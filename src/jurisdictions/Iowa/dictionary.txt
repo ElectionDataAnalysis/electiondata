@@ -1,0 +1,696 @@
+cdf_element	cdf_internal_name	raw_identifier_value
+Candidate	Abby Finkenauer	Abby Finkenauer
+Candidate	Ako Abdul-Samad	Ako Abdul-Samad
+Candidate	Amanda Ragan	Amanda Ragan
+Candidate	Amber Gustafson	Amber Gustafson
+Candidate	Amy Nielsen	Amy Nielsen
+Candidate	Andrew Emanuel	Andrew Emanuel
+Candidate	Andrew Rasmussen	Andrew Rasmussen
+Candidate	Andy McKean	Andy McKean
+Candidate	Ann Egley	Ann Egley
+Candidate	Ann Howell	Ann Howell
+Candidate	Ann M. Fields	Ann M. Fields
+Candidate	Ann Meyer	Ann Meyer
+Candidate	Anna Bergman	Anna Bergman
+Candidate	Anne Osmundson	Anne Osmundson
+Candidate	Annette Sweeney	Annette Sweeney
+Candidate	Anthony Junk	Anthony Junk
+Candidate	Art Staed	Art Staed
+Candidate	Ashley Hinson	Ashley Hinson
+Candidate	Ben Brown	Ben Brown
+Candidate	Beth Wessel-Kroeschell	Beth Wessel-Kroeschell
+Candidate	Bill Dotzler	Bill Dotzler
+Candidate	Bob Kressig	Bob Kressig
+Candidate	Bobby Kaufmann	Bobby Kaufmann
+Candidate	Brenda Brink	Brenda Brink
+Candidate	Brian B. Bales	Brian B. Bales
+Candidate	Brian Best	Brian Best
+Candidate	Brian K. Lohse	Brian K. Lohse
+Candidate	Brian Meyer	Brian Meyer
+Candidate	Bruce Bearinger	Bruce Bearinger
+Candidate	Bruce Hunter	Bruce Hunter
+Candidate	Bryan Jack Holder	Bryan Jack Holder
+Candidate	Carl A. Krambeck	Carl A. Krambeck
+Candidate	Carrie Koelker	Carrie Koelker
+Candidate	Cecil Dolecheck	Cecil Dolecheck
+Candidate	Chad Brewbaker	Chad Brewbaker
+Candidate	Charles Aldrich	Charles Aldrich
+Candidate	Charles Isenhart	Charles Isenhart
+Candidate	Charlie McConkey	Charlie McConkey
+Candidate	Cherielynn Westrich	Cherielynn Westrich
+Candidate	Chris Cournoyer	Chris Cournoyer
+Candidate	Chris Hagenow	Chris Hagenow
+Candidate	Chris Hall	Chris Hall
+Candidate	Christian Andrews	Christian Andrews
+Candidate	Christopher Peters	Christopher Peters
+Candidate	Chuck Larson	Chuck Larson
+Candidate	Cindy Axne	Cindy Axne
+Candidate	Cindy Winckler	Cindy Winckler
+Candidate	Claire Celsi	Claire Celsi
+Candidate	Claudia Addy	Claudia Addy
+Candidate	Connie Price	Connie Price
+Candidate	Corey Gingerich	Corey Gingerich
+Candidate	Dan Huseman	Dan Huseman
+Candidate	Dan Nieland	Dan Nieland
+Candidate	Daniel Clark	Daniel Clark
+Candidate	Dave Dawson	Dave Dawson
+Candidate	Dave Deyoe	Dave Deyoe
+Candidate	Dave Jacoby	Dave Jacoby
+Candidate	Dave Loebsack	Dave Loebsack
+Candidate	Dave Williams	Dave Williams
+Candidate	David Kerr	David Kerr
+Candidate	David Maxwell	David Maxwell
+Candidate	David Melchert Jr.	David Melchert Jr.
+Candidate	David Sieck	David Sieck
+Candidate	David Weaver	David Weaver
+Candidate	David Young	David Young
+Candidate	Dean Fisher	Dean Fisher
+Candidate	Debra Jensen	Debra Jensen
+Candidate	Deidre DeJear	Deidre DeJear
+Candidate	Denise O'Brien	Denise O'Brien
+Candidate	Dennis Evans	Dennis Evans
+Candidate	Dennis M. Cohoon	Dennis M. Cohoon
+Candidate	Dustin D. Hite	Dustin D. Hite
+Candidate	Edward Bernie Hayes	Edward Bernie Hayes
+Candidate	Edward Peterson	Edward Peterson
+Candidate	Eric Cooper	Eric Cooper
+Candidate	Eric Gjerde	Eric Gjerde
+Candidate	Eric Stromberg	Eric Stromberg
+Candidate	Fred Hubbell/Rita R. Hart	Fred Hubbell/Rita R. Hart
+Candidate	Fred Perryman	Fred Perryman
+Candidate	Gabriel Thomson	Gabriel Thomson
+Candidate	Gary Carlson	Gary Carlson
+Candidate	Gary Mohr	Gary Mohr
+Candidate	Gary Siegwarth/Natalia Blaskovich	Gary Siegwarth/Natalia Blaskovich
+Candidate	Gary Worthan	Gary Worthan
+Candidate	George M. Olmsted	George M. Olmsted
+Candidate	Gregg Gustafson	Gregg Gustafson
+Candidate	Gregory T. Malone	Gregory T. Malone
+Candidate	Hank Linden	Hank Linden
+Candidate	Heather Hora	Heather Hora
+Candidate	Heather Matson	Heather Matson
+Candidate	Herman C. Quirmbach	Herman C. Quirmbach
+Candidate	Holly Brink	Holly Brink
+Candidate	J.D. Scholten	J.D. Scholten
+Candidate	Jack Whitver	Jack Whitver
+Candidate	Jackie Smith	Jackie Smith
+Candidate	Jacob Bossman	Jacob Bossman
+Candidate	Jake Highfill	Jake Highfill
+Candidate	Jake Porter/Lynne Gentry	Jake Porter/Lynne Gentry
+Candidate	Jake Ronald Thompson	Jake Ronald Thompson
+Candidate	James Perez	James Perez
+Candidate	James Uhlenkamp	James Uhlenkamp
+Candidate	Jan Creasman	Jan Creasman
+Candidate	Jane Bloomingdale	Jane Bloomingdale
+Candidate	Jarad Klein	Jarad Klein
+Candidate	Jason Moats	Jason Moats
+Candidate	Jason Schultz	Jason Schultz
+Candidate	Jean Simpson	Jean Simpson
+Candidate	Jeff Kurtz	Jeff Kurtz
+Candidate	Jeff Shipley	Jeff Shipley
+Candidate	Jeffrey D. Reichman	Jeffrey D. Reichman
+Candidate	Jennifer Konfrst	Jennifer Konfrst
+Candidate	Jeremy N. Davis	Jeremy N. Davis
+Candidate	Jerry Cheevers	Jerry Cheevers
+Candidate	Jim Carlin	Jim Carlin
+Candidate	Jim Lykam	Jim Lykam
+Candidate	Jo Oldson	Jo Oldson
+Candidate	Joan Marttila	Joan Marttila
+Candidate	Jodi Clemens	Jodi Clemens
+Candidate	Joe Bolkcom	Joe Bolkcom
+Candidate	Joe Grandanette	Joe Grandanette
+Candidate	Joe Mitchell	Joe Mitchell
+Candidate	Joe Oclon	Joe Oclon
+Candidate	Joel Fry	Joel Fry
+Candidate	John Callahan	John Callahan
+Candidate	John Evans	John Evans
+Candidate	John Forbes	John Forbes
+Candidate	John George	John George
+Candidate	John H. Wills	John H. Wills
+Candidate	John J. O'Brien	John J. O'Brien
+Candidate	John Landon	John Landon
+Candidate	Jon Jacobsen	Jon Jacobsen
+Candidate	Jon Thorup	Jon Thorup
+Candidate	Joseph Howe	Joseph Howe
+Candidate	Joshua Henderson	Joshua Henderson
+Candidate	Jules Ofenbakh	Jules Ofenbakh
+Candidate	Julian Garrett	Julian Garrett
+Candidate	Karen A. Larson	Karen A. Larson
+Candidate	Karin Derry	Karin Derry
+Candidate	Kayla Koether	Kayla Koether
+Candidate	Kenan Judge	Kenan Judge
+Candidate	Kent A. Balduchi	Kent A. Balduchi
+Candidate	Kevin Kinney	Kevin Kinney
+Candidate	Kevin Koester	Kevin Koester
+Candidate	Kim Reynolds/Adam Gregg	Kim Reynolds/Adam Gregg
+Candidate	Kimberly K. Davis	Kimberly K. Davis
+Candidate	Kirsten Running-Marquardt	Kirsten Running-Marquardt
+Candidate	Kristin Sunde	Kristin Sunde
+Candidate	Lanny Hillyard	Lanny Hillyard
+Candidate	Laura J. Liegois	Laura J. Liegois
+Candidate	LeAnn L. Hughes	LeAnn L. Hughes
+Candidate	Lee Hein	Lee Hein
+Candidate	Linda Upmeyer	Linda Upmeyer
+Candidate	Lindsay James	Lindsay James
+Candidate	Lisa K. Heddens	Lisa K. Heddens
+Candidate	Liz Bennett	Liz Bennett
+Candidate	Lori Egan	Lori Egan
+Candidate	Louis J. Zumbach	Louis J. Zumbach
+Candidate	Lucas J. Link	Lucas J. Link
+Candidate	Marco Battaglia	Marco Battaglia
+Candidate	Mariannette Miller-Meeks	Mariannette Miller-Meeks
+Candidate	Marie Gleason	Marie Gleason
+Candidate	Mark David Strauss	Mark David Strauss
+Candidate	Mark Elworth Jr.	Mark Elworth Jr.
+Candidate	Mark Smith	Mark Smith
+Candidate	Marrianna Collins	Marrianna Collins
+Candidate	Marti Anderson	Marti Anderson
+Candidate	Mary Ann Hanusa	Mary Ann Hanusa
+Candidate	Mary Gaskill	Mary Gaskill
+Candidate	Mary Mascher	Mary Mascher
+Candidate	Mary Mosiman	Mary Mosiman
+Candidate	Mary S. Stewart	Mary S. Stewart
+Candidate	Mary Wolfe	Mary Wolfe
+Candidate	Matt W. Windschitl	Matt W. Windschitl
+Candidate	Megan L. Srinivas	Megan L. Srinivas
+Candidate	Megan Lee Hess Jones	Megan Lee Hess Jones
+Candidate	Michael Bergan	Michael Bergan
+Candidate	Michael Boal	Michael Boal
+Candidate	Michael L. Fitzgerald	Michael L. Fitzgerald
+Candidate	Mike Naig	Mike Naig
+Candidate	Mike Sexton	Mike Sexton
+Candidate	Mindy Benson	Mindy Benson
+Candidate	Molly Donahue	Molly Donahue
+Candidate	Monica Kurth	Monica Kurth
+Candidate	Myra Matejka	Myra Matejka
+Candidate	Nancy Fett	Nancy Fett
+Candidate	Nicholas Ryan	Nicholas Ryan
+Candidate	Norlin Mommsen	Norlin Mommsen
+Candidate	Pat Grassley	Pat Grassley
+Candidate	Patrick A. Shaw	Patrick A. Shaw
+Candidate	Patrick Joseph Wronkiewicz	Patrick Joseph Wronkiewicz
+Candidate	Patti Robinson	Patti Robinson
+Candidate	Paul D. Pate	Paul D. Pate
+Candidate	Paul Knupp	Paul Knupp
+Candidate	Paula Denison	Paula Denison
+Candidate	Pauline Chilton	Pauline Chilton
+Candidate	Peter Cownie	Peter Cownie
+Candidate	Peter Leo	Peter Leo
+Candidate	Phil Miller	Phil Miller
+Candidate	Phil Thompson	Phil Thompson
+Candidate	Phyllis Thede	Phyllis Thede
+Candidate	Randy Ray	Randy Ray
+Candidate	Ras Smith	Ras Smith
+Candidate	Ray Bubba Sorensen	Ray Bubba Sorensen
+Candidate	Ray Stevens	Ray Stevens
+Candidate	Rebel Snodgrass	Rebel Snodgrass
+Candidate	Reenie Montgomery	Reenie Montgomery
+Candidate	Richard Dedor	Richard Dedor
+Candidate	Richard Foster	Richard Foster
+Candidate	Rick Bertrand	Rick Bertrand
+Candidate	Rick L. Olson	Rick L. Olson
+Candidate	Rick Stewart	Rick Stewart
+Candidate	Rita DeJong	Rita DeJong
+Candidate	Rob Sand	Rob Sand
+Candidate	Robert Henderson	Robert Henderson
+Candidate	Robert M. Hogg	Robert M. Hogg
+Candidate	Robert P. Bacon	Robert P. Bacon
+Candidate	Roby Smith	Roby Smith
+Candidate	Rod Blum	Rod Blum
+Candidate	Ross Paustian	Ross Paustian
+Candidate	Ruth Ann Gaines	Ruth Ann Gaines
+Candidate	Ryan Marquardt	Ryan Marquardt
+Candidate	Ryan Odor	Ryan Odor
+Candidate	Samantha Keith	Samantha Keith
+Candidate	Sandy Salmon	Sandy Salmon
+Candidate	Sara Ramsey	Sara Ramsey
+Candidate	Scott Ourth	Scott Ourth
+Candidate	Shannon Latham	Shannon Latham
+Candidate	Shannon Lundgren	Shannon Lundgren
+Candidate	Sharon Steckman	Sharon Steckman
+Candidate	Skyler Wheeler	Skyler Wheeler
+Candidate	Stan Gustafson	Stan Gustafson
+Candidate	Steve Gorman	Steve Gorman
+Candidate	Steve King	Steve King
+Candidate	Steve Sechrest	Steve Sechrest
+Candidate	Steven Holt	Steven Holt
+Candidate	Susan McDanel	Susan McDanel
+Candidate	Tedd Gassman	Tedd Gassman
+Candidate	Teresa Daubitz	Teresa Daubitz
+Candidate	Terry Baxter	Terry Baxter
+Candidate	Thomas Gerhold	Thomas Gerhold
+Candidate	Thomas Jeneary	Thomas Jeneary
+Candidate	Tim Gannon	Tim Gannon
+Candidate	Tim Goodwin	Tim Goodwin
+Candidate	Tim Knutson	Tim Knutson
+Candidate	Tim Kraayenbrink	Tim Kraayenbrink
+Candidate	Tim McClimon	Tim McClimon
+Candidate	Tim Winter	Tim Winter
+Candidate	Timi Brown-Powers	Timi Brown-Powers
+Candidate	Timothy H. Kacena	Timothy H. Kacena
+Candidate	Timothy Hird	Timothy Hird
+Candidate	Tod R. Bowman	Tod R. Bowman
+Candidate	Todd Prichard	Todd Prichard
+Candidate	Todd Taylor	Todd Taylor
+Candidate	Tom Miller	Tom Miller
+Candidate	Tom Moore	Tom Moore
+Candidate	Tom Shipley	Tom Shipley
+Candidate	Tony Bisignano	Tony Bisignano
+Candidate	ToyA S. Johnson	ToyA S. Johnson
+Candidate	Tracy Ehlert	Tracy Ehlert
+Candidate	Tracy Freese	Tracy Freese
+Candidate	Troy Hageman	Troy Hageman
+Candidate	Vicki Lensing	Vicki Lensing
+Candidate	Vicky Brenner	Vicky Brenner
+Candidate	Walt Rogers	Walt Rogers
+Candidate	Warren Varley	Warren Varley
+Candidate	Wes Breckenridge	Wes Breckenridge
+Candidate	William M. Charlier	William M. Charlier
+Candidate	Write-in	Write-in
+Candidate	Zach Nunn	Zach Nunn
+Candidate	Zach Wahls	Zach Wahls
+Candidate	Zach Whiting	Zach Whiting
+CandidateContest	IA House District 1	State Representative District 1 ( 1)
+CandidateContest	IA House District 2	State Representative District 2 ( 1)
+CandidateContest	IA House District 3	State Representative District 3 ( 1)
+CandidateContest	IA House District 4	State Representative District 4 ( 1)
+CandidateContest	IA House District 5	State Representative District 5 ( 1)
+CandidateContest	IA House District 6	State Representative District 6 ( 1)
+CandidateContest	IA House District 7	State Representative District 7 ( 1)
+CandidateContest	IA House District 8	State Representative District 8 ( 1)
+CandidateContest	IA House District 9	State Representative District 9 ( 1)
+CandidateContest	IA House District 10	State Representative District 10 ( 1)
+CandidateContest	IA House District 11	State Representative District 11 ( 1)
+CandidateContest	IA House District 12	State Representative District 12 ( 1)
+CandidateContest	IA House District 13	State Representative District 13 ( 1)
+CandidateContest	IA House District 14	State Representative District 14 ( 1)
+CandidateContest	IA House District 15	State Representative District 15 ( 1)
+CandidateContest	IA House District 16	State Representative District 16 ( 1)
+CandidateContest	IA House District 17	State Representative District 17 ( 1)
+CandidateContest	IA House District 18	State Representative District 18 ( 1)
+CandidateContest	IA House District 19	State Representative District 19 ( 1)
+CandidateContest	IA House District 20	State Representative District 20 ( 1)
+CandidateContest	IA House District 21	State Representative District 21 ( 1)
+CandidateContest	IA House District 22	State Representative District 22 ( 1)
+CandidateContest	IA House District 23	State Representative District 23 ( 1)
+CandidateContest	IA House District 24	State Representative District 24 ( 1)
+CandidateContest	IA House District 25	State Representative District 25 ( 1)
+CandidateContest	IA House District 26	State Representative District 26 ( 1)
+CandidateContest	IA House District 27	State Representative District 27 ( 1)
+CandidateContest	IA House District 28	State Representative District 28 ( 1)
+CandidateContest	IA House District 29	State Representative District 29 ( 1)
+CandidateContest	IA House District 30	State Representative District 30 ( 1)
+CandidateContest	IA House District 31	State Representative District 31 ( 1)
+CandidateContest	IA House District 32	State Representative District 32 ( 1)
+CandidateContest	IA House District 33	State Representative District 33 ( 1)
+CandidateContest	IA House District 34	State Representative District 34 ( 1)
+CandidateContest	IA House District 35	State Representative District 35 ( 1)
+CandidateContest	IA House District 36	State Representative District 36 ( 1)
+CandidateContest	IA House District 37	State Representative District 37 ( 1)
+CandidateContest	IA House District 38	State Representative District 38 ( 1)
+CandidateContest	IA House District 39	State Representative District 39 ( 1)
+CandidateContest	IA House District 40	State Representative District 40 ( 1)
+CandidateContest	IA House District 41	State Representative District 41 ( 1)
+CandidateContest	IA House District 42	State Representative District 42 ( 1)
+CandidateContest	IA House District 43	State Representative District 43 ( 1)
+CandidateContest	IA House District 44	State Representative District 44 ( 1)
+CandidateContest	IA House District 45	State Representative District 45 ( 1)
+CandidateContest	IA House District 46	State Representative District 46 ( 1)
+CandidateContest	IA House District 47	State Representative District 47 ( 1)
+CandidateContest	IA House District 48	State Representative District 48 ( 1)
+CandidateContest	IA House District 49	State Representative District 49 ( 1)
+CandidateContest	IA House District 50	State Representative District 50 ( 1)
+CandidateContest	IA House District 51	State Representative District 51 ( 1)
+CandidateContest	IA House District 52	State Representative District 52 ( 1)
+CandidateContest	IA House District 53	State Representative District 53 ( 1)
+CandidateContest	IA House District 54	State Representative District 54 ( 1)
+CandidateContest	IA House District 55	State Representative District 55 ( 1)
+CandidateContest	IA House District 56	State Representative District 56 ( 1)
+CandidateContest	IA House District 57	State Representative District 57 ( 1)
+CandidateContest	IA House District 58	State Representative District 58 ( 1)
+CandidateContest	IA House District 59	State Representative District 59 ( 1)
+CandidateContest	IA House District 60	State Representative District 60 ( 1)
+CandidateContest	IA House District 61	State Representative District 61 ( 1)
+CandidateContest	IA House District 62	State Representative District 62 ( 1)
+CandidateContest	IA House District 63	State Representative District 63 ( 1)
+CandidateContest	IA House District 64	State Representative District 64 ( 1)
+CandidateContest	IA House District 65	State Representative District 65 ( 1)
+CandidateContest	IA House District 66	State Representative District 66 ( 1)
+CandidateContest	IA House District 67	State Representative District 67 ( 1)
+CandidateContest	IA House District 68	State Representative District 68 ( 1)
+CandidateContest	IA House District 69	State Representative District 69 ( 1)
+CandidateContest	IA House District 70	State Representative District 70 ( 1)
+CandidateContest	IA House District 71	State Representative District 71 ( 1)
+CandidateContest	IA House District 72	State Representative District 72 ( 1)
+CandidateContest	IA House District 73	State Representative District 73 ( 1)
+CandidateContest	IA House District 74	State Representative District 74 ( 1)
+CandidateContest	IA House District 75	State Representative District 75 ( 1)
+CandidateContest	IA House District 76	State Representative District 76 ( 1)
+CandidateContest	IA House District 77	State Representative District 77 ( 1)
+CandidateContest	IA House District 78	State Representative District 78 ( 1)
+CandidateContest	IA House District 79	State Representative District 79 ( 1)
+CandidateContest	IA House District 80	State Representative District 80 ( 1)
+CandidateContest	IA House District 81	State Representative District 81 ( 1)
+CandidateContest	IA House District 82	State Representative District 82 ( 1)
+CandidateContest	IA House District 83	State Representative District 83 ( 1)
+CandidateContest	IA House District 84	State Representative District 84 ( 1)
+CandidateContest	IA House District 85	State Representative District 85 ( 1)
+CandidateContest	IA House District 86	State Representative District 86 ( 1)
+CandidateContest	IA House District 87	State Representative District 87 ( 1)
+CandidateContest	IA House District 88	State Representative District 88 ( 1)
+CandidateContest	IA House District 89	State Representative District 89 ( 1)
+CandidateContest	IA House District 90	State Representative District 90 ( 1)
+CandidateContest	IA House District 91	State Representative District 91 ( 1)
+CandidateContest	IA House District 92	State Representative District 92 ( 1)
+CandidateContest	IA House District 93	State Representative District 93 ( 1)
+CandidateContest	IA House District 94	State Representative District 94 ( 1)
+CandidateContest	IA House District 95	State Representative District 95 ( 1)
+CandidateContest	IA House District 96	State Representative District 96 ( 1)
+CandidateContest	IA House District 97	State Representative District 97 ( 1)
+CandidateContest	IA House District 98	State Representative District 98 ( 1)
+CandidateContest	IA House District 99	State Representative District 99 ( 1)
+CandidateContest	IA House District 100	State Representative District 100 ( 1)
+CandidateContest	IA Senate District 1	State Senator District 1 ( 1)
+CandidateContest	IA Senate District 2	State Senator District 2 ( 1)
+CandidateContest	IA Senate District 3	State Senator District 3 ( 1)
+CandidateContest	IA Senate District 4	State Senator District 4 ( 1)
+CandidateContest	IA Senate District 5	State Senator District 5 ( 1)
+CandidateContest	IA Senate District 6	State Senator District 6 ( 1)
+CandidateContest	IA Senate District 7	State Senator District 7 ( 1)
+CandidateContest	IA Senate District 8	State Senator District 8 ( 1)
+CandidateContest	IA Senate District 9	State Senator District 9 ( 1)
+CandidateContest	IA Senate District 10	State Senator District 10 ( 1)
+CandidateContest	IA Senate District 11	State Senator District 11 ( 1)
+CandidateContest	IA Senate District 12	State Senator District 12 ( 1)
+CandidateContest	IA Senate District 13	State Senator District 13 ( 1)
+CandidateContest	IA Senate District 14	State Senator District 14 ( 1)
+CandidateContest	IA Senate District 15	State Senator District 15 ( 1)
+CandidateContest	IA Senate District 16	State Senator District 16 ( 1)
+CandidateContest	IA Senate District 17	State Senator District 17 ( 1)
+CandidateContest	IA Senate District 18	State Senator District 18 ( 1)
+CandidateContest	IA Senate District 19	State Senator District 19 ( 1)
+CandidateContest	IA Senate District 20	State Senator District 20 ( 1)
+CandidateContest	IA Senate District 21	State Senator District 21 ( 1)
+CandidateContest	IA Senate District 22	State Senator District 22 ( 1)
+CandidateContest	IA Senate District 23	State Senator District 23 ( 1)
+CandidateContest	IA Senate District 24	State Senator District 24 ( 1)
+CandidateContest	IA Senate District 25	State Senator District 25 ( 1)
+CandidateContest	IA Senate District 26	State Senator District 26 ( 1)
+CandidateContest	IA Senate District 27	State Senator District 27 ( 1)
+CandidateContest	IA Senate District 28	State Senator District 28 ( 1)
+CandidateContest	IA Senate District 29	State Senator District 29 ( 1)
+CandidateContest	IA Senate District 30	State Senator District 30 ( 1)
+CandidateContest	IA Senate District 31	State Senator District 31 ( 1)
+CandidateContest	IA Senate District 32	State Senator District 32 ( 1)
+CandidateContest	IA Senate District 33	State Senator District 33 ( 1)
+CandidateContest	IA Senate District 34	State Senator District 34 ( 1)
+CandidateContest	IA Senate District 35	State Senator District 35 ( 1)
+CandidateContest	IA Senate District 36	State Senator District 36 ( 1)
+CandidateContest	IA Senate District 37	State Senator District 37 ( 1)
+CandidateContest	IA Senate District 38	State Senator District 38 ( 1)
+CandidateContest	IA Senate District 39	State Senator District 39 ( 1)
+CandidateContest	IA Senate District 40	State Senator District 40 ( 1)
+CandidateContest	IA Senate District 41	State Senator District 41 ( 1)
+CandidateContest	IA Senate District 42	State Senator District 42 ( 1)
+CandidateContest	IA Senate District 43	State Senator District 43 ( 1)
+CandidateContest	IA Senate District 44	State Senator District 44 ( 1)
+CandidateContest	IA Senate District 45	State Senator District 45 ( 1)
+CandidateContest	IA Senate District 46	State Senator District 46 ( 1)
+CandidateContest	IA Senate District 47	State Senator District 47 ( 1)
+CandidateContest	IA Senate District 48	State Senator District 48 ( 1)
+CandidateContest	IA Senate District 49	State Senator District 49 ( 1)
+CandidateContest	IA Senate District 50	State Senator District 50 ( 1)
+CandidateContest	US House IA District 1	United States Representative District 1 ( 1)
+CandidateContest	US House IA District 2	United States Representative District 2 ( 1)
+CandidateContest	US House IA District 3	United States Representative District 3 ( 1)
+CandidateContest	US House IA District 4	United States Representative District 4 ( 1)
+CandidateContest	US President (IA)	President ( 1)
+CandidateContest	IA Governor	Governor/Lieutenant Governor ( 1)
+CandidateContest	US Senate IA	United States Senator ( 1)
+CandidateContest	IA Attorney General	Attorney General ( 1)
+CandidateContest	IA Treasurer of State	Treasurer of State ( 1)
+CandidateContest	IA Secretary of State	Secretary of State ( 1)
+CandidateContest	IA Secretary of Agriculture	Secretary of Agriculture ( 1)
+CandidateContest	IA Auditor of State	Auditor of State ( 1)
+Party	Democratic Party	Democratic
+Party	Republican Party	Republican
+Party	Libertarian Party	Libertarian
+Party	Green Party	Green
+Party	Independent Party	Independent
+ReportingUnit	Iowa;IA House District 1	Iowa;IA House District 1
+ReportingUnit	Iowa;IA House District 2	Iowa;IA House District 2
+ReportingUnit	Iowa;IA House District 3	Iowa;IA House District 3
+ReportingUnit	Iowa;IA House District 4	Iowa;IA House District 4
+ReportingUnit	Iowa;IA House District 5	Iowa;IA House District 5
+ReportingUnit	Iowa;IA House District 6	Iowa;IA House District 6
+ReportingUnit	Iowa;IA House District 7	Iowa;IA House District 7
+ReportingUnit	Iowa;IA House District 8	Iowa;IA House District 8
+ReportingUnit	Iowa;IA House District 9	Iowa;IA House District 9
+ReportingUnit	Iowa;IA House District 10	Iowa;IA House District 10
+ReportingUnit	Iowa;IA House District 11	Iowa;IA House District 11
+ReportingUnit	Iowa;IA House District 12	Iowa;IA House District 12
+ReportingUnit	Iowa;IA House District 13	Iowa;IA House District 13
+ReportingUnit	Iowa;IA House District 14	Iowa;IA House District 14
+ReportingUnit	Iowa;IA House District 15	Iowa;IA House District 15
+ReportingUnit	Iowa;IA House District 16	Iowa;IA House District 16
+ReportingUnit	Iowa;IA House District 17	Iowa;IA House District 17
+ReportingUnit	Iowa;IA House District 18	Iowa;IA House District 18
+ReportingUnit	Iowa;IA House District 19	Iowa;IA House District 19
+ReportingUnit	Iowa;IA House District 20	Iowa;IA House District 20
+ReportingUnit	Iowa;IA House District 21	Iowa;IA House District 21
+ReportingUnit	Iowa;IA House District 22	Iowa;IA House District 22
+ReportingUnit	Iowa;IA House District 23	Iowa;IA House District 23
+ReportingUnit	Iowa;IA House District 24	Iowa;IA House District 24
+ReportingUnit	Iowa;IA House District 25	Iowa;IA House District 25
+ReportingUnit	Iowa;IA House District 26	Iowa;IA House District 26
+ReportingUnit	Iowa;IA House District 27	Iowa;IA House District 27
+ReportingUnit	Iowa;IA House District 28	Iowa;IA House District 28
+ReportingUnit	Iowa;IA House District 29	Iowa;IA House District 29
+ReportingUnit	Iowa;IA House District 30	Iowa;IA House District 30
+ReportingUnit	Iowa;IA House District 31	Iowa;IA House District 31
+ReportingUnit	Iowa;IA House District 32	Iowa;IA House District 32
+ReportingUnit	Iowa;IA House District 33	Iowa;IA House District 33
+ReportingUnit	Iowa;IA House District 34	Iowa;IA House District 34
+ReportingUnit	Iowa;IA House District 35	Iowa;IA House District 35
+ReportingUnit	Iowa;IA House District 36	Iowa;IA House District 36
+ReportingUnit	Iowa;IA House District 37	Iowa;IA House District 37
+ReportingUnit	Iowa;IA House District 38	Iowa;IA House District 38
+ReportingUnit	Iowa;IA House District 39	Iowa;IA House District 39
+ReportingUnit	Iowa;IA House District 40	Iowa;IA House District 40
+ReportingUnit	Iowa;IA House District 41	Iowa;IA House District 41
+ReportingUnit	Iowa;IA House District 42	Iowa;IA House District 42
+ReportingUnit	Iowa;IA House District 43	Iowa;IA House District 43
+ReportingUnit	Iowa;IA House District 44	Iowa;IA House District 44
+ReportingUnit	Iowa;IA House District 45	Iowa;IA House District 45
+ReportingUnit	Iowa;IA House District 46	Iowa;IA House District 46
+ReportingUnit	Iowa;IA House District 47	Iowa;IA House District 47
+ReportingUnit	Iowa;IA House District 48	Iowa;IA House District 48
+ReportingUnit	Iowa;IA House District 49	Iowa;IA House District 49
+ReportingUnit	Iowa;IA House District 50	Iowa;IA House District 50
+ReportingUnit	Iowa;IA House District 51	Iowa;IA House District 51
+ReportingUnit	Iowa;IA House District 52	Iowa;IA House District 52
+ReportingUnit	Iowa;IA House District 53	Iowa;IA House District 53
+ReportingUnit	Iowa;IA House District 54	Iowa;IA House District 54
+ReportingUnit	Iowa;IA House District 55	Iowa;IA House District 55
+ReportingUnit	Iowa;IA House District 56	Iowa;IA House District 56
+ReportingUnit	Iowa;IA House District 57	Iowa;IA House District 57
+ReportingUnit	Iowa;IA House District 58	Iowa;IA House District 58
+ReportingUnit	Iowa;IA House District 59	Iowa;IA House District 59
+ReportingUnit	Iowa;IA House District 60	Iowa;IA House District 60
+ReportingUnit	Iowa;IA House District 61	Iowa;IA House District 61
+ReportingUnit	Iowa;IA House District 62	Iowa;IA House District 62
+ReportingUnit	Iowa;IA House District 63	Iowa;IA House District 63
+ReportingUnit	Iowa;IA House District 64	Iowa;IA House District 64
+ReportingUnit	Iowa;IA House District 65	Iowa;IA House District 65
+ReportingUnit	Iowa;IA House District 66	Iowa;IA House District 66
+ReportingUnit	Iowa;IA House District 67	Iowa;IA House District 67
+ReportingUnit	Iowa;IA House District 68	Iowa;IA House District 68
+ReportingUnit	Iowa;IA House District 69	Iowa;IA House District 69
+ReportingUnit	Iowa;IA House District 70	Iowa;IA House District 70
+ReportingUnit	Iowa;IA House District 71	Iowa;IA House District 71
+ReportingUnit	Iowa;IA House District 72	Iowa;IA House District 72
+ReportingUnit	Iowa;IA House District 73	Iowa;IA House District 73
+ReportingUnit	Iowa;IA House District 74	Iowa;IA House District 74
+ReportingUnit	Iowa;IA House District 75	Iowa;IA House District 75
+ReportingUnit	Iowa;IA House District 76	Iowa;IA House District 76
+ReportingUnit	Iowa;IA House District 77	Iowa;IA House District 77
+ReportingUnit	Iowa;IA House District 78	Iowa;IA House District 78
+ReportingUnit	Iowa;IA House District 79	Iowa;IA House District 79
+ReportingUnit	Iowa;IA House District 80	Iowa;IA House District 80
+ReportingUnit	Iowa;IA House District 81	Iowa;IA House District 81
+ReportingUnit	Iowa;IA House District 82	Iowa;IA House District 82
+ReportingUnit	Iowa;IA House District 83	Iowa;IA House District 83
+ReportingUnit	Iowa;IA House District 84	Iowa;IA House District 84
+ReportingUnit	Iowa;IA House District 85	Iowa;IA House District 85
+ReportingUnit	Iowa;IA House District 86	Iowa;IA House District 86
+ReportingUnit	Iowa;IA House District 87	Iowa;IA House District 87
+ReportingUnit	Iowa;IA House District 88	Iowa;IA House District 88
+ReportingUnit	Iowa;IA House District 89	Iowa;IA House District 89
+ReportingUnit	Iowa;IA House District 90	Iowa;IA House District 90
+ReportingUnit	Iowa;IA House District 91	Iowa;IA House District 91
+ReportingUnit	Iowa;IA House District 92	Iowa;IA House District 92
+ReportingUnit	Iowa;IA House District 93	Iowa;IA House District 93
+ReportingUnit	Iowa;IA House District 94	Iowa;IA House District 94
+ReportingUnit	Iowa;IA House District 95	Iowa;IA House District 95
+ReportingUnit	Iowa;IA House District 96	Iowa;IA House District 96
+ReportingUnit	Iowa;IA House District 97	Iowa;IA House District 97
+ReportingUnit	Iowa;IA House District 98	Iowa;IA House District 98
+ReportingUnit	Iowa;IA House District 99	Iowa;IA House District 99
+ReportingUnit	Iowa;IA House District 100	Iowa;IA House District 100
+ReportingUnit	Iowa;IA Senate District 1	Iowa;IA Senate District 1
+ReportingUnit	Iowa;IA Senate District 2	Iowa;IA Senate District 2
+ReportingUnit	Iowa;IA Senate District 3	Iowa;IA Senate District 3
+ReportingUnit	Iowa;IA Senate District 4	Iowa;IA Senate District 4
+ReportingUnit	Iowa;IA Senate District 5	Iowa;IA Senate District 5
+ReportingUnit	Iowa;IA Senate District 6	Iowa;IA Senate District 6
+ReportingUnit	Iowa;IA Senate District 7	Iowa;IA Senate District 7
+ReportingUnit	Iowa;IA Senate District 8	Iowa;IA Senate District 8
+ReportingUnit	Iowa;IA Senate District 9	Iowa;IA Senate District 9
+ReportingUnit	Iowa;IA Senate District 10	Iowa;IA Senate District 10
+ReportingUnit	Iowa;IA Senate District 11	Iowa;IA Senate District 11
+ReportingUnit	Iowa;IA Senate District 12	Iowa;IA Senate District 12
+ReportingUnit	Iowa;IA Senate District 13	Iowa;IA Senate District 13
+ReportingUnit	Iowa;IA Senate District 14	Iowa;IA Senate District 14
+ReportingUnit	Iowa;IA Senate District 15	Iowa;IA Senate District 15
+ReportingUnit	Iowa;IA Senate District 16	Iowa;IA Senate District 16
+ReportingUnit	Iowa;IA Senate District 17	Iowa;IA Senate District 17
+ReportingUnit	Iowa;IA Senate District 18	Iowa;IA Senate District 18
+ReportingUnit	Iowa;IA Senate District 19	Iowa;IA Senate District 19
+ReportingUnit	Iowa;IA Senate District 20	Iowa;IA Senate District 20
+ReportingUnit	Iowa;IA Senate District 21	Iowa;IA Senate District 21
+ReportingUnit	Iowa;IA Senate District 22	Iowa;IA Senate District 22
+ReportingUnit	Iowa;IA Senate District 23	Iowa;IA Senate District 23
+ReportingUnit	Iowa;IA Senate District 24	Iowa;IA Senate District 24
+ReportingUnit	Iowa;IA Senate District 25	Iowa;IA Senate District 25
+ReportingUnit	Iowa;IA Senate District 26	Iowa;IA Senate District 26
+ReportingUnit	Iowa;IA Senate District 27	Iowa;IA Senate District 27
+ReportingUnit	Iowa;IA Senate District 28	Iowa;IA Senate District 28
+ReportingUnit	Iowa;IA Senate District 29	Iowa;IA Senate District 29
+ReportingUnit	Iowa;IA Senate District 30	Iowa;IA Senate District 30
+ReportingUnit	Iowa;IA Senate District 31	Iowa;IA Senate District 31
+ReportingUnit	Iowa;IA Senate District 32	Iowa;IA Senate District 32
+ReportingUnit	Iowa;IA Senate District 33	Iowa;IA Senate District 33
+ReportingUnit	Iowa;IA Senate District 34	Iowa;IA Senate District 34
+ReportingUnit	Iowa;IA Senate District 35	Iowa;IA Senate District 35
+ReportingUnit	Iowa;IA Senate District 36	Iowa;IA Senate District 36
+ReportingUnit	Iowa;IA Senate District 37	Iowa;IA Senate District 37
+ReportingUnit	Iowa;IA Senate District 38	Iowa;IA Senate District 38
+ReportingUnit	Iowa;IA Senate District 39	Iowa;IA Senate District 39
+ReportingUnit	Iowa;IA Senate District 40	Iowa;IA Senate District 40
+ReportingUnit	Iowa;IA Senate District 41	Iowa;IA Senate District 41
+ReportingUnit	Iowa;IA Senate District 42	Iowa;IA Senate District 42
+ReportingUnit	Iowa;IA Senate District 43	Iowa;IA Senate District 43
+ReportingUnit	Iowa;IA Senate District 44	Iowa;IA Senate District 44
+ReportingUnit	Iowa;IA Senate District 45	Iowa;IA Senate District 45
+ReportingUnit	Iowa;IA Senate District 46	Iowa;IA Senate District 46
+ReportingUnit	Iowa;IA Senate District 47	Iowa;IA Senate District 47
+ReportingUnit	Iowa;IA Senate District 48	Iowa;IA Senate District 48
+ReportingUnit	Iowa;IA Senate District 49	Iowa;IA Senate District 49
+ReportingUnit	Iowa;IA Senate District 50	Iowa;IA Senate District 50
+ReportingUnit	Iowa;US House IA District 1	Iowa;US House IA District 1
+ReportingUnit	Iowa;US House IA District 2	Iowa;US House IA District 2
+ReportingUnit	Iowa;US House IA District 3	Iowa;US House IA District 3
+ReportingUnit	Iowa;US House IA District 4	Iowa;US House IA District 4
+ReportingUnit	Iowa	Iowa
+ReportingUnit	Iowa;Adair County	Adair
+ReportingUnit	Iowa;Adams County	Adams
+ReportingUnit	Iowa;Allamakee County	Allamakee
+ReportingUnit	Iowa;Appanoose County	Appanoose
+ReportingUnit	Iowa;Audubon County	Audubon
+ReportingUnit	Iowa;Benton County	Benton
+ReportingUnit	Iowa;Black Hawk County	Black Hawk
+ReportingUnit	Iowa;Boone County	Boone
+ReportingUnit	Iowa;Bremer County	Bremer
+ReportingUnit	Iowa;Buchanan County	Buchanan
+ReportingUnit	Iowa;Buena Vista County	Buena Vista
+ReportingUnit	Iowa;Butler County	Butler
+ReportingUnit	Iowa;Calhoun County	Calhoun
+ReportingUnit	Iowa;Carroll County	Carroll
+ReportingUnit	Iowa;Cass County	Cass
+ReportingUnit	Iowa;Cedar County	Cedar
+ReportingUnit	Iowa;Cerro Gordo County	Cerro Gordo
+ReportingUnit	Iowa;Cherokee County	Cherokee
+ReportingUnit	Iowa;Chickasaw County	Chickasaw
+ReportingUnit	Iowa;Clarke County	Clarke
+ReportingUnit	Iowa;Clay County	Clay
+ReportingUnit	Iowa;Clayton County	Clayton
+ReportingUnit	Iowa;Clinton County	Clinton
+ReportingUnit	Iowa;Crawford County	Crawford
+ReportingUnit	Iowa;Dallas County	Dallas
+ReportingUnit	Iowa;Davis County	Davis
+ReportingUnit	Iowa;Decatur County	Decatur
+ReportingUnit	Iowa;Delaware County	Delaware
+ReportingUnit	Iowa;Des Moines County	Des Moines
+ReportingUnit	Iowa;Dickinson County	Dickinson
+ReportingUnit	Iowa;Dubuque County	Dubuque
+ReportingUnit	Iowa;Emmet County	Emmet
+ReportingUnit	Iowa;Fayette County	Fayette
+ReportingUnit	Iowa;Floyd County	Floyd
+ReportingUnit	Iowa;Franklin County	Franklin
+ReportingUnit	Iowa;Fremont County	Fremont
+ReportingUnit	Iowa;Greene County	Greene
+ReportingUnit	Iowa;Grundy County	Grundy
+ReportingUnit	Iowa;Guthrie County	Guthrie
+ReportingUnit	Iowa;Hamilton County	Hamilton
+ReportingUnit	Iowa;Hancock County	Hancock
+ReportingUnit	Iowa;Hardin County	Hardin
+ReportingUnit	Iowa;Harrison County	Harrison
+ReportingUnit	Iowa;Henry County	Henry
+ReportingUnit	Iowa;Howard County	Howard
+ReportingUnit	Iowa;Humboldt County	Humboldt
+ReportingUnit	Iowa;Ida County	Ida
+ReportingUnit	Iowa;Iowa County	Iowa
+ReportingUnit	Iowa;Jackson County	Jackson
+ReportingUnit	Iowa;Jasper County	Jasper
+ReportingUnit	Iowa;Jefferson County	Jefferson
+ReportingUnit	Iowa;Johnson County	Johnson
+ReportingUnit	Iowa;Jones County	Jones
+ReportingUnit	Iowa;Keokuk County	Keokuk
+ReportingUnit	Iowa;Kossuth County	Kossuth
+ReportingUnit	Iowa;Lee County	Lee
+ReportingUnit	Iowa;Linn County	Linn
+ReportingUnit	Iowa;Louisa County	Louisa
+ReportingUnit	Iowa;Lucas County	Lucas
+ReportingUnit	Iowa;Lyon County	Lyon
+ReportingUnit	Iowa;Madison County	Madison
+ReportingUnit	Iowa;Mahaska County	Mahaska
+ReportingUnit	Iowa;Marion County	Marion
+ReportingUnit	Iowa;Marshall County	Marshall
+ReportingUnit	Iowa;Mills County	Mills
+ReportingUnit	Iowa;Mitchell County	Mitchell
+ReportingUnit	Iowa;Monona County	Monona
+ReportingUnit	Iowa;Monroe County	Monroe
+ReportingUnit	Iowa;Montgomery County	Montgomery
+ReportingUnit	Iowa;Muscatine County	Muscatine
+ReportingUnit	Iowa;O'Brien County	O'Brien
+ReportingUnit	Iowa;Osceola County	Osceola
+ReportingUnit	Iowa;Page County	Page
+ReportingUnit	Iowa;Palo Alto County	Palo Alto
+ReportingUnit	Iowa;Plymouth County	Plymouth
+ReportingUnit	Iowa;Pocahontas County	Pocahontas
+ReportingUnit	Iowa;Polk County	Polk
+ReportingUnit	Iowa;Pottawattamie County	Pottawattamie
+ReportingUnit	Iowa;Poweshiek County	Poweshiek
+ReportingUnit	Iowa;Ringgold County	Ringgold
+ReportingUnit	Iowa;Sac County	Sac
+ReportingUnit	Iowa;Scott County	Scott
+ReportingUnit	Iowa;Shelby County	Shelby
+ReportingUnit	Iowa;Sioux County	Sioux
+ReportingUnit	Iowa;Story County	Story
+ReportingUnit	Iowa;Tama County	Tama
+ReportingUnit	Iowa;Taylor County	Taylor
+ReportingUnit	Iowa;Union County	Union
+ReportingUnit	Iowa;Van Buren County	Van Buren
+ReportingUnit	Iowa;Wapello County	Wapello
+ReportingUnit	Iowa;Warren County	Warren
+ReportingUnit	Iowa;Washington County	Washington
+ReportingUnit	Iowa;Wayne County	Wayne
+ReportingUnit	Iowa;Webster County	Webster
+ReportingUnit	Iowa;Winnebago County	Winnebago
+ReportingUnit	Iowa;Winneshiek County	Winneshiek
+ReportingUnit	Iowa;Woodbury County	Woodbury
+ReportingUnit	Iowa;Worth County	Worth
+ReportingUnit	Iowa;Wright County	Wright
+CountItemType	absentee	Absentee
+CountItemType	election-day	Election Day
+CountItemType	total	Total

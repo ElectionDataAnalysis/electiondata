@@ -157,7 +157,6 @@ US President (IA)	1	US President (IA)
 IA Governor	1	IA Governor	
 US Senate IA	1	US Senate IA	
 IA Attorney General	1	IA Attorney General	
-IA Lieutenant Governor	1	IA Lieutenant Governor	
 IA Treasurer of State	1	IA Treasurer of State	
 IA Secretary of State	1	IA Secretary of State	
 IA Secretary of Agriculture	1	IA Secretary of Agriculture	
