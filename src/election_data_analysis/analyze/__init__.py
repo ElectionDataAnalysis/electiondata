@@ -191,7 +191,6 @@ def create_scatter(
     single_count_type = len(unsummed["CountItemType"].unique()) == 1
 
     if single_selection and not single_count_type:
-        print("woof")
         pivot_col = "CountItemType"
     elif single_selection and single_count_type:
         pivot_col = "Election_Id"
