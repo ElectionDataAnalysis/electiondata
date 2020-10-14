@@ -270,168 +270,168 @@ Candidate	Write-in	Write-in
 Candidate	Zach Nunn	Zach Nunn
 Candidate	Zach Wahls	Zach Wahls
 Candidate	Zach Whiting	Zach Whiting
-CandidateContest	IA House District 1	State Representative District 1 ( 1)
-CandidateContest	IA House District 2	State Representative District 2 ( 1)
-CandidateContest	IA House District 3	State Representative District 3 ( 1)
-CandidateContest	IA House District 4	State Representative District 4 ( 1)
-CandidateContest	IA House District 5	State Representative District 5 ( 1)
-CandidateContest	IA House District 6	State Representative District 6 ( 1)
-CandidateContest	IA House District 7	State Representative District 7 ( 1)
-CandidateContest	IA House District 8	State Representative District 8 ( 1)
-CandidateContest	IA House District 9	State Representative District 9 ( 1)
-CandidateContest	IA House District 10	State Representative District 10 ( 1)
-CandidateContest	IA House District 11	State Representative District 11 ( 1)
-CandidateContest	IA House District 12	State Representative District 12 ( 1)
-CandidateContest	IA House District 13	State Representative District 13 ( 1)
-CandidateContest	IA House District 14	State Representative District 14 ( 1)
-CandidateContest	IA House District 15	State Representative District 15 ( 1)
-CandidateContest	IA House District 16	State Representative District 16 ( 1)
-CandidateContest	IA House District 17	State Representative District 17 ( 1)
-CandidateContest	IA House District 18	State Representative District 18 ( 1)
-CandidateContest	IA House District 19	State Representative District 19 ( 1)
-CandidateContest	IA House District 20	State Representative District 20 ( 1)
-CandidateContest	IA House District 21	State Representative District 21 ( 1)
-CandidateContest	IA House District 22	State Representative District 22 ( 1)
-CandidateContest	IA House District 23	State Representative District 23 ( 1)
-CandidateContest	IA House District 24	State Representative District 24 ( 1)
-CandidateContest	IA House District 25	State Representative District 25 ( 1)
-CandidateContest	IA House District 26	State Representative District 26 ( 1)
-CandidateContest	IA House District 27	State Representative District 27 ( 1)
-CandidateContest	IA House District 28	State Representative District 28 ( 1)
-CandidateContest	IA House District 29	State Representative District 29 ( 1)
-CandidateContest	IA House District 30	State Representative District 30 ( 1)
-CandidateContest	IA House District 31	State Representative District 31 ( 1)
-CandidateContest	IA House District 32	State Representative District 32 ( 1)
-CandidateContest	IA House District 33	State Representative District 33 ( 1)
-CandidateContest	IA House District 34	State Representative District 34 ( 1)
-CandidateContest	IA House District 35	State Representative District 35 ( 1)
-CandidateContest	IA House District 36	State Representative District 36 ( 1)
-CandidateContest	IA House District 37	State Representative District 37 ( 1)
-CandidateContest	IA House District 38	State Representative District 38 ( 1)
-CandidateContest	IA House District 39	State Representative District 39 ( 1)
-CandidateContest	IA House District 40	State Representative District 40 ( 1)
-CandidateContest	IA House District 41	State Representative District 41 ( 1)
-CandidateContest	IA House District 42	State Representative District 42 ( 1)
-CandidateContest	IA House District 43	State Representative District 43 ( 1)
-CandidateContest	IA House District 44	State Representative District 44 ( 1)
-CandidateContest	IA House District 45	State Representative District 45 ( 1)
-CandidateContest	IA House District 46	State Representative District 46 ( 1)
-CandidateContest	IA House District 47	State Representative District 47 ( 1)
-CandidateContest	IA House District 48	State Representative District 48 ( 1)
-CandidateContest	IA House District 49	State Representative District 49 ( 1)
-CandidateContest	IA House District 50	State Representative District 50 ( 1)
-CandidateContest	IA House District 51	State Representative District 51 ( 1)
-CandidateContest	IA House District 52	State Representative District 52 ( 1)
-CandidateContest	IA House District 53	State Representative District 53 ( 1)
-CandidateContest	IA House District 54	State Representative District 54 ( 1)
-CandidateContest	IA House District 55	State Representative District 55 ( 1)
-CandidateContest	IA House District 56	State Representative District 56 ( 1)
-CandidateContest	IA House District 57	State Representative District 57 ( 1)
-CandidateContest	IA House District 58	State Representative District 58 ( 1)
-CandidateContest	IA House District 59	State Representative District 59 ( 1)
-CandidateContest	IA House District 60	State Representative District 60 ( 1)
-CandidateContest	IA House District 61	State Representative District 61 ( 1)
-CandidateContest	IA House District 62	State Representative District 62 ( 1)
-CandidateContest	IA House District 63	State Representative District 63 ( 1)
-CandidateContest	IA House District 64	State Representative District 64 ( 1)
-CandidateContest	IA House District 65	State Representative District 65 ( 1)
-CandidateContest	IA House District 66	State Representative District 66 ( 1)
-CandidateContest	IA House District 67	State Representative District 67 ( 1)
-CandidateContest	IA House District 68	State Representative District 68 ( 1)
-CandidateContest	IA House District 69	State Representative District 69 ( 1)
-CandidateContest	IA House District 70	State Representative District 70 ( 1)
-CandidateContest	IA House District 71	State Representative District 71 ( 1)
-CandidateContest	IA House District 72	State Representative District 72 ( 1)
-CandidateContest	IA House District 73	State Representative District 73 ( 1)
-CandidateContest	IA House District 74	State Representative District 74 ( 1)
-CandidateContest	IA House District 75	State Representative District 75 ( 1)
-CandidateContest	IA House District 76	State Representative District 76 ( 1)
-CandidateContest	IA House District 77	State Representative District 77 ( 1)
-CandidateContest	IA House District 78	State Representative District 78 ( 1)
-CandidateContest	IA House District 79	State Representative District 79 ( 1)
-CandidateContest	IA House District 80	State Representative District 80 ( 1)
-CandidateContest	IA House District 81	State Representative District 81 ( 1)
-CandidateContest	IA House District 82	State Representative District 82 ( 1)
-CandidateContest	IA House District 83	State Representative District 83 ( 1)
-CandidateContest	IA House District 84	State Representative District 84 ( 1)
-CandidateContest	IA House District 85	State Representative District 85 ( 1)
-CandidateContest	IA House District 86	State Representative District 86 ( 1)
-CandidateContest	IA House District 87	State Representative District 87 ( 1)
-CandidateContest	IA House District 88	State Representative District 88 ( 1)
-CandidateContest	IA House District 89	State Representative District 89 ( 1)
-CandidateContest	IA House District 90	State Representative District 90 ( 1)
-CandidateContest	IA House District 91	State Representative District 91 ( 1)
-CandidateContest	IA House District 92	State Representative District 92 ( 1)
-CandidateContest	IA House District 93	State Representative District 93 ( 1)
-CandidateContest	IA House District 94	State Representative District 94 ( 1)
-CandidateContest	IA House District 95	State Representative District 95 ( 1)
-CandidateContest	IA House District 96	State Representative District 96 ( 1)
-CandidateContest	IA House District 97	State Representative District 97 ( 1)
-CandidateContest	IA House District 98	State Representative District 98 ( 1)
-CandidateContest	IA House District 99	State Representative District 99 ( 1)
-CandidateContest	IA House District 100	State Representative District 100 ( 1)
-CandidateContest	IA Senate District 1	State Senator District 1 ( 1)
-CandidateContest	IA Senate District 2	State Senator District 2 ( 1)
-CandidateContest	IA Senate District 3	State Senator District 3 ( 1)
-CandidateContest	IA Senate District 4	State Senator District 4 ( 1)
-CandidateContest	IA Senate District 5	State Senator District 5 ( 1)
-CandidateContest	IA Senate District 6	State Senator District 6 ( 1)
-CandidateContest	IA Senate District 7	State Senator District 7 ( 1)
-CandidateContest	IA Senate District 8	State Senator District 8 ( 1)
-CandidateContest	IA Senate District 9	State Senator District 9 ( 1)
-CandidateContest	IA Senate District 10	State Senator District 10 ( 1)
-CandidateContest	IA Senate District 11	State Senator District 11 ( 1)
-CandidateContest	IA Senate District 12	State Senator District 12 ( 1)
-CandidateContest	IA Senate District 13	State Senator District 13 ( 1)
-CandidateContest	IA Senate District 14	State Senator District 14 ( 1)
-CandidateContest	IA Senate District 15	State Senator District 15 ( 1)
-CandidateContest	IA Senate District 16	State Senator District 16 ( 1)
-CandidateContest	IA Senate District 17	State Senator District 17 ( 1)
-CandidateContest	IA Senate District 18	State Senator District 18 ( 1)
-CandidateContest	IA Senate District 19	State Senator District 19 ( 1)
-CandidateContest	IA Senate District 20	State Senator District 20 ( 1)
-CandidateContest	IA Senate District 21	State Senator District 21 ( 1)
-CandidateContest	IA Senate District 22	State Senator District 22 ( 1)
-CandidateContest	IA Senate District 23	State Senator District 23 ( 1)
-CandidateContest	IA Senate District 24	State Senator District 24 ( 1)
-CandidateContest	IA Senate District 25	State Senator District 25 ( 1)
-CandidateContest	IA Senate District 26	State Senator District 26 ( 1)
-CandidateContest	IA Senate District 27	State Senator District 27 ( 1)
-CandidateContest	IA Senate District 28	State Senator District 28 ( 1)
-CandidateContest	IA Senate District 29	State Senator District 29 ( 1)
-CandidateContest	IA Senate District 30	State Senator District 30 ( 1)
-CandidateContest	IA Senate District 31	State Senator District 31 ( 1)
-CandidateContest	IA Senate District 32	State Senator District 32 ( 1)
-CandidateContest	IA Senate District 33	State Senator District 33 ( 1)
-CandidateContest	IA Senate District 34	State Senator District 34 ( 1)
-CandidateContest	IA Senate District 35	State Senator District 35 ( 1)
-CandidateContest	IA Senate District 36	State Senator District 36 ( 1)
-CandidateContest	IA Senate District 37	State Senator District 37 ( 1)
-CandidateContest	IA Senate District 38	State Senator District 38 ( 1)
-CandidateContest	IA Senate District 39	State Senator District 39 ( 1)
-CandidateContest	IA Senate District 40	State Senator District 40 ( 1)
-CandidateContest	IA Senate District 41	State Senator District 41 ( 1)
-CandidateContest	IA Senate District 42	State Senator District 42 ( 1)
-CandidateContest	IA Senate District 43	State Senator District 43 ( 1)
-CandidateContest	IA Senate District 44	State Senator District 44 ( 1)
-CandidateContest	IA Senate District 45	State Senator District 45 ( 1)
-CandidateContest	IA Senate District 46	State Senator District 46 ( 1)
-CandidateContest	IA Senate District 47	State Senator District 47 ( 1)
-CandidateContest	IA Senate District 48	State Senator District 48 ( 1)
-CandidateContest	IA Senate District 49	State Senator District 49 ( 1)
-CandidateContest	IA Senate District 50	State Senator District 50 ( 1)
-CandidateContest	US House IA District 1	United States Representative District 1 ( 1)
-CandidateContest	US House IA District 2	United States Representative District 2 ( 1)
-CandidateContest	US House IA District 3	United States Representative District 3 ( 1)
-CandidateContest	US House IA District 4	United States Representative District 4 ( 1)
-CandidateContest	US President (IA)	President ( 1)
-CandidateContest	IA Governor	Governor/Lieutenant Governor ( 1)
-CandidateContest	US Senate IA	United States Senator ( 1)
-CandidateContest	IA Attorney General	Attorney General ( 1)
-CandidateContest	IA Treasurer of State	Treasurer of State ( 1)
-CandidateContest	IA Secretary of State	Secretary of State ( 1)
-CandidateContest	IA Secretary of Agriculture	Secretary of Agriculture ( 1)
-CandidateContest	IA Auditor of State	Auditor of State ( 1)
+CandidateContest	IA House District 1	State Representative District 1
+CandidateContest	IA House District 2	State Representative District 2
+CandidateContest	IA House District 3	State Representative District 3
+CandidateContest	IA House District 4	State Representative District 4
+CandidateContest	IA House District 5	State Representative District 5
+CandidateContest	IA House District 6	State Representative District 6
+CandidateContest	IA House District 7	State Representative District 7
+CandidateContest	IA House District 8	State Representative District 8
+CandidateContest	IA House District 9	State Representative District 9
+CandidateContest	IA House District 10	State Representative District 10
+CandidateContest	IA House District 11	State Representative District 11
+CandidateContest	IA House District 12	State Representative District 12
+CandidateContest	IA House District 13	State Representative District 13
+CandidateContest	IA House District 14	State Representative District 14
+CandidateContest	IA House District 15	State Representative District 15
+CandidateContest	IA House District 16	State Representative District 16
+CandidateContest	IA House District 17	State Representative District 17
+CandidateContest	IA House District 18	State Representative District 18
+CandidateContest	IA House District 19	State Representative District 19
+CandidateContest	IA House District 20	State Representative District 20
+CandidateContest	IA House District 21	State Representative District 21
+CandidateContest	IA House District 22	State Representative District 22
+CandidateContest	IA House District 23	State Representative District 23
+CandidateContest	IA House District 24	State Representative District 24
+CandidateContest	IA House District 25	State Representative District 25
+CandidateContest	IA House District 26	State Representative District 26
+CandidateContest	IA House District 27	State Representative District 27
+CandidateContest	IA House District 28	State Representative District 28
+CandidateContest	IA House District 29	State Representative District 29
+CandidateContest	IA House District 30	State Representative District 30
+CandidateContest	IA House District 31	State Representative District 31
+CandidateContest	IA House District 32	State Representative District 32
+CandidateContest	IA House District 33	State Representative District 33
+CandidateContest	IA House District 34	State Representative District 34
+CandidateContest	IA House District 35	State Representative District 35
+CandidateContest	IA House District 36	State Representative District 36
+CandidateContest	IA House District 37	State Representative District 37
+CandidateContest	IA House District 38	State Representative District 38
+CandidateContest	IA House District 39	State Representative District 39
+CandidateContest	IA House District 40	State Representative District 40
+CandidateContest	IA House District 41	State Representative District 41
+CandidateContest	IA House District 42	State Representative District 42
+CandidateContest	IA House District 43	State Representative District 43
+CandidateContest	IA House District 44	State Representative District 44
+CandidateContest	IA House District 45	State Representative District 45
+CandidateContest	IA House District 46	State Representative District 46
+CandidateContest	IA House District 47	State Representative District 47
+CandidateContest	IA House District 48	State Representative District 48
+CandidateContest	IA House District 49	State Representative District 49
+CandidateContest	IA House District 50	State Representative District 50
+CandidateContest	IA House District 51	State Representative District 51
+CandidateContest	IA House District 52	State Representative District 52
+CandidateContest	IA House District 53	State Representative District 53
+CandidateContest	IA House District 54	State Representative District 54
+CandidateContest	IA House District 55	State Representative District 55
+CandidateContest	IA House District 56	State Representative District 56
+CandidateContest	IA House District 57	State Representative District 57
+CandidateContest	IA House District 58	State Representative District 58
+CandidateContest	IA House District 59	State Representative District 59
+CandidateContest	IA House District 60	State Representative District 60
+CandidateContest	IA House District 61	State Representative District 61
+CandidateContest	IA House District 62	State Representative District 62
+CandidateContest	IA House District 63	State Representative District 63
+CandidateContest	IA House District 64	State Representative District 64
+CandidateContest	IA House District 65	State Representative District 65
+CandidateContest	IA House District 66	State Representative District 66
+CandidateContest	IA House District 67	State Representative District 67
+CandidateContest	IA House District 68	State Representative District 68
+CandidateContest	IA House District 69	State Representative District 69
+CandidateContest	IA House District 70	State Representative District 70
+CandidateContest	IA House District 71	State Representative District 71
+CandidateContest	IA House District 72	State Representative District 72
+CandidateContest	IA House District 73	State Representative District 73
+CandidateContest	IA House District 74	State Representative District 74
+CandidateContest	IA House District 75	State Representative District 75
+CandidateContest	IA House District 76	State Representative District 76
+CandidateContest	IA House District 77	State Representative District 77
+CandidateContest	IA House District 78	State Representative District 78
+CandidateContest	IA House District 79	State Representative District 79
+CandidateContest	IA House District 80	State Representative District 80
+CandidateContest	IA House District 81	State Representative District 81
+CandidateContest	IA House District 82	State Representative District 82
+CandidateContest	IA House District 83	State Representative District 83
+CandidateContest	IA House District 84	State Representative District 84
+CandidateContest	IA House District 85	State Representative District 85
+CandidateContest	IA House District 86	State Representative District 86
+CandidateContest	IA House District 87	State Representative District 87
+CandidateContest	IA House District 88	State Representative District 88
+CandidateContest	IA House District 89	State Representative District 89
+CandidateContest	IA House District 90	State Representative District 90
+CandidateContest	IA House District 91	State Representative District 91
+CandidateContest	IA House District 92	State Representative District 92
+CandidateContest	IA House District 93	State Representative District 93
+CandidateContest	IA House District 94	State Representative District 94
+CandidateContest	IA House District 95	State Representative District 95
+CandidateContest	IA House District 96	State Representative District 96
+CandidateContest	IA House District 97	State Representative District 97
+CandidateContest	IA House District 98	State Representative District 98
+CandidateContest	IA House District 99	State Representative District 99
+CandidateContest	IA House District 100	State Representative District 100
+CandidateContest	IA Senate District 1	State Senator District 1
+CandidateContest	IA Senate District 2	State Senator District 2
+CandidateContest	IA Senate District 3	State Senator District 3
+CandidateContest	IA Senate District 4	State Senator District 4
+CandidateContest	IA Senate District 5	State Senator District 5
+CandidateContest	IA Senate District 6	State Senator District 6
+CandidateContest	IA Senate District 7	State Senator District 7
+CandidateContest	IA Senate District 8	State Senator District 8
+CandidateContest	IA Senate District 9	State Senator District 9
+CandidateContest	IA Senate District 10	State Senator District 10
+CandidateContest	IA Senate District 11	State Senator District 11
+CandidateContest	IA Senate District 12	State Senator District 12
+CandidateContest	IA Senate District 13	State Senator District 13
+CandidateContest	IA Senate District 14	State Senator District 14
+CandidateContest	IA Senate District 15	State Senator District 15
+CandidateContest	IA Senate District 16	State Senator District 16
+CandidateContest	IA Senate District 17	State Senator District 17
+CandidateContest	IA Senate District 18	State Senator District 18
+CandidateContest	IA Senate District 19	State Senator District 19
+CandidateContest	IA Senate District 20	State Senator District 20
+CandidateContest	IA Senate District 21	State Senator District 21
+CandidateContest	IA Senate District 22	State Senator District 22
+CandidateContest	IA Senate District 23	State Senator District 23
+CandidateContest	IA Senate District 24	State Senator District 24
+CandidateContest	IA Senate District 25	State Senator District 25
+CandidateContest	IA Senate District 26	State Senator District 26
+CandidateContest	IA Senate District 27	State Senator District 27
+CandidateContest	IA Senate District 28	State Senator District 28
+CandidateContest	IA Senate District 29	State Senator District 29
+CandidateContest	IA Senate District 30	State Senator District 30
+CandidateContest	IA Senate District 31	State Senator District 31
+CandidateContest	IA Senate District 32	State Senator District 32
+CandidateContest	IA Senate District 33	State Senator District 33
+CandidateContest	IA Senate District 34	State Senator District 34
+CandidateContest	IA Senate District 35	State Senator District 35
+CandidateContest	IA Senate District 36	State Senator District 36
+CandidateContest	IA Senate District 37	State Senator District 37
+CandidateContest	IA Senate District 38	State Senator District 38
+CandidateContest	IA Senate District 39	State Senator District 39
+CandidateContest	IA Senate District 40	State Senator District 40
+CandidateContest	IA Senate District 41	State Senator District 41
+CandidateContest	IA Senate District 42	State Senator District 42
+CandidateContest	IA Senate District 43	State Senator District 43
+CandidateContest	IA Senate District 44	State Senator District 44
+CandidateContest	IA Senate District 45	State Senator District 45
+CandidateContest	IA Senate District 46	State Senator District 46
+CandidateContest	IA Senate District 47	State Senator District 47
+CandidateContest	IA Senate District 48	State Senator District 48
+CandidateContest	IA Senate District 49	State Senator District 49
+CandidateContest	IA Senate District 50	State Senator District 50
+CandidateContest	US House IA District 1	United States Representative District 1
+CandidateContest	US House IA District 2	United States Representative District 2
+CandidateContest	US House IA District 3	United States Representative District 3
+CandidateContest	US House IA District 4	United States Representative District 4
+CandidateContest	US President (IA)	President
+CandidateContest	IA Governor	Governor/Lieutenant Governor
+CandidateContest	US Senate IA	United States Senator
+CandidateContest	IA Attorney General	Attorney General
+CandidateContest	IA Treasurer of State	Treasurer of State
+CandidateContest	IA Secretary of State	Secretary of State
+CandidateContest	IA Secretary of Agriculture	Secretary of Agriculture
+CandidateContest	IA Auditor of State	Auditor of State
 Party	Democratic Party	Democratic
 Party	Republican Party	Republican
 Party	Libertarian Party	Libertarian
