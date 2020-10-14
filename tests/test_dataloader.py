@@ -1119,9 +1119,9 @@ def test_ar_presidential_20():
         check_contest_totals(
             "2020 Primary",
             "Arkansas",
-            "US President (AR)",
+            "US President (AR) (Republican Party)",
         )
-        == 4799284
+        == 246037
     )
 
 @pytest.mark.skipif(not ok["ar20p"], reason="No AR 2020 Primary data")
@@ -1171,7 +1171,7 @@ def test_ar_contest_by_vote_type_20():
 
 @pytest.mark.skipif(not ok["ar20p"], reason="No AR 2020 Primary data")
 def test_ar_totals_match_vote_type_20():
-    assert check_totals_match_vote_types("2020 General", "Arkansas") == True
+    assert check_totals_match_vote_types("2020 Primary", "Arkansas") == True
 
 
 ### Michigan Data Loading Tests ###
