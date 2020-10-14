@@ -1,5 +1,5 @@
 cdf_element	cdf_internal_name	raw_identifier_value
-CountItemType	total	VOTE_TOTAL
+CountItemType	total	total
 CandidateContest	CA House District 1	State Assembly Member District 1
 CandidateContest	CA House District 2	State Assembly Member District 2
 CandidateContest	CA House District 3	State Assembly Member District 3
