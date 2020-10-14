@@ -668,6 +668,55 @@ def test_ga_presidential_16():
         == 2739007
     )
 
+@pytest.mark.skipif(not ok["ga18g"], reason="No GA 2018 General data")
+def test_ga_statewide_totals_18():
+    assert (
+        check_contest_totals(
+            "2018 General",
+            "Georgia",
+            "GA Governor",
+        )
+        == 3939328
+    )
+
+@pytest.mark.skipif(not ok["ga18g"], reason="No GA 2018 General data")
+def test_ga_senate_totals_18():
+    assert (
+        check_contest_totals(
+            "2018 General",
+            "Georgia",
+            "GA Senate District 5",
+        )
+        == 34429
+    )
+
+@pytest.mark.skipif(not ok["ga18g"], reason="No GA 2018 General data")
+def test_ga_house_totals_18():
+    assert (
+        check_contest_totals(
+            "2018 General",
+            "Georgia",
+            "US House GA District 2",
+        )
+        == 229171
+    )
+
+@pytest.mark.skipif(not ok["ga18g"], reason="No GA 2018 General data")
+def test_ga_contest_by_vote_type_18():
+    assert (
+        check_count_type_totals(
+            "2018 General",
+            "Georgia",
+            "GA Senate District 5",
+            "absentee-mail",
+        )
+        == 2335
+    )
+
+@pytest.mark.skipif(not ok["ga18g"], reason="No GA 2018 General data")
+def test_ga_totals_match_vote_type_18():
+    assert check_totals_match_vote_types("2018 General", "Georgia") == True
+
 #GA18
 @pytest.mark.skipif(not ok["ga18g"], reason="No GA 2018 General data")
 def test_ga_presidential_18():
@@ -727,35 +776,65 @@ def test_ga_totals_match_vote_type_18():
 
 ### South Carolina Data Loading Tests ###
 #SC20 test
-@pytest.mark.skipif(not ok["sc20ppp"], reason="No SC PPP data")
-def test_sc_presidential():
-    #only 2020 democratic presidental primary results loaded
-    assert True == True
+@pytest.mark.skipif(not ok["sc20p"], reason="No SC Primary data")
+def test_sc_presidential_20():
+    assert (
+        check_contest_totals(
+            "2020 Primary",
+            "South Carolina",
+            "US President (SC) (Republican Party)",
+        )
+        == 469043
+    )
 
-@pytest.mark.skipif(not ok["sc20ppp"], reason="No SC PPP data")
-def test_sc_statewide_totals():
-    #only 2020 democratic presidental primary results loaded
-    assert True == True
+@pytest.mark.skipif(not ok["sc20p"], reason="No SC Primary data")
+def test_sc_statewide_20():
+    assert (
+        check_contest_totals(
+            "2020 Primary",
+            "South Carolina",
+            "US President SC (Republican Party)",
+        )
+        == 469043
+    )
 
-@pytest.mark.skipif(not ok["sc20ppp"], reason="No SC PPP data")
-def test_sc_senate_totals():
-    #only 2020 democratic presidental primary results loaded
-    assert True == True
+@pytest.mark.skipif(not ok["sc20p"], reason="No SC Primary data")
+def test_sc_senate_totals_20():
+    assert (
+        check_contest_totals(
+            "2020 Primary",
+            "South Carolina",
+            "SC Senate District 8 (Republican Party)",
+        )
+        == 13838
+    )
 
-@pytest.mark.skipif(not ok["sc20ppp"], reason="No SC PPP data")
-def test_sc_house_totals():
-    #only 2020 democratic presidental primary results loaded
-    assert True == True
+@pytest.mark.skipif(not ok["sc20p"], reason="No SC Primary data")
+def test_sc_house_totals_20():
+    assert (
+        check_contest_totals(
+            "2016 General",
+            "South Carolina",
+            "SC House District 75 (Democratic Party)",
+        )
+        == 3863
+    )
 
-@pytest.mark.skipif(not ok["sc20ppp"], reason="No SC PPP data")
-def test_sc_contest_by_vote_type():
-    #only 2020 democratic presidental primary results loaded
-    assert True == True
+@pytest.mark.skipif(not ok["sc20p"], reason="No SC Primary data")
+def test_sc_contest_by_vote_type_20():
+    assert (
+        check_count_type_totals(
+            "2020 Primary",
+            "South Carolina",
+            "SC House District 75 (Democratic Party)",
+            "Absentee By Mail",
+        )
+        == 1106
+    )
 
-@pytest.mark.skipif(not ok["sc20ppp"], reason="No SC PPP data")
-def test_sc_totals_match_vote_type():
-    #only 2020 democratic presidental primary results loaded
-    assert True == True
+@pytest.mark.skipif(not ok["sc20p"], reason="No SC Primary data")
+def test_sc_totals_match_vote_type_20():
+    assert check_totals_match_vote_types("2020 Primary", "North Carolina") == True
 
 
 ### Indiana Data Loading Tests ###
