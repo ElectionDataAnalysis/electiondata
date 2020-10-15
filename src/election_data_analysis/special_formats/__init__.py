@@ -328,7 +328,7 @@ def read_xml(fpath: str, err: Optional[Dict]) -> (pd.DataFrame, Optional[Dict]):
         'jurisdiction': {'ReportingUnit': 'name'},
         'voteType': {'CountItemType': 'voteTypeName', 'Count': 'votes'},
         'contest': {'CandidateContest': 'contestLongName'},
-        'choice': {'Candidate': 'choiceName'},
+        'choice': {'Candidate': 'choiceName','Party':'party'},
     }
     db_elements = {k2 for k, v in vc_field.items() for k2 in v.keys()}
 
