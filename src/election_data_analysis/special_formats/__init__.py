@@ -79,6 +79,9 @@ def read_alternate_munger(
         raw_results, err = read_concatenated_blocks(f_path, munger, err)
     elif file_type in ["xls-multi"]:
         raw_results, err = read_multi_sheet_excel(f_path, munger, err)
+    elif file_type in ["xml"]:
+        vc_field = get_vc_field_from_munger(munger)
+        raw_results, err = read_xml(f_path, err, vc_field)
     else:
         err = ui.add_new_error(
             err,
@@ -323,13 +326,11 @@ def add_info(node: et.Element, info: dict, vc_field: dict) -> dict:
     return info
 
 
-def read_xml(fpath: str, err: Optional[Dict]) -> (pd.DataFrame, Optional[Dict]):
-    vc_field = {
-        'jurisdiction': {'ReportingUnit': 'name'},
-        'voteType': {'CountItemType': 'voteTypeName', 'Count': 'votes'},
-        'contest': {'CandidateContest': 'contestLongName'},
-        'choice': {'Candidate': 'choiceName','Party':'party'},
-    }
+def read_xml(
+        fpath: str,
+        err: Optional[Dict],
+        vc_field: dict,
+) -> (pd.DataFrame, Optional[Dict]):
     db_elements = {k2 for k, v in vc_field.items() for k2 in v.keys()}
 
     try:
@@ -362,3 +363,22 @@ def read_xml(fpath: str, err: Optional[Dict]) -> (pd.DataFrame, Optional[Dict]):
             f"Error munging xml: {e}"
         )
         return pd.DataFrame(), err
+
+
+def get_vc_field_from_munger(mu: jm.Munger) -> dict:
+    # TODO error handling
+    vc_field = {
+        'jurisdiction': {'ReportingUnit': 'name'},
+        'voteType': {'CountItemType': 'voteTypeName', 'Count': 'votes'},
+        'contest': {'CandidateContest': 'contestLongName'},
+        'choice': {'Candidate': 'choiceName', 'Party': 'party'},
+    }
+    vcf = dict()
+    # TODO do relevant checks on munger files so this doesn't error
+    for i, r in mu.cdf_elements.iterrow():
+        for tag, field in r["fields"].split("."):
+            if tag in vcf.keys():
+                vcf[tag][r["name"]] = field
+            else:
+                vcf[tag] = {r["name"]: field}
+    return vcf

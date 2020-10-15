@@ -378,12 +378,13 @@ def read_single_datafile(
         elif munger.file_type in ["json"]:
             kwargs["encoding"] = munger.encoding
             df= pd.read_json(f_path, **kwargs)
-        elif munger.file_type in ["concatenated-blocks", "xls-multi"]:
+        elif munger.file_type in ["concatenated-blocks", "xls-multi", "xml"]:
             err = add_new_error(
                 err,
                 "system",
                 "user_interface.read_single_datafile",
-                f"Munger ({munger.name}) with file_type {munger.file_type} should not have reached this part of the code.",
+                f"Munger ({munger.name}) with file_type {munger.file_type} "
+                f"should not have reached this part of the code.",
             )
             return pd.DataFrame(), err
         else:
@@ -448,7 +449,7 @@ def read_combine_results(
     aux_data_path: str = None,
 ) -> (pd.DataFrame, dict):
     # if results are not a flat file type or json
-    if mu.options["file_type"] in ["concatenated-blocks", "xls-multi"]:
+    if mu.options["file_type"] in ["concatenated-blocks", "xls-multi", "xml"]:
         working, new_err = sf.read_alternate_munger(
             mu.options["file_type"],
             results_file_path,
