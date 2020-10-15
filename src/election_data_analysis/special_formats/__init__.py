@@ -1,6 +1,8 @@
 import pandas as pd
 import io
+import xml.etree.ElementTree as et
 from pathlib import Path
+from typing import Optional, Dict, List
 from election_data_analysis import munge as m
 from election_data_analysis import juris_and_munger as jm
 from election_data_analysis import user_interface as ui
@@ -313,3 +315,50 @@ def read_multi_sheet_excel(
                 f"Unexpected exception while processing sheet {sh}: {e}"
             )
     return raw_results, err
+
+
+def add_info(node: et.Element, info: dict, vc_field: dict) -> dict:
+    for k in vc_field[node.tag].keys():
+        info[k] = node.attrib[vc_field[node.tag][k]]
+    return info
+
+
+def read_xml(fpath: str, err: Optional[Dict]) -> (pd.DataFrame, Optional[Dict]):
+    vc_field = {
+        'jurisdiction': {'ReportingUnit': 'name'},
+        'voteType': {'CountItemType': 'voteTypeName', 'Count': 'votes'},
+        'contest': {'CandidateContest': 'contestLongName'},
+        'choice': {'Candidate': 'choiceName'},
+    }
+    db_elements = {k2 for k, v in vc_field.items() for k2 in v.keys()}
+
+    try:
+        tree = et.parse(fpath)
+    except FileNotFoundError:
+        err = ui.add_new_error(
+            err,
+            "file",
+            Path(fpath).name,
+            "File not found"
+        )
+        return pd.DataFrame(), err
+
+    try:
+        vc_record_list = []
+        info = dict()
+        for node in tree.iter():  # depth-first search, what we want!
+            if node.tag in vc_field.keys():
+                if set(info.keys()) == db_elements:
+                    # record should be complete: add it to the list
+                    print(info)
+                    vc_record_list.append(info)
+                info = add_info(node, info, vc_field)
+                raw_results = pd.DataFrame(vc_record_list)
+                return raw_results, err
+    except Exception as e:
+        err = ui.add_new_error(
+            err,
+            "munger",
+            f"Error munging xml: {e}"
+        )
+        return pd.DataFrame(), err
