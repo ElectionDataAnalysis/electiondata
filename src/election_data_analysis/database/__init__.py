@@ -779,9 +779,11 @@ def get_input_options(session, input, verbose):
             result = session.execute(
                 f"""
                 SELECT  e."Id" AS parent, "Name" AS name, "Txt" as type
-                FROM    "Election" e
-                        JOIN "ElectionType" et on e."ElectionType_Id" = et."Id"
+                FROM    "VoteCount" vc
+                        JOIN "Election" e ON vc."Election_Id" = e."Id"
+                        JOIN "ElectionType" et ON e."ElectionType_Id" = et."Id"
                 WHERE   "Name" != 'none or unknown'
+                GROUP BY e."Id", "Name", "Txt"
                 ORDER BY LEFT("Name", 4) DESC, RIGHT("Name", LENGTH("Name") - 5)
             """
             )
