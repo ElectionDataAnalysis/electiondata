@@ -248,6 +248,8 @@ def create_scatter(
 
 def package_results(data, jurisdiction, x, y, restrict=None):
     results = {"jurisdiction": jurisdiction, "x": x, "y": y, "counts": []}
+    if restrict and len(data.index) > restrict:
+        data = get_remaining_averages(data, restrict)
     for i, row in data.iterrows():
         total = row[x] + row[y]
         if total == 0:
@@ -264,8 +266,6 @@ def package_results(data, jurisdiction, x, y, restrict=None):
                 "y_pct": y_pct,
             }
         )
-        if restrict and i == (restrict - 1):
-            break
     return results
 
 
@@ -954,3 +954,19 @@ def sort_pivot_by_margins(df):
     remainder_df.index = remainder_df.index + 1
 
     return pd.concat([anomalous_df, remainder_df])
+
+def get_remaining_averages(df, restrict):
+    """ Take a dataframe and keep a number of the rows as-is up to the restrict
+    number. The remaining rows get aggregated, either summed by the vote counts
+    or averaged for the other metrics."""
+    columns = df.columns.to_list()
+    columns.remove("Name")
+    df[columns] = df[columns].apply(pd.to_numeric) 
+
+    actual_df = df.iloc[0:restrict-1, :]
+    average_df = df.iloc[restrict-1:, :].copy()
+    
+    average_df["Name"] = "Average of all others"
+    average_df = average_df.groupby("Name").mean().reset_index()
+    average_df.index = [restrict-1]
+    return pd.concat([actual_df, average_df])
