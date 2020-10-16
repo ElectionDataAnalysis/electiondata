@@ -466,6 +466,16 @@ def read_combine_results(
         mu.options["header_row_count"] = 1
         mu.options["field_name_row"] = 0
 
+        if mu.file_type == "xml":
+            # TODO tech debt some of this may not be necessary
+            # change formulas in cdf_elements to match column names inserted by read_xml
+            mu.cdf_elements["idx"] = mu.cdf_elements.index
+            mu.cdf_elements["fields"] = mu.cdf_elements["idx"].apply(lambda x: [x])
+            mu.cdf_elements["raw_identifier_formula"] = mu.cdf_elements["idx"].apply(lambda x: f"<{x}_SOURCE>")
+            mu.cdf_elements.drop("idx",axis=1,inplace=True)
+            mu.field_list = list(mu.cdf_elements.index.unique())
+            mu.cdf_elements["source"] = "row"
+
     # if results are a flat file or json
     else:
         try:

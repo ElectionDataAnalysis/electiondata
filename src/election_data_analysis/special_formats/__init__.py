@@ -321,9 +321,16 @@ def read_multi_sheet_excel(
 
 
 def add_info(node: et.Element, info: dict, vc_field: dict) -> dict:
+    new_info = info.copy()
     for k in vc_field[node.tag].keys():
-        info[k] = node.attrib[vc_field[node.tag][k]]
-    return info
+        if k == "count":
+            # read value as integer
+            new_info[k] = int(node.attrib[vc_field[node.tag][k]])
+        else:
+            # read value as string
+            new_info[k] = node.attrib[vc_field[node.tag][k]]
+    changed = (new_info != info)
+    return new_info, changed
 
 
 def read_xml(
@@ -348,37 +355,42 @@ def read_xml(
         vc_record_list = []
         info = dict()
         for node in tree.iter():  # depth-first search, what we want!
+
             if node.tag in vc_field.keys():
-                if set(info.keys()) == db_elements:
-                    # record should be complete: add it to the list
-                    print(info)
-                    vc_record_list.append(info)
-                info = add_info(node, info, vc_field)
-                raw_results = pd.DataFrame(vc_record_list)
-                return raw_results, err
+                info, changed = add_info(node, info, vc_field)
+                # if record is both complete and new
+                if changed and set(info.keys()) == db_elements:
+                    # put record in list of records to be returned
+                    vc_record_list.append(info.copy())
+                    # delete the count from the info (to avoid entering count twice)
+                    info.pop("count")
+        raw_results = pd.DataFrame(vc_record_list)
+
     except Exception as e:
         err = ui.add_new_error(
             err,
             "munger",
             f"Error munging xml: {e}"
         )
-        return pd.DataFrame(), err
+        raw_results = pd.DataFrame()
+    return raw_results, err
 
 
 def get_vc_field_from_munger(mu: jm.Munger) -> dict:
     # TODO error handling
-    vc_field = {
-        'jurisdiction': {'ReportingUnit': 'name'},
-        'voteType': {'CountItemType': 'voteTypeName', 'Count': 'votes'},
-        'contest': {'CandidateContest': 'contestLongName'},
-        'choice': {'Candidate': 'choiceName', 'Party': 'party'},
-    }
     vcf = dict()
     # TODO do relevant checks on munger files so this doesn't error
-    for i, r in mu.cdf_elements.iterrow():
-        for tag, field in r["fields"].split("."):
+    for col in mu.options["count_columns_by_name"]:
+        tag, field = col.split(".")
+        if tag in vcf.keys():
+            vcf[tag]["count"] = field
+        else:
+            vcf[tag] = {"count": field}
+    for i, r in mu.cdf_elements.iterrows():
+        for fld in r["fields"]:
+            tag, field = fld.split(".")
             if tag in vcf.keys():
-                vcf[tag][r["name"]] = field
+                vcf[tag][i] = field
             else:
-                vcf[tag] = {r["name"]: field}
+                vcf[tag] = {i: field}
     return vcf
