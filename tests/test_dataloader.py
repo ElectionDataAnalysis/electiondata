@@ -124,7 +124,8 @@ ok = {
     "de20ppp": data_exists('2020 Presidential Preference Primary','Delaware'),
     "de20pri": data_exists('2020 Primary','Delaware'),
     "oh16g": data_exists('2016 General','Ohio'),
-    "sc18g": data_exists("2018 General", "South Carolina")
+    "sc18g": data_exists("2018 General", "South Carolina"),
+    "az20p": data_exists("2020 Primary", "Arizona")
 }
 
 print(ok)
@@ -725,3 +726,61 @@ def test_sc18g_contest_by_vote_type():
 def test_sc18g_totals_match_vote_type():
     assert check_totals_match_vote_types("2018 General", "South Carolina") == True
 
+## AZ 2020 Pri
+@pytest.mark.skipif(not ok["az20p"], reason="No AZ 2020 Primary data")
+def test_az20p_presidential():
+    # Presidential primary results not loaded as of 2020-10-15
+    assert True == True
+
+
+@pytest.mark.skipif(not ok["az20p"], reason="No AZ 2020 Primary data")
+def test_az20p_statewide_totals():
+    assert (
+        check_contest_totals(
+            "2020 Primary",
+            "Arizona",
+            "US Senate AZ (Republican Party)",
+        )
+        == 181511 + 551119
+    )
+
+
+@pytest.mark.skipif(not ok["az20p"], reason="No AZ 2020 Primary data")
+def test_az20p_senate_totals():
+    assert (
+        check_contest_totals(
+            "2020 Primary",
+            "Arizona",
+            "AZ Senate District 3 (Democratic Party)",
+        )
+        == 25471
+    )
+
+@pytest.mark.skipif(not ok["az20p"], reason="No AZ 2020 Primary data")
+def test_az20p_house_totals():
+    assert (
+        check_contest_totals(
+            "2020 Primary",
+            "Arizona",
+            "AZ House District 8 (Democratic Party)",
+        )
+        == 13727
+    )
+
+
+@pytest.mark.skipif(not ok["az20p"], reason="No AZ 2020 Primary data")
+def test_az20p_contest_by_vote_type():
+    assert (
+        check_count_type_totals(
+            "2020 Primary",
+            "Arizona",
+            "US House AZ District 4 (Republican Party)",
+            "provisional",
+        )
+        == 574 + 266
+    )
+
+
+@pytest.mark.skipif(not ok["az20p"], reason="No AZ 2020 Primary data")
+def test_az20p_totals_match_vote_type():
+    assert check_totals_match_vote_types("2020 Primary", "Arizona") == True
