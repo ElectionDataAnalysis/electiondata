@@ -1,0 +1,237 @@
+cdf_element	cdf_internal_name	raw_identifier_value
+CandidateContest	AZ House District 1	State Representative - District No.  1
+CandidateContest	AZ House District 2	State Representative - District No.  2
+CandidateContest	AZ House District 3	State Representative - District No.  3
+CandidateContest	AZ House District 4	State Representative - District No.  4
+CandidateContest	AZ House District 5	State Representative - District No.  5
+CandidateContest	AZ House District 6	State Representative - District No.  6
+CandidateContest	AZ House District 7	State Representative - District No.  7
+CandidateContest	AZ House District 8	State Representative - District No.  8
+CandidateContest	AZ House District 9	State Representative - District No.  9
+CandidateContest	AZ House District 10	State Representative - District No.  10
+CandidateContest	AZ House District 11	State Representative - District No.  11
+CandidateContest	AZ House District 12	State Representative - District No.  12
+CandidateContest	AZ House District 13	State Representative - District No.  13
+CandidateContest	AZ House District 14	State Representative - District No.  14
+CandidateContest	AZ House District 15	State Representative - District No.  15
+CandidateContest	AZ House District 16	State Representative - District No.  16
+CandidateContest	AZ House District 17	State Representative - District No.  17
+CandidateContest	AZ House District 18	State Representative - District No.  18
+CandidateContest	AZ House District 19	State Representative - District No.  19
+CandidateContest	AZ House District 20	State Representative - District No.  20
+CandidateContest	AZ House District 21	State Representative - District No.  21
+CandidateContest	AZ House District 22	State Representative - District No.  22
+CandidateContest	AZ House District 23	State Representative - District No.  23
+CandidateContest	AZ House District 24	State Representative - District No.  24
+CandidateContest	AZ House District 25	State Representative - District No.  25
+CandidateContest	AZ House District 26	State Representative - District No.  26
+CandidateContest	AZ House District 27	State Representative - District No.  27
+CandidateContest	AZ House District 28	State Representative - District No.  28
+CandidateContest	AZ House District 29	State Representative - District No.  29
+CandidateContest	AZ House District 30	State Representative - District No.  30
+CandidateContest	AZ House District 31	State Representative - District No.  31
+CandidateContest	AZ House District 32	State Representative - District No.  32
+CandidateContest	AZ House District 33	State Representative - District No.  33
+CandidateContest	AZ House District 34	State Representative - District No.  34
+CandidateContest	AZ House District 35	State Representative - District No.  35
+CandidateContest	AZ House District 36	State Representative - District No.  36
+CandidateContest	AZ House District 37	State Representative - District No.  37
+CandidateContest	AZ House District 38	State Representative - District No.  38
+CandidateContest	AZ House District 39	State Representative - District No.  39
+CandidateContest	AZ House District 40	State Representative - District No.  40
+CandidateContest	AZ House District 41	State Representative - District No.  41
+CandidateContest	AZ House District 42	State Representative - District No.  42
+CandidateContest	AZ House District 43	State Representative - District No.  43
+CandidateContest	AZ House District 44	State Representative - District No.  44
+CandidateContest	AZ House District 45	State Representative - District No.  45
+CandidateContest	AZ House District 46	State Representative - District No.  46
+CandidateContest	AZ House District 47	State Representative - District No.  47
+CandidateContest	AZ House District 48	State Representative - District No.  48
+CandidateContest	AZ House District 49	State Representative - District No.  49
+CandidateContest	AZ House District 50	State Representative - District No.  50
+CandidateContest	AZ House District 51	State Representative - District No.  51
+CandidateContest	AZ House District 52	State Representative - District No.  52
+CandidateContest	AZ House District 53	State Representative - District No.  53
+CandidateContest	AZ House District 54	State Representative - District No.  54
+CandidateContest	AZ House District 55	State Representative - District No.  55
+CandidateContest	AZ House District 56	State Representative - District No.  56
+CandidateContest	AZ House District 57	State Representative - District No.  57
+CandidateContest	AZ House District 58	State Representative - District No.  58
+CandidateContest	AZ House District 59	State Representative - District No.  59
+CandidateContest	AZ House District 60	State Representative - District No.  60
+CandidateContest	AZ Senate District 1	State Senator - District No.  1
+CandidateContest	AZ Senate District 2	State Senator - District No.  2
+CandidateContest	AZ Senate District 3	State Senator - District No.  3
+CandidateContest	AZ Senate District 4	State Senator - District No.  4
+CandidateContest	AZ Senate District 5	State Senator - District No.  5
+CandidateContest	AZ Senate District 6	State Senator - District No.  6
+CandidateContest	AZ Senate District 7	State Senator - District No.  7
+CandidateContest	AZ Senate District 8	State Senator - District No.  8
+CandidateContest	AZ Senate District 9	State Senator - District No.  9
+CandidateContest	AZ Senate District 10	State Senator - District No.  10
+CandidateContest	AZ Senate District 11	State Senator - District No.  11
+CandidateContest	AZ Senate District 12	State Senator - District No.  12
+CandidateContest	AZ Senate District 13	State Senator - District No.  13
+CandidateContest	AZ Senate District 14	State Senator - District No.  14
+CandidateContest	AZ Senate District 15	State Senator - District No.  15
+CandidateContest	AZ Senate District 16	State Senator - District No.  16
+CandidateContest	AZ Senate District 17	State Senator - District No.  17
+CandidateContest	AZ Senate District 18	State Senator - District No.  18
+CandidateContest	AZ Senate District 19	State Senator - District No.  19
+CandidateContest	AZ Senate District 20	State Senator - District No.  20
+CandidateContest	AZ Senate District 21	State Senator - District No.  21
+CandidateContest	AZ Senate District 22	State Senator - District No.  22
+CandidateContest	AZ Senate District 23	State Senator - District No.  23
+CandidateContest	AZ Senate District 24	State Senator - District No.  24
+CandidateContest	AZ Senate District 25	State Senator - District No.  25
+CandidateContest	AZ Senate District 26	State Senator - District No.  26
+CandidateContest	AZ Senate District 27	State Senator - District No.  27
+CandidateContest	AZ Senate District 28	State Senator - District No.  28
+CandidateContest	AZ Senate District 29	State Senator - District No.  29
+CandidateContest	AZ Senate District 30	State Senator - District No.  30
+CandidateContest	US House AZ District 1	U.S. Representative in Congress - District No. 1
+CandidateContest	US House AZ District 2	U.S. Representative in Congress - District No. 2
+CandidateContest	US House AZ District 3	U.S. Representative in Congress - District No. 3
+CandidateContest	US House AZ District 4	U.S. Representative in Congress - District No. 4
+CandidateContest	US House AZ District 5	U.S. Representative in Congress - District No. 5
+CandidateContest	US House AZ District 6	U.S. Representative in Congress - District No. 6
+CandidateContest	US House AZ District 7	U.S. Representative in Congress - District No. 7
+CandidateContest	US House AZ District 8	U.S. Representative in Congress - District No. 8
+CandidateContest	US House AZ District 9	U.S. Representative in Congress - District No. 9
+CandidateContest	US President (AZ)	US President (AZ)
+CandidateContest	AZ Governor	AZ Governor
+CandidateContest	US Senate AZ	U.S. Senator
+CandidateContest	AZ Corporation Commissioner	Corporation Commissioner
+CandidateContest	AZ Attorney General	AZ Attorney General
+CandidateContest	AZ Lieutenant Governor	AZ Lieutenant Governor
+CandidateContest	AZ Treasurer	AZ Treasurer
+CandidateContest	AZ Secretary of State	AZ Secretary of State
+Election	2020 General	2020 General
+Election	2020 Primary	2020 Primary
+Election	2018 General	2018 General
+Election	2016 General	2016 General
+Party	Democratic Party	Democratic Party
+Party	Democratic Party	DEM
+Party	Republican Party	Republican Party
+Party	Republican Party	REP
+Party	Green Party	Green Party
+Party	Libertarian Party	LBT
+ReportingUnit	Arizona;AZ House District 1	Arizona;AZ House District 1
+ReportingUnit	Arizona;AZ House District 2	Arizona;AZ House District 2
+ReportingUnit	Arizona;AZ House District 3	Arizona;AZ House District 3
+ReportingUnit	Arizona;AZ House District 4	Arizona;AZ House District 4
+ReportingUnit	Arizona;AZ House District 5	Arizona;AZ House District 5
+ReportingUnit	Arizona;AZ House District 6	Arizona;AZ House District 6
+ReportingUnit	Arizona;AZ House District 7	Arizona;AZ House District 7
+ReportingUnit	Arizona;AZ House District 8	Arizona;AZ House District 8
+ReportingUnit	Arizona;AZ House District 9	Arizona;AZ House District 9
+ReportingUnit	Arizona;AZ House District 10	Arizona;AZ House District 10
+ReportingUnit	Arizona;AZ House District 11	Arizona;AZ House District 11
+ReportingUnit	Arizona;AZ House District 12	Arizona;AZ House District 12
+ReportingUnit	Arizona;AZ House District 13	Arizona;AZ House District 13
+ReportingUnit	Arizona;AZ House District 14	Arizona;AZ House District 14
+ReportingUnit	Arizona;AZ House District 15	Arizona;AZ House District 15
+ReportingUnit	Arizona;AZ House District 16	Arizona;AZ House District 16
+ReportingUnit	Arizona;AZ House District 17	Arizona;AZ House District 17
+ReportingUnit	Arizona;AZ House District 18	Arizona;AZ House District 18
+ReportingUnit	Arizona;AZ House District 19	Arizona;AZ House District 19
+ReportingUnit	Arizona;AZ House District 20	Arizona;AZ House District 20
+ReportingUnit	Arizona;AZ House District 21	Arizona;AZ House District 21
+ReportingUnit	Arizona;AZ House District 22	Arizona;AZ House District 22
+ReportingUnit	Arizona;AZ House District 23	Arizona;AZ House District 23
+ReportingUnit	Arizona;AZ House District 24	Arizona;AZ House District 24
+ReportingUnit	Arizona;AZ House District 25	Arizona;AZ House District 25
+ReportingUnit	Arizona;AZ House District 26	Arizona;AZ House District 26
+ReportingUnit	Arizona;AZ House District 27	Arizona;AZ House District 27
+ReportingUnit	Arizona;AZ House District 28	Arizona;AZ House District 28
+ReportingUnit	Arizona;AZ House District 29	Arizona;AZ House District 29
+ReportingUnit	Arizona;AZ House District 30	Arizona;AZ House District 30
+ReportingUnit	Arizona;AZ House District 31	Arizona;AZ House District 31
+ReportingUnit	Arizona;AZ House District 32	Arizona;AZ House District 32
+ReportingUnit	Arizona;AZ House District 33	Arizona;AZ House District 33
+ReportingUnit	Arizona;AZ House District 34	Arizona;AZ House District 34
+ReportingUnit	Arizona;AZ House District 35	Arizona;AZ House District 35
+ReportingUnit	Arizona;AZ House District 36	Arizona;AZ House District 36
+ReportingUnit	Arizona;AZ House District 37	Arizona;AZ House District 37
+ReportingUnit	Arizona;AZ House District 38	Arizona;AZ House District 38
+ReportingUnit	Arizona;AZ House District 39	Arizona;AZ House District 39
+ReportingUnit	Arizona;AZ House District 40	Arizona;AZ House District 40
+ReportingUnit	Arizona;AZ House District 41	Arizona;AZ House District 41
+ReportingUnit	Arizona;AZ House District 42	Arizona;AZ House District 42
+ReportingUnit	Arizona;AZ House District 43	Arizona;AZ House District 43
+ReportingUnit	Arizona;AZ House District 44	Arizona;AZ House District 44
+ReportingUnit	Arizona;AZ House District 45	Arizona;AZ House District 45
+ReportingUnit	Arizona;AZ House District 46	Arizona;AZ House District 46
+ReportingUnit	Arizona;AZ House District 47	Arizona;AZ House District 47
+ReportingUnit	Arizona;AZ House District 48	Arizona;AZ House District 48
+ReportingUnit	Arizona;AZ House District 49	Arizona;AZ House District 49
+ReportingUnit	Arizona;AZ House District 50	Arizona;AZ House District 50
+ReportingUnit	Arizona;AZ House District 51	Arizona;AZ House District 51
+ReportingUnit	Arizona;AZ House District 52	Arizona;AZ House District 52
+ReportingUnit	Arizona;AZ House District 53	Arizona;AZ House District 53
+ReportingUnit	Arizona;AZ House District 54	Arizona;AZ House District 54
+ReportingUnit	Arizona;AZ House District 55	Arizona;AZ House District 55
+ReportingUnit	Arizona;AZ House District 56	Arizona;AZ House District 56
+ReportingUnit	Arizona;AZ House District 57	Arizona;AZ House District 57
+ReportingUnit	Arizona;AZ House District 58	Arizona;AZ House District 58
+ReportingUnit	Arizona;AZ House District 59	Arizona;AZ House District 59
+ReportingUnit	Arizona;AZ House District 60	Arizona;AZ House District 60
+ReportingUnit	Arizona;AZ Senate District 1	Arizona;AZ Senate District 1
+ReportingUnit	Arizona;AZ Senate District 2	Arizona;AZ Senate District 2
+ReportingUnit	Arizona;AZ Senate District 3	Arizona;AZ Senate District 3
+ReportingUnit	Arizona;AZ Senate District 4	Arizona;AZ Senate District 4
+ReportingUnit	Arizona;AZ Senate District 5	Arizona;AZ Senate District 5
+ReportingUnit	Arizona;AZ Senate District 6	Arizona;AZ Senate District 6
+ReportingUnit	Arizona;AZ Senate District 7	Arizona;AZ Senate District 7
+ReportingUnit	Arizona;AZ Senate District 8	Arizona;AZ Senate District 8
+ReportingUnit	Arizona;AZ Senate District 9	Arizona;AZ Senate District 9
+ReportingUnit	Arizona;AZ Senate District 10	Arizona;AZ Senate District 10
+ReportingUnit	Arizona;AZ Senate District 11	Arizona;AZ Senate District 11
+ReportingUnit	Arizona;AZ Senate District 12	Arizona;AZ Senate District 12
+ReportingUnit	Arizona;AZ Senate District 13	Arizona;AZ Senate District 13
+ReportingUnit	Arizona;AZ Senate District 14	Arizona;AZ Senate District 14
+ReportingUnit	Arizona;AZ Senate District 15	Arizona;AZ Senate District 15
+ReportingUnit	Arizona;AZ Senate District 16	Arizona;AZ Senate District 16
+ReportingUnit	Arizona;AZ Senate District 17	Arizona;AZ Senate District 17
+ReportingUnit	Arizona;AZ Senate District 18	Arizona;AZ Senate District 18
+ReportingUnit	Arizona;AZ Senate District 19	Arizona;AZ Senate District 19
+ReportingUnit	Arizona;AZ Senate District 20	Arizona;AZ Senate District 20
+ReportingUnit	Arizona;AZ Senate District 21	Arizona;AZ Senate District 21
+ReportingUnit	Arizona;AZ Senate District 22	Arizona;AZ Senate District 22
+ReportingUnit	Arizona;AZ Senate District 23	Arizona;AZ Senate District 23
+ReportingUnit	Arizona;AZ Senate District 24	Arizona;AZ Senate District 24
+ReportingUnit	Arizona;AZ Senate District 25	Arizona;AZ Senate District 25
+ReportingUnit	Arizona;AZ Senate District 26	Arizona;AZ Senate District 26
+ReportingUnit	Arizona;AZ Senate District 27	Arizona;AZ Senate District 27
+ReportingUnit	Arizona;AZ Senate District 28	Arizona;AZ Senate District 28
+ReportingUnit	Arizona;AZ Senate District 29	Arizona;AZ Senate District 29
+ReportingUnit	Arizona;AZ Senate District 30	Arizona;AZ Senate District 30
+ReportingUnit	Arizona;US House AZ District 1	Arizona;US House AZ District 1
+ReportingUnit	Arizona;US House AZ District 2	Arizona;US House AZ District 2
+ReportingUnit	Arizona;US House AZ District 3	Arizona;US House AZ District 3
+ReportingUnit	Arizona;US House AZ District 4	Arizona;US House AZ District 4
+ReportingUnit	Arizona;US House AZ District 5	Arizona;US House AZ District 5
+ReportingUnit	Arizona;US House AZ District 6	Arizona;US House AZ District 6
+ReportingUnit	Arizona;US House AZ District 7	Arizona;US House AZ District 7
+ReportingUnit	Arizona;US House AZ District 8	Arizona;US House AZ District 8
+ReportingUnit	Arizona;US House AZ District 9	Arizona;US House AZ District 9
+ReportingUnit	Arizona	Arizona
+ReportingUnit	Arizona;Apache County	Apache
+ReportingUnit	Arizona;Cochise County	Cochise
+ReportingUnit	Arizona;Coconino County	Coconino
+ReportingUnit	Arizona;Gila County	Gila
+ReportingUnit	Arizona;Graham County	Graham
+ReportingUnit	Arizona;Greenlee County	Greenlee
+ReportingUnit	Arizona;La Paz County	La Paz
+ReportingUnit	Arizona;Maricopa County	Maricopa
+ReportingUnit	Arizona;Mohave County	Mohave
+ReportingUnit	Arizona;Navajo County	Navajo
+ReportingUnit	Arizona;Pima County	Pima
+ReportingUnit	Arizona;Pinal County	Pinal
+ReportingUnit	Arizona;Santa Cruz County	Santa Cruz
+ReportingUnit	Arizona;Yavapai County	Yavapai
+ReportingUnit	Arizona;Yuma County	Yuma
+CountItemType	election-day	Polling Place
+CountItemType	early	Early Ballots
+CountItemType	provisional	Provisional Ballots
+
