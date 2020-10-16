@@ -125,7 +125,8 @@ ok = {
     "de20pri": data_exists('2020 Primary','Delaware'),
     "oh16g": data_exists('2016 General','Ohio'),
     "sc18g": data_exists("2018 General", "South Carolina"),
-    "az20p": data_exists("2020 Primary", "Arizona")
+    "az20p": data_exists("2020 Primary", "Arizona"),
+    "ga18g": data_exists("2018 General", "Georgia"),
 }
 
 print(ok)
@@ -303,11 +304,12 @@ def test_pa_totals_match_vote_type():
 
 
 ### Georgia Data Loading Tests ###
+@pytest.mark.skipif(not ok["ga18g"], reason="No GA 2018 General data")
 def test_ga_presidential():
     #no presidential contests in 2018
     assert True == True
 
-
+@pytest.mark.skipif(not ok["ga18g"], reason="No GA 2018 General data")
 def test_ga_statewide_totals():
     assert (
         check_contest_totals(
@@ -319,6 +321,7 @@ def test_ga_statewide_totals():
     )
 
 
+@pytest.mark.skipif(not ok["ga18g"], reason="No GA 2018 General data")
 def test_ga_senate_totals():
     assert (
         check_contest_totals(
@@ -330,6 +333,7 @@ def test_ga_senate_totals():
     )
 
 
+@pytest.mark.skipif(not ok["ga18g"], reason="No GA 2018 General data")
 def test_ga_house_totals():
     assert (
         check_contest_totals(
@@ -341,6 +345,7 @@ def test_ga_house_totals():
     )
 
 
+@pytest.mark.skipif(not ok["ga18g"], reason="No GA 2018 General data")
 def test_ga_contest_by_vote_type():
     assert (
         check_count_type_totals(
@@ -353,6 +358,7 @@ def test_ga_contest_by_vote_type():
     )
 
 
+@pytest.mark.skipif(not ok["ga18g"], reason="No GA 2018 General data")
 def test_ga_totals_match_vote_type():
     assert check_totals_match_vote_types("2018 General", "Georgia") == True
 
