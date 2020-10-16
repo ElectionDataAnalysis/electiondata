@@ -523,8 +523,8 @@ def check_munger_file_contents(munger_path, munger_file, err):
             encoding="iso-8859-1",
         ).fillna("")
 
-        # every source in cdf_elements is either row, column, ini or other
-        bad_source = [x for x in cdf_elements.source if x not in ["row", "column", "ini"]]
+        # every source in cdf_elements is either row, column, ini, xml or other
+        bad_source = [x for x in cdf_elements.source if x not in ["row", "column", "ini", "xml"]]
         if bad_source:
             err = ui.add_new_error(
                 err,

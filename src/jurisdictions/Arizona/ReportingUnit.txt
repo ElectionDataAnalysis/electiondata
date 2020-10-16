@@ -1,0 +1,116 @@
+Name	ReportingUnitType
+Arizona;AZ House District 1	state-house
+Arizona;AZ House District 2	state-house
+Arizona;AZ House District 3	state-house
+Arizona;AZ House District 4	state-house
+Arizona;AZ House District 5	state-house
+Arizona;AZ House District 6	state-house
+Arizona;AZ House District 7	state-house
+Arizona;AZ House District 8	state-house
+Arizona;AZ House District 9	state-house
+Arizona;AZ House District 10	state-house
+Arizona;AZ House District 11	state-house
+Arizona;AZ House District 12	state-house
+Arizona;AZ House District 13	state-house
+Arizona;AZ House District 14	state-house
+Arizona;AZ House District 15	state-house
+Arizona;AZ House District 16	state-house
+Arizona;AZ House District 17	state-house
+Arizona;AZ House District 18	state-house
+Arizona;AZ House District 19	state-house
+Arizona;AZ House District 20	state-house
+Arizona;AZ House District 21	state-house
+Arizona;AZ House District 22	state-house
+Arizona;AZ House District 23	state-house
+Arizona;AZ House District 24	state-house
+Arizona;AZ House District 25	state-house
+Arizona;AZ House District 26	state-house
+Arizona;AZ House District 27	state-house
+Arizona;AZ House District 28	state-house
+Arizona;AZ House District 29	state-house
+Arizona;AZ House District 30	state-house
+Arizona;AZ House District 31	state-house
+Arizona;AZ House District 32	state-house
+Arizona;AZ House District 33	state-house
+Arizona;AZ House District 34	state-house
+Arizona;AZ House District 35	state-house
+Arizona;AZ House District 36	state-house
+Arizona;AZ House District 37	state-house
+Arizona;AZ House District 38	state-house
+Arizona;AZ House District 39	state-house
+Arizona;AZ House District 40	state-house
+Arizona;AZ House District 41	state-house
+Arizona;AZ House District 42	state-house
+Arizona;AZ House District 43	state-house
+Arizona;AZ House District 44	state-house
+Arizona;AZ House District 45	state-house
+Arizona;AZ House District 46	state-house
+Arizona;AZ House District 47	state-house
+Arizona;AZ House District 48	state-house
+Arizona;AZ House District 49	state-house
+Arizona;AZ House District 50	state-house
+Arizona;AZ House District 51	state-house
+Arizona;AZ House District 52	state-house
+Arizona;AZ House District 53	state-house
+Arizona;AZ House District 54	state-house
+Arizona;AZ House District 55	state-house
+Arizona;AZ House District 56	state-house
+Arizona;AZ House District 57	state-house
+Arizona;AZ House District 58	state-house
+Arizona;AZ House District 59	state-house
+Arizona;AZ House District 60	state-house
+Arizona;AZ Senate District 1	state-senate
+Arizona;AZ Senate District 2	state-senate
+Arizona;AZ Senate District 3	state-senate
+Arizona;AZ Senate District 4	state-senate
+Arizona;AZ Senate District 5	state-senate
+Arizona;AZ Senate District 6	state-senate
+Arizona;AZ Senate District 7	state-senate
+Arizona;AZ Senate District 8	state-senate
+Arizona;AZ Senate District 9	state-senate
+Arizona;AZ Senate District 10	state-senate
+Arizona;AZ Senate District 11	state-senate
+Arizona;AZ Senate District 12	state-senate
+Arizona;AZ Senate District 13	state-senate
+Arizona;AZ Senate District 14	state-senate
+Arizona;AZ Senate District 15	state-senate
+Arizona;AZ Senate District 16	state-senate
+Arizona;AZ Senate District 17	state-senate
+Arizona;AZ Senate District 18	state-senate
+Arizona;AZ Senate District 19	state-senate
+Arizona;AZ Senate District 20	state-senate
+Arizona;AZ Senate District 21	state-senate
+Arizona;AZ Senate District 22	state-senate
+Arizona;AZ Senate District 23	state-senate
+Arizona;AZ Senate District 24	state-senate
+Arizona;AZ Senate District 25	state-senate
+Arizona;AZ Senate District 26	state-senate
+Arizona;AZ Senate District 27	state-senate
+Arizona;AZ Senate District 28	state-senate
+Arizona;AZ Senate District 29	state-senate
+Arizona;AZ Senate District 30	state-senate
+Arizona;US House AZ District 1	congressional
+Arizona;US House AZ District 2	congressional
+Arizona;US House AZ District 3	congressional
+Arizona;US House AZ District 4	congressional
+Arizona;US House AZ District 5	congressional
+Arizona;US House AZ District 6	congressional
+Arizona;US House AZ District 7	congressional
+Arizona;US House AZ District 8	congressional
+Arizona;US House AZ District 9	congressional
+Arizona	state
+Arizona;Apache County	county
+Arizona;Cochise County	county
+Arizona;Coconino County	county
+Arizona;Gila County	county
+Arizona;Graham County	county
+Arizona;Greenlee County	county
+Arizona;La Paz County	county
+Arizona;Maricopa County	county
+Arizona;Mohave County	county
+Arizona;Navajo County	county
+Arizona;Pima County	county
+Arizona;Pinal County	county
+Arizona;Santa Cruz County	county
+Arizona;Yavapai County	county
+Arizona;Yuma County	county
