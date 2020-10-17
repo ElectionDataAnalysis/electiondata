@@ -289,7 +289,7 @@ def read_multi_sheet_excel(
             data.columns = col_multi_index
 
             # remove header rows from data
-            data = data.iloc[header_row_count:].copy()
+            data.drop(data.index[:header_row_count], inplace=True)
 
             # Drop extraneous columns per munger, and columns without data
             data.drop(data.columns[columns_to_skip], axis=1, inplace=True)
