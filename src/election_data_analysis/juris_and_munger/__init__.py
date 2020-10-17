@@ -27,6 +27,7 @@ munger_pars_opt = {
     "column_width": "int",
     "sheets_to_skip": "list-of-strings",
     "constant_line_count": "int",
+    "constant_column_count": "int",
 }
 
 
@@ -638,6 +639,7 @@ def check_munger_file_contents(munger_path, munger_file, err):
             for key in [
                 "count_of_top_lines_to_skip",
                 "constant_line_count",
+                "constant_column_count",
                 "header_row_count",
             ]:
                 try:
@@ -649,6 +651,7 @@ def check_munger_file_contents(munger_path, munger_file, err):
                         munger_name,
                         f"{key} is not an integer:  {format_d[key]}",
                     )
+
         # note: json has no numeric parameters to test!
 
     else:

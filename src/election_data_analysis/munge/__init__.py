@@ -309,9 +309,10 @@ def add_munged_column(
 
 
 def compress_whitespace(s: str) -> str:
-    """Return a string where every instance of consecutive whitespaces in <s> has been replace by a single space,
+    """Return a string where every instance of consecutive whitespaces internal to <s> has been replace
+    by the first of those consecutive whitespace characters,
     and leading and trailing whitespace is eliminated"""
-    new_s = re.sub(r"\s+", " ", s)
+    new_s = re.sub(r"(\s)\s+", "\\1", s)
     new_s = new_s.strip()
     return new_s
 
