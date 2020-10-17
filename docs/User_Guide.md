@@ -38,10 +38,12 @@ Different file types need different parameters to be specified.
    * columns_to_skip
    * last_header_column_count
    * column_width
+   
  * Required for `xls-multi`:
    * sheets_to_skip
    * count_of_top_lines_to_skip
    * constant_line_count
+   * constant_column_count
    * header_row_count
    * columns_to_skip
  * Required for `json`:
