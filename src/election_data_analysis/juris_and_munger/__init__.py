@@ -651,6 +651,7 @@ def check_munger_file_contents(munger_path, munger_file, err):
                         munger_name,
                         f"{key} is not an integer:  {format_d[key]}",
                     )
+
         # note: json has no numeric parameters to test!
 
     else:

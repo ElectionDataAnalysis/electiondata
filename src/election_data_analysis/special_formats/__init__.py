@@ -236,6 +236,7 @@ def read_multi_sheet_excel(
     sheets_to_skip = munger.options["sheets_to_skip"]
     count_of_top_lines_to_skip = munger.options["count_of_top_lines_to_skip"]
     constant_line_count = munger.options["constant_line_count"]
+    constant_column_count = munger.options["constant_column_count"]
     header_row_count = munger.options["header_row_count"]
     columns_to_skip = munger.options["columns_to_skip"]
 
@@ -261,18 +262,22 @@ def read_multi_sheet_excel(
             data = df[sh].copy()
 
             # remove lines designated ignorable
-            data = data.iloc[count_of_top_lines_to_skip:]
+            data.drop(data.index[:count_of_top_lines_to_skip], inplace=True)
 
             # remove any all-null rows
             data.dropna(how="all",inplace=True)
 
-            # read constant info from first non-null entries of constant-header rows
+            # read constant_line info from first non-null entries of constant-header rows
             # then drop those rows
-            constants = data.iloc[:constant_line_count].fillna(method="bfill", axis=1).iloc[:,0]
-            data = data.iloc[constant_line_count:]
+            if constant_line_count > 0:
+                constant_lines = data.iloc[:constant_line_count].fillna(method="bfill", axis=1).iloc[:,0]
+                data.drop(data.index[:constant_line_count], inplace=True)
 
-            # reset column headers to generic index (moving column names to rows
-            # TODO remove data = data.transpose().reset_index().transpose()
+            # read constant_column info from first non-null entries of constant columns
+            # and drop those columns
+            if constant_column_count > 0:
+                constant_columns = data.T.iloc[:constant_column_count].fillna(method="bfill", axis=1).iloc[:,0]
+                data.drop(data.columns[:constant_column_count], axis=1, inplace=True)
 
             # add multi-index for actual header rows
             header_variable_names = [f"header_{j}" for j in range(header_row_count)]
@@ -284,7 +289,7 @@ def read_multi_sheet_excel(
             data.columns = col_multi_index
 
             # remove header rows from data
-            data = data.iloc[header_row_count:]
+            data = data.iloc[header_row_count:].copy()
 
             # Drop extraneous columns per munger, and columns without data
             data.drop(data.columns[columns_to_skip], axis=1, inplace=True)
@@ -303,7 +308,9 @@ def read_multi_sheet_excel(
 
             # add column(s) for constant info
             for j in range(constant_line_count):
-                data = m.add_constant_column(data,f"constant_{j}",constants.iloc[j])
+                data = m.add_constant_column(data,f"constant_line_{j}",constant_lines.iloc[j])
+            for j in range(constant_column_count):
+                data = m.add_constant_column(data,f"constant_column_{j}",constant_columns.iloc[j])
 
             # Make row index (from first column of blocks) into a column called 'first_column'
             data.reset_index(inplace=True)

@@ -264,7 +264,7 @@ CountItemType	total	Total Votes
 CountItemType	total	total
 ```
 
- (8) Add any existing content from `dictionary.txt` to the starter dictionary. If the jurisdiction is brand new there won't be any existing contest. 
+ (8) Add any existing content from `dictionary.txt` to the starter dictionary. If the jurisdiction is brand new there won't be any existing content. 
 
  (9) Move `XX_starter_dictionary.txt` from the current directory and to the jurisdiction's directory, and rename it to `dictionary.txt` . 
 
@@ -301,7 +301,7 @@ Candidate	Rosa Maria 'Rosy' Palomino	Rosa Maria "Rosy" Palomino
    * CandidateContest: Look at the new `CandidateContest.txt` file. Many may be contests you do *not* want to add -- the contests you already have (such as congressional contests) that will have been added with the raw identifier name. Some may be BallotMeasureContests that do not belong in `CandidateContest.txt`. For any new CandidateContest you do want to keep you will need to add the corresponding line to `Office.txt` (and the ElectionDistrict to `ReportingUnit.txt` if it is not already there). 
     * You may want to remove from `dictionary.txt` any lines corresponding to items removed in the bullet points above.
 
- (13) Finally, if you will be munging primary elections, and if you are confident that your `CandidateContest.txt`, `Party.txt` and associated lines in `dictionary.txt` are correct, use the `add_primaries_to_candidate_contest()` and `jp.add_primaries_to_dict()` methods
+ (13) Finally, if you will be munging primary elections, and if you are confident that your `CandidateContest.txt`, `Party.txt` and associated lines in `dictionary.txt` are correct, use the `jp.add_primaries_to_candidate_contest()` and `jp.add_primaries_to_dict()` methods
 ```
 >>> jp.add_primaries_to_candidate_contest()
 >>> jp.add_primaries_to_dict()
