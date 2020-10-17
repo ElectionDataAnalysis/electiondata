@@ -637,7 +637,7 @@ def test_oh_presidential():
     )
 
 
-# @pytest.mark.skipif(not ok["oh16g"],"No OH 2016 General data")
+@pytest.mark.skipif(not ok["oh16g"],"No OH 2016 General data")
 def test_oh_senate_totals():
     assert (
         check_contest_totals(
