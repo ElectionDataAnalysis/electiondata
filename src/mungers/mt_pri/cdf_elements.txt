@@ -1,6 +1,6 @@
 name	raw_identifier_formula	source
 ReportingUnit	<County>	row
 Party	{<header_0>,^.*\n(.*)$}	row
-CandidateContest	<constant_0>	row
+CandidateContest	<constant_column_0>	row
 Candidate	{<header_0>,^(.*)\n.*$}	row
 CountItemType		ini
