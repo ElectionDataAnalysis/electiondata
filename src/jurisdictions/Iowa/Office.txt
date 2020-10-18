@@ -153,11 +153,11 @@ US House IA District 1	Iowa;US House IA District 1
 US House IA District 2	Iowa;US House IA District 2
 US House IA District 3	Iowa;US House IA District 3
 US House IA District 4	Iowa;US House IA District 4
-('US President (IA)', 'President')	Iowa
-('IA Governor', 'Governor/Lieutenant Governor')	Iowa
-('US Senate IA', 'United States Senator')	Iowa
-('IA Attorney General', 'Attorney General')	Iowa
-('IA Treasurer of State', 'Treasurer of State')	Iowa
-('IA Secretary of State', 'Secretary of State')	Iowa
-('IA Secretary of Agriculture', 'Secretary of Agriculture')	Iowa
-('IA Auditor of State', 'Auditor of State')	Iowa
+US President (IA)	Iowa
+IA Governor	Iowa
+US Senate IA	Iowa
+IA Attorney General	Iowa
+IA Treasurer of State	Iowa
+IA Secretary of State	Iowa
+IA Secretary of Agriculture	Iowa
+IA Auditor of State	Iowa
