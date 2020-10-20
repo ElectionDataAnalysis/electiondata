@@ -424,7 +424,10 @@ def create_bar(
         pivot_df = pivot_df.merge(score_df, how="inner", on="Name")
         pivot_df = sort_pivot_by_margins(pivot_df)
 
-        results = package_results(pivot_df, jurisdiction, x, y, restrict=8)
+        if for_export:
+            results = package_results(pivot_df, jurisdiction, x, y)
+        else:
+            results = package_results(pivot_df, jurisdiction, x, y, restrict=8)
         results["election"] = db.name_from_id(cursor, "Election", election_id)
         results["contest"] = db.name_from_id(
             cursor, "Contest", int(temp_df.iloc[0]["Contest_Id"])
