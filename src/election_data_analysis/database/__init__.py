@@ -806,12 +806,12 @@ def get_input_options(session, input, verbose):
                     FROM    unnested u
                 )
  				, crossed AS (
-					SELECT	"Id", "Name", jurisdiction, order_by
+					SELECT	"Id", "Name", jurisdiction, 
+                            ROW_NUMBER() OVER(ORDER BY o.order_by ASC, order_by, LEFT("Name", 4) DESC, RIGHT("Name", LENGTH("Name") - 5) ASC) as order_by
                     FROM	"Election" e
                     		CROSS JOIN ordered o
                     WHERE	"Name" != 'none or unknown'
-                    ORDER BY e."Name", order_by
-                    
+                    ORDER BY o.order_by ASC, order_by, LEFT("Name", 4) DESC, RIGHT("Name", LENGTH("Name") - 5) ASC
                 )
                 , crossed_with_state_id as (
                 	SELECT	c.*, ru."Id" as jurisdiction_id
@@ -824,7 +824,7 @@ def get_input_options(session, input, verbose):
                 FROM    crossed_with_state_id s
                         LEFT JOIN "_datafile" d ON s."Id" = d."Election_Id"
                        	AND s.jurisdiction_id = d."ReportingUnit_Id"
-                ORDER BY "Name", order_by
+                ORDER BY order_by
             """
             ).format(states=sql.Literal(states))
         elif search_str == "BallotMeasureContest":
