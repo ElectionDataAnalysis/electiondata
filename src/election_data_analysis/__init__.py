@@ -106,9 +106,12 @@ class DataLoader:
             quit()
 
     def load_all(
-        self, load_jurisdictions: bool = True, move_files: bool = False
-    ) -> dict:
-        """returns an error dictionary"""
+        self, load_jurisdictions: bool = True, move_files: bool = True
+    ) -> Optional[dict]:
+        """Processes all .ini files in the DataLoader's results directory.
+        By default, loads (or reloads) the info from the jurisdiction files
+        into the db first. By default, moves files to the DataLoader's archive directory.
+        Returns an error dictionary"""
         # initialize error dictionary
         err = None
 
@@ -233,21 +236,25 @@ class DataLoader:
                     if load_error:
                         err = ui.consolidate_errors([err, load_error])
 
-                    # if no fatal load error, archive files
-
+                    # if move_files == True and no fatal load error,
                     if move_files and not ui.fatal_error(load_error):
+                        # archive files
                         ui.archive(f, self.d["results_dir"], success_dir)
                         ui.archive(
                             sdl.d["results_file"], self.d["results_dir"], success_dir
                         )
                         print(
-                            f"\tArchived {f} and its results file after successful load.\n"
+                            f"\tArchived {f} and its results file after successful load "
+                            f"via mungers {sdl.d['munger_name']}.\n"
                         )
+                    # if move_files == True and there was a fatal load error
                     elif move_files and ui.fatal_error(load_error):
                         print(f"\t{f} and its results file not archived due to errors")
 
+                    # if move_files is false
                     else:
                         print(f"{f} and its results file loaded successfully via mungers {sdl.d['munger_name']}.")
+
                 #  report munger, jurisdiction and file errors & warnings
                 err = ui.report(
                     err,
