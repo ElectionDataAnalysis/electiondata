@@ -1345,7 +1345,6 @@ class Analyzer:
     def scatter(
         self,
         jurisdiction: str,
-        subdivision_type: str,
         h_election: str,
         h_category: str,
         h_count: str,  # horizontal axis params
@@ -1370,8 +1369,8 @@ class Analyzer:
             print("Data not created.")
             return
         jurisdiction_id = db.name_to_id(self.session, "ReportingUnit", jurisdiction)
-        subdivision_type_id = db.name_to_id(
-            self.session, "ReportingUnitType", subdivision_type
+        subdivision_type_id = db.get_jurisdiction_hierarchy(
+            self.session, jurisdiction_id
         )
         h_election_id = db.name_to_id(self.session, "Election", h_election)
         v_election_id = db.name_to_id(self.session, "Election", v_election)
