@@ -130,6 +130,10 @@ def read_concatenated_blocks(
             # get info from header line
             field_list = extract_items(header_line, w)
 
+            # Add back county header in case of Iowa:
+            if header_line.startswith(' ' * w):
+                field_list = [''] + field_list
+
             # remove first column header and headers of any columns to be skipped
             last_header = remove_by_index(field_list, [0] + skip_cols)
 
@@ -184,16 +188,27 @@ def read_concatenated_blocks(
                 [y for z in [[cand] * v_t_cc for cand in header_1_list] for y in z],
                 last_header,
             ]
-            df[header_0].columns = pd.MultiIndex.from_arrays(index_array)
 
-            # move header_1 & header_2 info to columns
-            df[header_0] = pd.melt(
-                df[header_0],
-                ignore_index=False,
-                value_vars=df[header_0].columns.tolist(),
-                value_name="count",
-                var_name=["header_1", "header_2"],
-            )
+            # Create map from integer columns to (header_1, header_2) values
+            header_map = {}
+            for i, col in enumerate(df[header_0].columns):
+                header_map[col] = (index_array[0][i], index_array[1][i])
+
+            # Move header to columns
+            df[header_0] = pd.melt(df[header_0],
+                                   ignore_index=False,
+                                   value_vars=df[header_0].columns.tolist(),
+                                   value_name="count",
+                                   var_name="header_tmp")
+
+            # Gather values for header_1 and header_2 columns.
+            header_1_col = [header_map[i][0] for i in df[header_0]['header_tmp']]
+            header_2_col = [header_map[i][1] for i in df[header_0]['header_tmp']]
+
+            # Add header_1 and header_2 columns, and remove header_tmp.
+            df[header_0]['header_1'] = header_1_col
+            df[header_0]['header_2'] = header_2_col
+            df[header_0] = df[header_0].drop(columns='header_tmp')
 
             # Add columns for header_0
             df[header_0] = m.add_constant_column(df[header_0], "header_0", header_0)
