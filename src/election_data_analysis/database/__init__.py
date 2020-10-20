@@ -672,12 +672,17 @@ def vote_type_list(cursor, datafile_list: list, by: str = "Id") -> (list, str):
     return vt_list, err_str
 
 
-def data_file_list(cursor, election_id, by="Id"):
+def data_file_list(cursor, election_id, reporting_unit_id: Optional[int] = None, by="Id"):
     q = sql.SQL(
         """SELECT distinct d.{by} FROM _datafile d WHERE d."Election_Id" = %s"""
     ).format(by=sql.Identifier(by))
+    if reporting_unit_id:
+        q += sql.SQL(""" AND d."ReportingUnit_Id" = %s""")
+        id_tup = (election_id, reporting_unit_id)
+    else:
+        id_tup = (election_id,)
     try:
-        cursor.execute(q, (election_id,))
+        cursor.execute(q, id_tup)
         df_list = [x for (x,) in cursor.fetchall()]
         err_str = None
     except Exception as exc:
@@ -686,7 +691,7 @@ def data_file_list(cursor, election_id, by="Id"):
     return df_list, err_str
 
 
-def remove_vote_counts(connection, cursor, id: int) -> str:
+def remove_vote_counts(connection, cursor, id: int, active_confirm: bool = True) -> str:
     """Remove all VoteCount data from a particular file, and remove that file from _datafile"""
     try:
         q = 'SELECT * FROM _datafile WHERE _datafile."Id"=%s;'
@@ -694,10 +699,13 @@ def remove_vote_counts(connection, cursor, id: int) -> str:
         record = cursor.fetchall()[0]
     except KeyError as exc:
         return f"No datafile found with Id = {id}"
-
-    confirm = input(
-        f"Confirm: delete all VoteCount data from this results file: {record} (y/n)?"
-    )
+    if active_confirm:
+        confirm = input(
+            f"Confirm: delete all VoteCount data from this results file: {record} (y/n)?"
+        )
+    # if active_confirm is False, consider it confirmed.
+    else:
+        confirm == "y"
     if confirm == "y":
         try:
             q = 'DELETE FROM "VoteCount" where "_datafile_Id"=%s;Delete from _datafile where "Id"=%s;'

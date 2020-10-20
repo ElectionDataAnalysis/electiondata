@@ -279,6 +279,21 @@ class DataLoader:
         ui.report(err, loc_dict)
         return err
 
+    def remove_data(self, election_id: str, juris_id: str) -> Optional[str]:
+        """Remove from the db all data for the given <election_id> in the given <juris>"""
+        # get connection & cursor
+        connection = self.session.bind.raw_connection()
+        cursor = connection.cursor()
+
+        # find all datafile ids matching the given election and jurisdiction
+        df_list, err_str = db.data_file_list(cursor, election_id, reporting_unit_id=juris_id)
+        if err_str:
+            return err_str
+
+        # remove data from all those datafiles
+        for idx in df_list:
+            db.remove_vote_counts(connection, cursor, idx)
+        return None
 
 class SingleDataLoader:
     def __init__(
