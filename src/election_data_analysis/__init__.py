@@ -279,7 +279,7 @@ class DataLoader:
         ui.report(err, loc_dict)
         return err
 
-    def remove_data(self, election_id: str, juris_id: str) -> Optional[str]:
+    def remove_data(self, election_id: int, juris_id: int) -> Optional[str]:
         """Remove from the db all data for the given <election_id> in the given <juris>"""
         # get connection & cursor
         connection = self.session.bind.raw_connection()
