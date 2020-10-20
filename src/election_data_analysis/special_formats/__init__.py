@@ -416,3 +416,4 @@ def get_vc_field_from_munger(mu: jm.Munger) -> dict:
             else:
                 vcf[tag] = {i: field}
     return vcf
+
