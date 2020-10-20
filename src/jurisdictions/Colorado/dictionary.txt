@@ -1,4 +1,1030 @@
 cdf_element	cdf_internal_name	raw_identifier_value
+CandidateContest	CO House District 1 (Democratic Party)	State Representative - District 1 (Democratic Party)
+CandidateContest	CO House District 2 (Democratic Party)	State Representative - District 2 (Democratic Party)
+CandidateContest	CO House District 3 (Democratic Party)	State Representative - District 3 (Democratic Party)
+CandidateContest	CO House District 4 (Democratic Party)	State Representative - District 4 (Democratic Party)
+CandidateContest	CO House District 5 (Democratic Party)	State Representative - District 5 (Democratic Party)
+CandidateContest	CO House District 6 (Democratic Party)	State Representative - District 6 (Democratic Party)
+CandidateContest	CO House District 7 (Democratic Party)	State Representative - District 7 (Democratic Party)
+CandidateContest	CO House District 8 (Democratic Party)	State Representative - District 8 (Democratic Party)
+CandidateContest	CO House District 9 (Democratic Party)	State Representative - District 9 (Democratic Party)
+CandidateContest	CO House District 10 (Democratic Party)	State Representative - District 10 (Democratic Party)
+CandidateContest	CO House District 11 (Democratic Party)	State Representative - District 11 (Democratic Party)
+CandidateContest	CO House District 12 (Democratic Party)	State Representative - District 12 (Democratic Party)
+CandidateContest	CO House District 13 (Democratic Party)	State Representative - District 13 (Democratic Party)
+CandidateContest	CO House District 14 (Democratic Party)	State Representative - District 14 (Democratic Party)
+CandidateContest	CO House District 15 (Democratic Party)	State Representative - District 15 (Democratic Party)
+CandidateContest	CO House District 16 (Democratic Party)	State Representative - District 16 (Democratic Party)
+CandidateContest	CO House District 17 (Democratic Party)	State Representative - District 17 (Democratic Party)
+CandidateContest	CO House District 18 (Democratic Party)	State Representative - District 18 (Democratic Party)
+CandidateContest	CO House District 19 (Democratic Party)	State Representative - District 19 (Democratic Party)
+CandidateContest	CO House District 20 (Democratic Party)	State Representative - District 20 (Democratic Party)
+CandidateContest	CO House District 21 (Democratic Party)	State Representative - District 21 (Democratic Party)
+CandidateContest	CO House District 22 (Democratic Party)	State Representative - District 22 (Democratic Party)
+CandidateContest	CO House District 23 (Democratic Party)	State Representative - District 23 (Democratic Party)
+CandidateContest	CO House District 24 (Democratic Party)	State Representative - District 24 (Democratic Party)
+CandidateContest	CO House District 25 (Democratic Party)	State Representative - District 25 (Democratic Party)
+CandidateContest	CO House District 26 (Democratic Party)	State Representative - District 26 (Democratic Party)
+CandidateContest	CO House District 27 (Democratic Party)	State Representative - District 27 (Democratic Party)
+CandidateContest	CO House District 28 (Democratic Party)	State Representative - District 28 (Democratic Party)
+CandidateContest	CO House District 29 (Democratic Party)	State Representative - District 29 (Democratic Party)
+CandidateContest	CO House District 30 (Democratic Party)	State Representative - District 30 (Democratic Party)
+CandidateContest	CO House District 31 (Democratic Party)	State Representative - District 31 (Democratic Party)
+CandidateContest	CO House District 32 (Democratic Party)	State Representative - District 32 (Democratic Party)
+CandidateContest	CO House District 33 (Democratic Party)	State Representative - District 33 (Democratic Party)
+CandidateContest	CO House District 34 (Democratic Party)	State Representative - District 34 (Democratic Party)
+CandidateContest	CO House District 35 (Democratic Party)	State Representative - District 35 (Democratic Party)
+CandidateContest	CO House District 36 (Democratic Party)	State Representative - District 36 (Democratic Party)
+CandidateContest	CO House District 37 (Democratic Party)	State Representative - District 37 (Democratic Party)
+CandidateContest	CO House District 38 (Democratic Party)	State Representative - District 38 (Democratic Party)
+CandidateContest	CO House District 39 (Democratic Party)	State Representative - District 39 (Democratic Party)
+CandidateContest	CO House District 40 (Democratic Party)	State Representative - District 40 (Democratic Party)
+CandidateContest	CO House District 41 (Democratic Party)	State Representative - District 41 (Democratic Party)
+CandidateContest	CO House District 42 (Democratic Party)	State Representative - District 42 (Democratic Party)
+CandidateContest	CO House District 43 (Democratic Party)	State Representative - District 43 (Democratic Party)
+CandidateContest	CO House District 44 (Democratic Party)	State Representative - District 44 (Democratic Party)
+CandidateContest	CO House District 45 (Democratic Party)	State Representative - District 45 (Democratic Party)
+CandidateContest	CO House District 46 (Democratic Party)	State Representative - District 46 (Democratic Party)
+CandidateContest	CO House District 47 (Democratic Party)	State Representative - District 47 (Democratic Party)
+CandidateContest	CO House District 48 (Democratic Party)	State Representative - District 48 (Democratic Party)
+CandidateContest	CO House District 49 (Democratic Party)	State Representative - District 49 (Democratic Party)
+CandidateContest	CO House District 50 (Democratic Party)	State Representative - District 50 (Democratic Party)
+CandidateContest	CO House District 51 (Democratic Party)	State Representative - District 51 (Democratic Party)
+CandidateContest	CO House District 52 (Democratic Party)	State Representative - District 52 (Democratic Party)
+CandidateContest	CO House District 53 (Democratic Party)	State Representative - District 53 (Democratic Party)
+CandidateContest	CO House District 54 (Democratic Party)	State Representative - District 54 (Democratic Party)
+CandidateContest	CO House District 55 (Democratic Party)	State Representative - District 55 (Democratic Party)
+CandidateContest	CO House District 56 (Democratic Party)	State Representative - District 56 (Democratic Party)
+CandidateContest	CO House District 57 (Democratic Party)	State Representative - District 57 (Democratic Party)
+CandidateContest	CO House District 58 (Democratic Party)	State Representative - District 58 (Democratic Party)
+CandidateContest	CO House District 59 (Democratic Party)	State Representative - District 59 (Democratic Party)
+CandidateContest	CO House District 60 (Democratic Party)	State Representative - District 60 (Democratic Party)
+CandidateContest	CO House District 61 (Democratic Party)	State Representative - District 61 (Democratic Party)
+CandidateContest	CO House District 62 (Democratic Party)	State Representative - District 62 (Democratic Party)
+CandidateContest	CO House District 63 (Democratic Party)	State Representative - District 63 (Democratic Party)
+CandidateContest	CO House District 64 (Democratic Party)	State Representative - District 64 (Democratic Party)
+CandidateContest	CO House District 65 (Democratic Party)	State Representative - District 65 (Democratic Party)
+CandidateContest	CO Senate District 1 (Democratic Party)	State Senate - District 1 (Democratic Party)
+CandidateContest	CO Senate District 2 (Democratic Party)	State Senate - District 2 (Democratic Party)
+CandidateContest	CO Senate District 3 (Democratic Party)	State Senate - District 3 (Democratic Party)
+CandidateContest	CO Senate District 4 (Democratic Party)	State Senate - District 4 (Democratic Party)
+CandidateContest	CO Senate District 5 (Democratic Party)	State Senate - District 5 (Democratic Party)
+CandidateContest	CO Senate District 6 (Democratic Party)	State Senate - District 6 (Democratic Party)
+CandidateContest	CO Senate District 7 (Democratic Party)	State Senate - District 7 (Democratic Party)
+CandidateContest	CO Senate District 8 (Democratic Party)	State Senate - District 8 (Democratic Party)
+CandidateContest	CO Senate District 9 (Democratic Party)	State Senate - District 9 (Democratic Party)
+CandidateContest	CO Senate District 10 (Democratic Party)	State Senate - District 10 (Democratic Party)
+CandidateContest	CO Senate District 11 (Democratic Party)	State Senate - District 11 (Democratic Party)
+CandidateContest	CO Senate District 12 (Democratic Party)	State Senate - District 12 (Democratic Party)
+CandidateContest	CO Senate District 13 (Democratic Party)	State Senate - District 13 (Democratic Party)
+CandidateContest	CO Senate District 14 (Democratic Party)	State Senate - District 14 (Democratic Party)
+CandidateContest	CO Senate District 15 (Democratic Party)	State Senate - District 15 (Democratic Party)
+CandidateContest	CO Senate District 16 (Democratic Party)	State Senate - District 16 (Democratic Party)
+CandidateContest	CO Senate District 17 (Democratic Party)	State Senate - District 17 (Democratic Party)
+CandidateContest	CO Senate District 18 (Democratic Party)	State Senate - District 18 (Democratic Party)
+CandidateContest	CO Senate District 19 (Democratic Party)	State Senate - District 19 (Democratic Party)
+CandidateContest	CO Senate District 20 (Democratic Party)	State Senate - District 20 (Democratic Party)
+CandidateContest	CO Senate District 21 (Democratic Party)	State Senate - District 21 (Democratic Party)
+CandidateContest	CO Senate District 22 (Democratic Party)	State Senate - District 22 (Democratic Party)
+CandidateContest	CO Senate District 23 (Democratic Party)	State Senate - District 23 (Democratic Party)
+CandidateContest	CO Senate District 24 (Democratic Party)	State Senate - District 24 (Democratic Party)
+CandidateContest	CO Senate District 25 (Democratic Party)	State Senate - District 25 (Democratic Party)
+CandidateContest	CO Senate District 26 (Democratic Party)	State Senate - District 26 (Democratic Party)
+CandidateContest	CO Senate District 27 (Democratic Party)	State Senate - District 27 (Democratic Party)
+CandidateContest	CO Senate District 28 (Democratic Party)	State Senate - District 28 (Democratic Party)
+CandidateContest	CO Senate District 29 (Democratic Party)	State Senate - District 29 (Democratic Party)
+CandidateContest	CO Senate District 30 (Democratic Party)	State Senate - District 30 (Democratic Party)
+CandidateContest	CO Senate District 31 (Democratic Party)	State Senate - District 31 (Democratic Party)
+CandidateContest	CO Senate District 32 (Democratic Party)	State Senate - District 32 (Democratic Party)
+CandidateContest	CO Senate District 33 (Democratic Party)	State Senate - District 33 (Democratic Party)
+CandidateContest	CO Senate District 34 (Democratic Party)	State Senate - District 34 (Democratic Party)
+CandidateContest	CO Senate District 35 (Democratic Party)	State Senate - District 35 (Democratic Party)
+CandidateContest	US House CO District 1 (Democratic Party)	United States Representative - District 1 (Democratic Party)
+CandidateContest	US House CO District 2 (Democratic Party)	United States Representative - District 2 (Democratic Party)
+CandidateContest	US House CO District 3 (Democratic Party)	United States Representative - District 3 (Democratic Party)
+CandidateContest	US House CO District 4 (Democratic Party)	United States Representative - District 4 (Democratic Party)
+CandidateContest	US House CO District 5 (Democratic Party)	United States Representative - District 5 (Democratic Party)
+CandidateContest	US House CO District 6 (Democratic Party)	United States Representative - District 6 (Democratic Party)
+CandidateContest	US House CO District 7 (Democratic Party)	United States Representative - District 7 (Democratic Party)
+CandidateContest	US President (CO) (Democratic Party)	President/Vice President (Democratic Party)
+CandidateContest	US President (CO) (Democratic Party)	President of the United States (Democratic Party)
+CandidateContest	CO Governor (Democratic Party)	Governor/Lieutenant Governor (Democratic Party)
+CandidateContest	US Senate CO (Democratic Party)	United States Senator (Democratic Party)
+CandidateContest	CO Attorney General (Democratic Party)	Attorney General (Democratic Party)
+CandidateContest	CO State Treasurer (Democratic Party)	State Treasurer (Democratic Party)
+CandidateContest	CO Secretary of State (Democratic Party)	Secretary of State (Democratic Party)
+CandidateContest	CO House District 1 (Republican Party)	State Representative - District 1 (Republican Party)
+CandidateContest	CO House District 2 (Republican Party)	State Representative - District 2 (Republican Party)
+CandidateContest	CO House District 3 (Republican Party)	State Representative - District 3 (Republican Party)
+CandidateContest	CO House District 4 (Republican Party)	State Representative - District 4 (Republican Party)
+CandidateContest	CO House District 5 (Republican Party)	State Representative - District 5 (Republican Party)
+CandidateContest	CO House District 6 (Republican Party)	State Representative - District 6 (Republican Party)
+CandidateContest	CO House District 7 (Republican Party)	State Representative - District 7 (Republican Party)
+CandidateContest	CO House District 8 (Republican Party)	State Representative - District 8 (Republican Party)
+CandidateContest	CO House District 9 (Republican Party)	State Representative - District 9 (Republican Party)
+CandidateContest	CO House District 10 (Republican Party)	State Representative - District 10 (Republican Party)
+CandidateContest	CO House District 11 (Republican Party)	State Representative - District 11 (Republican Party)
+CandidateContest	CO House District 12 (Republican Party)	State Representative - District 12 (Republican Party)
+CandidateContest	CO House District 13 (Republican Party)	State Representative - District 13 (Republican Party)
+CandidateContest	CO House District 14 (Republican Party)	State Representative - District 14 (Republican Party)
+CandidateContest	CO House District 15 (Republican Party)	State Representative - District 15 (Republican Party)
+CandidateContest	CO House District 16 (Republican Party)	State Representative - District 16 (Republican Party)
+CandidateContest	CO House District 17 (Republican Party)	State Representative - District 17 (Republican Party)
+CandidateContest	CO House District 18 (Republican Party)	State Representative - District 18 (Republican Party)
+CandidateContest	CO House District 19 (Republican Party)	State Representative - District 19 (Republican Party)
+CandidateContest	CO House District 20 (Republican Party)	State Representative - District 20 (Republican Party)
+CandidateContest	CO House District 21 (Republican Party)	State Representative - District 21 (Republican Party)
+CandidateContest	CO House District 22 (Republican Party)	State Representative - District 22 (Republican Party)
+CandidateContest	CO House District 23 (Republican Party)	State Representative - District 23 (Republican Party)
+CandidateContest	CO House District 24 (Republican Party)	State Representative - District 24 (Republican Party)
+CandidateContest	CO House District 25 (Republican Party)	State Representative - District 25 (Republican Party)
+CandidateContest	CO House District 26 (Republican Party)	State Representative - District 26 (Republican Party)
+CandidateContest	CO House District 27 (Republican Party)	State Representative - District 27 (Republican Party)
+CandidateContest	CO House District 28 (Republican Party)	State Representative - District 28 (Republican Party)
+CandidateContest	CO House District 29 (Republican Party)	State Representative - District 29 (Republican Party)
+CandidateContest	CO House District 30 (Republican Party)	State Representative - District 30 (Republican Party)
+CandidateContest	CO House District 31 (Republican Party)	State Representative - District 31 (Republican Party)
+CandidateContest	CO House District 32 (Republican Party)	State Representative - District 32 (Republican Party)
+CandidateContest	CO House District 33 (Republican Party)	State Representative - District 33 (Republican Party)
+CandidateContest	CO House District 34 (Republican Party)	State Representative - District 34 (Republican Party)
+CandidateContest	CO House District 35 (Republican Party)	State Representative - District 35 (Republican Party)
+CandidateContest	CO House District 36 (Republican Party)	State Representative - District 36 (Republican Party)
+CandidateContest	CO House District 37 (Republican Party)	State Representative - District 37 (Republican Party)
+CandidateContest	CO House District 38 (Republican Party)	State Representative - District 38 (Republican Party)
+CandidateContest	CO House District 39 (Republican Party)	State Representative - District 39 (Republican Party)
+CandidateContest	CO House District 40 (Republican Party)	State Representative - District 40 (Republican Party)
+CandidateContest	CO House District 41 (Republican Party)	State Representative - District 41 (Republican Party)
+CandidateContest	CO House District 42 (Republican Party)	State Representative - District 42 (Republican Party)
+CandidateContest	CO House District 43 (Republican Party)	State Representative - District 43 (Republican Party)
+CandidateContest	CO House District 44 (Republican Party)	State Representative - District 44 (Republican Party)
+CandidateContest	CO House District 45 (Republican Party)	State Representative - District 45 (Republican Party)
+CandidateContest	CO House District 46 (Republican Party)	State Representative - District 46 (Republican Party)
+CandidateContest	CO House District 47 (Republican Party)	State Representative - District 47 (Republican Party)
+CandidateContest	CO House District 48 (Republican Party)	State Representative - District 48 (Republican Party)
+CandidateContest	CO House District 49 (Republican Party)	State Representative - District 49 (Republican Party)
+CandidateContest	CO House District 50 (Republican Party)	State Representative - District 50 (Republican Party)
+CandidateContest	CO House District 51 (Republican Party)	State Representative - District 51 (Republican Party)
+CandidateContest	CO House District 52 (Republican Party)	State Representative - District 52 (Republican Party)
+CandidateContest	CO House District 53 (Republican Party)	State Representative - District 53 (Republican Party)
+CandidateContest	CO House District 54 (Republican Party)	State Representative - District 54 (Republican Party)
+CandidateContest	CO House District 55 (Republican Party)	State Representative - District 55 (Republican Party)
+CandidateContest	CO House District 56 (Republican Party)	State Representative - District 56 (Republican Party)
+CandidateContest	CO House District 57 (Republican Party)	State Representative - District 57 (Republican Party)
+CandidateContest	CO House District 58 (Republican Party)	State Representative - District 58 (Republican Party)
+CandidateContest	CO House District 59 (Republican Party)	State Representative - District 59 (Republican Party)
+CandidateContest	CO House District 60 (Republican Party)	State Representative - District 60 (Republican Party)
+CandidateContest	CO House District 61 (Republican Party)	State Representative - District 61 (Republican Party)
+CandidateContest	CO House District 62 (Republican Party)	State Representative - District 62 (Republican Party)
+CandidateContest	CO House District 63 (Republican Party)	State Representative - District 63 (Republican Party)
+CandidateContest	CO House District 64 (Republican Party)	State Representative - District 64 (Republican Party)
+CandidateContest	CO House District 65 (Republican Party)	State Representative - District 65 (Republican Party)
+CandidateContest	CO Senate District 1 (Republican Party)	State Senate - District 1 (Republican Party)
+CandidateContest	CO Senate District 2 (Republican Party)	State Senate - District 2 (Republican Party)
+CandidateContest	CO Senate District 3 (Republican Party)	State Senate - District 3 (Republican Party)
+CandidateContest	CO Senate District 4 (Republican Party)	State Senate - District 4 (Republican Party)
+CandidateContest	CO Senate District 5 (Republican Party)	State Senate - District 5 (Republican Party)
+CandidateContest	CO Senate District 6 (Republican Party)	State Senate - District 6 (Republican Party)
+CandidateContest	CO Senate District 7 (Republican Party)	State Senate - District 7 (Republican Party)
+CandidateContest	CO Senate District 8 (Republican Party)	State Senate - District 8 (Republican Party)
+CandidateContest	CO Senate District 9 (Republican Party)	State Senate - District 9 (Republican Party)
+CandidateContest	CO Senate District 10 (Republican Party)	State Senate - District 10 (Republican Party)
+CandidateContest	CO Senate District 11 (Republican Party)	State Senate - District 11 (Republican Party)
+CandidateContest	CO Senate District 12 (Republican Party)	State Senate - District 12 (Republican Party)
+CandidateContest	CO Senate District 13 (Republican Party)	State Senate - District 13 (Republican Party)
+CandidateContest	CO Senate District 14 (Republican Party)	State Senate - District 14 (Republican Party)
+CandidateContest	CO Senate District 15 (Republican Party)	State Senate - District 15 (Republican Party)
+CandidateContest	CO Senate District 16 (Republican Party)	State Senate - District 16 (Republican Party)
+CandidateContest	CO Senate District 17 (Republican Party)	State Senate - District 17 (Republican Party)
+CandidateContest	CO Senate District 18 (Republican Party)	State Senate - District 18 (Republican Party)
+CandidateContest	CO Senate District 19 (Republican Party)	State Senate - District 19 (Republican Party)
+CandidateContest	CO Senate District 20 (Republican Party)	State Senate - District 20 (Republican Party)
+CandidateContest	CO Senate District 21 (Republican Party)	State Senate - District 21 (Republican Party)
+CandidateContest	CO Senate District 22 (Republican Party)	State Senate - District 22 (Republican Party)
+CandidateContest	CO Senate District 23 (Republican Party)	State Senate - District 23 (Republican Party)
+CandidateContest	CO Senate District 24 (Republican Party)	State Senate - District 24 (Republican Party)
+CandidateContest	CO Senate District 25 (Republican Party)	State Senate - District 25 (Republican Party)
+CandidateContest	CO Senate District 26 (Republican Party)	State Senate - District 26 (Republican Party)
+CandidateContest	CO Senate District 27 (Republican Party)	State Senate - District 27 (Republican Party)
+CandidateContest	CO Senate District 28 (Republican Party)	State Senate - District 28 (Republican Party)
+CandidateContest	CO Senate District 29 (Republican Party)	State Senate - District 29 (Republican Party)
+CandidateContest	CO Senate District 30 (Republican Party)	State Senate - District 30 (Republican Party)
+CandidateContest	CO Senate District 31 (Republican Party)	State Senate - District 31 (Republican Party)
+CandidateContest	CO Senate District 32 (Republican Party)	State Senate - District 32 (Republican Party)
+CandidateContest	CO Senate District 33 (Republican Party)	State Senate - District 33 (Republican Party)
+CandidateContest	CO Senate District 34 (Republican Party)	State Senate - District 34 (Republican Party)
+CandidateContest	CO Senate District 35 (Republican Party)	State Senate - District 35 (Republican Party)
+CandidateContest	US House CO District 1 (Republican Party)	United States Representative - District 1 (Republican Party)
+CandidateContest	US House CO District 2 (Republican Party)	United States Representative - District 2 (Republican Party)
+CandidateContest	US House CO District 3 (Republican Party)	United States Representative - District 3 (Republican Party)
+CandidateContest	US House CO District 4 (Republican Party)	United States Representative - District 4 (Republican Party)
+CandidateContest	US House CO District 5 (Republican Party)	United States Representative - District 5 (Republican Party)
+CandidateContest	US House CO District 6 (Republican Party)	United States Representative - District 6 (Republican Party)
+CandidateContest	US House CO District 7 (Republican Party)	United States Representative - District 7 (Republican Party)
+CandidateContest	US President (CO) (Republican Party)	President/Vice President (Republican Party)
+CandidateContest	US President (CO) (Republican Party)	President of the United States (Republican Party)
+CandidateContest	CO Governor (Republican Party)	Governor/Lieutenant Governor (Republican Party)
+CandidateContest	US Senate CO (Republican Party)	United States Senator (Republican Party)
+CandidateContest	CO Attorney General (Republican Party)	Attorney General (Republican Party)
+CandidateContest	CO State Treasurer (Republican Party)	State Treasurer (Republican Party)
+CandidateContest	CO Secretary of State (Republican Party)	Secretary of State (Republican Party)
+CandidateContest	CO House District 1 (Green Party)	State Representative - District 1 (Green Party)
+CandidateContest	CO House District 2 (Green Party)	State Representative - District 2 (Green Party)
+CandidateContest	CO House District 3 (Green Party)	State Representative - District 3 (Green Party)
+CandidateContest	CO House District 4 (Green Party)	State Representative - District 4 (Green Party)
+CandidateContest	CO House District 5 (Green Party)	State Representative - District 5 (Green Party)
+CandidateContest	CO House District 6 (Green Party)	State Representative - District 6 (Green Party)
+CandidateContest	CO House District 7 (Green Party)	State Representative - District 7 (Green Party)
+CandidateContest	CO House District 8 (Green Party)	State Representative - District 8 (Green Party)
+CandidateContest	CO House District 9 (Green Party)	State Representative - District 9 (Green Party)
+CandidateContest	CO House District 10 (Green Party)	State Representative - District 10 (Green Party)
+CandidateContest	CO House District 11 (Green Party)	State Representative - District 11 (Green Party)
+CandidateContest	CO House District 12 (Green Party)	State Representative - District 12 (Green Party)
+CandidateContest	CO House District 13 (Green Party)	State Representative - District 13 (Green Party)
+CandidateContest	CO House District 14 (Green Party)	State Representative - District 14 (Green Party)
+CandidateContest	CO House District 15 (Green Party)	State Representative - District 15 (Green Party)
+CandidateContest	CO House District 16 (Green Party)	State Representative - District 16 (Green Party)
+CandidateContest	CO House District 17 (Green Party)	State Representative - District 17 (Green Party)
+CandidateContest	CO House District 18 (Green Party)	State Representative - District 18 (Green Party)
+CandidateContest	CO House District 19 (Green Party)	State Representative - District 19 (Green Party)
+CandidateContest	CO House District 20 (Green Party)	State Representative - District 20 (Green Party)
+CandidateContest	CO House District 21 (Green Party)	State Representative - District 21 (Green Party)
+CandidateContest	CO House District 22 (Green Party)	State Representative - District 22 (Green Party)
+CandidateContest	CO House District 23 (Green Party)	State Representative - District 23 (Green Party)
+CandidateContest	CO House District 24 (Green Party)	State Representative - District 24 (Green Party)
+CandidateContest	CO House District 25 (Green Party)	State Representative - District 25 (Green Party)
+CandidateContest	CO House District 26 (Green Party)	State Representative - District 26 (Green Party)
+CandidateContest	CO House District 27 (Green Party)	State Representative - District 27 (Green Party)
+CandidateContest	CO House District 28 (Green Party)	State Representative - District 28 (Green Party)
+CandidateContest	CO House District 29 (Green Party)	State Representative - District 29 (Green Party)
+CandidateContest	CO House District 30 (Green Party)	State Representative - District 30 (Green Party)
+CandidateContest	CO House District 31 (Green Party)	State Representative - District 31 (Green Party)
+CandidateContest	CO House District 32 (Green Party)	State Representative - District 32 (Green Party)
+CandidateContest	CO House District 33 (Green Party)	State Representative - District 33 (Green Party)
+CandidateContest	CO House District 34 (Green Party)	State Representative - District 34 (Green Party)
+CandidateContest	CO House District 35 (Green Party)	State Representative - District 35 (Green Party)
+CandidateContest	CO House District 36 (Green Party)	State Representative - District 36 (Green Party)
+CandidateContest	CO House District 37 (Green Party)	State Representative - District 37 (Green Party)
+CandidateContest	CO House District 38 (Green Party)	State Representative - District 38 (Green Party)
+CandidateContest	CO House District 39 (Green Party)	State Representative - District 39 (Green Party)
+CandidateContest	CO House District 40 (Green Party)	State Representative - District 40 (Green Party)
+CandidateContest	CO House District 41 (Green Party)	State Representative - District 41 (Green Party)
+CandidateContest	CO House District 42 (Green Party)	State Representative - District 42 (Green Party)
+CandidateContest	CO House District 43 (Green Party)	State Representative - District 43 (Green Party)
+CandidateContest	CO House District 44 (Green Party)	State Representative - District 44 (Green Party)
+CandidateContest	CO House District 45 (Green Party)	State Representative - District 45 (Green Party)
+CandidateContest	CO House District 46 (Green Party)	State Representative - District 46 (Green Party)
+CandidateContest	CO House District 47 (Green Party)	State Representative - District 47 (Green Party)
+CandidateContest	CO House District 48 (Green Party)	State Representative - District 48 (Green Party)
+CandidateContest	CO House District 49 (Green Party)	State Representative - District 49 (Green Party)
+CandidateContest	CO House District 50 (Green Party)	State Representative - District 50 (Green Party)
+CandidateContest	CO House District 51 (Green Party)	State Representative - District 51 (Green Party)
+CandidateContest	CO House District 52 (Green Party)	State Representative - District 52 (Green Party)
+CandidateContest	CO House District 53 (Green Party)	State Representative - District 53 (Green Party)
+CandidateContest	CO House District 54 (Green Party)	State Representative - District 54 (Green Party)
+CandidateContest	CO House District 55 (Green Party)	State Representative - District 55 (Green Party)
+CandidateContest	CO House District 56 (Green Party)	State Representative - District 56 (Green Party)
+CandidateContest	CO House District 57 (Green Party)	State Representative - District 57 (Green Party)
+CandidateContest	CO House District 58 (Green Party)	State Representative - District 58 (Green Party)
+CandidateContest	CO House District 59 (Green Party)	State Representative - District 59 (Green Party)
+CandidateContest	CO House District 60 (Green Party)	State Representative - District 60 (Green Party)
+CandidateContest	CO House District 61 (Green Party)	State Representative - District 61 (Green Party)
+CandidateContest	CO House District 62 (Green Party)	State Representative - District 62 (Green Party)
+CandidateContest	CO House District 63 (Green Party)	State Representative - District 63 (Green Party)
+CandidateContest	CO House District 64 (Green Party)	State Representative - District 64 (Green Party)
+CandidateContest	CO House District 65 (Green Party)	State Representative - District 65 (Green Party)
+CandidateContest	CO Senate District 1 (Green Party)	State Senate - District 1 (Green Party)
+CandidateContest	CO Senate District 2 (Green Party)	State Senate - District 2 (Green Party)
+CandidateContest	CO Senate District 3 (Green Party)	State Senate - District 3 (Green Party)
+CandidateContest	CO Senate District 4 (Green Party)	State Senate - District 4 (Green Party)
+CandidateContest	CO Senate District 5 (Green Party)	State Senate - District 5 (Green Party)
+CandidateContest	CO Senate District 6 (Green Party)	State Senate - District 6 (Green Party)
+CandidateContest	CO Senate District 7 (Green Party)	State Senate - District 7 (Green Party)
+CandidateContest	CO Senate District 8 (Green Party)	State Senate - District 8 (Green Party)
+CandidateContest	CO Senate District 9 (Green Party)	State Senate - District 9 (Green Party)
+CandidateContest	CO Senate District 10 (Green Party)	State Senate - District 10 (Green Party)
+CandidateContest	CO Senate District 11 (Green Party)	State Senate - District 11 (Green Party)
+CandidateContest	CO Senate District 12 (Green Party)	State Senate - District 12 (Green Party)
+CandidateContest	CO Senate District 13 (Green Party)	State Senate - District 13 (Green Party)
+CandidateContest	CO Senate District 14 (Green Party)	State Senate - District 14 (Green Party)
+CandidateContest	CO Senate District 15 (Green Party)	State Senate - District 15 (Green Party)
+CandidateContest	CO Senate District 16 (Green Party)	State Senate - District 16 (Green Party)
+CandidateContest	CO Senate District 17 (Green Party)	State Senate - District 17 (Green Party)
+CandidateContest	CO Senate District 18 (Green Party)	State Senate - District 18 (Green Party)
+CandidateContest	CO Senate District 19 (Green Party)	State Senate - District 19 (Green Party)
+CandidateContest	CO Senate District 20 (Green Party)	State Senate - District 20 (Green Party)
+CandidateContest	CO Senate District 21 (Green Party)	State Senate - District 21 (Green Party)
+CandidateContest	CO Senate District 22 (Green Party)	State Senate - District 22 (Green Party)
+CandidateContest	CO Senate District 23 (Green Party)	State Senate - District 23 (Green Party)
+CandidateContest	CO Senate District 24 (Green Party)	State Senate - District 24 (Green Party)
+CandidateContest	CO Senate District 25 (Green Party)	State Senate - District 25 (Green Party)
+CandidateContest	CO Senate District 26 (Green Party)	State Senate - District 26 (Green Party)
+CandidateContest	CO Senate District 27 (Green Party)	State Senate - District 27 (Green Party)
+CandidateContest	CO Senate District 28 (Green Party)	State Senate - District 28 (Green Party)
+CandidateContest	CO Senate District 29 (Green Party)	State Senate - District 29 (Green Party)
+CandidateContest	CO Senate District 30 (Green Party)	State Senate - District 30 (Green Party)
+CandidateContest	CO Senate District 31 (Green Party)	State Senate - District 31 (Green Party)
+CandidateContest	CO Senate District 32 (Green Party)	State Senate - District 32 (Green Party)
+CandidateContest	CO Senate District 33 (Green Party)	State Senate - District 33 (Green Party)
+CandidateContest	CO Senate District 34 (Green Party)	State Senate - District 34 (Green Party)
+CandidateContest	CO Senate District 35 (Green Party)	State Senate - District 35 (Green Party)
+CandidateContest	US House CO District 1 (Green Party)	United States Representative - District 1 (Green Party)
+CandidateContest	US House CO District 2 (Green Party)	United States Representative - District 2 (Green Party)
+CandidateContest	US House CO District 3 (Green Party)	United States Representative - District 3 (Green Party)
+CandidateContest	US House CO District 4 (Green Party)	United States Representative - District 4 (Green Party)
+CandidateContest	US House CO District 5 (Green Party)	United States Representative - District 5 (Green Party)
+CandidateContest	US House CO District 6 (Green Party)	United States Representative - District 6 (Green Party)
+CandidateContest	US House CO District 7 (Green Party)	United States Representative - District 7 (Green Party)
+CandidateContest	US President (CO) (Green Party)	President/Vice President (Green Party)
+CandidateContest	US President (CO) (Green Party)	President of the United States (Green Party)
+CandidateContest	CO Governor (Green Party)	Governor/Lieutenant Governor (Green Party)
+CandidateContest	US Senate CO (Green Party)	United States Senator (Green Party)
+CandidateContest	CO Attorney General (Green Party)	Attorney General (Green Party)
+CandidateContest	CO State Treasurer (Green Party)	State Treasurer (Green Party)
+CandidateContest	CO Secretary of State (Green Party)	Secretary of State (Green Party)
+CandidateContest	CO House District 1 (Libertarian Party)	State Representative - District 1 (Libertarian Party)
+CandidateContest	CO House District 2 (Libertarian Party)	State Representative - District 2 (Libertarian Party)
+CandidateContest	CO House District 3 (Libertarian Party)	State Representative - District 3 (Libertarian Party)
+CandidateContest	CO House District 4 (Libertarian Party)	State Representative - District 4 (Libertarian Party)
+CandidateContest	CO House District 5 (Libertarian Party)	State Representative - District 5 (Libertarian Party)
+CandidateContest	CO House District 6 (Libertarian Party)	State Representative - District 6 (Libertarian Party)
+CandidateContest	CO House District 7 (Libertarian Party)	State Representative - District 7 (Libertarian Party)
+CandidateContest	CO House District 8 (Libertarian Party)	State Representative - District 8 (Libertarian Party)
+CandidateContest	CO House District 9 (Libertarian Party)	State Representative - District 9 (Libertarian Party)
+CandidateContest	CO House District 10 (Libertarian Party)	State Representative - District 10 (Libertarian Party)
+CandidateContest	CO House District 11 (Libertarian Party)	State Representative - District 11 (Libertarian Party)
+CandidateContest	CO House District 12 (Libertarian Party)	State Representative - District 12 (Libertarian Party)
+CandidateContest	CO House District 13 (Libertarian Party)	State Representative - District 13 (Libertarian Party)
+CandidateContest	CO House District 14 (Libertarian Party)	State Representative - District 14 (Libertarian Party)
+CandidateContest	CO House District 15 (Libertarian Party)	State Representative - District 15 (Libertarian Party)
+CandidateContest	CO House District 16 (Libertarian Party)	State Representative - District 16 (Libertarian Party)
+CandidateContest	CO House District 17 (Libertarian Party)	State Representative - District 17 (Libertarian Party)
+CandidateContest	CO House District 18 (Libertarian Party)	State Representative - District 18 (Libertarian Party)
+CandidateContest	CO House District 19 (Libertarian Party)	State Representative - District 19 (Libertarian Party)
+CandidateContest	CO House District 20 (Libertarian Party)	State Representative - District 20 (Libertarian Party)
+CandidateContest	CO House District 21 (Libertarian Party)	State Representative - District 21 (Libertarian Party)
+CandidateContest	CO House District 22 (Libertarian Party)	State Representative - District 22 (Libertarian Party)
+CandidateContest	CO House District 23 (Libertarian Party)	State Representative - District 23 (Libertarian Party)
+CandidateContest	CO House District 24 (Libertarian Party)	State Representative - District 24 (Libertarian Party)
+CandidateContest	CO House District 25 (Libertarian Party)	State Representative - District 25 (Libertarian Party)
+CandidateContest	CO House District 26 (Libertarian Party)	State Representative - District 26 (Libertarian Party)
+CandidateContest	CO House District 27 (Libertarian Party)	State Representative - District 27 (Libertarian Party)
+CandidateContest	CO House District 28 (Libertarian Party)	State Representative - District 28 (Libertarian Party)
+CandidateContest	CO House District 29 (Libertarian Party)	State Representative - District 29 (Libertarian Party)
+CandidateContest	CO House District 30 (Libertarian Party)	State Representative - District 30 (Libertarian Party)
+CandidateContest	CO House District 31 (Libertarian Party)	State Representative - District 31 (Libertarian Party)
+CandidateContest	CO House District 32 (Libertarian Party)	State Representative - District 32 (Libertarian Party)
+CandidateContest	CO House District 33 (Libertarian Party)	State Representative - District 33 (Libertarian Party)
+CandidateContest	CO House District 34 (Libertarian Party)	State Representative - District 34 (Libertarian Party)
+CandidateContest	CO House District 35 (Libertarian Party)	State Representative - District 35 (Libertarian Party)
+CandidateContest	CO House District 36 (Libertarian Party)	State Representative - District 36 (Libertarian Party)
+CandidateContest	CO House District 37 (Libertarian Party)	State Representative - District 37 (Libertarian Party)
+CandidateContest	CO House District 38 (Libertarian Party)	State Representative - District 38 (Libertarian Party)
+CandidateContest	CO House District 39 (Libertarian Party)	State Representative - District 39 (Libertarian Party)
+CandidateContest	CO House District 40 (Libertarian Party)	State Representative - District 40 (Libertarian Party)
+CandidateContest	CO House District 41 (Libertarian Party)	State Representative - District 41 (Libertarian Party)
+CandidateContest	CO House District 42 (Libertarian Party)	State Representative - District 42 (Libertarian Party)
+CandidateContest	CO House District 43 (Libertarian Party)	State Representative - District 43 (Libertarian Party)
+CandidateContest	CO House District 44 (Libertarian Party)	State Representative - District 44 (Libertarian Party)
+CandidateContest	CO House District 45 (Libertarian Party)	State Representative - District 45 (Libertarian Party)
+CandidateContest	CO House District 46 (Libertarian Party)	State Representative - District 46 (Libertarian Party)
+CandidateContest	CO House District 47 (Libertarian Party)	State Representative - District 47 (Libertarian Party)
+CandidateContest	CO House District 48 (Libertarian Party)	State Representative - District 48 (Libertarian Party)
+CandidateContest	CO House District 49 (Libertarian Party)	State Representative - District 49 (Libertarian Party)
+CandidateContest	CO House District 50 (Libertarian Party)	State Representative - District 50 (Libertarian Party)
+CandidateContest	CO House District 51 (Libertarian Party)	State Representative - District 51 (Libertarian Party)
+CandidateContest	CO House District 52 (Libertarian Party)	State Representative - District 52 (Libertarian Party)
+CandidateContest	CO House District 53 (Libertarian Party)	State Representative - District 53 (Libertarian Party)
+CandidateContest	CO House District 54 (Libertarian Party)	State Representative - District 54 (Libertarian Party)
+CandidateContest	CO House District 55 (Libertarian Party)	State Representative - District 55 (Libertarian Party)
+CandidateContest	CO House District 56 (Libertarian Party)	State Representative - District 56 (Libertarian Party)
+CandidateContest	CO House District 57 (Libertarian Party)	State Representative - District 57 (Libertarian Party)
+CandidateContest	CO House District 58 (Libertarian Party)	State Representative - District 58 (Libertarian Party)
+CandidateContest	CO House District 59 (Libertarian Party)	State Representative - District 59 (Libertarian Party)
+CandidateContest	CO House District 60 (Libertarian Party)	State Representative - District 60 (Libertarian Party)
+CandidateContest	CO House District 61 (Libertarian Party)	State Representative - District 61 (Libertarian Party)
+CandidateContest	CO House District 62 (Libertarian Party)	State Representative - District 62 (Libertarian Party)
+CandidateContest	CO House District 63 (Libertarian Party)	State Representative - District 63 (Libertarian Party)
+CandidateContest	CO House District 64 (Libertarian Party)	State Representative - District 64 (Libertarian Party)
+CandidateContest	CO House District 65 (Libertarian Party)	State Representative - District 65 (Libertarian Party)
+CandidateContest	CO Senate District 1 (Libertarian Party)	State Senate - District 1 (Libertarian Party)
+CandidateContest	CO Senate District 2 (Libertarian Party)	State Senate - District 2 (Libertarian Party)
+CandidateContest	CO Senate District 3 (Libertarian Party)	State Senate - District 3 (Libertarian Party)
+CandidateContest	CO Senate District 4 (Libertarian Party)	State Senate - District 4 (Libertarian Party)
+CandidateContest	CO Senate District 5 (Libertarian Party)	State Senate - District 5 (Libertarian Party)
+CandidateContest	CO Senate District 6 (Libertarian Party)	State Senate - District 6 (Libertarian Party)
+CandidateContest	CO Senate District 7 (Libertarian Party)	State Senate - District 7 (Libertarian Party)
+CandidateContest	CO Senate District 8 (Libertarian Party)	State Senate - District 8 (Libertarian Party)
+CandidateContest	CO Senate District 9 (Libertarian Party)	State Senate - District 9 (Libertarian Party)
+CandidateContest	CO Senate District 10 (Libertarian Party)	State Senate - District 10 (Libertarian Party)
+CandidateContest	CO Senate District 11 (Libertarian Party)	State Senate - District 11 (Libertarian Party)
+CandidateContest	CO Senate District 12 (Libertarian Party)	State Senate - District 12 (Libertarian Party)
+CandidateContest	CO Senate District 13 (Libertarian Party)	State Senate - District 13 (Libertarian Party)
+CandidateContest	CO Senate District 14 (Libertarian Party)	State Senate - District 14 (Libertarian Party)
+CandidateContest	CO Senate District 15 (Libertarian Party)	State Senate - District 15 (Libertarian Party)
+CandidateContest	CO Senate District 16 (Libertarian Party)	State Senate - District 16 (Libertarian Party)
+CandidateContest	CO Senate District 17 (Libertarian Party)	State Senate - District 17 (Libertarian Party)
+CandidateContest	CO Senate District 18 (Libertarian Party)	State Senate - District 18 (Libertarian Party)
+CandidateContest	CO Senate District 19 (Libertarian Party)	State Senate - District 19 (Libertarian Party)
+CandidateContest	CO Senate District 20 (Libertarian Party)	State Senate - District 20 (Libertarian Party)
+CandidateContest	CO Senate District 21 (Libertarian Party)	State Senate - District 21 (Libertarian Party)
+CandidateContest	CO Senate District 22 (Libertarian Party)	State Senate - District 22 (Libertarian Party)
+CandidateContest	CO Senate District 23 (Libertarian Party)	State Senate - District 23 (Libertarian Party)
+CandidateContest	CO Senate District 24 (Libertarian Party)	State Senate - District 24 (Libertarian Party)
+CandidateContest	CO Senate District 25 (Libertarian Party)	State Senate - District 25 (Libertarian Party)
+CandidateContest	CO Senate District 26 (Libertarian Party)	State Senate - District 26 (Libertarian Party)
+CandidateContest	CO Senate District 27 (Libertarian Party)	State Senate - District 27 (Libertarian Party)
+CandidateContest	CO Senate District 28 (Libertarian Party)	State Senate - District 28 (Libertarian Party)
+CandidateContest	CO Senate District 29 (Libertarian Party)	State Senate - District 29 (Libertarian Party)
+CandidateContest	CO Senate District 30 (Libertarian Party)	State Senate - District 30 (Libertarian Party)
+CandidateContest	CO Senate District 31 (Libertarian Party)	State Senate - District 31 (Libertarian Party)
+CandidateContest	CO Senate District 32 (Libertarian Party)	State Senate - District 32 (Libertarian Party)
+CandidateContest	CO Senate District 33 (Libertarian Party)	State Senate - District 33 (Libertarian Party)
+CandidateContest	CO Senate District 34 (Libertarian Party)	State Senate - District 34 (Libertarian Party)
+CandidateContest	CO Senate District 35 (Libertarian Party)	State Senate - District 35 (Libertarian Party)
+CandidateContest	US House CO District 1 (Libertarian Party)	United States Representative - District 1 (Libertarian Party)
+CandidateContest	US House CO District 2 (Libertarian Party)	United States Representative - District 2 (Libertarian Party)
+CandidateContest	US House CO District 3 (Libertarian Party)	United States Representative - District 3 (Libertarian Party)
+CandidateContest	US House CO District 4 (Libertarian Party)	United States Representative - District 4 (Libertarian Party)
+CandidateContest	US House CO District 5 (Libertarian Party)	United States Representative - District 5 (Libertarian Party)
+CandidateContest	US House CO District 6 (Libertarian Party)	United States Representative - District 6 (Libertarian Party)
+CandidateContest	US House CO District 7 (Libertarian Party)	United States Representative - District 7 (Libertarian Party)
+CandidateContest	US President (CO) (Libertarian Party)	President/Vice President (Libertarian Party)
+CandidateContest	US President (CO) (Libertarian Party)	President of the United States (Libertarian Party)
+CandidateContest	CO Governor (Libertarian Party)	Governor/Lieutenant Governor (Libertarian Party)
+CandidateContest	US Senate CO (Libertarian Party)	United States Senator (Libertarian Party)
+CandidateContest	CO Attorney General (Libertarian Party)	Attorney General (Libertarian Party)
+CandidateContest	CO State Treasurer (Libertarian Party)	State Treasurer (Libertarian Party)
+CandidateContest	CO Secretary of State (Libertarian Party)	Secretary of State (Libertarian Party)
+CandidateContest	CO House District 1 (American Constitution Party)	State Representative - District 1 (American Constitution Party)
+CandidateContest	CO House District 2 (American Constitution Party)	State Representative - District 2 (American Constitution Party)
+CandidateContest	CO House District 3 (American Constitution Party)	State Representative - District 3 (American Constitution Party)
+CandidateContest	CO House District 4 (American Constitution Party)	State Representative - District 4 (American Constitution Party)
+CandidateContest	CO House District 5 (American Constitution Party)	State Representative - District 5 (American Constitution Party)
+CandidateContest	CO House District 6 (American Constitution Party)	State Representative - District 6 (American Constitution Party)
+CandidateContest	CO House District 7 (American Constitution Party)	State Representative - District 7 (American Constitution Party)
+CandidateContest	CO House District 8 (American Constitution Party)	State Representative - District 8 (American Constitution Party)
+CandidateContest	CO House District 9 (American Constitution Party)	State Representative - District 9 (American Constitution Party)
+CandidateContest	CO House District 10 (American Constitution Party)	State Representative - District 10 (American Constitution Party)
+CandidateContest	CO House District 11 (American Constitution Party)	State Representative - District 11 (American Constitution Party)
+CandidateContest	CO House District 12 (American Constitution Party)	State Representative - District 12 (American Constitution Party)
+CandidateContest	CO House District 13 (American Constitution Party)	State Representative - District 13 (American Constitution Party)
+CandidateContest	CO House District 14 (American Constitution Party)	State Representative - District 14 (American Constitution Party)
+CandidateContest	CO House District 15 (American Constitution Party)	State Representative - District 15 (American Constitution Party)
+CandidateContest	CO House District 16 (American Constitution Party)	State Representative - District 16 (American Constitution Party)
+CandidateContest	CO House District 17 (American Constitution Party)	State Representative - District 17 (American Constitution Party)
+CandidateContest	CO House District 18 (American Constitution Party)	State Representative - District 18 (American Constitution Party)
+CandidateContest	CO House District 19 (American Constitution Party)	State Representative - District 19 (American Constitution Party)
+CandidateContest	CO House District 20 (American Constitution Party)	State Representative - District 20 (American Constitution Party)
+CandidateContest	CO House District 21 (American Constitution Party)	State Representative - District 21 (American Constitution Party)
+CandidateContest	CO House District 22 (American Constitution Party)	State Representative - District 22 (American Constitution Party)
+CandidateContest	CO House District 23 (American Constitution Party)	State Representative - District 23 (American Constitution Party)
+CandidateContest	CO House District 24 (American Constitution Party)	State Representative - District 24 (American Constitution Party)
+CandidateContest	CO House District 25 (American Constitution Party)	State Representative - District 25 (American Constitution Party)
+CandidateContest	CO House District 26 (American Constitution Party)	State Representative - District 26 (American Constitution Party)
+CandidateContest	CO House District 27 (American Constitution Party)	State Representative - District 27 (American Constitution Party)
+CandidateContest	CO House District 28 (American Constitution Party)	State Representative - District 28 (American Constitution Party)
+CandidateContest	CO House District 29 (American Constitution Party)	State Representative - District 29 (American Constitution Party)
+CandidateContest	CO House District 30 (American Constitution Party)	State Representative - District 30 (American Constitution Party)
+CandidateContest	CO House District 31 (American Constitution Party)	State Representative - District 31 (American Constitution Party)
+CandidateContest	CO House District 32 (American Constitution Party)	State Representative - District 32 (American Constitution Party)
+CandidateContest	CO House District 33 (American Constitution Party)	State Representative - District 33 (American Constitution Party)
+CandidateContest	CO House District 34 (American Constitution Party)	State Representative - District 34 (American Constitution Party)
+CandidateContest	CO House District 35 (American Constitution Party)	State Representative - District 35 (American Constitution Party)
+CandidateContest	CO House District 36 (American Constitution Party)	State Representative - District 36 (American Constitution Party)
+CandidateContest	CO House District 37 (American Constitution Party)	State Representative - District 37 (American Constitution Party)
+CandidateContest	CO House District 38 (American Constitution Party)	State Representative - District 38 (American Constitution Party)
+CandidateContest	CO House District 39 (American Constitution Party)	State Representative - District 39 (American Constitution Party)
+CandidateContest	CO House District 40 (American Constitution Party)	State Representative - District 40 (American Constitution Party)
+CandidateContest	CO House District 41 (American Constitution Party)	State Representative - District 41 (American Constitution Party)
+CandidateContest	CO House District 42 (American Constitution Party)	State Representative - District 42 (American Constitution Party)
+CandidateContest	CO House District 43 (American Constitution Party)	State Representative - District 43 (American Constitution Party)
+CandidateContest	CO House District 44 (American Constitution Party)	State Representative - District 44 (American Constitution Party)
+CandidateContest	CO House District 45 (American Constitution Party)	State Representative - District 45 (American Constitution Party)
+CandidateContest	CO House District 46 (American Constitution Party)	State Representative - District 46 (American Constitution Party)
+CandidateContest	CO House District 47 (American Constitution Party)	State Representative - District 47 (American Constitution Party)
+CandidateContest	CO House District 48 (American Constitution Party)	State Representative - District 48 (American Constitution Party)
+CandidateContest	CO House District 49 (American Constitution Party)	State Representative - District 49 (American Constitution Party)
+CandidateContest	CO House District 50 (American Constitution Party)	State Representative - District 50 (American Constitution Party)
+CandidateContest	CO House District 51 (American Constitution Party)	State Representative - District 51 (American Constitution Party)
+CandidateContest	CO House District 52 (American Constitution Party)	State Representative - District 52 (American Constitution Party)
+CandidateContest	CO House District 53 (American Constitution Party)	State Representative - District 53 (American Constitution Party)
+CandidateContest	CO House District 54 (American Constitution Party)	State Representative - District 54 (American Constitution Party)
+CandidateContest	CO House District 55 (American Constitution Party)	State Representative - District 55 (American Constitution Party)
+CandidateContest	CO House District 56 (American Constitution Party)	State Representative - District 56 (American Constitution Party)
+CandidateContest	CO House District 57 (American Constitution Party)	State Representative - District 57 (American Constitution Party)
+CandidateContest	CO House District 58 (American Constitution Party)	State Representative - District 58 (American Constitution Party)
+CandidateContest	CO House District 59 (American Constitution Party)	State Representative - District 59 (American Constitution Party)
+CandidateContest	CO House District 60 (American Constitution Party)	State Representative - District 60 (American Constitution Party)
+CandidateContest	CO House District 61 (American Constitution Party)	State Representative - District 61 (American Constitution Party)
+CandidateContest	CO House District 62 (American Constitution Party)	State Representative - District 62 (American Constitution Party)
+CandidateContest	CO House District 63 (American Constitution Party)	State Representative - District 63 (American Constitution Party)
+CandidateContest	CO House District 64 (American Constitution Party)	State Representative - District 64 (American Constitution Party)
+CandidateContest	CO House District 65 (American Constitution Party)	State Representative - District 65 (American Constitution Party)
+CandidateContest	CO Senate District 1 (American Constitution Party)	State Senate - District 1 (American Constitution Party)
+CandidateContest	CO Senate District 2 (American Constitution Party)	State Senate - District 2 (American Constitution Party)
+CandidateContest	CO Senate District 3 (American Constitution Party)	State Senate - District 3 (American Constitution Party)
+CandidateContest	CO Senate District 4 (American Constitution Party)	State Senate - District 4 (American Constitution Party)
+CandidateContest	CO Senate District 5 (American Constitution Party)	State Senate - District 5 (American Constitution Party)
+CandidateContest	CO Senate District 6 (American Constitution Party)	State Senate - District 6 (American Constitution Party)
+CandidateContest	CO Senate District 7 (American Constitution Party)	State Senate - District 7 (American Constitution Party)
+CandidateContest	CO Senate District 8 (American Constitution Party)	State Senate - District 8 (American Constitution Party)
+CandidateContest	CO Senate District 9 (American Constitution Party)	State Senate - District 9 (American Constitution Party)
+CandidateContest	CO Senate District 10 (American Constitution Party)	State Senate - District 10 (American Constitution Party)
+CandidateContest	CO Senate District 11 (American Constitution Party)	State Senate - District 11 (American Constitution Party)
+CandidateContest	CO Senate District 12 (American Constitution Party)	State Senate - District 12 (American Constitution Party)
+CandidateContest	CO Senate District 13 (American Constitution Party)	State Senate - District 13 (American Constitution Party)
+CandidateContest	CO Senate District 14 (American Constitution Party)	State Senate - District 14 (American Constitution Party)
+CandidateContest	CO Senate District 15 (American Constitution Party)	State Senate - District 15 (American Constitution Party)
+CandidateContest	CO Senate District 16 (American Constitution Party)	State Senate - District 16 (American Constitution Party)
+CandidateContest	CO Senate District 17 (American Constitution Party)	State Senate - District 17 (American Constitution Party)
+CandidateContest	CO Senate District 18 (American Constitution Party)	State Senate - District 18 (American Constitution Party)
+CandidateContest	CO Senate District 19 (American Constitution Party)	State Senate - District 19 (American Constitution Party)
+CandidateContest	CO Senate District 20 (American Constitution Party)	State Senate - District 20 (American Constitution Party)
+CandidateContest	CO Senate District 21 (American Constitution Party)	State Senate - District 21 (American Constitution Party)
+CandidateContest	CO Senate District 22 (American Constitution Party)	State Senate - District 22 (American Constitution Party)
+CandidateContest	CO Senate District 23 (American Constitution Party)	State Senate - District 23 (American Constitution Party)
+CandidateContest	CO Senate District 24 (American Constitution Party)	State Senate - District 24 (American Constitution Party)
+CandidateContest	CO Senate District 25 (American Constitution Party)	State Senate - District 25 (American Constitution Party)
+CandidateContest	CO Senate District 26 (American Constitution Party)	State Senate - District 26 (American Constitution Party)
+CandidateContest	CO Senate District 27 (American Constitution Party)	State Senate - District 27 (American Constitution Party)
+CandidateContest	CO Senate District 28 (American Constitution Party)	State Senate - District 28 (American Constitution Party)
+CandidateContest	CO Senate District 29 (American Constitution Party)	State Senate - District 29 (American Constitution Party)
+CandidateContest	CO Senate District 30 (American Constitution Party)	State Senate - District 30 (American Constitution Party)
+CandidateContest	CO Senate District 31 (American Constitution Party)	State Senate - District 31 (American Constitution Party)
+CandidateContest	CO Senate District 32 (American Constitution Party)	State Senate - District 32 (American Constitution Party)
+CandidateContest	CO Senate District 33 (American Constitution Party)	State Senate - District 33 (American Constitution Party)
+CandidateContest	CO Senate District 34 (American Constitution Party)	State Senate - District 34 (American Constitution Party)
+CandidateContest	CO Senate District 35 (American Constitution Party)	State Senate - District 35 (American Constitution Party)
+CandidateContest	US House CO District 1 (American Constitution Party)	United States Representative - District 1 (American Constitution Party)
+CandidateContest	US House CO District 2 (American Constitution Party)	United States Representative - District 2 (American Constitution Party)
+CandidateContest	US House CO District 3 (American Constitution Party)	United States Representative - District 3 (American Constitution Party)
+CandidateContest	US House CO District 4 (American Constitution Party)	United States Representative - District 4 (American Constitution Party)
+CandidateContest	US House CO District 5 (American Constitution Party)	United States Representative - District 5 (American Constitution Party)
+CandidateContest	US House CO District 6 (American Constitution Party)	United States Representative - District 6 (American Constitution Party)
+CandidateContest	US House CO District 7 (American Constitution Party)	United States Representative - District 7 (American Constitution Party)
+CandidateContest	US President (CO) (American Constitution Party)	President/Vice President (American Constitution Party)
+CandidateContest	US President (CO) (American Constitution Party)	President of the United States (American Constitution Party)
+CandidateContest	CO Governor (American Constitution Party)	Governor/Lieutenant Governor (American Constitution Party)
+CandidateContest	US Senate CO (American Constitution Party)	United States Senator (American Constitution Party)
+CandidateContest	CO Attorney General (American Constitution Party)	Attorney General (American Constitution Party)
+CandidateContest	CO State Treasurer (American Constitution Party)	State Treasurer (American Constitution Party)
+CandidateContest	CO Secretary of State (American Constitution Party)	Secretary of State (American Constitution Party)
+CandidateContest	CO House District 1 (Unity Party)	State Representative - District 1 (Unity Party)
+CandidateContest	CO House District 2 (Unity Party)	State Representative - District 2 (Unity Party)
+CandidateContest	CO House District 3 (Unity Party)	State Representative - District 3 (Unity Party)
+CandidateContest	CO House District 4 (Unity Party)	State Representative - District 4 (Unity Party)
+CandidateContest	CO House District 5 (Unity Party)	State Representative - District 5 (Unity Party)
+CandidateContest	CO House District 6 (Unity Party)	State Representative - District 6 (Unity Party)
+CandidateContest	CO House District 7 (Unity Party)	State Representative - District 7 (Unity Party)
+CandidateContest	CO House District 8 (Unity Party)	State Representative - District 8 (Unity Party)
+CandidateContest	CO House District 9 (Unity Party)	State Representative - District 9 (Unity Party)
+CandidateContest	CO House District 10 (Unity Party)	State Representative - District 10 (Unity Party)
+CandidateContest	CO House District 11 (Unity Party)	State Representative - District 11 (Unity Party)
+CandidateContest	CO House District 12 (Unity Party)	State Representative - District 12 (Unity Party)
+CandidateContest	CO House District 13 (Unity Party)	State Representative - District 13 (Unity Party)
+CandidateContest	CO House District 14 (Unity Party)	State Representative - District 14 (Unity Party)
+CandidateContest	CO House District 15 (Unity Party)	State Representative - District 15 (Unity Party)
+CandidateContest	CO House District 16 (Unity Party)	State Representative - District 16 (Unity Party)
+CandidateContest	CO House District 17 (Unity Party)	State Representative - District 17 (Unity Party)
+CandidateContest	CO House District 18 (Unity Party)	State Representative - District 18 (Unity Party)
+CandidateContest	CO House District 19 (Unity Party)	State Representative - District 19 (Unity Party)
+CandidateContest	CO House District 20 (Unity Party)	State Representative - District 20 (Unity Party)
+CandidateContest	CO House District 21 (Unity Party)	State Representative - District 21 (Unity Party)
+CandidateContest	CO House District 22 (Unity Party)	State Representative - District 22 (Unity Party)
+CandidateContest	CO House District 23 (Unity Party)	State Representative - District 23 (Unity Party)
+CandidateContest	CO House District 24 (Unity Party)	State Representative - District 24 (Unity Party)
+CandidateContest	CO House District 25 (Unity Party)	State Representative - District 25 (Unity Party)
+CandidateContest	CO House District 26 (Unity Party)	State Representative - District 26 (Unity Party)
+CandidateContest	CO House District 27 (Unity Party)	State Representative - District 27 (Unity Party)
+CandidateContest	CO House District 28 (Unity Party)	State Representative - District 28 (Unity Party)
+CandidateContest	CO House District 29 (Unity Party)	State Representative - District 29 (Unity Party)
+CandidateContest	CO House District 30 (Unity Party)	State Representative - District 30 (Unity Party)
+CandidateContest	CO House District 31 (Unity Party)	State Representative - District 31 (Unity Party)
+CandidateContest	CO House District 32 (Unity Party)	State Representative - District 32 (Unity Party)
+CandidateContest	CO House District 33 (Unity Party)	State Representative - District 33 (Unity Party)
+CandidateContest	CO House District 34 (Unity Party)	State Representative - District 34 (Unity Party)
+CandidateContest	CO House District 35 (Unity Party)	State Representative - District 35 (Unity Party)
+CandidateContest	CO House District 36 (Unity Party)	State Representative - District 36 (Unity Party)
+CandidateContest	CO House District 37 (Unity Party)	State Representative - District 37 (Unity Party)
+CandidateContest	CO House District 38 (Unity Party)	State Representative - District 38 (Unity Party)
+CandidateContest	CO House District 39 (Unity Party)	State Representative - District 39 (Unity Party)
+CandidateContest	CO House District 40 (Unity Party)	State Representative - District 40 (Unity Party)
+CandidateContest	CO House District 41 (Unity Party)	State Representative - District 41 (Unity Party)
+CandidateContest	CO House District 42 (Unity Party)	State Representative - District 42 (Unity Party)
+CandidateContest	CO House District 43 (Unity Party)	State Representative - District 43 (Unity Party)
+CandidateContest	CO House District 44 (Unity Party)	State Representative - District 44 (Unity Party)
+CandidateContest	CO House District 45 (Unity Party)	State Representative - District 45 (Unity Party)
+CandidateContest	CO House District 46 (Unity Party)	State Representative - District 46 (Unity Party)
+CandidateContest	CO House District 47 (Unity Party)	State Representative - District 47 (Unity Party)
+CandidateContest	CO House District 48 (Unity Party)	State Representative - District 48 (Unity Party)
+CandidateContest	CO House District 49 (Unity Party)	State Representative - District 49 (Unity Party)
+CandidateContest	CO House District 50 (Unity Party)	State Representative - District 50 (Unity Party)
+CandidateContest	CO House District 51 (Unity Party)	State Representative - District 51 (Unity Party)
+CandidateContest	CO House District 52 (Unity Party)	State Representative - District 52 (Unity Party)
+CandidateContest	CO House District 53 (Unity Party)	State Representative - District 53 (Unity Party)
+CandidateContest	CO House District 54 (Unity Party)	State Representative - District 54 (Unity Party)
+CandidateContest	CO House District 55 (Unity Party)	State Representative - District 55 (Unity Party)
+CandidateContest	CO House District 56 (Unity Party)	State Representative - District 56 (Unity Party)
+CandidateContest	CO House District 57 (Unity Party)	State Representative - District 57 (Unity Party)
+CandidateContest	CO House District 58 (Unity Party)	State Representative - District 58 (Unity Party)
+CandidateContest	CO House District 59 (Unity Party)	State Representative - District 59 (Unity Party)
+CandidateContest	CO House District 60 (Unity Party)	State Representative - District 60 (Unity Party)
+CandidateContest	CO House District 61 (Unity Party)	State Representative - District 61 (Unity Party)
+CandidateContest	CO House District 62 (Unity Party)	State Representative - District 62 (Unity Party)
+CandidateContest	CO House District 63 (Unity Party)	State Representative - District 63 (Unity Party)
+CandidateContest	CO House District 64 (Unity Party)	State Representative - District 64 (Unity Party)
+CandidateContest	CO House District 65 (Unity Party)	State Representative - District 65 (Unity Party)
+CandidateContest	CO Senate District 1 (Unity Party)	State Senate - District 1 (Unity Party)
+CandidateContest	CO Senate District 2 (Unity Party)	State Senate - District 2 (Unity Party)
+CandidateContest	CO Senate District 3 (Unity Party)	State Senate - District 3 (Unity Party)
+CandidateContest	CO Senate District 4 (Unity Party)	State Senate - District 4 (Unity Party)
+CandidateContest	CO Senate District 5 (Unity Party)	State Senate - District 5 (Unity Party)
+CandidateContest	CO Senate District 6 (Unity Party)	State Senate - District 6 (Unity Party)
+CandidateContest	CO Senate District 7 (Unity Party)	State Senate - District 7 (Unity Party)
+CandidateContest	CO Senate District 8 (Unity Party)	State Senate - District 8 (Unity Party)
+CandidateContest	CO Senate District 9 (Unity Party)	State Senate - District 9 (Unity Party)
+CandidateContest	CO Senate District 10 (Unity Party)	State Senate - District 10 (Unity Party)
+CandidateContest	CO Senate District 11 (Unity Party)	State Senate - District 11 (Unity Party)
+CandidateContest	CO Senate District 12 (Unity Party)	State Senate - District 12 (Unity Party)
+CandidateContest	CO Senate District 13 (Unity Party)	State Senate - District 13 (Unity Party)
+CandidateContest	CO Senate District 14 (Unity Party)	State Senate - District 14 (Unity Party)
+CandidateContest	CO Senate District 15 (Unity Party)	State Senate - District 15 (Unity Party)
+CandidateContest	CO Senate District 16 (Unity Party)	State Senate - District 16 (Unity Party)
+CandidateContest	CO Senate District 17 (Unity Party)	State Senate - District 17 (Unity Party)
+CandidateContest	CO Senate District 18 (Unity Party)	State Senate - District 18 (Unity Party)
+CandidateContest	CO Senate District 19 (Unity Party)	State Senate - District 19 (Unity Party)
+CandidateContest	CO Senate District 20 (Unity Party)	State Senate - District 20 (Unity Party)
+CandidateContest	CO Senate District 21 (Unity Party)	State Senate - District 21 (Unity Party)
+CandidateContest	CO Senate District 22 (Unity Party)	State Senate - District 22 (Unity Party)
+CandidateContest	CO Senate District 23 (Unity Party)	State Senate - District 23 (Unity Party)
+CandidateContest	CO Senate District 24 (Unity Party)	State Senate - District 24 (Unity Party)
+CandidateContest	CO Senate District 25 (Unity Party)	State Senate - District 25 (Unity Party)
+CandidateContest	CO Senate District 26 (Unity Party)	State Senate - District 26 (Unity Party)
+CandidateContest	CO Senate District 27 (Unity Party)	State Senate - District 27 (Unity Party)
+CandidateContest	CO Senate District 28 (Unity Party)	State Senate - District 28 (Unity Party)
+CandidateContest	CO Senate District 29 (Unity Party)	State Senate - District 29 (Unity Party)
+CandidateContest	CO Senate District 30 (Unity Party)	State Senate - District 30 (Unity Party)
+CandidateContest	CO Senate District 31 (Unity Party)	State Senate - District 31 (Unity Party)
+CandidateContest	CO Senate District 32 (Unity Party)	State Senate - District 32 (Unity Party)
+CandidateContest	CO Senate District 33 (Unity Party)	State Senate - District 33 (Unity Party)
+CandidateContest	CO Senate District 34 (Unity Party)	State Senate - District 34 (Unity Party)
+CandidateContest	CO Senate District 35 (Unity Party)	State Senate - District 35 (Unity Party)
+CandidateContest	US House CO District 1 (Unity Party)	United States Representative - District 1 (Unity Party)
+CandidateContest	US House CO District 2 (Unity Party)	United States Representative - District 2 (Unity Party)
+CandidateContest	US House CO District 3 (Unity Party)	United States Representative - District 3 (Unity Party)
+CandidateContest	US House CO District 4 (Unity Party)	United States Representative - District 4 (Unity Party)
+CandidateContest	US House CO District 5 (Unity Party)	United States Representative - District 5 (Unity Party)
+CandidateContest	US House CO District 6 (Unity Party)	United States Representative - District 6 (Unity Party)
+CandidateContest	US House CO District 7 (Unity Party)	United States Representative - District 7 (Unity Party)
+CandidateContest	US President (CO) (Unity Party)	President/Vice President (Unity Party)
+CandidateContest	US President (CO) (Unity Party)	President of the United States (Unity Party)
+CandidateContest	CO Governor (Unity Party)	Governor/Lieutenant Governor (Unity Party)
+CandidateContest	US Senate CO (Unity Party)	United States Senator (Unity Party)
+CandidateContest	CO Attorney General (Unity Party)	Attorney General (Unity Party)
+CandidateContest	CO State Treasurer (Unity Party)	State Treasurer (Unity Party)
+CandidateContest	CO Secretary of State (Unity Party)	Secretary of State (Unity Party)
+CandidateContest	CO House District 1 (Approval Voting Party)	State Representative - District 1 (Approval Voting Party)
+CandidateContest	CO House District 2 (Approval Voting Party)	State Representative - District 2 (Approval Voting Party)
+CandidateContest	CO House District 3 (Approval Voting Party)	State Representative - District 3 (Approval Voting Party)
+CandidateContest	CO House District 4 (Approval Voting Party)	State Representative - District 4 (Approval Voting Party)
+CandidateContest	CO House District 5 (Approval Voting Party)	State Representative - District 5 (Approval Voting Party)
+CandidateContest	CO House District 6 (Approval Voting Party)	State Representative - District 6 (Approval Voting Party)
+CandidateContest	CO House District 7 (Approval Voting Party)	State Representative - District 7 (Approval Voting Party)
+CandidateContest	CO House District 8 (Approval Voting Party)	State Representative - District 8 (Approval Voting Party)
+CandidateContest	CO House District 9 (Approval Voting Party)	State Representative - District 9 (Approval Voting Party)
+CandidateContest	CO House District 10 (Approval Voting Party)	State Representative - District 10 (Approval Voting Party)
+CandidateContest	CO House District 11 (Approval Voting Party)	State Representative - District 11 (Approval Voting Party)
+CandidateContest	CO House District 12 (Approval Voting Party)	State Representative - District 12 (Approval Voting Party)
+CandidateContest	CO House District 13 (Approval Voting Party)	State Representative - District 13 (Approval Voting Party)
+CandidateContest	CO House District 14 (Approval Voting Party)	State Representative - District 14 (Approval Voting Party)
+CandidateContest	CO House District 15 (Approval Voting Party)	State Representative - District 15 (Approval Voting Party)
+CandidateContest	CO House District 16 (Approval Voting Party)	State Representative - District 16 (Approval Voting Party)
+CandidateContest	CO House District 17 (Approval Voting Party)	State Representative - District 17 (Approval Voting Party)
+CandidateContest	CO House District 18 (Approval Voting Party)	State Representative - District 18 (Approval Voting Party)
+CandidateContest	CO House District 19 (Approval Voting Party)	State Representative - District 19 (Approval Voting Party)
+CandidateContest	CO House District 20 (Approval Voting Party)	State Representative - District 20 (Approval Voting Party)
+CandidateContest	CO House District 21 (Approval Voting Party)	State Representative - District 21 (Approval Voting Party)
+CandidateContest	CO House District 22 (Approval Voting Party)	State Representative - District 22 (Approval Voting Party)
+CandidateContest	CO House District 23 (Approval Voting Party)	State Representative - District 23 (Approval Voting Party)
+CandidateContest	CO House District 24 (Approval Voting Party)	State Representative - District 24 (Approval Voting Party)
+CandidateContest	CO House District 25 (Approval Voting Party)	State Representative - District 25 (Approval Voting Party)
+CandidateContest	CO House District 26 (Approval Voting Party)	State Representative - District 26 (Approval Voting Party)
+CandidateContest	CO House District 27 (Approval Voting Party)	State Representative - District 27 (Approval Voting Party)
+CandidateContest	CO House District 28 (Approval Voting Party)	State Representative - District 28 (Approval Voting Party)
+CandidateContest	CO House District 29 (Approval Voting Party)	State Representative - District 29 (Approval Voting Party)
+CandidateContest	CO House District 30 (Approval Voting Party)	State Representative - District 30 (Approval Voting Party)
+CandidateContest	CO House District 31 (Approval Voting Party)	State Representative - District 31 (Approval Voting Party)
+CandidateContest	CO House District 32 (Approval Voting Party)	State Representative - District 32 (Approval Voting Party)
+CandidateContest	CO House District 33 (Approval Voting Party)	State Representative - District 33 (Approval Voting Party)
+CandidateContest	CO House District 34 (Approval Voting Party)	State Representative - District 34 (Approval Voting Party)
+CandidateContest	CO House District 35 (Approval Voting Party)	State Representative - District 35 (Approval Voting Party)
+CandidateContest	CO House District 36 (Approval Voting Party)	State Representative - District 36 (Approval Voting Party)
+CandidateContest	CO House District 37 (Approval Voting Party)	State Representative - District 37 (Approval Voting Party)
+CandidateContest	CO House District 38 (Approval Voting Party)	State Representative - District 38 (Approval Voting Party)
+CandidateContest	CO House District 39 (Approval Voting Party)	State Representative - District 39 (Approval Voting Party)
+CandidateContest	CO House District 40 (Approval Voting Party)	State Representative - District 40 (Approval Voting Party)
+CandidateContest	CO House District 41 (Approval Voting Party)	State Representative - District 41 (Approval Voting Party)
+CandidateContest	CO House District 42 (Approval Voting Party)	State Representative - District 42 (Approval Voting Party)
+CandidateContest	CO House District 43 (Approval Voting Party)	State Representative - District 43 (Approval Voting Party)
+CandidateContest	CO House District 44 (Approval Voting Party)	State Representative - District 44 (Approval Voting Party)
+CandidateContest	CO House District 45 (Approval Voting Party)	State Representative - District 45 (Approval Voting Party)
+CandidateContest	CO House District 46 (Approval Voting Party)	State Representative - District 46 (Approval Voting Party)
+CandidateContest	CO House District 47 (Approval Voting Party)	State Representative - District 47 (Approval Voting Party)
+CandidateContest	CO House District 48 (Approval Voting Party)	State Representative - District 48 (Approval Voting Party)
+CandidateContest	CO House District 49 (Approval Voting Party)	State Representative - District 49 (Approval Voting Party)
+CandidateContest	CO House District 50 (Approval Voting Party)	State Representative - District 50 (Approval Voting Party)
+CandidateContest	CO House District 51 (Approval Voting Party)	State Representative - District 51 (Approval Voting Party)
+CandidateContest	CO House District 52 (Approval Voting Party)	State Representative - District 52 (Approval Voting Party)
+CandidateContest	CO House District 53 (Approval Voting Party)	State Representative - District 53 (Approval Voting Party)
+CandidateContest	CO House District 54 (Approval Voting Party)	State Representative - District 54 (Approval Voting Party)
+CandidateContest	CO House District 55 (Approval Voting Party)	State Representative - District 55 (Approval Voting Party)
+CandidateContest	CO House District 56 (Approval Voting Party)	State Representative - District 56 (Approval Voting Party)
+CandidateContest	CO House District 57 (Approval Voting Party)	State Representative - District 57 (Approval Voting Party)
+CandidateContest	CO House District 58 (Approval Voting Party)	State Representative - District 58 (Approval Voting Party)
+CandidateContest	CO House District 59 (Approval Voting Party)	State Representative - District 59 (Approval Voting Party)
+CandidateContest	CO House District 60 (Approval Voting Party)	State Representative - District 60 (Approval Voting Party)
+CandidateContest	CO House District 61 (Approval Voting Party)	State Representative - District 61 (Approval Voting Party)
+CandidateContest	CO House District 62 (Approval Voting Party)	State Representative - District 62 (Approval Voting Party)
+CandidateContest	CO House District 63 (Approval Voting Party)	State Representative - District 63 (Approval Voting Party)
+CandidateContest	CO House District 64 (Approval Voting Party)	State Representative - District 64 (Approval Voting Party)
+CandidateContest	CO House District 65 (Approval Voting Party)	State Representative - District 65 (Approval Voting Party)
+CandidateContest	CO Senate District 1 (Approval Voting Party)	State Senate - District 1 (Approval Voting Party)
+CandidateContest	CO Senate District 2 (Approval Voting Party)	State Senate - District 2 (Approval Voting Party)
+CandidateContest	CO Senate District 3 (Approval Voting Party)	State Senate - District 3 (Approval Voting Party)
+CandidateContest	CO Senate District 4 (Approval Voting Party)	State Senate - District 4 (Approval Voting Party)
+CandidateContest	CO Senate District 5 (Approval Voting Party)	State Senate - District 5 (Approval Voting Party)
+CandidateContest	CO Senate District 6 (Approval Voting Party)	State Senate - District 6 (Approval Voting Party)
+CandidateContest	CO Senate District 7 (Approval Voting Party)	State Senate - District 7 (Approval Voting Party)
+CandidateContest	CO Senate District 8 (Approval Voting Party)	State Senate - District 8 (Approval Voting Party)
+CandidateContest	CO Senate District 9 (Approval Voting Party)	State Senate - District 9 (Approval Voting Party)
+CandidateContest	CO Senate District 10 (Approval Voting Party)	State Senate - District 10 (Approval Voting Party)
+CandidateContest	CO Senate District 11 (Approval Voting Party)	State Senate - District 11 (Approval Voting Party)
+CandidateContest	CO Senate District 12 (Approval Voting Party)	State Senate - District 12 (Approval Voting Party)
+CandidateContest	CO Senate District 13 (Approval Voting Party)	State Senate - District 13 (Approval Voting Party)
+CandidateContest	CO Senate District 14 (Approval Voting Party)	State Senate - District 14 (Approval Voting Party)
+CandidateContest	CO Senate District 15 (Approval Voting Party)	State Senate - District 15 (Approval Voting Party)
+CandidateContest	CO Senate District 16 (Approval Voting Party)	State Senate - District 16 (Approval Voting Party)
+CandidateContest	CO Senate District 17 (Approval Voting Party)	State Senate - District 17 (Approval Voting Party)
+CandidateContest	CO Senate District 18 (Approval Voting Party)	State Senate - District 18 (Approval Voting Party)
+CandidateContest	CO Senate District 19 (Approval Voting Party)	State Senate - District 19 (Approval Voting Party)
+CandidateContest	CO Senate District 20 (Approval Voting Party)	State Senate - District 20 (Approval Voting Party)
+CandidateContest	CO Senate District 21 (Approval Voting Party)	State Senate - District 21 (Approval Voting Party)
+CandidateContest	CO Senate District 22 (Approval Voting Party)	State Senate - District 22 (Approval Voting Party)
+CandidateContest	CO Senate District 23 (Approval Voting Party)	State Senate - District 23 (Approval Voting Party)
+CandidateContest	CO Senate District 24 (Approval Voting Party)	State Senate - District 24 (Approval Voting Party)
+CandidateContest	CO Senate District 25 (Approval Voting Party)	State Senate - District 25 (Approval Voting Party)
+CandidateContest	CO Senate District 26 (Approval Voting Party)	State Senate - District 26 (Approval Voting Party)
+CandidateContest	CO Senate District 27 (Approval Voting Party)	State Senate - District 27 (Approval Voting Party)
+CandidateContest	CO Senate District 28 (Approval Voting Party)	State Senate - District 28 (Approval Voting Party)
+CandidateContest	CO Senate District 29 (Approval Voting Party)	State Senate - District 29 (Approval Voting Party)
+CandidateContest	CO Senate District 30 (Approval Voting Party)	State Senate - District 30 (Approval Voting Party)
+CandidateContest	CO Senate District 31 (Approval Voting Party)	State Senate - District 31 (Approval Voting Party)
+CandidateContest	CO Senate District 32 (Approval Voting Party)	State Senate - District 32 (Approval Voting Party)
+CandidateContest	CO Senate District 33 (Approval Voting Party)	State Senate - District 33 (Approval Voting Party)
+CandidateContest	CO Senate District 34 (Approval Voting Party)	State Senate - District 34 (Approval Voting Party)
+CandidateContest	CO Senate District 35 (Approval Voting Party)	State Senate - District 35 (Approval Voting Party)
+CandidateContest	US House CO District 1 (Approval Voting Party)	United States Representative - District 1 (Approval Voting Party)
+CandidateContest	US House CO District 2 (Approval Voting Party)	United States Representative - District 2 (Approval Voting Party)
+CandidateContest	US House CO District 3 (Approval Voting Party)	United States Representative - District 3 (Approval Voting Party)
+CandidateContest	US House CO District 4 (Approval Voting Party)	United States Representative - District 4 (Approval Voting Party)
+CandidateContest	US House CO District 5 (Approval Voting Party)	United States Representative - District 5 (Approval Voting Party)
+CandidateContest	US House CO District 6 (Approval Voting Party)	United States Representative - District 6 (Approval Voting Party)
+CandidateContest	US House CO District 7 (Approval Voting Party)	United States Representative - District 7 (Approval Voting Party)
+CandidateContest	US President (CO) (Approval Voting Party)	President/Vice President (Approval Voting Party)
+CandidateContest	US President (CO) (Approval Voting Party)	President of the United States (Approval Voting Party)
+CandidateContest	CO Governor (Approval Voting Party)	Governor/Lieutenant Governor (Approval Voting Party)
+CandidateContest	US Senate CO (Approval Voting Party)	United States Senator (Approval Voting Party)
+CandidateContest	CO Attorney General (Approval Voting Party)	Attorney General (Approval Voting Party)
+CandidateContest	CO State Treasurer (Approval Voting Party)	State Treasurer (Approval Voting Party)
+CandidateContest	CO Secretary of State (Approval Voting Party)	Secretary of State (Approval Voting Party)
+CandidateContest	CO House District 1 (Unaffiliated)	State Representative - District 1 (Unaffiliated)
+CandidateContest	CO House District 2 (Unaffiliated)	State Representative - District 2 (Unaffiliated)
+CandidateContest	CO House District 3 (Unaffiliated)	State Representative - District 3 (Unaffiliated)
+CandidateContest	CO House District 4 (Unaffiliated)	State Representative - District 4 (Unaffiliated)
+CandidateContest	CO House District 5 (Unaffiliated)	State Representative - District 5 (Unaffiliated)
+CandidateContest	CO House District 6 (Unaffiliated)	State Representative - District 6 (Unaffiliated)
+CandidateContest	CO House District 7 (Unaffiliated)	State Representative - District 7 (Unaffiliated)
+CandidateContest	CO House District 8 (Unaffiliated)	State Representative - District 8 (Unaffiliated)
+CandidateContest	CO House District 9 (Unaffiliated)	State Representative - District 9 (Unaffiliated)
+CandidateContest	CO House District 10 (Unaffiliated)	State Representative - District 10 (Unaffiliated)
+CandidateContest	CO House District 11 (Unaffiliated)	State Representative - District 11 (Unaffiliated)
+CandidateContest	CO House District 12 (Unaffiliated)	State Representative - District 12 (Unaffiliated)
+CandidateContest	CO House District 13 (Unaffiliated)	State Representative - District 13 (Unaffiliated)
+CandidateContest	CO House District 14 (Unaffiliated)	State Representative - District 14 (Unaffiliated)
+CandidateContest	CO House District 15 (Unaffiliated)	State Representative - District 15 (Unaffiliated)
+CandidateContest	CO House District 16 (Unaffiliated)	State Representative - District 16 (Unaffiliated)
+CandidateContest	CO House District 17 (Unaffiliated)	State Representative - District 17 (Unaffiliated)
+CandidateContest	CO House District 18 (Unaffiliated)	State Representative - District 18 (Unaffiliated)
+CandidateContest	CO House District 19 (Unaffiliated)	State Representative - District 19 (Unaffiliated)
+CandidateContest	CO House District 20 (Unaffiliated)	State Representative - District 20 (Unaffiliated)
+CandidateContest	CO House District 21 (Unaffiliated)	State Representative - District 21 (Unaffiliated)
+CandidateContest	CO House District 22 (Unaffiliated)	State Representative - District 22 (Unaffiliated)
+CandidateContest	CO House District 23 (Unaffiliated)	State Representative - District 23 (Unaffiliated)
+CandidateContest	CO House District 24 (Unaffiliated)	State Representative - District 24 (Unaffiliated)
+CandidateContest	CO House District 25 (Unaffiliated)	State Representative - District 25 (Unaffiliated)
+CandidateContest	CO House District 26 (Unaffiliated)	State Representative - District 26 (Unaffiliated)
+CandidateContest	CO House District 27 (Unaffiliated)	State Representative - District 27 (Unaffiliated)
+CandidateContest	CO House District 28 (Unaffiliated)	State Representative - District 28 (Unaffiliated)
+CandidateContest	CO House District 29 (Unaffiliated)	State Representative - District 29 (Unaffiliated)
+CandidateContest	CO House District 30 (Unaffiliated)	State Representative - District 30 (Unaffiliated)
+CandidateContest	CO House District 31 (Unaffiliated)	State Representative - District 31 (Unaffiliated)
+CandidateContest	CO House District 32 (Unaffiliated)	State Representative - District 32 (Unaffiliated)
+CandidateContest	CO House District 33 (Unaffiliated)	State Representative - District 33 (Unaffiliated)
+CandidateContest	CO House District 34 (Unaffiliated)	State Representative - District 34 (Unaffiliated)
+CandidateContest	CO House District 35 (Unaffiliated)	State Representative - District 35 (Unaffiliated)
+CandidateContest	CO House District 36 (Unaffiliated)	State Representative - District 36 (Unaffiliated)
+CandidateContest	CO House District 37 (Unaffiliated)	State Representative - District 37 (Unaffiliated)
+CandidateContest	CO House District 38 (Unaffiliated)	State Representative - District 38 (Unaffiliated)
+CandidateContest	CO House District 39 (Unaffiliated)	State Representative - District 39 (Unaffiliated)
+CandidateContest	CO House District 40 (Unaffiliated)	State Representative - District 40 (Unaffiliated)
+CandidateContest	CO House District 41 (Unaffiliated)	State Representative - District 41 (Unaffiliated)
+CandidateContest	CO House District 42 (Unaffiliated)	State Representative - District 42 (Unaffiliated)
+CandidateContest	CO House District 43 (Unaffiliated)	State Representative - District 43 (Unaffiliated)
+CandidateContest	CO House District 44 (Unaffiliated)	State Representative - District 44 (Unaffiliated)
+CandidateContest	CO House District 45 (Unaffiliated)	State Representative - District 45 (Unaffiliated)
+CandidateContest	CO House District 46 (Unaffiliated)	State Representative - District 46 (Unaffiliated)
+CandidateContest	CO House District 47 (Unaffiliated)	State Representative - District 47 (Unaffiliated)
+CandidateContest	CO House District 48 (Unaffiliated)	State Representative - District 48 (Unaffiliated)
+CandidateContest	CO House District 49 (Unaffiliated)	State Representative - District 49 (Unaffiliated)
+CandidateContest	CO House District 50 (Unaffiliated)	State Representative - District 50 (Unaffiliated)
+CandidateContest	CO House District 51 (Unaffiliated)	State Representative - District 51 (Unaffiliated)
+CandidateContest	CO House District 52 (Unaffiliated)	State Representative - District 52 (Unaffiliated)
+CandidateContest	CO House District 53 (Unaffiliated)	State Representative - District 53 (Unaffiliated)
+CandidateContest	CO House District 54 (Unaffiliated)	State Representative - District 54 (Unaffiliated)
+CandidateContest	CO House District 55 (Unaffiliated)	State Representative - District 55 (Unaffiliated)
+CandidateContest	CO House District 56 (Unaffiliated)	State Representative - District 56 (Unaffiliated)
+CandidateContest	CO House District 57 (Unaffiliated)	State Representative - District 57 (Unaffiliated)
+CandidateContest	CO House District 58 (Unaffiliated)	State Representative - District 58 (Unaffiliated)
+CandidateContest	CO House District 59 (Unaffiliated)	State Representative - District 59 (Unaffiliated)
+CandidateContest	CO House District 60 (Unaffiliated)	State Representative - District 60 (Unaffiliated)
+CandidateContest	CO House District 61 (Unaffiliated)	State Representative - District 61 (Unaffiliated)
+CandidateContest	CO House District 62 (Unaffiliated)	State Representative - District 62 (Unaffiliated)
+CandidateContest	CO House District 63 (Unaffiliated)	State Representative - District 63 (Unaffiliated)
+CandidateContest	CO House District 64 (Unaffiliated)	State Representative - District 64 (Unaffiliated)
+CandidateContest	CO House District 65 (Unaffiliated)	State Representative - District 65 (Unaffiliated)
+CandidateContest	CO Senate District 1 (Unaffiliated)	State Senate - District 1 (Unaffiliated)
+CandidateContest	CO Senate District 2 (Unaffiliated)	State Senate - District 2 (Unaffiliated)
+CandidateContest	CO Senate District 3 (Unaffiliated)	State Senate - District 3 (Unaffiliated)
+CandidateContest	CO Senate District 4 (Unaffiliated)	State Senate - District 4 (Unaffiliated)
+CandidateContest	CO Senate District 5 (Unaffiliated)	State Senate - District 5 (Unaffiliated)
+CandidateContest	CO Senate District 6 (Unaffiliated)	State Senate - District 6 (Unaffiliated)
+CandidateContest	CO Senate District 7 (Unaffiliated)	State Senate - District 7 (Unaffiliated)
+CandidateContest	CO Senate District 8 (Unaffiliated)	State Senate - District 8 (Unaffiliated)
+CandidateContest	CO Senate District 9 (Unaffiliated)	State Senate - District 9 (Unaffiliated)
+CandidateContest	CO Senate District 10 (Unaffiliated)	State Senate - District 10 (Unaffiliated)
+CandidateContest	CO Senate District 11 (Unaffiliated)	State Senate - District 11 (Unaffiliated)
+CandidateContest	CO Senate District 12 (Unaffiliated)	State Senate - District 12 (Unaffiliated)
+CandidateContest	CO Senate District 13 (Unaffiliated)	State Senate - District 13 (Unaffiliated)
+CandidateContest	CO Senate District 14 (Unaffiliated)	State Senate - District 14 (Unaffiliated)
+CandidateContest	CO Senate District 15 (Unaffiliated)	State Senate - District 15 (Unaffiliated)
+CandidateContest	CO Senate District 16 (Unaffiliated)	State Senate - District 16 (Unaffiliated)
+CandidateContest	CO Senate District 17 (Unaffiliated)	State Senate - District 17 (Unaffiliated)
+CandidateContest	CO Senate District 18 (Unaffiliated)	State Senate - District 18 (Unaffiliated)
+CandidateContest	CO Senate District 19 (Unaffiliated)	State Senate - District 19 (Unaffiliated)
+CandidateContest	CO Senate District 20 (Unaffiliated)	State Senate - District 20 (Unaffiliated)
+CandidateContest	CO Senate District 21 (Unaffiliated)	State Senate - District 21 (Unaffiliated)
+CandidateContest	CO Senate District 22 (Unaffiliated)	State Senate - District 22 (Unaffiliated)
+CandidateContest	CO Senate District 23 (Unaffiliated)	State Senate - District 23 (Unaffiliated)
+CandidateContest	CO Senate District 24 (Unaffiliated)	State Senate - District 24 (Unaffiliated)
+CandidateContest	CO Senate District 25 (Unaffiliated)	State Senate - District 25 (Unaffiliated)
+CandidateContest	CO Senate District 26 (Unaffiliated)	State Senate - District 26 (Unaffiliated)
+CandidateContest	CO Senate District 27 (Unaffiliated)	State Senate - District 27 (Unaffiliated)
+CandidateContest	CO Senate District 28 (Unaffiliated)	State Senate - District 28 (Unaffiliated)
+CandidateContest	CO Senate District 29 (Unaffiliated)	State Senate - District 29 (Unaffiliated)
+CandidateContest	CO Senate District 30 (Unaffiliated)	State Senate - District 30 (Unaffiliated)
+CandidateContest	CO Senate District 31 (Unaffiliated)	State Senate - District 31 (Unaffiliated)
+CandidateContest	CO Senate District 32 (Unaffiliated)	State Senate - District 32 (Unaffiliated)
+CandidateContest	CO Senate District 33 (Unaffiliated)	State Senate - District 33 (Unaffiliated)
+CandidateContest	CO Senate District 34 (Unaffiliated)	State Senate - District 34 (Unaffiliated)
+CandidateContest	CO Senate District 35 (Unaffiliated)	State Senate - District 35 (Unaffiliated)
+CandidateContest	US House CO District 1 (Unaffiliated)	United States Representative - District 1 (Unaffiliated)
+CandidateContest	US House CO District 2 (Unaffiliated)	United States Representative - District 2 (Unaffiliated)
+CandidateContest	US House CO District 3 (Unaffiliated)	United States Representative - District 3 (Unaffiliated)
+CandidateContest	US House CO District 4 (Unaffiliated)	United States Representative - District 4 (Unaffiliated)
+CandidateContest	US House CO District 5 (Unaffiliated)	United States Representative - District 5 (Unaffiliated)
+CandidateContest	US House CO District 6 (Unaffiliated)	United States Representative - District 6 (Unaffiliated)
+CandidateContest	US House CO District 7 (Unaffiliated)	United States Representative - District 7 (Unaffiliated)
+CandidateContest	US President (CO) (Unaffiliated)	President/Vice President (Unaffiliated)
+CandidateContest	US President (CO) (Unaffiliated)	President of the United States (Unaffiliated)
+CandidateContest	CO Governor (Unaffiliated)	Governor/Lieutenant Governor (Unaffiliated)
+CandidateContest	US Senate CO (Unaffiliated)	United States Senator (Unaffiliated)
+CandidateContest	CO Attorney General (Unaffiliated)	Attorney General (Unaffiliated)
+CandidateContest	CO State Treasurer (Unaffiliated)	State Treasurer (Unaffiliated)
+CandidateContest	CO Secretary of State (Unaffiliated)	Secretary of State (Unaffiliated)
+CandidateContest	CO House District 1 (Independent)	State Representative - District 1 (Independent)
+CandidateContest	CO House District 2 (Independent)	State Representative - District 2 (Independent)
+CandidateContest	CO House District 3 (Independent)	State Representative - District 3 (Independent)
+CandidateContest	CO House District 4 (Independent)	State Representative - District 4 (Independent)
+CandidateContest	CO House District 5 (Independent)	State Representative - District 5 (Independent)
+CandidateContest	CO House District 6 (Independent)	State Representative - District 6 (Independent)
+CandidateContest	CO House District 7 (Independent)	State Representative - District 7 (Independent)
+CandidateContest	CO House District 8 (Independent)	State Representative - District 8 (Independent)
+CandidateContest	CO House District 9 (Independent)	State Representative - District 9 (Independent)
+CandidateContest	CO House District 10 (Independent)	State Representative - District 10 (Independent)
+CandidateContest	CO House District 11 (Independent)	State Representative - District 11 (Independent)
+CandidateContest	CO House District 12 (Independent)	State Representative - District 12 (Independent)
+CandidateContest	CO House District 13 (Independent)	State Representative - District 13 (Independent)
+CandidateContest	CO House District 14 (Independent)	State Representative - District 14 (Independent)
+CandidateContest	CO House District 15 (Independent)	State Representative - District 15 (Independent)
+CandidateContest	CO House District 16 (Independent)	State Representative - District 16 (Independent)
+CandidateContest	CO House District 17 (Independent)	State Representative - District 17 (Independent)
+CandidateContest	CO House District 18 (Independent)	State Representative - District 18 (Independent)
+CandidateContest	CO House District 19 (Independent)	State Representative - District 19 (Independent)
+CandidateContest	CO House District 20 (Independent)	State Representative - District 20 (Independent)
+CandidateContest	CO House District 21 (Independent)	State Representative - District 21 (Independent)
+CandidateContest	CO House District 22 (Independent)	State Representative - District 22 (Independent)
+CandidateContest	CO House District 23 (Independent)	State Representative - District 23 (Independent)
+CandidateContest	CO House District 24 (Independent)	State Representative - District 24 (Independent)
+CandidateContest	CO House District 25 (Independent)	State Representative - District 25 (Independent)
+CandidateContest	CO House District 26 (Independent)	State Representative - District 26 (Independent)
+CandidateContest	CO House District 27 (Independent)	State Representative - District 27 (Independent)
+CandidateContest	CO House District 28 (Independent)	State Representative - District 28 (Independent)
+CandidateContest	CO House District 29 (Independent)	State Representative - District 29 (Independent)
+CandidateContest	CO House District 30 (Independent)	State Representative - District 30 (Independent)
+CandidateContest	CO House District 31 (Independent)	State Representative - District 31 (Independent)
+CandidateContest	CO House District 32 (Independent)	State Representative - District 32 (Independent)
+CandidateContest	CO House District 33 (Independent)	State Representative - District 33 (Independent)
+CandidateContest	CO House District 34 (Independent)	State Representative - District 34 (Independent)
+CandidateContest	CO House District 35 (Independent)	State Representative - District 35 (Independent)
+CandidateContest	CO House District 36 (Independent)	State Representative - District 36 (Independent)
+CandidateContest	CO House District 37 (Independent)	State Representative - District 37 (Independent)
+CandidateContest	CO House District 38 (Independent)	State Representative - District 38 (Independent)
+CandidateContest	CO House District 39 (Independent)	State Representative - District 39 (Independent)
+CandidateContest	CO House District 40 (Independent)	State Representative - District 40 (Independent)
+CandidateContest	CO House District 41 (Independent)	State Representative - District 41 (Independent)
+CandidateContest	CO House District 42 (Independent)	State Representative - District 42 (Independent)
+CandidateContest	CO House District 43 (Independent)	State Representative - District 43 (Independent)
+CandidateContest	CO House District 44 (Independent)	State Representative - District 44 (Independent)
+CandidateContest	CO House District 45 (Independent)	State Representative - District 45 (Independent)
+CandidateContest	CO House District 46 (Independent)	State Representative - District 46 (Independent)
+CandidateContest	CO House District 47 (Independent)	State Representative - District 47 (Independent)
+CandidateContest	CO House District 48 (Independent)	State Representative - District 48 (Independent)
+CandidateContest	CO House District 49 (Independent)	State Representative - District 49 (Independent)
+CandidateContest	CO House District 50 (Independent)	State Representative - District 50 (Independent)
+CandidateContest	CO House District 51 (Independent)	State Representative - District 51 (Independent)
+CandidateContest	CO House District 52 (Independent)	State Representative - District 52 (Independent)
+CandidateContest	CO House District 53 (Independent)	State Representative - District 53 (Independent)
+CandidateContest	CO House District 54 (Independent)	State Representative - District 54 (Independent)
+CandidateContest	CO House District 55 (Independent)	State Representative - District 55 (Independent)
+CandidateContest	CO House District 56 (Independent)	State Representative - District 56 (Independent)
+CandidateContest	CO House District 57 (Independent)	State Representative - District 57 (Independent)
+CandidateContest	CO House District 58 (Independent)	State Representative - District 58 (Independent)
+CandidateContest	CO House District 59 (Independent)	State Representative - District 59 (Independent)
+CandidateContest	CO House District 60 (Independent)	State Representative - District 60 (Independent)
+CandidateContest	CO House District 61 (Independent)	State Representative - District 61 (Independent)
+CandidateContest	CO House District 62 (Independent)	State Representative - District 62 (Independent)
+CandidateContest	CO House District 63 (Independent)	State Representative - District 63 (Independent)
+CandidateContest	CO House District 64 (Independent)	State Representative - District 64 (Independent)
+CandidateContest	CO House District 65 (Independent)	State Representative - District 65 (Independent)
+CandidateContest	CO Senate District 1 (Independent)	State Senate - District 1 (Independent)
+CandidateContest	CO Senate District 2 (Independent)	State Senate - District 2 (Independent)
+CandidateContest	CO Senate District 3 (Independent)	State Senate - District 3 (Independent)
+CandidateContest	CO Senate District 4 (Independent)	State Senate - District 4 (Independent)
+CandidateContest	CO Senate District 5 (Independent)	State Senate - District 5 (Independent)
+CandidateContest	CO Senate District 6 (Independent)	State Senate - District 6 (Independent)
+CandidateContest	CO Senate District 7 (Independent)	State Senate - District 7 (Independent)
+CandidateContest	CO Senate District 8 (Independent)	State Senate - District 8 (Independent)
+CandidateContest	CO Senate District 9 (Independent)	State Senate - District 9 (Independent)
+CandidateContest	CO Senate District 10 (Independent)	State Senate - District 10 (Independent)
+CandidateContest	CO Senate District 11 (Independent)	State Senate - District 11 (Independent)
+CandidateContest	CO Senate District 12 (Independent)	State Senate - District 12 (Independent)
+CandidateContest	CO Senate District 13 (Independent)	State Senate - District 13 (Independent)
+CandidateContest	CO Senate District 14 (Independent)	State Senate - District 14 (Independent)
+CandidateContest	CO Senate District 15 (Independent)	State Senate - District 15 (Independent)
+CandidateContest	CO Senate District 16 (Independent)	State Senate - District 16 (Independent)
+CandidateContest	CO Senate District 17 (Independent)	State Senate - District 17 (Independent)
+CandidateContest	CO Senate District 18 (Independent)	State Senate - District 18 (Independent)
+CandidateContest	CO Senate District 19 (Independent)	State Senate - District 19 (Independent)
+CandidateContest	CO Senate District 20 (Independent)	State Senate - District 20 (Independent)
+CandidateContest	CO Senate District 21 (Independent)	State Senate - District 21 (Independent)
+CandidateContest	CO Senate District 22 (Independent)	State Senate - District 22 (Independent)
+CandidateContest	CO Senate District 23 (Independent)	State Senate - District 23 (Independent)
+CandidateContest	CO Senate District 24 (Independent)	State Senate - District 24 (Independent)
+CandidateContest	CO Senate District 25 (Independent)	State Senate - District 25 (Independent)
+CandidateContest	CO Senate District 26 (Independent)	State Senate - District 26 (Independent)
+CandidateContest	CO Senate District 27 (Independent)	State Senate - District 27 (Independent)
+CandidateContest	CO Senate District 28 (Independent)	State Senate - District 28 (Independent)
+CandidateContest	CO Senate District 29 (Independent)	State Senate - District 29 (Independent)
+CandidateContest	CO Senate District 30 (Independent)	State Senate - District 30 (Independent)
+CandidateContest	CO Senate District 31 (Independent)	State Senate - District 31 (Independent)
+CandidateContest	CO Senate District 32 (Independent)	State Senate - District 32 (Independent)
+CandidateContest	CO Senate District 33 (Independent)	State Senate - District 33 (Independent)
+CandidateContest	CO Senate District 34 (Independent)	State Senate - District 34 (Independent)
+CandidateContest	CO Senate District 35 (Independent)	State Senate - District 35 (Independent)
+CandidateContest	US House CO District 1 (Independent)	United States Representative - District 1 (Independent)
+CandidateContest	US House CO District 2 (Independent)	United States Representative - District 2 (Independent)
+CandidateContest	US House CO District 3 (Independent)	United States Representative - District 3 (Independent)
+CandidateContest	US House CO District 4 (Independent)	United States Representative - District 4 (Independent)
+CandidateContest	US House CO District 5 (Independent)	United States Representative - District 5 (Independent)
+CandidateContest	US House CO District 6 (Independent)	United States Representative - District 6 (Independent)
+CandidateContest	US House CO District 7 (Independent)	United States Representative - District 7 (Independent)
+CandidateContest	US President (CO) (Independent)	President/Vice President (Independent)
+CandidateContest	US President (CO) (Independent)	President of the United States (Independent)
+CandidateContest	CO Governor (Independent)	Governor/Lieutenant Governor (Independent)
+CandidateContest	US Senate CO (Independent)	United States Senator (Independent)
+CandidateContest	CO Attorney General (Independent)	Attorney General (Independent)
+CandidateContest	CO State Treasurer (Independent)	State Treasurer (Independent)
+CandidateContest	CO Secretary of State (Independent)	Secretary of State (Independent)
 CandidateContest	CO House District 1	State Representative - District 1
 CandidateContest	CO House District 2	State Representative - District 2
 CandidateContest	CO House District 3	State Representative - District 3
@@ -126,9 +1152,33 @@ Party	Green Party	Green Party
 Party	Libertarian Party	Libertarian Party
 Party	American Constitution Party	American Constitution Party
 Party	Unity Party	Unity Party
+Party	Unity Party	Unity Party of Colorado
 Party	Approval Voting Party	Approval Voting Party
 Party	Unaffiliated	Unaffiliated
 Party	Independent	Independent
+Party	Veterans Party	Veterans Party of America
+Party	Unaffiliated / Republican	Unaffiliated / Republican
+Party	Unaffiliated / Libertarian	Unaffiliated / Libertarian
+Party	Socialist Workers Party	Socialist Workers Party
+Party	Socialist Party USA	Socialist Party USA
+Party	Socialism and Liberation	Socialism and Liberation
+Party	Prohibition Party	Prohibition Party
+Party	Nutrition Party	Nutrition Party
+Party	Nonviolent Resistance/Pacifist	Nonviolent Resistance/Pacifist
+Party	Kotlikoff for President	Kotlikoff for President
+Party	Independent People of Colorado	Independent People of Colorado
+Party	Independent American Party	Independent American Party
+Party	Green / Democratic	Green / Democratic
+Party	American Solidarity Party	American Solidarity Party
+Party	American Delta Party	American Delta Party
+Party	America's Party	America's Party
+
+
+
+
+
+
+
 ReportingUnit	Colorado;CO House District 1	Colorado;State Representative - District 1
 ReportingUnit	Colorado;CO House District 2	Colorado;State Representative - District 2
 ReportingUnit	Colorado;CO House District 3	Colorado;State Representative - District 3
@@ -694,3 +1744,868 @@ Candidate	Michele Lynn Meyer	Michele Lynn Meyer
 Candidate	Dana Nichols	Dana Nichols
 Candidate	Charles S. Unfug	Charles S. Unfug
 CountItemType	total	total
+Candidate	Hillary Clinton / Tim Kaine	Hillary Clinton / Tim Kaine
+Candidate	Hillary Clinton / Tim Kaine TOTAL	Hillary Clinton / Tim Kaine TOTAL
+Candidate	Donald J. Trump / Michael R. Pence	Donald J. Trump / Michael R. Pence
+Candidate	Donald J. Trump / Michael R. Pence TOTAL	Donald J. Trump / Michael R. Pence TOTAL
+Candidate	Darrell L. Castle / Scott N. Bradley	Darrell L. Castle / Scott N. Bradley
+Candidate	Darrell L. Castle / Scott N. Bradley TOTAL	Darrell L. Castle / Scott N. Bradley TOTAL
+Candidate	Gary Johnson / Bill Weld	Gary Johnson / Bill Weld
+Candidate	Gary Johnson / Bill Weld TOTAL	Gary Johnson / Bill Weld TOTAL
+Candidate	Jill Stein / Ajamu Baraka	Jill Stein / Ajamu Baraka
+Candidate	Jill Stein / Ajamu Baraka TOTAL	Jill Stein / Ajamu Baraka TOTAL
+Candidate	Frank Atwood / Blake Huber	Frank Atwood / Blake Huber
+Candidate	Frank Atwood / Blake Huber TOTAL	Frank Atwood / Blake Huber TOTAL
+Candidate	Rocky Roque De La Fuente / Michael Steinberg	Rocky Roque De La Fuente / Michael Steinberg
+Candidate	Rocky Roque De La Fuente / Michael Steinberg TOTAL	Rocky Roque De La Fuente / Michael Steinberg TOTAL
+Candidate	James Hedges / Bill Bayes	James Hedges / Bill Bayes
+Candidate	James Hedges / Bill Bayes TOTAL	James Hedges / Bill Bayes TOTAL
+Candidate	Tom Hoefling / Steve Schulin	Tom Hoefling / Steve Schulin
+Candidate	Tom Hoefling / Steve Schulin TOTAL	Tom Hoefling / Steve Schulin TOTAL
+Candidate	Chris Keniston / Deacon Taylor	Chris Keniston / Deacon Taylor
+Candidate	Chris Keniston / Deacon Taylor TOTAL	Chris Keniston / Deacon Taylor TOTAL
+Candidate	Alyson Kennedy / Osborne Hart	Alyson Kennedy / Osborne Hart
+Candidate	Alyson Kennedy / Osborne Hart TOTAL	Alyson Kennedy / Osborne Hart TOTAL
+Candidate	Kyle Kenley Kopitke / Nathan R. Sorenson	Kyle Kenley Kopitke / Nathan R. Sorenson
+Candidate	Kyle Kenley Kopitke / Nathan R. Sorenson TOTAL	Kyle Kenley Kopitke / Nathan R. Sorenson TOTAL
+Candidate	Laurence Kotlikoff / Edward Leamer	Laurence Kotlikoff / Edward Leamer
+Candidate	Laurence Kotlikoff / Edward Leamer TOTAL	Laurence Kotlikoff / Edward Leamer TOTAL
+Candidate	Gloria Estela La Riva / Dennis J. Banks	Gloria Estela La Riva / Dennis J. Banks
+Candidate	Gloria Estela La Riva / Dennis J. Banks TOTAL	Gloria Estela La Riva / Dennis J. Banks TOTAL
+Candidate	Bradford Lyttle / Hannah Walsh	Bradford Lyttle / Hannah Walsh
+Candidate	Bradford Lyttle / Hannah Walsh TOTAL	Bradford Lyttle / Hannah Walsh TOTAL
+Candidate	Joseph Allen Maldonado / Douglas K. Terranova	Joseph Allen Maldonado / Douglas K. Terranova
+Candidate	Joseph Allen Maldonado / Douglas K. Terranova TOTAL	Joseph Allen Maldonado / Douglas K. Terranova TOTAL
+Candidate	Michael A. Maturen / Juan Munoz	Michael A. Maturen / Juan Munoz
+Candidate	Michael A. Maturen / Juan Munoz TOTAL	Michael A. Maturen / Juan Munoz TOTAL
+Candidate	Evan McMullin / Nathan Johnson	Evan McMullin / Nathan Johnson
+Candidate	Evan McMullin / Nathan Johnson TOTAL	Evan McMullin / Nathan Johnson TOTAL
+Candidate	Ryan Alan Scott / Bruce Kendall Barnard	Ryan Alan Scott / Bruce Kendall Barnard
+Candidate	Ryan Alan Scott / Bruce Kendall Barnard TOTAL	Ryan Alan Scott / Bruce Kendall Barnard TOTAL
+Candidate	Rod Silva / Richard C. Silva	Rod Silva / Richard C. Silva
+Candidate	Rod Silva / Richard C. Silva TOTAL	Rod Silva / Richard C. Silva TOTAL
+Candidate	Mike Smith / Daniel White	Mike Smith / Daniel White
+Candidate	Mike Smith / Daniel White TOTAL	Mike Smith / Daniel White TOTAL
+Candidate	Emidio Soltysik / Angela Nicole Walker	Emidio Soltysik / Angela Nicole Walker
+Candidate	Emidio Soltysik / Angela Nicole Walker TOTAL	Emidio Soltysik / Angela Nicole Walker TOTAL
+Candidate	Bruce Lohmiller / J.R. Smith	Bruce Lohmiller / J.R. Smith
+Candidate	Bruce Lohmiller / J.R. Smith TOTAL	Bruce Lohmiller / J.R. Smith TOTAL
+Candidate	Thomas J. Nieman / Bernie Jackson	Thomas J. Nieman / Bernie Jackson
+Candidate	Thomas J. Nieman / Bernie Jackson TOTAL	Thomas J. Nieman / Bernie Jackson TOTAL
+Candidate	Corey Sterner / Jeff Ryan	Corey Sterner / Jeff Ryan
+Candidate	Corey Sterner / Jeff Ryan TOTAL	Corey Sterner / Jeff Ryan TOTAL
+Candidate	David Perry / Eric 'Rick' Seiley	David Perry / Eric 'Rick' Seiley
+Candidate	David Perry / Eric 'Rick' Seiley TOTAL	David Perry / Eric 'Rick' Seiley TOTAL
+Candidate	Brian Anthony Perry / Michael Byron Nelson	Brian Anthony Perry / Michael Byron Nelson
+Candidate	Brian Anthony Perry / Michael Byron Nelson TOTAL	Brian Anthony Perry / Michael Byron Nelson TOTAL
+Candidate	Cherunda Fox / Roger Kushner	Cherunda Fox / Roger Kushner
+Candidate	Cherunda Fox / Roger Kushner TOTAL	Cherunda Fox / Roger Kushner TOTAL
+Candidate	Michael Bennet	Michael Bennet
+Candidate	Michael Bennet TOTAL	Michael Bennet TOTAL
+Candidate	Darryl Glenn	Darryl Glenn
+Candidate	Darryl Glenn TOTAL	Darryl Glenn TOTAL
+Candidate	Lily Tang Williams	Lily Tang Williams
+Candidate	Lily Tang Williams TOTAL	Lily Tang Williams TOTAL
+Candidate	Arn Menconi	Arn Menconi
+Candidate	Arn Menconi TOTAL	Arn Menconi TOTAL
+Candidate	Bill Hammons	Bill Hammons
+Candidate	Bill Hammons TOTAL	Bill Hammons TOTAL
+Candidate	Dan Chapin TOTAL	Dan Chapin TOTAL
+Candidate	Paul Noel Fiorino	Paul Noel Fiorino
+Candidate	Paul Noel Fiorino TOTAL	Paul Noel Fiorino TOTAL
+Candidate	Don Willoughby	Don Willoughby
+Candidate	Don Willoughby TOTAL	Don Willoughby TOTAL
+Candidate	Diana DeGette TOTAL	Diana DeGette TOTAL
+Candidate	Charles 'Casper' Stockham	Charles 'Casper' Stockham
+Candidate	Charles 'Casper' Stockham TOTAL	Charles 'Casper' Stockham TOTAL
+Candidate	Darrell Dinges TOTAL	Darrell Dinges TOTAL
+Candidate	Jared Polis	Jared Polis
+Candidate	Jared Polis TOTAL	Jared Polis TOTAL
+Candidate	Nicholas Morse	Nicholas Morse
+Candidate	Nicholas Morse TOTAL	Nicholas Morse TOTAL
+Candidate	Richard Longstreth	Richard Longstreth
+Candidate	Richard Longstreth TOTAL	Richard Longstreth TOTAL
+Candidate	Scott R. Tipton TOTAL	Scott R. Tipton TOTAL
+Candidate	Gail Schwartz	Gail Schwartz
+Candidate	Gail Schwartz TOTAL	Gail Schwartz TOTAL
+Candidate	Gaylon Kent TOTAL	Gaylon Kent TOTAL
+Candidate	Bob Seay	Bob Seay
+Candidate	Bob Seay TOTAL	Bob Seay TOTAL
+Candidate	Ken Buck TOTAL	Ken Buck TOTAL
+Candidate	Bruce Griffith	Bruce Griffith
+Candidate	Bruce Griffith TOTAL	Bruce Griffith TOTAL
+Candidate	Donald Howbert	Donald Howbert
+Candidate	Donald Howbert TOTAL	Donald Howbert TOTAL
+Candidate	Misty Plowright	Misty Plowright
+Candidate	Misty Plowright TOTAL	Misty Plowright TOTAL
+Candidate	Doug Lamborn TOTAL	Doug Lamborn TOTAL
+Candidate	Mike McRedmond	Mike McRedmond
+Candidate	Mike McRedmond TOTAL	Mike McRedmond TOTAL
+Candidate	Curtis Imrie	Curtis Imrie
+Candidate	Curtis Imrie TOTAL	Curtis Imrie TOTAL
+Candidate	Mike Coffman TOTAL	Mike Coffman TOTAL
+Candidate	Morgan Carroll	Morgan Carroll
+Candidate	Morgan Carroll TOTAL	Morgan Carroll TOTAL
+Candidate	Norm Olsen	Norm Olsen
+Candidate	Norm Olsen TOTAL	Norm Olsen TOTAL
+Candidate	Robert Lee Worthey	Robert Lee Worthey
+Candidate	Robert Lee Worthey TOTAL	Robert Lee Worthey TOTAL
+Candidate	Ed Perlmutter TOTAL	Ed Perlmutter TOTAL
+Candidate	George Athanasopoulos	George Athanasopoulos
+Candidate	George Athanasopoulos TOTAL	George Athanasopoulos TOTAL
+Candidate	Martin L. Buchanan	Martin L. Buchanan
+Candidate	Martin L. Buchanan TOTAL	Martin L. Buchanan TOTAL
+Candidate	Joyce Rankin	Joyce Rankin
+Candidate	Joyce Rankin TOTAL	Joyce Rankin TOTAL
+Candidate	Christine Pacheco-Koveleski	Christine Pacheco-Koveleski
+Candidate	Christine Pacheco-Koveleski TOTAL	Christine Pacheco-Koveleski TOTAL
+Candidate	Jeffery L. Walker Sr.	Jeffery L. Walker Sr.
+Candidate	Jeffery L. Walker Sr. TOTAL	Jeffery L. Walker Sr. TOTAL
+Candidate	Steven Durham	Steven Durham
+Candidate	Steven Durham TOTAL	Steven Durham TOTAL
+Candidate	Debora L. Scheffel TOTAL	Debora L. Scheffel TOTAL
+Candidate	Rebecca McClellan	Rebecca McClellan
+Candidate	Rebecca McClellan TOTAL	Rebecca McClellan TOTAL
+Candidate	Alice Madden	Alice Madden
+Candidate	Alice Madden TOTAL	Alice Madden TOTAL
+Candidate	Heidi Ganahl	Heidi Ganahl
+Candidate	Heidi Ganahl TOTAL	Heidi Ganahl TOTAL
+Candidate	Jack Kroll	Jack Kroll
+Candidate	Jack Kroll TOTAL	Jack Kroll TOTAL
+Candidate	Jennifer Qualteri	Jennifer Qualteri
+Candidate	Jennifer Qualteri TOTAL	Jennifer Qualteri TOTAL
+Candidate	Suzanne M. Sharkey	Suzanne M. Sharkey
+Candidate	Suzanne M. Sharkey TOTAL	Suzanne M. Sharkey TOTAL
+Candidate	Bob Owens	Bob Owens
+Candidate	Bob Owens TOTAL	Bob Owens TOTAL
+Candidate	Christina Maria Riegel	Christina Maria Riegel
+Candidate	Christina Maria Riegel TOTAL	Christina Maria Riegel TOTAL
+Candidate	Jim Smallwood	Jim Smallwood
+Candidate	Jim Smallwood TOTAL	Jim Smallwood TOTAL
+Candidate	Randy L. Baumgardner	Randy L. Baumgardner
+Candidate	Randy L. Baumgardner TOTAL	Randy L. Baumgardner TOTAL
+Candidate	Emily Tracy	Emily Tracy
+Candidate	Emily Tracy TOTAL	Emily Tracy TOTAL
+Candidate	Mark Anthony Barrionuevo	Mark Anthony Barrionuevo
+Candidate	Mark Anthony Barrionuevo TOTAL	Mark Anthony Barrionuevo TOTAL
+Candidate	Owen Hill	Owen Hill
+Candidate	Owen Hill TOTAL	Owen Hill TOTAL
+Candidate	Bob Gardner	Bob Gardner
+Candidate	Bob Gardner TOTAL	Bob Gardner TOTAL
+Candidate	Manuel Quintel	Manuel Quintel
+Candidate	Manuel Quintel TOTAL	Manuel Quintel TOTAL
+Candidate	John Kefalas	John Kefalas
+Candidate	John Kefalas TOTAL	John Kefalas TOTAL
+Candidate	Hans Hochheimer	Hans Hochheimer
+Candidate	Hans Hochheimer TOTAL	Hans Hochheimer TOTAL
+Candidate	Matt Jones	Matt Jones
+Candidate	Matt Jones TOTAL	Matt Jones TOTAL
+Candidate	Stephen Fenberg	Stephen Fenberg
+Candidate	Stephen Fenberg TOTAL	Stephen Fenberg TOTAL
+Candidate	M. Peter Spraitz	M. Peter Spraitz
+Candidate	M. Peter Spraitz TOTAL	M. Peter Spraitz TOTAL
+Candidate	Laura J. Woods	Laura J. Woods
+Candidate	Laura J. Woods TOTAL	Laura J. Woods TOTAL
+Candidate	Rachel Zenzinger	Rachel Zenzinger
+Candidate	Rachel Zenzinger TOTAL	Rachel Zenzinger TOTAL
+Candidate	Hans V. Romer TOTAL	Hans V. Romer TOTAL
+Candidate	Dominick Moreno	Dominick Moreno
+Candidate	Dominick Moreno TOTAL	Dominick Moreno TOTAL
+Candidate	Kara Leach Palfy	Kara Leach Palfy
+Candidate	Kara Leach Palfy TOTAL	Kara Leach Palfy TOTAL
+Candidate	T.J. Cole	T.J. Cole
+Candidate	T.J. Cole TOTAL	T.J. Cole TOTAL
+Candidate	Vicki Marble	Vicki Marble
+Candidate	Vicki Marble TOTAL	Vicki Marble TOTAL
+Candidate	Jenise May	Jenise May
+Candidate	Jenise May TOTAL	Jenise May TOTAL
+Candidate	Kevin Priola	Kevin Priola
+Candidate	Kevin Priola TOTAL	Kevin Priola TOTAL
+Candidate	Daniel Kagan	Daniel Kagan
+Candidate	Daniel Kagan TOTAL	Daniel Kagan TOTAL
+Candidate	Nancy A. Doty	Nancy A. Doty
+Candidate	Nancy A. Doty TOTAL	Nancy A. Doty TOTAL
+Candidate	Jack Tate	Jack Tate
+Candidate	Jack Tate TOTAL	Jack Tate TOTAL
+Candidate	Tom Sullivan TOTAL	Tom Sullivan TOTAL
+Candidate	Nancy Todd	Nancy Todd
+Candidate	Nancy Todd TOTAL	Nancy Todd TOTAL
+Candidate	James Woodley	James Woodley
+Candidate	James Woodley TOTAL	James Woodley TOTAL
+Candidate	Sebastian Chunn	Sebastian Chunn
+Candidate	Sebastian Chunn TOTAL	Sebastian Chunn TOTAL
+Candidate	Rhonda Fields	Rhonda Fields
+Candidate	Rhonda Fields TOTAL	Rhonda Fields TOTAL
+Candidate	Michele Poague	Michele Poague
+Candidate	Michele Poague TOTAL	Michele Poague TOTAL
+Candidate	Bob Lane TOTAL	Bob Lane TOTAL
+Candidate	Lois Court	Lois Court
+Candidate	Lois Court TOTAL	Lois Court TOTAL
+Candidate	Raymon Doane	Raymon Doane
+Candidate	Raymon Doane TOTAL	Raymon Doane TOTAL
+Candidate	Angela Williams	Angela Williams
+Candidate	Angela Williams TOTAL	Angela Williams TOTAL
+Candidate	Larry W. Crowder	Larry W. Crowder
+Candidate	Larry W. Crowder TOTAL	Larry W. Crowder TOTAL
+Candidate	James W. 'Jim' Casias	James W. 'Jim' Casias
+Candidate	James W. 'Jim' Casias TOTAL	James W. 'Jim' Casias TOTAL
+Candidate	William Stuart Bartley	William Stuart Bartley
+Candidate	William Stuart Bartley TOTAL	William Stuart Bartley TOTAL
+Candidate	Susan Lontine TOTAL	Susan Lontine TOTAL
+Candidate	Raymond Garcia	Raymond Garcia
+Candidate	Raymond Garcia TOTAL	Raymond Garcia TOTAL
+Candidate	Paul A. Linton	Paul A. Linton
+Candidate	Paul A. Linton TOTAL	Paul A. Linton TOTAL
+Candidate	Alec Garnett TOTAL	Alec Garnett TOTAL
+Candidate	Jeff Bridges TOTAL	Jeff Bridges TOTAL
+Candidate	Katy Brown	Katy Brown
+Candidate	Katy Brown TOTAL	Katy Brown TOTAL
+Candidate	Dan Pabón	Dan Pabón
+Candidate	Dan Pabón TOTAL	Dan Pabón TOTAL
+Candidate	Gavin Marie Halligan	Gavin Marie Halligan
+Candidate	Gavin Marie Halligan TOTAL	Gavin Marie Halligan TOTAL
+Candidate	Crisanta Duran	Crisanta Duran
+Candidate	Crisanta Duran TOTAL	Crisanta Duran TOTAL
+Candidate	Ronnie Nelson	Ronnie Nelson
+Candidate	Ronnie Nelson TOTAL	Ronnie Nelson TOTAL
+Candidate	Chris Hansen TOTAL	Chris Hansen TOTAL
+Candidate	James Rashad Coleman TOTAL	James Rashad Coleman TOTAL
+Candidate	Leslie Herod TOTAL	Leslie Herod TOTAL
+Candidate	Evan J. Vanderpool	Evan J. Vanderpool
+Candidate	Evan J. Vanderpool TOTAL	Evan J. Vanderpool TOTAL
+Candidate	Paul Stevens Martin	Paul Stevens Martin
+Candidate	Paul Stevens Martin TOTAL	Paul Stevens Martin TOTAL
+Candidate	Paul Rosenthal	Paul Rosenthal
+Candidate	Paul Rosenthal TOTAL	Paul Rosenthal TOTAL
+Candidate	Edie Hooton TOTAL	Edie Hooton TOTAL
+Candidate	Jonathan Singer TOTAL	Jonathan Singer TOTAL
+Candidate	Corey Piper	Corey Piper
+Candidate	Corey Piper TOTAL	Corey Piper TOTAL
+Candidate	Bob Dillon	Bob Dillon
+Candidate	Bob Dillon TOTAL	Bob Dillon TOTAL
+Candidate	Mike Foote	Mike Foote
+Candidate	Mike Foote TOTAL	Mike Foote TOTAL
+Candidate	KC Becker	KC Becker
+Candidate	KC Becker TOTAL	KC Becker TOTAL
+Candidate	Dan Nordberg	Dan Nordberg
+Candidate	Dan Nordberg TOTAL	Dan Nordberg TOTAL
+Candidate	Chris Walters	Chris Walters
+Candidate	Chris Walters TOTAL	Chris Walters TOTAL
+Candidate	Dave Williams TOTAL	Dave Williams TOTAL
+Candidate	Sharon Huff	Sharon Huff
+Candidate	Sharon Huff TOTAL	Sharon Huff TOTAL
+Candidate	Larry G. Liston TOTAL	Larry G. Liston TOTAL
+Candidate	John C. Hjersman	John C. Hjersman
+Candidate	John C. Hjersman TOTAL	John C. Hjersman TOTAL
+Candidate	Thomas 'Tony' Exum Sr. TOTAL	Thomas 'Tony' Exum Sr. TOTAL
+Candidate	Kit Roupe TOTAL	Kit Roupe TOTAL
+Candidate	Susan Quilleash	Susan Quilleash
+Candidate	Susan Quilleash TOTAL	Susan Quilleash TOTAL
+Candidate	Cameron Forth	Cameron Forth
+Candidate	Cameron Forth TOTAL	Cameron Forth TOTAL
+Candidate	Pete Lee TOTAL	Pete Lee TOTAL
+Candidate	Norman 'Paotie' Dawson	Norman 'Paotie' Dawson
+Candidate	Norman 'Paotie' Dawson TOTAL	Norman 'Paotie' Dawson TOTAL
+Candidate	Paul Lundeen TOTAL	Paul Lundeen TOTAL
+Candidate	Tom Reynolds	Tom Reynolds
+Candidate	Tom Reynolds TOTAL	Tom Reynolds TOTAL
+Candidate	Terri Carver TOTAL	Terri Carver TOTAL
+Candidate	Julia Endicott	Julia Endicott
+Candidate	Julia Endicott TOTAL	Julia Endicott TOTAL
+Candidate	Judith Darcy	Judith Darcy
+Candidate	Judith Darcy TOTAL	Judith Darcy TOTAL
+Candidate	Lois Landgraf TOTAL	Lois Landgraf TOTAL
+Candidate	Michael Seebeck	Michael Seebeck
+Candidate	Michael Seebeck TOTAL	Michael Seebeck TOTAL
+Candidate	Justin Everett	Justin Everett
+Candidate	Justin Everett TOTAL	Justin Everett TOTAL
+Candidate	Mary Parker	Mary Parker
+Candidate	Mary Parker TOTAL	Mary Parker TOTAL
+Candidate	Chris Kennedy TOTAL	Chris Kennedy TOTAL
+Candidate	Chris Hadsall	Chris Hadsall
+Candidate	Chris Hadsall TOTAL	Chris Hadsall TOTAL
+Candidate	Jessie Danielson TOTAL	Jessie Danielson TOTAL
+Candidate	Joseph E. DeMott	Joseph E. DeMott
+Candidate	Joseph E. DeMott TOTAL	Joseph E. DeMott TOTAL
+Candidate	Tim Leonard	Tim Leonard
+Candidate	Tim Leonard TOTAL	Tim Leonard TOTAL
+Candidate	Tammy Story TOTAL	Tammy Story TOTAL
+Candidate	Diane E. Mitsch Bush	Diane E. Mitsch Bush
+Candidate	Diane E. Mitsch Bush TOTAL	Diane E. Mitsch Bush TOTAL
+Candidate	Michael Cacioppo	Michael Cacioppo
+Candidate	Michael Cacioppo TOTAL	Michael Cacioppo TOTAL
+Candidate	Wade Michael Norris	Wade Michael Norris
+Candidate	Wade Michael Norris TOTAL	Wade Michael Norris TOTAL
+Candidate	Lang Sias	Lang Sias
+Candidate	Lang Sias TOTAL	Lang Sias TOTAL
+Candidate	Doug Miracle	Doug Miracle
+Candidate	Doug Miracle TOTAL	Doug Miracle TOTAL
+Candidate	Nancy Pallozzi	Nancy Pallozzi
+Candidate	Nancy Pallozzi TOTAL	Nancy Pallozzi TOTAL
+Candidate	Brittany Pettersen TOTAL	Brittany Pettersen TOTAL
+Candidate	Matthew Hess	Matthew Hess
+Candidate	Matthew Hess TOTAL	Matthew Hess TOTAL
+Candidate	Tracy Kraft-Tharp TOTAL	Tracy Kraft-Tharp TOTAL
+Candidate	Susan Kochevar TOTAL	Susan Kochevar TOTAL
+Candidate	Dafna Michaelson Jenet TOTAL	Dafna Michaelson Jenet TOTAL
+Candidate	JoAnn Windholz	JoAnn Windholz
+Candidate	JoAnn Windholz TOTAL	JoAnn Windholz TOTAL
+Candidate	Jessica Sandgren	Jessica Sandgren
+Candidate	Jessica Sandgren TOTAL	Jessica Sandgren TOTAL
+Candidate	Joe Salazar	Joe Salazar
+Candidate	Joe Salazar TOTAL	Joe Salazar TOTAL
+Candidate	Adrienne Benavidez TOTAL	Adrienne Benavidez TOTAL
+Candidate	Alexander D. Jacobson	Alexander D. Jacobson
+Candidate	Alexander D. Jacobson TOTAL	Alexander D. Jacobson TOTAL
+Candidate	Steve Zorn TOTAL	Steve Zorn TOTAL
+Candidate	Karen Nelson	Karen Nelson
+Candidate	Karen Nelson TOTAL	Karen Nelson TOTAL
+Candidate	Matt Gray TOTAL	Matt Gray TOTAL
+Candidate	Kim Tavendale TOTAL	Kim Tavendale TOTAL
+Candidate	Dustin Johnson	Dustin Johnson
+Candidate	Dustin Johnson TOTAL	Dustin Johnson TOTAL
+Candidate	Steve Lebsock	Steve Lebsock
+Candidate	Steve Lebsock TOTAL	Steve Lebsock TOTAL
+Candidate	Jenice 'JJ' Dove	Jenice 'JJ' Dove
+Candidate	Jenice 'JJ' Dove TOTAL	Jenice 'JJ' Dove TOTAL
+Candidate	Faith Winter TOTAL	Faith Winter TOTAL
+Candidate	Emily Voss	Emily Voss
+Candidate	Emily Voss TOTAL	Emily Voss TOTAL
+Candidate	Mike Weissman TOTAL	Mike Weissman TOTAL
+Candidate	Richard J. Bowman TOTAL	Richard J. Bowman TOTAL
+Candidate	Carol A. Barrett	Carol A. Barrett
+Candidate	Carol A. Barrett TOTAL	Carol A. Barrett TOTAL
+Candidate	Cole Wist TOTAL	Cole Wist TOTAL
+Candidate	Susan Beckman TOTAL	Susan Beckman TOTAL
+Candidate	Robert Bowen	Robert Bowen
+Candidate	Robert Bowen TOTAL	Robert Bowen TOTAL
+Candidate	Polly Lawrence	Polly Lawrence
+Candidate	Polly Lawrence TOTAL	Polly Lawrence TOTAL
+Candidate	Richard Opler	Richard Opler
+Candidate	Richard Opler TOTAL	Richard Opler TOTAL
+Candidate	Janet Buckner TOTAL	Janet Buckner TOTAL
+Candidate	Todd Brophy	Todd Brophy
+Candidate	Todd Brophy TOTAL	Todd Brophy TOTAL
+Candidate	Linda Garrison	Linda Garrison
+Candidate	Linda Garrison TOTAL	Linda Garrison TOTAL
+Candidate	Jovan Melton TOTAL	Jovan Melton TOTAL
+Candidate	Mike Donald TOTAL	Mike Donald TOTAL
+Candidate	Dominique Jackson TOTAL	Dominique Jackson TOTAL
+Candidate	Scott Wagner TOTAL	Scott Wagner TOTAL
+Candidate	Kevin Van Winkle TOTAL	Kevin Van Winkle TOTAL
+Candidate	Kim Ransom TOTAL	Kim Ransom TOTAL
+Candidate	Tim Hicks	Tim Hicks
+Candidate	Tim Hicks TOTAL	Tim Hicks TOTAL
+Candidate	Patrick Neville TOTAL	Patrick Neville TOTAL
+Candidate	Shantell Schweikart	Shantell Schweikart
+Candidate	Shantell Schweikart TOTAL	Shantell Schweikart TOTAL
+Candidate	Daneya Esgar TOTAL	Daneya Esgar TOTAL
+Candidate	Jason Munoz	Jason Munoz
+Candidate	Jason Munoz TOTAL	Jason Munoz TOTAL
+Candidate	Clarice Navarro	Clarice Navarro
+Candidate	Clarice Navarro TOTAL	Clarice Navarro TOTAL
+Candidate	Annie King	Annie King
+Candidate	Annie King TOTAL	Annie King TOTAL
+Candidate	Steve Humphrey	Steve Humphrey
+Candidate	Steve Humphrey TOTAL	Steve Humphrey TOTAL
+Candidate	Adrian 'Buzz' Sweeney	Adrian 'Buzz' Sweeney
+Candidate	Adrian 'Buzz' Sweeney TOTAL	Adrian 'Buzz' Sweeney TOTAL
+Candidate	Perry L. Buck TOTAL	Perry L. Buck TOTAL
+Candidate	Dave Young TOTAL	Dave Young TOTAL
+Candidate	John Alan Honeycutt	John Alan Honeycutt
+Candidate	John Alan Honeycutt TOTAL	John Alan Honeycutt TOTAL
+Candidate	Roy Dakroub	Roy Dakroub
+Candidate	Roy Dakroub TOTAL	Roy Dakroub TOTAL
+Candidate	Hugh McKean TOTAL	Hugh McKean TOTAL
+Candidate	Jody Shadduck-McNally	Jody Shadduck-McNally
+Candidate	Jody Shadduck-McNally TOTAL	Jody Shadduck-McNally TOTAL
+Candidate	Donna Walter TOTAL	Donna Walter TOTAL
+Candidate	Joann Ginal TOTAL	Joann Ginal TOTAL
+Candidate	Jeni Arndt TOTAL	Jeni Arndt TOTAL
+Candidate	Yeulin Willett	Yeulin Willett
+Candidate	Yeulin Willett TOTAL	Yeulin Willett TOTAL
+Candidate	Gilbert Fuller	Gilbert Fuller
+Candidate	Gilbert Fuller TOTAL	Gilbert Fuller TOTAL
+Candidate	Dan Thurlow	Dan Thurlow
+Candidate	Dan Thurlow TOTAL	Dan Thurlow TOTAL
+Candidate	Matt Snider	Matt Snider
+Candidate	Matt Snider TOTAL	Matt Snider TOTAL
+Candidate	Phil Covarrubias	Phil Covarrubias
+Candidate	Phil Covarrubias TOTAL	Phil Covarrubias TOTAL
+Candidate	Kevin Gulbranson TOTAL	Kevin Gulbranson TOTAL
+Candidate	Bob Rankin TOTAL	Bob Rankin TOTAL
+Candidate	Don Coram TOTAL	Don Coram TOTAL
+Candidate	Barbara Hall McLachlan	Barbara Hall McLachlan
+Candidate	Barbara Hall McLachlan TOTAL	Barbara Hall McLachlan TOTAL
+Candidate	J. Paul Brown	J. Paul Brown
+Candidate	J. Paul Brown TOTAL	J. Paul Brown TOTAL
+Candidate	David Higginbotham	David Higginbotham
+Candidate	David Higginbotham TOTAL	David Higginbotham TOTAL
+Candidate	James D. 'Jim' Wilson TOTAL	James D. 'Jim' Wilson TOTAL
+Candidate	Glenn Ingalls TOTAL	Glenn Ingalls TOTAL
+Candidate	Bob Schutt	Bob Schutt
+Candidate	Bob Schutt TOTAL	Bob Schutt TOTAL
+Candidate	Millie Hamner	Millie Hamner
+Candidate	Millie Hamner TOTAL	Millie Hamner TOTAL
+Candidate	Bob Mattive	Bob Mattive
+Candidate	Bob Mattive TOTAL	Bob Mattive TOTAL
+Candidate	Donald E. Valdez TOTAL	Donald E. Valdez TOTAL
+Candidate	Thomas A. Hudson	Thomas A. Hudson
+Candidate	Thomas A. Hudson TOTAL	Thomas A. Hudson TOTAL
+Candidate	Lori Saine	Lori Saine
+Candidate	Lori Saine TOTAL	Lori Saine TOTAL
+Candidate	Joe Johnson TOTAL	Joe Johnson TOTAL
+Candidate	Kathleen J. Conway	Kathleen J. Conway
+Candidate	Kathleen J. Conway TOTAL	Kathleen J. Conway TOTAL
+Candidate	Kimmi Lewis TOTAL	Kimmi Lewis TOTAL
+Candidate	Jon Becker	Jon Becker
+Candidate	Jon Becker TOTAL	Jon Becker TOTAL
+Candidate	Anthony Engelhaupt	Anthony Engelhaupt
+Candidate	Anthony Engelhaupt TOTAL	Anthony Engelhaupt TOTAL
+Candidate	Pete Weir	Pete Weir
+Candidate	Pete Weir TOTAL	Pete Weir TOTAL
+Candidate	Jake Lilly	Jake Lilly
+Candidate	Jake Lilly TOTAL	Jake Lilly TOTAL
+Candidate	Beth McCann	Beth McCann
+Candidate	Beth McCann TOTAL	Beth McCann TOTAL
+Candidate	Helen Morgan	Helen Morgan
+Candidate	Helen Morgan TOTAL	Helen Morgan TOTAL
+Candidate	Henry Solano	Henry Solano
+Candidate	Henry Solano TOTAL	Henry Solano TOTAL
+Candidate	Dan May	Dan May
+Candidate	Dan May TOTAL	Dan May TOTAL
+Candidate	Bruce Brown	Bruce Brown
+Candidate	Bruce Brown TOTAL	Bruce Brown TOTAL
+Candidate	Bruce Carey	Bruce Carey
+Candidate	Bruce Carey TOTAL	Bruce Carey TOTAL
+Candidate	Sanam Mehrnia	Sanam Mehrnia
+Candidate	Sanam Mehrnia TOTAL	Sanam Mehrnia TOTAL
+Candidate	Christian Champagne	Christian Champagne
+Candidate	Christian Champagne TOTAL	Christian Champagne TOTAL
+Candidate	Dan Hotsenpiller	Dan Hotsenpiller
+Candidate	Dan Hotsenpiller TOTAL	Dan Hotsenpiller TOTAL
+Candidate	Clifford E. Riedel	Clifford E. Riedel
+Candidate	Clifford E. Riedel TOTAL	Clifford E. Riedel TOTAL
+Candidate	Jefferson J. Cheney	Jefferson J. Cheney
+Candidate	Jefferson J. Cheney TOTAL	Jefferson J. Cheney TOTAL
+Candidate	Sherry A. Caloia	Sherry A. Caloia
+Candidate	Sherry A. Caloia TOTAL	Sherry A. Caloia TOTAL
+Candidate	Chip McCrory	Chip McCrory
+Candidate	Chip McCrory TOTAL	Chip McCrory TOTAL
+Candidate	Jeff Chostner	Jeff Chostner
+Candidate	Jeff Chostner TOTAL	Jeff Chostner TOTAL
+Candidate	Molly Chilson	Molly Chilson
+Candidate	Molly Chilson TOTAL	Molly Chilson TOTAL
+Candidate	Crista Newmyer-Olsen	Crista Newmyer-Olsen
+Candidate	Crista Newmyer-Olsen TOTAL	Crista Newmyer-Olsen TOTAL
+Candidate	Brittny B. Lewton	Brittny B. Lewton
+Candidate	Brittny B. Lewton TOTAL	Brittny B. Lewton TOTAL
+Candidate	Paul Wiese	Paul Wiese
+Candidate	Paul Wiese TOTAL	Paul Wiese TOTAL
+Candidate	Brett D. Barkey	Brett D. Barkey
+Candidate	Brett D. Barkey TOTAL	Brett D. Barkey TOTAL
+Candidate	Joshua Vogel	Joshua Vogel
+Candidate	Joshua Vogel TOTAL	Joshua Vogel TOTAL
+Candidate	Rodney D. Fouracre	Rodney D. Fouracre
+Candidate	Rodney D. Fouracre TOTAL	Rodney D. Fouracre TOTAL
+Candidate	James R. Bullock	James R. Bullock
+Candidate	James R. Bullock TOTAL	James R. Bullock TOTAL
+Candidate	Molly Falk Jansen	Molly Falk Jansen
+Candidate	Molly Falk Jansen TOTAL	Molly Falk Jansen TOTAL
+Candidate	George H. Brauchler	George H. Brauchler
+Candidate	George H. Brauchler TOTAL	George H. Brauchler TOTAL
+Candidate	Michael J. Rourke	Michael J. Rourke
+Candidate	Michael J. Rourke TOTAL	Michael J. Rourke TOTAL
+Candidate	Stan Garnett	Stan Garnett
+Candidate	Stan Garnett TOTAL	Stan Garnett TOTAL
+Candidate	Daniel Rubinstein	Daniel Rubinstein
+Candidate	Daniel Rubinstein TOTAL	Daniel Rubinstein TOTAL
+Candidate	Will Furse	Will Furse
+Candidate	Will Furse TOTAL	Will Furse TOTAL
+Candidate	Regan Byrd	Regan Byrd
+Candidate	Regan Byrd TOTAL	Regan Byrd TOTAL
+Candidate	Kate Williams	Kate Williams
+Candidate	Kate Williams TOTAL	Kate Williams TOTAL
+Candidate	Aaron D. Goldhamer	Aaron D. Goldhamer
+Candidate	Aaron D. Goldhamer TOTAL	Aaron D. Goldhamer TOTAL
+Candidate	Mike Cerbo	Mike Cerbo
+Candidate	Mike Cerbo TOTAL	Mike Cerbo TOTAL
+Candidate	Jeffrey Allen Walker	Jeffrey Allen Walker
+Candidate	Jeffrey Allen Walker TOTAL	Jeffrey Allen Walker TOTAL
+Candidate	Claudia L. Folska	Claudia L. Folska
+Candidate	Claudia L. Folska TOTAL	Claudia L. Folska TOTAL
+Candidate	JM (Maria J) Fay	JM (Maria J) Fay
+Candidate	JM (Maria J) Fay TOTAL	JM (Maria J) Fay TOTAL
+Candidate	Bob Broom	Bob Broom
+Candidate	Bob Broom TOTAL	Bob Broom TOTAL
+Candidate	Ken Mihalik	Ken Mihalik
+Candidate	Ken Mihalik TOTAL	Ken Mihalik TOTAL
+Candidate	Doug Tisdale	Doug Tisdale
+Candidate	Doug Tisdale TOTAL	Doug Tisdale TOTAL
+Candidate	Véronique Marie Bellamy	Véronique Marie Bellamy
+Candidate	Véronique Marie Bellamy TOTAL	Véronique Marie Bellamy TOTAL
+Candidate	Lee Kemp	Lee Kemp
+Candidate	Lee Kemp TOTAL	Lee Kemp TOTAL
+Candidate	Judy Lubow	Judy Lubow
+Candidate	Judy Lubow TOTAL	Judy Lubow TOTAL
+Candidate	Dave Ruchman	Dave Ruchman
+Candidate	Dave Ruchman TOTAL	Dave Ruchman TOTAL
+Candidate	Natalie Menten	Natalie Menten
+Candidate	Natalie Menten TOTAL	Natalie Menten TOTAL
+Candidate	William Hood	William Hood
+Candidate	William Hood TOTAL	William Hood TOTAL
+Candidate	Karen M. Ashby	Karen M. Ashby
+Candidate	Karen M. Ashby TOTAL	Karen M. Ashby TOTAL
+Candidate	Michael H. Berger	Michael H. Berger
+Candidate	Michael H. Berger TOTAL	Michael H. Berger TOTAL
+Candidate	Steven L. Bernard	Steven L. Bernard
+Candidate	Steven L. Bernard TOTAL	Steven L. Bernard TOTAL
+Candidate	Stephanie E. Dunn	Stephanie E. Dunn
+Candidate	Stephanie E. Dunn TOTAL	Stephanie E. Dunn TOTAL
+Candidate	David Furman	David Furman
+Candidate	David Furman TOTAL	David Furman TOTAL
+Candidate	Robert D. Hawthorne	Robert D. Hawthorne
+Candidate	Robert D. Hawthorne TOTAL	Robert D. Hawthorne TOTAL
+Candidate	Jerry N. Jones	Jerry N. Jones
+Candidate	Jerry N. Jones TOTAL	Jerry N. Jones TOTAL
+Candidate	Anthony J. Navarro	Anthony J. Navarro
+Candidate	Anthony J. Navarro TOTAL	Anthony J. Navarro TOTAL
+Candidate	Gilbert M. Román	Gilbert M. Román
+Candidate	Gilbert M. Román TOTAL	Gilbert M. Román TOTAL
+Candidate	Diana Terry	Diana Terry
+Candidate	Diana Terry TOTAL	Diana Terry TOTAL
+Candidate	Dennis J. Hall	Dennis J. Hall
+Candidate	Dennis J. Hall TOTAL	Dennis J. Hall TOTAL
+Candidate	Philip James McNulty	Philip James McNulty
+Candidate	Philip James McNulty TOTAL	Philip James McNulty TOTAL
+Candidate	Jeffrey Ralph Pilkington	Jeffrey Ralph Pilkington
+Candidate	Jeffrey Ralph Pilkington TOTAL	Jeffrey Ralph Pilkington TOTAL
+Candidate	Todd L. Vriesman	Todd L. Vriesman
+Candidate	Todd L. Vriesman TOTAL	Todd L. Vriesman TOTAL
+Candidate	Karen L. Brody	Karen L. Brody
+Candidate	Karen L. Brody TOTAL	Karen L. Brody TOTAL
+Candidate	Edward David Bronfin	Edward David Bronfin
+Candidate	Edward David Bronfin TOTAL	Edward David Bronfin TOTAL
+Candidate	Ross B. H. Buchanan	Ross B. H. Buchanan
+Candidate	Ross B. H. Buchanan TOTAL	Ross B. H. Buchanan TOTAL
+Candidate	Kandace C. Gerdes	Kandace C. Gerdes
+Candidate	Kandace C. Gerdes TOTAL	Kandace C. Gerdes TOTAL
+Candidate	Michael A. Martinez	Michael A. Martinez
+Candidate	Michael A. Martinez TOTAL	Michael A. Martinez TOTAL
+Candidate	Andy McCallin	Andy McCallin
+Candidate	Andy McCallin TOTAL	Andy McCallin TOTAL
+Candidate	William D. Robbins	William D. Robbins
+Candidate	William D. Robbins TOTAL	William D. Robbins TOTAL
+Candidate	Brian Whitney	Brian Whitney
+Candidate	Brian Whitney TOTAL	Brian Whitney TOTAL
+Candidate	Laurie A. Clark	Laurie A. Clark
+Candidate	Laurie A. Clark TOTAL	Laurie A. Clark TOTAL
+Candidate	Donna J. Schmalberger	Donna J. Schmalberger
+Candidate	Donna J. Schmalberger TOTAL	Donna J. Schmalberger TOTAL
+Candidate	D. Brett Woods	D. Brett Woods
+Candidate	D. Brett Woods TOTAL	D. Brett Woods TOTAL
+Candidate	Leslie J. Gerbracht	Leslie J. Gerbracht
+Candidate	Leslie J. Gerbracht TOTAL	Leslie J. Gerbracht TOTAL
+Candidate	Robin Lynn Chittum	Robin Lynn Chittum
+Candidate	Robin Lynn Chittum TOTAL	Robin Lynn Chittum TOTAL
+Candidate	David A. Gilbert	David A. Gilbert
+Candidate	David A. Gilbert TOTAL	David A. Gilbert TOTAL
+Candidate	Deborah J. Grohs	Deborah J. Grohs
+Candidate	Deborah J. Grohs TOTAL	Deborah J. Grohs TOTAL
+Candidate	Gilbert Anthony Martinez	Gilbert Anthony Martinez
+Candidate	Gilbert Anthony Martinez TOTAL	Gilbert Anthony Martinez TOTAL
+Candidate	G. David Miller	G. David Miller
+Candidate	G. David Miller TOTAL	G. David Miller TOTAL
+Candidate	Marla Prudek	Marla Prudek
+Candidate	Marla Prudek TOTAL	Marla Prudek TOTAL
+Candidate	Paul R. Dunkelman	Paul R. Dunkelman
+Candidate	Paul R. Dunkelman TOTAL	Paul R. Dunkelman TOTAL
+Candidate	Wayne Patton	Wayne Patton
+Candidate	Wayne Patton TOTAL	Wayne Patton TOTAL
+Candidate	Karen Ann Romeo	Karen Ann Romeo
+Candidate	Karen Ann Romeo TOTAL	Karen Ann Romeo TOTAL
+Candidate	William L. Herringer	William L. Herringer
+Candidate	William L. Herringer TOTAL	William L. Herringer TOTAL
+Candidate	Jeffrey Raymond Wilson	Jeffrey Raymond Wilson
+Candidate	Jeffrey Raymond Wilson TOTAL	Jeffrey Raymond Wilson TOTAL
+Candidate	Carroll Michelle Brinegar	Carroll Michelle Brinegar
+Candidate	Carroll Michelle Brinegar TOTAL	Carroll Michelle Brinegar TOTAL
+Candidate	Gregory M. Lammons	Gregory M. Lammons
+Candidate	Gregory M. Lammons TOTAL	Gregory M. Lammons TOTAL
+Candidate	John Fowler Neiley	John Fowler Neiley
+Candidate	John Fowler Neiley TOTAL	John Fowler Neiley TOTAL
+Candidate	Thomas B. Flesher	Thomas B. Flesher
+Candidate	Thomas B. Flesher TOTAL	Thomas B. Flesher TOTAL
+Candidate	Jill S. Mattoon	Jill S. Mattoon
+Candidate	Jill S. Mattoon TOTAL	Jill S. Mattoon TOTAL
+Candidate	Larry Charles Schwartz	Larry Charles Schwartz
+Candidate	Larry Charles Schwartz TOTAL	Larry Charles Schwartz TOTAL
+Candidate	Stephen A. Groome	Stephen A. Groome
+Candidate	Stephen A. Groome TOTAL	Stephen A. Groome TOTAL
+Candidate	Patrick William Murphy	Patrick William Murphy
+Candidate	Patrick William Murphy TOTAL	Patrick William Murphy TOTAL
+Candidate	Martin A. Gonzales	Martin A. Gonzales
+Candidate	Martin A. Gonzales TOTAL	Martin A. Gonzales TOTAL
+Candidate	Mary C. Hoak	Mary C. Hoak
+Candidate	Mary C. Hoak TOTAL	Mary C. Hoak TOTAL
+Candidate	Stanley A. Brinkley	Stanley A. Brinkley
+Candidate	Stanley A. Brinkley TOTAL	Stanley A. Brinkley TOTAL
+Candidate	Mark A. MacDonnell	Mark A. MacDonnell
+Candidate	Mark A. MacDonnell TOTAL	Mark A. MacDonnell TOTAL
+Candidate	Michael Andrew Schiferl	Michael Andrew Schiferl
+Candidate	Michael Andrew Schiferl TOTAL	Michael Andrew Schiferl TOTAL
+Candidate	Emily Elizabeth Anderson	Emily Elizabeth Anderson
+Candidate	Emily Elizabeth Anderson TOTAL	Emily Elizabeth Anderson TOTAL
+Candidate	Katherine Delgado	Katherine Delgado
+Candidate	Katherine Delgado TOTAL	Katherine Delgado TOTAL
+Candidate	Thomas R. Ensor	Thomas R. Ensor
+Candidate	Thomas R. Ensor TOTAL	Thomas R. Ensor TOTAL
+Candidate	F. Michael Goodbee	F. Michael Goodbee
+Candidate	F. Michael Goodbee TOTAL	F. Michael Goodbee TOTAL
+Candidate	Patrick T. Murphy	Patrick T. Murphy
+Candidate	Patrick T. Murphy TOTAL	Patrick T. Murphy TOTAL
+Candidate	Jill-Ellyn Straus	Jill-Ellyn Straus
+Candidate	Jill-Ellyn Straus TOTAL	Jill-Ellyn Straus TOTAL
+Candidate	Natalie T. Chase	Natalie T. Chase
+Candidate	Natalie T. Chase TOTAL	Natalie T. Chase TOTAL
+Candidate	Jeffrey K. Holmes	Jeffrey K. Holmes
+Candidate	Jeffrey K. Holmes TOTAL	Jeffrey K. Holmes TOTAL
+Candidate	Frederick Thomas Martinez	Frederick Thomas Martinez
+Candidate	Frederick Thomas Martinez TOTAL	Frederick Thomas Martinez TOTAL
+Candidate	Carlos Armando Samour Jr.	Carlos Armando Samour Jr.
+Candidate	Carlos Armando Samour Jr. TOTAL	Carlos Armando Samour Jr. TOTAL
+Candidate	David John Stevens	David John Stevens
+Candidate	David John Stevens TOTAL	David John Stevens TOTAL
+Candidate	Elizabeth Ann Weishaupl	Elizabeth Ann Weishaupl
+Candidate	Elizabeth Ann Weishaupl TOTAL	Elizabeth Ann Weishaupl TOTAL
+Candidate	Warren Troy Hause	Warren Troy Hause
+Candidate	Warren Troy Hause TOTAL	Warren Troy Hause TOTAL
+Candidate	Julie C. Hoskins	Julie C. Hoskins
+Candidate	Julie C. Hoskins TOTAL	Julie C. Hoskins TOTAL
+Candidate	Shannon D. Lyons	Shannon D. Lyons
+Candidate	Shannon D. Lyons TOTAL	Shannon D. Lyons TOTAL
+Candidate	Thomas J. Quammen	Thomas J. Quammen
+Candidate	Thomas J. Quammen TOTAL	Thomas J. Quammen TOTAL
+Candidate	Andrew Hartman	Andrew Hartman
+Candidate	Andrew Hartman TOTAL	Andrew Hartman TOTAL
+Candidate	Bruce Langer	Bruce Langer
+Candidate	Bruce Langer TOTAL	Bruce Langer TOTAL
+Candidate	Richard T. Gurley	Richard T. Gurley
+Candidate	Richard T. Gurley TOTAL	Richard T. Gurley TOTAL
+Candidate	Valerie J. Robison	Valerie J. Robison
+Candidate	Valerie J. Robison TOTAL	Valerie J. Robison TOTAL
+Candidate	Douglas S. Walker	Douglas S. Walker
+Candidate	Douglas S. Walker TOTAL	Douglas S. Walker TOTAL
+Candidate	Leroy D. Kirby	Leroy D. Kirby
+Candidate	Leroy D. Kirby TOTAL	Leroy D. Kirby TOTAL
+Candidate	Anne M. Ollada	Anne M. Ollada
+Candidate	Anne M. Ollada TOTAL	Anne M. Ollada TOTAL
+Candidate	Samuel Scott Vigil	Samuel Scott Vigil
+Candidate	Samuel Scott Vigil TOTAL	Samuel Scott Vigil TOTAL
+Candidate	William P. Alderton	William P. Alderton
+Candidate	William P. Alderton TOTAL	William P. Alderton TOTAL
+Candidate	Rachel J. Olguin-Fresquez	Rachel J. Olguin-Fresquez
+Candidate	Rachel J. Olguin-Fresquez TOTAL	Rachel J. Olguin-Fresquez TOTAL
+Candidate	Sandra K. Miller	Sandra K. Miller
+Candidate	Sandra K. Miller TOTAL	Sandra K. Miller TOTAL
+Candidate	Doris E. Burd	Doris E. Burd
+Candidate	Doris E. Burd TOTAL	Doris E. Burd TOTAL
+Candidate	Beth A. Faragher	Beth A. Faragher
+Candidate	Beth A. Faragher TOTAL	Beth A. Faragher TOTAL
+Candidate	Gary M. Jackson	Gary M. Jackson
+Candidate	Gary M. Jackson TOTAL	Gary M. Jackson TOTAL
+Candidate	John M. Marcucci	John M. Marcucci
+Candidate	John M. Marcucci TOTAL	John M. Marcucci TOTAL
+Candidate	Nicole M. Rodarte	Nicole M. Rodarte
+Candidate	Nicole M. Rodarte TOTAL	Nicole M. Rodarte TOTAL
+Candidate	Andre L. Rudolph	Andre L. Rudolph
+Candidate	Andre L. Rudolph TOTAL	Andre L. Rudolph TOTAL
+Candidate	Theresa A. Spahn	Theresa A. Spahn
+Candidate	Theresa A. Spahn TOTAL	Theresa A. Spahn TOTAL
+Candidate	E. Dale Boyd	E. Dale Boyd
+Candidate	E. Dale Boyd TOTAL	E. Dale Boyd TOTAL
+Candidate	Katharine T. Sullivan	Katharine T. Sullivan
+Candidate	Katharine T. Sullivan TOTAL	Katharine T. Sullivan TOTAL
+Candidate	Laura Norris Findorff	Laura Norris Findorff
+Candidate	Laura Norris Findorff TOTAL	Laura Norris Findorff TOTAL
+Candidate	Karla J. Hansen	Karla J. Hansen
+Candidate	Karla J. Hansen TOTAL	Karla J. Hansen TOTAL
+Candidate	Daniel S. Wilson	Daniel S. Wilson
+Candidate	Daniel S. Wilson TOTAL	Daniel S. Wilson TOTAL
+Candidate	Alvin K. Lutz	Alvin K. Lutz
+Candidate	Alvin K. Lutz TOTAL	Alvin K. Lutz TOTAL
+Candidate	Bradley Allen Burback	Bradley Allen Burback
+Candidate	Bradley Allen Burback TOTAL	Bradley Allen Burback TOTAL
+Candidate	Verna L. Carpenter	Verna L. Carpenter
+Candidate	Verna L. Carpenter TOTAL	Verna L. Carpenter TOTAL
+Candidate	Tammy Greene	Tammy Greene
+Candidate	Tammy Greene TOTAL	Tammy Greene TOTAL
+Candidate	K.J. Moore	K.J. Moore
+Candidate	K.J. Moore TOTAL	K.J. Moore TOTAL
+Candidate	Jonathan Shamis	Jonathan Shamis
+Candidate	Jonathan Shamis TOTAL	Jonathan Shamis TOTAL
+Candidate	Mary Joan Berenato	Mary Joan Berenato
+Candidate	Mary Joan Berenato TOTAL	Mary Joan Berenato TOTAL
+Candidate	Kraig Ecton	Kraig Ecton
+Candidate	Kraig Ecton TOTAL	Kraig Ecton TOTAL
+Candidate	Joshua B. Lehman	Joshua B. Lehman
+Candidate	Joshua B. Lehman TOTAL	Joshua B. Lehman TOTAL
+Candidate	Ray Ann Brammer	Ray Ann Brammer
+Candidate	Ray Ann Brammer TOTAL	Ray Ann Brammer TOTAL
+Candidate	Craig P. Henderson	Craig P. Henderson
+Candidate	Craig P. Henderson TOTAL	Craig P. Henderson TOTAL
+Candidate	Gretchen B. Larson	Gretchen B. Larson
+Candidate	Gretchen B. Larson TOTAL	Gretchen B. Larson TOTAL
+Candidate	Ruth M. Acheson	Ruth M. Acheson
+Candidate	Ruth M. Acheson TOTAL	Ruth M. Acheson TOTAL
+Candidate	Kimbra Leigh Killin	Kimbra Leigh Killin
+Candidate	Kimbra Leigh Killin TOTAL	Kimbra Leigh Killin TOTAL
+Candidate	Laurie Noble	Laurie Noble
+Candidate	Laurie Noble TOTAL	Laurie Noble TOTAL
+Candidate	Anthony Douglas Edwards	Anthony Douglas Edwards
+Candidate	Anthony Douglas Edwards TOTAL	Anthony Douglas Edwards TOTAL
+Candidate	Tera Neugebauer	Tera Neugebauer
+Candidate	Tera Neugebauer TOTAL	Tera Neugebauer TOTAL
+Candidate	Edward Jude Casias	Edward Jude Casias
+Candidate	Edward Jude Casias TOTAL	Edward Jude Casias TOTAL
+Candidate	Involuntary Servitude Prohibition	Involuntary Servitude Prohibition
+Candidate	Involuntary Servitude Prohibition TOTAL	Involuntary Servitude Prohibition TOTAL
+Candidate	Exempt Interests From Property Taxes	Exempt Interests From Property Taxes
+Candidate	Exempt Interests From Property Taxes TOTAL	Exempt Interests From Property Taxes TOTAL
+Candidate	State Healthcare System	State Healthcare System
+Candidate	State Healthcare System TOTAL	State Healthcare System TOTAL
+Candidate	State Minimum Wage	State Minimum Wage
+Candidate	State Minimum Wage TOTAL	State Minimum Wage TOTAL
+Candidate	Initiated Constitutional Amendments	Initiated Constitutional Amendments
+Candidate	Initiated Constitutional Amendments TOTAL	Initiated Constitutional Amendments TOTAL
+Candidate	New Tobacco Taxes	New Tobacco Taxes
+Candidate	New Tobacco Taxes TOTAL	New Tobacco Taxes TOTAL
+Candidate	Medical Aid in Dying	Medical Aid in Dying
+Candidate	Medical Aid in Dying TOTAL	Medical Aid in Dying TOTAL
+Candidate	Presidential Primary Election	Presidential Primary Election
+Candidate	Presidential Primary Election TOTAL	Presidential Primary Election TOTAL
+Candidate	Primary Elections	Primary Elections
+Candidate	Primary Elections TOTAL	Primary Elections TOTAL
+Candidate	Denver Metro Cultural District	Denver Metro Cultural District
+Candidate	Denver Metro Cultural District TOTAL	Denver Metro Cultural District TOTAL
+ReportingUnit	Colorado;Adams County	Adams
+ReportingUnit	Colorado;Alamosa County	Alamosa
+ReportingUnit	Colorado;Arapahoe County	Arapahoe
+ReportingUnit	Colorado;Archuleta County	Archuleta
+ReportingUnit	Colorado;Baca County	Baca
+ReportingUnit	Colorado;Bent County	Bent
+ReportingUnit	Colorado;Boulder County	Boulder
+ReportingUnit	Colorado;Broomfield County	Broomfield
+ReportingUnit	Colorado;Chaffee County	Chaffee
+ReportingUnit	Colorado;Cheyenne County	Cheyenne
+ReportingUnit	Colorado;Clear Creek County	Clear Creek
+ReportingUnit	Colorado;Conejos County	Conejos
+ReportingUnit	Colorado;Costilla County	Costilla
+ReportingUnit	Colorado;Crowley County	Crowley
+ReportingUnit	Colorado;Custer County	Custer
+ReportingUnit	Colorado;Delta County	Delta
+ReportingUnit	Colorado;Denver County	Denver
+ReportingUnit	Colorado;Dolores County	Dolores
+ReportingUnit	Colorado;Douglas County	Douglas
+ReportingUnit	Colorado;Eagle County	Eagle
+ReportingUnit	Colorado;El Paso County	El Paso
+ReportingUnit	Colorado;Elbert County	Elbert
+ReportingUnit	Colorado;Fremont County	Fremont
+ReportingUnit	Colorado;Garfield County	Garfield
+ReportingUnit	Colorado;Gilpin County	Gilpin
+ReportingUnit	Colorado;Grand County	Grand
+ReportingUnit	Colorado;Gunnison County	Gunnison
+ReportingUnit	Colorado;Hinsdale County	Hinsdale
+ReportingUnit	Colorado;Huerfano County	Huerfano
+ReportingUnit	Colorado;Jackson County	Jackson
+ReportingUnit	Colorado;Jefferson County	Jefferson
+ReportingUnit	Colorado;Kiowa County	Kiowa
+ReportingUnit	Colorado;Kit Carson County	Kit Carson
+ReportingUnit	Colorado;La Plata County	La Plata
+ReportingUnit	Colorado;Lake County	Lake
+ReportingUnit	Colorado;Larimer County	Larimer
+ReportingUnit	Colorado;Las Animas County	Las Animas
+ReportingUnit	Colorado;Lincoln County	Lincoln
+ReportingUnit	Colorado;Logan County	Logan
+ReportingUnit	Colorado;Mesa County	Mesa
+ReportingUnit	Colorado;Mineral County	Mineral
+ReportingUnit	Colorado;Moffat County	Moffat
+ReportingUnit	Colorado;Montezuma County	Montezuma
+ReportingUnit	Colorado;Montrose County	Montrose
+ReportingUnit	Colorado;Morgan County	Morgan
+ReportingUnit	Colorado;Otero County	Otero
+ReportingUnit	Colorado;Ouray County	Ouray
+ReportingUnit	Colorado;Park County	Park
+ReportingUnit	Colorado;Phillips County	Phillips
+ReportingUnit	Colorado;Pitkin County	Pitkin
+ReportingUnit	Colorado;Prowers County	Prowers
+ReportingUnit	Colorado;Pueblo County	Pueblo
+ReportingUnit	Colorado;Rio Blanco County	Rio Blanco
+ReportingUnit	Colorado;Rio Grande County	Rio Grande
+ReportingUnit	Colorado;Routt County	Routt
+ReportingUnit	Colorado;Saguache County	Saguache
+ReportingUnit	Colorado;San Juan County	San Juan
+ReportingUnit	Colorado;San Miguel County	San Miguel
+ReportingUnit	Colorado;Sedgwick County	Sedgwick
+ReportingUnit	Colorado;Summit County	Summit
+ReportingUnit	Colorado;Teller County	Teller
+ReportingUnit	Colorado;Washington County	Washington
+ReportingUnit	Colorado;Weld County	Weld
+ReportingUnit	Colorado;Yuma County	Yuma
+Candidate	Cory Booker	Cory Booker
+Candidate	Cory Booker Total Votes	Cory Booker Total Votes
+Candidate	Cory Booker Vote %	Cory Booker Vote %
+Candidate	Tulsi Gabbard	Tulsi Gabbard
+Candidate	Tulsi Gabbard Total Votes	Tulsi Gabbard Total Votes
+Candidate	Tulsi Gabbard Vote %	Tulsi Gabbard Vote %
+Candidate	Bernie Sanders	Bernie Sanders
+Candidate	Bernie Sanders Total Votes	Bernie Sanders Total Votes
+Candidate	Bernie Sanders Vote %	Bernie Sanders Vote %
+Candidate	Elizabeth Warren	Elizabeth Warren
+Candidate	Elizabeth Warren Total Votes	Elizabeth Warren Total Votes
+Candidate	Elizabeth Warren Vote %	Elizabeth Warren Vote %
+Candidate	Roque 'Rocky' De La Fuente III	Roque 'Rocky' De La Fuente III
+Candidate	Roque 'Rocky' De La Fuente III Total Votes	Roque 'Rocky' De La Fuente III Total Votes
+Candidate	Roque 'Rocky' De La Fuente III Vote %	Roque 'Rocky' De La Fuente III Vote %
+Candidate	Marianne Williamson	Marianne Williamson
+Candidate	Marianne Williamson Total Votes	Marianne Williamson Total Votes
+Candidate	Marianne Williamson Vote %	Marianne Williamson Vote %
+Candidate	Deval Patrick	Deval Patrick
+Candidate	Deval Patrick Total Votes	Deval Patrick Total Votes
+Candidate	Deval Patrick Vote %	Deval Patrick Vote %
+Candidate	Michael R. Bloomberg	Michael R. Bloomberg
+Candidate	Michael R. Bloomberg Total Votes	Michael R. Bloomberg Total Votes
+Candidate	Michael R. Bloomberg Vote %	Michael R. Bloomberg Vote %
+Candidate	Robby Wells	Robby Wells
+Candidate	Robby Wells Total Votes	Robby Wells Total Votes
+Candidate	Robby Wells Vote %	Robby Wells Vote %
+Candidate	Andrew Yang	Andrew Yang
+Candidate	Andrew Yang Total Votes	Andrew Yang Total Votes
+Candidate	Andrew Yang Vote %	Andrew Yang Vote %
+Candidate	Joseph R. Biden	Joseph R. Biden
+Candidate	Joseph R. Biden Total Votes	Joseph R. Biden Total Votes
+Candidate	Joseph R. Biden Vote %	Joseph R. Biden Vote %
+Candidate	Tom Steyer	Tom Steyer
+Candidate	Tom Steyer Total Votes	Tom Steyer Total Votes
+Candidate	Tom Steyer Vote %	Tom Steyer Vote %
+Candidate	Rita Krichevsky	Rita Krichevsky
+Candidate	Rita Krichevsky Total Votes	Rita Krichevsky Total Votes
+Candidate	Rita Krichevsky Vote %	Rita Krichevsky Vote %
+Candidate	Matthew John Matern	Matthew John Matern
+Candidate	Matthew John Matern Total Votes	Matthew John Matern Total Votes
+Candidate	Matthew John Matern Vote %	Matthew John Matern Vote %
+Candidate	Robert Ardini	Robert Ardini
+Candidate	Robert Ardini Total Votes	Robert Ardini Total Votes
+Candidate	Robert Ardini Vote %	Robert Ardini Vote %
+Candidate	Joe Walsh	Joe Walsh
+Candidate	Joe Walsh Total Votes	Joe Walsh Total Votes
+Candidate	Joe Walsh Vote %	Joe Walsh Vote %
+Candidate	Donald J. Trump	Donald J. Trump
+Candidate	Donald J. Trump Total Votes	Donald J. Trump Total Votes
+Candidate	Donald J. Trump Vote %	Donald J. Trump Vote %
+Candidate	Bill Weld	Bill Weld
+Candidate	Bill Weld Total Votes	Bill Weld Total Votes
+Candidate	Bill Weld Vote %	Bill Weld Vote %
+Candidate	Zoltan G. Istvan	Zoltan G. Istvan
+Candidate	Zoltan G. Istvan Total Votes	Zoltan G. Istvan Total Votes
+Candidate	Zoltan G. Istvan Vote %	Zoltan G. Istvan Vote %
