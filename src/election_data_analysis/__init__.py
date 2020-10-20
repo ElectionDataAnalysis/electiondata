@@ -1087,7 +1087,7 @@ class JurisdictionPrepper:
                 error = ui.consolidate_errors([error, new_err])
 
             if not ui.fatal_error(error):
-                if d["aux_data_dir"] is None:
+                if d["aux_data_dir"] is None or d["aux_data_dir"] == "":
                     aux_data_path = None
                 else:
                     aux_data_path = os.path.join(dir, d["aux_data_dir"])

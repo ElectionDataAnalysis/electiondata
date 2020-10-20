@@ -378,12 +378,13 @@ def read_single_datafile(
         elif munger.file_type in ["json"]:
             kwargs["encoding"] = munger.encoding
             df= pd.read_json(f_path, **kwargs)
-        elif munger.file_type in ["concatenated-blocks", "xls-multi"]:
+        elif munger.file_type in ["concatenated-blocks", "xls-multi", "xml"]:
             err = add_new_error(
                 err,
                 "system",
                 "user_interface.read_single_datafile",
-                f"Munger ({munger.name}) with file_type {munger.file_type} should not have reached this part of the code.",
+                f"Munger ({munger.name}) with file_type {munger.file_type} "
+                f"should not have reached this part of the code.",
             )
             return pd.DataFrame(), err
         else:
@@ -448,7 +449,7 @@ def read_combine_results(
     aux_data_path: str = None,
 ) -> (pd.DataFrame, dict):
     # if results are not a flat file type or json
-    if mu.options["file_type"] in ["concatenated-blocks", "xls-multi"]:
+    if mu.options["file_type"] in ["concatenated-blocks", "xls-multi", "xml"]:
         working, new_err = sf.read_alternate_munger(
             mu.options["file_type"],
             results_file_path,
@@ -464,6 +465,16 @@ def read_combine_results(
         mu.options["count_columns"] = [working.columns.to_list().index("count")]
         mu.options["header_row_count"] = 1
         mu.options["field_name_row"] = 0
+
+        if mu.file_type == "xml":
+            # TODO tech debt some of this may not be necessary
+            # change formulas in cdf_elements to match column names inserted by read_xml
+            mu.cdf_elements["idx"] = mu.cdf_elements.index
+            mu.cdf_elements["fields"] = mu.cdf_elements["idx"].apply(lambda x: [x])
+            mu.cdf_elements["raw_identifier_formula"] = mu.cdf_elements["idx"].apply(lambda x: f"<{x}_SOURCE>")
+            mu.cdf_elements.drop("idx",axis=1,inplace=True)
+            mu.field_list = list(mu.cdf_elements.index.unique())
+            mu.cdf_elements["source"] = "row"
 
     # if results are a flat file or json
     else:

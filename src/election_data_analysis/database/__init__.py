@@ -779,9 +779,11 @@ def get_input_options(session, input, verbose):
             result = session.execute(
                 f"""
                 SELECT  e."Id" AS parent, "Name" AS name, "Txt" as type
-                FROM    "Election" e
-                        JOIN "ElectionType" et on e."ElectionType_Id" = et."Id"
+                FROM    "VoteCount" vc
+                        JOIN "Election" e ON vc."Election_Id" = e."Id"
+                        JOIN "ElectionType" et ON e."ElectionType_Id" = et."Id"
                 WHERE   "Name" != 'none or unknown'
+                GROUP BY e."Id", "Name", "Txt"
                 ORDER BY LEFT("Name", 4) DESC, RIGHT("Name", LENGTH("Name") - 5)
             """
             )
@@ -1023,7 +1025,7 @@ def get_filtered_input_options(session, input_str, filters):
         }
         df = pd.DataFrame(data=data)
     # check if it's looking for a count of contests
-    elif input_str == "count" and bool([f for f in filters if "contests" in f]):
+    elif input_str == "count" and bool([f for f in filters if f.startswith("Contest")]):
         df = get_relevant_contests(session, filters)
     # check if it's looking for a count of candidates
     elif input_str == "count":
