@@ -118,82 +118,82 @@ CandidateContest	IL House District 116	116TH REPRESENTATIVE
 CandidateContest	IL House District 117	117TH REPRESENTATIVE
 CandidateContest	IL House District 118	118TH REPRESENTATIVE
 CandidateContest	IL Senate District 1	1ST SENATE
-CandidateContest	IL Senate District 2	2nd SENATE
-CandidateContest	IL Senate District 3	3rd SENATE
-CandidateContest	IL Senate District 4	4th SENATE
-CandidateContest	IL Senate District 5	5th SENATE
-CandidateContest	IL Senate District 6	6th SENATE
-CandidateContest	IL Senate District 7	7th SENATE
-CandidateContest	IL Senate District 8	8th SENATE
-CandidateContest	IL Senate District 9	9th SENATE
-CandidateContest	IL Senate District 10	10th SENATE
-CandidateContest	IL Senate District 11	11th SENATE
-CandidateContest	IL Senate District 12	12th SENATE
-CandidateContest	IL Senate District 13	13th SENATE
-CandidateContest	IL Senate District 14	14th SENATE
-CandidateContest	IL Senate District 15	15th SENATE
-CandidateContest	IL Senate District 16	16th SENATE
-CandidateContest	IL Senate District 17	17th SENATE
-CandidateContest	IL Senate District 18	18th SENATE
-CandidateContest	IL Senate District 19	19th SENATE
-CandidateContest	IL Senate District 20	20th SENATE
-CandidateContest	IL Senate District 21	21st SENATE
-CandidateContest	IL Senate District 22	22nd SENATE
-CandidateContest	IL Senate District 23	23rd SENATE
-CandidateContest	IL Senate District 24	24th SENATE
-CandidateContest	IL Senate District 25	25th SENATE
-CandidateContest	IL Senate District 26	26th SENATE
-CandidateContest	IL Senate District 27	27th SENATE
-CandidateContest	IL Senate District 28	28th SENATE
-CandidateContest	IL Senate District 29	29th SENATE
-CandidateContest	IL Senate District 30	30th SENATE
-CandidateContest	IL Senate District 31	31st SENATE
-CandidateContest	IL Senate District 32	32nd SENATE
-CandidateContest	IL Senate District 33	33rd SENATE
-CandidateContest	IL Senate District 34	34th SENATE
-CandidateContest	IL Senate District 35	35th SENATE
-CandidateContest	IL Senate District 36	36th SENATE
-CandidateContest	IL Senate District 37	37th SENATE
-CandidateContest	IL Senate District 38	38th SENATE
-CandidateContest	IL Senate District 39	39th SENATE
-CandidateContest	IL Senate District 40	40th SENATE
-CandidateContest	IL Senate District 41	41st SENATE
-CandidateContest	IL Senate District 42	42nd SENATE
-CandidateContest	IL Senate District 43	43rd SENATE
-CandidateContest	IL Senate District 44	44th SENATE
-CandidateContest	IL Senate District 45	45th SENATE
-CandidateContest	IL Senate District 46	46th SENATE
-CandidateContest	IL Senate District 47	47th SENATE
-CandidateContest	IL Senate District 48	48th SENATE
-CandidateContest	IL Senate District 49	49th SENATE
-CandidateContest	IL Senate District 50	50th SENATE
-CandidateContest	IL Senate District 51	51st SENATE
-CandidateContest	IL Senate District 52	52nd SENATE
-CandidateContest	IL Senate District 53	53rd SENATE
-CandidateContest	IL Senate District 54	54th SENATE
-CandidateContest	IL Senate District 55	55th SENATE
-CandidateContest	IL Senate District 56	56th SENATE
-CandidateContest	IL Senate District 57	57th SENATE
-CandidateContest	IL Senate District 58	58th SENATE
-CandidateContest	IL Senate District 59	59th SENATE
+CandidateContest	IL Senate District 2	2ND SENATE
+CandidateContest	IL Senate District 3	3RD SENATE
+CandidateContest	IL Senate District 4	4TH SENATE
+CandidateContest	IL Senate District 5	5TH SENATE
+CandidateContest	IL Senate District 6	6TH SENATE
+CandidateContest	IL Senate District 7	7TH SENATE
+CandidateContest	IL Senate District 8	8TH SENATE
+CandidateContest	IL Senate District 9	9TH SENATE
+CandidateContest	IL Senate District 10	10TH SENATE
+CandidateContest	IL Senate District 11	11TH SENATE
+CandidateContest	IL Senate District 12	12TH SENATE
+CandidateContest	IL Senate District 13	13TH SENATE
+CandidateContest	IL Senate District 14	14TH SENATE
+CandidateContest	IL Senate District 15	15TH SENATE
+CandidateContest	IL Senate District 16	16TH SENATE
+CandidateContest	IL Senate District 17	17TH SENATE
+CandidateContest	IL Senate District 18	18TH SENATE
+CandidateContest	IL Senate District 19	19TH SENATE
+CandidateContest	IL Senate District 20	20TH SENATE
+CandidateContest	IL Senate District 21	21ST SENATE
+CandidateContest	IL Senate District 22	22ND SENATE
+CandidateContest	IL Senate District 23	23RD SENATE
+CandidateContest	IL Senate District 24	24TH SENATE
+CandidateContest	IL Senate District 25	25TH SENATE
+CandidateContest	IL Senate District 26	26TH SENATE
+CandidateContest	IL Senate District 27	27TH SENATE
+CandidateContest	IL Senate District 28	28TH SENATE
+CandidateContest	IL Senate District 29	29TH SENATE
+CandidateContest	IL Senate District 30	30TH SENATE
+CandidateContest	IL Senate District 31	31ST SENATE
+CandidateContest	IL Senate District 32	32ND SENATE
+CandidateContest	IL Senate District 33	33RD SENATE
+CandidateContest	IL Senate District 34	34TH SENATE
+CandidateContest	IL Senate District 35	35TH SENATE
+CandidateContest	IL Senate District 36	36TH SENATE
+CandidateContest	IL Senate District 37	37TH SENATE
+CandidateContest	IL Senate District 38	38TH SENATE
+CandidateContest	IL Senate District 39	39TH SENATE
+CandidateContest	IL Senate District 40	40TH SENATE
+CandidateContest	IL Senate District 41	41ST SENATE
+CandidateContest	IL Senate District 42	42ND SENATE
+CandidateContest	IL Senate District 43	43RD SENATE
+CandidateContest	IL Senate District 44	44TH SENATE
+CandidateContest	IL Senate District 45	45TH SENATE
+CandidateContest	IL Senate District 46	46TH SENATE
+CandidateContest	IL Senate District 47	47TH SENATE
+CandidateContest	IL Senate District 48	48TH SENATE
+CandidateContest	IL Senate District 49	49TH SENATE
+CandidateContest	IL Senate District 50	50TH SENATE
+CandidateContest	IL Senate District 51	51ST SENATE
+CandidateContest	IL Senate District 52	52ND SENATE
+CandidateContest	IL Senate District 53	53RD SENATE
+CandidateContest	IL Senate District 54	54TH SENATE
+CandidateContest	IL Senate District 55	55TH SENATE
+CandidateContest	IL Senate District 56	56TH SENATE
+CandidateContest	IL Senate District 57	57TH SENATE
+CandidateContest	IL Senate District 58	58TH SENATE
+CandidateContest	IL Senate District 59	59TH SENATE
 CandidateContest	US House IL District 1	1ST CONGRESS
-CandidateContest	US House IL District 2	2nd CONGRESS
-CandidateContest	US House IL District 3	3rd CONGRESS
-CandidateContest	US House IL District 4	4th CONGRESS
-CandidateContest	US House IL District 5	5th CONGRESS
-CandidateContest	US House IL District 6	6th CONGRESS
-CandidateContest	US House IL District 7	7th CONGRESS
-CandidateContest	US House IL District 8	8th CONGRESS
-CandidateContest	US House IL District 9	9th CONGRESS
-CandidateContest	US House IL District 10	10th CONGRESS
-CandidateContest	US House IL District 11	11th CONGRESS
-CandidateContest	US House IL District 12	12th CONGRESS
-CandidateContest	US House IL District 13	13th CONGRESS
-CandidateContest	US House IL District 14	14th CONGRESS
-CandidateContest	US House IL District 15	15th CONGRESS
-CandidateContest	US House IL District 16	16th CONGRESS
-CandidateContest	US House IL District 17	17th CONGRESS
-CandidateContest	US House IL District 18	18th CONGRESS
+CandidateContest	US House IL District 2	2ND CONGRESS
+CandidateContest	US House IL District 3	3RD CONGRESS
+CandidateContest	US House IL District 4	4TH CONGRESS
+CandidateContest	US House IL District 5	5TH CONGRESS
+CandidateContest	US House IL District 6	6TH CONGRESS
+CandidateContest	US House IL District 7	7TH CONGRESS
+CandidateContest	US House IL District 8	8TH CONGRESS
+CandidateContest	US House IL District 9	9TH CONGRESS
+CandidateContest	US House IL District 10	10TH CONGRESS
+CandidateContest	US House IL District 11	11TH CONGRESS
+CandidateContest	US House IL District 12	12TH CONGRESS
+CandidateContest	US House IL District 13	13TH CONGRESS
+CandidateContest	US House IL District 14	14TH CONGRESS
+CandidateContest	US House IL District 15	15TH CONGRESS
+CandidateContest	US House IL District 16	16TH CONGRESS
+CandidateContest	US House IL District 17	17TH CONGRESS
+CandidateContest	US House IL District 18	18TH CONGRESS
 CandidateContest	US President (IL)	PRESIDENT AND VICE PRESIDENT
 CandidateContest	US President (IL)	PRESIDENT
 CandidateContest	IL Governor	GOVERNOR AND LIEUTENANT GOVERNOR
