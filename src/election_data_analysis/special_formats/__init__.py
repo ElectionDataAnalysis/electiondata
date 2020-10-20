@@ -1,6 +1,8 @@
 import pandas as pd
 import io
+import xml.etree.ElementTree as et
 from pathlib import Path
+from typing import Optional, Dict, List
 from election_data_analysis import munge as m
 from election_data_analysis import juris_and_munger as jm
 from election_data_analysis import user_interface as ui
@@ -77,6 +79,9 @@ def read_alternate_munger(
         raw_results, err = read_concatenated_blocks(f_path, munger, err)
     elif file_type in ["xls-multi"]:
         raw_results, err = read_multi_sheet_excel(f_path, munger, err)
+    elif file_type in ["xml"]:
+        vc_field = get_vc_field_from_munger(munger)
+        raw_results, err = read_xml(f_path, err, vc_field)
     else:
         err = ui.add_new_error(
             err,
@@ -231,6 +236,7 @@ def read_multi_sheet_excel(
     sheets_to_skip = munger.options["sheets_to_skip"]
     count_of_top_lines_to_skip = munger.options["count_of_top_lines_to_skip"]
     constant_line_count = munger.options["constant_line_count"]
+    constant_column_count = munger.options["constant_column_count"]
     header_row_count = munger.options["header_row_count"]
     columns_to_skip = munger.options["columns_to_skip"]
 
@@ -256,18 +262,22 @@ def read_multi_sheet_excel(
             data = df[sh].copy()
 
             # remove lines designated ignorable
-            data = data.iloc[count_of_top_lines_to_skip:]
+            data.drop(data.index[:count_of_top_lines_to_skip], inplace=True)
 
             # remove any all-null rows
             data.dropna(how="all",inplace=True)
 
-            # read constant info from first non-null entries of constant-header rows
+            # read constant_line info from first non-null entries of constant-header rows
             # then drop those rows
-            constants = data.iloc[:constant_line_count].fillna(method="bfill", axis=1).iloc[:,0]
-            data = data.iloc[constant_line_count:]
+            if constant_line_count > 0:
+                constant_lines = data.iloc[:constant_line_count].fillna(method="bfill", axis=1).iloc[:,0]
+                data.drop(data.index[:constant_line_count], inplace=True)
 
-            # reset column headers to generic index (moving column names to rows
-            # TODO remove data = data.transpose().reset_index().transpose()
+            # read constant_column info from first non-null entries of constant columns
+            # and drop those columns
+            if constant_column_count > 0:
+                constant_columns = data.T.iloc[:constant_column_count].fillna(method="bfill", axis=1).iloc[:,0]
+                data.drop(data.columns[:constant_column_count], axis=1, inplace=True)
 
             # add multi-index for actual header rows
             header_variable_names = [f"header_{j}" for j in range(header_row_count)]
@@ -279,7 +289,7 @@ def read_multi_sheet_excel(
             data.columns = col_multi_index
 
             # remove header rows from data
-            data = data.iloc[header_row_count:]
+            data.drop(data.index[:header_row_count], inplace=True)
 
             # Drop extraneous columns per munger, and columns without data
             data.drop(data.columns[columns_to_skip], axis=1, inplace=True)
@@ -298,7 +308,9 @@ def read_multi_sheet_excel(
 
             # add column(s) for constant info
             for j in range(constant_line_count):
-                data = m.add_constant_column(data,f"constant_{j}",constants.iloc[j])
+                data = m.add_constant_column(data,f"constant_line_{j}",constant_lines.iloc[j])
+            for j in range(constant_column_count):
+                data = m.add_constant_column(data,f"constant_column_{j}",constant_columns.iloc[j])
 
             # Make row index (from first column of blocks) into a column called 'first_column'
             data.reset_index(inplace=True)
@@ -313,3 +325,79 @@ def read_multi_sheet_excel(
                 f"Unexpected exception while processing sheet {sh}: {e}"
             )
     return raw_results, err
+
+
+def add_info(node: et.Element, info: dict, vc_field: dict) -> dict:
+    new_info = info.copy()
+    for k in vc_field[node.tag].keys():
+        if k == "count":
+            # read value as integer
+            new_info[k] = int(node.attrib[vc_field[node.tag][k]])
+        else:
+            # read value as string
+            new_info[k] = node.attrib[vc_field[node.tag][k]]
+    changed = (new_info != info)
+    return new_info, changed
+
+
+def read_xml(
+        fpath: str,
+        err: Optional[Dict],
+        vc_field: dict,
+) -> (pd.DataFrame, Optional[Dict]):
+    db_elements = {k2 for k, v in vc_field.items() for k2 in v.keys()}
+
+    try:
+        tree = et.parse(fpath)
+    except FileNotFoundError:
+        err = ui.add_new_error(
+            err,
+            "file",
+            Path(fpath).name,
+            "File not found"
+        )
+        return pd.DataFrame(), err
+
+    try:
+        vc_record_list = []
+        info = dict()
+        for node in tree.iter():  # depth-first search, what we want!
+
+            if node.tag in vc_field.keys():
+                info, changed = add_info(node, info, vc_field)
+                # if record is both complete and new
+                if changed and set(info.keys()) == db_elements:
+                    # put record in list of records to be returned
+                    vc_record_list.append(info.copy())
+                    # delete the count from the info (to avoid entering count twice)
+                    info.pop("count")
+        raw_results = pd.DataFrame(vc_record_list)
+
+    except Exception as e:
+        err = ui.add_new_error(
+            err,
+            "munger",
+            f"Error munging xml: {e}"
+        )
+        raw_results = pd.DataFrame()
+    return raw_results, err
+
+
+def get_vc_field_from_munger(mu: jm.Munger) -> dict:
+    # TODO error handling
+    vcf = dict()
+    # TODO do relevant checks on munger files so this doesn't error
+    for col in mu.options["count_columns_by_name"]:
+        tag, field = col.split(".")
+        if tag in vcf.keys():
+            vcf[tag]["count"] = field
+        else:
+            vcf[tag] = {"count": field}
+    for i, r in mu.cdf_elements.iterrows():
+        for fld in r["fields"]:
+            tag, field = fld.split(".")
+            if tag in vcf.keys():
+                vcf[tag][i] = field
+            else:
+                vcf[tag] = {i: field}
+    return vcf

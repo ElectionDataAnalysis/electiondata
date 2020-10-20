@@ -187,21 +187,31 @@ def create_scatter(
 
     # check if there is only 1 candidate selection (with multiple count types)
     single_selection = len(unsummed["Selection"].unique()) == 1
-    if single_selection:
+    # check if there is only one contest
+    single_count_type = len(unsummed["CountItemType"].unique()) == 1
+
+    if single_selection and not single_count_type:
         pivot_col = "CountItemType"
+    elif single_selection and single_count_type:
+        pivot_col = "Election_Id"
     else:
         pivot_col = "Selection"
     pivot_df = pd.pivot_table(
-        unsummed, values="Count", index=["Name"], columns=pivot_col
+        unsummed, values="Count", index=["Name"], columns=pivot_col, aggfunc=np.sum
     ).reset_index()
     pivot_df = pivot_df.dropna()
+    pivot_df.columns = pivot_df.columns.map(str)
     if pivot_df.empty:
         connection.close()
         return None
 
     # package up results
-    if single_selection:
+    if single_selection and not single_count_type:
         results = package_results(pivot_df, jurisdiction, h_category, v_category)
+        results["x"] = x
+        results["y"] = y
+    elif single_selection and single_count_type:
+        results = package_results(pivot_df, jurisdiction, str(h_election_id), str(v_election_id))
         results["x"] = x
         results["y"] = y
     else:
@@ -238,6 +248,8 @@ def create_scatter(
 
 def package_results(data, jurisdiction, x, y, restrict=None):
     results = {"jurisdiction": jurisdiction, "x": x, "y": y, "counts": []}
+    if restrict and len(data.index) > restrict:
+        data = get_remaining_averages(data, restrict)
     for i, row in data.iterrows():
         total = row[x] + row[y]
         if total == 0:
@@ -254,8 +266,6 @@ def package_results(data, jurisdiction, x, y, restrict=None):
                 "y_pct": y_pct,
             }
         )
-        if restrict and i == (restrict - 1):
-            break
     return results
 
 
@@ -283,8 +293,17 @@ def get_data_for_scatter(
 
     # cleanup for purposes of flexibility
     unsummed = unsummed[
-        ["Name", "Count", "Selection", "Contest_Id", "Candidate_Id", "Contest", "CountItemType"]
-    ]
+        [
+            "Election_Id",
+            "ParentName",
+            "Count",
+            "Selection",
+            "Contest_Id",
+            "Candidate_Id",
+            "Contest",
+            "CountItemType"
+        ]
+    ].rename(columns={"ParentName": "Name"})
 
     # if filter_id is -1, then that means we have all contests or candidates
     # so we need to group by
@@ -381,7 +400,7 @@ def create_bar(
             },
             inplace=True,
         )
-        temp_df = temp_df.merge(scores_df, how="inner", on="ReportingUnit_Id")
+        temp_df = temp_df.merge(scores_df, how="left", on="ReportingUnit_Id")
         temp_df.drop(columns=["score", "margins_pct"], inplace=True)
         temp_df.rename(
             columns={
@@ -397,16 +416,13 @@ def create_bar(
         jurisdiction = db.name_from_id(cursor, "ReportingUnit", top_ru_id)
 
         pivot_df = pd.pivot_table(
-            temp_df, values="Count", index=["Name"], columns="Selection"
+            temp_df, values="Count", index=["Name"], columns="Selection", fill_value=0
         ).reset_index()
         score_df = temp_df.groupby("Name")[
             ["score", "margins_pct", "margin_ratio"]
         ].mean()
-        pivot_df = (
-            pivot_df.merge(score_df, how="inner", on="Name")
-            .sort_values("score", ascending=False)
-            .reset_index()
-        )
+        pivot_df = pivot_df.merge(score_df, how="inner", on="Name")
+        pivot_df = sort_pivot_by_margins(pivot_df)
 
         results = package_results(pivot_df, jurisdiction, x, y, restrict=8)
         results["election"] = db.name_from_id(cursor, "Election", election_id)
@@ -425,21 +441,21 @@ def create_bar(
         votes_at_stake = human_readable_numbers(results["votes_at_stake_raw"])
         if votes_at_stake[0] == "-":
             votes_at_stake = votes_at_stake[1:]
-            suffix = "decrease"
+            acted = "narrowed"
         else:
-            suffix = "increase"
-        results["votes_at_stake"] = f"{votes_at_stake} margin {suffix}"
+            acted = "widened"
+        results["votes_at_stake"] = f"Outlier {acted} margin by ~ {votes_at_stake}"
         results["margin"] = human_readable_numbers(results["margin_raw"])
         if multiple_ballot_types:
             results[
                 "ballot_types"
             ] = f"""{results["jurisdiction"]} provides data by vote type"""
         else:
-            results["ballot_types"] = "Data unavailable by vote type"
+            results["ballot_types"] = "Data by vote type unavailable"
         results["score"] = temp_df["score"].max()
         results[
             "title"
-        ] = f"""Accepted {results["count_item_type"].replace("-", " ").title()} Ballots"""
+        ] = f"""{results["count_item_type"].replace("-", " ").title()} Ballots Reported"""
         result_list.append(results)
     connection.close()
     return result_list
@@ -629,14 +645,7 @@ def get_most_anomalous(data, n):
         if max_score > 0:
             rank = temp_df[temp_df["score"] == max_score].iloc[0]["rank"]
             temp_df = temp_df[temp_df["rank"].isin([1, rank])]
-            scores = list(temp_df["score"].unique())
-            scores.sort(reverse=True)
-            top_scores = scores[0:8]
-            reporting_units = temp_df[temp_df["score"].isin(top_scores)][
-                "ReportingUnit_Id"
-            ].unique()
-            df_final = temp_df[temp_df["ReportingUnit_Id"].isin(reporting_units)]
-            df = pd.concat([df, df_final])
+            df = pd.concat([df, temp_df])
     return df
 
 
@@ -926,3 +935,38 @@ def human_readable_numbers(value):
         return str(round(value, -2))
     else:
         return "{:,}".format(round(value, -3))
+
+
+def sort_pivot_by_margins(df):
+    """ grab the row with the highest anomaly score, then sort the remainder by
+    margin. The sorting order depends on whether the anomalous row is >50% or <50%"""
+
+    # create an DF of just the most anomalous row
+    i = df.index[df["score"] == df["score"].max()][0]
+    anomalous_df = df.iloc[i, :].to_frame().transpose().reset_index(drop=True)
+
+    # get the rest of the rows and sort based on margins
+    remainder_df = df.drop(index=i)
+    sort_ascending = (
+        anomalous_df.iloc[0, anomalous_df.columns.get_indexer(["margins_pct"])[0]] < remainder_df["margins_pct"].max()
+    )
+    remainder_df = remainder_df.sort_values("margins_pct", ascending=sort_ascending).reset_index(drop=True)
+    remainder_df.index = remainder_df.index + 1
+
+    return pd.concat([anomalous_df, remainder_df])
+
+def get_remaining_averages(df, restrict):
+    """ Take a dataframe and keep a number of the rows as-is up to the restrict
+    number. The remaining rows get aggregated, either summed by the vote counts
+    or averaged for the other metrics."""
+    columns = df.columns.to_list()
+    columns.remove("Name")
+    df[columns] = df[columns].apply(pd.to_numeric) 
+
+    actual_df = df.iloc[0:restrict-1, :]
+    average_df = df.iloc[restrict-1:, :].copy()
+    
+    average_df["Name"] = "Average of all others"
+    average_df = average_df.groupby("Name").mean().reset_index()
+    average_df.index = [restrict-1]
+    return pd.concat([actual_df, average_df])

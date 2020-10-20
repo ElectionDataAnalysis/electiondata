@@ -121,10 +121,12 @@ def check_count_type_totals(election, jurisdiction, contest, count_item_type):
 #constants
 ok = {
     "nc18g": data_exists('2018 General','North Carolina'),
-    "de20ppp": data_exists('2020 Presidential Preference Primary','Delaware'),
     "de20pri": data_exists('2020 Primary','Delaware'),
     "oh16g": data_exists('2016 General','Ohio'),
-    "sc18g": data_exists("2018 General", "South Carolina")
+    "sc18g": data_exists("2018 General", "South Carolina"),
+    "az20p": data_exists("2020 Primary", "Arizona"),
+    "mt20p": data_exists("2020 Primary", "Montana"),
+    "ga18g": data_exists("2018 General", "Georgia"),
 }
 
 print(ok)
@@ -302,11 +304,12 @@ def test_pa_totals_match_vote_type():
 
 
 ### Georgia Data Loading Tests ###
+@pytest.mark.skipif(not ok["ga18g"], reason="No GA 2018 General data")
 def test_ga_presidential():
     #no presidential contests in 2018
     assert True == True
 
-
+@pytest.mark.skipif(not ok["ga18g"], reason="No GA 2018 General data")
 def test_ga_statewide_totals():
     assert (
         check_contest_totals(
@@ -318,6 +321,7 @@ def test_ga_statewide_totals():
     )
 
 
+@pytest.mark.skipif(not ok["ga18g"], reason="No GA 2018 General data")
 def test_ga_senate_totals():
     assert (
         check_contest_totals(
@@ -329,6 +333,7 @@ def test_ga_senate_totals():
     )
 
 
+@pytest.mark.skipif(not ok["ga18g"], reason="No GA 2018 General data")
 def test_ga_house_totals():
     assert (
         check_contest_totals(
@@ -340,6 +345,7 @@ def test_ga_house_totals():
     )
 
 
+@pytest.mark.skipif(not ok["ga18g"], reason="No GA 2018 General data")
 def test_ga_contest_by_vote_type():
     assert (
         check_count_type_totals(
@@ -352,6 +358,7 @@ def test_ga_contest_by_vote_type():
     )
 
 
+@pytest.mark.skipif(not ok["ga18g"], reason="No GA 2018 General data")
 def test_ga_totals_match_vote_type():
     assert check_totals_match_vote_types("2018 General", "Georgia") == True
 
@@ -550,11 +557,11 @@ def test_mi_totals_match_vote_type():
     assert True == True
 
 ### Delaware 2020 Primary Data Loading Tests ###
-@pytest.mark.skipif(not ok["de20ppp"], reason="No DE 2020 Presidential Preference Primary data")
+@pytest.mark.skipif(not ok["de20pri"], reason="No DE 2020 Primary data")
 def test_de_presidential():
     assert (
         check_contest_totals(
-            "2020 Presidential Preference Primary",
+            "2020 Primary",
             "Delaware",
             "US President (DE) (Democratic Party)",
         )
@@ -606,9 +613,9 @@ def test_de_contest_by_vote_type():
         == 559
     )
 
-@pytest.mark.skipif(not ok["de20ppp"], reason="No DE 2020 Presidential Preference Primary data")
+@pytest.mark.skipif(not ok["de20pri"], reason="No DE 2020 Primary data")
 def test_de_totals_match_vote_type():
-    assert check_totals_match_vote_types("2020 Presidential Preference Primary", "Delaware") == True
+    assert check_totals_match_vote_types("2020 Primary", "Delaware") == True
 
 
 ## oh 2016g tests
@@ -630,7 +637,7 @@ def test_oh_presidential():
     )
 
 
-# @pytest.mark.skipif(not ok["oh16g"],"No OH 2016 General data")
+#@pytest.mark.skipif(not ok["oh16g"], "No OH 2016 General data")
 def test_oh_senate_totals():
     assert (
         check_contest_totals(
@@ -725,3 +732,112 @@ def test_sc18g_contest_by_vote_type():
 def test_sc18g_totals_match_vote_type():
     assert check_totals_match_vote_types("2018 General", "South Carolina") == True
 
+## AZ 2020 Pri
+@pytest.mark.skipif(not ok["az20p"], reason="No AZ 2020 Primary data")
+def test_az20p_presidential():
+    # Presidential primary results not loaded as of 2020-10-15
+    assert True == True
+
+
+@pytest.mark.skipif(not ok["az20p"], reason="No AZ 2020 Primary data")
+def test_az20p_statewide_totals():
+    assert (
+        check_contest_totals(
+            "2020 Primary",
+            "Arizona",
+            "US Senate AZ (Republican Party)",
+        )
+        == 181511 + 551119
+    )
+
+
+@pytest.mark.skipif(not ok["az20p"], reason="No AZ 2020 Primary data")
+def test_az20p_senate_totals():
+    assert (
+        check_contest_totals(
+            "2020 Primary",
+            "Arizona",
+            "AZ Senate District 3 (Democratic Party)",
+        )
+        == 25471
+    )
+
+@pytest.mark.skipif(not ok["az20p"], reason="No AZ 2020 Primary data")
+def test_az20p_house_totals():
+    assert (
+        check_contest_totals(
+            "2020 Primary",
+            "Arizona",
+            "AZ House District 8 (Democratic Party)",
+        )
+        == 13727
+    )
+
+
+@pytest.mark.skipif(not ok["az20p"], reason="No AZ 2020 Primary data")
+def test_az20p_contest_by_vote_type():
+    assert (
+        check_count_type_totals(
+            "2020 Primary",
+            "Arizona",
+            "US House AZ District 4 (Republican Party)",
+            "provisional",
+        )
+        == 574 + 266
+    )
+
+
+@pytest.mark.skipif(not ok["az20p"], reason="No AZ 2020 Primary data")
+def test_az20p_totals_match_vote_type():
+    assert check_totals_match_vote_types("2020 Primary", "Arizona") == True
+
+### Montana 2020 Primary Data Loading Tests ###
+@pytest.mark.skipif(not ok["mt20p"], reason="No MT 2020 Primary data")
+def test_mt_presidential():
+    assert check_contest_totals(
+            "2020 Primary",
+            "Montana",
+            "US President (MT) (Democratic Party)",
+        ) == 149973
+
+
+@pytest.mark.skipif(not ok["mt20p"], reason="No MT 2020 Primary data")
+def test_mt_statewide_totals():
+    assert check_contest_totals(
+                "2020 Primary",
+                "Montana",
+                "MT Governor (Republican Party)",
+            ) == 223150
+
+
+@pytest.mark.skipif(not ok["mt20p"], reason="No MT 2020 Primary data")
+def test_mt_senate_totals():
+    assert check_contest_totals(
+                "2020 Primary",
+                "Montana",
+                "MT Senate District 44 (Democratic Party)",
+            ) == 2344
+
+
+@pytest.mark.skipif(not ok["mt20p"], reason="No MT 2020 Primary data")
+def test_mt_house_totals():
+    assert check_contest_totals(
+                "2020 Primary",
+                "Montana",
+                "MT House District 36 (Republican Party)",
+            ) == 3147
+
+
+@pytest.mark.skipif(not ok["mt20p"], reason="No MT 2020 Primary data")
+def test_mt_contest_by_vote_type():
+    assert check_count_type_totals(
+            "2020 Primary",
+            "Montana",
+            "MT Senate District 26 (Republican Party)",
+            "total",
+        ) == 2698
+
+
+@pytest.mark.skipif(not ok["mt20p"], reason="No MT 2020 Primary data")
+def test_mt_totals_match_vote_type():
+    assert check_totals_match_vote_types("2020 Primary", "Montana") == True

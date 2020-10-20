@@ -309,9 +309,10 @@ def add_munged_column(
 
 
 def compress_whitespace(s: str) -> str:
-    """Return a string where every instance of consecutive whitespaces in <s> has been replace by a single space,
+    """Return a string where every instance of consecutive whitespaces internal to <s> has been replace
+    by the first of those consecutive whitespace characters,
     and leading and trailing whitespace is eliminated"""
-    new_s = re.sub(r"\s+", " ", s)
+    new_s = re.sub(r"(\s)\s+", "\\1", s)
     new_s = new_s.strip()
     return new_s
 
@@ -601,7 +602,7 @@ def munge_and_melt(
     # NB: if there is just one numerical column, melt still creates dummy variable col
     #  in which each value is 'value'
 
-    # rename count to Count
+    # rename value to Count
     #  NB: any unnecessary numerical cols (e.g., Contest Group ID) will not matter
     #  as they will be be missing from dictionary.txt and hence will be ignored.
     working.rename(columns={"value": "Count"}, inplace=True)
@@ -650,54 +651,58 @@ def add_contest_id(
     w_for_type = dict()
     df_contest = pd.read_sql_table(f"Contest", session.bind)
     for c_type in ["BallotMeasure", "Candidate"]:
-        # restrict df_contest to the contest_type <c_type> and get the <c_type>Contest_Id
-        df_for_type[c_type] = df_contest[df_contest.contest_type == c_type]
-        none_or_unknown_id = db.name_to_id(
-            session, f"{c_type}Contest", "none or unknown"
-        )
-        working, new_err = replace_raw_with_internal_ids(
-            working,
-            juris,
-            df_for_type[c_type],
-            f"{c_type}Contest",
-            "Name",
-            err,
-            drop_unmatched=False,
-            unmatched_id=none_or_unknown_id,
-            drop_all_ok=True,
-        )
-        if new_err:
-            err = ui.consolidate_errors([err, new_err])
-        # restrict working to the contest_type <c_type>, add contest_type column
-        w_for_type[c_type] = working[working[f"{c_type}Contest"] != "none or unknown"]
-        w_for_type[c_type] = add_constant_column(
-            w_for_type[c_type], "contest_type", c_type
-        ).rename(columns={f"{c_type}Contest_Id": "Contest_Id"})
+        if f"{c_type}Contest_raw" in working.columns:
+            # restrict df_contest to the contest_type <c_type> and get the <c_type>Contest_Id
+            df_for_type[c_type] = df_contest[df_contest.contest_type == c_type]
+            none_or_unknown_id = db.name_to_id(
+                session, f"{c_type}Contest", "none or unknown"
+            )
+            working, new_err = replace_raw_with_internal_ids(
+                working,
+                juris,
+                df_for_type[c_type],
+                f"{c_type}Contest",
+                "Name",
+                err,
+                drop_unmatched=False,
+                unmatched_id=none_or_unknown_id,
+                drop_all_ok=True,
+            )
+            if new_err:
+                err = ui.consolidate_errors([err, new_err])
+            # restrict working to the contest_type <c_type>, add contest_type column
+            w_for_type[c_type] = working[working[f"{c_type}Contest"] != "none or unknown"]
+            w_for_type[c_type] = add_constant_column(
+                w_for_type[c_type], "contest_type", c_type
+            ).rename(columns={f"{c_type}Contest_Id": "Contest_Id"})
 
-        # drop text column
-        w_for_type[c_type] = w_for_type[c_type].drop(f"{c_type}Contest", axis=1)
+            # drop text column
+            w_for_type[c_type] = w_for_type[c_type].drop(f"{c_type}Contest", axis=1)
+        else:
+            w_for_type[c_type] = pd.DataFrame()
 
     # FIXME: check somewhere that no name (other than 'none or unknown') is shared by BMContests and CandidateContests
     # TODO check this also when juris files loaded, to save time for user
 
     # drop obsolete columns
-    common_cols = [
-        c
-        for c in w_for_type["BallotMeasure"].columns
-        if c in w_for_type["Candidate"].columns
-    ]
-    for c_type in ["BallotMeasure", "Candidate"]:
-        w_for_type[c_type] = w_for_type[c_type][common_cols]
+    if w_for_type["BallotMeasure"].empty:
+        working_temp = w_for_type["Candidate"]
+    elif w_for_type["Candidate"].empty:
+        working_temp = w_for_type["BallotMeasure"]
+    else:
+        common_cols = [
+            c
+            for c in w_for_type["BallotMeasure"].columns
+            if c in w_for_type["Candidate"].columns
+        ]
+        for c_type in ["BallotMeasure", "Candidate"]:
+            w_for_type[c_type] = w_for_type[c_type][common_cols]
 
-    # assemble working from the two pieces
-    working_temp = pd.concat([w_for_type[ct] for ct in ["BallotMeasure", "Candidate"]])
+        # assemble working from the two pieces
+        working_temp = pd.concat([w_for_type[ct] for ct in ["BallotMeasure", "Candidate"]])
 
     # fail if fatal errors or no contests recognized (in reverse order, just for fun
     if working_temp.empty:
-        cc_list = "\n\t".join(sorted(df.CandidateContest_raw.unique(),reverse=True))
-        bmc_list = "\n\t".join(sorted(df.CandidateContest_raw.unique(),reverse=True))
-        contest_list = f"Raw CandidateContests:\n{cc_list}\n\nRaw BallotMeasureContests:\n{bmc_list}"
-
         err = ui.add_new_error(
             err, "jurisdiction", juris.short_name, f"No contests recognized."
         )
