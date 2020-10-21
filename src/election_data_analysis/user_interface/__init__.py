@@ -1,6 +1,7 @@
 from configparser import ConfigParser, MissingSectionHeaderError
 from election_data_analysis import munge as m
 from election_data_analysis import special_formats as sf
+import election_data_analysis as e
 import pandas as pd
 from pandas.errors import ParserError, ParserWarning
 import csv
@@ -346,7 +347,7 @@ def find_dupes(df):
 def read_single_datafile(
     munger: jm.Munger,
         f_path: str,
-        err: dict
+        err: Optional[dict]
 ) -> (pd.DataFrame, dict):
     try:
         dtype = {c: str for c in munger.field_list}
@@ -445,7 +446,7 @@ def read_single_datafile(
 def read_combine_results(
     mu: jm.Munger,
     results_file_path: str,
-    err: dict,
+    err: Optional[dict],
     aux_data_path: str = None,
 ) -> (pd.DataFrame, dict):
     # if results are not a flat file type or json
@@ -865,3 +866,155 @@ def fatal_error(err, error_type_list=None, name_key_list=None) -> bool:
         if bad:
             return True
     return False
+
+
+def create_param_file(db_params: dict, multi_data_loader_pars: dict, target_dir: str) -> Optional[str]:
+    err_str = None
+    if not os.path.isdir(target_dir):
+        return f"Directory not found: {target_dir}"
+    db_params_str = "\n".join([f"{s}={db_params[s]}" for s in db_params.keys()])
+    mdlp_str = "\n".join([f"{s}={multi_data_loader_pars[s]}" for s in multi_data_loader_pars.keys()])
+
+    with open(os.path.join(target_dir,"run_time.ini"),"w") as f:
+        f.write("[postgresql]\n" + db_params_str + "\n\n[election_data_analysis]\n" + mdlp_str)
+
+    return err_str
+
+
+def run_tests(test_dir: str, test_param_file: str, db_params: dict):
+    """ move to tests directory, run tests, move back
+    db_params must have host, user, pass, db_name.
+    test_param_file is a reference run_time.ini file"""
+
+    # note current directory
+    original_dir = os.getcwd()
+
+    # move to tests directory
+    os.chdir(test_dir)
+
+    # create run_time.ini for testing routines to use
+    # default port is 5432; default password is ""
+    if "port" not in db_params.keys():
+        db_params["port"] = "5432"
+    if "password" not in db_params.keys():
+        db_params["password"] = ""
+
+    new_parameter_text = f"[postgresql]\n" \
+                         f"host={db_params['host']}\n" \
+                         f"port={db_params['port']}\n" \
+                         f"dbname={db_params['dbname']}\n" \
+                         f"user={db_params['user']}\n" \
+                         f"password={db_params['password']}"
+    with open(test_param_file, "w") as f:
+        f.write(new_parameter_text)
+
+    # run pytest
+    os.system("pytest")
+
+    # move back to original directory
+    os.chdir(original_dir)
+    return
+
+
+def confirm_essential_info(
+        directory: str,
+        header: str,
+        param_list: List[str],
+        known: Optional[dict] = None,
+        msg: str = "",
+):
+    """Returns True if user confirms all values in key_list for all *.ini files in
+    the given directory; False otherwise"""
+
+    # loop through files
+    for f in [f for f in os.listdir(directory) if f[-4:] == ".ini"]:
+        file_confirmed = False
+        while not file_confirmed:
+            param_dict, err = get_runtime_parameters(
+                required_keys=param_list + known.keys(),
+                header=header,
+                param_file=f,
+            )
+            if err:
+                err_str = ""
+                if "file" in err.keys():
+                    err_str += f"File error: {err['file']}\n"
+                if "ini" in err.keys():
+                    err_str += f"Error in file: {err['ini']}"
+                input(f"Please fix errors and try again: {err_str}")
+            else:
+                # have user confirm unknowns
+                param_str = "\n".join([f"{s}={param_dict[s]}" for s in param_list])
+                user_confirm = input(
+                    f"Are all of these correct (y/n)?{msg}\n{param_str}"
+                )
+                if user_confirm == "y":
+                    file_confirmed = True
+
+                # check knowns
+                incorrect_knowns = []
+                for k in known.keys():
+                    if known[k] != param_dict[k]:
+                        incorrect_knowns.append(f"Need {k}={param_dict[k]}")
+                if incorrect_knowns:
+                    incorrect_str = "\n".join(incorrect_knowns)
+                    print(f"Incorrect values:\n{incorrect_str}")
+                    file_confirmed = False
+
+                if not file_confirmed:
+                    input("Correct file and hit return to continue.")
+    return
+
+
+def reload_juris_election(
+        juris_name: str,
+        election_name: str,
+        test_dir: str,
+) -> dict:
+    """Assumes run_time.ini in directory"""
+    # Get info from run_time.ini
+    mdlp, err = get_runtime_parameters(
+        required_keys=e.multi_data_loader_pars,
+        header="election_data_analysis",
+        param_file="run_time.ini"
+    )
+    if err:
+        return err
+
+    # Ask user to confirm/correct essential info
+    confirm_essential_info(
+        mdlp["results_dir"],
+        "election_data_analysis",
+        ["results_file", "results_download_date", "results_source"],
+        known={
+            "top_reporting_unit": juris_name,
+            "jurisdiction_path": juris_name.replace(" ","-"),
+            "election": election_name,
+        },
+        msg=" Check download date carefully!!!",
+    )
+
+    # initialize dataloader
+    dl = e.DataLoader()
+
+    # change db name to a good temp name
+    ts = datetime.datetime.now().strftime("%m%d_%H%M")
+    dl.change_db(f"test_{ts}")
+
+    # load all data into temp db
+    dl.load_all(move_files=False)
+
+    # run test files on temp db
+    # TODO inefficient: this duplicates the work of creating the new run_time.ini file
+    run_tests(test_dir, "run_time.ini", db_params)
+
+    # Ask user to OK test results or abandon
+
+    # Remove existing data for juris-election pair from live db
+
+    # Load new data into live db
+
+    # run tests on live db
+
+    return err
+

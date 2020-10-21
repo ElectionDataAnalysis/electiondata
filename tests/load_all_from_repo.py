@@ -24,53 +24,6 @@ def get_testing_data(url: str, target: str = "TestingData"):
     return
 
 
-def run_tests(test_dir: str, test_param_file: str, db_params: dict):
-    """ move to tests directory, run tests, move back
-    db_params must have host, user, pass, db_name"""
-
-    # note current directory
-    original_dir = os.getcwd()
-
-    # move to tests directory
-    os.chdir(test_dir)
-
-    # create run_time.ini for testing routines to use
-    # default port is 5432; default password is ""
-    if "port" not in db_params.keys():
-        db_params["port"] = "5432"
-    if "password" not in db_params.keys():
-        db_params["password"] = ""
-
-    new_parameter_text = f"[postgresql]\n" \
-                         f"host={db_params['host']}\n" \
-                         f"port={db_params['port']}\n" \
-                         f"dbname={db_params['dbname']}\n" \
-                         f"user={db_params['user']}\n" \
-                         f"password={db_params['password']}"
-    with open(test_param_file, "w") as f:
-        f.write(new_parameter_text)
-
-    # run pytest
-    os.system("pytest")
-
-    # move back to original directory
-    os.chdir(original_dir)
-    return
-
-
-def create_param_file(db_params: dict, multi_data_loader_pars: dict, target_dir: str) -> Optional[str]:
-    err_str = None
-    if not os.path.isdir(target_dir):
-        return f"Directory not found: {target_dir}"
-    db_params_str = "\n".join([f"{s}={db_params[s]}" for s in db_params.keys()])
-    mdlp_str = "\n".join([f"{s}={multi_data_loader_pars[s]}" for s in multi_data_loader_pars.keys()])
-
-    with open(os.path.join(target_dir,"run_time.ini"),"w") as f:
-        f.write("[postgresql]\n" + db_params_str + "\n\n[election_data_analysis]\n" + mdlp_str)
-
-    return err_str
-
-
 def run2(load_data: bool = True, dbname: str = None):
     reference_param_file = test_param_file = os.path.join(Path(__file__).parents[1], "src", "run_time.ini")
     with open(reference_param_file, "r") as f:
@@ -105,13 +58,13 @@ def run2(load_data: bool = True, dbname: str = None):
             param_file="run_time.ini",
         )
 
-        create_param_file(db_params, mdlp, test_dir)
+        ui.create_param_file(db_params, mdlp, test_dir)
 
         # Load the data
         dl = e.DataLoader()
         dl.load_all(move_files=False)
 
-    run_tests(test_dir, test_param_file, db_params)
+    ui.run_tests(test_dir, test_param_file, db_params)
 
     # allow user to inspect database if desired
     input(f"Hit return to continue (and remove test db {dbname} and test data)")
@@ -126,7 +79,7 @@ def run2(load_data: bool = True, dbname: str = None):
 
     if load_data:
         d.remove_database(new_params)
-    run_tests(test_dir, test_param_file, db_params)
+    ui.run_tests(test_dir, test_param_file, db_params)
 
     if load_data:
         # allow user to pause, option to remove db
