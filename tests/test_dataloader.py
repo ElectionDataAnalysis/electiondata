@@ -891,7 +891,7 @@ def test_sc_contest_by_vote_type_20():
             "2020 Primary",
             "South Carolina",
             "SC House District 75 (Democratic Party)",
-            "Absentee By Mail",
+            "absentee-mail",
         )
         == 1106
     )
@@ -1837,11 +1837,11 @@ def test_co_statewide_totals_16():
 def test_co_senate_totals_16():
     assert (
         check_contest_totals(
-            "2018 General",
+            "2016 General",
             "Colorado",
             "CO Senate District 14",
         )
-        == 313531
+        == 85788
     )
 
 @pytest.mark.skipif(not ok["co16g"], reason="No CO 2016 General data")
@@ -1852,7 +1852,7 @@ def test_co_rep_16():
             "Colorado",
             "CO House District 60",
         )
-        == 85788
+        == 41303
     )
 
 @pytest.mark.skipif(not ok["co16g"], reason="No CO 2016 General data")
@@ -1887,7 +1887,7 @@ def test_co_senate_totals_18():
             "Colorado",
             "CO Senate District 15",
         )
-        == 313531
+        == 83690
     )
 
 @pytest.mark.skipif(not ok["co18g"], reason="No CO 2018 General data")
@@ -1898,7 +1898,7 @@ def test_co_rep_18():
             "Colorado",
             "CO House District 60",
         )
-        == 142114
+        == 39237
     )
 
 @pytest.mark.skipif(not ok["co18g"], reason="No CO 2018 General data")
@@ -1949,7 +1949,7 @@ def test_co_rep_20():
         check_contest_totals(
             "2020 Primary",
             "Colorado",
-            "CO House District 20 (Republican Party)",
+            "CO House District 20 (Democratic Party)",
         )
         == 10011
     )
