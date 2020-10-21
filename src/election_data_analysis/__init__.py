@@ -105,6 +105,11 @@ class DataLoader:
             print("Exiting")
             quit()
 
+    def change_db(self, new_db_name: str):
+        """Changes the database into which the data is loaded"""
+        self.d["dbname"] = new_db_name
+        return
+
     def load_all(
         self, load_jurisdictions: bool = True, move_files: bool = True
     ) -> Optional[dict]:
