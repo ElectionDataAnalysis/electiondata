@@ -113,6 +113,21 @@ def run2(load_data: bool = True, dbname: str = None):
 
     run_tests(test_dir, test_param_file, db_params)
 
+    # allow user to inspect database if desired
+    input(f"Hit return to continue (and remove test db {dbname} and test data)")
+
+    # remove database
+    new_params, err = ui.get_runtime_parameters(
+        required_keys=["host", "port", "user", "password", "dbname"],
+        param_file=test_param_file,
+        header="postgresql",
+        err=dict(),
+    )
+
+    if load_data:
+        d.remove_database(new_params)
+    run_tests(test_dir, test_param_file, db_params)
+
     if load_data:
         # allow user to pause, option to remove db
         remove_db = input(f"Remove test db {dbname} (y/n)?")
