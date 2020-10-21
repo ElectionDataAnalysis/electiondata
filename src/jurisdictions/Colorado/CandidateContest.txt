@@ -1129,3 +1129,1811 @@ US Senate CO (Unaffiliated)	1	US Senate CO	Unaffiliated
 CO Attorney General (Unaffiliated)	1	CO Attorney General	Unaffiliated
 CO State Treasurer (Unaffiliated)	1	CO State Treasurer	Unaffiliated
 CO Secretary of State (Unaffiliated)	1	CO Secretary of State	Unaffiliated
+CO House District 1 (Veterans Party of America)	1	CO House District 1	Veterans Party of America
+CO House District 2 (Veterans Party of America)	1	CO House District 2	Veterans Party of America
+CO House District 3 (Veterans Party of America)	1	CO House District 3	Veterans Party of America
+CO House District 4 (Veterans Party of America)	1	CO House District 4	Veterans Party of America
+CO House District 5 (Veterans Party of America)	1	CO House District 5	Veterans Party of America
+CO House District 6 (Veterans Party of America)	1	CO House District 6	Veterans Party of America
+CO House District 7 (Veterans Party of America)	1	CO House District 7	Veterans Party of America
+CO House District 8 (Veterans Party of America)	1	CO House District 8	Veterans Party of America
+CO House District 9 (Veterans Party of America)	1	CO House District 9	Veterans Party of America
+CO House District 10 (Veterans Party of America)	1	CO House District 10	Veterans Party of America
+CO House District 11 (Veterans Party of America)	1	CO House District 11	Veterans Party of America
+CO House District 12 (Veterans Party of America)	1	CO House District 12	Veterans Party of America
+CO House District 13 (Veterans Party of America)	1	CO House District 13	Veterans Party of America
+CO House District 14 (Veterans Party of America)	1	CO House District 14	Veterans Party of America
+CO House District 15 (Veterans Party of America)	1	CO House District 15	Veterans Party of America
+CO House District 16 (Veterans Party of America)	1	CO House District 16	Veterans Party of America
+CO House District 17 (Veterans Party of America)	1	CO House District 17	Veterans Party of America
+CO House District 18 (Veterans Party of America)	1	CO House District 18	Veterans Party of America
+CO House District 19 (Veterans Party of America)	1	CO House District 19	Veterans Party of America
+CO House District 20 (Veterans Party of America)	1	CO House District 20	Veterans Party of America
+CO House District 21 (Veterans Party of America)	1	CO House District 21	Veterans Party of America
+CO House District 22 (Veterans Party of America)	1	CO House District 22	Veterans Party of America
+CO House District 23 (Veterans Party of America)	1	CO House District 23	Veterans Party of America
+CO House District 24 (Veterans Party of America)	1	CO House District 24	Veterans Party of America
+CO House District 25 (Veterans Party of America)	1	CO House District 25	Veterans Party of America
+CO House District 26 (Veterans Party of America)	1	CO House District 26	Veterans Party of America
+CO House District 27 (Veterans Party of America)	1	CO House District 27	Veterans Party of America
+CO House District 28 (Veterans Party of America)	1	CO House District 28	Veterans Party of America
+CO House District 29 (Veterans Party of America)	1	CO House District 29	Veterans Party of America
+CO House District 30 (Veterans Party of America)	1	CO House District 30	Veterans Party of America
+CO House District 31 (Veterans Party of America)	1	CO House District 31	Veterans Party of America
+CO House District 32 (Veterans Party of America)	1	CO House District 32	Veterans Party of America
+CO House District 33 (Veterans Party of America)	1	CO House District 33	Veterans Party of America
+CO House District 34 (Veterans Party of America)	1	CO House District 34	Veterans Party of America
+CO House District 35 (Veterans Party of America)	1	CO House District 35	Veterans Party of America
+CO House District 36 (Veterans Party of America)	1	CO House District 36	Veterans Party of America
+CO House District 37 (Veterans Party of America)	1	CO House District 37	Veterans Party of America
+CO House District 38 (Veterans Party of America)	1	CO House District 38	Veterans Party of America
+CO House District 39 (Veterans Party of America)	1	CO House District 39	Veterans Party of America
+CO House District 40 (Veterans Party of America)	1	CO House District 40	Veterans Party of America
+CO House District 41 (Veterans Party of America)	1	CO House District 41	Veterans Party of America
+CO House District 42 (Veterans Party of America)	1	CO House District 42	Veterans Party of America
+CO House District 43 (Veterans Party of America)	1	CO House District 43	Veterans Party of America
+CO House District 44 (Veterans Party of America)	1	CO House District 44	Veterans Party of America
+CO House District 45 (Veterans Party of America)	1	CO House District 45	Veterans Party of America
+CO House District 46 (Veterans Party of America)	1	CO House District 46	Veterans Party of America
+CO House District 47 (Veterans Party of America)	1	CO House District 47	Veterans Party of America
+CO House District 48 (Veterans Party of America)	1	CO House District 48	Veterans Party of America
+CO House District 49 (Veterans Party of America)	1	CO House District 49	Veterans Party of America
+CO House District 50 (Veterans Party of America)	1	CO House District 50	Veterans Party of America
+CO House District 51 (Veterans Party of America)	1	CO House District 51	Veterans Party of America
+CO House District 52 (Veterans Party of America)	1	CO House District 52	Veterans Party of America
+CO House District 53 (Veterans Party of America)	1	CO House District 53	Veterans Party of America
+CO House District 54 (Veterans Party of America)	1	CO House District 54	Veterans Party of America
+CO House District 55 (Veterans Party of America)	1	CO House District 55	Veterans Party of America
+CO House District 56 (Veterans Party of America)	1	CO House District 56	Veterans Party of America
+CO House District 57 (Veterans Party of America)	1	CO House District 57	Veterans Party of America
+CO House District 58 (Veterans Party of America)	1	CO House District 58	Veterans Party of America
+CO House District 59 (Veterans Party of America)	1	CO House District 59	Veterans Party of America
+CO House District 60 (Veterans Party of America)	1	CO House District 60	Veterans Party of America
+CO House District 61 (Veterans Party of America)	1	CO House District 61	Veterans Party of America
+CO House District 62 (Veterans Party of America)	1	CO House District 62	Veterans Party of America
+CO House District 63 (Veterans Party of America)	1	CO House District 63	Veterans Party of America
+CO House District 64 (Veterans Party of America)	1	CO House District 64	Veterans Party of America
+CO House District 65 (Veterans Party of America)	1	CO House District 65	Veterans Party of America
+CO Senate District 1 (Veterans Party of America)	1	CO Senate District 1	Veterans Party of America
+CO Senate District 2 (Veterans Party of America)	1	CO Senate District 2	Veterans Party of America
+CO Senate District 3 (Veterans Party of America)	1	CO Senate District 3	Veterans Party of America
+CO Senate District 4 (Veterans Party of America)	1	CO Senate District 4	Veterans Party of America
+CO Senate District 5 (Veterans Party of America)	1	CO Senate District 5	Veterans Party of America
+CO Senate District 6 (Veterans Party of America)	1	CO Senate District 6	Veterans Party of America
+CO Senate District 7 (Veterans Party of America)	1	CO Senate District 7	Veterans Party of America
+CO Senate District 8 (Veterans Party of America)	1	CO Senate District 8	Veterans Party of America
+CO Senate District 9 (Veterans Party of America)	1	CO Senate District 9	Veterans Party of America
+CO Senate District 10 (Veterans Party of America)	1	CO Senate District 10	Veterans Party of America
+CO Senate District 11 (Veterans Party of America)	1	CO Senate District 11	Veterans Party of America
+CO Senate District 12 (Veterans Party of America)	1	CO Senate District 12	Veterans Party of America
+CO Senate District 13 (Veterans Party of America)	1	CO Senate District 13	Veterans Party of America
+CO Senate District 14 (Veterans Party of America)	1	CO Senate District 14	Veterans Party of America
+CO Senate District 15 (Veterans Party of America)	1	CO Senate District 15	Veterans Party of America
+CO Senate District 16 (Veterans Party of America)	1	CO Senate District 16	Veterans Party of America
+CO Senate District 17 (Veterans Party of America)	1	CO Senate District 17	Veterans Party of America
+CO Senate District 18 (Veterans Party of America)	1	CO Senate District 18	Veterans Party of America
+CO Senate District 19 (Veterans Party of America)	1	CO Senate District 19	Veterans Party of America
+CO Senate District 20 (Veterans Party of America)	1	CO Senate District 20	Veterans Party of America
+CO Senate District 21 (Veterans Party of America)	1	CO Senate District 21	Veterans Party of America
+CO Senate District 22 (Veterans Party of America)	1	CO Senate District 22	Veterans Party of America
+CO Senate District 23 (Veterans Party of America)	1	CO Senate District 23	Veterans Party of America
+CO Senate District 24 (Veterans Party of America)	1	CO Senate District 24	Veterans Party of America
+CO Senate District 25 (Veterans Party of America)	1	CO Senate District 25	Veterans Party of America
+CO Senate District 26 (Veterans Party of America)	1	CO Senate District 26	Veterans Party of America
+CO Senate District 27 (Veterans Party of America)	1	CO Senate District 27	Veterans Party of America
+CO Senate District 28 (Veterans Party of America)	1	CO Senate District 28	Veterans Party of America
+CO Senate District 29 (Veterans Party of America)	1	CO Senate District 29	Veterans Party of America
+CO Senate District 30 (Veterans Party of America)	1	CO Senate District 30	Veterans Party of America
+CO Senate District 31 (Veterans Party of America)	1	CO Senate District 31	Veterans Party of America
+CO Senate District 32 (Veterans Party of America)	1	CO Senate District 32	Veterans Party of America
+CO Senate District 33 (Veterans Party of America)	1	CO Senate District 33	Veterans Party of America
+CO Senate District 34 (Veterans Party of America)	1	CO Senate District 34	Veterans Party of America
+CO Senate District 35 (Veterans Party of America)	1	CO Senate District 35	Veterans Party of America
+US House CO District 1 (Veterans Party of America)	1	US House CO District 1	Veterans Party of America
+US House CO District 2 (Veterans Party of America)	1	US House CO District 2	Veterans Party of America
+US House CO District 3 (Veterans Party of America)	1	US House CO District 3	Veterans Party of America
+US House CO District 4 (Veterans Party of America)	1	US House CO District 4	Veterans Party of America
+US House CO District 5 (Veterans Party of America)	1	US House CO District 5	Veterans Party of America
+US House CO District 6 (Veterans Party of America)	1	US House CO District 6	Veterans Party of America
+US House CO District 7 (Veterans Party of America)	1	US House CO District 7	Veterans Party of America
+US President (CO) (Veterans Party of America)	1	US President (CO)	Veterans Party of America
+CO Governor (Veterans Party of America)	1	CO Governor	Veterans Party of America
+US Senate CO (Veterans Party of America)	1	US Senate CO	Veterans Party of America
+CO Attorney General (Veterans Party of America)	1	CO Attorney General	Veterans Party of America
+CO State Treasurer (Veterans Party of America)	1	CO State Treasurer	Veterans Party of America
+CO Secretary of State (Veterans Party of America)	1	CO Secretary of State	Veterans Party of America
+CO House District 1 (Unaffiliated / Republican)	1	CO House District 1	Unaffiliated / Republican
+CO House District 2 (Unaffiliated / Republican)	1	CO House District 2	Unaffiliated / Republican
+CO House District 3 (Unaffiliated / Republican)	1	CO House District 3	Unaffiliated / Republican
+CO House District 4 (Unaffiliated / Republican)	1	CO House District 4	Unaffiliated / Republican
+CO House District 5 (Unaffiliated / Republican)	1	CO House District 5	Unaffiliated / Republican
+CO House District 6 (Unaffiliated / Republican)	1	CO House District 6	Unaffiliated / Republican
+CO House District 7 (Unaffiliated / Republican)	1	CO House District 7	Unaffiliated / Republican
+CO House District 8 (Unaffiliated / Republican)	1	CO House District 8	Unaffiliated / Republican
+CO House District 9 (Unaffiliated / Republican)	1	CO House District 9	Unaffiliated / Republican
+CO House District 10 (Unaffiliated / Republican)	1	CO House District 10	Unaffiliated / Republican
+CO House District 11 (Unaffiliated / Republican)	1	CO House District 11	Unaffiliated / Republican
+CO House District 12 (Unaffiliated / Republican)	1	CO House District 12	Unaffiliated / Republican
+CO House District 13 (Unaffiliated / Republican)	1	CO House District 13	Unaffiliated / Republican
+CO House District 14 (Unaffiliated / Republican)	1	CO House District 14	Unaffiliated / Republican
+CO House District 15 (Unaffiliated / Republican)	1	CO House District 15	Unaffiliated / Republican
+CO House District 16 (Unaffiliated / Republican)	1	CO House District 16	Unaffiliated / Republican
+CO House District 17 (Unaffiliated / Republican)	1	CO House District 17	Unaffiliated / Republican
+CO House District 18 (Unaffiliated / Republican)	1	CO House District 18	Unaffiliated / Republican
+CO House District 19 (Unaffiliated / Republican)	1	CO House District 19	Unaffiliated / Republican
+CO House District 20 (Unaffiliated / Republican)	1	CO House District 20	Unaffiliated / Republican
+CO House District 21 (Unaffiliated / Republican)	1	CO House District 21	Unaffiliated / Republican
+CO House District 22 (Unaffiliated / Republican)	1	CO House District 22	Unaffiliated / Republican
+CO House District 23 (Unaffiliated / Republican)	1	CO House District 23	Unaffiliated / Republican
+CO House District 24 (Unaffiliated / Republican)	1	CO House District 24	Unaffiliated / Republican
+CO House District 25 (Unaffiliated / Republican)	1	CO House District 25	Unaffiliated / Republican
+CO House District 26 (Unaffiliated / Republican)	1	CO House District 26	Unaffiliated / Republican
+CO House District 27 (Unaffiliated / Republican)	1	CO House District 27	Unaffiliated / Republican
+CO House District 28 (Unaffiliated / Republican)	1	CO House District 28	Unaffiliated / Republican
+CO House District 29 (Unaffiliated / Republican)	1	CO House District 29	Unaffiliated / Republican
+CO House District 30 (Unaffiliated / Republican)	1	CO House District 30	Unaffiliated / Republican
+CO House District 31 (Unaffiliated / Republican)	1	CO House District 31	Unaffiliated / Republican
+CO House District 32 (Unaffiliated / Republican)	1	CO House District 32	Unaffiliated / Republican
+CO House District 33 (Unaffiliated / Republican)	1	CO House District 33	Unaffiliated / Republican
+CO House District 34 (Unaffiliated / Republican)	1	CO House District 34	Unaffiliated / Republican
+CO House District 35 (Unaffiliated / Republican)	1	CO House District 35	Unaffiliated / Republican
+CO House District 36 (Unaffiliated / Republican)	1	CO House District 36	Unaffiliated / Republican
+CO House District 37 (Unaffiliated / Republican)	1	CO House District 37	Unaffiliated / Republican
+CO House District 38 (Unaffiliated / Republican)	1	CO House District 38	Unaffiliated / Republican
+CO House District 39 (Unaffiliated / Republican)	1	CO House District 39	Unaffiliated / Republican
+CO House District 40 (Unaffiliated / Republican)	1	CO House District 40	Unaffiliated / Republican
+CO House District 41 (Unaffiliated / Republican)	1	CO House District 41	Unaffiliated / Republican
+CO House District 42 (Unaffiliated / Republican)	1	CO House District 42	Unaffiliated / Republican
+CO House District 43 (Unaffiliated / Republican)	1	CO House District 43	Unaffiliated / Republican
+CO House District 44 (Unaffiliated / Republican)	1	CO House District 44	Unaffiliated / Republican
+CO House District 45 (Unaffiliated / Republican)	1	CO House District 45	Unaffiliated / Republican
+CO House District 46 (Unaffiliated / Republican)	1	CO House District 46	Unaffiliated / Republican
+CO House District 47 (Unaffiliated / Republican)	1	CO House District 47	Unaffiliated / Republican
+CO House District 48 (Unaffiliated / Republican)	1	CO House District 48	Unaffiliated / Republican
+CO House District 49 (Unaffiliated / Republican)	1	CO House District 49	Unaffiliated / Republican
+CO House District 50 (Unaffiliated / Republican)	1	CO House District 50	Unaffiliated / Republican
+CO House District 51 (Unaffiliated / Republican)	1	CO House District 51	Unaffiliated / Republican
+CO House District 52 (Unaffiliated / Republican)	1	CO House District 52	Unaffiliated / Republican
+CO House District 53 (Unaffiliated / Republican)	1	CO House District 53	Unaffiliated / Republican
+CO House District 54 (Unaffiliated / Republican)	1	CO House District 54	Unaffiliated / Republican
+CO House District 55 (Unaffiliated / Republican)	1	CO House District 55	Unaffiliated / Republican
+CO House District 56 (Unaffiliated / Republican)	1	CO House District 56	Unaffiliated / Republican
+CO House District 57 (Unaffiliated / Republican)	1	CO House District 57	Unaffiliated / Republican
+CO House District 58 (Unaffiliated / Republican)	1	CO House District 58	Unaffiliated / Republican
+CO House District 59 (Unaffiliated / Republican)	1	CO House District 59	Unaffiliated / Republican
+CO House District 60 (Unaffiliated / Republican)	1	CO House District 60	Unaffiliated / Republican
+CO House District 61 (Unaffiliated / Republican)	1	CO House District 61	Unaffiliated / Republican
+CO House District 62 (Unaffiliated / Republican)	1	CO House District 62	Unaffiliated / Republican
+CO House District 63 (Unaffiliated / Republican)	1	CO House District 63	Unaffiliated / Republican
+CO House District 64 (Unaffiliated / Republican)	1	CO House District 64	Unaffiliated / Republican
+CO House District 65 (Unaffiliated / Republican)	1	CO House District 65	Unaffiliated / Republican
+CO Senate District 1 (Unaffiliated / Republican)	1	CO Senate District 1	Unaffiliated / Republican
+CO Senate District 2 (Unaffiliated / Republican)	1	CO Senate District 2	Unaffiliated / Republican
+CO Senate District 3 (Unaffiliated / Republican)	1	CO Senate District 3	Unaffiliated / Republican
+CO Senate District 4 (Unaffiliated / Republican)	1	CO Senate District 4	Unaffiliated / Republican
+CO Senate District 5 (Unaffiliated / Republican)	1	CO Senate District 5	Unaffiliated / Republican
+CO Senate District 6 (Unaffiliated / Republican)	1	CO Senate District 6	Unaffiliated / Republican
+CO Senate District 7 (Unaffiliated / Republican)	1	CO Senate District 7	Unaffiliated / Republican
+CO Senate District 8 (Unaffiliated / Republican)	1	CO Senate District 8	Unaffiliated / Republican
+CO Senate District 9 (Unaffiliated / Republican)	1	CO Senate District 9	Unaffiliated / Republican
+CO Senate District 10 (Unaffiliated / Republican)	1	CO Senate District 10	Unaffiliated / Republican
+CO Senate District 11 (Unaffiliated / Republican)	1	CO Senate District 11	Unaffiliated / Republican
+CO Senate District 12 (Unaffiliated / Republican)	1	CO Senate District 12	Unaffiliated / Republican
+CO Senate District 13 (Unaffiliated / Republican)	1	CO Senate District 13	Unaffiliated / Republican
+CO Senate District 14 (Unaffiliated / Republican)	1	CO Senate District 14	Unaffiliated / Republican
+CO Senate District 15 (Unaffiliated / Republican)	1	CO Senate District 15	Unaffiliated / Republican
+CO Senate District 16 (Unaffiliated / Republican)	1	CO Senate District 16	Unaffiliated / Republican
+CO Senate District 17 (Unaffiliated / Republican)	1	CO Senate District 17	Unaffiliated / Republican
+CO Senate District 18 (Unaffiliated / Republican)	1	CO Senate District 18	Unaffiliated / Republican
+CO Senate District 19 (Unaffiliated / Republican)	1	CO Senate District 19	Unaffiliated / Republican
+CO Senate District 20 (Unaffiliated / Republican)	1	CO Senate District 20	Unaffiliated / Republican
+CO Senate District 21 (Unaffiliated / Republican)	1	CO Senate District 21	Unaffiliated / Republican
+CO Senate District 22 (Unaffiliated / Republican)	1	CO Senate District 22	Unaffiliated / Republican
+CO Senate District 23 (Unaffiliated / Republican)	1	CO Senate District 23	Unaffiliated / Republican
+CO Senate District 24 (Unaffiliated / Republican)	1	CO Senate District 24	Unaffiliated / Republican
+CO Senate District 25 (Unaffiliated / Republican)	1	CO Senate District 25	Unaffiliated / Republican
+CO Senate District 26 (Unaffiliated / Republican)	1	CO Senate District 26	Unaffiliated / Republican
+CO Senate District 27 (Unaffiliated / Republican)	1	CO Senate District 27	Unaffiliated / Republican
+CO Senate District 28 (Unaffiliated / Republican)	1	CO Senate District 28	Unaffiliated / Republican
+CO Senate District 29 (Unaffiliated / Republican)	1	CO Senate District 29	Unaffiliated / Republican
+CO Senate District 30 (Unaffiliated / Republican)	1	CO Senate District 30	Unaffiliated / Republican
+CO Senate District 31 (Unaffiliated / Republican)	1	CO Senate District 31	Unaffiliated / Republican
+CO Senate District 32 (Unaffiliated / Republican)	1	CO Senate District 32	Unaffiliated / Republican
+CO Senate District 33 (Unaffiliated / Republican)	1	CO Senate District 33	Unaffiliated / Republican
+CO Senate District 34 (Unaffiliated / Republican)	1	CO Senate District 34	Unaffiliated / Republican
+CO Senate District 35 (Unaffiliated / Republican)	1	CO Senate District 35	Unaffiliated / Republican
+US House CO District 1 (Unaffiliated / Republican)	1	US House CO District 1	Unaffiliated / Republican
+US House CO District 2 (Unaffiliated / Republican)	1	US House CO District 2	Unaffiliated / Republican
+US House CO District 3 (Unaffiliated / Republican)	1	US House CO District 3	Unaffiliated / Republican
+US House CO District 4 (Unaffiliated / Republican)	1	US House CO District 4	Unaffiliated / Republican
+US House CO District 5 (Unaffiliated / Republican)	1	US House CO District 5	Unaffiliated / Republican
+US House CO District 6 (Unaffiliated / Republican)	1	US House CO District 6	Unaffiliated / Republican
+US House CO District 7 (Unaffiliated / Republican)	1	US House CO District 7	Unaffiliated / Republican
+US President (CO) (Unaffiliated / Republican)	1	US President (CO)	Unaffiliated / Republican
+CO Governor (Unaffiliated / Republican)	1	CO Governor	Unaffiliated / Republican
+US Senate CO (Unaffiliated / Republican)	1	US Senate CO	Unaffiliated / Republican
+CO Attorney General (Unaffiliated / Republican)	1	CO Attorney General	Unaffiliated / Republican
+CO State Treasurer (Unaffiliated / Republican)	1	CO State Treasurer	Unaffiliated / Republican
+CO Secretary of State (Unaffiliated / Republican)	1	CO Secretary of State	Unaffiliated / Republican
+CO House District 1 (Unaffiliated / Libertarian)	1	CO House District 1	Unaffiliated / Libertarian
+CO House District 2 (Unaffiliated / Libertarian)	1	CO House District 2	Unaffiliated / Libertarian
+CO House District 3 (Unaffiliated / Libertarian)	1	CO House District 3	Unaffiliated / Libertarian
+CO House District 4 (Unaffiliated / Libertarian)	1	CO House District 4	Unaffiliated / Libertarian
+CO House District 5 (Unaffiliated / Libertarian)	1	CO House District 5	Unaffiliated / Libertarian
+CO House District 6 (Unaffiliated / Libertarian)	1	CO House District 6	Unaffiliated / Libertarian
+CO House District 7 (Unaffiliated / Libertarian)	1	CO House District 7	Unaffiliated / Libertarian
+CO House District 8 (Unaffiliated / Libertarian)	1	CO House District 8	Unaffiliated / Libertarian
+CO House District 9 (Unaffiliated / Libertarian)	1	CO House District 9	Unaffiliated / Libertarian
+CO House District 10 (Unaffiliated / Libertarian)	1	CO House District 10	Unaffiliated / Libertarian
+CO House District 11 (Unaffiliated / Libertarian)	1	CO House District 11	Unaffiliated / Libertarian
+CO House District 12 (Unaffiliated / Libertarian)	1	CO House District 12	Unaffiliated / Libertarian
+CO House District 13 (Unaffiliated / Libertarian)	1	CO House District 13	Unaffiliated / Libertarian
+CO House District 14 (Unaffiliated / Libertarian)	1	CO House District 14	Unaffiliated / Libertarian
+CO House District 15 (Unaffiliated / Libertarian)	1	CO House District 15	Unaffiliated / Libertarian
+CO House District 16 (Unaffiliated / Libertarian)	1	CO House District 16	Unaffiliated / Libertarian
+CO House District 17 (Unaffiliated / Libertarian)	1	CO House District 17	Unaffiliated / Libertarian
+CO House District 18 (Unaffiliated / Libertarian)	1	CO House District 18	Unaffiliated / Libertarian
+CO House District 19 (Unaffiliated / Libertarian)	1	CO House District 19	Unaffiliated / Libertarian
+CO House District 20 (Unaffiliated / Libertarian)	1	CO House District 20	Unaffiliated / Libertarian
+CO House District 21 (Unaffiliated / Libertarian)	1	CO House District 21	Unaffiliated / Libertarian
+CO House District 22 (Unaffiliated / Libertarian)	1	CO House District 22	Unaffiliated / Libertarian
+CO House District 23 (Unaffiliated / Libertarian)	1	CO House District 23	Unaffiliated / Libertarian
+CO House District 24 (Unaffiliated / Libertarian)	1	CO House District 24	Unaffiliated / Libertarian
+CO House District 25 (Unaffiliated / Libertarian)	1	CO House District 25	Unaffiliated / Libertarian
+CO House District 26 (Unaffiliated / Libertarian)	1	CO House District 26	Unaffiliated / Libertarian
+CO House District 27 (Unaffiliated / Libertarian)	1	CO House District 27	Unaffiliated / Libertarian
+CO House District 28 (Unaffiliated / Libertarian)	1	CO House District 28	Unaffiliated / Libertarian
+CO House District 29 (Unaffiliated / Libertarian)	1	CO House District 29	Unaffiliated / Libertarian
+CO House District 30 (Unaffiliated / Libertarian)	1	CO House District 30	Unaffiliated / Libertarian
+CO House District 31 (Unaffiliated / Libertarian)	1	CO House District 31	Unaffiliated / Libertarian
+CO House District 32 (Unaffiliated / Libertarian)	1	CO House District 32	Unaffiliated / Libertarian
+CO House District 33 (Unaffiliated / Libertarian)	1	CO House District 33	Unaffiliated / Libertarian
+CO House District 34 (Unaffiliated / Libertarian)	1	CO House District 34	Unaffiliated / Libertarian
+CO House District 35 (Unaffiliated / Libertarian)	1	CO House District 35	Unaffiliated / Libertarian
+CO House District 36 (Unaffiliated / Libertarian)	1	CO House District 36	Unaffiliated / Libertarian
+CO House District 37 (Unaffiliated / Libertarian)	1	CO House District 37	Unaffiliated / Libertarian
+CO House District 38 (Unaffiliated / Libertarian)	1	CO House District 38	Unaffiliated / Libertarian
+CO House District 39 (Unaffiliated / Libertarian)	1	CO House District 39	Unaffiliated / Libertarian
+CO House District 40 (Unaffiliated / Libertarian)	1	CO House District 40	Unaffiliated / Libertarian
+CO House District 41 (Unaffiliated / Libertarian)	1	CO House District 41	Unaffiliated / Libertarian
+CO House District 42 (Unaffiliated / Libertarian)	1	CO House District 42	Unaffiliated / Libertarian
+CO House District 43 (Unaffiliated / Libertarian)	1	CO House District 43	Unaffiliated / Libertarian
+CO House District 44 (Unaffiliated / Libertarian)	1	CO House District 44	Unaffiliated / Libertarian
+CO House District 45 (Unaffiliated / Libertarian)	1	CO House District 45	Unaffiliated / Libertarian
+CO House District 46 (Unaffiliated / Libertarian)	1	CO House District 46	Unaffiliated / Libertarian
+CO House District 47 (Unaffiliated / Libertarian)	1	CO House District 47	Unaffiliated / Libertarian
+CO House District 48 (Unaffiliated / Libertarian)	1	CO House District 48	Unaffiliated / Libertarian
+CO House District 49 (Unaffiliated / Libertarian)	1	CO House District 49	Unaffiliated / Libertarian
+CO House District 50 (Unaffiliated / Libertarian)	1	CO House District 50	Unaffiliated / Libertarian
+CO House District 51 (Unaffiliated / Libertarian)	1	CO House District 51	Unaffiliated / Libertarian
+CO House District 52 (Unaffiliated / Libertarian)	1	CO House District 52	Unaffiliated / Libertarian
+CO House District 53 (Unaffiliated / Libertarian)	1	CO House District 53	Unaffiliated / Libertarian
+CO House District 54 (Unaffiliated / Libertarian)	1	CO House District 54	Unaffiliated / Libertarian
+CO House District 55 (Unaffiliated / Libertarian)	1	CO House District 55	Unaffiliated / Libertarian
+CO House District 56 (Unaffiliated / Libertarian)	1	CO House District 56	Unaffiliated / Libertarian
+CO House District 57 (Unaffiliated / Libertarian)	1	CO House District 57	Unaffiliated / Libertarian
+CO House District 58 (Unaffiliated / Libertarian)	1	CO House District 58	Unaffiliated / Libertarian
+CO House District 59 (Unaffiliated / Libertarian)	1	CO House District 59	Unaffiliated / Libertarian
+CO House District 60 (Unaffiliated / Libertarian)	1	CO House District 60	Unaffiliated / Libertarian
+CO House District 61 (Unaffiliated / Libertarian)	1	CO House District 61	Unaffiliated / Libertarian
+CO House District 62 (Unaffiliated / Libertarian)	1	CO House District 62	Unaffiliated / Libertarian
+CO House District 63 (Unaffiliated / Libertarian)	1	CO House District 63	Unaffiliated / Libertarian
+CO House District 64 (Unaffiliated / Libertarian)	1	CO House District 64	Unaffiliated / Libertarian
+CO House District 65 (Unaffiliated / Libertarian)	1	CO House District 65	Unaffiliated / Libertarian
+CO Senate District 1 (Unaffiliated / Libertarian)	1	CO Senate District 1	Unaffiliated / Libertarian
+CO Senate District 2 (Unaffiliated / Libertarian)	1	CO Senate District 2	Unaffiliated / Libertarian
+CO Senate District 3 (Unaffiliated / Libertarian)	1	CO Senate District 3	Unaffiliated / Libertarian
+CO Senate District 4 (Unaffiliated / Libertarian)	1	CO Senate District 4	Unaffiliated / Libertarian
+CO Senate District 5 (Unaffiliated / Libertarian)	1	CO Senate District 5	Unaffiliated / Libertarian
+CO Senate District 6 (Unaffiliated / Libertarian)	1	CO Senate District 6	Unaffiliated / Libertarian
+CO Senate District 7 (Unaffiliated / Libertarian)	1	CO Senate District 7	Unaffiliated / Libertarian
+CO Senate District 8 (Unaffiliated / Libertarian)	1	CO Senate District 8	Unaffiliated / Libertarian
+CO Senate District 9 (Unaffiliated / Libertarian)	1	CO Senate District 9	Unaffiliated / Libertarian
+CO Senate District 10 (Unaffiliated / Libertarian)	1	CO Senate District 10	Unaffiliated / Libertarian
+CO Senate District 11 (Unaffiliated / Libertarian)	1	CO Senate District 11	Unaffiliated / Libertarian
+CO Senate District 12 (Unaffiliated / Libertarian)	1	CO Senate District 12	Unaffiliated / Libertarian
+CO Senate District 13 (Unaffiliated / Libertarian)	1	CO Senate District 13	Unaffiliated / Libertarian
+CO Senate District 14 (Unaffiliated / Libertarian)	1	CO Senate District 14	Unaffiliated / Libertarian
+CO Senate District 15 (Unaffiliated / Libertarian)	1	CO Senate District 15	Unaffiliated / Libertarian
+CO Senate District 16 (Unaffiliated / Libertarian)	1	CO Senate District 16	Unaffiliated / Libertarian
+CO Senate District 17 (Unaffiliated / Libertarian)	1	CO Senate District 17	Unaffiliated / Libertarian
+CO Senate District 18 (Unaffiliated / Libertarian)	1	CO Senate District 18	Unaffiliated / Libertarian
+CO Senate District 19 (Unaffiliated / Libertarian)	1	CO Senate District 19	Unaffiliated / Libertarian
+CO Senate District 20 (Unaffiliated / Libertarian)	1	CO Senate District 20	Unaffiliated / Libertarian
+CO Senate District 21 (Unaffiliated / Libertarian)	1	CO Senate District 21	Unaffiliated / Libertarian
+CO Senate District 22 (Unaffiliated / Libertarian)	1	CO Senate District 22	Unaffiliated / Libertarian
+CO Senate District 23 (Unaffiliated / Libertarian)	1	CO Senate District 23	Unaffiliated / Libertarian
+CO Senate District 24 (Unaffiliated / Libertarian)	1	CO Senate District 24	Unaffiliated / Libertarian
+CO Senate District 25 (Unaffiliated / Libertarian)	1	CO Senate District 25	Unaffiliated / Libertarian
+CO Senate District 26 (Unaffiliated / Libertarian)	1	CO Senate District 26	Unaffiliated / Libertarian
+CO Senate District 27 (Unaffiliated / Libertarian)	1	CO Senate District 27	Unaffiliated / Libertarian
+CO Senate District 28 (Unaffiliated / Libertarian)	1	CO Senate District 28	Unaffiliated / Libertarian
+CO Senate District 29 (Unaffiliated / Libertarian)	1	CO Senate District 29	Unaffiliated / Libertarian
+CO Senate District 30 (Unaffiliated / Libertarian)	1	CO Senate District 30	Unaffiliated / Libertarian
+CO Senate District 31 (Unaffiliated / Libertarian)	1	CO Senate District 31	Unaffiliated / Libertarian
+CO Senate District 32 (Unaffiliated / Libertarian)	1	CO Senate District 32	Unaffiliated / Libertarian
+CO Senate District 33 (Unaffiliated / Libertarian)	1	CO Senate District 33	Unaffiliated / Libertarian
+CO Senate District 34 (Unaffiliated / Libertarian)	1	CO Senate District 34	Unaffiliated / Libertarian
+CO Senate District 35 (Unaffiliated / Libertarian)	1	CO Senate District 35	Unaffiliated / Libertarian
+US House CO District 1 (Unaffiliated / Libertarian)	1	US House CO District 1	Unaffiliated / Libertarian
+US House CO District 2 (Unaffiliated / Libertarian)	1	US House CO District 2	Unaffiliated / Libertarian
+US House CO District 3 (Unaffiliated / Libertarian)	1	US House CO District 3	Unaffiliated / Libertarian
+US House CO District 4 (Unaffiliated / Libertarian)	1	US House CO District 4	Unaffiliated / Libertarian
+US House CO District 5 (Unaffiliated / Libertarian)	1	US House CO District 5	Unaffiliated / Libertarian
+US House CO District 6 (Unaffiliated / Libertarian)	1	US House CO District 6	Unaffiliated / Libertarian
+US House CO District 7 (Unaffiliated / Libertarian)	1	US House CO District 7	Unaffiliated / Libertarian
+US President (CO) (Unaffiliated / Libertarian)	1	US President (CO)	Unaffiliated / Libertarian
+CO Governor (Unaffiliated / Libertarian)	1	CO Governor	Unaffiliated / Libertarian
+US Senate CO (Unaffiliated / Libertarian)	1	US Senate CO	Unaffiliated / Libertarian
+CO Attorney General (Unaffiliated / Libertarian)	1	CO Attorney General	Unaffiliated / Libertarian
+CO State Treasurer (Unaffiliated / Libertarian)	1	CO State Treasurer	Unaffiliated / Libertarian
+CO Secretary of State (Unaffiliated / Libertarian)	1	CO Secretary of State	Unaffiliated / Libertarian
+CO House District 1 (Socialist Workers Party)	1	CO House District 1	Socialist Workers Party
+CO House District 2 (Socialist Workers Party)	1	CO House District 2	Socialist Workers Party
+CO House District 3 (Socialist Workers Party)	1	CO House District 3	Socialist Workers Party
+CO House District 4 (Socialist Workers Party)	1	CO House District 4	Socialist Workers Party
+CO House District 5 (Socialist Workers Party)	1	CO House District 5	Socialist Workers Party
+CO House District 6 (Socialist Workers Party)	1	CO House District 6	Socialist Workers Party
+CO House District 7 (Socialist Workers Party)	1	CO House District 7	Socialist Workers Party
+CO House District 8 (Socialist Workers Party)	1	CO House District 8	Socialist Workers Party
+CO House District 9 (Socialist Workers Party)	1	CO House District 9	Socialist Workers Party
+CO House District 10 (Socialist Workers Party)	1	CO House District 10	Socialist Workers Party
+CO House District 11 (Socialist Workers Party)	1	CO House District 11	Socialist Workers Party
+CO House District 12 (Socialist Workers Party)	1	CO House District 12	Socialist Workers Party
+CO House District 13 (Socialist Workers Party)	1	CO House District 13	Socialist Workers Party
+CO House District 14 (Socialist Workers Party)	1	CO House District 14	Socialist Workers Party
+CO House District 15 (Socialist Workers Party)	1	CO House District 15	Socialist Workers Party
+CO House District 16 (Socialist Workers Party)	1	CO House District 16	Socialist Workers Party
+CO House District 17 (Socialist Workers Party)	1	CO House District 17	Socialist Workers Party
+CO House District 18 (Socialist Workers Party)	1	CO House District 18	Socialist Workers Party
+CO House District 19 (Socialist Workers Party)	1	CO House District 19	Socialist Workers Party
+CO House District 20 (Socialist Workers Party)	1	CO House District 20	Socialist Workers Party
+CO House District 21 (Socialist Workers Party)	1	CO House District 21	Socialist Workers Party
+CO House District 22 (Socialist Workers Party)	1	CO House District 22	Socialist Workers Party
+CO House District 23 (Socialist Workers Party)	1	CO House District 23	Socialist Workers Party
+CO House District 24 (Socialist Workers Party)	1	CO House District 24	Socialist Workers Party
+CO House District 25 (Socialist Workers Party)	1	CO House District 25	Socialist Workers Party
+CO House District 26 (Socialist Workers Party)	1	CO House District 26	Socialist Workers Party
+CO House District 27 (Socialist Workers Party)	1	CO House District 27	Socialist Workers Party
+CO House District 28 (Socialist Workers Party)	1	CO House District 28	Socialist Workers Party
+CO House District 29 (Socialist Workers Party)	1	CO House District 29	Socialist Workers Party
+CO House District 30 (Socialist Workers Party)	1	CO House District 30	Socialist Workers Party
+CO House District 31 (Socialist Workers Party)	1	CO House District 31	Socialist Workers Party
+CO House District 32 (Socialist Workers Party)	1	CO House District 32	Socialist Workers Party
+CO House District 33 (Socialist Workers Party)	1	CO House District 33	Socialist Workers Party
+CO House District 34 (Socialist Workers Party)	1	CO House District 34	Socialist Workers Party
+CO House District 35 (Socialist Workers Party)	1	CO House District 35	Socialist Workers Party
+CO House District 36 (Socialist Workers Party)	1	CO House District 36	Socialist Workers Party
+CO House District 37 (Socialist Workers Party)	1	CO House District 37	Socialist Workers Party
+CO House District 38 (Socialist Workers Party)	1	CO House District 38	Socialist Workers Party
+CO House District 39 (Socialist Workers Party)	1	CO House District 39	Socialist Workers Party
+CO House District 40 (Socialist Workers Party)	1	CO House District 40	Socialist Workers Party
+CO House District 41 (Socialist Workers Party)	1	CO House District 41	Socialist Workers Party
+CO House District 42 (Socialist Workers Party)	1	CO House District 42	Socialist Workers Party
+CO House District 43 (Socialist Workers Party)	1	CO House District 43	Socialist Workers Party
+CO House District 44 (Socialist Workers Party)	1	CO House District 44	Socialist Workers Party
+CO House District 45 (Socialist Workers Party)	1	CO House District 45	Socialist Workers Party
+CO House District 46 (Socialist Workers Party)	1	CO House District 46	Socialist Workers Party
+CO House District 47 (Socialist Workers Party)	1	CO House District 47	Socialist Workers Party
+CO House District 48 (Socialist Workers Party)	1	CO House District 48	Socialist Workers Party
+CO House District 49 (Socialist Workers Party)	1	CO House District 49	Socialist Workers Party
+CO House District 50 (Socialist Workers Party)	1	CO House District 50	Socialist Workers Party
+CO House District 51 (Socialist Workers Party)	1	CO House District 51	Socialist Workers Party
+CO House District 52 (Socialist Workers Party)	1	CO House District 52	Socialist Workers Party
+CO House District 53 (Socialist Workers Party)	1	CO House District 53	Socialist Workers Party
+CO House District 54 (Socialist Workers Party)	1	CO House District 54	Socialist Workers Party
+CO House District 55 (Socialist Workers Party)	1	CO House District 55	Socialist Workers Party
+CO House District 56 (Socialist Workers Party)	1	CO House District 56	Socialist Workers Party
+CO House District 57 (Socialist Workers Party)	1	CO House District 57	Socialist Workers Party
+CO House District 58 (Socialist Workers Party)	1	CO House District 58	Socialist Workers Party
+CO House District 59 (Socialist Workers Party)	1	CO House District 59	Socialist Workers Party
+CO House District 60 (Socialist Workers Party)	1	CO House District 60	Socialist Workers Party
+CO House District 61 (Socialist Workers Party)	1	CO House District 61	Socialist Workers Party
+CO House District 62 (Socialist Workers Party)	1	CO House District 62	Socialist Workers Party
+CO House District 63 (Socialist Workers Party)	1	CO House District 63	Socialist Workers Party
+CO House District 64 (Socialist Workers Party)	1	CO House District 64	Socialist Workers Party
+CO House District 65 (Socialist Workers Party)	1	CO House District 65	Socialist Workers Party
+CO Senate District 1 (Socialist Workers Party)	1	CO Senate District 1	Socialist Workers Party
+CO Senate District 2 (Socialist Workers Party)	1	CO Senate District 2	Socialist Workers Party
+CO Senate District 3 (Socialist Workers Party)	1	CO Senate District 3	Socialist Workers Party
+CO Senate District 4 (Socialist Workers Party)	1	CO Senate District 4	Socialist Workers Party
+CO Senate District 5 (Socialist Workers Party)	1	CO Senate District 5	Socialist Workers Party
+CO Senate District 6 (Socialist Workers Party)	1	CO Senate District 6	Socialist Workers Party
+CO Senate District 7 (Socialist Workers Party)	1	CO Senate District 7	Socialist Workers Party
+CO Senate District 8 (Socialist Workers Party)	1	CO Senate District 8	Socialist Workers Party
+CO Senate District 9 (Socialist Workers Party)	1	CO Senate District 9	Socialist Workers Party
+CO Senate District 10 (Socialist Workers Party)	1	CO Senate District 10	Socialist Workers Party
+CO Senate District 11 (Socialist Workers Party)	1	CO Senate District 11	Socialist Workers Party
+CO Senate District 12 (Socialist Workers Party)	1	CO Senate District 12	Socialist Workers Party
+CO Senate District 13 (Socialist Workers Party)	1	CO Senate District 13	Socialist Workers Party
+CO Senate District 14 (Socialist Workers Party)	1	CO Senate District 14	Socialist Workers Party
+CO Senate District 15 (Socialist Workers Party)	1	CO Senate District 15	Socialist Workers Party
+CO Senate District 16 (Socialist Workers Party)	1	CO Senate District 16	Socialist Workers Party
+CO Senate District 17 (Socialist Workers Party)	1	CO Senate District 17	Socialist Workers Party
+CO Senate District 18 (Socialist Workers Party)	1	CO Senate District 18	Socialist Workers Party
+CO Senate District 19 (Socialist Workers Party)	1	CO Senate District 19	Socialist Workers Party
+CO Senate District 20 (Socialist Workers Party)	1	CO Senate District 20	Socialist Workers Party
+CO Senate District 21 (Socialist Workers Party)	1	CO Senate District 21	Socialist Workers Party
+CO Senate District 22 (Socialist Workers Party)	1	CO Senate District 22	Socialist Workers Party
+CO Senate District 23 (Socialist Workers Party)	1	CO Senate District 23	Socialist Workers Party
+CO Senate District 24 (Socialist Workers Party)	1	CO Senate District 24	Socialist Workers Party
+CO Senate District 25 (Socialist Workers Party)	1	CO Senate District 25	Socialist Workers Party
+CO Senate District 26 (Socialist Workers Party)	1	CO Senate District 26	Socialist Workers Party
+CO Senate District 27 (Socialist Workers Party)	1	CO Senate District 27	Socialist Workers Party
+CO Senate District 28 (Socialist Workers Party)	1	CO Senate District 28	Socialist Workers Party
+CO Senate District 29 (Socialist Workers Party)	1	CO Senate District 29	Socialist Workers Party
+CO Senate District 30 (Socialist Workers Party)	1	CO Senate District 30	Socialist Workers Party
+CO Senate District 31 (Socialist Workers Party)	1	CO Senate District 31	Socialist Workers Party
+CO Senate District 32 (Socialist Workers Party)	1	CO Senate District 32	Socialist Workers Party
+CO Senate District 33 (Socialist Workers Party)	1	CO Senate District 33	Socialist Workers Party
+CO Senate District 34 (Socialist Workers Party)	1	CO Senate District 34	Socialist Workers Party
+CO Senate District 35 (Socialist Workers Party)	1	CO Senate District 35	Socialist Workers Party
+US House CO District 1 (Socialist Workers Party)	1	US House CO District 1	Socialist Workers Party
+US House CO District 2 (Socialist Workers Party)	1	US House CO District 2	Socialist Workers Party
+US House CO District 3 (Socialist Workers Party)	1	US House CO District 3	Socialist Workers Party
+US House CO District 4 (Socialist Workers Party)	1	US House CO District 4	Socialist Workers Party
+US House CO District 5 (Socialist Workers Party)	1	US House CO District 5	Socialist Workers Party
+US House CO District 6 (Socialist Workers Party)	1	US House CO District 6	Socialist Workers Party
+US House CO District 7 (Socialist Workers Party)	1	US House CO District 7	Socialist Workers Party
+US President (CO) (Socialist Workers Party)	1	US President (CO)	Socialist Workers Party
+CO Governor (Socialist Workers Party)	1	CO Governor	Socialist Workers Party
+US Senate CO (Socialist Workers Party)	1	US Senate CO	Socialist Workers Party
+CO Attorney General (Socialist Workers Party)	1	CO Attorney General	Socialist Workers Party
+CO State Treasurer (Socialist Workers Party)	1	CO State Treasurer	Socialist Workers Party
+CO Secretary of State (Socialist Workers Party)	1	CO Secretary of State	Socialist Workers Party
+CO House District 1 (Socialist Party USA)	1	CO House District 1	Socialist Party USA
+CO House District 2 (Socialist Party USA)	1	CO House District 2	Socialist Party USA
+CO House District 3 (Socialist Party USA)	1	CO House District 3	Socialist Party USA
+CO House District 4 (Socialist Party USA)	1	CO House District 4	Socialist Party USA
+CO House District 5 (Socialist Party USA)	1	CO House District 5	Socialist Party USA
+CO House District 6 (Socialist Party USA)	1	CO House District 6	Socialist Party USA
+CO House District 7 (Socialist Party USA)	1	CO House District 7	Socialist Party USA
+CO House District 8 (Socialist Party USA)	1	CO House District 8	Socialist Party USA
+CO House District 9 (Socialist Party USA)	1	CO House District 9	Socialist Party USA
+CO House District 10 (Socialist Party USA)	1	CO House District 10	Socialist Party USA
+CO House District 11 (Socialist Party USA)	1	CO House District 11	Socialist Party USA
+CO House District 12 (Socialist Party USA)	1	CO House District 12	Socialist Party USA
+CO House District 13 (Socialist Party USA)	1	CO House District 13	Socialist Party USA
+CO House District 14 (Socialist Party USA)	1	CO House District 14	Socialist Party USA
+CO House District 15 (Socialist Party USA)	1	CO House District 15	Socialist Party USA
+CO House District 16 (Socialist Party USA)	1	CO House District 16	Socialist Party USA
+CO House District 17 (Socialist Party USA)	1	CO House District 17	Socialist Party USA
+CO House District 18 (Socialist Party USA)	1	CO House District 18	Socialist Party USA
+CO House District 19 (Socialist Party USA)	1	CO House District 19	Socialist Party USA
+CO House District 20 (Socialist Party USA)	1	CO House District 20	Socialist Party USA
+CO House District 21 (Socialist Party USA)	1	CO House District 21	Socialist Party USA
+CO House District 22 (Socialist Party USA)	1	CO House District 22	Socialist Party USA
+CO House District 23 (Socialist Party USA)	1	CO House District 23	Socialist Party USA
+CO House District 24 (Socialist Party USA)	1	CO House District 24	Socialist Party USA
+CO House District 25 (Socialist Party USA)	1	CO House District 25	Socialist Party USA
+CO House District 26 (Socialist Party USA)	1	CO House District 26	Socialist Party USA
+CO House District 27 (Socialist Party USA)	1	CO House District 27	Socialist Party USA
+CO House District 28 (Socialist Party USA)	1	CO House District 28	Socialist Party USA
+CO House District 29 (Socialist Party USA)	1	CO House District 29	Socialist Party USA
+CO House District 30 (Socialist Party USA)	1	CO House District 30	Socialist Party USA
+CO House District 31 (Socialist Party USA)	1	CO House District 31	Socialist Party USA
+CO House District 32 (Socialist Party USA)	1	CO House District 32	Socialist Party USA
+CO House District 33 (Socialist Party USA)	1	CO House District 33	Socialist Party USA
+CO House District 34 (Socialist Party USA)	1	CO House District 34	Socialist Party USA
+CO House District 35 (Socialist Party USA)	1	CO House District 35	Socialist Party USA
+CO House District 36 (Socialist Party USA)	1	CO House District 36	Socialist Party USA
+CO House District 37 (Socialist Party USA)	1	CO House District 37	Socialist Party USA
+CO House District 38 (Socialist Party USA)	1	CO House District 38	Socialist Party USA
+CO House District 39 (Socialist Party USA)	1	CO House District 39	Socialist Party USA
+CO House District 40 (Socialist Party USA)	1	CO House District 40	Socialist Party USA
+CO House District 41 (Socialist Party USA)	1	CO House District 41	Socialist Party USA
+CO House District 42 (Socialist Party USA)	1	CO House District 42	Socialist Party USA
+CO House District 43 (Socialist Party USA)	1	CO House District 43	Socialist Party USA
+CO House District 44 (Socialist Party USA)	1	CO House District 44	Socialist Party USA
+CO House District 45 (Socialist Party USA)	1	CO House District 45	Socialist Party USA
+CO House District 46 (Socialist Party USA)	1	CO House District 46	Socialist Party USA
+CO House District 47 (Socialist Party USA)	1	CO House District 47	Socialist Party USA
+CO House District 48 (Socialist Party USA)	1	CO House District 48	Socialist Party USA
+CO House District 49 (Socialist Party USA)	1	CO House District 49	Socialist Party USA
+CO House District 50 (Socialist Party USA)	1	CO House District 50	Socialist Party USA
+CO House District 51 (Socialist Party USA)	1	CO House District 51	Socialist Party USA
+CO House District 52 (Socialist Party USA)	1	CO House District 52	Socialist Party USA
+CO House District 53 (Socialist Party USA)	1	CO House District 53	Socialist Party USA
+CO House District 54 (Socialist Party USA)	1	CO House District 54	Socialist Party USA
+CO House District 55 (Socialist Party USA)	1	CO House District 55	Socialist Party USA
+CO House District 56 (Socialist Party USA)	1	CO House District 56	Socialist Party USA
+CO House District 57 (Socialist Party USA)	1	CO House District 57	Socialist Party USA
+CO House District 58 (Socialist Party USA)	1	CO House District 58	Socialist Party USA
+CO House District 59 (Socialist Party USA)	1	CO House District 59	Socialist Party USA
+CO House District 60 (Socialist Party USA)	1	CO House District 60	Socialist Party USA
+CO House District 61 (Socialist Party USA)	1	CO House District 61	Socialist Party USA
+CO House District 62 (Socialist Party USA)	1	CO House District 62	Socialist Party USA
+CO House District 63 (Socialist Party USA)	1	CO House District 63	Socialist Party USA
+CO House District 64 (Socialist Party USA)	1	CO House District 64	Socialist Party USA
+CO House District 65 (Socialist Party USA)	1	CO House District 65	Socialist Party USA
+CO Senate District 1 (Socialist Party USA)	1	CO Senate District 1	Socialist Party USA
+CO Senate District 2 (Socialist Party USA)	1	CO Senate District 2	Socialist Party USA
+CO Senate District 3 (Socialist Party USA)	1	CO Senate District 3	Socialist Party USA
+CO Senate District 4 (Socialist Party USA)	1	CO Senate District 4	Socialist Party USA
+CO Senate District 5 (Socialist Party USA)	1	CO Senate District 5	Socialist Party USA
+CO Senate District 6 (Socialist Party USA)	1	CO Senate District 6	Socialist Party USA
+CO Senate District 7 (Socialist Party USA)	1	CO Senate District 7	Socialist Party USA
+CO Senate District 8 (Socialist Party USA)	1	CO Senate District 8	Socialist Party USA
+CO Senate District 9 (Socialist Party USA)	1	CO Senate District 9	Socialist Party USA
+CO Senate District 10 (Socialist Party USA)	1	CO Senate District 10	Socialist Party USA
+CO Senate District 11 (Socialist Party USA)	1	CO Senate District 11	Socialist Party USA
+CO Senate District 12 (Socialist Party USA)	1	CO Senate District 12	Socialist Party USA
+CO Senate District 13 (Socialist Party USA)	1	CO Senate District 13	Socialist Party USA
+CO Senate District 14 (Socialist Party USA)	1	CO Senate District 14	Socialist Party USA
+CO Senate District 15 (Socialist Party USA)	1	CO Senate District 15	Socialist Party USA
+CO Senate District 16 (Socialist Party USA)	1	CO Senate District 16	Socialist Party USA
+CO Senate District 17 (Socialist Party USA)	1	CO Senate District 17	Socialist Party USA
+CO Senate District 18 (Socialist Party USA)	1	CO Senate District 18	Socialist Party USA
+CO Senate District 19 (Socialist Party USA)	1	CO Senate District 19	Socialist Party USA
+CO Senate District 20 (Socialist Party USA)	1	CO Senate District 20	Socialist Party USA
+CO Senate District 21 (Socialist Party USA)	1	CO Senate District 21	Socialist Party USA
+CO Senate District 22 (Socialist Party USA)	1	CO Senate District 22	Socialist Party USA
+CO Senate District 23 (Socialist Party USA)	1	CO Senate District 23	Socialist Party USA
+CO Senate District 24 (Socialist Party USA)	1	CO Senate District 24	Socialist Party USA
+CO Senate District 25 (Socialist Party USA)	1	CO Senate District 25	Socialist Party USA
+CO Senate District 26 (Socialist Party USA)	1	CO Senate District 26	Socialist Party USA
+CO Senate District 27 (Socialist Party USA)	1	CO Senate District 27	Socialist Party USA
+CO Senate District 28 (Socialist Party USA)	1	CO Senate District 28	Socialist Party USA
+CO Senate District 29 (Socialist Party USA)	1	CO Senate District 29	Socialist Party USA
+CO Senate District 30 (Socialist Party USA)	1	CO Senate District 30	Socialist Party USA
+CO Senate District 31 (Socialist Party USA)	1	CO Senate District 31	Socialist Party USA
+CO Senate District 32 (Socialist Party USA)	1	CO Senate District 32	Socialist Party USA
+CO Senate District 33 (Socialist Party USA)	1	CO Senate District 33	Socialist Party USA
+CO Senate District 34 (Socialist Party USA)	1	CO Senate District 34	Socialist Party USA
+CO Senate District 35 (Socialist Party USA)	1	CO Senate District 35	Socialist Party USA
+US House CO District 1 (Socialist Party USA)	1	US House CO District 1	Socialist Party USA
+US House CO District 2 (Socialist Party USA)	1	US House CO District 2	Socialist Party USA
+US House CO District 3 (Socialist Party USA)	1	US House CO District 3	Socialist Party USA
+US House CO District 4 (Socialist Party USA)	1	US House CO District 4	Socialist Party USA
+US House CO District 5 (Socialist Party USA)	1	US House CO District 5	Socialist Party USA
+US House CO District 6 (Socialist Party USA)	1	US House CO District 6	Socialist Party USA
+US House CO District 7 (Socialist Party USA)	1	US House CO District 7	Socialist Party USA
+US President (CO) (Socialist Party USA)	1	US President (CO)	Socialist Party USA
+CO Governor (Socialist Party USA)	1	CO Governor	Socialist Party USA
+US Senate CO (Socialist Party USA)	1	US Senate CO	Socialist Party USA
+CO Attorney General (Socialist Party USA)	1	CO Attorney General	Socialist Party USA
+CO State Treasurer (Socialist Party USA)	1	CO State Treasurer	Socialist Party USA
+CO Secretary of State (Socialist Party USA)	1	CO Secretary of State	Socialist Party USA
+CO House District 1 (Socialism and Liberation)	1	CO House District 1	Socialism and Liberation
+CO House District 2 (Socialism and Liberation)	1	CO House District 2	Socialism and Liberation
+CO House District 3 (Socialism and Liberation)	1	CO House District 3	Socialism and Liberation
+CO House District 4 (Socialism and Liberation)	1	CO House District 4	Socialism and Liberation
+CO House District 5 (Socialism and Liberation)	1	CO House District 5	Socialism and Liberation
+CO House District 6 (Socialism and Liberation)	1	CO House District 6	Socialism and Liberation
+CO House District 7 (Socialism and Liberation)	1	CO House District 7	Socialism and Liberation
+CO House District 8 (Socialism and Liberation)	1	CO House District 8	Socialism and Liberation
+CO House District 9 (Socialism and Liberation)	1	CO House District 9	Socialism and Liberation
+CO House District 10 (Socialism and Liberation)	1	CO House District 10	Socialism and Liberation
+CO House District 11 (Socialism and Liberation)	1	CO House District 11	Socialism and Liberation
+CO House District 12 (Socialism and Liberation)	1	CO House District 12	Socialism and Liberation
+CO House District 13 (Socialism and Liberation)	1	CO House District 13	Socialism and Liberation
+CO House District 14 (Socialism and Liberation)	1	CO House District 14	Socialism and Liberation
+CO House District 15 (Socialism and Liberation)	1	CO House District 15	Socialism and Liberation
+CO House District 16 (Socialism and Liberation)	1	CO House District 16	Socialism and Liberation
+CO House District 17 (Socialism and Liberation)	1	CO House District 17	Socialism and Liberation
+CO House District 18 (Socialism and Liberation)	1	CO House District 18	Socialism and Liberation
+CO House District 19 (Socialism and Liberation)	1	CO House District 19	Socialism and Liberation
+CO House District 20 (Socialism and Liberation)	1	CO House District 20	Socialism and Liberation
+CO House District 21 (Socialism and Liberation)	1	CO House District 21	Socialism and Liberation
+CO House District 22 (Socialism and Liberation)	1	CO House District 22	Socialism and Liberation
+CO House District 23 (Socialism and Liberation)	1	CO House District 23	Socialism and Liberation
+CO House District 24 (Socialism and Liberation)	1	CO House District 24	Socialism and Liberation
+CO House District 25 (Socialism and Liberation)	1	CO House District 25	Socialism and Liberation
+CO House District 26 (Socialism and Liberation)	1	CO House District 26	Socialism and Liberation
+CO House District 27 (Socialism and Liberation)	1	CO House District 27	Socialism and Liberation
+CO House District 28 (Socialism and Liberation)	1	CO House District 28	Socialism and Liberation
+CO House District 29 (Socialism and Liberation)	1	CO House District 29	Socialism and Liberation
+CO House District 30 (Socialism and Liberation)	1	CO House District 30	Socialism and Liberation
+CO House District 31 (Socialism and Liberation)	1	CO House District 31	Socialism and Liberation
+CO House District 32 (Socialism and Liberation)	1	CO House District 32	Socialism and Liberation
+CO House District 33 (Socialism and Liberation)	1	CO House District 33	Socialism and Liberation
+CO House District 34 (Socialism and Liberation)	1	CO House District 34	Socialism and Liberation
+CO House District 35 (Socialism and Liberation)	1	CO House District 35	Socialism and Liberation
+CO House District 36 (Socialism and Liberation)	1	CO House District 36	Socialism and Liberation
+CO House District 37 (Socialism and Liberation)	1	CO House District 37	Socialism and Liberation
+CO House District 38 (Socialism and Liberation)	1	CO House District 38	Socialism and Liberation
+CO House District 39 (Socialism and Liberation)	1	CO House District 39	Socialism and Liberation
+CO House District 40 (Socialism and Liberation)	1	CO House District 40	Socialism and Liberation
+CO House District 41 (Socialism and Liberation)	1	CO House District 41	Socialism and Liberation
+CO House District 42 (Socialism and Liberation)	1	CO House District 42	Socialism and Liberation
+CO House District 43 (Socialism and Liberation)	1	CO House District 43	Socialism and Liberation
+CO House District 44 (Socialism and Liberation)	1	CO House District 44	Socialism and Liberation
+CO House District 45 (Socialism and Liberation)	1	CO House District 45	Socialism and Liberation
+CO House District 46 (Socialism and Liberation)	1	CO House District 46	Socialism and Liberation
+CO House District 47 (Socialism and Liberation)	1	CO House District 47	Socialism and Liberation
+CO House District 48 (Socialism and Liberation)	1	CO House District 48	Socialism and Liberation
+CO House District 49 (Socialism and Liberation)	1	CO House District 49	Socialism and Liberation
+CO House District 50 (Socialism and Liberation)	1	CO House District 50	Socialism and Liberation
+CO House District 51 (Socialism and Liberation)	1	CO House District 51	Socialism and Liberation
+CO House District 52 (Socialism and Liberation)	1	CO House District 52	Socialism and Liberation
+CO House District 53 (Socialism and Liberation)	1	CO House District 53	Socialism and Liberation
+CO House District 54 (Socialism and Liberation)	1	CO House District 54	Socialism and Liberation
+CO House District 55 (Socialism and Liberation)	1	CO House District 55	Socialism and Liberation
+CO House District 56 (Socialism and Liberation)	1	CO House District 56	Socialism and Liberation
+CO House District 57 (Socialism and Liberation)	1	CO House District 57	Socialism and Liberation
+CO House District 58 (Socialism and Liberation)	1	CO House District 58	Socialism and Liberation
+CO House District 59 (Socialism and Liberation)	1	CO House District 59	Socialism and Liberation
+CO House District 60 (Socialism and Liberation)	1	CO House District 60	Socialism and Liberation
+CO House District 61 (Socialism and Liberation)	1	CO House District 61	Socialism and Liberation
+CO House District 62 (Socialism and Liberation)	1	CO House District 62	Socialism and Liberation
+CO House District 63 (Socialism and Liberation)	1	CO House District 63	Socialism and Liberation
+CO House District 64 (Socialism and Liberation)	1	CO House District 64	Socialism and Liberation
+CO House District 65 (Socialism and Liberation)	1	CO House District 65	Socialism and Liberation
+CO Senate District 1 (Socialism and Liberation)	1	CO Senate District 1	Socialism and Liberation
+CO Senate District 2 (Socialism and Liberation)	1	CO Senate District 2	Socialism and Liberation
+CO Senate District 3 (Socialism and Liberation)	1	CO Senate District 3	Socialism and Liberation
+CO Senate District 4 (Socialism and Liberation)	1	CO Senate District 4	Socialism and Liberation
+CO Senate District 5 (Socialism and Liberation)	1	CO Senate District 5	Socialism and Liberation
+CO Senate District 6 (Socialism and Liberation)	1	CO Senate District 6	Socialism and Liberation
+CO Senate District 7 (Socialism and Liberation)	1	CO Senate District 7	Socialism and Liberation
+CO Senate District 8 (Socialism and Liberation)	1	CO Senate District 8	Socialism and Liberation
+CO Senate District 9 (Socialism and Liberation)	1	CO Senate District 9	Socialism and Liberation
+CO Senate District 10 (Socialism and Liberation)	1	CO Senate District 10	Socialism and Liberation
+CO Senate District 11 (Socialism and Liberation)	1	CO Senate District 11	Socialism and Liberation
+CO Senate District 12 (Socialism and Liberation)	1	CO Senate District 12	Socialism and Liberation
+CO Senate District 13 (Socialism and Liberation)	1	CO Senate District 13	Socialism and Liberation
+CO Senate District 14 (Socialism and Liberation)	1	CO Senate District 14	Socialism and Liberation
+CO Senate District 15 (Socialism and Liberation)	1	CO Senate District 15	Socialism and Liberation
+CO Senate District 16 (Socialism and Liberation)	1	CO Senate District 16	Socialism and Liberation
+CO Senate District 17 (Socialism and Liberation)	1	CO Senate District 17	Socialism and Liberation
+CO Senate District 18 (Socialism and Liberation)	1	CO Senate District 18	Socialism and Liberation
+CO Senate District 19 (Socialism and Liberation)	1	CO Senate District 19	Socialism and Liberation
+CO Senate District 20 (Socialism and Liberation)	1	CO Senate District 20	Socialism and Liberation
+CO Senate District 21 (Socialism and Liberation)	1	CO Senate District 21	Socialism and Liberation
+CO Senate District 22 (Socialism and Liberation)	1	CO Senate District 22	Socialism and Liberation
+CO Senate District 23 (Socialism and Liberation)	1	CO Senate District 23	Socialism and Liberation
+CO Senate District 24 (Socialism and Liberation)	1	CO Senate District 24	Socialism and Liberation
+CO Senate District 25 (Socialism and Liberation)	1	CO Senate District 25	Socialism and Liberation
+CO Senate District 26 (Socialism and Liberation)	1	CO Senate District 26	Socialism and Liberation
+CO Senate District 27 (Socialism and Liberation)	1	CO Senate District 27	Socialism and Liberation
+CO Senate District 28 (Socialism and Liberation)	1	CO Senate District 28	Socialism and Liberation
+CO Senate District 29 (Socialism and Liberation)	1	CO Senate District 29	Socialism and Liberation
+CO Senate District 30 (Socialism and Liberation)	1	CO Senate District 30	Socialism and Liberation
+CO Senate District 31 (Socialism and Liberation)	1	CO Senate District 31	Socialism and Liberation
+CO Senate District 32 (Socialism and Liberation)	1	CO Senate District 32	Socialism and Liberation
+CO Senate District 33 (Socialism and Liberation)	1	CO Senate District 33	Socialism and Liberation
+CO Senate District 34 (Socialism and Liberation)	1	CO Senate District 34	Socialism and Liberation
+CO Senate District 35 (Socialism and Liberation)	1	CO Senate District 35	Socialism and Liberation
+US House CO District 1 (Socialism and Liberation)	1	US House CO District 1	Socialism and Liberation
+US House CO District 2 (Socialism and Liberation)	1	US House CO District 2	Socialism and Liberation
+US House CO District 3 (Socialism and Liberation)	1	US House CO District 3	Socialism and Liberation
+US House CO District 4 (Socialism and Liberation)	1	US House CO District 4	Socialism and Liberation
+US House CO District 5 (Socialism and Liberation)	1	US House CO District 5	Socialism and Liberation
+US House CO District 6 (Socialism and Liberation)	1	US House CO District 6	Socialism and Liberation
+US House CO District 7 (Socialism and Liberation)	1	US House CO District 7	Socialism and Liberation
+US President (CO) (Socialism and Liberation)	1	US President (CO)	Socialism and Liberation
+CO Governor (Socialism and Liberation)	1	CO Governor	Socialism and Liberation
+US Senate CO (Socialism and Liberation)	1	US Senate CO	Socialism and Liberation
+CO Attorney General (Socialism and Liberation)	1	CO Attorney General	Socialism and Liberation
+CO State Treasurer (Socialism and Liberation)	1	CO State Treasurer	Socialism and Liberation
+CO Secretary of State (Socialism and Liberation)	1	CO Secretary of State	Socialism and Liberation
+CO House District 1 (Prohibition Party)	1	CO House District 1	Prohibition Party
+CO House District 2 (Prohibition Party)	1	CO House District 2	Prohibition Party
+CO House District 3 (Prohibition Party)	1	CO House District 3	Prohibition Party
+CO House District 4 (Prohibition Party)	1	CO House District 4	Prohibition Party
+CO House District 5 (Prohibition Party)	1	CO House District 5	Prohibition Party
+CO House District 6 (Prohibition Party)	1	CO House District 6	Prohibition Party
+CO House District 7 (Prohibition Party)	1	CO House District 7	Prohibition Party
+CO House District 8 (Prohibition Party)	1	CO House District 8	Prohibition Party
+CO House District 9 (Prohibition Party)	1	CO House District 9	Prohibition Party
+CO House District 10 (Prohibition Party)	1	CO House District 10	Prohibition Party
+CO House District 11 (Prohibition Party)	1	CO House District 11	Prohibition Party
+CO House District 12 (Prohibition Party)	1	CO House District 12	Prohibition Party
+CO House District 13 (Prohibition Party)	1	CO House District 13	Prohibition Party
+CO House District 14 (Prohibition Party)	1	CO House District 14	Prohibition Party
+CO House District 15 (Prohibition Party)	1	CO House District 15	Prohibition Party
+CO House District 16 (Prohibition Party)	1	CO House District 16	Prohibition Party
+CO House District 17 (Prohibition Party)	1	CO House District 17	Prohibition Party
+CO House District 18 (Prohibition Party)	1	CO House District 18	Prohibition Party
+CO House District 19 (Prohibition Party)	1	CO House District 19	Prohibition Party
+CO House District 20 (Prohibition Party)	1	CO House District 20	Prohibition Party
+CO House District 21 (Prohibition Party)	1	CO House District 21	Prohibition Party
+CO House District 22 (Prohibition Party)	1	CO House District 22	Prohibition Party
+CO House District 23 (Prohibition Party)	1	CO House District 23	Prohibition Party
+CO House District 24 (Prohibition Party)	1	CO House District 24	Prohibition Party
+CO House District 25 (Prohibition Party)	1	CO House District 25	Prohibition Party
+CO House District 26 (Prohibition Party)	1	CO House District 26	Prohibition Party
+CO House District 27 (Prohibition Party)	1	CO House District 27	Prohibition Party
+CO House District 28 (Prohibition Party)	1	CO House District 28	Prohibition Party
+CO House District 29 (Prohibition Party)	1	CO House District 29	Prohibition Party
+CO House District 30 (Prohibition Party)	1	CO House District 30	Prohibition Party
+CO House District 31 (Prohibition Party)	1	CO House District 31	Prohibition Party
+CO House District 32 (Prohibition Party)	1	CO House District 32	Prohibition Party
+CO House District 33 (Prohibition Party)	1	CO House District 33	Prohibition Party
+CO House District 34 (Prohibition Party)	1	CO House District 34	Prohibition Party
+CO House District 35 (Prohibition Party)	1	CO House District 35	Prohibition Party
+CO House District 36 (Prohibition Party)	1	CO House District 36	Prohibition Party
+CO House District 37 (Prohibition Party)	1	CO House District 37	Prohibition Party
+CO House District 38 (Prohibition Party)	1	CO House District 38	Prohibition Party
+CO House District 39 (Prohibition Party)	1	CO House District 39	Prohibition Party
+CO House District 40 (Prohibition Party)	1	CO House District 40	Prohibition Party
+CO House District 41 (Prohibition Party)	1	CO House District 41	Prohibition Party
+CO House District 42 (Prohibition Party)	1	CO House District 42	Prohibition Party
+CO House District 43 (Prohibition Party)	1	CO House District 43	Prohibition Party
+CO House District 44 (Prohibition Party)	1	CO House District 44	Prohibition Party
+CO House District 45 (Prohibition Party)	1	CO House District 45	Prohibition Party
+CO House District 46 (Prohibition Party)	1	CO House District 46	Prohibition Party
+CO House District 47 (Prohibition Party)	1	CO House District 47	Prohibition Party
+CO House District 48 (Prohibition Party)	1	CO House District 48	Prohibition Party
+CO House District 49 (Prohibition Party)	1	CO House District 49	Prohibition Party
+CO House District 50 (Prohibition Party)	1	CO House District 50	Prohibition Party
+CO House District 51 (Prohibition Party)	1	CO House District 51	Prohibition Party
+CO House District 52 (Prohibition Party)	1	CO House District 52	Prohibition Party
+CO House District 53 (Prohibition Party)	1	CO House District 53	Prohibition Party
+CO House District 54 (Prohibition Party)	1	CO House District 54	Prohibition Party
+CO House District 55 (Prohibition Party)	1	CO House District 55	Prohibition Party
+CO House District 56 (Prohibition Party)	1	CO House District 56	Prohibition Party
+CO House District 57 (Prohibition Party)	1	CO House District 57	Prohibition Party
+CO House District 58 (Prohibition Party)	1	CO House District 58	Prohibition Party
+CO House District 59 (Prohibition Party)	1	CO House District 59	Prohibition Party
+CO House District 60 (Prohibition Party)	1	CO House District 60	Prohibition Party
+CO House District 61 (Prohibition Party)	1	CO House District 61	Prohibition Party
+CO House District 62 (Prohibition Party)	1	CO House District 62	Prohibition Party
+CO House District 63 (Prohibition Party)	1	CO House District 63	Prohibition Party
+CO House District 64 (Prohibition Party)	1	CO House District 64	Prohibition Party
+CO House District 65 (Prohibition Party)	1	CO House District 65	Prohibition Party
+CO Senate District 1 (Prohibition Party)	1	CO Senate District 1	Prohibition Party
+CO Senate District 2 (Prohibition Party)	1	CO Senate District 2	Prohibition Party
+CO Senate District 3 (Prohibition Party)	1	CO Senate District 3	Prohibition Party
+CO Senate District 4 (Prohibition Party)	1	CO Senate District 4	Prohibition Party
+CO Senate District 5 (Prohibition Party)	1	CO Senate District 5	Prohibition Party
+CO Senate District 6 (Prohibition Party)	1	CO Senate District 6	Prohibition Party
+CO Senate District 7 (Prohibition Party)	1	CO Senate District 7	Prohibition Party
+CO Senate District 8 (Prohibition Party)	1	CO Senate District 8	Prohibition Party
+CO Senate District 9 (Prohibition Party)	1	CO Senate District 9	Prohibition Party
+CO Senate District 10 (Prohibition Party)	1	CO Senate District 10	Prohibition Party
+CO Senate District 11 (Prohibition Party)	1	CO Senate District 11	Prohibition Party
+CO Senate District 12 (Prohibition Party)	1	CO Senate District 12	Prohibition Party
+CO Senate District 13 (Prohibition Party)	1	CO Senate District 13	Prohibition Party
+CO Senate District 14 (Prohibition Party)	1	CO Senate District 14	Prohibition Party
+CO Senate District 15 (Prohibition Party)	1	CO Senate District 15	Prohibition Party
+CO Senate District 16 (Prohibition Party)	1	CO Senate District 16	Prohibition Party
+CO Senate District 17 (Prohibition Party)	1	CO Senate District 17	Prohibition Party
+CO Senate District 18 (Prohibition Party)	1	CO Senate District 18	Prohibition Party
+CO Senate District 19 (Prohibition Party)	1	CO Senate District 19	Prohibition Party
+CO Senate District 20 (Prohibition Party)	1	CO Senate District 20	Prohibition Party
+CO Senate District 21 (Prohibition Party)	1	CO Senate District 21	Prohibition Party
+CO Senate District 22 (Prohibition Party)	1	CO Senate District 22	Prohibition Party
+CO Senate District 23 (Prohibition Party)	1	CO Senate District 23	Prohibition Party
+CO Senate District 24 (Prohibition Party)	1	CO Senate District 24	Prohibition Party
+CO Senate District 25 (Prohibition Party)	1	CO Senate District 25	Prohibition Party
+CO Senate District 26 (Prohibition Party)	1	CO Senate District 26	Prohibition Party
+CO Senate District 27 (Prohibition Party)	1	CO Senate District 27	Prohibition Party
+CO Senate District 28 (Prohibition Party)	1	CO Senate District 28	Prohibition Party
+CO Senate District 29 (Prohibition Party)	1	CO Senate District 29	Prohibition Party
+CO Senate District 30 (Prohibition Party)	1	CO Senate District 30	Prohibition Party
+CO Senate District 31 (Prohibition Party)	1	CO Senate District 31	Prohibition Party
+CO Senate District 32 (Prohibition Party)	1	CO Senate District 32	Prohibition Party
+CO Senate District 33 (Prohibition Party)	1	CO Senate District 33	Prohibition Party
+CO Senate District 34 (Prohibition Party)	1	CO Senate District 34	Prohibition Party
+CO Senate District 35 (Prohibition Party)	1	CO Senate District 35	Prohibition Party
+US House CO District 1 (Prohibition Party)	1	US House CO District 1	Prohibition Party
+US House CO District 2 (Prohibition Party)	1	US House CO District 2	Prohibition Party
+US House CO District 3 (Prohibition Party)	1	US House CO District 3	Prohibition Party
+US House CO District 4 (Prohibition Party)	1	US House CO District 4	Prohibition Party
+US House CO District 5 (Prohibition Party)	1	US House CO District 5	Prohibition Party
+US House CO District 6 (Prohibition Party)	1	US House CO District 6	Prohibition Party
+US House CO District 7 (Prohibition Party)	1	US House CO District 7	Prohibition Party
+US President (CO) (Prohibition Party)	1	US President (CO)	Prohibition Party
+CO Governor (Prohibition Party)	1	CO Governor	Prohibition Party
+US Senate CO (Prohibition Party)	1	US Senate CO	Prohibition Party
+CO Attorney General (Prohibition Party)	1	CO Attorney General	Prohibition Party
+CO State Treasurer (Prohibition Party)	1	CO State Treasurer	Prohibition Party
+CO Secretary of State (Prohibition Party)	1	CO Secretary of State	Prohibition Party
+CO House District 1 (Nutrition Party)	1	CO House District 1	Nutrition Party
+CO House District 2 (Nutrition Party)	1	CO House District 2	Nutrition Party
+CO House District 3 (Nutrition Party)	1	CO House District 3	Nutrition Party
+CO House District 4 (Nutrition Party)	1	CO House District 4	Nutrition Party
+CO House District 5 (Nutrition Party)	1	CO House District 5	Nutrition Party
+CO House District 6 (Nutrition Party)	1	CO House District 6	Nutrition Party
+CO House District 7 (Nutrition Party)	1	CO House District 7	Nutrition Party
+CO House District 8 (Nutrition Party)	1	CO House District 8	Nutrition Party
+CO House District 9 (Nutrition Party)	1	CO House District 9	Nutrition Party
+CO House District 10 (Nutrition Party)	1	CO House District 10	Nutrition Party
+CO House District 11 (Nutrition Party)	1	CO House District 11	Nutrition Party
+CO House District 12 (Nutrition Party)	1	CO House District 12	Nutrition Party
+CO House District 13 (Nutrition Party)	1	CO House District 13	Nutrition Party
+CO House District 14 (Nutrition Party)	1	CO House District 14	Nutrition Party
+CO House District 15 (Nutrition Party)	1	CO House District 15	Nutrition Party
+CO House District 16 (Nutrition Party)	1	CO House District 16	Nutrition Party
+CO House District 17 (Nutrition Party)	1	CO House District 17	Nutrition Party
+CO House District 18 (Nutrition Party)	1	CO House District 18	Nutrition Party
+CO House District 19 (Nutrition Party)	1	CO House District 19	Nutrition Party
+CO House District 20 (Nutrition Party)	1	CO House District 20	Nutrition Party
+CO House District 21 (Nutrition Party)	1	CO House District 21	Nutrition Party
+CO House District 22 (Nutrition Party)	1	CO House District 22	Nutrition Party
+CO House District 23 (Nutrition Party)	1	CO House District 23	Nutrition Party
+CO House District 24 (Nutrition Party)	1	CO House District 24	Nutrition Party
+CO House District 25 (Nutrition Party)	1	CO House District 25	Nutrition Party
+CO House District 26 (Nutrition Party)	1	CO House District 26	Nutrition Party
+CO House District 27 (Nutrition Party)	1	CO House District 27	Nutrition Party
+CO House District 28 (Nutrition Party)	1	CO House District 28	Nutrition Party
+CO House District 29 (Nutrition Party)	1	CO House District 29	Nutrition Party
+CO House District 30 (Nutrition Party)	1	CO House District 30	Nutrition Party
+CO House District 31 (Nutrition Party)	1	CO House District 31	Nutrition Party
+CO House District 32 (Nutrition Party)	1	CO House District 32	Nutrition Party
+CO House District 33 (Nutrition Party)	1	CO House District 33	Nutrition Party
+CO House District 34 (Nutrition Party)	1	CO House District 34	Nutrition Party
+CO House District 35 (Nutrition Party)	1	CO House District 35	Nutrition Party
+CO House District 36 (Nutrition Party)	1	CO House District 36	Nutrition Party
+CO House District 37 (Nutrition Party)	1	CO House District 37	Nutrition Party
+CO House District 38 (Nutrition Party)	1	CO House District 38	Nutrition Party
+CO House District 39 (Nutrition Party)	1	CO House District 39	Nutrition Party
+CO House District 40 (Nutrition Party)	1	CO House District 40	Nutrition Party
+CO House District 41 (Nutrition Party)	1	CO House District 41	Nutrition Party
+CO House District 42 (Nutrition Party)	1	CO House District 42	Nutrition Party
+CO House District 43 (Nutrition Party)	1	CO House District 43	Nutrition Party
+CO House District 44 (Nutrition Party)	1	CO House District 44	Nutrition Party
+CO House District 45 (Nutrition Party)	1	CO House District 45	Nutrition Party
+CO House District 46 (Nutrition Party)	1	CO House District 46	Nutrition Party
+CO House District 47 (Nutrition Party)	1	CO House District 47	Nutrition Party
+CO House District 48 (Nutrition Party)	1	CO House District 48	Nutrition Party
+CO House District 49 (Nutrition Party)	1	CO House District 49	Nutrition Party
+CO House District 50 (Nutrition Party)	1	CO House District 50	Nutrition Party
+CO House District 51 (Nutrition Party)	1	CO House District 51	Nutrition Party
+CO House District 52 (Nutrition Party)	1	CO House District 52	Nutrition Party
+CO House District 53 (Nutrition Party)	1	CO House District 53	Nutrition Party
+CO House District 54 (Nutrition Party)	1	CO House District 54	Nutrition Party
+CO House District 55 (Nutrition Party)	1	CO House District 55	Nutrition Party
+CO House District 56 (Nutrition Party)	1	CO House District 56	Nutrition Party
+CO House District 57 (Nutrition Party)	1	CO House District 57	Nutrition Party
+CO House District 58 (Nutrition Party)	1	CO House District 58	Nutrition Party
+CO House District 59 (Nutrition Party)	1	CO House District 59	Nutrition Party
+CO House District 60 (Nutrition Party)	1	CO House District 60	Nutrition Party
+CO House District 61 (Nutrition Party)	1	CO House District 61	Nutrition Party
+CO House District 62 (Nutrition Party)	1	CO House District 62	Nutrition Party
+CO House District 63 (Nutrition Party)	1	CO House District 63	Nutrition Party
+CO House District 64 (Nutrition Party)	1	CO House District 64	Nutrition Party
+CO House District 65 (Nutrition Party)	1	CO House District 65	Nutrition Party
+CO Senate District 1 (Nutrition Party)	1	CO Senate District 1	Nutrition Party
+CO Senate District 2 (Nutrition Party)	1	CO Senate District 2	Nutrition Party
+CO Senate District 3 (Nutrition Party)	1	CO Senate District 3	Nutrition Party
+CO Senate District 4 (Nutrition Party)	1	CO Senate District 4	Nutrition Party
+CO Senate District 5 (Nutrition Party)	1	CO Senate District 5	Nutrition Party
+CO Senate District 6 (Nutrition Party)	1	CO Senate District 6	Nutrition Party
+CO Senate District 7 (Nutrition Party)	1	CO Senate District 7	Nutrition Party
+CO Senate District 8 (Nutrition Party)	1	CO Senate District 8	Nutrition Party
+CO Senate District 9 (Nutrition Party)	1	CO Senate District 9	Nutrition Party
+CO Senate District 10 (Nutrition Party)	1	CO Senate District 10	Nutrition Party
+CO Senate District 11 (Nutrition Party)	1	CO Senate District 11	Nutrition Party
+CO Senate District 12 (Nutrition Party)	1	CO Senate District 12	Nutrition Party
+CO Senate District 13 (Nutrition Party)	1	CO Senate District 13	Nutrition Party
+CO Senate District 14 (Nutrition Party)	1	CO Senate District 14	Nutrition Party
+CO Senate District 15 (Nutrition Party)	1	CO Senate District 15	Nutrition Party
+CO Senate District 16 (Nutrition Party)	1	CO Senate District 16	Nutrition Party
+CO Senate District 17 (Nutrition Party)	1	CO Senate District 17	Nutrition Party
+CO Senate District 18 (Nutrition Party)	1	CO Senate District 18	Nutrition Party
+CO Senate District 19 (Nutrition Party)	1	CO Senate District 19	Nutrition Party
+CO Senate District 20 (Nutrition Party)	1	CO Senate District 20	Nutrition Party
+CO Senate District 21 (Nutrition Party)	1	CO Senate District 21	Nutrition Party
+CO Senate District 22 (Nutrition Party)	1	CO Senate District 22	Nutrition Party
+CO Senate District 23 (Nutrition Party)	1	CO Senate District 23	Nutrition Party
+CO Senate District 24 (Nutrition Party)	1	CO Senate District 24	Nutrition Party
+CO Senate District 25 (Nutrition Party)	1	CO Senate District 25	Nutrition Party
+CO Senate District 26 (Nutrition Party)	1	CO Senate District 26	Nutrition Party
+CO Senate District 27 (Nutrition Party)	1	CO Senate District 27	Nutrition Party
+CO Senate District 28 (Nutrition Party)	1	CO Senate District 28	Nutrition Party
+CO Senate District 29 (Nutrition Party)	1	CO Senate District 29	Nutrition Party
+CO Senate District 30 (Nutrition Party)	1	CO Senate District 30	Nutrition Party
+CO Senate District 31 (Nutrition Party)	1	CO Senate District 31	Nutrition Party
+CO Senate District 32 (Nutrition Party)	1	CO Senate District 32	Nutrition Party
+CO Senate District 33 (Nutrition Party)	1	CO Senate District 33	Nutrition Party
+CO Senate District 34 (Nutrition Party)	1	CO Senate District 34	Nutrition Party
+CO Senate District 35 (Nutrition Party)	1	CO Senate District 35	Nutrition Party
+US House CO District 1 (Nutrition Party)	1	US House CO District 1	Nutrition Party
+US House CO District 2 (Nutrition Party)	1	US House CO District 2	Nutrition Party
+US House CO District 3 (Nutrition Party)	1	US House CO District 3	Nutrition Party
+US House CO District 4 (Nutrition Party)	1	US House CO District 4	Nutrition Party
+US House CO District 5 (Nutrition Party)	1	US House CO District 5	Nutrition Party
+US House CO District 6 (Nutrition Party)	1	US House CO District 6	Nutrition Party
+US House CO District 7 (Nutrition Party)	1	US House CO District 7	Nutrition Party
+US President (CO) (Nutrition Party)	1	US President (CO)	Nutrition Party
+CO Governor (Nutrition Party)	1	CO Governor	Nutrition Party
+US Senate CO (Nutrition Party)	1	US Senate CO	Nutrition Party
+CO Attorney General (Nutrition Party)	1	CO Attorney General	Nutrition Party
+CO State Treasurer (Nutrition Party)	1	CO State Treasurer	Nutrition Party
+CO Secretary of State (Nutrition Party)	1	CO Secretary of State	Nutrition Party
+CO House District 1 (Nonviolent Resistance/Pacifist)	1	CO House District 1	Nonviolent Resistance/Pacifist
+CO House District 2 (Nonviolent Resistance/Pacifist)	1	CO House District 2	Nonviolent Resistance/Pacifist
+CO House District 3 (Nonviolent Resistance/Pacifist)	1	CO House District 3	Nonviolent Resistance/Pacifist
+CO House District 4 (Nonviolent Resistance/Pacifist)	1	CO House District 4	Nonviolent Resistance/Pacifist
+CO House District 5 (Nonviolent Resistance/Pacifist)	1	CO House District 5	Nonviolent Resistance/Pacifist
+CO House District 6 (Nonviolent Resistance/Pacifist)	1	CO House District 6	Nonviolent Resistance/Pacifist
+CO House District 7 (Nonviolent Resistance/Pacifist)	1	CO House District 7	Nonviolent Resistance/Pacifist
+CO House District 8 (Nonviolent Resistance/Pacifist)	1	CO House District 8	Nonviolent Resistance/Pacifist
+CO House District 9 (Nonviolent Resistance/Pacifist)	1	CO House District 9	Nonviolent Resistance/Pacifist
+CO House District 10 (Nonviolent Resistance/Pacifist)	1	CO House District 10	Nonviolent Resistance/Pacifist
+CO House District 11 (Nonviolent Resistance/Pacifist)	1	CO House District 11	Nonviolent Resistance/Pacifist
+CO House District 12 (Nonviolent Resistance/Pacifist)	1	CO House District 12	Nonviolent Resistance/Pacifist
+CO House District 13 (Nonviolent Resistance/Pacifist)	1	CO House District 13	Nonviolent Resistance/Pacifist
+CO House District 14 (Nonviolent Resistance/Pacifist)	1	CO House District 14	Nonviolent Resistance/Pacifist
+CO House District 15 (Nonviolent Resistance/Pacifist)	1	CO House District 15	Nonviolent Resistance/Pacifist
+CO House District 16 (Nonviolent Resistance/Pacifist)	1	CO House District 16	Nonviolent Resistance/Pacifist
+CO House District 17 (Nonviolent Resistance/Pacifist)	1	CO House District 17	Nonviolent Resistance/Pacifist
+CO House District 18 (Nonviolent Resistance/Pacifist)	1	CO House District 18	Nonviolent Resistance/Pacifist
+CO House District 19 (Nonviolent Resistance/Pacifist)	1	CO House District 19	Nonviolent Resistance/Pacifist
+CO House District 20 (Nonviolent Resistance/Pacifist)	1	CO House District 20	Nonviolent Resistance/Pacifist
+CO House District 21 (Nonviolent Resistance/Pacifist)	1	CO House District 21	Nonviolent Resistance/Pacifist
+CO House District 22 (Nonviolent Resistance/Pacifist)	1	CO House District 22	Nonviolent Resistance/Pacifist
+CO House District 23 (Nonviolent Resistance/Pacifist)	1	CO House District 23	Nonviolent Resistance/Pacifist
+CO House District 24 (Nonviolent Resistance/Pacifist)	1	CO House District 24	Nonviolent Resistance/Pacifist
+CO House District 25 (Nonviolent Resistance/Pacifist)	1	CO House District 25	Nonviolent Resistance/Pacifist
+CO House District 26 (Nonviolent Resistance/Pacifist)	1	CO House District 26	Nonviolent Resistance/Pacifist
+CO House District 27 (Nonviolent Resistance/Pacifist)	1	CO House District 27	Nonviolent Resistance/Pacifist
+CO House District 28 (Nonviolent Resistance/Pacifist)	1	CO House District 28	Nonviolent Resistance/Pacifist
+CO House District 29 (Nonviolent Resistance/Pacifist)	1	CO House District 29	Nonviolent Resistance/Pacifist
+CO House District 30 (Nonviolent Resistance/Pacifist)	1	CO House District 30	Nonviolent Resistance/Pacifist
+CO House District 31 (Nonviolent Resistance/Pacifist)	1	CO House District 31	Nonviolent Resistance/Pacifist
+CO House District 32 (Nonviolent Resistance/Pacifist)	1	CO House District 32	Nonviolent Resistance/Pacifist
+CO House District 33 (Nonviolent Resistance/Pacifist)	1	CO House District 33	Nonviolent Resistance/Pacifist
+CO House District 34 (Nonviolent Resistance/Pacifist)	1	CO House District 34	Nonviolent Resistance/Pacifist
+CO House District 35 (Nonviolent Resistance/Pacifist)	1	CO House District 35	Nonviolent Resistance/Pacifist
+CO House District 36 (Nonviolent Resistance/Pacifist)	1	CO House District 36	Nonviolent Resistance/Pacifist
+CO House District 37 (Nonviolent Resistance/Pacifist)	1	CO House District 37	Nonviolent Resistance/Pacifist
+CO House District 38 (Nonviolent Resistance/Pacifist)	1	CO House District 38	Nonviolent Resistance/Pacifist
+CO House District 39 (Nonviolent Resistance/Pacifist)	1	CO House District 39	Nonviolent Resistance/Pacifist
+CO House District 40 (Nonviolent Resistance/Pacifist)	1	CO House District 40	Nonviolent Resistance/Pacifist
+CO House District 41 (Nonviolent Resistance/Pacifist)	1	CO House District 41	Nonviolent Resistance/Pacifist
+CO House District 42 (Nonviolent Resistance/Pacifist)	1	CO House District 42	Nonviolent Resistance/Pacifist
+CO House District 43 (Nonviolent Resistance/Pacifist)	1	CO House District 43	Nonviolent Resistance/Pacifist
+CO House District 44 (Nonviolent Resistance/Pacifist)	1	CO House District 44	Nonviolent Resistance/Pacifist
+CO House District 45 (Nonviolent Resistance/Pacifist)	1	CO House District 45	Nonviolent Resistance/Pacifist
+CO House District 46 (Nonviolent Resistance/Pacifist)	1	CO House District 46	Nonviolent Resistance/Pacifist
+CO House District 47 (Nonviolent Resistance/Pacifist)	1	CO House District 47	Nonviolent Resistance/Pacifist
+CO House District 48 (Nonviolent Resistance/Pacifist)	1	CO House District 48	Nonviolent Resistance/Pacifist
+CO House District 49 (Nonviolent Resistance/Pacifist)	1	CO House District 49	Nonviolent Resistance/Pacifist
+CO House District 50 (Nonviolent Resistance/Pacifist)	1	CO House District 50	Nonviolent Resistance/Pacifist
+CO House District 51 (Nonviolent Resistance/Pacifist)	1	CO House District 51	Nonviolent Resistance/Pacifist
+CO House District 52 (Nonviolent Resistance/Pacifist)	1	CO House District 52	Nonviolent Resistance/Pacifist
+CO House District 53 (Nonviolent Resistance/Pacifist)	1	CO House District 53	Nonviolent Resistance/Pacifist
+CO House District 54 (Nonviolent Resistance/Pacifist)	1	CO House District 54	Nonviolent Resistance/Pacifist
+CO House District 55 (Nonviolent Resistance/Pacifist)	1	CO House District 55	Nonviolent Resistance/Pacifist
+CO House District 56 (Nonviolent Resistance/Pacifist)	1	CO House District 56	Nonviolent Resistance/Pacifist
+CO House District 57 (Nonviolent Resistance/Pacifist)	1	CO House District 57	Nonviolent Resistance/Pacifist
+CO House District 58 (Nonviolent Resistance/Pacifist)	1	CO House District 58	Nonviolent Resistance/Pacifist
+CO House District 59 (Nonviolent Resistance/Pacifist)	1	CO House District 59	Nonviolent Resistance/Pacifist
+CO House District 60 (Nonviolent Resistance/Pacifist)	1	CO House District 60	Nonviolent Resistance/Pacifist
+CO House District 61 (Nonviolent Resistance/Pacifist)	1	CO House District 61	Nonviolent Resistance/Pacifist
+CO House District 62 (Nonviolent Resistance/Pacifist)	1	CO House District 62	Nonviolent Resistance/Pacifist
+CO House District 63 (Nonviolent Resistance/Pacifist)	1	CO House District 63	Nonviolent Resistance/Pacifist
+CO House District 64 (Nonviolent Resistance/Pacifist)	1	CO House District 64	Nonviolent Resistance/Pacifist
+CO House District 65 (Nonviolent Resistance/Pacifist)	1	CO House District 65	Nonviolent Resistance/Pacifist
+CO Senate District 1 (Nonviolent Resistance/Pacifist)	1	CO Senate District 1	Nonviolent Resistance/Pacifist
+CO Senate District 2 (Nonviolent Resistance/Pacifist)	1	CO Senate District 2	Nonviolent Resistance/Pacifist
+CO Senate District 3 (Nonviolent Resistance/Pacifist)	1	CO Senate District 3	Nonviolent Resistance/Pacifist
+CO Senate District 4 (Nonviolent Resistance/Pacifist)	1	CO Senate District 4	Nonviolent Resistance/Pacifist
+CO Senate District 5 (Nonviolent Resistance/Pacifist)	1	CO Senate District 5	Nonviolent Resistance/Pacifist
+CO Senate District 6 (Nonviolent Resistance/Pacifist)	1	CO Senate District 6	Nonviolent Resistance/Pacifist
+CO Senate District 7 (Nonviolent Resistance/Pacifist)	1	CO Senate District 7	Nonviolent Resistance/Pacifist
+CO Senate District 8 (Nonviolent Resistance/Pacifist)	1	CO Senate District 8	Nonviolent Resistance/Pacifist
+CO Senate District 9 (Nonviolent Resistance/Pacifist)	1	CO Senate District 9	Nonviolent Resistance/Pacifist
+CO Senate District 10 (Nonviolent Resistance/Pacifist)	1	CO Senate District 10	Nonviolent Resistance/Pacifist
+CO Senate District 11 (Nonviolent Resistance/Pacifist)	1	CO Senate District 11	Nonviolent Resistance/Pacifist
+CO Senate District 12 (Nonviolent Resistance/Pacifist)	1	CO Senate District 12	Nonviolent Resistance/Pacifist
+CO Senate District 13 (Nonviolent Resistance/Pacifist)	1	CO Senate District 13	Nonviolent Resistance/Pacifist
+CO Senate District 14 (Nonviolent Resistance/Pacifist)	1	CO Senate District 14	Nonviolent Resistance/Pacifist
+CO Senate District 15 (Nonviolent Resistance/Pacifist)	1	CO Senate District 15	Nonviolent Resistance/Pacifist
+CO Senate District 16 (Nonviolent Resistance/Pacifist)	1	CO Senate District 16	Nonviolent Resistance/Pacifist
+CO Senate District 17 (Nonviolent Resistance/Pacifist)	1	CO Senate District 17	Nonviolent Resistance/Pacifist
+CO Senate District 18 (Nonviolent Resistance/Pacifist)	1	CO Senate District 18	Nonviolent Resistance/Pacifist
+CO Senate District 19 (Nonviolent Resistance/Pacifist)	1	CO Senate District 19	Nonviolent Resistance/Pacifist
+CO Senate District 20 (Nonviolent Resistance/Pacifist)	1	CO Senate District 20	Nonviolent Resistance/Pacifist
+CO Senate District 21 (Nonviolent Resistance/Pacifist)	1	CO Senate District 21	Nonviolent Resistance/Pacifist
+CO Senate District 22 (Nonviolent Resistance/Pacifist)	1	CO Senate District 22	Nonviolent Resistance/Pacifist
+CO Senate District 23 (Nonviolent Resistance/Pacifist)	1	CO Senate District 23	Nonviolent Resistance/Pacifist
+CO Senate District 24 (Nonviolent Resistance/Pacifist)	1	CO Senate District 24	Nonviolent Resistance/Pacifist
+CO Senate District 25 (Nonviolent Resistance/Pacifist)	1	CO Senate District 25	Nonviolent Resistance/Pacifist
+CO Senate District 26 (Nonviolent Resistance/Pacifist)	1	CO Senate District 26	Nonviolent Resistance/Pacifist
+CO Senate District 27 (Nonviolent Resistance/Pacifist)	1	CO Senate District 27	Nonviolent Resistance/Pacifist
+CO Senate District 28 (Nonviolent Resistance/Pacifist)	1	CO Senate District 28	Nonviolent Resistance/Pacifist
+CO Senate District 29 (Nonviolent Resistance/Pacifist)	1	CO Senate District 29	Nonviolent Resistance/Pacifist
+CO Senate District 30 (Nonviolent Resistance/Pacifist)	1	CO Senate District 30	Nonviolent Resistance/Pacifist
+CO Senate District 31 (Nonviolent Resistance/Pacifist)	1	CO Senate District 31	Nonviolent Resistance/Pacifist
+CO Senate District 32 (Nonviolent Resistance/Pacifist)	1	CO Senate District 32	Nonviolent Resistance/Pacifist
+CO Senate District 33 (Nonviolent Resistance/Pacifist)	1	CO Senate District 33	Nonviolent Resistance/Pacifist
+CO Senate District 34 (Nonviolent Resistance/Pacifist)	1	CO Senate District 34	Nonviolent Resistance/Pacifist
+CO Senate District 35 (Nonviolent Resistance/Pacifist)	1	CO Senate District 35	Nonviolent Resistance/Pacifist
+US House CO District 1 (Nonviolent Resistance/Pacifist)	1	US House CO District 1	Nonviolent Resistance/Pacifist
+US House CO District 2 (Nonviolent Resistance/Pacifist)	1	US House CO District 2	Nonviolent Resistance/Pacifist
+US House CO District 3 (Nonviolent Resistance/Pacifist)	1	US House CO District 3	Nonviolent Resistance/Pacifist
+US House CO District 4 (Nonviolent Resistance/Pacifist)	1	US House CO District 4	Nonviolent Resistance/Pacifist
+US House CO District 5 (Nonviolent Resistance/Pacifist)	1	US House CO District 5	Nonviolent Resistance/Pacifist
+US House CO District 6 (Nonviolent Resistance/Pacifist)	1	US House CO District 6	Nonviolent Resistance/Pacifist
+US House CO District 7 (Nonviolent Resistance/Pacifist)	1	US House CO District 7	Nonviolent Resistance/Pacifist
+US President (CO) (Nonviolent Resistance/Pacifist)	1	US President (CO)	Nonviolent Resistance/Pacifist
+CO Governor (Nonviolent Resistance/Pacifist)	1	CO Governor	Nonviolent Resistance/Pacifist
+US Senate CO (Nonviolent Resistance/Pacifist)	1	US Senate CO	Nonviolent Resistance/Pacifist
+CO Attorney General (Nonviolent Resistance/Pacifist)	1	CO Attorney General	Nonviolent Resistance/Pacifist
+CO State Treasurer (Nonviolent Resistance/Pacifist)	1	CO State Treasurer	Nonviolent Resistance/Pacifist
+CO Secretary of State (Nonviolent Resistance/Pacifist)	1	CO Secretary of State	Nonviolent Resistance/Pacifist
+CO House District 1 (Kotlikoff for President)	1	CO House District 1	Kotlikoff for President
+CO House District 2 (Kotlikoff for President)	1	CO House District 2	Kotlikoff for President
+CO House District 3 (Kotlikoff for President)	1	CO House District 3	Kotlikoff for President
+CO House District 4 (Kotlikoff for President)	1	CO House District 4	Kotlikoff for President
+CO House District 5 (Kotlikoff for President)	1	CO House District 5	Kotlikoff for President
+CO House District 6 (Kotlikoff for President)	1	CO House District 6	Kotlikoff for President
+CO House District 7 (Kotlikoff for President)	1	CO House District 7	Kotlikoff for President
+CO House District 8 (Kotlikoff for President)	1	CO House District 8	Kotlikoff for President
+CO House District 9 (Kotlikoff for President)	1	CO House District 9	Kotlikoff for President
+CO House District 10 (Kotlikoff for President)	1	CO House District 10	Kotlikoff for President
+CO House District 11 (Kotlikoff for President)	1	CO House District 11	Kotlikoff for President
+CO House District 12 (Kotlikoff for President)	1	CO House District 12	Kotlikoff for President
+CO House District 13 (Kotlikoff for President)	1	CO House District 13	Kotlikoff for President
+CO House District 14 (Kotlikoff for President)	1	CO House District 14	Kotlikoff for President
+CO House District 15 (Kotlikoff for President)	1	CO House District 15	Kotlikoff for President
+CO House District 16 (Kotlikoff for President)	1	CO House District 16	Kotlikoff for President
+CO House District 17 (Kotlikoff for President)	1	CO House District 17	Kotlikoff for President
+CO House District 18 (Kotlikoff for President)	1	CO House District 18	Kotlikoff for President
+CO House District 19 (Kotlikoff for President)	1	CO House District 19	Kotlikoff for President
+CO House District 20 (Kotlikoff for President)	1	CO House District 20	Kotlikoff for President
+CO House District 21 (Kotlikoff for President)	1	CO House District 21	Kotlikoff for President
+CO House District 22 (Kotlikoff for President)	1	CO House District 22	Kotlikoff for President
+CO House District 23 (Kotlikoff for President)	1	CO House District 23	Kotlikoff for President
+CO House District 24 (Kotlikoff for President)	1	CO House District 24	Kotlikoff for President
+CO House District 25 (Kotlikoff for President)	1	CO House District 25	Kotlikoff for President
+CO House District 26 (Kotlikoff for President)	1	CO House District 26	Kotlikoff for President
+CO House District 27 (Kotlikoff for President)	1	CO House District 27	Kotlikoff for President
+CO House District 28 (Kotlikoff for President)	1	CO House District 28	Kotlikoff for President
+CO House District 29 (Kotlikoff for President)	1	CO House District 29	Kotlikoff for President
+CO House District 30 (Kotlikoff for President)	1	CO House District 30	Kotlikoff for President
+CO House District 31 (Kotlikoff for President)	1	CO House District 31	Kotlikoff for President
+CO House District 32 (Kotlikoff for President)	1	CO House District 32	Kotlikoff for President
+CO House District 33 (Kotlikoff for President)	1	CO House District 33	Kotlikoff for President
+CO House District 34 (Kotlikoff for President)	1	CO House District 34	Kotlikoff for President
+CO House District 35 (Kotlikoff for President)	1	CO House District 35	Kotlikoff for President
+CO House District 36 (Kotlikoff for President)	1	CO House District 36	Kotlikoff for President
+CO House District 37 (Kotlikoff for President)	1	CO House District 37	Kotlikoff for President
+CO House District 38 (Kotlikoff for President)	1	CO House District 38	Kotlikoff for President
+CO House District 39 (Kotlikoff for President)	1	CO House District 39	Kotlikoff for President
+CO House District 40 (Kotlikoff for President)	1	CO House District 40	Kotlikoff for President
+CO House District 41 (Kotlikoff for President)	1	CO House District 41	Kotlikoff for President
+CO House District 42 (Kotlikoff for President)	1	CO House District 42	Kotlikoff for President
+CO House District 43 (Kotlikoff for President)	1	CO House District 43	Kotlikoff for President
+CO House District 44 (Kotlikoff for President)	1	CO House District 44	Kotlikoff for President
+CO House District 45 (Kotlikoff for President)	1	CO House District 45	Kotlikoff for President
+CO House District 46 (Kotlikoff for President)	1	CO House District 46	Kotlikoff for President
+CO House District 47 (Kotlikoff for President)	1	CO House District 47	Kotlikoff for President
+CO House District 48 (Kotlikoff for President)	1	CO House District 48	Kotlikoff for President
+CO House District 49 (Kotlikoff for President)	1	CO House District 49	Kotlikoff for President
+CO House District 50 (Kotlikoff for President)	1	CO House District 50	Kotlikoff for President
+CO House District 51 (Kotlikoff for President)	1	CO House District 51	Kotlikoff for President
+CO House District 52 (Kotlikoff for President)	1	CO House District 52	Kotlikoff for President
+CO House District 53 (Kotlikoff for President)	1	CO House District 53	Kotlikoff for President
+CO House District 54 (Kotlikoff for President)	1	CO House District 54	Kotlikoff for President
+CO House District 55 (Kotlikoff for President)	1	CO House District 55	Kotlikoff for President
+CO House District 56 (Kotlikoff for President)	1	CO House District 56	Kotlikoff for President
+CO House District 57 (Kotlikoff for President)	1	CO House District 57	Kotlikoff for President
+CO House District 58 (Kotlikoff for President)	1	CO House District 58	Kotlikoff for President
+CO House District 59 (Kotlikoff for President)	1	CO House District 59	Kotlikoff for President
+CO House District 60 (Kotlikoff for President)	1	CO House District 60	Kotlikoff for President
+CO House District 61 (Kotlikoff for President)	1	CO House District 61	Kotlikoff for President
+CO House District 62 (Kotlikoff for President)	1	CO House District 62	Kotlikoff for President
+CO House District 63 (Kotlikoff for President)	1	CO House District 63	Kotlikoff for President
+CO House District 64 (Kotlikoff for President)	1	CO House District 64	Kotlikoff for President
+CO House District 65 (Kotlikoff for President)	1	CO House District 65	Kotlikoff for President
+CO Senate District 1 (Kotlikoff for President)	1	CO Senate District 1	Kotlikoff for President
+CO Senate District 2 (Kotlikoff for President)	1	CO Senate District 2	Kotlikoff for President
+CO Senate District 3 (Kotlikoff for President)	1	CO Senate District 3	Kotlikoff for President
+CO Senate District 4 (Kotlikoff for President)	1	CO Senate District 4	Kotlikoff for President
+CO Senate District 5 (Kotlikoff for President)	1	CO Senate District 5	Kotlikoff for President
+CO Senate District 6 (Kotlikoff for President)	1	CO Senate District 6	Kotlikoff for President
+CO Senate District 7 (Kotlikoff for President)	1	CO Senate District 7	Kotlikoff for President
+CO Senate District 8 (Kotlikoff for President)	1	CO Senate District 8	Kotlikoff for President
+CO Senate District 9 (Kotlikoff for President)	1	CO Senate District 9	Kotlikoff for President
+CO Senate District 10 (Kotlikoff for President)	1	CO Senate District 10	Kotlikoff for President
+CO Senate District 11 (Kotlikoff for President)	1	CO Senate District 11	Kotlikoff for President
+CO Senate District 12 (Kotlikoff for President)	1	CO Senate District 12	Kotlikoff for President
+CO Senate District 13 (Kotlikoff for President)	1	CO Senate District 13	Kotlikoff for President
+CO Senate District 14 (Kotlikoff for President)	1	CO Senate District 14	Kotlikoff for President
+CO Senate District 15 (Kotlikoff for President)	1	CO Senate District 15	Kotlikoff for President
+CO Senate District 16 (Kotlikoff for President)	1	CO Senate District 16	Kotlikoff for President
+CO Senate District 17 (Kotlikoff for President)	1	CO Senate District 17	Kotlikoff for President
+CO Senate District 18 (Kotlikoff for President)	1	CO Senate District 18	Kotlikoff for President
+CO Senate District 19 (Kotlikoff for President)	1	CO Senate District 19	Kotlikoff for President
+CO Senate District 20 (Kotlikoff for President)	1	CO Senate District 20	Kotlikoff for President
+CO Senate District 21 (Kotlikoff for President)	1	CO Senate District 21	Kotlikoff for President
+CO Senate District 22 (Kotlikoff for President)	1	CO Senate District 22	Kotlikoff for President
+CO Senate District 23 (Kotlikoff for President)	1	CO Senate District 23	Kotlikoff for President
+CO Senate District 24 (Kotlikoff for President)	1	CO Senate District 24	Kotlikoff for President
+CO Senate District 25 (Kotlikoff for President)	1	CO Senate District 25	Kotlikoff for President
+CO Senate District 26 (Kotlikoff for President)	1	CO Senate District 26	Kotlikoff for President
+CO Senate District 27 (Kotlikoff for President)	1	CO Senate District 27	Kotlikoff for President
+CO Senate District 28 (Kotlikoff for President)	1	CO Senate District 28	Kotlikoff for President
+CO Senate District 29 (Kotlikoff for President)	1	CO Senate District 29	Kotlikoff for President
+CO Senate District 30 (Kotlikoff for President)	1	CO Senate District 30	Kotlikoff for President
+CO Senate District 31 (Kotlikoff for President)	1	CO Senate District 31	Kotlikoff for President
+CO Senate District 32 (Kotlikoff for President)	1	CO Senate District 32	Kotlikoff for President
+CO Senate District 33 (Kotlikoff for President)	1	CO Senate District 33	Kotlikoff for President
+CO Senate District 34 (Kotlikoff for President)	1	CO Senate District 34	Kotlikoff for President
+CO Senate District 35 (Kotlikoff for President)	1	CO Senate District 35	Kotlikoff for President
+US House CO District 1 (Kotlikoff for President)	1	US House CO District 1	Kotlikoff for President
+US House CO District 2 (Kotlikoff for President)	1	US House CO District 2	Kotlikoff for President
+US House CO District 3 (Kotlikoff for President)	1	US House CO District 3	Kotlikoff for President
+US House CO District 4 (Kotlikoff for President)	1	US House CO District 4	Kotlikoff for President
+US House CO District 5 (Kotlikoff for President)	1	US House CO District 5	Kotlikoff for President
+US House CO District 6 (Kotlikoff for President)	1	US House CO District 6	Kotlikoff for President
+US House CO District 7 (Kotlikoff for President)	1	US House CO District 7	Kotlikoff for President
+US President (CO) (Kotlikoff for President)	1	US President (CO)	Kotlikoff for President
+CO Governor (Kotlikoff for President)	1	CO Governor	Kotlikoff for President
+US Senate CO (Kotlikoff for President)	1	US Senate CO	Kotlikoff for President
+CO Attorney General (Kotlikoff for President)	1	CO Attorney General	Kotlikoff for President
+CO State Treasurer (Kotlikoff for President)	1	CO State Treasurer	Kotlikoff for President
+CO Secretary of State (Kotlikoff for President)	1	CO Secretary of State	Kotlikoff for President
+CO House District 1 (Independent People of Colorado)	1	CO House District 1	Independent People of Colorado
+CO House District 2 (Independent People of Colorado)	1	CO House District 2	Independent People of Colorado
+CO House District 3 (Independent People of Colorado)	1	CO House District 3	Independent People of Colorado
+CO House District 4 (Independent People of Colorado)	1	CO House District 4	Independent People of Colorado
+CO House District 5 (Independent People of Colorado)	1	CO House District 5	Independent People of Colorado
+CO House District 6 (Independent People of Colorado)	1	CO House District 6	Independent People of Colorado
+CO House District 7 (Independent People of Colorado)	1	CO House District 7	Independent People of Colorado
+CO House District 8 (Independent People of Colorado)	1	CO House District 8	Independent People of Colorado
+CO House District 9 (Independent People of Colorado)	1	CO House District 9	Independent People of Colorado
+CO House District 10 (Independent People of Colorado)	1	CO House District 10	Independent People of Colorado
+CO House District 11 (Independent People of Colorado)	1	CO House District 11	Independent People of Colorado
+CO House District 12 (Independent People of Colorado)	1	CO House District 12	Independent People of Colorado
+CO House District 13 (Independent People of Colorado)	1	CO House District 13	Independent People of Colorado
+CO House District 14 (Independent People of Colorado)	1	CO House District 14	Independent People of Colorado
+CO House District 15 (Independent People of Colorado)	1	CO House District 15	Independent People of Colorado
+CO House District 16 (Independent People of Colorado)	1	CO House District 16	Independent People of Colorado
+CO House District 17 (Independent People of Colorado)	1	CO House District 17	Independent People of Colorado
+CO House District 18 (Independent People of Colorado)	1	CO House District 18	Independent People of Colorado
+CO House District 19 (Independent People of Colorado)	1	CO House District 19	Independent People of Colorado
+CO House District 20 (Independent People of Colorado)	1	CO House District 20	Independent People of Colorado
+CO House District 21 (Independent People of Colorado)	1	CO House District 21	Independent People of Colorado
+CO House District 22 (Independent People of Colorado)	1	CO House District 22	Independent People of Colorado
+CO House District 23 (Independent People of Colorado)	1	CO House District 23	Independent People of Colorado
+CO House District 24 (Independent People of Colorado)	1	CO House District 24	Independent People of Colorado
+CO House District 25 (Independent People of Colorado)	1	CO House District 25	Independent People of Colorado
+CO House District 26 (Independent People of Colorado)	1	CO House District 26	Independent People of Colorado
+CO House District 27 (Independent People of Colorado)	1	CO House District 27	Independent People of Colorado
+CO House District 28 (Independent People of Colorado)	1	CO House District 28	Independent People of Colorado
+CO House District 29 (Independent People of Colorado)	1	CO House District 29	Independent People of Colorado
+CO House District 30 (Independent People of Colorado)	1	CO House District 30	Independent People of Colorado
+CO House District 31 (Independent People of Colorado)	1	CO House District 31	Independent People of Colorado
+CO House District 32 (Independent People of Colorado)	1	CO House District 32	Independent People of Colorado
+CO House District 33 (Independent People of Colorado)	1	CO House District 33	Independent People of Colorado
+CO House District 34 (Independent People of Colorado)	1	CO House District 34	Independent People of Colorado
+CO House District 35 (Independent People of Colorado)	1	CO House District 35	Independent People of Colorado
+CO House District 36 (Independent People of Colorado)	1	CO House District 36	Independent People of Colorado
+CO House District 37 (Independent People of Colorado)	1	CO House District 37	Independent People of Colorado
+CO House District 38 (Independent People of Colorado)	1	CO House District 38	Independent People of Colorado
+CO House District 39 (Independent People of Colorado)	1	CO House District 39	Independent People of Colorado
+CO House District 40 (Independent People of Colorado)	1	CO House District 40	Independent People of Colorado
+CO House District 41 (Independent People of Colorado)	1	CO House District 41	Independent People of Colorado
+CO House District 42 (Independent People of Colorado)	1	CO House District 42	Independent People of Colorado
+CO House District 43 (Independent People of Colorado)	1	CO House District 43	Independent People of Colorado
+CO House District 44 (Independent People of Colorado)	1	CO House District 44	Independent People of Colorado
+CO House District 45 (Independent People of Colorado)	1	CO House District 45	Independent People of Colorado
+CO House District 46 (Independent People of Colorado)	1	CO House District 46	Independent People of Colorado
+CO House District 47 (Independent People of Colorado)	1	CO House District 47	Independent People of Colorado
+CO House District 48 (Independent People of Colorado)	1	CO House District 48	Independent People of Colorado
+CO House District 49 (Independent People of Colorado)	1	CO House District 49	Independent People of Colorado
+CO House District 50 (Independent People of Colorado)	1	CO House District 50	Independent People of Colorado
+CO House District 51 (Independent People of Colorado)	1	CO House District 51	Independent People of Colorado
+CO House District 52 (Independent People of Colorado)	1	CO House District 52	Independent People of Colorado
+CO House District 53 (Independent People of Colorado)	1	CO House District 53	Independent People of Colorado
+CO House District 54 (Independent People of Colorado)	1	CO House District 54	Independent People of Colorado
+CO House District 55 (Independent People of Colorado)	1	CO House District 55	Independent People of Colorado
+CO House District 56 (Independent People of Colorado)	1	CO House District 56	Independent People of Colorado
+CO House District 57 (Independent People of Colorado)	1	CO House District 57	Independent People of Colorado
+CO House District 58 (Independent People of Colorado)	1	CO House District 58	Independent People of Colorado
+CO House District 59 (Independent People of Colorado)	1	CO House District 59	Independent People of Colorado
+CO House District 60 (Independent People of Colorado)	1	CO House District 60	Independent People of Colorado
+CO House District 61 (Independent People of Colorado)	1	CO House District 61	Independent People of Colorado
+CO House District 62 (Independent People of Colorado)	1	CO House District 62	Independent People of Colorado
+CO House District 63 (Independent People of Colorado)	1	CO House District 63	Independent People of Colorado
+CO House District 64 (Independent People of Colorado)	1	CO House District 64	Independent People of Colorado
+CO House District 65 (Independent People of Colorado)	1	CO House District 65	Independent People of Colorado
+CO Senate District 1 (Independent People of Colorado)	1	CO Senate District 1	Independent People of Colorado
+CO Senate District 2 (Independent People of Colorado)	1	CO Senate District 2	Independent People of Colorado
+CO Senate District 3 (Independent People of Colorado)	1	CO Senate District 3	Independent People of Colorado
+CO Senate District 4 (Independent People of Colorado)	1	CO Senate District 4	Independent People of Colorado
+CO Senate District 5 (Independent People of Colorado)	1	CO Senate District 5	Independent People of Colorado
+CO Senate District 6 (Independent People of Colorado)	1	CO Senate District 6	Independent People of Colorado
+CO Senate District 7 (Independent People of Colorado)	1	CO Senate District 7	Independent People of Colorado
+CO Senate District 8 (Independent People of Colorado)	1	CO Senate District 8	Independent People of Colorado
+CO Senate District 9 (Independent People of Colorado)	1	CO Senate District 9	Independent People of Colorado
+CO Senate District 10 (Independent People of Colorado)	1	CO Senate District 10	Independent People of Colorado
+CO Senate District 11 (Independent People of Colorado)	1	CO Senate District 11	Independent People of Colorado
+CO Senate District 12 (Independent People of Colorado)	1	CO Senate District 12	Independent People of Colorado
+CO Senate District 13 (Independent People of Colorado)	1	CO Senate District 13	Independent People of Colorado
+CO Senate District 14 (Independent People of Colorado)	1	CO Senate District 14	Independent People of Colorado
+CO Senate District 15 (Independent People of Colorado)	1	CO Senate District 15	Independent People of Colorado
+CO Senate District 16 (Independent People of Colorado)	1	CO Senate District 16	Independent People of Colorado
+CO Senate District 17 (Independent People of Colorado)	1	CO Senate District 17	Independent People of Colorado
+CO Senate District 18 (Independent People of Colorado)	1	CO Senate District 18	Independent People of Colorado
+CO Senate District 19 (Independent People of Colorado)	1	CO Senate District 19	Independent People of Colorado
+CO Senate District 20 (Independent People of Colorado)	1	CO Senate District 20	Independent People of Colorado
+CO Senate District 21 (Independent People of Colorado)	1	CO Senate District 21	Independent People of Colorado
+CO Senate District 22 (Independent People of Colorado)	1	CO Senate District 22	Independent People of Colorado
+CO Senate District 23 (Independent People of Colorado)	1	CO Senate District 23	Independent People of Colorado
+CO Senate District 24 (Independent People of Colorado)	1	CO Senate District 24	Independent People of Colorado
+CO Senate District 25 (Independent People of Colorado)	1	CO Senate District 25	Independent People of Colorado
+CO Senate District 26 (Independent People of Colorado)	1	CO Senate District 26	Independent People of Colorado
+CO Senate District 27 (Independent People of Colorado)	1	CO Senate District 27	Independent People of Colorado
+CO Senate District 28 (Independent People of Colorado)	1	CO Senate District 28	Independent People of Colorado
+CO Senate District 29 (Independent People of Colorado)	1	CO Senate District 29	Independent People of Colorado
+CO Senate District 30 (Independent People of Colorado)	1	CO Senate District 30	Independent People of Colorado
+CO Senate District 31 (Independent People of Colorado)	1	CO Senate District 31	Independent People of Colorado
+CO Senate District 32 (Independent People of Colorado)	1	CO Senate District 32	Independent People of Colorado
+CO Senate District 33 (Independent People of Colorado)	1	CO Senate District 33	Independent People of Colorado
+CO Senate District 34 (Independent People of Colorado)	1	CO Senate District 34	Independent People of Colorado
+CO Senate District 35 (Independent People of Colorado)	1	CO Senate District 35	Independent People of Colorado
+US House CO District 1 (Independent People of Colorado)	1	US House CO District 1	Independent People of Colorado
+US House CO District 2 (Independent People of Colorado)	1	US House CO District 2	Independent People of Colorado
+US House CO District 3 (Independent People of Colorado)	1	US House CO District 3	Independent People of Colorado
+US House CO District 4 (Independent People of Colorado)	1	US House CO District 4	Independent People of Colorado
+US House CO District 5 (Independent People of Colorado)	1	US House CO District 5	Independent People of Colorado
+US House CO District 6 (Independent People of Colorado)	1	US House CO District 6	Independent People of Colorado
+US House CO District 7 (Independent People of Colorado)	1	US House CO District 7	Independent People of Colorado
+US President (CO) (Independent People of Colorado)	1	US President (CO)	Independent People of Colorado
+CO Governor (Independent People of Colorado)	1	CO Governor	Independent People of Colorado
+US Senate CO (Independent People of Colorado)	1	US Senate CO	Independent People of Colorado
+CO Attorney General (Independent People of Colorado)	1	CO Attorney General	Independent People of Colorado
+CO State Treasurer (Independent People of Colorado)	1	CO State Treasurer	Independent People of Colorado
+CO Secretary of State (Independent People of Colorado)	1	CO Secretary of State	Independent People of Colorado
+CO House District 1 (Independent American Party)	1	CO House District 1	Independent American Party
+CO House District 2 (Independent American Party)	1	CO House District 2	Independent American Party
+CO House District 3 (Independent American Party)	1	CO House District 3	Independent American Party
+CO House District 4 (Independent American Party)	1	CO House District 4	Independent American Party
+CO House District 5 (Independent American Party)	1	CO House District 5	Independent American Party
+CO House District 6 (Independent American Party)	1	CO House District 6	Independent American Party
+CO House District 7 (Independent American Party)	1	CO House District 7	Independent American Party
+CO House District 8 (Independent American Party)	1	CO House District 8	Independent American Party
+CO House District 9 (Independent American Party)	1	CO House District 9	Independent American Party
+CO House District 10 (Independent American Party)	1	CO House District 10	Independent American Party
+CO House District 11 (Independent American Party)	1	CO House District 11	Independent American Party
+CO House District 12 (Independent American Party)	1	CO House District 12	Independent American Party
+CO House District 13 (Independent American Party)	1	CO House District 13	Independent American Party
+CO House District 14 (Independent American Party)	1	CO House District 14	Independent American Party
+CO House District 15 (Independent American Party)	1	CO House District 15	Independent American Party
+CO House District 16 (Independent American Party)	1	CO House District 16	Independent American Party
+CO House District 17 (Independent American Party)	1	CO House District 17	Independent American Party
+CO House District 18 (Independent American Party)	1	CO House District 18	Independent American Party
+CO House District 19 (Independent American Party)	1	CO House District 19	Independent American Party
+CO House District 20 (Independent American Party)	1	CO House District 20	Independent American Party
+CO House District 21 (Independent American Party)	1	CO House District 21	Independent American Party
+CO House District 22 (Independent American Party)	1	CO House District 22	Independent American Party
+CO House District 23 (Independent American Party)	1	CO House District 23	Independent American Party
+CO House District 24 (Independent American Party)	1	CO House District 24	Independent American Party
+CO House District 25 (Independent American Party)	1	CO House District 25	Independent American Party
+CO House District 26 (Independent American Party)	1	CO House District 26	Independent American Party
+CO House District 27 (Independent American Party)	1	CO House District 27	Independent American Party
+CO House District 28 (Independent American Party)	1	CO House District 28	Independent American Party
+CO House District 29 (Independent American Party)	1	CO House District 29	Independent American Party
+CO House District 30 (Independent American Party)	1	CO House District 30	Independent American Party
+CO House District 31 (Independent American Party)	1	CO House District 31	Independent American Party
+CO House District 32 (Independent American Party)	1	CO House District 32	Independent American Party
+CO House District 33 (Independent American Party)	1	CO House District 33	Independent American Party
+CO House District 34 (Independent American Party)	1	CO House District 34	Independent American Party
+CO House District 35 (Independent American Party)	1	CO House District 35	Independent American Party
+CO House District 36 (Independent American Party)	1	CO House District 36	Independent American Party
+CO House District 37 (Independent American Party)	1	CO House District 37	Independent American Party
+CO House District 38 (Independent American Party)	1	CO House District 38	Independent American Party
+CO House District 39 (Independent American Party)	1	CO House District 39	Independent American Party
+CO House District 40 (Independent American Party)	1	CO House District 40	Independent American Party
+CO House District 41 (Independent American Party)	1	CO House District 41	Independent American Party
+CO House District 42 (Independent American Party)	1	CO House District 42	Independent American Party
+CO House District 43 (Independent American Party)	1	CO House District 43	Independent American Party
+CO House District 44 (Independent American Party)	1	CO House District 44	Independent American Party
+CO House District 45 (Independent American Party)	1	CO House District 45	Independent American Party
+CO House District 46 (Independent American Party)	1	CO House District 46	Independent American Party
+CO House District 47 (Independent American Party)	1	CO House District 47	Independent American Party
+CO House District 48 (Independent American Party)	1	CO House District 48	Independent American Party
+CO House District 49 (Independent American Party)	1	CO House District 49	Independent American Party
+CO House District 50 (Independent American Party)	1	CO House District 50	Independent American Party
+CO House District 51 (Independent American Party)	1	CO House District 51	Independent American Party
+CO House District 52 (Independent American Party)	1	CO House District 52	Independent American Party
+CO House District 53 (Independent American Party)	1	CO House District 53	Independent American Party
+CO House District 54 (Independent American Party)	1	CO House District 54	Independent American Party
+CO House District 55 (Independent American Party)	1	CO House District 55	Independent American Party
+CO House District 56 (Independent American Party)	1	CO House District 56	Independent American Party
+CO House District 57 (Independent American Party)	1	CO House District 57	Independent American Party
+CO House District 58 (Independent American Party)	1	CO House District 58	Independent American Party
+CO House District 59 (Independent American Party)	1	CO House District 59	Independent American Party
+CO House District 60 (Independent American Party)	1	CO House District 60	Independent American Party
+CO House District 61 (Independent American Party)	1	CO House District 61	Independent American Party
+CO House District 62 (Independent American Party)	1	CO House District 62	Independent American Party
+CO House District 63 (Independent American Party)	1	CO House District 63	Independent American Party
+CO House District 64 (Independent American Party)	1	CO House District 64	Independent American Party
+CO House District 65 (Independent American Party)	1	CO House District 65	Independent American Party
+CO Senate District 1 (Independent American Party)	1	CO Senate District 1	Independent American Party
+CO Senate District 2 (Independent American Party)	1	CO Senate District 2	Independent American Party
+CO Senate District 3 (Independent American Party)	1	CO Senate District 3	Independent American Party
+CO Senate District 4 (Independent American Party)	1	CO Senate District 4	Independent American Party
+CO Senate District 5 (Independent American Party)	1	CO Senate District 5	Independent American Party
+CO Senate District 6 (Independent American Party)	1	CO Senate District 6	Independent American Party
+CO Senate District 7 (Independent American Party)	1	CO Senate District 7	Independent American Party
+CO Senate District 8 (Independent American Party)	1	CO Senate District 8	Independent American Party
+CO Senate District 9 (Independent American Party)	1	CO Senate District 9	Independent American Party
+CO Senate District 10 (Independent American Party)	1	CO Senate District 10	Independent American Party
+CO Senate District 11 (Independent American Party)	1	CO Senate District 11	Independent American Party
+CO Senate District 12 (Independent American Party)	1	CO Senate District 12	Independent American Party
+CO Senate District 13 (Independent American Party)	1	CO Senate District 13	Independent American Party
+CO Senate District 14 (Independent American Party)	1	CO Senate District 14	Independent American Party
+CO Senate District 15 (Independent American Party)	1	CO Senate District 15	Independent American Party
+CO Senate District 16 (Independent American Party)	1	CO Senate District 16	Independent American Party
+CO Senate District 17 (Independent American Party)	1	CO Senate District 17	Independent American Party
+CO Senate District 18 (Independent American Party)	1	CO Senate District 18	Independent American Party
+CO Senate District 19 (Independent American Party)	1	CO Senate District 19	Independent American Party
+CO Senate District 20 (Independent American Party)	1	CO Senate District 20	Independent American Party
+CO Senate District 21 (Independent American Party)	1	CO Senate District 21	Independent American Party
+CO Senate District 22 (Independent American Party)	1	CO Senate District 22	Independent American Party
+CO Senate District 23 (Independent American Party)	1	CO Senate District 23	Independent American Party
+CO Senate District 24 (Independent American Party)	1	CO Senate District 24	Independent American Party
+CO Senate District 25 (Independent American Party)	1	CO Senate District 25	Independent American Party
+CO Senate District 26 (Independent American Party)	1	CO Senate District 26	Independent American Party
+CO Senate District 27 (Independent American Party)	1	CO Senate District 27	Independent American Party
+CO Senate District 28 (Independent American Party)	1	CO Senate District 28	Independent American Party
+CO Senate District 29 (Independent American Party)	1	CO Senate District 29	Independent American Party
+CO Senate District 30 (Independent American Party)	1	CO Senate District 30	Independent American Party
+CO Senate District 31 (Independent American Party)	1	CO Senate District 31	Independent American Party
+CO Senate District 32 (Independent American Party)	1	CO Senate District 32	Independent American Party
+CO Senate District 33 (Independent American Party)	1	CO Senate District 33	Independent American Party
+CO Senate District 34 (Independent American Party)	1	CO Senate District 34	Independent American Party
+CO Senate District 35 (Independent American Party)	1	CO Senate District 35	Independent American Party
+US House CO District 1 (Independent American Party)	1	US House CO District 1	Independent American Party
+US House CO District 2 (Independent American Party)	1	US House CO District 2	Independent American Party
+US House CO District 3 (Independent American Party)	1	US House CO District 3	Independent American Party
+US House CO District 4 (Independent American Party)	1	US House CO District 4	Independent American Party
+US House CO District 5 (Independent American Party)	1	US House CO District 5	Independent American Party
+US House CO District 6 (Independent American Party)	1	US House CO District 6	Independent American Party
+US House CO District 7 (Independent American Party)	1	US House CO District 7	Independent American Party
+US President (CO) (Independent American Party)	1	US President (CO)	Independent American Party
+CO Governor (Independent American Party)	1	CO Governor	Independent American Party
+US Senate CO (Independent American Party)	1	US Senate CO	Independent American Party
+CO Attorney General (Independent American Party)	1	CO Attorney General	Independent American Party
+CO State Treasurer (Independent American Party)	1	CO State Treasurer	Independent American Party
+CO Secretary of State (Independent American Party)	1	CO Secretary of State	Independent American Party
+CO House District 1 (Green / Democratic)	1	CO House District 1	Green / Democratic
+CO House District 2 (Green / Democratic)	1	CO House District 2	Green / Democratic
+CO House District 3 (Green / Democratic)	1	CO House District 3	Green / Democratic
+CO House District 4 (Green / Democratic)	1	CO House District 4	Green / Democratic
+CO House District 5 (Green / Democratic)	1	CO House District 5	Green / Democratic
+CO House District 6 (Green / Democratic)	1	CO House District 6	Green / Democratic
+CO House District 7 (Green / Democratic)	1	CO House District 7	Green / Democratic
+CO House District 8 (Green / Democratic)	1	CO House District 8	Green / Democratic
+CO House District 9 (Green / Democratic)	1	CO House District 9	Green / Democratic
+CO House District 10 (Green / Democratic)	1	CO House District 10	Green / Democratic
+CO House District 11 (Green / Democratic)	1	CO House District 11	Green / Democratic
+CO House District 12 (Green / Democratic)	1	CO House District 12	Green / Democratic
+CO House District 13 (Green / Democratic)	1	CO House District 13	Green / Democratic
+CO House District 14 (Green / Democratic)	1	CO House District 14	Green / Democratic
+CO House District 15 (Green / Democratic)	1	CO House District 15	Green / Democratic
+CO House District 16 (Green / Democratic)	1	CO House District 16	Green / Democratic
+CO House District 17 (Green / Democratic)	1	CO House District 17	Green / Democratic
+CO House District 18 (Green / Democratic)	1	CO House District 18	Green / Democratic
+CO House District 19 (Green / Democratic)	1	CO House District 19	Green / Democratic
+CO House District 20 (Green / Democratic)	1	CO House District 20	Green / Democratic
+CO House District 21 (Green / Democratic)	1	CO House District 21	Green / Democratic
+CO House District 22 (Green / Democratic)	1	CO House District 22	Green / Democratic
+CO House District 23 (Green / Democratic)	1	CO House District 23	Green / Democratic
+CO House District 24 (Green / Democratic)	1	CO House District 24	Green / Democratic
+CO House District 25 (Green / Democratic)	1	CO House District 25	Green / Democratic
+CO House District 26 (Green / Democratic)	1	CO House District 26	Green / Democratic
+CO House District 27 (Green / Democratic)	1	CO House District 27	Green / Democratic
+CO House District 28 (Green / Democratic)	1	CO House District 28	Green / Democratic
+CO House District 29 (Green / Democratic)	1	CO House District 29	Green / Democratic
+CO House District 30 (Green / Democratic)	1	CO House District 30	Green / Democratic
+CO House District 31 (Green / Democratic)	1	CO House District 31	Green / Democratic
+CO House District 32 (Green / Democratic)	1	CO House District 32	Green / Democratic
+CO House District 33 (Green / Democratic)	1	CO House District 33	Green / Democratic
+CO House District 34 (Green / Democratic)	1	CO House District 34	Green / Democratic
+CO House District 35 (Green / Democratic)	1	CO House District 35	Green / Democratic
+CO House District 36 (Green / Democratic)	1	CO House District 36	Green / Democratic
+CO House District 37 (Green / Democratic)	1	CO House District 37	Green / Democratic
+CO House District 38 (Green / Democratic)	1	CO House District 38	Green / Democratic
+CO House District 39 (Green / Democratic)	1	CO House District 39	Green / Democratic
+CO House District 40 (Green / Democratic)	1	CO House District 40	Green / Democratic
+CO House District 41 (Green / Democratic)	1	CO House District 41	Green / Democratic
+CO House District 42 (Green / Democratic)	1	CO House District 42	Green / Democratic
+CO House District 43 (Green / Democratic)	1	CO House District 43	Green / Democratic
+CO House District 44 (Green / Democratic)	1	CO House District 44	Green / Democratic
+CO House District 45 (Green / Democratic)	1	CO House District 45	Green / Democratic
+CO House District 46 (Green / Democratic)	1	CO House District 46	Green / Democratic
+CO House District 47 (Green / Democratic)	1	CO House District 47	Green / Democratic
+CO House District 48 (Green / Democratic)	1	CO House District 48	Green / Democratic
+CO House District 49 (Green / Democratic)	1	CO House District 49	Green / Democratic
+CO House District 50 (Green / Democratic)	1	CO House District 50	Green / Democratic
+CO House District 51 (Green / Democratic)	1	CO House District 51	Green / Democratic
+CO House District 52 (Green / Democratic)	1	CO House District 52	Green / Democratic
+CO House District 53 (Green / Democratic)	1	CO House District 53	Green / Democratic
+CO House District 54 (Green / Democratic)	1	CO House District 54	Green / Democratic
+CO House District 55 (Green / Democratic)	1	CO House District 55	Green / Democratic
+CO House District 56 (Green / Democratic)	1	CO House District 56	Green / Democratic
+CO House District 57 (Green / Democratic)	1	CO House District 57	Green / Democratic
+CO House District 58 (Green / Democratic)	1	CO House District 58	Green / Democratic
+CO House District 59 (Green / Democratic)	1	CO House District 59	Green / Democratic
+CO House District 60 (Green / Democratic)	1	CO House District 60	Green / Democratic
+CO House District 61 (Green / Democratic)	1	CO House District 61	Green / Democratic
+CO House District 62 (Green / Democratic)	1	CO House District 62	Green / Democratic
+CO House District 63 (Green / Democratic)	1	CO House District 63	Green / Democratic
+CO House District 64 (Green / Democratic)	1	CO House District 64	Green / Democratic
+CO House District 65 (Green / Democratic)	1	CO House District 65	Green / Democratic
+CO Senate District 1 (Green / Democratic)	1	CO Senate District 1	Green / Democratic
+CO Senate District 2 (Green / Democratic)	1	CO Senate District 2	Green / Democratic
+CO Senate District 3 (Green / Democratic)	1	CO Senate District 3	Green / Democratic
+CO Senate District 4 (Green / Democratic)	1	CO Senate District 4	Green / Democratic
+CO Senate District 5 (Green / Democratic)	1	CO Senate District 5	Green / Democratic
+CO Senate District 6 (Green / Democratic)	1	CO Senate District 6	Green / Democratic
+CO Senate District 7 (Green / Democratic)	1	CO Senate District 7	Green / Democratic
+CO Senate District 8 (Green / Democratic)	1	CO Senate District 8	Green / Democratic
+CO Senate District 9 (Green / Democratic)	1	CO Senate District 9	Green / Democratic
+CO Senate District 10 (Green / Democratic)	1	CO Senate District 10	Green / Democratic
+CO Senate District 11 (Green / Democratic)	1	CO Senate District 11	Green / Democratic
+CO Senate District 12 (Green / Democratic)	1	CO Senate District 12	Green / Democratic
+CO Senate District 13 (Green / Democratic)	1	CO Senate District 13	Green / Democratic
+CO Senate District 14 (Green / Democratic)	1	CO Senate District 14	Green / Democratic
+CO Senate District 15 (Green / Democratic)	1	CO Senate District 15	Green / Democratic
+CO Senate District 16 (Green / Democratic)	1	CO Senate District 16	Green / Democratic
+CO Senate District 17 (Green / Democratic)	1	CO Senate District 17	Green / Democratic
+CO Senate District 18 (Green / Democratic)	1	CO Senate District 18	Green / Democratic
+CO Senate District 19 (Green / Democratic)	1	CO Senate District 19	Green / Democratic
+CO Senate District 20 (Green / Democratic)	1	CO Senate District 20	Green / Democratic
+CO Senate District 21 (Green / Democratic)	1	CO Senate District 21	Green / Democratic
+CO Senate District 22 (Green / Democratic)	1	CO Senate District 22	Green / Democratic
+CO Senate District 23 (Green / Democratic)	1	CO Senate District 23	Green / Democratic
+CO Senate District 24 (Green / Democratic)	1	CO Senate District 24	Green / Democratic
+CO Senate District 25 (Green / Democratic)	1	CO Senate District 25	Green / Democratic
+CO Senate District 26 (Green / Democratic)	1	CO Senate District 26	Green / Democratic
+CO Senate District 27 (Green / Democratic)	1	CO Senate District 27	Green / Democratic
+CO Senate District 28 (Green / Democratic)	1	CO Senate District 28	Green / Democratic
+CO Senate District 29 (Green / Democratic)	1	CO Senate District 29	Green / Democratic
+CO Senate District 30 (Green / Democratic)	1	CO Senate District 30	Green / Democratic
+CO Senate District 31 (Green / Democratic)	1	CO Senate District 31	Green / Democratic
+CO Senate District 32 (Green / Democratic)	1	CO Senate District 32	Green / Democratic
+CO Senate District 33 (Green / Democratic)	1	CO Senate District 33	Green / Democratic
+CO Senate District 34 (Green / Democratic)	1	CO Senate District 34	Green / Democratic
+CO Senate District 35 (Green / Democratic)	1	CO Senate District 35	Green / Democratic
+US House CO District 1 (Green / Democratic)	1	US House CO District 1	Green / Democratic
+US House CO District 2 (Green / Democratic)	1	US House CO District 2	Green / Democratic
+US House CO District 3 (Green / Democratic)	1	US House CO District 3	Green / Democratic
+US House CO District 4 (Green / Democratic)	1	US House CO District 4	Green / Democratic
+US House CO District 5 (Green / Democratic)	1	US House CO District 5	Green / Democratic
+US House CO District 6 (Green / Democratic)	1	US House CO District 6	Green / Democratic
+US House CO District 7 (Green / Democratic)	1	US House CO District 7	Green / Democratic
+US President (CO) (Green / Democratic)	1	US President (CO)	Green / Democratic
+CO Governor (Green / Democratic)	1	CO Governor	Green / Democratic
+US Senate CO (Green / Democratic)	1	US Senate CO	Green / Democratic
+CO Attorney General (Green / Democratic)	1	CO Attorney General	Green / Democratic
+CO State Treasurer (Green / Democratic)	1	CO State Treasurer	Green / Democratic
+CO Secretary of State (Green / Democratic)	1	CO Secretary of State	Green / Democratic
+CO House District 1 (American Solidarity Party)	1	CO House District 1	American Solidarity Party
+CO House District 2 (American Solidarity Party)	1	CO House District 2	American Solidarity Party
+CO House District 3 (American Solidarity Party)	1	CO House District 3	American Solidarity Party
+CO House District 4 (American Solidarity Party)	1	CO House District 4	American Solidarity Party
+CO House District 5 (American Solidarity Party)	1	CO House District 5	American Solidarity Party
+CO House District 6 (American Solidarity Party)	1	CO House District 6	American Solidarity Party
+CO House District 7 (American Solidarity Party)	1	CO House District 7	American Solidarity Party
+CO House District 8 (American Solidarity Party)	1	CO House District 8	American Solidarity Party
+CO House District 9 (American Solidarity Party)	1	CO House District 9	American Solidarity Party
+CO House District 10 (American Solidarity Party)	1	CO House District 10	American Solidarity Party
+CO House District 11 (American Solidarity Party)	1	CO House District 11	American Solidarity Party
+CO House District 12 (American Solidarity Party)	1	CO House District 12	American Solidarity Party
+CO House District 13 (American Solidarity Party)	1	CO House District 13	American Solidarity Party
+CO House District 14 (American Solidarity Party)	1	CO House District 14	American Solidarity Party
+CO House District 15 (American Solidarity Party)	1	CO House District 15	American Solidarity Party
+CO House District 16 (American Solidarity Party)	1	CO House District 16	American Solidarity Party
+CO House District 17 (American Solidarity Party)	1	CO House District 17	American Solidarity Party
+CO House District 18 (American Solidarity Party)	1	CO House District 18	American Solidarity Party
+CO House District 19 (American Solidarity Party)	1	CO House District 19	American Solidarity Party
+CO House District 20 (American Solidarity Party)	1	CO House District 20	American Solidarity Party
+CO House District 21 (American Solidarity Party)	1	CO House District 21	American Solidarity Party
+CO House District 22 (American Solidarity Party)	1	CO House District 22	American Solidarity Party
+CO House District 23 (American Solidarity Party)	1	CO House District 23	American Solidarity Party
+CO House District 24 (American Solidarity Party)	1	CO House District 24	American Solidarity Party
+CO House District 25 (American Solidarity Party)	1	CO House District 25	American Solidarity Party
+CO House District 26 (American Solidarity Party)	1	CO House District 26	American Solidarity Party
+CO House District 27 (American Solidarity Party)	1	CO House District 27	American Solidarity Party
+CO House District 28 (American Solidarity Party)	1	CO House District 28	American Solidarity Party
+CO House District 29 (American Solidarity Party)	1	CO House District 29	American Solidarity Party
+CO House District 30 (American Solidarity Party)	1	CO House District 30	American Solidarity Party
+CO House District 31 (American Solidarity Party)	1	CO House District 31	American Solidarity Party
+CO House District 32 (American Solidarity Party)	1	CO House District 32	American Solidarity Party
+CO House District 33 (American Solidarity Party)	1	CO House District 33	American Solidarity Party
+CO House District 34 (American Solidarity Party)	1	CO House District 34	American Solidarity Party
+CO House District 35 (American Solidarity Party)	1	CO House District 35	American Solidarity Party
+CO House District 36 (American Solidarity Party)	1	CO House District 36	American Solidarity Party
+CO House District 37 (American Solidarity Party)	1	CO House District 37	American Solidarity Party
+CO House District 38 (American Solidarity Party)	1	CO House District 38	American Solidarity Party
+CO House District 39 (American Solidarity Party)	1	CO House District 39	American Solidarity Party
+CO House District 40 (American Solidarity Party)	1	CO House District 40	American Solidarity Party
+CO House District 41 (American Solidarity Party)	1	CO House District 41	American Solidarity Party
+CO House District 42 (American Solidarity Party)	1	CO House District 42	American Solidarity Party
+CO House District 43 (American Solidarity Party)	1	CO House District 43	American Solidarity Party
+CO House District 44 (American Solidarity Party)	1	CO House District 44	American Solidarity Party
+CO House District 45 (American Solidarity Party)	1	CO House District 45	American Solidarity Party
+CO House District 46 (American Solidarity Party)	1	CO House District 46	American Solidarity Party
+CO House District 47 (American Solidarity Party)	1	CO House District 47	American Solidarity Party
+CO House District 48 (American Solidarity Party)	1	CO House District 48	American Solidarity Party
+CO House District 49 (American Solidarity Party)	1	CO House District 49	American Solidarity Party
+CO House District 50 (American Solidarity Party)	1	CO House District 50	American Solidarity Party
+CO House District 51 (American Solidarity Party)	1	CO House District 51	American Solidarity Party
+CO House District 52 (American Solidarity Party)	1	CO House District 52	American Solidarity Party
+CO House District 53 (American Solidarity Party)	1	CO House District 53	American Solidarity Party
+CO House District 54 (American Solidarity Party)	1	CO House District 54	American Solidarity Party
+CO House District 55 (American Solidarity Party)	1	CO House District 55	American Solidarity Party
+CO House District 56 (American Solidarity Party)	1	CO House District 56	American Solidarity Party
+CO House District 57 (American Solidarity Party)	1	CO House District 57	American Solidarity Party
+CO House District 58 (American Solidarity Party)	1	CO House District 58	American Solidarity Party
+CO House District 59 (American Solidarity Party)	1	CO House District 59	American Solidarity Party
+CO House District 60 (American Solidarity Party)	1	CO House District 60	American Solidarity Party
+CO House District 61 (American Solidarity Party)	1	CO House District 61	American Solidarity Party
+CO House District 62 (American Solidarity Party)	1	CO House District 62	American Solidarity Party
+CO House District 63 (American Solidarity Party)	1	CO House District 63	American Solidarity Party
+CO House District 64 (American Solidarity Party)	1	CO House District 64	American Solidarity Party
+CO House District 65 (American Solidarity Party)	1	CO House District 65	American Solidarity Party
+CO Senate District 1 (American Solidarity Party)	1	CO Senate District 1	American Solidarity Party
+CO Senate District 2 (American Solidarity Party)	1	CO Senate District 2	American Solidarity Party
+CO Senate District 3 (American Solidarity Party)	1	CO Senate District 3	American Solidarity Party
+CO Senate District 4 (American Solidarity Party)	1	CO Senate District 4	American Solidarity Party
+CO Senate District 5 (American Solidarity Party)	1	CO Senate District 5	American Solidarity Party
+CO Senate District 6 (American Solidarity Party)	1	CO Senate District 6	American Solidarity Party
+CO Senate District 7 (American Solidarity Party)	1	CO Senate District 7	American Solidarity Party
+CO Senate District 8 (American Solidarity Party)	1	CO Senate District 8	American Solidarity Party
+CO Senate District 9 (American Solidarity Party)	1	CO Senate District 9	American Solidarity Party
+CO Senate District 10 (American Solidarity Party)	1	CO Senate District 10	American Solidarity Party
+CO Senate District 11 (American Solidarity Party)	1	CO Senate District 11	American Solidarity Party
+CO Senate District 12 (American Solidarity Party)	1	CO Senate District 12	American Solidarity Party
+CO Senate District 13 (American Solidarity Party)	1	CO Senate District 13	American Solidarity Party
+CO Senate District 14 (American Solidarity Party)	1	CO Senate District 14	American Solidarity Party
+CO Senate District 15 (American Solidarity Party)	1	CO Senate District 15	American Solidarity Party
+CO Senate District 16 (American Solidarity Party)	1	CO Senate District 16	American Solidarity Party
+CO Senate District 17 (American Solidarity Party)	1	CO Senate District 17	American Solidarity Party
+CO Senate District 18 (American Solidarity Party)	1	CO Senate District 18	American Solidarity Party
+CO Senate District 19 (American Solidarity Party)	1	CO Senate District 19	American Solidarity Party
+CO Senate District 20 (American Solidarity Party)	1	CO Senate District 20	American Solidarity Party
+CO Senate District 21 (American Solidarity Party)	1	CO Senate District 21	American Solidarity Party
+CO Senate District 22 (American Solidarity Party)	1	CO Senate District 22	American Solidarity Party
+CO Senate District 23 (American Solidarity Party)	1	CO Senate District 23	American Solidarity Party
+CO Senate District 24 (American Solidarity Party)	1	CO Senate District 24	American Solidarity Party
+CO Senate District 25 (American Solidarity Party)	1	CO Senate District 25	American Solidarity Party
+CO Senate District 26 (American Solidarity Party)	1	CO Senate District 26	American Solidarity Party
+CO Senate District 27 (American Solidarity Party)	1	CO Senate District 27	American Solidarity Party
+CO Senate District 28 (American Solidarity Party)	1	CO Senate District 28	American Solidarity Party
+CO Senate District 29 (American Solidarity Party)	1	CO Senate District 29	American Solidarity Party
+CO Senate District 30 (American Solidarity Party)	1	CO Senate District 30	American Solidarity Party
+CO Senate District 31 (American Solidarity Party)	1	CO Senate District 31	American Solidarity Party
+CO Senate District 32 (American Solidarity Party)	1	CO Senate District 32	American Solidarity Party
+CO Senate District 33 (American Solidarity Party)	1	CO Senate District 33	American Solidarity Party
+CO Senate District 34 (American Solidarity Party)	1	CO Senate District 34	American Solidarity Party
+CO Senate District 35 (American Solidarity Party)	1	CO Senate District 35	American Solidarity Party
+US House CO District 1 (American Solidarity Party)	1	US House CO District 1	American Solidarity Party
+US House CO District 2 (American Solidarity Party)	1	US House CO District 2	American Solidarity Party
+US House CO District 3 (American Solidarity Party)	1	US House CO District 3	American Solidarity Party
+US House CO District 4 (American Solidarity Party)	1	US House CO District 4	American Solidarity Party
+US House CO District 5 (American Solidarity Party)	1	US House CO District 5	American Solidarity Party
+US House CO District 6 (American Solidarity Party)	1	US House CO District 6	American Solidarity Party
+US House CO District 7 (American Solidarity Party)	1	US House CO District 7	American Solidarity Party
+US President (CO) (American Solidarity Party)	1	US President (CO)	American Solidarity Party
+CO Governor (American Solidarity Party)	1	CO Governor	American Solidarity Party
+US Senate CO (American Solidarity Party)	1	US Senate CO	American Solidarity Party
+CO Attorney General (American Solidarity Party)	1	CO Attorney General	American Solidarity Party
+CO State Treasurer (American Solidarity Party)	1	CO State Treasurer	American Solidarity Party
+CO Secretary of State (American Solidarity Party)	1	CO Secretary of State	American Solidarity Party
+CO House District 1 (American Delta Party)	1	CO House District 1	American Delta Party
+CO House District 2 (American Delta Party)	1	CO House District 2	American Delta Party
+CO House District 3 (American Delta Party)	1	CO House District 3	American Delta Party
+CO House District 4 (American Delta Party)	1	CO House District 4	American Delta Party
+CO House District 5 (American Delta Party)	1	CO House District 5	American Delta Party
+CO House District 6 (American Delta Party)	1	CO House District 6	American Delta Party
+CO House District 7 (American Delta Party)	1	CO House District 7	American Delta Party
+CO House District 8 (American Delta Party)	1	CO House District 8	American Delta Party
+CO House District 9 (American Delta Party)	1	CO House District 9	American Delta Party
+CO House District 10 (American Delta Party)	1	CO House District 10	American Delta Party
+CO House District 11 (American Delta Party)	1	CO House District 11	American Delta Party
+CO House District 12 (American Delta Party)	1	CO House District 12	American Delta Party
+CO House District 13 (American Delta Party)	1	CO House District 13	American Delta Party
+CO House District 14 (American Delta Party)	1	CO House District 14	American Delta Party
+CO House District 15 (American Delta Party)	1	CO House District 15	American Delta Party
+CO House District 16 (American Delta Party)	1	CO House District 16	American Delta Party
+CO House District 17 (American Delta Party)	1	CO House District 17	American Delta Party
+CO House District 18 (American Delta Party)	1	CO House District 18	American Delta Party
+CO House District 19 (American Delta Party)	1	CO House District 19	American Delta Party
+CO House District 20 (American Delta Party)	1	CO House District 20	American Delta Party
+CO House District 21 (American Delta Party)	1	CO House District 21	American Delta Party
+CO House District 22 (American Delta Party)	1	CO House District 22	American Delta Party
+CO House District 23 (American Delta Party)	1	CO House District 23	American Delta Party
+CO House District 24 (American Delta Party)	1	CO House District 24	American Delta Party
+CO House District 25 (American Delta Party)	1	CO House District 25	American Delta Party
+CO House District 26 (American Delta Party)	1	CO House District 26	American Delta Party
+CO House District 27 (American Delta Party)	1	CO House District 27	American Delta Party
+CO House District 28 (American Delta Party)	1	CO House District 28	American Delta Party
+CO House District 29 (American Delta Party)	1	CO House District 29	American Delta Party
+CO House District 30 (American Delta Party)	1	CO House District 30	American Delta Party
+CO House District 31 (American Delta Party)	1	CO House District 31	American Delta Party
+CO House District 32 (American Delta Party)	1	CO House District 32	American Delta Party
+CO House District 33 (American Delta Party)	1	CO House District 33	American Delta Party
+CO House District 34 (American Delta Party)	1	CO House District 34	American Delta Party
+CO House District 35 (American Delta Party)	1	CO House District 35	American Delta Party
+CO House District 36 (American Delta Party)	1	CO House District 36	American Delta Party
+CO House District 37 (American Delta Party)	1	CO House District 37	American Delta Party
+CO House District 38 (American Delta Party)	1	CO House District 38	American Delta Party
+CO House District 39 (American Delta Party)	1	CO House District 39	American Delta Party
+CO House District 40 (American Delta Party)	1	CO House District 40	American Delta Party
+CO House District 41 (American Delta Party)	1	CO House District 41	American Delta Party
+CO House District 42 (American Delta Party)	1	CO House District 42	American Delta Party
+CO House District 43 (American Delta Party)	1	CO House District 43	American Delta Party
+CO House District 44 (American Delta Party)	1	CO House District 44	American Delta Party
+CO House District 45 (American Delta Party)	1	CO House District 45	American Delta Party
+CO House District 46 (American Delta Party)	1	CO House District 46	American Delta Party
+CO House District 47 (American Delta Party)	1	CO House District 47	American Delta Party
+CO House District 48 (American Delta Party)	1	CO House District 48	American Delta Party
+CO House District 49 (American Delta Party)	1	CO House District 49	American Delta Party
+CO House District 50 (American Delta Party)	1	CO House District 50	American Delta Party
+CO House District 51 (American Delta Party)	1	CO House District 51	American Delta Party
+CO House District 52 (American Delta Party)	1	CO House District 52	American Delta Party
+CO House District 53 (American Delta Party)	1	CO House District 53	American Delta Party
+CO House District 54 (American Delta Party)	1	CO House District 54	American Delta Party
+CO House District 55 (American Delta Party)	1	CO House District 55	American Delta Party
+CO House District 56 (American Delta Party)	1	CO House District 56	American Delta Party
+CO House District 57 (American Delta Party)	1	CO House District 57	American Delta Party
+CO House District 58 (American Delta Party)	1	CO House District 58	American Delta Party
+CO House District 59 (American Delta Party)	1	CO House District 59	American Delta Party
+CO House District 60 (American Delta Party)	1	CO House District 60	American Delta Party
+CO House District 61 (American Delta Party)	1	CO House District 61	American Delta Party
+CO House District 62 (American Delta Party)	1	CO House District 62	American Delta Party
+CO House District 63 (American Delta Party)	1	CO House District 63	American Delta Party
+CO House District 64 (American Delta Party)	1	CO House District 64	American Delta Party
+CO House District 65 (American Delta Party)	1	CO House District 65	American Delta Party
+CO Senate District 1 (American Delta Party)	1	CO Senate District 1	American Delta Party
+CO Senate District 2 (American Delta Party)	1	CO Senate District 2	American Delta Party
+CO Senate District 3 (American Delta Party)	1	CO Senate District 3	American Delta Party
+CO Senate District 4 (American Delta Party)	1	CO Senate District 4	American Delta Party
+CO Senate District 5 (American Delta Party)	1	CO Senate District 5	American Delta Party
+CO Senate District 6 (American Delta Party)	1	CO Senate District 6	American Delta Party
+CO Senate District 7 (American Delta Party)	1	CO Senate District 7	American Delta Party
+CO Senate District 8 (American Delta Party)	1	CO Senate District 8	American Delta Party
+CO Senate District 9 (American Delta Party)	1	CO Senate District 9	American Delta Party
+CO Senate District 10 (American Delta Party)	1	CO Senate District 10	American Delta Party
+CO Senate District 11 (American Delta Party)	1	CO Senate District 11	American Delta Party
+CO Senate District 12 (American Delta Party)	1	CO Senate District 12	American Delta Party
+CO Senate District 13 (American Delta Party)	1	CO Senate District 13	American Delta Party
+CO Senate District 14 (American Delta Party)	1	CO Senate District 14	American Delta Party
+CO Senate District 15 (American Delta Party)	1	CO Senate District 15	American Delta Party
+CO Senate District 16 (American Delta Party)	1	CO Senate District 16	American Delta Party
+CO Senate District 17 (American Delta Party)	1	CO Senate District 17	American Delta Party
+CO Senate District 18 (American Delta Party)	1	CO Senate District 18	American Delta Party
+CO Senate District 19 (American Delta Party)	1	CO Senate District 19	American Delta Party
+CO Senate District 20 (American Delta Party)	1	CO Senate District 20	American Delta Party
+CO Senate District 21 (American Delta Party)	1	CO Senate District 21	American Delta Party
+CO Senate District 22 (American Delta Party)	1	CO Senate District 22	American Delta Party
+CO Senate District 23 (American Delta Party)	1	CO Senate District 23	American Delta Party
+CO Senate District 24 (American Delta Party)	1	CO Senate District 24	American Delta Party
+CO Senate District 25 (American Delta Party)	1	CO Senate District 25	American Delta Party
+CO Senate District 26 (American Delta Party)	1	CO Senate District 26	American Delta Party
+CO Senate District 27 (American Delta Party)	1	CO Senate District 27	American Delta Party
+CO Senate District 28 (American Delta Party)	1	CO Senate District 28	American Delta Party
+CO Senate District 29 (American Delta Party)	1	CO Senate District 29	American Delta Party
+CO Senate District 30 (American Delta Party)	1	CO Senate District 30	American Delta Party
+CO Senate District 31 (American Delta Party)	1	CO Senate District 31	American Delta Party
+CO Senate District 32 (American Delta Party)	1	CO Senate District 32	American Delta Party
+CO Senate District 33 (American Delta Party)	1	CO Senate District 33	American Delta Party
+CO Senate District 34 (American Delta Party)	1	CO Senate District 34	American Delta Party
+CO Senate District 35 (American Delta Party)	1	CO Senate District 35	American Delta Party
+US House CO District 1 (American Delta Party)	1	US House CO District 1	American Delta Party
+US House CO District 2 (American Delta Party)	1	US House CO District 2	American Delta Party
+US House CO District 3 (American Delta Party)	1	US House CO District 3	American Delta Party
+US House CO District 4 (American Delta Party)	1	US House CO District 4	American Delta Party
+US House CO District 5 (American Delta Party)	1	US House CO District 5	American Delta Party
+US House CO District 6 (American Delta Party)	1	US House CO District 6	American Delta Party
+US House CO District 7 (American Delta Party)	1	US House CO District 7	American Delta Party
+US President (CO) (American Delta Party)	1	US President (CO)	American Delta Party
+CO Governor (American Delta Party)	1	CO Governor	American Delta Party
+US Senate CO (American Delta Party)	1	US Senate CO	American Delta Party
+CO Attorney General (American Delta Party)	1	CO Attorney General	American Delta Party
+CO State Treasurer (American Delta Party)	1	CO State Treasurer	American Delta Party
+CO Secretary of State (American Delta Party)	1	CO Secretary of State	American Delta Party
+CO House District 1 (America's Party)	1	CO House District 1	America's Party
+CO House District 2 (America's Party)	1	CO House District 2	America's Party
+CO House District 3 (America's Party)	1	CO House District 3	America's Party
+CO House District 4 (America's Party)	1	CO House District 4	America's Party
+CO House District 5 (America's Party)	1	CO House District 5	America's Party
+CO House District 6 (America's Party)	1	CO House District 6	America's Party
+CO House District 7 (America's Party)	1	CO House District 7	America's Party
+CO House District 8 (America's Party)	1	CO House District 8	America's Party
+CO House District 9 (America's Party)	1	CO House District 9	America's Party
+CO House District 10 (America's Party)	1	CO House District 10	America's Party
+CO House District 11 (America's Party)	1	CO House District 11	America's Party
+CO House District 12 (America's Party)	1	CO House District 12	America's Party
+CO House District 13 (America's Party)	1	CO House District 13	America's Party
+CO House District 14 (America's Party)	1	CO House District 14	America's Party
+CO House District 15 (America's Party)	1	CO House District 15	America's Party
+CO House District 16 (America's Party)	1	CO House District 16	America's Party
+CO House District 17 (America's Party)	1	CO House District 17	America's Party
+CO House District 18 (America's Party)	1	CO House District 18	America's Party
+CO House District 19 (America's Party)	1	CO House District 19	America's Party
+CO House District 20 (America's Party)	1	CO House District 20	America's Party
+CO House District 21 (America's Party)	1	CO House District 21	America's Party
+CO House District 22 (America's Party)	1	CO House District 22	America's Party
+CO House District 23 (America's Party)	1	CO House District 23	America's Party
+CO House District 24 (America's Party)	1	CO House District 24	America's Party
+CO House District 25 (America's Party)	1	CO House District 25	America's Party
+CO House District 26 (America's Party)	1	CO House District 26	America's Party
+CO House District 27 (America's Party)	1	CO House District 27	America's Party
+CO House District 28 (America's Party)	1	CO House District 28	America's Party
+CO House District 29 (America's Party)	1	CO House District 29	America's Party
+CO House District 30 (America's Party)	1	CO House District 30	America's Party
+CO House District 31 (America's Party)	1	CO House District 31	America's Party
+CO House District 32 (America's Party)	1	CO House District 32	America's Party
+CO House District 33 (America's Party)	1	CO House District 33	America's Party
+CO House District 34 (America's Party)	1	CO House District 34	America's Party
+CO House District 35 (America's Party)	1	CO House District 35	America's Party
+CO House District 36 (America's Party)	1	CO House District 36	America's Party
+CO House District 37 (America's Party)	1	CO House District 37	America's Party
+CO House District 38 (America's Party)	1	CO House District 38	America's Party
+CO House District 39 (America's Party)	1	CO House District 39	America's Party
+CO House District 40 (America's Party)	1	CO House District 40	America's Party
+CO House District 41 (America's Party)	1	CO House District 41	America's Party
+CO House District 42 (America's Party)	1	CO House District 42	America's Party
+CO House District 43 (America's Party)	1	CO House District 43	America's Party
+CO House District 44 (America's Party)	1	CO House District 44	America's Party
+CO House District 45 (America's Party)	1	CO House District 45	America's Party
+CO House District 46 (America's Party)	1	CO House District 46	America's Party
+CO House District 47 (America's Party)	1	CO House District 47	America's Party
+CO House District 48 (America's Party)	1	CO House District 48	America's Party
+CO House District 49 (America's Party)	1	CO House District 49	America's Party
+CO House District 50 (America's Party)	1	CO House District 50	America's Party
+CO House District 51 (America's Party)	1	CO House District 51	America's Party
+CO House District 52 (America's Party)	1	CO House District 52	America's Party
+CO House District 53 (America's Party)	1	CO House District 53	America's Party
+CO House District 54 (America's Party)	1	CO House District 54	America's Party
+CO House District 55 (America's Party)	1	CO House District 55	America's Party
+CO House District 56 (America's Party)	1	CO House District 56	America's Party
+CO House District 57 (America's Party)	1	CO House District 57	America's Party
+CO House District 58 (America's Party)	1	CO House District 58	America's Party
+CO House District 59 (America's Party)	1	CO House District 59	America's Party
+CO House District 60 (America's Party)	1	CO House District 60	America's Party
+CO House District 61 (America's Party)	1	CO House District 61	America's Party
+CO House District 62 (America's Party)	1	CO House District 62	America's Party
+CO House District 63 (America's Party)	1	CO House District 63	America's Party
+CO House District 64 (America's Party)	1	CO House District 64	America's Party
+CO House District 65 (America's Party)	1	CO House District 65	America's Party
+CO Senate District 1 (America's Party)	1	CO Senate District 1	America's Party
+CO Senate District 2 (America's Party)	1	CO Senate District 2	America's Party
+CO Senate District 3 (America's Party)	1	CO Senate District 3	America's Party
+CO Senate District 4 (America's Party)	1	CO Senate District 4	America's Party
+CO Senate District 5 (America's Party)	1	CO Senate District 5	America's Party
+CO Senate District 6 (America's Party)	1	CO Senate District 6	America's Party
+CO Senate District 7 (America's Party)	1	CO Senate District 7	America's Party
+CO Senate District 8 (America's Party)	1	CO Senate District 8	America's Party
+CO Senate District 9 (America's Party)	1	CO Senate District 9	America's Party
+CO Senate District 10 (America's Party)	1	CO Senate District 10	America's Party
+CO Senate District 11 (America's Party)	1	CO Senate District 11	America's Party
+CO Senate District 12 (America's Party)	1	CO Senate District 12	America's Party
+CO Senate District 13 (America's Party)	1	CO Senate District 13	America's Party
+CO Senate District 14 (America's Party)	1	CO Senate District 14	America's Party
+CO Senate District 15 (America's Party)	1	CO Senate District 15	America's Party
+CO Senate District 16 (America's Party)	1	CO Senate District 16	America's Party
+CO Senate District 17 (America's Party)	1	CO Senate District 17	America's Party
+CO Senate District 18 (America's Party)	1	CO Senate District 18	America's Party
+CO Senate District 19 (America's Party)	1	CO Senate District 19	America's Party
+CO Senate District 20 (America's Party)	1	CO Senate District 20	America's Party
+CO Senate District 21 (America's Party)	1	CO Senate District 21	America's Party
+CO Senate District 22 (America's Party)	1	CO Senate District 22	America's Party
+CO Senate District 23 (America's Party)	1	CO Senate District 23	America's Party
+CO Senate District 24 (America's Party)	1	CO Senate District 24	America's Party
+CO Senate District 25 (America's Party)	1	CO Senate District 25	America's Party
+CO Senate District 26 (America's Party)	1	CO Senate District 26	America's Party
+CO Senate District 27 (America's Party)	1	CO Senate District 27	America's Party
+CO Senate District 28 (America's Party)	1	CO Senate District 28	America's Party
+CO Senate District 29 (America's Party)	1	CO Senate District 29	America's Party
+CO Senate District 30 (America's Party)	1	CO Senate District 30	America's Party
+CO Senate District 31 (America's Party)	1	CO Senate District 31	America's Party
+CO Senate District 32 (America's Party)	1	CO Senate District 32	America's Party
+CO Senate District 33 (America's Party)	1	CO Senate District 33	America's Party
+CO Senate District 34 (America's Party)	1	CO Senate District 34	America's Party
+CO Senate District 35 (America's Party)	1	CO Senate District 35	America's Party
+US House CO District 1 (America's Party)	1	US House CO District 1	America's Party
+US House CO District 2 (America's Party)	1	US House CO District 2	America's Party
+US House CO District 3 (America's Party)	1	US House CO District 3	America's Party
+US House CO District 4 (America's Party)	1	US House CO District 4	America's Party
+US House CO District 5 (America's Party)	1	US House CO District 5	America's Party
+US House CO District 6 (America's Party)	1	US House CO District 6	America's Party
+US House CO District 7 (America's Party)	1	US House CO District 7	America's Party
+US President (CO) (America's Party)	1	US President (CO)	America's Party
+CO Governor (America's Party)	1	CO Governor	America's Party
+US Senate CO (America's Party)	1	US Senate CO	America's Party
+CO Attorney General (America's Party)	1	CO Attorney General	America's Party
+CO State Treasurer (America's Party)	1	CO State Treasurer	America's Party
+CO Secretary of State (America's Party)	1	CO Secretary of State	America's Party

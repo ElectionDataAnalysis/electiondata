@@ -66,28 +66,31 @@ def run(load_data: bool = True, dbname: str = None):
     # move back to original directory
     os.chdir(original_dir)
 
-    # allow user to inspect database if desired
-    input(f"Hit return to continue (and remove test db {dbname} and test data)")
-
-    # remove database
-    new_params, err = ui.get_runtime_parameters(
-        required_keys=["host","port","user","password","dbname"],
-        param_file=test_param_file,
-        header="postgresql",
-        err=dict(),
-    )
-
     if load_data:
-        d.remove_database(new_params)
+        # allow user to pause, option to remove db
+        remove_db = input(f"Remove test db {dbname} (y/n)?")
+
+        if remove_db == "y":
+            # remove database
+            new_params, err = ui.get_runtime_parameters(
+                required_keys=["host","port","user","password","dbname"],
+                param_file=test_param_file,
+                header="postgresql",
+                err=dict(),
+            )
+            d.remove_database(new_params)
+
+        remove_dir = input("Remove TestingData directory (y/n)?")
+        if remove_dir == "y":
+            # remove testing data
+            os.system(f"rm -rf TestingData")
 
     # return run_time.ini to its original state (necessary only when it was in the current directory)
     if reference_param_file == test_param_file:
         with open(reference_param_file, "w") as f:
             f.write(original_parameter_text)
 
-    # remove testing data
-    if load_data:
-        os.system(f"rm -rf TestingData")
+
     return
 
 
