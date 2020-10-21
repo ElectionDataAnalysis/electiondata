@@ -1337,12 +1337,12 @@ class Analyzer:
 
         return super().__new__(self)
 
-    def __init__(self, param_file=None):
+    def __init__(self, param_file=None, dbname=None):
         if param_file:
             self.param_file = param_file
         else:
             self.param_file = "run_time.ini"
-        eng, err = db.sql_alchemy_connect(self.param_file)
+        eng, err = db.sql_alchemy_connect(self.param_file, dbname=dbname)
         Session = sessionmaker(bind=eng)
         self.session = Session()
 
