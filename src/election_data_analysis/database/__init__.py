@@ -1017,10 +1017,13 @@ def get_filtered_input_options(session, input_str, filters):
         count_types.sort()
         data = {
             "parent": [filters[0] for count_type in count_types]
+            + [filters[0] for count_type in count_types]
             + [filters[0] for count_type in count_types],
             "name": [f"Candidate {count_type}" for count_type in count_types]
-            + [f"Contest {count_type}" for count_type in count_types],
+            + [f"Contest {count_type}" for count_type in count_types]
+            + [f"Party {count_type}" for count_type in count_types],
             "type": [None for count_type in count_types]
+            + [None for count_type in count_types]
             + [None for count_type in count_types],
         }
         df = pd.DataFrame(data=data)
