@@ -1384,18 +1384,6 @@ def clean_candidate_names(df):
     mask_st_sen = (df["jurisdiction"] != "US") & (df["contest"].str.contains("senate", case=False))
     mask_st_house = (df["jurisdiction"] != "US") & (df["contest"].str.contains("house", case=False))
     df["chamber"] = None
-    # if not df[mask_us_pres].empty:
-    #     df.loc[mask_us_pres, "chamber"] = "Pres"
-    # if not df[mask_us_sen].empty:
-    #     df.loc[mask_us_sen, "chamber"] = "Sen"
-    # if not df[mask_us_house].empty:
-    #     df.loc[mask_us_house, "chamber"] = "House"
-    # if not df[mask_st_sen].empty:
-    #     df.loc[mask_st_sen, "chamber"] = "S"
-    # if not df[mask_st_house].empty:
-    #     df.loc[mask_st_house, "chamber"] = "H"
-
-
     df.loc[mask_us_pres, "chamber"] = "Pres"
     df.loc[mask_us_sen, "chamber"] = "Sen"
     df.loc[mask_us_house, "chamber"] = "House"
