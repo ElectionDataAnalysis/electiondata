@@ -1141,12 +1141,13 @@ def get_candidate_votecounts(session, election_id, top_ru_id, subdivision_type_i
             IntermediateRU."Name" as "ParentName", IntermediateRU."ReportingUnitType_Id" as "ParentReportingUnitType_Id",
             CIT."Txt" as "CountItemType", C."Name" as "Contest",
             Cand."BallotName" as "Selection", "ElectionDistrict_Id", Cand."Id" as "Candidate_Id", "contest_type",
-            EDRUT."Txt" as "contest_district_type"
+            EDRUT."Txt" as "contest_district_type", P."Name" as "Party"
             FROM "VoteCount" vc
             LEFT JOIN _datafile d on vc."_datafile_Id" = d."Id"
             LEFT JOIN "Contest" C on vc."Contest_Id" = C."Id"
             LEFT JOIN "CandidateSelection" CS on CS."Id" = vc."Selection_Id"
             LEFT JOIN "Candidate" Cand on CS."Candidate_Id" = Cand."Id"
+            LEFT JOIN "Party" P on cs."Party_Id" = P."Id"
             -- sum over all children
             LEFT JOIN "ReportingUnit" ChildRU on vc."ReportingUnit_Id" = ChildRU."Id"
             LEFT JOIN "ComposingReportingUnitJoin" CRUJ_sum on ChildRU."Id" = CRUJ_sum."ChildReportingUnit_Id"
@@ -1191,6 +1192,7 @@ def get_candidate_votecounts(session, election_id, top_ru_id, subdivision_type_i
         "Candidate_Id",
         "contest_type",
         "contest_district_type",
+        "Party"
     ]
     return result_df
 
