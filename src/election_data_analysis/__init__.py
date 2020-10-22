@@ -116,10 +116,16 @@ class DataLoader:
             return
 
     def change_db(self, new_db_name: str):
-        """Changes the database into which the data is loaded"""
+        """Changes the database into which the data is loaded, including reconnecting"""
         self.d["dbname"] = new_db_name
         self.session.close()
         self.connect_to_db(dbname=new_db_name)
+        db.create_db_if_not_ok(dbname=new_db_name)
+        return
+
+    def change_dir(self, dir_param: str, new_dir: str):
+        # TODO technical debt: error handling
+        self.d[dir_param] = new_dir
         return
 
     def load_all(
@@ -519,7 +525,7 @@ def check_aux_data_setup(
                 f"Specified aux_data_dir ({params['aux_data_dir']}) is not a subdirectory of {aux_data_dir_parent}",
             )
             sdl = None
-            return sdl, err
+            return err
     # and if aux_data_dir is not given
     else:
         # check that no munger expects an aux_data_dir
