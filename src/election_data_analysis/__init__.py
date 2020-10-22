@@ -116,10 +116,16 @@ class DataLoader:
             return
 
     def change_db(self, new_db_name: str):
-        """Changes the database into which the data is loaded"""
+        """Changes the database into which the data is loaded, including reconnecting"""
         self.d["dbname"] = new_db_name
         self.session.close()
         self.connect_to_db(dbname=new_db_name)
+        db.create_db_if_not_ok(dbname=new_db_name)
+        return
+
+    def change_dir(self, dir_param: str, new_dir: str):
+        # TODO technical debt: error handling
+        self.d[dir_param] = new_dir
         return
 
     def load_all(
@@ -518,8 +524,7 @@ def check_aux_data_setup(
                 par_file_name,
                 f"Specified aux_data_dir ({params['aux_data_dir']}) is not a subdirectory of {aux_data_dir_parent}",
             )
-            sdl = None
-            return sdl, err
+            return err
     # and if aux_data_dir is not given
     else:
         # check that no munger expects an aux_data_dir
@@ -683,7 +688,7 @@ class JurisdictionPrepper:
         ui.report(error)
         return error
 
-    def add_primaries_to_dict(self) -> dict:
+    def add_primaries_to_dict(self) -> Optional[dict]:
         """Return error dictionary"""
         print("\nStarting add_primaries_to_dict")
         error = None
@@ -911,7 +916,7 @@ class JurisdictionPrepper:
         aux_data_path=None,
         sub_ru_type: str = "precinct",
         error: dict = None,
-    ) -> dict:
+    ) -> Optional[dict]:
         """Assumes precincts (or other sub-county reporting units)
         are munged from row of the results file.
         Adds corresponding rows to ReportingUnit.txt and dictionary.txt
@@ -1384,7 +1389,7 @@ class Analyzer:
         v_category: str,
         v_count: str,  # vertical axis params
         fig_type: str = None,
-    ) -> list:
+    ) -> Optional[list]:
         """Used to create a scatter plot based on selected inputs. The fig_type parameter
         is used when the user wants to actually create the visualization; this uses plotly
         so any image extension that is supported by plotly is usable here. Currently supports
@@ -1528,7 +1533,7 @@ class Analyzer:
 
     def top_counts(
         self, election: str, rollup_unit: str, sub_unit: str, by_vote_type: bool
-    ) -> str:
+    ) -> Optional[str]:
         d, error = ui.get_runtime_parameters(
             required_keys=["rollup_directory"],
             param_file=self.param_file,

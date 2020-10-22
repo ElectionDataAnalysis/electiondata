@@ -32,9 +32,4 @@ def test_state_rep_totals():
         == 1382
     )
 
-def test_contest_by_vote_type():
-    assert True = True
-
-
-def test_totals_match_vote_type():
-    assert True == True
+# no tests by vote type
