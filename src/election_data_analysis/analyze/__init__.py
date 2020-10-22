@@ -341,7 +341,7 @@ def create_bar(
     # through front end, contest_type must be truthy if contest is truthy
     # Only filter when there is an actual contest passed through, as opposed to 
     # "All congressional" as an example
-    if contest and contest[0:3] != "All":
+    if contest and not contest.startswith("All "):
         unsummed = unsummed[unsummed["Contest"] == contest]
 
     groupby_cols = [
