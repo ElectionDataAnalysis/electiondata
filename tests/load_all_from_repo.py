@@ -24,7 +24,12 @@ def get_testing_data(url: str, target: str = "TestingData"):
     return
 
 
-def run2(load_data: bool = True, dbname: Optional[str] = None, test_dir: Optional[str] = None):
+def run2(
+        load_data: bool = True,
+        dbname: Optional[str] = None,
+        test_dir: Optional[str] = None,
+        election_jurisdiction_list: Optional[list] = None
+):
     if not test_dir:
         # set the test_dir to the directory containing this file
         test_dir = Path(__file__).parent.absolute()
@@ -46,7 +51,7 @@ def run2(load_data: bool = True, dbname: Optional[str] = None, test_dir: Optiona
         dl.change_dir("results_dir","TestingData")
         dl.load_all(move_files=False)
 
-    ui.run_tests(test_dir, dbname)
+    ui.run_tests(test_dir, dbname, election_jurisdiction_list=election_jurisdiction_list)
 
     # allow user to inspect database if desired
     input(f"Hit return to continue (and remove test db {dbname} and test data)")
@@ -77,5 +82,5 @@ def run2(load_data: bool = True, dbname: Optional[str] = None, test_dir: Optiona
 
 
 if __name__ == "__main__":
-    run2()
+    run2(election_jurisdiction_list=[("2020 Primary","Georgia")])
     exit()

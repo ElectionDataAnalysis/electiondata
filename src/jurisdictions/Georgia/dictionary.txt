@@ -3854,7 +3854,6 @@ CountItemType	election-day	Election Day Votes
 CountItemType	absentee-mail	Absentee by Mail Votes
 CountItemType	early	Advanced Voting Votes
 CountItemType	provisional	Provisional Votes
-CountItemType	total	Choice Total
 BallotMeasureSelection	Yes	YES
 BallotMeasureSelection	No	NO
 Candidate	Donald J. Trump	Donald J. Trump (I)
@@ -5214,7 +5213,6 @@ Candidate	Mark Butler	MARK BUTLER (I)
 Candidate	Richard Keatley	RICHARD KEATLEY
 Candidate	Earl L. 'Buddy' Carter	EARL L. 'BUDDY' CARTER
 Candidate	Earl L. 'Buddy' Carter	Earl L. ''Buddy'' Carter (I)
-Candidate	Earl L. 'Buddy' Carter	EARL 'BUDDY' CARTER (I)
 Candidate	Lisa M. Ring	LISA M. RING
 Candidate	Herman West Jr	HERMAN WEST JR
 Candidate	Chuck Enderlin	CHUCK ENDERLIN
@@ -5314,7 +5312,7 @@ Candidate	TERI ANULEWICZ (I)	TERI ANULEWICZ (I)
 Candidate	LUISA WAKEMAN	LUISA WAKEMAN
 Candidate	CHINITA ALLEN	CHINITA ALLEN
 Candidate	ESSENCE JOHNSON	ESSENCE JOHNSON
-Candidate	KARÍN SANDIFORD	KARÍN SANDIFORD
+Candidate	KARÃN SANDIFORD	KARÃN SANDIFORD
 Candidate	ANDREA NUGENT	ANDREA NUGENT
 Candidate	MARY ROBICHAUX	MARY ROBICHAUX
 Candidate	CHARLES E. 'CHUCK' MARTIN (I)	CHARLES E. 'CHUCK' MARTIN (I)

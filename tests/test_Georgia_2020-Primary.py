@@ -54,7 +54,7 @@ def test_contest_by_vote_type(dbname):
             "absentee-mail",
             dbname=dbname,
         )
-            == 2193
+            == 1655
     )
 
 
