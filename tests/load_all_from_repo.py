@@ -64,7 +64,7 @@ def run2(load_data: bool = True, dbname: str = None):
         dl = e.DataLoader()
         dl.load_all(move_files=False)
 
-    ui.run_tests(test_dir, test_param_file, db_params)
+    ui.run_tests(test_dir, dbname)
 
     # allow user to inspect database if desired
     input(f"Hit return to continue (and remove test db {dbname} and test data)")
@@ -79,7 +79,6 @@ def run2(load_data: bool = True, dbname: str = None):
 
     if load_data:
         d.remove_database(new_params)
-    ui.run_tests(test_dir, test_param_file, db_params)
 
     if load_data:
         # allow user to pause, option to remove db
@@ -110,5 +109,6 @@ def run2(load_data: bool = True, dbname: str = None):
 
 
 if __name__ == "__main__":
+#    run2(load_data=False, dbname='test_1021_2049')
     run2()
     exit()
