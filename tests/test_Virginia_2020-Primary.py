@@ -1,5 +1,5 @@
 import election_data_analysis as e
-#PA16 tests
+#VA20 tests
 
 def test_presidential(dbname):
     assert (not e.data_exists("2020 Primary","Virginia",dbname=dbname) or e.contest_total(
