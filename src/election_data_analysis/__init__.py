@@ -45,6 +45,10 @@ multi_data_loader_pars = [
     "mungers_dir",
 ]
 
+optional_mdl_pars = [
+    "unloaded_dir",
+]
+
 prep_pars = [
     "mungers_dir",
     "jurisdiction_path",
@@ -67,6 +71,7 @@ class DataLoader:
         not create DataLoader object."""
         d, err = ui.get_runtime_parameters(
             required_keys=multi_data_loader_pars,
+            optional_keys=optional_mdl_pars,
             param_file="run_time.ini",
             header="election_data_analysis",
         )
@@ -81,6 +86,7 @@ class DataLoader:
         # grab parameters
         self.d, self.parameter_err = ui.get_runtime_parameters(
             required_keys=multi_data_loader_pars,
+            optional_keys=optional_mdl_pars,
             param_file="run_time.ini",
             header="election_data_analysis",
         )

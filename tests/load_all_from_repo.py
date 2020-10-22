@@ -54,6 +54,7 @@ def run2(load_data: bool = True, dbname: str = None):
         # create local run_time.ini for dataloader, based on existing
         mdlp, err2 = ui.get_runtime_parameters(
             required_keys=e.multi_data_loader_pars,
+            optional_keys=e.optional_mdl_pars,
             header="election_data_analysis",
             param_file="run_time.ini",
         )
