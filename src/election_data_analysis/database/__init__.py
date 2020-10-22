@@ -265,7 +265,11 @@ def test_connection(paramfile="run_time.ini", dbname=None) -> (bool, dict):
     return True, err
 
 
-def create_new_db(param_file="run_time.ini") -> dict:
+def create_or_reset_db(
+        param_file: str = "run_time.ini",
+        dbname: Optional[str] = None,
+) -> Optional[dict]:
+    """if no dbname is given, name will be taken from param_file"""
 
     project_root = Path(__file__).absolute().parents[1]
     params, err = ui.get_runtime_parameters(
@@ -273,12 +277,16 @@ def create_new_db(param_file="run_time.ini") -> dict:
     )
     if err:
         return err
-    db_name = params["dbname"]
-    params["dbname"] = "postgres"
+
+    # use dbname from param_file, unless another dbname was given
+    if dbname is None:
+        dbname = params["dbname"]
 
     # get connection to default postgres DB to create new DB
     try:
-        con = psycopg2.connect(**params)
+        postgres_params = params
+        postgres_params["dbname"] = "postgres"
+        con = psycopg2.connect(**postgres_params)
     except Exception as e:
         # Can't connect to the default postgres database, so there
         # seems to be something wrong with connection. Fail here.
@@ -288,28 +296,34 @@ def create_new_db(param_file="run_time.ini") -> dict:
     cur = con.cursor()
     db_df = get_database_names(con)
 
-    eng, err = sql_alchemy_connect(param_file, dbname=params["dbname"])
+    # connect to postgres db
+    eng, err = sql_alchemy_connect(param_file, dbname="postgres")
     Session = sqlalchemy.orm.sessionmaker(bind=eng)
-    sess = Session()
 
-    # DB already exists.
-    # TODO if DB exists, check that desired_db has right format?
-    if db_name in db_df.datname.unique():
+    # if dbname already exists.
+    if dbname in db_df.datname.unique():
         # Clean out DB
+        eng_new, err = sql_alchemy_connect(param_file,dbname=dbname)
+        Session_new = sqlalchemy.orm.sessionmaker(bind=eng_new)
+        sess_new = Session_new()
         db_cdf.reset_db(
-            sess,
+            sess_new,
             os.path.join(project_root, "CDF_schema_def_info"),
         )
     else:
-        create_database(con, cur, db_name)
+        create_database(con, cur, dbname)
+        eng_new, err = sql_alchemy_connect(param_file,dbname=dbname)
+        Session_new = sqlalchemy.orm.sessionmaker(bind=eng_new)
+        sess_new = Session_new()
+
 
     # load cdf tables
     db_cdf.create_common_data_format_tables(
-        sess,
+        sess_new,
         dirpath=os.path.join(project_root, "CDF_schema_def_info"),
     )
     db_cdf.fill_standard_tables(
-        sess,
+        sess_new,
         None,
         dirpath=os.path.join(project_root, "CDF_schema_def_info"),
     )
@@ -319,7 +333,7 @@ def create_new_db(param_file="run_time.ini") -> dict:
 
 def sql_alchemy_connect(
     paramfile: str = "run_time.ini", dbname: str = "postgres"
-) -> (sqlalchemy.engine, dict):
+) -> (sqlalchemy.engine, Optional[dict]):
     """Returns an engine and a metadata object"""
     params, err = ui.get_runtime_parameters(
         required_keys=db_pars, param_file=paramfile, header="postgresql"
@@ -336,6 +350,14 @@ def sql_alchemy_connect(
     # The return value of create_engine() is our connection object
     engine = db.create_engine(url, client_encoding="utf8", pool_size=20, max_overflow=40)
     return engine, err
+
+
+def create_db_if_not_ok(dbname: Optional[str] = None) -> Optional[dict]:
+    # create db if it does not already exist and have right tables
+    ok, err = test_connection(dbname=dbname)
+    if not ok:
+        create_or_reset_db(dbname=dbname)
+    return err
 
 
 def get_cdf_db_table_names(eng):

@@ -1,6 +1,7 @@
 from configparser import ConfigParser, MissingSectionHeaderError
 from election_data_analysis import munge as m
 from election_data_analysis import special_formats as sf
+from election_data_analysis import database as db
 import election_data_analysis as e
 import pandas as pd
 from pandas.errors import ParserError, ParserWarning
@@ -637,7 +638,7 @@ def get_runtime_parameters(
     header: str,
     err: Optional[Dict[Any, dict]] = None,
     optional_keys: list = None,
-) -> (dict, dict):
+) -> (dict, Optional[dict]):
     d = {}
 
     # read info from file
@@ -881,7 +882,7 @@ def create_param_file(db_params: dict, multi_data_loader_pars: dict, target_dir:
     return err_str
 
 
-def run_tests(test_dir: str, test_param_file: str, db_params: dict):
+def run_tests(test_dir: str, dbname: str, election_jurisdiction_list: Optional[list]=None):
     """ move to tests directory, run tests, move back
     db_params must have host, user, pass, db_name.
     test_param_file is a reference run_time.ini file"""
@@ -892,24 +893,13 @@ def run_tests(test_dir: str, test_param_file: str, db_params: dict):
     # move to tests directory
     os.chdir(test_dir)
 
-    # create run_time.ini for testing routines to use
-    # default port is 5432; default password is ""
-    if "port" not in db_params.keys():
-        db_params["port"] = "5432"
-    if "password" not in db_params.keys():
-        db_params["password"] = ""
-
-    new_parameter_text = f"[postgresql]\n" \
-                         f"host={db_params['host']}\n" \
-                         f"port={db_params['port']}\n" \
-                         f"dbname={db_params['dbname']}\n" \
-                         f"user={db_params['user']}\n" \
-                         f"password={db_params['password']}"
-    with open(test_param_file, "w") as f:
-        f.write(new_parameter_text)
-
     # run pytest
-    os.system("pytest")
+    if election_jurisdiction_list:
+        for (e,j) in election_jurisdiction_list:
+            f = f"test_{j.replace(' ','-')}_{e.replace(' ','-')}.py"
+            os.system(f"pytest --dbname {dbname} {f}")
+    else:
+        os.system(f"pytest --dbname {dbname}")
 
     # move back to original directory
     os.chdir(original_dir)
@@ -928,12 +918,13 @@ def confirm_essential_info(
 
     # loop through files
     for f in [f for f in os.listdir(directory) if f[-4:] == ".ini"]:
+        p_path = os.path.join(directory,f)
         file_confirmed = False
         while not file_confirmed:
             param_dict, err = get_runtime_parameters(
-                required_keys=param_list + known.keys(),
+                required_keys=param_list + list(known.keys()),
                 header=header,
-                param_file=f,
+                param_file=p_path,
             )
             if err:
                 err_str = ""
@@ -946,7 +937,7 @@ def confirm_essential_info(
                 # have user confirm unknowns
                 param_str = "\n".join([f"{s}={param_dict[s]}" for s in param_list])
                 user_confirm = input(
-                    f"Are all of these correct (y/n)?{msg}\n{param_str}"
+                    f"Are all of these parameters from {f} correct (y/n)?{msg}\n{param_str}"
                 )
                 if user_confirm == "y":
                     file_confirmed = True
@@ -958,7 +949,8 @@ def confirm_essential_info(
                         incorrect_knowns.append(f"Need {k}={param_dict[k]}")
                 if incorrect_knowns:
                     incorrect_str = "\n".join(incorrect_knowns)
-                    print(f"Incorrect values:\n{incorrect_str}")
+                    print(f"Incorrect values in {f}:\n{incorrect_str}\n"
+                          f"Either remove those files or correct their parameter values")
                     file_confirmed = False
 
                 if not file_confirmed:
@@ -970,51 +962,57 @@ def reload_juris_election(
         juris_name: str,
         election_name: str,
         test_dir: str,
-) -> dict:
+):
     """Assumes run_time.ini in directory"""
-    # Get info from run_time.ini
-    mdlp, err = get_runtime_parameters(
-        required_keys=e.multi_data_loader_pars,
-        header="election_data_analysis",
-        param_file="run_time.ini"
-    )
-    if err:
-        return err
+    # initialize dataloader
+    dl = e.DataLoader()
 
     # Ask user to confirm/correct essential info
     confirm_essential_info(
-        mdlp["results_dir"],
+        dl.d["results_dir"],
         "election_data_analysis",
         ["results_file", "results_download_date", "results_source"],
         known={
             "top_reporting_unit": juris_name,
-            "jurisdiction_path": juris_name.replace(" ","-"),
+            "jurisdiction_directory": juris_name.replace(" ","-"),
             "election": election_name,
         },
         msg=" Check download date carefully!!!",
     )
 
-    # initialize dataloader
-    dl = e.DataLoader()
-
-    # change db name to a good temp name
+    # create temp_db (preserving live db name)
+    live_db = dl.session.bind.url.database
     ts = datetime.datetime.now().strftime("%m%d_%H%M")
-    dl.change_db(f"test_{ts}")
+    temp_db = f"{live_db}_test_{ts}"
+    db.create_or_reset_db(dbname=temp_db)
 
     # load all data into temp db
+    dl.change_db(temp_db)
     dl.load_all(move_files=False)
 
     # run test files on temp db
-    # TODO inefficient: this duplicates the work of creating the new run_time.ini file
-    run_tests(test_dir, "run_time.ini", db_params)
+    run_tests(
+        test_dir,
+        dl.d["dbname"],
+        election_jurisdiction_list=[(election_name,juris_name)],
+    )
 
     # Ask user to OK test results or abandon
+    go_ahead = input(f"Did tests succeeded for election {election_name} in {juris_name} (y/n)?")
+    if go_ahead != "y":
+        return
 
     # Remove existing data for juris-election pair from live db
+    dl.change_db(live_db)
+    election_id = db.name_to_id(dl.session, "Election", election_name)
+    juris_id = db.name_to_id(dl.session,"ReportingUnit", juris_name)
+    dl.remove_data(election_id, juris_id)
 
-    # Load new data into live db
+    # Load new data into live db (and move successful to archive
+    dl.load_all()
 
     # run tests on live db
+    run_tests(test_dir, dl.d["dbname"], election_jurisdiction_list=[(election_name,juris_name)])
 
-    return err
+    return
 

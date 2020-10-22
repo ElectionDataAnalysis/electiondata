@@ -86,13 +86,15 @@ class DataLoader:
         )
 
         # create db if it does not already exist and have right tables
-        ok, err = db.test_connection()
-        if not ok:
-            db.create_new_db()
+        err = db.create_db_if_not_ok()
 
         # connect to db
+        self.connect_to_db(err=err)
+
+    def connect_to_db(self, dbname: str = "postgres", err: Optional[dict] = None):
+        new_err = None
         try:
-            self.engine, new_err = db.sql_alchemy_connect()
+            self.engine, new_err = db.sql_alchemy_connect(dbname=dbname)
             Session = sessionmaker(bind=self.engine)
             self.session = Session()
         except Exception as e:
@@ -104,10 +106,14 @@ class DataLoader:
             ui.report(err)
             print("Exiting")
             quit()
+        else:
+            return
 
     def change_db(self, new_db_name: str):
         """Changes the database into which the data is loaded"""
         self.d["dbname"] = new_db_name
+        self.session.close()
+        self.connect_to_db(dbname=new_db_name)
         return
 
     def load_all(
@@ -1599,7 +1605,7 @@ def data_exists(election, jurisdiction, p_path=None, dbname=None):
     reporting_unit_id = db.name_to_id(an.session, "ReportingUnit", jurisdiction)
     con = an.session.bind.raw_connection()
     cur = con.cursor()
-    answer = db.data_file_list(
+    answer, err_str = db.data_file_list(
         cur,
         election_id=election_id,
         reporting_unit_id=reporting_unit_id
@@ -1634,7 +1640,11 @@ def count_type_total(election, jurisdiction, contest, count_item_type, dbname=No
     df_candidate = aggregate_results(election, jurisdiction, "Candidate", False, dbname=dbname)
     df_ballot = aggregate_results(election, jurisdiction, "BallotMeasure", False, dbname=dbname)
     df = pd.concat([df_candidate, df_ballot])
-    df = df[df["contest"] == contest]
-    df = df[df["count_item_type"] == count_item_type]
-    return df["count"].sum()
+    # TODO is this error-handling what we want?
+    if df.empty:
+        return 0
+    else:
+        df = df[df["contest"] == contest]
+        df = df[df["count_item_type"] == count_item_type]
+        return df["count"].sum()
 
