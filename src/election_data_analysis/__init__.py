@@ -1377,31 +1377,39 @@ class Analyzer:
         # *_type is either candidates or contests
         h_type, h_count_item_type = self.split_category_input(h_category)
         v_type, v_count_item_type = self.split_category_input(v_category)
-        if h_count == "All Candidates" or h_count == "All Contests":
-            h_count_id = -1
-        elif h_type == "candidates":
-            h = h_count.split("-")[0].strip()
-            h_count_id = db.name_to_id(self.session, "Candidate", h)
-        elif h_type == "contests":
-            h_count_id = db.name_to_id(self.session, "CandidateContest", h_count)
-        if v_count == "All Candidates" or v_count == "All Contests":
-            v_count_id = -1
-        elif v_type == "candidates":
-            v = v_count.split("-")[0].strip()
-            v_count_id = db.name_to_id(self.session, "Candidate", v)
-        elif v_type == "contests":
-            v_count_id = db.name_to_id(self.session, "CandidateContest", v_count)
+        # if h_count == "All Candidates" or h_count == "All Contests":
+        #     h_count_id = -1
+        # elif h_type == "candidates":
+        #     h = h_count.split("-")[0].strip()
+        #     h_count_id = db.name_to_id(self.session, "Candidate", h)
+        # elif h_type == "contests":
+        #     h_count_id = db.name_to_id(self.session, "CandidateContest", h_count)
+        # if v_count == "All Candidates" or v_count == "All Contests":
+        #     v_count_id = -1
+        # elif v_type == "candidates":
+        #     v = v_count.split("-")[0].strip()
+        #     v_count_id = db.name_to_id(self.session, "Candidate", v)
+        # elif v_type == "contests":
+        #     v_count_id = db.name_to_id(self.session, "CandidateContest", v_count)
+        # elif v_type == "parties":
+        #     if v_count in ["Unaffiliated", "none or unknown"]:
+        #         # remove the count item type
+        #         v = " ".join(v_count.split(" ")[:-1])
+        #     else:
+        #         # grab the first word and add `Party`
+        #         v = f"""{v_count.split(" ")[0]} Party"""
+        #     v_count_id = db.name_to_id(self.session, "Party", v)
         agg_results = a.create_scatter(
             self.session,
             jurisdiction_id,
             subdivision_type_id,
             h_election_id,
             h_count_item_type,
-            h_count_id,
+            h_count,
             h_type,
             v_election_id,
             v_count_item_type,
-            v_count_id,
+            v_count,
             v_type,
         )
         if fig_type and agg_results:
@@ -1452,13 +1460,15 @@ class Analyzer:
 
     def split_category_input(self, input_str: str):
         """Helper function. Takes an input from the front end that is the cartesian
-        product of the CountItemType and {'Candidate', 'Contest'}. So something like:
+        product of the CountItemType and {'Candidate', 'Contest', 'Party'}. So something like:
         Candidate total or Contest absentee-mail. Cleans this and returns
         something usable for the system to identify what the user is asking for."""
         if input_str.startswith("Candidate"):
             return "candidates", input_str.replace("Candidate", "").strip()
         elif input_str.startswith("Contest"):
             return "contests", input_str.replace("Contest", "").strip()
+        elif input_str.startswith("Party"):
+            return "parties", input_str.replace("Party", "").strip()
 
     def export_outlier_data(
         self,
