@@ -963,7 +963,7 @@ def reload_juris_election(
         election_name: str,
         test_dir: str,
 ):
-    """Assumes run_time.ini in directory"""
+    """Assumes run_time.ini in directory, and results to be loaded are in the results_dir named in run_time.ini"""
     # initialize dataloader
     dl = e.DataLoader()
 
@@ -1002,13 +1002,33 @@ def reload_juris_election(
     if go_ahead != "y":
         return
 
-    # Remove existing data for juris-election pair from live db
+    # switch to live db and get info needed later
     dl.change_db(live_db)
     election_id = db.name_to_id(dl.session, "Election", election_name)
     juris_id = db.name_to_id(dl.session,"ReportingUnit", juris_name)
+
+    # Move *.ini and results files for juris-election pair to 'unloaded' directory
+    archive_directory = dl.d["archive_dir"]
+    if dl.d["unloaded_dir"]:
+        unloaded_directory = dl.d["unloaded_dir"]
+    else:
+        unloaded_directory = os.path.join(archive_directory, "unloaded")
+    for f in [f for f in os.listdir(archive_directory) if f[-4:] == ".ini"]:
+        params, err = get_runtime_parameters(
+            required_keys=["election","top_reporting_unit","results_file"],
+            header="election_data_analysis",
+            param_file=os.path.join(archive_directory, f),
+        )
+        # if the *.ini file is for the given election and jurisdiction
+        if (not err) and params["election"] == election_name and params["top_reporting_unit"] == juris_name:
+            # move both the *.ini file and its results file to the unloaded directory
+            archive(f, archive_directory, unloaded_directory)
+            archive(params["results_file"], archive_directory, unloaded_directory)
+
+    # Remove existing data for juris-election pair from live db
     dl.remove_data(election_id, juris_id)
 
-    # Load new data into live db (and move successful to archive
+    # Load new data into live db (and move successful to archive)
     dl.load_all()
 
     # run tests on live db
