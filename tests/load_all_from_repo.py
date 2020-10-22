@@ -1,8 +1,8 @@
 import os
-import re
 import datetime
 from pathlib import Path
 import shutil
+from typing import Optional
 import election_data_analysis as e
 from election_data_analysis import database as d
 from election_data_analysis import user_interface as ui
@@ -24,47 +24,61 @@ def get_testing_data(url: str, target: str = "TestingData"):
     return
 
 
-def run(load_data: bool = True, dbname: str = None):
+def run2(load_data: bool = True, dbname: str = None):
     reference_param_file = test_param_file = os.path.join(Path(__file__).parents[1], "src", "run_time.ini")
-    dataloader_param_file = "run_time.ini"
-
-    original_dir = Path(__file__).parent.absolute()
+    with open(reference_param_file, "r") as f:
+        original_parameter_text = f.read()
     test_dir = Path(__file__).parent.absolute()
 
-    if load_data:
-        get_testing_data("https://github.com/ElectionDataAnalysis/TestingData.git", "TestingData")
-
+    # name the db
     if dbname is None:
         # create unique name for test database
         ts = datetime.datetime.now().strftime("%m%d_%H%M")
         dbname = f"test_{ts}"
 
-    with open(reference_param_file, "r") as f:
-        original_parameter_text = f.read()
-    new_parameter_text = re.sub("dbname=[^\n]*\n", f"dbname={dbname}\n", original_parameter_text)
-    new_parameter_text = re.sub("results_dir=[^\n]*\n", "results_dir=TestingData\n", new_parameter_text)
+    # get db parameters
+    required_keys = {"host", "user"}
+    optional_keys = {"password", "port"}
+    db_params, err1 = ui.get_runtime_parameters(
+        required_keys=required_keys,
+        optional_keys=optional_keys,
+        header="postgresql",
+        param_file="run_time.ini"
+    )
+    db_params["dbname"] = dbname
+
+    if load_data:
+        get_testing_data("https://github.com/ElectionDataAnalysis/TestingData.git", "TestingData")
 
     if load_data:
         # create local run_time.ini for dataloader, based on existing
-        with open(dataloader_param_file, "w") as f:
-            f.write(new_parameter_text)
+        mdlp, err2 = ui.get_runtime_parameters(
+            required_keys=e.multi_data_loader_pars,
+            header="election_data_analysis",
+            param_file="run_time.ini",
+        )
+
+        ui.create_param_file(db_params, mdlp, test_dir)
 
         # Load the data
         dl = e.DataLoader()
         dl.load_all(move_files=False)
 
-    # move to tests directory
-    os.chdir(test_dir)
+    ui.run_tests(test_dir, dbname)
 
-    # create run_time.ini for testing routines to use
-    with open(test_param_file, "w") as f:
-        f.write(new_parameter_text)
+    # allow user to inspect database if desired
+    input(f"Hit return to continue (and remove test db {dbname} and test data)")
 
-    # run pytest
-    os.system("pytest")
+    # remove database
+    new_params, err = ui.get_runtime_parameters(
+        required_keys=["host", "port", "user", "password", "dbname"],
+        param_file=test_param_file,
+        header="postgresql",
+        err=dict(),
+    )
 
-    # move back to original directory
-    os.chdir(original_dir)
+    if load_data:
+        d.remove_database(new_params)
 
     if load_data:
         # allow user to pause, option to remove db
@@ -95,6 +109,6 @@ def run(load_data: bool = True, dbname: str = None):
 
 
 if __name__ == "__main__":
-#    run(load_data=False,dbname='test_0924_1643')
-    run()
+#    run2(load_data=False, dbname='test_1021_2049')
+    run2()
     exit()

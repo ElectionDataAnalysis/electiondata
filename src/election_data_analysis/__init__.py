@@ -86,13 +86,15 @@ class DataLoader:
         )
 
         # create db if it does not already exist and have right tables
-        ok, err = db.test_connection()
-        if not ok:
-            db.create_new_db()
+        err = db.create_db_if_not_ok()
 
         # connect to db
+        self.connect_to_db(err=err)
+
+    def connect_to_db(self, dbname: str = "postgres", err: Optional[dict] = None):
+        new_err = None
         try:
-            self.engine, new_err = db.sql_alchemy_connect()
+            self.engine, new_err = db.sql_alchemy_connect(dbname=dbname)
             Session = sessionmaker(bind=self.engine)
             self.session = Session()
         except Exception as e:
@@ -104,6 +106,15 @@ class DataLoader:
             ui.report(err)
             print("Exiting")
             quit()
+        else:
+            return
+
+    def change_db(self, new_db_name: str):
+        """Changes the database into which the data is loaded"""
+        self.d["dbname"] = new_db_name
+        self.session.close()
+        self.connect_to_db(dbname=new_db_name)
+        return
 
     def load_all(
         self, load_jurisdictions: bool = True, move_files: bool = True
@@ -279,6 +290,21 @@ class DataLoader:
         ui.report(err, loc_dict)
         return err
 
+    def remove_data(self, election_id: int, juris_id: int) -> Optional[str]:
+        """Remove from the db all data for the given <election_id> in the given <juris>"""
+        # get connection & cursor
+        connection = self.session.bind.raw_connection()
+        cursor = connection.cursor()
+
+        # find all datafile ids matching the given election and jurisdiction
+        df_list, err_str = db.data_file_list(cursor, election_id, reporting_unit_id=juris_id)
+        if err_str:
+            return err_str
+
+        # remove data from all those datafiles
+        for idx in df_list:
+            db.remove_vote_counts(connection, cursor, idx)
+        return None
 
 class SingleDataLoader:
     def __init__(
@@ -1291,7 +1317,7 @@ def make_par_files(
 
 
 class Analyzer:
-    def __new__(self, param_file=None):
+    def __new__(self, param_file=None, dbname=None):
         """Checks if parameter file exists and is correct. If not, does
         not create DataLoader object."""
         try:
@@ -1317,12 +1343,12 @@ class Analyzer:
 
         return super().__new__(self)
 
-    def __init__(self, param_file=None):
+    def __init__(self, param_file=None, dbname=None):
         if param_file:
             self.param_file = param_file
         else:
             self.param_file = "run_time.ini"
-        eng, err = db.sql_alchemy_connect(self.param_file)
+        eng, err = db.sql_alchemy_connect(self.param_file, dbname=dbname)
         Session = sessionmaker(bind=eng)
         self.session = Session()
 
@@ -1525,3 +1551,99 @@ class Analyzer:
 def get_filename(path: str) -> str:
     head, tail = ntpath.split(path)
     return tail or ntpath.basename(head)
+
+def aggregate_results(election, jurisdiction, contest_type, by_vote_type, dbname=None):
+    # using the analyzer gives us access to DB session
+    empty_df_with_good_cols = pd.DataFrame(columns=['contest','count'])
+    an = Analyzer(dbname=dbname)
+    election_id = db.name_to_id(an.session, "Election", election)
+    if not election_id:
+        return empty_df_with_good_cols
+    connection = an.session.bind.raw_connection()
+    cursor = connection.cursor()
+
+    datafile_list, e = db.data_file_list(cursor, election_id, by="Id")
+    if e:
+        print(e)
+        return empty_df_with_good_cols
+    if len(datafile_list) == 0:
+        print(f"No datafiles found for Election_Id {election_id}")
+        return empty_df_with_good_cols
+
+    df, err_str = db.export_rollup_from_db(
+        cursor,
+        jurisdiction,
+        "county",
+        contest_type,
+        datafile_list,
+        by="Id",
+        exclude_total=True,
+        by_vote_type=True,
+    )
+    if df.empty:
+        # TODO better logic? This is like throwing spaghetti at the wall
+        # try without excluding total
+        df, err_str = db.export_rollup_from_db(
+            cursor,
+            jurisdiction,
+            "county",
+            contest_type,
+            datafile_list,
+            by="Id",
+            exclude_total=False,
+            by_vote_type=True,
+        )
+    if err_str:
+        return empty_df_with_good_cols
+    return df
+
+
+def data_exists(election, jurisdiction, p_path=None, dbname=None):
+    an = Analyzer(param_file=p_path, dbname=dbname)
+    election_id = db.name_to_id(an.session, "Election", election)
+    reporting_unit_id = db.name_to_id(an.session, "ReportingUnit", jurisdiction)
+    con = an.session.bind.raw_connection()
+    cur = con.cursor()
+    answer, err_str = db.data_file_list(
+        cur,
+        election_id=election_id,
+        reporting_unit_id=reporting_unit_id
+    )
+    if len(answer) > 0:
+        return True
+    else:
+        return False
+
+
+def check_totals_match_vote_types(election, jurisdiction, dbname=None):
+    df_candidate = aggregate_results(election, jurisdiction, "Candidate", False, dbname=dbname)
+    df_ballot = aggregate_results(election, jurisdiction, "BallotMeasure", False, dbname=dbname)
+    df_by_ttl = pd.concat([df_candidate, df_ballot])
+
+    df_candidate = aggregate_results(election, jurisdiction, "Candidate", True, dbname=dbname)
+    df_ballot = aggregate_results(election, jurisdiction, "BallotMeasure", True, dbname=dbname)
+    df_by_type = pd.concat([df_candidate, df_ballot])
+    return df_by_ttl["count"].sum() == df_by_type["count"].sum()
+
+
+# A couple random contests
+def contest_total(election, jurisdiction, contest, dbname=None):
+    df_candidate = aggregate_results(election, jurisdiction, "Candidate", False, dbname=dbname)
+    df_ballot = aggregate_results(election, jurisdiction, "BallotMeasure", False, dbname=dbname)
+    df = pd.concat([df_candidate, df_ballot])
+    df = df[df["contest"] == contest]
+    return df["count"].sum()
+
+
+def count_type_total(election, jurisdiction, contest, count_item_type, dbname=None):
+    df_candidate = aggregate_results(election, jurisdiction, "Candidate", False, dbname=dbname)
+    df_ballot = aggregate_results(election, jurisdiction, "BallotMeasure", False, dbname=dbname)
+    df = pd.concat([df_candidate, df_ballot])
+    # TODO is this error-handling what we want?
+    if df.empty:
+        return 0
+    else:
+        df = df[df["contest"] == contest]
+        df = df[df["count_item_type"] == count_item_type]
+        return df["count"].sum()
+
