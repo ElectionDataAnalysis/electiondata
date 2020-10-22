@@ -3850,6 +3850,11 @@ CountItemType	absentee-mail	Absentee by Mail
 CountItemType	early	Advance in Person
 CountItemType	provisional	Provisional
 CountItemType	total	Choice Total
+CountItemType	election-day	Election Day Votes
+CountItemType	absentee-mail	Absentee by Mail Votes
+CountItemType	early	Advanced Voting Votes
+CountItemType	provisional	Provisional Votes
+CountItemType	total	Choice Total
 BallotMeasureSelection	Yes	YES
 BallotMeasureSelection	No	NO
 Candidate	Donald J. Trump	Donald J. Trump (I)
