@@ -237,6 +237,7 @@ def read_concatenated_blocks(
 
     # Make row index (from first column of blocks) into a column called 'first_column'
     raw_results.reset_index(inplace=True)
+    # TODO tech debt is next line still necessary?
     raw_results.rename(columns={0: "first_column"}, inplace=True)
 
     return raw_results, err
