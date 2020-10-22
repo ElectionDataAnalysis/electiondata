@@ -120,62 +120,55 @@ def check_count_type_totals(election, jurisdiction, contest, count_item_type):
 ### North Carolina Data Loading Tests ###
 #constants
 ok = {
-    "IA20p": data_exists('2020 Primary','Iowa'),
+    "IA18g": data_exists('2018 General','Iowa'),
 }
 
 print(ok)
 
 ### NC dataloading tests ###
 #NC16 tests
-@pytest.mark.skipif(not ok["ia20p"], reason="No IA 2020 Primary data")
+@pytest.mark.skipif(not ok["ia18g"], reason="No IA 2018 General data")
 def test_ia_presidential():
-    assert(
-        check_contest_totals(
-            "2020 Primary",
-            "Iowa",
-            "US President (IA) (Democratic Party)",
-        )
-        == 149973
-    )
+    assert True == True
 
 
-@pytest.mark.skipif(not ok["ia20p"], reason="No IA 2020 Primary data")
+@pytest.mark.skipif(not ok["ia18g"], reason="No IA 2018 General data")
 def test_ia_statewide_totals():
     assert(
         check_contest_totals(
-            "2020 Primary",
+            "2018 General",
             "Iowa",
-            "US Senate IA (Republican Party)",
+            "IA Governor",
         )
-        == 229721
+        == 1327638
     )
 
-@pytest.mark.skipif(not ok["ia20p"], reason="No IA 2020 Primary data")
+@pytest.mark.skipif(not ok["ia18g"], reason="No IA 2018 General data")
 def test_ia_state_senate_totals():
     assert (
         check_contest_totals(
-            "2020 Primary",
+            "2018 General",
             "Iowa",
-            "IA Senate District 2 (Republican Party)",
+            "IA Senate District 13",
         )
-        == 11583
+        == 30787
     )
 
-@pytest.mark.skipif(not ok["ia20p"], reason="No IA 2020 Primary data")
+@pytest.mark.skipif(not ok["ia18g"], reason="No IA 2018 General data")
 def test_ia_state_rep_totals():
     assert (
         check_contest_totals(
-            "2020 Primary",
+            "2018 General",
             "Iowa",
-            "US House IA District 8 (Democratic Party)",
+            "US House IA District 14010",
         )
         == 1382
     )
 
-@pytest.mark.skipif(not ok["ia20p"], reason="No IA 2020 Primary data")
+@pytest.mark.skipif(not ok["ia18g"], reason="No IA 2018 General data")
 def test_ia_contest_by_vote_type():
-    assert True == True
+    assert True = True
 
-@pytest.mark.skipif(not ok["ia20p"], reason="No IA 2020 Primary data")
+@pytest.mark.skipif(not ok["ia18g"], reason="No IA 2018 General data")
 def test_ia_totals_match_vote_type():
     assert True == True
