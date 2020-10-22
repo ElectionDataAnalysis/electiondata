@@ -26,7 +26,7 @@ def test_house_totals(dbname):
     assert (not e.data_exists("2016 General","Virginia",dbname=dbname) or e.contest_total(
             "2016 General",
             "Virginia",
-            "US House PA District 2",
+            "US House VA District 2",
             dbname=dbname,
         )
             == 309915
