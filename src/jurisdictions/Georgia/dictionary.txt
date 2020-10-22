@@ -3854,6 +3854,7 @@ CountItemType	election-day	Election Day Votes
 CountItemType	absentee-mail	Absentee by Mail Votes
 CountItemType	early	Advanced Voting Votes
 CountItemType	provisional	Provisional Votes
+CountItemType	total	Choice Total
 BallotMeasureSelection	Yes	YES
 BallotMeasureSelection	No	NO
 Candidate	Donald J. Trump	Donald J. Trump (I)
@@ -3883,7 +3884,7 @@ Candidate	John Noel	John Noel
 Candidate	Jason Shaw	Jason Shaw (I)
 Candidate	Robert G. Bryant	Robert G. Bryant
 Candidate	Earl L. 'Buddy' Carter	Earl L. 'Buddy' Carter (I)
-Candidate	Earl L. 'Buddy' Carter	EARL âBUDDYâ CARTER (I)
+Candidate	Earl L. 'Buddy' Carter	EARL 'BUDDY' CARTER (I)
 Candidate	Danny Merritt	Danny Merritt
 Candidate	Ken Yasger	Ken Yasger
 Candidate	Joyce Marie Griggs	Joyce Marie Griggs
@@ -3899,7 +3900,7 @@ Candidate	Johsie Cruz Ezammudeen	Johsie Cruz Ezammudeen
 Candidate	William Haston	William Haston
 Candidate	Henry C. 'Hank' Johnson, Jr.	Henry C. 'Hank' Johnson, Jr. (I)
 Candidate	Henry C. 'Hank' Johnson, Jr.	HENRY C HANK JOHNSON JR (I)
-Candidate	Henry C. 'Hank' Johnson, Jr.	HENRY C âHANKâ JOHNSON JR (I)
+Candidate	Henry C. 'Hank' Johnson, Jr.	HENRY C 'HANK' JOHNSON JR (I)
 Candidate	Elaine Amankwah Nietmann	Elaine Amankwah Nietmann
 Candidate	Angela Stanton-King	Angela Stanton-King
 Candidate	John R. Lewis	John R. Lewis (I)
@@ -5213,7 +5214,7 @@ Candidate	Mark Butler	MARK BUTLER (I)
 Candidate	Richard Keatley	RICHARD KEATLEY
 Candidate	Earl L. 'Buddy' Carter	EARL L. 'BUDDY' CARTER
 Candidate	Earl L. 'Buddy' Carter	Earl L. ''Buddy'' Carter (I)
-Candidate	Earl L. 'Buddy' Carter	EARL Ã¢ÂÂBUDDYÃ¢ÂÂ CARTER (I)
+Candidate	Earl L. 'Buddy' Carter	EARL 'BUDDY' CARTER (I)
 Candidate	Lisa M. Ring	LISA M. RING
 Candidate	Herman West Jr	HERMAN WEST JR
 Candidate	Chuck Enderlin	CHUCK ENDERLIN
@@ -5313,7 +5314,7 @@ Candidate	TERI ANULEWICZ (I)	TERI ANULEWICZ (I)
 Candidate	LUISA WAKEMAN	LUISA WAKEMAN
 Candidate	CHINITA ALLEN	CHINITA ALLEN
 Candidate	ESSENCE JOHNSON	ESSENCE JOHNSON
-Candidate	KARÃN SANDIFORD	KARÃN SANDIFORD
+Candidate	KARÍN SANDIFORD	KARÍN SANDIFORD
 Candidate	ANDREA NUGENT	ANDREA NUGENT
 Candidate	MARY ROBICHAUX	MARY ROBICHAUX
 Candidate	CHARLES E. 'CHUCK' MARTIN (I)	CHARLES E. 'CHUCK' MARTIN (I)
