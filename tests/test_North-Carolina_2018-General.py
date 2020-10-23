@@ -1,10 +1,5 @@
 import election_data_analysis as e
 
-def test_nc_presidential_18(dbname):
-    # No presidential contests in 2018
-    assert True == True
-
-
 
 def test_nc_statewide_totals_18(dbname):
     assert (not e.data_exists("2018 General","North Carolina",dbname=dbname) or e.contest_total(

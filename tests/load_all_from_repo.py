@@ -83,8 +83,8 @@ def run2(
 
 if __name__ == "__main__":
     run2(election_jurisdiction_list=[
-        ("2020 Primary","Indiana"),
-        ("2018 General","Indiana"),
-        ("2016 General","Indiana"),
+        ("2020 Primary","North Carolina"),
+        ("2018 General","North Carolina"),
+        ("2016 General","North Carolina"),
     ])
     exit()
