@@ -1374,31 +1374,12 @@ class Analyzer:
         )
         h_election_id = db.name_to_id(self.session, "Election", h_election)
         v_election_id = db.name_to_id(self.session, "Election", v_election)
-        # *_type is either candidates or contests
+        # *_type is either candidates or contests or parties
         h_type, h_count_item_type = self.split_category_input(h_category)
         v_type, v_count_item_type = self.split_category_input(v_category)
-        # if h_count == "All Candidates" or h_count == "All Contests":
-        #     h_count_id = -1
-        # elif h_type == "candidates":
-        #     h = h_count.split("-")[0].strip()
-        #     h_count_id = db.name_to_id(self.session, "Candidate", h)
-        # elif h_type == "contests":
-        #     h_count_id = db.name_to_id(self.session, "CandidateContest", h_count)
-        # if v_count == "All Candidates" or v_count == "All Contests":
-        #     v_count_id = -1
-        # elif v_type == "candidates":
-        #     v = v_count.split("-")[0].strip()
-        #     v_count_id = db.name_to_id(self.session, "Candidate", v)
-        # elif v_type == "contests":
-        #     v_count_id = db.name_to_id(self.session, "CandidateContest", v_count)
-        # elif v_type == "parties":
-        #     if v_count in ["Unaffiliated", "none or unknown"]:
-        #         # remove the count item type
-        #         v = " ".join(v_count.split(" ")[:-1])
-        #     else:
-        #         # grab the first word and add `Party`
-        #         v = f"""{v_count.split(" ")[0]} Party"""
-        #     v_count_id = db.name_to_id(self.session, "Party", v)
+        h_count = h_count.split(" - ")[0].strip()
+        v_count = v_count.split(" - ")[0].strip()
+
         agg_results = a.create_scatter(
             self.session,
             jurisdiction_id,

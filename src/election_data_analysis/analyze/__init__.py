@@ -306,6 +306,7 @@ def get_data_for_scatter(
         unsummed["Selection"] = filter_str
         unsummed["Contest_Id"] = -1
         unsummed["Candidate_Id"] = -1
+        unsummed["Contest"] = filter_str
 
     if count_type == "contests" and not keep_all:
         connection = session.bind.raw_connection()
