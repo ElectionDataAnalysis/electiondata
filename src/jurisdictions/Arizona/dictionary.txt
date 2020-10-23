@@ -877,6 +877,7 @@ CountItemType	election-day	Polling Place
 CountItemType	early	Early Ballots
 CountItemType	provisional	Provisional Ballots
 Candidate	Garcia, Bo 'Heir Archy'	Garcia, Bo 'Heir Archy'
+Candidate	Garcia, Bo 'Heir Archy'	Garcia, Bo &quot;Heir Archy&quot;
 Candidate	Kelly, Mark	Kelly, Mark
 Candidate	Hess, Barry	Hess, Barry
 Candidate	White, Alan	White, Alan

@@ -895,8 +895,8 @@ def run_tests(test_dir: str, dbname: str, election_jurisdiction_list: Optional[l
 
     # run pytest
     if election_jurisdiction_list:
-        for (e,j) in election_jurisdiction_list:
-            f = f"test_{j.replace(' ','-')}_{e.replace(' ','-')}.py"
+        for (election, juris) in election_jurisdiction_list:
+            f = f"test_{juris.replace(' ','-')}_{election.replace(' ','-')}.py"
             os.system(f"pytest --dbname {dbname} {f}")
     else:
         os.system(f"pytest --dbname {dbname}")

@@ -14,3 +14,5 @@ local/
 .DS_Store
 *.ini
 /tests/TestingData/
+/tests/Passed_Tests/
+/tests/Staging/
