@@ -216,6 +216,8 @@ def test_connection(paramfile="run_time.ini", dbname=None) -> (bool, dict):
         )[0]
     except MissingSectionHeaderError as e:
         return {"message": "database.ini file not found suggested location."}
+
+    # use dbname from paramfile, unless dbname is passed
     if dbname:
         params["dbname"] = dbname
 
@@ -300,7 +302,7 @@ def create_or_reset_db(
     # if dbname already exists.
     if dbname in db_df.datname.unique():
         # reset DB to blank
-        eng_new, err = sql_alchemy_connect(param_file,dbname=dbname)
+        eng_new, err = sql_alchemy_connect(param_file, dbname=dbname)
         Session_new = sqlalchemy.orm.sessionmaker(bind=eng_new)
         sess_new = Session_new()
         db_cdf.reset_db(

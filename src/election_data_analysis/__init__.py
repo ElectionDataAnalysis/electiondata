@@ -97,7 +97,7 @@ class DataLoader:
         # connect to db
         self.connect_to_db(err=err)
 
-    def connect_to_db(self, dbname: str = "postgres", err: Optional[dict] = None):
+    def connect_to_db(self, dbname: Optional[str] = None, err: Optional[dict] = None):
         new_err = None
         try:
             self.engine, new_err = db.sql_alchemy_connect(dbname=dbname)
