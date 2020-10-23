@@ -778,7 +778,8 @@ def add_selection_id(
             c_df.loc[c_df_unmatched.index, "CandidateSelection_Id"] = c_df_unmatched[
                 "Id"
             ]
-        # recast Candidate_Id and Party_Id to int in w['Candidate']; Note that neither should have nulls, but rather the 'none or unknown' Id
+        # recast Candidate_Id and Party_Id to int in w['Candidate'];
+        # Note that neither should have nulls, but rather the 'none or unknown' Id
         #  NB: c_df had this recasting done in the append_id_to_dframe routine
         w["Candidate"], count_cols, err_df = generic_clean(w["Candidate"])
 

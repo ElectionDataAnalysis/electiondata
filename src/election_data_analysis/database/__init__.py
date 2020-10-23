@@ -1356,7 +1356,8 @@ def export_rollup_from_db(
         cursor.execute(q, [top_ru, sub_unit_type, tuple(datafile_list)])
         results = cursor.fetchall()
         results_df = pd.DataFrame(results)
-        results_df.columns = columns
+        if not results_df.empty:
+            results_df.columns = columns
         err_str = None
     except Exception as exc:
         results_df = pd.DataFrame()
