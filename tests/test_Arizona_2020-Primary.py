@@ -1,10 +1,8 @@
 import election_data_analysis as e
 #AZ20 tests
 
-def test_presidential(dbname):
-    # TODO get this contest
-    #Contest Not available
-    assert True == True
+def data_exists(dbname):
+    assert e.data_exists("2020 Primary","Arizona",dbname=dbname)
 
 # TODO get AZ munger to read write-in votes; then will have to add 451 for Bo 'Heir Archy' Garcia
 def test_statewide_totals(dbname):
