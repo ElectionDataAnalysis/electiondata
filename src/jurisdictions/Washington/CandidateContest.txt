@@ -1,0 +1,165 @@
+Name	NumberElected	Office	PrimaryParty
+WA House District 1	1	WA House District 1	
+WA House District 2	1	WA House District 2	
+WA House District 3	1	WA House District 3	
+WA House District 4	1	WA House District 4	
+WA House District 5	1	WA House District 5	
+WA House District 6	1	WA House District 6	
+WA House District 7	1	WA House District 7	
+WA House District 8	1	WA House District 8	
+WA House District 9	1	WA House District 9	
+WA House District 10	1	WA House District 10	
+WA House District 11	1	WA House District 11	
+WA House District 12	1	WA House District 12	
+WA House District 13	1	WA House District 13	
+WA House District 14	1	WA House District 14	
+WA House District 15	1	WA House District 15	
+WA House District 16	1	WA House District 16	
+WA House District 17	1	WA House District 17	
+WA House District 18	1	WA House District 18	
+WA House District 19	1	WA House District 19	
+WA House District 20	1	WA House District 20	
+WA House District 21	1	WA House District 21	
+WA House District 22	1	WA House District 22	
+WA House District 23	1	WA House District 23	
+WA House District 24	1	WA House District 24	
+WA House District 25	1	WA House District 25	
+WA House District 26	1	WA House District 26	
+WA House District 27	1	WA House District 27	
+WA House District 28	1	WA House District 28	
+WA House District 29	1	WA House District 29	
+WA House District 30	1	WA House District 30	
+WA House District 31	1	WA House District 31	
+WA House District 32	1	WA House District 32	
+WA House District 33	1	WA House District 33	
+WA House District 34	1	WA House District 34	
+WA House District 35	1	WA House District 35	
+WA House District 36	1	WA House District 36	
+WA House District 37	1	WA House District 37	
+WA House District 38	1	WA House District 38	
+WA House District 39	1	WA House District 39	
+WA House District 40	1	WA House District 40	
+WA House District 41	1	WA House District 41	
+WA House District 42	1	WA House District 42	
+WA House District 43	1	WA House District 43	
+WA House District 44	1	WA House District 44	
+WA House District 45	1	WA House District 45	
+WA House District 46	1	WA House District 46	
+WA House District 47	1	WA House District 47	
+WA House District 48	1	WA House District 48	
+WA House District 49	1	WA House District 49	
+WA House District 50	1	WA House District 50	
+WA House District 51	1	WA House District 51	
+WA House District 52	1	WA House District 52	
+WA House District 53	1	WA House District 53	
+WA House District 54	1	WA House District 54	
+WA House District 55	1	WA House District 55	
+WA House District 56	1	WA House District 56	
+WA House District 57	1	WA House District 57	
+WA House District 58	1	WA House District 58	
+WA House District 59	1	WA House District 59	
+WA House District 60	1	WA House District 60	
+WA House District 61	1	WA House District 61	
+WA House District 62	1	WA House District 62	
+WA House District 63	1	WA House District 63	
+WA House District 64	1	WA House District 64	
+WA House District 65	1	WA House District 65	
+WA House District 66	1	WA House District 66	
+WA House District 67	1	WA House District 67	
+WA House District 68	1	WA House District 68	
+WA House District 69	1	WA House District 69	
+WA House District 70	1	WA House District 70	
+WA House District 71	1	WA House District 71	
+WA House District 72	1	WA House District 72	
+WA House District 73	1	WA House District 73	
+WA House District 74	1	WA House District 74	
+WA House District 75	1	WA House District 75	
+WA House District 76	1	WA House District 76	
+WA House District 77	1	WA House District 77	
+WA House District 78	1	WA House District 78	
+WA House District 79	1	WA House District 79	
+WA House District 80	1	WA House District 80	
+WA House District 81	1	WA House District 81	
+WA House District 82	1	WA House District 82	
+WA House District 83	1	WA House District 83	
+WA House District 84	1	WA House District 84	
+WA House District 85	1	WA House District 85	
+WA House District 86	1	WA House District 86	
+WA House District 87	1	WA House District 87	
+WA House District 88	1	WA House District 88	
+WA House District 89	1	WA House District 89	
+WA House District 90	1	WA House District 90	
+WA House District 91	1	WA House District 91	
+WA House District 92	1	WA House District 92	
+WA House District 93	1	WA House District 93	
+WA House District 94	1	WA House District 94	
+WA House District 95	1	WA House District 95	
+WA House District 96	1	WA House District 96	
+WA House District 97	1	WA House District 97	
+WA House District 98	1	WA House District 98	
+WA Senate District 1	1	WA Senate District 1	
+WA Senate District 2	1	WA Senate District 2	
+WA Senate District 3	1	WA Senate District 3	
+WA Senate District 4	1	WA Senate District 4	
+WA Senate District 5	1	WA Senate District 5	
+WA Senate District 6	1	WA Senate District 6	
+WA Senate District 7	1	WA Senate District 7	
+WA Senate District 8	1	WA Senate District 8	
+WA Senate District 9	1	WA Senate District 9	
+WA Senate District 10	1	WA Senate District 10	
+WA Senate District 11	1	WA Senate District 11	
+WA Senate District 12	1	WA Senate District 12	
+WA Senate District 13	1	WA Senate District 13	
+WA Senate District 14	1	WA Senate District 14	
+WA Senate District 15	1	WA Senate District 15	
+WA Senate District 16	1	WA Senate District 16	
+WA Senate District 17	1	WA Senate District 17	
+WA Senate District 18	1	WA Senate District 18	
+WA Senate District 19	1	WA Senate District 19	
+WA Senate District 20	1	WA Senate District 20	
+WA Senate District 21	1	WA Senate District 21	
+WA Senate District 22	1	WA Senate District 22	
+WA Senate District 23	1	WA Senate District 23	
+WA Senate District 24	1	WA Senate District 24	
+WA Senate District 25	1	WA Senate District 25	
+WA Senate District 26	1	WA Senate District 26	
+WA Senate District 27	1	WA Senate District 27	
+WA Senate District 28	1	WA Senate District 28	
+WA Senate District 29	1	WA Senate District 29	
+WA Senate District 30	1	WA Senate District 30	
+WA Senate District 31	1	WA Senate District 31	
+WA Senate District 32	1	WA Senate District 32	
+WA Senate District 33	1	WA Senate District 33	
+WA Senate District 34	1	WA Senate District 34	
+WA Senate District 35	1	WA Senate District 35	
+WA Senate District 36	1	WA Senate District 36	
+WA Senate District 37	1	WA Senate District 37	
+WA Senate District 38	1	WA Senate District 38	
+WA Senate District 39	1	WA Senate District 39	
+WA Senate District 40	1	WA Senate District 40	
+WA Senate District 41	1	WA Senate District 41	
+WA Senate District 42	1	WA Senate District 42	
+WA Senate District 43	1	WA Senate District 43	
+WA Senate District 44	1	WA Senate District 44	
+WA Senate District 45	1	WA Senate District 45	
+WA Senate District 46	1	WA Senate District 46	
+WA Senate District 47	1	WA Senate District 47	
+WA Senate District 48	1	WA Senate District 48	
+WA Senate District 49	1	WA Senate District 49	
+US House WA District 1	1	US House WA District 1	
+US House WA District 2	1	US House WA District 2	
+US House WA District 3	1	US House WA District 3	
+US House WA District 4	1	US House WA District 4	
+US House WA District 5	1	US House WA District 5	
+US House WA District 6	1	US House WA District 6	
+US House WA District 7	1	US House WA District 7	
+US House WA District 8	1	US House WA District 8	
+US House WA District 9	1	US House WA District 9	
+US House WA District 10	1	US House WA District 10	
+US President (WA)	1	US President (WA)	
+WA Governor	1	WA Governor	
+US Senate WA	1	US Senate WA	
+WA Attorney General	1	WA Attorney General	
+WA Lieutenant Governor	1	WA Lieutenant Governor	
+WA Treasurer	1	WA Treasurer	
+WA Secretary of State	1	WA Secretary of State	
