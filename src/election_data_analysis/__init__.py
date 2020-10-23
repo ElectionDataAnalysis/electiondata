@@ -97,7 +97,7 @@ class DataLoader:
         # connect to db
         self.connect_to_db(err=err)
 
-    def connect_to_db(self, dbname: str = "postgres", err: Optional[dict] = None):
+    def connect_to_db(self, dbname: Optional[str] = None, err: Optional[dict] = None):
         new_err = None
         try:
             self.engine, new_err = db.sql_alchemy_connect(dbname=dbname)
@@ -1334,10 +1334,15 @@ class Analyzer:
         try:
             if not param_file:
                 param_file = "run_time.ini"
-            d, parameter_err = ui.get_runtime_parameters(
+            d, postgres_param_err = ui.get_runtime_parameters(
                 required_keys=["dbname"],
                 param_file=param_file,
                 header="postgresql",
+            )
+            d, eda_err = ui.get_runtime_parameters(
+                required_keys=["rollup_directory"],
+                param_file=param_file,
+                header="election_data_analysis"
             )
         except FileNotFoundError as e:
             print(
@@ -1346,20 +1351,28 @@ class Analyzer:
             )
             return None
 
-        if parameter_err:
+        if postgres_param_err or eda_err:
             print("Parameter file missing requirements.")
-            print(parameter_err)
+            print(postgres_param_err)
             print("Analyzer object not created.")
             return None
 
         return super().__new__(self)
 
     def __init__(self, param_file=None, dbname=None):
-        if param_file:
-            self.param_file = param_file
-        else:
-            self.param_file = "run_time.ini"
-        eng, err = db.sql_alchemy_connect(self.param_file, dbname=dbname)
+        if not param_file:
+            param_file = "run_time.ini"
+
+        # read rollup_directory from param_file
+        d, error = ui.get_runtime_parameters(
+            required_keys=["rollup_directory"],
+            param_file=param_file,
+            header="election_data_analysis",
+        )
+        self.rollup_directory = d["rollup_directory"]
+
+        # create session
+        eng, err = db.sql_alchemy_connect(param_file, dbname=dbname)
         Session = sessionmaker(bind=eng)
         self.session = Session()
 
@@ -1395,16 +1408,6 @@ class Analyzer:
         so any image extension that is supported by plotly is usable here. Currently supports
         html, png, jpeg, webp, svg, pdf, and eps. Note that some filetypes may need plotly-orca
         installed as well."""
-        d, error = ui.get_runtime_parameters(
-            required_keys=["rollup_directory"],
-            param_file=self.param_file,
-            header="election_data_analysis",
-        )
-        if error:
-            print("Parameter file missing requirements.")
-            print(error)
-            print("Data not created.")
-            return
         jurisdiction_id = db.name_to_id(self.session, "ReportingUnit", jurisdiction)
         subdivision_type_id = db.get_jurisdiction_hierarchy(
             self.session, jurisdiction_id
@@ -1431,7 +1434,7 @@ class Analyzer:
             v_type,
         )
         if fig_type and agg_results:
-            viz.plot("scatter", agg_results, fig_type, d["rollup_directory"])
+            viz.plot("scatter", agg_results, fig_type, self.rollup_directory)
         return agg_results
 
     def bar(
@@ -1443,16 +1446,6 @@ class Analyzer:
         fig_type: str = None,
     ) -> list:
         """contest_type is one of state, congressional, state-senate, state-house"""
-        d, error = ui.get_runtime_parameters(
-            required_keys=["rollup_directory"],
-            param_file=self.param_file,
-            header="election_data_analysis",
-        )
-        if error:
-            print("Parameter file missing requirements.")
-            print(error)
-            print("Data not created.")
-            return
         election_id = db.name_to_id(self.session, "Election", election)
         jurisdiction_id = db.name_to_id(self.session, "ReportingUnit", jurisdiction)
         # for now, bar charts can only handle jurisdictions where county is one level
@@ -1473,7 +1466,7 @@ class Analyzer:
         )
         if fig_type and agg_results:
             for agg_result in agg_results:
-                viz.plot("bar", agg_result, fig_type, d["rollup_directory"])
+                viz.plot("bar", agg_result, fig_type, self.rollup_directory)
         return agg_results
 
     def split_category_input(self, input_str: str):
@@ -1495,16 +1488,6 @@ class Analyzer:
         contest: str = None,
     ) -> list:
         """contest_type is one of state, congressional, state-senate, state-house"""
-        d, error = ui.get_runtime_parameters(
-            required_keys=["rollup_directory"],
-            param_file=self.param_file,
-            header="election_data_analysis",
-        )
-        if error:
-            print("Parameter file missing requirements.")
-            print(error)
-            print("Data not created.")
-            return
         election_id = db.name_to_id(self.session, "Election", election)
         jurisdiction_id = db.name_to_id(self.session, "ReportingUnit", jurisdiction)
         subdivision_type_id = db.get_jurisdiction_hierarchy(
@@ -1525,29 +1508,18 @@ class Analyzer:
     def top_counts(
         self, election: str, rollup_unit: str, sub_unit: str, by_vote_type: bool
     ) -> Optional[str]:
-        d, error = ui.get_runtime_parameters(
-            required_keys=["rollup_directory"],
-            param_file=self.param_file,
-            header="election_data_analysis",
+        rollup_unit_id = db.name_to_id(self.session, "ReportingUnit", rollup_unit)
+        sub_unit_id = db.name_to_id(self.session, "ReportingUnitType", sub_unit)
+        election_id = db.name_to_id(self.session, "Election", election)
+        err = a.create_rollup(
+            self.session,
+            self.rollup_directory,
+            top_ru_id=rollup_unit_id,
+            sub_rutype_id=sub_unit_id,
+            election_id=election_id,
+            by_vote_type=by_vote_type,
         )
-        if error:
-            print("Parameter file missing requirements.")
-            print(error)
-            print("Data not created.")
-            return
-        else:
-            rollup_unit_id = db.name_to_id(self.session, "ReportingUnit", rollup_unit)
-            sub_unit_id = db.name_to_id(self.session, "ReportingUnitType", sub_unit)
-            election_id = db.name_to_id(self.session, "Election", election)
-            err = a.create_rollup(
-                self.session,
-                d["rollup_directory"],
-                top_ru_id=rollup_unit_id,
-                sub_rutype_id=sub_unit_id,
-                election_id=election_id,
-                by_vote_type=by_vote_type,
-            )
-            return err
+        return err
 
 
 def get_filename(path: str) -> str:

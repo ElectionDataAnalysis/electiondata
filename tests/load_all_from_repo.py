@@ -1,4 +1,5 @@
 import os
+import sys, getopt
 import datetime
 from pathlib import Path
 import shutil
@@ -6,6 +7,32 @@ from typing import Optional
 import election_data_analysis as e
 from election_data_analysis import database as db
 from election_data_analysis import user_interface as ui
+
+
+def io(argv) -> Optional[list]:
+    election = None
+    jurisdiction = None
+    file_name = 'load_all_from_repo.py'
+    try:
+        opts, args = getopt.getopt(argv,"he:j:",["election=","juris="])
+    except getopt.GetoptError:
+        print (f'{file_name} -e <election> -j <jurisdiction>')
+        sys.exit(2)
+    for opt, arg in opts:
+        if opt == '-h':
+            print (f'{file_name} -e <election> -j <jurisdiction>')
+            sys.exit()
+        elif opt in ("-i", "--election"):
+            election = arg
+        elif opt in ("-o", "--juris"):
+            jurisdiction = arg
+    print (f'Election file is {election}')
+    print (f'Jurisdiction is {jurisdiction}')
+    if (not election) or (not jurisdiction):
+        ej_list = None
+    else:
+        ej_list = [(election, jurisdiction)]
+    return ej_list
 
 
 def get_testing_data(url: str, target: str = "TestingData"):
@@ -82,5 +109,11 @@ def run2(
 
 
 if __name__ == "__main__":
-    run2(election_jurisdiction_list=[("2020 Primary","Georgia")])
+
+    if len(sys.argv) == 1:
+        election_jurisdiction_list = None
+    else:
+        election_jurisdiction_list = io(sys.argv[1:])
+
+    run2(election_jurisdiction_list=election_jurisdiction_list)
     exit()

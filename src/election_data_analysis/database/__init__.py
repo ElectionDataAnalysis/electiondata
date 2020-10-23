@@ -216,6 +216,8 @@ def test_connection(paramfile="run_time.ini", dbname=None) -> (bool, dict):
         )[0]
     except MissingSectionHeaderError as e:
         return {"message": "database.ini file not found suggested location."}
+
+    # use dbname from paramfile, unless dbname is passed
     if dbname:
         params["dbname"] = dbname
 
@@ -292,18 +294,15 @@ def create_or_reset_db(
         # seems to be something wrong with connection. Fail here.
         print(f"Error connecting to database. Exiting.")
         quit()
+        con = None  # to keep syntax-checker happy
 
     cur = con.cursor()
     db_df = get_database_names(con)
 
-    # connect to postgres db
-    eng, err = sql_alchemy_connect(param_file, dbname="postgres")
-    Session = sqlalchemy.orm.sessionmaker(bind=eng)
-
     # if dbname already exists.
     if dbname in db_df.datname.unique():
-        # Clean out DB
-        eng_new, err = sql_alchemy_connect(param_file,dbname=dbname)
+        # reset DB to blank
+        eng_new, err = sql_alchemy_connect(param_file, dbname=dbname)
         Session_new = sqlalchemy.orm.sessionmaker(bind=eng_new)
         sess_new = Session_new()
         db_cdf.reset_db(
@@ -316,7 +315,7 @@ def create_or_reset_db(
         Session_new = sqlalchemy.orm.sessionmaker(bind=eng_new)
         sess_new = Session_new()
 
-
+    # TODO tech debt: does reset duplicate work here?
     # load cdf tables
     db_cdf.create_common_data_format_tables(
         sess_new,
@@ -332,7 +331,7 @@ def create_or_reset_db(
 
 
 def sql_alchemy_connect(
-    paramfile: str = "run_time.ini", dbname: str = "postgres"
+    paramfile: str = "run_time.ini", dbname: Optional[str] = None
 ) -> (sqlalchemy.engine, Optional[dict]):
     """Returns an engine and a metadata object"""
     params, err = ui.get_runtime_parameters(
@@ -341,8 +340,10 @@ def sql_alchemy_connect(
     if err:
         return None, err
 
-    if dbname != "postgres":
+    # if dbname was given, use it instead of name in paramfile
+    if dbname:
         params["dbname"] = dbname
+
     # We connect with the help of the PostgreSQL URL
     url = "postgresql://{user}:{password}@{host}:{port}/{dbname}"
     url = url.format(**params)
