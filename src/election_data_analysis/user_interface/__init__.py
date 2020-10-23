@@ -1,4 +1,5 @@
 from configparser import ConfigParser, MissingSectionHeaderError
+from typing import Optional
 from election_data_analysis import munge as m
 from election_data_analysis import special_formats as sf
 from election_data_analysis import database as db
@@ -307,7 +308,7 @@ warning_keys = {
 }
 
 
-def read_results(results_file_path, munger_path, aux_data_path, error: dict) -> (pd.DataFrame, jm.Munger, dict):
+def read_results(results_file_path, munger_path, aux_data_path, error: Optional[dict]) -> (pd.DataFrame, jm.Munger, dict):
     """Reads results (appending '_SOURCE' to the columns)
     and initiates munger."""
 

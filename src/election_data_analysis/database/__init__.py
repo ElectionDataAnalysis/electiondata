@@ -292,17 +292,14 @@ def create_or_reset_db(
         # seems to be something wrong with connection. Fail here.
         print(f"Error connecting to database. Exiting.")
         quit()
+        con = None  # to keep syntax-checker happy
 
     cur = con.cursor()
     db_df = get_database_names(con)
 
-    # connect to postgres db
-    eng, err = sql_alchemy_connect(param_file, dbname="postgres")
-    Session = sqlalchemy.orm.sessionmaker(bind=eng)
-
     # if dbname already exists.
     if dbname in db_df.datname.unique():
-        # Clean out DB
+        # reset DB to blank
         eng_new, err = sql_alchemy_connect(param_file,dbname=dbname)
         Session_new = sqlalchemy.orm.sessionmaker(bind=eng_new)
         sess_new = Session_new()
@@ -316,7 +313,7 @@ def create_or_reset_db(
         Session_new = sqlalchemy.orm.sessionmaker(bind=eng_new)
         sess_new = Session_new()
 
-
+    # TODO tech debt: does reset duplicate work here?
     # load cdf tables
     db_cdf.create_common_data_format_tables(
         sess_new,
@@ -332,7 +329,7 @@ def create_or_reset_db(
 
 
 def sql_alchemy_connect(
-    paramfile: str = "run_time.ini", dbname: str = "postgres"
+    paramfile: str = "run_time.ini", dbname: Optional[str] = None
 ) -> (sqlalchemy.engine, Optional[dict]):
     """Returns an engine and a metadata object"""
     params, err = ui.get_runtime_parameters(
@@ -341,8 +338,10 @@ def sql_alchemy_connect(
     if err:
         return None, err
 
-    if dbname != "postgres":
+    # if dbname was given, use it instead of name in paramfile
+    if dbname:
         params["dbname"] = dbname
+
     # We connect with the help of the PostgreSQL URL
     url = "postgresql://{user}:{password}@{host}:{port}/{dbname}"
     url = url.format(**params)
@@ -1047,10 +1046,13 @@ def get_filtered_input_options(session, input_str, filters):
         count_types.sort()
         data = {
             "parent": [filters[0] for count_type in count_types]
+            + [filters[0] for count_type in count_types]
             + [filters[0] for count_type in count_types],
             "name": [f"Candidate {count_type}" for count_type in count_types]
-            + [f"Contest {count_type}" for count_type in count_types],
+            + [f"Contest {count_type}" for count_type in count_types]
+            + [f"Party {count_type}" for count_type in count_types],
             "type": [None for count_type in count_types]
+            + [None for count_type in count_types]
             + [None for count_type in count_types],
         }
         df = pd.DataFrame(data=data)
@@ -1058,7 +1060,7 @@ def get_filtered_input_options(session, input_str, filters):
     elif input_str == "count" and bool([f for f in filters if f.startswith("Contest")]):
         df = get_relevant_contests(session, filters)
     # check if it's looking for a count of candidates
-    elif input_str == "count":
+    elif input_str == "count" and bool([f for f in filters if f.startswith("Candidate")]):
         election_id = list_to_id(session, "Election", filters)
         reporting_unit_id = list_to_id(session, "ReportingUnit", filters)
         df_unordered = read_vote_count(
@@ -1069,6 +1071,19 @@ def get_filtered_input_options(session, input_str, filters):
             ["parent", "name", "type", "unit_type"]
         )
         df = clean_candidate_names(df_unordered[df_cols])
+    # check if it's looking for a count by party
+    elif input_str == "count":
+        election_id = list_to_id(session, "Election", filters)
+        reporting_unit_id = list_to_id(session, "ReportingUnit", filters)
+        df = read_vote_count(
+            session, 
+            election_id, 
+            reporting_unit_id, 
+            ["PartyName", "unit_type"], 
+            ["parent", "type"]
+        )
+        df["name"] = df["parent"].str.replace(" Party", "") + " " + df["type"]
+        df = df[df_cols].sort_values(["parent", "type"])
     else:
         election_id = list_to_id(session, "Election", filters)
         reporting_unit_id = list_to_id(session, "ReportingUnit", filters)
@@ -1155,12 +1170,13 @@ def get_candidate_votecounts(session, election_id, top_ru_id, subdivision_type_i
             IntermediateRU."Name" as "ParentName", IntermediateRU."ReportingUnitType_Id" as "ParentReportingUnitType_Id",
             CIT."Txt" as "CountItemType", C."Name" as "Contest",
             Cand."BallotName" as "Selection", "ElectionDistrict_Id", Cand."Id" as "Candidate_Id", "contest_type",
-            EDRUT."Txt" as "contest_district_type"
+            EDRUT."Txt" as "contest_district_type", P."Name" as "Party"
             FROM "VoteCount" vc
             LEFT JOIN _datafile d on vc."_datafile_Id" = d."Id"
             LEFT JOIN "Contest" C on vc."Contest_Id" = C."Id"
             LEFT JOIN "CandidateSelection" CS on CS."Id" = vc."Selection_Id"
             LEFT JOIN "Candidate" Cand on CS."Candidate_Id" = Cand."Id"
+            LEFT JOIN "Party" P on cs."Party_Id" = P."Id"
             -- sum over all children
             LEFT JOIN "ReportingUnit" ChildRU on vc."ReportingUnit_Id" = ChildRU."Id"
             LEFT JOIN "ComposingReportingUnitJoin" CRUJ_sum on ChildRU."Id" = CRUJ_sum."ChildReportingUnit_Id"
@@ -1205,6 +1221,7 @@ def get_candidate_votecounts(session, election_id, top_ru_id, subdivision_type_i
         "Candidate_Id",
         "contest_type",
         "contest_district_type",
+        "Party"
     ]
     return result_df
 
@@ -1368,7 +1385,6 @@ def read_vote_count(
                 JOIN (SELECT "Id", "ElectionDistrict_Id" FROM "Office") o on cc."Office_Id" = o."Id"
                 JOIN (SELECT "Id", "ReportingUnitType_Id" FROM "ReportingUnit") ru on o."ElectionDistrict_Id" = ru."Id"
                 JOIN (SELECT "Id", "Txt" AS unit_type FROM "ReportingUnitType") rut on ru."ReportingUnitType_Id" = rut."Id"
-                
         WHERE   "Election_Id" = %s
                 AND "ParentReportingUnit_Id" = %s
         """
@@ -1414,18 +1430,6 @@ def clean_candidate_names(df):
     mask_st_sen = (df["jurisdiction"] != "US") & (df["contest"].str.contains("senate", case=False))
     mask_st_house = (df["jurisdiction"] != "US") & (df["contest"].str.contains("house", case=False))
     df["chamber"] = None
-    # if not df[mask_us_pres].empty:
-    #     df.loc[mask_us_pres, "chamber"] = "Pres"
-    # if not df[mask_us_sen].empty:
-    #     df.loc[mask_us_sen, "chamber"] = "Sen"
-    # if not df[mask_us_house].empty:
-    #     df.loc[mask_us_house, "chamber"] = "House"
-    # if not df[mask_st_sen].empty:
-    #     df.loc[mask_st_sen, "chamber"] = "S"
-    # if not df[mask_st_house].empty:
-    #     df.loc[mask_st_house, "chamber"] = "H"
-
-
     df.loc[mask_us_pres, "chamber"] = "Pres"
     df.loc[mask_us_sen, "chamber"] = "Sen"
     df.loc[mask_us_house, "chamber"] = "House"

@@ -136,11 +136,11 @@ def create_scatter(
     subdivision_type_id,
     h_election_id,
     h_category,
-    h_count_id,
+    h_count,
     h_type,
     v_election_id,
     v_category,
-    v_count_id,
+    v_count,
     v_type,
 ):
     connection = session.bind.raw_connection()
@@ -153,7 +153,7 @@ def create_scatter(
         subdivision_type_id,
         h_election_id,
         h_category,
-        h_count_id,
+        h_count,
         h_type,
     )
     dfv = get_data_for_scatter(
@@ -162,7 +162,7 @@ def create_scatter(
         subdivision_type_id,
         v_election_id,
         v_category,
-        v_count_id,
+        v_count,
         v_type,
     )
     if dfh.empty or dfv.empty:
@@ -170,19 +170,6 @@ def create_scatter(
         return None
 
     unsummed = pd.concat([dfh, dfv])
-    # package into dictionary
-    if h_count_id == -1:
-        x = f"All {h_type}"
-    elif h_type == "candidates":
-        x = db.name_from_id(cursor, "Candidate", h_count_id)
-    elif h_type == "contests":
-        x = db.name_from_id(cursor, "Contest", h_count_id)
-    if v_count_id == -1:
-        y = f"All {v_type}"
-    elif v_type == "candidates":
-        y = db.name_from_id(cursor, "Candidate", v_count_id)
-    elif v_type == "contests":
-        y = db.name_from_id(cursor, "Contest", v_count_id)
     jurisdiction = db.name_from_id(cursor, "ReportingUnit", jurisdiction_id)
 
     # check if there is only 1 candidate selection (with multiple count types)
@@ -208,14 +195,14 @@ def create_scatter(
     # package up results
     if single_selection and not single_count_type:
         results = package_results(pivot_df, jurisdiction, h_category, v_category)
-        results["x"] = x
-        results["y"] = y
+        results["x"] = h_count
+        results["y"] = v_count
     elif single_selection and single_count_type:
         results = package_results(pivot_df, jurisdiction, str(h_election_id), str(v_election_id))
-        results["x"] = x
-        results["y"] = y
+        results["x"] = h_count
+        results["y"] = v_count
     else:
-        results = package_results(pivot_df, jurisdiction, x, y)
+        results = package_results(pivot_df, jurisdiction, h_count, v_count)
     results["x-election"] = db.name_from_id(cursor, "Election", h_election_id)
     results["y-election"] = db.name_from_id(cursor, "Election", v_election_id)
     results["subdivision_type"] = db.name_from_id(
@@ -229,7 +216,6 @@ def create_scatter(
     results[
         "y-title"
     ] = f"""{results["y"]} - {results["y-election"]} - {dfv.iloc[0]["Contest"]}"""
-
     # only keep the ones where there are an (x, y) to graph
     to_keep = []
     for result in results["counts"]:
@@ -275,20 +261,30 @@ def get_data_for_scatter(
     subdivision_type_id,
     election_id,
     count_item_type,
-    filter_id,
+    filter_str,
     count_type,
 ):
     # Since this could be data across 2 elections, grab data one election at a time
     unsummed = db.get_candidate_votecounts(
         session, election_id, jurisdiction_id, subdivision_type_id
     )
+    keep_all = filter_str.startswith("All ")
+
     #  limit to relevant data
     if count_type == "candidates":
-        filter_column = "Candidate_Id"
+        filter_column = "Selection"
     elif count_type == "contests":
-        filter_column = "Contest_Id"
-    if filter_id != -1:
-        unsummed = unsummed[unsummed[filter_column].isin([filter_id])]
+        filter_column = "Contest"
+    elif count_type == "parties":
+        # create new column to filter on
+        unsummed["party_district_type"] = (
+            (unsummed["Party"].str.replace("Party", "")).str.strip() + " " + unsummed["contest_district_type"]
+        )
+        filter_column = "party_district_type"
+    if not keep_all:
+        unsummed = unsummed[unsummed[filter_column].isin([filter_str])]
+    if "party_district_type" in unsummed.columns:
+        del unsummed["party_district_type"]
     unsummed = unsummed[unsummed["CountItemType"] == count_item_type]
 
     # cleanup for purposes of flexibility
@@ -305,18 +301,17 @@ def get_data_for_scatter(
         ]
     ].rename(columns={"ParentName": "Name"})
 
-    # if filter_id is -1, then that means we have all contests or candidates
-    # so we need to group by
-    if filter_id == -1:
-        unsummed["Selection"] = f"All {count_type}"
-        unsummed["Contest_Id"] = filter_id
-        unsummed["Candidate_Id"] = filter_id
+    # if All contests or All candidates
+    if keep_all or count_type == "parties":
+        unsummed["Selection"] = filter_str
+        unsummed["Contest_Id"] = -1
+        unsummed["Candidate_Id"] = -1
+        unsummed["Contest"] = filter_str
 
-    if count_type == "contests" and filter_id != -1:
+    if count_type == "contests" and not keep_all:
         connection = session.bind.raw_connection()
         cursor = connection.cursor()
-        selection = db.name_from_id(cursor, "Contest", filter_id)
-        unsummed["Selection"] = selection
+        unsummed["Selection"] = filter_str
         cursor.close()
 
     columns = list(unsummed.drop(columns="Count").columns)
@@ -347,7 +342,7 @@ def create_bar(
     # through front end, contest_type must be truthy if contest is truthy
     # Only filter when there is an actual contest passed through, as opposed to 
     # "All congressional" as an example
-    if contest and contest[0:3] != "All":
+    if contest and not contest.startswith("All "):
         unsummed = unsummed[unsummed["Contest"] == contest]
 
     groupby_cols = [
