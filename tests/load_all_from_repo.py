@@ -82,5 +82,5 @@ def run2(
 
 
 if __name__ == "__main__":
-    run2(election_jurisdiction_list=[("2020 Primary","Georgia")])
+    run2(election_jurisdiction_list=[("2016 General","North Carolina")])
     exit()

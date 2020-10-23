@@ -73,7 +73,7 @@ def read_alternate_munger(
         file_type: str,
         f_path: str,
         munger: jm.Munger,
-        err: dict
+        err: Optional[dict]
 ) -> (pd.DataFrame, dict):
     if file_type in ["concatenated-blocks"]:
         raw_results, err = read_concatenated_blocks(f_path, munger, err)
@@ -343,7 +343,7 @@ def read_multi_sheet_excel(
     return raw_results, err
 
 
-def add_info(node: et.Element, info: dict, vc_field: dict) -> dict:
+def add_info(node: et.Element, info: dict, vc_field: dict) -> (dict, bool):
     new_info = info.copy()
     for k in vc_field[node.tag].keys():
         if k == "count":
