@@ -4381,6 +4381,7 @@ North Carolina;Wake County;18-08	precinct
 North Carolina;Wake County;19-10	precinct
 North Carolina;Wake County;19-13	precinct
 North Carolina;Wake County;19-16	precinct
+North Carolina;Wake County;19-18	precinct
 North Carolina;Wake County;20-09	precinct
 North Carolina;Wake County;OSAP 41-80	precinct
 North Carolina;Wake County;OSAP 81-91	precinct
