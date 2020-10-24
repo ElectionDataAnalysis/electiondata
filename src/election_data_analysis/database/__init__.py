@@ -640,7 +640,7 @@ def append_id_to_dframe(
         tt=sql.Identifier(temp_table), t=sql.Identifier(element), on_clause=on_clause
     )
     w = pd.read_sql_query(q, connection).set_index("dataframe_index")
-    id_cols = [c for c in w.columns if c[-3:] == "_Id"]
+    id_cols = [c for c in w.columns if c[-3:] == "_Id"] + [""]
     w, err_df = m.clean_ids(w, id_cols)
 
     # drop temp db table

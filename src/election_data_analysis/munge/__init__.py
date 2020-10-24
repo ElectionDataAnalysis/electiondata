@@ -40,7 +40,7 @@ def clean_ids(
     """Requires all the columns to be of numeric type; changes them 
     to integer, with any nulls changed to 0. Reports a dataframe of 
     any rows so changed."""
-    err_df = pd.DataFrame
+    err_df = pd.DataFrame()
     working = df.copy()
     for c in cols:
         if c in working.columns and is_numeric_dtype(working[c]):
