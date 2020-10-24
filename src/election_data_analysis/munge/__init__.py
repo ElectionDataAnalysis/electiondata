@@ -80,10 +80,18 @@ def clean_strings(
     return working
 
 
-def clean_column_names(df: pd.DataFrame, count_cols: List[str]):
+def clean_column_names(
+        df: pd.DataFrame,
+        count_cols: List[str],
+) -> (pd.DataFrame, List[str], Optional[str]):
     working = df.copy()
-    # remove any columns with duplicate names, get new list of
-    working = working.loc[:,~working.columns.duplicated()]
+
+    err_str = None
+    # remove any columns with duplicate names
+    new_working = working.loc[:,~working.columns.duplicated()]
+    # if something dropped, warn user
+    if new_working.shape != working.shape:
+        err_str = f"Duplicate column names found; these columns were dropped"
     # restrict count_cols to columns of working
     new_count_cols = [c for c in working.columns if c in count_cols]
 
@@ -98,7 +106,7 @@ def clean_column_names(df: pd.DataFrame, count_cols: List[str]):
     else:
         working.columns = [c.strip() for c in working.columns]
         new_count_cols = [c.strip() for c in new_count_cols]
-    return df, new_count_cols
+    return df, new_count_cols, err_str
 
 
 def generic_clean(
@@ -114,7 +122,7 @@ def generic_clean(
     working = df.copy()
 
     # clean the column names
-    working, count_cols = clean_column_names(working, count_cols)
+    working, count_cols, err_str = clean_column_names(working, count_cols)
 
     # clean count columns (reporting rows with bad values)
     working, err_df = clean_count_cols(working, count_cols)
@@ -128,7 +136,7 @@ def generic_clean(
     str_cols = [c for c in working.columns if working.dtypes[c] == np.object]
     working = clean_strings(working, str_cols)
 
-    return working, new_int_cols_by_name, err_df
+    return working, count_cols, err_df
 
 
 def cast_cols_as_int(
