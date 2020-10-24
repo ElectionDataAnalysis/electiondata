@@ -10,25 +10,73 @@ import numpy as np
 from sqlalchemy.orm.session import Session
 
 
-class MungeError(Exception):
-    pass
+def clean_count_cols(
+        df: pd.DataFrame,
+        cols: List[str],
+) -> (pd.DataFrame, Optional[pd.DataFrame]):
+    """Casts the given columns as integers, replacing any bad
+    values with 0 and reporting a dataframe of any rows so changed."""
+    err_df = None
+    working = df.copy()
+    for c in cols:
+        if c in working.columns:
+            mask = (working[c] != pd.to_numeric(working[c], errors='coerce'))
+            if mask.any():
+                # return bad rows for error reporting
+                err_df = pd.concat([err_df, working[mask]]).drop_duplicates()
+        
+                # cast as int, changing any non-integer values to 0
+                working[c] = pd.to_numeric(
+                    working[c],
+                    errors='coerce'
+                ).fillna(0).astype("int64")
+    return working, err_df
+
+
+def clean_ids(
+        df: pd.DataFrame,
+        cols: List[str],
+) -> (pd.DataFrame(), pd.DataFrame):
+    """Requires all the columns to be of numeric type; changes them 
+    to integer, with any nulls changed to 0. Reports a dataframe of 
+    any rows so changed."""
+    # TODO error handling
+    err_df = pd.DataFrame
+    working = df.copy()
+    for c in cols:
+        if is_numeric_dtype(working[c]):
+            err_df = pd.concat([err_df, working[working[c].isnull()]])
+            working[c] = working[c].fillna(0).astype("int64")
+        else: 
+            err_df = working
+            return pd.DataFrame(), err_df
+    err_df.drop_duplicates(inplace=True)
+    return working, err_df
+
+
+def clean_strings(
+        df: pd.DataFrame,
+        cols: List[str],
+) -> (pd.DataFrame(), pd.DataFrame):
+    return
 
 
 def generic_clean(
         df: pd.DataFrame,
-        int_cols_by_name: Optional[List[str]] = None,
+        count_cols: Optional[List[str]] = None,
+        id_cols: Optional[List[str]] = None,
 ) -> (pd.DataFrame, List[str], Optional[pd.DataFrame]):
     """Replaces nulls, strips external whitespace, compresses any internal whitespace."""
     # TODO put all info about data cleaning into README.md (e.g., whitespace strip)
     # TODO return error if cleaning fails, including dtypes of columns
-    err_df = pd.DataFrame()
-    if int_cols_by_name is None:
-        int_cols_by_name = list()
+    if count_cols is None:
+        count_cols = list()
     working = df.copy()
 
     # remove any columns with duplicate names, get new list of
     working = working.loc[:,~working.columns.duplicated()]
-    new_int_cols_by_name = [c for c in working.columns if c in int_cols_by_name]
+    # restrict to columns of working
+    new_int_cols_by_name = [c for c in working.columns if c in count_cols]
 
     # strip any whitespace from column names
     if isinstance(working.columns,pd.MultiIndex):
@@ -38,26 +86,18 @@ def generic_clean(
             )
     else:
         working.columns = [x.strip() for x in working.columns]
+        
+    # clean count columns (reporting rows with bad values)
+    working, err_df = clean_count_cols(working, new_int_cols_by_name)
+    
+    # clean id columns, (reporting row with nulls)
+    if not id_cols:
+        id_cols = [c for c in working.columns if c[-3:] == "_Id"]
+    working, null_id_df = clean_ids(working, id_cols)
 
+    # clean all strings in 
     for c in working.columns:
-        # if c is in the given list of count_columns
-        if c in int_cols_by_name:
-            # find any values that cannot be interpreted as numeric
-            mask = (working[c] != pd.to_numeric(working[c], errors='coerce'))
-            if mask.any():
-                # return bad rows for error reporting
-                err_df = pd.concat([err_df, working[mask]]).drop_duplicates()
-
-                # cast as int, changing any non-integer values to 0
-                working[c] = pd.to_numeric(
-                    working[c],
-                    errors='coerce'
-                ).fillna(0).astype("int64")
-
-        elif is_numeric_dtype(working[c]):
-            # change nulls to 0
-            working[c] = working[c].fillna(0).astype("int64")
-        elif working.dtypes[c] == np.object:
+        if working.dtypes[c] == np.object:
             # change nulls to the empty string
             working[c] = working[c].fillna("")
             # replace any double quotes with single quotes
@@ -113,7 +153,7 @@ def munge_clean(raw: pd.DataFrame, munger: jm.Munger, count_columns_by_name: Lis
     working = raw.copy()
     try:
         # do a generic clean
-        working, count_columns_by_name, err_df = generic_clean(working,int_cols_by_name=count_columns_by_name)
+        working, count_columns_by_name, err_df = generic_clean(working, count_cols=count_columns_by_name)
         if not err_df.empty:
             pd.set_option('max_columns',None)
             err = ui.add_new_error(
