@@ -798,7 +798,10 @@ def add_selection_id(
     # prepare to append CandidateSelection_Id as Selection_Id
     if not w["Candidate"].empty:
         c_df = w["Candidate"][["Candidate_Id", "Party_Id"]].drop_duplicates()
-        c_df = c_df[(c_df.Candidate_Id.notnull()) & (c_df.Candidate_Id != 0)]
+
+        # clean Ids and drop any that were null (i.e., 0 after cleaning)
+        c_df, err_df = clean_ids(c_df, ["Candidate_Id","Party_Id"])
+        c_df = c_df[c_df.Candidate_Id != 0]
 
         # pull any existing Ids into a new CandidateSelection_Id column
         col_map = {c: c for c in ["Party_Id", "Candidate_Id"]}
@@ -1012,6 +1015,7 @@ def raw_elements_to_cdf(
         #  when VoteCount is filled)
         group_cols = [c for c in working.columns if c != 'Count']
         working = working.groupby(group_cols).sum().reset_index()
+        # TODO clean before inserting? All should be already clean, no?
 
     # Fill VoteCount
     try:

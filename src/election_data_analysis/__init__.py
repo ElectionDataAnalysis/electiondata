@@ -409,6 +409,7 @@ class SingleDataLoader:
                 "created_at",
             ],
         )
+        data = m.clean_strings(data,["short_name"])
         try:
             e = db.insert_to_cdf_db(self.session.bind, data, "_datafile")
             if e:

@@ -454,10 +454,6 @@ def insert_to_cdf_db(
     except Id and <timestamp> if any. Returns an error message (or None)"""
 
     working = df.copy()
-    # clean id columns
-    # TODO is this cleaning redundant?
-    id_cols = [c for c in working.columns if c[-3:] == "_Id"]
-    working, err_df = m.clean_ids(working, id_cols)
     if element == "Candidate":
         # enforce title case, except for 'none or unknown'
         # TODO enforce title case only if names are all caps
@@ -476,6 +472,7 @@ def insert_to_cdf_db(
 
     # identify new ReportingUnits, must later enter nesting info in db
     if element == "ReportingUnit":
+        working = m.clean_strings(working, ["Name"])
         # find any new RUs
         matched_with_old = append_id_to_dframe(
             engine, working, "ReportingUnit", {"Name": "Name"}
@@ -619,7 +616,7 @@ def append_id_to_dframe(
     df_cols = list(col_map.keys())
 
     # create temp db table with info from df, without index
-    id_cols = [c for c in df.columns if c[-3:] == "Id"]
+    id_cols = [c for c in df.columns if c[-3:] == "_Id"]
     df, err_df = m.clean_ids(df, id_cols)
     df[df_cols].fillna("").to_sql(temp_table, engine, index_label="dataframe_index")
     # TODO fillna('') probably redundant
@@ -649,7 +646,9 @@ def append_id_to_dframe(
     cur.execute(q)
     connection.commit()
     connection.close()
-    return df.join(w[["Id"]]).rename(columns={"Id": f"{element}_Id"})
+    df_appended = df.join(w[["Id"]]).rename(columns={"Id": f"{element}_Id"})
+    df_appended, err_df = m.clean_ids(df_appended, "Id")
+    return df_appended
 
 
 def get_column_names(cursor, table: str) -> (list, dict):
