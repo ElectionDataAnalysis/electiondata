@@ -44,7 +44,7 @@ def clean_ids(
     err_df = pd.DataFrame
     working = df.copy()
     for c in cols:
-        if is_numeric_dtype(working[c]):
+        if c in working.columns and is_numeric_dtype(working[c]):
             err_df = pd.concat([err_df, working[working[c].isnull()]])
             working[c] = working[c].fillna(0).astype("int64")
         else: 
@@ -57,8 +57,48 @@ def clean_ids(
 def clean_strings(
         df: pd.DataFrame,
         cols: List[str],
-) -> (pd.DataFrame(), pd.DataFrame):
-    return
+) -> pd.DataFrame():
+
+    working = df.copy()
+    for c in cols:
+        if c in working.columns:
+            # change nulls to the empty string
+            working[c] = working[c].fillna("")
+            # replace any double quotes with single quotes
+            try:
+                mask = working[c].str.contains('"')
+                working.loc[mask, c] = working[c].str.replace('"', "'")[mask]
+            except AttributeError or TypeError:
+                pass
+            try:
+                # strip extraneous whitespace
+                working[c] = working[c].apply(
+                    compress_whitespace
+                )
+            except (AttributeError, TypeError):
+                pass
+    return working
+
+
+def clean_column_names(df: pd.DataFrame, count_cols: List[str]):
+    working = df.copy()
+    # remove any columns with duplicate names, get new list of
+    working = working.loc[:,~working.columns.duplicated()]
+    # restrict count_cols to columns of working
+    new_count_cols = [c for c in working.columns if c in count_cols]
+
+    # strip any whitespace from column names
+    if isinstance(working.columns, pd.MultiIndex):
+        for j in range(len(working.columns.levels)):
+            # strip whitespace at level j
+            working.columns = working.columns.set_levels(
+                working.columns.levels[j].str.strip(), level=j
+            )
+        # TODO strip whitespace from each item in count_cols as well
+    else:
+        working.columns = [c.strip() for c in working.columns]
+        new_count_cols = [c.strip() for c in new_count_cols]
+    return df, new_count_cols
 
 
 def generic_clean(
@@ -73,46 +113,21 @@ def generic_clean(
         count_cols = list()
     working = df.copy()
 
-    # remove any columns with duplicate names, get new list of
-    working = working.loc[:,~working.columns.duplicated()]
-    # restrict to columns of working
-    new_int_cols_by_name = [c for c in working.columns if c in count_cols]
+    # clean the column names
+    working, count_cols = clean_column_names(working, count_cols)
 
-    # strip any whitespace from column names
-    if isinstance(working.columns,pd.MultiIndex):
-        for j in range(len(working.columns.levels)):
-            working.columns = working.columns.set_levels(
-                working.columns.levels[j].str.strip(), level=j
-            )
-    else:
-        working.columns = [x.strip() for x in working.columns]
-        
     # clean count columns (reporting rows with bad values)
-    working, err_df = clean_count_cols(working, new_int_cols_by_name)
+    working, err_df = clean_count_cols(working, count_cols)
     
     # clean id columns, (reporting row with nulls)
     if not id_cols:
         id_cols = [c for c in working.columns if c[-3:] == "_Id"]
     working, null_id_df = clean_ids(working, id_cols)
 
-    # clean all strings in 
-    for c in working.columns:
-        if working.dtypes[c] == np.object:
-            # change nulls to the empty string
-            working[c] = working[c].fillna("")
-            # replace any double quotes with single quotes
-            try:
-                mask = working[c].str.contains('"')
-                working.loc[mask, c] = working[c].str.replace('"', "'")[mask]
-            except AttributeError or TypeError:
-                pass
-            try:
-                # strip extraneous whitespace
-                working[c] = working[c].apply(
-                    compress_whitespace
-                )
-            except (AttributeError,TypeError):
-                pass
+    # clean string columns
+    str_cols = [c for c in working.columns if working.dtypes[c] == np.object]
+    working = clean_strings(working, str_cols)
+
     return working, new_int_cols_by_name, err_df
 
 
