@@ -442,9 +442,6 @@ def read_single_datafile(
             str_cols = [c for c in df.columns if df.dtypes[c] == np.object]
             df = m.clean_strings(df, str_cols)
 
-            df, count_cols_by_name, err_df = m.generic_clean(df, count_cols=count_cols_by_name)
-            # TODO remove generic clean now
-
             err = jm.check_results_munger_compatibility(
                 munger, df, Path(f_path).name, err
             )

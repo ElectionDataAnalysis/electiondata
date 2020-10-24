@@ -40,7 +40,6 @@ def clean_ids(
     """Requires all the columns to be of numeric type; changes them 
     to integer, with any nulls changed to 0. Reports a dataframe of 
     any rows so changed."""
-    # TODO error handling
     err_df = pd.DataFrame
     working = df.copy()
     for c in cols:
@@ -175,19 +174,6 @@ def munge_clean(raw: pd.DataFrame, munger: jm.Munger, count_columns_by_name: Lis
     err = None
     working = raw.copy()
     try:
-        # do a generic clean
-        working, count_columns_by_name, err_df = generic_clean(working, count_cols=count_columns_by_name)
-        if not err_df.empty:
-            pd.set_option('max_columns',None)
-            err = ui.add_new_error(
-                err,
-                "warn-munger",
-                munger.name,
-                f"At least one count in some rows of {err_df} not recognized as integer; these are set to 0:\n"
-                f"{err_df}"
-            )
-            pd.reset_option('max_columns')
-
         #  define columns named in munger formulas (both plain from 'row' sourced info and
         #  'variable_j' from column-sourced)
         munger_formula_row_sourced = [
@@ -843,7 +829,17 @@ def add_selection_id(
             ]
         # recast Candidate_Id and Party_Id to int in w['Candidate']; Note that neither should have nulls, but rather the 'none or unknown' Id
         #  NB: c_df had this recasting done in the append_id_to_dframe routine
-        w["Candidate"], count_cols, err_df = generic_clean(w["Candidate"])
+        w["Candidate"], err_df = clean_ids(w["Candidate"],["Candidate_Id","Party_Id"])
+        if not err_df.empty:
+            # show all columns of dataframe with problem in Party_Id or Candidate_Id
+            pd.set_option('max_columns', None)
+            err = ui.add_new_error(
+                err,
+                "system",
+                "munge.add_selection_id",
+                f"Problem with Candidate_Id or Party_Id in some rows:\n{err_df}"
+            )
+            pd.reset_option('max_columns')
 
         # append CandidateSelection_Id to w['Candidate']
         w["Candidate"] = w["Candidate"].merge(

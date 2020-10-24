@@ -453,10 +453,14 @@ def insert_to_cdf_db(
     it must be specified in <timestamp>; <df> must have columns matching <element>,
     except Id and <timestamp> if any. Returns an error message (or None)"""
 
-    # clean data
-    working, count_cols, err_df = m.generic_clean(df)
+    working = df.copy()
+    # clean id columns
+    # TODO is this cleaning redundant?
+    id_cols = [c for c in working.columns if c[-3:] == "_Id"]
+    working, err_df = m.clean_ids(working, id_cols)
     if element == "Candidate":
         # enforce title case, except for 'none or unknown'
+        # TODO enforce title case only if names are all caps
         working.loc[
             working.BallotName != "none or unknown",
             "BallotName"
@@ -615,7 +619,8 @@ def append_id_to_dframe(
     df_cols = list(col_map.keys())
 
     # create temp db table with info from df, without index
-    df, count_cols, err_df = m.generic_clean(df)
+    id_cols = [c for c in df.columns if c[-3:] == "Id"]
+    df, err_df = m.clean_ids(df, id_cols)
     df[df_cols].fillna("").to_sql(temp_table, engine, index_label="dataframe_index")
     # TODO fillna('') probably redundant
 
@@ -634,7 +639,9 @@ def append_id_to_dframe(
     ).format(
         tt=sql.Identifier(temp_table), t=sql.Identifier(element), on_clause=on_clause
     )
-    w, count_cols, err_df = m.generic_clean(pd.read_sql_query(q, connection).set_index("dataframe_index"))
+    w = pd.read_sql_query(q, connection).set_index("dataframe_index")
+    id_cols = [c for c in w.columns if c[-3:] == "_Id"]
+    w, err_df = m.clean_ids(w, id_cols)
 
     # drop temp db table
     q = sql.SQL("DROP TABLE {temp_table}").format(temp_table=sql.Identifier(temp_table))
