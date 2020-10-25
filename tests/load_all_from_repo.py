@@ -81,6 +81,11 @@ def run2(
         ts = datetime.datetime.now().strftime("%m%d_%H%M")
         dbname = f"test_{ts}"
 
+    # restrict elections and jurisdictions to those given (if given)
+    # otherwise use all in TestingData
+    if not election_jurisdiction_list:
+        election_jurisdiction_list = ui.election_juris_list("TestingData")
+
     if load_data:
         get_testing_data("https://github.com/ElectionDataAnalysis/TestingData.git", "TestingData")
 
@@ -90,7 +95,7 @@ def run2(
 
 
         dl.change_dir("results_dir","TestingData")
-        dl.load_all(move_files=False)
+        dl.load_all(move_files=False, election_jurisdiction_list=election_jurisdiction_list)
 
     ui.run_tests(test_dir, dbname, election_jurisdiction_list=election_jurisdiction_list)
 
@@ -115,7 +120,7 @@ def run2(
 if __name__ == "__main__":
 
     if len(sys.argv) == 1:
-        election_jurisdiction_list = None
+        election_jurisdiction_list = [("2016 General","North Carolina")]
     else:
         election_jurisdiction_list = io(sys.argv[1:])
 

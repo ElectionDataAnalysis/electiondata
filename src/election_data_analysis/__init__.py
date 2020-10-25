@@ -129,7 +129,10 @@ class DataLoader:
         return
 
     def load_all(
-        self, load_jurisdictions: bool = True, move_files: bool = True
+        self,
+            load_jurisdictions: bool = True,
+            move_files: bool = True,
+            election_jurisdiction_list: Optional[list] = None,
     ) -> Optional[dict]:
         """Processes all .ini files in the DataLoader's results directory.
         By default, loads (or reloads) the info from the jurisdiction files
@@ -199,7 +202,11 @@ class DataLoader:
                         params[f]["jurisdiction_path"]
                     ).name
                 ###########
-                good_par_files.append(f)
+                if election_jurisdiction_list:
+                    if (params[f]["election"], params[f]["top_reporting_unit"]) in election_jurisdiction_list:
+                        good_par_files.append(f)
+                else:
+                    good_par_files.append(f)
                 juris_directory[f] = params[f]["jurisdiction_directory"]
 
         # group .ini files by jurisdiction_directory name

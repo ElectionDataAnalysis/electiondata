@@ -1,5 +1,4 @@
 from configparser import ConfigParser, MissingSectionHeaderError
-from typing import Optional
 from election_data_analysis import munge as m
 from election_data_analysis import special_formats as sf
 from election_data_analysis import database as db
@@ -976,6 +975,20 @@ def confirm_essential_info(
                     input("Correct file and hit return to continue.")
     return
 
+
+def election_juris_list(dir_path: str) -> list:
+    """Return list of all election-jurisdiction pairs in .ini files in the given directory"""
+    ej_list = []
+    for f in os.listdir(dir_path):
+        if f[-4:] == ".ini":
+            d, err = get_runtime_parameters(
+                param_file=os.path.join(dir_path,f),
+                header="'election_data_analysis",
+                required_keys=["election", "top_reporting_unit"]
+            )
+            if not err:
+                ej_list.append((d["election"],d["top_reporting_unit"]))
+    return ej_list
 
 def reload_juris_election(
         juris_name: str,
