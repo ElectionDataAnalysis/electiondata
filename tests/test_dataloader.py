@@ -545,58 +545,7 @@ def test_ca_presidential_20ppp(dbname):
 
 
 ### Colorado Data Loading Tests ###
-#CO16 test
 
-def test_co_presidential_16(dbname):
-    assert (not e.data_exists("2016 General","Colorado",dbname=dbname) or e.contest_total(
-            "2016 General",
-            "Colorado",
-            "US President (CO)",
-            dbname=dbname,
-        )
-            == 2780247
-    )
-
-
-def test_co_statewide_totals_16(dbname):
-    assert (not e.data_exists("2016 General","Colorado",dbname=dbname) or e.contest_total(
-            "2016 General",
-            "Colorado",
-            "US Senate CO",
-            dbname=dbname,
-        )
-            == 2743029
-    )
-
-
-def test_co_senate_totals_16(dbname):
-    assert (not e.data_exists("2016 General","Colorado",dbname=dbname) or e.contest_total(
-            "2016 General",
-            "Colorado",
-            "CO Senate District 14",
-            dbname=dbname,
-        )
-            == 85788
-    )
-
-
-def test_co_rep_16(dbname):
-    assert (not e.data_exists("2016 General","Colorado",dbname=dbname) or e.contest_total(
-            "2016 General",
-            "Colorado",
-            "CO House District 60",
-            dbname=dbname,
-        )
-            == 41303
-    )
-
-
-def test_co_contest_by_vote_type_16(dbname):
-    assert True == True
-
-
-def test_co_totals_match_vote_type_16(dbname):
-    assert True == True
 
 #CO18 test
 
