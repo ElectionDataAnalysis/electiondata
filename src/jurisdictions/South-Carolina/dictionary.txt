@@ -369,375 +369,745 @@ CandidateContest	SC State Superintendent of Education (Democratic Party)	SC Stat
 CandidateContest	SC State Superintendent of Education (Democratic Party)	State Superintendent of Education (Democratic Party)
 CandidateContest	SC Comptroller General (Democratic Party)	SC Treasurer (Democratic Party)
 CandidateContest	SC Comptroller General (Democratic Party)	Comptroller General (Democratic Party)
+CandidateContest	SC House District 1 (Democratic Party)	SC House District 1 - DEM
 CandidateContest	SC House District 1 (Democratic Party)	SC House District 1 (DEM)
+CandidateContest	SC House District 1 (Democratic Party)	State House of Representatives, District 1 - DEM
 CandidateContest	SC House District 1 (Democratic Party)	State House of Representatives, District 1 (DEM)
+CandidateContest	SC House District 2 (Democratic Party)	SC House District 2 - DEM
 CandidateContest	SC House District 2 (Democratic Party)	SC House District 2 (DEM)
+CandidateContest	SC House District 2 (Democratic Party)	State House of Representatives, District 2 - DEM
 CandidateContest	SC House District 2 (Democratic Party)	State House of Representatives, District 2 (DEM)
+CandidateContest	SC House District 3 (Democratic Party)	SC House District 3 - DEM
 CandidateContest	SC House District 3 (Democratic Party)	SC House District 3 (DEM)
+CandidateContest	SC House District 3 (Democratic Party)	State House of Representatives, District 3 - DEM
 CandidateContest	SC House District 3 (Democratic Party)	State House of Representatives, District 3 (DEM)
+CandidateContest	SC House District 4 (Democratic Party)	SC House District 4 - DEM
 CandidateContest	SC House District 4 (Democratic Party)	SC House District 4 (DEM)
+CandidateContest	SC House District 4 (Democratic Party)	State House of Representatives, District 4 - DEM
 CandidateContest	SC House District 4 (Democratic Party)	State House of Representatives, District 4 (DEM)
+CandidateContest	SC House District 5 (Democratic Party)	SC House District 5 - DEM
 CandidateContest	SC House District 5 (Democratic Party)	SC House District 5 (DEM)
+CandidateContest	SC House District 5 (Democratic Party)	State House of Representatives, District 5 - DEM
 CandidateContest	SC House District 5 (Democratic Party)	State House of Representatives, District 5 (DEM)
+CandidateContest	SC House District 6 (Democratic Party)	SC House District 6 - DEM
 CandidateContest	SC House District 6 (Democratic Party)	SC House District 6 (DEM)
+CandidateContest	SC House District 6 (Democratic Party)	State House of Representatives, District 6 - DEM
 CandidateContest	SC House District 6 (Democratic Party)	State House of Representatives, District 6 (DEM)
+CandidateContest	SC House District 7 (Democratic Party)	SC House District 7 - DEM
 CandidateContest	SC House District 7 (Democratic Party)	SC House District 7 (DEM)
+CandidateContest	SC House District 7 (Democratic Party)	State House of Representatives, District 7 - DEM
 CandidateContest	SC House District 7 (Democratic Party)	State House of Representatives, District 7 (DEM)
+CandidateContest	SC House District 8 (Democratic Party)	SC House District 8 - DEM
 CandidateContest	SC House District 8 (Democratic Party)	SC House District 8 (DEM)
+CandidateContest	SC House District 8 (Democratic Party)	State House of Representatives, District 8 - DEM
 CandidateContest	SC House District 8 (Democratic Party)	State House of Representatives, District 8 (DEM)
+CandidateContest	SC House District 9 (Democratic Party)	SC House District 9 - DEM
 CandidateContest	SC House District 9 (Democratic Party)	SC House District 9 (DEM)
+CandidateContest	SC House District 9 (Democratic Party)	State House of Representatives, District 9 - DEM
 CandidateContest	SC House District 9 (Democratic Party)	State House of Representatives, District 9 (DEM)
+CandidateContest	SC House District 10 (Democratic Party)	SC House District 10 - DEM
 CandidateContest	SC House District 10 (Democratic Party)	SC House District 10 (DEM)
+CandidateContest	SC House District 10 (Democratic Party)	State House of Representatives, District 10 - DEM
 CandidateContest	SC House District 10 (Democratic Party)	State House of Representatives, District 10 (DEM)
+CandidateContest	SC House District 11 (Democratic Party)	SC House District 11 - DEM
 CandidateContest	SC House District 11 (Democratic Party)	SC House District 11 (DEM)
+CandidateContest	SC House District 11 (Democratic Party)	State House of Representatives, District 11 - DEM
 CandidateContest	SC House District 11 (Democratic Party)	State House of Representatives, District 11 (DEM)
+CandidateContest	SC House District 12 (Democratic Party)	SC House District 12 - DEM
 CandidateContest	SC House District 12 (Democratic Party)	SC House District 12 (DEM)
+CandidateContest	SC House District 12 (Democratic Party)	State House of Representatives, District 12 - DEM
 CandidateContest	SC House District 12 (Democratic Party)	State House of Representatives, District 12 (DEM)
+CandidateContest	SC House District 13 (Democratic Party)	SC House District 13 - DEM
 CandidateContest	SC House District 13 (Democratic Party)	SC House District 13 (DEM)
+CandidateContest	SC House District 13 (Democratic Party)	State House of Representatives, District 13 - DEM
 CandidateContest	SC House District 13 (Democratic Party)	State House of Representatives, District 13 (DEM)
+CandidateContest	SC House District 14 (Democratic Party)	SC House District 14 - DEM
 CandidateContest	SC House District 14 (Democratic Party)	SC House District 14 (DEM)
+CandidateContest	SC House District 14 (Democratic Party)	State House of Representatives, District 14 - DEM
 CandidateContest	SC House District 14 (Democratic Party)	State House of Representatives, District 14 (DEM)
+CandidateContest	SC House District 15 (Democratic Party)	SC House District 15 - DEM
 CandidateContest	SC House District 15 (Democratic Party)	SC House District 15 (DEM)
+CandidateContest	SC House District 15 (Democratic Party)	State House of Representatives, District 15 - DEM
 CandidateContest	SC House District 15 (Democratic Party)	State House of Representatives, District 15 (DEM)
+CandidateContest	SC House District 16 (Democratic Party)	SC House District 16 - DEM
 CandidateContest	SC House District 16 (Democratic Party)	SC House District 16 (DEM)
+CandidateContest	SC House District 16 (Democratic Party)	State House of Representatives, District 16 - DEM
 CandidateContest	SC House District 16 (Democratic Party)	State House of Representatives, District 16 (DEM)
+CandidateContest	SC House District 17 (Democratic Party)	SC House District 17 - DEM
 CandidateContest	SC House District 17 (Democratic Party)	SC House District 17 (DEM)
+CandidateContest	SC House District 17 (Democratic Party)	State House of Representatives, District 17 - DEM
 CandidateContest	SC House District 17 (Democratic Party)	State House of Representatives, District 17 (DEM)
+CandidateContest	SC House District 18 (Democratic Party)	SC House District 18 - DEM
 CandidateContest	SC House District 18 (Democratic Party)	SC House District 18 (DEM)
+CandidateContest	SC House District 18 (Democratic Party)	State House of Representatives, District 18 - DEM
 CandidateContest	SC House District 18 (Democratic Party)	State House of Representatives, District 18 (DEM)
+CandidateContest	SC House District 19 (Democratic Party)	SC House District 19 - DEM
 CandidateContest	SC House District 19 (Democratic Party)	SC House District 19 (DEM)
+CandidateContest	SC House District 19 (Democratic Party)	State House of Representatives, District 19 - DEM
 CandidateContest	SC House District 19 (Democratic Party)	State House of Representatives, District 19 (DEM)
+CandidateContest	SC House District 20 (Democratic Party)	SC House District 20 - DEM
 CandidateContest	SC House District 20 (Democratic Party)	SC House District 20 (DEM)
+CandidateContest	SC House District 20 (Democratic Party)	State House of Representatives, District 20 - DEM
 CandidateContest	SC House District 20 (Democratic Party)	State House of Representatives, District 20 (DEM)
+CandidateContest	SC House District 21 (Democratic Party)	SC House District 21 - DEM
 CandidateContest	SC House District 21 (Democratic Party)	SC House District 21 (DEM)
+CandidateContest	SC House District 21 (Democratic Party)	State House of Representatives, District 21 - DEM
 CandidateContest	SC House District 21 (Democratic Party)	State House of Representatives, District 21 (DEM)
+CandidateContest	SC House District 22 (Democratic Party)	SC House District 22 - DEM
 CandidateContest	SC House District 22 (Democratic Party)	SC House District 22 (DEM)
+CandidateContest	SC House District 22 (Democratic Party)	State House of Representatives, District 22 - DEM
 CandidateContest	SC House District 22 (Democratic Party)	State House of Representatives, District 22 (DEM)
+CandidateContest	SC House District 23 (Democratic Party)	SC House District 23 - DEM
 CandidateContest	SC House District 23 (Democratic Party)	SC House District 23 (DEM)
+CandidateContest	SC House District 23 (Democratic Party)	State House of Representatives, District 23 - DEM
 CandidateContest	SC House District 23 (Democratic Party)	State House of Representatives, District 23 (DEM)
+CandidateContest	SC House District 24 (Democratic Party)	SC House District 24 - DEM
 CandidateContest	SC House District 24 (Democratic Party)	SC House District 24 (DEM)
+CandidateContest	SC House District 24 (Democratic Party)	State House of Representatives, District 24 - DEM
 CandidateContest	SC House District 24 (Democratic Party)	State House of Representatives, District 24 (DEM)
+CandidateContest	SC House District 25 (Democratic Party)	SC House District 25 - DEM
 CandidateContest	SC House District 25 (Democratic Party)	SC House District 25 (DEM)
+CandidateContest	SC House District 25 (Democratic Party)	State House of Representatives, District 25 - DEM
 CandidateContest	SC House District 25 (Democratic Party)	State House of Representatives, District 25 (DEM)
+CandidateContest	SC House District 26 (Democratic Party)	SC House District 26 - DEM
 CandidateContest	SC House District 26 (Democratic Party)	SC House District 26 (DEM)
+CandidateContest	SC House District 26 (Democratic Party)	State House of Representatives, District 26 - DEM
 CandidateContest	SC House District 26 (Democratic Party)	State House of Representatives, District 26 (DEM)
+CandidateContest	SC House District 27 (Democratic Party)	SC House District 27 - DEM
 CandidateContest	SC House District 27 (Democratic Party)	SC House District 27 (DEM)
+CandidateContest	SC House District 27 (Democratic Party)	State House of Representatives, District 27 - DEM
 CandidateContest	SC House District 27 (Democratic Party)	State House of Representatives, District 27 (DEM)
+CandidateContest	SC House District 28 (Democratic Party)	SC House District 28 - DEM
 CandidateContest	SC House District 28 (Democratic Party)	SC House District 28 (DEM)
+CandidateContest	SC House District 28 (Democratic Party)	State House of Representatives, District 28 - DEM
 CandidateContest	SC House District 28 (Democratic Party)	State House of Representatives, District 28 (DEM)
+CandidateContest	SC House District 29 (Democratic Party)	SC House District 29 - DEM
 CandidateContest	SC House District 29 (Democratic Party)	SC House District 29 (DEM)
+CandidateContest	SC House District 29 (Democratic Party)	State House of Representatives, District 29 - DEM
 CandidateContest	SC House District 29 (Democratic Party)	State House of Representatives, District 29 (DEM)
+CandidateContest	SC House District 30 (Democratic Party)	SC House District 30 - DEM
 CandidateContest	SC House District 30 (Democratic Party)	SC House District 30 (DEM)
+CandidateContest	SC House District 30 (Democratic Party)	State House of Representatives, District 30 - DEM
 CandidateContest	SC House District 30 (Democratic Party)	State House of Representatives, District 30 (DEM)
+CandidateContest	SC House District 31 (Democratic Party)	SC House District 31 - DEM
 CandidateContest	SC House District 31 (Democratic Party)	SC House District 31 (DEM)
+CandidateContest	SC House District 31 (Democratic Party)	State House of Representatives, District 31 - DEM
 CandidateContest	SC House District 31 (Democratic Party)	State House of Representatives, District 31 (DEM)
+CandidateContest	SC House District 32 (Democratic Party)	SC House District 32 - DEM
 CandidateContest	SC House District 32 (Democratic Party)	SC House District 32 (DEM)
+CandidateContest	SC House District 32 (Democratic Party)	State House of Representatives, District 32 - DEM
 CandidateContest	SC House District 32 (Democratic Party)	State House of Representatives, District 32 (DEM)
+CandidateContest	SC House District 33 (Democratic Party)	SC House District 33 - DEM
 CandidateContest	SC House District 33 (Democratic Party)	SC House District 33 (DEM)
+CandidateContest	SC House District 33 (Democratic Party)	State House of Representatives, District 33 - DEM
 CandidateContest	SC House District 33 (Democratic Party)	State House of Representatives, District 33 (DEM)
+CandidateContest	SC House District 34 (Democratic Party)	SC House District 34 - DEM
 CandidateContest	SC House District 34 (Democratic Party)	SC House District 34 (DEM)
+CandidateContest	SC House District 34 (Democratic Party)	State House of Representatives, District 34 - DEM
 CandidateContest	SC House District 34 (Democratic Party)	State House of Representatives, District 34 (DEM)
+CandidateContest	SC House District 35 (Democratic Party)	SC House District 35 - DEM
 CandidateContest	SC House District 35 (Democratic Party)	SC House District 35 (DEM)
+CandidateContest	SC House District 35 (Democratic Party)	State House of Representatives, District 35 - DEM
 CandidateContest	SC House District 35 (Democratic Party)	State House of Representatives, District 35 (DEM)
+CandidateContest	SC House District 36 (Democratic Party)	SC House District 36 - DEM
 CandidateContest	SC House District 36 (Democratic Party)	SC House District 36 (DEM)
+CandidateContest	SC House District 36 (Democratic Party)	State House of Representatives, District 36 - DEM
 CandidateContest	SC House District 36 (Democratic Party)	State House of Representatives, District 36 (DEM)
+CandidateContest	SC House District 37 (Democratic Party)	SC House District 37 - DEM
 CandidateContest	SC House District 37 (Democratic Party)	SC House District 37 (DEM)
+CandidateContest	SC House District 37 (Democratic Party)	State House of Representatives, District 37 - DEM
 CandidateContest	SC House District 37 (Democratic Party)	State House of Representatives, District 37 (DEM)
+CandidateContest	SC House District 38 (Democratic Party)	SC House District 38 - DEM
 CandidateContest	SC House District 38 (Democratic Party)	SC House District 38 (DEM)
+CandidateContest	SC House District 38 (Democratic Party)	State House of Representatives, District 38 - DEM
 CandidateContest	SC House District 38 (Democratic Party)	State House of Representatives, District 38 (DEM)
+CandidateContest	SC House District 39 (Democratic Party)	SC House District 39 - DEM
 CandidateContest	SC House District 39 (Democratic Party)	SC House District 39 (DEM)
+CandidateContest	SC House District 39 (Democratic Party)	State House of Representatives, District 39 - DEM
 CandidateContest	SC House District 39 (Democratic Party)	State House of Representatives, District 39 (DEM)
+CandidateContest	SC House District 40 (Democratic Party)	SC House District 40 - DEM
 CandidateContest	SC House District 40 (Democratic Party)	SC House District 40 (DEM)
+CandidateContest	SC House District 40 (Democratic Party)	State House of Representatives, District 40 - DEM
 CandidateContest	SC House District 40 (Democratic Party)	State House of Representatives, District 40 (DEM)
+CandidateContest	SC House District 41 (Democratic Party)	SC House District 41 - DEM
 CandidateContest	SC House District 41 (Democratic Party)	SC House District 41 (DEM)
+CandidateContest	SC House District 41 (Democratic Party)	State House of Representatives, District 41 - DEM
 CandidateContest	SC House District 41 (Democratic Party)	State House of Representatives, District 41 (DEM)
+CandidateContest	SC House District 42 (Democratic Party)	SC House District 42 - DEM
 CandidateContest	SC House District 42 (Democratic Party)	SC House District 42 (DEM)
+CandidateContest	SC House District 42 (Democratic Party)	State House of Representatives, District 42 - DEM
 CandidateContest	SC House District 42 (Democratic Party)	State House of Representatives, District 42 (DEM)
+CandidateContest	SC House District 43 (Democratic Party)	SC House District 43 - DEM
 CandidateContest	SC House District 43 (Democratic Party)	SC House District 43 (DEM)
+CandidateContest	SC House District 43 (Democratic Party)	State House of Representatives, District 43 - DEM
 CandidateContest	SC House District 43 (Democratic Party)	State House of Representatives, District 43 (DEM)
+CandidateContest	SC House District 44 (Democratic Party)	SC House District 44 - DEM
 CandidateContest	SC House District 44 (Democratic Party)	SC House District 44 (DEM)
+CandidateContest	SC House District 44 (Democratic Party)	State House of Representatives, District 44 - DEM
 CandidateContest	SC House District 44 (Democratic Party)	State House of Representatives, District 44 (DEM)
+CandidateContest	SC House District 45 (Democratic Party)	SC House District 45 - DEM
 CandidateContest	SC House District 45 (Democratic Party)	SC House District 45 (DEM)
+CandidateContest	SC House District 45 (Democratic Party)	State House of Representatives, District 45 - DEM
 CandidateContest	SC House District 45 (Democratic Party)	State House of Representatives, District 45 (DEM)
+CandidateContest	SC House District 46 (Democratic Party)	SC House District 46 - DEM
 CandidateContest	SC House District 46 (Democratic Party)	SC House District 46 (DEM)
+CandidateContest	SC House District 46 (Democratic Party)	State House of Representatives, District 46 - DEM
 CandidateContest	SC House District 46 (Democratic Party)	State House of Representatives, District 46 (DEM)
+CandidateContest	SC House District 47 (Democratic Party)	SC House District 47 - DEM
 CandidateContest	SC House District 47 (Democratic Party)	SC House District 47 (DEM)
+CandidateContest	SC House District 47 (Democratic Party)	State House of Representatives, District 47 - DEM
 CandidateContest	SC House District 47 (Democratic Party)	State House of Representatives, District 47 (DEM)
+CandidateContest	SC House District 48 (Democratic Party)	SC House District 48 - DEM
 CandidateContest	SC House District 48 (Democratic Party)	SC House District 48 (DEM)
+CandidateContest	SC House District 48 (Democratic Party)	State House of Representatives, District 48 - DEM
 CandidateContest	SC House District 48 (Democratic Party)	State House of Representatives, District 48 (DEM)
+CandidateContest	SC House District 49 (Democratic Party)	SC House District 49 - DEM
 CandidateContest	SC House District 49 (Democratic Party)	SC House District 49 (DEM)
+CandidateContest	SC House District 49 (Democratic Party)	State House of Representatives, District 49 - DEM
 CandidateContest	SC House District 49 (Democratic Party)	State House of Representatives, District 49 (DEM)
+CandidateContest	SC House District 50 (Democratic Party)	SC House District 50 - DEM
 CandidateContest	SC House District 50 (Democratic Party)	SC House District 50 (DEM)
+CandidateContest	SC House District 50 (Democratic Party)	State House of Representatives, District 50 - DEM
 CandidateContest	SC House District 50 (Democratic Party)	State House of Representatives, District 50 (DEM)
+CandidateContest	SC House District 51 (Democratic Party)	SC House District 51 - DEM
 CandidateContest	SC House District 51 (Democratic Party)	SC House District 51 (DEM)
+CandidateContest	SC House District 51 (Democratic Party)	State House of Representatives, District 51 - DEM
 CandidateContest	SC House District 51 (Democratic Party)	State House of Representatives, District 51 (DEM)
+CandidateContest	SC House District 52 (Democratic Party)	SC House District 52 - DEM
 CandidateContest	SC House District 52 (Democratic Party)	SC House District 52 (DEM)
+CandidateContest	SC House District 52 (Democratic Party)	State House of Representatives, District 52 - DEM
 CandidateContest	SC House District 52 (Democratic Party)	State House of Representatives, District 52 (DEM)
+CandidateContest	SC House District 53 (Democratic Party)	SC House District 53 - DEM
 CandidateContest	SC House District 53 (Democratic Party)	SC House District 53 (DEM)
+CandidateContest	SC House District 53 (Democratic Party)	State House of Representatives, District 53 - DEM
 CandidateContest	SC House District 53 (Democratic Party)	State House of Representatives, District 53 (DEM)
+CandidateContest	SC House District 54 (Democratic Party)	SC House District 54 - DEM
 CandidateContest	SC House District 54 (Democratic Party)	SC House District 54 (DEM)
+CandidateContest	SC House District 54 (Democratic Party)	State House of Representatives, District 54 - DEM
 CandidateContest	SC House District 54 (Democratic Party)	State House of Representatives, District 54 (DEM)
+CandidateContest	SC House District 55 (Democratic Party)	SC House District 55 - DEM
 CandidateContest	SC House District 55 (Democratic Party)	SC House District 55 (DEM)
+CandidateContest	SC House District 55 (Democratic Party)	State House of Representatives, District 55 - DEM
 CandidateContest	SC House District 55 (Democratic Party)	State House of Representatives, District 55 (DEM)
+CandidateContest	SC House District 56 (Democratic Party)	SC House District 56 - DEM
 CandidateContest	SC House District 56 (Democratic Party)	SC House District 56 (DEM)
+CandidateContest	SC House District 56 (Democratic Party)	State House of Representatives, District 56 - DEM
 CandidateContest	SC House District 56 (Democratic Party)	State House of Representatives, District 56 (DEM)
+CandidateContest	SC House District 57 (Democratic Party)	SC House District 57 - DEM
 CandidateContest	SC House District 57 (Democratic Party)	SC House District 57 (DEM)
+CandidateContest	SC House District 57 (Democratic Party)	State House of Representatives, District 57 - DEM
 CandidateContest	SC House District 57 (Democratic Party)	State House of Representatives, District 57 (DEM)
+CandidateContest	SC House District 58 (Democratic Party)	SC House District 58 - DEM
 CandidateContest	SC House District 58 (Democratic Party)	SC House District 58 (DEM)
+CandidateContest	SC House District 58 (Democratic Party)	State House of Representatives, District 58 - DEM
 CandidateContest	SC House District 58 (Democratic Party)	State House of Representatives, District 58 (DEM)
+CandidateContest	SC House District 59 (Democratic Party)	SC House District 59 - DEM
 CandidateContest	SC House District 59 (Democratic Party)	SC House District 59 (DEM)
+CandidateContest	SC House District 59 (Democratic Party)	State House of Representatives, District 59 - DEM
 CandidateContest	SC House District 59 (Democratic Party)	State House of Representatives, District 59 (DEM)
+CandidateContest	SC House District 60 (Democratic Party)	SC House District 60 - DEM
 CandidateContest	SC House District 60 (Democratic Party)	SC House District 60 (DEM)
+CandidateContest	SC House District 60 (Democratic Party)	State House of Representatives, District 60 - DEM
 CandidateContest	SC House District 60 (Democratic Party)	State House of Representatives, District 60 (DEM)
+CandidateContest	SC House District 61 (Democratic Party)	SC House District 61 - DEM
 CandidateContest	SC House District 61 (Democratic Party)	SC House District 61 (DEM)
+CandidateContest	SC House District 61 (Democratic Party)	State House of Representatives, District 61 - DEM
 CandidateContest	SC House District 61 (Democratic Party)	State House of Representatives, District 61 (DEM)
+CandidateContest	SC House District 62 (Democratic Party)	SC House District 62 - DEM
 CandidateContest	SC House District 62 (Democratic Party)	SC House District 62 (DEM)
+CandidateContest	SC House District 62 (Democratic Party)	State House of Representatives, District 62 - DEM
 CandidateContest	SC House District 62 (Democratic Party)	State House of Representatives, District 62 (DEM)
+CandidateContest	SC House District 63 (Democratic Party)	SC House District 63 - DEM
 CandidateContest	SC House District 63 (Democratic Party)	SC House District 63 (DEM)
+CandidateContest	SC House District 63 (Democratic Party)	State House of Representatives, District 63 - DEM
 CandidateContest	SC House District 63 (Democratic Party)	State House of Representatives, District 63 (DEM)
+CandidateContest	SC House District 64 (Democratic Party)	SC House District 64 - DEM
 CandidateContest	SC House District 64 (Democratic Party)	SC House District 64 (DEM)
+CandidateContest	SC House District 64 (Democratic Party)	State House of Representatives, District 64 - DEM
 CandidateContest	SC House District 64 (Democratic Party)	State House of Representatives, District 64 (DEM)
+CandidateContest	SC House District 65 (Democratic Party)	SC House District 65 - DEM
 CandidateContest	SC House District 65 (Democratic Party)	SC House District 65 (DEM)
+CandidateContest	SC House District 65 (Democratic Party)	State House of Representatives, District 65 - DEM
 CandidateContest	SC House District 65 (Democratic Party)	State House of Representatives, District 65 (DEM)
+CandidateContest	SC House District 66 (Democratic Party)	SC House District 66 - DEM
 CandidateContest	SC House District 66 (Democratic Party)	SC House District 66 (DEM)
+CandidateContest	SC House District 66 (Democratic Party)	State House of Representatives, District 66 - DEM
 CandidateContest	SC House District 66 (Democratic Party)	State House of Representatives, District 66 (DEM)
+CandidateContest	SC House District 67 (Democratic Party)	SC House District 67 - DEM
 CandidateContest	SC House District 67 (Democratic Party)	SC House District 67 (DEM)
+CandidateContest	SC House District 67 (Democratic Party)	State House of Representatives, District 67 - DEM
 CandidateContest	SC House District 67 (Democratic Party)	State House of Representatives, District 67 (DEM)
+CandidateContest	SC House District 68 (Democratic Party)	SC House District 68 - DEM
 CandidateContest	SC House District 68 (Democratic Party)	SC House District 68 (DEM)
+CandidateContest	SC House District 68 (Democratic Party)	State House of Representatives, District 68 - DEM
 CandidateContest	SC House District 68 (Democratic Party)	State House of Representatives, District 68 (DEM)
+CandidateContest	SC House District 69 (Democratic Party)	SC House District 69 - DEM
 CandidateContest	SC House District 69 (Democratic Party)	SC House District 69 (DEM)
+CandidateContest	SC House District 69 (Democratic Party)	State House of Representatives, District 69 - DEM
 CandidateContest	SC House District 69 (Democratic Party)	State House of Representatives, District 69 (DEM)
+CandidateContest	SC House District 70 (Democratic Party)	SC House District 70 - DEM
 CandidateContest	SC House District 70 (Democratic Party)	SC House District 70 (DEM)
+CandidateContest	SC House District 70 (Democratic Party)	State House of Representatives, District 70 - DEM
 CandidateContest	SC House District 70 (Democratic Party)	State House of Representatives, District 70 (DEM)
+CandidateContest	SC House District 71 (Democratic Party)	SC House District 71 - DEM
 CandidateContest	SC House District 71 (Democratic Party)	SC House District 71 (DEM)
+CandidateContest	SC House District 71 (Democratic Party)	State House of Representatives, District 71 - DEM
 CandidateContest	SC House District 71 (Democratic Party)	State House of Representatives, District 71 (DEM)
+CandidateContest	SC House District 72 (Democratic Party)	SC House District 72 - DEM
 CandidateContest	SC House District 72 (Democratic Party)	SC House District 72 (DEM)
+CandidateContest	SC House District 72 (Democratic Party)	State House of Representatives, District 72 - DEM
 CandidateContest	SC House District 72 (Democratic Party)	State House of Representatives, District 72 (DEM)
+CandidateContest	SC House District 73 (Democratic Party)	SC House District 73 - DEM
 CandidateContest	SC House District 73 (Democratic Party)	SC House District 73 (DEM)
+CandidateContest	SC House District 73 (Democratic Party)	State House of Representatives, District 73 - DEM
 CandidateContest	SC House District 73 (Democratic Party)	State House of Representatives, District 73 (DEM)
+CandidateContest	SC House District 74 (Democratic Party)	SC House District 74 - DEM
 CandidateContest	SC House District 74 (Democratic Party)	SC House District 74 (DEM)
+CandidateContest	SC House District 74 (Democratic Party)	State House of Representatives, District 74 - DEM
 CandidateContest	SC House District 74 (Democratic Party)	State House of Representatives, District 74 (DEM)
+CandidateContest	SC House District 75 (Democratic Party)	SC House District 75 - DEM
 CandidateContest	SC House District 75 (Democratic Party)	SC House District 75 (DEM)
+CandidateContest	SC House District 75 (Democratic Party)	State House of Representatives, District 75 - DEM
 CandidateContest	SC House District 75 (Democratic Party)	State House of Representatives, District 75 (DEM)
+CandidateContest	SC House District 76 (Democratic Party)	SC House District 76 - DEM
 CandidateContest	SC House District 76 (Democratic Party)	SC House District 76 (DEM)
+CandidateContest	SC House District 76 (Democratic Party)	State House of Representatives, District 76 - DEM
 CandidateContest	SC House District 76 (Democratic Party)	State House of Representatives, District 76 (DEM)
+CandidateContest	SC House District 77 (Democratic Party)	SC House District 77 - DEM
 CandidateContest	SC House District 77 (Democratic Party)	SC House District 77 (DEM)
+CandidateContest	SC House District 77 (Democratic Party)	State House of Representatives, District 77 - DEM
 CandidateContest	SC House District 77 (Democratic Party)	State House of Representatives, District 77 (DEM)
+CandidateContest	SC House District 78 (Democratic Party)	SC House District 78 - DEM
 CandidateContest	SC House District 78 (Democratic Party)	SC House District 78 (DEM)
+CandidateContest	SC House District 78 (Democratic Party)	State House of Representatives, District 78 - DEM
 CandidateContest	SC House District 78 (Democratic Party)	State House of Representatives, District 78 (DEM)
+CandidateContest	SC House District 79 (Democratic Party)	SC House District 79 - DEM
 CandidateContest	SC House District 79 (Democratic Party)	SC House District 79 (DEM)
+CandidateContest	SC House District 79 (Democratic Party)	State House of Representatives, District 79 - DEM
 CandidateContest	SC House District 79 (Democratic Party)	State House of Representatives, District 79 (DEM)
+CandidateContest	SC House District 80 (Democratic Party)	SC House District 80 - DEM
 CandidateContest	SC House District 80 (Democratic Party)	SC House District 80 (DEM)
+CandidateContest	SC House District 80 (Democratic Party)	State House of Representatives, District 80 - DEM
 CandidateContest	SC House District 80 (Democratic Party)	State House of Representatives, District 80 (DEM)
+CandidateContest	SC House District 81 (Democratic Party)	SC House District 81 - DEM
 CandidateContest	SC House District 81 (Democratic Party)	SC House District 81 (DEM)
+CandidateContest	SC House District 81 (Democratic Party)	State House of Representatives, District 81 - DEM
 CandidateContest	SC House District 81 (Democratic Party)	State House of Representatives, District 81 (DEM)
+CandidateContest	SC House District 82 (Democratic Party)	SC House District 82 - DEM
 CandidateContest	SC House District 82 (Democratic Party)	SC House District 82 (DEM)
+CandidateContest	SC House District 82 (Democratic Party)	State House of Representatives, District 82 - DEM
 CandidateContest	SC House District 82 (Democratic Party)	State House of Representatives, District 82 (DEM)
+CandidateContest	SC House District 83 (Democratic Party)	SC House District 83 - DEM
 CandidateContest	SC House District 83 (Democratic Party)	SC House District 83 (DEM)
+CandidateContest	SC House District 83 (Democratic Party)	State House of Representatives, District 83 - DEM
 CandidateContest	SC House District 83 (Democratic Party)	State House of Representatives, District 83 (DEM)
+CandidateContest	SC House District 84 (Democratic Party)	SC House District 84 - DEM
 CandidateContest	SC House District 84 (Democratic Party)	SC House District 84 (DEM)
+CandidateContest	SC House District 84 (Democratic Party)	State House of Representatives, District 84 - DEM
 CandidateContest	SC House District 84 (Democratic Party)	State House of Representatives, District 84 (DEM)
+CandidateContest	SC House District 85 (Democratic Party)	SC House District 85 - DEM
 CandidateContest	SC House District 85 (Democratic Party)	SC House District 85 (DEM)
+CandidateContest	SC House District 85 (Democratic Party)	State House of Representatives, District 85 - DEM
 CandidateContest	SC House District 85 (Democratic Party)	State House of Representatives, District 85 (DEM)
+CandidateContest	SC House District 86 (Democratic Party)	SC House District 86 - DEM
 CandidateContest	SC House District 86 (Democratic Party)	SC House District 86 (DEM)
+CandidateContest	SC House District 86 (Democratic Party)	State House of Representatives, District 86 - DEM
 CandidateContest	SC House District 86 (Democratic Party)	State House of Representatives, District 86 (DEM)
+CandidateContest	SC House District 87 (Democratic Party)	SC House District 87 - DEM
 CandidateContest	SC House District 87 (Democratic Party)	SC House District 87 (DEM)
+CandidateContest	SC House District 87 (Democratic Party)	State House of Representatives, District 87 - DEM
 CandidateContest	SC House District 87 (Democratic Party)	State House of Representatives, District 87 (DEM)
+CandidateContest	SC House District 88 (Democratic Party)	SC House District 88 - DEM
 CandidateContest	SC House District 88 (Democratic Party)	SC House District 88 (DEM)
+CandidateContest	SC House District 88 (Democratic Party)	State House of Representatives, District 88 - DEM
 CandidateContest	SC House District 88 (Democratic Party)	State House of Representatives, District 88 (DEM)
+CandidateContest	SC House District 89 (Democratic Party)	SC House District 89 - DEM
 CandidateContest	SC House District 89 (Democratic Party)	SC House District 89 (DEM)
+CandidateContest	SC House District 89 (Democratic Party)	State House of Representatives, District 89 - DEM
 CandidateContest	SC House District 89 (Democratic Party)	State House of Representatives, District 89 (DEM)
+CandidateContest	SC House District 90 (Democratic Party)	SC House District 90 - DEM
 CandidateContest	SC House District 90 (Democratic Party)	SC House District 90 (DEM)
+CandidateContest	SC House District 90 (Democratic Party)	State House of Representatives, District 90 - DEM
 CandidateContest	SC House District 90 (Democratic Party)	State House of Representatives, District 90 (DEM)
+CandidateContest	SC House District 91 (Democratic Party)	SC House District 91 - DEM
 CandidateContest	SC House District 91 (Democratic Party)	SC House District 91 (DEM)
+CandidateContest	SC House District 91 (Democratic Party)	State House of Representatives, District 91 - DEM
 CandidateContest	SC House District 91 (Democratic Party)	State House of Representatives, District 91 (DEM)
+CandidateContest	SC House District 92 (Democratic Party)	SC House District 92 - DEM
 CandidateContest	SC House District 92 (Democratic Party)	SC House District 92 (DEM)
+CandidateContest	SC House District 92 (Democratic Party)	State House of Representatives, District 92 - DEM
 CandidateContest	SC House District 92 (Democratic Party)	State House of Representatives, District 92 (DEM)
+CandidateContest	SC House District 93 (Democratic Party)	SC House District 93 - DEM
 CandidateContest	SC House District 93 (Democratic Party)	SC House District 93 (DEM)
+CandidateContest	SC House District 93 (Democratic Party)	State House of Representatives, District 93 - DEM
 CandidateContest	SC House District 93 (Democratic Party)	State House of Representatives, District 93 (DEM)
+CandidateContest	SC House District 94 (Democratic Party)	SC House District 94 - DEM
 CandidateContest	SC House District 94 (Democratic Party)	SC House District 94 (DEM)
+CandidateContest	SC House District 94 (Democratic Party)	State House of Representatives, District 94 - DEM
 CandidateContest	SC House District 94 (Democratic Party)	State House of Representatives, District 94 (DEM)
+CandidateContest	SC House District 95 (Democratic Party)	SC House District 95 - DEM
 CandidateContest	SC House District 95 (Democratic Party)	SC House District 95 (DEM)
+CandidateContest	SC House District 95 (Democratic Party)	State House of Representatives, District 95 - DEM
 CandidateContest	SC House District 95 (Democratic Party)	State House of Representatives, District 95 (DEM)
+CandidateContest	SC House District 96 (Democratic Party)	SC House District 96 - DEM
 CandidateContest	SC House District 96 (Democratic Party)	SC House District 96 (DEM)
+CandidateContest	SC House District 96 (Democratic Party)	State House of Representatives, District 96 - DEM
 CandidateContest	SC House District 96 (Democratic Party)	State House of Representatives, District 96 (DEM)
+CandidateContest	SC House District 97 (Democratic Party)	SC House District 97 - DEM
 CandidateContest	SC House District 97 (Democratic Party)	SC House District 97 (DEM)
+CandidateContest	SC House District 97 (Democratic Party)	State House of Representatives, District 97 - DEM
 CandidateContest	SC House District 97 (Democratic Party)	State House of Representatives, District 97 (DEM)
+CandidateContest	SC House District 98 (Democratic Party)	SC House District 98 - DEM
 CandidateContest	SC House District 98 (Democratic Party)	SC House District 98 (DEM)
+CandidateContest	SC House District 98 (Democratic Party)	State House of Representatives, District 98 - DEM
 CandidateContest	SC House District 98 (Democratic Party)	State House of Representatives, District 98 (DEM)
+CandidateContest	SC House District 99 (Democratic Party)	SC House District 99 - DEM
 CandidateContest	SC House District 99 (Democratic Party)	SC House District 99 (DEM)
+CandidateContest	SC House District 99 (Democratic Party)	State House of Representatives, District 99 - DEM
 CandidateContest	SC House District 99 (Democratic Party)	State House of Representatives, District 99 (DEM)
+CandidateContest	SC House District 100 (Democratic Party)	SC House District 100 - DEM
 CandidateContest	SC House District 100 (Democratic Party)	SC House District 100 (DEM)
+CandidateContest	SC House District 100 (Democratic Party)	State House of Representatives, District 100 - DEM
 CandidateContest	SC House District 100 (Democratic Party)	State House of Representatives, District 100 (DEM)
+CandidateContest	SC House District 101 (Democratic Party)	SC House District 101 - DEM
 CandidateContest	SC House District 101 (Democratic Party)	SC House District 101 (DEM)
+CandidateContest	SC House District 101 (Democratic Party)	State House of Representatives, District 101 - DEM
 CandidateContest	SC House District 101 (Democratic Party)	State House of Representatives, District 101 (DEM)
+CandidateContest	SC House District 102 (Democratic Party)	SC House District 102 - DEM
 CandidateContest	SC House District 102 (Democratic Party)	SC House District 102 (DEM)
+CandidateContest	SC House District 102 (Democratic Party)	State House of Representatives, District 102 - DEM
 CandidateContest	SC House District 102 (Democratic Party)	State House of Representatives, District 102 (DEM)
+CandidateContest	SC House District 103 (Democratic Party)	SC House District 103 - DEM
 CandidateContest	SC House District 103 (Democratic Party)	SC House District 103 (DEM)
+CandidateContest	SC House District 103 (Democratic Party)	State House of Representatives, District 103 - DEM
 CandidateContest	SC House District 103 (Democratic Party)	State House of Representatives, District 103 (DEM)
+CandidateContest	SC House District 104 (Democratic Party)	SC House District 104 - DEM
 CandidateContest	SC House District 104 (Democratic Party)	SC House District 104 (DEM)
+CandidateContest	SC House District 104 (Democratic Party)	State House of Representatives, District 104 - DEM
 CandidateContest	SC House District 104 (Democratic Party)	State House of Representatives, District 104 (DEM)
+CandidateContest	SC House District 105 (Democratic Party)	SC House District 105 - DEM
 CandidateContest	SC House District 105 (Democratic Party)	SC House District 105 (DEM)
+CandidateContest	SC House District 105 (Democratic Party)	State House of Representatives, District 105 - DEM
 CandidateContest	SC House District 105 (Democratic Party)	State House of Representatives, District 105 (DEM)
+CandidateContest	SC House District 106 (Democratic Party)	SC House District 106 - DEM
 CandidateContest	SC House District 106 (Democratic Party)	SC House District 106 (DEM)
+CandidateContest	SC House District 106 (Democratic Party)	State House of Representatives, District 106 - DEM
 CandidateContest	SC House District 106 (Democratic Party)	State House of Representatives, District 106 (DEM)
+CandidateContest	SC House District 107 (Democratic Party)	SC House District 107 - DEM
 CandidateContest	SC House District 107 (Democratic Party)	SC House District 107 (DEM)
+CandidateContest	SC House District 107 (Democratic Party)	State House of Representatives, District 107 - DEM
 CandidateContest	SC House District 107 (Democratic Party)	State House of Representatives, District 107 (DEM)
+CandidateContest	SC House District 108 (Democratic Party)	SC House District 108 - DEM
 CandidateContest	SC House District 108 (Democratic Party)	SC House District 108 (DEM)
+CandidateContest	SC House District 108 (Democratic Party)	State House of Representatives, District 108 - DEM
 CandidateContest	SC House District 108 (Democratic Party)	State House of Representatives, District 108 (DEM)
+CandidateContest	SC House District 109 (Democratic Party)	SC House District 109 - DEM
 CandidateContest	SC House District 109 (Democratic Party)	SC House District 109 (DEM)
+CandidateContest	SC House District 109 (Democratic Party)	State House of Representatives, District 109 - DEM
 CandidateContest	SC House District 109 (Democratic Party)	State House of Representatives, District 109 (DEM)
+CandidateContest	SC House District 110 (Democratic Party)	SC House District 110 - DEM
 CandidateContest	SC House District 110 (Democratic Party)	SC House District 110 (DEM)
+CandidateContest	SC House District 110 (Democratic Party)	State House of Representatives, District 110 - DEM
 CandidateContest	SC House District 110 (Democratic Party)	State House of Representatives, District 110 (DEM)
+CandidateContest	SC House District 111 (Democratic Party)	SC House District 111 - DEM
 CandidateContest	SC House District 111 (Democratic Party)	SC House District 111 (DEM)
+CandidateContest	SC House District 111 (Democratic Party)	State House of Representatives, District 111 - DEM
 CandidateContest	SC House District 111 (Democratic Party)	State House of Representatives, District 111 (DEM)
+CandidateContest	SC House District 112 (Democratic Party)	SC House District 112 - DEM
 CandidateContest	SC House District 112 (Democratic Party)	SC House District 112 (DEM)
+CandidateContest	SC House District 112 (Democratic Party)	State House of Representatives, District 112 - DEM
 CandidateContest	SC House District 112 (Democratic Party)	State House of Representatives, District 112 (DEM)
+CandidateContest	SC House District 113 (Democratic Party)	SC House District 113 - DEM
 CandidateContest	SC House District 113 (Democratic Party)	SC House District 113 (DEM)
+CandidateContest	SC House District 113 (Democratic Party)	State House of Representatives, District 113 - DEM
 CandidateContest	SC House District 113 (Democratic Party)	State House of Representatives, District 113 (DEM)
+CandidateContest	SC House District 114 (Democratic Party)	SC House District 114 - DEM
 CandidateContest	SC House District 114 (Democratic Party)	SC House District 114 (DEM)
+CandidateContest	SC House District 114 (Democratic Party)	State House of Representatives, District 114 - DEM
 CandidateContest	SC House District 114 (Democratic Party)	State House of Representatives, District 114 (DEM)
+CandidateContest	SC House District 115 (Democratic Party)	SC House District 115 - DEM
 CandidateContest	SC House District 115 (Democratic Party)	SC House District 115 (DEM)
+CandidateContest	SC House District 115 (Democratic Party)	State House of Representatives, District 115 - DEM
 CandidateContest	SC House District 115 (Democratic Party)	State House of Representatives, District 115 (DEM)
+CandidateContest	SC House District 116 (Democratic Party)	SC House District 116 - DEM
 CandidateContest	SC House District 116 (Democratic Party)	SC House District 116 (DEM)
+CandidateContest	SC House District 116 (Democratic Party)	State House of Representatives, District 116 - DEM
 CandidateContest	SC House District 116 (Democratic Party)	State House of Representatives, District 116 (DEM)
+CandidateContest	SC House District 117 (Democratic Party)	SC House District 117 - DEM
 CandidateContest	SC House District 117 (Democratic Party)	SC House District 117 (DEM)
+CandidateContest	SC House District 117 (Democratic Party)	State House of Representatives, District 117 - DEM
 CandidateContest	SC House District 117 (Democratic Party)	State House of Representatives, District 117 (DEM)
+CandidateContest	SC House District 118 (Democratic Party)	SC House District 118 - DEM
 CandidateContest	SC House District 118 (Democratic Party)	SC House District 118 (DEM)
+CandidateContest	SC House District 118 (Democratic Party)	State House of Representatives, District 118 - DEM
 CandidateContest	SC House District 118 (Democratic Party)	State House of Representatives, District 118 (DEM)
+CandidateContest	SC House District 119 (Democratic Party)	SC House District 119 - DEM
 CandidateContest	SC House District 119 (Democratic Party)	SC House District 119 (DEM)
+CandidateContest	SC House District 119 (Democratic Party)	State House of Representatives, District 119 - DEM
 CandidateContest	SC House District 119 (Democratic Party)	State House of Representatives, District 119 (DEM)
+CandidateContest	SC House District 120 (Democratic Party)	SC House District 120 - DEM
 CandidateContest	SC House District 120 (Democratic Party)	SC House District 120 (DEM)
+CandidateContest	SC House District 120 (Democratic Party)	State House of Representatives, District 120 - DEM
 CandidateContest	SC House District 120 (Democratic Party)	State House of Representatives, District 120 (DEM)
+CandidateContest	SC House District 121 (Democratic Party)	SC House District 121 - DEM
 CandidateContest	SC House District 121 (Democratic Party)	SC House District 121 (DEM)
+CandidateContest	SC House District 121 (Democratic Party)	State House of Representatives, District 121 - DEM
 CandidateContest	SC House District 121 (Democratic Party)	State House of Representatives, District 121 (DEM)
+CandidateContest	SC House District 122 (Democratic Party)	SC House District 122 - DEM
 CandidateContest	SC House District 122 (Democratic Party)	SC House District 122 (DEM)
+CandidateContest	SC House District 122 (Democratic Party)	State House of Representatives, District 122 - DEM
 CandidateContest	SC House District 122 (Democratic Party)	State House of Representatives, District 122 (DEM)
+CandidateContest	SC House District 123 (Democratic Party)	SC House District 123 - DEM
 CandidateContest	SC House District 123 (Democratic Party)	SC House District 123 (DEM)
+CandidateContest	SC House District 123 (Democratic Party)	State House of Representatives, District 123 - DEM
 CandidateContest	SC House District 123 (Democratic Party)	State House of Representatives, District 123 (DEM)
+CandidateContest	SC House District 124 (Democratic Party)	SC House District 124 - DEM
 CandidateContest	SC House District 124 (Democratic Party)	SC House District 124 (DEM)
+CandidateContest	SC House District 124 (Democratic Party)	State House of Representatives, District 124 - DEM
 CandidateContest	SC House District 124 (Democratic Party)	State House of Representatives, District 124 (DEM)
+CandidateContest	SC Senate District 1 (Democratic Party)	SC Senate District 1 - DEM
 CandidateContest	SC Senate District 1 (Democratic Party)	SC Senate District 1 (DEM)
+CandidateContest	SC Senate District 1 (Democratic Party)	State Senate, District 1 - DEM
 CandidateContest	SC Senate District 1 (Democratic Party)	State Senate, District 1 (DEM)
+CandidateContest	SC Senate District 2 (Democratic Party)	SC Senate District 2 - DEM
 CandidateContest	SC Senate District 2 (Democratic Party)	SC Senate District 2 (DEM)
+CandidateContest	SC Senate District 2 (Democratic Party)	State Senate, District 2 - DEM
 CandidateContest	SC Senate District 2 (Democratic Party)	State Senate, District 2 (DEM)
+CandidateContest	SC Senate District 3 (Democratic Party)	SC Senate District 3 - DEM
 CandidateContest	SC Senate District 3 (Democratic Party)	SC Senate District 3 (DEM)
+CandidateContest	SC Senate District 3 (Democratic Party)	State Senate, District 3 - DEM
 CandidateContest	SC Senate District 3 (Democratic Party)	State Senate, District 3 (DEM)
+CandidateContest	SC Senate District 4 (Democratic Party)	SC Senate District 4 - DEM
 CandidateContest	SC Senate District 4 (Democratic Party)	SC Senate District 4 (DEM)
+CandidateContest	SC Senate District 4 (Democratic Party)	State Senate, District 4 - DEM
 CandidateContest	SC Senate District 4 (Democratic Party)	State Senate, District 4 (DEM)
+CandidateContest	SC Senate District 5 (Democratic Party)	SC Senate District 5 - DEM
 CandidateContest	SC Senate District 5 (Democratic Party)	SC Senate District 5 (DEM)
+CandidateContest	SC Senate District 5 (Democratic Party)	State Senate, District 5 - DEM
 CandidateContest	SC Senate District 5 (Democratic Party)	State Senate, District 5 (DEM)
+CandidateContest	SC Senate District 6 (Democratic Party)	SC Senate District 6 - DEM
 CandidateContest	SC Senate District 6 (Democratic Party)	SC Senate District 6 (DEM)
+CandidateContest	SC Senate District 6 (Democratic Party)	State Senate, District 6 - DEM
 CandidateContest	SC Senate District 6 (Democratic Party)	State Senate, District 6 (DEM)
+CandidateContest	SC Senate District 7 (Democratic Party)	SC Senate District 7 - DEM
 CandidateContest	SC Senate District 7 (Democratic Party)	SC Senate District 7 (DEM)
+CandidateContest	SC Senate District 7 (Democratic Party)	State Senate, District 7 - DEM
 CandidateContest	SC Senate District 7 (Democratic Party)	State Senate, District 7 (DEM)
+CandidateContest	SC Senate District 8 (Democratic Party)	SC Senate District 8 - DEM
 CandidateContest	SC Senate District 8 (Democratic Party)	SC Senate District 8 (DEM)
+CandidateContest	SC Senate District 8 (Democratic Party)	State Senate, District 8 - DEM
 CandidateContest	SC Senate District 8 (Democratic Party)	State Senate, District 8 (DEM)
+CandidateContest	SC Senate District 9 (Democratic Party)	SC Senate District 9 - DEM
 CandidateContest	SC Senate District 9 (Democratic Party)	SC Senate District 9 (DEM)
+CandidateContest	SC Senate District 9 (Democratic Party)	State Senate, District 9 - DEM
 CandidateContest	SC Senate District 9 (Democratic Party)	State Senate, District 9 (DEM)
+CandidateContest	SC Senate District 10 (Democratic Party)	SC Senate District 10 - DEM
 CandidateContest	SC Senate District 10 (Democratic Party)	SC Senate District 10 (DEM)
+CandidateContest	SC Senate District 10 (Democratic Party)	State Senate, District 10 - DEM
 CandidateContest	SC Senate District 10 (Democratic Party)	State Senate, District 10 (DEM)
+CandidateContest	SC Senate District 11 (Democratic Party)	SC Senate District 11 - DEM
 CandidateContest	SC Senate District 11 (Democratic Party)	SC Senate District 11 (DEM)
+CandidateContest	SC Senate District 11 (Democratic Party)	State Senate, District 11 - DEM
 CandidateContest	SC Senate District 11 (Democratic Party)	State Senate, District 11 (DEM)
+CandidateContest	SC Senate District 12 (Democratic Party)	SC Senate District 12 - DEM
 CandidateContest	SC Senate District 12 (Democratic Party)	SC Senate District 12 (DEM)
+CandidateContest	SC Senate District 12 (Democratic Party)	State Senate, District 12 - DEM
 CandidateContest	SC Senate District 12 (Democratic Party)	State Senate, District 12 (DEM)
+CandidateContest	SC Senate District 13 (Democratic Party)	SC Senate District 13 - DEM
 CandidateContest	SC Senate District 13 (Democratic Party)	SC Senate District 13 (DEM)
+CandidateContest	SC Senate District 13 (Democratic Party)	State Senate, District 13 - DEM
 CandidateContest	SC Senate District 13 (Democratic Party)	State Senate, District 13 (DEM)
+CandidateContest	SC Senate District 14 (Democratic Party)	SC Senate District 14 - DEM
 CandidateContest	SC Senate District 14 (Democratic Party)	SC Senate District 14 (DEM)
+CandidateContest	SC Senate District 14 (Democratic Party)	State Senate, District 14 - DEM
 CandidateContest	SC Senate District 14 (Democratic Party)	State Senate, District 14 (DEM)
+CandidateContest	SC Senate District 15 (Democratic Party)	SC Senate District 15 - DEM
 CandidateContest	SC Senate District 15 (Democratic Party)	SC Senate District 15 (DEM)
+CandidateContest	SC Senate District 15 (Democratic Party)	State Senate, District 15 - DEM
 CandidateContest	SC Senate District 15 (Democratic Party)	State Senate, District 15 (DEM)
+CandidateContest	SC Senate District 16 (Democratic Party)	SC Senate District 16 - DEM
 CandidateContest	SC Senate District 16 (Democratic Party)	SC Senate District 16 (DEM)
+CandidateContest	SC Senate District 16 (Democratic Party)	State Senate, District 16 - DEM
 CandidateContest	SC Senate District 16 (Democratic Party)	State Senate, District 16 (DEM)
+CandidateContest	SC Senate District 17 (Democratic Party)	SC Senate District 17 - DEM
 CandidateContest	SC Senate District 17 (Democratic Party)	SC Senate District 17 (DEM)
+CandidateContest	SC Senate District 17 (Democratic Party)	State Senate, District 17 - DEM
 CandidateContest	SC Senate District 17 (Democratic Party)	State Senate, District 17 (DEM)
+CandidateContest	SC Senate District 18 (Democratic Party)	SC Senate District 18 - DEM
 CandidateContest	SC Senate District 18 (Democratic Party)	SC Senate District 18 (DEM)
+CandidateContest	SC Senate District 18 (Democratic Party)	State Senate, District 18 - DEM
 CandidateContest	SC Senate District 18 (Democratic Party)	State Senate, District 18 (DEM)
+CandidateContest	SC Senate District 19 (Democratic Party)	SC Senate District 19 - DEM
 CandidateContest	SC Senate District 19 (Democratic Party)	SC Senate District 19 (DEM)
+CandidateContest	SC Senate District 19 (Democratic Party)	State Senate, District 19 - DEM
 CandidateContest	SC Senate District 19 (Democratic Party)	State Senate, District 19 (DEM)
+CandidateContest	SC Senate District 20 (Democratic Party)	SC Senate District 20 - DEM
 CandidateContest	SC Senate District 20 (Democratic Party)	SC Senate District 20 (DEM)
+CandidateContest	SC Senate District 20 (Democratic Party)	State Senate, District 20 - DEM
 CandidateContest	SC Senate District 20 (Democratic Party)	State Senate, District 20 (DEM)
+CandidateContest	SC Senate District 21 (Democratic Party)	SC Senate District 21 - DEM
 CandidateContest	SC Senate District 21 (Democratic Party)	SC Senate District 21 (DEM)
+CandidateContest	SC Senate District 21 (Democratic Party)	State Senate, District 21 - DEM
 CandidateContest	SC Senate District 21 (Democratic Party)	State Senate, District 21 (DEM)
+CandidateContest	SC Senate District 22 (Democratic Party)	SC Senate District 22 - DEM
 CandidateContest	SC Senate District 22 (Democratic Party)	SC Senate District 22 (DEM)
+CandidateContest	SC Senate District 22 (Democratic Party)	State Senate, District 22 - DEM
 CandidateContest	SC Senate District 22 (Democratic Party)	State Senate, District 22 (DEM)
+CandidateContest	SC Senate District 23 (Democratic Party)	SC Senate District 23 - DEM
 CandidateContest	SC Senate District 23 (Democratic Party)	SC Senate District 23 (DEM)
+CandidateContest	SC Senate District 23 (Democratic Party)	State Senate, District 23 - DEM
 CandidateContest	SC Senate District 23 (Democratic Party)	State Senate, District 23 (DEM)
+CandidateContest	SC Senate District 24 (Democratic Party)	SC Senate District 24 - DEM
 CandidateContest	SC Senate District 24 (Democratic Party)	SC Senate District 24 (DEM)
+CandidateContest	SC Senate District 24 (Democratic Party)	State Senate, District 24 - DEM
 CandidateContest	SC Senate District 24 (Democratic Party)	State Senate, District 24 (DEM)
+CandidateContest	SC Senate District 25 (Democratic Party)	SC Senate District 25 - DEM
 CandidateContest	SC Senate District 25 (Democratic Party)	SC Senate District 25 (DEM)
+CandidateContest	SC Senate District 25 (Democratic Party)	State Senate, District 25 - DEM
 CandidateContest	SC Senate District 25 (Democratic Party)	State Senate, District 25 (DEM)
+CandidateContest	SC Senate District 26 (Democratic Party)	SC Senate District 26 - DEM
 CandidateContest	SC Senate District 26 (Democratic Party)	SC Senate District 26 (DEM)
+CandidateContest	SC Senate District 26 (Democratic Party)	State Senate, District 26 - DEM
 CandidateContest	SC Senate District 26 (Democratic Party)	State Senate, District 26 (DEM)
+CandidateContest	SC Senate District 27 (Democratic Party)	SC Senate District 27 - DEM
 CandidateContest	SC Senate District 27 (Democratic Party)	SC Senate District 27 (DEM)
+CandidateContest	SC Senate District 27 (Democratic Party)	State Senate, District 27 - DEM
 CandidateContest	SC Senate District 27 (Democratic Party)	State Senate, District 27 (DEM)
+CandidateContest	SC Senate District 28 (Democratic Party)	SC Senate District 28 - DEM
 CandidateContest	SC Senate District 28 (Democratic Party)	SC Senate District 28 (DEM)
+CandidateContest	SC Senate District 28 (Democratic Party)	State Senate, District 28 - DEM
 CandidateContest	SC Senate District 28 (Democratic Party)	State Senate, District 28 (DEM)
+CandidateContest	SC Senate District 29 (Democratic Party)	SC Senate District 29 - DEM
 CandidateContest	SC Senate District 29 (Democratic Party)	SC Senate District 29 (DEM)
+CandidateContest	SC Senate District 29 (Democratic Party)	State Senate, District 29 - DEM
 CandidateContest	SC Senate District 29 (Democratic Party)	State Senate, District 29 (DEM)
+CandidateContest	SC Senate District 30 (Democratic Party)	SC Senate District 30 - DEM
 CandidateContest	SC Senate District 30 (Democratic Party)	SC Senate District 30 (DEM)
+CandidateContest	SC Senate District 30 (Democratic Party)	State Senate, District 30 - DEM
 CandidateContest	SC Senate District 30 (Democratic Party)	State Senate, District 30 (DEM)
+CandidateContest	SC Senate District 31 (Democratic Party)	SC Senate District 31 - DEM
 CandidateContest	SC Senate District 31 (Democratic Party)	SC Senate District 31 (DEM)
+CandidateContest	SC Senate District 31 (Democratic Party)	State Senate, District 31 - DEM
 CandidateContest	SC Senate District 31 (Democratic Party)	State Senate, District 31 (DEM)
+CandidateContest	SC Senate District 32 (Democratic Party)	SC Senate District 32 - DEM
 CandidateContest	SC Senate District 32 (Democratic Party)	SC Senate District 32 (DEM)
+CandidateContest	SC Senate District 32 (Democratic Party)	State Senate, District 32 - DEM
 CandidateContest	SC Senate District 32 (Democratic Party)	State Senate, District 32 (DEM)
+CandidateContest	SC Senate District 33 (Democratic Party)	SC Senate District 33 - DEM
 CandidateContest	SC Senate District 33 (Democratic Party)	SC Senate District 33 (DEM)
+CandidateContest	SC Senate District 33 (Democratic Party)	State Senate, District 33 - DEM
 CandidateContest	SC Senate District 33 (Democratic Party)	State Senate, District 33 (DEM)
+CandidateContest	SC Senate District 34 (Democratic Party)	SC Senate District 34 - DEM
 CandidateContest	SC Senate District 34 (Democratic Party)	SC Senate District 34 (DEM)
+CandidateContest	SC Senate District 34 (Democratic Party)	State Senate, District 34 - DEM
 CandidateContest	SC Senate District 34 (Democratic Party)	State Senate, District 34 (DEM)
+CandidateContest	SC Senate District 35 (Democratic Party)	SC Senate District 35 - DEM
 CandidateContest	SC Senate District 35 (Democratic Party)	SC Senate District 35 (DEM)
+CandidateContest	SC Senate District 35 (Democratic Party)	State Senate, District 35 - DEM
 CandidateContest	SC Senate District 35 (Democratic Party)	State Senate, District 35 (DEM)
+CandidateContest	SC Senate District 36 (Democratic Party)	SC Senate District 36 - DEM
 CandidateContest	SC Senate District 36 (Democratic Party)	SC Senate District 36 (DEM)
+CandidateContest	SC Senate District 36 (Democratic Party)	State Senate, District 36 - DEM
 CandidateContest	SC Senate District 36 (Democratic Party)	State Senate, District 36 (DEM)
+CandidateContest	SC Senate District 37 (Democratic Party)	SC Senate District 37 - DEM
 CandidateContest	SC Senate District 37 (Democratic Party)	SC Senate District 37 (DEM)
+CandidateContest	SC Senate District 37 (Democratic Party)	State Senate, District 37 - DEM
 CandidateContest	SC Senate District 37 (Democratic Party)	State Senate, District 37 (DEM)
+CandidateContest	SC Senate District 38 (Democratic Party)	SC Senate District 38 - DEM
 CandidateContest	SC Senate District 38 (Democratic Party)	SC Senate District 38 (DEM)
+CandidateContest	SC Senate District 38 (Democratic Party)	State Senate, District 38 - DEM
 CandidateContest	SC Senate District 38 (Democratic Party)	State Senate, District 38 (DEM)
+CandidateContest	SC Senate District 39 (Democratic Party)	SC Senate District 39 - DEM
 CandidateContest	SC Senate District 39 (Democratic Party)	SC Senate District 39 (DEM)
+CandidateContest	SC Senate District 39 (Democratic Party)	State Senate, District 39 - DEM
 CandidateContest	SC Senate District 39 (Democratic Party)	State Senate, District 39 (DEM)
+CandidateContest	SC Senate District 40 (Democratic Party)	SC Senate District 40 - DEM
 CandidateContest	SC Senate District 40 (Democratic Party)	SC Senate District 40 (DEM)
+CandidateContest	SC Senate District 40 (Democratic Party)	State Senate, District 40 - DEM
 CandidateContest	SC Senate District 40 (Democratic Party)	State Senate, District 40 (DEM)
+CandidateContest	SC Senate District 41 (Democratic Party)	SC Senate District 41 - DEM
 CandidateContest	SC Senate District 41 (Democratic Party)	SC Senate District 41 (DEM)
+CandidateContest	SC Senate District 41 (Democratic Party)	State Senate, District 41 - DEM
 CandidateContest	SC Senate District 41 (Democratic Party)	State Senate, District 41 (DEM)
+CandidateContest	SC Senate District 42 (Democratic Party)	SC Senate District 42 - DEM
 CandidateContest	SC Senate District 42 (Democratic Party)	SC Senate District 42 (DEM)
+CandidateContest	SC Senate District 42 (Democratic Party)	State Senate, District 42 - DEM
 CandidateContest	SC Senate District 42 (Democratic Party)	State Senate, District 42 (DEM)
+CandidateContest	SC Senate District 43 (Democratic Party)	SC Senate District 43 - DEM
 CandidateContest	SC Senate District 43 (Democratic Party)	SC Senate District 43 (DEM)
+CandidateContest	SC Senate District 43 (Democratic Party)	State Senate, District 43 - DEM
 CandidateContest	SC Senate District 43 (Democratic Party)	State Senate, District 43 (DEM)
+CandidateContest	SC Senate District 44 (Democratic Party)	SC Senate District 44 - DEM
 CandidateContest	SC Senate District 44 (Democratic Party)	SC Senate District 44 (DEM)
+CandidateContest	SC Senate District 44 (Democratic Party)	State Senate, District 44 - DEM
 CandidateContest	SC Senate District 44 (Democratic Party)	State Senate, District 44 (DEM)
+CandidateContest	SC Senate District 45 (Democratic Party)	SC Senate District 45 - DEM
 CandidateContest	SC Senate District 45 (Democratic Party)	SC Senate District 45 (DEM)
+CandidateContest	SC Senate District 45 (Democratic Party)	State Senate, District 45 - DEM
 CandidateContest	SC Senate District 45 (Democratic Party)	State Senate, District 45 (DEM)
+CandidateContest	SC Senate District 46 (Democratic Party)	SC Senate District 46 - DEM
 CandidateContest	SC Senate District 46 (Democratic Party)	SC Senate District 46 (DEM)
+CandidateContest	SC Senate District 46 (Democratic Party)	State Senate, District 46 - DEM
 CandidateContest	SC Senate District 46 (Democratic Party)	State Senate, District 46 (DEM)
+CandidateContest	US House SC District 1 (Democratic Party)	US House SC District 1 - DEM
 CandidateContest	US House SC District 1 (Democratic Party)	US House SC District 1 (DEM)
+CandidateContest	US House SC District 1 (Democratic Party)	U.S. House of Representatives, District 1 - DEM
 CandidateContest	US House SC District 1 (Democratic Party)	U.S. House of Representatives, District 1 (DEM)
+CandidateContest	US House SC District 2 (Democratic Party)	US House SC District 2 - DEM
 CandidateContest	US House SC District 2 (Democratic Party)	US House SC District 2 (DEM)
+CandidateContest	US House SC District 2 (Democratic Party)	U.S. House of Representatives, District 2 - DEM
 CandidateContest	US House SC District 2 (Democratic Party)	U.S. House of Representatives, District 2 (DEM)
+CandidateContest	US House SC District 3 (Democratic Party)	US House SC District 3 - DEM
 CandidateContest	US House SC District 3 (Democratic Party)	US House SC District 3 (DEM)
+CandidateContest	US House SC District 3 (Democratic Party)	U.S. House of Representatives, District 3 - DEM
 CandidateContest	US House SC District 3 (Democratic Party)	U.S. House of Representatives, District 3 (DEM)
+CandidateContest	US House SC District 4 (Democratic Party)	US House SC District 4 - DEM
 CandidateContest	US House SC District 4 (Democratic Party)	US House SC District 4 (DEM)
+CandidateContest	US House SC District 4 (Democratic Party)	U.S. House of Representatives, District 4 - DEM
 CandidateContest	US House SC District 4 (Democratic Party)	U.S. House of Representatives, District 4 (DEM)
+CandidateContest	US House SC District 5 (Democratic Party)	US House SC District 5 - DEM
 CandidateContest	US House SC District 5 (Democratic Party)	US House SC District 5 (DEM)
+CandidateContest	US House SC District 5 (Democratic Party)	U.S. House of Representatives, District 5 - DEM
 CandidateContest	US House SC District 5 (Democratic Party)	U.S. House of Representatives, District 5 (DEM)
+CandidateContest	US House SC District 6 (Democratic Party)	US House SC District 6 - DEM
 CandidateContest	US House SC District 6 (Democratic Party)	US House SC District 6 (DEM)
+CandidateContest	US House SC District 6 (Democratic Party)	U.S. House of Representatives, District 6 - DEM
 CandidateContest	US House SC District 6 (Democratic Party)	U.S. House of Representatives, District 6 (DEM)
+CandidateContest	US House SC District 7 (Democratic Party)	US House SC District 7 - DEM
 CandidateContest	US House SC District 7 (Democratic Party)	US House SC District 7 (DEM)
+CandidateContest	US House SC District 7 (Democratic Party)	U.S. House of Representatives, District 7 - DEM
 CandidateContest	US House SC District 7 (Democratic Party)	U.S. House of Representatives, District 7 (DEM)
+CandidateContest	US President (SC) (Democratic Party)	US President (SC) - DEM
 CandidateContest	US President (SC) (Democratic Party)	US President (SC) (DEM)
+CandidateContest	US President (SC) (Democratic Party)	President - DEM
 CandidateContest	US President (SC) (Democratic Party)	President (DEM)
+CandidateContest	SC Governor (Democratic Party)	SC Governor - DEM
 CandidateContest	SC Governor (Democratic Party)	SC Governor (DEM)
+CandidateContest	SC Governor (Democratic Party)	Governor and Lieutenant Governor - DEM
 CandidateContest	SC Governor (Democratic Party)	Governor and Lieutenant Governor (DEM)
+CandidateContest	US Senate SC (Democratic Party)	U.S. Senate - DEM
 CandidateContest	US Senate SC (Democratic Party)	U.S. Senate (DEM)
+CandidateContest	SC Attorney General (Democratic Party)	SC Attorney General - DEM
 CandidateContest	SC Attorney General (Democratic Party)	SC Attorney General (DEM)
+CandidateContest	SC Attorney General (Democratic Party)	Attorney General - DEM
 CandidateContest	SC Attorney General (Democratic Party)	Attorney General (DEM)
+CandidateContest	SC Secretary of State (Democratic Party)	Secretary of State - DEM
 CandidateContest	SC Secretary of State (Democratic Party)	Secretary of State (DEM)
+CandidateContest	SC Treasurer (Democratic Party)	State Treasurer - DEM
 CandidateContest	SC Treasurer (Democratic Party)	State Treasurer (DEM)
+CandidateContest	SC Adjutant General (Democratic Party)	SC Adjutant General - DEM
 CandidateContest	SC Adjutant General (Democratic Party)	SC Adjutant General (DEM)
+CandidateContest	SC Commissioner of Agriculture (Democratic Party)	SC Commissioner of Agriculture - DEM
 CandidateContest	SC Commissioner of Agriculture (Democratic Party)	SC Commissioner of Agriculture (DEM)
+CandidateContest	SC Commissioner of Agriculture (Democratic Party)	Commissioner of Agriculture - DEM
 CandidateContest	SC Commissioner of Agriculture (Democratic Party)	Commissioner of Agriculture (DEM)
+CandidateContest	SC State Superintendent of Education (Democratic Party)	SC State Superintendent of Education - DEM
 CandidateContest	SC State Superintendent of Education (Democratic Party)	SC State Superintendent of Education (DEM)
+CandidateContest	SC State Superintendent of Education (Democratic Party)	State Superintendent of Education - DEM
 CandidateContest	SC State Superintendent of Education (Democratic Party)	State Superintendent of Education (DEM)
+CandidateContest	SC Comptroller General (Democratic Party)	SC Treasurer - DEM
 CandidateContest	SC Comptroller General (Democratic Party)	SC Treasurer (DEM)
+CandidateContest	SC Comptroller General (Democratic Party)	Comptroller General - DEM
 CandidateContest	SC Comptroller General (Democratic Party)	Comptroller General (DEM)
 CandidateContest	SC House District 1 (United Citizens Party)	SC House District 1 (United Citizens Party)
 CandidateContest	SC House District 1 (United Citizens Party)	State House of Representatives, District 1 (United Citizens Party)
@@ -1479,375 +1849,745 @@ CandidateContest	SC State Superintendent of Education (Republican Party)	SC Stat
 CandidateContest	SC State Superintendent of Education (Republican Party)	State Superintendent of Education (Republican Party)
 CandidateContest	SC Comptroller General (Republican Party)	SC Treasurer (Republican Party)
 CandidateContest	SC Comptroller General (Republican Party)	Comptroller General (Republican Party)
+CandidateContest	SC House District 1 (Republican Party)	SC House District 1 - REP
 CandidateContest	SC House District 1 (Republican Party)	SC House District 1 (REP)
+CandidateContest	SC House District 1 (Republican Party)	State House of Representatives, District 1 - REP
 CandidateContest	SC House District 1 (Republican Party)	State House of Representatives, District 1 (REP)
+CandidateContest	SC House District 2 (Republican Party)	SC House District 2 - REP
 CandidateContest	SC House District 2 (Republican Party)	SC House District 2 (REP)
+CandidateContest	SC House District 2 (Republican Party)	State House of Representatives, District 2 - REP
 CandidateContest	SC House District 2 (Republican Party)	State House of Representatives, District 2 (REP)
+CandidateContest	SC House District 3 (Republican Party)	SC House District 3 - REP
 CandidateContest	SC House District 3 (Republican Party)	SC House District 3 (REP)
+CandidateContest	SC House District 3 (Republican Party)	State House of Representatives, District 3 - REP
 CandidateContest	SC House District 3 (Republican Party)	State House of Representatives, District 3 (REP)
+CandidateContest	SC House District 4 (Republican Party)	SC House District 4 - REP
 CandidateContest	SC House District 4 (Republican Party)	SC House District 4 (REP)
+CandidateContest	SC House District 4 (Republican Party)	State House of Representatives, District 4 - REP
 CandidateContest	SC House District 4 (Republican Party)	State House of Representatives, District 4 (REP)
+CandidateContest	SC House District 5 (Republican Party)	SC House District 5 - REP
 CandidateContest	SC House District 5 (Republican Party)	SC House District 5 (REP)
+CandidateContest	SC House District 5 (Republican Party)	State House of Representatives, District 5 - REP
 CandidateContest	SC House District 5 (Republican Party)	State House of Representatives, District 5 (REP)
+CandidateContest	SC House District 6 (Republican Party)	SC House District 6 - REP
 CandidateContest	SC House District 6 (Republican Party)	SC House District 6 (REP)
+CandidateContest	SC House District 6 (Republican Party)	State House of Representatives, District 6 - REP
 CandidateContest	SC House District 6 (Republican Party)	State House of Representatives, District 6 (REP)
+CandidateContest	SC House District 7 (Republican Party)	SC House District 7 - REP
 CandidateContest	SC House District 7 (Republican Party)	SC House District 7 (REP)
+CandidateContest	SC House District 7 (Republican Party)	State House of Representatives, District 7 - REP
 CandidateContest	SC House District 7 (Republican Party)	State House of Representatives, District 7 (REP)
+CandidateContest	SC House District 8 (Republican Party)	SC House District 8 - REP
 CandidateContest	SC House District 8 (Republican Party)	SC House District 8 (REP)
+CandidateContest	SC House District 8 (Republican Party)	State House of Representatives, District 8 - REP
 CandidateContest	SC House District 8 (Republican Party)	State House of Representatives, District 8 (REP)
+CandidateContest	SC House District 9 (Republican Party)	SC House District 9 - REP
 CandidateContest	SC House District 9 (Republican Party)	SC House District 9 (REP)
+CandidateContest	SC House District 9 (Republican Party)	State House of Representatives, District 9 - REP
 CandidateContest	SC House District 9 (Republican Party)	State House of Representatives, District 9 (REP)
+CandidateContest	SC House District 10 (Republican Party)	SC House District 10 - REP
 CandidateContest	SC House District 10 (Republican Party)	SC House District 10 (REP)
+CandidateContest	SC House District 10 (Republican Party)	State House of Representatives, District 10 - REP
 CandidateContest	SC House District 10 (Republican Party)	State House of Representatives, District 10 (REP)
+CandidateContest	SC House District 11 (Republican Party)	SC House District 11 - REP
 CandidateContest	SC House District 11 (Republican Party)	SC House District 11 (REP)
+CandidateContest	SC House District 11 (Republican Party)	State House of Representatives, District 11 - REP
 CandidateContest	SC House District 11 (Republican Party)	State House of Representatives, District 11 (REP)
+CandidateContest	SC House District 12 (Republican Party)	SC House District 12 - REP
 CandidateContest	SC House District 12 (Republican Party)	SC House District 12 (REP)
+CandidateContest	SC House District 12 (Republican Party)	State House of Representatives, District 12 - REP
 CandidateContest	SC House District 12 (Republican Party)	State House of Representatives, District 12 (REP)
+CandidateContest	SC House District 13 (Republican Party)	SC House District 13 - REP
 CandidateContest	SC House District 13 (Republican Party)	SC House District 13 (REP)
+CandidateContest	SC House District 13 (Republican Party)	State House of Representatives, District 13 - REP
 CandidateContest	SC House District 13 (Republican Party)	State House of Representatives, District 13 (REP)
+CandidateContest	SC House District 14 (Republican Party)	SC House District 14 - REP
 CandidateContest	SC House District 14 (Republican Party)	SC House District 14 (REP)
+CandidateContest	SC House District 14 (Republican Party)	State House of Representatives, District 14 - REP
 CandidateContest	SC House District 14 (Republican Party)	State House of Representatives, District 14 (REP)
+CandidateContest	SC House District 15 (Republican Party)	SC House District 15 - REP
 CandidateContest	SC House District 15 (Republican Party)	SC House District 15 (REP)
+CandidateContest	SC House District 15 (Republican Party)	State House of Representatives, District 15 - REP
 CandidateContest	SC House District 15 (Republican Party)	State House of Representatives, District 15 (REP)
+CandidateContest	SC House District 16 (Republican Party)	SC House District 16 - REP
 CandidateContest	SC House District 16 (Republican Party)	SC House District 16 (REP)
+CandidateContest	SC House District 16 (Republican Party)	State House of Representatives, District 16 - REP
 CandidateContest	SC House District 16 (Republican Party)	State House of Representatives, District 16 (REP)
+CandidateContest	SC House District 17 (Republican Party)	SC House District 17 - REP
 CandidateContest	SC House District 17 (Republican Party)	SC House District 17 (REP)
+CandidateContest	SC House District 17 (Republican Party)	State House of Representatives, District 17 - REP
 CandidateContest	SC House District 17 (Republican Party)	State House of Representatives, District 17 (REP)
+CandidateContest	SC House District 18 (Republican Party)	SC House District 18 - REP
 CandidateContest	SC House District 18 (Republican Party)	SC House District 18 (REP)
+CandidateContest	SC House District 18 (Republican Party)	State House of Representatives, District 18 - REP
 CandidateContest	SC House District 18 (Republican Party)	State House of Representatives, District 18 (REP)
+CandidateContest	SC House District 19 (Republican Party)	SC House District 19 - REP
 CandidateContest	SC House District 19 (Republican Party)	SC House District 19 (REP)
+CandidateContest	SC House District 19 (Republican Party)	State House of Representatives, District 19 - REP
 CandidateContest	SC House District 19 (Republican Party)	State House of Representatives, District 19 (REP)
+CandidateContest	SC House District 20 (Republican Party)	SC House District 20 - REP
 CandidateContest	SC House District 20 (Republican Party)	SC House District 20 (REP)
+CandidateContest	SC House District 20 (Republican Party)	State House of Representatives, District 20 - REP
 CandidateContest	SC House District 20 (Republican Party)	State House of Representatives, District 20 (REP)
+CandidateContest	SC House District 21 (Republican Party)	SC House District 21 - REP
 CandidateContest	SC House District 21 (Republican Party)	SC House District 21 (REP)
+CandidateContest	SC House District 21 (Republican Party)	State House of Representatives, District 21 - REP
 CandidateContest	SC House District 21 (Republican Party)	State House of Representatives, District 21 (REP)
+CandidateContest	SC House District 22 (Republican Party)	SC House District 22 - REP
 CandidateContest	SC House District 22 (Republican Party)	SC House District 22 (REP)
+CandidateContest	SC House District 22 (Republican Party)	State House of Representatives, District 22 - REP
 CandidateContest	SC House District 22 (Republican Party)	State House of Representatives, District 22 (REP)
+CandidateContest	SC House District 23 (Republican Party)	SC House District 23 - REP
 CandidateContest	SC House District 23 (Republican Party)	SC House District 23 (REP)
+CandidateContest	SC House District 23 (Republican Party)	State House of Representatives, District 23 - REP
 CandidateContest	SC House District 23 (Republican Party)	State House of Representatives, District 23 (REP)
+CandidateContest	SC House District 24 (Republican Party)	SC House District 24 - REP
 CandidateContest	SC House District 24 (Republican Party)	SC House District 24 (REP)
+CandidateContest	SC House District 24 (Republican Party)	State House of Representatives, District 24 - REP
 CandidateContest	SC House District 24 (Republican Party)	State House of Representatives, District 24 (REP)
+CandidateContest	SC House District 25 (Republican Party)	SC House District 25 - REP
 CandidateContest	SC House District 25 (Republican Party)	SC House District 25 (REP)
+CandidateContest	SC House District 25 (Republican Party)	State House of Representatives, District 25 - REP
 CandidateContest	SC House District 25 (Republican Party)	State House of Representatives, District 25 (REP)
+CandidateContest	SC House District 26 (Republican Party)	SC House District 26 - REP
 CandidateContest	SC House District 26 (Republican Party)	SC House District 26 (REP)
+CandidateContest	SC House District 26 (Republican Party)	State House of Representatives, District 26 - REP
 CandidateContest	SC House District 26 (Republican Party)	State House of Representatives, District 26 (REP)
+CandidateContest	SC House District 27 (Republican Party)	SC House District 27 - REP
 CandidateContest	SC House District 27 (Republican Party)	SC House District 27 (REP)
+CandidateContest	SC House District 27 (Republican Party)	State House of Representatives, District 27 - REP
 CandidateContest	SC House District 27 (Republican Party)	State House of Representatives, District 27 (REP)
+CandidateContest	SC House District 28 (Republican Party)	SC House District 28 - REP
 CandidateContest	SC House District 28 (Republican Party)	SC House District 28 (REP)
+CandidateContest	SC House District 28 (Republican Party)	State House of Representatives, District 28 - REP
 CandidateContest	SC House District 28 (Republican Party)	State House of Representatives, District 28 (REP)
+CandidateContest	SC House District 29 (Republican Party)	SC House District 29 - REP
 CandidateContest	SC House District 29 (Republican Party)	SC House District 29 (REP)
+CandidateContest	SC House District 29 (Republican Party)	State House of Representatives, District 29 - REP
 CandidateContest	SC House District 29 (Republican Party)	State House of Representatives, District 29 (REP)
+CandidateContest	SC House District 30 (Republican Party)	SC House District 30 - REP
 CandidateContest	SC House District 30 (Republican Party)	SC House District 30 (REP)
+CandidateContest	SC House District 30 (Republican Party)	State House of Representatives, District 30 - REP
 CandidateContest	SC House District 30 (Republican Party)	State House of Representatives, District 30 (REP)
+CandidateContest	SC House District 31 (Republican Party)	SC House District 31 - REP
 CandidateContest	SC House District 31 (Republican Party)	SC House District 31 (REP)
+CandidateContest	SC House District 31 (Republican Party)	State House of Representatives, District 31 - REP
 CandidateContest	SC House District 31 (Republican Party)	State House of Representatives, District 31 (REP)
+CandidateContest	SC House District 32 (Republican Party)	SC House District 32 - REP
 CandidateContest	SC House District 32 (Republican Party)	SC House District 32 (REP)
+CandidateContest	SC House District 32 (Republican Party)	State House of Representatives, District 32 - REP
 CandidateContest	SC House District 32 (Republican Party)	State House of Representatives, District 32 (REP)
+CandidateContest	SC House District 33 (Republican Party)	SC House District 33 - REP
 CandidateContest	SC House District 33 (Republican Party)	SC House District 33 (REP)
+CandidateContest	SC House District 33 (Republican Party)	State House of Representatives, District 33 - REP
 CandidateContest	SC House District 33 (Republican Party)	State House of Representatives, District 33 (REP)
+CandidateContest	SC House District 34 (Republican Party)	SC House District 34 - REP
 CandidateContest	SC House District 34 (Republican Party)	SC House District 34 (REP)
+CandidateContest	SC House District 34 (Republican Party)	State House of Representatives, District 34 - REP
 CandidateContest	SC House District 34 (Republican Party)	State House of Representatives, District 34 (REP)
+CandidateContest	SC House District 35 (Republican Party)	SC House District 35 - REP
 CandidateContest	SC House District 35 (Republican Party)	SC House District 35 (REP)
+CandidateContest	SC House District 35 (Republican Party)	State House of Representatives, District 35 - REP
 CandidateContest	SC House District 35 (Republican Party)	State House of Representatives, District 35 (REP)
+CandidateContest	SC House District 36 (Republican Party)	SC House District 36 - REP
 CandidateContest	SC House District 36 (Republican Party)	SC House District 36 (REP)
+CandidateContest	SC House District 36 (Republican Party)	State House of Representatives, District 36 - REP
 CandidateContest	SC House District 36 (Republican Party)	State House of Representatives, District 36 (REP)
+CandidateContest	SC House District 37 (Republican Party)	SC House District 37 - REP
 CandidateContest	SC House District 37 (Republican Party)	SC House District 37 (REP)
+CandidateContest	SC House District 37 (Republican Party)	State House of Representatives, District 37 - REP
 CandidateContest	SC House District 37 (Republican Party)	State House of Representatives, District 37 (REP)
+CandidateContest	SC House District 38 (Republican Party)	SC House District 38 - REP
 CandidateContest	SC House District 38 (Republican Party)	SC House District 38 (REP)
+CandidateContest	SC House District 38 (Republican Party)	State House of Representatives, District 38 - REP
 CandidateContest	SC House District 38 (Republican Party)	State House of Representatives, District 38 (REP)
+CandidateContest	SC House District 39 (Republican Party)	SC House District 39 - REP
 CandidateContest	SC House District 39 (Republican Party)	SC House District 39 (REP)
+CandidateContest	SC House District 39 (Republican Party)	State House of Representatives, District 39 - REP
 CandidateContest	SC House District 39 (Republican Party)	State House of Representatives, District 39 (REP)
+CandidateContest	SC House District 40 (Republican Party)	SC House District 40 - REP
 CandidateContest	SC House District 40 (Republican Party)	SC House District 40 (REP)
+CandidateContest	SC House District 40 (Republican Party)	State House of Representatives, District 40 - REP
 CandidateContest	SC House District 40 (Republican Party)	State House of Representatives, District 40 (REP)
+CandidateContest	SC House District 41 (Republican Party)	SC House District 41 - REP
 CandidateContest	SC House District 41 (Republican Party)	SC House District 41 (REP)
+CandidateContest	SC House District 41 (Republican Party)	State House of Representatives, District 41 - REP
 CandidateContest	SC House District 41 (Republican Party)	State House of Representatives, District 41 (REP)
+CandidateContest	SC House District 42 (Republican Party)	SC House District 42 - REP
 CandidateContest	SC House District 42 (Republican Party)	SC House District 42 (REP)
+CandidateContest	SC House District 42 (Republican Party)	State House of Representatives, District 42 - REP
 CandidateContest	SC House District 42 (Republican Party)	State House of Representatives, District 42 (REP)
+CandidateContest	SC House District 43 (Republican Party)	SC House District 43 - REP
 CandidateContest	SC House District 43 (Republican Party)	SC House District 43 (REP)
+CandidateContest	SC House District 43 (Republican Party)	State House of Representatives, District 43 - REP
 CandidateContest	SC House District 43 (Republican Party)	State House of Representatives, District 43 (REP)
+CandidateContest	SC House District 44 (Republican Party)	SC House District 44 - REP
 CandidateContest	SC House District 44 (Republican Party)	SC House District 44 (REP)
+CandidateContest	SC House District 44 (Republican Party)	State House of Representatives, District 44 - REP
 CandidateContest	SC House District 44 (Republican Party)	State House of Representatives, District 44 (REP)
+CandidateContest	SC House District 45 (Republican Party)	SC House District 45 - REP
 CandidateContest	SC House District 45 (Republican Party)	SC House District 45 (REP)
+CandidateContest	SC House District 45 (Republican Party)	State House of Representatives, District 45 - REP
 CandidateContest	SC House District 45 (Republican Party)	State House of Representatives, District 45 (REP)
+CandidateContest	SC House District 46 (Republican Party)	SC House District 46 - REP
 CandidateContest	SC House District 46 (Republican Party)	SC House District 46 (REP)
+CandidateContest	SC House District 46 (Republican Party)	State House of Representatives, District 46 - REP
 CandidateContest	SC House District 46 (Republican Party)	State House of Representatives, District 46 (REP)
+CandidateContest	SC House District 47 (Republican Party)	SC House District 47 - REP
 CandidateContest	SC House District 47 (Republican Party)	SC House District 47 (REP)
+CandidateContest	SC House District 47 (Republican Party)	State House of Representatives, District 47 - REP
 CandidateContest	SC House District 47 (Republican Party)	State House of Representatives, District 47 (REP)
+CandidateContest	SC House District 48 (Republican Party)	SC House District 48 - REP
 CandidateContest	SC House District 48 (Republican Party)	SC House District 48 (REP)
+CandidateContest	SC House District 48 (Republican Party)	State House of Representatives, District 48 - REP
 CandidateContest	SC House District 48 (Republican Party)	State House of Representatives, District 48 (REP)
+CandidateContest	SC House District 49 (Republican Party)	SC House District 49 - REP
 CandidateContest	SC House District 49 (Republican Party)	SC House District 49 (REP)
+CandidateContest	SC House District 49 (Republican Party)	State House of Representatives, District 49 - REP
 CandidateContest	SC House District 49 (Republican Party)	State House of Representatives, District 49 (REP)
+CandidateContest	SC House District 50 (Republican Party)	SC House District 50 - REP
 CandidateContest	SC House District 50 (Republican Party)	SC House District 50 (REP)
+CandidateContest	SC House District 50 (Republican Party)	State House of Representatives, District 50 - REP
 CandidateContest	SC House District 50 (Republican Party)	State House of Representatives, District 50 (REP)
+CandidateContest	SC House District 51 (Republican Party)	SC House District 51 - REP
 CandidateContest	SC House District 51 (Republican Party)	SC House District 51 (REP)
+CandidateContest	SC House District 51 (Republican Party)	State House of Representatives, District 51 - REP
 CandidateContest	SC House District 51 (Republican Party)	State House of Representatives, District 51 (REP)
+CandidateContest	SC House District 52 (Republican Party)	SC House District 52 - REP
 CandidateContest	SC House District 52 (Republican Party)	SC House District 52 (REP)
+CandidateContest	SC House District 52 (Republican Party)	State House of Representatives, District 52 - REP
 CandidateContest	SC House District 52 (Republican Party)	State House of Representatives, District 52 (REP)
+CandidateContest	SC House District 53 (Republican Party)	SC House District 53 - REP
 CandidateContest	SC House District 53 (Republican Party)	SC House District 53 (REP)
+CandidateContest	SC House District 53 (Republican Party)	State House of Representatives, District 53 - REP
 CandidateContest	SC House District 53 (Republican Party)	State House of Representatives, District 53 (REP)
+CandidateContest	SC House District 54 (Republican Party)	SC House District 54 - REP
 CandidateContest	SC House District 54 (Republican Party)	SC House District 54 (REP)
+CandidateContest	SC House District 54 (Republican Party)	State House of Representatives, District 54 - REP
 CandidateContest	SC House District 54 (Republican Party)	State House of Representatives, District 54 (REP)
+CandidateContest	SC House District 55 (Republican Party)	SC House District 55 - REP
 CandidateContest	SC House District 55 (Republican Party)	SC House District 55 (REP)
+CandidateContest	SC House District 55 (Republican Party)	State House of Representatives, District 55 - REP
 CandidateContest	SC House District 55 (Republican Party)	State House of Representatives, District 55 (REP)
+CandidateContest	SC House District 56 (Republican Party)	SC House District 56 - REP
 CandidateContest	SC House District 56 (Republican Party)	SC House District 56 (REP)
+CandidateContest	SC House District 56 (Republican Party)	State House of Representatives, District 56 - REP
 CandidateContest	SC House District 56 (Republican Party)	State House of Representatives, District 56 (REP)
+CandidateContest	SC House District 57 (Republican Party)	SC House District 57 - REP
 CandidateContest	SC House District 57 (Republican Party)	SC House District 57 (REP)
+CandidateContest	SC House District 57 (Republican Party)	State House of Representatives, District 57 - REP
 CandidateContest	SC House District 57 (Republican Party)	State House of Representatives, District 57 (REP)
+CandidateContest	SC House District 58 (Republican Party)	SC House District 58 - REP
 CandidateContest	SC House District 58 (Republican Party)	SC House District 58 (REP)
+CandidateContest	SC House District 58 (Republican Party)	State House of Representatives, District 58 - REP
 CandidateContest	SC House District 58 (Republican Party)	State House of Representatives, District 58 (REP)
+CandidateContest	SC House District 59 (Republican Party)	SC House District 59 - REP
 CandidateContest	SC House District 59 (Republican Party)	SC House District 59 (REP)
+CandidateContest	SC House District 59 (Republican Party)	State House of Representatives, District 59 - REP
 CandidateContest	SC House District 59 (Republican Party)	State House of Representatives, District 59 (REP)
+CandidateContest	SC House District 60 (Republican Party)	SC House District 60 - REP
 CandidateContest	SC House District 60 (Republican Party)	SC House District 60 (REP)
+CandidateContest	SC House District 60 (Republican Party)	State House of Representatives, District 60 - REP
 CandidateContest	SC House District 60 (Republican Party)	State House of Representatives, District 60 (REP)
+CandidateContest	SC House District 61 (Republican Party)	SC House District 61 - REP
 CandidateContest	SC House District 61 (Republican Party)	SC House District 61 (REP)
+CandidateContest	SC House District 61 (Republican Party)	State House of Representatives, District 61 - REP
 CandidateContest	SC House District 61 (Republican Party)	State House of Representatives, District 61 (REP)
+CandidateContest	SC House District 62 (Republican Party)	SC House District 62 - REP
 CandidateContest	SC House District 62 (Republican Party)	SC House District 62 (REP)
+CandidateContest	SC House District 62 (Republican Party)	State House of Representatives, District 62 - REP
 CandidateContest	SC House District 62 (Republican Party)	State House of Representatives, District 62 (REP)
+CandidateContest	SC House District 63 (Republican Party)	SC House District 63 - REP
 CandidateContest	SC House District 63 (Republican Party)	SC House District 63 (REP)
+CandidateContest	SC House District 63 (Republican Party)	State House of Representatives, District 63 - REP
 CandidateContest	SC House District 63 (Republican Party)	State House of Representatives, District 63 (REP)
+CandidateContest	SC House District 64 (Republican Party)	SC House District 64 - REP
 CandidateContest	SC House District 64 (Republican Party)	SC House District 64 (REP)
+CandidateContest	SC House District 64 (Republican Party)	State House of Representatives, District 64 - REP
 CandidateContest	SC House District 64 (Republican Party)	State House of Representatives, District 64 (REP)
+CandidateContest	SC House District 65 (Republican Party)	SC House District 65 - REP
 CandidateContest	SC House District 65 (Republican Party)	SC House District 65 (REP)
+CandidateContest	SC House District 65 (Republican Party)	State House of Representatives, District 65 - REP
 CandidateContest	SC House District 65 (Republican Party)	State House of Representatives, District 65 (REP)
+CandidateContest	SC House District 66 (Republican Party)	SC House District 66 - REP
 CandidateContest	SC House District 66 (Republican Party)	SC House District 66 (REP)
+CandidateContest	SC House District 66 (Republican Party)	State House of Representatives, District 66 - REP
 CandidateContest	SC House District 66 (Republican Party)	State House of Representatives, District 66 (REP)
+CandidateContest	SC House District 67 (Republican Party)	SC House District 67 - REP
 CandidateContest	SC House District 67 (Republican Party)	SC House District 67 (REP)
+CandidateContest	SC House District 67 (Republican Party)	State House of Representatives, District 67 - REP
 CandidateContest	SC House District 67 (Republican Party)	State House of Representatives, District 67 (REP)
+CandidateContest	SC House District 68 (Republican Party)	SC House District 68 - REP
 CandidateContest	SC House District 68 (Republican Party)	SC House District 68 (REP)
+CandidateContest	SC House District 68 (Republican Party)	State House of Representatives, District 68 - REP
 CandidateContest	SC House District 68 (Republican Party)	State House of Representatives, District 68 (REP)
+CandidateContest	SC House District 69 (Republican Party)	SC House District 69 - REP
 CandidateContest	SC House District 69 (Republican Party)	SC House District 69 (REP)
+CandidateContest	SC House District 69 (Republican Party)	State House of Representatives, District 69 - REP
 CandidateContest	SC House District 69 (Republican Party)	State House of Representatives, District 69 (REP)
+CandidateContest	SC House District 70 (Republican Party)	SC House District 70 - REP
 CandidateContest	SC House District 70 (Republican Party)	SC House District 70 (REP)
+CandidateContest	SC House District 70 (Republican Party)	State House of Representatives, District 70 - REP
 CandidateContest	SC House District 70 (Republican Party)	State House of Representatives, District 70 (REP)
+CandidateContest	SC House District 71 (Republican Party)	SC House District 71 - REP
 CandidateContest	SC House District 71 (Republican Party)	SC House District 71 (REP)
+CandidateContest	SC House District 71 (Republican Party)	State House of Representatives, District 71 - REP
 CandidateContest	SC House District 71 (Republican Party)	State House of Representatives, District 71 (REP)
+CandidateContest	SC House District 72 (Republican Party)	SC House District 72 - REP
 CandidateContest	SC House District 72 (Republican Party)	SC House District 72 (REP)
+CandidateContest	SC House District 72 (Republican Party)	State House of Representatives, District 72 - REP
 CandidateContest	SC House District 72 (Republican Party)	State House of Representatives, District 72 (REP)
+CandidateContest	SC House District 73 (Republican Party)	SC House District 73 - REP
 CandidateContest	SC House District 73 (Republican Party)	SC House District 73 (REP)
+CandidateContest	SC House District 73 (Republican Party)	State House of Representatives, District 73 - REP
 CandidateContest	SC House District 73 (Republican Party)	State House of Representatives, District 73 (REP)
+CandidateContest	SC House District 74 (Republican Party)	SC House District 74 - REP
 CandidateContest	SC House District 74 (Republican Party)	SC House District 74 (REP)
+CandidateContest	SC House District 74 (Republican Party)	State House of Representatives, District 74 - REP
 CandidateContest	SC House District 74 (Republican Party)	State House of Representatives, District 74 (REP)
+CandidateContest	SC House District 75 (Republican Party)	SC House District 75 - REP
 CandidateContest	SC House District 75 (Republican Party)	SC House District 75 (REP)
+CandidateContest	SC House District 75 (Republican Party)	State House of Representatives, District 75 - REP
 CandidateContest	SC House District 75 (Republican Party)	State House of Representatives, District 75 (REP)
+CandidateContest	SC House District 76 (Republican Party)	SC House District 76 - REP
 CandidateContest	SC House District 76 (Republican Party)	SC House District 76 (REP)
+CandidateContest	SC House District 76 (Republican Party)	State House of Representatives, District 76 - REP
 CandidateContest	SC House District 76 (Republican Party)	State House of Representatives, District 76 (REP)
+CandidateContest	SC House District 77 (Republican Party)	SC House District 77 - REP
 CandidateContest	SC House District 77 (Republican Party)	SC House District 77 (REP)
+CandidateContest	SC House District 77 (Republican Party)	State House of Representatives, District 77 - REP
 CandidateContest	SC House District 77 (Republican Party)	State House of Representatives, District 77 (REP)
+CandidateContest	SC House District 78 (Republican Party)	SC House District 78 - REP
 CandidateContest	SC House District 78 (Republican Party)	SC House District 78 (REP)
+CandidateContest	SC House District 78 (Republican Party)	State House of Representatives, District 78 - REP
 CandidateContest	SC House District 78 (Republican Party)	State House of Representatives, District 78 (REP)
+CandidateContest	SC House District 79 (Republican Party)	SC House District 79 - REP
 CandidateContest	SC House District 79 (Republican Party)	SC House District 79 (REP)
+CandidateContest	SC House District 79 (Republican Party)	State House of Representatives, District 79 - REP
 CandidateContest	SC House District 79 (Republican Party)	State House of Representatives, District 79 (REP)
+CandidateContest	SC House District 80 (Republican Party)	SC House District 80 - REP
 CandidateContest	SC House District 80 (Republican Party)	SC House District 80 (REP)
+CandidateContest	SC House District 80 (Republican Party)	State House of Representatives, District 80 - REP
 CandidateContest	SC House District 80 (Republican Party)	State House of Representatives, District 80 (REP)
+CandidateContest	SC House District 81 (Republican Party)	SC House District 81 - REP
 CandidateContest	SC House District 81 (Republican Party)	SC House District 81 (REP)
+CandidateContest	SC House District 81 (Republican Party)	State House of Representatives, District 81 - REP
 CandidateContest	SC House District 81 (Republican Party)	State House of Representatives, District 81 (REP)
+CandidateContest	SC House District 82 (Republican Party)	SC House District 82 - REP
 CandidateContest	SC House District 82 (Republican Party)	SC House District 82 (REP)
+CandidateContest	SC House District 82 (Republican Party)	State House of Representatives, District 82 - REP
 CandidateContest	SC House District 82 (Republican Party)	State House of Representatives, District 82 (REP)
+CandidateContest	SC House District 83 (Republican Party)	SC House District 83 - REP
 CandidateContest	SC House District 83 (Republican Party)	SC House District 83 (REP)
+CandidateContest	SC House District 83 (Republican Party)	State House of Representatives, District 83 - REP
 CandidateContest	SC House District 83 (Republican Party)	State House of Representatives, District 83 (REP)
+CandidateContest	SC House District 84 (Republican Party)	SC House District 84 - REP
 CandidateContest	SC House District 84 (Republican Party)	SC House District 84 (REP)
+CandidateContest	SC House District 84 (Republican Party)	State House of Representatives, District 84 - REP
 CandidateContest	SC House District 84 (Republican Party)	State House of Representatives, District 84 (REP)
+CandidateContest	SC House District 85 (Republican Party)	SC House District 85 - REP
 CandidateContest	SC House District 85 (Republican Party)	SC House District 85 (REP)
+CandidateContest	SC House District 85 (Republican Party)	State House of Representatives, District 85 - REP
 CandidateContest	SC House District 85 (Republican Party)	State House of Representatives, District 85 (REP)
+CandidateContest	SC House District 86 (Republican Party)	SC House District 86 - REP
 CandidateContest	SC House District 86 (Republican Party)	SC House District 86 (REP)
+CandidateContest	SC House District 86 (Republican Party)	State House of Representatives, District 86 - REP
 CandidateContest	SC House District 86 (Republican Party)	State House of Representatives, District 86 (REP)
+CandidateContest	SC House District 87 (Republican Party)	SC House District 87 - REP
 CandidateContest	SC House District 87 (Republican Party)	SC House District 87 (REP)
+CandidateContest	SC House District 87 (Republican Party)	State House of Representatives, District 87 - REP
 CandidateContest	SC House District 87 (Republican Party)	State House of Representatives, District 87 (REP)
+CandidateContest	SC House District 88 (Republican Party)	SC House District 88 - REP
 CandidateContest	SC House District 88 (Republican Party)	SC House District 88 (REP)
+CandidateContest	SC House District 88 (Republican Party)	State House of Representatives, District 88 - REP
 CandidateContest	SC House District 88 (Republican Party)	State House of Representatives, District 88 (REP)
+CandidateContest	SC House District 89 (Republican Party)	SC House District 89 - REP
 CandidateContest	SC House District 89 (Republican Party)	SC House District 89 (REP)
+CandidateContest	SC House District 89 (Republican Party)	State House of Representatives, District 89 - REP
 CandidateContest	SC House District 89 (Republican Party)	State House of Representatives, District 89 (REP)
+CandidateContest	SC House District 90 (Republican Party)	SC House District 90 - REP
 CandidateContest	SC House District 90 (Republican Party)	SC House District 90 (REP)
+CandidateContest	SC House District 90 (Republican Party)	State House of Representatives, District 90 - REP
 CandidateContest	SC House District 90 (Republican Party)	State House of Representatives, District 90 (REP)
+CandidateContest	SC House District 91 (Republican Party)	SC House District 91 - REP
 CandidateContest	SC House District 91 (Republican Party)	SC House District 91 (REP)
+CandidateContest	SC House District 91 (Republican Party)	State House of Representatives, District 91 - REP
 CandidateContest	SC House District 91 (Republican Party)	State House of Representatives, District 91 (REP)
+CandidateContest	SC House District 92 (Republican Party)	SC House District 92 - REP
 CandidateContest	SC House District 92 (Republican Party)	SC House District 92 (REP)
+CandidateContest	SC House District 92 (Republican Party)	State House of Representatives, District 92 - REP
 CandidateContest	SC House District 92 (Republican Party)	State House of Representatives, District 92 (REP)
+CandidateContest	SC House District 93 (Republican Party)	SC House District 93 - REP
 CandidateContest	SC House District 93 (Republican Party)	SC House District 93 (REP)
+CandidateContest	SC House District 93 (Republican Party)	State House of Representatives, District 93 - REP
 CandidateContest	SC House District 93 (Republican Party)	State House of Representatives, District 93 (REP)
+CandidateContest	SC House District 94 (Republican Party)	SC House District 94 - REP
 CandidateContest	SC House District 94 (Republican Party)	SC House District 94 (REP)
+CandidateContest	SC House District 94 (Republican Party)	State House of Representatives, District 94 - REP
 CandidateContest	SC House District 94 (Republican Party)	State House of Representatives, District 94 (REP)
+CandidateContest	SC House District 95 (Republican Party)	SC House District 95 - REP
 CandidateContest	SC House District 95 (Republican Party)	SC House District 95 (REP)
+CandidateContest	SC House District 95 (Republican Party)	State House of Representatives, District 95 - REP
 CandidateContest	SC House District 95 (Republican Party)	State House of Representatives, District 95 (REP)
+CandidateContest	SC House District 96 (Republican Party)	SC House District 96 - REP
 CandidateContest	SC House District 96 (Republican Party)	SC House District 96 (REP)
+CandidateContest	SC House District 96 (Republican Party)	State House of Representatives, District 96 - REP
 CandidateContest	SC House District 96 (Republican Party)	State House of Representatives, District 96 (REP)
+CandidateContest	SC House District 97 (Republican Party)	SC House District 97 - REP
 CandidateContest	SC House District 97 (Republican Party)	SC House District 97 (REP)
+CandidateContest	SC House District 97 (Republican Party)	State House of Representatives, District 97 - REP
 CandidateContest	SC House District 97 (Republican Party)	State House of Representatives, District 97 (REP)
+CandidateContest	SC House District 98 (Republican Party)	SC House District 98 - REP
 CandidateContest	SC House District 98 (Republican Party)	SC House District 98 (REP)
+CandidateContest	SC House District 98 (Republican Party)	State House of Representatives, District 98 - REP
 CandidateContest	SC House District 98 (Republican Party)	State House of Representatives, District 98 (REP)
+CandidateContest	SC House District 99 (Republican Party)	SC House District 99 - REP
 CandidateContest	SC House District 99 (Republican Party)	SC House District 99 (REP)
+CandidateContest	SC House District 99 (Republican Party)	State House of Representatives, District 99 - REP
 CandidateContest	SC House District 99 (Republican Party)	State House of Representatives, District 99 (REP)
+CandidateContest	SC House District 100 (Republican Party)	SC House District 100 - REP
 CandidateContest	SC House District 100 (Republican Party)	SC House District 100 (REP)
+CandidateContest	SC House District 100 (Republican Party)	State House of Representatives, District 100 - REP
 CandidateContest	SC House District 100 (Republican Party)	State House of Representatives, District 100 (REP)
+CandidateContest	SC House District 101 (Republican Party)	SC House District 101 - REP
 CandidateContest	SC House District 101 (Republican Party)	SC House District 101 (REP)
+CandidateContest	SC House District 101 (Republican Party)	State House of Representatives, District 101 - REP
 CandidateContest	SC House District 101 (Republican Party)	State House of Representatives, District 101 (REP)
+CandidateContest	SC House District 102 (Republican Party)	SC House District 102 - REP
 CandidateContest	SC House District 102 (Republican Party)	SC House District 102 (REP)
+CandidateContest	SC House District 102 (Republican Party)	State House of Representatives, District 102 - REP
 CandidateContest	SC House District 102 (Republican Party)	State House of Representatives, District 102 (REP)
+CandidateContest	SC House District 103 (Republican Party)	SC House District 103 - REP
 CandidateContest	SC House District 103 (Republican Party)	SC House District 103 (REP)
+CandidateContest	SC House District 103 (Republican Party)	State House of Representatives, District 103 - REP
 CandidateContest	SC House District 103 (Republican Party)	State House of Representatives, District 103 (REP)
+CandidateContest	SC House District 104 (Republican Party)	SC House District 104 - REP
 CandidateContest	SC House District 104 (Republican Party)	SC House District 104 (REP)
+CandidateContest	SC House District 104 (Republican Party)	State House of Representatives, District 104 - REP
 CandidateContest	SC House District 104 (Republican Party)	State House of Representatives, District 104 (REP)
+CandidateContest	SC House District 105 (Republican Party)	SC House District 105 - REP
 CandidateContest	SC House District 105 (Republican Party)	SC House District 105 (REP)
+CandidateContest	SC House District 105 (Republican Party)	State House of Representatives, District 105 - REP
 CandidateContest	SC House District 105 (Republican Party)	State House of Representatives, District 105 (REP)
+CandidateContest	SC House District 106 (Republican Party)	SC House District 106 - REP
 CandidateContest	SC House District 106 (Republican Party)	SC House District 106 (REP)
+CandidateContest	SC House District 106 (Republican Party)	State House of Representatives, District 106 - REP
 CandidateContest	SC House District 106 (Republican Party)	State House of Representatives, District 106 (REP)
+CandidateContest	SC House District 107 (Republican Party)	SC House District 107 - REP
 CandidateContest	SC House District 107 (Republican Party)	SC House District 107 (REP)
+CandidateContest	SC House District 107 (Republican Party)	State House of Representatives, District 107 - REP
 CandidateContest	SC House District 107 (Republican Party)	State House of Representatives, District 107 (REP)
+CandidateContest	SC House District 108 (Republican Party)	SC House District 108 - REP
 CandidateContest	SC House District 108 (Republican Party)	SC House District 108 (REP)
+CandidateContest	SC House District 108 (Republican Party)	State House of Representatives, District 108 - REP
 CandidateContest	SC House District 108 (Republican Party)	State House of Representatives, District 108 (REP)
+CandidateContest	SC House District 109 (Republican Party)	SC House District 109 - REP
 CandidateContest	SC House District 109 (Republican Party)	SC House District 109 (REP)
+CandidateContest	SC House District 109 (Republican Party)	State House of Representatives, District 109 - REP
 CandidateContest	SC House District 109 (Republican Party)	State House of Representatives, District 109 (REP)
+CandidateContest	SC House District 110 (Republican Party)	SC House District 110 - REP
 CandidateContest	SC House District 110 (Republican Party)	SC House District 110 (REP)
+CandidateContest	SC House District 110 (Republican Party)	State House of Representatives, District 110 - REP
 CandidateContest	SC House District 110 (Republican Party)	State House of Representatives, District 110 (REP)
+CandidateContest	SC House District 111 (Republican Party)	SC House District 111 - REP
 CandidateContest	SC House District 111 (Republican Party)	SC House District 111 (REP)
+CandidateContest	SC House District 111 (Republican Party)	State House of Representatives, District 111 - REP
 CandidateContest	SC House District 111 (Republican Party)	State House of Representatives, District 111 (REP)
+CandidateContest	SC House District 112 (Republican Party)	SC House District 112 - REP
 CandidateContest	SC House District 112 (Republican Party)	SC House District 112 (REP)
+CandidateContest	SC House District 112 (Republican Party)	State House of Representatives, District 112 - REP
 CandidateContest	SC House District 112 (Republican Party)	State House of Representatives, District 112 (REP)
+CandidateContest	SC House District 113 (Republican Party)	SC House District 113 - REP
 CandidateContest	SC House District 113 (Republican Party)	SC House District 113 (REP)
+CandidateContest	SC House District 113 (Republican Party)	State House of Representatives, District 113 - REP
 CandidateContest	SC House District 113 (Republican Party)	State House of Representatives, District 113 (REP)
+CandidateContest	SC House District 114 (Republican Party)	SC House District 114 - REP
 CandidateContest	SC House District 114 (Republican Party)	SC House District 114 (REP)
+CandidateContest	SC House District 114 (Republican Party)	State House of Representatives, District 114 - REP
 CandidateContest	SC House District 114 (Republican Party)	State House of Representatives, District 114 (REP)
+CandidateContest	SC House District 115 (Republican Party)	SC House District 115 - REP
 CandidateContest	SC House District 115 (Republican Party)	SC House District 115 (REP)
+CandidateContest	SC House District 115 (Republican Party)	State House of Representatives, District 115 - REP
 CandidateContest	SC House District 115 (Republican Party)	State House of Representatives, District 115 (REP)
+CandidateContest	SC House District 116 (Republican Party)	SC House District 116 - REP
 CandidateContest	SC House District 116 (Republican Party)	SC House District 116 (REP)
+CandidateContest	SC House District 116 (Republican Party)	State House of Representatives, District 116 - REP
 CandidateContest	SC House District 116 (Republican Party)	State House of Representatives, District 116 (REP)
+CandidateContest	SC House District 117 (Republican Party)	SC House District 117 - REP
 CandidateContest	SC House District 117 (Republican Party)	SC House District 117 (REP)
+CandidateContest	SC House District 117 (Republican Party)	State House of Representatives, District 117 - REP
 CandidateContest	SC House District 117 (Republican Party)	State House of Representatives, District 117 (REP)
+CandidateContest	SC House District 118 (Republican Party)	SC House District 118 - REP
 CandidateContest	SC House District 118 (Republican Party)	SC House District 118 (REP)
+CandidateContest	SC House District 118 (Republican Party)	State House of Representatives, District 118 - REP
 CandidateContest	SC House District 118 (Republican Party)	State House of Representatives, District 118 (REP)
+CandidateContest	SC House District 119 (Republican Party)	SC House District 119 - REP
 CandidateContest	SC House District 119 (Republican Party)	SC House District 119 (REP)
+CandidateContest	SC House District 119 (Republican Party)	State House of Representatives, District 119 - REP
 CandidateContest	SC House District 119 (Republican Party)	State House of Representatives, District 119 (REP)
+CandidateContest	SC House District 120 (Republican Party)	SC House District 120 - REP
 CandidateContest	SC House District 120 (Republican Party)	SC House District 120 (REP)
+CandidateContest	SC House District 120 (Republican Party)	State House of Representatives, District 120 - REP
 CandidateContest	SC House District 120 (Republican Party)	State House of Representatives, District 120 (REP)
+CandidateContest	SC House District 121 (Republican Party)	SC House District 121 - REP
 CandidateContest	SC House District 121 (Republican Party)	SC House District 121 (REP)
+CandidateContest	SC House District 121 (Republican Party)	State House of Representatives, District 121 - REP
 CandidateContest	SC House District 121 (Republican Party)	State House of Representatives, District 121 (REP)
+CandidateContest	SC House District 122 (Republican Party)	SC House District 122 - REP
 CandidateContest	SC House District 122 (Republican Party)	SC House District 122 (REP)
+CandidateContest	SC House District 122 (Republican Party)	State House of Representatives, District 122 - REP
 CandidateContest	SC House District 122 (Republican Party)	State House of Representatives, District 122 (REP)
+CandidateContest	SC House District 123 (Republican Party)	SC House District 123 - REP
 CandidateContest	SC House District 123 (Republican Party)	SC House District 123 (REP)
+CandidateContest	SC House District 123 (Republican Party)	State House of Representatives, District 123 - REP
 CandidateContest	SC House District 123 (Republican Party)	State House of Representatives, District 123 (REP)
+CandidateContest	SC House District 124 (Republican Party)	SC House District 124 - REP
 CandidateContest	SC House District 124 (Republican Party)	SC House District 124 (REP)
+CandidateContest	SC House District 124 (Republican Party)	State House of Representatives, District 124 - REP
 CandidateContest	SC House District 124 (Republican Party)	State House of Representatives, District 124 (REP)
+CandidateContest	SC Senate District 1 (Republican Party)	SC Senate District 1 - REP
 CandidateContest	SC Senate District 1 (Republican Party)	SC Senate District 1 (REP)
+CandidateContest	SC Senate District 1 (Republican Party)	State Senate, District 1 - REP
 CandidateContest	SC Senate District 1 (Republican Party)	State Senate, District 1 (REP)
+CandidateContest	SC Senate District 2 (Republican Party)	SC Senate District 2 - REP
 CandidateContest	SC Senate District 2 (Republican Party)	SC Senate District 2 (REP)
+CandidateContest	SC Senate District 2 (Republican Party)	State Senate, District 2 - REP
 CandidateContest	SC Senate District 2 (Republican Party)	State Senate, District 2 (REP)
+CandidateContest	SC Senate District 3 (Republican Party)	SC Senate District 3 - REP
 CandidateContest	SC Senate District 3 (Republican Party)	SC Senate District 3 (REP)
+CandidateContest	SC Senate District 3 (Republican Party)	State Senate, District 3 - REP
 CandidateContest	SC Senate District 3 (Republican Party)	State Senate, District 3 (REP)
+CandidateContest	SC Senate District 4 (Republican Party)	SC Senate District 4 - REP
 CandidateContest	SC Senate District 4 (Republican Party)	SC Senate District 4 (REP)
+CandidateContest	SC Senate District 4 (Republican Party)	State Senate, District 4 - REP
 CandidateContest	SC Senate District 4 (Republican Party)	State Senate, District 4 (REP)
+CandidateContest	SC Senate District 5 (Republican Party)	SC Senate District 5 - REP
 CandidateContest	SC Senate District 5 (Republican Party)	SC Senate District 5 (REP)
+CandidateContest	SC Senate District 5 (Republican Party)	State Senate, District 5 - REP
 CandidateContest	SC Senate District 5 (Republican Party)	State Senate, District 5 (REP)
+CandidateContest	SC Senate District 6 (Republican Party)	SC Senate District 6 - REP
 CandidateContest	SC Senate District 6 (Republican Party)	SC Senate District 6 (REP)
+CandidateContest	SC Senate District 6 (Republican Party)	State Senate, District 6 - REP
 CandidateContest	SC Senate District 6 (Republican Party)	State Senate, District 6 (REP)
+CandidateContest	SC Senate District 7 (Republican Party)	SC Senate District 7 - REP
 CandidateContest	SC Senate District 7 (Republican Party)	SC Senate District 7 (REP)
+CandidateContest	SC Senate District 7 (Republican Party)	State Senate, District 7 - REP
 CandidateContest	SC Senate District 7 (Republican Party)	State Senate, District 7 (REP)
+CandidateContest	SC Senate District 8 (Republican Party)	SC Senate District 8 - REP
 CandidateContest	SC Senate District 8 (Republican Party)	SC Senate District 8 (REP)
+CandidateContest	SC Senate District 8 (Republican Party)	State Senate, District 8 - REP
 CandidateContest	SC Senate District 8 (Republican Party)	State Senate, District 8 (REP)
+CandidateContest	SC Senate District 9 (Republican Party)	SC Senate District 9 - REP
 CandidateContest	SC Senate District 9 (Republican Party)	SC Senate District 9 (REP)
+CandidateContest	SC Senate District 9 (Republican Party)	State Senate, District 9 - REP
 CandidateContest	SC Senate District 9 (Republican Party)	State Senate, District 9 (REP)
+CandidateContest	SC Senate District 10 (Republican Party)	SC Senate District 10 - REP
 CandidateContest	SC Senate District 10 (Republican Party)	SC Senate District 10 (REP)
+CandidateContest	SC Senate District 10 (Republican Party)	State Senate, District 10 - REP
 CandidateContest	SC Senate District 10 (Republican Party)	State Senate, District 10 (REP)
+CandidateContest	SC Senate District 11 (Republican Party)	SC Senate District 11 - REP
 CandidateContest	SC Senate District 11 (Republican Party)	SC Senate District 11 (REP)
+CandidateContest	SC Senate District 11 (Republican Party)	State Senate, District 11 - REP
 CandidateContest	SC Senate District 11 (Republican Party)	State Senate, District 11 (REP)
+CandidateContest	SC Senate District 12 (Republican Party)	SC Senate District 12 - REP
 CandidateContest	SC Senate District 12 (Republican Party)	SC Senate District 12 (REP)
+CandidateContest	SC Senate District 12 (Republican Party)	State Senate, District 12 - REP
 CandidateContest	SC Senate District 12 (Republican Party)	State Senate, District 12 (REP)
+CandidateContest	SC Senate District 13 (Republican Party)	SC Senate District 13 - REP
 CandidateContest	SC Senate District 13 (Republican Party)	SC Senate District 13 (REP)
+CandidateContest	SC Senate District 13 (Republican Party)	State Senate, District 13 - REP
 CandidateContest	SC Senate District 13 (Republican Party)	State Senate, District 13 (REP)
+CandidateContest	SC Senate District 14 (Republican Party)	SC Senate District 14 - REP
 CandidateContest	SC Senate District 14 (Republican Party)	SC Senate District 14 (REP)
+CandidateContest	SC Senate District 14 (Republican Party)	State Senate, District 14 - REP
 CandidateContest	SC Senate District 14 (Republican Party)	State Senate, District 14 (REP)
+CandidateContest	SC Senate District 15 (Republican Party)	SC Senate District 15 - REP
 CandidateContest	SC Senate District 15 (Republican Party)	SC Senate District 15 (REP)
+CandidateContest	SC Senate District 15 (Republican Party)	State Senate, District 15 - REP
 CandidateContest	SC Senate District 15 (Republican Party)	State Senate, District 15 (REP)
+CandidateContest	SC Senate District 16 (Republican Party)	SC Senate District 16 - REP
 CandidateContest	SC Senate District 16 (Republican Party)	SC Senate District 16 (REP)
+CandidateContest	SC Senate District 16 (Republican Party)	State Senate, District 16 - REP
 CandidateContest	SC Senate District 16 (Republican Party)	State Senate, District 16 (REP)
+CandidateContest	SC Senate District 17 (Republican Party)	SC Senate District 17 - REP
 CandidateContest	SC Senate District 17 (Republican Party)	SC Senate District 17 (REP)
+CandidateContest	SC Senate District 17 (Republican Party)	State Senate, District 17 - REP
 CandidateContest	SC Senate District 17 (Republican Party)	State Senate, District 17 (REP)
+CandidateContest	SC Senate District 18 (Republican Party)	SC Senate District 18 - REP
 CandidateContest	SC Senate District 18 (Republican Party)	SC Senate District 18 (REP)
+CandidateContest	SC Senate District 18 (Republican Party)	State Senate, District 18 - REP
 CandidateContest	SC Senate District 18 (Republican Party)	State Senate, District 18 (REP)
+CandidateContest	SC Senate District 19 (Republican Party)	SC Senate District 19 - REP
 CandidateContest	SC Senate District 19 (Republican Party)	SC Senate District 19 (REP)
+CandidateContest	SC Senate District 19 (Republican Party)	State Senate, District 19 - REP
 CandidateContest	SC Senate District 19 (Republican Party)	State Senate, District 19 (REP)
+CandidateContest	SC Senate District 20 (Republican Party)	SC Senate District 20 - REP
 CandidateContest	SC Senate District 20 (Republican Party)	SC Senate District 20 (REP)
+CandidateContest	SC Senate District 20 (Republican Party)	State Senate, District 20 - REP
 CandidateContest	SC Senate District 20 (Republican Party)	State Senate, District 20 (REP)
+CandidateContest	SC Senate District 21 (Republican Party)	SC Senate District 21 - REP
 CandidateContest	SC Senate District 21 (Republican Party)	SC Senate District 21 (REP)
+CandidateContest	SC Senate District 21 (Republican Party)	State Senate, District 21 - REP
 CandidateContest	SC Senate District 21 (Republican Party)	State Senate, District 21 (REP)
+CandidateContest	SC Senate District 22 (Republican Party)	SC Senate District 22 - REP
 CandidateContest	SC Senate District 22 (Republican Party)	SC Senate District 22 (REP)
+CandidateContest	SC Senate District 22 (Republican Party)	State Senate, District 22 - REP
 CandidateContest	SC Senate District 22 (Republican Party)	State Senate, District 22 (REP)
+CandidateContest	SC Senate District 23 (Republican Party)	SC Senate District 23 - REP
 CandidateContest	SC Senate District 23 (Republican Party)	SC Senate District 23 (REP)
+CandidateContest	SC Senate District 23 (Republican Party)	State Senate, District 23 - REP
 CandidateContest	SC Senate District 23 (Republican Party)	State Senate, District 23 (REP)
+CandidateContest	SC Senate District 24 (Republican Party)	SC Senate District 24 - REP
 CandidateContest	SC Senate District 24 (Republican Party)	SC Senate District 24 (REP)
+CandidateContest	SC Senate District 24 (Republican Party)	State Senate, District 24 - REP
 CandidateContest	SC Senate District 24 (Republican Party)	State Senate, District 24 (REP)
+CandidateContest	SC Senate District 25 (Republican Party)	SC Senate District 25 - REP
 CandidateContest	SC Senate District 25 (Republican Party)	SC Senate District 25 (REP)
+CandidateContest	SC Senate District 25 (Republican Party)	State Senate, District 25 - REP
 CandidateContest	SC Senate District 25 (Republican Party)	State Senate, District 25 (REP)
+CandidateContest	SC Senate District 26 (Republican Party)	SC Senate District 26 - REP
 CandidateContest	SC Senate District 26 (Republican Party)	SC Senate District 26 (REP)
+CandidateContest	SC Senate District 26 (Republican Party)	State Senate, District 26 - REP
 CandidateContest	SC Senate District 26 (Republican Party)	State Senate, District 26 (REP)
+CandidateContest	SC Senate District 27 (Republican Party)	SC Senate District 27 - REP
 CandidateContest	SC Senate District 27 (Republican Party)	SC Senate District 27 (REP)
+CandidateContest	SC Senate District 27 (Republican Party)	State Senate, District 27 - REP
 CandidateContest	SC Senate District 27 (Republican Party)	State Senate, District 27 (REP)
+CandidateContest	SC Senate District 28 (Republican Party)	SC Senate District 28 - REP
 CandidateContest	SC Senate District 28 (Republican Party)	SC Senate District 28 (REP)
+CandidateContest	SC Senate District 28 (Republican Party)	State Senate, District 28 - REP
 CandidateContest	SC Senate District 28 (Republican Party)	State Senate, District 28 (REP)
+CandidateContest	SC Senate District 29 (Republican Party)	SC Senate District 29 - REP
 CandidateContest	SC Senate District 29 (Republican Party)	SC Senate District 29 (REP)
+CandidateContest	SC Senate District 29 (Republican Party)	State Senate, District 29 - REP
 CandidateContest	SC Senate District 29 (Republican Party)	State Senate, District 29 (REP)
+CandidateContest	SC Senate District 30 (Republican Party)	SC Senate District 30 - REP
 CandidateContest	SC Senate District 30 (Republican Party)	SC Senate District 30 (REP)
+CandidateContest	SC Senate District 30 (Republican Party)	State Senate, District 30 - REP
 CandidateContest	SC Senate District 30 (Republican Party)	State Senate, District 30 (REP)
+CandidateContest	SC Senate District 31 (Republican Party)	SC Senate District 31 - REP
 CandidateContest	SC Senate District 31 (Republican Party)	SC Senate District 31 (REP)
+CandidateContest	SC Senate District 31 (Republican Party)	State Senate, District 31 - REP
 CandidateContest	SC Senate District 31 (Republican Party)	State Senate, District 31 (REP)
+CandidateContest	SC Senate District 32 (Republican Party)	SC Senate District 32 - REP
 CandidateContest	SC Senate District 32 (Republican Party)	SC Senate District 32 (REP)
+CandidateContest	SC Senate District 32 (Republican Party)	State Senate, District 32 - REP
 CandidateContest	SC Senate District 32 (Republican Party)	State Senate, District 32 (REP)
+CandidateContest	SC Senate District 33 (Republican Party)	SC Senate District 33 - REP
 CandidateContest	SC Senate District 33 (Republican Party)	SC Senate District 33 (REP)
+CandidateContest	SC Senate District 33 (Republican Party)	State Senate, District 33 - REP
 CandidateContest	SC Senate District 33 (Republican Party)	State Senate, District 33 (REP)
+CandidateContest	SC Senate District 34 (Republican Party)	SC Senate District 34 - REP
 CandidateContest	SC Senate District 34 (Republican Party)	SC Senate District 34 (REP)
+CandidateContest	SC Senate District 34 (Republican Party)	State Senate, District 34 - REP
 CandidateContest	SC Senate District 34 (Republican Party)	State Senate, District 34 (REP)
+CandidateContest	SC Senate District 35 (Republican Party)	SC Senate District 35 - REP
 CandidateContest	SC Senate District 35 (Republican Party)	SC Senate District 35 (REP)
+CandidateContest	SC Senate District 35 (Republican Party)	State Senate, District 35 - REP
 CandidateContest	SC Senate District 35 (Republican Party)	State Senate, District 35 (REP)
+CandidateContest	SC Senate District 36 (Republican Party)	SC Senate District 36 - REP
 CandidateContest	SC Senate District 36 (Republican Party)	SC Senate District 36 (REP)
+CandidateContest	SC Senate District 36 (Republican Party)	State Senate, District 36 - REP
 CandidateContest	SC Senate District 36 (Republican Party)	State Senate, District 36 (REP)
+CandidateContest	SC Senate District 37 (Republican Party)	SC Senate District 37 - REP
 CandidateContest	SC Senate District 37 (Republican Party)	SC Senate District 37 (REP)
+CandidateContest	SC Senate District 37 (Republican Party)	State Senate, District 37 - REP
 CandidateContest	SC Senate District 37 (Republican Party)	State Senate, District 37 (REP)
+CandidateContest	SC Senate District 38 (Republican Party)	SC Senate District 38 - REP
 CandidateContest	SC Senate District 38 (Republican Party)	SC Senate District 38 (REP)
+CandidateContest	SC Senate District 38 (Republican Party)	State Senate, District 38 - REP
 CandidateContest	SC Senate District 38 (Republican Party)	State Senate, District 38 (REP)
+CandidateContest	SC Senate District 39 (Republican Party)	SC Senate District 39 - REP
 CandidateContest	SC Senate District 39 (Republican Party)	SC Senate District 39 (REP)
+CandidateContest	SC Senate District 39 (Republican Party)	State Senate, District 39 - REP
 CandidateContest	SC Senate District 39 (Republican Party)	State Senate, District 39 (REP)
+CandidateContest	SC Senate District 40 (Republican Party)	SC Senate District 40 - REP
 CandidateContest	SC Senate District 40 (Republican Party)	SC Senate District 40 (REP)
+CandidateContest	SC Senate District 40 (Republican Party)	State Senate, District 40 - REP
 CandidateContest	SC Senate District 40 (Republican Party)	State Senate, District 40 (REP)
+CandidateContest	SC Senate District 41 (Republican Party)	SC Senate District 41 - REP
 CandidateContest	SC Senate District 41 (Republican Party)	SC Senate District 41 (REP)
+CandidateContest	SC Senate District 41 (Republican Party)	State Senate, District 41 - REP
 CandidateContest	SC Senate District 41 (Republican Party)	State Senate, District 41 (REP)
+CandidateContest	SC Senate District 42 (Republican Party)	SC Senate District 42 - REP
 CandidateContest	SC Senate District 42 (Republican Party)	SC Senate District 42 (REP)
+CandidateContest	SC Senate District 42 (Republican Party)	State Senate, District 42 - REP
 CandidateContest	SC Senate District 42 (Republican Party)	State Senate, District 42 (REP)
+CandidateContest	SC Senate District 43 (Republican Party)	SC Senate District 43 - REP
 CandidateContest	SC Senate District 43 (Republican Party)	SC Senate District 43 (REP)
+CandidateContest	SC Senate District 43 (Republican Party)	State Senate, District 43 - REP
 CandidateContest	SC Senate District 43 (Republican Party)	State Senate, District 43 (REP)
+CandidateContest	SC Senate District 44 (Republican Party)	SC Senate District 44 - REP
 CandidateContest	SC Senate District 44 (Republican Party)	SC Senate District 44 (REP)
+CandidateContest	SC Senate District 44 (Republican Party)	State Senate, District 44 - REP
 CandidateContest	SC Senate District 44 (Republican Party)	State Senate, District 44 (REP)
+CandidateContest	SC Senate District 45 (Republican Party)	SC Senate District 45 - REP
 CandidateContest	SC Senate District 45 (Republican Party)	SC Senate District 45 (REP)
+CandidateContest	SC Senate District 45 (Republican Party)	State Senate, District 45 - REP
 CandidateContest	SC Senate District 45 (Republican Party)	State Senate, District 45 (REP)
+CandidateContest	SC Senate District 46 (Republican Party)	SC Senate District 46 - REP
 CandidateContest	SC Senate District 46 (Republican Party)	SC Senate District 46 (REP)
+CandidateContest	SC Senate District 46 (Republican Party)	State Senate, District 46 - REP
 CandidateContest	SC Senate District 46 (Republican Party)	State Senate, District 46 (REP)
+CandidateContest	US House SC District 1 (Republican Party)	US House SC District 1 - REP
 CandidateContest	US House SC District 1 (Republican Party)	US House SC District 1 (REP)
+CandidateContest	US House SC District 1 (Republican Party)	U.S. House of Representatives, District 1 - REP
 CandidateContest	US House SC District 1 (Republican Party)	U.S. House of Representatives, District 1 (REP)
+CandidateContest	US House SC District 2 (Republican Party)	US House SC District 2 - REP
 CandidateContest	US House SC District 2 (Republican Party)	US House SC District 2 (REP)
+CandidateContest	US House SC District 2 (Republican Party)	U.S. House of Representatives, District 2 - REP
 CandidateContest	US House SC District 2 (Republican Party)	U.S. House of Representatives, District 2 (REP)
+CandidateContest	US House SC District 3 (Republican Party)	US House SC District 3 - REP
 CandidateContest	US House SC District 3 (Republican Party)	US House SC District 3 (REP)
+CandidateContest	US House SC District 3 (Republican Party)	U.S. House of Representatives, District 3 - REP
 CandidateContest	US House SC District 3 (Republican Party)	U.S. House of Representatives, District 3 (REP)
+CandidateContest	US House SC District 4 (Republican Party)	US House SC District 4 - REP
 CandidateContest	US House SC District 4 (Republican Party)	US House SC District 4 (REP)
+CandidateContest	US House SC District 4 (Republican Party)	U.S. House of Representatives, District 4 - REP
 CandidateContest	US House SC District 4 (Republican Party)	U.S. House of Representatives, District 4 (REP)
+CandidateContest	US House SC District 5 (Republican Party)	US House SC District 5 - REP
 CandidateContest	US House SC District 5 (Republican Party)	US House SC District 5 (REP)
+CandidateContest	US House SC District 5 (Republican Party)	U.S. House of Representatives, District 5 - REP
 CandidateContest	US House SC District 5 (Republican Party)	U.S. House of Representatives, District 5 (REP)
+CandidateContest	US House SC District 6 (Republican Party)	US House SC District 6 - REP
 CandidateContest	US House SC District 6 (Republican Party)	US House SC District 6 (REP)
+CandidateContest	US House SC District 6 (Republican Party)	U.S. House of Representatives, District 6 - REP
 CandidateContest	US House SC District 6 (Republican Party)	U.S. House of Representatives, District 6 (REP)
+CandidateContest	US House SC District 7 (Republican Party)	US House SC District 7 - REP
 CandidateContest	US House SC District 7 (Republican Party)	US House SC District 7 (REP)
+CandidateContest	US House SC District 7 (Republican Party)	U.S. House of Representatives, District 7 - REP
 CandidateContest	US House SC District 7 (Republican Party)	U.S. House of Representatives, District 7 (REP)
+CandidateContest	US President (SC) (Republican Party)	US President (SC) - REP
 CandidateContest	US President (SC) (Republican Party)	US President (SC) (REP)
+CandidateContest	US President (SC) (Republican Party)	President - REP
 CandidateContest	US President (SC) (Republican Party)	President (REP)
+CandidateContest	SC Governor (Republican Party)	SC Governor - REP
 CandidateContest	SC Governor (Republican Party)	SC Governor (REP)
+CandidateContest	SC Governor (Republican Party)	Governor and Lieutenant Governor - REP
 CandidateContest	SC Governor (Republican Party)	Governor and Lieutenant Governor (REP)
+CandidateContest	US Senate SC (Republican Party)	U.S. Senate - REP
 CandidateContest	US Senate SC (Republican Party)	U.S. Senate (REP)
+CandidateContest	SC Attorney General (Republican Party)	SC Attorney General - REP
 CandidateContest	SC Attorney General (Republican Party)	SC Attorney General (REP)
+CandidateContest	SC Attorney General (Republican Party)	Attorney General - REP
 CandidateContest	SC Attorney General (Republican Party)	Attorney General (REP)
+CandidateContest	SC Secretary of State (Republican Party)	Secretary of State - REP
 CandidateContest	SC Secretary of State (Republican Party)	Secretary of State (REP)
+CandidateContest	SC Treasurer (Republican Party)	State Treasurer - REP
 CandidateContest	SC Treasurer (Republican Party)	State Treasurer (REP)
+CandidateContest	SC Adjutant General (Republican Party)	SC Adjutant General - REP
 CandidateContest	SC Adjutant General (Republican Party)	SC Adjutant General (REP)
+CandidateContest	SC Commissioner of Agriculture (Republican Party)	SC Commissioner of Agriculture - REP
 CandidateContest	SC Commissioner of Agriculture (Republican Party)	SC Commissioner of Agriculture (REP)
+CandidateContest	SC Commissioner of Agriculture (Republican Party)	Commissioner of Agriculture - REP
 CandidateContest	SC Commissioner of Agriculture (Republican Party)	Commissioner of Agriculture (REP)
+CandidateContest	SC State Superintendent of Education (Republican Party)	SC State Superintendent of Education - REP
 CandidateContest	SC State Superintendent of Education (Republican Party)	SC State Superintendent of Education (REP)
+CandidateContest	SC State Superintendent of Education (Republican Party)	State Superintendent of Education - REP
 CandidateContest	SC State Superintendent of Education (Republican Party)	State Superintendent of Education (REP)
+CandidateContest	SC Comptroller General (Republican Party)	SC Treasurer - REP
 CandidateContest	SC Comptroller General (Republican Party)	SC Treasurer (REP)
+CandidateContest	SC Comptroller General (Republican Party)	Comptroller General - REP
 CandidateContest	SC Comptroller General (Republican Party)	Comptroller General (REP)
 CandidateContest	SC House District 1 (Independence Party)	SC House District 1 (Independence Party)
 CandidateContest	SC House District 1 (Independence Party)	State House of Representatives, District 1 (Independence Party)

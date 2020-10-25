@@ -169,10 +169,11 @@ def read_concatenated_blocks(
             header_1_list, alts = disambiguate(extract_items(header_1, w * v_t_cc))
 
             #  add disambiguated entries to munger's dictionary of alternatives
-            if "Candidate" in munger.alt.keys():
-                munger.alt["Candidate"].update(alts)
-            else:
-                munger.alt["Candidate"] = alts
+            if alts:
+                if "Candidate" in munger.alt.keys():
+                    munger.alt["Candidate"].update(alts)
+                else:
+                    munger.alt["Candidate"] = alts
 
             # create df from next batch of lines, with that multi-index
             # find idx of next empty line (or end of data)

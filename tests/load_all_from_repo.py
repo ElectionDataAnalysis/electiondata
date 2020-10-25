@@ -115,7 +115,7 @@ def run2(
 if __name__ == "__main__":
 
     if len(sys.argv) == 1:
-        election_jurisdiction_list = [("2020 Primary", "Arizona")]
+        election_jurisdiction_list = [("2020 Primary", "South Carolina")]
     else:
         election_jurisdiction_list = io(sys.argv[1:])
 

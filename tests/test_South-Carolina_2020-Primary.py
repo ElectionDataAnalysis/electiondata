@@ -1,21 +1,24 @@
 import election_data_analysis as e
 
+def test_data_exists(dbname):
+    assert e.data_exists("2020 Primary", "South Carolina", dbname=dbname)
+
 def test_sc_presidential_20(dbname):
-    assert (not e.data_exists("2020 Primary","South Carolina",dbname=dbname) or e.contest_total(
+    assert (e.contest_total(
             "2020 Primary",
             "South Carolina",
-            "US President (SC) (Republican Party)",
+            "US President (SC) (Democratic Party)",
             dbname=dbname,
         )
-            == 469043
+            == 539263
     )
 
 
 def test_sc_statewide_20(dbname):
-    assert (not e.data_exists("2020 Primary","South Carolina",dbname=dbname) or e.contest_total(
+    assert (e.contest_total(
             "2020 Primary",
             "South Carolina",
-            "US President SC (Republican Party)",
+            "US Senate SC (Republican Party)",
             dbname=dbname,
         )
             == 469043
@@ -23,7 +26,7 @@ def test_sc_statewide_20(dbname):
 
 
 def test_sc_senate_totals_20(dbname):
-    assert (not e.data_exists("2020 Primary","South Carolina",dbname=dbname) or e.contest_total(
+    assert (e.contest_total(
             "2020 Primary",
             "South Carolina",
             "SC Senate District 8 (Republican Party)",
@@ -34,8 +37,8 @@ def test_sc_senate_totals_20(dbname):
 
 
 def test_sc_house_totals_20(dbname):
-    assert (not e.data_exists("2016 General","South Carolina",dbname=dbname) or e.contest_total(
-            "2016 General",
+    assert (e.contest_total(
+            "2020 Primary",
             "South Carolina",
             "SC House District 75 (Democratic Party)",
             dbname=dbname,
@@ -45,11 +48,11 @@ def test_sc_house_totals_20(dbname):
 
 
 def test_sc_contest_by_vote_type_20(dbname):
-    assert ( not e.data_exists("2020 Primary","South Carolina", dbname=dbname) or
+    assert (
             e.count_type_total(
-            "2016 General",
-            "North Carolina",
-"SC House District 75 (Democratic Party)",
+            "2020 Primary",
+            "South Carolina",
+            "SC House District 75 (Democratic Party)",
             "absentee-mail",
             dbname=dbname,
         )
@@ -58,7 +61,7 @@ def test_sc_contest_by_vote_type_20(dbname):
 
 
 def test_sc_totals_match_vote_type_20(dbname):
-    assert (not e.data_exists("2020 Primary","North Carolina", dbname=dbname) or
-            e.check_totals_match_vote_types("2020 Primary","North Carolina" ,dbname=dbname) == True)
+    assert (
+            e.check_totals_match_vote_types("2020 Primary","South Carolina" ,dbname=dbname) == True)
 
 

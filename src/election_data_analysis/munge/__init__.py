@@ -910,6 +910,7 @@ def raw_elements_to_cdf(
                 # join CountItemType_Id and OtherCountItemType
                 cit = pd.read_sql_table("CountItemType", session.bind)
                 working = enum_col_to_id_othertext(working, "CountItemType", cit)
+                working, err_df = clean_ids(working, ["CountItemType_Id"])
                 working = working.drop(
                     ["raw_identifier_value", "cdf_element", "CountItemType_raw"], axis=1
                 )

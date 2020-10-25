@@ -1557,7 +1557,7 @@ def aggregate_results(election, jurisdiction, contest_type, by_vote_type, dbname
         return empty_df_with_good_cols
     if len(datafile_list) == 0:
         print(f"No datafiles found for election {election} and jurisdiction {jurisdiction}"
-              f"(election_id={election_id} and jurisdiction_id={jurisdiction_id}")
+              f"(election_id={election_id} and jurisdiction_id={jurisdiction_id})")
         return empty_df_with_good_cols
 
     df, err_str = db.export_rollup_from_db(
