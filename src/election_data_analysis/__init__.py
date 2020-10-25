@@ -559,18 +559,27 @@ def check_par_file_elements(d: dict, mungers_path: str, par_file_name: str) -> O
     # for each munger, check that no element defined elsewhere is sourced as 'row' or 'column'
     for mu in d["munger_name"].split(","):
         elt_file = os.path.join(mungers_path, mu, "cdf_elements.txt")
-        elt = pd.read_csv(elt_file, sep="\t")
-        rc_from_mu = elt[(elt.source == "row") | (elt.source == "column")]["name"].unique()
-        duped = [x for x in elt_from_par_file if x in rc_from_mu]
-        if duped:
+        try:
+            elt = pd.read_csv(elt_file, sep="\t")
+        except Exception as e:
             err = ui.add_new_error(
                 err,
                 "ini",
                 par_file_name,
-                f"Some elements given in the parameter file are also designated "
-                f"as row- or column-sourced in munger {mu}:\n"
-                f"{duped}",
+                f"Error reading cdf_elements.txt file for munger {mu}"
             )
+        else:
+            rc_from_mu = elt[(elt.source == "row") | (elt.source == "column")]["name"].unique()
+            duped = [x for x in elt_from_par_file if x in rc_from_mu]
+            if duped:
+                err = ui.add_new_error(
+                    err,
+                    "ini",
+                    par_file_name,
+                    f"Some elements given in the parameter file are also designated "
+                    f"as row- or column-sourced in munger {mu}:\n"
+                    f"{duped}",
+                )
     return err
 
 
@@ -1567,7 +1576,7 @@ def aggregate_results(election, jurisdiction, contest_type, by_vote_type, dbname
             exclude_total=False,
             by_vote_type=True,
         )
-    if err_str:
+    if err_str or df.empty:
         return empty_df_with_good_cols
     return df
 

@@ -13,10 +13,10 @@ from sqlalchemy.orm.session import Session
 def clean_count_cols(
         df: pd.DataFrame,
         cols: List[str],
-) -> (pd.DataFrame, Optional[pd.DataFrame]):
+) -> (pd.DataFrame, pd.DataFrame):
     """Casts the given columns as integers, replacing any bad
     values with 0 and reporting a dataframe of any rows so changed."""
-    err_df = None
+    err_df = pd.DataFrame()
     working = df.copy()
     for c in cols:
         if c in working.columns:
@@ -37,18 +37,19 @@ def clean_ids(
         df: pd.DataFrame,
         cols: List[str],
 ) -> (pd.DataFrame(), pd.DataFrame):
-    """Requires all the columns to be of numeric type; changes them 
+    """changes only the columns to of numeric type; changes them
     to integer, with any nulls changed to 0. Reports a dataframe of 
-    any rows so changed."""
+    any rows so changed. Non-numeric-type columns are changed to all 0"""
     err_df = pd.DataFrame()
     working = df.copy()
     for c in cols:
         if c in working.columns and is_numeric_dtype(working[c]):
             err_df = pd.concat([err_df, working[working[c].isnull()]])
             working[c] = working[c].fillna(0).astype("int64")
-        else: 
+        else:
             err_df = working
-            return pd.DataFrame(), err_df
+            working[c] = 0
+
     err_df.drop_duplicates(inplace=True)
     return working, err_df
 
@@ -106,36 +107,6 @@ def clean_column_names(
         working.columns = [c.strip() for c in working.columns]
         new_count_cols = [c.strip() for c in new_count_cols]
     return df, new_count_cols, err_str
-
-
-def generic_clean(
-        df: pd.DataFrame,
-        count_cols: Optional[List[str]] = None,
-        id_cols: Optional[List[str]] = None,
-) -> (pd.DataFrame, List[str], Optional[pd.DataFrame]):
-    """Replaces nulls, strips external whitespace, compresses any internal whitespace."""
-    # TODO put all info about data cleaning into README.md (e.g., whitespace strip)
-    # TODO return error if cleaning fails, including dtypes of columns
-    if count_cols is None:
-        count_cols = list()
-    working = df.copy()
-
-    # clean the column names
-    working, count_cols, err_str = clean_column_names(working, count_cols)
-
-    # clean count columns (reporting rows with bad values)
-    working, err_df = clean_count_cols(working, count_cols)
-    
-    # clean id columns, (reporting row with nulls)
-    if not id_cols:
-        id_cols = [c for c in working.columns if c[-3:] == "_Id"]
-    working, null_id_df = clean_ids(working, id_cols)
-
-    # clean string columns
-    str_cols = [c for c in working.columns if working.dtypes[c] == np.object]
-    working = clean_strings(working, str_cols)
-
-    return working, count_cols, err_df
 
 
 def cast_cols_as_int(
