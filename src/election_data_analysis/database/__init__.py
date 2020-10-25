@@ -453,10 +453,10 @@ def insert_to_cdf_db(
     it must be specified in <timestamp>; <df> must have columns matching <element>,
     except Id and <timestamp> if any. Returns an error message (or None)"""
 
-    # clean data
-    working, count_cols, err_df = m.generic_clean(df)
+    working = df.copy()
     if element == "Candidate":
         # enforce title case, except for 'none or unknown'
+        # TODO enforce title case only if names are all caps
         working.loc[
             working.BallotName != "none or unknown",
             "BallotName"
@@ -472,6 +472,7 @@ def insert_to_cdf_db(
 
     # identify new ReportingUnits, must later enter nesting info in db
     if element == "ReportingUnit":
+        working = m.clean_strings(working, ["Name"])
         # find any new RUs
         matched_with_old = append_id_to_dframe(
             engine, working, "ReportingUnit", {"Name": "Name"}
@@ -510,7 +511,7 @@ def insert_to_cdf_db(
     # get set <mixed_int> of cols with integers & nulls and kludge only those
     temp_columns, type_map = get_column_names(cursor, temp_table)
     mixed_int = [
-        c
+        c  # TODO Selection_Id was numerical but not int here for AZ (xml)
         for c in temp_columns
         if type_map[c] == "integer" and working[c].dtype != "int64"
     ]
@@ -550,7 +551,7 @@ def insert_to_cdf_db(
                 "UPDATE {temp_table} SET {c} = NULL WHERE {c} = 0"
             ).format(temp_table=sql.Identifier(temp_table), c=sql.Identifier(c))
             cursor.execute(q_kludge)
-        connection.commit()
+        connection.commit()   # TODO when Selection_Id was in mixed_int, this emptied temp table, why?
 
         # insert records from temp table into <element> table
         q = sql.SQL(
@@ -572,11 +573,9 @@ def insert_to_cdf_db(
     cursor.execute(q)
 
     if element == "ReportingUnit":
-        # check Id column for '' or 0 (indicating not matched)
-        if pd.api.types.is_numeric_dtype(matched_with_old[f"{element}_Id"]):
-            new_rus = matched_with_old[matched_with_old[f"{element}_Id"] == 0]
-        else:
-            new_rus = matched_with_old[matched_with_old[f"{element}_Id"] == ""]
+        # check get RUs not matched and process them
+        mask = (matched_with_old.ReportingUnit_Id > 0)
+        new_rus = matched_with_old[~mask]
         if not new_rus.empty:
             append_to_composing_reporting_unit_join(engine, new_rus)
 
@@ -615,7 +614,8 @@ def append_id_to_dframe(
     df_cols = list(col_map.keys())
 
     # create temp db table with info from df, without index
-    df, count_cols, err_df = m.generic_clean(df)
+    id_cols = [c for c in df.columns if c[-3:] == "_Id"]
+    df, err_df = m.clean_ids(df, id_cols)
     df[df_cols].fillna("").to_sql(temp_table, engine, index_label="dataframe_index")
     # TODO fillna('') probably redundant
 
@@ -634,7 +634,7 @@ def append_id_to_dframe(
     ).format(
         tt=sql.Identifier(temp_table), t=sql.Identifier(element), on_clause=on_clause
     )
-    w, count_cols, err_df = m.generic_clean(pd.read_sql_query(q, connection).set_index("dataframe_index"))
+    w = pd.read_sql_query(q, connection).set_index("dataframe_index")
 
     # drop temp db table
     q = sql.SQL("DROP TABLE {temp_table}").format(temp_table=sql.Identifier(temp_table))
@@ -642,7 +642,9 @@ def append_id_to_dframe(
     cur.execute(q)
     connection.commit()
     connection.close()
-    return df.join(w[["Id"]]).rename(columns={"Id": f"{element}_Id"})
+    df_appended = df.join(w[["Id"]]).rename(columns={"Id": f"{element}_Id"})
+    df_appended, err_df = m.clean_ids(df_appended, "Id")
+    return df_appended
 
 
 def get_column_names(cursor, table: str) -> (list, dict):
@@ -1356,7 +1358,8 @@ def export_rollup_from_db(
         cursor.execute(q, [top_ru, sub_unit_type, tuple(datafile_list)])
         results = cursor.fetchall()
         results_df = pd.DataFrame(results)
-        results_df.columns = columns
+        if not results_df.empty:
+            results_df.columns = columns
         err_str = None
     except Exception as exc:
         results_df = pd.DataFrame()

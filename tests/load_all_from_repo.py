@@ -35,6 +35,20 @@ def io(argv) -> Optional[list]:
     return ej_list
 
 
+def close_and_erase(dl: e.DataLoader):
+    db_params = {
+        "host": dl.engine.url.host,
+        "port": dl.engine.url.port,
+        "user": dl.engine.url.username,
+        "password": dl.engine.url.password,
+        "dbname": dl.engine.url.database,
+    }
+    # close the connection to the db
+    dl.engine.dispose()
+    # remove the db
+    db.remove_database(db_params)
+    return
+
 def get_testing_data(url: str, target: str = "TestingData"):
     # if there is no testing data directory
     if not os.path.isdir(target):
@@ -88,18 +102,8 @@ def run2(
         remove_db = input(f"Remove test db {dbname} (y/n)?")
 
         if remove_db == "y":
+            close_and_erase(dl)
             # define parameters to connect to postgres db
-            db_params = {
-                "host": dl.engine.url.host,
-                "port": dl.engine.url.port,
-                "user": dl.engine.url.username,
-                "password": dl.engine.url.password,
-                "dbname": dl.engine.url.database,
-            }
-            # close the connection to the db
-            dl.engine.dispose()
-            # remove the db
-            db.remove_database(db_params)
 
         remove_dir = input("Remove TestingData directory (y/n)?")
         if remove_dir == "y":
@@ -111,7 +115,7 @@ def run2(
 if __name__ == "__main__":
 
     if len(sys.argv) == 1:
-        election_jurisdiction_list = None
+        election_jurisdiction_list = [("2020 Primary", "South Carolina")]
     else:
         election_jurisdiction_list = io(sys.argv[1:])
 

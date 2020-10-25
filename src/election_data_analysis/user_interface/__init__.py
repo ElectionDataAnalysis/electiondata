@@ -5,6 +5,7 @@ from election_data_analysis import special_formats as sf
 from election_data_analysis import database as db
 import election_data_analysis as e
 import pandas as pd
+import numpy as np
 from pandas.errors import ParserError, ParserWarning
 import csv
 import os
@@ -406,17 +407,26 @@ def read_single_datafile(
                 f"Nothing read from datafile. Munger may be inconsistent, or datafile may be empty.",
             )
         else:
-            # clean the file, specifying the count columns as integer columns
+            # get count columns by name
             if munger.options['count_columns_by_name']:
                 count_cols_by_name = munger.options['count_columns_by_name']
             elif munger.options['count_columns']:
                 count_cols_by_name = [df.columns[j] for j in munger.options['count_columns']]
             else:
                 count_cols_by_name = None
-            df, count_cols_by_name, err_df = m.generic_clean(df, int_cols_by_name=count_cols_by_name)
-            err = jm.check_results_munger_compatibility(
-                munger, df, Path(f_path).name, err
-            )
+
+            # clean the column names
+            df, count_cols_by_name, err_str = m.clean_column_names(df, count_cols_by_name)
+            if err_str:
+                err = add_new_error(
+                    err,
+                    "warn-file",
+                    Path(f_path).name,
+                    err_str
+                )
+
+            # clean the count columns
+            df, err_df = m.clean_count_cols(df, count_cols_by_name)
             if not err_df.empty:
                 # show all columns of dataframe holding rows where counts were set to 0
                 pd.set_option('max_columns',None)
@@ -427,6 +437,14 @@ def read_single_datafile(
                     f"At least one count was set to 0 in certain rows of {Path(f_path).name}:\n{err_df}"
                 )
                 pd.reset_option('max_columns')
+
+            # clean the string columns
+            str_cols = [c for c in df.columns if df.dtypes[c] == np.object]
+            df = m.clean_strings(df, str_cols)
+
+            err = jm.check_results_munger_compatibility(
+                munger, df, Path(f_path).name, err
+            )
         return df, err
     except FileNotFoundError as fnfe:
         e = f"File not found: {f_path}"

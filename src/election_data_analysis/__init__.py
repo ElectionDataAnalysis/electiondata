@@ -409,6 +409,7 @@ class SingleDataLoader:
                 "created_at",
             ],
         )
+        data = m.clean_strings(data,["short_name"])
         try:
             e = db.insert_to_cdf_db(self.session.bind, data, "_datafile")
             if e:
@@ -558,18 +559,27 @@ def check_par_file_elements(d: dict, mungers_path: str, par_file_name: str) -> O
     # for each munger, check that no element defined elsewhere is sourced as 'row' or 'column'
     for mu in d["munger_name"].split(","):
         elt_file = os.path.join(mungers_path, mu, "cdf_elements.txt")
-        elt = pd.read_csv(elt_file, sep="\t")
-        rc_from_mu = elt[(elt.source == "row") | (elt.source == "column")]["name"].unique()
-        duped = [x for x in elt_from_par_file if x in rc_from_mu]
-        if duped:
+        try:
+            elt = pd.read_csv(elt_file, sep="\t")
+        except Exception as e:
             err = ui.add_new_error(
                 err,
                 "ini",
                 par_file_name,
-                f"Some elements given in the parameter file are also designated "
-                f"as row- or column-sourced in munger {mu}:\n"
-                f"{duped}",
+                f"Error reading cdf_elements.txt file for munger {mu}"
             )
+        else:
+            rc_from_mu = elt[(elt.source == "row") | (elt.source == "column")]["name"].unique()
+            duped = [x for x in elt_from_par_file if x in rc_from_mu]
+            if duped:
+                err = ui.add_new_error(
+                    err,
+                    "ini",
+                    par_file_name,
+                    f"Some elements given in the parameter file are also designated "
+                    f"as row- or column-sourced in munger {mu}:\n"
+                    f"{duped}",
+                )
     return err
 
 
@@ -946,7 +956,6 @@ class JurisdictionPrepper:
             return error
 
         # clean the dataframe read from the results
-        wr, count_cols, err_df = m.generic_clean(wr)
         # reduce <wr> in size
         fields = [
             f"{field}_SOURCE"
@@ -1531,17 +1540,24 @@ def aggregate_results(election, jurisdiction, contest_type, by_vote_type, dbname
     empty_df_with_good_cols = pd.DataFrame(columns=['contest','count'])
     an = Analyzer(dbname=dbname)
     election_id = db.name_to_id(an.session, "Election", election)
+    jurisdiction_id = db.name_to_id(an.session, "ReportingUnit", jurisdiction)
     if not election_id:
         return empty_df_with_good_cols
     connection = an.session.bind.raw_connection()
     cursor = connection.cursor()
 
-    datafile_list, e = db.data_file_list(cursor, election_id, by="Id")
+    datafile_list, e = db.data_file_list(
+        cursor,
+        election_id,
+        reporting_unit_id=jurisdiction_id,
+        by="Id",
+    )
     if e:
         print(e)
         return empty_df_with_good_cols
     if len(datafile_list) == 0:
-        print(f"No datafiles found for Election_Id {election_id}")
+        print(f"No datafiles found for election {election} and jurisdiction {jurisdiction}"
+              f"(election_id={election_id} and jurisdiction_id={jurisdiction_id})")
         return empty_df_with_good_cols
 
     df, err_str = db.export_rollup_from_db(
@@ -1567,7 +1583,7 @@ def aggregate_results(election, jurisdiction, contest_type, by_vote_type, dbname
             exclude_total=False,
             by_vote_type=True,
         )
-    if err_str:
+    if err_str or df.empty:
         return empty_df_with_good_cols
     return df
 

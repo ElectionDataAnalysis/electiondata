@@ -843,6 +843,9 @@ def load_juris_dframe_into_cdf(session, element, juris_path, error) -> dict:
             # for every instance of the enumeration in the current table, add id and othertype columns to the dataframe
             if e in df.columns:
                 df = m.enum_col_to_id_othertext(df, e, cdf_e)
+            # clean
+            df, err_df = m.clean_ids(df, [f"{e}_Id"])
+            df[f"Other{e}"] = df[f"Other{e}"].fillna("")
 
     # get Ids for any foreign key (or similar) in the table, e.g., Party_Id, etc.
     fk_file_path = os.path.join(
