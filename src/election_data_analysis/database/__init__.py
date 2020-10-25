@@ -511,7 +511,7 @@ def insert_to_cdf_db(
     # get set <mixed_int> of cols with integers & nulls and kludge only those
     temp_columns, type_map = get_column_names(cursor, temp_table)
     mixed_int = [
-        c
+        c  # TODO Selection_Id was numerical but not int here for AZ (xml)
         for c in temp_columns
         if type_map[c] == "integer" and working[c].dtype != "int64"
     ]
@@ -551,7 +551,7 @@ def insert_to_cdf_db(
                 "UPDATE {temp_table} SET {c} = NULL WHERE {c} = 0"
             ).format(temp_table=sql.Identifier(temp_table), c=sql.Identifier(c))
             cursor.execute(q_kludge)
-        connection.commit()
+        connection.commit()   # TODO when Selection_Id was in mixed_int, this emptied temp table, why?
 
         # insert records from temp table into <element> table
         q = sql.SQL(
@@ -573,11 +573,9 @@ def insert_to_cdf_db(
     cursor.execute(q)
 
     if element == "ReportingUnit":
-        # check Id column for '' or 0 (indicating not matched)
-        if pd.api.types.is_numeric_dtype(matched_with_old[f"{element}_Id"]):
-            new_rus = matched_with_old[matched_with_old[f"{element}_Id"] == 0]
-        else:
-            new_rus = matched_with_old[matched_with_old[f"{element}_Id"] == ""]
+        # check get RUs not matched and process them
+        mask = (matched_with_old.ReportingUnit_Id > 0)
+        new_rus = matched_with_old[~mask]
         if not new_rus.empty:
             append_to_composing_reporting_unit_join(engine, new_rus)
 

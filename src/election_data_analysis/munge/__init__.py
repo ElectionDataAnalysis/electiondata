@@ -949,6 +949,7 @@ def raw_elements_to_cdf(
     # add Selection_Id (combines info from BallotMeasureSelection and CandidateContestSelection)
     try:
         working, err = add_selection_id(working, session.bind, juris, err)
+        working, err_df = clean_ids(working, ["Selection_Id"])
     except Exception as exc:
         err = ui.add_new_error(
             err,
