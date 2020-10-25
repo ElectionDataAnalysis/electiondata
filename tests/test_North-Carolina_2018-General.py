@@ -1,8 +1,10 @@
 import election_data_analysis as e
 
+def test_data(dbname):
+    assert e.data_exists("2018 General","North Carolina",dbname=dbname)
 
 def test_nc_statewide_totals_18(dbname):
-    assert (not e.data_exists("2018 General","North Carolina",dbname=dbname) or e.contest_total(
+    assert (e.contest_total(
             "2018 General",
             "North Carolina",
             "US House NC District 3",
@@ -14,7 +16,7 @@ def test_nc_statewide_totals_18(dbname):
 
 
 def test_nc_senate_totals_18(dbname):
-    assert (not e.data_exists("2018 General","North Carolina",dbname=dbname) or e.contest_total(
+    assert (e.contest_total(
             "2018 General",
             "North Carolina",
             "NC Senate District 15",
@@ -26,7 +28,7 @@ def test_nc_senate_totals_18(dbname):
 
 
 def test_nc_house_totals_18(dbname):
-    assert (not e.data_exists("2018 General","North Carolina",dbname=dbname) or e.contest_total(
+    assert (e.contest_total(
             "2018 General",
             "North Carolina",
             "NC House District 1",
@@ -38,9 +40,8 @@ def test_nc_house_totals_18(dbname):
 
 
 def test_nc_contest_by_vote_type_18(dbname):
-    assert (not e.data_exists("2018 General", "North Carolina", dbname=dbname) or
-            e.count_type_total(
-            "2016 General",
+    assert (e.count_type_total(
+            "2018 General",
             "North Carolina",
             "US House NC District 4",
             "absentee-mail",
@@ -51,7 +52,6 @@ def test_nc_contest_by_vote_type_18(dbname):
 
 
 def test_nc_totals_match_vote_type_18(dbname):
-    assert (not e.data_exists("2018 General","North Carolina", dbname=dbname) or
-            e.check_totals_match_vote_types("2018 General","North Carolina" ,dbname=dbname) == True)
+    assert (e.check_totals_match_vote_types("2018 General","North Carolina" ,dbname=dbname) == True)
 
 

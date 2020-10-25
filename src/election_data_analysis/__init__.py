@@ -1362,7 +1362,8 @@ class Analyzer:
 
         if postgres_param_err or eda_err:
             print("Parameter file missing requirements.")
-            print(postgres_param_err)
+            print(f"postgres: {postgres_param_err}")
+            print(f"election_data_analysis: {eda_err}")
             print("Analyzer object not created.")
             return None
 
@@ -1539,6 +1540,8 @@ def aggregate_results(election, jurisdiction, contest_type, by_vote_type, dbname
     # using the analyzer gives us access to DB session
     empty_df_with_good_cols = pd.DataFrame(columns=['contest','count'])
     an = Analyzer(dbname=dbname)
+    if not an:
+        return empty_df_with_good_cols
     election_id = db.name_to_id(an.session, "Election", election)
     jurisdiction_id = db.name_to_id(an.session, "ReportingUnit", jurisdiction)
     if not election_id:
@@ -1590,6 +1593,9 @@ def aggregate_results(election, jurisdiction, contest_type, by_vote_type, dbname
 
 def data_exists(election, jurisdiction, p_path=None, dbname=None):
     an = Analyzer(param_file=p_path, dbname=dbname)
+    if not an:
+        return False
+
     election_id = db.name_to_id(an.session, "Election", election)
     reporting_unit_id = db.name_to_id(an.session, "ReportingUnit", jurisdiction)
     con = an.session.bind.raw_connection()
@@ -1603,6 +1609,8 @@ def data_exists(election, jurisdiction, p_path=None, dbname=None):
         return True
     else:
         return False
+
+
 
 
 def check_totals_match_vote_types(election, jurisdiction, dbname=None):

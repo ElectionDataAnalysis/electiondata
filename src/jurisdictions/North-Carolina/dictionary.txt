@@ -2028,7 +2028,181 @@ CountItemType	early	One Stop
 CountItemType	absentee-mail	Absentee by Mail
 CountItemType	provisional	Provisional
 CountItemType	total	Total Votes
-ReportingUnitCandidate	Vermin Supreme	Vermin Supreme
+CountItemType	early	OS DCC
+CountItemType	early	OS DEEP GAP
+CountItemType	early	OS DUKE
+CountItemType	early	OS EAST
+CountItemType	early	OS ECBL
+CountItemType	early	OS ERL
+CountItemType	early	OS ERWIN
+CountItemType	early	OS FESSENDEN
+CountItemType	early	OS FVBL
+CountItemType	early	OS GLEN ALPINE PAPER
+CountItemType	early	OS GRANITE FALLS
+CountItemType	early	OS GVT PAPER
+CountItemType	early	OS HILDEBRAN PAPER
+CountItemType	early	OS HOS
+CountItemType	early	OS KDH TOWN HALL
+CountItemType	early	OS LCBL
+CountItemType	early	OS LENOIR
+CountItemType	early	OS LINCOLN
+CountItemType	early	OS LOB
+CountItemType	early	OS LOBBY
+CountItemType	early	OS MEAT CAMP
+CountItemType	early	OS NABL
+CountItemType	early	OS NCCU
+CountItemType	early	OS NLB PAPER
+CountItemType	early	OS NRL
+CountItemType	early	OS OCK
+CountItemType	early	OS OFFICE
+CountItemType	early	OS R COLLEGE PAPER
+CountItemType	early	OS SBBL
+CountItemType	early	OS SENIOR CENTER PAPER
+CountItemType	early	OS SRC PAPER
+CountItemType	early	OS SRL
+CountItemType	early	OS WABL
+CountItemType	early	OS WEST
+CountItemType	early	OS WESTERN
+CountItemType	early	OS WGSC
+CountItemType	early	OS WILLIS BUILDING
+CountItemType	early	OS WINTERVILLE
+CountItemType	early	OS WVTH
+CountItemType	early	OS WWCC
+CountItemType	early	OS-CFS
+CountItemType	early	OS-HBP
+CountItemType	early	OS-KTD
+CountItemType	early	OS-LOB
+CountItemType	early	OSAP 1-40
+CountItemType	early	OSAP 41-80
+CountItemType	early	OSAP 81-95
+CountItemType	early	OSCA 1-40
+CountItemType	early	OSCA 41-80
+CountItemType	early	OSCA 81-95
+CountItemType	early	OSCH 1-40
+CountItemType	early	OSCH 41-80
+CountItemType	early	OSCH 81-95
+CountItemType	early	OSKD 1-40
+CountItemType	early	OSKD 41-80
+CountItemType	early	OSKD 81-95
+CountItemType	early	OSLL 1-40
+CountItemType	early	OSLL 41-80
+CountItemType	early	OSLL 81-95
+CountItemType	early	OSLOB 1-40
+CountItemType	early	OSLOB 41-80
+CountItemType	early	OSLOB 81-95
+CountItemType	early	OSNR 1-40
+CountItemType	early	OSNR 41-80
+CountItemType	early	OSNR 81-95
+CountItemType	early	OSOP 1-40
+CountItemType	early	OSOP 41-80
+CountItemType	early	OSOP 81-95
+CountItemType	early	OSTA 1-40
+CountItemType	early	OSTA 41-80
+CountItemType	early	OSTA 81-95
+CountItemType	early	OSWA 1-40
+CountItemType	early	OSWA 41-80
+CountItemType	early	OSWA 81-95
+CountItemType	early	ROCKY MOUNT OS
+CountItemType	early	SEYMOUR SENIOR CENTER
+CountItemType	early	SMITHFIELD
+CountItemType	early	EFLAND
+CountItemType	early	GASTON ONE STOP
+CountItemType	early	NASHVILLE OS
+CountItemType	early	OFFICE ONE STOP
+CountItemType	early	ONE STOP
+CountItemType	early	ONE STOP #1
+CountItemType	early	ONE STOP #2
+CountItemType	early	ONE STOP #3
+CountItemType	early	ONE STOP #4
+CountItemType	early	ONE STOP A 1-20
+CountItemType	early	ONE STOP A 21-45
+CountItemType	early	ONE STOP B 1-20
+CountItemType	early	ONE STOP B 21-45
+CountItemType	early	ONE STOP BOE
+CountItemType	early	ONE STOP C 1-20
+CountItemType	early	ONE STOP C 21-45
+CountItemType	early	ONE STOP D 1-20
+CountItemType	early	ONE STOP D 21-45
+CountItemType	early	ONE STOP DANBURY
+CountItemType	early	ONE STOP GARL
+CountItemType	early	ONE STOP KING
+CountItemType	early	ONE STOP LIBRARY
+CountItemType	early	ONE STOP MCSWAIN
+CountItemType	early	ONE STOP MILLERS CREEK
+CountItemType	early	ONE STOP NGRV
+CountItemType	early	ONE STOP OFFICE
+CountItemType	early	ONE STOP PLEASANT HILL
+CountItemType	early	ONE STOP WALNUT COVE
+CountItemType	early	OS ADMIN
+CountItemType	early	OS AG CENTER
+CountItemType	early	OS ANNEX PAPER
+CountItemType	early	OS ASU
+CountItemType	early	OS AURORA
+CountItemType	early	OS AVML
+CountItemType	early	OS BCPI
+CountItemType	early	OS BELHAVEN
+CountItemType	early	OS BLOWING ROCK
+CountItemType	early	OS BMBL
+CountItemType	early	OS BOE
+CountItemType	early	OS BOE LOBBY PAPER
+CountItemType	early	OS BOE PAPER
+CountItemType	early	OS CAB PAPER
+CountItemType	early	OS CFCC PAPER
+CountItemType	early	OS CHOCOWINITY
+CountItemType	early	OS COMMUNITY SCHOOLS
+CountItemType	early	OS COUNTY OFFICE
+CountItemType	early	BOE
+CountItemType	early	CARRBORO TOWN HALL
+CountItemType	early	CHAPEL OF THE CROSS
+CountItemType	early	CLAYTON
+CountItemType	early	CLEVELAND
+CountItemType	absentee-mail	ABS
+CountItemType	absentee-mail	ABS ADDTNL
+CountItemType	absentee-mail	ABS BY MAIL
+CountItemType	absentee-mail	ABSEN 1-40
+CountItemType	absentee-mail	ABSEN 41-80
+CountItemType	absentee-mail	ABSEN 81-95
+CountItemType	absentee-mail	ABSENTEE
+CountItemType	absentee-mail	ABSENTEE 1
+CountItemType	absentee-mail	ABSENTEE 1-20
+CountItemType	absentee-mail	ABSENTEE 2
+CountItemType	absentee-mail	ABSENTEE 21-45
+CountItemType	absentee-mail	ABSENTEE 3
+CountItemType	absentee-mail	ABSENTEE BY MAIL
+CountItemType	absentee-mail	ABSENTEE BY MAIL 1-35
+CountItemType	absentee-mail	ABSENTEE BY MAIL 36-70
+CountItemType	absentee-mail	ABSENTEE BY MAIL 71-106
+CountItemType	absentee-mail	ABSENTEE MAIL
+CountItemType	election-day	CURBSIDE 1
+CountItemType	election-day	CURBSIDE 1-35
+CountItemType	election-day	CURBSIDE 2
+CountItemType	election-day	CURBSIDE 3
+CountItemType	election-day	CURBSIDE 36-70
+CountItemType	election-day	CURBSIDE 71-106
+CountItemType	election-day	OS CURBSIDE
+CountItemType	election-day	TRANS
+CountItemType	election-day	TRANS 1-40
+CountItemType	election-day	TRANS 41-80
+CountItemType	election-day	TRANS 81-95
+CountItemType	election-day	TRANSFER
+CountItemType	election-day	TRANSFER 1-20
+CountItemType	election-day	TRANSFER 21-45
+CountItemType	election-day	TRANSFER PAPER
+CountItemType	provisional	PROV
+CountItemType	provisional	PROVI 1-40
+CountItemType	provisional	PROVI 41-80
+CountItemType	provisional	PROVI 81-95
+CountItemType	provisional	PROVISIOINAL
+CountItemType	provisional	PROVISIONAL
+CountItemType	provisional	PROVISIONAL 1
+CountItemType	provisional	PROVISIONAL 1-20
+CountItemType	provisional	PROVISIONAL 1-35
+CountItemType	provisional	PROVISIONAL 2
+CountItemType	provisional	PROVISIONAL 21-45
+CountItemType	provisional	PROVISIONAL 3
+CountItemType	provisional	PROVISIONAL 36-70
+CountItemType	provisional	PROVISIONAL 71-106
+Candidate	Vermin Supreme	Vermin Supreme
 Candidate	Donovan Alexander Watson	Donovan Alexander Watson
 Candidate	Cal Cunningham	Cal Cunningham
 Candidate	No Preference	No Preference
@@ -11619,41 +11793,41 @@ ReportingUnit	North Carolina;Avery County;14	AVERY;14
 ReportingUnit	North Carolina;Avery County;16	AVERY;16
 ReportingUnit	North Carolina;Avery County;13	AVERY;13
 ReportingUnit	North Carolina;Avery County;02	AVERY;02
-ReportingUnit	North Carolina;Avery County;ABSENTEE	AVERY;ABSENTEE
+ReportingUnit	North Carolina;Avery County	AVERY;ABSENTEE
 ReportingUnit	North Carolina;Avery County;15	AVERY;15
-ReportingUnit	North Carolina;Avery County;PROVISIONAL	AVERY;PROVISIONAL
+ReportingUnit	North Carolina;Avery County	AVERY;PROVISIONAL
 ReportingUnit	North Carolina;Avery County;01	AVERY;01
 ReportingUnit	North Carolina;Avery County;07	AVERY;07
 ReportingUnit	North Carolina;Avery County;04	AVERY;04
-ReportingUnit	North Carolina;Avery County;ONE STOP	AVERY;ONE STOP
+ReportingUnit	North Carolina;Avery County	AVERY;ONE STOP
 ReportingUnit	North Carolina;Avery County;12	AVERY;12
 ReportingUnit	North Carolina;Avery County;03	AVERY;03
 ReportingUnit	North Carolina;Avery County;06	AVERY;06
 ReportingUnit	North Carolina;Avery County;09	AVERY;09
 ReportingUnit	North Carolina;Avery County;08	AVERY;08
 ReportingUnit	North Carolina;Avery County;05	AVERY;05
-ReportingUnit	North Carolina;Bertie County;OS-POW	BERTIE;OS-POW
+ReportingUnit	North Carolina;Bertie County	BERTIE;OS-POW
 ReportingUnit	North Carolina;Bertie County;W2	BERTIE;W2
 ReportingUnit	North Carolina;Bertie County;C2	BERTIE;C2
 ReportingUnit	North Carolina;Bertie County;SN	BERTIE;SN
-ReportingUnit	North Carolina;Bertie County;OS-LOB	BERTIE;OS-LOB
-ReportingUnit	North Carolina;Bertie County;ABSENTEE	BERTIE;ABSENTEE
+ReportingUnit	North Carolina;Bertie County	BERTIE;OS-LOB
+ReportingUnit	North Carolina;Bertie County	BERTIE;ABSENTEE
 ReportingUnit	North Carolina;Bertie County;C1	BERTIE;C1
-ReportingUnit	North Carolina;Bertie County;PROVISIONAL	BERTIE;PROVISIONAL
+ReportingUnit	North Carolina;Bertie County	BERTIE;PROVISIONAL
 ReportingUnit	North Carolina;Bertie County;WD	BERTIE;WD
 ReportingUnit	North Carolina;Bladen County;P30	BLADEN;P30
 ReportingUnit	North Carolina;Bladen County;P60	BLADEN;P60
-ReportingUnit	North Carolina;Bladen County;PROVISIONAL	BLADEN;PROVISIONAL
-ReportingUnit	North Carolina;Bladen County;TRANSFER	BLADEN;TRANSFER
-ReportingUnit	North Carolina;Bladen County;ONE STOP LIBRARY	BLADEN;ONE STOP LIBRARY
+ReportingUnit	North Carolina;Bladen County	BLADEN;PROVISIONAL
+ReportingUnit	North Carolina;Bladen County	BLADEN;TRANSFER
+ReportingUnit	North Carolina;Bladen County	BLADEN;ONE STOP LIBRARY
 ReportingUnit	North Carolina;Bladen County;P502	BLADEN;P502
-ReportingUnit	North Carolina;Bladen County;ONE STOP DUBLIN	BLADEN;ONE STOP DUBLIN
+ReportingUnit	North Carolina;Bladen County	BLADEN;ONE STOP DUBLIN
 ReportingUnit	North Carolina;Bladen County;P45	BLADEN;P45
 ReportingUnit	North Carolina;Bladen County;P202	BLADEN;P202
-ReportingUnit	North Carolina;Bladen County;ONE STOP B-BORO	BLADEN;ONE STOP B-BORO
+ReportingUnit	North Carolina;Bladen County	BLADEN;ONE STOP B-BORO
 ReportingUnit	North Carolina;Bladen County;P501	BLADEN;P501
 ReportingUnit	North Carolina;Bladen County;MAIL ABSENTEE	BLADEN;MAIL ABSENTEE
-ReportingUnit	North Carolina;Bladen County;ONE STOP EA	BLADEN;ONE STOP EA
+ReportingUnit	North Carolina;Bladen County	BLADEN;ONE STOP EA
 ReportingUnit	North Carolina;Bladen County;P70	BLADEN;P70
 ReportingUnit	North Carolina;Bladen County;P201	BLADEN;P201
 ReportingUnit	North Carolina;Brunswick County;06	BRUNSWICK;06
@@ -11670,13 +11844,13 @@ ReportingUnit	North Carolina;Brunswick County;01	BRUNSWICK;01
 ReportingUnit	North Carolina;Brunswick County;19	BRUNSWICK;19
 ReportingUnit	North Carolina;Brunswick County;16	BRUNSWICK;16
 ReportingUnit	North Carolina;Brunswick County;04A	BRUNSWICK;04A
-ReportingUnit	North Carolina;Brunswick County;PROVISIONAL	BRUNSWICK;PROVISIONAL
+ReportingUnit	North Carolina;Brunswick County	BRUNSWICK;PROVISIONAL
 ReportingUnit	North Carolina;Brunswick County;04B1	BRUNSWICK;04B1
 ReportingUnit	North Carolina;Brunswick County;07	BRUNSWICK;07
 ReportingUnit	North Carolina;Brunswick County;12	BRUNSWICK;12
 ReportingUnit	North Carolina;Brunswick County;10A	BRUNSWICK;10A
 ReportingUnit	North Carolina;Brunswick County;23	BRUNSWICK;23
-ReportingUnit	North Carolina;Brunswick County;ABSENTEE MAIL	BRUNSWICK;ABSENTEE MAIL
+ReportingUnit	North Carolina;Brunswick County	BRUNSWICK;ABSENTEE MAIL
 ReportingUnit	North Carolina;Brunswick County;17	BRUNSWICK;17
 ReportingUnit	North Carolina;Brunswick County;10B	BRUNSWICK;10B
 ReportingUnit	North Carolina;Buncombe County;44.1	BUNCOMBE;44.1
@@ -11686,70 +11860,70 @@ ReportingUnit	North Carolina;Buncombe County;09.1	BUNCOMBE;09.1
 ReportingUnit	North Carolina;Buncombe County;43.2	BUNCOMBE;43.2
 ReportingUnit	North Carolina;Buncombe County;02.1	BUNCOMBE;02.1
 ReportingUnit	North Carolina;Buncombe County;18.2	BUNCOMBE;18.2
-ReportingUnit	North Carolina;Buncombe County;OS FVBL	BUNCOMBE;OS FVBL
-ReportingUnit	North Carolina;Buncombe County;OS MORC	BUNCOMBE;OS MORC
+ReportingUnit	North Carolina;Buncombe County	BUNCOMBE;OS FVBL
+ReportingUnit	North Carolina;Buncombe County	BUNCOMBE;OS MORC
 ReportingUnit	North Carolina;Buncombe County;12.1	BUNCOMBE;12.1
 ReportingUnit	North Carolina;Buncombe County;29.2	BUNCOMBE;29.2
 ReportingUnit	North Carolina;Buncombe County;55.1	BUNCOMBE;55.1
 ReportingUnit	North Carolina;Buncombe County;61.1	BUNCOMBE;61.1
-ReportingUnit	North Carolina;Buncombe County;ABSENTEE	BUNCOMBE;ABSENTEE
+ReportingUnit	North Carolina;Buncombe County	BUNCOMBE;ABSENTEE
 ReportingUnit	North Carolina;Buncombe County;35.1	BUNCOMBE;35.1
 ReportingUnit	North Carolina;Buncombe County;54.2	BUNCOMBE;54.2
 ReportingUnit	North Carolina;Buncombe County;57.1	BUNCOMBE;57.1
 ReportingUnit	North Carolina;Buncombe County;59.1	BUNCOMBE;59.1
 ReportingUnit	North Carolina;Buncombe County;07.1	BUNCOMBE;07.1
 ReportingUnit	North Carolina;Buncombe County;20.1	BUNCOMBE;20.1
-ReportingUnit	North Carolina;Buncombe County;OS WABL	BUNCOMBE;OS WABL
+ReportingUnit	North Carolina;Buncombe County	BUNCOMBE;OS WABL
 ReportingUnit	North Carolina;Buncombe County;03.1	BUNCOMBE;03.1
 ReportingUnit	North Carolina;Buncombe County;08.2	BUNCOMBE;08.2
 ReportingUnit	North Carolina;Buncombe County;10.1	BUNCOMBE;10.1
 ReportingUnit	North Carolina;Buncombe County;51.2	BUNCOMBE;51.2
 ReportingUnit	North Carolina;Buncombe County;52.1	BUNCOMBE;52.1
 ReportingUnit	North Carolina;Buncombe County;71.1	BUNCOMBE;71.1
-ReportingUnit	North Carolina;Buncombe County;OS ACCC	BUNCOMBE;OS ACCC
-ReportingUnit	North Carolina;Buncombe County;OS ABTC	BUNCOMBE;OS ABTC
-ReportingUnit	North Carolina;Buncombe County;OS NABL	BUNCOMBE;OS NABL
-ReportingUnit	North Carolina;Buncombe County;OS NHPC	BUNCOMBE;OS NHPC
-ReportingUnit	North Carolina;Buncombe County;OS WOCO	BUNCOMBE;OS WOCO
+ReportingUnit	North Carolina;Buncombe County	BUNCOMBE;OS ACCC
+ReportingUnit	North Carolina;Buncombe County	BUNCOMBE;OS ABTC
+ReportingUnit	North Carolina;Buncombe County	BUNCOMBE;OS NABL
+ReportingUnit	North Carolina;Buncombe County	BUNCOMBE;OS NHPC
+ReportingUnit	North Carolina;Buncombe County	BUNCOMBE;OS WOCO
 ReportingUnit	North Carolina;Buncombe County;08.3	BUNCOMBE;08.3
 ReportingUnit	North Carolina;Buncombe County;14.3	BUNCOMBE;14.3
 ReportingUnit	North Carolina;Buncombe County;26.1	BUNCOMBE;26.1
 ReportingUnit	North Carolina;Buncombe County;28.1	BUNCOMBE;28.1
-ReportingUnit	North Carolina;Buncombe County;OS BMBL	BUNCOMBE;OS BMBL
+ReportingUnit	North Carolina;Buncombe County	BUNCOMBE;OS BMBL
 ReportingUnit	North Carolina;Buncombe County;34.1	BUNCOMBE;34.1
-ReportingUnit	North Carolina;Buncombe County;OS PACK	BUNCOMBE;OS PACK
+ReportingUnit	North Carolina;Buncombe County	BUNCOMBE;OS PACK
 ReportingUnit	North Carolina;Buncombe County;22.2	BUNCOMBE;22.2
 ReportingUnit	North Carolina;Buncombe County;31.1	BUNCOMBE;31.1
 ReportingUnit	North Carolina;Buncombe County;36.1	BUNCOMBE;36.1
 ReportingUnit	North Carolina;Buncombe County;47.1	BUNCOMBE;47.1
-ReportingUnit	North Carolina;Buncombe County;OS PCBC	BUNCOMBE;OS PCBC
-ReportingUnit	North Carolina;Buncombe County;OS SBBL	BUNCOMBE;OS SBBL
-ReportingUnit	North Carolina;Buncombe County;PROVISIONAL	BUNCOMBE;PROVISIONAL
+ReportingUnit	North Carolina;Buncombe County	BUNCOMBE;OS PCBC
+ReportingUnit	North Carolina;Buncombe County	BUNCOMBE;OS SBBL
+ReportingUnit	North Carolina;Buncombe County	BUNCOMBE;PROVISIONAL
 ReportingUnit	North Carolina;Buncombe County;05.1	BUNCOMBE;05.1
 ReportingUnit	North Carolina;Buncombe County;60.2	BUNCOMBE;60.2
-ReportingUnit	North Carolina;Buncombe County;OS WVTH	BUNCOMBE;OS WVTH
+ReportingUnit	North Carolina;Buncombe County	BUNCOMBE;OS WVTH
 ReportingUnit	North Carolina;Buncombe County;11.1	BUNCOMBE;11.1
 ReportingUnit	North Carolina;Buncombe County;14.2	BUNCOMBE;14.2
 ReportingUnit	North Carolina;Buncombe County;33.3	BUNCOMBE;33.3
 ReportingUnit	North Carolina;Buncombe County;38.2	BUNCOMBE;38.2
 ReportingUnit	North Carolina;Buncombe County;65.1	BUNCOMBE;65.1
-ReportingUnit	North Carolina;Buncombe County;OS BTFD	BUNCOMBE;OS BTFD
-ReportingUnit	North Carolina;Buncombe County;TRANSFER	BUNCOMBE;TRANSFER
+ReportingUnit	North Carolina;Buncombe County	BUNCOMBE;OS BTFD
+ReportingUnit	North Carolina;Buncombe County	BUNCOMBE;TRANSFER
 ReportingUnit	North Carolina;Buncombe County;15.1	BUNCOMBE;15.1
 ReportingUnit	North Carolina;Buncombe County;23.2	BUNCOMBE;23.2
-ReportingUnit	North Carolina;Buncombe County;OS AVML	BUNCOMBE;OS AVML
-ReportingUnit	North Carolina;Buncombe County;OS LCBL	BUNCOMBE;OS LCBL
+ReportingUnit	North Carolina;Buncombe County	BUNCOMBE;OS AVML
+ReportingUnit	North Carolina;Buncombe County	BUNCOMBE;OS LCBL
 ReportingUnit	North Carolina;Buncombe County;70.1	BUNCOMBE;70.1
 ReportingUnit	North Carolina;Buncombe County;21.1	BUNCOMBE;21.1
 ReportingUnit	North Carolina;Buncombe County;49.1	BUNCOMBE;49.1
 ReportingUnit	North Carolina;Buncombe County;50.1	BUNCOMBE;50.1
-ReportingUnit	North Carolina;Buncombe County;OS ECBL	BUNCOMBE;OS ECBL
+ReportingUnit	North Carolina;Buncombe County	BUNCOMBE;OS ECBL
 ReportingUnit	North Carolina;Buncombe County;04.1	BUNCOMBE;04.1
-ReportingUnit	North Carolina;Buncombe County;OS FCAM	BUNCOMBE;OS FCAM
-ReportingUnit	North Carolina;Buncombe County;OS UNCA	BUNCOMBE;OS UNCA
+ReportingUnit	North Carolina;Buncombe County	BUNCOMBE;OS FCAM
+ReportingUnit	North Carolina;Buncombe County	BUNCOMBE;OS UNCA
 ReportingUnit	North Carolina;Buncombe County;63.1	BUNCOMBE;63.1
 ReportingUnit	North Carolina;Buncombe County;681	BUNCOMBE;681
-ReportingUnit	North Carolina;Buncombe County;OS WGSC	BUNCOMBE;OS WGSC
+ReportingUnit	North Carolina;Buncombe County	BUNCOMBE;OS WGSC
 ReportingUnit	North Carolina;Cabarrus County;12-10	CABARRUS;12-10
 ReportingUnit	North Carolina;Cabarrus County;02-06	CABARRUS;02-06
 ReportingUnit	North Carolina;Cabarrus County;08-00	CABARRUS;08-00
@@ -11762,11 +11936,11 @@ ReportingUnit	North Carolina;Cabarrus County;12-09	CABARRUS;12-09
 ReportingUnit	North Carolina;Cabarrus County;02-05	CABARRUS;02-05
 ReportingUnit	North Carolina;Cabarrus County;01-04	CABARRUS;01-04
 ReportingUnit	North Carolina;Cabarrus County;01-07	CABARRUS;01-07
-ReportingUnit	North Carolina;Cabarrus County;OS-HBL	CABARRUS;OS-HBL
+ReportingUnit	North Carolina;Cabarrus County	CABARRUS;OS-HBL
 ReportingUnit	North Carolina;Cabarrus County;04-02	CABARRUS;04-02
 ReportingUnit	North Carolina;Cabarrus County;01-10	CABARRUS;01-10
-ReportingUnit	North Carolina;Cabarrus County;OS-CFS	CABARRUS;OS-CFS
-ReportingUnit	North Carolina;Cabarrus County;OS-LOB	CABARRUS;OS-LOB
+ReportingUnit	North Carolina;Cabarrus County	CABARRUS;OS-CFS
+ReportingUnit	North Carolina;Cabarrus County	CABARRUS;OS-LOB
 ReportingUnit	North Carolina;Cabarrus County;12-11	CABARRUS;12-11
 ReportingUnit	North Carolina;Cabarrus County;04-03	CABARRUS;04-03
 ReportingUnit	North Carolina;Cabarrus County;04-04	CABARRUS;04-04
@@ -11775,12 +11949,12 @@ ReportingUnit	North Carolina;Cabarrus County;02-08	CABARRUS;02-08
 ReportingUnit	North Carolina;Cabarrus County;11-01	CABARRUS;11-01
 ReportingUnit	North Carolina;Cabarrus County;11-02	CABARRUS;11-02
 ReportingUnit	North Carolina;Cabarrus County;06-00	CABARRUS;06-00
-ReportingUnit	North Carolina;Cabarrus County;PROVISIONAL	CABARRUS;PROVISIONAL
+ReportingUnit	North Carolina;Cabarrus County	CABARRUS;PROVISIONAL
 ReportingUnit	North Carolina;Cabarrus County;02-01	CABARRUS;02-01
 ReportingUnit	North Carolina;Cabarrus County;12-05	CABARRUS;12-05
 ReportingUnit	North Carolina;Cabarrus County;01-06	CABARRUS;01-06
 ReportingUnit	North Carolina;Cabarrus County;01-09	CABARRUS;01-09
-ReportingUnit	North Carolina;Cabarrus County;TRANSFER	CABARRUS;TRANSFER
+ReportingUnit	North Carolina;Cabarrus County	CABARRUS;TRANSFER
 ReportingUnit	North Carolina;Cabarrus County;04-08	CABARRUS;04-08
 ReportingUnit	North Carolina;Cabarrus County;04-05	CABARRUS;04-05
 ReportingUnit	North Carolina;Cabarrus County;10-00	CABARRUS;10-00
@@ -11789,7 +11963,7 @@ ReportingUnit	North Carolina;Cabarrus County;12-08	CABARRUS;12-08
 ReportingUnit	North Carolina;Cabarrus County;12-07	CABARRUS;12-07
 ReportingUnit	North Carolina;Cabarrus County;09-00	CABARRUS;09-00
 ReportingUnit	North Carolina;Cabarrus County;04-07	CABARRUS;04-07
-ReportingUnit	North Carolina;Cabarrus County;OS-CBB	CABARRUS;OS-CBB
+ReportingUnit	North Carolina;Cabarrus County	CABARRUS;OS-CBB
 ReportingUnit	North Carolina;Cabarrus County;12-01	CABARRUS;12-01
 ReportingUnit	North Carolina;Cabarrus County;12-02	CABARRUS;12-02
 ReportingUnit	North Carolina;Cabarrus County;02-07	CABARRUS;02-07
@@ -11798,7 +11972,7 @@ ReportingUnit	North Carolina;Cabarrus County;02-03	CABARRUS;02-03
 ReportingUnit	North Carolina;Cabarrus County;01-02	CABARRUS;01-02
 ReportingUnit	North Carolina;Cabarrus County;01-08	CABARRUS;01-08
 ReportingUnit	North Carolina;Cabarrus County;03-00	CABARRUS;03-00
-ReportingUnit	North Carolina;Cabarrus County;ABSENTEE	CABARRUS;ABSENTEE
+ReportingUnit	North Carolina;Cabarrus County	CABARRUS;ABSENTEE
 ReportingUnit	North Carolina;Cabarrus County;02-09	CABARRUS;02-09
 ReportingUnit	North Carolina;Cabarrus County;05-00	CABARRUS;05-00
 ReportingUnit	North Carolina;Cabarrus County;02-02	CABARRUS;02-02
@@ -11808,48 +11982,48 @@ ReportingUnit	North Carolina;Caldwell County;PR30	CALDWELL;PR30
 ReportingUnit	North Carolina;Caldwell County;PR31	CALDWELL;PR31
 ReportingUnit	North Carolina;Caldwell County;PR07	CALDWELL;PR07
 ReportingUnit	North Carolina;Caldwell County;PR16	CALDWELL;PR16
-ReportingUnit	North Carolina;Caldwell County;ONE STOP GRANITE FALLS	CALDWELL;ONE STOP GRANITE FALLS
+ReportingUnit	North Carolina;Caldwell County	CALDWELL;ONE STOP GRANITE FALLS
 ReportingUnit	North Carolina;Caldwell County;PR17	CALDWELL;PR17
 ReportingUnit	North Carolina;Caldwell County;PR13	CALDWELL;PR13
 ReportingUnit	North Carolina;Caldwell County;PR18	CALDWELL;PR18
 ReportingUnit	North Carolina;Caldwell County;PR08	CALDWELL;PR08
 ReportingUnit	North Carolina;Caldwell County;PR33	CALDWELL;PR33
-ReportingUnit	North Carolina;Caldwell County;ONE STOP LENOIR	CALDWELL;ONE STOP LENOIR
-ReportingUnit	North Carolina;Caldwell County;PROVISIONAL	CALDWELL;PROVISIONAL
-ReportingUnit	North Carolina;Caldwell County;ABSENTEE	CALDWELL;ABSENTEE
+ReportingUnit	North Carolina;Caldwell County	CALDWELL;ONE STOP LENOIR
+ReportingUnit	North Carolina;Caldwell County	CALDWELL;PROVISIONAL
+ReportingUnit	North Carolina;Caldwell County	CALDWELL;ABSENTEE
 ReportingUnit	North Carolina;Caldwell County;PR34	CALDWELL;PR34
 ReportingUnit	North Carolina;Caldwell County;PR35	CALDWELL;PR35
-ReportingUnit	North Carolina;Camden County;ONE STOP	CAMDEN;ONE STOP
-ReportingUnit	North Carolina;Camden County;PROVISIONAL	CAMDEN;PROVISIONAL
+ReportingUnit	North Carolina;Camden County	CAMDEN;ONE STOP
+ReportingUnit	North Carolina;Camden County	CAMDEN;PROVISIONAL
 ReportingUnit	North Carolina;Ashe County;06	ASHE;06
 ReportingUnit	North Carolina;Ashe County;03	ASHE;03
 ReportingUnit	North Carolina;Ashe County;14	ASHE;14
 ReportingUnit	North Carolina;Ashe County;11	ASHE;11
-ReportingUnit	North Carolina;Ashe County;ABSENTEE	ASHE;ABSENTEE
+ReportingUnit	North Carolina;Ashe County	ASHE;ABSENTEE
 ReportingUnit	North Carolina;Ashe County;04	ASHE;04
 ReportingUnit	North Carolina;Ashe County;07	ASHE;07
 ReportingUnit	North Carolina;Ashe County;17	ASHE;17
 ReportingUnit	North Carolina;Ashe County;09	ASHE;09
-ReportingUnit	North Carolina;Ashe County;ONE STOP	ASHE;ONE STOP
+ReportingUnit	North Carolina;Ashe County	ASHE;ONE STOP
 ReportingUnit	North Carolina;Ashe County;08	ASHE;08
 ReportingUnit	North Carolina;Ashe County;02	ASHE;02
-ReportingUnit	North Carolina;Ashe County;PROVISIONAL	ASHE;PROVISIONAL
+ReportingUnit	North Carolina;Ashe County	ASHE;PROVISIONAL
 ReportingUnit	North Carolina;Beaufort County;WDPD	BEAUFORT;WDPD
 ReportingUnit	North Carolina;Beaufort County;WASH1	BEAUFORT;WASH1
 ReportingUnit	North Carolina;Beaufort County;WASH2	BEAUFORT;WASH2
 ReportingUnit	North Carolina;Beaufort County;PINET	BEAUFORT;PINET
 ReportingUnit	North Carolina;Beaufort County;EDWAR	BEAUFORT;EDWAR
-ReportingUnit	North Carolina;Beaufort County;PROVISIONAL	BEAUFORT;PROVISIONAL
+ReportingUnit	North Carolina;Beaufort County	BEAUFORT;PROVISIONAL
 ReportingUnit	North Carolina;Beaufort County;WASH4	BEAUFORT;WASH4
 ReportingUnit	North Carolina;Beaufort County;GILEA	BEAUFORT;GILEA
 ReportingUnit	North Carolina;Beaufort County;PSJW3	BEAUFORT;PSJW3
-ReportingUnit	North Carolina;Beaufort County;OS BOE	BEAUFORT;OS BOE
-ReportingUnit	North Carolina;Beaufort County;OS CHO	BEAUFORT;OS CHO
-ReportingUnit	North Carolina;Beaufort County;ABSENTEE	BEAUFORT;ABSENTEE
+ReportingUnit	North Carolina;Beaufort County	BEAUFORT;OS BOE
+ReportingUnit	North Carolina;Beaufort County	BEAUFORT;OS CHO
+ReportingUnit	North Carolina;Beaufort County	BEAUFORT;ABSENTEE
 ReportingUnit	North Carolina;Beaufort County;OLDF	BEAUFORT;OLDF
 ReportingUnit	North Carolina;Beaufort County;CHOCO	BEAUFORT;CHOCO
-ReportingUnit	North Carolina;Beaufort County;OS BEL	BEAUFORT;OS BEL
-ReportingUnit	North Carolina;Beaufort County;OS AUR	BEAUFORT;OS AUR
+ReportingUnit	North Carolina;Beaufort County	BEAUFORT;OS BEL
+ReportingUnit	North Carolina;Beaufort County	BEAUFORT;OS AUR
 ReportingUnit	North Carolina;Beaufort County;RVRD	BEAUFORT;RVRD
 ReportingUnit	North Carolina;Beaufort County;BELHV	BEAUFORT;BELHV
 ReportingUnit	North Carolina;Burke County;0034	BURKE;0034
@@ -11874,7 +12048,7 @@ ReportingUnit	North Carolina;Burke County;0051	BURKE;0051
 ReportingUnit	North Carolina;Burke County;0062	BURKE;0062
 ReportingUnit	North Carolina;Burke County;0012	BURKE;0012
 ReportingUnit	North Carolina;Burke County;0047-B	BURKE;0047-B
-ReportingUnit	North Carolina;Burke County;ABSENTEE	BURKE;ABSENTEE
+ReportingUnit	North Carolina;Burke County	BURKE;ABSENTEE
 ReportingUnit	North Carolina;Burke County;0039	BURKE;0039
 ReportingUnit	North Carolina;Burke County;0021	BURKE;0021
 ReportingUnit	North Carolina;Burke County;0035	BURKE;0035
@@ -11887,62 +12061,62 @@ ReportingUnit	North Carolina;Burke County;0064	BURKE;0064
 ReportingUnit	North Carolina;Burke County;0053	BURKE;0053
 ReportingUnit	North Carolina;Burke County;0031	BURKE;0031
 ReportingUnit	North Carolina;Anson County;POLK	ANSON;POLK
-ReportingUnit	North Carolina;Anson County;ONE STOP	ANSON;ONE STOP
+ReportingUnit	North Carolina;Anson County	ANSON;ONE STOP
 ReportingUnit	North Carolina;Anson County;W1	ANSON;W1
 ReportingUnit	North Carolina;Anson County;GULL	ANSON;GULL
 ReportingUnit	North Carolina;Anson County;ANS	ANSON;ANS
 ReportingUnit	North Carolina;Anson County;BURN	ANSON;BURN
-ReportingUnit	North Carolina;Anson County;PROVISIONAL	ANSON;PROVISIONAL
+ReportingUnit	North Carolina;Anson County	ANSON;PROVISIONAL
 ReportingUnit	North Carolina;Anson County;WS	ANSON;WS
-ReportingUnit	North Carolina;Anson County;ABSENTEE	ANSON;ABSENTEE
+ReportingUnit	North Carolina;Anson County	ANSON;ABSENTEE
 ReportingUnit	North Carolina;Anson County;W3	ANSON;W3
 ReportingUnit	North Carolina;Anson County;W2	ANSON;W2
 ReportingUnit	North Carolina;Alleghany County;01	ALLEGHANY;01
 ReportingUnit	North Carolina;Alleghany County;06A	ALLEGHANY;06A
-ReportingUnit	North Carolina;Alleghany County;ABSENTEE	ALLEGHANY;ABSENTEE
+ReportingUnit	North Carolina;Alleghany County	ALLEGHANY;ABSENTEE
 ReportingUnit	North Carolina;Alleghany County;CURBSIDE	ALLEGHANY;CURBSIDE
 ReportingUnit	North Carolina;Alleghany County;03A	ALLEGHANY;03A
 ReportingUnit	North Carolina;Alleghany County;04	ALLEGHANY;04
-ReportingUnit	North Carolina;Alleghany County;PROVISIONAL	ALLEGHANY;PROVISIONAL
+ReportingUnit	North Carolina;Alleghany County	ALLEGHANY;PROVISIONAL
 ReportingUnit	North Carolina;Carteret County;ABCH	CARTERET;ABCH
-ReportingUnit	North Carolina;Carteret County;TRANSFER	CARTERET;TRANSFER
+ReportingUnit	North Carolina;Carteret County	CARTERET;TRANSFER
 ReportingUnit	North Carolina;Carteret County;NPT1	CARTERET;NPT1
 ReportingUnit	North Carolina;Carteret County;OTBE	CARTERET;OTBE
-ReportingUnit	North Carolina;Carteret County;OS-EAS	CARTERET;OS-EAS
+ReportingUnit	North Carolina;Carteret County	CARTERET;OS-EAS
 ReportingUnit	North Carolina;Carteret County;NRIV	CARTERET;NRIV
-ReportingUnit	North Carolina;Carteret County;OS-MHD	CARTERET;OS-MHD
+ReportingUnit	North Carolina;Carteret County	CARTERET;OS-MHD
 ReportingUnit	North Carolina;Carteret County;BFT1	CARTERET;BFT1
 ReportingUnit	North Carolina;Carteret County;MCRK	CARTERET;MCRK
-ReportingUnit	North Carolina;Carteret County;OS-BOE	CARTERET;OS-BOE
-ReportingUnit	North Carolina;Carteret County;OS-CEN	CARTERET;OS-CEN
+ReportingUnit	North Carolina;Carteret County	CARTERET;OS-BOE
+ReportingUnit	North Carolina;Carteret County	CARTERET;OS-CEN
 ReportingUnit	North Carolina;Carteret County;MERR	CARTERET;MERR
 ReportingUnit	North Carolina;Carteret County;BOGU	CARTERET;BOGU
-ReportingUnit	North Carolina;Carteret County;PROVISIONAL	CARTERET;PROVISIONAL
-ReportingUnit	North Carolina;Carteret County;OS-WES	CARTERET;OS-WES
+ReportingUnit	North Carolina;Carteret County	CARTERET;PROVISIONAL
+ReportingUnit	North Carolina;Carteret County	CARTERET;OS-WES
 ReportingUnit	North Carolina;Carteret County;STEL	CARTERET;STEL
 ReportingUnit	North Carolina;Carteret County;MHD1	CARTERET;MHD1
 ReportingUnit	North Carolina;Carteret County;MHD2	CARTERET;MHD2
 ReportingUnit	North Carolina;Carteret County;WILD	CARTERET;WILD
 ReportingUnit	North Carolina;Carteret County;CISL	CARTERET;CISL
 ReportingUnit	North Carolina;Carteret County;IBSP	CARTERET;IBSP
-ReportingUnit	North Carolina;Carteret County;ABSENTEE	CARTERET;ABSENTEE
+ReportingUnit	North Carolina;Carteret County	CARTERET;ABSENTEE
 ReportingUnit	North Carolina;Carteret County;MASM	CARTERET;MASM
 ReportingUnit	North Carolina;Carteret County;BFT2	CARTERET;BFT2
 ReportingUnit	North Carolina;Camden County;SH	CAMDEN;SH
-ReportingUnit	North Carolina;Camden County;ABSENTEE	CAMDEN;ABSENTEE
-ReportingUnit	North Carolina;Camden County;TRANSFER	CAMDEN;TRANSFER
+ReportingUnit	North Carolina;Camden County	CAMDEN;ABSENTEE
+ReportingUnit	North Carolina;Camden County	CAMDEN;TRANSFER
 ReportingUnit	North Carolina;Caswell County;PELH	CASWELL;PELH
 ReportingUnit	North Carolina;Caswell County;LOCU	CASWELL;LOCU
-ReportingUnit	North Carolina;Caswell County;ABSENTEE	CASWELL;ABSENTEE
+ReportingUnit	North Carolina;Caswell County	CASWELL;ABSENTEE
 ReportingUnit	North Carolina;Caswell County;STON	CASWELL;STON
 ReportingUnit	North Carolina;Caswell County;MILT	CASWELL;MILT
 ReportingUnit	North Carolina;Caswell County;PH	CASWELL;PH
 ReportingUnit	North Carolina;Caswell County;CURBSIDE	CASWELL;CURBSIDE
 ReportingUnit	North Carolina;Caswell County;PROVI	CASWELL;PROVI
-ReportingUnit	North Carolina;Caswell County;PROVISIONAL	CASWELL;PROVISIONAL
+ReportingUnit	North Carolina;Caswell County	CASWELL;PROVISIONAL
 ReportingUnit	North Carolina;Catawba County;21	CATAWBA;21
 ReportingUnit	North Carolina;Catawba County;37	CATAWBA;37
-ReportingUnit	North Carolina;Catawba County;ABSENTEE	CATAWBA;ABSENTEE
+ReportingUnit	North Carolina;Catawba County	CATAWBA;ABSENTEE
 ReportingUnit	North Carolina;Catawba County;14	CATAWBA;14
 ReportingUnit	North Carolina;Catawba County;19	CATAWBA;19
 ReportingUnit	North Carolina;Catawba County;02	CATAWBA;02
@@ -11962,7 +12136,7 @@ ReportingUnit	North Carolina;Catawba County;41	CATAWBA;41
 ReportingUnit	North Carolina;Catawba County;01	CATAWBA;01
 ReportingUnit	North Carolina;Catawba County;CURBSIDE	CATAWBA;CURBSIDE
 ReportingUnit	North Carolina;Catawba County;36	CATAWBA;36
-ReportingUnit	North Carolina;Catawba County;PROVISIONAL	CATAWBA;PROVISIONAL
+ReportingUnit	North Carolina;Catawba County	CATAWBA;PROVISIONAL
 ReportingUnit	North Carolina;Catawba County;15	CATAWBA;15
 ReportingUnit	North Carolina;Catawba County;03	CATAWBA;03
 ReportingUnit	North Carolina;Catawba County;06	CATAWBA;06
@@ -11972,19 +12146,19 @@ ReportingUnit	North Carolina;Catawba County;33	CATAWBA;33
 ReportingUnit	North Carolina;Chatham County;PIT113	CHATHAM;PIT113
 ReportingUnit	North Carolina;Chatham County;NWM117	CHATHAM;NWM117
 ReportingUnit	North Carolina;Chatham County;9	CHATHAM;9
-ReportingUnit	North Carolina;Chatham County;PROVISIONAL	CHATHAM;PROVISIONAL
+ReportingUnit	North Carolina;Chatham County	CHATHAM;PROVISIONAL
 ReportingUnit	North Carolina;Chatham County;45	CHATHAM;45
 ReportingUnit	North Carolina;Chatham County;18	CHATHAM;18
-ReportingUnit	North Carolina;Chatham County;ONE STOP	CHATHAM;ONE STOP
-ReportingUnit	North Carolina;Chatham County;ABSENTEE	CHATHAM;ABSENTEE
+ReportingUnit	North Carolina;Chatham County	CHATHAM;ONE STOP
+ReportingUnit	North Carolina;Chatham County	CHATHAM;ABSENTEE
 ReportingUnit	North Carolina;Cherokee County;HIWA	CHEROKEE;HIWA
 ReportingUnit	North Carolina;Cherokee County;RGER	CHEROKEE;RGER
 ReportingUnit	North Carolina;Cherokee County;TOPT	CHEROKEE;TOPT
 ReportingUnit	North Carolina;Cherokee County;MARB	CHEROKEE;MARB
 ReportingUnit	North Carolina;Cherokee County;BELL	CHEROKEE;BELL
-ReportingUnit	North Carolina;Columbus County;OS TABOR CITY	COLUMBUS;OS TABOR CITY
+ReportingUnit	North Carolina;Columbus County	COLUMBUS;OS TABOR CITY
 ReportingUnit	North Carolina;Columbus County;P19	COLUMBUS;P19
-ReportingUnit	North Carolina;Columbus County;OS EAST COLUMBUS	COLUMBUS;OS EAST COLUMBUS
+ReportingUnit	North Carolina;Columbus County	COLUMBUS;OS EAST COLUMBUS
 ReportingUnit	North Carolina;Columbus County;P07	COLUMBUS;P07
 ReportingUnit	North Carolina;Columbus County;P25B	COLUMBUS;P25B
 ReportingUnit	North Carolina;Columbus County;P20A	COLUMBUS;P20A
@@ -11992,17 +12166,17 @@ ReportingUnit	North Carolina;Columbus County;P14	COLUMBUS;P14
 ReportingUnit	North Carolina;Columbus County;P15	COLUMBUS;P15
 ReportingUnit	North Carolina;Columbus County;P21	COLUMBUS;P21
 ReportingUnit	North Carolina;Columbus County;P23	COLUMBUS;P23
-ReportingUnit	North Carolina;Columbus County;OS LOBBY	COLUMBUS;OS LOBBY
+ReportingUnit	North Carolina;Columbus County	COLUMBUS;OS LOBBY
 ReportingUnit	North Carolina;Columbus County;P22A	COLUMBUS;P22A
-ReportingUnit	North Carolina;Columbus County;OS BOLTON	COLUMBUS;OS BOLTON
-ReportingUnit	North Carolina;Columbus County;PROVISIONAL	COLUMBUS;PROVISIONAL
+ReportingUnit	North Carolina;Columbus County	COLUMBUS;OS BOLTON
+ReportingUnit	North Carolina;Columbus County	COLUMBUS;PROVISIONAL
 ReportingUnit	North Carolina;Columbus County;P02B	COLUMBUS;P02B
-ReportingUnit	North Carolina;Columbus County;ABSENTEE	COLUMBUS;ABSENTEE
+ReportingUnit	North Carolina;Columbus County	COLUMBUS;ABSENTEE
 ReportingUnit	North Carolina;Columbus County;P11	COLUMBUS;P11
-ReportingUnit	North Carolina;Columbus County;OS FAIR BLUFF	COLUMBUS;OS FAIR BLUFF
+ReportingUnit	North Carolina;Columbus County	COLUMBUS;OS FAIR BLUFF
 ReportingUnit	North Carolina;Columbus County;P08	COLUMBUS;P08
 ReportingUnit	North Carolina;Columbus County;P17	COLUMBUS;P17
-ReportingUnit	North Carolina;Columbus County;OS CHADBOURN	COLUMBUS;OS CHADBOURN
+ReportingUnit	North Carolina;Columbus County	COLUMBUS;OS CHADBOURN
 ReportingUnit	North Carolina;Craven County;N3	CRAVEN;N3
 ReportingUnit	North Carolina;Craven County;17	CRAVEN;17
 ReportingUnit	North Carolina;Craven County;12	CRAVEN;12
@@ -12025,59 +12199,59 @@ ReportingUnit	North Carolina;Craven County;16	CRAVEN;16
 ReportingUnit	North Carolina;Craven County;N1	CRAVEN;N1
 ReportingUnit	North Carolina;Craven County;07	CRAVEN;07
 ReportingUnit	North Carolina;Craven County;04	CRAVEN;04
-ReportingUnit	North Carolina;Cumberland County;ABSENTEE 31-57	CUMBERLAND;ABSENTEE 31-57
+ReportingUnit	North Carolina;Cumberland County	CUMBERLAND;ABSENTEE 31-57
 ReportingUnit	North Carolina;Cumberland County;AH49	CUMBERLAND;AH49
-ReportingUnit	North Carolina;Cumberland County;ONE STOP 100 G 31-57	CUMBERLAND;ONE STOP 100 G 31-57
+ReportingUnit	North Carolina;Cumberland County	CUMBERLAND;ONE STOP 100 G 31-57
 ReportingUnit	North Carolina;Cumberland County;G2B	CUMBERLAND;G2B
 ReportingUnit	North Carolina;Cumberland County;G8A	CUMBERLAND;G8A
 ReportingUnit	North Carolina;Cumberland County;G9B-1	CUMBERLAND;G9B-1
 ReportingUnit	North Carolina;Cumberland County;AL51	CUMBERLAND;AL51
-ReportingUnit	North Carolina;Cumberland County;ONE STOP 100 L 31-57	CUMBERLAND;ONE STOP 100 L 31-57
+ReportingUnit	North Carolina;Cumberland County	CUMBERLAND;ONE STOP 100 L 31-57
 ReportingUnit	North Carolina;Cumberland County;G8C	CUMBERLAND;G8C
-ReportingUnit	North Carolina;Cumberland County;ONE STOP 100 G 1-30	CUMBERLAND;ONE STOP 100 G 1-30
-ReportingUnit	North Carolina;Cumberland County;ONE STOP 100 L 1-30	CUMBERLAND;ONE STOP 100 L 1-30
+ReportingUnit	North Carolina;Cumberland County	CUMBERLAND;ONE STOP 100 G 1-30
+ReportingUnit	North Carolina;Cumberland County	CUMBERLAND;ONE STOP 100 L 1-30
 ReportingUnit	North Carolina;Cumberland County;CC18	CUMBERLAND;CC18
 ReportingUnit	North Carolina;Cumberland County;CL57-2	CUMBERLAND;CL57-2
 ReportingUnit	North Carolina;Cumberland County;G4B	CUMBERLAND;G4B
 ReportingUnit	North Carolina;Cumberland County;G6A	CUMBERLAND;G6A
 ReportingUnit	North Carolina;Cumberland County;G8B	CUMBERLAND;G8B
-ReportingUnit	North Carolina;Cumberland County;ONE STOP 100 B 1-30	CUMBERLAND;ONE STOP 100 B 1-30
-ReportingUnit	North Carolina;Cumberland County;ONE STOP 100 D 31-57	CUMBERLAND;ONE STOP 100 D 31-57
-ReportingUnit	North Carolina;Cumberland County;ONE STOP 100 I 31-57	CUMBERLAND;ONE STOP 100 I 31-57
+ReportingUnit	North Carolina;Cumberland County	CUMBERLAND;ONE STOP 100 B 1-30
+ReportingUnit	North Carolina;Cumberland County	CUMBERLAND;ONE STOP 100 D 31-57
+ReportingUnit	North Carolina;Cumberland County	CUMBERLAND;ONE STOP 100 I 31-57
 ReportingUnit	North Carolina;Cumberland County;CC34	CUMBERLAND;CC34
-ReportingUnit	North Carolina;Cumberland County;ONE STOP 100 E 1-30	CUMBERLAND;ONE STOP 100 E 1-30
-ReportingUnit	North Carolina;Cumberland County;ABSENTEE 1-30	CUMBERLAND;ABSENTEE 1-30
-ReportingUnit	North Carolina;Cumberland County;ONE STOP 100 D 1-30	CUMBERLAND;ONE STOP 100 D 1-30
-ReportingUnit	North Carolina;Cumberland County;TRANSFER 1-30	CUMBERLAND;TRANSFER 1-30
-ReportingUnit	North Carolina;Cumberland County;ONE STOP 100 I 1-30	CUMBERLAND;ONE STOP 100 I 1-30
+ReportingUnit	North Carolina;Cumberland County	CUMBERLAND;ONE STOP 100 E 1-30
+ReportingUnit	North Carolina;Cumberland County	CUMBERLAND;ABSENTEE 1-30
+ReportingUnit	North Carolina;Cumberland County	CUMBERLAND;ONE STOP 100 D 1-30
+ReportingUnit	North Carolina;Cumberland County	CUMBERLAND;TRANSFER 1-30
+ReportingUnit	North Carolina;Cumberland County	CUMBERLAND;ONE STOP 100 I 1-30
 ReportingUnit	North Carolina;Cumberland County;PROVISIONAL 1-30	CUMBERLAND;PROVISIONAL 1-30
 ReportingUnit	North Carolina;Cumberland County;CC06	CUMBERLAND;CC06
 ReportingUnit	North Carolina;Cumberland County;G10C	CUMBERLAND;G10C
 ReportingUnit	North Carolina;Cumberland County;G7A	CUMBERLAND;G7A
 ReportingUnit	North Carolina;Cumberland County;CC29	CUMBERLAND;CC29
-ReportingUnit	North Carolina;Cumberland County;ONE STOP 100 A 31-57	CUMBERLAND;ONE STOP 100 A 31-57
-ReportingUnit	North Carolina;Cumberland County;ONE STOP 100 C 31-57	CUMBERLAND;ONE STOP 100 C 31-57
-ReportingUnit	North Carolina;Cumberland County;ONE STOP 100 H 1-30	CUMBERLAND;ONE STOP 100 H 1-30
+ReportingUnit	North Carolina;Cumberland County	CUMBERLAND;ONE STOP 100 A 31-57
+ReportingUnit	North Carolina;Cumberland County	CUMBERLAND;ONE STOP 100 C 31-57
+ReportingUnit	North Carolina;Cumberland County	CUMBERLAND;ONE STOP 100 H 1-30
 ReportingUnit	North Carolina;Cumberland County;CC14	CUMBERLAND;CC14
 ReportingUnit	North Carolina;Cumberland County;G10B	CUMBERLAND;G10B
 ReportingUnit	North Carolina;Cumberland County;G1B	CUMBERLAND;G1B
-ReportingUnit	North Carolina;Cumberland County;ONE STOP 100 H 31-57	CUMBERLAND;ONE STOP 100 H 31-57
+ReportingUnit	North Carolina;Cumberland County	CUMBERLAND;ONE STOP 100 H 31-57
 ReportingUnit	North Carolina;Cumberland County;PROVISIONAL 31-57	CUMBERLAND;PROVISIONAL 31-57
 ReportingUnit	North Carolina;Cumberland County;CU02	CUMBERLAND;CU02
 ReportingUnit	North Carolina;Cumberland County;G5A-2	CUMBERLAND;G5A-2
-ReportingUnit	North Carolina;Cumberland County;ONE STOP 100 A 1-30	CUMBERLAND;ONE STOP 100 A 1-30
-ReportingUnit	North Carolina;Cumberland County;ONE STOP 100 C 1-30	CUMBERLAND;ONE STOP 100 C 1-30
-ReportingUnit	North Carolina;Cumberland County;ONE STOP 100 E 31-57	CUMBERLAND;ONE STOP 100 E 31-57
+ReportingUnit	North Carolina;Cumberland County	CUMBERLAND;ONE STOP 100 A 1-30
+ReportingUnit	North Carolina;Cumberland County	CUMBERLAND;ONE STOP 100 C 1-30
+ReportingUnit	North Carolina;Cumberland County	CUMBERLAND;ONE STOP 100 E 31-57
 ReportingUnit	North Carolina;Cumberland County;CC10	CUMBERLAND;CC10
 ReportingUnit	North Carolina;Cumberland County;G10A	CUMBERLAND;G10A
-ReportingUnit	North Carolina;Cumberland County;ONE STOP 100 B 31-57	CUMBERLAND;ONE STOP 100 B 31-57
-ReportingUnit	North Carolina;Cumberland County;ONE STOP 100 J 31-57	CUMBERLAND;ONE STOP 100 J 31-57
-ReportingUnit	North Carolina;Cumberland County;TRANSFER 31-57	CUMBERLAND;TRANSFER 31-57
+ReportingUnit	North Carolina;Cumberland County	CUMBERLAND;ONE STOP 100 B 31-57
+ReportingUnit	North Carolina;Cumberland County	CUMBERLAND;ONE STOP 100 J 31-57
+ReportingUnit	North Carolina;Cumberland County	CUMBERLAND;TRANSFER 31-57
 ReportingUnit	North Carolina;Cumberland County;G2C-1	CUMBERLAND;G2C-1
 ReportingUnit	North Carolina;Cumberland County;G3B	CUMBERLAND;G3B
 ReportingUnit	North Carolina;Cumberland County;SH77	CUMBERLAND;SH77
 ReportingUnit	North Carolina;Cumberland County;EO61-2	CUMBERLAND;EO61-2
-ReportingUnit	North Carolina;Cumberland County;ONE STOP 100 J 1-30	CUMBERLAND;ONE STOP 100 J 1-30
+ReportingUnit	North Carolina;Cumberland County	CUMBERLAND;ONE STOP 100 J 1-30
 ReportingUnit	North Carolina;Cumberland County;CL57-1	CUMBERLAND;CL57-1
 ReportingUnit	North Carolina;Cumberland County;MR02	CUMBERLAND;MR02
 ReportingUnit	North Carolina;Cumberland County;G2A	CUMBERLAND;G2A
@@ -12102,14 +12276,14 @@ ReportingUnit	North Carolina;Davidson County;74	DAVIDSON;74
 ReportingUnit	North Carolina;Davidson County;40	DAVIDSON;40
 ReportingUnit	North Carolina;Davidson County;60	DAVIDSON;60
 ReportingUnit	North Carolina;Davidson County;52	DAVIDSON;52
-ReportingUnit	North Carolina;Davidson County;PROVISIONAL	DAVIDSON;PROVISIONAL
+ReportingUnit	North Carolina;Davidson County	DAVIDSON;PROVISIONAL
 ReportingUnit	North Carolina;Davidson County;04	DAVIDSON;04
 ReportingUnit	North Carolina;Davidson County;86A	DAVIDSON;86A
 ReportingUnit	North Carolina;Davidson County;20	DAVIDSON;20
 ReportingUnit	North Carolina;Davidson County;84	DAVIDSON;84
 ReportingUnit	North Carolina;Davidson County;46	DAVIDSON;46
-ReportingUnit	North Carolina;Davidson County;ABSENTEE	DAVIDSON;ABSENTEE
-ReportingUnit	North Carolina;Davidson County;TRANSFER	DAVIDSON;TRANSFER
+ReportingUnit	North Carolina;Davidson County	DAVIDSON;ABSENTEE
+ReportingUnit	North Carolina;Davidson County	DAVIDSON;TRANSFER
 ReportingUnit	North Carolina;Davidson County;68	DAVIDSON;68
 ReportingUnit	North Carolina;Davidson County;82	DAVIDSON;82
 ReportingUnit	North Carolina;Davidson County;42	DAVIDSON;42
@@ -12125,11 +12299,11 @@ ReportingUnit	North Carolina;Davidson County;80A	DAVIDSON;80A
 ReportingUnit	North Carolina;Davidson County;34	DAVIDSON;34
 ReportingUnit	North Carolina;Davidson County;10	DAVIDSON;10
 ReportingUnit	North Carolina;Duplin County;MAGN	DUPLIN;MAGN
-ReportingUnit	North Carolina;Duplin County;ABSENTEE	DUPLIN;ABSENTEE
+ReportingUnit	North Carolina;Duplin County	DUPLIN;ABSENTEE
 ReportingUnit	North Carolina;Duplin County;FAIS	DUPLIN;FAIS
-ReportingUnit	North Carolina;Duplin County;ONE STOP	DUPLIN;ONE STOP
+ReportingUnit	North Carolina;Duplin County	DUPLIN;ONE STOP
 ReportingUnit	North Carolina;Duplin County;WARS	DUPLIN;WARS
-ReportingUnit	North Carolina;Duplin County;PROVISIONAL	DUPLIN;PROVISIONAL
+ReportingUnit	North Carolina;Duplin County	DUPLIN;PROVISIONAL
 ReportingUnit	North Carolina;Duplin County;CYCK	DUPLIN;CYCK
 ReportingUnit	North Carolina;Duplin County;ALBE	DUPLIN;ALBE
 ReportingUnit	North Carolina;Duplin County;LOCK	DUPLIN;LOCK
@@ -12145,12 +12319,12 @@ ReportingUnit	North Carolina;Cleveland County;KM N	CLEVELAND;KM N
 ReportingUnit	North Carolina;Cleveland County;KM S	CLEVELAND;KM S
 ReportingUnit	North Carolina;Cleveland County;POLKVL	CLEVELAND;POLKVL
 ReportingUnit	North Carolina;Davie County;12	DAVIE;12
-ReportingUnit	North Carolina;Davie County;PROVISIONAL	DAVIE;PROVISIONAL
+ReportingUnit	North Carolina;Davie County	DAVIE;PROVISIONAL
 ReportingUnit	North Carolina;Davie County;11	DAVIE;11
 ReportingUnit	North Carolina;Davie County;02	DAVIE;02
 ReportingUnit	North Carolina;Davie County;05	DAVIE;05
 ReportingUnit	North Carolina;Davie County;08	DAVIE;08
-ReportingUnit	North Carolina;Davie County;ABSENTEE	DAVIE;ABSENTEE
+ReportingUnit	North Carolina;Davie County	DAVIE;ABSENTEE
 ReportingUnit	North Carolina;Davie County;06	DAVIE;06
 ReportingUnit	North Carolina;Davie County;09	DAVIE;09
 ReportingUnit	North Carolina;Davie County;03	DAVIE;03
@@ -12161,7 +12335,7 @@ ReportingUnit	North Carolina;Davie County;01	DAVIE;01
 ReportingUnit	North Carolina;Clay County;WARN	CLAY;WARN
 ReportingUnit	North Carolina;Clay County;TUSQ	CLAY;TUSQ
 ReportingUnit	North Carolina;Dare County;AVON	DARE;AVON
-ReportingUnit	North Carolina;Dare County;ABSENTEE	DARE;ABSENTEE
+ReportingUnit	North Carolina;Dare County	DARE;ABSENTEE
 ReportingUnit	North Carolina;Dare County;HAT	DARE;HAT
 ReportingUnit	North Carolina;Dare County;BUX	DARE;BUX
 ReportingUnit	North Carolina;Dare County;CURBSIDE	DARE;CURBSIDE
@@ -12170,78 +12344,78 @@ ReportingUnit	North Carolina;Dare County;COL	DARE;COL
 ReportingUnit	North Carolina;Dare County;KDH	DARE;KDH
 ReportingUnit	North Carolina;Dare County;FRCO	DARE;FRCO
 ReportingUnit	North Carolina;Dare County;MATO	DARE;MATO
-ReportingUnit	North Carolina;Dare County;PROVISIONAL	DARE;PROVISIONAL
+ReportingUnit	North Carolina;Dare County	DARE;PROVISIONAL
 ReportingUnit	North Carolina;Dare County;DUCK	DARE;DUCK
 ReportingUnit	North Carolina;Dare County;KTHK	DARE;KTHK
 ReportingUnit	North Carolina;Chowan County;1	CHOWAN;1
 ReportingUnit	North Carolina;Chowan County;6	CHOWAN;6
-ReportingUnit	North Carolina;Chowan County;PROVISIONAL	CHOWAN;PROVISIONAL
-ReportingUnit	North Carolina;Chowan County;TRANSFER	CHOWAN;TRANSFER
-ReportingUnit	North Carolina;Chowan County;OS BOE	CHOWAN;OS BOE
-ReportingUnit	North Carolina;Chowan County;OS NCC	CHOWAN;OS NCC
-ReportingUnit	North Carolina;Chowan County;ABSENTEE	CHOWAN;ABSENTEE
+ReportingUnit	North Carolina;Chowan County	CHOWAN;PROVISIONAL
+ReportingUnit	North Carolina;Chowan County	CHOWAN;TRANSFER
+ReportingUnit	North Carolina;Chowan County	CHOWAN;OS BOE
+ReportingUnit	North Carolina;Chowan County	CHOWAN;OS NCC
+ReportingUnit	North Carolina;Chowan County	CHOWAN;ABSENTEE
 ReportingUnit	North Carolina;Currituck County;KI	CURRITUCK;KI
-ReportingUnit	North Carolina;Currituck County;ABSENTEE	CURRITUCK;ABSENTEE
-ReportingUnit	North Carolina;Currituck County;ONE STOP	CURRITUCK;ONE STOP
+ReportingUnit	North Carolina;Currituck County	CURRITUCK;ABSENTEE
+ReportingUnit	North Carolina;Currituck County	CURRITUCK;ONE STOP
 ReportingUnit	North Carolina;Currituck County;MY	CURRITUCK;MY
 ReportingUnit	North Carolina;Currituck County;PB	CURRITUCK;PB
 ReportingUnit	North Carolina;Currituck County;GW	CURRITUCK;GW
-ReportingUnit	North Carolina;Currituck County;PROVISIONAL	CURRITUCK;PROVISIONAL
+ReportingUnit	North Carolina;Currituck County	CURRITUCK;PROVISIONAL
 ReportingUnit	North Carolina;Currituck County;WH	CURRITUCK;WH
 ReportingUnit	North Carolina;Durham County;08	DURHAM;08
 ReportingUnit	North Carolina;Durham County;29	DURHAM;29
 ReportingUnit	North Carolina;Durham County;42	DURHAM;42
 ReportingUnit	North Carolina;Durham County;48	DURHAM;48
 ReportingUnit	North Carolina;Durham County;53-2	DURHAM;53-2
-ReportingUnit	North Carolina;Durham County;OS-ERL	DURHAM;OS-ERL
-ReportingUnit	North Carolina;Durham County;OS-FRONT	DURHAM;OS-FRONT
-ReportingUnit	North Carolina;Durham County;OS-DUKE	DURHAM;OS-DUKE
+ReportingUnit	North Carolina;Durham County	DURHAM;OS-ERL
+ReportingUnit	North Carolina;Durham County	DURHAM;OS-FRONT
+ReportingUnit	North Carolina;Durham County	DURHAM;OS-DUKE
 ReportingUnit	North Carolina;Durham County;02	DURHAM;02
 ReportingUnit	North Carolina;Durham County;05	DURHAM;05
-ReportingUnit	North Carolina;Durham County;OS-DTC	DURHAM;OS-DTC
+ReportingUnit	North Carolina;Durham County	DURHAM;OS-DTC
 ReportingUnit	North Carolina;Durham County;13	DURHAM;13
 ReportingUnit	North Carolina;Durham County;31	DURHAM;31
 ReportingUnit	North Carolina;Durham County;50	DURHAM;50
 ReportingUnit	North Carolina;Durham County;30-2	DURHAM;30-2
 ReportingUnit	North Carolina;Durham County;33	DURHAM;33
-ReportingUnit	North Carolina;Durham County;ABSENTEE	DURHAM;ABSENTEE
-ReportingUnit	North Carolina;Durham County;OS-BOE	DURHAM;OS-BOE
+ReportingUnit	North Carolina;Durham County	DURHAM;ABSENTEE
+ReportingUnit	North Carolina;Durham County	DURHAM;OS-BOE
 ReportingUnit	North Carolina;Durham County;55-11	DURHAM;55-11
 ReportingUnit	North Carolina;Durham County;34-1	DURHAM;34-1
-ReportingUnit	North Carolina;Durham County;OS-NRL	DURHAM;OS-NRL
+ReportingUnit	North Carolina;Durham County	DURHAM;OS-NRL
 ReportingUnit	North Carolina;Durham County;03	DURHAM;03
 ReportingUnit	North Carolina;Durham County;06	DURHAM;06
 ReportingUnit	North Carolina;Durham County;09	DURHAM;09
 ReportingUnit	North Carolina;Durham County;26	DURHAM;26
 ReportingUnit	North Carolina;Durham County;45	DURHAM;45
-ReportingUnit	North Carolina;Durham County;OS-NJBC	DURHAM;OS-NJBC
-ReportingUnit	North Carolina;Durham County;OS-ENO	DURHAM;OS-ENO
-ReportingUnit	North Carolina;Durham County;TRANSFER	DURHAM;TRANSFER
+ReportingUnit	North Carolina;Durham County	DURHAM;OS-NJBC
+ReportingUnit	North Carolina;Durham County	DURHAM;OS-ENO
+ReportingUnit	North Carolina;Durham County	DURHAM;TRANSFER
 ReportingUnit	North Carolina;Durham County;01	DURHAM;01
 ReportingUnit	North Carolina;Durham County;38	DURHAM;38
 ReportingUnit	North Carolina;Durham County;14	DURHAM;14
 ReportingUnit	North Carolina;Durham County;30-1	DURHAM;30-1
 ReportingUnit	North Carolina;Durham County;51	DURHAM;51
 ReportingUnit	North Carolina;Durham County;54	DURHAM;54
-ReportingUnit	North Carolina;Durham County;OS-IVY	DURHAM;OS-IVY
-ReportingUnit	North Carolina;Durham County;OS-NCCU	DURHAM;OS-NCCU
+ReportingUnit	North Carolina;Durham County	DURHAM;OS-IVY
+ReportingUnit	North Carolina;Durham County	DURHAM;OS-NCCU
 ReportingUnit	North Carolina;Durham County;04	DURHAM;04
 ReportingUnit	North Carolina;Durham County;07	DURHAM;07
 ReportingUnit	North Carolina;Durham County;25	DURHAM;25
 ReportingUnit	North Carolina;Durham County;28	DURHAM;28
-ReportingUnit	North Carolina;Durham County;OS-DTCN	DURHAM;OS-DTCN
-ReportingUnit	North Carolina;Durham County;OS-GETG	DURHAM;OS-GETG
-ReportingUnit	North Carolina;Durham County;OS-SRL	DURHAM;OS-SRL
+ReportingUnit	North Carolina;Durham County	DURHAM;OS-DTCN
+ReportingUnit	North Carolina;Durham County	DURHAM;OS-GETG
+ReportingUnit	North Carolina;Durham County	DURHAM;OS-SRL
 ReportingUnit	North Carolina;Durham County;52	DURHAM;52
-ReportingUnit	North Carolina;Durham County;PROVISIONAL	DURHAM;PROVISIONAL
+ReportingUnit	North Carolina;Durham County	DURHAM;PROVISIONAL
 ReportingUnit	North Carolina;Edgecombe County;0301	EDGECOMBE;0301
 ReportingUnit	North Carolina;Edgecombe County;1201	EDGECOMBE;1201
-ReportingUnit	North Carolina;Edgecombe County;ONE STOP 1	EDGECOMBE;ONE STOP 1
+ReportingUnit	North Carolina;Edgecombe County	EDGECOMBE;ONE STOP 1
 ReportingUnit	North Carolina;Edgecombe County;0104	EDGECOMBE;0104
 ReportingUnit	North Carolina;Edgecombe County;1101	EDGECOMBE;1101
 ReportingUnit	North Carolina;Edgecombe County;0601	EDGECOMBE;0601
-ReportingUnit	North Carolina;Edgecombe County;ONE STOP 2	EDGECOMBE;ONE STOP 2
-ReportingUnit	North Carolina;Edgecombe County;ONE STOP 5	EDGECOMBE;ONE STOP 5
+ReportingUnit	North Carolina;Edgecombe County	EDGECOMBE;ONE STOP 2
+ReportingUnit	North Carolina;Edgecombe County	EDGECOMBE;ONE STOP 5
 ReportingUnit	North Carolina;Edgecombe County;CURBSIDE	EDGECOMBE;CURBSIDE
 ReportingUnit	North Carolina;Edgecombe County;0501	EDGECOMBE;0501
 ReportingUnit	North Carolina;Edgecombe County;0701	EDGECOMBE;0701
@@ -12249,15 +12423,15 @@ ReportingUnit	North Carolina;Edgecombe County;0801	EDGECOMBE;0801
 ReportingUnit	North Carolina;Edgecombe County;0102	EDGECOMBE;0102
 ReportingUnit	North Carolina;Edgecombe County;0103	EDGECOMBE;0103
 ReportingUnit	North Carolina;Edgecombe County;0401	EDGECOMBE;0401
-ReportingUnit	North Carolina;Edgecombe County;ABSENTEE	EDGECOMBE;ABSENTEE
-ReportingUnit	North Carolina;Edgecombe County;ONE STOP 4	EDGECOMBE;ONE STOP 4
+ReportingUnit	North Carolina;Edgecombe County	EDGECOMBE;ABSENTEE
+ReportingUnit	North Carolina;Edgecombe County	EDGECOMBE;ONE STOP 4
 ReportingUnit	North Carolina;Edgecombe County;1203	EDGECOMBE;1203
 ReportingUnit	North Carolina;Edgecombe County;0901	EDGECOMBE;0901
 ReportingUnit	North Carolina;Edgecombe County;0101	EDGECOMBE;0101
-ReportingUnit	North Carolina;Edgecombe County;PROVISIONAL	EDGECOMBE;PROVISIONAL
-ReportingUnit	North Carolina;Edgecombe County;ONE STOP 6	EDGECOMBE;ONE STOP 6
-ReportingUnit	North Carolina;Edgecombe County;ONE STOP 3	EDGECOMBE;ONE STOP 3
-ReportingUnit	North Carolina;Edgecombe County;TRANSFER	EDGECOMBE;TRANSFER
+ReportingUnit	North Carolina;Edgecombe County	EDGECOMBE;PROVISIONAL
+ReportingUnit	North Carolina;Edgecombe County	EDGECOMBE;ONE STOP 6
+ReportingUnit	North Carolina;Edgecombe County	EDGECOMBE;ONE STOP 3
+ReportingUnit	North Carolina;Edgecombe County	EDGECOMBE;TRANSFER
 ReportingUnit	North Carolina;Edgecombe County;1301	EDGECOMBE;1301
 ReportingUnit	North Carolina;Edgecombe County;0201	EDGECOMBE;0201
 ReportingUnit	North Carolina;Forsyth County;071	FORSYTH;071
@@ -12333,8 +12507,8 @@ ReportingUnit	North Carolina;Forsyth County;702	FORSYTH;702
 ReportingUnit	North Carolina;Forsyth County;707	FORSYTH;707
 ReportingUnit	North Carolina;Forsyth County;904	FORSYTH;904
 ReportingUnit	North Carolina;Gaston County;01	GASTON;01
-ReportingUnit	North Carolina;Gaston County;PROVISIONAL	GASTON;PROVISIONAL
-ReportingUnit	North Carolina;Gaston County;OS-DALLAS	GASTON;OS-DALLAS
+ReportingUnit	North Carolina;Gaston County	GASTON;PROVISIONAL
+ReportingUnit	North Carolina;Gaston County	GASTON;OS-DALLAS
 ReportingUnit	North Carolina;Gaston County;19	GASTON;19
 ReportingUnit	North Carolina;Gaston County;32	GASTON;32
 ReportingUnit	North Carolina;Gaston County;07	GASTON;07
@@ -12342,20 +12516,20 @@ ReportingUnit	North Carolina;Gaston County;04	GASTON;04
 ReportingUnit	North Carolina;Gaston County;25	GASTON;25
 ReportingUnit	North Carolina;Gaston County;28	GASTON;28
 ReportingUnit	North Carolina;Gaston County;46	GASTON;46
-ReportingUnit	North Carolina;Gaston County;TRANSFER	GASTON;TRANSFER
+ReportingUnit	North Carolina;Gaston County	GASTON;TRANSFER
 ReportingUnit	North Carolina;Gaston County;27	GASTON;27
-ReportingUnit	North Carolina;Gaston County;OS-CHERRYVILLE	GASTON;OS-CHERRYVILLE
+ReportingUnit	North Carolina;Gaston County	GASTON;OS-CHERRYVILLE
 ReportingUnit	North Carolina;Gaston County;15	GASTON;15
 ReportingUnit	North Carolina;Gaston County;36	GASTON;36
 ReportingUnit	North Carolina;Gaston County;10	GASTON;10
-ReportingUnit	North Carolina;Gaston County;OS-BOE	GASTON;OS-BOE
-ReportingUnit	North Carolina;Gaston County;ABSENTEE	GASTON;ABSENTEE
+ReportingUnit	North Carolina;Gaston County	GASTON;OS-BOE
+ReportingUnit	North Carolina;Gaston County	GASTON;ABSENTEE
 ReportingUnit	North Carolina;Gaston County;06	GASTON;06
 ReportingUnit	North Carolina;Gaston County;09	GASTON;09
 ReportingUnit	North Carolina;Gaston County;40	GASTON;40
 ReportingUnit	North Carolina;Gaston County;23	GASTON;23
 ReportingUnit	North Carolina;Gaston County;26	GASTON;26
-ReportingUnit	North Carolina;Gaston County;OS-LIBRARY	GASTON;OS-LIBRARY
+ReportingUnit	North Carolina;Gaston County	GASTON;OS-LIBRARY
 ReportingUnit	North Carolina;Gaston County;03	GASTON;03
 ReportingUnit	North Carolina;Gaston County;24	GASTON;24
 ReportingUnit	North Carolina;Gaston County;31	GASTON;31
@@ -12366,8 +12540,8 @@ ReportingUnit	North Carolina;Gaston County;08	GASTON;08
 ReportingUnit	North Carolina;Gaston County;44	GASTON;44
 ReportingUnit	North Carolina;Gaston County;22	GASTON;22
 ReportingUnit	North Carolina;Gaston County;29	GASTON;29
-ReportingUnit	North Carolina;Gaston County;OS-MOUNT HOLLY	GASTON;OS-MOUNT HOLLY
-ReportingUnit	North Carolina;Gaston County;OS-FBC GASTONIA	GASTON;OS-FBC GASTONIA
+ReportingUnit	North Carolina;Gaston County	GASTON;OS-MOUNT HOLLY
+ReportingUnit	North Carolina;Gaston County	GASTON;OS-FBC GASTONIA
 ReportingUnit	North Carolina;Gaston County;14	GASTON;14
 ReportingUnit	North Carolina;Granville County;EAOX	GRANVILLE;EAOX
 ReportingUnit	North Carolina;Granville County;MTEN	GRANVILLE;MTEN
@@ -12380,7 +12554,7 @@ ReportingUnit	North Carolina;Granville County;TYHO	GRANVILLE;TYHO
 ReportingUnit	North Carolina;Granville County;CRDM	GRANVILLE;CRDM
 ReportingUnit	North Carolina;Greene County;BULL	GREENE;BULL
 ReportingUnit	North Carolina;Greene County;WALS	GREENE;WALS
-ReportingUnit	North Carolina;Greene County;ABSENTEE	GREENE;ABSENTEE
+ReportingUnit	North Carolina;Greene County	GREENE;ABSENTEE
 ReportingUnit	North Carolina;Guilford County;PG1	GUILFORD;PG1
 ReportingUnit	North Carolina;Guilford County;FR1	GUILFORD;FR1
 ReportingUnit	North Carolina;Guilford County;G24	GUILFORD;G24
@@ -12473,13 +12647,13 @@ ReportingUnit	North Carolina;Guilford County;G63	GUILFORD;G63
 ReportingUnit	North Carolina;Guilford County;MON3	GUILFORD;MON3
 ReportingUnit	North Carolina;Graham County;EAST	GRAHAM;EAST
 ReportingUnit	North Carolina;Graham County;STEC	GRAHAM;STEC
-ReportingUnit	North Carolina;Gates County;PROVISIONAL	GATES;PROVISIONAL
+ReportingUnit	North Carolina;Gates County	GATES;PROVISIONAL
 ReportingUnit	North Carolina;Gates County;4N	GATES;4N
-ReportingUnit	North Carolina;Gates County;ONE STOP 1	GATES;ONE STOP 1
-ReportingUnit	North Carolina;Gates County;ABSENTEE	GATES;ABSENTEE
+ReportingUnit	North Carolina;Gates County	GATES;ONE STOP 1
+ReportingUnit	North Carolina;Gates County	GATES;ABSENTEE
 ReportingUnit	North Carolina;Gates County;1	GATES;1
 ReportingUnit	North Carolina;Gates County;2	GATES;2
-ReportingUnit	North Carolina;Gates County;ONE STOP 2	GATES;ONE STOP 2
+ReportingUnit	North Carolina;Gates County	GATES;ONE STOP 2
 ReportingUnit	North Carolina;Franklin County;07	FRANKLIN;07
 ReportingUnit	North Carolina;Franklin County;14	FRANKLIN;14
 ReportingUnit	North Carolina;Franklin County;19	FRANKLIN;19
@@ -12494,18 +12668,18 @@ ReportingUnit	North Carolina;Franklin County;09	FRANKLIN;09
 ReportingUnit	North Carolina;Franklin County;17	FRANKLIN;17
 ReportingUnit	North Carolina;Greene County;SH#1	GREENE;SH#1
 ReportingUnit	North Carolina;Greene County;BEAR	GREENE;BEAR
-ReportingUnit	North Carolina;Greene County;TRANSFER	GREENE;TRANSFER
-ReportingUnit	North Carolina;Greene County;PROVISIONAL	GREENE;PROVISIONAL
+ReportingUnit	North Carolina;Greene County	GREENE;TRANSFER
+ReportingUnit	North Carolina;Greene County	GREENE;PROVISIONAL
 ReportingUnit	North Carolina;Greene County;ARBA	GREENE;ARBA
 ReportingUnit	North Carolina;Greene County;SUGG	GREENE;SUGG
-ReportingUnit	North Carolina;Greene County;ONE STOP	GREENE;ONE STOP
+ReportingUnit	North Carolina;Greene County	GREENE;ONE STOP
 ReportingUnit	North Carolina;Halifax County;ONE-STOP HALIFAX	HALIFAX;ONE-STOP HALIFAX
 ReportingUnit	North Carolina;Halifax County;RR 7	HALIFAX;RR 7
-ReportingUnit	North Carolina;Halifax County;ABSENTEE	HALIFAX;ABSENTEE
+ReportingUnit	North Carolina;Halifax County	HALIFAX;ABSENTEE
 ReportingUnit	North Carolina;Halifax County;RR 11	HALIFAX;RR 11
 ReportingUnit	North Carolina;Halifax County;ONE-STOP SCOTLAND NECK	HALIFAX;ONE-STOP SCOTLAND NECK
 ReportingUnit	North Carolina;Halifax County;RRC	HALIFAX;RRC
-ReportingUnit	North Carolina;Halifax County;PROVISIONAL	HALIFAX;PROVISIONAL
+ReportingUnit	North Carolina;Halifax County	HALIFAX;PROVISIONAL
 ReportingUnit	North Carolina;Halifax County;ONE-STOP ROANOKE RAPIDS	HALIFAX;ONE-STOP ROANOKE RAPIDS
 ReportingUnit	North Carolina;Halifax County;RR 5	HALIFAX;RR 5
 ReportingUnit	North Carolina;Halifax County;BUTWD	HALIFAX;BUTWD
@@ -12516,11 +12690,11 @@ ReportingUnit	North Carolina;Halifax County;ENF 2	HALIFAX;ENF 2
 ReportingUnit	North Carolina;Halifax County;CONC	HALIFAX;CONC
 ReportingUnit	North Carolina;Halifax County;LIT 2	HALIFAX;LIT 2
 ReportingUnit	North Carolina;Halifax County;HPR	HALIFAX;HPR
-ReportingUnit	North Carolina;Haywood County;ABSENTEE	HAYWOOD;ABSENTEE
+ReportingUnit	North Carolina;Haywood County	HAYWOOD;ABSENTEE
 ReportingUnit	North Carolina;Haywood County;EF	HAYWOOD;EF
 ReportingUnit	North Carolina;Haywood County;AC	HAYWOOD;AC
 ReportingUnit	North Carolina;Haywood County;LJ	HAYWOOD;LJ
-ReportingUnit	North Carolina;Haywood County;PROVISIONAL	HAYWOOD;PROVISIONAL
+ReportingUnit	North Carolina;Haywood County	HAYWOOD;PROVISIONAL
 ReportingUnit	North Carolina;Haywood County;PC	HAYWOOD;PC
 ReportingUnit	North Carolina;Haywood County;ID	HAYWOOD;ID
 ReportingUnit	North Carolina;Haywood County;CR	HAYWOOD;CR
@@ -12534,14 +12708,14 @@ ReportingUnit	North Carolina;Haywood County;WS-1	HAYWOOD;WS-1
 ReportingUnit	North Carolina;Haywood County;WS-2	HAYWOOD;WS-2
 ReportingUnit	North Carolina;Haywood County;FC-2	HAYWOOD;FC-2
 ReportingUnit	North Carolina;Haywood County;WW	HAYWOOD;WW
-ReportingUnit	North Carolina;Henderson County;PROVISIONAL	HENDERSON;PROVISIONAL
+ReportingUnit	North Carolina;Henderson County	HENDERSON;PROVISIONAL
 ReportingUnit	North Carolina;Henderson County;PR	HENDERSON;PR
 ReportingUnit	North Carolina;Henderson County;SW	HENDERSON;SW
 ReportingUnit	North Carolina;Henderson County;NB	HENDERSON;NB
 ReportingUnit	North Carolina;Henderson County;HV-2	HENDERSON;HV-2
 ReportingUnit	North Carolina;Henderson County;GM	HENDERSON;GM
 ReportingUnit	North Carolina;Henderson County;CURBSIDE	HENDERSON;CURBSIDE
-ReportingUnit	North Carolina;Henderson County;ABSENTEE	HENDERSON;ABSENTEE
+ReportingUnit	North Carolina;Henderson County	HENDERSON;ABSENTEE
 ReportingUnit	North Carolina;Henderson County;NW	HENDERSON;NW
 ReportingUnit	North Carolina;Henderson County;ED	HENDERSON;ED
 ReportingUnit	North Carolina;Henderson County;HS	HENDERSON;HS
@@ -12566,70 +12740,70 @@ ReportingUnit	North Carolina;Iredell County;ST2	IREDELL;ST2
 ReportingUnit	North Carolina;Iredell County;ST5	IREDELL;ST5
 ReportingUnit	North Carolina;Johnston County;PR21	JOHNSTON;PR21
 ReportingUnit	North Carolina;Johnston County;PR12B	JOHNSTON;PR12B
-ReportingUnit	North Carolina;Johnston County;ONE STOP BENSON	JOHNSTON;ONE STOP BENSON
+ReportingUnit	North Carolina;Johnston County	JOHNSTON;ONE STOP BENSON
 ReportingUnit	North Carolina;Johnston County;PR27B	JOHNSTON;PR27B
 ReportingUnit	North Carolina;Johnston County;PR35	JOHNSTON;PR35
 ReportingUnit	North Carolina;Johnston County;PR25	JOHNSTON;PR25
 ReportingUnit	North Carolina;Johnston County;PR34	JOHNSTON;PR34
-ReportingUnit	North Carolina;Johnston County;PROVISIONAL	JOHNSTON;PROVISIONAL
+ReportingUnit	North Carolina;Johnston County	JOHNSTON;PROVISIONAL
 ReportingUnit	North Carolina;Johnston County;PR38	JOHNSTON;PR38
 ReportingUnit	North Carolina;Johnston County;PR32	JOHNSTON;PR32
 ReportingUnit	North Carolina;Johnston County;PR33	JOHNSTON;PR33
 ReportingUnit	North Carolina;Johnston County;PR26	JOHNSTON;PR26
-ReportingUnit	North Carolina;Johnston County;ONE STOP SMITHFIELD	JOHNSTON;ONE STOP SMITHFIELD
+ReportingUnit	North Carolina;Johnston County	JOHNSTON;ONE STOP SMITHFIELD
 ReportingUnit	North Carolina;Johnston County;PR24	JOHNSTON;PR24
 ReportingUnit	North Carolina;Johnston County;PR04	JOHNSTON;PR04
 ReportingUnit	North Carolina;Johnston County;PR09	JOHNSTON;PR09
-ReportingUnit	North Carolina;Johnston County;ABSENTEE BY MAIL	JOHNSTON;ABSENTEE BY MAIL
-ReportingUnit	North Carolina;Johnston County;TRANSFER	JOHNSTON;TRANSFER
+ReportingUnit	North Carolina;Johnston County	JOHNSTON;ABSENTEE BY MAIL
+ReportingUnit	North Carolina;Johnston County	JOHNSTON;TRANSFER
 ReportingUnit	North Carolina;Johnston County;PR19	JOHNSTON;PR19
 ReportingUnit	North Carolina;Johnston County;PR10B	JOHNSTON;PR10B
-ReportingUnit	North Carolina;Johnston County;ONE STOP ARCHER LODGE	JOHNSTON;ONE STOP ARCHER LODGE
-ReportingUnit	North Carolina;Johnston County;ONE STOP CLEVELAND	JOHNSTON;ONE STOP CLEVELAND
-ReportingUnit	North Carolina;Johnston County;ONE STOP CLAYTON	JOHNSTON;ONE STOP CLAYTON
-ReportingUnit	North Carolina;Jones County;PROVISIONAL	JONES;PROVISIONAL
-ReportingUnit	North Carolina;Jones County;ONE STOP	JONES;ONE STOP
-ReportingUnit	North Carolina;Jones County;ABSENTEE	JONES;ABSENTEE
+ReportingUnit	North Carolina;Johnston County	JOHNSTON;ONE STOP ARCHER LODGE
+ReportingUnit	North Carolina;Johnston County	JOHNSTON;ONE STOP CLEVELAND
+ReportingUnit	North Carolina;Johnston County	JOHNSTON;ONE STOP CLAYTON
+ReportingUnit	North Carolina;Jones County	JONES;PROVISIONAL
+ReportingUnit	North Carolina;Jones County	JONES;ONE STOP
+ReportingUnit	North Carolina;Jones County	JONES;ABSENTEE
 ReportingUnit	North Carolina;Lee County;C1	LEE;C1
 ReportingUnit	North Carolina;Lee County;A2	LEE;A2
 ReportingUnit	North Carolina;Lee County;C2	LEE;C2
 ReportingUnit	North Carolina;Lee County;E2	LEE;E2
-ReportingUnit	North Carolina;Lee County;OS-PAPER	LEE;OS-PAPER
-ReportingUnit	North Carolina;Lee County;PROVISIONAL	LEE;PROVISIONAL
-ReportingUnit	North Carolina;Lee County;ABSENTEE	LEE;ABSENTEE
-ReportingUnit	North Carolina;Lincoln County;PROVISIONAL	LINCOLN;PROVISIONAL
+ReportingUnit	North Carolina;Lee County	LEE;OS-PAPER
+ReportingUnit	North Carolina;Lee County	LEE;PROVISIONAL
+ReportingUnit	North Carolina;Lee County	LEE;ABSENTEE
+ReportingUnit	North Carolina;Lincoln County	LINCOLN;PROVISIONAL
 ReportingUnit	North Carolina;Lincoln County;BC13	LINCOLN;BC13
 ReportingUnit	North Carolina;Lincoln County;LW31	LINCOLN;LW31
-ReportingUnit	North Carolina;Lincoln County;OS-LINCOLN	LINCOLN;OS-LINCOLN
-ReportingUnit	North Carolina;Lincoln County;OS-EAST	LINCOLN;OS-EAST
+ReportingUnit	North Carolina;Lincoln County	LINCOLN;OS-LINCOLN
+ReportingUnit	North Carolina;Lincoln County	LINCOLN;OS-EAST
 ReportingUnit	North Carolina;Lincoln County;HC33	LINCOLN;HC33
 ReportingUnit	North Carolina;Lincoln County;LS12	LINCOLN;LS12
 ReportingUnit	North Carolina;Lincoln County;AS25	LINCOLN;AS25
-ReportingUnit	North Carolina;Lincoln County;ABSENTEE	LINCOLN;ABSENTEE
+ReportingUnit	North Carolina;Lincoln County	LINCOLN;ABSENTEE
 ReportingUnit	North Carolina;Lincoln County;IS20	LINCOLN;IS20
-ReportingUnit	North Carolina;Lincoln County;OS-WEST	LINCOLN;OS-WEST
+ReportingUnit	North Carolina;Lincoln County	LINCOLN;OS-WEST
 ReportingUnit	North Carolina;Lincoln County;DV08	LINCOLN;DV08
 ReportingUnit	North Carolina;Lincoln County;WP32	LINCOLN;WP32
-ReportingUnit	North Carolina;Lincoln County;TRANSFER	LINCOLN;TRANSFER
-ReportingUnit	North Carolina;Hyde County;PROVISIONAL	HYDE;PROVISIONAL
-ReportingUnit	North Carolina;Hyde County;ABSENTEE	HYDE;ABSENTEE
+ReportingUnit	North Carolina;Lincoln County	LINCOLN;TRANSFER
+ReportingUnit	North Carolina;Hyde County	HYDE;PROVISIONAL
+ReportingUnit	North Carolina;Hyde County	HYDE;ABSENTEE
 ReportingUnit	North Carolina;Hyde County;LL	HYDE;LL
-ReportingUnit	North Carolina;Hyde County;TRANSFER	HYDE;TRANSFER
+ReportingUnit	North Carolina;Hyde County	HYDE;TRANSFER
 ReportingUnit	North Carolina;Hyde County;ENG	HYDE;ENG
 ReportingUnit	North Carolina;Hyde County;BM	HYDE;BM
 ReportingUnit	North Carolina;Hyde County;SQ	HYDE;SQ
-ReportingUnit	North Carolina;Hyde County;OS BOE	HYDE;OS BOE
-ReportingUnit	North Carolina;Hyde County;OS OCK	HYDE;OS OCK
-ReportingUnit	North Carolina;Harnett County;ABSENTEE	HARNETT;ABSENTEE
+ReportingUnit	North Carolina;Hyde County	HYDE;OS BOE
+ReportingUnit	North Carolina;Hyde County	HYDE;OS OCK
+ReportingUnit	North Carolina;Harnett County	HARNETT;ABSENTEE
 ReportingUnit	North Carolina;Harnett County;PR31	HARNETT;PR31
-ReportingUnit	North Carolina;Harnett County;OS ANDERSON	HARNETT;OS ANDERSON
-ReportingUnit	North Carolina;Harnett County;PROVISIONAL	HARNETT;PROVISIONAL
+ReportingUnit	North Carolina;Harnett County	HARNETT;OS ANDERSON
+ReportingUnit	North Carolina;Harnett County	HARNETT;PROVISIONAL
 ReportingUnit	North Carolina;Harnett County;PR20	HARNETT;PR20
-ReportingUnit	North Carolina;Harnett County;OS ANGIER	HARNETT;OS ANGIER
-ReportingUnit	North Carolina;Harnett County;OS ERWIN	HARNETT;OS ERWIN
-ReportingUnit	North Carolina;Harnett County;OS LOBBY	HARNETT;OS LOBBY
+ReportingUnit	North Carolina;Harnett County	HARNETT;OS ANGIER
+ReportingUnit	North Carolina;Harnett County	HARNETT;OS ERWIN
+ReportingUnit	North Carolina;Harnett County	HARNETT;OS LOBBY
 ReportingUnit	North Carolina;Harnett County;PR29	HARNETT;PR29
-ReportingUnit	North Carolina;Harnett County;OS WESTERN	HARNETT;OS WESTERN
+ReportingUnit	North Carolina;Harnett County	HARNETT;OS WESTERN
 ReportingUnit	North Carolina;Harnett County;PR16	HARNETT;PR16
 ReportingUnit	North Carolina;Hoke County;04	HOKE;04
 ReportingUnit	North Carolina;Hoke County;01	HOKE;01
@@ -12637,9 +12811,9 @@ ReportingUnit	North Carolina;Hoke County;03	HOKE;03
 ReportingUnit	North Carolina;Hoke County;05	HOKE;05
 ReportingUnit	North Carolina;Hoke County;02	HOKE;02
 ReportingUnit	North Carolina;Hoke County;13	HOKE;13
-ReportingUnit	North Carolina;Martin County;ONE STOP	MARTIN;ONE STOP
-ReportingUnit	North Carolina;Martin County;PROVISIONAL	MARTIN;PROVISIONAL
-ReportingUnit	North Carolina;Martin County;ABSENTEE	MARTIN;ABSENTEE
+ReportingUnit	North Carolina;Martin County	MARTIN;ONE STOP
+ReportingUnit	North Carolina;Martin County	MARTIN;PROVISIONAL
+ReportingUnit	North Carolina;Martin County	MARTIN;ABSENTEE
 ReportingUnit	North Carolina;Martin County;HS	MARTIN;HS
 ReportingUnit	North Carolina;Martin County;J	MARTIN;J
 ReportingUnit	North Carolina;Martin County;CR	MARTIN;CR
@@ -12648,11 +12822,11 @@ ReportingUnit	North Carolina;Jackson County;CUL	JACKSON;CUL
 ReportingUnit	North Carolina;Jackson County;SCC	JACKSON;SCC
 ReportingUnit	North Carolina;Jackson County;SSW	JACKSON;SSW
 ReportingUnit	North Carolina;Jackson County;CAN	JACKSON;CAN
-ReportingUnit	North Carolina;Jackson County;ABSENTEE	JACKSON;ABSENTEE
-ReportingUnit	North Carolina;Jackson County;CURBSIDE OS	JACKSON;CURBSIDE OS
-ReportingUnit	North Carolina;Jackson County;PROVISIONAL	JACKSON;PROVISIONAL
-ReportingUnit	North Carolina;Jackson County;CURBSIDE ED	JACKSON;CURBSIDE ED
-ReportingUnit	North Carolina;Jackson County;TRANSFER	JACKSON;TRANSFER
+ReportingUnit	North Carolina;Jackson County	JACKSON;ABSENTEE
+ReportingUnit	North Carolina;Jackson County	JACKSON;CURBSIDE OS
+ReportingUnit	North Carolina;Jackson County	JACKSON;PROVISIONAL
+ReportingUnit	North Carolina;Jackson County	JACKSON;CURBSIDE ED
+ReportingUnit	North Carolina;Jackson County	JACKSON;TRANSFER
 ReportingUnit	North Carolina;Jackson County;WEB	JACKSON;WEB
 ReportingUnit	North Carolina;Jackson County;SAV	JACKSON;SAV
 ReportingUnit	North Carolina;Jackson County;SND	JACKSON;SND
@@ -12665,8 +12839,8 @@ ReportingUnit	North Carolina;Lenoir County;I	LENOIR;I
 ReportingUnit	North Carolina;Lenoir County;SH	LENOIR;SH
 ReportingUnit	North Carolina;Lenoir County;V	LENOIR;V
 ReportingUnit	North Carolina;Lenoir County;K6	LENOIR;K6
-ReportingUnit	North Carolina;Lenoir County;ABSENTEE	LENOIR;ABSENTEE
-ReportingUnit	North Carolina;Lenoir County;PROVISIONAL	LENOIR;PROVISIONAL
+ReportingUnit	North Carolina;Lenoir County	LENOIR;ABSENTEE
+ReportingUnit	North Carolina;Lenoir County	LENOIR;PROVISIONAL
 ReportingUnit	North Carolina;Lenoir County;K4	LENOIR;K4
 ReportingUnit	North Carolina;Lenoir County;N	LENOIR;N
 ReportingUnit	North Carolina;Lenoir County;CURBSIDE	LENOIR;CURBSIDE
@@ -12674,29 +12848,29 @@ ReportingUnit	North Carolina;Lenoir County;K1	LENOIR;K1
 ReportingUnit	North Carolina;Lenoir County;K5	LENOIR;K5
 ReportingUnit	North Carolina;Hertford County;CO	HERTFORD;CO
 ReportingUnit	North Carolina;Hertford County;M1	HERTFORD;M1
-ReportingUnit	North Carolina;Hertford County;OS BOE	HERTFORD;OS BOE
+ReportingUnit	North Carolina;Hertford County	HERTFORD;OS BOE
 ReportingUnit	North Carolina;Hertford County;ML	HERTFORD;ML
 ReportingUnit	North Carolina;Hertford County;WN	HERTFORD;WN
 ReportingUnit	North Carolina;Hertford County;UN	HERTFORD;UN
-ReportingUnit	North Carolina;Hertford County;OS AHOSKIE	HERTFORD;OS AHOSKIE
-ReportingUnit	North Carolina;Hertford County;PROVISIONAL	HERTFORD;PROVISIONAL
-ReportingUnit	North Carolina;Hertford County;OS MBORO	HERTFORD;OS MBORO
+ReportingUnit	North Carolina;Hertford County	HERTFORD;OS AHOSKIE
+ReportingUnit	North Carolina;Hertford County	HERTFORD;PROVISIONAL
+ReportingUnit	North Carolina;Hertford County	HERTFORD;OS MBORO
 ReportingUnit	North Carolina;Hertford County;A2	HERTFORD;A2
 ReportingUnit	North Carolina;Hertford County;MAIL ABSENTEE	HERTFORD;MAIL ABSENTEE
 ReportingUnit	North Carolina;Macon County;02	MACON;02
 ReportingUnit	North Carolina;Macon County;14	MACON;14
-ReportingUnit	North Carolina;Macon County;ABSENTEE	MACON;ABSENTEE
-ReportingUnit	North Carolina;Macon County;PROVISIONAL	MACON;PROVISIONAL
+ReportingUnit	North Carolina;Macon County	MACON;ABSENTEE
+ReportingUnit	North Carolina;Macon County	MACON;PROVISIONAL
 ReportingUnit	North Carolina;Macon County;07	MACON;07
 ReportingUnit	North Carolina;Macon County;04	MACON;04
-ReportingUnit	North Carolina;Macon County;TRANSFER	MACON;TRANSFER
+ReportingUnit	North Carolina;Macon County	MACON;TRANSFER
 ReportingUnit	North Carolina;Macon County;06	MACON;06
 ReportingUnit	North Carolina;Macon County;03	MACON;03
 ReportingUnit	North Carolina;Macon County;09	MACON;09
-ReportingUnit	North Carolina;Macon County;OSBOE	MACON;OSBOE
+ReportingUnit	North Carolina;Macon County	MACON;OSBOE
 ReportingUnit	North Carolina;Macon County;01	MACON;01
 ReportingUnit	North Carolina;Macon County;08	MACON;08
-ReportingUnit	North Carolina;Macon County;OSHOS	MACON;OSHOS
+ReportingUnit	North Carolina;Macon County	MACON;OSHOS
 ReportingUnit	North Carolina;Macon County;05	MACON;05
 ReportingUnit	North Carolina;Mcdowell County;T.COVE	MCDOWELL;T.COVE
 ReportingUnit	North Carolina;Mcdowell County;CCREEK	MCDOWELL;CCREEK
@@ -12720,11 +12894,11 @@ ReportingUnit	North Carolina;Mecklenburg County;072	MECKLENBURG;072
 ReportingUnit	North Carolina;Mecklenburg County;045	MECKLENBURG;045
 ReportingUnit	North Carolina;Mecklenburg County;095	MECKLENBURG;095
 ReportingUnit	North Carolina;Mecklenburg County;092	MECKLENBURG;092
-ReportingUnit	North Carolina;Mecklenburg County;CURBSIDE 41-60	MECKLENBURG;CURBSIDE 41-60
+ReportingUnit	North Carolina;Mecklenburg County	MECKLENBURG;CURBSIDE 41-60
 ReportingUnit	North Carolina;Mecklenburg County;221	MECKLENBURG;221
-ReportingUnit	North Carolina;Mecklenburg County;ABSENTEE BY MAIL 41-60	MECKLENBURG;ABSENTEE BY MAIL 41-60
-ReportingUnit	North Carolina;Mecklenburg County;ABSENTEE BY MAIL 61-80	MECKLENBURG;ABSENTEE BY MAIL 61-80
-ReportingUnit	North Carolina;Mecklenburg County;ABSENTEE BY MAIL 21-40	MECKLENBURG;ABSENTEE BY MAIL 21-40
+ReportingUnit	North Carolina;Mecklenburg County	MECKLENBURG;ABSENTEE BY MAIL 41-60
+ReportingUnit	North Carolina;Mecklenburg County	MECKLENBURG;ABSENTEE BY MAIL 61-80
+ReportingUnit	North Carolina;Mecklenburg County	MECKLENBURG;ABSENTEE BY MAIL 21-40
 ReportingUnit	North Carolina;Mecklenburg County;PROVISIONAL 81-96	MECKLENBURG;PROVISIONAL 81-96
 ReportingUnit	North Carolina;Mecklenburg County;047	MECKLENBURG;047
 ReportingUnit	North Carolina;Mecklenburg County;048	MECKLENBURG;048
@@ -12740,8 +12914,8 @@ ReportingUnit	North Carolina;Mecklenburg County;098	MECKLENBURG;098
 ReportingUnit	North Carolina;Mecklenburg County;004	MECKLENBURG;004
 ReportingUnit	North Carolina;Mecklenburg County;005	MECKLENBURG;005
 ReportingUnit	North Carolina;Mecklenburg County;212	MECKLENBURG;212
-ReportingUnit	North Carolina;Mecklenburg County;CURBSIDE 1-20	MECKLENBURG;CURBSIDE 1-20
-ReportingUnit	North Carolina;Mecklenburg County;ABSENTEE BY MAIL 81-96	MECKLENBURG;ABSENTEE BY MAIL 81-96
+ReportingUnit	North Carolina;Mecklenburg County	MECKLENBURG;CURBSIDE 1-20
+ReportingUnit	North Carolina;Mecklenburg County	MECKLENBURG;ABSENTEE BY MAIL 81-96
 ReportingUnit	North Carolina;Mecklenburg County;104	MECKLENBURG;104
 ReportingUnit	North Carolina;Mecklenburg County;105	MECKLENBURG;105
 ReportingUnit	North Carolina;Mecklenburg County;059	MECKLENBURG;059
@@ -12763,7 +12937,7 @@ ReportingUnit	North Carolina;Mecklenburg County;083	MECKLENBURG;083
 ReportingUnit	North Carolina;Mecklenburg County;090	MECKLENBURG;090
 ReportingUnit	North Carolina;Mecklenburg County;067	MECKLENBURG;067
 ReportingUnit	North Carolina;Mecklenburg County;062	MECKLENBURG;062
-ReportingUnit	North Carolina;Mecklenburg County;ABSENTEE BY MAIL 1-20	MECKLENBURG;ABSENTEE BY MAIL 1-20
+ReportingUnit	North Carolina;Mecklenburg County	MECKLENBURG;ABSENTEE BY MAIL 1-20
 ReportingUnit	North Carolina;Mecklenburg County;208	MECKLENBURG;208
 ReportingUnit	North Carolina;Mecklenburg County;042	MECKLENBURG;042
 ReportingUnit	North Carolina;Mecklenburg County;049	MECKLENBURG;049
@@ -12811,7 +12985,7 @@ ReportingUnit	North Carolina;Mecklenburg County;021	MECKLENBURG;021
 ReportingUnit	North Carolina;Mecklenburg County;038	MECKLENBURG;038
 ReportingUnit	North Carolina;Mecklenburg County;079	MECKLENBURG;079
 ReportingUnit	North Carolina;Mecklenburg County;001	MECKLENBURG;001
-ReportingUnit	North Carolina;Mecklenburg County;CURBSIDE 21-40	MECKLENBURG;CURBSIDE 21-40
+ReportingUnit	North Carolina;Mecklenburg County	MECKLENBURG;CURBSIDE 21-40
 ReportingUnit	North Carolina;Mecklenburg County;PROVISIONAL 1-20	MECKLENBURG;PROVISIONAL 1-20
 ReportingUnit	North Carolina;Mecklenburg County;146	MECKLENBURG;146
 ReportingUnit	North Carolina;Mecklenburg County;224	MECKLENBURG;224
@@ -12844,10 +13018,10 @@ ReportingUnit	North Carolina;Mecklenburg County;026	MECKLENBURG;026
 ReportingUnit	North Carolina;Mecklenburg County;023	MECKLENBURG;023
 ReportingUnit	North Carolina;Mecklenburg County;008	MECKLENBURG;008
 ReportingUnit	North Carolina;Mecklenburg County;009	MECKLENBURG;009
-ReportingUnit	North Carolina;Mecklenburg County;CURBSIDE 81-96	MECKLENBURG;CURBSIDE 81-96
+ReportingUnit	North Carolina;Mecklenburg County	MECKLENBURG;CURBSIDE 81-96
 ReportingUnit	North Carolina;Mecklenburg County;226	MECKLENBURG;226
 ReportingUnit	North Carolina;Mecklenburg County;218	MECKLENBURG;218
-ReportingUnit	North Carolina;Mecklenburg County;CURBSIDE 61-80	MECKLENBURG;CURBSIDE 61-80
+ReportingUnit	North Carolina;Mecklenburg County	MECKLENBURG;CURBSIDE 61-80
 ReportingUnit	North Carolina;Mecklenburg County;229	MECKLENBURG;229
 ReportingUnit	North Carolina;Mecklenburg County;241	MECKLENBURG;241
 ReportingUnit	North Carolina;Mecklenburg County;081	MECKLENBURG;081
@@ -12858,19 +13032,19 @@ ReportingUnit	North Carolina;Mecklenburg County;057	MECKLENBURG;057
 ReportingUnit	North Carolina;Mecklenburg County;055	MECKLENBURG;055
 ReportingUnit	North Carolina;Mecklenburg County;032	MECKLENBURG;032
 ReportingUnit	North Carolina;Mecklenburg County;037	MECKLENBURG;037
-ReportingUnit	North Carolina;Moore County;OS-DC PAPER	MOORE;OS-DC PAPER
-ReportingUnit	North Carolina;Moore County;ABSENTEE	MOORE;ABSENTEE
+ReportingUnit	North Carolina;Moore County	MOORE;OS-DC PAPER
+ReportingUnit	North Carolina;Moore County	MOORE;ABSENTEE
 ReportingUnit	North Carolina;Moore County;CAR	MOORE;CAR
-ReportingUnit	North Carolina;Moore County;OS-WEG PAPER	MOORE;OS-WEG PAPER
+ReportingUnit	North Carolina;Moore County	MOORE;OS-WEG PAPER
 ReportingUnit	North Carolina;Moore County;PHB1	MOORE;PHB1
 ReportingUnit	North Carolina;Moore County;DHR	MOORE;DHR
 ReportingUnit	North Carolina;Moore County;EWD	MOORE;EWD
-ReportingUnit	North Carolina;Moore County;OS-AG PAPER	MOORE;OS-AG PAPER
+ReportingUnit	North Carolina;Moore County	MOORE;OS-AG PAPER
 ReportingUnit	North Carolina;Moore County;PHA1	MOORE;PHA1
 ReportingUnit	North Carolina;Moore County;PHA2	MOORE;PHA2
-ReportingUnit	North Carolina;Moore County;PROVISIONAL	MOORE;PROVISIONAL
-ReportingUnit	North Carolina;Moore County;OS-PFD PAPER	MOORE;OS-PFD PAPER
-ReportingUnit	North Carolina;Moore County;OS-VRS PAPER	MOORE;OS-VRS PAPER
+ReportingUnit	North Carolina;Moore County	MOORE;PROVISIONAL
+ReportingUnit	North Carolina;Moore County	MOORE;OS-PFD PAPER
+ReportingUnit	North Carolina;Moore County	MOORE;OS-VRS PAPER
 ReportingUnit	North Carolina;Moore County;WND	MOORE;WND
 ReportingUnit	North Carolina;Moore County;PBF	MOORE;PBF
 ReportingUnit	North Carolina;New Hanover County;H04	NEW HANOVER;H04
@@ -12878,12 +13052,12 @@ ReportingUnit	North Carolina;New Hanover County;CF02	NEW HANOVER;CF02
 ReportingUnit	North Carolina;New Hanover County;M02	NEW HANOVER;M02
 ReportingUnit	North Carolina;New Hanover County;M04	NEW HANOVER;M04
 ReportingUnit	North Carolina;New Hanover County;WB	NEW HANOVER;WB
-ReportingUnit	North Carolina;New Hanover County;ABSENTEE	NEW HANOVER;ABSENTEE
-ReportingUnit	North Carolina;New Hanover County;OS NLB PAPER	NEW HANOVER;OS NLB PAPER
-ReportingUnit	North Carolina;New Hanover County;OS SRC PAPER	NEW HANOVER;OS SRC PAPER
+ReportingUnit	North Carolina;New Hanover County	NEW HANOVER;ABSENTEE
+ReportingUnit	North Carolina;New Hanover County	NEW HANOVER;OS NLB PAPER
+ReportingUnit	North Carolina;New Hanover County	NEW HANOVER;OS SRC PAPER
 ReportingUnit	North Carolina;New Hanover County;W30	NEW HANOVER;W30
 ReportingUnit	North Carolina;New Hanover County;W12	NEW HANOVER;W12
-ReportingUnit	North Carolina;New Hanover County;PROVISIONAL	NEW HANOVER;PROVISIONAL
+ReportingUnit	North Carolina;New Hanover County	NEW HANOVER;PROVISIONAL
 ReportingUnit	North Carolina;New Hanover County;CF05	NEW HANOVER;CF05
 ReportingUnit	North Carolina;New Hanover County;H11	NEW HANOVER;H11
 ReportingUnit	North Carolina;New Hanover County;W21	NEW HANOVER;W21
@@ -12895,11 +13069,11 @@ ReportingUnit	North Carolina;New Hanover County;H06	NEW HANOVER;H06
 ReportingUnit	North Carolina;New Hanover County;FP06	NEW HANOVER;FP06
 ReportingUnit	North Carolina;New Hanover County;W16	NEW HANOVER;W16
 ReportingUnit	North Carolina;New Hanover County;FP08	NEW HANOVER;FP08
-ReportingUnit	North Carolina;New Hanover County;OS GVT PAPER	NEW HANOVER;OS GVT PAPER
-ReportingUnit	North Carolina;New Hanover County;OS CFCC PAPER	NEW HANOVER;OS CFCC PAPER
+ReportingUnit	North Carolina;New Hanover County	NEW HANOVER;OS GVT PAPER
+ReportingUnit	North Carolina;New Hanover County	NEW HANOVER;OS CFCC PAPER
 ReportingUnit	North Carolina;New Hanover County;W29	NEW HANOVER;W29
 ReportingUnit	North Carolina;New Hanover County;W26	NEW HANOVER;W26
-ReportingUnit	North Carolina;New Hanover County;OS CAB PAPER	NEW HANOVER;OS CAB PAPER
+ReportingUnit	North Carolina;New Hanover County	NEW HANOVER;OS CAB PAPER
 ReportingUnit	North Carolina;New Hanover County;W31	NEW HANOVER;W31
 ReportingUnit	North Carolina;New Hanover County;M06	NEW HANOVER;M06
 ReportingUnit	North Carolina;New Hanover County;H03	NEW HANOVER;H03
@@ -12908,18 +13082,18 @@ ReportingUnit	North Carolina;Nash County;P06A	NASH;P06A
 ReportingUnit	North Carolina;Nash County;MT PLEASANT OS	NASH;MT PLEASANT OS
 ReportingUnit	North Carolina;Nash County;P14A	NASH;P14A
 ReportingUnit	North Carolina;Nash County;P19A	NASH;P19A
-ReportingUnit	North Carolina;Nash County;ABSENTEE	NASH;ABSENTEE
+ReportingUnit	North Carolina;Nash County	NASH;ABSENTEE
 ReportingUnit	North Carolina;Nash County;NASHVILLE OS	NASH;NASHVILLE OS
 ReportingUnit	North Carolina;Nash County;SPRING HOPE OS	NASH;SPRING HOPE OS
 ReportingUnit	North Carolina;Nash County;P15A	NASH;P15A
 ReportingUnit	North Carolina;Nash County;P20A	NASH;P20A
 ReportingUnit	North Carolina;Nash County;P17A	NASH;P17A
 ReportingUnit	North Carolina;Nash County;P23A	NASH;P23A
-ReportingUnit	North Carolina;Nash County;PROVISIONAL	NASH;PROVISIONAL
+ReportingUnit	North Carolina;Nash County	NASH;PROVISIONAL
 ReportingUnit	North Carolina;Nash County;P13A	NASH;P13A
 ReportingUnit	North Carolina;Nash County;ROCKY MOUNT OS	NASH;ROCKY MOUNT OS
 ReportingUnit	North Carolina;Nash County;P12A	NASH;P12A
-ReportingUnit	North Carolina;Nash County;TRANSFER	NASH;TRANSFER
+ReportingUnit	North Carolina;Nash County	NASH;TRANSFER
 ReportingUnit	North Carolina;Nash County;P18A	NASH;P18A
 ReportingUnit	North Carolina;Nash County;P24A	NASH;P24A
 ReportingUnit	North Carolina;Nash County;P01A	NASH;P01A
@@ -12956,31 +13130,31 @@ ReportingUnit	North Carolina;Northampton County;CREEKS	NORTHAMPTON;CREEKS
 ReportingUnit	North Carolina;Northampton County;POTECA	NORTHAMPTON;POTECA
 ReportingUnit	North Carolina;Northampton County;CONWAY	NORTHAMPTON;CONWAY
 ReportingUnit	North Carolina;Northampton County;MILWAU	NORTHAMPTON;MILWAU
-ReportingUnit	North Carolina;Northampton County;OS GASTON	NORTHAMPTON;OS GASTON
-ReportingUnit	North Carolina;Northampton County;PROVISIONAL	NORTHAMPTON;PROVISIONAL
+ReportingUnit	North Carolina;Northampton County	NORTHAMPTON;OS GASTON
+ReportingUnit	North Carolina;Northampton County	NORTHAMPTON;PROVISIONAL
 ReportingUnit	North Carolina;Northampton County;GARYSB	NORTHAMPTON;GARYSB
-ReportingUnit	North Carolina;Northampton County;OS OFFICE	NORTHAMPTON;OS OFFICE
-ReportingUnit	North Carolina;Northampton County;OS RICH SQUARE	NORTHAMPTON;OS RICH SQUARE
+ReportingUnit	North Carolina;Northampton County	NORTHAMPTON;OS OFFICE
+ReportingUnit	North Carolina;Northampton County	NORTHAMPTON;OS RICH SQUARE
 ReportingUnit	North Carolina;Northampton County;GALATI	NORTHAMPTON;GALATI
-ReportingUnit	North Carolina;Northampton County;OS LAKE GASTON	NORTHAMPTON;OS LAKE GASTON
+ReportingUnit	North Carolina;Northampton County	NORTHAMPTON;OS LAKE GASTON
 ReportingUnit	North Carolina;Northampton County;RICH S	NORTHAMPTON;RICH S
 ReportingUnit	North Carolina;Northampton County;REHOBE	NORTHAMPTON;REHOBE
 ReportingUnit	North Carolina;Northampton County;WOODLA	NORTHAMPTON;WOODLA
-ReportingUnit	North Carolina;Northampton County;ABSENTEE BY MAIL	NORTHAMPTON;ABSENTEE BY MAIL
+ReportingUnit	North Carolina;Northampton County	NORTHAMPTON;ABSENTEE BY MAIL
 ReportingUnit	North Carolina;Northampton County;GASTON	NORTHAMPTON;GASTON
-ReportingUnit	North Carolina;Northampton County;TRANSFER	NORTHAMPTON;TRANSFER
+ReportingUnit	North Carolina;Northampton County	NORTHAMPTON;TRANSFER
 ReportingUnit	North Carolina;Orange County;CS1	ORANGE;CS1
 ReportingUnit	North Carolina;Orange County;DM	ORANGE;DM
 ReportingUnit	North Carolina;Orange County;H	ORANGE;H
 ReportingUnit	North Carolina;Orange County;EA	ORANGE;EA
 ReportingUnit	North Carolina;Orange County;CA	ORANGE;CA
 ReportingUnit	North Carolina;Orange County;CC	ORANGE;CC
-ReportingUnit	North Carolina;Orange County;ABSENTEE BY MAIL	ORANGE;ABSENTEE BY MAIL
-ReportingUnit	North Carolina;Orange County;OS EFLAND	ORANGE;OS EFLAND
+ReportingUnit	North Carolina;Orange County	ORANGE;ABSENTEE BY MAIL
+ReportingUnit	North Carolina;Orange County	ORANGE;OS EFLAND
 ReportingUnit	North Carolina;Orange County;WD	ORANGE;WD
 ReportingUnit	North Carolina;Orange County;GR	ORANGE;GR
 ReportingUnit	North Carolina;Orange County;MF	ORANGE;MF
-ReportingUnit	North Carolina;Orange County;OS COTC	ORANGE;OS COTC
+ReportingUnit	North Carolina;Orange County	ORANGE;OS COTC
 ReportingUnit	North Carolina;Orange County;ENO	ORANGE;ENO
 ReportingUnit	North Carolina;Orange County;CP	ORANGE;CP
 ReportingUnit	North Carolina;Orange County;NC	ORANGE;NC
@@ -12988,13 +13162,13 @@ ReportingUnit	North Carolina;Orange County;PA	ORANGE;PA
 ReportingUnit	North Carolina;Orange County;TO	ORANGE;TO
 ReportingUnit	North Carolina;Orange County;BC	ORANGE;BC
 ReportingUnit	North Carolina;Orange County;WW	ORANGE;WW
-ReportingUnit	North Carolina;Orange County;OS SEYMOUR	ORANGE;OS SEYMOUR
-ReportingUnit	North Carolina;Orange County;OS CTH	ORANGE;OS CTH
-ReportingUnit	North Carolina;Orange County;OS BOE	ORANGE;OS BOE
+ReportingUnit	North Carolina;Orange County	ORANGE;OS SEYMOUR
+ReportingUnit	North Carolina;Orange County	ORANGE;OS CTH
+ReportingUnit	North Carolina;Orange County	ORANGE;OS BOE
 ReportingUnit	North Carolina;Orange County;KM	ORANGE;KM
 ReportingUnit	North Carolina;Orange County;NS	ORANGE;NS
 ReportingUnit	North Carolina;Orange County;OG	ORANGE;OG
-ReportingUnit	North Carolina;Orange County;PROVISIONAL	ORANGE;PROVISIONAL
+ReportingUnit	North Carolina;Orange County	ORANGE;PROVISIONAL
 ReportingUnit	North Carolina;Orange County;LI	ORANGE;LI
 ReportingUnit	North Carolina;Orange County;CB	ORANGE;CB
 ReportingUnit	North Carolina;Orange County;RF	ORANGE;RF
@@ -13003,99 +13177,99 @@ ReportingUnit	North Carolina;Orange County;CF	ORANGE;CF
 ReportingUnit	North Carolina;Orange County;BP	ORANGE;BP
 ReportingUnit	North Carolina;Orange County;CW	ORANGE;CW
 ReportingUnit	North Carolina;Orange County;EH	ORANGE;EH
-ReportingUnit	North Carolina;Pamlico County;ABSENTEE	PAMLICO;ABSENTEE
+ReportingUnit	North Carolina;Pamlico County	PAMLICO;ABSENTEE
 ReportingUnit	North Carolina;Pamlico County;CURBSIDE	PAMLICO;CURBSIDE
 ReportingUnit	North Carolina;Pamlico County;5AP	PAMLICO;5AP
 ReportingUnit	North Carolina;Pamlico County;1AL A	PAMLICO;1AL A
 ReportingUnit	North Carolina;Pamlico County;2OT	PAMLICO;2OT
-ReportingUnit	North Carolina;Pamlico County;PROVISIONAL	PAMLICO;PROVISIONAL
+ReportingUnit	North Carolina;Pamlico County	PAMLICO;PROVISIONAL
 ReportingUnit	North Carolina;Pasquotank County;PRO	PASQUOTANK;PRO
-ReportingUnit	North Carolina;Pasquotank County;TRANSFER	PASQUOTANK;TRANSFER
-ReportingUnit	North Carolina;Pasquotank County;ABSENTEE	PASQUOTANK;ABSENTEE
-ReportingUnit	North Carolina;Pasquotank County;ONE STOP	PASQUOTANK;ONE STOP
+ReportingUnit	North Carolina;Pasquotank County	PASQUOTANK;TRANSFER
+ReportingUnit	North Carolina;Pasquotank County	PASQUOTANK;ABSENTEE
+ReportingUnit	North Carolina;Pasquotank County	PASQUOTANK;ONE STOP
 ReportingUnit	North Carolina;Pasquotank County;NORTH	PASQUOTANK;NORTH
-ReportingUnit	North Carolina;Pasquotank County;PROVISIONAL	PASQUOTANK;PROVISIONAL
+ReportingUnit	North Carolina;Pasquotank County	PASQUOTANK;PROVISIONAL
 ReportingUnit	North Carolina;Person County;FLRI	PERSON;FLRI
 ReportingUnit	North Carolina;Person County;OLHI	PERSON;OLHI
 ReportingUnit	North Carolina;Person County;PNTH	PERSON;PNTH
-ReportingUnit	North Carolina;Pitt County;ABSENTEE #1	PITT;ABSENTEE #1
-ReportingUnit	North Carolina;Pitt County;OS AG CENTER 1	PITT;OS AG CENTER 1
-ReportingUnit	North Carolina;Pitt County;OS COMMUNITY SCHOOLS 1	PITT;OS COMMUNITY SCHOOLS 1
+ReportingUnit	North Carolina;Pitt County	PITT;ABSENTEE #1
+ReportingUnit	North Carolina;Pitt County	PITT;OS AG CENTER 1
+ReportingUnit	North Carolina;Pitt County	PITT;OS COMMUNITY SCHOOLS 1
 ReportingUnit	North Carolina;Pitt County;0601	PITT;0601
-ReportingUnit	North Carolina;Pitt County;OS COUNTY OFFICE 1	PITT;OS COUNTY OFFICE 1
-ReportingUnit	North Carolina;Pitt County;OS WINTERVILLE #1	PITT;OS WINTERVILLE #1
-ReportingUnit	North Carolina;Pitt County;OS FARMVILLE 1	PITT;OS FARMVILLE 1
-ReportingUnit	North Carolina;Pitt County;OS FARMVILLE 2	PITT;OS FARMVILLE 2
+ReportingUnit	North Carolina;Pitt County	PITT;OS COUNTY OFFICE 1
+ReportingUnit	North Carolina;Pitt County	PITT;OS WINTERVILLE #1
+ReportingUnit	North Carolina;Pitt County	PITT;OS FARMVILLE 1
+ReportingUnit	North Carolina;Pitt County	PITT;OS FARMVILLE 2
 ReportingUnit	North Carolina;Pitt County;1504B	PITT;1504B
 ReportingUnit	North Carolina;Pitt County;1503	PITT;1503
-ReportingUnit	North Carolina;Pitt County;OS AYDEN #2	PITT;OS AYDEN #2
-ReportingUnit	North Carolina;Pitt County;OS WILLIS BUILDING #2	PITT;OS WILLIS BUILDING #2
+ReportingUnit	North Carolina;Pitt County	PITT;OS AYDEN #2
+ReportingUnit	North Carolina;Pitt County	PITT;OS WILLIS BUILDING #2
 ReportingUnit	North Carolina;Pitt County;0101	PITT;0101
 ReportingUnit	North Carolina;Pitt County;1102A	PITT;1102A
 ReportingUnit	North Carolina;Pitt County;1508B	PITT;1508B
 ReportingUnit	North Carolina;Pitt County;1511B	PITT;1511B
-ReportingUnit	North Carolina;Pitt County;OS COUNTY OFFICE 2	PITT;OS COUNTY OFFICE 2
+ReportingUnit	North Carolina;Pitt County	PITT;OS COUNTY OFFICE 2
 ReportingUnit	North Carolina;Pitt County;0901	PITT;0901
 ReportingUnit	North Carolina;Pitt County;0701	PITT;0701
 ReportingUnit	North Carolina;Pitt County;1508A	PITT;1508A
-ReportingUnit	North Carolina;Pitt County;OS AG CENTER 2	PITT;OS AG CENTER 2
+ReportingUnit	North Carolina;Pitt County	PITT;OS AG CENTER 2
 ReportingUnit	North Carolina;Pitt County;0401	PITT;0401
 ReportingUnit	North Carolina;Pitt County;1513A	PITT;1513A
 ReportingUnit	North Carolina;Pitt County;0501	PITT;0501
 ReportingUnit	North Carolina;Pitt County;1102B	PITT;1102B
 ReportingUnit	North Carolina;Pitt County;1507	PITT;1507
-ReportingUnit	North Carolina;Pitt County;OS WINTERVILLE #2	PITT;OS WINTERVILLE #2
-ReportingUnit	North Carolina;Pitt County;TRANSFER #2	PITT;TRANSFER #2
+ReportingUnit	North Carolina;Pitt County	PITT;OS WINTERVILLE #2
+ReportingUnit	North Carolina;Pitt County	PITT;TRANSFER #2
 ReportingUnit	North Carolina;Pitt County;0800A	PITT;0800A
 ReportingUnit	North Carolina;Pitt County;1501	PITT;1501
-ReportingUnit	North Carolina;Pitt County;OS AYDEN #1	PITT;OS AYDEN #1
-ReportingUnit	North Carolina;Pitt County;OS COMMUNITY SCHOOLS 2	PITT;OS COMMUNITY SCHOOLS 2
+ReportingUnit	North Carolina;Pitt County	PITT;OS AYDEN #1
+ReportingUnit	North Carolina;Pitt County	PITT;OS COMMUNITY SCHOOLS 2
 ReportingUnit	North Carolina;Pitt County;0301	PITT;0301
 ReportingUnit	North Carolina;Pitt County;1507B	PITT;1507B
 ReportingUnit	North Carolina;Pitt County;1101	PITT;1101
-ReportingUnit	North Carolina;Pitt County;TRANSFER #1	PITT;TRANSFER #1
+ReportingUnit	North Carolina;Pitt County	PITT;TRANSFER #1
 ReportingUnit	North Carolina;Pitt County;1201	PITT;1201
-ReportingUnit	North Carolina;Pitt County;ABSENTEE #2	PITT;ABSENTEE #2
+ReportingUnit	North Carolina;Pitt County	PITT;ABSENTEE #2
 ReportingUnit	North Carolina;Pitt County;1511A	PITT;1511A
-ReportingUnit	North Carolina;Pitt County;OS ECU-WILLIS BLDG 1	PITT;OS ECU-WILLIS BLDG 1
+ReportingUnit	North Carolina;Pitt County	PITT;OS ECU-WILLIS BLDG 1
 ReportingUnit	North Carolina;Pitt County;PROVISIONAL #1	PITT;PROVISIONAL #1
 ReportingUnit	North Carolina;Pitt County;PROVISIONAL #2	PITT;PROVISIONAL #2
-ReportingUnit	North Carolina;Richmond County;ONE STOP 100 COLE	RICHMOND;ONE STOP 100 COLE
-ReportingUnit	North Carolina;Richmond County;ONE STOP 100 ELLERBE	RICHMOND;ONE STOP 100 ELLERBE
-ReportingUnit	North Carolina;Richmond County;ONE STOP 100 NORMAN	RICHMOND;ONE STOP 100 NORMAN
-ReportingUnit	North Carolina;Richmond County;ONE STOP 100 COOP	RICHMOND;ONE STOP 100 COOP
-ReportingUnit	North Carolina;Richmond County;ABSENTEE	RICHMOND;ABSENTEE
+ReportingUnit	North Carolina;Richmond County	RICHMOND;ONE STOP 100 COLE
+ReportingUnit	North Carolina;Richmond County	RICHMOND;ONE STOP 100 ELLERBE
+ReportingUnit	North Carolina;Richmond County	RICHMOND;ONE STOP 100 NORMAN
+ReportingUnit	North Carolina;Richmond County	RICHMOND;ONE STOP 100 COOP
+ReportingUnit	North Carolina;Richmond County	RICHMOND;ABSENTEE
 ReportingUnit	North Carolina;Richmond County;09	RICHMOND;09
 ReportingUnit	North Carolina;Richmond County;13	RICHMOND;13
 ReportingUnit	North Carolina;Richmond County;06	RICHMOND;06
 ReportingUnit	North Carolina;Richmond County;03	RICHMOND;03
 ReportingUnit	North Carolina;Richmond County;14	RICHMOND;14
 ReportingUnit	North Carolina;Richmond County;02	RICHMOND;02
-ReportingUnit	North Carolina;Richmond County;TRANSFER	RICHMOND;TRANSFER
+ReportingUnit	North Carolina;Richmond County	RICHMOND;TRANSFER
 ReportingUnit	North Carolina;Richmond County;08	RICHMOND;08
 ReportingUnit	North Carolina;Richmond County;05	RICHMOND;05
 ReportingUnit	North Carolina;Richmond County;01	RICHMOND;01
-ReportingUnit	North Carolina;Richmond County;PROVISIONAL	RICHMOND;PROVISIONAL
+ReportingUnit	North Carolina;Richmond County	RICHMOND;PROVISIONAL
 ReportingUnit	North Carolina;Richmond County;04	RICHMOND;04
 ReportingUnit	North Carolina;Richmond County;07	RICHMOND;07
 ReportingUnit	North Carolina;Robeson County;32A	ROBESON;32A
-ReportingUnit	North Carolina;Robeson County;PROVISIONAL	ROBESON;PROVISIONAL
-ReportingUnit	North Carolina;Robeson County;OS FAIRMONT	ROBESON;OS FAIRMONT
-ReportingUnit	North Carolina;Robeson County;ABSENTEE	ROBESON;ABSENTEE
+ReportingUnit	North Carolina;Robeson County	ROBESON;PROVISIONAL
+ReportingUnit	North Carolina;Robeson County	ROBESON;OS FAIRMONT
+ReportingUnit	North Carolina;Robeson County	ROBESON;ABSENTEE
 ReportingUnit	North Carolina;Robeson County;21	ROBESON;21
 ReportingUnit	North Carolina;Robeson County;08	ROBESON;08
 ReportingUnit	North Carolina;Robeson County;02	ROBESON;02
 ReportingUnit	North Carolina;Robeson County;11	ROBESON;11
-ReportingUnit	North Carolina;Robeson County;OS ST PAULS	ROBESON;OS ST PAULS
+ReportingUnit	North Carolina;Robeson County	ROBESON;OS ST PAULS
 ReportingUnit	North Carolina;Robeson County;03	ROBESON;03
 ReportingUnit	North Carolina;Robeson County;26A	ROBESON;26A
 ReportingUnit	North Carolina;Robeson County;09	ROBESON;09
-ReportingUnit	North Carolina;Robeson County;OS LUMBERTON BOE	ROBESON;OS LUMBERTON BOE
+ReportingUnit	North Carolina;Robeson County	ROBESON;OS LUMBERTON BOE
 ReportingUnit	North Carolina;Robeson County;10	ROBESON;10
 ReportingUnit	North Carolina;Robeson County;33	ROBESON;33
 ReportingUnit	North Carolina;Robeson County;30	ROBESON;30
 ReportingUnit	North Carolina;Robeson County;18A	ROBESON;18A
-ReportingUnit	North Carolina;Robeson County;OS RED SPRINGS	ROBESON;OS RED SPRINGS
+ReportingUnit	North Carolina;Robeson County	ROBESON;OS RED SPRINGS
 ReportingUnit	North Carolina;Robeson County;01	ROBESON;01
 ReportingUnit	North Carolina;Robeson County;28	ROBESON;28
 ReportingUnit	North Carolina;Robeson County;41	ROBESON;41
@@ -13103,8 +13277,8 @@ ReportingUnit	North Carolina;Robeson County;07	ROBESON;07
 ReportingUnit	North Carolina;Robeson County;04	ROBESON;04
 ReportingUnit	North Carolina;Robeson County;11A	ROBESON;11A
 ReportingUnit	North Carolina;Robeson County;19	ROBESON;19
-ReportingUnit	North Carolina;Robeson County;OS PEMBROKE	ROBESON;OS PEMBROKE
-ReportingUnit	North Carolina;Robeson County;OS MAXTON	ROBESON;OS MAXTON
+ReportingUnit	North Carolina;Robeson County	ROBESON;OS PEMBROKE
+ReportingUnit	North Carolina;Robeson County	ROBESON;OS MAXTON
 ReportingUnit	North Carolina;Rockingham County;MA	ROCKINGHAM;MA
 ReportingUnit	North Carolina;Rockingham County;DR	ROCKINGHAM;DR
 ReportingUnit	North Carolina;Rockingham County;HU	ROCKINGHAM;HU
@@ -13113,40 +13287,40 @@ ReportingUnit	North Carolina;Rockingham County;IR	ROCKINGHAM;IR
 ReportingUnit	North Carolina;Rockingham County;LI	ROCKINGHAM;LI
 ReportingUnit	North Carolina;Rockingham County;MS	ROCKINGHAM;MS
 ReportingUnit	North Carolina;Rutherford County;09A	RUTHERFORD;09A
-ReportingUnit	North Carolina;Rutherford County;OS-ANNEX PAPER	RUTHERFORD;OS-ANNEX PAPER
+ReportingUnit	North Carolina;Rutherford County	RUTHERFORD;OS-ANNEX PAPER
 ReportingUnit	North Carolina;Rutherford County;27	RUTHERFORD;27
 ReportingUnit	North Carolina;Rutherford County;CURBSIDE	RUTHERFORD;CURBSIDE
-ReportingUnit	North Carolina;Rutherford County;ABSENTEE	RUTHERFORD;ABSENTEE
+ReportingUnit	North Carolina;Rutherford County	RUTHERFORD;ABSENTEE
 ReportingUnit	North Carolina;Rutherford County;13	RUTHERFORD;13
 ReportingUnit	North Carolina;Rutherford County;18	RUTHERFORD;18
-ReportingUnit	North Carolina;Rutherford County;OS-BOE PAPER	RUTHERFORD;OS-BOE PAPER
+ReportingUnit	North Carolina;Rutherford County	RUTHERFORD;OS-BOE PAPER
 ReportingUnit	North Carolina;Rutherford County;03A	RUTHERFORD;03A
 ReportingUnit	North Carolina;Rutherford County;11	RUTHERFORD;11
 ReportingUnit	North Carolina;Rutherford County;06A	RUTHERFORD;06A
 ReportingUnit	North Carolina;Rutherford County;19	RUTHERFORD;19
-ReportingUnit	North Carolina;Rutherford County;OS-ELLENBORO PAPER	RUTHERFORD;OS-ELLENBORO PAPER
+ReportingUnit	North Carolina;Rutherford County	RUTHERFORD;OS-ELLENBORO PAPER
 ReportingUnit	North Carolina;Rutherford County;04A	RUTHERFORD;04A
-ReportingUnit	North Carolina;Rutherford County;PROVISIONAL	RUTHERFORD;PROVISIONAL
+ReportingUnit	North Carolina;Rutherford County	RUTHERFORD;PROVISIONAL
 ReportingUnit	North Carolina;Onslow County;CL10	ONSLOW;CL10
 ReportingUnit	North Carolina;Onslow County;ML23	ONSLOW;ML23
 ReportingUnit	North Carolina;Onslow County;JA01	ONSLOW;JA01
-ReportingUnit	North Carolina;Onslow County;PROVISIONAL	ONSLOW;PROVISIONAL
+ReportingUnit	North Carolina;Onslow County	ONSLOW;PROVISIONAL
 ReportingUnit	North Carolina;Onslow County;NE22B	ONSLOW;NE22B
-ReportingUnit	North Carolina;Onslow County;ABSENTEE	ONSLOW;ABSENTEE
+ReportingUnit	North Carolina;Onslow County	ONSLOW;ABSENTEE
 ReportingUnit	North Carolina;Onslow County;NE22A	ONSLOW;NE22A
 ReportingUnit	North Carolina;Onslow County;SW19	ONSLOW;SW19
 ReportingUnit	North Carolina;Onslow County;HU20	ONSLOW;HU20
 ReportingUnit	North Carolina;Onslow County;GB12	ONSLOW;GB12
-ReportingUnit	North Carolina;Onslow County;OS-ONSLOW OFFICE	ONSLOW;OS-ONSLOW OFFICE
+ReportingUnit	North Carolina;Onslow County	ONSLOW;OS-ONSLOW OFFICE
 ReportingUnit	North Carolina;Onslow County;SF18	ONSLOW;SF18
 ReportingUnit	North Carolina;Onslow County;EN03	ONSLOW;EN03
 ReportingUnit	North Carolina;Onslow County;MT24	ONSLOW;MT24
-ReportingUnit	North Carolina;Onslow County;OS-COMMONS REC CTR	ONSLOW;OS-COMMONS REC CTR
+ReportingUnit	North Carolina;Onslow County	ONSLOW;OS-COMMONS REC CTR
 ReportingUnit	North Carolina;Onslow County;BM08	ONSLOW;BM08
 ReportingUnit	North Carolina;Onslow County;RL09	ONSLOW;RL09
-ReportingUnit	North Carolina;Onslow County;OS-SWANSBORO ROTARY	ONSLOW;OS-SWANSBORO ROTARY
+ReportingUnit	North Carolina;Onslow County	ONSLOW;OS-SWANSBORO ROTARY
 ReportingUnit	North Carolina;Onslow County;BC21	ONSLOW;BC21
-ReportingUnit	North Carolina;Onslow County;OS-VERONA	ONSLOW;OS-VERONA
+ReportingUnit	North Carolina;Onslow County	ONSLOW;OS-VERONA
 ReportingUnit	North Carolina;Onslow County;CR07	ONSLOW;CR07
 ReportingUnit	North Carolina;Onslow County;HN14	ONSLOW;HN14
 ReportingUnit	North Carolina;Randolph County;TR	RANDOLPH;TR
@@ -13177,58 +13351,58 @@ ReportingUnit	North Carolina;Rowan County;03	ROWAN;03
 ReportingUnit	North Carolina;Rowan County;30	ROWAN;30
 ReportingUnit	North Carolina;Rowan County;31	ROWAN;31
 ReportingUnit	North Carolina;Rowan County;09	ROWAN;09
-ReportingUnit	North Carolina;Perquimans County;PROVISIONAL	PERQUIMANS;PROVISIONAL
+ReportingUnit	North Carolina;Perquimans County	PERQUIMANS;PROVISIONAL
 ReportingUnit	North Carolina;Perquimans County;CURBSIDE	PERQUIMANS;CURBSIDE
 ReportingUnit	North Carolina;Perquimans County;BETHEL	PERQUIMANS;BETHEL
-ReportingUnit	North Carolina;Perquimans County;ABSENTEE	PERQUIMANS;ABSENTEE
+ReportingUnit	North Carolina;Perquimans County	PERQUIMANS;ABSENTEE
 ReportingUnit	North Carolina;Perquimans County;WEST H	PERQUIMANS;WEST H
 ReportingUnit	North Carolina;Perquimans County;BELVID	PERQUIMANS;BELVID
 ReportingUnit	North Carolina;Sampson County;MING	SAMPSON;MING
 ReportingUnit	North Carolina;Sampson County;CLEM	SAMPSON;CLEM
 ReportingUnit	North Carolina;Sampson County;GARL	SAMPSON;GARL
-ReportingUnit	North Carolina;Sampson County;PROVISIONAL	SAMPSON;PROVISIONAL
+ReportingUnit	North Carolina;Sampson County	SAMPSON;PROVISIONAL
 ReportingUnit	North Carolina;Sampson County;CLEA	SAMPSON;CLEA
 ReportingUnit	North Carolina;Sampson County;ROSE	SAMPSON;ROSE
-ReportingUnit	North Carolina;Sampson County;ONE STOP 1	SAMPSON;ONE STOP 1
+ReportingUnit	North Carolina;Sampson County	SAMPSON;ONE STOP 1
 ReportingUnit	North Carolina;Sampson County;LAKE	SAMPSON;LAKE
-ReportingUnit	North Carolina;Sampson County;ONE STOP 4	SAMPSON;ONE STOP 4
+ReportingUnit	North Carolina;Sampson County	SAMPSON;ONE STOP 4
 ReportingUnit	North Carolina;Sampson County;ROWA	SAMPSON;ROWA
-ReportingUnit	North Carolina;Sampson County;ONE STOP 5	SAMPSON;ONE STOP 5
-ReportingUnit	North Carolina;Sampson County;ONE STOP 2	SAMPSON;ONE STOP 2
-ReportingUnit	North Carolina;Sampson County;TRANSFER	SAMPSON;TRANSFER
-ReportingUnit	North Carolina;Sampson County;ABSENTEE	SAMPSON;ABSENTEE
+ReportingUnit	North Carolina;Sampson County	SAMPSON;ONE STOP 5
+ReportingUnit	North Carolina;Sampson County	SAMPSON;ONE STOP 2
+ReportingUnit	North Carolina;Sampson County	SAMPSON;TRANSFER
+ReportingUnit	North Carolina;Sampson County	SAMPSON;ABSENTEE
 ReportingUnit	North Carolina;Sampson County;PLVW	SAMPSON;PLVW
-ReportingUnit	North Carolina;Sampson County;ONE STOP 3	SAMPSON;ONE STOP 3
+ReportingUnit	North Carolina;Sampson County	SAMPSON;ONE STOP 3
 ReportingUnit	North Carolina;Sampson County;WBRK	SAMPSON;WBRK
 ReportingUnit	North Carolina;Sampson County;CLSW	SAMPSON;CLSW
 ReportingUnit	North Carolina;Sampson County;GIDD	SAMPSON;GIDD
 ReportingUnit	North Carolina;Sampson County;INGO	SAMPSON;INGO
 ReportingUnit	North Carolina;Scotland County;01	SCOTLAND;01
-ReportingUnit	North Carolina;Scotland County;ABSENTEE	SCOTLAND;ABSENTEE
-ReportingUnit	North Carolina;Scotland County;TRANSFER	SCOTLAND;TRANSFER
+ReportingUnit	North Carolina;Scotland County	SCOTLAND;ABSENTEE
+ReportingUnit	North Carolina;Scotland County	SCOTLAND;TRANSFER
 ReportingUnit	North Carolina;Scotland County;02	SCOTLAND;02
 ReportingUnit	North Carolina;Scotland County;05	SCOTLAND;05
 ReportingUnit	North Carolina;Scotland County;08	SCOTLAND;08
-ReportingUnit	North Carolina;Scotland County;ONE STOP	SCOTLAND;ONE STOP
+ReportingUnit	North Carolina;Scotland County	SCOTLAND;ONE STOP
 ReportingUnit	North Carolina;Scotland County;10	SCOTLAND;10
 ReportingUnit	North Carolina;Scotland County;03	SCOTLAND;03
 ReportingUnit	North Carolina;Scotland County;09	SCOTLAND;09
 ReportingUnit	North Carolina;Scotland County;06	SCOTLAND;06
 ReportingUnit	North Carolina;Scotland County;04	SCOTLAND;04
-ReportingUnit	North Carolina;Scotland County;PROVISIONAL	SCOTLAND;PROVISIONAL
+ReportingUnit	North Carolina;Scotland County	SCOTLAND;PROVISIONAL
 ReportingUnit	North Carolina;Scotland County;07	SCOTLAND;07
 ReportingUnit	North Carolina;Pender County;MH07	PENDER;MH07
 ReportingUnit	North Carolina;Pender County;MT19	PENDER;MT19
 ReportingUnit	North Carolina;Pender County;SH12	PENDER;SH12
-ReportingUnit	North Carolina;Pender County;PROVISIONAL	PENDER;PROVISIONAL
+ReportingUnit	North Carolina;Pender County	PENDER;PROVISIONAL
 ReportingUnit	North Carolina;Pender County;SP15	PENDER;SP15
 ReportingUnit	North Carolina;Pender County;UU17	PENDER;UU17
 ReportingUnit	North Carolina;Pender County;LT18	PENDER;LT18
 ReportingUnit	North Carolina;Pender County;CURBSIDE	PENDER;CURBSIDE
-ReportingUnit	North Carolina;Pender County;ABSENTEE BY MAIL	PENDER;ABSENTEE BY MAIL
+ReportingUnit	North Carolina;Pender County	PENDER;ABSENTEE BY MAIL
 ReportingUnit	North Carolina;Pender County;RP20	PENDER;RP20
-ReportingUnit	North Carolina;Polk County;ABSENTEE	POLK;ABSENTEE
-ReportingUnit	North Carolina;Polk County;PROVISIONAL	POLK;PROVISIONAL
+ReportingUnit	North Carolina;Polk County	POLK;ABSENTEE
+ReportingUnit	North Carolina;Polk County	POLK;PROVISIONAL
 ReportingUnit	North Carolina;Polk County;TR123	POLK;TR123
 ReportingUnit	North Carolina;Polk County;CL07	POLK;CL07
 ReportingUnit	North Carolina;Polk County;CL08	POLK;CL08
@@ -13257,12 +13431,12 @@ ReportingUnit	North Carolina;Stanly County;0019	STANLY;0019
 ReportingUnit	North Carolina;Stanly County;0010	STANLY;0010
 ReportingUnit	North Carolina;Stanly County;0012	STANLY;0012
 ReportingUnit	North Carolina;Stanly County;0017	STANLY;0017
-ReportingUnit	North Carolina;Surry County;PROVISIONAL	SURRY;PROVISIONAL
+ReportingUnit	North Carolina;Surry County	SURRY;PROVISIONAL
 ReportingUnit	North Carolina;Surry County;16	SURRY;16
 ReportingUnit	North Carolina;Surry County;CURBSIDE	SURRY;CURBSIDE
 ReportingUnit	North Carolina;Surry County;14	SURRY;14
 ReportingUnit	North Carolina;Surry County;33	SURRY;33
-ReportingUnit	North Carolina;Surry County;ABSENTEE	SURRY;ABSENTEE
+ReportingUnit	North Carolina;Surry County	SURRY;ABSENTEE
 ReportingUnit	North Carolina;Surry County;15	SURRY;15
 ReportingUnit	North Carolina;Surry County;17	SURRY;17
 ReportingUnit	North Carolina;Surry County;04	SURRY;04
@@ -13299,8 +13473,8 @@ ReportingUnit	North Carolina;Union County;042	UNION;042
 ReportingUnit	North Carolina;Union County;018	UNION;018
 ReportingUnit	North Carolina;Union County;022	UNION;022
 ReportingUnit	North Carolina;Union County;025	UNION;025
-ReportingUnit	North Carolina;Union County;TRANSFER	UNION;TRANSFER
-ReportingUnit	North Carolina;Union County;PROVISIONAL	UNION;PROVISIONAL
+ReportingUnit	North Carolina;Union County	UNION;TRANSFER
+ReportingUnit	North Carolina;Union County	UNION;PROVISIONAL
 ReportingUnit	North Carolina;Union County;039	UNION;039
 ReportingUnit	North Carolina;Union County;041	UNION;041
 ReportingUnit	North Carolina;Union County;007	UNION;007
@@ -13325,7 +13499,7 @@ ReportingUnit	North Carolina;Union County;019	UNION;019
 ReportingUnit	North Carolina;Union County;020A	UNION;020A
 ReportingUnit	North Carolina;Union County;030	UNION;030
 ReportingUnit	North Carolina;Union County;021	UNION;021
-ReportingUnit	North Carolina;Union County;ABSENTEE	UNION;ABSENTEE
+ReportingUnit	North Carolina;Union County	UNION;ABSENTEE
 ReportingUnit	North Carolina;Union County;011	UNION;011
 ReportingUnit	North Carolina;Union County;014	UNION;014
 ReportingUnit	North Carolina;Union County;020B	UNION;020B
@@ -13345,7 +13519,7 @@ ReportingUnit	North Carolina;Wake County;08-09	WAKE;08-09
 ReportingUnit	North Carolina;Wake County;09-01	WAKE;09-01
 ReportingUnit	North Carolina;Wake County;09-03	WAKE;09-03
 ReportingUnit	North Carolina;Wake County;12-06	WAKE;12-06
-ReportingUnit	North Carolina;Wake County;OSNB 81-91	WAKE;OSNB 81-91
+ReportingUnit	North Carolina;Wake County	WAKE;OSNB 81-91
 ReportingUnit	North Carolina;Wake County;01-01	WAKE;01-01
 ReportingUnit	North Carolina;Wake County;01-04	WAKE;01-04
 ReportingUnit	North Carolina;Wake County;01-21	WAKE;01-21
@@ -13362,13 +13536,13 @@ ReportingUnit	North Carolina;Wake County;12-01	WAKE;12-01
 ReportingUnit	North Carolina;Wake County;12-02	WAKE;12-02
 ReportingUnit	North Carolina;Wake County;14-01	WAKE;14-01
 ReportingUnit	North Carolina;Wake County;20-10	WAKE;20-10
-ReportingUnit	North Carolina;Wake County;OSAB 1-40	WAKE;OSAB 1-40
-ReportingUnit	North Carolina;Wake County;OSAV 1-40	WAKE;OSAV 1-40
-ReportingUnit	North Carolina;Wake County;OSFB 1-40	WAKE;OSFB 1-40
-ReportingUnit	North Carolina;Wake County;OSFB 81-91	WAKE;OSFB 81-91
-ReportingUnit	North Carolina;Wake County;OSLL 81-91	WAKE;OSLL 81-91
-ReportingUnit	North Carolina;Wake County;OSNR 41-80	WAKE;OSNR 41-80
-ReportingUnit	North Carolina;Wake County;OSOP 41-80	WAKE;OSOP 41-80
+ReportingUnit	North Carolina;Wake County	WAKE;OSAB 1-40
+ReportingUnit	North Carolina;Wake County	WAKE;OSAV 1-40
+ReportingUnit	North Carolina;Wake County	WAKE;OSFB 1-40
+ReportingUnit	North Carolina;Wake County	WAKE;OSFB 81-91
+ReportingUnit	North Carolina;Wake County	WAKE;OSLL 81-91
+ReportingUnit	North Carolina;Wake County	WAKE;OSNR 41-80
+ReportingUnit	North Carolina;Wake County	WAKE;OSOP 41-80
 ReportingUnit	North Carolina;Wake County;01-15	WAKE;01-15
 ReportingUnit	North Carolina;Wake County;04-17	WAKE;04-17
 ReportingUnit	North Carolina;Wake County;05-03	WAKE;05-03
@@ -13381,7 +13555,7 @@ ReportingUnit	North Carolina;Wake County;07-07A	WAKE;07-07A
 ReportingUnit	North Carolina;Wake County;07-11	WAKE;07-11
 ReportingUnit	North Carolina;Wake County;16-01	WAKE;16-01
 ReportingUnit	North Carolina;Wake County;16-04	WAKE;16-04
-ReportingUnit	North Carolina;Wake County;PROVI 81-91	WAKE;PROVI 81-91
+ReportingUnit	North Carolina;Wake County	WAKE;PROVI 81-91
 ReportingUnit	North Carolina;Wake County;01-10	WAKE;01-10
 ReportingUnit	North Carolina;Wake County;01-13	WAKE;01-13
 ReportingUnit	North Carolina;Wake County;04-10	WAKE;04-10
@@ -13395,22 +13569,22 @@ ReportingUnit	North Carolina;Wake County;18-08	WAKE;18-08
 ReportingUnit	North Carolina;Wake County;19-10	WAKE;19-10
 ReportingUnit	North Carolina;Wake County;19-16	WAKE;19-16
 ReportingUnit	North Carolina;Wake County;20-09	WAKE;20-09
-ReportingUnit	North Carolina;Wake County;OSAP 41-80	WAKE;OSAP 41-80
-ReportingUnit	North Carolina;Wake County;OSAP 81-91	WAKE;OSAP 81-91
-ReportingUnit	North Carolina;Wake County;OSCB 81-91	WAKE;OSCB 81-91
-ReportingUnit	North Carolina;Wake County;OSGR 1-40	WAKE;OSGR 1-40
-ReportingUnit	North Carolina;Wake County;OSLL 41-80	WAKE;OSLL 41-80
-ReportingUnit	North Carolina;Wake County;OSOP 1-40	WAKE;OSOP 1-40
+ReportingUnit	North Carolina;Wake County	WAKE;OSAP 41-80
+ReportingUnit	North Carolina;Wake County	WAKE;OSAP 81-91
+ReportingUnit	North Carolina;Wake County	WAKE;OSCB 81-91
+ReportingUnit	North Carolina;Wake County	WAKE;OSGR 1-40
+ReportingUnit	North Carolina;Wake County	WAKE;OSLL 41-80
+ReportingUnit	North Carolina;Wake County	WAKE;OSOP 1-40
 ReportingUnit	North Carolina;Wake County;04-20	WAKE;04-20
 ReportingUnit	North Carolina;Wake County;07-13	WAKE;07-13
 ReportingUnit	North Carolina;Wake County;14-02	WAKE;14-02
 ReportingUnit	North Carolina;Wake County;19-09	WAKE;19-09
 ReportingUnit	North Carolina;Wake County;20-11	WAKE;20-11
-ReportingUnit	North Carolina;Wake County;ABSEN 1-40	WAKE;ABSEN 1-40
-ReportingUnit	North Carolina;Wake County;OSAB 81-91	WAKE;OSAB 81-91
-ReportingUnit	North Carolina;Wake County;OSCA 1-40	WAKE;OSCA 1-40
-ReportingUnit	North Carolina;Wake County;OSCH 41-80	WAKE;OSCH 41-80
-ReportingUnit	North Carolina;Wake County;OSHS 81-91	WAKE;OSHS 81-91
+ReportingUnit	North Carolina;Wake County	WAKE;ABSEN 1-40
+ReportingUnit	North Carolina;Wake County	WAKE;OSAB 81-91
+ReportingUnit	North Carolina;Wake County	WAKE;OSCA 1-40
+ReportingUnit	North Carolina;Wake County	WAKE;OSCH 41-80
+ReportingUnit	North Carolina;Wake County	WAKE;OSHS 81-91
 ReportingUnit	North Carolina;Wake County;01-03	WAKE;01-03
 ReportingUnit	North Carolina;Wake County;01-06	WAKE;01-06
 ReportingUnit	North Carolina;Wake County;01-07A	WAKE;01-07A
@@ -13426,13 +13600,13 @@ ReportingUnit	North Carolina;Wake County;05-01	WAKE;05-01
 ReportingUnit	North Carolina;Wake County;08-02	WAKE;08-02
 ReportingUnit	North Carolina;Wake County;08-07	WAKE;08-07
 ReportingUnit	North Carolina;Wake County;20-16	WAKE;20-16
-ReportingUnit	North Carolina;Wake County;OSCB 1-40	WAKE;OSCB 1-40
-ReportingUnit	North Carolina;Wake County;OSFV 81-91	WAKE;OSFV 81-91
-ReportingUnit	North Carolina;Wake County;OSHS 1-40	WAKE;OSHS 1-40
-ReportingUnit	North Carolina;Wake County;OSNR 81-91	WAKE;OSNR 81-91
-ReportingUnit	North Carolina;Wake County;OSOP 81-91	WAKE;OSOP 81-91
-ReportingUnit	North Carolina;Wake County;OSTC 81-91	WAKE;OSTC 81-91
-ReportingUnit	North Carolina;Wake County;OSWD 41-80	WAKE;OSWD 41-80
+ReportingUnit	North Carolina;Wake County	WAKE;OSCB 1-40
+ReportingUnit	North Carolina;Wake County	WAKE;OSFV 81-91
+ReportingUnit	North Carolina;Wake County	WAKE;OSHS 1-40
+ReportingUnit	North Carolina;Wake County	WAKE;OSNR 81-91
+ReportingUnit	North Carolina;Wake County	WAKE;OSOP 81-91
+ReportingUnit	North Carolina;Wake County	WAKE;OSTC 81-91
+ReportingUnit	North Carolina;Wake County	WAKE;OSWD 41-80
 ReportingUnit	North Carolina;Wake County;01-20	WAKE;01-20
 ReportingUnit	North Carolina;Wake County;01-27	WAKE;01-27
 ReportingUnit	North Carolina;Wake County;01-31	WAKE;01-31
@@ -13445,13 +13619,13 @@ ReportingUnit	North Carolina;Wake County;13-10	WAKE;13-10
 ReportingUnit	North Carolina;Wake County;17-03	WAKE;17-03
 ReportingUnit	North Carolina;Wake County;17-11	WAKE;17-11
 ReportingUnit	North Carolina;Wake County;20-05	WAKE;20-05
-ReportingUnit	North Carolina;Wake County;OSAP 1-40	WAKE;OSAP 1-40
-ReportingUnit	North Carolina;Wake County;OSAV 41-80	WAKE;OSAV 41-80
-ReportingUnit	North Carolina;Wake County;OSCH 81-91	WAKE;OSCH 81-91
-ReportingUnit	North Carolina;Wake County;OSLL 1-40	WAKE;OSLL 1-40
-ReportingUnit	North Carolina;Wake County;OSNB 1-40	WAKE;OSNB 1-40
-ReportingUnit	North Carolina;Wake County;OSTC 41-80	WAKE;OSTC 41-80
-ReportingUnit	North Carolina;Wake County;TRANS 41-80	WAKE;TRANS 41-80
+ReportingUnit	North Carolina;Wake County	WAKE;OSAP 1-40
+ReportingUnit	North Carolina;Wake County	WAKE;OSAV 41-80
+ReportingUnit	North Carolina;Wake County	WAKE;OSCH 81-91
+ReportingUnit	North Carolina;Wake County	WAKE;OSLL 1-40
+ReportingUnit	North Carolina;Wake County	WAKE;OSNB 1-40
+ReportingUnit	North Carolina;Wake County	WAKE;OSTC 41-80
+ReportingUnit	North Carolina;Wake County	WAKE;TRANS 41-80
 ReportingUnit	North Carolina;Wake County;01-42	WAKE;01-42
 ReportingUnit	North Carolina;Wake County;01-47	WAKE;01-47
 ReportingUnit	North Carolina;Wake County;06-05	WAKE;06-05
@@ -13460,9 +13634,9 @@ ReportingUnit	North Carolina;Wake County;10-04	WAKE;10-04
 ReportingUnit	North Carolina;Wake County;16-03	WAKE;16-03
 ReportingUnit	North Carolina;Wake County;16-08	WAKE;16-08
 ReportingUnit	North Carolina;Wake County;19-11	WAKE;19-11
-ReportingUnit	North Carolina;Wake County;OSFV 41-80	WAKE;OSFV 41-80
-ReportingUnit	North Carolina;Wake County;OSGR 81-91	WAKE;OSGR 81-91
-ReportingUnit	North Carolina;Wake County;OSHS 41-80	WAKE;OSHS 41-80
+ReportingUnit	North Carolina;Wake County	WAKE;OSFV 41-80
+ReportingUnit	North Carolina;Wake County	WAKE;OSGR 81-91
+ReportingUnit	North Carolina;Wake County	WAKE;OSHS 41-80
 ReportingUnit	North Carolina;Wake County;01-23	WAKE;01-23
 ReportingUnit	North Carolina;Wake County;01-26	WAKE;01-26
 ReportingUnit	North Carolina;Wake County;01-35	WAKE;01-35
@@ -13471,9 +13645,9 @@ ReportingUnit	North Carolina;Wake County;02-03	WAKE;02-03
 ReportingUnit	North Carolina;Wake County;04-21	WAKE;04-21
 ReportingUnit	North Carolina;Wake County;08-08	WAKE;08-08
 ReportingUnit	North Carolina;Wake County;12-09	WAKE;12-09
-ReportingUnit	North Carolina;Wake County;OSZB 1-40	WAKE;OSZB 1-40
-ReportingUnit	North Carolina;Wake County;OSZB 81-91	WAKE;OSZB 81-91
-ReportingUnit	North Carolina;Wake County;OSCA 81-91	WAKE;OSCA 81-91
+ReportingUnit	North Carolina;Wake County	WAKE;OSZB 1-40
+ReportingUnit	North Carolina;Wake County	WAKE;OSZB 81-91
+ReportingUnit	North Carolina;Wake County	WAKE;OSCA 81-91
 ReportingUnit	North Carolina;Wake County;01-02	WAKE;01-02
 ReportingUnit	North Carolina;Wake County;01-05	WAKE;01-05
 ReportingUnit	North Carolina;Wake County;01-25	WAKE;01-25
@@ -13485,31 +13659,31 @@ ReportingUnit	North Carolina;Wake County;01-49	WAKE;01-49
 ReportingUnit	North Carolina;Wake County;06-06	WAKE;06-06
 ReportingUnit	North Carolina;Wake County;08-06	WAKE;08-06
 ReportingUnit	North Carolina;Wake County;10-03	WAKE;10-03
-ReportingUnit	North Carolina;Wake County;PROVI 1-40	WAKE;PROVI 1-40
-ReportingUnit	North Carolina;Wake County;OSKD 81-91	WAKE;OSKD 81-91
+ReportingUnit	North Carolina;Wake County	WAKE;PROVI 1-40
+ReportingUnit	North Carolina;Wake County	WAKE;OSKD 81-91
 ReportingUnit	North Carolina;Wake County;01-11	WAKE;01-11
 ReportingUnit	North Carolina;Wake County;01-16	WAKE;01-16
 ReportingUnit	North Carolina;Wake County;01-39	WAKE;01-39
-ReportingUnit	North Carolina;Wake County;OSCA 41-80	WAKE;OSCA 41-80
+ReportingUnit	North Carolina;Wake County	WAKE;OSCA 41-80
 ReportingUnit	North Carolina;Wake County;08-03	WAKE;08-03
 ReportingUnit	North Carolina;Wake County;19-03	WAKE;19-03
 ReportingUnit	North Carolina;Wake County;08-05	WAKE;08-05
-ReportingUnit	North Carolina;Wake County;OSKD 41-80	WAKE;OSKD 41-80
-ReportingUnit	North Carolina;Wake County;OSNB 41-80	WAKE;OSNB 41-80
+ReportingUnit	North Carolina;Wake County	WAKE;OSKD 41-80
+ReportingUnit	North Carolina;Wake County	WAKE;OSNB 41-80
 ReportingUnit	North Carolina;Wake County;07-01	WAKE;07-01
 ReportingUnit	North Carolina;Wake County;12-08	WAKE;12-08
 ReportingUnit	North Carolina;Wake County;12-07	WAKE;12-07
 ReportingUnit	North Carolina;Wake County;09-02	WAKE;09-02
 ReportingUnit	North Carolina;Wake County;15-02	WAKE;15-02
 ReportingUnit	North Carolina;Wake County;15-04	WAKE;15-04
-ReportingUnit	North Carolina;Wake County;OSZB 41-80	WAKE;OSZB 41-80
-ReportingUnit	North Carolina;Wake County;TRANS 1-40	WAKE;TRANS 1-40
+ReportingUnit	North Carolina;Wake County	WAKE;OSZB 41-80
+ReportingUnit	North Carolina;Wake County	WAKE;TRANS 1-40
 ReportingUnit	North Carolina;Wake County;12-04	WAKE;12-04
-ReportingUnit	North Carolina;Wake County;OSFV 1-40	WAKE;OSFV 1-40
-ReportingUnit	North Carolina;Wake County;OSCB 41-80	WAKE;OSCB 41-80
-ReportingUnit	North Carolina;Wake County;OSLOB 1-40	WAKE;OSLOB 1-40
-ReportingUnit	North Carolina;Wake County;OSWA 1-40	WAKE;OSWA 1-40
-ReportingUnit	North Carolina;Wake County;OSWA 81-91	WAKE;OSWA 81-91
+ReportingUnit	North Carolina;Wake County	WAKE;OSFV 1-40
+ReportingUnit	North Carolina;Wake County	WAKE;OSCB 41-80
+ReportingUnit	North Carolina;Wake County	WAKE;OSLOB 1-40
+ReportingUnit	North Carolina;Wake County	WAKE;OSWA 1-40
+ReportingUnit	North Carolina;Wake County	WAKE;OSWA 81-91
 ReportingUnit	North Carolina;Wake County;05-06	WAKE;05-06
 ReportingUnit	North Carolina;Wake County;08-11	WAKE;08-11
 ReportingUnit	North Carolina;Wake County;07-12	WAKE;07-12
@@ -13521,52 +13695,52 @@ ReportingUnit	North Carolina;Wake County;11-02	WAKE;11-02
 ReportingUnit	North Carolina;Wake County;13-05	WAKE;13-05
 ReportingUnit	North Carolina;Wake County;17-07	WAKE;17-07
 ReportingUnit	North Carolina;Wake County;17-04	WAKE;17-04
-ReportingUnit	North Carolina;Wake County;OSLOB 81-91	WAKE;OSLOB 81-91
-ReportingUnit	North Carolina;Wake County;OSCH 1-40	WAKE;OSCH 1-40
-ReportingUnit	North Carolina;Wake County;OSNR 1-40	WAKE;OSNR 1-40
-ReportingUnit	North Carolina;Wake County;OSWD 81-91	WAKE;OSWD 81-91
+ReportingUnit	North Carolina;Wake County	WAKE;OSLOB 81-91
+ReportingUnit	North Carolina;Wake County	WAKE;OSCH 1-40
+ReportingUnit	North Carolina;Wake County	WAKE;OSNR 1-40
+ReportingUnit	North Carolina;Wake County	WAKE;OSWD 81-91
 ReportingUnit	North Carolina;Wake County;20-14	WAKE;20-14
 ReportingUnit	North Carolina;Wake County;01-18	WAKE;01-18
 ReportingUnit	North Carolina;Wake County;04-03	WAKE;04-03
 ReportingUnit	North Carolina;Wake County;04-04	WAKE;04-04
 ReportingUnit	North Carolina;Wake County;07-04	WAKE;07-04
 ReportingUnit	North Carolina;Wake County;07-07	WAKE;07-07
-ReportingUnit	North Carolina;Wake County;OSAB 41-80	WAKE;OSAB 41-80
+ReportingUnit	North Carolina;Wake County	WAKE;OSAB 41-80
 ReportingUnit	North Carolina;Wake County;18-07	WAKE;18-07
-ReportingUnit	North Carolina;Wake County;TRANS 81-91	WAKE;TRANS 81-91
+ReportingUnit	North Carolina;Wake County	WAKE;TRANS 81-91
 ReportingUnit	North Carolina;Wake County;04-12	WAKE;04-12
 ReportingUnit	North Carolina;Wake County;17-08	WAKE;17-08
 ReportingUnit	North Carolina;Wake County;16-09	WAKE;16-09
 ReportingUnit	North Carolina;Wake County;13-09	WAKE;13-09
 ReportingUnit	North Carolina;Wake County;17-02	WAKE;17-02
-ReportingUnit	North Carolina;Wake County;OSKD 1-40	WAKE;OSKD 1-40
+ReportingUnit	North Carolina;Wake County	WAKE;OSKD 1-40
 ReportingUnit	North Carolina;Wake County;10-02	WAKE;10-02
 ReportingUnit	North Carolina;Wake County;06-07	WAKE;06-07
 ReportingUnit	North Carolina;Wake County;06-08	WAKE;06-08
-ReportingUnit	North Carolina;Wake County;OSTC 1-40	WAKE;OSTC 1-40
-ReportingUnit	North Carolina;Wake County;OSWA 41-80	WAKE;OSWA 41-80
+ReportingUnit	North Carolina;Wake County	WAKE;OSTC 1-40
+ReportingUnit	North Carolina;Wake County	WAKE;OSWA 41-80
 ReportingUnit	North Carolina;Wake County;17-10	WAKE;17-10
 ReportingUnit	North Carolina;Wake County;04-19	WAKE;04-19
 ReportingUnit	North Carolina;Wake County;04-18	WAKE;04-18
 ReportingUnit	North Carolina;Wake County;04-16	WAKE;04-16
-ReportingUnit	North Carolina;Wake County;OSAV 81-91	WAKE;OSAV 81-91
-ReportingUnit	North Carolina;Wake County;ABSEN 41-80	WAKE;ABSEN 41-80
+ReportingUnit	North Carolina;Wake County	WAKE;OSAV 81-91
+ReportingUnit	North Carolina;Wake County	WAKE;ABSEN 41-80
 ReportingUnit	North Carolina;Wake County;01-41	WAKE;01-41
 ReportingUnit	North Carolina;Wake County;01-46	WAKE;01-46
-ReportingUnit	North Carolina;Wake County;OSLOB 41-80	WAKE;OSLOB 41-80
+ReportingUnit	North Carolina;Wake County	WAKE;OSLOB 41-80
 ReportingUnit	North Carolina;Wake County;01-43	WAKE;01-43
 ReportingUnit	North Carolina;Wake County;01-48	WAKE;01-48
 ReportingUnit	North Carolina;Wake County;02-06	WAKE;02-06
 ReportingUnit	North Carolina;Wake County;01-22	WAKE;01-22
-ReportingUnit	North Carolina;Wake County;ABSEN 81-91	WAKE;ABSEN 81-91
-ReportingUnit	North Carolina;Wake County;OSGR 41-80	WAKE;OSGR 41-80
-ReportingUnit	North Carolina;Wake County;OSFB 41-80	WAKE;OSFB 41-80
+ReportingUnit	North Carolina;Wake County	WAKE;ABSEN 81-91
+ReportingUnit	North Carolina;Wake County	WAKE;OSGR 41-80
+ReportingUnit	North Carolina;Wake County	WAKE;OSFB 41-80
 ReportingUnit	North Carolina;Wake County;01-19	WAKE;01-19
 ReportingUnit	North Carolina;Wake County;01-17	WAKE;01-17
 ReportingUnit	North Carolina;Wake County;01-14	WAKE;01-14
 ReportingUnit	North Carolina;Wake County;01-12	WAKE;01-12
 ReportingUnit	North Carolina;Wake County;20-06B	WAKE;20-06B
-ReportingUnit	North Carolina;Wake County;OSWD 1-40	WAKE;OSWD 1-40
+ReportingUnit	North Carolina;Wake County	WAKE;OSWD 1-40
 ReportingUnit	North Carolina;Wake County;01-45	WAKE;01-45
 ReportingUnit	North Carolina;Wake County;05-07	WAKE;05-07
 ReportingUnit	North Carolina;Wake County;20-01	WAKE;20-01
@@ -13574,23 +13748,23 @@ ReportingUnit	North Carolina;Wake County;04-01	WAKE;04-01
 ReportingUnit	North Carolina;Wake County;07-03	WAKE;07-03
 ReportingUnit	North Carolina;Wake County;20-08	WAKE;20-08
 ReportingUnit	North Carolina;Wake County;19-04	WAKE;19-04
-ReportingUnit	North Carolina;Wake County;PROVI 41-80	WAKE;PROVI 41-80
+ReportingUnit	North Carolina;Wake County	WAKE;PROVI 41-80
 ReportingUnit	North Carolina;Wake County;07-09	WAKE;07-09
 ReportingUnit	North Carolina;Wake County;07-06	WAKE;07-06
 ReportingUnit	North Carolina;Wake County;07-10	WAKE;07-10
 ReportingUnit	North Carolina;Stokes County;18	STOKES;18
-ReportingUnit	North Carolina;Stokes County;OS DANBURY	STOKES;OS DANBURY
-ReportingUnit	North Carolina;Stokes County;ABSENTEE	STOKES;ABSENTEE
+ReportingUnit	North Carolina;Stokes County	STOKES;OS DANBURY
+ReportingUnit	North Carolina;Stokes County	STOKES;ABSENTEE
 ReportingUnit	North Carolina;Stokes County;04	STOKES;04
 ReportingUnit	North Carolina;Stokes County;07	STOKES;07
 ReportingUnit	North Carolina;Stokes County;12	STOKES;12
-ReportingUnit	North Carolina;Stokes County;OS WALNUT COVE	STOKES;OS WALNUT COVE
+ReportingUnit	North Carolina;Stokes County	STOKES;OS WALNUT COVE
 ReportingUnit	North Carolina;Stokes County;01	STOKES;01
 ReportingUnit	North Carolina;Stokes County;16	STOKES;16
 ReportingUnit	North Carolina;Stokes County;19	STOKES;19
 ReportingUnit	North Carolina;Stokes County;08	STOKES;08
-ReportingUnit	North Carolina;Stokes County;PROVISIONAL	STOKES;PROVISIONAL
-ReportingUnit	North Carolina;Stokes County;OS KING	STOKES;OS KING
+ReportingUnit	North Carolina;Stokes County	STOKES;PROVISIONAL
+ReportingUnit	North Carolina;Stokes County	STOKES;OS KING
 ReportingUnit	North Carolina;Stokes County;13	STOKES;13
 ReportingUnit	North Carolina;Stokes County;05	STOKES;05
 ReportingUnit	North Carolina;Stokes County;02	STOKES;02
@@ -13599,12 +13773,12 @@ ReportingUnit	North Carolina;Stokes County;09	STOKES;09
 ReportingUnit	North Carolina;Stokes County;06	STOKES;06
 ReportingUnit	North Carolina;Stokes County;03	STOKES;03
 ReportingUnit	North Carolina;Tyrrell County;16	TYRRELL;16
-ReportingUnit	North Carolina;Tyrrell County;ABSENTEE	TYRRELL;ABSENTEE
-ReportingUnit	North Carolina;Tyrrell County;TRANSFER	TYRRELL;TRANSFER
+ReportingUnit	North Carolina;Tyrrell County	TYRRELL;ABSENTEE
+ReportingUnit	North Carolina;Tyrrell County	TYRRELL;TRANSFER
 ReportingUnit	North Carolina;Tyrrell County;2	TYRRELL;2
 ReportingUnit	North Carolina;Tyrrell County;3	TYRRELL;3
-ReportingUnit	North Carolina;Tyrrell County;ONE STOP	TYRRELL;ONE STOP
-ReportingUnit	North Carolina;Tyrrell County;PROVISIONAL	TYRRELL;PROVISIONAL
+ReportingUnit	North Carolina;Tyrrell County	TYRRELL;ONE STOP
+ReportingUnit	North Carolina;Tyrrell County	TYRRELL;PROVISIONAL
 ReportingUnit	North Carolina;Transylvania County;B1	TRANSYLVANIA;B1
 ReportingUnit	North Carolina;Transylvania County;WC	TRANSYLVANIA;WC
 ReportingUnit	North Carolina;Transylvania County;TC7	TRANSYLVANIA;TC7
@@ -13613,26 +13787,26 @@ ReportingUnit	North Carolina;Transylvania County;TC1	TRANSYLVANIA;TC1
 ReportingUnit	North Carolina;Union County;???	UNION;???
 ReportingUnit	North Carolina;Swain County;ALMOND	SWAIN;ALMOND
 ReportingUnit	North Carolina;Swain County;ALARKA	SWAIN;ALARKA
-ReportingUnit	North Carolina;Watauga County;OS ADMIN	WATAUGA;OS ADMIN
-ReportingUnit	North Carolina;Watauga County;OS ASU	WATAUGA;OS ASU
+ReportingUnit	North Carolina;Watauga County	WATAUGA;OS ADMIN
+ReportingUnit	North Carolina;Watauga County	WATAUGA;OS ASU
 ReportingUnit	North Carolina;Watauga County;09	WATAUGA;09
 ReportingUnit	North Carolina;Watauga County;06	WATAUGA;06
 ReportingUnit	North Carolina;Watauga County;03	WATAUGA;03
-ReportingUnit	North Carolina;Watauga County;ABSENTEE MAIL	WATAUGA;ABSENTEE MAIL
-ReportingUnit	North Carolina;Watauga County;OS BLOWING ROCK	WATAUGA;OS BLOWING ROCK
-ReportingUnit	North Carolina;Watauga County;OS WESTERN W	WATAUGA;OS WESTERN W
+ReportingUnit	North Carolina;Watauga County	WATAUGA;ABSENTEE MAIL
+ReportingUnit	North Carolina;Watauga County	WATAUGA;OS BLOWING ROCK
+ReportingUnit	North Carolina;Watauga County	WATAUGA;OS WESTERN W
 ReportingUnit	North Carolina;Watauga County;08	WATAUGA;08
 ReportingUnit	North Carolina;Watauga County;05	WATAUGA;05
 ReportingUnit	North Carolina;Watauga County;02	WATAUGA;02
-ReportingUnit	North Carolina;Watauga County;OS MEAT CAMP	WATAUGA;OS MEAT CAMP
-ReportingUnit	North Carolina;Watauga County;TRANSFER	WATAUGA;TRANSFER
+ReportingUnit	North Carolina;Watauga County	WATAUGA;OS MEAT CAMP
+ReportingUnit	North Carolina;Watauga County	WATAUGA;TRANSFER
 ReportingUnit	North Carolina;Watauga County;04	WATAUGA;04
 ReportingUnit	North Carolina;Watauga County;07	WATAUGA;07
 ReportingUnit	North Carolina;Watauga County;01	WATAUGA;01
-ReportingUnit	North Carolina;Watauga County;OS DEEP GAP	WATAUGA;OS DEEP GAP
+ReportingUnit	North Carolina;Watauga County	WATAUGA;OS DEEP GAP
 ReportingUnit	North Carolina;Watauga County;13	WATAUGA;13
 ReportingUnit	North Carolina;Watauga County;12	WATAUGA;12
-ReportingUnit	North Carolina;Watauga County;PROVISIONAL	WATAUGA;PROVISIONAL
+ReportingUnit	North Carolina;Watauga County	WATAUGA;PROVISIONAL
 ReportingUnit	North Carolina;Wayne County;16	WAYNE;16
 ReportingUnit	North Carolina;Wayne County;20	WAYNE;20
 ReportingUnit	North Carolina;Wayne County;19	WAYNE;19
@@ -13640,10 +13814,10 @@ ReportingUnit	North Carolina;Wayne County;07	WAYNE;07
 ReportingUnit	North Carolina;Wayne County;04	WAYNE;04
 ReportingUnit	North Carolina;Wayne County;25	WAYNE;25
 ReportingUnit	North Carolina;Wayne County;27	WAYNE;27
-ReportingUnit	North Carolina;Wayne County;TRANSFER	WAYNE;TRANSFER
-ReportingUnit	North Carolina;Wayne County;ABSENTEE	WAYNE;ABSENTEE
-ReportingUnit	North Carolina;Wayne County;ONE STOP FTH	WAYNE;ONE STOP FTH
-ReportingUnit	North Carolina;Wayne County;ONE STOP LRS	WAYNE;ONE STOP LRS
+ReportingUnit	North Carolina;Wayne County	WAYNE;TRANSFER
+ReportingUnit	North Carolina;Wayne County	WAYNE;ABSENTEE
+ReportingUnit	North Carolina;Wayne County	WAYNE;ONE STOP FTH
+ReportingUnit	North Carolina;Wayne County	WAYNE;ONE STOP LRS
 ReportingUnit	North Carolina;Wayne County;17	WAYNE;17
 ReportingUnit	North Carolina;Wayne County;12	WAYNE;12
 ReportingUnit	North Carolina;Wayne County;09	WAYNE;09
@@ -13651,10 +13825,10 @@ ReportingUnit	North Carolina;Wayne County;06	WAYNE;06
 ReportingUnit	North Carolina;Wayne County;03	WAYNE;03
 ReportingUnit	North Carolina;Wayne County;23	WAYNE;23
 ReportingUnit	North Carolina;Wayne County;26	WAYNE;26
-ReportingUnit	North Carolina;Wayne County;ONE STOP GWC	WAYNE;ONE STOP GWC
-ReportingUnit	North Carolina;Wayne County;PROVISIONAL	WAYNE;PROVISIONAL
-ReportingUnit	North Carolina;Wayne County;ONE STOP NHF	WAYNE;ONE STOP NHF
-ReportingUnit	North Carolina;Wayne County;ONE STOP MOT	WAYNE;ONE STOP MOT
+ReportingUnit	North Carolina;Wayne County	WAYNE;ONE STOP GWC
+ReportingUnit	North Carolina;Wayne County	WAYNE;PROVISIONAL
+ReportingUnit	North Carolina;Wayne County	WAYNE;ONE STOP NHF
+ReportingUnit	North Carolina;Wayne County	WAYNE;ONE STOP MOT
 ReportingUnit	North Carolina;Wayne County;30	WAYNE;30
 ReportingUnit	North Carolina;Wayne County;13	WAYNE;13
 ReportingUnit	North Carolina;Wayne County;29	WAYNE;29
@@ -13663,25 +13837,25 @@ ReportingUnit	North Carolina;Wayne County;22	WAYNE;22
 ReportingUnit	North Carolina;Wayne County;02	WAYNE;02
 ReportingUnit	North Carolina;Wayne County;05	WAYNE;05
 ReportingUnit	North Carolina;Wayne County;01	WAYNE;01
-ReportingUnit	North Carolina;Wayne County;ONE STOP BOE	WAYNE;ONE STOP BOE
+ReportingUnit	North Carolina;Wayne County	WAYNE;ONE STOP BOE
 ReportingUnit	North Carolina;Wilson County;PRWH	WILSON;PRWH
-ReportingUnit	North Carolina;Wilson County;ONE STOP BOE PAPER	WILSON;ONE STOP BOE PAPER
-ReportingUnit	North Carolina;Wilson County;ONE STOP HD PAPER	WILSON;ONE STOP HD PAPER
+ReportingUnit	North Carolina;Wilson County	WILSON;ONE STOP BOE PAPER
+ReportingUnit	North Carolina;Wilson County	WILSON;ONE STOP HD PAPER
 ReportingUnit	North Carolina;Wilson County;CURBSIDE	WILSON;CURBSIDE
-ReportingUnit	North Carolina;Wilson County;ABSENTEE	WILSON;ABSENTEE
+ReportingUnit	North Carolina;Wilson County	WILSON;ABSENTEE
 ReportingUnit	North Carolina;Wilson County;PRCR	WILSON;PRCR
 ReportingUnit	North Carolina;Wilson County;PRWD	WILSON;PRWD
 ReportingUnit	North Carolina;Wilson County;PRWN	WILSON;PRWN
-ReportingUnit	North Carolina;Wilson County;PROVISIONAL	WILSON;PROVISIONAL
+ReportingUnit	North Carolina;Wilson County	WILSON;PROVISIONAL
 ReportingUnit	North Carolina;Wilson County;PRBL	WILSON;PRBL
 ReportingUnit	North Carolina;Wilson County;PRGA	WILSON;PRGA
 ReportingUnit	North Carolina;Wilson County;PRSA	WILSON;PRSA
 ReportingUnit	North Carolina;Washington County;LM	WASHINGTON;LM
-ReportingUnit	North Carolina;Washington County;ABSENTEE	WASHINGTON;ABSENTEE
+ReportingUnit	North Carolina;Washington County	WASHINGTON;ABSENTEE
 ReportingUnit	North Carolina;Washington County;SK	WASHINGTON;SK
-ReportingUnit	North Carolina;Washington County;PROVISIONAL	WASHINGTON;PROVISIONAL
+ReportingUnit	North Carolina;Washington County	WASHINGTON;PROVISIONAL
 ReportingUnit	North Carolina;Washington County;P3	WASHINGTON;P3
-ReportingUnit	North Carolina;Washington County;ONE STOP	WASHINGTON;ONE STOP
+ReportingUnit	North Carolina;Washington County	WASHINGTON;ONE STOP
 ReportingUnit	North Carolina;Warren County;009	WARREN;009
 ReportingUnit	North Carolina;Warren County;001	WARREN;001
 ReportingUnit	North Carolina;Warren County;006	WARREN;006
@@ -13696,27 +13870,27 @@ ReportingUnit	North Carolina;Warren County;002	WARREN;002
 ReportingUnit	North Carolina;Warren County;013	WARREN;013
 ReportingUnit	North Carolina;Warren County;010	WARREN;010
 ReportingUnit	North Carolina;Warren County;003	WARREN;003
-ReportingUnit	North Carolina;Wilkes County;ABSENTEE	WILKES;ABSENTEE
-ReportingUnit	North Carolina;Wilkes County;OS OFFICE	WILKES;OS OFFICE
-ReportingUnit	North Carolina;Wilkes County;OS PLEASANT HILL	WILKES;OS PLEASANT HILL
+ReportingUnit	North Carolina;Wilkes County	WILKES;ABSENTEE
+ReportingUnit	North Carolina;Wilkes County	WILKES;OS OFFICE
+ReportingUnit	North Carolina;Wilkes County	WILKES;OS PLEASANT HILL
 ReportingUnit	North Carolina;Wilkes County;126	WILKES;126
 ReportingUnit	North Carolina;Wilkes County;124	WILKES;124
 ReportingUnit	North Carolina;Wilkes County;129	WILKES;129
-ReportingUnit	North Carolina;Wilkes County;OS MILLER CRK	WILKES;OS MILLER CRK
+ReportingUnit	North Carolina;Wilkes County	WILKES;OS MILLER CRK
 ReportingUnit	North Carolina;Wilkes County;113	WILKES;113
-ReportingUnit	North Carolina;Wilkes County;OS MTN VIEW	WILKES;OS MTN VIEW
+ReportingUnit	North Carolina;Wilkes County	WILKES;OS MTN VIEW
 ReportingUnit	North Carolina;Wilkes County;125	WILKES;125
 ReportingUnit	North Carolina;Wilkes County;104	WILKES;104
 ReportingUnit	North Carolina;Wilkes County;109	WILKES;109
 ReportingUnit	North Carolina;Wilkes County;108	WILKES;108
 ReportingUnit	North Carolina;Wilkes County;123	WILKES;123
 ReportingUnit	North Carolina;Wilkes County;128	WILKES;128
-ReportingUnit	North Carolina;Wilkes County;PROVISIONAL	WILKES;PROVISIONAL
+ReportingUnit	North Carolina;Wilkes County	WILKES;PROVISIONAL
 ReportingUnit	North Carolina;Wilkes County;107	WILKES;107
 ReportingUnit	North Carolina;Wilkes County;110	WILKES;110
 ReportingUnit	North Carolina;Wilkes County;119	WILKES;119
-ReportingUnit	North Carolina;Wilkes County;OS MULBERRY	WILKES;OS MULBERRY
-ReportingUnit	North Carolina;Wilkes County;TRANSFER	WILKES;TRANSFER
+ReportingUnit	North Carolina;Wilkes County	WILKES;OS MULBERRY
+ReportingUnit	North Carolina;Wilkes County	WILKES;TRANSFER
 ReportingUnit	North Carolina;Wilkes County;127	WILKES;127
 ReportingUnit	North Carolina;Wilkes County;121	WILKES;121
 ReportingUnit	North Carolina;Yancey County;09 SOU	YANCEY;09 SOU
@@ -13725,13 +13899,13 @@ ReportingUnit	North Carolina;Yancey County;10 PEN	YANCEY;10 PEN
 ReportingUnit	North Carolina;Yancey County;02 CAN	YANCEY;02 CAN
 ReportingUnit	North Carolina;Yancey County;08 CRA	YANCEY;08 CRA
 ReportingUnit	North Carolina;Yancey County;03 EGY	YANCEY;03 EGY
-ReportingUnit	North Carolina;Yadkin County;ABSENTEE	YADKIN;ABSENTEE
-ReportingUnit	North Carolina;Yadkin County;ONE STOP	YADKIN;ONE STOP
+ReportingUnit	North Carolina;Yadkin County	YADKIN;ABSENTEE
+ReportingUnit	North Carolina;Yadkin County	YADKIN;ONE STOP
 ReportingUnit	North Carolina;Yadkin County;BNVL	YADKIN;BNVL
 ReportingUnit	North Carolina;Yadkin County;DCRK	YADKIN;DCRK
 ReportingUnit	North Carolina;Yadkin County;SKNB	YADKIN;SKNB
 ReportingUnit	North Carolina;Yadkin County;NKNB	YADKIN;NKNB
-ReportingUnit	North Carolina;Yadkin County;PROVISIONAL	YADKIN;PROVISIONAL
+ReportingUnit	North Carolina;Yadkin County	YADKIN;PROVISIONAL
 ReportingUnit	North Carolina;Yadkin County;NLIB	YADKIN;NLIB
 ReportingUnit	North Carolina;Alamance County;064	ALAMANCE;064 - Y
 ReportingUnit	North Carolina;Alamance County;04	ALAMANCE;04 - Y

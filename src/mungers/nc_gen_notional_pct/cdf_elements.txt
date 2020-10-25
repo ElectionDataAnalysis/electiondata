@@ -5,4 +5,4 @@ CandidateContest	<Contest Name>	row
 Candidate	<Choice>	row
 BallotMeasureContest	<Contest Name>	row
 BallotMeasureSelection	<Choice>	row
-CountItemType	<0>	column
+CountItemType	<Precinct>	row
