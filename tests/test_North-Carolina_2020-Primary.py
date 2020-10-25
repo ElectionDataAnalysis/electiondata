@@ -1,7 +1,10 @@
 import election_data_analysis as e
 
+def test_data(dbname):
+    assert e.data_exists("2020 Primary","North Carolina",dbname=dbname)
+
 def test_nc_presidential_20(dbname):
-    assert (not e.data_exists("2020 Primary","North Carolina",dbname=dbname) or e.contest_total(
+    assert (e.contest_total(
             "2020 Primary",
             "North Carolina",
             "US President (NC) (Democratic Party)",
@@ -12,7 +15,7 @@ def test_nc_presidential_20(dbname):
 
 
 def test_nc_statewide_totals_20(dbname):
-    assert (not e.data_exists("2020 Primary","North Carolina",dbname=dbname) or e.contest_total(
+    assert (e.contest_total(
             "2020 Primary",
             "North Carolina",
             "NC Governor (Democratic Party)",
@@ -23,7 +26,7 @@ def test_nc_statewide_totals_20(dbname):
 
 
 def test_nc_senate_totals_20(dbname):
-    assert (not e.data_exists("2020 Primary","North Carolina",dbname=dbname) or e.contest_total(
+    assert (e.contest_total(
             "2020 Primary",
             "North Carolina",
             "US Senate NC (Democratic Party)",
@@ -33,7 +36,7 @@ def test_nc_senate_totals_20(dbname):
     )
 
 def test_nc_rep_20_20(dbname):
-    assert (not e.data_exists("2020 Primary","North Carolina",dbname=dbname) or e.contest_total(
+    assert (e.contest_total(
             "2020 Primary",
             "North Carolina",
             "US House NC District 4 (Republican Party)",

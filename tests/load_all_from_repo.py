@@ -22,11 +22,11 @@ def io(argv) -> Optional[list]:
         if opt == '-h':
             print (f'{file_name} -e <election> -j <jurisdiction>')
             sys.exit()
-        elif opt in ("-i", "--election"):
+        elif opt in ("-e", "--election"):
             election = arg
-        elif opt in ("-o", "--juris"):
+        elif opt in ("-j", "--juris"):
             jurisdiction = arg
-    print (f'Election file is {election}')
+    print (f'Election is {election}')
     print (f'Jurisdiction is {jurisdiction}')
     if (not election) or (not jurisdiction):
         ej_list = None
@@ -118,9 +118,9 @@ def run2(
 
 
 if __name__ == "__main__":
-
+    print(sys.argv)
     if len(sys.argv) == 1:
-        election_jurisdiction_list = [("2016 General","North Carolina")]
+        election_jurisdiction_list = [("2018 General","North Carolina")]
     else:
         election_jurisdiction_list = io(sys.argv[1:])
 
