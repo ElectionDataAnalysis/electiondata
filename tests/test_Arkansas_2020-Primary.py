@@ -1,7 +1,10 @@
 import election_data_analysis as e
 
+def test_data_exists(dbname):
+    assert e.data_exists("2020 Primary","Arkansas",dbname=dbname)
+
 def test_ar_presidential_20(dbname):
-    assert (not e.data_exists("2020 Primary","Arkansas",dbname=dbname) or e.contest_total(
+    assert (e.contest_total(
             "2020 Primary",
             "Arkansas",
             "US President (AR) (Republican Party)",
@@ -11,53 +14,43 @@ def test_ar_presidential_20(dbname):
     )
 
 
-def test_ar_statewide_totals_20(dbname):
-    assert (not e.data_exists("2020 Primary","Arkansas",dbname=dbname) or e.contest_total(
-            "2020 Primary",
-            "Arkansas",
-            "AR Governor",
-            dbname=dbname,
-        )
-            == 891509
-    )
+# No statewide (non-presidential) contests in 2020
 
 
 def test_ar_senate_totals_20(dbname):
-    assert (not e.data_exists("2020 Primary","Arkansas",dbname=dbname) or e.contest_total(
+    assert (e.contest_total(
             "2020 Primary",
             "Arkansas",
-            "AR Senate District 5",
+            "AR Senate District 25 (Democratic Party)",
             dbname=dbname,
         )
-            == 27047
+            == 8656
     )
 
 
 def test_ar_house_totals_20(dbname):
-    assert (not e.data_exists("2020 Primary","Arkansas",dbname=dbname) or e.contest_total(
+    assert (e.contest_total(
             "2020 Primary",
             "Arkansas",
-            "AR House District 19",
+            "AR House District 41 (Democratic Party)",
             dbname=dbname,
         )
-            == 7927
+            == 3354
     )
 
 
 def test_ar_contest_by_vote_type_20(dbname):
-    assert ( not e.data_exists("2020 Primary","Arkansas", dbname=dbname) or
-            e.count_type_total(
-            "2016 General",
-            "North Carolina",
-"AR Senate District 5",
+    assert (e.count_type_total(
+            "2020 Primary",
+            "Arkansas",
+            "AR Senate District 13 (Republican Party)",
             "absentee",
             dbname=dbname,
         )
-            == 453
+            == 69 + 19
     )
 
 
 def test_ar_totals_match_vote_type_20(dbname):
-    assert (not e.data_exists("2020 Primary","Arkansas", dbname=dbname) or
-            e.check_totals_match_vote_types("2020 Primary","Arkansas" ,dbname=dbname) == True)
+    assert (e.check_totals_match_vote_types("2020 Primary","Arkansas" ,dbname=dbname) == True)
 

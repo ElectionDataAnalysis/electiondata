@@ -1,9 +1,12 @@
 import election_data_analysis as e
 #IA18 tests
 
+def test_data_exists(dbname):
+    assert e.data_exists("2018 General","Iowa",dbname=dbname)
+
 
 def test_statewide_totals(dbname):
-    assert(not e.data_exists("2018 General","Iowa",dbname=dbname) or e.contest_total(
+    assert(e.contest_total(
             "2018 General",
             "Iowa",
             "IA Governor",
@@ -13,7 +16,7 @@ def test_statewide_totals(dbname):
     )
 
 def test_state_senate_totals(dbname):
-    assert (not e.data_exists("2018 General","Iowa",dbname=dbname) or e.contest_total(
+    assert (e.contest_total(
             "2018 General",
             "Iowa",
             "IA Senate District 13",
@@ -23,7 +26,7 @@ def test_state_senate_totals(dbname):
     )
 
 def test_state_rep_totals(dbname):
-    assert (not e.data_exists("2018 General","Iowa",dbname=dbname) or e.contest_total(
+    assert (e.contest_total(
             "2018 General",
             "Iowa",
             "IA House District 14",

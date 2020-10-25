@@ -1,7 +1,10 @@
 import election_data_analysis as e
 
+def test_data_exists(dbname):
+    assert e.data_exists("2018 General","Arkansas",dbname=dbname)
+
 def test_ar_statewide_totals_18(dbname):
-    assert (not e.data_exists("2018 General","Arkansas",dbname=dbname) or e.contest_total(
+    assert (e.contest_total(
             "2018 General",
             "Arkansas",
             "AR Governor",
@@ -12,7 +15,7 @@ def test_ar_statewide_totals_18(dbname):
 
 
 def test_ar_senate_totals_18(dbname):
-    assert (not e.data_exists("2018 General","Arkansas",dbname=dbname) or e.contest_total(
+    assert (e.contest_total(
             "2018 General",
             "Arkansas",
             "AR Senate District 5",
@@ -23,7 +26,7 @@ def test_ar_senate_totals_18(dbname):
 
 
 def test_ar_house_totals_18(dbname):
-    assert (not e.data_exists("2018 General","Arkansas",dbname=dbname) or e.contest_total(
+    assert (e.contest_total(
             "2018 General",
             "Arkansas",
             "AR House District 19",
