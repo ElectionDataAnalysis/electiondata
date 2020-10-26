@@ -3,12 +3,6 @@ import election_data_analysis as e
 ### Arkansas Data Loading Tests ###
 #AR18 test
 
-def test_ar_presidential_18(dbname):
-    #no presidential contests in 2018
-    assert True == True
-
-
-
 def test_mi_statewide_totals_20(dbname):
     assert ( e.contest_total(
             "2020 Primary",
@@ -40,16 +34,6 @@ def test_mi_state_rep_totals_20(dbname):
         )
             == 6669
     )
-
-
-def test_mi_contest_by_vote_type_20(dbname):
-    # Vote type not available
-    assert True == True
-
-
-def test_mi_totals_match_vote_type_20(dbname):
-    # Vote type not available
-    assert True == True
 
 
 
@@ -127,116 +111,6 @@ def test_de_totals_match_vote_type(dbname):
     assert ( 
             e.check_totals_match_vote_types("2020 Primary","Delaware" ,dbname=dbname) == True)
 
-
-### Ohio Data Loading Tests ###
-## oh 2016g tests
-
-def test_oh_presidential_16(dbname):
-    assert ( e.contest_total(
-            "2016 General",
-            "Ohio",
-            "US President (OH)",
-            dbname=dbname,
-        )
-            == 5496487
-    )
-
-
-def test_oh_statewide_16(dbname):
-    # No tracked statewide contests other than president,
-    assert True == True
-
-
-def test_oh_senate_totals_16(dbname):
-    assert ( e.contest_total(
-            "2016 General",
-            "Ohio",
-            "OH Senate District 16",
-            dbname=dbname,
-        )
-            == 185531
-    )
-
-
-
-def test_oh_house_totals_16(dbname):
-    assert ( e.contest_total(
-            "2016 General",
-            "Ohio",
-            "OH House District 2",
-            dbname=dbname,
-        )
-            == 51931
-    )
-
-
-
-def test_oh_contest_by_vote_type_16(dbname):
-    assert ( 
-            e.count_type_total(
-            "2016 General",
-            "North Carolina",
-"US House OH District 5",
-            "total",
-            dbname=dbname,
-        )
-            == 344991
-    )
-
-
-
-def test_oh_totals_match_vote_type_16(dbname):
-    assert ( 
-            e.check_totals_match_vote_types("2016 General","Ohio" ,dbname=dbname) == True)
-
-#OH18 test
-
-def test_oh_presidential(dbname):
-    assert True == True
-
-
-def test_oh_statewide(dbname):
-    assert ( e.contest_total(
-            "2018 General",
-            "Ohio",
-            "OH Governor",
-            dbname=dbname,
-        )
-            == 5496487
-    )
-
-
-def test_oh_senate_totals_18(dbname):
-    assert ( e.contest_total(
-            "2018 General",
-            "Ohio",
-            "OH Senate District 21",
-            dbname=dbname,
-        )
-            == 110903
-    )
-
-
-
-def test_oh_house_totals_18(dbname):
-    assert ( e.contest_total(
-            "2018 General",
-            "Ohio",
-            "OH House District 2",
-            dbname=dbname,
-        )
-            == 44213
-    )
-
-
-def test_oh_contest_by_vote_type_18(dbname):
-    # Vote type not available
-    assert True == True
-
-
-def test_oh_totals_match_vote_type_18(dbname):
-    # Vote type not available
-    assert True == True
 
 ### Illinois Data Loading Tests ###
 
@@ -525,12 +399,6 @@ def test_ca_rep_18(dbname):
     )
 
 
-def test_ca_contest_by_vote_type_20(dbname):
-    assert True == True
-
-
-def test_ca_totals_match_vote_type_20(dbname):
-    assert True == True
 
 
 def test_ca_presidential_20ppp(dbname):
@@ -543,15 +411,3 @@ def test_ca_presidential_20ppp(dbname):
             == 2780247
     )
 
-
-### Colorado Data Loading Tests ###
-
-
-
-
-def test_co_contest_by_vote_type_18(dbname):
-    assert True == True
-
-
-def test_co_totals_match_vote_type_18(dbname):
-    assert True == True
