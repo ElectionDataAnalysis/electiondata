@@ -10,7 +10,7 @@ def test_ca_presidential_20(dbname):
             "US President (CA) (Democratic Party)",
             dbname=dbname,
         )
-            == 11568728
+            == 5784364
     )
 
 def test_ca_senate_totals_20(dbname):
@@ -20,7 +20,7 @@ def test_ca_senate_totals_20(dbname):
             "CA Senate District 13 (Libertarian Party)",
             dbname=dbname,
         )
-            == 11820
+            == 5910
     )
 
 
@@ -31,7 +31,7 @@ def test_ca_rep_20(dbname):
             "CA House District 60 (Republican Party)",
             dbname=dbname,
         )
-            == 77936
+            == 38968
     )
 
 def test_ca_congress_20(dbname):
@@ -41,5 +41,5 @@ def test_ca_congress_20(dbname):
             "US House CA District 6 (Democratic Party)",
             dbname=dbname,
         )
-            == 265322
+            == 132661
     )

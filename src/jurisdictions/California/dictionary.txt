@@ -2004,6 +2004,12 @@ CandidateContest	US House CA District 51	United States Representative District 5
 CandidateContest	US House CA District 52	United States Representative District 52
 CandidateContest	US House CA District 53	United States Representative District 53
 CandidateContest	US President (CA)	President
+CandidateContest	US President (CA) (Democratic Party)	President Democratic (Democratic)
+CandidateContest	US President (CA) (Republican Party)	President Republican (Republican)
+CandidateContest	US President (CA) (American Independent Party)	President American Independent (American Independent)
+CandidateContest	US President (CA) (Green Party)	President Green (Green)
+CandidateContest	US President (CA) (Libertarian Party)	President Libertarian (Libertarian)
+CandidateContest	US President (CA) (Peace and Freedom Party)	President P and F (Peace and Freedom)
 CandidateContest	US Senate CA	US Senate - 1
 CandidateContest	US Senate CA	US Senate - 2
 CandidateContest	CA Governor	Governor
