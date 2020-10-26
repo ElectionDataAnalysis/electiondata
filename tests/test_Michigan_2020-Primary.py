@@ -1,6 +1,6 @@
 import election_data_analysis as e
 
-def test_mi_presidential(dbname):
+def test_presidential(dbname):
     assert (e.contest_total(
             "2020 Primary",
             "Michigan",
@@ -10,7 +10,7 @@ def test_mi_presidential(dbname):
             == 1587679
     )
 
-def test_mi_senate(dbname):
+def test_senate(dbname):
     assert (e.contest_total(
             "2020 Primary",
             "Michigan",
