@@ -108,7 +108,7 @@ def clean_column_names(
     else:
         working.columns = [c.strip() for c in working.columns]
         new_count_cols = [c.strip() for c in new_count_cols]
-    return df, new_count_cols, err_str
+    return working, new_count_cols, err_str
 
 
 def cast_cols_as_int(
@@ -146,6 +146,7 @@ def munge_clean(raw: pd.DataFrame, munger: jm.Munger, count_columns_by_name: Lis
     Append '_SOURCE' suffix to raw column names to avoid conflicts"""
     err = None
     working = raw.copy()
+    working, count_columns_by_name, e = clean_column_names(working, count_cols=count_columns_by_name)
     try:
         #  define columns named in munger formulas (both plain from 'row' sourced info and
         #  'variable_j' from column-sourced)
