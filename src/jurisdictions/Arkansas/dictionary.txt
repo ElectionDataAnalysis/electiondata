@@ -1667,145 +1667,6 @@ Election	2018 General	2018 General
 Election	2018 Primary	2018 Primary
 Election	2016 General	2016 General
 Election	2016 Primary	2016 Primary
-Office	AR House District 1	State House District 1
-Office	AR House District 2	State House District 2
-Office	AR House District 3	State House District 3
-Office	AR House District 4	State House District 4
-Office	AR House District 5	State House District 5
-Office	AR House District 6	State House District 6
-Office	AR House District 7	State House District 7
-Office	AR House District 8	State House District 8
-Office	AR House District 9	State House District 9
-Office	AR House District 10	State House District 10
-Office	AR House District 11	State House District 11
-Office	AR House District 12	State House District 12
-Office	AR House District 13	State House District 13
-Office	AR House District 14	State House District 14
-Office	AR House District 15	State House District 15
-Office	AR House District 16	State House District 16
-Office	AR House District 17	State House District 17
-Office	AR House District 18	State House District 18
-Office	AR House District 19	State House District 19
-Office	AR House District 20	State House District 20
-Office	AR House District 21	State House District 21
-Office	AR House District 22	State House District 22
-Office	AR House District 23	State House District 23
-Office	AR House District 24	State House District 24
-Office	AR House District 25	State House District 25
-Office	AR House District 26	State House District 26
-Office	AR House District 27	State House District 27
-Office	AR House District 28	State House District 28
-Office	AR House District 29	State House District 29
-Office	AR House District 30	State House District 30
-Office	AR House District 31	State House District 31
-Office	AR House District 32	State House District 32
-Office	AR House District 33	State House District 33
-Office	AR House District 34	State House District 34
-Office	AR House District 35	State House District 35
-Office	AR House District 36	State House District 36
-Office	AR House District 37	State House District 37
-Office	AR House District 38	State House District 38
-Office	AR House District 39	State House District 39
-Office	AR House District 40	State House District 40
-Office	AR House District 41	State House District 41
-Office	AR House District 42	State House District 42
-Office	AR House District 43	State House District 43
-Office	AR House District 44	State House District 44
-Office	AR House District 45	State House District 45
-Office	AR House District 46	State House District 46
-Office	AR House District 47	State House District 47
-Office	AR House District 48	State House District 48
-Office	AR House District 49	State House District 49
-Office	AR House District 50	State House District 50
-Office	AR House District 51	State House District 51
-Office	AR House District 52	State House District 52
-Office	AR House District 53	State House District 53
-Office	AR House District 54	State House District 54
-Office	AR House District 55	State House District 55
-Office	AR House District 56	State House District 56
-Office	AR House District 57	State House District 57
-Office	AR House District 58	State House District 58
-Office	AR House District 59	State House District 59
-Office	AR House District 60	State House District 60
-Office	AR House District 61	State House District 61
-Office	AR House District 62	State House District 62
-Office	AR House District 63	State House District 63
-Office	AR House District 64	State House District 64
-Office	AR House District 65	State House District 65
-Office	AR House District 66	State House District 66
-Office	AR House District 67	State House District 67
-Office	AR House District 68	State House District 68
-Office	AR House District 69	State House District 69
-Office	AR House District 70	State House District 70
-Office	AR House District 71	State House District 71
-Office	AR House District 72	State House District 72
-Office	AR House District 73	State House District 73
-Office	AR House District 74	State House District 74
-Office	AR House District 75	State House District 75
-Office	AR House District 76	State House District 76
-Office	AR House District 77	State House District 77
-Office	AR House District 78	State House District 78
-Office	AR House District 79	State House District 79
-Office	AR House District 80	State House District 80
-Office	AR House District 81	State House District 81
-Office	AR House District 82	State House District 82
-Office	AR House District 83	State House District 83
-Office	AR House District 84	State House District 84
-Office	AR House District 85	State House District 85
-Office	AR House District 86	State House District 86
-Office	AR House District 87	State House District 87
-Office	AR House District 88	State House District 88
-Office	AR House District 89	State House District 89
-Office	AR House District 90	State House District 90
-Office	AR House District 91	State House District 91
-Office	AR House District 92	State House District 92
-Office	AR House District 93	State House District 93
-Office	AR House District 94	State House District 94
-Office	AR House District 95	State House District 95
-Office	AR House District 96	State House District 96
-Office	AR House District 97	State House District 97
-Office	AR House District 98	State House District 98
-Office	AR House District 99	State House District 99
-Office	AR House District 100	State House District 100
-Office	AR Senate District 1	State Senate District 1
-Office	AR Senate District 2	State Senate District 2
-Office	AR Senate District 3	State Senate District 3
-Office	AR Senate District 4	State Senate District 4
-Office	AR Senate District 5	State Senate District 5
-Office	AR Senate District 6	State Senate District 6
-Office	AR Senate District 7	State Senate District 7
-Office	AR Senate District 8	State Senate District 8
-Office	AR Senate District 9	State Senate District 9
-Office	AR Senate District 10	State Senate District 10
-Office	AR Senate District 11	State Senate District 11
-Office	AR Senate District 12	State Senate District 12
-Office	AR Senate District 13	State Senate District 13
-Office	AR Senate District 14	State Senate District 14
-Office	AR Senate District 15	State Senate District 15
-Office	AR Senate District 16	State Senate District 16
-Office	AR Senate District 17	State Senate District 17
-Office	AR Senate District 18	State Senate District 18
-Office	AR Senate District 19	State Senate District 19
-Office	AR Senate District 20	State Senate District 20
-Office	AR Senate District 21	State Senate District 21
-Office	AR Senate District 22	State Senate District 22
-Office	AR Senate District 23	State Senate District 23
-Office	AR Senate District 24	State Senate District 24
-Office	AR Senate District 25	State Senate District 25
-Office	AR Senate District 26	State Senate District 26
-Office	AR Senate District 27	State Senate District 27
-Office	AR Senate District 28	State Senate District 28
-Office	AR Senate District 29	State Senate District 29
-Office	AR Senate District 30	State Senate District 30
-Office	AR Senate District 31	State Senate District 31
-Office	AR Senate District 32	State Senate District 32
-Office	AR Senate District 33	State Senate District 33
-Office	AR Senate District 34	State Senate District 34
-Office	AR Senate District 35	State Senate District 35
-Office	US House AR District 1	U.S. Congress District 1
-Office	US House AR District 2	U.S. Congress District 2
-Office	US House AR District 3	U.S. Congress District 3
-Office	US House AR District 4	U.S. Congress District 4
 ReportingUnit	Arkansas;AR House District 1	State House District 1
 ReportingUnit	Arkansas;AR House District 2	State House District 2
 ReportingUnit	Arkansas;AR House District 3	State House District 3
@@ -2414,6 +2275,9 @@ Candidate	Meredith Switzer	Meredith Switzer
 Party	Democratic Party	DEM
 Party	Republican Party	REP
 Party	Libertarian Party	LIB
+CandidateContest	US President (AR) (Republican Party)	U.S. President - REP
+CandidateContest	US President (AR) (Democratic Party)	U.S. President - DEM
+CandidateContest	US President (AR)	U.S. President
 CandidateContest	AR Governor	Governor
 CandidateContest	AR State Treasurer	State Treasurer
 CandidateContest	AR Auditor of State	Auditor of State

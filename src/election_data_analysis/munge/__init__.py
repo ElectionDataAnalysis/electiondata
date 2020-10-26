@@ -30,6 +30,8 @@ def clean_count_cols(
                     working[c],
                     errors='coerce'
                 ).fillna(0).astype("int64")
+            else:
+                working[c] = working[c].astype("int64")
     return working, err_df
 
 
@@ -982,6 +984,7 @@ def raw_elements_to_cdf(
         '_datafile_Id',
     ]
     working = working[vc_cols]
+    working, e = clean_count_cols(working, ["Count"])
 
     if mu.alt != dict():
         # TODO there are edge cases where this might include dupes
