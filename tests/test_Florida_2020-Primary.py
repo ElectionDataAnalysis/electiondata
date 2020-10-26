@@ -1,39 +1,50 @@
 import election_data_analysis as e
 
+def test_data_exists(dbname):
+    assert e.data_exists("2020 Primary","Florida",dbname=dbname) 
+
 def test_fl_presidential_20(dbname):
-    assert (not e.data_exists("2020 Primary","Florida",dbname=dbname) or e.contest_total(
+    assert ( e.contest_total(
             "2020 Primary",
             "Florida",
-            "US President (FL)",
+            "US President (FL) (Democratic Party)",
             dbname=dbname,
         )
-            == 5958306
+            == 3478428 / 2
     )
 
 
-def test_fl_statewide_totals_20(dbname):
-    assert True == True
 
 
 def test_fl_senate_totals_20(dbname):
-    assert (not e.data_exists("2020 Primary","Florida",dbname=dbname) or e.contest_total(
+    assert ( e.contest_total(
             "2020 Primary",
             "Florida",
-            "FL Senate District 21",
+            "FL Senate District 5 (Republican Party)",
             dbname=dbname,
         )
-            == 54988
+            == 80339
     )
 
 
 def test_fl_house_totals_20(dbname):
-    assert (not e.data_exists("2020 Primary","Florida",dbname=dbname) or e.contest_total(
+    assert ( e.contest_total(
             "2020 Primary",
             "Florida",
-            "FL House District 11",
+            "FL House District 31 (Democratic Party)",
             dbname=dbname,
         )
-            == 17445
+            == 12084
+    )
+
+def test_us_house_totals_20(dbname):
+    assert ( e.contest_total(
+            "2020 Primary",
+            "Florida",
+            "US House FL District 5 (Republican Party)",
+            dbname=dbname,
+        )
+            == 33445
     )
 
 # results not available by vote type
