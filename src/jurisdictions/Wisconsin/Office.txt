@@ -1,0 +1,147 @@
+Name	ElectionDistrict
+US House WI District 1	Wisconsin;US House WI District 1
+US House WI District 2	Wisconsin;US House WI District 2
+US House WI District 3	Wisconsin;US House WI District 3
+US House WI District 4	Wisconsin;US House WI District 4
+US House WI District 5	Wisconsin;US House WI District 5
+US House WI District 6	Wisconsin;US House WI District 6
+US House WI District 7	Wisconsin;US House WI District 7
+US House WI District 8	Wisconsin;US House WI District 8
+US President (WI)	Wisconsin
+US Senate WI	Wisconsin
+WI Attorney General	Wisconsin
+WI Governor	Wisconsin
+WI House District 1	Wisconsin;WI House District 1
+WI House District 10	Wisconsin;WI House District 10
+WI House District 11	Wisconsin;WI House District 11
+WI House District 12	Wisconsin;WI House District 12
+WI House District 13	Wisconsin;WI House District 13
+WI House District 14	Wisconsin;WI House District 14
+WI House District 15	Wisconsin;WI House District 15
+WI House District 16	Wisconsin;WI House District 16
+WI House District 17	Wisconsin;WI House District 17
+WI House District 18	Wisconsin;WI House District 18
+WI House District 19	Wisconsin;WI House District 19
+WI House District 2	Wisconsin;WI House District 2
+WI House District 20	Wisconsin;WI House District 20
+WI House District 21	Wisconsin;WI House District 21
+WI House District 22	Wisconsin;WI House District 22
+WI House District 23	Wisconsin;WI House District 23
+WI House District 24	Wisconsin;WI House District 24
+WI House District 25	Wisconsin;WI House District 25
+WI House District 26	Wisconsin;WI House District 26
+WI House District 27	Wisconsin;WI House District 27
+WI House District 28	Wisconsin;WI House District 28
+WI House District 29	Wisconsin;WI House District 29
+WI House District 3	Wisconsin;WI House District 3
+WI House District 30	Wisconsin;WI House District 30
+WI House District 31	Wisconsin;WI House District 31
+WI House District 32	Wisconsin;WI House District 32
+WI House District 33	Wisconsin;WI House District 33
+WI House District 34	Wisconsin;WI House District 34
+WI House District 35	Wisconsin;WI House District 35
+WI House District 36	Wisconsin;WI House District 36
+WI House District 37	Wisconsin;WI House District 37
+WI House District 38	Wisconsin;WI House District 38
+WI House District 39	Wisconsin;WI House District 39
+WI House District 4	Wisconsin;WI House District 4
+WI House District 40	Wisconsin;WI House District 40
+WI House District 41	Wisconsin;WI House District 41
+WI House District 42	Wisconsin;WI House District 42
+WI House District 43	Wisconsin;WI House District 43
+WI House District 44	Wisconsin;WI House District 44
+WI House District 45	Wisconsin;WI House District 45
+WI House District 46	Wisconsin;WI House District 46
+WI House District 47	Wisconsin;WI House District 47
+WI House District 48	Wisconsin;WI House District 48
+WI House District 49	Wisconsin;WI House District 49
+WI House District 5	Wisconsin;WI House District 5
+WI House District 50	Wisconsin;WI House District 50
+WI House District 51	Wisconsin;WI House District 51
+WI House District 52	Wisconsin;WI House District 52
+WI House District 53	Wisconsin;WI House District 53
+WI House District 54	Wisconsin;WI House District 54
+WI House District 55	Wisconsin;WI House District 55
+WI House District 56	Wisconsin;WI House District 56
+WI House District 57	Wisconsin;WI House District 57
+WI House District 58	Wisconsin;WI House District 58
+WI House District 59	Wisconsin;WI House District 59
+WI House District 6	Wisconsin;WI House District 6
+WI House District 60	Wisconsin;WI House District 60
+WI House District 61	Wisconsin;WI House District 61
+WI House District 62	Wisconsin;WI House District 62
+WI House District 63	Wisconsin;WI House District 63
+WI House District 64	Wisconsin;WI House District 64
+WI House District 65	Wisconsin;WI House District 65
+WI House District 66	Wisconsin;WI House District 66
+WI House District 67	Wisconsin;WI House District 67
+WI House District 68	Wisconsin;WI House District 68
+WI House District 69	Wisconsin;WI House District 69
+WI House District 7	Wisconsin;WI House District 7
+WI House District 70	Wisconsin;WI House District 70
+WI House District 71	Wisconsin;WI House District 71
+WI House District 72	Wisconsin;WI House District 72
+WI House District 73	Wisconsin;WI House District 73
+WI House District 74	Wisconsin;WI House District 74
+WI House District 75	Wisconsin;WI House District 75
+WI House District 76	Wisconsin;WI House District 76
+WI House District 77	Wisconsin;WI House District 77
+WI House District 78	Wisconsin;WI House District 78
+WI House District 79	Wisconsin;WI House District 79
+WI House District 8	Wisconsin;WI House District 8
+WI House District 80	Wisconsin;WI House District 80
+WI House District 81	Wisconsin;WI House District 81
+WI House District 82	Wisconsin;WI House District 82
+WI House District 83	Wisconsin;WI House District 83
+WI House District 84	Wisconsin;WI House District 84
+WI House District 85	Wisconsin;WI House District 85
+WI House District 86	Wisconsin;WI House District 86
+WI House District 87	Wisconsin;WI House District 87
+WI House District 88	Wisconsin;WI House District 88
+WI House District 89	Wisconsin;WI House District 89
+WI House District 9	Wisconsin;WI House District 9
+WI House District 90	Wisconsin;WI House District 90
+WI House District 91	Wisconsin;WI House District 91
+WI House District 92	Wisconsin;WI House District 92
+WI House District 93	Wisconsin;WI House District 93
+WI House District 94	Wisconsin;WI House District 94
+WI House District 95	Wisconsin;WI House District 95
+WI House District 96	Wisconsin;WI House District 96
+WI House District 97	Wisconsin;WI House District 97
+WI House District 98	Wisconsin;WI House District 98
+WI House District 99	Wisconsin;WI House District 99
+WI Secretary of State	Wisconsin
+WI Senate District 1	Wisconsin;WI Senate District 1
+WI Senate District 10	Wisconsin;WI Senate District 10
+WI Senate District 11	Wisconsin;WI Senate District 11
+WI Senate District 12	Wisconsin;WI Senate District 12
+WI Senate District 13	Wisconsin;WI Senate District 13
+WI Senate District 14	Wisconsin;WI Senate District 14
+WI Senate District 15	Wisconsin;WI Senate District 15
+WI Senate District 16	Wisconsin;WI Senate District 16
+WI Senate District 17	Wisconsin;WI Senate District 17
+WI Senate District 18	Wisconsin;WI Senate District 18
+WI Senate District 19	Wisconsin;WI Senate District 19
+WI Senate District 2	Wisconsin;WI Senate District 2
+WI Senate District 20	Wisconsin;WI Senate District 20
+WI Senate District 21	Wisconsin;WI Senate District 21
+WI Senate District 22	Wisconsin;WI Senate District 22
+WI Senate District 23	Wisconsin;WI Senate District 23
+WI Senate District 24	Wisconsin;WI Senate District 24
+WI Senate District 25	Wisconsin;WI Senate District 25
+WI Senate District 26	Wisconsin;WI Senate District 26
+WI Senate District 27	Wisconsin;WI Senate District 27
+WI Senate District 28	Wisconsin;WI Senate District 28
+WI Senate District 29	Wisconsin;WI Senate District 29
+WI Senate District 3	Wisconsin;WI Senate District 3
+WI Senate District 30	Wisconsin;WI Senate District 30
+WI Senate District 31	Wisconsin;WI Senate District 31
+WI Senate District 32	Wisconsin;WI Senate District 32
+WI Senate District 33	Wisconsin;WI Senate District 33
+WI Senate District 4	Wisconsin;WI Senate District 4
+WI Senate District 5	Wisconsin;WI Senate District 5
+WI Senate District 6	Wisconsin;WI Senate District 6
+WI Senate District 7	Wisconsin;WI Senate District 7
+WI Senate District 8	Wisconsin;WI Senate District 8
+WI Senate District 9	Wisconsin;WI Senate District 9
+WI State Treasurer	Wisconsin
