@@ -21,7 +21,7 @@ def test_senate_totals(dbname):
             "IL Senate District 14",
             dbname=dbname,
         )
-            == 38061 
+            == 65275 
     )
 
 
