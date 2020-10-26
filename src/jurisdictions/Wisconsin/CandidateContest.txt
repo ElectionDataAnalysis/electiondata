@@ -1,0 +1,1023 @@
+Name	NumberElected	Office	PrimaryParty
+WI Attorney General	1	WI Attorney General	
+WI Governor	1	WI Governor	
+US President (WI)	1	US President (WI)	
+US House WI District 1	1	US House WI District 1	
+US House WI District 2	1	US House WI District 2	
+US House WI District 3	1	US House WI District 3	
+US House WI District 4	1	US House WI District 4	
+US House WI District 5	1	US House WI District 5	
+US House WI District 6	1	US House WI District 6	
+US House WI District 7	1	US House WI District 7	
+US House WI District 8	1	US House WI District 8	
+WI House District 1	1	WI House District 1	
+WI House District 10	1	WI House District 10	
+WI House District 11	1	WI House District 11	
+WI House District 12	1	WI House District 12	
+WI House District 13	1	WI House District 13	
+WI House District 14	1	WI House District 14	
+WI House District 15	1	WI House District 15	
+WI House District 16	1	WI House District 16	
+WI House District 17	1	WI House District 17	
+WI House District 18	1	WI House District 18	
+WI House District 19	1	WI House District 19	
+WI House District 2	1	WI House District 2	
+WI House District 20	1	WI House District 20	
+WI House District 21	1	WI House District 21	
+WI House District 22	1	WI House District 22	
+WI House District 23	1	WI House District 23	
+WI House District 24	1	WI House District 24	
+WI House District 25	1	WI House District 25	
+WI House District 26	1	WI House District 26	
+WI House District 27	1	WI House District 27	
+WI House District 28	1	WI House District 28	
+WI House District 29	1	WI House District 29	
+WI House District 3	1	WI House District 3	
+WI House District 30	1	WI House District 30	
+WI House District 31	1	WI House District 31	
+WI House District 32	1	WI House District 32	
+WI House District 33	1	WI House District 33	
+WI House District 34	1	WI House District 34	
+WI House District 35	1	WI House District 35	
+WI House District 36	1	WI House District 36	
+WI House District 37	1	WI House District 37	
+WI House District 38	1	WI House District 38	
+WI House District 39	1	WI House District 39	
+WI House District 4	1	WI House District 4	
+WI House District 40	1	WI House District 40	
+WI House District 41	1	WI House District 41	
+WI House District 42	1	WI House District 42	
+WI House District 43	1	WI House District 43	
+WI House District 44	1	WI House District 44	
+WI House District 45	1	WI House District 45	
+WI House District 46	1	WI House District 46	
+WI House District 47	1	WI House District 47	
+WI House District 48	1	WI House District 48	
+WI House District 49	1	WI House District 49	
+WI House District 5	1	WI House District 5	
+WI House District 50	1	WI House District 50	
+WI House District 51	1	WI House District 51	
+WI House District 52	1	WI House District 52	
+WI House District 53	1	WI House District 53	
+WI House District 54	1	WI House District 54	
+WI House District 55	1	WI House District 55	
+WI House District 56	1	WI House District 56	
+WI House District 57	1	WI House District 57	
+WI House District 58	1	WI House District 58	
+WI House District 59	1	WI House District 59	
+WI House District 6	1	WI House District 6	
+WI House District 60	1	WI House District 60	
+WI House District 61	1	WI House District 61	
+WI House District 62	1	WI House District 62	
+WI House District 63	1	WI House District 63	
+WI House District 64	1	WI House District 64	
+WI House District 65	1	WI House District 65	
+WI House District 66	1	WI House District 66	
+WI House District 67	1	WI House District 67	
+WI House District 68	1	WI House District 68	
+WI House District 69	1	WI House District 69	
+WI House District 7	1	WI House District 7	
+WI House District 70	1	WI House District 70	
+WI House District 71	1	WI House District 71	
+WI House District 72	1	WI House District 72	
+WI House District 73	1	WI House District 73	
+WI House District 74	1	WI House District 74	
+WI House District 75	1	WI House District 75	
+WI House District 76	1	WI House District 76	
+WI House District 77	1	WI House District 77	
+WI House District 78	1	WI House District 78	
+WI House District 79	1	WI House District 79	
+WI House District 8	1	WI House District 8	
+WI House District 80	1	WI House District 80	
+WI House District 81	1	WI House District 81	
+WI House District 82	1	WI House District 82	
+WI House District 83	1	WI House District 83	
+WI House District 84	1	WI House District 84	
+WI House District 85	1	WI House District 85	
+WI House District 86	1	WI House District 86	
+WI House District 87	1	WI House District 87	
+WI House District 88	1	WI House District 88	
+WI House District 89	1	WI House District 89	
+WI House District 9	1	WI House District 9	
+WI House District 90	1	WI House District 90	
+WI House District 91	1	WI House District 91	
+WI House District 92	1	WI House District 92	
+WI House District 93	1	WI House District 93	
+WI House District 94	1	WI House District 94	
+WI House District 95	1	WI House District 95	
+WI House District 96	1	WI House District 96	
+WI House District 97	1	WI House District 97	
+WI House District 98	1	WI House District 98	
+WI House District 99	1	WI House District 99	
+WI Secretary of State	1	WI Secretary of State	
+WI Senate District 1	1	WI Senate District 1	
+WI Senate District 10	1	WI Senate District 10	
+WI Senate District 11	1	WI Senate District 11	
+WI Senate District 12	1	WI Senate District 12	
+WI Senate District 13	1	WI Senate District 13	
+WI Senate District 14	1	WI Senate District 14	
+WI Senate District 15	1	WI Senate District 15	
+WI Senate District 16	1	WI Senate District 16	
+WI Senate District 17	1	WI Senate District 17	
+WI Senate District 18	1	WI Senate District 18	
+WI Senate District 19	1	WI Senate District 19	
+WI Senate District 2	1	WI Senate District 2	
+WI Senate District 20	1	WI Senate District 20	
+WI Senate District 21	1	WI Senate District 21	
+WI Senate District 22	1	WI Senate District 22	
+WI Senate District 23	1	WI Senate District 23	
+WI Senate District 24	1	WI Senate District 24	
+WI Senate District 25	1	WI Senate District 25	
+WI Senate District 26	1	WI Senate District 26	
+WI Senate District 27	1	WI Senate District 27	
+WI Senate District 28	1	WI Senate District 28	
+WI Senate District 29	1	WI Senate District 29	
+WI Senate District 3	1	WI Senate District 3	
+WI Senate District 30	1	WI Senate District 30	
+WI Senate District 31	1	WI Senate District 31	
+WI Senate District 32	1	WI Senate District 32	
+WI Senate District 33	1	WI Senate District 33	
+WI Senate District 4	1	WI Senate District 4	
+WI Senate District 5	1	WI Senate District 5	
+WI Senate District 6	1	WI Senate District 6	
+WI Senate District 7	1	WI Senate District 7	
+WI Senate District 8	1	WI Senate District 8	
+WI Senate District 9	1	WI Senate District 9	
+WI State Treasurer	1	WI State Treasurer	
+US Senate WI	1	US Senate WI	
+WI Attorney General (Democratic Party)	1	WI Attorney General	Democratic Party
+WI Governor (Democratic Party)	1	WI Governor	Democratic Party
+US President (WI) (Democratic Party)	1	US President (WI)	Democratic Party
+US House WI District 1 (Democratic Party)	1	US House WI District 1	Democratic Party
+US House WI District 2 (Democratic Party)	1	US House WI District 2	Democratic Party
+US House WI District 3 (Democratic Party)	1	US House WI District 3	Democratic Party
+US House WI District 4 (Democratic Party)	1	US House WI District 4	Democratic Party
+US House WI District 5 (Democratic Party)	1	US House WI District 5	Democratic Party
+US House WI District 6 (Democratic Party)	1	US House WI District 6	Democratic Party
+US House WI District 7 (Democratic Party)	1	US House WI District 7	Democratic Party
+US House WI District 8 (Democratic Party)	1	US House WI District 8	Democratic Party
+WI House District 1 (Democratic Party)	1	WI House District 1	Democratic Party
+WI House District 10 (Democratic Party)	1	WI House District 10	Democratic Party
+WI House District 11 (Democratic Party)	1	WI House District 11	Democratic Party
+WI House District 12 (Democratic Party)	1	WI House District 12	Democratic Party
+WI House District 13 (Democratic Party)	1	WI House District 13	Democratic Party
+WI House District 14 (Democratic Party)	1	WI House District 14	Democratic Party
+WI House District 15 (Democratic Party)	1	WI House District 15	Democratic Party
+WI House District 16 (Democratic Party)	1	WI House District 16	Democratic Party
+WI House District 17 (Democratic Party)	1	WI House District 17	Democratic Party
+WI House District 18 (Democratic Party)	1	WI House District 18	Democratic Party
+WI House District 19 (Democratic Party)	1	WI House District 19	Democratic Party
+WI House District 2 (Democratic Party)	1	WI House District 2	Democratic Party
+WI House District 20 (Democratic Party)	1	WI House District 20	Democratic Party
+WI House District 21 (Democratic Party)	1	WI House District 21	Democratic Party
+WI House District 22 (Democratic Party)	1	WI House District 22	Democratic Party
+WI House District 23 (Democratic Party)	1	WI House District 23	Democratic Party
+WI House District 24 (Democratic Party)	1	WI House District 24	Democratic Party
+WI House District 25 (Democratic Party)	1	WI House District 25	Democratic Party
+WI House District 26 (Democratic Party)	1	WI House District 26	Democratic Party
+WI House District 27 (Democratic Party)	1	WI House District 27	Democratic Party
+WI House District 28 (Democratic Party)	1	WI House District 28	Democratic Party
+WI House District 29 (Democratic Party)	1	WI House District 29	Democratic Party
+WI House District 3 (Democratic Party)	1	WI House District 3	Democratic Party
+WI House District 30 (Democratic Party)	1	WI House District 30	Democratic Party
+WI House District 31 (Democratic Party)	1	WI House District 31	Democratic Party
+WI House District 32 (Democratic Party)	1	WI House District 32	Democratic Party
+WI House District 33 (Democratic Party)	1	WI House District 33	Democratic Party
+WI House District 34 (Democratic Party)	1	WI House District 34	Democratic Party
+WI House District 35 (Democratic Party)	1	WI House District 35	Democratic Party
+WI House District 36 (Democratic Party)	1	WI House District 36	Democratic Party
+WI House District 37 (Democratic Party)	1	WI House District 37	Democratic Party
+WI House District 38 (Democratic Party)	1	WI House District 38	Democratic Party
+WI House District 39 (Democratic Party)	1	WI House District 39	Democratic Party
+WI House District 4 (Democratic Party)	1	WI House District 4	Democratic Party
+WI House District 40 (Democratic Party)	1	WI House District 40	Democratic Party
+WI House District 41 (Democratic Party)	1	WI House District 41	Democratic Party
+WI House District 42 (Democratic Party)	1	WI House District 42	Democratic Party
+WI House District 43 (Democratic Party)	1	WI House District 43	Democratic Party
+WI House District 44 (Democratic Party)	1	WI House District 44	Democratic Party
+WI House District 45 (Democratic Party)	1	WI House District 45	Democratic Party
+WI House District 46 (Democratic Party)	1	WI House District 46	Democratic Party
+WI House District 47 (Democratic Party)	1	WI House District 47	Democratic Party
+WI House District 48 (Democratic Party)	1	WI House District 48	Democratic Party
+WI House District 49 (Democratic Party)	1	WI House District 49	Democratic Party
+WI House District 5 (Democratic Party)	1	WI House District 5	Democratic Party
+WI House District 50 (Democratic Party)	1	WI House District 50	Democratic Party
+WI House District 51 (Democratic Party)	1	WI House District 51	Democratic Party
+WI House District 52 (Democratic Party)	1	WI House District 52	Democratic Party
+WI House District 53 (Democratic Party)	1	WI House District 53	Democratic Party
+WI House District 54 (Democratic Party)	1	WI House District 54	Democratic Party
+WI House District 55 (Democratic Party)	1	WI House District 55	Democratic Party
+WI House District 56 (Democratic Party)	1	WI House District 56	Democratic Party
+WI House District 57 (Democratic Party)	1	WI House District 57	Democratic Party
+WI House District 58 (Democratic Party)	1	WI House District 58	Democratic Party
+WI House District 59 (Democratic Party)	1	WI House District 59	Democratic Party
+WI House District 6 (Democratic Party)	1	WI House District 6	Democratic Party
+WI House District 60 (Democratic Party)	1	WI House District 60	Democratic Party
+WI House District 61 (Democratic Party)	1	WI House District 61	Democratic Party
+WI House District 62 (Democratic Party)	1	WI House District 62	Democratic Party
+WI House District 63 (Democratic Party)	1	WI House District 63	Democratic Party
+WI House District 64 (Democratic Party)	1	WI House District 64	Democratic Party
+WI House District 65 (Democratic Party)	1	WI House District 65	Democratic Party
+WI House District 66 (Democratic Party)	1	WI House District 66	Democratic Party
+WI House District 67 (Democratic Party)	1	WI House District 67	Democratic Party
+WI House District 68 (Democratic Party)	1	WI House District 68	Democratic Party
+WI House District 69 (Democratic Party)	1	WI House District 69	Democratic Party
+WI House District 7 (Democratic Party)	1	WI House District 7	Democratic Party
+WI House District 70 (Democratic Party)	1	WI House District 70	Democratic Party
+WI House District 71 (Democratic Party)	1	WI House District 71	Democratic Party
+WI House District 72 (Democratic Party)	1	WI House District 72	Democratic Party
+WI House District 73 (Democratic Party)	1	WI House District 73	Democratic Party
+WI House District 74 (Democratic Party)	1	WI House District 74	Democratic Party
+WI House District 75 (Democratic Party)	1	WI House District 75	Democratic Party
+WI House District 76 (Democratic Party)	1	WI House District 76	Democratic Party
+WI House District 77 (Democratic Party)	1	WI House District 77	Democratic Party
+WI House District 78 (Democratic Party)	1	WI House District 78	Democratic Party
+WI House District 79 (Democratic Party)	1	WI House District 79	Democratic Party
+WI House District 8 (Democratic Party)	1	WI House District 8	Democratic Party
+WI House District 80 (Democratic Party)	1	WI House District 80	Democratic Party
+WI House District 81 (Democratic Party)	1	WI House District 81	Democratic Party
+WI House District 82 (Democratic Party)	1	WI House District 82	Democratic Party
+WI House District 83 (Democratic Party)	1	WI House District 83	Democratic Party
+WI House District 84 (Democratic Party)	1	WI House District 84	Democratic Party
+WI House District 85 (Democratic Party)	1	WI House District 85	Democratic Party
+WI House District 86 (Democratic Party)	1	WI House District 86	Democratic Party
+WI House District 87 (Democratic Party)	1	WI House District 87	Democratic Party
+WI House District 88 (Democratic Party)	1	WI House District 88	Democratic Party
+WI House District 89 (Democratic Party)	1	WI House District 89	Democratic Party
+WI House District 9 (Democratic Party)	1	WI House District 9	Democratic Party
+WI House District 90 (Democratic Party)	1	WI House District 90	Democratic Party
+WI House District 91 (Democratic Party)	1	WI House District 91	Democratic Party
+WI House District 92 (Democratic Party)	1	WI House District 92	Democratic Party
+WI House District 93 (Democratic Party)	1	WI House District 93	Democratic Party
+WI House District 94 (Democratic Party)	1	WI House District 94	Democratic Party
+WI House District 95 (Democratic Party)	1	WI House District 95	Democratic Party
+WI House District 96 (Democratic Party)	1	WI House District 96	Democratic Party
+WI House District 97 (Democratic Party)	1	WI House District 97	Democratic Party
+WI House District 98 (Democratic Party)	1	WI House District 98	Democratic Party
+WI House District 99 (Democratic Party)	1	WI House District 99	Democratic Party
+WI Secretary of State (Democratic Party)	1	WI Secretary of State	Democratic Party
+WI Senate District 1 (Democratic Party)	1	WI Senate District 1	Democratic Party
+WI Senate District 10 (Democratic Party)	1	WI Senate District 10	Democratic Party
+WI Senate District 11 (Democratic Party)	1	WI Senate District 11	Democratic Party
+WI Senate District 12 (Democratic Party)	1	WI Senate District 12	Democratic Party
+WI Senate District 13 (Democratic Party)	1	WI Senate District 13	Democratic Party
+WI Senate District 14 (Democratic Party)	1	WI Senate District 14	Democratic Party
+WI Senate District 15 (Democratic Party)	1	WI Senate District 15	Democratic Party
+WI Senate District 16 (Democratic Party)	1	WI Senate District 16	Democratic Party
+WI Senate District 17 (Democratic Party)	1	WI Senate District 17	Democratic Party
+WI Senate District 18 (Democratic Party)	1	WI Senate District 18	Democratic Party
+WI Senate District 19 (Democratic Party)	1	WI Senate District 19	Democratic Party
+WI Senate District 2 (Democratic Party)	1	WI Senate District 2	Democratic Party
+WI Senate District 20 (Democratic Party)	1	WI Senate District 20	Democratic Party
+WI Senate District 21 (Democratic Party)	1	WI Senate District 21	Democratic Party
+WI Senate District 22 (Democratic Party)	1	WI Senate District 22	Democratic Party
+WI Senate District 23 (Democratic Party)	1	WI Senate District 23	Democratic Party
+WI Senate District 24 (Democratic Party)	1	WI Senate District 24	Democratic Party
+WI Senate District 25 (Democratic Party)	1	WI Senate District 25	Democratic Party
+WI Senate District 26 (Democratic Party)	1	WI Senate District 26	Democratic Party
+WI Senate District 27 (Democratic Party)	1	WI Senate District 27	Democratic Party
+WI Senate District 28 (Democratic Party)	1	WI Senate District 28	Democratic Party
+WI Senate District 29 (Democratic Party)	1	WI Senate District 29	Democratic Party
+WI Senate District 3 (Democratic Party)	1	WI Senate District 3	Democratic Party
+WI Senate District 30 (Democratic Party)	1	WI Senate District 30	Democratic Party
+WI Senate District 31 (Democratic Party)	1	WI Senate District 31	Democratic Party
+WI Senate District 32 (Democratic Party)	1	WI Senate District 32	Democratic Party
+WI Senate District 33 (Democratic Party)	1	WI Senate District 33	Democratic Party
+WI Senate District 4 (Democratic Party)	1	WI Senate District 4	Democratic Party
+WI Senate District 5 (Democratic Party)	1	WI Senate District 5	Democratic Party
+WI Senate District 6 (Democratic Party)	1	WI Senate District 6	Democratic Party
+WI Senate District 7 (Democratic Party)	1	WI Senate District 7	Democratic Party
+WI Senate District 8 (Democratic Party)	1	WI Senate District 8	Democratic Party
+WI Senate District 9 (Democratic Party)	1	WI Senate District 9	Democratic Party
+WI State Treasurer (Democratic Party)	1	WI State Treasurer	Democratic Party
+US Senate WI (Democratic Party)	1	US Senate WI	Democratic Party
+WI Attorney General (Republican Party)	1	WI Attorney General	Republican Party
+WI Governor (Republican Party)	1	WI Governor	Republican Party
+US President (WI) (Republican Party)	1	US President (WI)	Republican Party
+US House WI District 1 (Republican Party)	1	US House WI District 1	Republican Party
+US House WI District 2 (Republican Party)	1	US House WI District 2	Republican Party
+US House WI District 3 (Republican Party)	1	US House WI District 3	Republican Party
+US House WI District 4 (Republican Party)	1	US House WI District 4	Republican Party
+US House WI District 5 (Republican Party)	1	US House WI District 5	Republican Party
+US House WI District 6 (Republican Party)	1	US House WI District 6	Republican Party
+US House WI District 7 (Republican Party)	1	US House WI District 7	Republican Party
+US House WI District 8 (Republican Party)	1	US House WI District 8	Republican Party
+WI House District 1 (Republican Party)	1	WI House District 1	Republican Party
+WI House District 10 (Republican Party)	1	WI House District 10	Republican Party
+WI House District 11 (Republican Party)	1	WI House District 11	Republican Party
+WI House District 12 (Republican Party)	1	WI House District 12	Republican Party
+WI House District 13 (Republican Party)	1	WI House District 13	Republican Party
+WI House District 14 (Republican Party)	1	WI House District 14	Republican Party
+WI House District 15 (Republican Party)	1	WI House District 15	Republican Party
+WI House District 16 (Republican Party)	1	WI House District 16	Republican Party
+WI House District 17 (Republican Party)	1	WI House District 17	Republican Party
+WI House District 18 (Republican Party)	1	WI House District 18	Republican Party
+WI House District 19 (Republican Party)	1	WI House District 19	Republican Party
+WI House District 2 (Republican Party)	1	WI House District 2	Republican Party
+WI House District 20 (Republican Party)	1	WI House District 20	Republican Party
+WI House District 21 (Republican Party)	1	WI House District 21	Republican Party
+WI House District 22 (Republican Party)	1	WI House District 22	Republican Party
+WI House District 23 (Republican Party)	1	WI House District 23	Republican Party
+WI House District 24 (Republican Party)	1	WI House District 24	Republican Party
+WI House District 25 (Republican Party)	1	WI House District 25	Republican Party
+WI House District 26 (Republican Party)	1	WI House District 26	Republican Party
+WI House District 27 (Republican Party)	1	WI House District 27	Republican Party
+WI House District 28 (Republican Party)	1	WI House District 28	Republican Party
+WI House District 29 (Republican Party)	1	WI House District 29	Republican Party
+WI House District 3 (Republican Party)	1	WI House District 3	Republican Party
+WI House District 30 (Republican Party)	1	WI House District 30	Republican Party
+WI House District 31 (Republican Party)	1	WI House District 31	Republican Party
+WI House District 32 (Republican Party)	1	WI House District 32	Republican Party
+WI House District 33 (Republican Party)	1	WI House District 33	Republican Party
+WI House District 34 (Republican Party)	1	WI House District 34	Republican Party
+WI House District 35 (Republican Party)	1	WI House District 35	Republican Party
+WI House District 36 (Republican Party)	1	WI House District 36	Republican Party
+WI House District 37 (Republican Party)	1	WI House District 37	Republican Party
+WI House District 38 (Republican Party)	1	WI House District 38	Republican Party
+WI House District 39 (Republican Party)	1	WI House District 39	Republican Party
+WI House District 4 (Republican Party)	1	WI House District 4	Republican Party
+WI House District 40 (Republican Party)	1	WI House District 40	Republican Party
+WI House District 41 (Republican Party)	1	WI House District 41	Republican Party
+WI House District 42 (Republican Party)	1	WI House District 42	Republican Party
+WI House District 43 (Republican Party)	1	WI House District 43	Republican Party
+WI House District 44 (Republican Party)	1	WI House District 44	Republican Party
+WI House District 45 (Republican Party)	1	WI House District 45	Republican Party
+WI House District 46 (Republican Party)	1	WI House District 46	Republican Party
+WI House District 47 (Republican Party)	1	WI House District 47	Republican Party
+WI House District 48 (Republican Party)	1	WI House District 48	Republican Party
+WI House District 49 (Republican Party)	1	WI House District 49	Republican Party
+WI House District 5 (Republican Party)	1	WI House District 5	Republican Party
+WI House District 50 (Republican Party)	1	WI House District 50	Republican Party
+WI House District 51 (Republican Party)	1	WI House District 51	Republican Party
+WI House District 52 (Republican Party)	1	WI House District 52	Republican Party
+WI House District 53 (Republican Party)	1	WI House District 53	Republican Party
+WI House District 54 (Republican Party)	1	WI House District 54	Republican Party
+WI House District 55 (Republican Party)	1	WI House District 55	Republican Party
+WI House District 56 (Republican Party)	1	WI House District 56	Republican Party
+WI House District 57 (Republican Party)	1	WI House District 57	Republican Party
+WI House District 58 (Republican Party)	1	WI House District 58	Republican Party
+WI House District 59 (Republican Party)	1	WI House District 59	Republican Party
+WI House District 6 (Republican Party)	1	WI House District 6	Republican Party
+WI House District 60 (Republican Party)	1	WI House District 60	Republican Party
+WI House District 61 (Republican Party)	1	WI House District 61	Republican Party
+WI House District 62 (Republican Party)	1	WI House District 62	Republican Party
+WI House District 63 (Republican Party)	1	WI House District 63	Republican Party
+WI House District 64 (Republican Party)	1	WI House District 64	Republican Party
+WI House District 65 (Republican Party)	1	WI House District 65	Republican Party
+WI House District 66 (Republican Party)	1	WI House District 66	Republican Party
+WI House District 67 (Republican Party)	1	WI House District 67	Republican Party
+WI House District 68 (Republican Party)	1	WI House District 68	Republican Party
+WI House District 69 (Republican Party)	1	WI House District 69	Republican Party
+WI House District 7 (Republican Party)	1	WI House District 7	Republican Party
+WI House District 70 (Republican Party)	1	WI House District 70	Republican Party
+WI House District 71 (Republican Party)	1	WI House District 71	Republican Party
+WI House District 72 (Republican Party)	1	WI House District 72	Republican Party
+WI House District 73 (Republican Party)	1	WI House District 73	Republican Party
+WI House District 74 (Republican Party)	1	WI House District 74	Republican Party
+WI House District 75 (Republican Party)	1	WI House District 75	Republican Party
+WI House District 76 (Republican Party)	1	WI House District 76	Republican Party
+WI House District 77 (Republican Party)	1	WI House District 77	Republican Party
+WI House District 78 (Republican Party)	1	WI House District 78	Republican Party
+WI House District 79 (Republican Party)	1	WI House District 79	Republican Party
+WI House District 8 (Republican Party)	1	WI House District 8	Republican Party
+WI House District 80 (Republican Party)	1	WI House District 80	Republican Party
+WI House District 81 (Republican Party)	1	WI House District 81	Republican Party
+WI House District 82 (Republican Party)	1	WI House District 82	Republican Party
+WI House District 83 (Republican Party)	1	WI House District 83	Republican Party
+WI House District 84 (Republican Party)	1	WI House District 84	Republican Party
+WI House District 85 (Republican Party)	1	WI House District 85	Republican Party
+WI House District 86 (Republican Party)	1	WI House District 86	Republican Party
+WI House District 87 (Republican Party)	1	WI House District 87	Republican Party
+WI House District 88 (Republican Party)	1	WI House District 88	Republican Party
+WI House District 89 (Republican Party)	1	WI House District 89	Republican Party
+WI House District 9 (Republican Party)	1	WI House District 9	Republican Party
+WI House District 90 (Republican Party)	1	WI House District 90	Republican Party
+WI House District 91 (Republican Party)	1	WI House District 91	Republican Party
+WI House District 92 (Republican Party)	1	WI House District 92	Republican Party
+WI House District 93 (Republican Party)	1	WI House District 93	Republican Party
+WI House District 94 (Republican Party)	1	WI House District 94	Republican Party
+WI House District 95 (Republican Party)	1	WI House District 95	Republican Party
+WI House District 96 (Republican Party)	1	WI House District 96	Republican Party
+WI House District 97 (Republican Party)	1	WI House District 97	Republican Party
+WI House District 98 (Republican Party)	1	WI House District 98	Republican Party
+WI House District 99 (Republican Party)	1	WI House District 99	Republican Party
+WI Secretary of State (Republican Party)	1	WI Secretary of State	Republican Party
+WI Senate District 1 (Republican Party)	1	WI Senate District 1	Republican Party
+WI Senate District 10 (Republican Party)	1	WI Senate District 10	Republican Party
+WI Senate District 11 (Republican Party)	1	WI Senate District 11	Republican Party
+WI Senate District 12 (Republican Party)	1	WI Senate District 12	Republican Party
+WI Senate District 13 (Republican Party)	1	WI Senate District 13	Republican Party
+WI Senate District 14 (Republican Party)	1	WI Senate District 14	Republican Party
+WI Senate District 15 (Republican Party)	1	WI Senate District 15	Republican Party
+WI Senate District 16 (Republican Party)	1	WI Senate District 16	Republican Party
+WI Senate District 17 (Republican Party)	1	WI Senate District 17	Republican Party
+WI Senate District 18 (Republican Party)	1	WI Senate District 18	Republican Party
+WI Senate District 19 (Republican Party)	1	WI Senate District 19	Republican Party
+WI Senate District 2 (Republican Party)	1	WI Senate District 2	Republican Party
+WI Senate District 20 (Republican Party)	1	WI Senate District 20	Republican Party
+WI Senate District 21 (Republican Party)	1	WI Senate District 21	Republican Party
+WI Senate District 22 (Republican Party)	1	WI Senate District 22	Republican Party
+WI Senate District 23 (Republican Party)	1	WI Senate District 23	Republican Party
+WI Senate District 24 (Republican Party)	1	WI Senate District 24	Republican Party
+WI Senate District 25 (Republican Party)	1	WI Senate District 25	Republican Party
+WI Senate District 26 (Republican Party)	1	WI Senate District 26	Republican Party
+WI Senate District 27 (Republican Party)	1	WI Senate District 27	Republican Party
+WI Senate District 28 (Republican Party)	1	WI Senate District 28	Republican Party
+WI Senate District 29 (Republican Party)	1	WI Senate District 29	Republican Party
+WI Senate District 3 (Republican Party)	1	WI Senate District 3	Republican Party
+WI Senate District 30 (Republican Party)	1	WI Senate District 30	Republican Party
+WI Senate District 31 (Republican Party)	1	WI Senate District 31	Republican Party
+WI Senate District 32 (Republican Party)	1	WI Senate District 32	Republican Party
+WI Senate District 33 (Republican Party)	1	WI Senate District 33	Republican Party
+WI Senate District 4 (Republican Party)	1	WI Senate District 4	Republican Party
+WI Senate District 5 (Republican Party)	1	WI Senate District 5	Republican Party
+WI Senate District 6 (Republican Party)	1	WI Senate District 6	Republican Party
+WI Senate District 7 (Republican Party)	1	WI Senate District 7	Republican Party
+WI Senate District 8 (Republican Party)	1	WI Senate District 8	Republican Party
+WI Senate District 9 (Republican Party)	1	WI Senate District 9	Republican Party
+WI State Treasurer (Republican Party)	1	WI State Treasurer	Republican Party
+US Senate WI (Republican Party)	1	US Senate WI	Republican Party
+WI Attorney General (Constitution Party)	1	WI Attorney General	Constitution Party
+WI Governor (Constitution Party)	1	WI Governor	Constitution Party
+US President (WI) (Constitution Party)	1	US President (WI)	Constitution Party
+US House WI District 1 (Constitution Party)	1	US House WI District 1	Constitution Party
+US House WI District 2 (Constitution Party)	1	US House WI District 2	Constitution Party
+US House WI District 3 (Constitution Party)	1	US House WI District 3	Constitution Party
+US House WI District 4 (Constitution Party)	1	US House WI District 4	Constitution Party
+US House WI District 5 (Constitution Party)	1	US House WI District 5	Constitution Party
+US House WI District 6 (Constitution Party)	1	US House WI District 6	Constitution Party
+US House WI District 7 (Constitution Party)	1	US House WI District 7	Constitution Party
+US House WI District 8 (Constitution Party)	1	US House WI District 8	Constitution Party
+WI House District 1 (Constitution Party)	1	WI House District 1	Constitution Party
+WI House District 10 (Constitution Party)	1	WI House District 10	Constitution Party
+WI House District 11 (Constitution Party)	1	WI House District 11	Constitution Party
+WI House District 12 (Constitution Party)	1	WI House District 12	Constitution Party
+WI House District 13 (Constitution Party)	1	WI House District 13	Constitution Party
+WI House District 14 (Constitution Party)	1	WI House District 14	Constitution Party
+WI House District 15 (Constitution Party)	1	WI House District 15	Constitution Party
+WI House District 16 (Constitution Party)	1	WI House District 16	Constitution Party
+WI House District 17 (Constitution Party)	1	WI House District 17	Constitution Party
+WI House District 18 (Constitution Party)	1	WI House District 18	Constitution Party
+WI House District 19 (Constitution Party)	1	WI House District 19	Constitution Party
+WI House District 2 (Constitution Party)	1	WI House District 2	Constitution Party
+WI House District 20 (Constitution Party)	1	WI House District 20	Constitution Party
+WI House District 21 (Constitution Party)	1	WI House District 21	Constitution Party
+WI House District 22 (Constitution Party)	1	WI House District 22	Constitution Party
+WI House District 23 (Constitution Party)	1	WI House District 23	Constitution Party
+WI House District 24 (Constitution Party)	1	WI House District 24	Constitution Party
+WI House District 25 (Constitution Party)	1	WI House District 25	Constitution Party
+WI House District 26 (Constitution Party)	1	WI House District 26	Constitution Party
+WI House District 27 (Constitution Party)	1	WI House District 27	Constitution Party
+WI House District 28 (Constitution Party)	1	WI House District 28	Constitution Party
+WI House District 29 (Constitution Party)	1	WI House District 29	Constitution Party
+WI House District 3 (Constitution Party)	1	WI House District 3	Constitution Party
+WI House District 30 (Constitution Party)	1	WI House District 30	Constitution Party
+WI House District 31 (Constitution Party)	1	WI House District 31	Constitution Party
+WI House District 32 (Constitution Party)	1	WI House District 32	Constitution Party
+WI House District 33 (Constitution Party)	1	WI House District 33	Constitution Party
+WI House District 34 (Constitution Party)	1	WI House District 34	Constitution Party
+WI House District 35 (Constitution Party)	1	WI House District 35	Constitution Party
+WI House District 36 (Constitution Party)	1	WI House District 36	Constitution Party
+WI House District 37 (Constitution Party)	1	WI House District 37	Constitution Party
+WI House District 38 (Constitution Party)	1	WI House District 38	Constitution Party
+WI House District 39 (Constitution Party)	1	WI House District 39	Constitution Party
+WI House District 4 (Constitution Party)	1	WI House District 4	Constitution Party
+WI House District 40 (Constitution Party)	1	WI House District 40	Constitution Party
+WI House District 41 (Constitution Party)	1	WI House District 41	Constitution Party
+WI House District 42 (Constitution Party)	1	WI House District 42	Constitution Party
+WI House District 43 (Constitution Party)	1	WI House District 43	Constitution Party
+WI House District 44 (Constitution Party)	1	WI House District 44	Constitution Party
+WI House District 45 (Constitution Party)	1	WI House District 45	Constitution Party
+WI House District 46 (Constitution Party)	1	WI House District 46	Constitution Party
+WI House District 47 (Constitution Party)	1	WI House District 47	Constitution Party
+WI House District 48 (Constitution Party)	1	WI House District 48	Constitution Party
+WI House District 49 (Constitution Party)	1	WI House District 49	Constitution Party
+WI House District 5 (Constitution Party)	1	WI House District 5	Constitution Party
+WI House District 50 (Constitution Party)	1	WI House District 50	Constitution Party
+WI House District 51 (Constitution Party)	1	WI House District 51	Constitution Party
+WI House District 52 (Constitution Party)	1	WI House District 52	Constitution Party
+WI House District 53 (Constitution Party)	1	WI House District 53	Constitution Party
+WI House District 54 (Constitution Party)	1	WI House District 54	Constitution Party
+WI House District 55 (Constitution Party)	1	WI House District 55	Constitution Party
+WI House District 56 (Constitution Party)	1	WI House District 56	Constitution Party
+WI House District 57 (Constitution Party)	1	WI House District 57	Constitution Party
+WI House District 58 (Constitution Party)	1	WI House District 58	Constitution Party
+WI House District 59 (Constitution Party)	1	WI House District 59	Constitution Party
+WI House District 6 (Constitution Party)	1	WI House District 6	Constitution Party
+WI House District 60 (Constitution Party)	1	WI House District 60	Constitution Party
+WI House District 61 (Constitution Party)	1	WI House District 61	Constitution Party
+WI House District 62 (Constitution Party)	1	WI House District 62	Constitution Party
+WI House District 63 (Constitution Party)	1	WI House District 63	Constitution Party
+WI House District 64 (Constitution Party)	1	WI House District 64	Constitution Party
+WI House District 65 (Constitution Party)	1	WI House District 65	Constitution Party
+WI House District 66 (Constitution Party)	1	WI House District 66	Constitution Party
+WI House District 67 (Constitution Party)	1	WI House District 67	Constitution Party
+WI House District 68 (Constitution Party)	1	WI House District 68	Constitution Party
+WI House District 69 (Constitution Party)	1	WI House District 69	Constitution Party
+WI House District 7 (Constitution Party)	1	WI House District 7	Constitution Party
+WI House District 70 (Constitution Party)	1	WI House District 70	Constitution Party
+WI House District 71 (Constitution Party)	1	WI House District 71	Constitution Party
+WI House District 72 (Constitution Party)	1	WI House District 72	Constitution Party
+WI House District 73 (Constitution Party)	1	WI House District 73	Constitution Party
+WI House District 74 (Constitution Party)	1	WI House District 74	Constitution Party
+WI House District 75 (Constitution Party)	1	WI House District 75	Constitution Party
+WI House District 76 (Constitution Party)	1	WI House District 76	Constitution Party
+WI House District 77 (Constitution Party)	1	WI House District 77	Constitution Party
+WI House District 78 (Constitution Party)	1	WI House District 78	Constitution Party
+WI House District 79 (Constitution Party)	1	WI House District 79	Constitution Party
+WI House District 8 (Constitution Party)	1	WI House District 8	Constitution Party
+WI House District 80 (Constitution Party)	1	WI House District 80	Constitution Party
+WI House District 81 (Constitution Party)	1	WI House District 81	Constitution Party
+WI House District 82 (Constitution Party)	1	WI House District 82	Constitution Party
+WI House District 83 (Constitution Party)	1	WI House District 83	Constitution Party
+WI House District 84 (Constitution Party)	1	WI House District 84	Constitution Party
+WI House District 85 (Constitution Party)	1	WI House District 85	Constitution Party
+WI House District 86 (Constitution Party)	1	WI House District 86	Constitution Party
+WI House District 87 (Constitution Party)	1	WI House District 87	Constitution Party
+WI House District 88 (Constitution Party)	1	WI House District 88	Constitution Party
+WI House District 89 (Constitution Party)	1	WI House District 89	Constitution Party
+WI House District 9 (Constitution Party)	1	WI House District 9	Constitution Party
+WI House District 90 (Constitution Party)	1	WI House District 90	Constitution Party
+WI House District 91 (Constitution Party)	1	WI House District 91	Constitution Party
+WI House District 92 (Constitution Party)	1	WI House District 92	Constitution Party
+WI House District 93 (Constitution Party)	1	WI House District 93	Constitution Party
+WI House District 94 (Constitution Party)	1	WI House District 94	Constitution Party
+WI House District 95 (Constitution Party)	1	WI House District 95	Constitution Party
+WI House District 96 (Constitution Party)	1	WI House District 96	Constitution Party
+WI House District 97 (Constitution Party)	1	WI House District 97	Constitution Party
+WI House District 98 (Constitution Party)	1	WI House District 98	Constitution Party
+WI House District 99 (Constitution Party)	1	WI House District 99	Constitution Party
+WI Secretary of State (Constitution Party)	1	WI Secretary of State	Constitution Party
+WI Senate District 1 (Constitution Party)	1	WI Senate District 1	Constitution Party
+WI Senate District 10 (Constitution Party)	1	WI Senate District 10	Constitution Party
+WI Senate District 11 (Constitution Party)	1	WI Senate District 11	Constitution Party
+WI Senate District 12 (Constitution Party)	1	WI Senate District 12	Constitution Party
+WI Senate District 13 (Constitution Party)	1	WI Senate District 13	Constitution Party
+WI Senate District 14 (Constitution Party)	1	WI Senate District 14	Constitution Party
+WI Senate District 15 (Constitution Party)	1	WI Senate District 15	Constitution Party
+WI Senate District 16 (Constitution Party)	1	WI Senate District 16	Constitution Party
+WI Senate District 17 (Constitution Party)	1	WI Senate District 17	Constitution Party
+WI Senate District 18 (Constitution Party)	1	WI Senate District 18	Constitution Party
+WI Senate District 19 (Constitution Party)	1	WI Senate District 19	Constitution Party
+WI Senate District 2 (Constitution Party)	1	WI Senate District 2	Constitution Party
+WI Senate District 20 (Constitution Party)	1	WI Senate District 20	Constitution Party
+WI Senate District 21 (Constitution Party)	1	WI Senate District 21	Constitution Party
+WI Senate District 22 (Constitution Party)	1	WI Senate District 22	Constitution Party
+WI Senate District 23 (Constitution Party)	1	WI Senate District 23	Constitution Party
+WI Senate District 24 (Constitution Party)	1	WI Senate District 24	Constitution Party
+WI Senate District 25 (Constitution Party)	1	WI Senate District 25	Constitution Party
+WI Senate District 26 (Constitution Party)	1	WI Senate District 26	Constitution Party
+WI Senate District 27 (Constitution Party)	1	WI Senate District 27	Constitution Party
+WI Senate District 28 (Constitution Party)	1	WI Senate District 28	Constitution Party
+WI Senate District 29 (Constitution Party)	1	WI Senate District 29	Constitution Party
+WI Senate District 3 (Constitution Party)	1	WI Senate District 3	Constitution Party
+WI Senate District 30 (Constitution Party)	1	WI Senate District 30	Constitution Party
+WI Senate District 31 (Constitution Party)	1	WI Senate District 31	Constitution Party
+WI Senate District 32 (Constitution Party)	1	WI Senate District 32	Constitution Party
+WI Senate District 33 (Constitution Party)	1	WI Senate District 33	Constitution Party
+WI Senate District 4 (Constitution Party)	1	WI Senate District 4	Constitution Party
+WI Senate District 5 (Constitution Party)	1	WI Senate District 5	Constitution Party
+WI Senate District 6 (Constitution Party)	1	WI Senate District 6	Constitution Party
+WI Senate District 7 (Constitution Party)	1	WI Senate District 7	Constitution Party
+WI Senate District 8 (Constitution Party)	1	WI Senate District 8	Constitution Party
+WI Senate District 9 (Constitution Party)	1	WI Senate District 9	Constitution Party
+WI State Treasurer (Constitution Party)	1	WI State Treasurer	Constitution Party
+US Senate WI (Constitution Party)	1	US Senate WI	Constitution Party
+WI Attorney General (Libertarian Party)	1	WI Attorney General	Libertarian Party
+WI Governor (Libertarian Party)	1	WI Governor	Libertarian Party
+US President (WI) (Libertarian Party)	1	US President (WI)	Libertarian Party
+US House WI District 1 (Libertarian Party)	1	US House WI District 1	Libertarian Party
+US House WI District 2 (Libertarian Party)	1	US House WI District 2	Libertarian Party
+US House WI District 3 (Libertarian Party)	1	US House WI District 3	Libertarian Party
+US House WI District 4 (Libertarian Party)	1	US House WI District 4	Libertarian Party
+US House WI District 5 (Libertarian Party)	1	US House WI District 5	Libertarian Party
+US House WI District 6 (Libertarian Party)	1	US House WI District 6	Libertarian Party
+US House WI District 7 (Libertarian Party)	1	US House WI District 7	Libertarian Party
+US House WI District 8 (Libertarian Party)	1	US House WI District 8	Libertarian Party
+WI House District 1 (Libertarian Party)	1	WI House District 1	Libertarian Party
+WI House District 10 (Libertarian Party)	1	WI House District 10	Libertarian Party
+WI House District 11 (Libertarian Party)	1	WI House District 11	Libertarian Party
+WI House District 12 (Libertarian Party)	1	WI House District 12	Libertarian Party
+WI House District 13 (Libertarian Party)	1	WI House District 13	Libertarian Party
+WI House District 14 (Libertarian Party)	1	WI House District 14	Libertarian Party
+WI House District 15 (Libertarian Party)	1	WI House District 15	Libertarian Party
+WI House District 16 (Libertarian Party)	1	WI House District 16	Libertarian Party
+WI House District 17 (Libertarian Party)	1	WI House District 17	Libertarian Party
+WI House District 18 (Libertarian Party)	1	WI House District 18	Libertarian Party
+WI House District 19 (Libertarian Party)	1	WI House District 19	Libertarian Party
+WI House District 2 (Libertarian Party)	1	WI House District 2	Libertarian Party
+WI House District 20 (Libertarian Party)	1	WI House District 20	Libertarian Party
+WI House District 21 (Libertarian Party)	1	WI House District 21	Libertarian Party
+WI House District 22 (Libertarian Party)	1	WI House District 22	Libertarian Party
+WI House District 23 (Libertarian Party)	1	WI House District 23	Libertarian Party
+WI House District 24 (Libertarian Party)	1	WI House District 24	Libertarian Party
+WI House District 25 (Libertarian Party)	1	WI House District 25	Libertarian Party
+WI House District 26 (Libertarian Party)	1	WI House District 26	Libertarian Party
+WI House District 27 (Libertarian Party)	1	WI House District 27	Libertarian Party
+WI House District 28 (Libertarian Party)	1	WI House District 28	Libertarian Party
+WI House District 29 (Libertarian Party)	1	WI House District 29	Libertarian Party
+WI House District 3 (Libertarian Party)	1	WI House District 3	Libertarian Party
+WI House District 30 (Libertarian Party)	1	WI House District 30	Libertarian Party
+WI House District 31 (Libertarian Party)	1	WI House District 31	Libertarian Party
+WI House District 32 (Libertarian Party)	1	WI House District 32	Libertarian Party
+WI House District 33 (Libertarian Party)	1	WI House District 33	Libertarian Party
+WI House District 34 (Libertarian Party)	1	WI House District 34	Libertarian Party
+WI House District 35 (Libertarian Party)	1	WI House District 35	Libertarian Party
+WI House District 36 (Libertarian Party)	1	WI House District 36	Libertarian Party
+WI House District 37 (Libertarian Party)	1	WI House District 37	Libertarian Party
+WI House District 38 (Libertarian Party)	1	WI House District 38	Libertarian Party
+WI House District 39 (Libertarian Party)	1	WI House District 39	Libertarian Party
+WI House District 4 (Libertarian Party)	1	WI House District 4	Libertarian Party
+WI House District 40 (Libertarian Party)	1	WI House District 40	Libertarian Party
+WI House District 41 (Libertarian Party)	1	WI House District 41	Libertarian Party
+WI House District 42 (Libertarian Party)	1	WI House District 42	Libertarian Party
+WI House District 43 (Libertarian Party)	1	WI House District 43	Libertarian Party
+WI House District 44 (Libertarian Party)	1	WI House District 44	Libertarian Party
+WI House District 45 (Libertarian Party)	1	WI House District 45	Libertarian Party
+WI House District 46 (Libertarian Party)	1	WI House District 46	Libertarian Party
+WI House District 47 (Libertarian Party)	1	WI House District 47	Libertarian Party
+WI House District 48 (Libertarian Party)	1	WI House District 48	Libertarian Party
+WI House District 49 (Libertarian Party)	1	WI House District 49	Libertarian Party
+WI House District 5 (Libertarian Party)	1	WI House District 5	Libertarian Party
+WI House District 50 (Libertarian Party)	1	WI House District 50	Libertarian Party
+WI House District 51 (Libertarian Party)	1	WI House District 51	Libertarian Party
+WI House District 52 (Libertarian Party)	1	WI House District 52	Libertarian Party
+WI House District 53 (Libertarian Party)	1	WI House District 53	Libertarian Party
+WI House District 54 (Libertarian Party)	1	WI House District 54	Libertarian Party
+WI House District 55 (Libertarian Party)	1	WI House District 55	Libertarian Party
+WI House District 56 (Libertarian Party)	1	WI House District 56	Libertarian Party
+WI House District 57 (Libertarian Party)	1	WI House District 57	Libertarian Party
+WI House District 58 (Libertarian Party)	1	WI House District 58	Libertarian Party
+WI House District 59 (Libertarian Party)	1	WI House District 59	Libertarian Party
+WI House District 6 (Libertarian Party)	1	WI House District 6	Libertarian Party
+WI House District 60 (Libertarian Party)	1	WI House District 60	Libertarian Party
+WI House District 61 (Libertarian Party)	1	WI House District 61	Libertarian Party
+WI House District 62 (Libertarian Party)	1	WI House District 62	Libertarian Party
+WI House District 63 (Libertarian Party)	1	WI House District 63	Libertarian Party
+WI House District 64 (Libertarian Party)	1	WI House District 64	Libertarian Party
+WI House District 65 (Libertarian Party)	1	WI House District 65	Libertarian Party
+WI House District 66 (Libertarian Party)	1	WI House District 66	Libertarian Party
+WI House District 67 (Libertarian Party)	1	WI House District 67	Libertarian Party
+WI House District 68 (Libertarian Party)	1	WI House District 68	Libertarian Party
+WI House District 69 (Libertarian Party)	1	WI House District 69	Libertarian Party
+WI House District 7 (Libertarian Party)	1	WI House District 7	Libertarian Party
+WI House District 70 (Libertarian Party)	1	WI House District 70	Libertarian Party
+WI House District 71 (Libertarian Party)	1	WI House District 71	Libertarian Party
+WI House District 72 (Libertarian Party)	1	WI House District 72	Libertarian Party
+WI House District 73 (Libertarian Party)	1	WI House District 73	Libertarian Party
+WI House District 74 (Libertarian Party)	1	WI House District 74	Libertarian Party
+WI House District 75 (Libertarian Party)	1	WI House District 75	Libertarian Party
+WI House District 76 (Libertarian Party)	1	WI House District 76	Libertarian Party
+WI House District 77 (Libertarian Party)	1	WI House District 77	Libertarian Party
+WI House District 78 (Libertarian Party)	1	WI House District 78	Libertarian Party
+WI House District 79 (Libertarian Party)	1	WI House District 79	Libertarian Party
+WI House District 8 (Libertarian Party)	1	WI House District 8	Libertarian Party
+WI House District 80 (Libertarian Party)	1	WI House District 80	Libertarian Party
+WI House District 81 (Libertarian Party)	1	WI House District 81	Libertarian Party
+WI House District 82 (Libertarian Party)	1	WI House District 82	Libertarian Party
+WI House District 83 (Libertarian Party)	1	WI House District 83	Libertarian Party
+WI House District 84 (Libertarian Party)	1	WI House District 84	Libertarian Party
+WI House District 85 (Libertarian Party)	1	WI House District 85	Libertarian Party
+WI House District 86 (Libertarian Party)	1	WI House District 86	Libertarian Party
+WI House District 87 (Libertarian Party)	1	WI House District 87	Libertarian Party
+WI House District 88 (Libertarian Party)	1	WI House District 88	Libertarian Party
+WI House District 89 (Libertarian Party)	1	WI House District 89	Libertarian Party
+WI House District 9 (Libertarian Party)	1	WI House District 9	Libertarian Party
+WI House District 90 (Libertarian Party)	1	WI House District 90	Libertarian Party
+WI House District 91 (Libertarian Party)	1	WI House District 91	Libertarian Party
+WI House District 92 (Libertarian Party)	1	WI House District 92	Libertarian Party
+WI House District 93 (Libertarian Party)	1	WI House District 93	Libertarian Party
+WI House District 94 (Libertarian Party)	1	WI House District 94	Libertarian Party
+WI House District 95 (Libertarian Party)	1	WI House District 95	Libertarian Party
+WI House District 96 (Libertarian Party)	1	WI House District 96	Libertarian Party
+WI House District 97 (Libertarian Party)	1	WI House District 97	Libertarian Party
+WI House District 98 (Libertarian Party)	1	WI House District 98	Libertarian Party
+WI House District 99 (Libertarian Party)	1	WI House District 99	Libertarian Party
+WI Secretary of State (Libertarian Party)	1	WI Secretary of State	Libertarian Party
+WI Senate District 1 (Libertarian Party)	1	WI Senate District 1	Libertarian Party
+WI Senate District 10 (Libertarian Party)	1	WI Senate District 10	Libertarian Party
+WI Senate District 11 (Libertarian Party)	1	WI Senate District 11	Libertarian Party
+WI Senate District 12 (Libertarian Party)	1	WI Senate District 12	Libertarian Party
+WI Senate District 13 (Libertarian Party)	1	WI Senate District 13	Libertarian Party
+WI Senate District 14 (Libertarian Party)	1	WI Senate District 14	Libertarian Party
+WI Senate District 15 (Libertarian Party)	1	WI Senate District 15	Libertarian Party
+WI Senate District 16 (Libertarian Party)	1	WI Senate District 16	Libertarian Party
+WI Senate District 17 (Libertarian Party)	1	WI Senate District 17	Libertarian Party
+WI Senate District 18 (Libertarian Party)	1	WI Senate District 18	Libertarian Party
+WI Senate District 19 (Libertarian Party)	1	WI Senate District 19	Libertarian Party
+WI Senate District 2 (Libertarian Party)	1	WI Senate District 2	Libertarian Party
+WI Senate District 20 (Libertarian Party)	1	WI Senate District 20	Libertarian Party
+WI Senate District 21 (Libertarian Party)	1	WI Senate District 21	Libertarian Party
+WI Senate District 22 (Libertarian Party)	1	WI Senate District 22	Libertarian Party
+WI Senate District 23 (Libertarian Party)	1	WI Senate District 23	Libertarian Party
+WI Senate District 24 (Libertarian Party)	1	WI Senate District 24	Libertarian Party
+WI Senate District 25 (Libertarian Party)	1	WI Senate District 25	Libertarian Party
+WI Senate District 26 (Libertarian Party)	1	WI Senate District 26	Libertarian Party
+WI Senate District 27 (Libertarian Party)	1	WI Senate District 27	Libertarian Party
+WI Senate District 28 (Libertarian Party)	1	WI Senate District 28	Libertarian Party
+WI Senate District 29 (Libertarian Party)	1	WI Senate District 29	Libertarian Party
+WI Senate District 3 (Libertarian Party)	1	WI Senate District 3	Libertarian Party
+WI Senate District 30 (Libertarian Party)	1	WI Senate District 30	Libertarian Party
+WI Senate District 31 (Libertarian Party)	1	WI Senate District 31	Libertarian Party
+WI Senate District 32 (Libertarian Party)	1	WI Senate District 32	Libertarian Party
+WI Senate District 33 (Libertarian Party)	1	WI Senate District 33	Libertarian Party
+WI Senate District 4 (Libertarian Party)	1	WI Senate District 4	Libertarian Party
+WI Senate District 5 (Libertarian Party)	1	WI Senate District 5	Libertarian Party
+WI Senate District 6 (Libertarian Party)	1	WI Senate District 6	Libertarian Party
+WI Senate District 7 (Libertarian Party)	1	WI Senate District 7	Libertarian Party
+WI Senate District 8 (Libertarian Party)	1	WI Senate District 8	Libertarian Party
+WI Senate District 9 (Libertarian Party)	1	WI Senate District 9	Libertarian Party
+WI State Treasurer (Libertarian Party)	1	WI State Treasurer	Libertarian Party
+US Senate WI (Libertarian Party)	1	US Senate WI	Libertarian Party
+WI Attorney General (Green Party)	1	WI Attorney General	Green Party
+WI Governor (Green Party)	1	WI Governor	Green Party
+US President (WI) (Green Party)	1	US President (WI)	Green Party
+US House WI District 1 (Green Party)	1	US House WI District 1	Green Party
+US House WI District 2 (Green Party)	1	US House WI District 2	Green Party
+US House WI District 3 (Green Party)	1	US House WI District 3	Green Party
+US House WI District 4 (Green Party)	1	US House WI District 4	Green Party
+US House WI District 5 (Green Party)	1	US House WI District 5	Green Party
+US House WI District 6 (Green Party)	1	US House WI District 6	Green Party
+US House WI District 7 (Green Party)	1	US House WI District 7	Green Party
+US House WI District 8 (Green Party)	1	US House WI District 8	Green Party
+WI House District 1 (Green Party)	1	WI House District 1	Green Party
+WI House District 10 (Green Party)	1	WI House District 10	Green Party
+WI House District 11 (Green Party)	1	WI House District 11	Green Party
+WI House District 12 (Green Party)	1	WI House District 12	Green Party
+WI House District 13 (Green Party)	1	WI House District 13	Green Party
+WI House District 14 (Green Party)	1	WI House District 14	Green Party
+WI House District 15 (Green Party)	1	WI House District 15	Green Party
+WI House District 16 (Green Party)	1	WI House District 16	Green Party
+WI House District 17 (Green Party)	1	WI House District 17	Green Party
+WI House District 18 (Green Party)	1	WI House District 18	Green Party
+WI House District 19 (Green Party)	1	WI House District 19	Green Party
+WI House District 2 (Green Party)	1	WI House District 2	Green Party
+WI House District 20 (Green Party)	1	WI House District 20	Green Party
+WI House District 21 (Green Party)	1	WI House District 21	Green Party
+WI House District 22 (Green Party)	1	WI House District 22	Green Party
+WI House District 23 (Green Party)	1	WI House District 23	Green Party
+WI House District 24 (Green Party)	1	WI House District 24	Green Party
+WI House District 25 (Green Party)	1	WI House District 25	Green Party
+WI House District 26 (Green Party)	1	WI House District 26	Green Party
+WI House District 27 (Green Party)	1	WI House District 27	Green Party
+WI House District 28 (Green Party)	1	WI House District 28	Green Party
+WI House District 29 (Green Party)	1	WI House District 29	Green Party
+WI House District 3 (Green Party)	1	WI House District 3	Green Party
+WI House District 30 (Green Party)	1	WI House District 30	Green Party
+WI House District 31 (Green Party)	1	WI House District 31	Green Party
+WI House District 32 (Green Party)	1	WI House District 32	Green Party
+WI House District 33 (Green Party)	1	WI House District 33	Green Party
+WI House District 34 (Green Party)	1	WI House District 34	Green Party
+WI House District 35 (Green Party)	1	WI House District 35	Green Party
+WI House District 36 (Green Party)	1	WI House District 36	Green Party
+WI House District 37 (Green Party)	1	WI House District 37	Green Party
+WI House District 38 (Green Party)	1	WI House District 38	Green Party
+WI House District 39 (Green Party)	1	WI House District 39	Green Party
+WI House District 4 (Green Party)	1	WI House District 4	Green Party
+WI House District 40 (Green Party)	1	WI House District 40	Green Party
+WI House District 41 (Green Party)	1	WI House District 41	Green Party
+WI House District 42 (Green Party)	1	WI House District 42	Green Party
+WI House District 43 (Green Party)	1	WI House District 43	Green Party
+WI House District 44 (Green Party)	1	WI House District 44	Green Party
+WI House District 45 (Green Party)	1	WI House District 45	Green Party
+WI House District 46 (Green Party)	1	WI House District 46	Green Party
+WI House District 47 (Green Party)	1	WI House District 47	Green Party
+WI House District 48 (Green Party)	1	WI House District 48	Green Party
+WI House District 49 (Green Party)	1	WI House District 49	Green Party
+WI House District 5 (Green Party)	1	WI House District 5	Green Party
+WI House District 50 (Green Party)	1	WI House District 50	Green Party
+WI House District 51 (Green Party)	1	WI House District 51	Green Party
+WI House District 52 (Green Party)	1	WI House District 52	Green Party
+WI House District 53 (Green Party)	1	WI House District 53	Green Party
+WI House District 54 (Green Party)	1	WI House District 54	Green Party
+WI House District 55 (Green Party)	1	WI House District 55	Green Party
+WI House District 56 (Green Party)	1	WI House District 56	Green Party
+WI House District 57 (Green Party)	1	WI House District 57	Green Party
+WI House District 58 (Green Party)	1	WI House District 58	Green Party
+WI House District 59 (Green Party)	1	WI House District 59	Green Party
+WI House District 6 (Green Party)	1	WI House District 6	Green Party
+WI House District 60 (Green Party)	1	WI House District 60	Green Party
+WI House District 61 (Green Party)	1	WI House District 61	Green Party
+WI House District 62 (Green Party)	1	WI House District 62	Green Party
+WI House District 63 (Green Party)	1	WI House District 63	Green Party
+WI House District 64 (Green Party)	1	WI House District 64	Green Party
+WI House District 65 (Green Party)	1	WI House District 65	Green Party
+WI House District 66 (Green Party)	1	WI House District 66	Green Party
+WI House District 67 (Green Party)	1	WI House District 67	Green Party
+WI House District 68 (Green Party)	1	WI House District 68	Green Party
+WI House District 69 (Green Party)	1	WI House District 69	Green Party
+WI House District 7 (Green Party)	1	WI House District 7	Green Party
+WI House District 70 (Green Party)	1	WI House District 70	Green Party
+WI House District 71 (Green Party)	1	WI House District 71	Green Party
+WI House District 72 (Green Party)	1	WI House District 72	Green Party
+WI House District 73 (Green Party)	1	WI House District 73	Green Party
+WI House District 74 (Green Party)	1	WI House District 74	Green Party
+WI House District 75 (Green Party)	1	WI House District 75	Green Party
+WI House District 76 (Green Party)	1	WI House District 76	Green Party
+WI House District 77 (Green Party)	1	WI House District 77	Green Party
+WI House District 78 (Green Party)	1	WI House District 78	Green Party
+WI House District 79 (Green Party)	1	WI House District 79	Green Party
+WI House District 8 (Green Party)	1	WI House District 8	Green Party
+WI House District 80 (Green Party)	1	WI House District 80	Green Party
+WI House District 81 (Green Party)	1	WI House District 81	Green Party
+WI House District 82 (Green Party)	1	WI House District 82	Green Party
+WI House District 83 (Green Party)	1	WI House District 83	Green Party
+WI House District 84 (Green Party)	1	WI House District 84	Green Party
+WI House District 85 (Green Party)	1	WI House District 85	Green Party
+WI House District 86 (Green Party)	1	WI House District 86	Green Party
+WI House District 87 (Green Party)	1	WI House District 87	Green Party
+WI House District 88 (Green Party)	1	WI House District 88	Green Party
+WI House District 89 (Green Party)	1	WI House District 89	Green Party
+WI House District 9 (Green Party)	1	WI House District 9	Green Party
+WI House District 90 (Green Party)	1	WI House District 90	Green Party
+WI House District 91 (Green Party)	1	WI House District 91	Green Party
+WI House District 92 (Green Party)	1	WI House District 92	Green Party
+WI House District 93 (Green Party)	1	WI House District 93	Green Party
+WI House District 94 (Green Party)	1	WI House District 94	Green Party
+WI House District 95 (Green Party)	1	WI House District 95	Green Party
+WI House District 96 (Green Party)	1	WI House District 96	Green Party
+WI House District 97 (Green Party)	1	WI House District 97	Green Party
+WI House District 98 (Green Party)	1	WI House District 98	Green Party
+WI House District 99 (Green Party)	1	WI House District 99	Green Party
+WI Secretary of State (Green Party)	1	WI Secretary of State	Green Party
+WI Senate District 1 (Green Party)	1	WI Senate District 1	Green Party
+WI Senate District 10 (Green Party)	1	WI Senate District 10	Green Party
+WI Senate District 11 (Green Party)	1	WI Senate District 11	Green Party
+WI Senate District 12 (Green Party)	1	WI Senate District 12	Green Party
+WI Senate District 13 (Green Party)	1	WI Senate District 13	Green Party
+WI Senate District 14 (Green Party)	1	WI Senate District 14	Green Party
+WI Senate District 15 (Green Party)	1	WI Senate District 15	Green Party
+WI Senate District 16 (Green Party)	1	WI Senate District 16	Green Party
+WI Senate District 17 (Green Party)	1	WI Senate District 17	Green Party
+WI Senate District 18 (Green Party)	1	WI Senate District 18	Green Party
+WI Senate District 19 (Green Party)	1	WI Senate District 19	Green Party
+WI Senate District 2 (Green Party)	1	WI Senate District 2	Green Party
+WI Senate District 20 (Green Party)	1	WI Senate District 20	Green Party
+WI Senate District 21 (Green Party)	1	WI Senate District 21	Green Party
+WI Senate District 22 (Green Party)	1	WI Senate District 22	Green Party
+WI Senate District 23 (Green Party)	1	WI Senate District 23	Green Party
+WI Senate District 24 (Green Party)	1	WI Senate District 24	Green Party
+WI Senate District 25 (Green Party)	1	WI Senate District 25	Green Party
+WI Senate District 26 (Green Party)	1	WI Senate District 26	Green Party
+WI Senate District 27 (Green Party)	1	WI Senate District 27	Green Party
+WI Senate District 28 (Green Party)	1	WI Senate District 28	Green Party
+WI Senate District 29 (Green Party)	1	WI Senate District 29	Green Party
+WI Senate District 3 (Green Party)	1	WI Senate District 3	Green Party
+WI Senate District 30 (Green Party)	1	WI Senate District 30	Green Party
+WI Senate District 31 (Green Party)	1	WI Senate District 31	Green Party
+WI Senate District 32 (Green Party)	1	WI Senate District 32	Green Party
+WI Senate District 33 (Green Party)	1	WI Senate District 33	Green Party
+WI Senate District 4 (Green Party)	1	WI Senate District 4	Green Party
+WI Senate District 5 (Green Party)	1	WI Senate District 5	Green Party
+WI Senate District 6 (Green Party)	1	WI Senate District 6	Green Party
+WI Senate District 7 (Green Party)	1	WI Senate District 7	Green Party
+WI Senate District 8 (Green Party)	1	WI Senate District 8	Green Party
+WI Senate District 9 (Green Party)	1	WI Senate District 9	Green Party
+WI State Treasurer (Green Party)	1	WI State Treasurer	Green Party
+US Senate WI (Green Party)	1	US Senate WI	Green Party
+WI Attorney General (Independent Party)	1	WI Attorney General	Independent Party
+WI Governor (Independent Party)	1	WI Governor	Independent Party
+US President (WI) (Independent Party)	1	US President (WI)	Independent Party
+US House WI District 1 (Independent Party)	1	US House WI District 1	Independent Party
+US House WI District 2 (Independent Party)	1	US House WI District 2	Independent Party
+US House WI District 3 (Independent Party)	1	US House WI District 3	Independent Party
+US House WI District 4 (Independent Party)	1	US House WI District 4	Independent Party
+US House WI District 5 (Independent Party)	1	US House WI District 5	Independent Party
+US House WI District 6 (Independent Party)	1	US House WI District 6	Independent Party
+US House WI District 7 (Independent Party)	1	US House WI District 7	Independent Party
+US House WI District 8 (Independent Party)	1	US House WI District 8	Independent Party
+WI House District 1 (Independent Party)	1	WI House District 1	Independent Party
+WI House District 10 (Independent Party)	1	WI House District 10	Independent Party
+WI House District 11 (Independent Party)	1	WI House District 11	Independent Party
+WI House District 12 (Independent Party)	1	WI House District 12	Independent Party
+WI House District 13 (Independent Party)	1	WI House District 13	Independent Party
+WI House District 14 (Independent Party)	1	WI House District 14	Independent Party
+WI House District 15 (Independent Party)	1	WI House District 15	Independent Party
+WI House District 16 (Independent Party)	1	WI House District 16	Independent Party
+WI House District 17 (Independent Party)	1	WI House District 17	Independent Party
+WI House District 18 (Independent Party)	1	WI House District 18	Independent Party
+WI House District 19 (Independent Party)	1	WI House District 19	Independent Party
+WI House District 2 (Independent Party)	1	WI House District 2	Independent Party
+WI House District 20 (Independent Party)	1	WI House District 20	Independent Party
+WI House District 21 (Independent Party)	1	WI House District 21	Independent Party
+WI House District 22 (Independent Party)	1	WI House District 22	Independent Party
+WI House District 23 (Independent Party)	1	WI House District 23	Independent Party
+WI House District 24 (Independent Party)	1	WI House District 24	Independent Party
+WI House District 25 (Independent Party)	1	WI House District 25	Independent Party
+WI House District 26 (Independent Party)	1	WI House District 26	Independent Party
+WI House District 27 (Independent Party)	1	WI House District 27	Independent Party
+WI House District 28 (Independent Party)	1	WI House District 28	Independent Party
+WI House District 29 (Independent Party)	1	WI House District 29	Independent Party
+WI House District 3 (Independent Party)	1	WI House District 3	Independent Party
+WI House District 30 (Independent Party)	1	WI House District 30	Independent Party
+WI House District 31 (Independent Party)	1	WI House District 31	Independent Party
+WI House District 32 (Independent Party)	1	WI House District 32	Independent Party
+WI House District 33 (Independent Party)	1	WI House District 33	Independent Party
+WI House District 34 (Independent Party)	1	WI House District 34	Independent Party
+WI House District 35 (Independent Party)	1	WI House District 35	Independent Party
+WI House District 36 (Independent Party)	1	WI House District 36	Independent Party
+WI House District 37 (Independent Party)	1	WI House District 37	Independent Party
+WI House District 38 (Independent Party)	1	WI House District 38	Independent Party
+WI House District 39 (Independent Party)	1	WI House District 39	Independent Party
+WI House District 4 (Independent Party)	1	WI House District 4	Independent Party
+WI House District 40 (Independent Party)	1	WI House District 40	Independent Party
+WI House District 41 (Independent Party)	1	WI House District 41	Independent Party
+WI House District 42 (Independent Party)	1	WI House District 42	Independent Party
+WI House District 43 (Independent Party)	1	WI House District 43	Independent Party
+WI House District 44 (Independent Party)	1	WI House District 44	Independent Party
+WI House District 45 (Independent Party)	1	WI House District 45	Independent Party
+WI House District 46 (Independent Party)	1	WI House District 46	Independent Party
+WI House District 47 (Independent Party)	1	WI House District 47	Independent Party
+WI House District 48 (Independent Party)	1	WI House District 48	Independent Party
+WI House District 49 (Independent Party)	1	WI House District 49	Independent Party
+WI House District 5 (Independent Party)	1	WI House District 5	Independent Party
+WI House District 50 (Independent Party)	1	WI House District 50	Independent Party
+WI House District 51 (Independent Party)	1	WI House District 51	Independent Party
+WI House District 52 (Independent Party)	1	WI House District 52	Independent Party
+WI House District 53 (Independent Party)	1	WI House District 53	Independent Party
+WI House District 54 (Independent Party)	1	WI House District 54	Independent Party
+WI House District 55 (Independent Party)	1	WI House District 55	Independent Party
+WI House District 56 (Independent Party)	1	WI House District 56	Independent Party
+WI House District 57 (Independent Party)	1	WI House District 57	Independent Party
+WI House District 58 (Independent Party)	1	WI House District 58	Independent Party
+WI House District 59 (Independent Party)	1	WI House District 59	Independent Party
+WI House District 6 (Independent Party)	1	WI House District 6	Independent Party
+WI House District 60 (Independent Party)	1	WI House District 60	Independent Party
+WI House District 61 (Independent Party)	1	WI House District 61	Independent Party
+WI House District 62 (Independent Party)	1	WI House District 62	Independent Party
+WI House District 63 (Independent Party)	1	WI House District 63	Independent Party
+WI House District 64 (Independent Party)	1	WI House District 64	Independent Party
+WI House District 65 (Independent Party)	1	WI House District 65	Independent Party
+WI House District 66 (Independent Party)	1	WI House District 66	Independent Party
+WI House District 67 (Independent Party)	1	WI House District 67	Independent Party
+WI House District 68 (Independent Party)	1	WI House District 68	Independent Party
+WI House District 69 (Independent Party)	1	WI House District 69	Independent Party
+WI House District 7 (Independent Party)	1	WI House District 7	Independent Party
+WI House District 70 (Independent Party)	1	WI House District 70	Independent Party
+WI House District 71 (Independent Party)	1	WI House District 71	Independent Party
+WI House District 72 (Independent Party)	1	WI House District 72	Independent Party
+WI House District 73 (Independent Party)	1	WI House District 73	Independent Party
+WI House District 74 (Independent Party)	1	WI House District 74	Independent Party
+WI House District 75 (Independent Party)	1	WI House District 75	Independent Party
+WI House District 76 (Independent Party)	1	WI House District 76	Independent Party
+WI House District 77 (Independent Party)	1	WI House District 77	Independent Party
+WI House District 78 (Independent Party)	1	WI House District 78	Independent Party
+WI House District 79 (Independent Party)	1	WI House District 79	Independent Party
+WI House District 8 (Independent Party)	1	WI House District 8	Independent Party
+WI House District 80 (Independent Party)	1	WI House District 80	Independent Party
+WI House District 81 (Independent Party)	1	WI House District 81	Independent Party
+WI House District 82 (Independent Party)	1	WI House District 82	Independent Party
+WI House District 83 (Independent Party)	1	WI House District 83	Independent Party
+WI House District 84 (Independent Party)	1	WI House District 84	Independent Party
+WI House District 85 (Independent Party)	1	WI House District 85	Independent Party
+WI House District 86 (Independent Party)	1	WI House District 86	Independent Party
+WI House District 87 (Independent Party)	1	WI House District 87	Independent Party
+WI House District 88 (Independent Party)	1	WI House District 88	Independent Party
+WI House District 89 (Independent Party)	1	WI House District 89	Independent Party
+WI House District 9 (Independent Party)	1	WI House District 9	Independent Party
+WI House District 90 (Independent Party)	1	WI House District 90	Independent Party
+WI House District 91 (Independent Party)	1	WI House District 91	Independent Party
+WI House District 92 (Independent Party)	1	WI House District 92	Independent Party
+WI House District 93 (Independent Party)	1	WI House District 93	Independent Party
+WI House District 94 (Independent Party)	1	WI House District 94	Independent Party
+WI House District 95 (Independent Party)	1	WI House District 95	Independent Party
+WI House District 96 (Independent Party)	1	WI House District 96	Independent Party
+WI House District 97 (Independent Party)	1	WI House District 97	Independent Party
+WI House District 98 (Independent Party)	1	WI House District 98	Independent Party
+WI House District 99 (Independent Party)	1	WI House District 99	Independent Party
+WI Secretary of State (Independent Party)	1	WI Secretary of State	Independent Party
+WI Senate District 1 (Independent Party)	1	WI Senate District 1	Independent Party
+WI Senate District 10 (Independent Party)	1	WI Senate District 10	Independent Party
+WI Senate District 11 (Independent Party)	1	WI Senate District 11	Independent Party
+WI Senate District 12 (Independent Party)	1	WI Senate District 12	Independent Party
+WI Senate District 13 (Independent Party)	1	WI Senate District 13	Independent Party
+WI Senate District 14 (Independent Party)	1	WI Senate District 14	Independent Party
+WI Senate District 15 (Independent Party)	1	WI Senate District 15	Independent Party
+WI Senate District 16 (Independent Party)	1	WI Senate District 16	Independent Party
+WI Senate District 17 (Independent Party)	1	WI Senate District 17	Independent Party
+WI Senate District 18 (Independent Party)	1	WI Senate District 18	Independent Party
+WI Senate District 19 (Independent Party)	1	WI Senate District 19	Independent Party
+WI Senate District 2 (Independent Party)	1	WI Senate District 2	Independent Party
+WI Senate District 20 (Independent Party)	1	WI Senate District 20	Independent Party
+WI Senate District 21 (Independent Party)	1	WI Senate District 21	Independent Party
+WI Senate District 22 (Independent Party)	1	WI Senate District 22	Independent Party
+WI Senate District 23 (Independent Party)	1	WI Senate District 23	Independent Party
+WI Senate District 24 (Independent Party)	1	WI Senate District 24	Independent Party
+WI Senate District 25 (Independent Party)	1	WI Senate District 25	Independent Party
+WI Senate District 26 (Independent Party)	1	WI Senate District 26	Independent Party
+WI Senate District 27 (Independent Party)	1	WI Senate District 27	Independent Party
+WI Senate District 28 (Independent Party)	1	WI Senate District 28	Independent Party
+WI Senate District 29 (Independent Party)	1	WI Senate District 29	Independent Party
+WI Senate District 3 (Independent Party)	1	WI Senate District 3	Independent Party
+WI Senate District 30 (Independent Party)	1	WI Senate District 30	Independent Party
+WI Senate District 31 (Independent Party)	1	WI Senate District 31	Independent Party
+WI Senate District 32 (Independent Party)	1	WI Senate District 32	Independent Party
+WI Senate District 33 (Independent Party)	1	WI Senate District 33	Independent Party
+WI Senate District 4 (Independent Party)	1	WI Senate District 4	Independent Party
+WI Senate District 5 (Independent Party)	1	WI Senate District 5	Independent Party
+WI Senate District 6 (Independent Party)	1	WI Senate District 6	Independent Party
+WI Senate District 7 (Independent Party)	1	WI Senate District 7	Independent Party
+WI Senate District 8 (Independent Party)	1	WI Senate District 8	Independent Party
+WI Senate District 9 (Independent Party)	1	WI Senate District 9	Independent Party
+WI State Treasurer (Independent Party)	1	WI State Treasurer	Independent Party
+US Senate WI (Independent Party)	1	US Senate WI	Independent Party

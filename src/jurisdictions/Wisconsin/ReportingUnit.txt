@@ -1,0 +1,214 @@
+Name	ReportingUnitType
+Wisconsin	State
+Wisconsin;Adams County	county
+Wisconsin;Ashland County	county
+Wisconsin;Barron County	county
+Wisconsin;Bayfield County	county
+Wisconsin;Brown County	county
+Wisconsin;Buffalo County	county
+Wisconsin;Burnett County	county
+Wisconsin;Calumet County	county
+Wisconsin;Chippewa County	county
+Wisconsin;Clark County	county
+Wisconsin;Columbia County	county
+Wisconsin;Crawford County	county
+Wisconsin;Dane County	county
+Wisconsin;Dodge County	county
+Wisconsin;Door County	county
+Wisconsin;Douglas County	county
+Wisconsin;Dunn County	county
+Wisconsin;Eau Claire County	county
+Wisconsin;Florence County	county
+Wisconsin;Fond Du Lac County	county
+Wisconsin;Forest County	county
+Wisconsin;Grant County	county
+Wisconsin;Green County	county
+Wisconsin;Green Lake County	county
+Wisconsin;Iowa County	county
+Wisconsin;Iron County	county
+Wisconsin;Jackson County	county
+Wisconsin;Jefferson County	county
+Wisconsin;Juneau County	county
+Wisconsin;Kenosha County	county
+Wisconsin;Kewaunee County	county
+Wisconsin;La Crosse County	county
+Wisconsin;Lafayette County	county
+Wisconsin;Langlade County	county
+Wisconsin;Lincoln County	county
+Wisconsin;Manitowoc County	county
+Wisconsin;Marathon County	county
+Wisconsin;Marinette County	county
+Wisconsin;Marquette County	county
+Wisconsin;Menominee County	county
+Wisconsin;Milwaukee County	county
+Wisconsin;Monroe County	county
+Wisconsin;Oconto County	county
+Wisconsin;Oneida County	county
+Wisconsin;Outagamie County	county
+Wisconsin;Ozaukee County	county
+Wisconsin;Pepin County	county
+Wisconsin;Pierce County	county
+Wisconsin;Polk County	county
+Wisconsin;Portage County	county
+Wisconsin;Price County	county
+Wisconsin;Racine County	county
+Wisconsin;Richland County	county
+Wisconsin;Rock County	county
+Wisconsin;Rusk County	county
+Wisconsin;Sauk County	county
+Wisconsin;Sawyer County	county
+Wisconsin;Shawano County	county
+Wisconsin;Sheboygan County	county
+Wisconsin;St. Croix County	county
+Wisconsin;Taylor County	county
+Wisconsin;Trempealeau County	county
+Wisconsin;US House WI District 1	congressional
+Wisconsin;US House WI District 2	congressional
+Wisconsin;US House WI District 3	congressional
+Wisconsin;US House WI District 4	congressional
+Wisconsin;US House WI District 5	congressional
+Wisconsin;US House WI District 6	congressional
+Wisconsin;US House WI District 7	congressional
+Wisconsin;US House WI District 8	congressional
+Wisconsin;Vernon County	county
+Wisconsin;Vilas County	county
+Wisconsin;WI House District 1	state-house
+Wisconsin;WI House District 10	state-house
+Wisconsin;WI House District 11	state-house
+Wisconsin;WI House District 12	state-house
+Wisconsin;WI House District 13	state-house
+Wisconsin;WI House District 14	state-house
+Wisconsin;WI House District 15	state-house
+Wisconsin;WI House District 16	state-house
+Wisconsin;WI House District 17	state-house
+Wisconsin;WI House District 18	state-house
+Wisconsin;WI House District 19	state-house
+Wisconsin;WI House District 2	state-house
+Wisconsin;WI House District 20	state-house
+Wisconsin;WI House District 21	state-house
+Wisconsin;WI House District 22	state-house
+Wisconsin;WI House District 23	state-house
+Wisconsin;WI House District 24	state-house
+Wisconsin;WI House District 25	state-house
+Wisconsin;WI House District 26	state-house
+Wisconsin;WI House District 27	state-house
+Wisconsin;WI House District 28	state-house
+Wisconsin;WI House District 29	state-house
+Wisconsin;WI House District 3	state-house
+Wisconsin;WI House District 30	state-house
+Wisconsin;WI House District 31	state-house
+Wisconsin;WI House District 32	state-house
+Wisconsin;WI House District 33	state-house
+Wisconsin;WI House District 34	state-house
+Wisconsin;WI House District 35	state-house
+Wisconsin;WI House District 36	state-house
+Wisconsin;WI House District 37	state-house
+Wisconsin;WI House District 38	state-house
+Wisconsin;WI House District 39	state-house
+Wisconsin;WI House District 4	state-house
+Wisconsin;WI House District 40	state-house
+Wisconsin;WI House District 41	state-house
+Wisconsin;WI House District 42	state-house
+Wisconsin;WI House District 43	state-house
+Wisconsin;WI House District 44	state-house
+Wisconsin;WI House District 45	state-house
+Wisconsin;WI House District 46	state-house
+Wisconsin;WI House District 47	state-house
+Wisconsin;WI House District 48	state-house
+Wisconsin;WI House District 49	state-house
+Wisconsin;WI House District 5	state-house
+Wisconsin;WI House District 50	state-house
+Wisconsin;WI House District 51	state-house
+Wisconsin;WI House District 52	state-house
+Wisconsin;WI House District 53	state-house
+Wisconsin;WI House District 54	state-house
+Wisconsin;WI House District 55	state-house
+Wisconsin;WI House District 56	state-house
+Wisconsin;WI House District 57	state-house
+Wisconsin;WI House District 58	state-house
+Wisconsin;WI House District 59	state-house
+Wisconsin;WI House District 6	state-house
+Wisconsin;WI House District 60	state-house
+Wisconsin;WI House District 61	state-house
+Wisconsin;WI House District 62	state-house
+Wisconsin;WI House District 63	state-house
+Wisconsin;WI House District 64	state-house
+Wisconsin;WI House District 65	state-house
+Wisconsin;WI House District 66	state-house
+Wisconsin;WI House District 67	state-house
+Wisconsin;WI House District 68	state-house
+Wisconsin;WI House District 69	state-house
+Wisconsin;WI House District 7	state-house
+Wisconsin;WI House District 70	state-house
+Wisconsin;WI House District 71	state-house
+Wisconsin;WI House District 72	state-house
+Wisconsin;WI House District 73	state-house
+Wisconsin;WI House District 74	state-house
+Wisconsin;WI House District 75	state-house
+Wisconsin;WI House District 76	state-house
+Wisconsin;WI House District 77	state-house
+Wisconsin;WI House District 78	state-house
+Wisconsin;WI House District 79	state-house
+Wisconsin;WI House District 8	state-house
+Wisconsin;WI House District 80	state-house
+Wisconsin;WI House District 81	state-house
+Wisconsin;WI House District 82	state-house
+Wisconsin;WI House District 83	state-house
+Wisconsin;WI House District 84	state-house
+Wisconsin;WI House District 85	state-house
+Wisconsin;WI House District 86	state-house
+Wisconsin;WI House District 87	state-house
+Wisconsin;WI House District 88	state-house
+Wisconsin;WI House District 89	state-house
+Wisconsin;WI House District 9	state-house
+Wisconsin;WI House District 90	state-house
+Wisconsin;WI House District 91	state-house
+Wisconsin;WI House District 92	state-house
+Wisconsin;WI House District 93	state-house
+Wisconsin;WI House District 94	state-house
+Wisconsin;WI House District 95	state-house
+Wisconsin;WI House District 96	state-house
+Wisconsin;WI House District 97	state-house
+Wisconsin;WI House District 98	state-house
+Wisconsin;WI House District 99	state-house
+Wisconsin;WI Senate District 1	state-senate
+Wisconsin;WI Senate District 10	state-senate
+Wisconsin;WI Senate District 11	state-senate
+Wisconsin;WI Senate District 12	state-senate
+Wisconsin;WI Senate District 13	state-senate
+Wisconsin;WI Senate District 14	state-senate
+Wisconsin;WI Senate District 15	state-senate
+Wisconsin;WI Senate District 16	state-senate
+Wisconsin;WI Senate District 17	state-senate
+Wisconsin;WI Senate District 18	state-senate
+Wisconsin;WI Senate District 19	state-senate
+Wisconsin;WI Senate District 2	state-senate
+Wisconsin;WI Senate District 20	state-senate
+Wisconsin;WI Senate District 21	state-senate
+Wisconsin;WI Senate District 22	state-senate
+Wisconsin;WI Senate District 23	state-senate
+Wisconsin;WI Senate District 24	state-senate
+Wisconsin;WI Senate District 25	state-senate
+Wisconsin;WI Senate District 26	state-senate
+Wisconsin;WI Senate District 27	state-senate
+Wisconsin;WI Senate District 28	state-senate
+Wisconsin;WI Senate District 29	state-senate
+Wisconsin;WI Senate District 3	state-senate
+Wisconsin;WI Senate District 30	state-senate
+Wisconsin;WI Senate District 31	state-senate
+Wisconsin;WI Senate District 32	state-senate
+Wisconsin;WI Senate District 33	state-senate
+Wisconsin;WI Senate District 4	state-senate
+Wisconsin;WI Senate District 5	state-senate
+Wisconsin;WI Senate District 6	state-senate
+Wisconsin;WI Senate District 7	state-senate
+Wisconsin;WI Senate District 8	state-senate
+Wisconsin;WI Senate District 9	state-senate
+Wisconsin;Walworth County	county
+Wisconsin;Washburn County	county
+Wisconsin;Washington County	county
+Wisconsin;Waukesha County	county
+Wisconsin;Waupaca County	county
+Wisconsin;Waushara County	county
+Wisconsin;Winnebago County	county
+Wisconsin;Wood County	county
