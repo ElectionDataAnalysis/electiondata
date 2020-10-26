@@ -7,7 +7,7 @@ def test_mi_presidential(dbname):
             "US President (MI) (Democratic Party)",
             dbname=dbname,
         )
-            == 3175358
+            == 1587679
     )
 
 def test_mi_senate(dbname):
