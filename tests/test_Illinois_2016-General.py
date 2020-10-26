@@ -41,5 +41,5 @@ def test_house_totals(dbname):
             "IL House District 13",
             dbname=dbname,
         )
-            == 26712
+            == 40831
     )
