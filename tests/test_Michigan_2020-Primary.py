@@ -7,7 +7,7 @@ def test_mi_presidential(dbname):
             "US President (MI) (Democratic Party)",
             dbname=dbname,
         )
-            == 4799284
+            == 3175358
     )
 
 def test_mi_senate(dbname):
@@ -22,14 +22,14 @@ def test_mi_senate(dbname):
 
 
 
-def test_senate_totals(dbname):
+def test_us_rep_totals(dbname):
     assert (e.contest_total(
             "2020 Primary",
             "Michigan",
-            "MI Senate District 37 (Republican Party)",
+            "US House MI District 5 (Republican Party)",
             dbname=dbname,
         )
-            == 124414
+            == 47367
     )
 
 def test_house_totals(dbname):
@@ -39,5 +39,5 @@ def test_house_totals(dbname):
             "MI House District 8 (Republican Party)",
             dbname=dbname,
         )
-            == 28017
+            == 238
     )
