@@ -1,7 +1,7 @@
 import election_data_analysis as e
 
 def test_mi_presidential(dbname):
-    assert (not e.data_exists("2020 Primary","Michigan",dbname=dbname) or e.contest_total(
+    assert (e.contest_total(
             "2020 Primary",
             "Michigan",
             "US President (MI)",
@@ -12,7 +12,7 @@ def test_mi_presidential(dbname):
 
 
 def test_senate_totals(dbname):
-    assert (not e.data_exists("2020 Primary","Michigan",dbname=dbname) or e.contest_total(
+    assert (e.contest_total(
             "2020 Primary",
             "Michigan",
             "MI Senate District 37",
@@ -22,7 +22,7 @@ def test_senate_totals(dbname):
     )
 
 def test_house_totals(dbname):
-    assert (not e.data_exists("2020 Primary","Michigan",dbname=dbname) or e.contest_total(
+    assert (e.contest_total(
             "2020 Primary",
             "Michigan",
             "MI House District 8",
