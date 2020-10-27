@@ -1068,10 +1068,10 @@ def get_filtered_input_options(session, input_str, filters):
             session, 
             election_id, 
             reporting_unit_id, 
-            ["Name", "BallotName", "unit_type"], 
+            ["ReportingUnitName", "Name", "unit_type"], 
             ["parent", "name", "type"]
         )
-        df.sort_values(["Name", "BallotName"], inplace=True)
+        df.sort_values(["parent", "name"], inplace=True)
     # check if it's looking for a count of candidates
     elif input_str == "count" and bool([f for f in filters if f.startswith("Candidate")]):
         election_id = list_to_id(session, "Election", filters)
@@ -1404,7 +1404,7 @@ def read_vote_count(
                 JOIN (SELECT "Id", "Name" AS "PartyName" FROM "Party") p ON cs."Party_Id" = p."Id"
                 JOIN "CandidateContest" cc ON "Contest"."Id" = cc."Id"
                 JOIN (SELECT "Id", "ElectionDistrict_Id" FROM "Office") o on cc."Office_Id" = o."Id"
-                JOIN (SELECT "Id", "ReportingUnitType_Id" FROM "ReportingUnit") ru on o."ElectionDistrict_Id" = ru."Id"
+                JOIN (SELECT "Id", "Name" as "ReportingUnitName", "ReportingUnitType_Id" FROM "ReportingUnit") ru on o."ElectionDistrict_Id" = ru."Id"
                 JOIN (SELECT "Id", "Txt" AS unit_type FROM "ReportingUnitType") rut on ru."ReportingUnitType_Id" = rut."Id"
         WHERE   "Election_Id" = %s
                 AND "ParentReportingUnit_Id" = %s
