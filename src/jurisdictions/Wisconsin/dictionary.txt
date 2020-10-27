@@ -31,7 +31,8 @@ Candidate	André Jacque	André Jacque
 Candidate	Andy Craig	Andy Craig
 Candidate	Angel C. Sanchez	Angel C. Sanchez
 Candidate	Ann Groves Lloyd	Ann Groves Lloyd
-Candidate	Arnie Enz No Candidate	Arnie Enz No Candidate
+Candidate	Arnie Enz	Arnie Enz
+Candidate	Arnie Enz	Arnie Enz No Candidate
 Candidate	Arthur L. Shrader	Arthur L. Shrader
 Candidate	August Schutz	August Schutz
 Candidate	Barbara Dittrich	Barbara Dittrich
@@ -64,10 +65,10 @@ Candidate	Charlene Charlie Warner	Charlene Charlie Warner
 Candidate	Charlie Walker	Charlie Walker
 Candidate	Chase Binnie	Chase Binnie
 Candidate	Cherie Link	Cherie Link
-Candidate	Cherunda Fox Roger Kushner (write-in)	Cherunda Fox Roger Kushner (write-in)
+Candidate	Cherunda Fox	Cherunda Fox
 Candidate	Chris Kapenga	Chris Kapenga
 Candidate	Chris Kapsner	Chris Kapsner
-Candidate	Chris Keniston Deacon Taylor (write-in)	Chris Keniston Deacon Taylor (write-in)
+Candidate	Chris Keniston	Chris Keniston
 Candidate	Chris Larson	Chris Larson
 Candidate	Chris Meier	Chris Meier
 Candidate	Chris Rahlf	Chris Rahlf
@@ -97,7 +98,7 @@ Candidate	Dan Kohl	Dan Kohl
 Candidate	Dan Schierl	Dan Schierl
 Candidate	Daniel G. Riemer	Daniel G. Riemer
 Candidate	Daniel Schierl	Daniel Schierl
-Candidate	Darrell L. Castle	Darrell L. Castle Scott N. Bradley
+Candidate	Darrell L. Castle	Darrell L. Castle
 Candidate	Dave Considine	Dave Considine
 Candidate	Dave Murphy	Dave Murphy
 Candidate	David Armstrong	David Armstrong
@@ -120,7 +121,6 @@ Candidate	Dianne H. Hesselbein	Dianne H. Hesselbein
 Candidate	Dianne Hesselbein	Dianne Hesselbein
 Candidate	Don Vruwink	Don Vruwink
 Candidate	Donald J. Trump	Donald J. Trump
-Candidate	Donald J. Trump	Donald J. Trump Michael R. Pence
 Candidate	Donald Nelson	Donald Nelson
 Candidate	Donna M. Rozar	Donna M. Rozar
 Candidate	Donny Herman	Donny Herman
@@ -136,7 +136,7 @@ Candidate	Elisha Barudin	Elisha Barudin
 Candidate	Elizabeth Lochner-Abel	Elizabeth Lochner-Abel
 Candidate	Elizabeth Riley	Elizabeth Riley
 Candidate	Elizabeth Warren	Elizabeth Warren
-Candidate	Emidio Soltysik	Emidio Soltysik Angela Nicole Walker (write-in)
+Candidate	Emidio Soltysik	Emidio Soltysik
 Candidate	Emily Berge	Emily Berge
 Candidate	Emily Siegrist	Emily Siegrist
 Candidate	Emily Voight	Emily Voight
@@ -146,7 +146,7 @@ Candidate	Erica Flynn	Erica Flynn
 Candidate	Erik Brooks	Erik Brooks
 Candidate	Erin Tracy	Erin Tracy
 Candidate	Evan Goyke	Evan Goyke
-Candidate	Evan McMullin	Evan McMullin Nathan Johnson (write-in)
+Candidate	Evan McMullin	Evan McMullin
 Candidate	F. James Sensenbrenner, Jr.	F. James Sensenbrenner, Jr.
 Candidate	Francesca Hong	Francesca Hong
 Candidate	Frank T. Buress	Frank T. Buress
@@ -156,7 +156,7 @@ Candidate	Gae Magnafici	Gae Magnafici
 Candidate	Gary A. Will	Gary A. Will
 Candidate	Gary Alan Hebl	Gary Alan Hebl
 Candidate	Gary Alan Hebl	Gary Hebl
-Candidate	Gary Johnson	Gary Johnson Bill Weld
+Candidate	Gary Johnson	Gary Johnson
 Candidate	Gary Tauchen	Gary Tauchen
 Candidate	Gina Walkington	Gina Walkington
 Candidate	Glenn Grothman	Glenn Grothman
@@ -166,7 +166,7 @@ Candidate	Greta Neubauer	Greta Neubauer
 Candidate	Gwen S. Moore	Gwen S. Moore
 Candidate	Heather Driscoll	Heather Driscoll
 Candidate	Helmut Fritz	Helmut Fritz
-Candidate	Hillary Clinton	Hillary Clinton Tim Kaine
+Candidate	Hillary Clinton	Hillary Clinton
 Candidate	Howard Marklein	Howard Marklein
 Candidate	Izzy Hassey Nevarez	Izzy Hassey Nevarez
 Candidate	Jacob Malinowski	Jacob Malinowski
@@ -176,7 +176,7 @@ Candidate	James W. Edming	James W. Edming
 Candidate	Janel Brandtjen	Janel Brandtjen
 Candidate	Janet Bewley	Janet Bewley
 Candidate	Janis Ringhand	Janis Ringhand
-Candidate	Jared William Landry (Write-in)	Jared William Landry (Write-in) No Candidate
+Candidate	Jared William Landry (Write-in)	Jared William Landry (Write-in)
 Candidate	Jason J. Sellnow	Jason J. Sellnow
 Candidate	Jason Lebeck	Jason Lebeck
 Candidate	Jason M. Fields	Jason M. Fields
@@ -203,7 +203,7 @@ Candidate	Jessica J. King	Jessica J. King
 Candidate	Jessica Katzenmeyer	Jessica Katzenmeyer
 Candidate	Jessie Rodriguez	Jessie Rodriguez
 Candidate	Jill Billings	Jill Billings
-Candidate	Jill Stein	Jill Stein Ajamu Baraka
+Candidate	Jill Stein	Jill Stein
 Candidate	Jim Brownlow	Jim Brownlow
 Candidate	Jim Engstrand	Jim Engstrand
 Candidate	Jim Ott	Jim Ott
@@ -279,7 +279,7 @@ Candidate	Kristina Shelton	Kristina Shelton
 Candidate	Kyle Whelton	Kyle Whelton
 Candidate	LaKeshia N. Myers	LaKeshia N. Myers
 Candidate	LaTonya Johnson	LaTonya Johnson
-Candidate	Laurence Kotlikoff	Laurence Kotlikoff Edward E. Leamer (write-in)
+Candidate	Laurence Kotlikoff	Laurence Kotlikoff
 Candidate	Lauri Asbury	Lauri Asbury
 Candidate	Leah Vukmir	Leah Vukmir
 Candidate	Lee Snodgrass	Lee Snodgrass
@@ -293,6 +293,7 @@ Candidate	Liz Sumner	Liz Sumner
 Candidate	Loren Oldenburg	Loren Oldenburg
 Candidate	Lori Hawkins	Lori Hawkins
 Candidate	Luke Dretske	Luke Dretske
+Candidate	Maggie Turnbull	Maggie Turnbull
 Candidate	Maggie Turnbull	Maggie Turnbull Wil Losch
 Candidate	Margaret Engebretson	Margaret Engebretson
 Candidate	Marina Croft	Marina Croft
@@ -303,11 +304,11 @@ Candidate	Mark Kiley	Mark Kiley
 Candidate	Mark L. Born	Mark L. Born
 Candidate	Mark Neumann	Mark Neumann
 Candidate	Mark Pocan	Mark Pocan
-Candidate	Mark S. Grimek (Write-in)	Mark S. Grimek (Write-in) No Candidate
+Candidate	Mark S. Grimek (Write-in)	Mark S. Grimek (Write-in)
 Candidate	Mark Spreitzer	Mark Spreitzer
 Candidate	Mark Waldon	Mark Waldon
 Candidate	Marsha A. Rummel	Marsha A. Rummel
-Candidate	Marshall Schoenke	Marshall Schoenke James Creighton Mitchell Jr. (write-in)
+Candidate	Marshall Schoenke	Marshall Schoenke
 Candidate	Mary Czaja-Felzkowski	Mary Czaja-Felzkowski
 Candidate	Mary Hoeft	Mary Hoeft
 Candidate	Mary Jo Walters (write-in)	Mary Jo Walters (write-in)
@@ -323,10 +324,11 @@ Candidate	Mel Pittman	Mel Pittman
 Candidate	Melisa Arndt	Melisa Arndt
 Candidate	Melissa Agard Sargent	Melissa Agard Sargent
 Candidate	Melissa Winker	Melissa Winker
-Candidate	Michael A. Maturen	Michael A. Maturen Juan Munoz (write-in)
+Candidate	Michael A. Maturen	Michael A. Maturen
 Candidate	Michael A. Tauschek	Michael A. Tauschek
 Candidate	Michael Bennet	Michael Bennet
 Candidate	Michael G. Beardsley	Michael G. Beardsley
+Candidate	Michael J. White	Michael J. White
 Candidate	Michael J. White	Michael J. White Tiffany Anderson
 Candidate	Michael R. Bloomberg	Michael R. Bloomberg
 Candidate	Michael Rivera (write-in)	Michael Rivera (write-in)
@@ -341,7 +343,7 @@ Candidate	Mike Hammond	Mike Hammond
 Candidate	Mike Kuglitsch	Mike Kuglitsch
 Candidate	Mike Mooney	Mike Mooney
 Candidate	Mike Rohrkaste	Mike Rohrkaste
-Candidate	Monica Moorehead	Monica Moorehead Lamont Lilly
+Candidate	Monica Moorehead	Monica Moorehead
 Candidate	Nada Elmikashfi	Nada Elmikashfi
 Candidate	Nancy Lynn VanderMeer	Nancy Lynn Vander Meer
 Candidate	Nancy Lynn VanderMeer	Nancy Lynn VanderMeer
@@ -352,15 +354,14 @@ Candidate	Neal Plotkin	Neal Plotkin
 Candidate	Neil R. Kline	Neil R. Kline
 Candidate	Nick Milroy	Nick Milroy
 Candidate	Nicki Vander Meulen	Nicki Vander Meulen
-Candidate	Corban Gehler (Write-in)	No Candidate Corban Gehler (Write-in)
-Candidate	William Henry Davis III (Write-in)	No Candidate William Henry Davis III (Write-in)
+Candidate	No Candidate	No Candidate
 Candidate	Orlando Owens	Orlando Owens
 Candidate	Ozell Cox	Ozell Cox
 Candidate	Patrick Hull	Patrick Hull
 Candidate	Patrick Snyder	Patrick Snyder
 Candidate	Patrick Testin	Patrick Testin
 Candidate	Patty Schachtner	Patty Schachtner
-Candidate	Paul Boucher (Write-in)	Paul Boucher (Write-in) No Candidate
+Candidate	Paul Boucher (Write-in)	Paul Boucher (Write-in)
 Candidate	Paul Buhr	Paul Buhr
 Candidate	Paul McCreary	Paul McCreary
 Candidate	Paul Michael Weber	Paul Michael Weber
@@ -372,6 +373,7 @@ Candidate	Pete Kohlhoff	Pete Kohlhoff
 Candidate	Peter Theron	Peter Theron
 Candidate	Peter W. Barca	Peter W. Barca
 Candidate	Phillip N. Anderson	Phil Anderson
+Candidate	Phillip Anderson	Phillip Anderson
 Candidate	Phillip N. Anderson	Phillip Anderson Patrick Baird
 Candidate	Phillip N. Anderson	Phillip N. Anderson
 Candidate	Rachael Cabral-Guevara	Rachael Cabral-Guevara
@@ -379,7 +381,7 @@ Candidate	Ramon Garcia (write-in)	Ramon Garcia (write-in)
 Candidate	Randy Bryce	Randy Bryce
 Candidate	Rebecca Clarke	Rebecca Clarke
 Candidate	Reese Wood	Reese Wood
-Candidate	Richard Michael Turtenwald (Write-in)	Richard Michael Turtenwald (Write-in) No Candidate
+Candidate	Richard Michael Turtenwald (Write-in)	Richard Michael Turtenwald (Write-in)
 Candidate	Richard Pulcher	Richard Pulcher
 Candidate	Richard Sarnwick	Richard Sarnwick
 Candidate	Rick Braun	Rick Braun
@@ -392,7 +394,7 @@ Candidate	Rob Slamka	Rob Slamka
 Candidate	Rob Stafsholt	Rob Stafsholt
 Candidate	Rob Summerfield	Rob Summerfield
 Candidate	Rob Swearingen	Rob Swearingen
-Candidate	Robbie Hoffman (Write-in)	Robbie Hoffman (Write-in) No Candidate
+Candidate	Robbie Hoffman (Write-in)	Robbie Hoffman (Write-in)
 Candidate	Robert Brooks	Robert Brooks
 Candidate	Robert L. Cowles	Robert L. Cowles
 Candidate	Robert R. Raymond	Robert R. Raymond
@@ -402,7 +404,7 @@ Candidate	Roberta Thelen	Roberta Thelen
 Candidate	Robin J. Vos	Robin J. Vos
 Candidate	Robin Vos	Robin Vos
 Candidate	Robyn Vining	Robyn Vining
-Candidate	Rocky Roque De La Fuente	Rocky Roque De La Fuente Michael Steinberg
+Candidate	Rocky Roque De La Fuente	Rocky Roque De La Fuente
 Candidate	Roger Polack	Roger Polack
 Candidate	Roger Roth	Roger Roth
 Candidate	Romaine Robert Quinn	Romaine Robert Quinn
@@ -411,7 +413,7 @@ Candidate	Ron Kind	Ron Kind
 Candidate	Ron Tusler	Ron Tusler
 Candidate	Ruben Velez	Ruben Velez
 Candidate	Russ Feingold	Russ Feingold
-Candidate	Ryan Cason (Write-in)	Ryan Cason (Write-in) No Candidate
+Candidate	Ryan Cason (Write-in)	Ryan Cason (Write-in)
 Candidate	Ryan Peterson (write-in)	Ryan Peterson (write-in)
 Candidate	Ryan Sherley	Ryan Sherley
 Candidate	Ryan Solen	Ryan Solen
@@ -430,6 +432,7 @@ Candidate	Scott C. Soik	Scott C. Soik
 Candidate	Scott Fitzgerald	Scott Fitzgerald
 Candidate	Scott Gavin	Scott Gavin
 Candidate	Scott S. Krug	Scott S. Krug
+Candidate	Scott Walker	Scott Walker
 Candidate	Scott Walker	Scott Walker Rebecca Kleefisch
 Candidate	Sean P. Duffy	Sean Duffy
 Candidate	Sean P. Duffy	Sean P. Duffy
@@ -469,13 +472,14 @@ Candidate	Timothy S. Ramthun	Timothy S. Ramthun
 Candidate	Tip McGuire	Tip McGuire
 Candidate	Tod Ohnstad	Tod Ohnstad
 Candidate	Todd Novak	Todd Novak
-Candidate	Tom Hoefling Steve Schulin (write-in)	Tom Hoefling Steve Schulin (write-in)
+Candidate	Tom Hoefling	Tom Hoefling
 Candidate	Tom Nelson	Tom Nelson
 Candidate	Tom Palzewicz	Tom Palzewicz
 Candidate	Tom Sieber	Tom Sieber
 Candidate	Tom Steyer	Tom Steyer
 Candidate	Tom Tiffany	Tom Tiffany
 Candidate	Tomika S. Vukovic	Tomika S. Vukovic
+Candidate	Tony Evers	Tony Evers
 Candidate	Tony Evers	Tony Evers Mandela Barnes
 Candidate	Tony Kurtz	Tony Kurtz
 Candidate	Tony Lee (write-in)	Tony Lee (write-in)
