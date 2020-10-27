@@ -1,5 +1,4 @@
 import election_data_analysis as e
-#MT20 tests
 
 def test_data_exists(dbname):
     assert e.data_exists("2020 Primary","Delaware",dbname=dbname)
