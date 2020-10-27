@@ -32,7 +32,7 @@ def test_state_senate_totals(dbname):
             "DE Senate District 14 (Republican Party)",
             dbname=dbname,
         )
-        == 559
+        == 2649
     )
 
 def test_state_rep_totals(dbname):
