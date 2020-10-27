@@ -1,7 +1,7 @@
 import election_data_analysis as e
 
 def test_data_exists(dbname):
-    assert e.data_exists("2018 General","Colorado",dbname=dbname)
+    assert e.data_exists("2018 General","Illinois",dbname=dbname)
 
 def test_statewide_totals(dbname):
     assert (e.contest_total(
@@ -21,7 +21,7 @@ def test_senate_totals(dbname):
             "IL Senate District 14",
             dbname=dbname,
         )
-            == 65275 
+            == 65275
     )
 
 
