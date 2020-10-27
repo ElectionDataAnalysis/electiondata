@@ -1062,7 +1062,16 @@ def get_filtered_input_options(session, input_str, filters):
         df = pd.DataFrame(data=data)
     # check if it's looking for a count of contests
     elif input_str == "count" and bool([f for f in filters if f.startswith("Contest")]):
-        df = get_relevant_contests(session, filters)
+        election_id = list_to_id(session, "Election", filters)
+        reporting_unit_id = list_to_id(session, "ReportingUnit", filters)
+        df = read_vote_count(
+            session, 
+            election_id, 
+            reporting_unit_id, 
+            ["Name", "BallotName", "unit_type"], 
+            ["parent", "name", "type"]
+        )
+        df.sort_values(["Name", "BallotName"], inplace=True)
     # check if it's looking for a count of candidates
     elif input_str == "count" and bool([f for f in filters if f.startswith("Candidate")]):
         election_id = list_to_id(session, "Election", filters)
@@ -1074,7 +1083,8 @@ def get_filtered_input_options(session, input_str, filters):
             ["Name", "BallotName", "PartyName", "unit_type"], 
             ["parent", "name", "type", "unit_type"]
         )
-        df = clean_candidate_names(df_unordered[df_cols])
+        df = clean_candidate_names(df_unordered)
+        df = df[["parent", "name", "unit_type"]].rename(columns={"unit_type": "type"})
     # check if it's looking for a count by party
     elif input_str == "count":
         election_id = list_to_id(session, "Election", filters)
@@ -1425,6 +1435,11 @@ def clean_candidate_names(df):
     data as described in https://github.com/ElectionDataAnalysis/election_data_analysis/issues/207"""
     # Get first letter of each word in the party name except for "Party"
     # if "Party" is not in the name, then it's "None"
+    cols = df.columns
+    df_cols = ["parent", "name", "type"]
+    extra_cols = [col for col in cols if col not in df_cols]
+    extra_df = df[extra_cols]
+    df = df[df_cols]
     df["party"] = df["type"].str.split(" ")
     df["party"] = np.where(
         df["party"].str.contains("party", case=False),
@@ -1462,9 +1477,11 @@ def clean_candidate_names(df):
         df["contest"].str.split(" ").map(lambda words: "".join([word[0:3] for word in words if word != "of"])),
         df["contest_short"]
     )
-    df = df.sort_values(by=["contest_short", "party", "name"]).reset_index()
     df["name"] = df[["name", "party", "contest_short"]].apply(
         lambda x: ' - '.join(x.dropna().astype(str)),
         axis=1
     )
-    return df[["parent", "name", "type"]]
+    df = df.sort_values(by=["contest_short", "party", "name"])
+    df = df[df_cols].merge(extra_df, how="inner", left_index=True, right_index=True)
+    df.reset_index(drop=True, inplace=True)
+    return df
