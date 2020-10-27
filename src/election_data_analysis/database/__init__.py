@@ -1071,7 +1071,7 @@ def get_filtered_input_options(session, input_str, filters):
             ["ReportingUnitName", "Name", "unit_type"], 
             ["parent", "name", "type"]
         )
-        df.sort_values(["parent", "name"], inplace=True)
+        df = df.sort_values(["parent", "name"]).reset_index(drop=True)
     # check if it's looking for a count of candidates
     elif input_str == "count" and bool([f for f in filters if f.startswith("Candidate")]):
         election_id = list_to_id(session, "Election", filters)
