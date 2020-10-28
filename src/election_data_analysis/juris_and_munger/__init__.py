@@ -3,6 +3,7 @@ import os.path
 from election_data_analysis import database as db
 import pandas as pd
 from pandas.api.types import is_numeric_dtype
+from typing import Optional
 from election_data_analysis import munge as m
 from election_data_analysis import user_interface as ui
 import re
@@ -337,7 +338,7 @@ def ensure_jurisdiction_dir(juris_path, ignore_empty=False) -> dict:
     return err
 
 
-def ensure_juris_files(juris_path, ignore_empty=False) -> dict:
+def ensure_juris_files(juris_path, ignore_empty=False) -> Optional[dict]:
     """Check that the jurisdiction files are complete and consistent with one another.
     Check for extraneous files in Jurisdiction directory.
     Assumes Jurisdiction directory exists. Assumes dictionary.txt is in the template file"""
@@ -397,12 +398,22 @@ def ensure_juris_files(juris_path, ignore_empty=False) -> dict:
 
         # if file exists, check format against template
         if not created:
-            cf_df = pd.read_csv(
-                os.path.join(juris_path, f"{juris_file}.txt"),
-                sep="\t",
-                encoding="iso=8859-1",
-                quoting=csv.QUOTE_MINIMAL,
-            )
+            try:
+                cf_df = pd.read_csv(
+                    os.path.join(juris_path, f"{juris_file}.txt"),
+                    sep="\t",
+                    encoding="iso=8859-1",
+                    quoting=csv.QUOTE_MINIMAL,
+                )
+            except pd.errors.ParserError as e:
+                err = ui.add_new_error(
+                    err,
+                    "jurisdiction",
+                    juris_name,
+                    f"Error reading file {juris_file}.txt: {e}"
+                )
+                return err
+
             if set(cf_df.columns) != set(temp.columns):
                 print(juris_file)
                 cols = "\t".join(temp.columns.to_list())

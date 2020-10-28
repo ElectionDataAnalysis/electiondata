@@ -243,6 +243,9 @@ class DataLoader:
                         f"Jurisdiction {juris[jp].name} assumed to be loaded to database already"
                     )
                     good_jurisdictions.append(jp)
+            else:
+                err = ui.consolidate_errors([err, new_err])
+                return err
 
         # process all good parameter files with good jurisdictions
         for jp in good_jurisdictions:
@@ -484,19 +487,25 @@ class SingleDataLoader:
                 if self.d[k] is not None:
                     # collect <k>_Id or fail gracefully
                     k_id = db.name_to_id(self.session, k, self.d[k])
-                    if k_id is None and k != "CountItemType":
-                        err = ui.add_new_error(
-                            err,
-                            "ini",
-                            self.par_file_name,
-                            f"{k} defined in .ini file ({self.d[k]}) not found in database",
-                        )
-                        return err
-                    # no CountItemType throws an error
-                    elif k == "CountItemType":
-                        # put CountItemType value into OtherCountItemType field
-                        k_id = db.name_to_id(self.session, k, "other")
-                        results_info["OtherCountItemType"] = self.d[k]
+                # CountItemType is different because it's an enumeration
+                    if k == "CountItemType":
+                        if k_id is None:
+                            # put CountItemType value into OtherCountItemType field
+                            # and set k_id to id for 'other'
+                            k_id = db.name_to_id(self.session, k, "other")
+                            results_info["OtherCountItemType"] = self.d[k]
+                        else:
+                            # set OtherCountItemType to "" since type was recognized
+                            results_info["OtherCountItemType"] = ""
+                    else:
+                        if k_id is None:
+                            err = ui.add_new_error(
+                                err,
+                                "ini",
+                                self.par_file_name,
+                                f"{k} defined in .ini file ({self.d[k]}) not found in database",
+                            )
+                            return err
 
                     results_info[f"{k}_Id"] = k_id
 

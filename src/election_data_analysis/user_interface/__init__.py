@@ -625,7 +625,7 @@ def new_datafile(
             raw,
             count_columns_by_name,
             err,
-            ids=results_info,
+            constants=results_info,
         )
         if new_err:
             # append munger name to jurisdiction errors/warnings key
