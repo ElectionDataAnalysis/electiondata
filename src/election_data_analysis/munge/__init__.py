@@ -842,7 +842,7 @@ def raw_elements_to_cdf(
     raw: pd.DataFrame,
     count_cols: List[str],
     err: dict,
-    ids: dict,
+    constants: dict,
 ) -> dict:
     """load data from <raw> into the database."""
     working = raw.copy()
@@ -863,8 +863,8 @@ def raw_elements_to_cdf(
         return err
 
     # enter elements from sources outside raw data, including creating id column(s)
-    for k in ids.keys():
-        working = add_constant_column(working, k, ids[k])
+    for k in constants.keys():
+        working = add_constant_column(working, k, constants[k])
 
     # add Contest_Id (unless it was passed in ids)
     if "Contest_Id" not in working.columns:
@@ -885,7 +885,7 @@ def raw_elements_to_cdf(
     element_list = [
         t
         for t in mu.cdf_elements.index
-        if (t[-7:] != "Contest" and (t[-9:] != "Selection") and f"{t}_Id" not in ids.keys())
+        if (t[-7:] != "Contest" and (t[-9:] != "Selection") and f"{t}_Id" not in constants.keys())
     ]
     for t in element_list:
         try:

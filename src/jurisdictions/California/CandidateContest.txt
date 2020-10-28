@@ -1455,6 +1455,7 @@ CA Controller (None Party)	1	CA Controller	None Party
 CA Secretary of State (None Party)	1	CA Secretary of State	None Party
 CA Insurance Commissioner (None Party)	1	CA Insurance Commissioner	None Party
 CA Superintendent of Public Instruction (None Party)	1	CA Superintendent of Public Instruction	None Party
+US President (CA)	1	US President (CA)
 US President (CA) (Democratic Party)	1	US President (CA)	Democratic Party
 US President (CA) (Republican Party)	1	US President (CA)	Republican Party
 US President (CA) (American Independent Party)	1	US President (CA)	American Independent Party
