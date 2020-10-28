@@ -370,11 +370,13 @@ def read_single_datafile(
         if munger.options["count_of_top_lines_to_skip"]:
             kwargs["skiprows"] = range(munger.options["count_of_top_lines_to_skip"])
 
-        if munger.file_type in ["txt", "csv"]:
+        if munger.file_type in ["txt", "csv", "txt-semicolon-separated"]:
             kwargs["encoding"] = munger.encoding
             kwargs["quoting"] = csv.QUOTE_MINIMAL
             if munger.file_type == "txt":
                 kwargs["sep"] = "\t"
+            elif munger.file_type == "txt-semicolon-separated":
+                kwargs["sep"] = ";"
             df = pd.read_csv(f_path, **kwargs)
         elif munger.file_type in ["xls", "xlsx"]:
             df = pd.read_excel(f_path, **kwargs)

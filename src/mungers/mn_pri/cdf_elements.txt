@@ -1,0 +1,6 @@
+name	raw_identifier_formula	source
+ReportingUnit	<County ID>	row
+Party	<Party Abbreviation>	row
+CandidateContest	<Office Name> District <District> (<Party Abbreviation>)	row
+Candidate	<Candidate Name>	row
+CountItemType		ini

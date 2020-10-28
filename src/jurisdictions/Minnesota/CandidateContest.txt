@@ -1,0 +1,352 @@
+Name	NumberElected	Office	PrimaryParty
+MN House District 1	MN House District 1
+MN House District 1AMN House District 1A
+MN House District 1BMN House District 1B
+MN House District 2	1	MN House District 2	
+MN House District 3	MN House District 3
+MN House District 3AMN House District 3A
+MN House District 3BMN House District 3B
+MN House District 4	1	MN House District 4	
+MN House District 5	MN House District 5
+MN House District 5AMN House District 5A
+MN House District 5BMN House District 5B
+MN House District 6	1	MN House District 6	
+MN House District 7	MN House District 7
+MN House District 7AMN House District 7A
+MN House District 7BMN House District 7B
+MN House District 8	1	MN House District 8	
+MN House District 9	MN House District 9
+MN House District 9AMN House District 9A
+MN House District 9BMN House District 9B
+MN House District 10	1	MN House District 10	
+MN House District 11	MN House District 11
+MN House District 11AMN House District 11A
+MN House District 11BMN House District 11B
+MN House District 12	1	MN House District 12	
+MN House District 13	MN House District 13
+MN House District 13AMN House District 13A
+MN House District 13BMN House District 13B
+MN House District 14	1	MN House District 14	
+MN House District 15	MN House District 15
+MN House District 15AMN House District 15A
+MN House District 15BMN House District 15B
+MN House District 16	1	MN House District 16	
+MN House District 17	MN House District 17
+MN House District 17AMN House District 17A
+MN House District 17BMN House District 17B
+MN House District 18	1	MN House District 18	
+MN House District 19	MN House District 19
+MN House District 19AMN House District 19A
+MN House District 19BMN House District 19B
+MN House District 20	1	MN House District 20	
+MN House District 21	MN House District 21
+MN House District 21AMN House District 21A
+MN House District 21BMN House District 21B
+MN House District 22	1	MN House District 22	
+MN House District 23	MN House District 23
+MN House District 23AMN House District 23A
+MN House District 23BMN House District 23B
+MN House District 24	1	MN House District 24	
+MN House District 25	MN House District 25
+MN House District 25AMN House District 25A
+MN House District 25BMN House District 25B
+MN House District 26	1	MN House District 26	
+MN House District 27	MN House District 27
+MN House District 27AMN House District 27A
+MN House District 27BMN House District 27B
+MN House District 28	1	MN House District 28	
+MN House District 29	MN House District 29
+MN House District 29AMN House District 29A
+MN House District 29BMN House District 29B
+MN House District 30	1	MN House District 30	
+MN House District 31	MN House District 31
+MN House District 31AMN House District 31A
+MN House District 31BMN House District 31B
+MN House District 32	1	MN House District 32	
+MN House District 33	MN House District 33
+MN House District 33AMN House District 33A
+MN House District 33BMN House District 33B
+MN House District 34	1	MN House District 34	
+MN House District 35	MN House District 35
+MN House District 35AMN House District 35A
+MN House District 35BMN House District 35B
+MN House District 36	1	MN House District 36	
+MN House District 37	MN House District 37
+MN House District 37AMN House District 37A
+MN House District 37BMN House District 37B
+MN House District 38	1	MN House District 38	
+MN House District 39	MN House District 39
+MN House District 39AMN House District 39A
+MN House District 39BMN House District 39B
+MN House District 40	1	MN House District 40	
+MN House District 41	MN House District 41
+MN House District 41AMN House District 41A
+MN House District 41BMN House District 41B
+MN House District 42	1	MN House District 42	
+MN House District 43	MN House District 43
+MN House District 43AMN House District 43A
+MN House District 43BMN House District 43B
+MN House District 44	1	MN House District 44	
+MN House District 45	MN House District 45
+MN House District 45AMN House District 45A
+MN House District 45BMN House District 45B
+MN House District 46	1	MN House District 46	
+MN House District 47	MN House District 47
+MN House District 47AMN House District 47A
+MN House District 47BMN House District 47B
+MN House District 48	1	MN House District 48	
+MN House District 49	MN House District 49
+MN House District 49AMN House District 49A
+MN House District 49BMN House District 49B
+MN House District 50	1	MN House District 50	
+MN House District 51	MN House District 51
+MN House District 51AMN House District 51A
+MN House District 51BMN House District 51B
+MN House District 52	1	MN House District 52	
+MN House District 53	MN House District 53
+MN House District 53AMN House District 53A
+MN House District 53BMN House District 53B
+MN House District 54	1	MN House District 54	
+MN House District 55	MN House District 55
+MN House District 55AMN House District 55A
+MN House District 55BMN House District 55B
+MN House District 56	1	MN House District 56	
+MN House District 57	MN House District 57
+MN House District 57AMN House District 57A
+MN House District 57BMN House District 57B
+MN House District 58	1	MN House District 58	
+MN House District 59	MN House District 59
+MN House District 59AMN House District 59A
+MN House District 59BMN House District 59B
+MN House District 60	1	MN House District 60	
+MN House District 61	MN House District 61
+MN House District 61AMN House District 61A
+MN House District 61BMN House District 61B
+MN House District 62	1	MN House District 62	
+MN House District 63	MN House District 63
+MN House District 63AMN House District 63A
+MN House District 63BMN House District 63B
+MN House District 64	1	MN House District 64	
+MN House District 65	MN House District 65
+MN House District 65AMN House District 65A
+MN House District 65BMN House District 65B
+MN House District 66	1	MN House District 66	
+MN House District 67	MN House District 67
+MN House District 67AMN House District 67A
+MN House District 67BMN House District 67B
+MN House District 68	1	MN House District 68	
+MN House District 69	MN House District 69
+MN House District 69AMN House District 69A
+MN House District 69BMN House District 69B
+MN House District 70	1	MN House District 70	
+MN House District 71	MN House District 71
+MN House District 71AMN House District 71A
+MN House District 71BMN House District 71B
+MN House District 72	1	MN House District 72	
+MN House District 73	MN House District 73
+MN House District 73AMN House District 73A
+MN House District 73BMN House District 73B
+MN House District 74	1	MN House District 74	
+MN House District 75	MN House District 75
+MN House District 75AMN House District 75A
+MN House District 75BMN House District 75B
+MN House District 76	1	MN House District 76	
+MN House District 77	MN House District 77
+MN House District 77AMN House District 77A
+MN House District 77BMN House District 77B
+MN House District 78	1	MN House District 78	
+MN House District 79	MN House District 79
+MN House District 79AMN House District 79A
+MN House District 79BMN House District 79B
+MN House District 80	1	MN House District 80	
+MN House District 81	MN House District 81
+MN House District 81AMN House District 81A
+MN House District 81BMN House District 81B
+MN House District 82	1	MN House District 82	
+MN House District 83	MN House District 83
+MN House District 83AMN House District 83A
+MN House District 83BMN House District 83B
+MN House District 84	1	MN House District 84	
+MN House District 85	MN House District 85
+MN House District 85AMN House District 85A
+MN House District 85BMN House District 85B
+MN House District 86	1	MN House District 86	
+MN House District 87	MN House District 87
+MN House District 87AMN House District 87A
+MN House District 87BMN House District 87B
+MN House District 88	1	MN House District 88	
+MN House District 89	MN House District 89
+MN House District 89AMN House District 89A
+MN House District 89BMN House District 89B
+MN House District 90	1	MN House District 90	
+MN House District 91	MN House District 91
+MN House District 91AMN House District 91A
+MN House District 91BMN House District 91B
+MN House District 92	1	MN House District 92	
+MN House District 93	MN House District 93
+MN House District 93AMN House District 93A
+MN House District 93BMN House District 93B
+MN House District 94	1	MN House District 94	
+MN House District 95	MN House District 95
+MN House District 95AMN House District 95A
+MN House District 95BMN House District 95B
+MN House District 96	1	MN House District 96	
+MN House District 97	MN House District 97
+MN House District 97AMN House District 97A
+MN House District 97BMN House District 97B
+MN House District 98	1	MN House District 98	
+MN House District 99	MN House District 99
+MN House District 99AMN House District 99A
+MN House District 99BMN House District 99B
+MN House District 100	1	MN House District 100	
+MN House District 101	MN House District 101
+MN House District 101AMN House District 101A
+MN House District 101BMN House District 101B
+MN House District 102	1	MN House District 102	
+MN House District 103	MN House District 103
+MN House District 103AMN House District 103A
+MN House District 103BMN House District 103B
+MN House District 104	1	MN House District 104	
+MN House District 105	MN House District 105
+MN House District 105AMN House District 105A
+MN House District 105BMN House District 105B
+MN House District 106	1	MN House District 106	
+MN House District 107	MN House District 107
+MN House District 107AMN House District 107A
+MN House District 107BMN House District 107B
+MN House District 108	1	MN House District 108	
+MN House District 109	MN House District 109
+MN House District 109AMN House District 109A
+MN House District 109BMN House District 109B
+MN House District 110	1	MN House District 110	
+MN House District 111	MN House District 111
+MN House District 111AMN House District 111A
+MN House District 111BMN House District 111B
+MN House District 112	1	MN House District 112	
+MN House District 113	MN House District 113
+MN House District 113AMN House District 113A
+MN House District 113BMN House District 113B
+MN House District 114	1	MN House District 114	
+MN House District 115	MN House District 115
+MN House District 115AMN House District 115A
+MN House District 115BMN House District 115B
+MN House District 116	1	MN House District 116	
+MN House District 117	MN House District 117
+MN House District 117AMN House District 117A
+MN House District 117BMN House District 117B
+MN House District 118	1	MN House District 118	
+MN House District 119	MN House District 119
+MN House District 119AMN House District 119A
+MN House District 119BMN House District 119B
+MN House District 120	1	MN House District 120	
+MN House District 121	MN House District 121
+MN House District 121AMN House District 121A
+MN House District 121BMN House District 121B
+MN House District 122	1	MN House District 122	
+MN House District 123	MN House District 123
+MN House District 123AMN House District 123A
+MN House District 123BMN House District 123B
+MN House District 124	1	MN House District 124	
+MN House District 125	MN House District 125
+MN House District 125AMN House District 125A
+MN House District 125BMN House District 125B
+MN House District 126	1	MN House District 126	
+MN House District 127	MN House District 127
+MN House District 127AMN House District 127A
+MN House District 127BMN House District 127B
+MN House District 128	1	MN House District 128	
+MN House District 129	MN House District 129
+MN House District 129AMN House District 129A
+MN House District 129BMN House District 129B
+MN House District 130	1	MN House District 130	
+MN House District 131	MN House District 131
+MN House District 131AMN House District 131A
+MN House District 131BMN House District 131B
+MN House District 132	1	MN House District 132	
+MN House District 133	MN House District 133
+MN House District 133AMN House District 133A
+MN House District 133BMN House District 133B
+MN House District 134	1	MN House District 134	
+MN Senate District 1	1	MN Senate District 1	
+MN Senate District 2	1	MN Senate District 2	
+MN Senate District 3	1	MN Senate District 3	
+MN Senate District 4	1	MN Senate District 4	
+MN Senate District 5	1	MN Senate District 5	
+MN Senate District 6	1	MN Senate District 6	
+MN Senate District 7	1	MN Senate District 7	
+MN Senate District 8	1	MN Senate District 8	
+MN Senate District 9	1	MN Senate District 9	
+MN Senate District 10	1	MN Senate District 10	
+MN Senate District 11	1	MN Senate District 11	
+MN Senate District 12	1	MN Senate District 12	
+MN Senate District 13	1	MN Senate District 13	
+MN Senate District 14	1	MN Senate District 14	
+MN Senate District 15	1	MN Senate District 15	
+MN Senate District 16	1	MN Senate District 16	
+MN Senate District 17	1	MN Senate District 17	
+MN Senate District 18	1	MN Senate District 18	
+MN Senate District 19	1	MN Senate District 19	
+MN Senate District 20	1	MN Senate District 20	
+MN Senate District 21	1	MN Senate District 21	
+MN Senate District 22	1	MN Senate District 22	
+MN Senate District 23	1	MN Senate District 23	
+MN Senate District 24	1	MN Senate District 24	
+MN Senate District 25	1	MN Senate District 25	
+MN Senate District 26	1	MN Senate District 26	
+MN Senate District 27	1	MN Senate District 27	
+MN Senate District 28	1	MN Senate District 28	
+MN Senate District 29	1	MN Senate District 29	
+MN Senate District 30	1	MN Senate District 30	
+MN Senate District 31	1	MN Senate District 31	
+MN Senate District 32	1	MN Senate District 32	
+MN Senate District 33	1	MN Senate District 33	
+MN Senate District 34	1	MN Senate District 34	
+MN Senate District 35	1	MN Senate District 35	
+MN Senate District 36	1	MN Senate District 36	
+MN Senate District 37	1	MN Senate District 37	
+MN Senate District 38	1	MN Senate District 38	
+MN Senate District 39	1	MN Senate District 39	
+MN Senate District 40	1	MN Senate District 40	
+MN Senate District 41	1	MN Senate District 41	
+MN Senate District 42	1	MN Senate District 42	
+MN Senate District 43	1	MN Senate District 43	
+MN Senate District 44	1	MN Senate District 44	
+MN Senate District 45	1	MN Senate District 45	
+MN Senate District 46	1	MN Senate District 46	
+MN Senate District 47	1	MN Senate District 47	
+MN Senate District 48	1	MN Senate District 48	
+MN Senate District 49	1	MN Senate District 49	
+MN Senate District 50	1	MN Senate District 50	
+MN Senate District 51	1	MN Senate District 51	
+MN Senate District 52	1	MN Senate District 52	
+MN Senate District 53	1	MN Senate District 53	
+MN Senate District 54	1	MN Senate District 54	
+MN Senate District 55	1	MN Senate District 55	
+MN Senate District 56	1	MN Senate District 56	
+MN Senate District 57	1	MN Senate District 57	
+MN Senate District 58	1	MN Senate District 58	
+MN Senate District 59	1	MN Senate District 59	
+MN Senate District 60	1	MN Senate District 60	
+MN Senate District 61	1	MN Senate District 61	
+MN Senate District 62	1	MN Senate District 62	
+MN Senate District 63	1	MN Senate District 63	
+MN Senate District 64	1	MN Senate District 64	
+MN Senate District 65	1	MN Senate District 65	
+MN Senate District 66	1	MN Senate District 66	
+MN Senate District 67	1	MN Senate District 67	
+US House MN District 1	1	US House MN District 1	
+US House MN District 2	1	US House MN District 2	
+US House MN District 3	1	US House MN District 3	
+US House MN District 4	1	US House MN District 4	
+US House MN District 5	1	US House MN District 5	
+US House MN District 6	1	US House MN District 6	
+US House MN District 7	1	US House MN District 7	
+US House MN District 8	1	US House MN District 8	
+US President (MN)	1	US President (MN)	
+MN Governor	1	MN Governor	
+US Senate MN	1	US Senate MN	
+MN Attorney General	1	MN Attorney General	
+MN Lieutenant Governor	1	MN Lieutenant Governor	
+MN Treasurer	1	MN Treasurer	
+MN Secretary of State	1	MN Secretary of State	
+MN State Auditor	1	MN State Auditor

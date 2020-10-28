@@ -592,7 +592,7 @@ def check_munger_file_contents(munger_path, munger_file, err):
                 )
 
         # check all parameters for flat files
-        if format_d["file_type"] in ["txt", "csv", "xls"]:
+        if format_d["file_type"] in ["txt", "csv", "xls", "txt-semicolon-separated"]:
             # Either field_name_row is a number, or field_names_if_no_field_name_row is a non-empty list
             if (not format_d["field_name_row"]) or (not format_d["field_name_row"].isnumeric()):
                 if (not format_d["field_names_if_no_field_name_row"]) or (len(format_d["field_names_if_no_field_name_row"]) == 0):
