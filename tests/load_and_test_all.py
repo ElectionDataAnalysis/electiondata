@@ -35,6 +35,25 @@ def io(argv) -> Optional[list]:
     return ej_list
 
 
+def optional_remove(dl: e.DataLoader, dir_path: str):
+    # allow user to inspect database if desired
+    input(f"Hit return to continue (and remove test db {dl.d['dbname']} and test data)")
+
+    # allow user to pause, option to remove db
+    remove_db = input(f"Remove test db {dl.d['dbname']} (y/n)?")
+
+    if remove_db == "y":
+        close_and_erase(dl)
+        # define parameters to connect to postgres db
+
+    remove_dir = input(f"Remove {dir_path} directory (y/n)?")
+    if remove_dir == "y":
+        # remove testing data
+        os.system(f"rm -rf {dir_path}")
+
+    return
+
+
 def close_and_erase(dl: e.DataLoader):
     db_params = {
         "host": dl.engine.url.host,
@@ -71,6 +90,7 @@ def run2(
         test_dir: Optional[str] = None,
         election_jurisdiction_list: Optional[list] = None
 ):
+    dl = None  # to keep syntax-checker happy
     if not test_dir:
         # set the test_dir to the directory containing this file
         test_dir = Path(__file__).parent.absolute()
@@ -93,36 +113,28 @@ def run2(
         dl = e.DataLoader()
         dl.change_db(dbname)
 
-
         dl.change_dir("results_dir","TestingData")
-        dl.load_all(move_files=False, election_jurisdiction_list=election_jurisdiction_list)
+        err = dl.load_all(move_files=False, election_jurisdiction_list=election_jurisdiction_list)
+        if ui.fatal_error(err):
+            ui.report(err)
+            optional_remove(dl, "TestingData")
+            return
 
     ui.run_tests(test_dir, dbname, election_jurisdiction_list=election_jurisdiction_list)
 
-    # allow user to inspect database if desired
-    input(f"Hit return to continue (and remove test db {dbname} and test data)")
-
     if load_data:
-        # allow user to pause, option to remove db
-        remove_db = input(f"Remove test db {dbname} (y/n)?")
-
-        if remove_db == "y":
-            close_and_erase(dl)
-            # define parameters to connect to postgres db
-
-        remove_dir = input("Remove TestingData directory (y/n)?")
-        if remove_dir == "y":
-            # remove testing data
-            os.system(f"rm -rf TestingData")
+        optional_remove(dl, "TestingData")
     return
 
 
 if __name__ == "__main__":
     print(sys.argv)
     if len(sys.argv) == 1:
-        election_jurisdiction_list = [("2018 General","North Carolina")]
+        election_jurisdiction_list = None
     else:
         election_jurisdiction_list = io(sys.argv[1:])
 
-    run2(election_jurisdiction_list=election_jurisdiction_list)
+    run2(
+        election_jurisdiction_list=election_jurisdiction_list,
+    )
     exit()
