@@ -1605,6 +1605,9 @@ def data_exists(election, jurisdiction, p_path=None, dbname=None):
 
     election_id = db.name_to_id(an.session, "Election", election)
     reporting_unit_id = db.name_to_id(an.session, "ReportingUnit", jurisdiction)
+    if not election_id or not reporting_unit_id:
+        return False
+
     con = an.session.bind.raw_connection()
     cur = con.cursor()
     answer, err_str = db.data_file_list(
