@@ -36,6 +36,7 @@ sdl_pars_opt = [
     "Party",
     "CountItemType",
     "ReportingUnit",
+    "Contest",
 ]
 
 multi_data_loader_pars = [
@@ -482,7 +483,7 @@ class SingleDataLoader:
                 else:
                     results_info["Contest_Id"] = contest_id
 
-            for k in ["Party", "ReportingUnit", "CountItemType"]:
+            for k in ["Party", "ReportingUnit", "CountItemType", "Contest"]:
                 # if element was given in .ini file
                 if self.d[k] is not None:
                     # collect <k>_Id or fail gracefully

@@ -1,7 +1,9 @@
 import election_data_analysis as e
+def test_data_exists(dbname):
+    assert e.data_exists("2020 Primary","Pennsylvania",dbname=dbname)
 
 def test_pa_presidential_20(dbname):
-    assert (not e.data_exists("2020 Primary","Pennsylvania",dbname=dbname) or e.contest_total(
+    assert (e.contest_total(
             "2020 Primary",
             "Pennsylvania",
             "US President (PA) (Democratic Party)",
@@ -12,7 +14,7 @@ def test_pa_presidential_20(dbname):
 
 
 def test_pa_statewide_totals_20(dbname):
-    assert (not e.data_exists("2020 Primary","Pennsylvania",dbname=dbname) or e.contest_total(
+    assert (e.contest_total(
             "2020 Primary",
             "Pennsylvania",
             "PA Auditor General (Republican Party)",
@@ -23,7 +25,7 @@ def test_pa_statewide_totals_20(dbname):
 
 
 def test_pa_senate_totals_20(dbname):
-    assert (not e.data_exists("2020 Primary","Pennsylvania",dbname=dbname) or e.contest_total(
+    assert (e.contest_total(
             "2020 Primary",
             "Pennsylvania",
             "PA Senate District 21 (Democratic Party)",
@@ -34,7 +36,7 @@ def test_pa_senate_totals_20(dbname):
 
 
 def test_pa_house_totals_20(dbname):
-    assert (not e.data_exists("2020 Primary","Pennsylvania",dbname=dbname) or e.contest_total(
+    assert (e.contest_total(
             "2020 Primary",
             "Pennsylvania",
             "PA House District 100 (Republican Party)",

@@ -939,9 +939,9 @@ def check_results_munger_compatibility(
     if missing:
         error = ui.add_new_error(
             error,
-            "munger",
+            "warn-munger",
             mu.name,
-            f"Only {df.shape[1]} columns read from results file {file_name}. Check file_type in format.config",
+            f"Some count_columns missing from results file {file_name}:\n{missing}",
         )
     else:
         # check that count cols are numeric
