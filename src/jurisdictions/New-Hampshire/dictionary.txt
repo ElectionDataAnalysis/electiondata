@@ -4744,3 +4744,64 @@ Candidate	SAYLOR, STANLEY E	SAYLOR, STANLEY E
 Candidate	SEARS, JOEL L	SEARS, JOEL L
 Candidate	MARCOCCIO, ROBERT J	MARCOCCIO, ROBERT J
 Candidate	GROVE, SETH	GROVE, SETH
+Candidate	Michael Bennet	Bennet
+Candidate	Joseph R. Biden	Biden
+Candidate	Michael R. Bloomberg	Bloomberg
+Candidate	Cory Booker	Booker
+Candidate	Mosie Boyd	Boyd
+Candidate	Steve Bullock	Bullock
+Candidate	Pete Buttigieg	Buttigieg
+Candidate	Julian Castro	Castro
+Candidate	John K. Delaney	Delaney
+Candidate	Tulsi Gabbard	Gabbard
+Candidate	Kamala Harris	Harris
+Candidate	Amy Klobuchar	Klobuchar
+Candidate	Bernie Sanders	Sanders
+Candidate	Joe Sestak	Sestak
+Candidate	Tom Steyer	Steyer
+Candidate	Elizabeth Warren	Warren
+Candidate	Marianne Williamson	Williamson
+Candidate	Andrew Yang	Yang
+Candidate	Roque 'Rocky' De La Fuente	Fuente
+Candidate	Donald J. Trump	Trump
+Candidate	Bill Weld	Weld
+Candidate	Senator Alan Clark	Clark
+Candidate	Jeff Crow	Crow
+Candidate	State Senator John Cooper	Cooper
+Candidate	Representative Dan Sullivan	Sullivan
+Candidate	Efrem Elliott	Elliott
+Candidate	Senator Stephanie Flowers	Flowers
+Candidate	Bill Dunklin	Dunklin
+Candidate	Ben Gilmore	Gilmore
+Candidate	Keidra Burrell	Burrell
+Candidate	Garry L. Smith	Smith
+Candidate	Jim Reynolds	Reynolds
+Candidate	Scatter	Scatter
+Candidate	Walsh	Walsh
+Candidate	Payne	Payne
+Candidate	Murphy	Murphy
+Candidate	Merrill	Merrill
+Candidate	Maxwell	Maxwell
+Candidate	Matern	Matern
+Candidate	Locke	Locke
+Candidate	Kraft	Kraft
+Candidate	Horn	Horn
+Candidate	Gyurko	Gyurko
+Candidate	Ely	Ely
+Candidate	Wells	Wells
+Candidate	Torgesen	Torgesen
+Candidate	Thistle	Thistle
+Candidate	Sloan	Sloan
+Candidate	Patrick	Patrick
+Candidate	Moroz	Moroz
+Candidate	Krichevsky	Krichevsky
+Candidate	Kraus	Kraus
+Candidate	Koos	Koos
+Candidate	Hewes	Hewes
+Candidate	Greenstein	Greenstein
+Candidate	Gleiberman	Gleiberman
+Candidate	Ellinger	Ellinger
+Candidate	Dunlap	Dunlap
+Candidate	De La Fuente	De La Fuente
+Candidate	Burke	Burke
+Candidate		

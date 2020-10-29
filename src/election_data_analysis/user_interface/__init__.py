@@ -615,7 +615,7 @@ def new_datafile(
         )
         return err
     else:
-        count_columns_by_name = [raw.columns[x] for x in munger.options["count_columns"]]
+        count_columns_by_name = [raw.columns[x] for x in munger.options["count_columns"] if x < raw.shape[1]]
 
     try:
         new_err = m.raw_elements_to_cdf(

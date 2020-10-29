@@ -1,6 +1,6 @@
 name	raw_identifier_formula	source
-ReportingUnit	<SUMMARY BY COUNTIES>	column
-Party	{<header_2>,^.*,(.*)$}	row
+ReportingUnit	<SUMMARY BY COUNTIES>	row
+Party	{<0>,^.*,(.*)$}	column
 CandidateContest		ini
-Candidate	{<header_2>,^(.*),.*$}	row
+Candidate	{<0>,^(.*),.*$}	column
 CountItemType		ini
