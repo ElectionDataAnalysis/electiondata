@@ -4807,3 +4807,11 @@ Candidate	Burke	Burke
 Candidate	Comley, Sr.	Comley, Sr.
 Candidate	Boddie	Boddie
 Candidate	Ardini	Ardini
+Candidate	Tom Alciere	Tom Alciere
+Candidate	Paul J. Krautmann	Paul J. Krautmann
+Candidate	Jeanne Shaheen	Jeanne Shaheen
+Candidate	Gerard Beloin	Gerard Beloin
+Candidate	Don Bolduc	Don Bolduc
+Candidate	Corky Messner	Corky Messner
+Candidate	Andy Martin	Andy Martin
+
