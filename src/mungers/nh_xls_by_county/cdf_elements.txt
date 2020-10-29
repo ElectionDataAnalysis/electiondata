@@ -1,0 +1,6 @@
+name	raw_identifier_formula	source
+ReportingUnit	<SUMMARY BY COUNTIES>	column
+Party	{<header_2>,^.*,(.*)$}	row
+CandidateContest		ini
+Candidate	{<header_2>,^(.*),.*$}	row
+CountItemType		ini

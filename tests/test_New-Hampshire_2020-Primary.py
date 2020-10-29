@@ -17,30 +17,10 @@ def test_nh_statewide_totals_20(dbname):
     assert (e.contest_total(
             "2020 Primary",
             "New Hampshire",
-            "NH Auditor General (Republican Party)",
+            "US Senate NH (Republican Party)",
             dbname=dbname,
         )
-            == 1042092
+            == 139117
     )
 
 
-def test_nh_senate_totals_20(dbname):
-    assert (e.contest_total(
-            "2020 Primary",
-            "New Hampshire",
-            "NH Senate District 21 (Democratic Party)",
-            dbname=dbname,
-        )
-            == 18435
-    )
-
-
-def test_nh_house_totals_20(dbname):
-    assert (e.contest_total(
-            "2020 Primary",
-            "New Hampshire",
-            "NH House District 100 (Republican Party)",
-            dbname=dbname,
-        )
-            == 6327
-    )
