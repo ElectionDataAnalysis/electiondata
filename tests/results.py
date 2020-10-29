@@ -99,8 +99,8 @@ ga_2018_congressional_contests = [
 ga_2018_bar_congressional = [
     {
         "jurisdiction": "Georgia",
-        "x": "Sanford Bishop",
-        "y": "Herman West Jr",
+        "x": "Sanford Bishop (D)",
+        "y": "Herman West Jr (R)",
         "counts": [
             {
                 "name": "Georgia;Miller County",
@@ -173,8 +173,8 @@ ga_2018_bar_congressional = [
     },
     {
         "jurisdiction": "Georgia",
-        "x": "Sanford Bishop",
-        "y": "Herman West Jr",
+        "x": "Sanford Bishop (D)",
+        "y": "Herman West Jr (R)",
         "counts": [
             {
                 "name": "Georgia;Schley County",
@@ -247,8 +247,8 @@ ga_2018_bar_congressional = [
     },
     {
         "jurisdiction": "Georgia",
-        "x": "Sanford Bishop",
-        "y": "Herman West Jr",
+        "x": "Sanford Bishop (D)",
+        "y": "Herman West Jr (R)",
         "counts": [
             {
                 "name": "Georgia;Schley County",
@@ -323,8 +323,8 @@ ga_2018_bar_congressional = [
 nc_2018_bar_statehouse = [
     {
         "jurisdiction": "North Carolina",
-        "x": "Ronald (Ron) Wesson",
-        "y": "Edward C. Goodwin",
+        "x": "Ronald (Ron) Wesson (D)",
+        "y": "Edward C. Goodwin (R)",
         "counts": [
             {
                 "name": "North Carolina;Bertie County",
@@ -383,8 +383,8 @@ nc_2018_bar_statehouse = [
     },
     {
         "jurisdiction": "North Carolina",
-        "x": "Ronald (Ron) Wesson",
-        "y": "Edward C. Goodwin",
+        "x": "Ronald (Ron) Wesson (D)",
+        "y": "Edward C. Goodwin (R)",
         "counts": [
             {
                 "name": "North Carolina;Bertie County",
@@ -443,8 +443,8 @@ nc_2018_bar_statehouse = [
     },
     {
         "jurisdiction": "North Carolina",
-        "x": "Ronald (Ron) Wesson",
-        "y": "Edward C. Goodwin",
+        "x": "Ronald (Ron) Wesson (D)",
+        "y": "Edward C. Goodwin (R)",
         "counts": [
             {
                 "name": "North Carolina;Camden County",
@@ -505,8 +505,8 @@ nc_2018_bar_statehouse = [
 nc_2018_bar_congressional = [
     {
         "jurisdiction": "North Carolina",
-        "x": "B. Mark Walker",
-        "y": "Ryan Watts",
+        "x": "B. Mark Walker (R)",
+        "y": "Ryan Watts (D)",
         "counts": [
             {
                 "name": "North Carolina;Randolph County",
@@ -579,8 +579,8 @@ nc_2018_bar_congressional = [
     },
     {
         "jurisdiction": "North Carolina",
-        "x": "Dan Mccready",
-        "y": "Mark Harris",
+        "x": "Dan Mccready (D)",
+        "y": "Mark Harris (R)",
         "counts": [
             {
                 "name": "North Carolina;Bladen County",
@@ -653,8 +653,8 @@ nc_2018_bar_congressional = [
     },
     {
         "jurisdiction": "North Carolina",
-        "x": "Phillip G. Price",
-        "y": "Mark Meadows",
+        "x": "Phillip G. Price (D)",
+        "y": "Mark Meadows (R)",
         "counts": [
             {
                 "name": "North Carolina;Buncombe County",
@@ -1854,7 +1854,7 @@ ga_2018_count = [
     },
     {
         "parent": "GA House District 46",
-        "name": "Karín Sandiford - D - GAH46",
+        "name": "none or unknown - D - GAH46",
         "type": "state-house",
         "order_by": 184,
     },
@@ -2928,57 +2928,63 @@ ga_2018_count = [
     },
     {
         "parent": "US House GA District 4",
-        "name": "Joe Profit - R - USHouse4",
+        "name": "Henry C. 'Hank' Johnson, Jr. - D - USHouse4",
         "type": "congressional",
         "order_by": 363,
+    },
+    {
+        "parent": "US House GA District 4",
+        "name": "Joe Profit - R - USHouse4",
+        "type": "congressional",
+        "order_by": 364,
     },
     {
         "parent": "US House GA District 5",
         "name": "John R. Lewis - D - USHouse5",
         "type": "congressional",
-        "order_by": 364,
+        "order_by": 365,
     },
     {
         "parent": "US House GA District 6",
         "name": "Lucy Mcbath - D - USHouse6",
         "type": "congressional",
-        "order_by": 365,
+        "order_by": 366,
     },
     {
         "parent": "US House GA District 6",
         "name": "Karen Handel - R - USHouse6",
         "type": "congressional",
-        "order_by": 366,
+        "order_by": 367,
     },
     {
         "parent": "US House GA District 7",
         "name": "Carolyn Bourdeaux - D - USHouse7",
         "type": "congressional",
-        "order_by": 367,
+        "order_by": 368,
     },
     {
         "parent": "US House GA District 7",
         "name": "Rob Woodall - R - USHouse7",
         "type": "congressional",
-        "order_by": 368,
+        "order_by": 369,
     },
     {
         "parent": "US House GA District 8",
         "name": "Austin Scott - R - USHouse8",
         "type": "congressional",
-        "order_by": 369,
+        "order_by": 370,
     },
     {
         "parent": "US House GA District 9",
         "name": "Josh Mccall - D - USHouse9",
         "type": "congressional",
-        "order_by": 370,
+        "order_by": 371,
     },
     {
         "parent": "US House GA District 9",
         "name": "Doug Collins - R - USHouse9",
         "type": "congressional",
-        "order_by": 371,
+        "order_by": 372,
     },
 ]
 ga_2018_scatter_candidates = {
