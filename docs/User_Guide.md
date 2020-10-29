@@ -31,6 +31,7 @@ Different file types need different parameters to be specified.
    * field_names_if_no_field_name_row
    * count_columns
    
+Applying a munger with file_type `xls` to a multi-sheet excel file will read only the first sheet. If other sheets are necessary, use `xls-multi` file type.
  NB: the header_row_count should count only rows with data the system needs to read. If there are blank lines, or lines with inessential information -- such as the election date, which is not munged -- use the optional parameter count_of_top_lines_to_skip.
  
  * Required for `concatenated-blocks` type:
