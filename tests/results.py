@@ -99,8 +99,8 @@ ga_2018_congressional_contests = [
 ga_2018_bar_congressional = [
     {
         "jurisdiction": "Georgia",
-        "x": "Sanford Bishop",
-        "y": "Herman West Jr",
+        "x": "Sanford Bishop (D)",
+        "y": "Herman West Jr (R)",
         "counts": [
             {
                 "name": "Georgia;Miller County",
@@ -173,8 +173,8 @@ ga_2018_bar_congressional = [
     },
     {
         "jurisdiction": "Georgia",
-        "x": "Sanford Bishop",
-        "y": "Herman West Jr",
+        "x": "Sanford Bishop (D)",
+        "y": "Herman West Jr (R)",
         "counts": [
             {
                 "name": "Georgia;Schley County",
@@ -247,8 +247,8 @@ ga_2018_bar_congressional = [
     },
     {
         "jurisdiction": "Georgia",
-        "x": "Sanford Bishop",
-        "y": "Herman West Jr",
+        "x": "Sanford Bishop (D)",
+        "y": "Herman West Jr (R)",
         "counts": [
             {
                 "name": "Georgia;Schley County",
@@ -323,8 +323,8 @@ ga_2018_bar_congressional = [
 nc_2018_bar_statehouse = [
     {
         "jurisdiction": "North Carolina",
-        "x": "Ronald (Ron) Wesson",
-        "y": "Edward C. Goodwin",
+        "x": "Ronald (Ron) Wesson (D)",
+        "y": "Edward C. Goodwin (R)",
         "counts": [
             {
                 "name": "North Carolina;Bertie County",
@@ -383,8 +383,8 @@ nc_2018_bar_statehouse = [
     },
     {
         "jurisdiction": "North Carolina",
-        "x": "Ronald (Ron) Wesson",
-        "y": "Edward C. Goodwin",
+        "x": "Ronald (Ron) Wesson (D)",
+        "y": "Edward C. Goodwin (R)",
         "counts": [
             {
                 "name": "North Carolina;Bertie County",
@@ -443,8 +443,8 @@ nc_2018_bar_statehouse = [
     },
     {
         "jurisdiction": "North Carolina",
-        "x": "Ronald (Ron) Wesson",
-        "y": "Edward C. Goodwin",
+        "x": "Ronald (Ron) Wesson (D)",
+        "y": "Edward C. Goodwin (R)",
         "counts": [
             {
                 "name": "North Carolina;Camden County",
@@ -505,8 +505,8 @@ nc_2018_bar_statehouse = [
 nc_2018_bar_congressional = [
     {
         "jurisdiction": "North Carolina",
-        "x": "B. Mark Walker",
-        "y": "Ryan Watts",
+        "x": "B. Mark Walker (R)",
+        "y": "Ryan Watts (D)",
         "counts": [
             {
                 "name": "North Carolina;Randolph County",
@@ -579,8 +579,8 @@ nc_2018_bar_congressional = [
     },
     {
         "jurisdiction": "North Carolina",
-        "x": "Dan Mccready",
-        "y": "Mark Harris",
+        "x": "Dan Mccready (D)",
+        "y": "Mark Harris (R)",
         "counts": [
             {
                 "name": "North Carolina;Bladen County",
@@ -653,8 +653,8 @@ nc_2018_bar_congressional = [
     },
     {
         "jurisdiction": "North Carolina",
-        "x": "Phillip G. Price",
-        "y": "Mark Meadows",
+        "x": "Phillip G. Price (D)",
+        "y": "Mark Meadows (R)",
         "counts": [
             {
                 "name": "North Carolina;Buncombe County",
