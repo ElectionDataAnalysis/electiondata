@@ -4804,4 +4804,6 @@ Candidate	Ellinger	Ellinger
 Candidate	Dunlap	Dunlap
 Candidate	De La Fuente	De La Fuente
 Candidate	Burke	Burke
-Candidate		
+Candidate	Comley, Sr.	Comley, Sr.
+Candidate	Boddie	Boddie
+Candidate	Ardini	Ardini

@@ -12,6 +12,16 @@ def test_nh_presidential_20(dbname):
             == 298377 
     )
 
+def test_nh_presidential_20_rep(dbname):
+    assert (e.contest_total(
+            "2020 Primary",
+            "New Hampshire",
+            "US President (NH) (Republican Party)",
+            dbname=dbname,
+        )
+            == 153711
+    )
+
 
 def test_nh_statewide_totals_20(dbname):
     assert (e.contest_total(
@@ -21,6 +31,17 @@ def test_nh_statewide_totals_20(dbname):
             dbname=dbname,
         )
             == 139117
+    )
+
+
+def test_nh_statewide_totals_20_dem(dbname):
+    assert (e.contest_total(
+            "2020 Primary",
+            "New Hampshire",
+            "US Senate NH (Democratic Party)",
+            dbname=dbname,
+        )
+            == 151405
     )
 
 
