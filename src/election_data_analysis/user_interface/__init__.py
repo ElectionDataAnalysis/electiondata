@@ -412,7 +412,7 @@ def read_single_datafile(
             if munger.options['count_columns_by_name']:
                 count_cols_by_name = munger.options['count_columns_by_name']
             elif munger.options['count_columns']:
-                count_cols_by_name = [df.columns[j] for j in munger.options['count_columns']]
+                count_cols_by_name = [df.columns[j] for j in munger.options['count_columns'] if j < df.shape[1]]
             else:
                 count_cols_by_name = None
 
@@ -916,8 +916,15 @@ def run_tests(test_dir: str, dbname: str, election_jurisdiction_list: Optional[l
     # run pytest
     if election_jurisdiction_list:
         for (election, juris) in election_jurisdiction_list:
-            f = f"test_{juris.replace(' ','-')}_{election.replace(' ','-')}.py"
-            os.system(f"pytest --dbname {dbname} {f}")
+            if election is None and juris is not None:
+                keyword = f"{juris.replace(' ','-')}"
+            elif juris is None and election is not None:
+                keyword = f"{juris.replace(' ','-')}"
+            elif juris is not None and election is not None:
+                keyword = f"{juris.replace(' ','-')}_{election.replace(' ','-')}"
+            else:
+                keyword = "_"
+            os.system(f"pytest --dbname {dbname} -k {keyword}")
     else:
         os.system(f"pytest --dbname {dbname}")
 
