@@ -218,3 +218,10 @@ US House TX District 35	Texas;US House TX District 35
 US House TX District 36	Texas;US House TX District 36
 US President (TX)	Texas
 Railroad Commissioner	Texas
+TX Governor	Texas
+US Senate TX	Texas
+TX Attorney General	Texas
+TX Lieutenant Governor	Texas
+TX Comptroller of Public Accounts	Texas
+TX Commissioner of the General Land Office	Texas
+TX Commissioner of Agriculture	Texas

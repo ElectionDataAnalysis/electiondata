@@ -211,4 +211,17 @@ US House TX District 34	1	US House TX District 34
 US House TX District 35	1	US House TX District 35	
 US House TX District 36	1	US House TX District 36	
 US President (TX)	1	US President (TX)	
-Railroad Commissioner	1	Railroad Commissioner
+Railroad Commissioner	1	Railroad Commissioner	
+TX House District 100	1	TX House District 100	
+TX House District 110	1	TX House District 110	
+TX House District 120	1	TX House District 120	
+TX House District 130	1	TX House District 130	
+TX House District 140	1	TX House District 140	
+TX House District 150	1	TX House District 150	
+TX Governor	1	TX Governor	
+US Senate TX	1	US Senate TX	
+TX Attorney General	1	TX Attorney General	
+TX Lieutenant Governor	1	TX Lieutenant Governor	
+TX Comptroller of Public Accounts	1	TX Comptroller of Public Accounts	
+TX Commissioner of the General Land Office	1	TX Commissioner of the General Land Office	
+TX Commissioner of Agriculture	1	TX Commissioner of Agriculture	
