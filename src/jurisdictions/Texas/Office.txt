@@ -216,8 +216,5 @@ US House TX District 33	Texas;US House TX District 33
 US House TX District 34	Texas;US House TX District 34
 US House TX District 35	Texas;US House TX District 35
 US House TX District 36	Texas;US House TX District 36
-TX Governor	Texas
-US Senate TX	Texas
-TX Attorney General	Texas
-TX Lieutenant Governor	Texas
-TX Treasurer	Texas
+US President (TX)	Texas
+Railroad Commissioner	Texas
