@@ -564,21 +564,39 @@ def read_combine_results(
     return working, err
 
 
-def archive(file_name: str, current_dir: str, archive_dir: str):
-    """Move <file_name> from <current_dir> to <archive_dir>. If <archive_dir> already has a file with that name,
-    prefix <prefix> to the file name and try again. If that doesn't work, add prefix and timestamp"""
-    archive = Path(archive_dir)
-    archive.mkdir(parents=True, exist_ok=True)
-    old_path = os.path.join(current_dir, file_name)
-    new_path = os.path.join(archive_dir, file_name)
+def archive_from_param_file(param_file: str, current_dir: str, archive_dir: str):
+    params, err = get_runtime_parameters(
+        required_keys=['results_file', 'aux_data_dir'],
+        header='election_data_analysis',
+        param_file=os.path.join(current_dir,param_file),
+    )
+    # TODO error handling
+    # if the ini file specifies an aux_data_directory
+    if params["aux_data_dir"] and params["aux_data_dir"] != "":
+        archive(params["aux_data_dir"], current_dir, archive_dir)
+    archive(params["results_file"], current_dir, archive_dir)
+    archive(param_file, current_dir, archive_dir)
+    return
+
+
+def archive(relative_path: str, current_dir: str, archive_dir: str):
+    """Move <relative_path> from <current_dir> to <archive_dir>. If <archive_dir> already has a file with that name,
+    add a number prefix to the name of the created file."""
+    old_path = os.path.join(current_dir, relative_path)
+    new_path = os.path.join(archive_dir, relative_path)
+
+    # Create archive directory (and any necessary subdirectories)
+    archive_dir_with_subs = Path(os.path.join(archive_dir, relative_path)).parent
+    Path(archive_dir_with_subs).mkdir(parents=True, exist_ok=True)
+
     i = 0
     while os.path.exists(new_path):
         i += 1
-        new_path = os.path.join(archive_dir, f"{i}_{file_name}")
+        new_path = os.path.join(archive_dir, f"{i}_{relative_path}")
     try:
         os.rename(old_path, new_path)
     except Exception as exc:
-        print(f"File {file_name} not moved: {exc}")
+        print(f"File {relative_path} not moved: {exc}")
     return
 
 
@@ -1055,16 +1073,16 @@ def reload_juris_election(
     else:
         unloaded_directory = os.path.join(archive_directory, "unloaded")
     for f in [f for f in os.listdir(archive_directory) if f[-4:] == ".ini"]:
+        param_file = os.path.join(archive_directory, f)
         params, err = get_runtime_parameters(
             required_keys=["election","top_reporting_unit","results_file"],
             header="election_data_analysis",
-            param_file=os.path.join(archive_directory, f),
+            param_file=param_file,
         )
         # if the *.ini file is for the given election and jurisdiction
         if (not err) and params["election"] == election_name and params["top_reporting_unit"] == juris_name:
-            # move both the *.ini file and its results file to the unloaded directory
-            archive(f, archive_directory, unloaded_directory)
-            archive(params["results_file"], archive_directory, unloaded_directory)
+            # move the *.ini file and its results file (and any aux_data_directory) to the unloaded directory
+            archive_from_param_file(param_file, archive_directory, unloaded_directory)
 
     # Remove existing data for juris-election pair from live db
     dl.remove_data(election_id, juris_id)

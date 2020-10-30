@@ -273,10 +273,7 @@ class DataLoader:
                     # if move_files == True and no fatal load error,
                     if move_files and not ui.fatal_error(load_error):
                         # archive files
-                        ui.archive(f, self.d["results_dir"], success_dir)
-                        ui.archive(
-                            sdl.d["results_file"], self.d["results_dir"], success_dir
-                        )
+                        ui.archive_from_param_file(f, self.d["results_dir"], success_dir)
                         print(
                             f"\tArchived {f} and its results file after successful load "
                             f"via mungers {sdl.d['munger_name']}.\n"
@@ -1075,7 +1072,10 @@ class JurisdictionPrepper:
         return error
 
     def add_sub_county_rus_from_multi_results_file(
-        self, dir: str, error: dict = None, sub_ru_type: str = "precinct"
+            self,
+            dir: str,
+            error: dict = None,
+            sub_ru_type: str = "precinct",
     ) -> dict:
         """For each .ini file in <dir>, finds specified results file.
         For each results file, adds all elements in <elements> to <element>.txt and, naively, to <dictionary.txt>
@@ -1108,7 +1108,7 @@ class JurisdictionPrepper:
                     return error
 
             # set aux_data_path
-            if "aux_data_dir" in d.keys() and d["aux_data_dir"] is not None:
+            if "aux_data_dir" in d.keys() and d["aux_data_dir"] is not None and d["aux_data_dir"] != "":
                 aux_data_path = os.path.join(dir, d["aux_data_dir"])
             else:
                 aux_data_path = None
