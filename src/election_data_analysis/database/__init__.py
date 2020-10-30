@@ -855,8 +855,8 @@ def get_input_options(session, input, verbose):
                         jurisdiction AS name, 
                         CASE WHEN d."ReportingUnit_Id" IS null THEN false ELSE true END AS type
                 FROM    crossed_with_state_id s
-                        LEFT JOIN "_datafile" d ON s."Id" = d."Election_Id"
-                       	AND s.jurisdiction_id = d."ReportingUnit_Id"
+                        LEFT JOIN (SELECT DISTINCT "Election_Id", "ReportingUnit_Id" FROM _datafile) d 
+                        ON s."Id" = d."Election_Id" AND s.jurisdiction_id = d."ReportingUnit_Id"
                 ORDER BY order_by
             """
             ).format(states=sql.Literal(states))
