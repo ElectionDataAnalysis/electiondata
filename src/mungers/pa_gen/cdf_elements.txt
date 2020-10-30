@@ -4,5 +4,5 @@ Party	<Party Name>	row
 CandidateContest	<Office Name> <District Name>	row
 Candidate	<Candidate Name>	row
 BallotMeasureContest	<Office Name> <District Name>	row
-BallotMeasureSelection	<0>	column
+BallotMeasureSelection	<0>	row
 CountItemType	total	row

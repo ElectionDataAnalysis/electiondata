@@ -1,207 +1,170 @@
 cdf_element	cdf_internal_name	raw_identifier_value
-CandidateContest	WA House District 1	WA House District 1
-CandidateContest	WA House District 2	WA House District 2
-CandidateContest	WA House District 3	WA House District 3
-CandidateContest	WA House District 4	WA House District 4
-CandidateContest	WA House District 5	WA House District 5
-CandidateContest	WA House District 6	WA House District 6
-CandidateContest	WA House District 7	WA House District 7
-CandidateContest	WA House District 8	WA House District 8
-CandidateContest	WA House District 9	WA House District 9
-CandidateContest	WA House District 10	WA House District 10
-CandidateContest	WA House District 11	WA House District 11
-CandidateContest	WA House District 12	WA House District 12
-CandidateContest	WA House District 13	WA House District 13
-CandidateContest	WA House District 14	WA House District 14
-CandidateContest	WA House District 15	WA House District 15
-CandidateContest	WA House District 16	WA House District 16
-CandidateContest	WA House District 17	WA House District 17
-CandidateContest	WA House District 18	WA House District 18
-CandidateContest	WA House District 19	WA House District 19
-CandidateContest	WA House District 20	WA House District 20
-CandidateContest	WA House District 21	WA House District 21
-CandidateContest	WA House District 22	WA House District 22
-CandidateContest	WA House District 23	WA House District 23
-CandidateContest	WA House District 24	WA House District 24
-CandidateContest	WA House District 25	WA House District 25
-CandidateContest	WA House District 26	WA House District 26
-CandidateContest	WA House District 27	WA House District 27
-CandidateContest	WA House District 28	WA House District 28
-CandidateContest	WA House District 29	WA House District 29
-CandidateContest	WA House District 30	WA House District 30
-CandidateContest	WA House District 31	WA House District 31
-CandidateContest	WA House District 32	WA House District 32
-CandidateContest	WA House District 33	WA House District 33
-CandidateContest	WA House District 34	WA House District 34
-CandidateContest	WA House District 35	WA House District 35
-CandidateContest	WA House District 36	WA House District 36
-CandidateContest	WA House District 37	WA House District 37
-CandidateContest	WA House District 38	WA House District 38
-CandidateContest	WA House District 39	WA House District 39
-CandidateContest	WA House District 40	WA House District 40
-CandidateContest	WA House District 41	WA House District 41
-CandidateContest	WA House District 42	WA House District 42
-CandidateContest	WA House District 43	WA House District 43
-CandidateContest	WA House District 44	WA House District 44
-CandidateContest	WA House District 45	WA House District 45
-CandidateContest	WA House District 46	WA House District 46
-CandidateContest	WA House District 47	WA House District 47
-CandidateContest	WA House District 48	WA House District 48
-CandidateContest	WA House District 49	WA House District 49
-CandidateContest	WA House District 50	WA House District 50
-CandidateContest	WA House District 51	WA House District 51
-CandidateContest	WA House District 52	WA House District 52
-CandidateContest	WA House District 53	WA House District 53
-CandidateContest	WA House District 54	WA House District 54
-CandidateContest	WA House District 55	WA House District 55
-CandidateContest	WA House District 56	WA House District 56
-CandidateContest	WA House District 57	WA House District 57
-CandidateContest	WA House District 58	WA House District 58
-CandidateContest	WA House District 59	WA House District 59
-CandidateContest	WA House District 60	WA House District 60
-CandidateContest	WA House District 61	WA House District 61
-CandidateContest	WA House District 62	WA House District 62
-CandidateContest	WA House District 63	WA House District 63
-CandidateContest	WA House District 64	WA House District 64
-CandidateContest	WA House District 65	WA House District 65
-CandidateContest	WA House District 66	WA House District 66
-CandidateContest	WA House District 67	WA House District 67
-CandidateContest	WA House District 68	WA House District 68
-CandidateContest	WA House District 69	WA House District 69
-CandidateContest	WA House District 70	WA House District 70
-CandidateContest	WA House District 71	WA House District 71
-CandidateContest	WA House District 72	WA House District 72
-CandidateContest	WA House District 73	WA House District 73
-CandidateContest	WA House District 74	WA House District 74
-CandidateContest	WA House District 75	WA House District 75
-CandidateContest	WA House District 76	WA House District 76
-CandidateContest	WA House District 77	WA House District 77
-CandidateContest	WA House District 78	WA House District 78
-CandidateContest	WA House District 79	WA House District 79
-CandidateContest	WA House District 80	WA House District 80
-CandidateContest	WA House District 81	WA House District 81
-CandidateContest	WA House District 82	WA House District 82
-CandidateContest	WA House District 83	WA House District 83
-CandidateContest	WA House District 84	WA House District 84
-CandidateContest	WA House District 85	WA House District 85
-CandidateContest	WA House District 86	WA House District 86
-CandidateContest	WA House District 87	WA House District 87
-CandidateContest	WA House District 88	WA House District 88
-CandidateContest	WA House District 89	WA House District 89
-CandidateContest	WA House District 90	WA House District 90
-CandidateContest	WA House District 91	WA House District 91
-CandidateContest	WA House District 92	WA House District 92
-CandidateContest	WA House District 93	WA House District 93
-CandidateContest	WA House District 94	WA House District 94
-CandidateContest	WA House District 95	WA House District 95
-CandidateContest	WA House District 96	WA House District 96
-CandidateContest	WA House District 97	WA House District 97
-CandidateContest	WA House District 98	WA House District 98
-CandidateContest	WA Senate District 1	WA Senate District 1
-CandidateContest	WA Senate District 2	WA Senate District 2
-CandidateContest	WA Senate District 3	WA Senate District 3
-CandidateContest	WA Senate District 4	WA Senate District 4
-CandidateContest	WA Senate District 5	WA Senate District 5
-CandidateContest	WA Senate District 6	WA Senate District 6
-CandidateContest	WA Senate District 7	WA Senate District 7
-CandidateContest	WA Senate District 8	WA Senate District 8
-CandidateContest	WA Senate District 9	WA Senate District 9
-CandidateContest	WA Senate District 10	WA Senate District 10
-CandidateContest	WA Senate District 11	WA Senate District 11
-CandidateContest	WA Senate District 12	WA Senate District 12
-CandidateContest	WA Senate District 13	WA Senate District 13
-CandidateContest	WA Senate District 14	WA Senate District 14
-CandidateContest	WA Senate District 15	WA Senate District 15
-CandidateContest	WA Senate District 16	WA Senate District 16
-CandidateContest	WA Senate District 17	WA Senate District 17
-CandidateContest	WA Senate District 18	WA Senate District 18
-CandidateContest	WA Senate District 19	WA Senate District 19
-CandidateContest	WA Senate District 20	WA Senate District 20
-CandidateContest	WA Senate District 21	WA Senate District 21
-CandidateContest	WA Senate District 22	WA Senate District 22
-CandidateContest	WA Senate District 23	WA Senate District 23
-CandidateContest	WA Senate District 24	WA Senate District 24
-CandidateContest	WA Senate District 25	WA Senate District 25
-CandidateContest	WA Senate District 26	WA Senate District 26
-CandidateContest	WA Senate District 27	WA Senate District 27
-CandidateContest	WA Senate District 28	WA Senate District 28
-CandidateContest	WA Senate District 29	WA Senate District 29
-CandidateContest	WA Senate District 30	WA Senate District 30
-CandidateContest	WA Senate District 31	WA Senate District 31
-CandidateContest	WA Senate District 32	WA Senate District 32
-CandidateContest	WA Senate District 33	WA Senate District 33
-CandidateContest	WA Senate District 34	WA Senate District 34
-CandidateContest	WA Senate District 35	WA Senate District 35
-CandidateContest	WA Senate District 36	WA Senate District 36
-CandidateContest	WA Senate District 37	WA Senate District 37
-CandidateContest	WA Senate District 38	WA Senate District 38
-CandidateContest	WA Senate District 39	WA Senate District 39
-CandidateContest	WA Senate District 40	WA Senate District 40
-CandidateContest	WA Senate District 41	WA Senate District 41
-CandidateContest	WA Senate District 42	WA Senate District 42
-CandidateContest	WA Senate District 43	WA Senate District 43
-CandidateContest	WA Senate District 44	WA Senate District 44
-CandidateContest	WA Senate District 45	WA Senate District 45
-CandidateContest	WA Senate District 46	WA Senate District 46
-CandidateContest	WA Senate District 47	WA Senate District 47
-CandidateContest	WA Senate District 48	WA Senate District 48
-CandidateContest	WA Senate District 49	WA Senate District 49
-CandidateContest	US House WA District 1	US House WA District 1
-CandidateContest	US House WA District 2	US House WA District 2
-CandidateContest	US House WA District 3	US House WA District 3
-CandidateContest	US House WA District 4	US House WA District 4
-CandidateContest	US House WA District 5	US House WA District 5
-CandidateContest	US House WA District 6	US House WA District 6
-CandidateContest	US House WA District 7	US House WA District 7
-CandidateContest	US House WA District 8	US House WA District 8
-CandidateContest	US House WA District 9	US House WA District 9
-CandidateContest	US House WA District 10	US House WA District 10
-CandidateContest	US President (WA)	US President (WA)
-CandidateContest	WA Governor	WA Governor
-CandidateContest	US Senate WA	US Senate WA
-CandidateContest	WA Attorney General	WA Attorney General
-CandidateContest	WA Lieutenant Governor	WA Lieutenant Governor
-CandidateContest	WA Treasurer	WA Treasurer
-CandidateContest	WA Secretary of State	WA Secretary of State
-ReportingUnit		Washington;Adams County
-ReportingUnit		Washington;Asotin County
-ReportingUnit		Washington;Benton County
-ReportingUnit		Washington;Chelan County
-ReportingUnit		Washington;Clallam County
-ReportingUnit		Washington;Clark County
-ReportingUnit		Washington;Columbia County
-ReportingUnit		Washington;Cowlitz County
-ReportingUnit		Washington;Douglas County
-ReportingUnit		Washington;Ferry County
-ReportingUnit		Washington;Franklin County
-ReportingUnit		Washington;Garfield County
-ReportingUnit		Washington;Grant County
-ReportingUnit		Washington;Grays Harbor County
-ReportingUnit		Washington;Island County
-ReportingUnit		Washington;Jefferson County
-ReportingUnit		Washington;King County
-ReportingUnit		Washington;Kitsap County
-ReportingUnit		Washington;Kittitas County
-ReportingUnit		Washington;Klickitat County
-ReportingUnit		Washington;Lewis County
-ReportingUnit		Washington;Lincoln County
-ReportingUnit		Washington;Mason County
-ReportingUnit		Washington;Okanogan County
-ReportingUnit		Washington;Pacific County
-ReportingUnit		Washington;Pend Oreille County
-ReportingUnit		Washington;Pierce County
-ReportingUnit		Washington;San Juan County
-ReportingUnit		Washington;Skagit County
-ReportingUnit		Washington;Skamania County
-ReportingUnit		Washington;Snohomish County
-ReportingUnit		Washington;Spokane County
-ReportingUnit		Washington;Stevens County
-ReportingUnit		Washington;Thurston County
-ReportingUnit		Washington;Wahkiakum County
-ReportingUnit		Washington;Walla Walla County
-ReportingUnit		Washington;Whatcom County
-ReportingUnit		Washington;Whitman County
-ReportingUnit		Washington;Yakima County
+CandidateContest	WA House District 1	Legislative District 1 State Representative Pos. 1
+CandidateContest	WA House District 2	Legislative District 2 State Representative Pos. 1
+CandidateContest	WA House District 3	Legislative District 3 State Representative Pos. 1
+CandidateContest	WA House District 4	Legislative District 4 State Representative Pos. 1
+CandidateContest	WA House District 5	Legislative District 5 State Representative Pos. 1
+CandidateContest	WA House District 6	Legislative District 6 State Representative Pos. 1
+CandidateContest	WA House District 7	Legislative District 7 State Representative Pos. 1
+CandidateContest	WA House District 8	Legislative District 8 State Representative Pos. 1
+CandidateContest	WA House District 9	Legislative District 9 State Representative Pos. 1
+CandidateContest	WA House District 10	Legislative District 10 State Representative Pos. 1
+CandidateContest	WA House District 11	Legislative District 11 State Representative Pos. 1
+CandidateContest	WA House District 12	Legislative District 12 State Representative Pos. 1
+CandidateContest	WA House District 13	Legislative District 13 State Representative Pos. 1
+CandidateContest	WA House District 14	Legislative District 14 State Representative Pos. 1
+CandidateContest	WA House District 15	Legislative District 15 State Representative Pos. 1
+CandidateContest	WA House District 16	Legislative District 16 State Representative Pos. 1
+CandidateContest	WA House District 17	Legislative District 17 State Representative Pos. 1
+CandidateContest	WA House District 18	Legislative District 18 State Representative Pos. 1
+CandidateContest	WA House District 19	Legislative District 19 State Representative Pos. 1
+CandidateContest	WA House District 20	Legislative District 20 State Representative Pos. 1
+CandidateContest	WA House District 21	Legislative District 21 State Representative Pos. 1
+CandidateContest	WA House District 22	Legislative District 22 State Representative Pos. 1
+CandidateContest	WA House District 23	Legislative District 23 State Representative Pos. 1
+CandidateContest	WA House District 24	Legislative District 24 State Representative Pos. 1
+CandidateContest	WA House District 25	Legislative District 25 State Representative Pos. 1
+CandidateContest	WA House District 26	Legislative District 26 State Representative Pos. 1
+CandidateContest	WA House District 27	Legislative District 27 State Representative Pos. 1
+CandidateContest	WA House District 28	Legislative District 28 State Representative Pos. 1
+CandidateContest	WA House District 29	Legislative District 29 State Representative Pos. 1
+CandidateContest	WA House District 30	Legislative District 30 State Representative Pos. 1
+CandidateContest	WA House District 31	Legislative District 31 State Representative Pos. 1
+CandidateContest	WA House District 32	Legislative District 32 State Representative Pos. 1
+CandidateContest	WA House District 33	Legislative District 33 State Representative Pos. 1
+CandidateContest	WA House District 34	Legislative District 34 State Representative Pos. 1
+CandidateContest	WA House District 35	Legislative District 35 State Representative Pos. 1
+CandidateContest	WA House District 36	Legislative District 36 State Representative Pos. 1
+CandidateContest	WA House District 37	Legislative District 37 State Representative Pos. 1
+CandidateContest	WA House District 38	Legislative District 38 State Representative Pos. 1
+CandidateContest	WA House District 39	Legislative District 39 State Representative Pos. 1
+CandidateContest	WA House District 40	Legislative District 40 State Representative Pos. 1
+CandidateContest	WA House District 41	Legislative District 41 State Representative Pos. 1
+CandidateContest	WA House District 42	Legislative District 42 State Representative Pos. 1
+CandidateContest	WA House District 43	Legislative District 43 State Representative Pos. 1
+CandidateContest	WA House District 44	Legislative District 44 State Representative Pos. 1
+CandidateContest	WA House District 45	Legislative District 45 State Representative Pos. 1
+CandidateContest	WA House District 46	Legislative District 46 State Representative Pos. 1
+CandidateContest	WA House District 47	Legislative District 47 State Representative Pos. 1
+CandidateContest	WA House District 48	Legislative District 48 State Representative Pos. 1
+CandidateContest	WA House District 49	Legislative District 49 State Representative Pos. 1
+CandidateContest	WA House District 50	Legislative District 50 State Representative Pos. 1
+CandidateContest	WA House District 51	Legislative District 51 State Representative Pos. 1
+CandidateContest	WA House District 52	Legislative District 52 State Representative Pos. 1
+CandidateContest	WA House District 53	Legislative District 53 State Representative Pos. 1
+CandidateContest	WA House District 54	Legislative District 54 State Representative Pos. 1
+CandidateContest	WA House District 55	Legislative District 55 State Representative Pos. 1
+CandidateContest	WA House District 56	Legislative District 56 State Representative Pos. 1
+CandidateContest	WA House District 57	Legislative District 57 State Representative Pos. 1
+CandidateContest	WA House District 58	Legislative District 58 State Representative Pos. 1
+CandidateContest	WA House District 59	Legislative District 59 State Representative Pos. 1
+CandidateContest	WA House District 60	Legislative District 60 State Representative Pos. 1
+CandidateContest	WA House District 61	Legislative District 61 State Representative Pos. 1
+CandidateContest	WA House District 62	Legislative District 62 State Representative Pos. 1
+CandidateContest	WA House District 63	Legislative District 63 State Representative Pos. 1
+CandidateContest	WA House District 64	Legislative District 64 State Representative Pos. 1
+CandidateContest	WA House District 65	Legislative District 65 State Representative Pos. 1
+CandidateContest	WA House District 66	Legislative District 66 State Representative Pos. 1
+CandidateContest	WA House District 67	Legislative District 67 State Representative Pos. 1
+CandidateContest	WA House District 68	Legislative District 68 State Representative Pos. 1
+CandidateContest	WA House District 69	Legislative District 69 State Representative Pos. 1
+CandidateContest	WA House District 70	Legislative District 70 State Representative Pos. 1
+CandidateContest	WA House District 71	Legislative District 71 State Representative Pos. 1
+CandidateContest	WA House District 72	Legislative District 72 State Representative Pos. 1
+CandidateContest	WA House District 73	Legislative District 73 State Representative Pos. 1
+CandidateContest	WA House District 74	Legislative District 74 State Representative Pos. 1
+CandidateContest	WA House District 75	Legislative District 75 State Representative Pos. 1
+CandidateContest	WA House District 76	Legislative District 76 State Representative Pos. 1
+CandidateContest	WA House District 77	Legislative District 77 State Representative Pos. 1
+CandidateContest	WA House District 78	Legislative District 78 State Representative Pos. 1
+CandidateContest	WA House District 79	Legislative District 79 State Representative Pos. 1
+CandidateContest	WA House District 80	Legislative District 80 State Representative Pos. 1
+CandidateContest	WA House District 81	Legislative District 81 State Representative Pos. 1
+CandidateContest	WA House District 82	Legislative District 82 State Representative Pos. 1
+CandidateContest	WA House District 83	Legislative District 83 State Representative Pos. 1
+CandidateContest	WA House District 84	Legislative District 84 State Representative Pos. 1
+CandidateContest	WA House District 85	Legislative District 85 State Representative Pos. 1
+CandidateContest	WA House District 86	Legislative District 86 State Representative Pos. 1
+CandidateContest	WA House District 87	Legislative District 87 State Representative Pos. 1
+CandidateContest	WA House District 88	Legislative District 88 State Representative Pos. 1
+CandidateContest	WA House District 89	Legislative District 89 State Representative Pos. 1
+CandidateContest	WA House District 90	Legislative District 90 State Representative Pos. 1
+CandidateContest	WA House District 91	Legislative District 91 State Representative Pos. 1
+CandidateContest	WA House District 92	Legislative District 92 State Representative Pos. 1
+CandidateContest	WA House District 93	Legislative District 93 State Representative Pos. 1
+CandidateContest	WA House District 94	Legislative District 94 State Representative Pos. 1
+CandidateContest	WA House District 95	Legislative District 95 State Representative Pos. 1
+CandidateContest	WA House District 96	Legislative District 96 State Representative Pos. 1
+CandidateContest	WA House District 97	Legislative District 97 State Representative Pos. 1
+CandidateContest	WA House District 98	Legislative District 98 State Representative Pos. 1
+CandidateContest	WA Senate District 1	Legislative District 1 State Senator
+CandidateContest	WA Senate District 2	Legislative District 2 State Senator
+CandidateContest	WA Senate District 3	Legislative District 3 State Senator
+CandidateContest	WA Senate District 4	Legislative District 4 State Senator
+CandidateContest	WA Senate District 5	Legislative District 5 State Senator
+CandidateContest	WA Senate District 6	Legislative District 6 State Senator
+CandidateContest	WA Senate District 7	Legislative District 7 State Senator
+CandidateContest	WA Senate District 8	Legislative District 8 State Senator
+CandidateContest	WA Senate District 9	Legislative District 9 State Senator
+CandidateContest	WA Senate District 10	Legislative District 10 State Senator
+CandidateContest	WA Senate District 11	Legislative District 11 State Senator
+CandidateContest	WA Senate District 12	Legislative District 12 State Senator
+CandidateContest	WA Senate District 13	Legislative District 13 State Senator
+CandidateContest	WA Senate District 14	Legislative District 14 State Senator
+CandidateContest	WA Senate District 15	Legislative District 15 State Senator
+CandidateContest	WA Senate District 16	Legislative District 16 State Senator
+CandidateContest	WA Senate District 17	Legislative District 17 State Senator
+CandidateContest	WA Senate District 18	Legislative District 18 State Senator
+CandidateContest	WA Senate District 19	Legislative District 19 State Senator
+CandidateContest	WA Senate District 20	Legislative District 20 State Senator
+CandidateContest	WA Senate District 21	Legislative District 21 State Senator
+CandidateContest	WA Senate District 22	Legislative District 22 State Senator
+CandidateContest	WA Senate District 23	Legislative District 23 State Senator
+CandidateContest	WA Senate District 24	Legislative District 24 State Senator
+CandidateContest	WA Senate District 25	Legislative District 25 State Senator
+CandidateContest	WA Senate District 26	Legislative District 26 State Senator
+CandidateContest	WA Senate District 27	Legislative District 27 State Senator
+CandidateContest	WA Senate District 28	Legislative District 28 State Senator
+CandidateContest	WA Senate District 29	Legislative District 29 State Senator
+CandidateContest	WA Senate District 30	Legislative District 30 State Senator
+CandidateContest	WA Senate District 31	Legislative District 31 State Senator
+CandidateContest	WA Senate District 32	Legislative District 32 State Senator
+CandidateContest	WA Senate District 33	Legislative District 33 State Senator
+CandidateContest	WA Senate District 34	Legislative District 34 State Senator
+CandidateContest	WA Senate District 35	Legislative District 35 State Senator
+CandidateContest	WA Senate District 36	Legislative District 36 State Senator
+CandidateContest	WA Senate District 37	Legislative District 37 State Senator
+CandidateContest	WA Senate District 38	Legislative District 38 State Senator
+CandidateContest	WA Senate District 39	Legislative District 39 State Senator
+CandidateContest	WA Senate District 40	Legislative District 40 State Senator
+CandidateContest	WA Senate District 41	Legislative District 41 State Senator
+CandidateContest	WA Senate District 42	Legislative District 42 State Senator
+CandidateContest	WA Senate District 43	Legislative District 43 State Senator
+CandidateContest	WA Senate District 44	Legislative District 44 State Senator
+CandidateContest	WA Senate District 45	Legislative District 45 State Senator
+CandidateContest	WA Senate District 46	Legislative District 46 State Senator
+CandidateContest	WA Senate District 47	Legislative District 47 State Senator
+CandidateContest	WA Senate District 48	Legislative District 48 State Senator
+CandidateContest	WA Senate District 49	Legislative District 49 State Senator
+CandidateContest	US House WA District 1	Congressional District 1 U.S. Representative
+CandidateContest	US House WA District 2	Congressional District 2 U.S. Representative
+CandidateContest	US House WA District 3	Congressional District 3 U.S. Representative
+CandidateContest	US House WA District 4	Congressional District 4 U.S. Representative
+CandidateContest	US House WA District 5	Congressional District 5 U.S. Representative
+CandidateContest	US House WA District 6	Congressional District 6 U.S. Representative
+CandidateContest	US House WA District 7	Congressional District 7 U.S. Representative
+CandidateContest	US House WA District 8	Congressional District 8 U.S. Representative
+CandidateContest	US House WA District 9	Congressional District 9 U.S. Representative
+CandidateContest	US House WA District 10	Congressional District 10 U.S. Representative
+CandidateContest	US President (WA)	United States President/Vice President
+CandidateContest	US President (WA) (Democratic / Republican Party)	United States President Democratic Party
+CandidateContest	US President (WA) (Democratic / Republican Party)	United States President Republican Party
+CandidateContest	WA Governor	Washington State Governor
+CandidateContest	US Senate WA	United States U.S. Senator
+CandidateContest	WA Attorney General	Washington State Attorney General
+CandidateContest	WA Lieutenant Governor	Washington State Lt. Governor
+CandidateContest	WA Treasurer	Washington State State Treasurer
+CandidateContest	WA Secretary of State	Washington State Secretary of State
 Candidate	Hillary Clinton / Tim Kaine	Hillary Clinton / Tim Kaine
 Candidate	Donald J. Trump / Michael R. Pence	Donald J. Trump / Michael R. Pence
 Candidate	Alyson Kennedy / Osborne Hart	Alyson Kennedy / Osborne Hart
@@ -888,7 +851,7 @@ Candidate	James (Jim) McLaughlin	James (Jim) McLaughlin
 Candidate	Bill Benedict	Bill Benedict
 Candidate	Teresa Marchi	Teresa Marchi
 Candidate	Bill Peach	Bill Peach
-Candidate	Howard (Mike) Doherty, Jr.	Howard (Mike) Doherty, Jr.
+Candidate	"Howard (Mike) Doherty, Jr."	"Howard (Mike) Doherty, Jr."
 Candidate	Rebecca Glasgow	Rebecca Glasgow
 Candidate	Suzanne M.B. Hayden	Suzanne M.B. Hayden
 Candidate	John Black	John Black
@@ -900,7 +863,7 @@ Candidate	Sasha Bentley	Sasha Bentley
 Candidate	Gina Mosbrucker	Gina Mosbrucker
 Candidate	Liz Hallock	Liz Hallock
 Candidate	Tanisha Harris	Tanisha Harris
-Candidate	Damion E Jiles, Sr.	Damion E Jiles, Sr.
+Candidate	"Damion E Jiles, Sr."	"Damion E Jiles, Sr."
 Candidate	Chris Thobaben	Chris Thobaben
 Candidate	Larry A. Hoff	Larry A. Hoff
 Candidate	John Thompson	John Thompson
@@ -1166,7 +1129,7 @@ Candidate	Les Ponomarchuk	Les Ponomarchuk
 Candidate	Marcine Anderson	Marcine Anderson
 Candidate	Jason Poydras	Jason Poydras
 Candidate	Matthew York	Matthew York
-Candidate	Nathaniel B. Green, Jr.	Nathaniel B. Green, Jr.
+Candidate	"Nathaniel B. Green, Jr."	"Nathaniel B. Green, Jr."
 Candidate	Corinna Harn	Corinna Harn
 Candidate	Virginia M. Amato	Virginia M. Amato
 Candidate	Rhonda Laumann	Rhonda Laumann
@@ -1962,7 +1925,7 @@ Candidate	Janet Lodge	Janet Lodge
 Candidate	William Griffin	William Griffin
 Candidate	Jordan J. Olin	Jordan J. Olin
 Candidate	Sharon Murphin	Sharon Murphin
-Candidate	Richard W. Rylander, Jr.	Richard W. Rylander, Jr.
+Candidate	"Richard W. Rylander, Jr."	"Richard W. Rylander, Jr."
 Candidate	Joe L. Scott	Joe L. Scott
 Candidate	Igor Rybkin	Igor Rybkin
 Candidate	Robin Rulffes	Robin Rulffes
@@ -2243,7 +2206,7 @@ Candidate	Robert Dean Mair	Robert Dean Mair
 Candidate	Matthew Heines	Matthew Heines
 Candidate	Justin Smoak	Justin Smoak
 Candidate	Derek Chartrand	Derek Chartrand
-Candidate	Jeffrey Beeler, Sr.	Jeffrey Beeler, Sr.
+Candidate	"Jeffrey Beeler, Sr."	"Jeffrey Beeler, Sr."
 Candidate	Scott Sutherland	Scott Sutherland
 Candidate	Jack Hughes-Hageman	Jack Hughes-Hageman
 Candidate	Rick Lewis	Rick Lewis
@@ -2302,8 +2265,8 @@ Candidate	Jessi Murray	Jessi Murray
 Candidate	John P. Gibbons	John P. Gibbons
 Candidate	Eric J. Brown	Eric J. Brown
 Candidate	Kyle Lyebyedyev	Kyle Lyebyedyev
-Candidate	Peter Thompson, Jr.	Peter Thompson, Jr.
-Candidate	Joseph Cimaomo, Jr.	Joseph Cimaomo, Jr.
+Candidate	"Peter Thompson, Jr."	"Peter Thompson, Jr."
+Candidate	"Joseph Cimaomo, Jr."	"Joseph Cimaomo, Jr."
 Candidate	Scott Dusenbery	Scott Dusenbery
 Candidate	Victor H. Bishop	Victor H. Bishop
 Candidate	Morgan Puchek	Morgan Puchek
@@ -3358,7 +3321,7 @@ Candidate	Brad Sinsel	Brad Sinsel
 Candidate	Deanna Roy	Deanna Roy
 Candidate	Jason White	Jason White
 Candidate	Steve Painter	Steve Painter
-Candidate	Reynaldo Garza, Jr.	Reynaldo Garza, Jr.
+Candidate	"Reynaldo Garza, Jr."	"Reynaldo Garza, Jr."
 Candidate	Gary Hintze	Gary Hintze
 Candidate	Todd McClaskey	Todd McClaskey
 Candidate	TROY CLEMENTS	TROY CLEMENTS
@@ -3405,4 +3368,44 @@ Candidate	Jose Rocha	Jose Rocha
 Candidate	Lars Hanson	Lars Hanson
 Candidate	KATHLEEN ALTICK	KATHLEEN ALTICK
 Candidate	Lauri Palmer	Lauri Palmer
-Candidate	David R. Weyeneth, Sr.	David R. Weyeneth, Sr.
+Candidate	"David R. Weyeneth, Sr."	"David R. Weyeneth, Sr."
+CountItemType	total	total
+ReportingUnit	Washington;Adams County	Adams
+ReportingUnit	Washington;Asotin County	Asotin
+ReportingUnit	Washington;Benton County	Benton
+ReportingUnit	Washington;Chelan County	Chelan
+ReportingUnit	Washington;Clallam County	Clallam
+ReportingUnit	Washington;Clark County	Clark
+ReportingUnit	Washington;Columbia County	Columbia
+ReportingUnit	Washington;Cowlitz County	Cowlitz
+ReportingUnit	Washington;Douglas County	Douglas
+ReportingUnit	Washington;Ferry County	Ferry
+ReportingUnit	Washington;Franklin County	Franklin
+ReportingUnit	Washington;Garfield County	Garfield
+ReportingUnit	Washington;Grant County	Grant
+ReportingUnit	Washington;Grays Harbor County	Grays Harbor
+ReportingUnit	Washington;Island County	Island
+ReportingUnit	Washington;Jefferson County	Jefferson
+ReportingUnit	Washington;King County	King
+ReportingUnit	Washington;Kitsap County	Kitsap
+ReportingUnit	Washington;Kittitas County	Kittitas
+ReportingUnit	Washington;Klickitat County	Klickitat
+ReportingUnit	Washington;Lewis County	Lewis
+ReportingUnit	Washington;Lincoln County	Lincoln
+ReportingUnit	Washington;Mason County	Mason
+ReportingUnit	Washington;Okanogan County	Okanogan
+ReportingUnit	Washington;Pacific County	Pacific
+ReportingUnit	Washington;Pend Oreille County	Pend Oreille
+ReportingUnit	Washington;Pierce County	Pierce
+ReportingUnit	Washington;San Juan County	San Juan
+ReportingUnit	Washington;Skagit County	Skagit
+ReportingUnit	Washington;Skamania County	Skamania
+ReportingUnit	Washington;Snohomish County	Snohomish
+ReportingUnit	Washington;Spokane County	Spokane
+ReportingUnit	Washington;Stevens County	Stevens
+ReportingUnit	Washington;Thurston County	Thurston
+ReportingUnit	Washington;Wahkiakum County	Wahkiakum
+ReportingUnit	Washington;Walla Walla County	Walla Walla
+ReportingUnit	Washington;Whatcom County	Whatcom
+ReportingUnit	Washington;Whitman County	Whitman
+ReportingUnit	Washington;Yakima County	Yakima

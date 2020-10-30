@@ -19,7 +19,7 @@ def test_wa_statewide_totals_16(dbname):
     assert (e.contest_total(
             "2016 General",
             "Washington",
-            "Washington State Attorney General",
+            "WA Attorney General",
             dbname=dbname,
         )
             == 2979909
@@ -48,11 +48,3 @@ def test_wa_house_totals_16(dbname):
     )
 
 
-def test_wa_contest_by_vote_type_16(dbname):
-    # Vote type not available
-    assert True == True
-
-
-def test_wa_totals_match_vote_type_16(dbname):
-    # Vote type not available
-    assert True == True
