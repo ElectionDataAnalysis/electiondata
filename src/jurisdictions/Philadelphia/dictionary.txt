@@ -1,0 +1,3216 @@
+cdf_element	cdf_internal_name	raw_identifier_value
+CandidateContest	US President (PA) (Phila) (Democratic Party)	PRESIDENT OF THE UNITED STATES-DEM
+CandidateContest	US Senate PA (Phila) (Democratic Party)	UNITED STATES SENATOR-DEM
+CandidateContest	PA Attorney General (Phila) (Democratic Party)	ATTORNEY GENERAL-DEM
+CandidateContest	PA Auditor General (Phila) (Democratic Party)	AUDITOR GENERAL-DEM
+CandidateContest	PA Treasurer (Phila) (Democratic Party)	STATE TREASURER-DEM
+CandidateContest	PA Senate District 1 (Democratic Party)	SENATOR IN THE GENERAL ASSEMBLY-1ST-DEM
+CandidateContest	PA Senate District 2 (Democratic Party)	SENATOR IN THE GENERAL ASSEMBLY-2ND-DEM
+CandidateContest	PA Senate District 3 (Democratic Party)	SENATOR IN THE GENERAL ASSEMBLY-3RD-DEM
+CandidateContest	PA Senate District 4 (Phila) (Democratic Party)	SENATOR IN THE GENERAL ASSEMBLY-4TH-DEM
+CandidateContest	PA Senate District 5 (Democratic Party)	SENATOR IN THE GENERAL ASSEMBLY-5TH-DEM
+CandidateContest	PA Senate District 6 (Democratic Party)	SENATOR IN THE GENERAL ASSEMBLY-6TH-DEM
+CandidateContest	PA Senate District 7 (Phila) (Democratic Party)	SENATOR IN THE GENERAL ASSEMBLY-7TH-DEM
+CandidateContest	PA Senate District 8 (Phila) (Democratic Party)	SENATOR IN THE GENERAL ASSEMBLY-8TH-DEM
+CandidateContest	PA House District 152 (Phila) (Democratic Party)	REPRESENTATIVE IN THE GENERAL ASSEMBLY-152ND-DEM
+CandidateContest	PA House District 170 (Phila) (Democratic Party)	REPRESENTATIVE IN THE GENERAL ASSEMBLY-170TH-DEM
+CandidateContest	PA House District 172 (Phila) (Democratic Party)	REPRESENTATIVE IN THE GENERAL ASSEMBLY-172ND-DEM
+CandidateContest	PA House District 173 (Phila) (Democratic Party)	REPRESENTATIVE IN THE GENERAL ASSEMBLY-173RD-DEM
+CandidateContest	PA House District 174 (Phila) (Democratic Party)	REPRESENTATIVE IN THE GENERAL ASSEMBLY-174TH-DEM
+CandidateContest	PA House District 175 (Phila) (Democratic Party)	REPRESENTATIVE IN THE GENERAL ASSEMBLY-175TH-DEM
+CandidateContest	PA House District 177 (Phila) (Democratic Party)	REPRESENTATIVE IN THE GENERAL ASSEMBLY-177TH-DEM
+CandidateContest	PA House District 179 (Phila) (Democratic Party)	REPRESENTATIVE IN THE GENERAL ASSEMBLY-179TH-DEM
+CandidateContest	PA House District 180 (Phila) (Democratic Party)	REPRESENTATIVE IN THE GENERAL ASSEMBLY-180TH-DEM
+CandidateContest	PA House District 181 (Phila) (Democratic Party)	REPRESENTATIVE IN THE GENERAL ASSEMBLY-181ST-DEM
+CandidateContest	PA House District 182 (Phila) (Democratic Party)	REPRESENTATIVE IN THE GENERAL ASSEMBLY-182ND-DEM
+CandidateContest	PA House District 184 (Phila) (Democratic Party)	REPRESENTATIVE IN THE GENERAL ASSEMBLY-184TH-DEM
+CandidateContest	PA House District 185 (Phila) (Democratic Party)	REPRESENTATIVE IN THE GENERAL ASSEMBLY-185TH-DEM
+CandidateContest	PA House District 186 (Phila) (Democratic Party)	REPRESENTATIVE IN THE GENERAL ASSEMBLY-186TH-DEM
+CandidateContest	PA House District 188 (Phila) (Democratic Party)	REPRESENTATIVE IN THE GENERAL ASSEMBLY-188TH-DEM
+CandidateContest	PA House District 190 (Phila) (Democratic Party)	REPRESENTATIVE IN THE GENERAL ASSEMBLY-190TH-DEM
+CandidateContest	PA House District 191 (Phila) (Democratic Party)	REPRESENTATIVE IN THE GENERAL ASSEMBLY-191ST-DEM
+CandidateContest	PA House District 192 (Phila) (Democratic Party)	REPRESENTATIVE IN THE GENERAL ASSEMBLY-192ND-DEM
+CandidateContest	PA House District 194 (Phila) (Democratic Party)	REPRESENTATIVE IN THE GENERAL ASSEMBLY-194TH-DEM
+CandidateContest	PA House District 195 (Phila) (Democratic Party)	REPRESENTATIVE IN THE GENERAL ASSEMBLY-195TH-DEM
+CandidateContest	PA House District 197 (Phila) (Democratic Party)	REPRESENTATIVE IN THE GENERAL ASSEMBLY-197TH-DEM
+CandidateContest	PA House District 198 (Phila) (Democratic Party)	REPRESENTATIVE IN THE GENERAL ASSEMBLY-198TH-DEM
+CandidateContest	PA House District 200 (Phila) (Democratic Party)	REPRESENTATIVE IN THE GENERAL ASSEMBLY-200TH-DEM
+CandidateContest	PA House District 201 (Phila) (Democratic Party)	REPRESENTATIVE IN THE GENERAL ASSEMBLY-201ST-DEM
+CandidateContest	PA House District 202 (Phila) (Democratic Party)	REPRESENTATIVE IN THE GENERAL ASSEMBLY-202ND-DEM
+CandidateContest	PA House District 203 (Phila) (Democratic Party)	REPRESENTATIVE IN THE GENERAL ASSEMBLY-203RD-DEM
+CandidateContest	US House PA District 1 (Phila) (Democratic Party)	REPRESENTATIVE IN CONGRESS-1ST-DEM
+CandidateContest	US House PA District 2 (Phila) (Democratic Party)	REPRESENTATIVE IN CONGRESS-2ND-DEM
+CandidateContest	US House PA District 3 (Phila) (Democratic Party)	REPRESENTATIVE IN CONGRESS-3RD-DEM
+CandidateContest	US House PA District 5 (Phila) (Democratic Party)	REPRESENTATIVE IN CONGRESS-5TH-DEM
+CandidateContest	US House PA District 13 (Phila) (Democratic Party)	REPRESENTATIVE IN CONGRESS-13TH-DEM
+CandidateContest	US President (PA) (Phila) (Republican Party)	PRESIDENT OF THE UNITED STATES-REP
+CandidateContest	US Senate PA (Phila) (Republican Party)	UNITED STATES SENATOR-REP
+CandidateContest	PA Attorney General (Phila) (Republican Party)	ATTORNEY GENERAL-REP
+CandidateContest	PA Auditor General (Phila) (Republican Party)	AUDITOR GENERAL-REP
+CandidateContest	PA Treasurer (Phila) (Republican Party)	STATE TREASURER-REP
+CandidateContest	PA Senate District 1 (Republican Party)	SENATOR IN THE GENERAL ASSEMBLY-1ST-REP
+CandidateContest	PA Senate District 2 (Republican Party)	SENATOR IN THE GENERAL ASSEMBLY-2ND-REP
+CandidateContest	PA Senate District 3 (Republican Party)	SENATOR IN THE GENERAL ASSEMBLY-3RD-REP
+CandidateContest	PA Senate District 4 (Phila) (Republican Party)	SENATOR IN THE GENERAL ASSEMBLY-4TH-REP
+CandidateContest	PA Senate District 5 (Republican Party)	SENATOR IN THE GENERAL ASSEMBLY-5TH-REP
+CandidateContest	PA Senate District 6 (Republican Party)	SENATOR IN THE GENERAL ASSEMBLY-6TH-REP
+CandidateContest	PA Senate District 7 (Phila) (Republican Party)	SENATOR IN THE GENERAL ASSEMBLY-7TH-REP
+CandidateContest	PA Senate District 8 (Phila) (Republican Party)	SENATOR IN THE GENERAL ASSEMBLY-8TH-REP
+CandidateContest	PA House District 152 (Phila) (Republican Party)	REPRESENTATIVE IN THE GENERAL ASSEMBLY-152ND-REP
+CandidateContest	PA House District 170 (Phila) (Republican Party)	REPRESENTATIVE IN THE GENERAL ASSEMBLY-170TH-REP
+CandidateContest	PA House District 172 (Phila) (Republican Party)	REPRESENTATIVE IN THE GENERAL ASSEMBLY-172ND-REP
+CandidateContest	PA House District 173 (Phila) (Republican Party)	REPRESENTATIVE IN THE GENERAL ASSEMBLY-173RD-REP
+CandidateContest	PA House District 174 (Phila) (Republican Party)	REPRESENTATIVE IN THE GENERAL ASSEMBLY-174TH-REP
+CandidateContest	PA House District 175 (Phila) (Republican Party)	REPRESENTATIVE IN THE GENERAL ASSEMBLY-175TH-REP
+CandidateContest	PA House District 177 (Phila) (Republican Party)	REPRESENTATIVE IN THE GENERAL ASSEMBLY-177TH-REP
+CandidateContest	PA House District 179 (Phila) (Republican Party)	REPRESENTATIVE IN THE GENERAL ASSEMBLY-179TH-REP
+CandidateContest	PA House District 180 (Phila) (Republican Party)	REPRESENTATIVE IN THE GENERAL ASSEMBLY-180TH-REP
+CandidateContest	PA House District 181 (Phila) (Republican Party)	REPRESENTATIVE IN THE GENERAL ASSEMBLY-181ST-REP
+CandidateContest	PA House District 182 (Phila) (Republican Party)	REPRESENTATIVE IN THE GENERAL ASSEMBLY-182ND-REP
+CandidateContest	PA House District 184 (Phila) (Republican Party)	REPRESENTATIVE IN THE GENERAL ASSEMBLY-184TH-REP
+CandidateContest	PA House District 185 (Phila) (Republican Party)	REPRESENTATIVE IN THE GENERAL ASSEMBLY-185TH-REP
+CandidateContest	PA House District 186 (Phila) (Republican Party)	REPRESENTATIVE IN THE GENERAL ASSEMBLY-186TH-REP
+CandidateContest	PA House District 188 (Phila) (Republican Party)	REPRESENTATIVE IN THE GENERAL ASSEMBLY-188TH-REP
+CandidateContest	PA House District 190 (Phila) (Republican Party)	REPRESENTATIVE IN THE GENERAL ASSEMBLY-190TH-REP
+CandidateContest	PA House District 191 (Phila) (Republican Party)	REPRESENTATIVE IN THE GENERAL ASSEMBLY-191ST-REP
+CandidateContest	PA House District 192 (Phila) (Republican Party)	REPRESENTATIVE IN THE GENERAL ASSEMBLY-192ND-REP
+CandidateContest	PA House District 194 (Phila) (Republican Party)	REPRESENTATIVE IN THE GENERAL ASSEMBLY-194TH-REP
+CandidateContest	PA House District 195 (Phila) (Republican Party)	REPRESENTATIVE IN THE GENERAL ASSEMBLY-195TH-REP
+CandidateContest	PA House District 197 (Phila) (Republican Party)	REPRESENTATIVE IN THE GENERAL ASSEMBLY-197TH-REP
+CandidateContest	PA House District 198 (Phila) (Republican Party)	REPRESENTATIVE IN THE GENERAL ASSEMBLY-198TH-REP
+CandidateContest	PA House District 200 (Phila) (Republican Party)	REPRESENTATIVE IN THE GENERAL ASSEMBLY-200TH-REP
+CandidateContest	PA House District 201 (Phila) (Republican Party)	REPRESENTATIVE IN THE GENERAL ASSEMBLY-201ST-REP
+CandidateContest	PA House District 202 (Phila) (Republican Party)	REPRESENTATIVE IN THE GENERAL ASSEMBLY-202ND-REP
+CandidateContest	PA House District 203 (Phila) (Republican Party)	REPRESENTATIVE IN THE GENERAL ASSEMBLY-203RD-REP
+CandidateContest	US House PA District 1 (Phila) (Republican Party)	REPRESENTATIVE IN CONGRESS-1ST-REP
+CandidateContest	US House PA District 2 (Phila) (Republican Party)	REPRESENTATIVE IN CONGRESS-2ND-REP
+CandidateContest	US House PA District 3 (Phila) (Republican Party)	REPRESENTATIVE IN CONGRESS-3RD-REP
+CandidateContest	US House PA District 5 (Phila) (Republican Party)	REPRESENTATIVE IN CONGRESS-5TH-REP
+CandidateContest	US House PA District 13 (Phila) (Republican Party)	REPRESENTATIVE IN CONGRESS-13TH-REP
+CandidateContest	US President (PA) (Phila) (Green Party)	PRESIDENT OF THE UNITED STATES-GRE
+CandidateContest	US Senate PA (Phila) (Green Party)	UNITED STATES SENATOR-GRE
+CandidateContest	PA Attorney General (Phila) (Green Party)	ATTORNEY GENERAL-GRE
+CandidateContest	PA Auditor General (Phila) (Green Party)	AUDITOR GENERAL-GRE
+CandidateContest	PA Treasurer (Phila) (Green Party)	STATE TREASURER-GRE
+CandidateContest	PA Senate District 1 (Green Party)	SENATOR IN THE GENERAL ASSEMBLY-1ST-GRE
+CandidateContest	PA Senate District 2 (Green Party)	SENATOR IN THE GENERAL ASSEMBLY-2ND-GRE
+CandidateContest	PA Senate District 3 (Green Party)	SENATOR IN THE GENERAL ASSEMBLY-3RD-GRE
+CandidateContest	PA Senate District 4 (Phila) (Green Party)	SENATOR IN THE GENERAL ASSEMBLY-4TH-GRE
+CandidateContest	PA Senate District 5 (Green Party)	SENATOR IN THE GENERAL ASSEMBLY-5TH-GRE
+CandidateContest	PA Senate District 6 (Green Party)	SENATOR IN THE GENERAL ASSEMBLY-6TH-GRE
+CandidateContest	PA Senate District 7 (Phila) (Green Party)	SENATOR IN THE GENERAL ASSEMBLY-7TH-GRE
+CandidateContest	PA Senate District 8 (Phila) (Green Party)	SENATOR IN THE GENERAL ASSEMBLY-8TH-GRE
+CandidateContest	PA House District 152 (Phila) (Green Party)	REPRESENTATIVE IN THE GENERAL ASSEMBLY-152ND-GRE
+CandidateContest	PA House District 170 (Phila) (Green Party)	REPRESENTATIVE IN THE GENERAL ASSEMBLY-170TH-GRE
+CandidateContest	PA House District 172 (Phila) (Green Party)	REPRESENTATIVE IN THE GENERAL ASSEMBLY-172ND-GRE
+CandidateContest	PA House District 173 (Phila) (Green Party)	REPRESENTATIVE IN THE GENERAL ASSEMBLY-173RD-GRE
+CandidateContest	PA House District 174 (Phila) (Green Party)	REPRESENTATIVE IN THE GENERAL ASSEMBLY-174TH-GRE
+CandidateContest	PA House District 175 (Phila) (Green Party)	REPRESENTATIVE IN THE GENERAL ASSEMBLY-175TH-GRE
+CandidateContest	PA House District 177 (Phila) (Green Party)	REPRESENTATIVE IN THE GENERAL ASSEMBLY-177TH-GRE
+CandidateContest	PA House District 179 (Phila) (Green Party)	REPRESENTATIVE IN THE GENERAL ASSEMBLY-179TH-GRE
+CandidateContest	PA House District 180 (Phila) (Green Party)	REPRESENTATIVE IN THE GENERAL ASSEMBLY-180TH-GRE
+CandidateContest	PA House District 181 (Phila) (Green Party)	REPRESENTATIVE IN THE GENERAL ASSEMBLY-181ST-GRE
+CandidateContest	PA House District 182 (Phila) (Green Party)	REPRESENTATIVE IN THE GENERAL ASSEMBLY-182ND-GRE
+CandidateContest	PA House District 184 (Phila) (Green Party)	REPRESENTATIVE IN THE GENERAL ASSEMBLY-184TH-GRE
+CandidateContest	PA House District 185 (Phila) (Green Party)	REPRESENTATIVE IN THE GENERAL ASSEMBLY-185TH-GRE
+CandidateContest	PA House District 186 (Phila) (Green Party)	REPRESENTATIVE IN THE GENERAL ASSEMBLY-186TH-GRE
+CandidateContest	PA House District 188 (Phila) (Green Party)	REPRESENTATIVE IN THE GENERAL ASSEMBLY-188TH-GRE
+CandidateContest	PA House District 190 (Phila) (Green Party)	REPRESENTATIVE IN THE GENERAL ASSEMBLY-190TH-GRE
+CandidateContest	PA House District 191 (Phila) (Green Party)	REPRESENTATIVE IN THE GENERAL ASSEMBLY-191ST-GRE
+CandidateContest	PA House District 192 (Phila) (Green Party)	REPRESENTATIVE IN THE GENERAL ASSEMBLY-192ND-GRE
+CandidateContest	PA House District 194 (Phila) (Green Party)	REPRESENTATIVE IN THE GENERAL ASSEMBLY-194TH-GRE
+CandidateContest	PA House District 195 (Phila) (Green Party)	REPRESENTATIVE IN THE GENERAL ASSEMBLY-195TH-GRE
+CandidateContest	PA House District 197 (Phila) (Green Party)	REPRESENTATIVE IN THE GENERAL ASSEMBLY-197TH-GRE
+CandidateContest	PA House District 198 (Phila) (Green Party)	REPRESENTATIVE IN THE GENERAL ASSEMBLY-198TH-GRE
+CandidateContest	PA House District 200 (Phila) (Green Party)	REPRESENTATIVE IN THE GENERAL ASSEMBLY-200TH-GRE
+CandidateContest	PA House District 201 (Phila) (Green Party)	REPRESENTATIVE IN THE GENERAL ASSEMBLY-201ST-GRE
+CandidateContest	PA House District 202 (Phila) (Green Party)	REPRESENTATIVE IN THE GENERAL ASSEMBLY-202ND-GRE
+CandidateContest	PA House District 203 (Phila) (Green Party)	REPRESENTATIVE IN THE GENERAL ASSEMBLY-203RD-GRE
+CandidateContest	US House PA District 1 (Phila) (Green Party)	REPRESENTATIVE IN CONGRESS-1ST-GRE
+CandidateContest	US House PA District 2 (Phila) (Green Party)	REPRESENTATIVE IN CONGRESS-2ND-GRE
+CandidateContest	US House PA District 3 (Phila) (Green Party)	REPRESENTATIVE IN CONGRESS-3RD-GRE
+CandidateContest	US House PA District 5 (Phila) (Green Party)	REPRESENTATIVE IN CONGRESS-5TH-GRE
+CandidateContest	US House PA District 13 (Phila) (Green Party)	REPRESENTATIVE IN CONGRESS-13TH-GRE
+CandidateContest	US President (PA) (Phila) (Libertarian Party)	PRESIDENT OF THE UNITED STATES-LIB
+CandidateContest	US Senate PA (Phila) (Libertarian Party)	UNITED STATES SENATOR-LIB
+CandidateContest	PA Attorney General (Phila) (Libertarian Party)	ATTORNEY GENERAL-LIB
+CandidateContest	PA Auditor General (Phila) (Libertarian Party)	AUDITOR GENERAL-LIB
+CandidateContest	PA Treasurer (Phila) (Libertarian Party)	STATE TREASURER-LIB
+CandidateContest	PA Senate District 1 (Libertarian Party)	SENATOR IN THE GENERAL ASSEMBLY-1ST-LIB
+CandidateContest	PA Senate District 2 (Libertarian Party)	SENATOR IN THE GENERAL ASSEMBLY-2ND-LIB
+CandidateContest	PA Senate District 3 (Libertarian Party)	SENATOR IN THE GENERAL ASSEMBLY-3RD-LIB
+CandidateContest	PA Senate District 4 (Phila) (Libertarian Party)	SENATOR IN THE GENERAL ASSEMBLY-4TH-LIB
+CandidateContest	PA Senate District 5 (Libertarian Party)	SENATOR IN THE GENERAL ASSEMBLY-5TH-LIB
+CandidateContest	PA Senate District 6 (Libertarian Party)	SENATOR IN THE GENERAL ASSEMBLY-6TH-LIB
+CandidateContest	PA Senate District 7 (Phila) (Libertarian Party)	SENATOR IN THE GENERAL ASSEMBLY-7TH-LIB
+CandidateContest	PA Senate District 8 (Phila) (Libertarian Party)	SENATOR IN THE GENERAL ASSEMBLY-8TH-LIB
+CandidateContest	PA House District 152 (Phila) (Libertarian Party)	REPRESENTATIVE IN THE GENERAL ASSEMBLY-152ND-LIB
+CandidateContest	PA House District 170 (Phila) (Libertarian Party)	REPRESENTATIVE IN THE GENERAL ASSEMBLY-170TH-LIB
+CandidateContest	PA House District 172 (Phila) (Libertarian Party)	REPRESENTATIVE IN THE GENERAL ASSEMBLY-172ND-LIB
+CandidateContest	PA House District 173 (Phila) (Libertarian Party)	REPRESENTATIVE IN THE GENERAL ASSEMBLY-173RD-LIB
+CandidateContest	PA House District 174 (Phila) (Libertarian Party)	REPRESENTATIVE IN THE GENERAL ASSEMBLY-174TH-LIB
+CandidateContest	PA House District 175 (Phila) (Libertarian Party)	REPRESENTATIVE IN THE GENERAL ASSEMBLY-175TH-LIB
+CandidateContest	PA House District 177 (Phila) (Libertarian Party)	REPRESENTATIVE IN THE GENERAL ASSEMBLY-177TH-LIB
+CandidateContest	PA House District 179 (Phila) (Libertarian Party)	REPRESENTATIVE IN THE GENERAL ASSEMBLY-179TH-LIB
+CandidateContest	PA House District 180 (Phila) (Libertarian Party)	REPRESENTATIVE IN THE GENERAL ASSEMBLY-180TH-LIB
+CandidateContest	PA House District 181 (Phila) (Libertarian Party)	REPRESENTATIVE IN THE GENERAL ASSEMBLY-181ST-LIB
+CandidateContest	PA House District 182 (Phila) (Libertarian Party)	REPRESENTATIVE IN THE GENERAL ASSEMBLY-182ND-LIB
+CandidateContest	PA House District 184 (Phila) (Libertarian Party)	REPRESENTATIVE IN THE GENERAL ASSEMBLY-184TH-LIB
+CandidateContest	PA House District 185 (Phila) (Libertarian Party)	REPRESENTATIVE IN THE GENERAL ASSEMBLY-185TH-LIB
+CandidateContest	PA House District 186 (Phila) (Libertarian Party)	REPRESENTATIVE IN THE GENERAL ASSEMBLY-186TH-LIB
+CandidateContest	PA House District 188 (Phila) (Libertarian Party)	REPRESENTATIVE IN THE GENERAL ASSEMBLY-188TH-LIB
+CandidateContest	PA House District 190 (Phila) (Libertarian Party)	REPRESENTATIVE IN THE GENERAL ASSEMBLY-190TH-LIB
+CandidateContest	PA House District 191 (Phila) (Libertarian Party)	REPRESENTATIVE IN THE GENERAL ASSEMBLY-191ST-LIB
+CandidateContest	PA House District 192 (Phila) (Libertarian Party)	REPRESENTATIVE IN THE GENERAL ASSEMBLY-192ND-LIB
+CandidateContest	PA House District 194 (Phila) (Libertarian Party)	REPRESENTATIVE IN THE GENERAL ASSEMBLY-194TH-LIB
+CandidateContest	PA House District 195 (Phila) (Libertarian Party)	REPRESENTATIVE IN THE GENERAL ASSEMBLY-195TH-LIB
+CandidateContest	PA House District 197 (Phila) (Libertarian Party)	REPRESENTATIVE IN THE GENERAL ASSEMBLY-197TH-LIB
+CandidateContest	PA House District 198 (Phila) (Libertarian Party)	REPRESENTATIVE IN THE GENERAL ASSEMBLY-198TH-LIB
+CandidateContest	PA House District 200 (Phila) (Libertarian Party)	REPRESENTATIVE IN THE GENERAL ASSEMBLY-200TH-LIB
+CandidateContest	PA House District 201 (Phila) (Libertarian Party)	REPRESENTATIVE IN THE GENERAL ASSEMBLY-201ST-LIB
+CandidateContest	PA House District 202 (Phila) (Libertarian Party)	REPRESENTATIVE IN THE GENERAL ASSEMBLY-202ND-LIB
+CandidateContest	PA House District 203 (Phila) (Libertarian Party)	REPRESENTATIVE IN THE GENERAL ASSEMBLY-203RD-LIB
+CandidateContest	US House PA District 1 (Phila) (Libertarian Party)	REPRESENTATIVE IN CONGRESS-1ST-LIB
+CandidateContest	US House PA District 2 (Phila) (Libertarian Party)	REPRESENTATIVE IN CONGRESS-2ND-LIB
+CandidateContest	US House PA District 3 (Phila) (Libertarian Party)	REPRESENTATIVE IN CONGRESS-3RD-LIB
+CandidateContest	US House PA District 5 (Phila) (Libertarian Party)	REPRESENTATIVE IN CONGRESS-5TH-LIB
+CandidateContest	US House PA District 13 (Phila) (Libertarian Party)	REPRESENTATIVE IN CONGRESS-13TH-LIB
+CandidateContest	US President (PA) (Phila) (Independent)	PRESIDENT OF THE UNITED STATES-IND
+CandidateContest	US Senate PA (Phila) (Independent)	UNITED STATES SENATOR-IND
+CandidateContest	PA Attorney General (Phila) (Independent)	ATTORNEY GENERAL-IND
+CandidateContest	PA Auditor General (Phila) (Independent)	AUDITOR GENERAL-IND
+CandidateContest	PA Treasurer (Phila) (Independent)	STATE TREASURER-IND
+CandidateContest	PA Senate District 1 (Independent)	SENATOR IN THE GENERAL ASSEMBLY-1ST-IND
+CandidateContest	PA Senate District 2 (Independent)	SENATOR IN THE GENERAL ASSEMBLY-2ND-IND
+CandidateContest	PA Senate District 3 (Independent)	SENATOR IN THE GENERAL ASSEMBLY-3RD-IND
+CandidateContest	PA Senate District 4 (Phila) (Independent)	SENATOR IN THE GENERAL ASSEMBLY-4TH-IND
+CandidateContest	PA Senate District 5 (Independent)	SENATOR IN THE GENERAL ASSEMBLY-5TH-IND
+CandidateContest	PA Senate District 6 (Independent)	SENATOR IN THE GENERAL ASSEMBLY-6TH-IND
+CandidateContest	PA Senate District 7 (Phila) (Independent)	SENATOR IN THE GENERAL ASSEMBLY-7TH-IND
+CandidateContest	PA Senate District 8 (Phila) (Independent)	SENATOR IN THE GENERAL ASSEMBLY-8TH-IND
+CandidateContest	PA House District 152 (Phila) (Independent)	REPRESENTATIVE IN THE GENERAL ASSEMBLY-152ND-IND
+CandidateContest	PA House District 170 (Phila) (Independent)	REPRESENTATIVE IN THE GENERAL ASSEMBLY-170TH-IND
+CandidateContest	PA House District 172 (Phila) (Independent)	REPRESENTATIVE IN THE GENERAL ASSEMBLY-172ND-IND
+CandidateContest	PA House District 173 (Phila) (Independent)	REPRESENTATIVE IN THE GENERAL ASSEMBLY-173RD-IND
+CandidateContest	PA House District 174 (Phila) (Independent)	REPRESENTATIVE IN THE GENERAL ASSEMBLY-174TH-IND
+CandidateContest	PA House District 175 (Phila) (Independent)	REPRESENTATIVE IN THE GENERAL ASSEMBLY-175TH-IND
+CandidateContest	PA House District 177 (Phila) (Independent)	REPRESENTATIVE IN THE GENERAL ASSEMBLY-177TH-IND
+CandidateContest	PA House District 179 (Phila) (Independent)	REPRESENTATIVE IN THE GENERAL ASSEMBLY-179TH-IND
+CandidateContest	PA House District 180 (Phila) (Independent)	REPRESENTATIVE IN THE GENERAL ASSEMBLY-180TH-IND
+CandidateContest	PA House District 181 (Phila) (Independent)	REPRESENTATIVE IN THE GENERAL ASSEMBLY-181ST-IND
+CandidateContest	PA House District 182 (Phila) (Independent)	REPRESENTATIVE IN THE GENERAL ASSEMBLY-182ND-IND
+CandidateContest	PA House District 184 (Phila) (Independent)	REPRESENTATIVE IN THE GENERAL ASSEMBLY-184TH-IND
+CandidateContest	PA House District 185 (Phila) (Independent)	REPRESENTATIVE IN THE GENERAL ASSEMBLY-185TH-IND
+CandidateContest	PA House District 186 (Phila) (Independent)	REPRESENTATIVE IN THE GENERAL ASSEMBLY-186TH-IND
+CandidateContest	PA House District 188 (Phila) (Independent)	REPRESENTATIVE IN THE GENERAL ASSEMBLY-188TH-IND
+CandidateContest	PA House District 190 (Phila) (Independent)	REPRESENTATIVE IN THE GENERAL ASSEMBLY-190TH-IND
+CandidateContest	PA House District 191 (Phila) (Independent)	REPRESENTATIVE IN THE GENERAL ASSEMBLY-191ST-IND
+CandidateContest	PA House District 192 (Phila) (Independent)	REPRESENTATIVE IN THE GENERAL ASSEMBLY-192ND-IND
+CandidateContest	PA House District 194 (Phila) (Independent)	REPRESENTATIVE IN THE GENERAL ASSEMBLY-194TH-IND
+CandidateContest	PA House District 195 (Phila) (Independent)	REPRESENTATIVE IN THE GENERAL ASSEMBLY-195TH-IND
+CandidateContest	PA House District 197 (Phila) (Independent)	REPRESENTATIVE IN THE GENERAL ASSEMBLY-197TH-IND
+CandidateContest	PA House District 198 (Phila) (Independent)	REPRESENTATIVE IN THE GENERAL ASSEMBLY-198TH-IND
+CandidateContest	PA House District 200 (Phila) (Independent)	REPRESENTATIVE IN THE GENERAL ASSEMBLY-200TH-IND
+CandidateContest	PA House District 201 (Phila) (Independent)	REPRESENTATIVE IN THE GENERAL ASSEMBLY-201ST-IND
+CandidateContest	PA House District 202 (Phila) (Independent)	REPRESENTATIVE IN THE GENERAL ASSEMBLY-202ND-IND
+CandidateContest	PA House District 203 (Phila) (Independent)	REPRESENTATIVE IN THE GENERAL ASSEMBLY-203RD-IND
+CandidateContest	US House PA District 1 (Phila) (Independent)	REPRESENTATIVE IN CONGRESS-1ST-IND
+CandidateContest	US House PA District 2 (Phila) (Independent)	REPRESENTATIVE IN CONGRESS-2ND-IND
+CandidateContest	US House PA District 3 (Phila) (Independent)	REPRESENTATIVE IN CONGRESS-3RD-IND
+CandidateContest	US House PA District 5 (Phila) (Independent)	REPRESENTATIVE IN CONGRESS-5TH-IND
+CandidateContest	US House PA District 13 (Phila) (Independent)	REPRESENTATIVE IN CONGRESS-13TH-IND
+ReportingUnit	Philadelphia;Ward 1	1
+ReportingUnit	Philadelphia;Ward 1	01
+ReportingUnit	Philadelphia;Ward 2	2
+ReportingUnit	Philadelphia;Ward 2	02
+ReportingUnit	Philadelphia;Ward 3	3
+ReportingUnit	Philadelphia;Ward 3	03
+ReportingUnit	Philadelphia;Ward 4	4
+ReportingUnit	Philadelphia;Ward 4	04
+ReportingUnit	Philadelphia;Ward 5	5
+ReportingUnit	Philadelphia;Ward 5	05
+ReportingUnit	Philadelphia;Ward 6	6
+ReportingUnit	Philadelphia;Ward 6	06
+ReportingUnit	Philadelphia;Ward 7	7
+ReportingUnit	Philadelphia;Ward 7	07
+ReportingUnit	Philadelphia;Ward 8	8
+ReportingUnit	Philadelphia;Ward 8	08
+ReportingUnit	Philadelphia;Ward 9	9
+ReportingUnit	Philadelphia;Ward 9	09
+ReportingUnit	Philadelphia;Ward 10	10
+ReportingUnit	Philadelphia;Ward 11	11
+ReportingUnit	Philadelphia;Ward 12	12
+ReportingUnit	Philadelphia;Ward 13	13
+ReportingUnit	Philadelphia;Ward 14	14
+ReportingUnit	Philadelphia;Ward 15	15
+ReportingUnit	Philadelphia;Ward 16	16
+ReportingUnit	Philadelphia;Ward 17	17
+ReportingUnit	Philadelphia;Ward 18	18
+ReportingUnit	Philadelphia;Ward 19	19
+ReportingUnit	Philadelphia;Ward 20	20
+ReportingUnit	Philadelphia;Ward 21	21
+ReportingUnit	Philadelphia;Ward 22	22
+ReportingUnit	Philadelphia;Ward 23	23
+ReportingUnit	Philadelphia;Ward 24	24
+ReportingUnit	Philadelphia;Ward 25	25
+ReportingUnit	Philadelphia;Ward 26	26
+ReportingUnit	Philadelphia;Ward 27	27
+ReportingUnit	Philadelphia;Ward 28	28
+ReportingUnit	Philadelphia;Ward 29	29
+ReportingUnit	Philadelphia;Ward 30	30
+ReportingUnit	Philadelphia;Ward 31	31
+ReportingUnit	Philadelphia;Ward 32	32
+ReportingUnit	Philadelphia;Ward 33	33
+ReportingUnit	Philadelphia;Ward 34	34
+ReportingUnit	Philadelphia;Ward 35	35
+ReportingUnit	Philadelphia;Ward 36	36
+ReportingUnit	Philadelphia;Ward 37	37
+ReportingUnit	Philadelphia;Ward 38	38
+ReportingUnit	Philadelphia;Ward 39	39
+ReportingUnit	Philadelphia;Ward 40	40
+ReportingUnit	Philadelphia;Ward 41	41
+ReportingUnit	Philadelphia;Ward 42	42
+ReportingUnit	Philadelphia;Ward 43	43
+ReportingUnit	Philadelphia;Ward 44	44
+ReportingUnit	Philadelphia;Ward 45	45
+ReportingUnit	Philadelphia;Ward 46	46
+ReportingUnit	Philadelphia;Ward 47	47
+ReportingUnit	Philadelphia;Ward 48	48
+ReportingUnit	Philadelphia;Ward 49	49
+ReportingUnit	Philadelphia;Ward 50	50
+ReportingUnit	Philadelphia;Ward 51	51
+ReportingUnit	Philadelphia;Ward 52	52
+ReportingUnit	Philadelphia;Ward 53	53
+ReportingUnit	Philadelphia;Ward 54	54
+ReportingUnit	Philadelphia;Ward 55	55
+ReportingUnit	Philadelphia;Ward 56	56
+ReportingUnit	Philadelphia;Ward 57	57
+ReportingUnit	Philadelphia;Ward 58	58
+ReportingUnit	Philadelphia;Ward 59	59
+ReportingUnit	Philadelphia;Ward 60	60
+ReportingUnit	Philadelphia;Ward 61	61
+ReportingUnit	Philadelphia;Ward 62	62
+ReportingUnit	Philadelphia;Ward 63	63
+ReportingUnit	Philadelphia;Ward 64	64
+ReportingUnit	Philadelphia;Ward 65	65
+ReportingUnit	Philadelphia;Ward 66	66
+ReportingUnit	Philadelphia;Notional Ward 99	99
+ReportingUnit	Philadelphia;Notional Ward 99;Division 2	99;2
+ReportingUnit	Philadelphia;Notional Ward 99;Division 2	99;02
+ReportingUnit	Philadelphia;Notional Ward 99;Division 3	99;3
+ReportingUnit	Philadelphia;Notional Ward 99;Division 3	99;03
+ReportingUnit	Philadelphia;Notional Ward 99;Division 5	99;5
+ReportingUnit	Philadelphia;Notional Ward 99;Division 5	99;05
+ReportingUnit	Philadelphia;Ward 1;Division 1	01;1
+ReportingUnit	Philadelphia;Ward 1;Division 1	1;1
+ReportingUnit	Philadelphia;Ward 1;Division 1	01;01
+ReportingUnit	Philadelphia;Ward 1;Division 1	1;01
+ReportingUnit	Philadelphia;Ward 1;Division 2	01;2
+ReportingUnit	Philadelphia;Ward 1;Division 2	1;2
+ReportingUnit	Philadelphia;Ward 1;Division 2	01;02
+ReportingUnit	Philadelphia;Ward 1;Division 2	1;02
+ReportingUnit	Philadelphia;Ward 1;Division 3	01;3
+ReportingUnit	Philadelphia;Ward 1;Division 3	1;3
+ReportingUnit	Philadelphia;Ward 1;Division 3	01;03
+ReportingUnit	Philadelphia;Ward 1;Division 3	1;03
+ReportingUnit	Philadelphia;Ward 1;Division 4	01;4
+ReportingUnit	Philadelphia;Ward 1;Division 4	1;4
+ReportingUnit	Philadelphia;Ward 1;Division 4	01;04
+ReportingUnit	Philadelphia;Ward 1;Division 4	1;04
+ReportingUnit	Philadelphia;Ward 1;Division 5	01;5
+ReportingUnit	Philadelphia;Ward 1;Division 5	1;5
+ReportingUnit	Philadelphia;Ward 1;Division 5	01;05
+ReportingUnit	Philadelphia;Ward 1;Division 5	1;05
+ReportingUnit	Philadelphia;Ward 1;Division 6	01;6
+ReportingUnit	Philadelphia;Ward 1;Division 6	1;6
+ReportingUnit	Philadelphia;Ward 1;Division 6	01;06
+ReportingUnit	Philadelphia;Ward 1;Division 6	1;06
+ReportingUnit	Philadelphia;Ward 1;Division 7	01;7
+ReportingUnit	Philadelphia;Ward 1;Division 7	1;7
+ReportingUnit	Philadelphia;Ward 1;Division 7	01;07
+ReportingUnit	Philadelphia;Ward 1;Division 7	1;07
+ReportingUnit	Philadelphia;Ward 1;Division 8	01;8
+ReportingUnit	Philadelphia;Ward 1;Division 8	1;8
+ReportingUnit	Philadelphia;Ward 1;Division 8	01;08
+ReportingUnit	Philadelphia;Ward 1;Division 8	1;08
+ReportingUnit	Philadelphia;Ward 1;Division 9	01;9
+ReportingUnit	Philadelphia;Ward 1;Division 9	1;9
+ReportingUnit	Philadelphia;Ward 1;Division 9	01;09
+ReportingUnit	Philadelphia;Ward 1;Division 9	1;09
+ReportingUnit	Philadelphia;Ward 1;Division 10	01;10
+ReportingUnit	Philadelphia;Ward 1;Division 10	1;10
+ReportingUnit	Philadelphia;Ward 1;Division 11	01;11
+ReportingUnit	Philadelphia;Ward 1;Division 11	1;11
+ReportingUnit	Philadelphia;Ward 1;Division 12	01;12
+ReportingUnit	Philadelphia;Ward 1;Division 12	1;12
+ReportingUnit	Philadelphia;Ward 1;Division 13	01;13
+ReportingUnit	Philadelphia;Ward 1;Division 13	1;13
+ReportingUnit	Philadelphia;Ward 1;Division 14	01;14
+ReportingUnit	Philadelphia;Ward 1;Division 14	1;14
+ReportingUnit	Philadelphia;Ward 1;Division 15	01;15
+ReportingUnit	Philadelphia;Ward 1;Division 15	1;15
+ReportingUnit	Philadelphia;Ward 1;Division 16	01;16
+ReportingUnit	Philadelphia;Ward 1;Division 16	1;16
+ReportingUnit	Philadelphia;Ward 1;Division 17	01;17
+ReportingUnit	Philadelphia;Ward 1;Division 17	1;17
+ReportingUnit	Philadelphia;Ward 1;Division 18	01;18
+ReportingUnit	Philadelphia;Ward 1;Division 18	1;18
+ReportingUnit	Philadelphia;Ward 1;Division 19	01;19
+ReportingUnit	Philadelphia;Ward 1;Division 19	1;19
+ReportingUnit	Philadelphia;Ward 1;Division 20	01;20
+ReportingUnit	Philadelphia;Ward 1;Division 20	1;20
+ReportingUnit	Philadelphia;Ward 1;Division 21	01;21
+ReportingUnit	Philadelphia;Ward 1;Division 21	1;21
+ReportingUnit	Philadelphia;Ward 2;Division 1	02;1
+ReportingUnit	Philadelphia;Ward 2;Division 1	2;1
+ReportingUnit	Philadelphia;Ward 2;Division 1	02;01
+ReportingUnit	Philadelphia;Ward 2;Division 1	2;01
+ReportingUnit	Philadelphia;Ward 2;Division 2	02;2
+ReportingUnit	Philadelphia;Ward 2;Division 2	2;2
+ReportingUnit	Philadelphia;Ward 2;Division 2	02;02
+ReportingUnit	Philadelphia;Ward 2;Division 2	2;02
+ReportingUnit	Philadelphia;Ward 2;Division 3	02;3
+ReportingUnit	Philadelphia;Ward 2;Division 3	2;3
+ReportingUnit	Philadelphia;Ward 2;Division 3	02;03
+ReportingUnit	Philadelphia;Ward 2;Division 3	2;03
+ReportingUnit	Philadelphia;Ward 2;Division 4	02;4
+ReportingUnit	Philadelphia;Ward 2;Division 4	2;4
+ReportingUnit	Philadelphia;Ward 2;Division 4	02;04
+ReportingUnit	Philadelphia;Ward 2;Division 4	2;04
+ReportingUnit	Philadelphia;Ward 2;Division 5	02;5
+ReportingUnit	Philadelphia;Ward 2;Division 5	2;5
+ReportingUnit	Philadelphia;Ward 2;Division 5	02;05
+ReportingUnit	Philadelphia;Ward 2;Division 5	2;05
+ReportingUnit	Philadelphia;Ward 2;Division 6	02;6
+ReportingUnit	Philadelphia;Ward 2;Division 6	2;6
+ReportingUnit	Philadelphia;Ward 2;Division 6	02;06
+ReportingUnit	Philadelphia;Ward 2;Division 6	2;06
+ReportingUnit	Philadelphia;Ward 2;Division 7	02;7
+ReportingUnit	Philadelphia;Ward 2;Division 7	2;7
+ReportingUnit	Philadelphia;Ward 2;Division 7	02;07
+ReportingUnit	Philadelphia;Ward 2;Division 7	2;07
+ReportingUnit	Philadelphia;Ward 2;Division 8	02;8
+ReportingUnit	Philadelphia;Ward 2;Division 8	2;8
+ReportingUnit	Philadelphia;Ward 2;Division 8	02;08
+ReportingUnit	Philadelphia;Ward 2;Division 8	2;08
+ReportingUnit	Philadelphia;Ward 2;Division 9	02;9
+ReportingUnit	Philadelphia;Ward 2;Division 9	2;9
+ReportingUnit	Philadelphia;Ward 2;Division 9	02;09
+ReportingUnit	Philadelphia;Ward 2;Division 9	2;09
+ReportingUnit	Philadelphia;Ward 2;Division 10	02;10
+ReportingUnit	Philadelphia;Ward 2;Division 10	2;10
+ReportingUnit	Philadelphia;Ward 2;Division 11	02;11
+ReportingUnit	Philadelphia;Ward 2;Division 11	2;11
+ReportingUnit	Philadelphia;Ward 2;Division 12	02;12
+ReportingUnit	Philadelphia;Ward 2;Division 12	2;12
+ReportingUnit	Philadelphia;Ward 2;Division 13	02;13
+ReportingUnit	Philadelphia;Ward 2;Division 13	2;13
+ReportingUnit	Philadelphia;Ward 2;Division 14	02;14
+ReportingUnit	Philadelphia;Ward 2;Division 14	2;14
+ReportingUnit	Philadelphia;Ward 2;Division 15	02;15
+ReportingUnit	Philadelphia;Ward 2;Division 15	2;15
+ReportingUnit	Philadelphia;Ward 2;Division 16	02;16
+ReportingUnit	Philadelphia;Ward 2;Division 16	2;16
+ReportingUnit	Philadelphia;Ward 2;Division 17	02;17
+ReportingUnit	Philadelphia;Ward 2;Division 17	2;17
+ReportingUnit	Philadelphia;Ward 2;Division 18	02;18
+ReportingUnit	Philadelphia;Ward 2;Division 18	2;18
+ReportingUnit	Philadelphia;Ward 2;Division 19	02;19
+ReportingUnit	Philadelphia;Ward 2;Division 19	2;19
+ReportingUnit	Philadelphia;Ward 2;Division 20	02;20
+ReportingUnit	Philadelphia;Ward 2;Division 20	2;20
+ReportingUnit	Philadelphia;Ward 2;Division 21	02;21
+ReportingUnit	Philadelphia;Ward 2;Division 21	2;21
+ReportingUnit	Philadelphia;Ward 2;Division 22	02;22
+ReportingUnit	Philadelphia;Ward 2;Division 22	2;22
+ReportingUnit	Philadelphia;Ward 2;Division 23	02;23
+ReportingUnit	Philadelphia;Ward 2;Division 23	2;23
+ReportingUnit	Philadelphia;Ward 2;Division 24	02;24
+ReportingUnit	Philadelphia;Ward 2;Division 24	2;24
+ReportingUnit	Philadelphia;Ward 2;Division 25	02;25
+ReportingUnit	Philadelphia;Ward 2;Division 25	2;25
+ReportingUnit	Philadelphia;Ward 2;Division 26	02;26
+ReportingUnit	Philadelphia;Ward 2;Division 26	2;26
+ReportingUnit	Philadelphia;Ward 2;Division 27	02;27
+ReportingUnit	Philadelphia;Ward 2;Division 27	2;27
+ReportingUnit	Philadelphia;Ward 2;Division 28	02;28
+ReportingUnit	Philadelphia;Ward 2;Division 28	2;28
+ReportingUnit	Philadelphia;Ward 2;Division 29	02;29
+ReportingUnit	Philadelphia;Ward 2;Division 29	2;29
+ReportingUnit	Philadelphia;Ward 3;Division 1	03;1
+ReportingUnit	Philadelphia;Ward 3;Division 1	3;1
+ReportingUnit	Philadelphia;Ward 3;Division 1	03;01
+ReportingUnit	Philadelphia;Ward 3;Division 1	3;01
+ReportingUnit	Philadelphia;Ward 3;Division 2	03;2
+ReportingUnit	Philadelphia;Ward 3;Division 2	3;2
+ReportingUnit	Philadelphia;Ward 3;Division 2	03;02
+ReportingUnit	Philadelphia;Ward 3;Division 2	3;02
+ReportingUnit	Philadelphia;Ward 3;Division 3	03;3
+ReportingUnit	Philadelphia;Ward 3;Division 3	3;3
+ReportingUnit	Philadelphia;Ward 3;Division 3	03;03
+ReportingUnit	Philadelphia;Ward 3;Division 3	3;03
+ReportingUnit	Philadelphia;Ward 3;Division 4	03;4
+ReportingUnit	Philadelphia;Ward 3;Division 4	3;4
+ReportingUnit	Philadelphia;Ward 3;Division 4	03;04
+ReportingUnit	Philadelphia;Ward 3;Division 4	3;04
+ReportingUnit	Philadelphia;Ward 3;Division 5	03;5
+ReportingUnit	Philadelphia;Ward 3;Division 5	3;5
+ReportingUnit	Philadelphia;Ward 3;Division 5	03;05
+ReportingUnit	Philadelphia;Ward 3;Division 5	3;05
+ReportingUnit	Philadelphia;Ward 3;Division 6	03;6
+ReportingUnit	Philadelphia;Ward 3;Division 6	3;6
+ReportingUnit	Philadelphia;Ward 3;Division 6	03;06
+ReportingUnit	Philadelphia;Ward 3;Division 6	3;06
+ReportingUnit	Philadelphia;Ward 3;Division 7	03;7
+ReportingUnit	Philadelphia;Ward 3;Division 7	3;7
+ReportingUnit	Philadelphia;Ward 3;Division 7	03;07
+ReportingUnit	Philadelphia;Ward 3;Division 7	3;07
+ReportingUnit	Philadelphia;Ward 3;Division 8	03;8
+ReportingUnit	Philadelphia;Ward 3;Division 8	3;8
+ReportingUnit	Philadelphia;Ward 3;Division 8	03;08
+ReportingUnit	Philadelphia;Ward 3;Division 8	3;08
+ReportingUnit	Philadelphia;Ward 3;Division 9	03;9
+ReportingUnit	Philadelphia;Ward 3;Division 9	3;9
+ReportingUnit	Philadelphia;Ward 3;Division 9	03;09
+ReportingUnit	Philadelphia;Ward 3;Division 9	3;09
+ReportingUnit	Philadelphia;Ward 3;Division 10	03;10
+ReportingUnit	Philadelphia;Ward 3;Division 10	3;10
+ReportingUnit	Philadelphia;Ward 3;Division 11	03;11
+ReportingUnit	Philadelphia;Ward 3;Division 11	3;11
+ReportingUnit	Philadelphia;Ward 3;Division 12	03;12
+ReportingUnit	Philadelphia;Ward 3;Division 12	3;12
+ReportingUnit	Philadelphia;Ward 3;Division 13	03;13
+ReportingUnit	Philadelphia;Ward 3;Division 13	3;13
+ReportingUnit	Philadelphia;Ward 3;Division 14	03;14
+ReportingUnit	Philadelphia;Ward 3;Division 14	3;14
+ReportingUnit	Philadelphia;Ward 3;Division 15	03;15
+ReportingUnit	Philadelphia;Ward 3;Division 15	3;15
+ReportingUnit	Philadelphia;Ward 3;Division 16	03;16
+ReportingUnit	Philadelphia;Ward 3;Division 16	3;16
+ReportingUnit	Philadelphia;Ward 3;Division 17	03;17
+ReportingUnit	Philadelphia;Ward 3;Division 17	3;17
+ReportingUnit	Philadelphia;Ward 3;Division 18	03;18
+ReportingUnit	Philadelphia;Ward 3;Division 18	3;18
+ReportingUnit	Philadelphia;Ward 3;Division 19	03;19
+ReportingUnit	Philadelphia;Ward 3;Division 19	3;19
+ReportingUnit	Philadelphia;Ward 3;Division 20	03;20
+ReportingUnit	Philadelphia;Ward 3;Division 20	3;20
+ReportingUnit	Philadelphia;Ward 3;Division 21	03;21
+ReportingUnit	Philadelphia;Ward 3;Division 21	3;21
+ReportingUnit	Philadelphia;Ward 3;Division 22	03;22
+ReportingUnit	Philadelphia;Ward 3;Division 22	3;22
+ReportingUnit	Philadelphia;Ward 4;Division 1	04;1
+ReportingUnit	Philadelphia;Ward 4;Division 1	4;1
+ReportingUnit	Philadelphia;Ward 4;Division 1	04;01
+ReportingUnit	Philadelphia;Ward 4;Division 1	4;01
+ReportingUnit	Philadelphia;Ward 4;Division 2	04;2
+ReportingUnit	Philadelphia;Ward 4;Division 2	4;2
+ReportingUnit	Philadelphia;Ward 4;Division 2	04;02
+ReportingUnit	Philadelphia;Ward 4;Division 2	4;02
+ReportingUnit	Philadelphia;Ward 4;Division 3	04;3
+ReportingUnit	Philadelphia;Ward 4;Division 3	4;3
+ReportingUnit	Philadelphia;Ward 4;Division 3	04;03
+ReportingUnit	Philadelphia;Ward 4;Division 3	4;03
+ReportingUnit	Philadelphia;Ward 4;Division 4	04;4
+ReportingUnit	Philadelphia;Ward 4;Division 4	4;4
+ReportingUnit	Philadelphia;Ward 4;Division 4	04;04
+ReportingUnit	Philadelphia;Ward 4;Division 4	4;04
+ReportingUnit	Philadelphia;Ward 4;Division 5	04;5
+ReportingUnit	Philadelphia;Ward 4;Division 5	4;5
+ReportingUnit	Philadelphia;Ward 4;Division 5	04;05
+ReportingUnit	Philadelphia;Ward 4;Division 5	4;05
+ReportingUnit	Philadelphia;Ward 4;Division 6	04;6
+ReportingUnit	Philadelphia;Ward 4;Division 6	4;6
+ReportingUnit	Philadelphia;Ward 4;Division 6	04;06
+ReportingUnit	Philadelphia;Ward 4;Division 6	4;06
+ReportingUnit	Philadelphia;Ward 4;Division 7	04;7
+ReportingUnit	Philadelphia;Ward 4;Division 7	4;7
+ReportingUnit	Philadelphia;Ward 4;Division 7	04;07
+ReportingUnit	Philadelphia;Ward 4;Division 7	4;07
+ReportingUnit	Philadelphia;Ward 4;Division 8	04;8
+ReportingUnit	Philadelphia;Ward 4;Division 8	4;8
+ReportingUnit	Philadelphia;Ward 4;Division 8	04;08
+ReportingUnit	Philadelphia;Ward 4;Division 8	4;08
+ReportingUnit	Philadelphia;Ward 4;Division 9	04;9
+ReportingUnit	Philadelphia;Ward 4;Division 9	4;9
+ReportingUnit	Philadelphia;Ward 4;Division 9	04;09
+ReportingUnit	Philadelphia;Ward 4;Division 9	4;09
+ReportingUnit	Philadelphia;Ward 4;Division 10	04;10
+ReportingUnit	Philadelphia;Ward 4;Division 10	4;10
+ReportingUnit	Philadelphia;Ward 4;Division 11	04;11
+ReportingUnit	Philadelphia;Ward 4;Division 11	4;11
+ReportingUnit	Philadelphia;Ward 4;Division 12	04;12
+ReportingUnit	Philadelphia;Ward 4;Division 12	4;12
+ReportingUnit	Philadelphia;Ward 4;Division 13	04;13
+ReportingUnit	Philadelphia;Ward 4;Division 13	4;13
+ReportingUnit	Philadelphia;Ward 4;Division 14	04;14
+ReportingUnit	Philadelphia;Ward 4;Division 14	4;14
+ReportingUnit	Philadelphia;Ward 4;Division 15	04;15
+ReportingUnit	Philadelphia;Ward 4;Division 15	4;15
+ReportingUnit	Philadelphia;Ward 4;Division 16	04;16
+ReportingUnit	Philadelphia;Ward 4;Division 16	4;16
+ReportingUnit	Philadelphia;Ward 4;Division 17	04;17
+ReportingUnit	Philadelphia;Ward 4;Division 17	4;17
+ReportingUnit	Philadelphia;Ward 4;Division 18	04;18
+ReportingUnit	Philadelphia;Ward 4;Division 18	4;18
+ReportingUnit	Philadelphia;Ward 4;Division 19	04;19
+ReportingUnit	Philadelphia;Ward 4;Division 19	4;19
+ReportingUnit	Philadelphia;Ward 4;Division 20	04;20
+ReportingUnit	Philadelphia;Ward 4;Division 20	4;20
+ReportingUnit	Philadelphia;Ward 4;Division 21	04;21
+ReportingUnit	Philadelphia;Ward 4;Division 21	4;21
+ReportingUnit	Philadelphia;Ward 5;Division 1	05;1
+ReportingUnit	Philadelphia;Ward 5;Division 1	5;1
+ReportingUnit	Philadelphia;Ward 5;Division 1	05;01
+ReportingUnit	Philadelphia;Ward 5;Division 1	5;01
+ReportingUnit	Philadelphia;Ward 5;Division 2	05;2
+ReportingUnit	Philadelphia;Ward 5;Division 2	5;2
+ReportingUnit	Philadelphia;Ward 5;Division 2	05;02
+ReportingUnit	Philadelphia;Ward 5;Division 2	5;02
+ReportingUnit	Philadelphia;Ward 5;Division 3	05;3
+ReportingUnit	Philadelphia;Ward 5;Division 3	5;3
+ReportingUnit	Philadelphia;Ward 5;Division 3	05;03
+ReportingUnit	Philadelphia;Ward 5;Division 3	5;03
+ReportingUnit	Philadelphia;Ward 5;Division 4	05;4
+ReportingUnit	Philadelphia;Ward 5;Division 4	5;4
+ReportingUnit	Philadelphia;Ward 5;Division 4	05;04
+ReportingUnit	Philadelphia;Ward 5;Division 4	5;04
+ReportingUnit	Philadelphia;Ward 5;Division 5	05;5
+ReportingUnit	Philadelphia;Ward 5;Division 5	5;5
+ReportingUnit	Philadelphia;Ward 5;Division 5	05;05
+ReportingUnit	Philadelphia;Ward 5;Division 5	5;05
+ReportingUnit	Philadelphia;Ward 5;Division 6	05;6
+ReportingUnit	Philadelphia;Ward 5;Division 6	5;6
+ReportingUnit	Philadelphia;Ward 5;Division 6	05;06
+ReportingUnit	Philadelphia;Ward 5;Division 6	5;06
+ReportingUnit	Philadelphia;Ward 5;Division 7	05;7
+ReportingUnit	Philadelphia;Ward 5;Division 7	5;7
+ReportingUnit	Philadelphia;Ward 5;Division 7	05;07
+ReportingUnit	Philadelphia;Ward 5;Division 7	5;07
+ReportingUnit	Philadelphia;Ward 5;Division 8	05;8
+ReportingUnit	Philadelphia;Ward 5;Division 8	5;8
+ReportingUnit	Philadelphia;Ward 5;Division 8	05;08
+ReportingUnit	Philadelphia;Ward 5;Division 8	5;08
+ReportingUnit	Philadelphia;Ward 5;Division 9	05;9
+ReportingUnit	Philadelphia;Ward 5;Division 9	5;9
+ReportingUnit	Philadelphia;Ward 5;Division 9	05;09
+ReportingUnit	Philadelphia;Ward 5;Division 9	5;09
+ReportingUnit	Philadelphia;Ward 5;Division 10	05;10
+ReportingUnit	Philadelphia;Ward 5;Division 10	5;10
+ReportingUnit	Philadelphia;Ward 5;Division 11	05;11
+ReportingUnit	Philadelphia;Ward 5;Division 11	5;11
+ReportingUnit	Philadelphia;Ward 5;Division 12	05;12
+ReportingUnit	Philadelphia;Ward 5;Division 12	5;12
+ReportingUnit	Philadelphia;Ward 5;Division 13	05;13
+ReportingUnit	Philadelphia;Ward 5;Division 13	5;13
+ReportingUnit	Philadelphia;Ward 5;Division 14	05;14
+ReportingUnit	Philadelphia;Ward 5;Division 14	5;14
+ReportingUnit	Philadelphia;Ward 5;Division 15	05;15
+ReportingUnit	Philadelphia;Ward 5;Division 15	5;15
+ReportingUnit	Philadelphia;Ward 5;Division 16	05;16
+ReportingUnit	Philadelphia;Ward 5;Division 16	5;16
+ReportingUnit	Philadelphia;Ward 5;Division 17	05;17
+ReportingUnit	Philadelphia;Ward 5;Division 17	5;17
+ReportingUnit	Philadelphia;Ward 5;Division 18	05;18
+ReportingUnit	Philadelphia;Ward 5;Division 18	5;18
+ReportingUnit	Philadelphia;Ward 5;Division 19	05;19
+ReportingUnit	Philadelphia;Ward 5;Division 19	5;19
+ReportingUnit	Philadelphia;Ward 5;Division 20	05;20
+ReportingUnit	Philadelphia;Ward 5;Division 20	5;20
+ReportingUnit	Philadelphia;Ward 5;Division 21	05;21
+ReportingUnit	Philadelphia;Ward 5;Division 21	5;21
+ReportingUnit	Philadelphia;Ward 5;Division 22	05;22
+ReportingUnit	Philadelphia;Ward 5;Division 22	5;22
+ReportingUnit	Philadelphia;Ward 5;Division 23	05;23
+ReportingUnit	Philadelphia;Ward 5;Division 23	5;23
+ReportingUnit	Philadelphia;Ward 5;Division 24	05;24
+ReportingUnit	Philadelphia;Ward 5;Division 24	5;24
+ReportingUnit	Philadelphia;Ward 5;Division 25	05;25
+ReportingUnit	Philadelphia;Ward 5;Division 25	5;25
+ReportingUnit	Philadelphia;Ward 5;Division 26	05;26
+ReportingUnit	Philadelphia;Ward 5;Division 26	5;26
+ReportingUnit	Philadelphia;Ward 5;Division 27	05;27
+ReportingUnit	Philadelphia;Ward 5;Division 27	5;27
+ReportingUnit	Philadelphia;Ward 5;Division 28	05;28
+ReportingUnit	Philadelphia;Ward 5;Division 28	5;28
+ReportingUnit	Philadelphia;Ward 5;Division 29	05;29
+ReportingUnit	Philadelphia;Ward 5;Division 29	5;29
+ReportingUnit	Philadelphia;Ward 5;Division 30	05;30
+ReportingUnit	Philadelphia;Ward 5;Division 30	5;30
+ReportingUnit	Philadelphia;Ward 5;Division 31	05;31
+ReportingUnit	Philadelphia;Ward 5;Division 31	5;31
+ReportingUnit	Philadelphia;Ward 5;Division 32	05;32
+ReportingUnit	Philadelphia;Ward 5;Division 32	5;32
+ReportingUnit	Philadelphia;Ward 5;Division 33	05;33
+ReportingUnit	Philadelphia;Ward 5;Division 33	5;33
+ReportingUnit	Philadelphia;Ward 5;Division 34	05;34
+ReportingUnit	Philadelphia;Ward 5;Division 34	5;34
+ReportingUnit	Philadelphia;Ward 5;Division 35	05;35
+ReportingUnit	Philadelphia;Ward 5;Division 35	5;35
+ReportingUnit	Philadelphia;Ward 5;Division 36	05;36
+ReportingUnit	Philadelphia;Ward 5;Division 36	5;36
+ReportingUnit	Philadelphia;Ward 5;Division 37	05;37
+ReportingUnit	Philadelphia;Ward 5;Division 37	5;37
+ReportingUnit	Philadelphia;Ward 6;Division 1	06;1
+ReportingUnit	Philadelphia;Ward 6;Division 1	6;1
+ReportingUnit	Philadelphia;Ward 6;Division 1	06;01
+ReportingUnit	Philadelphia;Ward 6;Division 1	6;01
+ReportingUnit	Philadelphia;Ward 6;Division 2	06;2
+ReportingUnit	Philadelphia;Ward 6;Division 2	6;2
+ReportingUnit	Philadelphia;Ward 6;Division 2	06;02
+ReportingUnit	Philadelphia;Ward 6;Division 2	6;02
+ReportingUnit	Philadelphia;Ward 6;Division 3	06;3
+ReportingUnit	Philadelphia;Ward 6;Division 3	6;3
+ReportingUnit	Philadelphia;Ward 6;Division 3	06;03
+ReportingUnit	Philadelphia;Ward 6;Division 3	6;03
+ReportingUnit	Philadelphia;Ward 6;Division 4	06;4
+ReportingUnit	Philadelphia;Ward 6;Division 4	6;4
+ReportingUnit	Philadelphia;Ward 6;Division 4	06;04
+ReportingUnit	Philadelphia;Ward 6;Division 4	6;04
+ReportingUnit	Philadelphia;Ward 6;Division 5	06;5
+ReportingUnit	Philadelphia;Ward 6;Division 5	6;5
+ReportingUnit	Philadelphia;Ward 6;Division 5	06;05
+ReportingUnit	Philadelphia;Ward 6;Division 5	6;05
+ReportingUnit	Philadelphia;Ward 6;Division 6	06;6
+ReportingUnit	Philadelphia;Ward 6;Division 6	6;6
+ReportingUnit	Philadelphia;Ward 6;Division 6	06;06
+ReportingUnit	Philadelphia;Ward 6;Division 6	6;06
+ReportingUnit	Philadelphia;Ward 6;Division 7	06;7
+ReportingUnit	Philadelphia;Ward 6;Division 7	6;7
+ReportingUnit	Philadelphia;Ward 6;Division 7	06;07
+ReportingUnit	Philadelphia;Ward 6;Division 7	6;07
+ReportingUnit	Philadelphia;Ward 6;Division 8	06;8
+ReportingUnit	Philadelphia;Ward 6;Division 8	6;8
+ReportingUnit	Philadelphia;Ward 6;Division 8	06;08
+ReportingUnit	Philadelphia;Ward 6;Division 8	6;08
+ReportingUnit	Philadelphia;Ward 6;Division 9	06;9
+ReportingUnit	Philadelphia;Ward 6;Division 9	6;9
+ReportingUnit	Philadelphia;Ward 6;Division 9	06;09
+ReportingUnit	Philadelphia;Ward 6;Division 9	6;09
+ReportingUnit	Philadelphia;Ward 6;Division 10	06;10
+ReportingUnit	Philadelphia;Ward 6;Division 10	6;10
+ReportingUnit	Philadelphia;Ward 6;Division 11	06;11
+ReportingUnit	Philadelphia;Ward 6;Division 11	6;11
+ReportingUnit	Philadelphia;Ward 6;Division 12	06;12
+ReportingUnit	Philadelphia;Ward 6;Division 12	6;12
+ReportingUnit	Philadelphia;Ward 6;Division 13	06;13
+ReportingUnit	Philadelphia;Ward 6;Division 13	6;13
+ReportingUnit	Philadelphia;Ward 6;Division 14	06;14
+ReportingUnit	Philadelphia;Ward 6;Division 14	6;14
+ReportingUnit	Philadelphia;Ward 6;Division 15	06;15
+ReportingUnit	Philadelphia;Ward 6;Division 15	6;15
+ReportingUnit	Philadelphia;Ward 6;Division 16	06;16
+ReportingUnit	Philadelphia;Ward 6;Division 16	6;16
+ReportingUnit	Philadelphia;Ward 6;Division 17	06;17
+ReportingUnit	Philadelphia;Ward 6;Division 17	6;17
+ReportingUnit	Philadelphia;Ward 6;Division 18	06;18
+ReportingUnit	Philadelphia;Ward 6;Division 18	6;18
+ReportingUnit	Philadelphia;Ward 7;Division 1	07;1
+ReportingUnit	Philadelphia;Ward 7;Division 1	7;1
+ReportingUnit	Philadelphia;Ward 7;Division 1	07;01
+ReportingUnit	Philadelphia;Ward 7;Division 1	7;01
+ReportingUnit	Philadelphia;Ward 7;Division 2	07;2
+ReportingUnit	Philadelphia;Ward 7;Division 2	7;2
+ReportingUnit	Philadelphia;Ward 7;Division 2	07;02
+ReportingUnit	Philadelphia;Ward 7;Division 2	7;02
+ReportingUnit	Philadelphia;Ward 7;Division 3	07;3
+ReportingUnit	Philadelphia;Ward 7;Division 3	7;3
+ReportingUnit	Philadelphia;Ward 7;Division 3	07;03
+ReportingUnit	Philadelphia;Ward 7;Division 3	7;03
+ReportingUnit	Philadelphia;Ward 7;Division 4	07;4
+ReportingUnit	Philadelphia;Ward 7;Division 4	7;4
+ReportingUnit	Philadelphia;Ward 7;Division 4	07;04
+ReportingUnit	Philadelphia;Ward 7;Division 4	7;04
+ReportingUnit	Philadelphia;Ward 7;Division 5	07;5
+ReportingUnit	Philadelphia;Ward 7;Division 5	7;5
+ReportingUnit	Philadelphia;Ward 7;Division 5	07;05
+ReportingUnit	Philadelphia;Ward 7;Division 5	7;05
+ReportingUnit	Philadelphia;Ward 7;Division 6	07;6
+ReportingUnit	Philadelphia;Ward 7;Division 6	7;6
+ReportingUnit	Philadelphia;Ward 7;Division 6	07;06
+ReportingUnit	Philadelphia;Ward 7;Division 6	7;06
+ReportingUnit	Philadelphia;Ward 7;Division 7	07;7
+ReportingUnit	Philadelphia;Ward 7;Division 7	7;7
+ReportingUnit	Philadelphia;Ward 7;Division 7	07;07
+ReportingUnit	Philadelphia;Ward 7;Division 7	7;07
+ReportingUnit	Philadelphia;Ward 7;Division 8	07;8
+ReportingUnit	Philadelphia;Ward 7;Division 8	7;8
+ReportingUnit	Philadelphia;Ward 7;Division 8	07;08
+ReportingUnit	Philadelphia;Ward 7;Division 8	7;08
+ReportingUnit	Philadelphia;Ward 7;Division 9	07;9
+ReportingUnit	Philadelphia;Ward 7;Division 9	7;9
+ReportingUnit	Philadelphia;Ward 7;Division 9	07;09
+ReportingUnit	Philadelphia;Ward 7;Division 9	7;09
+ReportingUnit	Philadelphia;Ward 7;Division 10	07;10
+ReportingUnit	Philadelphia;Ward 7;Division 10	7;10
+ReportingUnit	Philadelphia;Ward 7;Division 11	07;11
+ReportingUnit	Philadelphia;Ward 7;Division 11	7;11
+ReportingUnit	Philadelphia;Ward 7;Division 12	07;12
+ReportingUnit	Philadelphia;Ward 7;Division 12	7;12
+ReportingUnit	Philadelphia;Ward 7;Division 13	07;13
+ReportingUnit	Philadelphia;Ward 7;Division 13	7;13
+ReportingUnit	Philadelphia;Ward 7;Division 14	07;14
+ReportingUnit	Philadelphia;Ward 7;Division 14	7;14
+ReportingUnit	Philadelphia;Ward 7;Division 15	07;15
+ReportingUnit	Philadelphia;Ward 7;Division 15	7;15
+ReportingUnit	Philadelphia;Ward 7;Division 16	07;16
+ReportingUnit	Philadelphia;Ward 7;Division 16	7;16
+ReportingUnit	Philadelphia;Ward 7;Division 17	07;17
+ReportingUnit	Philadelphia;Ward 7;Division 17	7;17
+ReportingUnit	Philadelphia;Ward 7;Division 18	07;18
+ReportingUnit	Philadelphia;Ward 7;Division 18	7;18
+ReportingUnit	Philadelphia;Ward 7;Division 19	07;19
+ReportingUnit	Philadelphia;Ward 7;Division 19	7;19
+ReportingUnit	Philadelphia;Ward 7;Division 20	07;20
+ReportingUnit	Philadelphia;Ward 7;Division 20	7;20
+ReportingUnit	Philadelphia;Ward 7;Division 21	07;21
+ReportingUnit	Philadelphia;Ward 7;Division 21	7;21
+ReportingUnit	Philadelphia;Ward 7;Division 22	07;22
+ReportingUnit	Philadelphia;Ward 7;Division 22	7;22
+ReportingUnit	Philadelphia;Ward 7;Division 23	07;23
+ReportingUnit	Philadelphia;Ward 7;Division 23	7;23
+ReportingUnit	Philadelphia;Ward 8;Division 1	08;1
+ReportingUnit	Philadelphia;Ward 8;Division 1	8;1
+ReportingUnit	Philadelphia;Ward 8;Division 1	08;01
+ReportingUnit	Philadelphia;Ward 8;Division 1	8;01
+ReportingUnit	Philadelphia;Ward 8;Division 2	08;2
+ReportingUnit	Philadelphia;Ward 8;Division 2	8;2
+ReportingUnit	Philadelphia;Ward 8;Division 2	08;02
+ReportingUnit	Philadelphia;Ward 8;Division 2	8;02
+ReportingUnit	Philadelphia;Ward 8;Division 3	08;3
+ReportingUnit	Philadelphia;Ward 8;Division 3	8;3
+ReportingUnit	Philadelphia;Ward 8;Division 3	08;03
+ReportingUnit	Philadelphia;Ward 8;Division 3	8;03
+ReportingUnit	Philadelphia;Ward 8;Division 4	08;4
+ReportingUnit	Philadelphia;Ward 8;Division 4	8;4
+ReportingUnit	Philadelphia;Ward 8;Division 4	08;04
+ReportingUnit	Philadelphia;Ward 8;Division 4	8;04
+ReportingUnit	Philadelphia;Ward 8;Division 5	08;5
+ReportingUnit	Philadelphia;Ward 8;Division 5	8;5
+ReportingUnit	Philadelphia;Ward 8;Division 5	08;05
+ReportingUnit	Philadelphia;Ward 8;Division 5	8;05
+ReportingUnit	Philadelphia;Ward 8;Division 6	08;6
+ReportingUnit	Philadelphia;Ward 8;Division 6	8;6
+ReportingUnit	Philadelphia;Ward 8;Division 6	08;06
+ReportingUnit	Philadelphia;Ward 8;Division 6	8;06
+ReportingUnit	Philadelphia;Ward 8;Division 7	08;7
+ReportingUnit	Philadelphia;Ward 8;Division 7	8;7
+ReportingUnit	Philadelphia;Ward 8;Division 7	08;07
+ReportingUnit	Philadelphia;Ward 8;Division 7	8;07
+ReportingUnit	Philadelphia;Ward 8;Division 8	08;8
+ReportingUnit	Philadelphia;Ward 8;Division 8	8;8
+ReportingUnit	Philadelphia;Ward 8;Division 8	08;08
+ReportingUnit	Philadelphia;Ward 8;Division 8	8;08
+ReportingUnit	Philadelphia;Ward 8;Division 9	08;9
+ReportingUnit	Philadelphia;Ward 8;Division 9	8;9
+ReportingUnit	Philadelphia;Ward 8;Division 9	08;09
+ReportingUnit	Philadelphia;Ward 8;Division 9	8;09
+ReportingUnit	Philadelphia;Ward 8;Division 10	08;10
+ReportingUnit	Philadelphia;Ward 8;Division 10	8;10
+ReportingUnit	Philadelphia;Ward 8;Division 11	08;11
+ReportingUnit	Philadelphia;Ward 8;Division 11	8;11
+ReportingUnit	Philadelphia;Ward 8;Division 12	08;12
+ReportingUnit	Philadelphia;Ward 8;Division 12	8;12
+ReportingUnit	Philadelphia;Ward 8;Division 13	08;13
+ReportingUnit	Philadelphia;Ward 8;Division 13	8;13
+ReportingUnit	Philadelphia;Ward 8;Division 14	08;14
+ReportingUnit	Philadelphia;Ward 8;Division 14	8;14
+ReportingUnit	Philadelphia;Ward 8;Division 15	08;15
+ReportingUnit	Philadelphia;Ward 8;Division 15	8;15
+ReportingUnit	Philadelphia;Ward 8;Division 16	08;16
+ReportingUnit	Philadelphia;Ward 8;Division 16	8;16
+ReportingUnit	Philadelphia;Ward 8;Division 17	08;17
+ReportingUnit	Philadelphia;Ward 8;Division 17	8;17
+ReportingUnit	Philadelphia;Ward 8;Division 18	08;18
+ReportingUnit	Philadelphia;Ward 8;Division 18	8;18
+ReportingUnit	Philadelphia;Ward 8;Division 19	08;19
+ReportingUnit	Philadelphia;Ward 8;Division 19	8;19
+ReportingUnit	Philadelphia;Ward 8;Division 20	08;20
+ReportingUnit	Philadelphia;Ward 8;Division 20	8;20
+ReportingUnit	Philadelphia;Ward 8;Division 21	08;21
+ReportingUnit	Philadelphia;Ward 8;Division 21	8;21
+ReportingUnit	Philadelphia;Ward 8;Division 22	08;22
+ReportingUnit	Philadelphia;Ward 8;Division 22	8;22
+ReportingUnit	Philadelphia;Ward 8;Division 23	08;23
+ReportingUnit	Philadelphia;Ward 8;Division 23	8;23
+ReportingUnit	Philadelphia;Ward 8;Division 24	08;24
+ReportingUnit	Philadelphia;Ward 8;Division 24	8;24
+ReportingUnit	Philadelphia;Ward 8;Division 25	08;25
+ReportingUnit	Philadelphia;Ward 8;Division 25	8;25
+ReportingUnit	Philadelphia;Ward 8;Division 26	08;26
+ReportingUnit	Philadelphia;Ward 8;Division 26	8;26
+ReportingUnit	Philadelphia;Ward 8;Division 27	08;27
+ReportingUnit	Philadelphia;Ward 8;Division 27	8;27
+ReportingUnit	Philadelphia;Ward 8;Division 28	08;28
+ReportingUnit	Philadelphia;Ward 8;Division 28	8;28
+ReportingUnit	Philadelphia;Ward 8;Division 29	08;29
+ReportingUnit	Philadelphia;Ward 8;Division 29	8;29
+ReportingUnit	Philadelphia;Ward 8;Division 30	08;30
+ReportingUnit	Philadelphia;Ward 8;Division 30	8;30
+ReportingUnit	Philadelphia;Ward 8;Division 31	08;31
+ReportingUnit	Philadelphia;Ward 8;Division 31	8;31
+ReportingUnit	Philadelphia;Ward 8;Division 32	08;32
+ReportingUnit	Philadelphia;Ward 8;Division 32	8;32
+ReportingUnit	Philadelphia;Ward 8;Division 33	08;33
+ReportingUnit	Philadelphia;Ward 8;Division 33	8;33
+ReportingUnit	Philadelphia;Ward 8;Division 34	08;34
+ReportingUnit	Philadelphia;Ward 8;Division 34	8;34
+ReportingUnit	Philadelphia;Ward 8;Division 35	08;35
+ReportingUnit	Philadelphia;Ward 8;Division 35	8;35
+ReportingUnit	Philadelphia;Ward 9;Division 1	09;1
+ReportingUnit	Philadelphia;Ward 9;Division 1	9;1
+ReportingUnit	Philadelphia;Ward 9;Division 1	09;01
+ReportingUnit	Philadelphia;Ward 9;Division 1	9;01
+ReportingUnit	Philadelphia;Ward 9;Division 2	09;2
+ReportingUnit	Philadelphia;Ward 9;Division 2	9;2
+ReportingUnit	Philadelphia;Ward 9;Division 2	09;02
+ReportingUnit	Philadelphia;Ward 9;Division 2	9;02
+ReportingUnit	Philadelphia;Ward 9;Division 3	09;3
+ReportingUnit	Philadelphia;Ward 9;Division 3	9;3
+ReportingUnit	Philadelphia;Ward 9;Division 3	09;03
+ReportingUnit	Philadelphia;Ward 9;Division 3	9;03
+ReportingUnit	Philadelphia;Ward 9;Division 4	09;4
+ReportingUnit	Philadelphia;Ward 9;Division 4	9;4
+ReportingUnit	Philadelphia;Ward 9;Division 4	09;04
+ReportingUnit	Philadelphia;Ward 9;Division 4	9;04
+ReportingUnit	Philadelphia;Ward 9;Division 5	09;5
+ReportingUnit	Philadelphia;Ward 9;Division 5	9;5
+ReportingUnit	Philadelphia;Ward 9;Division 5	09;05
+ReportingUnit	Philadelphia;Ward 9;Division 5	9;05
+ReportingUnit	Philadelphia;Ward 9;Division 6	09;6
+ReportingUnit	Philadelphia;Ward 9;Division 6	9;6
+ReportingUnit	Philadelphia;Ward 9;Division 6	09;06
+ReportingUnit	Philadelphia;Ward 9;Division 6	9;06
+ReportingUnit	Philadelphia;Ward 9;Division 7	09;7
+ReportingUnit	Philadelphia;Ward 9;Division 7	9;7
+ReportingUnit	Philadelphia;Ward 9;Division 7	09;07
+ReportingUnit	Philadelphia;Ward 9;Division 7	9;07
+ReportingUnit	Philadelphia;Ward 9;Division 8	09;8
+ReportingUnit	Philadelphia;Ward 9;Division 8	9;8
+ReportingUnit	Philadelphia;Ward 9;Division 8	09;08
+ReportingUnit	Philadelphia;Ward 9;Division 8	9;08
+ReportingUnit	Philadelphia;Ward 9;Division 9	09;9
+ReportingUnit	Philadelphia;Ward 9;Division 9	9;9
+ReportingUnit	Philadelphia;Ward 9;Division 9	09;09
+ReportingUnit	Philadelphia;Ward 9;Division 9	9;09
+ReportingUnit	Philadelphia;Ward 9;Division 10	09;10
+ReportingUnit	Philadelphia;Ward 9;Division 10	9;10
+ReportingUnit	Philadelphia;Ward 9;Division 11	09;11
+ReportingUnit	Philadelphia;Ward 9;Division 11	9;11
+ReportingUnit	Philadelphia;Ward 9;Division 12	09;12
+ReportingUnit	Philadelphia;Ward 9;Division 12	9;12
+ReportingUnit	Philadelphia;Ward 9;Division 13	09;13
+ReportingUnit	Philadelphia;Ward 9;Division 13	9;13
+ReportingUnit	Philadelphia;Ward 9;Division 14	09;14
+ReportingUnit	Philadelphia;Ward 9;Division 14	9;14
+ReportingUnit	Philadelphia;Ward 9;Division 15	09;15
+ReportingUnit	Philadelphia;Ward 9;Division 15	9;15
+ReportingUnit	Philadelphia;Ward 9;Division 16	09;16
+ReportingUnit	Philadelphia;Ward 9;Division 16	9;16
+ReportingUnit	Philadelphia;Ward 9;Division 17	09;17
+ReportingUnit	Philadelphia;Ward 9;Division 17	9;17
+ReportingUnit	Philadelphia;Ward 10;Division 1	10;1
+ReportingUnit	Philadelphia;Ward 10;Division 1	10;01
+ReportingUnit	Philadelphia;Ward 10;Division 2	10;2
+ReportingUnit	Philadelphia;Ward 10;Division 2	10;02
+ReportingUnit	Philadelphia;Ward 10;Division 3	10;3
+ReportingUnit	Philadelphia;Ward 10;Division 3	10;03
+ReportingUnit	Philadelphia;Ward 10;Division 4	10;4
+ReportingUnit	Philadelphia;Ward 10;Division 4	10;04
+ReportingUnit	Philadelphia;Ward 10;Division 5	10;5
+ReportingUnit	Philadelphia;Ward 10;Division 5	10;05
+ReportingUnit	Philadelphia;Ward 10;Division 6	10;6
+ReportingUnit	Philadelphia;Ward 10;Division 6	10;06
+ReportingUnit	Philadelphia;Ward 10;Division 7	10;7
+ReportingUnit	Philadelphia;Ward 10;Division 7	10;07
+ReportingUnit	Philadelphia;Ward 10;Division 8	10;8
+ReportingUnit	Philadelphia;Ward 10;Division 8	10;08
+ReportingUnit	Philadelphia;Ward 10;Division 9	10;9
+ReportingUnit	Philadelphia;Ward 10;Division 9	10;09
+ReportingUnit	Philadelphia;Ward 10;Division 10	10;10
+ReportingUnit	Philadelphia;Ward 10;Division 11	10;11
+ReportingUnit	Philadelphia;Ward 10;Division 12	10;12
+ReportingUnit	Philadelphia;Ward 10;Division 13	10;13
+ReportingUnit	Philadelphia;Ward 10;Division 14	10;14
+ReportingUnit	Philadelphia;Ward 10;Division 15	10;15
+ReportingUnit	Philadelphia;Ward 10;Division 16	10;16
+ReportingUnit	Philadelphia;Ward 10;Division 17	10;17
+ReportingUnit	Philadelphia;Ward 10;Division 18	10;18
+ReportingUnit	Philadelphia;Ward 10;Division 19	10;19
+ReportingUnit	Philadelphia;Ward 10;Division 20	10;20
+ReportingUnit	Philadelphia;Ward 10;Division 21	10;21
+ReportingUnit	Philadelphia;Ward 10;Division 22	10;22
+ReportingUnit	Philadelphia;Ward 10;Division 23	10;23
+ReportingUnit	Philadelphia;Ward 10;Division 24	10;24
+ReportingUnit	Philadelphia;Ward 10;Division 25	10;25
+ReportingUnit	Philadelphia;Ward 10;Division 26	10;26
+ReportingUnit	Philadelphia;Ward 10;Division 27	10;27
+ReportingUnit	Philadelphia;Ward 10;Division 28	10;28
+ReportingUnit	Philadelphia;Ward 10;Division 29	10;29
+ReportingUnit	Philadelphia;Ward 11;Division 1	11;1
+ReportingUnit	Philadelphia;Ward 11;Division 1	11;01
+ReportingUnit	Philadelphia;Ward 11;Division 2	11;2
+ReportingUnit	Philadelphia;Ward 11;Division 2	11;02
+ReportingUnit	Philadelphia;Ward 11;Division 3	11;3
+ReportingUnit	Philadelphia;Ward 11;Division 3	11;03
+ReportingUnit	Philadelphia;Ward 11;Division 4	11;4
+ReportingUnit	Philadelphia;Ward 11;Division 4	11;04
+ReportingUnit	Philadelphia;Ward 11;Division 5	11;5
+ReportingUnit	Philadelphia;Ward 11;Division 5	11;05
+ReportingUnit	Philadelphia;Ward 11;Division 6	11;6
+ReportingUnit	Philadelphia;Ward 11;Division 6	11;06
+ReportingUnit	Philadelphia;Ward 11;Division 7	11;7
+ReportingUnit	Philadelphia;Ward 11;Division 7	11;07
+ReportingUnit	Philadelphia;Ward 11;Division 8	11;8
+ReportingUnit	Philadelphia;Ward 11;Division 8	11;08
+ReportingUnit	Philadelphia;Ward 11;Division 9	11;9
+ReportingUnit	Philadelphia;Ward 11;Division 9	11;09
+ReportingUnit	Philadelphia;Ward 11;Division 10	11;10
+ReportingUnit	Philadelphia;Ward 11;Division 11	11;11
+ReportingUnit	Philadelphia;Ward 11;Division 12	11;12
+ReportingUnit	Philadelphia;Ward 11;Division 13	11;13
+ReportingUnit	Philadelphia;Ward 11;Division 14	11;14
+ReportingUnit	Philadelphia;Ward 11;Division 15	11;15
+ReportingUnit	Philadelphia;Ward 11;Division 16	11;16
+ReportingUnit	Philadelphia;Ward 11;Division 17	11;17
+ReportingUnit	Philadelphia;Ward 11;Division 18	11;18
+ReportingUnit	Philadelphia;Ward 11;Division 19	11;19
+ReportingUnit	Philadelphia;Ward 11;Division 20	11;20
+ReportingUnit	Philadelphia;Ward 12;Division 1	12;1
+ReportingUnit	Philadelphia;Ward 12;Division 1	12;01
+ReportingUnit	Philadelphia;Ward 12;Division 2	12;2
+ReportingUnit	Philadelphia;Ward 12;Division 2	12;02
+ReportingUnit	Philadelphia;Ward 12;Division 3	12;3
+ReportingUnit	Philadelphia;Ward 12;Division 3	12;03
+ReportingUnit	Philadelphia;Ward 12;Division 4	12;4
+ReportingUnit	Philadelphia;Ward 12;Division 4	12;04
+ReportingUnit	Philadelphia;Ward 12;Division 5	12;5
+ReportingUnit	Philadelphia;Ward 12;Division 5	12;05
+ReportingUnit	Philadelphia;Ward 12;Division 6	12;6
+ReportingUnit	Philadelphia;Ward 12;Division 6	12;06
+ReportingUnit	Philadelphia;Ward 12;Division 7	12;7
+ReportingUnit	Philadelphia;Ward 12;Division 7	12;07
+ReportingUnit	Philadelphia;Ward 12;Division 8	12;8
+ReportingUnit	Philadelphia;Ward 12;Division 8	12;08
+ReportingUnit	Philadelphia;Ward 12;Division 9	12;9
+ReportingUnit	Philadelphia;Ward 12;Division 9	12;09
+ReportingUnit	Philadelphia;Ward 12;Division 10	12;10
+ReportingUnit	Philadelphia;Ward 12;Division 11	12;11
+ReportingUnit	Philadelphia;Ward 12;Division 12	12;12
+ReportingUnit	Philadelphia;Ward 12;Division 13	12;13
+ReportingUnit	Philadelphia;Ward 12;Division 14	12;14
+ReportingUnit	Philadelphia;Ward 12;Division 15	12;15
+ReportingUnit	Philadelphia;Ward 12;Division 16	12;16
+ReportingUnit	Philadelphia;Ward 12;Division 17	12;17
+ReportingUnit	Philadelphia;Ward 12;Division 18	12;18
+ReportingUnit	Philadelphia;Ward 12;Division 19	12;19
+ReportingUnit	Philadelphia;Ward 12;Division 20	12;20
+ReportingUnit	Philadelphia;Ward 12;Division 21	12;21
+ReportingUnit	Philadelphia;Ward 12;Division 22	12;22
+ReportingUnit	Philadelphia;Ward 12;Division 23	12;23
+ReportingUnit	Philadelphia;Ward 12;Division 24	12;24
+ReportingUnit	Philadelphia;Ward 13;Division 1	13;1
+ReportingUnit	Philadelphia;Ward 13;Division 1	13;01
+ReportingUnit	Philadelphia;Ward 13;Division 2	13;2
+ReportingUnit	Philadelphia;Ward 13;Division 2	13;02
+ReportingUnit	Philadelphia;Ward 13;Division 3	13;3
+ReportingUnit	Philadelphia;Ward 13;Division 3	13;03
+ReportingUnit	Philadelphia;Ward 13;Division 4	13;4
+ReportingUnit	Philadelphia;Ward 13;Division 4	13;04
+ReportingUnit	Philadelphia;Ward 13;Division 5	13;5
+ReportingUnit	Philadelphia;Ward 13;Division 5	13;05
+ReportingUnit	Philadelphia;Ward 13;Division 6	13;6
+ReportingUnit	Philadelphia;Ward 13;Division 6	13;06
+ReportingUnit	Philadelphia;Ward 13;Division 7	13;7
+ReportingUnit	Philadelphia;Ward 13;Division 7	13;07
+ReportingUnit	Philadelphia;Ward 13;Division 8	13;8
+ReportingUnit	Philadelphia;Ward 13;Division 8	13;08
+ReportingUnit	Philadelphia;Ward 13;Division 9	13;9
+ReportingUnit	Philadelphia;Ward 13;Division 9	13;09
+ReportingUnit	Philadelphia;Ward 13;Division 10	13;10
+ReportingUnit	Philadelphia;Ward 13;Division 11	13;11
+ReportingUnit	Philadelphia;Ward 13;Division 12	13;12
+ReportingUnit	Philadelphia;Ward 13;Division 13	13;13
+ReportingUnit	Philadelphia;Ward 13;Division 14	13;14
+ReportingUnit	Philadelphia;Ward 13;Division 15	13;15
+ReportingUnit	Philadelphia;Ward 13;Division 16	13;16
+ReportingUnit	Philadelphia;Ward 13;Division 17	13;17
+ReportingUnit	Philadelphia;Ward 13;Division 18	13;18
+ReportingUnit	Philadelphia;Ward 13;Division 19	13;19
+ReportingUnit	Philadelphia;Ward 13;Division 20	13;20
+ReportingUnit	Philadelphia;Ward 13;Division 21	13;21
+ReportingUnit	Philadelphia;Ward 13;Division 22	13;22
+ReportingUnit	Philadelphia;Ward 13;Division 23	13;23
+ReportingUnit	Philadelphia;Ward 13;Division 24	13;24
+ReportingUnit	Philadelphia;Ward 13;Division 25	13;25
+ReportingUnit	Philadelphia;Ward 14;Division 1	14;1
+ReportingUnit	Philadelphia;Ward 14;Division 1	14;01
+ReportingUnit	Philadelphia;Ward 14;Division 2	14;2
+ReportingUnit	Philadelphia;Ward 14;Division 2	14;02
+ReportingUnit	Philadelphia;Ward 14;Division 3	14;3
+ReportingUnit	Philadelphia;Ward 14;Division 3	14;03
+ReportingUnit	Philadelphia;Ward 14;Division 4	14;4
+ReportingUnit	Philadelphia;Ward 14;Division 4	14;04
+ReportingUnit	Philadelphia;Ward 14;Division 5	14;5
+ReportingUnit	Philadelphia;Ward 14;Division 5	14;05
+ReportingUnit	Philadelphia;Ward 14;Division 6	14;6
+ReportingUnit	Philadelphia;Ward 14;Division 6	14;06
+ReportingUnit	Philadelphia;Ward 14;Division 7	14;7
+ReportingUnit	Philadelphia;Ward 14;Division 7	14;07
+ReportingUnit	Philadelphia;Ward 14;Division 8	14;8
+ReportingUnit	Philadelphia;Ward 14;Division 8	14;08
+ReportingUnit	Philadelphia;Ward 14;Division 9	14;9
+ReportingUnit	Philadelphia;Ward 14;Division 9	14;09
+ReportingUnit	Philadelphia;Ward 14;Division 10	14;10
+ReportingUnit	Philadelphia;Ward 14;Division 11	14;11
+ReportingUnit	Philadelphia;Ward 15;Division 1	15;1
+ReportingUnit	Philadelphia;Ward 15;Division 1	15;01
+ReportingUnit	Philadelphia;Ward 15;Division 2	15;2
+ReportingUnit	Philadelphia;Ward 15;Division 2	15;02
+ReportingUnit	Philadelphia;Ward 15;Division 3	15;3
+ReportingUnit	Philadelphia;Ward 15;Division 3	15;03
+ReportingUnit	Philadelphia;Ward 15;Division 4	15;4
+ReportingUnit	Philadelphia;Ward 15;Division 4	15;04
+ReportingUnit	Philadelphia;Ward 15;Division 5	15;5
+ReportingUnit	Philadelphia;Ward 15;Division 5	15;05
+ReportingUnit	Philadelphia;Ward 15;Division 6	15;6
+ReportingUnit	Philadelphia;Ward 15;Division 6	15;06
+ReportingUnit	Philadelphia;Ward 15;Division 7	15;7
+ReportingUnit	Philadelphia;Ward 15;Division 7	15;07
+ReportingUnit	Philadelphia;Ward 15;Division 8	15;8
+ReportingUnit	Philadelphia;Ward 15;Division 8	15;08
+ReportingUnit	Philadelphia;Ward 15;Division 9	15;9
+ReportingUnit	Philadelphia;Ward 15;Division 9	15;09
+ReportingUnit	Philadelphia;Ward 15;Division 10	15;10
+ReportingUnit	Philadelphia;Ward 15;Division 11	15;11
+ReportingUnit	Philadelphia;Ward 15;Division 12	15;12
+ReportingUnit	Philadelphia;Ward 15;Division 13	15;13
+ReportingUnit	Philadelphia;Ward 15;Division 14	15;14
+ReportingUnit	Philadelphia;Ward 15;Division 15	15;15
+ReportingUnit	Philadelphia;Ward 15;Division 16	15;16
+ReportingUnit	Philadelphia;Ward 15;Division 17	15;17
+ReportingUnit	Philadelphia;Ward 15;Division 18	15;18
+ReportingUnit	Philadelphia;Ward 15;Division 19	15;19
+ReportingUnit	Philadelphia;Ward 16;Division 1	16;1
+ReportingUnit	Philadelphia;Ward 16;Division 1	16;01
+ReportingUnit	Philadelphia;Ward 16;Division 2	16;2
+ReportingUnit	Philadelphia;Ward 16;Division 2	16;02
+ReportingUnit	Philadelphia;Ward 16;Division 3	16;3
+ReportingUnit	Philadelphia;Ward 16;Division 3	16;03
+ReportingUnit	Philadelphia;Ward 16;Division 4	16;4
+ReportingUnit	Philadelphia;Ward 16;Division 4	16;04
+ReportingUnit	Philadelphia;Ward 16;Division 5	16;5
+ReportingUnit	Philadelphia;Ward 16;Division 5	16;05
+ReportingUnit	Philadelphia;Ward 16;Division 6	16;6
+ReportingUnit	Philadelphia;Ward 16;Division 6	16;06
+ReportingUnit	Philadelphia;Ward 16;Division 7	16;7
+ReportingUnit	Philadelphia;Ward 16;Division 7	16;07
+ReportingUnit	Philadelphia;Ward 16;Division 8	16;8
+ReportingUnit	Philadelphia;Ward 16;Division 8	16;08
+ReportingUnit	Philadelphia;Ward 16;Division 9	16;9
+ReportingUnit	Philadelphia;Ward 16;Division 9	16;09
+ReportingUnit	Philadelphia;Ward 16;Division 10	16;10
+ReportingUnit	Philadelphia;Ward 16;Division 11	16;11
+ReportingUnit	Philadelphia;Ward 16;Division 12	16;12
+ReportingUnit	Philadelphia;Ward 16;Division 13	16;13
+ReportingUnit	Philadelphia;Ward 16;Division 14	16;14
+ReportingUnit	Philadelphia;Ward 16;Division 15	16;15
+ReportingUnit	Philadelphia;Ward 16;Division 16	16;16
+ReportingUnit	Philadelphia;Ward 16;Division 17	16;17
+ReportingUnit	Philadelphia;Ward 16;Division 18	16;18
+ReportingUnit	Philadelphia;Ward 17;Division 1	17;1
+ReportingUnit	Philadelphia;Ward 17;Division 1	17;01
+ReportingUnit	Philadelphia;Ward 17;Division 2	17;2
+ReportingUnit	Philadelphia;Ward 17;Division 2	17;02
+ReportingUnit	Philadelphia;Ward 17;Division 3	17;3
+ReportingUnit	Philadelphia;Ward 17;Division 3	17;03
+ReportingUnit	Philadelphia;Ward 17;Division 4	17;4
+ReportingUnit	Philadelphia;Ward 17;Division 4	17;04
+ReportingUnit	Philadelphia;Ward 17;Division 5	17;5
+ReportingUnit	Philadelphia;Ward 17;Division 5	17;05
+ReportingUnit	Philadelphia;Ward 17;Division 6	17;6
+ReportingUnit	Philadelphia;Ward 17;Division 6	17;06
+ReportingUnit	Philadelphia;Ward 17;Division 7	17;7
+ReportingUnit	Philadelphia;Ward 17;Division 7	17;07
+ReportingUnit	Philadelphia;Ward 17;Division 8	17;8
+ReportingUnit	Philadelphia;Ward 17;Division 8	17;08
+ReportingUnit	Philadelphia;Ward 17;Division 9	17;9
+ReportingUnit	Philadelphia;Ward 17;Division 9	17;09
+ReportingUnit	Philadelphia;Ward 17;Division 10	17;10
+ReportingUnit	Philadelphia;Ward 17;Division 11	17;11
+ReportingUnit	Philadelphia;Ward 17;Division 12	17;12
+ReportingUnit	Philadelphia;Ward 17;Division 13	17;13
+ReportingUnit	Philadelphia;Ward 17;Division 14	17;14
+ReportingUnit	Philadelphia;Ward 17;Division 15	17;15
+ReportingUnit	Philadelphia;Ward 17;Division 16	17;16
+ReportingUnit	Philadelphia;Ward 17;Division 17	17;17
+ReportingUnit	Philadelphia;Ward 17;Division 18	17;18
+ReportingUnit	Philadelphia;Ward 17;Division 19	17;19
+ReportingUnit	Philadelphia;Ward 17;Division 20	17;20
+ReportingUnit	Philadelphia;Ward 17;Division 21	17;21
+ReportingUnit	Philadelphia;Ward 17;Division 22	17;22
+ReportingUnit	Philadelphia;Ward 17;Division 23	17;23
+ReportingUnit	Philadelphia;Ward 17;Division 24	17;24
+ReportingUnit	Philadelphia;Ward 17;Division 25	17;25
+ReportingUnit	Philadelphia;Ward 17;Division 26	17;26
+ReportingUnit	Philadelphia;Ward 17;Division 27	17;27
+ReportingUnit	Philadelphia;Ward 17;Division 28	17;28
+ReportingUnit	Philadelphia;Ward 17;Division 29	17;29
+ReportingUnit	Philadelphia;Ward 18;Division 1	18;1
+ReportingUnit	Philadelphia;Ward 18;Division 1	18;01
+ReportingUnit	Philadelphia;Ward 18;Division 2	18;2
+ReportingUnit	Philadelphia;Ward 18;Division 2	18;02
+ReportingUnit	Philadelphia;Ward 18;Division 3	18;3
+ReportingUnit	Philadelphia;Ward 18;Division 3	18;03
+ReportingUnit	Philadelphia;Ward 18;Division 4	18;4
+ReportingUnit	Philadelphia;Ward 18;Division 4	18;04
+ReportingUnit	Philadelphia;Ward 18;Division 5	18;5
+ReportingUnit	Philadelphia;Ward 18;Division 5	18;05
+ReportingUnit	Philadelphia;Ward 18;Division 6	18;6
+ReportingUnit	Philadelphia;Ward 18;Division 6	18;06
+ReportingUnit	Philadelphia;Ward 18;Division 7	18;7
+ReportingUnit	Philadelphia;Ward 18;Division 7	18;07
+ReportingUnit	Philadelphia;Ward 18;Division 8	18;8
+ReportingUnit	Philadelphia;Ward 18;Division 8	18;08
+ReportingUnit	Philadelphia;Ward 18;Division 9	18;9
+ReportingUnit	Philadelphia;Ward 18;Division 9	18;09
+ReportingUnit	Philadelphia;Ward 18;Division 10	18;10
+ReportingUnit	Philadelphia;Ward 18;Division 11	18;11
+ReportingUnit	Philadelphia;Ward 18;Division 12	18;12
+ReportingUnit	Philadelphia;Ward 18;Division 13	18;13
+ReportingUnit	Philadelphia;Ward 18;Division 14	18;14
+ReportingUnit	Philadelphia;Ward 18;Division 15	18;15
+ReportingUnit	Philadelphia;Ward 18;Division 16	18;16
+ReportingUnit	Philadelphia;Ward 18;Division 17	18;17
+ReportingUnit	Philadelphia;Ward 18;Division 18	18;18
+ReportingUnit	Philadelphia;Ward 18;Division 19	18;19
+ReportingUnit	Philadelphia;Ward 19;Division 1	19;1
+ReportingUnit	Philadelphia;Ward 19;Division 1	19;01
+ReportingUnit	Philadelphia;Ward 19;Division 2	19;2
+ReportingUnit	Philadelphia;Ward 19;Division 2	19;02
+ReportingUnit	Philadelphia;Ward 19;Division 3	19;3
+ReportingUnit	Philadelphia;Ward 19;Division 3	19;03
+ReportingUnit	Philadelphia;Ward 19;Division 4	19;4
+ReportingUnit	Philadelphia;Ward 19;Division 4	19;04
+ReportingUnit	Philadelphia;Ward 19;Division 5	19;5
+ReportingUnit	Philadelphia;Ward 19;Division 5	19;05
+ReportingUnit	Philadelphia;Ward 19;Division 6	19;6
+ReportingUnit	Philadelphia;Ward 19;Division 6	19;06
+ReportingUnit	Philadelphia;Ward 19;Division 7	19;7
+ReportingUnit	Philadelphia;Ward 19;Division 7	19;07
+ReportingUnit	Philadelphia;Ward 19;Division 8	19;8
+ReportingUnit	Philadelphia;Ward 19;Division 8	19;08
+ReportingUnit	Philadelphia;Ward 19;Division 9	19;9
+ReportingUnit	Philadelphia;Ward 19;Division 9	19;09
+ReportingUnit	Philadelphia;Ward 19;Division 10	19;10
+ReportingUnit	Philadelphia;Ward 19;Division 11	19;11
+ReportingUnit	Philadelphia;Ward 19;Division 12	19;12
+ReportingUnit	Philadelphia;Ward 19;Division 13	19;13
+ReportingUnit	Philadelphia;Ward 19;Division 14	19;14
+ReportingUnit	Philadelphia;Ward 19;Division 15	19;15
+ReportingUnit	Philadelphia;Ward 19;Division 16	19;16
+ReportingUnit	Philadelphia;Ward 19;Division 17	19;17
+ReportingUnit	Philadelphia;Ward 19;Division 18	19;18
+ReportingUnit	Philadelphia;Ward 19;Division 19	19;19
+ReportingUnit	Philadelphia;Ward 20;Division 1	20;1
+ReportingUnit	Philadelphia;Ward 20;Division 1	20;01
+ReportingUnit	Philadelphia;Ward 20;Division 2	20;2
+ReportingUnit	Philadelphia;Ward 20;Division 2	20;02
+ReportingUnit	Philadelphia;Ward 20;Division 3	20;3
+ReportingUnit	Philadelphia;Ward 20;Division 3	20;03
+ReportingUnit	Philadelphia;Ward 20;Division 4	20;4
+ReportingUnit	Philadelphia;Ward 20;Division 4	20;04
+ReportingUnit	Philadelphia;Ward 20;Division 5	20;5
+ReportingUnit	Philadelphia;Ward 20;Division 5	20;05
+ReportingUnit	Philadelphia;Ward 20;Division 6	20;6
+ReportingUnit	Philadelphia;Ward 20;Division 6	20;06
+ReportingUnit	Philadelphia;Ward 20;Division 7	20;7
+ReportingUnit	Philadelphia;Ward 20;Division 7	20;07
+ReportingUnit	Philadelphia;Ward 20;Division 8	20;8
+ReportingUnit	Philadelphia;Ward 20;Division 8	20;08
+ReportingUnit	Philadelphia;Ward 20;Division 9	20;9
+ReportingUnit	Philadelphia;Ward 20;Division 9	20;09
+ReportingUnit	Philadelphia;Ward 20;Division 10	20;10
+ReportingUnit	Philadelphia;Ward 20;Division 11	20;11
+ReportingUnit	Philadelphia;Ward 21;Division 1	21;1
+ReportingUnit	Philadelphia;Ward 21;Division 1	21;01
+ReportingUnit	Philadelphia;Ward 21;Division 2	21;2
+ReportingUnit	Philadelphia;Ward 21;Division 2	21;02
+ReportingUnit	Philadelphia;Ward 21;Division 3	21;3
+ReportingUnit	Philadelphia;Ward 21;Division 3	21;03
+ReportingUnit	Philadelphia;Ward 21;Division 4	21;4
+ReportingUnit	Philadelphia;Ward 21;Division 4	21;04
+ReportingUnit	Philadelphia;Ward 21;Division 5	21;5
+ReportingUnit	Philadelphia;Ward 21;Division 5	21;05
+ReportingUnit	Philadelphia;Ward 21;Division 6	21;6
+ReportingUnit	Philadelphia;Ward 21;Division 6	21;06
+ReportingUnit	Philadelphia;Ward 21;Division 7	21;7
+ReportingUnit	Philadelphia;Ward 21;Division 7	21;07
+ReportingUnit	Philadelphia;Ward 21;Division 8	21;8
+ReportingUnit	Philadelphia;Ward 21;Division 8	21;08
+ReportingUnit	Philadelphia;Ward 21;Division 9	21;9
+ReportingUnit	Philadelphia;Ward 21;Division 9	21;09
+ReportingUnit	Philadelphia;Ward 21;Division 10	21;10
+ReportingUnit	Philadelphia;Ward 21;Division 11	21;11
+ReportingUnit	Philadelphia;Ward 21;Division 12	21;12
+ReportingUnit	Philadelphia;Ward 21;Division 13	21;13
+ReportingUnit	Philadelphia;Ward 21;Division 14	21;14
+ReportingUnit	Philadelphia;Ward 21;Division 15	21;15
+ReportingUnit	Philadelphia;Ward 21;Division 16	21;16
+ReportingUnit	Philadelphia;Ward 21;Division 17	21;17
+ReportingUnit	Philadelphia;Ward 21;Division 18	21;18
+ReportingUnit	Philadelphia;Ward 21;Division 19	21;19
+ReportingUnit	Philadelphia;Ward 21;Division 20	21;20
+ReportingUnit	Philadelphia;Ward 21;Division 21	21;21
+ReportingUnit	Philadelphia;Ward 21;Division 22	21;22
+ReportingUnit	Philadelphia;Ward 21;Division 23	21;23
+ReportingUnit	Philadelphia;Ward 21;Division 24	21;24
+ReportingUnit	Philadelphia;Ward 21;Division 25	21;25
+ReportingUnit	Philadelphia;Ward 21;Division 26	21;26
+ReportingUnit	Philadelphia;Ward 21;Division 27	21;27
+ReportingUnit	Philadelphia;Ward 21;Division 28	21;28
+ReportingUnit	Philadelphia;Ward 21;Division 29	21;29
+ReportingUnit	Philadelphia;Ward 21;Division 30	21;30
+ReportingUnit	Philadelphia;Ward 21;Division 31	21;31
+ReportingUnit	Philadelphia;Ward 21;Division 32	21;32
+ReportingUnit	Philadelphia;Ward 21;Division 33	21;33
+ReportingUnit	Philadelphia;Ward 21;Division 34	21;34
+ReportingUnit	Philadelphia;Ward 21;Division 35	21;35
+ReportingUnit	Philadelphia;Ward 21;Division 36	21;36
+ReportingUnit	Philadelphia;Ward 21;Division 37	21;37
+ReportingUnit	Philadelphia;Ward 21;Division 38	21;38
+ReportingUnit	Philadelphia;Ward 21;Division 39	21;39
+ReportingUnit	Philadelphia;Ward 21;Division 40	21;40
+ReportingUnit	Philadelphia;Ward 21;Division 41	21;41
+ReportingUnit	Philadelphia;Ward 21;Division 42	21;42
+ReportingUnit	Philadelphia;Ward 21;Division 43	21;43
+ReportingUnit	Philadelphia;Ward 21;Division 44	21;44
+ReportingUnit	Philadelphia;Ward 21;Division 45	21;45
+ReportingUnit	Philadelphia;Ward 22;Division 1	22;1
+ReportingUnit	Philadelphia;Ward 22;Division 1	22;01
+ReportingUnit	Philadelphia;Ward 22;Division 2	22;2
+ReportingUnit	Philadelphia;Ward 22;Division 2	22;02
+ReportingUnit	Philadelphia;Ward 22;Division 3	22;3
+ReportingUnit	Philadelphia;Ward 22;Division 3	22;03
+ReportingUnit	Philadelphia;Ward 22;Division 4	22;4
+ReportingUnit	Philadelphia;Ward 22;Division 4	22;04
+ReportingUnit	Philadelphia;Ward 22;Division 5	22;5
+ReportingUnit	Philadelphia;Ward 22;Division 5	22;05
+ReportingUnit	Philadelphia;Ward 22;Division 6	22;6
+ReportingUnit	Philadelphia;Ward 22;Division 6	22;06
+ReportingUnit	Philadelphia;Ward 22;Division 7	22;7
+ReportingUnit	Philadelphia;Ward 22;Division 7	22;07
+ReportingUnit	Philadelphia;Ward 22;Division 8	22;8
+ReportingUnit	Philadelphia;Ward 22;Division 8	22;08
+ReportingUnit	Philadelphia;Ward 22;Division 9	22;9
+ReportingUnit	Philadelphia;Ward 22;Division 9	22;09
+ReportingUnit	Philadelphia;Ward 22;Division 10	22;10
+ReportingUnit	Philadelphia;Ward 22;Division 11	22;11
+ReportingUnit	Philadelphia;Ward 22;Division 12	22;12
+ReportingUnit	Philadelphia;Ward 22;Division 13	22;13
+ReportingUnit	Philadelphia;Ward 22;Division 14	22;14
+ReportingUnit	Philadelphia;Ward 22;Division 15	22;15
+ReportingUnit	Philadelphia;Ward 22;Division 16	22;16
+ReportingUnit	Philadelphia;Ward 22;Division 17	22;17
+ReportingUnit	Philadelphia;Ward 22;Division 18	22;18
+ReportingUnit	Philadelphia;Ward 22;Division 19	22;19
+ReportingUnit	Philadelphia;Ward 22;Division 20	22;20
+ReportingUnit	Philadelphia;Ward 22;Division 21	22;21
+ReportingUnit	Philadelphia;Ward 22;Division 22	22;22
+ReportingUnit	Philadelphia;Ward 22;Division 23	22;23
+ReportingUnit	Philadelphia;Ward 22;Division 24	22;24
+ReportingUnit	Philadelphia;Ward 22;Division 25	22;25
+ReportingUnit	Philadelphia;Ward 22;Division 26	22;26
+ReportingUnit	Philadelphia;Ward 22;Division 27	22;27
+ReportingUnit	Philadelphia;Ward 22;Division 28	22;28
+ReportingUnit	Philadelphia;Ward 22;Division 29	22;29
+ReportingUnit	Philadelphia;Ward 23;Division 1	23;1
+ReportingUnit	Philadelphia;Ward 23;Division 1	23;01
+ReportingUnit	Philadelphia;Ward 23;Division 2	23;2
+ReportingUnit	Philadelphia;Ward 23;Division 2	23;02
+ReportingUnit	Philadelphia;Ward 23;Division 3	23;3
+ReportingUnit	Philadelphia;Ward 23;Division 3	23;03
+ReportingUnit	Philadelphia;Ward 23;Division 4	23;4
+ReportingUnit	Philadelphia;Ward 23;Division 4	23;04
+ReportingUnit	Philadelphia;Ward 23;Division 5	23;5
+ReportingUnit	Philadelphia;Ward 23;Division 5	23;05
+ReportingUnit	Philadelphia;Ward 23;Division 6	23;6
+ReportingUnit	Philadelphia;Ward 23;Division 6	23;06
+ReportingUnit	Philadelphia;Ward 23;Division 7	23;7
+ReportingUnit	Philadelphia;Ward 23;Division 7	23;07
+ReportingUnit	Philadelphia;Ward 23;Division 8	23;8
+ReportingUnit	Philadelphia;Ward 23;Division 8	23;08
+ReportingUnit	Philadelphia;Ward 23;Division 9	23;9
+ReportingUnit	Philadelphia;Ward 23;Division 9	23;09
+ReportingUnit	Philadelphia;Ward 23;Division 10	23;10
+ReportingUnit	Philadelphia;Ward 23;Division 11	23;11
+ReportingUnit	Philadelphia;Ward 23;Division 12	23;12
+ReportingUnit	Philadelphia;Ward 23;Division 13	23;13
+ReportingUnit	Philadelphia;Ward 23;Division 14	23;14
+ReportingUnit	Philadelphia;Ward 23;Division 15	23;15
+ReportingUnit	Philadelphia;Ward 23;Division 16	23;16
+ReportingUnit	Philadelphia;Ward 23;Division 17	23;17
+ReportingUnit	Philadelphia;Ward 23;Division 18	23;18
+ReportingUnit	Philadelphia;Ward 23;Division 19	23;19
+ReportingUnit	Philadelphia;Ward 23;Division 20	23;20
+ReportingUnit	Philadelphia;Ward 23;Division 21	23;21
+ReportingUnit	Philadelphia;Ward 23;Division 22	23;22
+ReportingUnit	Philadelphia;Ward 23;Division 23	23;23
+ReportingUnit	Philadelphia;Ward 24;Division 1	24;1
+ReportingUnit	Philadelphia;Ward 24;Division 1	24;01
+ReportingUnit	Philadelphia;Ward 24;Division 2	24;2
+ReportingUnit	Philadelphia;Ward 24;Division 2	24;02
+ReportingUnit	Philadelphia;Ward 24;Division 3	24;3
+ReportingUnit	Philadelphia;Ward 24;Division 3	24;03
+ReportingUnit	Philadelphia;Ward 24;Division 4	24;4
+ReportingUnit	Philadelphia;Ward 24;Division 4	24;04
+ReportingUnit	Philadelphia;Ward 24;Division 5	24;5
+ReportingUnit	Philadelphia;Ward 24;Division 5	24;05
+ReportingUnit	Philadelphia;Ward 24;Division 6	24;6
+ReportingUnit	Philadelphia;Ward 24;Division 6	24;06
+ReportingUnit	Philadelphia;Ward 24;Division 7	24;7
+ReportingUnit	Philadelphia;Ward 24;Division 7	24;07
+ReportingUnit	Philadelphia;Ward 24;Division 8	24;8
+ReportingUnit	Philadelphia;Ward 24;Division 8	24;08
+ReportingUnit	Philadelphia;Ward 24;Division 9	24;9
+ReportingUnit	Philadelphia;Ward 24;Division 9	24;09
+ReportingUnit	Philadelphia;Ward 24;Division 10	24;10
+ReportingUnit	Philadelphia;Ward 24;Division 11	24;11
+ReportingUnit	Philadelphia;Ward 24;Division 12	24;12
+ReportingUnit	Philadelphia;Ward 24;Division 13	24;13
+ReportingUnit	Philadelphia;Ward 24;Division 14	24;14
+ReportingUnit	Philadelphia;Ward 24;Division 15	24;15
+ReportingUnit	Philadelphia;Ward 24;Division 16	24;16
+ReportingUnit	Philadelphia;Ward 24;Division 17	24;17
+ReportingUnit	Philadelphia;Ward 24;Division 18	24;18
+ReportingUnit	Philadelphia;Ward 24;Division 19	24;19
+ReportingUnit	Philadelphia;Ward 25;Division 1	25;1
+ReportingUnit	Philadelphia;Ward 25;Division 1	25;01
+ReportingUnit	Philadelphia;Ward 25;Division 2	25;2
+ReportingUnit	Philadelphia;Ward 25;Division 2	25;02
+ReportingUnit	Philadelphia;Ward 25;Division 3	25;3
+ReportingUnit	Philadelphia;Ward 25;Division 3	25;03
+ReportingUnit	Philadelphia;Ward 25;Division 4	25;4
+ReportingUnit	Philadelphia;Ward 25;Division 4	25;04
+ReportingUnit	Philadelphia;Ward 25;Division 5	25;5
+ReportingUnit	Philadelphia;Ward 25;Division 5	25;05
+ReportingUnit	Philadelphia;Ward 25;Division 6	25;6
+ReportingUnit	Philadelphia;Ward 25;Division 6	25;06
+ReportingUnit	Philadelphia;Ward 25;Division 7	25;7
+ReportingUnit	Philadelphia;Ward 25;Division 7	25;07
+ReportingUnit	Philadelphia;Ward 25;Division 8	25;8
+ReportingUnit	Philadelphia;Ward 25;Division 8	25;08
+ReportingUnit	Philadelphia;Ward 25;Division 9	25;9
+ReportingUnit	Philadelphia;Ward 25;Division 9	25;09
+ReportingUnit	Philadelphia;Ward 25;Division 10	25;10
+ReportingUnit	Philadelphia;Ward 25;Division 11	25;11
+ReportingUnit	Philadelphia;Ward 25;Division 12	25;12
+ReportingUnit	Philadelphia;Ward 25;Division 13	25;13
+ReportingUnit	Philadelphia;Ward 25;Division 14	25;14
+ReportingUnit	Philadelphia;Ward 25;Division 15	25;15
+ReportingUnit	Philadelphia;Ward 25;Division 16	25;16
+ReportingUnit	Philadelphia;Ward 25;Division 17	25;17
+ReportingUnit	Philadelphia;Ward 25;Division 18	25;18
+ReportingUnit	Philadelphia;Ward 25;Division 19	25;19
+ReportingUnit	Philadelphia;Ward 25;Division 20	25;20
+ReportingUnit	Philadelphia;Ward 25;Division 21	25;21
+ReportingUnit	Philadelphia;Ward 25;Division 22	25;22
+ReportingUnit	Philadelphia;Ward 25;Division 23	25;23
+ReportingUnit	Philadelphia;Ward 25;Division 24	25;24
+ReportingUnit	Philadelphia;Ward 26;Division 1	26;1
+ReportingUnit	Philadelphia;Ward 26;Division 1	26;01
+ReportingUnit	Philadelphia;Ward 26;Division 2	26;2
+ReportingUnit	Philadelphia;Ward 26;Division 2	26;02
+ReportingUnit	Philadelphia;Ward 26;Division 3	26;3
+ReportingUnit	Philadelphia;Ward 26;Division 3	26;03
+ReportingUnit	Philadelphia;Ward 26;Division 4	26;4
+ReportingUnit	Philadelphia;Ward 26;Division 4	26;04
+ReportingUnit	Philadelphia;Ward 26;Division 5	26;5
+ReportingUnit	Philadelphia;Ward 26;Division 5	26;05
+ReportingUnit	Philadelphia;Ward 26;Division 6	26;6
+ReportingUnit	Philadelphia;Ward 26;Division 6	26;06
+ReportingUnit	Philadelphia;Ward 26;Division 7	26;7
+ReportingUnit	Philadelphia;Ward 26;Division 7	26;07
+ReportingUnit	Philadelphia;Ward 26;Division 8	26;8
+ReportingUnit	Philadelphia;Ward 26;Division 8	26;08
+ReportingUnit	Philadelphia;Ward 26;Division 9	26;9
+ReportingUnit	Philadelphia;Ward 26;Division 9	26;09
+ReportingUnit	Philadelphia;Ward 26;Division 10	26;10
+ReportingUnit	Philadelphia;Ward 26;Division 11	26;11
+ReportingUnit	Philadelphia;Ward 26;Division 12	26;12
+ReportingUnit	Philadelphia;Ward 26;Division 13	26;13
+ReportingUnit	Philadelphia;Ward 26;Division 14	26;14
+ReportingUnit	Philadelphia;Ward 26;Division 15	26;15
+ReportingUnit	Philadelphia;Ward 26;Division 16	26;16
+ReportingUnit	Philadelphia;Ward 26;Division 17	26;17
+ReportingUnit	Philadelphia;Ward 26;Division 18	26;18
+ReportingUnit	Philadelphia;Ward 26;Division 19	26;19
+ReportingUnit	Philadelphia;Ward 26;Division 20	26;20
+ReportingUnit	Philadelphia;Ward 26;Division 21	26;21
+ReportingUnit	Philadelphia;Ward 26;Division 22	26;22
+ReportingUnit	Philadelphia;Ward 26;Division 23	26;23
+ReportingUnit	Philadelphia;Ward 27;Division 1	27;1
+ReportingUnit	Philadelphia;Ward 27;Division 1	27;01
+ReportingUnit	Philadelphia;Ward 27;Division 2	27;2
+ReportingUnit	Philadelphia;Ward 27;Division 2	27;02
+ReportingUnit	Philadelphia;Ward 27;Division 3	27;3
+ReportingUnit	Philadelphia;Ward 27;Division 3	27;03
+ReportingUnit	Philadelphia;Ward 27;Division 4	27;4
+ReportingUnit	Philadelphia;Ward 27;Division 4	27;04
+ReportingUnit	Philadelphia;Ward 27;Division 5	27;5
+ReportingUnit	Philadelphia;Ward 27;Division 5	27;05
+ReportingUnit	Philadelphia;Ward 27;Division 6	27;6
+ReportingUnit	Philadelphia;Ward 27;Division 6	27;06
+ReportingUnit	Philadelphia;Ward 27;Division 7	27;7
+ReportingUnit	Philadelphia;Ward 27;Division 7	27;07
+ReportingUnit	Philadelphia;Ward 27;Division 8	27;8
+ReportingUnit	Philadelphia;Ward 27;Division 8	27;08
+ReportingUnit	Philadelphia;Ward 27;Division 9	27;9
+ReportingUnit	Philadelphia;Ward 27;Division 9	27;09
+ReportingUnit	Philadelphia;Ward 27;Division 10	27;10
+ReportingUnit	Philadelphia;Ward 27;Division 11	27;11
+ReportingUnit	Philadelphia;Ward 27;Division 12	27;12
+ReportingUnit	Philadelphia;Ward 27;Division 13	27;13
+ReportingUnit	Philadelphia;Ward 27;Division 14	27;14
+ReportingUnit	Philadelphia;Ward 27;Division 15	27;15
+ReportingUnit	Philadelphia;Ward 27;Division 16	27;16
+ReportingUnit	Philadelphia;Ward 27;Division 17	27;17
+ReportingUnit	Philadelphia;Ward 27;Division 18	27;18
+ReportingUnit	Philadelphia;Ward 27;Division 19	27;19
+ReportingUnit	Philadelphia;Ward 27;Division 20	27;20
+ReportingUnit	Philadelphia;Ward 27;Division 21	27;21
+ReportingUnit	Philadelphia;Ward 27;Division 22	27;22
+ReportingUnit	Philadelphia;Ward 27;Division 23	27;23
+ReportingUnit	Philadelphia;Ward 28;Division 1	28;1
+ReportingUnit	Philadelphia;Ward 28;Division 1	28;01
+ReportingUnit	Philadelphia;Ward 28;Division 2	28;2
+ReportingUnit	Philadelphia;Ward 28;Division 2	28;02
+ReportingUnit	Philadelphia;Ward 28;Division 3	28;3
+ReportingUnit	Philadelphia;Ward 28;Division 3	28;03
+ReportingUnit	Philadelphia;Ward 28;Division 4	28;4
+ReportingUnit	Philadelphia;Ward 28;Division 4	28;04
+ReportingUnit	Philadelphia;Ward 28;Division 5	28;5
+ReportingUnit	Philadelphia;Ward 28;Division 5	28;05
+ReportingUnit	Philadelphia;Ward 28;Division 6	28;6
+ReportingUnit	Philadelphia;Ward 28;Division 6	28;06
+ReportingUnit	Philadelphia;Ward 28;Division 7	28;7
+ReportingUnit	Philadelphia;Ward 28;Division 7	28;07
+ReportingUnit	Philadelphia;Ward 28;Division 8	28;8
+ReportingUnit	Philadelphia;Ward 28;Division 8	28;08
+ReportingUnit	Philadelphia;Ward 28;Division 9	28;9
+ReportingUnit	Philadelphia;Ward 28;Division 9	28;09
+ReportingUnit	Philadelphia;Ward 28;Division 10	28;10
+ReportingUnit	Philadelphia;Ward 28;Division 11	28;11
+ReportingUnit	Philadelphia;Ward 28;Division 12	28;12
+ReportingUnit	Philadelphia;Ward 28;Division 13	28;13
+ReportingUnit	Philadelphia;Ward 28;Division 14	28;14
+ReportingUnit	Philadelphia;Ward 28;Division 15	28;15
+ReportingUnit	Philadelphia;Ward 28;Division 16	28;16
+ReportingUnit	Philadelphia;Ward 28;Division 17	28;17
+ReportingUnit	Philadelphia;Ward 28;Division 18	28;18
+ReportingUnit	Philadelphia;Ward 29;Division 1	29;1
+ReportingUnit	Philadelphia;Ward 29;Division 1	29;01
+ReportingUnit	Philadelphia;Ward 29;Division 2	29;2
+ReportingUnit	Philadelphia;Ward 29;Division 2	29;02
+ReportingUnit	Philadelphia;Ward 29;Division 3	29;3
+ReportingUnit	Philadelphia;Ward 29;Division 3	29;03
+ReportingUnit	Philadelphia;Ward 29;Division 4	29;4
+ReportingUnit	Philadelphia;Ward 29;Division 4	29;04
+ReportingUnit	Philadelphia;Ward 29;Division 5	29;5
+ReportingUnit	Philadelphia;Ward 29;Division 5	29;05
+ReportingUnit	Philadelphia;Ward 29;Division 6	29;6
+ReportingUnit	Philadelphia;Ward 29;Division 6	29;06
+ReportingUnit	Philadelphia;Ward 29;Division 7	29;7
+ReportingUnit	Philadelphia;Ward 29;Division 7	29;07
+ReportingUnit	Philadelphia;Ward 29;Division 8	29;8
+ReportingUnit	Philadelphia;Ward 29;Division 8	29;08
+ReportingUnit	Philadelphia;Ward 29;Division 9	29;9
+ReportingUnit	Philadelphia;Ward 29;Division 9	29;09
+ReportingUnit	Philadelphia;Ward 29;Division 10	29;10
+ReportingUnit	Philadelphia;Ward 29;Division 11	29;11
+ReportingUnit	Philadelphia;Ward 29;Division 12	29;12
+ReportingUnit	Philadelphia;Ward 29;Division 13	29;13
+ReportingUnit	Philadelphia;Ward 29;Division 14	29;14
+ReportingUnit	Philadelphia;Ward 29;Division 15	29;15
+ReportingUnit	Philadelphia;Ward 29;Division 16	29;16
+ReportingUnit	Philadelphia;Ward 29;Division 17	29;17
+ReportingUnit	Philadelphia;Ward 29;Division 18	29;18
+ReportingUnit	Philadelphia;Ward 30;Division 1	30;1
+ReportingUnit	Philadelphia;Ward 30;Division 1	30;01
+ReportingUnit	Philadelphia;Ward 30;Division 2	30;2
+ReportingUnit	Philadelphia;Ward 30;Division 2	30;02
+ReportingUnit	Philadelphia;Ward 30;Division 3	30;3
+ReportingUnit	Philadelphia;Ward 30;Division 3	30;03
+ReportingUnit	Philadelphia;Ward 30;Division 4	30;4
+ReportingUnit	Philadelphia;Ward 30;Division 4	30;04
+ReportingUnit	Philadelphia;Ward 30;Division 5	30;5
+ReportingUnit	Philadelphia;Ward 30;Division 5	30;05
+ReportingUnit	Philadelphia;Ward 30;Division 6	30;6
+ReportingUnit	Philadelphia;Ward 30;Division 6	30;06
+ReportingUnit	Philadelphia;Ward 30;Division 7	30;7
+ReportingUnit	Philadelphia;Ward 30;Division 7	30;07
+ReportingUnit	Philadelphia;Ward 30;Division 8	30;8
+ReportingUnit	Philadelphia;Ward 30;Division 8	30;08
+ReportingUnit	Philadelphia;Ward 30;Division 9	30;9
+ReportingUnit	Philadelphia;Ward 30;Division 9	30;09
+ReportingUnit	Philadelphia;Ward 30;Division 10	30;10
+ReportingUnit	Philadelphia;Ward 30;Division 11	30;11
+ReportingUnit	Philadelphia;Ward 30;Division 12	30;12
+ReportingUnit	Philadelphia;Ward 30;Division 13	30;13
+ReportingUnit	Philadelphia;Ward 30;Division 14	30;14
+ReportingUnit	Philadelphia;Ward 30;Division 15	30;15
+ReportingUnit	Philadelphia;Ward 30;Division 16	30;16
+ReportingUnit	Philadelphia;Ward 30;Division 17	30;17
+ReportingUnit	Philadelphia;Ward 31;Division 1	31;1
+ReportingUnit	Philadelphia;Ward 31;Division 1	31;01
+ReportingUnit	Philadelphia;Ward 31;Division 2	31;2
+ReportingUnit	Philadelphia;Ward 31;Division 2	31;02
+ReportingUnit	Philadelphia;Ward 31;Division 3	31;3
+ReportingUnit	Philadelphia;Ward 31;Division 3	31;03
+ReportingUnit	Philadelphia;Ward 31;Division 4	31;4
+ReportingUnit	Philadelphia;Ward 31;Division 4	31;04
+ReportingUnit	Philadelphia;Ward 31;Division 5	31;5
+ReportingUnit	Philadelphia;Ward 31;Division 5	31;05
+ReportingUnit	Philadelphia;Ward 31;Division 6	31;6
+ReportingUnit	Philadelphia;Ward 31;Division 6	31;06
+ReportingUnit	Philadelphia;Ward 31;Division 7	31;7
+ReportingUnit	Philadelphia;Ward 31;Division 7	31;07
+ReportingUnit	Philadelphia;Ward 31;Division 8	31;8
+ReportingUnit	Philadelphia;Ward 31;Division 8	31;08
+ReportingUnit	Philadelphia;Ward 31;Division 9	31;9
+ReportingUnit	Philadelphia;Ward 31;Division 9	31;09
+ReportingUnit	Philadelphia;Ward 31;Division 10	31;10
+ReportingUnit	Philadelphia;Ward 31;Division 11	31;11
+ReportingUnit	Philadelphia;Ward 31;Division 12	31;12
+ReportingUnit	Philadelphia;Ward 31;Division 13	31;13
+ReportingUnit	Philadelphia;Ward 31;Division 14	31;14
+ReportingUnit	Philadelphia;Ward 31;Division 15	31;15
+ReportingUnit	Philadelphia;Ward 31;Division 16	31;16
+ReportingUnit	Philadelphia;Ward 31;Division 17	31;17
+ReportingUnit	Philadelphia;Ward 31;Division 18	31;18
+ReportingUnit	Philadelphia;Ward 31;Division 19	31;19
+ReportingUnit	Philadelphia;Ward 32;Division 1	32;1
+ReportingUnit	Philadelphia;Ward 32;Division 1	32;01
+ReportingUnit	Philadelphia;Ward 32;Division 2	32;2
+ReportingUnit	Philadelphia;Ward 32;Division 2	32;02
+ReportingUnit	Philadelphia;Ward 32;Division 3	32;3
+ReportingUnit	Philadelphia;Ward 32;Division 3	32;03
+ReportingUnit	Philadelphia;Ward 32;Division 4	32;4
+ReportingUnit	Philadelphia;Ward 32;Division 4	32;04
+ReportingUnit	Philadelphia;Ward 32;Division 5	32;5
+ReportingUnit	Philadelphia;Ward 32;Division 5	32;05
+ReportingUnit	Philadelphia;Ward 32;Division 6	32;6
+ReportingUnit	Philadelphia;Ward 32;Division 6	32;06
+ReportingUnit	Philadelphia;Ward 32;Division 7	32;7
+ReportingUnit	Philadelphia;Ward 32;Division 7	32;07
+ReportingUnit	Philadelphia;Ward 32;Division 8	32;8
+ReportingUnit	Philadelphia;Ward 32;Division 8	32;08
+ReportingUnit	Philadelphia;Ward 32;Division 9	32;9
+ReportingUnit	Philadelphia;Ward 32;Division 9	32;09
+ReportingUnit	Philadelphia;Ward 32;Division 10	32;10
+ReportingUnit	Philadelphia;Ward 32;Division 11	32;11
+ReportingUnit	Philadelphia;Ward 32;Division 12	32;12
+ReportingUnit	Philadelphia;Ward 32;Division 13	32;13
+ReportingUnit	Philadelphia;Ward 32;Division 14	32;14
+ReportingUnit	Philadelphia;Ward 32;Division 15	32;15
+ReportingUnit	Philadelphia;Ward 32;Division 16	32;16
+ReportingUnit	Philadelphia;Ward 32;Division 17	32;17
+ReportingUnit	Philadelphia;Ward 32;Division 18	32;18
+ReportingUnit	Philadelphia;Ward 32;Division 19	32;19
+ReportingUnit	Philadelphia;Ward 32;Division 20	32;20
+ReportingUnit	Philadelphia;Ward 32;Division 21	32;21
+ReportingUnit	Philadelphia;Ward 32;Division 22	32;22
+ReportingUnit	Philadelphia;Ward 32;Division 23	32;23
+ReportingUnit	Philadelphia;Ward 32;Division 24	32;24
+ReportingUnit	Philadelphia;Ward 32;Division 25	32;25
+ReportingUnit	Philadelphia;Ward 32;Division 26	32;26
+ReportingUnit	Philadelphia;Ward 32;Division 27	32;27
+ReportingUnit	Philadelphia;Ward 32;Division 28	32;28
+ReportingUnit	Philadelphia;Ward 32;Division 29	32;29
+ReportingUnit	Philadelphia;Ward 32;Division 30	32;30
+ReportingUnit	Philadelphia;Ward 32;Division 31	32;31
+ReportingUnit	Philadelphia;Ward 33;Division 1	33;1
+ReportingUnit	Philadelphia;Ward 33;Division 1	33;01
+ReportingUnit	Philadelphia;Ward 33;Division 2	33;2
+ReportingUnit	Philadelphia;Ward 33;Division 2	33;02
+ReportingUnit	Philadelphia;Ward 33;Division 3	33;3
+ReportingUnit	Philadelphia;Ward 33;Division 3	33;03
+ReportingUnit	Philadelphia;Ward 33;Division 4	33;4
+ReportingUnit	Philadelphia;Ward 33;Division 4	33;04
+ReportingUnit	Philadelphia;Ward 33;Division 5	33;5
+ReportingUnit	Philadelphia;Ward 33;Division 5	33;05
+ReportingUnit	Philadelphia;Ward 33;Division 6	33;6
+ReportingUnit	Philadelphia;Ward 33;Division 6	33;06
+ReportingUnit	Philadelphia;Ward 33;Division 7	33;7
+ReportingUnit	Philadelphia;Ward 33;Division 7	33;07
+ReportingUnit	Philadelphia;Ward 33;Division 8	33;8
+ReportingUnit	Philadelphia;Ward 33;Division 8	33;08
+ReportingUnit	Philadelphia;Ward 33;Division 9	33;9
+ReportingUnit	Philadelphia;Ward 33;Division 9	33;09
+ReportingUnit	Philadelphia;Ward 33;Division 10	33;10
+ReportingUnit	Philadelphia;Ward 33;Division 11	33;11
+ReportingUnit	Philadelphia;Ward 33;Division 12	33;12
+ReportingUnit	Philadelphia;Ward 33;Division 13	33;13
+ReportingUnit	Philadelphia;Ward 33;Division 14	33;14
+ReportingUnit	Philadelphia;Ward 33;Division 15	33;15
+ReportingUnit	Philadelphia;Ward 33;Division 16	33;16
+ReportingUnit	Philadelphia;Ward 33;Division 17	33;17
+ReportingUnit	Philadelphia;Ward 33;Division 18	33;18
+ReportingUnit	Philadelphia;Ward 33;Division 19	33;19
+ReportingUnit	Philadelphia;Ward 33;Division 20	33;20
+ReportingUnit	Philadelphia;Ward 33;Division 21	33;21
+ReportingUnit	Philadelphia;Ward 33;Division 22	33;22
+ReportingUnit	Philadelphia;Ward 33;Division 23	33;23
+ReportingUnit	Philadelphia;Ward 33;Division 24	33;24
+ReportingUnit	Philadelphia;Ward 34;Division 1	34;1
+ReportingUnit	Philadelphia;Ward 34;Division 1	34;01
+ReportingUnit	Philadelphia;Ward 34;Division 2	34;2
+ReportingUnit	Philadelphia;Ward 34;Division 2	34;02
+ReportingUnit	Philadelphia;Ward 34;Division 3	34;3
+ReportingUnit	Philadelphia;Ward 34;Division 3	34;03
+ReportingUnit	Philadelphia;Ward 34;Division 4	34;4
+ReportingUnit	Philadelphia;Ward 34;Division 4	34;04
+ReportingUnit	Philadelphia;Ward 34;Division 5	34;5
+ReportingUnit	Philadelphia;Ward 34;Division 5	34;05
+ReportingUnit	Philadelphia;Ward 34;Division 6	34;6
+ReportingUnit	Philadelphia;Ward 34;Division 6	34;06
+ReportingUnit	Philadelphia;Ward 34;Division 7	34;7
+ReportingUnit	Philadelphia;Ward 34;Division 7	34;07
+ReportingUnit	Philadelphia;Ward 34;Division 8	34;8
+ReportingUnit	Philadelphia;Ward 34;Division 8	34;08
+ReportingUnit	Philadelphia;Ward 34;Division 9	34;9
+ReportingUnit	Philadelphia;Ward 34;Division 9	34;09
+ReportingUnit	Philadelphia;Ward 34;Division 10	34;10
+ReportingUnit	Philadelphia;Ward 34;Division 11	34;11
+ReportingUnit	Philadelphia;Ward 34;Division 12	34;12
+ReportingUnit	Philadelphia;Ward 34;Division 13	34;13
+ReportingUnit	Philadelphia;Ward 34;Division 14	34;14
+ReportingUnit	Philadelphia;Ward 34;Division 15	34;15
+ReportingUnit	Philadelphia;Ward 34;Division 16	34;16
+ReportingUnit	Philadelphia;Ward 34;Division 17	34;17
+ReportingUnit	Philadelphia;Ward 34;Division 18	34;18
+ReportingUnit	Philadelphia;Ward 34;Division 19	34;19
+ReportingUnit	Philadelphia;Ward 34;Division 20	34;20
+ReportingUnit	Philadelphia;Ward 34;Division 21	34;21
+ReportingUnit	Philadelphia;Ward 34;Division 22	34;22
+ReportingUnit	Philadelphia;Ward 34;Division 23	34;23
+ReportingUnit	Philadelphia;Ward 34;Division 24	34;24
+ReportingUnit	Philadelphia;Ward 34;Division 25	34;25
+ReportingUnit	Philadelphia;Ward 34;Division 26	34;26
+ReportingUnit	Philadelphia;Ward 34;Division 27	34;27
+ReportingUnit	Philadelphia;Ward 34;Division 28	34;28
+ReportingUnit	Philadelphia;Ward 34;Division 29	34;29
+ReportingUnit	Philadelphia;Ward 34;Division 30	34;30
+ReportingUnit	Philadelphia;Ward 34;Division 31	34;31
+ReportingUnit	Philadelphia;Ward 34;Division 32	34;32
+ReportingUnit	Philadelphia;Ward 34;Division 33	34;33
+ReportingUnit	Philadelphia;Ward 34;Division 34	34;34
+ReportingUnit	Philadelphia;Ward 34;Division 35	34;35
+ReportingUnit	Philadelphia;Ward 34;Division 36	34;36
+ReportingUnit	Philadelphia;Ward 34;Division 37	34;37
+ReportingUnit	Philadelphia;Ward 34;Division 38	34;38
+ReportingUnit	Philadelphia;Ward 34;Division 39	34;39
+ReportingUnit	Philadelphia;Ward 34;Division 40	34;40
+ReportingUnit	Philadelphia;Ward 34;Division 41	34;41
+ReportingUnit	Philadelphia;Ward 34;Division 42	34;42
+ReportingUnit	Philadelphia;Ward 35;Division 1	35;1
+ReportingUnit	Philadelphia;Ward 35;Division 1	35;01
+ReportingUnit	Philadelphia;Ward 35;Division 2	35;2
+ReportingUnit	Philadelphia;Ward 35;Division 2	35;02
+ReportingUnit	Philadelphia;Ward 35;Division 3	35;3
+ReportingUnit	Philadelphia;Ward 35;Division 3	35;03
+ReportingUnit	Philadelphia;Ward 35;Division 4	35;4
+ReportingUnit	Philadelphia;Ward 35;Division 4	35;04
+ReportingUnit	Philadelphia;Ward 35;Division 5	35;5
+ReportingUnit	Philadelphia;Ward 35;Division 5	35;05
+ReportingUnit	Philadelphia;Ward 35;Division 6	35;6
+ReportingUnit	Philadelphia;Ward 35;Division 6	35;06
+ReportingUnit	Philadelphia;Ward 35;Division 7	35;7
+ReportingUnit	Philadelphia;Ward 35;Division 7	35;07
+ReportingUnit	Philadelphia;Ward 35;Division 8	35;8
+ReportingUnit	Philadelphia;Ward 35;Division 8	35;08
+ReportingUnit	Philadelphia;Ward 35;Division 9	35;9
+ReportingUnit	Philadelphia;Ward 35;Division 9	35;09
+ReportingUnit	Philadelphia;Ward 35;Division 10	35;10
+ReportingUnit	Philadelphia;Ward 35;Division 11	35;11
+ReportingUnit	Philadelphia;Ward 35;Division 12	35;12
+ReportingUnit	Philadelphia;Ward 35;Division 13	35;13
+ReportingUnit	Philadelphia;Ward 35;Division 14	35;14
+ReportingUnit	Philadelphia;Ward 35;Division 15	35;15
+ReportingUnit	Philadelphia;Ward 35;Division 16	35;16
+ReportingUnit	Philadelphia;Ward 35;Division 17	35;17
+ReportingUnit	Philadelphia;Ward 35;Division 18	35;18
+ReportingUnit	Philadelphia;Ward 35;Division 19	35;19
+ReportingUnit	Philadelphia;Ward 35;Division 20	35;20
+ReportingUnit	Philadelphia;Ward 35;Division 21	35;21
+ReportingUnit	Philadelphia;Ward 35;Division 22	35;22
+ReportingUnit	Philadelphia;Ward 35;Division 23	35;23
+ReportingUnit	Philadelphia;Ward 35;Division 24	35;24
+ReportingUnit	Philadelphia;Ward 35;Division 25	35;25
+ReportingUnit	Philadelphia;Ward 35;Division 26	35;26
+ReportingUnit	Philadelphia;Ward 35;Division 27	35;27
+ReportingUnit	Philadelphia;Ward 35;Division 28	35;28
+ReportingUnit	Philadelphia;Ward 35;Division 29	35;29
+ReportingUnit	Philadelphia;Ward 35;Division 30	35;30
+ReportingUnit	Philadelphia;Ward 35;Division 31	35;31
+ReportingUnit	Philadelphia;Ward 35;Division 32	35;32
+ReportingUnit	Philadelphia;Ward 36;Division 1	36;1
+ReportingUnit	Philadelphia;Ward 36;Division 1	36;01
+ReportingUnit	Philadelphia;Ward 36;Division 2	36;2
+ReportingUnit	Philadelphia;Ward 36;Division 2	36;02
+ReportingUnit	Philadelphia;Ward 36;Division 3	36;3
+ReportingUnit	Philadelphia;Ward 36;Division 3	36;03
+ReportingUnit	Philadelphia;Ward 36;Division 4	36;4
+ReportingUnit	Philadelphia;Ward 36;Division 4	36;04
+ReportingUnit	Philadelphia;Ward 36;Division 5	36;5
+ReportingUnit	Philadelphia;Ward 36;Division 5	36;05
+ReportingUnit	Philadelphia;Ward 36;Division 6	36;6
+ReportingUnit	Philadelphia;Ward 36;Division 6	36;06
+ReportingUnit	Philadelphia;Ward 36;Division 7	36;7
+ReportingUnit	Philadelphia;Ward 36;Division 7	36;07
+ReportingUnit	Philadelphia;Ward 36;Division 8	36;8
+ReportingUnit	Philadelphia;Ward 36;Division 8	36;08
+ReportingUnit	Philadelphia;Ward 36;Division 9	36;9
+ReportingUnit	Philadelphia;Ward 36;Division 9	36;09
+ReportingUnit	Philadelphia;Ward 36;Division 10	36;10
+ReportingUnit	Philadelphia;Ward 36;Division 11	36;11
+ReportingUnit	Philadelphia;Ward 36;Division 12	36;12
+ReportingUnit	Philadelphia;Ward 36;Division 13	36;13
+ReportingUnit	Philadelphia;Ward 36;Division 14	36;14
+ReportingUnit	Philadelphia;Ward 36;Division 15	36;15
+ReportingUnit	Philadelphia;Ward 36;Division 16	36;16
+ReportingUnit	Philadelphia;Ward 36;Division 17	36;17
+ReportingUnit	Philadelphia;Ward 36;Division 18	36;18
+ReportingUnit	Philadelphia;Ward 36;Division 19	36;19
+ReportingUnit	Philadelphia;Ward 36;Division 20	36;20
+ReportingUnit	Philadelphia;Ward 36;Division 21	36;21
+ReportingUnit	Philadelphia;Ward 36;Division 22	36;22
+ReportingUnit	Philadelphia;Ward 36;Division 23	36;23
+ReportingUnit	Philadelphia;Ward 36;Division 24	36;24
+ReportingUnit	Philadelphia;Ward 36;Division 25	36;25
+ReportingUnit	Philadelphia;Ward 36;Division 26	36;26
+ReportingUnit	Philadelphia;Ward 36;Division 27	36;27
+ReportingUnit	Philadelphia;Ward 36;Division 28	36;28
+ReportingUnit	Philadelphia;Ward 36;Division 29	36;29
+ReportingUnit	Philadelphia;Ward 36;Division 30	36;30
+ReportingUnit	Philadelphia;Ward 36;Division 31	36;31
+ReportingUnit	Philadelphia;Ward 36;Division 32	36;32
+ReportingUnit	Philadelphia;Ward 36;Division 33	36;33
+ReportingUnit	Philadelphia;Ward 36;Division 34	36;34
+ReportingUnit	Philadelphia;Ward 36;Division 35	36;35
+ReportingUnit	Philadelphia;Ward 36;Division 36	36;36
+ReportingUnit	Philadelphia;Ward 36;Division 37	36;37
+ReportingUnit	Philadelphia;Ward 36;Division 38	36;38
+ReportingUnit	Philadelphia;Ward 36;Division 39	36;39
+ReportingUnit	Philadelphia;Ward 36;Division 40	36;40
+ReportingUnit	Philadelphia;Ward 36;Division 41	36;41
+ReportingUnit	Philadelphia;Ward 37;Division 1	37;1
+ReportingUnit	Philadelphia;Ward 37;Division 1	37;01
+ReportingUnit	Philadelphia;Ward 37;Division 2	37;2
+ReportingUnit	Philadelphia;Ward 37;Division 2	37;02
+ReportingUnit	Philadelphia;Ward 37;Division 3	37;3
+ReportingUnit	Philadelphia;Ward 37;Division 3	37;03
+ReportingUnit	Philadelphia;Ward 37;Division 4	37;4
+ReportingUnit	Philadelphia;Ward 37;Division 4	37;04
+ReportingUnit	Philadelphia;Ward 37;Division 5	37;5
+ReportingUnit	Philadelphia;Ward 37;Division 5	37;05
+ReportingUnit	Philadelphia;Ward 37;Division 6	37;6
+ReportingUnit	Philadelphia;Ward 37;Division 6	37;06
+ReportingUnit	Philadelphia;Ward 37;Division 7	37;7
+ReportingUnit	Philadelphia;Ward 37;Division 7	37;07
+ReportingUnit	Philadelphia;Ward 37;Division 8	37;8
+ReportingUnit	Philadelphia;Ward 37;Division 8	37;08
+ReportingUnit	Philadelphia;Ward 37;Division 9	37;9
+ReportingUnit	Philadelphia;Ward 37;Division 9	37;09
+ReportingUnit	Philadelphia;Ward 37;Division 10	37;10
+ReportingUnit	Philadelphia;Ward 37;Division 11	37;11
+ReportingUnit	Philadelphia;Ward 37;Division 12	37;12
+ReportingUnit	Philadelphia;Ward 37;Division 13	37;13
+ReportingUnit	Philadelphia;Ward 37;Division 14	37;14
+ReportingUnit	Philadelphia;Ward 37;Division 15	37;15
+ReportingUnit	Philadelphia;Ward 37;Division 16	37;16
+ReportingUnit	Philadelphia;Ward 37;Division 17	37;17
+ReportingUnit	Philadelphia;Ward 37;Division 18	37;18
+ReportingUnit	Philadelphia;Ward 37;Division 19	37;19
+ReportingUnit	Philadelphia;Ward 37;Division 20	37;20
+ReportingUnit	Philadelphia;Ward 37;Division 21	37;21
+ReportingUnit	Philadelphia;Ward 38;Division 1	38;1
+ReportingUnit	Philadelphia;Ward 38;Division 1	38;01
+ReportingUnit	Philadelphia;Ward 38;Division 2	38;2
+ReportingUnit	Philadelphia;Ward 38;Division 2	38;02
+ReportingUnit	Philadelphia;Ward 38;Division 3	38;3
+ReportingUnit	Philadelphia;Ward 38;Division 3	38;03
+ReportingUnit	Philadelphia;Ward 38;Division 4	38;4
+ReportingUnit	Philadelphia;Ward 38;Division 4	38;04
+ReportingUnit	Philadelphia;Ward 38;Division 5	38;5
+ReportingUnit	Philadelphia;Ward 38;Division 5	38;05
+ReportingUnit	Philadelphia;Ward 38;Division 6	38;6
+ReportingUnit	Philadelphia;Ward 38;Division 6	38;06
+ReportingUnit	Philadelphia;Ward 38;Division 7	38;7
+ReportingUnit	Philadelphia;Ward 38;Division 7	38;07
+ReportingUnit	Philadelphia;Ward 38;Division 8	38;8
+ReportingUnit	Philadelphia;Ward 38;Division 8	38;08
+ReportingUnit	Philadelphia;Ward 38;Division 9	38;9
+ReportingUnit	Philadelphia;Ward 38;Division 9	38;09
+ReportingUnit	Philadelphia;Ward 38;Division 10	38;10
+ReportingUnit	Philadelphia;Ward 38;Division 11	38;11
+ReportingUnit	Philadelphia;Ward 38;Division 12	38;12
+ReportingUnit	Philadelphia;Ward 38;Division 13	38;13
+ReportingUnit	Philadelphia;Ward 38;Division 14	38;14
+ReportingUnit	Philadelphia;Ward 38;Division 15	38;15
+ReportingUnit	Philadelphia;Ward 38;Division 16	38;16
+ReportingUnit	Philadelphia;Ward 38;Division 17	38;17
+ReportingUnit	Philadelphia;Ward 38;Division 18	38;18
+ReportingUnit	Philadelphia;Ward 38;Division 19	38;19
+ReportingUnit	Philadelphia;Ward 38;Division 20	38;20
+ReportingUnit	Philadelphia;Ward 38;Division 21	38;21
+ReportingUnit	Philadelphia;Ward 39;Division 1	39;1
+ReportingUnit	Philadelphia;Ward 39;Division 1	39;01
+ReportingUnit	Philadelphia;Ward 39;Division 2	39;2
+ReportingUnit	Philadelphia;Ward 39;Division 2	39;02
+ReportingUnit	Philadelphia;Ward 39;Division 3	39;3
+ReportingUnit	Philadelphia;Ward 39;Division 3	39;03
+ReportingUnit	Philadelphia;Ward 39;Division 4	39;4
+ReportingUnit	Philadelphia;Ward 39;Division 4	39;04
+ReportingUnit	Philadelphia;Ward 39;Division 5	39;5
+ReportingUnit	Philadelphia;Ward 39;Division 5	39;05
+ReportingUnit	Philadelphia;Ward 39;Division 6	39;6
+ReportingUnit	Philadelphia;Ward 39;Division 6	39;06
+ReportingUnit	Philadelphia;Ward 39;Division 7	39;7
+ReportingUnit	Philadelphia;Ward 39;Division 7	39;07
+ReportingUnit	Philadelphia;Ward 39;Division 8	39;8
+ReportingUnit	Philadelphia;Ward 39;Division 8	39;08
+ReportingUnit	Philadelphia;Ward 39;Division 9	39;9
+ReportingUnit	Philadelphia;Ward 39;Division 9	39;09
+ReportingUnit	Philadelphia;Ward 39;Division 10	39;10
+ReportingUnit	Philadelphia;Ward 39;Division 11	39;11
+ReportingUnit	Philadelphia;Ward 39;Division 12	39;12
+ReportingUnit	Philadelphia;Ward 39;Division 13	39;13
+ReportingUnit	Philadelphia;Ward 39;Division 14	39;14
+ReportingUnit	Philadelphia;Ward 39;Division 15	39;15
+ReportingUnit	Philadelphia;Ward 39;Division 16	39;16
+ReportingUnit	Philadelphia;Ward 39;Division 17	39;17
+ReportingUnit	Philadelphia;Ward 39;Division 18	39;18
+ReportingUnit	Philadelphia;Ward 39;Division 19	39;19
+ReportingUnit	Philadelphia;Ward 39;Division 20	39;20
+ReportingUnit	Philadelphia;Ward 39;Division 21	39;21
+ReportingUnit	Philadelphia;Ward 39;Division 22	39;22
+ReportingUnit	Philadelphia;Ward 39;Division 23	39;23
+ReportingUnit	Philadelphia;Ward 39;Division 24	39;24
+ReportingUnit	Philadelphia;Ward 39;Division 25	39;25
+ReportingUnit	Philadelphia;Ward 39;Division 26	39;26
+ReportingUnit	Philadelphia;Ward 39;Division 27	39;27
+ReportingUnit	Philadelphia;Ward 39;Division 28	39;28
+ReportingUnit	Philadelphia;Ward 39;Division 29	39;29
+ReportingUnit	Philadelphia;Ward 39;Division 30	39;30
+ReportingUnit	Philadelphia;Ward 39;Division 31	39;31
+ReportingUnit	Philadelphia;Ward 39;Division 32	39;32
+ReportingUnit	Philadelphia;Ward 39;Division 33	39;33
+ReportingUnit	Philadelphia;Ward 39;Division 34	39;34
+ReportingUnit	Philadelphia;Ward 39;Division 35	39;35
+ReportingUnit	Philadelphia;Ward 39;Division 36	39;36
+ReportingUnit	Philadelphia;Ward 39;Division 37	39;37
+ReportingUnit	Philadelphia;Ward 39;Division 38	39;38
+ReportingUnit	Philadelphia;Ward 39;Division 39	39;39
+ReportingUnit	Philadelphia;Ward 39;Division 40	39;40
+ReportingUnit	Philadelphia;Ward 39;Division 41	39;41
+ReportingUnit	Philadelphia;Ward 39;Division 42	39;42
+ReportingUnit	Philadelphia;Ward 39;Division 43	39;43
+ReportingUnit	Philadelphia;Ward 39;Division 44	39;44
+ReportingUnit	Philadelphia;Ward 39;Division 45	39;45
+ReportingUnit	Philadelphia;Ward 39;Division 46	39;46
+ReportingUnit	Philadelphia;Ward 40;Division 1	40;1
+ReportingUnit	Philadelphia;Ward 40;Division 1	40;01
+ReportingUnit	Philadelphia;Ward 40;Division 2	40;2
+ReportingUnit	Philadelphia;Ward 40;Division 2	40;02
+ReportingUnit	Philadelphia;Ward 40;Division 3	40;3
+ReportingUnit	Philadelphia;Ward 40;Division 3	40;03
+ReportingUnit	Philadelphia;Ward 40;Division 4	40;4
+ReportingUnit	Philadelphia;Ward 40;Division 4	40;04
+ReportingUnit	Philadelphia;Ward 40;Division 5	40;5
+ReportingUnit	Philadelphia;Ward 40;Division 5	40;05
+ReportingUnit	Philadelphia;Ward 40;Division 6	40;6
+ReportingUnit	Philadelphia;Ward 40;Division 6	40;06
+ReportingUnit	Philadelphia;Ward 40;Division 7	40;7
+ReportingUnit	Philadelphia;Ward 40;Division 7	40;07
+ReportingUnit	Philadelphia;Ward 40;Division 8	40;8
+ReportingUnit	Philadelphia;Ward 40;Division 8	40;08
+ReportingUnit	Philadelphia;Ward 40;Division 9	40;9
+ReportingUnit	Philadelphia;Ward 40;Division 9	40;09
+ReportingUnit	Philadelphia;Ward 40;Division 10	40;10
+ReportingUnit	Philadelphia;Ward 40;Division 11	40;11
+ReportingUnit	Philadelphia;Ward 40;Division 12	40;12
+ReportingUnit	Philadelphia;Ward 40;Division 13	40;13
+ReportingUnit	Philadelphia;Ward 40;Division 14	40;14
+ReportingUnit	Philadelphia;Ward 40;Division 15	40;15
+ReportingUnit	Philadelphia;Ward 40;Division 16	40;16
+ReportingUnit	Philadelphia;Ward 40;Division 17	40;17
+ReportingUnit	Philadelphia;Ward 40;Division 18	40;18
+ReportingUnit	Philadelphia;Ward 40;Division 19	40;19
+ReportingUnit	Philadelphia;Ward 40;Division 20	40;20
+ReportingUnit	Philadelphia;Ward 40;Division 21	40;21
+ReportingUnit	Philadelphia;Ward 40;Division 22	40;22
+ReportingUnit	Philadelphia;Ward 40;Division 23	40;23
+ReportingUnit	Philadelphia;Ward 40;Division 24	40;24
+ReportingUnit	Philadelphia;Ward 40;Division 25	40;25
+ReportingUnit	Philadelphia;Ward 40;Division 26	40;26
+ReportingUnit	Philadelphia;Ward 40;Division 27	40;27
+ReportingUnit	Philadelphia;Ward 40;Division 28	40;28
+ReportingUnit	Philadelphia;Ward 40;Division 29	40;29
+ReportingUnit	Philadelphia;Ward 40;Division 30	40;30
+ReportingUnit	Philadelphia;Ward 40;Division 31	40;31
+ReportingUnit	Philadelphia;Ward 40;Division 32	40;32
+ReportingUnit	Philadelphia;Ward 40;Division 33	40;33
+ReportingUnit	Philadelphia;Ward 40;Division 34	40;34
+ReportingUnit	Philadelphia;Ward 40;Division 35	40;35
+ReportingUnit	Philadelphia;Ward 40;Division 36	40;36
+ReportingUnit	Philadelphia;Ward 40;Division 37	40;37
+ReportingUnit	Philadelphia;Ward 40;Division 38	40;38
+ReportingUnit	Philadelphia;Ward 40;Division 39	40;39
+ReportingUnit	Philadelphia;Ward 40;Division 40	40;40
+ReportingUnit	Philadelphia;Ward 40;Division 41	40;41
+ReportingUnit	Philadelphia;Ward 40;Division 42	40;42
+ReportingUnit	Philadelphia;Ward 40;Division 43	40;43
+ReportingUnit	Philadelphia;Ward 40;Division 44	40;44
+ReportingUnit	Philadelphia;Ward 40;Division 45	40;45
+ReportingUnit	Philadelphia;Ward 40;Division 46	40;46
+ReportingUnit	Philadelphia;Ward 40;Division 47	40;47
+ReportingUnit	Philadelphia;Ward 40;Division 48	40;48
+ReportingUnit	Philadelphia;Ward 40;Division 49	40;49
+ReportingUnit	Philadelphia;Ward 40;Division 50	40;50
+ReportingUnit	Philadelphia;Ward 40;Division 51	40;51
+ReportingUnit	Philadelphia;Ward 41;Division 1	41;1
+ReportingUnit	Philadelphia;Ward 41;Division 1	41;01
+ReportingUnit	Philadelphia;Ward 41;Division 2	41;2
+ReportingUnit	Philadelphia;Ward 41;Division 2	41;02
+ReportingUnit	Philadelphia;Ward 41;Division 3	41;3
+ReportingUnit	Philadelphia;Ward 41;Division 3	41;03
+ReportingUnit	Philadelphia;Ward 41;Division 4	41;4
+ReportingUnit	Philadelphia;Ward 41;Division 4	41;04
+ReportingUnit	Philadelphia;Ward 41;Division 5	41;5
+ReportingUnit	Philadelphia;Ward 41;Division 5	41;05
+ReportingUnit	Philadelphia;Ward 41;Division 6	41;6
+ReportingUnit	Philadelphia;Ward 41;Division 6	41;06
+ReportingUnit	Philadelphia;Ward 41;Division 7	41;7
+ReportingUnit	Philadelphia;Ward 41;Division 7	41;07
+ReportingUnit	Philadelphia;Ward 41;Division 8	41;8
+ReportingUnit	Philadelphia;Ward 41;Division 8	41;08
+ReportingUnit	Philadelphia;Ward 41;Division 9	41;9
+ReportingUnit	Philadelphia;Ward 41;Division 9	41;09
+ReportingUnit	Philadelphia;Ward 41;Division 10	41;10
+ReportingUnit	Philadelphia;Ward 41;Division 11	41;11
+ReportingUnit	Philadelphia;Ward 41;Division 12	41;12
+ReportingUnit	Philadelphia;Ward 41;Division 13	41;13
+ReportingUnit	Philadelphia;Ward 41;Division 14	41;14
+ReportingUnit	Philadelphia;Ward 41;Division 15	41;15
+ReportingUnit	Philadelphia;Ward 41;Division 16	41;16
+ReportingUnit	Philadelphia;Ward 41;Division 17	41;17
+ReportingUnit	Philadelphia;Ward 41;Division 18	41;18
+ReportingUnit	Philadelphia;Ward 41;Division 19	41;19
+ReportingUnit	Philadelphia;Ward 41;Division 20	41;20
+ReportingUnit	Philadelphia;Ward 41;Division 21	41;21
+ReportingUnit	Philadelphia;Ward 41;Division 22	41;22
+ReportingUnit	Philadelphia;Ward 41;Division 23	41;23
+ReportingUnit	Philadelphia;Ward 41;Division 24	41;24
+ReportingUnit	Philadelphia;Ward 41;Division 25	41;25
+ReportingUnit	Philadelphia;Ward 41;Division 26	41;26
+ReportingUnit	Philadelphia;Ward 42;Division 1	42;1
+ReportingUnit	Philadelphia;Ward 42;Division 1	42;01
+ReportingUnit	Philadelphia;Ward 42;Division 2	42;2
+ReportingUnit	Philadelphia;Ward 42;Division 2	42;02
+ReportingUnit	Philadelphia;Ward 42;Division 3	42;3
+ReportingUnit	Philadelphia;Ward 42;Division 3	42;03
+ReportingUnit	Philadelphia;Ward 42;Division 4	42;4
+ReportingUnit	Philadelphia;Ward 42;Division 4	42;04
+ReportingUnit	Philadelphia;Ward 42;Division 5	42;5
+ReportingUnit	Philadelphia;Ward 42;Division 5	42;05
+ReportingUnit	Philadelphia;Ward 42;Division 6	42;6
+ReportingUnit	Philadelphia;Ward 42;Division 6	42;06
+ReportingUnit	Philadelphia;Ward 42;Division 7	42;7
+ReportingUnit	Philadelphia;Ward 42;Division 7	42;07
+ReportingUnit	Philadelphia;Ward 42;Division 8	42;8
+ReportingUnit	Philadelphia;Ward 42;Division 8	42;08
+ReportingUnit	Philadelphia;Ward 42;Division 9	42;9
+ReportingUnit	Philadelphia;Ward 42;Division 9	42;09
+ReportingUnit	Philadelphia;Ward 42;Division 10	42;10
+ReportingUnit	Philadelphia;Ward 42;Division 11	42;11
+ReportingUnit	Philadelphia;Ward 42;Division 12	42;12
+ReportingUnit	Philadelphia;Ward 42;Division 13	42;13
+ReportingUnit	Philadelphia;Ward 42;Division 14	42;14
+ReportingUnit	Philadelphia;Ward 42;Division 15	42;15
+ReportingUnit	Philadelphia;Ward 42;Division 16	42;16
+ReportingUnit	Philadelphia;Ward 42;Division 17	42;17
+ReportingUnit	Philadelphia;Ward 42;Division 18	42;18
+ReportingUnit	Philadelphia;Ward 42;Division 19	42;19
+ReportingUnit	Philadelphia;Ward 42;Division 20	42;20
+ReportingUnit	Philadelphia;Ward 42;Division 21	42;21
+ReportingUnit	Philadelphia;Ward 42;Division 22	42;22
+ReportingUnit	Philadelphia;Ward 42;Division 23	42;23
+ReportingUnit	Philadelphia;Ward 42;Division 24	42;24
+ReportingUnit	Philadelphia;Ward 42;Division 25	42;25
+ReportingUnit	Philadelphia;Ward 43;Division 1	43;1
+ReportingUnit	Philadelphia;Ward 43;Division 1	43;01
+ReportingUnit	Philadelphia;Ward 43;Division 2	43;2
+ReportingUnit	Philadelphia;Ward 43;Division 2	43;02
+ReportingUnit	Philadelphia;Ward 43;Division 3	43;3
+ReportingUnit	Philadelphia;Ward 43;Division 3	43;03
+ReportingUnit	Philadelphia;Ward 43;Division 4	43;4
+ReportingUnit	Philadelphia;Ward 43;Division 4	43;04
+ReportingUnit	Philadelphia;Ward 43;Division 5	43;5
+ReportingUnit	Philadelphia;Ward 43;Division 5	43;05
+ReportingUnit	Philadelphia;Ward 43;Division 6	43;6
+ReportingUnit	Philadelphia;Ward 43;Division 6	43;06
+ReportingUnit	Philadelphia;Ward 43;Division 7	43;7
+ReportingUnit	Philadelphia;Ward 43;Division 7	43;07
+ReportingUnit	Philadelphia;Ward 43;Division 8	43;8
+ReportingUnit	Philadelphia;Ward 43;Division 8	43;08
+ReportingUnit	Philadelphia;Ward 43;Division 9	43;9
+ReportingUnit	Philadelphia;Ward 43;Division 9	43;09
+ReportingUnit	Philadelphia;Ward 43;Division 10	43;10
+ReportingUnit	Philadelphia;Ward 43;Division 11	43;11
+ReportingUnit	Philadelphia;Ward 43;Division 12	43;12
+ReportingUnit	Philadelphia;Ward 43;Division 13	43;13
+ReportingUnit	Philadelphia;Ward 43;Division 14	43;14
+ReportingUnit	Philadelphia;Ward 43;Division 15	43;15
+ReportingUnit	Philadelphia;Ward 43;Division 16	43;16
+ReportingUnit	Philadelphia;Ward 43;Division 17	43;17
+ReportingUnit	Philadelphia;Ward 43;Division 18	43;18
+ReportingUnit	Philadelphia;Ward 43;Division 19	43;19
+ReportingUnit	Philadelphia;Ward 43;Division 20	43;20
+ReportingUnit	Philadelphia;Ward 43;Division 21	43;21
+ReportingUnit	Philadelphia;Ward 43;Division 22	43;22
+ReportingUnit	Philadelphia;Ward 43;Division 23	43;23
+ReportingUnit	Philadelphia;Ward 43;Division 24	43;24
+ReportingUnit	Philadelphia;Ward 43;Division 25	43;25
+ReportingUnit	Philadelphia;Ward 44;Division 1	44;1
+ReportingUnit	Philadelphia;Ward 44;Division 1	44;01
+ReportingUnit	Philadelphia;Ward 44;Division 2	44;2
+ReportingUnit	Philadelphia;Ward 44;Division 2	44;02
+ReportingUnit	Philadelphia;Ward 44;Division 3	44;3
+ReportingUnit	Philadelphia;Ward 44;Division 3	44;03
+ReportingUnit	Philadelphia;Ward 44;Division 4	44;4
+ReportingUnit	Philadelphia;Ward 44;Division 4	44;04
+ReportingUnit	Philadelphia;Ward 44;Division 5	44;5
+ReportingUnit	Philadelphia;Ward 44;Division 5	44;05
+ReportingUnit	Philadelphia;Ward 44;Division 6	44;6
+ReportingUnit	Philadelphia;Ward 44;Division 6	44;06
+ReportingUnit	Philadelphia;Ward 44;Division 7	44;7
+ReportingUnit	Philadelphia;Ward 44;Division 7	44;07
+ReportingUnit	Philadelphia;Ward 44;Division 8	44;8
+ReportingUnit	Philadelphia;Ward 44;Division 8	44;08
+ReportingUnit	Philadelphia;Ward 44;Division 9	44;9
+ReportingUnit	Philadelphia;Ward 44;Division 9	44;09
+ReportingUnit	Philadelphia;Ward 44;Division 10	44;10
+ReportingUnit	Philadelphia;Ward 44;Division 11	44;11
+ReportingUnit	Philadelphia;Ward 44;Division 12	44;12
+ReportingUnit	Philadelphia;Ward 44;Division 13	44;13
+ReportingUnit	Philadelphia;Ward 44;Division 14	44;14
+ReportingUnit	Philadelphia;Ward 44;Division 15	44;15
+ReportingUnit	Philadelphia;Ward 44;Division 16	44;16
+ReportingUnit	Philadelphia;Ward 44;Division 17	44;17
+ReportingUnit	Philadelphia;Ward 44;Division 18	44;18
+ReportingUnit	Philadelphia;Ward 44;Division 19	44;19
+ReportingUnit	Philadelphia;Ward 45;Division 1	45;1
+ReportingUnit	Philadelphia;Ward 45;Division 1	45;01
+ReportingUnit	Philadelphia;Ward 45;Division 2	45;2
+ReportingUnit	Philadelphia;Ward 45;Division 2	45;02
+ReportingUnit	Philadelphia;Ward 45;Division 3	45;3
+ReportingUnit	Philadelphia;Ward 45;Division 3	45;03
+ReportingUnit	Philadelphia;Ward 45;Division 4	45;4
+ReportingUnit	Philadelphia;Ward 45;Division 4	45;04
+ReportingUnit	Philadelphia;Ward 45;Division 5	45;5
+ReportingUnit	Philadelphia;Ward 45;Division 5	45;05
+ReportingUnit	Philadelphia;Ward 45;Division 6	45;6
+ReportingUnit	Philadelphia;Ward 45;Division 6	45;06
+ReportingUnit	Philadelphia;Ward 45;Division 7	45;7
+ReportingUnit	Philadelphia;Ward 45;Division 7	45;07
+ReportingUnit	Philadelphia;Ward 45;Division 8	45;8
+ReportingUnit	Philadelphia;Ward 45;Division 8	45;08
+ReportingUnit	Philadelphia;Ward 45;Division 9	45;9
+ReportingUnit	Philadelphia;Ward 45;Division 9	45;09
+ReportingUnit	Philadelphia;Ward 45;Division 10	45;10
+ReportingUnit	Philadelphia;Ward 45;Division 11	45;11
+ReportingUnit	Philadelphia;Ward 45;Division 12	45;12
+ReportingUnit	Philadelphia;Ward 45;Division 13	45;13
+ReportingUnit	Philadelphia;Ward 45;Division 14	45;14
+ReportingUnit	Philadelphia;Ward 45;Division 15	45;15
+ReportingUnit	Philadelphia;Ward 45;Division 16	45;16
+ReportingUnit	Philadelphia;Ward 45;Division 17	45;17
+ReportingUnit	Philadelphia;Ward 45;Division 18	45;18
+ReportingUnit	Philadelphia;Ward 45;Division 19	45;19
+ReportingUnit	Philadelphia;Ward 45;Division 20	45;20
+ReportingUnit	Philadelphia;Ward 45;Division 21	45;21
+ReportingUnit	Philadelphia;Ward 45;Division 22	45;22
+ReportingUnit	Philadelphia;Ward 45;Division 23	45;23
+ReportingUnit	Philadelphia;Ward 45;Division 24	45;24
+ReportingUnit	Philadelphia;Ward 45;Division 25	45;25
+ReportingUnit	Philadelphia;Ward 46;Division 1	46;1
+ReportingUnit	Philadelphia;Ward 46;Division 1	46;01
+ReportingUnit	Philadelphia;Ward 46;Division 2	46;2
+ReportingUnit	Philadelphia;Ward 46;Division 2	46;02
+ReportingUnit	Philadelphia;Ward 46;Division 3	46;3
+ReportingUnit	Philadelphia;Ward 46;Division 3	46;03
+ReportingUnit	Philadelphia;Ward 46;Division 4	46;4
+ReportingUnit	Philadelphia;Ward 46;Division 4	46;04
+ReportingUnit	Philadelphia;Ward 46;Division 5	46;5
+ReportingUnit	Philadelphia;Ward 46;Division 5	46;05
+ReportingUnit	Philadelphia;Ward 46;Division 6	46;6
+ReportingUnit	Philadelphia;Ward 46;Division 6	46;06
+ReportingUnit	Philadelphia;Ward 46;Division 7	46;7
+ReportingUnit	Philadelphia;Ward 46;Division 7	46;07
+ReportingUnit	Philadelphia;Ward 46;Division 8	46;8
+ReportingUnit	Philadelphia;Ward 46;Division 8	46;08
+ReportingUnit	Philadelphia;Ward 46;Division 9	46;9
+ReportingUnit	Philadelphia;Ward 46;Division 9	46;09
+ReportingUnit	Philadelphia;Ward 46;Division 10	46;10
+ReportingUnit	Philadelphia;Ward 46;Division 11	46;11
+ReportingUnit	Philadelphia;Ward 46;Division 12	46;12
+ReportingUnit	Philadelphia;Ward 46;Division 13	46;13
+ReportingUnit	Philadelphia;Ward 46;Division 14	46;14
+ReportingUnit	Philadelphia;Ward 46;Division 15	46;15
+ReportingUnit	Philadelphia;Ward 46;Division 16	46;16
+ReportingUnit	Philadelphia;Ward 46;Division 17	46;17
+ReportingUnit	Philadelphia;Ward 46;Division 18	46;18
+ReportingUnit	Philadelphia;Ward 46;Division 19	46;19
+ReportingUnit	Philadelphia;Ward 46;Division 20	46;20
+ReportingUnit	Philadelphia;Ward 46;Division 21	46;21
+ReportingUnit	Philadelphia;Ward 46;Division 22	46;22
+ReportingUnit	Philadelphia;Ward 46;Division 23	46;23
+ReportingUnit	Philadelphia;Ward 47;Division 1	47;1
+ReportingUnit	Philadelphia;Ward 47;Division 1	47;01
+ReportingUnit	Philadelphia;Ward 47;Division 2	47;2
+ReportingUnit	Philadelphia;Ward 47;Division 2	47;02
+ReportingUnit	Philadelphia;Ward 47;Division 3	47;3
+ReportingUnit	Philadelphia;Ward 47;Division 3	47;03
+ReportingUnit	Philadelphia;Ward 47;Division 4	47;4
+ReportingUnit	Philadelphia;Ward 47;Division 4	47;04
+ReportingUnit	Philadelphia;Ward 47;Division 5	47;5
+ReportingUnit	Philadelphia;Ward 47;Division 5	47;05
+ReportingUnit	Philadelphia;Ward 47;Division 6	47;6
+ReportingUnit	Philadelphia;Ward 47;Division 6	47;06
+ReportingUnit	Philadelphia;Ward 47;Division 7	47;7
+ReportingUnit	Philadelphia;Ward 47;Division 7	47;07
+ReportingUnit	Philadelphia;Ward 47;Division 8	47;8
+ReportingUnit	Philadelphia;Ward 47;Division 8	47;08
+ReportingUnit	Philadelphia;Ward 47;Division 9	47;9
+ReportingUnit	Philadelphia;Ward 47;Division 9	47;09
+ReportingUnit	Philadelphia;Ward 47;Division 10	47;10
+ReportingUnit	Philadelphia;Ward 47;Division 11	47;11
+ReportingUnit	Philadelphia;Ward 47;Division 12	47;12
+ReportingUnit	Philadelphia;Ward 47;Division 13	47;13
+ReportingUnit	Philadelphia;Ward 47;Division 14	47;14
+ReportingUnit	Philadelphia;Ward 48;Division 1	48;1
+ReportingUnit	Philadelphia;Ward 48;Division 1	48;01
+ReportingUnit	Philadelphia;Ward 48;Division 2	48;2
+ReportingUnit	Philadelphia;Ward 48;Division 2	48;02
+ReportingUnit	Philadelphia;Ward 48;Division 3	48;3
+ReportingUnit	Philadelphia;Ward 48;Division 3	48;03
+ReportingUnit	Philadelphia;Ward 48;Division 4	48;4
+ReportingUnit	Philadelphia;Ward 48;Division 4	48;04
+ReportingUnit	Philadelphia;Ward 48;Division 5	48;5
+ReportingUnit	Philadelphia;Ward 48;Division 5	48;05
+ReportingUnit	Philadelphia;Ward 48;Division 6	48;6
+ReportingUnit	Philadelphia;Ward 48;Division 6	48;06
+ReportingUnit	Philadelphia;Ward 48;Division 7	48;7
+ReportingUnit	Philadelphia;Ward 48;Division 7	48;07
+ReportingUnit	Philadelphia;Ward 48;Division 8	48;8
+ReportingUnit	Philadelphia;Ward 48;Division 8	48;08
+ReportingUnit	Philadelphia;Ward 48;Division 9	48;9
+ReportingUnit	Philadelphia;Ward 48;Division 9	48;09
+ReportingUnit	Philadelphia;Ward 48;Division 10	48;10
+ReportingUnit	Philadelphia;Ward 48;Division 11	48;11
+ReportingUnit	Philadelphia;Ward 48;Division 12	48;12
+ReportingUnit	Philadelphia;Ward 48;Division 13	48;13
+ReportingUnit	Philadelphia;Ward 48;Division 14	48;14
+ReportingUnit	Philadelphia;Ward 48;Division 15	48;15
+ReportingUnit	Philadelphia;Ward 48;Division 16	48;16
+ReportingUnit	Philadelphia;Ward 48;Division 17	48;17
+ReportingUnit	Philadelphia;Ward 48;Division 18	48;18
+ReportingUnit	Philadelphia;Ward 48;Division 19	48;19
+ReportingUnit	Philadelphia;Ward 48;Division 20	48;20
+ReportingUnit	Philadelphia;Ward 48;Division 21	48;21
+ReportingUnit	Philadelphia;Ward 48;Division 22	48;22
+ReportingUnit	Philadelphia;Ward 48;Division 23	48;23
+ReportingUnit	Philadelphia;Ward 49;Division 1	49;1
+ReportingUnit	Philadelphia;Ward 49;Division 1	49;01
+ReportingUnit	Philadelphia;Ward 49;Division 2	49;2
+ReportingUnit	Philadelphia;Ward 49;Division 2	49;02
+ReportingUnit	Philadelphia;Ward 49;Division 3	49;3
+ReportingUnit	Philadelphia;Ward 49;Division 3	49;03
+ReportingUnit	Philadelphia;Ward 49;Division 4	49;4
+ReportingUnit	Philadelphia;Ward 49;Division 4	49;04
+ReportingUnit	Philadelphia;Ward 49;Division 5	49;5
+ReportingUnit	Philadelphia;Ward 49;Division 5	49;05
+ReportingUnit	Philadelphia;Ward 49;Division 6	49;6
+ReportingUnit	Philadelphia;Ward 49;Division 6	49;06
+ReportingUnit	Philadelphia;Ward 49;Division 7	49;7
+ReportingUnit	Philadelphia;Ward 49;Division 7	49;07
+ReportingUnit	Philadelphia;Ward 49;Division 8	49;8
+ReportingUnit	Philadelphia;Ward 49;Division 8	49;08
+ReportingUnit	Philadelphia;Ward 49;Division 9	49;9
+ReportingUnit	Philadelphia;Ward 49;Division 9	49;09
+ReportingUnit	Philadelphia;Ward 49;Division 10	49;10
+ReportingUnit	Philadelphia;Ward 49;Division 11	49;11
+ReportingUnit	Philadelphia;Ward 49;Division 12	49;12
+ReportingUnit	Philadelphia;Ward 49;Division 13	49;13
+ReportingUnit	Philadelphia;Ward 49;Division 14	49;14
+ReportingUnit	Philadelphia;Ward 49;Division 15	49;15
+ReportingUnit	Philadelphia;Ward 49;Division 16	49;16
+ReportingUnit	Philadelphia;Ward 49;Division 17	49;17
+ReportingUnit	Philadelphia;Ward 49;Division 18	49;18
+ReportingUnit	Philadelphia;Ward 49;Division 19	49;19
+ReportingUnit	Philadelphia;Ward 49;Division 20	49;20
+ReportingUnit	Philadelphia;Ward 49;Division 21	49;21
+ReportingUnit	Philadelphia;Ward 49;Division 22	49;22
+ReportingUnit	Philadelphia;Ward 50;Division 1	50;1
+ReportingUnit	Philadelphia;Ward 50;Division 1	50;01
+ReportingUnit	Philadelphia;Ward 50;Division 2	50;2
+ReportingUnit	Philadelphia;Ward 50;Division 2	50;02
+ReportingUnit	Philadelphia;Ward 50;Division 3	50;3
+ReportingUnit	Philadelphia;Ward 50;Division 3	50;03
+ReportingUnit	Philadelphia;Ward 50;Division 4	50;4
+ReportingUnit	Philadelphia;Ward 50;Division 4	50;04
+ReportingUnit	Philadelphia;Ward 50;Division 5	50;5
+ReportingUnit	Philadelphia;Ward 50;Division 5	50;05
+ReportingUnit	Philadelphia;Ward 50;Division 6	50;6
+ReportingUnit	Philadelphia;Ward 50;Division 6	50;06
+ReportingUnit	Philadelphia;Ward 50;Division 7	50;7
+ReportingUnit	Philadelphia;Ward 50;Division 7	50;07
+ReportingUnit	Philadelphia;Ward 50;Division 8	50;8
+ReportingUnit	Philadelphia;Ward 50;Division 8	50;08
+ReportingUnit	Philadelphia;Ward 50;Division 9	50;9
+ReportingUnit	Philadelphia;Ward 50;Division 9	50;09
+ReportingUnit	Philadelphia;Ward 50;Division 10	50;10
+ReportingUnit	Philadelphia;Ward 50;Division 11	50;11
+ReportingUnit	Philadelphia;Ward 50;Division 12	50;12
+ReportingUnit	Philadelphia;Ward 50;Division 13	50;13
+ReportingUnit	Philadelphia;Ward 50;Division 14	50;14
+ReportingUnit	Philadelphia;Ward 50;Division 15	50;15
+ReportingUnit	Philadelphia;Ward 50;Division 16	50;16
+ReportingUnit	Philadelphia;Ward 50;Division 17	50;17
+ReportingUnit	Philadelphia;Ward 50;Division 18	50;18
+ReportingUnit	Philadelphia;Ward 50;Division 19	50;19
+ReportingUnit	Philadelphia;Ward 50;Division 20	50;20
+ReportingUnit	Philadelphia;Ward 50;Division 21	50;21
+ReportingUnit	Philadelphia;Ward 50;Division 22	50;22
+ReportingUnit	Philadelphia;Ward 50;Division 23	50;23
+ReportingUnit	Philadelphia;Ward 50;Division 24	50;24
+ReportingUnit	Philadelphia;Ward 50;Division 25	50;25
+ReportingUnit	Philadelphia;Ward 50;Division 26	50;26
+ReportingUnit	Philadelphia;Ward 50;Division 27	50;27
+ReportingUnit	Philadelphia;Ward 50;Division 28	50;28
+ReportingUnit	Philadelphia;Ward 50;Division 29	50;29
+ReportingUnit	Philadelphia;Ward 50;Division 30	50;30
+ReportingUnit	Philadelphia;Ward 51;Division 1	51;1
+ReportingUnit	Philadelphia;Ward 51;Division 1	51;01
+ReportingUnit	Philadelphia;Ward 51;Division 2	51;2
+ReportingUnit	Philadelphia;Ward 51;Division 2	51;02
+ReportingUnit	Philadelphia;Ward 51;Division 3	51;3
+ReportingUnit	Philadelphia;Ward 51;Division 3	51;03
+ReportingUnit	Philadelphia;Ward 51;Division 4	51;4
+ReportingUnit	Philadelphia;Ward 51;Division 4	51;04
+ReportingUnit	Philadelphia;Ward 51;Division 5	51;5
+ReportingUnit	Philadelphia;Ward 51;Division 5	51;05
+ReportingUnit	Philadelphia;Ward 51;Division 6	51;6
+ReportingUnit	Philadelphia;Ward 51;Division 6	51;06
+ReportingUnit	Philadelphia;Ward 51;Division 7	51;7
+ReportingUnit	Philadelphia;Ward 51;Division 7	51;07
+ReportingUnit	Philadelphia;Ward 51;Division 8	51;8
+ReportingUnit	Philadelphia;Ward 51;Division 8	51;08
+ReportingUnit	Philadelphia;Ward 51;Division 9	51;9
+ReportingUnit	Philadelphia;Ward 51;Division 9	51;09
+ReportingUnit	Philadelphia;Ward 51;Division 10	51;10
+ReportingUnit	Philadelphia;Ward 51;Division 11	51;11
+ReportingUnit	Philadelphia;Ward 51;Division 12	51;12
+ReportingUnit	Philadelphia;Ward 51;Division 13	51;13
+ReportingUnit	Philadelphia;Ward 51;Division 14	51;14
+ReportingUnit	Philadelphia;Ward 51;Division 15	51;15
+ReportingUnit	Philadelphia;Ward 51;Division 16	51;16
+ReportingUnit	Philadelphia;Ward 51;Division 17	51;17
+ReportingUnit	Philadelphia;Ward 51;Division 18	51;18
+ReportingUnit	Philadelphia;Ward 51;Division 19	51;19
+ReportingUnit	Philadelphia;Ward 51;Division 20	51;20
+ReportingUnit	Philadelphia;Ward 51;Division 21	51;21
+ReportingUnit	Philadelphia;Ward 51;Division 22	51;22
+ReportingUnit	Philadelphia;Ward 51;Division 23	51;23
+ReportingUnit	Philadelphia;Ward 51;Division 24	51;24
+ReportingUnit	Philadelphia;Ward 51;Division 25	51;25
+ReportingUnit	Philadelphia;Ward 51;Division 26	51;26
+ReportingUnit	Philadelphia;Ward 51;Division 27	51;27
+ReportingUnit	Philadelphia;Ward 51;Division 28	51;28
+ReportingUnit	Philadelphia;Ward 52;Division 1	52;1
+ReportingUnit	Philadelphia;Ward 52;Division 1	52;01
+ReportingUnit	Philadelphia;Ward 52;Division 2	52;2
+ReportingUnit	Philadelphia;Ward 52;Division 2	52;02
+ReportingUnit	Philadelphia;Ward 52;Division 3	52;3
+ReportingUnit	Philadelphia;Ward 52;Division 3	52;03
+ReportingUnit	Philadelphia;Ward 52;Division 4	52;4
+ReportingUnit	Philadelphia;Ward 52;Division 4	52;04
+ReportingUnit	Philadelphia;Ward 52;Division 5	52;5
+ReportingUnit	Philadelphia;Ward 52;Division 5	52;05
+ReportingUnit	Philadelphia;Ward 52;Division 6	52;6
+ReportingUnit	Philadelphia;Ward 52;Division 6	52;06
+ReportingUnit	Philadelphia;Ward 52;Division 7	52;7
+ReportingUnit	Philadelphia;Ward 52;Division 7	52;07
+ReportingUnit	Philadelphia;Ward 52;Division 8	52;8
+ReportingUnit	Philadelphia;Ward 52;Division 8	52;08
+ReportingUnit	Philadelphia;Ward 52;Division 9	52;9
+ReportingUnit	Philadelphia;Ward 52;Division 9	52;09
+ReportingUnit	Philadelphia;Ward 52;Division 10	52;10
+ReportingUnit	Philadelphia;Ward 52;Division 11	52;11
+ReportingUnit	Philadelphia;Ward 52;Division 12	52;12
+ReportingUnit	Philadelphia;Ward 52;Division 13	52;13
+ReportingUnit	Philadelphia;Ward 52;Division 14	52;14
+ReportingUnit	Philadelphia;Ward 52;Division 15	52;15
+ReportingUnit	Philadelphia;Ward 52;Division 16	52;16
+ReportingUnit	Philadelphia;Ward 52;Division 17	52;17
+ReportingUnit	Philadelphia;Ward 52;Division 18	52;18
+ReportingUnit	Philadelphia;Ward 52;Division 19	52;19
+ReportingUnit	Philadelphia;Ward 52;Division 20	52;20
+ReportingUnit	Philadelphia;Ward 52;Division 21	52;21
+ReportingUnit	Philadelphia;Ward 52;Division 22	52;22
+ReportingUnit	Philadelphia;Ward 52;Division 23	52;23
+ReportingUnit	Philadelphia;Ward 52;Division 24	52;24
+ReportingUnit	Philadelphia;Ward 52;Division 25	52;25
+ReportingUnit	Philadelphia;Ward 52;Division 26	52;26
+ReportingUnit	Philadelphia;Ward 52;Division 27	52;27
+ReportingUnit	Philadelphia;Ward 52;Division 28	52;28
+ReportingUnit	Philadelphia;Ward 53;Division 1	53;1
+ReportingUnit	Philadelphia;Ward 53;Division 1	53;01
+ReportingUnit	Philadelphia;Ward 53;Division 2	53;2
+ReportingUnit	Philadelphia;Ward 53;Division 2	53;02
+ReportingUnit	Philadelphia;Ward 53;Division 3	53;3
+ReportingUnit	Philadelphia;Ward 53;Division 3	53;03
+ReportingUnit	Philadelphia;Ward 53;Division 4	53;4
+ReportingUnit	Philadelphia;Ward 53;Division 4	53;04
+ReportingUnit	Philadelphia;Ward 53;Division 5	53;5
+ReportingUnit	Philadelphia;Ward 53;Division 5	53;05
+ReportingUnit	Philadelphia;Ward 53;Division 6	53;6
+ReportingUnit	Philadelphia;Ward 53;Division 6	53;06
+ReportingUnit	Philadelphia;Ward 53;Division 7	53;7
+ReportingUnit	Philadelphia;Ward 53;Division 7	53;07
+ReportingUnit	Philadelphia;Ward 53;Division 8	53;8
+ReportingUnit	Philadelphia;Ward 53;Division 8	53;08
+ReportingUnit	Philadelphia;Ward 53;Division 9	53;9
+ReportingUnit	Philadelphia;Ward 53;Division 9	53;09
+ReportingUnit	Philadelphia;Ward 53;Division 10	53;10
+ReportingUnit	Philadelphia;Ward 53;Division 11	53;11
+ReportingUnit	Philadelphia;Ward 53;Division 12	53;12
+ReportingUnit	Philadelphia;Ward 53;Division 13	53;13
+ReportingUnit	Philadelphia;Ward 53;Division 14	53;14
+ReportingUnit	Philadelphia;Ward 53;Division 15	53;15
+ReportingUnit	Philadelphia;Ward 53;Division 16	53;16
+ReportingUnit	Philadelphia;Ward 53;Division 17	53;17
+ReportingUnit	Philadelphia;Ward 53;Division 18	53;18
+ReportingUnit	Philadelphia;Ward 53;Division 19	53;19
+ReportingUnit	Philadelphia;Ward 53;Division 20	53;20
+ReportingUnit	Philadelphia;Ward 53;Division 21	53;21
+ReportingUnit	Philadelphia;Ward 53;Division 22	53;22
+ReportingUnit	Philadelphia;Ward 53;Division 23	53;23
+ReportingUnit	Philadelphia;Ward 54;Division 1	54;1
+ReportingUnit	Philadelphia;Ward 54;Division 1	54;01
+ReportingUnit	Philadelphia;Ward 54;Division 2	54;2
+ReportingUnit	Philadelphia;Ward 54;Division 2	54;02
+ReportingUnit	Philadelphia;Ward 54;Division 3	54;3
+ReportingUnit	Philadelphia;Ward 54;Division 3	54;03
+ReportingUnit	Philadelphia;Ward 54;Division 4	54;4
+ReportingUnit	Philadelphia;Ward 54;Division 4	54;04
+ReportingUnit	Philadelphia;Ward 54;Division 5	54;5
+ReportingUnit	Philadelphia;Ward 54;Division 5	54;05
+ReportingUnit	Philadelphia;Ward 54;Division 6	54;6
+ReportingUnit	Philadelphia;Ward 54;Division 6	54;06
+ReportingUnit	Philadelphia;Ward 54;Division 7	54;7
+ReportingUnit	Philadelphia;Ward 54;Division 7	54;07
+ReportingUnit	Philadelphia;Ward 54;Division 8	54;8
+ReportingUnit	Philadelphia;Ward 54;Division 8	54;08
+ReportingUnit	Philadelphia;Ward 54;Division 9	54;9
+ReportingUnit	Philadelphia;Ward 54;Division 9	54;09
+ReportingUnit	Philadelphia;Ward 54;Division 10	54;10
+ReportingUnit	Philadelphia;Ward 54;Division 11	54;11
+ReportingUnit	Philadelphia;Ward 54;Division 12	54;12
+ReportingUnit	Philadelphia;Ward 54;Division 13	54;13
+ReportingUnit	Philadelphia;Ward 54;Division 14	54;14
+ReportingUnit	Philadelphia;Ward 54;Division 15	54;15
+ReportingUnit	Philadelphia;Ward 54;Division 16	54;16
+ReportingUnit	Philadelphia;Ward 54;Division 17	54;17
+ReportingUnit	Philadelphia;Ward 54;Division 18	54;18
+ReportingUnit	Philadelphia;Ward 54;Division 19	54;19
+ReportingUnit	Philadelphia;Ward 54;Division 20	54;20
+ReportingUnit	Philadelphia;Ward 54;Division 21	54;21
+ReportingUnit	Philadelphia;Ward 54;Division 22	54;22
+ReportingUnit	Philadelphia;Ward 55;Division 1	55;1
+ReportingUnit	Philadelphia;Ward 55;Division 1	55;01
+ReportingUnit	Philadelphia;Ward 55;Division 2	55;2
+ReportingUnit	Philadelphia;Ward 55;Division 2	55;02
+ReportingUnit	Philadelphia;Ward 55;Division 3	55;3
+ReportingUnit	Philadelphia;Ward 55;Division 3	55;03
+ReportingUnit	Philadelphia;Ward 55;Division 4	55;4
+ReportingUnit	Philadelphia;Ward 55;Division 4	55;04
+ReportingUnit	Philadelphia;Ward 55;Division 5	55;5
+ReportingUnit	Philadelphia;Ward 55;Division 5	55;05
+ReportingUnit	Philadelphia;Ward 55;Division 6	55;6
+ReportingUnit	Philadelphia;Ward 55;Division 6	55;06
+ReportingUnit	Philadelphia;Ward 55;Division 7	55;7
+ReportingUnit	Philadelphia;Ward 55;Division 7	55;07
+ReportingUnit	Philadelphia;Ward 55;Division 8	55;8
+ReportingUnit	Philadelphia;Ward 55;Division 8	55;08
+ReportingUnit	Philadelphia;Ward 55;Division 9	55;9
+ReportingUnit	Philadelphia;Ward 55;Division 9	55;09
+ReportingUnit	Philadelphia;Ward 55;Division 10	55;10
+ReportingUnit	Philadelphia;Ward 55;Division 11	55;11
+ReportingUnit	Philadelphia;Ward 55;Division 12	55;12
+ReportingUnit	Philadelphia;Ward 55;Division 13	55;13
+ReportingUnit	Philadelphia;Ward 55;Division 14	55;14
+ReportingUnit	Philadelphia;Ward 55;Division 15	55;15
+ReportingUnit	Philadelphia;Ward 55;Division 16	55;16
+ReportingUnit	Philadelphia;Ward 55;Division 17	55;17
+ReportingUnit	Philadelphia;Ward 55;Division 18	55;18
+ReportingUnit	Philadelphia;Ward 55;Division 19	55;19
+ReportingUnit	Philadelphia;Ward 55;Division 20	55;20
+ReportingUnit	Philadelphia;Ward 55;Division 21	55;21
+ReportingUnit	Philadelphia;Ward 55;Division 22	55;22
+ReportingUnit	Philadelphia;Ward 55;Division 23	55;23
+ReportingUnit	Philadelphia;Ward 55;Division 24	55;24
+ReportingUnit	Philadelphia;Ward 55;Division 25	55;25
+ReportingUnit	Philadelphia;Ward 55;Division 26	55;26
+ReportingUnit	Philadelphia;Ward 55;Division 27	55;27
+ReportingUnit	Philadelphia;Ward 55;Division 28	55;28
+ReportingUnit	Philadelphia;Ward 55;Division 29	55;29
+ReportingUnit	Philadelphia;Ward 56;Division 1	56;1
+ReportingUnit	Philadelphia;Ward 56;Division 1	56;01
+ReportingUnit	Philadelphia;Ward 56;Division 2	56;2
+ReportingUnit	Philadelphia;Ward 56;Division 2	56;02
+ReportingUnit	Philadelphia;Ward 56;Division 3	56;3
+ReportingUnit	Philadelphia;Ward 56;Division 3	56;03
+ReportingUnit	Philadelphia;Ward 56;Division 4	56;4
+ReportingUnit	Philadelphia;Ward 56;Division 4	56;04
+ReportingUnit	Philadelphia;Ward 56;Division 5	56;5
+ReportingUnit	Philadelphia;Ward 56;Division 5	56;05
+ReportingUnit	Philadelphia;Ward 56;Division 6	56;6
+ReportingUnit	Philadelphia;Ward 56;Division 6	56;06
+ReportingUnit	Philadelphia;Ward 56;Division 7	56;7
+ReportingUnit	Philadelphia;Ward 56;Division 7	56;07
+ReportingUnit	Philadelphia;Ward 56;Division 8	56;8
+ReportingUnit	Philadelphia;Ward 56;Division 8	56;08
+ReportingUnit	Philadelphia;Ward 56;Division 9	56;9
+ReportingUnit	Philadelphia;Ward 56;Division 9	56;09
+ReportingUnit	Philadelphia;Ward 56;Division 10	56;10
+ReportingUnit	Philadelphia;Ward 56;Division 11	56;11
+ReportingUnit	Philadelphia;Ward 56;Division 12	56;12
+ReportingUnit	Philadelphia;Ward 56;Division 13	56;13
+ReportingUnit	Philadelphia;Ward 56;Division 14	56;14
+ReportingUnit	Philadelphia;Ward 56;Division 15	56;15
+ReportingUnit	Philadelphia;Ward 56;Division 16	56;16
+ReportingUnit	Philadelphia;Ward 56;Division 17	56;17
+ReportingUnit	Philadelphia;Ward 56;Division 18	56;18
+ReportingUnit	Philadelphia;Ward 56;Division 19	56;19
+ReportingUnit	Philadelphia;Ward 56;Division 20	56;20
+ReportingUnit	Philadelphia;Ward 56;Division 21	56;21
+ReportingUnit	Philadelphia;Ward 56;Division 22	56;22
+ReportingUnit	Philadelphia;Ward 56;Division 23	56;23
+ReportingUnit	Philadelphia;Ward 56;Division 24	56;24
+ReportingUnit	Philadelphia;Ward 56;Division 25	56;25
+ReportingUnit	Philadelphia;Ward 56;Division 26	56;26
+ReportingUnit	Philadelphia;Ward 56;Division 27	56;27
+ReportingUnit	Philadelphia;Ward 56;Division 28	56;28
+ReportingUnit	Philadelphia;Ward 56;Division 29	56;29
+ReportingUnit	Philadelphia;Ward 56;Division 30	56;30
+ReportingUnit	Philadelphia;Ward 56;Division 31	56;31
+ReportingUnit	Philadelphia;Ward 56;Division 32	56;32
+ReportingUnit	Philadelphia;Ward 56;Division 33	56;33
+ReportingUnit	Philadelphia;Ward 56;Division 34	56;34
+ReportingUnit	Philadelphia;Ward 56;Division 35	56;35
+ReportingUnit	Philadelphia;Ward 56;Division 36	56;36
+ReportingUnit	Philadelphia;Ward 56;Division 37	56;37
+ReportingUnit	Philadelphia;Ward 56;Division 38	56;38
+ReportingUnit	Philadelphia;Ward 56;Division 39	56;39
+ReportingUnit	Philadelphia;Ward 56;Division 40	56;40
+ReportingUnit	Philadelphia;Ward 56;Division 41	56;41
+ReportingUnit	Philadelphia;Ward 57;Division 1	57;1
+ReportingUnit	Philadelphia;Ward 57;Division 1	57;01
+ReportingUnit	Philadelphia;Ward 57;Division 2	57;2
+ReportingUnit	Philadelphia;Ward 57;Division 2	57;02
+ReportingUnit	Philadelphia;Ward 57;Division 3	57;3
+ReportingUnit	Philadelphia;Ward 57;Division 3	57;03
+ReportingUnit	Philadelphia;Ward 57;Division 4	57;4
+ReportingUnit	Philadelphia;Ward 57;Division 4	57;04
+ReportingUnit	Philadelphia;Ward 57;Division 5	57;5
+ReportingUnit	Philadelphia;Ward 57;Division 5	57;05
+ReportingUnit	Philadelphia;Ward 57;Division 6	57;6
+ReportingUnit	Philadelphia;Ward 57;Division 6	57;06
+ReportingUnit	Philadelphia;Ward 57;Division 7	57;7
+ReportingUnit	Philadelphia;Ward 57;Division 7	57;07
+ReportingUnit	Philadelphia;Ward 57;Division 8	57;8
+ReportingUnit	Philadelphia;Ward 57;Division 8	57;08
+ReportingUnit	Philadelphia;Ward 57;Division 9	57;9
+ReportingUnit	Philadelphia;Ward 57;Division 9	57;09
+ReportingUnit	Philadelphia;Ward 57;Division 10	57;10
+ReportingUnit	Philadelphia;Ward 57;Division 11	57;11
+ReportingUnit	Philadelphia;Ward 57;Division 12	57;12
+ReportingUnit	Philadelphia;Ward 57;Division 13	57;13
+ReportingUnit	Philadelphia;Ward 57;Division 14	57;14
+ReportingUnit	Philadelphia;Ward 57;Division 15	57;15
+ReportingUnit	Philadelphia;Ward 57;Division 16	57;16
+ReportingUnit	Philadelphia;Ward 57;Division 17	57;17
+ReportingUnit	Philadelphia;Ward 57;Division 18	57;18
+ReportingUnit	Philadelphia;Ward 57;Division 19	57;19
+ReportingUnit	Philadelphia;Ward 57;Division 20	57;20
+ReportingUnit	Philadelphia;Ward 57;Division 21	57;21
+ReportingUnit	Philadelphia;Ward 57;Division 22	57;22
+ReportingUnit	Philadelphia;Ward 57;Division 23	57;23
+ReportingUnit	Philadelphia;Ward 57;Division 24	57;24
+ReportingUnit	Philadelphia;Ward 57;Division 25	57;25
+ReportingUnit	Philadelphia;Ward 57;Division 26	57;26
+ReportingUnit	Philadelphia;Ward 57;Division 27	57;27
+ReportingUnit	Philadelphia;Ward 57;Division 28	57;28
+ReportingUnit	Philadelphia;Ward 58;Division 1	58;1
+ReportingUnit	Philadelphia;Ward 58;Division 1	58;01
+ReportingUnit	Philadelphia;Ward 58;Division 2	58;2
+ReportingUnit	Philadelphia;Ward 58;Division 2	58;02
+ReportingUnit	Philadelphia;Ward 58;Division 3	58;3
+ReportingUnit	Philadelphia;Ward 58;Division 3	58;03
+ReportingUnit	Philadelphia;Ward 58;Division 4	58;4
+ReportingUnit	Philadelphia;Ward 58;Division 4	58;04
+ReportingUnit	Philadelphia;Ward 58;Division 5	58;5
+ReportingUnit	Philadelphia;Ward 58;Division 5	58;05
+ReportingUnit	Philadelphia;Ward 58;Division 6	58;6
+ReportingUnit	Philadelphia;Ward 58;Division 6	58;06
+ReportingUnit	Philadelphia;Ward 58;Division 7	58;7
+ReportingUnit	Philadelphia;Ward 58;Division 7	58;07
+ReportingUnit	Philadelphia;Ward 58;Division 8	58;8
+ReportingUnit	Philadelphia;Ward 58;Division 8	58;08
+ReportingUnit	Philadelphia;Ward 58;Division 9	58;9
+ReportingUnit	Philadelphia;Ward 58;Division 9	58;09
+ReportingUnit	Philadelphia;Ward 58;Division 10	58;10
+ReportingUnit	Philadelphia;Ward 58;Division 11	58;11
+ReportingUnit	Philadelphia;Ward 58;Division 12	58;12
+ReportingUnit	Philadelphia;Ward 58;Division 13	58;13
+ReportingUnit	Philadelphia;Ward 58;Division 14	58;14
+ReportingUnit	Philadelphia;Ward 58;Division 15	58;15
+ReportingUnit	Philadelphia;Ward 58;Division 16	58;16
+ReportingUnit	Philadelphia;Ward 58;Division 17	58;17
+ReportingUnit	Philadelphia;Ward 58;Division 18	58;18
+ReportingUnit	Philadelphia;Ward 58;Division 19	58;19
+ReportingUnit	Philadelphia;Ward 58;Division 20	58;20
+ReportingUnit	Philadelphia;Ward 58;Division 21	58;21
+ReportingUnit	Philadelphia;Ward 58;Division 22	58;22
+ReportingUnit	Philadelphia;Ward 58;Division 23	58;23
+ReportingUnit	Philadelphia;Ward 58;Division 24	58;24
+ReportingUnit	Philadelphia;Ward 58;Division 25	58;25
+ReportingUnit	Philadelphia;Ward 58;Division 26	58;26
+ReportingUnit	Philadelphia;Ward 58;Division 27	58;27
+ReportingUnit	Philadelphia;Ward 58;Division 28	58;28
+ReportingUnit	Philadelphia;Ward 58;Division 29	58;29
+ReportingUnit	Philadelphia;Ward 58;Division 30	58;30
+ReportingUnit	Philadelphia;Ward 58;Division 31	58;31
+ReportingUnit	Philadelphia;Ward 58;Division 32	58;32
+ReportingUnit	Philadelphia;Ward 58;Division 33	58;33
+ReportingUnit	Philadelphia;Ward 58;Division 34	58;34
+ReportingUnit	Philadelphia;Ward 58;Division 35	58;35
+ReportingUnit	Philadelphia;Ward 58;Division 36	58;36
+ReportingUnit	Philadelphia;Ward 58;Division 37	58;37
+ReportingUnit	Philadelphia;Ward 58;Division 38	58;38
+ReportingUnit	Philadelphia;Ward 58;Division 39	58;39
+ReportingUnit	Philadelphia;Ward 58;Division 40	58;40
+ReportingUnit	Philadelphia;Ward 58;Division 41	58;41
+ReportingUnit	Philadelphia;Ward 58;Division 42	58;42
+ReportingUnit	Philadelphia;Ward 58;Division 43	58;43
+ReportingUnit	Philadelphia;Ward 58;Division 44	58;44
+ReportingUnit	Philadelphia;Ward 59;Division 1	59;1
+ReportingUnit	Philadelphia;Ward 59;Division 1	59;01
+ReportingUnit	Philadelphia;Ward 59;Division 2	59;2
+ReportingUnit	Philadelphia;Ward 59;Division 2	59;02
+ReportingUnit	Philadelphia;Ward 59;Division 3	59;3
+ReportingUnit	Philadelphia;Ward 59;Division 3	59;03
+ReportingUnit	Philadelphia;Ward 59;Division 4	59;4
+ReportingUnit	Philadelphia;Ward 59;Division 4	59;04
+ReportingUnit	Philadelphia;Ward 59;Division 5	59;5
+ReportingUnit	Philadelphia;Ward 59;Division 5	59;05
+ReportingUnit	Philadelphia;Ward 59;Division 6	59;6
+ReportingUnit	Philadelphia;Ward 59;Division 6	59;06
+ReportingUnit	Philadelphia;Ward 59;Division 7	59;7
+ReportingUnit	Philadelphia;Ward 59;Division 7	59;07
+ReportingUnit	Philadelphia;Ward 59;Division 8	59;8
+ReportingUnit	Philadelphia;Ward 59;Division 8	59;08
+ReportingUnit	Philadelphia;Ward 59;Division 9	59;9
+ReportingUnit	Philadelphia;Ward 59;Division 9	59;09
+ReportingUnit	Philadelphia;Ward 59;Division 10	59;10
+ReportingUnit	Philadelphia;Ward 59;Division 11	59;11
+ReportingUnit	Philadelphia;Ward 59;Division 12	59;12
+ReportingUnit	Philadelphia;Ward 59;Division 13	59;13
+ReportingUnit	Philadelphia;Ward 59;Division 14	59;14
+ReportingUnit	Philadelphia;Ward 59;Division 15	59;15
+ReportingUnit	Philadelphia;Ward 59;Division 16	59;16
+ReportingUnit	Philadelphia;Ward 59;Division 17	59;17
+ReportingUnit	Philadelphia;Ward 59;Division 18	59;18
+ReportingUnit	Philadelphia;Ward 59;Division 19	59;19
+ReportingUnit	Philadelphia;Ward 59;Division 20	59;20
+ReportingUnit	Philadelphia;Ward 59;Division 21	59;21
+ReportingUnit	Philadelphia;Ward 59;Division 22	59;22
+ReportingUnit	Philadelphia;Ward 59;Division 23	59;23
+ReportingUnit	Philadelphia;Ward 59;Division 24	59;24
+ReportingUnit	Philadelphia;Ward 59;Division 25	59;25
+ReportingUnit	Philadelphia;Ward 60;Division 1	60;1
+ReportingUnit	Philadelphia;Ward 60;Division 1	60;01
+ReportingUnit	Philadelphia;Ward 60;Division 2	60;2
+ReportingUnit	Philadelphia;Ward 60;Division 2	60;02
+ReportingUnit	Philadelphia;Ward 60;Division 3	60;3
+ReportingUnit	Philadelphia;Ward 60;Division 3	60;03
+ReportingUnit	Philadelphia;Ward 60;Division 4	60;4
+ReportingUnit	Philadelphia;Ward 60;Division 4	60;04
+ReportingUnit	Philadelphia;Ward 60;Division 5	60;5
+ReportingUnit	Philadelphia;Ward 60;Division 5	60;05
+ReportingUnit	Philadelphia;Ward 60;Division 6	60;6
+ReportingUnit	Philadelphia;Ward 60;Division 6	60;06
+ReportingUnit	Philadelphia;Ward 60;Division 7	60;7
+ReportingUnit	Philadelphia;Ward 60;Division 7	60;07
+ReportingUnit	Philadelphia;Ward 60;Division 8	60;8
+ReportingUnit	Philadelphia;Ward 60;Division 8	60;08
+ReportingUnit	Philadelphia;Ward 60;Division 9	60;9
+ReportingUnit	Philadelphia;Ward 60;Division 9	60;09
+ReportingUnit	Philadelphia;Ward 60;Division 10	60;10
+ReportingUnit	Philadelphia;Ward 60;Division 11	60;11
+ReportingUnit	Philadelphia;Ward 60;Division 12	60;12
+ReportingUnit	Philadelphia;Ward 60;Division 13	60;13
+ReportingUnit	Philadelphia;Ward 60;Division 14	60;14
+ReportingUnit	Philadelphia;Ward 60;Division 15	60;15
+ReportingUnit	Philadelphia;Ward 60;Division 16	60;16
+ReportingUnit	Philadelphia;Ward 60;Division 17	60;17
+ReportingUnit	Philadelphia;Ward 60;Division 18	60;18
+ReportingUnit	Philadelphia;Ward 60;Division 19	60;19
+ReportingUnit	Philadelphia;Ward 60;Division 20	60;20
+ReportingUnit	Philadelphia;Ward 60;Division 21	60;21
+ReportingUnit	Philadelphia;Ward 60;Division 22	60;22
+ReportingUnit	Philadelphia;Ward 60;Division 23	60;23
+ReportingUnit	Philadelphia;Ward 61;Division 1	61;1
+ReportingUnit	Philadelphia;Ward 61;Division 1	61;01
+ReportingUnit	Philadelphia;Ward 61;Division 2	61;2
+ReportingUnit	Philadelphia;Ward 61;Division 2	61;02
+ReportingUnit	Philadelphia;Ward 61;Division 3	61;3
+ReportingUnit	Philadelphia;Ward 61;Division 3	61;03
+ReportingUnit	Philadelphia;Ward 61;Division 4	61;4
+ReportingUnit	Philadelphia;Ward 61;Division 4	61;04
+ReportingUnit	Philadelphia;Ward 61;Division 5	61;5
+ReportingUnit	Philadelphia;Ward 61;Division 5	61;05
+ReportingUnit	Philadelphia;Ward 61;Division 6	61;6
+ReportingUnit	Philadelphia;Ward 61;Division 6	61;06
+ReportingUnit	Philadelphia;Ward 61;Division 7	61;7
+ReportingUnit	Philadelphia;Ward 61;Division 7	61;07
+ReportingUnit	Philadelphia;Ward 61;Division 8	61;8
+ReportingUnit	Philadelphia;Ward 61;Division 8	61;08
+ReportingUnit	Philadelphia;Ward 61;Division 9	61;9
+ReportingUnit	Philadelphia;Ward 61;Division 9	61;09
+ReportingUnit	Philadelphia;Ward 61;Division 10	61;10
+ReportingUnit	Philadelphia;Ward 61;Division 11	61;11
+ReportingUnit	Philadelphia;Ward 61;Division 12	61;12
+ReportingUnit	Philadelphia;Ward 61;Division 13	61;13
+ReportingUnit	Philadelphia;Ward 61;Division 14	61;14
+ReportingUnit	Philadelphia;Ward 61;Division 15	61;15
+ReportingUnit	Philadelphia;Ward 61;Division 16	61;16
+ReportingUnit	Philadelphia;Ward 61;Division 17	61;17
+ReportingUnit	Philadelphia;Ward 61;Division 18	61;18
+ReportingUnit	Philadelphia;Ward 61;Division 19	61;19
+ReportingUnit	Philadelphia;Ward 61;Division 20	61;20
+ReportingUnit	Philadelphia;Ward 61;Division 21	61;21
+ReportingUnit	Philadelphia;Ward 61;Division 22	61;22
+ReportingUnit	Philadelphia;Ward 61;Division 23	61;23
+ReportingUnit	Philadelphia;Ward 61;Division 24	61;24
+ReportingUnit	Philadelphia;Ward 61;Division 25	61;25
+ReportingUnit	Philadelphia;Ward 61;Division 26	61;26
+ReportingUnit	Philadelphia;Ward 61;Division 27	61;27
+ReportingUnit	Philadelphia;Ward 61;Division 28	61;28
+ReportingUnit	Philadelphia;Ward 62;Division 1	62;1
+ReportingUnit	Philadelphia;Ward 62;Division 1	62;01
+ReportingUnit	Philadelphia;Ward 62;Division 2	62;2
+ReportingUnit	Philadelphia;Ward 62;Division 2	62;02
+ReportingUnit	Philadelphia;Ward 62;Division 3	62;3
+ReportingUnit	Philadelphia;Ward 62;Division 3	62;03
+ReportingUnit	Philadelphia;Ward 62;Division 4	62;4
+ReportingUnit	Philadelphia;Ward 62;Division 4	62;04
+ReportingUnit	Philadelphia;Ward 62;Division 5	62;5
+ReportingUnit	Philadelphia;Ward 62;Division 5	62;05
+ReportingUnit	Philadelphia;Ward 62;Division 6	62;6
+ReportingUnit	Philadelphia;Ward 62;Division 6	62;06
+ReportingUnit	Philadelphia;Ward 62;Division 7	62;7
+ReportingUnit	Philadelphia;Ward 62;Division 7	62;07
+ReportingUnit	Philadelphia;Ward 62;Division 8	62;8
+ReportingUnit	Philadelphia;Ward 62;Division 8	62;08
+ReportingUnit	Philadelphia;Ward 62;Division 9	62;9
+ReportingUnit	Philadelphia;Ward 62;Division 9	62;09
+ReportingUnit	Philadelphia;Ward 62;Division 10	62;10
+ReportingUnit	Philadelphia;Ward 62;Division 11	62;11
+ReportingUnit	Philadelphia;Ward 62;Division 12	62;12
+ReportingUnit	Philadelphia;Ward 62;Division 13	62;13
+ReportingUnit	Philadelphia;Ward 62;Division 14	62;14
+ReportingUnit	Philadelphia;Ward 62;Division 15	62;15
+ReportingUnit	Philadelphia;Ward 62;Division 16	62;16
+ReportingUnit	Philadelphia;Ward 62;Division 17	62;17
+ReportingUnit	Philadelphia;Ward 62;Division 18	62;18
+ReportingUnit	Philadelphia;Ward 62;Division 19	62;19
+ReportingUnit	Philadelphia;Ward 62;Division 20	62;20
+ReportingUnit	Philadelphia;Ward 62;Division 21	62;21
+ReportingUnit	Philadelphia;Ward 62;Division 22	62;22
+ReportingUnit	Philadelphia;Ward 62;Division 23	62;23
+ReportingUnit	Philadelphia;Ward 62;Division 24	62;24
+ReportingUnit	Philadelphia;Ward 62;Division 25	62;25
+ReportingUnit	Philadelphia;Ward 62;Division 26	62;26
+ReportingUnit	Philadelphia;Ward 63;Division 1	63;1
+ReportingUnit	Philadelphia;Ward 63;Division 1	63;01
+ReportingUnit	Philadelphia;Ward 63;Division 2	63;2
+ReportingUnit	Philadelphia;Ward 63;Division 2	63;02
+ReportingUnit	Philadelphia;Ward 63;Division 3	63;3
+ReportingUnit	Philadelphia;Ward 63;Division 3	63;03
+ReportingUnit	Philadelphia;Ward 63;Division 4	63;4
+ReportingUnit	Philadelphia;Ward 63;Division 4	63;04
+ReportingUnit	Philadelphia;Ward 63;Division 5	63;5
+ReportingUnit	Philadelphia;Ward 63;Division 5	63;05
+ReportingUnit	Philadelphia;Ward 63;Division 6	63;6
+ReportingUnit	Philadelphia;Ward 63;Division 6	63;06
+ReportingUnit	Philadelphia;Ward 63;Division 7	63;7
+ReportingUnit	Philadelphia;Ward 63;Division 7	63;07
+ReportingUnit	Philadelphia;Ward 63;Division 8	63;8
+ReportingUnit	Philadelphia;Ward 63;Division 8	63;08
+ReportingUnit	Philadelphia;Ward 63;Division 9	63;9
+ReportingUnit	Philadelphia;Ward 63;Division 9	63;09
+ReportingUnit	Philadelphia;Ward 63;Division 10	63;10
+ReportingUnit	Philadelphia;Ward 63;Division 11	63;11
+ReportingUnit	Philadelphia;Ward 63;Division 12	63;12
+ReportingUnit	Philadelphia;Ward 63;Division 13	63;13
+ReportingUnit	Philadelphia;Ward 63;Division 14	63;14
+ReportingUnit	Philadelphia;Ward 63;Division 15	63;15
+ReportingUnit	Philadelphia;Ward 63;Division 16	63;16
+ReportingUnit	Philadelphia;Ward 63;Division 17	63;17
+ReportingUnit	Philadelphia;Ward 63;Division 18	63;18
+ReportingUnit	Philadelphia;Ward 63;Division 19	63;19
+ReportingUnit	Philadelphia;Ward 63;Division 20	63;20
+ReportingUnit	Philadelphia;Ward 63;Division 21	63;21
+ReportingUnit	Philadelphia;Ward 63;Division 22	63;22
+ReportingUnit	Philadelphia;Ward 63;Division 23	63;23
+ReportingUnit	Philadelphia;Ward 63;Division 24	63;24
+ReportingUnit	Philadelphia;Ward 63;Division 25	63;25
+ReportingUnit	Philadelphia;Ward 64;Division 1	64;1
+ReportingUnit	Philadelphia;Ward 64;Division 1	64;01
+ReportingUnit	Philadelphia;Ward 64;Division 2	64;2
+ReportingUnit	Philadelphia;Ward 64;Division 2	64;02
+ReportingUnit	Philadelphia;Ward 64;Division 3	64;3
+ReportingUnit	Philadelphia;Ward 64;Division 3	64;03
+ReportingUnit	Philadelphia;Ward 64;Division 4	64;4
+ReportingUnit	Philadelphia;Ward 64;Division 4	64;04
+ReportingUnit	Philadelphia;Ward 64;Division 5	64;5
+ReportingUnit	Philadelphia;Ward 64;Division 5	64;05
+ReportingUnit	Philadelphia;Ward 64;Division 6	64;6
+ReportingUnit	Philadelphia;Ward 64;Division 6	64;06
+ReportingUnit	Philadelphia;Ward 64;Division 7	64;7
+ReportingUnit	Philadelphia;Ward 64;Division 7	64;07
+ReportingUnit	Philadelphia;Ward 64;Division 8	64;8
+ReportingUnit	Philadelphia;Ward 64;Division 8	64;08
+ReportingUnit	Philadelphia;Ward 64;Division 9	64;9
+ReportingUnit	Philadelphia;Ward 64;Division 9	64;09
+ReportingUnit	Philadelphia;Ward 64;Division 10	64;10
+ReportingUnit	Philadelphia;Ward 64;Division 11	64;11
+ReportingUnit	Philadelphia;Ward 64;Division 12	64;12
+ReportingUnit	Philadelphia;Ward 64;Division 13	64;13
+ReportingUnit	Philadelphia;Ward 64;Division 14	64;14
+ReportingUnit	Philadelphia;Ward 64;Division 15	64;15
+ReportingUnit	Philadelphia;Ward 64;Division 16	64;16
+ReportingUnit	Philadelphia;Ward 64;Division 17	64;17
+ReportingUnit	Philadelphia;Ward 64;Division 18	64;18
+ReportingUnit	Philadelphia;Ward 65;Division 1	65;1
+ReportingUnit	Philadelphia;Ward 65;Division 1	65;01
+ReportingUnit	Philadelphia;Ward 65;Division 2	65;2
+ReportingUnit	Philadelphia;Ward 65;Division 2	65;02
+ReportingUnit	Philadelphia;Ward 65;Division 3	65;3
+ReportingUnit	Philadelphia;Ward 65;Division 3	65;03
+ReportingUnit	Philadelphia;Ward 65;Division 4	65;4
+ReportingUnit	Philadelphia;Ward 65;Division 4	65;04
+ReportingUnit	Philadelphia;Ward 65;Division 5	65;5
+ReportingUnit	Philadelphia;Ward 65;Division 5	65;05
+ReportingUnit	Philadelphia;Ward 65;Division 6	65;6
+ReportingUnit	Philadelphia;Ward 65;Division 6	65;06
+ReportingUnit	Philadelphia;Ward 65;Division 7	65;7
+ReportingUnit	Philadelphia;Ward 65;Division 7	65;07
+ReportingUnit	Philadelphia;Ward 65;Division 8	65;8
+ReportingUnit	Philadelphia;Ward 65;Division 8	65;08
+ReportingUnit	Philadelphia;Ward 65;Division 9	65;9
+ReportingUnit	Philadelphia;Ward 65;Division 9	65;09
+ReportingUnit	Philadelphia;Ward 65;Division 10	65;10
+ReportingUnit	Philadelphia;Ward 65;Division 11	65;11
+ReportingUnit	Philadelphia;Ward 65;Division 12	65;12
+ReportingUnit	Philadelphia;Ward 65;Division 13	65;13
+ReportingUnit	Philadelphia;Ward 65;Division 14	65;14
+ReportingUnit	Philadelphia;Ward 65;Division 15	65;15
+ReportingUnit	Philadelphia;Ward 65;Division 16	65;16
+ReportingUnit	Philadelphia;Ward 65;Division 17	65;17
+ReportingUnit	Philadelphia;Ward 65;Division 18	65;18
+ReportingUnit	Philadelphia;Ward 65;Division 19	65;19
+ReportingUnit	Philadelphia;Ward 65;Division 20	65;20
+ReportingUnit	Philadelphia;Ward 65;Division 21	65;21
+ReportingUnit	Philadelphia;Ward 65;Division 22	65;22
+ReportingUnit	Philadelphia;Ward 65;Division 23	65;23
+ReportingUnit	Philadelphia;Ward 66;Division 1	66;1
+ReportingUnit	Philadelphia;Ward 66;Division 1	66;01
+ReportingUnit	Philadelphia;Ward 66;Division 2	66;2
+ReportingUnit	Philadelphia;Ward 66;Division 2	66;02
+ReportingUnit	Philadelphia;Ward 66;Division 3	66;3
+ReportingUnit	Philadelphia;Ward 66;Division 3	66;03
+ReportingUnit	Philadelphia;Ward 66;Division 4	66;4
+ReportingUnit	Philadelphia;Ward 66;Division 4	66;04
+ReportingUnit	Philadelphia;Ward 66;Division 5	66;5
+ReportingUnit	Philadelphia;Ward 66;Division 5	66;05
+ReportingUnit	Philadelphia;Ward 66;Division 6	66;6
+ReportingUnit	Philadelphia;Ward 66;Division 6	66;06
+ReportingUnit	Philadelphia;Ward 66;Division 7	66;7
+ReportingUnit	Philadelphia;Ward 66;Division 7	66;07
+ReportingUnit	Philadelphia;Ward 66;Division 8	66;8
+ReportingUnit	Philadelphia;Ward 66;Division 8	66;08
+ReportingUnit	Philadelphia;Ward 66;Division 9	66;9
+ReportingUnit	Philadelphia;Ward 66;Division 9	66;09
+ReportingUnit	Philadelphia;Ward 66;Division 10	66;10
+ReportingUnit	Philadelphia;Ward 66;Division 11	66;11
+ReportingUnit	Philadelphia;Ward 66;Division 12	66;12
+ReportingUnit	Philadelphia;Ward 66;Division 13	66;13
+ReportingUnit	Philadelphia;Ward 66;Division 14	66;14
+ReportingUnit	Philadelphia;Ward 66;Division 15	66;15
+ReportingUnit	Philadelphia;Ward 66;Division 16	66;16
+ReportingUnit	Philadelphia;Ward 66;Division 17	66;17
+ReportingUnit	Philadelphia;Ward 66;Division 18	66;18
+ReportingUnit	Philadelphia;Ward 66;Division 19	66;19
+ReportingUnit	Philadelphia;Ward 66;Division 20	66;20
+ReportingUnit	Philadelphia;Ward 66;Division 21	66;21
+ReportingUnit	Philadelphia;Ward 66;Division 22	66;22
+ReportingUnit	Philadelphia;Ward 66;Division 23	66;23
+ReportingUnit	Philadelphia;Ward 66;Division 24	66;24
+ReportingUnit	Philadelphia;Ward 66;Division 25	66;25
+ReportingUnit	Philadelphia;Ward 66;Division 26	66;26
+ReportingUnit	Philadelphia;Ward 66;Division 27	66;27
+ReportingUnit	Philadelphia;Ward 66;Division 28	66;28
+ReportingUnit	Philadelphia;Ward 66;Division 29	66;29
+ReportingUnit	Philadelphia;Ward 66;Division 30	66;30
+ReportingUnit	Philadelphia;Ward 66;Division 31	66;31
+ReportingUnit	Philadelphia;Ward 66;Division 32	66;32
+ReportingUnit	Philadelphia;Ward 66;Division 33	66;33
+ReportingUnit	Philadelphia;Ward 66;Division 34	66;34
+ReportingUnit	Philadelphia;Ward 66;Division 35	66;35
+ReportingUnit	Philadelphia;Ward 66;Division 36	66;36
+ReportingUnit	Philadelphia;Ward 66;Division 37	66;37
+ReportingUnit	Philadelphia;Ward 66;Division 38	66;38
+ReportingUnit	Philadelphia;Ward 66;Division 39	66;39
+ReportingUnit	Philadelphia;Ward 66;Division 40	66;40
+ReportingUnit	Philadelphia;Ward 66;Division 41	66;41
+ReportingUnit	Philadelphia;Ward 66;Division 42	66;42
+ReportingUnit	Philadelphia;Ward 66;Division 43	66;43
+ReportingUnit	Philadelphia;Ward 66;Division 44	66;44
+ReportingUnit	Philadelphia;Ward 66;Division 45	66;45
+ReportingUnit	Philadelphia;Ward 66;Division 46	66;46
+Candidate	BERNIE SANDERS	BERNIE SANDERS
+Candidate	JOSEPH R BIDEN	JOSEPH R BIDEN
+Candidate	TULSI GABBARD	TULSI GABBARD
+Candidate	Write In	Write In
+Candidate	DONALD J TRUMP	DONALD J TRUMP
+Candidate	ROQUE ROCKY DE LA FUENTE	ROQUE ROCKY DE LA FUENTE
+Candidate	BILL WELD	BILL WELD
+Candidate	JOSH SHAPIRO	JOSH SHAPIRO
+Candidate	HEATHER HEIDELBAUGH	HEATHER HEIDELBAUGH
+Candidate	H SCOTT CONKLIN	H SCOTT CONKLIN
+Candidate	MICHAEL LAMB	MICHAEL LAMB
+Candidate	TRACIE FOUNTAIN	TRACIE FOUNTAIN
+Candidate	ROSE ROSIE MARIE DAVIS	ROSE ROSIE MARIE DAVIS
+Candidate	NINA AHMAD	NINA AHMAD
+Candidate	CHRISTINA M HARTMAN	CHRISTINA M HARTMAN
+Candidate	TIMOTHY DEFOOR	TIMOTHY DEFOOR
+Candidate	JOE TORSELLA	JOE TORSELLA
+Candidate	STACY L GARRITY	STACY L GARRITY
+Candidate	BRENDAN F BOYLE	BRENDAN F BOYLE
+Candidate	DAVID TORRES	DAVID TORRES
+Candidate	DWIGHT EVANS	DWIGHT EVANS
+Candidate	MICHAEL HARVEY	MICHAEL HARVEY
+Candidate	MARY GAY SCANLON	MARY GAY SCANLON
+Candidate	ROB JORDAN	ROB JORDAN
+Candidate	DASHA PRUETT	DASHA PRUETT
+Candidate	NIKIL SAVAL	NIKIL SAVAL
+Candidate	LARRY FARNESE	LARRY FARNESE
+Candidate	SHARIF STREET	SHARIF STREET
+Candidate	JOHN SABATINA	JOHN SABATINA
+Candidate	VINCENT HUGHES	VINCENT HUGHES
+Candidate	NANCY GUENST	NANCY GUENST
+Candidate	KAREN HOUCK	KAREN HOUCK
+Candidate	MARTINA WHITE	MARTINA WHITE
+Candidate	KEVIN J BOYLE	KEVIN J BOYLE
+Candidate	AARON BASHIR	AARON BASHIR
+Candidate	MIKE DRISCOLL	MIKE DRISCOLL
+Candidate	ED NEILSON	ED NEILSON
+Candidate	JEFF DEMPSEY	JEFF DEMPSEY
+Candidate	MARYLOUISE ISAACSON	MARYLOUISE ISAACSON
+Candidate	VANESSA MCGRATH	VANESSA MCGRATH
+Candidate	ANDRE DEL VALLE	ANDRE DEL VALLE
+Candidate	JOE HOHENSTEIN	JOE HOHENSTEIN
+Candidate	JOHN NUNGESSER	JOHN NUNGESSER
+Candidate	JASON DAWKINS	JASON DAWKINS
+Candidate	ANGEL CRUZ	ANGEL CRUZ
+Candidate	MALCOLM KENYATTA	MALCOLM KENYATTA
+Candidate	MARISA SHAABAN	MARISA SHAABAN
+Candidate	BRIAN SIMS	BRIAN SIMS
+Candidate	DREW MURRAY	DREW MURRAY
+Candidate	ELIZABETH FIEDLER	ELIZABETH FIEDLER
+Candidate	LOU MENNA IV	LOU MENNA IV
+Candidate	MARIA P DONATUCCI	MARIA P DONATUCCI
+Candidate	REGINA YOUNG	REGINA YOUNG
+Candidate	JORDAN A HARRIS	JORDAN A HARRIS
+Candidate	GREGORY R BENJAMIN	GREGORY R BENJAMIN
+Candidate	JAMES R ROEBUCK	JAMES R ROEBUCK
+Candidate	RICK KRAJEWSKI	RICK KRAJEWSKI
+Candidate	KAREN DUNN	KAREN DUNN
+Candidate	AMEN BROWN	AMEN BROWN
+Candidate	RONI GREEN	RONI GREEN
+Candidate	DANYL PATTERSON	DANYL PATTERSON
+Candidate	VAN STONE	VAN STONE
+Candidate	WANDA LOGAN	WANDA LOGAN
+Candidate	JOANNA E MCCLINTON	JOANNA E MCCLINTON
+Candidate	MORGAN CEPHAS	MORGAN CEPHAS
+Candidate	PAMELA A DELISSIO	PAMELA A DELISSIO
+Candidate	LISA GOLDMAN RILEY	LISA GOLDMAN RILEY
+Candidate	DONNA BULLOCK	DONNA BULLOCK
+Candidate	DANILO BURGOS	DANILO BURGOS
+Candidate	DARISHA K PARKER	DARISHA K PARKER
+Candidate	BERNARD A WILLIAMS	BERNARD A WILLIAMS
+Candidate	FAREED ABDULLAH	FAREED ABDULLAH
+Candidate	SUPREME DOW	SUPREME DOW
+Candidate	CHRIS RABB	CHRIS RABB
+Candidate	STEPHEN KINSEY	STEPHEN KINSEY
+Candidate	JARED SOLOMON	JARED SOLOMON
+Candidate	ISABELLA FITZGERALD	ISABELLA FITZGERALD
+Candidate	AMY ROAT	AMY ROAT
+Candidate	PAMELA ROBINSON	PAMELA ROBINSON
+Candidate	LISA POWLEY	LISA POWLEY
+Candidate	ANTHONY BELLMON	ANTHONY BELLMON
+Candidate	PATRICK PARKINSON	PATRICK PARKINSON
+Candidate	THEODORE KIRSCH	THEODORE KIRSCH
+Candidate	MICHELE LOCKMAN	MICHELE LOCKMAN
+Candidate	KEMPIS GHANI SONGSTER	KEMPIS GHANI SONGSTER
+Candidate	RONALD RAJU JOSEPH	RONALD RAJU JOSEPH
+Candidate	LORRAINE HAW	LORRAINE HAW
+Candidate	ADAM TENNANT	ADAM TENNANT
+Candidate	VAYDA GOOD	VAYDA GOOD
+Candidate	ALVARO QUINONES	ALVARO QUINONES
+Candidate	MONA GETZES COHEN	MONA GETZES COHEN
+Candidate	PETE DIGIANNANTONIO	PETE DIGIANNANTONIO
+Candidate	GARY GRISAFI	GARY GRISAFI
+Candidate	CHRISTOPHER M VOGLER	CHRISTOPHER M VOGLER
+Candidate	WILLIAM M PIROLLI	WILLIAM M PIROLLI
+Candidate	HEATHER POPE	HEATHER POPE
+Candidate	NINA TINARI	NINA TINARI
+Candidate	OWEN VOUTSINAS-KLOSE	OWEN VOUTSINAS-KLO
+Candidate	SHERRIE COHEN	SHERRIE COHEN
+Candidate	ANLIN WANG	ANLIN WANG
+Candidate	STEVE PAUL	STEVE PAUL
+Candidate	CINDY BASS	CINDY BASS
+Candidate	ANUJ GUPTA	ANUJ GUPTA
+Candidate	CHARLENE COOPER	CHARLENE COOPER
+Candidate	JOANNE BEER	JOANNE BEER
+Candidate	PAUL PRESCOD	PAUL PRESCOD
+Candidate	DAISY CONFOY	DAISY CONFOY
+Candidate	TERRY GILLEN	TERRY GILLEN
+Candidate	KEN WASHINGTON	KEN WASHINGTON
+Candidate	ARIELLE COHEN	ARIELLE COHEN
+Candidate	WYNNETTA WARD	WYNNETTA WARD
+Candidate	SERGIO CEA	SERGIO CEA
+Candidate	MATTHEW MILLER	MATTHEW MILLER
+Candidate	LINDY LI	LINDY LI
+Candidate	JACK CAHILL	JACK CAHILL
+Candidate	DANIEL LAUFER	DANIEL LAUFER
+Candidate	CARLA LE'COIN	CARLA LE'COIN
+Candidate	CHRISTINA BORST	CHRISTINA BORST
+Candidate	BRYAN MERCER	BRYAN MERCER
+Candidate	DENISE FUREY	DENISE FUREY
+Candidate	PAUL PANEPINTO	PAUL PANEPINTO
+Candidate	CALVIN TUCKER	CALVIN TUCKER
+Candidate	ERIN ELMORE	ERIN ELMORE
+Candidate	JOHN PAUL SUTTON	JOHN PAUL SUTTON
+Candidate	JAKE METZGER	JAKE METZGER
+Candidate	SAMANTHA NEWELL	SAMANTHA NEWELL
+Candidate	CORA LINEHAN	CORA LINEHAN
+Candidate	KARYN HOLLIS	KARYN HOLLIS
+Candidate	JOHN RANDOLPH	JOHN RANDOLPH
+Candidate	REBECCA DIVALERIO	REBECCA DIVALERIO
+Candidate	MICHEL LEE	MICHEL LEE
+Candidate	MARYANNE DONAGHY	MARYANNE DONAGHY
+Candidate	TRAY HERMAN	TRAY HERMAN
+Candidate	COLLEEN GUINEY	COLLEEN GUINEY
+Candidate	RYAN YEAGER	RYAN YEAGER
+Candidate	AMANDA MCILLMURRAY	AMANDA MCILLMURRAY
+Candidate	DEIDRE SELIG	DEIDRE SELIG
+Candidate	VAL BIANCANIELLO	VAL BIANCANIELLO
+Candidate	LESLIE P MORGAN	LESLIE P MORGAN
+Candidate	JOAN MILLER	JOAN MILLER
+Candidate	DEBORAH YOUNG	DEBORAH YOUNG
+Candidate	JOSEPH GIEDEMANN	JOSEPH GIEDEMANN
+Candidate	BILL HEENEY	BILL HEENEY
+Candidate	CAMILLE G MC COLGAN	CAMILLE G MC COLGAN
+Candidate	MATTHEW DAGGETT	MATTHEW DAGGETT
+Candidate	JASON JACKRABBIT POLLACK	JASON JACKRABBIT POLLACK
+Candidate	WALTER F VOGLER JR	WALTER F VOGLER JR
+Candidate	MATT WOLFE	MATT WOLFE
+Candidate	AARON COHEN	AARON COHEN
+Candidate	JOHN ZIMMERMAN	JOHN ZIMMERMAN
+Candidate	ANTHONY ALEXANDER MAALOUF	ANTHONY ALEXANDER MAALOUF
+Candidate	WILLIAM HILLMAN	WILLIAM HILLMAN
+Candidate	RALPH E WIKE III	RALPH E WIKE III
+Candidate	YES SÃÂ	YES SÃÂ
+Candidate	NO	NO
+CandidateContest	US President (PA) (Phila)	PRESIDENT AND VICE PRESIDENT OF THE UNITED STATES
+CandidateContest	PA Governor (Phila)	GOVERNOR AND LIEUTENANT GOVERNOR
+CandidateContest	US Senate PA (Phila)	UNITED STATES SENATOR
+CandidateContest	PA Attorney General (Phila)	ATTORNEY GENERAL
+CandidateContest	PA Auditor General (Phila)	AUDITOR GENERAL
+CandidateContest	PA Treasurer (Phila)	STATE TREASURER
+Party	Democratic Party	DEMOCRATIC
+Party	Democratic Party	DEM
+Party	Republican Party	REPUBLICAN
+Party	Republican Party	REP
+Party	Green Party	GREEN
+Party	Green Party	GRE
+Party	Constitution Party	CONSTITUTION PARTY
+Party	Libertarian Party	LIBERTARIAN
+Party	Libertarian Party	LIB
+Party	Independent	INDEPENDENT
+ReportingUnit	Philadelphia	Philadelphia
+CountItemType	absentee	A
+CountItemType	election-day	M
+CountItemType	provisional	P
+CountItemType	by-mail	L
+CandidateContest	PA Senate District 1	SENATOR IN THE GENERAL ASSEMBLY-1ST
+CandidateContest	PA Senate District 1	SENATOR IN THE GENERAL ASSEMBLY-1ST DISTRICT
+CandidateContest	PA Senate District 2	SENATOR IN THE GENERAL ASSEMBLY-2ND
+CandidateContest	PA Senate District 2	SENATOR IN THE GENERAL ASSEMBLY-2ND DISTRICT
+CandidateContest	PA Senate District 3	SENATOR IN THE GENERAL ASSEMBLY-3RD
+CandidateContest	PA Senate District 3	SENATOR IN THE GENERAL ASSEMBLY-3RD DISTRICT
+CandidateContest	PA Senate District 4 (Phila)	SENATOR IN THE GENERAL ASSEMBLY-4TH
+CandidateContest	PA Senate District 4 (Phila)	SENATOR IN THE GENERAL ASSEMBLY-4TH DISTRICT
+CandidateContest	PA Senate District 5	SENATOR IN THE GENERAL ASSEMBLY-5TH
+CandidateContest	PA Senate District 5	SENATOR IN THE GENERAL ASSEMBLY-5TH DISTRICT
+CandidateContest	PA Senate District 6	SENATOR IN THE GENERAL ASSEMBLY-6TH
+CandidateContest	PA Senate District 6	SENATOR IN THE GENERAL ASSEMBLY-6TH DISTRICT
+CandidateContest	PA Senate District 7 (Phila)	SENATOR IN THE GENERAL ASSEMBLY-7TH
+CandidateContest	PA Senate District 7 (Phila)	SENATOR IN THE GENERAL ASSEMBLY-7TH DISTRICT
+CandidateContest	PA Senate District 8 (Phila)	SENATOR IN THE GENERAL ASSEMBLY-8TH
+CandidateContest	PA Senate District 8 (Phila)	SENATOR IN THE GENERAL ASSEMBLY-8TH DISTRICT
+CandidateContest	PA House District 152 (Phila)	REPRESENTATIVE IN THE GENERAL ASSEMBLY-152ND
+CandidateContest	PA House District 152 (Phila)	REPRESENTATIVE IN THE GENERAL ASSEMBLY-152ND DISTRICT
+CandidateContest	PA House District 170 (Phila)	REPRESENTATIVE IN THE GENERAL ASSEMBLY-170TH
+CandidateContest	PA House District 170 (Phila)	REPRESENTATIVE IN THE GENERAL ASSEMBLY-170TH DISTRICT
+CandidateContest	PA House District 172 (Phila)	REPRESENTATIVE IN THE GENERAL ASSEMBLY-172ND
+CandidateContest	PA House District 172 (Phila)	REPRESENTATIVE IN THE GENERAL ASSEMBLY-172ND DISTRICT
+CandidateContest	PA House District 173 (Phila)	REPRESENTATIVE IN THE GENERAL ASSEMBLY-173RD
+CandidateContest	PA House District 173 (Phila)	REPRESENTATIVE IN THE GENERAL ASSEMBLY-173RD DISTRICT
+CandidateContest	PA House District 174 (Phila)	REPRESENTATIVE IN THE GENERAL ASSEMBLY-174TH
+CandidateContest	PA House District 174 (Phila)	REPRESENTATIVE IN THE GENERAL ASSEMBLY-174TH DISTRICT
+CandidateContest	PA House District 175 (Phila)	REPRESENTATIVE IN THE GENERAL ASSEMBLY-175TH
+CandidateContest	PA House District 175 (Phila)	REPRESENTATIVE IN THE GENERAL ASSEMBLY-175TH DISTRICT
+CandidateContest	PA House District 177 (Phila)	REPRESENTATIVE IN THE GENERAL ASSEMBLY-177TH
+CandidateContest	PA House District 177 (Phila)	REPRESENTATIVE IN THE GENERAL ASSEMBLY-177TH DISTRICT
+CandidateContest	PA House District 179 (Phila)	REPRESENTATIVE IN THE GENERAL ASSEMBLY-179TH
+CandidateContest	PA House District 179 (Phila)	REPRESENTATIVE IN THE GENERAL ASSEMBLY-179TH DISTRICT
+CandidateContest	PA House District 180 (Phila)	REPRESENTATIVE IN THE GENERAL ASSEMBLY-180TH
+CandidateContest	PA House District 180 (Phila)	REPRESENTATIVE IN THE GENERAL ASSEMBLY-180TH DISTRICT
+CandidateContest	PA House District 181 (Phila)	REPRESENTATIVE IN THE GENERAL ASSEMBLY-181ST
+CandidateContest	PA House District 181 (Phila)	REPRESENTATIVE IN THE GENERAL ASSEMBLY-181ST DISTRICT
+CandidateContest	PA House District 182 (Phila)	REPRESENTATIVE IN THE GENERAL ASSEMBLY-182ND
+CandidateContest	PA House District 182 (Phila)	REPRESENTATIVE IN THE GENERAL ASSEMBLY-182ND DISTRICT
+CandidateContest	PA House District 184 (Phila)	REPRESENTATIVE IN THE GENERAL ASSEMBLY-184TH
+CandidateContest	PA House District 184 (Phila)	REPRESENTATIVE IN THE GENERAL ASSEMBLY-184TH DISTRICT
+CandidateContest	PA House District 185 (Phila)	REPRESENTATIVE IN THE GENERAL ASSEMBLY-185TH
+CandidateContest	PA House District 185 (Phila)	REPRESENTATIVE IN THE GENERAL ASSEMBLY-185TH DISTRICT
+CandidateContest	PA House District 186 (Phila)	REPRESENTATIVE IN THE GENERAL ASSEMBLY-186TH
+CandidateContest	PA House District 186 (Phila)	REPRESENTATIVE IN THE GENERAL ASSEMBLY-186TH DISTRICT
+CandidateContest	PA House District 188 (Phila)	REPRESENTATIVE IN THE GENERAL ASSEMBLY-188TH
+CandidateContest	PA House District 188 (Phila)	REPRESENTATIVE IN THE GENERAL ASSEMBLY-188TH DISTRICT
+CandidateContest	PA House District 190 (Phila)	REPRESENTATIVE IN THE GENERAL ASSEMBLY-190TH
+CandidateContest	PA House District 190 (Phila)	REPRESENTATIVE IN THE GENERAL ASSEMBLY-190TH DISTRICT
+CandidateContest	PA House District 191 (Phila)	REPRESENTATIVE IN THE GENERAL ASSEMBLY-191ST
+CandidateContest	PA House District 191 (Phila)	REPRESENTATIVE IN THE GENERAL ASSEMBLY-191ST DISTRICT
+CandidateContest	PA House District 192 (Phila)	REPRESENTATIVE IN THE GENERAL ASSEMBLY-192ND
+CandidateContest	PA House District 192 (Phila)	REPRESENTATIVE IN THE GENERAL ASSEMBLY-192ND DISTRICT
+CandidateContest	PA House District 194 (Phila)	REPRESENTATIVE IN THE GENERAL ASSEMBLY-194TH
+CandidateContest	PA House District 194 (Phila)	REPRESENTATIVE IN THE GENERAL ASSEMBLY-194TH DISTRICT
+CandidateContest	PA House District 195 (Phila)	REPRESENTATIVE IN THE GENERAL ASSEMBLY-195TH
+CandidateContest	PA House District 195 (Phila)	REPRESENTATIVE IN THE GENERAL ASSEMBLY-195TH DISTRICT
+CandidateContest	PA House District 197 (Phila)	REPRESENTATIVE IN THE GENERAL ASSEMBLY-197TH
+CandidateContest	PA House District 197 (Phila)	REPRESENTATIVE IN THE GENERAL ASSEMBLY-197TH DISTRICT
+CandidateContest	PA House District 198 (Phila)	REPRESENTATIVE IN THE GENERAL ASSEMBLY-198TH
+CandidateContest	PA House District 198 (Phila)	REPRESENTATIVE IN THE GENERAL ASSEMBLY-198TH DISTRICT
+CandidateContest	PA House District 200 (Phila)	REPRESENTATIVE IN THE GENERAL ASSEMBLY-200TH
+CandidateContest	PA House District 200 (Phila)	REPRESENTATIVE IN THE GENERAL ASSEMBLY-200TH DISTRICT
+CandidateContest	PA House District 201 (Phila)	REPRESENTATIVE IN THE GENERAL ASSEMBLY-201ST
+CandidateContest	PA House District 201 (Phila)	REPRESENTATIVE IN THE GENERAL ASSEMBLY-201ST DISTRICT
+CandidateContest	PA House District 202 (Phila)	REPRESENTATIVE IN THE GENERAL ASSEMBLY-202ND
+CandidateContest	PA House District 202 (Phila)	REPRESENTATIVE IN THE GENERAL ASSEMBLY-202ND DISTRICT
+CandidateContest	PA House District 203 (Phila)	REPRESENTATIVE IN THE GENERAL ASSEMBLY-203RD
+CandidateContest	PA House District 203 (Phila)	REPRESENTATIVE IN THE GENERAL ASSEMBLY-203RD DISTRICT
+CandidateContest	US House PA District 1 (Phila)	REPRESENTATIVE IN CONGRESS-1ST
+CandidateContest	US House PA District 1 (Phila)	REPRESENTATIVE IN CONGRESS-1ST DISTRICT
+CandidateContest	US House PA District 2 (Phila)	REPRESENTATIVE IN CONGRESS-2ND
+CandidateContest	US House PA District 2 (Phila)	REPRESENTATIVE IN CONGRESS-2ND DISTRICT
+CandidateContest	US House PA District 3 (Phila)	REPRESENTATIVE IN CONGRESS-3RD
+CandidateContest	US House PA District 3 (Phila)	REPRESENTATIVE IN CONGRESS-3RD DISTRICT
+CandidateContest	US House PA District 5 (Phila)	REPRESENTATIVE IN CONGRESS-5TH
+CandidateContest	US House PA District 5 (Phila)	REPRESENTATIVE IN CONGRESS-5TH DISTRICT
+CandidateContest	US House PA District 13 (Phila)	REPRESENTATIVE IN CONGRESS-13TH
+CandidateContest	US House PA District 13 (Phila)	REPRESENTATIVE IN CONGRESS-13TH DISTRICT
+Candidate	TOM WOLF	TOM WOLF
+Candidate	SCOTT R WAGNER	SCOTT R WAGNER
+Candidate	PAUL GLOVER	PAUL GLOVER
+Candidate	NEAL GALE	NEAL GALE
+Candidate	LOU BARLETTA	LOU BARLETTA
+Candidate	KEN V KRAWCHUK	KEN V KRAWCHUK
+Candidate	DALE R KERNS JR	DALE R KERNS JR
+Candidate	BOB CASEY JR	BOB CASEY JR
+Candidate	VANESSA L BROWN	VANESSA L BROWN
+Candidate	THOMAS P MURT	THOMAS P MURT
+Candidate	SEAN STEVENS	SEAN STEVENS
+Candidate	ROSITA C YOUNGBLOOD	ROSITA C YOUNGBLOOD
+Candidate	PEARL KIM	PEARL KIM
+Candidate	PATTY PAT KOZLOWSKI	PATTY PAT KOZLOWSKI
+Candidate	PAMELA DELISSIO	PAMELA DELISSIO
+Candidate	MILTON STREET	MILTON STREET
+Candidate	MIKE DOYLE	MIKE DOYLE
+Candidate	MATT BALTSAR	MATT BALTSAR
+Candidate	JASON T DAWKINS	JASON T DAWKINS
+Candidate	DARYL BOLING	DARYL BOLING
+Candidate	CHRISTINE M TARTAGLIONE	CHRISTINE M TARTAGLIONE
+Candidate	BRYAN E LEIB	BRYAN E LEIB
+Candidate	ANTHONY HARDY WILLIAMS	ANTHONY HARDY WILLIAMS
+Candidate	RON HOLT	RON HOLT
+Candidate	JAMES MCDEVITT	JAMES MCDEVITT
+Candidate	ART HAYWOOD	ART HAYWOOD
+Candidate	WILLIAM F KELLER	WILLIAM F KELLER
+Candidate	W CURTIS THOMAS	W CURTIS THOMAS
+Candidate	ROY A MINET	ROY A MINET
+Candidate	ROSS FEINBERG	ROSS FEINBERG
+Candidate	ROBERT A BRADY	ROBERT A BRADY
+Candidate	PAT TOOMEY	PAT TOOMEY
+Candidate	PAM DELISSIO	PAM DELISSIO
+Candidate	OTTO VOIT	OTTO VOIT
+Candidate	MICHAEL H OBRIEN	MICHAEL H OBRIEN
+Candidate	MATTHEW J DARRAGH	MATTHEW J DARRAGH
+Candidate	LESLIE ACOSTA	LESLIE ACOSTA
+Candidate	LAWRENCE M FARNESE JR	LAWRENCE M FARNESE JR
+Candidate	LATRYSE MCDOWELL	LATRYSE MCDOWELL
+Candidate	KRISTIN COMBS	KRISTIN COMBS
+Candidate	KATIE MCGINTY	KATIE MCGINTY
+Candidate	JOHN RAFFERTY	JOHN RAFFERTY
+Candidate	JOHN J TAYLOR	JOHN J TAYLOR
+Candidate	JOHN J SWEENEY	JOHN J SWEENEY
+Candidate	JOHN BROWN	JOHN BROWN
+Candidate	JOANNA MCCLINTON	JOANNA MCCLINTON
+Candidate	JIM PIO	JIM PIO
+Candidate	JILL STEIN	JILL STEIN
+Candidate	JAMES BABB	JAMES BABB
+Candidate	JAMES A JONES	JAMES A JONES
+Candidate	HILLARY CLINTON	HILLARY CLINTON
+Candidate	GARY JOHNSON	GARY JOHNSON
+Candidate	EUGENE A DEPASQUALE	EUGENE A DEPASQUALE
+Candidate	EDWARD T CLIFFORD III	EDWARD T CLIFFORD III
+Candidate	DEBORAH WILLIAMS	DEBORAH WILLIAMS
+Candidate	DARRELL L CASTLE	DARRELL L CASTLE
+Candidate	BILL POUNDS	BILL POUNDS
+Candidate	ALBERT J DERMOVSESIAN	ALBERT J DERMOVSESIAN
