@@ -1,7 +1,10 @@
 from configparser import ConfigParser, MissingSectionHeaderError
 from election_data_analysis import munge as m
 from election_data_analysis import special_formats as sf
+from election_data_analysis import database as db
+import election_data_analysis as e
 import pandas as pd
+import numpy as np
 from pandas.errors import ParserError, ParserWarning
 import csv
 import os
@@ -305,7 +308,7 @@ warning_keys = {
 }
 
 
-def read_results(results_file_path, munger_path, aux_data_path, error: dict) -> (pd.DataFrame, jm.Munger, dict):
+def read_results(results_file_path, munger_path, aux_data_path, error: Optional[dict]) -> (pd.DataFrame, jm.Munger, dict):
     """Reads results (appending '_SOURCE' to the columns)
     and initiates munger."""
 
@@ -346,7 +349,7 @@ def find_dupes(df):
 def read_single_datafile(
     munger: jm.Munger,
         f_path: str,
-        err: dict
+        err: Optional[dict]
 ) -> (pd.DataFrame, dict):
     try:
         dtype = {c: str for c in munger.field_list}
@@ -367,11 +370,13 @@ def read_single_datafile(
         if munger.options["count_of_top_lines_to_skip"]:
             kwargs["skiprows"] = range(munger.options["count_of_top_lines_to_skip"])
 
-        if munger.file_type in ["txt", "csv"]:
+        if munger.file_type in ["txt", "csv", "txt-semicolon-separated"]:
             kwargs["encoding"] = munger.encoding
             kwargs["quoting"] = csv.QUOTE_MINIMAL
             if munger.file_type == "txt":
                 kwargs["sep"] = "\t"
+            elif munger.file_type == "txt-semicolon-separated":
+                kwargs["sep"] = ";"
             df = pd.read_csv(f_path, **kwargs)
         elif munger.file_type in ["xls", "xlsx"]:
             df = pd.read_excel(f_path, **kwargs)
@@ -403,17 +408,26 @@ def read_single_datafile(
                 f"Nothing read from datafile. Munger may be inconsistent, or datafile may be empty.",
             )
         else:
-            # clean the file, specifying the count columns as integer columns
+            # get count columns by name
             if munger.options['count_columns_by_name']:
                 count_cols_by_name = munger.options['count_columns_by_name']
             elif munger.options['count_columns']:
-                count_cols_by_name = [df.columns[j] for j in munger.options['count_columns']]
+                count_cols_by_name = [df.columns[j] for j in munger.options['count_columns'] if j < df.shape[1]]
             else:
                 count_cols_by_name = None
-            df, count_cols_by_name, err_df = m.generic_clean(df, int_cols_by_name=count_cols_by_name)
-            err = jm.check_results_munger_compatibility(
-                munger, df, Path(f_path).name, err
-            )
+
+            # clean the column names
+            df, count_cols_by_name, err_str = m.clean_column_names(df, count_cols_by_name)
+            if err_str:
+                err = add_new_error(
+                    err,
+                    "warn-file",
+                    Path(f_path).name,
+                    err_str
+                )
+
+            # clean the count columns
+            df, err_df = m.clean_count_cols(df, count_cols_by_name)
             if not err_df.empty:
                 # show all columns of dataframe holding rows where counts were set to 0
                 pd.set_option('max_columns',None)
@@ -424,6 +438,14 @@ def read_single_datafile(
                     f"At least one count was set to 0 in certain rows of {Path(f_path).name}:\n{err_df}"
                 )
                 pd.reset_option('max_columns')
+
+            # clean the string columns
+            str_cols = [c for c in df.columns if df.dtypes[c] == np.object]
+            df = m.clean_strings(df, str_cols)
+
+            err = jm.check_results_munger_compatibility(
+                munger, df, Path(f_path).name, err
+            )
         return df, err
     except FileNotFoundError as fnfe:
         e = f"File not found: {f_path}"
@@ -445,7 +467,7 @@ def read_single_datafile(
 def read_combine_results(
     mu: jm.Munger,
     results_file_path: str,
-    err: dict,
+    err: Optional[dict],
     aux_data_path: str = None,
 ) -> (pd.DataFrame, dict):
     # if results are not a flat file type or json
@@ -593,7 +615,7 @@ def new_datafile(
         )
         return err
     else:
-        count_columns_by_name = [raw.columns[x] for x in munger.options["count_columns"]]
+        count_columns_by_name = [raw.columns[x] for x in munger.options["count_columns"] if x < raw.shape[1]]
 
     try:
         new_err = m.raw_elements_to_cdf(
@@ -603,7 +625,7 @@ def new_datafile(
             raw,
             count_columns_by_name,
             err,
-            ids=results_info,
+            constants=results_info,
         )
         if new_err:
             # append munger name to jurisdiction errors/warnings key
@@ -636,7 +658,7 @@ def get_runtime_parameters(
     header: str,
     err: Optional[Dict[Any, dict]] = None,
     optional_keys: list = None,
-) -> (dict, dict):
+) -> (dict, Optional[dict]):
     d = {}
 
     # read info from file
@@ -865,3 +887,193 @@ def fatal_error(err, error_type_list=None, name_key_list=None) -> bool:
         if bad:
             return True
     return False
+
+
+def create_param_file(db_params: dict, multi_data_loader_pars: dict, target_dir: str) -> Optional[str]:
+    err_str = None
+    if not os.path.isdir(target_dir):
+        return f"Directory not found: {target_dir}"
+    db_params_str = "\n".join([f"{s}={db_params[s]}" for s in db_params.keys()])
+    mdlp_str = "\n".join([f"{s}={multi_data_loader_pars[s]}" for s in multi_data_loader_pars.keys()])
+
+    with open(os.path.join(target_dir,"run_time.ini"),"w") as f:
+        f.write("[postgresql]\n" + db_params_str + "\n\n[election_data_analysis]\n" + mdlp_str)
+
+    return err_str
+
+
+def run_tests(test_dir: str, dbname: str, election_jurisdiction_list: Optional[list]=None):
+    """ move to tests directory, run tests, move back
+    db_params must have host, user, pass, db_name.
+    test_param_file is a reference run_time.ini file"""
+
+    # note current directory
+    original_dir = os.getcwd()
+
+    # move to tests directory
+    os.chdir(test_dir)
+
+    # run pytest
+    if election_jurisdiction_list:
+        for (election, juris) in election_jurisdiction_list:
+            if election is None and juris is not None:
+                keyword = f"{juris.replace(' ','-')}"
+            elif juris is None and election is not None:
+                keyword = f"{juris.replace(' ','-')}"
+            elif juris is not None and election is not None:
+                keyword = f"{juris.replace(' ','-')}_{election.replace(' ','-')}"
+            else:
+                keyword = "_"
+            os.system(f"pytest --dbname {dbname} -k {keyword}")
+    else:
+        os.system(f"pytest --dbname {dbname}")
+
+    # move back to original directory
+    os.chdir(original_dir)
+    return
+
+
+def confirm_essential_info(
+        directory: str,
+        header: str,
+        param_list: List[str],
+        known: Optional[dict] = None,
+        msg: str = "",
+):
+    """Returns True if user confirms all values in key_list for all *.ini files in
+    the given directory; False otherwise"""
+
+    # loop through files
+    for f in [f for f in os.listdir(directory) if f[-4:] == ".ini"]:
+        p_path = os.path.join(directory,f)
+        file_confirmed = False
+        while not file_confirmed:
+            param_dict, err = get_runtime_parameters(
+                required_keys=param_list + list(known.keys()),
+                header=header,
+                param_file=p_path,
+            )
+            if err:
+                err_str = ""
+                if "file" in err.keys():
+                    err_str += f"File error: {err['file']}\n"
+                if "ini" in err.keys():
+                    err_str += f"Error in file: {err['ini']}"
+                input(f"Please fix errors and try again: {err_str}")
+            else:
+                # have user confirm unknowns
+                param_str = "\n".join([f"{s}={param_dict[s]}" for s in param_list])
+                user_confirm = input(
+                    f"Are all of these parameters from {f} correct (y/n)?{msg}\n{param_str}"
+                )
+                if user_confirm == "y":
+                    file_confirmed = True
+
+                # check knowns
+                incorrect_knowns = []
+                for k in known.keys():
+                    if known[k] != param_dict[k]:
+                        incorrect_knowns.append(f"Need {k}={param_dict[k]}")
+                if incorrect_knowns:
+                    incorrect_str = "\n".join(incorrect_knowns)
+                    print(f"Incorrect values in {f}:\n{incorrect_str}\n"
+                          f"Either remove those files or correct their parameter values")
+                    file_confirmed = False
+
+                if not file_confirmed:
+                    input("Correct file and hit return to continue.")
+    return
+
+
+def election_juris_list(dir_path: str) -> list:
+    """Return list of all election-jurisdiction pairs in .ini files in the given directory"""
+    ej_list = []
+    for f in os.listdir(dir_path):
+        if f[-4:] == ".ini":
+            d, err = get_runtime_parameters(
+                param_file=os.path.join(dir_path,f),
+                header="'election_data_analysis",
+                required_keys=["election", "top_reporting_unit"]
+            )
+            if not err:
+                ej_list.append((d["election"],d["top_reporting_unit"]))
+    return ej_list
+
+def reload_juris_election(
+        juris_name: str,
+        election_name: str,
+        test_dir: str,
+):
+    """Assumes run_time.ini in directory, and results to be loaded are in the results_dir named in run_time.ini"""
+    # initialize dataloader
+    dl = e.DataLoader()
+
+    # Ask user to confirm/correct essential info
+    confirm_essential_info(
+        dl.d["results_dir"],
+        "election_data_analysis",
+        ["results_file", "results_download_date", "results_source"],
+        known={
+            "top_reporting_unit": juris_name,
+            "jurisdiction_directory": juris_name.replace(" ","-"),
+            "election": election_name,
+        },
+        msg=" Check download date carefully!!!",
+    )
+
+    # create temp_db (preserving live db name)
+    live_db = dl.session.bind.url.database
+    ts = datetime.datetime.now().strftime("%m%d_%H%M")
+    temp_db = f"{live_db}_test_{ts}"
+    db.create_or_reset_db(dbname=temp_db)
+
+    # load all data into temp db
+    dl.change_db(temp_db)
+    dl.load_all(move_files=False)
+
+    # run test files on temp db
+    run_tests(
+        test_dir,
+        dl.d["dbname"],
+        election_jurisdiction_list=[(election_name,juris_name)],
+    )
+
+    # Ask user to OK test results or abandon
+    go_ahead = input(f"Did tests succeeded for election {election_name} in {juris_name} (y/n)?")
+    if go_ahead != "y":
+        return
+
+    # switch to live db and get info needed later
+    dl.change_db(live_db)
+    election_id = db.name_to_id(dl.session, "Election", election_name)
+    juris_id = db.name_to_id(dl.session,"ReportingUnit", juris_name)
+
+    # Move *.ini and results files for juris-election pair to 'unloaded' directory
+    archive_directory = dl.d["archive_dir"]
+    if dl.d["unloaded_dir"]:
+        unloaded_directory = dl.d["unloaded_dir"]
+    else:
+        unloaded_directory = os.path.join(archive_directory, "unloaded")
+    for f in [f for f in os.listdir(archive_directory) if f[-4:] == ".ini"]:
+        params, err = get_runtime_parameters(
+            required_keys=["election","top_reporting_unit","results_file"],
+            header="election_data_analysis",
+            param_file=os.path.join(archive_directory, f),
+        )
+        # if the *.ini file is for the given election and jurisdiction
+        if (not err) and params["election"] == election_name and params["top_reporting_unit"] == juris_name:
+            # move both the *.ini file and its results file to the unloaded directory
+            archive(f, archive_directory, unloaded_directory)
+            archive(params["results_file"], archive_directory, unloaded_directory)
+
+    # Remove existing data for juris-election pair from live db
+    dl.remove_data(election_id, juris_id)
+
+    # Load new data into live db (and move successful to archive)
+    dl.load_all()
+
+    # run tests on live db
+    run_tests(test_dir, dl.d["dbname"], election_jurisdiction_list=[(election_name,juris_name)])
+
+    return
+

@@ -73,7 +73,7 @@ def read_alternate_munger(
         file_type: str,
         f_path: str,
         munger: jm.Munger,
-        err: dict
+        err: Optional[dict]
 ) -> (pd.DataFrame, dict):
     if file_type in ["concatenated-blocks"]:
         raw_results, err = read_concatenated_blocks(f_path, munger, err)
@@ -90,6 +90,18 @@ def read_alternate_munger(
             f"file type not recognized: {file_type}"
         )
         raw_results = pd.DataFrame()
+
+    # clean the raw results
+    raw_results, err_df = m.clean_count_cols(raw_results, ["count"])
+    if not err_df.empty:
+        err = ui.add_new_error(
+            err,
+            "warn-file",
+            Path(f_path).name,
+            f"Some counts not read, set to 0"
+        )
+    str_cols = [c for c in raw_results.columns if c != "count"]
+    raw_results = m.clean_strings(raw_results, str_cols)
     return raw_results, err
 
 
@@ -130,6 +142,10 @@ def read_concatenated_blocks(
             # get info from header line
             field_list = extract_items(header_line, w)
 
+            # Add back county header in case of Iowa:
+            if header_line.startswith(' ' * w):
+                field_list = [''] + field_list
+
             # remove first column header and headers of any columns to be skipped
             last_header = remove_by_index(field_list, [0] + skip_cols)
 
@@ -153,10 +169,11 @@ def read_concatenated_blocks(
             header_1_list, alts = disambiguate(extract_items(header_1, w * v_t_cc))
 
             #  add disambiguated entries to munger's dictionary of alternatives
-            if "Candidate" in munger.alt.keys():
-                munger.alt["Candidate"].update(alts)
-            else:
-                munger.alt["Candidate"] = alts
+            if alts:
+                if "Candidate" in munger.alt.keys():
+                    munger.alt["Candidate"].update(alts)
+                else:
+                    munger.alt["Candidate"] = alts
 
             # create df from next batch of lines, with that multi-index
             # find idx of next empty line (or end of data)
@@ -184,16 +201,27 @@ def read_concatenated_blocks(
                 [y for z in [[cand] * v_t_cc for cand in header_1_list] for y in z],
                 last_header,
             ]
-            df[header_0].columns = pd.MultiIndex.from_arrays(index_array)
 
-            # move header_1 & header_2 info to columns
-            df[header_0] = pd.melt(
-                df[header_0],
-                ignore_index=False,
-                value_vars=df[header_0].columns.tolist(),
-                value_name="count",
-                var_name=["header_1", "header_2"],
-            )
+            # Create map from integer columns to (header_1, header_2) values
+            header_map = {}
+            for i, col in enumerate(df[header_0].columns):
+                header_map[col] = (index_array[0][i], index_array[1][i])
+
+            # Move header to columns
+            df[header_0] = pd.melt(df[header_0],
+                                   ignore_index=False,
+                                   value_vars=df[header_0].columns.tolist(),
+                                   value_name="count",
+                                   var_name="header_tmp")
+
+            # Gather values for header_1 and header_2 columns.
+            header_1_col = [header_map[i][0] for i in df[header_0]['header_tmp']]
+            header_2_col = [header_map[i][1] for i in df[header_0]['header_tmp']]
+
+            # Add header_1 and header_2 columns, and remove header_tmp.
+            df[header_0]['header_1'] = header_1_col
+            df[header_0]['header_2'] = header_2_col
+            df[header_0] = df[header_0].drop(columns='header_tmp')
 
             # Add columns for header_0
             df[header_0] = m.add_constant_column(df[header_0], "header_0", header_0)
@@ -222,6 +250,7 @@ def read_concatenated_blocks(
 
     # Make row index (from first column of blocks) into a column called 'first_column'
     raw_results.reset_index(inplace=True)
+    # TODO tech debt is next line still necessary?
     raw_results.rename(columns={0: "first_column"}, inplace=True)
 
     return raw_results, err
@@ -236,6 +265,7 @@ def read_multi_sheet_excel(
     sheets_to_skip = munger.options["sheets_to_skip"]
     count_of_top_lines_to_skip = munger.options["count_of_top_lines_to_skip"]
     constant_line_count = munger.options["constant_line_count"]
+    constant_column_count = munger.options["constant_column_count"]
     header_row_count = munger.options["header_row_count"]
     columns_to_skip = munger.options["columns_to_skip"]
 
@@ -261,18 +291,22 @@ def read_multi_sheet_excel(
             data = df[sh].copy()
 
             # remove lines designated ignorable
-            data = data.iloc[count_of_top_lines_to_skip:]
+            data.drop(data.index[:count_of_top_lines_to_skip], inplace=True)
 
             # remove any all-null rows
             data.dropna(how="all",inplace=True)
 
-            # read constant info from first non-null entries of constant-header rows
+            # read constant_line info from first non-null entries of constant-header rows
             # then drop those rows
-            constants = data.iloc[:constant_line_count].fillna(method="bfill", axis=1).iloc[:,0]
-            data = data.iloc[constant_line_count:]
+            if constant_line_count > 0:
+                constant_lines = data.iloc[:constant_line_count].fillna(method="bfill", axis=1).iloc[:,0]
+                data.drop(data.index[:constant_line_count], inplace=True)
 
-            # reset column headers to generic index (moving column names to rows
-            # TODO remove data = data.transpose().reset_index().transpose()
+            # read constant_column info from first non-null entries of constant columns
+            # and drop those columns
+            if constant_column_count > 0:
+                constant_columns = data.T.iloc[:constant_column_count].fillna(method="bfill", axis=1).iloc[:,0]
+                data.drop(data.columns[:constant_column_count], axis=1, inplace=True)
 
             # add multi-index for actual header rows
             header_variable_names = [f"header_{j}" for j in range(header_row_count)]
@@ -284,7 +318,7 @@ def read_multi_sheet_excel(
             data.columns = col_multi_index
 
             # remove header rows from data
-            data = data.iloc[header_row_count:]
+            data.drop(data.index[:header_row_count], inplace=True)
 
             # Drop extraneous columns per munger, and columns without data
             data.drop(data.columns[columns_to_skip], axis=1, inplace=True)
@@ -303,7 +337,9 @@ def read_multi_sheet_excel(
 
             # add column(s) for constant info
             for j in range(constant_line_count):
-                data = m.add_constant_column(data,f"constant_{j}",constants.iloc[j])
+                data = m.add_constant_column(data,f"constant_line_{j}",constant_lines.iloc[j])
+            for j in range(constant_column_count):
+                data = m.add_constant_column(data,f"constant_column_{j}",constant_columns.iloc[j])
 
             # Make row index (from first column of blocks) into a column called 'first_column'
             data.reset_index(inplace=True)
@@ -320,7 +356,7 @@ def read_multi_sheet_excel(
     return raw_results, err
 
 
-def add_info(node: et.Element, info: dict, vc_field: dict) -> dict:
+def add_info(node: et.Element, info: dict, vc_field: dict) -> (dict, bool):
     new_info = info.copy()
     for k in vc_field[node.tag].keys():
         if k == "count":

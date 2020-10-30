@@ -31,6 +31,7 @@ Different file types need different parameters to be specified.
    * field_names_if_no_field_name_row
    * count_columns
    
+Applying a munger with file_type `xls` to a multi-sheet excel file will read only the first sheet. If other sheets are necessary, use `xls-multi` file type.
  NB: the header_row_count should count only rows with data the system needs to read. If there are blank lines, or lines with inessential information -- such as the election date, which is not munged -- use the optional parameter count_of_top_lines_to_skip.
  
  * Required for `concatenated-blocks` type:
@@ -38,10 +39,12 @@ Different file types need different parameters to be specified.
    * columns_to_skip
    * last_header_column_count
    * column_width
+   
  * Required for `xls-multi`:
    * sheets_to_skip
    * count_of_top_lines_to_skip
    * constant_line_count
+   * constant_column_count
    * header_row_count
    * columns_to_skip
  * Required for `json`:
@@ -262,7 +265,7 @@ CountItemType	total	Total Votes
 CountItemType	total	total
 ```
 
- (8) Add any existing content from `dictionary.txt` to the starter dictionary. If the jurisdiction is brand new there won't be any existing contest. 
+ (8) Add any existing content from `dictionary.txt` to the starter dictionary. If the jurisdiction is brand new there won't be any existing content. 
 
  (9) Move `XX_starter_dictionary.txt` from the current directory and to the jurisdiction's directory, and rename it to `dictionary.txt` . 
 
@@ -299,7 +302,7 @@ Candidate	Rosa Maria 'Rosy' Palomino	Rosa Maria "Rosy" Palomino
    * CandidateContest: Look at the new `CandidateContest.txt` file. Many may be contests you do *not* want to add -- the contests you already have (such as congressional contests) that will have been added with the raw identifier name. Some may be BallotMeasureContests that do not belong in `CandidateContest.txt`. For any new CandidateContest you do want to keep you will need to add the corresponding line to `Office.txt` (and the ElectionDistrict to `ReportingUnit.txt` if it is not already there). 
     * You may want to remove from `dictionary.txt` any lines corresponding to items removed in the bullet points above.
 
- (13) Finally, if you will be munging primary elections, and if you are confident that your `CandidateContest.txt`, `Party.txt` and associated lines in `dictionary.txt` are correct, use the `add_primaries_to_candidate_contest()` and `jp.add_primaries_to_dict()` methods
+ (13) Finally, if you will be munging primary elections, and if you are confident that your `CandidateContest.txt`, `Party.txt` and associated lines in `dictionary.txt` are correct, use the `jp.add_primaries_to_candidate_contest()` and `jp.add_primaries_to_dict()` methods
 ```
 >>> jp.add_primaries_to_candidate_contest()
 >>> jp.add_primaries_to_dict()
@@ -394,6 +397,16 @@ analyzer = Analyzer()
 analyzer.top_counts('2018 General', 'North Carolina', 'county', True)
 ```
 This code will produce all North Carolina data from the 2018 general election, grouped by contest, county, and vote type (total, early, absentee, etc).
+
+## Unload and reload data
+To unload existing data for a given jurisdiction and a given election -- or more exactly, to remove data from any datafiles with that election and that jurisdiction as "top ReportingUnit" -- you can use the routine 
+```user_interface.reload_juris_election(juris_name,election_name,test_dir)```
+
+where `test_dir` is the directory holding the tests to perform on the data before upload. For example, `test_dir` might be the repository's `tests` directory. This routine will move any files associated with unloaded data to the directory specified in the optional `unloaded_dir` in `run_time.ini`.
+
+## Testing
+The routine `tests/load_and_test_all.py` can be used to run tests. If the directory `test/TestingData` does not exist, the function will download files from `github.com/ElectionDataAnalysis/TestingData`, load it all and run all tests. If `tests/TestingData` exists, the routine will test all data in that directory (without downloading anything). Election-jurisdiction pairs can be specified with the -e and -j flags, e.g. `load_all_from_repo.py -e '2018 General' -j 'Arkansas'` to restrict the loading and testing to just that pair.
+
 
 ## Miscellaneous helpful hints
 Beware of:

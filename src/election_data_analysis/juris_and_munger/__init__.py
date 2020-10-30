@@ -3,6 +3,7 @@ import os.path
 from election_data_analysis import database as db
 import pandas as pd
 from pandas.api.types import is_numeric_dtype
+from typing import Optional
 from election_data_analysis import munge as m
 from election_data_analysis import user_interface as ui
 import re
@@ -27,6 +28,7 @@ munger_pars_opt = {
     "column_width": "int",
     "sheets_to_skip": "list-of-strings",
     "constant_line_count": "int",
+    "constant_column_count": "int",
 }
 
 
@@ -336,7 +338,7 @@ def ensure_jurisdiction_dir(juris_path, ignore_empty=False) -> dict:
     return err
 
 
-def ensure_juris_files(juris_path, ignore_empty=False) -> dict:
+def ensure_juris_files(juris_path, ignore_empty=False) -> Optional[dict]:
     """Check that the jurisdiction files are complete and consistent with one another.
     Check for extraneous files in Jurisdiction directory.
     Assumes Jurisdiction directory exists. Assumes dictionary.txt is in the template file"""
@@ -396,12 +398,22 @@ def ensure_juris_files(juris_path, ignore_empty=False) -> dict:
 
         # if file exists, check format against template
         if not created:
-            cf_df = pd.read_csv(
-                os.path.join(juris_path, f"{juris_file}.txt"),
-                sep="\t",
-                encoding="iso=8859-1",
-                quoting=csv.QUOTE_MINIMAL,
-            )
+            try:
+                cf_df = pd.read_csv(
+                    os.path.join(juris_path, f"{juris_file}.txt"),
+                    sep="\t",
+                    encoding="iso=8859-1",
+                    quoting=csv.QUOTE_MINIMAL,
+                )
+            except pd.errors.ParserError as e:
+                err = ui.add_new_error(
+                    err,
+                    "jurisdiction",
+                    juris_name,
+                    f"Error reading file {juris_file}.txt: {e}"
+                )
+                return err
+
             if set(cf_df.columns) != set(temp.columns):
                 print(juris_file)
                 cols = "\t".join(temp.columns.to_list())
@@ -591,7 +603,7 @@ def check_munger_file_contents(munger_path, munger_file, err):
                 )
 
         # check all parameters for flat files
-        if format_d["file_type"] in ["txt", "csv", "xls"]:
+        if format_d["file_type"] in ["txt", "csv", "xls", "txt-semicolon-separated"]:
             # Either field_name_row is a number, or field_names_if_no_field_name_row is a non-empty list
             if (not format_d["field_name_row"]) or (not format_d["field_name_row"].isnumeric()):
                 if (not format_d["field_names_if_no_field_name_row"]) or (len(format_d["field_names_if_no_field_name_row"]) == 0):
@@ -638,6 +650,7 @@ def check_munger_file_contents(munger_path, munger_file, err):
             for key in [
                 "count_of_top_lines_to_skip",
                 "constant_line_count",
+                "constant_column_count",
                 "header_row_count",
             ]:
                 try:
@@ -649,6 +662,7 @@ def check_munger_file_contents(munger_path, munger_file, err):
                         munger_name,
                         f"{key} is not an integer:  {format_d[key]}",
                     )
+
         # note: json has no numeric parameters to test!
 
     else:
@@ -840,6 +854,9 @@ def load_juris_dframe_into_cdf(session, element, juris_path, error) -> dict:
             # for every instance of the enumeration in the current table, add id and othertype columns to the dataframe
             if e in df.columns:
                 df = m.enum_col_to_id_othertext(df, e, cdf_e)
+            # clean
+            df, err_df = m.clean_ids(df, [f"{e}_Id"])
+            df[f"Other{e}"] = df[f"Other{e}"].fillna("")
 
     # get Ids for any foreign key (or similar) in the table, e.g., Party_Id, etc.
     fk_file_path = os.path.join(
@@ -922,9 +939,9 @@ def check_results_munger_compatibility(
     if missing:
         error = ui.add_new_error(
             error,
-            "munger",
+            "warn-munger",
             mu.name,
-            f"Only {df.shape[1]} columns read from results file {file_name}. Check file_type in format.config",
+            f"Some count_columns missing from results file {file_name}:\n{missing}",
         )
     else:
         # check that count cols are numeric

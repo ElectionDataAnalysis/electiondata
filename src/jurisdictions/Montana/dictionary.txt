@@ -1,1 +1,2173 @@
 cdf_element	cdf_internal_name	raw_identifier_value
+CandidateContest	MT House District 1 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 1 (Democratic)
+CandidateContest	MT House District 1 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 1 (Democrat)
+CandidateContest	MT House District 2 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 2 (Democratic)
+CandidateContest	MT House District 2 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 2 (Democrat)
+CandidateContest	MT House District 3 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 3 (Democratic)
+CandidateContest	MT House District 3 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 3 (Democrat)
+CandidateContest	MT House District 4 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 4 (Democratic)
+CandidateContest	MT House District 4 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 4 (Democrat)
+CandidateContest	MT House District 5 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 5 (Democratic)
+CandidateContest	MT House District 5 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 5 (Democrat)
+CandidateContest	MT House District 6 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 6 (Democratic)
+CandidateContest	MT House District 6 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 6 (Democrat)
+CandidateContest	MT House District 7 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 7 (Democratic)
+CandidateContest	MT House District 7 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 7 (Democrat)
+CandidateContest	MT House District 8 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 8 (Democratic)
+CandidateContest	MT House District 8 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 8 (Democrat)
+CandidateContest	MT House District 9 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 9 (Democratic)
+CandidateContest	MT House District 9 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 9 (Democrat)
+CandidateContest	MT House District 10 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 10 (Democratic)
+CandidateContest	MT House District 10 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 10 (Democrat)
+CandidateContest	MT House District 11 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 11 (Democratic)
+CandidateContest	MT House District 11 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 11 (Democrat)
+CandidateContest	MT House District 12 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 12 (Democratic)
+CandidateContest	MT House District 12 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 12 (Democrat)
+CandidateContest	MT House District 13 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 13 (Democratic)
+CandidateContest	MT House District 13 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 13 (Democrat)
+CandidateContest	MT House District 14 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 14 (Democratic)
+CandidateContest	MT House District 14 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 14 (Democrat)
+CandidateContest	MT House District 15 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 15 (Democratic)
+CandidateContest	MT House District 15 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 15 (Democrat)
+CandidateContest	MT House District 16 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 16 (Democratic)
+CandidateContest	MT House District 16 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 16 (Democrat)
+CandidateContest	MT House District 17 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 17 (Democratic)
+CandidateContest	MT House District 17 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 17 (Democrat)
+CandidateContest	MT House District 18 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 18 (Democratic)
+CandidateContest	MT House District 18 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 18 (Democrat)
+CandidateContest	MT House District 19 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 19 (Democratic)
+CandidateContest	MT House District 19 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 19 (Democrat)
+CandidateContest	MT House District 20 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 20 (Democratic)
+CandidateContest	MT House District 20 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 20 (Democrat)
+CandidateContest	MT House District 21 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 21 (Democratic)
+CandidateContest	MT House District 21 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 21 (Democrat)
+CandidateContest	MT House District 22 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 22 (Democratic)
+CandidateContest	MT House District 22 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 22 (Democrat)
+CandidateContest	MT House District 23 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 23 (Democratic)
+CandidateContest	MT House District 23 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 23 (Democrat)
+CandidateContest	MT House District 24 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 24 (Democratic)
+CandidateContest	MT House District 24 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 24 (Democrat)
+CandidateContest	MT House District 25 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 25 (Democratic)
+CandidateContest	MT House District 25 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 25 (Democrat)
+CandidateContest	MT House District 26 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 26 (Democratic)
+CandidateContest	MT House District 26 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 26 (Democrat)
+CandidateContest	MT House District 27 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 27 (Democratic)
+CandidateContest	MT House District 27 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 27 (Democrat)
+CandidateContest	MT House District 28 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 28 (Democratic)
+CandidateContest	MT House District 28 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 28 (Democrat)
+CandidateContest	MT House District 29 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 29 (Democratic)
+CandidateContest	MT House District 29 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 29 (Democrat)
+CandidateContest	MT House District 30 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 30 (Democratic)
+CandidateContest	MT House District 30 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 30 (Democrat)
+CandidateContest	MT House District 31 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 31 (Democratic)
+CandidateContest	MT House District 31 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 31 (Democrat)
+CandidateContest	MT House District 32 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 32 (Democratic)
+CandidateContest	MT House District 32 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 32 (Democrat)
+CandidateContest	MT House District 33 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 33 (Democratic)
+CandidateContest	MT House District 33 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 33 (Democrat)
+CandidateContest	MT House District 34 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 34 (Democratic)
+CandidateContest	MT House District 34 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 34 (Democrat)
+CandidateContest	MT House District 35 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 35 (Democratic)
+CandidateContest	MT House District 35 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 35 (Democrat)
+CandidateContest	MT House District 36 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 36 (Democratic)
+CandidateContest	MT House District 36 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 36 (Democrat)
+CandidateContest	MT House District 37 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 37 (Democratic)
+CandidateContest	MT House District 37 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 37 (Democrat)
+CandidateContest	MT House District 38 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 38 (Democratic)
+CandidateContest	MT House District 38 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 38 (Democrat)
+CandidateContest	MT House District 39 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 39 (Democratic)
+CandidateContest	MT House District 39 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 39 (Democrat)
+CandidateContest	MT House District 40 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 40 (Democratic)
+CandidateContest	MT House District 40 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 40 (Democrat)
+CandidateContest	MT House District 41 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 41 (Democratic)
+CandidateContest	MT House District 41 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 41 (Democrat)
+CandidateContest	MT House District 42 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 42 (Democratic)
+CandidateContest	MT House District 42 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 42 (Democrat)
+CandidateContest	MT House District 43 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 43 (Democratic)
+CandidateContest	MT House District 43 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 43 (Democrat)
+CandidateContest	MT House District 44 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 44 (Democratic)
+CandidateContest	MT House District 44 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 44 (Democrat)
+CandidateContest	MT House District 45 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 45 (Democratic)
+CandidateContest	MT House District 45 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 45 (Democrat)
+CandidateContest	MT House District 46 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 46 (Democratic)
+CandidateContest	MT House District 46 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 46 (Democrat)
+CandidateContest	MT House District 47 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 47 (Democratic)
+CandidateContest	MT House District 47 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 47 (Democrat)
+CandidateContest	MT House District 48 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 48 (Democratic)
+CandidateContest	MT House District 48 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 48 (Democrat)
+CandidateContest	MT House District 49 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 49 (Democratic)
+CandidateContest	MT House District 49 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 49 (Democrat)
+CandidateContest	MT House District 50 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 50 (Democratic)
+CandidateContest	MT House District 50 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 50 (Democrat)
+CandidateContest	MT House District 51 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 51 (Democratic)
+CandidateContest	MT House District 51 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 51 (Democrat)
+CandidateContest	MT House District 52 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 52 (Democratic)
+CandidateContest	MT House District 52 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 52 (Democrat)
+CandidateContest	MT House District 53 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 53 (Democratic)
+CandidateContest	MT House District 53 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 53 (Democrat)
+CandidateContest	MT House District 54 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 54 (Democratic)
+CandidateContest	MT House District 54 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 54 (Democrat)
+CandidateContest	MT House District 55 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 55 (Democratic)
+CandidateContest	MT House District 55 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 55 (Democrat)
+CandidateContest	MT House District 56 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 56 (Democratic)
+CandidateContest	MT House District 56 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 56 (Democrat)
+CandidateContest	MT House District 57 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 57 (Democratic)
+CandidateContest	MT House District 57 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 57 (Democrat)
+CandidateContest	MT House District 58 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 58 (Democratic)
+CandidateContest	MT House District 58 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 58 (Democrat)
+CandidateContest	MT House District 59 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 59 (Democratic)
+CandidateContest	MT House District 59 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 59 (Democrat)
+CandidateContest	MT House District 60 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 60 (Democratic)
+CandidateContest	MT House District 60 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 60 (Democrat)
+CandidateContest	MT House District 61 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 61 (Democratic)
+CandidateContest	MT House District 61 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 61 (Democrat)
+CandidateContest	MT House District 62 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 62 (Democratic)
+CandidateContest	MT House District 62 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 62 (Democrat)
+CandidateContest	MT House District 63 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 63 (Democratic)
+CandidateContest	MT House District 63 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 63 (Democrat)
+CandidateContest	MT House District 64 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 64 (Democratic)
+CandidateContest	MT House District 64 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 64 (Democrat)
+CandidateContest	MT House District 65 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 65 (Democratic)
+CandidateContest	MT House District 65 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 65 (Democrat)
+CandidateContest	MT House District 66 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 66 (Democratic)
+CandidateContest	MT House District 66 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 66 (Democrat)
+CandidateContest	MT House District 67 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 67 (Democratic)
+CandidateContest	MT House District 67 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 67 (Democrat)
+CandidateContest	MT House District 68 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 68 (Democratic)
+CandidateContest	MT House District 68 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 68 (Democrat)
+CandidateContest	MT House District 69 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 69 (Democratic)
+CandidateContest	MT House District 69 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 69 (Democrat)
+CandidateContest	MT House District 70 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 70 (Democratic)
+CandidateContest	MT House District 70 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 70 (Democrat)
+CandidateContest	MT House District 71 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 71 (Democratic)
+CandidateContest	MT House District 71 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 71 (Democrat)
+CandidateContest	MT House District 72 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 72 (Democratic)
+CandidateContest	MT House District 72 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 72 (Democrat)
+CandidateContest	MT House District 73 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 73 (Democratic)
+CandidateContest	MT House District 73 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 73 (Democrat)
+CandidateContest	MT House District 74 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 74 (Democratic)
+CandidateContest	MT House District 74 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 74 (Democrat)
+CandidateContest	MT House District 75 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 75 (Democratic)
+CandidateContest	MT House District 75 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 75 (Democrat)
+CandidateContest	MT House District 76 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 76 (Democratic)
+CandidateContest	MT House District 76 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 76 (Democrat)
+CandidateContest	MT House District 77 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 77 (Democratic)
+CandidateContest	MT House District 77 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 77 (Democrat)
+CandidateContest	MT House District 78 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 78 (Democratic)
+CandidateContest	MT House District 78 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 78 (Democrat)
+CandidateContest	MT House District 79 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 79 (Democratic)
+CandidateContest	MT House District 79 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 79 (Democrat)
+CandidateContest	MT House District 80 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 80 (Democratic)
+CandidateContest	MT House District 80 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 80 (Democrat)
+CandidateContest	MT House District 81 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 81 (Democratic)
+CandidateContest	MT House District 81 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 81 (Democrat)
+CandidateContest	MT House District 82 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 82 (Democratic)
+CandidateContest	MT House District 82 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 82 (Democrat)
+CandidateContest	MT House District 83 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 83 (Democratic)
+CandidateContest	MT House District 83 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 83 (Democrat)
+CandidateContest	MT House District 84 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 84 (Democratic)
+CandidateContest	MT House District 84 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 84 (Democrat)
+CandidateContest	MT House District 85 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 85 (Democratic)
+CandidateContest	MT House District 85 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 85 (Democrat)
+CandidateContest	MT House District 86 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 86 (Democratic)
+CandidateContest	MT House District 86 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 86 (Democrat)
+CandidateContest	MT House District 87 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 87 (Democratic)
+CandidateContest	MT House District 87 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 87 (Democrat)
+CandidateContest	MT House District 88 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 88 (Democratic)
+CandidateContest	MT House District 88 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 88 (Democrat)
+CandidateContest	MT House District 89 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 89 (Democratic)
+CandidateContest	MT House District 89 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 89 (Democrat)
+CandidateContest	MT House District 90 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 90 (Democratic)
+CandidateContest	MT House District 90 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 90 (Democrat)
+CandidateContest	MT House District 91 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 91 (Democratic)
+CandidateContest	MT House District 91 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 91 (Democrat)
+CandidateContest	MT House District 92 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 92 (Democratic)
+CandidateContest	MT House District 92 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 92 (Democrat)
+CandidateContest	MT House District 93 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 93 (Democratic)
+CandidateContest	MT House District 93 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 93 (Democrat)
+CandidateContest	MT House District 94 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 94 (Democratic)
+CandidateContest	MT House District 94 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 94 (Democrat)
+CandidateContest	MT House District 95 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 95 (Democratic)
+CandidateContest	MT House District 95 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 95 (Democrat)
+CandidateContest	MT House District 96 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 96 (Democratic)
+CandidateContest	MT House District 96 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 96 (Democrat)
+CandidateContest	MT House District 97 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 97 (Democratic)
+CandidateContest	MT House District 97 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 97 (Democrat)
+CandidateContest	MT House District 98 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 98 (Democratic)
+CandidateContest	MT House District 98 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 98 (Democrat)
+CandidateContest	MT House District 99 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 99 (Democratic)
+CandidateContest	MT House District 99 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 99 (Democrat)
+CandidateContest	MT House District 100 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 100 (Democratic)
+CandidateContest	MT House District 100 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 100 (Democrat)
+CandidateContest	MT Senate District 1 (Democratic Party)	STATE SENATOR DISTRICT 1 (Democratic)
+CandidateContest	MT Senate District 1 (Democratic Party)	STATE SENATOR DISTRICT 1 (Democrat)
+CandidateContest	MT Senate District 2 (Democratic Party)	STATE SENATOR DISTRICT 2 (Democratic)
+CandidateContest	MT Senate District 2 (Democratic Party)	STATE SENATOR DISTRICT 2 (Democrat)
+CandidateContest	MT Senate District 3 (Democratic Party)	STATE SENATOR DISTRICT 3 (Democratic)
+CandidateContest	MT Senate District 3 (Democratic Party)	STATE SENATOR DISTRICT 3 (Democrat)
+CandidateContest	MT Senate District 4 (Democratic Party)	STATE SENATOR DISTRICT 4 (Democratic)
+CandidateContest	MT Senate District 4 (Democratic Party)	STATE SENATOR DISTRICT 4 (Democrat)
+CandidateContest	MT Senate District 5 (Democratic Party)	STATE SENATOR DISTRICT 5 (Democratic)
+CandidateContest	MT Senate District 5 (Democratic Party)	STATE SENATOR DISTRICT 5 (Democrat)
+CandidateContest	MT Senate District 6 (Democratic Party)	STATE SENATOR DISTRICT 6 (Democratic)
+CandidateContest	MT Senate District 6 (Democratic Party)	STATE SENATOR DISTRICT 6 (Democrat)
+CandidateContest	MT Senate District 7 (Democratic Party)	STATE SENATOR DISTRICT 7 (Democratic)
+CandidateContest	MT Senate District 7 (Democratic Party)	STATE SENATOR DISTRICT 7 (Democrat)
+CandidateContest	MT Senate District 8 (Democratic Party)	STATE SENATOR DISTRICT 8 (Democratic)
+CandidateContest	MT Senate District 8 (Democratic Party)	STATE SENATOR DISTRICT 8 (Democrat)
+CandidateContest	MT Senate District 9 (Democratic Party)	STATE SENATOR DISTRICT 9 (Democratic)
+CandidateContest	MT Senate District 9 (Democratic Party)	STATE SENATOR DISTRICT 9 (Democrat)
+CandidateContest	MT Senate District 10 (Democratic Party)	STATE SENATOR DISTRICT 10 (Democratic)
+CandidateContest	MT Senate District 10 (Democratic Party)	STATE SENATOR DISTRICT 10 (Democrat)
+CandidateContest	MT Senate District 11 (Democratic Party)	STATE SENATOR DISTRICT 11 (Democratic)
+CandidateContest	MT Senate District 11 (Democratic Party)	STATE SENATOR DISTRICT 11 (Democrat)
+CandidateContest	MT Senate District 12 (Democratic Party)	STATE SENATOR DISTRICT 12 (Democratic)
+CandidateContest	MT Senate District 12 (Democratic Party)	STATE SENATOR DISTRICT 12 (Democrat)
+CandidateContest	MT Senate District 13 (Democratic Party)	STATE SENATOR DISTRICT 13 (Democratic)
+CandidateContest	MT Senate District 13 (Democratic Party)	STATE SENATOR DISTRICT 13 (Democrat)
+CandidateContest	MT Senate District 14 (Democratic Party)	STATE SENATOR DISTRICT 14 (Democratic)
+CandidateContest	MT Senate District 14 (Democratic Party)	STATE SENATOR DISTRICT 14 (Democrat)
+CandidateContest	MT Senate District 15 (Democratic Party)	STATE SENATOR DISTRICT 15 (Democratic)
+CandidateContest	MT Senate District 15 (Democratic Party)	STATE SENATOR DISTRICT 15 (Democrat)
+CandidateContest	MT Senate District 16 (Democratic Party)	STATE SENATOR DISTRICT 16 (Democratic)
+CandidateContest	MT Senate District 16 (Democratic Party)	STATE SENATOR DISTRICT 16 (Democrat)
+CandidateContest	MT Senate District 17 (Democratic Party)	STATE SENATOR DISTRICT 17 (Democratic)
+CandidateContest	MT Senate District 17 (Democratic Party)	STATE SENATOR DISTRICT 17 (Democrat)
+CandidateContest	MT Senate District 18 (Democratic Party)	STATE SENATOR DISTRICT 18 (Democratic)
+CandidateContest	MT Senate District 18 (Democratic Party)	STATE SENATOR DISTRICT 18 (Democrat)
+CandidateContest	MT Senate District 19 (Democratic Party)	STATE SENATOR DISTRICT 19 (Democratic)
+CandidateContest	MT Senate District 19 (Democratic Party)	STATE SENATOR DISTRICT 19 (Democrat)
+CandidateContest	MT Senate District 20 (Democratic Party)	STATE SENATOR DISTRICT 20 (Democratic)
+CandidateContest	MT Senate District 20 (Democratic Party)	STATE SENATOR DISTRICT 20 (Democrat)
+CandidateContest	MT Senate District 21 (Democratic Party)	STATE SENATOR DISTRICT 21 (Democratic)
+CandidateContest	MT Senate District 21 (Democratic Party)	STATE SENATOR DISTRICT 21 (Democrat)
+CandidateContest	MT Senate District 22 (Democratic Party)	STATE SENATOR DISTRICT 22 (Democratic)
+CandidateContest	MT Senate District 22 (Democratic Party)	STATE SENATOR DISTRICT 22 (Democrat)
+CandidateContest	MT Senate District 23 (Democratic Party)	STATE SENATOR DISTRICT 23 (Democratic)
+CandidateContest	MT Senate District 23 (Democratic Party)	STATE SENATOR DISTRICT 23 (Democrat)
+CandidateContest	MT Senate District 24 (Democratic Party)	STATE SENATOR DISTRICT 24 (Democratic)
+CandidateContest	MT Senate District 24 (Democratic Party)	STATE SENATOR DISTRICT 24 (Democrat)
+CandidateContest	MT Senate District 25 (Democratic Party)	STATE SENATOR DISTRICT 25 (Democratic)
+CandidateContest	MT Senate District 25 (Democratic Party)	STATE SENATOR DISTRICT 25 (Democrat)
+CandidateContest	MT Senate District 26 (Democratic Party)	STATE SENATOR DISTRICT 26 (Democratic)
+CandidateContest	MT Senate District 26 (Democratic Party)	STATE SENATOR DISTRICT 26 (Democrat)
+CandidateContest	MT Senate District 27 (Democratic Party)	STATE SENATOR DISTRICT 27 (Democratic)
+CandidateContest	MT Senate District 27 (Democratic Party)	STATE SENATOR DISTRICT 27 (Democrat)
+CandidateContest	MT Senate District 28 (Democratic Party)	STATE SENATOR DISTRICT 28 (Democratic)
+CandidateContest	MT Senate District 28 (Democratic Party)	STATE SENATOR DISTRICT 28 (Democrat)
+CandidateContest	MT Senate District 29 (Democratic Party)	STATE SENATOR DISTRICT 29 (Democratic)
+CandidateContest	MT Senate District 29 (Democratic Party)	STATE SENATOR DISTRICT 29 (Democrat)
+CandidateContest	MT Senate District 30 (Democratic Party)	STATE SENATOR DISTRICT 30 (Democratic)
+CandidateContest	MT Senate District 30 (Democratic Party)	STATE SENATOR DISTRICT 30 (Democrat)
+CandidateContest	MT Senate District 31 (Democratic Party)	STATE SENATOR DISTRICT 31 (Democratic)
+CandidateContest	MT Senate District 31 (Democratic Party)	STATE SENATOR DISTRICT 31 (Democrat)
+CandidateContest	MT Senate District 32 (Democratic Party)	STATE SENATOR DISTRICT 32 (Democratic)
+CandidateContest	MT Senate District 32 (Democratic Party)	STATE SENATOR DISTRICT 32 (Democrat)
+CandidateContest	MT Senate District 33 (Democratic Party)	STATE SENATOR DISTRICT 33 (Democratic)
+CandidateContest	MT Senate District 33 (Democratic Party)	STATE SENATOR DISTRICT 33 (Democrat)
+CandidateContest	MT Senate District 34 (Democratic Party)	STATE SENATOR DISTRICT 34 (Democratic)
+CandidateContest	MT Senate District 34 (Democratic Party)	STATE SENATOR DISTRICT 34 (Democrat)
+CandidateContest	MT Senate District 35 (Democratic Party)	STATE SENATOR DISTRICT 35 (Democratic)
+CandidateContest	MT Senate District 35 (Democratic Party)	STATE SENATOR DISTRICT 35 (Democrat)
+CandidateContest	MT Senate District 36 (Democratic Party)	STATE SENATOR DISTRICT 36 (Democratic)
+CandidateContest	MT Senate District 36 (Democratic Party)	STATE SENATOR DISTRICT 36 (Democrat)
+CandidateContest	MT Senate District 37 (Democratic Party)	STATE SENATOR DISTRICT 37 (Democratic)
+CandidateContest	MT Senate District 37 (Democratic Party)	STATE SENATOR DISTRICT 37 (Democrat)
+CandidateContest	MT Senate District 38 (Democratic Party)	STATE SENATOR DISTRICT 38 (Democratic)
+CandidateContest	MT Senate District 38 (Democratic Party)	STATE SENATOR DISTRICT 38 (Democrat)
+CandidateContest	MT Senate District 39 (Democratic Party)	STATE SENATOR DISTRICT 39 (Democratic)
+CandidateContest	MT Senate District 39 (Democratic Party)	STATE SENATOR DISTRICT 39 (Democrat)
+CandidateContest	MT Senate District 40 (Democratic Party)	STATE SENATOR DISTRICT 40 (Democratic)
+CandidateContest	MT Senate District 40 (Democratic Party)	STATE SENATOR DISTRICT 40 (Democrat)
+CandidateContest	MT Senate District 41 (Democratic Party)	STATE SENATOR DISTRICT 41 (Democratic)
+CandidateContest	MT Senate District 41 (Democratic Party)	STATE SENATOR DISTRICT 41 (Democrat)
+CandidateContest	MT Senate District 42 (Democratic Party)	STATE SENATOR DISTRICT 42 (Democratic)
+CandidateContest	MT Senate District 42 (Democratic Party)	STATE SENATOR DISTRICT 42 (Democrat)
+CandidateContest	MT Senate District 43 (Democratic Party)	STATE SENATOR DISTRICT 43 (Democratic)
+CandidateContest	MT Senate District 43 (Democratic Party)	STATE SENATOR DISTRICT 43 (Democrat)
+CandidateContest	MT Senate District 44 (Democratic Party)	STATE SENATOR DISTRICT 44 (Democratic)
+CandidateContest	MT Senate District 44 (Democratic Party)	STATE SENATOR DISTRICT 44 (Democrat)
+CandidateContest	MT Senate District 45 (Democratic Party)	STATE SENATOR DISTRICT 45 (Democratic)
+CandidateContest	MT Senate District 45 (Democratic Party)	STATE SENATOR DISTRICT 45 (Democrat)
+CandidateContest	MT Senate District 46 (Democratic Party)	STATE SENATOR DISTRICT 46 (Democratic)
+CandidateContest	MT Senate District 46 (Democratic Party)	STATE SENATOR DISTRICT 46 (Democrat)
+CandidateContest	MT Senate District 47 (Democratic Party)	STATE SENATOR DISTRICT 47 (Democratic)
+CandidateContest	MT Senate District 47 (Democratic Party)	STATE SENATOR DISTRICT 47 (Democrat)
+CandidateContest	MT Senate District 48 (Democratic Party)	STATE SENATOR DISTRICT 48 (Democratic)
+CandidateContest	MT Senate District 48 (Democratic Party)	STATE SENATOR DISTRICT 48 (Democrat)
+CandidateContest	MT Senate District 49 (Democratic Party)	STATE SENATOR DISTRICT 49 (Democratic)
+CandidateContest	MT Senate District 49 (Democratic Party)	STATE SENATOR DISTRICT 49 (Democrat)
+CandidateContest	MT Senate District 50 (Democratic Party)	STATE SENATOR DISTRICT 50 (Democratic)
+CandidateContest	MT Senate District 50 (Democratic Party)	STATE SENATOR DISTRICT 50 (Democrat)
+CandidateContest	US House MT District 1 (Democratic Party)	UNITED STATES REPRESENTATIVE (Democratic)
+CandidateContest	US House MT District 1 (Democratic Party)	UNITED STATES REPRESENTATIVE (Democrat)
+CandidateContest	US President (MT) (Democratic Party)	PRESIDENT (Democratic)
+CandidateContest	US President (MT) (Democratic Party)	PRESIDENT (Democrat)
+CandidateContest	MT Governor (Democratic Party)	GOVERNOR & LT. GOVERNOR (Democratic)
+CandidateContest	MT Governor (Democratic Party)	GOVERNOR & LT. GOVERNOR (Democrat)
+CandidateContest	US Senate MT (Democratic Party)	UNITED STATES SENATOR (Democratic)
+CandidateContest	US Senate MT (Democratic Party)	UNITED STATES SENATOR (Democrat)
+CandidateContest	MT State Auditor (Democratic Party)	ATTORNEY GENERAL (Democratic)
+CandidateContest	MT State Auditor (Democratic Party)	ATTORNEY GENERAL (Democrat)
+CandidateContest	MT State Superintendent (Democratic Party)	STATE SUPERINTENDENT OF PUBLIC INSTRUCTION (Democratic)
+CandidateContest	MT State Superintendent (Democratic Party)	STATE SUPERINTENDENT OF PUBLIC INSTRUCTION (Democrat)
+CandidateContest	MT Attorney General (Democratic Party)	STATE AUDITOR (Democratic)
+CandidateContest	MT Attorney General (Democratic Party)	STATE AUDITOR (Democrat)
+CandidateContest	MT Lieutenant Governor (Democratic Party)	MT Lieutenant Governor (Democratic)
+CandidateContest	MT Lieutenant Governor (Democratic Party)	MT Lieutenant Governor (Democrat)
+CandidateContest	MT Treasurer (Democratic Party)	MT Treasurer (Democratic)
+CandidateContest	MT Treasurer (Democratic Party)	MT Treasurer (Democrat)
+CandidateContest	MT Secretary of State (Democratic Party)	SECRETARY OF STATE (Democratic)
+CandidateContest	MT Secretary of State (Democratic Party)	SECRETARY OF STATE (Democrat)
+CandidateContest	MT House District 1 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 1 (DEM)
+CandidateContest	MT House District 2 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 2 (DEM)
+CandidateContest	MT House District 3 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 3 (DEM)
+CandidateContest	MT House District 4 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 4 (DEM)
+CandidateContest	MT House District 5 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 5 (DEM)
+CandidateContest	MT House District 6 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 6 (DEM)
+CandidateContest	MT House District 7 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 7 (DEM)
+CandidateContest	MT House District 8 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 8 (DEM)
+CandidateContest	MT House District 9 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 9 (DEM)
+CandidateContest	MT House District 10 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 10 (DEM)
+CandidateContest	MT House District 11 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 11 (DEM)
+CandidateContest	MT House District 12 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 12 (DEM)
+CandidateContest	MT House District 13 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 13 (DEM)
+CandidateContest	MT House District 14 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 14 (DEM)
+CandidateContest	MT House District 15 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 15 (DEM)
+CandidateContest	MT House District 16 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 16 (DEM)
+CandidateContest	MT House District 17 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 17 (DEM)
+CandidateContest	MT House District 18 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 18 (DEM)
+CandidateContest	MT House District 19 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 19 (DEM)
+CandidateContest	MT House District 20 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 20 (DEM)
+CandidateContest	MT House District 21 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 21 (DEM)
+CandidateContest	MT House District 22 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 22 (DEM)
+CandidateContest	MT House District 23 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 23 (DEM)
+CandidateContest	MT House District 24 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 24 (DEM)
+CandidateContest	MT House District 25 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 25 (DEM)
+CandidateContest	MT House District 26 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 26 (DEM)
+CandidateContest	MT House District 27 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 27 (DEM)
+CandidateContest	MT House District 28 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 28 (DEM)
+CandidateContest	MT House District 29 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 29 (DEM)
+CandidateContest	MT House District 30 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 30 (DEM)
+CandidateContest	MT House District 31 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 31 (DEM)
+CandidateContest	MT House District 32 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 32 (DEM)
+CandidateContest	MT House District 33 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 33 (DEM)
+CandidateContest	MT House District 34 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 34 (DEM)
+CandidateContest	MT House District 35 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 35 (DEM)
+CandidateContest	MT House District 36 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 36 (DEM)
+CandidateContest	MT House District 37 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 37 (DEM)
+CandidateContest	MT House District 38 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 38 (DEM)
+CandidateContest	MT House District 39 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 39 (DEM)
+CandidateContest	MT House District 40 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 40 (DEM)
+CandidateContest	MT House District 41 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 41 (DEM)
+CandidateContest	MT House District 42 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 42 (DEM)
+CandidateContest	MT House District 43 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 43 (DEM)
+CandidateContest	MT House District 44 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 44 (DEM)
+CandidateContest	MT House District 45 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 45 (DEM)
+CandidateContest	MT House District 46 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 46 (DEM)
+CandidateContest	MT House District 47 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 47 (DEM)
+CandidateContest	MT House District 48 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 48 (DEM)
+CandidateContest	MT House District 49 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 49 (DEM)
+CandidateContest	MT House District 50 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 50 (DEM)
+CandidateContest	MT House District 51 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 51 (DEM)
+CandidateContest	MT House District 52 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 52 (DEM)
+CandidateContest	MT House District 53 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 53 (DEM)
+CandidateContest	MT House District 54 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 54 (DEM)
+CandidateContest	MT House District 55 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 55 (DEM)
+CandidateContest	MT House District 56 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 56 (DEM)
+CandidateContest	MT House District 57 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 57 (DEM)
+CandidateContest	MT House District 58 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 58 (DEM)
+CandidateContest	MT House District 59 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 59 (DEM)
+CandidateContest	MT House District 60 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 60 (DEM)
+CandidateContest	MT House District 61 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 61 (DEM)
+CandidateContest	MT House District 62 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 62 (DEM)
+CandidateContest	MT House District 63 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 63 (DEM)
+CandidateContest	MT House District 64 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 64 (DEM)
+CandidateContest	MT House District 65 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 65 (DEM)
+CandidateContest	MT House District 66 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 66 (DEM)
+CandidateContest	MT House District 67 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 67 (DEM)
+CandidateContest	MT House District 68 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 68 (DEM)
+CandidateContest	MT House District 69 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 69 (DEM)
+CandidateContest	MT House District 70 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 70 (DEM)
+CandidateContest	MT House District 71 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 71 (DEM)
+CandidateContest	MT House District 72 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 72 (DEM)
+CandidateContest	MT House District 73 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 73 (DEM)
+CandidateContest	MT House District 74 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 74 (DEM)
+CandidateContest	MT House District 75 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 75 (DEM)
+CandidateContest	MT House District 76 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 76 (DEM)
+CandidateContest	MT House District 77 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 77 (DEM)
+CandidateContest	MT House District 78 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 78 (DEM)
+CandidateContest	MT House District 79 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 79 (DEM)
+CandidateContest	MT House District 80 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 80 (DEM)
+CandidateContest	MT House District 81 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 81 (DEM)
+CandidateContest	MT House District 82 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 82 (DEM)
+CandidateContest	MT House District 83 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 83 (DEM)
+CandidateContest	MT House District 84 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 84 (DEM)
+CandidateContest	MT House District 85 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 85 (DEM)
+CandidateContest	MT House District 86 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 86 (DEM)
+CandidateContest	MT House District 87 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 87 (DEM)
+CandidateContest	MT House District 88 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 88 (DEM)
+CandidateContest	MT House District 89 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 89 (DEM)
+CandidateContest	MT House District 90 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 90 (DEM)
+CandidateContest	MT House District 91 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 91 (DEM)
+CandidateContest	MT House District 92 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 92 (DEM)
+CandidateContest	MT House District 93 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 93 (DEM)
+CandidateContest	MT House District 94 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 94 (DEM)
+CandidateContest	MT House District 95 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 95 (DEM)
+CandidateContest	MT House District 96 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 96 (DEM)
+CandidateContest	MT House District 97 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 97 (DEM)
+CandidateContest	MT House District 98 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 98 (DEM)
+CandidateContest	MT House District 99 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 99 (DEM)
+CandidateContest	MT House District 100 (Democratic Party)	STATE REPRESENTATIVE DISTRICT 100 (DEM)
+CandidateContest	MT Senate District 1 (Democratic Party)	STATE SENATOR DISTRICT 1 (DEM)
+CandidateContest	MT Senate District 2 (Democratic Party)	STATE SENATOR DISTRICT 2 (DEM)
+CandidateContest	MT Senate District 3 (Democratic Party)	STATE SENATOR DISTRICT 3 (DEM)
+CandidateContest	MT Senate District 4 (Democratic Party)	STATE SENATOR DISTRICT 4 (DEM)
+CandidateContest	MT Senate District 5 (Democratic Party)	STATE SENATOR DISTRICT 5 (DEM)
+CandidateContest	MT Senate District 6 (Democratic Party)	STATE SENATOR DISTRICT 6 (DEM)
+CandidateContest	MT Senate District 7 (Democratic Party)	STATE SENATOR DISTRICT 7 (DEM)
+CandidateContest	MT Senate District 8 (Democratic Party)	STATE SENATOR DISTRICT 8 (DEM)
+CandidateContest	MT Senate District 9 (Democratic Party)	STATE SENATOR DISTRICT 9 (DEM)
+CandidateContest	MT Senate District 10 (Democratic Party)	STATE SENATOR DISTRICT 10 (DEM)
+CandidateContest	MT Senate District 11 (Democratic Party)	STATE SENATOR DISTRICT 11 (DEM)
+CandidateContest	MT Senate District 12 (Democratic Party)	STATE SENATOR DISTRICT 12 (DEM)
+CandidateContest	MT Senate District 13 (Democratic Party)	STATE SENATOR DISTRICT 13 (DEM)
+CandidateContest	MT Senate District 14 (Democratic Party)	STATE SENATOR DISTRICT 14 (DEM)
+CandidateContest	MT Senate District 15 (Democratic Party)	STATE SENATOR DISTRICT 15 (DEM)
+CandidateContest	MT Senate District 16 (Democratic Party)	STATE SENATOR DISTRICT 16 (DEM)
+CandidateContest	MT Senate District 17 (Democratic Party)	STATE SENATOR DISTRICT 17 (DEM)
+CandidateContest	MT Senate District 18 (Democratic Party)	STATE SENATOR DISTRICT 18 (DEM)
+CandidateContest	MT Senate District 19 (Democratic Party)	STATE SENATOR DISTRICT 19 (DEM)
+CandidateContest	MT Senate District 20 (Democratic Party)	STATE SENATOR DISTRICT 20 (DEM)
+CandidateContest	MT Senate District 21 (Democratic Party)	STATE SENATOR DISTRICT 21 (DEM)
+CandidateContest	MT Senate District 22 (Democratic Party)	STATE SENATOR DISTRICT 22 (DEM)
+CandidateContest	MT Senate District 23 (Democratic Party)	STATE SENATOR DISTRICT 23 (DEM)
+CandidateContest	MT Senate District 24 (Democratic Party)	STATE SENATOR DISTRICT 24 (DEM)
+CandidateContest	MT Senate District 25 (Democratic Party)	STATE SENATOR DISTRICT 25 (DEM)
+CandidateContest	MT Senate District 26 (Democratic Party)	STATE SENATOR DISTRICT 26 (DEM)
+CandidateContest	MT Senate District 27 (Democratic Party)	STATE SENATOR DISTRICT 27 (DEM)
+CandidateContest	MT Senate District 28 (Democratic Party)	STATE SENATOR DISTRICT 28 (DEM)
+CandidateContest	MT Senate District 29 (Democratic Party)	STATE SENATOR DISTRICT 29 (DEM)
+CandidateContest	MT Senate District 30 (Democratic Party)	STATE SENATOR DISTRICT 30 (DEM)
+CandidateContest	MT Senate District 31 (Democratic Party)	STATE SENATOR DISTRICT 31 (DEM)
+CandidateContest	MT Senate District 32 (Democratic Party)	STATE SENATOR DISTRICT 32 (DEM)
+CandidateContest	MT Senate District 33 (Democratic Party)	STATE SENATOR DISTRICT 33 (DEM)
+CandidateContest	MT Senate District 34 (Democratic Party)	STATE SENATOR DISTRICT 34 (DEM)
+CandidateContest	MT Senate District 35 (Democratic Party)	STATE SENATOR DISTRICT 35 (DEM)
+CandidateContest	MT Senate District 36 (Democratic Party)	STATE SENATOR DISTRICT 36 (DEM)
+CandidateContest	MT Senate District 37 (Democratic Party)	STATE SENATOR DISTRICT 37 (DEM)
+CandidateContest	MT Senate District 38 (Democratic Party)	STATE SENATOR DISTRICT 38 (DEM)
+CandidateContest	MT Senate District 39 (Democratic Party)	STATE SENATOR DISTRICT 39 (DEM)
+CandidateContest	MT Senate District 40 (Democratic Party)	STATE SENATOR DISTRICT 40 (DEM)
+CandidateContest	MT Senate District 41 (Democratic Party)	STATE SENATOR DISTRICT 41 (DEM)
+CandidateContest	MT Senate District 42 (Democratic Party)	STATE SENATOR DISTRICT 42 (DEM)
+CandidateContest	MT Senate District 43 (Democratic Party)	STATE SENATOR DISTRICT 43 (DEM)
+CandidateContest	MT Senate District 44 (Democratic Party)	STATE SENATOR DISTRICT 44 (DEM)
+CandidateContest	MT Senate District 45 (Democratic Party)	STATE SENATOR DISTRICT 45 (DEM)
+CandidateContest	MT Senate District 46 (Democratic Party)	STATE SENATOR DISTRICT 46 (DEM)
+CandidateContest	MT Senate District 47 (Democratic Party)	STATE SENATOR DISTRICT 47 (DEM)
+CandidateContest	MT Senate District 48 (Democratic Party)	STATE SENATOR DISTRICT 48 (DEM)
+CandidateContest	MT Senate District 49 (Democratic Party)	STATE SENATOR DISTRICT 49 (DEM)
+CandidateContest	MT Senate District 50 (Democratic Party)	STATE SENATOR DISTRICT 50 (DEM)
+CandidateContest	US House MT District 1 (Democratic Party)	UNITED STATES REPRESENTATIVE (DEM)
+CandidateContest	US President (MT) (Democratic Party)	PRESIDENT (DEM)
+CandidateContest	MT Governor (Democratic Party)	GOVERNOR & LT. GOVERNOR (DEM)
+CandidateContest	US Senate MT (Democratic Party)	UNITED STATES SENATOR (DEM)
+CandidateContest	MT State Auditor (Democratic Party)	ATTORNEY GENERAL (DEM)
+CandidateContest	MT State Superintendent (Democratic Party)	STATE SUPERINTENDENT OF PUBLIC INSTRUCTION (DEM)
+CandidateContest	MT Attorney General (Democratic Party)	STATE AUDITOR (DEM)
+CandidateContest	MT Lieutenant Governor (Democratic Party)	MT Lieutenant Governor (DEM)
+CandidateContest	MT Treasurer (Democratic Party)	MT Treasurer (DEM)
+CandidateContest	MT Secretary of State (Democratic Party)	SECRETARY OF STATE (DEM)
+CandidateContest	MT House District 1 (Republican Party)	STATE REPRESENTATIVE DISTRICT 1 (REP)
+CandidateContest	MT House District 2 (Republican Party)	STATE REPRESENTATIVE DISTRICT 2 (REP)
+CandidateContest	MT House District 3 (Republican Party)	STATE REPRESENTATIVE DISTRICT 3 (REP)
+CandidateContest	MT House District 4 (Republican Party)	STATE REPRESENTATIVE DISTRICT 4 (REP)
+CandidateContest	MT House District 5 (Republican Party)	STATE REPRESENTATIVE DISTRICT 5 (REP)
+CandidateContest	MT House District 6 (Republican Party)	STATE REPRESENTATIVE DISTRICT 6 (REP)
+CandidateContest	MT House District 7 (Republican Party)	STATE REPRESENTATIVE DISTRICT 7 (REP)
+CandidateContest	MT House District 8 (Republican Party)	STATE REPRESENTATIVE DISTRICT 8 (REP)
+CandidateContest	MT House District 9 (Republican Party)	STATE REPRESENTATIVE DISTRICT 9 (REP)
+CandidateContest	MT House District 10 (Republican Party)	STATE REPRESENTATIVE DISTRICT 10 (REP)
+CandidateContest	MT House District 11 (Republican Party)	STATE REPRESENTATIVE DISTRICT 11 (REP)
+CandidateContest	MT House District 12 (Republican Party)	STATE REPRESENTATIVE DISTRICT 12 (REP)
+CandidateContest	MT House District 13 (Republican Party)	STATE REPRESENTATIVE DISTRICT 13 (REP)
+CandidateContest	MT House District 14 (Republican Party)	STATE REPRESENTATIVE DISTRICT 14 (REP)
+CandidateContest	MT House District 15 (Republican Party)	STATE REPRESENTATIVE DISTRICT 15 (REP)
+CandidateContest	MT House District 16 (Republican Party)	STATE REPRESENTATIVE DISTRICT 16 (REP)
+CandidateContest	MT House District 17 (Republican Party)	STATE REPRESENTATIVE DISTRICT 17 (REP)
+CandidateContest	MT House District 18 (Republican Party)	STATE REPRESENTATIVE DISTRICT 18 (REP)
+CandidateContest	MT House District 19 (Republican Party)	STATE REPRESENTATIVE DISTRICT 19 (REP)
+CandidateContest	MT House District 20 (Republican Party)	STATE REPRESENTATIVE DISTRICT 20 (REP)
+CandidateContest	MT House District 21 (Republican Party)	STATE REPRESENTATIVE DISTRICT 21 (REP)
+CandidateContest	MT House District 22 (Republican Party)	STATE REPRESENTATIVE DISTRICT 22 (REP)
+CandidateContest	MT House District 23 (Republican Party)	STATE REPRESENTATIVE DISTRICT 23 (REP)
+CandidateContest	MT House District 24 (Republican Party)	STATE REPRESENTATIVE DISTRICT 24 (REP)
+CandidateContest	MT House District 25 (Republican Party)	STATE REPRESENTATIVE DISTRICT 25 (REP)
+CandidateContest	MT House District 26 (Republican Party)	STATE REPRESENTATIVE DISTRICT 26 (REP)
+CandidateContest	MT House District 27 (Republican Party)	STATE REPRESENTATIVE DISTRICT 27 (REP)
+CandidateContest	MT House District 28 (Republican Party)	STATE REPRESENTATIVE DISTRICT 28 (REP)
+CandidateContest	MT House District 29 (Republican Party)	STATE REPRESENTATIVE DISTRICT 29 (REP)
+CandidateContest	MT House District 30 (Republican Party)	STATE REPRESENTATIVE DISTRICT 30 (REP)
+CandidateContest	MT House District 31 (Republican Party)	STATE REPRESENTATIVE DISTRICT 31 (REP)
+CandidateContest	MT House District 32 (Republican Party)	STATE REPRESENTATIVE DISTRICT 32 (REP)
+CandidateContest	MT House District 33 (Republican Party)	STATE REPRESENTATIVE DISTRICT 33 (REP)
+CandidateContest	MT House District 34 (Republican Party)	STATE REPRESENTATIVE DISTRICT 34 (REP)
+CandidateContest	MT House District 35 (Republican Party)	STATE REPRESENTATIVE DISTRICT 35 (REP)
+CandidateContest	MT House District 36 (Republican Party)	STATE REPRESENTATIVE DISTRICT 36 (REP)
+CandidateContest	MT House District 37 (Republican Party)	STATE REPRESENTATIVE DISTRICT 37 (REP)
+CandidateContest	MT House District 38 (Republican Party)	STATE REPRESENTATIVE DISTRICT 38 (REP)
+CandidateContest	MT House District 39 (Republican Party)	STATE REPRESENTATIVE DISTRICT 39 (REP)
+CandidateContest	MT House District 40 (Republican Party)	STATE REPRESENTATIVE DISTRICT 40 (REP)
+CandidateContest	MT House District 41 (Republican Party)	STATE REPRESENTATIVE DISTRICT 41 (REP)
+CandidateContest	MT House District 42 (Republican Party)	STATE REPRESENTATIVE DISTRICT 42 (REP)
+CandidateContest	MT House District 43 (Republican Party)	STATE REPRESENTATIVE DISTRICT 43 (REP)
+CandidateContest	MT House District 44 (Republican Party)	STATE REPRESENTATIVE DISTRICT 44 (REP)
+CandidateContest	MT House District 45 (Republican Party)	STATE REPRESENTATIVE DISTRICT 45 (REP)
+CandidateContest	MT House District 46 (Republican Party)	STATE REPRESENTATIVE DISTRICT 46 (REP)
+CandidateContest	MT House District 47 (Republican Party)	STATE REPRESENTATIVE DISTRICT 47 (REP)
+CandidateContest	MT House District 48 (Republican Party)	STATE REPRESENTATIVE DISTRICT 48 (REP)
+CandidateContest	MT House District 49 (Republican Party)	STATE REPRESENTATIVE DISTRICT 49 (REP)
+CandidateContest	MT House District 50 (Republican Party)	STATE REPRESENTATIVE DISTRICT 50 (REP)
+CandidateContest	MT House District 51 (Republican Party)	STATE REPRESENTATIVE DISTRICT 51 (REP)
+CandidateContest	MT House District 52 (Republican Party)	STATE REPRESENTATIVE DISTRICT 52 (REP)
+CandidateContest	MT House District 53 (Republican Party)	STATE REPRESENTATIVE DISTRICT 53 (REP)
+CandidateContest	MT House District 54 (Republican Party)	STATE REPRESENTATIVE DISTRICT 54 (REP)
+CandidateContest	MT House District 55 (Republican Party)	STATE REPRESENTATIVE DISTRICT 55 (REP)
+CandidateContest	MT House District 56 (Republican Party)	STATE REPRESENTATIVE DISTRICT 56 (REP)
+CandidateContest	MT House District 57 (Republican Party)	STATE REPRESENTATIVE DISTRICT 57 (REP)
+CandidateContest	MT House District 58 (Republican Party)	STATE REPRESENTATIVE DISTRICT 58 (REP)
+CandidateContest	MT House District 59 (Republican Party)	STATE REPRESENTATIVE DISTRICT 59 (REP)
+CandidateContest	MT House District 60 (Republican Party)	STATE REPRESENTATIVE DISTRICT 60 (REP)
+CandidateContest	MT House District 61 (Republican Party)	STATE REPRESENTATIVE DISTRICT 61 (REP)
+CandidateContest	MT House District 62 (Republican Party)	STATE REPRESENTATIVE DISTRICT 62 (REP)
+CandidateContest	MT House District 63 (Republican Party)	STATE REPRESENTATIVE DISTRICT 63 (REP)
+CandidateContest	MT House District 64 (Republican Party)	STATE REPRESENTATIVE DISTRICT 64 (REP)
+CandidateContest	MT House District 65 (Republican Party)	STATE REPRESENTATIVE DISTRICT 65 (REP)
+CandidateContest	MT House District 66 (Republican Party)	STATE REPRESENTATIVE DISTRICT 66 (REP)
+CandidateContest	MT House District 67 (Republican Party)	STATE REPRESENTATIVE DISTRICT 67 (REP)
+CandidateContest	MT House District 68 (Republican Party)	STATE REPRESENTATIVE DISTRICT 68 (REP)
+CandidateContest	MT House District 69 (Republican Party)	STATE REPRESENTATIVE DISTRICT 69 (REP)
+CandidateContest	MT House District 70 (Republican Party)	STATE REPRESENTATIVE DISTRICT 70 (REP)
+CandidateContest	MT House District 71 (Republican Party)	STATE REPRESENTATIVE DISTRICT 71 (REP)
+CandidateContest	MT House District 72 (Republican Party)	STATE REPRESENTATIVE DISTRICT 72 (REP)
+CandidateContest	MT House District 73 (Republican Party)	STATE REPRESENTATIVE DISTRICT 73 (REP)
+CandidateContest	MT House District 74 (Republican Party)	STATE REPRESENTATIVE DISTRICT 74 (REP)
+CandidateContest	MT House District 75 (Republican Party)	STATE REPRESENTATIVE DISTRICT 75 (REP)
+CandidateContest	MT House District 76 (Republican Party)	STATE REPRESENTATIVE DISTRICT 76 (REP)
+CandidateContest	MT House District 77 (Republican Party)	STATE REPRESENTATIVE DISTRICT 77 (REP)
+CandidateContest	MT House District 78 (Republican Party)	STATE REPRESENTATIVE DISTRICT 78 (REP)
+CandidateContest	MT House District 79 (Republican Party)	STATE REPRESENTATIVE DISTRICT 79 (REP)
+CandidateContest	MT House District 80 (Republican Party)	STATE REPRESENTATIVE DISTRICT 80 (REP)
+CandidateContest	MT House District 81 (Republican Party)	STATE REPRESENTATIVE DISTRICT 81 (REP)
+CandidateContest	MT House District 82 (Republican Party)	STATE REPRESENTATIVE DISTRICT 82 (REP)
+CandidateContest	MT House District 83 (Republican Party)	STATE REPRESENTATIVE DISTRICT 83 (REP)
+CandidateContest	MT House District 84 (Republican Party)	STATE REPRESENTATIVE DISTRICT 84 (REP)
+CandidateContest	MT House District 85 (Republican Party)	STATE REPRESENTATIVE DISTRICT 85 (REP)
+CandidateContest	MT House District 86 (Republican Party)	STATE REPRESENTATIVE DISTRICT 86 (REP)
+CandidateContest	MT House District 87 (Republican Party)	STATE REPRESENTATIVE DISTRICT 87 (REP)
+CandidateContest	MT House District 88 (Republican Party)	STATE REPRESENTATIVE DISTRICT 88 (REP)
+CandidateContest	MT House District 89 (Republican Party)	STATE REPRESENTATIVE DISTRICT 89 (REP)
+CandidateContest	MT House District 90 (Republican Party)	STATE REPRESENTATIVE DISTRICT 90 (REP)
+CandidateContest	MT House District 91 (Republican Party)	STATE REPRESENTATIVE DISTRICT 91 (REP)
+CandidateContest	MT House District 92 (Republican Party)	STATE REPRESENTATIVE DISTRICT 92 (REP)
+CandidateContest	MT House District 93 (Republican Party)	STATE REPRESENTATIVE DISTRICT 93 (REP)
+CandidateContest	MT House District 94 (Republican Party)	STATE REPRESENTATIVE DISTRICT 94 (REP)
+CandidateContest	MT House District 95 (Republican Party)	STATE REPRESENTATIVE DISTRICT 95 (REP)
+CandidateContest	MT House District 96 (Republican Party)	STATE REPRESENTATIVE DISTRICT 96 (REP)
+CandidateContest	MT House District 97 (Republican Party)	STATE REPRESENTATIVE DISTRICT 97 (REP)
+CandidateContest	MT House District 98 (Republican Party)	STATE REPRESENTATIVE DISTRICT 98 (REP)
+CandidateContest	MT House District 99 (Republican Party)	STATE REPRESENTATIVE DISTRICT 99 (REP)
+CandidateContest	MT House District 100 (Republican Party)	STATE REPRESENTATIVE DISTRICT 100 (REP)
+CandidateContest	MT Senate District 1 (Republican Party)	STATE SENATOR DISTRICT 1 (REP)
+CandidateContest	MT Senate District 2 (Republican Party)	STATE SENATOR DISTRICT 2 (REP)
+CandidateContest	MT Senate District 3 (Republican Party)	STATE SENATOR DISTRICT 3 (REP)
+CandidateContest	MT Senate District 4 (Republican Party)	STATE SENATOR DISTRICT 4 (REP)
+CandidateContest	MT Senate District 5 (Republican Party)	STATE SENATOR DISTRICT 5 (REP)
+CandidateContest	MT Senate District 6 (Republican Party)	STATE SENATOR DISTRICT 6 (REP)
+CandidateContest	MT Senate District 7 (Republican Party)	STATE SENATOR DISTRICT 7 (REP)
+CandidateContest	MT Senate District 8 (Republican Party)	STATE SENATOR DISTRICT 8 (REP)
+CandidateContest	MT Senate District 9 (Republican Party)	STATE SENATOR DISTRICT 9 (REP)
+CandidateContest	MT Senate District 10 (Republican Party)	STATE SENATOR DISTRICT 10 (REP)
+CandidateContest	MT Senate District 11 (Republican Party)	STATE SENATOR DISTRICT 11 (REP)
+CandidateContest	MT Senate District 12 (Republican Party)	STATE SENATOR DISTRICT 12 (REP)
+CandidateContest	MT Senate District 13 (Republican Party)	STATE SENATOR DISTRICT 13 (REP)
+CandidateContest	MT Senate District 14 (Republican Party)	STATE SENATOR DISTRICT 14 (REP)
+CandidateContest	MT Senate District 15 (Republican Party)	STATE SENATOR DISTRICT 15 (REP)
+CandidateContest	MT Senate District 16 (Republican Party)	STATE SENATOR DISTRICT 16 (REP)
+CandidateContest	MT Senate District 17 (Republican Party)	STATE SENATOR DISTRICT 17 (REP)
+CandidateContest	MT Senate District 18 (Republican Party)	STATE SENATOR DISTRICT 18 (REP)
+CandidateContest	MT Senate District 19 (Republican Party)	STATE SENATOR DISTRICT 19 (REP)
+CandidateContest	MT Senate District 20 (Republican Party)	STATE SENATOR DISTRICT 20 (REP)
+CandidateContest	MT Senate District 21 (Republican Party)	STATE SENATOR DISTRICT 21 (REP)
+CandidateContest	MT Senate District 22 (Republican Party)	STATE SENATOR DISTRICT 22 (REP)
+CandidateContest	MT Senate District 23 (Republican Party)	STATE SENATOR DISTRICT 23 (REP)
+CandidateContest	MT Senate District 24 (Republican Party)	STATE SENATOR DISTRICT 24 (REP)
+CandidateContest	MT Senate District 25 (Republican Party)	STATE SENATOR DISTRICT 25 (REP)
+CandidateContest	MT Senate District 26 (Republican Party)	STATE SENATOR DISTRICT 26 (REP)
+CandidateContest	MT Senate District 27 (Republican Party)	STATE SENATOR DISTRICT 27 (REP)
+CandidateContest	MT Senate District 28 (Republican Party)	STATE SENATOR DISTRICT 28 (REP)
+CandidateContest	MT Senate District 29 (Republican Party)	STATE SENATOR DISTRICT 29 (REP)
+CandidateContest	MT Senate District 30 (Republican Party)	STATE SENATOR DISTRICT 30 (REP)
+CandidateContest	MT Senate District 31 (Republican Party)	STATE SENATOR DISTRICT 31 (REP)
+CandidateContest	MT Senate District 32 (Republican Party)	STATE SENATOR DISTRICT 32 (REP)
+CandidateContest	MT Senate District 33 (Republican Party)	STATE SENATOR DISTRICT 33 (REP)
+CandidateContest	MT Senate District 34 (Republican Party)	STATE SENATOR DISTRICT 34 (REP)
+CandidateContest	MT Senate District 35 (Republican Party)	STATE SENATOR DISTRICT 35 (REP)
+CandidateContest	MT Senate District 36 (Republican Party)	STATE SENATOR DISTRICT 36 (REP)
+CandidateContest	MT Senate District 37 (Republican Party)	STATE SENATOR DISTRICT 37 (REP)
+CandidateContest	MT Senate District 38 (Republican Party)	STATE SENATOR DISTRICT 38 (REP)
+CandidateContest	MT Senate District 39 (Republican Party)	STATE SENATOR DISTRICT 39 (REP)
+CandidateContest	MT Senate District 40 (Republican Party)	STATE SENATOR DISTRICT 40 (REP)
+CandidateContest	MT Senate District 41 (Republican Party)	STATE SENATOR DISTRICT 41 (REP)
+CandidateContest	MT Senate District 42 (Republican Party)	STATE SENATOR DISTRICT 42 (REP)
+CandidateContest	MT Senate District 43 (Republican Party)	STATE SENATOR DISTRICT 43 (REP)
+CandidateContest	MT Senate District 44 (Republican Party)	STATE SENATOR DISTRICT 44 (REP)
+CandidateContest	MT Senate District 45 (Republican Party)	STATE SENATOR DISTRICT 45 (REP)
+CandidateContest	MT Senate District 46 (Republican Party)	STATE SENATOR DISTRICT 46 (REP)
+CandidateContest	MT Senate District 47 (Republican Party)	STATE SENATOR DISTRICT 47 (REP)
+CandidateContest	MT Senate District 48 (Republican Party)	STATE SENATOR DISTRICT 48 (REP)
+CandidateContest	MT Senate District 49 (Republican Party)	STATE SENATOR DISTRICT 49 (REP)
+CandidateContest	MT Senate District 50 (Republican Party)	STATE SENATOR DISTRICT 50 (REP)
+CandidateContest	US House MT District 1 (Republican Party)	UNITED STATES REPRESENTATIVE (REP)
+CandidateContest	US President (MT) (Republican Party)	PRESIDENT (REP)
+CandidateContest	MT Governor (Republican Party)	GOVERNOR & LT. GOVERNOR (REP)
+CandidateContest	US Senate MT (Republican Party)	UNITED STATES SENATOR (REP)
+CandidateContest	MT State Auditor (Republican Party)	ATTORNEY GENERAL (REP)
+CandidateContest	MT State Superintendent (Republican Party)	STATE SUPERINTENDENT OF PUBLIC INSTRUCTION (REP)
+CandidateContest	MT Attorney General (Republican Party)	STATE AUDITOR (REP)
+CandidateContest	MT Lieutenant Governor (Republican Party)	MT Lieutenant Governor (REP)
+CandidateContest	MT Treasurer (Republican Party)	MT Treasurer (REP)
+CandidateContest	MT Secretary of State (Republican Party)	SECRETARY OF STATE (REP)
+CandidateContest	MT House District 1 (Republican Party)	STATE REPRESENTATIVE DISTRICT 1 (Republican)
+CandidateContest	MT House District 2 (Republican Party)	STATE REPRESENTATIVE DISTRICT 2 (Republican)
+CandidateContest	MT House District 3 (Republican Party)	STATE REPRESENTATIVE DISTRICT 3 (Republican)
+CandidateContest	MT House District 4 (Republican Party)	STATE REPRESENTATIVE DISTRICT 4 (Republican)
+CandidateContest	MT House District 5 (Republican Party)	STATE REPRESENTATIVE DISTRICT 5 (Republican)
+CandidateContest	MT House District 6 (Republican Party)	STATE REPRESENTATIVE DISTRICT 6 (Republican)
+CandidateContest	MT House District 7 (Republican Party)	STATE REPRESENTATIVE DISTRICT 7 (Republican)
+CandidateContest	MT House District 8 (Republican Party)	STATE REPRESENTATIVE DISTRICT 8 (Republican)
+CandidateContest	MT House District 9 (Republican Party)	STATE REPRESENTATIVE DISTRICT 9 (Republican)
+CandidateContest	MT House District 10 (Republican Party)	STATE REPRESENTATIVE DISTRICT 10 (Republican)
+CandidateContest	MT House District 11 (Republican Party)	STATE REPRESENTATIVE DISTRICT 11 (Republican)
+CandidateContest	MT House District 12 (Republican Party)	STATE REPRESENTATIVE DISTRICT 12 (Republican)
+CandidateContest	MT House District 13 (Republican Party)	STATE REPRESENTATIVE DISTRICT 13 (Republican)
+CandidateContest	MT House District 14 (Republican Party)	STATE REPRESENTATIVE DISTRICT 14 (Republican)
+CandidateContest	MT House District 15 (Republican Party)	STATE REPRESENTATIVE DISTRICT 15 (Republican)
+CandidateContest	MT House District 16 (Republican Party)	STATE REPRESENTATIVE DISTRICT 16 (Republican)
+CandidateContest	MT House District 17 (Republican Party)	STATE REPRESENTATIVE DISTRICT 17 (Republican)
+CandidateContest	MT House District 18 (Republican Party)	STATE REPRESENTATIVE DISTRICT 18 (Republican)
+CandidateContest	MT House District 19 (Republican Party)	STATE REPRESENTATIVE DISTRICT 19 (Republican)
+CandidateContest	MT House District 20 (Republican Party)	STATE REPRESENTATIVE DISTRICT 20 (Republican)
+CandidateContest	MT House District 21 (Republican Party)	STATE REPRESENTATIVE DISTRICT 21 (Republican)
+CandidateContest	MT House District 22 (Republican Party)	STATE REPRESENTATIVE DISTRICT 22 (Republican)
+CandidateContest	MT House District 23 (Republican Party)	STATE REPRESENTATIVE DISTRICT 23 (Republican)
+CandidateContest	MT House District 24 (Republican Party)	STATE REPRESENTATIVE DISTRICT 24 (Republican)
+CandidateContest	MT House District 25 (Republican Party)	STATE REPRESENTATIVE DISTRICT 25 (Republican)
+CandidateContest	MT House District 26 (Republican Party)	STATE REPRESENTATIVE DISTRICT 26 (Republican)
+CandidateContest	MT House District 27 (Republican Party)	STATE REPRESENTATIVE DISTRICT 27 (Republican)
+CandidateContest	MT House District 28 (Republican Party)	STATE REPRESENTATIVE DISTRICT 28 (Republican)
+CandidateContest	MT House District 29 (Republican Party)	STATE REPRESENTATIVE DISTRICT 29 (Republican)
+CandidateContest	MT House District 30 (Republican Party)	STATE REPRESENTATIVE DISTRICT 30 (Republican)
+CandidateContest	MT House District 31 (Republican Party)	STATE REPRESENTATIVE DISTRICT 31 (Republican)
+CandidateContest	MT House District 32 (Republican Party)	STATE REPRESENTATIVE DISTRICT 32 (Republican)
+CandidateContest	MT House District 33 (Republican Party)	STATE REPRESENTATIVE DISTRICT 33 (Republican)
+CandidateContest	MT House District 34 (Republican Party)	STATE REPRESENTATIVE DISTRICT 34 (Republican)
+CandidateContest	MT House District 35 (Republican Party)	STATE REPRESENTATIVE DISTRICT 35 (Republican)
+CandidateContest	MT House District 36 (Republican Party)	STATE REPRESENTATIVE DISTRICT 36 (Republican)
+CandidateContest	MT House District 37 (Republican Party)	STATE REPRESENTATIVE DISTRICT 37 (Republican)
+CandidateContest	MT House District 38 (Republican Party)	STATE REPRESENTATIVE DISTRICT 38 (Republican)
+CandidateContest	MT House District 39 (Republican Party)	STATE REPRESENTATIVE DISTRICT 39 (Republican)
+CandidateContest	MT House District 40 (Republican Party)	STATE REPRESENTATIVE DISTRICT 40 (Republican)
+CandidateContest	MT House District 41 (Republican Party)	STATE REPRESENTATIVE DISTRICT 41 (Republican)
+CandidateContest	MT House District 42 (Republican Party)	STATE REPRESENTATIVE DISTRICT 42 (Republican)
+CandidateContest	MT House District 43 (Republican Party)	STATE REPRESENTATIVE DISTRICT 43 (Republican)
+CandidateContest	MT House District 44 (Republican Party)	STATE REPRESENTATIVE DISTRICT 44 (Republican)
+CandidateContest	MT House District 45 (Republican Party)	STATE REPRESENTATIVE DISTRICT 45 (Republican)
+CandidateContest	MT House District 46 (Republican Party)	STATE REPRESENTATIVE DISTRICT 46 (Republican)
+CandidateContest	MT House District 47 (Republican Party)	STATE REPRESENTATIVE DISTRICT 47 (Republican)
+CandidateContest	MT House District 48 (Republican Party)	STATE REPRESENTATIVE DISTRICT 48 (Republican)
+CandidateContest	MT House District 49 (Republican Party)	STATE REPRESENTATIVE DISTRICT 49 (Republican)
+CandidateContest	MT House District 50 (Republican Party)	STATE REPRESENTATIVE DISTRICT 50 (Republican)
+CandidateContest	MT House District 51 (Republican Party)	STATE REPRESENTATIVE DISTRICT 51 (Republican)
+CandidateContest	MT House District 52 (Republican Party)	STATE REPRESENTATIVE DISTRICT 52 (Republican)
+CandidateContest	MT House District 53 (Republican Party)	STATE REPRESENTATIVE DISTRICT 53 (Republican)
+CandidateContest	MT House District 54 (Republican Party)	STATE REPRESENTATIVE DISTRICT 54 (Republican)
+CandidateContest	MT House District 55 (Republican Party)	STATE REPRESENTATIVE DISTRICT 55 (Republican)
+CandidateContest	MT House District 56 (Republican Party)	STATE REPRESENTATIVE DISTRICT 56 (Republican)
+CandidateContest	MT House District 57 (Republican Party)	STATE REPRESENTATIVE DISTRICT 57 (Republican)
+CandidateContest	MT House District 58 (Republican Party)	STATE REPRESENTATIVE DISTRICT 58 (Republican)
+CandidateContest	MT House District 59 (Republican Party)	STATE REPRESENTATIVE DISTRICT 59 (Republican)
+CandidateContest	MT House District 60 (Republican Party)	STATE REPRESENTATIVE DISTRICT 60 (Republican)
+CandidateContest	MT House District 61 (Republican Party)	STATE REPRESENTATIVE DISTRICT 61 (Republican)
+CandidateContest	MT House District 62 (Republican Party)	STATE REPRESENTATIVE DISTRICT 62 (Republican)
+CandidateContest	MT House District 63 (Republican Party)	STATE REPRESENTATIVE DISTRICT 63 (Republican)
+CandidateContest	MT House District 64 (Republican Party)	STATE REPRESENTATIVE DISTRICT 64 (Republican)
+CandidateContest	MT House District 65 (Republican Party)	STATE REPRESENTATIVE DISTRICT 65 (Republican)
+CandidateContest	MT House District 66 (Republican Party)	STATE REPRESENTATIVE DISTRICT 66 (Republican)
+CandidateContest	MT House District 67 (Republican Party)	STATE REPRESENTATIVE DISTRICT 67 (Republican)
+CandidateContest	MT House District 68 (Republican Party)	STATE REPRESENTATIVE DISTRICT 68 (Republican)
+CandidateContest	MT House District 69 (Republican Party)	STATE REPRESENTATIVE DISTRICT 69 (Republican)
+CandidateContest	MT House District 70 (Republican Party)	STATE REPRESENTATIVE DISTRICT 70 (Republican)
+CandidateContest	MT House District 71 (Republican Party)	STATE REPRESENTATIVE DISTRICT 71 (Republican)
+CandidateContest	MT House District 72 (Republican Party)	STATE REPRESENTATIVE DISTRICT 72 (Republican)
+CandidateContest	MT House District 73 (Republican Party)	STATE REPRESENTATIVE DISTRICT 73 (Republican)
+CandidateContest	MT House District 74 (Republican Party)	STATE REPRESENTATIVE DISTRICT 74 (Republican)
+CandidateContest	MT House District 75 (Republican Party)	STATE REPRESENTATIVE DISTRICT 75 (Republican)
+CandidateContest	MT House District 76 (Republican Party)	STATE REPRESENTATIVE DISTRICT 76 (Republican)
+CandidateContest	MT House District 77 (Republican Party)	STATE REPRESENTATIVE DISTRICT 77 (Republican)
+CandidateContest	MT House District 78 (Republican Party)	STATE REPRESENTATIVE DISTRICT 78 (Republican)
+CandidateContest	MT House District 79 (Republican Party)	STATE REPRESENTATIVE DISTRICT 79 (Republican)
+CandidateContest	MT House District 80 (Republican Party)	STATE REPRESENTATIVE DISTRICT 80 (Republican)
+CandidateContest	MT House District 81 (Republican Party)	STATE REPRESENTATIVE DISTRICT 81 (Republican)
+CandidateContest	MT House District 82 (Republican Party)	STATE REPRESENTATIVE DISTRICT 82 (Republican)
+CandidateContest	MT House District 83 (Republican Party)	STATE REPRESENTATIVE DISTRICT 83 (Republican)
+CandidateContest	MT House District 84 (Republican Party)	STATE REPRESENTATIVE DISTRICT 84 (Republican)
+CandidateContest	MT House District 85 (Republican Party)	STATE REPRESENTATIVE DISTRICT 85 (Republican)
+CandidateContest	MT House District 86 (Republican Party)	STATE REPRESENTATIVE DISTRICT 86 (Republican)
+CandidateContest	MT House District 87 (Republican Party)	STATE REPRESENTATIVE DISTRICT 87 (Republican)
+CandidateContest	MT House District 88 (Republican Party)	STATE REPRESENTATIVE DISTRICT 88 (Republican)
+CandidateContest	MT House District 89 (Republican Party)	STATE REPRESENTATIVE DISTRICT 89 (Republican)
+CandidateContest	MT House District 90 (Republican Party)	STATE REPRESENTATIVE DISTRICT 90 (Republican)
+CandidateContest	MT House District 91 (Republican Party)	STATE REPRESENTATIVE DISTRICT 91 (Republican)
+CandidateContest	MT House District 92 (Republican Party)	STATE REPRESENTATIVE DISTRICT 92 (Republican)
+CandidateContest	MT House District 93 (Republican Party)	STATE REPRESENTATIVE DISTRICT 93 (Republican)
+CandidateContest	MT House District 94 (Republican Party)	STATE REPRESENTATIVE DISTRICT 94 (Republican)
+CandidateContest	MT House District 95 (Republican Party)	STATE REPRESENTATIVE DISTRICT 95 (Republican)
+CandidateContest	MT House District 96 (Republican Party)	STATE REPRESENTATIVE DISTRICT 96 (Republican)
+CandidateContest	MT House District 97 (Republican Party)	STATE REPRESENTATIVE DISTRICT 97 (Republican)
+CandidateContest	MT House District 98 (Republican Party)	STATE REPRESENTATIVE DISTRICT 98 (Republican)
+CandidateContest	MT House District 99 (Republican Party)	STATE REPRESENTATIVE DISTRICT 99 (Republican)
+CandidateContest	MT House District 100 (Republican Party)	STATE REPRESENTATIVE DISTRICT 100 (Republican)
+CandidateContest	MT Senate District 1 (Republican Party)	STATE SENATOR DISTRICT 1 (Republican)
+CandidateContest	MT Senate District 2 (Republican Party)	STATE SENATOR DISTRICT 2 (Republican)
+CandidateContest	MT Senate District 3 (Republican Party)	STATE SENATOR DISTRICT 3 (Republican)
+CandidateContest	MT Senate District 4 (Republican Party)	STATE SENATOR DISTRICT 4 (Republican)
+CandidateContest	MT Senate District 5 (Republican Party)	STATE SENATOR DISTRICT 5 (Republican)
+CandidateContest	MT Senate District 6 (Republican Party)	STATE SENATOR DISTRICT 6 (Republican)
+CandidateContest	MT Senate District 7 (Republican Party)	STATE SENATOR DISTRICT 7 (Republican)
+CandidateContest	MT Senate District 8 (Republican Party)	STATE SENATOR DISTRICT 8 (Republican)
+CandidateContest	MT Senate District 9 (Republican Party)	STATE SENATOR DISTRICT 9 (Republican)
+CandidateContest	MT Senate District 10 (Republican Party)	STATE SENATOR DISTRICT 10 (Republican)
+CandidateContest	MT Senate District 11 (Republican Party)	STATE SENATOR DISTRICT 11 (Republican)
+CandidateContest	MT Senate District 12 (Republican Party)	STATE SENATOR DISTRICT 12 (Republican)
+CandidateContest	MT Senate District 13 (Republican Party)	STATE SENATOR DISTRICT 13 (Republican)
+CandidateContest	MT Senate District 14 (Republican Party)	STATE SENATOR DISTRICT 14 (Republican)
+CandidateContest	MT Senate District 15 (Republican Party)	STATE SENATOR DISTRICT 15 (Republican)
+CandidateContest	MT Senate District 16 (Republican Party)	STATE SENATOR DISTRICT 16 (Republican)
+CandidateContest	MT Senate District 17 (Republican Party)	STATE SENATOR DISTRICT 17 (Republican)
+CandidateContest	MT Senate District 18 (Republican Party)	STATE SENATOR DISTRICT 18 (Republican)
+CandidateContest	MT Senate District 19 (Republican Party)	STATE SENATOR DISTRICT 19 (Republican)
+CandidateContest	MT Senate District 20 (Republican Party)	STATE SENATOR DISTRICT 20 (Republican)
+CandidateContest	MT Senate District 21 (Republican Party)	STATE SENATOR DISTRICT 21 (Republican)
+CandidateContest	MT Senate District 22 (Republican Party)	STATE SENATOR DISTRICT 22 (Republican)
+CandidateContest	MT Senate District 23 (Republican Party)	STATE SENATOR DISTRICT 23 (Republican)
+CandidateContest	MT Senate District 24 (Republican Party)	STATE SENATOR DISTRICT 24 (Republican)
+CandidateContest	MT Senate District 25 (Republican Party)	STATE SENATOR DISTRICT 25 (Republican)
+CandidateContest	MT Senate District 26 (Republican Party)	STATE SENATOR DISTRICT 26 (Republican)
+CandidateContest	MT Senate District 27 (Republican Party)	STATE SENATOR DISTRICT 27 (Republican)
+CandidateContest	MT Senate District 28 (Republican Party)	STATE SENATOR DISTRICT 28 (Republican)
+CandidateContest	MT Senate District 29 (Republican Party)	STATE SENATOR DISTRICT 29 (Republican)
+CandidateContest	MT Senate District 30 (Republican Party)	STATE SENATOR DISTRICT 30 (Republican)
+CandidateContest	MT Senate District 31 (Republican Party)	STATE SENATOR DISTRICT 31 (Republican)
+CandidateContest	MT Senate District 32 (Republican Party)	STATE SENATOR DISTRICT 32 (Republican)
+CandidateContest	MT Senate District 33 (Republican Party)	STATE SENATOR DISTRICT 33 (Republican)
+CandidateContest	MT Senate District 34 (Republican Party)	STATE SENATOR DISTRICT 34 (Republican)
+CandidateContest	MT Senate District 35 (Republican Party)	STATE SENATOR DISTRICT 35 (Republican)
+CandidateContest	MT Senate District 36 (Republican Party)	STATE SENATOR DISTRICT 36 (Republican)
+CandidateContest	MT Senate District 37 (Republican Party)	STATE SENATOR DISTRICT 37 (Republican)
+CandidateContest	MT Senate District 38 (Republican Party)	STATE SENATOR DISTRICT 38 (Republican)
+CandidateContest	MT Senate District 39 (Republican Party)	STATE SENATOR DISTRICT 39 (Republican)
+CandidateContest	MT Senate District 40 (Republican Party)	STATE SENATOR DISTRICT 40 (Republican)
+CandidateContest	MT Senate District 41 (Republican Party)	STATE SENATOR DISTRICT 41 (Republican)
+CandidateContest	MT Senate District 42 (Republican Party)	STATE SENATOR DISTRICT 42 (Republican)
+CandidateContest	MT Senate District 43 (Republican Party)	STATE SENATOR DISTRICT 43 (Republican)
+CandidateContest	MT Senate District 44 (Republican Party)	STATE SENATOR DISTRICT 44 (Republican)
+CandidateContest	MT Senate District 45 (Republican Party)	STATE SENATOR DISTRICT 45 (Republican)
+CandidateContest	MT Senate District 46 (Republican Party)	STATE SENATOR DISTRICT 46 (Republican)
+CandidateContest	MT Senate District 47 (Republican Party)	STATE SENATOR DISTRICT 47 (Republican)
+CandidateContest	MT Senate District 48 (Republican Party)	STATE SENATOR DISTRICT 48 (Republican)
+CandidateContest	MT Senate District 49 (Republican Party)	STATE SENATOR DISTRICT 49 (Republican)
+CandidateContest	MT Senate District 50 (Republican Party)	STATE SENATOR DISTRICT 50 (Republican)
+CandidateContest	US House MT District 1 (Republican Party)	UNITED STATES REPRESENTATIVE (Republican)
+CandidateContest	US President (MT) (Republican Party)	PRESIDENT (Republican)
+CandidateContest	MT Governor (Republican Party)	GOVERNOR & LT. GOVERNOR (Republican)
+CandidateContest	US Senate MT (Republican Party)	UNITED STATES SENATOR (Republican)
+CandidateContest	MT State Auditor (Republican Party)	ATTORNEY GENERAL (Republican)
+CandidateContest	MT State Superintendent (Republican Party)	STATE SUPERINTENDENT OF PUBLIC INSTRUCTION (Republican)
+CandidateContest	MT Attorney General (Republican Party)	STATE AUDITOR (Republican)
+CandidateContest	MT Lieutenant Governor (Republican Party)	MT Lieutenant Governor (Republican)
+CandidateContest	MT Treasurer (Republican Party)	MT Treasurer (Republican)
+CandidateContest	MT Secretary of State (Republican Party)	SECRETARY OF STATE (Republican)
+CandidateContest	MT House District 1 (Green Party)	STATE REPRESENTATIVE DISTRICT 1 (Green)
+CandidateContest	MT House District 2 (Green Party)	STATE REPRESENTATIVE DISTRICT 2 (Green)
+CandidateContest	MT House District 3 (Green Party)	STATE REPRESENTATIVE DISTRICT 3 (Green)
+CandidateContest	MT House District 4 (Green Party)	STATE REPRESENTATIVE DISTRICT 4 (Green)
+CandidateContest	MT House District 5 (Green Party)	STATE REPRESENTATIVE DISTRICT 5 (Green)
+CandidateContest	MT House District 6 (Green Party)	STATE REPRESENTATIVE DISTRICT 6 (Green)
+CandidateContest	MT House District 7 (Green Party)	STATE REPRESENTATIVE DISTRICT 7 (Green)
+CandidateContest	MT House District 8 (Green Party)	STATE REPRESENTATIVE DISTRICT 8 (Green)
+CandidateContest	MT House District 9 (Green Party)	STATE REPRESENTATIVE DISTRICT 9 (Green)
+CandidateContest	MT House District 10 (Green Party)	STATE REPRESENTATIVE DISTRICT 10 (Green)
+CandidateContest	MT House District 11 (Green Party)	STATE REPRESENTATIVE DISTRICT 11 (Green)
+CandidateContest	MT House District 12 (Green Party)	STATE REPRESENTATIVE DISTRICT 12 (Green)
+CandidateContest	MT House District 13 (Green Party)	STATE REPRESENTATIVE DISTRICT 13 (Green)
+CandidateContest	MT House District 14 (Green Party)	STATE REPRESENTATIVE DISTRICT 14 (Green)
+CandidateContest	MT House District 15 (Green Party)	STATE REPRESENTATIVE DISTRICT 15 (Green)
+CandidateContest	MT House District 16 (Green Party)	STATE REPRESENTATIVE DISTRICT 16 (Green)
+CandidateContest	MT House District 17 (Green Party)	STATE REPRESENTATIVE DISTRICT 17 (Green)
+CandidateContest	MT House District 18 (Green Party)	STATE REPRESENTATIVE DISTRICT 18 (Green)
+CandidateContest	MT House District 19 (Green Party)	STATE REPRESENTATIVE DISTRICT 19 (Green)
+CandidateContest	MT House District 20 (Green Party)	STATE REPRESENTATIVE DISTRICT 20 (Green)
+CandidateContest	MT House District 21 (Green Party)	STATE REPRESENTATIVE DISTRICT 21 (Green)
+CandidateContest	MT House District 22 (Green Party)	STATE REPRESENTATIVE DISTRICT 22 (Green)
+CandidateContest	MT House District 23 (Green Party)	STATE REPRESENTATIVE DISTRICT 23 (Green)
+CandidateContest	MT House District 24 (Green Party)	STATE REPRESENTATIVE DISTRICT 24 (Green)
+CandidateContest	MT House District 25 (Green Party)	STATE REPRESENTATIVE DISTRICT 25 (Green)
+CandidateContest	MT House District 26 (Green Party)	STATE REPRESENTATIVE DISTRICT 26 (Green)
+CandidateContest	MT House District 27 (Green Party)	STATE REPRESENTATIVE DISTRICT 27 (Green)
+CandidateContest	MT House District 28 (Green Party)	STATE REPRESENTATIVE DISTRICT 28 (Green)
+CandidateContest	MT House District 29 (Green Party)	STATE REPRESENTATIVE DISTRICT 29 (Green)
+CandidateContest	MT House District 30 (Green Party)	STATE REPRESENTATIVE DISTRICT 30 (Green)
+CandidateContest	MT House District 31 (Green Party)	STATE REPRESENTATIVE DISTRICT 31 (Green)
+CandidateContest	MT House District 32 (Green Party)	STATE REPRESENTATIVE DISTRICT 32 (Green)
+CandidateContest	MT House District 33 (Green Party)	STATE REPRESENTATIVE DISTRICT 33 (Green)
+CandidateContest	MT House District 34 (Green Party)	STATE REPRESENTATIVE DISTRICT 34 (Green)
+CandidateContest	MT House District 35 (Green Party)	STATE REPRESENTATIVE DISTRICT 35 (Green)
+CandidateContest	MT House District 36 (Green Party)	STATE REPRESENTATIVE DISTRICT 36 (Green)
+CandidateContest	MT House District 37 (Green Party)	STATE REPRESENTATIVE DISTRICT 37 (Green)
+CandidateContest	MT House District 38 (Green Party)	STATE REPRESENTATIVE DISTRICT 38 (Green)
+CandidateContest	MT House District 39 (Green Party)	STATE REPRESENTATIVE DISTRICT 39 (Green)
+CandidateContest	MT House District 40 (Green Party)	STATE REPRESENTATIVE DISTRICT 40 (Green)
+CandidateContest	MT House District 41 (Green Party)	STATE REPRESENTATIVE DISTRICT 41 (Green)
+CandidateContest	MT House District 42 (Green Party)	STATE REPRESENTATIVE DISTRICT 42 (Green)
+CandidateContest	MT House District 43 (Green Party)	STATE REPRESENTATIVE DISTRICT 43 (Green)
+CandidateContest	MT House District 44 (Green Party)	STATE REPRESENTATIVE DISTRICT 44 (Green)
+CandidateContest	MT House District 45 (Green Party)	STATE REPRESENTATIVE DISTRICT 45 (Green)
+CandidateContest	MT House District 46 (Green Party)	STATE REPRESENTATIVE DISTRICT 46 (Green)
+CandidateContest	MT House District 47 (Green Party)	STATE REPRESENTATIVE DISTRICT 47 (Green)
+CandidateContest	MT House District 48 (Green Party)	STATE REPRESENTATIVE DISTRICT 48 (Green)
+CandidateContest	MT House District 49 (Green Party)	STATE REPRESENTATIVE DISTRICT 49 (Green)
+CandidateContest	MT House District 50 (Green Party)	STATE REPRESENTATIVE DISTRICT 50 (Green)
+CandidateContest	MT House District 51 (Green Party)	STATE REPRESENTATIVE DISTRICT 51 (Green)
+CandidateContest	MT House District 52 (Green Party)	STATE REPRESENTATIVE DISTRICT 52 (Green)
+CandidateContest	MT House District 53 (Green Party)	STATE REPRESENTATIVE DISTRICT 53 (Green)
+CandidateContest	MT House District 54 (Green Party)	STATE REPRESENTATIVE DISTRICT 54 (Green)
+CandidateContest	MT House District 55 (Green Party)	STATE REPRESENTATIVE DISTRICT 55 (Green)
+CandidateContest	MT House District 56 (Green Party)	STATE REPRESENTATIVE DISTRICT 56 (Green)
+CandidateContest	MT House District 57 (Green Party)	STATE REPRESENTATIVE DISTRICT 57 (Green)
+CandidateContest	MT House District 58 (Green Party)	STATE REPRESENTATIVE DISTRICT 58 (Green)
+CandidateContest	MT House District 59 (Green Party)	STATE REPRESENTATIVE DISTRICT 59 (Green)
+CandidateContest	MT House District 60 (Green Party)	STATE REPRESENTATIVE DISTRICT 60 (Green)
+CandidateContest	MT House District 61 (Green Party)	STATE REPRESENTATIVE DISTRICT 61 (Green)
+CandidateContest	MT House District 62 (Green Party)	STATE REPRESENTATIVE DISTRICT 62 (Green)
+CandidateContest	MT House District 63 (Green Party)	STATE REPRESENTATIVE DISTRICT 63 (Green)
+CandidateContest	MT House District 64 (Green Party)	STATE REPRESENTATIVE DISTRICT 64 (Green)
+CandidateContest	MT House District 65 (Green Party)	STATE REPRESENTATIVE DISTRICT 65 (Green)
+CandidateContest	MT House District 66 (Green Party)	STATE REPRESENTATIVE DISTRICT 66 (Green)
+CandidateContest	MT House District 67 (Green Party)	STATE REPRESENTATIVE DISTRICT 67 (Green)
+CandidateContest	MT House District 68 (Green Party)	STATE REPRESENTATIVE DISTRICT 68 (Green)
+CandidateContest	MT House District 69 (Green Party)	STATE REPRESENTATIVE DISTRICT 69 (Green)
+CandidateContest	MT House District 70 (Green Party)	STATE REPRESENTATIVE DISTRICT 70 (Green)
+CandidateContest	MT House District 71 (Green Party)	STATE REPRESENTATIVE DISTRICT 71 (Green)
+CandidateContest	MT House District 72 (Green Party)	STATE REPRESENTATIVE DISTRICT 72 (Green)
+CandidateContest	MT House District 73 (Green Party)	STATE REPRESENTATIVE DISTRICT 73 (Green)
+CandidateContest	MT House District 74 (Green Party)	STATE REPRESENTATIVE DISTRICT 74 (Green)
+CandidateContest	MT House District 75 (Green Party)	STATE REPRESENTATIVE DISTRICT 75 (Green)
+CandidateContest	MT House District 76 (Green Party)	STATE REPRESENTATIVE DISTRICT 76 (Green)
+CandidateContest	MT House District 77 (Green Party)	STATE REPRESENTATIVE DISTRICT 77 (Green)
+CandidateContest	MT House District 78 (Green Party)	STATE REPRESENTATIVE DISTRICT 78 (Green)
+CandidateContest	MT House District 79 (Green Party)	STATE REPRESENTATIVE DISTRICT 79 (Green)
+CandidateContest	MT House District 80 (Green Party)	STATE REPRESENTATIVE DISTRICT 80 (Green)
+CandidateContest	MT House District 81 (Green Party)	STATE REPRESENTATIVE DISTRICT 81 (Green)
+CandidateContest	MT House District 82 (Green Party)	STATE REPRESENTATIVE DISTRICT 82 (Green)
+CandidateContest	MT House District 83 (Green Party)	STATE REPRESENTATIVE DISTRICT 83 (Green)
+CandidateContest	MT House District 84 (Green Party)	STATE REPRESENTATIVE DISTRICT 84 (Green)
+CandidateContest	MT House District 85 (Green Party)	STATE REPRESENTATIVE DISTRICT 85 (Green)
+CandidateContest	MT House District 86 (Green Party)	STATE REPRESENTATIVE DISTRICT 86 (Green)
+CandidateContest	MT House District 87 (Green Party)	STATE REPRESENTATIVE DISTRICT 87 (Green)
+CandidateContest	MT House District 88 (Green Party)	STATE REPRESENTATIVE DISTRICT 88 (Green)
+CandidateContest	MT House District 89 (Green Party)	STATE REPRESENTATIVE DISTRICT 89 (Green)
+CandidateContest	MT House District 90 (Green Party)	STATE REPRESENTATIVE DISTRICT 90 (Green)
+CandidateContest	MT House District 91 (Green Party)	STATE REPRESENTATIVE DISTRICT 91 (Green)
+CandidateContest	MT House District 92 (Green Party)	STATE REPRESENTATIVE DISTRICT 92 (Green)
+CandidateContest	MT House District 93 (Green Party)	STATE REPRESENTATIVE DISTRICT 93 (Green)
+CandidateContest	MT House District 94 (Green Party)	STATE REPRESENTATIVE DISTRICT 94 (Green)
+CandidateContest	MT House District 95 (Green Party)	STATE REPRESENTATIVE DISTRICT 95 (Green)
+CandidateContest	MT House District 96 (Green Party)	STATE REPRESENTATIVE DISTRICT 96 (Green)
+CandidateContest	MT House District 97 (Green Party)	STATE REPRESENTATIVE DISTRICT 97 (Green)
+CandidateContest	MT House District 98 (Green Party)	STATE REPRESENTATIVE DISTRICT 98 (Green)
+CandidateContest	MT House District 99 (Green Party)	STATE REPRESENTATIVE DISTRICT 99 (Green)
+CandidateContest	MT House District 100 (Green Party)	STATE REPRESENTATIVE DISTRICT 100 (Green)
+CandidateContest	MT Senate District 1 (Green Party)	STATE SENATOR DISTRICT 1 (Green)
+CandidateContest	MT Senate District 2 (Green Party)	STATE SENATOR DISTRICT 2 (Green)
+CandidateContest	MT Senate District 3 (Green Party)	STATE SENATOR DISTRICT 3 (Green)
+CandidateContest	MT Senate District 4 (Green Party)	STATE SENATOR DISTRICT 4 (Green)
+CandidateContest	MT Senate District 5 (Green Party)	STATE SENATOR DISTRICT 5 (Green)
+CandidateContest	MT Senate District 6 (Green Party)	STATE SENATOR DISTRICT 6 (Green)
+CandidateContest	MT Senate District 7 (Green Party)	STATE SENATOR DISTRICT 7 (Green)
+CandidateContest	MT Senate District 8 (Green Party)	STATE SENATOR DISTRICT 8 (Green)
+CandidateContest	MT Senate District 9 (Green Party)	STATE SENATOR DISTRICT 9 (Green)
+CandidateContest	MT Senate District 10 (Green Party)	STATE SENATOR DISTRICT 10 (Green)
+CandidateContest	MT Senate District 11 (Green Party)	STATE SENATOR DISTRICT 11 (Green)
+CandidateContest	MT Senate District 12 (Green Party)	STATE SENATOR DISTRICT 12 (Green)
+CandidateContest	MT Senate District 13 (Green Party)	STATE SENATOR DISTRICT 13 (Green)
+CandidateContest	MT Senate District 14 (Green Party)	STATE SENATOR DISTRICT 14 (Green)
+CandidateContest	MT Senate District 15 (Green Party)	STATE SENATOR DISTRICT 15 (Green)
+CandidateContest	MT Senate District 16 (Green Party)	STATE SENATOR DISTRICT 16 (Green)
+CandidateContest	MT Senate District 17 (Green Party)	STATE SENATOR DISTRICT 17 (Green)
+CandidateContest	MT Senate District 18 (Green Party)	STATE SENATOR DISTRICT 18 (Green)
+CandidateContest	MT Senate District 19 (Green Party)	STATE SENATOR DISTRICT 19 (Green)
+CandidateContest	MT Senate District 20 (Green Party)	STATE SENATOR DISTRICT 20 (Green)
+CandidateContest	MT Senate District 21 (Green Party)	STATE SENATOR DISTRICT 21 (Green)
+CandidateContest	MT Senate District 22 (Green Party)	STATE SENATOR DISTRICT 22 (Green)
+CandidateContest	MT Senate District 23 (Green Party)	STATE SENATOR DISTRICT 23 (Green)
+CandidateContest	MT Senate District 24 (Green Party)	STATE SENATOR DISTRICT 24 (Green)
+CandidateContest	MT Senate District 25 (Green Party)	STATE SENATOR DISTRICT 25 (Green)
+CandidateContest	MT Senate District 26 (Green Party)	STATE SENATOR DISTRICT 26 (Green)
+CandidateContest	MT Senate District 27 (Green Party)	STATE SENATOR DISTRICT 27 (Green)
+CandidateContest	MT Senate District 28 (Green Party)	STATE SENATOR DISTRICT 28 (Green)
+CandidateContest	MT Senate District 29 (Green Party)	STATE SENATOR DISTRICT 29 (Green)
+CandidateContest	MT Senate District 30 (Green Party)	STATE SENATOR DISTRICT 30 (Green)
+CandidateContest	MT Senate District 31 (Green Party)	STATE SENATOR DISTRICT 31 (Green)
+CandidateContest	MT Senate District 32 (Green Party)	STATE SENATOR DISTRICT 32 (Green)
+CandidateContest	MT Senate District 33 (Green Party)	STATE SENATOR DISTRICT 33 (Green)
+CandidateContest	MT Senate District 34 (Green Party)	STATE SENATOR DISTRICT 34 (Green)
+CandidateContest	MT Senate District 35 (Green Party)	STATE SENATOR DISTRICT 35 (Green)
+CandidateContest	MT Senate District 36 (Green Party)	STATE SENATOR DISTRICT 36 (Green)
+CandidateContest	MT Senate District 37 (Green Party)	STATE SENATOR DISTRICT 37 (Green)
+CandidateContest	MT Senate District 38 (Green Party)	STATE SENATOR DISTRICT 38 (Green)
+CandidateContest	MT Senate District 39 (Green Party)	STATE SENATOR DISTRICT 39 (Green)
+CandidateContest	MT Senate District 40 (Green Party)	STATE SENATOR DISTRICT 40 (Green)
+CandidateContest	MT Senate District 41 (Green Party)	STATE SENATOR DISTRICT 41 (Green)
+CandidateContest	MT Senate District 42 (Green Party)	STATE SENATOR DISTRICT 42 (Green)
+CandidateContest	MT Senate District 43 (Green Party)	STATE SENATOR DISTRICT 43 (Green)
+CandidateContest	MT Senate District 44 (Green Party)	STATE SENATOR DISTRICT 44 (Green)
+CandidateContest	MT Senate District 45 (Green Party)	STATE SENATOR DISTRICT 45 (Green)
+CandidateContest	MT Senate District 46 (Green Party)	STATE SENATOR DISTRICT 46 (Green)
+CandidateContest	MT Senate District 47 (Green Party)	STATE SENATOR DISTRICT 47 (Green)
+CandidateContest	MT Senate District 48 (Green Party)	STATE SENATOR DISTRICT 48 (Green)
+CandidateContest	MT Senate District 49 (Green Party)	STATE SENATOR DISTRICT 49 (Green)
+CandidateContest	MT Senate District 50 (Green Party)	STATE SENATOR DISTRICT 50 (Green)
+CandidateContest	US House MT District 1 (Green Party)	UNITED STATES REPRESENTATIVE (Green)
+CandidateContest	US President (MT) (Green Party)	PRESIDENT (Green)
+CandidateContest	MT Governor (Green Party)	GOVERNOR & LT. GOVERNOR (Green)
+CandidateContest	US Senate MT (Green Party)	UNITED STATES SENATOR (Green)
+CandidateContest	MT State Auditor (Green Party)	ATTORNEY GENERAL (Green)
+CandidateContest	MT State Superintendent (Green Party)	STATE SUPERINTENDENT OF PUBLIC INSTRUCTION (Green)
+CandidateContest	MT Attorney General (Green Party)	STATE AUDITOR (Green)
+CandidateContest	MT Lieutenant Governor (Green Party)	MT Lieutenant Governor (Green)
+CandidateContest	MT Treasurer (Green Party)	MT Treasurer (Green)
+CandidateContest	MT Secretary of State (Green Party)	SECRETARY OF STATE (Green)
+CandidateContest	MT House District 1 (Green Party)	STATE REPRESENTATIVE DISTRICT 1 (GRN)
+CandidateContest	MT House District 2 (Green Party)	STATE REPRESENTATIVE DISTRICT 2 (GRN)
+CandidateContest	MT House District 3 (Green Party)	STATE REPRESENTATIVE DISTRICT 3 (GRN)
+CandidateContest	MT House District 4 (Green Party)	STATE REPRESENTATIVE DISTRICT 4 (GRN)
+CandidateContest	MT House District 5 (Green Party)	STATE REPRESENTATIVE DISTRICT 5 (GRN)
+CandidateContest	MT House District 6 (Green Party)	STATE REPRESENTATIVE DISTRICT 6 (GRN)
+CandidateContest	MT House District 7 (Green Party)	STATE REPRESENTATIVE DISTRICT 7 (GRN)
+CandidateContest	MT House District 8 (Green Party)	STATE REPRESENTATIVE DISTRICT 8 (GRN)
+CandidateContest	MT House District 9 (Green Party)	STATE REPRESENTATIVE DISTRICT 9 (GRN)
+CandidateContest	MT House District 10 (Green Party)	STATE REPRESENTATIVE DISTRICT 10 (GRN)
+CandidateContest	MT House District 11 (Green Party)	STATE REPRESENTATIVE DISTRICT 11 (GRN)
+CandidateContest	MT House District 12 (Green Party)	STATE REPRESENTATIVE DISTRICT 12 (GRN)
+CandidateContest	MT House District 13 (Green Party)	STATE REPRESENTATIVE DISTRICT 13 (GRN)
+CandidateContest	MT House District 14 (Green Party)	STATE REPRESENTATIVE DISTRICT 14 (GRN)
+CandidateContest	MT House District 15 (Green Party)	STATE REPRESENTATIVE DISTRICT 15 (GRN)
+CandidateContest	MT House District 16 (Green Party)	STATE REPRESENTATIVE DISTRICT 16 (GRN)
+CandidateContest	MT House District 17 (Green Party)	STATE REPRESENTATIVE DISTRICT 17 (GRN)
+CandidateContest	MT House District 18 (Green Party)	STATE REPRESENTATIVE DISTRICT 18 (GRN)
+CandidateContest	MT House District 19 (Green Party)	STATE REPRESENTATIVE DISTRICT 19 (GRN)
+CandidateContest	MT House District 20 (Green Party)	STATE REPRESENTATIVE DISTRICT 20 (GRN)
+CandidateContest	MT House District 21 (Green Party)	STATE REPRESENTATIVE DISTRICT 21 (GRN)
+CandidateContest	MT House District 22 (Green Party)	STATE REPRESENTATIVE DISTRICT 22 (GRN)
+CandidateContest	MT House District 23 (Green Party)	STATE REPRESENTATIVE DISTRICT 23 (GRN)
+CandidateContest	MT House District 24 (Green Party)	STATE REPRESENTATIVE DISTRICT 24 (GRN)
+CandidateContest	MT House District 25 (Green Party)	STATE REPRESENTATIVE DISTRICT 25 (GRN)
+CandidateContest	MT House District 26 (Green Party)	STATE REPRESENTATIVE DISTRICT 26 (GRN)
+CandidateContest	MT House District 27 (Green Party)	STATE REPRESENTATIVE DISTRICT 27 (GRN)
+CandidateContest	MT House District 28 (Green Party)	STATE REPRESENTATIVE DISTRICT 28 (GRN)
+CandidateContest	MT House District 29 (Green Party)	STATE REPRESENTATIVE DISTRICT 29 (GRN)
+CandidateContest	MT House District 30 (Green Party)	STATE REPRESENTATIVE DISTRICT 30 (GRN)
+CandidateContest	MT House District 31 (Green Party)	STATE REPRESENTATIVE DISTRICT 31 (GRN)
+CandidateContest	MT House District 32 (Green Party)	STATE REPRESENTATIVE DISTRICT 32 (GRN)
+CandidateContest	MT House District 33 (Green Party)	STATE REPRESENTATIVE DISTRICT 33 (GRN)
+CandidateContest	MT House District 34 (Green Party)	STATE REPRESENTATIVE DISTRICT 34 (GRN)
+CandidateContest	MT House District 35 (Green Party)	STATE REPRESENTATIVE DISTRICT 35 (GRN)
+CandidateContest	MT House District 36 (Green Party)	STATE REPRESENTATIVE DISTRICT 36 (GRN)
+CandidateContest	MT House District 37 (Green Party)	STATE REPRESENTATIVE DISTRICT 37 (GRN)
+CandidateContest	MT House District 38 (Green Party)	STATE REPRESENTATIVE DISTRICT 38 (GRN)
+CandidateContest	MT House District 39 (Green Party)	STATE REPRESENTATIVE DISTRICT 39 (GRN)
+CandidateContest	MT House District 40 (Green Party)	STATE REPRESENTATIVE DISTRICT 40 (GRN)
+CandidateContest	MT House District 41 (Green Party)	STATE REPRESENTATIVE DISTRICT 41 (GRN)
+CandidateContest	MT House District 42 (Green Party)	STATE REPRESENTATIVE DISTRICT 42 (GRN)
+CandidateContest	MT House District 43 (Green Party)	STATE REPRESENTATIVE DISTRICT 43 (GRN)
+CandidateContest	MT House District 44 (Green Party)	STATE REPRESENTATIVE DISTRICT 44 (GRN)
+CandidateContest	MT House District 45 (Green Party)	STATE REPRESENTATIVE DISTRICT 45 (GRN)
+CandidateContest	MT House District 46 (Green Party)	STATE REPRESENTATIVE DISTRICT 46 (GRN)
+CandidateContest	MT House District 47 (Green Party)	STATE REPRESENTATIVE DISTRICT 47 (GRN)
+CandidateContest	MT House District 48 (Green Party)	STATE REPRESENTATIVE DISTRICT 48 (GRN)
+CandidateContest	MT House District 49 (Green Party)	STATE REPRESENTATIVE DISTRICT 49 (GRN)
+CandidateContest	MT House District 50 (Green Party)	STATE REPRESENTATIVE DISTRICT 50 (GRN)
+CandidateContest	MT House District 51 (Green Party)	STATE REPRESENTATIVE DISTRICT 51 (GRN)
+CandidateContest	MT House District 52 (Green Party)	STATE REPRESENTATIVE DISTRICT 52 (GRN)
+CandidateContest	MT House District 53 (Green Party)	STATE REPRESENTATIVE DISTRICT 53 (GRN)
+CandidateContest	MT House District 54 (Green Party)	STATE REPRESENTATIVE DISTRICT 54 (GRN)
+CandidateContest	MT House District 55 (Green Party)	STATE REPRESENTATIVE DISTRICT 55 (GRN)
+CandidateContest	MT House District 56 (Green Party)	STATE REPRESENTATIVE DISTRICT 56 (GRN)
+CandidateContest	MT House District 57 (Green Party)	STATE REPRESENTATIVE DISTRICT 57 (GRN)
+CandidateContest	MT House District 58 (Green Party)	STATE REPRESENTATIVE DISTRICT 58 (GRN)
+CandidateContest	MT House District 59 (Green Party)	STATE REPRESENTATIVE DISTRICT 59 (GRN)
+CandidateContest	MT House District 60 (Green Party)	STATE REPRESENTATIVE DISTRICT 60 (GRN)
+CandidateContest	MT House District 61 (Green Party)	STATE REPRESENTATIVE DISTRICT 61 (GRN)
+CandidateContest	MT House District 62 (Green Party)	STATE REPRESENTATIVE DISTRICT 62 (GRN)
+CandidateContest	MT House District 63 (Green Party)	STATE REPRESENTATIVE DISTRICT 63 (GRN)
+CandidateContest	MT House District 64 (Green Party)	STATE REPRESENTATIVE DISTRICT 64 (GRN)
+CandidateContest	MT House District 65 (Green Party)	STATE REPRESENTATIVE DISTRICT 65 (GRN)
+CandidateContest	MT House District 66 (Green Party)	STATE REPRESENTATIVE DISTRICT 66 (GRN)
+CandidateContest	MT House District 67 (Green Party)	STATE REPRESENTATIVE DISTRICT 67 (GRN)
+CandidateContest	MT House District 68 (Green Party)	STATE REPRESENTATIVE DISTRICT 68 (GRN)
+CandidateContest	MT House District 69 (Green Party)	STATE REPRESENTATIVE DISTRICT 69 (GRN)
+CandidateContest	MT House District 70 (Green Party)	STATE REPRESENTATIVE DISTRICT 70 (GRN)
+CandidateContest	MT House District 71 (Green Party)	STATE REPRESENTATIVE DISTRICT 71 (GRN)
+CandidateContest	MT House District 72 (Green Party)	STATE REPRESENTATIVE DISTRICT 72 (GRN)
+CandidateContest	MT House District 73 (Green Party)	STATE REPRESENTATIVE DISTRICT 73 (GRN)
+CandidateContest	MT House District 74 (Green Party)	STATE REPRESENTATIVE DISTRICT 74 (GRN)
+CandidateContest	MT House District 75 (Green Party)	STATE REPRESENTATIVE DISTRICT 75 (GRN)
+CandidateContest	MT House District 76 (Green Party)	STATE REPRESENTATIVE DISTRICT 76 (GRN)
+CandidateContest	MT House District 77 (Green Party)	STATE REPRESENTATIVE DISTRICT 77 (GRN)
+CandidateContest	MT House District 78 (Green Party)	STATE REPRESENTATIVE DISTRICT 78 (GRN)
+CandidateContest	MT House District 79 (Green Party)	STATE REPRESENTATIVE DISTRICT 79 (GRN)
+CandidateContest	MT House District 80 (Green Party)	STATE REPRESENTATIVE DISTRICT 80 (GRN)
+CandidateContest	MT House District 81 (Green Party)	STATE REPRESENTATIVE DISTRICT 81 (GRN)
+CandidateContest	MT House District 82 (Green Party)	STATE REPRESENTATIVE DISTRICT 82 (GRN)
+CandidateContest	MT House District 83 (Green Party)	STATE REPRESENTATIVE DISTRICT 83 (GRN)
+CandidateContest	MT House District 84 (Green Party)	STATE REPRESENTATIVE DISTRICT 84 (GRN)
+CandidateContest	MT House District 85 (Green Party)	STATE REPRESENTATIVE DISTRICT 85 (GRN)
+CandidateContest	MT House District 86 (Green Party)	STATE REPRESENTATIVE DISTRICT 86 (GRN)
+CandidateContest	MT House District 87 (Green Party)	STATE REPRESENTATIVE DISTRICT 87 (GRN)
+CandidateContest	MT House District 88 (Green Party)	STATE REPRESENTATIVE DISTRICT 88 (GRN)
+CandidateContest	MT House District 89 (Green Party)	STATE REPRESENTATIVE DISTRICT 89 (GRN)
+CandidateContest	MT House District 90 (Green Party)	STATE REPRESENTATIVE DISTRICT 90 (GRN)
+CandidateContest	MT House District 91 (Green Party)	STATE REPRESENTATIVE DISTRICT 91 (GRN)
+CandidateContest	MT House District 92 (Green Party)	STATE REPRESENTATIVE DISTRICT 92 (GRN)
+CandidateContest	MT House District 93 (Green Party)	STATE REPRESENTATIVE DISTRICT 93 (GRN)
+CandidateContest	MT House District 94 (Green Party)	STATE REPRESENTATIVE DISTRICT 94 (GRN)
+CandidateContest	MT House District 95 (Green Party)	STATE REPRESENTATIVE DISTRICT 95 (GRN)
+CandidateContest	MT House District 96 (Green Party)	STATE REPRESENTATIVE DISTRICT 96 (GRN)
+CandidateContest	MT House District 97 (Green Party)	STATE REPRESENTATIVE DISTRICT 97 (GRN)
+CandidateContest	MT House District 98 (Green Party)	STATE REPRESENTATIVE DISTRICT 98 (GRN)
+CandidateContest	MT House District 99 (Green Party)	STATE REPRESENTATIVE DISTRICT 99 (GRN)
+CandidateContest	MT House District 100 (Green Party)	STATE REPRESENTATIVE DISTRICT 100 (GRN)
+CandidateContest	MT Senate District 1 (Green Party)	STATE SENATOR DISTRICT 1 (GRN)
+CandidateContest	MT Senate District 2 (Green Party)	STATE SENATOR DISTRICT 2 (GRN)
+CandidateContest	MT Senate District 3 (Green Party)	STATE SENATOR DISTRICT 3 (GRN)
+CandidateContest	MT Senate District 4 (Green Party)	STATE SENATOR DISTRICT 4 (GRN)
+CandidateContest	MT Senate District 5 (Green Party)	STATE SENATOR DISTRICT 5 (GRN)
+CandidateContest	MT Senate District 6 (Green Party)	STATE SENATOR DISTRICT 6 (GRN)
+CandidateContest	MT Senate District 7 (Green Party)	STATE SENATOR DISTRICT 7 (GRN)
+CandidateContest	MT Senate District 8 (Green Party)	STATE SENATOR DISTRICT 8 (GRN)
+CandidateContest	MT Senate District 9 (Green Party)	STATE SENATOR DISTRICT 9 (GRN)
+CandidateContest	MT Senate District 10 (Green Party)	STATE SENATOR DISTRICT 10 (GRN)
+CandidateContest	MT Senate District 11 (Green Party)	STATE SENATOR DISTRICT 11 (GRN)
+CandidateContest	MT Senate District 12 (Green Party)	STATE SENATOR DISTRICT 12 (GRN)
+CandidateContest	MT Senate District 13 (Green Party)	STATE SENATOR DISTRICT 13 (GRN)
+CandidateContest	MT Senate District 14 (Green Party)	STATE SENATOR DISTRICT 14 (GRN)
+CandidateContest	MT Senate District 15 (Green Party)	STATE SENATOR DISTRICT 15 (GRN)
+CandidateContest	MT Senate District 16 (Green Party)	STATE SENATOR DISTRICT 16 (GRN)
+CandidateContest	MT Senate District 17 (Green Party)	STATE SENATOR DISTRICT 17 (GRN)
+CandidateContest	MT Senate District 18 (Green Party)	STATE SENATOR DISTRICT 18 (GRN)
+CandidateContest	MT Senate District 19 (Green Party)	STATE SENATOR DISTRICT 19 (GRN)
+CandidateContest	MT Senate District 20 (Green Party)	STATE SENATOR DISTRICT 20 (GRN)
+CandidateContest	MT Senate District 21 (Green Party)	STATE SENATOR DISTRICT 21 (GRN)
+CandidateContest	MT Senate District 22 (Green Party)	STATE SENATOR DISTRICT 22 (GRN)
+CandidateContest	MT Senate District 23 (Green Party)	STATE SENATOR DISTRICT 23 (GRN)
+CandidateContest	MT Senate District 24 (Green Party)	STATE SENATOR DISTRICT 24 (GRN)
+CandidateContest	MT Senate District 25 (Green Party)	STATE SENATOR DISTRICT 25 (GRN)
+CandidateContest	MT Senate District 26 (Green Party)	STATE SENATOR DISTRICT 26 (GRN)
+CandidateContest	MT Senate District 27 (Green Party)	STATE SENATOR DISTRICT 27 (GRN)
+CandidateContest	MT Senate District 28 (Green Party)	STATE SENATOR DISTRICT 28 (GRN)
+CandidateContest	MT Senate District 29 (Green Party)	STATE SENATOR DISTRICT 29 (GRN)
+CandidateContest	MT Senate District 30 (Green Party)	STATE SENATOR DISTRICT 30 (GRN)
+CandidateContest	MT Senate District 31 (Green Party)	STATE SENATOR DISTRICT 31 (GRN)
+CandidateContest	MT Senate District 32 (Green Party)	STATE SENATOR DISTRICT 32 (GRN)
+CandidateContest	MT Senate District 33 (Green Party)	STATE SENATOR DISTRICT 33 (GRN)
+CandidateContest	MT Senate District 34 (Green Party)	STATE SENATOR DISTRICT 34 (GRN)
+CandidateContest	MT Senate District 35 (Green Party)	STATE SENATOR DISTRICT 35 (GRN)
+CandidateContest	MT Senate District 36 (Green Party)	STATE SENATOR DISTRICT 36 (GRN)
+CandidateContest	MT Senate District 37 (Green Party)	STATE SENATOR DISTRICT 37 (GRN)
+CandidateContest	MT Senate District 38 (Green Party)	STATE SENATOR DISTRICT 38 (GRN)
+CandidateContest	MT Senate District 39 (Green Party)	STATE SENATOR DISTRICT 39 (GRN)
+CandidateContest	MT Senate District 40 (Green Party)	STATE SENATOR DISTRICT 40 (GRN)
+CandidateContest	MT Senate District 41 (Green Party)	STATE SENATOR DISTRICT 41 (GRN)
+CandidateContest	MT Senate District 42 (Green Party)	STATE SENATOR DISTRICT 42 (GRN)
+CandidateContest	MT Senate District 43 (Green Party)	STATE SENATOR DISTRICT 43 (GRN)
+CandidateContest	MT Senate District 44 (Green Party)	STATE SENATOR DISTRICT 44 (GRN)
+CandidateContest	MT Senate District 45 (Green Party)	STATE SENATOR DISTRICT 45 (GRN)
+CandidateContest	MT Senate District 46 (Green Party)	STATE SENATOR DISTRICT 46 (GRN)
+CandidateContest	MT Senate District 47 (Green Party)	STATE SENATOR DISTRICT 47 (GRN)
+CandidateContest	MT Senate District 48 (Green Party)	STATE SENATOR DISTRICT 48 (GRN)
+CandidateContest	MT Senate District 49 (Green Party)	STATE SENATOR DISTRICT 49 (GRN)
+CandidateContest	MT Senate District 50 (Green Party)	STATE SENATOR DISTRICT 50 (GRN)
+CandidateContest	US House MT District 1 (Green Party)	UNITED STATES REPRESENTATIVE (GRN)
+CandidateContest	US President (MT) (Green Party)	PRESIDENT (GRN)
+CandidateContest	MT Governor (Green Party)	GOVERNOR & LT. GOVERNOR (GRN)
+CandidateContest	US Senate MT (Green Party)	UNITED STATES SENATOR (GRN)
+CandidateContest	MT State Auditor (Green Party)	ATTORNEY GENERAL (GRN)
+CandidateContest	MT State Superintendent (Green Party)	STATE SUPERINTENDENT OF PUBLIC INSTRUCTION (GRN)
+CandidateContest	MT Attorney General (Green Party)	STATE AUDITOR (GRN)
+CandidateContest	MT Lieutenant Governor (Green Party)	MT Lieutenant Governor (GRN)
+CandidateContest	MT Treasurer (Green Party)	MT Treasurer (GRN)
+CandidateContest	MT Secretary of State (Green Party)	SECRETARY OF STATE (GRN)
+CandidateContest	MT House District 1 (Libertarian Party)	STATE REPRESENTATIVE DISTRICT 1 (Libertarian Party)
+CandidateContest	MT House District 2 (Libertarian Party)	STATE REPRESENTATIVE DISTRICT 2 (Libertarian Party)
+CandidateContest	MT House District 3 (Libertarian Party)	STATE REPRESENTATIVE DISTRICT 3 (Libertarian Party)
+CandidateContest	MT House District 4 (Libertarian Party)	STATE REPRESENTATIVE DISTRICT 4 (Libertarian Party)
+CandidateContest	MT House District 5 (Libertarian Party)	STATE REPRESENTATIVE DISTRICT 5 (Libertarian Party)
+CandidateContest	MT House District 6 (Libertarian Party)	STATE REPRESENTATIVE DISTRICT 6 (Libertarian Party)
+CandidateContest	MT House District 7 (Libertarian Party)	STATE REPRESENTATIVE DISTRICT 7 (Libertarian Party)
+CandidateContest	MT House District 8 (Libertarian Party)	STATE REPRESENTATIVE DISTRICT 8 (Libertarian Party)
+CandidateContest	MT House District 9 (Libertarian Party)	STATE REPRESENTATIVE DISTRICT 9 (Libertarian Party)
+CandidateContest	MT House District 10 (Libertarian Party)	STATE REPRESENTATIVE DISTRICT 10 (Libertarian Party)
+CandidateContest	MT House District 11 (Libertarian Party)	STATE REPRESENTATIVE DISTRICT 11 (Libertarian Party)
+CandidateContest	MT House District 12 (Libertarian Party)	STATE REPRESENTATIVE DISTRICT 12 (Libertarian Party)
+CandidateContest	MT House District 13 (Libertarian Party)	STATE REPRESENTATIVE DISTRICT 13 (Libertarian Party)
+CandidateContest	MT House District 14 (Libertarian Party)	STATE REPRESENTATIVE DISTRICT 14 (Libertarian Party)
+CandidateContest	MT House District 15 (Libertarian Party)	STATE REPRESENTATIVE DISTRICT 15 (Libertarian Party)
+CandidateContest	MT House District 16 (Libertarian Party)	STATE REPRESENTATIVE DISTRICT 16 (Libertarian Party)
+CandidateContest	MT House District 17 (Libertarian Party)	STATE REPRESENTATIVE DISTRICT 17 (Libertarian Party)
+CandidateContest	MT House District 18 (Libertarian Party)	STATE REPRESENTATIVE DISTRICT 18 (Libertarian Party)
+CandidateContest	MT House District 19 (Libertarian Party)	STATE REPRESENTATIVE DISTRICT 19 (Libertarian Party)
+CandidateContest	MT House District 20 (Libertarian Party)	STATE REPRESENTATIVE DISTRICT 20 (Libertarian Party)
+CandidateContest	MT House District 21 (Libertarian Party)	STATE REPRESENTATIVE DISTRICT 21 (Libertarian Party)
+CandidateContest	MT House District 22 (Libertarian Party)	STATE REPRESENTATIVE DISTRICT 22 (Libertarian Party)
+CandidateContest	MT House District 23 (Libertarian Party)	STATE REPRESENTATIVE DISTRICT 23 (Libertarian Party)
+CandidateContest	MT House District 24 (Libertarian Party)	STATE REPRESENTATIVE DISTRICT 24 (Libertarian Party)
+CandidateContest	MT House District 25 (Libertarian Party)	STATE REPRESENTATIVE DISTRICT 25 (Libertarian Party)
+CandidateContest	MT House District 26 (Libertarian Party)	STATE REPRESENTATIVE DISTRICT 26 (Libertarian Party)
+CandidateContest	MT House District 27 (Libertarian Party)	STATE REPRESENTATIVE DISTRICT 27 (Libertarian Party)
+CandidateContest	MT House District 28 (Libertarian Party)	STATE REPRESENTATIVE DISTRICT 28 (Libertarian Party)
+CandidateContest	MT House District 29 (Libertarian Party)	STATE REPRESENTATIVE DISTRICT 29 (Libertarian Party)
+CandidateContest	MT House District 30 (Libertarian Party)	STATE REPRESENTATIVE DISTRICT 30 (Libertarian Party)
+CandidateContest	MT House District 31 (Libertarian Party)	STATE REPRESENTATIVE DISTRICT 31 (Libertarian Party)
+CandidateContest	MT House District 32 (Libertarian Party)	STATE REPRESENTATIVE DISTRICT 32 (Libertarian Party)
+CandidateContest	MT House District 33 (Libertarian Party)	STATE REPRESENTATIVE DISTRICT 33 (Libertarian Party)
+CandidateContest	MT House District 34 (Libertarian Party)	STATE REPRESENTATIVE DISTRICT 34 (Libertarian Party)
+CandidateContest	MT House District 35 (Libertarian Party)	STATE REPRESENTATIVE DISTRICT 35 (Libertarian Party)
+CandidateContest	MT House District 36 (Libertarian Party)	STATE REPRESENTATIVE DISTRICT 36 (Libertarian Party)
+CandidateContest	MT House District 37 (Libertarian Party)	STATE REPRESENTATIVE DISTRICT 37 (Libertarian Party)
+CandidateContest	MT House District 38 (Libertarian Party)	STATE REPRESENTATIVE DISTRICT 38 (Libertarian Party)
+CandidateContest	MT House District 39 (Libertarian Party)	STATE REPRESENTATIVE DISTRICT 39 (Libertarian Party)
+CandidateContest	MT House District 40 (Libertarian Party)	STATE REPRESENTATIVE DISTRICT 40 (Libertarian Party)
+CandidateContest	MT House District 41 (Libertarian Party)	STATE REPRESENTATIVE DISTRICT 41 (Libertarian Party)
+CandidateContest	MT House District 42 (Libertarian Party)	STATE REPRESENTATIVE DISTRICT 42 (Libertarian Party)
+CandidateContest	MT House District 43 (Libertarian Party)	STATE REPRESENTATIVE DISTRICT 43 (Libertarian Party)
+CandidateContest	MT House District 44 (Libertarian Party)	STATE REPRESENTATIVE DISTRICT 44 (Libertarian Party)
+CandidateContest	MT House District 45 (Libertarian Party)	STATE REPRESENTATIVE DISTRICT 45 (Libertarian Party)
+CandidateContest	MT House District 46 (Libertarian Party)	STATE REPRESENTATIVE DISTRICT 46 (Libertarian Party)
+CandidateContest	MT House District 47 (Libertarian Party)	STATE REPRESENTATIVE DISTRICT 47 (Libertarian Party)
+CandidateContest	MT House District 48 (Libertarian Party)	STATE REPRESENTATIVE DISTRICT 48 (Libertarian Party)
+CandidateContest	MT House District 49 (Libertarian Party)	STATE REPRESENTATIVE DISTRICT 49 (Libertarian Party)
+CandidateContest	MT House District 50 (Libertarian Party)	STATE REPRESENTATIVE DISTRICT 50 (Libertarian Party)
+CandidateContest	MT House District 51 (Libertarian Party)	STATE REPRESENTATIVE DISTRICT 51 (Libertarian Party)
+CandidateContest	MT House District 52 (Libertarian Party)	STATE REPRESENTATIVE DISTRICT 52 (Libertarian Party)
+CandidateContest	MT House District 53 (Libertarian Party)	STATE REPRESENTATIVE DISTRICT 53 (Libertarian Party)
+CandidateContest	MT House District 54 (Libertarian Party)	STATE REPRESENTATIVE DISTRICT 54 (Libertarian Party)
+CandidateContest	MT House District 55 (Libertarian Party)	STATE REPRESENTATIVE DISTRICT 55 (Libertarian Party)
+CandidateContest	MT House District 56 (Libertarian Party)	STATE REPRESENTATIVE DISTRICT 56 (Libertarian Party)
+CandidateContest	MT House District 57 (Libertarian Party)	STATE REPRESENTATIVE DISTRICT 57 (Libertarian Party)
+CandidateContest	MT House District 58 (Libertarian Party)	STATE REPRESENTATIVE DISTRICT 58 (Libertarian Party)
+CandidateContest	MT House District 59 (Libertarian Party)	STATE REPRESENTATIVE DISTRICT 59 (Libertarian Party)
+CandidateContest	MT House District 60 (Libertarian Party)	STATE REPRESENTATIVE DISTRICT 60 (Libertarian Party)
+CandidateContest	MT House District 61 (Libertarian Party)	STATE REPRESENTATIVE DISTRICT 61 (Libertarian Party)
+CandidateContest	MT House District 62 (Libertarian Party)	STATE REPRESENTATIVE DISTRICT 62 (Libertarian Party)
+CandidateContest	MT House District 63 (Libertarian Party)	STATE REPRESENTATIVE DISTRICT 63 (Libertarian Party)
+CandidateContest	MT House District 64 (Libertarian Party)	STATE REPRESENTATIVE DISTRICT 64 (Libertarian Party)
+CandidateContest	MT House District 65 (Libertarian Party)	STATE REPRESENTATIVE DISTRICT 65 (Libertarian Party)
+CandidateContest	MT House District 66 (Libertarian Party)	STATE REPRESENTATIVE DISTRICT 66 (Libertarian Party)
+CandidateContest	MT House District 67 (Libertarian Party)	STATE REPRESENTATIVE DISTRICT 67 (Libertarian Party)
+CandidateContest	MT House District 68 (Libertarian Party)	STATE REPRESENTATIVE DISTRICT 68 (Libertarian Party)
+CandidateContest	MT House District 69 (Libertarian Party)	STATE REPRESENTATIVE DISTRICT 69 (Libertarian Party)
+CandidateContest	MT House District 70 (Libertarian Party)	STATE REPRESENTATIVE DISTRICT 70 (Libertarian Party)
+CandidateContest	MT House District 71 (Libertarian Party)	STATE REPRESENTATIVE DISTRICT 71 (Libertarian Party)
+CandidateContest	MT House District 72 (Libertarian Party)	STATE REPRESENTATIVE DISTRICT 72 (Libertarian Party)
+CandidateContest	MT House District 73 (Libertarian Party)	STATE REPRESENTATIVE DISTRICT 73 (Libertarian Party)
+CandidateContest	MT House District 74 (Libertarian Party)	STATE REPRESENTATIVE DISTRICT 74 (Libertarian Party)
+CandidateContest	MT House District 75 (Libertarian Party)	STATE REPRESENTATIVE DISTRICT 75 (Libertarian Party)
+CandidateContest	MT House District 76 (Libertarian Party)	STATE REPRESENTATIVE DISTRICT 76 (Libertarian Party)
+CandidateContest	MT House District 77 (Libertarian Party)	STATE REPRESENTATIVE DISTRICT 77 (Libertarian Party)
+CandidateContest	MT House District 78 (Libertarian Party)	STATE REPRESENTATIVE DISTRICT 78 (Libertarian Party)
+CandidateContest	MT House District 79 (Libertarian Party)	STATE REPRESENTATIVE DISTRICT 79 (Libertarian Party)
+CandidateContest	MT House District 80 (Libertarian Party)	STATE REPRESENTATIVE DISTRICT 80 (Libertarian Party)
+CandidateContest	MT House District 81 (Libertarian Party)	STATE REPRESENTATIVE DISTRICT 81 (Libertarian Party)
+CandidateContest	MT House District 82 (Libertarian Party)	STATE REPRESENTATIVE DISTRICT 82 (Libertarian Party)
+CandidateContest	MT House District 83 (Libertarian Party)	STATE REPRESENTATIVE DISTRICT 83 (Libertarian Party)
+CandidateContest	MT House District 84 (Libertarian Party)	STATE REPRESENTATIVE DISTRICT 84 (Libertarian Party)
+CandidateContest	MT House District 85 (Libertarian Party)	STATE REPRESENTATIVE DISTRICT 85 (Libertarian Party)
+CandidateContest	MT House District 86 (Libertarian Party)	STATE REPRESENTATIVE DISTRICT 86 (Libertarian Party)
+CandidateContest	MT House District 87 (Libertarian Party)	STATE REPRESENTATIVE DISTRICT 87 (Libertarian Party)
+CandidateContest	MT House District 88 (Libertarian Party)	STATE REPRESENTATIVE DISTRICT 88 (Libertarian Party)
+CandidateContest	MT House District 89 (Libertarian Party)	STATE REPRESENTATIVE DISTRICT 89 (Libertarian Party)
+CandidateContest	MT House District 90 (Libertarian Party)	STATE REPRESENTATIVE DISTRICT 90 (Libertarian Party)
+CandidateContest	MT House District 91 (Libertarian Party)	STATE REPRESENTATIVE DISTRICT 91 (Libertarian Party)
+CandidateContest	MT House District 92 (Libertarian Party)	STATE REPRESENTATIVE DISTRICT 92 (Libertarian Party)
+CandidateContest	MT House District 93 (Libertarian Party)	STATE REPRESENTATIVE DISTRICT 93 (Libertarian Party)
+CandidateContest	MT House District 94 (Libertarian Party)	STATE REPRESENTATIVE DISTRICT 94 (Libertarian Party)
+CandidateContest	MT House District 95 (Libertarian Party)	STATE REPRESENTATIVE DISTRICT 95 (Libertarian Party)
+CandidateContest	MT House District 96 (Libertarian Party)	STATE REPRESENTATIVE DISTRICT 96 (Libertarian Party)
+CandidateContest	MT House District 97 (Libertarian Party)	STATE REPRESENTATIVE DISTRICT 97 (Libertarian Party)
+CandidateContest	MT House District 98 (Libertarian Party)	STATE REPRESENTATIVE DISTRICT 98 (Libertarian Party)
+CandidateContest	MT House District 99 (Libertarian Party)	STATE REPRESENTATIVE DISTRICT 99 (Libertarian Party)
+CandidateContest	MT House District 100 (Libertarian Party)	STATE REPRESENTATIVE DISTRICT 100 (Libertarian Party)
+CandidateContest	MT Senate District 1 (Libertarian Party)	STATE SENATOR DISTRICT 1 (Libertarian Party)
+CandidateContest	MT Senate District 2 (Libertarian Party)	STATE SENATOR DISTRICT 2 (Libertarian Party)
+CandidateContest	MT Senate District 3 (Libertarian Party)	STATE SENATOR DISTRICT 3 (Libertarian Party)
+CandidateContest	MT Senate District 4 (Libertarian Party)	STATE SENATOR DISTRICT 4 (Libertarian Party)
+CandidateContest	MT Senate District 5 (Libertarian Party)	STATE SENATOR DISTRICT 5 (Libertarian Party)
+CandidateContest	MT Senate District 6 (Libertarian Party)	STATE SENATOR DISTRICT 6 (Libertarian Party)
+CandidateContest	MT Senate District 7 (Libertarian Party)	STATE SENATOR DISTRICT 7 (Libertarian Party)
+CandidateContest	MT Senate District 8 (Libertarian Party)	STATE SENATOR DISTRICT 8 (Libertarian Party)
+CandidateContest	MT Senate District 9 (Libertarian Party)	STATE SENATOR DISTRICT 9 (Libertarian Party)
+CandidateContest	MT Senate District 10 (Libertarian Party)	STATE SENATOR DISTRICT 10 (Libertarian Party)
+CandidateContest	MT Senate District 11 (Libertarian Party)	STATE SENATOR DISTRICT 11 (Libertarian Party)
+CandidateContest	MT Senate District 12 (Libertarian Party)	STATE SENATOR DISTRICT 12 (Libertarian Party)
+CandidateContest	MT Senate District 13 (Libertarian Party)	STATE SENATOR DISTRICT 13 (Libertarian Party)
+CandidateContest	MT Senate District 14 (Libertarian Party)	STATE SENATOR DISTRICT 14 (Libertarian Party)
+CandidateContest	MT Senate District 15 (Libertarian Party)	STATE SENATOR DISTRICT 15 (Libertarian Party)
+CandidateContest	MT Senate District 16 (Libertarian Party)	STATE SENATOR DISTRICT 16 (Libertarian Party)
+CandidateContest	MT Senate District 17 (Libertarian Party)	STATE SENATOR DISTRICT 17 (Libertarian Party)
+CandidateContest	MT Senate District 18 (Libertarian Party)	STATE SENATOR DISTRICT 18 (Libertarian Party)
+CandidateContest	MT Senate District 19 (Libertarian Party)	STATE SENATOR DISTRICT 19 (Libertarian Party)
+CandidateContest	MT Senate District 20 (Libertarian Party)	STATE SENATOR DISTRICT 20 (Libertarian Party)
+CandidateContest	MT Senate District 21 (Libertarian Party)	STATE SENATOR DISTRICT 21 (Libertarian Party)
+CandidateContest	MT Senate District 22 (Libertarian Party)	STATE SENATOR DISTRICT 22 (Libertarian Party)
+CandidateContest	MT Senate District 23 (Libertarian Party)	STATE SENATOR DISTRICT 23 (Libertarian Party)
+CandidateContest	MT Senate District 24 (Libertarian Party)	STATE SENATOR DISTRICT 24 (Libertarian Party)
+CandidateContest	MT Senate District 25 (Libertarian Party)	STATE SENATOR DISTRICT 25 (Libertarian Party)
+CandidateContest	MT Senate District 26 (Libertarian Party)	STATE SENATOR DISTRICT 26 (Libertarian Party)
+CandidateContest	MT Senate District 27 (Libertarian Party)	STATE SENATOR DISTRICT 27 (Libertarian Party)
+CandidateContest	MT Senate District 28 (Libertarian Party)	STATE SENATOR DISTRICT 28 (Libertarian Party)
+CandidateContest	MT Senate District 29 (Libertarian Party)	STATE SENATOR DISTRICT 29 (Libertarian Party)
+CandidateContest	MT Senate District 30 (Libertarian Party)	STATE SENATOR DISTRICT 30 (Libertarian Party)
+CandidateContest	MT Senate District 31 (Libertarian Party)	STATE SENATOR DISTRICT 31 (Libertarian Party)
+CandidateContest	MT Senate District 32 (Libertarian Party)	STATE SENATOR DISTRICT 32 (Libertarian Party)
+CandidateContest	MT Senate District 33 (Libertarian Party)	STATE SENATOR DISTRICT 33 (Libertarian Party)
+CandidateContest	MT Senate District 34 (Libertarian Party)	STATE SENATOR DISTRICT 34 (Libertarian Party)
+CandidateContest	MT Senate District 35 (Libertarian Party)	STATE SENATOR DISTRICT 35 (Libertarian Party)
+CandidateContest	MT Senate District 36 (Libertarian Party)	STATE SENATOR DISTRICT 36 (Libertarian Party)
+CandidateContest	MT Senate District 37 (Libertarian Party)	STATE SENATOR DISTRICT 37 (Libertarian Party)
+CandidateContest	MT Senate District 38 (Libertarian Party)	STATE SENATOR DISTRICT 38 (Libertarian Party)
+CandidateContest	MT Senate District 39 (Libertarian Party)	STATE SENATOR DISTRICT 39 (Libertarian Party)
+CandidateContest	MT Senate District 40 (Libertarian Party)	STATE SENATOR DISTRICT 40 (Libertarian Party)
+CandidateContest	MT Senate District 41 (Libertarian Party)	STATE SENATOR DISTRICT 41 (Libertarian Party)
+CandidateContest	MT Senate District 42 (Libertarian Party)	STATE SENATOR DISTRICT 42 (Libertarian Party)
+CandidateContest	MT Senate District 43 (Libertarian Party)	STATE SENATOR DISTRICT 43 (Libertarian Party)
+CandidateContest	MT Senate District 44 (Libertarian Party)	STATE SENATOR DISTRICT 44 (Libertarian Party)
+CandidateContest	MT Senate District 45 (Libertarian Party)	STATE SENATOR DISTRICT 45 (Libertarian Party)
+CandidateContest	MT Senate District 46 (Libertarian Party)	STATE SENATOR DISTRICT 46 (Libertarian Party)
+CandidateContest	MT Senate District 47 (Libertarian Party)	STATE SENATOR DISTRICT 47 (Libertarian Party)
+CandidateContest	MT Senate District 48 (Libertarian Party)	STATE SENATOR DISTRICT 48 (Libertarian Party)
+CandidateContest	MT Senate District 49 (Libertarian Party)	STATE SENATOR DISTRICT 49 (Libertarian Party)
+CandidateContest	MT Senate District 50 (Libertarian Party)	STATE SENATOR DISTRICT 50 (Libertarian Party)
+CandidateContest	US House MT District 1 (Libertarian Party)	UNITED STATES REPRESENTATIVE (Libertarian Party)
+CandidateContest	US President (MT) (Libertarian Party)	PRESIDENT (Libertarian Party)
+CandidateContest	MT Governor (Libertarian Party)	GOVERNOR & LT. GOVERNOR (Libertarian Party)
+CandidateContest	US Senate MT (Libertarian Party)	UNITED STATES SENATOR (Libertarian Party)
+CandidateContest	MT State Auditor (Libertarian Party)	ATTORNEY GENERAL (Libertarian Party)
+CandidateContest	MT State Superintendent (Libertarian Party)	STATE SUPERINTENDENT OF PUBLIC INSTRUCTION (Libertarian Party)
+CandidateContest	MT Attorney General (Libertarian Party)	STATE AUDITOR (Libertarian Party)
+CandidateContest	MT Lieutenant Governor (Libertarian Party)	MT Lieutenant Governor (Libertarian Party)
+CandidateContest	MT Treasurer (Libertarian Party)	MT Treasurer (Libertarian Party)
+CandidateContest	MT Secretary of State (Libertarian Party)	SECRETARY OF STATE (Libertarian Party)
+CandidateContest	MT House District 1	STATE REPRESENTATIVE DISTRICT 1
+CandidateContest	MT House District 2	STATE REPRESENTATIVE DISTRICT 2
+CandidateContest	MT House District 3	STATE REPRESENTATIVE DISTRICT 3
+CandidateContest	MT House District 4	STATE REPRESENTATIVE DISTRICT 4
+CandidateContest	MT House District 5	STATE REPRESENTATIVE DISTRICT 5
+CandidateContest	MT House District 6	STATE REPRESENTATIVE DISTRICT 6
+CandidateContest	MT House District 7	STATE REPRESENTATIVE DISTRICT 7
+CandidateContest	MT House District 8	STATE REPRESENTATIVE DISTRICT 8
+CandidateContest	MT House District 9	STATE REPRESENTATIVE DISTRICT 9
+CandidateContest	MT House District 10	STATE REPRESENTATIVE DISTRICT 10
+CandidateContest	MT House District 11	STATE REPRESENTATIVE DISTRICT 11
+CandidateContest	MT House District 12	STATE REPRESENTATIVE DISTRICT 12
+CandidateContest	MT House District 13	STATE REPRESENTATIVE DISTRICT 13
+CandidateContest	MT House District 14	STATE REPRESENTATIVE DISTRICT 14
+CandidateContest	MT House District 15	STATE REPRESENTATIVE DISTRICT 15
+CandidateContest	MT House District 16	STATE REPRESENTATIVE DISTRICT 16
+CandidateContest	MT House District 17	STATE REPRESENTATIVE DISTRICT 17
+CandidateContest	MT House District 18	STATE REPRESENTATIVE DISTRICT 18
+CandidateContest	MT House District 19	STATE REPRESENTATIVE DISTRICT 19
+CandidateContest	MT House District 20	STATE REPRESENTATIVE DISTRICT 20
+CandidateContest	MT House District 21	STATE REPRESENTATIVE DISTRICT 21
+CandidateContest	MT House District 22	STATE REPRESENTATIVE DISTRICT 22
+CandidateContest	MT House District 23	STATE REPRESENTATIVE DISTRICT 23
+CandidateContest	MT House District 24	STATE REPRESENTATIVE DISTRICT 24
+CandidateContest	MT House District 25	STATE REPRESENTATIVE DISTRICT 25
+CandidateContest	MT House District 26	STATE REPRESENTATIVE DISTRICT 26
+CandidateContest	MT House District 27	STATE REPRESENTATIVE DISTRICT 27
+CandidateContest	MT House District 28	STATE REPRESENTATIVE DISTRICT 28
+CandidateContest	MT House District 29	STATE REPRESENTATIVE DISTRICT 29
+CandidateContest	MT House District 30	STATE REPRESENTATIVE DISTRICT 30
+CandidateContest	MT House District 31	STATE REPRESENTATIVE DISTRICT 31
+CandidateContest	MT House District 32	STATE REPRESENTATIVE DISTRICT 32
+CandidateContest	MT House District 33	STATE REPRESENTATIVE DISTRICT 33
+CandidateContest	MT House District 34	STATE REPRESENTATIVE DISTRICT 34
+CandidateContest	MT House District 35	STATE REPRESENTATIVE DISTRICT 35
+CandidateContest	MT House District 36	STATE REPRESENTATIVE DISTRICT 36
+CandidateContest	MT House District 37	STATE REPRESENTATIVE DISTRICT 37
+CandidateContest	MT House District 38	STATE REPRESENTATIVE DISTRICT 38
+CandidateContest	MT House District 39	STATE REPRESENTATIVE DISTRICT 39
+CandidateContest	MT House District 40	STATE REPRESENTATIVE DISTRICT 40
+CandidateContest	MT House District 41	STATE REPRESENTATIVE DISTRICT 41
+CandidateContest	MT House District 42	STATE REPRESENTATIVE DISTRICT 42
+CandidateContest	MT House District 43	STATE REPRESENTATIVE DISTRICT 43
+CandidateContest	MT House District 44	STATE REPRESENTATIVE DISTRICT 44
+CandidateContest	MT House District 45	STATE REPRESENTATIVE DISTRICT 45
+CandidateContest	MT House District 46	STATE REPRESENTATIVE DISTRICT 46
+CandidateContest	MT House District 47	STATE REPRESENTATIVE DISTRICT 47
+CandidateContest	MT House District 48	STATE REPRESENTATIVE DISTRICT 48
+CandidateContest	MT House District 49	STATE REPRESENTATIVE DISTRICT 49
+CandidateContest	MT House District 50	STATE REPRESENTATIVE DISTRICT 50
+CandidateContest	MT House District 51	STATE REPRESENTATIVE DISTRICT 51
+CandidateContest	MT House District 52	STATE REPRESENTATIVE DISTRICT 52
+CandidateContest	MT House District 53	STATE REPRESENTATIVE DISTRICT 53
+CandidateContest	MT House District 54	STATE REPRESENTATIVE DISTRICT 54
+CandidateContest	MT House District 55	STATE REPRESENTATIVE DISTRICT 55
+CandidateContest	MT House District 56	STATE REPRESENTATIVE DISTRICT 56
+CandidateContest	MT House District 57	STATE REPRESENTATIVE DISTRICT 57
+CandidateContest	MT House District 58	STATE REPRESENTATIVE DISTRICT 58
+CandidateContest	MT House District 59	STATE REPRESENTATIVE DISTRICT 59
+CandidateContest	MT House District 60	STATE REPRESENTATIVE DISTRICT 60
+CandidateContest	MT House District 61	STATE REPRESENTATIVE DISTRICT 61
+CandidateContest	MT House District 62	STATE REPRESENTATIVE DISTRICT 62
+CandidateContest	MT House District 63	STATE REPRESENTATIVE DISTRICT 63
+CandidateContest	MT House District 64	STATE REPRESENTATIVE DISTRICT 64
+CandidateContest	MT House District 65	STATE REPRESENTATIVE DISTRICT 65
+CandidateContest	MT House District 66	STATE REPRESENTATIVE DISTRICT 66
+CandidateContest	MT House District 67	STATE REPRESENTATIVE DISTRICT 67
+CandidateContest	MT House District 68	STATE REPRESENTATIVE DISTRICT 68
+CandidateContest	MT House District 69	STATE REPRESENTATIVE DISTRICT 69
+CandidateContest	MT House District 70	STATE REPRESENTATIVE DISTRICT 70
+CandidateContest	MT House District 71	STATE REPRESENTATIVE DISTRICT 71
+CandidateContest	MT House District 72	STATE REPRESENTATIVE DISTRICT 72
+CandidateContest	MT House District 73	STATE REPRESENTATIVE DISTRICT 73
+CandidateContest	MT House District 74	STATE REPRESENTATIVE DISTRICT 74
+CandidateContest	MT House District 75	STATE REPRESENTATIVE DISTRICT 75
+CandidateContest	MT House District 76	STATE REPRESENTATIVE DISTRICT 76
+CandidateContest	MT House District 77	STATE REPRESENTATIVE DISTRICT 77
+CandidateContest	MT House District 78	STATE REPRESENTATIVE DISTRICT 78
+CandidateContest	MT House District 79	STATE REPRESENTATIVE DISTRICT 79
+CandidateContest	MT House District 80	STATE REPRESENTATIVE DISTRICT 80
+CandidateContest	MT House District 81	STATE REPRESENTATIVE DISTRICT 81
+CandidateContest	MT House District 82	STATE REPRESENTATIVE DISTRICT 82
+CandidateContest	MT House District 83	STATE REPRESENTATIVE DISTRICT 83
+CandidateContest	MT House District 84	STATE REPRESENTATIVE DISTRICT 84
+CandidateContest	MT House District 85	STATE REPRESENTATIVE DISTRICT 85
+CandidateContest	MT House District 86	STATE REPRESENTATIVE DISTRICT 86
+CandidateContest	MT House District 87	STATE REPRESENTATIVE DISTRICT 87
+CandidateContest	MT House District 88	STATE REPRESENTATIVE DISTRICT 88
+CandidateContest	MT House District 89	STATE REPRESENTATIVE DISTRICT 89
+CandidateContest	MT House District 90	STATE REPRESENTATIVE DISTRICT 90
+CandidateContest	MT House District 91	STATE REPRESENTATIVE DISTRICT 91
+CandidateContest	MT House District 92	STATE REPRESENTATIVE DISTRICT 92
+CandidateContest	MT House District 93	STATE REPRESENTATIVE DISTRICT 93
+CandidateContest	MT House District 94	STATE REPRESENTATIVE DISTRICT 94
+CandidateContest	MT House District 95	STATE REPRESENTATIVE DISTRICT 95
+CandidateContest	MT House District 96	STATE REPRESENTATIVE DISTRICT 96
+CandidateContest	MT House District 97	STATE REPRESENTATIVE DISTRICT 97
+CandidateContest	MT House District 98	STATE REPRESENTATIVE DISTRICT 98
+CandidateContest	MT House District 99	STATE REPRESENTATIVE DISTRICT 99
+CandidateContest	MT House District 100	STATE REPRESENTATIVE DISTRICT 100
+CandidateContest	MT Senate District 1	STATE SENATOR DISTRICT 1
+CandidateContest	MT Senate District 2	STATE SENATOR DISTRICT 2
+CandidateContest	MT Senate District 3	STATE SENATOR DISTRICT 3
+CandidateContest	MT Senate District 4	STATE SENATOR DISTRICT 4
+CandidateContest	MT Senate District 5	STATE SENATOR DISTRICT 5
+CandidateContest	MT Senate District 6	STATE SENATOR DISTRICT 6
+CandidateContest	MT Senate District 7	STATE SENATOR DISTRICT 7
+CandidateContest	MT Senate District 8	STATE SENATOR DISTRICT 8
+CandidateContest	MT Senate District 9	STATE SENATOR DISTRICT 9
+CandidateContest	MT Senate District 10	STATE SENATOR DISTRICT 10
+CandidateContest	MT Senate District 11	STATE SENATOR DISTRICT 11
+CandidateContest	MT Senate District 12	STATE SENATOR DISTRICT 12
+CandidateContest	MT Senate District 13	STATE SENATOR DISTRICT 13
+CandidateContest	MT Senate District 14	STATE SENATOR DISTRICT 14
+CandidateContest	MT Senate District 15	STATE SENATOR DISTRICT 15
+CandidateContest	MT Senate District 16	STATE SENATOR DISTRICT 16
+CandidateContest	MT Senate District 17	STATE SENATOR DISTRICT 17
+CandidateContest	MT Senate District 18	STATE SENATOR DISTRICT 18
+CandidateContest	MT Senate District 19	STATE SENATOR DISTRICT 19
+CandidateContest	MT Senate District 20	STATE SENATOR DISTRICT 20
+CandidateContest	MT Senate District 21	STATE SENATOR DISTRICT 21
+CandidateContest	MT Senate District 22	STATE SENATOR DISTRICT 22
+CandidateContest	MT Senate District 23	STATE SENATOR DISTRICT 23
+CandidateContest	MT Senate District 24	STATE SENATOR DISTRICT 24
+CandidateContest	MT Senate District 25	STATE SENATOR DISTRICT 25
+CandidateContest	MT Senate District 26	STATE SENATOR DISTRICT 26
+CandidateContest	MT Senate District 27	STATE SENATOR DISTRICT 27
+CandidateContest	MT Senate District 28	STATE SENATOR DISTRICT 28
+CandidateContest	MT Senate District 29	STATE SENATOR DISTRICT 29
+CandidateContest	MT Senate District 30	STATE SENATOR DISTRICT 30
+CandidateContest	MT Senate District 31	STATE SENATOR DISTRICT 31
+CandidateContest	MT Senate District 32	STATE SENATOR DISTRICT 32
+CandidateContest	MT Senate District 33	STATE SENATOR DISTRICT 33
+CandidateContest	MT Senate District 34	STATE SENATOR DISTRICT 34
+CandidateContest	MT Senate District 35	STATE SENATOR DISTRICT 35
+CandidateContest	MT Senate District 36	STATE SENATOR DISTRICT 36
+CandidateContest	MT Senate District 37	STATE SENATOR DISTRICT 37
+CandidateContest	MT Senate District 38	STATE SENATOR DISTRICT 38
+CandidateContest	MT Senate District 39	STATE SENATOR DISTRICT 39
+CandidateContest	MT Senate District 40	STATE SENATOR DISTRICT 40
+CandidateContest	MT Senate District 41	STATE SENATOR DISTRICT 41
+CandidateContest	MT Senate District 42	STATE SENATOR DISTRICT 42
+CandidateContest	MT Senate District 43	STATE SENATOR DISTRICT 43
+CandidateContest	MT Senate District 44	STATE SENATOR DISTRICT 44
+CandidateContest	MT Senate District 45	STATE SENATOR DISTRICT 45
+CandidateContest	MT Senate District 46	STATE SENATOR DISTRICT 46
+CandidateContest	MT Senate District 47	STATE SENATOR DISTRICT 47
+CandidateContest	MT Senate District 48	STATE SENATOR DISTRICT 48
+CandidateContest	MT Senate District 49	STATE SENATOR DISTRICT 49
+CandidateContest	MT Senate District 50	STATE SENATOR DISTRICT 50
+CandidateContest	US House MT District 1	UNITED STATES REPRESENTATIVE
+CandidateContest	US President (MT)	PRESIDENT
+CandidateContest	MT Governor	GOVERNOR & LT. GOVERNOR
+CandidateContest	US Senate MT	UNITED STATES SENATOR
+CandidateContest	MT State Auditor	ATTORNEY GENERAL
+CandidateContest	MT State Superintendent	STATE SUPERINTENDENT OF PUBLIC INSTRUCTION
+CandidateContest	MT Attorney General	STATE AUDITOR
+CandidateContest	MT Lieutenant Governor	MT Lieutenant Governor
+CandidateContest	MT Treasurer	MT Treasurer
+CandidateContest	MT Secretary of State	SECRETARY OF STATE
+Election	2020 General	2020 General
+Election	2020 Primary	2020 Primary
+Election	2018 General	2018 General
+Election	2016 General	2016 General
+Party	Democratic Party	Democratic
+Party	Democratic Party	Democrat
+Party	Democratic Party	DEM
+Party	Republican Party	REP
+Party	Republican Party	Republican
+Party	Green Party	Green
+Party	Green Party	GRN
+Party	Libertarian Party	Libertarian
+ReportingUnit	Montana;MT House District 1	Montana;MT House District 1
+ReportingUnit	Montana;MT House District 2	Montana;MT House District 2
+ReportingUnit	Montana;MT House District 3	Montana;MT House District 3
+ReportingUnit	Montana;MT House District 4	Montana;MT House District 4
+ReportingUnit	Montana;MT House District 5	Montana;MT House District 5
+ReportingUnit	Montana;MT House District 6	Montana;MT House District 6
+ReportingUnit	Montana;MT House District 7	Montana;MT House District 7
+ReportingUnit	Montana;MT House District 8	Montana;MT House District 8
+ReportingUnit	Montana;MT House District 9	Montana;MT House District 9
+ReportingUnit	Montana;MT House District 10	Montana;MT House District 10
+ReportingUnit	Montana;MT House District 11	Montana;MT House District 11
+ReportingUnit	Montana;MT House District 12	Montana;MT House District 12
+ReportingUnit	Montana;MT House District 13	Montana;MT House District 13
+ReportingUnit	Montana;MT House District 14	Montana;MT House District 14
+ReportingUnit	Montana;MT House District 15	Montana;MT House District 15
+ReportingUnit	Montana;MT House District 16	Montana;MT House District 16
+ReportingUnit	Montana;MT House District 17	Montana;MT House District 17
+ReportingUnit	Montana;MT House District 18	Montana;MT House District 18
+ReportingUnit	Montana;MT House District 19	Montana;MT House District 19
+ReportingUnit	Montana;MT House District 20	Montana;MT House District 20
+ReportingUnit	Montana;MT House District 21	Montana;MT House District 21
+ReportingUnit	Montana;MT House District 22	Montana;MT House District 22
+ReportingUnit	Montana;MT House District 23	Montana;MT House District 23
+ReportingUnit	Montana;MT House District 24	Montana;MT House District 24
+ReportingUnit	Montana;MT House District 25	Montana;MT House District 25
+ReportingUnit	Montana;MT House District 26	Montana;MT House District 26
+ReportingUnit	Montana;MT House District 27	Montana;MT House District 27
+ReportingUnit	Montana;MT House District 28	Montana;MT House District 28
+ReportingUnit	Montana;MT House District 29	Montana;MT House District 29
+ReportingUnit	Montana;MT House District 30	Montana;MT House District 30
+ReportingUnit	Montana;MT House District 31	Montana;MT House District 31
+ReportingUnit	Montana;MT House District 32	Montana;MT House District 32
+ReportingUnit	Montana;MT House District 33	Montana;MT House District 33
+ReportingUnit	Montana;MT House District 34	Montana;MT House District 34
+ReportingUnit	Montana;MT House District 35	Montana;MT House District 35
+ReportingUnit	Montana;MT House District 36	Montana;MT House District 36
+ReportingUnit	Montana;MT House District 37	Montana;MT House District 37
+ReportingUnit	Montana;MT House District 38	Montana;MT House District 38
+ReportingUnit	Montana;MT House District 39	Montana;MT House District 39
+ReportingUnit	Montana;MT House District 40	Montana;MT House District 40
+ReportingUnit	Montana;MT House District 41	Montana;MT House District 41
+ReportingUnit	Montana;MT House District 42	Montana;MT House District 42
+ReportingUnit	Montana;MT House District 43	Montana;MT House District 43
+ReportingUnit	Montana;MT House District 44	Montana;MT House District 44
+ReportingUnit	Montana;MT House District 45	Montana;MT House District 45
+ReportingUnit	Montana;MT House District 46	Montana;MT House District 46
+ReportingUnit	Montana;MT House District 47	Montana;MT House District 47
+ReportingUnit	Montana;MT House District 48	Montana;MT House District 48
+ReportingUnit	Montana;MT House District 49	Montana;MT House District 49
+ReportingUnit	Montana;MT House District 50	Montana;MT House District 50
+ReportingUnit	Montana;MT House District 51	Montana;MT House District 51
+ReportingUnit	Montana;MT House District 52	Montana;MT House District 52
+ReportingUnit	Montana;MT House District 53	Montana;MT House District 53
+ReportingUnit	Montana;MT House District 54	Montana;MT House District 54
+ReportingUnit	Montana;MT House District 55	Montana;MT House District 55
+ReportingUnit	Montana;MT House District 56	Montana;MT House District 56
+ReportingUnit	Montana;MT House District 57	Montana;MT House District 57
+ReportingUnit	Montana;MT House District 58	Montana;MT House District 58
+ReportingUnit	Montana;MT House District 59	Montana;MT House District 59
+ReportingUnit	Montana;MT House District 60	Montana;MT House District 60
+ReportingUnit	Montana;MT House District 61	Montana;MT House District 61
+ReportingUnit	Montana;MT House District 62	Montana;MT House District 62
+ReportingUnit	Montana;MT House District 63	Montana;MT House District 63
+ReportingUnit	Montana;MT House District 64	Montana;MT House District 64
+ReportingUnit	Montana;MT House District 65	Montana;MT House District 65
+ReportingUnit	Montana;MT House District 66	Montana;MT House District 66
+ReportingUnit	Montana;MT House District 67	Montana;MT House District 67
+ReportingUnit	Montana;MT House District 68	Montana;MT House District 68
+ReportingUnit	Montana;MT House District 69	Montana;MT House District 69
+ReportingUnit	Montana;MT House District 70	Montana;MT House District 70
+ReportingUnit	Montana;MT House District 71	Montana;MT House District 71
+ReportingUnit	Montana;MT House District 72	Montana;MT House District 72
+ReportingUnit	Montana;MT House District 73	Montana;MT House District 73
+ReportingUnit	Montana;MT House District 74	Montana;MT House District 74
+ReportingUnit	Montana;MT House District 75	Montana;MT House District 75
+ReportingUnit	Montana;MT House District 76	Montana;MT House District 76
+ReportingUnit	Montana;MT House District 77	Montana;MT House District 77
+ReportingUnit	Montana;MT House District 78	Montana;MT House District 78
+ReportingUnit	Montana;MT House District 79	Montana;MT House District 79
+ReportingUnit	Montana;MT House District 80	Montana;MT House District 80
+ReportingUnit	Montana;MT House District 81	Montana;MT House District 81
+ReportingUnit	Montana;MT House District 82	Montana;MT House District 82
+ReportingUnit	Montana;MT House District 83	Montana;MT House District 83
+ReportingUnit	Montana;MT House District 84	Montana;MT House District 84
+ReportingUnit	Montana;MT House District 85	Montana;MT House District 85
+ReportingUnit	Montana;MT House District 86	Montana;MT House District 86
+ReportingUnit	Montana;MT House District 87	Montana;MT House District 87
+ReportingUnit	Montana;MT House District 88	Montana;MT House District 88
+ReportingUnit	Montana;MT House District 89	Montana;MT House District 89
+ReportingUnit	Montana;MT House District 90	Montana;MT House District 90
+ReportingUnit	Montana;MT House District 91	Montana;MT House District 91
+ReportingUnit	Montana;MT House District 92	Montana;MT House District 92
+ReportingUnit	Montana;MT House District 93	Montana;MT House District 93
+ReportingUnit	Montana;MT House District 94	Montana;MT House District 94
+ReportingUnit	Montana;MT House District 95	Montana;MT House District 95
+ReportingUnit	Montana;MT House District 96	Montana;MT House District 96
+ReportingUnit	Montana;MT House District 97	Montana;MT House District 97
+ReportingUnit	Montana;MT House District 98	Montana;MT House District 98
+ReportingUnit	Montana;MT House District 99	Montana;MT House District 99
+ReportingUnit	Montana;MT House District 100	Montana;MT House District 100
+ReportingUnit	Montana;MT Senate District 1	Montana;MT Senate District 1
+ReportingUnit	Montana;MT Senate District 2	Montana;MT Senate District 2
+ReportingUnit	Montana;MT Senate District 3	Montana;MT Senate District 3
+ReportingUnit	Montana;MT Senate District 4	Montana;MT Senate District 4
+ReportingUnit	Montana;MT Senate District 5	Montana;MT Senate District 5
+ReportingUnit	Montana;MT Senate District 6	Montana;MT Senate District 6
+ReportingUnit	Montana;MT Senate District 7	Montana;MT Senate District 7
+ReportingUnit	Montana;MT Senate District 8	Montana;MT Senate District 8
+ReportingUnit	Montana;MT Senate District 9	Montana;MT Senate District 9
+ReportingUnit	Montana;MT Senate District 10	Montana;MT Senate District 10
+ReportingUnit	Montana;MT Senate District 11	Montana;MT Senate District 11
+ReportingUnit	Montana;MT Senate District 12	Montana;MT Senate District 12
+ReportingUnit	Montana;MT Senate District 13	Montana;MT Senate District 13
+ReportingUnit	Montana;MT Senate District 14	Montana;MT Senate District 14
+ReportingUnit	Montana;MT Senate District 15	Montana;MT Senate District 15
+ReportingUnit	Montana;MT Senate District 16	Montana;MT Senate District 16
+ReportingUnit	Montana;MT Senate District 17	Montana;MT Senate District 17
+ReportingUnit	Montana;MT Senate District 18	Montana;MT Senate District 18
+ReportingUnit	Montana;MT Senate District 19	Montana;MT Senate District 19
+ReportingUnit	Montana;MT Senate District 20	Montana;MT Senate District 20
+ReportingUnit	Montana;MT Senate District 21	Montana;MT Senate District 21
+ReportingUnit	Montana;MT Senate District 22	Montana;MT Senate District 22
+ReportingUnit	Montana;MT Senate District 23	Montana;MT Senate District 23
+ReportingUnit	Montana;MT Senate District 24	Montana;MT Senate District 24
+ReportingUnit	Montana;MT Senate District 25	Montana;MT Senate District 25
+ReportingUnit	Montana;MT Senate District 26	Montana;MT Senate District 26
+ReportingUnit	Montana;MT Senate District 27	Montana;MT Senate District 27
+ReportingUnit	Montana;MT Senate District 28	Montana;MT Senate District 28
+ReportingUnit	Montana;MT Senate District 29	Montana;MT Senate District 29
+ReportingUnit	Montana;MT Senate District 30	Montana;MT Senate District 30
+ReportingUnit	Montana;MT Senate District 31	Montana;MT Senate District 31
+ReportingUnit	Montana;MT Senate District 32	Montana;MT Senate District 32
+ReportingUnit	Montana;MT Senate District 33	Montana;MT Senate District 33
+ReportingUnit	Montana;MT Senate District 34	Montana;MT Senate District 34
+ReportingUnit	Montana;MT Senate District 35	Montana;MT Senate District 35
+ReportingUnit	Montana;MT Senate District 36	Montana;MT Senate District 36
+ReportingUnit	Montana;MT Senate District 37	Montana;MT Senate District 37
+ReportingUnit	Montana;MT Senate District 38	Montana;MT Senate District 38
+ReportingUnit	Montana;MT Senate District 39	Montana;MT Senate District 39
+ReportingUnit	Montana;MT Senate District 40	Montana;MT Senate District 40
+ReportingUnit	Montana;MT Senate District 41	Montana;MT Senate District 41
+ReportingUnit	Montana;MT Senate District 42	Montana;MT Senate District 42
+ReportingUnit	Montana;MT Senate District 43	Montana;MT Senate District 43
+ReportingUnit	Montana;MT Senate District 44	Montana;MT Senate District 44
+ReportingUnit	Montana;MT Senate District 45	Montana;MT Senate District 45
+ReportingUnit	Montana;MT Senate District 46	Montana;MT Senate District 46
+ReportingUnit	Montana;MT Senate District 47	Montana;MT Senate District 47
+ReportingUnit	Montana;MT Senate District 48	Montana;MT Senate District 48
+ReportingUnit	Montana;MT Senate District 49	Montana;MT Senate District 49
+ReportingUnit	Montana;MT Senate District 50	Montana;MT Senate District 50
+ReportingUnit	Montana;US House MT District 1	Montana;US House MT District 1
+ReportingUnit	Montana	Montana
+ReportingUnit	Montana;Beaverhead County	Beaverhead
+ReportingUnit	Montana;Big Horn County	Big Horn
+ReportingUnit	Montana;Blaine County	Blaine
+ReportingUnit	Montana;Broadwater County	Broadwater
+ReportingUnit	Montana;Carbon County	Carbon
+ReportingUnit	Montana;Carter County	Carter
+ReportingUnit	Montana;Cascade County	Cascade
+ReportingUnit	Montana;Chouteau County	Chouteau
+ReportingUnit	Montana;Custer County	Custer
+ReportingUnit	Montana;Daniels County	Daniels
+ReportingUnit	Montana;Dawson County	Dawson
+ReportingUnit	Montana;Deer Lodge County	Deer Lodge
+ReportingUnit	Montana;Fallon County	Fallon
+ReportingUnit	Montana;Fergus County	Fergus
+ReportingUnit	Montana;Flathead County	Flathead
+ReportingUnit	Montana;Gallatin County	Gallatin
+ReportingUnit	Montana;Garfield County	Garfield
+ReportingUnit	Montana;Glacier County	Glacier
+ReportingUnit	Montana;Golden Valley County	Golden Valley
+ReportingUnit	Montana;Granite County	Granite
+ReportingUnit	Montana;Hill County	Hill
+ReportingUnit	Montana;Jefferson County	Jefferson
+ReportingUnit	Montana;Judith Basin County	Judith Basin
+ReportingUnit	Montana;Lake County	Lake
+ReportingUnit	Montana;Lewis & Clark County	Lewis & Clark
+ReportingUnit	Montana;Liberty County	Liberty
+ReportingUnit	Montana;Lincoln County	Lincoln
+ReportingUnit	Montana;Madison County	Madison
+ReportingUnit	Montana;McCone County	McCone
+ReportingUnit	Montana;Meagher County	Meagher
+ReportingUnit	Montana;Mineral County	Mineral
+ReportingUnit	Montana;Missoula County	Missoula
+ReportingUnit	Montana;Musselshell County	Musselshell
+ReportingUnit	Montana;Park County	Park
+ReportingUnit	Montana;Petroleum County	Petroleum
+ReportingUnit	Montana;Phillips County	Phillips
+ReportingUnit	Montana;Pondera County	Pondera
+ReportingUnit	Montana;Powder River County	Powder River
+ReportingUnit	Montana;Powell County	Powell
+ReportingUnit	Montana;Prairie County	Prairie
+ReportingUnit	Montana;Ravalli County	Ravalli
+ReportingUnit	Montana;Richland County	Richland
+ReportingUnit	Montana;Roosevelt County	Roosevelt
+ReportingUnit	Montana;Rosebud County	Rosebud
+ReportingUnit	Montana;Sanders County	Sanders
+ReportingUnit	Montana;Sheridan County	Sheridan
+ReportingUnit	Montana;Silver Bow County	Silver Bow
+ReportingUnit	Montana;Stillwater County	Stillwater
+ReportingUnit	Montana;Sweet Grass County	Sweet Grass
+ReportingUnit	Montana;Teton County	Teton
+ReportingUnit	Montana;Toole County	Toole
+ReportingUnit	Montana;Treasure County	Treasure
+ReportingUnit	Montana;Valley County	Valley
+ReportingUnit	Montana;Wheatland County	Wheatland
+ReportingUnit	Montana;Wibaux County	Wibaux
+ReportingUnit	Montana;Yellowstone County	Yellowstone
+Candidate	BERNIE SANDERS	BERNIE SANDERS
+Candidate	ELIZABETH WARREN	ELIZABETH WARREN
+Candidate	JOSEPH R. BIDEN	JOSEPH R. BIDEN
+Candidate	NO PREFERENCE	NO PREFERENCE
+Candidate	DONALD J TRUMP	DONALD J TRUMP
+Candidate	STEVE BULLOCK	STEVE BULLOCK
+Candidate	MIKE KNOLES	MIKE KNOLES
+Candidate	JOHN MUES	JOHN MUES
+Candidate	DENNIS DANEKE	DENNIS DANEKE
+Candidate	WENDIE FREDRICKSON	WENDIE FREDRICKSON
+Candidate	JOHN BRIAN DRISCOLL	JOHN BRIAN DRISCOLL
+Candidate	STEVE DAINES	STEVE DAINES
+Candidate	DANIEL R LARSON	DANIEL R LARSON
+Candidate	TOM WINTER	TOM WINTER
+Candidate	KATHLEEN WILLIAMS	KATHLEEN WILLIAMS
+Candidate	JOHN GIBNEY	JOHN GIBNEY
+Candidate	COREY STAPLETON	COREY STAPLETON
+Candidate	JOE DOOLING	JOE DOOLING
+Candidate	JOHN EVANKOVICH	JOHN EVANKOVICH
+Candidate	DEBRA LAMM	DEBRA LAMM
+Candidate	MARK J. MCGINLEY	MARK J. MCGINLEY
+Candidate	MATT ROSENDALE	MATT ROSENDALE
+Candidate	MIKE COONEY AND CASEY SCHREINER	MIKE COONEY AND CASEY SCHREINER
+Candidate	WHITNEY WILLIAMS AND BUZZ MATTELIN	WHITNEY WILLIAMS AND BUZZ MATTELIN
+Candidate	ROBERT BARB AND JOSHUA THOMAS	ROBERT BARB AND JOSHUA THOMAS
+Candidate	TIM FOX AND JON KNOKEY	TIM FOX AND JON KNOKEY
+Candidate	AL 'DOC' OLSZEWSKI AND KEN BOGNER	AL 'DOC' OLSZEWSKI AND KEN BOGNER
+Candidate	GREG GIANFORTE AND KRISTEN JURAS	GREG GIANFORTE AND KRISTEN JURAS
+Candidate	BRYCE BENNETT	BRYCE BENNETT
+Candidate	BRAD JOHNSON	BRAD JOHNSON
+Candidate	KURT JOHNSON	KURT JOHNSON
+Candidate	CHRISTI JACOBSEN	CHRISTI JACOBSEN
+Candidate	FORREST J. MANDEVILLE	FORREST J. MANDEVILLE
+Candidate	SCOTT SALES	SCOTT SALES
+Candidate	BOWEN GREENWOOD	BOWEN GREENWOOD
+Candidate	KIMBERLY P. DUDIK	KIMBERLY P. DUDIK
+Candidate	RAPH GRAYBILL	RAPH GRAYBILL
+Candidate	ROY DAVIS	ROY DAVIS
+Candidate	JON BENNION	JON BENNION
+Candidate	AUSTIN KNUDSEN	AUSTIN KNUDSEN
+Candidate	MIKE WINSOR	MIKE WINSOR
+Candidate	SHANE A MORIGEAU	SHANE A MORIGEAU
+Candidate	TROY DOWNING	TROY DOWNING
+Candidate	NELLY NICOL	NELLY NICOL
+Candidate	SCOTT 'TUX' TUXBURY	SCOTT 'TUX' TUXBURY
+Candidate	MELISSA ROMANO	MELISSA ROMANO
+Candidate	ELSIE ARNTZEN	ELSIE ARNTZEN
+Candidate	MIKE BLACK	MIKE BLACK
+Candidate	LAURIE MCKINNON	LAURIE MCKINNON
+Candidate	MARS SCOTT	MARS SCOTT
+Candidate	JIM SHEA	JIM SHEA
+Candidate	KATHERINE M. BIDEGARAY	KATHERINE M. BIDEGARAY
+Candidate	TOM WOODS	TOM WOODS
+Candidate	JAMES BROWN	JAMES BROWN
+Candidate	ALAN H. GEORGE	ALAN H. GEORGE
+Candidate	VALERIE MCMURTRY	VALERIE MCMURTRY
+Candidate	KIRK BUSHMAN	KIRK BUSHMAN
+Candidate	TONY ODONNELL	TONY ODONNELL
+Candidate	DANIEL ZOLNIKOV	DANIEL ZOLNIKOV
+Candidate	RANDY C BOLING	RANDY C BOLING
+Candidate	BENJAMIN PETERSON	BENJAMIN PETERSON
+Candidate	SCOTT SEILSTAD	SCOTT SEILSTAD
+Candidate	BRUCE WJ LUHRSEN	BRUCE WJ LUHRSEN
+Candidate	ALEXZANDRA DUNNINGTON	ALEXZANDRA DUNNINGTON
+Candidate	RACHEL STANSBERRY	RACHEL STANSBERRY
+Candidate	ANNA MORRIS	ANNA MORRIS
+Candidate	RIENNE H. MCELYEA	RIENNE H. MCELYEA
+Candidate	DONALD SEIFERT	DONALD SEIFERT
+Candidate	GORDON (GORDY) VANCE	GORDON (GORDY) VANCE
+Candidate	DAMION LYNN	DAMION LYNN
+Candidate	SCOTT AMBROSE OCONNOR	SCOTT AMBROSE OCONNOR
+Candidate	KLAAS TUININGA	KLAAS TUININGA
+Candidate	TIMOTHY J. VENHUIZEN	TIMOTHY J. VENHUIZEN
+Candidate	PHILIP OLSON	PHILIP OLSON
+Candidate	SHELLEY VANCE	SHELLEY VANCE
+Candidate	JENNIFER CARLSON	JENNIFER CARLSON
+Candidate	DARLYNE V. OLSON	DARLYNE V. OLSON
+Candidate	ANDREA ANDERSON WASS	ANDREA ANDERSON WASS
+Candidate	MONICA TRANEL	MONICA TRANEL
+Candidate	DANIEL CARLINO	DANIEL CARLINO
+Candidate	JENNIFER FIELDER	JENNIFER FIELDER
+Candidate	WILL DESCHAMPS	WILL DESCHAMPS
+Candidate	CHAMP EDMUNDS	CHAMP EDMUNDS
+Candidate	KAYDEE N. SNIPES RUIZ	KAYDEE N. SNIPES RUIZ
+Candidate	BEN ANCIAUX	BEN ANCIAUX
+Candidate	JAMES A. MANLEY	JAMES A. MANLEY
+Candidate	CAROLYN JOYCE PARDINI	CAROLYN JOYCE PARDINI
+Candidate	SUSAN RITTENHOUSE	SUSAN RITTENHOUSE
+Candidate	KATHY SEELEY	KATHY SEELEY
+Candidate	RON BREWER	RON BREWER
+Candidate	DOUG TAPPER	DOUG TAPPER
+Candidate	MARY TAPPER	MARY TAPPER
+Candidate	SHANE A VANNATTA	SHANE A VANNATTA
+Candidate	ROBIN B. HAMMOND	ROBIN B. HAMMOND
+Candidate	JASON MARKS	JASON MARKS
+Candidate	DAVID WALL	DAVID WALL
+Candidate	WILLIAM GENADEK	WILLIAM GENADEK
+Candidate	NICHOLAS T. DAVIS	NICHOLAS T. DAVIS
+Candidate	FRANK PROSPERI	FRANK PROSPERI
+Candidate	JOHN WOLVERTON	JOHN WOLVERTON
+Candidate	CHRISTOFFER LEHNHERR	CHRISTOFFER LEHNHERR
+Candidate	CONRAD RYAN SCHEID	CONRAD RYAN SCHEID
+Candidate	JOHN ANGWIN	JOHN ANGWIN
+Candidate	JAY BOSTROM	JAY BOSTROM
+Candidate	TODD MOWBRAY	TODD MOWBRAY
+Candidate	NICHOLAS SHEPARD	NICHOLAS SHEPARD
+Candidate	MARIO BATKI	MARIO BATKI
+Candidate	MARK THANE	MARK THANE
+Candidate	ROY MCKENZIE	ROY MCKENZIE
+Candidate	DAVID A. GRACE	DAVID A. GRACE
+Candidate	STEPHEN K. WELLS	STEPHEN K. WELLS
+Candidate	DEVIN M. JACARUSO	DEVIN M. JACARUSO
+Candidate	DAVID A. SEVERSON	DAVID A. SEVERSON
+Candidate	HENRY CURTIS	HENRY CURTIS
+Candidate	JACOB A WEILL	JACOB A WEILL
+Candidate	THOMAS GRAFF	THOMAS GRAFF
+Candidate	JACOB LLOYDSON ELDER	JACOB LLOYDSON ELDER
+Candidate	WAYNE CHAMBERLAIN	WAYNE CHAMBERLAIN
+Candidate	J. KEVIN HUNT	J. KEVIN HUNT
+Candidate	MANOUSOS KOUIDIS	MANOUSOS KOUIDIS
+Candidate	ARTHUR WEATHERWAX	ARTHUR WEATHERWAX
+Candidate	KEITH BAER	KEITH BAER
+Candidate	KLAUS VON STUTTERHEIM	KLAUS VON STUTTERHEIM
+Candidate	MATTHEW ROBERT GIACONE	MATTHEW ROBERT GIACONE
+Candidate	TYLER N. SMITH	TYLER N. SMITH
+Candidate	DONALD ST. PETER	DONALD ST. PETER
+Candidate	WILLIS CURDY	WILLIS CURDY
+Candidate	STEVEN D. MCARTHUR	STEVEN D. MCARTHUR
+Candidate	SARAH SRIRAMAN	SARAH SRIRAMAN
+Candidate	SUSAN A. WALL	SUSAN A. WALL
+Candidate	AMBER LAMB	AMBER LAMB
+Candidate	SUSAN MASON	SUSAN MASON
+Candidate	REBECCA DAWSON	REBECCA DAWSON
+Candidate	CAROL MINJARES	CAROL MINJARES
+Candidate	SUSAN S. ARMOCIDO	SUSAN S. ARMOCIDO
+Candidate	KIMIMILA BOSTROM	KIMIMILA BOSTROM
+Candidate	KIMBERLY DUDIK	KIMBERLY DUDIK
+Candidate	D. BETH HANSEN	D. BETH HANSEN
+Candidate	JAMIE RYAN LOCKMAN	JAMIE RYAN LOCKMAN
+Candidate	SARAH MCCLAIN	SARAH MCCLAIN
+Candidate	BRITTANY PALMER	BRITTANY PALMER
+Candidate	MARY DENEVI	MARY DENEVI
+Candidate	DEBORAH FRANDSEN	DEBORAH FRANDSEN
+Candidate	ATHINA COLLINS	ATHINA COLLINS
+Candidate	GWEN COON	GWEN COON
+Candidate	TAYLOR POWELL	TAYLOR POWELL
+Candidate	BRIDGET WANDERER	BRIDGET WANDERER
+Candidate	EMILY MCGUIRT	EMILY MCGUIRT
+Candidate	BETTE ORR	BETTE ORR
+Candidate	ELLIE HILL	ELLIE HILL
+Candidate	LINDA ST. PETER	LINDA ST. PETER
+Candidate	BRIDGET JOHNSON	BRIDGET JOHNSON
+Candidate	LINDSEY STORMO	LINDSEY STORMO
+Candidate	ROBERT (BOB) GOFFENA	ROBERT (BOB) GOFFENA
+Candidate	JOSEPH K. KUZARA	JOSEPH K. KUZARA
+Candidate	JOHN DALLAS TEINI	JOHN DALLAS TEINI
+Candidate	JUDY RONGEN	JUDY RONGEN
+Candidate	JENNIFER B. LINT	JENNIFER B. LINT
+Candidate	HOWARD F. RECHT	HOWARD F. RECHT
+Candidate	DERRELL W. POOLE	DERRELL W. POOLE
+Candidate	DAVID BEDEY	DAVID BEDEY
+Candidate	HOLLIS POE	HOLLIS POE
+Candidate	KURT LOVE	KURT LOVE
+Candidate	ED GREEF	ED GREEF
+Candidate	JEANNIE POE	JEANNIE POE
+Candidate	KATHY LOVE	KATHY LOVE
+Candidate	RUTH SUSANNA PYRON	RUTH SUSANNA PYRON
+Candidate	SASHIN HUME	SASHIN HUME
+Candidate	TODD RONALD WOOD	TODD RONALD WOOD
+Candidate	FREDRIC M LAKE	FREDRIC M LAKE
+Candidate	PETER O MALTESE	PETER O MALTESE
+Candidate	JORDAN HALL	JORDAN HALL
+Candidate	JOHN R MERCER	JOHN R MERCER
+Candidate	WILLIAM CLARK	WILLIAM CLARK
+Candidate	EUGENE SONDENO	EUGENE SONDENO
+Candidate	RUSS UNRUH	RUSS UNRUH
+Candidate	GREG MILLER	GREG MILLER
+Candidate	SAMUEL P SHAW	SAMUEL P SHAW
+Candidate	WALTER L MCNUTT	WALTER L MCNUTT
+Candidate	BRIAN LER	BRIAN LER
+Candidate	LILLIAN JOYCE NESPER	LILLIAN JOYCE NESPER
+Candidate	JOLENE BAXTER	JOLENE BAXTER
+Candidate	LORILEE STEPPLER NORBY	LORILEE STEPPLER NORBY
+Candidate	DEEDRA ERICKSON	DEEDRA ERICKSON
+Candidate	CANDICE OSSOWSKI	CANDICE OSSOWSKI
+Candidate	LAURA SCHIEBER	LAURA SCHIEBER
+Candidate	JODY CLARK	JODY CLARK
+Candidate	JACKLYN YOUNG	JACKLYN YOUNG
+Candidate	JUDY SONDENO	JUDY SONDENO
+Candidate	KATHLEEN WALLER	KATHLEEN WALLER
+Candidate	DIANA YOUNGQUIST	DIANA YOUNGQUIST
+Candidate	AMANDA SNODGRASS	AMANDA SNODGRASS
+Candidate	DANIEL JONES	DANIEL JONES
+Candidate	CHRISTOPHER STOUGH	CHRISTOPHER STOUGH
+Candidate	JESSE BYLER	JESSE BYLER
+Candidate	KENNETH C. MATTHIESEN	KENNETH C. MATTHIESEN
+Candidate	BRANDI L. JONES	BRANDI L. JONES
+Candidate	NADIYA STOUGH	NADIYA STOUGH
+Candidate	MARY HALLING	MARY HALLING
+Candidate	JUNE C. LAGUE	JUNE C. LAGUE
+Candidate	ZENA BETH MCGLASHAN	ZENA BETH MCGLASHAN
+Candidate	GREGORY R. TODD	GREGORY R. TODD
+Candidate	ROD SOUZA	ROD SOUZA
+Candidate	JOHN W. PARKER	JOHN W. PARKER
+Candidate	MARK ROPE	MARK ROPE
+Candidate	JUDD BROOKS	JUDD BROOKS
+Candidate	JASON L. GIBSON	JASON L. GIBSON
+Candidate	RANDY PINOCCI	RANDY PINOCCI
+Candidate	DANIEL J. ROCKWELL	DANIEL J. ROCKWELL
+Candidate	MICHAEL A. DUBE	MICHAEL A. DUBE
+Candidate	KEITH OCHS	KEITH OCHS
+Candidate	KENT HOLTZ	KENT HOLTZ
+Candidate	J C KANTOROWICZ	J C KANTOROWICZ
+Candidate	BRIAN E. HOVEN	BRIAN E. HOVEN
+Candidate	WILLIAM R. ZUCCONI	WILLIAM R. ZUCCONI
+Candidate	RICKEY D. LINAFELTER	RICKEY D. LINAFELTER
+Candidate	MASON A. WALKER	MASON A. WALKER
+Candidate	FRED L. FAIRHURST	FRED L. FAIRHURST
+Candidate	RON STALEY	RON STALEY
+Candidate	CLYDE CORNELIUSEN	CLYDE CORNELIUSEN
+Candidate	GEORGE MOLLANDER	GEORGE MOLLANDER
+Candidate	JAMES EMIL NEUMANN	JAMES EMIL NEUMANN
+Candidate	BRANTLEY LANDON	BRANTLEY LANDON
+Candidate	MICHAEL POLASKE	MICHAEL POLASKE
+Candidate	TRAVIS GROVE	TRAVIS GROVE
+Candidate	ROGER A. HAGAN	ROGER A. HAGAN
+Candidate	TRAVIS MANUS	TRAVIS MANUS
+Candidate	RUDOLF TANKINK	RUDOLF TANKINK
+Candidate	ANTHONY E. JUNTUNEN	ANTHONY E. JUNTUNEN
+Candidate	AMY BROOKS	AMY BROOKS
+Candidate	GARNETT ROPE	GARNETT ROPE
+Candidate	JULIE R. GIBSON	JULIE R. GIBSON
+Candidate	SVETLANA PINOCCI	SVETLANA PINOCCI
+Candidate	ADRIENNE S. DUBE	ADRIENNE S. DUBE
+Candidate	LINDA R. MADSEN	LINDA R. MADSEN
+Candidate	STEPHANIE ANNIS	STEPHANIE ANNIS
+Candidate	BARBARA T. HOVEN	BARBARA T. HOVEN
+Candidate	DARLENE MEDDOCK	DARLENE MEDDOCK
+Candidate	SALLY M TUCKER	SALLY M TUCKER
+Candidate	SUSAN L. FAIRHURST	SUSAN L. FAIRHURST
+Candidate	RITA STALEY	RITA STALEY
+Candidate	LOLA SHELDON-GALLOWAY	LOLA SHELDON-GALLOWAY
+Candidate	MICHELLE D. NEUMANN	MICHELLE D. NEUMANN
+Candidate	ROMELLE C. KAFKA	ROMELLE C. KAFKA
+Candidate	STACIE LANDON	STACIE LANDON
+Candidate	ALBERT- MARY SPARKLIN	ALBERT- MARY SPARKLIN
+Candidate	FABIOLA HANSER	FABIOLA HANSER
+Candidate	HEIDI HAYMAKER	HEIDI HAYMAKER
+Candidate	JUDY TANKINK	JUDY TANKINK
+Candidate	SHERRY L. JUNTUNEN	SHERRY L. JUNTUNEN
+Candidate	VICKY JO REEVES	VICKY JO REEVES
+Candidate	MIKE LANG	MIKE LANG
+Candidate	PAT MISCHEL	PAT MISCHEL
+Candidate	STEVE HINEBAUCH	STEVE HINEBAUCH
+Candidate	GORDON PIERSON	GORDON PIERSON
+Candidate	MARK SWEENEY	MARK SWEENEY
+Candidate	SUZZANN NORDWICK	SUZZANN NORDWICK
+Candidate	RYAN OSMUNDSON	RYAN OSMUNDSON
+Candidate	KYLE WATERMAN	KYLE WATERMAN
+Candidate	CARL GLIMM	CARL GLIMM
+Candidate	PAUL J. LONGFIELD	PAUL J. LONGFIELD
+Candidate	NORM NUNNALLY	NORM NUNNALLY
+Candidate	GUTHRIE QUIST	GUTHRIE QUIST
+Candidate	KEITH REGIER	KEITH REGIER
+Candidate	GREG HERTZ	GREG HERTZ
+Candidate	DIANE L. MAGONE	DIANE L. MAGONE
+Candidate	GERALD J CUVILLIER	GERALD J CUVILLIER
+Candidate	BOB BROWN	BOB BROWN
+Candidate	CHRISTOPHER POPE	CHRISTOPHER POPE
+Candidate	RICK L. VAUGHT	RICK L. VAUGHT
+Candidate	DEBRA BROWN	DEBRA BROWN
+Candidate	GARY PERRY	GARY PERRY
+Candidate	WALT SALES	WALT SALES
+Candidate	JEFF WELBORN	JEFF WELBORN
+Candidate	KRISTOFER FOURSTAR	KRISTOFER FOURSTAR
+Candidate	MIKE FOX	MIKE FOX
+Candidate	JESTIN DUPREE	JESTIN DUPREE
+Candidate	BRIDGET SMITH	BRIDGET SMITH
+Candidate	EDITH (EDIE) MCCLAFFERTY	EDITH (EDIE) MCCLAFFERTY
+Candidate	JANE HAMMAN	JANE HAMMAN
+Candidate	JIM BUTERBAUGH	JIM BUTERBAUGH
+Candidate	CHASE PORTER GAY	CHASE PORTER GAY
+Candidate	GARY MARBUT	GARY MARBUT
+Candidate	DAN SALOMON	DAN SALOMON
+Candidate	CATHERINE SCOTT	CATHERINE SCOTT
+Candidate	JACOB TORGERSON	JACOB TORGERSON
+Candidate	TERRY J. GAUTHIER	TERRY J. GAUTHIER
+Candidate	RAE PEPPERS	RAE PEPPERS
+Candidate	JASON D SMALL	JASON D SMALL
+Candidate	BENJAMIN BURDA	BENJAMIN BURDA
+Candidate	ERICA SIATE	ERICA SIATE
+Candidate	TERRY LUCKE	TERRY LUCKE
+Candidate	NOLEN W SKIME	NOLEN W SKIME
+Candidate	MIKE WARNER	MIKE WARNER
+Candidate	ALEX GRAY	ALEX GRAY
+Candidate	SHANNON OBRIEN	SHANNON OBRIEN
+Candidate	NIKI SARDOT	NIKI SARDOT
+Candidate	TIMOTHY GIBNEY	TIMOTHY GIBNEY
+Candidate	MARGARET GORSKI	MARGARET GORSKI
+Candidate	NANCY BALLANCE	NANCY BALLANCE
+Candidate	THERESA MANZELLA	THERESA MANZELLA
+Candidate	RYAN LYNCH	RYAN LYNCH
+Candidate	AARON MEADERS	AARON MEADERS
+Candidate	TOM MCGILLVRAY	TOM MCGILLVRAY
+Candidate	JEN GROSS	JEN GROSS
+Candidate	SCOTT PRICE	SCOTT PRICE
+Candidate	MARGIE MACDONALD	MARGIE MACDONALD
+Candidate	CHRIS FRIEDEL	CHRIS FRIEDEL
+Candidate	RODNEY GARCIA	RODNEY GARCIA
+Candidate	BRAD MOLNAR	BRAD MOLNAR
+Candidate	TOM RICHMOND	TOM RICHMOND
+Candidate	JENI DODD	JENI DODD
+Candidate	STEVE FITZPATRICK	STEVE FITZPATRICK
+Candidate	RHONDA KNUDSEN	RHONDA KNUDSEN
+Candidate	TRACY SCHUSTER	TRACY SCHUSTER
+Candidate	JASON STUART	JASON STUART
+Candidate	JIM JOHNSON	JIM JOHNSON
+Candidate	BOB PHALEN	BOB PHALEN
+Candidate	CHARLES J PETERSON JR	CHARLES J PETERSON JR
+Candidate	SARA NOVAK	SARA NOVAK
+Candidate	HEATHER BLOM	HEATHER BLOM
+Candidate	CINDY HINER	CINDY HINER
+Candidate	GREGORY L. FRAZER	GREGORY L. FRAZER
+Candidate	FREDERICK D. (ERIC) MOORE	FREDERICK D. (ERIC) MOORE
+Candidate	JERRY SCHILLINGER	JERRY SCHILLINGER
+Candidate	DAN BARTEL	DAN BARTEL
+Candidate	CINDY PALMER	CINDY PALMER
+Candidate	E. WYLIE GALT	E. WYLIE GALT
+Candidate	DEBO POWERS	DEBO POWERS
+Candidate	BRAXTON MITCHELL	BRAXTON MITCHELL
+Candidate	MATT REGIER	MATT REGIER
+Candidate	DAVE FERN	DAVE FERN
+Candidate	SHAWN GUYMON	SHAWN GUYMON
+Candidate	CATHERINE OWENS	CATHERINE OWENS
+Candidate	JERRAMY DEAR-RUEL	JERRAMY DEAR-RUEL
+Candidate	BRUCE P TUTVEDT	BRUCE P TUTVEDT
+Candidate	AMY REGIER	AMY REGIER
+Candidate	ROSS FRAZIER	ROSS FRAZIER
+Candidate	JERRY ONEIL	JERRY ONEIL
+Candidate	FRANK GARNER	FRANK GARNER
+Candidate	JOHN FULLER	JOHN FULLER
+Candidate	DAVID DUNN	DAVID DUNN
+Candidate	BRIAN PUTNAM	BRIAN PUTNAM
+Candidate	JENNIFER ALLEN	JENNIFER ALLEN
+Candidate	MARK NOLAND	MARK NOLAND
+Candidate	DOUG MAHLUM	DOUG MAHLUM
+Candidate	DEE KIRK-BOON	DEE KIRK-BOON
+Candidate	DEREK SKEES	DEREK SKEES
+Candidate	COLLEEN HINDS	COLLEEN HINDS
+Candidate	PAUL C. FIELDER	PAUL C. FIELDER
+Candidate	DAN VERMILLION	DAN VERMILLION
+Candidate	MARTY MALONE	MARTY MALONE
+Candidate	BRIAN CLOSE	BRIAN CLOSE
+Candidate	JIM HAMILTON	JIM HAMILTON
+Candidate	ED STAFMAN	ED STAFMAN
+Candidate	ALICE BUCKLEY	ALICE BUCKLEY
+Candidate	BRYAN DONALD HAYSOM	BRYAN DONALD HAYSOM
+Candidate	JASON ZENG	JASON ZENG
+Candidate	BRIAN GABRIEL POPIEL	BRIAN GABRIEL POPIEL
+Candidate	JOSH SECKINGER	JOSH SECKINGER
+Candidate	RANDY CHAMBERLIN	RANDY CHAMBERLIN
+Candidate	JANE GILLETTE	JANE GILLETTE
+Candidate	KELLY KORTUM	KELLY KORTUM
+Candidate	JOLENE CRUM	JOLENE CRUM
+Candidate	DENISE HAYMAN	DENISE HAYMAN
+Candidate	COLETTE K. CAMPBELL	COLETTE K. CAMPBELL
+Candidate	JEDEDIAH HINKLE	JEDEDIAH HINKLE
+Candidate	CLAIRE BROLING	CLAIRE BROLING
+Candidate	BRUCE GRUBBS	BRUCE GRUBBS
+Candidate	CALEB HINKLE	CALEB HINKLE
+Candidate	DON SEIFERT	DON SEIFERT
+Candidate	TOM WELCH	TOM WELCH
+Candidate	MARVIN R .WEATHERWAX JR	MARVIN R .WEATHERWAX JR
+Candidate	NICK WHITE	NICK WHITE
+Candidate	TYSON T RUNNING WOLF	TYSON T RUNNING WOLF
+Candidate	LLEW JONES	LLEW JONES
+Candidate	JOSH J KASSMIER	JOSH J KASSMIER
+Candidate	KRYSTAL STEINMETZ	KRYSTAL STEINMETZ
+Candidate	ED HILL	ED HILL
+Candidate	JONATHAN WINDY BOY	JONATHAN WINDY BOY
+Candidate	G. BRUCE MEYERS	G. BRUCE MEYERS
+Candidate	CASEY KNUDSEN	CASEY KNUDSEN
+Candidate	JOYCE STONE	JOYCE STONE
+Candidate	IAN ROOT	IAN ROOT
+Candidate	KENNETH M WALSH	KENNETH M WALSH
+Candidate	CINDY YOUNKIN	CINDY YOUNKIN
+Candidate	BRYHER HERAK	BRYHER HERAK
+Candidate	GREG DEVRIES	GREG DEVRIES
+Candidate	MARTA BERTOGLIO	MARTA BERTOGLIO
+Candidate	GERRY BROWNING	GERRY BROWNING
+Candidate	LINDA REKSTEN	LINDA REKSTEN
+Candidate	LISA M. PAVLOCK	LISA M. PAVLOCK
+Candidate	RALPH FOSTER	RALPH FOSTER
+Candidate	JOE READ	JOE READ
+Candidate	BARNETT G. SPORKIN-MORRISON	BARNETT G. SPORKIN-MORRISON
+Candidate	ROSS H FITZGERALD	ROSS H FITZGERALD
+Candidate	TIM RAVNDAL	TIM RAVNDAL
+Candidate	JULIE DOOLING	JULIE DOOLING
+Candidate	ED COLEMAN	ED COLEMAN
+Candidate	ROB FARRIS-OLSEN	ROB FARRIS-OLSEN
+Candidate	DENNISON J RIVERA	DENNISON J RIVERA
+Candidate	BECKY BEARD	BECKY BEARD
+Candidate	MARY CAFERRO	MARY CAFERRO
+Candidate	BOB LEACH	BOB LEACH
+Candidate	MOFFIE FUNK	MOFFIE FUNK
+Candidate	DEBBIE WESTLAKE	DEBBIE WESTLAKE
+Candidate	KIM ABBOTT	KIM ABBOTT
+Candidate	DARIN L. GAUB	DARIN L. GAUB
+Candidate	JON JACKSON	JON JACKSON
+Candidate	MARY ANN DUNWELL	MARY ANN DUNWELL
+Candidate	CHARLIE HULL	CHARLIE HULL
+Candidate	MARVIN C SATHER	MARVIN C SATHER
+Candidate	STEVE GUNDERSON	STEVE GUNDERSON
+Candidate	LORI RAMESZ	LORI RAMESZ
+Candidate	NEIL A DURAM	NEIL A DURAM
+Candidate	AUGUST SCALPCANE	AUGUST SCALPCANE
+Candidate	RYNALEA WHITEMAN PENA	RYNALEA WHITEMAN PENA
+Candidate	SHARON STEWART PEREGOY	SHARON STEWART PEREGOY
+Candidate	MARK T FRENCH	MARK T FRENCH
+Candidate	DENLEY M. LOGE	DENLEY M. LOGE
+Candidate	KATIE SULLIVAN	KATIE SULLIVAN
+Candidate	GARY D. WANBERG	GARY D. WANBERG
+Candidate	MARILYN MARLER	MARILYN MARLER
+Candidate	LANA HAMILTON	LANA HAMILTON
+Candidate	CONNIE KEOGH	CONNIE KEOGH
+Candidate	BETHANIE CALVERT WANBERG	BETHANIE CALVERT WANBERG
+Candidate	TOM BROWDER	TOM BROWDER
+Candidate	MIKE HOPKINS	MIKE HOPKINS
+Candidate	TOM FRANCE	TOM FRANCE
+Candidate	JIM MCLEAN	JIM MCLEAN
+Candidate	KELSEY COOLEY	KELSEY COOLEY
+Candidate	DANNY TENENBAUM	DANNY TENENBAUM
+Candidate	KAREN SHERMAN	KAREN SHERMAN
+Candidate	DAKOTA HILEMAN	DAKOTA HILEMAN
+Candidate	LONI CONLEY	LONI CONLEY
+Candidate	KATHY WHITMAN	KATHY WHITMAN
+Candidate	LOUANN HANSEN	LOUANN HANSEN
+Candidate	BRAD TSCHIDA	BRAD TSCHIDA
+Candidate	NANCY BURGOYNE	NANCY BURGOYNE
+Candidate	DAVID 'DOC' MOORE	DAVID 'DOC' MOORE
+Candidate	ANDREA OLSEN	ANDREA OLSEN
+Candidate	KRIS SPANJIAN	KRIS SPANJIAN
+Candidate	BARRY USHER	BARRY USHER
+Candidate	LAURIE BISHOP	LAURIE BISHOP
+Candidate	JOE LAMM	JOE LAMM
+Candidate	LAURA JACKSON	LAURA JACKSON
+Candidate	MICHELE BINKLEY	MICHELE BINKLEY
+Candidate	KYLE ELLSWORTH	KYLE ELLSWORTH
+Candidate	MATTHEW LOCATI	MATTHEW LOCATI
+Candidate	KENNETH E ALLEN	KENNETH E ALLEN
+Candidate	LAURA MERRILL	LAURA MERRILL
+Candidate	JOLENA BUGLI	JOLENA BUGLI
+Candidate	RON MARSHALL	RON MARSHALL
+Candidate	JAMES V. (JIM) CREWS	JAMES V. (JIM) CREWS
+Candidate	SCOTT ROY MCLEAN	SCOTT ROY MCLEAN
+Candidate	SHARON GREEF	SHARON GREEF
+Candidate	JOEL G. KRAUTTER	JOEL G. KRAUTTER
+Candidate	BRANDON LER	BRANDON LER
+Candidate	FRANK J. SMITH	FRANK J. SMITH
+Candidate	GERALDINE CUSTER	GERALDINE CUSTER
+Candidate	AMANDA SCHEIDLER	AMANDA SCHEIDLER
+Candidate	JIM KEANE	JIM KEANE
+Candidate	MARJORY MCCAFFERY	MARJORY MCCAFFERY
+Candidate	DEREK J. HARVEY	DEREK J. HARVEY
+Candidate	JIM KEPHART	JIM KEPHART
+Candidate	DONAVON HAWK	DONAVON HAWK
+Candidate	ANDY JOHNSON	ANDY JOHNSON
+Candidate	FIONA NAVE	FIONA NAVE
+Candidate	KERRI SEEKINS-CROWE	KERRI SEEKINS-CROWE
+Candidate	TERRY DENNIS	TERRY DENNIS
+Candidate	LARRY BREWSTER	LARRY BREWSTER
+Candidate	KATIE ZOLNIKOV	KATIE ZOLNIKOV
+Candidate	ZACH LADSON	ZACH LADSON
+Candidate	BILL MERCER	BILL MERCER
+Candidate	KATHY KELKER	KATHY KELKER
+Candidate	TJ SMITH	TJ SMITH
+Candidate	JESSICA L KARJALA	JESSICA L KARJALA
+Candidate	LEIGH VERRILL-RHYS	LEIGH VERRILL-RHYS
+Candidate	EMMA KERR-CARPENTER	EMMA KERR-CARPENTER
+Candidate	COLIN MICHAEL NYGAARD	COLIN MICHAEL NYGAARD
+Candidate	JADE BAHR	JADE BAHR
+Candidate	MALLERIE STROMSWOLD	MALLERIE STROMSWOLD
+Candidate	ANNE GIULIANO	ANNE GIULIANO
+Candidate	FRANK FLEMING	FRANK FLEMING
+Candidate	HANNAH OLSON	HANNAH OLSON
+Candidate	JIMMY PATELIS	JIMMY PATELIS
+Candidate	DENNIS LENZ	DENNIS LENZ
+Candidate	RYAN THOMSEN	RYAN THOMSEN
+Candidate	TERRY MOORE	TERRY MOORE
+Candidate	VINCE RICCI	VINCE RICCI
+Candidate	SUE VINTON	SUE VINTON
+Candidate	ELIZABETH 'BETSY' SCANLIN	ELIZABETH 'BETSY' SCANLIN
+Candidate	SETH BERGLEE	SETH BERGLEE
+Candidate	WENDY MCKAMEY	WENDY MCKAMEY
+Candidate	MELISSA SMITH	MELISSA SMITH
+Candidate	FRED ANDERSON	FRED ANDERSON
+Candidate	JAMIE A HORN	JAMIE A HORN
+Candidate	ED BUTTREY	ED BUTTREY
+Candidate	SALLY TUCKER	SALLY TUCKER
+Candidate	MATT RAINS	MATT RAINS
+Candidate	JASMINE TAYLOR	JASMINE TAYLOR
+Candidate	BRAD HAMLETT	BRAD HAMLETT
+Candidate	SCOT KERNS	SCOT KERNS
+Candidate	BARBARA BESSETTE	BARBARA BESSETTE
+Candidate	STEVEN GALLOWAY	STEVEN GALLOWAY
+Candidate	JASMINE KROTKOV	JASMINE KROTKOV
+Candidate	STEVE GIST	STEVE GIST
+Candidate	HELENA LOVICK	HELENA LOVICK
+Candidate	SHERIDAN BUCK	SHERIDAN BUCK
+Candidate	JEREMY TREBAS	JEREMY TREBAS
+Candidate	KENNETH L HOLMLUND	KENNETH L HOLMLUND
+CountItemType	total	total

@@ -36,6 +36,7 @@ sdl_pars_opt = [
     "Party",
     "CountItemType",
     "ReportingUnit",
+    "Contest",
 ]
 
 multi_data_loader_pars = [
@@ -43,6 +44,10 @@ multi_data_loader_pars = [
     "archive_dir",
     "jurisdictions_dir",
     "mungers_dir",
+]
+
+optional_mdl_pars = [
+    "unloaded_dir",
 ]
 
 prep_pars = [
@@ -67,6 +72,7 @@ class DataLoader:
         not create DataLoader object."""
         d, err = ui.get_runtime_parameters(
             required_keys=multi_data_loader_pars,
+            optional_keys=optional_mdl_pars,
             param_file="run_time.ini",
             header="election_data_analysis",
         )
@@ -81,18 +87,21 @@ class DataLoader:
         # grab parameters
         self.d, self.parameter_err = ui.get_runtime_parameters(
             required_keys=multi_data_loader_pars,
+            optional_keys=optional_mdl_pars,
             param_file="run_time.ini",
             header="election_data_analysis",
         )
 
         # create db if it does not already exist and have right tables
-        ok, err = db.test_connection()
-        if not ok:
-            db.create_new_db()
+        err = db.create_db_if_not_ok()
 
         # connect to db
+        self.connect_to_db(err=err)
+
+    def connect_to_db(self, dbname: Optional[str] = None, err: Optional[dict] = None):
+        new_err = None
         try:
-            self.engine, new_err = db.sql_alchemy_connect()
+            self.engine, new_err = db.sql_alchemy_connect(dbname=dbname)
             Session = sessionmaker(bind=self.engine)
             self.session = Session()
         except Exception as e:
@@ -104,11 +113,32 @@ class DataLoader:
             ui.report(err)
             print("Exiting")
             quit()
+        else:
+            return
+
+    def change_db(self, new_db_name: str):
+        """Changes the database into which the data is loaded, including reconnecting"""
+        self.d["dbname"] = new_db_name
+        self.session.close()
+        self.connect_to_db(dbname=new_db_name)
+        db.create_db_if_not_ok(dbname=new_db_name)
+        return
+
+    def change_dir(self, dir_param: str, new_dir: str):
+        # TODO technical debt: error handling
+        self.d[dir_param] = new_dir
+        return
 
     def load_all(
-        self, load_jurisdictions: bool = True, move_files: bool = False
-    ) -> dict:
-        """returns an error dictionary"""
+        self,
+            load_jurisdictions: bool = True,
+            move_files: bool = True,
+            election_jurisdiction_list: Optional[list] = None,
+    ) -> Optional[dict]:
+        """Processes all .ini files in the DataLoader's results directory.
+        By default, loads (or reloads) the info from the jurisdiction files
+        into the db first. By default, moves files to the DataLoader's archive directory.
+        Returns an error dictionary"""
         # initialize error dictionary
         err = None
 
@@ -173,7 +203,11 @@ class DataLoader:
                         params[f]["jurisdiction_path"]
                     ).name
                 ###########
-                good_par_files.append(f)
+                if election_jurisdiction_list:
+                    if (params[f]["election"], params[f]["top_reporting_unit"]) in election_jurisdiction_list:
+                        good_par_files.append(f)
+                else:
+                    good_par_files.append(f)
                 juris_directory[f] = params[f]["jurisdiction_directory"]
 
         # group .ini files by jurisdiction_directory name
@@ -210,6 +244,9 @@ class DataLoader:
                         f"Jurisdiction {juris[jp].name} assumed to be loaded to database already"
                     )
                     good_jurisdictions.append(jp)
+            else:
+                err = ui.consolidate_errors([err, new_err])
+                return err
 
         # process all good parameter files with good jurisdictions
         for jp in good_jurisdictions:
@@ -233,21 +270,25 @@ class DataLoader:
                     if load_error:
                         err = ui.consolidate_errors([err, load_error])
 
-                    # if no fatal load error, archive files
-
+                    # if move_files == True and no fatal load error,
                     if move_files and not ui.fatal_error(load_error):
+                        # archive files
                         ui.archive(f, self.d["results_dir"], success_dir)
                         ui.archive(
                             sdl.d["results_file"], self.d["results_dir"], success_dir
                         )
                         print(
-                            f"\tArchived {f} and its results file after successful load.\n"
+                            f"\tArchived {f} and its results file after successful load "
+                            f"via mungers {sdl.d['munger_name']}.\n"
                         )
+                    # if move_files == True and there was a fatal load error
                     elif move_files and ui.fatal_error(load_error):
                         print(f"\t{f} and its results file not archived due to errors")
 
+                    # if move_files is false
                     else:
                         print(f"{f} and its results file loaded successfully via mungers {sdl.d['munger_name']}.")
+
                 #  report munger, jurisdiction and file errors & warnings
                 err = ui.report(
                     err,
@@ -272,6 +313,21 @@ class DataLoader:
         ui.report(err, loc_dict)
         return err
 
+    def remove_data(self, election_id: int, juris_id: int) -> Optional[str]:
+        """Remove from the db all data for the given <election_id> in the given <juris>"""
+        # get connection & cursor
+        connection = self.session.bind.raw_connection()
+        cursor = connection.cursor()
+
+        # find all datafile ids matching the given election and jurisdiction
+        df_list, err_str = db.data_file_list(cursor, election_id, reporting_unit_id=juris_id)
+        if err_str:
+            return err_str
+
+        # remove data from all those datafiles
+        for idx in df_list:
+            db.remove_vote_counts(connection, cursor, idx)
+        return None
 
 class SingleDataLoader:
     def __init__(
@@ -364,6 +420,7 @@ class SingleDataLoader:
                 "created_at",
             ],
         )
+        data = m.clean_strings(data,["short_name"])
         try:
             e = db.insert_to_cdf_db(self.session.bind, data, "_datafile")
             if e:
@@ -426,24 +483,30 @@ class SingleDataLoader:
                 else:
                     results_info["Contest_Id"] = contest_id
 
-            for k in ["Party", "ReportingUnit", "CountItemType"]:
+            for k in ["Party", "ReportingUnit", "CountItemType", "Contest"]:
                 # if element was given in .ini file
                 if self.d[k] is not None:
                     # collect <k>_Id or fail gracefully
                     k_id = db.name_to_id(self.session, k, self.d[k])
-                    if k_id is None and k != "CountItemType":
-                        err = ui.add_new_error(
-                            err,
-                            "ini",
-                            self.par_file_name,
-                            f"{k} defined in .ini file ({self.d[k]}) not found in database",
-                        )
-                        return err
-                    # no CountItemType throws an error
-                    elif k == "CountItemType":
-                        # put CountItemType value into OtherCountItemType field
-                        k_id = db.name_to_id(self.session, k, "other")
-                        results_info["OtherCountItemType"] = self.d[k]
+                # CountItemType is different because it's an enumeration
+                    if k == "CountItemType":
+                        if k_id is None:
+                            # put CountItemType value into OtherCountItemType field
+                            # and set k_id to id for 'other'
+                            k_id = db.name_to_id(self.session, k, "other")
+                            results_info["OtherCountItemType"] = self.d[k]
+                        else:
+                            # set OtherCountItemType to "" since type was recognized
+                            results_info["OtherCountItemType"] = ""
+                    else:
+                        if k_id is None:
+                            err = ui.add_new_error(
+                                err,
+                                "ini",
+                                self.par_file_name,
+                                f"{k} defined in .ini file ({self.d[k]}) not found in database",
+                            )
+                            return err
 
                     results_info[f"{k}_Id"] = k_id
 
@@ -479,8 +542,7 @@ def check_aux_data_setup(
                 par_file_name,
                 f"Specified aux_data_dir ({params['aux_data_dir']}) is not a subdirectory of {aux_data_dir_parent}",
             )
-            sdl = None
-            return sdl, err
+            return err
     # and if aux_data_dir is not given
     else:
         # check that no munger expects an aux_data_dir
@@ -514,18 +576,27 @@ def check_par_file_elements(d: dict, mungers_path: str, par_file_name: str) -> O
     # for each munger, check that no element defined elsewhere is sourced as 'row' or 'column'
     for mu in d["munger_name"].split(","):
         elt_file = os.path.join(mungers_path, mu, "cdf_elements.txt")
-        elt = pd.read_csv(elt_file, sep="\t")
-        rc_from_mu = elt[(elt.source == "row") | (elt.source == "column")]["name"].unique()
-        duped = [x for x in elt_from_par_file if x in rc_from_mu]
-        if duped:
+        try:
+            elt = pd.read_csv(elt_file, sep="\t")
+        except Exception as e:
             err = ui.add_new_error(
                 err,
                 "ini",
                 par_file_name,
-                f"Some elements given in the parameter file are also designated "
-                f"as row- or column-sourced in munger {mu}:\n"
-                f"{duped}",
+                f"Error reading cdf_elements.txt file for munger {mu}"
             )
+        else:
+            rc_from_mu = elt[(elt.source == "row") | (elt.source == "column")]["name"].unique()
+            duped = [x for x in elt_from_par_file if x in rc_from_mu]
+            if duped:
+                err = ui.add_new_error(
+                    err,
+                    "ini",
+                    par_file_name,
+                    f"Some elements given in the parameter file are also designated "
+                    f"as row- or column-sourced in munger {mu}:\n"
+                    f"{duped}",
+                )
     return err
 
 
@@ -644,7 +715,7 @@ class JurisdictionPrepper:
         ui.report(error)
         return error
 
-    def add_primaries_to_dict(self) -> dict:
+    def add_primaries_to_dict(self) -> Optional[dict]:
         """Return error dictionary"""
         print("\nStarting add_primaries_to_dict")
         error = None
@@ -872,7 +943,7 @@ class JurisdictionPrepper:
         aux_data_path=None,
         sub_ru_type: str = "precinct",
         error: dict = None,
-    ) -> dict:
+    ) -> Optional[dict]:
         """Assumes precincts (or other sub-county reporting units)
         are munged from row of the results file.
         Adds corresponding rows to ReportingUnit.txt and dictionary.txt
@@ -902,7 +973,6 @@ class JurisdictionPrepper:
             return error
 
         # clean the dataframe read from the results
-        wr, count_cols, err_df = m.generic_clean(wr)
         # reduce <wr> in size
         fields = [
             f"{field}_SOURCE"
@@ -1284,16 +1354,21 @@ def make_par_files(
 
 
 class Analyzer:
-    def __new__(self, param_file=None):
+    def __new__(self, param_file=None, dbname=None):
         """Checks if parameter file exists and is correct. If not, does
         not create DataLoader object."""
         try:
             if not param_file:
                 param_file = "run_time.ini"
-            d, parameter_err = ui.get_runtime_parameters(
+            d, postgres_param_err = ui.get_runtime_parameters(
                 required_keys=["dbname"],
                 param_file=param_file,
                 header="postgresql",
+            )
+            d, eda_err = ui.get_runtime_parameters(
+                required_keys=["rollup_directory"],
+                param_file=param_file,
+                header="election_data_analysis"
             )
         except FileNotFoundError as e:
             print(
@@ -1302,20 +1377,29 @@ class Analyzer:
             )
             return None
 
-        if parameter_err:
+        if postgres_param_err or eda_err:
             print("Parameter file missing requirements.")
-            print(parameter_err)
+            print(f"postgres: {postgres_param_err}")
+            print(f"election_data_analysis: {eda_err}")
             print("Analyzer object not created.")
             return None
 
         return super().__new__(self)
 
-    def __init__(self, param_file=None):
-        if param_file:
-            self.param_file = param_file
-        else:
-            self.param_file = "run_time.ini"
-        eng, err = db.sql_alchemy_connect(self.param_file)
+    def __init__(self, param_file=None, dbname=None):
+        if not param_file:
+            param_file = "run_time.ini"
+
+        # read rollup_directory from param_file
+        d, error = ui.get_runtime_parameters(
+            required_keys=["rollup_directory"],
+            param_file=param_file,
+            header="election_data_analysis",
+        )
+        self.rollup_directory = d["rollup_directory"]
+
+        # create session
+        eng, err = db.sql_alchemy_connect(param_file, dbname=dbname)
         Session = sessionmaker(bind=eng)
         self.session = Session()
 
@@ -1338,7 +1422,6 @@ class Analyzer:
     def scatter(
         self,
         jurisdiction: str,
-        subdivision_type: str,
         h_election: str,
         h_category: str,
         h_count: str,  # horizontal axis params
@@ -1346,60 +1429,39 @@ class Analyzer:
         v_category: str,
         v_count: str,  # vertical axis params
         fig_type: str = None,
-    ) -> list:
+    ) -> Optional[list]:
         """Used to create a scatter plot based on selected inputs. The fig_type parameter
         is used when the user wants to actually create the visualization; this uses plotly
         so any image extension that is supported by plotly is usable here. Currently supports
         html, png, jpeg, webp, svg, pdf, and eps. Note that some filetypes may need plotly-orca
         installed as well."""
-        d, error = ui.get_runtime_parameters(
-            required_keys=["rollup_directory"],
-            param_file=self.param_file,
-            header="election_data_analysis",
-        )
-        if error:
-            print("Parameter file missing requirements.")
-            print(error)
-            print("Data not created.")
-            return
         jurisdiction_id = db.name_to_id(self.session, "ReportingUnit", jurisdiction)
-        subdivision_type_id = db.name_to_id(
-            self.session, "ReportingUnitType", subdivision_type
+        subdivision_type_id = db.get_jurisdiction_hierarchy(
+            self.session, jurisdiction_id
         )
         h_election_id = db.name_to_id(self.session, "Election", h_election)
         v_election_id = db.name_to_id(self.session, "Election", v_election)
-        # *_type is either candidates or contests
+        # *_type is either candidates or contests or parties
         h_type, h_count_item_type = self.split_category_input(h_category)
         v_type, v_count_item_type = self.split_category_input(v_category)
-        if h_count == "All Candidates" or h_count == "All Contests":
-            h_count_id = -1
-        elif h_type == "candidates":
-            h = h_count.split("-")[0].strip()
-            h_count_id = db.name_to_id(self.session, "Candidate", h)
-        elif h_type == "contests":
-            h_count_id = db.name_to_id(self.session, "CandidateContest", h_count)
-        if v_count == "All Candidates" or v_count == "All Contests":
-            v_count_id = -1
-        elif v_type == "candidates":
-            v = v_count.split("-")[0].strip()
-            v_count_id = db.name_to_id(self.session, "Candidate", v)
-        elif v_type == "contests":
-            v_count_id = db.name_to_id(self.session, "CandidateContest", v_count)
+        h_count = h_count.split(" - ")[0].strip()
+        v_count = v_count.split(" - ")[0].strip()
+
         agg_results = a.create_scatter(
             self.session,
             jurisdiction_id,
             subdivision_type_id,
             h_election_id,
             h_count_item_type,
-            h_count_id,
+            h_count,
             h_type,
             v_election_id,
             v_count_item_type,
-            v_count_id,
+            v_count,
             v_type,
         )
         if fig_type and agg_results:
-            viz.plot("scatter", agg_results, fig_type, d["rollup_directory"])
+            viz.plot("scatter", agg_results, fig_type, self.rollup_directory)
         return agg_results
 
     def bar(
@@ -1411,16 +1473,6 @@ class Analyzer:
         fig_type: str = None,
     ) -> list:
         """contest_type is one of state, congressional, state-senate, state-house"""
-        d, error = ui.get_runtime_parameters(
-            required_keys=["rollup_directory"],
-            param_file=self.param_file,
-            header="election_data_analysis",
-        )
-        if error:
-            print("Parameter file missing requirements.")
-            print(error)
-            print("Data not created.")
-            return
         election_id = db.name_to_id(self.session, "Election", election)
         jurisdiction_id = db.name_to_id(self.session, "ReportingUnit", jurisdiction)
         # for now, bar charts can only handle jurisdictions where county is one level
@@ -1441,18 +1493,20 @@ class Analyzer:
         )
         if fig_type and agg_results:
             for agg_result in agg_results:
-                viz.plot("bar", agg_result, fig_type, d["rollup_directory"])
+                viz.plot("bar", agg_result, fig_type, self.rollup_directory)
         return agg_results
 
     def split_category_input(self, input_str: str):
         """Helper function. Takes an input from the front end that is the cartesian
-        product of the CountItemType and {'Candidate', 'Contest'}. So something like:
+        product of the CountItemType and {'Candidate', 'Contest', 'Party'}. So something like:
         Candidate total or Contest absentee-mail. Cleans this and returns
         something usable for the system to identify what the user is asking for."""
         if input_str.startswith("Candidate"):
             return "candidates", input_str.replace("Candidate", "").strip()
         elif input_str.startswith("Contest"):
             return "contests", input_str.replace("Contest", "").strip()
+        elif input_str.startswith("Party"):
+            return "parties", input_str.replace("Party", "").strip()
 
     def export_outlier_data(
         self,
@@ -1461,16 +1515,6 @@ class Analyzer:
         contest: str = None,
     ) -> list:
         """contest_type is one of state, congressional, state-senate, state-house"""
-        d, error = ui.get_runtime_parameters(
-            required_keys=["rollup_directory"],
-            param_file=self.param_file,
-            header="election_data_analysis",
-        )
-        if error:
-            print("Parameter file missing requirements.")
-            print(error)
-            print("Data not created.")
-            return
         election_id = db.name_to_id(self.session, "Election", election)
         jurisdiction_id = db.name_to_id(self.session, "ReportingUnit", jurisdiction)
         subdivision_type_id = db.get_jurisdiction_hierarchy(
@@ -1490,32 +1534,134 @@ class Analyzer:
 
     def top_counts(
         self, election: str, rollup_unit: str, sub_unit: str, by_vote_type: bool
-    ) -> str:
-        d, error = ui.get_runtime_parameters(
-            required_keys=["rollup_directory"],
-            param_file=self.param_file,
-            header="election_data_analysis",
+    ) -> Optional[str]:
+        rollup_unit_id = db.name_to_id(self.session, "ReportingUnit", rollup_unit)
+        sub_unit_id = db.name_to_id(self.session, "ReportingUnitType", sub_unit)
+        election_id = db.name_to_id(self.session, "Election", election)
+        err = a.create_rollup(
+            self.session,
+            self.rollup_directory,
+            top_ru_id=rollup_unit_id,
+            sub_rutype_id=sub_unit_id,
+            election_id=election_id,
+            by_vote_type=by_vote_type,
         )
-        if error:
-            print("Parameter file missing requirements.")
-            print(error)
-            print("Data not created.")
-            return
-        else:
-            rollup_unit_id = db.name_to_id(self.session, "ReportingUnit", rollup_unit)
-            sub_unit_id = db.name_to_id(self.session, "ReportingUnitType", sub_unit)
-            election_id = db.name_to_id(self.session, "Election", election)
-            err = a.create_rollup(
-                self.session,
-                d["rollup_directory"],
-                top_ru_id=rollup_unit_id,
-                sub_rutype_id=sub_unit_id,
-                election_id=election_id,
-                by_vote_type=by_vote_type,
-            )
-            return err
+        return err
 
 
 def get_filename(path: str) -> str:
     head, tail = ntpath.split(path)
     return tail or ntpath.basename(head)
+
+def aggregate_results(election, jurisdiction, contest_type, by_vote_type, dbname=None):
+    # using the analyzer gives us access to DB session
+    empty_df_with_good_cols = pd.DataFrame(columns=['contest','count'])
+    an = Analyzer(dbname=dbname)
+    if not an:
+        return empty_df_with_good_cols
+    election_id = db.name_to_id(an.session, "Election", election)
+    jurisdiction_id = db.name_to_id(an.session, "ReportingUnit", jurisdiction)
+    if not election_id:
+        return empty_df_with_good_cols
+    connection = an.session.bind.raw_connection()
+    cursor = connection.cursor()
+
+    datafile_list, e = db.data_file_list(
+        cursor,
+        election_id,
+        reporting_unit_id=jurisdiction_id,
+        by="Id",
+    )
+    if e:
+        print(e)
+        return empty_df_with_good_cols
+    if len(datafile_list) == 0:
+        print(f"No datafiles found for election {election} and jurisdiction {jurisdiction}"
+              f"(election_id={election_id} and jurisdiction_id={jurisdiction_id})")
+        return empty_df_with_good_cols
+
+    df, err_str = db.export_rollup_from_db(
+        cursor,
+        jurisdiction,
+        "county",
+        contest_type,
+        datafile_list,
+        by="Id",
+        exclude_total=True,
+        by_vote_type=True,
+    )
+    if df.empty:
+        # TODO better logic? This is like throwing spaghetti at the wall
+        # try without excluding total
+        df, err_str = db.export_rollup_from_db(
+            cursor,
+            jurisdiction,
+            "county",
+            contest_type,
+            datafile_list,
+            by="Id",
+            exclude_total=False,
+            by_vote_type=True,
+        )
+    if err_str or df.empty:
+        return empty_df_with_good_cols
+    return df
+
+
+def data_exists(election, jurisdiction, p_path=None, dbname=None):
+    an = Analyzer(param_file=p_path, dbname=dbname)
+    if not an:
+        return False
+
+    election_id = db.name_to_id(an.session, "Election", election)
+    reporting_unit_id = db.name_to_id(an.session, "ReportingUnit", jurisdiction)
+    if not election_id or not reporting_unit_id:
+        return False
+
+    con = an.session.bind.raw_connection()
+    cur = con.cursor()
+    answer, err_str = db.data_file_list(
+        cur,
+        election_id=election_id,
+        reporting_unit_id=reporting_unit_id
+    )
+    if len(answer) > 0:
+        return True
+    else:
+        return False
+
+
+
+
+def check_totals_match_vote_types(election, jurisdiction, dbname=None):
+    df_candidate = aggregate_results(election, jurisdiction, "Candidate", False, dbname=dbname)
+    df_ballot = aggregate_results(election, jurisdiction, "BallotMeasure", False, dbname=dbname)
+    df_by_ttl = pd.concat([df_candidate, df_ballot])
+
+    df_candidate = aggregate_results(election, jurisdiction, "Candidate", True, dbname=dbname)
+    df_ballot = aggregate_results(election, jurisdiction, "BallotMeasure", True, dbname=dbname)
+    df_by_type = pd.concat([df_candidate, df_ballot])
+    return df_by_ttl["count"].sum() == df_by_type["count"].sum()
+
+
+# A couple random contests
+def contest_total(election, jurisdiction, contest, dbname=None):
+    df_candidate = aggregate_results(election, jurisdiction, "Candidate", False, dbname=dbname)
+    df_ballot = aggregate_results(election, jurisdiction, "BallotMeasure", False, dbname=dbname)
+    df = pd.concat([df_candidate, df_ballot])
+    df = df[df["contest"] == contest]
+    return df["count"].sum()
+
+
+def count_type_total(election, jurisdiction, contest, count_item_type, dbname=None):
+    df_candidate = aggregate_results(election, jurisdiction, "Candidate", False, dbname=dbname)
+    df_ballot = aggregate_results(election, jurisdiction, "BallotMeasure", False, dbname=dbname)
+    df = pd.concat([df_candidate, df_ballot])
+    # TODO is this error-handling what we want?
+    if df.empty:
+        return 0
+    else:
+        df = df[df["contest"] == contest]
+        df = df[df["count_item_type"] == count_item_type]
+        return df["count"].sum()
+
