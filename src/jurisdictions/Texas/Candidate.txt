@@ -1,685 +1,822 @@
 BallotName
-Cruz
-O'Rourke
-Dikeman
-Gooden
-Wood
-Gray
-Abbott
-Valdez
-Tippetts
-Patrick
-Collier
-McKennon
-Paxton
-Nelson
-Harris
-Hegar
-Chevalier
-Sanders
-Bush
-Suazo
-Pina
-Miller
-Olson
-Carpenter
-Craddick
-McAllen
-Wright
-Blacklock
-Kirkland
-Devine
-Sandill
-Brown
-Cheng
-Keller
-Strange
-Jackson
-Hervey
-Franklin
-Slaughter
-Ash
-Nichols
-Layton
-Quarles
-Ratcliff
-Conaway
-Leeder
-Smith
-Seliger
-Westbrook
-Landgraf
-Gamboa
-Gohmert
-McKellar
-Callaway
-Ashby
-Rogers
-Cloud
-Holguin
-Tinus
-Duerr
-Hasse
-Cortez
-Morrison
-Hayter
-Thornberry
-Sagan
-DeWeese
-Fallon
-Lopez
-King
-Barron
-Cuellar
-Thomas
-McCaul
-Siegel
-Ryan
-Leman
-Webster
-Arrington
-Levario
-Roy
-Kopser
-Santos
-Murr
-Ertel
-Hindman
-Watson
-Verlander
-Cyrier
-Flores
-Kennedy
-Churchman
-Gonzalez
-Vela
-Lozano
-Carter
-Hope
-Bourland
-Field
-Kelly
-Toth
-Triana
-Write-In
-Puryear
-Baker
-Buckley
-Richerson
-Walden
-Williams
-Oliver
-Lindsey
-Smalling
-Doggett
-Patterson
-Barnard
-Watkins
-Pulliam
-Alvarez
-Ballantyne
-Chapa
-Simmons
-Rodriguez
-Stolarczyk
-Martinez
-Walsh
-Rummel
-Olivarri
-Yanta
-Diaz
-Alexander
-Boyd
-McCray
-Meza
-Price
-Haas
-Lawson
-Austin
-Quezada
-Skinner
-Pena
-Rickhoff
-Wolff
-Bustamante
-Fleming
-Petry Stowe
-Cross
-Kazen
-Hardaway
-Vasquez
-Uzomba
-Foster
-Garrahan
-Ximenez
-Bray Patterson
-Longoria
-De Leon
-Roman
-Shelton
-Saldana
-Crouch
-Davis
-Key
-Chandler
-Behrens
-Vara
-Shaeffer
-Gonzales
-McKinney
-Garcia
-Adame-Clark
-Hurd
-Jones
-Corvalan
-Arredondo
-Minjarez
-Castro
-Blunt
-Lujan
-Pacheco
-Berlanga
-Connolly
-Elizondo
-Padron
-Martinez Fischer
-Campbell
-Kling
-Larson
-Barnett
-Wentworth
-Velasquez
-Allison
-Montoya
-Olfers
-Payne
-Gervin-Hawkins
-Zwiener
-Burrows
-Landry
-Ratcliffe
-Krantz
-Weber
-Bell
-Conley
-Robinson
-Markowitz
-Bland
-Goodman
-Landau
-Yates
-Countiss
-Massengale
-Hightower
-Caughey
-Busby
-Zimmerer
-Spain
-Jamison
-Bourliot
-Boyce
-Hassan
-Donovan
-Poissant
-Sebesta
-Pruett
-Rickert
-Burgess
-Hudman
-MacAskie
-Huffman
-Lucido
-LaCount
-Kulkarni
-McElligott
-Sweny
-Thompson
-Presley
-Schwertner
-Lyons
-Kacal
-Arnold
-Raney
-Wilkinson
-Westley
-Cristo
-Wilson
-Wyman
-Aliseda
-Contreras
-Perkes
-Tijerina
-Delgado
-Silva
-Benavides
-Cascos
-Trevino
-Hefner
-Liebbe
-Babin
-Steele
-Middleton
-Jamrok
-Johnson
-Clardy
-Taylor
-Burch
-Claytor
-Little
-Wester
-Phariss
-Sanford
-Luton
-Lang
-Burns
-Evans
-Partida-Kipness
-Stoddart
-Nowell
-Boatright
-Pedersen
-Francis
-Reichek
-Browning
-Carlyle
-Pikl
-Molberg
-Lang Miers
-Lester Osborne
-Hill
-Lanier
-Finley
-Kirschner
-Kemp
-Leach
-Depew
-Noble
-Holland
-Gunn
-Shaheen
-Hirsch
-Sessions
-Allred
-Biedermann
-Phillips
-Bounds
-Smithee
-Purcell
-Huffines
-Luby Ryan
-Turner
-Lee
-Mays
-Fargo
-Anyiam
-Hutcheson
-Jenkins
-Poulter
-Creuzot
-Meek
-Seider
-Long
-Meyer
-Cattanach
-Russell
-Fortenberry
-Anchia
-Koop
-Ramos
-Chen Button
-Chambers
-Hall
-Scudder
-Metzger
-Neave
-Whitfield
-Bernice Johnson
-Boos
-Bowers
-Marchant
-McDowell
-Kolls
-Koch
-Cannon
-Perez
-Hardy
-Morton
-Gutknecht
-Rinaldi
-Aviles
-Moreno
-Fagan
-Boler
-Billups
-Veasey
-Reeves
-Hancock
-Burud
-Anderson
-Schaab
-Stucky
-Morris
-Dietrich
-Bassel
-Eads
-Leggett
-Trantham
-Luke
-Manuel
-Yeatts Brown
-Beckley
-Parker
-Haines
-Sanchez
-Harber
-Wray
-Emery
-Savino
-Seeberger
-Escobar
-Mendoza
-Lane
-Moody
-DeMerchant
-Bridges
-Fraley
-Hawkins
-Hebert
-George
-Cannata
-Rolnick
-Mitchell
-Wallace
-Krenek
-Mathew
-Hrbacek
-Hatton
-Vacek
-Elliott
-Walker
-Stephenson
-Cantu
-Zerwas
-Scoggins
-Green
-Kurtz
-Hernandez
-Foley
-Pettijohn
-Bonnen
-Phelps
-Illyes
-Brady
-David
-Duncan
-Kuempel
-Rodgers
-White
-Pate
-Jackson Lee
-Spencer
-Alvarado
-Hunt
-Shadwick
-Lewis Payne
-Landrum
-Garrison
-McClure
-Lacayo
-Silverman
-Magee
-Anastasio
-Bond
-Luong
-Hemphill
-Dollinger
-Mayfield
-Collins
-Glass
-McSpadden
-Warren
-Aguilar
-Hart
-Guiney
-Ward
-Reeder
-Moore
-Longino
-Prine
-Graves-Harrington
-Schmude
-Berg
-Cabaniss
-Unger
-Flowers
-Peake
-Martin
-Hinde
-Sepolio
-Gamble
-Stalder
-Matthews
-Weems
-Fraga
-Roth
-Lombardino
-Dean
-Dunson
-Millard
-Heath
-Franklin York
-Tanner
-Farr
-Wells
-Devlin
-Oakes
-Schneider
-Shapiro
-Emmett
-Hidalgo
-Gatlin
-Simoneaux
-Black
-Newman
-Olsen
-Cox
-Butts
-Horwitz
-Goodhart
-Salgado
-Harmon
-Bowman
-Hughes
-Clinton
-Baldwin
-Alfaro
-Fleischer
-Andrews
-Derbyshire
-Simons
-Bynum
-Wakefield
-Finch
-Spjut
-Burdette
-Holleman
-Padilla
-Fields
-Singer
-Bridgwater
-Leuchtag
-Barnstone
-Swanson
-Kovach
-Storey
-Mafrige
-McLeod
-Daniel
-Stanart
-Trautman
-Chirino-Gomez
-Osborne
-Morman
-Wang
-Coleman
-Orr
-Whitmire
-Velsquez
-McConnico
-Farrar
-Bettencort
-Romero
-Cagle
-Shaw
-Culberson
-Fletcher
-Thierry
-Aronoff
-Garza
-Sawyer
-Flanagan
-Crenshaw
-Litton
-Gunnels
-Cubbler
-Oliverson
-Infortunio
-Eriksen
-Elkins
-Rosenthal
-Bilyeu
-Bohac
-Milasincic
-Villarreal
-Trojacek
-Paul
-Karjeker
-Majsterski
-Harless
-Hurtado
-Murphy
-Schexnayder
-Huberty
-Woods
-Schofield
-Calanni
-Arevalo
-Ali
-Allen
-Wu
-Sharp
-Vo
-Close
-Morales
-Mancias
-Talbot
-Garza DeShazo
-Guerra
-Flynn
-Brannon
-Templeton
-Chappell
-Branick
-Lampson
-Wingate
-Guidry
-Funchess
-Hallmark
-Lambert
-Bailes
-Lemond
-Frullo
-Turner-Pearson
-Felton
-Metcalf
-Midler
-Keough
-Stittleburg
-Pierre
-Sunderland
-Seger
-Hale
-Herrero
-Pulcher
-Henderson
-Pusley
-Canales
-Manning
-Vargas
-Lorentzen
-Sands
-Barrera
-Granger
-Adia
-Leddy
-Schaefer
-Katz
-Moran
-Mast
-Burton
-Powell
-West
-Munford
-Hicks
-Kim
-Teel
-Whitley
-Meyers
-Roberts
-Wilder
-Derewitz
-Nguyen
-Hayes
-Tinderholt
-Pallett
-Cravens Curnutt
-Gloria
-Goldman
-McLaughlin
-Wingo
-Charbonnet
-Thorn
-Geren
-Stackhouse
-Zedler
-Ray
-Parmer
-Stickland
-Riddell
-Espinoza
-Capriglione
-Ringo
-Brandt
-Jara
-Klick
-Sims
-Krause
-Bean
-Debeauvoir
-Lockwood
-Soileau
-Slagle
-Nila
-Cole
-Ludlow
-Hinojosa
-Harry
-Holmes
-Workman
-Goodwin
-De La Garza
-Raymond
-Casso
-Talarico
-Gravell
-Conkin
-Kelberlau
-Hallford
-Morehart
-Rister
-Tiedt
-Heselmeyer
-Kadir
-Dale
-Bucy
-Parks
+Donald J. Trump
+Hillary Clinton
+Gary Johnson
+Jill Stein
+Tony Valdivia
+Emidio Soltysik
+Laurence Kotlikoff
+Jonathan Lee
+Michael A. Maturen
+Monica Moorehead
+Scott Cubbler
+Evan McMullin
+Dale Steffes
+Cherunda Fox
+Darrell L. Castle
+Tom Hoefling
+Robert Morrow
+Jeb Hensarling
+Ken Ashby
+Wayne Christian
+Grady Yarbrough
+Mark Miller
+Martina Salinas
+Debra Lehrmann
+Mike Westergren
+Kathie Glass
+Rodolfo Rivera Munoz
+Paul Green
+Dori Contreras Garza
+Tom Oxford
+Charles E. Waterbury
+Eva Guzman
+Savannah Robinson
+Don Fulton
+Jim Chisholm
+Mary Lou Keel
+Lawrence 'Larry' Meyers
+Mark Ash
+Adam King Blackwell Reposa
+Scott Walker
+Betsy Johnson
+William Bryan Strange, III
+Judith Sanders-Castro
+Michael E. Keasler
+Robert Burns
+Mark W. Bennett
+Keven M. Ellis
+Amanda M. Rudolph
+Anastasia Wilford
+Byron Cook
+Brian Hoyle
+Greg Neeley
+Mark A. Calhoon
+Pam Foster Fletcher
+Mike Conaway
+Nicholas Landholt
+Marty Rowley
+Brooks Landgraf
+Gina M. Palafox
+Louie Gohmert
+Shirley J. McKellar
+Phil Gray
+Renee Culler
+Trent Ashby
+Joe Martin
+Blake Farenthold
+Raul (Roy) Barrera
+Lois W. Kolkhorst
+Kathie L. Stone
+Geanie W. Morrison
+Greg Perkes
+Leticia Hinojosa
+Janna K. Whatley
+Mac Thornberry
+Calvin DeWeese
+H.F. 'Rusty' Tomlinson
+James B. Frank
+Elizabeth Kerr
+Bonnie Sudderth
+Jack McGaughey
+Casey Polhemus
+Ken King
+Jim Campbell
+Randall Sims
+Zeffen Hardin
+Henry Cuellar
+Michael D. Cary
+Georgina Perez
+Hugo Noyola Jr.
+Peter P. Flores
+Carlos I. Uresti
+Maximilian Martin
+Judith Zaffirini
+Ryan Guillen
+Jason Pulliam
+Irene Rios
+Audrey Gossett Louis
+Rene M. Pena
+Michael T. McCaul
+Tawana W. Cadien
+Bill Kelsey
+Tom Maynard
+Judy Jennings
+Leighton Schubert
+Cecil R. Webster
+Sherry Radack
+Jim Peacock
+Evelyn Keyes
+Barbara Gardner
+Kevin Jewell
+Candance White
+Tracy Elizabeth Christopher
+Peter M. Kelly
+Jodey Arrington
+Troy Bonar
+Mark Lawson
+Kathryn Horton Gurley
+Lamar Smith
+Tom Wakely
+Mark Loewe
+Antonio 'Tony' Diaz
+Dawn Buckingham
+Virginia 'Jennie Lou' Leeder
+Andrew S. Murr
+Stephanie Lochte Ertel
+Brian Holk
+Scott Monroe
+Bill Flores
+William Matta
+Clark Patterson
+John Cyrier
+Cindy Olson Bourland
+Melissa Goodwin
+Carson Campbell
+Reva L. Towslee Corbett
+Chris Duggan
+Charles Perry
+John Bailey
+Bobby D. Burnett
+Jennifer Habert Dick
+Rey Gonzalez, Jr.
+Filemon B. Vela
+J.M. Lozano
+Marisa Yvette Garcia-Utley
+Jose Aliseda
+Roger Williams
+Kathi Thomas
+Loren Marc Schneiderman
+John Carter
+Mike Clark
+Scott Ballard
+Scott Cosper
+Sandra Blankenship
+Hugh D. Shine
+John Gauntt
+Jack Jones
+Fancy H. Jezek
+Henry Garza
+Joaquin Castro
+Jeffrey C. Blunt
+Paul Pipkin
+Will Hurd
+Pete P. Gallego
+Ruben S. Corvalan
+Susan Narvaiz
+Lloyd Doggett
+Rhett Rosenquest Smith
+Scott Trimble
+Ken Mercer
+Rebecca Bell-Metereau
+Ricardo Perkins
+Jose Menendez
+Fidel 'TwoBears' Castillo
+Scott Pusich
+Diana Arévalo
+Rick Galindo
+Philip Cortez
+Carlos Antonio Raymond
+John Lujan
+Tomas Uresti
+Roland Gutierrez
+Barbara Gervin-Hawkins
+Laura Thompson
+Joe Straus
+Lyle Larson
+Diego Bernal
+Ina Minjarez
+Justin Rodriguez
+Michael Mery
+Antonia 'Toni' Arteaga
+David A. Canales
+David Kaliski
+Norma Gonzales
+Laura Salinas
+Libby Wiedermann
+Catherine Torrres-Stahl
+Ron Rangel
+Laura Parker
+Arcelia Treviño
+Jan Ischy-Prins
+Frank J. Castro
+Karen Pozza
+Leslie Sachanowicz
+Angelica Jimenez
+Frances V. Dunham
+Rosie Alvarado
+Jason A. Isaac
+Allan Garrett
+Wiley (Sonny) McAfee
+Dustin Burrows
+Ernie B. Armstrong
+Ben R. Smith
+Sue Melton-Malone
+Brian Birdwell
+Michael Collins
+DeWayne Burns
+Al Scoggins
+Adam Sibley
+John Ratcliffe
+Cody Wommack
+Bryan Hughes
+Gary VanDeaver
+Josh Morriss
+Bill Miller
+John Tidwell
+Randy Weber
+Michael Cole
+Pete Olson
+Mark Gibson
+Larry Taylor
+Dennis Bonnen
+Ed Thompson
+John T Floyd
+Ben Hardin
+Barbara Cargill
+Kyle Kacal
+John Raney
+Travis Bryan, III
+Jarvis Parsons
+Poncho Nevárez
+Roy Ferguson
+Sandy Wilson
+Jaime Escuder
+Wade Jackson
+Tim Westley
+Vicente Gonzalez
+Ross Lynn Leone
+Vanessa S. Tijerina
+Velma A. Arellano
+Juan 'Chuy' Hinojosa
+Richard C. Terrell
+Carlos Omar Garcia
+Mike Lang
+Steve Ellis
+Micheal Murray
+Julie Renken
+Terry Wilson
+Bruce Boyer
+Chris Schneider
+Andrea 'Andi' St. Leger
+Jack W. Marr
+Kemper Stephen Williams
+Robert E. 'Bobby' Bell
+James Eidson
+Eddie Lucio Jr.
+Oscar Longoria
+Rene O. Oliveira
+Eddie Lucio III
+Arturo Cisneros Nelson
+Elia Cornejo Lopez
+David A. Sanchez
+Rene De Coss
+Gloria M. Rincones
+Cole Hefner
+Danny Woodson
+Charles Craig Bailey
+Four Price
+Stuart Messer
+Luke McLean Inman
+Chris Paddie
+Brian Babin
+Hal J. Ridley Jr.
+Brandon Creighton
+Jenn West
+Wayne Faircloth
+Lloyd Criss
+Randy McDonald
+Cheryl Swope Lieck
+Travis Clardy
+Stephen J. Wright
+Chris Day
+Elmer Beckworth
+Drew Springer
+Christopher E. Dennis
+Drew Darby
+Barbara Lane Walther
+Allison Palmer
+Heath Hemphill
+Sam Johnson
+Adam P. Bell
+Scott Jameson
+Paul Blair
+Pete Sessions
+Ed Rankin
+Gary Stuard
+Justin Holland
+Karen Jacobs
+Rick Donaldson
+Matt Shaheen
+Gnanse Nelson
+Shawn W. Jones
+Jeff Leach
+Scott Coleman
+Ray Brewer
+Scott Sanford
+John Bryant
+Rachel Wester
+Emmett Merwin
+Jodie Laubenberg
+Denise Hamilton
+Bob Worthington
+Lana Myers
+Gena Slaughter
+David John Schenck
+Dennise Garcia
+Angela Tucker
+Ben Smith
+Mark Rusch
+Andrea Thompson
+Daniel R. Correa
+Piper McCraw
+Emily A. Miskel
+Bill Old
+Jessica Richard Crawford
+Kyle Biedermann
+Dibrell 'Dib' Waldrip
+J.D. Sheffield
+Ben Woodward
+John Best
+Janelle M. Haverkamp
+John Warren
+Trent D. Farrell
+Dusty Boyd
+Tom Craddick
+Amanda Navarette
+Laurie K. English
+Ruben G. Reyes
+José Rodriguez
+Jaime Esparza
+John Smithee
+David M. Green
+Kenny E. Marchant
+Jan McDowell
+Mike Kolls
+Kevin McCormick
+Michael C. Burgess
+Eric Mauck
+Mark Boler
+Charles Lingerfelt
+Eddie Bernice Johnson
+Jarrett R. Woods
+Thom Prentice
+M. Mark Mitchell
+Marc Veasey
+Eric Johnson
+Heather Marcus
+Linda Koop
+Laura Irvin
+Rafael M. Anchia
+Roberto R. Alonzo
+Rodney Anderson
+Terry Meza
+Kenneth Sheets
+Victoria Neave
+Morgan Meyer
+Scott Smith
+A. Denise Russell
+Helen Giddings
+Toni Rose
+Chad O. Jackson
+Yvonne Davis
+Angie Chen Button
+Jack Blackshear
+Cindy Burkett
+Rhetta Andrews Bowers
+Jason Villalba
+Jim Burke
+Anthony Holan
+Matt Rinaldi
+Dorotha M. Ocker
+Barry Johnson
+Eric Moye
+Ken Molberg
+Gregory Preston Gorman
+Maricela Moore
+Mike Lee
+Hector Garza
+Susan Rankin
+Darlene Ewing
+Tom Spackman
+Nancy Kennedy
+Gracie Lewis
+Dominique Collins
+William R. Barr
+Philip Mack Furlow
+Larry Phillips
+Eddie Northcutt
+Will Biard
+Will Ramsay
+Jane Nelson
+Rod Wingo
+Tan Parker
+Lynn Stucky
+Connor Flanagan
+Ron Simmons
+Alex Mendoza
+Pat Fallon
+Rodney Caston
+Sherry Shipman
+Bruce McFarling
+Doug Robison
+Evan Stone
+Jonathan M. Bailey
+Tiffany Haertling
+Rob Lassmann
+Tracy O. King
+Roberto Serna
+Omar Escobar
+Steven R. Herod
+John W. Smith
+Sara Kate Billingsley
+R.N. 'Bobby' Bland
+Joe Barton
+Ruby Faye Woolridge
+Darrel Smith Jr.
+John Wray
+Chuck Richter
+Joe F Grubbs
+Cindy Ermatinger
+Beto O'Rourke
+Jaime O. Perez
+Mary L. Gourdoux
+Mary E. González
+César J. Blanco
+Evelina 'Lina' Ortega
+Jeffrey Lane
+Joe Moody
+Joseph C. Pickett
+Bill Moody
+Annabell 'Anna' Perez
+Yahara Lisa Gutierrez
+Angie Juarez Barill
+Mike Herrera
+Patrick Michael Garcia
+Laura Strathmann
+Sam Medrano, Jr.
+Sergio H. Enriquez
+Diane Navarrete
+Alan Nash
+Lauri Blake
+Richard E. Glaser
+Glen Harrison
+Ricky Thompson
+Staley Heatly
+Jeff Martin
+Al Green
+Borris L. Miles
+Joshua Rohn
+D.F. 'Rick' Miller
+L. 'Sarah' DeMerchant
+Ken Bryant
+Ron Reynolds
+John Zerwas
+Phil Stephenson
+John Davis
+Chad Bridges
+Frank J. Fraley
+Brenda Mullinix
+Maggie Jaramillo
+Teana Watson
+James H. 'Jim' Shoemake
+David Perwin
+Pat Simmons
+Greg Bonnen
+Kerry L. Neves
+Cornel Walker
+Lonnie Cox
+Michelle Slaughter
+Keith Williams
+Lucy Wilke
+Hardy L. Wilkerson
+Franklin McDonough
+Jim Fallon
+Rayburn M. 'Rim' Nall
+Joe Brown
+Jay Dean
+Alfonso Charles
+Kevin Brady
+Donald L. 'Don' Kraemer
+Albert M. McCaig, Jr.
+Tuck Moody McLain
+John Kuempel
+Robert M. Bohmfalk
+Wally Hatch
+Curt W. Brancheau
+Mark W. Snider
+James White
+Charles A. Kreger
+Earl Stover, III
+Steve Thomas
+David A. Sheffield
+Ted Poe
+Pat Bryan
+James B. Veasaw
+Joshua Darr
+John Culberson
+James Cargas
+Lori Bartley
+Sheila Jackson Lee
+Thomas Kleven
+Julio Garza
+Gene Green
+N. Ruben Perez
+James Partsch-Galvan
+Donna Bahorich
+R. Dakota Carter
+Whitney Bilyeu
+Sylvia R. Garcia
+Kevin Roberts
+Joy Dawson-Thomas
+Eric B. Moquin
+Dan Huberty
+Scott Ford
+Joseph McElligott
+Briscoe Cain
+Ken Lowder
+Dennis Paul
+Tom Oliverson
+Alma A. Allen
+Mike Schofield
+Phil Kurtz
+Jim Murphy
+Sarah Davis
+Ben Rose
+Gilberto 'Gil' Velasquez Jr.
+Gary Elkins
+Jesse A. Ybanez
+Kendall L. Baker
+Gene Wu
+Dan Biggs
+Dwayne Bohac
+Jarvis D. Johnson
+Armando Lucio Walle
+Senfronia Thompson
+Harold V. Dutton, Jr.
+Ana Hernandez
+Gilbert Pena
+Mary Ann Perez
+Carol Alvarado
+Shawn Thierry
+Roy Owens
+Matt Murphy
+Garnet F. Coleman
+Brian M. Harrison
+Jessica Cristina Farrar
+Bryan Chu
+Hubert Vo
+Valoree Swanson
+Michael Shawn Kelly
+Kevin Fulton
+Kristen Hawkins
+Erin Elizabeth Lunceford
+Fredericka Phillips
+Will Archer
+Larry Weiman
+Sharon Hemphill
+Kyle Carter
+Sarahjane Swanson
+R. K. Sandill
+Sophia Mafrige
+Michael Gomez
+Cindy Bennett Smith
+Jaclanel McFarland
+Jeff Hastings
+Mike Engelhart
+Don Self
+Robert K. Schaffer
+Bruce Bain
+Alexandra Smoots-Hogan
+Debra Ibarra Mayfield
+Ursula A. Hall
+Katherine McDaniel
+Hazel B. Jones
+Stacey W. Bond
+Nikita 'Niki' Harmon
+Ryan Patrick
+Robert Johnson
+Phil Gommels
+Kelli Johnson
+Kristin M. Guiney
+Randy Roll
+Fred Shuchart
+Elaine Palmer
+Joseph 'Tad' Halbach
+Daryl Moore
+Grant Dorfman
+Steven Kirkland
+Renee Magee
+Herb Ritchie
+Brock Thomas
+Ramona Franklin
+Mary McFaden
+Maria T. (Terri) Jackson
+Mark Kent Ellis
+George Powell
+Alyssa Lemkuil
+Julia Maldonado
+Devon Anderson
+Kim Ogg
+Brad Morin
+Mike Fouts
+Lance Gooden
+R. Scott McKee
+Mark W. Hall
+Sergio Munoz, Jr.
+Armando 'Mando' Martinez
+Maricela 'Mari' De Leon
+Terry Canales
+Hilda Garza De Shazo
+Bobby Guerra
+Luis M. Singleterry
+Rudy Delgado
+Bobby Flores
+Mario E. Ramirez, Jr.
+Letty Lopez
+Keno Vasquez
+Israel Ramon, Jr.
+Renee 'Rena' Rodriguez-Betancourt
+Mark F Pratt
+Rob Christian
+Dan Flynn
+Donna Gordon Kaspar
+Keli Aiken
+Noble D. Walker, Jr.
+Greg Lowery
+Pam Guenther
+Craig M. Mixson
+Dade Phelan
+Joe Deshotel
+Justin Gary Sanderson
+Dana Timaeus
+Baylor Wortham
+John E. Neill
+Bill Bosworth
+Dale Hanna
+Stan Lambert
+Pierce LoPachin
+Joe Edd Boaz
+B. Michael 'Mike' Chitty
+John T. Hubert
+Nathan P. Fugate
+Enrique (Henry) Fernandez
+Mike Bagley
+Fred Hernandez
+R. Wesley Tidwell
+Gary Waite
+Hope L. Knight
+Ernest Bailes
+Evan Nagel
+Logan Pickett
+Mike Swanson
+Randy Reynolds
+John Frullo
+William C (Bill) Sowder
+Jim Bob Darnell
+Ken Leatherman
+Craig Estlinbaum
+Steven E. Reis
+Charles 'Doc' Anderson
+Clif Deuvall
+Ralph T. Strother
+Gary Coley, Jr.
+Camile Glasscock DuBose
+Danny J. Kindred
+George D. 'Jody' Gilles
+Laura A. Nodolf
+John W. Youngblood
+Cecil Bell
+Mark Keough
+Will Metcalf
+Phil Grant
+Jennifer James Robin
+Tracy A. Gilbert
+Patty Maginnis
+Brett Ligon
+Campbell Cox, II
+Ed Klein
+Nicole Lostracco
+James Lagomarsino
+Todd Hunter
+Abel Herrero
+Nanette Hasette
+Inna Klein
+Jose Longoria
+Missy Medary
+James O. Gardner
+Mark A. Gonzalez
+Courtney Burch Arkeen
+Dennis Powell
+MICHAEL MOORE
+Kriste Burnett
+Leann Kay Rafferty
+Kay Granger
+Bill Bradshaw
+Ed Colliver
+Phil King
+Craig Towson
+Graham Quisenberry
+Don Schnebly
+Kaycee L. Jones
+John Wells
+Doug Woodburn
+Brett Hall
+David E. Rakow
+J. Clay Gossett
+J. Kevin Dutton
+Sam Smith
+Stephen Shires
+Matt Schaefer
+Kerry L. Russell
+Christi Kennedy
+Jose Luis Garza
+Stephen E. Bristow
+Dee Peavy
+Ramon Romero Jr.
+Stephanie Klick
+Jonathan Stickland
+Kim K. Leach
+Leah Sees
+Travis Christal
+Matt Krause
+Nancy Bean
+Tony Tinderholt
+Jessica Pallett
+Albert G. McDaniel
+Nicole Collier
+Bill Zedler
+Sandra D. Lee
+Craig Goldman
+Elizabeth Tarrant
+Patrick Wentworth
+Giovanni Capriglione
+Maricela Sanchez Chibli
+Charlie Geren
+Dan Hawkins
+Carlos 'Charlie' Garza
+Chris Turner
+Melody Wilkinson
+David Evans
+Don Cosby
+R.H. Wallace, Jr.
+Susan McCoy
+Louis E. Sturns
+Wade Birdwell
+Mike Wallach
+Joe Drago
+Mark Pittman
+Patricia Baca Bennett
+George Gallagher
+Wayne Salvant
+Lee Hamilton
+Thomas Wheeler
+James Hicks
+J.A. Trey Didway
+Jay K. Weatherby
+Brad Goodwin
+Gabriel Nila
+Dawnna Dukes
+Kevin Ludlow
+Adam Michael Greeley
+Paul Workman
+Ana Jordan
+Scott G. McKinlay
+Donna Howard
+Ben Easton
+Gina Hinojosa
+Rick Perkins
+Ceasar Ruiz
+Celia Israel
+Eddie Rodriguez
+katija 'kat' gruene
+Scott Jenkins
+Rhonda Hurley
+Darlene Byrne
+P. David Wahlberg
+Gisela D. Triana
+Jan Soifer
+Tim Sulak
+Julie Kocurek
+Tamara Needles
+Brad Urrutia
+Maura Phelan
+Margaret Moore
+Bennie L. Schiro
+Richard Pena Raymond
+Beckie Palomo
+Oscar 'O.J.' Hale, Jr.
+Isidro R. Alaniz
+Dawn Allison
+John Roades
+Barney Fudge
+Charlie Barnard
+Larry Gonzales
+Henry Knetsar
+Tony Dale
+Paul R. Gordon
+Donna King
+Ryan Larson
+Betsy F. Lambeth
+Shawn Dick
+Jeff Fletcher
