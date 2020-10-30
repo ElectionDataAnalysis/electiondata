@@ -7,5 +7,4 @@ abbreviated_name=<2 character abbreviation for name>
 count_of_state_house_districts=<expects integer>
 count_of_state_senate_districts=<expects integer>
 count_of_us_house_districts=<expects integer>
-results_file=</path/to/results/file>
-munger_name=<name of munger applied to results file>
+
