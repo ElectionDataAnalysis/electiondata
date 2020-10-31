@@ -1,0 +1,108 @@
+Name	ElectionDistrict
+AZ House District 1	Maricopa County;AZ House District 1
+AZ House District 2	Maricopa County;AZ House District 2
+AZ House District 3	Maricopa County;AZ House District 3
+AZ House District 4	Maricopa County;AZ House District 4
+AZ House District 5	Maricopa County;AZ House District 5
+AZ House District 6	Maricopa County;AZ House District 6
+AZ House District 7	Maricopa County;AZ House District 7
+AZ House District 8	Maricopa County;AZ House District 8
+AZ House District 9	Maricopa County;AZ House District 9
+AZ House District 10	Maricopa County;AZ House District 10
+AZ House District 11	Maricopa County;AZ House District 11
+AZ House District 12	Maricopa County;AZ House District 12
+AZ House District 13	Maricopa County;AZ House District 13
+AZ House District 14	Maricopa County;AZ House District 14
+AZ House District 15	Maricopa County;AZ House District 15
+AZ House District 16	Maricopa County;AZ House District 16
+AZ House District 17	Maricopa County;AZ House District 17
+AZ House District 18	Maricopa County;AZ House District 18
+AZ House District 19	Maricopa County;AZ House District 19
+AZ House District 20	Maricopa County;AZ House District 20
+AZ House District 21	Maricopa County;AZ House District 21
+AZ House District 22	Maricopa County;AZ House District 22
+AZ House District 23	Maricopa County;AZ House District 23
+AZ House District 24	Maricopa County;AZ House District 24
+AZ House District 25	Maricopa County;AZ House District 25
+AZ House District 26	Maricopa County;AZ House District 26
+AZ House District 27	Maricopa County;AZ House District 27
+AZ House District 28	Maricopa County;AZ House District 28
+AZ House District 29	Maricopa County;AZ House District 29
+AZ House District 30	Maricopa County;AZ House District 30
+AZ House District 31	Maricopa County;AZ House District 31
+AZ House District 32	Maricopa County;AZ House District 32
+AZ House District 33	Maricopa County;AZ House District 33
+AZ House District 34	Maricopa County;AZ House District 34
+AZ House District 35	Maricopa County;AZ House District 35
+AZ House District 36	Maricopa County;AZ House District 36
+AZ House District 37	Maricopa County;AZ House District 37
+AZ House District 38	Maricopa County;AZ House District 38
+AZ House District 39	Maricopa County;AZ House District 39
+AZ House District 40	Maricopa County;AZ House District 40
+AZ House District 41	Maricopa County;AZ House District 41
+AZ House District 42	Maricopa County;AZ House District 42
+AZ House District 43	Maricopa County;AZ House District 43
+AZ House District 44	Maricopa County;AZ House District 44
+AZ House District 45	Maricopa County;AZ House District 45
+AZ House District 46	Maricopa County;AZ House District 46
+AZ House District 47	Maricopa County;AZ House District 47
+AZ House District 48	Maricopa County;AZ House District 48
+AZ House District 49	Maricopa County;AZ House District 49
+AZ House District 50	Maricopa County;AZ House District 50
+AZ House District 51	Maricopa County;AZ House District 51
+AZ House District 52	Maricopa County;AZ House District 52
+AZ House District 53	Maricopa County;AZ House District 53
+AZ House District 54	Maricopa County;AZ House District 54
+AZ House District 55	Maricopa County;AZ House District 55
+AZ House District 56	Maricopa County;AZ House District 56
+AZ House District 57	Maricopa County;AZ House District 57
+AZ House District 58	Maricopa County;AZ House District 58
+AZ House District 59	Maricopa County;AZ House District 59
+AZ House District 60	Maricopa County;AZ House District 60
+AZ Senate District 1	Maricopa County;AZ Senate District 1
+AZ Senate District 2	Maricopa County;AZ Senate District 2
+AZ Senate District 3	Maricopa County;AZ Senate District 3
+AZ Senate District 4	Maricopa County;AZ Senate District 4
+AZ Senate District 5	Maricopa County;AZ Senate District 5
+AZ Senate District 6	Maricopa County;AZ Senate District 6
+AZ Senate District 7	Maricopa County;AZ Senate District 7
+AZ Senate District 8	Maricopa County;AZ Senate District 8
+AZ Senate District 9	Maricopa County;AZ Senate District 9
+AZ Senate District 10	Maricopa County;AZ Senate District 10
+AZ Senate District 11	Maricopa County;AZ Senate District 11
+AZ Senate District 12	Maricopa County;AZ Senate District 12
+AZ Senate District 13	Maricopa County;AZ Senate District 13
+AZ Senate District 14	Maricopa County;AZ Senate District 14
+AZ Senate District 15	Maricopa County;AZ Senate District 15
+AZ Senate District 16	Maricopa County;AZ Senate District 16
+AZ Senate District 17	Maricopa County;AZ Senate District 17
+AZ Senate District 18	Maricopa County;AZ Senate District 18
+AZ Senate District 19	Maricopa County;AZ Senate District 19
+AZ Senate District 20	Maricopa County;AZ Senate District 20
+AZ Senate District 21	Maricopa County;AZ Senate District 21
+AZ Senate District 22	Maricopa County;AZ Senate District 22
+AZ Senate District 23	Maricopa County;AZ Senate District 23
+AZ Senate District 24	Maricopa County;AZ Senate District 24
+AZ Senate District 25	Maricopa County;AZ Senate District 25
+AZ Senate District 26	Maricopa County;AZ Senate District 26
+AZ Senate District 27	Maricopa County;AZ Senate District 27
+AZ Senate District 28	Maricopa County;AZ Senate District 28
+AZ Senate District 29	Maricopa County;AZ Senate District 29
+AZ Senate District 30	Maricopa County;AZ Senate District 30
+US House AZ District 1	Maricopa County;US House AZ District 1
+US House AZ District 2	Maricopa County;US House AZ District 2
+US House AZ District 3	Maricopa County;US House AZ District 3
+US House AZ District 4	Maricopa County;US House AZ District 4
+US House AZ District 5	Maricopa County;US House AZ District 5
+US House AZ District 6	Maricopa County;US House AZ District 6
+US House AZ District 7	Maricopa County;US House AZ District 7
+US House AZ District 8	Maricopa County;US House AZ District 8
+US House AZ District 9	Maricopa County;US House AZ District 9
+US President (AZ)	Maricopa County
+AZ Governor	Maricopa County
+US Senate AZ	Maricopa County
+AZ Corporation Commissioner	Maricopa County
+AZ Attorney General	Maricopa County
+AZ Lieutenant Governor	Maricopa County
+AZ Treasurer	Maricopa County
+AZ Secretary of State	Maricopa County

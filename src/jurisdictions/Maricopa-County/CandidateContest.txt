@@ -1,0 +1,541 @@
+Name	NumberElected	Office	PrimaryParty
+AZ House District 1 (Maricopa County)	1	AZ House District 1	
+AZ House District 2 (Maricopa County)	1	AZ House District 2	
+AZ House District 3 (Maricopa County)	1	AZ House District 3	
+AZ House District 4 (Maricopa County)	1	AZ House District 4	
+AZ House District 5 (Maricopa County)	1	AZ House District 5	
+AZ House District 6 (Maricopa County)	1	AZ House District 6	
+AZ House District 7 (Maricopa County)	1	AZ House District 7	
+AZ House District 8 (Maricopa County)	1	AZ House District 8	
+AZ House District 9 (Maricopa County)	1	AZ House District 9	
+AZ House District 10 (Maricopa County)	1	AZ House District 10	
+AZ House District 11 (Maricopa County)	1	AZ House District 11	
+AZ House District 12 (Maricopa County)	1	AZ House District 12	
+AZ House District 13 (Maricopa County)	1	AZ House District 13	
+AZ House District 14 (Maricopa County)	1	AZ House District 14	
+AZ House District 15 (Maricopa County)	1	AZ House District 15	
+AZ House District 16 (Maricopa County)	1	AZ House District 16	
+AZ House District 17 (Maricopa County)	1	AZ House District 17	
+AZ House District 18 (Maricopa County)	1	AZ House District 18	
+AZ House District 19 (Maricopa County)	1	AZ House District 19	
+AZ House District 20 (Maricopa County)	1	AZ House District 20	
+AZ House District 21 (Maricopa County)	1	AZ House District 21	
+AZ House District 22 (Maricopa County)	1	AZ House District 22	
+AZ House District 23 (Maricopa County)	1	AZ House District 23	
+AZ House District 24 (Maricopa County)	1	AZ House District 24	
+AZ House District 25 (Maricopa County)	1	AZ House District 25	
+AZ House District 26 (Maricopa County)	1	AZ House District 26	
+AZ House District 27 (Maricopa County)	1	AZ House District 27	
+AZ House District 28 (Maricopa County)	1	AZ House District 28	
+AZ House District 29 (Maricopa County)	1	AZ House District 29	
+AZ House District 30 (Maricopa County)	1	AZ House District 30	
+AZ House District 31 (Maricopa County)	1	AZ House District 31	
+AZ House District 32 (Maricopa County)	1	AZ House District 32	
+AZ House District 33 (Maricopa County)	1	AZ House District 33	
+AZ House District 34 (Maricopa County)	1	AZ House District 34	
+AZ House District 35 (Maricopa County)	1	AZ House District 35	
+AZ House District 36 (Maricopa County)	1	AZ House District 36	
+AZ House District 37 (Maricopa County)	1	AZ House District 37	
+AZ House District 38 (Maricopa County)	1	AZ House District 38	
+AZ House District 39 (Maricopa County)	1	AZ House District 39	
+AZ House District 40 (Maricopa County)	1	AZ House District 40	
+AZ House District 41 (Maricopa County)	1	AZ House District 41	
+AZ House District 42 (Maricopa County)	1	AZ House District 42	
+AZ House District 43 (Maricopa County)	1	AZ House District 43	
+AZ House District 44 (Maricopa County)	1	AZ House District 44	
+AZ House District 45 (Maricopa County)	1	AZ House District 45	
+AZ House District 46 (Maricopa County)	1	AZ House District 46	
+AZ House District 47 (Maricopa County)	1	AZ House District 47	
+AZ House District 48 (Maricopa County)	1	AZ House District 48	
+AZ House District 49 (Maricopa County)	1	AZ House District 49	
+AZ House District 50 (Maricopa County)	1	AZ House District 50	
+AZ House District 51 (Maricopa County)	1	AZ House District 51	
+AZ House District 52 (Maricopa County)	1	AZ House District 52	
+AZ House District 53 (Maricopa County)	1	AZ House District 53	
+AZ House District 54 (Maricopa County)	1	AZ House District 54	
+AZ House District 55 (Maricopa County)	1	AZ House District 55	
+AZ House District 56 (Maricopa County)	1	AZ House District 56	
+AZ House District 57 (Maricopa County)	1	AZ House District 57	
+AZ House District 58 (Maricopa County)	1	AZ House District 58	
+AZ House District 59 (Maricopa County)	1	AZ House District 59	
+AZ House District 60 (Maricopa County)	1	AZ House District 60	
+AZ Senate District 1 (Maricopa County)	1	AZ Senate District 1	
+AZ Senate District 2 (Maricopa County)	1	AZ Senate District 2	
+AZ Senate District 3 (Maricopa County)	1	AZ Senate District 3	
+AZ Senate District 4 (Maricopa County)	1	AZ Senate District 4	
+AZ Senate District 5 (Maricopa County)	1	AZ Senate District 5	
+AZ Senate District 6 (Maricopa County)	1	AZ Senate District 6	
+AZ Senate District 7 (Maricopa County)	1	AZ Senate District 7	
+AZ Senate District 8 (Maricopa County)	1	AZ Senate District 8	
+AZ Senate District 9 (Maricopa County)	1	AZ Senate District 9	
+AZ Senate District 10 (Maricopa County)	1	AZ Senate District 10	
+AZ Senate District 11 (Maricopa County)	1	AZ Senate District 11	
+AZ Senate District 12 (Maricopa County)	1	AZ Senate District 12	
+AZ Senate District 13 (Maricopa County)	1	AZ Senate District 13	
+AZ Senate District 14 (Maricopa County)	1	AZ Senate District 14	
+AZ Senate District 15 (Maricopa County)	1	AZ Senate District 15	
+AZ Senate District 16 (Maricopa County)	1	AZ Senate District 16	
+AZ Senate District 17 (Maricopa County)	1	AZ Senate District 17	
+AZ Senate District 18 (Maricopa County)	1	AZ Senate District 18	
+AZ Senate District 19 (Maricopa County)	1	AZ Senate District 19	
+AZ Senate District 20 (Maricopa County)	1	AZ Senate District 20	
+AZ Senate District 21 (Maricopa County)	1	AZ Senate District 21	
+AZ Senate District 22 (Maricopa County)	1	AZ Senate District 22	
+AZ Senate District 23 (Maricopa County)	1	AZ Senate District 23	
+AZ Senate District 24 (Maricopa County)	1	AZ Senate District 24	
+AZ Senate District 25 (Maricopa County)	1	AZ Senate District 25	
+AZ Senate District 26 (Maricopa County)	1	AZ Senate District 26	
+AZ Senate District 27 (Maricopa County)	1	AZ Senate District 27	
+AZ Senate District 28 (Maricopa County)	1	AZ Senate District 28	
+AZ Senate District 29 (Maricopa County)	1	AZ Senate District 29	
+AZ Senate District 30 (Maricopa County)	1	AZ Senate District 30	
+US House AZ District 1 (Maricopa County)	1	US House AZ District 1	
+US House AZ District 2 (Maricopa County)	1	US House AZ District 2	
+US House AZ District 3 (Maricopa County)	1	US House AZ District 3	
+US House AZ District 4 (Maricopa County)	1	US House AZ District 4	
+US House AZ District 5 (Maricopa County)	1	US House AZ District 5	
+US House AZ District 6 (Maricopa County)	1	US House AZ District 6	
+US House AZ District 7 (Maricopa County)	1	US House AZ District 7	
+US House AZ District 8 (Maricopa County)	1	US House AZ District 8	
+US House AZ District 9 (Maricopa County)	1	US House AZ District 9	
+US President (AZ) (Maricopa County)	1	US President (AZ)	
+AZ Governor (Maricopa County)	1	AZ Governor	
+US Senate AZ (Maricopa County)	1	US Senate AZ	
+US Senate AZ Partial Term (Maricopa County)	1	US Senate AZ	
+AZ Corporation Commissioner (Maricopa County)	1	AZ Corporation Commissioner	
+AZ Attorney General (Maricopa County)	1	AZ Attorney General	
+AZ Lieutenant Governor (Maricopa County)	1	AZ Lieutenant Governor	
+AZ Treasurer (Maricopa County)	1	AZ Treasurer	
+AZ Secretary of State (Maricopa County)	1	AZ Secretary of State	
+AZ House District 1 (Democratic Party) (Maricopa County)	1	AZ House District 1	Democratic Party
+AZ House District 2 (Democratic Party) (Maricopa County)	1	AZ House District 2	Democratic Party
+AZ House District 3 (Democratic Party) (Maricopa County)	1	AZ House District 3	Democratic Party
+AZ House District 4 (Democratic Party) (Maricopa County)	1	AZ House District 4	Democratic Party
+AZ House District 5 (Democratic Party) (Maricopa County)	1	AZ House District 5	Democratic Party
+AZ House District 6 (Democratic Party) (Maricopa County)	1	AZ House District 6	Democratic Party
+AZ House District 7 (Democratic Party) (Maricopa County)	1	AZ House District 7	Democratic Party
+AZ House District 8 (Democratic Party) (Maricopa County)	1	AZ House District 8	Democratic Party
+AZ House District 9 (Democratic Party) (Maricopa County)	1	AZ House District 9	Democratic Party
+AZ House District 10 (Democratic Party) (Maricopa County)	1	AZ House District 10	Democratic Party
+AZ House District 11 (Democratic Party) (Maricopa County)	1	AZ House District 11	Democratic Party
+AZ House District 12 (Democratic Party) (Maricopa County)	1	AZ House District 12	Democratic Party
+AZ House District 13 (Democratic Party) (Maricopa County)	1	AZ House District 13	Democratic Party
+AZ House District 14 (Democratic Party) (Maricopa County)	1	AZ House District 14	Democratic Party
+AZ House District 15 (Democratic Party) (Maricopa County)	1	AZ House District 15	Democratic Party
+AZ House District 16 (Democratic Party) (Maricopa County)	1	AZ House District 16	Democratic Party
+AZ House District 17 (Democratic Party) (Maricopa County)	1	AZ House District 17	Democratic Party
+AZ House District 18 (Democratic Party) (Maricopa County)	1	AZ House District 18	Democratic Party
+AZ House District 19 (Democratic Party) (Maricopa County)	1	AZ House District 19	Democratic Party
+AZ House District 20 (Democratic Party) (Maricopa County)	1	AZ House District 20	Democratic Party
+AZ House District 21 (Democratic Party) (Maricopa County)	1	AZ House District 21	Democratic Party
+AZ House District 22 (Democratic Party) (Maricopa County)	1	AZ House District 22	Democratic Party
+AZ House District 23 (Democratic Party) (Maricopa County)	1	AZ House District 23	Democratic Party
+AZ House District 24 (Democratic Party) (Maricopa County)	1	AZ House District 24	Democratic Party
+AZ House District 25 (Democratic Party) (Maricopa County)	1	AZ House District 25	Democratic Party
+AZ House District 26 (Democratic Party) (Maricopa County)	1	AZ House District 26	Democratic Party
+AZ House District 27 (Democratic Party) (Maricopa County)	1	AZ House District 27	Democratic Party
+AZ House District 28 (Democratic Party) (Maricopa County)	1	AZ House District 28	Democratic Party
+AZ House District 29 (Democratic Party) (Maricopa County)	1	AZ House District 29	Democratic Party
+AZ House District 30 (Democratic Party) (Maricopa County)	1	AZ House District 30	Democratic Party
+AZ House District 31 (Democratic Party) (Maricopa County)	1	AZ House District 31	Democratic Party
+AZ House District 32 (Democratic Party) (Maricopa County)	1	AZ House District 32	Democratic Party
+AZ House District 33 (Democratic Party) (Maricopa County)	1	AZ House District 33	Democratic Party
+AZ House District 34 (Democratic Party) (Maricopa County)	1	AZ House District 34	Democratic Party
+AZ House District 35 (Democratic Party) (Maricopa County)	1	AZ House District 35	Democratic Party
+AZ House District 36 (Democratic Party) (Maricopa County)	1	AZ House District 36	Democratic Party
+AZ House District 37 (Democratic Party) (Maricopa County)	1	AZ House District 37	Democratic Party
+AZ House District 38 (Democratic Party) (Maricopa County)	1	AZ House District 38	Democratic Party
+AZ House District 39 (Democratic Party) (Maricopa County)	1	AZ House District 39	Democratic Party
+AZ House District 40 (Democratic Party) (Maricopa County)	1	AZ House District 40	Democratic Party
+AZ House District 41 (Democratic Party) (Maricopa County)	1	AZ House District 41	Democratic Party
+AZ House District 42 (Democratic Party) (Maricopa County)	1	AZ House District 42	Democratic Party
+AZ House District 43 (Democratic Party) (Maricopa County)	1	AZ House District 43	Democratic Party
+AZ House District 44 (Democratic Party) (Maricopa County)	1	AZ House District 44	Democratic Party
+AZ House District 45 (Democratic Party) (Maricopa County)	1	AZ House District 45	Democratic Party
+AZ House District 46 (Democratic Party) (Maricopa County)	1	AZ House District 46	Democratic Party
+AZ House District 47 (Democratic Party) (Maricopa County)	1	AZ House District 47	Democratic Party
+AZ House District 48 (Democratic Party) (Maricopa County)	1	AZ House District 48	Democratic Party
+AZ House District 49 (Democratic Party) (Maricopa County)	1	AZ House District 49	Democratic Party
+AZ House District 50 (Democratic Party) (Maricopa County)	1	AZ House District 50	Democratic Party
+AZ House District 51 (Democratic Party) (Maricopa County)	1	AZ House District 51	Democratic Party
+AZ House District 52 (Democratic Party) (Maricopa County)	1	AZ House District 52	Democratic Party
+AZ House District 53 (Democratic Party) (Maricopa County)	1	AZ House District 53	Democratic Party
+AZ House District 54 (Democratic Party) (Maricopa County)	1	AZ House District 54	Democratic Party
+AZ House District 55 (Democratic Party) (Maricopa County)	1	AZ House District 55	Democratic Party
+AZ House District 56 (Democratic Party) (Maricopa County)	1	AZ House District 56	Democratic Party
+AZ House District 57 (Democratic Party) (Maricopa County)	1	AZ House District 57	Democratic Party
+AZ House District 58 (Democratic Party) (Maricopa County)	1	AZ House District 58	Democratic Party
+AZ House District 59 (Democratic Party) (Maricopa County)	1	AZ House District 59	Democratic Party
+AZ House District 60 (Democratic Party) (Maricopa County)	1	AZ House District 60	Democratic Party
+AZ Senate District 1 (Democratic Party) (Maricopa County)	1	AZ Senate District 1	Democratic Party
+AZ Senate District 2 (Democratic Party) (Maricopa County)	1	AZ Senate District 2	Democratic Party
+AZ Senate District 3 (Democratic Party) (Maricopa County)	1	AZ Senate District 3	Democratic Party
+AZ Senate District 4 (Democratic Party) (Maricopa County)	1	AZ Senate District 4	Democratic Party
+AZ Senate District 5 (Democratic Party) (Maricopa County)	1	AZ Senate District 5	Democratic Party
+AZ Senate District 6 (Democratic Party) (Maricopa County)	1	AZ Senate District 6	Democratic Party
+AZ Senate District 7 (Democratic Party) (Maricopa County)	1	AZ Senate District 7	Democratic Party
+AZ Senate District 8 (Democratic Party) (Maricopa County)	1	AZ Senate District 8	Democratic Party
+AZ Senate District 9 (Democratic Party) (Maricopa County)	1	AZ Senate District 9	Democratic Party
+AZ Senate District 10 (Democratic Party) (Maricopa County)	1	AZ Senate District 10	Democratic Party
+AZ Senate District 11 (Democratic Party) (Maricopa County)	1	AZ Senate District 11	Democratic Party
+AZ Senate District 12 (Democratic Party) (Maricopa County)	1	AZ Senate District 12	Democratic Party
+AZ Senate District 13 (Democratic Party) (Maricopa County)	1	AZ Senate District 13	Democratic Party
+AZ Senate District 14 (Democratic Party) (Maricopa County)	1	AZ Senate District 14	Democratic Party
+AZ Senate District 15 (Democratic Party) (Maricopa County)	1	AZ Senate District 15	Democratic Party
+AZ Senate District 16 (Democratic Party) (Maricopa County)	1	AZ Senate District 16	Democratic Party
+AZ Senate District 17 (Democratic Party) (Maricopa County)	1	AZ Senate District 17	Democratic Party
+AZ Senate District 18 (Democratic Party) (Maricopa County)	1	AZ Senate District 18	Democratic Party
+AZ Senate District 19 (Democratic Party) (Maricopa County)	1	AZ Senate District 19	Democratic Party
+AZ Senate District 20 (Democratic Party) (Maricopa County)	1	AZ Senate District 20	Democratic Party
+AZ Senate District 21 (Democratic Party) (Maricopa County)	1	AZ Senate District 21	Democratic Party
+AZ Senate District 22 (Democratic Party) (Maricopa County)	1	AZ Senate District 22	Democratic Party
+AZ Senate District 23 (Democratic Party) (Maricopa County)	1	AZ Senate District 23	Democratic Party
+AZ Senate District 24 (Democratic Party) (Maricopa County)	1	AZ Senate District 24	Democratic Party
+AZ Senate District 25 (Democratic Party) (Maricopa County)	1	AZ Senate District 25	Democratic Party
+AZ Senate District 26 (Democratic Party) (Maricopa County)	1	AZ Senate District 26	Democratic Party
+AZ Senate District 27 (Democratic Party) (Maricopa County)	1	AZ Senate District 27	Democratic Party
+AZ Senate District 28 (Democratic Party) (Maricopa County)	1	AZ Senate District 28	Democratic Party
+AZ Senate District 29 (Democratic Party) (Maricopa County)	1	AZ Senate District 29	Democratic Party
+AZ Senate District 30 (Democratic Party) (Maricopa County)	1	AZ Senate District 30	Democratic Party
+US House AZ District 1 (Democratic Party) (Maricopa County)	1	US House AZ District 1	Democratic Party
+US House AZ District 2 (Democratic Party) (Maricopa County)	1	US House AZ District 2	Democratic Party
+US House AZ District 3 (Democratic Party) (Maricopa County)	1	US House AZ District 3	Democratic Party
+US House AZ District 4 (Democratic Party) (Maricopa County)	1	US House AZ District 4	Democratic Party
+US House AZ District 5 (Democratic Party) (Maricopa County)	1	US House AZ District 5	Democratic Party
+US House AZ District 6 (Democratic Party) (Maricopa County)	1	US House AZ District 6	Democratic Party
+US House AZ District 7 (Democratic Party) (Maricopa County)	1	US House AZ District 7	Democratic Party
+US House AZ District 8 (Democratic Party) (Maricopa County)	1	US House AZ District 8	Democratic Party
+US House AZ District 9 (Democratic Party) (Maricopa County)	1	US House AZ District 9	Democratic Party
+US President (AZ) (Democratic Party) (Maricopa County)	1	US President (AZ)	Democratic Party
+AZ Governor (Democratic Party) (Maricopa County)	1	AZ Governor	Democratic Party
+US Senate AZ (Democratic Party) (Maricopa County)	1	US Senate AZ	Democratic Party
+US Senate AZ Partial Term (Democratic Party) (Maricopa County)	1	US Senate AZ	Democratic Party
+AZ Corporation Commissioner (Democratic Party) (Maricopa County)	1	AZ Corporation Commissioner	Democratic Party
+AZ Attorney General (Democratic Party) (Maricopa County)	1	AZ Attorney General	Democratic Party
+AZ Lieutenant Governor (Democratic Party) (Maricopa County)	1	AZ Lieutenant Governor	Democratic Party
+AZ Treasurer (Democratic Party) (Maricopa County)	1	AZ Treasurer	Democratic Party
+AZ Secretary of State (Democratic Party) (Maricopa County)	1	AZ Secretary of State	Democratic Party
+AZ House District 1 (Republican Party) (Maricopa County)	1	AZ House District 1	Republican Party
+AZ House District 2 (Republican Party) (Maricopa County)	1	AZ House District 2	Republican Party
+AZ House District 3 (Republican Party) (Maricopa County)	1	AZ House District 3	Republican Party
+AZ House District 4 (Republican Party) (Maricopa County)	1	AZ House District 4	Republican Party
+AZ House District 5 (Republican Party) (Maricopa County)	1	AZ House District 5	Republican Party
+AZ House District 6 (Republican Party) (Maricopa County)	1	AZ House District 6	Republican Party
+AZ House District 7 (Republican Party) (Maricopa County)	1	AZ House District 7	Republican Party
+AZ House District 8 (Republican Party) (Maricopa County)	1	AZ House District 8	Republican Party
+AZ House District 9 (Republican Party) (Maricopa County)	1	AZ House District 9	Republican Party
+AZ House District 10 (Republican Party) (Maricopa County)	1	AZ House District 10	Republican Party
+AZ House District 11 (Republican Party) (Maricopa County)	1	AZ House District 11	Republican Party
+AZ House District 12 (Republican Party) (Maricopa County)	1	AZ House District 12	Republican Party
+AZ House District 13 (Republican Party) (Maricopa County)	1	AZ House District 13	Republican Party
+AZ House District 14 (Republican Party) (Maricopa County)	1	AZ House District 14	Republican Party
+AZ House District 15 (Republican Party) (Maricopa County)	1	AZ House District 15	Republican Party
+AZ House District 16 (Republican Party) (Maricopa County)	1	AZ House District 16	Republican Party
+AZ House District 17 (Republican Party) (Maricopa County)	1	AZ House District 17	Republican Party
+AZ House District 18 (Republican Party) (Maricopa County)	1	AZ House District 18	Republican Party
+AZ House District 19 (Republican Party) (Maricopa County)	1	AZ House District 19	Republican Party
+AZ House District 20 (Republican Party) (Maricopa County)	1	AZ House District 20	Republican Party
+AZ House District 21 (Republican Party) (Maricopa County)	1	AZ House District 21	Republican Party
+AZ House District 22 (Republican Party) (Maricopa County)	1	AZ House District 22	Republican Party
+AZ House District 23 (Republican Party) (Maricopa County)	1	AZ House District 23	Republican Party
+AZ House District 24 (Republican Party) (Maricopa County)	1	AZ House District 24	Republican Party
+AZ House District 25 (Republican Party) (Maricopa County)	1	AZ House District 25	Republican Party
+AZ House District 26 (Republican Party) (Maricopa County)	1	AZ House District 26	Republican Party
+AZ House District 27 (Republican Party) (Maricopa County)	1	AZ House District 27	Republican Party
+AZ House District 28 (Republican Party) (Maricopa County)	1	AZ House District 28	Republican Party
+AZ House District 29 (Republican Party) (Maricopa County)	1	AZ House District 29	Republican Party
+AZ House District 30 (Republican Party) (Maricopa County)	1	AZ House District 30	Republican Party
+AZ House District 31 (Republican Party) (Maricopa County)	1	AZ House District 31	Republican Party
+AZ House District 32 (Republican Party) (Maricopa County)	1	AZ House District 32	Republican Party
+AZ House District 33 (Republican Party) (Maricopa County)	1	AZ House District 33	Republican Party
+AZ House District 34 (Republican Party) (Maricopa County)	1	AZ House District 34	Republican Party
+AZ House District 35 (Republican Party) (Maricopa County)	1	AZ House District 35	Republican Party
+AZ House District 36 (Republican Party) (Maricopa County)	1	AZ House District 36	Republican Party
+AZ House District 37 (Republican Party) (Maricopa County)	1	AZ House District 37	Republican Party
+AZ House District 38 (Republican Party) (Maricopa County)	1	AZ House District 38	Republican Party
+AZ House District 39 (Republican Party) (Maricopa County)	1	AZ House District 39	Republican Party
+AZ House District 40 (Republican Party) (Maricopa County)	1	AZ House District 40	Republican Party
+AZ House District 41 (Republican Party) (Maricopa County)	1	AZ House District 41	Republican Party
+AZ House District 42 (Republican Party) (Maricopa County)	1	AZ House District 42	Republican Party
+AZ House District 43 (Republican Party) (Maricopa County)	1	AZ House District 43	Republican Party
+AZ House District 44 (Republican Party) (Maricopa County)	1	AZ House District 44	Republican Party
+AZ House District 45 (Republican Party) (Maricopa County)	1	AZ House District 45	Republican Party
+AZ House District 46 (Republican Party) (Maricopa County)	1	AZ House District 46	Republican Party
+AZ House District 47 (Republican Party) (Maricopa County)	1	AZ House District 47	Republican Party
+AZ House District 48 (Republican Party) (Maricopa County)	1	AZ House District 48	Republican Party
+AZ House District 49 (Republican Party) (Maricopa County)	1	AZ House District 49	Republican Party
+AZ House District 50 (Republican Party) (Maricopa County)	1	AZ House District 50	Republican Party
+AZ House District 51 (Republican Party) (Maricopa County)	1	AZ House District 51	Republican Party
+AZ House District 52 (Republican Party) (Maricopa County)	1	AZ House District 52	Republican Party
+AZ House District 53 (Republican Party) (Maricopa County)	1	AZ House District 53	Republican Party
+AZ House District 54 (Republican Party) (Maricopa County)	1	AZ House District 54	Republican Party
+AZ House District 55 (Republican Party) (Maricopa County)	1	AZ House District 55	Republican Party
+AZ House District 56 (Republican Party) (Maricopa County)	1	AZ House District 56	Republican Party
+AZ House District 57 (Republican Party) (Maricopa County)	1	AZ House District 57	Republican Party
+AZ House District 58 (Republican Party) (Maricopa County)	1	AZ House District 58	Republican Party
+AZ House District 59 (Republican Party) (Maricopa County)	1	AZ House District 59	Republican Party
+AZ House District 60 (Republican Party) (Maricopa County)	1	AZ House District 60	Republican Party
+AZ Senate District 1 (Republican Party) (Maricopa County)	1	AZ Senate District 1	Republican Party
+AZ Senate District 2 (Republican Party) (Maricopa County)	1	AZ Senate District 2	Republican Party
+AZ Senate District 3 (Republican Party) (Maricopa County)	1	AZ Senate District 3	Republican Party
+AZ Senate District 4 (Republican Party) (Maricopa County)	1	AZ Senate District 4	Republican Party
+AZ Senate District 5 (Republican Party) (Maricopa County)	1	AZ Senate District 5	Republican Party
+AZ Senate District 6 (Republican Party) (Maricopa County)	1	AZ Senate District 6	Republican Party
+AZ Senate District 7 (Republican Party) (Maricopa County)	1	AZ Senate District 7	Republican Party
+AZ Senate District 8 (Republican Party) (Maricopa County)	1	AZ Senate District 8	Republican Party
+AZ Senate District 9 (Republican Party) (Maricopa County)	1	AZ Senate District 9	Republican Party
+AZ Senate District 10 (Republican Party) (Maricopa County)	1	AZ Senate District 10	Republican Party
+AZ Senate District 11 (Republican Party) (Maricopa County)	1	AZ Senate District 11	Republican Party
+AZ Senate District 12 (Republican Party) (Maricopa County)	1	AZ Senate District 12	Republican Party
+AZ Senate District 13 (Republican Party) (Maricopa County)	1	AZ Senate District 13	Republican Party
+AZ Senate District 14 (Republican Party) (Maricopa County)	1	AZ Senate District 14	Republican Party
+AZ Senate District 15 (Republican Party) (Maricopa County)	1	AZ Senate District 15	Republican Party
+AZ Senate District 16 (Republican Party) (Maricopa County)	1	AZ Senate District 16	Republican Party
+AZ Senate District 17 (Republican Party) (Maricopa County)	1	AZ Senate District 17	Republican Party
+AZ Senate District 18 (Republican Party) (Maricopa County)	1	AZ Senate District 18	Republican Party
+AZ Senate District 19 (Republican Party) (Maricopa County)	1	AZ Senate District 19	Republican Party
+AZ Senate District 20 (Republican Party) (Maricopa County)	1	AZ Senate District 20	Republican Party
+AZ Senate District 21 (Republican Party) (Maricopa County)	1	AZ Senate District 21	Republican Party
+AZ Senate District 22 (Republican Party) (Maricopa County)	1	AZ Senate District 22	Republican Party
+AZ Senate District 23 (Republican Party) (Maricopa County)	1	AZ Senate District 23	Republican Party
+AZ Senate District 24 (Republican Party) (Maricopa County)	1	AZ Senate District 24	Republican Party
+AZ Senate District 25 (Republican Party) (Maricopa County)	1	AZ Senate District 25	Republican Party
+AZ Senate District 26 (Republican Party) (Maricopa County)	1	AZ Senate District 26	Republican Party
+AZ Senate District 27 (Republican Party) (Maricopa County)	1	AZ Senate District 27	Republican Party
+AZ Senate District 28 (Republican Party) (Maricopa County)	1	AZ Senate District 28	Republican Party
+AZ Senate District 29 (Republican Party) (Maricopa County)	1	AZ Senate District 29	Republican Party
+AZ Senate District 30 (Republican Party) (Maricopa County)	1	AZ Senate District 30	Republican Party
+US House AZ District 1 (Republican Party) (Maricopa County)	1	US House AZ District 1	Republican Party
+US House AZ District 2 (Republican Party) (Maricopa County)	1	US House AZ District 2	Republican Party
+US House AZ District 3 (Republican Party) (Maricopa County)	1	US House AZ District 3	Republican Party
+US House AZ District 4 (Republican Party) (Maricopa County)	1	US House AZ District 4	Republican Party
+US House AZ District 5 (Republican Party) (Maricopa County)	1	US House AZ District 5	Republican Party
+US House AZ District 6 (Republican Party) (Maricopa County)	1	US House AZ District 6	Republican Party
+US House AZ District 7 (Republican Party) (Maricopa County)	1	US House AZ District 7	Republican Party
+US House AZ District 8 (Republican Party) (Maricopa County)	1	US House AZ District 8	Republican Party
+US House AZ District 9 (Republican Party) (Maricopa County)	1	US House AZ District 9	Republican Party
+US President (AZ) (Republican Party) (Maricopa County)	1	US President (AZ)	Republican Party
+AZ Governor (Republican Party) (Maricopa County)	1	AZ Governor	Republican Party
+US Senate AZ (Republican Party) (Maricopa County)	1	US Senate AZ	Republican Party
+US Senate AZ Partial Term (Republican Party) (Maricopa County)	1	US Senate AZ	Republican Party
+AZ Corporation Commissioner (Republican Party) (Maricopa County)	1	AZ Corporation Commissioner	Republican Party
+AZ Attorney General (Republican Party) (Maricopa County)	1	AZ Attorney General	Republican Party
+AZ Lieutenant Governor (Republican Party) (Maricopa County)	1	AZ Lieutenant Governor	Republican Party
+AZ Treasurer (Republican Party) (Maricopa County)	1	AZ Treasurer	Republican Party
+AZ Secretary of State (Republican Party) (Maricopa County)	1	AZ Secretary of State	Republican Party
+AZ House District 1 (Green Party) (Maricopa County)	1	AZ House District 1	Green Party
+AZ House District 2 (Green Party) (Maricopa County)	1	AZ House District 2	Green Party
+AZ House District 3 (Green Party) (Maricopa County)	1	AZ House District 3	Green Party
+AZ House District 4 (Green Party) (Maricopa County)	1	AZ House District 4	Green Party
+AZ House District 5 (Green Party) (Maricopa County)	1	AZ House District 5	Green Party
+AZ House District 6 (Green Party) (Maricopa County)	1	AZ House District 6	Green Party
+AZ House District 7 (Green Party) (Maricopa County)	1	AZ House District 7	Green Party
+AZ House District 8 (Green Party) (Maricopa County)	1	AZ House District 8	Green Party
+AZ House District 9 (Green Party) (Maricopa County)	1	AZ House District 9	Green Party
+AZ House District 10 (Green Party) (Maricopa County)	1	AZ House District 10	Green Party
+AZ House District 11 (Green Party) (Maricopa County)	1	AZ House District 11	Green Party
+AZ House District 12 (Green Party) (Maricopa County)	1	AZ House District 12	Green Party
+AZ House District 13 (Green Party) (Maricopa County)	1	AZ House District 13	Green Party
+AZ House District 14 (Green Party) (Maricopa County)	1	AZ House District 14	Green Party
+AZ House District 15 (Green Party) (Maricopa County)	1	AZ House District 15	Green Party
+AZ House District 16 (Green Party) (Maricopa County)	1	AZ House District 16	Green Party
+AZ House District 17 (Green Party) (Maricopa County)	1	AZ House District 17	Green Party
+AZ House District 18 (Green Party) (Maricopa County)	1	AZ House District 18	Green Party
+AZ House District 19 (Green Party) (Maricopa County)	1	AZ House District 19	Green Party
+AZ House District 20 (Green Party) (Maricopa County)	1	AZ House District 20	Green Party
+AZ House District 21 (Green Party) (Maricopa County)	1	AZ House District 21	Green Party
+AZ House District 22 (Green Party) (Maricopa County)	1	AZ House District 22	Green Party
+AZ House District 23 (Green Party) (Maricopa County)	1	AZ House District 23	Green Party
+AZ House District 24 (Green Party) (Maricopa County)	1	AZ House District 24	Green Party
+AZ House District 25 (Green Party) (Maricopa County)	1	AZ House District 25	Green Party
+AZ House District 26 (Green Party) (Maricopa County)	1	AZ House District 26	Green Party
+AZ House District 27 (Green Party) (Maricopa County)	1	AZ House District 27	Green Party
+AZ House District 28 (Green Party) (Maricopa County)	1	AZ House District 28	Green Party
+AZ House District 29 (Green Party) (Maricopa County)	1	AZ House District 29	Green Party
+AZ House District 30 (Green Party) (Maricopa County)	1	AZ House District 30	Green Party
+AZ House District 31 (Green Party) (Maricopa County)	1	AZ House District 31	Green Party
+AZ House District 32 (Green Party) (Maricopa County)	1	AZ House District 32	Green Party
+AZ House District 33 (Green Party) (Maricopa County)	1	AZ House District 33	Green Party
+AZ House District 34 (Green Party) (Maricopa County)	1	AZ House District 34	Green Party
+AZ House District 35 (Green Party) (Maricopa County)	1	AZ House District 35	Green Party
+AZ House District 36 (Green Party) (Maricopa County)	1	AZ House District 36	Green Party
+AZ House District 37 (Green Party) (Maricopa County)	1	AZ House District 37	Green Party
+AZ House District 38 (Green Party) (Maricopa County)	1	AZ House District 38	Green Party
+AZ House District 39 (Green Party) (Maricopa County)	1	AZ House District 39	Green Party
+AZ House District 40 (Green Party) (Maricopa County)	1	AZ House District 40	Green Party
+AZ House District 41 (Green Party) (Maricopa County)	1	AZ House District 41	Green Party
+AZ House District 42 (Green Party) (Maricopa County)	1	AZ House District 42	Green Party
+AZ House District 43 (Green Party) (Maricopa County)	1	AZ House District 43	Green Party
+AZ House District 44 (Green Party) (Maricopa County)	1	AZ House District 44	Green Party
+AZ House District 45 (Green Party) (Maricopa County)	1	AZ House District 45	Green Party
+AZ House District 46 (Green Party) (Maricopa County)	1	AZ House District 46	Green Party
+AZ House District 47 (Green Party) (Maricopa County)	1	AZ House District 47	Green Party
+AZ House District 48 (Green Party) (Maricopa County)	1	AZ House District 48	Green Party
+AZ House District 49 (Green Party) (Maricopa County)	1	AZ House District 49	Green Party
+AZ House District 50 (Green Party) (Maricopa County)	1	AZ House District 50	Green Party
+AZ House District 51 (Green Party) (Maricopa County)	1	AZ House District 51	Green Party
+AZ House District 52 (Green Party) (Maricopa County)	1	AZ House District 52	Green Party
+AZ House District 53 (Green Party) (Maricopa County)	1	AZ House District 53	Green Party
+AZ House District 54 (Green Party) (Maricopa County)	1	AZ House District 54	Green Party
+AZ House District 55 (Green Party) (Maricopa County)	1	AZ House District 55	Green Party
+AZ House District 56 (Green Party) (Maricopa County)	1	AZ House District 56	Green Party
+AZ House District 57 (Green Party) (Maricopa County)	1	AZ House District 57	Green Party
+AZ House District 58 (Green Party) (Maricopa County)	1	AZ House District 58	Green Party
+AZ House District 59 (Green Party) (Maricopa County)	1	AZ House District 59	Green Party
+AZ House District 60 (Green Party) (Maricopa County)	1	AZ House District 60	Green Party
+AZ Senate District 1 (Green Party) (Maricopa County)	1	AZ Senate District 1	Green Party
+AZ Senate District 2 (Green Party) (Maricopa County)	1	AZ Senate District 2	Green Party
+AZ Senate District 3 (Green Party) (Maricopa County)	1	AZ Senate District 3	Green Party
+AZ Senate District 4 (Green Party) (Maricopa County)	1	AZ Senate District 4	Green Party
+AZ Senate District 5 (Green Party) (Maricopa County)	1	AZ Senate District 5	Green Party
+AZ Senate District 6 (Green Party) (Maricopa County)	1	AZ Senate District 6	Green Party
+AZ Senate District 7 (Green Party) (Maricopa County)	1	AZ Senate District 7	Green Party
+AZ Senate District 8 (Green Party) (Maricopa County)	1	AZ Senate District 8	Green Party
+AZ Senate District 9 (Green Party) (Maricopa County)	1	AZ Senate District 9	Green Party
+AZ Senate District 10 (Green Party) (Maricopa County)	1	AZ Senate District 10	Green Party
+AZ Senate District 11 (Green Party) (Maricopa County)	1	AZ Senate District 11	Green Party
+AZ Senate District 12 (Green Party) (Maricopa County)	1	AZ Senate District 12	Green Party
+AZ Senate District 13 (Green Party) (Maricopa County)	1	AZ Senate District 13	Green Party
+AZ Senate District 14 (Green Party) (Maricopa County)	1	AZ Senate District 14	Green Party
+AZ Senate District 15 (Green Party) (Maricopa County)	1	AZ Senate District 15	Green Party
+AZ Senate District 16 (Green Party) (Maricopa County)	1	AZ Senate District 16	Green Party
+AZ Senate District 17 (Green Party) (Maricopa County)	1	AZ Senate District 17	Green Party
+AZ Senate District 18 (Green Party) (Maricopa County)	1	AZ Senate District 18	Green Party
+AZ Senate District 19 (Green Party) (Maricopa County)	1	AZ Senate District 19	Green Party
+AZ Senate District 20 (Green Party) (Maricopa County)	1	AZ Senate District 20	Green Party
+AZ Senate District 21 (Green Party) (Maricopa County)	1	AZ Senate District 21	Green Party
+AZ Senate District 22 (Green Party) (Maricopa County)	1	AZ Senate District 22	Green Party
+AZ Senate District 23 (Green Party) (Maricopa County)	1	AZ Senate District 23	Green Party
+AZ Senate District 24 (Green Party) (Maricopa County)	1	AZ Senate District 24	Green Party
+AZ Senate District 25 (Green Party) (Maricopa County)	1	AZ Senate District 25	Green Party
+AZ Senate District 26 (Green Party) (Maricopa County)	1	AZ Senate District 26	Green Party
+AZ Senate District 27 (Green Party) (Maricopa County)	1	AZ Senate District 27	Green Party
+AZ Senate District 28 (Green Party) (Maricopa County)	1	AZ Senate District 28	Green Party
+AZ Senate District 29 (Green Party) (Maricopa County)	1	AZ Senate District 29	Green Party
+AZ Senate District 30 (Green Party) (Maricopa County)	1	AZ Senate District 30	Green Party
+US House AZ District 1 (Green Party) (Maricopa County)	1	US House AZ District 1	Green Party
+US House AZ District 2 (Green Party) (Maricopa County)	1	US House AZ District 2	Green Party
+US House AZ District 3 (Green Party) (Maricopa County)	1	US House AZ District 3	Green Party
+US House AZ District 4 (Green Party) (Maricopa County)	1	US House AZ District 4	Green Party
+US House AZ District 5 (Green Party) (Maricopa County)	1	US House AZ District 5	Green Party
+US House AZ District 6 (Green Party) (Maricopa County)	1	US House AZ District 6	Green Party
+US House AZ District 7 (Green Party) (Maricopa County)	1	US House AZ District 7	Green Party
+US House AZ District 8 (Green Party) (Maricopa County)	1	US House AZ District 8	Green Party
+US House AZ District 9 (Green Party) (Maricopa County)	1	US House AZ District 9	Green Party
+US President (AZ) (Green Party) (Maricopa County)	1	US President (AZ)	Green Party
+AZ Governor (Green Party) (Maricopa County)	1	AZ Governor	Green Party
+US Senate AZ (Green Party) (Maricopa County)	1	US Senate AZ	Green Party
+US Senate AZ Partial Term (Green Party) (Maricopa County)	1	US Senate AZ	Green Party
+AZ Corporation Commissioner (Green Party) (Maricopa County)	1	AZ Corporation Commissioner	Green Party
+AZ Attorney General (Green Party) (Maricopa County)	1	AZ Attorney General	Green Party
+AZ Lieutenant Governor (Green Party) (Maricopa County)	1	AZ Lieutenant Governor	Green Party
+AZ Treasurer (Green Party) (Maricopa County)	1	AZ Treasurer	Green Party
+AZ Secretary of State (Green Party) (Maricopa County)	1	AZ Secretary of State	Green Party
+AZ House District 1 (Libertarian Party) (Maricopa County)	1	AZ House District 1	Libertarian Party
+AZ House District 2 (Libertarian Party) (Maricopa County)	1	AZ House District 2	Libertarian Party
+AZ House District 3 (Libertarian Party) (Maricopa County)	1	AZ House District 3	Libertarian Party
+AZ House District 4 (Libertarian Party) (Maricopa County)	1	AZ House District 4	Libertarian Party
+AZ House District 5 (Libertarian Party) (Maricopa County)	1	AZ House District 5	Libertarian Party
+AZ House District 6 (Libertarian Party) (Maricopa County)	1	AZ House District 6	Libertarian Party
+AZ House District 7 (Libertarian Party) (Maricopa County)	1	AZ House District 7	Libertarian Party
+AZ House District 8 (Libertarian Party) (Maricopa County)	1	AZ House District 8	Libertarian Party
+AZ House District 9 (Libertarian Party) (Maricopa County)	1	AZ House District 9	Libertarian Party
+AZ House District 10 (Libertarian Party) (Maricopa County)	1	AZ House District 10	Libertarian Party
+AZ House District 11 (Libertarian Party) (Maricopa County)	1	AZ House District 11	Libertarian Party
+AZ House District 12 (Libertarian Party) (Maricopa County)	1	AZ House District 12	Libertarian Party
+AZ House District 13 (Libertarian Party) (Maricopa County)	1	AZ House District 13	Libertarian Party
+AZ House District 14 (Libertarian Party) (Maricopa County)	1	AZ House District 14	Libertarian Party
+AZ House District 15 (Libertarian Party) (Maricopa County)	1	AZ House District 15	Libertarian Party
+AZ House District 16 (Libertarian Party) (Maricopa County)	1	AZ House District 16	Libertarian Party
+AZ House District 17 (Libertarian Party) (Maricopa County)	1	AZ House District 17	Libertarian Party
+AZ House District 18 (Libertarian Party) (Maricopa County)	1	AZ House District 18	Libertarian Party
+AZ House District 19 (Libertarian Party) (Maricopa County)	1	AZ House District 19	Libertarian Party
+AZ House District 20 (Libertarian Party) (Maricopa County)	1	AZ House District 20	Libertarian Party
+AZ House District 21 (Libertarian Party) (Maricopa County)	1	AZ House District 21	Libertarian Party
+AZ House District 22 (Libertarian Party) (Maricopa County)	1	AZ House District 22	Libertarian Party
+AZ House District 23 (Libertarian Party) (Maricopa County)	1	AZ House District 23	Libertarian Party
+AZ House District 24 (Libertarian Party) (Maricopa County)	1	AZ House District 24	Libertarian Party
+AZ House District 25 (Libertarian Party) (Maricopa County)	1	AZ House District 25	Libertarian Party
+AZ House District 26 (Libertarian Party) (Maricopa County)	1	AZ House District 26	Libertarian Party
+AZ House District 27 (Libertarian Party) (Maricopa County)	1	AZ House District 27	Libertarian Party
+AZ House District 28 (Libertarian Party) (Maricopa County)	1	AZ House District 28	Libertarian Party
+AZ House District 29 (Libertarian Party) (Maricopa County)	1	AZ House District 29	Libertarian Party
+AZ House District 30 (Libertarian Party) (Maricopa County)	1	AZ House District 30	Libertarian Party
+AZ House District 31 (Libertarian Party) (Maricopa County)	1	AZ House District 31	Libertarian Party
+AZ House District 32 (Libertarian Party) (Maricopa County)	1	AZ House District 32	Libertarian Party
+AZ House District 33 (Libertarian Party) (Maricopa County)	1	AZ House District 33	Libertarian Party
+AZ House District 34 (Libertarian Party) (Maricopa County)	1	AZ House District 34	Libertarian Party
+AZ House District 35 (Libertarian Party) (Maricopa County)	1	AZ House District 35	Libertarian Party
+AZ House District 36 (Libertarian Party) (Maricopa County)	1	AZ House District 36	Libertarian Party
+AZ House District 37 (Libertarian Party) (Maricopa County)	1	AZ House District 37	Libertarian Party
+AZ House District 38 (Libertarian Party) (Maricopa County)	1	AZ House District 38	Libertarian Party
+AZ House District 39 (Libertarian Party) (Maricopa County)	1	AZ House District 39	Libertarian Party
+AZ House District 40 (Libertarian Party) (Maricopa County)	1	AZ House District 40	Libertarian Party
+AZ House District 41 (Libertarian Party) (Maricopa County)	1	AZ House District 41	Libertarian Party
+AZ House District 42 (Libertarian Party) (Maricopa County)	1	AZ House District 42	Libertarian Party
+AZ House District 43 (Libertarian Party) (Maricopa County)	1	AZ House District 43	Libertarian Party
+AZ House District 44 (Libertarian Party) (Maricopa County)	1	AZ House District 44	Libertarian Party
+AZ House District 45 (Libertarian Party) (Maricopa County)	1	AZ House District 45	Libertarian Party
+AZ House District 46 (Libertarian Party) (Maricopa County)	1	AZ House District 46	Libertarian Party
+AZ House District 47 (Libertarian Party) (Maricopa County)	1	AZ House District 47	Libertarian Party
+AZ House District 48 (Libertarian Party) (Maricopa County)	1	AZ House District 48	Libertarian Party
+AZ House District 49 (Libertarian Party) (Maricopa County)	1	AZ House District 49	Libertarian Party
+AZ House District 50 (Libertarian Party) (Maricopa County)	1	AZ House District 50	Libertarian Party
+AZ House District 51 (Libertarian Party) (Maricopa County)	1	AZ House District 51	Libertarian Party
+AZ House District 52 (Libertarian Party) (Maricopa County)	1	AZ House District 52	Libertarian Party
+AZ House District 53 (Libertarian Party) (Maricopa County)	1	AZ House District 53	Libertarian Party
+AZ House District 54 (Libertarian Party) (Maricopa County)	1	AZ House District 54	Libertarian Party
+AZ House District 55 (Libertarian Party) (Maricopa County)	1	AZ House District 55	Libertarian Party
+AZ House District 56 (Libertarian Party) (Maricopa County)	1	AZ House District 56	Libertarian Party
+AZ House District 57 (Libertarian Party) (Maricopa County)	1	AZ House District 57	Libertarian Party
+AZ House District 58 (Libertarian Party) (Maricopa County)	1	AZ House District 58	Libertarian Party
+AZ House District 59 (Libertarian Party) (Maricopa County)	1	AZ House District 59	Libertarian Party
+AZ House District 60 (Libertarian Party) (Maricopa County)	1	AZ House District 60	Libertarian Party
+AZ Senate District 1 (Libertarian Party) (Maricopa County)	1	AZ Senate District 1	Libertarian Party
+AZ Senate District 2 (Libertarian Party) (Maricopa County)	1	AZ Senate District 2	Libertarian Party
+AZ Senate District 3 (Libertarian Party) (Maricopa County)	1	AZ Senate District 3	Libertarian Party
+AZ Senate District 4 (Libertarian Party) (Maricopa County)	1	AZ Senate District 4	Libertarian Party
+AZ Senate District 5 (Libertarian Party) (Maricopa County)	1	AZ Senate District 5	Libertarian Party
+AZ Senate District 6 (Libertarian Party) (Maricopa County)	1	AZ Senate District 6	Libertarian Party
+AZ Senate District 7 (Libertarian Party) (Maricopa County)	1	AZ Senate District 7	Libertarian Party
+AZ Senate District 8 (Libertarian Party) (Maricopa County)	1	AZ Senate District 8	Libertarian Party
+AZ Senate District 9 (Libertarian Party) (Maricopa County)	1	AZ Senate District 9	Libertarian Party
+AZ Senate District 10 (Libertarian Party) (Maricopa County)	1	AZ Senate District 10	Libertarian Party
+AZ Senate District 11 (Libertarian Party) (Maricopa County)	1	AZ Senate District 11	Libertarian Party
+AZ Senate District 12 (Libertarian Party) (Maricopa County)	1	AZ Senate District 12	Libertarian Party
+AZ Senate District 13 (Libertarian Party) (Maricopa County)	1	AZ Senate District 13	Libertarian Party
+AZ Senate District 14 (Libertarian Party) (Maricopa County)	1	AZ Senate District 14	Libertarian Party
+AZ Senate District 15 (Libertarian Party) (Maricopa County)	1	AZ Senate District 15	Libertarian Party
+AZ Senate District 16 (Libertarian Party) (Maricopa County)	1	AZ Senate District 16	Libertarian Party
+AZ Senate District 17 (Libertarian Party) (Maricopa County)	1	AZ Senate District 17	Libertarian Party
+AZ Senate District 18 (Libertarian Party) (Maricopa County)	1	AZ Senate District 18	Libertarian Party
+AZ Senate District 19 (Libertarian Party) (Maricopa County)	1	AZ Senate District 19	Libertarian Party
+AZ Senate District 20 (Libertarian Party) (Maricopa County)	1	AZ Senate District 20	Libertarian Party
+AZ Senate District 21 (Libertarian Party) (Maricopa County)	1	AZ Senate District 21	Libertarian Party
+AZ Senate District 22 (Libertarian Party) (Maricopa County)	1	AZ Senate District 22	Libertarian Party
+AZ Senate District 23 (Libertarian Party) (Maricopa County)	1	AZ Senate District 23	Libertarian Party
+AZ Senate District 24 (Libertarian Party) (Maricopa County)	1	AZ Senate District 24	Libertarian Party
+AZ Senate District 25 (Libertarian Party) (Maricopa County)	1	AZ Senate District 25	Libertarian Party
+AZ Senate District 26 (Libertarian Party) (Maricopa County)	1	AZ Senate District 26	Libertarian Party
+AZ Senate District 27 (Libertarian Party) (Maricopa County)	1	AZ Senate District 27	Libertarian Party
+AZ Senate District 28 (Libertarian Party) (Maricopa County)	1	AZ Senate District 28	Libertarian Party
+AZ Senate District 29 (Libertarian Party) (Maricopa County)	1	AZ Senate District 29	Libertarian Party
+AZ Senate District 30 (Libertarian Party) (Maricopa County)	1	AZ Senate District 30	Libertarian Party
+US House AZ District 1 (Libertarian Party) (Maricopa County)	1	US House AZ District 1	Libertarian Party
+US House AZ District 2 (Libertarian Party) (Maricopa County)	1	US House AZ District 2	Libertarian Party
+US House AZ District 3 (Libertarian Party) (Maricopa County)	1	US House AZ District 3	Libertarian Party
+US House AZ District 4 (Libertarian Party) (Maricopa County)	1	US House AZ District 4	Libertarian Party
+US House AZ District 5 (Libertarian Party) (Maricopa County)	1	US House AZ District 5	Libertarian Party
+US House AZ District 6 (Libertarian Party) (Maricopa County)	1	US House AZ District 6	Libertarian Party
+US House AZ District 7 (Libertarian Party) (Maricopa County)	1	US House AZ District 7	Libertarian Party
+US House AZ District 8 (Libertarian Party) (Maricopa County)	1	US House AZ District 8	Libertarian Party
+US House AZ District 9 (Libertarian Party) (Maricopa County)	1	US House AZ District 9	Libertarian Party
+US President (AZ) (Libertarian Party) (Maricopa County)	1	US President (AZ)	Libertarian Party
+AZ Governor (Libertarian Party) (Maricopa County)	1	AZ Governor	Libertarian Party
+US Senate AZ (Libertarian Party) (Maricopa County)	1	US Senate AZ	Libertarian Party
+US Senate AZ Partial Term (Libertarian Party) (Maricopa County)	1	US Senate AZ	Libertarian Party
+AZ Corporation Commissioner (Libertarian Party) (Maricopa County)	1	AZ Corporation Commissioner	Libertarian Party
+AZ Attorney General (Libertarian Party) (Maricopa County)	1	AZ Attorney General	Libertarian Party
+AZ Lieutenant Governor (Libertarian Party) (Maricopa County)	1	AZ Lieutenant Governor	Libertarian Party
+AZ Treasurer (Libertarian Party) (Maricopa County)	1	AZ Treasurer	Libertarian Party
+AZ Secretary of State (Libertarian Party) (Maricopa County)	1	AZ Secretary of State	Libertarian Party
