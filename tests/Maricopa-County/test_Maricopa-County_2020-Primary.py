@@ -34,7 +34,7 @@ def test_senate_totals_20(dbname):
         e.contest_total(
             election,
             jurisdiction,
-            "AZ Senate District 13 (Libertarian Party)",
+            "AZ Senate District 13 (Libertarian Party) (Maricopa County)",
             dbname=dbname,
         )
         == 37
@@ -46,7 +46,7 @@ def test_rep_20(dbname):
         e.contest_total(
             election,
             jurisdiction,
-            "AZ House District 30 (Republican Party)",
+            "AZ House District 30 (Republican Party) (Maricopa County)",
             dbname=dbname,
         )
         == 1306
@@ -58,7 +58,7 @@ def test_congress_20(dbname):
         e.contest_total(
             election,
             jurisdiction,
-            "US House AZ District 6 (Democratic Party)",
+            "US House AZ District 6 (Democratic Party) (Maricopa County)",
             dbname=dbname,
         )
         == 80286
