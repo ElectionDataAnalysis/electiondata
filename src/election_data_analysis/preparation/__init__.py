@@ -34,7 +34,7 @@ def get_element(juris_path: str, element: str) -> pd.DataFrame:
     empty dataframe returned"""
     f_path = os.path.join(juris_path, f"{element}.txt")
     if os.path.isfile(f_path):
-        element_df = pd.read_csv(f_path, sep="\t")
+        element_df = pd.read_csv(f_path, sep="\t", dtype="object")
     else:
         element_df = pd.DataFrame()
     return element_df

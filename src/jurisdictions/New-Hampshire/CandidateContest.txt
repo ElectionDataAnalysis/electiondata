@@ -1,0 +1,2166 @@
+Name	NumberElected	Office	PrimaryParty
+NH House District 1	1	NH House District 1	
+NH House District 2	1	NH House District 2	
+NH House District 3	1	NH House District 3	
+NH House District 4	1	NH House District 4	
+NH House District 5	1	NH House District 5	
+NH House District 6	1	NH House District 6	
+NH House District 7	1	NH House District 7	
+NH House District 8	1	NH House District 8	
+NH House District 9	1	NH House District 9	
+NH House District 10	1	NH House District 10	
+NH House District 11	1	NH House District 11	
+NH House District 12	1	NH House District 12	
+NH House District 13	1	NH House District 13	
+NH House District 14	1	NH House District 14	
+NH House District 15	1	NH House District 15	
+NH House District 16	1	NH House District 16	
+NH House District 17	1	NH House District 17	
+NH House District 18	1	NH House District 18	
+NH House District 19	1	NH House District 19	
+NH House District 20	1	NH House District 20	
+NH House District 21	1	NH House District 21	
+NH House District 22	1	NH House District 22	
+NH House District 23	1	NH House District 23	
+NH House District 24	1	NH House District 24	
+NH House District 25	1	NH House District 25	
+NH House District 26	1	NH House District 26	
+NH House District 27	1	NH House District 27	
+NH House District 28	1	NH House District 28	
+NH House District 29	1	NH House District 29	
+NH House District 30	1	NH House District 30	
+NH House District 31	1	NH House District 31	
+NH House District 32	1	NH House District 32	
+NH House District 33	1	NH House District 33	
+NH House District 34	1	NH House District 34	
+NH House District 35	1	NH House District 35	
+NH House District 36	1	NH House District 36	
+NH House District 37	1	NH House District 37	
+NH House District 38	1	NH House District 38	
+NH House District 39	1	NH House District 39	
+NH House District 40	1	NH House District 40	
+NH House District 41	1	NH House District 41	
+NH House District 42	1	NH House District 42	
+NH House District 43	1	NH House District 43	
+NH House District 44	1	NH House District 44	
+NH House District 45	1	NH House District 45	
+NH House District 46	1	NH House District 46	
+NH House District 47	1	NH House District 47	
+NH House District 48	1	NH House District 48	
+NH House District 49	1	NH House District 49	
+NH House District 50	1	NH House District 50	
+NH House District 51	1	NH House District 51	
+NH House District 52	1	NH House District 52	
+NH House District 53	1	NH House District 53	
+NH House District 54	1	NH House District 54	
+NH House District 55	1	NH House District 55	
+NH House District 56	1	NH House District 56	
+NH House District 57	1	NH House District 57	
+NH House District 58	1	NH House District 58	
+NH House District 59	1	NH House District 59	
+NH House District 60	1	NH House District 60	
+NH House District 61	1	NH House District 61	
+NH House District 62	1	NH House District 62	
+NH House District 63	1	NH House District 63	
+NH House District 64	1	NH House District 64	
+NH House District 65	1	NH House District 65	
+NH House District 66	1	NH House District 66	
+NH House District 67	1	NH House District 67	
+NH House District 68	1	NH House District 68	
+NH House District 69	1	NH House District 69	
+NH House District 70	1	NH House District 70	
+NH House District 71	1	NH House District 71	
+NH House District 72	1	NH House District 72	
+NH House District 73	1	NH House District 73	
+NH House District 74	1	NH House District 74	
+NH House District 75	1	NH House District 75	
+NH House District 76	1	NH House District 76	
+NH House District 77	1	NH House District 77	
+NH House District 78	1	NH House District 78	
+NH House District 79	1	NH House District 79	
+NH House District 80	1	NH House District 80	
+NH House District 81	1	NH House District 81	
+NH House District 82	1	NH House District 82	
+NH House District 83	1	NH House District 83	
+NH House District 84	1	NH House District 84	
+NH House District 85	1	NH House District 85	
+NH House District 86	1	NH House District 86	
+NH House District 87	1	NH House District 87	
+NH House District 88	1	NH House District 88	
+NH House District 89	1	NH House District 89	
+NH House District 90	1	NH House District 90	
+NH House District 91	1	NH House District 91	
+NH House District 92	1	NH House District 92	
+NH House District 93	1	NH House District 93	
+NH House District 94	1	NH House District 94	
+NH House District 95	1	NH House District 95	
+NH House District 96	1	NH House District 96	
+NH House District 97	1	NH House District 97	
+NH House District 98	1	NH House District 98	
+NH House District 99	1	NH House District 99	
+NH House District 100	1	NH House District 100	
+NH House District 101	1	NH House District 101	
+NH House District 102	1	NH House District 102	
+NH House District 103	1	NH House District 103	
+NH House District 104	1	NH House District 104	
+NH House District 105	1	NH House District 105	
+NH House District 106	1	NH House District 106	
+NH House District 107	1	NH House District 107	
+NH House District 108	1	NH House District 108	
+NH House District 109	1	NH House District 109	
+NH House District 110	1	NH House District 110	
+NH House District 111	1	NH House District 111	
+NH House District 112	1	NH House District 112	
+NH House District 113	1	NH House District 113	
+NH House District 114	1	NH House District 114	
+NH House District 115	1	NH House District 115	
+NH House District 116	1	NH House District 116	
+NH House District 117	1	NH House District 117	
+NH House District 118	1	NH House District 118	
+NH House District 119	1	NH House District 119	
+NH House District 120	1	NH House District 120	
+NH House District 121	1	NH House District 121	
+NH House District 122	1	NH House District 122	
+NH House District 123	1	NH House District 123	
+NH House District 124	1	NH House District 124	
+NH House District 125	1	NH House District 125	
+NH House District 126	1	NH House District 126	
+NH House District 127	1	NH House District 127	
+NH House District 128	1	NH House District 128	
+NH House District 129	1	NH House District 129	
+NH House District 130	1	NH House District 130	
+NH House District 131	1	NH House District 131	
+NH House District 132	1	NH House District 132	
+NH House District 133	1	NH House District 133	
+NH House District 134	1	NH House District 134	
+NH House District 135	1	NH House District 135	
+NH House District 136	1	NH House District 136	
+NH House District 137	1	NH House District 137	
+NH House District 138	1	NH House District 138	
+NH House District 139	1	NH House District 139	
+NH House District 140	1	NH House District 140	
+NH House District 141	1	NH House District 141	
+NH House District 142	1	NH House District 142	
+NH House District 143	1	NH House District 143	
+NH House District 144	1	NH House District 144	
+NH House District 145	1	NH House District 145	
+NH House District 146	1	NH House District 146	
+NH House District 147	1	NH House District 147	
+NH House District 148	1	NH House District 148	
+NH House District 149	1	NH House District 149	
+NH House District 150	1	NH House District 150	
+NH House District 151	1	NH House District 151	
+NH House District 152	1	NH House District 152	
+NH House District 153	1	NH House District 153	
+NH House District 154	1	NH House District 154	
+NH House District 155	1	NH House District 155	
+NH House District 156	1	NH House District 156	
+NH House District 157	1	NH House District 157	
+NH House District 158	1	NH House District 158	
+NH House District 159	1	NH House District 159	
+NH House District 160	1	NH House District 160	
+NH House District 161	1	NH House District 161	
+NH House District 162	1	NH House District 162	
+NH House District 163	1	NH House District 163	
+NH House District 164	1	NH House District 164	
+NH House District 165	1	NH House District 165	
+NH House District 166	1	NH House District 166	
+NH House District 167	1	NH House District 167	
+NH House District 168	1	NH House District 168	
+NH House District 169	1	NH House District 169	
+NH House District 170	1	NH House District 170	
+NH House District 171	1	NH House District 171	
+NH House District 172	1	NH House District 172	
+NH House District 173	1	NH House District 173	
+NH House District 174	1	NH House District 174	
+NH House District 175	1	NH House District 175	
+NH House District 176	1	NH House District 176	
+NH House District 177	1	NH House District 177	
+NH House District 178	1	NH House District 178	
+NH House District 179	1	NH House District 179	
+NH House District 180	1	NH House District 180	
+NH House District 181	1	NH House District 181	
+NH House District 182	1	NH House District 182	
+NH House District 183	1	NH House District 183	
+NH House District 184	1	NH House District 184	
+NH House District 185	1	NH House District 185	
+NH House District 186	1	NH House District 186	
+NH House District 187	1	NH House District 187	
+NH House District 188	1	NH House District 188	
+NH House District 189	1	NH House District 189	
+NH House District 190	1	NH House District 190	
+NH House District 191	1	NH House District 191	
+NH House District 192	1	NH House District 192	
+NH House District 193	1	NH House District 193	
+NH House District 194	1	NH House District 194	
+NH House District 195	1	NH House District 195	
+NH House District 196	1	NH House District 196	
+NH House District 197	1	NH House District 197	
+NH House District 198	1	NH House District 198	
+NH House District 199	1	NH House District 199	
+NH House District 200	1	NH House District 200	
+NH House District 201	1	NH House District 201	
+NH House District 202	1	NH House District 202	
+NH House District 203	1	NH House District 203	
+NH House District 204	1	NH House District 204	
+NH House District 205	1	NH House District 205	
+NH House District 206	1	NH House District 206	
+NH House District 207	1	NH House District 207	
+NH House District 208	1	NH House District 208	
+NH House District 209	1	NH House District 209	
+NH House District 210	1	NH House District 210	
+NH House District 211	1	NH House District 211	
+NH House District 212	1	NH House District 212	
+NH House District 213	1	NH House District 213	
+NH House District 214	1	NH House District 214	
+NH House District 215	1	NH House District 215	
+NH House District 216	1	NH House District 216	
+NH House District 217	1	NH House District 217	
+NH House District 218	1	NH House District 218	
+NH House District 219	1	NH House District 219	
+NH House District 220	1	NH House District 220	
+NH House District 221	1	NH House District 221	
+NH House District 222	1	NH House District 222	
+NH House District 223	1	NH House District 223	
+NH House District 224	1	NH House District 224	
+NH House District 225	1	NH House District 225	
+NH House District 226	1	NH House District 226	
+NH House District 227	1	NH House District 227	
+NH House District 228	1	NH House District 228	
+NH House District 229	1	NH House District 229	
+NH House District 230	1	NH House District 230	
+NH House District 231	1	NH House District 231	
+NH House District 232	1	NH House District 232	
+NH House District 233	1	NH House District 233	
+NH House District 234	1	NH House District 234	
+NH House District 235	1	NH House District 235	
+NH House District 236	1	NH House District 236	
+NH House District 237	1	NH House District 237	
+NH House District 238	1	NH House District 238	
+NH House District 239	1	NH House District 239	
+NH House District 240	1	NH House District 240	
+NH House District 241	1	NH House District 241	
+NH House District 242	1	NH House District 242	
+NH House District 243	1	NH House District 243	
+NH House District 244	1	NH House District 244	
+NH House District 245	1	NH House District 245	
+NH House District 246	1	NH House District 246	
+NH House District 247	1	NH House District 247	
+NH House District 248	1	NH House District 248	
+NH House District 249	1	NH House District 249	
+NH House District 250	1	NH House District 250	
+NH House District 251	1	NH House District 251	
+NH House District 252	1	NH House District 252	
+NH House District 253	1	NH House District 253	
+NH House District 254	1	NH House District 254	
+NH House District 255	1	NH House District 255	
+NH House District 256	1	NH House District 256	
+NH House District 257	1	NH House District 257	
+NH House District 258	1	NH House District 258	
+NH House District 259	1	NH House District 259	
+NH House District 260	1	NH House District 260	
+NH House District 261	1	NH House District 261	
+NH House District 262	1	NH House District 262	
+NH House District 263	1	NH House District 263	
+NH House District 264	1	NH House District 264	
+NH House District 265	1	NH House District 265	
+NH House District 266	1	NH House District 266	
+NH House District 267	1	NH House District 267	
+NH House District 268	1	NH House District 268	
+NH House District 269	1	NH House District 269	
+NH House District 270	1	NH House District 270	
+NH House District 271	1	NH House District 271	
+NH House District 272	1	NH House District 272	
+NH House District 273	1	NH House District 273	
+NH House District 274	1	NH House District 274	
+NH House District 275	1	NH House District 275	
+NH House District 276	1	NH House District 276	
+NH House District 277	1	NH House District 277	
+NH House District 278	1	NH House District 278	
+NH House District 279	1	NH House District 279	
+NH House District 280	1	NH House District 280	
+NH House District 281	1	NH House District 281	
+NH House District 282	1	NH House District 282	
+NH House District 283	1	NH House District 283	
+NH House District 284	1	NH House District 284	
+NH House District 285	1	NH House District 285	
+NH House District 286	1	NH House District 286	
+NH House District 287	1	NH House District 287	
+NH House District 288	1	NH House District 288	
+NH House District 289	1	NH House District 289	
+NH House District 290	1	NH House District 290	
+NH House District 291	1	NH House District 291	
+NH House District 292	1	NH House District 292	
+NH House District 293	1	NH House District 293	
+NH House District 294	1	NH House District 294	
+NH House District 295	1	NH House District 295	
+NH House District 296	1	NH House District 296	
+NH House District 297	1	NH House District 297	
+NH House District 298	1	NH House District 298	
+NH House District 299	1	NH House District 299	
+NH House District 300	1	NH House District 300	
+NH House District 301	1	NH House District 301	
+NH House District 302	1	NH House District 302	
+NH House District 303	1	NH House District 303	
+NH House District 304	1	NH House District 304	
+NH House District 305	1	NH House District 305	
+NH House District 306	1	NH House District 306	
+NH House District 307	1	NH House District 307	
+NH House District 308	1	NH House District 308	
+NH House District 309	1	NH House District 309	
+NH House District 310	1	NH House District 310	
+NH House District 311	1	NH House District 311	
+NH House District 312	1	NH House District 312	
+NH House District 313	1	NH House District 313	
+NH House District 314	1	NH House District 314	
+NH House District 315	1	NH House District 315	
+NH House District 316	1	NH House District 316	
+NH House District 317	1	NH House District 317	
+NH House District 318	1	NH House District 318	
+NH House District 319	1	NH House District 319	
+NH House District 320	1	NH House District 320	
+NH House District 321	1	NH House District 321	
+NH House District 322	1	NH House District 322	
+NH House District 323	1	NH House District 323	
+NH House District 324	1	NH House District 324	
+NH House District 325	1	NH House District 325	
+NH House District 326	1	NH House District 326	
+NH House District 327	1	NH House District 327	
+NH House District 328	1	NH House District 328	
+NH House District 329	1	NH House District 329	
+NH House District 330	1	NH House District 330	
+NH House District 331	1	NH House District 331	
+NH House District 332	1	NH House District 332	
+NH House District 333	1	NH House District 333	
+NH House District 334	1	NH House District 334	
+NH House District 335	1	NH House District 335	
+NH House District 336	1	NH House District 336	
+NH House District 337	1	NH House District 337	
+NH House District 338	1	NH House District 338	
+NH House District 339	1	NH House District 339	
+NH House District 340	1	NH House District 340	
+NH House District 341	1	NH House District 341	
+NH House District 342	1	NH House District 342	
+NH House District 343	1	NH House District 343	
+NH House District 344	1	NH House District 344	
+NH House District 345	1	NH House District 345	
+NH House District 346	1	NH House District 346	
+NH House District 347	1	NH House District 347	
+NH House District 348	1	NH House District 348	
+NH House District 349	1	NH House District 349	
+NH House District 350	1	NH House District 350	
+NH House District 351	1	NH House District 351	
+NH House District 352	1	NH House District 352	
+NH House District 353	1	NH House District 353	
+NH House District 354	1	NH House District 354	
+NH House District 355	1	NH House District 355	
+NH House District 356	1	NH House District 356	
+NH House District 357	1	NH House District 357	
+NH House District 358	1	NH House District 358	
+NH House District 359	1	NH House District 359	
+NH House District 360	1	NH House District 360	
+NH House District 361	1	NH House District 361	
+NH House District 362	1	NH House District 362	
+NH House District 363	1	NH House District 363	
+NH House District 364	1	NH House District 364	
+NH House District 365	1	NH House District 365	
+NH House District 366	1	NH House District 366	
+NH House District 367	1	NH House District 367	
+NH House District 368	1	NH House District 368	
+NH House District 369	1	NH House District 369	
+NH House District 370	1	NH House District 370	
+NH House District 371	1	NH House District 371	
+NH House District 372	1	NH House District 372	
+NH House District 373	1	NH House District 373	
+NH House District 374	1	NH House District 374	
+NH House District 375	1	NH House District 375	
+NH House District 376	1	NH House District 376	
+NH House District 377	1	NH House District 377	
+NH House District 378	1	NH House District 378	
+NH House District 379	1	NH House District 379	
+NH House District 380	1	NH House District 380	
+NH House District 381	1	NH House District 381	
+NH House District 382	1	NH House District 382	
+NH House District 383	1	NH House District 383	
+NH House District 384	1	NH House District 384	
+NH House District 385	1	NH House District 385	
+NH House District 386	1	NH House District 386	
+NH House District 387	1	NH House District 387	
+NH House District 388	1	NH House District 388	
+NH House District 389	1	NH House District 389	
+NH House District 390	1	NH House District 390	
+NH House District 391	1	NH House District 391	
+NH House District 392	1	NH House District 392	
+NH House District 393	1	NH House District 393	
+NH House District 394	1	NH House District 394	
+NH House District 395	1	NH House District 395	
+NH House District 396	1	NH House District 396	
+NH House District 397	1	NH House District 397	
+NH House District 398	1	NH House District 398	
+NH House District 399	1	NH House District 399	
+NH House District 400	1	NH House District 400	
+NH Senate District 1	1	NH Senate District 1	
+NH Senate District 2	1	NH Senate District 2	
+NH Senate District 3	1	NH Senate District 3	
+NH Senate District 4	1	NH Senate District 4	
+NH Senate District 5	1	NH Senate District 5	
+NH Senate District 6	1	NH Senate District 6	
+NH Senate District 7	1	NH Senate District 7	
+NH Senate District 8	1	NH Senate District 8	
+NH Senate District 9	1	NH Senate District 9	
+NH Senate District 10	1	NH Senate District 10	
+NH Senate District 11	1	NH Senate District 11	
+NH Senate District 12	1	NH Senate District 12	
+NH Senate District 13	1	NH Senate District 13	
+NH Senate District 14	1	NH Senate District 14	
+NH Senate District 15	1	NH Senate District 15	
+NH Senate District 16	1	NH Senate District 16	
+NH Senate District 17	1	NH Senate District 17	
+NH Senate District 18	1	NH Senate District 18	
+NH Senate District 19	1	NH Senate District 19	
+NH Senate District 20	1	NH Senate District 20	
+NH Senate District 21	1	NH Senate District 21	
+NH Senate District 22	1	NH Senate District 22	
+NH Senate District 23	1	NH Senate District 23	
+NH Senate District 24	1	NH Senate District 24	
+US House NH District 1	1	US House NH District 1	
+US House NH District 2	1	US House NH District 2	
+US President (NH)	1	US President (NH)	
+NH Governor	1	NH Governor	
+US Senate NH	1	US Senate NH	
+NH Attorney General	1	NH Attorney General	
+NH Lieutenant Governor	1	NH Lieutenant Governor	
+NH Treasurer	1	NH Treasurer	
+NH Secretary of State	1	NH Secretary of State	
+NH House District 1 (Democratic Party)	1	NH House District 1	Democratic Party
+NH House District 2 (Democratic Party)	1	NH House District 2	Democratic Party
+NH House District 3 (Democratic Party)	1	NH House District 3	Democratic Party
+NH House District 4 (Democratic Party)	1	NH House District 4	Democratic Party
+NH House District 5 (Democratic Party)	1	NH House District 5	Democratic Party
+NH House District 6 (Democratic Party)	1	NH House District 6	Democratic Party
+NH House District 7 (Democratic Party)	1	NH House District 7	Democratic Party
+NH House District 8 (Democratic Party)	1	NH House District 8	Democratic Party
+NH House District 9 (Democratic Party)	1	NH House District 9	Democratic Party
+NH House District 10 (Democratic Party)	1	NH House District 10	Democratic Party
+NH House District 11 (Democratic Party)	1	NH House District 11	Democratic Party
+NH House District 12 (Democratic Party)	1	NH House District 12	Democratic Party
+NH House District 13 (Democratic Party)	1	NH House District 13	Democratic Party
+NH House District 14 (Democratic Party)	1	NH House District 14	Democratic Party
+NH House District 15 (Democratic Party)	1	NH House District 15	Democratic Party
+NH House District 16 (Democratic Party)	1	NH House District 16	Democratic Party
+NH House District 17 (Democratic Party)	1	NH House District 17	Democratic Party
+NH House District 18 (Democratic Party)	1	NH House District 18	Democratic Party
+NH House District 19 (Democratic Party)	1	NH House District 19	Democratic Party
+NH House District 20 (Democratic Party)	1	NH House District 20	Democratic Party
+NH House District 21 (Democratic Party)	1	NH House District 21	Democratic Party
+NH House District 22 (Democratic Party)	1	NH House District 22	Democratic Party
+NH House District 23 (Democratic Party)	1	NH House District 23	Democratic Party
+NH House District 24 (Democratic Party)	1	NH House District 24	Democratic Party
+NH House District 25 (Democratic Party)	1	NH House District 25	Democratic Party
+NH House District 26 (Democratic Party)	1	NH House District 26	Democratic Party
+NH House District 27 (Democratic Party)	1	NH House District 27	Democratic Party
+NH House District 28 (Democratic Party)	1	NH House District 28	Democratic Party
+NH House District 29 (Democratic Party)	1	NH House District 29	Democratic Party
+NH House District 30 (Democratic Party)	1	NH House District 30	Democratic Party
+NH House District 31 (Democratic Party)	1	NH House District 31	Democratic Party
+NH House District 32 (Democratic Party)	1	NH House District 32	Democratic Party
+NH House District 33 (Democratic Party)	1	NH House District 33	Democratic Party
+NH House District 34 (Democratic Party)	1	NH House District 34	Democratic Party
+NH House District 35 (Democratic Party)	1	NH House District 35	Democratic Party
+NH House District 36 (Democratic Party)	1	NH House District 36	Democratic Party
+NH House District 37 (Democratic Party)	1	NH House District 37	Democratic Party
+NH House District 38 (Democratic Party)	1	NH House District 38	Democratic Party
+NH House District 39 (Democratic Party)	1	NH House District 39	Democratic Party
+NH House District 40 (Democratic Party)	1	NH House District 40	Democratic Party
+NH House District 41 (Democratic Party)	1	NH House District 41	Democratic Party
+NH House District 42 (Democratic Party)	1	NH House District 42	Democratic Party
+NH House District 43 (Democratic Party)	1	NH House District 43	Democratic Party
+NH House District 44 (Democratic Party)	1	NH House District 44	Democratic Party
+NH House District 45 (Democratic Party)	1	NH House District 45	Democratic Party
+NH House District 46 (Democratic Party)	1	NH House District 46	Democratic Party
+NH House District 47 (Democratic Party)	1	NH House District 47	Democratic Party
+NH House District 48 (Democratic Party)	1	NH House District 48	Democratic Party
+NH House District 49 (Democratic Party)	1	NH House District 49	Democratic Party
+NH House District 50 (Democratic Party)	1	NH House District 50	Democratic Party
+NH House District 51 (Democratic Party)	1	NH House District 51	Democratic Party
+NH House District 52 (Democratic Party)	1	NH House District 52	Democratic Party
+NH House District 53 (Democratic Party)	1	NH House District 53	Democratic Party
+NH House District 54 (Democratic Party)	1	NH House District 54	Democratic Party
+NH House District 55 (Democratic Party)	1	NH House District 55	Democratic Party
+NH House District 56 (Democratic Party)	1	NH House District 56	Democratic Party
+NH House District 57 (Democratic Party)	1	NH House District 57	Democratic Party
+NH House District 58 (Democratic Party)	1	NH House District 58	Democratic Party
+NH House District 59 (Democratic Party)	1	NH House District 59	Democratic Party
+NH House District 60 (Democratic Party)	1	NH House District 60	Democratic Party
+NH House District 61 (Democratic Party)	1	NH House District 61	Democratic Party
+NH House District 62 (Democratic Party)	1	NH House District 62	Democratic Party
+NH House District 63 (Democratic Party)	1	NH House District 63	Democratic Party
+NH House District 64 (Democratic Party)	1	NH House District 64	Democratic Party
+NH House District 65 (Democratic Party)	1	NH House District 65	Democratic Party
+NH House District 66 (Democratic Party)	1	NH House District 66	Democratic Party
+NH House District 67 (Democratic Party)	1	NH House District 67	Democratic Party
+NH House District 68 (Democratic Party)	1	NH House District 68	Democratic Party
+NH House District 69 (Democratic Party)	1	NH House District 69	Democratic Party
+NH House District 70 (Democratic Party)	1	NH House District 70	Democratic Party
+NH House District 71 (Democratic Party)	1	NH House District 71	Democratic Party
+NH House District 72 (Democratic Party)	1	NH House District 72	Democratic Party
+NH House District 73 (Democratic Party)	1	NH House District 73	Democratic Party
+NH House District 74 (Democratic Party)	1	NH House District 74	Democratic Party
+NH House District 75 (Democratic Party)	1	NH House District 75	Democratic Party
+NH House District 76 (Democratic Party)	1	NH House District 76	Democratic Party
+NH House District 77 (Democratic Party)	1	NH House District 77	Democratic Party
+NH House District 78 (Democratic Party)	1	NH House District 78	Democratic Party
+NH House District 79 (Democratic Party)	1	NH House District 79	Democratic Party
+NH House District 80 (Democratic Party)	1	NH House District 80	Democratic Party
+NH House District 81 (Democratic Party)	1	NH House District 81	Democratic Party
+NH House District 82 (Democratic Party)	1	NH House District 82	Democratic Party
+NH House District 83 (Democratic Party)	1	NH House District 83	Democratic Party
+NH House District 84 (Democratic Party)	1	NH House District 84	Democratic Party
+NH House District 85 (Democratic Party)	1	NH House District 85	Democratic Party
+NH House District 86 (Democratic Party)	1	NH House District 86	Democratic Party
+NH House District 87 (Democratic Party)	1	NH House District 87	Democratic Party
+NH House District 88 (Democratic Party)	1	NH House District 88	Democratic Party
+NH House District 89 (Democratic Party)	1	NH House District 89	Democratic Party
+NH House District 90 (Democratic Party)	1	NH House District 90	Democratic Party
+NH House District 91 (Democratic Party)	1	NH House District 91	Democratic Party
+NH House District 92 (Democratic Party)	1	NH House District 92	Democratic Party
+NH House District 93 (Democratic Party)	1	NH House District 93	Democratic Party
+NH House District 94 (Democratic Party)	1	NH House District 94	Democratic Party
+NH House District 95 (Democratic Party)	1	NH House District 95	Democratic Party
+NH House District 96 (Democratic Party)	1	NH House District 96	Democratic Party
+NH House District 97 (Democratic Party)	1	NH House District 97	Democratic Party
+NH House District 98 (Democratic Party)	1	NH House District 98	Democratic Party
+NH House District 99 (Democratic Party)	1	NH House District 99	Democratic Party
+NH House District 100 (Democratic Party)	1	NH House District 100	Democratic Party
+NH House District 101 (Democratic Party)	1	NH House District 101	Democratic Party
+NH House District 102 (Democratic Party)	1	NH House District 102	Democratic Party
+NH House District 103 (Democratic Party)	1	NH House District 103	Democratic Party
+NH House District 104 (Democratic Party)	1	NH House District 104	Democratic Party
+NH House District 105 (Democratic Party)	1	NH House District 105	Democratic Party
+NH House District 106 (Democratic Party)	1	NH House District 106	Democratic Party
+NH House District 107 (Democratic Party)	1	NH House District 107	Democratic Party
+NH House District 108 (Democratic Party)	1	NH House District 108	Democratic Party
+NH House District 109 (Democratic Party)	1	NH House District 109	Democratic Party
+NH House District 110 (Democratic Party)	1	NH House District 110	Democratic Party
+NH House District 111 (Democratic Party)	1	NH House District 111	Democratic Party
+NH House District 112 (Democratic Party)	1	NH House District 112	Democratic Party
+NH House District 113 (Democratic Party)	1	NH House District 113	Democratic Party
+NH House District 114 (Democratic Party)	1	NH House District 114	Democratic Party
+NH House District 115 (Democratic Party)	1	NH House District 115	Democratic Party
+NH House District 116 (Democratic Party)	1	NH House District 116	Democratic Party
+NH House District 117 (Democratic Party)	1	NH House District 117	Democratic Party
+NH House District 118 (Democratic Party)	1	NH House District 118	Democratic Party
+NH House District 119 (Democratic Party)	1	NH House District 119	Democratic Party
+NH House District 120 (Democratic Party)	1	NH House District 120	Democratic Party
+NH House District 121 (Democratic Party)	1	NH House District 121	Democratic Party
+NH House District 122 (Democratic Party)	1	NH House District 122	Democratic Party
+NH House District 123 (Democratic Party)	1	NH House District 123	Democratic Party
+NH House District 124 (Democratic Party)	1	NH House District 124	Democratic Party
+NH House District 125 (Democratic Party)	1	NH House District 125	Democratic Party
+NH House District 126 (Democratic Party)	1	NH House District 126	Democratic Party
+NH House District 127 (Democratic Party)	1	NH House District 127	Democratic Party
+NH House District 128 (Democratic Party)	1	NH House District 128	Democratic Party
+NH House District 129 (Democratic Party)	1	NH House District 129	Democratic Party
+NH House District 130 (Democratic Party)	1	NH House District 130	Democratic Party
+NH House District 131 (Democratic Party)	1	NH House District 131	Democratic Party
+NH House District 132 (Democratic Party)	1	NH House District 132	Democratic Party
+NH House District 133 (Democratic Party)	1	NH House District 133	Democratic Party
+NH House District 134 (Democratic Party)	1	NH House District 134	Democratic Party
+NH House District 135 (Democratic Party)	1	NH House District 135	Democratic Party
+NH House District 136 (Democratic Party)	1	NH House District 136	Democratic Party
+NH House District 137 (Democratic Party)	1	NH House District 137	Democratic Party
+NH House District 138 (Democratic Party)	1	NH House District 138	Democratic Party
+NH House District 139 (Democratic Party)	1	NH House District 139	Democratic Party
+NH House District 140 (Democratic Party)	1	NH House District 140	Democratic Party
+NH House District 141 (Democratic Party)	1	NH House District 141	Democratic Party
+NH House District 142 (Democratic Party)	1	NH House District 142	Democratic Party
+NH House District 143 (Democratic Party)	1	NH House District 143	Democratic Party
+NH House District 144 (Democratic Party)	1	NH House District 144	Democratic Party
+NH House District 145 (Democratic Party)	1	NH House District 145	Democratic Party
+NH House District 146 (Democratic Party)	1	NH House District 146	Democratic Party
+NH House District 147 (Democratic Party)	1	NH House District 147	Democratic Party
+NH House District 148 (Democratic Party)	1	NH House District 148	Democratic Party
+NH House District 149 (Democratic Party)	1	NH House District 149	Democratic Party
+NH House District 150 (Democratic Party)	1	NH House District 150	Democratic Party
+NH House District 151 (Democratic Party)	1	NH House District 151	Democratic Party
+NH House District 152 (Democratic Party)	1	NH House District 152	Democratic Party
+NH House District 153 (Democratic Party)	1	NH House District 153	Democratic Party
+NH House District 154 (Democratic Party)	1	NH House District 154	Democratic Party
+NH House District 155 (Democratic Party)	1	NH House District 155	Democratic Party
+NH House District 156 (Democratic Party)	1	NH House District 156	Democratic Party
+NH House District 157 (Democratic Party)	1	NH House District 157	Democratic Party
+NH House District 158 (Democratic Party)	1	NH House District 158	Democratic Party
+NH House District 159 (Democratic Party)	1	NH House District 159	Democratic Party
+NH House District 160 (Democratic Party)	1	NH House District 160	Democratic Party
+NH House District 161 (Democratic Party)	1	NH House District 161	Democratic Party
+NH House District 162 (Democratic Party)	1	NH House District 162	Democratic Party
+NH House District 163 (Democratic Party)	1	NH House District 163	Democratic Party
+NH House District 164 (Democratic Party)	1	NH House District 164	Democratic Party
+NH House District 165 (Democratic Party)	1	NH House District 165	Democratic Party
+NH House District 166 (Democratic Party)	1	NH House District 166	Democratic Party
+NH House District 167 (Democratic Party)	1	NH House District 167	Democratic Party
+NH House District 168 (Democratic Party)	1	NH House District 168	Democratic Party
+NH House District 169 (Democratic Party)	1	NH House District 169	Democratic Party
+NH House District 170 (Democratic Party)	1	NH House District 170	Democratic Party
+NH House District 171 (Democratic Party)	1	NH House District 171	Democratic Party
+NH House District 172 (Democratic Party)	1	NH House District 172	Democratic Party
+NH House District 173 (Democratic Party)	1	NH House District 173	Democratic Party
+NH House District 174 (Democratic Party)	1	NH House District 174	Democratic Party
+NH House District 175 (Democratic Party)	1	NH House District 175	Democratic Party
+NH House District 176 (Democratic Party)	1	NH House District 176	Democratic Party
+NH House District 177 (Democratic Party)	1	NH House District 177	Democratic Party
+NH House District 178 (Democratic Party)	1	NH House District 178	Democratic Party
+NH House District 179 (Democratic Party)	1	NH House District 179	Democratic Party
+NH House District 180 (Democratic Party)	1	NH House District 180	Democratic Party
+NH House District 181 (Democratic Party)	1	NH House District 181	Democratic Party
+NH House District 182 (Democratic Party)	1	NH House District 182	Democratic Party
+NH House District 183 (Democratic Party)	1	NH House District 183	Democratic Party
+NH House District 184 (Democratic Party)	1	NH House District 184	Democratic Party
+NH House District 185 (Democratic Party)	1	NH House District 185	Democratic Party
+NH House District 186 (Democratic Party)	1	NH House District 186	Democratic Party
+NH House District 187 (Democratic Party)	1	NH House District 187	Democratic Party
+NH House District 188 (Democratic Party)	1	NH House District 188	Democratic Party
+NH House District 189 (Democratic Party)	1	NH House District 189	Democratic Party
+NH House District 190 (Democratic Party)	1	NH House District 190	Democratic Party
+NH House District 191 (Democratic Party)	1	NH House District 191	Democratic Party
+NH House District 192 (Democratic Party)	1	NH House District 192	Democratic Party
+NH House District 193 (Democratic Party)	1	NH House District 193	Democratic Party
+NH House District 194 (Democratic Party)	1	NH House District 194	Democratic Party
+NH House District 195 (Democratic Party)	1	NH House District 195	Democratic Party
+NH House District 196 (Democratic Party)	1	NH House District 196	Democratic Party
+NH House District 197 (Democratic Party)	1	NH House District 197	Democratic Party
+NH House District 198 (Democratic Party)	1	NH House District 198	Democratic Party
+NH House District 199 (Democratic Party)	1	NH House District 199	Democratic Party
+NH House District 200 (Democratic Party)	1	NH House District 200	Democratic Party
+NH House District 201 (Democratic Party)	1	NH House District 201	Democratic Party
+NH House District 202 (Democratic Party)	1	NH House District 202	Democratic Party
+NH House District 203 (Democratic Party)	1	NH House District 203	Democratic Party
+NH House District 204 (Democratic Party)	1	NH House District 204	Democratic Party
+NH House District 205 (Democratic Party)	1	NH House District 205	Democratic Party
+NH House District 206 (Democratic Party)	1	NH House District 206	Democratic Party
+NH House District 207 (Democratic Party)	1	NH House District 207	Democratic Party
+NH House District 208 (Democratic Party)	1	NH House District 208	Democratic Party
+NH House District 209 (Democratic Party)	1	NH House District 209	Democratic Party
+NH House District 210 (Democratic Party)	1	NH House District 210	Democratic Party
+NH House District 211 (Democratic Party)	1	NH House District 211	Democratic Party
+NH House District 212 (Democratic Party)	1	NH House District 212	Democratic Party
+NH House District 213 (Democratic Party)	1	NH House District 213	Democratic Party
+NH House District 214 (Democratic Party)	1	NH House District 214	Democratic Party
+NH House District 215 (Democratic Party)	1	NH House District 215	Democratic Party
+NH House District 216 (Democratic Party)	1	NH House District 216	Democratic Party
+NH House District 217 (Democratic Party)	1	NH House District 217	Democratic Party
+NH House District 218 (Democratic Party)	1	NH House District 218	Democratic Party
+NH House District 219 (Democratic Party)	1	NH House District 219	Democratic Party
+NH House District 220 (Democratic Party)	1	NH House District 220	Democratic Party
+NH House District 221 (Democratic Party)	1	NH House District 221	Democratic Party
+NH House District 222 (Democratic Party)	1	NH House District 222	Democratic Party
+NH House District 223 (Democratic Party)	1	NH House District 223	Democratic Party
+NH House District 224 (Democratic Party)	1	NH House District 224	Democratic Party
+NH House District 225 (Democratic Party)	1	NH House District 225	Democratic Party
+NH House District 226 (Democratic Party)	1	NH House District 226	Democratic Party
+NH House District 227 (Democratic Party)	1	NH House District 227	Democratic Party
+NH House District 228 (Democratic Party)	1	NH House District 228	Democratic Party
+NH House District 229 (Democratic Party)	1	NH House District 229	Democratic Party
+NH House District 230 (Democratic Party)	1	NH House District 230	Democratic Party
+NH House District 231 (Democratic Party)	1	NH House District 231	Democratic Party
+NH House District 232 (Democratic Party)	1	NH House District 232	Democratic Party
+NH House District 233 (Democratic Party)	1	NH House District 233	Democratic Party
+NH House District 234 (Democratic Party)	1	NH House District 234	Democratic Party
+NH House District 235 (Democratic Party)	1	NH House District 235	Democratic Party
+NH House District 236 (Democratic Party)	1	NH House District 236	Democratic Party
+NH House District 237 (Democratic Party)	1	NH House District 237	Democratic Party
+NH House District 238 (Democratic Party)	1	NH House District 238	Democratic Party
+NH House District 239 (Democratic Party)	1	NH House District 239	Democratic Party
+NH House District 240 (Democratic Party)	1	NH House District 240	Democratic Party
+NH House District 241 (Democratic Party)	1	NH House District 241	Democratic Party
+NH House District 242 (Democratic Party)	1	NH House District 242	Democratic Party
+NH House District 243 (Democratic Party)	1	NH House District 243	Democratic Party
+NH House District 244 (Democratic Party)	1	NH House District 244	Democratic Party
+NH House District 245 (Democratic Party)	1	NH House District 245	Democratic Party
+NH House District 246 (Democratic Party)	1	NH House District 246	Democratic Party
+NH House District 247 (Democratic Party)	1	NH House District 247	Democratic Party
+NH House District 248 (Democratic Party)	1	NH House District 248	Democratic Party
+NH House District 249 (Democratic Party)	1	NH House District 249	Democratic Party
+NH House District 250 (Democratic Party)	1	NH House District 250	Democratic Party
+NH House District 251 (Democratic Party)	1	NH House District 251	Democratic Party
+NH House District 252 (Democratic Party)	1	NH House District 252	Democratic Party
+NH House District 253 (Democratic Party)	1	NH House District 253	Democratic Party
+NH House District 254 (Democratic Party)	1	NH House District 254	Democratic Party
+NH House District 255 (Democratic Party)	1	NH House District 255	Democratic Party
+NH House District 256 (Democratic Party)	1	NH House District 256	Democratic Party
+NH House District 257 (Democratic Party)	1	NH House District 257	Democratic Party
+NH House District 258 (Democratic Party)	1	NH House District 258	Democratic Party
+NH House District 259 (Democratic Party)	1	NH House District 259	Democratic Party
+NH House District 260 (Democratic Party)	1	NH House District 260	Democratic Party
+NH House District 261 (Democratic Party)	1	NH House District 261	Democratic Party
+NH House District 262 (Democratic Party)	1	NH House District 262	Democratic Party
+NH House District 263 (Democratic Party)	1	NH House District 263	Democratic Party
+NH House District 264 (Democratic Party)	1	NH House District 264	Democratic Party
+NH House District 265 (Democratic Party)	1	NH House District 265	Democratic Party
+NH House District 266 (Democratic Party)	1	NH House District 266	Democratic Party
+NH House District 267 (Democratic Party)	1	NH House District 267	Democratic Party
+NH House District 268 (Democratic Party)	1	NH House District 268	Democratic Party
+NH House District 269 (Democratic Party)	1	NH House District 269	Democratic Party
+NH House District 270 (Democratic Party)	1	NH House District 270	Democratic Party
+NH House District 271 (Democratic Party)	1	NH House District 271	Democratic Party
+NH House District 272 (Democratic Party)	1	NH House District 272	Democratic Party
+NH House District 273 (Democratic Party)	1	NH House District 273	Democratic Party
+NH House District 274 (Democratic Party)	1	NH House District 274	Democratic Party
+NH House District 275 (Democratic Party)	1	NH House District 275	Democratic Party
+NH House District 276 (Democratic Party)	1	NH House District 276	Democratic Party
+NH House District 277 (Democratic Party)	1	NH House District 277	Democratic Party
+NH House District 278 (Democratic Party)	1	NH House District 278	Democratic Party
+NH House District 279 (Democratic Party)	1	NH House District 279	Democratic Party
+NH House District 280 (Democratic Party)	1	NH House District 280	Democratic Party
+NH House District 281 (Democratic Party)	1	NH House District 281	Democratic Party
+NH House District 282 (Democratic Party)	1	NH House District 282	Democratic Party
+NH House District 283 (Democratic Party)	1	NH House District 283	Democratic Party
+NH House District 284 (Democratic Party)	1	NH House District 284	Democratic Party
+NH House District 285 (Democratic Party)	1	NH House District 285	Democratic Party
+NH House District 286 (Democratic Party)	1	NH House District 286	Democratic Party
+NH House District 287 (Democratic Party)	1	NH House District 287	Democratic Party
+NH House District 288 (Democratic Party)	1	NH House District 288	Democratic Party
+NH House District 289 (Democratic Party)	1	NH House District 289	Democratic Party
+NH House District 290 (Democratic Party)	1	NH House District 290	Democratic Party
+NH House District 291 (Democratic Party)	1	NH House District 291	Democratic Party
+NH House District 292 (Democratic Party)	1	NH House District 292	Democratic Party
+NH House District 293 (Democratic Party)	1	NH House District 293	Democratic Party
+NH House District 294 (Democratic Party)	1	NH House District 294	Democratic Party
+NH House District 295 (Democratic Party)	1	NH House District 295	Democratic Party
+NH House District 296 (Democratic Party)	1	NH House District 296	Democratic Party
+NH House District 297 (Democratic Party)	1	NH House District 297	Democratic Party
+NH House District 298 (Democratic Party)	1	NH House District 298	Democratic Party
+NH House District 299 (Democratic Party)	1	NH House District 299	Democratic Party
+NH House District 300 (Democratic Party)	1	NH House District 300	Democratic Party
+NH House District 301 (Democratic Party)	1	NH House District 301	Democratic Party
+NH House District 302 (Democratic Party)	1	NH House District 302	Democratic Party
+NH House District 303 (Democratic Party)	1	NH House District 303	Democratic Party
+NH House District 304 (Democratic Party)	1	NH House District 304	Democratic Party
+NH House District 305 (Democratic Party)	1	NH House District 305	Democratic Party
+NH House District 306 (Democratic Party)	1	NH House District 306	Democratic Party
+NH House District 307 (Democratic Party)	1	NH House District 307	Democratic Party
+NH House District 308 (Democratic Party)	1	NH House District 308	Democratic Party
+NH House District 309 (Democratic Party)	1	NH House District 309	Democratic Party
+NH House District 310 (Democratic Party)	1	NH House District 310	Democratic Party
+NH House District 311 (Democratic Party)	1	NH House District 311	Democratic Party
+NH House District 312 (Democratic Party)	1	NH House District 312	Democratic Party
+NH House District 313 (Democratic Party)	1	NH House District 313	Democratic Party
+NH House District 314 (Democratic Party)	1	NH House District 314	Democratic Party
+NH House District 315 (Democratic Party)	1	NH House District 315	Democratic Party
+NH House District 316 (Democratic Party)	1	NH House District 316	Democratic Party
+NH House District 317 (Democratic Party)	1	NH House District 317	Democratic Party
+NH House District 318 (Democratic Party)	1	NH House District 318	Democratic Party
+NH House District 319 (Democratic Party)	1	NH House District 319	Democratic Party
+NH House District 320 (Democratic Party)	1	NH House District 320	Democratic Party
+NH House District 321 (Democratic Party)	1	NH House District 321	Democratic Party
+NH House District 322 (Democratic Party)	1	NH House District 322	Democratic Party
+NH House District 323 (Democratic Party)	1	NH House District 323	Democratic Party
+NH House District 324 (Democratic Party)	1	NH House District 324	Democratic Party
+NH House District 325 (Democratic Party)	1	NH House District 325	Democratic Party
+NH House District 326 (Democratic Party)	1	NH House District 326	Democratic Party
+NH House District 327 (Democratic Party)	1	NH House District 327	Democratic Party
+NH House District 328 (Democratic Party)	1	NH House District 328	Democratic Party
+NH House District 329 (Democratic Party)	1	NH House District 329	Democratic Party
+NH House District 330 (Democratic Party)	1	NH House District 330	Democratic Party
+NH House District 331 (Democratic Party)	1	NH House District 331	Democratic Party
+NH House District 332 (Democratic Party)	1	NH House District 332	Democratic Party
+NH House District 333 (Democratic Party)	1	NH House District 333	Democratic Party
+NH House District 334 (Democratic Party)	1	NH House District 334	Democratic Party
+NH House District 335 (Democratic Party)	1	NH House District 335	Democratic Party
+NH House District 336 (Democratic Party)	1	NH House District 336	Democratic Party
+NH House District 337 (Democratic Party)	1	NH House District 337	Democratic Party
+NH House District 338 (Democratic Party)	1	NH House District 338	Democratic Party
+NH House District 339 (Democratic Party)	1	NH House District 339	Democratic Party
+NH House District 340 (Democratic Party)	1	NH House District 340	Democratic Party
+NH House District 341 (Democratic Party)	1	NH House District 341	Democratic Party
+NH House District 342 (Democratic Party)	1	NH House District 342	Democratic Party
+NH House District 343 (Democratic Party)	1	NH House District 343	Democratic Party
+NH House District 344 (Democratic Party)	1	NH House District 344	Democratic Party
+NH House District 345 (Democratic Party)	1	NH House District 345	Democratic Party
+NH House District 346 (Democratic Party)	1	NH House District 346	Democratic Party
+NH House District 347 (Democratic Party)	1	NH House District 347	Democratic Party
+NH House District 348 (Democratic Party)	1	NH House District 348	Democratic Party
+NH House District 349 (Democratic Party)	1	NH House District 349	Democratic Party
+NH House District 350 (Democratic Party)	1	NH House District 350	Democratic Party
+NH House District 351 (Democratic Party)	1	NH House District 351	Democratic Party
+NH House District 352 (Democratic Party)	1	NH House District 352	Democratic Party
+NH House District 353 (Democratic Party)	1	NH House District 353	Democratic Party
+NH House District 354 (Democratic Party)	1	NH House District 354	Democratic Party
+NH House District 355 (Democratic Party)	1	NH House District 355	Democratic Party
+NH House District 356 (Democratic Party)	1	NH House District 356	Democratic Party
+NH House District 357 (Democratic Party)	1	NH House District 357	Democratic Party
+NH House District 358 (Democratic Party)	1	NH House District 358	Democratic Party
+NH House District 359 (Democratic Party)	1	NH House District 359	Democratic Party
+NH House District 360 (Democratic Party)	1	NH House District 360	Democratic Party
+NH House District 361 (Democratic Party)	1	NH House District 361	Democratic Party
+NH House District 362 (Democratic Party)	1	NH House District 362	Democratic Party
+NH House District 363 (Democratic Party)	1	NH House District 363	Democratic Party
+NH House District 364 (Democratic Party)	1	NH House District 364	Democratic Party
+NH House District 365 (Democratic Party)	1	NH House District 365	Democratic Party
+NH House District 366 (Democratic Party)	1	NH House District 366	Democratic Party
+NH House District 367 (Democratic Party)	1	NH House District 367	Democratic Party
+NH House District 368 (Democratic Party)	1	NH House District 368	Democratic Party
+NH House District 369 (Democratic Party)	1	NH House District 369	Democratic Party
+NH House District 370 (Democratic Party)	1	NH House District 370	Democratic Party
+NH House District 371 (Democratic Party)	1	NH House District 371	Democratic Party
+NH House District 372 (Democratic Party)	1	NH House District 372	Democratic Party
+NH House District 373 (Democratic Party)	1	NH House District 373	Democratic Party
+NH House District 374 (Democratic Party)	1	NH House District 374	Democratic Party
+NH House District 375 (Democratic Party)	1	NH House District 375	Democratic Party
+NH House District 376 (Democratic Party)	1	NH House District 376	Democratic Party
+NH House District 377 (Democratic Party)	1	NH House District 377	Democratic Party
+NH House District 378 (Democratic Party)	1	NH House District 378	Democratic Party
+NH House District 379 (Democratic Party)	1	NH House District 379	Democratic Party
+NH House District 380 (Democratic Party)	1	NH House District 380	Democratic Party
+NH House District 381 (Democratic Party)	1	NH House District 381	Democratic Party
+NH House District 382 (Democratic Party)	1	NH House District 382	Democratic Party
+NH House District 383 (Democratic Party)	1	NH House District 383	Democratic Party
+NH House District 384 (Democratic Party)	1	NH House District 384	Democratic Party
+NH House District 385 (Democratic Party)	1	NH House District 385	Democratic Party
+NH House District 386 (Democratic Party)	1	NH House District 386	Democratic Party
+NH House District 387 (Democratic Party)	1	NH House District 387	Democratic Party
+NH House District 388 (Democratic Party)	1	NH House District 388	Democratic Party
+NH House District 389 (Democratic Party)	1	NH House District 389	Democratic Party
+NH House District 390 (Democratic Party)	1	NH House District 390	Democratic Party
+NH House District 391 (Democratic Party)	1	NH House District 391	Democratic Party
+NH House District 392 (Democratic Party)	1	NH House District 392	Democratic Party
+NH House District 393 (Democratic Party)	1	NH House District 393	Democratic Party
+NH House District 394 (Democratic Party)	1	NH House District 394	Democratic Party
+NH House District 395 (Democratic Party)	1	NH House District 395	Democratic Party
+NH House District 396 (Democratic Party)	1	NH House District 396	Democratic Party
+NH House District 397 (Democratic Party)	1	NH House District 397	Democratic Party
+NH House District 398 (Democratic Party)	1	NH House District 398	Democratic Party
+NH House District 399 (Democratic Party)	1	NH House District 399	Democratic Party
+NH House District 400 (Democratic Party)	1	NH House District 400	Democratic Party
+NH Senate District 1 (Democratic Party)	1	NH Senate District 1	Democratic Party
+NH Senate District 2 (Democratic Party)	1	NH Senate District 2	Democratic Party
+NH Senate District 3 (Democratic Party)	1	NH Senate District 3	Democratic Party
+NH Senate District 4 (Democratic Party)	1	NH Senate District 4	Democratic Party
+NH Senate District 5 (Democratic Party)	1	NH Senate District 5	Democratic Party
+NH Senate District 6 (Democratic Party)	1	NH Senate District 6	Democratic Party
+NH Senate District 7 (Democratic Party)	1	NH Senate District 7	Democratic Party
+NH Senate District 8 (Democratic Party)	1	NH Senate District 8	Democratic Party
+NH Senate District 9 (Democratic Party)	1	NH Senate District 9	Democratic Party
+NH Senate District 10 (Democratic Party)	1	NH Senate District 10	Democratic Party
+NH Senate District 11 (Democratic Party)	1	NH Senate District 11	Democratic Party
+NH Senate District 12 (Democratic Party)	1	NH Senate District 12	Democratic Party
+NH Senate District 13 (Democratic Party)	1	NH Senate District 13	Democratic Party
+NH Senate District 14 (Democratic Party)	1	NH Senate District 14	Democratic Party
+NH Senate District 15 (Democratic Party)	1	NH Senate District 15	Democratic Party
+NH Senate District 16 (Democratic Party)	1	NH Senate District 16	Democratic Party
+NH Senate District 17 (Democratic Party)	1	NH Senate District 17	Democratic Party
+NH Senate District 18 (Democratic Party)	1	NH Senate District 18	Democratic Party
+NH Senate District 19 (Democratic Party)	1	NH Senate District 19	Democratic Party
+NH Senate District 20 (Democratic Party)	1	NH Senate District 20	Democratic Party
+NH Senate District 21 (Democratic Party)	1	NH Senate District 21	Democratic Party
+NH Senate District 22 (Democratic Party)	1	NH Senate District 22	Democratic Party
+NH Senate District 23 (Democratic Party)	1	NH Senate District 23	Democratic Party
+NH Senate District 24 (Democratic Party)	1	NH Senate District 24	Democratic Party
+US House NH District 1 (Democratic Party)	1	US House NH District 1	Democratic Party
+US House NH District 2 (Democratic Party)	1	US House NH District 2	Democratic Party
+US President (NH) (Democratic Party)	1	US President (NH)	Democratic Party
+NH Governor (Democratic Party)	1	NH Governor	Democratic Party
+US Senate NH (Democratic Party)	1	US Senate NH	Democratic Party
+NH Attorney General (Democratic Party)	1	NH Attorney General	Democratic Party
+NH Lieutenant Governor (Democratic Party)	1	NH Lieutenant Governor	Democratic Party
+NH Treasurer (Democratic Party)	1	NH Treasurer	Democratic Party
+NH Secretary of State (Democratic Party)	1	NH Secretary of State	Democratic Party
+NH House District 1 (Republican Party)	1	NH House District 1	Republican Party
+NH House District 2 (Republican Party)	1	NH House District 2	Republican Party
+NH House District 3 (Republican Party)	1	NH House District 3	Republican Party
+NH House District 4 (Republican Party)	1	NH House District 4	Republican Party
+NH House District 5 (Republican Party)	1	NH House District 5	Republican Party
+NH House District 6 (Republican Party)	1	NH House District 6	Republican Party
+NH House District 7 (Republican Party)	1	NH House District 7	Republican Party
+NH House District 8 (Republican Party)	1	NH House District 8	Republican Party
+NH House District 9 (Republican Party)	1	NH House District 9	Republican Party
+NH House District 10 (Republican Party)	1	NH House District 10	Republican Party
+NH House District 11 (Republican Party)	1	NH House District 11	Republican Party
+NH House District 12 (Republican Party)	1	NH House District 12	Republican Party
+NH House District 13 (Republican Party)	1	NH House District 13	Republican Party
+NH House District 14 (Republican Party)	1	NH House District 14	Republican Party
+NH House District 15 (Republican Party)	1	NH House District 15	Republican Party
+NH House District 16 (Republican Party)	1	NH House District 16	Republican Party
+NH House District 17 (Republican Party)	1	NH House District 17	Republican Party
+NH House District 18 (Republican Party)	1	NH House District 18	Republican Party
+NH House District 19 (Republican Party)	1	NH House District 19	Republican Party
+NH House District 20 (Republican Party)	1	NH House District 20	Republican Party
+NH House District 21 (Republican Party)	1	NH House District 21	Republican Party
+NH House District 22 (Republican Party)	1	NH House District 22	Republican Party
+NH House District 23 (Republican Party)	1	NH House District 23	Republican Party
+NH House District 24 (Republican Party)	1	NH House District 24	Republican Party
+NH House District 25 (Republican Party)	1	NH House District 25	Republican Party
+NH House District 26 (Republican Party)	1	NH House District 26	Republican Party
+NH House District 27 (Republican Party)	1	NH House District 27	Republican Party
+NH House District 28 (Republican Party)	1	NH House District 28	Republican Party
+NH House District 29 (Republican Party)	1	NH House District 29	Republican Party
+NH House District 30 (Republican Party)	1	NH House District 30	Republican Party
+NH House District 31 (Republican Party)	1	NH House District 31	Republican Party
+NH House District 32 (Republican Party)	1	NH House District 32	Republican Party
+NH House District 33 (Republican Party)	1	NH House District 33	Republican Party
+NH House District 34 (Republican Party)	1	NH House District 34	Republican Party
+NH House District 35 (Republican Party)	1	NH House District 35	Republican Party
+NH House District 36 (Republican Party)	1	NH House District 36	Republican Party
+NH House District 37 (Republican Party)	1	NH House District 37	Republican Party
+NH House District 38 (Republican Party)	1	NH House District 38	Republican Party
+NH House District 39 (Republican Party)	1	NH House District 39	Republican Party
+NH House District 40 (Republican Party)	1	NH House District 40	Republican Party
+NH House District 41 (Republican Party)	1	NH House District 41	Republican Party
+NH House District 42 (Republican Party)	1	NH House District 42	Republican Party
+NH House District 43 (Republican Party)	1	NH House District 43	Republican Party
+NH House District 44 (Republican Party)	1	NH House District 44	Republican Party
+NH House District 45 (Republican Party)	1	NH House District 45	Republican Party
+NH House District 46 (Republican Party)	1	NH House District 46	Republican Party
+NH House District 47 (Republican Party)	1	NH House District 47	Republican Party
+NH House District 48 (Republican Party)	1	NH House District 48	Republican Party
+NH House District 49 (Republican Party)	1	NH House District 49	Republican Party
+NH House District 50 (Republican Party)	1	NH House District 50	Republican Party
+NH House District 51 (Republican Party)	1	NH House District 51	Republican Party
+NH House District 52 (Republican Party)	1	NH House District 52	Republican Party
+NH House District 53 (Republican Party)	1	NH House District 53	Republican Party
+NH House District 54 (Republican Party)	1	NH House District 54	Republican Party
+NH House District 55 (Republican Party)	1	NH House District 55	Republican Party
+NH House District 56 (Republican Party)	1	NH House District 56	Republican Party
+NH House District 57 (Republican Party)	1	NH House District 57	Republican Party
+NH House District 58 (Republican Party)	1	NH House District 58	Republican Party
+NH House District 59 (Republican Party)	1	NH House District 59	Republican Party
+NH House District 60 (Republican Party)	1	NH House District 60	Republican Party
+NH House District 61 (Republican Party)	1	NH House District 61	Republican Party
+NH House District 62 (Republican Party)	1	NH House District 62	Republican Party
+NH House District 63 (Republican Party)	1	NH House District 63	Republican Party
+NH House District 64 (Republican Party)	1	NH House District 64	Republican Party
+NH House District 65 (Republican Party)	1	NH House District 65	Republican Party
+NH House District 66 (Republican Party)	1	NH House District 66	Republican Party
+NH House District 67 (Republican Party)	1	NH House District 67	Republican Party
+NH House District 68 (Republican Party)	1	NH House District 68	Republican Party
+NH House District 69 (Republican Party)	1	NH House District 69	Republican Party
+NH House District 70 (Republican Party)	1	NH House District 70	Republican Party
+NH House District 71 (Republican Party)	1	NH House District 71	Republican Party
+NH House District 72 (Republican Party)	1	NH House District 72	Republican Party
+NH House District 73 (Republican Party)	1	NH House District 73	Republican Party
+NH House District 74 (Republican Party)	1	NH House District 74	Republican Party
+NH House District 75 (Republican Party)	1	NH House District 75	Republican Party
+NH House District 76 (Republican Party)	1	NH House District 76	Republican Party
+NH House District 77 (Republican Party)	1	NH House District 77	Republican Party
+NH House District 78 (Republican Party)	1	NH House District 78	Republican Party
+NH House District 79 (Republican Party)	1	NH House District 79	Republican Party
+NH House District 80 (Republican Party)	1	NH House District 80	Republican Party
+NH House District 81 (Republican Party)	1	NH House District 81	Republican Party
+NH House District 82 (Republican Party)	1	NH House District 82	Republican Party
+NH House District 83 (Republican Party)	1	NH House District 83	Republican Party
+NH House District 84 (Republican Party)	1	NH House District 84	Republican Party
+NH House District 85 (Republican Party)	1	NH House District 85	Republican Party
+NH House District 86 (Republican Party)	1	NH House District 86	Republican Party
+NH House District 87 (Republican Party)	1	NH House District 87	Republican Party
+NH House District 88 (Republican Party)	1	NH House District 88	Republican Party
+NH House District 89 (Republican Party)	1	NH House District 89	Republican Party
+NH House District 90 (Republican Party)	1	NH House District 90	Republican Party
+NH House District 91 (Republican Party)	1	NH House District 91	Republican Party
+NH House District 92 (Republican Party)	1	NH House District 92	Republican Party
+NH House District 93 (Republican Party)	1	NH House District 93	Republican Party
+NH House District 94 (Republican Party)	1	NH House District 94	Republican Party
+NH House District 95 (Republican Party)	1	NH House District 95	Republican Party
+NH House District 96 (Republican Party)	1	NH House District 96	Republican Party
+NH House District 97 (Republican Party)	1	NH House District 97	Republican Party
+NH House District 98 (Republican Party)	1	NH House District 98	Republican Party
+NH House District 99 (Republican Party)	1	NH House District 99	Republican Party
+NH House District 100 (Republican Party)	1	NH House District 100	Republican Party
+NH House District 101 (Republican Party)	1	NH House District 101	Republican Party
+NH House District 102 (Republican Party)	1	NH House District 102	Republican Party
+NH House District 103 (Republican Party)	1	NH House District 103	Republican Party
+NH House District 104 (Republican Party)	1	NH House District 104	Republican Party
+NH House District 105 (Republican Party)	1	NH House District 105	Republican Party
+NH House District 106 (Republican Party)	1	NH House District 106	Republican Party
+NH House District 107 (Republican Party)	1	NH House District 107	Republican Party
+NH House District 108 (Republican Party)	1	NH House District 108	Republican Party
+NH House District 109 (Republican Party)	1	NH House District 109	Republican Party
+NH House District 110 (Republican Party)	1	NH House District 110	Republican Party
+NH House District 111 (Republican Party)	1	NH House District 111	Republican Party
+NH House District 112 (Republican Party)	1	NH House District 112	Republican Party
+NH House District 113 (Republican Party)	1	NH House District 113	Republican Party
+NH House District 114 (Republican Party)	1	NH House District 114	Republican Party
+NH House District 115 (Republican Party)	1	NH House District 115	Republican Party
+NH House District 116 (Republican Party)	1	NH House District 116	Republican Party
+NH House District 117 (Republican Party)	1	NH House District 117	Republican Party
+NH House District 118 (Republican Party)	1	NH House District 118	Republican Party
+NH House District 119 (Republican Party)	1	NH House District 119	Republican Party
+NH House District 120 (Republican Party)	1	NH House District 120	Republican Party
+NH House District 121 (Republican Party)	1	NH House District 121	Republican Party
+NH House District 122 (Republican Party)	1	NH House District 122	Republican Party
+NH House District 123 (Republican Party)	1	NH House District 123	Republican Party
+NH House District 124 (Republican Party)	1	NH House District 124	Republican Party
+NH House District 125 (Republican Party)	1	NH House District 125	Republican Party
+NH House District 126 (Republican Party)	1	NH House District 126	Republican Party
+NH House District 127 (Republican Party)	1	NH House District 127	Republican Party
+NH House District 128 (Republican Party)	1	NH House District 128	Republican Party
+NH House District 129 (Republican Party)	1	NH House District 129	Republican Party
+NH House District 130 (Republican Party)	1	NH House District 130	Republican Party
+NH House District 131 (Republican Party)	1	NH House District 131	Republican Party
+NH House District 132 (Republican Party)	1	NH House District 132	Republican Party
+NH House District 133 (Republican Party)	1	NH House District 133	Republican Party
+NH House District 134 (Republican Party)	1	NH House District 134	Republican Party
+NH House District 135 (Republican Party)	1	NH House District 135	Republican Party
+NH House District 136 (Republican Party)	1	NH House District 136	Republican Party
+NH House District 137 (Republican Party)	1	NH House District 137	Republican Party
+NH House District 138 (Republican Party)	1	NH House District 138	Republican Party
+NH House District 139 (Republican Party)	1	NH House District 139	Republican Party
+NH House District 140 (Republican Party)	1	NH House District 140	Republican Party
+NH House District 141 (Republican Party)	1	NH House District 141	Republican Party
+NH House District 142 (Republican Party)	1	NH House District 142	Republican Party
+NH House District 143 (Republican Party)	1	NH House District 143	Republican Party
+NH House District 144 (Republican Party)	1	NH House District 144	Republican Party
+NH House District 145 (Republican Party)	1	NH House District 145	Republican Party
+NH House District 146 (Republican Party)	1	NH House District 146	Republican Party
+NH House District 147 (Republican Party)	1	NH House District 147	Republican Party
+NH House District 148 (Republican Party)	1	NH House District 148	Republican Party
+NH House District 149 (Republican Party)	1	NH House District 149	Republican Party
+NH House District 150 (Republican Party)	1	NH House District 150	Republican Party
+NH House District 151 (Republican Party)	1	NH House District 151	Republican Party
+NH House District 152 (Republican Party)	1	NH House District 152	Republican Party
+NH House District 153 (Republican Party)	1	NH House District 153	Republican Party
+NH House District 154 (Republican Party)	1	NH House District 154	Republican Party
+NH House District 155 (Republican Party)	1	NH House District 155	Republican Party
+NH House District 156 (Republican Party)	1	NH House District 156	Republican Party
+NH House District 157 (Republican Party)	1	NH House District 157	Republican Party
+NH House District 158 (Republican Party)	1	NH House District 158	Republican Party
+NH House District 159 (Republican Party)	1	NH House District 159	Republican Party
+NH House District 160 (Republican Party)	1	NH House District 160	Republican Party
+NH House District 161 (Republican Party)	1	NH House District 161	Republican Party
+NH House District 162 (Republican Party)	1	NH House District 162	Republican Party
+NH House District 163 (Republican Party)	1	NH House District 163	Republican Party
+NH House District 164 (Republican Party)	1	NH House District 164	Republican Party
+NH House District 165 (Republican Party)	1	NH House District 165	Republican Party
+NH House District 166 (Republican Party)	1	NH House District 166	Republican Party
+NH House District 167 (Republican Party)	1	NH House District 167	Republican Party
+NH House District 168 (Republican Party)	1	NH House District 168	Republican Party
+NH House District 169 (Republican Party)	1	NH House District 169	Republican Party
+NH House District 170 (Republican Party)	1	NH House District 170	Republican Party
+NH House District 171 (Republican Party)	1	NH House District 171	Republican Party
+NH House District 172 (Republican Party)	1	NH House District 172	Republican Party
+NH House District 173 (Republican Party)	1	NH House District 173	Republican Party
+NH House District 174 (Republican Party)	1	NH House District 174	Republican Party
+NH House District 175 (Republican Party)	1	NH House District 175	Republican Party
+NH House District 176 (Republican Party)	1	NH House District 176	Republican Party
+NH House District 177 (Republican Party)	1	NH House District 177	Republican Party
+NH House District 178 (Republican Party)	1	NH House District 178	Republican Party
+NH House District 179 (Republican Party)	1	NH House District 179	Republican Party
+NH House District 180 (Republican Party)	1	NH House District 180	Republican Party
+NH House District 181 (Republican Party)	1	NH House District 181	Republican Party
+NH House District 182 (Republican Party)	1	NH House District 182	Republican Party
+NH House District 183 (Republican Party)	1	NH House District 183	Republican Party
+NH House District 184 (Republican Party)	1	NH House District 184	Republican Party
+NH House District 185 (Republican Party)	1	NH House District 185	Republican Party
+NH House District 186 (Republican Party)	1	NH House District 186	Republican Party
+NH House District 187 (Republican Party)	1	NH House District 187	Republican Party
+NH House District 188 (Republican Party)	1	NH House District 188	Republican Party
+NH House District 189 (Republican Party)	1	NH House District 189	Republican Party
+NH House District 190 (Republican Party)	1	NH House District 190	Republican Party
+NH House District 191 (Republican Party)	1	NH House District 191	Republican Party
+NH House District 192 (Republican Party)	1	NH House District 192	Republican Party
+NH House District 193 (Republican Party)	1	NH House District 193	Republican Party
+NH House District 194 (Republican Party)	1	NH House District 194	Republican Party
+NH House District 195 (Republican Party)	1	NH House District 195	Republican Party
+NH House District 196 (Republican Party)	1	NH House District 196	Republican Party
+NH House District 197 (Republican Party)	1	NH House District 197	Republican Party
+NH House District 198 (Republican Party)	1	NH House District 198	Republican Party
+NH House District 199 (Republican Party)	1	NH House District 199	Republican Party
+NH House District 200 (Republican Party)	1	NH House District 200	Republican Party
+NH House District 201 (Republican Party)	1	NH House District 201	Republican Party
+NH House District 202 (Republican Party)	1	NH House District 202	Republican Party
+NH House District 203 (Republican Party)	1	NH House District 203	Republican Party
+NH House District 204 (Republican Party)	1	NH House District 204	Republican Party
+NH House District 205 (Republican Party)	1	NH House District 205	Republican Party
+NH House District 206 (Republican Party)	1	NH House District 206	Republican Party
+NH House District 207 (Republican Party)	1	NH House District 207	Republican Party
+NH House District 208 (Republican Party)	1	NH House District 208	Republican Party
+NH House District 209 (Republican Party)	1	NH House District 209	Republican Party
+NH House District 210 (Republican Party)	1	NH House District 210	Republican Party
+NH House District 211 (Republican Party)	1	NH House District 211	Republican Party
+NH House District 212 (Republican Party)	1	NH House District 212	Republican Party
+NH House District 213 (Republican Party)	1	NH House District 213	Republican Party
+NH House District 214 (Republican Party)	1	NH House District 214	Republican Party
+NH House District 215 (Republican Party)	1	NH House District 215	Republican Party
+NH House District 216 (Republican Party)	1	NH House District 216	Republican Party
+NH House District 217 (Republican Party)	1	NH House District 217	Republican Party
+NH House District 218 (Republican Party)	1	NH House District 218	Republican Party
+NH House District 219 (Republican Party)	1	NH House District 219	Republican Party
+NH House District 220 (Republican Party)	1	NH House District 220	Republican Party
+NH House District 221 (Republican Party)	1	NH House District 221	Republican Party
+NH House District 222 (Republican Party)	1	NH House District 222	Republican Party
+NH House District 223 (Republican Party)	1	NH House District 223	Republican Party
+NH House District 224 (Republican Party)	1	NH House District 224	Republican Party
+NH House District 225 (Republican Party)	1	NH House District 225	Republican Party
+NH House District 226 (Republican Party)	1	NH House District 226	Republican Party
+NH House District 227 (Republican Party)	1	NH House District 227	Republican Party
+NH House District 228 (Republican Party)	1	NH House District 228	Republican Party
+NH House District 229 (Republican Party)	1	NH House District 229	Republican Party
+NH House District 230 (Republican Party)	1	NH House District 230	Republican Party
+NH House District 231 (Republican Party)	1	NH House District 231	Republican Party
+NH House District 232 (Republican Party)	1	NH House District 232	Republican Party
+NH House District 233 (Republican Party)	1	NH House District 233	Republican Party
+NH House District 234 (Republican Party)	1	NH House District 234	Republican Party
+NH House District 235 (Republican Party)	1	NH House District 235	Republican Party
+NH House District 236 (Republican Party)	1	NH House District 236	Republican Party
+NH House District 237 (Republican Party)	1	NH House District 237	Republican Party
+NH House District 238 (Republican Party)	1	NH House District 238	Republican Party
+NH House District 239 (Republican Party)	1	NH House District 239	Republican Party
+NH House District 240 (Republican Party)	1	NH House District 240	Republican Party
+NH House District 241 (Republican Party)	1	NH House District 241	Republican Party
+NH House District 242 (Republican Party)	1	NH House District 242	Republican Party
+NH House District 243 (Republican Party)	1	NH House District 243	Republican Party
+NH House District 244 (Republican Party)	1	NH House District 244	Republican Party
+NH House District 245 (Republican Party)	1	NH House District 245	Republican Party
+NH House District 246 (Republican Party)	1	NH House District 246	Republican Party
+NH House District 247 (Republican Party)	1	NH House District 247	Republican Party
+NH House District 248 (Republican Party)	1	NH House District 248	Republican Party
+NH House District 249 (Republican Party)	1	NH House District 249	Republican Party
+NH House District 250 (Republican Party)	1	NH House District 250	Republican Party
+NH House District 251 (Republican Party)	1	NH House District 251	Republican Party
+NH House District 252 (Republican Party)	1	NH House District 252	Republican Party
+NH House District 253 (Republican Party)	1	NH House District 253	Republican Party
+NH House District 254 (Republican Party)	1	NH House District 254	Republican Party
+NH House District 255 (Republican Party)	1	NH House District 255	Republican Party
+NH House District 256 (Republican Party)	1	NH House District 256	Republican Party
+NH House District 257 (Republican Party)	1	NH House District 257	Republican Party
+NH House District 258 (Republican Party)	1	NH House District 258	Republican Party
+NH House District 259 (Republican Party)	1	NH House District 259	Republican Party
+NH House District 260 (Republican Party)	1	NH House District 260	Republican Party
+NH House District 261 (Republican Party)	1	NH House District 261	Republican Party
+NH House District 262 (Republican Party)	1	NH House District 262	Republican Party
+NH House District 263 (Republican Party)	1	NH House District 263	Republican Party
+NH House District 264 (Republican Party)	1	NH House District 264	Republican Party
+NH House District 265 (Republican Party)	1	NH House District 265	Republican Party
+NH House District 266 (Republican Party)	1	NH House District 266	Republican Party
+NH House District 267 (Republican Party)	1	NH House District 267	Republican Party
+NH House District 268 (Republican Party)	1	NH House District 268	Republican Party
+NH House District 269 (Republican Party)	1	NH House District 269	Republican Party
+NH House District 270 (Republican Party)	1	NH House District 270	Republican Party
+NH House District 271 (Republican Party)	1	NH House District 271	Republican Party
+NH House District 272 (Republican Party)	1	NH House District 272	Republican Party
+NH House District 273 (Republican Party)	1	NH House District 273	Republican Party
+NH House District 274 (Republican Party)	1	NH House District 274	Republican Party
+NH House District 275 (Republican Party)	1	NH House District 275	Republican Party
+NH House District 276 (Republican Party)	1	NH House District 276	Republican Party
+NH House District 277 (Republican Party)	1	NH House District 277	Republican Party
+NH House District 278 (Republican Party)	1	NH House District 278	Republican Party
+NH House District 279 (Republican Party)	1	NH House District 279	Republican Party
+NH House District 280 (Republican Party)	1	NH House District 280	Republican Party
+NH House District 281 (Republican Party)	1	NH House District 281	Republican Party
+NH House District 282 (Republican Party)	1	NH House District 282	Republican Party
+NH House District 283 (Republican Party)	1	NH House District 283	Republican Party
+NH House District 284 (Republican Party)	1	NH House District 284	Republican Party
+NH House District 285 (Republican Party)	1	NH House District 285	Republican Party
+NH House District 286 (Republican Party)	1	NH House District 286	Republican Party
+NH House District 287 (Republican Party)	1	NH House District 287	Republican Party
+NH House District 288 (Republican Party)	1	NH House District 288	Republican Party
+NH House District 289 (Republican Party)	1	NH House District 289	Republican Party
+NH House District 290 (Republican Party)	1	NH House District 290	Republican Party
+NH House District 291 (Republican Party)	1	NH House District 291	Republican Party
+NH House District 292 (Republican Party)	1	NH House District 292	Republican Party
+NH House District 293 (Republican Party)	1	NH House District 293	Republican Party
+NH House District 294 (Republican Party)	1	NH House District 294	Republican Party
+NH House District 295 (Republican Party)	1	NH House District 295	Republican Party
+NH House District 296 (Republican Party)	1	NH House District 296	Republican Party
+NH House District 297 (Republican Party)	1	NH House District 297	Republican Party
+NH House District 298 (Republican Party)	1	NH House District 298	Republican Party
+NH House District 299 (Republican Party)	1	NH House District 299	Republican Party
+NH House District 300 (Republican Party)	1	NH House District 300	Republican Party
+NH House District 301 (Republican Party)	1	NH House District 301	Republican Party
+NH House District 302 (Republican Party)	1	NH House District 302	Republican Party
+NH House District 303 (Republican Party)	1	NH House District 303	Republican Party
+NH House District 304 (Republican Party)	1	NH House District 304	Republican Party
+NH House District 305 (Republican Party)	1	NH House District 305	Republican Party
+NH House District 306 (Republican Party)	1	NH House District 306	Republican Party
+NH House District 307 (Republican Party)	1	NH House District 307	Republican Party
+NH House District 308 (Republican Party)	1	NH House District 308	Republican Party
+NH House District 309 (Republican Party)	1	NH House District 309	Republican Party
+NH House District 310 (Republican Party)	1	NH House District 310	Republican Party
+NH House District 311 (Republican Party)	1	NH House District 311	Republican Party
+NH House District 312 (Republican Party)	1	NH House District 312	Republican Party
+NH House District 313 (Republican Party)	1	NH House District 313	Republican Party
+NH House District 314 (Republican Party)	1	NH House District 314	Republican Party
+NH House District 315 (Republican Party)	1	NH House District 315	Republican Party
+NH House District 316 (Republican Party)	1	NH House District 316	Republican Party
+NH House District 317 (Republican Party)	1	NH House District 317	Republican Party
+NH House District 318 (Republican Party)	1	NH House District 318	Republican Party
+NH House District 319 (Republican Party)	1	NH House District 319	Republican Party
+NH House District 320 (Republican Party)	1	NH House District 320	Republican Party
+NH House District 321 (Republican Party)	1	NH House District 321	Republican Party
+NH House District 322 (Republican Party)	1	NH House District 322	Republican Party
+NH House District 323 (Republican Party)	1	NH House District 323	Republican Party
+NH House District 324 (Republican Party)	1	NH House District 324	Republican Party
+NH House District 325 (Republican Party)	1	NH House District 325	Republican Party
+NH House District 326 (Republican Party)	1	NH House District 326	Republican Party
+NH House District 327 (Republican Party)	1	NH House District 327	Republican Party
+NH House District 328 (Republican Party)	1	NH House District 328	Republican Party
+NH House District 329 (Republican Party)	1	NH House District 329	Republican Party
+NH House District 330 (Republican Party)	1	NH House District 330	Republican Party
+NH House District 331 (Republican Party)	1	NH House District 331	Republican Party
+NH House District 332 (Republican Party)	1	NH House District 332	Republican Party
+NH House District 333 (Republican Party)	1	NH House District 333	Republican Party
+NH House District 334 (Republican Party)	1	NH House District 334	Republican Party
+NH House District 335 (Republican Party)	1	NH House District 335	Republican Party
+NH House District 336 (Republican Party)	1	NH House District 336	Republican Party
+NH House District 337 (Republican Party)	1	NH House District 337	Republican Party
+NH House District 338 (Republican Party)	1	NH House District 338	Republican Party
+NH House District 339 (Republican Party)	1	NH House District 339	Republican Party
+NH House District 340 (Republican Party)	1	NH House District 340	Republican Party
+NH House District 341 (Republican Party)	1	NH House District 341	Republican Party
+NH House District 342 (Republican Party)	1	NH House District 342	Republican Party
+NH House District 343 (Republican Party)	1	NH House District 343	Republican Party
+NH House District 344 (Republican Party)	1	NH House District 344	Republican Party
+NH House District 345 (Republican Party)	1	NH House District 345	Republican Party
+NH House District 346 (Republican Party)	1	NH House District 346	Republican Party
+NH House District 347 (Republican Party)	1	NH House District 347	Republican Party
+NH House District 348 (Republican Party)	1	NH House District 348	Republican Party
+NH House District 349 (Republican Party)	1	NH House District 349	Republican Party
+NH House District 350 (Republican Party)	1	NH House District 350	Republican Party
+NH House District 351 (Republican Party)	1	NH House District 351	Republican Party
+NH House District 352 (Republican Party)	1	NH House District 352	Republican Party
+NH House District 353 (Republican Party)	1	NH House District 353	Republican Party
+NH House District 354 (Republican Party)	1	NH House District 354	Republican Party
+NH House District 355 (Republican Party)	1	NH House District 355	Republican Party
+NH House District 356 (Republican Party)	1	NH House District 356	Republican Party
+NH House District 357 (Republican Party)	1	NH House District 357	Republican Party
+NH House District 358 (Republican Party)	1	NH House District 358	Republican Party
+NH House District 359 (Republican Party)	1	NH House District 359	Republican Party
+NH House District 360 (Republican Party)	1	NH House District 360	Republican Party
+NH House District 361 (Republican Party)	1	NH House District 361	Republican Party
+NH House District 362 (Republican Party)	1	NH House District 362	Republican Party
+NH House District 363 (Republican Party)	1	NH House District 363	Republican Party
+NH House District 364 (Republican Party)	1	NH House District 364	Republican Party
+NH House District 365 (Republican Party)	1	NH House District 365	Republican Party
+NH House District 366 (Republican Party)	1	NH House District 366	Republican Party
+NH House District 367 (Republican Party)	1	NH House District 367	Republican Party
+NH House District 368 (Republican Party)	1	NH House District 368	Republican Party
+NH House District 369 (Republican Party)	1	NH House District 369	Republican Party
+NH House District 370 (Republican Party)	1	NH House District 370	Republican Party
+NH House District 371 (Republican Party)	1	NH House District 371	Republican Party
+NH House District 372 (Republican Party)	1	NH House District 372	Republican Party
+NH House District 373 (Republican Party)	1	NH House District 373	Republican Party
+NH House District 374 (Republican Party)	1	NH House District 374	Republican Party
+NH House District 375 (Republican Party)	1	NH House District 375	Republican Party
+NH House District 376 (Republican Party)	1	NH House District 376	Republican Party
+NH House District 377 (Republican Party)	1	NH House District 377	Republican Party
+NH House District 378 (Republican Party)	1	NH House District 378	Republican Party
+NH House District 379 (Republican Party)	1	NH House District 379	Republican Party
+NH House District 380 (Republican Party)	1	NH House District 380	Republican Party
+NH House District 381 (Republican Party)	1	NH House District 381	Republican Party
+NH House District 382 (Republican Party)	1	NH House District 382	Republican Party
+NH House District 383 (Republican Party)	1	NH House District 383	Republican Party
+NH House District 384 (Republican Party)	1	NH House District 384	Republican Party
+NH House District 385 (Republican Party)	1	NH House District 385	Republican Party
+NH House District 386 (Republican Party)	1	NH House District 386	Republican Party
+NH House District 387 (Republican Party)	1	NH House District 387	Republican Party
+NH House District 388 (Republican Party)	1	NH House District 388	Republican Party
+NH House District 389 (Republican Party)	1	NH House District 389	Republican Party
+NH House District 390 (Republican Party)	1	NH House District 390	Republican Party
+NH House District 391 (Republican Party)	1	NH House District 391	Republican Party
+NH House District 392 (Republican Party)	1	NH House District 392	Republican Party
+NH House District 393 (Republican Party)	1	NH House District 393	Republican Party
+NH House District 394 (Republican Party)	1	NH House District 394	Republican Party
+NH House District 395 (Republican Party)	1	NH House District 395	Republican Party
+NH House District 396 (Republican Party)	1	NH House District 396	Republican Party
+NH House District 397 (Republican Party)	1	NH House District 397	Republican Party
+NH House District 398 (Republican Party)	1	NH House District 398	Republican Party
+NH House District 399 (Republican Party)	1	NH House District 399	Republican Party
+NH House District 400 (Republican Party)	1	NH House District 400	Republican Party
+NH Senate District 1 (Republican Party)	1	NH Senate District 1	Republican Party
+NH Senate District 2 (Republican Party)	1	NH Senate District 2	Republican Party
+NH Senate District 3 (Republican Party)	1	NH Senate District 3	Republican Party
+NH Senate District 4 (Republican Party)	1	NH Senate District 4	Republican Party
+NH Senate District 5 (Republican Party)	1	NH Senate District 5	Republican Party
+NH Senate District 6 (Republican Party)	1	NH Senate District 6	Republican Party
+NH Senate District 7 (Republican Party)	1	NH Senate District 7	Republican Party
+NH Senate District 8 (Republican Party)	1	NH Senate District 8	Republican Party
+NH Senate District 9 (Republican Party)	1	NH Senate District 9	Republican Party
+NH Senate District 10 (Republican Party)	1	NH Senate District 10	Republican Party
+NH Senate District 11 (Republican Party)	1	NH Senate District 11	Republican Party
+NH Senate District 12 (Republican Party)	1	NH Senate District 12	Republican Party
+NH Senate District 13 (Republican Party)	1	NH Senate District 13	Republican Party
+NH Senate District 14 (Republican Party)	1	NH Senate District 14	Republican Party
+NH Senate District 15 (Republican Party)	1	NH Senate District 15	Republican Party
+NH Senate District 16 (Republican Party)	1	NH Senate District 16	Republican Party
+NH Senate District 17 (Republican Party)	1	NH Senate District 17	Republican Party
+NH Senate District 18 (Republican Party)	1	NH Senate District 18	Republican Party
+NH Senate District 19 (Republican Party)	1	NH Senate District 19	Republican Party
+NH Senate District 20 (Republican Party)	1	NH Senate District 20	Republican Party
+NH Senate District 21 (Republican Party)	1	NH Senate District 21	Republican Party
+NH Senate District 22 (Republican Party)	1	NH Senate District 22	Republican Party
+NH Senate District 23 (Republican Party)	1	NH Senate District 23	Republican Party
+NH Senate District 24 (Republican Party)	1	NH Senate District 24	Republican Party
+US House NH District 1 (Republican Party)	1	US House NH District 1	Republican Party
+US House NH District 2 (Republican Party)	1	US House NH District 2	Republican Party
+US President (NH) (Republican Party)	1	US President (NH)	Republican Party
+NH Governor (Republican Party)	1	NH Governor	Republican Party
+US Senate NH (Republican Party)	1	US Senate NH	Republican Party
+NH Attorney General (Republican Party)	1	NH Attorney General	Republican Party
+NH Lieutenant Governor (Republican Party)	1	NH Lieutenant Governor	Republican Party
+NH Treasurer (Republican Party)	1	NH Treasurer	Republican Party
+NH Secretary of State (Republican Party)	1	NH Secretary of State	Republican Party
+NH House District 1 (Green Party)	1	NH House District 1	Green Party
+NH House District 2 (Green Party)	1	NH House District 2	Green Party
+NH House District 3 (Green Party)	1	NH House District 3	Green Party
+NH House District 4 (Green Party)	1	NH House District 4	Green Party
+NH House District 5 (Green Party)	1	NH House District 5	Green Party
+NH House District 6 (Green Party)	1	NH House District 6	Green Party
+NH House District 7 (Green Party)	1	NH House District 7	Green Party
+NH House District 8 (Green Party)	1	NH House District 8	Green Party
+NH House District 9 (Green Party)	1	NH House District 9	Green Party
+NH House District 10 (Green Party)	1	NH House District 10	Green Party
+NH House District 11 (Green Party)	1	NH House District 11	Green Party
+NH House District 12 (Green Party)	1	NH House District 12	Green Party
+NH House District 13 (Green Party)	1	NH House District 13	Green Party
+NH House District 14 (Green Party)	1	NH House District 14	Green Party
+NH House District 15 (Green Party)	1	NH House District 15	Green Party
+NH House District 16 (Green Party)	1	NH House District 16	Green Party
+NH House District 17 (Green Party)	1	NH House District 17	Green Party
+NH House District 18 (Green Party)	1	NH House District 18	Green Party
+NH House District 19 (Green Party)	1	NH House District 19	Green Party
+NH House District 20 (Green Party)	1	NH House District 20	Green Party
+NH House District 21 (Green Party)	1	NH House District 21	Green Party
+NH House District 22 (Green Party)	1	NH House District 22	Green Party
+NH House District 23 (Green Party)	1	NH House District 23	Green Party
+NH House District 24 (Green Party)	1	NH House District 24	Green Party
+NH House District 25 (Green Party)	1	NH House District 25	Green Party
+NH House District 26 (Green Party)	1	NH House District 26	Green Party
+NH House District 27 (Green Party)	1	NH House District 27	Green Party
+NH House District 28 (Green Party)	1	NH House District 28	Green Party
+NH House District 29 (Green Party)	1	NH House District 29	Green Party
+NH House District 30 (Green Party)	1	NH House District 30	Green Party
+NH House District 31 (Green Party)	1	NH House District 31	Green Party
+NH House District 32 (Green Party)	1	NH House District 32	Green Party
+NH House District 33 (Green Party)	1	NH House District 33	Green Party
+NH House District 34 (Green Party)	1	NH House District 34	Green Party
+NH House District 35 (Green Party)	1	NH House District 35	Green Party
+NH House District 36 (Green Party)	1	NH House District 36	Green Party
+NH House District 37 (Green Party)	1	NH House District 37	Green Party
+NH House District 38 (Green Party)	1	NH House District 38	Green Party
+NH House District 39 (Green Party)	1	NH House District 39	Green Party
+NH House District 40 (Green Party)	1	NH House District 40	Green Party
+NH House District 41 (Green Party)	1	NH House District 41	Green Party
+NH House District 42 (Green Party)	1	NH House District 42	Green Party
+NH House District 43 (Green Party)	1	NH House District 43	Green Party
+NH House District 44 (Green Party)	1	NH House District 44	Green Party
+NH House District 45 (Green Party)	1	NH House District 45	Green Party
+NH House District 46 (Green Party)	1	NH House District 46	Green Party
+NH House District 47 (Green Party)	1	NH House District 47	Green Party
+NH House District 48 (Green Party)	1	NH House District 48	Green Party
+NH House District 49 (Green Party)	1	NH House District 49	Green Party
+NH House District 50 (Green Party)	1	NH House District 50	Green Party
+NH House District 51 (Green Party)	1	NH House District 51	Green Party
+NH House District 52 (Green Party)	1	NH House District 52	Green Party
+NH House District 53 (Green Party)	1	NH House District 53	Green Party
+NH House District 54 (Green Party)	1	NH House District 54	Green Party
+NH House District 55 (Green Party)	1	NH House District 55	Green Party
+NH House District 56 (Green Party)	1	NH House District 56	Green Party
+NH House District 57 (Green Party)	1	NH House District 57	Green Party
+NH House District 58 (Green Party)	1	NH House District 58	Green Party
+NH House District 59 (Green Party)	1	NH House District 59	Green Party
+NH House District 60 (Green Party)	1	NH House District 60	Green Party
+NH House District 61 (Green Party)	1	NH House District 61	Green Party
+NH House District 62 (Green Party)	1	NH House District 62	Green Party
+NH House District 63 (Green Party)	1	NH House District 63	Green Party
+NH House District 64 (Green Party)	1	NH House District 64	Green Party
+NH House District 65 (Green Party)	1	NH House District 65	Green Party
+NH House District 66 (Green Party)	1	NH House District 66	Green Party
+NH House District 67 (Green Party)	1	NH House District 67	Green Party
+NH House District 68 (Green Party)	1	NH House District 68	Green Party
+NH House District 69 (Green Party)	1	NH House District 69	Green Party
+NH House District 70 (Green Party)	1	NH House District 70	Green Party
+NH House District 71 (Green Party)	1	NH House District 71	Green Party
+NH House District 72 (Green Party)	1	NH House District 72	Green Party
+NH House District 73 (Green Party)	1	NH House District 73	Green Party
+NH House District 74 (Green Party)	1	NH House District 74	Green Party
+NH House District 75 (Green Party)	1	NH House District 75	Green Party
+NH House District 76 (Green Party)	1	NH House District 76	Green Party
+NH House District 77 (Green Party)	1	NH House District 77	Green Party
+NH House District 78 (Green Party)	1	NH House District 78	Green Party
+NH House District 79 (Green Party)	1	NH House District 79	Green Party
+NH House District 80 (Green Party)	1	NH House District 80	Green Party
+NH House District 81 (Green Party)	1	NH House District 81	Green Party
+NH House District 82 (Green Party)	1	NH House District 82	Green Party
+NH House District 83 (Green Party)	1	NH House District 83	Green Party
+NH House District 84 (Green Party)	1	NH House District 84	Green Party
+NH House District 85 (Green Party)	1	NH House District 85	Green Party
+NH House District 86 (Green Party)	1	NH House District 86	Green Party
+NH House District 87 (Green Party)	1	NH House District 87	Green Party
+NH House District 88 (Green Party)	1	NH House District 88	Green Party
+NH House District 89 (Green Party)	1	NH House District 89	Green Party
+NH House District 90 (Green Party)	1	NH House District 90	Green Party
+NH House District 91 (Green Party)	1	NH House District 91	Green Party
+NH House District 92 (Green Party)	1	NH House District 92	Green Party
+NH House District 93 (Green Party)	1	NH House District 93	Green Party
+NH House District 94 (Green Party)	1	NH House District 94	Green Party
+NH House District 95 (Green Party)	1	NH House District 95	Green Party
+NH House District 96 (Green Party)	1	NH House District 96	Green Party
+NH House District 97 (Green Party)	1	NH House District 97	Green Party
+NH House District 98 (Green Party)	1	NH House District 98	Green Party
+NH House District 99 (Green Party)	1	NH House District 99	Green Party
+NH House District 100 (Green Party)	1	NH House District 100	Green Party
+NH House District 101 (Green Party)	1	NH House District 101	Green Party
+NH House District 102 (Green Party)	1	NH House District 102	Green Party
+NH House District 103 (Green Party)	1	NH House District 103	Green Party
+NH House District 104 (Green Party)	1	NH House District 104	Green Party
+NH House District 105 (Green Party)	1	NH House District 105	Green Party
+NH House District 106 (Green Party)	1	NH House District 106	Green Party
+NH House District 107 (Green Party)	1	NH House District 107	Green Party
+NH House District 108 (Green Party)	1	NH House District 108	Green Party
+NH House District 109 (Green Party)	1	NH House District 109	Green Party
+NH House District 110 (Green Party)	1	NH House District 110	Green Party
+NH House District 111 (Green Party)	1	NH House District 111	Green Party
+NH House District 112 (Green Party)	1	NH House District 112	Green Party
+NH House District 113 (Green Party)	1	NH House District 113	Green Party
+NH House District 114 (Green Party)	1	NH House District 114	Green Party
+NH House District 115 (Green Party)	1	NH House District 115	Green Party
+NH House District 116 (Green Party)	1	NH House District 116	Green Party
+NH House District 117 (Green Party)	1	NH House District 117	Green Party
+NH House District 118 (Green Party)	1	NH House District 118	Green Party
+NH House District 119 (Green Party)	1	NH House District 119	Green Party
+NH House District 120 (Green Party)	1	NH House District 120	Green Party
+NH House District 121 (Green Party)	1	NH House District 121	Green Party
+NH House District 122 (Green Party)	1	NH House District 122	Green Party
+NH House District 123 (Green Party)	1	NH House District 123	Green Party
+NH House District 124 (Green Party)	1	NH House District 124	Green Party
+NH House District 125 (Green Party)	1	NH House District 125	Green Party
+NH House District 126 (Green Party)	1	NH House District 126	Green Party
+NH House District 127 (Green Party)	1	NH House District 127	Green Party
+NH House District 128 (Green Party)	1	NH House District 128	Green Party
+NH House District 129 (Green Party)	1	NH House District 129	Green Party
+NH House District 130 (Green Party)	1	NH House District 130	Green Party
+NH House District 131 (Green Party)	1	NH House District 131	Green Party
+NH House District 132 (Green Party)	1	NH House District 132	Green Party
+NH House District 133 (Green Party)	1	NH House District 133	Green Party
+NH House District 134 (Green Party)	1	NH House District 134	Green Party
+NH House District 135 (Green Party)	1	NH House District 135	Green Party
+NH House District 136 (Green Party)	1	NH House District 136	Green Party
+NH House District 137 (Green Party)	1	NH House District 137	Green Party
+NH House District 138 (Green Party)	1	NH House District 138	Green Party
+NH House District 139 (Green Party)	1	NH House District 139	Green Party
+NH House District 140 (Green Party)	1	NH House District 140	Green Party
+NH House District 141 (Green Party)	1	NH House District 141	Green Party
+NH House District 142 (Green Party)	1	NH House District 142	Green Party
+NH House District 143 (Green Party)	1	NH House District 143	Green Party
+NH House District 144 (Green Party)	1	NH House District 144	Green Party
+NH House District 145 (Green Party)	1	NH House District 145	Green Party
+NH House District 146 (Green Party)	1	NH House District 146	Green Party
+NH House District 147 (Green Party)	1	NH House District 147	Green Party
+NH House District 148 (Green Party)	1	NH House District 148	Green Party
+NH House District 149 (Green Party)	1	NH House District 149	Green Party
+NH House District 150 (Green Party)	1	NH House District 150	Green Party
+NH House District 151 (Green Party)	1	NH House District 151	Green Party
+NH House District 152 (Green Party)	1	NH House District 152	Green Party
+NH House District 153 (Green Party)	1	NH House District 153	Green Party
+NH House District 154 (Green Party)	1	NH House District 154	Green Party
+NH House District 155 (Green Party)	1	NH House District 155	Green Party
+NH House District 156 (Green Party)	1	NH House District 156	Green Party
+NH House District 157 (Green Party)	1	NH House District 157	Green Party
+NH House District 158 (Green Party)	1	NH House District 158	Green Party
+NH House District 159 (Green Party)	1	NH House District 159	Green Party
+NH House District 160 (Green Party)	1	NH House District 160	Green Party
+NH House District 161 (Green Party)	1	NH House District 161	Green Party
+NH House District 162 (Green Party)	1	NH House District 162	Green Party
+NH House District 163 (Green Party)	1	NH House District 163	Green Party
+NH House District 164 (Green Party)	1	NH House District 164	Green Party
+NH House District 165 (Green Party)	1	NH House District 165	Green Party
+NH House District 166 (Green Party)	1	NH House District 166	Green Party
+NH House District 167 (Green Party)	1	NH House District 167	Green Party
+NH House District 168 (Green Party)	1	NH House District 168	Green Party
+NH House District 169 (Green Party)	1	NH House District 169	Green Party
+NH House District 170 (Green Party)	1	NH House District 170	Green Party
+NH House District 171 (Green Party)	1	NH House District 171	Green Party
+NH House District 172 (Green Party)	1	NH House District 172	Green Party
+NH House District 173 (Green Party)	1	NH House District 173	Green Party
+NH House District 174 (Green Party)	1	NH House District 174	Green Party
+NH House District 175 (Green Party)	1	NH House District 175	Green Party
+NH House District 176 (Green Party)	1	NH House District 176	Green Party
+NH House District 177 (Green Party)	1	NH House District 177	Green Party
+NH House District 178 (Green Party)	1	NH House District 178	Green Party
+NH House District 179 (Green Party)	1	NH House District 179	Green Party
+NH House District 180 (Green Party)	1	NH House District 180	Green Party
+NH House District 181 (Green Party)	1	NH House District 181	Green Party
+NH House District 182 (Green Party)	1	NH House District 182	Green Party
+NH House District 183 (Green Party)	1	NH House District 183	Green Party
+NH House District 184 (Green Party)	1	NH House District 184	Green Party
+NH House District 185 (Green Party)	1	NH House District 185	Green Party
+NH House District 186 (Green Party)	1	NH House District 186	Green Party
+NH House District 187 (Green Party)	1	NH House District 187	Green Party
+NH House District 188 (Green Party)	1	NH House District 188	Green Party
+NH House District 189 (Green Party)	1	NH House District 189	Green Party
+NH House District 190 (Green Party)	1	NH House District 190	Green Party
+NH House District 191 (Green Party)	1	NH House District 191	Green Party
+NH House District 192 (Green Party)	1	NH House District 192	Green Party
+NH House District 193 (Green Party)	1	NH House District 193	Green Party
+NH House District 194 (Green Party)	1	NH House District 194	Green Party
+NH House District 195 (Green Party)	1	NH House District 195	Green Party
+NH House District 196 (Green Party)	1	NH House District 196	Green Party
+NH House District 197 (Green Party)	1	NH House District 197	Green Party
+NH House District 198 (Green Party)	1	NH House District 198	Green Party
+NH House District 199 (Green Party)	1	NH House District 199	Green Party
+NH House District 200 (Green Party)	1	NH House District 200	Green Party
+NH House District 201 (Green Party)	1	NH House District 201	Green Party
+NH House District 202 (Green Party)	1	NH House District 202	Green Party
+NH House District 203 (Green Party)	1	NH House District 203	Green Party
+NH House District 204 (Green Party)	1	NH House District 204	Green Party
+NH House District 205 (Green Party)	1	NH House District 205	Green Party
+NH House District 206 (Green Party)	1	NH House District 206	Green Party
+NH House District 207 (Green Party)	1	NH House District 207	Green Party
+NH House District 208 (Green Party)	1	NH House District 208	Green Party
+NH House District 209 (Green Party)	1	NH House District 209	Green Party
+NH House District 210 (Green Party)	1	NH House District 210	Green Party
+NH House District 211 (Green Party)	1	NH House District 211	Green Party
+NH House District 212 (Green Party)	1	NH House District 212	Green Party
+NH House District 213 (Green Party)	1	NH House District 213	Green Party
+NH House District 214 (Green Party)	1	NH House District 214	Green Party
+NH House District 215 (Green Party)	1	NH House District 215	Green Party
+NH House District 216 (Green Party)	1	NH House District 216	Green Party
+NH House District 217 (Green Party)	1	NH House District 217	Green Party
+NH House District 218 (Green Party)	1	NH House District 218	Green Party
+NH House District 219 (Green Party)	1	NH House District 219	Green Party
+NH House District 220 (Green Party)	1	NH House District 220	Green Party
+NH House District 221 (Green Party)	1	NH House District 221	Green Party
+NH House District 222 (Green Party)	1	NH House District 222	Green Party
+NH House District 223 (Green Party)	1	NH House District 223	Green Party
+NH House District 224 (Green Party)	1	NH House District 224	Green Party
+NH House District 225 (Green Party)	1	NH House District 225	Green Party
+NH House District 226 (Green Party)	1	NH House District 226	Green Party
+NH House District 227 (Green Party)	1	NH House District 227	Green Party
+NH House District 228 (Green Party)	1	NH House District 228	Green Party
+NH House District 229 (Green Party)	1	NH House District 229	Green Party
+NH House District 230 (Green Party)	1	NH House District 230	Green Party
+NH House District 231 (Green Party)	1	NH House District 231	Green Party
+NH House District 232 (Green Party)	1	NH House District 232	Green Party
+NH House District 233 (Green Party)	1	NH House District 233	Green Party
+NH House District 234 (Green Party)	1	NH House District 234	Green Party
+NH House District 235 (Green Party)	1	NH House District 235	Green Party
+NH House District 236 (Green Party)	1	NH House District 236	Green Party
+NH House District 237 (Green Party)	1	NH House District 237	Green Party
+NH House District 238 (Green Party)	1	NH House District 238	Green Party
+NH House District 239 (Green Party)	1	NH House District 239	Green Party
+NH House District 240 (Green Party)	1	NH House District 240	Green Party
+NH House District 241 (Green Party)	1	NH House District 241	Green Party
+NH House District 242 (Green Party)	1	NH House District 242	Green Party
+NH House District 243 (Green Party)	1	NH House District 243	Green Party
+NH House District 244 (Green Party)	1	NH House District 244	Green Party
+NH House District 245 (Green Party)	1	NH House District 245	Green Party
+NH House District 246 (Green Party)	1	NH House District 246	Green Party
+NH House District 247 (Green Party)	1	NH House District 247	Green Party
+NH House District 248 (Green Party)	1	NH House District 248	Green Party
+NH House District 249 (Green Party)	1	NH House District 249	Green Party
+NH House District 250 (Green Party)	1	NH House District 250	Green Party
+NH House District 251 (Green Party)	1	NH House District 251	Green Party
+NH House District 252 (Green Party)	1	NH House District 252	Green Party
+NH House District 253 (Green Party)	1	NH House District 253	Green Party
+NH House District 254 (Green Party)	1	NH House District 254	Green Party
+NH House District 255 (Green Party)	1	NH House District 255	Green Party
+NH House District 256 (Green Party)	1	NH House District 256	Green Party
+NH House District 257 (Green Party)	1	NH House District 257	Green Party
+NH House District 258 (Green Party)	1	NH House District 258	Green Party
+NH House District 259 (Green Party)	1	NH House District 259	Green Party
+NH House District 260 (Green Party)	1	NH House District 260	Green Party
+NH House District 261 (Green Party)	1	NH House District 261	Green Party
+NH House District 262 (Green Party)	1	NH House District 262	Green Party
+NH House District 263 (Green Party)	1	NH House District 263	Green Party
+NH House District 264 (Green Party)	1	NH House District 264	Green Party
+NH House District 265 (Green Party)	1	NH House District 265	Green Party
+NH House District 266 (Green Party)	1	NH House District 266	Green Party
+NH House District 267 (Green Party)	1	NH House District 267	Green Party
+NH House District 268 (Green Party)	1	NH House District 268	Green Party
+NH House District 269 (Green Party)	1	NH House District 269	Green Party
+NH House District 270 (Green Party)	1	NH House District 270	Green Party
+NH House District 271 (Green Party)	1	NH House District 271	Green Party
+NH House District 272 (Green Party)	1	NH House District 272	Green Party
+NH House District 273 (Green Party)	1	NH House District 273	Green Party
+NH House District 274 (Green Party)	1	NH House District 274	Green Party
+NH House District 275 (Green Party)	1	NH House District 275	Green Party
+NH House District 276 (Green Party)	1	NH House District 276	Green Party
+NH House District 277 (Green Party)	1	NH House District 277	Green Party
+NH House District 278 (Green Party)	1	NH House District 278	Green Party
+NH House District 279 (Green Party)	1	NH House District 279	Green Party
+NH House District 280 (Green Party)	1	NH House District 280	Green Party
+NH House District 281 (Green Party)	1	NH House District 281	Green Party
+NH House District 282 (Green Party)	1	NH House District 282	Green Party
+NH House District 283 (Green Party)	1	NH House District 283	Green Party
+NH House District 284 (Green Party)	1	NH House District 284	Green Party
+NH House District 285 (Green Party)	1	NH House District 285	Green Party
+NH House District 286 (Green Party)	1	NH House District 286	Green Party
+NH House District 287 (Green Party)	1	NH House District 287	Green Party
+NH House District 288 (Green Party)	1	NH House District 288	Green Party
+NH House District 289 (Green Party)	1	NH House District 289	Green Party
+NH House District 290 (Green Party)	1	NH House District 290	Green Party
+NH House District 291 (Green Party)	1	NH House District 291	Green Party
+NH House District 292 (Green Party)	1	NH House District 292	Green Party
+NH House District 293 (Green Party)	1	NH House District 293	Green Party
+NH House District 294 (Green Party)	1	NH House District 294	Green Party
+NH House District 295 (Green Party)	1	NH House District 295	Green Party
+NH House District 296 (Green Party)	1	NH House District 296	Green Party
+NH House District 297 (Green Party)	1	NH House District 297	Green Party
+NH House District 298 (Green Party)	1	NH House District 298	Green Party
+NH House District 299 (Green Party)	1	NH House District 299	Green Party
+NH House District 300 (Green Party)	1	NH House District 300	Green Party
+NH House District 301 (Green Party)	1	NH House District 301	Green Party
+NH House District 302 (Green Party)	1	NH House District 302	Green Party
+NH House District 303 (Green Party)	1	NH House District 303	Green Party
+NH House District 304 (Green Party)	1	NH House District 304	Green Party
+NH House District 305 (Green Party)	1	NH House District 305	Green Party
+NH House District 306 (Green Party)	1	NH House District 306	Green Party
+NH House District 307 (Green Party)	1	NH House District 307	Green Party
+NH House District 308 (Green Party)	1	NH House District 308	Green Party
+NH House District 309 (Green Party)	1	NH House District 309	Green Party
+NH House District 310 (Green Party)	1	NH House District 310	Green Party
+NH House District 311 (Green Party)	1	NH House District 311	Green Party
+NH House District 312 (Green Party)	1	NH House District 312	Green Party
+NH House District 313 (Green Party)	1	NH House District 313	Green Party
+NH House District 314 (Green Party)	1	NH House District 314	Green Party
+NH House District 315 (Green Party)	1	NH House District 315	Green Party
+NH House District 316 (Green Party)	1	NH House District 316	Green Party
+NH House District 317 (Green Party)	1	NH House District 317	Green Party
+NH House District 318 (Green Party)	1	NH House District 318	Green Party
+NH House District 319 (Green Party)	1	NH House District 319	Green Party
+NH House District 320 (Green Party)	1	NH House District 320	Green Party
+NH House District 321 (Green Party)	1	NH House District 321	Green Party
+NH House District 322 (Green Party)	1	NH House District 322	Green Party
+NH House District 323 (Green Party)	1	NH House District 323	Green Party
+NH House District 324 (Green Party)	1	NH House District 324	Green Party
+NH House District 325 (Green Party)	1	NH House District 325	Green Party
+NH House District 326 (Green Party)	1	NH House District 326	Green Party
+NH House District 327 (Green Party)	1	NH House District 327	Green Party
+NH House District 328 (Green Party)	1	NH House District 328	Green Party
+NH House District 329 (Green Party)	1	NH House District 329	Green Party
+NH House District 330 (Green Party)	1	NH House District 330	Green Party
+NH House District 331 (Green Party)	1	NH House District 331	Green Party
+NH House District 332 (Green Party)	1	NH House District 332	Green Party
+NH House District 333 (Green Party)	1	NH House District 333	Green Party
+NH House District 334 (Green Party)	1	NH House District 334	Green Party
+NH House District 335 (Green Party)	1	NH House District 335	Green Party
+NH House District 336 (Green Party)	1	NH House District 336	Green Party
+NH House District 337 (Green Party)	1	NH House District 337	Green Party
+NH House District 338 (Green Party)	1	NH House District 338	Green Party
+NH House District 339 (Green Party)	1	NH House District 339	Green Party
+NH House District 340 (Green Party)	1	NH House District 340	Green Party
+NH House District 341 (Green Party)	1	NH House District 341	Green Party
+NH House District 342 (Green Party)	1	NH House District 342	Green Party
+NH House District 343 (Green Party)	1	NH House District 343	Green Party
+NH House District 344 (Green Party)	1	NH House District 344	Green Party
+NH House District 345 (Green Party)	1	NH House District 345	Green Party
+NH House District 346 (Green Party)	1	NH House District 346	Green Party
+NH House District 347 (Green Party)	1	NH House District 347	Green Party
+NH House District 348 (Green Party)	1	NH House District 348	Green Party
+NH House District 349 (Green Party)	1	NH House District 349	Green Party
+NH House District 350 (Green Party)	1	NH House District 350	Green Party
+NH House District 351 (Green Party)	1	NH House District 351	Green Party
+NH House District 352 (Green Party)	1	NH House District 352	Green Party
+NH House District 353 (Green Party)	1	NH House District 353	Green Party
+NH House District 354 (Green Party)	1	NH House District 354	Green Party
+NH House District 355 (Green Party)	1	NH House District 355	Green Party
+NH House District 356 (Green Party)	1	NH House District 356	Green Party
+NH House District 357 (Green Party)	1	NH House District 357	Green Party
+NH House District 358 (Green Party)	1	NH House District 358	Green Party
+NH House District 359 (Green Party)	1	NH House District 359	Green Party
+NH House District 360 (Green Party)	1	NH House District 360	Green Party
+NH House District 361 (Green Party)	1	NH House District 361	Green Party
+NH House District 362 (Green Party)	1	NH House District 362	Green Party
+NH House District 363 (Green Party)	1	NH House District 363	Green Party
+NH House District 364 (Green Party)	1	NH House District 364	Green Party
+NH House District 365 (Green Party)	1	NH House District 365	Green Party
+NH House District 366 (Green Party)	1	NH House District 366	Green Party
+NH House District 367 (Green Party)	1	NH House District 367	Green Party
+NH House District 368 (Green Party)	1	NH House District 368	Green Party
+NH House District 369 (Green Party)	1	NH House District 369	Green Party
+NH House District 370 (Green Party)	1	NH House District 370	Green Party
+NH House District 371 (Green Party)	1	NH House District 371	Green Party
+NH House District 372 (Green Party)	1	NH House District 372	Green Party
+NH House District 373 (Green Party)	1	NH House District 373	Green Party
+NH House District 374 (Green Party)	1	NH House District 374	Green Party
+NH House District 375 (Green Party)	1	NH House District 375	Green Party
+NH House District 376 (Green Party)	1	NH House District 376	Green Party
+NH House District 377 (Green Party)	1	NH House District 377	Green Party
+NH House District 378 (Green Party)	1	NH House District 378	Green Party
+NH House District 379 (Green Party)	1	NH House District 379	Green Party
+NH House District 380 (Green Party)	1	NH House District 380	Green Party
+NH House District 381 (Green Party)	1	NH House District 381	Green Party
+NH House District 382 (Green Party)	1	NH House District 382	Green Party
+NH House District 383 (Green Party)	1	NH House District 383	Green Party
+NH House District 384 (Green Party)	1	NH House District 384	Green Party
+NH House District 385 (Green Party)	1	NH House District 385	Green Party
+NH House District 386 (Green Party)	1	NH House District 386	Green Party
+NH House District 387 (Green Party)	1	NH House District 387	Green Party
+NH House District 388 (Green Party)	1	NH House District 388	Green Party
+NH House District 389 (Green Party)	1	NH House District 389	Green Party
+NH House District 390 (Green Party)	1	NH House District 390	Green Party
+NH House District 391 (Green Party)	1	NH House District 391	Green Party
+NH House District 392 (Green Party)	1	NH House District 392	Green Party
+NH House District 393 (Green Party)	1	NH House District 393	Green Party
+NH House District 394 (Green Party)	1	NH House District 394	Green Party
+NH House District 395 (Green Party)	1	NH House District 395	Green Party
+NH House District 396 (Green Party)	1	NH House District 396	Green Party
+NH House District 397 (Green Party)	1	NH House District 397	Green Party
+NH House District 398 (Green Party)	1	NH House District 398	Green Party
+NH House District 399 (Green Party)	1	NH House District 399	Green Party
+NH House District 400 (Green Party)	1	NH House District 400	Green Party
+NH Senate District 1 (Green Party)	1	NH Senate District 1	Green Party
+NH Senate District 2 (Green Party)	1	NH Senate District 2	Green Party
+NH Senate District 3 (Green Party)	1	NH Senate District 3	Green Party
+NH Senate District 4 (Green Party)	1	NH Senate District 4	Green Party
+NH Senate District 5 (Green Party)	1	NH Senate District 5	Green Party
+NH Senate District 6 (Green Party)	1	NH Senate District 6	Green Party
+NH Senate District 7 (Green Party)	1	NH Senate District 7	Green Party
+NH Senate District 8 (Green Party)	1	NH Senate District 8	Green Party
+NH Senate District 9 (Green Party)	1	NH Senate District 9	Green Party
+NH Senate District 10 (Green Party)	1	NH Senate District 10	Green Party
+NH Senate District 11 (Green Party)	1	NH Senate District 11	Green Party
+NH Senate District 12 (Green Party)	1	NH Senate District 12	Green Party
+NH Senate District 13 (Green Party)	1	NH Senate District 13	Green Party
+NH Senate District 14 (Green Party)	1	NH Senate District 14	Green Party
+NH Senate District 15 (Green Party)	1	NH Senate District 15	Green Party
+NH Senate District 16 (Green Party)	1	NH Senate District 16	Green Party
+NH Senate District 17 (Green Party)	1	NH Senate District 17	Green Party
+NH Senate District 18 (Green Party)	1	NH Senate District 18	Green Party
+NH Senate District 19 (Green Party)	1	NH Senate District 19	Green Party
+NH Senate District 20 (Green Party)	1	NH Senate District 20	Green Party
+NH Senate District 21 (Green Party)	1	NH Senate District 21	Green Party
+NH Senate District 22 (Green Party)	1	NH Senate District 22	Green Party
+NH Senate District 23 (Green Party)	1	NH Senate District 23	Green Party
+NH Senate District 24 (Green Party)	1	NH Senate District 24	Green Party
+US House NH District 1 (Green Party)	1	US House NH District 1	Green Party
+US House NH District 2 (Green Party)	1	US House NH District 2	Green Party
+US President (NH) (Green Party)	1	US President (NH)	Green Party
+NH Governor (Green Party)	1	NH Governor	Green Party
+US Senate NH (Green Party)	1	US Senate NH	Green Party
+NH Attorney General (Green Party)	1	NH Attorney General	Green Party
+NH Lieutenant Governor (Green Party)	1	NH Lieutenant Governor	Green Party
+NH Treasurer (Green Party)	1	NH Treasurer	Green Party
+NH Secretary of State (Green Party)	1	NH Secretary of State	Green Party
+NH House District 1 (Libertarian Party)	1	NH House District 1	Libertarian Party
+NH House District 2 (Libertarian Party)	1	NH House District 2	Libertarian Party
+NH House District 3 (Libertarian Party)	1	NH House District 3	Libertarian Party
+NH House District 4 (Libertarian Party)	1	NH House District 4	Libertarian Party
+NH House District 5 (Libertarian Party)	1	NH House District 5	Libertarian Party
+NH House District 6 (Libertarian Party)	1	NH House District 6	Libertarian Party
+NH House District 7 (Libertarian Party)	1	NH House District 7	Libertarian Party
+NH House District 8 (Libertarian Party)	1	NH House District 8	Libertarian Party
+NH House District 9 (Libertarian Party)	1	NH House District 9	Libertarian Party
+NH House District 10 (Libertarian Party)	1	NH House District 10	Libertarian Party
+NH House District 11 (Libertarian Party)	1	NH House District 11	Libertarian Party
+NH House District 12 (Libertarian Party)	1	NH House District 12	Libertarian Party
+NH House District 13 (Libertarian Party)	1	NH House District 13	Libertarian Party
+NH House District 14 (Libertarian Party)	1	NH House District 14	Libertarian Party
+NH House District 15 (Libertarian Party)	1	NH House District 15	Libertarian Party
+NH House District 16 (Libertarian Party)	1	NH House District 16	Libertarian Party
+NH House District 17 (Libertarian Party)	1	NH House District 17	Libertarian Party
+NH House District 18 (Libertarian Party)	1	NH House District 18	Libertarian Party
+NH House District 19 (Libertarian Party)	1	NH House District 19	Libertarian Party
+NH House District 20 (Libertarian Party)	1	NH House District 20	Libertarian Party
+NH House District 21 (Libertarian Party)	1	NH House District 21	Libertarian Party
+NH House District 22 (Libertarian Party)	1	NH House District 22	Libertarian Party
+NH House District 23 (Libertarian Party)	1	NH House District 23	Libertarian Party
+NH House District 24 (Libertarian Party)	1	NH House District 24	Libertarian Party
+NH House District 25 (Libertarian Party)	1	NH House District 25	Libertarian Party
+NH House District 26 (Libertarian Party)	1	NH House District 26	Libertarian Party
+NH House District 27 (Libertarian Party)	1	NH House District 27	Libertarian Party
+NH House District 28 (Libertarian Party)	1	NH House District 28	Libertarian Party
+NH House District 29 (Libertarian Party)	1	NH House District 29	Libertarian Party
+NH House District 30 (Libertarian Party)	1	NH House District 30	Libertarian Party
+NH House District 31 (Libertarian Party)	1	NH House District 31	Libertarian Party
+NH House District 32 (Libertarian Party)	1	NH House District 32	Libertarian Party
+NH House District 33 (Libertarian Party)	1	NH House District 33	Libertarian Party
+NH House District 34 (Libertarian Party)	1	NH House District 34	Libertarian Party
+NH House District 35 (Libertarian Party)	1	NH House District 35	Libertarian Party
+NH House District 36 (Libertarian Party)	1	NH House District 36	Libertarian Party
+NH House District 37 (Libertarian Party)	1	NH House District 37	Libertarian Party
+NH House District 38 (Libertarian Party)	1	NH House District 38	Libertarian Party
+NH House District 39 (Libertarian Party)	1	NH House District 39	Libertarian Party
+NH House District 40 (Libertarian Party)	1	NH House District 40	Libertarian Party
+NH House District 41 (Libertarian Party)	1	NH House District 41	Libertarian Party
+NH House District 42 (Libertarian Party)	1	NH House District 42	Libertarian Party
+NH House District 43 (Libertarian Party)	1	NH House District 43	Libertarian Party
+NH House District 44 (Libertarian Party)	1	NH House District 44	Libertarian Party
+NH House District 45 (Libertarian Party)	1	NH House District 45	Libertarian Party
+NH House District 46 (Libertarian Party)	1	NH House District 46	Libertarian Party
+NH House District 47 (Libertarian Party)	1	NH House District 47	Libertarian Party
+NH House District 48 (Libertarian Party)	1	NH House District 48	Libertarian Party
+NH House District 49 (Libertarian Party)	1	NH House District 49	Libertarian Party
+NH House District 50 (Libertarian Party)	1	NH House District 50	Libertarian Party
+NH House District 51 (Libertarian Party)	1	NH House District 51	Libertarian Party
+NH House District 52 (Libertarian Party)	1	NH House District 52	Libertarian Party
+NH House District 53 (Libertarian Party)	1	NH House District 53	Libertarian Party
+NH House District 54 (Libertarian Party)	1	NH House District 54	Libertarian Party
+NH House District 55 (Libertarian Party)	1	NH House District 55	Libertarian Party
+NH House District 56 (Libertarian Party)	1	NH House District 56	Libertarian Party
+NH House District 57 (Libertarian Party)	1	NH House District 57	Libertarian Party
+NH House District 58 (Libertarian Party)	1	NH House District 58	Libertarian Party
+NH House District 59 (Libertarian Party)	1	NH House District 59	Libertarian Party
+NH House District 60 (Libertarian Party)	1	NH House District 60	Libertarian Party
+NH House District 61 (Libertarian Party)	1	NH House District 61	Libertarian Party
+NH House District 62 (Libertarian Party)	1	NH House District 62	Libertarian Party
+NH House District 63 (Libertarian Party)	1	NH House District 63	Libertarian Party
+NH House District 64 (Libertarian Party)	1	NH House District 64	Libertarian Party
+NH House District 65 (Libertarian Party)	1	NH House District 65	Libertarian Party
+NH House District 66 (Libertarian Party)	1	NH House District 66	Libertarian Party
+NH House District 67 (Libertarian Party)	1	NH House District 67	Libertarian Party
+NH House District 68 (Libertarian Party)	1	NH House District 68	Libertarian Party
+NH House District 69 (Libertarian Party)	1	NH House District 69	Libertarian Party
+NH House District 70 (Libertarian Party)	1	NH House District 70	Libertarian Party
+NH House District 71 (Libertarian Party)	1	NH House District 71	Libertarian Party
+NH House District 72 (Libertarian Party)	1	NH House District 72	Libertarian Party
+NH House District 73 (Libertarian Party)	1	NH House District 73	Libertarian Party
+NH House District 74 (Libertarian Party)	1	NH House District 74	Libertarian Party
+NH House District 75 (Libertarian Party)	1	NH House District 75	Libertarian Party
+NH House District 76 (Libertarian Party)	1	NH House District 76	Libertarian Party
+NH House District 77 (Libertarian Party)	1	NH House District 77	Libertarian Party
+NH House District 78 (Libertarian Party)	1	NH House District 78	Libertarian Party
+NH House District 79 (Libertarian Party)	1	NH House District 79	Libertarian Party
+NH House District 80 (Libertarian Party)	1	NH House District 80	Libertarian Party
+NH House District 81 (Libertarian Party)	1	NH House District 81	Libertarian Party
+NH House District 82 (Libertarian Party)	1	NH House District 82	Libertarian Party
+NH House District 83 (Libertarian Party)	1	NH House District 83	Libertarian Party
+NH House District 84 (Libertarian Party)	1	NH House District 84	Libertarian Party
+NH House District 85 (Libertarian Party)	1	NH House District 85	Libertarian Party
+NH House District 86 (Libertarian Party)	1	NH House District 86	Libertarian Party
+NH House District 87 (Libertarian Party)	1	NH House District 87	Libertarian Party
+NH House District 88 (Libertarian Party)	1	NH House District 88	Libertarian Party
+NH House District 89 (Libertarian Party)	1	NH House District 89	Libertarian Party
+NH House District 90 (Libertarian Party)	1	NH House District 90	Libertarian Party
+NH House District 91 (Libertarian Party)	1	NH House District 91	Libertarian Party
+NH House District 92 (Libertarian Party)	1	NH House District 92	Libertarian Party
+NH House District 93 (Libertarian Party)	1	NH House District 93	Libertarian Party
+NH House District 94 (Libertarian Party)	1	NH House District 94	Libertarian Party
+NH House District 95 (Libertarian Party)	1	NH House District 95	Libertarian Party
+NH House District 96 (Libertarian Party)	1	NH House District 96	Libertarian Party
+NH House District 97 (Libertarian Party)	1	NH House District 97	Libertarian Party
+NH House District 98 (Libertarian Party)	1	NH House District 98	Libertarian Party
+NH House District 99 (Libertarian Party)	1	NH House District 99	Libertarian Party
+NH House District 100 (Libertarian Party)	1	NH House District 100	Libertarian Party
+NH House District 101 (Libertarian Party)	1	NH House District 101	Libertarian Party
+NH House District 102 (Libertarian Party)	1	NH House District 102	Libertarian Party
+NH House District 103 (Libertarian Party)	1	NH House District 103	Libertarian Party
+NH House District 104 (Libertarian Party)	1	NH House District 104	Libertarian Party
+NH House District 105 (Libertarian Party)	1	NH House District 105	Libertarian Party
+NH House District 106 (Libertarian Party)	1	NH House District 106	Libertarian Party
+NH House District 107 (Libertarian Party)	1	NH House District 107	Libertarian Party
+NH House District 108 (Libertarian Party)	1	NH House District 108	Libertarian Party
+NH House District 109 (Libertarian Party)	1	NH House District 109	Libertarian Party
+NH House District 110 (Libertarian Party)	1	NH House District 110	Libertarian Party
+NH House District 111 (Libertarian Party)	1	NH House District 111	Libertarian Party
+NH House District 112 (Libertarian Party)	1	NH House District 112	Libertarian Party
+NH House District 113 (Libertarian Party)	1	NH House District 113	Libertarian Party
+NH House District 114 (Libertarian Party)	1	NH House District 114	Libertarian Party
+NH House District 115 (Libertarian Party)	1	NH House District 115	Libertarian Party
+NH House District 116 (Libertarian Party)	1	NH House District 116	Libertarian Party
+NH House District 117 (Libertarian Party)	1	NH House District 117	Libertarian Party
+NH House District 118 (Libertarian Party)	1	NH House District 118	Libertarian Party
+NH House District 119 (Libertarian Party)	1	NH House District 119	Libertarian Party
+NH House District 120 (Libertarian Party)	1	NH House District 120	Libertarian Party
+NH House District 121 (Libertarian Party)	1	NH House District 121	Libertarian Party
+NH House District 122 (Libertarian Party)	1	NH House District 122	Libertarian Party
+NH House District 123 (Libertarian Party)	1	NH House District 123	Libertarian Party
+NH House District 124 (Libertarian Party)	1	NH House District 124	Libertarian Party
+NH House District 125 (Libertarian Party)	1	NH House District 125	Libertarian Party
+NH House District 126 (Libertarian Party)	1	NH House District 126	Libertarian Party
+NH House District 127 (Libertarian Party)	1	NH House District 127	Libertarian Party
+NH House District 128 (Libertarian Party)	1	NH House District 128	Libertarian Party
+NH House District 129 (Libertarian Party)	1	NH House District 129	Libertarian Party
+NH House District 130 (Libertarian Party)	1	NH House District 130	Libertarian Party
+NH House District 131 (Libertarian Party)	1	NH House District 131	Libertarian Party
+NH House District 132 (Libertarian Party)	1	NH House District 132	Libertarian Party
+NH House District 133 (Libertarian Party)	1	NH House District 133	Libertarian Party
+NH House District 134 (Libertarian Party)	1	NH House District 134	Libertarian Party
+NH House District 135 (Libertarian Party)	1	NH House District 135	Libertarian Party
+NH House District 136 (Libertarian Party)	1	NH House District 136	Libertarian Party
+NH House District 137 (Libertarian Party)	1	NH House District 137	Libertarian Party
+NH House District 138 (Libertarian Party)	1	NH House District 138	Libertarian Party
+NH House District 139 (Libertarian Party)	1	NH House District 139	Libertarian Party
+NH House District 140 (Libertarian Party)	1	NH House District 140	Libertarian Party
+NH House District 141 (Libertarian Party)	1	NH House District 141	Libertarian Party
+NH House District 142 (Libertarian Party)	1	NH House District 142	Libertarian Party
+NH House District 143 (Libertarian Party)	1	NH House District 143	Libertarian Party
+NH House District 144 (Libertarian Party)	1	NH House District 144	Libertarian Party
+NH House District 145 (Libertarian Party)	1	NH House District 145	Libertarian Party
+NH House District 146 (Libertarian Party)	1	NH House District 146	Libertarian Party
+NH House District 147 (Libertarian Party)	1	NH House District 147	Libertarian Party
+NH House District 148 (Libertarian Party)	1	NH House District 148	Libertarian Party
+NH House District 149 (Libertarian Party)	1	NH House District 149	Libertarian Party
+NH House District 150 (Libertarian Party)	1	NH House District 150	Libertarian Party
+NH House District 151 (Libertarian Party)	1	NH House District 151	Libertarian Party
+NH House District 152 (Libertarian Party)	1	NH House District 152	Libertarian Party
+NH House District 153 (Libertarian Party)	1	NH House District 153	Libertarian Party
+NH House District 154 (Libertarian Party)	1	NH House District 154	Libertarian Party
+NH House District 155 (Libertarian Party)	1	NH House District 155	Libertarian Party
+NH House District 156 (Libertarian Party)	1	NH House District 156	Libertarian Party
+NH House District 157 (Libertarian Party)	1	NH House District 157	Libertarian Party
+NH House District 158 (Libertarian Party)	1	NH House District 158	Libertarian Party
+NH House District 159 (Libertarian Party)	1	NH House District 159	Libertarian Party
+NH House District 160 (Libertarian Party)	1	NH House District 160	Libertarian Party
+NH House District 161 (Libertarian Party)	1	NH House District 161	Libertarian Party
+NH House District 162 (Libertarian Party)	1	NH House District 162	Libertarian Party
+NH House District 163 (Libertarian Party)	1	NH House District 163	Libertarian Party
+NH House District 164 (Libertarian Party)	1	NH House District 164	Libertarian Party
+NH House District 165 (Libertarian Party)	1	NH House District 165	Libertarian Party
+NH House District 166 (Libertarian Party)	1	NH House District 166	Libertarian Party
+NH House District 167 (Libertarian Party)	1	NH House District 167	Libertarian Party
+NH House District 168 (Libertarian Party)	1	NH House District 168	Libertarian Party
+NH House District 169 (Libertarian Party)	1	NH House District 169	Libertarian Party
+NH House District 170 (Libertarian Party)	1	NH House District 170	Libertarian Party
+NH House District 171 (Libertarian Party)	1	NH House District 171	Libertarian Party
+NH House District 172 (Libertarian Party)	1	NH House District 172	Libertarian Party
+NH House District 173 (Libertarian Party)	1	NH House District 173	Libertarian Party
+NH House District 174 (Libertarian Party)	1	NH House District 174	Libertarian Party
+NH House District 175 (Libertarian Party)	1	NH House District 175	Libertarian Party
+NH House District 176 (Libertarian Party)	1	NH House District 176	Libertarian Party
+NH House District 177 (Libertarian Party)	1	NH House District 177	Libertarian Party
+NH House District 178 (Libertarian Party)	1	NH House District 178	Libertarian Party
+NH House District 179 (Libertarian Party)	1	NH House District 179	Libertarian Party
+NH House District 180 (Libertarian Party)	1	NH House District 180	Libertarian Party
+NH House District 181 (Libertarian Party)	1	NH House District 181	Libertarian Party
+NH House District 182 (Libertarian Party)	1	NH House District 182	Libertarian Party
+NH House District 183 (Libertarian Party)	1	NH House District 183	Libertarian Party
+NH House District 184 (Libertarian Party)	1	NH House District 184	Libertarian Party
+NH House District 185 (Libertarian Party)	1	NH House District 185	Libertarian Party
+NH House District 186 (Libertarian Party)	1	NH House District 186	Libertarian Party
+NH House District 187 (Libertarian Party)	1	NH House District 187	Libertarian Party
+NH House District 188 (Libertarian Party)	1	NH House District 188	Libertarian Party
+NH House District 189 (Libertarian Party)	1	NH House District 189	Libertarian Party
+NH House District 190 (Libertarian Party)	1	NH House District 190	Libertarian Party
+NH House District 191 (Libertarian Party)	1	NH House District 191	Libertarian Party
+NH House District 192 (Libertarian Party)	1	NH House District 192	Libertarian Party
+NH House District 193 (Libertarian Party)	1	NH House District 193	Libertarian Party
+NH House District 194 (Libertarian Party)	1	NH House District 194	Libertarian Party
+NH House District 195 (Libertarian Party)	1	NH House District 195	Libertarian Party
+NH House District 196 (Libertarian Party)	1	NH House District 196	Libertarian Party
+NH House District 197 (Libertarian Party)	1	NH House District 197	Libertarian Party
+NH House District 198 (Libertarian Party)	1	NH House District 198	Libertarian Party
+NH House District 199 (Libertarian Party)	1	NH House District 199	Libertarian Party
+NH House District 200 (Libertarian Party)	1	NH House District 200	Libertarian Party
+NH House District 201 (Libertarian Party)	1	NH House District 201	Libertarian Party
+NH House District 202 (Libertarian Party)	1	NH House District 202	Libertarian Party
+NH House District 203 (Libertarian Party)	1	NH House District 203	Libertarian Party
+NH House District 204 (Libertarian Party)	1	NH House District 204	Libertarian Party
+NH House District 205 (Libertarian Party)	1	NH House District 205	Libertarian Party
+NH House District 206 (Libertarian Party)	1	NH House District 206	Libertarian Party
+NH House District 207 (Libertarian Party)	1	NH House District 207	Libertarian Party
+NH House District 208 (Libertarian Party)	1	NH House District 208	Libertarian Party
+NH House District 209 (Libertarian Party)	1	NH House District 209	Libertarian Party
+NH House District 210 (Libertarian Party)	1	NH House District 210	Libertarian Party
+NH House District 211 (Libertarian Party)	1	NH House District 211	Libertarian Party
+NH House District 212 (Libertarian Party)	1	NH House District 212	Libertarian Party
+NH House District 213 (Libertarian Party)	1	NH House District 213	Libertarian Party
+NH House District 214 (Libertarian Party)	1	NH House District 214	Libertarian Party
+NH House District 215 (Libertarian Party)	1	NH House District 215	Libertarian Party
+NH House District 216 (Libertarian Party)	1	NH House District 216	Libertarian Party
+NH House District 217 (Libertarian Party)	1	NH House District 217	Libertarian Party
+NH House District 218 (Libertarian Party)	1	NH House District 218	Libertarian Party
+NH House District 219 (Libertarian Party)	1	NH House District 219	Libertarian Party
+NH House District 220 (Libertarian Party)	1	NH House District 220	Libertarian Party
+NH House District 221 (Libertarian Party)	1	NH House District 221	Libertarian Party
+NH House District 222 (Libertarian Party)	1	NH House District 222	Libertarian Party
+NH House District 223 (Libertarian Party)	1	NH House District 223	Libertarian Party
+NH House District 224 (Libertarian Party)	1	NH House District 224	Libertarian Party
+NH House District 225 (Libertarian Party)	1	NH House District 225	Libertarian Party
+NH House District 226 (Libertarian Party)	1	NH House District 226	Libertarian Party
+NH House District 227 (Libertarian Party)	1	NH House District 227	Libertarian Party
+NH House District 228 (Libertarian Party)	1	NH House District 228	Libertarian Party
+NH House District 229 (Libertarian Party)	1	NH House District 229	Libertarian Party
+NH House District 230 (Libertarian Party)	1	NH House District 230	Libertarian Party
+NH House District 231 (Libertarian Party)	1	NH House District 231	Libertarian Party
+NH House District 232 (Libertarian Party)	1	NH House District 232	Libertarian Party
+NH House District 233 (Libertarian Party)	1	NH House District 233	Libertarian Party
+NH House District 234 (Libertarian Party)	1	NH House District 234	Libertarian Party
+NH House District 235 (Libertarian Party)	1	NH House District 235	Libertarian Party
+NH House District 236 (Libertarian Party)	1	NH House District 236	Libertarian Party
+NH House District 237 (Libertarian Party)	1	NH House District 237	Libertarian Party
+NH House District 238 (Libertarian Party)	1	NH House District 238	Libertarian Party
+NH House District 239 (Libertarian Party)	1	NH House District 239	Libertarian Party
+NH House District 240 (Libertarian Party)	1	NH House District 240	Libertarian Party
+NH House District 241 (Libertarian Party)	1	NH House District 241	Libertarian Party
+NH House District 242 (Libertarian Party)	1	NH House District 242	Libertarian Party
+NH House District 243 (Libertarian Party)	1	NH House District 243	Libertarian Party
+NH House District 244 (Libertarian Party)	1	NH House District 244	Libertarian Party
+NH House District 245 (Libertarian Party)	1	NH House District 245	Libertarian Party
+NH House District 246 (Libertarian Party)	1	NH House District 246	Libertarian Party
+NH House District 247 (Libertarian Party)	1	NH House District 247	Libertarian Party
+NH House District 248 (Libertarian Party)	1	NH House District 248	Libertarian Party
+NH House District 249 (Libertarian Party)	1	NH House District 249	Libertarian Party
+NH House District 250 (Libertarian Party)	1	NH House District 250	Libertarian Party
+NH House District 251 (Libertarian Party)	1	NH House District 251	Libertarian Party
+NH House District 252 (Libertarian Party)	1	NH House District 252	Libertarian Party
+NH House District 253 (Libertarian Party)	1	NH House District 253	Libertarian Party
+NH House District 254 (Libertarian Party)	1	NH House District 254	Libertarian Party
+NH House District 255 (Libertarian Party)	1	NH House District 255	Libertarian Party
+NH House District 256 (Libertarian Party)	1	NH House District 256	Libertarian Party
+NH House District 257 (Libertarian Party)	1	NH House District 257	Libertarian Party
+NH House District 258 (Libertarian Party)	1	NH House District 258	Libertarian Party
+NH House District 259 (Libertarian Party)	1	NH House District 259	Libertarian Party
+NH House District 260 (Libertarian Party)	1	NH House District 260	Libertarian Party
+NH House District 261 (Libertarian Party)	1	NH House District 261	Libertarian Party
+NH House District 262 (Libertarian Party)	1	NH House District 262	Libertarian Party
+NH House District 263 (Libertarian Party)	1	NH House District 263	Libertarian Party
+NH House District 264 (Libertarian Party)	1	NH House District 264	Libertarian Party
+NH House District 265 (Libertarian Party)	1	NH House District 265	Libertarian Party
+NH House District 266 (Libertarian Party)	1	NH House District 266	Libertarian Party
+NH House District 267 (Libertarian Party)	1	NH House District 267	Libertarian Party
+NH House District 268 (Libertarian Party)	1	NH House District 268	Libertarian Party
+NH House District 269 (Libertarian Party)	1	NH House District 269	Libertarian Party
+NH House District 270 (Libertarian Party)	1	NH House District 270	Libertarian Party
+NH House District 271 (Libertarian Party)	1	NH House District 271	Libertarian Party
+NH House District 272 (Libertarian Party)	1	NH House District 272	Libertarian Party
+NH House District 273 (Libertarian Party)	1	NH House District 273	Libertarian Party
+NH House District 274 (Libertarian Party)	1	NH House District 274	Libertarian Party
+NH House District 275 (Libertarian Party)	1	NH House District 275	Libertarian Party
+NH House District 276 (Libertarian Party)	1	NH House District 276	Libertarian Party
+NH House District 277 (Libertarian Party)	1	NH House District 277	Libertarian Party
+NH House District 278 (Libertarian Party)	1	NH House District 278	Libertarian Party
+NH House District 279 (Libertarian Party)	1	NH House District 279	Libertarian Party
+NH House District 280 (Libertarian Party)	1	NH House District 280	Libertarian Party
+NH House District 281 (Libertarian Party)	1	NH House District 281	Libertarian Party
+NH House District 282 (Libertarian Party)	1	NH House District 282	Libertarian Party
+NH House District 283 (Libertarian Party)	1	NH House District 283	Libertarian Party
+NH House District 284 (Libertarian Party)	1	NH House District 284	Libertarian Party
+NH House District 285 (Libertarian Party)	1	NH House District 285	Libertarian Party
+NH House District 286 (Libertarian Party)	1	NH House District 286	Libertarian Party
+NH House District 287 (Libertarian Party)	1	NH House District 287	Libertarian Party
+NH House District 288 (Libertarian Party)	1	NH House District 288	Libertarian Party
+NH House District 289 (Libertarian Party)	1	NH House District 289	Libertarian Party
+NH House District 290 (Libertarian Party)	1	NH House District 290	Libertarian Party
+NH House District 291 (Libertarian Party)	1	NH House District 291	Libertarian Party
+NH House District 292 (Libertarian Party)	1	NH House District 292	Libertarian Party
+NH House District 293 (Libertarian Party)	1	NH House District 293	Libertarian Party
+NH House District 294 (Libertarian Party)	1	NH House District 294	Libertarian Party
+NH House District 295 (Libertarian Party)	1	NH House District 295	Libertarian Party
+NH House District 296 (Libertarian Party)	1	NH House District 296	Libertarian Party
+NH House District 297 (Libertarian Party)	1	NH House District 297	Libertarian Party
+NH House District 298 (Libertarian Party)	1	NH House District 298	Libertarian Party
+NH House District 299 (Libertarian Party)	1	NH House District 299	Libertarian Party
+NH House District 300 (Libertarian Party)	1	NH House District 300	Libertarian Party
+NH House District 301 (Libertarian Party)	1	NH House District 301	Libertarian Party
+NH House District 302 (Libertarian Party)	1	NH House District 302	Libertarian Party
+NH House District 303 (Libertarian Party)	1	NH House District 303	Libertarian Party
+NH House District 304 (Libertarian Party)	1	NH House District 304	Libertarian Party
+NH House District 305 (Libertarian Party)	1	NH House District 305	Libertarian Party
+NH House District 306 (Libertarian Party)	1	NH House District 306	Libertarian Party
+NH House District 307 (Libertarian Party)	1	NH House District 307	Libertarian Party
+NH House District 308 (Libertarian Party)	1	NH House District 308	Libertarian Party
+NH House District 309 (Libertarian Party)	1	NH House District 309	Libertarian Party
+NH House District 310 (Libertarian Party)	1	NH House District 310	Libertarian Party
+NH House District 311 (Libertarian Party)	1	NH House District 311	Libertarian Party
+NH House District 312 (Libertarian Party)	1	NH House District 312	Libertarian Party
+NH House District 313 (Libertarian Party)	1	NH House District 313	Libertarian Party
+NH House District 314 (Libertarian Party)	1	NH House District 314	Libertarian Party
+NH House District 315 (Libertarian Party)	1	NH House District 315	Libertarian Party
+NH House District 316 (Libertarian Party)	1	NH House District 316	Libertarian Party
+NH House District 317 (Libertarian Party)	1	NH House District 317	Libertarian Party
+NH House District 318 (Libertarian Party)	1	NH House District 318	Libertarian Party
+NH House District 319 (Libertarian Party)	1	NH House District 319	Libertarian Party
+NH House District 320 (Libertarian Party)	1	NH House District 320	Libertarian Party
+NH House District 321 (Libertarian Party)	1	NH House District 321	Libertarian Party
+NH House District 322 (Libertarian Party)	1	NH House District 322	Libertarian Party
+NH House District 323 (Libertarian Party)	1	NH House District 323	Libertarian Party
+NH House District 324 (Libertarian Party)	1	NH House District 324	Libertarian Party
+NH House District 325 (Libertarian Party)	1	NH House District 325	Libertarian Party
+NH House District 326 (Libertarian Party)	1	NH House District 326	Libertarian Party
+NH House District 327 (Libertarian Party)	1	NH House District 327	Libertarian Party
+NH House District 328 (Libertarian Party)	1	NH House District 328	Libertarian Party
+NH House District 329 (Libertarian Party)	1	NH House District 329	Libertarian Party
+NH House District 330 (Libertarian Party)	1	NH House District 330	Libertarian Party
+NH House District 331 (Libertarian Party)	1	NH House District 331	Libertarian Party
+NH House District 332 (Libertarian Party)	1	NH House District 332	Libertarian Party
+NH House District 333 (Libertarian Party)	1	NH House District 333	Libertarian Party
+NH House District 334 (Libertarian Party)	1	NH House District 334	Libertarian Party
+NH House District 335 (Libertarian Party)	1	NH House District 335	Libertarian Party
+NH House District 336 (Libertarian Party)	1	NH House District 336	Libertarian Party
+NH House District 337 (Libertarian Party)	1	NH House District 337	Libertarian Party
+NH House District 338 (Libertarian Party)	1	NH House District 338	Libertarian Party
+NH House District 339 (Libertarian Party)	1	NH House District 339	Libertarian Party
+NH House District 340 (Libertarian Party)	1	NH House District 340	Libertarian Party
+NH House District 341 (Libertarian Party)	1	NH House District 341	Libertarian Party
+NH House District 342 (Libertarian Party)	1	NH House District 342	Libertarian Party
+NH House District 343 (Libertarian Party)	1	NH House District 343	Libertarian Party
+NH House District 344 (Libertarian Party)	1	NH House District 344	Libertarian Party
+NH House District 345 (Libertarian Party)	1	NH House District 345	Libertarian Party
+NH House District 346 (Libertarian Party)	1	NH House District 346	Libertarian Party
+NH House District 347 (Libertarian Party)	1	NH House District 347	Libertarian Party
+NH House District 348 (Libertarian Party)	1	NH House District 348	Libertarian Party
+NH House District 349 (Libertarian Party)	1	NH House District 349	Libertarian Party
+NH House District 350 (Libertarian Party)	1	NH House District 350	Libertarian Party
+NH House District 351 (Libertarian Party)	1	NH House District 351	Libertarian Party
+NH House District 352 (Libertarian Party)	1	NH House District 352	Libertarian Party
+NH House District 353 (Libertarian Party)	1	NH House District 353	Libertarian Party
+NH House District 354 (Libertarian Party)	1	NH House District 354	Libertarian Party
+NH House District 355 (Libertarian Party)	1	NH House District 355	Libertarian Party
+NH House District 356 (Libertarian Party)	1	NH House District 356	Libertarian Party
+NH House District 357 (Libertarian Party)	1	NH House District 357	Libertarian Party
+NH House District 358 (Libertarian Party)	1	NH House District 358	Libertarian Party
+NH House District 359 (Libertarian Party)	1	NH House District 359	Libertarian Party
+NH House District 360 (Libertarian Party)	1	NH House District 360	Libertarian Party
+NH House District 361 (Libertarian Party)	1	NH House District 361	Libertarian Party
+NH House District 362 (Libertarian Party)	1	NH House District 362	Libertarian Party
+NH House District 363 (Libertarian Party)	1	NH House District 363	Libertarian Party
+NH House District 364 (Libertarian Party)	1	NH House District 364	Libertarian Party
+NH House District 365 (Libertarian Party)	1	NH House District 365	Libertarian Party
+NH House District 366 (Libertarian Party)	1	NH House District 366	Libertarian Party
+NH House District 367 (Libertarian Party)	1	NH House District 367	Libertarian Party
+NH House District 368 (Libertarian Party)	1	NH House District 368	Libertarian Party
+NH House District 369 (Libertarian Party)	1	NH House District 369	Libertarian Party
+NH House District 370 (Libertarian Party)	1	NH House District 370	Libertarian Party
+NH House District 371 (Libertarian Party)	1	NH House District 371	Libertarian Party
+NH House District 372 (Libertarian Party)	1	NH House District 372	Libertarian Party
+NH House District 373 (Libertarian Party)	1	NH House District 373	Libertarian Party
+NH House District 374 (Libertarian Party)	1	NH House District 374	Libertarian Party
+NH House District 375 (Libertarian Party)	1	NH House District 375	Libertarian Party
+NH House District 376 (Libertarian Party)	1	NH House District 376	Libertarian Party
+NH House District 377 (Libertarian Party)	1	NH House District 377	Libertarian Party
+NH House District 378 (Libertarian Party)	1	NH House District 378	Libertarian Party
+NH House District 379 (Libertarian Party)	1	NH House District 379	Libertarian Party
+NH House District 380 (Libertarian Party)	1	NH House District 380	Libertarian Party
+NH House District 381 (Libertarian Party)	1	NH House District 381	Libertarian Party
+NH House District 382 (Libertarian Party)	1	NH House District 382	Libertarian Party
+NH House District 383 (Libertarian Party)	1	NH House District 383	Libertarian Party
+NH House District 384 (Libertarian Party)	1	NH House District 384	Libertarian Party
+NH House District 385 (Libertarian Party)	1	NH House District 385	Libertarian Party
+NH House District 386 (Libertarian Party)	1	NH House District 386	Libertarian Party
+NH House District 387 (Libertarian Party)	1	NH House District 387	Libertarian Party
+NH House District 388 (Libertarian Party)	1	NH House District 388	Libertarian Party
+NH House District 389 (Libertarian Party)	1	NH House District 389	Libertarian Party
+NH House District 390 (Libertarian Party)	1	NH House District 390	Libertarian Party
+NH House District 391 (Libertarian Party)	1	NH House District 391	Libertarian Party
+NH House District 392 (Libertarian Party)	1	NH House District 392	Libertarian Party
+NH House District 393 (Libertarian Party)	1	NH House District 393	Libertarian Party
+NH House District 394 (Libertarian Party)	1	NH House District 394	Libertarian Party
+NH House District 395 (Libertarian Party)	1	NH House District 395	Libertarian Party
+NH House District 396 (Libertarian Party)	1	NH House District 396	Libertarian Party
+NH House District 397 (Libertarian Party)	1	NH House District 397	Libertarian Party
+NH House District 398 (Libertarian Party)	1	NH House District 398	Libertarian Party
+NH House District 399 (Libertarian Party)	1	NH House District 399	Libertarian Party
+NH House District 400 (Libertarian Party)	1	NH House District 400	Libertarian Party
+NH Senate District 1 (Libertarian Party)	1	NH Senate District 1	Libertarian Party
+NH Senate District 2 (Libertarian Party)	1	NH Senate District 2	Libertarian Party
+NH Senate District 3 (Libertarian Party)	1	NH Senate District 3	Libertarian Party
+NH Senate District 4 (Libertarian Party)	1	NH Senate District 4	Libertarian Party
+NH Senate District 5 (Libertarian Party)	1	NH Senate District 5	Libertarian Party
+NH Senate District 6 (Libertarian Party)	1	NH Senate District 6	Libertarian Party
+NH Senate District 7 (Libertarian Party)	1	NH Senate District 7	Libertarian Party
+NH Senate District 8 (Libertarian Party)	1	NH Senate District 8	Libertarian Party
+NH Senate District 9 (Libertarian Party)	1	NH Senate District 9	Libertarian Party
+NH Senate District 10 (Libertarian Party)	1	NH Senate District 10	Libertarian Party
+NH Senate District 11 (Libertarian Party)	1	NH Senate District 11	Libertarian Party
+NH Senate District 12 (Libertarian Party)	1	NH Senate District 12	Libertarian Party
+NH Senate District 13 (Libertarian Party)	1	NH Senate District 13	Libertarian Party
+NH Senate District 14 (Libertarian Party)	1	NH Senate District 14	Libertarian Party
+NH Senate District 15 (Libertarian Party)	1	NH Senate District 15	Libertarian Party
+NH Senate District 16 (Libertarian Party)	1	NH Senate District 16	Libertarian Party
+NH Senate District 17 (Libertarian Party)	1	NH Senate District 17	Libertarian Party
+NH Senate District 18 (Libertarian Party)	1	NH Senate District 18	Libertarian Party
+NH Senate District 19 (Libertarian Party)	1	NH Senate District 19	Libertarian Party
+NH Senate District 20 (Libertarian Party)	1	NH Senate District 20	Libertarian Party
+NH Senate District 21 (Libertarian Party)	1	NH Senate District 21	Libertarian Party
+NH Senate District 22 (Libertarian Party)	1	NH Senate District 22	Libertarian Party
+NH Senate District 23 (Libertarian Party)	1	NH Senate District 23	Libertarian Party
+NH Senate District 24 (Libertarian Party)	1	NH Senate District 24	Libertarian Party
+US House NH District 1 (Libertarian Party)	1	US House NH District 1	Libertarian Party
+US House NH District 2 (Libertarian Party)	1	US House NH District 2	Libertarian Party
+US President (NH) (Libertarian Party)	1	US President (NH)	Libertarian Party
+NH Governor (Libertarian Party)	1	NH Governor	Libertarian Party
+US Senate NH (Libertarian Party)	1	US Senate NH	Libertarian Party
+NH Attorney General (Libertarian Party)	1	NH Attorney General	Libertarian Party
+NH Lieutenant Governor (Libertarian Party)	1	NH Lieutenant Governor	Libertarian Party
+NH Treasurer (Libertarian Party)	1	NH Treasurer	Libertarian Party
+NH Secretary of State (Libertarian Party)	1	NH Secretary of State	Libertarian Party

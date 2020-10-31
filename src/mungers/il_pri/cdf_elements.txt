@@ -1,7 +1,7 @@
 name	raw_identifier_formula	source
 ReportingUnit	<County>	row
 Party	<PartyName>	row
-CandidateContest	<OfficeName>	row
+CandidateContest	<OfficeName> (<PartyName>)	row
 Candidate	<CanFirstName> <CanLastName>	row
 BallotMeasureContest	None	row
 BallotMeasureSelection	None	row

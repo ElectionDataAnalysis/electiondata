@@ -31,6 +31,7 @@ Different file types need different parameters to be specified.
    * field_names_if_no_field_name_row
    * count_columns
    
+Applying a munger with file_type `xls` to a multi-sheet excel file will read only the first sheet. If other sheets are necessary, use `xls-multi` file type.
  NB: the header_row_count should count only rows with data the system needs to read. If there are blank lines, or lines with inessential information -- such as the election date, which is not munged -- use the optional parameter count_of_top_lines_to_skip.
  
  * Required for `concatenated-blocks` type:
@@ -404,7 +405,7 @@ To unload existing data for a given jurisdiction and a given election -- or more
 where `test_dir` is the directory holding the tests to perform on the data before upload. For example, `test_dir` might be the repository's `tests` directory. This routine will move any files associated with unloaded data to the directory specified in the optional `unloaded_dir` in `run_time.ini`.
 
 ## Testing
-The routine `tests/load_and_test_all.py` can be used to run tests. If the directory `test/TestingData` does not exist, the function will download files from `github.com/ElectionDataAnalysis/TestingData`, load it all and run all tests. If `tests/TestingData` exists, the routine will test all data in that directory (without downloading anything). Election-jurisdiction pairs can be specified with the -e and -j flags, e.g. `load_all_from_repo.py -e '2018 General' -j 'Arkansas'` to restrict the loading and testing to just that pair.
+The routine `tests/load_and_test_all.py` can be used to run tests. If the directory `tests/TestingData` does not exist, the function will download files from `github.com/ElectionDataAnalysis/TestingData`, load it all and run all tests. If `tests/TestingData` exists, the routine will test all data in that directory (without downloading anything). Election-jurisdiction pairs can be specified with the -e and -j flags, e.g. `load_all_from_repo.py -e '2018 General' -j 'Arkansas'` to restrict the loading and testing to just that pair.
 
 
 ## Miscellaneous helpful hints

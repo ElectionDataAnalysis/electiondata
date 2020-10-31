@@ -35,7 +35,25 @@ def io(argv) -> Optional[list]:
     return ej_list
 
 
-def close_and_erase(dl: e.DataLoader):
+def optional_remove(dl: e.DataLoader, dir_path: str) -> Optional[dict]:
+    err = None
+    # give user option to remove db
+    remove_db = input(f"Remove test db {dl.d['dbname']} (y/n)?")
+
+    if remove_db == "y":
+        err = close_and_erase(dl)
+        # define parameters to connect to postgres db
+
+    # give user option to remove directory
+    remove_dir = input(f"Remove {dir_path} directory and all its contents (y/n)?")
+    if remove_dir == "y":
+        # remove testing data
+        os.system(f"rm -rf {dir_path}")
+
+    return err
+
+
+def close_and_erase(dl: e.DataLoader) -> Optional[dict]:
     db_params = {
         "host": dl.engine.url.host,
         "port": dl.engine.url.port,
@@ -43,11 +61,12 @@ def close_and_erase(dl: e.DataLoader):
         "password": dl.engine.url.password,
         "dbname": dl.engine.url.database,
     }
+    err = None
     # close the connection to the db
     dl.engine.dispose()
     # remove the db
-    db.remove_database(db_params)
-    return
+    err = db.remove_database(db_params)
+    return err
 
 def get_testing_data(url: str, target: str = "TestingData"):
     # if there is no testing data directory
@@ -70,7 +89,9 @@ def run2(
         dbname: Optional[str] = None,
         test_dir: Optional[str] = None,
         election_jurisdiction_list: Optional[list] = None
-):
+) -> Optional[dict]:
+    dl = None  # to keep syntax-checker happy
+    err = None
     if not test_dir:
         # set the test_dir to the directory containing this file
         test_dir = Path(__file__).parent.absolute()
@@ -81,48 +102,47 @@ def run2(
         ts = datetime.datetime.now().strftime("%m%d_%H%M")
         dbname = f"test_{ts}"
 
-    # restrict elections and jurisdictions to those given (if given)
-    # otherwise use all in TestingData
-    if not election_jurisdiction_list:
-        election_jurisdiction_list = ui.election_juris_list("TestingData")
-
     if load_data:
         get_testing_data("https://github.com/ElectionDataAnalysis/TestingData.git", "TestingData")
+
+        # restrict elections and jurisdictions to those given (if given)
+        # otherwise use all in TestingData
+        if not election_jurisdiction_list:
+            election_jurisdiction_list = ui.election_juris_list("TestingData")
 
         # Load the data
         dl = e.DataLoader()
         dl.change_db(dbname)
 
-
         dl.change_dir("results_dir","TestingData")
-        dl.load_all(move_files=False, election_jurisdiction_list=election_jurisdiction_list)
+        err = dl.load_all(move_files=False, election_jurisdiction_list=election_jurisdiction_list)
+        if ui.fatal_error(err):
+            ui.report(err)
+            err = optional_remove(dl, "TestingData")
+            return err
+    else:
+        # restrict elections and jurisdictions to those given (if given)
+        # otherwise use all in TestingData
+        if not election_jurisdiction_list:
+            election_jurisdiction_list = ui.election_juris_list("TestingData")
 
     ui.run_tests(test_dir, dbname, election_jurisdiction_list=election_jurisdiction_list)
 
-    # allow user to inspect database if desired
-    input(f"Hit return to continue (and remove test db {dbname} and test data)")
-
     if load_data:
-        # allow user to pause, option to remove db
-        remove_db = input(f"Remove test db {dbname} (y/n)?")
-
-        if remove_db == "y":
-            close_and_erase(dl)
-            # define parameters to connect to postgres db
-
-        remove_dir = input("Remove TestingData directory (y/n)?")
-        if remove_dir == "y":
-            # remove testing data
-            os.system(f"rm -rf TestingData")
-    return
+        err = optional_remove(dl, "TestingData")
+    return err
 
 
 if __name__ == "__main__":
     print(sys.argv)
     if len(sys.argv) == 1:
-        election_jurisdiction_list = [("2018 General","North Carolina")]
+        ej_list = None
     else:
-        election_jurisdiction_list = io(sys.argv[1:])
+        ej_list = io(sys.argv[1:])
 
-    run2(election_jurisdiction_list=election_jurisdiction_list)
+    err = run2(
+        election_jurisdiction_list=ej_list,
+    )
+    if err:
+        print(err)
     exit()

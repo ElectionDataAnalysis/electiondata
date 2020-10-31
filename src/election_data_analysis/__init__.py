@@ -36,6 +36,7 @@ sdl_pars_opt = [
     "Party",
     "CountItemType",
     "ReportingUnit",
+    "Contest",
 ]
 
 multi_data_loader_pars = [
@@ -243,6 +244,9 @@ class DataLoader:
                         f"Jurisdiction {juris[jp].name} assumed to be loaded to database already"
                     )
                     good_jurisdictions.append(jp)
+            else:
+                err = ui.consolidate_errors([err, new_err])
+                return err
 
         # process all good parameter files with good jurisdictions
         for jp in good_jurisdictions:
@@ -269,10 +273,7 @@ class DataLoader:
                     # if move_files == True and no fatal load error,
                     if move_files and not ui.fatal_error(load_error):
                         # archive files
-                        ui.archive(f, self.d["results_dir"], success_dir)
-                        ui.archive(
-                            sdl.d["results_file"], self.d["results_dir"], success_dir
-                        )
+                        ui.archive_from_param_file(f, self.d["results_dir"], success_dir)
                         print(
                             f"\tArchived {f} and its results file after successful load "
                             f"via mungers {sdl.d['munger_name']}.\n"
@@ -479,24 +480,30 @@ class SingleDataLoader:
                 else:
                     results_info["Contest_Id"] = contest_id
 
-            for k in ["Party", "ReportingUnit", "CountItemType"]:
+            for k in ["Party", "ReportingUnit", "CountItemType", "Contest"]:
                 # if element was given in .ini file
                 if self.d[k] is not None:
                     # collect <k>_Id or fail gracefully
                     k_id = db.name_to_id(self.session, k, self.d[k])
-                    if k_id is None and k != "CountItemType":
-                        err = ui.add_new_error(
-                            err,
-                            "ini",
-                            self.par_file_name,
-                            f"{k} defined in .ini file ({self.d[k]}) not found in database",
-                        )
-                        return err
-                    # no CountItemType throws an error
-                    elif k == "CountItemType":
-                        # put CountItemType value into OtherCountItemType field
-                        k_id = db.name_to_id(self.session, k, "other")
-                        results_info["OtherCountItemType"] = self.d[k]
+                # CountItemType is different because it's an enumeration
+                    if k == "CountItemType":
+                        if k_id is None:
+                            # put CountItemType value into OtherCountItemType field
+                            # and set k_id to id for 'other'
+                            k_id = db.name_to_id(self.session, k, "other")
+                            results_info["OtherCountItemType"] = self.d[k]
+                        else:
+                            # set OtherCountItemType to "" since type was recognized
+                            results_info["OtherCountItemType"] = ""
+                    else:
+                        if k_id is None:
+                            err = ui.add_new_error(
+                                err,
+                                "ini",
+                                self.par_file_name,
+                                f"{k} defined in .ini file ({self.d[k]}) not found in database",
+                            )
+                            return err
 
                     results_info[f"{k}_Id"] = k_id
 
@@ -1065,7 +1072,10 @@ class JurisdictionPrepper:
         return error
 
     def add_sub_county_rus_from_multi_results_file(
-        self, dir: str, error: dict = None, sub_ru_type: str = "precinct"
+            self,
+            dir: str,
+            error: dict = None,
+            sub_ru_type: str = "precinct",
     ) -> dict:
         """For each .ini file in <dir>, finds specified results file.
         For each results file, adds all elements in <elements> to <element>.txt and, naively, to <dictionary.txt>
@@ -1098,7 +1108,7 @@ class JurisdictionPrepper:
                     return error
 
             # set aux_data_path
-            if "aux_data_dir" in d.keys() and d["aux_data_dir"] is not None:
+            if "aux_data_dir" in d.keys() and d["aux_data_dir"] is not None and d["aux_data_dir"] != "":
                 aux_data_path = os.path.join(dir, d["aux_data_dir"])
             else:
                 aux_data_path = None
@@ -1605,6 +1615,9 @@ def data_exists(election, jurisdiction, p_path=None, dbname=None):
 
     election_id = db.name_to_id(an.session, "Election", election)
     reporting_unit_id = db.name_to_id(an.session, "ReportingUnit", jurisdiction)
+    if not election_id or not reporting_unit_id:
+        return False
+
     con = an.session.bind.raw_connection()
     cur = con.cursor()
     answer, err_str = db.data_file_list(

@@ -1,0 +1,283 @@
+Name	NumberElected	Office	PrimaryParty
+US President (PA) (Phila)	1	US President (PA)
+PA Governor (Phila)	1	PA Governor
+US Senate PA (Phila)	1	US Senate PA
+PA Attorney General (Phila)	1	PA Attorney General	
+PA Auditor General (Phila)	1	PA Auditor General	
+PA Lieutenant Governor (Phila)	1	PA Lieutenant Governor	
+PA Treasurer (Phila)	1	PA Treasurer	
+PA Secretary of State (Phila)	1	PA Secretary of State	
+PA Senate District 1	1	PA Senate District 1	
+PA Senate District 2	1	PA Senate District 2	
+PA Senate District 3	1	PA Senate District 3	
+PA Senate District 4 (Phila)	1	PA Senate District 4	
+PA Senate District 5	1	PA Senate District 5	
+PA Senate District 6	1	PA Senate District 6	
+PA Senate District 7 (Phila)	1	PA Senate District 7	
+PA Senate District 8 (Phila)	1	PA Senate District 8	
+PA House District 152 (Phila)	1	PA House District 152	
+PA House District 170 (Phila)	1	PA House District 170	
+PA House District 172 (Phila)	1	PA House District 172	
+PA House District 173 (Phila)	1	PA House District 173	
+PA House District 174 (Phila)	1	PA House District 174	
+PA House District 175 (Phila)	1	PA House District 175	
+PA House District 177 (Phila)	1	PA House District 177	
+PA House District 179 (Phila)	1	PA House District 179	
+PA House District 180 (Phila)	1	PA House District 180	
+PA House District 181 (Phila)	1	PA House District 181	
+PA House District 182 (Phila)	1	PA House District 182	
+PA House District 184 (Phila)	1	PA House District 184	
+PA House District 185 (Phila)	1	PA House District 185	
+PA House District 186 (Phila)	1	PA House District 186	
+PA House District 188 (Phila)	1	PA House District 188	
+PA House District 190 (Phila)	1	PA House District 190	
+PA House District 191 (Phila)	1	PA House District 191	
+PA House District 192 (Phila)	1	PA House District 192	
+PA House District 194 (Phila)	1	PA House District 194	
+PA House District 195 (Phila)	1	PA House District 195	
+PA House District 197 (Phila)	1	PA House District 197	
+PA House District 198 (Phila)	1	PA House District 198	
+PA House District 200 (Phila)	1	PA House District 200	
+PA House District 201 (Phila)	1	PA House District 201	
+PA House District 202 (Phila)	1	PA House District 202	
+PA House District 203 (Phila)	1	PA House District 203	
+US House PA District 1 (Phila)	1	US House PA District 1
+US House PA District 2 (Phila)	1	US House PA District 2
+US House PA District 3 (Phila)	1	US House PA District 3
+US House PA District 5 (Phila)	1	US House PA District 5
+US House PA District 13 (Phila)	1	US House PA District 13
+US President (Phila) (Democratic Party)	1	US President (PA)	Democratic Party
+PA Governor (Democratic Party)	1	PA Governor	Democratic Party
+US Senate PA (Phila) (Democratic Party)	1	US Senate PA	Democratic Party
+PA Attorney General (Phila) (Democratic Party)	1	PA Attorney General	Democratic Party
+PA Auditor General (Phila) (Democratic Party)	1	PA Auditor General	Democratic Party
+PA Lieutenant Governor (Phila) (Democratic Party)	1	PA Lieutenant Governor	Democratic Party
+PA Treasurer (Phila) (Democratic Party)	1	PA Treasurer	Democratic Party
+PA Secretary of State (Phila) (Democratic Party)	1	PA Secretary of State	Democratic Party
+PA Senate District 1 (Democratic Party)	1	PA Senate District 1	Democratic Party
+PA Senate District 2 (Democratic Party)	1	PA Senate District 2	Democratic Party
+PA Senate District 3 (Democratic Party)	1	PA Senate District 3	Democratic Party
+PA Senate District 4 (Phila) (Democratic Party)	1	PA Senate District 4	Democratic Party
+PA Senate District 5 (Democratic Party)	1	PA Senate District 5	Democratic Party
+PA Senate District 6 (Democratic Party)	1	PA Senate District 6	Democratic Party
+PA Senate District 7 (Phila) (Democratic Party)	1	PA Senate District 7	Democratic Party
+PA Senate District 8 (Phila) (Democratic Party)	1	PA Senate District 8	Democratic Party
+PA House District 152 (Phila) (Democratic Party)	1	PA House District 152	Democratic Party
+PA House District 170 (Phila) (Democratic Party)	1	PA House District 170	Democratic Party
+PA House District 172 (Phila) (Democratic Party)	1	PA House District 172	Democratic Party
+PA House District 173 (Phila) (Democratic Party)	1	PA House District 173	Democratic Party
+PA House District 174 (Phila) (Democratic Party)	1	PA House District 174	Democratic Party
+PA House District 175 (Phila) (Democratic Party)	1	PA House District 175	Democratic Party
+PA House District 177 (Phila) (Democratic Party)	1	PA House District 177	Democratic Party
+PA House District 179 (Phila) (Democratic Party)	1	PA House District 179	Democratic Party
+PA House District 180 (Phila) (Democratic Party)	1	PA House District 180	Democratic Party
+PA House District 181 (Phila) (Democratic Party)	1	PA House District 181	Democratic Party
+PA House District 182 (Phila) (Democratic Party)	1	PA House District 182	Democratic Party
+PA House District 184 (Phila) (Democratic Party)	1	PA House District 184	Democratic Party
+PA House District 185 (Phila) (Democratic Party)	1	PA House District 185	Democratic Party
+PA House District 186 (Phila) (Democratic Party)	1	PA House District 186	Democratic Party
+PA House District 188 (Phila) (Democratic Party)	1	PA House District 188	Democratic Party
+PA House District 190 (Phila) (Democratic Party)	1	PA House District 190	Democratic Party
+PA House District 191 (Phila) (Democratic Party)	1	PA House District 191	Democratic Party
+PA House District 192 (Phila) (Democratic Party)	1	PA House District 192	Democratic Party
+PA House District 194 (Phila) (Democratic Party)	1	PA House District 194	Democratic Party
+PA House District 195 (Phila) (Democratic Party)	1	PA House District 195	Democratic Party
+PA House District 197 (Phila) (Democratic Party)	1	PA House District 197	Democratic Party
+PA House District 198 (Phila) (Democratic Party)	1	PA House District 198	Democratic Party
+PA House District 200 (Phila) (Democratic Party)	1	PA House District 200	Democratic Party
+PA House District 201 (Phila) (Democratic Party)	1	PA House District 201	Democratic Party
+PA House District 202 (Phila) (Democratic Party)	1	PA House District 202	Democratic Party
+PA House District 203 (Phila) (Democratic Party)	1	PA House District 203	Democratic Party
+US House PA District 1 (Phila) (Democratic Party)	1	US House PA District 1	Democratic Party
+US House PA District 2 (Phila) (Democratic Party)	1	US House PA District 2	Democratic Party
+US House PA District 3 (Phila) (Democratic Party)	1	US House PA District 3	Democratic Party
+US House PA District 5 (Phila) (Democratic Party)	1	US House PA District 5	Democratic Party
+US House PA District 13 (Phila) (Democratic Party)	1	US House PA District 13	Democratic Party
+US President (Phila) (Republican Party)	1	US President (PA)	Republican Party
+PA Governor (Republican Party)	1	PA Governor	Republican Party
+US Senate PA (Phila) (Republican Party)	1	US Senate PA	Republican Party
+PA Attorney General (Phila) (Republican Party)	1	PA Attorney General	Republican Party
+PA Auditor General (Phila) (Republican Party)	1	PA Auditor General	Republican Party
+PA Lieutenant Governor (Phila) (Republican Party)	1	PA Lieutenant Governor	Republican Party
+PA Treasurer (Phila) (Republican Party)	1	PA Treasurer	Republican Party
+PA Secretary of State (Phila) (Republican Party)	1	PA Secretary of State	Republican Party
+PA Senate District 1 (Republican Party)	1	PA Senate District 1	Republican Party
+PA Senate District 2 (Republican Party)	1	PA Senate District 2	Republican Party
+PA Senate District 3 (Republican Party)	1	PA Senate District 3	Republican Party
+PA Senate District 4 (Phila) (Republican Party)	1	PA Senate District 4	Republican Party
+PA Senate District 5 (Republican Party)	1	PA Senate District 5	Republican Party
+PA Senate District 6 (Republican Party)	1	PA Senate District 6	Republican Party
+PA Senate District 7 (Phila) (Republican Party)	1	PA Senate District 7	Republican Party
+PA Senate District 8 (Phila) (Republican Party)	1	PA Senate District 8	Republican Party
+PA House District 152 (Phila) (Republican Party)	1	PA House District 152	Republican Party
+PA House District 170 (Phila) (Republican Party)	1	PA House District 170	Republican Party
+PA House District 172 (Phila) (Republican Party)	1	PA House District 172	Republican Party
+PA House District 173 (Phila) (Republican Party)	1	PA House District 173	Republican Party
+PA House District 174 (Phila) (Republican Party)	1	PA House District 174	Republican Party
+PA House District 175 (Phila) (Republican Party)	1	PA House District 175	Republican Party
+PA House District 177 (Phila) (Republican Party)	1	PA House District 177	Republican Party
+PA House District 179 (Phila) (Republican Party)	1	PA House District 179	Republican Party
+PA House District 180 (Phila) (Republican Party)	1	PA House District 180	Republican Party
+PA House District 181 (Phila) (Republican Party)	1	PA House District 181	Republican Party
+PA House District 182 (Phila) (Republican Party)	1	PA House District 182	Republican Party
+PA House District 184 (Phila) (Republican Party)	1	PA House District 184	Republican Party
+PA House District 185 (Phila) (Republican Party)	1	PA House District 185	Republican Party
+PA House District 186 (Phila) (Republican Party)	1	PA House District 186	Republican Party
+PA House District 188 (Phila) (Republican Party)	1	PA House District 188	Republican Party
+PA House District 190 (Phila) (Republican Party)	1	PA House District 190	Republican Party
+PA House District 191 (Phila) (Republican Party)	1	PA House District 191	Republican Party
+PA House District 192 (Phila) (Republican Party)	1	PA House District 192	Republican Party
+PA House District 194 (Phila) (Republican Party)	1	PA House District 194	Republican Party
+PA House District 195 (Phila) (Republican Party)	1	PA House District 195	Republican Party
+PA House District 197 (Phila) (Republican Party)	1	PA House District 197	Republican Party
+PA House District 198 (Phila) (Republican Party)	1	PA House District 198	Republican Party
+PA House District 200 (Phila) (Republican Party)	1	PA House District 200	Republican Party
+PA House District 201 (Phila) (Republican Party)	1	PA House District 201	Republican Party
+PA House District 202 (Phila) (Republican Party)	1	PA House District 202	Republican Party
+PA House District 203 (Phila) (Republican Party)	1	PA House District 203	Republican Party
+US House PA District 1 (Phila) (Republican Party)	1	US House PA District 1	Republican Party
+US House PA District 2 (Phila) (Republican Party)	1	US House PA District 2	Republican Party
+US House PA District 3 (Phila) (Republican Party)	1	US House PA District 3	Republican Party
+US House PA District 5 (Phila) (Republican Party)	1	US House PA District 5	Republican Party
+US House PA District 13 (Phila) (Republican Party)	1	US House PA District 13	Republican Party
+US President (Phila) (Green Party)	1	US President (PA)	Green Party
+PA Governor (Green Party)	1	PA Governor	Green Party
+US Senate PA (Phila) (Green Party)	1	US Senate PA	Green Party
+PA Attorney General (Phila) (Green Party)	1	PA Attorney General	Green Party
+PA Auditor General (Phila) (Green Party)	1	PA Auditor General	Green Party
+PA Lieutenant Governor (Phila) (Green Party)	1	PA Lieutenant Governor	Green Party
+PA Treasurer (Phila) (Green Party)	1	PA Treasurer	Green Party
+PA Secretary of State (Phila) (Green Party)	1	PA Secretary of State	Green Party
+PA Senate District 1 (Green Party)	1	PA Senate District 1	Green Party
+PA Senate District 2 (Green Party)	1	PA Senate District 2	Green Party
+PA Senate District 3 (Green Party)	1	PA Senate District 3	Green Party
+PA Senate District 4 (Phila) (Green Party)	1	PA Senate District 4	Green Party
+PA Senate District 5 (Green Party)	1	PA Senate District 5	Green Party
+PA Senate District 6 (Green Party)	1	PA Senate District 6	Green Party
+PA Senate District 7 (Phila) (Green Party)	1	PA Senate District 7	Green Party
+PA Senate District 8 (Phila) (Green Party)	1	PA Senate District 8	Green Party
+PA House District 152 (Phila) (Green Party)	1	PA House District 152	Green Party
+PA House District 170 (Phila) (Green Party)	1	PA House District 170	Green Party
+PA House District 172 (Phila) (Green Party)	1	PA House District 172	Green Party
+PA House District 173 (Phila) (Green Party)	1	PA House District 173	Green Party
+PA House District 174 (Phila) (Green Party)	1	PA House District 174	Green Party
+PA House District 175 (Phila) (Green Party)	1	PA House District 175	Green Party
+PA House District 177 (Phila) (Green Party)	1	PA House District 177	Green Party
+PA House District 179 (Phila) (Green Party)	1	PA House District 179	Green Party
+PA House District 180 (Phila) (Green Party)	1	PA House District 180	Green Party
+PA House District 181 (Phila) (Green Party)	1	PA House District 181	Green Party
+PA House District 182 (Phila) (Green Party)	1	PA House District 182	Green Party
+PA House District 184 (Phila) (Green Party)	1	PA House District 184	Green Party
+PA House District 185 (Phila) (Green Party)	1	PA House District 185	Green Party
+PA House District 186 (Phila) (Green Party)	1	PA House District 186	Green Party
+PA House District 188 (Phila) (Green Party)	1	PA House District 188	Green Party
+PA House District 190 (Phila) (Green Party)	1	PA House District 190	Green Party
+PA House District 191 (Phila) (Green Party)	1	PA House District 191	Green Party
+PA House District 192 (Phila) (Green Party)	1	PA House District 192	Green Party
+PA House District 194 (Phila) (Green Party)	1	PA House District 194	Green Party
+PA House District 195 (Phila) (Green Party)	1	PA House District 195	Green Party
+PA House District 197 (Phila) (Green Party)	1	PA House District 197	Green Party
+PA House District 198 (Phila) (Green Party)	1	PA House District 198	Green Party
+PA House District 200 (Phila) (Green Party)	1	PA House District 200	Green Party
+PA House District 201 (Phila) (Green Party)	1	PA House District 201	Green Party
+PA House District 202 (Phila) (Green Party)	1	PA House District 202	Green Party
+PA House District 203 (Phila) (Green Party)	1	PA House District 203	Green Party
+US House PA District 1 (Phila) (Green Party)	1	US House PA District 1	Green Party
+US House PA District 2 (Phila) (Green Party)	1	US House PA District 2	Green Party
+US House PA District 3 (Phila) (Green Party)	1	US House PA District 3	Green Party
+US House PA District 5 (Phila) (Green Party)	1	US House PA District 5	Green Party
+US House PA District 13 (Phila) (Green Party)	1	US House PA District 13	Green Party
+US President (Phila) (Libertarian Party)	1	US President (PA)	Libertarian Party
+PA Governor (Libertarian Party)	1	PA Governor	Libertarian Party
+US Senate PA (Phila) (Libertarian Party)	1	US Senate PA	Libertarian Party
+PA Attorney General (Phila) (Libertarian Party)	1	PA Attorney General	Libertarian Party
+PA Auditor General (Phila) (Libertarian Party)	1	PA Auditor General	Libertarian Party
+PA Lieutenant Governor (Phila) (Libertarian Party)	1	PA Lieutenant Governor	Libertarian Party
+PA Treasurer (Phila) (Libertarian Party)	1	PA Treasurer	Libertarian Party
+PA Secretary of State (Phila) (Libertarian Party)	1	PA Secretary of State	Libertarian Party
+PA Senate District 1 (Libertarian Party)	1	PA Senate District 1	Libertarian Party
+PA Senate District 2 (Libertarian Party)	1	PA Senate District 2	Libertarian Party
+PA Senate District 3 (Libertarian Party)	1	PA Senate District 3	Libertarian Party
+PA Senate District 4 (Phila) (Libertarian Party)	1	PA Senate District 4	Libertarian Party
+PA Senate District 5 (Libertarian Party)	1	PA Senate District 5	Libertarian Party
+PA Senate District 6 (Libertarian Party)	1	PA Senate District 6	Libertarian Party
+PA Senate District 7 (Phila) (Libertarian Party)	1	PA Senate District 7	Libertarian Party
+PA Senate District 8 (Phila) (Libertarian Party)	1	PA Senate District 8	Libertarian Party
+PA House District 152 (Phila) (Libertarian Party)	1	PA House District 152	Libertarian Party
+PA House District 170 (Phila) (Libertarian Party)	1	PA House District 170	Libertarian Party
+PA House District 172 (Phila) (Libertarian Party)	1	PA House District 172	Libertarian Party
+PA House District 173 (Phila) (Libertarian Party)	1	PA House District 173	Libertarian Party
+PA House District 174 (Phila) (Libertarian Party)	1	PA House District 174	Libertarian Party
+PA House District 175 (Phila) (Libertarian Party)	1	PA House District 175	Libertarian Party
+PA House District 177 (Phila) (Libertarian Party)	1	PA House District 177	Libertarian Party
+PA House District 179 (Phila) (Libertarian Party)	1	PA House District 179	Libertarian Party
+PA House District 180 (Phila) (Libertarian Party)	1	PA House District 180	Libertarian Party
+PA House District 181 (Phila) (Libertarian Party)	1	PA House District 181	Libertarian Party
+PA House District 182 (Phila) (Libertarian Party)	1	PA House District 182	Libertarian Party
+PA House District 184 (Phila) (Libertarian Party)	1	PA House District 184	Libertarian Party
+PA House District 185 (Phila) (Libertarian Party)	1	PA House District 185	Libertarian Party
+PA House District 186 (Phila) (Libertarian Party)	1	PA House District 186	Libertarian Party
+PA House District 188 (Phila) (Libertarian Party)	1	PA House District 188	Libertarian Party
+PA House District 190 (Phila) (Libertarian Party)	1	PA House District 190	Libertarian Party
+PA House District 191 (Phila) (Libertarian Party)	1	PA House District 191	Libertarian Party
+PA House District 192 (Phila) (Libertarian Party)	1	PA House District 192	Libertarian Party
+PA House District 194 (Phila) (Libertarian Party)	1	PA House District 194	Libertarian Party
+PA House District 195 (Phila) (Libertarian Party)	1	PA House District 195	Libertarian Party
+PA House District 197 (Phila) (Libertarian Party)	1	PA House District 197	Libertarian Party
+PA House District 198 (Phila) (Libertarian Party)	1	PA House District 198	Libertarian Party
+PA House District 200 (Phila) (Libertarian Party)	1	PA House District 200	Libertarian Party
+PA House District 201 (Phila) (Libertarian Party)	1	PA House District 201	Libertarian Party
+PA House District 202 (Phila) (Libertarian Party)	1	PA House District 202	Libertarian Party
+PA House District 203 (Phila) (Libertarian Party)	1	PA House District 203	Libertarian Party
+US House PA District 1 (Phila) (Libertarian Party)	1	US House PA District 1	Libertarian Party
+US House PA District 2 (Phila) (Libertarian Party)	1	US House PA District 2	Libertarian Party
+US House PA District 3 (Phila) (Libertarian Party)	1	US House PA District 3	Libertarian Party
+US House PA District 5 (Phila) (Libertarian Party)	1	US House PA District 5	Libertarian Party
+US House PA District 13 (Phila) (Libertarian Party)	1	US House PA District 13	Libertarian Party
+US President (Phila) (Independent)	1	US President (PA)	Independent
+PA Governor (Independent)	1	PA Governor	Independent
+US Senate PA (Phila) (Independent)	1	US Senate PA	Independent
+PA Attorney General (Phila) (Independent)	1	PA Attorney General	Independent
+PA Auditor General (Phila) (Independent)	1	PA Auditor General	Independent
+PA Lieutenant Governor (Phila) (Independent)	1	PA Lieutenant Governor	Independent
+PA Treasurer (Phila) (Independent)	1	PA Treasurer	Independent
+PA Secretary of State (Phila) (Independent)	1	PA Secretary of State	Independent
+PA Senate District 1 (Independent)	1	PA Senate District 1	Independent
+PA Senate District 2 (Independent)	1	PA Senate District 2	Independent
+PA Senate District 3 (Independent)	1	PA Senate District 3	Independent
+PA Senate District 4 (Phila) (Independent)	1	PA Senate District 4	Independent
+PA Senate District 5 (Independent)	1	PA Senate District 5	Independent
+PA Senate District 6 (Independent)	1	PA Senate District 6	Independent
+PA Senate District 7 (Phila) (Independent)	1	PA Senate District 7	Independent
+PA Senate District 8 (Phila) (Independent)	1	PA Senate District 8	Independent
+PA House District 152 (Phila) (Independent)	1	PA House District 152	Independent
+PA House District 170 (Phila) (Independent)	1	PA House District 170	Independent
+PA House District 172 (Phila) (Independent)	1	PA House District 172	Independent
+PA House District 173 (Phila) (Independent)	1	PA House District 173	Independent
+PA House District 174 (Phila) (Independent)	1	PA House District 174	Independent
+PA House District 175 (Phila) (Independent)	1	PA House District 175	Independent
+PA House District 177 (Phila) (Independent)	1	PA House District 177	Independent
+PA House District 179 (Phila) (Independent)	1	PA House District 179	Independent
+PA House District 180 (Phila) (Independent)	1	PA House District 180	Independent
+PA House District 181 (Phila) (Independent)	1	PA House District 181	Independent
+PA House District 182 (Phila) (Independent)	1	PA House District 182	Independent
+PA House District 184 (Phila) (Independent)	1	PA House District 184	Independent
+PA House District 185 (Phila) (Independent)	1	PA House District 185	Independent
+PA House District 186 (Phila) (Independent)	1	PA House District 186	Independent
+PA House District 188 (Phila) (Independent)	1	PA House District 188	Independent
+PA House District 190 (Phila) (Independent)	1	PA House District 190	Independent
+PA House District 191 (Phila) (Independent)	1	PA House District 191	Independent
+PA House District 192 (Phila) (Independent)	1	PA House District 192	Independent
+PA House District 194 (Phila) (Independent)	1	PA House District 194	Independent
+PA House District 195 (Phila) (Independent)	1	PA House District 195	Independent
+PA House District 197 (Phila) (Independent)	1	PA House District 197	Independent
+PA House District 198 (Phila) (Independent)	1	PA House District 198	Independent
+PA House District 200 (Phila) (Independent)	1	PA House District 200	Independent
+PA House District 201 (Phila) (Independent)	1	PA House District 201	Independent
+PA House District 202 (Phila) (Independent)	1	PA House District 202	Independent
+PA House District 203 (Phila) (Independent)	1	PA House District 203	Independent
+US House PA District 1 (Phila) (Independent)	1	US House PA District 1	Independent
+US House PA District 2 (Phila) (Independent)	1	US House PA District 2	Independent
+US House PA District 3 (Phila) (Independent)	1	US House PA District 3	Independent
+US House PA District 5 (Phila) (Independent)	1	US House PA District 5	Independent
+US House PA District 13 (Phila) (Independent)	1	US House PA District 13	Independent

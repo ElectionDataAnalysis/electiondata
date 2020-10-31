@@ -1,0 +1,566 @@
+Name	ReportingUnitType
+Minnesota;MN House District 1	state-house
+Minnesota;MN House District 1A	state-house
+Minnesota;MN House District 1B	state-house
+Minnesota;MN House District 2	state-house
+Minnesota;MN House District 3	state-house
+Minnesota;MN House District 3A	state-house
+Minnesota;MN House District 3B	state-house
+Minnesota;MN House District 4	state-house
+Minnesota;MN House District 5	state-house
+Minnesota;MN House District 5A	state-house
+Minnesota;MN House District 5B	state-house
+Minnesota;MN House District 6	state-house
+Minnesota;MN House District 7	state-house
+Minnesota;MN House District 7A	state-house
+Minnesota;MN House District 7B	state-house
+Minnesota;MN House District 8	state-house
+Minnesota;MN House District 9	state-house
+Minnesota;MN House District 9A	state-house
+Minnesota;MN House District 9B	state-house
+Minnesota;MN House District 10	state-house
+Minnesota;MN House District 11	state-house
+Minnesota;MN House District 11A	state-house
+Minnesota;MN House District 11B	state-house
+Minnesota;MN House District 12	state-house
+Minnesota;MN House District 13	state-house
+Minnesota;MN House District 13A	state-house
+Minnesota;MN House District 13B	state-house
+Minnesota;MN House District 14	state-house
+Minnesota;MN House District 15	state-house
+Minnesota;MN House District 15A	state-house
+Minnesota;MN House District 15B	state-house
+Minnesota;MN House District 16	state-house
+Minnesota;MN House District 17	state-house
+Minnesota;MN House District 17A	state-house
+Minnesota;MN House District 17B	state-house
+Minnesota;MN House District 18	state-house
+Minnesota;MN House District 19	state-house
+Minnesota;MN House District 19A	state-house
+Minnesota;MN House District 19B	state-house
+Minnesota;MN House District 20	state-house
+Minnesota;MN House District 21	state-house
+Minnesota;MN House District 21A	state-house
+Minnesota;MN House District 21B	state-house
+Minnesota;MN House District 22	state-house
+Minnesota;MN House District 23	state-house
+Minnesota;MN House District 23A	state-house
+Minnesota;MN House District 23B	state-house
+Minnesota;MN House District 24	state-house
+Minnesota;MN House District 25	state-house
+Minnesota;MN House District 25A	state-house
+Minnesota;MN House District 25B	state-house
+Minnesota;MN House District 26	state-house
+Minnesota;MN House District 27	state-house
+Minnesota;MN House District 27A	state-house
+Minnesota;MN House District 27B	state-house
+Minnesota;MN House District 28	state-house
+Minnesota;MN House District 29	state-house
+Minnesota;MN House District 29A	state-house
+Minnesota;MN House District 29B	state-house
+Minnesota;MN House District 30	state-house
+Minnesota;MN House District 31	state-house
+Minnesota;MN House District 31A	state-house
+Minnesota;MN House District 31B	state-house
+Minnesota;MN House District 32	state-house
+Minnesota;MN House District 33	state-house
+Minnesota;MN House District 33A	state-house
+Minnesota;MN House District 33B	state-house
+Minnesota;MN House District 34	state-house
+Minnesota;MN House District 35	state-house
+Minnesota;MN House District 35A	state-house
+Minnesota;MN House District 35B	state-house
+Minnesota;MN House District 36	state-house
+Minnesota;MN House District 37	state-house
+Minnesota;MN House District 37A	state-house
+Minnesota;MN House District 37B	state-house
+Minnesota;MN House District 38	state-house
+Minnesota;MN House District 39	state-house
+Minnesota;MN House District 39A	state-house
+Minnesota;MN House District 39B	state-house
+Minnesota;MN House District 40	state-house
+Minnesota;MN House District 41	state-house
+Minnesota;MN House District 41A	state-house
+Minnesota;MN House District 41B	state-house
+Minnesota;MN House District 42	state-house
+Minnesota;MN House District 43	state-house
+Minnesota;MN House District 43A	state-house
+Minnesota;MN House District 43B	state-house
+Minnesota;MN House District 44	state-house
+Minnesota;MN House District 45	state-house
+Minnesota;MN House District 45A	state-house
+Minnesota;MN House District 45B	state-house
+Minnesota;MN House District 46	state-house
+Minnesota;MN House District 47	state-house
+Minnesota;MN House District 47A	state-house
+Minnesota;MN House District 47B	state-house
+Minnesota;MN House District 48	state-house
+Minnesota;MN House District 49	state-house
+Minnesota;MN House District 49A	state-house
+Minnesota;MN House District 49B	state-house
+Minnesota;MN House District 50	state-house
+Minnesota;MN House District 51	state-house
+Minnesota;MN House District 51A	state-house
+Minnesota;MN House District 51B	state-house
+Minnesota;MN House District 52	state-house
+Minnesota;MN House District 53	state-house
+Minnesota;MN House District 53A	state-house
+Minnesota;MN House District 53B	state-house
+Minnesota;MN House District 54	state-house
+Minnesota;MN House District 55	state-house
+Minnesota;MN House District 55A	state-house
+Minnesota;MN House District 55B	state-house
+Minnesota;MN House District 56	state-house
+Minnesota;MN House District 57	state-house
+Minnesota;MN House District 57A	state-house
+Minnesota;MN House District 57B	state-house
+Minnesota;MN House District 58	state-house
+Minnesota;MN House District 59	state-house
+Minnesota;MN House District 59A	state-house
+Minnesota;MN House District 59B	state-house
+Minnesota;MN House District 60	state-house
+Minnesota;MN House District 61	state-house
+Minnesota;MN House District 61A	state-house
+Minnesota;MN House District 61B	state-house
+Minnesota;MN House District 62	state-house
+Minnesota;MN House District 63	state-house
+Minnesota;MN House District 63A	state-house
+Minnesota;MN House District 63B	state-house
+Minnesota;MN House District 64	state-house
+Minnesota;MN House District 65	state-house
+Minnesota;MN House District 65A	state-house
+Minnesota;MN House District 65B	state-house
+Minnesota;MN House District 66	state-house
+Minnesota;MN House District 67	state-house
+Minnesota;MN House District 67A	state-house
+Minnesota;MN House District 67B	state-house
+Minnesota;MN House District 68	state-house
+Minnesota;MN House District 69	state-house
+Minnesota;MN House District 69A	state-house
+Minnesota;MN House District 69B	state-house
+Minnesota;MN House District 70	state-house
+Minnesota;MN House District 71	state-house
+Minnesota;MN House District 71A	state-house
+Minnesota;MN House District 71B	state-house
+Minnesota;MN House District 72	state-house
+Minnesota;MN House District 73	state-house
+Minnesota;MN House District 73A	state-house
+Minnesota;MN House District 73B	state-house
+Minnesota;MN House District 74	state-house
+Minnesota;MN House District 75	state-house
+Minnesota;MN House District 75A	state-house
+Minnesota;MN House District 75B	state-house
+Minnesota;MN House District 76	state-house
+Minnesota;MN House District 77	state-house
+Minnesota;MN House District 77A	state-house
+Minnesota;MN House District 77B	state-house
+Minnesota;MN House District 78	state-house
+Minnesota;MN House District 79	state-house
+Minnesota;MN House District 79A	state-house
+Minnesota;MN House District 79B	state-house
+Minnesota;MN House District 80	state-house
+Minnesota;MN House District 81	state-house
+Minnesota;MN House District 81A	state-house
+Minnesota;MN House District 81B	state-house
+Minnesota;MN House District 82	state-house
+Minnesota;MN House District 83	state-house
+Minnesota;MN House District 83A	state-house
+Minnesota;MN House District 83B	state-house
+Minnesota;MN House District 84	state-house
+Minnesota;MN House District 85	state-house
+Minnesota;MN House District 85A	state-house
+Minnesota;MN House District 85B	state-house
+Minnesota;MN House District 86	state-house
+Minnesota;MN House District 87	state-house
+Minnesota;MN House District 87A	state-house
+Minnesota;MN House District 87B	state-house
+Minnesota;MN House District 88	state-house
+Minnesota;MN House District 89	state-house
+Minnesota;MN House District 89A	state-house
+Minnesota;MN House District 89B	state-house
+Minnesota;MN House District 90	state-house
+Minnesota;MN House District 91	state-house
+Minnesota;MN House District 91A	state-house
+Minnesota;MN House District 91B	state-house
+Minnesota;MN House District 92	state-house
+Minnesota;MN House District 93	state-house
+Minnesota;MN House District 93A	state-house
+Minnesota;MN House District 93B	state-house
+Minnesota;MN House District 94	state-house
+Minnesota;MN House District 95	state-house
+Minnesota;MN House District 95A	state-house
+Minnesota;MN House District 95B	state-house
+Minnesota;MN House District 96	state-house
+Minnesota;MN House District 97	state-house
+Minnesota;MN House District 97A	state-house
+Minnesota;MN House District 97B	state-house
+Minnesota;MN House District 98	state-house
+Minnesota;MN House District 99	state-house
+Minnesota;MN House District 99A	state-house
+Minnesota;MN House District 99B	state-house
+Minnesota;MN House District 100	state-house
+Minnesota;MN House District 101	state-house
+Minnesota;MN House District 101A	state-house
+Minnesota;MN House District 101B	state-house
+Minnesota;MN House District 102	state-house
+Minnesota;MN House District 103	state-house
+Minnesota;MN House District 103A	state-house
+Minnesota;MN House District 103B	state-house
+Minnesota;MN House District 104	state-house
+Minnesota;MN House District 105	state-house
+Minnesota;MN House District 105A	state-house
+Minnesota;MN House District 105B	state-house
+Minnesota;MN House District 106	state-house
+Minnesota;MN House District 107	state-house
+Minnesota;MN House District 107A	state-house
+Minnesota;MN House District 107B	state-house
+Minnesota;MN House District 108	state-house
+Minnesota;MN House District 109	state-house
+Minnesota;MN House District 109A	state-house
+Minnesota;MN House District 109B	state-house
+Minnesota;MN House District 110	state-house
+Minnesota;MN House District 111	state-house
+Minnesota;MN House District 111A	state-house
+Minnesota;MN House District 111B	state-house
+Minnesota;MN House District 112	state-house
+Minnesota;MN House District 113	state-house
+Minnesota;MN House District 113A	state-house
+Minnesota;MN House District 113B	state-house
+Minnesota;MN House District 114	state-house
+Minnesota;MN House District 115	state-house
+Minnesota;MN House District 115A	state-house
+Minnesota;MN House District 115B	state-house
+Minnesota;MN House District 116	state-house
+Minnesota;MN House District 117	state-house
+Minnesota;MN House District 117A	state-house
+Minnesota;MN House District 117B	state-house
+Minnesota;MN House District 118	state-house
+Minnesota;MN House District 119	state-house
+Minnesota;MN House District 119A	state-house
+Minnesota;MN House District 119B	state-house
+Minnesota;MN House District 120	state-house
+Minnesota;MN House District 121	state-house
+Minnesota;MN House District 121A	state-house
+Minnesota;MN House District 121B	state-house
+Minnesota;MN House District 122	state-house
+Minnesota;MN House District 123	state-house
+Minnesota;MN House District 123A	state-house
+Minnesota;MN House District 123B	state-house
+Minnesota;MN House District 124	state-house
+Minnesota;MN House District 125	state-house
+Minnesota;MN House District 125A	state-house
+Minnesota;MN House District 125B	state-house
+Minnesota;MN House District 126	state-house
+Minnesota;MN House District 127	state-house
+Minnesota;MN House District 127A	state-house
+Minnesota;MN House District 127B	state-house
+Minnesota;MN House District 128	state-house
+Minnesota;MN House District 129	state-house
+Minnesota;MN House District 129A	state-house
+Minnesota;MN House District 129B	state-house
+Minnesota;MN House District 130	state-house
+Minnesota;MN House District 131	state-house
+Minnesota;MN House District 131A	state-house
+Minnesota;MN House District 131B	state-house
+Minnesota;MN House District 132	state-house
+Minnesota;MN House District 133	state-house
+Minnesota;MN House District 133A	state-house
+Minnesota;MN House District 133B	state-house
+Minnesota;MN House District 134	state-house
+Minnesota;MN Senate District 1	state-senate
+Minnesota;MN Senate District 2	state-senate
+Minnesota;MN Senate District 3	state-senate
+Minnesota;MN Senate District 4	state-senate
+Minnesota;MN Senate District 5	state-senate
+Minnesota;MN Senate District 6	state-senate
+Minnesota;MN Senate District 7	state-senate
+Minnesota;MN Senate District 8	state-senate
+Minnesota;MN Senate District 9	state-senate
+Minnesota;MN Senate District 10	state-senate
+Minnesota;MN Senate District 11	state-senate
+Minnesota;MN Senate District 12	state-senate
+Minnesota;MN Senate District 13	state-senate
+Minnesota;MN Senate District 14	state-senate
+Minnesota;MN Senate District 15	state-senate
+Minnesota;MN Senate District 16	state-senate
+Minnesota;MN Senate District 17	state-senate
+Minnesota;MN Senate District 18	state-senate
+Minnesota;MN Senate District 19	state-senate
+Minnesota;MN Senate District 20	state-senate
+Minnesota;MN Senate District 21	state-senate
+Minnesota;MN Senate District 22	state-senate
+Minnesota;MN Senate District 23	state-senate
+Minnesota;MN Senate District 24	state-senate
+Minnesota;MN Senate District 25	state-senate
+Minnesota;MN Senate District 26	state-senate
+Minnesota;MN Senate District 27	state-senate
+Minnesota;MN Senate District 28	state-senate
+Minnesota;MN Senate District 29	state-senate
+Minnesota;MN Senate District 30	state-senate
+Minnesota;MN Senate District 31	state-senate
+Minnesota;MN Senate District 32	state-senate
+Minnesota;MN Senate District 33	state-senate
+Minnesota;MN Senate District 34	state-senate
+Minnesota;MN Senate District 35	state-senate
+Minnesota;MN Senate District 36	state-senate
+Minnesota;MN Senate District 37	state-senate
+Minnesota;MN Senate District 38	state-senate
+Minnesota;MN Senate District 39	state-senate
+Minnesota;MN Senate District 40	state-senate
+Minnesota;MN Senate District 41	state-senate
+Minnesota;MN Senate District 42	state-senate
+Minnesota;MN Senate District 43	state-senate
+Minnesota;MN Senate District 44	state-senate
+Minnesota;MN Senate District 45	state-senate
+Minnesota;MN Senate District 46	state-senate
+Minnesota;MN Senate District 47	state-senate
+Minnesota;MN Senate District 48	state-senate
+Minnesota;MN Senate District 49	state-senate
+Minnesota;MN Senate District 50	state-senate
+Minnesota;MN Senate District 51	state-senate
+Minnesota;MN Senate District 52	state-senate
+Minnesota;MN Senate District 53	state-senate
+Minnesota;MN Senate District 54	state-senate
+Minnesota;MN Senate District 55	state-senate
+Minnesota;MN Senate District 56	state-senate
+Minnesota;MN Senate District 57	state-senate
+Minnesota;MN Senate District 58	state-senate
+Minnesota;MN Senate District 59	state-senate
+Minnesota;MN Senate District 60	state-senate
+Minnesota;MN Senate District 61	state-senate
+Minnesota;MN Senate District 62	state-senate
+Minnesota;MN Senate District 63	state-senate
+Minnesota;MN Senate District 64	state-senate
+Minnesota;MN Senate District 65	state-senate
+Minnesota;MN Senate District 66	state-senate
+Minnesota;MN Senate District 67	state-senate
+Minnesota;US House MN District 1	congressional
+Minnesota;US House MN District 2	congressional
+Minnesota;US House MN District 3	congressional
+Minnesota;US House MN District 4	congressional
+Minnesota;US House MN District 5	congressional
+Minnesota;US House MN District 6	congressional
+Minnesota;US House MN District 7	congressional
+Minnesota;US House MN District 8	congressional
+Minnesota	state
+Minnesota;Aitkin County	county
+Minnesota;Anoka County	county
+Minnesota;Becker County	county
+Minnesota;Beltrami County	county
+Minnesota;Benton County	county
+Minnesota;Big Stone County	county
+Minnesota;Blue Earth County	county
+Minnesota;Brown County	county
+Minnesota;Carlton County	county
+Minnesota;Carver County	county
+Minnesota;Cass County	county
+Minnesota;Chippewa County	county
+Minnesota;Chisago County	county
+Minnesota;Clay County	county
+Minnesota;Clearwater County	county
+Minnesota;Cook County	county
+Minnesota;Cottonwood County	county
+Minnesota;Crow Wing County	county
+Minnesota;Dakota County	county
+Minnesota;Dodge County	county
+Minnesota;Douglas County	county
+Minnesota;Faribault County	county
+Minnesota;Fillmore County	county
+Minnesota;Freeborn County	county
+Minnesota;Goodhue County	county
+Minnesota;Grant County	county
+Minnesota;Hennepin County	county
+Minnesota;Houston County	county
+Minnesota;Hubbard County	county
+Minnesota;Isanti County	county
+Minnesota;Itasca County	county
+Minnesota;Jackson County	county
+Minnesota;Kanabec County	county
+Minnesota;Kandiyohi County	county
+Minnesota;Kittson County	county
+Minnesota;Koochiching County	county
+Minnesota;Lac Qui Parle County	county
+Minnesota;Lake County	county
+Minnesota;Lake Of The Woods County	county
+Minnesota;Le Sueur County	county
+Minnesota;Lincoln County	county
+Minnesota;Lyon County	county
+Minnesota;Mcleod County	county
+Minnesota;Mahnomen County	county
+Minnesota;Marshall County	county
+Minnesota;Martin County	county
+Minnesota;Meeker County	county
+Minnesota;Mille Lacs County	county
+Minnesota;Morrison County	county
+Minnesota;Mower County	county
+Minnesota;Murray County	county
+Minnesota;Nicollet County	county
+Minnesota;Nobles County	county
+Minnesota;Norman County	county
+Minnesota;Olmsted County	county
+Minnesota;Otter Tail County	county
+Minnesota;Pennington County	county
+Minnesota;Pine County	county
+Minnesota;Pipestone County	county
+Minnesota;Polk County	county
+Minnesota;Pope County	county
+Minnesota;Ramsey County	county
+Minnesota;Red Lake County	county
+Minnesota;Redwood County	county
+Minnesota;Renville County	county
+Minnesota;Rice County	county
+Minnesota;Rock County	county
+Minnesota;Roseau County	county
+Minnesota;St. Louis County	county
+Minnesota;Scott County	county
+Minnesota;Sherburne County	county
+Minnesota;Sibley County	county
+Minnesota;Stearns County	county
+Minnesota;Steele County	county
+Minnesota;Stevens County	county
+Minnesota;Swift County	county
+Minnesota;Todd County	county
+Minnesota;Traverse County	county
+Minnesota;Wabasha County	county
+Minnesota;Wadena County	county
+Minnesota;Waseca County	county
+Minnesota;Washington County	county
+Minnesota;Watonwan County	county
+Minnesota;Wilkin County	county
+Minnesota;Winona County	county
+Minnesota;Wright County	county
+Minnesota;Yellow Medicine County	county
+Minnesota;MN House District 2A	state-house
+Minnesota;MN House District 2B	state-house
+Minnesota;MN House District 4A	state-house
+Minnesota;MN House District 4B	state-house
+Minnesota;MN House District 6A	state-house
+Minnesota;MN House District 6B	state-house
+Minnesota;MN House District 8A	state-house
+Minnesota;MN House District 8B	state-house
+Minnesota;MN House District 10A	state-house
+Minnesota;MN House District 10B	state-house
+Minnesota;MN House District 12A	state-house
+Minnesota;MN House District 12B	state-house
+Minnesota;MN House District 14A	state-house
+Minnesota;MN House District 14B	state-house
+Minnesota;MN House District 16A	state-house
+Minnesota;MN House District 16B	state-house
+Minnesota;MN House District 18A	state-house
+Minnesota;MN House District 18B	state-house
+Minnesota;MN House District 20A	state-house
+Minnesota;MN House District 20B	state-house
+Minnesota;MN House District 22A	state-house
+Minnesota;MN House District 22B	state-house
+Minnesota;MN House District 24A	state-house
+Minnesota;MN House District 24B	state-house
+Minnesota;MN House District 26A	state-house
+Minnesota;MN House District 26B	state-house
+Minnesota;MN House District 28A	state-house
+Minnesota;MN House District 28B	state-house
+Minnesota;MN House District 30A	state-house
+Minnesota;MN House District 30B	state-house
+Minnesota;MN House District 32A	state-house
+Minnesota;MN House District 32B	state-house
+Minnesota;MN House District 34A	state-house
+Minnesota;MN House District 34B	state-house
+Minnesota;MN House District 36A	state-house
+Minnesota;MN House District 36B	state-house
+Minnesota;MN House District 38A	state-house
+Minnesota;MN House District 38B	state-house
+Minnesota;MN House District 40A	state-house
+Minnesota;MN House District 40B	state-house
+Minnesota;MN House District 42A	state-house
+Minnesota;MN House District 42B	state-house
+Minnesota;MN House District 44A	state-house
+Minnesota;MN House District 44B	state-house
+Minnesota;MN House District 46A	state-house
+Minnesota;MN House District 46B	state-house
+Minnesota;MN House District 48A	state-house
+Minnesota;MN House District 48B	state-house
+Minnesota;MN House District 50A	state-house
+Minnesota;MN House District 50B	state-house
+Minnesota;MN House District 52A	state-house
+Minnesota;MN House District 52B	state-house
+Minnesota;MN House District 54A	state-house
+Minnesota;MN House District 54B	state-house
+Minnesota;MN House District 56A	state-house
+Minnesota;MN House District 56B	state-house
+Minnesota;MN House District 58A	state-house
+Minnesota;MN House District 58B	state-house
+Minnesota;MN House District 60A	state-house
+Minnesota;MN House District 60B	state-house
+Minnesota;MN House District 62A	state-house
+Minnesota;MN House District 62B	state-house
+Minnesota;MN House District 64A	state-house
+Minnesota;MN House District 64B	state-house
+Minnesota;MN House District 66A	state-house
+Minnesota;MN House District 66B	state-house
+Minnesota;MN House District 68A	state-house
+Minnesota;MN House District 68B	state-house
+Minnesota;MN House District 70A	state-house
+Minnesota;MN House District 70B	state-house
+Minnesota;MN House District 72A	state-house
+Minnesota;MN House District 72B	state-house
+Minnesota;MN House District 74A	state-house
+Minnesota;MN House District 74B	state-house
+Minnesota;MN House District 76A	state-house
+Minnesota;MN House District 76B	state-house
+Minnesota;MN House District 78A	state-house
+Minnesota;MN House District 78B	state-house
+Minnesota;MN House District 80A	state-house
+Minnesota;MN House District 80B	state-house
+Minnesota;MN House District 82A	state-house
+Minnesota;MN House District 82B	state-house
+Minnesota;MN House District 84A	state-house
+Minnesota;MN House District 84B	state-house
+Minnesota;MN House District 86A	state-house
+Minnesota;MN House District 86B	state-house
+Minnesota;MN House District 88A	state-house
+Minnesota;MN House District 88B	state-house
+Minnesota;MN House District 90A	state-house
+Minnesota;MN House District 90B	state-house
+Minnesota;MN House District 92A	state-house
+Minnesota;MN House District 92B	state-house
+Minnesota;MN House District 94A	state-house
+Minnesota;MN House District 94B	state-house
+Minnesota;MN House District 96A	state-house
+Minnesota;MN House District 96B	state-house
+Minnesota;MN House District 98A	state-house
+Minnesota;MN House District 98B	state-house
+Minnesota;MN House District 100A	state-house
+Minnesota;MN House District 100B	state-house
+Minnesota;MN House District 102A	state-house
+Minnesota;MN House District 102B	state-house
+Minnesota;MN House District 104A	state-house
+Minnesota;MN House District 104B	state-house
+Minnesota;MN House District 106A	state-house
+Minnesota;MN House District 106B	state-house
+Minnesota;MN House District 108A	state-house
+Minnesota;MN House District 108B	state-house
+Minnesota;MN House District 110A	state-house
+Minnesota;MN House District 110B	state-house
+Minnesota;MN House District 112A	state-house
+Minnesota;MN House District 112B	state-house
+Minnesota;MN House District 114A	state-house
+Minnesota;MN House District 114B	state-house
+Minnesota;MN House District 116A	state-house
+Minnesota;MN House District 116B	state-house
+Minnesota;MN House District 118A	state-house
+Minnesota;MN House District 118B	state-house
+Minnesota;MN House District 120A	state-house
+Minnesota;MN House District 120B	state-house
+Minnesota;MN House District 122A	state-house
+Minnesota;MN House District 122B	state-house
+Minnesota;MN House District 124A	state-house
+Minnesota;MN House District 124B	state-house
+Minnesota;MN House District 126A	state-house
+Minnesota;MN House District 126B	state-house
+Minnesota;MN House District 128A	state-house
+Minnesota;MN House District 128B	state-house
+Minnesota;MN House District 130A	state-house
+Minnesota;MN House District 130B	state-house
+Minnesota;MN House District 132A	state-house
+Minnesota;MN House District 132B	state-house
+Minnesota;MN House District 134A	state-house
+Minnesota;MN House District 134B	state-house
