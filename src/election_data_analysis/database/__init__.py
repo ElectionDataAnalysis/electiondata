@@ -83,7 +83,13 @@ US Virgin Islands"""
 
 db_pars = ["host", "port", "dbname", "user", "password"]
 
-contest_types_model = ["state", "congressional", "judicial", "state-house", "state-senate"]
+contest_types_model = [
+    "state",
+    "congressional",
+    "judicial",
+    "state-house",
+    "state-senate",
+]
 
 
 def get_database_names(con):
@@ -268,8 +274,8 @@ def test_connection(paramfile="run_time.ini", dbname=None) -> (bool, dict):
 
 
 def create_or_reset_db(
-        param_file: str = "run_time.ini",
-        dbname: Optional[str] = None,
+    param_file: str = "run_time.ini",
+    dbname: Optional[str] = None,
 ) -> Optional[dict]:
     """if no dbname is given, name will be taken from param_file"""
 
@@ -311,7 +317,7 @@ def create_or_reset_db(
         )
     else:
         create_database(con, cur, dbname)
-        eng_new, err = sql_alchemy_connect(param_file,dbname=dbname)
+        eng_new, err = sql_alchemy_connect(param_file, dbname=dbname)
         Session_new = sqlalchemy.orm.sessionmaker(bind=eng_new)
         sess_new = Session_new()
 
@@ -349,7 +355,9 @@ def sql_alchemy_connect(
     url = url.format(**params)
 
     # The return value of create_engine() is our connection object
-    engine = db.create_engine(url, client_encoding="utf8", pool_size=20, max_overflow=40)
+    engine = db.create_engine(
+        url, client_encoding="utf8", pool_size=20, max_overflow=40
+    )
     return engine, err
 
 
@@ -457,13 +465,11 @@ def insert_to_cdf_db(
     if element == "Candidate":
         # enforce title case, except for 'none or unknown'
         # TODO enforce title case only if names are all caps
-        working.loc[
-            working.BallotName != "none or unknown",
-            "BallotName"
-        ] = working.copy().loc[
-            working.BallotName != "none or unknown",
-            "BallotName"
-        ].str.title()
+        working.loc[working.BallotName != "none or unknown", "BallotName"] = (
+            working.copy()
+            .loc[working.BallotName != "none or unknown", "BallotName"]
+            .str.title()
+        )
         working.drop_duplicates(inplace=True)
 
     # initialize connection and cursor
@@ -551,7 +557,7 @@ def insert_to_cdf_db(
                 "UPDATE {temp_table} SET {c} = NULL WHERE {c} = 0"
             ).format(temp_table=sql.Identifier(temp_table), c=sql.Identifier(c))
             cursor.execute(q_kludge)
-        connection.commit()   # TODO when Selection_Id was in mixed_int, this emptied temp table, why?
+        connection.commit()  # TODO when Selection_Id was in mixed_int, this emptied temp table, why?
 
         # insert records from temp table into <element> table
         q = sql.SQL(
@@ -574,7 +580,7 @@ def insert_to_cdf_db(
 
     if element == "ReportingUnit":
         # check get RUs not matched and process them
-        mask = (matched_with_old.ReportingUnit_Id > 0)
+        mask = matched_with_old.ReportingUnit_Id > 0
         new_rus = matched_with_old[~mask]
         if not new_rus.empty:
             append_to_composing_reporting_unit_join(engine, new_rus)
@@ -594,7 +600,10 @@ def table_named_to_avoid_conflict(engine, prefix: str) -> str:
 
 
 def append_id_to_dframe(
-    engine: sqlalchemy.engine, df: pd.DataFrame, element: str, col_map: Optional[dict] = None
+    engine: sqlalchemy.engine,
+    df: pd.DataFrame,
+    element: str,
+    col_map: Optional[dict] = None,
 ) -> pd.DataFrame:
     """Using <col_map> to map columns of <df> onto defining columns of <table>, returns
     a copy of <df> with appended column <table>_Id. Unmatched items returned with null value for <table>_Id"""
@@ -697,7 +706,9 @@ def vote_type_list(cursor, datafile_list: list, by: str = "Id") -> (list, str):
     return vt_list, err_str
 
 
-def data_file_list(cursor, election_id, reporting_unit_id: Optional[int] = None, by="Id"):
+def data_file_list(
+    cursor, election_id, reporting_unit_id: Optional[int] = None, by="Id"
+):
     q = sql.SQL(
         """SELECT distinct d.{by} FROM _datafile d WHERE d."Election_Id" = %s"""
     ).format(by=sql.Identifier(by))
@@ -974,11 +985,15 @@ def get_filtered_input_options(session, input_str, filters):
         reporting_unit = name_from_id(cursor, "ReportingUnit", reporting_unit_id)
         connection.close()
 
-        contest_type_df = pd.DataFrame([{
-            "parent": reporting_unit,
-            "name": f"All {contest_type}",
-            "type": contest_type
-        }])
+        contest_type_df = pd.DataFrame(
+            [
+                {
+                    "parent": reporting_unit,
+                    "name": f"All {contest_type}",
+                    "type": contest_type,
+                }
+            ]
+        )
         contest_df = get_relevant_contests(session, filters)
         contest_df = contest_df[contest_df["type"].isin(filters)]
         df = pd.concat([contest_type_df, contest_df])
@@ -1065,23 +1080,25 @@ def get_filtered_input_options(session, input_str, filters):
         election_id = list_to_id(session, "Election", filters)
         reporting_unit_id = list_to_id(session, "ReportingUnit", filters)
         df = read_vote_count(
-            session, 
-            election_id, 
-            reporting_unit_id, 
-            ["ReportingUnitName", "Name", "unit_type"], 
-            ["parent", "name", "type"]
+            session,
+            election_id,
+            reporting_unit_id,
+            ["ReportingUnitName", "Name", "unit_type"],
+            ["parent", "name", "type"],
         )
         df = df.sort_values(["parent", "name"]).reset_index(drop=True)
     # check if it's looking for a count of candidates
-    elif input_str == "count" and bool([f for f in filters if f.startswith("Candidate")]):
+    elif input_str == "count" and bool(
+        [f for f in filters if f.startswith("Candidate")]
+    ):
         election_id = list_to_id(session, "Election", filters)
         reporting_unit_id = list_to_id(session, "ReportingUnit", filters)
         df_unordered = read_vote_count(
-            session, 
-            election_id, 
-            reporting_unit_id, 
-            ["Name", "BallotName", "PartyName", "unit_type"], 
-            ["parent", "name", "type", "unit_type"]
+            session,
+            election_id,
+            reporting_unit_id,
+            ["Name", "BallotName", "PartyName", "unit_type"],
+            ["parent", "name", "type", "unit_type"],
         )
         df = clean_candidate_names(df_unordered)
         df = df[["parent", "name", "unit_type"]].rename(columns={"unit_type": "type"})
@@ -1090,11 +1107,11 @@ def get_filtered_input_options(session, input_str, filters):
         election_id = list_to_id(session, "Election", filters)
         reporting_unit_id = list_to_id(session, "ReportingUnit", filters)
         df = read_vote_count(
-            session, 
-            election_id, 
-            reporting_unit_id, 
-            ["PartyName", "unit_type"], 
-            ["parent", "type"]
+            session,
+            election_id,
+            reporting_unit_id,
+            ["PartyName", "unit_type"],
+            ["parent", "type"],
         )
         df["name"] = df["parent"].str.replace(" Party", "") + " " + df["type"]
         df = df[df_cols].sort_values(["parent", "type"])
@@ -1102,14 +1119,16 @@ def get_filtered_input_options(session, input_str, filters):
         election_id = list_to_id(session, "Election", filters)
         reporting_unit_id = list_to_id(session, "ReportingUnit", filters)
         df_unordered = read_vote_count(
-            session, 
-            election_id, 
-            reporting_unit_id, 
-            ["Name", "BallotName", "PartyName", "unit_type"], 
-            ["parent", "name", "type", "unit_type"]
+            session,
+            election_id,
+            reporting_unit_id,
+            ["Name", "BallotName", "PartyName", "unit_type"],
+            ["parent", "name", "type", "unit_type"],
         )
         df_unordered = df_unordered[df_unordered["unit_type"].isin(filters)].copy()
-        df_filtered = df_unordered[df_unordered["name"].str.contains(input_str, case=False)].copy()
+        df_filtered = df_unordered[
+            df_unordered["name"].str.contains(input_str, case=False)
+        ].copy()
         df = clean_candidate_names(df_filtered[df_cols].copy())
     # TODO: handle the "All" and "other" options better
     # TODO: handle sorting numbers better
@@ -1218,7 +1237,9 @@ def get_candidate_votecounts(session, election_id, top_ru_id, subdivision_type_i
                     JOIN "Party" p on CS."Party_Id" = p."Id"
     """
     )
-    cursor.execute(q, [top_ru_id, subdivision_type_id, subdivision_type_id, election_id])
+    cursor.execute(
+        q, [top_ru_id, subdivision_type_id, subdivision_type_id, election_id]
+    )
     result = cursor.fetchall()
     result_df = pd.DataFrame(result)
     result_df.columns = [
@@ -1241,7 +1262,7 @@ def get_candidate_votecounts(session, election_id, top_ru_id, subdivision_type_i
         "Candidate_Id",
         "contest_type",
         "contest_district_type",
-        "Party"
+        "Party",
     ]
     return result_df
 
@@ -1431,7 +1452,7 @@ def list_to_id(session, element, names) -> int:
 
 
 def clean_candidate_names(df):
-    """ takes a df that has contest, candidate name, and party in the columns. Cleans the
+    """takes a df that has contest, candidate name, and party in the columns. Cleans the
     data as described in https://github.com/ElectionDataAnalysis/election_data_analysis/issues/207"""
     # Get first letter of each word in the party name except for "Party"
     # if "Party" is not in the name, then it's "None"
@@ -1443,18 +1464,28 @@ def clean_candidate_names(df):
     df["party"] = df["type"].str.split(" ")
     df["party"] = np.where(
         df["party"].str.contains("party", case=False),
-        df["party"].map(lambda x: x[0:-1]).map(lambda words: "".join([word[0] for word in words])),
-        "None"
+        df["party"]
+        .map(lambda x: x[0:-1])
+        .map(lambda words: "".join([word[0] for word in words])),
+        "None",
     )
 
     # create the abbreviated contest name
     df["contest"] = df["parent"].str.replace(r"\(.*\)", "")
     df["jurisdiction"] = df["contest"].map(lambda x: x[0:2])
     mask_us_pres = df["contest"].str.contains("president", case=False)
-    mask_us_sen = (df["jurisdiction"] == "US") & (df["contest"].str.contains("senate", case=False))
-    mask_us_house = (df["jurisdiction"] == "US") & (df["contest"].str.contains("house", case=False))
-    mask_st_sen = (df["jurisdiction"] != "US") & (df["contest"].str.contains("senate", case=False))
-    mask_st_house = (df["jurisdiction"] != "US") & (df["contest"].str.contains("house", case=False))
+    mask_us_sen = (df["jurisdiction"] == "US") & (
+        df["contest"].str.contains("senate", case=False)
+    )
+    mask_us_house = (df["jurisdiction"] == "US") & (
+        df["contest"].str.contains("house", case=False)
+    )
+    mask_st_sen = (df["jurisdiction"] != "US") & (
+        df["contest"].str.contains("senate", case=False)
+    )
+    mask_st_house = (df["jurisdiction"] != "US") & (
+        df["contest"].str.contains("house", case=False)
+    )
     df["chamber"] = None
     df.loc[mask_us_pres, "chamber"] = "Pres"
     df.loc[mask_us_sen, "chamber"] = "Sen"
@@ -1466,20 +1497,18 @@ def clean_candidate_names(df):
     df["contest_short"] = ""
     df["contest_short"] = np.where(
         df["chamber"] != "unknown",
-        df[df.columns[5:]].apply(
-            lambda x: "".join(x.dropna().astype(str)),
-            axis=1
-        ),
-        df["contest_short"]
+        df[df.columns[5:]].apply(lambda x: "".join(x.dropna().astype(str)), axis=1),
+        df["contest_short"],
     )
     df["contest_short"] = np.where(
         df["chamber"] == "unknown",
-        df["contest"].str.split(" ").map(lambda words: "".join([word[0:3] for word in words if word != "of"])),
-        df["contest_short"]
+        df["contest"]
+        .str.split(" ")
+        .map(lambda words: "".join([word[0:3] for word in words if word != "of"])),
+        df["contest_short"],
     )
     df["name"] = df[["name", "party", "contest_short"]].apply(
-        lambda x: ' - '.join(x.dropna().astype(str)),
-        axis=1
+        lambda x: " - ".join(x.dropna().astype(str)), axis=1
     )
     df = df.sort_values(by=["contest_short", "party", "name"])
     df = df[df_cols].merge(extra_df, how="inner", left_index=True, right_index=True)
