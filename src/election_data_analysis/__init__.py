@@ -36,6 +36,7 @@ sdl_pars_opt = [
     "Party",
     "CountItemType",
     "ReportingUnit",
+    "Contest",
 ]
 
 multi_data_loader_pars = [
@@ -129,7 +130,10 @@ class DataLoader:
         return
 
     def load_all(
-        self, load_jurisdictions: bool = True, move_files: bool = True
+        self,
+            load_jurisdictions: bool = True,
+            move_files: bool = True,
+            election_jurisdiction_list: Optional[list] = None,
     ) -> Optional[dict]:
         """Processes all .ini files in the DataLoader's results directory.
         By default, loads (or reloads) the info from the jurisdiction files
@@ -199,7 +203,11 @@ class DataLoader:
                         params[f]["jurisdiction_path"]
                     ).name
                 ###########
-                good_par_files.append(f)
+                if election_jurisdiction_list:
+                    if (params[f]["election"], params[f]["top_reporting_unit"]) in election_jurisdiction_list:
+                        good_par_files.append(f)
+                else:
+                    good_par_files.append(f)
                 juris_directory[f] = params[f]["jurisdiction_directory"]
 
         # group .ini files by jurisdiction_directory name
@@ -236,6 +244,9 @@ class DataLoader:
                         f"Jurisdiction {juris[jp].name} assumed to be loaded to database already"
                     )
                     good_jurisdictions.append(jp)
+            else:
+                err = ui.consolidate_errors([err, new_err])
+                return err
 
         # process all good parameter files with good jurisdictions
         for jp in good_jurisdictions:
@@ -262,10 +273,7 @@ class DataLoader:
                     # if move_files == True and no fatal load error,
                     if move_files and not ui.fatal_error(load_error):
                         # archive files
-                        ui.archive(f, self.d["results_dir"], success_dir)
-                        ui.archive(
-                            sdl.d["results_file"], self.d["results_dir"], success_dir
-                        )
+                        ui.archive_from_param_file(f, self.d["results_dir"], success_dir)
                         print(
                             f"\tArchived {f} and its results file after successful load "
                             f"via mungers {sdl.d['munger_name']}.\n"
@@ -409,6 +417,7 @@ class SingleDataLoader:
                 "created_at",
             ],
         )
+        data = m.clean_strings(data,["short_name"])
         try:
             e = db.insert_to_cdf_db(self.session.bind, data, "_datafile")
             if e:
@@ -471,24 +480,30 @@ class SingleDataLoader:
                 else:
                     results_info["Contest_Id"] = contest_id
 
-            for k in ["Party", "ReportingUnit", "CountItemType"]:
+            for k in ["Party", "ReportingUnit", "CountItemType", "Contest"]:
                 # if element was given in .ini file
                 if self.d[k] is not None:
                     # collect <k>_Id or fail gracefully
                     k_id = db.name_to_id(self.session, k, self.d[k])
-                    if k_id is None and k != "CountItemType":
-                        err = ui.add_new_error(
-                            err,
-                            "ini",
-                            self.par_file_name,
-                            f"{k} defined in .ini file ({self.d[k]}) not found in database",
-                        )
-                        return err
-                    # no CountItemType throws an error
-                    elif k == "CountItemType":
-                        # put CountItemType value into OtherCountItemType field
-                        k_id = db.name_to_id(self.session, k, "other")
-                        results_info["OtherCountItemType"] = self.d[k]
+                # CountItemType is different because it's an enumeration
+                    if k == "CountItemType":
+                        if k_id is None:
+                            # put CountItemType value into OtherCountItemType field
+                            # and set k_id to id for 'other'
+                            k_id = db.name_to_id(self.session, k, "other")
+                            results_info["OtherCountItemType"] = self.d[k]
+                        else:
+                            # set OtherCountItemType to "" since type was recognized
+                            results_info["OtherCountItemType"] = ""
+                    else:
+                        if k_id is None:
+                            err = ui.add_new_error(
+                                err,
+                                "ini",
+                                self.par_file_name,
+                                f"{k} defined in .ini file ({self.d[k]}) not found in database",
+                            )
+                            return err
 
                     results_info[f"{k}_Id"] = k_id
 
@@ -558,18 +573,27 @@ def check_par_file_elements(d: dict, mungers_path: str, par_file_name: str) -> O
     # for each munger, check that no element defined elsewhere is sourced as 'row' or 'column'
     for mu in d["munger_name"].split(","):
         elt_file = os.path.join(mungers_path, mu, "cdf_elements.txt")
-        elt = pd.read_csv(elt_file, sep="\t")
-        rc_from_mu = elt[(elt.source == "row") | (elt.source == "column")]["name"].unique()
-        duped = [x for x in elt_from_par_file if x in rc_from_mu]
-        if duped:
+        try:
+            elt = pd.read_csv(elt_file, sep="\t")
+        except Exception as e:
             err = ui.add_new_error(
                 err,
                 "ini",
                 par_file_name,
-                f"Some elements given in the parameter file are also designated "
-                f"as row- or column-sourced in munger {mu}:\n"
-                f"{duped}",
+                f"Error reading cdf_elements.txt file for munger {mu}"
             )
+        else:
+            rc_from_mu = elt[(elt.source == "row") | (elt.source == "column")]["name"].unique()
+            duped = [x for x in elt_from_par_file if x in rc_from_mu]
+            if duped:
+                err = ui.add_new_error(
+                    err,
+                    "ini",
+                    par_file_name,
+                    f"Some elements given in the parameter file are also designated "
+                    f"as row- or column-sourced in munger {mu}:\n"
+                    f"{duped}",
+                )
     return err
 
 
@@ -946,7 +970,6 @@ class JurisdictionPrepper:
             return error
 
         # clean the dataframe read from the results
-        wr, count_cols, err_df = m.generic_clean(wr)
         # reduce <wr> in size
         fields = [
             f"{field}_SOURCE"
@@ -1049,7 +1072,10 @@ class JurisdictionPrepper:
         return error
 
     def add_sub_county_rus_from_multi_results_file(
-        self, dir: str, error: dict = None, sub_ru_type: str = "precinct"
+            self,
+            dir: str,
+            error: dict = None,
+            sub_ru_type: str = "precinct",
     ) -> dict:
         """For each .ini file in <dir>, finds specified results file.
         For each results file, adds all elements in <elements> to <element>.txt and, naively, to <dictionary.txt>
@@ -1082,7 +1108,7 @@ class JurisdictionPrepper:
                     return error
 
             # set aux_data_path
-            if "aux_data_dir" in d.keys() and d["aux_data_dir"] is not None:
+            if "aux_data_dir" in d.keys() and d["aux_data_dir"] is not None and d["aux_data_dir"] != "":
                 aux_data_path = os.path.join(dir, d["aux_data_dir"])
             else:
                 aux_data_path = None
@@ -1353,7 +1379,8 @@ class Analyzer:
 
         if postgres_param_err or eda_err:
             print("Parameter file missing requirements.")
-            print(postgres_param_err)
+            print(f"postgres: {postgres_param_err}")
+            print(f"election_data_analysis: {eda_err}")
             print("Analyzer object not created.")
             return None
 
@@ -1530,18 +1557,27 @@ def aggregate_results(election, jurisdiction, contest_type, by_vote_type, dbname
     # using the analyzer gives us access to DB session
     empty_df_with_good_cols = pd.DataFrame(columns=['contest','count'])
     an = Analyzer(dbname=dbname)
+    if not an:
+        return empty_df_with_good_cols
     election_id = db.name_to_id(an.session, "Election", election)
+    jurisdiction_id = db.name_to_id(an.session, "ReportingUnit", jurisdiction)
     if not election_id:
         return empty_df_with_good_cols
     connection = an.session.bind.raw_connection()
     cursor = connection.cursor()
 
-    datafile_list, e = db.data_file_list(cursor, election_id, by="Id")
+    datafile_list, e = db.data_file_list(
+        cursor,
+        election_id,
+        reporting_unit_id=jurisdiction_id,
+        by="Id",
+    )
     if e:
         print(e)
         return empty_df_with_good_cols
     if len(datafile_list) == 0:
-        print(f"No datafiles found for Election_Id {election_id}")
+        print(f"No datafiles found for election {election} and jurisdiction {jurisdiction}"
+              f"(election_id={election_id} and jurisdiction_id={jurisdiction_id})")
         return empty_df_with_good_cols
 
     df, err_str = db.export_rollup_from_db(
@@ -1567,15 +1603,21 @@ def aggregate_results(election, jurisdiction, contest_type, by_vote_type, dbname
             exclude_total=False,
             by_vote_type=True,
         )
-    if err_str:
+    if err_str or df.empty:
         return empty_df_with_good_cols
     return df
 
 
 def data_exists(election, jurisdiction, p_path=None, dbname=None):
     an = Analyzer(param_file=p_path, dbname=dbname)
+    if not an:
+        return False
+
     election_id = db.name_to_id(an.session, "Election", election)
     reporting_unit_id = db.name_to_id(an.session, "ReportingUnit", jurisdiction)
+    if not election_id or not reporting_unit_id:
+        return False
+
     con = an.session.bind.raw_connection()
     cur = con.cursor()
     answer, err_str = db.data_file_list(
@@ -1587,6 +1629,8 @@ def data_exists(election, jurisdiction, p_path=None, dbname=None):
         return True
     else:
         return False
+
+
 
 
 def check_totals_match_vote_types(election, jurisdiction, dbname=None):

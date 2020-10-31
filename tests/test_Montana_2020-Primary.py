@@ -1,8 +1,11 @@
 import election_data_analysis as e
 #MT20 tests
 
+def test_data_exists(dbname):
+    assert e.data_exists("2020 Primary","Montana",dbname=dbname)
+
 def test_presidential(dbname):
-    assert(not e.data_exists("2020 Primary","Montana",dbname=dbname) or e.contest_total(
+    assert(e.contest_total(
             "2020 Primary",
             "Montana",
             "US President (MT) (Democratic Party)",
@@ -13,7 +16,7 @@ def test_presidential(dbname):
 
 
 def test_statewide_totals(dbname):
-    assert(not e.data_exists("2020 Primary","Montana",dbname=dbname) or e.contest_total(
+    assert(e.contest_total(
             "2020 Primary",
             "Montana",
             "US Senate MT (Republican Party)",
@@ -23,7 +26,7 @@ def test_statewide_totals(dbname):
     )
 
 def test_state_senate_totals(dbname):
-    assert (not e.data_exists("2020 Primary","Montana",dbname=dbname) or e.contest_total(
+    assert (e.contest_total(
             "2020 Primary",
             "Montana",
             "MT Senate District 17 (Republican Party)",
@@ -33,7 +36,7 @@ def test_state_senate_totals(dbname):
     )
 
 def test_state_rep_totals(dbname):
-    assert (not e.data_exists("2020 Primary","Montana",dbname=dbname) or e.contest_total(
+    assert (e.contest_total(
             "2020 Primary",
             "Montana",
             "MT House District 4 (Republican Party)",

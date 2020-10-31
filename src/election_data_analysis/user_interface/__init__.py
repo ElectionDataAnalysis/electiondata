@@ -1,10 +1,10 @@
 from configparser import ConfigParser, MissingSectionHeaderError
-from typing import Optional
 from election_data_analysis import munge as m
 from election_data_analysis import special_formats as sf
 from election_data_analysis import database as db
 import election_data_analysis as e
 import pandas as pd
+import numpy as np
 from pandas.errors import ParserError, ParserWarning
 import csv
 import os
@@ -370,11 +370,13 @@ def read_single_datafile(
         if munger.options["count_of_top_lines_to_skip"]:
             kwargs["skiprows"] = range(munger.options["count_of_top_lines_to_skip"])
 
-        if munger.file_type in ["txt", "csv"]:
+        if munger.file_type in ["txt", "csv", "txt-semicolon-separated"]:
             kwargs["encoding"] = munger.encoding
             kwargs["quoting"] = csv.QUOTE_MINIMAL
             if munger.file_type == "txt":
                 kwargs["sep"] = "\t"
+            elif munger.file_type == "txt-semicolon-separated":
+                kwargs["sep"] = ";"
             df = pd.read_csv(f_path, **kwargs)
         elif munger.file_type in ["xls", "xlsx"]:
             df = pd.read_excel(f_path, **kwargs)
@@ -406,17 +408,26 @@ def read_single_datafile(
                 f"Nothing read from datafile. Munger may be inconsistent, or datafile may be empty.",
             )
         else:
-            # clean the file, specifying the count columns as integer columns
+            # get count columns by name
             if munger.options['count_columns_by_name']:
                 count_cols_by_name = munger.options['count_columns_by_name']
             elif munger.options['count_columns']:
-                count_cols_by_name = [df.columns[j] for j in munger.options['count_columns']]
+                count_cols_by_name = [df.columns[j] for j in munger.options['count_columns'] if j < df.shape[1]]
             else:
                 count_cols_by_name = None
-            df, count_cols_by_name, err_df = m.generic_clean(df, int_cols_by_name=count_cols_by_name)
-            err = jm.check_results_munger_compatibility(
-                munger, df, Path(f_path).name, err
-            )
+
+            # clean the column names
+            df, count_cols_by_name, err_str = m.clean_column_names(df, count_cols_by_name)
+            if err_str:
+                err = add_new_error(
+                    err,
+                    "warn-file",
+                    Path(f_path).name,
+                    err_str
+                )
+
+            # clean the count columns
+            df, err_df = m.clean_count_cols(df, count_cols_by_name)
             if not err_df.empty:
                 # show all columns of dataframe holding rows where counts were set to 0
                 pd.set_option('max_columns',None)
@@ -427,6 +438,14 @@ def read_single_datafile(
                     f"At least one count was set to 0 in certain rows of {Path(f_path).name}:\n{err_df}"
                 )
                 pd.reset_option('max_columns')
+
+            # clean the string columns
+            str_cols = [c for c in df.columns if df.dtypes[c] == np.object]
+            df = m.clean_strings(df, str_cols)
+
+            err = jm.check_results_munger_compatibility(
+                munger, df, Path(f_path).name, err
+            )
         return df, err
     except FileNotFoundError as fnfe:
         e = f"File not found: {f_path}"
@@ -545,21 +564,39 @@ def read_combine_results(
     return working, err
 
 
-def archive(file_name: str, current_dir: str, archive_dir: str):
-    """Move <file_name> from <current_dir> to <archive_dir>. If <archive_dir> already has a file with that name,
-    prefix <prefix> to the file name and try again. If that doesn't work, add prefix and timestamp"""
-    archive = Path(archive_dir)
-    archive.mkdir(parents=True, exist_ok=True)
-    old_path = os.path.join(current_dir, file_name)
-    new_path = os.path.join(archive_dir, file_name)
+def archive_from_param_file(param_file: str, current_dir: str, archive_dir: str):
+    params, err = get_runtime_parameters(
+        required_keys=['results_file', 'aux_data_dir'],
+        header='election_data_analysis',
+        param_file=os.path.join(current_dir,param_file),
+    )
+    # TODO error handling
+    # if the ini file specifies an aux_data_directory
+    if params["aux_data_dir"] and params["aux_data_dir"] != "":
+        archive(params["aux_data_dir"], current_dir, archive_dir)
+    archive(params["results_file"], current_dir, archive_dir)
+    archive(param_file, current_dir, archive_dir)
+    return
+
+
+def archive(relative_path: str, current_dir: str, archive_dir: str):
+    """Move <relative_path> from <current_dir> to <archive_dir>. If <archive_dir> already has a file with that name,
+    add a number prefix to the name of the created file."""
+    old_path = os.path.join(current_dir, relative_path)
+    new_path = os.path.join(archive_dir, relative_path)
+
+    # Create archive directory (and any necessary subdirectories)
+    archive_dir_with_subs = Path(os.path.join(archive_dir, relative_path)).parent
+    Path(archive_dir_with_subs).mkdir(parents=True, exist_ok=True)
+
     i = 0
     while os.path.exists(new_path):
         i += 1
-        new_path = os.path.join(archive_dir, f"{i}_{file_name}")
+        new_path = os.path.join(archive_dir, f"{i}_{relative_path}")
     try:
         os.rename(old_path, new_path)
     except Exception as exc:
-        print(f"File {file_name} not moved: {exc}")
+        print(f"File {relative_path} not moved: {exc}")
     return
 
 
@@ -596,7 +633,7 @@ def new_datafile(
         )
         return err
     else:
-        count_columns_by_name = [raw.columns[x] for x in munger.options["count_columns"]]
+        count_columns_by_name = [raw.columns[x] for x in munger.options["count_columns"] if x < raw.shape[1]]
 
     try:
         new_err = m.raw_elements_to_cdf(
@@ -606,7 +643,7 @@ def new_datafile(
             raw,
             count_columns_by_name,
             err,
-            ids=results_info,
+            constants=results_info,
         )
         if new_err:
             # append munger name to jurisdiction errors/warnings key
@@ -897,8 +934,15 @@ def run_tests(test_dir: str, dbname: str, election_jurisdiction_list: Optional[l
     # run pytest
     if election_jurisdiction_list:
         for (election, juris) in election_jurisdiction_list:
-            f = f"test_{juris.replace(' ','-')}_{election.replace(' ','-')}.py"
-            os.system(f"pytest --dbname {dbname} {f}")
+            if election is None and juris is not None:
+                keyword = f"{juris.replace(' ','-')}"
+            elif juris is None and election is not None:
+                keyword = f"{juris.replace(' ','-')}"
+            elif juris is not None and election is not None:
+                keyword = f"{juris.replace(' ','-')}_{election.replace(' ','-')}"
+            else:
+                keyword = "_"
+            os.system(f"pytest --dbname {dbname} -k {keyword}")
     else:
         os.system(f"pytest --dbname {dbname}")
 
@@ -959,6 +1003,20 @@ def confirm_essential_info(
     return
 
 
+def election_juris_list(dir_path: str) -> list:
+    """Return list of all election-jurisdiction pairs in .ini files in the given directory"""
+    ej_list = []
+    for f in os.listdir(dir_path):
+        if f[-4:] == ".ini":
+            d, err = get_runtime_parameters(
+                param_file=os.path.join(dir_path,f),
+                header="'election_data_analysis",
+                required_keys=["election", "top_reporting_unit"]
+            )
+            if not err:
+                ej_list.append((d["election"],d["top_reporting_unit"]))
+    return ej_list
+
 def reload_juris_election(
         juris_name: str,
         election_name: str,
@@ -1015,16 +1073,16 @@ def reload_juris_election(
     else:
         unloaded_directory = os.path.join(archive_directory, "unloaded")
     for f in [f for f in os.listdir(archive_directory) if f[-4:] == ".ini"]:
+        param_file = os.path.join(archive_directory, f)
         params, err = get_runtime_parameters(
             required_keys=["election","top_reporting_unit","results_file"],
             header="election_data_analysis",
-            param_file=os.path.join(archive_directory, f),
+            param_file=param_file,
         )
         # if the *.ini file is for the given election and jurisdiction
         if (not err) and params["election"] == election_name and params["top_reporting_unit"] == juris_name:
-            # move both the *.ini file and its results file to the unloaded directory
-            archive(f, archive_directory, unloaded_directory)
-            archive(params["results_file"], archive_directory, unloaded_directory)
+            # move the *.ini file and its results file (and any aux_data_directory) to the unloaded directory
+            archive_from_param_file(param_file, archive_directory, unloaded_directory)
 
     # Remove existing data for juris-election pair from live db
     dl.remove_data(election_id, juris_id)

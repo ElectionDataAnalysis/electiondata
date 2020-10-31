@@ -358,6 +358,7 @@ def create_bar(
         "Selection_Id",
         "contest_type",
         "contest_district_type",
+        "Party",
     ]
     unsummed = unsummed.groupby(groupby_cols).sum().reset_index()
     multiple_ballot_types = len(unsummed["CountItemType"].unique()) > 1
@@ -408,6 +409,14 @@ def create_bar(
         candidates = temp_df["Candidate_Id"].unique()
         x = db.name_from_id(cursor, "Candidate", int(candidates[0]))
         y = db.name_from_id(cursor, "Candidate", int(candidates[1]))
+        x_party = unsummed.loc[
+            unsummed["Candidate_Id"] == candidates[0], "Party"
+        ].iloc[0]
+        x_party_abbr = create_party_abbreviation(x_party)
+        y_party = unsummed.loc[
+            unsummed["Candidate_Id"] == candidates[1], "Party"
+        ].iloc[0]
+        y_party_abbr = create_party_abbreviation(y_party)
         jurisdiction = db.name_from_id(cursor, "ReportingUnit", top_ru_id)
 
         pivot_df = pd.pivot_table(
@@ -431,6 +440,8 @@ def create_bar(
             cursor, "ReportingUnitType", int(temp_df.iloc[0]["ReportingUnitType_Id"])
         )
         results["count_item_type"] = temp_df.iloc[0]["CountItemType"]
+
+        # display votes at stake, margin info
         results["votes_at_stake_raw"] = temp_df.iloc[0]["votes_at_stake"]
         results["margin_raw"] = (
             temp_df[temp_df["rank"] == 1].iloc[0]["ind_total"]
@@ -444,16 +455,25 @@ def create_bar(
             acted = "widened"
         results["votes_at_stake"] = f"Outlier {acted} margin by ~ {votes_at_stake}"
         results["margin"] = human_readable_numbers(results["margin_raw"])
+
+        # display ballot info
         if multiple_ballot_types:
             results[
                 "ballot_types"
             ] = f"""{results["jurisdiction"]} provides data by vote type"""
         else:
             results["ballot_types"] = "Data by vote type unavailable"
+
+        # display name with party
+        results["x"] = f"""{results["x"]} ({x_party_abbr})"""
+        results["y"] = f"""{results["y"]} ({y_party_abbr})"""
+        
         results["score"] = temp_df["score"].max()
         results[
             "title"
         ] = f"""{results["count_item_type"].replace("-", " ").title()} Ballots Reported"""
+
+
         result_list.append(results)
     connection.close()
     return result_list
@@ -968,3 +988,10 @@ def get_remaining_averages(df, restrict):
     average_df = average_df.groupby("Name").mean().reset_index()
     average_df.index = [restrict-1]
     return pd.concat([actual_df, average_df])
+
+
+def create_party_abbreviation(party):
+    if party.strip().lower().startswith("none "):
+        return "N/A"
+    else:
+        return (party.strip())[0].upper()

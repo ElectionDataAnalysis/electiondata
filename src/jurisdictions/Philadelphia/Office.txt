@@ -1,0 +1,50 @@
+Name	ElectionDistrict
+US President (PA)	Philadelphia
+PA Governor	Philadelphia
+US Senate PA	Philadelphia
+PA Attorney General	Philadelphia
+PA Auditor General	Philadelphia
+PA Lieutenant Governor	Philadelphia
+PA Treasurer	Philadelphia
+PA Secretary of State	Philadelphia
+PA Senate District 1	Philadelphia;PA Senate District 1
+PA Senate District 2	Philadelphia;PA Senate District 2
+PA Senate District 3	Philadelphia;PA Senate District 3
+PA Senate District 4	Philadelphia;PA Senate District 4 (Phila)
+PA Senate District 5	Philadelphia;PA Senate District 5
+PA Senate District 6	Philadelphia;PA Senate District 6
+PA Senate District 7	Philadelphia;PA Senate District 7 (Phila)
+PA Senate District 8	Philadelphia;PA Senate District 8 (Phila)
+PA House District 152	Philadelphia;PA House District 152 (Phila)
+PA House District 170	Philadelphia;PA House District 170 (Phila)
+PA House District 172	Philadelphia;PA House District 172 (Phila)
+PA House District 173	Philadelphia;PA House District 173 (Phila)
+PA House District 174	Philadelphia;PA House District 174 (Phila)
+PA House District 175	Philadelphia;PA House District 175 (Phila)
+PA House District 177	Philadelphia;PA House District 177 (Phila)
+PA House District 179	Philadelphia;PA House District 179 (Phila)
+PA House District 180	Philadelphia;PA House District 180 (Phila)
+PA House District 181	Philadelphia;PA House District 181 (Phila)
+PA House District 182	Philadelphia;PA House District 182 (Phila)
+PA House District 184	Philadelphia;PA House District 184 (Phila)
+PA House District 185	Philadelphia;PA House District 185 (Phila)
+PA House District 186	Philadelphia;PA House District 186 (Phila)
+PA House District 188	Philadelphia;PA House District 188 (Phila)
+PA House District 190	Philadelphia;PA House District 190 (Phila)
+PA House District 191	Philadelphia;PA House District 191 (Phila)
+PA House District 192	Philadelphia;PA House District 192 (Phila)
+PA House District 194	Philadelphia;PA House District 194 (Phila)
+PA House District 195	Philadelphia;PA House District 195 (Phila)
+PA House District 197	Philadelphia;PA House District 197 (Phila)
+PA House District 198	Philadelphia;PA House District 198 (Phila)
+PA House District 200	Philadelphia;PA House District 200 (Phila)
+PA House District 201	Philadelphia;PA House District 201 (Phila)
+PA House District 202	Philadelphia;PA House District 202 (Phila)
+PA House District 203	Philadelphia;PA House District 203 (Phila)
+US House PA District 1	Philadelphia;US House PA District 1 (Phila)
+US House PA District 2	Philadelphia;US House PA District 2 (Phila)
+US House PA District 3	Philadelphia;US House PA District 3 (Phila)
+US House PA District 5	Philadelphia;US House PA District 5 (Phila)
+US House PA District 13	Philadelphia;US House PA District 13 (Phila)
+
+

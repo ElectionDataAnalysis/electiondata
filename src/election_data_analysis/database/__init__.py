@@ -453,10 +453,10 @@ def insert_to_cdf_db(
     it must be specified in <timestamp>; <df> must have columns matching <element>,
     except Id and <timestamp> if any. Returns an error message (or None)"""
 
-    # clean data
-    working, count_cols, err_df = m.generic_clean(df)
+    working = df.copy()
     if element == "Candidate":
         # enforce title case, except for 'none or unknown'
+        # TODO enforce title case only if names are all caps
         working.loc[
             working.BallotName != "none or unknown",
             "BallotName"
@@ -472,6 +472,7 @@ def insert_to_cdf_db(
 
     # identify new ReportingUnits, must later enter nesting info in db
     if element == "ReportingUnit":
+        working = m.clean_strings(working, ["Name"])
         # find any new RUs
         matched_with_old = append_id_to_dframe(
             engine, working, "ReportingUnit", {"Name": "Name"}
@@ -510,7 +511,7 @@ def insert_to_cdf_db(
     # get set <mixed_int> of cols with integers & nulls and kludge only those
     temp_columns, type_map = get_column_names(cursor, temp_table)
     mixed_int = [
-        c
+        c  # TODO Selection_Id was numerical but not int here for AZ (xml)
         for c in temp_columns
         if type_map[c] == "integer" and working[c].dtype != "int64"
     ]
@@ -550,7 +551,7 @@ def insert_to_cdf_db(
                 "UPDATE {temp_table} SET {c} = NULL WHERE {c} = 0"
             ).format(temp_table=sql.Identifier(temp_table), c=sql.Identifier(c))
             cursor.execute(q_kludge)
-        connection.commit()
+        connection.commit()   # TODO when Selection_Id was in mixed_int, this emptied temp table, why?
 
         # insert records from temp table into <element> table
         q = sql.SQL(
@@ -572,11 +573,9 @@ def insert_to_cdf_db(
     cursor.execute(q)
 
     if element == "ReportingUnit":
-        # check Id column for '' or 0 (indicating not matched)
-        if pd.api.types.is_numeric_dtype(matched_with_old[f"{element}_Id"]):
-            new_rus = matched_with_old[matched_with_old[f"{element}_Id"] == 0]
-        else:
-            new_rus = matched_with_old[matched_with_old[f"{element}_Id"] == ""]
+        # check get RUs not matched and process them
+        mask = (matched_with_old.ReportingUnit_Id > 0)
+        new_rus = matched_with_old[~mask]
         if not new_rus.empty:
             append_to_composing_reporting_unit_join(engine, new_rus)
 
@@ -615,7 +614,8 @@ def append_id_to_dframe(
     df_cols = list(col_map.keys())
 
     # create temp db table with info from df, without index
-    df, count_cols, err_df = m.generic_clean(df)
+    id_cols = [c for c in df.columns if c[-3:] == "_Id"]
+    df, err_df = m.clean_ids(df, id_cols)
     df[df_cols].fillna("").to_sql(temp_table, engine, index_label="dataframe_index")
     # TODO fillna('') probably redundant
 
@@ -634,7 +634,7 @@ def append_id_to_dframe(
     ).format(
         tt=sql.Identifier(temp_table), t=sql.Identifier(element), on_clause=on_clause
     )
-    w, count_cols, err_df = m.generic_clean(pd.read_sql_query(q, connection).set_index("dataframe_index"))
+    w = pd.read_sql_query(q, connection).set_index("dataframe_index")
 
     # drop temp db table
     q = sql.SQL("DROP TABLE {temp_table}").format(temp_table=sql.Identifier(temp_table))
@@ -642,7 +642,9 @@ def append_id_to_dframe(
     cur.execute(q)
     connection.commit()
     connection.close()
-    return df.join(w[["Id"]]).rename(columns={"Id": f"{element}_Id"})
+    df_appended = df.join(w[["Id"]]).rename(columns={"Id": f"{element}_Id"})
+    df_appended, err_df = m.clean_ids(df_appended, "Id")
+    return df_appended
 
 
 def get_column_names(cursor, table: str) -> (list, dict):
@@ -853,8 +855,8 @@ def get_input_options(session, input, verbose):
                         jurisdiction AS name, 
                         CASE WHEN d."ReportingUnit_Id" IS null THEN false ELSE true END AS type
                 FROM    crossed_with_state_id s
-                        LEFT JOIN "_datafile" d ON s."Id" = d."Election_Id"
-                       	AND s.jurisdiction_id = d."ReportingUnit_Id"
+                        LEFT JOIN (SELECT DISTINCT "Election_Id", "ReportingUnit_Id" FROM _datafile) d 
+                        ON s."Id" = d."Election_Id" AND s.jurisdiction_id = d."ReportingUnit_Id"
                 ORDER BY order_by
             """
             ).format(states=sql.Literal(states))
@@ -1060,7 +1062,16 @@ def get_filtered_input_options(session, input_str, filters):
         df = pd.DataFrame(data=data)
     # check if it's looking for a count of contests
     elif input_str == "count" and bool([f for f in filters if f.startswith("Contest")]):
-        df = get_relevant_contests(session, filters)
+        election_id = list_to_id(session, "Election", filters)
+        reporting_unit_id = list_to_id(session, "ReportingUnit", filters)
+        df = read_vote_count(
+            session, 
+            election_id, 
+            reporting_unit_id, 
+            ["ReportingUnitName", "Name", "unit_type"], 
+            ["parent", "name", "type"]
+        )
+        df = df.sort_values(["parent", "name"]).reset_index(drop=True)
     # check if it's looking for a count of candidates
     elif input_str == "count" and bool([f for f in filters if f.startswith("Candidate")]):
         election_id = list_to_id(session, "Election", filters)
@@ -1072,7 +1083,8 @@ def get_filtered_input_options(session, input_str, filters):
             ["Name", "BallotName", "PartyName", "unit_type"], 
             ["parent", "name", "type", "unit_type"]
         )
-        df = clean_candidate_names(df_unordered[df_cols])
+        df = clean_candidate_names(df_unordered)
+        df = df[["parent", "name", "unit_type"]].rename(columns={"unit_type": "type"})
     # check if it's looking for a count by party
     elif input_str == "count":
         election_id = list_to_id(session, "Election", filters)
@@ -1165,41 +1177,48 @@ def get_candidate_votecounts(session, election_id, top_ru_id, subdivision_type_i
     cursor = connection.cursor()
     q = sql.SQL(
         """
-    SELECT  vc."Id" as "VoteCount_Id", "Count", "CountItemType_Id",
-            vc."ReportingUnit_Id", "Contest_Id", "Selection_Id",
-            vc."Election_Id", "_datafile_Id", IntermediateRU."Id" as "ParentReportingUnit_Id",
-            ChildRU."Name", ChildRU."ReportingUnitType_Id",
-            IntermediateRU."Name" as "ParentName", IntermediateRU."ReportingUnitType_Id" as "ParentReportingUnitType_Id",
-            CIT."Txt" as "CountItemType", C."Name" as "Contest",
-            Cand."BallotName" as "Selection", "ElectionDistrict_Id", Cand."Id" as "Candidate_Id", "contest_type",
-            EDRUT."Txt" as "contest_district_type", P."Name" as "Party"
-            FROM "VoteCount" vc
-            LEFT JOIN _datafile d on vc."_datafile_Id" = d."Id"
-            LEFT JOIN "Contest" C on vc."Contest_Id" = C."Id"
-            LEFT JOIN "CandidateSelection" CS on CS."Id" = vc."Selection_Id"
-            LEFT JOIN "Candidate" Cand on CS."Candidate_Id" = Cand."Id"
-            LEFT JOIN "Party" P on cs."Party_Id" = P."Id"
-            -- sum over all children
-            LEFT JOIN "ReportingUnit" ChildRU on vc."ReportingUnit_Id" = ChildRU."Id"
-            LEFT JOIN "ComposingReportingUnitJoin" CRUJ_sum on ChildRU."Id" = CRUJ_sum."ChildReportingUnit_Id"
-            -- roll up to the intermediate RUs
-            LEFT JOIN "ReportingUnit" IntermediateRU on CRUJ_sum."ParentReportingUnit_Id" =IntermediateRU."Id"
-            LEFT JOIN "ReportingUnitType" IntermediateRUT on IntermediateRU."ReportingUnitType_Id" = IntermediateRUT."Id"
-            -- intermediate RUs must nest in top RU
-            LEFT JOIN "ComposingReportingUnitJoin" CRUJ_top on IntermediateRU."Id" = CRUJ_top."ChildReportingUnit_Id"
-            LEFT JOIN "ReportingUnit" TopRU on CRUJ_top."ParentReportingUnit_Id" = TopRU."Id"
-            LEFT JOIN "CountItemType" CIT on vc."CountItemType_Id" = CIT."Id"
-            LEFT JOIN "CandidateContest" on C."Id" = "CandidateContest"."Id"
-            LEFT JOIN "Office" O on "CandidateContest"."Office_Id" = O."Id"
-            LEFT JOIN "ReportingUnit" ED on O."ElectionDistrict_Id" = ED."Id"
-            LEFT JOIN "ReportingUnitType" EDRUT on ED."ReportingUnitType_Id" = EDRUT."Id"
-            WHERE C.contest_type = 'Candidate'
-                AND TopRU."Id" = %s
-                AND IntermediateRU."ReportingUnitType_Id" = %s
-                AND vc."Election_Id" = %s
+        WITH RECURSIVE unit_hierarchy AS (
+            SELECT  c.*
+            FROM    "ComposingReportingUnitJoin" c
+            WHERE   "ParentReportingUnit_Id" = %s
+            UNION
+            SELECT  c.*
+            FROM    unit_hierarchy h
+                    JOIN "ComposingReportingUnitJoin" c ON h."ChildReportingUnit_Id" = c."ParentReportingUnit_Id"
+                    JOIN "ReportingUnit" ru ON c."ParentReportingUnit_Id" = ru."Id"
+            WHERE   ru."ReportingUnitType_Id" = %s
+        )
+        , unit_hierarchy_named AS (
+            SELECT  DISTINCT c."ParentReportingUnit_Id", c."ChildReportingUnit_Id", 
+                    pru."Name" AS "ParentName", pru."ReportingUnitType_Id" AS "ParentReportingUnitType_Id",
+                    cru."Name" AS "ChildName", cru."ReportingUnitType_Id" AS "ChildReportingUnitType_Id"
+            FROM    unit_hierarchy c
+                    JOIN "ReportingUnit" pru ON c."ParentReportingUnit_Id" = pru."Id"
+                    JOIN "ReportingUnit" cru ON c."ChildReportingUnit_Id" = cru."Id"
+        )
+            SELECT  vc."Id" AS "VoteCount_Id", "Count", "CountItemType_Id",
+                    vc."ReportingUnit_Id", "Contest_Id", "Selection_Id",
+                    vc."Election_Id", IntermediateRU."ParentReportingUnit_Id",
+                    IntermediateRU."ChildName" AS "Name", IntermediateRU."ChildReportingUnitType_Id" AS "ReportingUnitType_Id",
+                    IntermediateRU."ParentName" AS "ParentName", IntermediateRU."ParentReportingUnitType_Id" AS "ParentReportingUnitType_Id",
+                    CIT."Txt" AS "CountItemType", C."Name" AS "Contest",
+                    Cand."BallotName" AS "Selection", "ElectionDistrict_Id", Cand."Id" AS "Candidate_Id", "contest_type",
+                    EDRUT."Txt" AS "contest_district_type", p."Name" as Party
+                    FROM unit_hierarchy_named IntermediateRU
+                    JOIN "VoteCount" vc ON IntermediateRU."ChildReportingUnit_Id" = vc."ReportingUnit_Id"
+                        AND IntermediateRU."ParentReportingUnitType_Id" = %s AND vc."Election_Id" = %s
+                    JOIN "Contest" C ON vc."Contest_Id" = C."Id" AND C.contest_type = 'Candidate'
+                    JOIN "CandidateSelection" CS ON CS."Id" = vc."Selection_Id"
+                    JOIN "Candidate" Cand ON CS."Candidate_Id" = Cand."Id"
+                    JOIN "CountItemType" CIT ON vc."CountItemType_Id" = CIT."Id"
+                    JOIN "CandidateContest" ON C."Id" = "CandidateContest"."Id"
+                    JOIN "Office" O ON "CandidateContest"."Office_Id" = O."Id"
+                    JOIN "ReportingUnit" ED ON O."ElectionDistrict_Id" = ED."Id"
+                    JOIN "ReportingUnitType" EDRUT ON ED."ReportingUnitType_Id" = EDRUT."Id"
+                    JOIN "Party" p on CS."Party_Id" = p."Id"
     """
     )
-    cursor.execute(q, [top_ru_id, subdivision_type_id, election_id])
+    cursor.execute(q, [top_ru_id, subdivision_type_id, subdivision_type_id, election_id])
     result = cursor.fetchall()
     result_df = pd.DataFrame(result)
     result_df.columns = [
@@ -1210,7 +1229,6 @@ def get_candidate_votecounts(session, election_id, top_ru_id, subdivision_type_i
         "Contest_Id",
         "Selection_Id",
         "Election_Id",
-        "_datafile_Id",
         "ParentReportingUnit_Id",
         "Name",
         "ReportingUnitType_Id",
@@ -1356,7 +1374,8 @@ def export_rollup_from_db(
         cursor.execute(q, [top_ru, sub_unit_type, tuple(datafile_list)])
         results = cursor.fetchall()
         results_df = pd.DataFrame(results)
-        results_df.columns = columns
+        if not results_df.empty:
+            results_df.columns = columns
         err_str = None
     except Exception as exc:
         results_df = pd.DataFrame()
@@ -1385,7 +1404,7 @@ def read_vote_count(
                 JOIN (SELECT "Id", "Name" AS "PartyName" FROM "Party") p ON cs."Party_Id" = p."Id"
                 JOIN "CandidateContest" cc ON "Contest"."Id" = cc."Id"
                 JOIN (SELECT "Id", "ElectionDistrict_Id" FROM "Office") o on cc."Office_Id" = o."Id"
-                JOIN (SELECT "Id", "ReportingUnitType_Id" FROM "ReportingUnit") ru on o."ElectionDistrict_Id" = ru."Id"
+                JOIN (SELECT "Id", "Name" as "ReportingUnitName", "ReportingUnitType_Id" FROM "ReportingUnit") ru on o."ElectionDistrict_Id" = ru."Id"
                 JOIN (SELECT "Id", "Txt" AS unit_type FROM "ReportingUnitType") rut on ru."ReportingUnitType_Id" = rut."Id"
         WHERE   "Election_Id" = %s
                 AND "ParentReportingUnit_Id" = %s
@@ -1416,6 +1435,11 @@ def clean_candidate_names(df):
     data as described in https://github.com/ElectionDataAnalysis/election_data_analysis/issues/207"""
     # Get first letter of each word in the party name except for "Party"
     # if "Party" is not in the name, then it's "None"
+    cols = df.columns
+    df_cols = ["parent", "name", "type"]
+    extra_cols = [col for col in cols if col not in df_cols]
+    extra_df = df[extra_cols]
+    df = df[df_cols]
     df["party"] = df["type"].str.split(" ")
     df["party"] = np.where(
         df["party"].str.contains("party", case=False),
@@ -1453,9 +1477,11 @@ def clean_candidate_names(df):
         df["contest"].str.split(" ").map(lambda words: "".join([word[0:3] for word in words if word != "of"])),
         df["contest_short"]
     )
-    df = df.sort_values(by=["contest_short", "party", "name"]).reset_index()
     df["name"] = df[["name", "party", "contest_short"]].apply(
         lambda x: ' - '.join(x.dropna().astype(str)),
         axis=1
     )
-    return df[["parent", "name", "type"]]
+    df = df.sort_values(by=["contest_short", "party", "name"])
+    df = df[df_cols].merge(extra_df, how="inner", left_index=True, right_index=True)
+    df.reset_index(drop=True, inplace=True)
+    return df

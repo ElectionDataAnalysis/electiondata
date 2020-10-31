@@ -227,7 +227,7 @@ def test_scatter_party():
 
 
 @pytest.mark.skipif(not ok["ga18g"], reason="No Georgia 2018 General data")
-def test_scatter_party():
+def test_scatter_party_votetype():
     assert (
         analyzer.scatter(
             "Georgia",
@@ -269,4 +269,16 @@ def test_candidate_search_display():
             filters=["Georgia", "county", "2018 General", "congressional"],
         )
         == results.ga_2018_candidate_search_display
+    )
+
+
+@pytest.mark.skipif(not ok["ga18g"], reason="No Georgia 2018 General data")
+def test_count_contest_display():
+    assert (
+        analyzer.display_options(
+            "count",
+            verbose=True,
+            filters=["Georgia", "county", "2018 General", "Contest total"],
+        )
+        == results.ga_2018_count_contest
     )

@@ -10,54 +10,60 @@ import numpy as np
 from sqlalchemy.orm.session import Session
 
 
-class MungeError(Exception):
-    pass
-
-
-def generic_clean(
+def clean_count_cols(
         df: pd.DataFrame,
-        int_cols_by_name: Optional[List[str]] = None,
-) -> (pd.DataFrame, List[str], Optional[pd.DataFrame]):
-    """Replaces nulls, strips external whitespace, compresses any internal whitespace."""
-    # TODO put all info about data cleaning into README.md (e.g., whitespace strip)
-    # TODO return error if cleaning fails, including dtypes of columns
+        cols: List[str],
+) -> (pd.DataFrame, pd.DataFrame):
+    """Casts the given columns as integers, replacing any bad
+    values with 0 and reporting a dataframe of any rows so changed."""
     err_df = pd.DataFrame()
-    if int_cols_by_name is None:
-        int_cols_by_name = list()
     working = df.copy()
-
-    # remove any columns with duplicate names, get new list of
-    working = working.loc[:,~working.columns.duplicated()]
-    new_int_cols_by_name = [c for c in working.columns if c in int_cols_by_name]
-
-    # strip any whitespace from column names
-    if isinstance(working.columns,pd.MultiIndex):
-        for j in range(len(working.columns.levels)):
-            working.columns = working.columns.set_levels(
-                working.columns.levels[j].str.strip(), level=j
-            )
-    else:
-        working.columns = [x.strip() for x in working.columns]
-
-    for c in working.columns:
-        # if c is in the given list of count_columns
-        if c in int_cols_by_name:
-            # find any values that cannot be interpreted as numeric
+    for c in cols:
+        if c in working.columns:
             mask = (working[c] != pd.to_numeric(working[c], errors='coerce'))
             if mask.any():
                 # return bad rows for error reporting
                 err_df = pd.concat([err_df, working[mask]]).drop_duplicates()
-
+        
                 # cast as int, changing any non-integer values to 0
                 working[c] = pd.to_numeric(
                     working[c],
                     errors='coerce'
                 ).fillna(0).astype("int64")
+            else:
+                working[c] = working[c].astype("int64")
+    return working, err_df
 
-        elif is_numeric_dtype(working[c]):
-            # change nulls to 0
+
+def clean_ids(
+        df: pd.DataFrame,
+        cols: List[str],
+) -> (pd.DataFrame(), pd.DataFrame):
+    """changes only the columns to of numeric type; changes them
+    to integer, with any nulls changed to 0. Reports a dataframe of 
+    any rows so changed. Non-numeric-type columns are changed to all 0"""
+    err_df = pd.DataFrame()
+    working = df.copy()
+    for c in cols:
+        if c in working.columns and is_numeric_dtype(working[c]):
+            err_df = pd.concat([err_df, working[working[c].isnull()]])
             working[c] = working[c].fillna(0).astype("int64")
-        elif working.dtypes[c] == np.object:
+        else:
+            err_df = working
+            working[c] = 0
+
+    err_df.drop_duplicates(inplace=True)
+    return working, err_df
+
+
+def clean_strings(
+        df: pd.DataFrame,
+        cols: List[str],
+) -> pd.DataFrame():
+
+    working = df.copy()
+    for c in cols:
+        if c in working.columns:
             # change nulls to the empty string
             working[c] = working[c].fillna("")
             # replace any double quotes with single quotes
@@ -71,9 +77,38 @@ def generic_clean(
                 working[c] = working[c].apply(
                     compress_whitespace
                 )
-            except (AttributeError,TypeError):
+            except (AttributeError, TypeError):
                 pass
-    return working, new_int_cols_by_name, err_df
+    return working
+
+
+def clean_column_names(
+        df: pd.DataFrame,
+        count_cols: List[str],
+) -> (pd.DataFrame, List[str], Optional[str]):
+    working = df.copy()
+
+    err_str = None
+    # remove any columns with duplicate names
+    new_working = working.loc[:,~working.columns.duplicated()]
+    # if something dropped, warn user
+    if new_working.shape != working.shape:
+        err_str = f"Duplicate column names found; these columns were dropped"
+    # restrict count_cols to columns of working
+    new_count_cols = [c for c in working.columns if c in count_cols]
+
+    # strip any whitespace from column names
+    if isinstance(working.columns, pd.MultiIndex):
+        for j in range(len(working.columns.levels)):
+            # strip whitespace at level j
+            working.columns = working.columns.set_levels(
+                working.columns.levels[j].str.strip(), level=j
+            )
+        # TODO strip whitespace from each item in count_cols as well
+    else:
+        working.columns = [c.strip() for c in working.columns]
+        new_count_cols = [c.strip() for c in new_count_cols]
+    return working, new_count_cols, err_str
 
 
 def cast_cols_as_int(
@@ -111,20 +146,8 @@ def munge_clean(raw: pd.DataFrame, munger: jm.Munger, count_columns_by_name: Lis
     Append '_SOURCE' suffix to raw column names to avoid conflicts"""
     err = None
     working = raw.copy()
+    working, count_columns_by_name, e = clean_column_names(working, count_cols=count_columns_by_name)
     try:
-        # do a generic clean
-        working, count_columns_by_name, err_df = generic_clean(working,int_cols_by_name=count_columns_by_name)
-        if not err_df.empty:
-            pd.set_option('max_columns',None)
-            err = ui.add_new_error(
-                err,
-                "warn-munger",
-                munger.name,
-                f"At least one count in some rows of {err_df} not recognized as integer; these are set to 0:\n"
-                f"{err_df}"
-            )
-            pd.reset_option('max_columns')
-
         #  define columns named in munger formulas (both plain from 'row' sourced info and
         #  'variable_j' from column-sourced)
         munger_formula_row_sourced = [
@@ -749,7 +772,10 @@ def add_selection_id(
     # prepare to append CandidateSelection_Id as Selection_Id
     if not w["Candidate"].empty:
         c_df = w["Candidate"][["Candidate_Id", "Party_Id"]].drop_duplicates()
-        c_df = c_df[(c_df.Candidate_Id.notnull()) & (c_df.Candidate_Id != 0)]
+
+        # clean Ids and drop any that were null (i.e., 0 after cleaning)
+        c_df, err_df = clean_ids(c_df, ["Candidate_Id","Party_Id"])
+        c_df = c_df[c_df.Candidate_Id != 0]
 
         # pull any existing Ids into a new CandidateSelection_Id column
         col_map = {c: c for c in ["Party_Id", "Candidate_Id"]}
@@ -778,9 +804,20 @@ def add_selection_id(
             c_df.loc[c_df_unmatched.index, "CandidateSelection_Id"] = c_df_unmatched[
                 "Id"
             ]
-        # recast Candidate_Id and Party_Id to int in w['Candidate']; Note that neither should have nulls, but rather the 'none or unknown' Id
+        # recast Candidate_Id and Party_Id to int in w['Candidate'];
+        # Note that neither should have nulls, but rather the 'none or unknown' Id
         #  NB: c_df had this recasting done in the append_id_to_dframe routine
-        w["Candidate"], count_cols, err_df = generic_clean(w["Candidate"])
+        w["Candidate"], err_df = clean_ids(w["Candidate"],["Candidate_Id","Party_Id"])
+        if not err_df.empty:
+            # show all columns of dataframe with problem in Party_Id or Candidate_Id
+            pd.set_option('max_columns', None)
+            err = ui.add_new_error(
+                err,
+                "system",
+                "munge.add_selection_id",
+                f"Problem with Candidate_Id or Party_Id in some rows:\n{err_df}"
+            )
+            pd.reset_option('max_columns')
 
         # append CandidateSelection_Id to w['Candidate']
         w["Candidate"] = w["Candidate"].merge(
@@ -805,7 +842,7 @@ def raw_elements_to_cdf(
     raw: pd.DataFrame,
     count_cols: List[str],
     err: dict,
-    ids: dict,
+    constants: dict,
 ) -> dict:
     """load data from <raw> into the database."""
     working = raw.copy()
@@ -826,8 +863,8 @@ def raw_elements_to_cdf(
         return err
 
     # enter elements from sources outside raw data, including creating id column(s)
-    for k in ids.keys():
-        working = add_constant_column(working, k, ids[k])
+    for k in constants.keys():
+        working = add_constant_column(working, k, constants[k])
 
     # add Contest_Id (unless it was passed in ids)
     if "Contest_Id" not in working.columns:
@@ -848,7 +885,7 @@ def raw_elements_to_cdf(
     element_list = [
         t
         for t in mu.cdf_elements.index
-        if (t[-7:] != "Contest" and (t[-9:] != "Selection") and f"{t}_Id" not in ids.keys())
+        if (t[-7:] != "Contest" and (t[-9:] != "Selection") and f"{t}_Id" not in constants.keys())
     ]
     for t in element_list:
         try:
@@ -877,6 +914,8 @@ def raw_elements_to_cdf(
                 # join CountItemType_Id and OtherCountItemType
                 cit = pd.read_sql_table("CountItemType", session.bind)
                 working = enum_col_to_id_othertext(working, "CountItemType", cit)
+                working, err_df = clean_ids(working, ["CountItemType_Id"])
+                working = clean_strings(working,["OtherCountItemType"])
                 working = working.drop(
                     ["raw_identifier_value", "cdf_element", "CountItemType_raw"], axis=1
                 )
@@ -916,6 +955,7 @@ def raw_elements_to_cdf(
     # add Selection_Id (combines info from BallotMeasureSelection and CandidateContestSelection)
     try:
         working, err = add_selection_id(working, session.bind, juris, err)
+        working, err_df = clean_ids(working, ["Selection_Id"])
     except Exception as exc:
         err = ui.add_new_error(
             err,
@@ -945,6 +985,7 @@ def raw_elements_to_cdf(
         '_datafile_Id',
     ]
     working = working[vc_cols]
+    working, e = clean_count_cols(working, ["Count"])
 
     if mu.alt != dict():
         # TODO there are edge cases where this might include dupes
@@ -953,6 +994,7 @@ def raw_elements_to_cdf(
         #  when VoteCount is filled)
         group_cols = [c for c in working.columns if c != 'Count']
         working = working.groupby(group_cols).sum().reset_index()
+        # TODO clean before inserting? All should be already clean, no?
 
     # Fill VoteCount
     try:

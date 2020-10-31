@@ -1,7 +1,7 @@
 import pytest
 
 def pytest_addoption(parser):
-    parser.addoption("--dbname", action="store", default="default name")
+    parser.addoption("--dbname", action="store", default=None)
 
 def pytest_generate_tests(metafunc):
     # This is called for every test. Only get/set command line arguments

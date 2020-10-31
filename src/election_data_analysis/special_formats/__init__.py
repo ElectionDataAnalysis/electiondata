@@ -90,6 +90,18 @@ def read_alternate_munger(
             f"file type not recognized: {file_type}"
         )
         raw_results = pd.DataFrame()
+
+    # clean the raw results
+    raw_results, err_df = m.clean_count_cols(raw_results, ["count"])
+    if not err_df.empty:
+        err = ui.add_new_error(
+            err,
+            "warn-file",
+            Path(f_path).name,
+            f"Some counts not read, set to 0"
+        )
+    str_cols = [c for c in raw_results.columns if c != "count"]
+    raw_results = m.clean_strings(raw_results, str_cols)
     return raw_results, err
 
 
@@ -157,10 +169,11 @@ def read_concatenated_blocks(
             header_1_list, alts = disambiguate(extract_items(header_1, w * v_t_cc))
 
             #  add disambiguated entries to munger's dictionary of alternatives
-            if "Candidate" in munger.alt.keys():
-                munger.alt["Candidate"].update(alts)
-            else:
-                munger.alt["Candidate"] = alts
+            if alts:
+                if "Candidate" in munger.alt.keys():
+                    munger.alt["Candidate"].update(alts)
+                else:
+                    munger.alt["Candidate"] = alts
 
             # create df from next batch of lines, with that multi-index
             # find idx of next empty line (or end of data)
