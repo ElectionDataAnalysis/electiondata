@@ -1,0 +1,1315 @@
+cdf_element	cdf_internal_name	raw_identifier_value
+CandidateContest	AZ House District 1 (Democratic Party) (Maricopa)	DEM State Rep Dist-1
+CandidateContest	AZ House District 1 (Libertarian Party) (Maricopa)	LBT State Rep Dist-1
+CandidateContest	AZ House District 1 (Republican Party) (Maricopa)	REP State Rep Dist-1
+CandidateContest	AZ House District 2 (Democratic Party) (Maricopa)	DEM State Rep Dist-2
+CandidateContest	AZ House District 2 (Libertarian Party) (Maricopa)	LBT State Rep Dist-2
+CandidateContest	AZ House District 2 (Republican Party) (Maricopa)	REP State Rep Dist-2
+CandidateContest	AZ House District 3 (Democratic Party) (Maricopa)	DEM State Rep Dist-3
+CandidateContest	AZ House District 3 (Libertarian Party) (Maricopa)	LBT State Rep Dist-3
+CandidateContest	AZ House District 3 (Republican Party) (Maricopa)	REP State Rep Dist-3
+CandidateContest	AZ House District 4 (Democratic Party) (Maricopa)	DEM State Rep Dist-4
+CandidateContest	AZ House District 4 (Libertarian Party) (Maricopa)	LBT State Rep Dist-4
+CandidateContest	AZ House District 4 (Republican Party) (Maricopa)	REP State Rep Dist-4
+CandidateContest	AZ House District 5 (Democratic Party) (Maricopa)	DEM State Rep Dist-5
+CandidateContest	AZ House District 5 (Libertarian Party) (Maricopa)	LBT State Rep Dist-5
+CandidateContest	AZ House District 5 (Republican Party) (Maricopa)	REP State Rep Dist-5
+CandidateContest	AZ House District 6 (Democratic Party) (Maricopa)	DEM State Rep Dist-6
+CandidateContest	AZ House District 6 (Libertarian Party) (Maricopa)	LBT State Rep Dist-6
+CandidateContest	AZ House District 6 (Republican Party) (Maricopa)	REP State Rep Dist-6
+CandidateContest	AZ House District 7 (Democratic Party) (Maricopa)	DEM State Rep Dist-7
+CandidateContest	AZ House District 7 (Libertarian Party) (Maricopa)	LBT State Rep Dist-7
+CandidateContest	AZ House District 7 (Republican Party) (Maricopa)	REP State Rep Dist-7
+CandidateContest	AZ House District 8 (Democratic Party) (Maricopa)	DEM State Rep Dist-8
+CandidateContest	AZ House District 8 (Libertarian Party) (Maricopa)	LBT State Rep Dist-8
+CandidateContest	AZ House District 8 (Republican Party) (Maricopa)	REP State Rep Dist-8
+CandidateContest	AZ House District 9 (Democratic Party) (Maricopa)	DEM State Rep Dist-9
+CandidateContest	AZ House District 9 (Libertarian Party) (Maricopa)	LBT State Rep Dist-9
+CandidateContest	AZ House District 9 (Republican Party) (Maricopa)	REP State Rep Dist-9
+CandidateContest	AZ House District 10 (Democratic Party) (Maricopa)	DEM State Rep Dist-10
+CandidateContest	AZ House District 10 (Libertarian Party) (Maricopa)	LBT State Rep Dist-10
+CandidateContest	AZ House District 10 (Republican Party) (Maricopa)	REP State Rep Dist-10
+CandidateContest	AZ House District 11 (Democratic Party) (Maricopa)	DEM State Rep Dist-11
+CandidateContest	AZ House District 11 (Libertarian Party) (Maricopa)	LBT State Rep Dist-11
+CandidateContest	AZ House District 11 (Republican Party) (Maricopa)	REP State Rep Dist-11
+CandidateContest	AZ House District 12 (Democratic Party) (Maricopa)	DEM State Rep Dist-12
+CandidateContest	AZ House District 12 (Libertarian Party) (Maricopa)	LBT State Rep Dist-12
+CandidateContest	AZ House District 12 (Republican Party) (Maricopa)	REP State Rep Dist-12
+CandidateContest	AZ House District 13 (Democratic Party) (Maricopa)	DEM State Rep Dist-13
+CandidateContest	AZ House District 13 (Libertarian Party) (Maricopa)	LBT State Rep Dist-13
+CandidateContest	AZ House District 13 (Republican Party) (Maricopa)	REP State Rep Dist-13
+CandidateContest	AZ House District 14 (Democratic Party) (Maricopa)	DEM State Rep Dist-14
+CandidateContest	AZ House District 14 (Libertarian Party) (Maricopa)	LBT State Rep Dist-14
+CandidateContest	AZ House District 14 (Republican Party) (Maricopa)	REP State Rep Dist-14
+CandidateContest	AZ House District 15 (Democratic Party) (Maricopa)	DEM State Rep Dist-15
+CandidateContest	AZ House District 15 (Libertarian Party) (Maricopa)	LBT State Rep Dist-15
+CandidateContest	AZ House District 15 (Republican Party) (Maricopa)	REP State Rep Dist-15
+CandidateContest	AZ House District 16 (Democratic Party) (Maricopa)	DEM State Rep Dist-16
+CandidateContest	AZ House District 16 (Libertarian Party) (Maricopa)	LBT State Rep Dist-16
+CandidateContest	AZ House District 16 (Republican Party) (Maricopa)	REP State Rep Dist-16
+CandidateContest	AZ House District 17 (Democratic Party) (Maricopa)	DEM State Rep Dist-17
+CandidateContest	AZ House District 17 (Libertarian Party) (Maricopa)	LBT State Rep Dist-17
+CandidateContest	AZ House District 17 (Republican Party) (Maricopa)	REP State Rep Dist-17
+CandidateContest	AZ House District 18 (Democratic Party) (Maricopa)	DEM State Rep Dist-18
+CandidateContest	AZ House District 18 (Libertarian Party) (Maricopa)	LBT State Rep Dist-18
+CandidateContest	AZ House District 18 (Republican Party) (Maricopa)	REP State Rep Dist-18
+CandidateContest	AZ House District 19 (Democratic Party) (Maricopa)	DEM State Rep Dist-19
+CandidateContest	AZ House District 19 (Libertarian Party) (Maricopa)	LBT State Rep Dist-19
+CandidateContest	AZ House District 19 (Republican Party) (Maricopa)	REP State Rep Dist-19
+CandidateContest	AZ House District 20 (Democratic Party) (Maricopa)	DEM State Rep Dist-20
+CandidateContest	AZ House District 20 (Libertarian Party) (Maricopa)	LBT State Rep Dist-20
+CandidateContest	AZ House District 20 (Republican Party) (Maricopa)	REP State Rep Dist-20
+CandidateContest	AZ House District 21 (Democratic Party) (Maricopa)	DEM State Rep Dist-21
+CandidateContest	AZ House District 21 (Libertarian Party) (Maricopa)	LBT State Rep Dist-21
+CandidateContest	AZ House District 21 (Republican Party) (Maricopa)	REP State Rep Dist-21
+CandidateContest	AZ House District 22 (Democratic Party) (Maricopa)	DEM State Rep Dist-22
+CandidateContest	AZ House District 22 (Libertarian Party) (Maricopa)	LBT State Rep Dist-22
+CandidateContest	AZ House District 22 (Republican Party) (Maricopa)	REP State Rep Dist-22
+CandidateContest	AZ House District 23 (Democratic Party) (Maricopa)	DEM State Rep Dist-23
+CandidateContest	AZ House District 23 (Libertarian Party) (Maricopa)	LBT State Rep Dist-23
+CandidateContest	AZ House District 23 (Republican Party) (Maricopa)	REP State Rep Dist-23
+CandidateContest	AZ House District 24 (Democratic Party) (Maricopa)	DEM State Rep Dist-24
+CandidateContest	AZ House District 24 (Libertarian Party) (Maricopa)	LBT State Rep Dist-24
+CandidateContest	AZ House District 24 (Republican Party) (Maricopa)	REP State Rep Dist-24
+CandidateContest	AZ House District 25 (Democratic Party) (Maricopa)	DEM State Rep Dist-25
+CandidateContest	AZ House District 25 (Libertarian Party) (Maricopa)	LBT State Rep Dist-25
+CandidateContest	AZ House District 25 (Republican Party) (Maricopa)	REP State Rep Dist-25
+CandidateContest	AZ House District 26 (Democratic Party) (Maricopa)	DEM State Rep Dist-26
+CandidateContest	AZ House District 26 (Libertarian Party) (Maricopa)	LBT State Rep Dist-26
+CandidateContest	AZ House District 26 (Republican Party) (Maricopa)	REP State Rep Dist-26
+CandidateContest	AZ House District 27 (Democratic Party) (Maricopa)	DEM State Rep Dist-27
+CandidateContest	AZ House District 27 (Libertarian Party) (Maricopa)	LBT State Rep Dist-27
+CandidateContest	AZ House District 27 (Republican Party) (Maricopa)	REP State Rep Dist-27
+CandidateContest	AZ House District 28 (Democratic Party) (Maricopa)	DEM State Rep Dist-28
+CandidateContest	AZ House District 28 (Libertarian Party) (Maricopa)	LBT State Rep Dist-28
+CandidateContest	AZ House District 28 (Republican Party) (Maricopa)	REP State Rep Dist-28
+CandidateContest	AZ House District 29 (Democratic Party) (Maricopa)	DEM State Rep Dist-29
+CandidateContest	AZ House District 29 (Libertarian Party) (Maricopa)	LBT State Rep Dist-29
+CandidateContest	AZ House District 29 (Republican Party) (Maricopa)	REP State Rep Dist-29
+CandidateContest	AZ House District 30 (Democratic Party) (Maricopa)	DEM State Rep Dist-30
+CandidateContest	AZ House District 30 (Libertarian Party) (Maricopa)	LBT State Rep Dist-30
+CandidateContest	AZ House District 30 (Republican Party) (Maricopa)	REP State Rep Dist-30
+CandidateContest	AZ House District 31 (Democratic Party) (Maricopa)	DEM State Rep Dist-31
+CandidateContest	AZ House District 31 (Libertarian Party) (Maricopa)	LBT State Rep Dist-31
+CandidateContest	AZ House District 31 (Republican Party) (Maricopa)	REP State Rep Dist-31
+CandidateContest	AZ House District 32 (Democratic Party) (Maricopa)	DEM State Rep Dist-32
+CandidateContest	AZ House District 32 (Libertarian Party) (Maricopa)	LBT State Rep Dist-32
+CandidateContest	AZ House District 32 (Republican Party) (Maricopa)	REP State Rep Dist-32
+CandidateContest	AZ House District 33 (Democratic Party) (Maricopa)	DEM State Rep Dist-33
+CandidateContest	AZ House District 33 (Libertarian Party) (Maricopa)	LBT State Rep Dist-33
+CandidateContest	AZ House District 33 (Republican Party) (Maricopa)	REP State Rep Dist-33
+CandidateContest	AZ House District 34 (Democratic Party) (Maricopa)	DEM State Rep Dist-34
+CandidateContest	AZ House District 34 (Libertarian Party) (Maricopa)	LBT State Rep Dist-34
+CandidateContest	AZ House District 34 (Republican Party) (Maricopa)	REP State Rep Dist-34
+CandidateContest	AZ House District 35 (Democratic Party) (Maricopa)	DEM State Rep Dist-35
+CandidateContest	AZ House District 35 (Libertarian Party) (Maricopa)	LBT State Rep Dist-35
+CandidateContest	AZ House District 35 (Republican Party) (Maricopa)	REP State Rep Dist-35
+CandidateContest	AZ House District 36 (Democratic Party) (Maricopa)	DEM State Rep Dist-36
+CandidateContest	AZ House District 36 (Libertarian Party) (Maricopa)	LBT State Rep Dist-36
+CandidateContest	AZ House District 36 (Republican Party) (Maricopa)	REP State Rep Dist-36
+CandidateContest	AZ House District 37 (Democratic Party) (Maricopa)	DEM State Rep Dist-37
+CandidateContest	AZ House District 37 (Libertarian Party) (Maricopa)	LBT State Rep Dist-37
+CandidateContest	AZ House District 37 (Republican Party) (Maricopa)	REP State Rep Dist-37
+CandidateContest	AZ House District 38 (Democratic Party) (Maricopa)	DEM State Rep Dist-38
+CandidateContest	AZ House District 38 (Libertarian Party) (Maricopa)	LBT State Rep Dist-38
+CandidateContest	AZ House District 38 (Republican Party) (Maricopa)	REP State Rep Dist-38
+CandidateContest	AZ House District 39 (Democratic Party) (Maricopa)	DEM State Rep Dist-39
+CandidateContest	AZ House District 39 (Libertarian Party) (Maricopa)	LBT State Rep Dist-39
+CandidateContest	AZ House District 39 (Republican Party) (Maricopa)	REP State Rep Dist-39
+CandidateContest	AZ House District 40 (Democratic Party) (Maricopa)	DEM State Rep Dist-40
+CandidateContest	AZ House District 40 (Libertarian Party) (Maricopa)	LBT State Rep Dist-40
+CandidateContest	AZ House District 40 (Republican Party) (Maricopa)	REP State Rep Dist-40
+CandidateContest	AZ House District 41 (Democratic Party) (Maricopa)	DEM State Rep Dist-41
+CandidateContest	AZ House District 41 (Libertarian Party) (Maricopa)	LBT State Rep Dist-41
+CandidateContest	AZ House District 41 (Republican Party) (Maricopa)	REP State Rep Dist-41
+CandidateContest	AZ House District 42 (Democratic Party) (Maricopa)	DEM State Rep Dist-42
+CandidateContest	AZ House District 42 (Libertarian Party) (Maricopa)	LBT State Rep Dist-42
+CandidateContest	AZ House District 42 (Republican Party) (Maricopa)	REP State Rep Dist-42
+CandidateContest	AZ House District 43 (Democratic Party) (Maricopa)	DEM State Rep Dist-43
+CandidateContest	AZ House District 43 (Libertarian Party) (Maricopa)	LBT State Rep Dist-43
+CandidateContest	AZ House District 43 (Republican Party) (Maricopa)	REP State Rep Dist-43
+CandidateContest	AZ House District 44 (Democratic Party) (Maricopa)	DEM State Rep Dist-44
+CandidateContest	AZ House District 44 (Libertarian Party) (Maricopa)	LBT State Rep Dist-44
+CandidateContest	AZ House District 44 (Republican Party) (Maricopa)	REP State Rep Dist-44
+CandidateContest	AZ House District 45 (Democratic Party) (Maricopa)	DEM State Rep Dist-45
+CandidateContest	AZ House District 45 (Libertarian Party) (Maricopa)	LBT State Rep Dist-45
+CandidateContest	AZ House District 45 (Republican Party) (Maricopa)	REP State Rep Dist-45
+CandidateContest	AZ House District 46 (Democratic Party) (Maricopa)	DEM State Rep Dist-46
+CandidateContest	AZ House District 46 (Libertarian Party) (Maricopa)	LBT State Rep Dist-46
+CandidateContest	AZ House District 46 (Republican Party) (Maricopa)	REP State Rep Dist-46
+CandidateContest	AZ House District 47 (Democratic Party) (Maricopa)	DEM State Rep Dist-47
+CandidateContest	AZ House District 47 (Libertarian Party) (Maricopa)	LBT State Rep Dist-47
+CandidateContest	AZ House District 47 (Republican Party) (Maricopa)	REP State Rep Dist-47
+CandidateContest	AZ House District 48 (Democratic Party) (Maricopa)	DEM State Rep Dist-48
+CandidateContest	AZ House District 48 (Libertarian Party) (Maricopa)	LBT State Rep Dist-48
+CandidateContest	AZ House District 48 (Republican Party) (Maricopa)	REP State Rep Dist-48
+CandidateContest	AZ House District 49 (Democratic Party) (Maricopa)	DEM State Rep Dist-49
+CandidateContest	AZ House District 49 (Libertarian Party) (Maricopa)	LBT State Rep Dist-49
+CandidateContest	AZ House District 49 (Republican Party) (Maricopa)	REP State Rep Dist-49
+CandidateContest	AZ House District 50 (Democratic Party) (Maricopa)	DEM State Rep Dist-50
+CandidateContest	AZ House District 50 (Libertarian Party) (Maricopa)	LBT State Rep Dist-50
+CandidateContest	AZ House District 50 (Republican Party) (Maricopa)	REP State Rep Dist-50
+CandidateContest	AZ House District 51 (Democratic Party) (Maricopa)	DEM State Rep Dist-51
+CandidateContest	AZ House District 51 (Libertarian Party) (Maricopa)	LBT State Rep Dist-51
+CandidateContest	AZ House District 51 (Republican Party) (Maricopa)	REP State Rep Dist-51
+CandidateContest	AZ House District 52 (Democratic Party) (Maricopa)	DEM State Rep Dist-52
+CandidateContest	AZ House District 52 (Libertarian Party) (Maricopa)	LBT State Rep Dist-52
+CandidateContest	AZ House District 52 (Republican Party) (Maricopa)	REP State Rep Dist-52
+CandidateContest	AZ House District 53 (Democratic Party) (Maricopa)	DEM State Rep Dist-53
+CandidateContest	AZ House District 53 (Libertarian Party) (Maricopa)	LBT State Rep Dist-53
+CandidateContest	AZ House District 53 (Republican Party) (Maricopa)	REP State Rep Dist-53
+CandidateContest	AZ House District 54 (Democratic Party) (Maricopa)	DEM State Rep Dist-54
+CandidateContest	AZ House District 54 (Libertarian Party) (Maricopa)	LBT State Rep Dist-54
+CandidateContest	AZ House District 54 (Republican Party) (Maricopa)	REP State Rep Dist-54
+CandidateContest	AZ House District 55 (Democratic Party) (Maricopa)	DEM State Rep Dist-55
+CandidateContest	AZ House District 55 (Libertarian Party) (Maricopa)	LBT State Rep Dist-55
+CandidateContest	AZ House District 55 (Republican Party) (Maricopa)	REP State Rep Dist-55
+CandidateContest	AZ House District 56 (Democratic Party) (Maricopa)	DEM State Rep Dist-56
+CandidateContest	AZ House District 56 (Libertarian Party) (Maricopa)	LBT State Rep Dist-56
+CandidateContest	AZ House District 56 (Republican Party) (Maricopa)	REP State Rep Dist-56
+CandidateContest	AZ House District 57 (Democratic Party) (Maricopa)	DEM State Rep Dist-57
+CandidateContest	AZ House District 57 (Libertarian Party) (Maricopa)	LBT State Rep Dist-57
+CandidateContest	AZ House District 57 (Republican Party) (Maricopa)	REP State Rep Dist-57
+CandidateContest	AZ House District 58 (Democratic Party) (Maricopa)	DEM State Rep Dist-58
+CandidateContest	AZ House District 58 (Libertarian Party) (Maricopa)	LBT State Rep Dist-58
+CandidateContest	AZ House District 58 (Republican Party) (Maricopa)	REP State Rep Dist-58
+CandidateContest	AZ House District 59 (Democratic Party) (Maricopa)	DEM State Rep Dist-59
+CandidateContest	AZ House District 59 (Libertarian Party) (Maricopa)	LBT State Rep Dist-59
+CandidateContest	AZ House District 59 (Republican Party) (Maricopa)	REP State Rep Dist-59
+CandidateContest	AZ House District 60 (Democratic Party) (Maricopa)	DEM State Rep Dist-60
+CandidateContest	AZ House District 60 (Libertarian Party) (Maricopa)	LBT State Rep Dist-60
+CandidateContest	AZ House District 60 (Republican Party) (Maricopa)	REP State Rep Dist-60
+CandidateContest	AZ Senate District 1 (Democratic Party) (Maricopa)	DEM State Senator Dist-1
+CandidateContest	AZ Senate District 1 (Libertarian Party) (Maricopa)	LBT State Senator Dist-1
+CandidateContest	AZ Senate District 1 (Republican Party) (Maricopa)	REP State Senator Dist-1
+CandidateContest	AZ Senate District 2 (Democratic Party) (Maricopa)	DEM State Senator Dist-2
+CandidateContest	AZ Senate District 2 (Libertarian Party) (Maricopa)	LBT State Senator Dist-2
+CandidateContest	AZ Senate District 2 (Republican Party) (Maricopa)	REP State Senator Dist-2
+CandidateContest	AZ Senate District 3 (Democratic Party) (Maricopa)	DEM State Senator Dist-3
+CandidateContest	AZ Senate District 3 (Libertarian Party) (Maricopa)	LBT State Senator Dist-3
+CandidateContest	AZ Senate District 3 (Republican Party) (Maricopa)	REP State Senator Dist-3
+CandidateContest	AZ Senate District 4 (Democratic Party) (Maricopa)	DEM State Senator Dist-4
+CandidateContest	AZ Senate District 4 (Libertarian Party) (Maricopa)	LBT State Senator Dist-4
+CandidateContest	AZ Senate District 4 (Republican Party) (Maricopa)	REP State Senator Dist-4
+CandidateContest	AZ Senate District 5 (Democratic Party) (Maricopa)	DEM State Senator Dist-5
+CandidateContest	AZ Senate District 5 (Libertarian Party) (Maricopa)	LBT State Senator Dist-5
+CandidateContest	AZ Senate District 5 (Republican Party) (Maricopa)	REP State Senator Dist-5
+CandidateContest	AZ Senate District 6 (Democratic Party) (Maricopa)	DEM State Senator Dist-6
+CandidateContest	AZ Senate District 6 (Libertarian Party) (Maricopa)	LBT State Senator Dist-6
+CandidateContest	AZ Senate District 6 (Republican Party) (Maricopa)	REP State Senator Dist-6
+CandidateContest	AZ Senate District 7 (Democratic Party) (Maricopa)	DEM State Senator Dist-7
+CandidateContest	AZ Senate District 7 (Libertarian Party) (Maricopa)	LBT State Senator Dist-7
+CandidateContest	AZ Senate District 7 (Republican Party) (Maricopa)	REP State Senator Dist-7
+CandidateContest	AZ Senate District 8 (Democratic Party) (Maricopa)	DEM State Senator Dist-8
+CandidateContest	AZ Senate District 8 (Libertarian Party) (Maricopa)	LBT State Senator Dist-8
+CandidateContest	AZ Senate District 8 (Republican Party) (Maricopa)	REP State Senator Dist-8
+CandidateContest	AZ Senate District 9 (Democratic Party) (Maricopa)	DEM State Senator Dist-9
+CandidateContest	AZ Senate District 9 (Libertarian Party) (Maricopa)	LBT State Senator Dist-9
+CandidateContest	AZ Senate District 9 (Republican Party) (Maricopa)	REP State Senator Dist-9
+CandidateContest	AZ Senate District 10 (Democratic Party) (Maricopa)	DEM State Senator Dist-10
+CandidateContest	AZ Senate District 10 (Libertarian Party) (Maricopa)	LBT State Senator Dist-10
+CandidateContest	AZ Senate District 10 (Republican Party) (Maricopa)	REP State Senator Dist-10
+CandidateContest	AZ Senate District 11 (Democratic Party) (Maricopa)	DEM State Senator Dist-11
+CandidateContest	AZ Senate District 11 (Libertarian Party) (Maricopa)	LBT State Senator Dist-11
+CandidateContest	AZ Senate District 11 (Republican Party) (Maricopa)	REP State Senator Dist-11
+CandidateContest	AZ Senate District 12 (Democratic Party) (Maricopa)	DEM State Senator Dist-12
+CandidateContest	AZ Senate District 12 (Libertarian Party) (Maricopa)	LBT State Senator Dist-12
+CandidateContest	AZ Senate District 12 (Republican Party) (Maricopa)	REP State Senator Dist-12
+CandidateContest	AZ Senate District 13 (Democratic Party) (Maricopa)	DEM State Senator Dist-13
+CandidateContest	AZ Senate District 13 (Libertarian Party) (Maricopa)	LBT State Senator Dist-13
+CandidateContest	AZ Senate District 13 (Republican Party) (Maricopa)	REP State Senator Dist-13
+CandidateContest	AZ Senate District 14 (Democratic Party) (Maricopa)	DEM State Senator Dist-14
+CandidateContest	AZ Senate District 14 (Libertarian Party) (Maricopa)	LBT State Senator Dist-14
+CandidateContest	AZ Senate District 14 (Republican Party) (Maricopa)	REP State Senator Dist-14
+CandidateContest	AZ Senate District 15 (Democratic Party) (Maricopa)	DEM State Senator Dist-15
+CandidateContest	AZ Senate District 15 (Libertarian Party) (Maricopa)	LBT State Senator Dist-15
+CandidateContest	AZ Senate District 15 (Republican Party) (Maricopa)	REP State Senator Dist-15
+CandidateContest	AZ Senate District 16 (Democratic Party) (Maricopa)	DEM State Senator Dist-16
+CandidateContest	AZ Senate District 16 (Libertarian Party) (Maricopa)	LBT State Senator Dist-16
+CandidateContest	AZ Senate District 16 (Republican Party) (Maricopa)	REP State Senator Dist-16
+CandidateContest	AZ Senate District 17 (Democratic Party) (Maricopa)	DEM State Senator Dist-17
+CandidateContest	AZ Senate District 17 (Libertarian Party) (Maricopa)	LBT State Senator Dist-17
+CandidateContest	AZ Senate District 17 (Republican Party) (Maricopa)	REP State Senator Dist-17
+CandidateContest	AZ Senate District 18 (Democratic Party) (Maricopa)	DEM State Senator Dist-18
+CandidateContest	AZ Senate District 18 (Libertarian Party) (Maricopa)	LBT State Senator Dist-18
+CandidateContest	AZ Senate District 18 (Republican Party) (Maricopa)	REP State Senator Dist-18
+CandidateContest	AZ Senate District 19 (Democratic Party) (Maricopa)	DEM State Senator Dist-19
+CandidateContest	AZ Senate District 19 (Libertarian Party) (Maricopa)	LBT State Senator Dist-19
+CandidateContest	AZ Senate District 19 (Republican Party) (Maricopa)	REP State Senator Dist-19
+CandidateContest	AZ Senate District 20 (Democratic Party) (Maricopa)	DEM State Senator Dist-20
+CandidateContest	AZ Senate District 20 (Libertarian Party) (Maricopa)	LBT State Senator Dist-20
+CandidateContest	AZ Senate District 20 (Republican Party) (Maricopa)	REP State Senator Dist-20
+CandidateContest	AZ Senate District 21 (Democratic Party) (Maricopa)	DEM State Senator Dist-21
+CandidateContest	AZ Senate District 21 (Libertarian Party) (Maricopa)	LBT State Senator Dist-21
+CandidateContest	AZ Senate District 21 (Republican Party) (Maricopa)	REP State Senator Dist-21
+CandidateContest	AZ Senate District 22 (Democratic Party) (Maricopa)	DEM State Senator Dist-22
+CandidateContest	AZ Senate District 22 (Libertarian Party) (Maricopa)	LBT State Senator Dist-22
+CandidateContest	AZ Senate District 22 (Republican Party) (Maricopa)	REP State Senator Dist-22
+CandidateContest	AZ Senate District 23 (Democratic Party) (Maricopa)	DEM State Senator Dist-23
+CandidateContest	AZ Senate District 23 (Libertarian Party) (Maricopa)	LBT State Senator Dist-23
+CandidateContest	AZ Senate District 23 (Republican Party) (Maricopa)	REP State Senator Dist-23
+CandidateContest	AZ Senate District 24 (Democratic Party) (Maricopa)	DEM State Senator Dist-24
+CandidateContest	AZ Senate District 24 (Libertarian Party) (Maricopa)	LBT State Senator Dist-24
+CandidateContest	AZ Senate District 24 (Republican Party) (Maricopa)	REP State Senator Dist-24
+CandidateContest	AZ Senate District 25 (Democratic Party) (Maricopa)	DEM State Senator Dist-25
+CandidateContest	AZ Senate District 25 (Libertarian Party) (Maricopa)	LBT State Senator Dist-25
+CandidateContest	AZ Senate District 25 (Republican Party) (Maricopa)	REP State Senator Dist-25
+CandidateContest	AZ Senate District 26 (Democratic Party) (Maricopa)	DEM State Senator Dist-26
+CandidateContest	AZ Senate District 26 (Libertarian Party) (Maricopa)	LBT State Senator Dist-26
+CandidateContest	AZ Senate District 26 (Republican Party) (Maricopa)	REP State Senator Dist-26
+CandidateContest	AZ Senate District 27 (Democratic Party) (Maricopa)	DEM State Senator Dist-27
+CandidateContest	AZ Senate District 27 (Libertarian Party) (Maricopa)	LBT State Senator Dist-27
+CandidateContest	AZ Senate District 27 (Republican Party) (Maricopa)	REP State Senator Dist-27
+CandidateContest	AZ Senate District 28 (Democratic Party) (Maricopa)	DEM State Senator Dist-28
+CandidateContest	AZ Senate District 28 (Libertarian Party) (Maricopa)	LBT State Senator Dist-28
+CandidateContest	AZ Senate District 28 (Republican Party) (Maricopa)	REP State Senator Dist-28
+CandidateContest	AZ Senate District 29 (Democratic Party) (Maricopa)	DEM State Senator Dist-29
+CandidateContest	AZ Senate District 29 (Libertarian Party) (Maricopa)	LBT State Senator Dist-29
+CandidateContest	AZ Senate District 29 (Republican Party) (Maricopa)	REP State Senator Dist-29
+CandidateContest	AZ Senate District 30 (Democratic Party) (Maricopa)	DEM State Senator Dist-30
+CandidateContest	AZ Senate District 30 (Libertarian Party) (Maricopa)	LBT State Senator Dist-30
+CandidateContest	AZ Senate District 30 (Republican Party) (Maricopa)	REP State Senator Dist-30
+CandidateContest	US House AZ District 1 (Democratic Party) (Maricopa)	DEM US Rep Dist CD-1
+CandidateContest	US House AZ District 1 (Libertarian Party) (Maricopa)	LBT US Rep Dist CD-1
+CandidateContest	US House AZ District 1 (Republican Party) (Maricopa)	REP US Rep Dist CD-1
+CandidateContest	US House AZ District 2 (Democratic Party) (Maricopa)	DEM US Rep Dist CD-2
+CandidateContest	US House AZ District 2 (Libertarian Party) (Maricopa)	LBT US Rep Dist CD-2
+CandidateContest	US House AZ District 2 (Republican Party) (Maricopa)	REP US Rep Dist CD-2
+CandidateContest	US House AZ District 3 (Democratic Party) (Maricopa)	DEM US Rep Dist CD-3
+CandidateContest	US House AZ District 3 (Libertarian Party) (Maricopa)	LBT US Rep Dist CD-3
+CandidateContest	US House AZ District 3 (Republican Party) (Maricopa)	REP US Rep Dist CD-3
+CandidateContest	US House AZ District 4 (Democratic Party) (Maricopa)	DEM US Rep Dist CD-4
+CandidateContest	US House AZ District 4 (Libertarian Party) (Maricopa)	LBT US Rep Dist CD-4
+CandidateContest	US House AZ District 4 (Republican Party) (Maricopa)	REP US Rep Dist CD-4
+CandidateContest	US House AZ District 5 (Democratic Party) (Maricopa)	DEM US Rep Dist CD-5
+CandidateContest	US House AZ District 5 (Libertarian Party) (Maricopa)	LBT US Rep Dist CD-5
+CandidateContest	US House AZ District 5 (Republican Party) (Maricopa)	REP US Rep Dist CD-5
+CandidateContest	US House AZ District 6 (Democratic Party) (Maricopa)	DEM US Rep Dist CD-6
+CandidateContest	US House AZ District 6 (Libertarian Party) (Maricopa)	LBT US Rep Dist CD-6
+CandidateContest	US House AZ District 6 (Republican Party) (Maricopa)	REP US Rep Dist CD-6
+CandidateContest	US House AZ District 7 (Democratic Party) (Maricopa)	DEM US Rep Dist CD-7
+CandidateContest	US House AZ District 7 (Libertarian Party) (Maricopa)	LBT US Rep Dist CD-7
+CandidateContest	US House AZ District 7 (Republican Party) (Maricopa)	REP US Rep Dist CD-7
+CandidateContest	US House AZ District 8 (Democratic Party) (Maricopa)	DEM US Rep Dist CD-8
+CandidateContest	US House AZ District 8 (Libertarian Party) (Maricopa)	LBT US Rep Dist CD-8
+CandidateContest	US House AZ District 8 (Republican Party) (Maricopa)	REP US Rep Dist CD-8
+CandidateContest	US House AZ District 9 (Democratic Party) (Maricopa)	DEM US Rep Dist CD-9
+CandidateContest	US House AZ District 9 (Libertarian Party) (Maricopa)	LBT US Rep Dist CD-9
+CandidateContest	US House AZ District 9 (Republican Party) (Maricopa)	REP US Rep Dist CD-9
+CandidateContest	US President (AZ) (Democratic Party) (Maricopa)	US President (AZ) (Democratic Party)
+CandidateContest	AZ Governor (Democratic Party) (Maricopa)	AZ Governor (Democratic Party)
+CandidateContest	US Senate AZ (Democratic Party) (Maricopa)	U.S. Senator (Democratic Party)
+CandidateContest	US Senate AZ Partial Term (Democratic Party) (Maricopa)	DEM US Senate-Term Expires  JANUARY 3, 2023
+CandidateContest	US Senate AZ Partial Term (Libertarian Party) (Maricopa)	LBT US Senate-Term Expires  JANUARY 3, 2023
+CandidateContest	US Senate AZ Partial Term (Republican Party) (Maricopa)	REP US Senate-Term Expires  JANUARY 3, 2023
+CandidateContest	AZ Corporation Commissioner (Democratic Party) (Maricopa)	Corporation Commissioner (Democratic Party)
+CandidateContest	AZ Attorney General (Democratic Party) (Maricopa)	AZ Attorney General (Democratic Party)
+CandidateContest	AZ Lieutenant Governor (Democratic Party) (Maricopa)	AZ Lieutenant Governor (Democratic Party)
+CandidateContest	AZ Treasurer (Democratic Party) (Maricopa)	AZ Treasurer (Democratic Party)
+CandidateContest	AZ Secretary of State (Democratic Party) (Maricopa)	AZ Secretary of State (Democratic Party)
+CandidateContest	AZ House District 1 (Democratic Party) (Maricopa)	State Representative - District No. 1 (DEM)
+CandidateContest	AZ House District 2 (Democratic Party) (Maricopa)	State Representative - District No. 2 (DEM)
+CandidateContest	AZ House District 3 (Democratic Party) (Maricopa)	State Representative - District No. 3 (DEM)
+CandidateContest	AZ House District 4 (Democratic Party) (Maricopa)	State Representative - District No. 4 (DEM)
+CandidateContest	AZ House District 5 (Democratic Party) (Maricopa)	State Representative - District No. 5 (DEM)
+CandidateContest	AZ House District 6 (Democratic Party) (Maricopa)	State Representative - District No. 6 (DEM)
+CandidateContest	AZ House District 7 (Democratic Party) (Maricopa)	State Representative - District No. 7 (DEM)
+CandidateContest	AZ House District 8 (Democratic Party) (Maricopa)	State Representative - District No. 8 (DEM)
+CandidateContest	AZ House District 9 (Democratic Party) (Maricopa)	State Representative - District No. 9 (DEM)
+CandidateContest	AZ House District 10 (Democratic Party) (Maricopa)	State Representative - District No. 10 (DEM)
+CandidateContest	AZ House District 11 (Democratic Party) (Maricopa)	State Representative - District No. 11 (DEM)
+CandidateContest	AZ House District 12 (Democratic Party) (Maricopa)	State Representative - District No. 12 (DEM)
+CandidateContest	AZ House District 13 (Democratic Party) (Maricopa)	State Representative - District No. 13 (DEM)
+CandidateContest	AZ House District 14 (Democratic Party) (Maricopa)	State Representative - District No. 14 (DEM)
+CandidateContest	AZ House District 15 (Democratic Party) (Maricopa)	State Representative - District No. 15 (DEM)
+CandidateContest	AZ House District 16 (Democratic Party) (Maricopa)	State Representative - District No. 16 (DEM)
+CandidateContest	AZ House District 17 (Democratic Party) (Maricopa)	State Representative - District No. 17 (DEM)
+CandidateContest	AZ House District 18 (Democratic Party) (Maricopa)	State Representative - District No. 18 (DEM)
+CandidateContest	AZ House District 19 (Democratic Party) (Maricopa)	State Representative - District No. 19 (DEM)
+CandidateContest	AZ House District 20 (Democratic Party) (Maricopa)	State Representative - District No. 20 (DEM)
+CandidateContest	AZ House District 21 (Democratic Party) (Maricopa)	State Representative - District No. 21 (DEM)
+CandidateContest	AZ House District 22 (Democratic Party) (Maricopa)	State Representative - District No. 22 (DEM)
+CandidateContest	AZ House District 23 (Democratic Party) (Maricopa)	State Representative - District No. 23 (DEM)
+CandidateContest	AZ House District 24 (Democratic Party) (Maricopa)	State Representative - District No. 24 (DEM)
+CandidateContest	AZ House District 25 (Democratic Party) (Maricopa)	State Representative - District No. 25 (DEM)
+CandidateContest	AZ House District 26 (Democratic Party) (Maricopa)	State Representative - District No. 26 (DEM)
+CandidateContest	AZ House District 27 (Democratic Party) (Maricopa)	State Representative - District No. 27 (DEM)
+CandidateContest	AZ House District 28 (Democratic Party) (Maricopa)	State Representative - District No. 28 (DEM)
+CandidateContest	AZ House District 29 (Democratic Party) (Maricopa)	State Representative - District No. 29 (DEM)
+CandidateContest	AZ House District 30 (Democratic Party) (Maricopa)	State Representative - District No. 30 (DEM)
+CandidateContest	AZ House District 31 (Democratic Party) (Maricopa)	State Representative - District No. 31 (DEM)
+CandidateContest	AZ House District 32 (Democratic Party) (Maricopa)	State Representative - District No. 32 (DEM)
+CandidateContest	AZ House District 33 (Democratic Party) (Maricopa)	State Representative - District No. 33 (DEM)
+CandidateContest	AZ House District 34 (Democratic Party) (Maricopa)	State Representative - District No. 34 (DEM)
+CandidateContest	AZ House District 35 (Democratic Party) (Maricopa)	State Representative - District No. 35 (DEM)
+CandidateContest	AZ House District 36 (Democratic Party) (Maricopa)	State Representative - District No. 36 (DEM)
+CandidateContest	AZ House District 37 (Democratic Party) (Maricopa)	State Representative - District No. 37 (DEM)
+CandidateContest	AZ House District 38 (Democratic Party) (Maricopa)	State Representative - District No. 38 (DEM)
+CandidateContest	AZ House District 39 (Democratic Party) (Maricopa)	State Representative - District No. 39 (DEM)
+CandidateContest	AZ House District 40 (Democratic Party) (Maricopa)	State Representative - District No. 40 (DEM)
+CandidateContest	AZ House District 41 (Democratic Party) (Maricopa)	State Representative - District No. 41 (DEM)
+CandidateContest	AZ House District 42 (Democratic Party) (Maricopa)	State Representative - District No. 42 (DEM)
+CandidateContest	AZ House District 43 (Democratic Party) (Maricopa)	State Representative - District No. 43 (DEM)
+CandidateContest	AZ House District 44 (Democratic Party) (Maricopa)	State Representative - District No. 44 (DEM)
+CandidateContest	AZ House District 45 (Democratic Party) (Maricopa)	State Representative - District No. 45 (DEM)
+CandidateContest	AZ House District 46 (Democratic Party) (Maricopa)	State Representative - District No. 46 (DEM)
+CandidateContest	AZ House District 47 (Democratic Party) (Maricopa)	State Representative - District No. 47 (DEM)
+CandidateContest	AZ House District 48 (Democratic Party) (Maricopa)	State Representative - District No. 48 (DEM)
+CandidateContest	AZ House District 49 (Democratic Party) (Maricopa)	State Representative - District No. 49 (DEM)
+CandidateContest	AZ House District 50 (Democratic Party) (Maricopa)	State Representative - District No. 50 (DEM)
+CandidateContest	AZ House District 51 (Democratic Party) (Maricopa)	State Representative - District No. 51 (DEM)
+CandidateContest	AZ House District 52 (Democratic Party) (Maricopa)	State Representative - District No. 52 (DEM)
+CandidateContest	AZ House District 53 (Democratic Party) (Maricopa)	State Representative - District No. 53 (DEM)
+CandidateContest	AZ House District 54 (Democratic Party) (Maricopa)	State Representative - District No. 54 (DEM)
+CandidateContest	AZ House District 55 (Democratic Party) (Maricopa)	State Representative - District No. 55 (DEM)
+CandidateContest	AZ House District 56 (Democratic Party) (Maricopa)	State Representative - District No. 56 (DEM)
+CandidateContest	AZ House District 57 (Democratic Party) (Maricopa)	State Representative - District No. 57 (DEM)
+CandidateContest	AZ House District 58 (Democratic Party) (Maricopa)	State Representative - District No. 58 (DEM)
+CandidateContest	AZ House District 59 (Democratic Party) (Maricopa)	State Representative - District No. 59 (DEM)
+CandidateContest	AZ House District 60 (Democratic Party) (Maricopa)	State Representative - District No. 60 (DEM)
+CandidateContest	AZ Senate District 1 (Democratic Party) (Maricopa)	State Senator - District No. 1 (DEM)
+CandidateContest	AZ Senate District 2 (Democratic Party) (Maricopa)	State Senator - District No. 2 (DEM)
+CandidateContest	AZ Senate District 3 (Democratic Party) (Maricopa)	State Senator - District No. 3 (DEM)
+CandidateContest	AZ Senate District 4 (Democratic Party) (Maricopa)	State Senator - District No. 4 (DEM)
+CandidateContest	AZ Senate District 5 (Democratic Party) (Maricopa)	State Senator - District No. 5 (DEM)
+CandidateContest	AZ Senate District 6 (Democratic Party) (Maricopa)	State Senator - District No. 6 (DEM)
+CandidateContest	AZ Senate District 7 (Democratic Party) (Maricopa)	State Senator - District No. 7 (DEM)
+CandidateContest	AZ Senate District 8 (Democratic Party) (Maricopa)	State Senator - District No. 8 (DEM)
+CandidateContest	AZ Senate District 9 (Democratic Party) (Maricopa)	State Senator - District No. 9 (DEM)
+CandidateContest	AZ Senate District 10 (Democratic Party) (Maricopa)	State Senator - District No. 10 (DEM)
+CandidateContest	AZ Senate District 11 (Democratic Party) (Maricopa)	State Senator - District No. 11 (DEM)
+CandidateContest	AZ Senate District 12 (Democratic Party) (Maricopa)	State Senator - District No. 12 (DEM)
+CandidateContest	AZ Senate District 13 (Democratic Party) (Maricopa)	State Senator - District No. 13 (DEM)
+CandidateContest	AZ Senate District 14 (Democratic Party) (Maricopa)	State Senator - District No. 14 (DEM)
+CandidateContest	AZ Senate District 15 (Democratic Party) (Maricopa)	State Senator - District No. 15 (DEM)
+CandidateContest	AZ Senate District 16 (Democratic Party) (Maricopa)	State Senator - District No. 16 (DEM)
+CandidateContest	AZ Senate District 17 (Democratic Party) (Maricopa)	State Senator - District No. 17 (DEM)
+CandidateContest	AZ Senate District 18 (Democratic Party) (Maricopa)	State Senator - District No. 18 (DEM)
+CandidateContest	AZ Senate District 19 (Democratic Party) (Maricopa)	State Senator - District No. 19 (DEM)
+CandidateContest	AZ Senate District 20 (Democratic Party) (Maricopa)	State Senator - District No. 20 (DEM)
+CandidateContest	AZ Senate District 21 (Democratic Party) (Maricopa)	State Senator - District No. 21 (DEM)
+CandidateContest	AZ Senate District 22 (Democratic Party) (Maricopa)	State Senator - District No. 22 (DEM)
+CandidateContest	AZ Senate District 23 (Democratic Party) (Maricopa)	State Senator - District No. 23 (DEM)
+CandidateContest	AZ Senate District 24 (Democratic Party) (Maricopa)	State Senator - District No. 24 (DEM)
+CandidateContest	AZ Senate District 25 (Democratic Party) (Maricopa)	State Senator - District No. 25 (DEM)
+CandidateContest	AZ Senate District 26 (Democratic Party) (Maricopa)	State Senator - District No. 26 (DEM)
+CandidateContest	AZ Senate District 27 (Democratic Party) (Maricopa)	State Senator - District No. 27 (DEM)
+CandidateContest	AZ Senate District 28 (Democratic Party) (Maricopa)	State Senator - District No. 28 (DEM)
+CandidateContest	AZ Senate District 29 (Democratic Party) (Maricopa)	State Senator - District No. 29 (DEM)
+CandidateContest	AZ Senate District 30 (Democratic Party) (Maricopa)	State Senator - District No. 30 (DEM)
+CandidateContest	US House AZ District 1 (Democratic Party) (Maricopa)	U.S. Representative in Congress - District No. 1 (DEM)
+CandidateContest	US House AZ District 2 (Democratic Party) (Maricopa)	U.S. Representative in Congress - District No. 2 (DEM)
+CandidateContest	US House AZ District 3 (Democratic Party) (Maricopa)	U.S. Representative in Congress - District No. 3 (DEM)
+CandidateContest	US House AZ District 4 (Democratic Party) (Maricopa)	U.S. Representative in Congress - District No. 4 (DEM)
+CandidateContest	US House AZ District 5 (Democratic Party) (Maricopa)	U.S. Representative in Congress - District No. 5 (DEM)
+CandidateContest	US House AZ District 6 (Democratic Party) (Maricopa)	U.S. Representative in Congress - District No. 6 (DEM)
+CandidateContest	US House AZ District 7 (Democratic Party) (Maricopa)	U.S. Representative in Congress - District No. 7 (DEM)
+CandidateContest	US House AZ District 8 (Democratic Party) (Maricopa)	U.S. Representative in Congress - District No. 8 (DEM)
+CandidateContest	US House AZ District 9 (Democratic Party) (Maricopa)	U.S. Representative in Congress - District No. 9 (DEM)
+CandidateContest	US President (AZ) (Democratic Party) (Maricopa)	Democratic Presidential Preference
+CandidateContest	AZ Governor (Democratic Party) (Maricopa)	AZ Governor (DEM)
+CandidateContest	US Senate AZ (Democratic Party) (Maricopa)	U.S. Senator (DEM)
+CandidateContest	AZ Corporation Commissioner (Democratic Party) (Maricopa)	Corporation Commissioner (DEM)
+CandidateContest	AZ Attorney General (Democratic Party) (Maricopa)	AZ Attorney General (DEM)
+CandidateContest	AZ Lieutenant Governor (Democratic Party) (Maricopa)	AZ Lieutenant Governor (DEM)
+CandidateContest	AZ Treasurer (Democratic Party) (Maricopa)	AZ Treasurer (DEM)
+CandidateContest	AZ Secretary of State (Democratic Party) (Maricopa)	AZ Secretary of State (DEM)
+CandidateContest	AZ House District 1 (Republican Party) (Maricopa)	State Representative - District No. 1 (Republican Party)
+CandidateContest	AZ House District 2 (Republican Party) (Maricopa)	State Representative - District No. 2 (Republican Party)
+CandidateContest	AZ House District 3 (Republican Party) (Maricopa)	State Representative - District No. 3 (Republican Party)
+CandidateContest	AZ House District 4 (Republican Party) (Maricopa)	State Representative - District No. 4 (Republican Party)
+CandidateContest	AZ House District 5 (Republican Party) (Maricopa)	State Representative - District No. 5 (Republican Party)
+CandidateContest	AZ House District 6 (Republican Party) (Maricopa)	State Representative - District No. 6 (Republican Party)
+CandidateContest	AZ House District 7 (Republican Party) (Maricopa)	State Representative - District No. 7 (Republican Party)
+CandidateContest	AZ House District 8 (Republican Party) (Maricopa)	State Representative - District No. 8 (Republican Party)
+CandidateContest	AZ House District 9 (Republican Party) (Maricopa)	State Representative - District No. 9 (Republican Party)
+CandidateContest	AZ House District 10 (Republican Party) (Maricopa)	State Representative - District No. 10 (Republican Party)
+CandidateContest	AZ House District 11 (Republican Party) (Maricopa)	State Representative - District No. 11 (Republican Party)
+CandidateContest	AZ House District 12 (Republican Party) (Maricopa)	State Representative - District No. 12 (Republican Party)
+CandidateContest	AZ House District 13 (Republican Party) (Maricopa)	State Representative - District No. 13 (Republican Party)
+CandidateContest	AZ House District 14 (Republican Party) (Maricopa)	State Representative - District No. 14 (Republican Party)
+CandidateContest	AZ House District 15 (Republican Party) (Maricopa)	State Representative - District No. 15 (Republican Party)
+CandidateContest	AZ House District 16 (Republican Party) (Maricopa)	State Representative - District No. 16 (Republican Party)
+CandidateContest	AZ House District 17 (Republican Party) (Maricopa)	State Representative - District No. 17 (Republican Party)
+CandidateContest	AZ House District 18 (Republican Party) (Maricopa)	State Representative - District No. 18 (Republican Party)
+CandidateContest	AZ House District 19 (Republican Party) (Maricopa)	State Representative - District No. 19 (Republican Party)
+CandidateContest	AZ House District 20 (Republican Party) (Maricopa)	State Representative - District No. 20 (Republican Party)
+CandidateContest	AZ House District 21 (Republican Party) (Maricopa)	State Representative - District No. 21 (Republican Party)
+CandidateContest	AZ House District 22 (Republican Party) (Maricopa)	State Representative - District No. 22 (Republican Party)
+CandidateContest	AZ House District 23 (Republican Party) (Maricopa)	State Representative - District No. 23 (Republican Party)
+CandidateContest	AZ House District 24 (Republican Party) (Maricopa)	State Representative - District No. 24 (Republican Party)
+CandidateContest	AZ House District 25 (Republican Party) (Maricopa)	State Representative - District No. 25 (Republican Party)
+CandidateContest	AZ House District 26 (Republican Party) (Maricopa)	State Representative - District No. 26 (Republican Party)
+CandidateContest	AZ House District 27 (Republican Party) (Maricopa)	State Representative - District No. 27 (Republican Party)
+CandidateContest	AZ House District 28 (Republican Party) (Maricopa)	State Representative - District No. 28 (Republican Party)
+CandidateContest	AZ House District 29 (Republican Party) (Maricopa)	State Representative - District No. 29 (Republican Party)
+CandidateContest	AZ House District 30 (Republican Party) (Maricopa)	State Representative - District No. 30 (Republican Party)
+CandidateContest	AZ House District 31 (Republican Party) (Maricopa)	State Representative - District No. 31 (Republican Party)
+CandidateContest	AZ House District 32 (Republican Party) (Maricopa)	State Representative - District No. 32 (Republican Party)
+CandidateContest	AZ House District 33 (Republican Party) (Maricopa)	State Representative - District No. 33 (Republican Party)
+CandidateContest	AZ House District 34 (Republican Party) (Maricopa)	State Representative - District No. 34 (Republican Party)
+CandidateContest	AZ House District 35 (Republican Party) (Maricopa)	State Representative - District No. 35 (Republican Party)
+CandidateContest	AZ House District 36 (Republican Party) (Maricopa)	State Representative - District No. 36 (Republican Party)
+CandidateContest	AZ House District 37 (Republican Party) (Maricopa)	State Representative - District No. 37 (Republican Party)
+CandidateContest	AZ House District 38 (Republican Party) (Maricopa)	State Representative - District No. 38 (Republican Party)
+CandidateContest	AZ House District 39 (Republican Party) (Maricopa)	State Representative - District No. 39 (Republican Party)
+CandidateContest	AZ House District 40 (Republican Party) (Maricopa)	State Representative - District No. 40 (Republican Party)
+CandidateContest	AZ House District 41 (Republican Party) (Maricopa)	State Representative - District No. 41 (Republican Party)
+CandidateContest	AZ House District 42 (Republican Party) (Maricopa)	State Representative - District No. 42 (Republican Party)
+CandidateContest	AZ House District 43 (Republican Party) (Maricopa)	State Representative - District No. 43 (Republican Party)
+CandidateContest	AZ House District 44 (Republican Party) (Maricopa)	State Representative - District No. 44 (Republican Party)
+CandidateContest	AZ House District 45 (Republican Party) (Maricopa)	State Representative - District No. 45 (Republican Party)
+CandidateContest	AZ House District 46 (Republican Party) (Maricopa)	State Representative - District No. 46 (Republican Party)
+CandidateContest	AZ House District 47 (Republican Party) (Maricopa)	State Representative - District No. 47 (Republican Party)
+CandidateContest	AZ House District 48 (Republican Party) (Maricopa)	State Representative - District No. 48 (Republican Party)
+CandidateContest	AZ House District 49 (Republican Party) (Maricopa)	State Representative - District No. 49 (Republican Party)
+CandidateContest	AZ House District 50 (Republican Party) (Maricopa)	State Representative - District No. 50 (Republican Party)
+CandidateContest	AZ House District 51 (Republican Party) (Maricopa)	State Representative - District No. 51 (Republican Party)
+CandidateContest	AZ House District 52 (Republican Party) (Maricopa)	State Representative - District No. 52 (Republican Party)
+CandidateContest	AZ House District 53 (Republican Party) (Maricopa)	State Representative - District No. 53 (Republican Party)
+CandidateContest	AZ House District 54 (Republican Party) (Maricopa)	State Representative - District No. 54 (Republican Party)
+CandidateContest	AZ House District 55 (Republican Party) (Maricopa)	State Representative - District No. 55 (Republican Party)
+CandidateContest	AZ House District 56 (Republican Party) (Maricopa)	State Representative - District No. 56 (Republican Party)
+CandidateContest	AZ House District 57 (Republican Party) (Maricopa)	State Representative - District No. 57 (Republican Party)
+CandidateContest	AZ House District 58 (Republican Party) (Maricopa)	State Representative - District No. 58 (Republican Party)
+CandidateContest	AZ House District 59 (Republican Party) (Maricopa)	State Representative - District No. 59 (Republican Party)
+CandidateContest	AZ House District 60 (Republican Party) (Maricopa)	State Representative - District No. 60 (Republican Party)
+CandidateContest	AZ Senate District 1 (Republican Party) (Maricopa)	State Senator - District No. 1 (Republican Party)
+CandidateContest	AZ Senate District 2 (Republican Party) (Maricopa)	State Senator - District No. 2 (Republican Party)
+CandidateContest	AZ Senate District 3 (Republican Party) (Maricopa)	State Senator - District No. 3 (Republican Party)
+CandidateContest	AZ Senate District 4 (Republican Party) (Maricopa)	State Senator - District No. 4 (Republican Party)
+CandidateContest	AZ Senate District 5 (Republican Party) (Maricopa)	State Senator - District No. 5 (Republican Party)
+CandidateContest	AZ Senate District 6 (Republican Party) (Maricopa)	State Senator - District No. 6 (Republican Party)
+CandidateContest	AZ Senate District 7 (Republican Party) (Maricopa)	State Senator - District No. 7 (Republican Party)
+CandidateContest	AZ Senate District 8 (Republican Party) (Maricopa)	State Senator - District No. 8 (Republican Party)
+CandidateContest	AZ Senate District 9 (Republican Party) (Maricopa)	State Senator - District No. 9 (Republican Party)
+CandidateContest	AZ Senate District 10 (Republican Party) (Maricopa)	State Senator - District No. 10 (Republican Party)
+CandidateContest	AZ Senate District 11 (Republican Party) (Maricopa)	State Senator - District No. 11 (Republican Party)
+CandidateContest	AZ Senate District 12 (Republican Party) (Maricopa)	State Senator - District No. 12 (Republican Party)
+CandidateContest	AZ Senate District 13 (Republican Party) (Maricopa)	State Senator - District No. 13 (Republican Party)
+CandidateContest	AZ Senate District 14 (Republican Party) (Maricopa)	State Senator - District No. 14 (Republican Party)
+CandidateContest	AZ Senate District 15 (Republican Party) (Maricopa)	State Senator - District No. 15 (Republican Party)
+CandidateContest	AZ Senate District 16 (Republican Party) (Maricopa)	State Senator - District No. 16 (Republican Party)
+CandidateContest	AZ Senate District 17 (Republican Party) (Maricopa)	State Senator - District No. 17 (Republican Party)
+CandidateContest	AZ Senate District 18 (Republican Party) (Maricopa)	State Senator - District No. 18 (Republican Party)
+CandidateContest	AZ Senate District 19 (Republican Party) (Maricopa)	State Senator - District No. 19 (Republican Party)
+CandidateContest	AZ Senate District 20 (Republican Party) (Maricopa)	State Senator - District No. 20 (Republican Party)
+CandidateContest	AZ Senate District 21 (Republican Party) (Maricopa)	State Senator - District No. 21 (Republican Party)
+CandidateContest	AZ Senate District 22 (Republican Party) (Maricopa)	State Senator - District No. 22 (Republican Party)
+CandidateContest	AZ Senate District 23 (Republican Party) (Maricopa)	State Senator - District No. 23 (Republican Party)
+CandidateContest	AZ Senate District 24 (Republican Party) (Maricopa)	State Senator - District No. 24 (Republican Party)
+CandidateContest	AZ Senate District 25 (Republican Party) (Maricopa)	State Senator - District No. 25 (Republican Party)
+CandidateContest	AZ Senate District 26 (Republican Party) (Maricopa)	State Senator - District No. 26 (Republican Party)
+CandidateContest	AZ Senate District 27 (Republican Party) (Maricopa)	State Senator - District No. 27 (Republican Party)
+CandidateContest	AZ Senate District 28 (Republican Party) (Maricopa)	State Senator - District No. 28 (Republican Party)
+CandidateContest	AZ Senate District 29 (Republican Party) (Maricopa)	State Senator - District No. 29 (Republican Party)
+CandidateContest	AZ Senate District 30 (Republican Party) (Maricopa)	State Senator - District No. 30 (Republican Party)
+CandidateContest	US House AZ District 1 (Republican Party) (Maricopa)	U.S. Representative in Congress - District No. 1 (Republican Party)
+CandidateContest	US House AZ District 2 (Republican Party) (Maricopa)	U.S. Representative in Congress - District No. 2 (Republican Party)
+CandidateContest	US House AZ District 3 (Republican Party) (Maricopa)	U.S. Representative in Congress - District No. 3 (Republican Party)
+CandidateContest	US House AZ District 4 (Republican Party) (Maricopa)	U.S. Representative in Congress - District No. 4 (Republican Party)
+CandidateContest	US House AZ District 5 (Republican Party) (Maricopa)	U.S. Representative in Congress - District No. 5 (Republican Party)
+CandidateContest	US House AZ District 6 (Republican Party) (Maricopa)	U.S. Representative in Congress - District No. 6 (Republican Party)
+CandidateContest	US House AZ District 7 (Republican Party) (Maricopa)	U.S. Representative in Congress - District No. 7 (Republican Party)
+CandidateContest	US House AZ District 8 (Republican Party) (Maricopa)	U.S. Representative in Congress - District No. 8 (Republican Party)
+CandidateContest	US House AZ District 9 (Republican Party) (Maricopa)	U.S. Representative in Congress - District No. 9 (Republican Party)
+CandidateContest	US President (AZ) (Republican Party) (Maricopa)	US President (AZ) (Republican Party)
+CandidateContest	AZ Governor (Republican Party) (Maricopa)	AZ Governor (Republican Party)
+CandidateContest	US Senate AZ (Republican Party) (Maricopa)	U.S. Senator (Republican Party)
+CandidateContest	AZ Corporation Commissioner (Republican Party) (Maricopa)	Corporation Commissioner (Republican Party)
+CandidateContest	AZ Attorney General (Republican Party) (Maricopa)	AZ Attorney General (Republican Party)
+CandidateContest	AZ Lieutenant Governor (Republican Party) (Maricopa)	AZ Lieutenant Governor (Republican Party)
+CandidateContest	AZ Treasurer (Republican Party) (Maricopa)	AZ Treasurer (Republican Party)
+CandidateContest	AZ Secretary of State (Republican Party) (Maricopa)	AZ Secretary of State (Republican Party)
+CandidateContest	AZ House District 1 (Republican Party) (Maricopa)	State Representative - District No. 1 (REP)
+CandidateContest	AZ House District 2 (Republican Party) (Maricopa)	State Representative - District No. 2 (REP)
+CandidateContest	AZ House District 3 (Republican Party) (Maricopa)	State Representative - District No. 3 (REP)
+CandidateContest	AZ House District 4 (Republican Party) (Maricopa)	State Representative - District No. 4 (REP)
+CandidateContest	AZ House District 5 (Republican Party) (Maricopa)	State Representative - District No. 5 (REP)
+CandidateContest	AZ House District 6 (Republican Party) (Maricopa)	State Representative - District No. 6 (REP)
+CandidateContest	AZ House District 7 (Republican Party) (Maricopa)	State Representative - District No. 7 (REP)
+CandidateContest	AZ House District 8 (Republican Party) (Maricopa)	State Representative - District No. 8 (REP)
+CandidateContest	AZ House District 9 (Republican Party) (Maricopa)	State Representative - District No. 9 (REP)
+CandidateContest	AZ House District 10 (Republican Party) (Maricopa)	State Representative - District No. 10 (REP)
+CandidateContest	AZ House District 11 (Republican Party) (Maricopa)	State Representative - District No. 11 (REP)
+CandidateContest	AZ House District 12 (Republican Party) (Maricopa)	State Representative - District No. 12 (REP)
+CandidateContest	AZ House District 13 (Republican Party) (Maricopa)	State Representative - District No. 13 (REP)
+CandidateContest	AZ House District 14 (Republican Party) (Maricopa)	State Representative - District No. 14 (REP)
+CandidateContest	AZ House District 15 (Republican Party) (Maricopa)	State Representative - District No. 15 (REP)
+CandidateContest	AZ House District 16 (Republican Party) (Maricopa)	State Representative - District No. 16 (REP)
+CandidateContest	AZ House District 17 (Republican Party) (Maricopa)	State Representative - District No. 17 (REP)
+CandidateContest	AZ House District 18 (Republican Party) (Maricopa)	State Representative - District No. 18 (REP)
+CandidateContest	AZ House District 19 (Republican Party) (Maricopa)	State Representative - District No. 19 (REP)
+CandidateContest	AZ House District 20 (Republican Party) (Maricopa)	State Representative - District No. 20 (REP)
+CandidateContest	AZ House District 21 (Republican Party) (Maricopa)	State Representative - District No. 21 (REP)
+CandidateContest	AZ House District 22 (Republican Party) (Maricopa)	State Representative - District No. 22 (REP)
+CandidateContest	AZ House District 23 (Republican Party) (Maricopa)	State Representative - District No. 23 (REP)
+CandidateContest	AZ House District 24 (Republican Party) (Maricopa)	State Representative - District No. 24 (REP)
+CandidateContest	AZ House District 25 (Republican Party) (Maricopa)	State Representative - District No. 25 (REP)
+CandidateContest	AZ House District 26 (Republican Party) (Maricopa)	State Representative - District No. 26 (REP)
+CandidateContest	AZ House District 27 (Republican Party) (Maricopa)	State Representative - District No. 27 (REP)
+CandidateContest	AZ House District 28 (Republican Party) (Maricopa)	State Representative - District No. 28 (REP)
+CandidateContest	AZ House District 29 (Republican Party) (Maricopa)	State Representative - District No. 29 (REP)
+CandidateContest	AZ House District 30 (Republican Party) (Maricopa)	State Representative - District No. 30 (REP)
+CandidateContest	AZ House District 31 (Republican Party) (Maricopa)	State Representative - District No. 31 (REP)
+CandidateContest	AZ House District 32 (Republican Party) (Maricopa)	State Representative - District No. 32 (REP)
+CandidateContest	AZ House District 33 (Republican Party) (Maricopa)	State Representative - District No. 33 (REP)
+CandidateContest	AZ House District 34 (Republican Party) (Maricopa)	State Representative - District No. 34 (REP)
+CandidateContest	AZ House District 35 (Republican Party) (Maricopa)	State Representative - District No. 35 (REP)
+CandidateContest	AZ House District 36 (Republican Party) (Maricopa)	State Representative - District No. 36 (REP)
+CandidateContest	AZ House District 37 (Republican Party) (Maricopa)	State Representative - District No. 37 (REP)
+CandidateContest	AZ House District 38 (Republican Party) (Maricopa)	State Representative - District No. 38 (REP)
+CandidateContest	AZ House District 39 (Republican Party) (Maricopa)	State Representative - District No. 39 (REP)
+CandidateContest	AZ House District 40 (Republican Party) (Maricopa)	State Representative - District No. 40 (REP)
+CandidateContest	AZ House District 41 (Republican Party) (Maricopa)	State Representative - District No. 41 (REP)
+CandidateContest	AZ House District 42 (Republican Party) (Maricopa)	State Representative - District No. 42 (REP)
+CandidateContest	AZ House District 43 (Republican Party) (Maricopa)	State Representative - District No. 43 (REP)
+CandidateContest	AZ House District 44 (Republican Party) (Maricopa)	State Representative - District No. 44 (REP)
+CandidateContest	AZ House District 45 (Republican Party) (Maricopa)	State Representative - District No. 45 (REP)
+CandidateContest	AZ House District 46 (Republican Party) (Maricopa)	State Representative - District No. 46 (REP)
+CandidateContest	AZ House District 47 (Republican Party) (Maricopa)	State Representative - District No. 47 (REP)
+CandidateContest	AZ House District 48 (Republican Party) (Maricopa)	State Representative - District No. 48 (REP)
+CandidateContest	AZ House District 49 (Republican Party) (Maricopa)	State Representative - District No. 49 (REP)
+CandidateContest	AZ House District 50 (Republican Party) (Maricopa)	State Representative - District No. 50 (REP)
+CandidateContest	AZ House District 51 (Republican Party) (Maricopa)	State Representative - District No. 51 (REP)
+CandidateContest	AZ House District 52 (Republican Party) (Maricopa)	State Representative - District No. 52 (REP)
+CandidateContest	AZ House District 53 (Republican Party) (Maricopa)	State Representative - District No. 53 (REP)
+CandidateContest	AZ House District 54 (Republican Party) (Maricopa)	State Representative - District No. 54 (REP)
+CandidateContest	AZ House District 55 (Republican Party) (Maricopa)	State Representative - District No. 55 (REP)
+CandidateContest	AZ House District 56 (Republican Party) (Maricopa)	State Representative - District No. 56 (REP)
+CandidateContest	AZ House District 57 (Republican Party) (Maricopa)	State Representative - District No. 57 (REP)
+CandidateContest	AZ House District 58 (Republican Party) (Maricopa)	State Representative - District No. 58 (REP)
+CandidateContest	AZ House District 59 (Republican Party) (Maricopa)	State Representative - District No. 59 (REP)
+CandidateContest	AZ House District 60 (Republican Party) (Maricopa)	State Representative - District No. 60 (REP)
+CandidateContest	AZ Senate District 1 (Republican Party) (Maricopa)	State Senator - District No. 1 (REP)
+CandidateContest	AZ Senate District 2 (Republican Party) (Maricopa)	State Senator - District No. 2 (REP)
+CandidateContest	AZ Senate District 3 (Republican Party) (Maricopa)	State Senator - District No. 3 (REP)
+CandidateContest	AZ Senate District 4 (Republican Party) (Maricopa)	State Senator - District No. 4 (REP)
+CandidateContest	AZ Senate District 5 (Republican Party) (Maricopa)	State Senator - District No. 5 (REP)
+CandidateContest	AZ Senate District 6 (Republican Party) (Maricopa)	State Senator - District No. 6 (REP)
+CandidateContest	AZ Senate District 7 (Republican Party) (Maricopa)	State Senator - District No. 7 (REP)
+CandidateContest	AZ Senate District 8 (Republican Party) (Maricopa)	State Senator - District No. 8 (REP)
+CandidateContest	AZ Senate District 9 (Republican Party) (Maricopa)	State Senator - District No. 9 (REP)
+CandidateContest	AZ Senate District 10 (Republican Party) (Maricopa)	State Senator - District No. 10 (REP)
+CandidateContest	AZ Senate District 11 (Republican Party) (Maricopa)	State Senator - District No. 11 (REP)
+CandidateContest	AZ Senate District 12 (Republican Party) (Maricopa)	State Senator - District No. 12 (REP)
+CandidateContest	AZ Senate District 13 (Republican Party) (Maricopa)	State Senator - District No. 13 (REP)
+CandidateContest	AZ Senate District 14 (Republican Party) (Maricopa)	State Senator - District No. 14 (REP)
+CandidateContest	AZ Senate District 15 (Republican Party) (Maricopa)	State Senator - District No. 15 (REP)
+CandidateContest	AZ Senate District 16 (Republican Party) (Maricopa)	State Senator - District No. 16 (REP)
+CandidateContest	AZ Senate District 17 (Republican Party) (Maricopa)	State Senator - District No. 17 (REP)
+CandidateContest	AZ Senate District 18 (Republican Party) (Maricopa)	State Senator - District No. 18 (REP)
+CandidateContest	AZ Senate District 19 (Republican Party) (Maricopa)	State Senator - District No. 19 (REP)
+CandidateContest	AZ Senate District 20 (Republican Party) (Maricopa)	State Senator - District No. 20 (REP)
+CandidateContest	AZ Senate District 21 (Republican Party) (Maricopa)	State Senator - District No. 21 (REP)
+CandidateContest	AZ Senate District 22 (Republican Party) (Maricopa)	State Senator - District No. 22 (REP)
+CandidateContest	AZ Senate District 23 (Republican Party) (Maricopa)	State Senator - District No. 23 (REP)
+CandidateContest	AZ Senate District 24 (Republican Party) (Maricopa)	State Senator - District No. 24 (REP)
+CandidateContest	AZ Senate District 25 (Republican Party) (Maricopa)	State Senator - District No. 25 (REP)
+CandidateContest	AZ Senate District 26 (Republican Party) (Maricopa)	State Senator - District No. 26 (REP)
+CandidateContest	AZ Senate District 27 (Republican Party) (Maricopa)	State Senator - District No. 27 (REP)
+CandidateContest	AZ Senate District 28 (Republican Party) (Maricopa)	State Senator - District No. 28 (REP)
+CandidateContest	AZ Senate District 29 (Republican Party) (Maricopa)	State Senator - District No. 29 (REP)
+CandidateContest	AZ Senate District 30 (Republican Party) (Maricopa)	State Senator - District No. 30 (REP)
+CandidateContest	US House AZ District 1 (Republican Party) (Maricopa)	U.S. Representative in Congress - District No. 1 (REP)
+CandidateContest	US House AZ District 2 (Republican Party) (Maricopa)	U.S. Representative in Congress - District No. 2 (REP)
+CandidateContest	US House AZ District 3 (Republican Party) (Maricopa)	U.S. Representative in Congress - District No. 3 (REP)
+CandidateContest	US House AZ District 4 (Republican Party) (Maricopa)	U.S. Representative in Congress - District No. 4 (REP)
+CandidateContest	US House AZ District 5 (Republican Party) (Maricopa)	U.S. Representative in Congress - District No. 5 (REP)
+CandidateContest	US House AZ District 6 (Republican Party) (Maricopa)	U.S. Representative in Congress - District No. 6 (REP)
+CandidateContest	US House AZ District 7 (Republican Party) (Maricopa)	U.S. Representative in Congress - District No. 7 (REP)
+CandidateContest	US House AZ District 8 (Republican Party) (Maricopa)	U.S. Representative in Congress - District No. 8 (REP)
+CandidateContest	US House AZ District 9 (Republican Party) (Maricopa)	U.S. Representative in Congress - District No. 9 (REP)
+CandidateContest	US President (AZ) (Republican Party) (Maricopa)	US President (AZ) (REP)
+CandidateContest	AZ Governor (Republican Party) (Maricopa)	AZ Governor (REP)
+CandidateContest	US Senate AZ (Republican Party) (Maricopa)	U.S. Senator (REP)
+CandidateContest	AZ Corporation Commissioner (Republican Party) (Maricopa)	Corporation Commissioner (REP)
+CandidateContest	AZ Attorney General (Republican Party) (Maricopa)	AZ Attorney General (REP)
+CandidateContest	AZ Lieutenant Governor (Republican Party) (Maricopa)	AZ Lieutenant Governor (REP)
+CandidateContest	AZ Treasurer (Republican Party) (Maricopa)	AZ Treasurer (REP)
+CandidateContest	AZ Secretary of State (Republican Party) (Maricopa)	AZ Secretary of State (REP)
+CandidateContest	AZ House District 1 (Green Party) (Maricopa)	State Representative - District No. 1 (Green Party)
+CandidateContest	AZ House District 2 (Green Party) (Maricopa)	State Representative - District No. 2 (Green Party)
+CandidateContest	AZ House District 3 (Green Party) (Maricopa)	State Representative - District No. 3 (Green Party)
+CandidateContest	AZ House District 4 (Green Party) (Maricopa)	State Representative - District No. 4 (Green Party)
+CandidateContest	AZ House District 5 (Green Party) (Maricopa)	State Representative - District No. 5 (Green Party)
+CandidateContest	AZ House District 6 (Green Party) (Maricopa)	State Representative - District No. 6 (Green Party)
+CandidateContest	AZ House District 7 (Green Party) (Maricopa)	State Representative - District No. 7 (Green Party)
+CandidateContest	AZ House District 8 (Green Party) (Maricopa)	State Representative - District No. 8 (Green Party)
+CandidateContest	AZ House District 9 (Green Party) (Maricopa)	State Representative - District No. 9 (Green Party)
+CandidateContest	AZ House District 10 (Green Party) (Maricopa)	State Representative - District No. 10 (Green Party)
+CandidateContest	AZ House District 11 (Green Party) (Maricopa)	State Representative - District No. 11 (Green Party)
+CandidateContest	AZ House District 12 (Green Party) (Maricopa)	State Representative - District No. 12 (Green Party)
+CandidateContest	AZ House District 13 (Green Party) (Maricopa)	State Representative - District No. 13 (Green Party)
+CandidateContest	AZ House District 14 (Green Party) (Maricopa)	State Representative - District No. 14 (Green Party)
+CandidateContest	AZ House District 15 (Green Party) (Maricopa)	State Representative - District No. 15 (Green Party)
+CandidateContest	AZ House District 16 (Green Party) (Maricopa)	State Representative - District No. 16 (Green Party)
+CandidateContest	AZ House District 17 (Green Party) (Maricopa)	State Representative - District No. 17 (Green Party)
+CandidateContest	AZ House District 18 (Green Party) (Maricopa)	State Representative - District No. 18 (Green Party)
+CandidateContest	AZ House District 19 (Green Party) (Maricopa)	State Representative - District No. 19 (Green Party)
+CandidateContest	AZ House District 20 (Green Party) (Maricopa)	State Representative - District No. 20 (Green Party)
+CandidateContest	AZ House District 21 (Green Party) (Maricopa)	State Representative - District No. 21 (Green Party)
+CandidateContest	AZ House District 22 (Green Party) (Maricopa)	State Representative - District No. 22 (Green Party)
+CandidateContest	AZ House District 23 (Green Party) (Maricopa)	State Representative - District No. 23 (Green Party)
+CandidateContest	AZ House District 24 (Green Party) (Maricopa)	State Representative - District No. 24 (Green Party)
+CandidateContest	AZ House District 25 (Green Party) (Maricopa)	State Representative - District No. 25 (Green Party)
+CandidateContest	AZ House District 26 (Green Party) (Maricopa)	State Representative - District No. 26 (Green Party)
+CandidateContest	AZ House District 27 (Green Party) (Maricopa)	State Representative - District No. 27 (Green Party)
+CandidateContest	AZ House District 28 (Green Party) (Maricopa)	State Representative - District No. 28 (Green Party)
+CandidateContest	AZ House District 29 (Green Party) (Maricopa)	State Representative - District No. 29 (Green Party)
+CandidateContest	AZ House District 30 (Green Party) (Maricopa)	State Representative - District No. 30 (Green Party)
+CandidateContest	AZ House District 31 (Green Party) (Maricopa)	State Representative - District No. 31 (Green Party)
+CandidateContest	AZ House District 32 (Green Party) (Maricopa)	State Representative - District No. 32 (Green Party)
+CandidateContest	AZ House District 33 (Green Party) (Maricopa)	State Representative - District No. 33 (Green Party)
+CandidateContest	AZ House District 34 (Green Party) (Maricopa)	State Representative - District No. 34 (Green Party)
+CandidateContest	AZ House District 35 (Green Party) (Maricopa)	State Representative - District No. 35 (Green Party)
+CandidateContest	AZ House District 36 (Green Party) (Maricopa)	State Representative - District No. 36 (Green Party)
+CandidateContest	AZ House District 37 (Green Party) (Maricopa)	State Representative - District No. 37 (Green Party)
+CandidateContest	AZ House District 38 (Green Party) (Maricopa)	State Representative - District No. 38 (Green Party)
+CandidateContest	AZ House District 39 (Green Party) (Maricopa)	State Representative - District No. 39 (Green Party)
+CandidateContest	AZ House District 40 (Green Party) (Maricopa)	State Representative - District No. 40 (Green Party)
+CandidateContest	AZ House District 41 (Green Party) (Maricopa)	State Representative - District No. 41 (Green Party)
+CandidateContest	AZ House District 42 (Green Party) (Maricopa)	State Representative - District No. 42 (Green Party)
+CandidateContest	AZ House District 43 (Green Party) (Maricopa)	State Representative - District No. 43 (Green Party)
+CandidateContest	AZ House District 44 (Green Party) (Maricopa)	State Representative - District No. 44 (Green Party)
+CandidateContest	AZ House District 45 (Green Party) (Maricopa)	State Representative - District No. 45 (Green Party)
+CandidateContest	AZ House District 46 (Green Party) (Maricopa)	State Representative - District No. 46 (Green Party)
+CandidateContest	AZ House District 47 (Green Party) (Maricopa)	State Representative - District No. 47 (Green Party)
+CandidateContest	AZ House District 48 (Green Party) (Maricopa)	State Representative - District No. 48 (Green Party)
+CandidateContest	AZ House District 49 (Green Party) (Maricopa)	State Representative - District No. 49 (Green Party)
+CandidateContest	AZ House District 50 (Green Party) (Maricopa)	State Representative - District No. 50 (Green Party)
+CandidateContest	AZ House District 51 (Green Party) (Maricopa)	State Representative - District No. 51 (Green Party)
+CandidateContest	AZ House District 52 (Green Party) (Maricopa)	State Representative - District No. 52 (Green Party)
+CandidateContest	AZ House District 53 (Green Party) (Maricopa)	State Representative - District No. 53 (Green Party)
+CandidateContest	AZ House District 54 (Green Party) (Maricopa)	State Representative - District No. 54 (Green Party)
+CandidateContest	AZ House District 55 (Green Party) (Maricopa)	State Representative - District No. 55 (Green Party)
+CandidateContest	AZ House District 56 (Green Party) (Maricopa)	State Representative - District No. 56 (Green Party)
+CandidateContest	AZ House District 57 (Green Party) (Maricopa)	State Representative - District No. 57 (Green Party)
+CandidateContest	AZ House District 58 (Green Party) (Maricopa)	State Representative - District No. 58 (Green Party)
+CandidateContest	AZ House District 59 (Green Party) (Maricopa)	State Representative - District No. 59 (Green Party)
+CandidateContest	AZ House District 60 (Green Party) (Maricopa)	State Representative - District No. 60 (Green Party)
+CandidateContest	AZ Senate District 1 (Green Party) (Maricopa)	State Senator - District No. 1 (Green Party)
+CandidateContest	AZ Senate District 2 (Green Party) (Maricopa)	State Senator - District No. 2 (Green Party)
+CandidateContest	AZ Senate District 3 (Green Party) (Maricopa)	State Senator - District No. 3 (Green Party)
+CandidateContest	AZ Senate District 4 (Green Party) (Maricopa)	State Senator - District No. 4 (Green Party)
+CandidateContest	AZ Senate District 5 (Green Party) (Maricopa)	State Senator - District No. 5 (Green Party)
+CandidateContest	AZ Senate District 6 (Green Party) (Maricopa)	State Senator - District No. 6 (Green Party)
+CandidateContest	AZ Senate District 7 (Green Party) (Maricopa)	State Senator - District No. 7 (Green Party)
+CandidateContest	AZ Senate District 8 (Green Party) (Maricopa)	State Senator - District No. 8 (Green Party)
+CandidateContest	AZ Senate District 9 (Green Party) (Maricopa)	State Senator - District No. 9 (Green Party)
+CandidateContest	AZ Senate District 10 (Green Party) (Maricopa)	State Senator - District No. 10 (Green Party)
+CandidateContest	AZ Senate District 11 (Green Party) (Maricopa)	State Senator - District No. 11 (Green Party)
+CandidateContest	AZ Senate District 12 (Green Party) (Maricopa)	State Senator - District No. 12 (Green Party)
+CandidateContest	AZ Senate District 13 (Green Party) (Maricopa)	State Senator - District No. 13 (Green Party)
+CandidateContest	AZ Senate District 14 (Green Party) (Maricopa)	State Senator - District No. 14 (Green Party)
+CandidateContest	AZ Senate District 15 (Green Party) (Maricopa)	State Senator - District No. 15 (Green Party)
+CandidateContest	AZ Senate District 16 (Green Party) (Maricopa)	State Senator - District No. 16 (Green Party)
+CandidateContest	AZ Senate District 17 (Green Party) (Maricopa)	State Senator - District No. 17 (Green Party)
+CandidateContest	AZ Senate District 18 (Green Party) (Maricopa)	State Senator - District No. 18 (Green Party)
+CandidateContest	AZ Senate District 19 (Green Party) (Maricopa)	State Senator - District No. 19 (Green Party)
+CandidateContest	AZ Senate District 20 (Green Party) (Maricopa)	State Senator - District No. 20 (Green Party)
+CandidateContest	AZ Senate District 21 (Green Party) (Maricopa)	State Senator - District No. 21 (Green Party)
+CandidateContest	AZ Senate District 22 (Green Party) (Maricopa)	State Senator - District No. 22 (Green Party)
+CandidateContest	AZ Senate District 23 (Green Party) (Maricopa)	State Senator - District No. 23 (Green Party)
+CandidateContest	AZ Senate District 24 (Green Party) (Maricopa)	State Senator - District No. 24 (Green Party)
+CandidateContest	AZ Senate District 25 (Green Party) (Maricopa)	State Senator - District No. 25 (Green Party)
+CandidateContest	AZ Senate District 26 (Green Party) (Maricopa)	State Senator - District No. 26 (Green Party)
+CandidateContest	AZ Senate District 27 (Green Party) (Maricopa)	State Senator - District No. 27 (Green Party)
+CandidateContest	AZ Senate District 28 (Green Party) (Maricopa)	State Senator - District No. 28 (Green Party)
+CandidateContest	AZ Senate District 29 (Green Party) (Maricopa)	State Senator - District No. 29 (Green Party)
+CandidateContest	AZ Senate District 30 (Green Party) (Maricopa)	State Senator - District No. 30 (Green Party)
+CandidateContest	US House AZ District 1 (Green Party) (Maricopa)	U.S. Representative in Congress - District No. 1 (Green Party)
+CandidateContest	US House AZ District 2 (Green Party) (Maricopa)	U.S. Representative in Congress - District No. 2 (Green Party)
+CandidateContest	US House AZ District 3 (Green Party) (Maricopa)	U.S. Representative in Congress - District No. 3 (Green Party)
+CandidateContest	US House AZ District 4 (Green Party) (Maricopa)	U.S. Representative in Congress - District No. 4 (Green Party)
+CandidateContest	US House AZ District 5 (Green Party) (Maricopa)	U.S. Representative in Congress - District No. 5 (Green Party)
+CandidateContest	US House AZ District 6 (Green Party) (Maricopa)	U.S. Representative in Congress - District No. 6 (Green Party)
+CandidateContest	US House AZ District 7 (Green Party) (Maricopa)	U.S. Representative in Congress - District No. 7 (Green Party)
+CandidateContest	US House AZ District 8 (Green Party) (Maricopa)	U.S. Representative in Congress - District No. 8 (Green Party)
+CandidateContest	US House AZ District 9 (Green Party) (Maricopa)	U.S. Representative in Congress - District No. 9 (Green Party)
+CandidateContest	US President (AZ) (Green Party) (Maricopa)	US President (AZ) (Green Party)
+CandidateContest	AZ Governor (Green Party) (Maricopa)	AZ Governor (Green Party)
+CandidateContest	US Senate AZ (Green Party) (Maricopa)	U.S. Senator (Green Party)
+CandidateContest	AZ Corporation Commissioner (Green Party) (Maricopa)	Corporation Commissioner (Green Party)
+CandidateContest	AZ Attorney General (Green Party) (Maricopa)	AZ Attorney General (Green Party)
+CandidateContest	AZ Lieutenant Governor (Green Party) (Maricopa)	AZ Lieutenant Governor (Green Party)
+CandidateContest	AZ Treasurer (Green Party) (Maricopa)	AZ Treasurer (Green Party)
+CandidateContest	AZ Secretary of State (Green Party) (Maricopa)	AZ Secretary of State (Green Party)
+CandidateContest	AZ House District 1 (Libertarian Party) (Maricopa)	State Representative - District No. 1 (LBT)
+CandidateContest	AZ House District 2 (Libertarian Party) (Maricopa)	State Representative - District No. 2 (LBT)
+CandidateContest	AZ House District 3 (Libertarian Party) (Maricopa)	State Representative - District No. 3 (LBT)
+CandidateContest	AZ House District 4 (Libertarian Party) (Maricopa)	State Representative - District No. 4 (LBT)
+CandidateContest	AZ House District 5 (Libertarian Party) (Maricopa)	State Representative - District No. 5 (LBT)
+CandidateContest	AZ House District 6 (Libertarian Party) (Maricopa)	State Representative - District No. 6 (LBT)
+CandidateContest	AZ House District 7 (Libertarian Party) (Maricopa)	State Representative - District No. 7 (LBT)
+CandidateContest	AZ House District 8 (Libertarian Party) (Maricopa)	State Representative - District No. 8 (LBT)
+CandidateContest	AZ House District 9 (Libertarian Party) (Maricopa)	State Representative - District No. 9 (LBT)
+CandidateContest	AZ House District 10 (Libertarian Party) (Maricopa)	State Representative - District No. 10 (LBT)
+CandidateContest	AZ House District 11 (Libertarian Party) (Maricopa)	State Representative - District No. 11 (LBT)
+CandidateContest	AZ House District 12 (Libertarian Party) (Maricopa)	State Representative - District No. 12 (LBT)
+CandidateContest	AZ House District 13 (Libertarian Party) (Maricopa)	State Representative - District No. 13 (LBT)
+CandidateContest	AZ House District 14 (Libertarian Party) (Maricopa)	State Representative - District No. 14 (LBT)
+CandidateContest	AZ House District 15 (Libertarian Party) (Maricopa)	State Representative - District No. 15 (LBT)
+CandidateContest	AZ House District 16 (Libertarian Party) (Maricopa)	State Representative - District No. 16 (LBT)
+CandidateContest	AZ House District 17 (Libertarian Party) (Maricopa)	State Representative - District No. 17 (LBT)
+CandidateContest	AZ House District 18 (Libertarian Party) (Maricopa)	State Representative - District No. 18 (LBT)
+CandidateContest	AZ House District 19 (Libertarian Party) (Maricopa)	State Representative - District No. 19 (LBT)
+CandidateContest	AZ House District 20 (Libertarian Party) (Maricopa)	State Representative - District No. 20 (LBT)
+CandidateContest	AZ House District 21 (Libertarian Party) (Maricopa)	State Representative - District No. 21 (LBT)
+CandidateContest	AZ House District 22 (Libertarian Party) (Maricopa)	State Representative - District No. 22 (LBT)
+CandidateContest	AZ House District 23 (Libertarian Party) (Maricopa)	State Representative - District No. 23 (LBT)
+CandidateContest	AZ House District 24 (Libertarian Party) (Maricopa)	State Representative - District No. 24 (LBT)
+CandidateContest	AZ House District 25 (Libertarian Party) (Maricopa)	State Representative - District No. 25 (LBT)
+CandidateContest	AZ House District 26 (Libertarian Party) (Maricopa)	State Representative - District No. 26 (LBT)
+CandidateContest	AZ House District 27 (Libertarian Party) (Maricopa)	State Representative - District No. 27 (LBT)
+CandidateContest	AZ House District 28 (Libertarian Party) (Maricopa)	State Representative - District No. 28 (LBT)
+CandidateContest	AZ House District 29 (Libertarian Party) (Maricopa)	State Representative - District No. 29 (LBT)
+CandidateContest	AZ House District 30 (Libertarian Party) (Maricopa)	State Representative - District No. 30 (LBT)
+CandidateContest	AZ House District 31 (Libertarian Party) (Maricopa)	State Representative - District No. 31 (LBT)
+CandidateContest	AZ House District 32 (Libertarian Party) (Maricopa)	State Representative - District No. 32 (LBT)
+CandidateContest	AZ House District 33 (Libertarian Party) (Maricopa)	State Representative - District No. 33 (LBT)
+CandidateContest	AZ House District 34 (Libertarian Party) (Maricopa)	State Representative - District No. 34 (LBT)
+CandidateContest	AZ House District 35 (Libertarian Party) (Maricopa)	State Representative - District No. 35 (LBT)
+CandidateContest	AZ House District 36 (Libertarian Party) (Maricopa)	State Representative - District No. 36 (LBT)
+CandidateContest	AZ House District 37 (Libertarian Party) (Maricopa)	State Representative - District No. 37 (LBT)
+CandidateContest	AZ House District 38 (Libertarian Party) (Maricopa)	State Representative - District No. 38 (LBT)
+CandidateContest	AZ House District 39 (Libertarian Party) (Maricopa)	State Representative - District No. 39 (LBT)
+CandidateContest	AZ House District 40 (Libertarian Party) (Maricopa)	State Representative - District No. 40 (LBT)
+CandidateContest	AZ House District 41 (Libertarian Party) (Maricopa)	State Representative - District No. 41 (LBT)
+CandidateContest	AZ House District 42 (Libertarian Party) (Maricopa)	State Representative - District No. 42 (LBT)
+CandidateContest	AZ House District 43 (Libertarian Party) (Maricopa)	State Representative - District No. 43 (LBT)
+CandidateContest	AZ House District 44 (Libertarian Party) (Maricopa)	State Representative - District No. 44 (LBT)
+CandidateContest	AZ House District 45 (Libertarian Party) (Maricopa)	State Representative - District No. 45 (LBT)
+CandidateContest	AZ House District 46 (Libertarian Party) (Maricopa)	State Representative - District No. 46 (LBT)
+CandidateContest	AZ House District 47 (Libertarian Party) (Maricopa)	State Representative - District No. 47 (LBT)
+CandidateContest	AZ House District 48 (Libertarian Party) (Maricopa)	State Representative - District No. 48 (LBT)
+CandidateContest	AZ House District 49 (Libertarian Party) (Maricopa)	State Representative - District No. 49 (LBT)
+CandidateContest	AZ House District 50 (Libertarian Party) (Maricopa)	State Representative - District No. 50 (LBT)
+CandidateContest	AZ House District 51 (Libertarian Party) (Maricopa)	State Representative - District No. 51 (LBT)
+CandidateContest	AZ House District 52 (Libertarian Party) (Maricopa)	State Representative - District No. 52 (LBT)
+CandidateContest	AZ House District 53 (Libertarian Party) (Maricopa)	State Representative - District No. 53 (LBT)
+CandidateContest	AZ House District 54 (Libertarian Party) (Maricopa)	State Representative - District No. 54 (LBT)
+CandidateContest	AZ House District 55 (Libertarian Party) (Maricopa)	State Representative - District No. 55 (LBT)
+CandidateContest	AZ House District 56 (Libertarian Party) (Maricopa)	State Representative - District No. 56 (LBT)
+CandidateContest	AZ House District 57 (Libertarian Party) (Maricopa)	State Representative - District No. 57 (LBT)
+CandidateContest	AZ House District 58 (Libertarian Party) (Maricopa)	State Representative - District No. 58 (LBT)
+CandidateContest	AZ House District 59 (Libertarian Party) (Maricopa)	State Representative - District No. 59 (LBT)
+CandidateContest	AZ House District 60 (Libertarian Party) (Maricopa)	State Representative - District No. 60 (LBT)
+CandidateContest	AZ Senate District 1 (Libertarian Party) (Maricopa)	State Senator - District No. 1 (LBT)
+CandidateContest	AZ Senate District 2 (Libertarian Party) (Maricopa)	State Senator - District No. 2 (LBT)
+CandidateContest	AZ Senate District 3 (Libertarian Party) (Maricopa)	State Senator - District No. 3 (LBT)
+CandidateContest	AZ Senate District 4 (Libertarian Party) (Maricopa)	State Senator - District No. 4 (LBT)
+CandidateContest	AZ Senate District 5 (Libertarian Party) (Maricopa)	State Senator - District No. 5 (LBT)
+CandidateContest	AZ Senate District 6 (Libertarian Party) (Maricopa)	State Senator - District No. 6 (LBT)
+CandidateContest	AZ Senate District 7 (Libertarian Party) (Maricopa)	State Senator - District No. 7 (LBT)
+CandidateContest	AZ Senate District 8 (Libertarian Party) (Maricopa)	State Senator - District No. 8 (LBT)
+CandidateContest	AZ Senate District 9 (Libertarian Party) (Maricopa)	State Senator - District No. 9 (LBT)
+CandidateContest	AZ Senate District 10 (Libertarian Party) (Maricopa)	State Senator - District No. 10 (LBT)
+CandidateContest	AZ Senate District 11 (Libertarian Party) (Maricopa)	State Senator - District No. 11 (LBT)
+CandidateContest	AZ Senate District 12 (Libertarian Party) (Maricopa)	State Senator - District No. 12 (LBT)
+CandidateContest	AZ Senate District 13 (Libertarian Party) (Maricopa)	State Senator - District No. 13 (LBT)
+CandidateContest	AZ Senate District 14 (Libertarian Party) (Maricopa)	State Senator - District No. 14 (LBT)
+CandidateContest	AZ Senate District 15 (Libertarian Party) (Maricopa)	State Senator - District No. 15 (LBT)
+CandidateContest	AZ Senate District 16 (Libertarian Party) (Maricopa)	State Senator - District No. 16 (LBT)
+CandidateContest	AZ Senate District 17 (Libertarian Party) (Maricopa)	State Senator - District No. 17 (LBT)
+CandidateContest	AZ Senate District 18 (Libertarian Party) (Maricopa)	State Senator - District No. 18 (LBT)
+CandidateContest	AZ Senate District 19 (Libertarian Party) (Maricopa)	State Senator - District No. 19 (LBT)
+CandidateContest	AZ Senate District 20 (Libertarian Party) (Maricopa)	State Senator - District No. 20 (LBT)
+CandidateContest	AZ Senate District 21 (Libertarian Party) (Maricopa)	State Senator - District No. 21 (LBT)
+CandidateContest	AZ Senate District 22 (Libertarian Party) (Maricopa)	State Senator - District No. 22 (LBT)
+CandidateContest	AZ Senate District 23 (Libertarian Party) (Maricopa)	State Senator - District No. 23 (LBT)
+CandidateContest	AZ Senate District 24 (Libertarian Party) (Maricopa)	State Senator - District No. 24 (LBT)
+CandidateContest	AZ Senate District 25 (Libertarian Party) (Maricopa)	State Senator - District No. 25 (LBT)
+CandidateContest	AZ Senate District 26 (Libertarian Party) (Maricopa)	State Senator - District No. 26 (LBT)
+CandidateContest	AZ Senate District 27 (Libertarian Party) (Maricopa)	State Senator - District No. 27 (LBT)
+CandidateContest	AZ Senate District 28 (Libertarian Party) (Maricopa)	State Senator - District No. 28 (LBT)
+CandidateContest	AZ Senate District 29 (Libertarian Party) (Maricopa)	State Senator - District No. 29 (LBT)
+CandidateContest	AZ Senate District 30 (Libertarian Party) (Maricopa)	State Senator - District No. 30 (LBT)
+CandidateContest	US House AZ District 1 (Libertarian Party) (Maricopa)	U.S. Representative in Congress - District No. 1 (LBT)
+CandidateContest	US House AZ District 2 (Libertarian Party) (Maricopa)	U.S. Representative in Congress - District No. 2 (LBT)
+CandidateContest	US House AZ District 3 (Libertarian Party) (Maricopa)	U.S. Representative in Congress - District No. 3 (LBT)
+CandidateContest	US House AZ District 4 (Libertarian Party) (Maricopa)	U.S. Representative in Congress - District No. 4 (LBT)
+CandidateContest	US House AZ District 5 (Libertarian Party) (Maricopa)	U.S. Representative in Congress - District No. 5 (LBT)
+CandidateContest	US House AZ District 6 (Libertarian Party) (Maricopa)	U.S. Representative in Congress - District No. 6 (LBT)
+CandidateContest	US House AZ District 7 (Libertarian Party) (Maricopa)	U.S. Representative in Congress - District No. 7 (LBT)
+CandidateContest	US House AZ District 8 (Libertarian Party) (Maricopa)	U.S. Representative in Congress - District No. 8 (LBT)
+CandidateContest	US House AZ District 9 (Libertarian Party) (Maricopa)	U.S. Representative in Congress - District No. 9 (LBT)
+CandidateContest	US President (AZ) (Libertarian Party) (Maricopa)	US President (AZ) (LBT)
+CandidateContest	AZ Governor (Libertarian Party) (Maricopa)	AZ Governor (LBT)
+CandidateContest	US Senate AZ (Libertarian Party) (Maricopa)	U.S. Senator (LBT)
+CandidateContest	AZ Corporation Commissioner (Libertarian Party) (Maricopa)	Corporation Commissioner (LBT)
+CandidateContest	AZ Attorney General (Libertarian Party) (Maricopa)	AZ Attorney General (LBT)
+CandidateContest	AZ Lieutenant Governor (Libertarian Party) (Maricopa)	AZ Lieutenant Governor (LBT)
+CandidateContest	AZ Treasurer (Libertarian Party) (Maricopa)	AZ Treasurer (LBT)
+CandidateContest	AZ Secretary of State (Libertarian Party) (Maricopa)	AZ Secretary of State (LBT)
+CandidateContest	AZ House District 1 (Maricopa)	State Representative - District No. 1
+CandidateContest	AZ House District 2 (Maricopa)	State Representative - District No. 2
+CandidateContest	AZ House District 3 (Maricopa)	State Representative - District No. 3
+CandidateContest	AZ House District 4 (Maricopa)	State Representative - District No. 4
+CandidateContest	AZ House District 5 (Maricopa)	State Representative - District No. 5
+CandidateContest	AZ House District 6 (Maricopa)	State Representative - District No. 6
+CandidateContest	AZ House District 7 (Maricopa)	State Representative - District No. 7
+CandidateContest	AZ House District 8 (Maricopa)	State Representative - District No. 8
+CandidateContest	AZ House District 9 (Maricopa)	State Representative - District No. 9
+CandidateContest	AZ House District 10 (Maricopa)	State Representative - District No. 10
+CandidateContest	AZ House District 11 (Maricopa)	State Representative - District No. 11
+CandidateContest	AZ House District 12 (Maricopa)	State Representative - District No. 12
+CandidateContest	AZ House District 13 (Maricopa)	State Representative - District No. 13
+CandidateContest	AZ House District 14 (Maricopa)	State Representative - District No. 14
+CandidateContest	AZ House District 15 (Maricopa)	State Representative - District No. 15
+CandidateContest	AZ House District 16 (Maricopa)	State Representative - District No. 16
+CandidateContest	AZ House District 17 (Maricopa)	State Representative - District No. 17
+CandidateContest	AZ House District 18 (Maricopa)	State Representative - District No. 18
+CandidateContest	AZ House District 19 (Maricopa)	State Representative - District No. 19
+CandidateContest	AZ House District 20 (Maricopa)	State Representative - District No. 20
+CandidateContest	AZ House District 21 (Maricopa)	State Representative - District No. 21
+CandidateContest	AZ House District 22 (Maricopa)	State Representative - District No. 22
+CandidateContest	AZ House District 23 (Maricopa)	State Representative - District No. 23
+CandidateContest	AZ House District 24 (Maricopa)	State Representative - District No. 24
+CandidateContest	AZ House District 25 (Maricopa)	State Representative - District No. 25
+CandidateContest	AZ House District 26 (Maricopa)	State Representative - District No. 26
+CandidateContest	AZ House District 27 (Maricopa)	State Representative - District No. 27
+CandidateContest	AZ House District 28 (Maricopa)	State Representative - District No. 28
+CandidateContest	AZ House District 29 (Maricopa)	State Representative - District No. 29
+CandidateContest	AZ House District 30 (Maricopa)	State Representative - District No. 30
+CandidateContest	AZ House District 31 (Maricopa)	State Representative - District No. 31
+CandidateContest	AZ House District 32 (Maricopa)	State Representative - District No. 32
+CandidateContest	AZ House District 33 (Maricopa)	State Representative - District No. 33
+CandidateContest	AZ House District 34 (Maricopa)	State Representative - District No. 34
+CandidateContest	AZ House District 35 (Maricopa)	State Representative - District No. 35
+CandidateContest	AZ House District 36 (Maricopa)	State Representative - District No. 36
+CandidateContest	AZ House District 37 (Maricopa)	State Representative - District No. 37
+CandidateContest	AZ House District 38 (Maricopa)	State Representative - District No. 38
+CandidateContest	AZ House District 39 (Maricopa)	State Representative - District No. 39
+CandidateContest	AZ House District 40 (Maricopa)	State Representative - District No. 40
+CandidateContest	AZ House District 41 (Maricopa)	State Representative - District No. 41
+CandidateContest	AZ House District 42 (Maricopa)	State Representative - District No. 42
+CandidateContest	AZ House District 43 (Maricopa)	State Representative - District No. 43
+CandidateContest	AZ House District 44 (Maricopa)	State Representative - District No. 44
+CandidateContest	AZ House District 45 (Maricopa)	State Representative - District No. 45
+CandidateContest	AZ House District 46 (Maricopa)	State Representative - District No. 46
+CandidateContest	AZ House District 47 (Maricopa)	State Representative - District No. 47
+CandidateContest	AZ House District 48 (Maricopa)	State Representative - District No. 48
+CandidateContest	AZ House District 49 (Maricopa)	State Representative - District No. 49
+CandidateContest	AZ House District 50 (Maricopa)	State Representative - District No. 50
+CandidateContest	AZ House District 51 (Maricopa)	State Representative - District No. 51
+CandidateContest	AZ House District 52 (Maricopa)	State Representative - District No. 52
+CandidateContest	AZ House District 53 (Maricopa)	State Representative - District No. 53
+CandidateContest	AZ House District 54 (Maricopa)	State Representative - District No. 54
+CandidateContest	AZ House District 55 (Maricopa)	State Representative - District No. 55
+CandidateContest	AZ House District 56 (Maricopa)	State Representative - District No. 56
+CandidateContest	AZ House District 57 (Maricopa)	State Representative - District No. 57
+CandidateContest	AZ House District 58 (Maricopa)	State Representative - District No. 58
+CandidateContest	AZ House District 59 (Maricopa)	State Representative - District No. 59
+CandidateContest	AZ House District 60 (Maricopa)	State Representative - District No. 60
+CandidateContest	AZ Senate District 1 (Maricopa)	State Senator - District No. 1
+CandidateContest	AZ Senate District 2 (Maricopa)	State Senator - District No. 2
+CandidateContest	AZ Senate District 3 (Maricopa)	State Senator - District No. 3
+CandidateContest	AZ Senate District 4 (Maricopa)	State Senator - District No. 4
+CandidateContest	AZ Senate District 5 (Maricopa)	State Senator - District No. 5
+CandidateContest	AZ Senate District 6 (Maricopa)	State Senator - District No. 6
+CandidateContest	AZ Senate District 7 (Maricopa)	State Senator - District No. 7
+CandidateContest	AZ Senate District 8 (Maricopa)	State Senator - District No. 8
+CandidateContest	AZ Senate District 9 (Maricopa)	State Senator - District No. 9
+CandidateContest	AZ Senate District 10 (Maricopa)	State Senator - District No. 10
+CandidateContest	AZ Senate District 11 (Maricopa)	State Senator - District No. 11
+CandidateContest	AZ Senate District 12 (Maricopa)	State Senator - District No. 12
+CandidateContest	AZ Senate District 13 (Maricopa)	State Senator - District No. 13
+CandidateContest	AZ Senate District 14 (Maricopa)	State Senator - District No. 14
+CandidateContest	AZ Senate District 15 (Maricopa)	State Senator - District No. 15
+CandidateContest	AZ Senate District 16 (Maricopa)	State Senator - District No. 16
+CandidateContest	AZ Senate District 17 (Maricopa)	State Senator - District No. 17
+CandidateContest	AZ Senate District 18 (Maricopa)	State Senator - District No. 18
+CandidateContest	AZ Senate District 19 (Maricopa)	State Senator - District No. 19
+CandidateContest	AZ Senate District 20 (Maricopa)	State Senator - District No. 20
+CandidateContest	AZ Senate District 21 (Maricopa)	State Senator - District No. 21
+CandidateContest	AZ Senate District 22 (Maricopa)	State Senator - District No. 22
+CandidateContest	AZ Senate District 23 (Maricopa)	State Senator - District No. 23
+CandidateContest	AZ Senate District 24 (Maricopa)	State Senator - District No. 24
+CandidateContest	AZ Senate District 25 (Maricopa)	State Senator - District No. 25
+CandidateContest	AZ Senate District 26 (Maricopa)	State Senator - District No. 26
+CandidateContest	AZ Senate District 27 (Maricopa)	State Senator - District No. 27
+CandidateContest	AZ Senate District 28 (Maricopa)	State Senator - District No. 28
+CandidateContest	AZ Senate District 29 (Maricopa)	State Senator - District No. 29
+CandidateContest	AZ Senate District 30 (Maricopa)	State Senator - District No. 30
+CandidateContest	US House AZ District 1 (Maricopa)	U.S. Representative in Congress - District No. 1
+CandidateContest	US House AZ District 2 (Maricopa)	U.S. Representative in Congress - District No. 2
+CandidateContest	US House AZ District 3 (Maricopa)	U.S. Representative in Congress - District No. 3
+CandidateContest	US House AZ District 4 (Maricopa)	U.S. Representative in Congress - District No. 4
+CandidateContest	US House AZ District 5 (Maricopa)	U.S. Representative in Congress - District No. 5
+CandidateContest	US House AZ District 6 (Maricopa)	U.S. Representative in Congress - District No. 6
+CandidateContest	US House AZ District 7 (Maricopa)	U.S. Representative in Congress - District No. 7
+CandidateContest	US House AZ District 8 (Maricopa)	U.S. Representative in Congress - District No. 8
+CandidateContest	US House AZ District 9 (Maricopa)	U.S. Representative in Congress - District No. 9
+CandidateContest	US President (AZ) (Maricopa)	US President (AZ)
+CandidateContest	AZ Governor (Maricopa)	AZ Governor
+CandidateContest	US Senate AZ (Maricopa)	U.S. Senator
+CandidateContest	AZ Corporation Commissioner (Maricopa)	Corporation Commissioner
+CandidateContest	AZ Attorney General (Maricopa)	AZ Attorney General
+CandidateContest	AZ Lieutenant Governor (Maricopa)	AZ Lieutenant Governor
+CandidateContest	AZ Treasurer (Maricopa)	AZ Treasurer
+CandidateContest	AZ Secretary of State (Maricopa)	AZ Secretary of State
+Election	2020 General	2020 General
+Election	2020 Primary	2020 Primary
+Election	2018 General	2018 General
+Election	2016 General	2016 General
+Party	Democratic Party	Democratic Party
+Party	Democratic Party	DEM
+Party	Republican Party	Republican Party
+Party	Republican Party	REP
+Party	Green Party	Green Party
+Party	Libertarian Party	LBT
+ReportingUnit	Arizona;AZ House District 1	Arizona;AZ House District 1
+ReportingUnit	Arizona;AZ House District 2	Arizona;AZ House District 2
+ReportingUnit	Arizona;AZ House District 3	Arizona;AZ House District 3
+ReportingUnit	Arizona;AZ House District 4	Arizona;AZ House District 4
+ReportingUnit	Arizona;AZ House District 5	Arizona;AZ House District 5
+ReportingUnit	Arizona;AZ House District 6	Arizona;AZ House District 6
+ReportingUnit	Arizona;AZ House District 7	Arizona;AZ House District 7
+ReportingUnit	Arizona;AZ House District 8	Arizona;AZ House District 8
+ReportingUnit	Arizona;AZ House District 9	Arizona;AZ House District 9
+ReportingUnit	Arizona;AZ House District 10	Arizona;AZ House District 10
+ReportingUnit	Arizona;AZ House District 11	Arizona;AZ House District 11
+ReportingUnit	Arizona;AZ House District 12	Arizona;AZ House District 12
+ReportingUnit	Arizona;AZ House District 13	Arizona;AZ House District 13
+ReportingUnit	Arizona;AZ House District 14	Arizona;AZ House District 14
+ReportingUnit	Arizona;AZ House District 15	Arizona;AZ House District 15
+ReportingUnit	Arizona;AZ House District 16	Arizona;AZ House District 16
+ReportingUnit	Arizona;AZ House District 17	Arizona;AZ House District 17
+ReportingUnit	Arizona;AZ House District 18	Arizona;AZ House District 18
+ReportingUnit	Arizona;AZ House District 19	Arizona;AZ House District 19
+ReportingUnit	Arizona;AZ House District 20	Arizona;AZ House District 20
+ReportingUnit	Arizona;AZ House District 21	Arizona;AZ House District 21
+ReportingUnit	Arizona;AZ House District 22	Arizona;AZ House District 22
+ReportingUnit	Arizona;AZ House District 23	Arizona;AZ House District 23
+ReportingUnit	Arizona;AZ House District 24	Arizona;AZ House District 24
+ReportingUnit	Arizona;AZ House District 25	Arizona;AZ House District 25
+ReportingUnit	Arizona;AZ House District 26	Arizona;AZ House District 26
+ReportingUnit	Arizona;AZ House District 27	Arizona;AZ House District 27
+ReportingUnit	Arizona;AZ House District 28	Arizona;AZ House District 28
+ReportingUnit	Arizona;AZ House District 29	Arizona;AZ House District 29
+ReportingUnit	Arizona;AZ House District 30	Arizona;AZ House District 30
+ReportingUnit	Arizona;AZ House District 31	Arizona;AZ House District 31
+ReportingUnit	Arizona;AZ House District 32	Arizona;AZ House District 32
+ReportingUnit	Arizona;AZ House District 33	Arizona;AZ House District 33
+ReportingUnit	Arizona;AZ House District 34	Arizona;AZ House District 34
+ReportingUnit	Arizona;AZ House District 35	Arizona;AZ House District 35
+ReportingUnit	Arizona;AZ House District 36	Arizona;AZ House District 36
+ReportingUnit	Arizona;AZ House District 37	Arizona;AZ House District 37
+ReportingUnit	Arizona;AZ House District 38	Arizona;AZ House District 38
+ReportingUnit	Arizona;AZ House District 39	Arizona;AZ House District 39
+ReportingUnit	Arizona;AZ House District 40	Arizona;AZ House District 40
+ReportingUnit	Arizona;AZ House District 41	Arizona;AZ House District 41
+ReportingUnit	Arizona;AZ House District 42	Arizona;AZ House District 42
+ReportingUnit	Arizona;AZ House District 43	Arizona;AZ House District 43
+ReportingUnit	Arizona;AZ House District 44	Arizona;AZ House District 44
+ReportingUnit	Arizona;AZ House District 45	Arizona;AZ House District 45
+ReportingUnit	Arizona;AZ House District 46	Arizona;AZ House District 46
+ReportingUnit	Arizona;AZ House District 47	Arizona;AZ House District 47
+ReportingUnit	Arizona;AZ House District 48	Arizona;AZ House District 48
+ReportingUnit	Arizona;AZ House District 49	Arizona;AZ House District 49
+ReportingUnit	Arizona;AZ House District 50	Arizona;AZ House District 50
+ReportingUnit	Arizona;AZ House District 51	Arizona;AZ House District 51
+ReportingUnit	Arizona;AZ House District 52	Arizona;AZ House District 52
+ReportingUnit	Arizona;AZ House District 53	Arizona;AZ House District 53
+ReportingUnit	Arizona;AZ House District 54	Arizona;AZ House District 54
+ReportingUnit	Arizona;AZ House District 55	Arizona;AZ House District 55
+ReportingUnit	Arizona;AZ House District 56	Arizona;AZ House District 56
+ReportingUnit	Arizona;AZ House District 57	Arizona;AZ House District 57
+ReportingUnit	Arizona;AZ House District 58	Arizona;AZ House District 58
+ReportingUnit	Arizona;AZ House District 59	Arizona;AZ House District 59
+ReportingUnit	Arizona;AZ House District 60	Arizona;AZ House District 60
+ReportingUnit	Arizona;AZ Senate District 1	Arizona;AZ Senate District 1
+ReportingUnit	Arizona;AZ Senate District 2	Arizona;AZ Senate District 2
+ReportingUnit	Arizona;AZ Senate District 3	Arizona;AZ Senate District 3
+ReportingUnit	Arizona;AZ Senate District 4	Arizona;AZ Senate District 4
+ReportingUnit	Arizona;AZ Senate District 5	Arizona;AZ Senate District 5
+ReportingUnit	Arizona;AZ Senate District 6	Arizona;AZ Senate District 6
+ReportingUnit	Arizona;AZ Senate District 7	Arizona;AZ Senate District 7
+ReportingUnit	Arizona;AZ Senate District 8	Arizona;AZ Senate District 8
+ReportingUnit	Arizona;AZ Senate District 9	Arizona;AZ Senate District 9
+ReportingUnit	Arizona;AZ Senate District 10	Arizona;AZ Senate District 10
+ReportingUnit	Arizona;AZ Senate District 11	Arizona;AZ Senate District 11
+ReportingUnit	Arizona;AZ Senate District 12	Arizona;AZ Senate District 12
+ReportingUnit	Arizona;AZ Senate District 13	Arizona;AZ Senate District 13
+ReportingUnit	Arizona;AZ Senate District 14	Arizona;AZ Senate District 14
+ReportingUnit	Arizona;AZ Senate District 15	Arizona;AZ Senate District 15
+ReportingUnit	Arizona;AZ Senate District 16	Arizona;AZ Senate District 16
+ReportingUnit	Arizona;AZ Senate District 17	Arizona;AZ Senate District 17
+ReportingUnit	Arizona;AZ Senate District 18	Arizona;AZ Senate District 18
+ReportingUnit	Arizona;AZ Senate District 19	Arizona;AZ Senate District 19
+ReportingUnit	Arizona;AZ Senate District 20	Arizona;AZ Senate District 20
+ReportingUnit	Arizona;AZ Senate District 21	Arizona;AZ Senate District 21
+ReportingUnit	Arizona;AZ Senate District 22	Arizona;AZ Senate District 22
+ReportingUnit	Arizona;AZ Senate District 23	Arizona;AZ Senate District 23
+ReportingUnit	Arizona;AZ Senate District 24	Arizona;AZ Senate District 24
+ReportingUnit	Arizona;AZ Senate District 25	Arizona;AZ Senate District 25
+ReportingUnit	Arizona;AZ Senate District 26	Arizona;AZ Senate District 26
+ReportingUnit	Arizona;AZ Senate District 27	Arizona;AZ Senate District 27
+ReportingUnit	Arizona;AZ Senate District 28	Arizona;AZ Senate District 28
+ReportingUnit	Arizona;AZ Senate District 29	Arizona;AZ Senate District 29
+ReportingUnit	Arizona;AZ Senate District 30	Arizona;AZ Senate District 30
+ReportingUnit	Arizona;US House AZ District 1	Arizona;US House AZ District 1
+ReportingUnit	Arizona;US House AZ District 2	Arizona;US House AZ District 2
+ReportingUnit	Arizona;US House AZ District 3	Arizona;US House AZ District 3
+ReportingUnit	Arizona;US House AZ District 4	Arizona;US House AZ District 4
+ReportingUnit	Arizona;US House AZ District 5	Arizona;US House AZ District 5
+ReportingUnit	Arizona;US House AZ District 6	Arizona;US House AZ District 6
+ReportingUnit	Arizona;US House AZ District 7	Arizona;US House AZ District 7
+ReportingUnit	Arizona;US House AZ District 8	Arizona;US House AZ District 8
+ReportingUnit	Arizona;US House AZ District 9	Arizona;US House AZ District 9
+ReportingUnit	Arizona	Arizona
+ReportingUnit	Arizona;Apache County	Apache
+ReportingUnit	Arizona;Cochise County	Cochise
+ReportingUnit	Arizona;Coconino County	Coconino
+ReportingUnit	Arizona;Gila County	Gila
+ReportingUnit	Arizona;Graham County	Graham
+ReportingUnit	Arizona;Greenlee County	Greenlee
+ReportingUnit	Arizona;La Paz County	La Paz
+ReportingUnit	Arizona;Maricopa County	Maricopa
+ReportingUnit	Arizona;Mohave County	Mohave
+ReportingUnit	Arizona;Navajo County	Navajo
+ReportingUnit	Arizona;Pima County	Pima
+ReportingUnit	Arizona;Pinal County	Pinal
+ReportingUnit	Arizona;Santa Cruz County	Santa Cruz
+ReportingUnit	Arizona;Yavapai County	Yavapai
+ReportingUnit	Arizona;Yuma County	Yuma
+CountItemType	election-day	Votes_Election Day
+CountItemType	election-day	Votes_ELECTION DAY
+CountItemType	early	Votes_Early Vote
+CountItemType	early	Votes_EARLY VOTE
+CountItemType	provisional	Votes_PROVISIONAL
+Candidate	Garcia, Bo 'Heir Archy'	Garcia, Bo 'Heir Archy'
+Candidate	Garcia, Bo 'Heir Archy'	Garcia, Bo &quot;Heir Archy&quot;
+Candidate	Kelly, Mark	Kelly, Mark
+Candidate	Hess, Barry	Hess, Barry
+Candidate	White, Alan	White, Alan
+Candidate	Lyons, Sean	Lyons, Sean
+Candidate	McCarthy, Daniel 'Demand Daniel'	McCarthy, Daniel 'Demand Daniel'
+Candidate	McSally, Martha	McSally, Martha
+Candidate	O'Halleran, Tom	O'Halleran, Tom
+Candidate	Putzova, Eva	Putzova, Eva
+Candidate	Reidhead, Nolan	Reidhead, Nolan
+Candidate	Shedd, Tiffany	Shedd, Tiffany
+Candidate	Kirkpatrick, Ann	Kirkpatrick, Ann
+Candidate	Quilter, Peter	Quilter, Peter
+Candidate	Flayer, Jordan	Flayer, Jordan
+Candidate	Martin, Brandon	Martin, Brandon
+Candidate	Morgan, Joseph	Morgan, Joseph
+Candidate	Ruden, Noran Eric	Ruden, Noran Eric
+Candidate	Grijalva, Raúl	Grijalva, Raúl
+Candidate	Jolley, Richard	Jolley, Richard
+Candidate	Wood, Daniel	Wood, Daniel
+Candidate	DiSanto, Delina	DiSanto, Delina
+Candidate	Starky, Stuart	Starky, Stuart
+Candidate	Gosar, Paul	Gosar, Paul
+Candidate	Ward, Anne Marie	Ward, Anne Marie
+Candidate	Greene, Joan	Greene, Joan
+Candidate	Ireland, Jon	Ireland, Jon
+Candidate	Ramos, Javier	Ramos, Javier
+Candidate	Biggs, Andy	Biggs, Andy
+Candidate	Vess, Joe	Vess, Joe
+Candidate	Gentles, Karl	Gentles, Karl
+Candidate	Malik, Anita	Malik, Anita
+Candidate	Rimmer, Stephanie	Rimmer, Stephanie
+Candidate	Tipirneni, Hiral	Tipirneni, Hiral
+Candidate	Schweikert, David	Schweikert, David
+Candidate	Gallego, Ruben	Gallego, Ruben
+Candidate	Barnett, Joshua	Barnett, Joshua
+Candidate	Martin, Kyle	Martin, Kyle
+Candidate	Muscato, Michael	Muscato, Michael
+Candidate	Musselwhite, Bob	Musselwhite, Bob
+Candidate	Olsen, Robert 'Bob'	Olsen, Robert 'Bob'
+Candidate	Lesko, Debbie	Lesko, Debbie
+Candidate	Stanton, Greg	Stanton, Greg
+Candidate	Giles, Dave	Giles, Dave
+Candidate	Huang, Sam	Huang, Sam
+Candidate	Tutora, Nicholas	Tutora, Nicholas
+Candidate	Carillo, Gilbert 'Gilbert'	Carillo, Gilbert 'Gilbert'
+Candidate	Fann, Karen Elizabeth	Fann, Karen Elizabeth
+Candidate	Gabaldón, Rosanna	Gabaldón, Rosanna
+Candidate	Workman, Mark	Workman, Mark
+Candidate	Gonzales, Sally Ann	Gonzales, Sally Ann
+Candidate	Otondo, Lisa	Otondo, Lisa
+Candidate	Angry, Travis	Angry, Travis
+Candidate	Borrelli, Sonny	Borrelli, Sonny
+Candidate	French, Felicia	French, Felicia
+Candidate	Allen, Sylvia Tenney	Allen, Sylvia Tenney
+Candidate	Rogers, Wendy	Rogers, Wendy
+Candidate	Peshlakai, Jamescita	Peshlakai, Jamescita
+Candidate	McGuire, Barbara	McGuire, Barbara
+Candidate	Shope, Thomas 'T.J.'	Shope, Thomas 'T.J.'
+Candidate	Steele, Victoria	Steele, Victoria
+Candidate	Engel, Kirsten	Engel, Kirsten
+Candidate	Moore, David 'Dave'	Moore, David 'Dave'
+Candidate	Wadsack, Justine	Wadsack, Justine
+Candidate	Mendoza, JoAnna	Mendoza, JoAnna
+Candidate	Patterson, Linda	Patterson, Linda
+Candidate	Leach, Venden 'Vince'	Leach, Venden 'Vince'
+Candidate	Robinson, Lynsey	Robinson, Lynsey
+Candidate	Petersen, Warren	Petersen, Warren
+Candidate	Kerr, Sine	Kerr, Sine
+Candidate	Karp, Bob	Karp, Bob
+Candidate	Gowan, David	Gowan, David
+Candidate	Barto, Nancy	Barto, Nancy
+Candidate	Carter, Heather	Carter, Heather
+Candidate	Townsend, Kelly	Townsend, Kelly
+Candidate	Kurdoglu, Ajlan 'A.J.'	Kurdoglu, Ajlan 'A.J.'
+Candidate	Mesnard, J.D.	Mesnard, J.D.
+Candidate	Bowie, Sean	Bowie, Sean
+Candidate	Sharer, Suzanne	Sharer, Suzanne
+Candidate	Chavira Contreras, Lupe	Chavira Contreras, Lupe
+Candidate	Robinson, Steven	Robinson, Steven
+Candidate	Ervin, Douglas	Ervin, Douglas
+Candidate	Boyer, Paul	Boyer, Paul
+Candidate	Eldridge, Ryan	Eldridge, Ryan
+Candidate	Gray, Rick	Gray, Rick
+Candidate	Tyree, Sarah	Tyree, Sarah
+Candidate	DiCarlo, Van	DiCarlo, Van
+Candidate	Livingston, David	Livingston, David
+Candidate	Nguyen, Hop	Nguyen, Hop
+Candidate	Blattman, Seth	Blattman, Seth
+Candidate	Donnelly, Brandon 'Brandon'	Donnelly, Brandon 'Brandon'
+Candidate	Kolodin, Alexander	Kolodin, Alexander
+Candidate	Ugenti-Rita, Michelle	Ugenti-Rita, Michelle
+Candidate	Alston, Lela	Alston, Lela
+Candidate	Starzyk, Ryan	Starzyk, Ryan
+Candidate	Michaels, Ray	Michaels, Ray
+Candidate	Weigel, Paul	Weigel, Paul
+Candidate	Pace, Tyler	Pace, Tyler
+Candidate	Granillo, Jana Lynn	Granillo, Jana Lynn
+Candidate	Mendez, Juan	Mendez, Juan
+Candidate	Chin, Jae	Chin, Jae
+Candidate	Rios, Rebecca	Rios, Rebecca
+Candidate	Shreves, Garland	Shreves, Garland
+Candidate	Marsh, Christine	Marsh, Christine
+Candidate	Brophy McGee, Kate	Brophy McGee, Kate
+Candidate	Quezada, Martín J.	Quezada, Martín J.
+Candidate	Wilson, John	Wilson, John
+Candidate	Navarrete, Otoniel 'Tony'	Navarrete, Otoniel 'Tony'
+Candidate	Porter, C. Curtis	Porter, C. Curtis
+Candidate	Stahl, Judy	Stahl, Judy
+Candidate	Bliss, Selina	Bliss, Selina
+Candidate	Burges, Judy	Burges, Judy
+Candidate	Cocchiola, Ed	Cocchiola, Ed
+Candidate	Nguyen, Quang	Nguyen, Quang
+Candidate	Sensmeier, Steven	Sensmeier, Steven
+Candidate	Dalessandro, Andrea	Dalessandro, Andrea
+Candidate	Hernandez, Daniel, Jr.	Hernandez, Daniel, Jr.
+Candidate	Parra, Luis	Parra, Luis
+Candidate	Peard, Billy	Peard, Billy
+Candidate	McEwen, Deborah	McEwen, Deborah
+Candidate	Cano, Andrés	Cano, Andrés
+Candidate	Hernandez, Alma	Hernandez, Alma
+Candidate	Soto, Javier	Soto, Javier
+Candidate	Fernandez, Charlene	Fernandez, Charlene
+Candidate	Peten, Geraldine 'Gerae'	Peten, Geraldine 'Gerae'
+Candidate	John, Joel	John, Joel
+Candidate	Biasiucci, Leo	Biasiucci, Leo
+Candidate	Cobb, Regina	Cobb, Regina
+Candidate	Evans, Coral J	Evans, Coral J
+Candidate	Barton, Brenda	Barton, Brenda
+Candidate	Blackman, Walter 'Walt'	Blackman, Walter 'Walt'
+Candidate	Teller, Arlando	Teller, Arlando
+Candidate	Tsosie, Myron	Tsosie, Myron
+Candidate	Parks, James 'Jim'	Parks, James 'Jim'
+Candidate	Peelman, David	Peelman, David
+Candidate	Girard, Sharon	Girard, Sharon
+Candidate	Carter, Neal	Carter, Neal
+Candidate	Cook, David	Cook, David
+Candidate	Pratt, Frank	Pratt, Frank
+Candidate	Friese, Randall 'Randy'	Friese, Randall 'Randy'
+Candidate	Powers Hannley, Pamela	Powers Hannley, Pamela
+Candidate	Lyons, Brendan	Lyons, Brendan
+Candidate	DeGrazia, Domingo	DeGrazia, Domingo
+Candidate	Stahl Hamilton, Stephanie	Stahl Hamilton, Stephanie
+Candidate	Stapleton-Smith, Paul	Stapleton-Smith, Paul
+Candidate	Gummere, Mabelle	Gummere, Mabelle
+Candidate	Hicks, Michael	Hicks, Michael
+Candidate	Perez, Felipe R	Perez, Felipe R
+Candidate	Finchem, Mark	Finchem, Mark
+Candidate	Roberts, Bret	Roberts, Bret
+Candidate	Grantham, Travis	Grantham, Travis
+Candidate	Hoffman, Jake	Hoffman, Jake
+Candidate	Sandoval, Mariana	Sandoval, Mariana
+Candidate	Dunn, Timothy 'Tim'	Dunn, Timothy 'Tim'
+Candidate	Montenegro, Steve	Montenegro, Steve
+Candidate	Osborne, Joanne	Osborne, Joanne
+Candidate	Beach - Moschetti, Kimberly 'Kim'	Beach - Moschetti, Kimberly 'Kim'
+Candidate	Maestas-Condos, Ronnie	Maestas-Condos, Ronnie
+Candidate	Griffin, Gail	Griffin, Gail
+Candidate	Nutt, Becky	Nutt, Becky
+Candidate	Dybvig-Pawelko, Kristin	Dybvig-Pawelko, Kristin
+Candidate	Hamstreet, Jarret	Hamstreet, Jarret
+Candidate	Kaiser, Steve	Kaiser, Steve
+Candidate	Spata, Bill	Spata, Bill
+Candidate	Wilmeth, Justin	Wilmeth, Justin
+Candidate	Hunter, Helen	Hunter, Helen
+Candidate	Fillmore, John	Fillmore, John
+Candidate	Godzich, Lisa	Godzich, Lisa
+Candidate	Moriarty, Forest John	Moriarty, Forest John
+Candidate	Parker, Jacqueline	Parker, Jacqueline
+Candidate	Pawlik, Jennifer	Pawlik, Jennifer
+Candidate	Harris, Liz	Harris, Liz
+Candidate	Weninger, Jeff	Weninger, Jeff
+Candidate	Epstein, Denise 'Mitzi'	Epstein, Denise 'Mitzi'
+Candidate	Jermaine, Jennifer	Jermaine, Jennifer
+Candidate	Hawker, Don	Hawker, Don
+Candidate	Robson, Bob	Robson, Bob
+Candidate	Espinoza, Diego	Espinoza, Diego
+Candidate	Sierra, Lorenzo	Sierra, Lorenzo
+Candidate	Sun, Leezah	Sun, Leezah
+Candidate	Busch, Shelby	Busch, Shelby
+Candidate	Schwiebert, Judy	Schwiebert, Judy
+Candidate	Bolick, Shawnna	Bolick, Shawnna
+Candidate	Kern, Anthony	Kern, Anthony
+Candidate	Knecht, Kathy	Knecht, Kathy
+Candidate	Miller, Randy	Miller, Randy
+Candidate	Payne, Kevin	Payne, Kevin
+Candidate	Pingerelli, Beverly	Pingerelli, Beverly
+Candidate	Garcia, Wendy	Garcia, Wendy
+Candidate	Honne, Mary 'Kathleen'	Honne, Mary 'Kathleen'
+Candidate	Carroll, Frank	Carroll, Frank
+Candidate	Toma, Ben	Toma, Ben
+Candidate	Kurland, Eric	Kurland, Eric
+Candidate	Chaplik, Joseph	Chaplik, Joseph
+Candidate	Kavanagh, John	Kavanagh, John
+Candidate	Lawrence, Jay	Lawrence, Jay
+Candidate	Longdon, Jennifer	Longdon, Jennifer
+Candidate	Shah, Amish	Shah, Amish
+Candidate	Alger, David, Sr.	Alger, David, Sr.
+Candidate	Cushman, Robyn	Cushman, Robyn
+Candidate	Hug, Suzanne	Hug, Suzanne
+Candidate	Bowers, Russell W. 'Rusty'	Bowers, Russell W. 'Rusty'
+Candidate	Pearce, Kathy	Pearce, Kathy
+Candidate	Udall, Michelle	Udall, Michelle
+Candidate	Hernandez, Melody	Hernandez, Melody
+Candidate	Morales, Patrick	Morales, Patrick
+Candidate	Nez-Manuel, Debbie	Nez-Manuel, Debbie
+Candidate	Salman, Athena	Salman, Athena
+Candidate	Loughrige, Bill	Loughrige, Bill
+Candidate	Sifuentes, Seth 'Marcus'	Sifuentes, Seth 'Marcus'
+Candidate	Sifuentes, Seth 'Marcus'	Sifuentes, Seth ''Marcus''
+Candidate	Bolding, Reginald	Bolding, Reginald
+Candidate	Miranda, Catherine	Miranda, Catherine
+Candidate	Rodriguez, Diego	Rodriguez, Diego
+Candidate	Peña M., Tatiana	Peña M., Tatiana
+Candidate	Butler, Kelli	Butler, Kelli
+Candidate	Lieberman, Aaron	Lieberman, Aaron
+Candidate	Bowers, Kenneth R 'Ken', Jr	Bowers, Kenneth R 'Ken', Jr
+Candidate	Jackson, Jana	Jackson, Jana
+Candidate	Andrade, Richard	Andrade, Richard
+Candidate	Castro, Teddy	Castro, Teddy
+Candidate	Chavez, Cesar	Chavez, Cesar
+Candidate	Bragg, Billy	Bragg, Billy
+Candidate	FokszanskyJ-Conti, Helen	FokszanskyJ-Conti, Helen
+Candidate	McMillan, Alysia 'Ariesuptop'	McMillan, Alysia 'Ariesuptop'
+Candidate	Meza, Robert	Meza, Robert
+Candidate	Terán, Raquel	Terán, Raquel
+Candidate	Spears, Gary	Spears, Gary
+Candidate	Mundell, William 'Bill'	Mundell, William 'Bill'
+Candidate	Stanfield, Shea	Stanfield, Shea
+Candidate	Tovar, Anna	Tovar, Anna
+Candidate	Marquez Peterson, Lea	Marquez Peterson, Lea
+Candidate	O'Connor, James 'Jim'	O'Connor, James 'Jim'
+Candidate	Sloan, Eric	Sloan, Eric
