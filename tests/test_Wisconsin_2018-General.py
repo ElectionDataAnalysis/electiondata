@@ -13,7 +13,7 @@ def test_wi_statewide_totals(dbname):
         )
             == 2673305
     )
-    # The total votes for the above was 2673305, but two write-in candidates appeared
+    # The total votes for the above should be 2673308, but two write-in candidates appeared
     # with the same name "No candidate" after munging, the second of which received 3
     # votes that were lost.
 
