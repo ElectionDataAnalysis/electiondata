@@ -17,7 +17,7 @@ def test_statewide_totals(dbname):
     assert (e.contest_total(
             "2020 Primary",
             "Illinois",
-            "IL Senate IL (Democratic Party)",
+            "US Senate IL (Democratic Party)",
             dbname=dbname,
         )
             == 1446118
@@ -39,7 +39,7 @@ def test_house_totals(dbname):
     assert (e.contest_total(
             "2020 Primary",
             "Illinois",
-            "IL House District 100 (Democratic Party)",
+            "IL House District 100 (Republican Party)",
             dbname=dbname,
         )
             == 9319
