@@ -1,12 +1,15 @@
 import election_data_analysis as e
-#IA18 tests
+
+# IA18 tests
+
 
 def test_data_exists(dbname):
-    assert e.data_exists("2018 General","Texas",dbname=dbname)
+    assert e.data_exists("2018 General", "Texas", dbname=dbname)
 
 
 def test_senate_totals(dbname):
-    assert (e.contest_total(
+    assert (
+        e.contest_total(
             "2018 General",
             "Texas",
             "US Senate TX",
@@ -17,7 +20,8 @@ def test_senate_totals(dbname):
 
 
 def test_governor_totals(dbname):
-    assert (e.contest_total(
+    assert (
+        e.contest_total(
             "2018 General",
             "Texas",
             "TX Governor",
@@ -28,7 +32,8 @@ def test_governor_totals(dbname):
 
 
 def test_state_senate_totals(dbname):
-    assert (e.contest_total(
+    assert (
+        e.contest_total(
             "2018 General",
             "Texas",
             "TX Senate District 15",
@@ -39,13 +44,15 @@ def test_state_senate_totals(dbname):
 
 
 def test_state_rep_totals(dbname):
-    assert (e.contest_total(
+    assert (
+        e.contest_total(
             "2018 General",
             "Texas",
             "TX House District 25",
-        dbname=dbname,
-    )
+            dbname=dbname,
+        )
         == 40902
     )
+
 
 # # no tests by vote type

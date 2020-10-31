@@ -70,10 +70,7 @@ def extract_items(line: str, w: int) -> list:
 
 
 def read_alternate_munger(
-        file_type: str,
-        f_path: str,
-        munger: jm.Munger,
-        err: Optional[dict]
+    file_type: str, f_path: str, munger: jm.Munger, err: Optional[dict]
 ) -> (pd.DataFrame, dict):
     if file_type in ["concatenated-blocks"]:
         raw_results, err = read_concatenated_blocks(f_path, munger, err)
@@ -84,10 +81,7 @@ def read_alternate_munger(
         raw_results, err = read_xml(f_path, err, vc_field)
     else:
         err = ui.add_new_error(
-            err,
-            "munger",
-            munger.name,
-            f"file type not recognized: {file_type}"
+            err, "munger", munger.name, f"file type not recognized: {file_type}"
         )
         raw_results = pd.DataFrame()
 
@@ -95,10 +89,7 @@ def read_alternate_munger(
     raw_results, err_df = m.clean_count_cols(raw_results, ["count"])
     if not err_df.empty:
         err = ui.add_new_error(
-            err,
-            "warn-file",
-            Path(f_path).name,
-            f"Some counts not read, set to 0"
+            err, "warn-file", Path(f_path).name, f"Some counts not read, set to 0"
         )
     str_cols = [c for c in raw_results.columns if c != "count"]
     raw_results = m.clean_strings(raw_results, str_cols)
@@ -143,8 +134,8 @@ def read_concatenated_blocks(
             field_list = extract_items(header_line, w)
 
             # Add back county header in case of Iowa:
-            if header_line.startswith(' ' * w):
-                field_list = [''] + field_list
+            if header_line.startswith(" " * w):
+                field_list = [""] + field_list
 
             # remove first column header and headers of any columns to be skipped
             last_header = remove_by_index(field_list, [0] + skip_cols)
@@ -208,20 +199,22 @@ def read_concatenated_blocks(
                 header_map[col] = (index_array[0][i], index_array[1][i])
 
             # Move header to columns
-            df[header_0] = pd.melt(df[header_0],
-                                   ignore_index=False,
-                                   value_vars=df[header_0].columns.tolist(),
-                                   value_name="count",
-                                   var_name="header_tmp")
+            df[header_0] = pd.melt(
+                df[header_0],
+                ignore_index=False,
+                value_vars=df[header_0].columns.tolist(),
+                value_name="count",
+                var_name="header_tmp",
+            )
 
             # Gather values for header_1 and header_2 columns.
-            header_1_col = [header_map[i][0] for i in df[header_0]['header_tmp']]
-            header_2_col = [header_map[i][1] for i in df[header_0]['header_tmp']]
+            header_1_col = [header_map[i][0] for i in df[header_0]["header_tmp"]]
+            header_2_col = [header_map[i][1] for i in df[header_0]["header_tmp"]]
 
             # Add header_1 and header_2 columns, and remove header_tmp.
-            df[header_0]['header_1'] = header_1_col
-            df[header_0]['header_2'] = header_2_col
-            df[header_0] = df[header_0].drop(columns='header_tmp')
+            df[header_0]["header_1"] = header_1_col
+            df[header_0]["header_2"] = header_2_col
+            df[header_0] = df[header_0].drop(columns="header_tmp")
 
             # Add columns for header_0
             df[header_0] = m.add_constant_column(df[header_0], "header_0", header_0)
@@ -270,16 +263,13 @@ def read_multi_sheet_excel(
     columns_to_skip = munger.options["columns_to_skip"]
 
     try:
-        df = pd.read_excel(f_path,sheet_name=None,header=None)
+        df = pd.read_excel(f_path, sheet_name=None, header=None)
     except Exception as e:
         new_err = ui.add_new_error(
-            err,
-            "file",
-            Path(f_path).name,
-            f"Error reading file: {e}"
+            err, "file", Path(f_path).name, f"Error reading file: {e}"
         )
         if new_err:
-            err = ui.consolidate_errors([err,new_err])
+            err = ui.consolidate_errors([err, new_err])
             if ui.fatal_error(new_err):
                 return pd.DataFrame(), err
 
@@ -294,25 +284,35 @@ def read_multi_sheet_excel(
             data.drop(data.index[:count_of_top_lines_to_skip], inplace=True)
 
             # remove any all-null rows
-            data.dropna(how="all",inplace=True)
+            data.dropna(how="all", inplace=True)
 
             # read constant_line info from first non-null entries of constant-header rows
             # then drop those rows
             if constant_line_count > 0:
-                constant_lines = data.iloc[:constant_line_count].fillna(method="bfill", axis=1).iloc[:,0]
+                constant_lines = (
+                    data.iloc[:constant_line_count]
+                    .fillna(method="bfill", axis=1)
+                    .iloc[:, 0]
+                )
                 data.drop(data.index[:constant_line_count], inplace=True)
 
             # read constant_column info from first non-null entries of constant columns
             # and drop those columns
             if constant_column_count > 0:
-                constant_columns = data.T.iloc[:constant_column_count].fillna(method="bfill", axis=1).iloc[:,0]
+                constant_columns = (
+                    data.T.iloc[:constant_column_count]
+                    .fillna(method="bfill", axis=1)
+                    .iloc[:, 0]
+                )
                 data.drop(data.columns[:constant_column_count], axis=1, inplace=True)
 
             # add multi-index for actual header rows
             header_variable_names = [f"header_{j}" for j in range(header_row_count)]
 
             col_multi_index = pd.MultiIndex.from_frame(
-                data.iloc[range(header_row_count),:].transpose().fillna(method="ffill"),
+                data.iloc[range(header_row_count), :]
+                .transpose()
+                .fillna(method="ffill"),
                 names=header_variable_names,
             )
             data.columns = col_multi_index
@@ -337,21 +337,25 @@ def read_multi_sheet_excel(
 
             # add column(s) for constant info
             for j in range(constant_line_count):
-                data = m.add_constant_column(data,f"constant_line_{j}",constant_lines.iloc[j])
+                data = m.add_constant_column(
+                    data, f"constant_line_{j}", constant_lines.iloc[j]
+                )
             for j in range(constant_column_count):
-                data = m.add_constant_column(data,f"constant_column_{j}",constant_columns.iloc[j])
+                data = m.add_constant_column(
+                    data, f"constant_column_{j}", constant_columns.iloc[j]
+                )
 
             # Make row index (from first column of blocks) into a column called 'first_column'
             data.reset_index(inplace=True)
             data.rename(columns={data.columns[0]: "first_column"}, inplace=True)
 
-            raw_results = pd.concat([raw_results,data])
+            raw_results = pd.concat([raw_results, data])
         except Exception as e:
             err = ui.add_new_error(
                 err,
                 "system",
                 "special_formats.read_multi_sheet_excel",
-                f"Unexpected exception while processing sheet {sh}: {e}"
+                f"Unexpected exception while processing sheet {sh}: {e}",
             )
     return raw_results, err
 
@@ -365,26 +369,21 @@ def add_info(node: et.Element, info: dict, vc_field: dict) -> (dict, bool):
         else:
             # read value as string
             new_info[k] = node.attrib[vc_field[node.tag][k]]
-    changed = (new_info != info)
+    changed = new_info != info
     return new_info, changed
 
 
 def read_xml(
-        fpath: str,
-        err: Optional[Dict],
-        vc_field: dict,
+    fpath: str,
+    err: Optional[Dict],
+    vc_field: dict,
 ) -> (pd.DataFrame, Optional[Dict]):
     db_elements = {k2 for k, v in vc_field.items() for k2 in v.keys()}
 
     try:
         tree = et.parse(fpath)
     except FileNotFoundError:
-        err = ui.add_new_error(
-            err,
-            "file",
-            Path(fpath).name,
-            "File not found"
-        )
+        err = ui.add_new_error(err, "file", Path(fpath).name, "File not found")
         return pd.DataFrame(), err
 
     try:
@@ -403,11 +402,7 @@ def read_xml(
         raw_results = pd.DataFrame(vc_record_list)
 
     except Exception as e:
-        err = ui.add_new_error(
-            err,
-            "munger",
-            f"Error munging xml: {e}"
-        )
+        err = ui.add_new_error(err, "munger", f"Error munging xml: {e}")
         raw_results = pd.DataFrame()
     return raw_results, err
 

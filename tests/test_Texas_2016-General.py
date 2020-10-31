@@ -1,22 +1,27 @@
 import election_data_analysis as e
-#IA18 tests
+
+# IA18 tests
+
 
 def test_data_exists(dbname):
-    assert e.data_exists("2016 General","Texas",dbname=dbname)
+    assert e.data_exists("2016 General", "Texas", dbname=dbname)
 
 
 def test_tx_presidential_16(dbname):
-    assert ( e.contest_total(
+    assert (
+        e.contest_total(
             "2016 General",
             "Texas",
             "US President (TX)",
             dbname=dbname,
         )
-            == 8969226
+        == 8969226
     )
 
+
 def test_state_railroad_totals(dbname):
-    assert (e.contest_total(
+    assert (
+        e.contest_total(
             "2016 General",
             "Texas",
             "Railroad Commissioner",
@@ -27,7 +32,8 @@ def test_state_railroad_totals(dbname):
 
 
 def test_state_contest_totals(dbname):
-    assert (e.contest_total(
+    assert (
+        e.contest_total(
             "2016 General",
             "Texas",
             "US House TX District 10",
@@ -38,7 +44,8 @@ def test_state_contest_totals(dbname):
 
 
 def test_state_senate_totals(dbname):
-    assert (e.contest_total(
+    assert (
+        e.contest_total(
             "2016 General",
             "Texas",
             "TX Senate District 11",
@@ -49,13 +56,15 @@ def test_state_senate_totals(dbname):
 
 
 def test_state_rep_totals(dbname):
-    assert (e.contest_total(
+    assert (
+        e.contest_total(
             "2016 General",
             "Texas",
             "TX House District 115",
-        dbname=dbname,
-    )
+            dbname=dbname,
+        )
         == 58926
     )
+
 
 # # no tests by vote type

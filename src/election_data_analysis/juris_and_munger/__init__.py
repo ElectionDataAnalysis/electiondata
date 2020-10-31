@@ -229,7 +229,9 @@ class Munger:
         <aux_data_path> is the absolute path of the directory holding those files."""
         self.name = os.path.basename(munger_path)  # e.g., 'nc_general'
         self.path_to_munger_dir = munger_path
-        self.alt = dict()   # to hold any alt names, e.g., from disambiguation of cross-listed candidates
+        self.alt = (
+            dict()
+        )  # to hold any alt names, e.g., from disambiguation of cross-listed candidates
         [
             self.cdf_elements,
             self.file_type,
@@ -252,7 +254,9 @@ class Munger:
             self.field_list = self.field_list.union(r["fields"])
 
 
-def check_and_init_munger(munger_path: str, aux_data_path: str = None) -> (Munger, dict):
+def check_and_init_munger(
+    munger_path: str, aux_data_path: str = None
+) -> (Munger, dict):
     err = check_munger_files(munger_path)
     if ui.fatal_error(err):
         munger = None
@@ -348,7 +352,9 @@ def ensure_juris_files(juris_path, ignore_empty=False) -> Optional[dict]:
     juris_name = Path(juris_path).name
 
     project_root = Path(__file__).parents[1].absolute()
-    templates_dir = os.path.join(project_root, "juris_and_munger", "jurisdiction_templates")
+    templates_dir = os.path.join(
+        project_root, "juris_and_munger", "jurisdiction_templates"
+    )
     # notify user of any extraneous files
     extraneous = [
         f
@@ -410,7 +416,7 @@ def ensure_juris_files(juris_path, ignore_empty=False) -> Optional[dict]:
                     err,
                     "jurisdiction",
                     juris_name,
-                    f"Error reading file {juris_file}.txt: {e}"
+                    f"Error reading file {juris_file}.txt: {e}",
                 )
                 return err
 
@@ -488,7 +494,7 @@ def check_munger_files(munger_path: str) -> dict:
             err = ui.add_new_error(err, "munger", munger_name, "File does not exist")
 
     # if the munger requires auxiliary data
-    if os.path.isfile(os.path.join(munger_path,"aux_meta.txt")):
+    if os.path.isfile(os.path.join(munger_path, "aux_meta.txt")):
         # TODO check that each abbrev in aux_meta.txt has an associated sub_munger
         # check sub-mungers (in sub-directories of munger)
         sub_mungers = os.listdir(munger_path)
@@ -536,7 +542,9 @@ def check_munger_file_contents(munger_path, munger_file, err):
         ).fillna("")
 
         # every source in cdf_elements is either row, column, ini, xml or other
-        bad_source = [x for x in cdf_elements.source if x not in ["row", "column", "ini", "xml"]]
+        bad_source = [
+            x for x in cdf_elements.source if x not in ["row", "column", "ini", "xml"]
+        ]
         if bad_source:
             err = ui.add_new_error(
                 err,
@@ -597,16 +605,20 @@ def check_munger_file_contents(munger_path, munger_file, err):
                 f"No encoding specified; iso-8859-1 will be used",
             )
         elif not format_d["encoding"] in ui.recognized_encodings:
-            print (
-                    f"Encoding {format_d['encoding']} in format file is not recognized;"
-                    f"iso-8859-1 will be used"
-                )
+            print(
+                f"Encoding {format_d['encoding']} in format file is not recognized;"
+                f"iso-8859-1 will be used"
+            )
 
         # check all parameters for flat files
         if format_d["file_type"] in ["txt", "csv", "xls", "txt-semicolon-separated"]:
             # Either field_name_row is a number, or field_names_if_no_field_name_row is a non-empty list
-            if (not format_d["field_name_row"]) or (not format_d["field_name_row"].isnumeric()):
-                if (not format_d["field_names_if_no_field_name_row"]) or (len(format_d["field_names_if_no_field_name_row"]) == 0):
+            if (not format_d["field_name_row"]) or (
+                not format_d["field_name_row"].isnumeric()
+            ):
+                if (not format_d["field_names_if_no_field_name_row"]) or (
+                    len(format_d["field_names_if_no_field_name_row"]) == 0
+                ):
                     err = ui.add_new_error(
                         err,
                         "munger",
@@ -691,7 +703,8 @@ def check_nulls(element, f_path, project_root):
     # TODO automatically drop null rows
     nn_path = os.path.join(
         project_root,
-        "CDF_schema_def_info","elements",
+        "CDF_schema_def_info",
+        "elements",
         element,
         "not_null_fields.txt",
     )
@@ -821,7 +834,7 @@ def load_juris_dframe_into_cdf(session, element, juris_path, error) -> dict:
             error,
             "jurisdiction",
             Path(juris_path).name,
-            f"File {element}.txt not found"
+            f"File {element}.txt not found",
         )
         return error
     df = pd.read_csv(
@@ -839,7 +852,7 @@ def load_juris_dframe_into_cdf(session, element, juris_path, error) -> dict:
             error,
             "warn-jurisdiction",
             Path(juris_path).name,
-            f"Duplicates were found in {element}.txt"
+            f"Duplicates were found in {element}.txt",
         )
 
     # replace plain text enumerations from file system with id/othertext from db
@@ -881,7 +894,7 @@ def load_juris_dframe_into_cdf(session, element, juris_path, error) -> dict:
             error,
             "system",
             "juris_and_munger.load_juris_dframe_into_cdf",
-            f"Error loading {element} to database: {e}"
+            f"Error loading {element} to database: {e}",
         )
     return error
 
