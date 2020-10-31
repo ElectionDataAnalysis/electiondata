@@ -18,6 +18,7 @@ def test_statewide_totals(dbname):
             "2020 Primary",
             "Illinois",
             "US Senate IL (Democratic Party)",
+
             dbname=dbname,
         )
             == 1446118
@@ -40,6 +41,7 @@ def test_house_totals(dbname):
             "2020 Primary",
             "Illinois",
             "IL House District 100 (Republican Party)",
+
             dbname=dbname,
         )
             == 9319
