@@ -98,39 +98,41 @@ def get_database_names(con):
     return names
 
 
-def remove_database(params: dict) -> dict:
+def remove_database(params: dict) -> Optional[dict]:
     # initialize error dictionary
-    err = dict()
+    db_err = None
 
-    # connect to default postgres DB
+    # connect to postgres, not to the target database
     postgres_params = params.copy()
     postgres_params["dbname"] = "postgres"
     try:
-        con = psycopg2.connect(**postgres_params)
-    except Exception as e:
-        err = ui.add_new_error(
-            err,
-            "system",
-            "database.remove_database",
-            f"Error connecting to postgres via {postgres_params}: {e}",
-        )
-        return err
+        with psycopg2.connect(**postgres_params) as conn:
+            with conn.cursor() as cur:
+                conn.autocommit = True
 
-    # delete the database given in params
-    cur = con.cursor()
-    q = sql.SQL("DROP DATABASE {dbname}").format(
-        dbname=sql.Identifier(params["dbname"])
-    )
-    try:
-        cur.execute(q)
+                # close any active sessions
+                q = sql.SQL(
+                    """SELECT pg_terminate_backend(pg_stat_activity.pid) 
+                    FROM pg_stat_activity 
+                    WHERE pg_stat_activity.datname = %s 
+                    AND pid <> pg_backend_pid();"""
+                )
+                cur.execute(q, (params["dbname"],))
+
+                # drop database
+                q = sql.SQL(
+                    "DROP DATABASE IF EXISTS {dbname}"
+                ).format(dbname=sql.Identifier(params["dbname"]))
+                cur.execute(q)
     except Exception as e:
-        err = ui.add_new_error(
-            err,
+        db_err = ui.add_new_error(
+            db_err,
             "system",
             "database.remove_database",
-            f"Error while dropping database {params['dbname']}: {e}",
+            f"Error dropping database {params}:\n{e}",
         )
-    return err
+
+    return db_err
 
 
 def create_database(con, cur, db_name):
