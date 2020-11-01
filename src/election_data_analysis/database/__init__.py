@@ -101,24 +101,35 @@ def get_database_names(con):
 def remove_database(params: dict) -> Optional[dict]:
     # initialize error dictionary
     db_err = None
-    # delete the database given in params
-    #         "user": dl.engine.url.username,
-    #         "password": dl.engine.url.password,
-    #         "dbname"
-    drop_command = f"dropdb " \
-                   f"-p {params['port']} " \
-                   f"-h {params['host']} " \
-                   f"-U {params['user']} " \
-                   f"-e " \
-                   f"{params['dbname']}"
+
+    # connect to postgres, not to the target database
+    postgres_params = params.copy()
+    postgres_params["dbname"] = "postgres"
     try:
-        os.system(drop_command)
+        with psycopg2.connect(**postgres_params) as conn:
+            with conn.cursor() as cur:
+                conn.autocommit = True
+
+                # close any active sessions
+                q = sql.SQL(
+                    """SELECT pg_terminate_backend(pg_stat_activity.pid) 
+                    FROM pg_stat_activity 
+                    WHERE pg_stat_activity.datname = %s 
+                    AND pid <> pg_backend_pid();"""
+                )
+                cur.execute(q, (params["dbname"],))
+
+                # drop database
+                q = sql.SQL(
+                    "DROP DATABASE IF EXISTS {dbname}"
+                ).format(dbname=sql.Identifier(params["dbname"]))
+                cur.execute(q)
     except Exception as e:
         db_err = ui.add_new_error(
             db_err,
             "system",
             "database.remove_database",
-            f"Error executing command {drop_command}:\n{e}",
+            f"Error dropping database {params}:\n{e}",
         )
 
     return db_err
