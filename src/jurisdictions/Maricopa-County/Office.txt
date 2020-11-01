@@ -106,3 +106,6 @@ AZ Attorney General	Maricopa County
 AZ Lieutenant Governor	Maricopa County
 AZ Treasurer	Maricopa County
 AZ Secretary of State	Maricopa County
+AZ State Mine Inspector	Maricopa County
+AZ Superintendent of Public Instruction	Maricopa County
+

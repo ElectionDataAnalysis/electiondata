@@ -843,112 +843,214 @@ CandidateContest	AZ Lieutenant Governor (Libertarian Party) (Maricopa County)	AZ
 CandidateContest	AZ Treasurer (Libertarian Party) (Maricopa County)	AZ Treasurer (LBT)
 CandidateContest	AZ Secretary of State (Libertarian Party) (Maricopa County)	AZ Secretary of State (LBT)
 CandidateContest	AZ House District 1 (Maricopa County)	State Representative - District No. 1
+CandidateContest	AZ House District 1 (Maricopa County)	State Rep Dst 1 (vote for 2)
 CandidateContest	AZ House District 2 (Maricopa County)	State Representative - District No. 2
+CandidateContest	AZ House District 2 (Maricopa County)	State Rep Dst 2 (vote for 2)
 CandidateContest	AZ House District 3 (Maricopa County)	State Representative - District No. 3
+CandidateContest	AZ House District 3 (Maricopa County)	State Rep Dst 3 (vote for 2)
 CandidateContest	AZ House District 4 (Maricopa County)	State Representative - District No. 4
+CandidateContest	AZ House District 4 (Maricopa County)	State Rep Dst 4 (vote for 2)
 CandidateContest	AZ House District 5 (Maricopa County)	State Representative - District No. 5
+CandidateContest	AZ House District 5 (Maricopa County)	State Rep Dst 5 (vote for 2)
 CandidateContest	AZ House District 6 (Maricopa County)	State Representative - District No. 6
+CandidateContest	AZ House District 6 (Maricopa County)	State Rep Dst 6 (vote for 2)
 CandidateContest	AZ House District 7 (Maricopa County)	State Representative - District No. 7
+CandidateContest	AZ House District 7 (Maricopa County)	State Rep Dst 7 (vote for 2)
 CandidateContest	AZ House District 8 (Maricopa County)	State Representative - District No. 8
+CandidateContest	AZ House District 8 (Maricopa County)	State Rep Dst 8 (vote for 2)
 CandidateContest	AZ House District 9 (Maricopa County)	State Representative - District No. 9
+CandidateContest	AZ House District 9 (Maricopa County)	State Rep Dst 9 (vote for 2)
 CandidateContest	AZ House District 10 (Maricopa County)	State Representative - District No. 10
+CandidateContest	AZ House District 10 (Maricopa County)	State Rep Dst 10 (vote for 2)
 CandidateContest	AZ House District 11 (Maricopa County)	State Representative - District No. 11
+CandidateContest	AZ House District 11 (Maricopa County)	State Rep Dst 11 (vote for 2)
 CandidateContest	AZ House District 12 (Maricopa County)	State Representative - District No. 12
+CandidateContest	AZ House District 12 (Maricopa County)	State Rep Dst 12 (vote for 2)
 CandidateContest	AZ House District 13 (Maricopa County)	State Representative - District No. 13
+CandidateContest	AZ House District 13 (Maricopa County)	State Rep Dst 13 (vote for 2)
 CandidateContest	AZ House District 14 (Maricopa County)	State Representative - District No. 14
+CandidateContest	AZ House District 14 (Maricopa County)	State Rep Dst 14 (vote for 2)
 CandidateContest	AZ House District 15 (Maricopa County)	State Representative - District No. 15
+CandidateContest	AZ House District 15 (Maricopa County)	State Rep Dst 15 (vote for 2)
 CandidateContest	AZ House District 16 (Maricopa County)	State Representative - District No. 16
+CandidateContest	AZ House District 16 (Maricopa County)	State Rep Dst 16 (vote for 2)
 CandidateContest	AZ House District 17 (Maricopa County)	State Representative - District No. 17
+CandidateContest	AZ House District 17 (Maricopa County)	State Rep Dst 17 (vote for 2)
 CandidateContest	AZ House District 18 (Maricopa County)	State Representative - District No. 18
+CandidateContest	AZ House District 18 (Maricopa County)	State Rep Dst 18 (vote for 2)
 CandidateContest	AZ House District 19 (Maricopa County)	State Representative - District No. 19
+CandidateContest	AZ House District 19 (Maricopa County)	State Rep Dst 19 (vote for 2)
 CandidateContest	AZ House District 20 (Maricopa County)	State Representative - District No. 20
+CandidateContest	AZ House District 20 (Maricopa County)	State Rep Dst 20 (vote for 2)
 CandidateContest	AZ House District 21 (Maricopa County)	State Representative - District No. 21
+CandidateContest	AZ House District 21 (Maricopa County)	State Rep Dst 21 (vote for 2)
 CandidateContest	AZ House District 22 (Maricopa County)	State Representative - District No. 22
+CandidateContest	AZ House District 22 (Maricopa County)	State Rep Dst 22 (vote for 2)
 CandidateContest	AZ House District 23 (Maricopa County)	State Representative - District No. 23
+CandidateContest	AZ House District 23 (Maricopa County)	State Rep Dst 23 (vote for 2)
 CandidateContest	AZ House District 24 (Maricopa County)	State Representative - District No. 24
+CandidateContest	AZ House District 24 (Maricopa County)	State Rep Dst 24 (vote for 2)
 CandidateContest	AZ House District 25 (Maricopa County)	State Representative - District No. 25
+CandidateContest	AZ House District 25 (Maricopa County)	State Rep Dst 25 (vote for 2)
 CandidateContest	AZ House District 26 (Maricopa County)	State Representative - District No. 26
+CandidateContest	AZ House District 26 (Maricopa County)	State Rep Dst 26 (vote for 2)
 CandidateContest	AZ House District 27 (Maricopa County)	State Representative - District No. 27
+CandidateContest	AZ House District 27 (Maricopa County)	State Rep Dst 27 (vote for 2)
 CandidateContest	AZ House District 28 (Maricopa County)	State Representative - District No. 28
+CandidateContest	AZ House District 28 (Maricopa County)	State Rep Dst 28 (vote for 2)
 CandidateContest	AZ House District 29 (Maricopa County)	State Representative - District No. 29
+CandidateContest	AZ House District 29 (Maricopa County)	State Rep Dst 29 (vote for 2)
 CandidateContest	AZ House District 30 (Maricopa County)	State Representative - District No. 30
+CandidateContest	AZ House District 30 (Maricopa County)	State Rep Dst 30 (vote for 2)
 CandidateContest	AZ House District 31 (Maricopa County)	State Representative - District No. 31
+CandidateContest	AZ House District 31 (Maricopa County)	State Rep Dst 31 (vote for 2)
 CandidateContest	AZ House District 32 (Maricopa County)	State Representative - District No. 32
+CandidateContest	AZ House District 32 (Maricopa County)	State Rep Dst 32 (vote for 2)
 CandidateContest	AZ House District 33 (Maricopa County)	State Representative - District No. 33
+CandidateContest	AZ House District 33 (Maricopa County)	State Rep Dst 33 (vote for 2)
 CandidateContest	AZ House District 34 (Maricopa County)	State Representative - District No. 34
+CandidateContest	AZ House District 34 (Maricopa County)	State Rep Dst 34 (vote for 2)
 CandidateContest	AZ House District 35 (Maricopa County)	State Representative - District No. 35
+CandidateContest	AZ House District 35 (Maricopa County)	State Rep Dst 35 (vote for 2)
 CandidateContest	AZ House District 36 (Maricopa County)	State Representative - District No. 36
+CandidateContest	AZ House District 36 (Maricopa County)	State Rep Dst 36 (vote for 2)
 CandidateContest	AZ House District 37 (Maricopa County)	State Representative - District No. 37
+CandidateContest	AZ House District 37 (Maricopa County)	State Rep Dst 37 (vote for 2)
 CandidateContest	AZ House District 38 (Maricopa County)	State Representative - District No. 38
+CandidateContest	AZ House District 38 (Maricopa County)	State Rep Dst 38 (vote for 2)
 CandidateContest	AZ House District 39 (Maricopa County)	State Representative - District No. 39
+CandidateContest	AZ House District 39 (Maricopa County)	State Rep Dst 39 (vote for 2)
 CandidateContest	AZ House District 40 (Maricopa County)	State Representative - District No. 40
+CandidateContest	AZ House District 40 (Maricopa County)	State Rep Dst 40 (vote for 2)
 CandidateContest	AZ House District 41 (Maricopa County)	State Representative - District No. 41
+CandidateContest	AZ House District 41 (Maricopa County)	State Rep Dst 41 (vote for 2)
 CandidateContest	AZ House District 42 (Maricopa County)	State Representative - District No. 42
+CandidateContest	AZ House District 42 (Maricopa County)	State Rep Dst 42 (vote for 2)
 CandidateContest	AZ House District 43 (Maricopa County)	State Representative - District No. 43
+CandidateContest	AZ House District 43 (Maricopa County)	State Rep Dst 43 (vote for 2)
 CandidateContest	AZ House District 44 (Maricopa County)	State Representative - District No. 44
+CandidateContest	AZ House District 44 (Maricopa County)	State Rep Dst 44 (vote for 2)
 CandidateContest	AZ House District 45 (Maricopa County)	State Representative - District No. 45
+CandidateContest	AZ House District 45 (Maricopa County)	State Rep Dst 45 (vote for 2)
 CandidateContest	AZ House District 46 (Maricopa County)	State Representative - District No. 46
+CandidateContest	AZ House District 46 (Maricopa County)	State Rep Dst 46 (vote for 2)
 CandidateContest	AZ House District 47 (Maricopa County)	State Representative - District No. 47
+CandidateContest	AZ House District 47 (Maricopa County)	State Rep Dst 47 (vote for 2)
 CandidateContest	AZ House District 48 (Maricopa County)	State Representative - District No. 48
+CandidateContest	AZ House District 48 (Maricopa County)	State Rep Dst 48 (vote for 2)
 CandidateContest	AZ House District 49 (Maricopa County)	State Representative - District No. 49
+CandidateContest	AZ House District 49 (Maricopa County)	State Rep Dst 49 (vote for 2)
 CandidateContest	AZ House District 50 (Maricopa County)	State Representative - District No. 50
+CandidateContest	AZ House District 50 (Maricopa County)	State Rep Dst 50 (vote for 2)
 CandidateContest	AZ House District 51 (Maricopa County)	State Representative - District No. 51
+CandidateContest	AZ House District 51 (Maricopa County)	State Rep Dst 51 (vote for 2)
 CandidateContest	AZ House District 52 (Maricopa County)	State Representative - District No. 52
+CandidateContest	AZ House District 52 (Maricopa County)	State Rep Dst 52 (vote for 2)
 CandidateContest	AZ House District 53 (Maricopa County)	State Representative - District No. 53
+CandidateContest	AZ House District 53 (Maricopa County)	State Rep Dst 53 (vote for 2)
 CandidateContest	AZ House District 54 (Maricopa County)	State Representative - District No. 54
+CandidateContest	AZ House District 54 (Maricopa County)	State Rep Dst 54 (vote for 2)
 CandidateContest	AZ House District 55 (Maricopa County)	State Representative - District No. 55
+CandidateContest	AZ House District 55 (Maricopa County)	State Rep Dst 55 (vote for 2)
 CandidateContest	AZ House District 56 (Maricopa County)	State Representative - District No. 56
+CandidateContest	AZ House District 56 (Maricopa County)	State Rep Dst 56 (vote for 2)
 CandidateContest	AZ House District 57 (Maricopa County)	State Representative - District No. 57
+CandidateContest	AZ House District 57 (Maricopa County)	State Rep Dst 57 (vote for 2)
 CandidateContest	AZ House District 58 (Maricopa County)	State Representative - District No. 58
+CandidateContest	AZ House District 58 (Maricopa County)	State Rep Dst 58 (vote for 2)
 CandidateContest	AZ House District 59 (Maricopa County)	State Representative - District No. 59
+CandidateContest	AZ House District 59 (Maricopa County)	State Rep Dst 59 (vote for 2)
 CandidateContest	AZ House District 60 (Maricopa County)	State Representative - District No. 60
+CandidateContest	AZ House District 60 (Maricopa County)	State Rep Dst 60 (vote for 2)
 CandidateContest	AZ Senate District 1 (Maricopa County)	State Senator - District No. 1
+CandidateContest	AZ Senate District 1 (Maricopa County)	State Senator Dst 1 (vote for 2)
 CandidateContest	AZ Senate District 2 (Maricopa County)	State Senator - District No. 2
+CandidateContest	AZ Senate District 2 (Maricopa County)	State Senator Dst 2 (vote for 2)
 CandidateContest	AZ Senate District 3 (Maricopa County)	State Senator - District No. 3
+CandidateContest	AZ Senate District 3 (Maricopa County)	State Senator Dst 3 (vote for 2)
 CandidateContest	AZ Senate District 4 (Maricopa County)	State Senator - District No. 4
+CandidateContest	AZ Senate District 4 (Maricopa County)	State Senator Dst 4 (vote for 2)
 CandidateContest	AZ Senate District 5 (Maricopa County)	State Senator - District No. 5
+CandidateContest	AZ Senate District 5 (Maricopa County)	State Senator Dst 5 (vote for 2)
 CandidateContest	AZ Senate District 6 (Maricopa County)	State Senator - District No. 6
+CandidateContest	AZ Senate District 6 (Maricopa County)	State Senator Dst 6 (vote for 2)
 CandidateContest	AZ Senate District 7 (Maricopa County)	State Senator - District No. 7
+CandidateContest	AZ Senate District 7 (Maricopa County)	State Senator Dst 7 (vote for 2)
 CandidateContest	AZ Senate District 8 (Maricopa County)	State Senator - District No. 8
+CandidateContest	AZ Senate District 8 (Maricopa County)	State Senator Dst 8 (vote for 2)
 CandidateContest	AZ Senate District 9 (Maricopa County)	State Senator - District No. 9
+CandidateContest	AZ Senate District 9 (Maricopa County)	State Senator Dst 9 (vote for 2)
 CandidateContest	AZ Senate District 10 (Maricopa County)	State Senator - District No. 10
+CandidateContest	AZ Senate District 10 (Maricopa County)	State Senator Dst 10 (vote for 2)
 CandidateContest	AZ Senate District 11 (Maricopa County)	State Senator - District No. 11
+CandidateContest	AZ Senate District 11 (Maricopa County)	State Senator Dst 11 (vote for 2)
 CandidateContest	AZ Senate District 12 (Maricopa County)	State Senator - District No. 12
+CandidateContest	AZ Senate District 12 (Maricopa County)	State Senator Dst 12 (vote for 2)
 CandidateContest	AZ Senate District 13 (Maricopa County)	State Senator - District No. 13
+CandidateContest	AZ Senate District 13 (Maricopa County)	State Senator Dst 13 (vote for 2)
 CandidateContest	AZ Senate District 14 (Maricopa County)	State Senator - District No. 14
+CandidateContest	AZ Senate District 14 (Maricopa County)	State Senator Dst 14 (vote for 2)
 CandidateContest	AZ Senate District 15 (Maricopa County)	State Senator - District No. 15
+CandidateContest	AZ Senate District 15 (Maricopa County)	State Senator Dst 15 (vote for 2)
 CandidateContest	AZ Senate District 16 (Maricopa County)	State Senator - District No. 16
+CandidateContest	AZ Senate District 16 (Maricopa County)	State Senator Dst 16 (vote for 2)
 CandidateContest	AZ Senate District 17 (Maricopa County)	State Senator - District No. 17
+CandidateContest	AZ Senate District 17 (Maricopa County)	State Senator Dst 17 (vote for 2)
 CandidateContest	AZ Senate District 18 (Maricopa County)	State Senator - District No. 18
+CandidateContest	AZ Senate District 18 (Maricopa County)	State Senator Dst 18 (vote for 2)
 CandidateContest	AZ Senate District 19 (Maricopa County)	State Senator - District No. 19
+CandidateContest	AZ Senate District 19 (Maricopa County)	State Senator Dst 19 (vote for 2)
 CandidateContest	AZ Senate District 20 (Maricopa County)	State Senator - District No. 20
+CandidateContest	AZ Senate District 20 (Maricopa County)	State Senator Dst 20 (vote for 2)
 CandidateContest	AZ Senate District 21 (Maricopa County)	State Senator - District No. 21
+CandidateContest	AZ Senate District 21 (Maricopa County)	State Senator Dst 21 (vote for 2)
 CandidateContest	AZ Senate District 22 (Maricopa County)	State Senator - District No. 22
+CandidateContest	AZ Senate District 22 (Maricopa County)	State Senator Dst 22 (vote for 2)
 CandidateContest	AZ Senate District 23 (Maricopa County)	State Senator - District No. 23
+CandidateContest	AZ Senate District 23 (Maricopa County)	State Senator Dst 23 (vote for 2)
 CandidateContest	AZ Senate District 24 (Maricopa County)	State Senator - District No. 24
+CandidateContest	AZ Senate District 24 (Maricopa County)	State Senator Dst 24 (vote for 2)
 CandidateContest	AZ Senate District 25 (Maricopa County)	State Senator - District No. 25
+CandidateContest	AZ Senate District 25 (Maricopa County)	State Senator Dst 25 (vote for 2)
 CandidateContest	AZ Senate District 26 (Maricopa County)	State Senator - District No. 26
+CandidateContest	AZ Senate District 26 (Maricopa County)	State Senator Dst 26 (vote for 2)
 CandidateContest	AZ Senate District 27 (Maricopa County)	State Senator - District No. 27
+CandidateContest	AZ Senate District 27 (Maricopa County)	State Senator Dst 27 (vote for 2)
 CandidateContest	AZ Senate District 28 (Maricopa County)	State Senator - District No. 28
+CandidateContest	AZ Senate District 28 (Maricopa County)	State Senator Dst 28 (vote for 2)
 CandidateContest	AZ Senate District 29 (Maricopa County)	State Senator - District No. 29
+CandidateContest	AZ Senate District 29 (Maricopa County)	State Senator Dst 29 (vote for 2)
 CandidateContest	AZ Senate District 30 (Maricopa County)	State Senator - District No. 30
+CandidateContest	AZ Senate District 30 (Maricopa County)	State Senator Dst 30 (vote for 2)
 CandidateContest	US House AZ District 1 (Maricopa County)	U.S. Representative in Congress - District No. 1
+CandidateContest	US House AZ District 1 (Maricopa County)	US Rep CD 1
 CandidateContest	US House AZ District 2 (Maricopa County)	U.S. Representative in Congress - District No. 2
+CandidateContest	US House AZ District 2 (Maricopa County)	US Rep CD 2
 CandidateContest	US House AZ District 3 (Maricopa County)	U.S. Representative in Congress - District No. 3
+CandidateContest	US House AZ District 3 (Maricopa County)	US Rep CD 3
 CandidateContest	US House AZ District 4 (Maricopa County)	U.S. Representative in Congress - District No. 4
+CandidateContest	US House AZ District 4 (Maricopa County)	US Rep CD 4
 CandidateContest	US House AZ District 5 (Maricopa County)	U.S. Representative in Congress - District No. 5
+CandidateContest	US House AZ District 5 (Maricopa County)	US Rep CD 5
 CandidateContest	US House AZ District 6 (Maricopa County)	U.S. Representative in Congress - District No. 6
+CandidateContest	US House AZ District 6 (Maricopa County)	US Rep CD 6
 CandidateContest	US House AZ District 7 (Maricopa County)	U.S. Representative in Congress - District No. 7
+CandidateContest	US House AZ District 7 (Maricopa County)	US Rep CD 7
 CandidateContest	US House AZ District 8 (Maricopa County)	U.S. Representative in Congress - District No. 8
+CandidateContest	US House AZ District 8 (Maricopa County)	US Rep CD 8
 CandidateContest	US House AZ District 9 (Maricopa County)	U.S. Representative in Congress - District No. 9
-CandidateContest	US President (AZ) (Maricopa County)	US President (AZ)
-CandidateContest	AZ Governor (Maricopa County)	AZ Governor
+CandidateContest	US House AZ District 9 (Maricopa County)	US Rep CD 9
+CandidateContest	US President (AZ) (Maricopa County)	Presidential Electors
+CandidateContest	AZ Governor (Maricopa County)	Governor
 CandidateContest	US Senate AZ (Maricopa County)	U.S. Senator
+CandidateContest	US Senate AZ (Maricopa County)	US Senate
 CandidateContest	AZ Corporation Commissioner (Maricopa County)	Corporation Commissioner
-CandidateContest	AZ Attorney General (Maricopa County)	AZ Attorney General
-CandidateContest	AZ Lieutenant Governor (Maricopa County)	AZ Lieutenant Governor
-CandidateContest	AZ Treasurer (Maricopa County)	AZ Treasurer
-CandidateContest	AZ Secretary of State (Maricopa County)	AZ Secretary of State
+CandidateContest	AZ Attorney General (Maricopa County)	Attorney General
+CandidateContest	AZ Lieutenant Governor (Maricopa County)	Lieutenant Governor
+CandidateContest	AZ Treasurer (Maricopa County)	State Treasurer
+CandidateContest	AZ Secretary of State (Maricopa County)	Secretary of State
+CandidateContest	AZ State Mine Inspector (Maricopa County)	State Mine Inspector
+CandidateContest	AZ Superintendent of Public Instruction (Maricopa County)	Superintendent of Public Instr
 Election	2020 General	2020 General
 Election	2020 Primary	2020 Primary
 Election	2018 General	2018 General
@@ -3657,3 +3759,299 @@ Candidate	WILLOCKS, FRANCES RION 'PENNY'	WILLOCKS, FRANCES RION 'PENNY'
 Candidate	ZECHLIN, JENNIFER ALISHA	ZECHLIN, JENNIFER ALISHA
 Candidate	FRIES, LAURA FERN	FRIES, LAURA FERN
 Candidate	PICENO, GAIL	PICENO, GAIL
+Candidate	Election Day Paper Turnout	Election Day Paper Turnout
+Candidate	Early Voting Paper Turnout	Early Voting Paper Turnout
+Candidate	Early Voting Edge Turnout	Early Voting Edge Turnout
+Candidate	Election Day Edge Turnout	Election Day Edge Turnout
+Candidate	SINEMA, KYRSTEN	SINEMA, KYRSTEN
+Candidate	GREEN, ANGELA - WITHDRAWN	GREEN, ANGELA - WITHDRAWN
+Candidate	Write-In Candidate	Write-In Candidate
+Candidate	DUCEY, DOUG	DUCEY, DOUG
+Candidate	GARCIA, DAVID	GARCIA, DAVID
+Candidate	TORRES, ANGEL	TORRES, ANGEL
+Candidate	QUELLAND, DOUG ''Q.''	QUELLAND, DOUG ''Q.''
+Candidate	CHANDLER, HAZEL	CHANDLER, HAZEL
+Candidate	GILFILLAN, CHRISTOPHER ''CHRIS''	GILFILLAN, CHRISTOPHER ''CHRIS''
+Candidate	GAYNOR, STEVE	GAYNOR, STEVE
+Candidate	HOBBS, KATIE	HOBBS, KATIE
+Candidate	BRNOVICH, MARK	BRNOVICH, MARK
+Candidate	CONTRERAS, JANUARY	CONTRERAS, JANUARY
+Candidate	YEE, KIMBERLY	YEE, KIMBERLY
+Candidate	MANOIL, MARK	MANOIL, MARK
+Candidate	RIGGS, FRANK	RIGGS, FRANK
+Candidate	HOFFMAN, KATHY	HOFFMAN, KATHY
+Candidate	HART, JOE	HART, JOE
+Candidate	PIERCE, WILLIAM ''BILL''	PIERCE, WILLIAM ''BILL''
+Candidate	OLSON, JUSTIN	OLSON, JUSTIN
+Candidate	KENNEDY, SANDRA	KENNEDY, SANDRA
+Candidate	SEARS, KIANA MARIA	SEARS, KIANA MARIA
+Candidate	FINE, JEFF	FINE, JEFF
+Candidate	MILLER, ROBERTA NEIL	MILLER, ROBERTA NEIL
+Candidate	- ARCHER, FRANK LEE	- ARCHER, FRANK LEE
+Candidate	- ATKINS, LISA A.	- ATKINS, LISA A.
+Candidate	- BALLINGER, JIM	- BALLINGER, JIM
+Candidate	- DULANEY, ALAN	- DULANEY, ALAN
+Candidate	- GIANGOBBE, KERRY	- GIANGOBBE, KERRY
+Candidate	- GODDARD, TERRY	- GODDARD, TERRY
+Candidate	- IANNUZO, JIM	- IANNUZO, JIM
+Candidate	- MACRE, HEATHER A.	- MACRE, HEATHER A.
+Candidate	- MARTIN, JENNIFER	- MARTIN, JENNIFER
+Candidate	- PINGER, APRIL M.	- PINGER, APRIL M.
+Candidate	- SCHWEIKER, DANIEL W.	- SCHWEIKER, DANIEL W.
+Candidate	- SERENY, RONALD	- SERENY, RONALD
+Candidate	- VANPOUCKE, RORY	- VANPOUCKE, RORY
+Candidate	- WILL, CHRIS A.	- WILL, CHRIS A.
+Candidate	- ARNETT, ROC	- ARNETT, ROC
+Candidate	- WINN, KATHLEEN ANN	- WINN, KATHLEEN ANN
+Candidate	- ELLIOTT, SHERMAN L.	- ELLIOTT, SHERMAN L.
+Candidate	- SULLIVAN, MARIE	- SULLIVAN, MARIE
+Candidate	- VANDENBOOM, DEBI	- VANDENBOOM, DEBI
+Candidate	- BUDGET OVERRIDE CONTINUATION, YES	- BUDGET OVERRIDE CONTINUATION, YES
+Candidate	- BUDGET OVERRIDE CONTINUATION, NO	- BUDGET OVERRIDE CONTINUATION, NO
+Candidate	- GALLEGO, KATE	- GALLEGO, KATE
+Candidate	- SANCHEZ, MOSES	- SANCHEZ, MOSES
+Candidate	- SARWARK, NICHOLAS	- SARWARK, NICHOLAS
+Candidate	- VALENZUELA, DANIEL	- VALENZUELA, DANIEL
+Candidate	- YES	- YES
+Candidate	- NO	- NO
+Candidate	RIVERO, TONY	RIVERO, TONY
+Candidate	HUGHES, BRADLEY	HUGHES, BRADLEY
+Candidate	ROMERO, GILBERT	ROMERO, GILBERT
+Candidate	WISMER, CRAIG W.	WISMER, CRAIG W.
+Candidate	BRANHAM, MICHAEL D.	BRANHAM, MICHAEL D.
+Candidate	- ARTERBERRY, STAN	- ARTERBERRY, STAN
+Candidate	- MC GRATH, JEAN	- MC GRATH, JEAN
+Candidate	- GARD, MICHAEL JAMES	- GARD, MICHAEL JAMES
+Candidate	- PINGERELLI, BEVERLY J.	- PINGERELLI, BEVERLY J.
+Candidate	- SOLTER, DAVITA	- SOLTER, DAVITA
+Candidate	- UNDERHILL, CORY A.	- UNDERHILL, CORY A.
+Candidate	- BOND APPROVAL, YES	- BOND APPROVAL, YES
+Candidate	- BOND APPROVAL, NO	- BOND APPROVAL, NO
+Candidate	SWING, GARY	SWING, GARY
+Candidate	- GOMEZ, JOHN V.	- GOMEZ, JOHN V.
+Candidate	- HERNANDEZ, LYDIA	- HERNANDEZ, LYDIA
+Candidate	- LOPEZ, PEDRO	- LOPEZ, PEDRO
+Candidate	SAMUELS, JENNIFER	SAMUELS, JENNIFER
+Candidate	WILLIAMS, GERALD A.	WILLIAMS, GERALD A.
+Candidate	ROWE, MIKE	ROWE, MIKE
+Candidate	- DEIANA, M.	- DEIANA, M.
+Candidate	- DENNIS, MATT	- DENNIS, MATT
+Candidate	- FISHER, KIM K.	- FISHER, KIM K.
+Candidate	- O'BRIEN, ANN	- O'BRIEN, ANN
+Candidate	- PAPERMAN, JENNIE	- PAPERMAN, JENNIE
+Candidate	- READ, JULIE A.	- READ, JULIE A.
+Candidate	FARNSWORTH, EDDIE	FARNSWORTH, EDDIE
+Candidate	BROWN, ELIZABETH	BROWN, ELIZABETH
+Candidate	BISACCIA, JOE	BISACCIA, JOE
+Candidate	- ASKEY, JOSHUA	- ASKEY, JOSHUA
+Candidate	- BRUNER, LARA	- BRUNER, LARA
+Candidate	- ESPARZA-ISAACSON, NOEMY	- ESPARZA-ISAACSON, NOEMY
+Candidate	- LOVE, LINDSAY	- LOVE, LINDSAY
+Candidate	- RICE, ROBERT J.C.	- RICE, ROBERT J.C.
+Candidate	- ROBINSON, JIM	- ROBINSON, JIM
+Candidate	- LUGER, ROBERT EDWARD	- LUGER, ROBERT EDWARD
+Candidate	- MANN, DAVID A.	- MANN, DAVID A.
+Candidate	- WILMES, TIMOTHY	- WILMES, TIMOTHY
+Candidate	- SAWYER-SINKBEIL, TRACI L.	- SAWYER-SINKBEIL, TRACI L.
+Candidate	BRILL, DAVID	BRILL, DAVID
+Candidate	KNAUER, HARYAKSHA GREGOR	KNAUER, HARYAKSHA GREGOR
+Candidate	HARRIS, MICHELLE	HARRIS, MICHELLE
+Candidate	DUNN, TIMOTHY ''TIM''	DUNN, TIMOTHY ''TIM''
+Candidate	TZITZURA, THOMAS	TZITZURA, THOMAS
+Candidate	KEEGAN, MILES M.	KEEGAN, MILES M.
+Candidate	BLAKE, SCOTT C.	BLAKE, SCOTT C.
+Candidate	FERRARA, STEPHEN L.	FERRARA, STEPHEN L.
+Candidate	SCHMUCK, FRANK	SCHMUCK, FRANK
+Candidate	NORGAARD, JILL	NORGAARD, JILL
+Candidate	PATTERSON, GREG	PATTERSON, GREG
+Candidate	EPSTEIN, DENISE ''MITZI''	EPSTEIN, DENISE ''MITZI''
+Candidate	SAULS, SHARRON L.	SAULS, SHARRON L.
+Candidate	SCHMOLL, BRANDON C.	SCHMOLL, BRANDON C.
+Candidate	RINI, KENT	RINI, KENT
+Candidate	- BARRAZA, ANDRES ADAN	- BARRAZA, ANDRES ADAN
+Candidate	- FLETCHER, DON	- FLETCHER, DON
+Candidate	- GARCIA, BRIAN	- GARCIA, BRIAN
+Candidate	- HOYE, DAVID	- HOYE, DAVID
+Candidate	- MIDDLETON, MICHAEL	- MIDDLETON, MICHAEL
+Candidate	- PRATT, MARGARET	- PRATT, MARGARET
+Candidate	- WALSH, KEVIN	- WALSH, KEVIN
+Candidate	- HILL, MAXINE	- HILL, MAXINE
+Candidate	- HORNBACK, SHELLY SMITH	- HORNBACK, SHELLY SMITH
+Candidate	- LANDIS, VICKIE L.	- LANDIS, VICKIE L.
+Candidate	- MAY, STEVE	- MAY, STEVE
+Candidate	- HUSMOE, SEAN R.	- HUSMOE, SEAN R.
+Candidate	- ZUIDEMA, MELISSA A.	- ZUIDEMA, MELISSA A.
+Candidate	WEICHERT, STEVE	WEICHERT, STEVE
+Candidate	ELLEN, NORA	ELLEN, NORA
+Candidate	TIBSHRAENY, JAY	TIBSHRAENY, JAY
+Candidate	WALLACE, NATHAN F.	WALLACE, NATHAN F.
+Candidate	- HUTCHINSON, MARCIE J.	- HUTCHINSON, MARCIE J.
+Candidate	- LEVENDA, RHONDA	- LEVENDA, RHONDA
+Candidate	- RICHARDSON, JENNY	- RICHARDSON, JENNY
+Candidate	- SMITH, BEN	- SMITH, BEN
+Candidate	- BUDGET INCREASE, YES	- BUDGET INCREASE, YES
+Candidate	- BUDGET INCREASE, NO	- BUDGET INCREASE, NO
+Candidate	NAVARRETE, OTONIEL ''TONY''	NAVARRETE, OTONIEL ''TONY''
+Candidate	LOPEZ, TERESA	LOPEZ, TERESA
+Candidate	SANTA CRUZ, RAUL ''RUDY''	SANTA CRUZ, RAUL ''RUDY''
+Candidate	- CASTRO, MARIA	- CASTRO, MARIA
+Candidate	- GALLARDO, STEVE	- GALLARDO, STEVE
+Candidate	HARRIS, VALERIE	HARRIS, VALERIE
+Candidate	SARMIENTO, TERI	SARMIENTO, TERI
+Candidate	OSTERFELD, DAVID M.	OSTERFELD, DAVID M.
+Candidate	SINCLAIR, MARK	SINCLAIR, MARK
+Candidate	PIERSON, NICOLAS ''NICK''	PIERSON, NICOLAS ''NICK''
+Candidate	- APONTE, ANTHONY J.	- APONTE, ANTHONY J.
+Candidate	- GARCIA, TIDA	- GARCIA, TIDA
+Candidate	- MORADO, ADRIANA G.	- MORADO, ADRIANA G.
+Candidate	- GAUGERT, ALAN R.	- GAUGERT, ALAN R.
+Candidate	- MARTINEZ, EDGAR HERIBERTO	- MARTINEZ, EDGAR HERIBERTO
+Candidate	- QUEZADA, MARTIN J.	- QUEZADA, MARTIN J.
+Candidate	- SERIN, SUSAN M.	- SERIN, SUSAN M.
+Candidate	MARSH, CHRISTINE PORTER	MARSH, CHRISTINE PORTER
+Candidate	PAPPAS PETSAS, KATHY	PAPPAS PETSAS, KATHY
+Candidate	SYMS, MARIA	SYMS, MARIA
+Candidate	- BACON, JULIE	- BACON, JULIE
+Candidate	- MATURA, SUSAN	- MATURA, SUSAN
+Candidate	FARNSWORTH, DAVID CHRISTIAN	FARNSWORTH, DAVID CHRISTIAN
+Candidate	CARMITCHEL, BENJAMIN ''BEN''	CARMITCHEL, BENJAMIN ''BEN''
+Candidate	STINARD, SHARON	STINARD, SHARON
+Candidate	GRAYSON, RICHARD	GRAYSON, RICHARD
+Candidate	- CHAMBERLAIN, KATHLEEN ANN	- CHAMBERLAIN, KATHLEEN ANN
+Candidate	- GEHRT, GENE	- GEHRT, GENE
+Candidate	- HOUSE, TODD	- HOUSE, TODD
+Candidate	MOHR-ALMEIDA, KATHY	MOHR-ALMEIDA, KATHY
+Candidate	BOWERS, RUSSELL W. ''RUSTY''	BOWERS, RUSSELL W. ''RUSTY''
+Candidate	MARTIN, JOHNNY	MARTIN, JOHNNY
+Candidate	RUSSELL, KEITH E.	RUSSELL, KEITH E.
+Candidate	ALLEN, KEN	ALLEN, KEN
+Candidate	- SHUMWAY DOOLEN, RONDA	- SHUMWAY DOOLEN, RONDA
+Candidate	- HEIMBUCK, ERWIN ''ERV''	- HEIMBUCK, ERWIN ''ERV''
+Candidate	- BECKMAN, PATTY	- BECKMAN, PATTY
+Candidate	- GREENBURG, JANN-MICHAEL	- GREENBURG, JANN-MICHAEL
+Candidate	WILLIAMS, CODY	WILLIAMS, CODY
+Candidate	KENNEDY, MAHOGANY R.	KENNEDY, MAHOGANY R.
+Candidate	- CAMPUZANO, MICHELLE ''MS. C''	- CAMPUZANO, MICHELLE ''MS. C''
+Candidate	- DELGADO, DEAN F.	- DELGADO, DEAN F.
+Candidate	- PINA-GRAY, NANCY	- PINA-GRAY, NANCY
+Candidate	PETEN, GERALDINE ''GERAE''	PETEN, GERALDINE ''GERAE''
+Candidate	WILLIAMS, SARA MAE	WILLIAMS, SARA MAE
+Candidate	GETZWILLER, JOE B.	GETZWILLER, JOE B.
+Candidate	SPURLOCK, BILLY JOE	SPURLOCK, BILLY JOE
+Candidate	- HARDY, MELANIE	- HARDY, MELANIE
+Candidate	- LEAS, SARAH C.	- LEAS, SARAH C.
+Candidate	- ROSE, MICHAEL T.	- ROSE, MICHAEL T.
+Candidate	- WALLACE, ROGER E.	- WALLACE, ROGER E.
+Candidate	- AHLSTROM, KRISTEN E.	- AHLSTROM, KRISTEN E.
+Candidate	- LARA, MAGGIE	- LARA, MAGGIE
+Candidate	- LEWIS, ADAM	- LEWIS, ADAM
+Candidate	- SALE, LEASE, EXCH, YES	- SALE, LEASE, EXCH, YES
+Candidate	- SALE, LEASE, EXCH, NO	- SALE, LEASE, EXCH, NO
+Candidate	- CARPENTER, JOANNE	- CARPENTER, JOANNE
+Candidate	- RIGGS, PATRICIA BIRCHFIELD	- RIGGS, PATRICIA BIRCHFIELD
+Candidate	- SMITH, ELIZABETH ''LIZ''	- SMITH, ELIZABETH ''LIZ''
+Candidate	- JOHN, GARY E.	- JOHN, GARY E.
+Candidate	- SKOUSEN, TRIXIE	- SKOUSEN, TRIXIE
+Candidate	REAGAN, MICHAEL	REAGAN, MICHAEL
+Candidate	LESTER, DAVID	LESTER, DAVID
+Candidate	WATTS, DONALD	WATTS, DONALD
+Candidate	MCCLOSKEY, LENNIE	MCCLOSKEY, LENNIE
+Candidate	- JOHNSON, LARRY A.	- JOHNSON, LARRY A.
+Candidate	- RASMUSSEN, SHON THOMAS	- RASMUSSEN, SHON THOMAS
+Candidate	GUZMÁN, JOE ''PEP''	GUZMÁN, JOE ''PEP''
+Candidate	- No Candidate	- No Candidate
+Candidate	SPEAKMAN, REBECCA	SPEAKMAN, REBECCA
+Candidate	SPEAKMAN, RAYMOND D.	SPEAKMAN, RAYMOND D.
+Candidate	BLANC, ISELA	BLANC, ISELA
+Candidate	KISSELL, TYLER	KISSELL, TYLER
+Candidate	JOHNSON, GARY	JOHNSON, GARY
+Candidate	LATHAN, KARYN	LATHAN, KARYN
+Candidate	- LEMMON, JAMES ''JIM''	- LEMMON, JAMES ''JIM''
+Candidate	- MORALES, PATRICK	- MORALES, PATRICK
+Candidate	- WINSOR, CHARLOTTE	- WINSOR, CHARLOTTE
+Candidate	ALGER, VICKI	ALGER, VICKI
+Candidate	ALGER, DAVID, SR.	ALGER, DAVID, SR.
+Candidate	MEDINA-OCHOA, ENRIQUE	MEDINA-OCHOA, ENRIQUE
+Candidate	MARTINEZ, DARLENE	MARTINEZ, DARLENE
+Candidate	- BEAULIEU, JOHN R.	- BEAULIEU, JOHN R.
+Candidate	- CAMPOS, ANGEL R.	- CAMPOS, ANGEL R.
+Candidate	- RIVERA-CRUZ, CARLA	- RIVERA-CRUZ, CARLA
+Candidate	- YOUNG, DONNA L.	- YOUNG, DONNA L.
+Candidate	- AGUILAR, CESAR	- AGUILAR, CESAR
+Candidate	- SCHWARZ, TODD A.	- SCHWARZ, TODD A.
+Candidate	- SHEIKH, MUKTAR A.	- SHEIKH, MUKTAR A.
+Candidate	- GIPSON MCLEAN, KATIE	- GIPSON MCLEAN, KATIE
+Candidate	- PARRA, STEPHANIE	- PARRA, STEPHANIE
+Candidate	- CRAWFORD, BILL	- CRAWFORD, BILL
+Candidate	- LITTLEFIELD, KATHY	- LITTLEFIELD, KATHY
+Candidate	- MILHAVEN, LINDA	- MILHAVEN, LINDA
+Candidate	- SMITH, DAVID N.	- SMITH, DAVID N.
+Candidate	- WHITEHEAD, SOLANGE	- WHITEHEAD, SOLANGE
+Candidate	- KHAZAI, MITRA	- KHAZAI, MITRA
+Candidate	- OSBORN, MARCUS B.	- OSBORN, MARCUS B.
+Candidate	- ZEHRBACH, NALLELY CARLON	- ZEHRBACH, NALLELY CARLON
+Candidate	- BARTELS, BRENDA E.	- BARTELS, BRENDA E.
+Candidate	- SAMANIEGO, MARTIN	- SAMANIEGO, MARTIN
+Candidate	- SMITH, SARA	- SMITH, SARA
+Candidate	- ROSS, NAKETA	- ROSS, NAKETA
+Candidate	- SCHILLER, RANDY D.	- SCHILLER, RANDY D.
+Candidate	- DIAZ, ELORA D.	- DIAZ, ELORA D.
+Candidate	- GUNITSKIY, DANIIL	- GUNITSKIY, DANIIL
+Candidate	- MARSTON, RUTH ANN	- MARSTON, RUTH ANN
+Candidate	- TRUJILLO, CARMEN	- TRUJILLO, CARMEN
+Candidate	FANN, KAREN	FANN, KAREN
+Candidate	CRAYCRAFT, JO	CRAYCRAFT, JO
+Candidate	CAMPBELL, NOEL	CAMPBELL, NOEL
+Candidate	STRINGER, DAVID	STRINGER, DAVID
+Candidate	GOGEK, ED	GOGEK, ED
+Candidate	MANOLIS, JAN	MANOLIS, JAN
+Candidate	- CANTELME, JOE	- CANTELME, JOE
+Candidate	- HANCOCK, RANDY	- HANCOCK, RANDY
+Candidate	- MOORE, BRIAN V.	- MOORE, BRIAN V.
+Candidate	- MULLER, ALAN	- MULLER, ALAN
+Candidate	- RIFENBARK, NEIL	- RIFENBARK, NEIL
+Candidate	LOHMAN, DARIA	LOHMAN, DARIA
+Candidate	LEONE, CHRISTOPHER ''CHRIS''	LEONE, CHRISTOPHER ''CHRIS''
+Candidate	ARNETT, FRED	ARNETT, FRED
+Candidate	SEARS, ELAISSIA	SEARS, ELAISSIA
+Candidate	GILES, BRANDON E.	GILES, BRANDON E.
+Candidate	- HEREDIA, FRANCISCO	- HEREDIA, FRANCISCO
+Candidate	- YARBROUGH, MARK	- YARBROUGH, MARK
+Candidate	- BARRAGAN, JILL	- BARRAGAN, JILL
+Candidate	- MONTEILH, LOUIS SR.	- MONTEILH, LOUIS SR.
+Candidate	- MOORE, JONATHAN	- MOORE, JONATHAN
+Candidate	- WARD, FERN R.	- WARD, FERN R.
+Candidate	- BROWN, SCOTT	- BROWN, SCOTT
+Candidate	- HATCHER, BETH M.	- HATCHER, BETH M.
+Candidate	- SMITH, MICHAEL C.	- SMITH, MICHAEL C.
+Candidate	- JOIN EVIT, YES	- JOIN EVIT, YES
+Candidate	- JOIN EVIT, NO	- JOIN EVIT, NO
+Candidate	CHEUVRONT, KEN	CHEUVRONT, KEN
+Candidate	LIGOCKI-RUSSELL, MARIA M.	LIGOCKI-RUSSELL, MARIA M.
+Candidate	- BROWN, JAKE	- BROWN, JAKE
+Candidate	- DUFF, JEN	- DUFF, JEN
+Candidate	- CORBIN, SUE	- CORBIN, SUE
+Candidate	- FLAMAND, JUAN CARLOS	- FLAMAND, JUAN CARLOS
+Candidate	- PAETZ, KATIE	- PAETZ, KATIE
+Candidate	- BURBACK, BRITTANY	- BURBACK, BRITTANY
+Candidate	- HUNT, VICKI	- HUNT, VICKI
+Candidate	- BRAGUE, KEN D.	- BRAGUE, KEN D.
+Candidate	- DAVIS, SAMANTHA	- DAVIS, SAMANTHA
+Candidate	- CUNNINGHAM, JIM	- CUNNINGHAM, JIM
+Candidate	- WINTERS, ROLAND F., JR.	- WINTERS, ROLAND F., JR.
+Candidate	- HERMOSILLO, ALEXIS	- HERMOSILLO, ALEXIS
+Candidate	- MOOK, LANA	- MOOK, LANA
+Candidate	- BARNARD, WENDY MIEDEL	- BARNARD, WENDY MIEDEL
+Candidate	- JENKINS, NADYA	- JENKINS, NADYA
+Candidate	- RUTKOWSKI, JUDY	- RUTKOWSKI, JUDY
+Candidate	- FRANKS, JENNIFER	- FRANKS, JENNIFER
+Candidate	- SIPES, WILL	- SIPES, WILL
+Candidate	- SLY, SHANNON	- SLY, SHANNON
+Candidate	- TURNER, COLBY	- TURNER, COLBY
+Candidate	ROGERS, WENDY	ROGERS, WENDY
+Candidate	- BAND, CHRIS	- BAND, CHRIS
+Candidate	- BEDOIAN, KRISTY	- BEDOIAN, KRISTY
+Candidate	- BROWN, JEFF	- BROWN, JEFF
+Candidate	- MACIAS, JULIE	- MACIAS, JULIE
+Candidate	- PEREIRA, RUI	- PEREIRA, RUI
+Candidate	- STANDER, DAVID	- STANDER, DAVID

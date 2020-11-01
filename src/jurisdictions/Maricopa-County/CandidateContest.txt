@@ -106,7 +106,9 @@ AZ Corporation Commissioner (Maricopa County)	1	AZ Corporation Commissioner
 AZ Attorney General (Maricopa County)	1	AZ Attorney General	
 AZ Lieutenant Governor (Maricopa County)	1	AZ Lieutenant Governor	
 AZ Treasurer (Maricopa County)	1	AZ Treasurer	
-AZ Secretary of State (Maricopa County)	1	AZ Secretary of State	
+AZ State Mine Inspector (Maricopa County)	1	AZ State Mine Inspector
+AZ Superintendent of Public Instruction (Maricopa County)	1	AZ Superintendent of Public Instruction
+AZ Secretary of State (Maricopa County)	1	AZ Secretary of State
 AZ House District 1 (Democratic Party) (Maricopa County)	1	AZ House District 1	Democratic Party
 AZ House District 2 (Democratic Party) (Maricopa County)	1	AZ House District 2	Democratic Party
 AZ House District 3 (Democratic Party) (Maricopa County)	1	AZ House District 3	Democratic Party
