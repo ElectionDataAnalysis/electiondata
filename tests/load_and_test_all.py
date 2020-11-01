@@ -61,9 +61,8 @@ def close_and_erase(dl: e.DataLoader) -> Optional[dict]:
         "password": dl.engine.url.password,
         "dbname": dl.engine.url.database,
     }
-    err = None
-    # close the connection to the db
-    dl.engine.dispose()
+    # point dataloader to default database
+    dl.change_db("postgres")
     # remove the db
     err = db.remove_database(db_params)
     return err
