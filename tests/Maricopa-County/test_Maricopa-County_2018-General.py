@@ -18,7 +18,7 @@ def test_ussenate_20(dbname):
     )
 
 
-def test_senate_totals_20(dbname):
+def test_senate_totals(dbname):
     assert (
         e.contest_total(
             election,
@@ -30,7 +30,7 @@ def test_senate_totals_20(dbname):
     )
 
 
-def test_rep_20(dbname):
+def test_rep(dbname):
     assert (
         e.contest_total(
             election,
@@ -42,7 +42,7 @@ def test_rep_20(dbname):
     )
 
 
-def test_congress_20(dbname):
+def test_congress(dbname):
     assert (
         e.contest_total(
             election,

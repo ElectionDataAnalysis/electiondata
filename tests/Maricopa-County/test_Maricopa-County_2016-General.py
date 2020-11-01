@@ -22,7 +22,7 @@ def test_ussenate_20(dbname):
         e.contest_total(
             election,
             jurisdiction,
-            "US Senate AZ Partial Term (Republican Party) (Maricopa County)",
+            "US Senate AZ (Maricopa County)",
             dbname=dbname,
         )
         == 1534633
