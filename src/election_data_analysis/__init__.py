@@ -254,7 +254,7 @@ class DataLoader:
         # process all good parameter files with good jurisdictions
         for jp in good_jurisdictions:
             good_files = [f for f in good_par_files if juris_directory[f] == jp]
-            print(f"Processing results files {good_files}")
+            print(f"Processing results files specified in {good_files}")
             for f in good_files:
                 sdl, new_err = check_and_init_singledataloader(
                     self.d["results_dir"],
@@ -266,8 +266,11 @@ class DataLoader:
                 if new_err:
                     err = ui.consolidate_errors([err, new_err])
 
+                # if fatal error, print warning
+                if ui.fatal_error(new_err):
+                    print(f"Fatal error; data not loaded from {f}")
                 # if no fatal error from SDL initialization, continue
-                if not ui.fatal_error(new_err):
+                else:
                     # try to load data
                     load_error = sdl.load_results()
                     if load_error:
@@ -382,11 +385,36 @@ class SingleDataLoader:
         # initialize each munger (or collect error)
         m_err = dict()
         for mu in self.munger_list:
-
             self.munger[mu], m_err[mu] = jm.check_and_init_munger(
                 os.path.join(mungers_path, mu)
             )
             print(f"Munger initialized: {mu}")
+
+            # check whether all items to be specified in param file (per munger cdf_elements.txt)
+            #  are actually in the param file!
+            for i, r in self.munger[mu].cdf_elements[self.munger[mu].cdf_elements["source"] == "ini"].iterrows():
+                if i[-7:] == "Contest":
+                    if self.d["Contest"] is None:
+                        m_err[mu] = ui.add_new_error(
+                            m_err[mu],
+                            "ini",
+                            par_file,
+                            f"Munger {mu} requires {i} to be specified in ini file",
+                        )
+                    if self.d["contest_type"] is None:
+                        m_err[mu] = ui.add_new_error(
+                            m_err[mu],
+                            "ini",
+                            par_file,
+                            f"Munger {mu} requires contest_type={i[:-7]} to be specified in ini file",
+                        )
+                elif self.d[i] is None:
+                    m_err[mu] = ui.add_new_error(
+                        m_err[mu],
+                        "ini",
+                        par_file,
+                        f"Munger {mu} requires {i} to be specified in ini file"
+                    )
         self.munger_err = ui.consolidate_errors([m_err[mu] for mu in self.munger_list])
 
     def track_results(self) -> (dict, Optional[str]):
