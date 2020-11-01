@@ -51,8 +51,6 @@ optional_mdl_pars = [
 ]
 
 prep_pars = [
-    "mungers_dir",
-    "jurisdiction_path",
     "name",
     "abbreviated_name",
     "count_of_state_house_districts",
@@ -708,25 +706,28 @@ class JurisdictionPrepper:
     def __new__(cls):
         """Checks if parameter file exists and is correct. If not, does
         not create JurisdictionPrepper object."""
-        param_file = "jurisdiction_prep.ini"
-        try:
-            d, parameter_err = ui.get_runtime_parameters(
-                required_keys=prep_pars,
-                param_file=param_file,
-                header="election_data_analysis",
-            )
-        except FileNotFoundError as e:
-            print(
-                f"File {param_file} not found. Ensure that it is located"
-                " in the current directory. DataLoader object not created."
-            )
-            return None
+        for param_file, required in [
+            ("jurisdiction_prep.ini",prep_pars),
+            ("run_time.ini", ["jurisdictions_dir","mungers_dir"]),
+        ]:
+            try:
+                d, parameter_err = ui.get_runtime_parameters(
+                    required_keys=required,
+                    param_file=param_file,
+                    header="election_data_analysis",
+                )
+            except FileNotFoundError as e:
+                print(
+                    f"File {param_file} not found. Ensure that it is located"
+                    " in the current directory. DataLoader object not created."
+                )
+                return None
 
-        if parameter_err:
-            print(f"File {param_file} missing requirements.")
-            print(parameter_err)
-            print("JurisdictionPrepper object not created.")
-            return None
+            if parameter_err:
+                print(f"File {param_file} missing requirements.")
+                print(parameter_err)
+                print("JurisdictionPrepper object not created.")
+                return None
         return super().__new__(cls)
 
     def new_juris_files(self):
@@ -1368,13 +1369,21 @@ class JurisdictionPrepper:
         return err
 
     def __init__(self):
-        self.d, self.parameter_err = ui.get_runtime_parameters(
-            required_keys=prep_pars,
-            optional_keys=optional_prep_pars,
-            param_file="jurisdiction_prep.ini",
-            header="election_data_analysis",
-            err=None,
-        )
+        self.d = dict()
+        # get parameters from jurisdiction_prep.ini and run_time.ini
+        for param_file, required in [
+            ("jurisdiction_prep.ini",prep_pars),
+            ("run_time.ini", ["jurisdictions_dir","mungers_dir"]),
+        ]:
+            d, parameter_err = ui.get_runtime_parameters(
+                required_keys=required,
+                param_file=param_file,
+                header="election_data_analysis",
+            )
+            self.d.update(d)
+        # calculate full jurisdiction path from other info
+        self.d["jurisdiction_path"] = os.path.join(self.d["jurisdictions_dir"],self.d["name"].replace(" ","-"))
+
         self.state_house = int(self.d["count_of_state_house_districts"])
         self.state_senate = int(self.d["count_of_state_senate_districts"])
         self.congressional = int(self.d["count_of_us_house_districts"])
