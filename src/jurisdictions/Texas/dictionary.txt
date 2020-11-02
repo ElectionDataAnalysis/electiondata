@@ -742,7 +742,7 @@ Candidate	Savannah Robinson	Savannah Robinson
 Candidate	Don Fulton	Don Fulton
 Candidate	Jim Chisholm	Jim Chisholm
 Candidate	Mary Lou Keel	Mary Lou Keel
-Candidate	Lawrence 'Larry' Meyers	Lawrence 'Larry' Meyers
+Candidate	Lawrence 'Larry' Meyers	Lawrence "Larry" Meyers
 Candidate	Mark Ash	Mark Ash
 Candidate	Adam King Blackwell Reposa	Adam King Blackwell Reposa
 Candidate	Scott Walker	Scott Walker
@@ -781,7 +781,7 @@ Candidate	Leticia Hinojosa	Leticia Hinojosa
 Candidate	Janna K. Whatley	Janna K. Whatley
 Candidate	Mac Thornberry	Mac Thornberry
 Candidate	Calvin DeWeese	Calvin DeWeese
-Candidate	H.F. 'Rusty' Tomlinson	H.F. 'Rusty' Tomlinson
+Candidate	H.F. 'Rusty' Tomlinson	H.F. "Rusty" Tomlinson
 Candidate	James B. Frank	James B. Frank
 Candidate	Elizabeth Kerr	Elizabeth Kerr
 Candidate	Bonnie Sudderth	Bonnie Sudderth
@@ -826,9 +826,9 @@ Candidate	Kathryn Horton Gurley	Kathryn Horton Gurley
 Candidate	Lamar Smith	Lamar Smith
 Candidate	Tom Wakely	Tom Wakely
 Candidate	Mark Loewe	Mark Loewe
-Candidate	Antonio 'Tony' Diaz	Antonio 'Tony' Diaz
+Candidate	Antonio 'Tony' Diaz	Antonio "Tony" Diaz
 Candidate	Dawn Buckingham	Dawn Buckingham
-Candidate	Virginia 'Jennie Lou' Leeder	Virginia 'Jennie Lou' Leeder
+Candidate	Virginia 'Jennie Lou' Leeder	Virginia "Jennie Lou" Leeder
 Candidate	Andrew S. Murr	Andrew S. Murr
 Candidate	Stephanie Lochte Ertel	Stephanie Lochte Ertel
 Candidate	Brian Holk	Brian Holk
@@ -878,7 +878,7 @@ Candidate	Ken Mercer	Ken Mercer
 Candidate	Rebecca Bell-Metereau	Rebecca Bell-Metereau
 Candidate	Ricardo Perkins	Ricardo Perkins
 Candidate	Jose Menendez	Jose Menendez
-Candidate	Fidel 'TwoBears' Castillo	Fidel 'TwoBears' Castillo
+Candidate	Fidel 'TwoBears' Castillo	Fidel "TwoBears" Castillo
 Candidate	Scott Pusich	Scott Pusich
 Candidate	Diana ArÃÂ©valo	Diana ArÃÂ©valo
 Candidate	Rick Galindo	Rick Galindo
@@ -895,7 +895,7 @@ Candidate	Diego Bernal	Diego Bernal
 Candidate	Ina Minjarez	Ina Minjarez
 Candidate	Justin Rodriguez	Justin Rodriguez
 Candidate	Michael Mery	Michael Mery
-Candidate	Antonia 'Toni' Arteaga	Antonia 'Toni' Arteaga
+Candidate	Antonia 'Toni' Arteaga	Antonia "Toni" Arteaga
 Candidate	David A. Canales	David A. Canales
 Candidate	David Kaliski	David Kaliski
 Candidate	Norma Gonzales	Norma Gonzales
@@ -955,7 +955,7 @@ Candidate	Vicente Gonzalez	Vicente Gonzalez
 Candidate	Ross Lynn Leone	Ross Lynn Leone
 Candidate	Vanessa S. Tijerina	Vanessa S. Tijerina
 Candidate	Velma A. Arellano	Velma A. Arellano
-Candidate	Juan 'Chuy' Hinojosa	Juan 'Chuy' Hinojosa
+Candidate	Juan 'Chuy' Hinojosa	Juan "Chuy" Hinojosa
 Candidate	Richard C. Terrell	Richard C. Terrell
 Candidate	Carlos Omar Garcia	Carlos Omar Garcia
 Candidate	Mike Lang	Mike Lang
@@ -965,10 +965,10 @@ Candidate	Julie Renken	Julie Renken
 Candidate	Terry Wilson	Terry Wilson
 Candidate	Bruce Boyer	Bruce Boyer
 Candidate	Chris Schneider	Chris Schneider
-Candidate	Andrea 'Andi' St. Leger	Andrea 'Andi' St. Leger
+Candidate	Andrea 'Andi' St. Leger	Andrea "Andi" St. Leger
 Candidate	Jack W. Marr	Jack W. Marr
 Candidate	Kemper Stephen Williams	Kemper Stephen Williams
-Candidate	Robert E. 'Bobby' Bell	Robert E. 'Bobby' Bell
+Candidate	Robert E. 'Bobby' Bell	Robert E. "Bobby" Bell
 Candidate	James Eidson	James Eidson
 Candidate	Eddie Lucio Jr.	Eddie Lucio Jr.
 Candidate	Oscar Longoria	Oscar Longoria
@@ -1041,7 +1041,7 @@ Candidate	Emily A. Miskel	Emily A. Miskel
 Candidate	Bill Old	Bill Old
 Candidate	Jessica Richard Crawford	Jessica Richard Crawford
 Candidate	Kyle Biedermann	Kyle Biedermann
-Candidate	Dibrell 'Dib' Waldrip	Dibrell 'Dib' Waldrip
+Candidate	Dibrell 'Dib' Waldrip	Dibrell "Dib" Waldrip
 Candidate	J.D. Sheffield	J.D. Sheffield
 Candidate	Ben Woodward	Ben Woodward
 Candidate	John Best	John Best
@@ -1137,7 +1137,7 @@ Candidate	Omar Escobar	Omar Escobar
 Candidate	Steven R. Herod	Steven R. Herod
 Candidate	John W. Smith	John W. Smith
 Candidate	Sara Kate Billingsley	Sara Kate Billingsley
-Candidate	R.N. 'Bobby' Bland	R.N. 'Bobby' Bland
+Candidate	R.N. 'Bobby' Bland	R.N. "Bobby" Bland
 Candidate	Joe Barton	Joe Barton
 Candidate	Ruby Faye Woolridge	Ruby Faye Woolridge
 Candidate	Darrel Smith Jr.	Darrel Smith Jr.
@@ -1150,12 +1150,12 @@ Candidate	Jaime O. Perez	Jaime O. Perez
 Candidate	Mary L. Gourdoux	Mary L. Gourdoux
 Candidate	Mary E. GonzÃÂ¡lez	Mary E. GonzÃÂ¡lez
 Candidate	CÃÂ©sar J. Blanco	CÃÂ©sar J. Blanco
-Candidate	Evelina 'Lina' Ortega	Evelina 'Lina' Ortega
+Candidate	Evelina 'Lina' Ortega	Evelina "Lina" Ortega
 Candidate	Jeffrey Lane	Jeffrey Lane
 Candidate	Joe Moody	Joe Moody
 Candidate	Joseph C. Pickett	Joseph C. Pickett
 Candidate	Bill Moody	Bill Moody
-Candidate	Annabell 'Anna' Perez	Annabell 'Anna' Perez
+Candidate	Annabell 'Anna' Perez	Annabell "Anna" Perez
 Candidate	Yahara Lisa Gutierrez	Yahara Lisa Gutierrez
 Candidate	Angie Juarez Barill	Angie Juarez Barill
 Candidate	Mike Herrera	Mike Herrera
@@ -1174,8 +1174,8 @@ Candidate	Jeff Martin	Jeff Martin
 Candidate	Al Green	Al Green
 Candidate	Borris L. Miles	Borris L. Miles
 Candidate	Joshua Rohn	Joshua Rohn
-Candidate	D.F. 'Rick' Miller	D.F. 'Rick' Miller
-Candidate	L. 'Sarah' DeMerchant	L. 'Sarah' DeMerchant
+Candidate	D.F. 'Rick' Miller	D.F. "Rick" Miller
+Candidate	L. 'Sarah' DeMerchant	L. "Sarah" DeMerchant
 Candidate	Ken Bryant	Ken Bryant
 Candidate	Ron Reynolds	Ron Reynolds
 Candidate	John Zerwas	John Zerwas
@@ -1186,7 +1186,7 @@ Candidate	Frank J. Fraley	Frank J. Fraley
 Candidate	Brenda Mullinix	Brenda Mullinix
 Candidate	Maggie Jaramillo	Maggie Jaramillo
 Candidate	Teana Watson	Teana Watson
-Candidate	James H. 'Jim' Shoemake	James H. 'Jim' Shoemake
+Candidate	James H. 'Jim' Shoemake	James H. "Jim" Shoemake
 Candidate	David Perwin	David Perwin
 Candidate	Pat Simmons	Pat Simmons
 Candidate	Greg Bonnen	Greg Bonnen
@@ -1199,12 +1199,12 @@ Candidate	Lucy Wilke	Lucy Wilke
 Candidate	Hardy L. Wilkerson	Hardy L. Wilkerson
 Candidate	Franklin McDonough	Franklin McDonough
 Candidate	Jim Fallon	Jim Fallon
-Candidate	Rayburn M. 'Rim' Nall	Rayburn M. 'Rim' Nall
+Candidate	Rayburn M. 'Rim' Nall	Rayburn M. "Rim" Nall
 Candidate	Joe Brown	Joe Brown
 Candidate	Jay Dean	Jay Dean
 Candidate	Alfonso Charles	Alfonso Charles
 Candidate	Kevin Brady	Kevin Brady
-Candidate	Donald L. 'Don' Kraemer	Donald L. 'Don' Kraemer
+Candidate	Donald L. 'Don' Kraemer	Donald L. "Don" Kraemer
 Candidate	Albert M. McCaig, Jr.	Albert M. McCaig, Jr.
 Candidate	Tuck Moody McLain	Tuck Moody McLain
 Candidate	John Kuempel	John Kuempel
@@ -1250,7 +1250,7 @@ Candidate	Phil Kurtz	Phil Kurtz
 Candidate	Jim Murphy	Jim Murphy
 Candidate	Sarah Davis	Sarah Davis
 Candidate	Ben Rose	Ben Rose
-Candidate	Gilberto 'Gil' Velasquez Jr.	Gilberto 'Gil' Velasquez Jr.
+Candidate	Gilberto 'Gil' Velasquez Jr.	Gilberto "Gil" Velasquez Jr.
 Candidate	Gary Elkins	Gary Elkins
 Candidate	Jesse A. Ybanez	Jesse A. Ybanez
 Candidate	Kendall L. Baker	Kendall L. Baker
@@ -1300,7 +1300,7 @@ Candidate	Ursula A. Hall	Ursula A. Hall
 Candidate	Katherine McDaniel	Katherine McDaniel
 Candidate	Hazel B. Jones	Hazel B. Jones
 Candidate	Stacey W. Bond	Stacey W. Bond
-Candidate	Nikita 'Niki' Harmon	Nikita 'Niki' Harmon
+Candidate	Nikita 'Niki' Harmon	Nikita "Niki" Harmon
 Candidate	Ryan Patrick	Ryan Patrick
 Candidate	Robert Johnson	Robert Johnson
 Candidate	Phil Gommels	Phil Gommels
@@ -1309,7 +1309,7 @@ Candidate	Kristin M. Guiney	Kristin M. Guiney
 Candidate	Randy Roll	Randy Roll
 Candidate	Fred Shuchart	Fred Shuchart
 Candidate	Elaine Palmer	Elaine Palmer
-Candidate	Joseph 'Tad' Halbach	Joseph 'Tad' Halbach
+Candidate	Joseph 'Tad' Halbach	Joseph "Tad" Halbach
 Candidate	Daryl Moore	Daryl Moore
 Candidate	Grant Dorfman	Grant Dorfman
 Candidate	Steven Kirkland	Steven Kirkland
@@ -1331,8 +1331,8 @@ Candidate	Lance Gooden	Lance Gooden
 Candidate	R. Scott McKee	R. Scott McKee
 Candidate	Mark W. Hall	Mark W. Hall
 Candidate	Sergio Munoz, Jr.	Sergio Munoz, Jr.
-Candidate	Armando 'Mando' Martinez	Armando 'Mando' Martinez
-Candidate	Maricela 'Mari' De Leon	Maricela 'Mari' De Leon
+Candidate	Armando 'Mando' Martinez	Armando "Mando" Martinez
+Candidate	Maricela 'Mari' De Leon	Maricela "Mari" De Leon
 Candidate	Terry Canales	Terry Canales
 Candidate	Hilda Garza De Shazo	Hilda Garza De Shazo
 Candidate	Bobby Guerra	Bobby Guerra
@@ -1343,7 +1343,7 @@ Candidate	Mario E. Ramirez, Jr.	Mario E. Ramirez, Jr.
 Candidate	Letty Lopez	Letty Lopez
 Candidate	Keno Vasquez	Keno Vasquez
 Candidate	Israel Ramon, Jr.	Israel Ramon, Jr.
-Candidate	Renee 'Rena' Rodriguez-Betancourt	Renee 'Rena' Rodriguez-Betancourt
+Candidate	Renee 'Rena' Rodriguez-Betancourt	Renee "Rena" Rodriguez-Betancourt
 Candidate	Mark F Pratt	Mark F Pratt
 Candidate	Rob Christian	Rob Christian
 Candidate	Dan Flynn	Dan Flynn
@@ -1364,7 +1364,7 @@ Candidate	Dale Hanna	Dale Hanna
 Candidate	Stan Lambert	Stan Lambert
 Candidate	Pierce LoPachin	Pierce LoPachin
 Candidate	Joe Edd Boaz	Joe Edd Boaz
-Candidate	B. Michael 'Mike' Chitty	B. Michael 'Mike' Chitty
+Candidate	B. Michael 'Mike' Chitty	B. Michael "Mike" Chitty
 Candidate	John T. Hubert	John T. Hubert
 Candidate	Nathan P. Fugate	Nathan P. Fugate
 Candidate	Enrique (Henry) Fernandez	Enrique (Henry) Fernandez
@@ -1384,13 +1384,13 @@ Candidate	Jim Bob Darnell	Jim Bob Darnell
 Candidate	Ken Leatherman	Ken Leatherman
 Candidate	Craig Estlinbaum	Craig Estlinbaum
 Candidate	Steven E. Reis	Steven E. Reis
-Candidate	Charles 'Doc' Anderson	Charles 'Doc' Anderson
+Candidate	Charles 'Doc' Anderson	Charles "Doc" Anderson
 Candidate	Clif Deuvall	Clif Deuvall
 Candidate	Ralph T. Strother	Ralph T. Strother
 Candidate	Gary Coley, Jr.	Gary Coley, Jr.
 Candidate	Camile Glasscock DuBose	Camile Glasscock DuBose
 Candidate	Danny J. Kindred	Danny J. Kindred
-Candidate	George D. 'Jody' Gilles	George D. 'Jody' Gilles
+Candidate	George D. 'Jody' Gilles	George D. "Jody" Gilles
 Candidate	Laura A. Nodolf	Laura A. Nodolf
 Candidate	John W. Youngblood	John W. Youngblood
 Candidate	Cecil Bell	Cecil Bell
@@ -1461,7 +1461,7 @@ Candidate	Giovanni Capriglione	Giovanni Capriglione
 Candidate	Maricela Sanchez Chibli	Maricela Sanchez Chibli
 Candidate	Charlie Geren	Charlie Geren
 Candidate	Dan Hawkins	Dan Hawkins
-Candidate	Carlos 'Charlie' Garza	Carlos 'Charlie' Garza
+Candidate	Carlos 'Charlie' Garza	Carlos "Charlie" Garza
 Candidate	Chris Turner	Chris Turner
 Candidate	Melody Wilkinson	Melody Wilkinson
 Candidate	David Evans	David Evans
@@ -1496,7 +1496,7 @@ Candidate	Rick Perkins	Rick Perkins
 Candidate	Ceasar Ruiz	Ceasar Ruiz
 Candidate	Celia Israel	Celia Israel
 Candidate	Eddie Rodriguez	Eddie Rodriguez
-Candidate	katija 'kat' gruene	katija 'kat' gruene
+Candidate	katija 'kat' gruene	katija "kat" gruene
 Candidate	Scott Jenkins	Scott Jenkins
 Candidate	Rhonda Hurley	Rhonda Hurley
 Candidate	Darlene Byrne	Darlene Byrne
@@ -1512,7 +1512,7 @@ Candidate	Margaret Moore	Margaret Moore
 Candidate	Bennie L. Schiro	Bennie L. Schiro
 Candidate	Richard Pena Raymond	Richard Pena Raymond
 Candidate	Beckie Palomo	Beckie Palomo
-Candidate	Oscar 'O.J.' Hale, Jr.	Oscar 'O.J.' Hale, Jr.
+Candidate	Oscar 'O.J.' Hale, Jr.	Oscar "O.J." Hale, Jr.
 Candidate	Isidro R. Alaniz	Isidro R. Alaniz
 Candidate	Dawn Allison	Dawn Allison
 Candidate	John Roades	John Roades
@@ -1637,7 +1637,7 @@ Candidate	Frances Bourliot	Frances Bourliot
 Candidate	Bill Boyce	Bill Boyce
 Candidate	Meagan Hassan	Meagan Hassan
 Candidate	John Donovan	John Donovan
-Candidate	Margaret 'Meg' Poissant'	Margaret "Meg" Poissant
+Candidate	Margaret 'Meg' Poissant	Margaret "Meg" Poissant
 Candidate	Jeff R. Steinhauser	Jeff R. Steinhauser
 Candidate	Travis J. Koehn	Travis J. Koehn
 Candidate	Miguel Levario	Miguel Levario
