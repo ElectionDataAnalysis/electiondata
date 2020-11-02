@@ -225,3 +225,5 @@ TX Lieutenant Governor	Texas
 TX Comptroller of Public Accounts	Texas
 TX Commissioner of the General Land Office	Texas
 TX Commissioner of Agriculture	Texas
+TX Treasurer	Texas
+TX Secretary of State	Texas
