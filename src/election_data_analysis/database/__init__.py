@@ -1439,8 +1439,7 @@ def read_vote_count(
     cursor = connection.cursor()
     cursor.execute(q, [election_id, reporting_unit_id])
     results = cursor.fetchall()
-    results_df = pd.DataFrame(results)
-    results_df.columns = aliases
+    results_df = pd.DataFrame(results, columns=aliases)
     return results_df
 
 
