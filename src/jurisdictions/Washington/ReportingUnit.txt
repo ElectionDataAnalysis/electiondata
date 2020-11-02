@@ -1,0 +1,198 @@
+Name	ReportingUnitType
+Washington;Adams County	county
+Washington;Asotin County	county
+Washington;Benton County	county
+Washington;Chelan County	county
+Washington;Clallam County	county
+Washington;Clark County	county
+Washington;Columbia County	county
+Washington;Cowlitz County	county
+Washington;Douglas County	county
+Washington;Ferry County	county
+Washington;Franklin County	county
+Washington;Garfield County	county
+Washington;Grant County	county
+Washington;Grays Harbor County	county
+Washington;Island County	county
+Washington;Jefferson County	county
+Washington;King County	county
+Washington;Kitsap County	county
+Washington;Kittitas County	county
+Washington;Klickitat County	county
+Washington;Lewis County	county
+Washington;Lincoln County	county
+Washington;Mason County	county
+Washington;Okanogan County	county
+Washington;Pacific County	county
+Washington;Pend Oreille County	county
+Washington;Pierce County	county
+Washington;San Juan County	county
+Washington;Skagit County	county
+Washington;Skamania County	county
+Washington;Snohomish County	county
+Washington;Spokane County	county
+Washington;Stevens County	county
+Washington;Thurston County	county
+Washington;Wahkiakum County	county
+Washington;Walla Walla County	county
+Washington;Whatcom County	county
+Washington;Whitman County	county
+Washington;Yakima County	county
+Washington;WA House District 1	state-house
+Washington;WA House District 2	state-house
+Washington;WA House District 3	state-house
+Washington;WA House District 4	state-house
+Washington;WA House District 5	state-house
+Washington;WA House District 6	state-house
+Washington;WA House District 7	state-house
+Washington;WA House District 8	state-house
+Washington;WA House District 9	state-house
+Washington;WA House District 10	state-house
+Washington;WA House District 11	state-house
+Washington;WA House District 12	state-house
+Washington;WA House District 13	state-house
+Washington;WA House District 14	state-house
+Washington;WA House District 15	state-house
+Washington;WA House District 16	state-house
+Washington;WA House District 17	state-house
+Washington;WA House District 18	state-house
+Washington;WA House District 19	state-house
+Washington;WA House District 20	state-house
+Washington;WA House District 21	state-house
+Washington;WA House District 22	state-house
+Washington;WA House District 23	state-house
+Washington;WA House District 24	state-house
+Washington;WA House District 25	state-house
+Washington;WA House District 26	state-house
+Washington;WA House District 27	state-house
+Washington;WA House District 28	state-house
+Washington;WA House District 29	state-house
+Washington;WA House District 30	state-house
+Washington;WA House District 31	state-house
+Washington;WA House District 32	state-house
+Washington;WA House District 33	state-house
+Washington;WA House District 34	state-house
+Washington;WA House District 35	state-house
+Washington;WA House District 36	state-house
+Washington;WA House District 37	state-house
+Washington;WA House District 38	state-house
+Washington;WA House District 39	state-house
+Washington;WA House District 40	state-house
+Washington;WA House District 41	state-house
+Washington;WA House District 42	state-house
+Washington;WA House District 43	state-house
+Washington;WA House District 44	state-house
+Washington;WA House District 45	state-house
+Washington;WA House District 46	state-house
+Washington;WA House District 47	state-house
+Washington;WA House District 48	state-house
+Washington;WA House District 49	state-house
+Washington;WA House District 50	state-house
+Washington;WA House District 51	state-house
+Washington;WA House District 52	state-house
+Washington;WA House District 53	state-house
+Washington;WA House District 54	state-house
+Washington;WA House District 55	state-house
+Washington;WA House District 56	state-house
+Washington;WA House District 57	state-house
+Washington;WA House District 58	state-house
+Washington;WA House District 59	state-house
+Washington;WA House District 60	state-house
+Washington;WA House District 61	state-house
+Washington;WA House District 62	state-house
+Washington;WA House District 63	state-house
+Washington;WA House District 64	state-house
+Washington;WA House District 65	state-house
+Washington;WA House District 66	state-house
+Washington;WA House District 67	state-house
+Washington;WA House District 68	state-house
+Washington;WA House District 69	state-house
+Washington;WA House District 70	state-house
+Washington;WA House District 71	state-house
+Washington;WA House District 72	state-house
+Washington;WA House District 73	state-house
+Washington;WA House District 74	state-house
+Washington;WA House District 75	state-house
+Washington;WA House District 76	state-house
+Washington;WA House District 77	state-house
+Washington;WA House District 78	state-house
+Washington;WA House District 79	state-house
+Washington;WA House District 80	state-house
+Washington;WA House District 81	state-house
+Washington;WA House District 82	state-house
+Washington;WA House District 83	state-house
+Washington;WA House District 84	state-house
+Washington;WA House District 85	state-house
+Washington;WA House District 86	state-house
+Washington;WA House District 87	state-house
+Washington;WA House District 88	state-house
+Washington;WA House District 89	state-house
+Washington;WA House District 90	state-house
+Washington;WA House District 91	state-house
+Washington;WA House District 92	state-house
+Washington;WA House District 93	state-house
+Washington;WA House District 94	state-house
+Washington;WA House District 95	state-house
+Washington;WA House District 96	state-house
+Washington;WA House District 97	state-house
+Washington;WA House District 98	state-house
+Washington;WA Senate District 1	state-senate
+Washington;WA Senate District 2	state-senate
+Washington;WA Senate District 3	state-senate
+Washington;WA Senate District 4	state-senate
+Washington;WA Senate District 5	state-senate
+Washington;WA Senate District 6	state-senate
+Washington;WA Senate District 7	state-senate
+Washington;WA Senate District 8	state-senate
+Washington;WA Senate District 9	state-senate
+Washington;WA Senate District 10	state-senate
+Washington;WA Senate District 11	state-senate
+Washington;WA Senate District 12	state-senate
+Washington;WA Senate District 13	state-senate
+Washington;WA Senate District 14	state-senate
+Washington;WA Senate District 15	state-senate
+Washington;WA Senate District 16	state-senate
+Washington;WA Senate District 17	state-senate
+Washington;WA Senate District 18	state-senate
+Washington;WA Senate District 19	state-senate
+Washington;WA Senate District 20	state-senate
+Washington;WA Senate District 21	state-senate
+Washington;WA Senate District 22	state-senate
+Washington;WA Senate District 23	state-senate
+Washington;WA Senate District 24	state-senate
+Washington;WA Senate District 25	state-senate
+Washington;WA Senate District 26	state-senate
+Washington;WA Senate District 27	state-senate
+Washington;WA Senate District 28	state-senate
+Washington;WA Senate District 29	state-senate
+Washington;WA Senate District 30	state-senate
+Washington;WA Senate District 31	state-senate
+Washington;WA Senate District 32	state-senate
+Washington;WA Senate District 33	state-senate
+Washington;WA Senate District 34	state-senate
+Washington;WA Senate District 35	state-senate
+Washington;WA Senate District 36	state-senate
+Washington;WA Senate District 37	state-senate
+Washington;WA Senate District 38	state-senate
+Washington;WA Senate District 39	state-senate
+Washington;WA Senate District 40	state-senate
+Washington;WA Senate District 41	state-senate
+Washington;WA Senate District 42	state-senate
+Washington;WA Senate District 43	state-senate
+Washington;WA Senate District 44	state-senate
+Washington;WA Senate District 45	state-senate
+Washington;WA Senate District 46	state-senate
+Washington;WA Senate District 47	state-senate
+Washington;WA Senate District 48	state-senate
+Washington;WA Senate District 49	state-senate
+Washington;US House WA District 1	congressional
+Washington;US House WA District 2	congressional
+Washington;US House WA District 3	congressional
+Washington;US House WA District 4	congressional
+Washington;US House WA District 5	congressional
+Washington;US House WA District 6	congressional
+Washington;US House WA District 7	congressional
+Washington;US House WA District 8	congressional
+Washington;US House WA District 9	congressional
+Washington;US House WA District 10	congressional
+Washington	state

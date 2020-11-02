@@ -308,7 +308,9 @@ warning_keys = {
 }
 
 
-def read_results(results_file_path, munger_path, aux_data_path, error: Optional[dict]) -> (pd.DataFrame, jm.Munger, dict):
+def read_results(
+    results_file_path, munger_path, aux_data_path, error: Optional[dict]
+) -> (pd.DataFrame, jm.Munger, dict):
     """Reads results (appending '_SOURCE' to the columns)
     and initiates munger."""
 
@@ -319,7 +321,9 @@ def read_results(results_file_path, munger_path, aux_data_path, error: Optional[
         wr = pd.DataFrame()
     else:
         # read info from results file (and auxiliary files, if any)
-        wr, error = read_combine_results(mu, results_file_path, error, aux_data_path=aux_data_path)
+        wr, error = read_combine_results(
+            mu, results_file_path, error, aux_data_path=aux_data_path
+        )
         wr.columns = [f"{x}_SOURCE" for x in wr.columns]
     return wr, mu, error
 
@@ -347,9 +351,7 @@ def find_dupes(df):
 
 
 def read_single_datafile(
-    munger: jm.Munger,
-        f_path: str,
-        err: Optional[dict]
+    munger: jm.Munger, f_path: str, err: Optional[dict]
 ) -> (pd.DataFrame, dict):
     try:
         dtype = {c: str for c in munger.field_list}
@@ -382,7 +384,7 @@ def read_single_datafile(
             df = pd.read_excel(f_path, **kwargs)
         elif munger.file_type in ["json"]:
             kwargs["encoding"] = munger.encoding
-            df= pd.read_json(f_path, **kwargs)
+            df = pd.read_json(f_path, **kwargs)
         elif munger.file_type in ["concatenated-blocks", "xls-multi", "xml"]:
             err = add_new_error(
                 err,
@@ -409,35 +411,36 @@ def read_single_datafile(
             )
         else:
             # get count columns by name
-            if munger.options['count_columns_by_name']:
-                count_cols_by_name = munger.options['count_columns_by_name']
-            elif munger.options['count_columns']:
-                count_cols_by_name = [df.columns[j] for j in munger.options['count_columns'] if j < df.shape[1]]
+            if munger.options["count_columns_by_name"]:
+                count_cols_by_name = munger.options["count_columns_by_name"]
+            elif munger.options["count_columns"]:
+                count_cols_by_name = [
+                    df.columns[j]
+                    for j in munger.options["count_columns"]
+                    if j < df.shape[1]
+                ]
             else:
                 count_cols_by_name = None
 
             # clean the column names
-            df, count_cols_by_name, err_str = m.clean_column_names(df, count_cols_by_name)
+            df, count_cols_by_name, err_str = m.clean_column_names(
+                df, count_cols_by_name
+            )
             if err_str:
-                err = add_new_error(
-                    err,
-                    "warn-file",
-                    Path(f_path).name,
-                    err_str
-                )
+                err = add_new_error(err, "warn-file", Path(f_path).name, err_str)
 
             # clean the count columns
             df, err_df = m.clean_count_cols(df, count_cols_by_name)
             if not err_df.empty:
                 # show all columns of dataframe holding rows where counts were set to 0
-                pd.set_option('max_columns',None)
+                pd.set_option("max_columns", None)
                 err = add_new_error(
                     err,
                     "warn-munger",
                     munger.name,
-                    f"At least one count was set to 0 in certain rows of {Path(f_path).name}:\n{err_df}"
+                    f"At least one count was set to 0 in certain rows of {Path(f_path).name}:\n{err_df}",
                 )
-                pd.reset_option('max_columns')
+                pd.reset_option("max_columns")
 
             # clean the string columns
             str_cols = [c for c in df.columns if df.dtypes[c] == np.object]
@@ -493,8 +496,10 @@ def read_combine_results(
             # change formulas in cdf_elements to match column names inserted by read_xml
             mu.cdf_elements["idx"] = mu.cdf_elements.index
             mu.cdf_elements["fields"] = mu.cdf_elements["idx"].apply(lambda x: [x])
-            mu.cdf_elements["raw_identifier_formula"] = mu.cdf_elements["idx"].apply(lambda x: f"<{x}_SOURCE>")
-            mu.cdf_elements.drop("idx",axis=1,inplace=True)
+            mu.cdf_elements["raw_identifier_formula"] = mu.cdf_elements["idx"].apply(
+                lambda x: f"<{x}_SOURCE>"
+            )
+            mu.cdf_elements.drop("idx", axis=1, inplace=True)
             mu.field_list = list(mu.cdf_elements.index.unique())
             mu.cdf_elements["source"] = "row"
 
@@ -521,10 +526,14 @@ def read_combine_results(
             if mu.options["file_type"] in ["json"]:
                 # get numbers of count columns (now that we've read in the data)
                 mu.options["count_columns"] = [
-                    working.columns.to_list().index(c) for c in mu.options["count_columns_by_name"]
+                    working.columns.to_list().index(c)
+                    for c in mu.options["count_columns_by_name"]
                 ]
             working, new_err = m.cast_cols_as_int(
-                working, mu.options["count_columns"], mode="index", munger_name=mu.name,
+                working,
+                mu.options["count_columns"],
+                mode="index",
+                munger_name=mu.name,
             )
             if new_err:
                 err = consolidate_errors([err, new_err])
@@ -545,9 +554,11 @@ def read_combine_results(
             for abbrev, r in mu.aux_meta.iterrows():
                 # cast foreign key columns of main results file as int if possible
                 foreign_key = r["foreign_key"].split(",")
-                working, new_err = m.cast_cols_as_int(working, foreign_key, munger_name=mu.name)
+                working, new_err = m.cast_cols_as_int(
+                    working, foreign_key, munger_name=mu.name
+                )
                 if new_err:
-                    err = consolidate_errors([err,new_err])
+                    err = consolidate_errors([err, new_err])
                     if fatal_error(new_err):
                         return working, err
 
@@ -566,9 +577,9 @@ def read_combine_results(
 
 def archive_from_param_file(param_file: str, current_dir: str, archive_dir: str):
     params, err = get_runtime_parameters(
-        required_keys=['results_file', 'aux_data_dir'],
-        header='election_data_analysis',
-        param_file=os.path.join(current_dir,param_file),
+        required_keys=["results_file", "aux_data_dir"],
+        header="election_data_analysis",
+        param_file=os.path.join(current_dir, param_file),
     )
     # TODO error handling
     # if the ini file specifies an aux_data_directory
@@ -626,14 +637,13 @@ def new_datafile(
     # ensure that there is at least one count column
     if not munger.options["count_columns"]:
         err = add_new_error(
-            err,
-            "munger",
-            munger.name,
-            f"No count_columns specified for munger"
+            err, "munger", munger.name, f"No count_columns specified for munger"
         )
         return err
     else:
-        count_columns_by_name = [raw.columns[x] for x in munger.options["count_columns"] if x < raw.shape[1]]
+        count_columns_by_name = [
+            raw.columns[x] for x in munger.options["count_columns"] if x < raw.shape[1]
+        ]
 
     try:
         new_err = m.raw_elements_to_cdf(
@@ -649,7 +659,9 @@ def new_datafile(
             # append munger name to jurisdiction errors/warnings key
             keys = [x for x in new_err["warn-jurisdiction"].keys()]
             for k in keys:
-                new_err["warn-jurisdiction"][f"{k}-{munger.name}"] = new_err["warn-jurisdiction"].pop(k)
+                new_err["warn-jurisdiction"][f"{k}-{munger.name}"] = new_err[
+                    "warn-jurisdiction"
+                ].pop(k)
             err = consolidate_errors([err, new_err])
             if fatal_error(new_err):
                 return err
@@ -689,7 +701,7 @@ def get_runtime_parameters(
             return d, err
 
         h = parser[header]
-    except (KeyError,MissingSectionHeaderError) as ke:
+    except (KeyError, MissingSectionHeaderError) as ke:
         err = add_new_error(err, "ini", param_file, f"Missing header: {ke}")
         return d, err
 
@@ -838,7 +850,7 @@ def report(
                     # ensure directory exists
                     # TODO error handline: what if the path is a file?
                     if not os.path.exists(loc_dict[f"warn-{et}"]):
-                            Path(loc_dict[f"warn-{et}"]).mkdir(parents=True, exist_ok=True)
+                        Path(loc_dict[f"warn-{et}"]).mkdir(parents=True, exist_ok=True)
 
                     # get timestamp
                     ts = datetime.datetime.now().strftime("%m%d_%H%M")
@@ -907,21 +919,32 @@ def fatal_error(err, error_type_list=None, name_key_list=None) -> bool:
     return False
 
 
-def create_param_file(db_params: dict, multi_data_loader_pars: dict, target_dir: str) -> Optional[str]:
+def create_param_file(
+    db_params: dict, multi_data_loader_pars: dict, target_dir: str
+) -> Optional[str]:
     err_str = None
     if not os.path.isdir(target_dir):
         return f"Directory not found: {target_dir}"
     db_params_str = "\n".join([f"{s}={db_params[s]}" for s in db_params.keys()])
-    mdlp_str = "\n".join([f"{s}={multi_data_loader_pars[s]}" for s in multi_data_loader_pars.keys()])
+    mdlp_str = "\n".join(
+        [f"{s}={multi_data_loader_pars[s]}" for s in multi_data_loader_pars.keys()]
+    )
 
-    with open(os.path.join(target_dir,"run_time.ini"),"w") as f:
-        f.write("[postgresql]\n" + db_params_str + "\n\n[election_data_analysis]\n" + mdlp_str)
+    with open(os.path.join(target_dir, "run_time.ini"), "w") as f:
+        f.write(
+            "[postgresql]\n"
+            + db_params_str
+            + "\n\n[election_data_analysis]\n"
+            + mdlp_str
+        )
 
     return err_str
 
 
-def run_tests(test_dir: str, dbname: str, election_jurisdiction_list: Optional[list]=None):
-    """ move to tests directory, run tests, move back
+def run_tests(
+    test_dir: str, dbname: str, election_jurisdiction_list: Optional[list] = None
+):
+    """move to tests directory, run tests, move back
     db_params must have host, user, pass, db_name.
     test_param_file is a reference run_time.ini file"""
 
@@ -952,18 +975,18 @@ def run_tests(test_dir: str, dbname: str, election_jurisdiction_list: Optional[l
 
 
 def confirm_essential_info(
-        directory: str,
-        header: str,
-        param_list: List[str],
-        known: Optional[dict] = None,
-        msg: str = "",
+    directory: str,
+    header: str,
+    param_list: List[str],
+    known: Optional[dict] = None,
+    msg: str = "",
 ):
     """Returns True if user confirms all values in key_list for all *.ini files in
     the given directory; False otherwise"""
 
     # loop through files
     for f in [f for f in os.listdir(directory) if f[-4:] == ".ini"]:
-        p_path = os.path.join(directory,f)
+        p_path = os.path.join(directory, f)
         file_confirmed = False
         while not file_confirmed:
             param_dict, err = get_runtime_parameters(
@@ -994,8 +1017,10 @@ def confirm_essential_info(
                         incorrect_knowns.append(f"Need {k}={param_dict[k]}")
                 if incorrect_knowns:
                     incorrect_str = "\n".join(incorrect_knowns)
-                    print(f"Incorrect values in {f}:\n{incorrect_str}\n"
-                          f"Either remove those files or correct their parameter values")
+                    print(
+                        f"Incorrect values in {f}:\n{incorrect_str}\n"
+                        f"Either remove those files or correct their parameter values"
+                    )
                     file_confirmed = False
 
                 if not file_confirmed:
@@ -1009,18 +1034,19 @@ def election_juris_list(dir_path: str) -> list:
     for f in os.listdir(dir_path):
         if f[-4:] == ".ini":
             d, err = get_runtime_parameters(
-                param_file=os.path.join(dir_path,f),
+                param_file=os.path.join(dir_path, f),
                 header="'election_data_analysis",
-                required_keys=["election", "top_reporting_unit"]
+                required_keys=["election", "top_reporting_unit"],
             )
             if not err:
-                ej_list.append((d["election"],d["top_reporting_unit"]))
+                ej_list.append((d["election"], d["top_reporting_unit"]))
     return ej_list
 
+
 def reload_juris_election(
-        juris_name: str,
-        election_name: str,
-        test_dir: str,
+    juris_name: str,
+    election_name: str,
+    test_dir: str,
 ):
     """Assumes run_time.ini in directory, and results to be loaded are in the results_dir named in run_time.ini"""
     # initialize dataloader
@@ -1033,7 +1059,7 @@ def reload_juris_election(
         ["results_file", "results_download_date", "results_source"],
         known={
             "top_reporting_unit": juris_name,
-            "jurisdiction_directory": juris_name.replace(" ","-"),
+            "jurisdiction_directory": juris_name.replace(" ", "-"),
             "election": election_name,
         },
         msg=" Check download date carefully!!!",
@@ -1053,18 +1079,20 @@ def reload_juris_election(
     run_tests(
         test_dir,
         dl.d["dbname"],
-        election_jurisdiction_list=[(election_name,juris_name)],
+        election_jurisdiction_list=[(election_name, juris_name)],
     )
 
     # Ask user to OK test results or abandon
-    go_ahead = input(f"Did tests succeeded for election {election_name} in {juris_name} (y/n)?")
+    go_ahead = input(
+        f"Did tests succeeded for election {election_name} in {juris_name} (y/n)?"
+    )
     if go_ahead != "y":
         return
 
     # switch to live db and get info needed later
     dl.change_db(live_db)
     election_id = db.name_to_id(dl.session, "Election", election_name)
-    juris_id = db.name_to_id(dl.session,"ReportingUnit", juris_name)
+    juris_id = db.name_to_id(dl.session, "ReportingUnit", juris_name)
 
     # Move *.ini and results files for juris-election pair to 'unloaded' directory
     archive_directory = dl.d["archive_dir"]
@@ -1075,12 +1103,16 @@ def reload_juris_election(
     for f in [f for f in os.listdir(archive_directory) if f[-4:] == ".ini"]:
         param_file = os.path.join(archive_directory, f)
         params, err = get_runtime_parameters(
-            required_keys=["election","top_reporting_unit","results_file"],
+            required_keys=["election", "top_reporting_unit", "results_file"],
             header="election_data_analysis",
             param_file=param_file,
         )
         # if the *.ini file is for the given election and jurisdiction
-        if (not err) and params["election"] == election_name and params["top_reporting_unit"] == juris_name:
+        if (
+            (not err)
+            and params["election"] == election_name
+            and params["top_reporting_unit"] == juris_name
+        ):
             # move the *.ini file and its results file (and any aux_data_directory) to the unloaded directory
             archive_from_param_file(param_file, archive_directory, unloaded_directory)
 
@@ -1091,7 +1123,10 @@ def reload_juris_election(
     dl.load_all()
 
     # run tests on live db
-    run_tests(test_dir, dl.d["dbname"], election_jurisdiction_list=[(election_name,juris_name)])
+    run_tests(
+        test_dir,
+        dl.d["dbname"],
+        election_jurisdiction_list=[(election_name, juris_name)],
+    )
 
     return
-

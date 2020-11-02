@@ -12,22 +12,22 @@ from election_data_analysis import user_interface as ui
 def io(argv) -> Optional[list]:
     election = None
     jurisdiction = None
-    file_name = 'load_all_from_repo.py'
+    file_name = "load_all_from_repo.py"
     try:
-        opts, args = getopt.getopt(argv,"he:j:",["election=","juris="])
+        opts, args = getopt.getopt(argv, "he:j:", ["election=", "juris="])
     except getopt.GetoptError:
-        print (f'{file_name} -e <election> -j <jurisdiction>')
+        print(f"{file_name} -e <election> -j <jurisdiction>")
         sys.exit(2)
     for opt, arg in opts:
-        if opt == '-h':
-            print (f'{file_name} -e <election> -j <jurisdiction>')
+        if opt == "-h":
+            print(f"{file_name} -e <election> -j <jurisdiction>")
             sys.exit()
         elif opt in ("-e", "--election"):
             election = arg
         elif opt in ("-j", "--juris"):
             jurisdiction = arg
-    print (f'Election is {election}')
-    print (f'Jurisdiction is {jurisdiction}')
+    print(f"Election is {election}")
+    print(f"Jurisdiction is {jurisdiction}")
     if (not election) or (not jurisdiction):
         ej_list = None
     else:
@@ -61,12 +61,12 @@ def close_and_erase(dl: e.DataLoader) -> Optional[dict]:
         "password": dl.engine.url.password,
         "dbname": dl.engine.url.database,
     }
-    err = None
-    # close the connection to the db
-    dl.engine.dispose()
+    # point dataloader to default database
+    dl.change_db("postgres")
     # remove the db
     err = db.remove_database(db_params)
     return err
+
 
 def get_testing_data(url: str, target: str = "TestingData"):
     # if there is no testing data directory
@@ -85,10 +85,10 @@ def get_testing_data(url: str, target: str = "TestingData"):
 
 
 def run2(
-        load_data: bool = True,
-        dbname: Optional[str] = None,
-        test_dir: Optional[str] = None,
-        election_jurisdiction_list: Optional[list] = None
+    load_data: bool = True,
+    dbname: Optional[str] = None,
+    test_dir: Optional[str] = None,
+    election_jurisdiction_list: Optional[list] = None,
 ) -> Optional[dict]:
     dl = None  # to keep syntax-checker happy
     err = None
@@ -103,7 +103,9 @@ def run2(
         dbname = f"test_{ts}"
 
     if load_data:
-        get_testing_data("https://github.com/ElectionDataAnalysis/TestingData.git", "TestingData")
+        get_testing_data(
+            "https://github.com/ElectionDataAnalysis/TestingData.git", "TestingData"
+        )
 
         # restrict elections and jurisdictions to those given (if given)
         # otherwise use all in TestingData
@@ -114,8 +116,10 @@ def run2(
         dl = e.DataLoader()
         dl.change_db(dbname)
 
-        dl.change_dir("results_dir","TestingData")
-        err = dl.load_all(move_files=False, election_jurisdiction_list=election_jurisdiction_list)
+        dl.change_dir("results_dir", "TestingData")
+        err = dl.load_all(
+            move_files=False, election_jurisdiction_list=election_jurisdiction_list
+        )
         if ui.fatal_error(err):
             ui.report(err)
             err = optional_remove(dl, "TestingData")
@@ -126,7 +130,9 @@ def run2(
         if not election_jurisdiction_list:
             election_jurisdiction_list = ui.election_juris_list("TestingData")
 
-    ui.run_tests(test_dir, dbname, election_jurisdiction_list=election_jurisdiction_list)
+    ui.run_tests(
+        test_dir, dbname, election_jurisdiction_list=election_jurisdiction_list
+    )
 
     if load_data:
         err = optional_remove(dl, "TestingData")

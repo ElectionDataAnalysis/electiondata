@@ -14,6 +14,7 @@ local/
 .DS_Store
 *.ini
 !src/ini_files_for_results/*.ini
+!src/ini_files_for_results/*/*.ini
 
 /tests/TestingData/
 /tests/Passed_Tests/

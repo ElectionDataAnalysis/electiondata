@@ -1,0 +1,1086 @@
+Name	ReportingUnitType
+Maricopa County	county
+Maricopa County;ACACIA	precinct
+Maricopa County;ACOMA	precinct
+Maricopa County;ACUNA	precinct
+Maricopa County;ADOBE	precinct
+Maricopa County;ADORA	precinct
+Maricopa County;AGUA FRIA	precinct
+Maricopa County;AGUILA	precinct
+Maricopa County;AHWATUKEE	precinct
+Maricopa County;AIRLINE CANAL	precinct
+Maricopa County;ALAMO	precinct
+Maricopa County;ALEXANDER	precinct
+Maricopa County;ALHAMBRA	precinct
+Maricopa County;ALPACA	precinct
+Maricopa County;ALSUP	precinct
+Maricopa County;ALTADENA	precinct
+Maricopa County;ALVARADO	precinct
+Maricopa County;AMBER	precinct
+Maricopa County;ANDERSON	precinct
+Maricopa County;ANDORA	precinct
+Maricopa County;ANGELA	precinct
+Maricopa County;ANNETTE	precinct
+Maricopa County;APACHE	precinct
+Maricopa County;APACHE PARK	precinct
+Maricopa County;APACHE WELLS	precinct
+Maricopa County;APPLEBY	precinct
+Maricopa County;ARBOLEDA	precinct
+Maricopa County;ARCADIA	precinct
+Maricopa County;ARDMORE	precinct
+Maricopa County;ARLINGTON	precinct
+Maricopa County;ARROWHEAD RANCH	precinct
+Maricopa County;ARTESIAN	precinct
+Maricopa County;ASTER	precinct
+Maricopa County;ATHENS	precinct
+Maricopa County;AUGUSTA	precinct
+Maricopa County;AUGUSTA RANCH	precinct
+Maricopa County;AVIANO	precinct
+Maricopa County;AVONDALE	precinct
+Maricopa County;AZTEC SPRINGS	precinct
+Maricopa County;BALBOA	precinct
+Maricopa County;BALSZ	precinct
+Maricopa County;BARNES	precinct
+Maricopa County;BAYSHORE	precinct
+Maricopa County;BEARDSLEY	precinct
+Maricopa County;BERYL	precinct
+Maricopa County;BETHANY	precinct
+Maricopa County;BETHANY PARK	precinct
+Maricopa County;BETHUNE	precinct
+Maricopa County;BILTMORE	precinct
+Maricopa County;BISCUIT FLAT	precinct
+Maricopa County;BLACK CANYON	precinct
+Maricopa County;BLACK GOLD	precinct
+Maricopa County;BLACKHAWK	precinct
+Maricopa County;BLOOM	precinct
+Maricopa County;BLUE SKY	precinct
+Maricopa County;BLUEBIRD	precinct
+Maricopa County;BLUEFIELD	precinct
+Maricopa County;BONANZA	precinct
+Maricopa County;BONSALL PARK	precinct
+Maricopa County;BREWER	precinct
+Maricopa County;BRONCO	precinct
+Maricopa County;BROOKS FARM	precinct
+Maricopa County;BUCKEYE	precinct
+Maricopa County;BUCKLEY	precinct
+Maricopa County;BUFFALO RIDGE	precinct
+Maricopa County;BULLARD	precinct
+Maricopa County;BULLMOOSE	precinct
+Maricopa County;BUNKER PEAK	precinct
+Maricopa County;BURGESS	precinct
+Maricopa County;BUTLER	precinct
+Maricopa County;CACTUS GLEN	precinct
+Maricopa County;CAIRO	precinct
+Maricopa County;CALAVAR	precinct
+Maricopa County;CALAVEROS	precinct
+Maricopa County;CALYPSO	precinct
+Maricopa County;CAMBRIDGE	precinct
+Maricopa County;CAMELOT	precinct
+Maricopa County;CAMEO	precinct
+Maricopa County;CAMPBELL	precinct
+Maricopa County;CAMPBELL PARK	precinct
+Maricopa County;CANDLELIGHT	precinct
+Maricopa County;CANTERBURY	precinct
+Maricopa County;CANYON	precinct
+Maricopa County;CANYON RIM	precinct
+Maricopa County;CAPITOL SCHOOL	precinct
+Maricopa County;CARDINAL	precinct
+Maricopa County;CAREFREE	precinct
+Maricopa County;CARL	precinct
+Maricopa County;CARLA VISTA	precinct
+Maricopa County;CAROL ANN	precinct
+Maricopa County;CARON	precinct
+Maricopa County;CARRIAGE LANE	precinct
+Maricopa County;CARVER	precinct
+Maricopa County;CASHION	precinct
+Maricopa County;CATAMARAN	precinct
+Maricopa County;CAVE BUTTES	precinct
+Maricopa County;CAVE CREEK	precinct
+Maricopa County;CELAYA	precinct
+Maricopa County;CENTENNIAL	precinct
+Maricopa County;CENTRAL HIGH	precinct
+Maricopa County;CHALLENGER	precinct
+Maricopa County;CHANDLER HEIGHTS	precinct
+Maricopa County;CHAVEZ	precinct
+Maricopa County;CHEATHAM	precinct
+Maricopa County;CHENEY	precinct
+Maricopa County;CHILTON	precinct
+Maricopa County;CHOLLA	precinct
+Maricopa County;CHRISTY	precinct
+Maricopa County;CIELO	precinct
+Maricopa County;CIELO GRANDE	precinct
+Maricopa County;CITRUS	precinct
+Maricopa County;CITRUS GARDENS	precinct
+Maricopa County;CITRUS GROVES	precinct
+Maricopa County;CLAY MINE	precinct
+Maricopa County;CLEARVIEW	precinct
+Maricopa County;CLEARWATER	precinct
+Maricopa County;CLIFFVIEW	precinct
+Maricopa County;CLOUD	precinct
+Maricopa County;CLOVER	precinct
+Maricopa County;CLUB WEST	precinct
+Maricopa County;COCOPAH	precinct
+Maricopa County;COLDWATER RIDGE	precinct
+Maricopa County;COLONIA	precinct
+Maricopa County;COLONNADE	precinct
+Maricopa County;COLTER	precinct
+Maricopa County;COMET	precinct
+Maricopa County;COMMONWEALTH	precinct
+Maricopa County;COMPADRE	precinct
+Maricopa County;COMSTOCK	precinct
+Maricopa County;CONCORD	precinct
+Maricopa County;CONQUISTADOR	precinct
+Maricopa County;CONTENTION MINE	precinct
+Maricopa County;COPPER HILLS	precinct
+Maricopa County;COPPERWOOD	precinct
+Maricopa County;CORA	precinct
+Maricopa County;CORBELL	precinct
+Maricopa County;CORDES	precinct
+Maricopa County;CORDONIZ	precinct
+Maricopa County;CORDOVA	precinct
+Maricopa County;CORONA	precinct
+Maricopa County;CORONADO	precinct
+Maricopa County;CORRINE	precinct
+Maricopa County;CORTEZ	precinct
+Maricopa County;COTTON LANE	precinct
+Maricopa County;COTTONWOOD COUNTRY CLUB	precinct
+Maricopa County;COUNTRY GABLES	precinct
+Maricopa County;COUNTRY MEADOWS	precinct
+Maricopa County;COVINA	precinct
+Maricopa County;COYOTE BASIN	precinct
+Maricopa County;COYOTE HILLS	precinct
+Maricopa County;COYOTE LAKES	precinct
+Maricopa County;CREEDANCE	precinct
+Maricopa County;CREIGHTON	precinct
+Maricopa County;CRESCENT	precinct
+Maricopa County;CRISMON	precinct
+Maricopa County;CROCUS	precinct
+Maricopa County;CROSBY	precinct
+Maricopa County;CROSSROADS PARK	precinct
+Maricopa County;CRYSTAL GARDENS	precinct
+Maricopa County;CULLUMBER	precinct
+Maricopa County;CULVER	precinct
+Maricopa County;DAHLIA	precinct
+Maricopa County;DAISY	precinct
+Maricopa County;DALLAS	precinct
+Maricopa County;DANBURY	precinct
+Maricopa County;DANYELL	precinct
+Maricopa County;DARROW	precinct
+Maricopa County;DC RANCH	precinct
+Maricopa County;DEADMAN WASH	precinct
+Maricopa County;DEER VALLEY	precinct
+Maricopa County;DEERVIEW	precinct
+Maricopa County;DEL JOYA	precinct
+Maricopa County;DEL RIO	precinct
+Maricopa County;DESERT BELL	precinct
+Maricopa County;DESERT BLOSSOM	precinct
+Maricopa County;DESERT COVE	precinct
+Maricopa County;DESERT EDGE	precinct
+Maricopa County;DESERT HARBOR	precinct
+Maricopa County;DESERT HAVEN	precinct
+Maricopa County;DESERT HIGHLANDS	precinct
+Maricopa County;DESERT HILLS	precinct
+Maricopa County;DESERT MIRAGE	precinct
+Maricopa County;DESERT OASIS	precinct
+Maricopa County;DESERT SAGE	precinct
+Maricopa County;DESERT SKY	precinct
+Maricopa County;DESERT THUNDER	precinct
+Maricopa County;DESERT VISTA	precinct
+Maricopa County;DESOTO	precinct
+Maricopa County;DESSIE	precinct
+Maricopa County;DEVONSHIRE	precinct
+Maricopa County;DIABLO	precinct
+Maricopa County;DIXILETA	precinct
+Maricopa County;DOBBINS RANCH	precinct
+Maricopa County;DOBSON PARK	precinct
+Maricopa County;DOBSON RANCH	precinct
+Maricopa County;DOUBLETREE	precinct
+Maricopa County;DOVE VALLEY	precinct
+Maricopa County;DOVER	precinct
+Maricopa County;DREAMLAND VILLA	precinct
+Maricopa County;DREAMY DRAW	precinct
+Maricopa County;DREYFUS	precinct
+Maricopa County;DRIFTWOOD	precinct
+Maricopa County;DUBLIN	precinct
+Maricopa County;DUKE	precinct
+Maricopa County;DUNBAR	precinct
+Maricopa County;DURANGO	precinct
+Maricopa County;DUSTY TRAIL	precinct
+Maricopa County;DWIGHT	precinct
+Maricopa County;DYNAMITE	precinct
+Maricopa County;DYSART	precinct
+Maricopa County;EASTMARK	precinct
+Maricopa County;EASTRIDGE	precinct
+Maricopa County;ECHO	precinct
+Maricopa County;EDISON	precinct
+Maricopa County;EL CARO	precinct
+Maricopa County;EL DOMINGO	precinct
+Maricopa County;EL MIRAGE	precinct
+Maricopa County;ELLSWORTH PARK	precinct
+Maricopa County;ELWOOD	precinct
+Maricopa County;EMERALD	precinct
+Maricopa County;EMMETT	precinct
+Maricopa County;ENCANTO	precinct
+Maricopa County;ENID PARK	precinct
+Maricopa County;ENTZ	precinct
+Maricopa County;ESCALANTE	precinct
+Maricopa County;ESCOBAR	precinct
+Maricopa County;ESCONDIDO	precinct
+Maricopa County;ESQUIRE	precinct
+Maricopa County;ESTRELLA FOOTHILLS	precinct
+Maricopa County;EUCLID	precinct
+Maricopa County;EVANS	precinct
+Maricopa County;FAIRWAY	precinct
+Maricopa County;FALCON HILL	precinct
+Maricopa County;FENIMORE	precinct
+Maricopa County;FESTIVAL	precinct
+Maricopa County;FIESTA RANCH	precinct
+Maricopa County;FOLLEY	precinct
+Maricopa County;FOOTHILLS	precinct
+Maricopa County;FORT MCDOWELL	precinct
+Maricopa County;FOUNTAIN HILLS	precinct
+Maricopa County;FOUR PEAKS	precinct
+Maricopa County;FOX CROSSING	precinct
+Maricopa County;FOXWOOD	precinct
+Maricopa County;FREMONT	precinct
+Maricopa County;FRONTIER	precinct
+Maricopa County;FULTON RANCH	precinct
+Maricopa County;GALVESTON	precinct
+Maricopa County;GARDEN GROVES	precinct
+Maricopa County;GARDENS	precinct
+Maricopa County;GATEWAY	precinct
+Maricopa County;GAVILAN PEAK	precinct
+Maricopa County;GEMINI	precinct
+Maricopa County;GENE AUTRY	precinct
+Maricopa County;GERMANN	precinct
+Maricopa County;GERONIMO	precinct
+Maricopa County;GILA	precinct
+Maricopa County;GILA BEND	precinct
+Maricopa County;GILBERT	precinct
+Maricopa County;GILBERT GARDENS	precinct
+Maricopa County;GLENCROFT	precinct
+Maricopa County;GLENN	precinct
+Maricopa County;GLENROSA	precinct
+Maricopa County;GLENVIEW	precinct
+Maricopa County;GOLD DUST	precinct
+Maricopa County;GOLDEN EAGLE	precinct
+Maricopa County;GOLDEN HILLS	precinct
+Maricopa County;GOLDFIELD RANCH	precinct
+Maricopa County;GOODYEAR	precinct
+Maricopa County;GRANADA	precinct
+Maricopa County;GRAND	precinct
+Maricopa County;GRANITE FALLS	precinct
+Maricopa County;GRANITE MOUNTAIN	precinct
+Maricopa County;GRAYHAWK	precinct
+Maricopa County;GREENBRIAR	precinct
+Maricopa County;GREENFIELD	precinct
+Maricopa County;GREENFIELD PARK	precinct
+Maricopa County;GREENWAY	precinct
+Maricopa County;GREYSTONE	precinct
+Maricopa County;GROVERS	precinct
+Maricopa County;GROVES	precinct
+Maricopa County;GUADALUPE	precinct
+Maricopa County;GUERRERO	precinct
+Maricopa County;HADLEY	precinct
+Maricopa County;HALL	precinct
+Maricopa County;HAPPY TRAILS	precinct
+Maricopa County;HAPPY VALLEY	precinct
+Maricopa County;HARMONT	precinct
+Maricopa County;HARMONY PARK	precinct
+Maricopa County;HARQUAHALA	precinct
+Maricopa County;HARRIS	precinct
+Maricopa County;HARRISON	precinct
+Maricopa County;HASSAYAMPA	precinct
+Maricopa County;HASTINGS	precinct
+Maricopa County;HATCHER	precinct
+Maricopa County;HAWES	precinct
+Maricopa County;HAYDEN HIGH	precinct
+Maricopa County;HERITAGE	precinct
+Maricopa County;HERMOSA	precinct
+Maricopa County;HERMOSA VISTA	precinct
+Maricopa County;HICKIWAN	precinct
+Maricopa County;HIDALGO	precinct
+Maricopa County;HIGHLAND	precinct
+Maricopa County;HIGLEY	precinct
+Maricopa County;HILLCREST	precinct
+Maricopa County;HILLERY	precinct
+Maricopa County;HILLVIEW	precinct
+Maricopa County;HILTON	precinct
+Maricopa County;HOHOKAM PARK	precinct
+Maricopa County;HOLIDAY GARDENS	precinct
+Maricopa County;HOLIDAY PARK	precinct
+Maricopa County;HOLLIS	precinct
+Maricopa County;HOLLY	precinct
+Maricopa County;HOLLYHOCK	precinct
+Maricopa County;HOLMES	precinct
+Maricopa County;HONDA	precinct
+Maricopa County;HOPE	precinct
+Maricopa County;HOPEVILLE	precinct
+Maricopa County;HOPI	precinct
+Maricopa County;HORIZON	precinct
+Maricopa County;HUALAPAI	precinct
+Maricopa County;HUBBELL	precinct
+Maricopa County;HUDSON	precinct
+Maricopa County;INDEPENDENCE	precinct
+Maricopa County;INDIAN BEND	precinct
+Maricopa County;INDIAN SPRINGS	precinct
+Maricopa County;INDIAN WELLS	precinct
+Maricopa County;ISAAC	precinct
+Maricopa County;IVANHOE	precinct
+Maricopa County;JACKRABBIT	precinct
+Maricopa County;JANICE	precinct
+Maricopa County;JASMINE	precinct
+Maricopa County;JASPER	precinct
+Maricopa County;JENTILLY	precinct
+Maricopa County;JOHN CABOT	precinct
+Maricopa County;JULIE	precinct
+Maricopa County;JUNIPER	precinct
+Maricopa County;JUPITER	precinct
+Maricopa County;JUSTINE	precinct
+Maricopa County;KACHINA	precinct
+Maricopa County;KAIBAB	precinct
+Maricopa County;KALER	precinct
+Maricopa County;KEIM	precinct
+Maricopa County;KENLY FARMS	precinct
+Maricopa County;KIMBERLY	precinct
+Maricopa County;KINGS	precinct
+Maricopa County;KIVA	precinct
+Maricopa County;KLEINMAN	precinct
+Maricopa County;KODIAK	precinct
+Maricopa County;KOKOPELLI	precinct
+Maricopa County;KOMATKE	precinct
+Maricopa County;LA REATA	precinct
+Maricopa County;LA SOLANA	precinct
+Maricopa County;LAKE PLEASANT	precinct
+Maricopa County;LAKEVIEW	precinct
+Maricopa County;LAKEWOOD	precinct
+Maricopa County;LAMAR	precinct
+Maricopa County;LANTANA CANYON	precinct
+Maricopa County;LAREDO	precinct
+Maricopa County;LAS COLINAS	precinct
+Maricopa County;LAS SENDAS	precinct
+Maricopa County;LASSEN	precinct
+Maricopa County;LAUREL	precinct
+Maricopa County;LAVEEN	precinct
+Maricopa County;LAVEEN MEADOWS	precinct
+Maricopa County;LAYTON LAKES	precinct
+Maricopa County;LEHI	precinct
+Maricopa County;LEISURE WORLD	precinct
+Maricopa County;LEWIS	precinct
+Maricopa County;LIBBY	precinct
+Maricopa County;LIBERTY	precinct
+Maricopa County;LINDNER	precinct
+Maricopa County;LITCHFIELD	precinct
+Maricopa County;LOBO	precinct
+Maricopa County;LOLA	precinct
+Maricopa County;LOMA LINDA	precinct
+Maricopa County;LOMA VERDES	precinct
+Maricopa County;LONE BUTTE	precinct
+Maricopa County;LONE MOUNTAIN	precinct
+Maricopa County;LONESOME	precinct
+Maricopa County;LONGBOW	precinct
+Maricopa County;LONGHORN	precinct
+Maricopa County;LONGMORE	precinct
+Maricopa County;LOOKOUT RIDGE	precinct
+Maricopa County;LOS ALAMOS	precinct
+Maricopa County;LOS GATOS	precinct
+Maricopa County;LOWELL	precinct
+Maricopa County;LUDDEN	precinct
+Maricopa County;LUKE	precinct
+Maricopa County;LUKE FIELD	precinct
+Maricopa County;LYNWOOD	precinct
+Maricopa County;MADISON HEIGHTS	precinct
+Maricopa County;MADISON PARK	precinct
+Maricopa County;MADRID	precinct
+Maricopa County;MAGGIE	precinct
+Maricopa County;MAGIC STONE	precinct
+Maricopa County;MAJESTY	precinct
+Maricopa County;MANDALAY	precinct
+Maricopa County;MANISTEE	precinct
+Maricopa County;MANZANITA	precinct
+Maricopa County;MARICOPA	precinct
+Maricopa County;MARIGOLD	precinct
+Maricopa County;MARIPOSA	precinct
+Maricopa County;MARIVUE	precinct
+Maricopa County;MARLETTE	precinct
+Maricopa County;MARLEY PARK	precinct
+Maricopa County;MARTIN	precinct
+Maricopa County;MARYLAND	precinct
+Maricopa County;MARYVALE	precinct
+Maricopa County;MAYFLOWER	precinct
+Maricopa County;MCAFEE PLACE	precinct
+Maricopa County;MCCORMICK RANCH	precinct
+Maricopa County;MCDONALD	precinct
+Maricopa County;MCDOWELL	precinct
+Maricopa County;SUPAI	precinct
+Maricopa County;MCKEMY	precinct
+Maricopa County;MCQUEEN	precinct
+Maricopa County;MEGAN	precinct
+Maricopa County;MESA GRAND	precinct
+Maricopa County;MESA LINDA	precinct
+Maricopa County;MESA VISTA	precinct
+Maricopa County;MESQUITE	precinct
+Maricopa County;METRO	precinct
+Maricopa County;MICHELLE	precinct
+Maricopa County;MIMOSA	precinct
+Maricopa County;MINNEZONA	precinct
+Maricopa County;MIRADA	precinct
+Maricopa County;MISSION	precinct
+Maricopa County;MITCHELL PARK	precinct
+Maricopa County;MOBILE	precinct
+Maricopa County;MOHAVE	precinct
+Maricopa County;MOHAWK	precinct
+Maricopa County;MONROE	precinct
+Maricopa County;MONTE CRISTO	precinct
+Maricopa County;MONTE VISTA	precinct
+Maricopa County;MONTEBELLO	precinct
+Maricopa County;MONTOYA	precinct
+Maricopa County;MOON VALLEY	precinct
+Maricopa County;MORRISTOWN	precinct
+Maricopa County;MOUNTAIN SKY	precinct
+Maricopa County;MOUNTAIN VISTA	precinct
+Maricopa County;MUMMY MOUNTAIN	precinct
+Maricopa County;MUSKET	precinct
+Maricopa County;MUSTANG	precinct
+Maricopa County;MYSTIC	precinct
+Maricopa County;NEW RIVER	precinct
+Maricopa County;NICOLET	precinct
+Maricopa County;NIGHTINGALE	precinct
+Maricopa County;NORTERRA	precinct
+Maricopa County;NORTH HIGH	precinct
+Maricopa County;NORTON	precinct
+Maricopa County;OAK PARK	precinct
+Maricopa County;OAKGROVE	precinct
+Maricopa County;OAKHURST	precinct
+Maricopa County;OAKTREE	precinct
+Maricopa County;OAKWOOD COUNTRY CLUB	precinct
+Maricopa County;OASIS	precinct
+Maricopa County;OCOTILLO	precinct
+Maricopa County;OLD WEST	precinct
+Maricopa County;OLIVE	precinct
+Maricopa County;OLNEY	precinct
+Maricopa County;ONYX	precinct
+Maricopa County;OPTIMIST	precinct
+Maricopa County;ORANGE TREE	precinct
+Maricopa County;ORANGEWOOD	precinct
+Maricopa County;ORANGEWOOD FARMS	precinct
+Maricopa County;ORME	precinct
+Maricopa County;OSUNA PARK	precinct
+Maricopa County;OVAL	precinct
+Maricopa County;PAINTED MOUNTAIN	precinct
+Maricopa County;PAIUTE	precinct
+Maricopa County;PALISADES	precinct
+Maricopa County;PALM GARDENS	precinct
+Maricopa County;PALM VALLEY	precinct
+Maricopa County;PALMAIRE	precinct
+Maricopa County;PALMBROOK	precinct
+Maricopa County;PALMDALE	precinct
+Maricopa County;PALMER	precinct
+Maricopa County;PALO BLANCO	precinct
+Maricopa County;PALO CRISTI	precinct
+Maricopa County;PALO VERDE	precinct
+Maricopa County;PALOMINO	precinct
+Maricopa County;PAPAGO PARK	precinct
+Maricopa County;PARADA	precinct
+Maricopa County;PARADISE	precinct
+Maricopa County;PARADISE PARK	precinct
+Maricopa County;PARK CENTRAL	precinct
+Maricopa County;PARK MEADOWS	precinct
+Maricopa County;PARKRIDGE	precinct
+Maricopa County;PARKWOOD	precinct
+Maricopa County;PEAK VIEW	precinct
+Maricopa County;PEBBLE CREEK	precinct
+Maricopa County;PECK	precinct
+Maricopa County;PECOS	precinct
+Maricopa County;PEE-POSH	precinct
+Maricopa County;PEGASUS	precinct
+Maricopa County;PENA	precinct
+Maricopa County;PENNY LANE	precinct
+Maricopa County;PEORIA HEIGHTS	precinct
+Maricopa County;PEPPERWOOD	precinct
+Maricopa County;PERRY PARK	precinct
+Maricopa County;PHELPS	precinct
+Maricopa County;PICADILLY	precinct
+Maricopa County;PIERCE	precinct
+Maricopa County;PILGRIM	precinct
+Maricopa County;PIMA	precinct
+Maricopa County;PINE VALLEY	precinct
+Maricopa County;PINNACLE PEAK	precinct
+Maricopa County;PINNACLE WEST	precinct
+Maricopa County;PINON	precinct
+Maricopa County;PINTO	precinct
+Maricopa County;PIONEER	precinct
+Maricopa County;POCO BUENO	precinct
+Maricopa County;POINCIANA	precinct
+Maricopa County;POINSETTIA	precinct
+Maricopa County;PONDEROSA	precinct
+Maricopa County;PORT ROYALE	precinct
+Maricopa County;PORTER	precinct
+Maricopa County;PORTOBELLO	precinct
+Maricopa County;POWER RANCH	precinct
+Maricopa County;PUEBLO	precinct
+Maricopa County;PURPLE SAGE	precinct
+Maricopa County;PYRAMID PEAK	precinct
+Maricopa County;QUAIL RUN	precinct
+Maricopa County;QUEEN CREEK	precinct
+Maricopa County;RAINBOW VALLEY	precinct
+Maricopa County;RANCHO	precinct
+Maricopa County;RANCHO MIRAGE	precinct
+Maricopa County;RANCHO PALOMA	precinct
+Maricopa County;READE	precinct
+Maricopa County;RED MOUNTAIN	precinct
+Maricopa County;REDDEN	precinct
+Maricopa County;REDWING	precinct
+Maricopa County;REED PARK	precinct
+Maricopa County;REEMS	precinct
+Maricopa County;RHODES	precinct
+Maricopa County;RIATA	precinct
+Maricopa County;RIMROCK	precinct
+Maricopa County;RIO MONTANA	precinct
+Maricopa County;RIO PASEO	precinct
+Maricopa County;RIO SALADO	precinct
+Maricopa County;RIO VERDE	precinct
+Maricopa County;RITTENHOUSE	precinct
+Maricopa County;RIVERSIDE	precinct
+Maricopa County;RIVERVIEW	precinct
+Maricopa County;RIVIERA	precinct
+Maricopa County;ROADRUNNER	precinct
+Maricopa County;ROCKLEDGE	precinct
+Maricopa County;ROCKWOOD	precinct
+Maricopa County;ROESER	precinct
+Maricopa County;ROLLING HILLS	precinct
+Maricopa County;ROMA	precinct
+Maricopa County;ROSE	precinct
+Maricopa County;ROSE GARDEN	precinct
+Maricopa County;ROTARY PARK	precinct
+Maricopa County;ROVEY	precinct
+Maricopa County;ROYAL OAK	precinct
+Maricopa County;RUBY	precinct
+Maricopa County;SADDLE RIDGE	precinct
+Maricopa County;SAGEBRUSH	precinct
+Maricopa County;SAGUARO	precinct
+Maricopa County;SAHUARO RANCH	precinct
+Maricopa County;SALOME	precinct
+Maricopa County;SALT RIVER	precinct
+Maricopa County;SAN ANGELO	precinct
+Maricopa County;SAN LUCY	precinct
+Maricopa County;SAN MARCOS	precinct
+Maricopa County;SAN MICHELLE	precinct
+Maricopa County;SAN MIGUEL	precinct
+Maricopa County;SAN MONTEGO	precinct
+Maricopa County;SAN PEDRO	precinct
+Maricopa County;SAN SIMON	precinct
+Maricopa County;SAN VICTOR	precinct
+Maricopa County;SANDIA	precinct
+Maricopa County;SANDPIPER	precinct
+Maricopa County;SANTA FE	precinct
+Maricopa County;SANTA MARIA	precinct
+Maricopa County;SANTAN	precinct
+Maricopa County;SANTO	precinct
+Maricopa County;SARATOGA	precinct
+Maricopa County;SARIVAL	precinct
+Maricopa County;SCOTTSDALE	precinct
+Maricopa County;SCUDDER	precinct
+Maricopa County;SENNIA VISTA	precinct
+Maricopa County;SENTINEL	precinct
+Maricopa County;SENTRY	precinct
+Maricopa County;SEVILLA	precinct
+Maricopa County;SEVILLE	precinct
+Maricopa County;SHADOW ROCK	precinct
+Maricopa County;SHADY GLEN	precinct
+Maricopa County;SHALIMAR	precinct
+Maricopa County;SHASTA	precinct
+Maricopa County;SHAW BUTTE	precinct
+Maricopa County;SHEA	precinct
+Maricopa County;SHEENA	precinct
+Maricopa County;SIERRA HILLS	precinct
+Maricopa County;SIERRA MADRE	precinct
+Maricopa County;SIERRA PASS	precinct
+Maricopa County;SIERRA VERDE	precinct
+Maricopa County;SIERRA VISTA	precinct
+Maricopa County;SIESTA	precinct
+Maricopa County;SILVER SPUR	precinct
+Maricopa County;SILVERADO	precinct
+Maricopa County;SIMIS	precinct
+Maricopa County;SKY HAWK	precinct
+Maricopa County;SKY VIEW	precinct
+Maricopa County;SMP 1	precinct
+Maricopa County;SMP 2	precinct
+Maricopa County;SMP 3	precinct
+Maricopa County;SOLANO	precinct
+Maricopa County;SOLCITO	precinct
+Maricopa County;SOLEDAD	precinct
+Maricopa County;SONOQUI	precinct
+Maricopa County;SOSSAMAN	precinct
+Maricopa County;SOUTH MTN HIGH	precinct
+Maricopa County;SOUTH MTN PARK	precinct
+Maricopa County;SOUTHERN	precinct
+Maricopa County;SPANISH GARDEN	precinct
+Maricopa County;SPRINGS	precinct
+Maricopa County;SPRUCE	precinct
+Maricopa County;SPUR	precinct
+Maricopa County;SPUR CROSS	precinct
+Maricopa County;ST CHRISTOPHER	precinct
+Maricopa County;ST FRANCIS	precinct
+Maricopa County;ST MORITZ	precinct
+Maricopa County;STARDUST	precinct
+Maricopa County;STARLIGHT	precinct
+Maricopa County;STELLA	precinct
+Maricopa County;STELLAR	precinct
+Maricopa County;STONEGATE	precinct
+Maricopa County;STRADA	precinct
+Maricopa County;STUMP	precinct
+Maricopa County;SUMMERSTAR	precinct
+Maricopa County;SUN AIRE	precinct
+Maricopa County;SUN CITY	precinct
+Maricopa County;SUN DEVIL	precinct
+Maricopa County;SUN GROVES	precinct
+Maricopa County;SUN LAKES COUNTRY CLUB	precinct
+Maricopa County;SUN TRAILS	precinct
+Maricopa County;SUNBURST	precinct
+Maricopa County;SUNCLIFF	precinct
+Maricopa County;SUNDANCE	precinct
+Maricopa County;SUNDANCE WEST	precinct
+Maricopa County;SUNDOWN	precinct
+Maricopa County;SUNFLOWER	precinct
+Maricopa County;SUNLAND	precinct
+Maricopa County;SUNLAND VILLAGE	precinct
+Maricopa County;SUNNY HIGH	precinct
+Maricopa County;SUNNYSIDE	precinct
+Maricopa County;SUNNYSLOPE	precinct
+Maricopa County;SUNNYVALE	precinct
+Maricopa County;SUNRISE	precinct
+Maricopa County;SUNUP	precinct
+Maricopa County;MCKELLIPS PARK	precinct
+Maricopa County;SURPRISE	precinct
+Maricopa County;SURPRISE FARMS	precinct
+Maricopa County;SUTTON	precinct
+Maricopa County;SWEETWATER	precinct
+Maricopa County;TABLE MESA	precinct
+Maricopa County;TARO	precinct
+Maricopa County;TARTESSO	precinct
+Maricopa County;TATUM	precinct
+Maricopa County;TERRAVITA	precinct
+Maricopa County;THOMAS	precinct
+Maricopa County;TIERRA ESTE	precinct
+Maricopa County;TIERRA MADRE	precinct
+Maricopa County;TOLLESON	precinct
+Maricopa County;TONOPAH	precinct
+Maricopa County;TONTO	precinct
+Maricopa County;TORTILLA FLAT	precinct
+Maricopa County;TOWNE MEADOWS	precinct
+Maricopa County;TOWNLEY	precinct
+Maricopa County;TRADITIONS	precinct
+Maricopa County;TRAMONTO	precinct
+Maricopa County;TREVOR BROWNE	precinct
+Maricopa County;TRILOGY	precinct
+Maricopa County;TUCKEY	precinct
+Maricopa County;TULANE	precinct
+Maricopa County;TUMBLEWEED	precinct
+Maricopa County;TURF PARADISE	precinct
+Maricopa County;TURNEY	precinct
+Maricopa County;TUTHILL	precinct
+Maricopa County;TWIN BUTTES	precinct
+Maricopa County;VALENCIA	precinct
+Maricopa County;VALENCIA GROVES	precinct
+Maricopa County;VAN NESS	precinct
+Maricopa County;VARNEY PARK	precinct
+Maricopa County;VELERO	precinct
+Maricopa County;VERANO	precinct
+Maricopa County;VERMONT	precinct
+Maricopa County;VICTORY	precinct
+Maricopa County;VILLA DE PAZ	precinct
+Maricopa County;VILLA RITA	precinct
+Maricopa County;VINEYARD	precinct
+Maricopa County;VIRGINIA	precinct
+Maricopa County;VISTA	precinct
+Maricopa County;VISTA VERDE	precinct
+Maricopa County;VISTANCIA	precinct
+Maricopa County;VOGEL	precinct
+Maricopa County;WACKER PARK	precinct
+Maricopa County;WADDELL	precinct
+Maricopa County;WAGGONER	precinct
+Maricopa County;WAHALLA	precinct
+Maricopa County;WARNER	precinct
+Maricopa County;WATER WORKS	precinct
+Maricopa County;WATSON	precinct
+Maricopa County;WELDON	precinct
+Maricopa County;WENDY	precinct
+Maricopa County;WEST PLAZA	precinct
+Maricopa County;WEST POINT	precinct
+Maricopa County;WEST WING	precinct
+Maricopa County;WESTAR	precinct
+Maricopa County;WESTBROOK	precinct
+Maricopa County;WESTERN STAR	precinct
+Maricopa County;WESTGREEN PARK	precinct
+Maricopa County;WESTRIDGE	precinct
+Maricopa County;WESTWARD HO	precinct
+Maricopa County;WESTWOOD	precinct
+Maricopa County;WESTWORLD	precinct
+Maricopa County;WHITE TANK	precinct
+Maricopa County;WHITEWING	precinct
+Maricopa County;WHITTIER	precinct
+Maricopa County;WHITTON	precinct
+Maricopa County;WHYMAN	precinct
+Maricopa County;WICKENBURG	precinct
+Maricopa County;WIER	precinct
+Maricopa County;WIGWAM	precinct
+Maricopa County;WIGWAM CREEK	precinct
+Maricopa County;WIKIEUP	precinct
+Maricopa County;WILDER	precinct
+Maricopa County;WILDFLOWER	precinct
+Maricopa County;WILLIAMS FIELD	precinct
+Maricopa County;WILLOW	precinct
+Maricopa County;WILLOW CANYON	precinct
+Maricopa County;WILSHIRE	precinct
+Maricopa County;WINDMERE	precinct
+Maricopa County;WITTMANN	precinct
+Maricopa County;WOLF RUN	precinct
+Maricopa County;WOOD	precinct
+Maricopa County;WOODGLEN	precinct
+Maricopa County;XAVIER	precinct
+Maricopa County;YOUNGTOWN	precinct
+Maricopa County;YUCCA	precinct
+Maricopa County;YUMA	precinct
+Maricopa County;ZUNI HILLS	precinct
+Maricopa County;AZ House District 1	state-house
+Maricopa County;AZ House District 2	state-house
+Maricopa County;AZ House District 3	state-house
+Maricopa County;AZ House District 4	state-house
+Maricopa County;AZ House District 5	state-house
+Maricopa County;AZ House District 6	state-house
+Maricopa County;AZ House District 7	state-house
+Maricopa County;AZ House District 8	state-house
+Maricopa County;AZ House District 9	state-house
+Maricopa County;AZ House District 10	state-house
+Maricopa County;AZ House District 11	state-house
+Maricopa County;AZ House District 12	state-house
+Maricopa County;AZ House District 13	state-house
+Maricopa County;AZ House District 14	state-house
+Maricopa County;AZ House District 15	state-house
+Maricopa County;AZ House District 16	state-house
+Maricopa County;AZ House District 17	state-house
+Maricopa County;AZ House District 18	state-house
+Maricopa County;AZ House District 19	state-house
+Maricopa County;AZ House District 20	state-house
+Maricopa County;AZ House District 21	state-house
+Maricopa County;AZ House District 22	state-house
+Maricopa County;AZ House District 23	state-house
+Maricopa County;AZ House District 24	state-house
+Maricopa County;AZ House District 25	state-house
+Maricopa County;AZ House District 26	state-house
+Maricopa County;AZ House District 27	state-house
+Maricopa County;AZ House District 28	state-house
+Maricopa County;AZ House District 29	state-house
+Maricopa County;AZ House District 30	state-house
+Maricopa County;AZ House District 31	state-house
+Maricopa County;AZ House District 32	state-house
+Maricopa County;AZ House District 33	state-house
+Maricopa County;AZ House District 34	state-house
+Maricopa County;AZ House District 35	state-house
+Maricopa County;AZ House District 36	state-house
+Maricopa County;AZ House District 37	state-house
+Maricopa County;AZ House District 38	state-house
+Maricopa County;AZ House District 39	state-house
+Maricopa County;AZ House District 40	state-house
+Maricopa County;AZ House District 41	state-house
+Maricopa County;AZ House District 42	state-house
+Maricopa County;AZ House District 43	state-house
+Maricopa County;AZ House District 44	state-house
+Maricopa County;AZ House District 45	state-house
+Maricopa County;AZ House District 46	state-house
+Maricopa County;AZ House District 47	state-house
+Maricopa County;AZ House District 48	state-house
+Maricopa County;AZ House District 49	state-house
+Maricopa County;AZ House District 50	state-house
+Maricopa County;AZ House District 51	state-house
+Maricopa County;AZ House District 52	state-house
+Maricopa County;AZ House District 53	state-house
+Maricopa County;AZ House District 54	state-house
+Maricopa County;AZ House District 55	state-house
+Maricopa County;AZ House District 56	state-house
+Maricopa County;AZ House District 57	state-house
+Maricopa County;AZ House District 58	state-house
+Maricopa County;AZ House District 59	state-house
+Maricopa County;AZ House District 60	state-house
+Maricopa County;AZ Senate District 1	state-senate
+Maricopa County;AZ Senate District 2	state-senate
+Maricopa County;AZ Senate District 3	state-senate
+Maricopa County;AZ Senate District 4	state-senate
+Maricopa County;AZ Senate District 5	state-senate
+Maricopa County;AZ Senate District 6	state-senate
+Maricopa County;AZ Senate District 7	state-senate
+Maricopa County;AZ Senate District 8	state-senate
+Maricopa County;AZ Senate District 9	state-senate
+Maricopa County;AZ Senate District 10	state-senate
+Maricopa County;AZ Senate District 11	state-senate
+Maricopa County;AZ Senate District 12	state-senate
+Maricopa County;AZ Senate District 13	state-senate
+Maricopa County;AZ Senate District 14	state-senate
+Maricopa County;AZ Senate District 15	state-senate
+Maricopa County;AZ Senate District 16	state-senate
+Maricopa County;AZ Senate District 17	state-senate
+Maricopa County;AZ Senate District 18	state-senate
+Maricopa County;AZ Senate District 19	state-senate
+Maricopa County;AZ Senate District 20	state-senate
+Maricopa County;AZ Senate District 21	state-senate
+Maricopa County;AZ Senate District 22	state-senate
+Maricopa County;AZ Senate District 23	state-senate
+Maricopa County;AZ Senate District 24	state-senate
+Maricopa County;AZ Senate District 25	state-senate
+Maricopa County;AZ Senate District 26	state-senate
+Maricopa County;AZ Senate District 27	state-senate
+Maricopa County;AZ Senate District 28	state-senate
+Maricopa County;AZ Senate District 29	state-senate
+Maricopa County;AZ Senate District 30	state-senate
+Maricopa County;US House AZ District 1	congressional
+Maricopa County;US House AZ District 2	congressional
+Maricopa County;US House AZ District 3	congressional
+Maricopa County;US House AZ District 4	congressional
+Maricopa County;US House AZ District 5	congressional
+Maricopa County;US House AZ District 6	congressional
+Maricopa County;US House AZ District 7	congressional
+Maricopa County;US House AZ District 8	congressional
+Maricopa County;US House AZ District 9	congressional
+Maricopa County;7101	precinct
+Maricopa County;7102	precinct
+Maricopa County;7301	precinct
+Maricopa County;7302	precinct
+Maricopa County;7303	precinct
+Maricopa County;7304	precinct
+Maricopa County;7305	precinct
+Maricopa County;7306	precinct
+Maricopa County;7307	precinct
+Maricopa County;7308	precinct
+Maricopa County;7309	precinct
+Maricopa County;7310	precinct
+Maricopa County;7311	precinct
+Maricopa County;7312	precinct
+Maricopa County;7313	precinct
+Maricopa County;7314	precinct
+Maricopa County;7315	precinct
+Maricopa County;7316	precinct
+Maricopa County;7317	precinct
+Maricopa County;7318	precinct
+Maricopa County;7401	precinct
+Maricopa County;7402	precinct
+Maricopa County;7403	precinct
+Maricopa County;7404	precinct
+Maricopa County;7405	precinct
+Maricopa County;7406	precinct
+Maricopa County;7407	precinct
+Maricopa County;7408	precinct
+Maricopa County;7409	precinct
+Maricopa County;7410	precinct
+Maricopa County;7411	precinct
+Maricopa County;7412	precinct
+Maricopa County;7413	precinct
+Maricopa County;7414	precinct
+Maricopa County;7415	precinct
+Maricopa County;7416	precinct
+Maricopa County;7501	precinct
+Maricopa County;7502	precinct
+Maricopa County;7503	precinct
+Maricopa County;7504	precinct
+Maricopa County;7505	precinct
+Maricopa County;7506	precinct
+Maricopa County;7507	precinct
+Maricopa County;7508	precinct
+Maricopa County;7509	precinct
+Maricopa County;7510	precinct
+Maricopa County;7511	precinct
+Maricopa County;7512	precinct
+Maricopa County;7513	precinct
+Maricopa County;7514	precinct
+Maricopa County;7515	precinct
+Maricopa County;7516	precinct
+Maricopa County;7517	precinct
+Maricopa County;7518	precinct
+Maricopa County;7519	precinct
+Maricopa County;7520	precinct
+Maricopa County;7521	precinct
+Maricopa County;7522	precinct
+Maricopa County;7523	precinct
+Maricopa County;7524	precinct
+Maricopa County;7525	precinct
+Maricopa County;7526	precinct
+Maricopa County;7527	precinct
+Maricopa County;7528	precinct
+Maricopa County;7529	precinct
+Maricopa County;7530	precinct
+Maricopa County;7531	precinct
+Maricopa County;7532	precinct
+Maricopa County;7533	precinct
+Maricopa County;7534	precinct
+Maricopa County;7535	precinct
+Maricopa County;7536	precinct
+Maricopa County;7537	precinct
+Maricopa County;7538	precinct
+Maricopa County;7601	precinct
+Maricopa County;7602	precinct
+Maricopa County;7603	precinct
+Maricopa County;7604	precinct
+Maricopa County;7605	precinct
+Maricopa County;7606	precinct
+Maricopa County;7607	precinct
+Maricopa County;7608	precinct
+Maricopa County;7609	precinct
+Maricopa County;7610	precinct
+Maricopa County;7611	precinct
+Maricopa County;7612	precinct
+Maricopa County;7613	precinct
+Maricopa County;7614	precinct
+Maricopa County;7615	precinct
+Maricopa County;7616	precinct
+Maricopa County;7617	precinct
+Maricopa County;7618	precinct
+Maricopa County;7619	precinct
+Maricopa County;7620	precinct
+Maricopa County;7621	precinct
+Maricopa County;7622	precinct
+Maricopa County;7623	precinct
+Maricopa County;7624	precinct
+Maricopa County;7625	precinct
+Maricopa County;7626	precinct
+Maricopa County;7627	precinct
+Maricopa County;7628	precinct
+Maricopa County;7629	precinct
+Maricopa County;7630	precinct
+Maricopa County;7631	precinct
+Maricopa County;7632	precinct
+Maricopa County;7633	precinct
+Maricopa County;7634	precinct
+Maricopa County;7635	precinct
+Maricopa County;7636	precinct
+Maricopa County;7637	precinct
+Maricopa County;7638	precinct
+Maricopa County;7639	precinct
+Maricopa County;7640	precinct
+Maricopa County;7641	precinct
+Maricopa County;7642	precinct
+Maricopa County;7643	precinct
+Maricopa County;7644	precinct
+Maricopa County;7645	precinct
+Maricopa County;7646	precinct
+Maricopa County;7701	precinct
+Maricopa County;7702	precinct
+Maricopa County;7703	precinct
+Maricopa County;7704	precinct
+Maricopa County;7705	precinct
+Maricopa County;7706	precinct
+Maricopa County;7707	precinct
+Maricopa County;7708	precinct
+Maricopa County;7709	precinct
+Maricopa County;7710	precinct
+Maricopa County;7711	precinct
+Maricopa County;7712	precinct
+Maricopa County;7713	precinct
+Maricopa County;7714	precinct
+Maricopa County;7715	precinct
+Maricopa County;7716	precinct
+Maricopa County;7717	precinct
+Maricopa County;7718	precinct
+Maricopa County;7719	precinct
+Maricopa County;7720	precinct
+Maricopa County;7721	precinct
+Maricopa County;7722	precinct
+Maricopa County;7723	precinct
+Maricopa County;7724	precinct
+Maricopa County;7725	precinct
+Maricopa County;7726	precinct
+Maricopa County;7727	precinct
+Maricopa County;7728	precinct
+Maricopa County;7729	precinct
+Maricopa County;7730	precinct
+Maricopa County;7731	precinct
+Maricopa County;7732	precinct
+Maricopa County;7733	precinct
+Maricopa County;7734	precinct
+Maricopa County;7735	precinct
+Maricopa County;7736	precinct
+Maricopa County;7801	precinct
+Maricopa County;7802	precinct
+Maricopa County;7803	precinct
+Maricopa County;7804	precinct
+Maricopa County;7805	precinct
+Maricopa County;7806	precinct
+Maricopa County;7807	precinct
+Maricopa County;7808	precinct
+Maricopa County;7809	precinct
+Maricopa County;7810	precinct
+Maricopa County;7811	precinct
+Maricopa County;7812	precinct
+Maricopa County;7813	precinct
+Maricopa County;7814	precinct
+Maricopa County;7815	precinct
+Maricopa County;7816	precinct
+Maricopa County;7817	precinct
+Maricopa County;7818	precinct
+Maricopa County;7819	precinct
+Maricopa County;7820	precinct
+Maricopa County;7821	precinct
+Maricopa County;7822	precinct
+Maricopa County;7823	precinct
+Maricopa County;7824	precinct
+Maricopa County;7825	precinct
+Maricopa County;7826	precinct
+Maricopa County;7827	precinct
+Maricopa County;7828	precinct
+Maricopa County;7829	precinct
+Maricopa County;7830	precinct
+Maricopa County;7831	precinct
+Maricopa County;7832	precinct
+Maricopa County;7833	precinct
+Maricopa County;7834	precinct
+Maricopa County;7835	precinct
+Maricopa County;7836	precinct
+Maricopa County;7837	precinct
+Maricopa County;7838	precinct
+Maricopa County;7901	precinct
+Maricopa County;7902	precinct
+Maricopa County;7903	precinct
+Maricopa County;7904	precinct
+Maricopa County;7905	precinct
+Maricopa County;7906	precinct
+Maricopa County;7907	precinct
+Maricopa County;7908	precinct
+Maricopa County;7909	precinct
+Maricopa County;7910	precinct
+Maricopa County;7911	precinct
+Maricopa County;7912	precinct
+Maricopa County;7913	precinct
+Maricopa County;7914	precinct
+Maricopa County;7915	precinct
+Maricopa County;7916	precinct
+Maricopa County;7917	precinct
+Maricopa County;7918	precinct
+Maricopa County;7919	precinct
+Maricopa County;7920	precinct
+Maricopa County;7921	precinct
+Maricopa County;7922	precinct
+Maricopa County;7923	precinct
+Maricopa County;7924	precinct
+Maricopa County;7925	precinct
+Maricopa County;7926	precinct
+Maricopa County;7927	precinct
+Maricopa County;7928	precinct
+Maricopa County;7929	precinct
+Maricopa County;7930	precinct
+Maricopa County;7931	precinct
+Maricopa County;7932	precinct
+Maricopa County;7933	precinct
+Maricopa County;7934	precinct
+Maricopa County;7935	precinct
+Maricopa County;7936	precinct
+Maricopa County;7937	precinct
+Maricopa County;7938	precinct
+Maricopa County;7939	precinct
+Maricopa County;7940	precinct
+Maricopa County;7941	precinct
+Maricopa County;TEMPE	precinct
+Maricopa County;SANOKAI	precinct
+Maricopa County;SAN REMO	precinct
+Maricopa County;TOWN MEADOWS	precinct
+Maricopa County;MODOC	precinct
+Maricopa County;MARBELLA	precinct
+Maricopa County;BARBADOS	precinct
