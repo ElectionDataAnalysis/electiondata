@@ -1,8 +1,8 @@
 name	raw_identifier_formula	source
-ReportingUnit	<first_column>	row
-Party	unknown	row
-CandidateContest	{<header_0>,^(.*) \(Vote For [0-9]+\)$}	row
-Candidate	<header_1>	row
-BallotMeasureContest	{<header_0>,^(.*) \(Vote For [0-9]+\)$}	row
-BallotMeasureSelection	<header_1>	row
-CountItemType	<header_2>	row
+ReportingUnit	<header_0>	row
+Party	<constant_line_1>	row
+CandidateContest	<constant_line_0> (<constant_line_1>)	row
+Candidate	<first_column>	row
+BallotMeasureContest	unknown	row
+BallotMeasureSelection	<header_0>	row
+CountItemType	total	row
