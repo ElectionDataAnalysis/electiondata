@@ -16,7 +16,7 @@ def get_analyzer(p_path: str = None):
     return a
 
 
-def data_exists(election, jurisdiction, p_path=None):
+def test_data_exists(election, jurisdiction, p_path=None):
     a = get_analyzer(p_path=p_path)
     election_id = db.name_to_id(a.session, "Election", election)
     jurisdiction_id = db.name_to_id(a.session, "ReportingUnit", jurisdiction)
