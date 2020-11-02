@@ -1110,3 +1110,22 @@ Candidate	Tovar, Anna	Tovar, Anna
 Candidate	Marquez Peterson, Lea	Marquez Peterson, Lea
 Candidate	O'Connor, James 'Jim'	O'Connor, James 'Jim'
 Candidate	Sloan, Eric	Sloan, Eric
+Party	Democratic Party	Democratic
+CandidateContest	US President (AZ)	President of the United States
+CandidateContest	US President (AZ) (Democratic Party)	President of the United States (Democratic)
+CandidateContest	US President (AZ) (Republican Party)	President of the United States (Republican)
+CandidateContest	US President (AZ) (Libertarian Party)	President of the United States (Libertarian)
+CandidateContest	US President (AZ) (Green Party)	President of the United States (Green)
+Candidate	Joseph Biden	Joseph Biden
+Candidate	Pete Buttigieg	Pete Buttigieg
+Candidate	Julián Castro	Julián Castro
+Candidate	Roque 'Rocky' De La Fuente	Roque 'Rocky' De La Fuente
+Candidate	Michael Ellinger	Michael Ellinger
+Candidate	Tulsi Gabbard	Tulsi Gabbard
+Candidate	Henry Hewes	Henry Hewes
+Candidate	Deval Patrick	Deval Patrick
+Candidate	Bernie Sanders	Bernie Sanders
+Candidate	Elizabeth Warren	Elizabeth Warren
+Candidate	Marianne Williamson	Marianne Williamson
+Candidate	Andrew Yang	Andrew Yang
+CountItemType	total	total
