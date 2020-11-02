@@ -3,7 +3,7 @@ import election_data_analysis as e
 # WA16 tests
 
 
-def data_exists(dbname):
+def test_data_exists(dbname):
     assert e.data_exists("2016 General", "Washington", dbname=dbname)
 
 

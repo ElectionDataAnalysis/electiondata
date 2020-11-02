@@ -1682,18 +1682,23 @@ def data_exists(election, jurisdiction, p_path=None, dbname=None):
 
     election_id = db.name_to_id(an.session, "Election", election)
     reporting_unit_id = db.name_to_id(an.session, "ReportingUnit", jurisdiction)
+
+    # if the database doesn't have the election or the reporting unit
     if not election_id or not reporting_unit_id:
+        # data doesn't exist
         return False
 
-    con = an.session.bind.raw_connection()
-    cur = con.cursor()
-    answer, err_str = db.data_file_list(
-        cur, election_id=election_id, reporting_unit_id=reporting_unit_id
-    )
-    if len(answer) > 0:
-        return True
-    else:
+    # read all contests with records in the VoteCount table
+    df = db.read_vote_count(an.session, election_id, reporting_unit_id, ["Name"],["contest_name"])
+    # if no contest found
+    if df.empty:
+        # no data exists.
         return False
+    # otherwise
+    else:
+        # then data exists!
+        return True
+
 
 
 def check_totals_match_vote_types(election, jurisdiction, dbname=None):
