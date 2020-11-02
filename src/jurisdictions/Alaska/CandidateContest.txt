@@ -1,0 +1,89 @@
+Name	NumberElected	Office	PrimaryParty
+AK House District 1	1	AK House District 1	
+AK House District 2	1	AK House District 2	
+AK House District 3	1	AK House District 3	
+AK House District 4	1	AK House District 4	
+AK House District 5	1	AK House District 5	
+AK House District 6	1	AK House District 6	
+AK House District 7	1	AK House District 7	
+AK House District 8	1	AK House District 8	
+AK House District 9	1	AK House District 9	
+AK House District 10	1	AK House District 10	
+AK House District 11	1	AK House District 11	
+AK House District 12	1	AK House District 12	
+AK House District 13	1	AK House District 13	
+AK House District 14	1	AK House District 14	
+AK House District 15	1	AK House District 15	
+AK House District 16	1	AK House District 16	
+AK House District 17	1	AK House District 17	
+AK House District 18	1	AK House District 18	
+AK House District 19	1	AK House District 19	
+AK House District 20	1	AK House District 20	
+AK House District 21	1	AK House District 21	
+AK House District 22	1	AK House District 22	
+AK House District 23	1	AK House District 23	
+AK House District 24	1	AK House District 24	
+AK House District 25	1	AK House District 25	
+AK House District 26	1	AK House District 26	
+AK House District 27	1	AK House District 27	
+AK House District 28	1	AK House District 28	
+AK House District 29	1	AK House District 29	
+AK House District 30	1	AK House District 30	
+AK House District 31	1	AK House District 31	
+AK House District 32	1	AK House District 32	
+AK House District 33	1	AK House District 33	
+AK House District 34	1	AK House District 34	
+AK House District 35	1	AK House District 35	
+AK House District 36	1	AK House District 36	
+AK House District 37	1	AK House District 37	
+AK House District 38	1	AK House District 38	
+AK House District 39	1	AK House District 39	
+AK House District 40	1	AK House District 40	
+AK Senate District 1	1	AK Senate District 1	
+AK Senate District 2	1	AK Senate District 2	
+AK Senate District 3	1	AK Senate District 3	
+AK Senate District 4	1	AK Senate District 4	
+AK Senate District 5	1	AK Senate District 5	
+AK Senate District 6	1	AK Senate District 6	
+AK Senate District 7	1	AK Senate District 7	
+AK Senate District 8	1	AK Senate District 8	
+AK Senate District 9	1	AK Senate District 9	
+AK Senate District 10	1	AK Senate District 10	
+AK Senate District 11	1	AK Senate District 11	
+AK Senate District 12	1	AK Senate District 12	
+AK Senate District 13	1	AK Senate District 13	
+AK Senate District 14	1	AK Senate District 14	
+AK Senate District 15	1	AK Senate District 15	
+AK Senate District 16	1	AK Senate District 16	
+AK Senate District 17	1	AK Senate District 17	
+AK Senate District 18	1	AK Senate District 18	
+AK Senate District 19	1	AK Senate District 19	
+AK Senate District 20	1	AK Senate District 20	
+AK Senate District 21	1	AK Senate District 21	
+AK Senate District 22	1	AK Senate District 22	
+AK Senate District 23	1	AK Senate District 23	
+AK Senate District 24	1	AK Senate District 24	
+AK Senate District 25	1	AK Senate District 25	
+AK Senate District 26	1	AK Senate District 26	
+AK Senate District 27	1	AK Senate District 27	
+AK Senate District 28	1	AK Senate District 28	
+AK Senate District 29	1	AK Senate District 29	
+AK Senate District 30	1	AK Senate District 30	
+AK Senate District 31	1	AK Senate District 31	
+AK Senate District 32	1	AK Senate District 32	
+AK Senate District 33	1	AK Senate District 33	
+AK Senate District 34	1	AK Senate District 34	
+AK Senate District 35	1	AK Senate District 35	
+AK Senate District 36	1	AK Senate District 36	
+AK Senate District 37	1	AK Senate District 37	
+AK Senate District 38	1	AK Senate District 38	
+AK Senate District 39	1	AK Senate District 39	
+AK Senate District 40	1	AK Senate District 40	
+US House AK District 1	1	US House AK District 1	
+US President (AK)	1	US President (AK)	
+AK Governor	1	AK Governor	
+US Senate AK	1	US Senate AK	
+AK Attorney General	1	AK Attorney General	
+AK Lieutenant Governor	1	AK Lieutenant Governor	
+AK Treasurer	1	AK Treasurer	
+AK Secretary of State	1	AK Secretary of State	
