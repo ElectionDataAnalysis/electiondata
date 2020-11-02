@@ -3,7 +3,7 @@ import election_data_analysis as e
 # AZ20 tests
 
 
-def data_exists(dbname):
+def test_data_exists(dbname):
     assert e.data_exists("2020 Primary", "Arizona", dbname=dbname)
 
 
