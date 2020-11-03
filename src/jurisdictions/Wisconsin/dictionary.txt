@@ -2177,7 +2177,7 @@ ReportingUnit	Wisconsin;WI Senate District 6	Wisconsin;WI Senate District 6
 ReportingUnit	Wisconsin;WI Senate District 7	Wisconsin;WI Senate District 7
 ReportingUnit	Wisconsin;WI Senate District 8	Wisconsin;WI Senate District 8
 ReportingUnit	Wisconsin;WI Senate District 9	Wisconsin;WI Senate District 9
-CountItemType	total	Total Votes Cast
+CountItemType	total	total
 Party	Constitution Party	CON
 Party	Constitution Party	Constitution
 Party	Democratic Party	DEM
