@@ -333,7 +333,7 @@ def ensure_jurisdiction_dir(juris_path, ignore_empty=False) -> dict:
     try:
         Path(juris_path).mkdir(parents=True)
     except FileExistsError:
-        print(f"Directory already exists: {juris_path} ")
+        pass
     else:
         print(f"Directory created: {juris_path}")
 
