@@ -12,26 +12,29 @@ from sqlalchemy.orm.session import Session
 
 def clean_count_cols(
     df: pd.DataFrame,
-    cols: List[str],
+    cols: Optional[List[str]],
 ) -> (pd.DataFrame, pd.DataFrame):
     """Casts the given columns as integers, replacing any bad
     values with 0 and reporting a dataframe of any rows so changed."""
-    err_df = pd.DataFrame()
-    working = df.copy()
-    for c in cols:
-        if c in working.columns:
-            mask = working[c] != pd.to_numeric(working[c], errors="coerce")
-            if mask.any():
-                # return bad rows for error reporting
-                err_df = pd.concat([err_df, working[mask]]).drop_duplicates()
+    if cols is None:
+        return df, pd.DataFrame(columns=df.columns)
+    else:
+        err_df = pd.DataFrame()
+        working = df.copy()
+        for c in cols:
+            if c in working.columns:
+                mask = working[c] != pd.to_numeric(working[c], errors="coerce")
+                if mask.any():
+                    # return bad rows for error reporting
+                    err_df = pd.concat([err_df, working[mask]]).drop_duplicates()
 
-                # cast as int, changing any non-integer values to 0
-                working[c] = (
-                    pd.to_numeric(working[c], errors="coerce").fillna(0).astype("int64")
-                )
-            else:
-                working[c] = working[c].astype("int64")
-    return working, err_df
+                    # cast as int, changing any non-integer values to 0
+                    working[c] = (
+                        pd.to_numeric(working[c], errors="coerce").fillna(0).astype("int64")
+                    )
+                else:
+                    working[c] = working[c].astype("int64")
+        return working, err_df
 
 
 def clean_ids(
