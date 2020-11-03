@@ -1,0 +1,8 @@
+name	raw_identifier_formula	source
+ReportingUnit	<COUNTY NAME>	row
+Party	{<ELECTION DATE-NAME>,^.*\s(.+?)\sPRIMARY$}	row
+CandidateContest	<OFFICE NAME> (DEMOCRATIC)	row
+Candidate	<CANDIDATE NAME>	row
+BallotMeasureContest	<OFFICE NAME>	row
+BallotMeasureSelection	<CANDIDATE NAME>	row
+CountItemType	total	row
