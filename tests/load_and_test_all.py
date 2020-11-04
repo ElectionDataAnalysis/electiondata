@@ -121,6 +121,8 @@ def run2(
         err = dl.load_all(
             move_files=False, election_jurisdiction_list=election_jurisdiction_list
         )
+        if ui.fatal_error(err):
+            return err
 
     ui.run_tests(
         test_dir, dbname, election_jurisdiction_list=election_jurisdiction_list
