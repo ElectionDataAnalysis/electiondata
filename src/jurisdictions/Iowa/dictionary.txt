@@ -3059,6 +3059,7 @@ CandidateContest	US House IA District 2	United States Representative District 2
 CandidateContest	US House IA District 3	United States Representative District 3
 CandidateContest	US House IA District 4	United States Representative District 4
 CandidateContest	US President (IA)	President
+CandidateContest	US President (IA)	President and Vice President
 CandidateContest	IA Governor	Governor
 CandidateContest	IA Governor	Governor/Lieutenant Governor
 CandidateContest	US Senate IA	United States Senator
@@ -3333,3 +3334,28 @@ CountItemType	absentee	Absentee
 CountItemType	election-day	Election Day
 CountItemType	total	Total
 CountItemType	election-day	Polling
+Candidate	Suzanne Herzog	Suzanne Herzog
+Candidate	Shaun Kelley	Shaun Kelley
+Candidate	Ryan Patrick Quinn	Ryan Patrick Quinn
+Candidate	Robert Fairchild	Robert Fairchild
+Candidate	Kamal Hammouda	Kamal Hammouda
+Candidate	Jonathan Vance	Jonathan Vance
+Candidate	Eric Green	Eric Green
+Candidate	Dave Stock	Dave Stock
+Candidate	Charles Clayton	Charles Clayton
+Candidate	Blake Johannes	Blake Johannes
+Candidate	Bennett Smith	Bennett Smith
+Party	Kamal Hammouda For Iowa House Party	KHI
+Party	Green Party	GRN
+Party	Constitution Party	CON
+Party	Genealogy Know Your Family History Party	GKH
+Party	Alliance Party	ALL
+Candidate	Roque Rocky De La Fuente	Roque Rocky De La Fuente and Darcy G. Richardson
+Candidate	Ricki Sue King	Ricki Sue King and Dayna R. Chandler
+Candidate	Kanye West	Kanye West and Michelle Tidball
+Candidate	Joseph R. Biden	Joseph R. Biden and Kamala D. Harris
+Candidate	Jo Jorgensen	Jo Jorgensen and Jeremy Cohen
+Candidate	Howie Hawkins	Howie Hawkins and Angela Nicole Walker
+Candidate	Donald J. Trump	Donald J. Trump and Michael R. Pence
+Candidate	Don Blankenship	Don Blankenship and William Alan Mohr
+Candidate	Brock Pierce	Brock Pierce and Karla Ballard

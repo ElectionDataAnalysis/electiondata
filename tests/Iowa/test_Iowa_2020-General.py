@@ -17,7 +17,8 @@ def test_presidential(dbname):
         "US President (IA)",
         dbname=dbname,
         )
-        == -1
+        == 493433 + 402853 + 193211 + 564369 + 508 + 573 + 657 + 1047 + 214 + 336 + 1387 +
+           1680 + 11200 + 8346 + 247 + 302 + 1815 + 1387 + 1887 + 2431
     )
 
 def test_senate_totals(dbname):
@@ -27,36 +28,36 @@ def test_senate_totals(dbname):
         "US Senate IA",
         dbname=dbname,
         )
-        == -1
+        == 863670 + 753314 + 36821 + 13762 + 1203
     )
 
 def test_congressional_totals(dbname):
     assert (e.contest_total(
         "2020 General",
         "Iowa",
-        "US House IA District 1",
+        "US House IA District 3",
         dbname=dbname,
         )
-        == -1
+        == 212727 + 218968 + 15338 + 383
     )
 
 def test_state_senate_totals(dbname):
     assert (e.contest_total(
         "2020 General",
         "Iowa",
-        "IA Senate District 1",
+        "IA Senate District 2",
         dbname=dbname,
         )
-        == -1
+        == 26372 + 176
     )
 
 def test_state_house_totals(dbname):
     assert ( e.contest_total(
         "2020 General",
         "Iowa",
-        "IA House District 1",
+        "IA House District 4",
         dbname=dbname,
         )
-        == -1
+        == 13141 + 2868 + 43
     )
 
