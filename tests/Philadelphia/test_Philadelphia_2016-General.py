@@ -25,7 +25,7 @@ def test_president(dbname):
         e.contest_total(
             election,
             jurisdiction,
-            "US President (Phila)",
+            "US President (PA) (Phila)",
             dbname=dbname,
         )
         == 709618
@@ -37,10 +37,10 @@ def test_state_senate_dem(dbname):
         e.contest_total(
             election,
             jurisdiction,
-            "PA Senate District 1 (Phila)",
+            "PA Senate District 7 (Phila)",
             dbname=dbname,
         )
-        == 114370
+        == 87337
     )
 
 
@@ -61,7 +61,7 @@ def test_state_treasurer_republican(dbname):
         e.contest_total(
             election,
             jurisdiction,
-            "PA State Treasurer",
+            "PA Treasurer (Phila)",
             dbname=dbname,
         )
         == 21082
