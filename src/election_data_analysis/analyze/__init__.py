@@ -625,7 +625,9 @@ def get_most_anomalous(data, n):
     and 1 with largest score. If 2 from votes at stake cannot be found
     (bc of threshold for score) then we fill in the top n from scores"""
     # filter out very small votes at stake margins
-    data = data[data["margin_ratio"] > 0.01]
+    data = data[
+        (data["margin_ratio"] > 0.01) | (data["margin_ratio"] < -0.01) 
+    ]
 
     # grab data by highest votes at stake margin (magnitude)
     margin_data = data[data["score"] > 2.3]
