@@ -1,5 +1,8 @@
 import election_data_analysis as e
 
+def test_data_exists(dbname):
+    assert e.data_exists("2016 General", "Indiana", dbname=dbname)
+
 
 def test_in_presidential_16(dbname):
     assert (

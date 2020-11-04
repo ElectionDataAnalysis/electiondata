@@ -1,10 +1,10 @@
 import election_data_analysis as e
 
+def test_data_exists(dbname):
+    assert e.data_exists("2018 General", "Michigan", dbname=dbname)
 
 def test_mi_statewide_totals_18(dbname):
-    assert (
-        not e.data_exists("2018 General", "Michigan", dbname=dbname)
-        or e.contest_total(
+    assert (e.contest_total(
             "2018 General",
             "Michigan",
             "MI Governor",
@@ -15,9 +15,7 @@ def test_mi_statewide_totals_18(dbname):
 
 
 def test_mi_senate_totals_18(dbname):
-    assert (
-        not e.data_exists("2018 General", "Michigan", dbname=dbname)
-        or e.contest_total(
+    assert (e.contest_total(
             "2018 General",
             "Michigan",
             "MI Senate District 37",
@@ -28,9 +26,7 @@ def test_mi_senate_totals_18(dbname):
 
 
 def test_mi_house_totals_18(dbname):
-    assert (
-        not e.data_exists("2018 General", "Michigan", dbname=dbname)
-        or e.contest_total(
+    assert (e.contest_total(
             "2018 General",
             "Michigan",
             "MI House District 8",

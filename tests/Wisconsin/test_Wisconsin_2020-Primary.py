@@ -6,9 +6,7 @@ def test_data_exists(dbname):
 
 
 def test_wi_presidential_totals(dbname):
-    assert (
-        not e.data_exists("2020 Primary", "Wisconsin", dbname=dbname)
-        or e.contest_total(
+    assert (e.contest_total(
             "2020 Primary",
             "Wisconsin",
             "US President (WI) (Democratic Party)",
@@ -22,9 +20,7 @@ def test_wi_presidential_totals(dbname):
 
 
 def test_wi_senate_totals(dbname):
-    assert (
-        not e.data_exists("2020 Primary", "Wisconsin", dbname=dbname)
-        or e.contest_total(
+    assert (e.contest_total(
             "2020 Primary",
             "Wisconsin",
             "WI Senate District 28 (Republican Party)",
@@ -35,9 +31,7 @@ def test_wi_senate_totals(dbname):
 
 
 def test_wi_house_totals(dbname):
-    assert (
-        not e.data_exists("2020 Primary", "Wisconsin", dbname=dbname)
-        or e.contest_total(
+    assert (e.contest_total(
             "2020 Primary",
             "Wisconsin",
             "WI House District 4 (Democratic Party)",
@@ -48,9 +42,7 @@ def test_wi_house_totals(dbname):
 
 
 def test_us_house_totals(dbname):
-    assert (
-        not e.data_exists("2020 Primary", "Wisconsin", dbname=dbname)
-        or e.contest_total(
+    assert (e.contest_total(
             "2020 Primary",
             "Wisconsin",
             "US House WI District 1 (Republican Party)",

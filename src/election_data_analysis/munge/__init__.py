@@ -12,26 +12,29 @@ from sqlalchemy.orm.session import Session
 
 def clean_count_cols(
     df: pd.DataFrame,
-    cols: List[str],
+    cols: Optional[List[str]],
 ) -> (pd.DataFrame, pd.DataFrame):
     """Casts the given columns as integers, replacing any bad
     values with 0 and reporting a dataframe of any rows so changed."""
-    err_df = pd.DataFrame()
-    working = df.copy()
-    for c in cols:
-        if c in working.columns:
-            mask = working[c] != pd.to_numeric(working[c], errors="coerce")
-            if mask.any():
-                # return bad rows for error reporting
-                err_df = pd.concat([err_df, working[mask]]).drop_duplicates()
+    if cols is None:
+        return df, pd.DataFrame(columns=df.columns)
+    else:
+        err_df = pd.DataFrame()
+        working = df.copy()
+        for c in cols:
+            if c in working.columns:
+                mask = working[c] != pd.to_numeric(working[c], errors="coerce")
+                if mask.any():
+                    # return bad rows for error reporting
+                    err_df = pd.concat([err_df, working[mask]]).drop_duplicates()
 
-                # cast as int, changing any non-integer values to 0
-                working[c] = (
-                    pd.to_numeric(working[c], errors="coerce").fillna(0).astype("int64")
-                )
-            else:
-                working[c] = working[c].astype("int64")
-    return working, err_df
+                    # cast as int, changing any non-integer values to 0
+                    working[c] = (
+                        pd.to_numeric(working[c], errors="coerce").fillna(0).astype("int64")
+                    )
+                else:
+                    working[c] = working[c].astype("int64")
+        return working, err_df
 
 
 def clean_ids(
@@ -92,7 +95,10 @@ def clean_column_names(
     if new_working.shape != working.shape:
         err_str = f"Duplicate column names found; these columns were dropped"
     # restrict count_cols to columns of working
-    new_count_cols = [c for c in working.columns if c in count_cols]
+    if count_cols:
+        new_count_cols = [c for c in working.columns if c in count_cols]
+    else:
+        new_count_cols = None
 
     # strip any whitespace from column names
     if isinstance(working.columns, pd.MultiIndex):
@@ -104,7 +110,8 @@ def clean_column_names(
         # TODO strip whitespace from each item in count_cols as well
     else:
         working.columns = [c.strip() for c in working.columns]
-        new_count_cols = [c.strip() for c in new_count_cols]
+        if new_count_cols:
+            new_count_cols = [c.strip() for c in new_count_cols]
     return working, new_count_cols, err_str
 
 

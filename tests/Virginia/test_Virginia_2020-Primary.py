@@ -1,12 +1,11 @@
 import election_data_analysis as e
 
 # VA20 tests
-
+def test_data_exists(dbname):
+    assert e.data_exists("2020 Primary", "Virginia", dbname=dbname)
 
 def test_presidential(dbname):
-    assert (
-        not e.data_exists("2020 Primary", "Virginia", dbname=dbname)
-        or e.contest_total(
+    assert (e.contest_total(
             "2020 Primary",
             "Virginia",
             "US President (VA) (Democratic Party)",
@@ -17,9 +16,7 @@ def test_presidential(dbname):
 
 
 def test_statewide_totals(dbname):
-    assert (
-        not e.data_exists("2020 Primary", "Virginia", dbname=dbname)
-        or e.contest_total(
+    assert (e.contest_total(
             "2020 Primary",
             "Virginia",
             "US Senator VA (Republican Party)",
@@ -30,9 +27,7 @@ def test_statewide_totals(dbname):
 
 
 def test_house_totals_dem(dbname):
-    assert (
-        not e.data_exists("2020 Primary", "Virginia", dbname=dbname)
-        or e.contest_total(
+    assert (e.contest_total(
             "2020 Primary",
             "Virginia",
             "US House VA District 2 (Republican Primary)",
@@ -43,9 +38,7 @@ def test_house_totals_dem(dbname):
 
 
 def test_house_totals_dem(dbname):
-    assert (
-        not e.data_exists("2020 Primary", "Virginia", dbname=dbname)
-        or e.contest_total(
+    assert (e.contest_total(
             "2020 Primary",
             "Virginia",
             "US House VA District 5 (Democratic Primary)",
@@ -54,12 +47,3 @@ def test_house_totals_dem(dbname):
         == 54037
     )
 
-
-def test_contest_by_vote_type(dbname):
-    # Vote type not available
-    assert True == True
-
-
-def test_totals_match_vote_type(dbname):
-    # Vote type not available
-    assert True == True

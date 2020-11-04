@@ -38,14 +38,14 @@ def io(argv) -> Optional[list]:
 def optional_remove(dl: e.DataLoader, dir_path: str) -> Optional[dict]:
     err = None
     # give user option to remove db
-    remove_db = input(f"Remove test db {dl.d['dbname']} (y/n)?")
+    remove_db = input(f"Remove test db {dl.d['dbname']} (y/n)?\n")
 
     if remove_db == "y":
         err = close_and_erase(dl)
         # define parameters to connect to postgres db
 
     # give user option to remove directory
-    remove_dir = input(f"Remove {dir_path} directory and all its contents (y/n)?")
+    remove_dir = input(f"Remove {dir_path} directory and all its contents (y/n)?\n")
     if remove_dir == "y":
         # remove testing data
         os.system(f"rm -rf {dir_path}")
@@ -120,10 +120,11 @@ def run2(
         err = dl.load_all(
             move_files=False, election_jurisdiction_list=election_jurisdiction_list
         )
-        if ui.fatal_error(err):
-            ui.report(err)
-            err = optional_remove(dl, "TestingData")
-            return err
+
+        #if ui.fatal_error(err):
+            #ui.report(err)
+            #err = optional_remove(dl, "TestingData")
+            #return err
     else:
         # restrict elections and jurisdictions to those given (if given)
         # otherwise use all in TestingData
