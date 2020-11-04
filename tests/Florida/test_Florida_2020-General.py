@@ -7,7 +7,7 @@ import election_data_analysis as e
 #   Replace each '-1' with the correct number calculated from the results file.
 #   Move this testing file to the correct jurisdiction folder in `election_data_analysis/tests`
 
-def data_exists(dbname):
+def test_data_exists(dbname):
     assert e.data_exists("2020 General","Florida",dbname=dbname)
 
 def test_presidential(dbname):
@@ -17,46 +17,36 @@ def test_presidential(dbname):
         "US President (FL)",
         dbname=dbname,
         )
-        == -1
-    )
-
-def test_senate_totals(dbname):
-    assert (e.contest_total(
-        "2020 General",
-        "Florida",
-        "US Senate FL",
-        dbname=dbname,
-        )
-        == -1
+        == 11040997
     )
 
 def test_congressional_totals(dbname):
     assert (e.contest_total(
         "2020 General",
         "Florida",
-        "US House FL District 1",
+        "US House FL District 24",
         dbname=dbname,
         )
-        == -1
+        == 289356
     )
 
 def test_state_senate_totals(dbname):
     assert (e.contest_total(
         "2020 General",
         "Florida",
-        "FL Senate District 1",
+        "FL Senate District 3",
         dbname=dbname,
         )
-        == -1
+        == 257487
     )
 
 def test_state_house_totals(dbname):
     assert ( e.contest_total(
         "2020 General",
         "Florida",
-        "FL House District 1",
+        "FL House District 92",
         dbname=dbname,
         )
-        == -1
+        == 60913
     )
 
