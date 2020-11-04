@@ -6,9 +6,7 @@ def test_data_exists(dbname):
 
 
 def test_wi_statewide_totals(dbname):
-    assert (
-        not e.data_exists("2018 General", "Wisconsin", dbname=dbname)
-        or e.contest_total(
+    assert (e.contest_total(
             "2018 General",
             "Wisconsin",
             "WI Governor",
@@ -22,9 +20,7 @@ def test_wi_statewide_totals(dbname):
 
 
 def test_wi_senate_totals(dbname):
-    assert (
-        not e.data_exists("2018 General", "Wisconsin", dbname=dbname)
-        or e.contest_total(
+    assert (e.contest_total(
             "2018 General",
             "Wisconsin",
             "WI Senate District 21",
@@ -35,9 +31,7 @@ def test_wi_senate_totals(dbname):
 
 
 def test_wi_house_totals(dbname):
-    assert (
-        not e.data_exists("2018 General", "Wisconsin", dbname=dbname)
-        or e.contest_total(
+    assert (e.contest_total(
             "2018 General",
             "Wisconsin",
             "WI House District 10",
@@ -48,9 +42,7 @@ def test_wi_house_totals(dbname):
 
 
 def test_us_house_totals(dbname):
-    assert (
-        not e.data_exists("2018 General", "Wisconsin", dbname=dbname)
-        or e.contest_total(
+    assert (e.contest_total(
             "2018 General",
             "Wisconsin",
             "US House WI District 3",

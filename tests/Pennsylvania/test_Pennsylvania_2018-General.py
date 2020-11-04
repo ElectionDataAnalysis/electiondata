@@ -1,10 +1,9 @@
 import election_data_analysis as e
-
+def test_data_exists(dbname):
+    assert e.data_exists("2018 General", "Pennsylvania", dbname=dbname)
 
 def test_pa_statewide_totals_18(dbname):
-    assert (
-        not e.data_exists("2018 General", "Pennsylvania", dbname=dbname)
-        or e.contest_total(
+    assert (e.contest_total(
             "2018 General",
             "Pennsylvania",
             "PA Governor",
@@ -15,9 +14,7 @@ def test_pa_statewide_totals_18(dbname):
 
 
 def test_pa_senate_totals_18(dbname):
-    assert (
-        not e.data_exists("2018 General", "Pennsylvania", dbname=dbname)
-        or e.contest_total(
+    assert (e.contest_total(
             "2018 General",
             "Pennsylvania",
             "PA Senate District 20",
@@ -28,9 +25,7 @@ def test_pa_senate_totals_18(dbname):
 
 
 def test_pa_house_totals_18(dbname):
-    assert (
-        not e.data_exists("2018 General", "Pennsylvania", dbname=dbname)
-        or e.contest_total(
+    assert (e.contest_total(
             "2018 General",
             "Pennsylvania",
             "PA House District 103",

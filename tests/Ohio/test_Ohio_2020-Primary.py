@@ -57,9 +57,7 @@ def test_oh_rep_20_20(dbname):
 
 
 def test_oh_contest_by_vote_type_20(dbname):
-    assert (
-        not e.data_exists("2020 Primary", "Ohio", dbname=dbname)
-        or e.count_type_total(
+    assert (e.count_type_total(
             "2020 Primary",
             "Ohio",
             "US House OH District 3 (Republican Party)",
