@@ -1,10 +1,9 @@
 import election_data_analysis as e
-
+def test_data_exists(dbname):
+    assert e.data_exists("2016 General", "Florida", dbname=dbname)
 
 def test_fl_presidential(dbname):
-    assert (
-        not e.data_exists("2016 General", "Florida", dbname=dbname)
-        or e.contest_total(
+    assert (e.contest_total(
             "2016 General",
             "Florida",
             "US President (FL)",
@@ -15,9 +14,7 @@ def test_fl_presidential(dbname):
 
 
 def test_fl_statewide_totals(dbname):
-    assert (
-        not e.data_exists("2016 General", "Florida", dbname=dbname)
-        or e.contest_total(
+    assert (e.contest_total(
             "2016 General",
             "Florida",
             "US Senate FL",
@@ -28,9 +25,7 @@ def test_fl_statewide_totals(dbname):
 
 
 def test_fl_senate_totals(dbname):
-    assert (
-        not e.data_exists("2016 General", "Florida", dbname=dbname)
-        or e.contest_total(
+    assert (e.contest_total(
             "2016 General",
             "Florida",
             "FL Senate District 3",
@@ -41,9 +36,7 @@ def test_fl_senate_totals(dbname):
 
 
 def test_fl_house_totals(dbname):
-    assert (
-        not e.data_exists("2016 General", "Florida", dbname=dbname)
-        or e.contest_total(
+    assert (e.contest_total(
             "2016 General",
             "Florida",
             "US House FL District 10",

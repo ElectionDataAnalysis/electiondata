@@ -2,13 +2,12 @@ import election_data_analysis as e
 
 # AZ20 tests
 
-
 def test_data_exists(dbname):
     assert e.data_exists("2020 Primary", "Arizona", dbname=dbname)
 
 
 def test_presidential_totals(dbname):
-    assert(not e.data_exists("2020 Primary","Arizona",dbname=dbname) or e.contest_total(
+    assert(e.contest_total(
            "2020 Primary",
            "Arizona",
            "US President (AZ) (Democratic Party)",
