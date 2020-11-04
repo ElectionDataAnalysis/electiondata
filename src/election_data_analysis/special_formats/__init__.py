@@ -78,7 +78,7 @@ def read_alternate_munger(
         raw_results, err = read_multi_sheet_excel(f_path, munger, err)
     elif file_type in ["xml"]:
         vc_field = get_vc_field_from_munger(munger)
-        raw_results, err = read_xml(f_path, err, vc_field, munger)
+        raw_results, err = read_xml(f_path, err, vc_field)
     else:
         err = ui.add_new_error(
             err, "munger", munger.name, f"file type not recognized: {file_type}"
@@ -367,12 +367,8 @@ def add_info(node: et.Element, info: dict, vc_field: dict) -> (dict, bool):
             # read value as integer
             new_info[k] = int(node.attrib[vc_field[node.tag][k]])
         else:
-            try:
-                # read value as string
-                new_info[k] = node.attrib[vc_field[node.tag][k]]
-            except:
-                # If there is any problem reading (e.g., key not present in xml) put in a blank
-                new_info[k] = ""
+            # read value as string
+            new_info[k] = node.attrib[vc_field[node.tag][k]]
     changed = new_info != info
     return new_info, changed
 
@@ -381,7 +377,6 @@ def read_xml(
     fpath: str,
     err: Optional[Dict],
     vc_field: dict,
-    munger: jm.Munger,
 ) -> (pd.DataFrame, Optional[Dict]):
     db_elements = {k2 for k, v in vc_field.items() for k2 in v.keys()}
 
@@ -407,7 +402,7 @@ def read_xml(
         raw_results = pd.DataFrame(vc_record_list)
 
     except Exception as e:
-        err = ui.add_new_error(err, "munger", munger.name, f"Error munging xml: {e}")
+        err = ui.add_new_error(err, "munger", f"Error munging xml: {e}")
         raw_results = pd.DataFrame()
     return raw_results, err
 
