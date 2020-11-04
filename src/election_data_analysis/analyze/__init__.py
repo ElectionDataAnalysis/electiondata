@@ -624,13 +624,16 @@ def get_most_anomalous(data, n):
     """Gets n contest, with 2 from largest votes at stake ratio
     and 1 with largest score. If 2 from votes at stake cannot be found
     (bc of threshold for score) then we fill in the top n from scores"""
-    # data = data[data["votes_at_stake"] > 0]
-    margin_data = data[data["score"] > 2.3]
+    # filter out very small votes at stake margins
+    data = data[data["margin_ratio"] > 0.01]
 
+    # grab data by highest votes at stake margin (magnitude)
+    margin_data = data[data["score"] > 2.3]
+    unit_by_margin = get_unit_by_column(margin_data, "margin_ratio")
+    # grab data by highest z-score (magnitude)
+    unit_by_score = get_unit_by_column(data, "score")
     # get data for n deduped unit_ids, with n-1 from margin data, filling
     # in from score data if margin data is unavailable
-    unit_by_margin = get_unit_by_column(margin_data, "margin_ratio")
-    unit_by_score = get_unit_by_column(data, "score")
     unit_ids_all = unit_by_margin[0 : n - 1] + unit_by_score
     unit_ids = list(dict.fromkeys(unit_ids_all).keys())[0:n]
     data = data[data["unit_id"].isin(unit_ids)]
@@ -656,6 +659,12 @@ def get_most_anomalous(data, n):
     )
     data.rename(columns={"Count_x": "Count"}, inplace=True)
     data.drop(columns=["Count_y"], inplace=True)
+
+    data.sort_values(
+        by = ["margin_ratio", "Name", "Selection"],
+        ascending = [False, True, True],
+        inplace = True
+    )
 
     # now we get the top 8 reporting unit IDs, in terms of anomaly score, of the winner and most anomalous
     ids = data["unit_id"].unique()
@@ -765,7 +774,6 @@ def calculate_votes_at_stake(data):
         except:
             temp_df["margin_ratio"] = 0
             temp_df["votes_at_stake"] = 0
-
         df = pd.concat([df, temp_df])
     return df
 
