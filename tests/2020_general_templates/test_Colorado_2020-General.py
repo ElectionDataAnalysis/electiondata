@@ -17,7 +17,9 @@ def test_presidential(dbname):
         "US President (CO)",
         dbname=dbname,
         )
-        == -1
+        == 1634546 + 1224304 + 4484 + 2333 + 7323 + 298 + 42723 + 2090 +
+           1740 + 483 + 532 + 312 + 371 + 288 + 160 + 665 + 778 + 541 + 483 +
+           143 + 6295
     )
 
 def test_senate_totals(dbname):
@@ -27,7 +29,7 @@ def test_senate_totals(dbname):
         "US Senate CO",
         dbname=dbname,
         )
-        == -1
+        == 1569209 + 1283954 + 8429 + 7105 + 45914
     )
 
 def test_congressional_totals(dbname):
@@ -37,26 +39,26 @@ def test_congressional_totals(dbname):
         "US House CO District 1",
         dbname=dbname,
         )
-        == -1
+        == 79979 + 265478 + 1578 + 969 + 5524
     )
 
 def test_state_senate_totals(dbname):
     assert (e.contest_total(
         "2020 General",
         "Colorado",
-        "CO Senate District 1",
+        "CO Senate District 4",
         dbname=dbname,
         )
-        == -1
+        == 70311 + 40381 + 2957
     )
 
 def test_state_house_totals(dbname):
     assert ( e.contest_total(
         "2020 General",
         "Colorado",
-        "CO House District 1",
+        "CO House District 56",
         dbname=dbname,
         )
-        == -1
+        == 32937 + 22752 + 2264
     )
 
