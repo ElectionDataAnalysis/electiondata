@@ -64,5 +64,5 @@ def test_state_treasurer_republican(dbname):
             "PA Treasurer (Phila)",
             dbname=dbname,
         )
-        == 21082
+        == 669036
     )

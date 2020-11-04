@@ -7,12 +7,12 @@ PA Auditor General (Phila)	1	PA Auditor General
 PA Lieutenant Governor (Phila)	1	PA Lieutenant Governor	
 PA Treasurer (Phila)	1	PA Treasurer	
 PA Secretary of State (Phila)	1	PA Secretary of State	
-PA Senate District 1	1	PA Senate District 1	
-PA Senate District 2	1	PA Senate District 2	
-PA Senate District 3	1	PA Senate District 3	
+PA Senate District 1 (Phila)	1	PA Senate District 1	
+PA Senate District 2 (Phila)	1	PA Senate District 2	
+PA Senate District 3 (Phila)	1	PA Senate District 3	
 PA Senate District 4 (Phila)	1	PA Senate District 4	
-PA Senate District 5	1	PA Senate District 5	
-PA Senate District 6	1	PA Senate District 6	
+PA Senate District 5 (Phila)	1	PA Senate District 5	
+PA Senate District 6 (Phila)	1	PA Senate District 6	
 PA Senate District 7 (Phila)	1	PA Senate District 7	
 PA Senate District 8 (Phila)	1	PA Senate District 8	
 PA House District 152 (Phila)	1	PA House District 152	
@@ -46,7 +46,7 @@ US House PA District 2 (Phila)	1	US House PA District 2
 US House PA District 3 (Phila)	1	US House PA District 3
 US House PA District 5 (Phila)	1	US House PA District 5
 US House PA District 13 (Phila)	1	US House PA District 13
-US President (Phila) (Democratic Party)	1	US President (PA)	Democratic Party
+US President (PA) (Phila) (Democratic Party)	1	US President (PA)	Democratic Party
 PA Governor (Democratic Party)	1	PA Governor	Democratic Party
 US Senate PA (Phila) (Democratic Party)	1	US Senate PA	Democratic Party
 PA Attorney General (Phila) (Democratic Party)	1	PA Attorney General	Democratic Party
@@ -54,12 +54,12 @@ PA Auditor General (Phila) (Democratic Party)	1	PA Auditor General	Democratic Pa
 PA Lieutenant Governor (Phila) (Democratic Party)	1	PA Lieutenant Governor	Democratic Party
 PA Treasurer (Phila) (Democratic Party)	1	PA Treasurer	Democratic Party
 PA Secretary of State (Phila) (Democratic Party)	1	PA Secretary of State	Democratic Party
-PA Senate District 1 (Democratic Party)	1	PA Senate District 1	Democratic Party
-PA Senate District 2 (Democratic Party)	1	PA Senate District 2	Democratic Party
-PA Senate District 3 (Democratic Party)	1	PA Senate District 3	Democratic Party
+PA Senate District 1 (Phila) (Democratic Party)	1	PA Senate District 1	Democratic Party
+PA Senate District 2 (Phila) (Democratic Party)	1	PA Senate District 2	Democratic Party
+PA Senate District 3 (Phila) (Democratic Party)	1	PA Senate District 3	Democratic Party
 PA Senate District 4 (Phila) (Democratic Party)	1	PA Senate District 4	Democratic Party
-PA Senate District 5 (Democratic Party)	1	PA Senate District 5	Democratic Party
-PA Senate District 6 (Democratic Party)	1	PA Senate District 6	Democratic Party
+PA Senate District 5 (Phila) (Democratic Party)	1	PA Senate District 5	Democratic Party
+PA Senate District 6 (Phila) (Democratic Party)	1	PA Senate District 6	Democratic Party
 PA Senate District 7 (Phila) (Democratic Party)	1	PA Senate District 7	Democratic Party
 PA Senate District 8 (Phila) (Democratic Party)	1	PA Senate District 8	Democratic Party
 PA House District 152 (Phila) (Democratic Party)	1	PA House District 152	Democratic Party
@@ -93,7 +93,7 @@ US House PA District 2 (Phila) (Democratic Party)	1	US House PA District 2	Democ
 US House PA District 3 (Phila) (Democratic Party)	1	US House PA District 3	Democratic Party
 US House PA District 5 (Phila) (Democratic Party)	1	US House PA District 5	Democratic Party
 US House PA District 13 (Phila) (Democratic Party)	1	US House PA District 13	Democratic Party
-US President (Phila) (Republican Party)	1	US President (PA)	Republican Party
+US President (PA) (Phila) (Republican Party)	1	US President (PA)	Republican Party
 PA Governor (Republican Party)	1	PA Governor	Republican Party
 US Senate PA (Phila) (Republican Party)	1	US Senate PA	Republican Party
 PA Attorney General (Phila) (Republican Party)	1	PA Attorney General	Republican Party
@@ -101,12 +101,12 @@ PA Auditor General (Phila) (Republican Party)	1	PA Auditor General	Republican Pa
 PA Lieutenant Governor (Phila) (Republican Party)	1	PA Lieutenant Governor	Republican Party
 PA Treasurer (Phila) (Republican Party)	1	PA Treasurer	Republican Party
 PA Secretary of State (Phila) (Republican Party)	1	PA Secretary of State	Republican Party
-PA Senate District 1 (Republican Party)	1	PA Senate District 1	Republican Party
-PA Senate District 2 (Republican Party)	1	PA Senate District 2	Republican Party
-PA Senate District 3 (Republican Party)	1	PA Senate District 3	Republican Party
+PA Senate District 1 (Phila) (Republican Party)	1	PA Senate District 1	Republican Party
+PA Senate District 2 (Phila) (Republican Party)	1	PA Senate District 2	Republican Party
+PA Senate District 3 (Phila) (Republican Party)	1	PA Senate District 3	Republican Party
 PA Senate District 4 (Phila) (Republican Party)	1	PA Senate District 4	Republican Party
-PA Senate District 5 (Republican Party)	1	PA Senate District 5	Republican Party
-PA Senate District 6 (Republican Party)	1	PA Senate District 6	Republican Party
+PA Senate District 5 (Phila) (Republican Party)	1	PA Senate District 5	Republican Party
+PA Senate District 6 (Phila) (Republican Party)	1	PA Senate District 6	Republican Party
 PA Senate District 7 (Phila) (Republican Party)	1	PA Senate District 7	Republican Party
 PA Senate District 8 (Phila) (Republican Party)	1	PA Senate District 8	Republican Party
 PA House District 152 (Phila) (Republican Party)	1	PA House District 152	Republican Party
@@ -140,7 +140,7 @@ US House PA District 2 (Phila) (Republican Party)	1	US House PA District 2	Repub
 US House PA District 3 (Phila) (Republican Party)	1	US House PA District 3	Republican Party
 US House PA District 5 (Phila) (Republican Party)	1	US House PA District 5	Republican Party
 US House PA District 13 (Phila) (Republican Party)	1	US House PA District 13	Republican Party
-US President (Phila) (Green Party)	1	US President (PA)	Green Party
+US President (PA) (Phila) (Green Party)	1	US President (PA)	Green Party
 PA Governor (Green Party)	1	PA Governor	Green Party
 US Senate PA (Phila) (Green Party)	1	US Senate PA	Green Party
 PA Attorney General (Phila) (Green Party)	1	PA Attorney General	Green Party
@@ -148,12 +148,12 @@ PA Auditor General (Phila) (Green Party)	1	PA Auditor General	Green Party
 PA Lieutenant Governor (Phila) (Green Party)	1	PA Lieutenant Governor	Green Party
 PA Treasurer (Phila) (Green Party)	1	PA Treasurer	Green Party
 PA Secretary of State (Phila) (Green Party)	1	PA Secretary of State	Green Party
-PA Senate District 1 (Green Party)	1	PA Senate District 1	Green Party
-PA Senate District 2 (Green Party)	1	PA Senate District 2	Green Party
-PA Senate District 3 (Green Party)	1	PA Senate District 3	Green Party
+PA Senate District 1 (Phila) (Green Party)	1	PA Senate District 1	Green Party
+PA Senate District 2 (Phila) (Green Party)	1	PA Senate District 2	Green Party
+PA Senate District 3 (Phila) (Green Party)	1	PA Senate District 3	Green Party
 PA Senate District 4 (Phila) (Green Party)	1	PA Senate District 4	Green Party
-PA Senate District 5 (Green Party)	1	PA Senate District 5	Green Party
-PA Senate District 6 (Green Party)	1	PA Senate District 6	Green Party
+PA Senate District 5 (Phila) (Green Party)	1	PA Senate District 5	Green Party
+PA Senate District 6 (Phila) (Green Party)	1	PA Senate District 6	Green Party
 PA Senate District 7 (Phila) (Green Party)	1	PA Senate District 7	Green Party
 PA Senate District 8 (Phila) (Green Party)	1	PA Senate District 8	Green Party
 PA House District 152 (Phila) (Green Party)	1	PA House District 152	Green Party
@@ -187,7 +187,7 @@ US House PA District 2 (Phila) (Green Party)	1	US House PA District 2	Green Part
 US House PA District 3 (Phila) (Green Party)	1	US House PA District 3	Green Party
 US House PA District 5 (Phila) (Green Party)	1	US House PA District 5	Green Party
 US House PA District 13 (Phila) (Green Party)	1	US House PA District 13	Green Party
-US President (Phila) (Libertarian Party)	1	US President (PA)	Libertarian Party
+US President (PA) (Phila) (Libertarian Party)	1	US President (PA)	Libertarian Party
 PA Governor (Libertarian Party)	1	PA Governor	Libertarian Party
 US Senate PA (Phila) (Libertarian Party)	1	US Senate PA	Libertarian Party
 PA Attorney General (Phila) (Libertarian Party)	1	PA Attorney General	Libertarian Party
@@ -195,12 +195,12 @@ PA Auditor General (Phila) (Libertarian Party)	1	PA Auditor General	Libertarian 
 PA Lieutenant Governor (Phila) (Libertarian Party)	1	PA Lieutenant Governor	Libertarian Party
 PA Treasurer (Phila) (Libertarian Party)	1	PA Treasurer	Libertarian Party
 PA Secretary of State (Phila) (Libertarian Party)	1	PA Secretary of State	Libertarian Party
-PA Senate District 1 (Libertarian Party)	1	PA Senate District 1	Libertarian Party
-PA Senate District 2 (Libertarian Party)	1	PA Senate District 2	Libertarian Party
-PA Senate District 3 (Libertarian Party)	1	PA Senate District 3	Libertarian Party
+PA Senate District 1 (Phila) (Libertarian Party)	1	PA Senate District 1	Libertarian Party
+PA Senate District 2 (Phila) (Libertarian Party)	1	PA Senate District 2	Libertarian Party
+PA Senate District 3 (Phila) (Libertarian Party)	1	PA Senate District 3	Libertarian Party
 PA Senate District 4 (Phila) (Libertarian Party)	1	PA Senate District 4	Libertarian Party
-PA Senate District 5 (Libertarian Party)	1	PA Senate District 5	Libertarian Party
-PA Senate District 6 (Libertarian Party)	1	PA Senate District 6	Libertarian Party
+PA Senate District 5 (Phila) (Libertarian Party)	1	PA Senate District 5	Libertarian Party
+PA Senate District 6 (Phila) (Libertarian Party)	1	PA Senate District 6	Libertarian Party
 PA Senate District 7 (Phila) (Libertarian Party)	1	PA Senate District 7	Libertarian Party
 PA Senate District 8 (Phila) (Libertarian Party)	1	PA Senate District 8	Libertarian Party
 PA House District 152 (Phila) (Libertarian Party)	1	PA House District 152	Libertarian Party
@@ -234,7 +234,7 @@ US House PA District 2 (Phila) (Libertarian Party)	1	US House PA District 2	Libe
 US House PA District 3 (Phila) (Libertarian Party)	1	US House PA District 3	Libertarian Party
 US House PA District 5 (Phila) (Libertarian Party)	1	US House PA District 5	Libertarian Party
 US House PA District 13 (Phila) (Libertarian Party)	1	US House PA District 13	Libertarian Party
-US President (Phila) (Independent)	1	US President (PA)	Independent
+US President (PA) (Phila) (Independent)	1	US President (PA)	Independent
 PA Governor (Independent)	1	PA Governor	Independent
 US Senate PA (Phila) (Independent)	1	US Senate PA	Independent
 PA Attorney General (Phila) (Independent)	1	PA Attorney General	Independent
@@ -242,12 +242,12 @@ PA Auditor General (Phila) (Independent)	1	PA Auditor General	Independent
 PA Lieutenant Governor (Phila) (Independent)	1	PA Lieutenant Governor	Independent
 PA Treasurer (Phila) (Independent)	1	PA Treasurer	Independent
 PA Secretary of State (Phila) (Independent)	1	PA Secretary of State	Independent
-PA Senate District 1 (Independent)	1	PA Senate District 1	Independent
-PA Senate District 2 (Independent)	1	PA Senate District 2	Independent
-PA Senate District 3 (Independent)	1	PA Senate District 3	Independent
+PA Senate District 1 (Phila) (Independent)	1	PA Senate District 1	Independent
+PA Senate District 2 (Phila) (Independent)	1	PA Senate District 2	Independent
+PA Senate District 3 (Phila) (Independent)	1	PA Senate District 3	Independent
 PA Senate District 4 (Phila) (Independent)	1	PA Senate District 4	Independent
-PA Senate District 5 (Independent)	1	PA Senate District 5	Independent
-PA Senate District 6 (Independent)	1	PA Senate District 6	Independent
+PA Senate District 5 (Phila) (Independent)	1	PA Senate District 5	Independent
+PA Senate District 6 (Phila) (Independent)	1	PA Senate District 6	Independent
 PA Senate District 7 (Phila) (Independent)	1	PA Senate District 7	Independent
 PA Senate District 8 (Phila) (Independent)	1	PA Senate District 8	Independent
 PA House District 152 (Phila) (Independent)	1	PA House District 152	Independent

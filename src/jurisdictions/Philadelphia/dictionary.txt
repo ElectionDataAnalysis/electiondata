@@ -4,12 +4,12 @@ CandidateContest	US Senate PA (Phila) (Democratic Party)	UNITED STATES SENATOR-D
 CandidateContest	PA Attorney General (Phila) (Democratic Party)	ATTORNEY GENERAL-DEM
 CandidateContest	PA Auditor General (Phila) (Democratic Party)	AUDITOR GENERAL-DEM
 CandidateContest	PA Treasurer (Phila) (Democratic Party)	STATE TREASURER-DEM
-CandidateContest	PA Senate District 1 (Democratic Party)	SENATOR IN THE GENERAL ASSEMBLY-1ST-DEM
-CandidateContest	PA Senate District 2 (Democratic Party)	SENATOR IN THE GENERAL ASSEMBLY-2ND-DEM
-CandidateContest	PA Senate District 3 (Democratic Party)	SENATOR IN THE GENERAL ASSEMBLY-3RD-DEM
+CandidateContest	PA Senate District 1 (Phila) (Democratic Party)	SENATOR IN THE GENERAL ASSEMBLY-1ST-DEM
+CandidateContest	PA Senate District 2 (Phila) (Democratic Party)	SENATOR IN THE GENERAL ASSEMBLY-2ND-DEM
+CandidateContest	PA Senate District 3 (Phila) (Democratic Party)	SENATOR IN THE GENERAL ASSEMBLY-3RD-DEM
 CandidateContest	PA Senate District 4 (Phila) (Democratic Party)	SENATOR IN THE GENERAL ASSEMBLY-4TH-DEM
-CandidateContest	PA Senate District 5 (Democratic Party)	SENATOR IN THE GENERAL ASSEMBLY-5TH-DEM
-CandidateContest	PA Senate District 6 (Democratic Party)	SENATOR IN THE GENERAL ASSEMBLY-6TH-DEM
+CandidateContest	PA Senate District 5 (Phila) (Democratic Party)	SENATOR IN THE GENERAL ASSEMBLY-5TH-DEM
+CandidateContest	PA Senate District 6 (Phila) (Democratic Party)	SENATOR IN THE GENERAL ASSEMBLY-6TH-DEM
 CandidateContest	PA Senate District 7 (Phila) (Democratic Party)	SENATOR IN THE GENERAL ASSEMBLY-7TH-DEM
 CandidateContest	PA Senate District 8 (Phila) (Democratic Party)	SENATOR IN THE GENERAL ASSEMBLY-8TH-DEM
 CandidateContest	PA House District 152 (Phila) (Democratic Party)	REPRESENTATIVE IN THE GENERAL ASSEMBLY-152ND-DEM
@@ -48,12 +48,12 @@ CandidateContest	US Senate PA (Phila) (Republican Party)	UNITED STATES SENATOR-R
 CandidateContest	PA Attorney General (Phila) (Republican Party)	ATTORNEY GENERAL-REP
 CandidateContest	PA Auditor General (Phila) (Republican Party)	AUDITOR GENERAL-REP
 CandidateContest	PA Treasurer (Phila) (Republican Party)	STATE TREASURER-REP
-CandidateContest	PA Senate District 1 (Republican Party)	SENATOR IN THE GENERAL ASSEMBLY-1ST-REP
-CandidateContest	PA Senate District 2 (Republican Party)	SENATOR IN THE GENERAL ASSEMBLY-2ND-REP
-CandidateContest	PA Senate District 3 (Republican Party)	SENATOR IN THE GENERAL ASSEMBLY-3RD-REP
+CandidateContest	PA Senate District 1 (Phila) (Republican Party)	SENATOR IN THE GENERAL ASSEMBLY-1ST-REP
+CandidateContest	PA Senate District 2 (Phila) (Republican Party)	SENATOR IN THE GENERAL ASSEMBLY-2ND-REP
+CandidateContest	PA Senate District 3 (Phila) (Republican Party)	SENATOR IN THE GENERAL ASSEMBLY-3RD-REP
 CandidateContest	PA Senate District 4 (Phila) (Republican Party)	SENATOR IN THE GENERAL ASSEMBLY-4TH-REP
-CandidateContest	PA Senate District 5 (Republican Party)	SENATOR IN THE GENERAL ASSEMBLY-5TH-REP
-CandidateContest	PA Senate District 6 (Republican Party)	SENATOR IN THE GENERAL ASSEMBLY-6TH-REP
+CandidateContest	PA Senate District 5 (Phila) (Republican Party)	SENATOR IN THE GENERAL ASSEMBLY-5TH-REP
+CandidateContest	PA Senate District 6 (Phila) (Republican Party)	SENATOR IN THE GENERAL ASSEMBLY-6TH-REP
 CandidateContest	PA Senate District 7 (Phila) (Republican Party)	SENATOR IN THE GENERAL ASSEMBLY-7TH-REP
 CandidateContest	PA Senate District 8 (Phila) (Republican Party)	SENATOR IN THE GENERAL ASSEMBLY-8TH-REP
 CandidateContest	PA House District 152 (Phila) (Republican Party)	REPRESENTATIVE IN THE GENERAL ASSEMBLY-152ND-REP
@@ -92,12 +92,12 @@ CandidateContest	US Senate PA (Phila) (Green Party)	UNITED STATES SENATOR-GRE
 CandidateContest	PA Attorney General (Phila) (Green Party)	ATTORNEY GENERAL-GRE
 CandidateContest	PA Auditor General (Phila) (Green Party)	AUDITOR GENERAL-GRE
 CandidateContest	PA Treasurer (Phila) (Green Party)	STATE TREASURER-GRE
-CandidateContest	PA Senate District 1 (Green Party)	SENATOR IN THE GENERAL ASSEMBLY-1ST-GRE
-CandidateContest	PA Senate District 2 (Green Party)	SENATOR IN THE GENERAL ASSEMBLY-2ND-GRE
-CandidateContest	PA Senate District 3 (Green Party)	SENATOR IN THE GENERAL ASSEMBLY-3RD-GRE
+CandidateContest	PA Senate District 1 (Phila) (Green Party)	SENATOR IN THE GENERAL ASSEMBLY-1ST-GRE
+CandidateContest	PA Senate District 2 (Phila) (Green Party)	SENATOR IN THE GENERAL ASSEMBLY-2ND-GRE
+CandidateContest	PA Senate District 3 (Phila) (Green Party)	SENATOR IN THE GENERAL ASSEMBLY-3RD-GRE
 CandidateContest	PA Senate District 4 (Phila) (Green Party)	SENATOR IN THE GENERAL ASSEMBLY-4TH-GRE
-CandidateContest	PA Senate District 5 (Green Party)	SENATOR IN THE GENERAL ASSEMBLY-5TH-GRE
-CandidateContest	PA Senate District 6 (Green Party)	SENATOR IN THE GENERAL ASSEMBLY-6TH-GRE
+CandidateContest	PA Senate District 5 (Phila) (Green Party)	SENATOR IN THE GENERAL ASSEMBLY-5TH-GRE
+CandidateContest	PA Senate District 6 (Phila) (Green Party)	SENATOR IN THE GENERAL ASSEMBLY-6TH-GRE
 CandidateContest	PA Senate District 7 (Phila) (Green Party)	SENATOR IN THE GENERAL ASSEMBLY-7TH-GRE
 CandidateContest	PA Senate District 8 (Phila) (Green Party)	SENATOR IN THE GENERAL ASSEMBLY-8TH-GRE
 CandidateContest	PA House District 152 (Phila) (Green Party)	REPRESENTATIVE IN THE GENERAL ASSEMBLY-152ND-GRE
@@ -136,12 +136,12 @@ CandidateContest	US Senate PA (Phila) (Libertarian Party)	UNITED STATES SENATOR-
 CandidateContest	PA Attorney General (Phila) (Libertarian Party)	ATTORNEY GENERAL-LIB
 CandidateContest	PA Auditor General (Phila) (Libertarian Party)	AUDITOR GENERAL-LIB
 CandidateContest	PA Treasurer (Phila) (Libertarian Party)	STATE TREASURER-LIB
-CandidateContest	PA Senate District 1 (Libertarian Party)	SENATOR IN THE GENERAL ASSEMBLY-1ST-LIB
-CandidateContest	PA Senate District 2 (Libertarian Party)	SENATOR IN THE GENERAL ASSEMBLY-2ND-LIB
-CandidateContest	PA Senate District 3 (Libertarian Party)	SENATOR IN THE GENERAL ASSEMBLY-3RD-LIB
+CandidateContest	PA Senate District 1 (Phila) (Libertarian Party)	SENATOR IN THE GENERAL ASSEMBLY-1ST-LIB
+CandidateContest	PA Senate District 2 (Phila) (Libertarian Party)	SENATOR IN THE GENERAL ASSEMBLY-2ND-LIB
+CandidateContest	PA Senate District 3 (Phila) (Libertarian Party)	SENATOR IN THE GENERAL ASSEMBLY-3RD-LIB
 CandidateContest	PA Senate District 4 (Phila) (Libertarian Party)	SENATOR IN THE GENERAL ASSEMBLY-4TH-LIB
-CandidateContest	PA Senate District 5 (Libertarian Party)	SENATOR IN THE GENERAL ASSEMBLY-5TH-LIB
-CandidateContest	PA Senate District 6 (Libertarian Party)	SENATOR IN THE GENERAL ASSEMBLY-6TH-LIB
+CandidateContest	PA Senate District 5 (Phila) (Libertarian Party)	SENATOR IN THE GENERAL ASSEMBLY-5TH-LIB
+CandidateContest	PA Senate District 6 (Phila) (Libertarian Party)	SENATOR IN THE GENERAL ASSEMBLY-6TH-LIB
 CandidateContest	PA Senate District 7 (Phila) (Libertarian Party)	SENATOR IN THE GENERAL ASSEMBLY-7TH-LIB
 CandidateContest	PA Senate District 8 (Phila) (Libertarian Party)	SENATOR IN THE GENERAL ASSEMBLY-8TH-LIB
 CandidateContest	PA House District 152 (Phila) (Libertarian Party)	REPRESENTATIVE IN THE GENERAL ASSEMBLY-152ND-LIB
@@ -180,12 +180,12 @@ CandidateContest	US Senate PA (Phila) (Independent)	UNITED STATES SENATOR-IND
 CandidateContest	PA Attorney General (Phila) (Independent)	ATTORNEY GENERAL-IND
 CandidateContest	PA Auditor General (Phila) (Independent)	AUDITOR GENERAL-IND
 CandidateContest	PA Treasurer (Phila) (Independent)	STATE TREASURER-IND
-CandidateContest	PA Senate District 1 (Independent)	SENATOR IN THE GENERAL ASSEMBLY-1ST-IND
-CandidateContest	PA Senate District 2 (Independent)	SENATOR IN THE GENERAL ASSEMBLY-2ND-IND
-CandidateContest	PA Senate District 3 (Independent)	SENATOR IN THE GENERAL ASSEMBLY-3RD-IND
+CandidateContest	PA Senate District 1 (Phila) (Independent)	SENATOR IN THE GENERAL ASSEMBLY-1ST-IND
+CandidateContest	PA Senate District 2 (Phila) (Independent)	SENATOR IN THE GENERAL ASSEMBLY-2ND-IND
+CandidateContest	PA Senate District 3 (Phila) (Independent)	SENATOR IN THE GENERAL ASSEMBLY-3RD-IND
 CandidateContest	PA Senate District 4 (Phila) (Independent)	SENATOR IN THE GENERAL ASSEMBLY-4TH-IND
-CandidateContest	PA Senate District 5 (Independent)	SENATOR IN THE GENERAL ASSEMBLY-5TH-IND
-CandidateContest	PA Senate District 6 (Independent)	SENATOR IN THE GENERAL ASSEMBLY-6TH-IND
+CandidateContest	PA Senate District 5 (Phila) (Independent)	SENATOR IN THE GENERAL ASSEMBLY-5TH-IND
+CandidateContest	PA Senate District 6 (Phila) (Independent)	SENATOR IN THE GENERAL ASSEMBLY-6TH-IND
 CandidateContest	PA Senate District 7 (Phila) (Independent)	SENATOR IN THE GENERAL ASSEMBLY-7TH-IND
 CandidateContest	PA Senate District 8 (Phila) (Independent)	SENATOR IN THE GENERAL ASSEMBLY-8TH-IND
 CandidateContest	PA House District 152 (Phila) (Independent)	REPRESENTATIVE IN THE GENERAL ASSEMBLY-152ND-IND
@@ -3078,18 +3078,18 @@ CountItemType	absentee	A
 CountItemType	election-day	M
 CountItemType	provisional	P
 CountItemType	by-mail	L
-CandidateContest	PA Senate District 1	SENATOR IN THE GENERAL ASSEMBLY-1ST
-CandidateContest	PA Senate District 1	SENATOR IN THE GENERAL ASSEMBLY-1ST DISTRICT
-CandidateContest	PA Senate District 2	SENATOR IN THE GENERAL ASSEMBLY-2ND
-CandidateContest	PA Senate District 2	SENATOR IN THE GENERAL ASSEMBLY-2ND DISTRICT
-CandidateContest	PA Senate District 3	SENATOR IN THE GENERAL ASSEMBLY-3RD
-CandidateContest	PA Senate District 3	SENATOR IN THE GENERAL ASSEMBLY-3RD DISTRICT
+CandidateContest	PA Senate District 1 (Phila)	SENATOR IN THE GENERAL ASSEMBLY-1ST
+CandidateContest	PA Senate District 1 (Phila)	SENATOR IN THE GENERAL ASSEMBLY-1ST DISTRICT
+CandidateContest	PA Senate District 2 (Phila)	SENATOR IN THE GENERAL ASSEMBLY-2ND
+CandidateContest	PA Senate District 2 (Phila)	SENATOR IN THE GENERAL ASSEMBLY-2ND DISTRICT
+CandidateContest	PA Senate District 3 (Phila)	SENATOR IN THE GENERAL ASSEMBLY-3RD
+CandidateContest	PA Senate District 3 (Phila)	SENATOR IN THE GENERAL ASSEMBLY-3RD DISTRICT
 CandidateContest	PA Senate District 4 (Phila)	SENATOR IN THE GENERAL ASSEMBLY-4TH
 CandidateContest	PA Senate District 4 (Phila)	SENATOR IN THE GENERAL ASSEMBLY-4TH DISTRICT
-CandidateContest	PA Senate District 5	SENATOR IN THE GENERAL ASSEMBLY-5TH
-CandidateContest	PA Senate District 5	SENATOR IN THE GENERAL ASSEMBLY-5TH DISTRICT
-CandidateContest	PA Senate District 6	SENATOR IN THE GENERAL ASSEMBLY-6TH
-CandidateContest	PA Senate District 6	SENATOR IN THE GENERAL ASSEMBLY-6TH DISTRICT
+CandidateContest	PA Senate District 5 (Phila)	SENATOR IN THE GENERAL ASSEMBLY-5TH
+CandidateContest	PA Senate District 5 (Phila)	SENATOR IN THE GENERAL ASSEMBLY-5TH DISTRICT
+CandidateContest	PA Senate District 6 (Phila)	SENATOR IN THE GENERAL ASSEMBLY-6TH
+CandidateContest	PA Senate District 6 (Phila)	SENATOR IN THE GENERAL ASSEMBLY-6TH DISTRICT
 CandidateContest	PA Senate District 7 (Phila)	SENATOR IN THE GENERAL ASSEMBLY-7TH
 CandidateContest	PA Senate District 7 (Phila)	SENATOR IN THE GENERAL ASSEMBLY-7TH DISTRICT
 CandidateContest	PA Senate District 8 (Phila)	SENATOR IN THE GENERAL ASSEMBLY-8TH
