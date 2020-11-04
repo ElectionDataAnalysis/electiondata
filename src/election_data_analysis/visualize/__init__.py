@@ -21,19 +21,6 @@ def plot(type, data, fig_type, target_dir):
             font=dict(family="Courier New, monospace", size=18),
         )
     elif type == "bar":
-        # labels might get long, so we grab the most granular portion:
-        # for i in range(0, len(labels)):
-        #     l = labels[i].split(';')[-1]
-        #     labels[i] = l
-
-        # sort by most anomalous
-        # anomalous = list(map(abs, scores))
-        # to_sort = list(zip(anomalous, labels, x, y))
-        # ordered = sorted(to_sort, reverse=True)
-        # anomalous, labels, x, y = list(zip(*ordered))
-        # labels = list(labels)
-        # x = list(x)
-        # y = list(y)
         total = [x + y for x, y in zip(x, y)]
         x_pct = [x / ttl for x, ttl in zip(x, total)]
         y_pct = [y / ttl for y, ttl in zip(y, total)]
@@ -54,35 +41,10 @@ def plot(type, data, fig_type, target_dir):
             font=dict(family="Courier New, monospace", size=14),
         )
     image_dir = os.path.join(target_dir, "images")
+    x_clean = data["x"].replace(" ", "-").replace("/", "") 
+    y_clean = data["y"].replace(" ", "-").replace("/", "") 
     file_name = (
-        f'{data["x"].replace(" ", "-")}_{data["y"].replace(" ", "-")}.{fig_type}'
-    )
-    file_path = os.path.join(image_dir, file_name)
-
-    if not os.path.isdir(image_dir):
-        os.mkdir(image_dir)
-
-    if fig_type == "html":
-        fig.write_html(file_path)
-    else:
-        fig.write_image(file_path)
-    fig.show()
-
-
-def plot_bar(data, fig_type, target_dir):
-    labels, x, y = parse_data(data)
-    fig = go.Figure(
-        data=[
-            go.Bar(name=data["x"], x=[labels[0]], y=x),
-            go.Bar(name=data["y"], x=[labels[0]], y=y),
-        ]
-    )
-    fig.update_layout(
-        barmode="group", font=dict(family="Courier New, monospace", size=18)
-    )
-    image_dir = os.path.join(target_dir, "images")
-    file_name = (
-        f'{data["x"].replace(" ", "-")}_{data["y"].replace(" ", "-")}.{fig_type}'
+        f'{x_clean}_{y_clean}.{fig_type}'
     )
     file_path = os.path.join(image_dir, file_name)
 
