@@ -2,6 +2,7 @@ import results
 import os
 from election_data_analysis import Analyzer
 from election_data_analysis import database as db
+from election_data_analysis import data_exists
 from psycopg2 import sql
 import pytest
 
@@ -14,24 +15,6 @@ def get_analyzer(p_path: str = None):
         param_file = os.path.join(one_up, "src", "run_time.ini")
     a = Analyzer(param_file)
     return a
-
-
-def test_data_exists(election, jurisdiction, p_path=None):
-    a = get_analyzer(p_path=p_path)
-    election_id = db.name_to_id(a.session, "Election", election)
-    jurisdiction_id = db.name_to_id(a.session, "ReportingUnit", jurisdiction)
-    con = a.session.bind.raw_connection()
-    cur = con.cursor()
-    q = sql.SQL(
-        'SELECT "Id" FROM _datafile WHERE "Election_Id" = %s AND "ReportingUnit_Id" = %s'
-    )
-    cur.execute(q, (election_id, jurisdiction_id))
-
-    answer = cur.fetchall()
-    if len(answer) > 0:
-        return True
-    else:
-        return False
 
 
 analyzer = get_analyzer()
@@ -87,7 +70,7 @@ def test_contest_display():
 def test_bar_congressional():
     assert (
         analyzer.bar(
-            "2018 General", "Georgia", "congressional", "US House GA District 2"
+            "2018 General", "Georgia", "congressional", "US House GA District 3"
         )
         == results.ga_2018_bar_congressional
     )
