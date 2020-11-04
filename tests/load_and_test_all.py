@@ -120,10 +120,11 @@ def run2(
         err = dl.load_all(
             move_files=False, election_jurisdiction_list=election_jurisdiction_list
         )
-        if ui.fatal_error(err):
-            ui.report(err)
-            err = optional_remove(dl, "TestingData")
-            return err
+
+        #if ui.fatal_error(err):
+            #ui.report(err)
+            #err = optional_remove(dl, "TestingData")
+            #return err
     else:
         # restrict elections and jurisdictions to those given (if given)
         # otherwise use all in TestingData
