@@ -107,11 +107,12 @@ def run2(
             "https://github.com/ElectionDataAnalysis/TestingData.git", "TestingData"
         )
 
-        # restrict elections and jurisdictions to those given (if given)
-        # otherwise use all in TestingData
-        if not election_jurisdiction_list:
-            election_jurisdiction_list = ui.election_juris_list("TestingData")
+    # restrict elections and jurisdictions to those given (if given)
+    # otherwise use all in TestingData
+    if not election_jurisdiction_list:
+        election_jurisdiction_list = ui.election_juris_list("TestingData")
 
+    if load_data:
         # Load the data
         dl = e.DataLoader()
         dl.change_db(dbname)
@@ -120,16 +121,6 @@ def run2(
         err = dl.load_all(
             move_files=False, election_jurisdiction_list=election_jurisdiction_list
         )
-
-        #if ui.fatal_error(err):
-            #ui.report(err)
-            #err = optional_remove(dl, "TestingData")
-            #return err
-    else:
-        # restrict elections and jurisdictions to those given (if given)
-        # otherwise use all in TestingData
-        if not election_jurisdiction_list:
-            election_jurisdiction_list = ui.election_juris_list("TestingData")
 
     ui.run_tests(
         test_dir, dbname, election_jurisdiction_list=election_jurisdiction_list

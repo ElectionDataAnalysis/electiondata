@@ -955,7 +955,9 @@ def run_tests(
     os.chdir(test_dir)
 
     # run pytest
-    if election_jurisdiction_list:
+    if election_jurisdiction_list is None:
+        os.system(f"pytest --dbname {dbname}")
+    else:
         for (election, juris) in election_jurisdiction_list:
             if election is None and juris is not None:
                 keyword = f"{juris.replace(' ','-')}"
@@ -966,8 +968,7 @@ def run_tests(
             else:
                 keyword = "_"
             os.system(f"pytest --dbname {dbname} -k {keyword}")
-    else:
-        os.system(f"pytest --dbname {dbname}")
+
 
     # move back to original directory
     os.chdir(original_dir)
@@ -1035,7 +1036,7 @@ def election_juris_list(dir_path: str) -> list:
         if f[-4:] == ".ini":
             d, err = get_runtime_parameters(
                 param_file=os.path.join(dir_path, f),
-                header="'election_data_analysis",
+                header="election_data_analysis",
                 required_keys=["election", "top_reporting_unit"],
             )
             if not err:
