@@ -7,7 +7,7 @@ import election_data_analysis as e
 #   Replace each '-1' with the correct number calculated from the results file.
 #   Move this testing file to the correct jurisdiction folder in `election_data_analysis/tests`
 
-def data_exists(dbname):
+def test_data_exists(dbname):
     assert e.data_exists("2020 General","Indiana",dbname=dbname)
 
 def test_presidential(dbname):
