@@ -1,0 +1,10 @@
+Name	NumberElected	Office	PrimaryParty
+US President (AL)	1	US President (AL)	
+US Senate AL	1	US Senate AL	
+US House WI District 1	1	US House WI District 1	
+US House WI District 2	1	US House WI District 2	
+US House WI District 3	1	US House WI District 3	
+US House WI District 4	1	US House WI District 4	
+US House WI District 5	1	US House WI District 5	
+US House WI District 6	1	US House WI District 6	
+US House WI District 7	1	US House WI District 7	

@@ -1,0 +1,6 @@
+Name
+Democratic Party
+Republican Party
+Independent Party
+No Party
+Libertarian Party

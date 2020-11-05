@@ -1,0 +1,10 @@
+Name	ElectionDistrict
+US House AL District 1	Alabama;US House AL District 1
+US House AL District 2	Alabama;US House AL District 2
+US House AL District 3	Alabama;US House AL District 3
+US House AL District 4	Alabama;US House AL District 4
+US House AL District 5	Alabama;US House AL District 5
+US House AL District 6	Alabama;US House AL District 6
+US House AL District 7	Alabama;US House AL District 7
+US President (AL)	Alabama
+US Senate AL	Alabama
