@@ -2172,6 +2172,7 @@ Party	Democratic Party	d
 Party	Republican Party	r
 Party	Green Party	g
 Party	Libertarian Party	l
+Party	Libertarian Party	Jorgensen and Cohen lib
 ReportingUnit	New Hampshire;NH House District 1	New Hampshire;NH House District 1
 ReportingUnit	New Hampshire;NH House District 2	New Hampshire;NH House District 2
 ReportingUnit	New Hampshire;NH House District 3	New Hampshire;NH House District 3
@@ -4814,4 +4815,6 @@ Candidate	Gerard Beloin	Gerard Beloin
 Candidate	Don Bolduc	Don Bolduc
 Candidate	Corky Messner	Corky Messner
 Candidate	Andy Martin	Andy Martin
-
+Candidate	Donald J. Trump	Trump and Pence
+Candidate	Jo Jorgensen	Jorgensen and Cohen lib
+Candidate	Joseph R. Biden	Biden and Harris
