@@ -730,6 +730,30 @@ def data_file_list(
     return df_list, err_str
 
 
+def active_vote_types(session, election, jurisdiction):
+    """Gets a list of the vote types for the given election and jurisdiction"""
+
+    election_id = name_to_id(session,"Election",election)
+    jurisdiction_id = name_to_id(session, "ReportingUnit", jurisdiction)
+    connection = session.bind.raw_connection()
+    cursor = connection.cursor()
+    q = """SELECT distinct cit."Txt"
+        FROM "VoteCount" vc LEFT JOIN "CountItemType" cit
+        ON vc."CountItemType_Id" = cit."Id"
+        LEFT JOIN "ComposingReportingUnitJoin" cruj
+        on cruj."ChildReportingUnit_Id" = vc."ReportingUnit_Id"
+        AND cruj."ChildReportingUnit_Id" = vc."ReportingUnit_Id"
+        where vc."Election_Id" = %s and cruj."ParentReportingUnit_Id" = %s
+        """
+    cursor.execute(q,(election_id, jurisdiction_id))
+
+    aa = cursor.fetchall()
+    active_list = [x for (x,) in aa]
+    cursor.close()
+    connection.close()
+    return active_list
+
+
 def remove_vote_counts(connection, cursor, id: int, active_confirm: bool = True) -> str:
     """Remove all VoteCount data from a particular file, and remove that file from _datafile"""
     try:
