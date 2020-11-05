@@ -7,8 +7,8 @@ import election_data_analysis as e
 #   Replace each '-1' with the correct number calculated from the results file.
 #   Move this testing file to the correct jurisdiction folder in `election_data_analysis/tests`
 
-jurisdiction = 'State-Name'
-abbr = 'AB'
+jurisdiction = 'Michigan'
+abbr = 'MI'
 
 def test_data_exists(dbname):
     assert e.data_exists("2020 General",f"{jurisdiction}",dbname=dbname)
@@ -20,7 +20,7 @@ def test_presidential(dbname):
         f"US President ({abbr})",
         dbname=dbname,
         )
-        == -1
+        == 3842256 #not 100% sure that i was using pivot tables right to get this number. I think this is the total number of votes cast for president 
     )
 
 def test_senate_totals(dbname):
@@ -30,7 +30,7 @@ def test_senate_totals(dbname):
         f"US Senate {abbr}",
         dbname=dbname,
         )
-        == -1
+        == 3799664 #similarly, this should total votes for senators
     )
 
 def test_congressional_totals(dbname):
@@ -40,9 +40,10 @@ def test_congressional_totals(dbname):
         f"US House {abbr} District 1",
         dbname=dbname,
         )
-        == -1
+        == 398809
     )
-
+"""
+#not sure what state senate is called in michigan, or even if they are up for election right now. state house might be things like: District Representative in State Legislature, in which case the second test is right 
 def test_state_senate_totals(dbname):
     assert (e.contest_total(
         "2020 General",
@@ -57,8 +58,9 @@ def test_state_house_totals(dbname):
     assert (e.contest_total(
         "2020 General",
         f"{jurisdiction}",
-        f"{abbr} House District 1",
+        f"{abbr} House District 101",
         dbname=dbname,
         )
-        == -1
+        == 4754 + 7348+7730+8928+5283+9231+5977+11068
     )
+"""
