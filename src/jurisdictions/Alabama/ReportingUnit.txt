@@ -1,5 +1,5 @@
 Name	ReportingUnitType
-Alabama	State
+Alabama	state
 Alabama;Autauga County	county
 Alabama;Baldwin County	county
 Alabama;Barbour County	county

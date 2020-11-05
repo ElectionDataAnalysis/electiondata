@@ -153,7 +153,7 @@ Iowa;US House IA District 1	congressional
 Iowa;US House IA District 2	congressional
 Iowa;US House IA District 3	congressional
 Iowa;US House IA District 4	congressional
-Iowa	State
+Iowa	state
 Iowa;Adair County	county
 Iowa;Adams County	county
 Iowa;Allamakee County	county
