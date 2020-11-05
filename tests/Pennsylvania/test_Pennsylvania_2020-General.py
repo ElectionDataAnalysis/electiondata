@@ -13,14 +13,12 @@ abbr = 'PA'
 count_item_type = 'absentee'
 
 def data_exists(dbname):
-    assert e.data_exists(
-election,f"{jurisdiction}",dbname=dbname)
+    assert e.data_exists(election,jurisdiction,dbname=dbname)
 
 def test_presidential(dbname):
     assert(e.contest_total(
-
-election,
-        f"{jurisdiction}",
+		election,
+        jurisdiction,
         f"US President ({abbr})",
         dbname=dbname,
         )
@@ -29,9 +27,8 @@ election,
 
 def test_statewide_totals(dbname):
     assert (e.contest_total(
-
-election,
-        f"{jurisdiction}",
+		election,
+        jurisdiction,
         f"{abbr} Auditor General",
         dbname=dbname,
         )
@@ -40,9 +37,8 @@ election,
 
 def test_congressional_totals(dbname):
     assert (e.contest_total(
-
-election,
-        f"{jurisdiction}",
+		election,
+        jurisdiction,
         f"US House {abbr} District 16",
         dbname=dbname,
         )
@@ -51,9 +47,8 @@ election,
 
 def test_state_senate_totals(dbname):
     assert (e.contest_total(
-
-election,
-        f"{jurisdiction}",
+		election,
+        jurisdiction,
         f"{abbr} Senate District 35",
         dbname=dbname,
         )
@@ -62,9 +57,8 @@ election,
 
 def test_state_house_totals(dbname):
     assert (e.contest_total(
-
-election,
-        f"{jurisdiction}",
+		election,
+        jurisdiction,
         f"{abbr} House District 116",
         dbname=dbname,
         )
@@ -72,19 +66,19 @@ election,
     )
 
 def test_standard_vote_types(dbname):
-    assert e.check_count_types_standard(
-election, jurisdiction, dbname=dbname)
+    assert e.check_count_types_standard(election, jurisdiction, dbname=dbname)
 
 
 def test_vote_type_counts_consistent(dbname):
-    assert e.check_totals_match_vote_types(election, jurisdiction, dbname=None)
+    assert e.check_totals_match_vote_types(election, jurisdiction, dbname=dbname)
 
 def test_count_type_subtotal(dbname):
     assert (e.count_type_total(
-        election,
+		election,
         jurisdiction,
         f"US President ({abbr})",
         count_item_type,
         dbname=dbname,
-    ) == -1
+        )
+        == 2253712
     )
