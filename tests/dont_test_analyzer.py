@@ -60,7 +60,7 @@ def test_contest_display():
         analyzer.display_options(
             "contest",
             verbose=True,
-            filters=["2018 General", "Georgia", "congressional"],
+            filters=["2018 General", "Georgia", "Congressional"],
         )
         == results.ga_2018_congressional_contests
     )
@@ -70,7 +70,7 @@ def test_contest_display():
 def test_bar_congressional():
     assert (
         analyzer.bar(
-            "2018 General", "Georgia", "congressional", "US House GA District 3"
+            "2018 General", "Georgia", "Congressional", "US House GA District 3"
         )
         == results.ga_2018_bar_congressional
     )
@@ -79,7 +79,7 @@ def test_bar_congressional():
 @pytest.mark.skipif(not ok["nc18g"], reason="No North Carolina 2018 General data")
 def test_bar_all_state():
     assert (
-        analyzer.bar("2018 General", "North Carolina", "state-house", "All state-house")
+        analyzer.bar("2018 General", "North Carolina", "State House", "All State House")
         == results.nc_2018_bar_statehouse
     )
 
@@ -88,7 +88,7 @@ def test_bar_all_state():
 def test_bar_all_congressional():
     assert (
         analyzer.bar(
-            "2018 General", "North Carolina", "congressional", "All congressional"
+            "2018 General", "North Carolina", "Congressional", "All Congressional"
         )
         == results.nc_2018_bar_congressional
     )
@@ -200,10 +200,10 @@ def test_scatter_party():
             "Georgia",
             "2018 General",
             "Party total",
-            "Republican state-house",
+            "Republican State House",
             "2018 General",
             "Party total",
-            "Democratic state-house",
+            "Democratic State House",
         )
         == results.ga_2018_scatter_party
     )
@@ -216,7 +216,7 @@ def test_scatter_party_votetype():
             "Georgia",
             "2018 General",
             "Party absentee-mail",
-            "Republican state-house",
+            "Republican State House",
             "2018 General",
             "Candidate absentee-mail",
             "Stacey Abrams",
@@ -249,7 +249,7 @@ def test_candidate_search_display():
         analyzer.display_options(
             "bishop",
             verbose=True,
-            filters=["Georgia", "county", "2018 General", "congressional"],
+            filters=["Georgia", "county", "2018 General", "Congressional"],
         )
         == results.ga_2018_candidate_search_display
     )
@@ -264,4 +264,16 @@ def test_count_contest_display():
             filters=["Georgia", "county", "2018 General", "Contest total"],
         )
         == results.ga_2018_count_contest
+    )
+
+
+@pytest.mark.skipif(not ok["ga18g"], reason="No Georgia 2018 General data")
+def test_contest_updatelabels_display():
+    assert (
+        analyzer.display_options(
+            "contest",
+            verbose=True,
+            filters=["2018 General", "Georgia", "State Senate"],
+        )
+        == results.ga_2018_congressional_contests_state_senate
     )

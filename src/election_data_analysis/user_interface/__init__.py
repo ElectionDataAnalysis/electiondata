@@ -307,6 +307,13 @@ warning_keys = {
     "warn-system",
 }
 
+contest_type_mappings = {
+    "congressional": "Congressional",
+    "state": "Statewide",
+    "state-house": "State House",
+    "state-senate": "State Senate",
+}
+
 
 def read_results(
     results_file_path, munger_path, aux_data_path, error: Optional[dict]
@@ -1127,3 +1134,23 @@ def reload_juris_election(
     )
 
     return
+
+
+# get mappings for a list to the contest type database labels
+def get_contest_type_mappings(filters: list) -> list:
+    contest_types = contest_type_mappings.items()
+    for index, item in enumerate(filters):
+        for contest_type in contest_types:
+            if item == contest_type[1]:
+                filters[index] = contest_type[0]
+                break
+    return filters
+
+
+# get mappings for a list to the contest type database labels
+def get_contest_type_mapping(item: str) -> str:
+    contest_types = contest_type_mappings.items()
+    for contest_type in contest_types:
+        if contest_type[1] in item:
+            return item.replace(contest_type[1], contest_type[0])
+    return item

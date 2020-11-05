@@ -146,6 +146,10 @@ def create_scatter(
     connection = session.bind.raw_connection()
     cursor = connection.cursor()
 
+    # get the mappings back to the DB labels
+    h_count = ui.get_contest_type_mapping(h_count)
+    v_count = ui.get_contest_type_mapping(v_count)
+
     # Get name of db for error messages
     dfh = get_data_for_scatter(
         session,
@@ -278,6 +282,7 @@ def get_data_for_scatter(
     elif count_type == "contests":
         filter_column = "Contest"
     elif count_type == "parties":
+        filter_str = ui.get_contest_type_mapping(filter_str)
         # create new column to filter on
         unsummed["party_district_type"] = (
             (unsummed["Party"].str.replace("Party", "")).str.strip()
@@ -342,7 +347,9 @@ def create_bar(
     )
 
     if contest_type:
+        contest_type = ui.get_contest_type_mapping(contest_type)
         unsummed = unsummed[unsummed["contest_district_type"] == contest_type]
+
     # through front end, contest_type must be truthy if contest is truthy
     # Only filter when there is an actual contest passed through, as opposed to
     # "All congressional" as an example

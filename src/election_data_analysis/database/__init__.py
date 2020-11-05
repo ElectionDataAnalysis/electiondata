@@ -24,6 +24,7 @@ from election_data_analysis.database import create_cdf_db as db_cdf
 import os
 from sqlalchemy import MetaData, Table, Column, Integer, Float
 from typing import Optional, List
+from election_data_analysis import user_interface as ui
 
 states = """Alabama
 Alaska
@@ -953,6 +954,8 @@ def package_display_results(data):
     """takes a result set and packages into JSON to return"""
     results = []
     for i, row in data.iterrows():
+        if row[1] in ui.contest_type_mappings:
+            row[1] = ui.contest_type_mappings[row[1]]
         temp = {"parent": row[0], "name": row[1], "type": row[2], "order_by": i + 1}
         results.append(temp)
     return results
@@ -991,7 +994,7 @@ def get_filtered_input_options(session, input_str, filters):
             [
                 {
                     "parent": reporting_unit,
-                    "name": f"All {contest_type}",
+                    "name": f"All {ui.contest_type_mappings[contest_type]}",
                     "type": contest_type,
                 }
             ]
