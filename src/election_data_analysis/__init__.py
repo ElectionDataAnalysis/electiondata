@@ -1749,3 +1749,14 @@ def count_type_total(election, jurisdiction, contest, count_item_type, dbname=No
         df = df[df["contest"] == contest]
         df = df[df["count_item_type"] == count_item_type]
         return df["count"].sum()
+
+def check_count_types_standard(election, jurisdiction, dbname=None):
+    an = Analyzer(dbname=dbname)
+    standard_ct_list = db.get_input_options(an.session,'count_item_type',False)
+    active = db.active_vote_types(an.session, election, jurisdiction)
+    for vt in active:
+        # if even one fails, count types are not standard
+        if vt not in standard_ct_list:
+            return False
+    # if nothing failed, count types are standard
+    return True
