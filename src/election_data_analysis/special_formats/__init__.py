@@ -77,8 +77,7 @@ def read_alternate_munger(
     elif file_type in ["xls-multi"]:
         raw_results, err = read_multi_sheet_excel(f_path, munger, err)
     elif file_type in ["xml"]:
-        vc_field = get_vc_field_from_munger(munger)
-        raw_results, err = read_xml(f_path, err, vc_field, munger)
+        raw_results, err = read_xml(f_path, munger, err)
     else:
         err = ui.add_new_error(
             err, "munger", munger.name, f"file type not recognized: {file_type}"
@@ -360,73 +359,70 @@ def read_multi_sheet_excel(
     return raw_results, err
 
 
-def add_info(node: et.Element, info: dict, vc_field: dict) -> (dict, bool):
+def add_info(node: et.Element, info: dict, counts: dict, raws: dict) -> (dict, bool):
+    """Add values of interest to the info dictionary, noting whether anything changed"""
     new_info = info.copy()
-    for k in vc_field[node.tag].keys():
-        if k == "count":
-            # read value as integer
-            new_info[k] = int(node.attrib[vc_field[node.tag][k]])
-        else:
+    # read any count info from the node
+    if node.tag in counts.keys():
+        for f in counts[node.tag]:
             try:
-                # read value as string
-                new_info[k] = node.attrib[vc_field[node.tag][k]]
-            except:
+                new_info[f] = int(node.attrib[f.split(".")[1]])
+            except Exception:
+                new_info[f] = 0
+                print(f"Error reading count from node {node}")
+
+    # read any other raw info from the node
+    if node.tag in raws.keys():
+        for f in raws[node.tag]:
+            try:
+                new_info[f] = node.attrib[f.split(".")[1]]
+            except Exception:
                 # If there is any problem reading (e.g., key not present in xml) put in a blank
-                new_info[k] = ""
+                new_info[f] = ""
+                print(f"Error reading string from node {node}")
     changed = new_info != info
     return new_info, changed
 
 
 def read_xml(
     fpath: str,
-    err: Optional[Dict],
-    vc_field: dict,
     munger: jm.Munger,
+    err: Optional[Dict],
 ) -> (pd.DataFrame, Optional[Dict]):
-    db_elements = {k2 for k, v in vc_field.items() for k2 in v.keys()}
+    """Create dataframe from the xml file, with column names matching the fields in the raw_identifier formulas."""
 
+    # read data from file
     try:
         tree = et.parse(fpath)
     except FileNotFoundError:
         err = ui.add_new_error(err, "file", Path(fpath).name, "File not found")
         return pd.DataFrame(), err
 
+    # identify tags with counts or other raw data (the info we want)
+    # and list data to be pulled from each tag
+    count_tags = [x.split(".")[0] for x in munger.options["count_columns_by_name"]]
+    counts = {t:[x for x in munger.options["count_columns_by_name"] if x.split(".")[0] == t] for t in count_tags}
+    raw_tags = [x.split(".")[0] for x in munger.field_list]
+    raws = {t:[x for x in munger.field_list if x.split(".")[0] == t] for t in raw_tags}
+
     try:
         vc_record_list = []
         info = dict()
         for node in tree.iter():  # depth-first search, what we want!
-
-            if node.tag in vc_field.keys():
-                info, changed = add_info(node, info, vc_field)
+            # if node has info we want
+            if node.tag in count_tags or node.tag in raw_tags:
+                info, changed = add_info(node, info, counts, raws)
                 # if record is both complete and new
-                if changed and set(info.keys()) == db_elements:
+                if changed and \
+                        set(info.keys()) == munger.field_list.union(munger.options["count_columns_by_name"]):
                     # put record in list of records to be returned
                     vc_record_list.append(info.copy())
-                    # delete the count from the info (to avoid entering count twice)
-                    info.pop("count")
+                    # delete the counts from the info (to avoid entering counts twice)
+                    for c in munger.options["count_columns_by_name"]:
+                        info.pop(c)
         raw_results = pd.DataFrame(vc_record_list)
 
     except Exception as e:
         err = ui.add_new_error(err, "munger", munger.name, f"Error munging xml: {e}")
         raw_results = pd.DataFrame()
     return raw_results, err
-
-
-def get_vc_field_from_munger(mu: jm.Munger) -> dict:
-    # TODO error handling
-    vcf = dict()
-    # TODO do relevant checks on munger files so this doesn't error
-    for col in mu.options["count_columns_by_name"]:
-        tag, field = col.split(".")
-        if tag in vcf.keys():
-            vcf[tag]["count"] = field
-        else:
-            vcf[tag] = {"count": field}
-    for i, r in mu.cdf_elements.iterrows():
-        for fld in r["fields"]:
-            tag, field = fld.split(".")
-            if tag in vcf.keys():
-                vcf[tag][i] = field
-            else:
-                vcf[tag] = {i: field}
-    return vcf
