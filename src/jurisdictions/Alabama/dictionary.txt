@@ -1,0 +1,115 @@
+cdf_element	cdf_internal_name	raw_identifier_value
+BallotMeasureContest	PROPOSED STATEWIDE AMENDMENT NUMBER ONE (1)	PROPOSED STATEWIDE AMENDMENT NUMBER ONE (1)
+BallotMeasureContest	PROPOSED STATEWIDE AMENDMENT NUMBER TWO (2)	PROPOSED STATEWIDE AMENDMENT NUMBER TWO (2)
+BallotMeasureContest	PROPOSED STATEWIDE AMENDMENT NUMBER THREE (3)	PROPOSED STATEWIDE AMENDMENT NUMBER THREE (3)
+BallotMeasureContest	PROPOSED STATEWIDE AMENDMENT NUMBER FOUR (4)	PROPOSED STATEWIDE AMENDMENT NUMBER FOUR (4)
+BallotMeasureContest	PROPOSED STATEWIDE AMENDMENT NUMBER FIVE (5)	PROPOSED STATEWIDE AMENDMENT NUMBER FIVE (5)
+BallotMeasureContest	PROPOSED STATEWIDE AMENDMENT NUMBER SIX (6)	PROPOSED STATEWIDE AMENDMENT NUMBER SIX (6)
+BallotMeasureSelection	Yes	Yes
+BallotMeasureSelection	No	No
+CountItemType	total	total
+Candidate	Adia Winfrey	Adia Winfrey
+Candidate	Barry Moore	Barry Moore
+Candidate	Donald J. Trump	Donald J. Trump
+Candidate	Doug Jones	Doug Jones
+Candidate	Gary Palmer	Gary Palmer
+Candidate	James Averhart	James Averhart
+Candidate	Jerry Carl	Jerry Carl
+Candidate	Jo Jorgensen	Jo Jorgensen
+Candidate	Joseph R. Biden	Joseph R. Biden
+Candidate	Mike Rogers	Mike Rogers
+Candidate	Mo Brooks	Mo Brooks
+Candidate	Phyllis Harvey-Hall	Phyllis Harvey-Hall
+Candidate	Rick Neighbors	Rick Neighbors
+Candidate	Robert Aderholt	Robert Aderholt
+Candidate	Terri A. Sewell	Terri A. Sewell
+Candidate	Tommy Tuberville	Tommy Tuberville
+Candidate	Write-In	Write-In
+CandidateContest	US President (AL)	PRESIDENT AND VICE PRESIDENT OF THE UNITED STATES
+CandidateContest	US Senate AL	UNITED STATES SENATOR
+CandidateContest	US House AL District 1	UNITED STATES REPRESENTATIVE, 1ST CONGRESSIONAL DISTRICT
+CandidateContest	US House AL District 2	UNITED STATES REPRESENTATIVE, 2ND CONGRESSIONAL DISTRICT
+CandidateContest	US House AL District 3	UNITED STATES REPRESENTATIVE, 3RD CONGRESSIONAL DISTRICT
+CandidateContest	US House AL District 4	UNITED STATES REPRESENTATIVE, 4TH CONGRESSIONAL DISTRICT
+CandidateContest	US House AL District 5	UNITED STATES REPRESENTATIVE, 5TH CONGRESSIONAL DISTRICT
+CandidateContest	US House AL District 6	UNITED STATES REPRESENTATIVE, 6TH CONGRESSIONAL DISTRICT
+CandidateContest	US House AL District 7	UNITED STATES REPRESENTATIVE, 7TH CONGRESSIONAL DISTRICT
+ReportingUnit	Alabama;US House AL District 1	Alabama;US House AL District 1
+ReportingUnit	Alabama;US House AL District 2	Alabama;US House AL District 2
+ReportingUnit	Alabama;US House AL District 3	Alabama;US House AL District 3
+ReportingUnit	Alabama;US House AL District 4	Alabama;US House AL District 4
+ReportingUnit	Alabama;US House AL District 5	Alabama;US House AL District 5
+ReportingUnit	Alabama;US House AL District 6	Alabama;US House AL District 6
+ReportingUnit	Alabama;US House AL District 7	Alabama;US House AL District 7
+ReportingUnit	Alabama;Autauga County	Autauga
+ReportingUnit	Alabama;Baldwin County	Baldwin
+ReportingUnit	Alabama;Barbour County	Barbour
+ReportingUnit	Alabama;Bibb County	Bibb
+ReportingUnit	Alabama;Blount County	Blount
+ReportingUnit	Alabama;Bullock County	Bullock
+ReportingUnit	Alabama;Butler County	Butler
+ReportingUnit	Alabama;Calhoun County	Calhoun
+ReportingUnit	Alabama;Chambers County	Chambers
+ReportingUnit	Alabama;Cherokee County	Cherokee
+ReportingUnit	Alabama;Chilton County	Chilton
+ReportingUnit	Alabama;Choctaw County	Choctaw
+ReportingUnit	Alabama;Clarke County	Clarke
+ReportingUnit	Alabama;Clay County	Clay
+ReportingUnit	Alabama;Cleburne County	Cleburne
+ReportingUnit	Alabama;Coffee County	Coffee
+ReportingUnit	Alabama;Colbert County	Colbert
+ReportingUnit	Alabama;Conecuh County	Conecuh
+ReportingUnit	Alabama;Coosa County	Coosa
+ReportingUnit	Alabama;Covington County	Covington
+ReportingUnit	Alabama;Crenshaw County	Crenshaw
+ReportingUnit	Alabama;Cullman County	Cullman
+ReportingUnit	Alabama;Dale County	Dale
+ReportingUnit	Alabama;Dallas County	Dallas
+ReportingUnit	Alabama;DeKalb County	DeKalb
+ReportingUnit	Alabama;Elmore County	Elmore
+ReportingUnit	Alabama;Escambia County	Escambia
+ReportingUnit	Alabama;Etowah County	Etowah
+ReportingUnit	Alabama;Fayette County	Fayette
+ReportingUnit	Alabama;Franklin County	Franklin
+ReportingUnit	Alabama;Geneva County	Geneva
+ReportingUnit	Alabama;Greene County	Greene
+ReportingUnit	Alabama;Hale County	Hale
+ReportingUnit	Alabama;Henry County	Henry
+ReportingUnit	Alabama;Houston County	Houston
+ReportingUnit	Alabama;Jackson County	Jackson
+ReportingUnit	Alabama;Jefferson County	Jefferson
+ReportingUnit	Alabama;Lamar County	Lamar
+ReportingUnit	Alabama;Lauderdale County	Lauderdale
+ReportingUnit	Alabama;Lawrence County	Lawrence
+ReportingUnit	Alabama;Lee County	Lee
+ReportingUnit	Alabama;Limestone County	Limestone
+ReportingUnit	Alabama;Lowndes County	Lowndes
+ReportingUnit	Alabama;Macon County	Macon
+ReportingUnit	Alabama;Madison County	Madison
+ReportingUnit	Alabama;Marengo County	Marengo
+ReportingUnit	Alabama;Marion County	Marion
+ReportingUnit	Alabama;Marshall County	Marshall
+ReportingUnit	Alabama;Mobile County	Mobile
+ReportingUnit	Alabama;Monroe County	Monroe
+ReportingUnit	Alabama;Montgomery County	Montgomery
+ReportingUnit	Alabama;Morgan County	Morgan
+ReportingUnit	Alabama;Perry County	Perry
+ReportingUnit	Alabama;Pickens County	Pickens
+ReportingUnit	Alabama;Pike County	Pike
+ReportingUnit	Alabama;Randolph County	Randolph
+ReportingUnit	Alabama;Russell County	Russell
+ReportingUnit	Alabama;Shelby County	Shelby
+ReportingUnit	Alabama;St. Clair County	St. Clair
+ReportingUnit	Alabama;Sumter County	Sumter
+ReportingUnit	Alabama;Talladega County	Talladega
+ReportingUnit	Alabama;Tallapoosa County	Tallapoosa
+ReportingUnit	Alabama;Tuscaloosa County	Tuscaloosa
+ReportingUnit	Alabama;Walker County	Walker
+ReportingUnit	Alabama;Washington County	Washington
+ReportingUnit	Alabama;Wilcox County	Wilcox
+ReportingUnit	Alabama;Winston County	Winston
+Party	Democratic Party	DEM
+Party	Independent Party	IND
+Party	Libertarian Party	LIB
+Party	No Party	NON
+Party	Republican Party	REP

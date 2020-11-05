@@ -1,0 +1,10 @@
+Name	NumberElected	Office	PrimaryParty
+US President (AL)	1	US President (AL)	
+US Senate AL	1	US Senate AL	
+US House AL District 1	1	US House AL District 1	
+US House AL District 2	1	US House AL District 2	
+US House AL District 3	1	US House AL District 3	
+US House AL District 4	1	US House AL District 4	
+US House AL District 5	1	US House AL District 5	
+US House AL District 6	1	US House AL District 6	
+US House AL District 7	1	US House AL District 7	

@@ -1,0 +1,76 @@
+Name	ReportingUnitType
+Alabama	State
+Alabama;Autauga County	county
+Alabama;Baldwin County	county
+Alabama;Barbour County	county
+Alabama;Bibb County	county
+Alabama;Blount County	county
+Alabama;Bullock County	county
+Alabama;Butler County	county
+Alabama;Calhoun County	county
+Alabama;Chambers County	county
+Alabama;Cherokee County	county
+Alabama;Chilton County	county
+Alabama;Choctaw County	county
+Alabama;Clarke County	county
+Alabama;Clay County	county
+Alabama;Cleburne County	county
+Alabama;Coffee County	county
+Alabama;Colbert County	county
+Alabama;Conecuh County	county
+Alabama;Coosa County	county
+Alabama;Covington County	county
+Alabama;Crenshaw County	county
+Alabama;Cullman County	county
+Alabama;Dale County	county
+Alabama;Dallas County	county
+Alabama;DeKalb County	county
+Alabama;Elmore County	county
+Alabama;Escambia County	county
+Alabama;Etowah County	county
+Alabama;Fayette County	county
+Alabama;Franklin County	county
+Alabama;Geneva County	county
+Alabama;Greene County	county
+Alabama;Hale County	county
+Alabama;Henry County	county
+Alabama;Houston County	county
+Alabama;Jackson County	county
+Alabama;Jefferson County	county
+Alabama;Lamar County	county
+Alabama;Lauderdale County	county
+Alabama;Lawrence County	county
+Alabama;Lee County	county
+Alabama;Limestone County	county
+Alabama;Lowndes County	county
+Alabama;Macon County	county
+Alabama;Madison County	county
+Alabama;Marengo County	county
+Alabama;Marion County	county
+Alabama;Marshall County	county
+Alabama;Mobile County	county
+Alabama;Monroe County	county
+Alabama;Montgomery County	county
+Alabama;Morgan County	county
+Alabama;Perry County	county
+Alabama;Pickens County	county
+Alabama;Pike County	county
+Alabama;Randolph County	county
+Alabama;Russell County	county
+Alabama;Shelby County	county
+Alabama;St. Clair County	county
+Alabama;Sumter County	county
+Alabama;Talladega County	county
+Alabama;Tallapoosa County	county
+Alabama;Tuscaloosa County	county
+Alabama;US House AL District 1	congressional
+Alabama;US House AL District 2	congressional
+Alabama;US House AL District 3	congressional
+Alabama;US House AL District 4	congressional
+Alabama;US House AL District 5	congressional
+Alabama;US House AL District 6	congressional
+Alabama;US House AL District 7	congressional
+Alabama;Walker County	county
+Alabama;Washington County	county
+Alabama;Wilcox County	county
+Alabama;Winston County	county
