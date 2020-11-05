@@ -10,7 +10,7 @@ import election_data_analysis as e
 jurisdiction = 'Alabama'
 abbr = 'AL'
 
-def data_exists(dbname):
+def test_data_exists(dbname):
     assert e.data_exists("2020 General",f"{jurisdiction}",dbname=dbname)
 
 def test_presidential(dbname):
