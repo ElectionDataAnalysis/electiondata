@@ -1474,8 +1474,9 @@ class Analyzer:
                 results = db.package_display_results(df)
             else:
                 try:
+                    filters_mapped = ui.get_contest_type_mappings(filters)
                     results = db.get_filtered_input_options(
-                        self.session, input, filters
+                        self.session, input, filters_mapped
                     )
                 except:
                     results = None
