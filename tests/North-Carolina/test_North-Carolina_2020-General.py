@@ -7,22 +7,21 @@ import election_data_analysis as e
 #   Replace each '-1' with the correct number calculated from the results file.
 #   Move this testing file to the correct jurisdiction folder in `election_data_analysis/tests`
 
-# # # constants - CHANGE THESE!! - use internal db names
+## constants - CHANGE THESE!! - use internal db names
 election = "2020 General"
 jurisdiction = 'North Carolina'
 abbr = 'NC'
-total_pres_votes = -1  # total of all votes for President
+total_pres_votes = 5466828  # total of all votes for President
 cd = 3  # congressional district
-total_cd_votes = -1  # total votes in the chosen cd
+total_cd_votes = 358473 # total votes in the chosen cd
 shd = 1   # state house district
-total_shd_votes = -1
-ssd = 15  # state senate district
-total_ssd_votes = -1
+total_shd_votes = 37758
+ssd =  15  # state senate district
+total_ssd_votes = 122221
 single_vote_type = 'early'  # pick any one from your file
-pres_votes_vote_type = -1
+pres_votes_vote_type = 3559206
 single_county = 'North Carolina;Bertie County'  # pick any one from your file
-pres_votes_county = -1  # total votes for pres of that county & vote type
-
+pres_votes_county = 9682  # total votes for pres of that county & vote type
 
 def test_data_exists(dbname):
     assert e.data_exists(election, jurisdiction, dbname=dbname)

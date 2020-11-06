@@ -1,71 +1,71 @@
 cdf_element	cdf_internal_name	raw_identifier_value
-CandidateContest	NV House District 1	State Assembly, District 1
-CandidateContest	NV House District 2	State Assembly, District 2
-CandidateContest	NV House District 3	State Assembly, District 3
-CandidateContest	NV House District 4	State Assembly, District 4
-CandidateContest	NV House District 5	State Assembly, District 5
-CandidateContest	NV House District 6	State Assembly, District 6
-CandidateContest	NV House District 7	State Assembly, District 7
-CandidateContest	NV House District 8	State Assembly, District 8
-CandidateContest	NV House District 9	State Assembly, District 9
-CandidateContest	NV House District 10	State Assembly, District 10
-CandidateContest	NV House District 11	State Assembly, District 11
-CandidateContest	NV House District 12	State Assembly, District 12
-CandidateContest	NV House District 13	State Assembly, District 13
-CandidateContest	NV House District 14	State Assembly, District 14
-CandidateContest	NV House District 15	State Assembly, District 15
-CandidateContest	NV House District 16	State Assembly, District 16
-CandidateContest	NV House District 17	State Assembly, District 17
-CandidateContest	NV House District 18	State Assembly, District 18
-CandidateContest	NV House District 19	State Assembly, District 19
-CandidateContest	NV House District 20	State Assembly, District 20
-CandidateContest	NV House District 21	State Assembly, District 21
-CandidateContest	NV House District 22	State Assembly, District 22
-CandidateContest	NV House District 23	State Assembly, District 23
-CandidateContest	NV House District 24	State Assembly, District 24
-CandidateContest	NV House District 25	State Assembly, District 25
-CandidateContest	NV House District 26	State Assembly, District 26
-CandidateContest	NV House District 27	State Assembly, District 27
-CandidateContest	NV House District 28	State Assembly, District 28
-CandidateContest	NV House District 29	State Assembly, District 29
-CandidateContest	NV House District 30	State Assembly, District 30
-CandidateContest	NV House District 31	State Assembly, District 31
-CandidateContest	NV House District 32	State Assembly, District 32
-CandidateContest	NV House District 33	State Assembly, District 33
-CandidateContest	NV House District 34	State Assembly, District 34
-CandidateContest	NV House District 35	State Assembly, District 35
-CandidateContest	NV House District 36	State Assembly, District 36
-CandidateContest	NV House District 37	State Assembly, District 37
-CandidateContest	NV House District 38	State Assembly, District 38
-CandidateContest	NV House District 39	State Assembly, District 39
-CandidateContest	NV House District 40	State Assembly, District 40
-CandidateContest	NV House District 41	State Assembly, District 41
-CandidateContest	NV House District 42	State Assembly, District 42
-CandidateContest	NV Senate District 1	State Senate, District 1
-CandidateContest	NV Senate District 2	State Senate, District 2
-CandidateContest	NV Senate District 3	State Senate, District 3
-CandidateContest	NV Senate District 4	State Senate, District 4
-CandidateContest	NV Senate District 5	State Senate, District 5
-CandidateContest	NV Senate District 6	State Senate, District 6
-CandidateContest	NV Senate District 7	State Senate, District 7
-CandidateContest	NV Senate District 8	State Senate, District 8
-CandidateContest	NV Senate District 9	State Senate, District 9
-CandidateContest	NV Senate District 10	State Senate, District 10
-CandidateContest	NV Senate District 11	State Senate, District 11
-CandidateContest	NV Senate District 12	State Senate, District 12
-CandidateContest	NV Senate District 13	State Senate, District 13
-CandidateContest	NV Senate District 14	State Senate, District 14
-CandidateContest	NV Senate District 15	State Senate, District 15
-CandidateContest	NV Senate District 16	State Senate, District 16
-CandidateContest	NV Senate District 17	State Senate, District 17
-CandidateContest	NV Senate District 18	State Senate, District 18
-CandidateContest	NV Senate District 19	State Senate, District 19
-CandidateContest	NV Senate District 20	State Senate, District 20
-CandidateContest	NV Senate District 21	State Senate, District 21
-CandidateContest	US House NV District 1	U.S. Representative in Congress, Dist. 1
-CandidateContest	US House NV District 2	U.S. Representative in Congress, Dist. 2
-CandidateContest	US House NV District 3	U.S. Representative in Congress, Dist. 3
-CandidateContest	US House NV District 4	U.S. Representative in Congress, Dist. 4
+CandidateContest	NV House District 1	"State Assembly, District 1"
+CandidateContest	NV House District 2	"State Assembly, District 2"
+CandidateContest	NV House District 3	"State Assembly, District 3"
+CandidateContest	NV House District 4	"State Assembly, District 4"
+CandidateContest	NV House District 5	"State Assembly, District 5"
+CandidateContest	NV House District 6	"State Assembly, District 6"
+CandidateContest	NV House District 7	"State Assembly, District 7"
+CandidateContest	NV House District 8	"State Assembly, District 8"
+CandidateContest	NV House District 9	"State Assembly, District 9"
+CandidateContest	NV House District 10	"State Assembly, District 10"
+CandidateContest	NV House District 11	"State Assembly, District 11"
+CandidateContest	NV House District 12	"State Assembly, District 12"
+CandidateContest	NV House District 13	"State Assembly, District 13"
+CandidateContest	NV House District 14	"State Assembly, District 14"
+CandidateContest	NV House District 15	"State Assembly, District 15"
+CandidateContest	NV House District 16	"State Assembly, District 16"
+CandidateContest	NV House District 17	"State Assembly, District 17"
+CandidateContest	NV House District 18	"State Assembly, District 18"
+CandidateContest	NV House District 19	"State Assembly, District 19"
+CandidateContest	NV House District 20	"State Assembly, District 20"
+CandidateContest	NV House District 21	"State Assembly, District 21"
+CandidateContest	NV House District 22	"State Assembly, District 22"
+CandidateContest	NV House District 23	"State Assembly, District 23"
+CandidateContest	NV House District 24	"State Assembly, District 24"
+CandidateContest	NV House District 25	"State Assembly, District 25"
+CandidateContest	NV House District 26	"State Assembly, District 26"
+CandidateContest	NV House District 27	"State Assembly, District 27"
+CandidateContest	NV House District 28	"State Assembly, District 28"
+CandidateContest	NV House District 29	"State Assembly, District 29"
+CandidateContest	NV House District 30	"State Assembly, District 30"
+CandidateContest	NV House District 31	"State Assembly, District 31"
+CandidateContest	NV House District 32	"State Assembly, District 32"
+CandidateContest	NV House District 33	"State Assembly, District 33"
+CandidateContest	NV House District 34	"State Assembly, District 34"
+CandidateContest	NV House District 35	"State Assembly, District 35"
+CandidateContest	NV House District 36	"State Assembly, District 36"
+CandidateContest	NV House District 37	"State Assembly, District 37"
+CandidateContest	NV House District 38	"State Assembly, District 38"
+CandidateContest	NV House District 39	"State Assembly, District 39"
+CandidateContest	NV House District 40	"State Assembly, District 40"
+CandidateContest	NV House District 41	"State Assembly, District 41"
+CandidateContest	NV House District 42	"State Assembly, District 42"
+CandidateContest	NV Senate District 1	"State Senate, District 1"
+CandidateContest	NV Senate District 2	"State Senate, District 2"
+CandidateContest	NV Senate District 3	"State Senate, District 3"
+CandidateContest	NV Senate District 4	"State Senate, District 4"
+CandidateContest	NV Senate District 5	"State Senate, District 5"
+CandidateContest	NV Senate District 6	"State Senate, District 6"
+CandidateContest	NV Senate District 7	"State Senate, District 7"
+CandidateContest	NV Senate District 8	"State Senate, District 8"
+CandidateContest	NV Senate District 9	"State Senate, District 9"
+CandidateContest	NV Senate District 10	"State Senate, District 10"
+CandidateContest	NV Senate District 11	"State Senate, District 11"
+CandidateContest	NV Senate District 12	"State Senate, District 12"
+CandidateContest	NV Senate District 13	"State Senate, District 13"
+CandidateContest	NV Senate District 14	"State Senate, District 14"
+CandidateContest	NV Senate District 15	"State Senate, District 15"
+CandidateContest	NV Senate District 16	"State Senate, District 16"
+CandidateContest	NV Senate District 17	"State Senate, District 17"
+CandidateContest	NV Senate District 18	"State Senate, District 18"
+CandidateContest	NV Senate District 19	"State Senate, District 19"
+CandidateContest	NV Senate District 20	"State Senate, District 20"
+CandidateContest	NV Senate District 21	"State Senate, District 21"
+CandidateContest	US House NV District 1	"U.S. Representative in Congress, Dist. 1"
+CandidateContest	US House NV District 2	"U.S. Representative in Congress, Dist. 2"
+CandidateContest	US House NV District 3	"U.S. Representative in Congress, Dist. 3"
+CandidateContest	US House NV District 4	"U.S. Representative in Congress, Dist. 4"
 CandidateContest	NV Governor	Governor
 CandidateContest	US Senate NV	United States Senator
 CandidateContest	NV Attorney General	Attorney General
@@ -73,6 +73,302 @@ CandidateContest	NV Lieutenant Governor	Lieutenant Governor
 CandidateContest	NV State Treasurer	State Treasurer
 CandidateContest	NV Secretary of State	Secretary of State
 CandidateContest	NV State Controller	State Controller
+CandidateContest	NV House District 1 (Democratic Party)	"State Assembly, District 1 (Democratic)"
+CandidateContest	NV House District 2 (Democratic Party)	"State Assembly, District 2 (Democratic)"
+CandidateContest	NV House District 3 (Democratic Party)	"State Assembly, District 3 (Democratic)"
+CandidateContest	NV House District 4 (Democratic Party)	"State Assembly, District 4 (Democratic)"
+CandidateContest	NV House District 5 (Democratic Party)	"State Assembly, District 5 (Democratic)"
+CandidateContest	NV House District 6 (Democratic Party)	"State Assembly, District 6 (Democratic)"
+CandidateContest	NV House District 7 (Democratic Party)	"State Assembly, District 7 (Democratic)"
+CandidateContest	NV House District 8 (Democratic Party)	"State Assembly, District 8 (Democratic)"
+CandidateContest	NV House District 9 (Democratic Party)	"State Assembly, District 9 (Democratic)"
+CandidateContest	NV House District 10 (Democratic Party)	"State Assembly, District 10 (Democratic)"
+CandidateContest	NV House District 11 (Democratic Party)	"State Assembly, District 11 (Democratic)"
+CandidateContest	NV House District 12 (Democratic Party)	"State Assembly, District 12 (Democratic)"
+CandidateContest	NV House District 13 (Democratic Party)	"State Assembly, District 13 (Democratic)"
+CandidateContest	NV House District 14 (Democratic Party)	"State Assembly, District 14 (Democratic)"
+CandidateContest	NV House District 15 (Democratic Party)	"State Assembly, District 15 (Democratic)"
+CandidateContest	NV House District 16 (Democratic Party)	"State Assembly, District 16 (Democratic)"
+CandidateContest	NV House District 17 (Democratic Party)	"State Assembly, District 17 (Democratic)"
+CandidateContest	NV House District 18 (Democratic Party)	"State Assembly, District 18 (Democratic)"
+CandidateContest	NV House District 19 (Democratic Party)	"State Assembly, District 19 (Democratic)"
+CandidateContest	NV House District 20 (Democratic Party)	"State Assembly, District 20 (Democratic)"
+CandidateContest	NV House District 21 (Democratic Party)	"State Assembly, District 21 (Democratic)"
+CandidateContest	NV House District 22 (Democratic Party)	"State Assembly, District 22 (Democratic)"
+CandidateContest	NV House District 23 (Democratic Party)	"State Assembly, District 23 (Democratic)"
+CandidateContest	NV House District 24 (Democratic Party)	"State Assembly, District 24 (Democratic)"
+CandidateContest	NV House District 25 (Democratic Party)	"State Assembly, District 25 (Democratic)"
+CandidateContest	NV House District 26 (Democratic Party)	"State Assembly, District 26 (Democratic)"
+CandidateContest	NV House District 27 (Democratic Party)	"State Assembly, District 27 (Democratic)"
+CandidateContest	NV House District 28 (Democratic Party)	"State Assembly, District 28 (Democratic)"
+CandidateContest	NV House District 29 (Democratic Party)	"State Assembly, District 29 (Democratic)"
+CandidateContest	NV House District 30 (Democratic Party)	"State Assembly, District 30 (Democratic)"
+CandidateContest	NV House District 31 (Democratic Party)	"State Assembly, District 31 (Democratic)"
+CandidateContest	NV House District 32 (Democratic Party)	"State Assembly, District 32 (Democratic)"
+CandidateContest	NV House District 33 (Democratic Party)	"State Assembly, District 33 (Democratic)"
+CandidateContest	NV House District 34 (Democratic Party)	"State Assembly, District 34 (Democratic)"
+CandidateContest	NV House District 35 (Democratic Party)	"State Assembly, District 35 (Democratic)"
+CandidateContest	NV House District 36 (Democratic Party)	"State Assembly, District 36 (Democratic)"
+CandidateContest	NV House District 37 (Democratic Party)	"State Assembly, District 37 (Democratic)"
+CandidateContest	NV House District 38 (Democratic Party)	"State Assembly, District 38 (Democratic)"
+CandidateContest	NV House District 39 (Democratic Party)	"State Assembly, District 39 (Democratic)"
+CandidateContest	NV House District 40 (Democratic Party)	"State Assembly, District 40 (Democratic)"
+CandidateContest	NV House District 41 (Democratic Party)	"State Assembly, District 41 (Democratic)"
+CandidateContest	NV House District 42 (Democratic Party)	"State Assembly, District 42 (Democratic)"
+CandidateContest	NV Senate District 1 (Democratic Party)	"State Senate, District 1 (Democratic)"
+CandidateContest	NV Senate District 2 (Democratic Party)	"State Senate, District 2 (Democratic)"
+CandidateContest	NV Senate District 3 (Democratic Party)	"State Senate, District 3 (Democratic)"
+CandidateContest	NV Senate District 4 (Democratic Party)	"State Senate, District 4 (Democratic)"
+CandidateContest	NV Senate District 5 (Democratic Party)	"State Senate, District 5 (Democratic)"
+CandidateContest	NV Senate District 6 (Democratic Party)	"State Senate, District 6 (Democratic)"
+CandidateContest	NV Senate District 7 (Democratic Party)	"State Senate, District 7 (Democratic)"
+CandidateContest	NV Senate District 8 (Democratic Party)	"State Senate, District 8 (Democratic)"
+CandidateContest	NV Senate District 9 (Democratic Party)	"State Senate, District 9 (Democratic)"
+CandidateContest	NV Senate District 10 (Democratic Party)	"State Senate, District 10 (Democratic)"
+CandidateContest	NV Senate District 11 (Democratic Party)	"State Senate, District 11 (Democratic)"
+CandidateContest	NV Senate District 12 (Democratic Party)	"State Senate, District 12 (Democratic)"
+CandidateContest	NV Senate District 13 (Democratic Party)	"State Senate, District 13 (Democratic)"
+CandidateContest	NV Senate District 14 (Democratic Party)	"State Senate, District 14 (Democratic)"
+CandidateContest	NV Senate District 15 (Democratic Party)	"State Senate, District 15 (Democratic)"
+CandidateContest	NV Senate District 16 (Democratic Party)	"State Senate, District 16 (Democratic)"
+CandidateContest	NV Senate District 17 (Democratic Party)	"State Senate, District 17 (Democratic)"
+CandidateContest	NV Senate District 18 (Democratic Party)	"State Senate, District 18 (Democratic)"
+CandidateContest	NV Senate District 19 (Democratic Party)	"State Senate, District 19 (Democratic)"
+CandidateContest	NV Senate District 20 (Democratic Party)	"State Senate, District 20 (Democratic)"
+CandidateContest	NV Senate District 21 (Democratic Party)	"State Senate, District 21 (Democratic)"
+CandidateContest	US House NV District 1 (Democratic Party)	"U.S. Representative in Congress, District 1 (Democratic)"
+CandidateContest	US House NV District 2 (Democratic Party)	"U.S. Representative in Congress, District 2 (Democratic)"
+CandidateContest	US House NV District 3 (Democratic Party)	"U.S. Representative in Congress, District 3 (Democratic)"
+CandidateContest	US House NV District 4 (Democratic Party)	"U.S. Representative in Congress, District 4 (Democratic)"
+CandidateContest	NV Governor (Democratic Party)	Governor (Democratic)
+CandidateContest	US Senate NV (Democratic Party)	United States Senator (Democratic)
+CandidateContest	NV Attorney General (Democratic Party)	Attorney General (Democratic)
+CandidateContest	NV Lieutenant Governor (Democratic Party)	Lieutenant Governor (Democratic)
+CandidateContest	NV State Treasurer (Democratic Party)	State Treasurer (Democratic)
+CandidateContest	NV Secretary of State (Democratic Party)	Secretary of State (Democratic)
+CandidateContest	NV State Controller (Democratic Party)	State Controller (Democratic)
+CandidateContest	NV House District 1 (Republican Party)	"State Assembly, District 1 (Republican)"
+CandidateContest	NV House District 2 (Republican Party)	"State Assembly, District 2 (Republican)"
+CandidateContest	NV House District 3 (Republican Party)	"State Assembly, District 3 (Republican)"
+CandidateContest	NV House District 4 (Republican Party)	"State Assembly, District 4 (Republican)"
+CandidateContest	NV House District 5 (Republican Party)	"State Assembly, District 5 (Republican)"
+CandidateContest	NV House District 6 (Republican Party)	"State Assembly, District 6 (Republican)"
+CandidateContest	NV House District 7 (Republican Party)	"State Assembly, District 7 (Republican)"
+CandidateContest	NV House District 8 (Republican Party)	"State Assembly, District 8 (Republican)"
+CandidateContest	NV House District 9 (Republican Party)	"State Assembly, District 9 (Republican)"
+CandidateContest	NV House District 10 (Republican Party)	"State Assembly, District 10 (Republican)"
+CandidateContest	NV House District 11 (Republican Party)	"State Assembly, District 11 (Republican)"
+CandidateContest	NV House District 12 (Republican Party)	"State Assembly, District 12 (Republican)"
+CandidateContest	NV House District 13 (Republican Party)	"State Assembly, District 13 (Republican)"
+CandidateContest	NV House District 14 (Republican Party)	"State Assembly, District 14 (Republican)"
+CandidateContest	NV House District 15 (Republican Party)	"State Assembly, District 15 (Republican)"
+CandidateContest	NV House District 16 (Republican Party)	"State Assembly, District 16 (Republican)"
+CandidateContest	NV House District 17 (Republican Party)	"State Assembly, District 17 (Republican)"
+CandidateContest	NV House District 18 (Republican Party)	"State Assembly, District 18 (Republican)"
+CandidateContest	NV House District 19 (Republican Party)	"State Assembly, District 19 (Republican)"
+CandidateContest	NV House District 20 (Republican Party)	"State Assembly, District 20 (Republican)"
+CandidateContest	NV House District 21 (Republican Party)	"State Assembly, District 21 (Republican)"
+CandidateContest	NV House District 22 (Republican Party)	"State Assembly, District 22 (Republican)"
+CandidateContest	NV House District 23 (Republican Party)	"State Assembly, District 23 (Republican)"
+CandidateContest	NV House District 24 (Republican Party)	"State Assembly, District 24 (Republican)"
+CandidateContest	NV House District 25 (Republican Party)	"State Assembly, District 25 (Republican)"
+CandidateContest	NV House District 26 (Republican Party)	"State Assembly, District 26 (Republican)"
+CandidateContest	NV House District 27 (Republican Party)	"State Assembly, District 27 (Republican)"
+CandidateContest	NV House District 28 (Republican Party)	"State Assembly, District 28 (Republican)"
+CandidateContest	NV House District 29 (Republican Party)	"State Assembly, District 29 (Republican)"
+CandidateContest	NV House District 30 (Republican Party)	"State Assembly, District 30 (Republican)"
+CandidateContest	NV House District 31 (Republican Party)	"State Assembly, District 31 (Republican)"
+CandidateContest	NV House District 32 (Republican Party)	"State Assembly, District 32 (Republican)"
+CandidateContest	NV House District 33 (Republican Party)	"State Assembly, District 33 (Republican)"
+CandidateContest	NV House District 34 (Republican Party)	"State Assembly, District 34 (Republican)"
+CandidateContest	NV House District 35 (Republican Party)	"State Assembly, District 35 (Republican)"
+CandidateContest	NV House District 36 (Republican Party)	"State Assembly, District 36 (Republican)"
+CandidateContest	NV House District 37 (Republican Party)	"State Assembly, District 37 (Republican)"
+CandidateContest	NV House District 38 (Republican Party)	"State Assembly, District 38 (Republican)"
+CandidateContest	NV House District 39 (Republican Party)	"State Assembly, District 39 (Republican)"
+CandidateContest	NV House District 40 (Republican Party)	"State Assembly, District 40 (Republican)"
+CandidateContest	NV House District 41 (Republican Party)	"State Assembly, District 41 (Republican)"
+CandidateContest	NV House District 42 (Republican Party)	"State Assembly, District 42 (Republican)"
+CandidateContest	NV Senate District 1 (Republican Party)	"State Senate, District 1 (Republican)"
+CandidateContest	NV Senate District 2 (Republican Party)	"State Senate, District 2 (Republican)"
+CandidateContest	NV Senate District 3 (Republican Party)	"State Senate, District 3 (Republican)"
+CandidateContest	NV Senate District 4 (Republican Party)	"State Senate, District 4 (Republican)"
+CandidateContest	NV Senate District 5 (Republican Party)	"State Senate, District 5 (Republican)"
+CandidateContest	NV Senate District 6 (Republican Party)	"State Senate, District 6 (Republican)"
+CandidateContest	NV Senate District 7 (Republican Party)	"State Senate, District 7 (Republican)"
+CandidateContest	NV Senate District 8 (Republican Party)	"State Senate, District 8 (Republican)"
+CandidateContest	NV Senate District 9 (Republican Party)	"State Senate, District 9 (Republican)"
+CandidateContest	NV Senate District 10 (Republican Party)	"State Senate, District 10 (Republican)"
+CandidateContest	NV Senate District 11 (Republican Party)	"State Senate, District 11 (Republican)"
+CandidateContest	NV Senate District 12 (Republican Party)	"State Senate, District 12 (Republican)"
+CandidateContest	NV Senate District 13 (Republican Party)	"State Senate, District 13 (Republican)"
+CandidateContest	NV Senate District 14 (Republican Party)	"State Senate, District 14 (Republican)"
+CandidateContest	NV Senate District 15 (Republican Party)	"State Senate, District 15 (Republican)"
+CandidateContest	NV Senate District 16 (Republican Party)	"State Senate, District 16 (Republican)"
+CandidateContest	NV Senate District 17 (Republican Party)	"State Senate, District 17 (Republican)"
+CandidateContest	NV Senate District 18 (Republican Party)	"State Senate, District 18 (Republican)"
+CandidateContest	NV Senate District 19 (Republican Party)	"State Senate, District 19 (Republican)"
+CandidateContest	NV Senate District 20 (Republican Party)	"State Senate, District 20 (Republican)"
+CandidateContest	NV Senate District 21 (Republican Party)	"State Senate, District 21 (Republican)"
+CandidateContest	US House NV District 1 (Republican Party)	"U.S. Representative in Congress, District 1 (Republican)"
+CandidateContest	US House NV District 2 (Republican Party)	"U.S. Representative in Congress, District 2 (Republican)"
+CandidateContest	US House NV District 3 (Republican Party)	"U.S. Representative in Congress, District 3 (Republican)"
+CandidateContest	US House NV District 4 (Republican Party)	"U.S. Representative in Congress, District 4 (Republican)"
+CandidateContest	NV Governor (Republican Party)	Governor (Republican)
+CandidateContest	US Senate NV (Republican Party)	United States Senator (Republican)
+CandidateContest	NV Attorney General (Republican Party)	Attorney General (Republican)
+CandidateContest	NV Lieutenant Governor (Republican Party)	Lieutenant Governor (Republican)
+CandidateContest	NV State Treasurer (Republican Party)	State Treasurer (Republican)
+CandidateContest	NV Secretary of State (Republican Party)	Secretary of State (Republican)
+CandidateContest	NV State Controller (Republican Party)	State Controller (Republican)
+CandidateContest	NV House District 1 (Green Party)	"State Assembly, District 1 (Green)"
+CandidateContest	NV House District 2 (Green Party)	"State Assembly, District 2 (Green)"
+CandidateContest	NV House District 3 (Green Party)	"State Assembly, District 3 (Green)"
+CandidateContest	NV House District 4 (Green Party)	"State Assembly, District 4 (Green)"
+CandidateContest	NV House District 5 (Green Party)	"State Assembly, District 5 (Green)"
+CandidateContest	NV House District 6 (Green Party)	"State Assembly, District 6 (Green)"
+CandidateContest	NV House District 7 (Green Party)	"State Assembly, District 7 (Green)"
+CandidateContest	NV House District 8 (Green Party)	"State Assembly, District 8 (Green)"
+CandidateContest	NV House District 9 (Green Party)	"State Assembly, District 9 (Green)"
+CandidateContest	NV House District 10 (Green Party)	"State Assembly, District 10 (Green)"
+CandidateContest	NV House District 11 (Green Party)	"State Assembly, District 11 (Green)"
+CandidateContest	NV House District 12 (Green Party)	"State Assembly, District 12 (Green)"
+CandidateContest	NV House District 13 (Green Party)	"State Assembly, District 13 (Green)"
+CandidateContest	NV House District 14 (Green Party)	"State Assembly, District 14 (Green)"
+CandidateContest	NV House District 15 (Green Party)	"State Assembly, District 15 (Green)"
+CandidateContest	NV House District 16 (Green Party)	"State Assembly, District 16 (Green)"
+CandidateContest	NV House District 17 (Green Party)	"State Assembly, District 17 (Green)"
+CandidateContest	NV House District 18 (Green Party)	"State Assembly, District 18 (Green)"
+CandidateContest	NV House District 19 (Green Party)	"State Assembly, District 19 (Green)"
+CandidateContest	NV House District 20 (Green Party)	"State Assembly, District 20 (Green)"
+CandidateContest	NV House District 21 (Green Party)	"State Assembly, District 21 (Green)"
+CandidateContest	NV House District 22 (Green Party)	"State Assembly, District 22 (Green)"
+CandidateContest	NV House District 23 (Green Party)	"State Assembly, District 23 (Green)"
+CandidateContest	NV House District 24 (Green Party)	"State Assembly, District 24 (Green)"
+CandidateContest	NV House District 25 (Green Party)	"State Assembly, District 25 (Green)"
+CandidateContest	NV House District 26 (Green Party)	"State Assembly, District 26 (Green)"
+CandidateContest	NV House District 27 (Green Party)	"State Assembly, District 27 (Green)"
+CandidateContest	NV House District 28 (Green Party)	"State Assembly, District 28 (Green)"
+CandidateContest	NV House District 29 (Green Party)	"State Assembly, District 29 (Green)"
+CandidateContest	NV House District 30 (Green Party)	"State Assembly, District 30 (Green)"
+CandidateContest	NV House District 31 (Green Party)	"State Assembly, District 31 (Green)"
+CandidateContest	NV House District 32 (Green Party)	"State Assembly, District 32 (Green)"
+CandidateContest	NV House District 33 (Green Party)	"State Assembly, District 33 (Green)"
+CandidateContest	NV House District 34 (Green Party)	"State Assembly, District 34 (Green)"
+CandidateContest	NV House District 35 (Green Party)	"State Assembly, District 35 (Green)"
+CandidateContest	NV House District 36 (Green Party)	"State Assembly, District 36 (Green)"
+CandidateContest	NV House District 37 (Green Party)	"State Assembly, District 37 (Green)"
+CandidateContest	NV House District 38 (Green Party)	"State Assembly, District 38 (Green)"
+CandidateContest	NV House District 39 (Green Party)	"State Assembly, District 39 (Green)"
+CandidateContest	NV House District 40 (Green Party)	"State Assembly, District 40 (Green)"
+CandidateContest	NV House District 41 (Green Party)	"State Assembly, District 41 (Green)"
+CandidateContest	NV House District 42 (Green Party)	"State Assembly, District 42 (Green)"
+CandidateContest	NV Senate District 1 (Green Party)	"State Senate, District 1 (Green)"
+CandidateContest	NV Senate District 2 (Green Party)	"State Senate, District 2 (Green)"
+CandidateContest	NV Senate District 3 (Green Party)	"State Senate, District 3 (Green)"
+CandidateContest	NV Senate District 4 (Green Party)	"State Senate, District 4 (Green)"
+CandidateContest	NV Senate District 5 (Green Party)	"State Senate, District 5 (Green)"
+CandidateContest	NV Senate District 6 (Green Party)	"State Senate, District 6 (Green)"
+CandidateContest	NV Senate District 7 (Green Party)	"State Senate, District 7 (Green)"
+CandidateContest	NV Senate District 8 (Green Party)	"State Senate, District 8 (Green)"
+CandidateContest	NV Senate District 9 (Green Party)	"State Senate, District 9 (Green)"
+CandidateContest	NV Senate District 10 (Green Party)	"State Senate, District 10 (Green)"
+CandidateContest	NV Senate District 11 (Green Party)	"State Senate, District 11 (Green)"
+CandidateContest	NV Senate District 12 (Green Party)	"State Senate, District 12 (Green)"
+CandidateContest	NV Senate District 13 (Green Party)	"State Senate, District 13 (Green)"
+CandidateContest	NV Senate District 14 (Green Party)	"State Senate, District 14 (Green)"
+CandidateContest	NV Senate District 15 (Green Party)	"State Senate, District 15 (Green)"
+CandidateContest	NV Senate District 16 (Green Party)	"State Senate, District 16 (Green)"
+CandidateContest	NV Senate District 17 (Green Party)	"State Senate, District 17 (Green)"
+CandidateContest	NV Senate District 18 (Green Party)	"State Senate, District 18 (Green)"
+CandidateContest	NV Senate District 19 (Green Party)	"State Senate, District 19 (Green)"
+CandidateContest	NV Senate District 20 (Green Party)	"State Senate, District 20 (Green)"
+CandidateContest	NV Senate District 21 (Green Party)	"State Senate, District 21 (Green)"
+CandidateContest	US House NV District 1 (Green Party)	"U.S. Representative in Congress, Dist. 1 (Green)"
+CandidateContest	US House NV District 2 (Green Party)	"U.S. Representative in Congress, Dist. 2 (Green)"
+CandidateContest	US House NV District 3 (Green Party)	"U.S. Representative in Congress, Dist. 3 (Green)"
+CandidateContest	US House NV District 4 (Green Party)	"U.S. Representative in Congress, Dist. 4 (Green)"
+CandidateContest	NV Governor (Green Party)	Governor (Green)
+CandidateContest	US Senate NV (Green Party)	United States Senator (Green)
+CandidateContest	NV Attorney General (Green Party)	Attorney General (Green)
+CandidateContest	NV Lieutenant Governor (Green Party)	Lieutenant Governor (Green)
+CandidateContest	NV State Treasurer (Green Party)	State Treasurer (Green)
+CandidateContest	NV Secretary of State (Green Party)	Secretary of State (Green)
+CandidateContest	NV State Controller (Green Party)	State Controller (Green)
+CandidateContest	NV House District 1 (Libertarian Party)	"State Assembly, District 1 (Libertarian)"
+CandidateContest	NV House District 2 (Libertarian Party)	"State Assembly, District 2 (Libertarian)"
+CandidateContest	NV House District 3 (Libertarian Party)	"State Assembly, District 3 (Libertarian)"
+CandidateContest	NV House District 4 (Libertarian Party)	"State Assembly, District 4 (Libertarian)"
+CandidateContest	NV House District 5 (Libertarian Party)	"State Assembly, District 5 (Libertarian)"
+CandidateContest	NV House District 6 (Libertarian Party)	"State Assembly, District 6 (Libertarian)"
+CandidateContest	NV House District 7 (Libertarian Party)	"State Assembly, District 7 (Libertarian)"
+CandidateContest	NV House District 8 (Libertarian Party)	"State Assembly, District 8 (Libertarian)"
+CandidateContest	NV House District 9 (Libertarian Party)	"State Assembly, District 9 (Libertarian)"
+CandidateContest	NV House District 10 (Libertarian Party)	"State Assembly, District 10 (Libertarian)"
+CandidateContest	NV House District 11 (Libertarian Party)	"State Assembly, District 11 (Libertarian)"
+CandidateContest	NV House District 12 (Libertarian Party)	"State Assembly, District 12 (Libertarian)"
+CandidateContest	NV House District 13 (Libertarian Party)	"State Assembly, District 13 (Libertarian)"
+CandidateContest	NV House District 14 (Libertarian Party)	"State Assembly, District 14 (Libertarian)"
+CandidateContest	NV House District 15 (Libertarian Party)	"State Assembly, District 15 (Libertarian)"
+CandidateContest	NV House District 16 (Libertarian Party)	"State Assembly, District 16 (Libertarian)"
+CandidateContest	NV House District 17 (Libertarian Party)	"State Assembly, District 17 (Libertarian)"
+CandidateContest	NV House District 18 (Libertarian Party)	"State Assembly, District 18 (Libertarian)"
+CandidateContest	NV House District 19 (Libertarian Party)	"State Assembly, District 19 (Libertarian)"
+CandidateContest	NV House District 20 (Libertarian Party)	"State Assembly, District 20 (Libertarian)"
+CandidateContest	NV House District 21 (Libertarian Party)	"State Assembly, District 21 (Libertarian)"
+CandidateContest	NV House District 22 (Libertarian Party)	"State Assembly, District 22 (Libertarian)"
+CandidateContest	NV House District 23 (Libertarian Party)	"State Assembly, District 23 (Libertarian)"
+CandidateContest	NV House District 24 (Libertarian Party)	"State Assembly, District 24 (Libertarian)"
+CandidateContest	NV House District 25 (Libertarian Party)	"State Assembly, District 25 (Libertarian)"
+CandidateContest	NV House District 26 (Libertarian Party)	"State Assembly, District 26 (Libertarian)"
+CandidateContest	NV House District 27 (Libertarian Party)	"State Assembly, District 27 (Libertarian)"
+CandidateContest	NV House District 28 (Libertarian Party)	"State Assembly, District 28 (Libertarian)"
+CandidateContest	NV House District 29 (Libertarian Party)	"State Assembly, District 29 (Libertarian)"
+CandidateContest	NV House District 30 (Libertarian Party)	"State Assembly, District 30 (Libertarian)"
+CandidateContest	NV House District 31 (Libertarian Party)	"State Assembly, District 31 (Libertarian)"
+CandidateContest	NV House District 32 (Libertarian Party)	"State Assembly, District 32 (Libertarian)"
+CandidateContest	NV House District 33 (Libertarian Party)	"State Assembly, District 33 (Libertarian)"
+CandidateContest	NV House District 34 (Libertarian Party)	"State Assembly, District 34 (Libertarian)"
+CandidateContest	NV House District 35 (Libertarian Party)	"State Assembly, District 35 (Libertarian)"
+CandidateContest	NV House District 36 (Libertarian Party)	"State Assembly, District 36 (Libertarian)"
+CandidateContest	NV House District 37 (Libertarian Party)	"State Assembly, District 37 (Libertarian)"
+CandidateContest	NV House District 38 (Libertarian Party)	"State Assembly, District 38 (Libertarian)"
+CandidateContest	NV House District 39 (Libertarian Party)	"State Assembly, District 39 (Libertarian)"
+CandidateContest	NV House District 40 (Libertarian Party)	"State Assembly, District 40 (Libertarian)"
+CandidateContest	NV House District 41 (Libertarian Party)	"State Assembly, District 41 (Libertarian)"
+CandidateContest	NV House District 42 (Libertarian Party)	"State Assembly, District 42 (Libertarian)"
+CandidateContest	NV Senate District 1 (Libertarian Party)	"State Senate, District 1 (Libertarian)"
+CandidateContest	NV Senate District 2 (Libertarian Party)	"State Senate, District 2 (Libertarian)"
+CandidateContest	NV Senate District 3 (Libertarian Party)	"State Senate, District 3 (Libertarian)"
+CandidateContest	NV Senate District 4 (Libertarian Party)	"State Senate, District 4 (Libertarian)"
+CandidateContest	NV Senate District 5 (Libertarian Party)	"State Senate, District 5 (Libertarian)"
+CandidateContest	NV Senate District 6 (Libertarian Party)	"State Senate, District 6 (Libertarian)"
+CandidateContest	NV Senate District 7 (Libertarian Party)	"State Senate, District 7 (Libertarian)"
+CandidateContest	NV Senate District 8 (Libertarian Party)	"State Senate, District 8 (Libertarian)"
+CandidateContest	NV Senate District 9 (Libertarian Party)	"State Senate, District 9 (Libertarian)"
+CandidateContest	NV Senate District 10 (Libertarian Party)	"State Senate, District 10 (Libertarian)"
+CandidateContest	NV Senate District 11 (Libertarian Party)	"State Senate, District 11 (Libertarian)"
+CandidateContest	NV Senate District 12 (Libertarian Party)	"State Senate, District 12 (Libertarian)"
+CandidateContest	NV Senate District 13 (Libertarian Party)	"State Senate, District 13 (Libertarian)"
+CandidateContest	NV Senate District 14 (Libertarian Party)	"State Senate, District 14 (Libertarian)"
+CandidateContest	NV Senate District 15 (Libertarian Party)	"State Senate, District 15 (Libertarian)"
+CandidateContest	NV Senate District 16 (Libertarian Party)	"State Senate, District 16 (Libertarian)"
+CandidateContest	NV Senate District 17 (Libertarian Party)	"State Senate, District 17 (Libertarian)"
+CandidateContest	NV Senate District 18 (Libertarian Party)	"State Senate, District 18 (Libertarian)"
+CandidateContest	NV Senate District 19 (Libertarian Party)	"State Senate, District 19 (Libertarian)"
+CandidateContest	NV Senate District 20 (Libertarian Party)	"State Senate, District 20 (Libertarian)"
+CandidateContest	NV Senate District 21 (Libertarian Party)	"State Senate, District 21 (Libertarian)"
+CandidateContest	US House NV District 1 (Libertarian Party)	"U.S. Representative in Congress, Dist. 1 (Libertarian)"
+CandidateContest	US House NV District 2 (Libertarian Party)	"U.S. Representative in Congress, Dist. 2 (Libertarian)"
+CandidateContest	US House NV District 3 (Libertarian Party)	"U.S. Representative in Congress, Dist. 3 (Libertarian)"
+CandidateContest	US House NV District 4 (Libertarian Party)	"U.S. Representative in Congress, Dist. 4 (Libertarian)"
+CandidateContest	NV Governor (Libertarian Party)	Governor (Libertarian)
+CandidateContest	US Senate NV (Libertarian Party)	United States Senator (Libertarian)
+CandidateContest	NV Attorney General (Libertarian Party)	Attorney General (Libertarian)
+CandidateContest	NV Lieutenant Governor (Libertarian Party)	Lieutenant Governor (Libertarian)
+CandidateContest	NV State Treasurer (Libertarian Party)	State Treasurer (Libertarian)
+CandidateContest	NV Secretary of State (Libertarian Party)	Secretary of State (Libertarian)
+CandidateContest	NV State Controller (Libertarian Party)	State Controller (Libertarian)
 Election	2020 General	2020 General
 Election	2020 Primary	2020 Primary
 Election	2020 Presidential Preference Primary	2020 Presidential Preference Primary
@@ -80,73 +376,73 @@ Election	2018 General	2018 General
 Election	2018 Primary	2018 Primary
 Election	2016 General	2016 General
 Election	2016 Primary	2016 Primary
-Office	NV House District 1	State Assembly, District 1
-Office	NV House District 2	State Assembly, District 2
-Office	NV House District 3	State Assembly, District 3
-Office	NV House District 4	State Assembly, District 4
-Office	NV House District 5	State Assembly, District 5
-Office	NV House District 6	State Assembly, District 6
-Office	NV House District 7	State Assembly, District 7
-Office	NV House District 8	State Assembly, District 8
-Office	NV House District 9	State Assembly, District 9
-Office	NV House District 10	State Assembly, District 10
-Office	NV House District 11	State Assembly, District 11
-Office	NV House District 12	State Assembly, District 12
-Office	NV House District 13	State Assembly, District 13
-Office	NV House District 14	State Assembly, District 14
-Office	NV House District 15	State Assembly, District 15
-Office	NV House District 16	State Assembly, District 16
-Office	NV House District 17	State Assembly, District 17
-Office	NV House District 18	State Assembly, District 18
-Office	NV House District 19	State Assembly, District 19
-Office	NV House District 20	State Assembly, District 20
-Office	NV House District 21	State Assembly, District 21
-Office	NV House District 22	State Assembly, District 22
-Office	NV House District 23	State Assembly, District 23
-Office	NV House District 24	State Assembly, District 24
-Office	NV House District 25	State Assembly, District 25
-Office	NV House District 26	State Assembly, District 26
-Office	NV House District 27	State Assembly, District 27
-Office	NV House District 28	State Assembly, District 28
-Office	NV House District 29	State Assembly, District 29
-Office	NV House District 30	State Assembly, District 30
-Office	NV House District 31	State Assembly, District 31
-Office	NV House District 32	State Assembly, District 32
-Office	NV House District 33	State Assembly, District 33
-Office	NV House District 34	State Assembly, District 34
-Office	NV House District 35	State Assembly, District 35
-Office	NV House District 36	State Assembly, District 36
-Office	NV House District 37	State Assembly, District 37
-Office	NV House District 38	State Assembly, District 38
-Office	NV House District 39	State Assembly, District 39
-Office	NV House District 40	State Assembly, District 40
-Office	NV House District 41	State Assembly, District 41
-Office	NV House District 42	State Assembly, District 42
-Office	NV Senate District 1	State Senate, District 1
-Office	NV Senate District 2	State Senate, District 2
-Office	NV Senate District 3	State Senate, District 3
-Office	NV Senate District 4	State Senate, District 4
-Office	NV Senate District 5	State Senate, District 5
-Office	NV Senate District 6	State Senate, District 6
-Office	NV Senate District 7	State Senate, District 7
-Office	NV Senate District 8	State Senate, District 8
-Office	NV Senate District 9	State Senate, District 9
-Office	NV Senate District 10	State Senate, District 10
-Office	NV Senate District 11	State Senate, District 11
-Office	NV Senate District 12	State Senate, District 12
-Office	NV Senate District 13	State Senate, District 13
-Office	NV Senate District 14	State Senate, District 14
-Office	NV Senate District 15	State Senate, District 15
-Office	NV Senate District 16	State Senate, District 16
-Office	NV Senate District 17	State Senate, District 17
-Office	NV Senate District 18	State Senate, District 18
-Office	NV Senate District 19	State Senate, District 19
-Office	NV Senate District 20	State Senate, District 20
-Office	NV Senate District 21	State Senate, District 21
-Office	US House NV District 1	U.S. Representative in Congress, Dist. 1
-Office	US House NV District 2	U.S. Representative in Congress, Dist. 2
-Office	US House NV District 3	U.S. Representative in Congress, Dist. 3
-Office	US House NV District 4	U.S. Representative in Congress, Dist. 4
+Office	NV House District 1	"State Assembly, District 1"
+Office	NV House District 2	"State Assembly, District 2"
+Office	NV House District 3	"State Assembly, District 3"
+Office	NV House District 4	"State Assembly, District 4"
+Office	NV House District 5	"State Assembly, District 5"
+Office	NV House District 6	"State Assembly, District 6"
+Office	NV House District 7	"State Assembly, District 7"
+Office	NV House District 8	"State Assembly, District 8"
+Office	NV House District 9	"State Assembly, District 9"
+Office	NV House District 10	"State Assembly, District 10"
+Office	NV House District 11	"State Assembly, District 11"
+Office	NV House District 12	"State Assembly, District 12"
+Office	NV House District 13	"State Assembly, District 13"
+Office	NV House District 14	"State Assembly, District 14"
+Office	NV House District 15	"State Assembly, District 15"
+Office	NV House District 16	"State Assembly, District 16"
+Office	NV House District 17	"State Assembly, District 17"
+Office	NV House District 18	"State Assembly, District 18"
+Office	NV House District 19	"State Assembly, District 19"
+Office	NV House District 20	"State Assembly, District 20"
+Office	NV House District 21	"State Assembly, District 21"
+Office	NV House District 22	"State Assembly, District 22"
+Office	NV House District 23	"State Assembly, District 23"
+Office	NV House District 24	"State Assembly, District 24"
+Office	NV House District 25	"State Assembly, District 25"
+Office	NV House District 26	"State Assembly, District 26"
+Office	NV House District 27	"State Assembly, District 27"
+Office	NV House District 28	"State Assembly, District 28"
+Office	NV House District 29	"State Assembly, District 29"
+Office	NV House District 30	"State Assembly, District 30"
+Office	NV House District 31	"State Assembly, District 31"
+Office	NV House District 32	"State Assembly, District 32"
+Office	NV House District 33	"State Assembly, District 33"
+Office	NV House District 34	"State Assembly, District 34"
+Office	NV House District 35	"State Assembly, District 35"
+Office	NV House District 36	"State Assembly, District 36"
+Office	NV House District 37	"State Assembly, District 37"
+Office	NV House District 38	"State Assembly, District 38"
+Office	NV House District 39	"State Assembly, District 39"
+Office	NV House District 40	"State Assembly, District 40"
+Office	NV House District 41	"State Assembly, District 41"
+Office	NV House District 42	"State Assembly, District 42"
+Office	NV Senate District 1	"State Senate, District 1"
+Office	NV Senate District 2	"State Senate, District 2"
+Office	NV Senate District 3	"State Senate, District 3"
+Office	NV Senate District 4	"State Senate, District 4"
+Office	NV Senate District 5	"State Senate, District 5"
+Office	NV Senate District 6	"State Senate, District 6"
+Office	NV Senate District 7	"State Senate, District 7"
+Office	NV Senate District 8	"State Senate, District 8"
+Office	NV Senate District 9	"State Senate, District 9"
+Office	NV Senate District 10	"State Senate, District 10"
+Office	NV Senate District 11	"State Senate, District 11"
+Office	NV Senate District 12	"State Senate, District 12"
+Office	NV Senate District 13	"State Senate, District 13"
+Office	NV Senate District 14	"State Senate, District 14"
+Office	NV Senate District 15	"State Senate, District 15"
+Office	NV Senate District 16	"State Senate, District 16"
+Office	NV Senate District 17	"State Senate, District 17"
+Office	NV Senate District 18	"State Senate, District 18"
+Office	NV Senate District 19	"State Senate, District 19"
+Office	NV Senate District 20	"State Senate, District 20"
+Office	NV Senate District 21	"State Senate, District 21"
+Office	US House NV District 1	"U.S. Representative in Congress, Dist. 1"
+Office	US House NV District 2	"U.S. Representative in Congress, Dist. 2"
+Office	US House NV District 3	"U.S. Representative in Congress, Dist. 3"
+Office	US House NV District 4	"U.S. Representative in Congress, Dist. 4"
 Office	NV Governor	Governor
 Office	US Senate NV	United States Senator
 Office	NV Attorney General	Attorney General
@@ -1658,6 +1954,46 @@ ReportingUnit	Nevada;Lyon;40_Fernley 14- in city	Lyon;40_Fernley 14- in city
 ReportingUnit	Nevada;Lyon;40_Fernley 14- out of city	Lyon;40_Fernley 14- out of city
 ReportingUnit	Nevada;Lyon;Precinct 99	Lyon;Precinct 99
 ReportingUnit	Nevada;Lyon;Precinct 99-0	Lyon;Precinct 99-0
+ReportingUnit	Nevada;Lyon;01_East Mason Valley 1	Lyon;East Mason Valley 1
+ReportingUnit	Nevada;Lyon;02_East Mason Valley 2	Lyon;East Mason Valley 2
+ReportingUnit	Nevada;Lyon;03_West Mason Valley 1	Lyon;West Mason Valley 1
+ReportingUnit	Nevada;Lyon;04_West Mason Valley 2	Lyon;West Mason Valley 2
+ReportingUnit	Nevada;Lyon;05_West Mason Valley 3	Lyon;West Mason Valley 3
+ReportingUnit	Nevada;Lyon;06_Spragg-Plummer	Lyon;Spragg-Plummer
+ReportingUnit	Nevada;Lyon;07_Smith Valley 1	Lyon;Smith Valley 1
+ReportingUnit	Nevada;Lyon;08_Smith Valley 2	Lyon;Smith Valley 2
+ReportingUnit	Nevada;Lyon;09_South Dayton 1	Lyon;South Dayton 1
+ReportingUnit	Nevada;Lyon;10_South Dayton 2	Lyon;South Dayton 2
+ReportingUnit	Nevada;Lyon;11_South Dayton 3	Lyon;South Dayton 3
+ReportingUnit	Nevada;Lyon;12_South Dayton 4	Lyon;South Dayton 4
+ReportingUnit	Nevada;Lyon;13_North Dayton 1	Lyon;North Dayton 1
+ReportingUnit	Nevada;Lyon;14_North Dayton 2	Lyon;North Dayton 2
+ReportingUnit	Nevada;Lyon;15_North Dayton 3	Lyon;North Dayton 3
+ReportingUnit	Nevada;Lyon;16_North Dayton 4	Lyon;North Dayton 4
+ReportingUnit	Nevada;Lyon;17_North Dayton 5	Lyon;North Dayton 5
+ReportingUnit	Nevada;Lyon;18_Mound House 1	Lyon;Mound House 1
+ReportingUnit	Nevada;Lyon;19_Mound House 2	Lyon;Mound House 2
+ReportingUnit	Nevada;Lyon;20_Silver City	Lyon;Silver City
+ReportingUnit	Nevada;Lyon;21_Stagecoach 1	Lyon;Stagecoach 1
+ReportingUnit	Nevada;Lyon;22_Stagecoach 2	Lyon;Stagecoach 2
+ReportingUnit	Nevada;Lyon;23_Silver Springs 1	Lyon;Silver Springs 1
+ReportingUnit	Nevada;Lyon;24_Silver Springs 2	Lyon;Silver Springs 2
+ReportingUnit	Nevada;Lyon;25_Silver Springs 3	Lyon;Silver Springs 3
+ReportingUnit	Nevada;Lyon;26_Silver Springs 4	Lyon;Silver Springs 4
+ReportingUnit	Nevada;Lyon;27_Fernley 1	Lyon;Fernley 1
+ReportingUnit	Nevada;Lyon;28_Fernley 2	Lyon;Fernley 2
+ReportingUnit	Nevada;Lyon;29_Fernley 3	Lyon;Fernley 3
+ReportingUnit	Nevada;Lyon;30_Fernley 4	Lyon;Fernley 4
+ReportingUnit	Nevada;Lyon;31_Fernley 5	Lyon;Fernley 5
+ReportingUnit	Nevada;Lyon;32_Fernley 6	Lyon;Fernley 6
+ReportingUnit	Nevada;Lyon;33_Fernley 7	Lyon;Fernley 7
+ReportingUnit	Nevada;Lyon;34_Fernley 8	Lyon;Fernley 8
+ReportingUnit	Nevada;Lyon;35_Fernley 9	Lyon;Fernley 9
+ReportingUnit	Nevada;Lyon;36_Fernley 10	Lyon;Fernley 10
+ReportingUnit	Nevada;Lyon;37_Fernley 11	Lyon;Fernley 11
+ReportingUnit	Nevada;Lyon;38_Fernley 12	Lyon;Fernley 12
+ReportingUnit	Nevada;Lyon;39_Fernley 13	Lyon;Fernley 13
+ReportingUnit	Nevada;Lyon;40_Fernley 14	Lyon;Fernley 14
 ReportingUnit	Nevada;Lyon;Precinct 99-1	Lyon;Precinct 99-1
 ReportingUnit	Nevada;Mineral;PRECINCT 1	Mineral;PRECINCT 1
 ReportingUnit	Nevada;Mineral;PRECINCT 10	Mineral;PRECINCT 10
@@ -2297,556 +2633,1955 @@ ReportingUnit	Nevada;White Pine;Precinct 7	White Pine;Precinct 7
 ReportingUnit	Nevada;White Pine;Precinct 8	White Pine;Precinct 8
 ReportingUnit	Nevada;White Pine;Precinct 9	White Pine;Precinct 9
 ReportingUnit	Nevada;White Pine;Precinct 99	White Pine;Precinct 99
-Candidate	WES DUNCAN	DUNCAN, WES
-Candidate	AARON FORD	FORD, AARON
-Candidate	Joel F. Hansen	Hansen, Joel F.
-Candidate	Stacey Giomi	Giomi, Stacey
-Candidate	JOHN WOOD	WOOD, JOHN
-Candidate	RUSSELL BEST	BEST, RUSSELL
-Candidate	RYAN BUNDY	BUNDY, RYAN
-Candidate	ADAM PAUL LAXALT	LAXALT, ADAM PAUL
-Candidate	JARED LORD	LORD, JARED
-Candidate	STEVE SISOLAK	SISOLAK, STEVE
-Candidate	KRISTIN LUIS	LUIS, KRISTIN
-Candidate	RYAN RUSSELL	RUSSELL, RYAN
-Candidate	JANINE HANSEN	HANSEN, JANINE
-Candidate	KATE MARSHALL	MARSHALL, KATE
-Candidate	MICHAEL ROBERSON	ROBERSON, MICHAEL
-Candidate	ED UEHLING	UEHLING, ED
-Candidate	NELSON ARAUJO	ARAUJO, NELSON
-Candidate	Barbara K. Cegavske	Cegavske, Barbara K.
-Candidate	KENNY FURLONG	FURLONG, KENNY
-Candidate	LORNE R. HOULE	HOULE, LORNE R.
-Candidate	AL KRAMER	KRAMER, AL
-Candidate	Autumn Zemke	Zemke, Autumn
-Candidate	CATHERINE BYRNE	BYRNE, CATHERINE
-Candidate	Ron Knecht	Knecht, Ron
-Candidate	Tina Davis-Hersey	Davis-Hersey, Tina
-Candidate	Ben Kieckhefer	Kieckhefer, Ben
-Candidate	John Wagner	Wagner, John
-Candidate	BOB BEERS	BEERS, BOB
-Candidate	ZACH CONINE	CONINE, ZACH
-Candidate	BILL HOGE	HOGE, BILL
-Candidate	ELISSA CADISH	CADISH, ELISSA
-Candidate	JERRY TAO	TAO, JERRY
-Candidate	ABBI SILVER	SILVER, ABBI
-Candidate	MATHEW HARTER	HARTER, MATHEW
-Candidate	LIDIA STIGLICH	STIGLICH, LIDIA
-Candidate	Mark E. Amodei	Amodei, Mark E.
-Candidate	CLINT KOBLE	KOBLE, CLINT
-Candidate	KAMAU A. BAKARI	BAKARI, KAMAU A.
-Candidate	TIM HAGAN	HAGAN, TIM
-Candidate	Dean Heller	Heller, Dean
-Candidate	BARRY MICHAELS	MICHAELS, BARRY
-Candidate	JACKY ROSEN	ROSEN, JACKY
-Candidate	FREDERICK D. BUCKMASTER	BUCKMASTER, FREDERICK D.
-Candidate	AMBER N. GETTO	GETTO, AMBER N.
-Candidate	Clay HENDRIX	HENDRIX, Clay
-Candidate	MATT HYDE	HYDE, MATT
-Candidate	PATTY JULIAN	JULIAN, PATTY
-Candidate	TEDD MCDONALD	MCDONALD, TEDD
-Candidate	CARMEN SCHANK	SCHANK, CARMEN
-Candidate	DEBY SMOTHERMAN	SMOTHERMAN, DEBY
-Candidate	DENISE L. MONDHINK-FELTON	MONDHINK-FELTON, DENISE L.
-Candidate	LINDA ROTHERY	ROTHERY, LINDA
-Candidate	PETE OLSEN	OLSEN, PETE
-Candidate	TASHA HESSEY	HESSEY, TASHA
-Candidate	ART MALLORY	MALLORY, ART
-Candidate	MIKE RICHARDS	RICHARDS, MIKE
-Candidate	BENJAMIN D. TROTTER	TROTTER, BENJAMIN D.
-Candidate	THOMAS HUTCHINGS	HUTCHINGS, THOMAS
-Candidate	CHRISTY LATTIN	LATTIN, CHRISTY
-Candidate	GARY L. SMITH	SMITH, GARY L.
-Candidate	MICHAEL SPENCER	SPENCER, MICHAEL
-Candidate	LARRY TUCKER	TUCKER, LARRY
-Candidate	ROBERT M. GETTO JR.	GETTO JR., ROBERT M.
-Candidate	RAY EAST	EAST, RAY
-Candidate	RICHARD C. HICKOX	HICKOX, RICHARD C.
-Candidate	ROBIN L. TITUS	TITUS, ROBIN L.
-Candidate	CURTIS W. CANNON	CANNON, CURTIS W.
-Candidate	JAMES ARNOLD SETTELMEYER	SETTELMEYER, JAMES ARNOLD
-Candidate	Briana Johnson	Johnson, Briana
-Candidate	Gina McClain	McClain, Gina
-Candidate	Lynn Maria Goya	Goya, Lynn Maria
-Candidate	Minddie Lloyd	Lloyd, Minddie
-Candidate	Debbie Conway	Conway, Debbie
-Candidate	Jill MacFarlane	MacFarlane, Jill
-Candidate	Phil Collins	Collins, Phil
-Candidate	Laura Fitzpatrick	Fitzpatrick, Laura
-Candidate	STEVE WOLFSON	WOLFSON, STEVE
-Candidate	Tierra Jones	Jones, Tierra
-Candidate	Mark B. Bailus	Bailus, Mark B.
-Candidate	Mary Kay Holthus	Holthus, Mary Kay
-Candidate	DAVID M. JONES	JONES, DAVID M.
-Candidate	Elana Lee Graham	Graham, Elana Lee
-Candidate	James Dean Leavitt	Leavitt, James Dean
-Candidate	Victoria Kay DaCosta	DaCosta, Victoria Kay
-Candidate	Thomas L. Fougere	Fougere, Thomas L.
-Candidate	Robert Telles	Telles, Robert
-Candidate	Jason Frierson	Frierson, Jason
-Candidate	Tina M. Peetris	Peetris, Tina M.
-Candidate	Danielle Ford	Ford, Danielle
-Candidate	Kali Fox Miller	Miller, Kali Fox
-Candidate	Joyce Bentley	Bentley, Joyce
-Candidate	Dan Garfield	Garfield, Dan
-Candidate	Robert Strawder	Strawder, Robert
-Candidate	Dina TITUS	TITUS, Dina
-Candidate	Cherlyn Arrington	Arrington, Cherlyn
-Candidate	Ozzie FUMO	FUMO, Ozzie
-Candidate	Steve Brown	Brown, Steve
-Candidate	Gil Eisner	Eisner, Gil
-Candidate	David Goossen	Goossen, David
-Candidate	Tony Gumina	Gumina, Tony
-Candidate	Susie Lee	Lee, Susie
-Candidate	Danny Tarkanian	Tarkanian, Danny
-Candidate	Harry L. Vickers	Vickers, Harry L.
-Candidate	Jack 'Fat Jack' Cochran	Cochran, Jack 'Fat Jack'
-Candidate	Glen Leavitt	Leavitt, Glen
-Candidate	Ralph Preta	Preta, Ralph
-Candidate	JOE HARDY	HARDY, JOE
-Candidate	Craig Jordahl	Jordahl, Craig
-Candidate	Jordan Ross	Ross, Jordan
-Candidate	Irene Cepeda	Cepeda, Irene
-Candidate	KEVIN L. CHILD	CHILD, KEVIN L.
-Candidate	Michelle Gorelow	Gorelow, Michelle
-Candidate	Daniel Hofstein	Hofstein, Daniel
-Candidate	David Schoen	Schoen, David
-Candidate	Tiffany Jones	Jones, Tiffany
-Candidate	Melanie Scheible	Scheible, Melanie
-Candidate	Sandra Jauregui	Jauregui, Sandra
-Candidate	Paris Wade	Wade, Paris
-Candidate	Richard 'Rick' Bronstein	Bronstein, Richard 'Rick'
-Candidate	Julie Pazina	Pazina, Julie
-Candidate	Keith Pickard	Pickard, Keith
-Candidate	Lesley Elizabeth Cohen	Cohen, Lesley Elizabeth
-Candidate	Bruce James-Newman	James-Newman, Bruce
-Candidate	Stephen H. Silberkraus	Silberkraus, Stephen H.
-Candidate	Gary P. Rogers	Rogers, Gary P.
-Candidate	Amber Carter	Carter, Amber
-Candidate	Larry Shupe	Shupe, Larry
-Candidate	Joe Pitts	Pitts, Joe
-Candidate	Kenny Taylor	Taylor, Kenny
-Candidate	Melissa Hardy	Hardy, Melissa
-Candidate	Kristee Watson	Watson, Kristee
-Candidate	Amy Carvalho	Carvalho, Amy
-Candidate	Andrew Coates	Coates, Andrew
-Candidate	Linda Cannon	Cannon, Linda
-Candidate	Steve Yeager	Yeager, Steve
-Candidate	Alexander Assefa	Assefa, Alexander
-Candidate	Heidi Swank	Swank, Heidi
-Candidate	Yvanna Cancela	Cancela, Yvanna
-Candidate	STEVE HAMPE	HAMPE, STEVE
-Candidate	Robert D. Martin	Martin, Robert D.
-Candidate	Victor Lee Miller	Miller, Victor Lee
-Candidate	Dennis Hof	Hof, Dennis
-Candidate	Lesia Romanov	Romanov, Lesia
-Candidate	ROBERT L. ELIASON	ELIASON, ROBERT L.
-Candidate	Jimmy Vega	Vega, Jimmy
-Candidate	Daniele Monroe-Moreno	Monroe-Moreno, Daniele
-Candidate	Cresent Hardy	Hardy, Cresent
-Candidate	Steven A. Horsford	Horsford, Steven A.
-Candidate	Gregg Luckner	Luckner, Gregg
-Candidate	Warren Ross Markowitz	Markowitz, Warren Ross
-Candidate	Dean McGonigle	McGonigle, Dean
-Candidate	Rodney Smith	Smith, Rodney
-Candidate	Jo Cato	Cato, Jo
-Candidate	Laura E. Perkins	Perkins, Laura E.
-Candidate	Dina Neal	Neal, Dina
-Candidate	Leon S. Frei	Frei, Leon S.
-Candidate	Chris Edwards	Edwards, Chris
-Candidate	Richard Fletcher	Fletcher, Richard
-Candidate	Mary Elizabeth Boyer Martinez	Martinez, Mary Elizabeth Boyer
-Candidate	Susan Martinez	Martinez, Susan
-Candidate	Ron McGinnis	McGinnis, Ron
-Candidate	James Ohrenschall	Ohrenschall, James
-Candidate	Bob Lystrup	Lystrup, Bob
-Candidate	Richard McArthur	McArthur, Richard
-Candidate	Connie Munk	Munk, Connie
-Candidate	Leonard Foster	Foster, Leonard
-Candidate	Tom Roberts	Roberts, Tom
-Candidate	Patricia 'Pat' Little	Little, Patricia 'Pat'
-Candidate	Ronald Newsome	Newsome, Ronald
-Candidate	Tyrone THOMPSON	THOMPSON, Tyrone
-Candidate	Maggie CARLTON	CARLTON, Maggie
-Candidate	Sandra Ramaker	Ramaker, Sandra
-Candidate	Geno Withelder	Withelder, Geno
-Candidate	David P. Ballweg	Ballweg, David P.
-Candidate	George H. Gault	Gault, George H.
-Candidate	Ann 'Annie' Black	Black, Ann 'Annie'
-Candidate	Karen Fielding	Fielding, Karen
-Candidate	Duane L. Thurston	Thurston, Duane L.
-Candidate	John Burrows	Burrows, John
-Candidate	BEN K. DAVIS	DAVIS, BEN K.
-Candidate	Jere A. Walker	Walker, Jere A.
-Candidate	Josh Jensen	Jensen, Josh
-Candidate	LINDA CAVAZOS	CAVAZOS, LINDA
-Candidate	Ryan Scalia	Scalia, Ryan
-Candidate	Shea Backus	Backus, Shea
-Candidate	Jim Marchant	Marchant, Jim
-Candidate	Erik L. Laub	Laub, Erik L.
-Candidate	DARRYLL B. DODENBIER	DODENBIER, DARRYLL B.
-Candidate	Brian Douglas Haviland	Haviland, Brian Douglas
-Candidate	Edgar Flores	Flores, Edgar
-Candidate	Calvin 'Cal' Border	Border, Calvin 'Cal'
-Candidate	MO DENIS	DENIS, MO
-Candidate	Shannon Bilbray-Axelrod	Bilbray-Axelrod, Shannon
-Candidate	Janice E. Wesen	Wesen, Janice E.
-Candidate	John Hambrick	Hambrick, John
-Candidate	Jennie Sherwood	Sherwood, Jennie
-Candidate	Marilyn Dondero Loop	Loop, Marilyn Dondero
-Candidate	Valerie Weber	Weber, Valerie
-Candidate	Stephen G. Sedlmeyer	Sedlmeyer, Stephen G.
-Candidate	Selena Torres	Torres, Selena
-Candidate	Chris Brooks	Brooks, Chris
-Candidate	Jonathan Friedrich	Friedrich, Jonathan
-Candidate	Noel Searles	Searles, Noel
-Candidate	Jason Burke	Burke, Jason
-Candidate	Brittney Miller	Miller, Brittney
-Candidate	II McCurdy	McCurdy, II, William O'Neil
-Candidate	Olivia Diaz	Diaz, Olivia
-Candidate	Gianna Miceli	Miceli, Gianna
-Candidate	Stan Vaughan	Vaughan, Stan
-Candidate	III Watts	Watts, III, Howard
-Candidate	Trish Marsh	Marsh, Trish
-Candidate	Tick Segerblom	Segerblom, 'Tick'
-Candidate	Michael L. McDonald	McDonald, Michael L.
-Candidate	Ellen Spiegel	Spiegel, Ellen
-Candidate	Richard Carrillo	Carrillo, Richard
-Candidate	Matt Sadler	Sadler, Matt
-Candidate	Tisha Black	Black, Tisha
-Candidate	Justin Jones	Jones, Justin
-Candidate	Jim GIBSON	GIBSON, Jim
-Candidate	Cindy Lake	Lake, Cindy
-Candidate	Doug Marsh	Marsh, Doug
-Candidate	Paul E. Gilbert	Gilbert, Paul E.
-Candidate	Trent Tholen	Tholen, Trent
-Candidate	Kathy Lewis	Lewis, Kathy
-Candidate	John Engels	Engels, John
-Candidate	Kristi Lynn Kandel	Kandel, Kristi Lynn
-Candidate	Wesley A. Rice	Rice, Wesley A.
-Candidate	KAREN ELLISON	ELLISON, KAREN
-Candidate	Mark B. Jackson	Jackson, Mark B.
-Candidate	Cassandra G. Jones	Jones, Cassandra G.
-Candidate	Erik Levin	Levin, Erik
-Candidate	Steve Walsh	Walsh, Steve
-Candidate	Patricia Ackerman	Ackerman, Patricia
-Candidate	Paul Cwalina	Cwalina, Paul
-Candidate	Jim Wheeler	Wheeler, Jim
-Candidate	Brad Newlon	Newlon, Brad
-Candidate	John Sheridan	Sheridan, John
-Candidate	Robert Spellberg	Spellberg, Robert
-Candidate	Leann M. Teter	Teter, Leann M.
-Candidate	Mike King	King, Mike
-Candidate	Mary Schilling	Schilling, Mary
-Candidate	Ted Thran	Thran, Ted
-Candidate	Ray Wilson	Wilson, Ray
-Candidate	Aaron Hampton	Hampton, Aaron
-Candidate	Michael Henningsen	Henningsen, Michael
-Candidate	Kenneth Miller	Miller, Kenneth
-Candidate	Linda L. Slater	Slater, Linda L.
-Candidate	Brian Trute	Trute, Brian
-Candidate	Kathryn Clark-Ross	Clark-Ross, Kathryn
-Candidate	Bill Eisele	Eisele, Bill
-Candidate	Robert M. Garcia	Garcia, Robert M.
-Candidate	Gennady II Stolyarov	Stolyarov, Gennady II
-Candidate	Matt Bernard	Bernard, Matt
-Candidate	Bill Driscoll	Driscoll, Bill
-Candidate	Richard Sr. Koontz	Koontz, Richard Sr.
-Candidate	William R. 'Bill' Souligny	Souligny, William R. 'Bill'
-Candidate	Roxanne Stangle	Stangle, Roxanne
-Candidate	Charles 'Chuck' Fagen	Fagen, Charles 'Chuck'
-Candidate	Keith E. Fertala	Fertala, Keith E.
-Candidate	Hunter Harris	Harris, Hunter
-Candidate	Janet Murphy	Murphy, Janet
-Candidate	Carl N. Ruschmeyer	Ruschmeyer, Carl N.
-Candidate	William 'Bill' Kirschner	Kirschner, William 'Bill'
-Candidate	Dan Norman	Norman, Dan
-Candidate	Sandra 'Sandy' Parks	Parks, Sandra 'Sandy'
-Candidate	Darya Vogt	Vogt, Darya
-Candidate	KATRINKA S. RUSSELL	RUSSELL, KATRINKA S.
-Candidate	KRISTINE 'KRIS' JAKEMAN	JAKEMAN, KRISTINE 'KRIS'
-Candidate	CHERYL PAUL	PAUL, CHERYL
-Candidate	DELMO ANDREOZZI	ANDREOZZI, DELMO
-Candidate	CLIFF EKLUND	EKLUND, CLIFF
-Candidate	D. MIKE SMALES	SMALES, D. MIKE
-Candidate	TYLER INGRAM	INGRAM, TYLER
-Candidate	BILL HANCE	HANCE, BILL
-Candidate	TONY LIKER	LIKER, TONY
-Candidate	JEANNA SECRIST	SECRIST, JEANNA
-Candidate	RO SMITH	SMITH, RO
-Candidate	CHIP STONE	STONE, CHIP
-Candidate	REECE KEENER	KEENER, REECE
-Candidate	MARCEY LOGSDEN	LOGSDEN, MARCEY
-Candidate	ANTOINETTE CHIESA	CHIESA, ANTOINETTE
-Candidate	MASON EDWARD SIMONS	SIMONS, MASON EDWARD
-Candidate	STACIE PHILLIPS	PHILLIPS, STACIE
-Candidate	BRIAN ZEISZLER	ZEISZLER, BRIAN
-Candidate	EMILY CARTER	CARTER, EMILY
-Candidate	CANDACE WINES	WINES, CANDACE
-Candidate	AITOR NARVAIZA	NARVAIZA, AITOR
-Candidate	JIM PITTS	PITTS, JIM
-Candidate	John C. Ellison	Ellison, John C.
-Candidate	CAMERON KINNEY	KINNEY, CAMERON
-Candidate	SABRA ESPARZA	ESPARZA, SABRA
-Candidate	WAYNE A. EVENSON	EVENSON, WAYNE A.
-Candidate	PATRICIA 'PAM' GRISWOLD	GRISWOLD, PATRICIA 'PAM'
-Candidate	LINCOLN LITCHFIELD	LITCHFIELD, LINCOLN
-Candidate	DANA DON HOLBROOK	HOLBROOK, DANA DON
-Candidate	JONATHAN GOOLSBY	GOOLSBY, JONATHAN
-Candidate	MICHAEL K. PACE	PACE, MICHAEL K.
-Candidate	ROBERT WOOLSEY	WOOLSEY, ROBERT
-Candidate	LAYLA WALZ	WALZ, LAYLA
-Candidate	JEFF R. DURHAM	DURHAM, JEFF R.
-Candidate	KATHY DURHAM	DURHAM, KATHY
-Candidate	ISMAEL 'IZZY' GUTIERREZ	GUTIERREZ, ISMAEL 'IZZY' 
-Candidate	JOHN B. HANSON	HANSON, JOHN B.
-Candidate	JASIE HOLM	HOLM, JASIE
-Candidate	MICHAEL CHRISTENSEN	CHRISTENSEN, MICHAEL
-Candidate	MARIA G. ORTEGA	ORTEGA, MARIA G.
-Candidate	BRIAN RAY	RAY, BRIAN
-Candidate	JARED F. CARTER	CARTER, JARED F.
-Candidate	GERARDO RODRIGUEZ	RODRIGUEZ, GERARDO
-Candidate	RUTH P. LEE	LEE, RUTH P.
-Candidate	VERA BOYER	BOYER, VERA
-Candidate	PATRICIA 'PATTY' HUBER-BETH	HUBER-BETH, PATRICIA 'PATTY'
-Candidate	LaCinda 'CINDY' ELGAN	ELGAN, LaCinda 'CINDY'
-Candidate	TIMOTHY HIPP	HIPP, TIMOTHY
-Candidate	MARK STEZAKER	STEZAKER, MARK
-Candidate	ROBERT E. III GLENNEN	GLENNEN, ROBERT E. III
-Candidate	ALEXIS M. HANSEN	HANSEN, ALEXIS M.
-Candidate	PAULA POVILAITIS	POVILAITIS, PAULA
-Candidate	WENDY BOSZAK	BOSZAK, WENDY
-Candidate	IRA HANSEN	HANSEN, IRA
-Candidate	MICHAEL A. MEARS	MEARS, MICHAEL A.
-Candidate	LISA L. HOEHNE	HOEHNE, LISA L.
-Candidate	AMANDA JEAN PEARCE	PEARCE, AMANDA JEAN
-Candidate	RICH MCKAY	MCKAY, RICH
-Candidate	BEVERLY CONLEY	CONLEY, BEVERLY
-Candidate	THEODORE 'TED' BEUTEL	BEUTEL, THEODORE 'TED'
-Candidate	DOROTHY ROWLEY	ROWLEY, DOROTHY
-Candidate	MELYNDA SHARKOZY	SHARKOZY, MELYNDA
-Candidate	MELISSA FITZWATER	FITZWATER, MELISSA
-Candidate	ROBIN HICKS	HICKS, ROBIN
-Candidate	JIM IZZOLO	IZZOLO, JIM
-Candidate	BRANDI ANDERSON	ANDERSON, BRANDI
-Candidate	DARLA R. BAUMANN	BAUMANN, DARLA R.
-Candidate	Gary Horky	Horky, Gary
-Candidate	Theresa Mavity	Mavity, Theresa
-Candidate	Jim Billingsley	Billingsley, Jim
-Candidate	Fredrick Bryant	Bryant, Fredrick
-Candidate	Paige Brooks	Brooks, Paige
-Candidate	Rich Stone	Stone, Rich
-Candidate	WILLIAM 'JEFF' JOHNSON	JOHNSON, WILLIAM 'JEFF'
-Candidate	Tami Rae Spero	Spero, Tami Rae
-Candidate	Ronald L. Cerri	Cerri, Ronald L.
-Candidate	Jim French	French, Jim
-Candidate	Deborah Engstrom	Engstrom, Deborah
-Candidate	Rhona Lecumberry	Lecumberry, Rhona
-Candidate	MICHAEL MACDONALD	MACDONALD, MICHAEL
-Candidate	Gene Hunt	Hunt, Gene
-Candidate	Joel Murphy	Murphy, Joel
-Candidate	Bill Douglas	Douglas, Bill
-Candidate	Christopher R. Entwistle	Entwistle, Christopher R.
-Candidate	Jim Loveless	Loveless, Jim
-Candidate	Matt Morgan	Morgan, Matt
-Candidate	LURA DUVALL	DUVALL, LURA
-Candidate	Leann Miller	Miller, Leann
-Candidate	SADIE SULLIVAN	SULLIVAN, SADIE
-Candidate	Bryan Sparks	Sparks, Bryan
-Candidate	Art III Clark	Clark, Art III
-Candidate	Harry L. Sr. Dimitroff	Dimitroff, Harry L. Sr.
-Candidate	Kathleen V. Ancho	Ancho, Kathleen V.
-Candidate	Manuel II Moreno	Moreno, Manuel II
-Candidate	LESLEY L. BUNCH	BUNCH, LESLEY L.
-Candidate	Tina Marie Bisiaux	Bisiaux, Tina Marie
-Candidate	Jusdivia Johnson	Johnson, Jusdivia
-Candidate	Theodore C. Herrera	Herrera, Theodore C.
-Candidate	Denise Fortune	Fortune, Denise
-Candidate	Toby Melver	Melver, Toby
-Candidate	Billy Gandolfo	Gandolfo, Billy
-Candidate	Mark Holt	Holt, Mark
-Candidate	Lisa Lloyd	Lloyd, Lisa
-Candidate	Jared Brackenbury	Brackenbury, Jared
-Candidate	Ron Hibble	Hibble, Ron
-Candidate	Bevan Lister	Lister, Bevan
-Candidate	Kevin J. Phillips	Phillips, Kevin J.
-Candidate	Amy Nicole Elmer	Elmer, Amy Nicole
-Candidate	Bob McCleary	McCleary, Bob
-Candidate	Shawn Frehner	Frehner, Shawn
-Candidate	Dylan V. Frehner	Frehner, Dylan V.
-Candidate	Carol J. Hansen	Hansen, Carol J.
-Candidate	Carolyn Harr	Harr, Carolyn
-Candidate	Kerry D. Lee	Lee, Kerry D.
-Candidate	Evan W. Schimbeck	Schimbeck, Evan W.
-Candidate	Jeff Childers	Childers, Jeff
-Candidate	Mike D. Cowley	Cowley, Mike D.
-Candidate	Troy R. Villines	Villines, Troy R.
-Candidate	Nikki Bryan	Bryan, Nikki
-Candidate	Vida D. Keller	Keller, Vida D.
-Candidate	Greg Hunewill	Hunewill, Greg
-Candidate	Brenda K. Cullen	Cullen, Brenda K.
-Candidate	Margie Kassebaum	Kassebaum, Margie
-Candidate	Stephen B. Rye	Rye, Stephen B.
-Candidate	Douglas 'Doug' Kassebaum	Kassebaum, Douglas 'Doug'
-Candidate	Cary 'Rick' Smith	Smith, Cary 'Rick'
-Candidate	Cassandra Aveiro	Aveiro, Cassandra
-Candidate	Barbara Jean Jones	Jones, Barbara Jean
-Candidate	Frank Hunewill	Hunewill, Frank
-Candidate	AL MCNEIL	MCNEIL, AL
-Candidate	Charles 'Chuck' Kennedy	Kennedy, Charles 'Chuck'
-Candidate	Kathy McIntosh	McIntosh, Kathy
-Candidate	Avis Moniz	Moniz, Avis
-Candidate	Alicia Norris	Norris, Alicia
-Candidate	Terrin Hicks	Hicks, Terrin
-Candidate	Matt Johnson	Johnson, Matt
-Candidate	Chris Murphy	Murphy, Chris
-Candidate	Sue Seidl	Seidl, Sue
-Candidate	Ray Lacy	Lacy, Ray
-Candidate	Shari L. Whalen	Whalen, Shari L.
-Candidate	Kevin B. Chisum	Chisum, Kevin B.
-Candidate	Janeen Clark	Clark, Janeen
-Candidate	Christopher Nepper	Nepper, Christopher
-Candidate	Michael Guss	Guss, Michael
-Candidate	Christine Hoferer	Hoferer, Christine
-Candidate	Norman E. Williams	Williams, Norman E.
-Candidate	Cindy Nixon	Nixon, Cindy
-Candidate	Donna Oberhansli	Oberhansli, Donna
-Candidate	Sean Alden Rowe	Rowe, Sean Alden
-Candidate	Mike James	James, Mike
-Candidate	Paula Joe Reed	Reed, Paula Joe
-Candidate	Keith E. Neville	Neville, Keith E.
-Candidate	David Ziegler	Ziegler, David
-Candidate	BETH CICHOWLAZ	CICHOWLAZ, BETH
-Candidate	Randy Adams	Adams, Randy
-Candidate	Earl William Perry	Perry, Earl William
-Candidate	ANDY ALBERTI	ALBERTI, ANDY
-Candidate	SHEREE STRINGER	STRINGER, SHEREE
-Candidate	SANDRA 'SAM' MERLINO	MERLINO, SANDRA 'SAM'
-Candidate	SHEILA WINN	WINN, SHEILA
-Candidate	DEBORAH BEATTY	BEATTY, DEBORAH
-Candidate	MICHAEL S. NOYES	NOYES, MICHAEL S.
-Candidate	LANCE ROY SCHAUS	SCHAUS, LANCE ROY
-Candidate	PAM WEBSTER	WEBSTER, PAM
-Candidate	CHRIS ARABIA	ARABIA, CHRIS
-Candidate	NICHOLAS ANTHONY DEL VECCHIO	DEL VECCHIO, NICHOLAS ANTHONY
-Candidate	GINGER L. STUMNE	STUMNE, GINGER L.
-Candidate	Tony DeMeo	DeMeo, Tony
-Candidate	SHARON A. WEHRLY	WEHRLY, SHARON A.
-Candidate	HORACE H. CARLYLE	CARLYLE, HORACE H.
-Candidate	DON KAMINSKI	KAMINSKI, DON
-Candidate	TIMAREE KOSCIK	KOSCIK, TIMAREE
-Candidate	JUSTIN B. ZIMMERMAN	ZIMMERMAN, JUSTIN B.
-Candidate	FRANK CARBONE	CARBONE, FRANK
-Candidate	LISA CHAMLEE	CHAMLEE, LISA
-Candidate	SEAN C. HASTINGS	HASTINGS, SEAN C.
-Candidate	TAWNA YAZZIE	YAZZIE, TAWNA
-Candidate	LEO BLUNDO	BLUNDO, LEO
-Candidate	RICHARD GOLDSTEIN	GOLDSTEIN, RICHARD
-Candidate	MARK OWENS	OWENS, MARK
-Candidate	DONALD E. RUST	RUST, DONALD E.
-Candidate	DEBRA STRICKLAND	STRICKLAND, DEBRA
-Candidate	LAUREEN E. BASSO-CERINI	BASSO-CERINI, LAUREEN E.
-Candidate	LACEY DONALDSON	DONALDSON, LACEY
-Candidate	KRISTY BERGE	BERGE, KRISTY
-Candidate	CAROL A. SHANK	SHANK, CAROL A.
-Candidate	RENE M. CHILDS	CHILDS, RENE M.
-Candidate	R. BRYCE SHIELDS	SHIELDS, R. BRYCE
-Candidate	JEFFREY KEARNS	KEARNS, JEFFREY
-Candidate	CINDY PLUMMER	PLUMMER, CINDY
-Candidate	BARBARA RACKLEY	RACKLEY, BARBARA
-Candidate	JANA SEDDON	SEDDON, JANA
-Candidate	VANESSA STEPHENS	STEPHENS, VANESSA
-Candidate	Nicole Barde	Barde, Nicole
-Candidate	Jay Carmona	Carmona, Jay
-Candidate	JEN CHAPMAN	CHAPMAN, JEN
-Candidate	ANNE LANGER	LANGER, ANNE
-Candidate	Jeffrey M. Nevin	Nevin, Jeffrey M.
-Candidate	Sam Toll	Toll, Sam
-Candidate	Eddie Lorton	Lorton, Eddie
-Candidate	Hillary Schieve	Schieve, Hillary
-Candidate	Michael E. Clark	Clark, Michael E.
-Candidate	Hugh 'Chip' Evans	Evans, Hugh 'Chip'
-Candidate	Nancy Parent	Parent, Nancy
-Candidate	Emil Tudorache	Tudorache, Emil
-Candidate	Lawrence Burtness	Burtness, Lawrence
-Candidate	Kalie Work	Work, Kalie
-Candidate	Matthew R. Buehler	Buehler, Matthew R.
-Candidate	Tammi Davis	Davis, Tammi
-Candidate	Chris Hicks	Hicks, Chris
-Candidate	Kathleen M. Drakulich	Drakulich, Kathleen M.
-Candidate	Aaron Bushur	Bushur, Aaron
-Candidate	Dixie Grossman	Grossman, Dixie
-Candidate	Egan Walker	Walker, Egan
-Candidate	Barry Breslow	Breslow, Barry
-Candidate	DON CAVALLO	CAVALLO, DON
-Candidate	Verita Black Prothro	Prothro, Verita Black
-Candidate	Karl S. Hall	Hall, Karl S.
-Candidate	JOHN J. KADLIC	KADLIC, JOHN J.
-Candidate	Darin Balaam	Balaam, Darin
-Candidate	Heidi Howe	Howe, Heidi
-Candidate	Sarah Peters	Peters, Sarah
-Candidate	Julia Ratti	Ratti, Julia
-Candidate	Charlene Y. Young	Young, Charlene Y.
-Candidate	Teresa Benitez-Thompson	Benitez-Thompson, Teresa
-Candidate	Gregory J. Shorts	Shorts, Gregory J.
-Candidate	Jill Tolles	Tolles, Jill
-Candidate	Bill Johnson	Johnson, Bill
-Candidate	Kitty K. Jung	Jung, Kitty K.
-Candidate	Jacqueline Calvert	Calvert, Jacqueline
-Candidate	Jeffrey Church	Church, Jeffrey
-Candidate	Jeanne Herman	Herman, Jeanne
-Candidate	Lindsy Judd	Judd, Lindsy
-Candidate	Richard Bein	Bein, Richard
-Candidate	Bruce Comer	Comer, Bruce
-Candidate	Hud Horton	Horton, Hud
-Candidate	Robert Unsworth	Unsworth, Robert
-Candidate	NANCY E. ZUNINO	ZUNINO, NANCY E.
-Candidate	Naomi Duerr	Duerr, Naomi
-Candidate	Joe Lawrence	Lawrence, Joe
-Candidate	Bob Lucey	Lucey, Bob
-Candidate	Stephen Wolgast	Wolgast, Stephen
-Candidate	June Joseph	Joseph, June
-Candidate	Lisa Krasner	Krasner, Lisa
-Candidate	Michael Sprinkle	Sprinkle, Michael
-Candidate	Paul D. McKenzie	McKenzie, Paul D.
-Candidate	Bonnie Weber	Weber, Bonnie
-Candidate	Ellen Minetto	Minetto, Ellen
-Candidate	Dian Vanderwell	Vanderwell, Dian
-Candidate	Andrew Benjamin Caudill	Caudill, Andrew Benjamin
-Candidate	Debra Smith Feemster	Feemster, Debra Smith
-Candidate	Richard 'Skip' Daly	Daly, Richard 'Skip'
-Candidate	Jill Ann Dickman	Dickman, Jill Ann
-Candidate	Sandra Ainsworth	Ainsworth, Sandra
-Candidate	Suzanne Dutra	Dutra, Suzanne
-Candidate	Michael Rider	Rider, Michael
-Candidate	Susan Severt	Severt, Susan
-Candidate	James Currivan	Currivan, James
-Candidate	Greg Dennis	Dennis, Greg
-Candidate	Larry J. Johnson	Johnson, Larry J.
-Candidate	Donald Otto	Otto, Donald
-Candidate	Zachary Rhodes	Rhodes, Zachary
-Candidate	Hans R. Keller	Keller, Hans R.
-Candidate	Tim G. Callicrate	Callicrate, Tim G.
-Candidate	Sara Schmitz	Schmitz, Sara
-Candidate	Bruce Edward Simonian	Simonian, Bruce Edward
-Candidate	Kendra W. Wong	Wong, Kendra W.
-Candidate	Burton W. Hilton	Hilton, Burton W.
-Candidate	Nichole Baldwin	Baldwin, Nichole
-Candidate	Ian Bullis	Bullis, Ian
-Candidate	George Chachas	Chachas, George
-Candidate	Travis Godon	Godon, Travis
-Candidate	MARTHA RIVERA SINDELAR	SINDELAR, MARTHA RIVERA
-Candidate	CATHERINE BAKARIC	BAKARIC, CATHERINE
-Candidate	Michael A. Wheable	Wheable, Michael A.
-Candidate	Stephen J. Bishop	Bishop, Stephen J.
-Candidate	Matt Hibbs	Hibbs, Matt
-Candidate	Amy Adams	Adams, Amy
-Candidate	Cade H. Willes	Willes, Cade H.
-Candidate	Scott Henriod	Henriod, Scott
-Candidate	Ray Sawyer	Sawyer, Ray
-Candidate	Sid Beckwith	Beckwith, Sid
-Candidate	Ericson Skye	Skye, Ericson
+Candidate	"ACKERMAN, PATRICIA"	"ACKERMAN, PATRICIA"
+Candidate	"COHEN, ED"	"COHEN, ED"
+Candidate	"HERNANDEZ, REYNALDO"	"HERNANDEZ, REYNALDO"
+Candidate	"KOBLE, CLINT"	"KOBLE, CLINT"
+Candidate	"LUETKEHANS, IAN"	"LUETKEHANS, IAN"
+Candidate	"SCHIFFMAN, STEVE ""PRAGMATIC"""	"SCHIFFMAN, STEVE ""PRAGMATIC"""
+Candidate	"SHEPHERD, RICK"	"SHEPHERD, RICK"
+Candidate	"AMODEI, MARK E."	"AMODEI, MARK E."
+Candidate	"BECK, JOEL"	"BECK, JOEL"
+Candidate	"HURLEY, JESSE DOUGLAS"	"HURLEY, JESSE DOUGLAS"
+Candidate	"TITUS, ROBIN L."	"TITUS, ROBIN L."
+Candidate	"ULRICH, JEFF"	"ULRICH, JEFF"
+Candidate	"HEATH, JUSTIN"	"HEATH, JUSTIN"
+Candidate	"SCHARMANN, HARRY ""BUS"""	"SCHARMANN, HARRY ""BUS"""
+Candidate	"BOONE, KEITH W."	"BOONE, KEITH W."
+Candidate	"KELLY, KELLI"	"KELLY, KELLI"
+Candidate	"CASEY, MICHAEL ""MICK"""	"CASEY, MICHAEL ""MICK"""
+Candidate	"KOENIG, GREGORY S."	"KOENIG, GREGORY S."
+Candidate	"CHRISTENSEN, TS"	"CHRISTENSEN, TS"
+Candidate	"PICKERING, KRISTINA"	"PICKERING, KRISTINA"
+Candidate	"RODRIGUEZ, ESTHER C."	"RODRIGUEZ, ESTHER C."
+Candidate	NONE OF THESE CANDIDATES	NONE OF THESE CANDIDATES
+Candidate	"FUMO, OZZIE"	"FUMO, OZZIE"
+Candidate	"HERNDON, DOUGLAS"	"HERNDON, DOUGLAS"
+Candidate	"NELSON, ERV"	"NELSON, ERV"
+Candidate	"COOMBS, KATIE"	"COOMBS, KATIE"
+Candidate	"JONTE, MARION"	"JONTE, MARION"
+Candidate	"McConnell, Regina ""Gina"""	"McConnell, Regina ""Gina"""
+Candidate	"Cutter, Nadin"	"Cutter, Nadin"
+Candidate	"Naft, Michael"	"Naft, Michael"
+Candidate	"O'Sullivan, Ken Patrick ""Sully"""	"O'Sullivan, Ken Patrick ""Sully"""
+Candidate	"Ganz, Adam"	"Ganz, Adam"
+Candidate	"Miron Galindo, Edgar ""Galindo"""	"Miron Galindo, Edgar ""Galindo"""
+Candidate	"Dowden, Joshua"	"Dowden, Joshua"
+Candidate	"Breeden, Adam"	"Breeden, Adam"
+Candidate	"Bourke, Craig G."	"Bourke, Craig G."
+Candidate	"Thomas, Jr., Anthony"	"Thomas, Jr., Anthony"
+Candidate	"Elliott, Josh"	"Elliott, Josh"
+Candidate	"Rheinhart, Allen"	"Rheinhart, Allen"
+Candidate	"Butler, Dedree ""Dee"""	"Butler, Dedree ""Dee"""
+Candidate	"Bentley, Joyce"	"Bentley, Joyce"
+Candidate	"Hamilton, Eddie ""MrLasVegas"""	"Hamilton, Eddie ""MrLasVegas"""
+Candidate	"Casino, Angelo"	"Casino, Angelo"
+Candidate	"Larios-Elias, Citlaly"	"Larios-Elias, Citlaly"
+Candidate	"Titus, Dina"	"Titus, Dina"
+Candidate	"Dayani, Sara"	"Dayani, Sara"
+Candidate	"Nazareno-Edquilang, Gemma ""Gem"""	"Nazareno-Edquilang, Gemma ""Gem"""
+Candidate	"Hardy, Jr., Joe"	"Hardy, Jr., Joe"
+Candidate	"Esh, Steve"	"Esh, Steve"
+Candidate	"Goodman, Eric A."	"Goodman, Eric A."
+Candidate	"Kierny, Carli Lynn"	"Kierny, Carli Lynn"
+Candidate	"Nathan, Gayle"	"Nathan, Gayle"
+Candidate	"Hughes, Rena G."	"Hughes, Rena G."
+Candidate	"Ochoa, Vincent"	"Ochoa, Vincent"
+Candidate	"Fleeman, Jack"	"Fleeman, Jack"
+Candidate	"Hughes, Tim"	"Hughes, Tim"
+Candidate	"Page, Fred"	"Page, Fred"
+Candidate	"Marcello, Dustin R."	"Marcello, Dustin R."
+Candidate	"Andrade, Maricar ""Rica"""	"Andrade, Maricar ""Rica"""
+Candidate	"Stoffel, Jason"	"Stoffel, Jason"
+Candidate	"Szyc, Lisa M."	"Szyc, Lisa M."
+Candidate	"Machnich, Tegan Christine"	"Machnich, Tegan Christine"
+Candidate	"MacDonald, J. Scott"	"MacDonald, J. Scott"
+Candidate	"Voy, William"	"Voy, William"
+Candidate	"Robison, Michael S."	"Robison, Michael S."
+Candidate	"Mason, Aaron"	"Mason, Aaron"
+Candidate	"Perry, Mary"	"Perry, Mary"
+Candidate	"Abbott, Eric"	"Abbott, Eric"
+Candidate	"Scotti, Richard"	"Scotti, Richard"
+Candidate	"Eller, Crystal"	"Eller, Crystal"
+Candidate	"Wingate, Cheryl Ann"	"Wingate, Cheryl Ann"
+Candidate	"Caston, Marilyn"	"Caston, Marilyn"
+Candidate	"Almase, Caesar"	"Almase, Caesar"
+Candidate	"Barisich, Veronica"	"Barisich, Veronica"
+Candidate	"Pickard, Margaret E."	"Pickard, Margaret E."
+Candidate	"Charter, Stephanie"	"Charter, Stephanie"
+Candidate	"Kephart, William ""Bill"""	"Kephart, William ""Bill"""
+Candidate	"Clark Newberry, Tara"	"Clark Newberry, Tara"
+Candidate	"Aurbach, Phil"	"Aurbach, Phil"
+Candidate	"Gonzalez, Bill"	"Gonzalez, Bill"
+Candidate	"Coffing, Terry"	"Coffing, Terry"
+Candidate	"Molnar, Kari"	"Molnar, Kari"
+Candidate	"Bailey, Soonhee ""Sunny"""	"Bailey, Soonhee ""Sunny"""
+Candidate	"Krall, Nadia"	"Krall, Nadia"
+Candidate	"Gale, Bruce L."	"Gale, Bruce L."
+Candidate	"Throne, Dawn"	"Throne, Dawn"
+Candidate	"Miller, Fikisha Liki"	"Miller, Fikisha Liki"
+Candidate	"Parker, Blair C."	"Parker, Blair C."
+Candidate	"Chevalier Lopez, Yvette"	"Chevalier Lopez, Yvette"
+Candidate	"Schifalacqua, Barbara"	"Schifalacqua, Barbara"
+Candidate	"Forman, Randall"	"Forman, Randall"
+Candidate	"Reynolds, Jacob"	"Reynolds, Jacob"
+Candidate	"Armstrong, Karl W."	"Armstrong, Karl W."
+Candidate	"Mercer, Michele ""Shell"""	"Mercer, Michele ""Shell"""
+Candidate	"Tobler, Michelle O."	"Tobler, Michelle O."
+Candidate	"Miceli, Michael J."	"Miceli, Michael J."
+Candidate	"Friedberg, Craig"	"Friedberg, Craig"
+Candidate	"Hughes, Lynn"	"Hughes, Lynn"
+Candidate	"Perez, Romeo"	"Perez, Romeo"
+Candidate	"Lilly-Spells, Jasmin"	"Lilly-Spells, Jasmin"
+Candidate	"Trujillo, Monica"	"Trujillo, Monica"
+Candidate	"Sweetin, Jim"	"Sweetin, Jim"
+Candidate	"Speed, Kevin"	"Speed, Kevin"
+Candidate	"Kurth, Robert"	"Kurth, Robert"
+Candidate	"Ballou, Erika D."	"Ballou, Erika D."
+Candidate	"Cavanaugh, James E. ""Jim"""	"Cavanaugh, James E. ""Jim"""
+Candidate	"Mastin, Amy M."	"Mastin, Amy M."
+Candidate	"McKellar, Mandy"	"McKellar, Mandy"
+Candidate	"Israel, Ron"	"Israel, Ron"
+Candidate	"Bohn, Mickey"	"Bohn, Mickey"
+Candidate	"Mcleod, Alexandra Beth"	"Mcleod, Alexandra Beth"
+Candidate	"Gilliam, Dan"	"Gilliam, Dan"
+Candidate	"Rinetti, Dena"	"Rinetti, Dena"
+Candidate	"Vadala, Joe"	"Vadala, Joe"
+Candidate	"Lee, Susie"	"Lee, Susie"
+Candidate	"Nadell, Brian"	"Nadell, Brian"
+Candidate	"Bagley, David"	"Bagley, David"
+Candidate	"Marzola, Elaine"	"Marzola, Elaine"
+Candidate	"Sullivan, Dennis"	"Sullivan, Dennis"
+Candidate	"Newberry, Corwin ""Cory"""	"Newberry, Corwin ""Cory"""
+Candidate	"Watson, Tiffany Ann"	"Watson, Tiffany Ann"
+Candidate	"Robinson, Mindy"	"Robinson, Mindy"
+Candidate	"Rodimer, Dan ""Big Dan"""	"Rodimer, Dan ""Big Dan"""
+Candidate	"Schwartz, Dan"	"Schwartz, Dan"
+Candidate	"Willert, Victor R."	"Willert, Victor R."
+Candidate	"Deike, Kari"	"Deike, Kari"
+Candidate	"Cartwright, Andrew E."	"Cartwright, Andrew E."
+Candidate	"Kennedy, Amanda"	"Kennedy, Amanda"
+Candidate	"Guzman, Lisa"	"Guzman, Lisa"
+Candidate	"Leavitt, Liberty"	"Leavitt, Liberty"
+Candidate	"James-Newman, Bruce"	"James-Newman, Bruce"
+Candidate	"Marshall, Jshauntae ""Jai"""	"Marshall, Jshauntae ""Jai"""
+Candidate	"Nair, Anand K."	"Nair, Anand K."
+Candidate	"Mickanen, Justin ""Steeve Strange"""	"Mickanen, Justin ""Steeve Strange"""
+Candidate	"Rowe, Mike"	"Rowe, Mike"
+Candidate	"Ortiz, Felicia"	"Ortiz, Felicia"
+Candidate	"Brooks, Byron"	"Brooks, Byron"
+Candidate	"Nigam, Swadeep"	"Nigam, Swadeep"
+Candidate	"Fisher, Lachelle"	"Fisher, Lachelle"
+Candidate	"Silberkraus, Stephen Hayward"	"Silberkraus, Stephen Hayward"
+Candidate	"Kintigh, Claudia"	"Kintigh, Claudia"
+Candidate	"Calhoun, Jay"	"Calhoun, Jay"
+Candidate	"Archer, Troy"	"Archer, Troy"
+Candidate	"Delisle, Steven E."	"Delisle, Steven E."
+Candidate	"George, Stephen L."	"George, Stephen L."
+Candidate	"Gibson, Sr., David S."	"Gibson, Sr., David S."
+Candidate	"Child, Kevin L."	"Child, Kevin L."
+Candidate	"Boylan, Patrick"	"Boylan, Patrick"
+Candidate	"Spirtos, Nick ""Doc"""	"Spirtos, Nick ""Doc"""
+Candidate	"Davis, Russell"	"Davis, Russell"
+Candidate	"Sacco, Joseph"	"Sacco, Joseph"
+Candidate	"GonzÃ¡lez, Cecelia"	"GonzÃ¡lez, Cecelia"
+Candidate	"Vanderpal, Geoffrey"	"Vanderpal, Geoffrey"
+Candidate	"Hafen, II, Gregory T."	"Hafen, II, Gregory T."
+Candidate	"Bradley, Joe"	"Bradley, Joe"
+Candidate	"Bingham, Rosalie"	"Bingham, Rosalie"
+Candidate	"Brucato, George J."	"Brucato, George J."
+Candidate	"Blundo, Leonardo"	"Blundo, Leonardo"
+Candidate	"Colley, Chris"	"Colley, Chris"
+Candidate	"D'Ayr, Stephanie Gabrielle"	"D'Ayr, Stephanie Gabrielle"
+Candidate	"Marchant, Jim"	"Marchant, Jim"
+Candidate	"Navarro, Charles"	"Navarro, Charles"
+Candidate	"Eason, Jennifer"	"Eason, Jennifer"
+Candidate	"Peters, Sam"	"Peters, Sam"
+Candidate	"Reed, Randi"	"Reed, Randi"
+Candidate	"Sutton, Lisa Song"	"Sutton, Lisa Song"
+Candidate	"Horsford, Steven"	"Horsford, Steven"
+Candidate	"Wood, Rebecca"	"Wood, Rebecca"
+Candidate	"Kempton, Gregory"	"Kempton, Gregory"
+Candidate	"Cantu, Rene"	"Cantu, Rene"
+Candidate	"Bowen, Antonio"	"Bowen, Antonio"
+Candidate	"Ferranti, Carol"	"Ferranti, Carol"
+Candidate	"Dreyer, Barbara A."	"Dreyer, Barbara A."
+Candidate	"Garcia Morales, Evelyn"	"Garcia Morales, Evelyn"
+Candidate	"Newburn, Mark"	"Newburn, Mark"
+Candidate	"Jones, III, Walter"	"Jones, III, Walter"
+Candidate	"Henry, Tameka"	"Henry, Tameka"
+Candidate	"Searles, Noel"	"Searles, Noel"
+Candidate	"Richardson, Vincent L."	"Richardson, Vincent L."
+Candidate	"Miller, Cameron ""C.H."""	"Miller, Cameron ""C.H."""
+Candidate	"Stephens, III, John"	"Stephens, III, John"
+Candidate	"Edwards, Chris"	"Edwards, Chris"
+Candidate	"Black, Ann ""Annie"""	"Black, Ann ""Annie"""
+Candidate	"Boone, Kasina"	"Boone, Kasina"
+Candidate	"Hill, Cortland"	"Hill, Cortland"
+Candidate	"Proffitt, Jeff"	"Proffitt, Jeff"
+Candidate	"Shank, Chris E."	"Shank, Chris E."
+Candidate	"Stanley, Jack"	"Stanley, Jack"
+Candidate	"Sherman, Ebony"	"Sherman, Ebony"
+Candidate	"Wachter, Bryan"	"Wachter, Bryan"
+Candidate	"Williams, Katie"	"Williams, Katie"
+Candidate	"Becker, Liz"	"Becker, Liz"
+Candidate	"Bilodeau, Ronald ""Ron"""	"Bilodeau, Ronald ""Ron"""
+Candidate	"Gibson, Donnie"	"Gibson, Donnie"
+Candidate	"McArthur, Richard"	"McArthur, Richard"
+Candidate	"Arroyo, Elysa"	"Arroyo, Elysa"
+Candidate	"Brooks, Lola"	"Brooks, Lola"
+Candidate	"Craig, Christopher"	"Craig, Christopher"
+Candidate	"Lewis, Tracey"	"Lewis, Tracey"
+Candidate	"Helgelien, Tiger"	"Helgelien, Tiger"
+Candidate	"Robertson, Cristina"	"Robertson, Cristina"
+Candidate	"Salt, Alexis"	"Salt, Alexis"
+Candidate	"Polcyn, Jack"	"Polcyn, Jack"
+Candidate	"Creviston, Sylvia Liberty"	"Creviston, Sylvia Liberty"
+Candidate	"Carlton, Maggie"	"Carlton, Maggie"
+Candidate	"Fennell, II, James"	"Fennell, II, James"
+Candidate	"Fielding, Karen"	"Fielding, Karen"
+Candidate	"Boger, Wes"	"Boger, Wes"
+Candidate	"Wanlass, Paul"	"Wanlass, Paul"
+Candidate	"Lisk, Steven"	"Lisk, Steven"
+Candidate	"Wursten, Brian"	"Wursten, Brian"
+Candidate	"Skurow, Ronnie"	"Skurow, Ronnie"
+Candidate	"Dutkowski, Karen"	"Dutkowski, Karen"
+Candidate	"Mortensen, Michelle"	"Mortensen, Michelle"
+Candidate	"Deaville, Jacob"	"Deaville, Jacob"
+Candidate	"Noeth, Lisa"	"Noeth, Lisa"
+Candidate	"Matthews, Andy"	"Matthews, Andy"
+Candidate	"Brown, Patsy"	"Brown, Patsy"
+Candidate	"Cain, Hunter"	"Cain, Hunter"
+Candidate	"Miller, Ross"	"Miller, Ross"
+Candidate	"Hosea, Gary"	"Hosea, Gary"
+Candidate	"Raja, Fayyaz"	"Raja, Fayyaz"
+Candidate	"Penney, Jenny"	"Penney, Jenny"
+Candidate	"Kunnel, Radhika ""RPK"""	"Kunnel, Radhika ""RPK"""
+Candidate	"Valdes, Joe"	"Valdes, Joe"
+Candidate	"Sherwood, Jennie"	"Sherwood, Jennie"
+Candidate	"Littman, Eva"	"Littman, Eva"
+Candidate	"McArthur, Taylor"	"McArthur, Taylor"
+Candidate	"Morehead, Christian"	"Morehead, Christian"
+Candidate	"Kasama, Heidi"	"Kasama, Heidi"
+Candidate	"Sexton, Erik"	"Sexton, Erik"
+Candidate	"Small, Jim"	"Small, Jim"
+Candidate	"Nguyen, Rochelle"	"Nguyen, Rochelle"
+Candidate	"Holder, Jesse ""Jake"""	"Holder, Jesse ""Jake"""
+Candidate	"Randolph, Retha"	"Randolph, Retha"
+Candidate	"Tracy, Mitchell T."	"Tracy, Mitchell T."
+Candidate	"Miller, Mack"	"Miller, Mack"
+Candidate	"Robinson, II, William E."	"Robinson, II, William E."
+Candidate	"Summers-Armstrong, Shondra"	"Summers-Armstrong, Shondra"
+Candidate	"Lewis, Geraldine"	"Lewis, Geraldine"
+Candidate	"Barron, Isaac"	"Barron, Isaac"
+Candidate	"Duncan, Katie"	"Duncan, Katie"
+Candidate	"Flanagan, Tanya"	"Flanagan, Tanya"
+Candidate	"Denis, Moises ""Mo"""	"Denis, Moises ""Mo"""
+Candidate	"Kothari, Deepen ""My Friend"""	"Kothari, Deepen ""My Friend"""
+Candidate	"McCurdy, II, William"	"McCurdy, II, William"
+Candidate	"Scott, Dillard Allen"	"Scott, Dillard Allen"
+Candidate	"Moreno, Jesus Carlos"	"Moreno, Jesus Carlos"
+Candidate	"Watts, Howard"	"Watts, Howard"
+Candidate	"Andersson, Burke"	"Andersson, Burke"
+Candidate	"Carrillo, Richard"	"Carrillo, Richard"
+Candidate	"Lange, Roberta"	"Lange, Roberta"
+Candidate	"Spiegel, Ellen"	"Spiegel, Ellen"
+Candidate	"Logan, Zachary"	"Logan, Zachary"
+Candidate	"Orentlicher, David"	"Orentlicher, David"
+Candidate	"McAuliffe, Michael"	"McAuliffe, Michael"
+Candidate	"Smith, Emily"	"Smith, Emily"
+Candidate	"Considine, Venicia"	"Considine, Venicia"
+Candidate	"Dortch, Clarence M."	"Dortch, Clarence M."
+Candidate	"Frost, Char"	"Frost, Char"
+Candidate	"Ortega, Lisa"	"Ortega, Lisa"
+Candidate	"NELSON, DAVE"	"NELSON, DAVE"
+Candidate	"TARKANIAN, DANNY"	"TARKANIAN, DANNY"
+Candidate	"GARDNER, MARK"	"GARDNER, MARK"
+Candidate	"WALSH, LARRY"	"WALSH, LARRY"
+Candidate	"NOWOSAD, WALTER ""WALT"""	"NOWOSAD, WALTER ""WALT"""
+Candidate	"TOLBERT, NATHAN"	"TOLBERT, NATHAN"
+Candidate	"KANGAS, CAREY"	"KANGAS, CAREY"
+Candidate	"GILKERSON, LINDA J."	"GILKERSON, LINDA J."
+Candidate	"DUNHAM, DALE L."	"DUNHAM, DALE L."
+Candidate	"GRAY, TERI A."	"GRAY, TERI A."
+Candidate	"RIVANO, ANTHONY P."	"RIVANO, ANTHONY P."
+Candidate	"SIEGMAN, RUSS"	"SIEGMAN, RUSS"
+Candidate	"STOLYAROV, GENNADY II"	"STOLYAROV, GENNADY II"
+Candidate	"AKOLA, DAVE"	"AKOLA, DAVE"
+Candidate	"BARBER, GEORGE H."	"BARBER, GEORGE H."
+Candidate	"CARRILLO, AMBER"	"CARRILLO, AMBER"
+Candidate	"CLARK, GERALD ""SPARKY"" M."	"CLARK, GERALD ""SPARKY"" M."
+Candidate	"FANTO, FRANK"	"FANTO, FRANK"
+Candidate	"FERRIS, SHARON"	"FERRIS, SHARON"
+Candidate	"MITCHELL, STEVE"	"MITCHELL, STEVE"
+Candidate	"TAYLOR, JERRY ""BRANDON"""	"TAYLOR, JERRY ""BRANDON"""
+Candidate	"EVERTSEN, GARY âRADARâ"	"EVERTSEN, GARY âRADARâ"
+Candidate	"STENINGER, REX"	"STENINGER, REX"
+Candidate	"FISH, KIETH"	"FISH, KIETH"
+Candidate	"COONEY, JIM"	"COONEY, JIM"
+Candidate	"D'AYR, GABRIELLE ""BRIE"""	"D'AYR, GABRIELLE ""BRIE"""
+Candidate	"HORSFORD, STEVEN A."	"HORSFORD, STEVEN A."
+Candidate	"BLUNDO, LEO"	"BLUNDO, LEO"
+Candidate	"BLAND, ELIZABETH"	"BLAND, ELIZABETH"
+Candidate	"HAFER, TRISHA"	"HAFER, TRISHA"
+Candidate	"JOHNSON, TRINIE"	"JOHNSON, TRINIE"
+Candidate	"MELENDREZ, J. PAUL"	"MELENDREZ, J. PAUL"
+Candidate	"KIRBY, WILLIAM C"	"KIRBY, WILLIAM C"
+Candidate	"AMODEI, MARK E"	"AMODEI, MARK E"
+Candidate	"BRISSENDEN, MARLENE"	"BRISSENDEN, MARLENE"
+Candidate	"GARRETT, BEN"	"GARRETT, BEN"
+Candidate	"HILL, JESSE J"	"HILL, JESSE J"
+Candidate	"BELL, DEBRA"	"BELL, DEBRA"
+Candidate	"BROOKS, PAIGE"	"BROOKS, PAIGE"
+Candidate	"HOSS, TOM"	"HOSS, TOM"
+Candidate	"ROBERTSON, LEANNE"	"ROBERTSON, LEANNE"
+Candidate	"SAUERS, SHELBY"	"SAUERS, SHELBY"
+Candidate	"CASALEZ, JOANN"	"CASALEZ, JOANN"
+Candidate	"TROUT, LEWIS ""LUIS"""	"TROUT, LEWIS ""LUIS"""
+Candidate	"UHLMANN, SABRINA"	"UHLMANN, SABRINA"
+Candidate	"OWEN, VIRGINIA ""JENNA"""	"OWEN, VIRGINIA ""JENNA"""
+Candidate	"SWENSEN, ABRAM D."	"SWENSEN, ABRAM D."
+Candidate	"HARDY, HOPE E."	"HARDY, HOPE E."
+Candidate	"WAITS, PATSY A."	"WAITS, PATSY A."
+Candidate	"ALLAN, JUDIE A."	"ALLAN, JUDIE A."
+Candidate	"FREEMAN, KATHLEEN ""KATHY"""	"FREEMAN, KATHLEEN ""KATHY"""
+Candidate	"SCHMIDT, AMBER"	"SCHMIDT, AMBER"
+Candidate	"THOMAS, WALLACE ""JR"""	"THOMAS, WALLACE ""JR"""
+Candidate	"VILLANUEVA, MANUEL JR."	"VILLANUEVA, MANUEL JR."
+Candidate	"VALDOVINOS, ELIZABETH"	"VALDOVINOS, ELIZABETH"
+Candidate	"MCMAHON, LINDA L."	"MCMAHON, LINDA L."
+Candidate	"SAM, MARLA J."	"SAM, MARLA J."
+Candidate	"FARR, LYLE"	"FARR, LYLE"
+Candidate	"MATHEUS, JAMES R."	"MATHEUS, JAMES R."
+Candidate	"MILLS, DOUG"	"MILLS, DOUG"
+Candidate	"DâAYR, GABRIELLE âBRIEâ"	"DâAYR, GABRIELLE âBRIEâ"
+Candidate	"HAFEN II, GREGORY T."	"HAFEN II, GREGORY T."
+Candidate	"KELLEY, PAT"	"KELLEY, PAT"
+Candidate	"ROWE, PEGGY A."	"ROWE, PEGGY A."
+Candidate	"GLADWILL, GARY G."	"GLADWILL, GARY G."
+Candidate	"GRAY, KEN"	"GRAY, KEN"
+Candidate	"JACOBSON, ROBERT"	"JACOBSON, ROBERT"
+Candidate	"THOMAS, DAVID"	"THOMAS, DAVID"
+Candidate	"HOCKADAY, DAVID"	"HOCKADAY, DAVID"
+Candidate	"ORTEGA, RICKY"	"ORTEGA, RICKY"
+Candidate	"THOMPSON, CLIFFORD"	"THOMPSON, CLIFFORD"
+Candidate	"PARSONS, SHERRY"	"PARSONS, SHERRY"
+Candidate	"COWEE, PHILIP"	"COWEE, PHILIP"
+Candidate	"VILLINES, HOLLY"	"VILLINES, HOLLY"
+Candidate	"CRABTREE, KIMBER L. A."	"CRABTREE, KIMBER L. A."
+Candidate	"CHRISTENSEN, JAMES"	"CHRISTENSEN, JAMES"
+Candidate	"GIOMI, DEBORAH A."	"GIOMI, DEBORAH A."
+Candidate	"HITCHCOCK, GERALD"	"HITCHCOCK, GERALD"
+Candidate	"WEIR-COOLEY, RONNIE"	"WEIR-COOLEY, RONNIE"
+Candidate	"PRICE, JUDY"	"PRICE, JUDY"
+Candidate	"BLOCK, RAY"	"BLOCK, RAY"
+Candidate	"HON, PAT"	"HON, PAT"
+Candidate	"MCCASSIE, DAN"	"MCCASSIE, DAN"
+Candidate	"MURPHY, PAUL"	"MURPHY, PAUL"
+Candidate	"RIESEN, WILLIAM"	"RIESEN, WILLIAM"
+Candidate	"RODRIGUEZ, JAY"	"RODRIGUEZ, JAY"
+Candidate	"DE ST. MAURICE, L. MICHELLE"	"DE ST. MAURICE, L. MICHELLE"
+Candidate	"WHEELER, HARRY J."	"WHEELER, HARRY J."
+Candidate	"PARSONS, DONALD"	"PARSONS, DONALD"
+Candidate	"SEVERA, SHELLIE T."	"SEVERA, SHELLIE T."
+Candidate	"ZOBERSKI, FELICITY"	"ZOBERSKI, FELICITY"
+Candidate	"MCKAY, FRANCES ""FRAN"""	"MCKAY, FRANCES ""FRAN"""
+Candidate	"WARD, CHRIS"	"WARD, CHRIS"
+Candidate	"RODRIGUEZ, AUGGIE"	"RODRIGUEZ, AUGGIE"
+Candidate	"FLYNN, SHERRY"	"FLYNN, SHERRY"
+Candidate	"PEREZ, BRIDGET"	"PEREZ, BRIDGET"
+Candidate	"BRUCATO, GEORGE J"	"BRUCATO, GEORGE J"
+Candidate	"RICHARDSON, VINCENT L"	"RICHARDSON, VINCENT L"
+Candidate	"DIEDE, JUANITA"	"DIEDE, JUANITA"
+Candidate	"VIANI, TYLER J"	"VIANI, TYLER J"
+Candidate	"CASTAGNOLA, KATHRYN"	"CASTAGNOLA, KATHRYN"
+Candidate	"DOLBY, TREVOR"	"DOLBY, TREVOR"
+Candidate	"DUTTON, LIANDRA"	"DUTTON, LIANDRA"
+Candidate	"GAMBLE, TIM"	"GAMBLE, TIM"
+Candidate	"GARDNER, RICHARD ""DICK"""	"GARDNER, RICHARD ""DICK"""
+Candidate	"JABBOUR, BRUCE J."	"JABBOUR, BRUCE J."
+Candidate	"STODDARD, TERESA"	"STODDARD, TERESA"
+Candidate	"CARBONE, FRANK"	"CARBONE, FRANK"
+Candidate	"KOENIG, JOHN"	"KOENIG, JOHN"
+Candidate	"BAKER, LOUIS ""LOUIE"" JAMES"	"BAKER, LOUIS ""LOUIE"" JAMES"
+Candidate	"COX, DONNA C."	"COX, DONNA C."
+Candidate	"O'DONNELL, DEANNA"	"O'DONNELL, DEANNA"
+Candidate	"WEHRLY, JOHN"	"WEHRLY, JOHN"
+Candidate	"COMPTON, AARON"	"COMPTON, AARON"
+Candidate	"HAMPTON, OREN E."	"HAMPTON, OREN E."
+Candidate	"HANSEN, MARK D."	"HANSEN, MARK D."
+Candidate	"PETERSON, LIESE S."	"PETERSON, LIESE S."
+Candidate	"HUDSON, SHAYLA"	"HUDSON, SHAYLA"
+Candidate	"SKELTON, DAVID"	"SKELTON, DAVID"
+Candidate	"MANCEBO, MICHAEL"	"MANCEBO, MICHAEL"
+Candidate	"SHIELDS, MELISSA V."	"SHIELDS, MELISSA V."
+Candidate	"MCBRIDE, MARSHALL"	"MCBRIDE, MARSHALL"
+Candidate	"MITCHELL, CLAY"	"MITCHELL, CLAY"
+Candidate	"NASHOLD, LEE"	"NASHOLD, LEE"
+Candidate	"HILTON, PHILLIP A."	"HILTON, PHILLIP A."
+Candidate	"SIMONS, ANNE"	"SIMONS, ANNE"
+Candidate	"HAMES, GARY"	"HAMES, GARY"
+Candidate	"CONLEY, CASEY"	"CONLEY, CASEY"
+Candidate	"THOMPSON, TOM"	"THOMPSON, TOM"
+Candidate	"SCHIFFMAN, STEVE âPRAGMATICâ"	"SCHIFFMAN, STEVE âPRAGMATICâ"
+Candidate	"DOLLINGER, PAIGE"	"DOLLINGER, PAIGE"
+Candidate	"SHANNON, GREG"	"SHANNON, GREG"
+Candidate	"WHITE, LANCE CLARK"	"WHITE, LANCE CLARK"
+Candidate	"RODRIGUEZ, ESTHER C"	"RODRIGUEZ, ESTHER C"
+Candidate	"BAKER, TOM"	"BAKER, TOM"
+Candidate	"CHESNEY, LARRY"	"CHESNEY, LARRY"
+Candidate	"CURRIVAN, JAMES"	"CURRIVAN, JAMES"
+Candidate	"GUGICH, DANIEL"	"GUGICH, DANIEL"
+Candidate	"HELTON, CHRISTOPHER"	"HELTON, CHRISTOPHER"
+Candidate	"OTTO, DONALD"	"OTTO, DONALD"
+Candidate	"PATTERSON, JOHN"	"PATTERSON, JOHN"
+Candidate	"BACLET, JEFF"	"BACLET, JEFF"
+Candidate	"EPPOLITO, JOHN"	"EPPOLITO, JOHN"
+Candidate	"NICOLET, DIANE"	"NICOLET, DIANE"
+Candidate	"WESNER, CRAIG"	"WESNER, CRAIG"
+Candidate	"WHITE, PAUL D"	"WHITE, PAUL D"
+Candidate	"CONNER, DALE M"	"CONNER, DALE M"
+Candidate	"KRASNER, LISA"	"KRASNER, LISA"
+Candidate	"CHURCH, JEFF"	"CHURCH, JEFF"
+Candidate	"GENASCI, LISA"	"GENASCI, LISA"
+Candidate	"HEINEMANN, JACK"	"HEINEMANN, JACK"
+Candidate	"HUERSTEL, TERESE"	"HUERSTEL, TERESE"
+Candidate	"KELLEY, SCOTT"	"KELLEY, SCOTT"
+Candidate	"ARRASCADA, JOSEPH"	"ARRASCADA, JOSEPH"
+Candidate	"DISS, ANDREW"	"DISS, ANDREW"
+Candidate	"LOMBARDI, VINCE"	"LOMBARDI, VINCE"
+Candidate	"MCKENDRICKS, JOHN"	"MCKENDRICKS, JOHN"
+Candidate	"MELCHER, KEVIN"	"MELCHER, KEVIN"
+Candidate	"BERK, STAN"	"BERK, STAN"
+Candidate	"MARQUEZ, MICHAEL ""BROCK"""	"MARQUEZ, MICHAEL ""BROCK"""
+Candidate	"THIGPEN, KURT"	"THIGPEN, KURT"
+Candidate	"LORTON, GEORGE ""EDDIE"""	"LORTON, GEORGE ""EDDIE"""
+Candidate	"MOSKOWITZ, JOE"	"MOSKOWITZ, JOE"
+Candidate	"REESE, DEVON THOMAS"	"REESE, DEVON THOMAS"
+Candidate	"WALKER, MICHAEL"	"WALKER, MICHAEL"
+Candidate	"BREKHUS, JENNY"	"BREKHUS, JENNY"
+Candidate	"DRAKULICH, JOHN ""JD"""	"DRAKULICH, JOHN ""JD"""
+Candidate	"GRIFFITH, BRITTON ANNE"	"GRIFFITH, BRITTON ANNE"
+Candidate	"LOYD, SENA"	"LOYD, SENA"
+Candidate	"MORGAN, DEREK RAY"	"MORGAN, DEREK RAY"
+Candidate	"SCAFFIDI, SHERRIE PAULIE"	"SCAFFIDI, SHERRIE PAULIE"
+Candidate	"O'NEILL, PHILIP ""PK"""	"O'NEILL, PHILIP ""PK"""
+Candidate	"WILLIAMS, DAY ROBERT"	"WILLIAMS, DAY ROBERT"
+Candidate	"ANDERSON, NATHA C"	"ANDERSON, NATHA C"
+Candidate	"MOSER, LEA ""ARCHULETA"""	"MOSER, LEA ""ARCHULETA"""
+Candidate	"DICKMAN, JILL"	"DICKMAN, JILL"
+Candidate	"ESPINOSA, DAVID"	"ESPINOSA, DAVID"
+Candidate	"LINARES, SANDRA"	"LINARES, SANDRA"
+Candidate	"FINK, DARLA"	"FINK, DARLA"
+Candidate	"GOTTSCHALK, KURT"	"GOTTSCHALK, KURT"
+Candidate	"JARDON, NEOMA"	"JARDON, NEOMA"
+Candidate	"WILHELM, LEE ""CHEF"""	"WILHELM, LEE ""CHEF"""
+Candidate	"ABBOTT, DONALD"	"ABBOTT, DONALD"
+Candidate	"GRIMES, KRISTINE"	"GRIMES, KRISTINE"
+Candidate	"KIRTLEY, DICK"	"KIRTLEY, DICK"
+Candidate	"STOLYAROV, WENDY"	"STOLYAROV, WENDY"
+Candidate	"ANDERSON, PAUL S"	"ANDERSON, PAUL S"
+Candidate	"DIAZ, ELVIRA"	"DIAZ, ELVIRA"
+Candidate	"NESS, DAN"	"NESS, DAN"
+Candidate	"SMITH, QUENTIN"	"SMITH, QUENTIN"
+Candidate	"TAVENER, ANDREA"	"TAVENER, ANDREA"
+Candidate	"ALLRED, JAMES"	"ALLRED, JAMES"
+Candidate	"BYBEE, SHANE A."	"BYBEE, SHANE A."
+Candidate	"DISHONG, JOHNATHAN"	"DISHONG, JOHNATHAN"
+Candidate	"CARSON, LAURIE L."	"CARSON, LAURIE L."
+Candidate	"SOUTHWORTH, DON"	"SOUTHWORTH, DON"
+Candidate	"BALCH, LACEY"	"BALCH, LACEY"
+Candidate	"HOWE, RICHARD"	"HOWE, RICHARD"
+Candidate	"BORGHOFF, TERRI"	"BORGHOFF, TERRI"
+Candidate	"MCVICARS, ANGIE"	"MCVICARS, ANGIE"
+Candidate	"NICHOLES, SHELLA"	"NICHOLES, SHELLA"
+Candidate	"CAMPEAU, CANDICE"	"CAMPEAU, CANDICE"
+Candidate	"MCKENZIE, CAROL"	"MCKENZIE, CAROL"
+Candidate	"OLSON, ART M."	"OLSON, ART M."
+Candidate	"BECKWITH, SID"	"BECKWITH, SID"
+Candidate	"WHITTAKER, TONY"	"WHITTAKER, TONY"
+Candidate	"Dawley, David A."	"Dawley, David A."
+Candidate	"Ford, Aaron"	"Ford, Aaron"
+Candidate	"MacKie, Stuart J."	"MacKie, Stuart J."
+Candidate	"Duncan, Wes"	"Duncan, Wes"
+Candidate	"Mueller, Craig"	"Mueller, Craig"
+Candidate	"Bagwell, Lori"	"Bagwell, Lori"
+Candidate	"Rowlatt, Aubrey"	"Rowlatt, Aubrey"
+Candidate	"Woodbury, Jason D."	"Woodbury, Jason D."
+Candidate	"Bonaventura, John"	"Bonaventura, John"
+Candidate	"Dewan, Asheesh"	"Dewan, Asheesh"
+Candidate	"Giunchigliani, Christina ""Chris G"""	"Giunchigliani, Christina ""Chris G"""
+Candidate	"Jones, David E."	"Jones, David E."
+Candidate	"Sisolak, Steve"	"Sisolak, Steve"
+Candidate	"Thorns, Henry"	"Thorns, Henry"
+Candidate	"Boyd, William ""Bill"""	"Boyd, William ""Bill"""
+Candidate	"Carlisle, Stephanie"	"Carlisle, Stephanie"
+Candidate	"Conquest, Frederick L."	"Conquest, Frederick L."
+Candidate	"Dundas, Edward F."	"Dundas, Edward F."
+Candidate	"Fisher, Jared L."	"Fisher, Jared L."
+Candidate	"Laxalt, Adam Paul"	"Laxalt, Adam Paul"
+Candidate	"Lusak, Stan"	"Lusak, Stan"
+Candidate	"Armstrong, Tom"	"Armstrong, Tom"
+Candidate	"Hansen, Laurie L."	"Hansen, Laurie L."
+Candidate	"Marshall, Kate"	"Marshall, Kate"
+Candidate	"Hoover, Eugene"	"Hoover, Eugene"
+Candidate	"Jones, Brent A."	"Jones, Brent A."
+Candidate	"LaFata, Scott Anthony"	"LaFata, Scott Anthony"
+Candidate	"Meyers, Gary Anthony"	"Meyers, Gary Anthony"
+Candidate	"Roberson, Michael"	"Roberson, Michael"
+Candidate	"Ramirez, Lupe"	"Ramirez, Lupe"
+Candidate	"WILKE-MCCULLOCH, STACIE"	"WILKE-MCCULLOCH, STACIE"
+Candidate	"Varner, Richard"	"Varner, Richard"
+Candidate	"Carine, Donald"	"Carine, Donald"
+Candidate	"Aldridge, Ernest C."	"Aldridge, Ernest C."
+Candidate	"Cegavske, Barbara K."	"Cegavske, Barbara K."
+Candidate	"Kieckhefer, Ben"	"Kieckhefer, Ben"
+Candidate	"Schmidt, Gary R."	"Schmidt, Gary R."
+Candidate	"Beers, Bob"	"Beers, Bob"
+Candidate	"Uehara, Derek"	"Uehara, Derek"
+Candidate	"Aberasturi, Leon"	"Aberasturi, Leon"
+Candidate	"Cadish, Elissa"	"Cadish, Elissa"
+Candidate	"Lefebvre, Alan J."	"Lefebvre, Alan J."
+Candidate	"Rutledge, John"	"Rutledge, John"
+Candidate	"Tao, Jerry"	"Tao, Jerry"
+Candidate	"Robertson, Gayle"	"Robertson, Gayle"
+Candidate	"Alm, Vance"	"Alm, Vance"
+Candidate	"FOGARTY, PATRICK"	"FOGARTY, PATRICK"
+Candidate	"SCHOFIELD JR., JACK L."	"SCHOFIELD JR., JACK L."
+Candidate	"ANGLE, SHARRON"	"ANGLE, SHARRON"
+Candidate	"Burleigh, Danny"	"Burleigh, Danny"
+Candidate	"Knight, David Drew"	"Knight, David Drew"
+Candidate	"Mahendra, Sujeet ""Bobby"""	"Mahendra, Sujeet ""Bobby"""
+Candidate	"Rosen, Jacky"	"Rosen, Jacky"
+Candidate	"Sbaih, Jesse"	"Sbaih, Jesse"
+Candidate	"Brooks, Sherry"	"Brooks, Sherry"
+Candidate	"Gazala, Sarah"	"Gazala, Sarah"
+Candidate	"Harrell, Vic"	"Harrell, Vic"
+Candidate	"Heck, Tom"	"Heck, Tom"
+Candidate	"Heller, Dean"	"Heller, Dean"
+Candidate	"Del Carlo, Carol"	"Del Carlo, Carol"
+Candidate	"BUCKMASTER, FREDERICK D."	"BUCKMASTER, FREDERICK D."
+Candidate	"GETTO, AMBER N."	"GETTO, AMBER N."
+Candidate	"HENDRIX, CLAY"	"HENDRIX, CLAY"
+Candidate	"HYDE, MATT"	"HYDE, MATT"
+Candidate	"JULIAN, PATTY"	"JULIAN, PATTY"
+Candidate	"LINGENFELTER, JAY"	"LINGENFELTER, JAY"
+Candidate	"MARTELL, DANTE A."	"MARTELL, DANTE A."
+Candidate	"MCDONALD, TEDD"	"MCDONALD, TEDD"
+Candidate	"PARMENTER, BOBBY J."	"PARMENTER, BOBBY J."
+Candidate	"SCHANK, CARMEN"	"SCHANK, CARMEN"
+Candidate	"SMOTHERMAN, DEBY"	"SMOTHERMAN, DEBY"
+Candidate	"WIERSMA JR., RICHARD HARRY"	"WIERSMA JR., RICHARD HARRY"
+Candidate	"BARRENCHEA, CORINE ""RINNIE"""	"BARRENCHEA, CORINE ""RINNIE"""
+Candidate	"ROTHERY, LINDA"	"ROTHERY, LINDA"
+Candidate	"CHRISTIE, WALTER H. ""BUTCH"""	"CHRISTIE, WALTER H. ""BUTCH"""
+Candidate	"EAST, RAY"	"EAST, RAY"
+Candidate	"HICKOX, RICHARD C."	"HICKOX, RICHARD C."
+Candidate	"JONES, JARED"	"JONES, JARED"
+Candidate	"MOSER, JOHN"	"MOSER, JOHN"
+Candidate	"Bedwell, Tim"	"Bedwell, Tim"
+Candidate	"Caldwell, Matt"	"Caldwell, Matt"
+Candidate	"Heiny, Gregory S."	"Heiny, Gregory S."
+Candidate	"LOMBARDO, JOE"	"LOMBARDO, JOE"
+Candidate	"Martines, Gordon"	"Martines, Gordon"
+Candidate	"Johnson, Briana"	"Johnson, Briana"
+Candidate	"MacFarlane, Jill"	"MacFarlane, Jill"
+Candidate	"Moore, John"	"Moore, John"
+Candidate	"Paretts, Jayson"	"Paretts, Jayson"
+Candidate	"FITZPATRICK, LAURA"	"FITZPATRICK, LAURA"
+Candidate	"O'SULLIVAN, KEN ""Sully"""	"O'SULLIVAN, KEN ""Sully"""
+Candidate	"Collins, Phil"	"Collins, Phil"
+Candidate	"Quilang, Ron Q."	"Quilang, Ron Q."
+Candidate	"Langford, Robert L."	"Langford, Robert L."
+Candidate	"WOLFSON, STEVE"	"WOLFSON, STEVE"
+Candidate	"Ginn, Vincent ""Vinny"""	"Ginn, Vincent ""Vinny"""
+Candidate	"Graham, Elana Lee"	"Graham, Elana Lee"
+Candidate	"Leavitt, James Dean"	"Leavitt, James Dean"
+Candidate	"ANDRESS-TOBIASSON, MELANIE"	"ANDRESS-TOBIASSON, MELANIE"
+Candidate	"De La Garza, Melisa"	"De La Garza, Melisa"
+Candidate	"Friedberg, Craig B."	"Friedberg, Craig B."
+Candidate	"Rogan, Jeff"	"Rogan, Jeff"
+Candidate	"SCISCENTO, JOSEPH S."	"SCISCENTO, JOSEPH S."
+Candidate	"DUSTIN-CRUZ, CYNTHIA"	"DUSTIN-CRUZ, CYNTHIA"
+Candidate	"ZIMMERMAN, ANN E."	"ZIMMERMAN, ANN E."
+Candidate	"Fougere, Thomas L."	"Fougere, Thomas L."
+Candidate	"Manfredi, Aaron"	"Manfredi, Aaron"
+Candidate	"Frierson, Jason"	"Frierson, Jason"
+Candidate	"Ballinger, Mary E."	"Ballinger, Mary E."
+Candidate	"Eady, Eileen"	"Eady, Eileen"
+Candidate	"Ford, Danielle"	"Ford, Danielle"
+Candidate	"Gardner, David"	"Gardner, David"
+Candidate	"Miller, Kali Fox"	"Miller, Kali Fox"
+Candidate	"Musemici, Tammi N."	"Musemici, Tammi N."
+Candidate	"Thomas, Mike"	"Thomas, Mike"
+Candidate	"Trumbull, Jacquelyn"	"Trumbull, Jacquelyn"
+Candidate	"Wilson, Johnny"	"Wilson, Johnny"
+Candidate	"D'SILVA, REUBEN"	"D'SILVA, REUBEN"
+Candidate	"Horne, Fred"	"Horne, Fred"
+Candidate	"Arrington, Cherlyn"	"Arrington, Cherlyn"
+Candidate	"Atamian, Garo"	"Atamian, Garo"
+Candidate	"Hart, Richard ""Rick"""	"Hart, Richard ""Rick"""
+Candidate	"Love, John ""Jack"""	"Love, John ""Jack"""
+Candidate	"Pinjuv, Guy"	"Pinjuv, Guy"
+Candidate	"Schiffman, Steven Mitchell ""The Mench"""	"Schiffman, Steven Mitchell ""The Mench"""
+Candidate	"Stoltz, Eric"	"Stoltz, Eric"
+Candidate	"Weiss, Michael"	"Weiss, Michael"
+Candidate	"Carter, Patrick"	"Carter, Patrick"
+Candidate	"Hamilton, Eddie ""MisterMago"""	"Hamilton, Eddie ""MisterMago"""
+Candidate	"Hammond, Scott"	"Hammond, Scott"
+Candidate	"Jones, Stephanie ""BdyBySteph"""	"Jones, Stephanie ""BdyBySteph"""
+Candidate	"La Croix, Thomas Mark"	"La Croix, Thomas Mark"
+Candidate	"McKeon, David"	"McKeon, David"
+Candidate	"Teijeiro, Annette"	"Teijeiro, Annette"
+Candidate	"HILL, RICHARD"	"HILL, RICHARD"
+Candidate	"Leavitt, Glen"	"Leavitt, Glen"
+Candidate	"McCarthy, Matt"	"McCarthy, Matt"
+Candidate	"ATKINS, TIM"	"ATKINS, TIM"
+Candidate	"Cepeda, Irene"	"Cepeda, Irene"
+Candidate	"Martinez, Jr., Leobardo"	"Martinez, Jr., Leobardo"
+Candidate	"Thompson, Eli"	"Thompson, Eli"
+Candidate	"Gorelow, Michelle"	"Gorelow, Michelle"
+Candidate	"Nimsuwan, Paul"	"Nimsuwan, Paul"
+Candidate	"Jones, Aimee"	"Jones, Aimee"
+Candidate	"Schoen, David"	"Schoen, David"
+Candidate	"McCullough, Larry"	"McCullough, Larry"
+Candidate	"Rebollo, Justin Allen"	"Rebollo, Justin Allen"
+Candidate	"Scheible, Melanie"	"Scheible, Melanie"
+Candidate	"West, Brandon"	"West, Brandon"
+Candidate	"Aizley, Paul"	"Aizley, Paul"
+Candidate	"Pazina, Julie"	"Pazina, Julie"
+Candidate	"Pickard, Keith"	"Pickard, Keith"
+Candidate	"COHEN, LESLEY elizabeth"	"COHEN, LESLEY elizabeth"
+Candidate	"Watson, Terry L."	"Watson, Terry L."
+Candidate	"Carter, Amber"	"Carter, Amber"
+Candidate	"Cortese, Gregory"	"Cortese, Gregory"
+Candidate	"Kostas, Socrates"	"Kostas, Socrates"
+Candidate	"Lee, Charles"	"Lee, Charles"
+Candidate	"Shupe, Larry"	"Shupe, Larry"
+Candidate	"BATEMAN, SAMUEL"	"BATEMAN, SAMUEL"
+Candidate	"Aguirre-Insua, Luis"	"Aguirre-Insua, Luis"
+Candidate	"Watson, Kristee"	"Watson, Kristee"
+Candidate	"Bunce, Richard"	"Bunce, Richard"
+Candidate	"Hardy, Melissa"	"Hardy, Melissa"
+Candidate	"Carvalho, Amy"	"Carvalho, Amy"
+Candidate	"Coates, Andrew"	"Coates, Andrew"
+Candidate	"Coca, T. Rao"	"Coca, T. Rao"
+Candidate	"Gutschick, Bob"	"Gutschick, Bob"
+Candidate	"Cannon, Linda"	"Cannon, Linda"
+Candidate	"Keller, Barry"	"Keller, Barry"
+Candidate	"Assefa, Alexander"	"Assefa, Alexander"
+Candidate	"Henry, LaDon"	"Henry, LaDon"
+Candidate	"Lauckner, Kathleen"	"Lauckner, Kathleen"
+Candidate	"CANCELA, YVANNA"	"CANCELA, YVANNA"
+Candidate	"Henderson, Bryce"	"Henderson, Bryce"
+Candidate	"Bradley, Joseph J."	"Bradley, Joseph J."
+Candidate	"Hof, Dennis"	"Hof, Dennis"
+Candidate	"Oscarson, James"	"Oscarson, James"
+Candidate	"ELIASON, ROBERT L."	"ELIASON, ROBERT L."
+Candidate	"James, Sr., Isaac C."	"James, Sr., Isaac C."
+Candidate	"Martin, Jon"	"Martin, Jon"
+Candidate	"Roundy, Travis"	"Roundy, Travis"
+Candidate	"Vega, Jimmy"	"Vega, Jimmy"
+Candidate	"HOO, KALANI"	"HOO, KALANI"
+Candidate	"TYRRELL, NATALIE"	"TYRRELL, NATALIE"
+Candidate	"Anzalone, John"	"Anzalone, John"
+Candidate	"Spearman, Patricia ""Pat"""	"Spearman, Patricia ""Pat"""
+Candidate	"Stephens, Allison"	"Stephens, Allison"
+Candidate	"Vilela, Amy"	"Vilela, Amy"
+Candidate	"Zeller, Sid"	"Zeller, Sid"
+Candidate	"Gibbs, David Glenn"	"Gibbs, David Glenn"
+Candidate	"Hardy, Cresent"	"Hardy, Cresent"
+Candidate	"Miller, Jeff"	"Miller, Jeff"
+Candidate	"Monroe, Mike"	"Monroe, Mike"
+Candidate	"Townsend, Bill"	"Townsend, Bill"
+Candidate	"Wegner, Kenneth A."	"Wegner, Kenneth A."
+Candidate	"Cato, Jo"	"Cato, Jo"
+Candidate	"Mallory, Jack"	"Mallory, Jack"
+Candidate	"Olson, David M."	"Olson, David M."
+Candidate	"Perkins, Laura E."	"Perkins, Laura E."
+Candidate	"Ramirez, Eddie"	"Ramirez, Eddie"
+Candidate	"MILLS, GREGORY S."	"MILLS, GREGORY S."
+Candidate	"Solomon, Drue R."	"Solomon, Drue R."
+Candidate	"Waite, Kyle"	"Waite, Kyle"
+Candidate	Brandon J Casutt	Brandon J Casutt
+Candidate	"D'AYR, Gabrielle"	"D'AYR, Gabrielle"
+Candidate	"Levy, Anat ""Annette"""	"Levy, Anat ""Annette"""
+Candidate	"Martinez, Susan"	"Martinez, Susan"
+Candidate	"Moore, Cinthia"	"Moore, Cinthia"
+Candidate	"SEIP, II, WALTER L."	"SEIP, II, WALTER L."
+Candidate	"York, Gregory"	"York, Gregory"
+Candidate	"Craddock, Jay"	"Craddock, Jay"
+Candidate	"Glazer, Christine"	"Glazer, Christine"
+Candidate	"Ohrenschall, James"	"Ohrenschall, James"
+Candidate	"McMichael, Sr., Donald Sylvantee"	"McMichael, Sr., Donald Sylvantee"
+Candidate	"Munk, Connie"	"Munk, Connie"
+Candidate	"Smith, Tony T."	"Smith, Tony T."
+Candidate	"Rezendes, Kenneth"	"Rezendes, Kenneth"
+Candidate	"Vega, Luis"	"Vega, Luis"
+Candidate	"Kemp, James ""JP"""	"Kemp, James ""JP"""
+Candidate	"Roberts, Tom"	"Roberts, Tom"
+Candidate	"Sanson, Steve"	"Sanson, Steve"
+Candidate	"Mercer, L. Kay"	"Mercer, L. Kay"
+Candidate	"Ramaker, Sandra"	"Ramaker, Sandra"
+Candidate	"Withelder, Geno"	"Withelder, Geno"
+Candidate	"Kruder, Chuck"	"Kruder, Chuck"
+Candidate	"Hughes, Shawn L."	"Hughes, Shawn L."
+Candidate	"THURSTON, DUANE L."	"THURSTON, DUANE L."
+Candidate	"TOONE, RYAN W."	"TOONE, RYAN W."
+Candidate	"KOLHOSS, RUTH"	"KOLHOSS, RUTH"
+Candidate	"Backus, Shea"	"Backus, Shea"
+Candidate	"Cornstuble, Rick"	"Cornstuble, Rick"
+Candidate	"Pearce, Robbie Lucille"	"Pearce, Robbie Lucille"
+Candidate	"Laurie, Anthony A."	"Laurie, Anthony A."
+Candidate	"Wesen, Janice E."	"Wesen, Janice E."
+Candidate	"Hambrick, John C."	"Hambrick, John C."
+Candidate	"Alvarado, Stephanie"	"Alvarado, Stephanie"
+Candidate	"Loop, Marilyn Dondero"	"Loop, Marilyn Dondero"
+Candidate	"Helgelien, Elizabeth"	"Helgelien, Elizabeth"
+Candidate	"Rodimer, Dan"	"Rodimer, Dan"
+Candidate	"Weber, Valerie"	"Weber, Valerie"
+Candidate	"Burke, Jason"	"Burke, Jason"
+Candidate	"Chavez, Juan Manuel"	"Chavez, Juan Manuel"
+Candidate	"Gandy, Michael"	"Gandy, Michael"
+Candidate	"Spivak, Andrew"	"Spivak, Andrew"
+Candidate	"Toomin, Louis A. ""Lou"""	"Toomin, Louis A. ""Lou"""
+Candidate	"Watts, III, Howard"	"Watts, III, Howard"
+Candidate	"Hernandez, Marco"	"Hernandez, Marco"
+Candidate	"Segerblom, ""Tick"""	"Segerblom, ""Tick"""
+Candidate	"Marsh, Trish"	"Marsh, Trish"
+Candidate	"Rose, Randy"	"Rose, Randy"
+Candidate	"Hawkins, Richard E."	"Hawkins, Richard E."
+Candidate	"Sadler, Matt"	"Sadler, Matt"
+Candidate	"Hunt, Jason"	"Hunt, Jason"
+Candidate	"Jones, Justin"	"Jones, Justin"
+Candidate	"Black, Tisha"	"Black, Tisha"
+Candidate	"Lake, Cindy"	"Lake, Cindy"
+Candidate	"Van Dover, Fred"	"Van Dover, Fred"
+Candidate	"Engels, John"	"Engels, John"
+Candidate	"Thaler, Steven"	"Thaler, Steven"
+Candidate	"Murphy, Janet"	"Murphy, Janet"
+Candidate	"Rice, Wesley A."	"Rice, Wesley A."
+Candidate	"Logan, Deborah ""Debbie"""	"Logan, Deborah ""Debbie"""
+Candidate	"Walsh, Steve"	"Walsh, Steve"
+Candidate	"Etchegoyhen, Dion"	"Etchegoyhen, Dion"
+Candidate	"Tholen, Trent"	"Tholen, Trent"
+Candidate	"Brady, David J."	"Brady, David J."
+Candidate	"Coverley, Dan"	"Coverley, Dan"
+Candidate	"Duffy, Joe"	"Duffy, Joe"
+Candidate	"Paris, Dean"	"Paris, Dean"
+Candidate	"Lehmann, Robbe"	"Lehmann, Robbe"
+Candidate	"Moore, Thomas"	"Moore, Thomas"
+Candidate	"Chichester, Ross"	"Chichester, Ross"
+Candidate	"Glasson, Richard"	"Glasson, Richard"
+Candidate	"CRACRAFT-DICKENSON, TAMMIE"	"CRACRAFT-DICKENSON, TAMMIE"
+Candidate	"WINES, IRA T."	"WINES, IRA T."
+Candidate	"ELLISON, JOHN C."	"ELLISON, JOHN C."
+Candidate	"JOHNSON, CHRIS J."	"JOHNSON, CHRIS J."
+Candidate	"FEASEL, TERI"	"FEASEL, TERI"
+Candidate	"CALTON, KENNY"	"CALTON, KENNY"
+Candidate	"SWETT, NOAH J."	"SWETT, NOAH J."
+Candidate	"THORNAL, SHAUNIA"	"THORNAL, SHAUNIA"
+Candidate	"BOATMAN, BRIAN E."	"BOATMAN, BRIAN E."
+Candidate	"CHRISTENSEN, MICHAEL"	"CHRISTENSEN, MICHAEL"
+Candidate	"ORTEGA, MARIA G."	"ORTEGA, MARIA G."
+Candidate	"RAY, BRIAN"	"RAY, BRIAN"
+Candidate	"SANTILLANEZ, CAROLYN"	"SANTILLANEZ, CAROLYN"
+Candidate	"BATES, MICHELLE ""Micki"""	"BATES, MICHELLE ""Micki"""
+Candidate	"HIGGINS, PRESTON ""P.K."""	"HIGGINS, PRESTON ""P.K."""
+Candidate	"STEZAKER, MARK"	"STEZAKER, MARK"
+Candidate	"JOHNSON, DANIELLE ""Danie"""	"JOHNSON, DANIELLE ""Danie"""
+Candidate	"BROWNFIELD, CARL V."	"BROWNFIELD, CARL V."
+Candidate	"HARTMAN, MARCIA"	"HARTMAN, MARCIA"
+Candidate	"BOTELER, JD"	"BOTELER, JD"
+Candidate	"ELGAN, KEN"	"ELGAN, KEN"
+Candidate	"GIOVE, TONY"	"GIOVE, TONY"
+Candidate	"Fransway, Tom"	"Fransway, Tom"
+Candidate	"Hansen, Alexis M."	"Hansen, Alexis M."
+Candidate	"CLONINGER, JENNIFER"	"CLONINGER, JENNIFER"
+Candidate	"HOEHNE, LISA L."	"HOEHNE, LISA L."
+Candidate	"ANDERSON, ASHLEY E."	"ANDERSON, ASHLEY E."
+Candidate	"FITZWATER, MELISSA"	"FITZWATER, MELISSA"
+Candidate	"HICKS, ROBIN"	"HICKS, ROBIN"
+Candidate	"IZZOLO, JIM"	"IZZOLO, JIM"
+Candidate	"CANTRELL, Patrick Shane"	"CANTRELL, Patrick Shane"
+Candidate	"SANDERS, KENNETH ""KENNY"""	"SANDERS, KENNETH ""KENNY"""
+Candidate	"WATTS, JESSE"	"WATTS, JESSE"
+Candidate	"BROWN, ELDON R."	"BROWN, ELDON R."
+Candidate	"Miller, Michelle"	"Miller, Michelle"
+Candidate	"Deputy, Glenda J."	"Deputy, Glenda J."
+Candidate	"Bengochea, Nicole H."	"Bengochea, Nicole H."
+Candidate	"Allen, Mike"	"Allen, Mike"
+Candidate	"Fortune, Denise"	"Fortune, Denise"
+Candidate	"Johnson, Michael E."	"Johnson, Michael E."
+Candidate	"Jones, Joseph"	"Jones, Joseph"
+Candidate	"Melver, Toby"	"Melver, Toby"
+Candidate	"Sunseri, Joseph"	"Sunseri, Joseph"
+Candidate	"Garner, Brian"	"Garner, Brian"
+Candidate	"Sparks, Bryan"	"Sparks, Bryan"
+Candidate	"Clark, Art ""III"""	"Clark, Art ""III"""
+Candidate	"Love, Nicholas A."	"Love, Nicholas A."
+Candidate	"Ancho, Kathleen V."	"Ancho, Kathleen V."
+Candidate	"Bakker, Sean"	"Bakker, Sean"
+Candidate	"Mason, David R."	"Mason, David R."
+Candidate	"Herrera, Theodore C."	"Herrera, Theodore C."
+Candidate	"Schaeffer, William E. ""Bill"""	"Schaeffer, William E. ""Bill"""
+Candidate	"Bunch, Lesley L."	"Bunch, Lesley L."
+Candidate	"Fuller, Deonilla"	"Fuller, Deonilla"
+Candidate	"Green, Paula"	"Green, Paula"
+Candidate	"Castellanos, Noliena Frazier"	"Castellanos, Noliena Frazier"
+Candidate	"Ramos, ""Bert"" Bartolo"	"Ramos, ""Bert"" Bartolo"
+Candidate	"Unger, Ron"	"Unger, Ron"
+Candidate	"Chopp, Mike"	"Chopp, Mike"
+Candidate	"Gonzalez, Jorge"	"Gonzalez, Jorge"
+Candidate	"Marine, Laken"	"Marine, Laken"
+Candidate	"Staton, Douglas S. III"	"Staton, Douglas S. III"
+Candidate	"Thompson, W. Todd"	"Thompson, W. Todd"
+Candidate	"Hulse, Frank C."	"Hulse, Frank C."
+Candidate	"Lister, Bevan"	"Lister, Bevan"
+Candidate	"Woodworth, Janine A."	"Woodworth, Janine A."
+Candidate	"Frehner, Dylan V."	"Frehner, Dylan V."
+Candidate	"Hooge, Daniel M."	"Hooge, Daniel M."
+Candidate	"Lloyd, Mick"	"Lloyd, Mick"
+Candidate	"Avery, Terry"	"Avery, Terry"
+Candidate	"Holton, Nola A."	"Holton, Nola A."
+Candidate	"Mizer, Joseph ""Ty"""	"Mizer, Joseph ""Ty"""
+Candidate	"Poulsen, Wade"	"Poulsen, Wade"
+Candidate	"Bryan, Nikki"	"Bryan, Nikki"
+Candidate	"Crabtree, Kimber Lee Ann"	"Crabtree, Kimber Lee Ann"
+Candidate	"Alt, Don"	"Alt, Don"
+Candidate	"Keller, Vida D."	"Keller, Vida D."
+Candidate	"Nivens, Raymond Everett ""Ray"""	"Nivens, Raymond Everett ""Ray"""
+Candidate	"McIntyre, Neal E."	"McIntyre, Neal E."
+Candidate	"Peterson, Bridget"	"Peterson, Bridget"
+Candidate	"Kassebaum, Margie"	"Kassebaum, Margie"
+Candidate	"Wood, Stephen"	"Wood, Stephen"
+Candidate	"Brunson, Douglas"	"Brunson, Douglas"
+Candidate	"Hunewill, Frank"	"Hunewill, Frank"
+Candidate	"KANTZ, GREG"	"KANTZ, GREG"
+Candidate	"MCNEIL, AL"	"MCNEIL, AL"
+Candidate	"Bickerton, Tim"	"Bickerton, Tim"
+Candidate	"Edgington, Roy"	"Edgington, Roy"
+Candidate	"Hanan, Ryan P."	"Hanan, Ryan P."
+Candidate	"Matheus, Lori"	"Matheus, Lori"
+Candidate	"Hicks, Terrin"	"Hicks, Terrin"
+Candidate	"Johnson, Matt"	"Johnson, Matt"
+Candidate	"Murphy, Chris"	"Murphy, Chris"
+Candidate	"Seidl, Sue"	"Seidl, Sue"
+Candidate	"Sheldon, Dean"	"Sheldon, Dean"
+Candidate	"Standlee, Kevin"	"Standlee, Kevin"
+Candidate	"Watson, Luverne ""Vern"""	"Watson, Luverne ""Vern"""
+Candidate	"Jones, Richard ""Rick"""	"Jones, Richard ""Rick"""
+Candidate	"Lacy, Ray"	"Lacy, Ray"
+Candidate	"Whalen, Shari L."	"Whalen, Shari L."
+Candidate	"Williams, SR., Barry R."	"Williams, SR., Barry R."
+Candidate	"Vecchiarelli, Camille"	"Vecchiarelli, Camille"
+Candidate	"Clark, Janeen"	"Clark, Janeen"
+Candidate	"Tipton, Jerrie"	"Tipton, Jerrie"
+Candidate	"Hoferer, Christine"	"Hoferer, Christine"
+Candidate	"Owens, Barbara ""Barb"""	"Owens, Barbara ""Barb"""
+Candidate	"Owens, Russell C."	"Owens, Russell C."
+Candidate	"Utterback, James ""Gunny"""	"Utterback, James ""Gunny"""
+Candidate	"SCHAAF, GARY"	"SCHAAF, GARY"
+Candidate	"Fitzgerald, Tom"	"Fitzgerald, Tom"
+Candidate	"Schumann, Richard Lee"	"Schumann, Richard Lee"
+Candidate	"Womack, Karen"	"Womack, Karen"
+Candidate	"Hatfield, Breanna"	"Hatfield, Breanna"
+Candidate	"James, Mike"	"James, Mike"
+Candidate	"Kenner, James W."	"Kenner, James W."
+Candidate	"Reed, Paula Joe"	"Reed, Paula Joe"
+Candidate	"Farley, Teresa"	"Farley, Teresa"
+Candidate	"Neville, Keith E."	"Neville, Keith E."
+Candidate	"Ziegler, David"	"Ziegler, David"
+Candidate	"Castagnola, Kathy"	"Castagnola, Kathy"
+Candidate	"Birchum, Candice"	"Birchum, Candice"
+Candidate	"George, Cherrie"	"George, Cherrie"
+Candidate	"Nixon, Cindy"	"Nixon, Cindy"
+Candidate	"ARABIA, CHRIS"	"ARABIA, CHRIS"
+Candidate	"BELLO, ANGELA A."	"BELLO, ANGELA A."
+Candidate	"STUMNE, GINGER L."	"STUMNE, GINGER L."
+Candidate	"BUTLER, GERALD C."	"BUTLER, GERALD C."
+Candidate	"CHAMPION, DAVE"	"CHAMPION, DAVE"
+Candidate	"DEMEO, TONY"	"DEMEO, TONY"
+Candidate	"HIEBERT, DAVID"	"HIEBERT, DAVID"
+Candidate	"KULKIN, ASA"	"KULKIN, ASA"
+Candidate	"MIELZYNSKI, RAY ""THE FLAGMAN"""	"MIELZYNSKI, RAY ""THE FLAGMAN"""
+Candidate	"MOFFETT, JOE"	"MOFFETT, JOE"
+Candidate	"PFAFF, TASHA"	"PFAFF, TASHA"
+Candidate	"REX, KENNETH"	"REX, KENNETH"
+Candidate	"WEHRLY, SHARON A."	"WEHRLY, SHARON A."
+Candidate	"BORASKY, A. BUTCH"	"BORASKY, A. BUTCH"
+Candidate	"PRUDHONT, JOHN"	"PRUDHONT, JOHN"
+Candidate	"WEBSTER, PAM"	"WEBSTER, PAM"
+Candidate	"ZLOTEK, MARY DAWN"	"ZLOTEK, MARY DAWN"
+Candidate	"SULLIVAN, GUS"	"SULLIVAN, GUS"
+Candidate	"MORONES, ROGER"	"MORONES, ROGER"
+Candidate	"KLAPPER, JENNIFER"	"KLAPPER, JENNIFER"
+Candidate	"GREBER, KARMIN"	"GREBER, KARMIN"
+Candidate	"CHAMLEE, LISA"	"CHAMLEE, LISA"
+Candidate	"HAMILTON, RICHARD F."	"HAMILTON, RICHARD F."
+Candidate	"JONES, RANDY"	"JONES, RANDY"
+Candidate	"MARTIN, ROBERT M."	"MARTIN, ROBERT M."
+Candidate	"PAWLIUK, WARREN"	"PAWLIUK, WARREN"
+Candidate	"BOSKOVICH, RON"	"BOSKOVICH, RON"
+Candidate	"TRENNER, TINA"	"TRENNER, TINA"
+Candidate	"TURNER, WALT"	"TURNER, WALT"
+Candidate	"GRANT, RAY T."	"GRANT, RAY T."
+Candidate	"NORVELL, JOHN A."	"NORVELL, JOHN A."
+Candidate	"OWENS, MARK"	"OWENS, MARK"
+Candidate	"RUST, DONALD E."	"RUST, DONALD E."
+Candidate	"LILLY, DWIGHT"	"LILLY, DWIGHT"
+Candidate	"MARCHETTI, LEO B."	"MARCHETTI, LEO B."
+Candidate	"SCHINHOFEN, DAN"	"SCHINHOFEN, DAN"
+Candidate	"STRICKLAND, DEBRA"	"STRICKLAND, DEBRA"
+Candidate	"SUTTON, TIM"	"SUTTON, TIM"
+Candidate	"STEPHENS, KAREN"	"STEPHENS, KAREN"
+Candidate	"BASSO-CERINI, LAUREEN E."	"BASSO-CERINI, LAUREEN E."
+Candidate	"HODGES, MACKENZIE"	"HODGES, MACKENZIE"
+Candidate	"SHANK, CAROL A."	"SHANK, CAROL A."
+Candidate	"EVANS, JAMES"	"EVANS, JAMES"
+Candidate	"FENNER, ANN-MARIE"	"FENNER, ANN-MARIE"
+Candidate	"HUDSON, MICHAEL"	"HUDSON, MICHAEL"
+Candidate	"PLUMMER, CINDY"	"PLUMMER, CINDY"
+Candidate	"RACKLEY, BARBARA"	"RACKLEY, BARBARA"
+Candidate	"ALLEN, JERRY"	"ALLEN, JERRY"
+Candidate	"Carmona, Jay"	"Carmona, Jay"
+Candidate	"McGuffey, Jack R."	"McGuffey, Jack R."
+Candidate	"Langer, Anne"	"Langer, Anne"
+Candidate	"Neidert, Dave"	"Neidert, Dave"
+Candidate	"Herrington, Eileen F."	"Herrington, Eileen F."
+Candidate	"Miller, Dawn"	"Miller, Dawn"
+Candidate	"ANTINORO, GERALD"	"ANTINORO, GERALD"
+Candidate	"Clark, Bruce"	"Clark, Bruce"
+Candidate	"Cullen, Mike"	"Cullen, Mike"
+Candidate	"Coristine, John"	"Coristine, John"
+Candidate	"Dehne, Chad"	"Dehne, Chad"
+Candidate	"Hagen, Michael"	"Hagen, Michael"
+Candidate	"Lorton, Eddie"	"Lorton, Eddie"
+Candidate	"Mantle, William"	"Mantle, William"
+Candidate	"Razo, Jesse O."	"Razo, Jesse O."
+Candidate	"Schieve, Hillary"	"Schieve, Hillary"
+Candidate	"Shirazi, Azzi"	"Shirazi, Azzi"
+Candidate	"Evans, H. D. ""Chip"""	"Evans, H. D. ""Chip"""
+Candidate	"Jauregui-Jackins, Wendy"	"Jauregui-Jackins, Wendy"
+Candidate	"Clark, Aaron"	"Clark, Aaron"
+Candidate	"Clark, Michael E."	"Clark, Michael E."
+Candidate	"Maciel, Lisa"	"Maciel, Lisa"
+Candidate	"Sarman, Chris"	"Sarman, Chris"
+Candidate	"Dreiling, Derek"	"Dreiling, Derek"
+Candidate	"Hascheff, Pierre"	"Hascheff, Pierre"
+Candidate	"Balaam, Darin"	"Balaam, Darin"
+Candidate	"Boxx, Sherman Bard"	"Boxx, Sherman Bard"
+Candidate	"Cossio, Jerry Guzman"	"Cossio, Jerry Guzman"
+Candidate	"Fox, Allan"	"Fox, Allan"
+Candidate	"Hopkins, Adam Eugene"	"Hopkins, Adam Eugene"
+Candidate	"Howe, Heidi"	"Howe, Heidi"
+Candidate	"Meyer, Kim"	"Meyer, Kim"
+Candidate	"Coleman, Edward"	"Coleman, Edward"
+Candidate	"Contine, Deonne"	"Contine, Deonne"
+Candidate	"Peters, Sarah"	"Peters, Sarah"
+Candidate	"Stewart, Tom"	"Stewart, Tom"
+Candidate	"Grush, Austin Jacob"	"Grush, Austin Jacob"
+Candidate	"Jung, Kitty K."	"Jung, Kitty K."
+Candidate	"Calvert, Jacqueline"	"Calvert, Jacqueline"
+Candidate	"Church, Jeffrey"	"Church, Jeffrey"
+Candidate	"Gonda, Ryan"	"Gonda, Ryan"
+Candidate	"Judd, Lindsy"	"Judd, Lindsy"
+Candidate	"Smith, Greg"	"Smith, Greg"
+Candidate	"Davis, Maria"	"Davis, Maria"
+Candidate	"Duerr, Naomi"	"Duerr, Naomi"
+Candidate	"Lawrence, Joe"	"Lawrence, Joe"
+Candidate	"Buchanan, Kelvin J. ""Kel"""	"Buchanan, Kelvin J. ""Kel"""
+Candidate	"Delaire, Bret Edward"	"Delaire, Bret Edward"
+Candidate	"Lucey, Bob"	"Lucey, Bob"
+Candidate	"McKenzie, Paul D."	"McKenzie, Paul D."
+Candidate	"Weber, Bonnie"	"Weber, Bonnie"
+Candidate	"Yott, Joseph"	"Yott, Joseph"
+Candidate	"Minetto, Ellen"	"Minetto, Ellen"
+Candidate	"Morlet, David"	"Morlet, David"
+Candidate	"Vanderwell, Dian"	"Vanderwell, Dian"
+Candidate	"Bonano, Jeff"	"Bonano, Jeff"
+Candidate	"Smith, Ron"	"Smith, Ron"
+Candidate	"Wacker, Eric"	"Wacker, Eric"
+Candidate	"Wilson, Chris"	"Wilson, Chris"
+Candidate	"Bybee, Charlene T."	"Bybee, Charlene T."
+Candidate	"Hunt, Brian"	"Hunt, Brian"
+Candidate	"Viola Jr., Rudy"	"Viola Jr., Rudy"
+Candidate	"Graham, Terry L."	"Graham, Terry L."
+Candidate	"Callicrate, Tim G."	"Callicrate, Tim G."
+Candidate	"Price, Benecia"	"Price, Benecia"
+Candidate	"Robinson, Tony"	"Robinson, Tony"
+Candidate	"Schmitz, Sara"	"Schmitz, Sara"
+Candidate	"Simonian, Bruce Edward"	"Simonian, Bruce Edward"
+Candidate	"Wong, Kendra W."	"Wong, Kendra W."
+Candidate	"Tiras, E. Alan"	"Tiras, E. Alan"
+Candidate	"Baldwin, Nichole"	"Baldwin, Nichole"
+Candidate	"Rhoades, Meg M."	"Rhoades, Meg M."
+Candidate	"Bullis, Ian"	"Bullis, Ian"
+Candidate	"McKenzie, Carol O."	"McKenzie, Carol O."
+Candidate	"Godon, Travis"	"Godon, Travis"
+Candidate	"Bishop, Stephen J."	"Bishop, Stephen J."
+Candidate	"Costello, David J."	"Costello, David J."
+Candidate	"Hibbs, Matt"	"Hibbs, Matt"
+Candidate	"Sandoval, Tasheena"	"Sandoval, Tasheena"
+Candidate	"Backus, Gracyne"	"Backus, Gracyne"
+Candidate	"Cervantes, Juan Carlos"	"Cervantes, Juan Carlos"
+Candidate	"Gianoli, Julie"	"Gianoli, Julie"
+Candidate	"Hilton, Burton W."	"Hilton, Burton W."
+Candidate	"Rowley, Richard F."	"Rowley, Richard F."
+Candidate	"Ulibarri, Devin"	"Ulibarri, Devin"
+Candidate	"Robertson, Nathan"	"Robertson, Nathan"
+Candidate	"CARVER, CHRIS"	"CARVER, CHRIS"
+Candidate	"CINANI, JERRY"	"CINANI, JERRY"
+Candidate	"CROWELL, ROBERT ""BOB"""	"CROWELL, ROBERT ""BOB"""
+Candidate	"MEYER, KURT L."	"MEYER, KURT L."
+Candidate	"CROSSMAN, LAUREL"	"CROSSMAN, LAUREL"
+Candidate	"CACIOPPO, JOE"	"CACIOPPO, JOE"
+Candidate	"ENGLAND, SAM"	"ENGLAND, SAM"
+Candidate	"FORBUSH, CHRIS"	"FORBUSH, CHRIS"
+Candidate	"KRAMER, AL"	"KRAMER, AL"
+Candidate	"ONEILL, PHILIP ""PK"""	"ONEILL, PHILIP ""PK"""
+Candidate	"EVANS, H.D. ""CHIP"""	"EVANS, H.D. ""CHIP"""
+Candidate	"CORTEZ MASTO, CATHERINE"	"CORTEZ MASTO, CATHERINE"
+Candidate	"MAHENDRA, BOBBY"	"MAHENDRA, BOBBY"
+Candidate	"O'BRIANT, LIDDO SUSAN"	"O'BRIANT, LIDDO SUSAN"
+Candidate	"DAVIS, D'NESE"	"DAVIS, D'NESE"
+Candidate	"HAMILTON, EDDIE"	"HAMILTON, EDDIE"
+Candidate	"HECK, JOE"	"HECK, JOE"
+Candidate	"HECK, THOMAS ""SAD TOM"""	"HECK, THOMAS ""SAD TOM"""
+Candidate	"LEEDS, ROBERT X."	"LEEDS, ROBERT X."
+Candidate	"Poliak, Carlo ""Mazunga"""	"Poliak, Carlo ""Mazunga"""
+Candidate	"PREBLE, JUSTON J."	"PREBLE, JUSTON J."
+Candidate	"TARBELL, BILL"	"TARBELL, BILL"
+Candidate	"PINDER, PHIL"	"PINDER, PHIL"
+Candidate	"STRASDIN, TRICIA"	"STRASDIN, TRICIA"
+Candidate	"WHITAKER, KATHRYN"	"WHITAKER, KATHRYN"
+Candidate	"ERQUIAGA, CARL"	"ERQUIAGA, CARL"
+Candidate	"SLENTZ, BILL"	"SLENTZ, BILL"
+Candidate	"CHIPP, SHELDON E."	"CHIPP, SHELDON E."
+Candidate	"Holper, Scott Michael"	"Holper, Scott Michael"
+Candidate	"Johnson, Eric"	"Johnson, Eric"
+Candidate	"Ramsey, Catherine"	"Ramsey, Catherine"
+Candidate	"Chelini, Amy ""JoAnne"""	"Chelini, Amy ""JoAnne"""
+Candidate	"Hafen, Conrad"	"Hafen, Conrad"
+Candidate	"Jefferson, Phung"	"Jefferson, Phung"
+Candidate	"Connell, Sean P."	"Connell, Sean P."
+Candidate	"Letizia, Harmony"	"Letizia, Harmony"
+Candidate	"Marshall, Janiece"	"Marshall, Janiece"
+Candidate	"Candelaria, Amber"	"Candelaria, Amber"
+Candidate	"Prieto, Jillian"	"Prieto, Jillian"
+Candidate	"Saragosa, Melissa A."	"Saragosa, Melissa A."
+Candidate	"Kern, Rebecca"	"Kern, Rebecca"
+Candidate	"Yeager, Bita"	"Yeager, Bita"
+Candidate	"Bonaventure, Joe"	"Bonaventure, Joe"
+Candidate	"Goldstein, Steven"	"Goldstein, Steven"
+Candidate	"Blakely, Robert"	"Blakely, Robert"
+Candidate	"Louk, Ernest ""Doc"""	"Louk, Ernest ""Doc"""
+Candidate	"Solorio, Jose A."	"Solorio, Jose A."
+Candidate	"Baker, Louis ""Blulaker"""	"Baker, Louis ""Blulaker"""
+Candidate	"Johnston, Gary ""Coach"""	"Johnston, Gary ""Coach"""
+Candidate	"Doubrava, Mark"	"Doubrava, Mark"
+Candidate	"Rego, Daniel B."	"Rego, Daniel B."
+Candidate	"Thaler, Lucille"	"Thaler, Lucille"
+Candidate	"Nakhaima, Ben"	"Nakhaima, Ben"
+Candidate	"Spotleson, Vinny"	"Spotleson, Vinny"
+Candidate	"Armstrong, Derek"	"Armstrong, Derek"
+Candidate	"Jones, Blain K."	"Jones, Blain K."
+Candidate	"Hales, Dave"	"Hales, Dave"
+Candidate	"Herr, Barry"	"Herr, Barry"
+Candidate	"Lash, Nicholas"	"Lash, Nicholas"
+Candidate	"Woodhouse, Joyce"	"Woodhouse, Joyce"
+Candidate	"Gartside, James"	"Gartside, James"
+Candidate	"Krajcech, Patricia"	"Krajcech, Patricia"
+Candidate	"Levins, Mallory"	"Levins, Mallory"
+Candidate	"Mueller, Shawn"	"Mueller, Shawn"
+Candidate	"Vaughan, Richard"	"Vaughan, Richard"
+Candidate	"Wright, Deanna"	"Wright, Deanna"
+Candidate	Barry Michaels	Barry Michaels
+Candidate	"Schiffman, Steven M."	"Schiffman, Steven M."
+Candidate	"Singer, Alex Channing"	"Singer, Alex Channing"
+Candidate	"Waite, Neil M."	"Waite, Neil M."
+Candidate	"Bowers, Kerry"	"Bowers, Kerry"
+Candidate	"Fiore, Michele"	"Fiore, Michele"
+Candidate	"Khal, Sami"	"Khal, Sami"
+Candidate	"Woodbury, Melissa"	"Woodbury, Melissa"
+Candidate	"Goatz, Peter"	"Goatz, Peter"
+Candidate	"Kuch, Fred"	"Kuch, Fred"
+Candidate	"Wixom, Michael B."	"Wixom, Michael B."
+Candidate	"Lewis, Jr., Robert ""Bob"""	"Lewis, Jr., Robert ""Bob"""
+Candidate	"Moran, John"	"Moran, John"
+Candidate	"Ratigan, Jim"	"Ratigan, Jim"
+Candidate	"Blanchard, Tom"	"Blanchard, Tom"
+Candidate	"Donlon, Benjamin"	"Donlon, Benjamin"
+Candidate	"Giordano, Raymond Joseph"	"Giordano, Raymond Joseph"
+Candidate	"Jones, Tiffany"	"Jones, Tiffany"
+Candidate	"Jauregui, Sandra"	"Jauregui, Sandra"
+Candidate	"Phillips, Nick"	"Phillips, Nick"
+Candidate	"Rooney, Mary"	"Rooney, Mary"
+Candidate	"Groves, Amy L."	"Groves, Amy L."
+Candidate	"Silberkraus, Stephen"	"Silberkraus, Stephen"
+Candidate	"Isquith, Mark W."	"Isquith, Mark W."
+Candidate	"Lloyd, Minddie"	"Lloyd, Minddie"
+Candidate	"Orrock, Diana"	"Orrock, Diana"
+Candidate	"STANBERRY, RUSTY"	"STANBERRY, RUSTY"
+Candidate	"Kirkpatrick, Marilyn"	"Kirkpatrick, Marilyn"
+Candidate	"Ross, Steve"	"Ross, Steve"
+Candidate	"Dyer, Chris ""RINO"""	"Dyer, Chris ""RINO"""
+Candidate	"Williams, Kevin M."	"Williams, Kevin M."
+Candidate	"Baum, Roger ""OZ"""	"Baum, Roger ""OZ"""
+Candidate	"Brean, Howard"	"Brean, Howard"
+Candidate	"Davis, Russell W."	"Davis, Russell W."
+Candidate	"Johnson, Adam C."	"Johnson, Adam C."
+Candidate	"Melton, Mark R."	"Melton, Mark R."
+Candidate	"Young, Linda E."	"Young, Linda E."
+Candidate	"ARBERRY JR., MORSE"	"ARBERRY JR., MORSE"
+Candidate	"CASUTT, BRANDON"	"CASUTT, BRANDON"
+Candidate	"FLORES, LUCY"	"FLORES, LUCY"
+Candidate	"KIHUEN, RUBEN"	"KIHUEN, RUBEN"
+Candidate	"ROLLE, DAN"	"ROLLE, DAN"
+Candidate	"SCHAEFER, MIKE"	"SCHAEFER, MIKE"
+Candidate	"SMITH, RODNEY"	"SMITH, RODNEY"
+Candidate	"VILLINES, WAYNE J."	"VILLINES, WAYNE J."
+Candidate	"Atkinson, Kelvin"	"Atkinson, Kelvin"
+Candidate	"Munford, Stephen Harvey"	"Munford, Stephen Harvey"
+Candidate	"Foust, Connie"	"Foust, Connie"
+Candidate	"Eggeman, Jeff"	"Eggeman, Jeff"
+Candidate	"Garvey, Christine ""Chris"""	"Garvey, Christine ""Chris"""
+Candidate	"Bennett, Dave"	"Bennett, Dave"
+Candidate	"Hanson, Chuck"	"Hanson, Chuck"
+Candidate	"Metz, Judy"	"Metz, Judy"
+Candidate	"MCADOO, CATHY"	"MCADOO, CATHY"
+Candidate	"McGinnis, Ron"	"McGinnis, Ron"
+Candidate	"Riggins, Mark"	"Riggins, Mark"
+Candidate	"Santacruz, John F."	"Santacruz, John F."
+Candidate	"Lucas, Jr., Bert"	"Lucas, Jr., Bert"
+Candidate	"Orr, Earle"	"Orr, Earle"
+Candidate	"Piro, John"	"Piro, John"
+Candidate	"Laughter, Melissa D."	"Laughter, Melissa D."
+Candidate	"Anderson, Paul"	"Anderson, Paul"
+Candidate	"Foster, Leonard"	"Foster, Leonard"
+Candidate	"Howard, Melody"	"Howard, Melody"
+Candidate	"Simons, Quay"	"Simons, Quay"
+Candidate	"Ballweg, David P."	"Ballweg, David P."
+Candidate	"Benham, Mike"	"Benham, Mike"
+Candidate	"Delaney, Cynthia ""Cindi"""	"Delaney, Cynthia ""Cindi"""
+Candidate	"Larsen, CJ"	"Larsen, CJ"
+Candidate	"Rapson, George"	"Rapson, George"
+Candidate	"West, David D."	"West, David D."
+Candidate	"Trowbridge, Glenn"	"Trowbridge, Glenn"
+Candidate	"Seaman, Victoria"	"Seaman, Victoria"
+Candidate	"Sedlmeyer, Stephen"	"Sedlmeyer, Stephen"
+Candidate	"Bilbray-Axelrod, Shannon"	"Bilbray-Axelrod, Shannon"
+Candidate	"Conine, Zach"	"Conine, Zach"
+Candidate	"Garcia, Manny"	"Garcia, Manny"
+Candidate	"Hagans, Marty"	"Hagans, Marty"
+Candidate	"LaBay, David"	"LaBay, David"
+Candidate	"Williams, Matt"	"Williams, Matt"
+Candidate	"Carver, Owen"	"Carver, Owen"
+Candidate	"LeDuff, Garrett J."	"LeDuff, Garrett J."
+Candidate	"Nelsen, Ron"	"Nelsen, Ron"
+Candidate	"Hambrick, John"	"Hambrick, John"
+Candidate	"Hurst, Clayton Kelly"	"Hurst, Clayton Kelly"
+Candidate	"Brooks, Chris"	"Brooks, Chris"
+Candidate	"Castellanos, German"	"Castellanos, German"
+Candidate	"Churchwell, Shannon"	"Churchwell, Shannon"
+Candidate	"Martinez, Rory"	"Martinez, Rory"
+Candidate	"Miller, Brittney"	"Miller, Brittney"
+Candidate	"Baca, Tony"	"Baca, Tony"
+Candidate	"Ham, Artemus ""Art"""	"Ham, Artemus ""Art"""
+Candidate	"Burch, Valencia"	"Burch, Valencia"
+Candidate	"Foster, Arrick ""Kerm"""	"Foster, Arrick ""Kerm"""
+Candidate	"Jackson, Macon"	"Jackson, Macon"
+Candidate	"Anderson, Elliot"	"Anderson, Elliot"
+Candidate	"Toomin, Lou"	"Toomin, Lou"
+Candidate	"Welsh, Darren"	"Welsh, Darren"
+Candidate	"Parks, David"	"Parks, David"
+Candidate	"Wernicke, Toni"	"Wernicke, Toni"
+Candidate	"Carrillo, Richard A."	"Carrillo, Richard A."
+Candidate	"Mosca, Erica"	"Mosca, Erica"
+Candidate	"DeCorte, Christine"	"DeCorte, Christine"
+Candidate	"LYNN, GREG"	"LYNN, GREG"
+Candidate	"GODECKE, FRANK"	"GODECKE, FRANK"
+Candidate	"CHESSELL, KAREN"	"CHESSELL, KAREN"
+Candidate	"BYER, B. KEITH"	"BYER, B. KEITH"
+Candidate	"KIGER, MICHAEL EUGENE"	"KIGER, MICHAEL EUGENE"
+Candidate	"SHEPACK, NICHOLAS"	"SHEPACK, NICHOLAS"
+Candidate	"FREITAS, NEAL"	"FREITAS, NEAL"
+Candidate	"ALLGEIER, BOB"	"ALLGEIER, BOB"
+Candidate	"BARATTI-SALLANI, PATTY"	"BARATTI-SALLANI, PATTY"
+Candidate	"BUNTING, TIM"	"BUNTING, TIM"
+Candidate	"SMALLWOOD, BARBARA S."	"SMALLWOOD, BARBARA S."
+Candidate	"WILCOX, CRAIG"	"WILCOX, CRAIG"
+Candidate	"DALLING, JEFF"	"DALLING, JEFF"
+Candidate	"KARR, JON"	"KARR, JON"
+Candidate	"SACRISON, RALPH"	"SACRISON, RALPH"
+Candidate	"GOICOECHEA, ELIAS ""CHOCH"""	"GOICOECHEA, ELIAS ""CHOCH"""
+Candidate	"LEHMANN, WILLIAM"	"LEHMANN, WILLIAM"
+Candidate	"LEIKER, WADE"	"LEIKER, WADE"
+Candidate	"LOREMAN, DAVID"	"LOREMAN, DAVID"
+Candidate	"MIERINS, ANDREW M."	"MIERINS, ANDREW M."
+Candidate	"PARKER, DENNIS W."	"PARKER, DENNIS W."
+Candidate	"DASTRUP, TERESA"	"DASTRUP, TERESA"
+Candidate	"KIRBY, WILLIAM C."	"KIRBY, WILLIAM C."
+Candidate	"POLMAN, KENNY"	"POLMAN, KENNY"
+Candidate	"WINSOR, DELON ""DE"""	"WINSOR, DELON ""DE"""
+Candidate	"PASTORINO, ERIC J."	"PASTORINO, ERIC J."
+Candidate	"BREITRICK, JAMES A."	"BREITRICK, JAMES A."
+Candidate	"LEPPALA, BILL"	"LEPPALA, BILL"
+Candidate	"BURNHAM, ROBERT E."	"BURNHAM, ROBERT E."
+Candidate	"HICKS, DAVID W."	"HICKS, DAVID W."
+Candidate	"IZZOLO, JAMES"	"IZZOLO, JAMES"
+Candidate	"ANDERSON, BRANDI"	"ANDERSON, BRANDI"
+Candidate	"CONLEY, LYNN"	"CONLEY, LYNN"
+Candidate	"MARTIN, JORI"	"MARTIN, JORI"
+Candidate	"FIORENZI, LEONARD"	"FIORENZI, LEONARD"
+Candidate	"CHATFIELD, KEVIN"	"CHATFIELD, KEVIN"
+Candidate	"BELL, MIKE"	"BELL, MIKE"
+Candidate	"DOLPHIN, DENISE K."	"DOLPHIN, DENISE K."
+Candidate	"HAMMARGREN, WILLIAM ""BILL"""	"HAMMARGREN, WILLIAM ""BILL"""
+Candidate	"JACOBSEN, BARBARA A."	"JACOBSEN, BARBARA A."
+Candidate	"LECUMBERRY-UHLMANN, SABRINA"	"LECUMBERRY-UHLMANN, SABRINA"
+Candidate	"BETTERIDGE, BOYD"	"BETTERIDGE, BOYD"
+Candidate	"BRAGINTON, BRUCE L."	"BRAGINTON, BRUCE L."
+Candidate	"BAKKER, GERRIT"	"BAKKER, GERRIT"
+Candidate	"HELMING, DEE"	"HELMING, DEE"
+Candidate	"WAITS, PATSY ANN"	"WAITS, PATSY ANN"
+Candidate	"ALLAN, JUDIE"	"ALLAN, JUDIE"
+Candidate	"CARR, RICK"	"CARR, RICK"
+Candidate	"MYERS, MARK"	"MYERS, MARK"
+Candidate	"NANNEY, AL"	"NANNEY, AL"
+Candidate	"DIAS, ELIZABETH"	"DIAS, ELIZABETH"
+Candidate	"OSTLER, KAYLA A."	"OSTLER, KAYLA A."
+Candidate	"STATON, DOUGLAS S., III"	"STATON, DOUGLAS S., III"
+Candidate	"WELLS, BONNIE"	"WELLS, BONNIE"
+Candidate	"KATSCHKE, ADAM PAUL"	"KATSCHKE, ADAM PAUL"
+Candidate	"LARSON, KEITH"	"LARSON, KEITH"
+Candidate	"KATSCHKE, NATHAN J."	"KATSCHKE, NATHAN J."
+Candidate	"WADSWORTH, SCOTT"	"WADSWORTH, SCOTT"
+Candidate	"CASSINELLI, JOHN S"	"CASSINELLI, JOHN S"
+Candidate	"HASTINGS, BOB"	"HASTINGS, BOB"
+Candidate	"FIERRO, RAY"	"FIERRO, RAY"
+Candidate	"SHIRLEY, CHARLES W"	"SHIRLEY, CHARLES W"
+Candidate	"STEVENS, JOHN M."	"STEVENS, JOHN M."
+Candidate	"BITLER, KENNETH"	"BITLER, KENNETH"
+Candidate	"LEWIS, ANGELA"	"LEWIS, ANGELA"
+Candidate	"MCCASSIE, DANIEL"	"MCCASSIE, DANIEL"
+Candidate	"ROBINSON, ARCHIE L"	"ROBINSON, ARCHIE L"
+Candidate	"RODRIGUEZ, JAMIE"	"RODRIGUEZ, JAMIE"
+Candidate	"SHATTUCK, WILLIAM"	"SHATTUCK, WILLIAM"
+Candidate	"DANKS, BOYD V"	"DANKS, BOYD V"
+Candidate	"SEIDL, SUSAN"	"SEIDL, SUSAN"
+Candidate	"STEHWIEN, JEREMY"	"STEHWIEN, JEREMY"
+Candidate	"DUNHAM, SUSAN"	"DUNHAM, SUSAN"
+Candidate	"FLYNN, SHERRY S."	"FLYNN, SHERRY S."
+Candidate	"MONIZ, AVIS"	"MONIZ, AVIS"
+Candidate	"SHIRLEY, SHARON ANN"	"SHIRLEY, SHARON ANN"
+Candidate	"COEN, PATRICIA"	"COEN, PATRICIA"
+Candidate	"DOW, MICHELLE"	"DOW, MICHELLE"
+Candidate	"QUALLS, HUGH L."	"QUALLS, HUGH L."
+Candidate	"SAMSON, SHERI"	"SAMSON, SHERI"
+Candidate	"HAGEN, SCHYLER C."	"HAGEN, SCHYLER C."
+Candidate	"LANCASTER, BARBARA"	"LANCASTER, BARBARA"
+Candidate	"VIANI, TYLER"	"VIANI, TYLER"
+Candidate	"COEN, MICHAEL L."	"COEN, MICHAEL L."
+Candidate	"JONES, EARL"	"JONES, EARL"
+Candidate	"MATTOX, SCOTT"	"MATTOX, SCOTT"
+Candidate	"WICHMAN, LORINDA"	"WICHMAN, LORINDA"
+Candidate	"STODDARD, TERESA J."	"STODDARD, TERESA J."
+Candidate	"EASON, KENNETH"	"EASON, KENNETH"
+Candidate	"CLIFFORD, CATHIE"	"CLIFFORD, CATHIE"
+Candidate	"LINK, RONI"	"LINK, RONI"
+Candidate	"LANCASTER SR., DAVID"	"LANCASTER SR., DAVID"
+Candidate	"LEDESMA, SAL"	"LEDESMA, SAL"
+Candidate	"RICHES, AMY"	"RICHES, AMY"
+Candidate	"SMALL, LAWRENCE ""Larry"""	"SMALL, LAWRENCE ""Larry"""
+Candidate	"DANN, GREG"	"DANN, GREG"
+Candidate	"DECANIO, LOUIE"	"DECANIO, LOUIE"
+Candidate	"DODD, ANTHENY ""AJ"""	"DODD, ANTHENY ""AJ"""
+Candidate	"HANSEN, MARK"	"HANSEN, MARK"
+Candidate	"MCDOUGAL, ROBERT"	"MCDOUGAL, ROBERT"
+Candidate	"WHYTE, LINDA"	"WHYTE, LINDA"
+Candidate	"IRWIN, PAT"	"IRWIN, PAT"
+Candidate	"RACKLEY, LARRY"	"RACKLEY, LARRY"
+Candidate	"ARNOLD, BRAD"	"ARNOLD, BRAD"
+Candidate	"BENDURE, TED P."	"BENDURE, TED P."
+Candidate	"CHAMBERS, CHAD"	"CHAMBERS, CHAD"
+Candidate	"LIST, JIM"	"LIST, JIM"
+Candidate	"LUSBY-ANGVICK, HEIDI E."	"LUSBY-ANGVICK, HEIDI E."
+Candidate	"MACHADO, KEVIN E."	"MACHADO, KEVIN E."
+Candidate	"PILON, MARK"	"PILON, MARK"
+Candidate	"BRINKERHOFF, WALTER A."	"BRINKERHOFF, WALTER A."
+Candidate	"CRIM Jr., JOE"	"CRIM Jr., JOE"
+Candidate	"GEDDES, JASON"	"GEDDES, JASON"
+Candidate	"Salcido, Victor"	"Salcido, Victor"
+Candidate	"Vangogh, Richard"	"Vangogh, Richard"
+Candidate	"Bobzien, David"	"Bobzien, David"
+Candidate	"Dehne, Sam"	"Dehne, Sam"
+Candidate	"Kumar, Sam"	"Kumar, Sam"
+Candidate	"Lewis, James ""Jim"""	"Lewis, James ""Jim"""
+Candidate	"Conway, Cotter"	"Conway, Cotter"
+Candidate	"O'Neill, Shelly"	"O'Neill, Shelly"
+Candidate	"Sotelo, Henry"	"Sotelo, Henry"
+Candidate	"Woodman, Charles"	"Woodman, Charles"
+Candidate	"Sferrazza, Pete"	"Sferrazza, Pete"
+Candidate	"Sullivan, Ryan Katherine"	"Sullivan, Ryan Katherine"
+Candidate	"Pearson, Scott E."	"Pearson, Scott E."
+Candidate	"Clifton, David W."	"Clifton, David W."
+Candidate	"Grein, Kenneth W."	"Grein, Kenneth W."
+Candidate	"Hacker, Lauren"	"Hacker, Lauren"
+Candidate	"Little-Bolotin, Kathleen"	"Little-Bolotin, Kathleen"
+Candidate	"Marquez, Brock"	"Marquez, Brock"
+Candidate	"Raymond, Malena"	"Raymond, Malena"
+Candidate	"Reese, Emily"	"Reese, Emily"
+Candidate	"DeSilva, David"	"DeSilva, David"
+Candidate	"Holland, Katy Simon"	"Holland, Katy Simon"
+Candidate	"Horn, Bill"	"Horn, Bill"
+Candidate	"Hudson, Greg"	"Hudson, Greg"
+Candidate	"Lehmann, Helm"	"Lehmann, Helm"
+Candidate	"Mieras, Mike"	"Mieras, Mike"
+Candidate	"Millerick, Michael J."	"Millerick, Michael J."
+Candidate	"Milon, John ""Jack"""	"Milon, John ""Jack"""
+Candidate	"Bailey, Kent"	"Bailey, Kent"
+Candidate	"Brockelsby, Samantha ""Sammy B"""	"Brockelsby, Samantha ""Sammy B"""
+Candidate	"Gansert, Heidi S."	"Gansert, Heidi S."
+Candidate	"Doenges, Colleen"	"Doenges, Colleen"
+Candidate	"Richardson, Dale"	"Richardson, Dale"
+Candidate	"Jamison, Clint"	"Jamison, Clint"
+Candidate	"King, Kime"	"King, Kime"
+Candidate	"Terhune, Jennifer"	"Terhune, Jennifer"
+Candidate	"Tolles, Jill"	"Tolles, Jill"
+Candidate	"Ledon, Carlos"	"Ledon, Carlos"
+Candidate	"Taylor, Angie"	"Taylor, Angie"
+Candidate	"Ward, Paula"	"Ward, Paula"
+Candidate	"Guinasso, Jason"	"Guinasso, Jason"
+Candidate	"Khan, Adam"	"Khan, Adam"
+Candidate	"Lopez, Denise"	"Lopez, Denise"
+Candidate	"Higgins, Kevin"	"Higgins, Kevin"
+Candidate	"Hartung, Vaughn"	"Hartung, Vaughn"
+Candidate	"Washington, Maurice"	"Washington, Maurice"
+Candidate	"Dent, Matthew"	"Dent, Matthew"
+Candidate	"Horan, Philip"	"Horan, Philip"
+Candidate	"King, Steve"	"King, Steve"
+Candidate	"Longshore, Paul R."	"Longshore, Paul R."
+Candidate	"Miller, Judy"	"Miller, Judy"
+Candidate	"Morris, Peter W."	"Morris, Peter W."
+Candidate	"Olmer, Robert J."	"Olmer, Robert J."
+Candidate	"Thomason, Steven"	"Thomason, Steven"
+Candidate	"Wright, Frank L."	"Wright, Frank L."
+Candidate	"COSTER, MIKE"	"COSTER, MIKE"
+Candidate	"WEEKS, JEFF"	"WEEKS, JEFF"
+Candidate	"OLSON, ART"	"OLSON, ART"
+Candidate	No	No
+Candidate	Yes	Yes
+Candidate	"GIBBONS, MICHAEL"	"GIBBONS, MICHAEL"
+Candidate	"SILVER, ABBI"	"SILVER, ABBI"
+Candidate	"CASTLE, DARRELL"	"CASTLE, DARRELL"
+Candidate	"CLINTON, HILLARY"	"CLINTON, HILLARY"
+Candidate	"DE LA FUENTE, ROQUE ""ROCKY"""	"DE LA FUENTE, ROQUE ""ROCKY"""
+Candidate	"JOHNSON, GARY"	"JOHNSON, GARY"
+Candidate	"TRUMP, DONALD J."	"TRUMP, DONALD J."
+Candidate	"REYNOLDS, STEVEN"	"REYNOLDS, STEVEN"
+Candidate	"WALKER, MICHAEL B."	"WALKER, MICHAEL B."
+Candidate	"HART, SUSAN"	"HART, SUSAN"
+Candidate	"GREEDY, MICHAEL L."	"GREEDY, MICHAEL L."
+Candidate	"WAGNER, JOHN"	"WAGNER, JOHN"
+Candidate	"CARTER, DAVID W."	"CARTER, DAVID W."
+Candidate	"HICKEY, PAT"	"HICKEY, PAT"
+Candidate	"BONKOWSKI, BRAD"	"BONKOWSKI, BRAD"
+Candidate	"WHITE, MAURICE"	"WHITE, MAURICE"
+Candidate	"BARRETTE, JOHN"	"BARRETTE, JOHN"
+Candidate	"SHIRK, JIM"	"SHIRK, JIM"
+Candidate	"HARDESTY, JIM"	"HARDESTY, JIM"
+Candidate	"PARRAGUIRRE, RON D."	"PARRAGUIRRE, RON D."
+Candidate	"Everhart, John H."	"Everhart, John H."
+Candidate	"KNIGHT, DREW"	"KNIGHT, DREW"
+Candidate	"GUMINA, TONY"	"GUMINA, TONY"
+Candidate	"JONES, TOM"	"JONES, TOM"
+Candidate	"SAWYER, THOMAS ""TOM"""	"SAWYER, THOMAS ""TOM"""
+Candidate	"WILLIAMS, JARROD M."	"WILLIAMS, JARROD M."
+Candidate	"LAFRANCE, SARA"	"LAFRANCE, SARA"
+Candidate	"COCHRAN, WENDY ""ROOSTER"""	"COCHRAN, WENDY ""ROOSTER"""
+Candidate	"DINI, GEORGE R."	"DINI, GEORGE R."
+Candidate	"SMITH, JUSTIN"	"SMITH, JUSTIN"
+Candidate	"Thomas, Michael"	"Thomas, Michael"
+Candidate	"Bachman, Shana"	"Bachman, Shana"
+Candidate	"Baucum, Suzan"	"Baucum, Suzan"
+Candidate	"Bennett, Karen"	"Bennett, Karen"
+Candidate	"Ross, Norm"	"Ross, Norm"
+Candidate	"Chan, Lesley"	"Chan, Lesley"
+Candidate	"Ford, Aaron D."	"Ford, Aaron D."
+Candidate	"Frazier, Jon"	"Frazier, Jon"
+Candidate	"Bakari, Kamau A."	"Bakari, Kamau A."
+Candidate	"Buck, Carrie"	"Buck, Carrie"
+Candidate	"Hagan, Tim"	"Hagan, Tim"
+Candidate	"Goossen, David"	"Goossen, David"
+Candidate	"Markowitz, Warren"	"Markowitz, Warren"
+Candidate	"Jordahl, Craig"	"Jordahl, Craig"
+Candidate	"Bethards, Stephanie Sue"	"Bethards, Stephanie Sue"
+Candidate	"Brunelle, David P."	"Brunelle, David P."
+Candidate	"Henry, Bruce"	"Henry, Bruce"
+Candidate	"Knauss, Martin"	"Knauss, Martin"
+Candidate	"Mackey, Gina M."	"Mackey, Gina M."
+Candidate	"Maniaci, James ""Jim"""	"Maniaci, James ""Jim"""
+Candidate	"McBride, Noreen Forristal"	"McBride, Noreen Forristal"
+Candidate	"Ochs, Kathy"	"Ochs, Kathy"
+Candidate	"Watkins, Justin"	"Watkins, Justin"
+Candidate	"Bateman, Sam"	"Bateman, Sam"
+Candidate	"Davidson, Michael"	"Davidson, Michael"
+Candidate	"Gruber, Harvey"	"Gruber, Harvey"
+Candidate	"Posin, Jeffrey"	"Posin, Jeffrey"
+Candidate	"Zeller, Shane"	"Zeller, Shane"
+Candidate	"Yeager, Steve"	"Yeager, Steve"
+Candidate	"Bustamante Adams, Irene"	"Bustamante Adams, Irene"
+Candidate	"Scheff, Howard"	"Scheff, Howard"
+Candidate	"Swank, Heidi"	"Swank, Heidi"
+Candidate	"Uehling, Edmund"	"Uehling, Edmund"
+Candidate	"Goicoechea, Pete"	"Goicoechea, Pete"
+Candidate	"Hansen, Janine"	"Hansen, Janine"
+Candidate	"Monroe-Moreno, Daniele"	"Monroe-Moreno, Daniele"
+Candidate	"MARCIANO, LEN"	"MARCIANO, LEN"
+Candidate	"Ter-Petrosyan, Arsen ""Arsen T"""	"Ter-Petrosyan, Arsen ""Arsen T"""
+Candidate	"Brown, Steve"	"Brown, Steve"
+Candidate	"LITTLE, MIKE"	"LITTLE, MIKE"
+Candidate	"Fawzy, Jennifer"	"Fawzy, Jennifer"
+Candidate	"Neal, Dina"	"Neal, Dina"
+Candidate	"Warren, Troy Ethan"	"Warren, Troy Ethan"
+Candidate	"Hammond, Scott T."	"Hammond, Scott T."
+Candidate	"Marks, Alexander"	"Marks, Alexander"
+Candidate	"Tew, Patrice"	"Tew, Patrice"
+Candidate	"Newsome, Ronald"	"Newsome, Ronald"
+Candidate	"Thompson, Tyrone"	"Thompson, Tyrone"
+Candidate	"Anderson, Travis"	"Anderson, Travis"
+Candidate	"Ramaker, Sandra K."	"Ramaker, Sandra K."
+Candidate	"Litman, Allan S."	"Litman, Allan S."
+Candidate	"Pereida, Arthur V."	"Pereida, Arthur V."
+Candidate	"Leavitt, Chad D."	"Leavitt, Chad D."
+Candidate	"Pulsipher, Billy H."	"Pulsipher, Billy H."
+Candidate	"Lyttle, Sean D."	"Lyttle, Sean D."
+Candidate	"Cannizzaro, Nicole"	"Cannizzaro, Nicole"
+Candidate	"Cornwell, Wesley"	"Cornwell, Wesley"
+Candidate	"Flores, Edgar"	"Flores, Edgar"
+Candidate	"Brown, Larry"	"Brown, Larry"
+Candidate	"Araujo, Jr., Nelson"	"Araujo, Jr., Nelson"
+Candidate	"Friedrich, Jonathan"	"Friedrich, Jonathan"
+Candidate	"Palmerston, Dennis"	"Palmerston, Dennis"
+Candidate	"Shelton, Shelly M."	"Shelton, Shelly M."
+Candidate	"Osnaya, Anthony"	"Osnaya, Anthony"
+Candidate	"Weekly, Jr., Lawrence"	"Weekly, Jr., Lawrence"
+Candidate	"Maffatt, Carlo"	"Maffatt, Carlo"
+Candidate	"Diaz, Olivia"	"Diaz, Olivia"
+Candidate	"Vaughan, Stan"	"Vaughan, Stan"
+Candidate	"Linton, Carol"	"Linton, Carol"
+Candidate	"Schjang, Kimberly"	"Schjang, Kimberly"
+Candidate	"LEWIS, KATHY"	"LEWIS, KATHY"
+Candidate	"PENZEL, BARRY"	"PENZEL, BARRY"
+Candidate	"GREGORY, THOMAS W."	"GREGORY, THOMAS W."
+Candidate	"BORGZINNER, KIMBERLY"	"BORGZINNER, KIMBERLY"
+Candidate	"DRESSEL, FRANK"	"DRESSEL, FRANK"
+Candidate	"HARDIE, MIKE"	"HARDIE, MIKE"
+Candidate	"LEE, TRAVIS K."	"LEE, TRAVIS K."
+Candidate	"ROBBINS, DOUGLAS"	"ROBBINS, DOUGLAS"
+Candidate	"GILKERSON, LINDA"	"GILKERSON, LINDA"
+Candidate	"LIPPMANN, LARRY"	"LIPPMANN, LARRY"
+Candidate	"Wheeler, Jim"	"Wheeler, Jim"
+Candidate	"RADTKE, GLEN A."	"RADTKE, GLEN A."
+Candidate	"SHORTEN, CHRISTOPHER"	"SHORTEN, CHRISTOPHER"
+Candidate	"SOULIGNY, BILL"	"SOULIGNY, BILL"
+Candidate	"STEPHANS, JOHN"	"STEPHANS, JOHN"
+Candidate	"MILLER, RALPH L."	"MILLER, RALPH L."
+Candidate	"ROONEY, MICHAEL"	"ROONEY, MICHAEL"
+Candidate	"ZERG, JOANNE"	"ZERG, JOANNE"
+Candidate	"BREAUX, JOHN"	"BREAUX, JOHN"
+Candidate	"FELTON, GREG"	"FELTON, GREG"
+Candidate	"GRANT, ANN"	"GRANT, ANN"
+Candidate	"SCHUSSEL, LARRY F."	"SCHUSSEL, LARRY F."
+Candidate	"BARNARD, ANN"	"BARNARD, ANN"
+Candidate	"BORSOS, RONALD"	"BORSOS, RONALD"
+Candidate	"WESTERBECK, GREGG"	"WESTERBECK, GREGG"
+Candidate	"DAHL, DEMAR"	"DAHL, DEMAR"
+Candidate	"MARIN, PEDRO"	"MARIN, PEDRO"
+Candidate	"SCHMIDTLEIN, ROBERT"	"SCHMIDTLEIN, ROBERT"
+Candidate	"SIMONS, MANDY"	"SIMONS, MANDY"
+Candidate	"ZORNES, DAVID R."	"ZORNES, DAVID R."
+Candidate	"BRIAN, BETSY"	"BRIAN, BETSY"
+Candidate	"AYALA, MIKE"	"AYALA, MIKE"
+Candidate	"Ellison, John"	"Ellison, John"
+Candidate	"HOLBROOK, DANA"	"HOLBROOK, DANA"
+Candidate	"JOHNSTON, MARGARET A."	"JOHNSTON, MARGARET A."
+Candidate	"JONES, KARLA M."	"JONES, KARLA M."
+Candidate	"CARTER, EMILY"	"CARTER, EMILY"
+Candidate	"CORONA, DANIEL"	"CORONA, DANIEL"
+Candidate	"ANDERSON, GERALD ""JERRY"""	"ANDERSON, GERALD ""JERRY"""
+Candidate	"FLORES, NICOLAS ""NICK"""	"FLORES, NICOLAS ""NICK"""
+Candidate	"SNYDER, CASEY"	"SNYDER, CASEY"
+Candidate	"RICH, SYLVIA"	"RICH, SYLVIA"
+Candidate	"Hansen, Ira"	"Hansen, Ira"
+Candidate	"KEYES, RALPH M."	"KEYES, RALPH M."
+Candidate	"GOICOECHEA, J.J."	"GOICOECHEA, J.J."
+Candidate	"SHARKOZY, MIKE"	"SHARKOZY, MIKE"
+Candidate	"TIPTON, ROBERT ""KEN"""	"TIPTON, ROBERT ""KEN"""
+Candidate	"FORTMANN, ERNEST"	"FORTMANN, ERNEST"
+Candidate	"HOOD, JENNIFER"	"HOOD, JENNIFER"
+Candidate	"CASALEZ, JO ANN"	"CASALEZ, JO ANN"
+Candidate	"MURPHY, JOEL"	"MURPHY, JOEL"
+Candidate	"JACOBSEN, BARBARA"	"JACOBSEN, BARBARA"
+Candidate	"OLSON, BRENDA"	"OLSON, BRENDA"
+Candidate	"STRINGHAM, CARRIE D."	"STRINGHAM, CARRIE D."
+Candidate	"MENDIOLA, VINCENT L."	"MENDIOLA, VINCENT L."
+Candidate	"UPSHAW, RORY L."	"UPSHAW, RORY L."
+Candidate	"CARTER, CHRIS R."	"CARTER, CHRIS R."
+Candidate	"HARDY, ELLEN ""KATE"""	"HARDY, ELLEN ""KATE"""
+Candidate	"ALLAN, JUDITH ANN"	"ALLAN, JUDITH ANN"
+Candidate	"WINTLE, JAY"	"WINTLE, JAY"
+Candidate	"LANGER, MELVIN"	"LANGER, MELVIN"
+Candidate	"DUVALL, GLEN ORAL"	"DUVALL, GLEN ORAL"
+Candidate	"MORENO, MANUEL II"	"MORENO, MANUEL II"
+Candidate	"O'KANE, JENNIFER"	"O'KANE, JENNIFER"
+Candidate	"CASSORLA, EARL"	"CASSORLA, EARL"
+Candidate	"WALSH, CYNTHIA A."	"WALSH, CYNTHIA A."
+Candidate	"HELMING, DON KIP"	"HELMING, DON KIP"
+Candidate	"SMITH, STEPHEN L."	"SMITH, STEPHEN L."
+Candidate	"ELKINS, TAMERA LYNN"	"ELKINS, TAMERA LYNN"
+Candidate	"CARDOZA, CLAUDIO T."	"CARDOZA, CLAUDIO T."
+Candidate	"HAINES, DONALD RICHARD"	"HAINES, DONALD RICHARD"
+Candidate	"HIGBEE, VARLIN S."	"HIGBEE, VARLIN S."
+Candidate	"DIXON, KEN"	"DIXON, KEN"
+Candidate	"FOGLIANI, MIKE"	"FOGLIANI, MIKE"
+Candidate	"MATHEWS, LEE ROB"	"MATHEWS, LEE ROB"
+Candidate	"WRIGHT, EDWARD E."	"WRIGHT, EDWARD E."
+Candidate	"MORTENSEN, JOE"	"MORTENSEN, JOE"
+Candidate	"SANDERSON, JASON W."	"SANDERSON, JASON W."
+Candidate	"DINI, DAVID JOHN"	"DINI, DAVID JOHN"
+Candidate	"GIOMI HAWKEY, CHERYL"	"GIOMI HAWKEY, CHERYL"
+Candidate	"POPE, JEFF"	"POPE, JEFF"
+Candidate	"ADREON, RONNIE"	"ADREON, RONNIE"
+Candidate	"CLARKE, NANCY"	"CLARKE, NANCY"
+Candidate	"CLEGG, WILLIAM B."	"CLEGG, WILLIAM B."
+Candidate	"HOWELL, CHERYL A."	"HOWELL, CHERYL A."
+Candidate	"RIESEN, WILLIAM A."	"RIESEN, WILLIAM A."
+Candidate	"VANHORN, JANN"	"VANHORN, JANN"
+Candidate	"CARR, STEVE"	"CARR, STEVE"
+Candidate	"PICHA, STEVE"	"PICHA, STEVE"
+Candidate	"JOHNSON, RAY"	"JOHNSON, RAY"
+Candidate	"ZIERENBERG, RICK"	"ZIERENBERG, RICK"
+Candidate	"NEPPER, CHRISTOPHER"	"NEPPER, CHRISTOPHER"
+Candidate	"BRYANT, RICHARD D."	"BRYANT, RICHARD D."
+Candidate	"HEGG, CHRIS"	"HEGG, CHRIS"
+Candidate	"MACBETH, PAUL"	"MACBETH, PAUL"
+Candidate	"PRICE, GARTH D."	"PRICE, GARTH D."
+Candidate	"BOSTA, JOHN"	"BOSTA, JOHN"
+Candidate	"MENDYK, DEBBERA L."	"MENDYK, DEBBERA L."
+Candidate	"MINSHALL, PATRICIA J."	"MINSHALL, PATRICIA J."
+Candidate	"PITARRE, KEN"	"PITARRE, KEN"
+Candidate	"THOMAS, JIMMY"	"THOMAS, JIMMY"
+Candidate	"KULKIN, HARLEY ZANE"	"KULKIN, HARLEY ZANE"
+Candidate	"KAMINSKI, DON"	"KAMINSKI, DON"
+Candidate	"SAIN, MIKE"	"SAIN, MIKE"
+Candidate	"SELEY, TOM"	"SELEY, TOM"
+Candidate	"GENTRY, STARLIN"	"GENTRY, STARLIN"
+Candidate	"GILMAN, L. LANCE"	"GILMAN, L. LANCE"
+Candidate	"SNELL, SHARON"	"SNELL, SHARON"
+Candidate	"CONLEY, COLLEEN"	"CONLEY, COLLEEN"
+Candidate	"HUDDLESON, LARRY"	"HUDDLESON, LARRY"
+Candidate	"COYNE-THOMPSON, KAREN"	"COYNE-THOMPSON, KAREN"
+Candidate	"FIELD, MELISSA"	"FIELD, MELISSA"
+Candidate	"MAYS, CONSTANCE"	"MAYS, CONSTANCE"
+Candidate	"SULLIVAN, MARK"	"SULLIVAN, MARK"
+Candidate	"AUSTIN, ROSEMARIE ""ROSIE"""	"AUSTIN, ROSEMARIE ""ROSIE"""
+Candidate	"KITTRELL, JAMES"	"KITTRELL, JAMES"
+Candidate	"Berkbigler, Marsha"	"Berkbigler, Marsha"
+Candidate	"Hooper, Levi"	"Hooper, Levi"
+Candidate	"Delgado, Oscar"	"Delgado, Oscar"
+Candidate	"Holmes, Dorothy Nash"	"Holmes, Dorothy Nash"
+Candidate	"Riggs, Tammy M."	"Riggs, Tammy M."
+Candidate	"Joiner, Amber"	"Joiner, Amber"
+Candidate	"Riger Sr., Jim"	"Riger Sr., Jim"
+Candidate	"Jacobs, Brandon"	"Jacobs, Brandon"
+Candidate	"Ratti, Julia"	"Ratti, Julia"
+Candidate	"Benitez-Thompson, Teresa"	"Benitez-Thompson, Teresa"
+Candidate	"Colborne, David"	"Colborne, David"
+Candidate	"Smith, Allen ""Eli"""	"Smith, Allen ""Eli"""
+Candidate	"Scott, Lauren A"	"Scott, Lauren A"
+Candidate	"Sprinkle, Michael"	"Sprinkle, Michael"
+Candidate	"Elser, Allen"	"Elser, Allen"
+Candidate	"Evans, Carol Alice"	"Evans, Carol Alice"
+Candidate	"Feemster, Debra"	"Feemster, Debra"
+Candidate	"Stevens, Leonard ""Len"""	"Stevens, Leonard ""Len"""
+Candidate	"Daly, Richard ""Skip"""	"Daly, Richard ""Skip"""
+Candidate	"Lee, Matt"	"Lee, Matt"
+Candidate	"Longley, Jessica"	"Longley, Jessica"
+Candidate	"Rhoads, John"	"Rhoads, John"
+Candidate	"Dahir, Kristopher"	"Dahir, Kristopher"
+Candidate	"Walter, John"	"Walter, John"
+Candidate	"Barstow, Joseph D."	"Barstow, Joseph D."
+Candidate	"Elliott, Garth T."	"Elliott, Garth T."
+Candidate	"Ortiz, Carmen"	"Ortiz, Carmen"
+Candidate	"Rider, Michael"	"Rider, Michael"
+Candidate	"Barlow, Bobbie"	"Barlow, Bobbie"
+Candidate	"Carter, John"	"Carter, John"
+Candidate	"Conley, Judy L."	"Conley, Judy L."
+Candidate	"Gambrell, Elisabeth ""Schatzi"""	"Gambrell, Elisabeth ""Schatzi"""
+Candidate	"Hall, Cameron"	"Hall, Cameron"
+Candidate	"MOTT, DANNY"	"MOTT, DANNY"
+Candidate	"Bremer, Denise A."	"Bremer, Denise A."
+Candidate	"Costalupes, Jim"	"Costalupes, Jim"
+Candidate	"Herron, Susan A."	"Herron, Susan A."
+Candidate	"McKay, Greg"	"McKay, Greg"
+Candidate	"CHACHAS, GEORGE"	"CHACHAS, GEORGE"
+Candidate	"STORK, STEVEN M."	"STORK, STEVEN M."
+Candidate	"LEWIS, RUSTY"	"LEWIS, RUSTY"
+Candidate	"MCCLINTOCK, RALPH"	"MCCLINTOCK, RALPH"
+Candidate	"DERBIDGE, DALE L."	"DERBIDGE, DALE L."
+Candidate	"MARTIN, LESLIE"	"MARTIN, LESLIE"
+Candidate	"BREWSTER, TODD"	"BREWSTER, TODD"
+Candidate	"ROBISON, WADE"	"ROBISON, WADE"
+Candidate	"KERNER, MARY"	"KERNER, MARY"
+Candidate	"TRASK, JESSICA"	"TRASK, JESSICA"
+Candidate	"KOYLE, DENYS M."	"KOYLE, DENYS M."
+Candidate	"Hansen, Joel F."	"Hansen, Joel F."
+Candidate	"Giomi, Stacey"	"Giomi, Stacey"
+Candidate	"WOOD, JOHN"	"WOOD, JOHN"
+Candidate	"BEST, RUSSELL"	"BEST, RUSSELL"
+Candidate	"BUNDY, RYAN"	"BUNDY, RYAN"
+Candidate	"LORD, JARED"	"LORD, JARED"
+Candidate	"LUIS, KRISTIN"	"LUIS, KRISTIN"
+Candidate	"RUSSELL, RYAN"	"RUSSELL, RYAN"
+Candidate	"UEHLING, ED"	"UEHLING, ED"
+Candidate	"ARAUJO, NELSON"	"ARAUJO, NELSON"
+Candidate	"FURLONG, KENNY"	"FURLONG, KENNY"
+Candidate	"HOULE, LORNE R."	"HOULE, LORNE R."
+Candidate	"Zemke, Autumn"	"Zemke, Autumn"
+Candidate	"BYRNE, CATHERINE"	"BYRNE, CATHERINE"
+Candidate	"Knecht, Ron"	"Knecht, Ron"
+Candidate	"Davis-Hersey, Tina"	"Davis-Hersey, Tina"
+Candidate	"HOGE, BILL"	"HOGE, BILL"
+Candidate	"HARTER, MATHEW"	"HARTER, MATHEW"
+Candidate	"STIGLICH, LIDIA"	"STIGLICH, LIDIA"
+Candidate	"MICHAELS, BARRY"	"MICHAELS, BARRY"
+Candidate	"MONDHINK-FELTON, DENISE L."	"MONDHINK-FELTON, DENISE L."
+Candidate	"OLSEN, PETE"	"OLSEN, PETE"
+Candidate	"HESSEY, TASHA"	"HESSEY, TASHA"
+Candidate	"MALLORY, ART"	"MALLORY, ART"
+Candidate	"RICHARDS, MIKE"	"RICHARDS, MIKE"
+Candidate	"TROTTER, BENJAMIN D."	"TROTTER, BENJAMIN D."
+Candidate	"HUTCHINGS, THOMAS"	"HUTCHINGS, THOMAS"
+Candidate	"LATTIN, CHRISTY"	"LATTIN, CHRISTY"
+Candidate	"SMITH, GARY L."	"SMITH, GARY L."
+Candidate	"SPENCER, MICHAEL"	"SPENCER, MICHAEL"
+Candidate	"TUCKER, LARRY"	"TUCKER, LARRY"
+Candidate	"GETTO JR., ROBERT M."	"GETTO JR., ROBERT M."
+Candidate	"CANNON, CURTIS W."	"CANNON, CURTIS W."
+Candidate	"SETTELMEYER, JAMES ARNOLD"	"SETTELMEYER, JAMES ARNOLD"
+Candidate	"McClain, Gina"	"McClain, Gina"
+Candidate	"Goya, Lynn Maria"	"Goya, Lynn Maria"
+Candidate	"Conway, Debbie"	"Conway, Debbie"
+Candidate	"Jones, Tierra"	"Jones, Tierra"
+Candidate	"Bailus, Mark B."	"Bailus, Mark B."
+Candidate	"Holthus, Mary Kay"	"Holthus, Mary Kay"
+Candidate	"JONES, DAVID M."	"JONES, DAVID M."
+Candidate	"DaCosta, Victoria Kay"	"DaCosta, Victoria Kay"
+Candidate	"Telles, Robert"	"Telles, Robert"
+Candidate	"Peetris, Tina M."	"Peetris, Tina M."
+Candidate	"Garfield, Dan"	"Garfield, Dan"
+Candidate	"Strawder, Robert"	"Strawder, Robert"
+Candidate	"Eisner, Gil"	"Eisner, Gil"
+Candidate	"Vickers, Harry L."	"Vickers, Harry L."
+Candidate	"Cochran, Jack ""Fat Jack"""	"Cochran, Jack ""Fat Jack"""
+Candidate	"Preta, Ralph"	"Preta, Ralph"
+Candidate	"HARDY, JOE"	"HARDY, JOE"
+Candidate	"Ross, Jordan"	"Ross, Jordan"
+Candidate	"Hofstein, Daniel"	"Hofstein, Daniel"
+Candidate	"Wade, Paris"	"Wade, Paris"
+Candidate	"Bronstein, Richard ""Rick"""	"Bronstein, Richard ""Rick"""
+Candidate	"Silberkraus, Stephen H."	"Silberkraus, Stephen H."
+Candidate	"Rogers, Gary P."	"Rogers, Gary P."
+Candidate	"Pitts, Joe"	"Pitts, Joe"
+Candidate	"Taylor, Kenny"	"Taylor, Kenny"
+Candidate	"HAMPE, STEVE"	"HAMPE, STEVE"
+Candidate	"Martin, Robert D."	"Martin, Robert D."
+Candidate	"Miller, Victor Lee"	"Miller, Victor Lee"
+Candidate	"Romanov, Lesia"	"Romanov, Lesia"
+Candidate	"Luckner, Gregg"	"Luckner, Gregg"
+Candidate	"Markowitz, Warren Ross"	"Markowitz, Warren Ross"
+Candidate	"McGonigle, Dean"	"McGonigle, Dean"
+Candidate	"Frei, Leon S."	"Frei, Leon S."
+Candidate	"Fletcher, Richard"	"Fletcher, Richard"
+Candidate	"Martinez, Mary Elizabeth Boyer"	"Martinez, Mary Elizabeth Boyer"
+Candidate	"Lystrup, Bob"	"Lystrup, Bob"
+Candidate	"Little, Patricia ""Pat"""	"Little, Patricia ""Pat"""
+Candidate	"Gault, George H."	"Gault, George H."
+Candidate	"Burrows, John"	"Burrows, John"
+Candidate	"DAVIS, BEN K."	"DAVIS, BEN K."
+Candidate	"Walker, Jere A."	"Walker, Jere A."
+Candidate	"Jensen, Josh"	"Jensen, Josh"
+Candidate	"CAVAZOS, LINDA"	"CAVAZOS, LINDA"
+Candidate	"Scalia, Ryan"	"Scalia, Ryan"
+Candidate	"Laub, Erik L."	"Laub, Erik L."
+Candidate	"DODENBIER, DARRYLL B."	"DODENBIER, DARRYLL B."
+Candidate	"Haviland, Brian Douglas"	"Haviland, Brian Douglas"
+Candidate	"Border, Calvin ""Cal"""	"Border, Calvin ""Cal"""
+Candidate	"DENIS, MO"	"DENIS, MO"
+Candidate	"Sedlmeyer, Stephen G."	"Sedlmeyer, Stephen G."
+Candidate	"Torres, Selena"	"Torres, Selena"
+Candidate	"McCurdy, II, William O'Neil"	"McCurdy, II, William O'Neil"
+Candidate	"Miceli, Gianna"	"Miceli, Gianna"
+Candidate	"McDonald, Michael L."	"McDonald, Michael L."
+Candidate	"GIBSON, Jim"	"GIBSON, Jim"
+Candidate	"Marsh, Doug"	"Marsh, Doug"
+Candidate	"Gilbert, Paul E."	"Gilbert, Paul E."
+Candidate	"Kandel, Kristi Lynn"	"Kandel, Kristi Lynn"
+Candidate	"ELLISON, KAREN"	"ELLISON, KAREN"
+Candidate	"Jackson, Mark B."	"Jackson, Mark B."
+Candidate	"Jones, Cassandra G."	"Jones, Cassandra G."
+Candidate	"Levin, Erik"	"Levin, Erik"
+Candidate	"Cwalina, Paul"	"Cwalina, Paul"
+Candidate	"Newlon, Brad"	"Newlon, Brad"
+Candidate	"Sheridan, John"	"Sheridan, John"
+Candidate	"Spellberg, Robert"	"Spellberg, Robert"
+Candidate	"Teter, Leann M."	"Teter, Leann M."
+Candidate	"King, Mike"	"King, Mike"
+Candidate	"Schilling, Mary"	"Schilling, Mary"
+Candidate	"Thran, Ted"	"Thran, Ted"
+Candidate	"Wilson, Ray"	"Wilson, Ray"
+Candidate	"Hampton, Aaron"	"Hampton, Aaron"
+Candidate	"Henningsen, Michael"	"Henningsen, Michael"
+Candidate	"Miller, Kenneth"	"Miller, Kenneth"
+Candidate	"Slater, Linda L."	"Slater, Linda L."
+Candidate	"Trute, Brian"	"Trute, Brian"
+Candidate	"Clark-Ross, Kathryn"	"Clark-Ross, Kathryn"
+Candidate	"Eisele, Bill"	"Eisele, Bill"
+Candidate	"Garcia, Robert M."	"Garcia, Robert M."
+Candidate	"Bernard, Matt"	"Bernard, Matt"
+Candidate	"Driscoll, Bill"	"Driscoll, Bill"
+Candidate	"Koontz, Richard Sr."	"Koontz, Richard Sr."
+Candidate	"Souligny, William R. ""Bill"""	"Souligny, William R. ""Bill"""
+Candidate	"Stangle, Roxanne"	"Stangle, Roxanne"
+Candidate	"Fagen, Charles ""Chuck"""	"Fagen, Charles ""Chuck"""
+Candidate	"Fertala, Keith E."	"Fertala, Keith E."
+Candidate	"Harris, Hunter"	"Harris, Hunter"
+Candidate	"Ruschmeyer, Carl N."	"Ruschmeyer, Carl N."
+Candidate	"Kirschner, William ""Bill"""	"Kirschner, William ""Bill"""
+Candidate	"Norman, Dan"	"Norman, Dan"
+Candidate	"Parks, Sandra ""Sandy"""	"Parks, Sandra ""Sandy"""
+Candidate	"Vogt, Darya"	"Vogt, Darya"
+Candidate	"RUSSELL, KATRINKA S."	"RUSSELL, KATRINKA S."
+Candidate	"JAKEMAN, KRISTINE ""KRIS"""	"JAKEMAN, KRISTINE ""KRIS"""
+Candidate	"PAUL, CHERYL"	"PAUL, CHERYL"
+Candidate	"ANDREOZZI, DELMO"	"ANDREOZZI, DELMO"
+Candidate	"EKLUND, CLIFF"	"EKLUND, CLIFF"
+Candidate	"SMALES, D. MIKE"	"SMALES, D. MIKE"
+Candidate	"INGRAM, TYLER"	"INGRAM, TYLER"
+Candidate	"HANCE, BILL"	"HANCE, BILL"
+Candidate	"LIKER, TONY"	"LIKER, TONY"
+Candidate	"SECRIST, JEANNA"	"SECRIST, JEANNA"
+Candidate	"SMITH, RO"	"SMITH, RO"
+Candidate	"STONE, CHIP"	"STONE, CHIP"
+Candidate	"KEENER, REECE"	"KEENER, REECE"
+Candidate	"LOGSDEN, MARCEY"	"LOGSDEN, MARCEY"
+Candidate	"CHIESA, ANTOINETTE"	"CHIESA, ANTOINETTE"
+Candidate	"SIMONS, MASON EDWARD"	"SIMONS, MASON EDWARD"
+Candidate	"PHILLIPS, STACIE"	"PHILLIPS, STACIE"
+Candidate	"ZEISZLER, BRIAN"	"ZEISZLER, BRIAN"
+Candidate	"WINES, CANDACE"	"WINES, CANDACE"
+Candidate	"NARVAIZA, AITOR"	"NARVAIZA, AITOR"
+Candidate	"PITTS, JIM"	"PITTS, JIM"
+Candidate	"KINNEY, CAMERON"	"KINNEY, CAMERON"
+Candidate	"ESPARZA, SABRA"	"ESPARZA, SABRA"
+Candidate	"EVENSON, WAYNE A."	"EVENSON, WAYNE A."
+Candidate	"GRISWOLD, PATRICIA ""PAM"""	"GRISWOLD, PATRICIA ""PAM"""
+Candidate	"LITCHFIELD, LINCOLN"	"LITCHFIELD, LINCOLN"
+Candidate	"HOLBROOK, DANA DON"	"HOLBROOK, DANA DON"
+Candidate	"GOOLSBY, JONATHAN"	"GOOLSBY, JONATHAN"
+Candidate	"PACE, MICHAEL K."	"PACE, MICHAEL K."
+Candidate	"WOOLSEY, ROBERT"	"WOOLSEY, ROBERT"
+Candidate	"WALZ, LAYLA"	"WALZ, LAYLA"
+Candidate	"DURHAM, JEFF R."	"DURHAM, JEFF R."
+Candidate	"DURHAM, KATHY"	"DURHAM, KATHY"
+Candidate	"GUTIERREZ, ISMAEL ""IZZY"" "	"GUTIERREZ, ISMAEL ""IZZY"" "
+Candidate	"HANSON, JOHN B."	"HANSON, JOHN B."
+Candidate	"HOLM, JASIE"	"HOLM, JASIE"
+Candidate	"CARTER, JARED F."	"CARTER, JARED F."
+Candidate	"RODRIGUEZ, GERARDO"	"RODRIGUEZ, GERARDO"
+Candidate	"LEE, RUTH P."	"LEE, RUTH P."
+Candidate	"BOYER, VERA"	"BOYER, VERA"
+Candidate	"HUBER-BETH, PATRICIA ""PATTY"""	"HUBER-BETH, PATRICIA ""PATTY"""
+Candidate	"ELGAN, LaCinda ""CINDY"""	"ELGAN, LaCinda ""CINDY"""
+Candidate	"HIPP, TIMOTHY"	"HIPP, TIMOTHY"
+Candidate	"GLENNEN, ROBERT E. III"	"GLENNEN, ROBERT E. III"
+Candidate	"POVILAITIS, PAULA"	"POVILAITIS, PAULA"
+Candidate	"BOSZAK, WENDY"	"BOSZAK, WENDY"
+Candidate	"MEARS, MICHAEL A."	"MEARS, MICHAEL A."
+Candidate	"PEARCE, AMANDA JEAN"	"PEARCE, AMANDA JEAN"
+Candidate	"MCKAY, RICH"	"MCKAY, RICH"
+Candidate	"CONLEY, BEVERLY"	"CONLEY, BEVERLY"
+Candidate	"BEUTEL, THEODORE ""TED"""	"BEUTEL, THEODORE ""TED"""
+Candidate	"ROWLEY, DOROTHY"	"ROWLEY, DOROTHY"
+Candidate	"SHARKOZY, MELYNDA"	"SHARKOZY, MELYNDA"
+Candidate	"BAUMANN, DARLA R."	"BAUMANN, DARLA R."
+Candidate	"Horky, Gary"	"Horky, Gary"
+Candidate	"Mavity, Theresa"	"Mavity, Theresa"
+Candidate	"Billingsley, Jim"	"Billingsley, Jim"
+Candidate	"Bryant, Fredrick"	"Bryant, Fredrick"
+Candidate	"Stone, Rich"	"Stone, Rich"
+Candidate	"JOHNSON, WILLIAM ""JEFF"""	"JOHNSON, WILLIAM ""JEFF"""
+Candidate	"Spero, Tami Rae"	"Spero, Tami Rae"
+Candidate	"Cerri, Ronald L."	"Cerri, Ronald L."
+Candidate	"French, Jim"	"French, Jim"
+Candidate	"Engstrom, Deborah"	"Engstrom, Deborah"
+Candidate	"Lecumberry, Rhona"	"Lecumberry, Rhona"
+Candidate	"MACDONALD, MICHAEL"	"MACDONALD, MICHAEL"
+Candidate	"Hunt, Gene"	"Hunt, Gene"
+Candidate	"Douglas, Bill"	"Douglas, Bill"
+Candidate	"Entwistle, Christopher R."	"Entwistle, Christopher R."
+Candidate	"Loveless, Jim"	"Loveless, Jim"
+Candidate	"Morgan, Matt"	"Morgan, Matt"
+Candidate	"DUVALL, LURA"	"DUVALL, LURA"
+Candidate	"Miller, Leann"	"Miller, Leann"
+Candidate	"SULLIVAN, SADIE"	"SULLIVAN, SADIE"
+Candidate	"Clark, Art III"	"Clark, Art III"
+Candidate	"Dimitroff, Harry L. Sr."	"Dimitroff, Harry L. Sr."
+Candidate	"Bisiaux, Tina Marie"	"Bisiaux, Tina Marie"
+Candidate	"Johnson, Jusdivia"	"Johnson, Jusdivia"
+Candidate	"Gandolfo, Billy"	"Gandolfo, Billy"
+Candidate	"Holt, Mark"	"Holt, Mark"
+Candidate	"Lloyd, Lisa"	"Lloyd, Lisa"
+Candidate	"Brackenbury, Jared"	"Brackenbury, Jared"
+Candidate	"Hibble, Ron"	"Hibble, Ron"
+Candidate	"Phillips, Kevin J."	"Phillips, Kevin J."
+Candidate	"Elmer, Amy Nicole"	"Elmer, Amy Nicole"
+Candidate	"McCleary, Bob"	"McCleary, Bob"
+Candidate	"Frehner, Shawn"	"Frehner, Shawn"
+Candidate	"Hansen, Carol J."	"Hansen, Carol J."
+Candidate	"Harr, Carolyn"	"Harr, Carolyn"
+Candidate	"Lee, Kerry D."	"Lee, Kerry D."
+Candidate	"Schimbeck, Evan W."	"Schimbeck, Evan W."
+Candidate	"Childers, Jeff"	"Childers, Jeff"
+Candidate	"Cowley, Mike D."	"Cowley, Mike D."
+Candidate	"Villines, Troy R."	"Villines, Troy R."
+Candidate	"Hunewill, Greg"	"Hunewill, Greg"
+Candidate	"Cullen, Brenda K."	"Cullen, Brenda K."
+Candidate	"Rye, Stephen B."	"Rye, Stephen B."
+Candidate	"Kassebaum, Douglas ""Doug"""	"Kassebaum, Douglas ""Doug"""
+Candidate	"Smith, Cary ""Rick"""	"Smith, Cary ""Rick"""
+Candidate	"Aveiro, Cassandra"	"Aveiro, Cassandra"
+Candidate	"Jones, Barbara Jean"	"Jones, Barbara Jean"
+Candidate	"Kennedy, Charles ""Chuck"""	"Kennedy, Charles ""Chuck"""
+Candidate	"McIntosh, Kathy"	"McIntosh, Kathy"
+Candidate	"Norris, Alicia"	"Norris, Alicia"
+Candidate	"Chisum, Kevin B."	"Chisum, Kevin B."
+Candidate	"Guss, Michael"	"Guss, Michael"
+Candidate	"Williams, Norman E."	"Williams, Norman E."
+Candidate	"Oberhansli, Donna"	"Oberhansli, Donna"
+Candidate	"Rowe, Sean Alden"	"Rowe, Sean Alden"
+Candidate	"CICHOWLAZ, BETH"	"CICHOWLAZ, BETH"
+Candidate	"Adams, Randy"	"Adams, Randy"
+Candidate	"Perry, Earl William"	"Perry, Earl William"
+Candidate	"ALBERTI, ANDY"	"ALBERTI, ANDY"
+Candidate	"STRINGER, SHEREE"	"STRINGER, SHEREE"
+Candidate	"MERLINO, SANDRA ""SAM"""	"MERLINO, SANDRA ""SAM"""
+Candidate	"WINN, SHEILA"	"WINN, SHEILA"
+Candidate	"BEATTY, DEBORAH"	"BEATTY, DEBORAH"
+Candidate	"NOYES, MICHAEL S."	"NOYES, MICHAEL S."
+Candidate	"SCHAUS, LANCE ROY"	"SCHAUS, LANCE ROY"
+Candidate	"DEL VECCHIO, NICHOLAS ANTHONY"	"DEL VECCHIO, NICHOLAS ANTHONY"
+Candidate	"CARLYLE, HORACE H."	"CARLYLE, HORACE H."
+Candidate	"KOSCIK, TIMAREE"	"KOSCIK, TIMAREE"
+Candidate	"ZIMMERMAN, JUSTIN B."	"ZIMMERMAN, JUSTIN B."
+Candidate	"HASTINGS, SEAN C."	"HASTINGS, SEAN C."
+Candidate	"YAZZIE, TAWNA"	"YAZZIE, TAWNA"
+Candidate	"GOLDSTEIN, RICHARD"	"GOLDSTEIN, RICHARD"
+Candidate	"DONALDSON, LACEY"	"DONALDSON, LACEY"
+Candidate	"BERGE, KRISTY"	"BERGE, KRISTY"
+Candidate	"CHILDS, RENE M."	"CHILDS, RENE M."
+Candidate	"SHIELDS, R. BRYCE"	"SHIELDS, R. BRYCE"
+Candidate	"KEARNS, JEFFREY"	"KEARNS, JEFFREY"
+Candidate	"SEDDON, JANA"	"SEDDON, JANA"
+Candidate	"STEPHENS, VANESSA"	"STEPHENS, VANESSA"
+Candidate	"Barde, Nicole"	"Barde, Nicole"
+Candidate	"CHAPMAN, JEN"	"CHAPMAN, JEN"
+Candidate	"Nevin, Jeffrey M."	"Nevin, Jeffrey M."
+Candidate	"Toll, Sam"	"Toll, Sam"
+Candidate	"Evans, Hugh ""Chip"""	"Evans, Hugh ""Chip"""
+Candidate	"Parent, Nancy"	"Parent, Nancy"
+Candidate	"Tudorache, Emil"	"Tudorache, Emil"
+Candidate	"Burtness, Lawrence"	"Burtness, Lawrence"
+Candidate	"Work, Kalie"	"Work, Kalie"
+Candidate	"Buehler, Matthew R."	"Buehler, Matthew R."
+Candidate	"Davis, Tammi"	"Davis, Tammi"
+Candidate	"Hicks, Chris"	"Hicks, Chris"
+Candidate	"Drakulich, Kathleen M."	"Drakulich, Kathleen M."
+Candidate	"Bushur, Aaron"	"Bushur, Aaron"
+Candidate	"Grossman, Dixie"	"Grossman, Dixie"
+Candidate	"Walker, Egan"	"Walker, Egan"
+Candidate	"Breslow, Barry"	"Breslow, Barry"
+Candidate	"CAVALLO, DON"	"CAVALLO, DON"
+Candidate	"Prothro, Verita Black"	"Prothro, Verita Black"
+Candidate	"Hall, Karl S."	"Hall, Karl S."
+Candidate	"KADLIC, JOHN J."	"KADLIC, JOHN J."
+Candidate	"Young, Charlene Y."	"Young, Charlene Y."
+Candidate	"Shorts, Gregory J."	"Shorts, Gregory J."
+Candidate	"Johnson, Bill"	"Johnson, Bill"
+Candidate	"Herman, Jeanne"	"Herman, Jeanne"
+Candidate	"Bein, Richard"	"Bein, Richard"
+Candidate	"Comer, Bruce"	"Comer, Bruce"
+Candidate	"Horton, Hud"	"Horton, Hud"
+Candidate	"Unsworth, Robert"	"Unsworth, Robert"
+Candidate	"ZUNINO, NANCY E."	"ZUNINO, NANCY E."
+Candidate	"Wolgast, Stephen"	"Wolgast, Stephen"
+Candidate	"Joseph, June"	"Joseph, June"
+Candidate	"Caudill, Andrew Benjamin"	"Caudill, Andrew Benjamin"
+Candidate	"Feemster, Debra Smith"	"Feemster, Debra Smith"
+Candidate	"Dickman, Jill Ann"	"Dickman, Jill Ann"
+Candidate	"Ainsworth, Sandra"	"Ainsworth, Sandra"
+Candidate	"Dutra, Suzanne"	"Dutra, Suzanne"
+Candidate	"Severt, Susan"	"Severt, Susan"
+Candidate	"Dennis, Greg"	"Dennis, Greg"
+Candidate	"Johnson, Larry J."	"Johnson, Larry J."
+Candidate	"Rhodes, Zachary"	"Rhodes, Zachary"
+Candidate	"Keller, Hans R."	"Keller, Hans R."
+Candidate	"SINDELAR, MARTHA RIVERA"	"SINDELAR, MARTHA RIVERA"
+Candidate	"BAKARIC, CATHERINE"	"BAKARIC, CATHERINE"
+Candidate	"Wheable, Michael A."	"Wheable, Michael A."
+Candidate	"Adams, Amy"	"Adams, Amy"
+Candidate	"Willes, Cade H."	"Willes, Cade H."
+Candidate	"Henriod, Scott"	"Henriod, Scott"
+Candidate	"Sawyer, Ray"	"Sawyer, Ray"
+Candidate	"Skye, Ericson"	"Skye, Ericson"
+Candidate	"ACKERMAN, PATRICIA"	"Ackerman, Patricia"
+Candidate	"AMODEI, MARK E."	"Amodei, Mark E."
+Candidate	NONE OF THESE CANDIDATES	None Of These Candidates
+Candidate	"FUMO, OZZIE"	"FUMO, Ozzie"
+Candidate	"Titus, Dina"	"TITUS, Dina"
+Candidate	"Carlton, Maggie"	"CARLTON, Maggie"
+Candidate	"HORSFORD, STEVEN A."	"Horsford, Steven A."
+Candidate	"KRASNER, LISA"	"Krasner, Lisa"
+Candidate	"Ford, Aaron"	"FORD, AARON"
+Candidate	"Duncan, Wes"	"DUNCAN, WES"
+Candidate	"Sisolak, Steve"	"SISOLAK, STEVE"
+Candidate	"Laxalt, Adam Paul"	"LAXALT, ADAM PAUL"
+Candidate	"Marshall, Kate"	"MARSHALL, KATE"
+Candidate	"Roberson, Michael"	"ROBERSON, MICHAEL"
+Candidate	"Beers, Bob"	"BEERS, BOB"
+Candidate	"Rosen, Jacky"	"ROSEN, JACKY"
+Candidate	"COHEN, LESLEY elizabeth"	"Cohen, Lesley Elizabeth"
+Candidate	"CANCELA, YVANNA"	"Cancela, Yvanna"
+Candidate	"ELLISON, JOHN C."	"Ellison, John C."
+Candidate	"Hansen, Alexis M."	"HANSEN, ALEXIS M."
+Candidate	"SMITH, RODNEY"	"Smith, Rodney"
+Candidate	"Conine, Zach"	"CONINE, ZACH"
+Candidate	"GUMINA, TONY"	"Gumina, Tony"
+Candidate	"Bakari, Kamau A."	"BAKARI, KAMAU A."
+Candidate	"Hagan, Tim"	"HAGAN, TIM"
+Candidate	"Hansen, Janine"	"HANSEN, JANINE"
+Candidate	"Thompson, Tyrone"	"THOMPSON, Tyrone"
+Candidate	"Hansen, Ira"	"HANSEN, IRA"
+Candidate	"WAGNER, JOHN"	"Wagner, John"
+Candidate	"Tarkanian, Danny"	"Tarkanian, Danny"
 Party	Unknown	Unknown
+Party	Democratic Party	DEM
+Party	Republican Party	REP
+Party	Unaffiliated	Nonpartisan
+Party	Democratic Party	Democratic
+Party	Republican Party	Republican
 CountItemType	total	Votes
 BallotMeasureSelection	Yes	Yes
 BallotMeasureSelection	No	No
