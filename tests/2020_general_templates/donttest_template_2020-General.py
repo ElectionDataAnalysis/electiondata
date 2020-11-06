@@ -7,15 +7,26 @@ import election_data_analysis as e
 #   Replace each '-1' with the correct number calculated from the results file.
 #   Move this testing file to the correct jurisdiction folder in `election_data_analysis/tests`
 
-## constants - CHANGE THESE!! - use internal db names
+# # # constants - CHANGE THESE!! - use internal db names
 election = "2020 General"
-jurisdiction = 'Pennsylvania'
-abbr = 'PA'
-single_vote_type = 'absentee'  # pick any one from your file
-single_county = 'Pennsylvania;Philadelphia County'  # pick any one from your file
+jurisdiction = 'North Carolina'
+abbr = 'NC'
+total_pres_votes = -1  # total of all votes for President
+cd = 3  # congressional district
+total_cd_votes = -1  # total votes in the chosen cd
+shd = 1   # state house district
+total_shd_votes = -1
+ssd = 15  # state senate district
+total_ssd_votes = -1
+single_vote_type = 'early'  # pick any one from your file
+pres_votes_vote_type = -1
+single_county = 'North Carolina;Bertie County'  # pick any one from your file
+pres_votes_county = -1  # total votes for pres of that county & vote type
+
 
 def test_data_exists(dbname):
-    assert e.data_exists(election,jurisdiction,dbname=dbname)
+    assert e.data_exists(election, jurisdiction, dbname=dbname)
+
 
 def test_presidential(dbname):
     assert(e.contest_total(
@@ -24,37 +35,29 @@ def test_presidential(dbname):
         f"US President ({abbr})",
         dbname=dbname,
         )
-        == 6422156
+        == total_pres_votes
     )
 
-def test_statewide_totals(dbname):
-    assert (e.contest_total(
-        election,
-        jurisdiction,
-        f"{abbr} Auditor General",
-        dbname=dbname,
-        )
-        == 6274473
-    )
 
 def test_congressional_totals(dbname):
     assert (e.contest_total(
         election,
         jurisdiction,
-        f"US House {abbr} District 16",
+        f"US House {abbr} District {cd}",
         dbname=dbname,
         )
-        == 315704
+        == total_cd_votes
     )
+
 
 def test_state_senate_totals(dbname):
     assert (e.contest_total(
         election,
         jurisdiction,
-        f"{abbr} Senate District 35",
+        f"{abbr} Senate District {ssd}",
         dbname=dbname,
         )
-        == 122414
+        == total_ssd_votes
     )
 
 
@@ -62,10 +65,10 @@ def test_state_house_totals(dbname):
     assert (e.contest_total(
         election,
         jurisdiction,
-        f"{abbr} House District 116",
+        f"{abbr} House District {shd}",
         dbname=dbname,
         )
-        == 25615
+        == total_shd_votes
     )
 
 
@@ -78,25 +81,24 @@ def test_vote_type_counts_consistent(dbname):
 
 
 def test_count_type_subtotal(dbname):
-    assert (e.count_type_total(
+    assert (e.contest_total(
         election,
         jurisdiction,
         f"US President ({abbr})",
-        single_vote_type,
         dbname=dbname,
+        vote_type=single_vote_type,
         )
-        == 2253712
+        == pres_votes_vote_type
     )
 
 
-def test_one_county_vote_type(dbname):
+def test_county_subtotal(dbname):
     assert (e.contest_total(
         election,
         jurisdiction,
         f"US President ({abbr})",
         dbname=dbname,
         county=single_county,
-        vote_type=single_vote_type,
         )
-        == -1
+        == pres_votes_county
             )

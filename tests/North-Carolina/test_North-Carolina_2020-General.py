@@ -1,45 +1,103 @@
 import election_data_analysis as e
 
-def test_data(dbname):
-    assert e.data_exists("2020 General","North Carolina",dbname=dbname)
+# Instructions:
+#   Change the constants to values from your file
+#   Delete any tests for contest types your state doesn't have in 2020 (e.g., Florida has no US Senate contest)
+#   (Optional) Change district numbers
+#   Replace each '-1' with the correct number calculated from the results file.
+#   Move this testing file to the correct jurisdiction folder in `election_data_analysis/tests`
 
-def test_nc_statewide_totals_20(dbname):
-    assert (e.contest_total(
-            "2020 General",
-            "North Carolina",
-            "US House NC District 3",
-            dbname=dbname,
+## constants - CHANGE THESE!! - use internal db names
+election = "2020 General"
+jurisdiction = 'North Carolina'
+abbr = 'NC'
+total_pres_votes = 5466828  # total of all votes for President
+cd = 3  # congressional district
+total_cd_votes = 358473 # total votes in the chosen cd
+shd = 1   # state house district
+total_shd_votes = 37758
+ssd =  15  # state senate district
+total_ssd_votes = 122221
+single_vote_type = 'early'  # pick any one from your file
+pres_votes_vote_type = 3559206
+single_county = 'North Carolina;Bertie County'  # pick any one from your file
+pres_votes_county = 9682  # total votes for pres of that county & vote type
+
+def test_data_exists(dbname):
+    assert e.data_exists(election, jurisdiction, dbname=dbname)
+
+
+def test_presidential(dbname):
+    assert(e.contest_total(
+        election,
+        jurisdiction,
+        f"US President ({abbr})",
+        dbname=dbname,
         )
-            == 358473
+        == total_pres_votes
     )
 
 
-
-def test_nc_senate_totals_20(dbname):
+def test_congressional_totals(dbname):
     assert (e.contest_total(
-            "2020 General",
-            "North Carolina",
-            "NC Senate District 15",
-            dbname=dbname,
+        election,
+        jurisdiction,
+        f"US House {abbr} District {cd}",
+        dbname=dbname,
         )
-            == 122221
+        == total_cd_votes
     )
 
 
-
-def test_nc_house_totals_20(dbname):
+def test_state_senate_totals(dbname):
     assert (e.contest_total(
-            "2020 General",
-            "North Carolina",
-            "NC House District 1",
-            dbname=dbname,
+        election,
+        jurisdiction,
+        f"{abbr} Senate District {ssd}",
+        dbname=dbname,
         )
-            == 37758
+        == total_ssd_votes
     )
 
 
+def test_state_house_totals(dbname):
+    assert (e.contest_total(
+        election,
+        jurisdiction,
+        f"{abbr} House District {shd}",
+        dbname=dbname,
+        )
+        == total_shd_votes
+    )
 
-def test_nc_totals_match_vote_type_20(dbname):
-    assert (e.check_totals_match_vote_types("2020 General","North Carolina" ,dbname=dbname) == True)
+
+def test_standard_vote_types(dbname):
+    assert e.check_count_types_standard(election, jurisdiction, dbname=dbname)
 
 
+def test_vote_type_counts_consistent(dbname):
+    assert e.check_totals_match_vote_types(election, jurisdiction, dbname=dbname)
+
+
+def test_count_type_subtotal(dbname):
+    assert (e.contest_total(
+        election,
+        jurisdiction,
+        f"US President ({abbr})",
+        dbname=dbname,
+        vote_type=single_vote_type,
+        )
+        == pres_votes_vote_type
+    )
+
+
+def test_county_subtotal(dbname):
+    assert (e.contest_total(
+        election,
+        jurisdiction,
+        f"US President ({abbr})",
+        dbname=dbname,
+        county=single_county,
+        )
+        == pres_votes_county
+            )
