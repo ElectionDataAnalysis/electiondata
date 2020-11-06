@@ -4833,6 +4833,7 @@ Candidate	Michele Lynn Meyer	Michele Lynn Meyer
 Candidate	Dana Nichols	Dana Nichols
 Candidate	Charles S. Unfug	Charles S. Unfug
 CountItemType	total	total
+CountItemType	total	Total Votes
 Candidate	Hillary Clinton	Hillary Clinton / Tim Kaine
 Candidate	Donald J. Trump	Donald J. Trump / Michael R. Pence
 Candidate	Darrell L. Castle	Darrell L. Castle / Scott N. Bradley
