@@ -1542,3 +1542,18 @@ def clean_candidate_names(df):
     df = df[df_cols].merge(extra_df, how="inner", left_index=True, right_index=True)
     df.reset_index(drop=True, inplace=True)
     return df
+
+
+def data_file_download(cursor, election_id: int, reporting_unit_id: int) -> int:
+    q = sql.SQL("""
+        SELECT  MIN(download_date)::text as download_date
+        FROM    _datafile d
+        WHERE   d."Election_Id" = %s
+                AND d."ReportingUnit_Id" = %s
+    """
+    )
+    try:
+        cursor.execute(q, [election_id, reporting_unit_id])
+        return cursor.fetchall()[0][0]
+    except Exception as exc:
+        return None
