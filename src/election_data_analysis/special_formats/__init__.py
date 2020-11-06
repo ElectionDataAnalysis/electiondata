@@ -402,16 +402,16 @@ def read_xml(
     # identify tags with counts or other raw data (the info we want)
     # and list data to be pulled from each tag
     # TODO tech debt: simplify
-    count_tags = [x.split(".")[0] for x in munger.options["count_columns_by_name"]]
-    counts = {t:[x for x in munger.options["count_columns_by_name"] if x.split(".")[0] == t] for t in count_tags}
-    raw_tags = [x.split(".")[0] for x in munger.field_list]
-    raws = {t:[x for x in munger.field_list if x.split(".")[0] == t] for t in raw_tags}
-    good_tags = set(count_tags).update(raw_tags)
-    good_pairs = counts.update(raws)
+    fields = set(munger.options["count_columns_by_name"]).union(munger.field_list)
+    tags = {f.split(".")[0] for f in fields}
+    attributes = {t: [x.split(".")[1] for x in fields if x.split(".")[0] == t] for t in tags}
+
     try:
-        result_root = ResultsNode(tree.getroot())
-        result_root.process(good_tags, good_pairs)
-        raw_results = pd.DataFrame(result_root.results)
+        root = tree.getroot()
+        results_list = results_below(root, tags, attributes)
+        raw_results = pd.DataFrame(results_list)
+        for c in munger.options["count_columns_by_name"]:
+            raw_results[c] = pd.to_numeric(raw_results[c], errors="coerce")
         raw_results, err_df = m.clean_count_cols(
             raw_results,
             munger.options["count_columns_by_name"],
@@ -424,38 +424,25 @@ def read_xml(
     return raw_results, err
 
 
-class ResultsTree(et.ElementTree):
-    def __init__(self, file):
-        super().__init__(file=file)
-        for node in self.iter():
-            node.results_dictionaries = list()
+def results_below(node: et.Element, good_tags: set, good_pairs: dict) -> list:
+    """appends all (possibly incomplete) results records that can be
+    read from nodes below to the list self.results"""
+    r_below = []
 
-
-class ResultsNode(et.Element):
-    def __init__(self, elt: et.Element):
-        super().__init__(elt.tag, elt.attrib)
-        self.results = list()  # a list of dicts, each holding info for eventual dataframe row
-
-    def process(self, good_tags: set, good_pairs: dict):
-        """appends all (possibly incomplete) results records that can be
-        read from nodes below to the list self.results"""
-        for child in self:
-            r_child = ResultsNode(child)
-            if r_child.tag in good_tags:
+    if node.getchildren() == list():
+        r_below = [{f"{node.tag}.{k}": node.attrib.get(k, "") for k in good_pairs[node.tag]}]
+    else:
+        for child in node:
+            if child.tag in good_tags:
                 # get list of all (possibly incomplete) results records from below the child
-                r_child.process(good_tags, good_pairs)
+                r_below_child = results_below(child, good_tags, good_pairs)
                 # add info from the current node to each record and append result to self.results
-                for result in r_child.results:
-                    if self.tag in good_tags:
-                        self.results.append(
-                            result.update(
-                                {self.tag: self.attrib[k] for k in good_pairs[self.tag]}
-                            )
+                for result in r_below_child:
+                    if node.tag in good_tags:
+                        result.update(
+                            {f"{node.tag}.{k}": node.attrib.get(k, "") for k in good_pairs[node.tag]}
                         )
-
-            # if child not useful, delete child
-            else:
-                self.remove(child)
-        return
+                    r_below.append(result)
+    return r_below
 
 
