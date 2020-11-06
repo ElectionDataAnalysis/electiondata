@@ -14348,3 +14348,380 @@ ReportingUnit	North Carolina;Wilkes County;ABSENTEE MAIL	WILKES;ABSENTEE MAIL - 
 ReportingUnit	North Carolina;Wilkes County;ONE STOP OFFICE	WILKES;ONE STOP OFFICE - N
 ReportingUnit	North Carolina;Wilkes County;110	WILKES;110 - Y
 ReportingUnit	North Carolina;Wilkes County;ONE STOP PLEASANT HILL	WILKES;ONE STOP PLEASANT HILL - N
+Candidate	Zack Hawkins	Zack Hawkins
+Candidate	Zach Berly	Zach Berly
+Candidate	William Young	William Young
+Candidate	Will Marsh	Will Marsh
+Candidate	Wendy Sellars	Wendy Sellars
+Candidate	Warren Scott Nail	Warren Scott Nail
+Candidate	Warren Kennedy	Warren Kennedy
+Candidate	Wally White	Wally White
+Candidate	Victoria Fox	Victoria Fox
+Candidate	Vernetta Alston	Vernetta Alston
+Candidate	Ven Challa	Ven Challa
+Candidate	Tracey DeBruhl	Tracey DeBruhl
+Candidate	Tony Moore	Tony Moore
+Candidate	Tommy Fulcher	Tommy Fulcher
+Candidate	Tina R. Miles	Tina R. Miles
+Candidate	Tim Hyatt	Tim Hyatt
+Candidate	Tim Heath	Tim Heath
+Candidate	Terry E. Garrison	Terry E. Garrison
+Candidate	Terry Brown	Terry Brown
+Candidate	Ted Remington	Ted Remington
+Candidate	Tamara Zwinak	Tamara Zwinak
+Candidate	Susan Lee (Susie) Scott	Susan Lee (Susie) Scott
+Candidate	Susan Landis	Susan Landis
+Candidate	Steven J. DiFiore	Steven J. DiFiore
+Candidate	Sonja P. Nichols	Sonja P. Nichols
+Candidate	Shannon W. Bray	Shannon W. Bray
+Candidate	Sev Palacios	Sev Palacios
+Candidate	Sebastian King	Sebastian King
+Candidate	Scott T. Brewer	Scott T. Brewer
+Candidate	Scott Populorum	Scott Populorum
+Candidate	Scott Huffman	Scott Huffman
+Candidate	Sammy Davis Webb	Sammy Davis Webb
+Candidate	Sammie Brooks	Sammie Brooks
+Candidate	Russell Rowe	Russell Rowe
+Candidate	Ronald L. Smith	Ronald L. Smith
+Candidate	Robert Lewis Jordan	Robert Lewis Jordan
+Candidate	Rita Cruise	Rita Cruise
+Candidate	Ricky Hurtado	Ricky Hurtado
+Candidate	Rick Padgett	Rick Padgett
+Candidate	Ray Pickett	Ray Pickett
+Candidate	Phil Stover	Phil Stover
+Candidate	Perrin Jones	Perrin Jones
+Candidate	Paul Newton	Paul Newton
+Candidate	Patricia Timmons-Goodson	Patricia Timmons-Goodson
+Candidate	Pam De Maria	Pam De Maria
+Candidate	Olivia Oxendine	Olivia Oxendine
+Candidate	Norman W. Sanderson	Norman W. Sanderson
+Candidate	Nicole Quick	Nicole Quick
+Candidate	Nick Blount	Nick Blount
+Candidate	Mick Rankin	Mick Rankin
+Candidate	Michael C. Munger	Michael C. Munger
+Candidate	Matthew Winslow	Matthew Winslow
+Candidate	Mark Cavaliero	Mark Cavaliero
+Candidate	Mario J. Lomuscio	Mario J. Lomuscio
+Candidate	Marcus J. Singleton	Marcus J. Singleton
+Candidate	Linda Cooper-Suggs	Linda Cooper-Suggs
+Candidate	Libbie Griffin	Libbie Griffin
+Candidate	Liam Leaver	Liam Leaver
+Candidate	Kyle Kirby	Kyle Kirby
+Candidate	Kenneth Bagnal	Kenneth Bagnal
+Candidate	Keith Townsend	Keith Townsend
+Candidate	Kat McDonald	Kat McDonald
+Candidate	Karl Gillespie	Karl Gillespie
+Candidate	Karen Kozel	Karen Kozel
+Candidate	Kalle Thompson	Kalle Thompson
+Candidate	Justin Walczak	Justin Walczak
+Candidate	Jose Santiago	Jose Santiago
+Candidate	Jon Blake	Jon Blake
+Candidate	Johnny H. Boyles	Johnny H. Boyles
+Candidate	John Tarantino	John Tarantino
+Candidate	John Kirkman	John Kirkman
+Candidate	Jerry Munden	Jerry Munden
+Candidate	Jennifer Childers	Jennifer Childers
+Candidate	Jeff Zenger	Jeff Zenger
+Candidate	Jeff Gregory	Jeff Gregory
+Candidate	Jeanne Supin	Jeanne Supin
+Candidate	Jason Loeback	Jason Loeback
+Candidate	Jason Cain	Jason Cain
+Candidate	Jane Ledwell Gant	Jane Ledwell Gant
+Candidate	Jack W. Brosch	Jack W. Brosch
+Candidate	J.D. Wooten	J.D. Wooten
+Candidate	Ike Johnson	Ike Johnson
+Candidate	Heather S. Holmes	Heather S. Holmes
+Candidate	Grey Mills	Grey Mills
+Candidate	Greg McBryde	Greg McBryde
+Candidate	Gloria Harrington Overcash	Gloria Harrington Overcash
+Candidate	Gerard Falzon	Gerard Falzon
+Candidate	George T. Gilson, Jr.	George T. Gilson, Jr.
+Candidate	Gayle Wesley Harris	Gayle Wesley Harris
+Candidate	Gavin Bell	Gavin Bell
+Candidate	Frann Sarpolus	Frann Sarpolus
+Candidate	Ericka L. McKnight	Ericka L. McKnight
+Candidate	Eric Henry	Eric Henry
+Candidate	Eric Burns	Eric Burns
+Candidate	Emily Bunch Nicholson	Emily Bunch Nicholson
+Candidate	Edward Phifer	Edward Phifer
+Candidate	Ed Hallyburton	Ed Hallyburton
+Candidate	Duskin Lassiter	Duskin Lassiter
+Candidate	Dudley Greene	Dudley Greene
+Candidate	Dorothea Downing White	Dorothea Downing White
+Candidate	Donna Lake	Donna Lake
+Candidate	Don Pomeroy	Don Pomeroy
+Candidate	Denton Lee	Denton Lee
+Candidate	Dee Watson	Dee Watson
+Candidate	Debbi Fintak	Debbi Fintak
+Candidate	DeAndrea Salvador	DeAndrea Salvador
+Candidate	David Woodson	David Woodson
+Candidate	David Willis	David Willis
+Candidate	David Tondreau	David Tondreau
+Candidate	David Sink	David Sink
+Candidate	David Parker	David Parker
+Candidate	David Brian Wheeler	David Brian Wheeler
+Candidate	David (Dave) Craven	David (Dave) Craven
+Candidate	Daryl Farrow	Daryl Farrow
+Candidate	Daniel Caudill	Daniel Caudill
+Candidate	Dan Lawlor	Dan Lawlor
+Candidate	D.R. King	D.R. King
+Candidate	Corie Schreiber	Corie Schreiber
+Candidate	Corey Stephens	Corey Stephens
+Candidate	Clinton Honey	Clinton Honey
+Candidate	Clark Pope	Clark Pope
+Candidate	Cindy Deporter	Cindy Deporter
+Candidate	Christopher Schulte	Christopher Schulte
+Candidate	Christopher Cole	Christopher Cole
+Candidate	Chris Meadows	Chris Meadows
+Candidate	Cecelia Surratt	Cecelia Surratt
+Candidate	Carolyn G. Logan	Carolyn G. Logan
+Candidate	Carolyn F. Gomaa	Carolyn F. Gomaa
+Candidate	Carl Martin	Carl Martin
+Candidate	Buck Bayliff	Buck Bayliff
+Candidate	Brent Heath	Brent Heath
+Candidate	Brandon Gray	Brandon Gray
+Candidate	Bobbie Shields	Bobbie Shields
+Candidate	Bob Penland	Bob Penland
+Candidate	Beth Shaw	Beth Shaw
+Candidate	Barry Templeton	Barry Templeton
+Candidate	Barbara Yates-Lockamy	Barbara Yates-Lockamy
+Candidate	Amy S. Galey	Amy S. Galey
+Candidate	Amy Bynum	Amy Bynum
+Candidate	Amanda Brown Kotis	Amanda Brown Kotis
+Candidate	Alan Jones	Alan Jones
+Candidate	Alan D. Swain	Alan D. Swain
+Candidate	Al Pisano	Al Pisano
+Candidate	Al Heggins	Al Heggins
+Candidate	Adrian Lee Travers	Adrian Lee Travers
+Candidate	Adam Ericson	Adam Ericson
+Candidate	Abbie (Bud) Lane	Abbie (Bud) Lane
+ReportingUnit	North Carolina;Yadkin County;TRANSFER - N	YADKIN;TRANSFER - N
+ReportingUnit	North Carolina;Wilkes County;OFFICE OS - N	WILKES;OFFICE OS - N
+ReportingUnit	North Carolina;Wilkes County;MCGEE OS - N	WILKES;MCGEE OS - N
+ReportingUnit	North Carolina;Wayne County;OS MOT - N	WAYNE;OS MOT - N
+ReportingUnit	North Carolina;Wayne County;OS MAX - N	WAYNE;OS MAX - N
+ReportingUnit	North Carolina;Wayne County;OS BCR - N	WAYNE;OS BCR - N
+ReportingUnit	North Carolina;Watauga County;OS WW - N	WATAUGA;OS WW - N
+ReportingUnit	North Carolina;Watauga County;OS FSCO - N	WATAUGA;OS FSCO - N
+ReportingUnit	North Carolina;Watauga County;OS DG - N	WATAUGA;OS DG - N
+ReportingUnit	North Carolina;Watauga County;OS BR - N	WATAUGA;OS BR - N
+ReportingUnit	North Carolina;Watauga County;ABSENTEE - N	WATAUGA;ABSENTEE - N
+ReportingUnit	North Carolina;Washington County;TRANSFER - N	WASHINGTON;TRANSFER - N
+ReportingUnit	North Carolina;Wake County;TRANS 81-120 - N	WAKE;TRANS 81-120 - N
+ReportingUnit	North Carolina;Wake County;TRANS 121-128 - N	WAKE;TRANS 121-128 - N
+ReportingUnit	North Carolina;Wake County;PROVI 81-120 - N	WAKE;PROVI 81-120 - N
+ReportingUnit	North Carolina;Wake County;PROVI 121-128 - N	WAKE;PROVI 121-128 - N
+ReportingUnit	North Carolina;Wake County;OSZB 81-120 - N	WAKE;OSZB 81-120 - N
+ReportingUnit	North Carolina;Wake County;OSZB 41-80 - N	WAKE;OSZB 41-80 - N
+ReportingUnit	North Carolina;Wake County;OSZB 121-128 - N	WAKE;OSZB 121-128 - N
+ReportingUnit	North Carolina;Wake County;OSZB 1-40 - N	WAKE;OSZB 1-40 - N
+ReportingUnit	North Carolina;Wake County;OSWO 81-120 - N	WAKE;OSWO 81-120 - N
+ReportingUnit	North Carolina;Wake County;OSWO 41-80 - N	WAKE;OSWO 41-80 - N
+ReportingUnit	North Carolina;Wake County;OSWO 121-128 - N	WAKE;OSWO 121-128 - N
+ReportingUnit	North Carolina;Wake County;OSWO 1-40 - N	WAKE;OSWO 1-40 - N
+ReportingUnit	North Carolina;Wake County;OSWN 81-120 - N	WAKE;OSWN 81-120 - N
+ReportingUnit	North Carolina;Wake County;OSWN 41-80 - N	WAKE;OSWN 41-80 - N
+ReportingUnit	North Carolina;Wake County;OSWN 121-128 - N	WAKE;OSWN 121-128 - N
+ReportingUnit	North Carolina;Wake County;OSWN 1-40 - N	WAKE;OSWN 1-40 - N
+ReportingUnit	North Carolina;Wake County;OSWA 81-120 - N	WAKE;OSWA 81-120 - N
+ReportingUnit	North Carolina;Wake County;OSWA 121-128 - N	WAKE;OSWA 121-128 - N
+ReportingUnit	North Carolina;Wake County;OSTA 81-120 - N	WAKE;OSTA 81-120 - N
+ReportingUnit	North Carolina;Wake County;OSTA 121-128 - N	WAKE;OSTA 121-128 - N
+ReportingUnit	North Carolina;Wake County;OSRB 81-120 - N	WAKE;OSRB 81-120 - N
+ReportingUnit	North Carolina;Wake County;OSRB 41-80 - N	WAKE;OSRB 41-80 - N
+ReportingUnit	North Carolina;Wake County;OSRB 121-128 - N	WAKE;OSRB 121-128 - N
+ReportingUnit	North Carolina;Wake County;OSRB 1-40 - N	WAKE;OSRB 1-40 - N
+ReportingUnit	North Carolina;Wake County;OSOP 81-120 - N	WAKE;OSOP 81-120 - N
+ReportingUnit	North Carolina;Wake County;OSOP 121-128 - N	WAKE;OSOP 121-128 - N
+ReportingUnit	North Carolina;Wake County;OSNR 81-120 - N	WAKE;OSNR 81-120 - N
+ReportingUnit	North Carolina;Wake County;OSNR 121-128 - N	WAKE;OSNR 121-128 - N
+ReportingUnit	North Carolina;Wake County;OSLL 81-120 - N	WAKE;OSLL 81-120 - N
+ReportingUnit	North Carolina;Wake County;OSLL 121-128 - N	WAKE;OSLL 121-128 - N
+ReportingUnit	North Carolina;Wake County;OSLH 81-120 - N	WAKE;OSLH 81-120 - N
+ReportingUnit	North Carolina;Wake County;OSLH 41-80 - N	WAKE;OSLH 41-80 - N
+ReportingUnit	North Carolina;Wake County;OSLH 121-128 - N	WAKE;OSLH 121-128 - N
+ReportingUnit	North Carolina;Wake County;OSLH 1-40 - N	WAKE;OSLH 1-40 - N
+ReportingUnit	North Carolina;Wake County;OSKD 81-120 - N	WAKE;OSKD 81-120 - N
+ReportingUnit	North Carolina;Wake County;OSKD 121-128 - N	WAKE;OSKD 121-128 - N
+ReportingUnit	North Carolina;Wake County;OSHS 81-120 - N	WAKE;OSHS 81-120 - N
+ReportingUnit	North Carolina;Wake County;OSHS 41-80 - N	WAKE;OSHS 41-80 - N
+ReportingUnit	North Carolina;Wake County;OSHS 121-128 - N	WAKE;OSHS 121-128 - N
+ReportingUnit	North Carolina;Wake County;OSHS 1-40 - N	WAKE;OSHS 1-40 - N
+ReportingUnit	North Carolina;Wake County;OSGR 81-120 - N	WAKE;OSGR 81-120 - N
+ReportingUnit	North Carolina;Wake County;OSGR 41-80 - N	WAKE;OSGR 41-80 - N
+ReportingUnit	North Carolina;Wake County;OSGR 121-128 - N	WAKE;OSGR 121-128 - N
+ReportingUnit	North Carolina;Wake County;OSGR 1-40 - N	WAKE;OSGR 1-40 - N
+ReportingUnit	North Carolina;Wake County;OSCS 81-120 - N	WAKE;OSCS 81-120 - N
+ReportingUnit	North Carolina;Wake County;OSCS 41-80 - N	WAKE;OSCS 41-80 - N
+ReportingUnit	North Carolina;Wake County;OSCS 121-128 - N	WAKE;OSCS 121-128 - N
+ReportingUnit	North Carolina;Wake County;OSCS 1-40 - N	WAKE;OSCS 1-40 - N
+ReportingUnit	North Carolina;Wake County;OSCM 81-120 - N	WAKE;OSCM 81-120 - N
+ReportingUnit	North Carolina;Wake County;OSCM 41-80 - N	WAKE;OSCM 41-80 - N
+ReportingUnit	North Carolina;Wake County;OSCM 121-128 - N	WAKE;OSCM 121-128 - N
+ReportingUnit	North Carolina;Wake County;OSCM 1-40 - N	WAKE;OSCM 1-40 - N
+ReportingUnit	North Carolina;Wake County;OSCA 81-120 - N	WAKE;OSCA 81-120 - N
+ReportingUnit	North Carolina;Wake County;OSCA 121-128 - N	WAKE;OSCA 121-128 - N
+ReportingUnit	North Carolina;Wake County;OSBR 81-120 - N	WAKE;OSBR 81-120 - N
+ReportingUnit	North Carolina;Wake County;OSBR 41-80 - N	WAKE;OSBR 41-80 - N
+ReportingUnit	North Carolina;Wake County;OSBR 121-128 - N	WAKE;OSBR 121-128 - N
+ReportingUnit	North Carolina;Wake County;OSBR 1-40 - N	WAKE;OSBR 1-40 - N
+ReportingUnit	North Carolina;Wake County;OSAV 81-120 - N	WAKE;OSAV 81-120 - N
+ReportingUnit	North Carolina;Wake County;OSAV 41-80 - N	WAKE;OSAV 41-80 - N
+ReportingUnit	North Carolina;Wake County;OSAV 121-128 - N	WAKE;OSAV 121-128 - N
+ReportingUnit	North Carolina;Wake County;OSAV 1-40 - N	WAKE;OSAV 1-40 - N
+ReportingUnit	North Carolina;Wake County;OSAP 81-120 - N	WAKE;OSAP 81-120 - N
+ReportingUnit	North Carolina;Wake County;OSAP 121-128 - N	WAKE;OSAP 121-128 - N
+ReportingUnit	North Carolina;Wake County;OSAB 81-120 - N	WAKE;OSAB 81-120 - N
+ReportingUnit	North Carolina;Wake County;OSAB 41-80 - N	WAKE;OSAB 41-80 - N
+ReportingUnit	North Carolina;Wake County;OSAB 121-128 - N	WAKE;OSAB 121-128 - N
+ReportingUnit	North Carolina;Wake County;OSAB 1-40 - N	WAKE;OSAB 1-40 - N
+ReportingUnit	North Carolina;Wake County;ABSEN 81-120 - N	WAKE;ABSEN 81-120 - N
+ReportingUnit	North Carolina;Wake County;ABSEN 121-128 - N	WAKE;ABSEN 121-128 - N
+ReportingUnit	North Carolina;Tyrrell County;TRANSFER - N	TYRRELL;TRANSFER - N
+ReportingUnit	North Carolina;Surry County;PM OS - N	SURRY;PM OS - N
+ReportingUnit	North Carolina;Surry County;MA OS - N	SURRY;MA OS - N
+ReportingUnit	North Carolina;Surry County;ELK OS - N	SURRY;ELK OS - N
+ReportingUnit	North Carolina;Surry County;DOB OS - N	SURRY;DOB OS - N
+ReportingUnit	North Carolina;Surry County;ABSENTEE - N	SURRY;ABSENTEE - N
+ReportingUnit	North Carolina;Stokes County;TRANSFER - N	STOKES;TRANSFER - N
+ReportingUnit	North Carolina;Stokes County;0506 - Y	STOKES;0506 - Y
+ReportingUnit	North Carolina;Stanly County;0212 - Y	STANLY;0212 - Y
+ReportingUnit	North Carolina;Scotland County;TRANSFER - N	SCOTLAND;TRANSFER - N
+ReportingUnit	North Carolina;Scotland County;ONE STOP ANNEX CONF RM - N	SCOTLAND;ONE STOP ANNEX CONF RM - N
+ReportingUnit	North Carolina;Scotland County;06-89 - Y	SCOTLAND;06-89 - Y
+ReportingUnit	North Carolina;Scotland County;05-10 - Y	SCOTLAND;05-10 - Y
+ReportingUnit	North Carolina;Scotland County;02-25 - Y	SCOTLAND;02-25 - Y
+ReportingUnit	North Carolina;Scotland County;01-16 - Y	SCOTLAND;01-16 - Y
+ReportingUnit	North Carolina;Richmond County;TRANSFER - N	RICHMOND;TRANSFER - N
+ReportingUnit	North Carolina;Richmond County;HAMLET - N	RICHMOND;HAMLET - N
+ReportingUnit	North Carolina;Richmond County;ELLERBE - N	RICHMOND;ELLERBE - N
+ReportingUnit	North Carolina;Richmond County;CO OP - N	RICHMOND;CO OP - N
+ReportingUnit	North Carolina;Richmond County;BROWDER - N	RICHMOND;BROWDER - N
+ReportingUnit	North Carolina;Pitt County;OS STUDENT CENTER - N	PITT;OS STUDENT CENTER - N
+ReportingUnit	North Carolina;Pitt County;OS FARMVILLE - N	PITT;OS FARMVILLE - N
+ReportingUnit	North Carolina;Pitt County;OS EPPES - N	PITT;OS EPPES - N
+ReportingUnit	North Carolina;Pitt County;OS COMM SCHOOLS - N	PITT;OS COMM SCHOOLS - N
+ReportingUnit	North Carolina;Pender County;NB02 - Y	PENDER;NB02 - Y
+ReportingUnit	North Carolina;Orange County;TRANSFER - N	ORANGE;TRANSFER - N
+ReportingUnit	North Carolina;Northampton County;OS SEVERN - N	NORTHAMPTON;OS SEVERN - N
+ReportingUnit	North Carolina;Northampton County;OS RICHSQUARE - N	NORTHAMPTON;OS RICHSQUARE - N
+ReportingUnit	North Carolina;Northampton County;OS JACKSON - N	NORTHAMPTON;OS JACKSON - N
+ReportingUnit	North Carolina;Northampton County;OS GASTON - N	NORTHAMPTON;OS GASTON - N
+ReportingUnit	North Carolina;New Hanover County;TRANSFER - N	NEW HANOVER;TRANSFER - N
+ReportingUnit	North Carolina;New Hanover County;ONE STOP SRC - N	NEW HANOVER;ONE STOP SRC - N
+ReportingUnit	North Carolina;New Hanover County;ONE STOP PVL - N	NEW HANOVER;ONE STOP PVL - N
+ReportingUnit	North Carolina;New Hanover County;ONE STOP NLB - N	NEW HANOVER;ONE STOP NLB - N
+ReportingUnit	North Carolina;New Hanover County;ONE STOP MSL - N	NEW HANOVER;ONE STOP MSL - N
+ReportingUnit	North Carolina;New Hanover County;ONE STOP GVT - N	NEW HANOVER;ONE STOP GVT - N
+ReportingUnit	North Carolina;New Hanover County;ONE STOP CFN - N	NEW HANOVER;ONE STOP CFN - N
+ReportingUnit	North Carolina;New Hanover County;ONE STOP CFC - N	NEW HANOVER;ONE STOP CFC - N
+ReportingUnit	North Carolina;New Hanover County;ONE STOP CBC - N	NEW HANOVER;ONE STOP CBC - N
+ReportingUnit	North Carolina;New Hanover County;ONE STOP ARB - N	NEW HANOVER;ONE STOP ARB - N
+ReportingUnit	North Carolina;Nash County;RMT DOWNTOWN OS - N	NASH;RMT DOWNTOWN OS - N
+ReportingUnit	North Carolina;Nash County;RMT 301 OS - N	NASH;RMT 301 OS - N
+ReportingUnit	North Carolina;Nash County;MT. PLEASANT OS - N	NASH;MT. PLEASANT OS - N
+ReportingUnit	North Carolina;Moore County;TRANSFER - N	MOORE;TRANSFER - N
+ReportingUnit	North Carolina;Moore County;ONE STOP VTH - N	MOORE;ONE STOP VTH - N
+ReportingUnit	North Carolina;Moore County;ONE STOP RS - N	MOORE;ONE STOP RS - N
+ReportingUnit	North Carolina;Moore County;ONE STOP PCC - N	MOORE;ONE STOP PCC - N
+ReportingUnit	North Carolina;Martin County;ONE STOP EES - N	MARTIN;ONE STOP EES - N
+ReportingUnit	North Carolina;Martin County;ONE STOP CBR - N	MARTIN;ONE STOP CBR - N
+ReportingUnit	North Carolina;Lincoln County;WEST OS - N	LINCOLN;WEST OS - N
+ReportingUnit	North Carolina;Lincoln County;LINCOLN OS - N	LINCOLN;LINCOLN OS - N
+ReportingUnit	North Carolina;Lincoln County;EAST OS - N	LINCOLN;EAST OS - N
+ReportingUnit	North Carolina;Lincoln County;CITY OS - N	LINCOLN;CITY OS - N
+ReportingUnit	North Carolina;Lee County;OS MCSWAIN - N	LEE;OS MCSWAIN - N
+ReportingUnit	North Carolina;Lee County;OS HALES - N	LEE;OS HALES - N
+ReportingUnit	North Carolina;Jones County;TRANSFER - N	JONES;TRANSFER - N
+ReportingUnit	North Carolina;Johnston County;SELMA - N	JOHNSTON;SELMA - N
+ReportingUnit	North Carolina;Johnston County;PROVIDENCE - N	JOHNSTON;PROVIDENCE - N
+ReportingUnit	North Carolina;Johnston County;BENSON - N	JOHNSTON;BENSON - N
+ReportingUnit	North Carolina;Johnston County;ARCHER LODGE - N	JOHNSTON;ARCHER LODGE - N
+ReportingUnit	North Carolina;Hertford County;TRANSFER - N	HERTFORD;TRANSFER - N
+ReportingUnit	North Carolina;Hertford County;MURFREE CNTR - N	HERTFORD;MURFREE CNTR - N
+ReportingUnit	North Carolina;Hertford County;BOE OFFICE - N	HERTFORD;BOE OFFICE - N
+ReportingUnit	North Carolina;Henderson County;OS BOE - N	HENDERSON;OS BOE - N
+ReportingUnit	North Carolina;Harnett County;TRANSFER - N	HARNETT;TRANSFER - N
+ReportingUnit	North Carolina;Harnett County;OS ANGIER - N	HARNETT;OS ANGIER - N
+ReportingUnit	North Carolina;Halifax County;TRANSFER - N	HALIFAX;TRANSFER - N
+ReportingUnit	North Carolina;Halifax County;RRCE - Y	HALIFAX;RRCE - Y
+ReportingUnit	North Carolina;Halifax County;RR7-9 - Y	HALIFAX;RR7-9 - Y
+ReportingUnit	North Carolina;Halifax County;RR3-4 - Y	HALIFAX;RR3-4 - Y
+ReportingUnit	North Carolina;Halifax County;OS SCOTLAND NECK - N	HALIFAX;OS SCOTLAND NECK - N
+ReportingUnit	North Carolina;Halifax County;OS RINGWOOD - N	HALIFAX;OS RINGWOOD - N
+ReportingUnit	North Carolina;Halifax County;OS LITTLETON - N	HALIFAX;OS LITTLETON - N
+ReportingUnit	North Carolina;Halifax County;OS HALIFAX - N	HALIFAX;OS HALIFAX - N
+ReportingUnit	North Carolina;Halifax County;LIT - Y	HALIFAX;LIT - Y
+ReportingUnit	North Carolina;Edgecombe County;TARBORO 1 - N	EDGECOMBE;TARBORO 1 - N
+ReportingUnit	North Carolina;Edgecombe County;PINES CHAP FELLSHIP HALL - N	EDGECOMBE;PINES CHAP FELLSHIP HALL - N
+ReportingUnit	North Carolina;Edgecombe County;DET OF SOCIAL SERVICES - N	EDGECOMBE;DET OF SOCIAL SERVICES - N
+ReportingUnit	North Carolina;Durham County;OS TRC - N	DURHAM;OS TRC - N
+ReportingUnit	North Carolina;Durham County;OS SHS - N	DURHAM;OS SHS - N
+ReportingUnit	North Carolina;Durham County;OS MSUMC - N	DURHAM;OS MSUMC - N
+ReportingUnit	North Carolina;Durham County;OS ML - N	DURHAM;OS ML - N
+ReportingUnit	North Carolina;Durham County;OS HVBC - N	DURHAM;OS HVBC - N
+ReportingUnit	North Carolina;Durham County;OS GETG - N	DURHAM;OS GETG - N
+ReportingUnit	North Carolina;Durham County;OS ENO - N	DURHAM;OS ENO - N
+ReportingUnit	North Carolina;Durham County;OS DTM - N	DURHAM;OS DTM - N
+ReportingUnit	North Carolina;Duplin County;OS WARSAW - N	DUPLIN;OS WARSAW - N
+ReportingUnit	North Carolina;Duplin County;OS WALLACE - N	DUPLIN;OS WALLACE - N
+ReportingUnit	North Carolina;Duplin County;OS KENANSVILLE - N	DUPLIN;OS KENANSVILLE - N
+ReportingUnit	North Carolina;Dare County;TRANSFER - N	DARE;TRANSFER - N
+ReportingUnit	North Carolina;Dare County;ONE STOP TWO - N	DARE;ONE STOP TWO - N
+ReportingUnit	North Carolina;Dare County;ONE STOP THREE - N	DARE;ONE STOP THREE - N
+ReportingUnit	North Carolina;Dare County;ONE STOP ONE - N	DARE;ONE STOP ONE - N
+ReportingUnit	North Carolina;Dare County;ABSENTEE - N	DARE;ABSENTEE - N
+ReportingUnit	North Carolina;Currituck County;TRANSFER - N	CURRITUCK;TRANSFER - N
+ReportingUnit	North Carolina;Cumberland County;CC519 - Y	CUMBERLAND;CC519 - Y
+ReportingUnit	North Carolina;Carteret County;ISPK - Y	CARTERET;ISPK - Y
+ReportingUnit	North Carolina;Carteret County;ASCI - Y	CARTERET;ASCI - Y
+ReportingUnit	North Carolina;Camden County;TRANSFER - N	CAMDEN;TRANSFER - N
+ReportingUnit	North Carolina;Caldwell County;TRANSFER - N	CALDWELL;TRANSFER - N
+ReportingUnit	North Carolina;Caldwell County;OS RESOURCE CENTER - N	CALDWELL;OS RESOURCE CENTER - N
+ReportingUnit	North Carolina;Caldwell County;OS GRANITE REC - N	CALDWELL;OS GRANITE REC - N
+ReportingUnit	North Carolina;Cabarrus County;OS NTP - N	CABARRUS;OS NTP - N
+ReportingUnit	North Carolina;Cabarrus County;OS KTD - N	CABARRUS;OS KTD - N
+ReportingUnit	North Carolina;Cabarrus County;OS HAR - N	CABARRUS;OS HAR - N
+ReportingUnit	North Carolina;Cabarrus County;OS CAE - N	CABARRUS;OS CAE - N
+ReportingUnit	North Carolina;Cabarrus County;12-14 - Y	CABARRUS;12-14 - Y
+ReportingUnit	North Carolina;Cabarrus County;12-13 - Y	CABARRUS;12-13 - Y
+ReportingUnit	North Carolina;Cabarrus County;04-13 - Y	CABARRUS;04-13 - Y
+ReportingUnit	North Carolina;Cabarrus County;04-12 - Y	CABARRUS;04-12 - Y
+ReportingUnit	North Carolina;Cabarrus County;04-11 - Y	CABARRUS;04-11 - Y
+ReportingUnit	North Carolina;Cabarrus County;01-11 - Y	CABARRUS;01-11 - Y
+ReportingUnit	North Carolina;Buncombe County;WVTH - N	BUNCOMBE;WVTH - N
+ReportingUnit	North Carolina;Buncombe County;WGSC - N	BUNCOMBE;WGSC - N
+ReportingUnit	North Carolina;Buncombe County;WACC - N	BUNCOMBE;WACC - N
+ReportingUnit	North Carolina;Buncombe County;UNCA - N	BUNCOMBE;UNCA - N
+ReportingUnit	North Carolina;Buncombe County;TCRK - N	BUNCOMBE;TCRK - N
+ReportingUnit	North Carolina;Buncombe County;SBBL - N	BUNCOMBE;SBBL - N
+ReportingUnit	North Carolina;Buncombe County;REYV - N	BUNCOMBE;REYV - N
+ReportingUnit	North Carolina;Buncombe County;LSKY - N	BUNCOMBE;LSKY - N
+ReportingUnit	North Carolina;Buncombe County;LECC - N	BUNCOMBE;LECC - N
+ReportingUnit	North Carolina;Buncombe County;HACC - N	BUNCOMBE;HACC - N
+ReportingUnit	North Carolina;Buncombe County;FVCC - N	BUNCOMBE;FVCC - N
+ReportingUnit	North Carolina;Buncombe County;ECBL - N	BUNCOMBE;ECBL - N
+ReportingUnit	North Carolina;Buncombe County;BTFD - N	BUNCOMBE;BTFD - N
+ReportingUnit	North Carolina;Buncombe County;BMBL - N	BUNCOMBE;BMBL - N
+ReportingUnit	North Carolina;Buncombe County;AVOM - N	BUNCOMBE;AVOM - N
+ReportingUnit	North Carolina;Buncombe County;AVML - N	BUNCOMBE;AVML - N
+ReportingUnit	North Carolina;Bladen County;TAR HEEL MUNI BLD - N	BLADEN;TAR HEEL MUNI BLD - N
+ReportingUnit	North Carolina;Bladen County;SPAULDING MONROE - N	BLADEN;SPAULDING MONROE - N
+ReportingUnit	North Carolina;Bladen County;MAIL ABSENTEE - N	BLADEN;MAIL ABSENTEE - N
+ReportingUnit	North Carolina;Bladen County;EAST ARCADIA - N	BLADEN;EAST ARCADIA - N
+ReportingUnit	North Carolina;Bladen County;BOOK T. WASHINGTON - N	BLADEN;BOOK T. WASHINGTON - N
+ReportingUnit	North Carolina;Bladen County;BLAD COUNTY GYM - N	BLADEN;BLAD COUNTY GYM - N
+ReportingUnit	North Carolina;Bladen County;BAY TREE FIRE DEPT - N	BLADEN;BAY TREE FIRE DEPT - N
+ReportingUnit	North Carolina;Bertie County;TRANSFER - N	BERTIE;TRANSFER - N
+ReportingUnit	North Carolina;Bertie County;OS POW - N	BERTIE;OS POW - N
+ReportingUnit	North Carolina;Bertie County;OS LW - N	BERTIE;OS LW - N
+ReportingUnit	North Carolina;Beaufort County;TRANSFER - N	BEAUFORT;TRANSFER - N
+ReportingUnit	North Carolina;Beaufort County;CHOCO OS - N	BEAUFORT;CHOCO OS - N
+ReportingUnit	North Carolina;Beaufort County;BOE OS - N	BEAUFORT;BOE OS - N
+ReportingUnit	North Carolina;Beaufort County;BELHAVEN OS - N	BEAUFORT;BELHAVEN OS - N
+ReportingUnit	North Carolina;Beaufort County;AURORA OS - N	BEAUFORT;AURORA OS - N
+ReportingUnit	North Carolina;Avery County;ABSENTEE SUPPLEMENTAL - N	AVERY;ABSENTEE SUPPLEMENTAL - N
+ReportingUnit	North Carolina;Ashe County;TRANSFER - N	ASHE;TRANSFER - N
+ReportingUnit	North Carolina;Alamance County;TRANSFER - N	ALAMANCE;TRANSFER - N
+ReportingUnit	North Carolina;Alamance County;10S1 - Y	ALAMANCE;10S1 - Y
+ReportingUnit	North Carolina;Alamance County;104 - Y	ALAMANCE;104 - Y
