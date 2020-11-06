@@ -4481,3 +4481,233 @@ North Carolina;Wilkes County;ONE STOP MILLERS CREEK	vote-center
 North Carolina;Wilkes County;ABSENTEE MAIL	absentee
 North Carolina;Wilkes County;ONE STOP OFFICE	vote-center
 North Carolina;Wilkes County;ONE STOP PLEASANT HILL	vote-center
+North Carolina;Stokes County;0506 - Y	precinct
+North Carolina;Stanly County;0212 - Y	precinct
+North Carolina;Scotland County;06-89 - Y	precinct
+North Carolina;Scotland County;05-10 - Y	precinct
+North Carolina;Scotland County;02-25 - Y	precinct
+North Carolina;Scotland County;01-16 - Y	precinct
+North Carolina;Pender County;NB02 - Y	precinct
+North Carolina;Halifax County;RRCE - Y	precinct
+North Carolina;Halifax County;RR7-9 - Y	precinct
+North Carolina;Halifax County;RR3-4 - Y	precinct
+North Carolina;Halifax County;LIT - Y	precinct
+North Carolina;Cumberland County;CC519 - Y	precinct
+North Carolina;Carteret County;ISPK - Y	precinct
+North Carolina;Carteret County;ASCI - Y	precinct
+North Carolina;Cabarrus County;12-14 - Y	precinct
+North Carolina;Cabarrus County;12-13 - Y	precinct
+North Carolina;Cabarrus County;04-13 - Y	precinct
+North Carolina;Cabarrus County;04-12 - Y	precinct
+North Carolina;Cabarrus County;04-11 - Y	precinct
+North Carolina;Cabarrus County;01-11 - Y	precinct
+North Carolina;Alamance County;10S1 - Y	precinct
+North Carolina;Alamance County;104 - Y	precinct
+North Carolina;Yadkin County;TRANSFER - N	transfer
+North Carolina;Washington County;TRANSFER - N	transfer
+North Carolina;Wake County;TRANS 81-120 - N	transfer
+North Carolina;Wake County;TRANS 121-128 - N	transfer
+North Carolina;Wake County;PROVI 81-120 - N	provisional
+North Carolina;Wake County;PROVI 121-128 - N	provisional
+North Carolina;Tyrrell County;TRANSFER - N	transfer
+North Carolina;Stokes County;TRANSFER - N	transfer
+North Carolina;Scotland County;TRANSFER - N	transfer
+North Carolina;Scotland County;ONE STOP ANNEX CONF RM - N	vote-center
+North Carolina;Richmond County;TRANSFER - N	transfer
+North Carolina;Orange County;TRANSFER - N	transfer
+North Carolina;New Hanover County;TRANSFER - N	transfer
+North Carolina;New Hanover County;ONE STOP SRC - N	vote-center
+North Carolina;New Hanover County;ONE STOP PVL - N	vote-center
+North Carolina;New Hanover County;ONE STOP NLB - N	vote-center
+North Carolina;New Hanover County;ONE STOP MSL - N	vote-center
+North Carolina;New Hanover County;ONE STOP GVT - N	vote-center
+North Carolina;New Hanover County;ONE STOP CFN - N	vote-center
+North Carolina;New Hanover County;ONE STOP CFC - N	vote-center
+North Carolina;New Hanover County;ONE STOP CBC - N	vote-center
+North Carolina;New Hanover County;ONE STOP ARB - N	vote-center
+North Carolina;Moore County;TRANSFER - N	transfer
+North Carolina;Moore County;ONE STOP VTH - N	vote-center
+North Carolina;Moore County;ONE STOP RS - N	vote-center
+North Carolina;Moore County;ONE STOP PCC - N	vote-center
+North Carolina;Martin County;ONE STOP EES - N	vote-center
+North Carolina;Martin County;ONE STOP CBR - N	vote-center
+North Carolina;Jones County;TRANSFER - N	transfer
+North Carolina;Hertford County;TRANSFER - N	transfer
+North Carolina;Harnett County;TRANSFER - N	transfer
+North Carolina;Halifax County;TRANSFER - N	transfer
+North Carolina;Dare County;TRANSFER - N	transfer
+North Carolina;Dare County;ONE STOP TWO - N	vote-center
+North Carolina;Dare County;ONE STOP THREE - N	vote-center
+North Carolina;Dare County;ONE STOP ONE - N	vote-center
+North Carolina;Currituck County;TRANSFER - N	transfer
+North Carolina;Camden County;TRANSFER - N	transfer
+North Carolina;Caldwell County;TRANSFER - N	transfer
+North Carolina;Bertie County;TRANSFER - N	transfer
+North Carolina;Beaufort County;TRANSFER - N	transfer
+North Carolina;Ashe County;TRANSFER - N	transfer
+North Carolina;Alamance County;TRANSFER - N	transfer
+North Carolina;Watauga County;ABSENTEE - N	absentee
+North Carolina;Wake County;ABSEN 81-120 - N	absentee
+North Carolina;Wake County;ABSEN 121-128 - N	absentee
+North Carolina;Surry County;ABSENTEE - N	absentee
+North Carolina;Dare County;ABSENTEE - N	absentee
+North Carolina;Bladen County;MAIL ABSENTEE - N	absentee
+North Carolina;Avery County;ABSENTEE SUPPLEMENTAL - N	absentee
+North Carolina;Wilkes County;OFFICE OS - N	vote-center
+North Carolina;Wilkes County;MCGEE OS - N	vote-center
+North Carolina;Wayne County;OS MOT - N	vote-center
+North Carolina;Wayne County;OS MAX - N	vote-center
+North Carolina;Wayne County;OS BCR - N	vote-center
+North Carolina;Watauga County;OS WW - N	vote-center
+North Carolina;Watauga County;OS FSCO - N	vote-center
+North Carolina;Watauga County;OS DG - N	vote-center
+North Carolina;Watauga County;OS BR - N	vote-center
+North Carolina;Wake County;OSZB 81-120 - N	vote-center
+North Carolina;Wake County;OSZB 41-80 - N	vote-center
+North Carolina;Wake County;OSZB 121-128 - N	vote-center
+North Carolina;Wake County;OSZB 1-40 - N	vote-center
+North Carolina;Wake County;OSWO 81-120 - N	vote-center
+North Carolina;Wake County;OSWO 41-80 - N	vote-center
+North Carolina;Wake County;OSWO 121-128 - N	vote-center
+North Carolina;Wake County;OSWO 1-40 - N	vote-center
+North Carolina;Wake County;OSWN 81-120 - N	vote-center
+North Carolina;Wake County;OSWN 41-80 - N	vote-center
+North Carolina;Wake County;OSWN 121-128 - N	vote-center
+North Carolina;Wake County;OSWN 1-40 - N	vote-center
+North Carolina;Wake County;OSWA 81-120 - N	vote-center
+North Carolina;Wake County;OSWA 121-128 - N	vote-center
+North Carolina;Wake County;OSTA 81-120 - N	vote-center
+North Carolina;Wake County;OSTA 121-128 - N	vote-center
+North Carolina;Wake County;OSRB 81-120 - N	vote-center
+North Carolina;Wake County;OSRB 41-80 - N	vote-center
+North Carolina;Wake County;OSRB 121-128 - N	vote-center
+North Carolina;Wake County;OSRB 1-40 - N	vote-center
+North Carolina;Wake County;OSOP 81-120 - N	vote-center
+North Carolina;Wake County;OSOP 121-128 - N	vote-center
+North Carolina;Wake County;OSNR 81-120 - N	vote-center
+North Carolina;Wake County;OSNR 121-128 - N	vote-center
+North Carolina;Wake County;OSLL 81-120 - N	vote-center
+North Carolina;Wake County;OSLL 121-128 - N	vote-center
+North Carolina;Wake County;OSLH 81-120 - N	vote-center
+North Carolina;Wake County;OSLH 41-80 - N	vote-center
+North Carolina;Wake County;OSLH 121-128 - N	vote-center
+North Carolina;Wake County;OSLH 1-40 - N	vote-center
+North Carolina;Wake County;OSKD 81-120 - N	vote-center
+North Carolina;Wake County;OSKD 121-128 - N	vote-center
+North Carolina;Wake County;OSHS 81-120 - N	vote-center
+North Carolina;Wake County;OSHS 41-80 - N	vote-center
+North Carolina;Wake County;OSHS 121-128 - N	vote-center
+North Carolina;Wake County;OSHS 1-40 - N	vote-center
+North Carolina;Wake County;OSGR 81-120 - N	vote-center
+North Carolina;Wake County;OSGR 41-80 - N	vote-center
+North Carolina;Wake County;OSGR 121-128 - N	vote-center
+North Carolina;Wake County;OSGR 1-40 - N	vote-center
+North Carolina;Wake County;OSCS 81-120 - N	vote-center
+North Carolina;Wake County;OSCS 41-80 - N	vote-center
+North Carolina;Wake County;OSCS 121-128 - N	vote-center
+North Carolina;Wake County;OSCS 1-40 - N	vote-center
+North Carolina;Wake County;OSCM 81-120 - N	vote-center
+North Carolina;Wake County;OSCM 41-80 - N	vote-center
+North Carolina;Wake County;OSCM 121-128 - N	vote-center
+North Carolina;Wake County;OSCM 1-40 - N	vote-center
+North Carolina;Wake County;OSCA 81-120 - N	vote-center
+North Carolina;Wake County;OSCA 121-128 - N	vote-center
+North Carolina;Wake County;OSBR 81-120 - N	vote-center
+North Carolina;Wake County;OSBR 41-80 - N	vote-center
+North Carolina;Wake County;OSBR 121-128 - N	vote-center
+North Carolina;Wake County;OSBR 1-40 - N	vote-center
+North Carolina;Wake County;OSAV 81-120 - N	vote-center
+North Carolina;Wake County;OSAV 41-80 - N	vote-center
+North Carolina;Wake County;OSAV 121-128 - N	vote-center
+North Carolina;Wake County;OSAV 1-40 - N	vote-center
+North Carolina;Wake County;OSAP 81-120 - N	vote-center
+North Carolina;Wake County;OSAP 121-128 - N	vote-center
+North Carolina;Wake County;OSAB 81-120 - N	vote-center
+North Carolina;Wake County;OSAB 41-80 - N	vote-center
+North Carolina;Wake County;OSAB 121-128 - N	vote-center
+North Carolina;Wake County;OSAB 1-40 - N	vote-center
+North Carolina;Surry County;PM OS - N	vote-center
+North Carolina;Surry County;MA OS - N	vote-center
+North Carolina;Surry County;ELK OS - N	vote-center
+North Carolina;Surry County;DOB OS - N	vote-center
+North Carolina;Richmond County;HAMLET - N	vote-center
+North Carolina;Richmond County;ELLERBE - N	vote-center
+North Carolina;Richmond County;CO OP - N	vote-center
+North Carolina;Richmond County;BROWDER - N	vote-center
+North Carolina;Pitt County;OS STUDENT CENTER - N	vote-center
+North Carolina;Pitt County;OS FARMVILLE - N	vote-center
+North Carolina;Pitt County;OS EPPES - N	vote-center
+North Carolina;Pitt County;OS COMM SCHOOLS - N	vote-center
+North Carolina;Northampton County;OS SEVERN - N	vote-center
+North Carolina;Northampton County;OS RICHSQUARE - N	vote-center
+North Carolina;Northampton County;OS JACKSON - N	vote-center
+North Carolina;Northampton County;OS GASTON - N	vote-center
+North Carolina;Nash County;RMT DOWNTOWN OS - N	vote-center
+North Carolina;Nash County;RMT 301 OS - N	vote-center
+North Carolina;Nash County;MT. PLEASANT OS - N	vote-center
+North Carolina;Lincoln County;WEST OS - N	vote-center
+North Carolina;Lincoln County;LINCOLN OS - N	vote-center
+North Carolina;Lincoln County;EAST OS - N	vote-center
+North Carolina;Lincoln County;CITY OS - N	vote-center
+North Carolina;Lee County;OS MCSWAIN - N	vote-center
+North Carolina;Lee County;OS HALES - N	vote-center
+North Carolina;Johnston County;SELMA - N	vote-center
+North Carolina;Johnston County;PROVIDENCE - N	vote-center
+North Carolina;Johnston County;BENSON - N	vote-center
+North Carolina;Johnston County;ARCHER LODGE - N	vote-center
+North Carolina;Hertford County;MURFREE CNTR - N	vote-center
+North Carolina;Hertford County;BOE OFFICE - N	vote-center
+North Carolina;Henderson County;OS BOE - N	vote-center
+North Carolina;Harnett County;OS ANGIER - N	vote-center
+North Carolina;Halifax County;OS SCOTLAND NECK - N	vote-center
+North Carolina;Halifax County;OS RINGWOOD - N	vote-center
+North Carolina;Halifax County;OS LITTLETON - N	vote-center
+North Carolina;Halifax County;OS HALIFAX - N	vote-center
+North Carolina;Edgecombe County;TARBORO 1 - N	vote-center
+North Carolina;Edgecombe County;PINES CHAP FELLSHIP HALL - N	vote-center
+North Carolina;Edgecombe County;DET OF SOCIAL SERVICES - N	vote-center
+North Carolina;Durham County;OS TRC - N	vote-center
+North Carolina;Durham County;OS SHS - N	vote-center
+North Carolina;Durham County;OS MSUMC - N	vote-center
+North Carolina;Durham County;OS ML - N	vote-center
+North Carolina;Durham County;OS HVBC - N	vote-center
+North Carolina;Durham County;OS GETG - N	vote-center
+North Carolina;Durham County;OS ENO - N	vote-center
+North Carolina;Durham County;OS DTM - N	vote-center
+North Carolina;Duplin County;OS WARSAW - N	vote-center
+North Carolina;Duplin County;OS WALLACE - N	vote-center
+North Carolina;Duplin County;OS KENANSVILLE - N	vote-center
+North Carolina;Caldwell County;OS RESOURCE CENTER - N	vote-center
+North Carolina;Caldwell County;OS GRANITE REC - N	vote-center
+North Carolina;Cabarrus County;OS NTP - N	vote-center
+North Carolina;Cabarrus County;OS KTD - N	vote-center
+North Carolina;Cabarrus County;OS HAR - N	vote-center
+North Carolina;Cabarrus County;OS CAE - N	vote-center
+North Carolina;Buncombe County;WVTH - N	vote-center
+North Carolina;Buncombe County;WGSC - N	vote-center
+North Carolina;Buncombe County;WACC - N	vote-center
+North Carolina;Buncombe County;UNCA - N	vote-center
+North Carolina;Buncombe County;TCRK - N	vote-center
+North Carolina;Buncombe County;SBBL - N	vote-center
+North Carolina;Buncombe County;REYV - N	vote-center
+North Carolina;Buncombe County;LSKY - N	vote-center
+North Carolina;Buncombe County;LECC - N	vote-center
+North Carolina;Buncombe County;HACC - N	vote-center
+North Carolina;Buncombe County;FVCC - N	vote-center
+North Carolina;Buncombe County;ECBL - N	vote-center
+North Carolina;Buncombe County;BTFD - N	vote-center
+North Carolina;Buncombe County;BMBL - N	vote-center
+North Carolina;Buncombe County;AVOM - N	vote-center
+North Carolina;Buncombe County;AVML - N	vote-center
+North Carolina;Bladen County;TAR HEEL MUNI BLD - N	vote-center
+North Carolina;Bladen County;SPAULDING MONROE - N	vote-center
+North Carolina;Bladen County;EAST ARCADIA - N	vote-center
+North Carolina;Bladen County;BOOK T. WASHINGTON - N	vote-center
+North Carolina;Bladen County;BLAD COUNTY GYM - N	vote-center
+North Carolina;Bladen County;BAY TREE FIRE DEPT - N	vote-center
+North Carolina;Bertie County;OS POW - N	vote-center
+North Carolina;Bertie County;OS LW - N	vote-center
+North Carolina;Beaufort County;CHOCO OS - N	vote-center
+North Carolina;Beaufort County;BOE OS - N	vote-center
+North Carolina;Beaufort County;BELHAVEN OS - N	vote-center
+North Carolina;Beaufort County;AURORA OS - N	vote-center
