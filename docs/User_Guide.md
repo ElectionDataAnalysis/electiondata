@@ -17,6 +17,7 @@ See the template file (`src/parameter_file_templates/run_time.ini.template`).
 Ensure that the munger files are appropriate for your results file(s). 
  (1) If the munger doesn't already exist, pick a name for your munger and create a directory with that name in the `mungers` directory to hold `format.config` and `cdf_elements.txt`.
  (2) Copy the templates from `templates/munger_templates` to your munger directory. Every munger must have a value for `file_type`; depending your `file_type` other parameters may be required. Types currently supported are:
+  * `xml`
   * `txt`
   * `csv`
   * `xls` (which handles both `.xls` and `.xlsx` files)
@@ -33,6 +34,11 @@ Different file types need different parameters to be specified.
    
 Applying a munger with file_type `xls` to a multi-sheet excel file will read only the first sheet. If other sheets are necessary, use `xls-multi` file type.
  NB: the header_row_count should count only rows with data the system needs to read. If there are blank lines, or lines with inessential information -- such as the election date, which is not munged -- use the optional parameter count_of_top_lines_to_skip.
+ 
+ * Required for `xml` type:
+   * `count_columns_by_name`
+ * Available for `xml` type:
+   * `nested_tags` if there are elements without relevant info in their attributes, but with relevant relevant elements nested below, it is required to list the tags. See e.g. `ia_xml` munger  
  
  * Required for `concatenated-blocks` type:
    * count_of_top_lines_to_skip

@@ -1305,7 +1305,7 @@ def export_rollup_from_db(
     by: str = "Id",
     exclude_total: bool = False,
     by_vote_type: bool = False,
-):
+) -> (pd.DataFrame, Optional[str]):
     if not by_vote_type:
         restrict = """ AND CIT."Txt" = 'total' """
     elif exclude_total:
@@ -1419,7 +1419,7 @@ def export_rollup_from_db(
         ).format(by=sql.Identifier(by), restrict=sql.SQL(restrict))
     else:
         err_str = f"Unrecognized contest_type: {contest_type}. No results exported"
-        return err_str
+        return pd.DataFrame(columns=columns), err_str
     try:
         cursor.execute(q, [top_ru, sub_unit_type, tuple(datafile_list)])
         results = cursor.fetchall()

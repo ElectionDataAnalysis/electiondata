@@ -385,44 +385,67 @@ def add_info(node: et.Element, info: dict, counts: dict, raws: dict) -> (dict, b
 
 
 def read_xml(
-    fpath: str,
+    f_path: str,
     munger: jm.Munger,
     err: Optional[Dict],
 ) -> (pd.DataFrame, Optional[Dict]):
-    """Create dataframe from the xml file, with column names matching the fields in the raw_identifier formulas."""
+    """Create dataframe from the xml file, with column names matching the fields in the raw_identifier formulas.
+    Skip nodes whose tags are unrecognized"""
 
     # read data from file
     try:
-        tree = et.parse(fpath)
+        tree = et.parse(f_path)
     except FileNotFoundError:
-        err = ui.add_new_error(err, "file", Path(fpath).name, "File not found")
+        err = ui.add_new_error(err, "file", Path(f_path).name, "File not found")
         return pd.DataFrame(), err
 
     # identify tags with counts or other raw data (the info we want)
     # and list data to be pulled from each tag
-    count_tags = [x.split(".")[0] for x in munger.options["count_columns_by_name"]]
-    counts = {t:[x for x in munger.options["count_columns_by_name"] if x.split(".")[0] == t] for t in count_tags}
-    raw_tags = [x.split(".")[0] for x in munger.field_list]
-    raws = {t:[x for x in munger.field_list if x.split(".")[0] == t] for t in raw_tags}
+    # TODO tech debt: simplify
+    fields = set(munger.options["count_columns_by_name"]).union(munger.field_list)
+    tags = {f.split(".")[0] for f in fields}
+    # if munger has nesting tags in format.config
+    if munger.options["nesting_tags"] is not None:
+        tags.update(munger.options["nesting_tags"])
+    attributes = {t: [x.split(".")[1] for x in fields if x.split(".")[0] == t] for t in tags}
 
     try:
-        vc_record_list = []
-        info = dict()
-        for node in tree.iter():  # depth-first search, what we want!
-            # if node has info we want
-            if node.tag in count_tags or node.tag in raw_tags:
-                info, changed = add_info(node, info, counts, raws)
-                # if record is both complete and new
-                if changed and \
-                        set(info.keys()) == munger.field_list.union(munger.options["count_columns_by_name"]):
-                    # put record in list of records to be returned
-                    vc_record_list.append(info.copy())
-                    # delete the counts from the info (to avoid entering counts twice)
-                    for c in munger.options["count_columns_by_name"]:
-                        info.pop(c)
-        raw_results = pd.DataFrame(vc_record_list)
-
+        root = tree.getroot()
+        results_list = results_below(root, tags, attributes)
+        raw_results = pd.DataFrame(results_list)
+        for c in munger.options["count_columns_by_name"]:
+            raw_results[c] = pd.to_numeric(raw_results[c], errors="coerce")
+        raw_results, err_df = m.clean_count_cols(
+            raw_results,
+            munger.options["count_columns_by_name"],
+        )
+        if not err_df.empty:
+            err = ui.add_err_df(err, err_df, munger, f_path)
     except Exception as e:
-        err = ui.add_new_error(err, "munger", munger.name, f"Error munging xml: {e}")
+        err = ui.add_new_error(err, "munger", munger.name, f"Error reading xml: {e}")
         raw_results = pd.DataFrame()
     return raw_results, err
+
+
+def results_below(node: et.Element, good_tags: set, good_pairs: dict) -> list:
+    """appends all (possibly incomplete) results records that can be
+    read from nodes below to the list self.results"""
+    r_below = []
+
+    if node.getchildren() == list():
+        r_below = [{f"{node.tag}.{k}": node.attrib.get(k, "") for k in good_pairs[node.tag]}]
+    else:
+        for child in node:
+            if child.tag in good_tags:
+                # get list of all (possibly incomplete) results records from below the child
+                r_below_child = results_below(child, good_tags, good_pairs)
+                # add info from the current node to each record and append result to self.results
+                for result in r_below_child:
+                    if node.tag in good_tags:
+                        result.update(
+                            {f"{node.tag}.{k}": node.attrib.get(k, "") for k in good_pairs[node.tag]}
+                        )
+                    r_below.append(result)
+    return r_below
+
+

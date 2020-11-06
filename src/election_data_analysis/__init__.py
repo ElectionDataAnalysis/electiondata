@@ -1622,7 +1622,15 @@ def get_filename(path: str) -> str:
     return tail or ntpath.basename(head)
 
 
-def aggregate_results(election, jurisdiction, contest_type, by_vote_type, dbname=None):
+def aggregate_results(
+        election,
+        jurisdiction,
+        contest_type,
+        by_vote_type,
+        dbname=None,
+        vote_type=None,
+        county=None,
+):
     # using the analyzer gives us access to DB session
     empty_df_with_good_cols = pd.DataFrame(columns=["contest", "count"])
     an = Analyzer(dbname=dbname)
@@ -1676,6 +1684,10 @@ def aggregate_results(election, jurisdiction, contest_type, by_vote_type, dbname
         )
     if err_str or df.empty:
         return empty_df_with_good_cols
+    if vote_type:
+        df = df[df.count_item_type == vote_type]
+    if county:
+        df = df[df.reporting_unit == county]
     return df
 
 
@@ -1725,12 +1737,19 @@ def check_totals_match_vote_types(election, jurisdiction, dbname=None):
 
 
 # A couple random contests
-def contest_total(election, jurisdiction, contest, dbname=None):
+def contest_total(
+        election,
+        jurisdiction,
+        contest,
+        dbname=None,
+        vote_type=None,
+        county=None,
+):
     df_candidate = aggregate_results(
-        election, jurisdiction, "Candidate", False, dbname=dbname
+        election, jurisdiction, "Candidate", False, dbname=dbname, vote_type=vote_type, county=county
     )
     df_ballot = aggregate_results(
-        election, jurisdiction, "BallotMeasure", False, dbname=dbname
+        election, jurisdiction, "BallotMeasure", False, dbname=dbname, vote_type=vote_type, county=county
     )
     df = pd.concat([df_candidate, df_ballot])
     df = df[df["contest"] == contest]
