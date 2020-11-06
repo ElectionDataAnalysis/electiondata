@@ -439,6 +439,7 @@ def read_single_datafile(
             # clean the count columns
             df, err_df = m.clean_count_cols(df, count_cols_by_name)
             if not err_df.empty:
+                err = add_err_df(err, err_df, munger, f_path)
                 # show all columns of dataframe holding rows where counts were set to 0
                 pd.set_option("max_columns", None)
                 err = add_new_error(
@@ -472,6 +473,19 @@ def read_single_datafile(
         e,
     )
     return pd.DataFrame(), err
+
+
+def add_err_df(err, err_df, munger, f_path):
+    # show all columns of dataframe holding rows where counts were set to 0
+    pd.set_option("max_columns", None)
+    err = add_new_error(
+        err,
+        "warn-munger",
+        munger.name,
+        f"At least one count was set to 0 in certain rows of {Path(f_path).name}:\n{err_df}",
+    )
+    pd.reset_option("max_columns")
+    return err
 
 
 def read_combine_results(

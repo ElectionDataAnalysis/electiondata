@@ -385,44 +385,77 @@ def add_info(node: et.Element, info: dict, counts: dict, raws: dict) -> (dict, b
 
 
 def read_xml(
-    fpath: str,
+    f_path: str,
     munger: jm.Munger,
     err: Optional[Dict],
 ) -> (pd.DataFrame, Optional[Dict]):
-    """Create dataframe from the xml file, with column names matching the fields in the raw_identifier formulas."""
+    """Create dataframe from the xml file, with column names matching the fields in the raw_identifier formulas.
+    Skip nodes whose tags are unrecognized"""
 
     # read data from file
     try:
-        tree = et.parse(fpath)
+        tree = et.parse(f_path)
     except FileNotFoundError:
-        err = ui.add_new_error(err, "file", Path(fpath).name, "File not found")
+        err = ui.add_new_error(err, "file", Path(f_path).name, "File not found")
         return pd.DataFrame(), err
 
     # identify tags with counts or other raw data (the info we want)
     # and list data to be pulled from each tag
+    # TODO tech debt: simplify
     count_tags = [x.split(".")[0] for x in munger.options["count_columns_by_name"]]
     counts = {t:[x for x in munger.options["count_columns_by_name"] if x.split(".")[0] == t] for t in count_tags}
     raw_tags = [x.split(".")[0] for x in munger.field_list]
     raws = {t:[x for x in munger.field_list if x.split(".")[0] == t] for t in raw_tags}
-
+    good_tags = set(count_tags).update(raw_tags)
+    good_pairs = counts.update(raws)
     try:
-        vc_record_list = []
-        info = dict()
-        for node in tree.iter():  # depth-first search, what we want!
-            # if node has info we want
-            if node.tag in count_tags or node.tag in raw_tags:
-                info, changed = add_info(node, info, counts, raws)
-                # if record is both complete and new
-                if changed and \
-                        set(info.keys()) == munger.field_list.union(munger.options["count_columns_by_name"]):
-                    # put record in list of records to be returned
-                    vc_record_list.append(info.copy())
-                    # delete the counts from the info (to avoid entering counts twice)
-                    for c in munger.options["count_columns_by_name"]:
-                        info.pop(c)
-        raw_results = pd.DataFrame(vc_record_list)
-
+        result_root = ResultsNode(tree.getroot())
+        result_root.process(good_tags, good_pairs)
+        raw_results = pd.DataFrame(result_root.results)
+        raw_results, err_df = m.clean_count_cols(
+            raw_results,
+            munger.options["count_columns_by_name"],
+        )
+        if not err_df.empty:
+            err = ui.add_err_df(err, err_df, munger, f_path)
     except Exception as e:
-        err = ui.add_new_error(err, "munger", munger.name, f"Error munging xml: {e}")
+        err = ui.add_new_error(err, "munger", munger.name, f"Error reading xml: {e}")
         raw_results = pd.DataFrame()
     return raw_results, err
+
+
+class ResultsTree(et.ElementTree):
+    def __init__(self, file):
+        super().__init__(file=file)
+        for node in self.iter():
+            node.results_dictionaries = list()
+
+
+class ResultsNode(et.Element):
+    def __init__(self, elt: et.Element):
+        super().__init__(elt.tag, elt.attrib)
+        self.results = list()  # a list of dicts, each holding info for eventual dataframe row
+
+    def process(self, good_tags: set, good_pairs: dict):
+        """appends all (possibly incomplete) results records that can be
+        read from nodes below to the list self.results"""
+        for child in self:
+            r_child = ResultsNode(child)
+            if r_child.tag in good_tags:
+                # get list of all (possibly incomplete) results records from below the child
+                r_child.process(good_tags, good_pairs)
+                # add info from the current node to each record and append result to self.results
+                for result in r_child.results:
+                    if self.tag in good_tags:
+                        self.results.append(
+                            result.update(
+                                {self.tag: self.attrib[k] for k in good_pairs[self.tag]}
+                            )
+                        )
+
+            # if child not useful, delete child
+            else:
+                self.remove(child)
+        return
+
+
