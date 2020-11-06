@@ -364,7 +364,7 @@ From a directory containing a `run_time.ini` parameter file, run
 ```
 import election_data_analysis as ea
 dl = ea.DataLoader()
-err = dl.load_all()
+dl.load_all()
 ```
 
 Some results files may need to be munged with multiple mungers, e.g., if they have combined absentee results by county with election-day results by precinct. If the `.ini` file for that results file has `munger_name` set to a comma-separated list of mungers, then all those mungers will be run on that one file.

@@ -36,13 +36,16 @@ def io(argv) -> Optional[list]:
     return ej_list
 
 
-def optional_remove(dl: eda.DataLoader, dir_path: str) -> Optional[dict]:
+def optional_remove(dl: eda.DataLoader, dir_path: str) -> (Optional[dict], bool):
     err = None
+    db_removed = False
     # give user option to remove db
     remove_db = input(f"Remove test db {dl.d['dbname']} (y/n)?\n")
 
     if remove_db == "y":
         err = close_and_erase(dl)
+        if not err:
+            db_removed = True
         # define parameters to connect to postgres db
 
     # give user option to remove directory
@@ -51,7 +54,7 @@ def optional_remove(dl: eda.DataLoader, dir_path: str) -> Optional[dict]:
         # remove testing data
         os.system(f"rm -rf {dir_path}")
 
-    return err
+    return err, db_removed
 
 
 def close_and_erase(dl: eda.DataLoader) -> Optional[dict]:
@@ -94,6 +97,7 @@ def run2(
     dl = None  # to keep syntax-checker happy
 
     err = None
+    db_removed = False
     if not test_dir:
         # set the test_dir to the directory containing this file
         test_dir = Path(__file__).parent.absolute()
@@ -125,7 +129,8 @@ def run2(
                 move_files=False, election_jurisdiction_list=election_jurisdiction_list
             )
             if not success:
-                optional_remove(dl, "TestingData")
+                print("At least one file did not load correctly.")
+                err, db_removed = optional_remove(dl, "TestingData")
         except Exception as exc:
             print(f"Exception occurred: {exc}")
             if dl:
@@ -142,12 +147,13 @@ def run2(
             optional_remove(dl, "TestingData")
             return err
 
-    ui.run_tests(
-        test_dir, dbname, election_jurisdiction_list=election_jurisdiction_list
-    )
+    if not db_removed:
+        ui.run_tests(
+            test_dir, dbname, election_jurisdiction_list=election_jurisdiction_list
+        )
 
-    if load_data:
-        err = optional_remove(dl, "TestingData")
+        if load_data:
+            err, db_removed = optional_remove(dl, "TestingData")
     return err
 
 
