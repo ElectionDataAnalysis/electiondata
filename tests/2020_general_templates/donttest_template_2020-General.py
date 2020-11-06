@@ -14,7 +14,7 @@ abbr = 'PA'
 single_vote_type = 'absentee'  # pick any one from your file
 single_county = 'Pennsylvania;Philadelphia County'  # pick any one from your file
 
-def data_exists(dbname):
+def test_data_exists(dbname):
     assert e.data_exists(election,jurisdiction,dbname=dbname)
 
 def test_presidential(dbname):
