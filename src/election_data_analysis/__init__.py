@@ -132,13 +132,14 @@ class DataLoader:
         load_jurisdictions: bool = True,
         move_files: bool = True,
         election_jurisdiction_list: Optional[list] = None,
-    ) -> Optional[dict]:
+    ) -> (Optional[dict], bool):
         """Processes all .ini files in the DataLoader's results directory.
         By default, loads (or reloads) the info from the jurisdiction files
         into the db first. By default, moves files to the DataLoader's archive directory.
-        Returns an error dictionary"""
-        # initialize error dictionary
+        Returns a post-reporting error dictionary, and a flag to indicate whether all loaded successfully"""
+        # initialize error dictionary and success flag
         err = None
+        success = True
 
         # set locations for error reporting
         # TODO get rid of mungers_path variable, use self.d directly
@@ -152,7 +153,7 @@ class DataLoader:
             err = ui.consolidate_errors([err, new_err])
         if ui.fatal_error(new_err):
             err = ui.report(err)
-            return err
+            return err, False
 
         # specify directories for archiving and reporting warnings
         success_dir = os.path.join(self.d["archive_dir"], db_param["dbname"])
@@ -175,7 +176,7 @@ class DataLoader:
                 f"No <results>.ini files found in directory. No results files will be processed.",
             )
             err = ui.report(err)
-            return err
+            return err, False
 
         params = dict()
         juris_directory = dict()
@@ -247,7 +248,7 @@ class DataLoader:
                     good_jurisdictions.append(jp)
             else:
                 err = ui.consolidate_errors([err, new_err])
-                return err
+                return err, False
 
         # process all good parameter files with good jurisdictions
         for jp in good_jurisdictions:
@@ -267,6 +268,7 @@ class DataLoader:
                 # if fatal error, print warning
                 if ui.fatal_error(new_err):
                     print(f"Fatal error; data not loaded from {f}")
+                    success = False
                 # if no fatal error from SDL initialization, continue
                 else:
                     # try to load data
@@ -284,11 +286,12 @@ class DataLoader:
                             f"\tArchived {f} and its results file after successful load "
                             f"via mungers {sdl.d['munger_name']}.\n"
                         )
-                    # if move_files == True and there was a fatal load error
-                    elif move_files and ui.fatal_error(load_error):
-                        print(f"\t{f} and its results file not archived due to errors")
+                    # if there was a fatal load error
+                    elif ui.fatal_error(load_error):
+                        print(f"\tFatal errors. {f} and its results file not loaded (and not archived)")
+                        success = False
 
-                    # if move_files is false
+                    # if move_files is false and there is no fatal error
                     else:
                         print(
                             f"{f} and its results file loaded successfully via mungers {sdl.d['munger_name']}."
@@ -316,7 +319,7 @@ class DataLoader:
             "warn-jurisdiction": success_dir,
         }
         ui.report(err, loc_dict)
-        return err
+        return err, success
 
     def remove_data(self, election_id: int, juris_id: int) -> Optional[str]:
         """Remove from the db all data for the given <election_id> in the given <juris>"""

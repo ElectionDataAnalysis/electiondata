@@ -1,10 +1,11 @@
 import os
-import sys, getopt
+import sys
+import getopt
 import datetime
 from pathlib import Path
 import shutil
 from typing import Optional
-import election_data_analysis as e
+import election_data_analysis as eda
 from election_data_analysis import database as db
 from election_data_analysis import user_interface as ui
 
@@ -35,7 +36,7 @@ def io(argv) -> Optional[list]:
     return ej_list
 
 
-def optional_remove(dl: e.DataLoader, dir_path: str) -> Optional[dict]:
+def optional_remove(dl: eda.DataLoader, dir_path: str) -> Optional[dict]:
     err = None
     # give user option to remove db
     remove_db = input(f"Remove test db {dl.d['dbname']} (y/n)?\n")
@@ -53,7 +54,7 @@ def optional_remove(dl: e.DataLoader, dir_path: str) -> Optional[dict]:
     return err
 
 
-def close_and_erase(dl: e.DataLoader) -> Optional[dict]:
+def close_and_erase(dl: eda.DataLoader) -> Optional[dict]:
     db_params = {
         "host": dl.engine.url.host,
         "port": dl.engine.url.port,
@@ -91,6 +92,7 @@ def run2(
     election_jurisdiction_list: Optional[list] = None,
 ) -> Optional[dict]:
     dl = None  # to keep syntax-checker happy
+
     err = None
     if not test_dir:
         # set the test_dir to the directory containing this file
@@ -113,15 +115,31 @@ def run2(
         election_jurisdiction_list = ui.election_juris_list("TestingData")
 
     if load_data:
-        # Load the data
-        dl = e.DataLoader()
-        dl.change_db(dbname)
+        try:
+            # Load the data
+            dl = eda.DataLoader()
+            dl.change_db(dbname)
 
-        dl.change_dir("results_dir", "TestingData")
-        err = dl.load_all(
-            move_files=False, election_jurisdiction_list=election_jurisdiction_list
-        )
+            dl.change_dir("results_dir", "TestingData")
+            err, success = dl.load_all(
+                move_files=False, election_jurisdiction_list=election_jurisdiction_list
+            )
+            if not success:
+                optional_remove(dl, "TestingData")
+        except Exception as exc:
+            print(f"Exception occurred: {exc}")
+            if dl:
+                optional_remove(dl, "TestingData")
+            err = ui.add_new_error(
+                err,
+                "file",
+                "TestingData",
+                f"Exception during data loading: {exc}",
+            )
+            return err
+
         if ui.fatal_error(err):
+            optional_remove(dl, "TestingData")
             return err
 
     ui.run_tests(
@@ -136,13 +154,13 @@ def run2(
 if __name__ == "__main__":
     print(sys.argv)
     if len(sys.argv) == 1:
-        ej_list = None
+        ejs = None
     else:
-        ej_list = io(sys.argv[1:])
+        ejs = io(sys.argv[1:])
 
-    err = run2(
-        election_jurisdiction_list=ej_list,
+    error = run2(
+        election_jurisdiction_list=ejs,
     )
-    if err:
-        print(err)
+    if error:
+        print(error)
     exit()
