@@ -91,11 +91,10 @@ def test_count_type_subtotal(dbname):
 
 
 def test_one_county_vote_type(dbname):
-    assert (e.aggregate_results(
+    assert (e.contest_total(
         election,
         jurisdiction,
         f"US President ({abbr})",
-        single_vote_type,
         dbname=dbname,
         county=single_county,
         vote_type=single_vote_type,
