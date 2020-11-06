@@ -29,6 +29,7 @@ munger_pars_opt = {
     "sheets_to_skip": "list-of-strings",
     "constant_line_count": "int",
     "constant_column_count": "int",
+    "nesting_tags": "list-of-strings",
 }
 
 

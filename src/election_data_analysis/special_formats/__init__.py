@@ -404,6 +404,9 @@ def read_xml(
     # TODO tech debt: simplify
     fields = set(munger.options["count_columns_by_name"]).union(munger.field_list)
     tags = {f.split(".")[0] for f in fields}
+    # if munger has nesting tags in format.config
+    if munger.options["nesting_tags"] is not None:
+        tags.update(munger.options["nesting_tags"])
     attributes = {t: [x.split(".")[1] for x in fields if x.split(".")[0] == t] for t in tags}
 
     try:
