@@ -59,26 +59,7 @@ AK Senate District 17	Alaska;AK Senate District 17
 AK Senate District 18	Alaska;AK Senate District 18
 AK Senate District 19	Alaska;AK Senate District 19
 AK Senate District 20	Alaska;AK Senate District 20
-AK Senate District 21	Alaska;AK Senate District 21
-AK Senate District 22	Alaska;AK Senate District 22
-AK Senate District 23	Alaska;AK Senate District 23
-AK Senate District 24	Alaska;AK Senate District 24
-AK Senate District 25	Alaska;AK Senate District 25
-AK Senate District 26	Alaska;AK Senate District 26
-AK Senate District 27	Alaska;AK Senate District 27
-AK Senate District 28	Alaska;AK Senate District 28
-AK Senate District 29	Alaska;AK Senate District 29
-AK Senate District 30	Alaska;AK Senate District 30
-AK Senate District 31	Alaska;AK Senate District 31
-AK Senate District 32	Alaska;AK Senate District 32
-AK Senate District 33	Alaska;AK Senate District 33
-AK Senate District 34	Alaska;AK Senate District 34
-AK Senate District 35	Alaska;AK Senate District 35
-AK Senate District 36	Alaska;AK Senate District 36
-AK Senate District 37	Alaska;AK Senate District 37
-AK Senate District 38	Alaska;AK Senate District 38
-AK Senate District 39	Alaska;AK Senate District 39
-AK Senate District 40	Alaska;AK Senate District 40
+
 US House AK District 1	Alaska;US House AK District 1
 US President (AK)	Alaska
 AK Governor	Alaska
