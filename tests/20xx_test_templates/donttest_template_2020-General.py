@@ -21,7 +21,7 @@ total_ssd_votes = -1
 single_vote_type = 'early'  # pick any one from your file
 pres_votes_vote_type = -1
 single_county = 'North Carolina;Bertie County'  # pick any one from your file
-pres_votes_county = -1  # total votes for pres of that county & vote type
+pres_votes_county = -1  # total votes for pres of that county
 
 
 def test_data_exists(dbname):
