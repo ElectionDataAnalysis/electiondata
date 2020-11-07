@@ -98,5 +98,5 @@ def test_one_county_vote_type(dbname):
         county=single_county,
         vote_type=single_vote_type,
         )
-        == 2033 + 2831
+        == 142 + 2184 + 2562
             )
