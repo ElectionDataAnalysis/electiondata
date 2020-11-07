@@ -173,7 +173,7 @@ Ricardo Perkins
 Jose Menendez
 Fidel 'TwoBears' Castillo
 Scott Pusich
-Diana Arévalo
+Diana ArÃ©valo
 Rick Galindo
 Philip Cortez
 Carlos Antonio Raymond
@@ -197,7 +197,7 @@ Libby Wiedermann
 Catherine Torrres-Stahl
 Ron Rangel
 Laura Parker
-Arcelia Treviño
+Arcelia TreviÃ±o
 Jan Ischy-Prins
 Frank J. Castro
 Karen Pozza
@@ -238,7 +238,7 @@ Kyle Kacal
 John Raney
 Travis Bryan, III
 Jarvis Parsons
-Poncho Nevárez
+Poncho NevÃ¡rez
 Roy Ferguson
 Sandy Wilson
 Jaime Escuder
@@ -346,7 +346,7 @@ Tom Craddick
 Amanda Navarette
 Laurie K. English
 Ruben G. Reyes
-José Rodriguez
+JosÃ© Rodriguez
 Jaime Esparza
 John Smithee
 David M. Green
@@ -441,8 +441,8 @@ Cindy Ermatinger
 Beto O'Rourke
 Jaime O. Perez
 Mary L. Gourdoux
-Mary E. González
-César J. Blanco
+Mary E. GonzÃ¡lez
+CÃ©sar J. Blanco
 Evelina 'Lina' Ortega
 Jeffrey Lane
 Joe Moody
@@ -931,7 +931,7 @@ CECIL B. 'BURT' JONES
 JEFF MCFARLIN
 RAUL REYES
 SHARON BRECKENRIDGE THOMAS
-ALÍA URESTE
+ALÃA URESTE
 BEN VAN WINKLE
 SUNNY CHAPARALA
 DAVID FEGAN
@@ -1287,7 +1287,7 @@ JOSEPH R. BIDEN
 MICHAEL R. BLOOMBERG
 CORY BOOKER
 PETE BUTTIGIEG
-JULIÁN CASTRO
+JULIÃN CASTRO
 ROQUE 'ROCKY' DE LA FUENTE
 JOHN K. DELANEY
 TULSI GABBARD
@@ -1303,7 +1303,7 @@ CHRIS BELL
 MICHAEL COOPER
 AMANDA K. EDWARDS
 JACK DANIEL FOSTER JR
-ANNIE 'MAMÁ' GARCIA
+ANNIE 'MAMÃ' GARCIA
 VICTOR HUGO HARRIS
 MARY 'MJ' HEGAR
 SEMA HERNANDEZ
@@ -1604,7 +1604,7 @@ ERIC V. MOYE
 BRIAN MCCONNELL
 NICOLE GARZA
 LAWRENCE MEYERS
-MARIA CANTÚ HEXSEL
+MARIA CANTÃ HEXSEL
 KENNON WOOTEN
 GEORGE LINDSEY
 F. DAVID ORTIZ
@@ -1727,3 +1727,11 @@ ALBERTO RODRIGUEZ
 NATHAN J. MILLIRON
 JOHN (DOC) ROBERT GUERRA
 CLAVER T. KAMAU-IMANI
+L. 'SARAH' DEMERCHANT
+JUAN 'CHUY' HINOJOSA
+ARMANDO 'MANDO' MARTINEZ
+CHARLES 'DOC' ANDERSON
+'GUILLERMO' WILLIAM HAYWARD
+Asusena Reséndiz
+Renée Swann
+Alía Ureste
