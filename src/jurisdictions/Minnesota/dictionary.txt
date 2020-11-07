@@ -10423,15 +10423,15 @@ ReportingUnit	Minnesota;US House MN District 6	Minnesota;U.S. Representative Dis
 ReportingUnit	Minnesota;US House MN District 7	Minnesota;U.S. Representative District 7
 ReportingUnit	Minnesota;US House MN District 8	Minnesota;U.S. Representative District 8
 ReportingUnit	Minnesota	Minnesota
-ReportingUnit	Minnesota;Aitkin County	01
-ReportingUnit	Minnesota;Anoka County	02
-ReportingUnit	Minnesota;Becker County	03
-ReportingUnit	Minnesota;Beltrami County	04
-ReportingUnit	Minnesota;Benton County	05
-ReportingUnit	Minnesota;Big Stone County	06
-ReportingUnit	Minnesota;Blue Earth County	07
-ReportingUnit	Minnesota;Brown County	08
-ReportingUnit	Minnesota;Carlton County	09
+ReportingUnit	Minnesota;Aitkin County	1
+ReportingUnit	Minnesota;Anoka County	2
+ReportingUnit	Minnesota;Becker County	3
+ReportingUnit	Minnesota;Beltrami County	4
+ReportingUnit	Minnesota;Benton County	5
+ReportingUnit	Minnesota;Big Stone County	6
+ReportingUnit	Minnesota;Blue Earth County	7
+ReportingUnit	Minnesota;Brown County	8
+ReportingUnit	Minnesota;Carlton County	9
 ReportingUnit	Minnesota;Carver County	10
 ReportingUnit	Minnesota;Cass County	11
 ReportingUnit	Minnesota;Chippewa County	12
@@ -10518,7 +10518,7 @@ Candidate	Bob 'Again' Carney Jr.	Bob 'Again' Carney Jr.
 Candidate	James Reibestein	James Reibestein
 Candidate	Jason Lewis	Jason Lewis
 Candidate	John L. Berman	John L. Berman
-Candidate	Christopher Lovell Seymore, Sr.	Christopher Lovell Seymore, Sr.
+Candidate	"Christopher Lovell Seymore, Sr."	"Christopher Lovell Seymore, Sr."
 Candidate	Tina Smith	Tina Smith
 Candidate	Ahmad R. Hassan	Ahmad R. Hassan
 Candidate	Paula Overby	Paula Overby
@@ -10690,7 +10690,7 @@ Candidate	Aarica L. Coleman	Aarica L. Coleman
 Candidate	Greg Pulles	Greg Pulles
 Candidate	Zina Alston-Fizer	Zina Alston-Fizer
 Candidate	Ann Johnson Stewart	Ann Johnson Stewart
-Candidate	Julie DuprÃ©	Julie DuprÃ©
+Candidate	Julie DuprÃÂ©	Julie DuprÃÂ©
 Candidate	Jenny Rhoades	Jenny Rhoades
 Candidate	Melisa Lopez Franzen	Melisa Lopez Franzen
 Candidate	Paul Anderson	Paul Anderson
@@ -10751,7 +10751,7 @@ Candidate	Richard E. Rolling	Richard E. Rolling
 Candidate	Jack Vizecky	Jack Vizecky
 Candidate	Nathan Schmalz	Nathan Schmalz
 Candidate	Anthony Kadlec	Anthony Kadlec
-Candidate	JosÃ© Luciano	JosÃ© Luciano
+Candidate	JosÃÂ© Luciano	JosÃÂ© Luciano
 Candidate	Julie Bredeson	Julie Bredeson
 Candidate	Joe Tacheny	Joe Tacheny
 Candidate	Greg Gilbertson	Greg Gilbertson
@@ -10859,7 +10859,7 @@ Candidate	Deval Patrick	Deval Patrick
 Candidate	Tom Steyer	Tom Steyer
 Candidate	Pete Buttigieg	Pete Buttigieg
 Candidate	Amy Klobuchar	Amy Klobuchar
-Candidate	JuliÃ¡n Castro	JuliÃ¡n Castro
+Candidate	JuliÃÂ¡n Castro	JuliÃÂ¡n Castro
 Candidate	John K. Delaney	John K. Delaney
 Candidate	Marianne Williamson	Marianne Williamson
 Candidate	Bernie Sanders	Bernie Sanders
@@ -11333,7 +11333,7 @@ Candidate	Justin R. Anderson	Justin R. Anderson
 Candidate	Paul Groneberg	Paul Groneberg
 Candidate	Randy C. Larson	Randy C. Larson
 Candidate	Joe McDonald	Joe McDonald
-Candidate	RenÃ©e Cardarelle	RenÃ©e Cardarelle
+Candidate	RenÃÂ©e Cardarelle	RenÃÂ©e Cardarelle
 Candidate	Eric Lucero	Eric Lucero
 Candidate	Margaret Fernandez	Margaret Fernandez
 Candidate	Jerry Hertaus	Jerry Hertaus
@@ -11373,7 +11373,7 @@ Candidate	Fred Statema	Fred Statema
 Candidate	Fue Lee	Fue Lee
 Candidate	Kelly Winsor	Kelly Winsor
 Candidate	Diane Loeffler	Diane Loeffler
-Candidate	Joseph PatiÃ±o	Joseph PatiÃ±o
+Candidate	Joseph PatiÃÂ±o	Joseph PatiÃÂ±o
 Candidate	Mohamud Noor	Mohamud Noor
 Candidate	Jeremy Hansen	Jeremy Hansen
 Candidate	Frank Hornstein	Frank Hornstein
@@ -11561,7 +11561,7 @@ Candidate	James Austad	James Austad
 Candidate	Franklin D. Sindelir	Franklin D. Sindelir
 Candidate	Roger Krause	Roger Krause
 Candidate	Bob Vogel	Bob Vogel
-Candidate	Barbara DrÃ¶her Kline	Barbara DrÃ¶her Kline
+Candidate	Barbara DrÃÂ¶her Kline	Barbara DrÃÂ¶her Kline
 Candidate	Josh Gare	Josh Gare
 Candidate	Todd Lippert	Todd Lippert
 Candidate	Danny O'Keefe	Danny O'Keefe
@@ -12139,7 +12139,7 @@ Candidate	Sean A. Deringer	Sean A. Deringer
 Candidate	Tom Kelly	Tom Kelly
 Candidate	Judith Kelly	Judith Kelly
 Candidate	Michael W. Zieska	Michael W. Zieska
-Candidate	Richard Neil LaBute, Jr.	Richard Neil LaBute, Jr.
+Candidate	"Richard Neil LaBute, Jr."	"Richard Neil LaBute, Jr."
 Candidate	Mary L. Wetter	Mary L. Wetter
 Candidate	Greg Renneke	Greg Renneke
 Candidate	Jane Remiger	Jane Remiger
@@ -12151,7 +12151,7 @@ Candidate	Darwyn Bach	Darwyn Bach
 Candidate	Donald J. Trump and Michael R. Pence	Donald J. Trump and Michael R. Pence
 Candidate	Hillary Clinton and Tim Kaine	Hillary Clinton and Tim Kaine
 Candidate	Darrell Castle and Scott Bradley	Darrell Castle and Scott Bradley
-Candidate	Dan R. Vacek and Mark Elworth, Jr.	Dan R. Vacek and Mark Elworth, Jr.
+Candidate	"Dan R. Vacek and Mark Elworth, Jr."	"Dan R. Vacek and Mark Elworth, Jr."
 Candidate	Alyson Kennedy and Osborne Hart	Alyson Kennedy and Osborne Hart
 Candidate	Jill Stein and Howie Hawkins	Jill Stein and Howie Hawkins
 Candidate	Rocky Roque De La Fuente and Michael Steinberg	Rocky Roque De La Fuente and Michael Steinberg
@@ -12178,7 +12178,7 @@ Candidate	Denise D. Reilly	Denise D. Reilly
 Candidate	Michelle A. Larkin	Michelle A. Larkin
 Candidate	Randolph W. Peterson	Randolph W. Peterson
 Candidate	Larry Stauber Jr.	Larry Stauber Jr.
-Candidate	Peter M. Reyes, Jr.	Peter M. Reyes, Jr.
+Candidate	"Peter M. Reyes, Jr."	"Peter M. Reyes, Jr."
 Candidate	Matthew E. Johnson	Matthew E. Johnson
 Candidate	Heidi Schellhas	Heidi Schellhas
 Candidate	Francis Connolly	Francis Connolly
@@ -12516,7 +12516,7 @@ Candidate	Jerry L. Rapp	Jerry L. Rapp
 Candidate	Karen Hunt	Karen Hunt
 Candidate	Michael F. Cleary	Michael F. Cleary
 Candidate	Jon Schneider	Jon Schneider
-Candidate	Bill Dropik, Jr.	Bill Dropik, Jr.
+Candidate	"Bill Dropik, Jr."	"Bill Dropik, Jr."
 Candidate	Kenneth Douglas Rutten	Kenneth Douglas Rutten
 Candidate	John Roper	John Roper
 Candidate	William (Bill) Groskreutz Jr.	William (Bill) Groskreutz Jr.
@@ -12591,7 +12591,7 @@ Candidate	Richard Lieberman	Richard Lieberman
 Candidate	Alma J. Wetzker	Alma J. Wetzker
 Candidate	Anne Taylor	Anne Taylor
 Candidate	Peggy Flanagan	Peggy Flanagan
-Candidate	Bryan P. BjÃ¶rnson	Bryan P. BjÃ¶rnson
+Candidate	Bryan P. BjÃÂ¶rnson	Bryan P. BjÃÂ¶rnson
 Candidate	Mary Shapiro	Mary Shapiro
 Candidate	Ben Sherlock	Ben Sherlock
 Candidate	Ron Erhardt	Ron Erhardt
@@ -12600,7 +12600,7 @@ Candidate	Paul Rosenthal	Paul Rosenthal
 Candidate	Tim Johnson	Tim Johnson
 Candidate	Linda Slocum	Linda Slocum
 Candidate	Jessica Newville	Jessica Newville
-Candidate	Margaret E. MartÃ­n	Margaret E. MartÃ­n
+Candidate	Margaret E. MartÃÂ­n	Margaret E. MartÃÂ­n
 Candidate	Gabe Barnett	Gabe Barnett
 Candidate	Abdimalik Askar	Abdimalik Askar
 Candidate	Brian Rosenblatt	Brian Rosenblatt
@@ -12982,7 +12982,7 @@ Candidate	Dave Esselink	Dave Esselink
 Candidate	Jack Swanson	Jack Swanson
 Candidate	Todd O. Miller	Todd O. Miller
 Candidate	Russell Walker	Russell Walker
-Candidate	Jay Estling, Jr.	Jay Estling, Jr.
+Candidate	"Jay Estling, Jr."	"Jay Estling, Jr."
 Candidate	Warren Ulvin	Warren Ulvin
 Candidate	Landon Olson	Landon Olson
 Candidate	Jason I. Metsa	Jason I. Metsa
@@ -13138,3 +13138,12 @@ Candidate	Marty Grabow	Marty Grabow
 Candidate	Glen Kack	Glen Kack
 Candidate	Thomas J. Remmele	Thomas J. Remmele
 Candidate	Jerry Nelson	Jerry Nelson
+Candidate	Joseph Biden	Joseph R. Biden and Kamala Harris
+Candidate	"Roque ""Rocky"" De La Fuente"	"Roque ""Rocky"" De La Fuente and Darcy Richardson"
+Candidate	Howie Hawkins	Howie Hawkins and Angela Walker
+Candidate	Kanye West	Kanye West and Michelle Tidball
+Candidate	Brock Pierce	Brock Pierce and Karla Ballard
+Candidate	Gloria La Riva	Gloria La Riva and Leonard Peltier
+Candidate	Alyson Kennedy	Alyson Kennedy and Malcolm Jarrett
+Candidate	Jo Jorgensen	"Jo Jorgensen and Jeremy ""Spike"" Cohen"
+Candidate	Write-In	WRITE-IN
