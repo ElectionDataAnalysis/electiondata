@@ -1,1 +1,508 @@
 cdf_element	cdf_internal_name	raw_identifier_value
+CandidateContest	AK House District 1	AK House District 1
+CandidateContest	AK House District 2	AK House District 2
+CandidateContest	AK House District 3	AK House District 3
+CandidateContest	AK House District 4	AK House District 4
+CandidateContest	AK House District 5	AK House District 5
+CandidateContest	AK House District 6	AK House District 6
+CandidateContest	AK House District 7	AK House District 7
+CandidateContest	AK House District 8	AK House District 8
+CandidateContest	AK House District 9	AK House District 9
+CandidateContest	AK House District 10	AK House District 10
+CandidateContest	AK House District 11	AK House District 11
+CandidateContest	AK House District 12	AK House District 12
+CandidateContest	AK House District 13	AK House District 13
+CandidateContest	AK House District 14	AK House District 14
+CandidateContest	AK House District 15	AK House District 15
+CandidateContest	AK House District 16	AK House District 16
+CandidateContest	AK House District 17	AK House District 17
+CandidateContest	AK House District 18	AK House District 18
+CandidateContest	AK House District 19	AK House District 19
+CandidateContest	AK House District 20	AK House District 20
+CandidateContest	AK House District 21	AK House District 21
+CandidateContest	AK House District 22	AK House District 22
+CandidateContest	AK House District 23	AK House District 23
+CandidateContest	AK House District 24	AK House District 24
+CandidateContest	AK House District 25	AK House District 25
+CandidateContest	AK House District 26	AK House District 26
+CandidateContest	AK House District 27	AK House District 27
+CandidateContest	AK House District 28	AK House District 28
+CandidateContest	AK House District 29	AK House District 29
+CandidateContest	AK House District 30	AK House District 30
+CandidateContest	AK House District 31	AK House District 31
+CandidateContest	AK House District 32	AK House District 32
+CandidateContest	AK House District 33	AK House District 33
+CandidateContest	AK House District 34	AK House District 34
+CandidateContest	AK House District 35	AK House District 35
+CandidateContest	AK House District 36	AK House District 36
+CandidateContest	AK House District 37	AK House District 37
+CandidateContest	AK House District 38	AK House District 38
+CandidateContest	AK House District 39	AK House District 39
+CandidateContest	AK House District 40	AK House District 40
+CandidateContest	AK Senate District 1	AK Senate District 1
+CandidateContest	AK Senate District 2	AK Senate District 2
+CandidateContest	AK Senate District 3	AK Senate District 3
+CandidateContest	AK Senate District 4	AK Senate District 4
+CandidateContest	AK Senate District 5	AK Senate District 5
+CandidateContest	AK Senate District 6	AK Senate District 6
+CandidateContest	AK Senate District 7	AK Senate District 7
+CandidateContest	AK Senate District 8	AK Senate District 8
+CandidateContest	AK Senate District 9	AK Senate District 9
+CandidateContest	AK Senate District 10	AK Senate District 10
+CandidateContest	AK Senate District 11	AK Senate District 11
+CandidateContest	AK Senate District 12	AK Senate District 12
+CandidateContest	AK Senate District 13	AK Senate District 13
+CandidateContest	AK Senate District 14	AK Senate District 14
+CandidateContest	AK Senate District 15	AK Senate District 15
+CandidateContest	AK Senate District 16	AK Senate District 16
+CandidateContest	AK Senate District 17	AK Senate District 17
+CandidateContest	AK Senate District 18	AK Senate District 18
+CandidateContest	AK Senate District 19	AK Senate District 19
+CandidateContest	AK Senate District 20	AK Senate District 20
+CandidateContest	AK Senate District 21	AK Senate District 21
+CandidateContest	AK Senate District 22	AK Senate District 22
+CandidateContest	AK Senate District 23	AK Senate District 23
+CandidateContest	AK Senate District 24	AK Senate District 24
+CandidateContest	AK Senate District 25	AK Senate District 25
+CandidateContest	AK Senate District 26	AK Senate District 26
+CandidateContest	AK Senate District 27	AK Senate District 27
+CandidateContest	AK Senate District 28	AK Senate District 28
+CandidateContest	AK Senate District 29	AK Senate District 29
+CandidateContest	AK Senate District 30	AK Senate District 30
+CandidateContest	AK Senate District 31	AK Senate District 31
+CandidateContest	AK Senate District 32	AK Senate District 32
+CandidateContest	AK Senate District 33	AK Senate District 33
+CandidateContest	AK Senate District 34	AK Senate District 34
+CandidateContest	AK Senate District 35	AK Senate District 35
+CandidateContest	AK Senate District 36	AK Senate District 36
+CandidateContest	AK Senate District 37	AK Senate District 37
+CandidateContest	AK Senate District 38	AK Senate District 38
+CandidateContest	AK Senate District 39	AK Senate District 39
+CandidateContest	AK Senate District 40	AK Senate District 40
+CandidateContest	US House AK District 1	US House AK District 1
+CandidateContest	US President (AK)	US President (AK)
+CandidateContest	AK Governor	AK Governor
+CandidateContest	US Senate AK	US Senate AK
+CandidateContest	AK Attorney General	AK Attorney General
+CandidateContest	AK Lieutenant Governor	AK Lieutenant Governor
+CandidateContest	AK Treasurer	AK Treasurer
+CandidateContest	AK Secretary of State	AK Secretary of State
+Election	2020 General	2020 General
+Election	2020 Primary	2020 Primary
+Election	2018 General	2018 General
+Election	2016 General	2016 General
+Party	Democratic Party	Democratic Party
+Party	Republican Party	Republican Party
+Party	Green Party	Green Party
+Party	Libertarian Party	Libertarian Party
+ReportingUnit	Alaska;AK House District 1	Alaska;AK House District 1
+ReportingUnit	Alaska;AK House District 2	Alaska;AK House District 2
+ReportingUnit	Alaska;AK House District 3	Alaska;AK House District 3
+ReportingUnit	Alaska;AK House District 4	Alaska;AK House District 4
+ReportingUnit	Alaska;AK House District 5	Alaska;AK House District 5
+ReportingUnit	Alaska;AK House District 6	Alaska;AK House District 6
+ReportingUnit	Alaska;AK House District 7	Alaska;AK House District 7
+ReportingUnit	Alaska;AK House District 8	Alaska;AK House District 8
+ReportingUnit	Alaska;AK House District 9	Alaska;AK House District 9
+ReportingUnit	Alaska;AK House District 10	Alaska;AK House District 10
+ReportingUnit	Alaska;AK House District 11	Alaska;AK House District 11
+ReportingUnit	Alaska;AK House District 12	Alaska;AK House District 12
+ReportingUnit	Alaska;AK House District 13	Alaska;AK House District 13
+ReportingUnit	Alaska;AK House District 14	Alaska;AK House District 14
+ReportingUnit	Alaska;AK House District 15	Alaska;AK House District 15
+ReportingUnit	Alaska;AK House District 16	Alaska;AK House District 16
+ReportingUnit	Alaska;AK House District 17	Alaska;AK House District 17
+ReportingUnit	Alaska;AK House District 18	Alaska;AK House District 18
+ReportingUnit	Alaska;AK House District 19	Alaska;AK House District 19
+ReportingUnit	Alaska;AK House District 20	Alaska;AK House District 20
+ReportingUnit	Alaska;AK House District 21	Alaska;AK House District 21
+ReportingUnit	Alaska;AK House District 22	Alaska;AK House District 22
+ReportingUnit	Alaska;AK House District 23	Alaska;AK House District 23
+ReportingUnit	Alaska;AK House District 24	Alaska;AK House District 24
+ReportingUnit	Alaska;AK House District 25	Alaska;AK House District 25
+ReportingUnit	Alaska;AK House District 26	Alaska;AK House District 26
+ReportingUnit	Alaska;AK House District 27	Alaska;AK House District 27
+ReportingUnit	Alaska;AK House District 28	Alaska;AK House District 28
+ReportingUnit	Alaska;AK House District 29	Alaska;AK House District 29
+ReportingUnit	Alaska;AK House District 30	Alaska;AK House District 30
+ReportingUnit	Alaska;AK House District 31	Alaska;AK House District 31
+ReportingUnit	Alaska;AK House District 32	Alaska;AK House District 32
+ReportingUnit	Alaska;AK House District 33	Alaska;AK House District 33
+ReportingUnit	Alaska;AK House District 34	Alaska;AK House District 34
+ReportingUnit	Alaska;AK House District 35	Alaska;AK House District 35
+ReportingUnit	Alaska;AK House District 36	Alaska;AK House District 36
+ReportingUnit	Alaska;AK House District 37	Alaska;AK House District 37
+ReportingUnit	Alaska;AK House District 38	Alaska;AK House District 38
+ReportingUnit	Alaska;AK House District 39	Alaska;AK House District 39
+ReportingUnit	Alaska;AK House District 40	Alaska;AK House District 40
+ReportingUnit	Alaska;AK Senate District 1	Alaska;AK Senate District 1
+ReportingUnit	Alaska;AK Senate District 2	Alaska;AK Senate District 2
+ReportingUnit	Alaska;AK Senate District 3	Alaska;AK Senate District 3
+ReportingUnit	Alaska;AK Senate District 4	Alaska;AK Senate District 4
+ReportingUnit	Alaska;AK Senate District 5	Alaska;AK Senate District 5
+ReportingUnit	Alaska;AK Senate District 6	Alaska;AK Senate District 6
+ReportingUnit	Alaska;AK Senate District 7	Alaska;AK Senate District 7
+ReportingUnit	Alaska;AK Senate District 8	Alaska;AK Senate District 8
+ReportingUnit	Alaska;AK Senate District 9	Alaska;AK Senate District 9
+ReportingUnit	Alaska;AK Senate District 10	Alaska;AK Senate District 10
+ReportingUnit	Alaska;AK Senate District 11	Alaska;AK Senate District 11
+ReportingUnit	Alaska;AK Senate District 12	Alaska;AK Senate District 12
+ReportingUnit	Alaska;AK Senate District 13	Alaska;AK Senate District 13
+ReportingUnit	Alaska;AK Senate District 14	Alaska;AK Senate District 14
+ReportingUnit	Alaska;AK Senate District 15	Alaska;AK Senate District 15
+ReportingUnit	Alaska;AK Senate District 16	Alaska;AK Senate District 16
+ReportingUnit	Alaska;AK Senate District 17	Alaska;AK Senate District 17
+ReportingUnit	Alaska;AK Senate District 18	Alaska;AK Senate District 18
+ReportingUnit	Alaska;AK Senate District 19	Alaska;AK Senate District 19
+ReportingUnit	Alaska;AK Senate District 20	Alaska;AK Senate District 20
+ReportingUnit	Alaska;AK Senate District 21	Alaska;AK Senate District 21
+ReportingUnit	Alaska;AK Senate District 22	Alaska;AK Senate District 22
+ReportingUnit	Alaska;AK Senate District 23	Alaska;AK Senate District 23
+ReportingUnit	Alaska;AK Senate District 24	Alaska;AK Senate District 24
+ReportingUnit	Alaska;AK Senate District 25	Alaska;AK Senate District 25
+ReportingUnit	Alaska;AK Senate District 26	Alaska;AK Senate District 26
+ReportingUnit	Alaska;AK Senate District 27	Alaska;AK Senate District 27
+ReportingUnit	Alaska;AK Senate District 28	Alaska;AK Senate District 28
+ReportingUnit	Alaska;AK Senate District 29	Alaska;AK Senate District 29
+ReportingUnit	Alaska;AK Senate District 30	Alaska;AK Senate District 30
+ReportingUnit	Alaska;AK Senate District 31	Alaska;AK Senate District 31
+ReportingUnit	Alaska;AK Senate District 32	Alaska;AK Senate District 32
+ReportingUnit	Alaska;AK Senate District 33	Alaska;AK Senate District 33
+ReportingUnit	Alaska;AK Senate District 34	Alaska;AK Senate District 34
+ReportingUnit	Alaska;AK Senate District 35	Alaska;AK Senate District 35
+ReportingUnit	Alaska;AK Senate District 36	Alaska;AK Senate District 36
+ReportingUnit	Alaska;AK Senate District 37	Alaska;AK Senate District 37
+ReportingUnit	Alaska;AK Senate District 38	Alaska;AK Senate District 38
+ReportingUnit	Alaska;AK Senate District 39	Alaska;AK Senate District 39
+ReportingUnit	Alaska;AK Senate District 40	Alaska;AK Senate District 40
+ReportingUnit	Alaska;US House AK District 1	Alaska;US House AK District 1
+ReportingUnit	Alaska	Alaska
+
+Candidate	Alexander, Ed	Alexander, Ed
+Candidate	Baker  Thomas C.	Baker  Thomas C. - R
+Candidate	Batten  Bruce T.	Batten  Bruce T. - D
+Candidate	Bauer  Paul A.	Bauer  Paul A. - R
+Candidate	Becker  Leslie	Becker  Leslie - R
+Candidate	Begich  Tom	Begich  Tom - D
+Candidate	Begich, Tom	Begich, Tom
+Candidate	Begich/Call	Begich/Call
+Candidate	Beltrami, Vince	Beltrami, Vince
+Candidate	Birch, Chris	Birch, Chris
+Candidate	Bishop, Click	Bishop, Click
+Candidate	Blatchford  Edgar	Blatchford  Edgar - D
+Candidate	Borbridge  Harold	Borbridge  Harold - R
+Candidate	Butler, Shawn A.	Butler, Shawn A.
+Candidate	Cacy  Roselynn	Cacy  Roselynn - D
+Candidate	Canitz  James A. Sr.	Canitz  James A. Sr. - D
+Candidate	Carpenter  Benjamin E.	Carpenter  Benjamin E. - R
+Candidate	Carpenter, Benjamin	Carpenter, Benjamin
+Candidate	Cason, Sam	Cason, Sam
+Candidate	Castle, Darrell L.	Castle, Darrell L.
+Candidate	Chenault, Charles M.	Chenault, Charles M.
+Candidate	Chesbro, James L.	Chesbro, James L.
+Candidate	Claman  Matt	Claman  Matt - D
+Candidate	Claman, Matt	Claman, Matt
+Candidate	Clinton, Hillary	Clinton, Hillary
+Candidate	Coghill  John B. Jr.	Coghill  John B. Jr. - R
+Candidate	Coghill, John B. Jr.	Coghill, John B. Jr.
+Candidate	Colbert  Bennie D.	Colbert  Bennie D. - D
+Candidate	Costello, Mia	Costello, Mia
+Candidate	Cote, Shirley A. 	Cote, Shirley A.
+Candidate	Cox  John R. "Bear"	Cox  John R. "Bear" - R
+Candidate	Craig, Breck A. 	Craig, Breck A.
+Candidate	Crawford, Harry T. J	Crawford, Harry T. J
+Candidate	Crawford, Jim	Crawford, Jim
+Candidate	Cronk  Mike	Cronk  Mike - R
+Candidate	Cumings  Chris C.	Cumings  Chris C. - N
+Candidate	Dahlstrom, Nancy A.	Dahlstrom, Nancy A.
+Candidate	Darden  Dustin T.	Darden  Dustin T. - A
+Candidate	Darden, Dustin	Darden, Dustin
+Candidate	Darden, Dustin T. 	Darden, Dustin T.
+Candidate	De La Fuente, Roque	De La Fuente, Roque
+Candidate	Deacon, Darren M.	Deacon, Darren M.
+Candidate	Dimond, Chris	Dimond, Chris
+Candidate	Dodge, Kathryn E.	Dodge, Kathryn E.
+Candidate	Dougherty  Connie	Dougherty  Connie - R
+Candidate	Dougherty, Connie R.	Dougherty, Connie R.
+Candidate	Drummond  Harriet A.	Drummond  Harriet A. - D
+Candidate	Drummond, Harriet A.	Drummond, Harriet A.
+Candidate	Dunleavy/Meyer	Dunleavy/Meyer
+Candidate	Duplantis  Stephen J.	Duplantis  Stephen J. - R
+Candidate	Eastman  David	Eastman  David - R
+Candidate	Eastman, David	Eastman, David
+Candidate	Edgmon  Bryce	Edgmon  Bryce - U
+Candidate	Edgmon, Bryce E.	Edgmon, Bryce E.
+Candidate	Edgmon, Bryce E. 	Edgmon, Bryce E.
+Candidate	Etheridge, Don R.	Etheridge, Don R.
+Candidate	Fansler, Zach	Fansler, Zach
+Candidate	Faye-Brazel, Patrici	Faye-Brazel, Patrici
+Candidate	Ferguson  Elizabeth	Ferguson  Elizabeth - D
+Candidate	Fetta  Alex	Fetta  Alex - R
+Candidate	Fields  William Z. "Zack"	Fields  William Z. "Zack" - D
+Candidate	Fields, Duncan	Fields, Duncan
+Candidate	Fields, William Z.	Fields, William Z.
+Candidate	Finkenbinder, Sheila	Finkenbinder, Sheila
+Candidate	Fish, Mark	Fish, Mark
+Candidate	Foster  Neal W.	Foster  Neal W. - D
+Candidate	Foster, Neal W.	Foster, Neal W.
+Candidate	Foster, Neal W. 	Foster, Neal W.
+Candidate	Franks  Lyn D.	Franks  Lyn D. - D
+Candidate	Franks, Lyn D.	Franks, Lyn D.
+Candidate	Gaiser  Madeleine	Gaiser  Madeleine - R
+Candidate	Galvin  Alyse S.	Galvin  Alyse S. - N
+Candidate	Galvin, Alyse S.	Galvin, Alyse S.
+Candidate	Gara, Les S. 	Gara, Les S.
+Candidate	Gattis  Lynn	Gattis  Lynn - R
+Candidate	Gianoutsos, Ted	Gianoutsos, Ted
+Candidate	Giessel  Cathy	Giessel  Cathy - R
+Candidate	Giessel, Catherine A	Giessel, Catherine A
+Candidate	Gillespie, David M. 	Gillespie, David M.
+Candidate	Gillham  Ronald D. "Ron"	Gillham  Ronald D. "Ron" - R
+Candidate	Gillis  Mel	Gillis  Mel - R
+Candidate	Goode, Pamela	Goode, Pamela
+Candidate	Gordon, Michael W. 	Gordon, Michael W.
+Candidate	Gray  Danny	Gray  Danny - N
+Candidate	Gray-Jackson, Elvi	Gray-Jackson, Elvi
+Candidate	Grenn, Jason S.	Grenn, Jason S.
+Candidate	Grenn, Jason S. 	Grenn, Jason S.
+Candidate	Gross  Al	Gross  Al - N
+Candidate	Guttenberg, David	Guttenberg, David
+Candidate	Hackbarth  Andrea L.	Hackbarth  Andrea L. - D
+Candidate	Hackenmueller, Joe	Hackenmueller, Joe
+Candidate	Hadley, Don	Hadley, Don
+Candidate	Hale, Tim	Hale, Tim
+Candidate	Hannan  Sara	Hannan  Sara - D
+Candidate	Hannan, Sara	Hannan, Sara
+Candidate	Harris, Dennis P.	Harris, Dennis P.
+Candidate	Hartley  Alma N.	Hartley  Alma N. - D
+Candidate	Heikes  Gerald L. "Jer"	Heikes  Gerald L. "Jer" - R
+Candidate	Henslee  Katherine J. "Kathy"	Henslee  Katherine J. "Kathy" - R
+Candidate	Hibler  William "Bill"	Hibler  William "Bill" - D
+Candidate	Higgins, Pat	Higgins, Pat
+Candidate	Hinz  Lynette Moreno	Hinz  Lynette Moreno - D
+Candidate	Hnilicka  Julia A.	Hnilicka  Julia A. - D
+Candidate	Hoffman, Lyman F.	Hoffman, Lyman F.
+Candidate	Holdaway, Truno N. L	Holdaway, Truno N. L
+Candidate	Holland  Roger	Holland  Roger - R
+Candidate	Holmes  Dan	Holmes  Dan - R
+Candidate	Holmes, Doyle E.	Holmes, Doyle E.
+Candidate	Hopkins  Grier H.	Hopkins  Grier H. - D
+Candidate	Hopkins, Grier	Hopkins, Grier
+Candidate	Hopkins, Luke	Hopkins, Luke
+Candidate	Howard  Lucas D. "LD"	Howard  Lucas D. "LD" - R
+Candidate	Howe  John Wayne	Howe  John Wayne - A
+Candidate	Hughes  Shelley	Hughes  Shelley - R
+Candidate	Hughes  Taryn M.	Hughes  Taryn M. - D
+Candidate	Hughes, Shelley	Hughes, Shelley
+Candidate	Huit  Timothy R.	Huit  Timothy R. - A
+Candidate	Huit, Timothy R. 	Huit, Timothy R.
+Candidate	Ivanoff  Tyler L.	Ivanoff  Tyler L. - D
+Candidate	Jackson  Sharon D.	Jackson  Sharon D. - R
+Candidate	Jeffers  Stephany	Jeffers  Stephany - U
+Candidate	Jeffers, Stephany	Jeffers, Stephany
+Candidate	Johnson  Bill	Johnson  Bill - D
+Candidate	Johnson  Carl	Johnson  Carl - D
+Candidate	Johnson  Delena	Johnson  Delena - R
+Candidate	Johnson, Bill	Johnson, Bill
+Candidate	Johnson, DeLena	Johnson, DeLena
+Candidate	Johnson, DeLena M. 	Johnson, DeLena M.
+Candidate	Johnson, Gary	Johnson, Gary
+Candidate	Johnson, Tom	Johnson, Tom
+Candidate	Johnston  Jennifer B.	Johnston  Jennifer B. - R
+Candidate	Johnston, Jennifer B	Johnston, Jennifer B
+Candidate	Jones, Gregory I. 	Jones, Gregory I.
+Candidate	Josephson  Andrew L. "Andy"	Josephson  Andrew L. "Andy" - D
+Candidate	Josephson, Andrew L.	Josephson, Andrew L.
+Candidate	Kastner, Kevin D.	Kastner, Kevin D.
+Candidate	Katelnikoff-Lester	Katelnikoff-Lester
+Candidate	Kaufman  James D.	Kaufman  James D. - R
+Candidate	Kawasaki, Scott	Kawasaki, Scott
+Candidate	Kawasaki, Scott J. 	Kawasaki, Scott J.
+Candidate	Kay, Susan	Kay, Susan
+Candidate	Kelly, Pete	Kelly, Pete
+Candidate	Kiehl, Jesse	Kiehl, Jesse
+Candidate	Kimp, Danyelle D.	Kimp, Danyelle D.
+Candidate	Kito, Sam S. III	Kito, Sam S. III
+Candidate	Knopp  Gary A.	Knopp  Gary A. - R
+Candidate	Knopp, Gary A.	Knopp, Gary A.
+Candidate	Knopp, Gary A. 	Knopp, Gary A.
+Candidate	Kopp  Chuck M.	Kopp  Chuck M. - R
+Candidate	Kopp, Charles M.	Kopp, Charles M.
+Candidate	Kopp, Charles M. 	Kopp, Charles M.
+Candidate	Kreiss-Tomkins  Jonathan S.	Kreiss-Tomkins  Jonathan S. - D
+Candidate	Kreiss-Tomkins, Jona	Kreiss-Tomkins, Jona
+Candidate	Kurber  Keith	Kurber  Keith - R
+Candidate	Kurka  Christopher	Kurka  Christopher - R
+Candidate	Lamb  Thomas	Lamb  Thomas - N
+Candidate	Lamkin, Tim	Lamkin, Tim
+Candidate	Land, Jason T. 	Land, Jason T.
+Candidate	Largent  Lynette A.	Largent  Lynette A. - R
+Candidate	Lawrence, Van	Lawrence, Van
+Candidate	Lebon  Barton S. "Bart"	Lebon  Barton S. "Bart" - R
+Candidate	LeBon, Barton S.	LeBon, Barton S.
+Candidate	LeDoux  Gabrielle R. "Gabby"	LeDoux  Gabrielle R. "Gabby" - R
+Candidate	LeDoux, Gabrielle	LeDoux, Gabrielle
+Candidate	Lee  Huhnkie	Lee  Huhnkie - R
+Candidate	Lee, Amber M.	Lee, Amber M.
+Candidate	Lees  Adam S.	Lees  Adam S. - D
+Candidate	Lekanoff, Anthony C.	Lekanoff, Anthony C.
+Candidate	Levi  Sue	Levi  Sue - D
+Candidate	Levi, Sue	Levi, Sue
+Candidate	Lincoln, John	Lincoln, John
+Candidate	Lindbeck, Steve	Lindbeck, Steve
+Candidate	Lojewski, Aaron	Lojewski, Aaron
+Candidate	Lynch, Daniel L. 	Lynch, Daniel L.
+Candidate	Mack, Leanna R.	Mack, Leanna R.
+Candidate	Madden  Greg	Madden  Greg - A
+Candidate	Martin  Arthur S.	Martin  Arthur S. - R
+Candidate	Martinson, Ceezar X.	Martinson, Ceezar X.
+Candidate	McCabe  Kevin J.	McCabe  Kevin J. - R
+Candidate	McCain-Finch  Chandra S.	McCain-Finch  Chandra S. - R
+Candidate	McCarty  Ken	McCarty  Ken - R
+Candidate	McCormack  Patrick M.	McCormack  Patrick M. - D
+Candidate	McCormack, Patrick M	McCormack, Patrick M
+Candidate	McDermott, Jim C. 	McDermott, Jim C.
+Candidate	McDonald, Forrest J.	McDonald, Forrest J.
+Candidate	McKay  Thomas W. "Tom"	McKay  Thomas W. "Tom" - R
+Candidate	McKinley  Kevin M.	McKinley  Kevin M. - R
+Candidate	McKinley, Kevin	McKinley, Kevin
+Candidate	Merrick  Kelly R.	Merrick  Kelly R. - R
+Candidate	Merrick, Kelly R.	Merrick, Kelly R.
+Candidate	Metcalfe  Ray	Metcalfe  Ray - R
+Candidate	Metcalfe, Ray	Metcalfe, Ray
+Candidate	Micciche, Peter A.	Micciche, Peter A.
+Candidate	Miller, Joe	Miller, Joe
+Candidate	Millett, Charisse E.	Millett, Charisse E.
+Candidate	Morris  Julie M.	Morris  Julie M. - R
+Candidate	Moto  Calvin D. II	Moto  Calvin D. II - R
+Candidate	Muñoz, Cathy	Muñoz, Cathy
+Candidate	Murkowski, Lisa	Murkowski, Lisa
+Candidate	Myers  Robert H. Jr.	Myers  Robert H. Jr. - R
+Candidate	Myers, J. R. 	Myers, J. R.
+Candidate	Nankervis, Jerry A.	Nankervis, Jerry A.
+Candidate	Nees  David W.	Nees  David W. - A
+Candidate	Nelson  David	Nelson  David - R
+Candidate	Nelson  T. "John"	Nelson  T. "John" - R
+Candidate	Neuman  Mark A.	Neuman  Mark A. - R
+Candidate	Neuman, Mark	Neuman, Mark
+Candidate	Neuman, Mark A. 	Neuman, Mark A.
+Candidate	Olson  Donald C. "Donny"	Olson  Donald C. "Donny" - D
+Candidate	Olson, Donald C. 	Olson, Donald C.
+Candidate	Olson, Jeanne L. 	Olson, Jeanne L.
+Candidate	Olson, Sherie A. 	Olson, Sherie A.
+Candidate	Ortiz, Daniel H. 	Ortiz, Daniel H.
+Candidate	Parish, Justin	Parish, Justin
+Candidate	Park  Janice Lynn	Park  Janice Lynn - D
+Candidate	Park, Janice	Park, Janice
+Candidate	Patterson, Eileen E.	Patterson, Eileen E.
+Candidate	Perry, Karen	Perry, Karen
+Candidate	Phillips  Rick	Phillips  Rick - D
+Candidate	Prax  Glenn M. "Mike"	Prax  Glenn M. "Mike" - R
+Candidate	Pruitt  Lance D.	Pruitt  Lance D. - R
+Candidate	Pruitt, Lance	Pruitt, Lance
+Candidate	Quist  Christopher	Quist  Christopher - D
+Candidate	Rasmussen  Sara E.	Rasmussen  Sara E. - R
+Candidate	Rasmussen, Sara	Rasmussen, Sara
+Candidate	Rauscher  George	Rauscher  George - R
+Candidate	Rauscher, George	Rauscher, George
+Candidate	Registered Voters	Registered Voters
+Candidate	Reinbold, Lora	Reinbold, Lora
+Candidate	Reinbold, Lora H.	Reinbold, Lora H.
+Candidate	Revak  Joshua C.	Revak  Joshua C. - R
+Candidate	Revak, Josh C.	Revak, Josh C.
+Candidate	Rodriguez  Benjamin	Rodriguez  Benjamin - R
+Candidate	Rupright  Bernadette "Bee"	Rupright  Bernadette "Bee" - R
+Candidate	Sackett, Jim	Sackett, Jim
+Candidate	Saddler, Dan	Saddler, Dan
+Candidate	Sanders, Marcus	Sanders, Marcus
+Candidate	Savok, Patrick G. 	Savok, Patrick G.
+Candidate	Schiess, Oliver	Schiess, Oliver
+Candidate	Schrage  Calvin R.	Schrage  Calvin R. - N
+Candidate	Seaton, Paul	Seaton, Paul
+Candidate	Selle  Dave	Selle  Dave - R
+Candidate	Sharrock, Ian	Sharrock, Ian
+Candidate	Shaw  Laddie H.	Shaw  Laddie H. - R
+Candidate	Shaw, Kenneth	Shaw, Kenneth
+Candidate	Shaw, Laddie	Shaw, Laddie
+Candidate	Shaw, Trevor A.	Shaw, Trevor A.
+Candidate	Sheldon  Michael D.	Sheldon  Michael D. - R
+Candidate	Shower, Michael K.	Shower, Michael K.
+Candidate	Sinclair, Christina 	Sinclair, Christina
+Candidate	Sivertsen, Robert W.	Sivertsen, Robert W.
+Candidate	Skaflestad  Kenny	Skaflestad  Kenny - R
+Candidate	Smith  Ryan	Smith  Ryan - R
+Candidate	Snyder  Liz	Snyder  Liz - D
+Candidate	Snyder, Liz	Snyder, Liz
+Candidate	Souphanavong, Bernie	Souphanavong, Bernie
+Candidate	Spohnholz  Ivy A.	Spohnholz  Ivy A. - D
+Candidate	Spohnholz, Ivy	Spohnholz, Ivy
+Candidate	Spohnholz, Ivy A.	Spohnholz, Ivy A.
+Candidate	Squyres, James A.	Squyres, James A.
+Candidate	Stedman  Bert K.	Stedman  Bert K. - R
+Candidate	Stedman, Bert K. 	Stedman, Bert K.
+Candidate	Stein-Olson  Monica L.	Stein-Olson  Monica L. - D
+Candidate	Stein, Jill	Stein, Jill
+Candidate	Stevens  Gary	Stevens  Gary - R
+Candidate	Stevens, Cean	Stevens, Cean
+Candidate	Stevens, Gary	Stevens, Gary
+Candidate	Stewart, Marilyn	Stewart, Marilyn
+Candidate	Stock, Margaret	Stock, Margaret
+Candidate	Story  Andrea "Andi"	Story  Andrea "Andi" - D
+Candidate	Story, Andrea	Story, Andrea
+Candidate	Stutes  Louise B.	Stutes  Louise B. - R
+Candidate	Stutes, Louise	Stutes, Louise
+Candidate	Sullivan  Dan	Sullivan  Dan - R
+Candidate	Sullivan-Leonard, Co	Sullivan-Leonard, Co
+Candidate	Sumner  Jesse M.	Sumner  Jesse M. - R
+Candidate	Talerico, David M.	Talerico, David M.
+Candidate	Talerico, David M. 	Talerico, David M.
+Candidate	Tarr  Geran	Tarr  Geran - D
+Candidate	Tarr, Geran	Tarr, Geran
+Candidate	Thompson  Steve M.	Thompson  Steve M. - R
+Candidate	Thompson, Steve	Thompson, Steve
+Candidate	Thompson, Steve M. 	Thompson, Steve M.
+Candidate	Thorne  Anita L.	Thorne  Anita L. - D
+Candidate	Thorne, Anita	Thorne, Anita
+Candidate	Thornton, Shauna	Thornton, Shauna
+Candidate	Thurman  Loy "Santa"	Thurman  Loy "Santa" - R
+Candidate	Tilton  Cathy L.	Tilton  Cathy L. - R
+Candidate	Tilton, Cathy L.	Tilton, Cathy L.
+Candidate	Tilton, Cathy L. 	Tilton, Cathy L.
+Candidate	Times Counted	Times Counted
+Candidate	Toien/Clift	Toien/Clift
+Candidate	Trump, Donald J.	Trump, Donald J.
+Candidate	Tuck  Chris S.	Tuck  Chris S. - D
+Candidate	Tuck, Chris	Tuck, Chris
+Candidate	Tuck, Chris S. 	Tuck, Chris S.
+Candidate	Tugatuk  Ray Sean	Tugatuk  Ray Sean - D
+Candidate	Vance  Sarah L.	Vance  Sarah L. - R
+Candidate	Vance, Sarah L.	Vance, Sarah L.
+Candidate	Vazquez, Liz	Vazquez, Liz
+Candidate	Verrall, Bert	Verrall, Bert
+Candidate	Von Imhof  Natasha A.	Von Imhof  Natasha A. - R
+Candidate	Von Imhof, Natasha A	Von Imhof, Natasha A
+Candidate	Walker  David G.	Walker  David G. - R
+Candidate	Walker/Mallott	Walker/Mallott
+Candidate	Watkins, Brent L. 	Watkins, Brent L.
+Candidate	Weatherby, William W	Weatherby, William W
+Candidate	Wehmhoff, Gretchen L	Wehmhoff, Gretchen L
+Candidate	Wein, Richard J.	Wein, Richard J.
+Candidate	West, Warren P.	West, Warren P.
+Candidate	Westlake, Dean	Westlake, Dean
+Candidate	Wielechowski  Bill	Wielechowski  Bill - D
+Candidate	Wielechowski, Bill	Wielechowski, Bill
+Candidate	Willie  Nicholas G.	Willie  Nicholas G. - D
+Candidate	Wilson  David S.	Wilson  David S. - R
+Candidate	Wilson, David S. 	Wilson, David S.
+Candidate	Wilson, Tammie	Wilson, Tammie
+Candidate	Wolf  Kelly J.	Wolf  Kelly J. - R
+Candidate	Wool  Adam L.	Wool  Adam L. - D
+Candidate	Wool, Adam	Wool, Adam
+Candidate	Wool, Adam L.	Wool, Adam L.
+Candidate	Wright  Stephen	Wright  Stephen - R
+Candidate	Wright, Stanley A.	Wright, Stanley A.
+Candidate	Youmans  Jeremiah A.	Youmans  Jeremiah A. - D
+Candidate	Young  Don	Young  Don - R
+Candidate	Young, Don	Young, Don
+Candidate	Zulkosky  Tiffany	Zulkosky  Tiffany - D
+Candidate	Zulkosky, Tiffany	Zulkosky, Tiffany
