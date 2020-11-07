@@ -973,7 +973,7 @@ def run_tests(
 
     # run pytest
     if election_jurisdiction_list is None:
-        os.system(f"pytest --dbname {dbname}")
+        result = os.system(f"pytest --dbname {dbname}")
     else:
         for (election, juris) in election_jurisdiction_list:
             if election is None and juris is not None:
@@ -984,12 +984,13 @@ def run_tests(
                 keyword = f"{juris.replace(' ','-')}_{election.replace(' ','-')}"
             else:
                 keyword = "_"
-            os.system(f"pytest --dbname {dbname} -k {keyword}")
+            result = os.system(f"pytest --dbname {dbname} -k {keyword}")
 
 
     # move back to original directory
     os.chdir(original_dir)
-    return
+    # result is 0 if all tests pass, non-zero if something went wrong
+    return result
 
 
 def confirm_essential_info(
@@ -1069,28 +1070,36 @@ def reload_juris_election(
     juris_name: str,
     election_name: str,
     test_dir: str,
+    from_cron: bool = None,
 ):
     """Assumes run_time.ini in directory, and results to be loaded are in the results_dir named in run_time.ini"""
     # initialize dataloader
     dl = e.DataLoader()
+    db_params = get_runtime_parameters(
+        ["host", "port", "dbname", "user", "password",],
+        "run_time.ini",
+        "postgresql",
+    )[0]
 
-    # Ask user to confirm/correct essential info
-    confirm_essential_info(
-        dl.d["results_dir"],
-        "election_data_analysis",
-        ["results_file", "results_download_date", "results_source"],
-        known={
-            "top_reporting_unit": juris_name,
-            "jurisdiction_directory": juris_name.replace(" ", "-"),
-            "election": election_name,
-        },
-        msg=" Check download date carefully!!!",
-    )
+    if from_cron != True:
+        # Ask user to confirm/correct essential info
+        confirm_essential_info(
+            dl.d["results_dir"],
+            "election_data_analysis",
+            ["results_file", "results_download_date", "results_source"],
+            known={
+                "top_reporting_unit": juris_name,
+                "jurisdiction_directory": juris_name.replace(" ", "-"),
+                "election": election_name,
+            },
+            msg=" Check download date carefully!!!",
+        )
 
     # create temp_db (preserving live db name)
     live_db = dl.session.bind.url.database
     ts = datetime.datetime.now().strftime("%m%d_%H%M")
     temp_db = f"{live_db}_test_{ts}"
+    db_params["dbname"] = temp_db
     db.create_or_reset_db(dbname=temp_db)
 
     # load all data into temp db
@@ -1098,17 +1107,22 @@ def reload_juris_election(
     dl.load_all(move_files=False)
 
     # run test files on temp db
-    run_tests(
+    results = run_tests(
         test_dir,
         dl.d["dbname"],
         election_jurisdiction_list=[(election_name, juris_name)],
     )
 
-    # Ask user to OK test results or abandon
-    go_ahead = input(
-        f"Did tests succeeded for election {election_name} in {juris_name} (y/n)?"
-    )
-    if go_ahead != "y":
+    go_ahead = "y"
+    if not from_cron:
+        # Ask user to OK test results or abandon
+        go_ahead = input(
+            f"Did tests succeeded for election {election_name} in {juris_name} (y/n)?"
+        )
+    if go_ahead != "y" or results != 0:
+        print("Something went wrong, new data not loaded")
+        # cleanup
+        db.remove_database(db_params)
         return
 
     # switch to live db and get info needed later
@@ -1139,7 +1153,7 @@ def reload_juris_election(
             archive_from_param_file(param_file, archive_directory, unloaded_directory)
 
     # Remove existing data for juris-election pair from live db
-    dl.remove_data(election_id, juris_id)
+    dl.remove_data(election_id, juris_id, (not from_cron))
 
     # Load new data into live db (and move successful to archive)
     dl.load_all()
@@ -1151,6 +1165,8 @@ def reload_juris_election(
         election_jurisdiction_list=[(election_name, juris_name)],
     )
 
+    #cleanup
+    db.remove_database(db_params)
     return
 
 
