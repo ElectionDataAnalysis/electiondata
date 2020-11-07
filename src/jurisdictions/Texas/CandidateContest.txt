@@ -225,3 +225,1145 @@ TX Lieutenant Governor	1	TX Lieutenant Governor
 TX Comptroller of Public Accounts	1	TX Comptroller of Public Accounts	
 TX Commissioner of the General Land Office	1	TX Commissioner of the General Land Office	
 TX Commissioner of Agriculture	1	TX Commissioner of Agriculture	
+TX Treasurer	1	TX Treasurer	
+TX Secretary of State	1	TX Secretary of State	
+TX House District 1 (Democratic Party)	1	TX House District 1	Democratic Party
+TX House District 2 (Democratic Party)	1	TX House District 2	Democratic Party
+TX House District 3 (Democratic Party)	1	TX House District 3	Democratic Party
+TX House District 4 (Democratic Party)	1	TX House District 4	Democratic Party
+TX House District 5 (Democratic Party)	1	TX House District 5	Democratic Party
+TX House District 6 (Democratic Party)	1	TX House District 6	Democratic Party
+TX House District 7 (Democratic Party)	1	TX House District 7	Democratic Party
+TX House District 8 (Democratic Party)	1	TX House District 8	Democratic Party
+TX House District 9 (Democratic Party)	1	TX House District 9	Democratic Party
+TX House District 10 (Democratic Party)	1	TX House District 10	Democratic Party
+TX House District 11 (Democratic Party)	1	TX House District 11	Democratic Party
+TX House District 12 (Democratic Party)	1	TX House District 12	Democratic Party
+TX House District 13 (Democratic Party)	1	TX House District 13	Democratic Party
+TX House District 14 (Democratic Party)	1	TX House District 14	Democratic Party
+TX House District 15 (Democratic Party)	1	TX House District 15	Democratic Party
+TX House District 16 (Democratic Party)	1	TX House District 16	Democratic Party
+TX House District 17 (Democratic Party)	1	TX House District 17	Democratic Party
+TX House District 18 (Democratic Party)	1	TX House District 18	Democratic Party
+TX House District 19 (Democratic Party)	1	TX House District 19	Democratic Party
+TX House District 20 (Democratic Party)	1	TX House District 20	Democratic Party
+TX House District 21 (Democratic Party)	1	TX House District 21	Democratic Party
+TX House District 22 (Democratic Party)	1	TX House District 22	Democratic Party
+TX House District 23 (Democratic Party)	1	TX House District 23	Democratic Party
+TX House District 24 (Democratic Party)	1	TX House District 24	Democratic Party
+TX House District 25 (Democratic Party)	1	TX House District 25	Democratic Party
+TX House District 26 (Democratic Party)	1	TX House District 26	Democratic Party
+TX House District 27 (Democratic Party)	1	TX House District 27	Democratic Party
+TX House District 28 (Democratic Party)	1	TX House District 28	Democratic Party
+TX House District 29 (Democratic Party)	1	TX House District 29	Democratic Party
+TX House District 30 (Democratic Party)	1	TX House District 30	Democratic Party
+TX House District 31 (Democratic Party)	1	TX House District 31	Democratic Party
+TX House District 32 (Democratic Party)	1	TX House District 32	Democratic Party
+TX House District 33 (Democratic Party)	1	TX House District 33	Democratic Party
+TX House District 34 (Democratic Party)	1	TX House District 34	Democratic Party
+TX House District 35 (Democratic Party)	1	TX House District 35	Democratic Party
+TX House District 36 (Democratic Party)	1	TX House District 36	Democratic Party
+TX House District 37 (Democratic Party)	1	TX House District 37	Democratic Party
+TX House District 38 (Democratic Party)	1	TX House District 38	Democratic Party
+TX House District 39 (Democratic Party)	1	TX House District 39	Democratic Party
+TX House District 40 (Democratic Party)	1	TX House District 40	Democratic Party
+TX House District 41 (Democratic Party)	1	TX House District 41	Democratic Party
+TX House District 42 (Democratic Party)	1	TX House District 42	Democratic Party
+TX House District 43 (Democratic Party)	1	TX House District 43	Democratic Party
+TX House District 44 (Democratic Party)	1	TX House District 44	Democratic Party
+TX House District 45 (Democratic Party)	1	TX House District 45	Democratic Party
+TX House District 46 (Democratic Party)	1	TX House District 46	Democratic Party
+TX House District 47 (Democratic Party)	1	TX House District 47	Democratic Party
+TX House District 48 (Democratic Party)	1	TX House District 48	Democratic Party
+TX House District 49 (Democratic Party)	1	TX House District 49	Democratic Party
+TX House District 50 (Democratic Party)	1	TX House District 50	Democratic Party
+TX House District 51 (Democratic Party)	1	TX House District 51	Democratic Party
+TX House District 52 (Democratic Party)	1	TX House District 52	Democratic Party
+TX House District 53 (Democratic Party)	1	TX House District 53	Democratic Party
+TX House District 54 (Democratic Party)	1	TX House District 54	Democratic Party
+TX House District 55 (Democratic Party)	1	TX House District 55	Democratic Party
+TX House District 56 (Democratic Party)	1	TX House District 56	Democratic Party
+TX House District 57 (Democratic Party)	1	TX House District 57	Democratic Party
+TX House District 58 (Democratic Party)	1	TX House District 58	Democratic Party
+TX House District 59 (Democratic Party)	1	TX House District 59	Democratic Party
+TX House District 60 (Democratic Party)	1	TX House District 60	Democratic Party
+TX House District 61 (Democratic Party)	1	TX House District 61	Democratic Party
+TX House District 62 (Democratic Party)	1	TX House District 62	Democratic Party
+TX House District 63 (Democratic Party)	1	TX House District 63	Democratic Party
+TX House District 64 (Democratic Party)	1	TX House District 64	Democratic Party
+TX House District 65 (Democratic Party)	1	TX House District 65	Democratic Party
+TX House District 66 (Democratic Party)	1	TX House District 66	Democratic Party
+TX House District 67 (Democratic Party)	1	TX House District 67	Democratic Party
+TX House District 68 (Democratic Party)	1	TX House District 68	Democratic Party
+TX House District 69 (Democratic Party)	1	TX House District 69	Democratic Party
+TX House District 70 (Democratic Party)	1	TX House District 70	Democratic Party
+TX House District 71 (Democratic Party)	1	TX House District 71	Democratic Party
+TX House District 72 (Democratic Party)	1	TX House District 72	Democratic Party
+TX House District 73 (Democratic Party)	1	TX House District 73	Democratic Party
+TX House District 74 (Democratic Party)	1	TX House District 74	Democratic Party
+TX House District 75 (Democratic Party)	1	TX House District 75	Democratic Party
+TX House District 76 (Democratic Party)	1	TX House District 76	Democratic Party
+TX House District 77 (Democratic Party)	1	TX House District 77	Democratic Party
+TX House District 78 (Democratic Party)	1	TX House District 78	Democratic Party
+TX House District 79 (Democratic Party)	1	TX House District 79	Democratic Party
+TX House District 80 (Democratic Party)	1	TX House District 80	Democratic Party
+TX House District 81 (Democratic Party)	1	TX House District 81	Democratic Party
+TX House District 82 (Democratic Party)	1	TX House District 82	Democratic Party
+TX House District 83 (Democratic Party)	1	TX House District 83	Democratic Party
+TX House District 84 (Democratic Party)	1	TX House District 84	Democratic Party
+TX House District 85 (Democratic Party)	1	TX House District 85	Democratic Party
+TX House District 86 (Democratic Party)	1	TX House District 86	Democratic Party
+TX House District 87 (Democratic Party)	1	TX House District 87	Democratic Party
+TX House District 88 (Democratic Party)	1	TX House District 88	Democratic Party
+TX House District 89 (Democratic Party)	1	TX House District 89	Democratic Party
+TX House District 90 (Democratic Party)	1	TX House District 90	Democratic Party
+TX House District 91 (Democratic Party)	1	TX House District 91	Democratic Party
+TX House District 92 (Democratic Party)	1	TX House District 92	Democratic Party
+TX House District 93 (Democratic Party)	1	TX House District 93	Democratic Party
+TX House District 94 (Democratic Party)	1	TX House District 94	Democratic Party
+TX House District 95 (Democratic Party)	1	TX House District 95	Democratic Party
+TX House District 96 (Democratic Party)	1	TX House District 96	Democratic Party
+TX House District 97 (Democratic Party)	1	TX House District 97	Democratic Party
+TX House District 98 (Democratic Party)	1	TX House District 98	Democratic Party
+TX House District 99 (Democratic Party)	1	TX House District 99	Democratic Party
+TX House District 101 (Democratic Party)	1	TX House District 101	Democratic Party
+TX House District 102 (Democratic Party)	1	TX House District 102	Democratic Party
+TX House District 103 (Democratic Party)	1	TX House District 103	Democratic Party
+TX House District 104 (Democratic Party)	1	TX House District 104	Democratic Party
+TX House District 105 (Democratic Party)	1	TX House District 105	Democratic Party
+TX House District 106 (Democratic Party)	1	TX House District 106	Democratic Party
+TX House District 107 (Democratic Party)	1	TX House District 107	Democratic Party
+TX House District 108 (Democratic Party)	1	TX House District 108	Democratic Party
+TX House District 109 (Democratic Party)	1	TX House District 109	Democratic Party
+TX House District 111 (Democratic Party)	1	TX House District 111	Democratic Party
+TX House District 112 (Democratic Party)	1	TX House District 112	Democratic Party
+TX House District 113 (Democratic Party)	1	TX House District 113	Democratic Party
+TX House District 114 (Democratic Party)	1	TX House District 114	Democratic Party
+TX House District 115 (Democratic Party)	1	TX House District 115	Democratic Party
+TX House District 116 (Democratic Party)	1	TX House District 116	Democratic Party
+TX House District 117 (Democratic Party)	1	TX House District 117	Democratic Party
+TX House District 118 (Democratic Party)	1	TX House District 118	Democratic Party
+TX House District 119 (Democratic Party)	1	TX House District 119	Democratic Party
+TX House District 121 (Democratic Party)	1	TX House District 121	Democratic Party
+TX House District 122 (Democratic Party)	1	TX House District 122	Democratic Party
+TX House District 123 (Democratic Party)	1	TX House District 123	Democratic Party
+TX House District 124 (Democratic Party)	1	TX House District 124	Democratic Party
+TX House District 125 (Democratic Party)	1	TX House District 125	Democratic Party
+TX House District 126 (Democratic Party)	1	TX House District 126	Democratic Party
+TX House District 127 (Democratic Party)	1	TX House District 127	Democratic Party
+TX House District 128 (Democratic Party)	1	TX House District 128	Democratic Party
+TX House District 129 (Democratic Party)	1	TX House District 129	Democratic Party
+TX House District 131 (Democratic Party)	1	TX House District 131	Democratic Party
+TX House District 132 (Democratic Party)	1	TX House District 132	Democratic Party
+TX House District 133 (Democratic Party)	1	TX House District 133	Democratic Party
+TX House District 134 (Democratic Party)	1	TX House District 134	Democratic Party
+TX House District 135 (Democratic Party)	1	TX House District 135	Democratic Party
+TX House District 136 (Democratic Party)	1	TX House District 136	Democratic Party
+TX House District 137 (Democratic Party)	1	TX House District 137	Democratic Party
+TX House District 138 (Democratic Party)	1	TX House District 138	Democratic Party
+TX House District 139 (Democratic Party)	1	TX House District 139	Democratic Party
+TX House District 141 (Democratic Party)	1	TX House District 141	Democratic Party
+TX House District 142 (Democratic Party)	1	TX House District 142	Democratic Party
+TX House District 143 (Democratic Party)	1	TX House District 143	Democratic Party
+TX House District 144 (Democratic Party)	1	TX House District 144	Democratic Party
+TX House District 145 (Democratic Party)	1	TX House District 145	Democratic Party
+TX House District 146 (Democratic Party)	1	TX House District 146	Democratic Party
+TX House District 147 (Democratic Party)	1	TX House District 147	Democratic Party
+TX House District 148 (Democratic Party)	1	TX House District 148	Democratic Party
+TX House District 149 (Democratic Party)	1	TX House District 149	Democratic Party
+TX Senate District 1 (Democratic Party)	1	TX Senate District 1	Democratic Party
+TX Senate District 2 (Democratic Party)	1	TX Senate District 2	Democratic Party
+TX Senate District 3 (Democratic Party)	1	TX Senate District 3	Democratic Party
+TX Senate District 4 (Democratic Party)	1	TX Senate District 4	Democratic Party
+TX Senate District 5 (Democratic Party)	1	TX Senate District 5	Democratic Party
+TX Senate District 6 (Democratic Party)	1	TX Senate District 6	Democratic Party
+TX Senate District 7 (Democratic Party)	1	TX Senate District 7	Democratic Party
+TX Senate District 8 (Democratic Party)	1	TX Senate District 8	Democratic Party
+TX Senate District 9 (Democratic Party)	1	TX Senate District 9	Democratic Party
+TX Senate District 10 (Democratic Party)	1	TX Senate District 10	Democratic Party
+TX Senate District 11 (Democratic Party)	1	TX Senate District 11	Democratic Party
+TX Senate District 12 (Democratic Party)	1	TX Senate District 12	Democratic Party
+TX Senate District 13 (Democratic Party)	1	TX Senate District 13	Democratic Party
+TX Senate District 14 (Democratic Party)	1	TX Senate District 14	Democratic Party
+TX Senate District 15 (Democratic Party)	1	TX Senate District 15	Democratic Party
+TX Senate District 16 (Democratic Party)	1	TX Senate District 16	Democratic Party
+TX Senate District 17 (Democratic Party)	1	TX Senate District 17	Democratic Party
+TX Senate District 18 (Democratic Party)	1	TX Senate District 18	Democratic Party
+TX Senate District 19 (Democratic Party)	1	TX Senate District 19	Democratic Party
+TX Senate District 20 (Democratic Party)	1	TX Senate District 20	Democratic Party
+TX Senate District 21 (Democratic Party)	1	TX Senate District 21	Democratic Party
+TX Senate District 22 (Democratic Party)	1	TX Senate District 22	Democratic Party
+TX Senate District 23 (Democratic Party)	1	TX Senate District 23	Democratic Party
+TX Senate District 24 (Democratic Party)	1	TX Senate District 24	Democratic Party
+TX Senate District 25 (Democratic Party)	1	TX Senate District 25	Democratic Party
+TX Senate District 26 (Democratic Party)	1	TX Senate District 26	Democratic Party
+TX Senate District 27 (Democratic Party)	1	TX Senate District 27	Democratic Party
+TX Senate District 28 (Democratic Party)	1	TX Senate District 28	Democratic Party
+TX Senate District 29 (Democratic Party)	1	TX Senate District 29	Democratic Party
+TX Senate District 30 (Democratic Party)	1	TX Senate District 30	Democratic Party
+TX Senate District 31 (Democratic Party)	1	TX Senate District 31	Democratic Party
+US House TX District 1 (Democratic Party)	1	US House TX District 1	Democratic Party
+US House TX District 2 (Democratic Party)	1	US House TX District 2	Democratic Party
+US House TX District 3 (Democratic Party)	1	US House TX District 3	Democratic Party
+US House TX District 4 (Democratic Party)	1	US House TX District 4	Democratic Party
+US House TX District 5 (Democratic Party)	1	US House TX District 5	Democratic Party
+US House TX District 6 (Democratic Party)	1	US House TX District 6	Democratic Party
+US House TX District 7 (Democratic Party)	1	US House TX District 7	Democratic Party
+US House TX District 8 (Democratic Party)	1	US House TX District 8	Democratic Party
+US House TX District 9 (Democratic Party)	1	US House TX District 9	Democratic Party
+US House TX District 10 (Democratic Party)	1	US House TX District 10	Democratic Party
+US House TX District 11 (Democratic Party)	1	US House TX District 11	Democratic Party
+US House TX District 12 (Democratic Party)	1	US House TX District 12	Democratic Party
+US House TX District 13 (Democratic Party)	1	US House TX District 13	Democratic Party
+US House TX District 14 (Democratic Party)	1	US House TX District 14	Democratic Party
+US House TX District 15 (Democratic Party)	1	US House TX District 15	Democratic Party
+US House TX District 16 (Democratic Party)	1	US House TX District 16	Democratic Party
+US House TX District 17 (Democratic Party)	1	US House TX District 17	Democratic Party
+US House TX District 18 (Democratic Party)	1	US House TX District 18	Democratic Party
+US House TX District 19 (Democratic Party)	1	US House TX District 19	Democratic Party
+US House TX District 20 (Democratic Party)	1	US House TX District 20	Democratic Party
+US House TX District 21 (Democratic Party)	1	US House TX District 21	Democratic Party
+US House TX District 22 (Democratic Party)	1	US House TX District 22	Democratic Party
+US House TX District 23 (Democratic Party)	1	US House TX District 23	Democratic Party
+US House TX District 24 (Democratic Party)	1	US House TX District 24	Democratic Party
+US House TX District 25 (Democratic Party)	1	US House TX District 25	Democratic Party
+US House TX District 26 (Democratic Party)	1	US House TX District 26	Democratic Party
+US House TX District 27 (Democratic Party)	1	US House TX District 27	Democratic Party
+US House TX District 28 (Democratic Party)	1	US House TX District 28	Democratic Party
+US House TX District 29 (Democratic Party)	1	US House TX District 29	Democratic Party
+US House TX District 30 (Democratic Party)	1	US House TX District 30	Democratic Party
+US House TX District 31 (Democratic Party)	1	US House TX District 31	Democratic Party
+US House TX District 32 (Democratic Party)	1	US House TX District 32	Democratic Party
+US House TX District 33 (Democratic Party)	1	US House TX District 33	Democratic Party
+US House TX District 34 (Democratic Party)	1	US House TX District 34	Democratic Party
+US House TX District 35 (Democratic Party)	1	US House TX District 35	Democratic Party
+US House TX District 36 (Democratic Party)	1	US House TX District 36	Democratic Party
+US President (TX) (Democratic Party)	1	US President (TX)	Democratic Party
+Railroad Commissioner (Democratic Party)	1	Railroad Commissioner	Democratic Party
+TX House District 100 (Democratic Party)	1	TX House District 100	Democratic Party
+TX House District 110 (Democratic Party)	1	TX House District 110	Democratic Party
+TX House District 120 (Democratic Party)	1	TX House District 120	Democratic Party
+TX House District 130 (Democratic Party)	1	TX House District 130	Democratic Party
+TX House District 140 (Democratic Party)	1	TX House District 140	Democratic Party
+TX House District 150 (Democratic Party)	1	TX House District 150	Democratic Party
+TX Governor (Democratic Party)	1	TX Governor	Democratic Party
+US Senate TX (Democratic Party)	1	US Senate TX	Democratic Party
+TX Attorney General (Democratic Party)	1	TX Attorney General	Democratic Party
+TX Lieutenant Governor (Democratic Party)	1	TX Lieutenant Governor	Democratic Party
+TX Comptroller of Public Accounts (Democratic Party)	1	TX Comptroller of Public Accounts	Democratic Party
+TX Commissioner of the General Land Office (Democratic Party)	1	TX Commissioner of the General Land Office	Democratic Party
+TX Commissioner of Agriculture (Democratic Party)	1	TX Commissioner of Agriculture	Democratic Party
+TX Treasurer (Democratic Party)	1	TX Treasurer	Democratic Party
+TX Secretary of State (Democratic Party)	1	TX Secretary of State	Democratic Party
+TX House District 1 (Republican Party)	1	TX House District 1	Republican Party
+TX House District 2 (Republican Party)	1	TX House District 2	Republican Party
+TX House District 3 (Republican Party)	1	TX House District 3	Republican Party
+TX House District 4 (Republican Party)	1	TX House District 4	Republican Party
+TX House District 5 (Republican Party)	1	TX House District 5	Republican Party
+TX House District 6 (Republican Party)	1	TX House District 6	Republican Party
+TX House District 7 (Republican Party)	1	TX House District 7	Republican Party
+TX House District 8 (Republican Party)	1	TX House District 8	Republican Party
+TX House District 9 (Republican Party)	1	TX House District 9	Republican Party
+TX House District 10 (Republican Party)	1	TX House District 10	Republican Party
+TX House District 11 (Republican Party)	1	TX House District 11	Republican Party
+TX House District 12 (Republican Party)	1	TX House District 12	Republican Party
+TX House District 13 (Republican Party)	1	TX House District 13	Republican Party
+TX House District 14 (Republican Party)	1	TX House District 14	Republican Party
+TX House District 15 (Republican Party)	1	TX House District 15	Republican Party
+TX House District 16 (Republican Party)	1	TX House District 16	Republican Party
+TX House District 17 (Republican Party)	1	TX House District 17	Republican Party
+TX House District 18 (Republican Party)	1	TX House District 18	Republican Party
+TX House District 19 (Republican Party)	1	TX House District 19	Republican Party
+TX House District 20 (Republican Party)	1	TX House District 20	Republican Party
+TX House District 21 (Republican Party)	1	TX House District 21	Republican Party
+TX House District 22 (Republican Party)	1	TX House District 22	Republican Party
+TX House District 23 (Republican Party)	1	TX House District 23	Republican Party
+TX House District 24 (Republican Party)	1	TX House District 24	Republican Party
+TX House District 25 (Republican Party)	1	TX House District 25	Republican Party
+TX House District 26 (Republican Party)	1	TX House District 26	Republican Party
+TX House District 27 (Republican Party)	1	TX House District 27	Republican Party
+TX House District 28 (Republican Party)	1	TX House District 28	Republican Party
+TX House District 29 (Republican Party)	1	TX House District 29	Republican Party
+TX House District 30 (Republican Party)	1	TX House District 30	Republican Party
+TX House District 31 (Republican Party)	1	TX House District 31	Republican Party
+TX House District 32 (Republican Party)	1	TX House District 32	Republican Party
+TX House District 33 (Republican Party)	1	TX House District 33	Republican Party
+TX House District 34 (Republican Party)	1	TX House District 34	Republican Party
+TX House District 35 (Republican Party)	1	TX House District 35	Republican Party
+TX House District 36 (Republican Party)	1	TX House District 36	Republican Party
+TX House District 37 (Republican Party)	1	TX House District 37	Republican Party
+TX House District 38 (Republican Party)	1	TX House District 38	Republican Party
+TX House District 39 (Republican Party)	1	TX House District 39	Republican Party
+TX House District 40 (Republican Party)	1	TX House District 40	Republican Party
+TX House District 41 (Republican Party)	1	TX House District 41	Republican Party
+TX House District 42 (Republican Party)	1	TX House District 42	Republican Party
+TX House District 43 (Republican Party)	1	TX House District 43	Republican Party
+TX House District 44 (Republican Party)	1	TX House District 44	Republican Party
+TX House District 45 (Republican Party)	1	TX House District 45	Republican Party
+TX House District 46 (Republican Party)	1	TX House District 46	Republican Party
+TX House District 47 (Republican Party)	1	TX House District 47	Republican Party
+TX House District 48 (Republican Party)	1	TX House District 48	Republican Party
+TX House District 49 (Republican Party)	1	TX House District 49	Republican Party
+TX House District 50 (Republican Party)	1	TX House District 50	Republican Party
+TX House District 51 (Republican Party)	1	TX House District 51	Republican Party
+TX House District 52 (Republican Party)	1	TX House District 52	Republican Party
+TX House District 53 (Republican Party)	1	TX House District 53	Republican Party
+TX House District 54 (Republican Party)	1	TX House District 54	Republican Party
+TX House District 55 (Republican Party)	1	TX House District 55	Republican Party
+TX House District 56 (Republican Party)	1	TX House District 56	Republican Party
+TX House District 57 (Republican Party)	1	TX House District 57	Republican Party
+TX House District 58 (Republican Party)	1	TX House District 58	Republican Party
+TX House District 59 (Republican Party)	1	TX House District 59	Republican Party
+TX House District 60 (Republican Party)	1	TX House District 60	Republican Party
+TX House District 61 (Republican Party)	1	TX House District 61	Republican Party
+TX House District 62 (Republican Party)	1	TX House District 62	Republican Party
+TX House District 63 (Republican Party)	1	TX House District 63	Republican Party
+TX House District 64 (Republican Party)	1	TX House District 64	Republican Party
+TX House District 65 (Republican Party)	1	TX House District 65	Republican Party
+TX House District 66 (Republican Party)	1	TX House District 66	Republican Party
+TX House District 67 (Republican Party)	1	TX House District 67	Republican Party
+TX House District 68 (Republican Party)	1	TX House District 68	Republican Party
+TX House District 69 (Republican Party)	1	TX House District 69	Republican Party
+TX House District 70 (Republican Party)	1	TX House District 70	Republican Party
+TX House District 71 (Republican Party)	1	TX House District 71	Republican Party
+TX House District 72 (Republican Party)	1	TX House District 72	Republican Party
+TX House District 73 (Republican Party)	1	TX House District 73	Republican Party
+TX House District 74 (Republican Party)	1	TX House District 74	Republican Party
+TX House District 75 (Republican Party)	1	TX House District 75	Republican Party
+TX House District 76 (Republican Party)	1	TX House District 76	Republican Party
+TX House District 77 (Republican Party)	1	TX House District 77	Republican Party
+TX House District 78 (Republican Party)	1	TX House District 78	Republican Party
+TX House District 79 (Republican Party)	1	TX House District 79	Republican Party
+TX House District 80 (Republican Party)	1	TX House District 80	Republican Party
+TX House District 81 (Republican Party)	1	TX House District 81	Republican Party
+TX House District 82 (Republican Party)	1	TX House District 82	Republican Party
+TX House District 83 (Republican Party)	1	TX House District 83	Republican Party
+TX House District 84 (Republican Party)	1	TX House District 84	Republican Party
+TX House District 85 (Republican Party)	1	TX House District 85	Republican Party
+TX House District 86 (Republican Party)	1	TX House District 86	Republican Party
+TX House District 87 (Republican Party)	1	TX House District 87	Republican Party
+TX House District 88 (Republican Party)	1	TX House District 88	Republican Party
+TX House District 89 (Republican Party)	1	TX House District 89	Republican Party
+TX House District 90 (Republican Party)	1	TX House District 90	Republican Party
+TX House District 91 (Republican Party)	1	TX House District 91	Republican Party
+TX House District 92 (Republican Party)	1	TX House District 92	Republican Party
+TX House District 93 (Republican Party)	1	TX House District 93	Republican Party
+TX House District 94 (Republican Party)	1	TX House District 94	Republican Party
+TX House District 95 (Republican Party)	1	TX House District 95	Republican Party
+TX House District 96 (Republican Party)	1	TX House District 96	Republican Party
+TX House District 97 (Republican Party)	1	TX House District 97	Republican Party
+TX House District 98 (Republican Party)	1	TX House District 98	Republican Party
+TX House District 99 (Republican Party)	1	TX House District 99	Republican Party
+TX House District 101 (Republican Party)	1	TX House District 101	Republican Party
+TX House District 102 (Republican Party)	1	TX House District 102	Republican Party
+TX House District 103 (Republican Party)	1	TX House District 103	Republican Party
+TX House District 104 (Republican Party)	1	TX House District 104	Republican Party
+TX House District 105 (Republican Party)	1	TX House District 105	Republican Party
+TX House District 106 (Republican Party)	1	TX House District 106	Republican Party
+TX House District 107 (Republican Party)	1	TX House District 107	Republican Party
+TX House District 108 (Republican Party)	1	TX House District 108	Republican Party
+TX House District 109 (Republican Party)	1	TX House District 109	Republican Party
+TX House District 111 (Republican Party)	1	TX House District 111	Republican Party
+TX House District 112 (Republican Party)	1	TX House District 112	Republican Party
+TX House District 113 (Republican Party)	1	TX House District 113	Republican Party
+TX House District 114 (Republican Party)	1	TX House District 114	Republican Party
+TX House District 115 (Republican Party)	1	TX House District 115	Republican Party
+TX House District 116 (Republican Party)	1	TX House District 116	Republican Party
+TX House District 117 (Republican Party)	1	TX House District 117	Republican Party
+TX House District 118 (Republican Party)	1	TX House District 118	Republican Party
+TX House District 119 (Republican Party)	1	TX House District 119	Republican Party
+TX House District 121 (Republican Party)	1	TX House District 121	Republican Party
+TX House District 122 (Republican Party)	1	TX House District 122	Republican Party
+TX House District 123 (Republican Party)	1	TX House District 123	Republican Party
+TX House District 124 (Republican Party)	1	TX House District 124	Republican Party
+TX House District 125 (Republican Party)	1	TX House District 125	Republican Party
+TX House District 126 (Republican Party)	1	TX House District 126	Republican Party
+TX House District 127 (Republican Party)	1	TX House District 127	Republican Party
+TX House District 128 (Republican Party)	1	TX House District 128	Republican Party
+TX House District 129 (Republican Party)	1	TX House District 129	Republican Party
+TX House District 131 (Republican Party)	1	TX House District 131	Republican Party
+TX House District 132 (Republican Party)	1	TX House District 132	Republican Party
+TX House District 133 (Republican Party)	1	TX House District 133	Republican Party
+TX House District 134 (Republican Party)	1	TX House District 134	Republican Party
+TX House District 135 (Republican Party)	1	TX House District 135	Republican Party
+TX House District 136 (Republican Party)	1	TX House District 136	Republican Party
+TX House District 137 (Republican Party)	1	TX House District 137	Republican Party
+TX House District 138 (Republican Party)	1	TX House District 138	Republican Party
+TX House District 139 (Republican Party)	1	TX House District 139	Republican Party
+TX House District 141 (Republican Party)	1	TX House District 141	Republican Party
+TX House District 142 (Republican Party)	1	TX House District 142	Republican Party
+TX House District 143 (Republican Party)	1	TX House District 143	Republican Party
+TX House District 144 (Republican Party)	1	TX House District 144	Republican Party
+TX House District 145 (Republican Party)	1	TX House District 145	Republican Party
+TX House District 146 (Republican Party)	1	TX House District 146	Republican Party
+TX House District 147 (Republican Party)	1	TX House District 147	Republican Party
+TX House District 148 (Republican Party)	1	TX House District 148	Republican Party
+TX House District 149 (Republican Party)	1	TX House District 149	Republican Party
+TX Senate District 1 (Republican Party)	1	TX Senate District 1	Republican Party
+TX Senate District 2 (Republican Party)	1	TX Senate District 2	Republican Party
+TX Senate District 3 (Republican Party)	1	TX Senate District 3	Republican Party
+TX Senate District 4 (Republican Party)	1	TX Senate District 4	Republican Party
+TX Senate District 5 (Republican Party)	1	TX Senate District 5	Republican Party
+TX Senate District 6 (Republican Party)	1	TX Senate District 6	Republican Party
+TX Senate District 7 (Republican Party)	1	TX Senate District 7	Republican Party
+TX Senate District 8 (Republican Party)	1	TX Senate District 8	Republican Party
+TX Senate District 9 (Republican Party)	1	TX Senate District 9	Republican Party
+TX Senate District 10 (Republican Party)	1	TX Senate District 10	Republican Party
+TX Senate District 11 (Republican Party)	1	TX Senate District 11	Republican Party
+TX Senate District 12 (Republican Party)	1	TX Senate District 12	Republican Party
+TX Senate District 13 (Republican Party)	1	TX Senate District 13	Republican Party
+TX Senate District 14 (Republican Party)	1	TX Senate District 14	Republican Party
+TX Senate District 15 (Republican Party)	1	TX Senate District 15	Republican Party
+TX Senate District 16 (Republican Party)	1	TX Senate District 16	Republican Party
+TX Senate District 17 (Republican Party)	1	TX Senate District 17	Republican Party
+TX Senate District 18 (Republican Party)	1	TX Senate District 18	Republican Party
+TX Senate District 19 (Republican Party)	1	TX Senate District 19	Republican Party
+TX Senate District 20 (Republican Party)	1	TX Senate District 20	Republican Party
+TX Senate District 21 (Republican Party)	1	TX Senate District 21	Republican Party
+TX Senate District 22 (Republican Party)	1	TX Senate District 22	Republican Party
+TX Senate District 23 (Republican Party)	1	TX Senate District 23	Republican Party
+TX Senate District 24 (Republican Party)	1	TX Senate District 24	Republican Party
+TX Senate District 25 (Republican Party)	1	TX Senate District 25	Republican Party
+TX Senate District 26 (Republican Party)	1	TX Senate District 26	Republican Party
+TX Senate District 27 (Republican Party)	1	TX Senate District 27	Republican Party
+TX Senate District 28 (Republican Party)	1	TX Senate District 28	Republican Party
+TX Senate District 29 (Republican Party)	1	TX Senate District 29	Republican Party
+TX Senate District 30 (Republican Party)	1	TX Senate District 30	Republican Party
+TX Senate District 31 (Republican Party)	1	TX Senate District 31	Republican Party
+US House TX District 1 (Republican Party)	1	US House TX District 1	Republican Party
+US House TX District 2 (Republican Party)	1	US House TX District 2	Republican Party
+US House TX District 3 (Republican Party)	1	US House TX District 3	Republican Party
+US House TX District 4 (Republican Party)	1	US House TX District 4	Republican Party
+US House TX District 5 (Republican Party)	1	US House TX District 5	Republican Party
+US House TX District 6 (Republican Party)	1	US House TX District 6	Republican Party
+US House TX District 7 (Republican Party)	1	US House TX District 7	Republican Party
+US House TX District 8 (Republican Party)	1	US House TX District 8	Republican Party
+US House TX District 9 (Republican Party)	1	US House TX District 9	Republican Party
+US House TX District 10 (Republican Party)	1	US House TX District 10	Republican Party
+US House TX District 11 (Republican Party)	1	US House TX District 11	Republican Party
+US House TX District 12 (Republican Party)	1	US House TX District 12	Republican Party
+US House TX District 13 (Republican Party)	1	US House TX District 13	Republican Party
+US House TX District 14 (Republican Party)	1	US House TX District 14	Republican Party
+US House TX District 15 (Republican Party)	1	US House TX District 15	Republican Party
+US House TX District 16 (Republican Party)	1	US House TX District 16	Republican Party
+US House TX District 17 (Republican Party)	1	US House TX District 17	Republican Party
+US House TX District 18 (Republican Party)	1	US House TX District 18	Republican Party
+US House TX District 19 (Republican Party)	1	US House TX District 19	Republican Party
+US House TX District 20 (Republican Party)	1	US House TX District 20	Republican Party
+US House TX District 21 (Republican Party)	1	US House TX District 21	Republican Party
+US House TX District 22 (Republican Party)	1	US House TX District 22	Republican Party
+US House TX District 23 (Republican Party)	1	US House TX District 23	Republican Party
+US House TX District 24 (Republican Party)	1	US House TX District 24	Republican Party
+US House TX District 25 (Republican Party)	1	US House TX District 25	Republican Party
+US House TX District 26 (Republican Party)	1	US House TX District 26	Republican Party
+US House TX District 27 (Republican Party)	1	US House TX District 27	Republican Party
+US House TX District 28 (Republican Party)	1	US House TX District 28	Republican Party
+US House TX District 29 (Republican Party)	1	US House TX District 29	Republican Party
+US House TX District 30 (Republican Party)	1	US House TX District 30	Republican Party
+US House TX District 31 (Republican Party)	1	US House TX District 31	Republican Party
+US House TX District 32 (Republican Party)	1	US House TX District 32	Republican Party
+US House TX District 33 (Republican Party)	1	US House TX District 33	Republican Party
+US House TX District 34 (Republican Party)	1	US House TX District 34	Republican Party
+US House TX District 35 (Republican Party)	1	US House TX District 35	Republican Party
+US House TX District 36 (Republican Party)	1	US House TX District 36	Republican Party
+US President (TX) (Republican Party)	1	US President (TX)	Republican Party
+Railroad Commissioner (Republican Party)	1	Railroad Commissioner	Republican Party
+TX House District 100 (Republican Party)	1	TX House District 100	Republican Party
+TX House District 110 (Republican Party)	1	TX House District 110	Republican Party
+TX House District 120 (Republican Party)	1	TX House District 120	Republican Party
+TX House District 130 (Republican Party)	1	TX House District 130	Republican Party
+TX House District 140 (Republican Party)	1	TX House District 140	Republican Party
+TX House District 150 (Republican Party)	1	TX House District 150	Republican Party
+TX Governor (Republican Party)	1	TX Governor	Republican Party
+US Senate TX (Republican Party)	1	US Senate TX	Republican Party
+TX Attorney General (Republican Party)	1	TX Attorney General	Republican Party
+TX Lieutenant Governor (Republican Party)	1	TX Lieutenant Governor	Republican Party
+TX Comptroller of Public Accounts (Republican Party)	1	TX Comptroller of Public Accounts	Republican Party
+TX Commissioner of the General Land Office (Republican Party)	1	TX Commissioner of the General Land Office	Republican Party
+TX Commissioner of Agriculture (Republican Party)	1	TX Commissioner of Agriculture	Republican Party
+TX Treasurer (Republican Party)	1	TX Treasurer	Republican Party
+TX Secretary of State (Republican Party)	1	TX Secretary of State	Republican Party
+TX House District 1 (Green Party)	1	TX House District 1	Green Party
+TX House District 2 (Green Party)	1	TX House District 2	Green Party
+TX House District 3 (Green Party)	1	TX House District 3	Green Party
+TX House District 4 (Green Party)	1	TX House District 4	Green Party
+TX House District 5 (Green Party)	1	TX House District 5	Green Party
+TX House District 6 (Green Party)	1	TX House District 6	Green Party
+TX House District 7 (Green Party)	1	TX House District 7	Green Party
+TX House District 8 (Green Party)	1	TX House District 8	Green Party
+TX House District 9 (Green Party)	1	TX House District 9	Green Party
+TX House District 10 (Green Party)	1	TX House District 10	Green Party
+TX House District 11 (Green Party)	1	TX House District 11	Green Party
+TX House District 12 (Green Party)	1	TX House District 12	Green Party
+TX House District 13 (Green Party)	1	TX House District 13	Green Party
+TX House District 14 (Green Party)	1	TX House District 14	Green Party
+TX House District 15 (Green Party)	1	TX House District 15	Green Party
+TX House District 16 (Green Party)	1	TX House District 16	Green Party
+TX House District 17 (Green Party)	1	TX House District 17	Green Party
+TX House District 18 (Green Party)	1	TX House District 18	Green Party
+TX House District 19 (Green Party)	1	TX House District 19	Green Party
+TX House District 20 (Green Party)	1	TX House District 20	Green Party
+TX House District 21 (Green Party)	1	TX House District 21	Green Party
+TX House District 22 (Green Party)	1	TX House District 22	Green Party
+TX House District 23 (Green Party)	1	TX House District 23	Green Party
+TX House District 24 (Green Party)	1	TX House District 24	Green Party
+TX House District 25 (Green Party)	1	TX House District 25	Green Party
+TX House District 26 (Green Party)	1	TX House District 26	Green Party
+TX House District 27 (Green Party)	1	TX House District 27	Green Party
+TX House District 28 (Green Party)	1	TX House District 28	Green Party
+TX House District 29 (Green Party)	1	TX House District 29	Green Party
+TX House District 30 (Green Party)	1	TX House District 30	Green Party
+TX House District 31 (Green Party)	1	TX House District 31	Green Party
+TX House District 32 (Green Party)	1	TX House District 32	Green Party
+TX House District 33 (Green Party)	1	TX House District 33	Green Party
+TX House District 34 (Green Party)	1	TX House District 34	Green Party
+TX House District 35 (Green Party)	1	TX House District 35	Green Party
+TX House District 36 (Green Party)	1	TX House District 36	Green Party
+TX House District 37 (Green Party)	1	TX House District 37	Green Party
+TX House District 38 (Green Party)	1	TX House District 38	Green Party
+TX House District 39 (Green Party)	1	TX House District 39	Green Party
+TX House District 40 (Green Party)	1	TX House District 40	Green Party
+TX House District 41 (Green Party)	1	TX House District 41	Green Party
+TX House District 42 (Green Party)	1	TX House District 42	Green Party
+TX House District 43 (Green Party)	1	TX House District 43	Green Party
+TX House District 44 (Green Party)	1	TX House District 44	Green Party
+TX House District 45 (Green Party)	1	TX House District 45	Green Party
+TX House District 46 (Green Party)	1	TX House District 46	Green Party
+TX House District 47 (Green Party)	1	TX House District 47	Green Party
+TX House District 48 (Green Party)	1	TX House District 48	Green Party
+TX House District 49 (Green Party)	1	TX House District 49	Green Party
+TX House District 50 (Green Party)	1	TX House District 50	Green Party
+TX House District 51 (Green Party)	1	TX House District 51	Green Party
+TX House District 52 (Green Party)	1	TX House District 52	Green Party
+TX House District 53 (Green Party)	1	TX House District 53	Green Party
+TX House District 54 (Green Party)	1	TX House District 54	Green Party
+TX House District 55 (Green Party)	1	TX House District 55	Green Party
+TX House District 56 (Green Party)	1	TX House District 56	Green Party
+TX House District 57 (Green Party)	1	TX House District 57	Green Party
+TX House District 58 (Green Party)	1	TX House District 58	Green Party
+TX House District 59 (Green Party)	1	TX House District 59	Green Party
+TX House District 60 (Green Party)	1	TX House District 60	Green Party
+TX House District 61 (Green Party)	1	TX House District 61	Green Party
+TX House District 62 (Green Party)	1	TX House District 62	Green Party
+TX House District 63 (Green Party)	1	TX House District 63	Green Party
+TX House District 64 (Green Party)	1	TX House District 64	Green Party
+TX House District 65 (Green Party)	1	TX House District 65	Green Party
+TX House District 66 (Green Party)	1	TX House District 66	Green Party
+TX House District 67 (Green Party)	1	TX House District 67	Green Party
+TX House District 68 (Green Party)	1	TX House District 68	Green Party
+TX House District 69 (Green Party)	1	TX House District 69	Green Party
+TX House District 70 (Green Party)	1	TX House District 70	Green Party
+TX House District 71 (Green Party)	1	TX House District 71	Green Party
+TX House District 72 (Green Party)	1	TX House District 72	Green Party
+TX House District 73 (Green Party)	1	TX House District 73	Green Party
+TX House District 74 (Green Party)	1	TX House District 74	Green Party
+TX House District 75 (Green Party)	1	TX House District 75	Green Party
+TX House District 76 (Green Party)	1	TX House District 76	Green Party
+TX House District 77 (Green Party)	1	TX House District 77	Green Party
+TX House District 78 (Green Party)	1	TX House District 78	Green Party
+TX House District 79 (Green Party)	1	TX House District 79	Green Party
+TX House District 80 (Green Party)	1	TX House District 80	Green Party
+TX House District 81 (Green Party)	1	TX House District 81	Green Party
+TX House District 82 (Green Party)	1	TX House District 82	Green Party
+TX House District 83 (Green Party)	1	TX House District 83	Green Party
+TX House District 84 (Green Party)	1	TX House District 84	Green Party
+TX House District 85 (Green Party)	1	TX House District 85	Green Party
+TX House District 86 (Green Party)	1	TX House District 86	Green Party
+TX House District 87 (Green Party)	1	TX House District 87	Green Party
+TX House District 88 (Green Party)	1	TX House District 88	Green Party
+TX House District 89 (Green Party)	1	TX House District 89	Green Party
+TX House District 90 (Green Party)	1	TX House District 90	Green Party
+TX House District 91 (Green Party)	1	TX House District 91	Green Party
+TX House District 92 (Green Party)	1	TX House District 92	Green Party
+TX House District 93 (Green Party)	1	TX House District 93	Green Party
+TX House District 94 (Green Party)	1	TX House District 94	Green Party
+TX House District 95 (Green Party)	1	TX House District 95	Green Party
+TX House District 96 (Green Party)	1	TX House District 96	Green Party
+TX House District 97 (Green Party)	1	TX House District 97	Green Party
+TX House District 98 (Green Party)	1	TX House District 98	Green Party
+TX House District 99 (Green Party)	1	TX House District 99	Green Party
+TX House District 101 (Green Party)	1	TX House District 101	Green Party
+TX House District 102 (Green Party)	1	TX House District 102	Green Party
+TX House District 103 (Green Party)	1	TX House District 103	Green Party
+TX House District 104 (Green Party)	1	TX House District 104	Green Party
+TX House District 105 (Green Party)	1	TX House District 105	Green Party
+TX House District 106 (Green Party)	1	TX House District 106	Green Party
+TX House District 107 (Green Party)	1	TX House District 107	Green Party
+TX House District 108 (Green Party)	1	TX House District 108	Green Party
+TX House District 109 (Green Party)	1	TX House District 109	Green Party
+TX House District 111 (Green Party)	1	TX House District 111	Green Party
+TX House District 112 (Green Party)	1	TX House District 112	Green Party
+TX House District 113 (Green Party)	1	TX House District 113	Green Party
+TX House District 114 (Green Party)	1	TX House District 114	Green Party
+TX House District 115 (Green Party)	1	TX House District 115	Green Party
+TX House District 116 (Green Party)	1	TX House District 116	Green Party
+TX House District 117 (Green Party)	1	TX House District 117	Green Party
+TX House District 118 (Green Party)	1	TX House District 118	Green Party
+TX House District 119 (Green Party)	1	TX House District 119	Green Party
+TX House District 121 (Green Party)	1	TX House District 121	Green Party
+TX House District 122 (Green Party)	1	TX House District 122	Green Party
+TX House District 123 (Green Party)	1	TX House District 123	Green Party
+TX House District 124 (Green Party)	1	TX House District 124	Green Party
+TX House District 125 (Green Party)	1	TX House District 125	Green Party
+TX House District 126 (Green Party)	1	TX House District 126	Green Party
+TX House District 127 (Green Party)	1	TX House District 127	Green Party
+TX House District 128 (Green Party)	1	TX House District 128	Green Party
+TX House District 129 (Green Party)	1	TX House District 129	Green Party
+TX House District 131 (Green Party)	1	TX House District 131	Green Party
+TX House District 132 (Green Party)	1	TX House District 132	Green Party
+TX House District 133 (Green Party)	1	TX House District 133	Green Party
+TX House District 134 (Green Party)	1	TX House District 134	Green Party
+TX House District 135 (Green Party)	1	TX House District 135	Green Party
+TX House District 136 (Green Party)	1	TX House District 136	Green Party
+TX House District 137 (Green Party)	1	TX House District 137	Green Party
+TX House District 138 (Green Party)	1	TX House District 138	Green Party
+TX House District 139 (Green Party)	1	TX House District 139	Green Party
+TX House District 141 (Green Party)	1	TX House District 141	Green Party
+TX House District 142 (Green Party)	1	TX House District 142	Green Party
+TX House District 143 (Green Party)	1	TX House District 143	Green Party
+TX House District 144 (Green Party)	1	TX House District 144	Green Party
+TX House District 145 (Green Party)	1	TX House District 145	Green Party
+TX House District 146 (Green Party)	1	TX House District 146	Green Party
+TX House District 147 (Green Party)	1	TX House District 147	Green Party
+TX House District 148 (Green Party)	1	TX House District 148	Green Party
+TX House District 149 (Green Party)	1	TX House District 149	Green Party
+TX Senate District 1 (Green Party)	1	TX Senate District 1	Green Party
+TX Senate District 2 (Green Party)	1	TX Senate District 2	Green Party
+TX Senate District 3 (Green Party)	1	TX Senate District 3	Green Party
+TX Senate District 4 (Green Party)	1	TX Senate District 4	Green Party
+TX Senate District 5 (Green Party)	1	TX Senate District 5	Green Party
+TX Senate District 6 (Green Party)	1	TX Senate District 6	Green Party
+TX Senate District 7 (Green Party)	1	TX Senate District 7	Green Party
+TX Senate District 8 (Green Party)	1	TX Senate District 8	Green Party
+TX Senate District 9 (Green Party)	1	TX Senate District 9	Green Party
+TX Senate District 10 (Green Party)	1	TX Senate District 10	Green Party
+TX Senate District 11 (Green Party)	1	TX Senate District 11	Green Party
+TX Senate District 12 (Green Party)	1	TX Senate District 12	Green Party
+TX Senate District 13 (Green Party)	1	TX Senate District 13	Green Party
+TX Senate District 14 (Green Party)	1	TX Senate District 14	Green Party
+TX Senate District 15 (Green Party)	1	TX Senate District 15	Green Party
+TX Senate District 16 (Green Party)	1	TX Senate District 16	Green Party
+TX Senate District 17 (Green Party)	1	TX Senate District 17	Green Party
+TX Senate District 18 (Green Party)	1	TX Senate District 18	Green Party
+TX Senate District 19 (Green Party)	1	TX Senate District 19	Green Party
+TX Senate District 20 (Green Party)	1	TX Senate District 20	Green Party
+TX Senate District 21 (Green Party)	1	TX Senate District 21	Green Party
+TX Senate District 22 (Green Party)	1	TX Senate District 22	Green Party
+TX Senate District 23 (Green Party)	1	TX Senate District 23	Green Party
+TX Senate District 24 (Green Party)	1	TX Senate District 24	Green Party
+TX Senate District 25 (Green Party)	1	TX Senate District 25	Green Party
+TX Senate District 26 (Green Party)	1	TX Senate District 26	Green Party
+TX Senate District 27 (Green Party)	1	TX Senate District 27	Green Party
+TX Senate District 28 (Green Party)	1	TX Senate District 28	Green Party
+TX Senate District 29 (Green Party)	1	TX Senate District 29	Green Party
+TX Senate District 30 (Green Party)	1	TX Senate District 30	Green Party
+TX Senate District 31 (Green Party)	1	TX Senate District 31	Green Party
+US House TX District 1 (Green Party)	1	US House TX District 1	Green Party
+US House TX District 2 (Green Party)	1	US House TX District 2	Green Party
+US House TX District 3 (Green Party)	1	US House TX District 3	Green Party
+US House TX District 4 (Green Party)	1	US House TX District 4	Green Party
+US House TX District 5 (Green Party)	1	US House TX District 5	Green Party
+US House TX District 6 (Green Party)	1	US House TX District 6	Green Party
+US House TX District 7 (Green Party)	1	US House TX District 7	Green Party
+US House TX District 8 (Green Party)	1	US House TX District 8	Green Party
+US House TX District 9 (Green Party)	1	US House TX District 9	Green Party
+US House TX District 10 (Green Party)	1	US House TX District 10	Green Party
+US House TX District 11 (Green Party)	1	US House TX District 11	Green Party
+US House TX District 12 (Green Party)	1	US House TX District 12	Green Party
+US House TX District 13 (Green Party)	1	US House TX District 13	Green Party
+US House TX District 14 (Green Party)	1	US House TX District 14	Green Party
+US House TX District 15 (Green Party)	1	US House TX District 15	Green Party
+US House TX District 16 (Green Party)	1	US House TX District 16	Green Party
+US House TX District 17 (Green Party)	1	US House TX District 17	Green Party
+US House TX District 18 (Green Party)	1	US House TX District 18	Green Party
+US House TX District 19 (Green Party)	1	US House TX District 19	Green Party
+US House TX District 20 (Green Party)	1	US House TX District 20	Green Party
+US House TX District 21 (Green Party)	1	US House TX District 21	Green Party
+US House TX District 22 (Green Party)	1	US House TX District 22	Green Party
+US House TX District 23 (Green Party)	1	US House TX District 23	Green Party
+US House TX District 24 (Green Party)	1	US House TX District 24	Green Party
+US House TX District 25 (Green Party)	1	US House TX District 25	Green Party
+US House TX District 26 (Green Party)	1	US House TX District 26	Green Party
+US House TX District 27 (Green Party)	1	US House TX District 27	Green Party
+US House TX District 28 (Green Party)	1	US House TX District 28	Green Party
+US House TX District 29 (Green Party)	1	US House TX District 29	Green Party
+US House TX District 30 (Green Party)	1	US House TX District 30	Green Party
+US House TX District 31 (Green Party)	1	US House TX District 31	Green Party
+US House TX District 32 (Green Party)	1	US House TX District 32	Green Party
+US House TX District 33 (Green Party)	1	US House TX District 33	Green Party
+US House TX District 34 (Green Party)	1	US House TX District 34	Green Party
+US House TX District 35 (Green Party)	1	US House TX District 35	Green Party
+US House TX District 36 (Green Party)	1	US House TX District 36	Green Party
+US President (TX) (Green Party)	1	US President (TX)	Green Party
+Railroad Commissioner (Green Party)	1	Railroad Commissioner	Green Party
+TX House District 100 (Green Party)	1	TX House District 100	Green Party
+TX House District 110 (Green Party)	1	TX House District 110	Green Party
+TX House District 120 (Green Party)	1	TX House District 120	Green Party
+TX House District 130 (Green Party)	1	TX House District 130	Green Party
+TX House District 140 (Green Party)	1	TX House District 140	Green Party
+TX House District 150 (Green Party)	1	TX House District 150	Green Party
+TX Governor (Green Party)	1	TX Governor	Green Party
+US Senate TX (Green Party)	1	US Senate TX	Green Party
+TX Attorney General (Green Party)	1	TX Attorney General	Green Party
+TX Lieutenant Governor (Green Party)	1	TX Lieutenant Governor	Green Party
+TX Comptroller of Public Accounts (Green Party)	1	TX Comptroller of Public Accounts	Green Party
+TX Commissioner of the General Land Office (Green Party)	1	TX Commissioner of the General Land Office	Green Party
+TX Commissioner of Agriculture (Green Party)	1	TX Commissioner of Agriculture	Green Party
+TX Treasurer (Green Party)	1	TX Treasurer	Green Party
+TX Secretary of State (Green Party)	1	TX Secretary of State	Green Party
+TX House District 1 (Libertarian Party)	1	TX House District 1	Libertarian Party
+TX House District 2 (Libertarian Party)	1	TX House District 2	Libertarian Party
+TX House District 3 (Libertarian Party)	1	TX House District 3	Libertarian Party
+TX House District 4 (Libertarian Party)	1	TX House District 4	Libertarian Party
+TX House District 5 (Libertarian Party)	1	TX House District 5	Libertarian Party
+TX House District 6 (Libertarian Party)	1	TX House District 6	Libertarian Party
+TX House District 7 (Libertarian Party)	1	TX House District 7	Libertarian Party
+TX House District 8 (Libertarian Party)	1	TX House District 8	Libertarian Party
+TX House District 9 (Libertarian Party)	1	TX House District 9	Libertarian Party
+TX House District 10 (Libertarian Party)	1	TX House District 10	Libertarian Party
+TX House District 11 (Libertarian Party)	1	TX House District 11	Libertarian Party
+TX House District 12 (Libertarian Party)	1	TX House District 12	Libertarian Party
+TX House District 13 (Libertarian Party)	1	TX House District 13	Libertarian Party
+TX House District 14 (Libertarian Party)	1	TX House District 14	Libertarian Party
+TX House District 15 (Libertarian Party)	1	TX House District 15	Libertarian Party
+TX House District 16 (Libertarian Party)	1	TX House District 16	Libertarian Party
+TX House District 17 (Libertarian Party)	1	TX House District 17	Libertarian Party
+TX House District 18 (Libertarian Party)	1	TX House District 18	Libertarian Party
+TX House District 19 (Libertarian Party)	1	TX House District 19	Libertarian Party
+TX House District 20 (Libertarian Party)	1	TX House District 20	Libertarian Party
+TX House District 21 (Libertarian Party)	1	TX House District 21	Libertarian Party
+TX House District 22 (Libertarian Party)	1	TX House District 22	Libertarian Party
+TX House District 23 (Libertarian Party)	1	TX House District 23	Libertarian Party
+TX House District 24 (Libertarian Party)	1	TX House District 24	Libertarian Party
+TX House District 25 (Libertarian Party)	1	TX House District 25	Libertarian Party
+TX House District 26 (Libertarian Party)	1	TX House District 26	Libertarian Party
+TX House District 27 (Libertarian Party)	1	TX House District 27	Libertarian Party
+TX House District 28 (Libertarian Party)	1	TX House District 28	Libertarian Party
+TX House District 29 (Libertarian Party)	1	TX House District 29	Libertarian Party
+TX House District 30 (Libertarian Party)	1	TX House District 30	Libertarian Party
+TX House District 31 (Libertarian Party)	1	TX House District 31	Libertarian Party
+TX House District 32 (Libertarian Party)	1	TX House District 32	Libertarian Party
+TX House District 33 (Libertarian Party)	1	TX House District 33	Libertarian Party
+TX House District 34 (Libertarian Party)	1	TX House District 34	Libertarian Party
+TX House District 35 (Libertarian Party)	1	TX House District 35	Libertarian Party
+TX House District 36 (Libertarian Party)	1	TX House District 36	Libertarian Party
+TX House District 37 (Libertarian Party)	1	TX House District 37	Libertarian Party
+TX House District 38 (Libertarian Party)	1	TX House District 38	Libertarian Party
+TX House District 39 (Libertarian Party)	1	TX House District 39	Libertarian Party
+TX House District 40 (Libertarian Party)	1	TX House District 40	Libertarian Party
+TX House District 41 (Libertarian Party)	1	TX House District 41	Libertarian Party
+TX House District 42 (Libertarian Party)	1	TX House District 42	Libertarian Party
+TX House District 43 (Libertarian Party)	1	TX House District 43	Libertarian Party
+TX House District 44 (Libertarian Party)	1	TX House District 44	Libertarian Party
+TX House District 45 (Libertarian Party)	1	TX House District 45	Libertarian Party
+TX House District 46 (Libertarian Party)	1	TX House District 46	Libertarian Party
+TX House District 47 (Libertarian Party)	1	TX House District 47	Libertarian Party
+TX House District 48 (Libertarian Party)	1	TX House District 48	Libertarian Party
+TX House District 49 (Libertarian Party)	1	TX House District 49	Libertarian Party
+TX House District 50 (Libertarian Party)	1	TX House District 50	Libertarian Party
+TX House District 51 (Libertarian Party)	1	TX House District 51	Libertarian Party
+TX House District 52 (Libertarian Party)	1	TX House District 52	Libertarian Party
+TX House District 53 (Libertarian Party)	1	TX House District 53	Libertarian Party
+TX House District 54 (Libertarian Party)	1	TX House District 54	Libertarian Party
+TX House District 55 (Libertarian Party)	1	TX House District 55	Libertarian Party
+TX House District 56 (Libertarian Party)	1	TX House District 56	Libertarian Party
+TX House District 57 (Libertarian Party)	1	TX House District 57	Libertarian Party
+TX House District 58 (Libertarian Party)	1	TX House District 58	Libertarian Party
+TX House District 59 (Libertarian Party)	1	TX House District 59	Libertarian Party
+TX House District 60 (Libertarian Party)	1	TX House District 60	Libertarian Party
+TX House District 61 (Libertarian Party)	1	TX House District 61	Libertarian Party
+TX House District 62 (Libertarian Party)	1	TX House District 62	Libertarian Party
+TX House District 63 (Libertarian Party)	1	TX House District 63	Libertarian Party
+TX House District 64 (Libertarian Party)	1	TX House District 64	Libertarian Party
+TX House District 65 (Libertarian Party)	1	TX House District 65	Libertarian Party
+TX House District 66 (Libertarian Party)	1	TX House District 66	Libertarian Party
+TX House District 67 (Libertarian Party)	1	TX House District 67	Libertarian Party
+TX House District 68 (Libertarian Party)	1	TX House District 68	Libertarian Party
+TX House District 69 (Libertarian Party)	1	TX House District 69	Libertarian Party
+TX House District 70 (Libertarian Party)	1	TX House District 70	Libertarian Party
+TX House District 71 (Libertarian Party)	1	TX House District 71	Libertarian Party
+TX House District 72 (Libertarian Party)	1	TX House District 72	Libertarian Party
+TX House District 73 (Libertarian Party)	1	TX House District 73	Libertarian Party
+TX House District 74 (Libertarian Party)	1	TX House District 74	Libertarian Party
+TX House District 75 (Libertarian Party)	1	TX House District 75	Libertarian Party
+TX House District 76 (Libertarian Party)	1	TX House District 76	Libertarian Party
+TX House District 77 (Libertarian Party)	1	TX House District 77	Libertarian Party
+TX House District 78 (Libertarian Party)	1	TX House District 78	Libertarian Party
+TX House District 79 (Libertarian Party)	1	TX House District 79	Libertarian Party
+TX House District 80 (Libertarian Party)	1	TX House District 80	Libertarian Party
+TX House District 81 (Libertarian Party)	1	TX House District 81	Libertarian Party
+TX House District 82 (Libertarian Party)	1	TX House District 82	Libertarian Party
+TX House District 83 (Libertarian Party)	1	TX House District 83	Libertarian Party
+TX House District 84 (Libertarian Party)	1	TX House District 84	Libertarian Party
+TX House District 85 (Libertarian Party)	1	TX House District 85	Libertarian Party
+TX House District 86 (Libertarian Party)	1	TX House District 86	Libertarian Party
+TX House District 87 (Libertarian Party)	1	TX House District 87	Libertarian Party
+TX House District 88 (Libertarian Party)	1	TX House District 88	Libertarian Party
+TX House District 89 (Libertarian Party)	1	TX House District 89	Libertarian Party
+TX House District 90 (Libertarian Party)	1	TX House District 90	Libertarian Party
+TX House District 91 (Libertarian Party)	1	TX House District 91	Libertarian Party
+TX House District 92 (Libertarian Party)	1	TX House District 92	Libertarian Party
+TX House District 93 (Libertarian Party)	1	TX House District 93	Libertarian Party
+TX House District 94 (Libertarian Party)	1	TX House District 94	Libertarian Party
+TX House District 95 (Libertarian Party)	1	TX House District 95	Libertarian Party
+TX House District 96 (Libertarian Party)	1	TX House District 96	Libertarian Party
+TX House District 97 (Libertarian Party)	1	TX House District 97	Libertarian Party
+TX House District 98 (Libertarian Party)	1	TX House District 98	Libertarian Party
+TX House District 99 (Libertarian Party)	1	TX House District 99	Libertarian Party
+TX House District 101 (Libertarian Party)	1	TX House District 101	Libertarian Party
+TX House District 102 (Libertarian Party)	1	TX House District 102	Libertarian Party
+TX House District 103 (Libertarian Party)	1	TX House District 103	Libertarian Party
+TX House District 104 (Libertarian Party)	1	TX House District 104	Libertarian Party
+TX House District 105 (Libertarian Party)	1	TX House District 105	Libertarian Party
+TX House District 106 (Libertarian Party)	1	TX House District 106	Libertarian Party
+TX House District 107 (Libertarian Party)	1	TX House District 107	Libertarian Party
+TX House District 108 (Libertarian Party)	1	TX House District 108	Libertarian Party
+TX House District 109 (Libertarian Party)	1	TX House District 109	Libertarian Party
+TX House District 111 (Libertarian Party)	1	TX House District 111	Libertarian Party
+TX House District 112 (Libertarian Party)	1	TX House District 112	Libertarian Party
+TX House District 113 (Libertarian Party)	1	TX House District 113	Libertarian Party
+TX House District 114 (Libertarian Party)	1	TX House District 114	Libertarian Party
+TX House District 115 (Libertarian Party)	1	TX House District 115	Libertarian Party
+TX House District 116 (Libertarian Party)	1	TX House District 116	Libertarian Party
+TX House District 117 (Libertarian Party)	1	TX House District 117	Libertarian Party
+TX House District 118 (Libertarian Party)	1	TX House District 118	Libertarian Party
+TX House District 119 (Libertarian Party)	1	TX House District 119	Libertarian Party
+TX House District 121 (Libertarian Party)	1	TX House District 121	Libertarian Party
+TX House District 122 (Libertarian Party)	1	TX House District 122	Libertarian Party
+TX House District 123 (Libertarian Party)	1	TX House District 123	Libertarian Party
+TX House District 124 (Libertarian Party)	1	TX House District 124	Libertarian Party
+TX House District 125 (Libertarian Party)	1	TX House District 125	Libertarian Party
+TX House District 126 (Libertarian Party)	1	TX House District 126	Libertarian Party
+TX House District 127 (Libertarian Party)	1	TX House District 127	Libertarian Party
+TX House District 128 (Libertarian Party)	1	TX House District 128	Libertarian Party
+TX House District 129 (Libertarian Party)	1	TX House District 129	Libertarian Party
+TX House District 131 (Libertarian Party)	1	TX House District 131	Libertarian Party
+TX House District 132 (Libertarian Party)	1	TX House District 132	Libertarian Party
+TX House District 133 (Libertarian Party)	1	TX House District 133	Libertarian Party
+TX House District 134 (Libertarian Party)	1	TX House District 134	Libertarian Party
+TX House District 135 (Libertarian Party)	1	TX House District 135	Libertarian Party
+TX House District 136 (Libertarian Party)	1	TX House District 136	Libertarian Party
+TX House District 137 (Libertarian Party)	1	TX House District 137	Libertarian Party
+TX House District 138 (Libertarian Party)	1	TX House District 138	Libertarian Party
+TX House District 139 (Libertarian Party)	1	TX House District 139	Libertarian Party
+TX House District 141 (Libertarian Party)	1	TX House District 141	Libertarian Party
+TX House District 142 (Libertarian Party)	1	TX House District 142	Libertarian Party
+TX House District 143 (Libertarian Party)	1	TX House District 143	Libertarian Party
+TX House District 144 (Libertarian Party)	1	TX House District 144	Libertarian Party
+TX House District 145 (Libertarian Party)	1	TX House District 145	Libertarian Party
+TX House District 146 (Libertarian Party)	1	TX House District 146	Libertarian Party
+TX House District 147 (Libertarian Party)	1	TX House District 147	Libertarian Party
+TX House District 148 (Libertarian Party)	1	TX House District 148	Libertarian Party
+TX House District 149 (Libertarian Party)	1	TX House District 149	Libertarian Party
+TX Senate District 1 (Libertarian Party)	1	TX Senate District 1	Libertarian Party
+TX Senate District 2 (Libertarian Party)	1	TX Senate District 2	Libertarian Party
+TX Senate District 3 (Libertarian Party)	1	TX Senate District 3	Libertarian Party
+TX Senate District 4 (Libertarian Party)	1	TX Senate District 4	Libertarian Party
+TX Senate District 5 (Libertarian Party)	1	TX Senate District 5	Libertarian Party
+TX Senate District 6 (Libertarian Party)	1	TX Senate District 6	Libertarian Party
+TX Senate District 7 (Libertarian Party)	1	TX Senate District 7	Libertarian Party
+TX Senate District 8 (Libertarian Party)	1	TX Senate District 8	Libertarian Party
+TX Senate District 9 (Libertarian Party)	1	TX Senate District 9	Libertarian Party
+TX Senate District 10 (Libertarian Party)	1	TX Senate District 10	Libertarian Party
+TX Senate District 11 (Libertarian Party)	1	TX Senate District 11	Libertarian Party
+TX Senate District 12 (Libertarian Party)	1	TX Senate District 12	Libertarian Party
+TX Senate District 13 (Libertarian Party)	1	TX Senate District 13	Libertarian Party
+TX Senate District 14 (Libertarian Party)	1	TX Senate District 14	Libertarian Party
+TX Senate District 15 (Libertarian Party)	1	TX Senate District 15	Libertarian Party
+TX Senate District 16 (Libertarian Party)	1	TX Senate District 16	Libertarian Party
+TX Senate District 17 (Libertarian Party)	1	TX Senate District 17	Libertarian Party
+TX Senate District 18 (Libertarian Party)	1	TX Senate District 18	Libertarian Party
+TX Senate District 19 (Libertarian Party)	1	TX Senate District 19	Libertarian Party
+TX Senate District 20 (Libertarian Party)	1	TX Senate District 20	Libertarian Party
+TX Senate District 21 (Libertarian Party)	1	TX Senate District 21	Libertarian Party
+TX Senate District 22 (Libertarian Party)	1	TX Senate District 22	Libertarian Party
+TX Senate District 23 (Libertarian Party)	1	TX Senate District 23	Libertarian Party
+TX Senate District 24 (Libertarian Party)	1	TX Senate District 24	Libertarian Party
+TX Senate District 25 (Libertarian Party)	1	TX Senate District 25	Libertarian Party
+TX Senate District 26 (Libertarian Party)	1	TX Senate District 26	Libertarian Party
+TX Senate District 27 (Libertarian Party)	1	TX Senate District 27	Libertarian Party
+TX Senate District 28 (Libertarian Party)	1	TX Senate District 28	Libertarian Party
+TX Senate District 29 (Libertarian Party)	1	TX Senate District 29	Libertarian Party
+TX Senate District 30 (Libertarian Party)	1	TX Senate District 30	Libertarian Party
+TX Senate District 31 (Libertarian Party)	1	TX Senate District 31	Libertarian Party
+US House TX District 1 (Libertarian Party)	1	US House TX District 1	Libertarian Party
+US House TX District 2 (Libertarian Party)	1	US House TX District 2	Libertarian Party
+US House TX District 3 (Libertarian Party)	1	US House TX District 3	Libertarian Party
+US House TX District 4 (Libertarian Party)	1	US House TX District 4	Libertarian Party
+US House TX District 5 (Libertarian Party)	1	US House TX District 5	Libertarian Party
+US House TX District 6 (Libertarian Party)	1	US House TX District 6	Libertarian Party
+US House TX District 7 (Libertarian Party)	1	US House TX District 7	Libertarian Party
+US House TX District 8 (Libertarian Party)	1	US House TX District 8	Libertarian Party
+US House TX District 9 (Libertarian Party)	1	US House TX District 9	Libertarian Party
+US House TX District 10 (Libertarian Party)	1	US House TX District 10	Libertarian Party
+US House TX District 11 (Libertarian Party)	1	US House TX District 11	Libertarian Party
+US House TX District 12 (Libertarian Party)	1	US House TX District 12	Libertarian Party
+US House TX District 13 (Libertarian Party)	1	US House TX District 13	Libertarian Party
+US House TX District 14 (Libertarian Party)	1	US House TX District 14	Libertarian Party
+US House TX District 15 (Libertarian Party)	1	US House TX District 15	Libertarian Party
+US House TX District 16 (Libertarian Party)	1	US House TX District 16	Libertarian Party
+US House TX District 17 (Libertarian Party)	1	US House TX District 17	Libertarian Party
+US House TX District 18 (Libertarian Party)	1	US House TX District 18	Libertarian Party
+US House TX District 19 (Libertarian Party)	1	US House TX District 19	Libertarian Party
+US House TX District 20 (Libertarian Party)	1	US House TX District 20	Libertarian Party
+US House TX District 21 (Libertarian Party)	1	US House TX District 21	Libertarian Party
+US House TX District 22 (Libertarian Party)	1	US House TX District 22	Libertarian Party
+US House TX District 23 (Libertarian Party)	1	US House TX District 23	Libertarian Party
+US House TX District 24 (Libertarian Party)	1	US House TX District 24	Libertarian Party
+US House TX District 25 (Libertarian Party)	1	US House TX District 25	Libertarian Party
+US House TX District 26 (Libertarian Party)	1	US House TX District 26	Libertarian Party
+US House TX District 27 (Libertarian Party)	1	US House TX District 27	Libertarian Party
+US House TX District 28 (Libertarian Party)	1	US House TX District 28	Libertarian Party
+US House TX District 29 (Libertarian Party)	1	US House TX District 29	Libertarian Party
+US House TX District 30 (Libertarian Party)	1	US House TX District 30	Libertarian Party
+US House TX District 31 (Libertarian Party)	1	US House TX District 31	Libertarian Party
+US House TX District 32 (Libertarian Party)	1	US House TX District 32	Libertarian Party
+US House TX District 33 (Libertarian Party)	1	US House TX District 33	Libertarian Party
+US House TX District 34 (Libertarian Party)	1	US House TX District 34	Libertarian Party
+US House TX District 35 (Libertarian Party)	1	US House TX District 35	Libertarian Party
+US House TX District 36 (Libertarian Party)	1	US House TX District 36	Libertarian Party
+US President (TX) (Libertarian Party)	1	US President (TX)	Libertarian Party
+Railroad Commissioner (Libertarian Party)	1	Railroad Commissioner	Libertarian Party
+TX House District 100 (Libertarian Party)	1	TX House District 100	Libertarian Party
+TX House District 110 (Libertarian Party)	1	TX House District 110	Libertarian Party
+TX House District 120 (Libertarian Party)	1	TX House District 120	Libertarian Party
+TX House District 130 (Libertarian Party)	1	TX House District 130	Libertarian Party
+TX House District 140 (Libertarian Party)	1	TX House District 140	Libertarian Party
+TX House District 150 (Libertarian Party)	1	TX House District 150	Libertarian Party
+TX Governor (Libertarian Party)	1	TX Governor	Libertarian Party
+US Senate TX (Libertarian Party)	1	US Senate TX	Libertarian Party
+TX Attorney General (Libertarian Party)	1	TX Attorney General	Libertarian Party
+TX Lieutenant Governor (Libertarian Party)	1	TX Lieutenant Governor	Libertarian Party
+TX Comptroller of Public Accounts (Libertarian Party)	1	TX Comptroller of Public Accounts	Libertarian Party
+TX Commissioner of the General Land Office (Libertarian Party)	1	TX Commissioner of the General Land Office	Libertarian Party
+TX Commissioner of Agriculture (Libertarian Party)	1	TX Commissioner of Agriculture	Libertarian Party
+TX Treasurer (Libertarian Party)	1	TX Treasurer	Libertarian Party
+TX Secretary of State (Libertarian Party)	1	TX Secretary of State	Libertarian Party
+TX House District 1 (Independent Party)	1	TX House District 1	Independent Party
+TX House District 2 (Independent Party)	1	TX House District 2	Independent Party
+TX House District 3 (Independent Party)	1	TX House District 3	Independent Party
+TX House District 4 (Independent Party)	1	TX House District 4	Independent Party
+TX House District 5 (Independent Party)	1	TX House District 5	Independent Party
+TX House District 6 (Independent Party)	1	TX House District 6	Independent Party
+TX House District 7 (Independent Party)	1	TX House District 7	Independent Party
+TX House District 8 (Independent Party)	1	TX House District 8	Independent Party
+TX House District 9 (Independent Party)	1	TX House District 9	Independent Party
+TX House District 10 (Independent Party)	1	TX House District 10	Independent Party
+TX House District 11 (Independent Party)	1	TX House District 11	Independent Party
+TX House District 12 (Independent Party)	1	TX House District 12	Independent Party
+TX House District 13 (Independent Party)	1	TX House District 13	Independent Party
+TX House District 14 (Independent Party)	1	TX House District 14	Independent Party
+TX House District 15 (Independent Party)	1	TX House District 15	Independent Party
+TX House District 16 (Independent Party)	1	TX House District 16	Independent Party
+TX House District 17 (Independent Party)	1	TX House District 17	Independent Party
+TX House District 18 (Independent Party)	1	TX House District 18	Independent Party
+TX House District 19 (Independent Party)	1	TX House District 19	Independent Party
+TX House District 20 (Independent Party)	1	TX House District 20	Independent Party
+TX House District 21 (Independent Party)	1	TX House District 21	Independent Party
+TX House District 22 (Independent Party)	1	TX House District 22	Independent Party
+TX House District 23 (Independent Party)	1	TX House District 23	Independent Party
+TX House District 24 (Independent Party)	1	TX House District 24	Independent Party
+TX House District 25 (Independent Party)	1	TX House District 25	Independent Party
+TX House District 26 (Independent Party)	1	TX House District 26	Independent Party
+TX House District 27 (Independent Party)	1	TX House District 27	Independent Party
+TX House District 28 (Independent Party)	1	TX House District 28	Independent Party
+TX House District 29 (Independent Party)	1	TX House District 29	Independent Party
+TX House District 30 (Independent Party)	1	TX House District 30	Independent Party
+TX House District 31 (Independent Party)	1	TX House District 31	Independent Party
+TX House District 32 (Independent Party)	1	TX House District 32	Independent Party
+TX House District 33 (Independent Party)	1	TX House District 33	Independent Party
+TX House District 34 (Independent Party)	1	TX House District 34	Independent Party
+TX House District 35 (Independent Party)	1	TX House District 35	Independent Party
+TX House District 36 (Independent Party)	1	TX House District 36	Independent Party
+TX House District 37 (Independent Party)	1	TX House District 37	Independent Party
+TX House District 38 (Independent Party)	1	TX House District 38	Independent Party
+TX House District 39 (Independent Party)	1	TX House District 39	Independent Party
+TX House District 40 (Independent Party)	1	TX House District 40	Independent Party
+TX House District 41 (Independent Party)	1	TX House District 41	Independent Party
+TX House District 42 (Independent Party)	1	TX House District 42	Independent Party
+TX House District 43 (Independent Party)	1	TX House District 43	Independent Party
+TX House District 44 (Independent Party)	1	TX House District 44	Independent Party
+TX House District 45 (Independent Party)	1	TX House District 45	Independent Party
+TX House District 46 (Independent Party)	1	TX House District 46	Independent Party
+TX House District 47 (Independent Party)	1	TX House District 47	Independent Party
+TX House District 48 (Independent Party)	1	TX House District 48	Independent Party
+TX House District 49 (Independent Party)	1	TX House District 49	Independent Party
+TX House District 50 (Independent Party)	1	TX House District 50	Independent Party
+TX House District 51 (Independent Party)	1	TX House District 51	Independent Party
+TX House District 52 (Independent Party)	1	TX House District 52	Independent Party
+TX House District 53 (Independent Party)	1	TX House District 53	Independent Party
+TX House District 54 (Independent Party)	1	TX House District 54	Independent Party
+TX House District 55 (Independent Party)	1	TX House District 55	Independent Party
+TX House District 56 (Independent Party)	1	TX House District 56	Independent Party
+TX House District 57 (Independent Party)	1	TX House District 57	Independent Party
+TX House District 58 (Independent Party)	1	TX House District 58	Independent Party
+TX House District 59 (Independent Party)	1	TX House District 59	Independent Party
+TX House District 60 (Independent Party)	1	TX House District 60	Independent Party
+TX House District 61 (Independent Party)	1	TX House District 61	Independent Party
+TX House District 62 (Independent Party)	1	TX House District 62	Independent Party
+TX House District 63 (Independent Party)	1	TX House District 63	Independent Party
+TX House District 64 (Independent Party)	1	TX House District 64	Independent Party
+TX House District 65 (Independent Party)	1	TX House District 65	Independent Party
+TX House District 66 (Independent Party)	1	TX House District 66	Independent Party
+TX House District 67 (Independent Party)	1	TX House District 67	Independent Party
+TX House District 68 (Independent Party)	1	TX House District 68	Independent Party
+TX House District 69 (Independent Party)	1	TX House District 69	Independent Party
+TX House District 70 (Independent Party)	1	TX House District 70	Independent Party
+TX House District 71 (Independent Party)	1	TX House District 71	Independent Party
+TX House District 72 (Independent Party)	1	TX House District 72	Independent Party
+TX House District 73 (Independent Party)	1	TX House District 73	Independent Party
+TX House District 74 (Independent Party)	1	TX House District 74	Independent Party
+TX House District 75 (Independent Party)	1	TX House District 75	Independent Party
+TX House District 76 (Independent Party)	1	TX House District 76	Independent Party
+TX House District 77 (Independent Party)	1	TX House District 77	Independent Party
+TX House District 78 (Independent Party)	1	TX House District 78	Independent Party
+TX House District 79 (Independent Party)	1	TX House District 79	Independent Party
+TX House District 80 (Independent Party)	1	TX House District 80	Independent Party
+TX House District 81 (Independent Party)	1	TX House District 81	Independent Party
+TX House District 82 (Independent Party)	1	TX House District 82	Independent Party
+TX House District 83 (Independent Party)	1	TX House District 83	Independent Party
+TX House District 84 (Independent Party)	1	TX House District 84	Independent Party
+TX House District 85 (Independent Party)	1	TX House District 85	Independent Party
+TX House District 86 (Independent Party)	1	TX House District 86	Independent Party
+TX House District 87 (Independent Party)	1	TX House District 87	Independent Party
+TX House District 88 (Independent Party)	1	TX House District 88	Independent Party
+TX House District 89 (Independent Party)	1	TX House District 89	Independent Party
+TX House District 90 (Independent Party)	1	TX House District 90	Independent Party
+TX House District 91 (Independent Party)	1	TX House District 91	Independent Party
+TX House District 92 (Independent Party)	1	TX House District 92	Independent Party
+TX House District 93 (Independent Party)	1	TX House District 93	Independent Party
+TX House District 94 (Independent Party)	1	TX House District 94	Independent Party
+TX House District 95 (Independent Party)	1	TX House District 95	Independent Party
+TX House District 96 (Independent Party)	1	TX House District 96	Independent Party
+TX House District 97 (Independent Party)	1	TX House District 97	Independent Party
+TX House District 98 (Independent Party)	1	TX House District 98	Independent Party
+TX House District 99 (Independent Party)	1	TX House District 99	Independent Party
+TX House District 101 (Independent Party)	1	TX House District 101	Independent Party
+TX House District 102 (Independent Party)	1	TX House District 102	Independent Party
+TX House District 103 (Independent Party)	1	TX House District 103	Independent Party
+TX House District 104 (Independent Party)	1	TX House District 104	Independent Party
+TX House District 105 (Independent Party)	1	TX House District 105	Independent Party
+TX House District 106 (Independent Party)	1	TX House District 106	Independent Party
+TX House District 107 (Independent Party)	1	TX House District 107	Independent Party
+TX House District 108 (Independent Party)	1	TX House District 108	Independent Party
+TX House District 109 (Independent Party)	1	TX House District 109	Independent Party
+TX House District 111 (Independent Party)	1	TX House District 111	Independent Party
+TX House District 112 (Independent Party)	1	TX House District 112	Independent Party
+TX House District 113 (Independent Party)	1	TX House District 113	Independent Party
+TX House District 114 (Independent Party)	1	TX House District 114	Independent Party
+TX House District 115 (Independent Party)	1	TX House District 115	Independent Party
+TX House District 116 (Independent Party)	1	TX House District 116	Independent Party
+TX House District 117 (Independent Party)	1	TX House District 117	Independent Party
+TX House District 118 (Independent Party)	1	TX House District 118	Independent Party
+TX House District 119 (Independent Party)	1	TX House District 119	Independent Party
+TX House District 121 (Independent Party)	1	TX House District 121	Independent Party
+TX House District 122 (Independent Party)	1	TX House District 122	Independent Party
+TX House District 123 (Independent Party)	1	TX House District 123	Independent Party
+TX House District 124 (Independent Party)	1	TX House District 124	Independent Party
+TX House District 125 (Independent Party)	1	TX House District 125	Independent Party
+TX House District 126 (Independent Party)	1	TX House District 126	Independent Party
+TX House District 127 (Independent Party)	1	TX House District 127	Independent Party
+TX House District 128 (Independent Party)	1	TX House District 128	Independent Party
+TX House District 129 (Independent Party)	1	TX House District 129	Independent Party
+TX House District 131 (Independent Party)	1	TX House District 131	Independent Party
+TX House District 132 (Independent Party)	1	TX House District 132	Independent Party
+TX House District 133 (Independent Party)	1	TX House District 133	Independent Party
+TX House District 134 (Independent Party)	1	TX House District 134	Independent Party
+TX House District 135 (Independent Party)	1	TX House District 135	Independent Party
+TX House District 136 (Independent Party)	1	TX House District 136	Independent Party
+TX House District 137 (Independent Party)	1	TX House District 137	Independent Party
+TX House District 138 (Independent Party)	1	TX House District 138	Independent Party
+TX House District 139 (Independent Party)	1	TX House District 139	Independent Party
+TX House District 141 (Independent Party)	1	TX House District 141	Independent Party
+TX House District 142 (Independent Party)	1	TX House District 142	Independent Party
+TX House District 143 (Independent Party)	1	TX House District 143	Independent Party
+TX House District 144 (Independent Party)	1	TX House District 144	Independent Party
+TX House District 145 (Independent Party)	1	TX House District 145	Independent Party
+TX House District 146 (Independent Party)	1	TX House District 146	Independent Party
+TX House District 147 (Independent Party)	1	TX House District 147	Independent Party
+TX House District 148 (Independent Party)	1	TX House District 148	Independent Party
+TX House District 149 (Independent Party)	1	TX House District 149	Independent Party
+TX Senate District 1 (Independent Party)	1	TX Senate District 1	Independent Party
+TX Senate District 2 (Independent Party)	1	TX Senate District 2	Independent Party
+TX Senate District 3 (Independent Party)	1	TX Senate District 3	Independent Party
+TX Senate District 4 (Independent Party)	1	TX Senate District 4	Independent Party
+TX Senate District 5 (Independent Party)	1	TX Senate District 5	Independent Party
+TX Senate District 6 (Independent Party)	1	TX Senate District 6	Independent Party
+TX Senate District 7 (Independent Party)	1	TX Senate District 7	Independent Party
+TX Senate District 8 (Independent Party)	1	TX Senate District 8	Independent Party
+TX Senate District 9 (Independent Party)	1	TX Senate District 9	Independent Party
+TX Senate District 10 (Independent Party)	1	TX Senate District 10	Independent Party
+TX Senate District 11 (Independent Party)	1	TX Senate District 11	Independent Party
+TX Senate District 12 (Independent Party)	1	TX Senate District 12	Independent Party
+TX Senate District 13 (Independent Party)	1	TX Senate District 13	Independent Party
+TX Senate District 14 (Independent Party)	1	TX Senate District 14	Independent Party
+TX Senate District 15 (Independent Party)	1	TX Senate District 15	Independent Party
+TX Senate District 16 (Independent Party)	1	TX Senate District 16	Independent Party
+TX Senate District 17 (Independent Party)	1	TX Senate District 17	Independent Party
+TX Senate District 18 (Independent Party)	1	TX Senate District 18	Independent Party
+TX Senate District 19 (Independent Party)	1	TX Senate District 19	Independent Party
+TX Senate District 20 (Independent Party)	1	TX Senate District 20	Independent Party
+TX Senate District 21 (Independent Party)	1	TX Senate District 21	Independent Party
+TX Senate District 22 (Independent Party)	1	TX Senate District 22	Independent Party
+TX Senate District 23 (Independent Party)	1	TX Senate District 23	Independent Party
+TX Senate District 24 (Independent Party)	1	TX Senate District 24	Independent Party
+TX Senate District 25 (Independent Party)	1	TX Senate District 25	Independent Party
+TX Senate District 26 (Independent Party)	1	TX Senate District 26	Independent Party
+TX Senate District 27 (Independent Party)	1	TX Senate District 27	Independent Party
+TX Senate District 28 (Independent Party)	1	TX Senate District 28	Independent Party
+TX Senate District 29 (Independent Party)	1	TX Senate District 29	Independent Party
+TX Senate District 30 (Independent Party)	1	TX Senate District 30	Independent Party
+TX Senate District 31 (Independent Party)	1	TX Senate District 31	Independent Party
+US House TX District 1 (Independent Party)	1	US House TX District 1	Independent Party
+US House TX District 2 (Independent Party)	1	US House TX District 2	Independent Party
+US House TX District 3 (Independent Party)	1	US House TX District 3	Independent Party
+US House TX District 4 (Independent Party)	1	US House TX District 4	Independent Party
+US House TX District 5 (Independent Party)	1	US House TX District 5	Independent Party
+US House TX District 6 (Independent Party)	1	US House TX District 6	Independent Party
+US House TX District 7 (Independent Party)	1	US House TX District 7	Independent Party
+US House TX District 8 (Independent Party)	1	US House TX District 8	Independent Party
+US House TX District 9 (Independent Party)	1	US House TX District 9	Independent Party
+US House TX District 10 (Independent Party)	1	US House TX District 10	Independent Party
+US House TX District 11 (Independent Party)	1	US House TX District 11	Independent Party
+US House TX District 12 (Independent Party)	1	US House TX District 12	Independent Party
+US House TX District 13 (Independent Party)	1	US House TX District 13	Independent Party
+US House TX District 14 (Independent Party)	1	US House TX District 14	Independent Party
+US House TX District 15 (Independent Party)	1	US House TX District 15	Independent Party
+US House TX District 16 (Independent Party)	1	US House TX District 16	Independent Party
+US House TX District 17 (Independent Party)	1	US House TX District 17	Independent Party
+US House TX District 18 (Independent Party)	1	US House TX District 18	Independent Party
+US House TX District 19 (Independent Party)	1	US House TX District 19	Independent Party
+US House TX District 20 (Independent Party)	1	US House TX District 20	Independent Party
+US House TX District 21 (Independent Party)	1	US House TX District 21	Independent Party
+US House TX District 22 (Independent Party)	1	US House TX District 22	Independent Party
+US House TX District 23 (Independent Party)	1	US House TX District 23	Independent Party
+US House TX District 24 (Independent Party)	1	US House TX District 24	Independent Party
+US House TX District 25 (Independent Party)	1	US House TX District 25	Independent Party
+US House TX District 26 (Independent Party)	1	US House TX District 26	Independent Party
+US House TX District 27 (Independent Party)	1	US House TX District 27	Independent Party
+US House TX District 28 (Independent Party)	1	US House TX District 28	Independent Party
+US House TX District 29 (Independent Party)	1	US House TX District 29	Independent Party
+US House TX District 30 (Independent Party)	1	US House TX District 30	Independent Party
+US House TX District 31 (Independent Party)	1	US House TX District 31	Independent Party
+US House TX District 32 (Independent Party)	1	US House TX District 32	Independent Party
+US House TX District 33 (Independent Party)	1	US House TX District 33	Independent Party
+US House TX District 34 (Independent Party)	1	US House TX District 34	Independent Party
+US House TX District 35 (Independent Party)	1	US House TX District 35	Independent Party
+US House TX District 36 (Independent Party)	1	US House TX District 36	Independent Party
+US President (TX) (Independent Party)	1	US President (TX)	Independent Party
+Railroad Commissioner (Independent Party)	1	Railroad Commissioner	Independent Party
+TX House District 100 (Independent Party)	1	TX House District 100	Independent Party
+TX House District 110 (Independent Party)	1	TX House District 110	Independent Party
+TX House District 120 (Independent Party)	1	TX House District 120	Independent Party
+TX House District 130 (Independent Party)	1	TX House District 130	Independent Party
+TX House District 140 (Independent Party)	1	TX House District 140	Independent Party
+TX House District 150 (Independent Party)	1	TX House District 150	Independent Party
+TX Governor (Independent Party)	1	TX Governor	Independent Party
+US Senate TX (Independent Party)	1	US Senate TX	Independent Party
+TX Attorney General (Independent Party)	1	TX Attorney General	Independent Party
+TX Lieutenant Governor (Independent Party)	1	TX Lieutenant Governor	Independent Party
+TX Comptroller of Public Accounts (Independent Party)	1	TX Comptroller of Public Accounts	Independent Party
+TX Commissioner of the General Land Office (Independent Party)	1	TX Commissioner of the General Land Office	Independent Party
+TX Commissioner of Agriculture (Independent Party)	1	TX Commissioner of Agriculture	Independent Party
+TX Treasurer (Independent Party)	1	TX Treasurer	Independent Party
+TX Secretary of State (Independent Party)	1	TX Secretary of State	Independent Party
