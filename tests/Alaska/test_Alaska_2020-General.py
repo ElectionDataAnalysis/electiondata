@@ -5,7 +5,7 @@ def test_data_exists(dbname):
     assert e.data_exists("2020 Primary", "Colorado", dbname=dbname)
 
 
-def test_co_presidential_20(dbname):
+def test_ak_presidential_20(dbname):
     assert (
         e.contest_total(
             "2020 Primary",
@@ -17,7 +17,7 @@ def test_co_presidential_20(dbname):
     )
 
 
-def test_co_statewide_totals_20(dbname):
+def test_ak_statewide_totals_20(dbname):
     assert (
         e.contest_total(
             "2020 Primary",
@@ -29,7 +29,7 @@ def test_co_statewide_totals_20(dbname):
     )
 
 
-def test_co_senate_totals_20(dbname):
+def test_ak_senate_totals_20(dbname):
     assert (
         e.contest_total(
             "2020 Primary",
@@ -41,7 +41,7 @@ def test_co_senate_totals_20(dbname):
     )
 
 
-def test_co_rep_20(dbname):
+def test_ak_rep_20(dbname):
     assert (
         e.contest_total(
             "2020 Primary",

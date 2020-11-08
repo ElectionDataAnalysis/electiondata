@@ -5,7 +5,7 @@ def test_data_exists(dbname):
     assert e.data_exists("2016 General", "Colorado", dbname=dbname)
 
 
-def test_co_presidential_16(dbname):
+def test_ak_presidential_16(dbname):
     assert (
         e.contest_total(
             "2016 General",
@@ -17,7 +17,7 @@ def test_co_presidential_16(dbname):
     )
 
 
-def test_co_statewide_totals_16(dbname):
+def test_ak_statewide_totals_16(dbname):
     assert (
         e.contest_total(
             "2016 General",
@@ -29,7 +29,7 @@ def test_co_statewide_totals_16(dbname):
     )
 
 
-def test_co_senate_totals_16(dbname):
+def test_ak_senate_totals_16(dbname):
     assert (
         e.contest_total(
             "2016 General",
@@ -41,7 +41,7 @@ def test_co_senate_totals_16(dbname):
     )
 
 
-def test_co_rep_16(dbname):
+def test_ak_rep_16(dbname):
     assert (
         e.contest_total(
             "2016 General",
