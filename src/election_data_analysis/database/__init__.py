@@ -768,7 +768,7 @@ def remove_vote_counts(connection, cursor, id: int, active_confirm: bool = True)
         )
     # if active_confirm is False, consider it confirmed.
     else:
-        confirm == "y"
+        confirm = "y"
     if confirm == "y":
         try:
             q = 'DELETE FROM "VoteCount" where "_datafile_Id"=%s;Delete from _datafile where "Id"=%s;'
