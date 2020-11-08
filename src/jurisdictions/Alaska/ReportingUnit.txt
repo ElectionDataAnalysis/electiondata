@@ -59,10 +59,8 @@ Alaska;AK Senate District 17	state-senate
 Alaska;AK Senate District 18	state-senate
 Alaska;AK Senate District 19	state-senate
 Alaska;AK Senate District 20	state-senate
-
 Alaska;US House AK District 1	congressional
 Alaska	state
-
 Alaska;AK House District 1;Aurora	precinct
 Alaska;AK House District 1;Fairbanks No. 1	precinct
 Alaska;AK House District 1;Fairbanks No. 2	precinct
@@ -507,84 +505,124 @@ Alaska;AK House District 40;Wainwright	precinct
 Alaska;AK House District 40;Allakaket	precinct
 Alaska;AK House District 40;Bettles	precinct
 Alaska;AK House District 40;Hughes	precinct
-
-Alaska;AK House District 1;Question	provisional
 Alaska;AK House District 1;Question	provisional
 Alaska;AK House District 10;Question	provisional
-Alaska;AK House District 10;Question	provisional
-Alaska;AK House District 11;Question	provisional
 Alaska;AK House District 11;Question	provisional
 Alaska;AK House District 12;Question	provisional
-Alaska;AK House District 12;Question	provisional
-Alaska;AK House District 13;Question	provisional
 Alaska;AK House District 13;Question	provisional
 Alaska;AK House District 14;Question	provisional
-Alaska;AK House District 14;Question	provisional
-Alaska;AK House District 15;Question	provisional
 Alaska;AK House District 15;Question	provisional
 Alaska;AK House District 16;Question	provisional
-Alaska;AK House District 16;Question	provisional
-Alaska;AK House District 17;Question	provisional
 Alaska;AK House District 17;Question	provisional
 Alaska;AK House District 18;Question	provisional
-Alaska;AK House District 18;Question	provisional
-Alaska;AK House District 19;Question	provisional
 Alaska;AK House District 19;Question	provisional
 Alaska;AK House District 2;Question	provisional
-Alaska;AK House District 2;Question	provisional
-Alaska;AK House District 20;Question	provisional
 Alaska;AK House District 20;Question	provisional
 Alaska;AK House District 21;Question	provisional
-Alaska;AK House District 21;Question	provisional
-Alaska;AK House District 22;Question	provisional
 Alaska;AK House District 22;Question	provisional
 Alaska;AK House District 23;Question	provisional
-Alaska;AK House District 23;Question	provisional
-Alaska;AK House District 24;Question	provisional
 Alaska;AK House District 24;Question	provisional
 Alaska;AK House District 25;Question	provisional
-Alaska;AK House District 25;Question	provisional
-Alaska;AK House District 26;Question	provisional
 Alaska;AK House District 26;Question	provisional
 Alaska;AK House District 27;Question	provisional
-Alaska;AK House District 27;Question	provisional
-Alaska;AK House District 28;Question	provisional
 Alaska;AK House District 28;Question	provisional
 Alaska;AK House District 29;Question	provisional
-Alaska;AK House District 29;Question	provisional
-Alaska;AK House District 3;Question	provisional
 Alaska;AK House District 3;Question	provisional
 Alaska;AK House District 30;Question	provisional
-Alaska;AK House District 30;Question	provisional
-Alaska;AK House District 31;Question	provisional
 Alaska;AK House District 31;Question	provisional
 Alaska;AK House District 32;Question	provisional
-Alaska;AK House District 32;Question	provisional
-Alaska;AK House District 33;Question	provisional
 Alaska;AK House District 33;Question	provisional
 Alaska;AK House District 34;Question	provisional
-Alaska;AK House District 34;Question	provisional
-Alaska;AK House District 35;Question	provisional
 Alaska;AK House District 35;Question	provisional
 Alaska;AK House District 36;Question	provisional
-Alaska;AK House District 36;Question	provisional
-Alaska;AK House District 37;Question	provisional
 Alaska;AK House District 37;Question	provisional
 Alaska;AK House District 38;Question	provisional
-Alaska;AK House District 38;Question	provisional
-Alaska;AK House District 39;Question	provisional
 Alaska;AK House District 39;Question	provisional
 Alaska;AK House District 4;Question	provisional
-Alaska;AK House District 4;Question	provisional
-Alaska;AK House District 40;Question	provisional
 Alaska;AK House District 40;Question	provisional
 Alaska;AK House District 5;Question	provisional
-Alaska;AK House District 5;Question	provisional
-Alaska;AK House District 6;Question	provisional
 Alaska;AK House District 6;Question	provisional
 Alaska;AK House District 7;Question	provisional
-Alaska;AK House District 7;Question	provisional
-Alaska;AK House District 8;Question	provisional
 Alaska;AK House District 8;Question	provisional
 Alaska;AK House District 9;Question	provisional
-Alaska;AK House District 9;Question	provisional
+Alaska;HD99 Fed Overseas Absentee	absentee
+Alaska;AK House District 1;Absentee	absentee
+Alaska;AK House District 2;Absentee	absentee
+Alaska;AK House District 3;Absentee	absentee
+Alaska;AK House District 4;Absentee	absentee
+Alaska;AK House District 5;Absentee	absentee
+Alaska;AK House District 7;Absentee	absentee
+Alaska;AK House District 8;Absentee	absentee
+Alaska;AK House District 10;Absentee	absentee
+Alaska;AK House District 11;Absentee	absentee
+Alaska;AK House District 12;Absentee	absentee
+Alaska;AK House District 13;Absentee	absentee
+Alaska;AK House District 14;Absentee	absentee
+Alaska;AK House District 15;Absentee	absentee
+Alaska;AK House District 16;Absentee	absentee
+Alaska;AK House District 17;Absentee	absentee
+Alaska;AK House District 18;Absentee	absentee
+Alaska;AK House District 19;Absentee	absentee
+Alaska;AK House District 20;Absentee	absentee
+Alaska;AK House District 21;Absentee	absentee
+Alaska;AK House District 22;Absentee	absentee
+Alaska;AK House District 23;Absentee	absentee
+Alaska;AK House District 24;Absentee	absentee
+Alaska;AK House District 25;Absentee	absentee
+Alaska;AK House District 26;Absentee	absentee
+Alaska;AK House District 27;Absentee	absentee
+Alaska;AK House District 28;Absentee	absentee
+Alaska;AK House District 29;Absentee	absentee
+Alaska;AK House District 30;Absentee	absentee
+Alaska;AK House District 31;Absentee	absentee
+Alaska;AK House District 33;Absentee	absentee
+Alaska;AK House District 34;Absentee	absentee
+Alaska;AK House District 35;Absentee	absentee
+Alaska;AK House District 36;Absentee	absentee
+Alaska;AK House District 38;Absentee	absentee
+Alaska;AK House District 1;Early Voting	early
+Alaska;AK House District 2;Early Voting	early
+Alaska;AK House District 3;Early Voting	early
+Alaska;AK House District 4;Early Voting	early
+Alaska;AK House District 5;Early Voting	early
+Alaska;AK House District 7;Early Voting	early
+Alaska;AK House District 8;Early Voting	early
+Alaska;AK House District 10;Early Voting	early
+Alaska;AK House District 11;Early Voting	early
+Alaska;AK House District 12;Early Voting	early
+Alaska;AK House District 13;Early Voting	early
+Alaska;AK House District 14;Early Voting	early
+Alaska;AK House District 15;Early Voting	early
+Alaska;AK House District 16;Early Voting	early
+Alaska;AK House District 17;Early Voting	early
+Alaska;AK House District 18;Early Voting	early
+Alaska;AK House District 19;Early Voting	early
+Alaska;AK House District 20;Early Voting	early
+Alaska;AK House District 21;Early Voting	early
+Alaska;AK House District 22;Early Voting	early
+Alaska;AK House District 23;Early Voting	early
+Alaska;AK House District 24;Early Voting	early
+Alaska;AK House District 25;Early Voting	early
+Alaska;AK House District 26;Early Voting	early
+Alaska;AK House District 27;Early Voting	early
+Alaska;AK House District 28;Early Voting	early
+Alaska;AK House District 29;Early Voting	early
+Alaska;AK House District 30;Early Voting	early
+Alaska;AK House District 31;Early Voting	early
+Alaska;AK House District 33;Early Voting	early
+Alaska;AK House District 34;Early Voting	early
+Alaska;AK House District 35;Early Voting	early
+Alaska;AK House District 36;Early Voting	early
+Alaska;AK House District 38;Early Voting	early
+Alaska;AK House District 9;Absentee	absentee
+Alaska;AK House District 6;Absentee	absentee
+Alaska;AK House District 40;Absentee	absentee
+Alaska;AK House District 39;Absentee	absentee
+Alaska;AK House District 37;Absentee	absentee
+Alaska;AK House District 32;Absentee	absentee
+Alaska;AK House District 9;Early Voting	early
+Alaska;AK House District 6;Early Voting	early
+Alaska;AK House District 40;Early Voting	early
+Alaska;AK House District 39;Early Voting	early
+Alaska;AK House District 37;Early Voting	early
+Alaska;AK House District 32;Early Voting	early

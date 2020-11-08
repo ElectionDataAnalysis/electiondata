@@ -39,7 +39,7 @@ AK House District 37	1	AK House District 37
 AK House District 38	1	AK House District 38
 AK House District 39	1	AK House District 39
 AK House District 40	1	AK House District 40
-AK Senate District 1	1	AK Senate District 1
+AK Senate District A	1	AK Senate District 1
 AK Senate District 2	1	AK Senate District 2
 AK Senate District 3	1	AK Senate District 3
 AK Senate District 4	1	AK Senate District 4
