@@ -125,10 +125,19 @@ Election	2020 General	2020 General
 Election	2020 Primary	2020 Primary
 Election	2018 General	2018 General
 Election	2016 General	2016 General
+
 Party	Democratic Party	DEM
 Party	Republican Party	REP
-Party	Green Party	Green Party
+Party	Green Party	GRE
 Party	Libertarian Party	LIB
+Party	Constitution Party	CON
+Party	Independence Party	AI
+
+Democratic Party
+Republican Party
+Green Party
+Libertarian Party
+Constitution Party
 
 CountItemType total Votes
 
@@ -1031,7 +1040,7 @@ Candidate	Miller, Joe	Miller, Joe
 Candidate	Millett, Charisse E.	Millett, Charisse E.
 Candidate	Morris, Julie M.	Morris  Julie M. - R
 Candidate	Moto, Calvin D. II	Moto  Calvin D. II - R
-Candidate	MuÃ±oz, Cathy	MuÃ±oz, Cathy
+Candidate	Muñoz, Cathy	Muñoz, Cathy
 Candidate	Murkowski, Lisa	Murkowski, Lisa
 Candidate	Myers, J. R.	Myers, J. R.
 Candidate	Myers, Robert H. Jr.	Myers  Robert H. Jr. - R
