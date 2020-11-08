@@ -2,4 +2,6 @@ Name
 Democratic Party
 Republican Party
 Green Party
+Independence Party
 Libertarian Party
+Constitution Party
