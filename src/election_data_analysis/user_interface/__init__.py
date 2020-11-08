@@ -1056,8 +1056,12 @@ def election_juris_list(dir_path: str) -> list:
                 header="election_data_analysis",
                 required_keys=["election", "top_reporting_unit"],
             )
+            # if parameters were read without error
             if not err:
-                ej_list.append((d["election"], d["top_reporting_unit"]))
+                # and if the pair is not already in the list
+                if (d["election"], d["top_reporting_unit"]) not in ej_list:
+                    # append the pair from the param file to the list
+                    ej_list.append((d["election"], d["top_reporting_unit"]))
     return ej_list
 
 
