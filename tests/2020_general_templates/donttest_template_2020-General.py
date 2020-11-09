@@ -13,6 +13,7 @@ jurisdiction = 'Pennsylvania'
 abbr = 'PA'
 single_vote_type = 'absentee'  # pick any one from your file
 single_county = 'Pennsylvania;Philadelphia County'  # pick any one from your file
+county_type = "county"   # unless major subdivision is something else, e.g. 'parish' for Louisiana
 
 def test_data_exists(dbname):
     assert e.data_exists(election,jurisdiction,dbname=dbname)
@@ -23,6 +24,7 @@ def test_presidential(dbname):
         jurisdiction,
         f"US President ({abbr})",
         dbname=dbname,
+        sub_unit_type=county_type,
         )
         == 6422156
     )
@@ -33,6 +35,7 @@ def test_statewide_totals(dbname):
         jurisdiction,
         f"{abbr} Auditor General",
         dbname=dbname,
+        sub_unit_type=county_type,
         )
         == 6274473
     )
@@ -43,6 +46,7 @@ def test_congressional_totals(dbname):
         jurisdiction,
         f"US House {abbr} District 16",
         dbname=dbname,
+        sub_unit_type=county_type,
         )
         == 315704
     )
@@ -53,6 +57,7 @@ def test_state_senate_totals(dbname):
         jurisdiction,
         f"{abbr} Senate District 35",
         dbname=dbname,
+        sub_unit_type=county_type,
         )
         == 122414
     )
@@ -64,6 +69,7 @@ def test_state_house_totals(dbname):
         jurisdiction,
         f"{abbr} House District 116",
         dbname=dbname,
+        sub_unit_type=county_type,
         )
         == 25615
     )
@@ -84,6 +90,7 @@ def test_count_type_subtotal(dbname):
         f"US President ({abbr})",
         single_vote_type,
         dbname=dbname,
+        sub_unit_type=county_type,
         )
         == 2253712
     )

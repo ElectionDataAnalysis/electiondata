@@ -1629,8 +1629,9 @@ def aggregate_results(
         by_vote_type,
         dbname=None,
         vote_type=None,
-        county=None,
-        contest=None,
+        sub_unit: Optional[str] = None,
+        contest: Optional[str] = None,
+        sub_unit_type: str = "county",
 ):
     # using the analyzer gives us access to DB session
     empty_df_with_good_cols = pd.DataFrame(columns=["contest", "count"])
@@ -1663,7 +1664,7 @@ def aggregate_results(
     df, err_str = db.export_rollup_from_db(
         cursor=cursor,
         top_ru=jurisdiction,
-        sub_unit_type="county",
+        sub_unit_type=sub_unit_type,
         contest_type=contest_type,
         datafile_list=datafile_list,
         by="Id",
@@ -1677,7 +1678,7 @@ def aggregate_results(
         df, err_str = db.export_rollup_from_db(
             cursor=cursor,
             top_ru=jurisdiction,
-            sub_unit_type="county",
+            sub_unit_type=sub_unit_type,
             contest_type=contest_type,
             datafile_list=datafile_list,
             by="Id",
@@ -1689,8 +1690,8 @@ def aggregate_results(
         return empty_df_with_good_cols
     if vote_type:
         df = df[df.count_item_type == vote_type]
-    if county:
-        df = df[df.reporting_unit == county]
+    if sub_unit:
+        df = df[df.reporting_unit == sub_unit]
     return df
 
 
@@ -1747,12 +1748,29 @@ def contest_total(
         dbname=None,
         vote_type=None,
         county=None,
+        sub_unit_type: str = "county"
 ):
     df_candidate = aggregate_results(
-        election, jurisdiction, "Candidate", False, dbname=dbname, vote_type=vote_type, county=county
+        election,
+        jurisdiction,
+        "Candidate",
+        False,
+        dbname=dbname,
+        vote_type=vote_type,
+        sub_unit=county,
+        sub_unit_type=sub_unit_type,
+        contest=contest,
     )
     df_ballot = aggregate_results(
-        election, jurisdiction, "BallotMeasure", False, dbname=dbname, vote_type=vote_type, county=county
+        election,
+        jurisdiction,
+        "BallotMeasure",
+        False,
+        dbname=dbname,
+        vote_type=vote_type,
+        sub_unit=county,
+        sub_unit_type=sub_unit_type,
+        contest=contest,
     )
     df = pd.concat([df_candidate, df_ballot])
     df = df[df["contest"] == contest]
