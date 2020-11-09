@@ -224,6 +224,10 @@ def create_scatter(
         results["y"], results["y-election"], dfv.iloc[0]["Contest"]
     )
     results["y-title"] = ui.get_contest_type_display(y_title)
+    h_preliminary = db.is_preliminary(cursor, h_election_id, jurisdiction_id)
+    v_preliminary = db.is_preliminary(cursor, v_election_id, jurisdiction_id)
+    results["preliminary"] = h_preliminary or v_preliminary
+
     # only keep the ones where there are an (x, y) to graph
     to_keep = []
     for result in results["counts"]:
@@ -468,6 +472,9 @@ def create_bar(
             acted = "widened"
         results["votes_at_stake"] = f"Outlier {acted} margin by ~ {votes_at_stake}"
         results["margin"] = human_readable_numbers(results["margin_raw"])
+        results["preliminary"] = db.is_preliminary(
+            cursor, election_id, top_ru_id
+        )
 
         # display ballot info
         if multiple_ballot_types:
