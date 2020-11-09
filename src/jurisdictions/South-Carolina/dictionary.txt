@@ -5905,6 +5905,7 @@ CandidateContest	US House SC District 7	US House SC District 7
 CandidateContest	US House SC District 7	U.S. House of Representatives, District 7
 CandidateContest	US President (SC)	US President (SC)
 CandidateContest	US President (SC)	President
+CandidateContest	US President (SC)	President and Vice President
 CandidateContest	SC Governor	SC Governor
 CandidateContest	SC Governor	Governor and Lieutenant Governor
 CandidateContest	US Senate SC	U.S. Senate
@@ -5931,12 +5932,19 @@ Party	United Citizens Party	United Citizens Party
 Party	Republican Party	Republican Party
 Party	Republican Party	REP
 Party	Independence Party	Independence Party
+Party	Independence Party	IND
 Party	Constitution Party	Constitution Party
+Party	Constitution Party	CON
 Party	Alliance Party	Alliance Party
+Party	Alliance Party	ALN
 Party	Labor Party	Labor Party
+Party	Labor Party	LAB
 Party	Green Party	Green Party
+Party	Green Party	GRN
 Party	Libertarian Party	Libertarian Party
+Party	Libertarian Party	LIB
 Party	Working Families Party	Working Families Party
+Party	none or unknown	NON
 ReportingUnit	South Carolina;SC House District 1	South Carolina;SC House District 1
 ReportingUnit	South Carolina;SC House District 2	South Carolina;SC House District 2
 ReportingUnit	South Carolina;SC House District 3	South Carolina;SC House District 3
@@ -6600,4 +6608,133 @@ Candidate	Republican	Republican
 Candidate	American	American
 Candidate	Constitution	Constitution
 Candidate	Libertarian	Libertarian
-Party	none or unknown	none or unknown
+Candidate	Wm Dettmering III	Wm Dettmering III
+Candidate	Willie M Legette	Willie M Legette
+Candidate	Wes Climer	Wes Climer
+Candidate	Viresh Sinha	Viresh Sinha
+Candidate	Vincent Sheheen	Vincent Sheheen
+Candidate	Vincent E Wilson	Vincent E Wilson
+Candidate	Vimalkumar Jariwala	Vimalkumar Jariwala
+Candidate	Vic Dabney	Vic Dabney
+Candidate	Ty Washington	Ty Washington
+Candidate	Tony Cahill	Tony Cahill
+Candidate	Tommy Pope	Tommy Pope
+Candidate	Tom Young	Tom Young
+Candidate	Tom Davis	Tom Davis
+Candidate	Todd Rutherford	Todd Rutherford
+Candidate	Thomas McElveen	Thomas McElveen
+Candidate	Thomas J Riddle	Thomas J Riddle
+Candidate	Thomas C Alexander	Thomas C Alexander
+Candidate	Terry T Seawright	Terry T Seawright
+Candidate	Ted Vining	Ted Vining
+Candidate	Stewart O Jones	Stewart O Jones
+Candidate	Steven W Long	Steven W Long
+Candidate	Steve French	Steve French
+Candidate	Sterling McDiarmid	Sterling McDiarmid
+Candidate	Stephen Goldfinch	Stephen Goldfinch
+Candidate	Stephen Dreyfus	Stephen Dreyfus
+Candidate	Shirley A Green Fayson	Shirley A Green Fayson
+Candidate	Shedron Hook Williams	Shedron Hook Williams
+Candidate	Shane Martin	Shane Martin
+Candidate	Sean Bennett	Sean Bennett
+Candidate	Sandy Senn	Sandy Senn
+Candidate	Sandy McGarry	Sandy McGarry
+Candidate	Ryan McKenzie Arioli	Ryan McKenzie Arioli
+Candidate	Roque Rocky De La Fuente | Darcy G Richardson	Roque Rocky De La Fuente | Darcy G Richardson
+Candidate	Ronee De Canio	Ronee De Canio
+Candidate	Roger Kirby	Roger Kirby
+Candidate	Roger A Nutt	Roger A Nutt
+Candidate	Rodney Buncum	Rodney Buncum
+Candidate	Robbie Bryant	Robbie Bryant
+Candidate	Rick Martin	Rick Martin
+Candidate	Richard L Richie Yow	Richard L Richie Yow
+Candidate	Richard Hricik	Richard Hricik
+Candidate	Rex Rice	Rex Rice
+Candidate	Reid Carrico	Reid Carrico
+Candidate	Rebecca Niess Cingolani	Rebecca Niess Cingolani
+Candidate	Ram Mammadov	Ram Mammadov
+Candidate	Ralph Norman	Ralph Norman
+Candidate	Patrick B Haddon	Patrick B Haddon
+Candidate	Patricia Moore Pat Henegan	Patricia Moore Pat Henegan
+Candidate	Nikki Setzler	Nikki Setzler
+Candidate	Nathan Campbell	Nathan Campbell
+Candidate	Myron Samuels	Myron Samuels
+Candidate	Monica Danneman	Monica Danneman
+Candidate	Mitchell Siegel	Mitchell Siegel
+Candidate	Mike Gambrell	Mike Gambrell
+Candidate	Mike Childs	Mike Childs
+Candidate	Michael McCord	Michael McCord
+Candidate	Mia McLeod	Mia McLeod
+Candidate	Melissa Oremus	Melissa Oremus
+Candidate	Marlon Kimpson	Marlon Kimpson
+Candidate	Mark Hackett	Mark Hackett
+Candidate	Margie Bright Matthews	Margie Bright Matthews
+Candidate	Leon Winn	Leon Winn
+Candidate	Lawrence L Lee	Lawrence L Lee
+Candidate	Larry Grooms	Larry Grooms
+Candidate	Krystle Matthews	Krystle Matthews
+Candidate	Kim Nelson	Kim Nelson
+Candidate	Keith T Grey Sr	Keith T Grey Sr
+Candidate	Katrina Shealy	Katrina Shealy
+Candidate	Kathryn Roberts	Kathryn Roberts
+Candidate	Kathryn B Whitaker	Kathryn B Whitaker
+Candidate	Kathleen K Wright	Kathleen K Wright
+Candidate	Judith Polson	Judith Polson
+Candidate	Josh Kimbrell	Josh Kimbrell
+Candidate	Joseph R Biden | Kamala D Harris	Joseph R Biden | Kamala D Harris
+Candidate	Jose Villa	Jose Villa
+Candidate	John McCollum	John McCollum
+Candidate	John Lowe	John Lowe
+Candidate	John L Scott Jr	John L Scott Jr
+Candidate	Joe H Jefferson	Joe H Jefferson
+Candidate	Jo Jorgensen | Jeremy Spike Cohen	Jo Jorgensen | Jeremy Spike Cohen
+Candidate	Jevarus Howard	Jevarus Howard
+Candidate	Jennifer Brecheisen	Jennifer Brecheisen
+Candidate	Jeffrey Cila	Jeffrey Cila
+Candidate	James Pearman	James Pearman
+Candidate	Jaime Harrison	Jaime Harrison
+Candidate	Jackie Todd	Jackie Todd
+Candidate	Jack Logan	Jack Logan
+Candidate	Ivory T Thigpen	Ivory T Thigpen
+Candidate	Isaac Wilson	Isaac Wilson
+Candidate	Hugh Leatherman	Hugh Leatherman
+Candidate	Howie Hawkins | Angela Walker	Howie Hawkins | Angela Walker
+Candidate	Harvey Peeler	Harvey Peeler
+Candidate	Hao Wu	Hao Wu
+Candidate	Greg Hembree	Greg Hembree
+Candidate	Glenn Reese	Glenn Reese
+Candidate	Glenn Posey	Glenn Posey
+Candidate	Gerald Malloy	Gerald Malloy
+Candidate	Garry Smith	Garry Smith
+Candidate	Floyd Nicholson	Floyd Nicholson
+Candidate	Evelyn T Robinson	Evelyn T Robinson
+Candidate	Eunice Lehmacher	Eunice Lehmacher
+Candidate	Erin Mosley	Erin Mosley
+Candidate	Eric Erickson	Eric Erickson
+Candidate	Emily Cegledy	Emily Cegledy
+Candidate	Ed Sutton	Ed Sutton
+Candidate	Dwight A Loftis	Dwight A Loftis
+Candidate	Donald J Trump | Michael R Pence	Donald J Trump | Michael R Pence
+Candidate	Denise Waldrep	Denise Waldrep
+Candidate	Dawn Bingham	Dawn Bingham
+Candidate	David Ellison	David Ellison
+Candidate	David Davey Hiott	David Davey Hiott
+Candidate	Darrell Jackson	Darrell Jackson
+Candidate	Darath Mackie	Darath Mackie
+Candidate	Danny Verdin	Danny Verdin
+Candidate	Craig Gagnon	Craig Gagnon
+Candidate	Christopher Thibault	Christopher Thibault
+Candidate	Christine deVries	Christine deVries
+Candidate	Chip Campsen	Chip Campsen
+Candidate	Bruce W Bannister	Bruce W Bannister
+Candidate	Bruce Fischer	Bruce Fischer
+Candidate	Brad Jayne	Brad Jayne
+Candidate	Bill Brown	Bill Brown
+Candidate	Bill Bledsoe	Bill Bledsoe
+Candidate	Benjamin Smith	Benjamin Smith
+Candidate	Barb Nash	Barb Nash
+Candidate	Ashley Lawton	Ashley Lawton
+Candidate	Andrea Bejarano-Robinson	Andrea Bejarano-Robinson
+Candidate	Alex Thornton	Alex Thornton
+Candidate	Adair Ford Boroughs	Adair Ford Boroughs
+Candidate		

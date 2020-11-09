@@ -768,7 +768,7 @@ def remove_vote_counts(connection, cursor, id: int, active_confirm: bool = True)
         )
     # if active_confirm is False, consider it confirmed.
     else:
-        confirm == "y"
+        confirm = "y"
     if confirm == "y":
         try:
             q = 'DELETE FROM "VoteCount" where "_datafile_Id"=%s;Delete from _datafile where "Id"=%s;'
@@ -1557,3 +1557,13 @@ def data_file_download(cursor, election_id: int, reporting_unit_id: int) -> int:
         return cursor.fetchall()[0][0]
     except Exception as exc:
         return None
+
+
+def is_preliminary(cursor, election_id, jurisdiction_id):
+    """ get the preliminary flag from the _datafile table.
+    Since this flag doesn't exist yet, parsing the election name for
+    2020 because we expect all data for 2020 to be preliminary for awhile."""
+    election = name_from_id(cursor, "Election", election_id)
+    if election.startswith("2020 General"):
+        return True
+    return False

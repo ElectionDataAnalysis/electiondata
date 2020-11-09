@@ -396,6 +396,7 @@ ga_2018_bar_congressional = [
         "ballot_types": "Georgia provides data by vote type",
         "score": 2.954547891007076,
         "title": "Election Day Ballots Reported",
+        "preliminary": False,
     },
     {
         "jurisdiction": "Georgia",
@@ -470,6 +471,7 @@ ga_2018_bar_congressional = [
         "ballot_types": "Georgia provides data by vote type",
         "score": 2.7384929621481704,
         "title": "Early Ballots Reported",
+        "preliminary": False,
     },
     {
         "jurisdiction": "Georgia",
@@ -544,6 +546,7 @@ ga_2018_bar_congressional = [
         "ballot_types": "Georgia provides data by vote type",
         "score": 2.796871322532087,
         "title": "Total Ballots Reported",
+        "preliminary": False,
     },
 ]
 
@@ -607,6 +610,7 @@ nc_2018_bar_statehouse = [
         "ballot_types": "North Carolina provides data by vote type",
         "score": 1.5423714928458896,
         "title": "Election Day Ballots Reported",
+        "preliminary": False,
     },
     {
         "jurisdiction": "North Carolina",
@@ -667,6 +671,7 @@ nc_2018_bar_statehouse = [
         "ballot_types": "North Carolina provides data by vote type",
         "score": 1.9868516958497928,
         "title": "Early Ballots Reported",
+        "preliminary": False,
     },
     {
         "jurisdiction": "North Carolina",
@@ -727,6 +732,7 @@ nc_2018_bar_statehouse = [
         "ballot_types": "North Carolina provides data by vote type",
         "score": 1.523465328707447,
         "title": "Total Ballots Reported",
+        "preliminary": False,
     },
 ]
 
@@ -804,6 +810,7 @@ nc_2018_bar_congressional = [
         "ballot_types": "North Carolina provides data by vote type",
         "score": 2.3313165358687526,
         "title": "Absentee Mail Ballots Reported",
+        "preliminary": False,
     },
     {
         "jurisdiction": "North Carolina",
@@ -878,6 +885,7 @@ nc_2018_bar_congressional = [
         "ballot_types": "North Carolina provides data by vote type",
         "score": 2.3758572130853186,
         "title": "Early Ballots Reported",
+        "preliminary": False,
     },
     {
         "jurisdiction": "North Carolina",
@@ -952,6 +960,7 @@ nc_2018_bar_congressional = [
         "ballot_types": "North Carolina provides data by vote type",
         "score": 3.0842429254562234,
         "title": "Total Ballots Reported",
+        "preliminary": False,
     },
 ]
 
@@ -4342,6 +4351,7 @@ ga_2018_scatter_candidates = {
     "y-count_item_type": "total",
     "x-title": "Chris Carr - 2018 General - GA Attorney General",
     "y-title": "Charlie Bailey - 2018 General - GA Attorney General",
+    "preliminary": False,
 }
 ga_2018_scatter_candidates_votetype = {
     "jurisdiction": "Georgia",
@@ -5469,6 +5479,7 @@ ga_2018_scatter_candidates_votetype = {
     "y-count_item_type": "election-day",
     "x-title": "Stacey Abrams - 2018 General - GA Governor",
     "y-title": "Stacey Abrams - 2018 General - GA Governor",
+    "preliminary": False,
 }
 ga_multi_election = {
     "jurisdiction": "Georgia",
@@ -5565,8 +5576,9 @@ ga_multi_election = {
     "subdivision_type": "county",
     "x-count_item_type": "total",
     "y-count_item_type": "total",
-    "x-title": "US House GA District 14 - 2018 General - US House GA District 14",
-    "y-title": "US House GA District 14 - 2016 General - US House GA District 14",
+    "x-title": "US House GA District 14 - 2018 General",
+    "y-title": "US House GA District 14 - 2016 General",
+    "preliminary": False,
 }
 ga_2018_scatter_party = {
     "jurisdiction": "Georgia",
@@ -6216,8 +6228,9 @@ ga_2018_scatter_party = {
     "subdivision_type": "county",
     "x-count_item_type": "total",
     "y-count_item_type": "total",
-    "x-title": "Republican state-house - 2018 General - Republican state-house",
-    "y-title": "Democratic state-house - 2018 General - Democratic state-house",
+    "x-title": "Republican State House - 2018 General",
+    "y-title": "Democratic State House - 2018 General",
+    "preliminary": False,
 }
 ga_2018_scatter_party_votetype = {
     "jurisdiction": "Georgia",
@@ -7273,8 +7286,9 @@ ga_2018_scatter_party_votetype = {
     "subdivision_type": "county",
     "x-count_item_type": "absentee-mail",
     "y-count_item_type": "absentee-mail",
-    "x-title": "Republican state-house - 2018 General - Republican state-house",
+    "x-title": "Republican State House - 2018 General",
     "y-title": "Stacey Abrams - 2018 General - GA Governor",
+    "preliminary": False,
 }
 nc_2018_scatter_county_rollup = {
     "jurisdiction": "North Carolina",
@@ -7345,6 +7359,7 @@ nc_2018_scatter_county_rollup = {
     "y-count_item_type": "total",
     "x-title": "Mark Harris - 2018 General - US House NC District 9",
     "y-title": "Dan Mccready - 2018 General - US House NC District 9",
+    "preliminary": False,
 }
 ga_2018_candidate_search_display = [
     {

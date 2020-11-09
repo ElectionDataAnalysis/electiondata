@@ -6,7 +6,7 @@ Bob 'Again' Carney Jr.
 James Reibestein
 Jason Lewis
 John L. Berman
-Christopher Lovell Seymore, Sr.
+"Christopher Lovell Seymore, Sr."
 Tina Smith
 Ahmad R. Hassan
 Paula Overby
@@ -178,7 +178,7 @@ Aarica L. Coleman
 Greg Pulles
 Zina Alston-Fizer
 Ann Johnson Stewart
-Julie Dupré
+Julie DuprÃÂ©
 Jenny Rhoades
 Melisa Lopez Franzen
 Paul Anderson
@@ -239,7 +239,7 @@ Richard E. Rolling
 Jack Vizecky
 Nathan Schmalz
 Anthony Kadlec
-José Luciano
+JosÃÂ© Luciano
 Julie Bredeson
 Joe Tacheny
 Greg Gilbertson
@@ -347,7 +347,7 @@ Deval Patrick
 Tom Steyer
 Pete Buttigieg
 Amy Klobuchar
-Julián Castro
+JuliÃÂ¡n Castro
 John K. Delaney
 Marianne Williamson
 Bernie Sanders
@@ -821,7 +821,7 @@ Justin R. Anderson
 Paul Groneberg
 Randy C. Larson
 Joe McDonald
-Renée Cardarelle
+RenÃÂ©e Cardarelle
 Eric Lucero
 Margaret Fernandez
 Jerry Hertaus
@@ -861,7 +861,7 @@ Fred Statema
 Fue Lee
 Kelly Winsor
 Diane Loeffler
-Joseph Patiño
+Joseph PatiÃÂ±o
 Mohamud Noor
 Jeremy Hansen
 Frank Hornstein
@@ -1049,7 +1049,7 @@ James Austad
 Franklin D. Sindelir
 Roger Krause
 Bob Vogel
-Barbara Dröher Kline
+Barbara DrÃÂ¶her Kline
 Josh Gare
 Todd Lippert
 Danny O'Keefe
@@ -1627,7 +1627,7 @@ Sean A. Deringer
 Tom Kelly
 Judith Kelly
 Michael W. Zieska
-Richard Neil LaBute, Jr.
+"Richard Neil LaBute, Jr."
 Mary L. Wetter
 Greg Renneke
 Jane Remiger
@@ -1639,7 +1639,7 @@ Darwyn Bach
 Donald J. Trump and Michael R. Pence
 Hillary Clinton and Tim Kaine
 Darrell Castle and Scott Bradley
-Dan R. Vacek and Mark Elworth, Jr.
+"Dan R. Vacek and Mark Elworth, Jr."
 Alyson Kennedy and Osborne Hart
 Jill Stein and Howie Hawkins
 Rocky Roque De La Fuente and Michael Steinberg
@@ -1666,7 +1666,7 @@ Denise D. Reilly
 Michelle A. Larkin
 Randolph W. Peterson
 Larry Stauber Jr.
-Peter M. Reyes, Jr.
+"Peter M. Reyes, Jr."
 Matthew E. Johnson
 Heidi Schellhas
 Francis Connolly
@@ -2004,7 +2004,7 @@ Jerry L. Rapp
 Karen Hunt
 Michael F. Cleary
 Jon Schneider
-Bill Dropik, Jr.
+"Bill Dropik, Jr."
 Kenneth Douglas Rutten
 John Roper
 William (Bill) Groskreutz Jr.
@@ -2079,7 +2079,7 @@ Richard Lieberman
 Alma J. Wetzker
 Anne Taylor
 Peggy Flanagan
-Bryan P. Björnson
+Bryan P. BjÃÂ¶rnson
 Mary Shapiro
 Ben Sherlock
 Ron Erhardt
@@ -2088,7 +2088,7 @@ Paul Rosenthal
 Tim Johnson
 Linda Slocum
 Jessica Newville
-Margaret E. Martín
+Margaret E. MartÃÂ­n
 Gabe Barnett
 Abdimalik Askar
 Brian Rosenblatt
@@ -2470,7 +2470,7 @@ Dave Esselink
 Jack Swanson
 Todd O. Miller
 Russell Walker
-Jay Estling, Jr.
+"Jay Estling, Jr."
 Warren Ulvin
 Landon Olson
 Jason I. Metsa
@@ -2627,3 +2627,173 @@ Glen Kack
 Thomas J. Remmele
 Jerry Nelson
 Ryan Dowling
+"Roque ""Rocky"" De La Fuente"
+Howie Hawkins
+Kanye West
+Brock Pierce
+Gloria La Riva
+Alyson Kennedy
+Jo Jorgensen
+Zach Duckworth
+William A Johnston
+Tyler Kistner
+Tyler Becvar
+Tomas Settell
+Tom Sullivan
+Tom Shea
+Thomas Manninen
+Tamara 'Tami' Calhoun
+Sydney Jordan
+Susan Akland
+Sue Finney
+Steve 'Stoney' Preslicka
+Spencer Igo
+Sherry Schack
+Sharon Anderson
+Scott Simmons
+Scott Newman
+Sarah Kruger
+Sara Wolf
+Sara Flick
+Sandra Feist
+Sandra A. Jimenez
+Sahra Odowa
+Ross Tenneson
+Roque 'Rocky' De La Fuente and Darcy Richardson
+Ronald Ray Vogel
+Roger Steinkamp
+Robyn Smith
+Robert Farnsworth
+Rita Albrecht
+Renée Cardarelle
+Reed Perkins
+Randy Brock
+Ralph Kaehler
+Perry Nouis
+Paul Novotny
+Paul Brandmire
+Paul Babin
+Patricia Mueller
+Patricia Jirovec McArdell
+Pat Garofalo
+Nathan Nelson
+Michelle R. Benson
+Michelle Lee
+Michele Anderson
+Michael P. Goggin
+Megan Olson
+Matt Bruns
+Mathew J. Grossell
+Mary Holmberg
+Mariah de la Paz
+Marcus Harcus
+Lynn Herrick
+Lucia Marina Vogel
+Logan Kortgard
+Liz Boldon
+Lisa Pohlman
+Lisa Neal-Delgado
+Leonard Alan Roy
+Laura Wright
+Kurtis Fechtmeyer
+Kim Hicks
+Ken Fitzgerald
+Kelsey Waits
+Kelly Jahner-Byrne
+Katy Westlund
+Kate Luthner
+Karla Bigham
+Karen Attia
+Kaela Berg
+Justin Stofferahn
+Julie Dupré
+Julie Buria
+Julie A. Rosen
+Joshua Prine
+Joshua Fike
+Jose W. Jimenez
+Jordan Rasmusson
+Jordan Herzog
+Jordan Fontenello
+Jon Olson
+John R. Jasinski
+John M Poston
+John Holmberg
+John D. Huot
+Joe Thalman
+Joe Rosh
+Joe Moravchik
+Joe Garofalo
+Joe Abeyta
+Jill Abahsain
+Jeremy R. Miller
+Jeremiah Liend
+Jeffery W Backer
+Jeff Jiang
+Jeff Dotseth
+Jason Hoschette
+Jaden Partlow
+Jack Frechette
+Holly Link
+Heather Bakke
+Gretchen Piper
+Greg Copeland
+Georgia Dietz
+Gene P. Pelowski Jr.
+Gaylene Spolarich
+Gary Melin
+Gary Heyer
+Fernando Alvarado
+Erina Prom
+Erin Preese
+Eric Wessels
+Elliott Engen
+Elizabeth Bangert
+Duane Robert Quam
+Doria Drost
+Dori Trossen
+Diane Nguyen
+Diane Napper
+Dean Wm Mumbleau
+David Suby
+David Pulkrabek
+David Lislegard
+Dan Kessler
+Dale K. Lueck
+Cynthia Lonnquist
+Cindy Ansbacher
+Christopher Hogan
+Chris Wright
+Chris Brazelton
+Chris Baumberger
+Chris A. Eaton
+Charlotte Smith
+Chad R. Tschimperle
+Chad Hobot
+Carol Wenner
+Calvin Lee Carpenter
+Cal Schmock
+Caitlin Cahill
+Bryan P. Björnson
+Bruce D. Anderson
+Brian Raines
+Brian Pfarr
+Brett Rose
+Brent Krist
+Brad Kovach
+Bill Rood
+Benjamin Carollo
+Ben Schwanke
+Ashley Martinez-Perez
+Art Johnston
+Arlan Brinkmeier
+Arjun Kataria
+Antonio Nerios
+Andy Schuler
+Andrew J Hjelle
+Andrea Nelsen
+Amy Anderson
+Alexander Deputie
+Alex Herring
+Aleta Borrud
+Adam Charles Weeks

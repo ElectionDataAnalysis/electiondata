@@ -216,12 +216,18 @@ def create_scatter(
     )
     results["x-count_item_type"] = h_category
     results["y-count_item_type"] = v_category
-    results[
-        "x-title"
-    ] = f"""{results["x"]} - {results["x-election"]} - {dfh.iloc[0]["Contest"]}"""
-    results[
-        "y-title"
-    ] = f"""{results["y"]} - {results["y-election"]} - {dfv.iloc[0]["Contest"]}"""
+    x_title = dedupe_scatter_title(
+        results["x"], results["x-election"], dfh.iloc[0]["Contest"]
+    )
+    results["x-title"] = ui.get_contest_type_display(x_title)
+    y_title = dedupe_scatter_title(
+        results["y"], results["y-election"], dfv.iloc[0]["Contest"]
+    )
+    results["y-title"] = ui.get_contest_type_display(y_title)
+    h_preliminary = db.is_preliminary(cursor, h_election_id, jurisdiction_id)
+    v_preliminary = db.is_preliminary(cursor, v_election_id, jurisdiction_id)
+    results["preliminary"] = h_preliminary or v_preliminary
+
     # only keep the ones where there are an (x, y) to graph
     to_keep = []
     for result in results["counts"]:
@@ -466,6 +472,9 @@ def create_bar(
             acted = "widened"
         results["votes_at_stake"] = f"Outlier {acted} margin by ~ {votes_at_stake}"
         results["margin"] = human_readable_numbers(results["margin_raw"])
+        results["preliminary"] = db.is_preliminary(
+            cursor, election_id, top_ru_id
+        )
 
         # display ballot info
         if multiple_ballot_types:
@@ -1022,3 +1031,10 @@ def create_party_abbreviation(party):
         return "N/A"
     else:
         return (party.strip())[0].upper()
+
+
+def dedupe_scatter_title(category, election, contest):
+    title = f"{category} - {election}"
+    if category != contest:
+        title = f"{title} - {contest}"
+    return title

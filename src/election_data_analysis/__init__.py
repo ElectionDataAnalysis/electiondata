@@ -321,7 +321,7 @@ class DataLoader:
         ui.report(err, loc_dict)
         return err, success
 
-    def remove_data(self, election_id: int, juris_id: int) -> Optional[str]:
+    def remove_data(self, election_id: int, juris_id: int, active_confirm: bool) -> Optional[str]:
         """Remove from the db all data for the given <election_id> in the given <juris>"""
         # get connection & cursor
         connection = self.session.bind.raw_connection()
@@ -336,7 +336,7 @@ class DataLoader:
 
         # remove data from all those datafiles
         for idx in df_list:
-            db.remove_vote_counts(connection, cursor, idx)
+            db.remove_vote_counts(connection, cursor, idx, active_confirm)
         return None
 
 
@@ -1775,6 +1775,8 @@ def count_type_total(election, jurisdiction, contest, count_item_type, dbname=No
 def check_count_types_standard(election, jurisdiction, dbname=None):
     an = Analyzer(dbname=dbname)
     standard_ct_list = db.get_input_options(an.session,'count_item_type',False)
+    # don't want type "other"
+    standard_ct_list.remove("other")
     active = db.active_vote_types(an.session, election, jurisdiction)
     for vt in active:
         # if even one fails, count types are not standard
