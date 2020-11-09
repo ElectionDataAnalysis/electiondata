@@ -6216,8 +6216,8 @@ ga_2018_scatter_party = {
     "subdivision_type": "county",
     "x-count_item_type": "total",
     "y-count_item_type": "total",
-    "x-title": "Republican state-house - 2018 General",
-    "y-title": "Democratic state-house - 2018 General",
+    "x-title": "Republican State House - 2018 General",
+    "y-title": "Democratic State House - 2018 General",
 }
 ga_2018_scatter_party_votetype = {
     "jurisdiction": "Georgia",
@@ -7273,7 +7273,7 @@ ga_2018_scatter_party_votetype = {
     "subdivision_type": "county",
     "x-count_item_type": "absentee-mail",
     "y-count_item_type": "absentee-mail",
-    "x-title": "Republican state-house - 2018 General",
+    "x-title": "Republican State House - 2018 General",
     "y-title": "Stacey Abrams - 2018 General - GA Governor",
 }
 nc_2018_scatter_county_rollup = {
