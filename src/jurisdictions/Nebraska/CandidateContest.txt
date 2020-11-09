@@ -1,0 +1,60 @@
+Name	NumberElected	Office	PrimaryParty
+NE House District 1	1	NE House District 1	
+NE House District 2	1	NE House District 2	
+NE House District 3	1	NE House District 3	
+NE House District 4	1	NE House District 4	
+NE House District 5	1	NE House District 5	
+NE House District 6	1	NE House District 6	
+NE House District 7	1	NE House District 7	
+NE House District 8	1	NE House District 8	
+NE House District 9	1	NE House District 9	
+NE House District 10	1	NE House District 10	
+NE House District 11	1	NE House District 11	
+NE House District 12	1	NE House District 12	
+NE House District 13	1	NE House District 13	
+NE House District 14	1	NE House District 14	
+NE House District 15	1	NE House District 15	
+NE House District 16	1	NE House District 16	
+NE House District 17	1	NE House District 17	
+NE House District 18	1	NE House District 18	
+NE House District 19	1	NE House District 19	
+NE House District 20	1	NE House District 20	
+NE House District 21	1	NE House District 21	
+NE House District 22	1	NE House District 22	
+NE House District 23	1	NE House District 23	
+NE House District 24	1	NE House District 24	
+NE House District 25	1	NE House District 25	
+NE House District 26	1	NE House District 26	
+NE House District 27	1	NE House District 27	
+NE House District 28	1	NE House District 28	
+NE House District 29	1	NE House District 29	
+NE House District 30	1	NE House District 30	
+NE House District 31	1	NE House District 31	
+NE House District 32	1	NE House District 32	
+NE House District 33	1	NE House District 33	
+NE House District 34	1	NE House District 34	
+NE House District 35	1	NE House District 35	
+NE House District 36	1	NE House District 36	
+NE House District 37	1	NE House District 37	
+NE House District 38	1	NE House District 38	
+NE House District 39	1	NE House District 39	
+NE House District 40	1	NE House District 40	
+NE House District 41	1	NE House District 41	
+NE House District 42	1	NE House District 42	
+NE House District 43	1	NE House District 43	
+NE House District 44	1	NE House District 44	
+NE House District 45	1	NE House District 45	
+NE House District 46	1	NE House District 46	
+NE House District 47	1	NE House District 47	
+NE House District 48	1	NE House District 48	
+NE House District 49	1	NE House District 49	
+US House NE District 1	1	US House NE District 1	
+US House NE District 2	1	US House NE District 2	
+US House NE District 3	1	US House NE District 3	
+US President (NE)	1	US President (NE)	
+NE Governor	1	NE Governor	
+US Senate NE	1	US Senate NE	
+NE Attorney General	1	NE Attorney General	
+NE Lieutenant Governor	1	NE Lieutenant Governor	
+NE Treasurer	1	NE Treasurer	
+NE Secretary of State	1	NE Secretary of State	
