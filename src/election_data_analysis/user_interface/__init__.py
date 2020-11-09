@@ -1170,8 +1170,8 @@ def reload_juris_election(
     return
 
 
-# get mappings for a list to the contest type database labels
 def get_contest_type_mappings(filters: list) -> list:
+    """get mappings for a list to the contest type database labels"""
     contest_types = contest_type_mappings.items()
     for index, item in enumerate(filters):
         for contest_type in contest_types:
@@ -1181,10 +1181,21 @@ def get_contest_type_mappings(filters: list) -> list:
     return filters
 
 
-# get mappings for a list to the contest type database labels
 def get_contest_type_mapping(item: str) -> str:
+    """get mappings for a string to the contest type database labels"""
     contest_types = contest_type_mappings.items()
     for contest_type in contest_types:
         if contest_type[1] in item:
             return item.replace(contest_type[1], contest_type[0])
     return item
+
+
+def get_contest_type_display(item: str) -> str:
+    """get the user-friendly version of the contest_type"""
+    item_list = item.split(" ")
+    for index in range(len(item_list)):
+        for key in contest_type_mappings.keys():
+            if key == item_list[index]:
+                item_list[index] = contest_type_mappings[key] 
+                break
+    return " ".join(item_list)
