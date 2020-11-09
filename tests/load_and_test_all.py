@@ -46,6 +46,20 @@ def grab_ini_files(results_dir, path_to_repo):
         if os.path.isdir(copy_path):
             copy_tree(copy_path, results_dir)
 
+    par_files = [f for f in os.listdir(results_dir) if f[-4:] == ".ini"]
+
+    # if the results file not found, delete the .ini file & warn user
+    for par_file in par_files:
+        d, err = ui.get_runtime_parameters(
+            required_keys=["results_file"],
+            header="election_data_analysis",
+            param_file=os.path.join(results_dir, par_file),
+        )
+        # delete any .ini files whose results file is not found
+        if not os.path.isfile(os.path.join(results_dir,d["results_file"])):
+            print(f"File not found: {d['results_file']}")
+            os.remove(os.path.join(results_dir, par_file))
+    return
 
 def optional_remove(dl: eda.DataLoader, dir_path: str) -> (Optional[dict], bool):
     err = None
