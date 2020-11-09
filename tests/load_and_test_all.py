@@ -114,7 +114,7 @@ def get_testing_data(
     else:
         print(f"Tests will use data in existing directory: {Path(results_dir).absolute()}")
         if path_to_repo is None:
-            path_to_repo = Path(__file__).parents[1].absolute()
+            path_to_repo = Path(__file__).resolve().parents[1].absolute()
         grab_ini_files(results_dir, path_to_repo)
     return
 
