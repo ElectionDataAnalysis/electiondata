@@ -110,11 +110,11 @@ def create_rollup(
             )
 
         df, err_str = db.export_rollup_from_db(
-            cursor,
-            top_ru,
-            sub_rutype,
-            contest_type,
-            datafile_list,
+            cursor=cursor,
+            top_ru=top_ru,
+            sub_unit_type=sub_rutype,
+            contest_type=contest_type,
+            datafile_list=datafile_list,
             by=by,
             exclude_total=exclude_total,
             by_vote_type=by_vote_type,

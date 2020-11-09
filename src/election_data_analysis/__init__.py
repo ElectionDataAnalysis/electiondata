@@ -1630,6 +1630,7 @@ def aggregate_results(
         dbname=None,
         vote_type=None,
         county=None,
+        contest=None,
 ):
     # using the analyzer gives us access to DB session
     empty_df_with_good_cols = pd.DataFrame(columns=["contest", "count"])
@@ -1660,27 +1661,29 @@ def aggregate_results(
         return empty_df_with_good_cols
 
     df, err_str = db.export_rollup_from_db(
-        cursor,
-        jurisdiction,
-        "county",
-        contest_type,
-        datafile_list,
+        cursor=cursor,
+        top_ru=jurisdiction,
+        sub_unit_type="county",
+        contest_type=contest_type,
+        datafile_list=datafile_list,
         by="Id",
         exclude_total=True,
         by_vote_type=True,
+        contest=contest,
     )
     if df.empty:
         # TODO better logic? This is like throwing spaghetti at the wall
         # try without excluding total
         df, err_str = db.export_rollup_from_db(
-            cursor,
-            jurisdiction,
-            "county",
-            contest_type,
-            datafile_list,
+            cursor=cursor,
+            top_ru=jurisdiction,
+            sub_unit_type="county",
+            contest_type=contest_type,
+            datafile_list=datafile_list,
             by="Id",
             exclude_total=False,
             by_vote_type=True,
+            contest=contest,
         )
     if err_str or df.empty:
         return empty_df_with_good_cols
