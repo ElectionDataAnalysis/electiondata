@@ -63,11 +63,9 @@ CandidateContest	AK Senate District 20	SENATE DISTRICT T
 CandidateContest	US President (AK)	US PRESIDENT
 CandidateContest	US House AK District 1	US REPRESENTATIVE
 CandidateContest	US Senate AK	US SENATOR
-
 CandidateContest	US Senate AK	U.S. Senator''
 CandidateContest	US House AK District 1	U.S. Representative''
 CandidateContest	US President (AK)	U.S. President / Vice President''
-
 CandidateContest	AK Senate District 20	Senate District T''
 CandidateContest	AK Senate District 18	Senate District R''
 CandidateContest	AK Senate District 16	Senate District P''
@@ -79,7 +77,6 @@ CandidateContest	AK Senate District 8	Senate District H''
 CandidateContest	AK Senate District 6	Senate District F''
 CandidateContest	AK Senate District 4	Senate District D''
 CandidateContest	AK Senate District 2	Senate District B''
-
 CandidateContest	AK House District 9	House District 9''
 CandidateContest	AK House District 8	House District 8''
 CandidateContest	AK House District 7	House District 7''
@@ -120,27 +117,26 @@ CandidateContest	AK House District 12	House District 12''
 CandidateContest	AK House District 11	House District 11''
 CandidateContest	AK House District 10	House District 10''
 CandidateContest	AK House District 1	House District 1''
-
 Election	2020 General	2020 General
 Election	2020 Primary	2020 Primary
 Election	2018 General	2018 General
 Election	2016 General	2016 General
-
 Party	Democratic Party	DEM
 Party	Republican Party	REP
 Party	Green Party	GRE
 Party	Libertarian Party	LIB
 Party	Constitution Party	CON
 Party	Independence Party	AI
-
 Democratic Party
 Republican Party
 Green Party
 Libertarian Party
 Constitution Party
-
-CountItemType total Votes
-
+CountItemType	election-day	election-day
+CountItemType	absentee	Absentee
+CountItemType	provisional	Question
+CountItemType	early	Early Voting
+CountItemType	absentee-fwab	FWAB
 ReportingUnit	Alaska;AK House District 1	Alaska;AK House District 1
 ReportingUnit	Alaska;AK House District 2	Alaska;AK House District 2
 ReportingUnit	Alaska;AK House District 3	Alaska;AK House District 3
@@ -647,207 +643,51 @@ ReportingUnit	Alaska;AK House District 40;Wainwright	40-040 Wainwright
 ReportingUnit	Alaska;AK House District 40;Allakaket	40-326 Allakaket
 ReportingUnit	Alaska;AK House District 40;Bettles	40-328 Bettles
 ReportingUnit	Alaska;AK House District 40;Hughes	40-330 Hughes
-ReportingUnit	Alaska;HD99 Fed Overseas Absentee	HD99 Fed Overseas Absentee
 
-ReportingUnit	Alaska;AK House District 1;Absentee	District 1 - Absentee
-ReportingUnit	Alaska;AK House District 10;Absentee	District 10 - Absentee
-ReportingUnit	Alaska;AK House District 11;Absentee	District 11 - Absentee
-ReportingUnit	Alaska;AK House District 12;Absentee	District 12 - Absentee
-ReportingUnit	Alaska;AK House District 13;Absentee	District 13 - Absentee
-ReportingUnit	Alaska;AK House District 14;Absentee	District 14 - Absentee
-ReportingUnit	Alaska;AK House District 15;Absentee	District 15 - Absentee
-ReportingUnit	Alaska;AK House District 16;Absentee	District 16 - Absentee
-ReportingUnit	Alaska;AK House District 17;Absentee	District 17 - Absentee
-ReportingUnit	Alaska;AK House District 18;Absentee	District 18 - Absentee
-ReportingUnit	Alaska;AK House District 19;Absentee	District 19 - Absentee
-ReportingUnit	Alaska;AK House District 2;Absentee	District 2 - Absentee
-ReportingUnit	Alaska;AK House District 20;Absentee	District 20 - Absentee
-ReportingUnit	Alaska;AK House District 21;Absentee	District 21 - Absentee
-ReportingUnit	Alaska;AK House District 22;Absentee	District 22 - Absentee
-ReportingUnit	Alaska;AK House District 23;Absentee	District 23 - Absentee
-ReportingUnit	Alaska;AK House District 24;Absentee	District 24 - Absentee
-ReportingUnit	Alaska;AK House District 25;Absentee	District 25 - Absentee
-ReportingUnit	Alaska;AK House District 26;Absentee	District 26 - Absentee
-ReportingUnit	Alaska;AK House District 27;Absentee	District 27 - Absentee
-ReportingUnit	Alaska;AK House District 28;Absentee	District 28 - Absentee
-ReportingUnit	Alaska;AK House District 29;Absentee	District 29 - Absentee
-ReportingUnit	Alaska;AK House District 3;Absentee	District 3 - Absentee
-ReportingUnit	Alaska;AK House District 30;Absentee	District 30 - Absentee
-ReportingUnit	Alaska;AK House District 31;Absentee	District 31 - Absentee
-ReportingUnit	Alaska;AK House District 32;Absentee	District 32 - Absentee
-ReportingUnit	Alaska;AK House District 33;Absentee	District 33 - Absentee
-ReportingUnit	Alaska;AK House District 34;Absentee	District 34 - Absentee
-ReportingUnit	Alaska;AK House District 35;Absentee	District 35 - Absentee
-ReportingUnit	Alaska;AK House District 36;Absentee	District 36 - Absentee
-ReportingUnit	Alaska;AK House District 37;Absentee	District 37 - Absentee
-ReportingUnit	Alaska;AK House District 38;Absentee	District 38 - Absentee
-ReportingUnit	Alaska;AK House District 39;Absentee	District 39 - Absentee
-ReportingUnit	Alaska;AK House District 4;Absentee	District 4 - Absentee
-ReportingUnit	Alaska;AK House District 40;Absentee	District 40 - Absentee
-ReportingUnit	Alaska;AK House District 5;Absentee	District 5 - Absentee
-ReportingUnit	Alaska;AK House District 6;Absentee	District 6 - Absentee
-ReportingUnit	Alaska;AK House District 7;Absentee	District 7 - Absentee
-ReportingUnit	Alaska;AK House District 8;Absentee	District 8 - Absentee
-ReportingUnit	Alaska;AK House District 9;Absentee	District 9 - Absentee
-ReportingUnit	Alaska;AK House District 1;Early Voting	District 1 - Early Voting
-ReportingUnit	Alaska;AK House District 10;Early Voting	District 10 - Early Voting
-ReportingUnit	Alaska;AK House District 11;Early Voting	District 11 - Early Voting
-ReportingUnit	Alaska;AK House District 12;Early Voting	District 12 - Early Voting
-ReportingUnit	Alaska;AK House District 13;Early Voting	District 13 - Early Voting
-ReportingUnit	Alaska;AK House District 14;Early Voting	District 14 - Early Voting
-ReportingUnit	Alaska;AK House District 15;Early Voting	District 15 - Early Voting
-ReportingUnit	Alaska;AK House District 16;Early Voting	District 16 - Early Voting
-ReportingUnit	Alaska;AK House District 17;Early Voting	District 17 - Early Voting
-ReportingUnit	Alaska;AK House District 18;Early Voting	District 18 - Early Voting
-ReportingUnit	Alaska;AK House District 19;Early Voting	District 19 - Early Voting
-ReportingUnit	Alaska;AK House District 2;Early Voting	District 2 - Early Voting
-ReportingUnit	Alaska;AK House District 20;Early Voting	District 20 - Early Voting
-ReportingUnit	Alaska;AK House District 21;Early Voting	District 21 - Early Voting
-ReportingUnit	Alaska;AK House District 22;Early Voting	District 22 - Early Voting
-ReportingUnit	Alaska;AK House District 23;Early Voting	District 23 - Early Voting
-ReportingUnit	Alaska;AK House District 24;Early Voting	District 24 - Early Voting
-ReportingUnit	Alaska;AK House District 25;Early Voting	District 25 - Early Voting
-ReportingUnit	Alaska;AK House District 26;Early Voting	District 26 - Early Voting
-ReportingUnit	Alaska;AK House District 27;Early Voting	District 27 - Early Voting
-ReportingUnit	Alaska;AK House District 28;Early Voting	District 28 - Early Voting
-ReportingUnit	Alaska;AK House District 29;Early Voting	District 29 - Early Voting
-ReportingUnit	Alaska;AK House District 3;Early Voting	District 3 - Early Voting
-ReportingUnit	Alaska;AK House District 30;Early Voting	District 30 - Early Voting
-ReportingUnit	Alaska;AK House District 31;Early Voting	District 31 - Early Voting
-ReportingUnit	Alaska;AK House District 32;Early Voting	District 32 - Early Voting
-ReportingUnit	Alaska;AK House District 33;Early Voting	District 33 - Early Voting
-ReportingUnit	Alaska;AK House District 34;Early Voting	District 34 - Early Voting
-ReportingUnit	Alaska;AK House District 35;Early Voting	District 35 - Early Voting
-ReportingUnit	Alaska;AK House District 36;Early Voting	District 36 - Early Voting
-ReportingUnit	Alaska;AK House District 37;Early Voting	District 37 - Early Voting
-ReportingUnit	Alaska;AK House District 38;Early Voting	District 38 - Early Voting
-ReportingUnit	Alaska;AK House District 39;Early Voting	District 39 - Early Voting
-ReportingUnit	Alaska;AK House District 4;Early Voting	District 4 - Early Voting
-ReportingUnit	Alaska;AK House District 40;Early Voting	District 40 - Early Voting
-ReportingUnit	Alaska;AK House District 5;Early Voting	District 5 - Early Voting
-ReportingUnit	Alaska;AK House District 6;Early Voting	District 6 - Early Voting
-ReportingUnit	Alaska;AK House District 7;Early Voting	District 7 - Early Voting
-ReportingUnit	Alaska;AK House District 8;Early Voting	District 8 - Early Voting
-ReportingUnit	Alaska;AK House District 9;Early Voting	District 9 - Early Voting
-ReportingUnit	Alaska;AK House District 1;Question	District 1  - Question
-ReportingUnit	Alaska;AK House District 1;Question	District 1 - Question
-ReportingUnit	Alaska;AK House District 10;Question	District 10  - Question
-ReportingUnit	Alaska;AK House District 10;Question	District 10 - Question
-ReportingUnit	Alaska;AK House District 11;Question	District 11  - Question
-ReportingUnit	Alaska;AK House District 11;Question	District 11 - Question
-ReportingUnit	Alaska;AK House District 12;Question	District 12  - Question
-ReportingUnit	Alaska;AK House District 12;Question	District 12 - Question
-ReportingUnit	Alaska;AK House District 13;Question	District 13  - Question
-ReportingUnit	Alaska;AK House District 13;Question	District 13 - Question
-ReportingUnit	Alaska;AK House District 14;Question	District 14  - Question
-ReportingUnit	Alaska;AK House District 14;Question	District 14 - Question
-ReportingUnit	Alaska;AK House District 15;Question	District 15  - Question
-ReportingUnit	Alaska;AK House District 15;Question	District 15 - Question
-ReportingUnit	Alaska;AK House District 16;Question	District 16  - Question
-ReportingUnit	Alaska;AK House District 16;Question	District 16 - Question
-ReportingUnit	Alaska;AK House District 17;Question	District 17  - Question
-ReportingUnit	Alaska;AK House District 17;Question	District 17 - Question
-ReportingUnit	Alaska;AK House District 18;Question	District 18  - Question
-ReportingUnit	Alaska;AK House District 18;Question	District 18 - Question
-ReportingUnit	Alaska;AK House District 19;Question	District 19  - Question
-ReportingUnit	Alaska;AK House District 19;Question	District 19 - Question
-ReportingUnit	Alaska;AK House District 2;Question	District 2  - Question
-ReportingUnit	Alaska;AK House District 2;Question	District 2 - Question
-ReportingUnit	Alaska;AK House District 20;Question	District 20  - Question
-ReportingUnit	Alaska;AK House District 20;Question	District 20 - Question
-ReportingUnit	Alaska;AK House District 21;Question	District 21  - Question
-ReportingUnit	Alaska;AK House District 21;Question	District 21 - Question
-ReportingUnit	Alaska;AK House District 22;Question	District 22  - Question
-ReportingUnit	Alaska;AK House District 22;Question	District 22 - Question
-ReportingUnit	Alaska;AK House District 23;Question	District 23  - Question
-ReportingUnit	Alaska;AK House District 23;Question	District 23 - Question
-ReportingUnit	Alaska;AK House District 24;Question	District 24  - Question
-ReportingUnit	Alaska;AK House District 24;Question	District 24 - Question
-ReportingUnit	Alaska;AK House District 25;Question	District 25  - Question
-ReportingUnit	Alaska;AK House District 25;Question	District 25 - Question
-ReportingUnit	Alaska;AK House District 26;Question	District 26  - Question
-ReportingUnit	Alaska;AK House District 26;Question	District 26 - Question
-ReportingUnit	Alaska;AK House District 27;Question	District 27  - Question
-ReportingUnit	Alaska;AK House District 27;Question	District 27 - Question
-ReportingUnit	Alaska;AK House District 28;Question	District 28  - Question
-ReportingUnit	Alaska;AK House District 28;Question	District 28 - Question
-ReportingUnit	Alaska;AK House District 29;Question	District 29  - Question
-ReportingUnit	Alaska;AK House District 29;Question	District 29 - Question
-ReportingUnit	Alaska;AK House District 3;Question	District 3  - Question
-ReportingUnit	Alaska;AK House District 3;Question	District 3 - Question
-ReportingUnit	Alaska;AK House District 30;Question	District 30  - Question
-ReportingUnit	Alaska;AK House District 30;Question	District 30 - Question
-ReportingUnit	Alaska;AK House District 31;Question	District 31  - Question
-ReportingUnit	Alaska;AK House District 31;Question	District 31 - Question
-ReportingUnit	Alaska;AK House District 32;Question	District 32  - Question
-ReportingUnit	Alaska;AK House District 32;Question	District 32 - Question
-ReportingUnit	Alaska;AK House District 33;Question	District 33  - Question
-ReportingUnit	Alaska;AK House District 33;Question	District 33 - Question
-ReportingUnit	Alaska;AK House District 34;Question	District 34  - Question
-ReportingUnit	Alaska;AK House District 34;Question	District 34 - Question
-ReportingUnit	Alaska;AK House District 35;Question	District 35  - Question
-ReportingUnit	Alaska;AK House District 35;Question	District 35 - Question
-ReportingUnit	Alaska;AK House District 36;Question	District 36  - Question
-ReportingUnit	Alaska;AK House District 36;Question	District 36 - Question
-ReportingUnit	Alaska;AK House District 37;Question	District 37  - Question
-ReportingUnit	Alaska;AK House District 37;Question	District 37 - Question
-ReportingUnit	Alaska;AK House District 38;Question	District 38  - Question
-ReportingUnit	Alaska;AK House District 38;Question	District 38 - Question
-ReportingUnit	Alaska;AK House District 39;Question	District 39  - Question
-ReportingUnit	Alaska;AK House District 39;Question	District 39 - Question
-ReportingUnit	Alaska;AK House District 4;Question	District 4  - Question
-ReportingUnit	Alaska;AK House District 4;Question	District 4 - Question
-ReportingUnit	Alaska;AK House District 40;Question	District 40  - Question
-ReportingUnit	Alaska;AK House District 40;Question	District 40 - Question
-ReportingUnit	Alaska;AK House District 5;Question	District 5  - Question
-ReportingUnit	Alaska;AK House District 5;Question	District 5 - Question
-ReportingUnit	Alaska;AK House District 6;Question	District 6  - Question
-ReportingUnit	Alaska;AK House District 6;Question	District 6 - Question
-ReportingUnit	Alaska;AK House District 7;Question	District 7  - Question
-ReportingUnit	Alaska;AK House District 7;Question	District 7 - Question
-ReportingUnit	Alaska;AK House District 8;Question	District 8  - Question
-ReportingUnit	Alaska;AK House District 8;Question	District 8 - Question
-ReportingUnit	Alaska;AK House District 9;Question	District 9  - Question
-ReportingUnit	Alaska;AK House District 9;Question	District 9 - Question
+ReportingUnit	Alaska
+ReportingUnit	Alaska;AK House District 1	District 1
+ReportingUnit	Alaska;AK House District 10	District 10
+ReportingUnit	Alaska;AK House District 11	District 11
+ReportingUnit	Alaska;AK House District 12	District 12
+ReportingUnit	Alaska;AK House District 13	District 13
+ReportingUnit	Alaska;AK House District 14	District 14
+ReportingUnit	Alaska;AK House District 15	District 15
+ReportingUnit	Alaska;AK House District 16	District 16
+ReportingUnit	Alaska;AK House District 17	District 17
+ReportingUnit	Alaska;AK House District 18	District 18
+ReportingUnit	Alaska;AK House District 19	District 19
+ReportingUnit	Alaska;AK House District 2	District 2
+ReportingUnit	Alaska;AK House District 20	District 20
+ReportingUnit	Alaska;AK House District 21	District 21
+ReportingUnit	Alaska;AK House District 22	District 22
+ReportingUnit	Alaska;AK House District 23	District 23
+ReportingUnit	Alaska;AK House District 24	District 24
+ReportingUnit	Alaska;AK House District 25	District 25
+ReportingUnit	Alaska;AK House District 26	District 26
+ReportingUnit	Alaska;AK House District 27	District 27
+ReportingUnit	Alaska;AK House District 28	District 28
+ReportingUnit	Alaska;AK House District 29	District 29
+ReportingUnit	Alaska;AK House District 3	District 3
+ReportingUnit	Alaska;AK House District 30	District 30
+ReportingUnit	Alaska;AK House District 31	District 31
+ReportingUnit	Alaska;AK House District 32	District 32
+ReportingUnit	Alaska;AK House District 33	District 33
+ReportingUnit	Alaska;AK House District 34	District 34
+ReportingUnit	Alaska;AK House District 35	District 35
+ReportingUnit	Alaska;AK House District 36	District 36
+ReportingUnit	Alaska;AK House District 37	District 37
+ReportingUnit	Alaska;AK House District 38	District 38
+ReportingUnit	Alaska;AK House District 39	District 39
+ReportingUnit	Alaska;AK House District 4	District 4
+ReportingUnit	Alaska;AK House District 40	District 40
+ReportingUnit	Alaska;AK House District 5	District 5
+ReportingUnit	Alaska;AK House District 6	District 6
+ReportingUnit	Alaska;AK House District 7	District 7
+ReportingUnit	Alaska;AK House District 8	District 8
+ReportingUnit	Alaska;AK House District 9	District 9
 
-ReportingUnit	Alaska;AK House District 9;Absentee	District 9 - Absentee District 9 - Absentee - 2
-ReportingUnit	Alaska;AK House District 9;Absentee	District 9 - Absentee District 9 - Absentee - 1
-ReportingUnit	Alaska;AK House District 6;Absentee	District 6 - Absentee District 6 - Absentee - 2
-ReportingUnit	Alaska;AK House District 6;Absentee	District 6 - Absentee District 6 - Absentee - 1
-ReportingUnit	Alaska;AK House District 40;Absentee	District 40 - Absentee District 40 - Absentee - 2
-ReportingUnit	Alaska;AK House District 40;Absentee	District 40 - Absentee District 40 - Absentee - 1
-ReportingUnit	Alaska;AK House District 39;Absentee	District 39 - Absentee District 39 - Absentee - 2
-ReportingUnit	Alaska;AK House District 39;Absentee	District 39 - Absentee District 39 - Absentee - 1
-ReportingUnit	Alaska;AK House District 37;Absentee	District 37 - Absentee District 37 - Absentee - 2
-ReportingUnit	Alaska;AK House District 37;Absentee	District 37 - Absentee District 37 - Absentee - 1
-ReportingUnit	Alaska;AK House District 32;Absentee	District 32 - Absentee District 32 - Absentee - 2
-ReportingUnit	Alaska;AK House District 32;Absentee	District 32 - Absentee District 32 - Absentee - 1
-ReportingUnit	Alaska;AK House District 9;Early Voting	District 9 - Early Voting District 9 - Early Voting - 2
-ReportingUnit	Alaska;AK House District 9;Early Voting	District 9 - Early Voting District 9 - Early Voting - 1
-ReportingUnit	Alaska;AK House District 6;Early Voting	District 6 - Early Voting District 6 - Early Voting - 2
-ReportingUnit	Alaska;AK House District 6;Early Voting	District 6 - Early Voting District 6 - Early Voting - 1
-ReportingUnit	Alaska;AK House District 40;Early Voting	District 40 - Early Voting District 40 - Early Voting - 2
-ReportingUnit	Alaska;AK House District 40;Early Voting	District 40 - Early Voting District 40 - Early Voting - 1
-ReportingUnit	Alaska;AK House District 39;Early Voting	District 39 - Early Voting District 39 - Early Voting - 2
-ReportingUnit	Alaska;AK House District 39;Early Voting	District 39 - Early Voting District 39 - Early Voting - 1
-ReportingUnit	Alaska;AK House District 37;Early Voting	District 37 - Early Voting District 37 - Early Voting - 2
-ReportingUnit	Alaska;AK House District 37;Early Voting	District 37 - Early Voting District 37 - Early Voting - 1
-ReportingUnit	Alaska;AK House District 32;Early Voting	District 32 - Early Voting District 32 - Early Voting - 2
-ReportingUnit	Alaska;AK House District 32;Early Voting	District 32 - Early Voting District 32 - Early Voting - 1
-ReportingUnit	Alaska;AK House District 9;Question	District 9 - Question District 9 - Question - 2
-ReportingUnit	Alaska;AK House District 9;Question	District 9 - Question District 9 - Question - 1
-ReportingUnit	Alaska;AK House District 6;Question	District 6 - Question District 6 - Question - 2
-ReportingUnit	Alaska;AK House District 6;Question	District 6 - Question District 6 - Question - 1
-ReportingUnit	Alaska;AK House District 40;Question	District 40 - Question District 40 - Question - 2
-ReportingUnit	Alaska;AK House District 40;Question	District 40 - Question District 40 - Question - 1
-ReportingUnit	Alaska;AK House District 39;Question	District 39 - Question District 39 - Question - 2
-ReportingUnit	Alaska;AK House District 39;Question	District 39 - Question District 39 - Question - 1
-ReportingUnit	Alaska;AK House District 37;Question	District 37 - Question District 37 - Question - 2
-ReportingUnit	Alaska;AK House District 37;Question	District 37 - Question District 37 - Question - 1
-ReportingUnit	Alaska;AK House District 32;Question	District 32 - Question District 32 - Question - 2
-ReportingUnit	Alaska;AK House District 32;Question	District 32 - Question District 32 - Question - 1
-
-
+ReportingUnit	Alaska;AK House District 9	District 9 - Question
+ReportingUnit	Alaska	HD99
 Candidate	Alexander, Ed	Alexander, Ed
 Candidate	Baker, Thomas C.	Baker  Thomas C. - R
 Candidate	Batten, Bruce T.	Batten  Bruce T. - D
@@ -1040,7 +880,7 @@ Candidate	Miller, Joe	Miller, Joe
 Candidate	Millett, Charisse E.	Millett, Charisse E.
 Candidate	Morris, Julie M.	Morris  Julie M. - R
 Candidate	Moto, Calvin D. II	Moto  Calvin D. II - R
-Candidate	Muñoz, Cathy	Muñoz, Cathy
+Candidate	MuÃ±oz, Cathy	MuÃ±oz, Cathy
 Candidate	Murkowski, Lisa	Murkowski, Lisa
 Candidate	Myers, J. R.	Myers, J. R.
 Candidate	Myers, Robert H. Jr.	Myers  Robert H. Jr. - R
@@ -1168,3 +1008,4 @@ Candidate	Young, Don	Young  Don - R
 Candidate	Young, Don	Young, Don
 Candidate	Zulkosky, Tiffany	Zulkosky  Tiffany - D
 Candidate	Zulkosky, Tiffany	Zulkosky, Tiffany
+CountItemType total total
