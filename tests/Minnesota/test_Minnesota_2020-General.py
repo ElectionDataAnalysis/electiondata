@@ -14,14 +14,14 @@ abbr = 'MN'
 total_pres_votes = 3267046  # total of all votes for President
 cd = 7  # congressional district
 total_cd_votes = 363211  # total votes in the chosen cd
-shd = 47A   # state house district
-total_shd_votes = 27476
+shd = "47A"   # state house district
+total_shd_votes = 28601
 ssd = 13  # state senate district
 total_ssd_votes = 46962
 single_vote_type = 'early'  # pick any one from your file
 pres_votes_vote_type = 0
 single_county = 'Minnesota;Aitkin County'  # pick any one from your file
-pres_votes_county = 174209  # total votes for pres of that county & vote type
+pres_votes_county = 10020  # total votes for pres of that county
 
 
 def test_data_exists(dbname):

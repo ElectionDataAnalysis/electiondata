@@ -10424,14 +10424,23 @@ ReportingUnit	Minnesota;US House MN District 7	Minnesota;U.S. Representative Dis
 ReportingUnit	Minnesota;US House MN District 8	Minnesota;U.S. Representative District 8
 ReportingUnit	Minnesota	Minnesota
 ReportingUnit	Minnesota;Aitkin County	1
+ReportingUnit	Minnesota;Aitkin County	01
 ReportingUnit	Minnesota;Anoka County	2
+ReportingUnit	Minnesota;Anoka County	02
 ReportingUnit	Minnesota;Becker County	3
+ReportingUnit	Minnesota;Becker County	03
 ReportingUnit	Minnesota;Beltrami County	4
+ReportingUnit	Minnesota;Beltrami County	04
 ReportingUnit	Minnesota;Benton County	5
+ReportingUnit	Minnesota;Benton County	05
 ReportingUnit	Minnesota;Big Stone County	6
+ReportingUnit	Minnesota;Big Stone County	06
 ReportingUnit	Minnesota;Blue Earth County	7
+ReportingUnit	Minnesota;Blue Earth County	07
 ReportingUnit	Minnesota;Brown County	8
+ReportingUnit	Minnesota;Brown County	08
 ReportingUnit	Minnesota;Carlton County	9
+ReportingUnit	Minnesota;Carlton County	09
 ReportingUnit	Minnesota;Carver County	10
 ReportingUnit	Minnesota;Cass County	11
 ReportingUnit	Minnesota;Chippewa County	12
@@ -13146,4 +13155,172 @@ Candidate	Brock Pierce	Brock Pierce and Karla Ballard
 Candidate	Gloria La Riva	Gloria La Riva and Leonard Peltier
 Candidate	Alyson Kennedy	Alyson Kennedy and Malcolm Jarrett
 Candidate	Jo Jorgensen	"Jo Jorgensen and Jeremy ""Spike"" Cohen"
+Candidate	Jo Jorgensen	Jo Jorgensen and Jeremy 'Spike' Cohen
 Candidate	Write-In	WRITE-IN
+Candidate	Zach Duckworth	Zach Duckworth
+Candidate	William A Johnston	William A Johnston
+Party	VPM	VPM
+Party	SLP	SLP
+Party	IND	IND
+Party	IA	IA
+Candidate	Tyler Kistner	Tyler Kistner
+Candidate	Tyler Becvar	Tyler Becvar
+Candidate	Tomas Settell	Tomas Settell
+Candidate	Tom Sullivan	Tom Sullivan
+Candidate	Tom Shea	Tom Shea
+Candidate	Thomas Manninen	Thomas Manninen
+Candidate	Tamara 'Tami' Calhoun	Tamara 'Tami' Calhoun
+Candidate	Sydney Jordan	Sydney Jordan
+Candidate	Susan Akland	Susan Akland
+Candidate	Sue Finney	Sue Finney
+Candidate	Steve 'Stoney' Preslicka	Steve 'Stoney' Preslicka
+Candidate	Spencer Igo	Spencer Igo
+Candidate	Sherry Schack	Sherry Schack
+Candidate	Sharon Anderson	Sharon Anderson
+Candidate	Scott Simmons	Scott Simmons
+Candidate	Scott Newman	Scott Newman
+Candidate	Sarah Kruger	Sarah Kruger
+Candidate	Sara Wolf	Sara Wolf
+Candidate	Sara Flick	Sara Flick
+Candidate	Sandra Feist	Sandra Feist
+Candidate	Sandra A. Jimenez	Sandra A. Jimenez
+Candidate	Sahra Odowa	Sahra Odowa
+Candidate	Ross Tenneson	Ross Tenneson
+Candidate	Roque 'Rocky' De La Fuente and Darcy Richardson	Roque 'Rocky' De La Fuente and Darcy Richardson
+Candidate	Ronald Ray Vogel	Ronald Ray Vogel
+Candidate	Roger Steinkamp	Roger Steinkamp
+Candidate	Robyn Smith	Robyn Smith
+Candidate	Robert Farnsworth	Robert Farnsworth
+Candidate	Rita Albrecht	Rita Albrecht
+Candidate	Renée Cardarelle	Renée Cardarelle
+Candidate	Reed Perkins	Reed Perkins
+Candidate	Randy Brock	Randy Brock
+Candidate	Ralph Kaehler	Ralph Kaehler
+Candidate	Perry Nouis	Perry Nouis
+Candidate	Paul Novotny	Paul Novotny
+Candidate	Paul Brandmire	Paul Brandmire
+Candidate	Paul Babin	Paul Babin
+Candidate	Patricia Mueller	Patricia Mueller
+Candidate	Patricia Jirovec McArdell	Patricia Jirovec McArdell
+Candidate	Pat Garofalo	Pat Garofalo
+Candidate	Nathan Nelson	Nathan Nelson
+Candidate	Michelle R. Benson	Michelle R. Benson
+Candidate	Michelle Lee	Michelle Lee
+Candidate	Michele Anderson	Michele Anderson
+Candidate	Michael P. Goggin	Michael P. Goggin
+Candidate	Megan Olson	Megan Olson
+Candidate	Matt Bruns	Matt Bruns
+Candidate	Mathew J. Grossell	Mathew J. Grossell
+Candidate	Mary Holmberg	Mary Holmberg
+Candidate	Mariah de la Paz	Mariah de la Paz
+Candidate	Marcus Harcus	Marcus Harcus
+Candidate	Lynn Herrick	Lynn Herrick
+Candidate	Lucia Marina Vogel	Lucia Marina Vogel
+Candidate	Logan Kortgard	Logan Kortgard
+Candidate	Liz Boldon	Liz Boldon
+Candidate	Lisa Pohlman	Lisa Pohlman
+Candidate	Lisa Neal-Delgado	Lisa Neal-Delgado
+Candidate	Leonard Alan Roy	Leonard Alan Roy
+Candidate	Laura Wright	Laura Wright
+Candidate	Kurtis Fechtmeyer	Kurtis Fechtmeyer
+Candidate	Kim Hicks	Kim Hicks
+Candidate	Ken Fitzgerald	Ken Fitzgerald
+Candidate	Kelsey Waits	Kelsey Waits
+Candidate	Kelly Jahner-Byrne	Kelly Jahner-Byrne
+Candidate	Katy Westlund	Katy Westlund
+Candidate	Kate Luthner	Kate Luthner
+Candidate	Karla Bigham	Karla Bigham
+Candidate	Karen Attia	Karen Attia
+Candidate	Kaela Berg	Kaela Berg
+Candidate	Justin Stofferahn	Justin Stofferahn
+Candidate	Julie Dupré	Julie Dupré
+Candidate	Julie Buria	Julie Buria
+Candidate	Julie A. Rosen	Julie A. Rosen
+Candidate	Joshua Prine	Joshua Prine
+Candidate	Joshua Fike	Joshua Fike
+Candidate	Jose W. Jimenez	Jose W. Jimenez
+Candidate	Jordan Rasmusson	Jordan Rasmusson
+Candidate	Jordan Herzog	Jordan Herzog
+Candidate	Jordan Fontenello	Jordan Fontenello
+Candidate	Jon Olson	Jon Olson
+Candidate	John R. Jasinski	John R. Jasinski
+Candidate	John M Poston	John M Poston
+Candidate	John Holmberg	John Holmberg
+Candidate	John D. Huot	John D. Huot
+Candidate	Joe Thalman	Joe Thalman
+Candidate	Joe Rosh	Joe Rosh
+Candidate	Joe Moravchik	Joe Moravchik
+Candidate	Joe Garofalo	Joe Garofalo
+Candidate	Joe Abeyta	Joe Abeyta
+Candidate	Jill Abahsain	Jill Abahsain
+Candidate	Jeremy R. Miller	Jeremy R. Miller
+Candidate	Jeremiah Liend	Jeremiah Liend
+Candidate	Jeffery W Backer	Jeffery W Backer
+Candidate	Jeff Jiang	Jeff Jiang
+Candidate	Jeff Dotseth	Jeff Dotseth
+Candidate	Jason Hoschette	Jason Hoschette
+Candidate	Jaden Partlow	Jaden Partlow
+Candidate	Jack Frechette	Jack Frechette
+Candidate	Holly Link	Holly Link
+Candidate	Heather Bakke	Heather Bakke
+Candidate	Gretchen Piper	Gretchen Piper
+Candidate	Greg Copeland	Greg Copeland
+Candidate	Georgia Dietz	Georgia Dietz
+Candidate	Gene P. Pelowski Jr.	Gene P. Pelowski Jr.
+Candidate	Gaylene Spolarich	Gaylene Spolarich
+Candidate	Gary Melin	Gary Melin
+Candidate	Gary Heyer	Gary Heyer
+Candidate	Fernando Alvarado	Fernando Alvarado
+Candidate	Erina Prom	Erina Prom
+Candidate	Erin Preese	Erin Preese
+Candidate	Eric Wessels	Eric Wessels
+Candidate	Elliott Engen	Elliott Engen
+Candidate	Elizabeth Bangert	Elizabeth Bangert
+Candidate	Duane Robert Quam	Duane Robert Quam
+Candidate	Doria Drost	Doria Drost
+Candidate	Dori Trossen	Dori Trossen
+Candidate	Diane Nguyen	Diane Nguyen
+Candidate	Diane Napper	Diane Napper
+Candidate	Dean Wm Mumbleau	Dean Wm Mumbleau
+Candidate	David Suby	David Suby
+Candidate	David Pulkrabek	David Pulkrabek
+Candidate	David Lislegard	David Lislegard
+Candidate	Dan Kessler	Dan Kessler
+Candidate	Dale K. Lueck	Dale K. Lueck
+Candidate	Cynthia Lonnquist	Cynthia Lonnquist
+Candidate	Cindy Ansbacher	Cindy Ansbacher
+Candidate	Christopher Hogan	Christopher Hogan
+Candidate	Chris Wright	Chris Wright
+Candidate	Chris Brazelton	Chris Brazelton
+Candidate	Chris Baumberger	Chris Baumberger
+Candidate	Chris A. Eaton	Chris A. Eaton
+Candidate	Charlotte Smith	Charlotte Smith
+Candidate	Chad R. Tschimperle	Chad R. Tschimperle
+Candidate	Chad Hobot	Chad Hobot
+Candidate	Carol Wenner	Carol Wenner
+Candidate	Calvin Lee Carpenter	Calvin Lee Carpenter
+Candidate	Cal Schmock	Cal Schmock
+Candidate	Caitlin Cahill	Caitlin Cahill
+Candidate	Bryan P. Björnson	Bryan P. Björnson
+Candidate	Bruce D. Anderson	Bruce D. Anderson
+Candidate	Brian Raines	Brian Raines
+Candidate	Brian Pfarr	Brian Pfarr
+Candidate	Brett Rose	Brett Rose
+Candidate	Brent Krist	Brent Krist
+Candidate	Brad Kovach	Brad Kovach
+Candidate	Bill Rood	Bill Rood
+Candidate	Benjamin Carollo	Benjamin Carollo
+Candidate	Ben Schwanke	Ben Schwanke
+Candidate	Ashley Martinez-Perez	Ashley Martinez-Perez
+Candidate	Art Johnston	Art Johnston
+Candidate	Arlan Brinkmeier	Arlan Brinkmeier
+Candidate	Arjun Kataria	Arjun Kataria
+Candidate	Antonio Nerios	Antonio Nerios
+Candidate	Andy Schuler	Andy Schuler
+Candidate	Andrew J Hjelle	Andrew J Hjelle
+Candidate	Andrea Nelsen	Andrea Nelsen
+Candidate	Amy Anderson	Amy Anderson
+Candidate	Alexander Deputie	Alexander Deputie
+Candidate	Alex Herring	Alex Herring
+Candidate	Aleta Borrud	Aleta Borrud
+Candidate	Adam Charles Weeks	Adam Charles Weeks
