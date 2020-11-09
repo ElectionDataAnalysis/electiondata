@@ -90,7 +90,6 @@ def test_count_type_subtotal(dbname):
         f"US President ({abbr})",
         single_vote_type,
         dbname=dbname,
-        sub_unit_type=county_type,
         )
         == 2253712
     )
