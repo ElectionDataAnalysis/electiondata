@@ -1564,6 +1564,6 @@ def is_preliminary(cursor, election_id, jurisdiction_id):
     Since this flag doesn't exist yet, parsing the election name for
     2020 because we expect all data for 2020 to be preliminary for awhile."""
     election = name_from_id(cursor, "Election", election_id)
-    if election.startswith("2020"):
+    if election.startswith("2020 General"):
         return True
     return False
