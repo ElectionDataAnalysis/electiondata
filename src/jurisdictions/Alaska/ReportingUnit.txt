@@ -60,7 +60,7 @@ Alaska;AK Senate District 18	state-senate
 Alaska;AK Senate District 19	state-senate
 Alaska;AK Senate District 20	state-senate
 Alaska;US House AK District 1	congressional
-Alaska  state
+Alaska	state
 Alaska;AK House District 1;Aurora	precinct
 Alaska;AK House District 1;Fairbanks No. 1	precinct
 Alaska;AK House District 1;Fairbanks No. 2	precinct
