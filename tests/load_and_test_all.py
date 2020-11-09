@@ -8,7 +8,7 @@ from typing import Optional
 import election_data_analysis as eda
 from election_data_analysis import database as db
 from election_data_analysis import user_interface as ui
-
+from distutils.dir_util import copy_tree
 
 def io(argv) -> Optional[list]:
     election = None
@@ -35,6 +35,31 @@ def io(argv) -> Optional[list]:
         ej_list = [(election, jurisdiction)]
     return ej_list
 
+
+def grab_ini_files(results_dir, path_to_repo):
+    jurisdictions = [
+        name for name in os.listdir(results_dir) if os.path.isdir(os.path.join(results_dir, name))
+    ]
+    path_to_ini = os.path.join(path_to_repo, "src", "ini_files_for_results")
+    for j in jurisdictions:
+        copy_path = os.path.join(path_to_ini, j)
+        if os.path.isdir(copy_path):
+            copy_tree(copy_path, results_dir)
+
+    par_files = [f for f in os.listdir(results_dir) if f[-4:] == ".ini"]
+
+    # if the results file not found, delete the .ini file & warn user
+    for par_file in par_files:
+        d, err = ui.get_runtime_parameters(
+            required_keys=["results_file"],
+            header="election_data_analysis",
+            param_file=os.path.join(results_dir, par_file),
+        )
+        # delete any .ini files whose results file is not found
+        if not os.path.isfile(os.path.join(results_dir,d["results_file"])):
+            print(f"File not found: {d['results_file']}")
+            os.remove(os.path.join(results_dir, par_file))
+    return
 
 def optional_remove(dl: eda.DataLoader, dir_path: str) -> (Optional[dict], bool):
     err = None
@@ -72,19 +97,25 @@ def close_and_erase(dl: eda.DataLoader) -> Optional[dict]:
     return err
 
 
-def get_testing_data(url: str, target: str = "TestingData"):
-    # if there is no testing data directory
-    if not os.path.isdir(target):
+def get_testing_data(
+        url: Optional[str] = None,
+        results_dir: Optional[str] = "TestingData",
+        path_to_repo: Optional[str] = None):
+    # if there is no target directory
+    if not os.path.isdir(results_dir):
         # create a shallow copy of the git directory in current directory
         cmd = f"git clone --depth 1 -b main {url}"
         os.system(cmd)
         # remove the git information
-        shutil.rmtree(os.path.join(target, ".git"), ignore_errors=True)
-        os.remove(os.path.join(target, ".gitignore"))
+        shutil.rmtree(os.path.join(results_dir, ".git"), ignore_errors=True)
+        os.remove(os.path.join(results_dir, ".gitignore"))
+        print(f"Files downloaded from {url} into {Path(results_dir).absolute()}")
 
-        print(f"Files downloaded from {url} into {Path(target).absolute()}")
     else:
-        print(f"Tests will use data in existing directory: {Path(target).absolute()}")
+        print(f"Tests will use data in existing directory: {Path(results_dir).absolute()}")
+        if path_to_repo is None:
+            path_to_repo = Path(__file__).parents[1].absolute()
+        grab_ini_files(results_dir, path_to_repo)
     return
 
 
@@ -110,7 +141,8 @@ def run2(
 
     if load_data:
         get_testing_data(
-            "https://github.com/ElectionDataAnalysis/TestingData.git", "TestingData"
+            url = "https://github.com/ElectionDataAnalysis/TestingData.git",
+            results_dir ="TestingData",
         )
 
     # restrict elections and jurisdictions to those given (if given)
