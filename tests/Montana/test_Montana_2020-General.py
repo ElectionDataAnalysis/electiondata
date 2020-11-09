@@ -13,6 +13,7 @@ jurisdiction = 'Montana'
 abbr = 'MT'
 single_vote_type = 'total'  # pick any one from your file. only 'total' avaialable for MT
 single_county = 'Montana;Deer Lodge County'  # pick any one from your file
+county_type = "county"   # unless major subdivision is something else, e.g. 'parish' for Louisiana
 
 def test_data_exists(dbname):
     assert e.data_exists(election,jurisdiction,dbname=dbname)
@@ -23,6 +24,7 @@ def test_presidential(dbname):
         jurisdiction,
         f"US President ({abbr})",
         dbname=dbname,
+        sub_unit_type=county_type,
         )
         == 15147 + 341740 + 243753
     )
@@ -33,6 +35,7 @@ def test_statewide_totals(dbname):
         jurisdiction,
         f"US Senate {abbr}",
         dbname=dbname,
+        sub_unit_type=county_type,
         )
         == 271226 + 331359
     )
@@ -43,6 +46,7 @@ def test_congressional_totals(dbname):
         jurisdiction,
         f"US House {abbr} District 1",
         dbname=dbname,
+        sub_unit_type=county_type,
         )
         == 337327 + 261183
     )
@@ -53,6 +57,7 @@ def test_state_senate_totals(dbname):
         jurisdiction,
         f"{abbr} Senate District 2",
         dbname=dbname,
+        sub_unit_type=county_type,
         )
         == 8740 + 4057
     )
@@ -64,6 +69,7 @@ def test_state_house_totals(dbname):
         jurisdiction,
         f"{abbr} House District 13",
         dbname=dbname,
+        sub_unit_type=county_type,
         )
         == 4796 + 1452 + 497
     )

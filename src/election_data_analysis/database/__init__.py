@@ -1305,13 +1305,21 @@ def export_rollup_from_db(
     by: str = "Id",
     exclude_total: bool = False,
     by_vote_type: bool = False,
+    contest: Optional[str] = None
 ) -> (pd.DataFrame, Optional[str]):
+
+    # define the 'where' sql clause based on restrictions from parameters
+    # and the string variables to be passed to query
+    restrict = ""
+    string_vars = [top_ru, sub_unit_type, tuple(datafile_list)]
     if not by_vote_type:
-        restrict = """ AND CIT."Txt" = 'total' """
+        restrict += """ AND CIT."Txt" = 'total' """
     elif exclude_total:
-        restrict = """ AND CIT."Txt" != 'total' """
-    else:
-        restrict = ""
+        restrict += """ AND CIT."Txt" != 'total' """
+
+    if contest:
+        restrict += """ AND C."Name" = %s """
+        string_vars.append(contest)
 
     columns = [
         "contest_type",
