@@ -52,3 +52,97 @@ Nebraska;US House NE District 1	congressional
 Nebraska;US House NE District 2	congressional
 Nebraska;US House NE District 3	congressional
 Nebraska	state
+Nebraska;Adams County	county
+Nebraska;Antelope County	county
+Nebraska;Arthur County	county
+Nebraska;Banner County	county
+Nebraska;Blaine County	county
+Nebraska;Boone County	county
+Nebraska;Box Butte County	county
+Nebraska;Boyd County	county
+Nebraska;Brown County	county
+Nebraska;Buffalo County	county
+Nebraska;Burt County	county
+Nebraska;Butler County	county
+Nebraska;Cass County	county
+Nebraska;Cedar County	county
+Nebraska;Chase County	county
+Nebraska;Cherry County	county
+Nebraska;Cheyenne County	county
+Nebraska;Clay County	county
+Nebraska;Colfax County	county
+Nebraska;Cuming County	county
+Nebraska;Custer County	county
+Nebraska;Dakota County	county
+Nebraska;Dawes County	county
+Nebraska;Dawson County	county
+Nebraska;Deuel County	county
+Nebraska;Dixon County	county
+Nebraska;Dodge County	county
+Nebraska;Douglas County	county
+Nebraska;Dundy County	county
+Nebraska;Fillmore County	county
+Nebraska;Franklin County	county
+Nebraska;Frontier County	county
+Nebraska;Furnas County	county
+Nebraska;Gage County	county
+Nebraska;Garden County	county
+Nebraska;Garfield County	county
+Nebraska;Gosper County	county
+Nebraska;Grant County	county
+Nebraska;Greeley County	county
+Nebraska;Hall County	county
+Nebraska;Hamilton County	county
+Nebraska;Harlan County	county
+Nebraska;Hayes County	county
+Nebraska;Hitchcock County	county
+Nebraska;Holt County	county
+Nebraska;Hooker County	county
+Nebraska;Howard County	county
+Nebraska;Jefferson County	county
+Nebraska;Johnson County	county
+Nebraska;Kearney County	county
+Nebraska;Keith County	county
+Nebraska;Keya Paha County	county
+Nebraska;Kimball County	county
+Nebraska;Knox County	county
+Nebraska;Lancaster County	county
+Nebraska;Lincoln County	county
+Nebraska;Logan County	county
+Nebraska;Loup County	county
+Nebraska;Madison County	county
+Nebraska;McPherson County	county
+Nebraska;Merrick County	county
+Nebraska;Morrill County	county
+Nebraska;Nance County	county
+Nebraska;Nemaha County	county
+Nebraska;Nuckolls County	county
+Nebraska;Otoe County	county
+Nebraska;Pawnee County	county
+Nebraska;Perkins County	county
+Nebraska;Phelps County	county
+Nebraska;Pierce County	county
+Nebraska;Platte County	county
+Nebraska;Polk County	county
+Nebraska;Red Willow County	county
+Nebraska;Richardson County	county
+Nebraska;Rock County	county
+Nebraska;Saline County	county
+Nebraska;Sarpy County	county
+Nebraska;Saunders County	county
+Nebraska;Scotts Bluff County	county
+Nebraska;Seward County	county
+Nebraska;Sheridan County	county
+Nebraska;Sherman County	county
+Nebraska;Sioux County	county
+Nebraska;Stanton County	county
+Nebraska;Thayer County	county
+Nebraska;Thomas County	county
+Nebraska;Thurston County	county
+Nebraska;Valley County	county
+Nebraska;Washington County	county
+Nebraska;Wayne County	county
+Nebraska;Webster County	county
+Nebraska;Wheeler County	county
+Nebraska;York County	county
+

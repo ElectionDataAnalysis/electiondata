@@ -1,6 +1,6 @@
 name	raw_identifier_formula	source
 ReportingUnit	<County>	row
-Party	ini
-CandidateContest	ini
-Candidate	<5>	column
-CountItemType	ini
+Party		ini
+CandidateContest		ini
+Candidate	<0>	column
+CountItemType		ini
