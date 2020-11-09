@@ -20,8 +20,8 @@ ssd = 15  # state senate district
 total_ssd_votes = -1
 single_vote_type = 'early'  # pick any one from your file
 pres_votes_vote_type = -1
-single_county = 'North Carolina;Bertie County'  # pick any one from your file
-pres_votes_county = -1  # total votes for pres of that county
+single_county = 'Nebraska;Dundy County'  # pick any one from your file
+pres_votes_county = 999  # total votes for pres of that county
 
 
 def test_data_exists(dbname):
@@ -70,7 +70,7 @@ def test_state_house_totals(dbname):
         )
         == total_shd_votes
     )
-
+"""
 
 def test_standard_vote_types(dbname):
     assert e.check_count_types_standard(election, jurisdiction, dbname=dbname)
@@ -79,7 +79,7 @@ def test_standard_vote_types(dbname):
 def test_vote_type_counts_consistent(dbname):
     assert e.check_totals_match_vote_types(election, jurisdiction, dbname=dbname)
 
-
+"""
 def test_count_type_subtotal(dbname):
     assert (e.contest_total(
         election,
@@ -90,7 +90,7 @@ def test_count_type_subtotal(dbname):
         )
         == pres_votes_vote_type
     )
-
+"""
 
 def test_county_subtotal(dbname):
     assert (e.contest_total(
@@ -102,4 +102,4 @@ def test_county_subtotal(dbname):
         )
         == pres_votes_county
             )
-"""
+
