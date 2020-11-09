@@ -216,12 +216,14 @@ def create_scatter(
     )
     results["x-count_item_type"] = h_category
     results["y-count_item_type"] = v_category
-    results[
-        "x-title"
-    ] = f"""{results["x"]} - {results["x-election"]} - {dfh.iloc[0]["Contest"]}"""
-    results[
-        "y-title"
-    ] = f"""{results["y"]} - {results["y-election"]} - {dfv.iloc[0]["Contest"]}"""
+    x_title = dedupe_scatter_title(
+        results["x"], results["x-election"], dfh.iloc[0]["Contest"]
+    )
+    results["x-title"] = ui.get_contest_type_display(x_title)
+    y_title = dedupe_scatter_title(
+        results["y"], results["y-election"], dfv.iloc[0]["Contest"]
+    )
+    results["y-title"] = ui.get_contest_type_display(y_title)
     # only keep the ones where there are an (x, y) to graph
     to_keep = []
     for result in results["counts"]:
@@ -1022,3 +1024,10 @@ def create_party_abbreviation(party):
         return "N/A"
     else:
         return (party.strip())[0].upper()
+
+
+def dedupe_scatter_title(category, election, contest):
+    title = f"{category} - {election}"
+    if category != contest:
+        title = f"{title} - {contest}"
+    return title
