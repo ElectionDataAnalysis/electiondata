@@ -119,3 +119,112 @@ ReportingUnit	Nebraska;US House NE District 1	Nebraska;US House NE District 1
 ReportingUnit	Nebraska;US House NE District 2	Nebraska;US House NE District 2
 ReportingUnit	Nebraska;US House NE District 3	Nebraska;US House NE District 3
 ReportingUnit	Nebraska	Nebraska
+ReportingUnit	Nebraska;Adams County	Adams
+ReportingUnit	Nebraska;Antelope County	Antelope
+ReportingUnit	Nebraska;Arthur County	Arthur
+ReportingUnit	Nebraska;Banner County	Banner
+ReportingUnit	Nebraska;Blaine County	Blaine
+ReportingUnit	Nebraska;Boone County	Boone
+ReportingUnit	Nebraska;Box Butte County	Box Butte
+ReportingUnit	Nebraska;Boyd County	Boyd
+ReportingUnit	Nebraska;Brown County	Brown
+ReportingUnit	Nebraska;Buffalo County	Buffalo
+ReportingUnit	Nebraska;Burt County	Burt
+ReportingUnit	Nebraska;Butler County	Butler
+ReportingUnit	Nebraska;Cass County	Cass
+ReportingUnit	Nebraska;Cedar County	Cedar
+ReportingUnit	Nebraska;Chase County	Chase
+ReportingUnit	Nebraska;Cherry County	Cherry
+ReportingUnit	Nebraska;Cheyenne County	Cheyenne
+ReportingUnit	Nebraska;Clay County	Clay
+ReportingUnit	Nebraska;Colfax County	Colfax
+ReportingUnit	Nebraska;Cuming County	Cuming
+ReportingUnit	Nebraska;Custer County	Custer
+ReportingUnit	Nebraska;Dakota County	Dakota
+ReportingUnit	Nebraska;Dawes County	Dawes
+ReportingUnit	Nebraska;Dawson County	Dawson
+ReportingUnit	Nebraska;Deuel County	Deuel
+ReportingUnit	Nebraska;Dixon County	Dixon
+ReportingUnit	Nebraska;Dodge County	Dodge
+ReportingUnit	Nebraska;Douglas County	Douglas
+ReportingUnit	Nebraska;Dundy County	Dundy
+ReportingUnit	Nebraska;Fillmore County	Fillmore
+ReportingUnit	Nebraska;Franklin County	Franklin
+ReportingUnit	Nebraska;Frontier County	Frontier
+ReportingUnit	Nebraska;Furnas County	Furnas
+ReportingUnit	Nebraska;Gage County	Gage
+ReportingUnit	Nebraska;Garden County	Garden
+ReportingUnit	Nebraska;Garfield County	Garfield
+ReportingUnit	Nebraska;Gosper County	Gosper
+ReportingUnit	Nebraska;Grant County	Grant
+ReportingUnit	Nebraska;Greeley County	Greeley
+ReportingUnit	Nebraska;Hall County	Hall
+ReportingUnit	Nebraska;Hamilton County	Hamilton
+ReportingUnit	Nebraska;Harlan County	Harlan
+ReportingUnit	Nebraska;Hayes County	Hayes
+ReportingUnit	Nebraska;Hitchcock County	Hitchcock
+ReportingUnit	Nebraska;Holt County	Holt
+ReportingUnit	Nebraska;Hooker County	Hooker
+ReportingUnit	Nebraska;Howard County	Howard
+ReportingUnit	Nebraska;Jefferson County	Jefferson
+ReportingUnit	Nebraska;Johnson County	Johnson
+ReportingUnit	Nebraska;Kearney County	Kearney
+ReportingUnit	Nebraska;Keith County	Keith
+ReportingUnit	Nebraska;Keya Paha County	Keya Paha
+ReportingUnit	Nebraska;Kimball County	Kimball
+ReportingUnit	Nebraska;Knox County	Knox
+ReportingUnit	Nebraska;Lancaster County	Lancaster
+ReportingUnit	Nebraska;Lincoln County	Lincoln
+ReportingUnit	Nebraska;Logan County	Logan
+ReportingUnit	Nebraska;Loup County	Loup
+ReportingUnit	Nebraska;Madison County	Madison
+ReportingUnit	Nebraska;McPherson County	McPherson
+ReportingUnit	Nebraska;Merrick County	Merrick
+ReportingUnit	Nebraska;Morrill County	Morrill
+ReportingUnit	Nebraska;Nance County	Nance
+ReportingUnit	Nebraska;Nemaha County	Nemaha
+ReportingUnit	Nebraska;Nuckolls County	Nuckolls
+ReportingUnit	Nebraska;Otoe County	Otoe
+ReportingUnit	Nebraska;Pawnee County	Pawnee
+ReportingUnit	Nebraska;Perkins County	Perkins
+ReportingUnit	Nebraska;Phelps County	Phelps
+ReportingUnit	Nebraska;Pierce County	Pierce
+ReportingUnit	Nebraska;Platte County	Platte
+ReportingUnit	Nebraska;Polk County	Polk
+ReportingUnit	Nebraska;Red Willow County	Red Willow
+ReportingUnit	Nebraska;Richardson County	Richardson
+ReportingUnit	Nebraska;Rock County	Rock
+ReportingUnit	Nebraska;Saline County	Saline
+ReportingUnit	Nebraska;Sarpy County	Sarpy
+ReportingUnit	Nebraska;Saunders County	Saunders
+ReportingUnit	Nebraska;Scotts Bluff County	Scotts Bluff
+ReportingUnit	Nebraska;Seward County	Seward
+ReportingUnit	Nebraska;Sheridan County	Sheridan
+ReportingUnit	Nebraska;Sherman County	Sherman
+ReportingUnit	Nebraska;Sioux County	Sioux
+ReportingUnit	Nebraska;Stanton County	Stanton
+ReportingUnit	Nebraska;Thayer County	Thayer
+ReportingUnit	Nebraska;Thomas County	Thomas
+ReportingUnit	Nebraska;Thurston County	Thurston
+ReportingUnit	Nebraska;Valley County	Valley
+ReportingUnit	Nebraska;Washington County	Washington
+ReportingUnit	Nebraska;Wayne County	Wayne
+ReportingUnit	Nebraska;Webster County	Webster
+ReportingUnit	Nebraska;Wheeler County	Wheeler
+ReportingUnit	Nebraska;York County	York
+Candidate	Joseph R. Biden	Joseph R. Biden and Kamala D. Harris
+Candidate	Donald J. Trump	Donald J. Trump and Michael R. Pence
+Candidate	Jo Jorgensen	Jo Jorgensen and Jeremy Cohen
+Candidate	Gene Siadek	Gene Siadek
+Candidate	Ben Sasse	Ben Sasse
+Candidate	Chris Janicek	Chris Janicek
+Candidate	Kate Bolz	Kate Bolz
+Candidate	Jeff Fortenberry	Jeff Fortenberry
+Candidate	Dennis B. Grace	Dennis B. Grace
+Candidate	Donald Bacon	Donald Bacon
+Candidate	Kara Eastman	Kara Eastman
+Candidate	Tyler Schaeffer	Tyler Schaeffer
+Candidate	Adrian Smith	Adrian Smith
+Candidate	Mark Elworth Jr.	Mark Elworth Jr.
+Candidate	Dustin C. Hobbs	Dustin C. Hobbs
+CountItemType	total	TOTAL
