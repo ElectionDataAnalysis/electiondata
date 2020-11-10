@@ -1710,7 +1710,7 @@ def data_exists(election, jurisdiction, p_path=None, dbname=None):
 def check_totals_match_vote_types(
         election, 
         jurisdiction, 
-        sub_unit_type,
+        sub_unit_type="county",
         dbname=None,
 ):
     """Interesting if there are both total and other vote types;
@@ -1779,7 +1779,7 @@ def contest_total(
     return df["count"].sum()
 
 
-def count_type_total(election, jurisdiction, contest, count_item_type, sub_unit_type, dbname=None):
+def count_type_total(election, jurisdiction, contest, count_item_type, sub_unit_type="county", dbname=None):
     df_candidate = aggregate_results(
         election=election, 
         jurisdiction=jurisdiction, 
