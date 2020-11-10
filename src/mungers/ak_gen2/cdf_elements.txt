@@ -1,0 +1,6 @@
+name	raw_identifier_formula	source
+ReportingUnit	{<District>,^(.*)\s+-\s+.*$}	row
+CountItemType	{<District>,^.*\s+-\s+(.*)$}	row
+Party	<Party>	row
+CandidateContest	<Contest Name>	row
+Candidate	<Candidate Name>	row

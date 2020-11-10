@@ -1,0 +1,70 @@
+Name	ElectionDistrict
+AK House District 1	Alaska;AK House District 1
+AK House District 2	Alaska;AK House District 2
+AK House District 3	Alaska;AK House District 3
+AK House District 4	Alaska;AK House District 4
+AK House District 5	Alaska;AK House District 5
+AK House District 6	Alaska;AK House District 6
+AK House District 7	Alaska;AK House District 7
+AK House District 8	Alaska;AK House District 8
+AK House District 9	Alaska;AK House District 9
+AK House District 10	Alaska;AK House District 10
+AK House District 11	Alaska;AK House District 11
+AK House District 12	Alaska;AK House District 12
+AK House District 13	Alaska;AK House District 13
+AK House District 14	Alaska;AK House District 14
+AK House District 15	Alaska;AK House District 15
+AK House District 16	Alaska;AK House District 16
+AK House District 17	Alaska;AK House District 17
+AK House District 18	Alaska;AK House District 18
+AK House District 19	Alaska;AK House District 19
+AK House District 20	Alaska;AK House District 20
+AK House District 21	Alaska;AK House District 21
+AK House District 22	Alaska;AK House District 22
+AK House District 23	Alaska;AK House District 23
+AK House District 24	Alaska;AK House District 24
+AK House District 25	Alaska;AK House District 25
+AK House District 26	Alaska;AK House District 26
+AK House District 27	Alaska;AK House District 27
+AK House District 28	Alaska;AK House District 28
+AK House District 29	Alaska;AK House District 29
+AK House District 30	Alaska;AK House District 30
+AK House District 31	Alaska;AK House District 31
+AK House District 32	Alaska;AK House District 32
+AK House District 33	Alaska;AK House District 33
+AK House District 34	Alaska;AK House District 34
+AK House District 35	Alaska;AK House District 35
+AK House District 36	Alaska;AK House District 36
+AK House District 37	Alaska;AK House District 37
+AK House District 38	Alaska;AK House District 38
+AK House District 39	Alaska;AK House District 39
+AK House District 40	Alaska;AK House District 40
+AK Senate District 1	Alaska;AK Senate District 1
+AK Senate District 2	Alaska;AK Senate District 2
+AK Senate District 3	Alaska;AK Senate District 3
+AK Senate District 4	Alaska;AK Senate District 4
+AK Senate District 5	Alaska;AK Senate District 5
+AK Senate District 6	Alaska;AK Senate District 6
+AK Senate District 7	Alaska;AK Senate District 7
+AK Senate District 8	Alaska;AK Senate District 8
+AK Senate District 9	Alaska;AK Senate District 9
+AK Senate District 10	Alaska;AK Senate District 10
+AK Senate District 11	Alaska;AK Senate District 11
+AK Senate District 12	Alaska;AK Senate District 12
+AK Senate District 13	Alaska;AK Senate District 13
+AK Senate District 14	Alaska;AK Senate District 14
+AK Senate District 15	Alaska;AK Senate District 15
+AK Senate District 16	Alaska;AK Senate District 16
+AK Senate District 17	Alaska;AK Senate District 17
+AK Senate District 18	Alaska;AK Senate District 18
+AK Senate District 19	Alaska;AK Senate District 19
+AK Senate District 20	Alaska;AK Senate District 20
+
+US House AK District 1	Alaska;US House AK District 1
+US President (AK)	Alaska
+AK Governor	Alaska
+US Senate AK	Alaska
+AK Attorney General	Alaska
+AK Lieutenant Governor	Alaska
+AK Treasurer	Alaska
+AK Secretary of State	Alaska

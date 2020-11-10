@@ -57,7 +57,7 @@ def grab_ini_files(results_dir, path_to_repo):
         )
         # delete any .ini files whose results file is not found
         if not os.path.isfile(os.path.join(results_dir,d["results_file"])):
-            print(f"File not found: {d['results_file']}")
+            print(f"File referenced in .ini file, but not found: {d['results_file']}")
             os.remove(os.path.join(results_dir, par_file))
     return
 
@@ -183,6 +183,11 @@ def run2(
         ui.run_tests(
             test_dir, dbname, election_jurisdiction_list=election_jurisdiction_list
         )
+
+        # remove all .ini files
+        par_files = [x for x in os.listdir("TestingData") if x[-4:] == ".ini"]
+        for f in par_files:
+            os.remove(os.path.join("TestingData",f))
 
         if load_data:
             err, db_removed = optional_remove(dl, "TestingData")

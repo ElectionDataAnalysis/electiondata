@@ -1,0 +1,282 @@
+BallotName
+Alexander, Ed
+Baker, Thomas C.
+Batten, Bruce T.
+Bauer, Paul A.
+Becker, Leslie
+Begich, Tom
+Begich/Call
+Beltrami, Vince
+Birch, Chris
+Bishop, Click
+Blatchford, Edgar
+Borbridge, Harold
+Butler, Shawn A.
+Cacy, Roselynn
+Canitz, James A. Sr.
+Carpenter, Benjamin
+Cason, Sam
+Castle, Darrell L.
+Chenault, Charles M.
+Chesbro, James L.
+Claman, Matt
+Clinton, Hillary
+Coghill, John B. Jr.
+Colbert, Bennie D.
+Costello, Mia
+Cote, Shirley A.
+Cox, John R. "Bear"
+Craig, Breck A.
+Crawford, Harry T. J
+Crawford, Jim
+Cronk, Mike
+Cumings, Chris C.
+Dahlstrom, Nancy A.
+Darden, Dustin
+De La Fuente, Roque
+Deacon, Darren M.
+Dimond, Chris
+Dodge, Kathryn E.
+Dougherty, Connie
+Dougherty, Connie R.
+Drummond, Harriet A.
+Dunleavy/Meyer
+Duplantis, Stephen J.
+Eastman, David
+Edgmon, Bryce
+Etheridge, Don R.
+Fansler, Zach
+Faye-Brazel, Patrici
+Ferguson, Elizabeth
+Fetta, Alex
+Fields, Duncan
+Fields, William Z.
+Fields, William Z. "Zack"
+Finkenbinder, Sheila
+Fish, Mark
+Foster, Neal W.
+Franks, Lyn D.
+Gaiser, Madeleine
+Galvin, Alyse S.
+Gara, Les S.
+Gattis, Lynn
+Gianoutsos, Ted
+Giessel, Catherine A
+Giessel, Cathy
+Gillespie, David M.
+Gillham, Ronald D. "Ron"
+Gillis, Mel
+Goode, Pamela
+Gordon, Michael W.
+Gray-Jackson, Elvi
+Gray, Danny
+Grenn, Jason S.
+Gross, Al
+Guttenberg, David
+Hackbarth, Andrea L.
+Hackenmueller, Joe
+Hadley, Don
+Hale, Tim
+Hannan, Sara
+Harris, Dennis P.
+Hartley, Alma N.
+Heikes, Gerald L. "Jer"
+Henslee, Katherine J. "Kathy"
+Hibler, William "Bill"
+Higgins, Pat
+Hinz, Lynette Moreno
+Hnilicka, Julia A.
+Hoffman, Lyman F.
+Holdaway, Truno N. L
+Holland, Roger
+Holmes, Dan
+Holmes, Doyle E.
+Hopkins, Grier
+Hopkins, Grier H.
+Hopkins, Luke
+Howard, Lucas D. "LD"
+Howe, John Wayne
+Hughes, Shelley
+Hughes, Taryn M.
+Huit, Timothy R.
+Ivanoff, Tyler L.
+Jackson, Sharon D.
+Jeffers, Stephany
+Johnson, Bill
+Johnson, Carl
+Johnson, Delena
+Johnson, DeLena
+Johnson, DeLena M.
+Johnson, Gary
+Johnson, Tom
+Johnston, Jennifer B
+Johnston, Jennifer B.
+Jones, Gregory I.
+Josephson, Andrew L.
+Josephson, Andrew L. "Andy"
+Kastner, Kevin D.
+Katelnikoff-Lester
+Kaufman, James D.
+Kawasaki, Scott
+Kawasaki, Scott J.
+Kay, Susan
+Kelly, Pete
+Kiehl, Jesse
+Kimp, Danyelle D.
+Kito, Sam S. III
+Knopp, Gary A.
+Kopp, Charles M.
+Kopp, Chuck M.
+Kreiss-Tomkins, Jona
+Kreiss-Tomkins, Jonathan S.
+Kurber, Keith
+Kurka, Christopher
+Lamb, Thomas
+Lamkin, Tim
+Land, Jason T.
+Largent, Lynette A.
+Lawrence, Van
+LeBon, Barton S.
+Lebon, Barton S. "Bart"
+LeDoux, Gabrielle
+LeDoux, Gabrielle R. "Gabby"
+Lee, Amber M.
+Lee, Huhnkie
+Lees, Adam S.
+Lekanoff, Anthony C.
+Levi, Sue
+Lincoln, John
+Lindbeck, Steve
+Lojewski, Aaron
+Lynch, Daniel L.
+Mack, Leanna R.
+Madden, Greg
+Martin, Arthur S.
+Martinson, Ceezar X.
+McCabe, Kevin J.
+McCain-Finch, Chandra S.
+McCarty, Ken
+McCormack, Patrick M
+McCormack, Patrick M.
+McDermott, Jim C.
+McDonald, Forrest J.
+McKay, Thomas W. "Tom"
+McKinley, Kevin
+McKinley, Kevin M.
+Merrick, Kelly R.
+Metcalfe, Ray
+Micciche, Peter A.
+Miller, Joe
+Millett, Charisse E.
+Morris, Julie M.
+Moto, Calvin D. II
+Muñoz, Cathy
+Murkowski, Lisa
+Myers, J. R.
+Myers, Robert H. Jr.
+Nankervis, Jerry A.
+Nees, David W.
+Nelson, David
+Nelson, T. "John"
+Neuman, Mark
+Neuman, Mark A.
+Olson, Donald C.
+Olson, Donald C. "Donny"
+Olson, Jeanne L.
+Olson, Sherie A.
+Ortiz, Daniel H.
+Parish, Justin
+Park, Janice
+Park, Janice Lynn
+Patterson, Eileen E.
+Perry, Karen
+Phillips, Rick
+Prax, Glenn M. "Mike"
+Pruitt, Lance
+Pruitt, Lance D.
+Quist, Christopher
+Rasmussen, Sara
+Rasmussen, Sara E.
+Rauscher, George
+Reinbold, Lora
+Reinbold, Lora H.
+Revak, Josh C.
+Revak, Joshua C.
+Rodriguez, Benjamin
+Rupright, Bernadette "Bee"
+Sackett, Jim
+Saddler, Dan
+Sanders, Marcus
+Savok, Patrick G.
+Schiess, Oliver
+Schrage, Calvin R.
+Seaton, Paul
+Selle, Dave
+Sharrock, Ian
+Shaw, Kenneth
+Shaw, Laddie
+Shaw, Laddie H.
+Shaw, Trevor A.
+Sheldon, Michael D.
+Shower, Michael K.
+Sinclair, Christina
+Sivertsen, Robert W.
+Skaflestad, Kenny
+Smith, Ryan
+Snyder, Liz
+Souphanavong, Bernie
+Spohnholz, Ivy
+Spohnholz, Ivy A.
+Squyres, James A.
+Stedman, Bert K.
+Stein-Olson, Monica L.
+Stein, Jill
+Stevens, Cean
+Stevens, Gary
+Stewart, Marilyn
+Stock, Margaret
+Story, Andrea
+Story, Andrea "Andi"
+Stutes, Louise
+Stutes, Louise B.
+Sullivan-Leonard, Co
+Sullivan, Dan
+Sumner, Jesse M.
+Talerico, David M.
+Tarr, Geran
+Thompson, Steve
+Thompson, Steve M.
+Thorne, Anita
+Thorne, Anita L.
+Thornton, Shauna
+Thurman, Loy "Santa"
+Tilton, Cathy L.
+Toien/Clift
+Trump, Donald J.
+Tuck, Chris
+Tuck, Chris S.
+Tugatuk, Ray Sean
+Vance, Sarah L.
+Vazquez, Liz
+Verrall, Bert
+Von Imhof, Natasha A
+Walker, David G.
+Walker/Mallott
+Watkins, Brent L.
+Weatherby, William W
+Wehmhoff, Gretchen L
+Wein, Richard J.
+West, Warren P.
+Westlake, Dean
+Wielechowski, Bill
+Willie, Nicholas G.
+Wilson, David S.
+Wilson, Tammie
+Wolf, Kelly J.
+Wool, Adam
+Wool, Adam L.
+Wright, Stanley A.
+Wright, Stephen
+Youmans, Jeremiah A.
+Young, Don
+Zulkosky, Tiffany

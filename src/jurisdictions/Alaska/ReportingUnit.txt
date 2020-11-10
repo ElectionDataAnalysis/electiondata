@@ -1,0 +1,507 @@
+Name	ReportingUnitType
+Alaska;AK House District 1	state-house
+Alaska;AK House District 2	state-house
+Alaska;AK House District 3	state-house
+Alaska;AK House District 4	state-house
+Alaska;AK House District 5	state-house
+Alaska;AK House District 6	state-house
+Alaska;AK House District 7	state-house
+Alaska;AK House District 8	state-house
+Alaska;AK House District 9	state-house
+Alaska;AK House District 10	state-house
+Alaska;AK House District 11	state-house
+Alaska;AK House District 12	state-house
+Alaska;AK House District 13	state-house
+Alaska;AK House District 14	state-house
+Alaska;AK House District 15	state-house
+Alaska;AK House District 16	state-house
+Alaska;AK House District 17	state-house
+Alaska;AK House District 18	state-house
+Alaska;AK House District 19	state-house
+Alaska;AK House District 20	state-house
+Alaska;AK House District 21	state-house
+Alaska;AK House District 22	state-house
+Alaska;AK House District 23	state-house
+Alaska;AK House District 24	state-house
+Alaska;AK House District 25	state-house
+Alaska;AK House District 26	state-house
+Alaska;AK House District 27	state-house
+Alaska;AK House District 28	state-house
+Alaska;AK House District 29	state-house
+Alaska;AK House District 30	state-house
+Alaska;AK House District 31	state-house
+Alaska;AK House District 32	state-house
+Alaska;AK House District 33	state-house
+Alaska;AK House District 34	state-house
+Alaska;AK House District 35	state-house
+Alaska;AK House District 36	state-house
+Alaska;AK House District 37	state-house
+Alaska;AK House District 38	state-house
+Alaska;AK House District 39	state-house
+Alaska;AK House District 40	state-house
+Alaska;AK Senate District 1	state-senate
+Alaska;AK Senate District 2	state-senate
+Alaska;AK Senate District 3	state-senate
+Alaska;AK Senate District 4	state-senate
+Alaska;AK Senate District 5	state-senate
+Alaska;AK Senate District 6	state-senate
+Alaska;AK Senate District 7	state-senate
+Alaska;AK Senate District 8	state-senate
+Alaska;AK Senate District 9	state-senate
+Alaska;AK Senate District 10	state-senate
+Alaska;AK Senate District 11	state-senate
+Alaska;AK Senate District 12	state-senate
+Alaska;AK Senate District 13	state-senate
+Alaska;AK Senate District 14	state-senate
+Alaska;AK Senate District 15	state-senate
+Alaska;AK Senate District 16	state-senate
+Alaska;AK Senate District 17	state-senate
+Alaska;AK Senate District 18	state-senate
+Alaska;AK Senate District 19	state-senate
+Alaska;AK Senate District 20	state-senate
+Alaska;US House AK District 1	congressional
+Alaska	state
+Alaska;AK House District 1;Aurora	precinct
+Alaska;AK House District 1;Fairbanks No. 1	precinct
+Alaska;AK House District 1;Fairbanks No. 2	precinct
+Alaska;AK House District 1;Fairbanks No. 3	precinct
+Alaska;AK House District 1;Fairbanks No. 4	precinct
+Alaska;AK House District 1;Fairbanks No. 5	precinct
+Alaska;AK House District 1;Fairbanks No. 6	precinct
+Alaska;AK House District 1;Fairbanks No. 7	precinct
+Alaska;AK House District 1;Fairbanks No. 10	precinct
+Alaska;AK House District 2;Badger No. 2	precinct
+Alaska;AK House District 2;Fairbanks No. 8	precinct
+Alaska;AK House District 2;Fairbanks No. 9	precinct
+Alaska;AK House District 2;Fort Wainwright	precinct
+Alaska;AK House District 3;Badger No. 1	precinct
+Alaska;AK House District 3;Chena Lakes	precinct
+Alaska;AK House District 3;Newby	precinct
+Alaska;AK House District 3;North Pole	precinct
+Alaska;AK House District 3;Plack	precinct
+Alaska;AK House District 4;Ester	precinct
+Alaska;AK House District 4;Farmers Loop	precinct
+Alaska;AK House District 4;Goldstream No. 1	precinct
+Alaska;AK House District 4;Goldstream No. 2	precinct
+Alaska;AK House District 4;Steese East-Gilmore	precinct
+Alaska;AK House District 4;Steese West	precinct
+Alaska;AK House District 4;University Hills	precinct
+Alaska;AK House District 5;Airport	precinct
+Alaska;AK House District 5;Chena	precinct
+Alaska;AK House District 5;Geist	precinct
+Alaska;AK House District 5;Lakeview	precinct
+Alaska;AK House District 5;Pike	precinct
+Alaska;AK House District 5;Richardson	precinct
+Alaska;AK House District 5;Shanly	precinct
+Alaska;AK House District 5;University Campus	precinct
+Alaska;AK House District 5;University West	precinct
+Alaska;AK House District 6;Anderson	precinct
+Alaska;AK House District 6;Arctic Village	precinct
+Alaska;AK House District 6;Beaver	precinct
+Alaska;AK House District 6;Cantwell	precinct
+Alaska;AK House District 6;Central	precinct
+Alaska;AK House District 6;Chistochina	precinct
+Alaska;AK House District 6;Circle	precinct
+Alaska;AK House District 6;Clear	precinct
+Alaska;AK House District 6;Copper Center	precinct
+Alaska;AK House District 6;Denali Park	precinct
+Alaska;AK House District 6;Dot Lake	precinct
+Alaska;AK House District 6;Eagle	precinct
+Alaska;AK House District 6;Fort Yukon	precinct
+Alaska;AK House District 6;Gakona	precinct
+Alaska;AK House District 6;Healy	precinct
+Alaska;AK House District 6;Kenny Lake	precinct
+Alaska;AK House District 6;Manley Hot Springs	precinct
+Alaska;AK House District 6;Mentasta	precinct
+Alaska;AK House District 6;Minto	precinct
+Alaska;AK House District 6;Nenana	precinct
+Alaska;AK House District 6;Northway	precinct
+Alaska;AK House District 6;Stevens Village	precinct
+Alaska;AK House District 6;Tanacross	precinct
+Alaska;AK House District 6;Tanana	precinct
+Alaska;AK House District 6;Tetlin	precinct
+Alaska;AK House District 6;Tok	precinct
+Alaska;AK House District 6;Venetie	precinct
+Alaska;AK House District 6;Eielson	precinct
+Alaska;AK House District 6;Fox	precinct
+Alaska;AK House District 6;Moose Creek	precinct
+Alaska;AK House District 6;Salcha	precinct
+Alaska;AK House District 6;Steele Creek	precinct
+Alaska;AK House District 6;Two Rivers	precinct
+Alaska;AK House District 7;Lakes No. 1	precinct
+Alaska;AK House District 7;Pioneer Peak	precinct
+Alaska;AK House District 7;Schrock	precinct
+Alaska;AK House District 7;Wasilla Lake	precinct
+Alaska;AK House District 7;Wasilla No. 1	precinct
+Alaska;AK House District 7;Wasilla No. 2	precinct
+Alaska;AK House District 7;Foothills	precinct
+Alaska;AK House District 8;Meadow Lakes No. 1	precinct
+Alaska;AK House District 8;Meadow Lakes No. 2	precinct
+Alaska;AK House District 8;Knik Goose Bay No. 1	precinct
+Alaska;AK House District 8;Knik Goose Bay No. 2	precinct
+Alaska;AK House District 8;Knik Goose Bay No. 3	precinct
+Alaska;AK House District 8;Big Lake	precinct
+Alaska;AK House District 9;Big Delta	precinct
+Alaska;AK House District 9;Delta Junction	precinct
+Alaska;AK House District 9;Farm Loop	precinct
+Alaska;AK House District 9;Fishhook	precinct
+Alaska;AK House District 9;Glennallen	precinct
+Alaska;AK House District 9;Sheep Mountain	precinct
+Alaska;AK House District 9;Sutton	precinct
+Alaska;AK House District 9;Valdez No. 1	precinct
+Alaska;AK House District 9;Valdez No. 2	precinct
+Alaska;AK House District 9;Valdez No. 3	precinct
+Alaska;AK House District 9;Whittier	precinct
+Alaska;AK House District 10;Kings Lake	precinct
+Alaska;AK House District 10;Church	precinct
+Alaska;AK House District 10;Tanaina	precinct
+Alaska;AK House District 10;Houston	precinct
+Alaska;AK House District 10;Meadow Lakes No. 3	precinct
+Alaska;AK House District 10;Susitna	precinct
+Alaska;AK House District 10;Talkeetna	precinct
+Alaska;AK House District 10;Trapper Creek	precinct
+Alaska;AK House District 10;Willow	precinct
+Alaska;AK House District 10;Meadow Lakes No. 4	precinct
+Alaska;AK House District 10;Lakes No. 2	precinct
+Alaska;AK House District 11;Walby	precinct
+Alaska;AK House District 11;Greater Palmer	precinct
+Alaska;AK House District 11;Mat-Su Campus	precinct
+Alaska;AK House District 11;Palmer City No. 1	precinct
+Alaska;AK House District 11;Palmer City No. 2	precinct
+Alaska;AK House District 11;Trunk	precinct
+Alaska;AK House District 11;Seward Meridian	precinct
+Alaska;AK House District 11;Springer Loop	precinct
+Alaska;AK House District 11;Lazy Mountain	precinct
+Alaska;AK House District 12;Fairview No. 1	precinct
+Alaska;AK House District 12;Fairview No. 2	precinct
+Alaska;AK House District 12;Snowshoe	precinct
+Alaska;AK House District 12;Butte	precinct
+Alaska;AK House District 12;Eklutna	precinct
+Alaska;AK House District 12;Peters Creek No. 1	precinct
+Alaska;AK House District 12;Peters Creek No. 2	precinct
+Alaska;AK House District 13;Chugiak	precinct
+Alaska;AK House District 13;Fire Lake	precinct
+Alaska;AK House District 13;JBER No. 1	precinct
+Alaska;AK House District 13;Downtown Eagle River No. 1	precinct
+Alaska;AK House District 13;Chugach Park No. 1	precinct
+Alaska;AK House District 13;Centennial Park	precinct
+Alaska;AK House District 14;Downtown Eagle River No. 2	precinct
+Alaska;AK House District 14;Meadow Creek No. 1	precinct
+Alaska;AK House District 14;Meadow Creek No. 2	precinct
+Alaska;AK House District 14;Eagle River No. 1	precinct
+Alaska;AK House District 14;Eagle River No. 2	precinct
+Alaska;AK House District 14;Chugach Park No. 2	precinct
+Alaska;AK House District 14;Hiland	precinct
+Alaska;AK House District 15;JBER No. 2	precinct
+Alaska;AK House District 15;Creekside Park	precinct
+Alaska;AK House District 15;Muldoon No. 1	precinct
+Alaska;AK House District 15;Muldoon No. 2	precinct
+Alaska;AK House District 15;North Muldoon	precinct
+Alaska;AK House District 16;Russian Jack	precinct
+Alaska;AK House District 16;Nunaka Valley	precinct
+Alaska;AK House District 16;Northeast Anchorage	precinct
+Alaska;AK House District 16;College Gate	precinct
+Alaska;AK House District 16;Chester Valley	precinct
+Alaska;AK House District 16;Reflection Lake	precinct
+Alaska;AK House District 16;Wonder Park	precinct
+Alaska;AK House District 17;Rogers Park	precinct
+Alaska;AK House District 17;University No. 1	precinct
+Alaska;AK House District 17;University No. 2	precinct
+Alaska;AK House District 17;Far North Bicentennial	precinct
+Alaska;AK House District 17;Tudor No. 1	precinct
+Alaska;AK House District 17;Tudor No. 2	precinct
+Alaska;AK House District 17;East Anchorage	precinct
+Alaska;AK House District 18;West Anchorage No. 1	precinct
+Alaska;AK House District 18;West Anchorage No. 2	precinct
+Alaska;AK House District 18;Spenard	precinct
+Alaska;AK House District 18;Willow Crest	precinct
+Alaska;AK House District 18;West Anchorage No. 3	precinct
+Alaska;AK House District 18;Fireweed No. 1	precinct
+Alaska;AK House District 18;Fireweed No. 2	precinct
+Alaska;AK House District 18;Fireweed No. 3	precinct
+Alaska;AK House District 18;Midtown No. 1	precinct
+Alaska;AK House District 18;Midtown No. 2	precinct
+Alaska;AK House District 19;North Mt View No. 1	precinct
+Alaska;AK House District 19;North Mt View No. 2	precinct
+Alaska;AK House District 19;South Mt View No. 1	precinct
+Alaska;AK House District 19;South Mt View No. 2	precinct
+Alaska;AK House District 19;Airport Heights No. 1	precinct
+Alaska;AK House District 19;Airport Heights No. 2	precinct
+Alaska;AK House District 20;Government Hill	precinct
+Alaska;AK House District 20;Merrill Field	precinct
+Alaska;AK House District 20;Downtown Anch No. 1	precinct
+Alaska;AK House District 20;Downtown Anch No. 2	precinct
+Alaska;AK House District 20;Downtown Anch No. 3	precinct
+Alaska;AK House District 20;Downtown Anch No. 4	precinct
+Alaska;AK House District 20;Inlet View	precinct
+Alaska;AK House District 20;Westchester	precinct
+Alaska;AK House District 20;Fairview	precinct
+Alaska;AK House District 21;Turnagain No. 1	precinct
+Alaska;AK House District 21;Sand Lake No. 1	precinct
+Alaska;AK House District 21;Sand Lake No. 2	precinct
+Alaska;AK House District 21;Sand Lake No. 3	precinct
+Alaska;AK House District 21;Lake Spenard	precinct
+Alaska;AK House District 21;Lake Hood	precinct
+Alaska;AK House District 21;Turnagain No. 2	precinct
+Alaska;AK House District 21;Turnagain No. 3	precinct
+Alaska;AK House District 22;Dimond No. 1	precinct
+Alaska;AK House District 22;Kincaid	precinct
+Alaska;AK House District 22;Jewel Lake No. 1	precinct
+Alaska;AK House District 22;Jewel Lake No. 2	precinct
+Alaska;AK House District 22;Campbell Lake	precinct
+Alaska;AK House District 22;Sand Lake No. 4	precinct
+Alaska;AK House District 22;Sand Lake No. 5	precinct
+Alaska;AK House District 23;Northwood	precinct
+Alaska;AK House District 23;Arctic	precinct
+Alaska;AK House District 23;Midtown No. 3	precinct
+Alaska;AK House District 23;Taku	precinct
+Alaska;AK House District 23;Campbell Creek No. 1	precinct
+Alaska;AK House District 23;Campbell Creek No. 2	precinct
+Alaska;AK House District 23;Campbell Creek No. 3	precinct
+Alaska;AK House District 23;Dimond No. 2	precinct
+Alaska;AK House District 24;Huffman No. 1	precinct
+Alaska;AK House District 24;Huffman No. 2	precinct
+Alaska;AK House District 24;Klatt	precinct
+Alaska;AK House District 24;Southport	precinct
+Alaska;AK House District 24;Ocean View No. 1	precinct
+Alaska;AK House District 24;Ocean View No. 2	precinct
+Alaska;AK House District 24;Bayshore	precinct
+Alaska;AK House District 25;East Dowling No. 1	precinct
+Alaska;AK House District 25;Elmore No. 1	precinct
+Alaska;AK House District 25;Abbott No. 1	precinct
+Alaska;AK House District 25;Lore No. 1	precinct
+Alaska;AK House District 25;Lore No. 2	precinct
+Alaska;AK House District 25;Abbott No. 2	precinct
+Alaska;AK House District 25;East Dowling No. 2	precinct
+Alaska;AK House District 26;Independence Park No. 1	precinct
+Alaska;AK House District 26;O'Malley No. 1	precinct
+Alaska;AK House District 26;Huffman No. 3	precinct
+Alaska;AK House District 26;Huffman No. 4	precinct
+Alaska;AK House District 26;O'Malley No. 2	precinct
+Alaska;AK House District 26;Independence Park No. 2	precinct
+Alaska;AK House District 26;Elmore No. 2	precinct
+Alaska;AK House District 26;O'Malley No. 3	precinct
+Alaska;AK House District 27;Cheney Lake	precinct
+Alaska;AK House District 27;Muldoon No. 3	precinct
+Alaska;AK House District 27;Muldoon No. 4	precinct
+Alaska;AK House District 27;Chugach Ft. Hills No. 1	precinct
+Alaska;AK House District 27;Chugach Ft. Hills No. 2	precinct
+Alaska;AK House District 27;Scenic Park	precinct
+Alaska;AK House District 27;Baxter	precinct
+Alaska;AK House District 27;Stuckagain Heights	precinct
+Alaska;AK House District 28;Rabbit Creek No. 1	precinct
+Alaska;AK House District 28;Rabbit Creek No. 2	precinct
+Alaska;AK House District 28;Huffman No. 6	precinct
+Alaska;AK House District 28;Huffman No. 7	precinct
+Alaska;AK House District 28;Bear Valley	precinct
+Alaska;AK House District 28;Indian	precinct
+Alaska;AK House District 28;Girdwood	precinct
+Alaska;AK House District 28;Golden View	precinct
+Alaska;AK House District 28;O'Malley No. 4	precinct
+Alaska;AK House District 29;Bear Creek	precinct
+Alaska;AK House District 29;Cooper Landing	precinct
+Alaska;AK House District 29;Funny River No. 1	precinct
+Alaska;AK House District 29;Hope	precinct
+Alaska;AK House District 29;Mackey Lake	precinct
+Alaska;AK House District 29;Moose Pass	precinct
+Alaska;AK House District 29;Nikiski	precinct
+Alaska;AK House District 29;Salamatof	precinct
+Alaska;AK House District 29;Seward-Lowell Point	precinct
+Alaska;AK House District 29;Sterling No. 1	precinct
+Alaska;AK House District 29;Sterling No. 2	precinct
+Alaska;AK House District 30;Central	precinct
+Alaska;AK House District 30;K-Beach	precinct
+Alaska;AK House District 30;Kenai No. 1	precinct
+Alaska;AK House District 30;Kenai No. 2	precinct
+Alaska;AK House District 30;Kenai No. 3	precinct
+Alaska;AK House District 30;Soldotna	precinct
+Alaska;AK House District 31;Anchor Point	precinct
+Alaska;AK House District 31;Diamond Ridge	precinct
+Alaska;AK House District 31;Fox River	precinct
+Alaska;AK House District 31;Funny River No. 2	precinct
+Alaska;AK House District 31;Homer No. 1	precinct
+Alaska;AK House District 31;Homer No. 2	precinct
+Alaska;AK House District 31;Kachemak-Fritz Creek	precinct
+Alaska;AK House District 31;Kachemak/Fritz Creek	precinct
+Alaska;AK House District 31;Kasilof	precinct
+Alaska;AK House District 31;Ninilchik	precinct
+Alaska;AK House District 32;Chiniak	precinct
+Alaska;AK House District 32;Cordova	precinct
+Alaska;AK House District 32;Flats	precinct
+Alaska;AK House District 32;Kodiak Island South	precinct
+Alaska;AK House District 32;Kodiak No. 1	precinct
+Alaska;AK House District 32;Kodiak No. 2	precinct
+Alaska;AK House District 32;Mission Road	precinct
+Alaska;AK House District 32;Old Harbor	precinct
+Alaska;AK House District 32;Ouzinkie	precinct
+Alaska;AK House District 32;Port Lions	precinct
+Alaska;AK House District 32;Seldovia-Kachemak Bay	precinct
+Alaska;AK House District 32;Seldovia/Kachemak Bay	precinct
+Alaska;AK House District 32;Tatitlek	precinct
+Alaska;AK House District 32;Tyonek	precinct
+Alaska;AK House District 32;Yakutat	precinct
+Alaska;AK House District 33;Douglas	precinct
+Alaska;AK House District 33;Gustavus	precinct
+Alaska;AK House District 33;Juneau No. 1	precinct
+Alaska;AK House District 33;Juneau No. 2	precinct
+Alaska;AK House District 33;Juneau No. 3	precinct
+Alaska;AK House District 33;Lemon Creek	precinct
+Alaska;AK House District 33;North Douglas	precinct
+Alaska;AK House District 33;Skagway	precinct
+Alaska;AK House District 33;Haines No. 1	precinct
+Alaska;AK House District 33;Haines No. 2	precinct
+Alaska;AK House District 33;Klukwan	precinct
+Alaska;AK House District 34;Auke Bay	precinct
+Alaska;AK House District 34;Juneau Airport	precinct
+Alaska;AK House District 34;Lynn Canal	precinct
+Alaska;AK House District 34;Mendenhall Valley No. 1	precinct
+Alaska;AK House District 34;Mendenhall Valley No. 2	precinct
+Alaska;AK House District 34;Mendenhall Valley No. 3	precinct
+Alaska;AK House District 34;Mendenhall Valley No. 4	precinct
+Alaska;AK House District 35;Angoon	precinct
+Alaska;AK House District 35;Craig	precinct
+Alaska;AK House District 35;Hoonah	precinct
+Alaska;AK House District 35;Kake	precinct
+Alaska;AK House District 35;Kasaan	precinct
+Alaska;AK House District 35;Klawock	precinct
+Alaska;AK House District 35;North Prince of Wales	precinct
+Alaska;AK House District 35;Pelican-Elfin Cove	precinct
+Alaska;AK House District 35;Petersburg-Kupreanof	precinct
+Alaska;AK House District 35;Port Alexander	precinct
+Alaska;AK House District 35;Sitka No. 1	precinct
+Alaska;AK House District 35;Sitka No. 2	precinct
+Alaska;AK House District 35;Tenakee Springs	precinct
+Alaska;AK House District 35;Thorne Bay	precinct
+Alaska;AK House District 36;Ketchikan No. 1	precinct
+Alaska;AK House District 36;Ketchikan No. 2	precinct
+Alaska;AK House District 36;Ketchikan No. 3	precinct
+Alaska;AK House District 36;North Tongass No. 1	precinct
+Alaska;AK House District 36;North Tongass No. 2	precinct
+Alaska;AK House District 36;Saxman	precinct
+Alaska;AK House District 36;South Tongass	precinct
+Alaska;AK House District 36;Hydaburg	precinct
+Alaska;AK House District 36;Metlakatla	precinct
+Alaska;AK House District 36;Wrangell	precinct
+Alaska;AK House District 37;Anvik	precinct
+Alaska;AK House District 37;Grayling	precinct
+Alaska;AK House District 37;Holy Cross	precinct
+Alaska;AK House District 37;McGrath	precinct
+Alaska;AK House District 37;Nikolai	precinct
+Alaska;AK House District 37;Shageluk	precinct
+Alaska;AK House District 37;Takotna	precinct
+Alaska;AK House District 37;Akutan	precinct
+Alaska;AK House District 37;Aleknagik	precinct
+Alaska;AK House District 37;Aleutians No. 1	precinct
+Alaska;AK House District 37;Aleutians No. 2	precinct
+Alaska;AK House District 37;Chignik	precinct
+Alaska;AK House District 37;Clark's Point	precinct
+Alaska;AK House District 37;Cold Bay	precinct
+Alaska;AK House District 37;Dillingham	precinct
+Alaska;AK House District 37;Egegik	precinct
+Alaska;AK House District 37;Ekwok	precinct
+Alaska;AK House District 37;King Cove	precinct
+Alaska;AK House District 37;King Salmon	precinct
+Alaska;AK House District 37;Koliganek	precinct
+Alaska;AK House District 37;Lake Iliamna No. 1	precinct
+Alaska;AK House District 37;Lake Iliamna No. 2	precinct
+Alaska;AK House District 37;Levelock	precinct
+Alaska;AK House District 37;Manokotak	precinct
+Alaska;AK House District 37;Naknek	precinct
+Alaska;AK House District 37;New Stuyahok	precinct
+Alaska;AK House District 37;Nondalton	precinct
+Alaska;AK House District 37;Pedro Bay	precinct
+Alaska;AK House District 37;Port Heiden	precinct
+Alaska;AK House District 37;Sand Point	precinct
+Alaska;AK House District 37;Sleetmute	precinct
+Alaska;AK House District 37;South Naknek	precinct
+Alaska;AK House District 37;St. George Island	precinct
+Alaska;AK House District 37;St. Paul Island	precinct
+Alaska;AK House District 37;Togiak	precinct
+Alaska;AK House District 38;Akiachak	precinct
+Alaska;AK House District 38;Akiak	precinct
+Alaska;AK House District 38;Aniak	precinct
+Alaska;AK House District 38;Atmautluak	precinct
+Alaska;AK House District 38;Bethel No. 1	precinct
+Alaska;AK House District 38;Bethel No. 2	precinct
+Alaska;AK House District 38;Chefornak	precinct
+Alaska;AK House District 38;Chuathbaluk	precinct
+Alaska;AK House District 38;Crooked Creek	precinct
+Alaska;AK House District 38;Eek	precinct
+Alaska;AK House District 38;Goodnews Bay	precinct
+Alaska;AK House District 38;Kasigluk	precinct
+Alaska;AK House District 38;Kipnuk	precinct
+Alaska;AK House District 38;Kongiganak	precinct
+Alaska;AK House District 38;Kwethluk	precinct
+Alaska;AK House District 38;Kwigillingok	precinct
+Alaska;AK House District 38;Lower Kalskag	precinct
+Alaska;AK House District 38;Marshall	precinct
+Alaska;AK House District 38;Mekoryuk	precinct
+Alaska;AK House District 38;Napakiak	precinct
+Alaska;AK House District 38;Napaskiak	precinct
+Alaska;AK House District 38;Newtok	precinct
+Alaska;AK House District 38;Nightmute	precinct
+Alaska;AK House District 38;Nunapitchuk	precinct
+Alaska;AK House District 38;Quinhagak	precinct
+Alaska;AK House District 38;Russian Mission	precinct
+Alaska;AK House District 38;Toksook Bay	precinct
+Alaska;AK House District 38;Tuluksak	precinct
+Alaska;AK House District 38;Tuntutuliak	precinct
+Alaska;AK House District 38;Tununak	precinct
+Alaska;AK House District 38;Upper Kalskag	precinct
+Alaska;AK House District 39;Galena	precinct
+Alaska;AK House District 39;Huslia	precinct
+Alaska;AK House District 39;Kaltag	precinct
+Alaska;AK House District 39;Koyukuk	precinct
+Alaska;AK House District 39;Nulato	precinct
+Alaska;AK House District 39;Ruby	precinct
+Alaska;AK House District 39;Alakanuk	precinct
+Alaska;AK House District 39;Brevig Mission	precinct
+Alaska;AK House District 39;Chevak	precinct
+Alaska;AK House District 39;Diomede	precinct
+Alaska;AK House District 39;Elim	precinct
+Alaska;AK House District 39;Emmonak	precinct
+Alaska;AK House District 39;Gambell	precinct
+Alaska;AK House District 39;Golovin	precinct
+Alaska;AK House District 39;Hooper Bay	precinct
+Alaska;AK House District 39;Kotlik	precinct
+Alaska;AK House District 39;Koyuk	precinct
+Alaska;AK House District 39;Mountain Village	precinct
+Alaska;AK House District 39;Nome No. 1	precinct
+Alaska;AK House District 39;Nome No. 2	precinct
+Alaska;AK House District 39;Nunam Iqua	precinct
+Alaska;AK House District 39;Pilot Station	precinct
+Alaska;AK House District 39;Savoonga	precinct
+Alaska;AK House District 39;Scammon Bay	precinct
+Alaska;AK House District 39;Shaktoolik	precinct
+Alaska;AK House District 39;Shishmaref	precinct
+Alaska;AK House District 39;St. Mary's	precinct
+Alaska;AK House District 39;St. Michael	precinct
+Alaska;AK House District 39;Stebbins	precinct
+Alaska;AK House District 39;Teller	precinct
+Alaska;AK House District 39;Unalakleet	precinct
+Alaska;AK House District 39;Wales	precinct
+Alaska;AK House District 39;White Mountain	precinct
+Alaska;AK House District 40;Ambler	precinct
+Alaska;AK House District 40;Anaktuvuk Pass	precinct
+Alaska;AK House District 40;Atqasuk	precinct
+Alaska;AK House District 40;Barrow	precinct
+Alaska;AK House District 40;Utqiagvik (Barrow)	precinct
+Alaska;AK House District 40;Browerville	precinct
+Alaska;AK House District 40;Buckland	precinct
+Alaska;AK House District 40;Deering	precinct
+Alaska;AK House District 40;Kaktovik	precinct
+Alaska;AK House District 40;Kiana	precinct
+Alaska;AK House District 40;Kivalina	precinct
+Alaska;AK House District 40;Kobuk	precinct
+Alaska;AK House District 40;Kotzebue	precinct
+Alaska;AK House District 40;Noatak	precinct
+Alaska;AK House District 40;Noorvik	precinct
+Alaska;AK House District 40;Nuiqsut	precinct
+Alaska;AK House District 40;Point Hope	precinct
+Alaska;AK House District 40;Point Lay	precinct
+Alaska;AK House District 40;Selawik	precinct
+Alaska;AK House District 40;Shungnak	precinct
+Alaska;AK House District 40;Wainwright	precinct
+Alaska;AK House District 40;Allakaket	precinct
+Alaska;AK House District 40;Bettles	precinct
+Alaska;AK House District 40;Hughes	precinct
