@@ -196,7 +196,14 @@ def add_regex_column(
     err = None
     working = df.copy()
     p = re.compile(pattern_str)
-    working[new_col] = working[old_col].str.replace(p, "\\1")
+
+    # replace via regex if possible; otherwise msg
+    # # put informative error message in new_col
+    old = working[old_col].copy()
+    working[new_col] = working[old_col].str.cat (old, f" <- did not match regex {pattern_str}")
+    # # where regex succeeds, replace error message with good value
+    mask = working[old_col].str.match(p)
+    working.loc[mask,new_col] = working[mask][old_col].str.replace(p,"\\1")
 
     return working, err
 
@@ -277,7 +284,6 @@ def add_column_from_formula(
                 )
                 return w, err
 
-        # use regex to pull info out of the concatenation formula (e.g., 'DEM' from 'DEM - US Senate')
     except Exception as e:
         err = ui.add_new_error(
             err, "system", "munge.add_column_from_formula", f"Unexpected error: {e}"
@@ -1030,14 +1036,13 @@ def raw_elements_to_cdf(
     working = working[vc_cols]
     working, e = clean_count_cols(working, ["Count"])
 
-    if mu.alt != dict():
-        # TODO there are edge cases where this might include dupes
-        #  that should be omitted. E.g., if data mistakenly read twice
-        # Sum any rows that were disambiguated (otherwise dupes will be dropped
-        #  when VoteCount is filled)
-        group_cols = [c for c in working.columns if c != "Count"]
-        working = working.groupby(group_cols).sum().reset_index()
-        # TODO clean before inserting? All should be already clean, no?
+    # TODO there are edge cases where this might include dupes
+    #  that should be omitted. E.g., if data mistakenly read twice
+    # Sum any rows that were disambiguated (otherwise dupes will be dropped
+    #  when VoteCount is filled)
+    group_cols = [c for c in working.columns if c != "Count"]
+    working = working.groupby(group_cols).sum().reset_index()
+    # TODO clean before inserting? All should be already clean, no?
 
     # Fill VoteCount
     try:
