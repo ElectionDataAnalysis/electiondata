@@ -184,6 +184,11 @@ def run2(
             test_dir, dbname, election_jurisdiction_list=election_jurisdiction_list
         )
 
+        # remove all .ini files
+        par_files = [x for x in os.listdir("TestingData") if x[-4:] == ".ini"]
+        for f in par_files:
+            os.remove(os.path.join("TestingData",f))
+
         if load_data:
             err, db_removed = optional_remove(dl, "TestingData")
     return err

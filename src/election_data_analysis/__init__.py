@@ -1625,14 +1625,15 @@ def get_filename(path: str) -> str:
 def aggregate_results(
         election,
         jurisdiction,
-        contest_type,
-        by_vote_type,
-        dbname=None,
-        vote_type=None,
+        dbname: Optional[str] = None,
+        vote_type: Optional[str] = None,
         sub_unit: Optional[str] = None,
         contest: Optional[str] = None,
+        contest_type: str = "Candidate",
         sub_unit_type: str = "county",
 ):
+    """if a vote type is given, restricts to that vote type; otherwise returns all vote types;
+    Similarly for sub_unit and contest"""
     # using the analyzer gives us access to DB session
     empty_df_with_good_cols = pd.DataFrame(columns=["contest", "count"])
     an = Analyzer(dbname=dbname)
@@ -1668,24 +1669,10 @@ def aggregate_results(
         contest_type=contest_type,
         datafile_list=datafile_list,
         by="Id",
-        exclude_total=True,
+        exclude_redundant_total=True,
         by_vote_type=True,
         contest=contest,
     )
-    if df.empty:
-        # TODO better logic? This is like throwing spaghetti at the wall
-        # try without excluding total
-        df, err_str = db.export_rollup_from_db(
-            cursor=cursor,
-            top_ru=jurisdiction,
-            sub_unit_type=sub_unit_type,
-            contest_type=contest_type,
-            datafile_list=datafile_list,
-            by="Id",
-            exclude_total=False,
-            by_vote_type=True,
-            contest=contest,
-        )
     if err_str or df.empty:
         return empty_df_with_good_cols
     if vote_type:
@@ -1720,77 +1707,101 @@ def data_exists(election, jurisdiction, p_path=None, dbname=None):
         return True
 
 
+def check_totals_match_vote_types(
+        election, 
+        jurisdiction, 
+        sub_unit_type,
+        dbname=None,
+):
+    """Interesting if there are both total and other vote types;
+    otherwise trivially true"""
+    an = Analyzer(dbname=dbname)
+    active = db.active_vote_types(an.session, election, jurisdiction)
+    if len(active) > 1 and 'total' in active:
+        df_candidate = aggregate_results(
+            election, 
+            jurisdiction, 
+            contest_type="Candidate",
+            vote_type='total',
+            sub_unit_type=sub_unit_type,
+            dbname=dbname,
+        )
+        df_ballot = aggregate_results(
+            election, 
+            jurisdiction, 
+            contest_type="BallotMeasure",
+            vote_type='total',
+            sub_unit_type=sub_unit_type,
+            dbname=dbname,
+        )
+        df_total_type_only = pd.concat([df_candidate, df_ballot])
 
-def check_totals_match_vote_types(election, jurisdiction, dbname=None):
-    df_candidate = aggregate_results(
-        election, jurisdiction, "Candidate", False, dbname=dbname
-    )
-    df_ballot = aggregate_results(
-        election, jurisdiction, "BallotMeasure", False, dbname=dbname
-    )
-    df_by_ttl = pd.concat([df_candidate, df_ballot])
+        df_candidate = aggregate_results(
+            election,
+            jurisdiction,
+            contest_type="Candidate",
+            sub_unit_type=sub_unit_type,
+            dbname=dbname,
+        )
+        df_ballot = aggregate_results(
+            election,
+            jurisdiction,
+            contest_type="BallotMeasure",
+            sub_unit_type=sub_unit_type,
+            dbname=dbname,
+        )
+        df_sum_nontotal_types = pd.concat([df_candidate, df_ballot])
+        return df_total_type_only["count"].sum() == df_sum_nontotal_types["count"].sum()
+    else:
+        return True
 
-    df_candidate = aggregate_results(
-        election, jurisdiction, "Candidate", True, dbname=dbname
-    )
-    df_ballot = aggregate_results(
-        election, jurisdiction, "BallotMeasure", True, dbname=dbname
-    )
-    df_by_type = pd.concat([df_candidate, df_ballot])
-    return df_by_ttl["count"].sum() == df_by_type["count"].sum()
 
-
-# A couple random contests
 def contest_total(
         election,
         jurisdiction,
         contest,
-        dbname=None,
-        vote_type=None,
-        county=None,
-        sub_unit_type: str = "county"
+        dbname: Optional[str] = None,
+        vote_type: Optional[str] = None,
+        county: Optional[str] = None,
+        sub_unit_type: str = "county",
+        contest_type: Optional[str] = "Candidate"
 ):
-    df_candidate = aggregate_results(
-        election,
-        jurisdiction,
-        "Candidate",
-        False,
+    df = aggregate_results(
+        election=election,
+        jurisdiction=jurisdiction,
         dbname=dbname,
         vote_type=vote_type,
         sub_unit=county,
         sub_unit_type=sub_unit_type,
         contest=contest,
+        contest_type=contest_type,
     )
-    df_ballot = aggregate_results(
-        election,
-        jurisdiction,
-        "BallotMeasure",
-        False,
-        dbname=dbname,
-        vote_type=vote_type,
-        sub_unit=county,
-        sub_unit_type=sub_unit_type,
-        contest=contest,
-    )
-    df = pd.concat([df_candidate, df_ballot])
-    df = df[df["contest"] == contest]
     return df["count"].sum()
 
 
-def count_type_total(election, jurisdiction, contest, count_item_type, dbname=None):
+def count_type_total(election, jurisdiction, contest, count_item_type, sub_unit_type, dbname=None):
     df_candidate = aggregate_results(
-        election, jurisdiction, "Candidate", False, dbname=dbname
+        election=election, 
+        jurisdiction=jurisdiction, 
+        contest=contest,
+        contest_type="Candidate", 
+        vote_type=count_item_type, 
+        sub_unit_type=sub_unit_type,
+        dbname=dbname,
     )
     df_ballot = aggregate_results(
-        election, jurisdiction, "BallotMeasure", False, dbname=dbname
+        election=election, 
+        jurisdiction=jurisdiction, 
+        contest=contest,
+        contest_type="BallotMeasure", 
+        vote_type=count_item_type,
+        sub_unit_type=sub_unit_type,
+        dbname=dbname,
     )
     df = pd.concat([df_candidate, df_ballot])
-    # TODO is this error-handling what we want?
     if df.empty:
         return 0
     else:
-        df = df[df["contest"] == contest]
-        df = df[df["count_item_type"] == count_item_type]
         return df["count"].sum()
 
 def check_count_types_standard(election, jurisdiction, dbname=None):

@@ -66,7 +66,7 @@ def create_rollup(
         by = "Id"
         if len(datafile_list) == 0:
             return f"No datafiles found for Election_Id {election_id}"
-    # set exclude_total
+    # set exclude_redundant_total
     vote_type_list, err_str = db.vote_type_list(cursor, datafile_list, by=by)
     if err_str:
         return err_str
@@ -74,9 +74,9 @@ def create_rollup(
         return f"No vote types found for datafiles with {by} in {datafile_list} "
 
     if len(vote_type_list) > 1 and "total" in vote_type_list:
-        exclude_total = True
+        exclude_redundant_total = True
     else:
-        exclude_total = False
+        exclude_redundant_total = False
 
     # get names from ids
     top_ru = db.name_from_id(cursor, "ReportingUnit", top_ru_id)
@@ -116,7 +116,7 @@ def create_rollup(
             contest_type=contest_type,
             datafile_list=datafile_list,
             by=by,
-            exclude_total=exclude_total,
+            exclude_redundant_total=exclude_redundant_total,
             by_vote_type=by_vote_type,
         )
         if not err_str:

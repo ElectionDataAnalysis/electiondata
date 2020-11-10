@@ -1303,18 +1303,27 @@ def export_rollup_from_db(
     contest_type: str,
     datafile_list: iter,
     by: str = "Id",
-    exclude_total: bool = False,
+    exclude_redundant_total: bool = False,
     by_vote_type: bool = False,
     contest: Optional[str] = None
 ) -> (pd.DataFrame, Optional[str]):
+    """Return a dataframe of rolled-up results and an error string.
+    If by_vote_type, return separate rows for each vote type.
+    If exclude_redundant_total then, if both total and other vote types are given, exclude total"""
 
     # define the 'where' sql clause based on restrictions from parameters
     # and the string variables to be passed to query
     restrict = ""
+    group_and_order_by = """C."Name", EDRUT."Txt", Cand."BallotName", IntermediateRU."Name" """
     string_vars = [top_ru, sub_unit_type, tuple(datafile_list)]
-    if not by_vote_type:
-        restrict += """ AND CIT."Txt" = 'total' """
-    elif exclude_total:
+
+    if by_vote_type:
+        count_item_type_sql = sql.SQL("CIT.{txt}").format(txt=sql.Identifier("Txt"))
+        group_and_order_by += """, CIT."Txt" """
+    else:
+        count_item_type_sql = sql.SQL("'total'")
+
+    if exclude_redundant_total:
         restrict += """ AND CIT."Txt" != 'total' """
 
     if contest:
@@ -1338,7 +1347,7 @@ def export_rollup_from_db(
             EDRUT."Txt" contest_district_type,
             Cand."BallotName" "Selection",
             IntermediateRU."Name" "ReportingUnit",
-            CIT."Txt" "CountItemType",
+            {count_item_type_sql} "CountItemType",
             sum(vc."Count") "Count"
         FROM "VoteCount" vc
         LEFT JOIN _datafile d on vc."_datafile_Id" = d."Id"
@@ -1364,20 +1373,15 @@ def export_rollup_from_db(
             AND IntermediateRUT."Txt" = %s  -- intermediate_reporting_unit_type
             AND d.{by} in %s  -- tuple of datafile short_names (if by='short_name) or Ids (if by="Id")
             {restrict}
-        GROUP BY
-               C."Name",
-               EDRUT."Txt",
-               Cand."BallotName",
-              IntermediateRU."Name",
-               CIT."Txt"
-        ORDER BY
-               C."Name",
-               EDRUT."Txt",
-               Cand."BallotName",
-              IntermediateRU."Name",
-               CIT."Txt";
+        GROUP BY {group_and_order_by}
+        ORDER BY {group_and_order_by};
         """
-        ).format(by=sql.Identifier(by), restrict=sql.SQL(restrict))
+        ).format(
+            count_item_type_sql=count_item_type_sql,
+            by=sql.Identifier(by),
+            group_and_order_by=sql.SQL(group_and_order_by),
+            restrict=sql.SQL(restrict),
+        )
 
     elif contest_type == "BallotMeasure":
         q = sql.SQL(
@@ -1411,25 +1415,21 @@ def export_rollup_from_db(
             AND IntermediateRUT."Txt" = %s  -- intermediate_reporting_unit_type
             AND d.{by} in %s  -- tuple of datafile short_names
             {restrict}
-        GROUP BY
-               C."Name",
-               EDRUT."Txt",
-               BMS."Name",
-              IntermediateRU."Name",
-               CIT."Txt"
-        ORDER BY
-               C."Name",
-               EDRUT."Txt",
-               BMS."Name",
-              IntermediateRU."Name",
-               CIT."Txt";
+        GROUP BY {group_and_order_by}
+        ORDER BY {group_and_order_by}
+        ;
         """
-        ).format(by=sql.Identifier(by), restrict=sql.SQL(restrict))
+        ).format(
+            count_item_type_sql=count_item_type_sql,
+            by=sql.Identifier(by),
+            group_and_order_by=sql.SQL(group_and_order_by),
+            restrict=sql.SQL(restrict),
+        )
     else:
         err_str = f"Unrecognized contest_type: {contest_type}. No results exported"
         return pd.DataFrame(columns=columns), err_str
     try:
-        cursor.execute(q, [top_ru, sub_unit_type, tuple(datafile_list)])
+        cursor.execute(q, string_vars)
         results = cursor.fetchall()
         results_df = pd.DataFrame(results)
         if not results_df.empty:
