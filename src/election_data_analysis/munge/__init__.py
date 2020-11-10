@@ -366,6 +366,7 @@ def replace_raw_with_internal_ids(
     internal_name_column: str,
     error: dict,
     drop_unmatched: bool = False,
+    drop_extraneous: bool = True,
     mode: str = "row",
     unmatched_id: int = 0,
     drop_all_ok: bool = False,
@@ -373,6 +374,8 @@ def replace_raw_with_internal_ids(
     """replace columns in <working> with raw_identifier values by columns with internal names and Ids
     from <table_df>, which has structure of a db table for <element>.
     <unmatched_id> is the id to assign to unmatched records.
+    If <drop_extraneous> = True and dictionary matches raw_identifier to "row should be dropped",
+    drop that row EVEN IF <drop_unmatched> = False.
     """
     working = df.copy()
     # join the 'cdf_internal_name' from the raw_identifier table -- this is the internal name field value,
@@ -389,10 +392,13 @@ def replace_raw_with_internal_ids(
     ].copy()
 
     if element == "Candidate":
-        # Change all internal candidate names to title case in dictionary
-        raw_ids_for_element["cdf_internal_name"] = raw_ids_for_element.copy()[
-            "cdf_internal_name"
-        ].str.title()
+        # Change all upper-case-only internal candidate names to title case in dictionary
+        mask = raw_ids_for_element["cdf_internal_name"].str.isupper()
+        if mask.any():
+            # TODO test whether this works when there are all-upper candidate names
+            raw_ids_for_element[mask,"cdf_internal_name"] = raw_ids_for_element.copy()[mask,
+                "cdf_internal_name"
+            ].str.title()
         raw_ids_for_element.drop_duplicates(inplace=True)
 
     working = working.merge(
@@ -403,6 +409,7 @@ def replace_raw_with_internal_ids(
         suffixes=["", f"_{element}_ei"],
     )
 
+    # identify unmatched
     unmatched = working[working["cdf_internal_name"].isnull()]
     unmatched_raw = sorted(unmatched[f"{element}_raw"].unique(), reverse=True)
     if len(unmatched_raw) > 0 and element != "BallotMeasureContest":
@@ -413,8 +420,14 @@ def replace_raw_with_internal_ids(
     if drop_unmatched:
         working = working[working["cdf_internal_name"].notnull()]
 
+    if drop_extraneous:
+        # TODO tech debt - note change of case for Candidate above which, if
+        #  changed, might affect this in unexpected ways
+        # drop extraneous rows identified in dictionary
+        working = working[working["cdf_internal_name"] != "row should be dropped"]
+
     if working.empty:
-        e = f"No raw {element} in 'dictionary.txt' matched any raw {element} derived from the result file"
+        e = f"No true raw {element} in 'dictionary.txt' matched any raw {element} derived from the result file"
         if drop_unmatched and not drop_all_ok:
             error = ui.add_new_error(
                 error,
@@ -451,7 +464,9 @@ def replace_raw_with_internal_ids(
                 (working["raw_identifier_value"].isnull())
                 | (working["cdf_internal_name"].notnull())
             ]
-            # TODO more efficient to drop these earlier, before melting
+            if drop_extraneous:
+                working = working[working["cdf_internal_name"] != "row should be dropped"]
+            # TODO tech debt more efficient to drop these earlier, before melting
 
     # unmatched elements get nan in fields from dictionary table. Change these to "none or unknown"
     if not drop_unmatched:
