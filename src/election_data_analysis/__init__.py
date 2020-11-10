@@ -1666,6 +1666,7 @@ def aggregate_results(
     df, err_str = db.export_rollup_from_db(
         cursor=cursor,
         top_ru=jurisdiction,
+        election=election,
         sub_unit_type=sub_unit_type,
         contest_type=contest_type,
         datafile_list=datafile_list,

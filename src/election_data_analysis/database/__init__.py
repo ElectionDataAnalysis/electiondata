@@ -411,10 +411,7 @@ def name_from_id(cursor, element, idx):
     return name
 
 
-def name_to_id(session, element, name) -> int:
-    """ Condition can be a field/value pair, e.g., ('contest_type','Candidate')"""
-    connection = session.bind.raw_connection()
-    cursor = connection.cursor()
+def name_to_id_cursor(cursor, element, name):
     if element == "CandidateContest":
         q = sql.SQL(
             'SELECT "Id" FROM "Contest" where "Name" = %s AND contest_type = \'Candidate\''
@@ -434,6 +431,15 @@ def name_to_id(session, element, name) -> int:
     except Exception:
         # if no record with name <name> was found
         idx = None
+    return idx
+
+
+def name_to_id(session, element, name) -> int:
+    """ Condition can be a field/value pair, e.g., ('contest_type','Candidate')"""
+    connection = session.bind.raw_connection()
+    cursor = connection.cursor()
+    idx = name_to_id_cursor(cursor, element, name)
+
     connection.close()
     return idx
 
@@ -730,6 +736,56 @@ def data_file_list(
     return df_list, err_str
 
 
+def active_vote_types_from_ids(cursor, election_id=None, jurisdiction_id=None):
+    if election_id:
+        if jurisdiction_id:
+            q = """SELECT distinct cit."Txt"
+                FROM "VoteCount" vc LEFT JOIN "CountItemType" cit
+                ON vc."CountItemType_Id" = cit."Id"
+                LEFT JOIN "ComposingReportingUnitJoin" cruj
+                on cruj."ChildReportingUnit_Id" = vc."ReportingUnit_Id"
+                AND cruj."ChildReportingUnit_Id" = vc."ReportingUnit_Id"
+                WHERE vc."Election_Id" = %s AND cruj."ParentReportingUnit_Id" = %s 
+                """
+            str_vars = (election_id, jurisdiction_id)
+        else:  # if election_id but no jurisdiction_id
+            q = """SELECT distinct cit."Txt"
+                FROM "VoteCount" vc LEFT JOIN "CountItemType" cit
+                ON vc."CountItemType_Id" = cit."Id"
+                LEFT JOIN "ComposingReportingUnitJoin" cruj
+                on cruj."ChildReportingUnit_Id" = vc."ReportingUnit_Id"
+                AND cruj."ChildReportingUnit_Id" = vc."ReportingUnit_Id"
+                WHERE vc."Election_Id" = %s 
+                """
+            str_vars = (election_id,)
+
+    elif jurisdiction_id:   # if jurisdiction_id but no election_id
+        q = """SELECT distinct cit."Txt"
+            FROM "VoteCount" vc LEFT JOIN "CountItemType" cit
+            ON vc."CountItemType_Id" = cit."Id"
+            LEFT JOIN "ComposingReportingUnitJoin" cruj
+            on cruj."ChildReportingUnit_Id" = vc."ReportingUnit_Id"
+            AND cruj."ChildReportingUnit_Id" = vc."ReportingUnit_Id"
+            WHERE cruj."ParentReportingUnit_Id" = %s 
+            """
+        str_vars = (jurisdiction_id,)
+    else:
+        q = """SELECT distinct cit."Txt"
+                FROM "VoteCount" vc LEFT JOIN "CountItemType" cit
+                ON vc."CountItemType_Id" = cit."Id"
+                LEFT JOIN "ComposingReportingUnitJoin" cruj
+                on cruj."ChildReportingUnit_Id" = vc."ReportingUnit_Id"
+                AND cruj."ChildReportingUnit_Id" = vc."ReportingUnit_Id"
+                """
+        str_vars = tuple()
+
+    cursor.execute(q,str_vars)
+
+    aa = cursor.fetchall()
+    active_list = [x for (x,) in aa]
+    return active_list
+
+
 def active_vote_types(session, election, jurisdiction):
     """Gets a list of the vote types for the given election and jurisdiction"""
 
@@ -737,18 +793,7 @@ def active_vote_types(session, election, jurisdiction):
     jurisdiction_id = name_to_id(session, "ReportingUnit", jurisdiction)
     connection = session.bind.raw_connection()
     cursor = connection.cursor()
-    q = """SELECT distinct cit."Txt"
-        FROM "VoteCount" vc LEFT JOIN "CountItemType" cit
-        ON vc."CountItemType_Id" = cit."Id"
-        LEFT JOIN "ComposingReportingUnitJoin" cruj
-        on cruj."ChildReportingUnit_Id" = vc."ReportingUnit_Id"
-        AND cruj."ChildReportingUnit_Id" = vc."ReportingUnit_Id"
-        where vc."Election_Id" = %s and cruj."ParentReportingUnit_Id" = %s
-        """
-    cursor.execute(q,(election_id, jurisdiction_id))
-
-    aa = cursor.fetchall()
-    active_list = [x for (x,) in aa]
+    active_list = active_vote_types_from_ids(cursor, election_id=election_id, jurisdiction_id=jurisdiction_id)
     cursor.close()
     connection.close()
     return active_list
@@ -1299,6 +1344,7 @@ def get_candidate_votecounts(session, election_id, top_ru_id, subdivision_type_i
 def export_rollup_from_db(
     cursor,
     top_ru: str,
+    election: str,
     sub_unit_type: str,
     contest_type: str,
     datafile_list: iter,
@@ -1315,7 +1361,7 @@ def export_rollup_from_db(
     # and the string variables to be passed to query
     restrict = ""
     group_and_order_by = """C."Name", EDRUT."Txt", Cand."BallotName", IntermediateRU."Name" """
-    string_vars = [top_ru, sub_unit_type, tuple(datafile_list)]
+    string_vars = [election, top_ru, sub_unit_type, tuple(datafile_list)]
 
     if by_vote_type:
         count_item_type_sql = sql.SQL("CIT.{txt}").format(txt=sql.Identifier("Txt"))
@@ -1324,7 +1370,11 @@ def export_rollup_from_db(
         count_item_type_sql = sql.SQL("'total'")
 
     if exclude_redundant_total:
-        restrict += """ AND CIT."Txt" != 'total' """
+        election_id = name_to_id_cursor(cursor, "Election", election)
+        jurisdiction_id = name_to_id_cursor(cursor, "ReportingUnit", top_ru)
+        active = active_vote_types_from_ids(cursor, election_id=election_id, jurisdiction_id=jurisdiction_id)
+        if len(active) > 1 and 'total' in active:
+            restrict += """ AND CIT."Txt" != 'total' """
 
     if contest:
         restrict += """ AND C."Name" = %s """
@@ -1354,6 +1404,7 @@ def export_rollup_from_db(
         LEFT JOIN "Contest" C on vc."Contest_Id" = C."Id"
         LEFT JOIN "CandidateSelection" CS on CS."Id" = vc."Selection_Id"
         LEFT JOIN "Candidate" Cand on CS."Candidate_Id" = Cand."Id"
+        LEFT JOIN "Election" e on vc."Election_Id" = e."Id"
         -- sum over all children
         LEFT JOIN "ReportingUnit" ChildRU on vc."ReportingUnit_Id" = ChildRU."Id"
         LEFT JOIN "ComposingReportingUnitJoin" CRUJ_sum on ChildRU."Id" = CRUJ_sum."ChildReportingUnit_Id"
@@ -1369,6 +1420,7 @@ def export_rollup_from_db(
         LEFT JOIN "ReportingUnit" ED on O."ElectionDistrict_Id" = ED."Id"
         LEFT JOIN "ReportingUnitType" EDRUT on ED."ReportingUnitType_Id" = EDRUT."Id"
         WHERE C.contest_type = 'Candidate'
+            AND e."Name" = %s -- election name
             AND TopRU."Name" = %s  -- top RU
             AND IntermediateRUT."Txt" = %s  -- intermediate_reporting_unit_type
             AND d.{by} in %s  -- tuple of datafile short_names (if by='short_name) or Ids (if by="Id")
@@ -1398,6 +1450,7 @@ def export_rollup_from_db(
         LEFT JOIN "Contest" C on vc."Contest_Id" = C."Id"
         LEFT JOIN "BallotMeasureContest" BMC on vc."Contest_Id" = BMC."Id"
         LEFT JOIN "BallotMeasureSelection" BMS on BMS."Id" = vc."Selection_Id"
+        LEFT JOIN "Election" e on vc."Election_Id" = e."Id"
         -- sum over all children
         LEFT JOIN "ReportingUnit" ChildRU on vc."ReportingUnit_Id" = ChildRU."Id"
         LEFT JOIN "ComposingReportingUnitJoin" CRUJ_sum on ChildRU."Id" = CRUJ_sum."ChildReportingUnit_Id"
@@ -1411,6 +1464,7 @@ def export_rollup_from_db(
         LEFT JOIN "ReportingUnit" ED on BMC."ElectionDistrict_Id" = ED."Id"
         LEFT JOIN "ReportingUnitType" EDRUT on ED."ReportingUnitType_Id" = EDRUT."Id"
         WHERE C.contest_type = 'BallotMeasure'
+            AND e."Name" = %s -- election name
             AND TopRU."Name" = %s  -- top RU
             AND IntermediateRUT."Txt" = %s  -- intermediate_reporting_unit_type
             AND d.{by} in %s  -- tuple of datafile short_names
