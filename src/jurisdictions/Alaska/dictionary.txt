@@ -134,7 +134,7 @@ CountItemType	election-day	election-day
 CountItemType	absentee	Absentee
 CountItemType	provisional	Question
 CountItemType	early	Early Voting
-CountItemType	absentee-fwab	FWAB
+CountItemType	absentee-fwab	Fed Overseas Absentee
 
 ReportingUnit	Alaska;AK House District 1	Alaska;AK House District 1
 ReportingUnit	Alaska;AK House District 2	Alaska;AK House District 2
@@ -686,7 +686,6 @@ ReportingUnit	Alaska;AK House District 7	District 7
 ReportingUnit	Alaska;AK House District 8	District 8
 ReportingUnit	Alaska;AK House District 9	District 9
 
-ReportingUnit	Alaska;AK House District 9	District 9 - Question
 ReportingUnit	Alaska	HD99
 
 Candidate	Alexander, Ed	Alexander, Ed
@@ -1012,5 +1011,9 @@ Candidate	Young, Don	Young Don''
 Candidate	Zulkosky, Tiffany	Zulkosky  Tiffany - D
 Candidate	Zulkosky, Tiffany	Zulkosky, Tiffany
 Candidate	Zulkosky, Tiffany	Zulkosky Tiffany''
-
-
+Candidate	row should be dropped	Registered Voters
+Candidate	row should be dropped	Times Counted
+Candidate	row should be dropped	Number of Precincts Reporting
+Candidate	row should be dropped	Number of Precincts for Race
+Candidate	row should be dropped	Number of Precincts
+Candidate	Muñoz, Cathy	Muñoz, Cathy
