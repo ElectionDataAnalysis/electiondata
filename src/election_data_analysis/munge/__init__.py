@@ -395,8 +395,7 @@ def replace_raw_with_internal_ids(
         # Change all upper-case-only internal candidate names to title case in dictionary
         mask = raw_ids_for_element["cdf_internal_name"].str.isupper()
         if mask.any():
-            # TODO test whether this works when there are all-upper candidate names
-            raw_ids_for_element[mask,"cdf_internal_name"] = raw_ids_for_element.copy()[mask,
+            raw_ids_for_element.loc[mask,"cdf_internal_name"] = raw_ids_for_element.copy()[mask][
                 "cdf_internal_name"
             ].str.title()
         raw_ids_for_element.drop_duplicates(inplace=True)
