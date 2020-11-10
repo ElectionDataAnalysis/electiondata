@@ -1631,6 +1631,7 @@ def aggregate_results(
         contest: Optional[str] = None,
         contest_type: str = "Candidate",
         sub_unit_type: str = "county",
+        exclude_redundant_total: bool = True,
 ):
     """if a vote type is given, restricts to that vote type; otherwise returns all vote types;
     Similarly for sub_unit and contest"""
@@ -1669,7 +1670,7 @@ def aggregate_results(
         contest_type=contest_type,
         datafile_list=datafile_list,
         by="Id",
-        exclude_redundant_total=True,
+        exclude_redundant_total=exclude_redundant_total,
         by_vote_type=True,
         contest=contest,
     )
@@ -1718,12 +1719,14 @@ def check_totals_match_vote_types(
     an = Analyzer(dbname=dbname)
     active = db.active_vote_types(an.session, election, jurisdiction)
     if len(active) > 1 and 'total' in active:
+        # pull type 'total' only
         df_candidate = aggregate_results(
             election, 
             jurisdiction, 
             contest_type="Candidate",
             vote_type='total',
             sub_unit_type=sub_unit_type,
+            exclude_redundant_total=False,
             dbname=dbname,
         )
         df_ballot = aggregate_results(
@@ -1732,6 +1735,7 @@ def check_totals_match_vote_types(
             contest_type="BallotMeasure",
             vote_type='total',
             sub_unit_type=sub_unit_type,
+            exclude_redundant_total=False,
             dbname=dbname,
         )
         df_total_type_only = pd.concat([df_candidate, df_ballot])
