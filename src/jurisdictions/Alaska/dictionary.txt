@@ -911,7 +911,6 @@ Candidate	Rasmussen, Sara	Rasmussen, Sara
 Candidate	Rasmussen, Sara E.	Rasmussen  Sara E. - R
 Candidate	Rauscher, George	Rauscher  George - R
 Candidate	Rauscher, George	Rauscher, George
-Candidate	Registered Voters	Registered Voters
 Candidate	Reinbold, Lora	Reinbold, Lora
 Candidate	Reinbold, Lora H.	Reinbold, Lora H.
 Candidate	Revak, Josh C.	Revak, Josh C.
@@ -984,6 +983,7 @@ Candidate	Vazquez, Liz	Vazquez, Liz
 Candidate	Verrall, Bert	Verrall, Bert
 Candidate	Von Imhof, Natasha A	Von Imhof, Natasha A
 Candidate	Von Imhof, Natasha A.	Von Imhof  Natasha A. - R
+Candidate	Von Imhof, Natasha A.	von Imhof Natasha A.''
 Candidate	Walker, David G.	Walker  David G. - R
 Candidate	Walker/Mallott	Walker/Mallott
 Candidate	Watkins, Brent L.	Watkins, Brent L.
@@ -1005,7 +1005,12 @@ Candidate	Wool, Adam L.	Wool, Adam L.
 Candidate	Wright, Stanley A.	Wright, Stanley A.
 Candidate	Wright, Stephen	Wright  Stephen - R
 Candidate	Youmans, Jeremiah A.	Youmans  Jeremiah A. - D
+Candidate	Youmans, Jeremiah A.	Youmans Jeremiah A.''
 Candidate	Young, Don	Young  Don - R
 Candidate	Young, Don	Young, Don
+Candidate	Young, Don	Young Don''
 Candidate	Zulkosky, Tiffany	Zulkosky  Tiffany - D
 Candidate	Zulkosky, Tiffany	Zulkosky, Tiffany
+Candidate	Zulkosky, Tiffany	Zulkosky Tiffany''
+
+

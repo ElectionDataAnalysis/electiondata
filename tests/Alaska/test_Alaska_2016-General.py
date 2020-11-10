@@ -25,6 +25,7 @@ single_vote_type = 'provisional'  # pick any one from your file
 pres_votes_vote_type = 19309 ## based on filters in my gsheets munger file. filter for "Question" in District... and then filter for President and remove Number Precincts and other rows...
 single_county = 'Alaska;AK House District 29'  # pick any one from your file - includes all 09-xxx and District 9 - Early District 9 - Question... row counts ... based on munger.
 pres_votes_county = 9394  # total votes for pres of that county
+county_or_other = "state-house"
 
 
 def test_data_exists(dbname):
@@ -102,6 +103,7 @@ def test_county_subtotal(dbname):
         f"US President ({abbr})",
         dbname=dbname,
         county=single_county,
+        sub_unit_type=county_or_other,
         )
         == pres_votes_county
             )
