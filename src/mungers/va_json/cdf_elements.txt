@@ -5,4 +5,4 @@ CandidateContest	<RaceName>	row
 Candidate	<BallotName>	row
 BallotMeasureContest	<RaceName>	row
 BallotMeasureSelection	<BallotName>	row
-CountItemType	total	row
+CountItemType	Votes	row
