@@ -449,3 +449,54 @@ def results_below(node: et.Element, good_tags: set, good_pairs: dict) -> list:
     return r_below
 
 
+def read_nested_json(f_path: str,
+                     munger: jm.Munger,
+                     err: Optional[Dict]) -> (pd.DataFrame, Optional[Dict]):
+    """
+    Create dataframe from a nested json file, by traversing the json dictionary
+    recursively, similar to the case of xml.
+    """
+
+
+def json_results_below(j: dict or list,
+                       count_keys: set,
+                       attribute_keys: set,
+                       current_values: dict) -> list:
+    """
+    Traverse entire json, keeping info for attribute_key's, and returning
+    rows when a count_key is reached.
+    """
+
+    # The json can be either a dict or a list.
+    if isinstance(j, list):
+        results = []
+        for v in j:
+            results += json_results_below(v,
+                                          count_keys,
+                                          attribute_keys,
+                                          current_values)
+        return results
+
+    else: # json is dict
+
+        # Update values at current level
+        for k, v in j.items():
+            if k in attribute_keys | count_keys:
+                current_values[k] = v
+
+        # Recursively update values
+        results = []
+        for k, v in j.items():
+            if isinstance(v, dict) or isinstance(v, list):
+                results += json_results_below(v,
+                                              count_keys,
+                                              attribute_keys,
+                                              current_values)
+
+        # Return current_values if we've reached the counts
+        for k in j.keys():
+            if k in count_keys:
+                return [deepcopy(current_values)]
+
+        # Otherwise, return the results below current node
+        return results
