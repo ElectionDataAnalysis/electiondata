@@ -851,7 +851,7 @@ Candidate	James (Jim) McLaughlin	James (Jim) McLaughlin
 Candidate	Bill Benedict	Bill Benedict
 Candidate	Teresa Marchi	Teresa Marchi
 Candidate	Bill Peach	Bill Peach
-Candidate	"Howard (Mike) Doherty, Jr."	"Howard (Mike) Doherty, Jr."
+Candidate	Howard (Mike) Doherty, Jr.	Howard (Mike) Doherty, Jr.
 Candidate	Rebecca Glasgow	Rebecca Glasgow
 Candidate	Suzanne M.B. Hayden	Suzanne M.B. Hayden
 Candidate	John Black	John Black
@@ -863,7 +863,7 @@ Candidate	Sasha Bentley	Sasha Bentley
 Candidate	Gina Mosbrucker	Gina Mosbrucker
 Candidate	Liz Hallock	Liz Hallock
 Candidate	Tanisha Harris	Tanisha Harris
-Candidate	"Damion E Jiles, Sr."	"Damion E Jiles, Sr."
+Candidate	Damion E Jiles, Sr.	Damion E Jiles, Sr.
 Candidate	Chris Thobaben	Chris Thobaben
 Candidate	Larry A. Hoff	Larry A. Hoff
 Candidate	John Thompson	John Thompson
@@ -1129,7 +1129,7 @@ Candidate	Les Ponomarchuk	Les Ponomarchuk
 Candidate	Marcine Anderson	Marcine Anderson
 Candidate	Jason Poydras	Jason Poydras
 Candidate	Matthew York	Matthew York
-Candidate	"Nathaniel B. Green, Jr."	"Nathaniel B. Green, Jr."
+Candidate	Nathaniel B. Green, Jr.	Nathaniel B. Green, Jr.
 Candidate	Corinna Harn	Corinna Harn
 Candidate	Virginia M. Amato	Virginia M. Amato
 Candidate	Rhonda Laumann	Rhonda Laumann
@@ -1925,7 +1925,7 @@ Candidate	Janet Lodge	Janet Lodge
 Candidate	William Griffin	William Griffin
 Candidate	Jordan J. Olin	Jordan J. Olin
 Candidate	Sharon Murphin	Sharon Murphin
-Candidate	"Richard W. Rylander, Jr."	"Richard W. Rylander, Jr."
+Candidate	Richard W. Rylander, Jr.	Richard W. Rylander, Jr.
 Candidate	Joe L. Scott	Joe L. Scott
 Candidate	Igor Rybkin	Igor Rybkin
 Candidate	Robin Rulffes	Robin Rulffes
@@ -2206,7 +2206,7 @@ Candidate	Robert Dean Mair	Robert Dean Mair
 Candidate	Matthew Heines	Matthew Heines
 Candidate	Justin Smoak	Justin Smoak
 Candidate	Derek Chartrand	Derek Chartrand
-Candidate	"Jeffrey Beeler, Sr."	"Jeffrey Beeler, Sr."
+Candidate	Jeffrey Beeler, Sr.	Jeffrey Beeler, Sr.
 Candidate	Scott Sutherland	Scott Sutherland
 Candidate	Jack Hughes-Hageman	Jack Hughes-Hageman
 Candidate	Rick Lewis	Rick Lewis
@@ -2265,8 +2265,8 @@ Candidate	Jessi Murray	Jessi Murray
 Candidate	John P. Gibbons	John P. Gibbons
 Candidate	Eric J. Brown	Eric J. Brown
 Candidate	Kyle Lyebyedyev	Kyle Lyebyedyev
-Candidate	"Peter Thompson, Jr."	"Peter Thompson, Jr."
-Candidate	"Joseph Cimaomo, Jr."	"Joseph Cimaomo, Jr."
+Candidate	Peter Thompson, Jr.	Peter Thompson, Jr.
+Candidate	Joseph Cimaomo, Jr.	Joseph Cimaomo, Jr.
 Candidate	Scott Dusenbery	Scott Dusenbery
 Candidate	Victor H. Bishop	Victor H. Bishop
 Candidate	Morgan Puchek	Morgan Puchek
@@ -3321,7 +3321,7 @@ Candidate	Brad Sinsel	Brad Sinsel
 Candidate	Deanna Roy	Deanna Roy
 Candidate	Jason White	Jason White
 Candidate	Steve Painter	Steve Painter
-Candidate	"Reynaldo Garza, Jr."	"Reynaldo Garza, Jr."
+Candidate	Reynaldo Garza, Jr.	Reynaldo Garza, Jr.
 Candidate	Gary Hintze	Gary Hintze
 Candidate	Todd McClaskey	Todd McClaskey
 Candidate	TROY CLEMENTS	TROY CLEMENTS
@@ -3368,7 +3368,7 @@ Candidate	Jose Rocha	Jose Rocha
 Candidate	Lars Hanson	Lars Hanson
 Candidate	KATHLEEN ALTICK	KATHLEEN ALTICK
 Candidate	Lauri Palmer	Lauri Palmer
-Candidate	"David R. Weyeneth, Sr."	"David R. Weyeneth, Sr."
+Candidate	David R. Weyeneth, Sr.	David R. Weyeneth, Sr.
 CountItemType	total	total
 ReportingUnit	Washington;Adams County	Adams
 ReportingUnit	Washington;Asotin County	Asotin

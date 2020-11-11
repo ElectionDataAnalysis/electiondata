@@ -1861,6 +1861,9 @@ Party	Libertarian Party	Libertarian
 Party	Democratic / Republican Party	Democratic / Republican
 Party	Independent Party	Independent
 Party	No Affiliation	No Affiliation
+Party	usaminutemen	usaminutemen
+Party	Kate McGraw Independent	Kate McGraw Independent
+Party	Constitution Party	Constitution Party
 CandidateContest	PA Governor	Governor Statewide
 CandidateContest	US House PA District 1	Representative in Congress 1st Congressional District
 CandidateContest	US House PA District 2	Representative in Congress 2nd Congressional District
@@ -3449,9 +3452,9 @@ CandidateContest	PA Senate District 27 (Republican Party)	Senator in the General
 CandidateContest	PA Senate District 31	Senator in the General Assembly 31st Senatorial District
 CandidateContest	PA Senate District 31 (Democratic Party)	Senator in the General Assembly 31st Senatorial District (Democratic)
 CandidateContest	PA Senate District 31 (Republican Party)	Senator in the General Assembly 31st Senatorial District (Republican)
-CandidateContest	Representative in the General Assembly 161th Legislative District	Representative in the General Assembly 161th Legislative District
-CandidateContest	Representative in the General Assembly 162th Legislative District	Representative in the General Assembly 162th Legislative District
-CandidateContest	Representative in the General Assembly 163th Legislative District	Representative in the General Assembly 163th Legislative District
+CandidateContest	PA House District 161	Representative in the General Assembly 161th Legislative District
+CandidateContest	PA House District 162	Representative in the General Assembly 162th Legislative District
+CandidateContest	PA House District 163	Representative in the General Assembly 163th Legislative District
 CandidateContest	PA Senate District 49	Senator in the General Assembly 49th Senatorial District
 CandidateContest	PA Senate District 49 (Democratic Party)	Senator in the General Assembly 49th Senatorial District (Democratic)
 CandidateContest	PA Senate District 49 (Republican Party)	Senator in the General Assembly 49th Senatorial District (Republican)
@@ -3481,7 +3484,6 @@ Candidate	ALLOWAY, RICHARD L II	ALLOWAY, RICHARD L II
 Candidate	WELDON-SIVIY, DENISE L	WELDON-SIVIY, DENISE L
 Candidate	VAN ESSEN, DENISE M	VAN ESSEN, DENISE M
 Candidate	TALLMAN, WILL F	TALLMAN, WILL F
-Candidate		
 Candidate	MCCLELLAND, ERIN R	MCCLELLAND, ERIN R
 Candidate	ROTHFUS, KEITH JAMES	ROTHFUS, KEITH JAMES
 Candidate	DOYLE, MICHAEL F. JR.	DOYLE, MICHAEL F. JR.

@@ -971,6 +971,7 @@ def run_tests(
     # move to tests directory
     os.chdir(test_dir)
 
+    result = -1    # initialize result to failure if pytest is not run
     # run pytest
     if election_jurisdiction_list is None:
         result = os.system(f"pytest --dbname {dbname}")
@@ -985,7 +986,6 @@ def run_tests(
             else:
                 keyword = "_"
             result = os.system(f"pytest --dbname {dbname} -k {keyword}")
-
 
     # move back to original directory
     os.chdir(original_dir)

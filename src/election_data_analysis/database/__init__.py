@@ -268,7 +268,7 @@ def test_connection(paramfile="run_time.ini", dbname=None) -> (bool, dict):
         err = ui.add_new_error(
             err,
             "system",
-            "database.test_connection"
+            "database.test_connection",
             f"Unexpected exception while connecting to database: {e}",
         )
         return False, err
