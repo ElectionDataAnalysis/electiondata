@@ -392,7 +392,7 @@ def read_single_datafile(
         elif munger.file_type in ["json"]:
             kwargs["encoding"] = munger.encoding
             df = pd.read_json(f_path, **kwargs)
-        elif munger.file_type in ["concatenated-blocks", "xls-multi", "xml"]:
+        elif munger.file_type in ["concatenated-blocks", "xls-multi", "xml", "json-nested"]:
             err = add_new_error(
                 err,
                 "system",
@@ -495,7 +495,7 @@ def read_combine_results(
     aux_data_path: str = None,
 ) -> (pd.DataFrame, dict):
     # if results are not a flat file type or json
-    if mu.options["file_type"] in ["concatenated-blocks", "xls-multi", "xml"]:
+    if mu.options["file_type"] in ["concatenated-blocks", "xls-multi", "xml", "json-nested"]:
         working, new_err = sf.read_alternate_munger(
             mu.options["file_type"],
             results_file_path,
@@ -513,7 +513,7 @@ def read_combine_results(
         if mu.options["file_type"] in ["concatenated-blocks", "xls-multi"]:
             mu.options["count_columns"] = [working.columns.to_list().index("count")]
 
-        elif mu.file_type == "xml":
+        elif mu.file_type in ["xml", "json-nested"]:
             # TODO tech debt some of this may not be necessary
             # change formulas in cdf_elements to match column names inserted by read_xml
             mu.cdf_elements["idx"] = mu.cdf_elements.index
