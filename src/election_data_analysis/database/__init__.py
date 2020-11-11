@@ -1119,6 +1119,9 @@ def get_filtered_input_options(session, input_str, filters):
             "type": [None for election in elections],
         }
         df = pd.DataFrame(data=data)
+        df[["year", "election_type"]] = df["name"].str.split(" ", expand=True)
+        df.sort_values(["year", "election_type"], ascending=[False, True], inplace=True)
+        df.drop(columns=["year", "election_type"], inplace=True)
     elif input_str == "category":
         election_id = list_to_id(session, "Election", filters)
         reporting_unit_id = list_to_id(session, "ReportingUnit", filters)
