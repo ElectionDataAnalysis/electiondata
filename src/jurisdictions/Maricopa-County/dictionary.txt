@@ -1252,7 +1252,7 @@ Candidate	Flayer, Jordan	Flayer, Jordan
 Candidate	Martin, Brandon	Martin, Brandon
 Candidate	Morgan, Joseph	Morgan, Joseph
 Candidate	Ruden, Noran Eric	Ruden, Noran Eric
-Candidate	Grijalva, Raúl	Grijalva, Raúl
+Candidate	Grijalva, RaÃºl	Grijalva, RaÃºl
 Candidate	Jolley, Richard	Jolley, Richard
 Candidate	Wood, Daniel	Wood, Daniel
 Candidate	DiSanto, Delina	DiSanto, Delina
@@ -1282,7 +1282,7 @@ Candidate	Huang, Sam	Huang, Sam
 Candidate	Tutora, Nicholas	Tutora, Nicholas
 Candidate	Carillo, Gilbert 'Gilbert'	Carillo, Gilbert 'Gilbert'
 Candidate	Fann, Karen Elizabeth	Fann, Karen Elizabeth
-Candidate	Gabaldón, Rosanna	Gabaldón, Rosanna
+Candidate	GabaldÃ³n, Rosanna	GabaldÃ³n, Rosanna
 Candidate	Workman, Mark	Workman, Mark
 Candidate	Gonzales, Sally Ann	Gonzales, Sally Ann
 Candidate	Otondo, Lisa	Otondo, Lisa
@@ -1339,7 +1339,7 @@ Candidate	Rios, Rebecca	Rios, Rebecca
 Candidate	Shreves, Garland	Shreves, Garland
 Candidate	Marsh, Christine	Marsh, Christine
 Candidate	Brophy McGee, Kate	Brophy McGee, Kate
-Candidate	Quezada, Martín J.	Quezada, Martín J.
+Candidate	Quezada, MartÃ­n J.	Quezada, MartÃ­n J.
 Candidate	Wilson, John	Wilson, John
 Candidate	Navarrete, Otoniel 'Tony'	Navarrete, Otoniel 'Tony'
 Candidate	Porter, C. Curtis	Porter, C. Curtis
@@ -1354,7 +1354,7 @@ Candidate	Hernandez, Daniel, Jr.	Hernandez, Daniel, Jr.
 Candidate	Parra, Luis	Parra, Luis
 Candidate	Peard, Billy	Peard, Billy
 Candidate	McEwen, Deborah	McEwen, Deborah
-Candidate	Cano, Andrés	Cano, Andrés
+Candidate	Cano, AndrÃ©s	Cano, AndrÃ©s
 Candidate	Hernandez, Alma	Hernandez, Alma
 Candidate	Soto, Javier	Soto, Javier
 Candidate	Fernandez, Charlene	Fernandez, Charlene
@@ -1448,7 +1448,7 @@ Candidate	Sifuentes, Seth 'Marcus'	Sifuentes, Seth ''Marcus''
 Candidate	Bolding, Reginald	Bolding, Reginald
 Candidate	Miranda, Catherine	Miranda, Catherine
 Candidate	Rodriguez, Diego	Rodriguez, Diego
-Candidate	Peña M., Tatiana	Peña M., Tatiana
+Candidate	PeÃ±a M., Tatiana	PeÃ±a M., Tatiana
 Candidate	Butler, Kelli	Butler, Kelli
 Candidate	Lieberman, Aaron	Lieberman, Aaron
 Candidate	Bowers, Kenneth R 'Ken', Jr	Bowers, Kenneth R 'Ken', Jr
@@ -1460,7 +1460,7 @@ Candidate	Bragg, Billy	Bragg, Billy
 Candidate	FokszanskyJ-Conti, Helen	FokszanskyJ-Conti, Helen
 Candidate	McMillan, Alysia 'Ariesuptop'	McMillan, Alysia 'Ariesuptop'
 Candidate	Meza, Robert	Meza, Robert
-Candidate	Terán, Raquel	Terán, Raquel
+Candidate	TerÃ¡n, Raquel	TerÃ¡n, Raquel
 Candidate	Spears, Gary	Spears, Gary
 Candidate	Mundell, William 'Bill'	Mundell, William 'Bill'
 Candidate	Stanfield, Shea	Stanfield, Shea
@@ -3192,7 +3192,7 @@ ReportingUnit	Maricopa County;7941	7941
 Candidate	KLOBUCHAR, AMY	KLOBUCHAR, AMY
 Candidate	GABBARD, TULSI	GABBARD, TULSI
 Candidate	DE LA FUENTE, ROQUE 'ROCKY'	DE LA FUENTE, ROQUE 'ROCKY'
-Candidate	CASTRO, JULIÁN	CASTRO, JULIÁN
+Candidate	CASTRO, JULIÃN	CASTRO, JULIÃN
 Candidate	DELANEY, JOHN	DELANEY, JOHN
 Candidate	BUTTIGIEG, PETE	BUTTIGIEG, PETE
 Candidate	BLOOMBERG, MICHAEL R.	BLOOMBERG, MICHAEL R.
@@ -3292,7 +3292,7 @@ Candidate	CHIN, JAE	CHIN, JAE
 Candidate	LOUGHRIGE, BILL	LOUGHRIGE, BILL
 Candidate	SIFUENTES, SETH ''MARCUS''	SIFUENTES, SETH ''MARCUS''
 Candidate	SHREVES, GARLAND	SHREVES, GARLAND
-Candidate	PEÑA M., TATIANA	PEÑA M., TATIANA
+Candidate	PEÃA M., TATIANA	PEÃA M., TATIANA
 Candidate	BROPHY MCGEE, KATE	BROPHY MCGEE, KATE
 Candidate	BOWERS, KENNETH R. JR. 'KEN'	BOWERS, KENNETH R. JR. 'KEN'
 Candidate	JACKSON, JANA	JACKSON, JANA
@@ -3350,7 +3350,7 @@ Candidate	KELLY, MARK	KELLY, MARK
 Candidate	GARCIA, BO 'HEIR ARCHY'	GARCIA, BO 'HEIR ARCHY'
 Candidate	O'HALLERAN, TOM	O'HALLERAN, TOM
 Candidate	PUTZOVA, EVA	PUTZOVA, EVA
-Candidate	GRIJALVA, RAÚL	GRIJALVA, RAÚL
+Candidate	GRIJALVA, RAÃL	GRIJALVA, RAÃL
 Candidate	DISANTO, DELINA	DISANTO, DELINA
 Candidate	STARKY, STUART	STARKY, STUART
 Candidate	GREENE, JOAN	GREENE, JOAN
@@ -3413,13 +3413,13 @@ Candidate	RODRIGUEZ, DIEGO	RODRIGUEZ, DIEGO
 Candidate	MARSH, CHRISTINE	MARSH, CHRISTINE
 Candidate	BUTLER, KELLI	BUTLER, KELLI
 Candidate	LIEBERMAN, AARON	LIEBERMAN, AARON
-Candidate	QUEZADA, MARTÍN J.	QUEZADA, MARTÍN J.
+Candidate	QUEZADA, MARTÃN J.	QUEZADA, MARTÃN J.
 Candidate	ANDRADE, RICHARD	ANDRADE, RICHARD
 Candidate	CASTRO, TEDDY	CASTRO, TEDDY
 Candidate	CHAVEZ, CESAR	CHAVEZ, CESAR
 Candidate	NAVARRETE, OTONIEL 'TONY'	NAVARRETE, OTONIEL 'TONY'
 Candidate	MEZA, ROBERT	MEZA, ROBERT
-Candidate	TERÁN, RAQUEL	TERÁN, RAQUEL
+Candidate	TERÃN, RAQUEL	TERÃN, RAQUEL
 Candidate	MUNDELL, WILLIAM 'BILL'	MUNDELL, WILLIAM 'BILL'
 Candidate	STANFIELD, SHEA	STANFIELD, SHEA
 Candidate	TOVAR, ANNA	TOVAR, ANNA
@@ -3581,7 +3581,7 @@ Candidate	RODRIGUEZ, JUAN F.	RODRIGUEZ, JUAN F.
 Candidate	BANDIN, LUPE LEYVA	BANDIN, LUPE LEYVA
 Candidate	CARNERO, JOHN	CARNERO, JOHN
 Candidate	DAVIS, JIMMY	DAVIS, JIMMY
-Candidate	GÁMEZ, ADOLFO F.	GÁMEZ, ADOLFO F.
+Candidate	GÃMEZ, ADOLFO F.	GÃMEZ, ADOLFO F.
 Candidate	GERHART, DONNIE	GERHART, DONNIE
 Candidate	MENDOZA, ALBERT P.	MENDOZA, ALBERT P.
 Candidate	PEREIRA, RUI	PEREIRA, RUI
@@ -4027,7 +4027,7 @@ Candidate	WATTS, DONALD	WATTS, DONALD
 Candidate	MCCLOSKEY, LENNIE	MCCLOSKEY, LENNIE
 Candidate	- JOHNSON, LARRY A.	- JOHNSON, LARRY A.
 Candidate	- RASMUSSEN, SHON THOMAS	- RASMUSSEN, SHON THOMAS
-Candidate	GUZMÁN, JOE ''PEP''	GUZMÁN, JOE ''PEP''
+Candidate	GUZMÃN, JOE ''PEP''	GUZMÃN, JOE ''PEP''
 Candidate	- No Candidate	- No Candidate
 Candidate	SPEAKMAN, REBECCA	SPEAKMAN, REBECCA
 Candidate	SPEAKMAN, RAYMOND D.	SPEAKMAN, RAYMOND D.

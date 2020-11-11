@@ -12,7 +12,7 @@ def test_wi_statewide_totals(dbname):
             "WI Governor",
             dbname=dbname,
         )
-        == 2673305
+        == 2673308
     )
     # The total votes for the above should be 2673308, but two write-in candidates appeared
     # with the same name "No candidate" after munging, the second of which received 3

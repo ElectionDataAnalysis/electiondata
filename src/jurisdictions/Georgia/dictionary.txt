@@ -8432,7 +8432,7 @@ Candidate	TERI ANULEWICZ (I)	TERI ANULEWICZ (I)
 Candidate	LUISA WAKEMAN	LUISA WAKEMAN
 Candidate	CHINITA ALLEN	CHINITA ALLEN
 Candidate	ESSENCE JOHNSON	ESSENCE JOHNSON
-Candidate	KARÃÂÃÂN SANDIFORD	KARÃÂÃÂN SANDIFORD
+Candidate	KARÃÂÃÂÃÂÃÂN SANDIFORD	KARÃÂÃÂÃÂÃÂN SANDIFORD
 Candidate	ANDREA NUGENT	ANDREA NUGENT
 Candidate	MARY ROBICHAUX	MARY ROBICHAUX
 Candidate	CHARLES E. 'CHUCK' MARTIN (I)	CHARLES E. 'CHUCK' MARTIN (I)
@@ -8573,6 +8573,6 @@ Candidate	Annette Davis Jackson	Annette Davis Jackson
 Candidate	Allen Buckley	Allen Buckley
 Candidate	Al Bartell	Al Bartell
 Candidate	A. Wayne Johnson	A. Wayne Johnson
-Candidate	HENRY C 'HANK' JOHNSON JR (I)	HENRY C “HANK” JOHNSON JR (I)
-Candidate	EARL 'BUDDY' CARTER (I)	EARL “BUDDY” CARTER (I)
+Candidate	HENRY C 'HANK' JOHNSON JR (I)	HENRY C âHANKâ JOHNSON JR (I)
+Candidate	EARL 'BUDDY' CARTER (I)	EARL âBUDDYâ CARTER (I)
 Candidate	ABLE MABLE THOMAS (I)	ABLE MABLE THOMAS (I)

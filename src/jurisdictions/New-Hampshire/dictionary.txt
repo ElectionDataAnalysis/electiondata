@@ -4263,7 +4263,7 @@ Candidate	Aarica L. Coleman	Aarica L. Coleman
 Candidate	Greg Pulles	Greg Pulles
 Candidate	Zina Alston-Fizer	Zina Alston-Fizer
 Candidate	Ann Johnson Stewart	Ann Johnson Stewart
-Candidate	Julie Dupré	Julie Dupré
+Candidate	Julie DuprÃ©	Julie DuprÃ©
 Candidate	Jenny Rhoades	Jenny Rhoades
 Candidate	Melisa Lopez Franzen	Melisa Lopez Franzen
 Candidate	Paul Anderson	Paul Anderson
@@ -4324,7 +4324,7 @@ Candidate	Richard E. Rolling	Richard E. Rolling
 Candidate	Jack Vizecky	Jack Vizecky
 Candidate	Nathan Schmalz	Nathan Schmalz
 Candidate	Anthony Kadlec	Anthony Kadlec
-Candidate	José Luciano	José Luciano
+Candidate	JosÃ© Luciano	JosÃ© Luciano
 Candidate	Julie Bredeson	Julie Bredeson
 Candidate	Joe Tacheny	Joe Tacheny
 Candidate	Greg Gilbertson	Greg Gilbertson

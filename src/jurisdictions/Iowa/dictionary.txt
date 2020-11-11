@@ -2329,7 +2329,7 @@ Candidate	Bill Dotzler	Bill Dotzler
 Candidate	Bill Morain	Bill Morain
 Candidate	Bill Schafer	Bill Schafer
 Candidate	Bjorn Johnson	Bjorn Johnson
-Candidate	Bjorn Johnson	Björn Johnson
+Candidate	Bjorn Johnson	BjÃ¶rn Johnson
 Candidate	Blake Stratton	Blake Stratton
 Candidate	Blank	Blank
 Candidate	Bob Bergendal	Bob Bergendal

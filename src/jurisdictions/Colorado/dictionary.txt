@@ -4954,7 +4954,7 @@ Candidate	Raymond Garcia	Raymond Garcia
 Candidate	Paul A. Linton	Paul A. Linton
 Candidate	Alec Garnett TOTAL	Alec Garnett TOTAL
 Candidate	Katy Brown	Katy Brown
-Candidate	Dan PabÃÂÃÂ³n	Dan PabÃÂÃÂ³n
+Candidate	Dan PabÃÂÃÂÃÂÃÂ³n	Dan PabÃÂÃÂÃÂÃÂ³n
 Candidate	Gavin Marie Halligan	Gavin Marie Halligan
 Candidate	Crisanta Duran	Crisanta Duran
 Candidate	Ronnie Nelson	Ronnie Nelson
@@ -5113,7 +5113,7 @@ Candidate	JM (Maria J) Fay	JM (Maria J) Fay
 Candidate	Bob Broom	Bob Broom
 Candidate	Ken Mihalik	Ken Mihalik
 Candidate	Doug Tisdale	Doug Tisdale
-Candidate	VÃÂÃÂ©ronique Marie Bellamy	VÃÂÃÂ©ronique Marie Bellamy
+Candidate	VÃÂÃÂÃÂÃÂ©ronique Marie Bellamy	VÃÂÃÂÃÂÃÂ©ronique Marie Bellamy
 Candidate	Lee Kemp	Lee Kemp
 Candidate	Judy Lubow	Judy Lubow
 Candidate	Dave Ruchman	Dave Ruchman
@@ -5127,7 +5127,7 @@ Candidate	David Furman	David Furman
 Candidate	Robert D. Hawthorne	Robert D. Hawthorne
 Candidate	Jerry N. Jones	Jerry N. Jones
 Candidate	Anthony J. Navarro	Anthony J. Navarro
-Candidate	Gilbert M. RomÃÂÃÂ¡n	Gilbert M. RomÃÂÃÂ¡n
+Candidate	Gilbert M. RomÃÂÃÂÃÂÃÂ¡n	Gilbert M. RomÃÂÃÂÃÂÃÂ¡n
 Candidate	Diana Terry	Diana Terry
 Candidate	Dennis J. Hall	Dennis J. Hall
 Candidate	Philip James McNulty	Philip James McNulty
@@ -5354,7 +5354,7 @@ Candidate	Steve House	Steve House
 Candidate	Ed Perlmutter Vote %	Ed Perlmutter Vote %
 Candidate	Charles 'Casper' Stockham Total Votes	Charles ''Casper'' Stockham Total Votes
 Candidate	Charles 'Casper' Stockham Vote %	Charles ''Casper'' Stockham Vote %
-Candidate	Lisa EscÃÂÃÂ¡rcega	Lisa EscÃÂÃÂ¡rcega
+Candidate	Lisa EscÃÂÃÂÃÂÃÂ¡rcega	Lisa EscÃÂÃÂÃÂÃÂ¡rcega
 Candidate	Donna Morganstern	Donna Morganstern
 Candidate	Sydnnia Wulff	Sydnnia Wulff
 Candidate	Mayling Simpson	Mayling Simpson
@@ -5387,8 +5387,8 @@ Candidate	Peg Cage	Peg Cage
 Candidate	Rachel Zenzinger Vote %	Rachel Zenzinger Vote %
 Candidate	Lynn Gerber	Lynn Gerber
 Candidate	Dominick Moreno Vote %	Dominick Moreno Vote %
-Candidate	MartÃ­n Mendez	MartÃÂÃÂ­n Mendez
-Candidate	MartÃ­n Mendez	MartÃ­n Mendez
+Candidate	MartÃÂ­n Mendez	MartÃÂÃÂÃÂÃÂ­n Mendez
+Candidate	MartÃÂ­n Mendez	MartÃÂ­n Mendez
 Candidate	Sally Boccella	Sally Boccella
 Candidate	Galina Nicoll	Galina Nicoll
 Candidate	Rupert Parchment	Rupert Parchment
@@ -5636,7 +5636,7 @@ Candidate	Joe McHugh	Joe McHugh / Elizabeth Storm
 Candidate	Brock Pierce	Brock Pierce / Karla Ballard
 Candidate	Jordan 'Cancer' Scott	Jordan ''Cancer'' Scott / Jennifer Tepool
 Candidate	Kanye West	Kanye West / Michelle Tidball
-Candidate	Lisa EscÃ¡rcega	Lisa EscÃ¡rcega
+Candidate	Lisa EscÃÂ¡rcega	Lisa EscÃÂ¡rcega
 Candidate	Zachary Laddison	Zachary Laddison
 Candidate	Alan Hayman	Alan Hayman
 Candidate	Christian Vernaza	Christian Vernaza

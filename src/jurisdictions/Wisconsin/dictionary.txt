@@ -27,7 +27,7 @@ Candidate	Andi Rich	Andi Rich
 Candidate	Andrew McKinney	Andrew McKinney
 Candidate	Andrew Yang	Andrew Yang
 Candidate	Andrew Zuelke	Andrew Zuelke
-Candidate	André Jacque	André Jacque
+Candidate	AndrÃ© Jacque	AndrÃ© Jacque
 Candidate	Andy Craig	Andy Craig
 Candidate	Angel C. Sanchez	Angel C. Sanchez
 Candidate	Ann Groves Lloyd	Ann Groves Lloyd

@@ -2287,7 +2287,7 @@ Candidate	Ro Khanna	Ro Khanna
 Candidate	Joseph Alexander Rubay	Joseph Alexander Rubay
 Candidate	Steve Glazer	Steve Glazer
 Candidate	Nancy Skinner	Nancy Skinner
-Candidate	Sandré R. Swanson	Sandré R. Swanson
+Candidate	SandrÃ© R. Swanson	SandrÃ© R. Swanson
 Candidate	Tony Thurmond	Tony Thurmond
 Candidate	Claire Chiara	Claire Chiara
 Candidate	Cheryl Cook-Kallio	Cheryl Cook-Kallio
@@ -2325,7 +2325,7 @@ Candidate	Bill Dodd	Bill Dodd
 Candidate	Dave Miller	Dave Miller
 Candidate	Jim Frazier	Jim Frazier
 Candidate	Tim Grayson	Tim Grayson
-Candidate	Mae Cendaña Torlakson	Mae Cendaña Torlakson
+Candidate	Mae CendaÃ±a Torlakson	Mae CendaÃ±a Torlakson
 Candidate	Jared W. Huffman	Jared W. Huffman
 Candidate	Dale K. Mensing	Dale K. Mensing
 Candidate	Jim Wood	Jim Wood
@@ -2370,7 +2370,7 @@ Candidate	Richard Alarcon	Richard Alarcon
 Candidate	Brad Sherman	Brad Sherman
 Candidate	Mark Reed	Mark Reed
 Candidate	Grace F. Napolitano	Grace F. Napolitano
-Candidate	Roger Hernández	Roger Hernández
+Candidate	Roger HernÃ¡ndez	Roger HernÃ¡ndez
 Candidate	Ted W. Lieu	Ted W. Lieu
 Candidate	Kenneth W. Wright	Kenneth W. Wright
 Candidate	Adrienne Nicole Edwards	Adrienne Nicole Edwards
@@ -2387,7 +2387,7 @@ Candidate	Roman Gabriel Gonzalez	Roman Gabriel Gonzalez
 Candidate	Maxine Waters	Maxine Waters
 Candidate	Omar Navarro	Omar Navarro
 Candidate	Isadore Hall, III	Isadore Hall, III
-Candidate	Nanette Diaz Barragán	Nanette Diaz Barragán
+Candidate	Nanette Diaz BarragÃ¡n	Nanette Diaz BarragÃ¡n
 Candidate	Alan Lowenthal	Alan Lowenthal
 Candidate	Andy Whallon	Andy Whallon
 Candidate	Johnathon Levar Ervin	Johnathon Levar Ervin
@@ -2535,7 +2535,7 @@ Candidate	John Renison	John Renison
 Candidate	Rocky Chavez	Rocky Chavez
 Candidate	Thomas E. Krouse	Thomas E. Krouse
 Candidate	Brian Maienschein	Brian Maienschein
-Candidate	Melinda K. Vásquez	Melinda K. Vásquez
+Candidate	Melinda K. VÃ¡squez	Melinda K. VÃ¡squez
 Candidate	Todd Gloria	Todd Gloria
 Candidate	Kevin D. Melton	Kevin D. Melton
 Candidate	Shirley N. Weber	Shirley N. Weber
@@ -2562,7 +2562,7 @@ Candidate	Salud Carbajal	Salud Carbajal
 Candidate	Justin Donald Fareed	Justin Donald Fareed
 Candidate	Dawn Ortiz-Legg	Dawn Ortiz-Legg
 Candidate	Jordan Cunningham	Jordan Cunningham
-Candidate	S. Monique Limón	S. Monique Limón
+Candidate	S. Monique LimÃ³n	S. Monique LimÃ³n
 Candidate	Edward Fuller	Edward Fuller
 Candidate	Anna G. Eshoo	Anna G. Eshoo
 Candidate	Richard B. Fox	Richard B. Fox
@@ -2758,7 +2758,7 @@ Candidate	Sunday Gover	Sunday Gover
 Candidate	Maggie J. Campbell	Maggie J. Campbell
 Candidate	Lorena Gonzalez Fletcher	Lorena Gonzalez Fletcher
 Candidate	Lisa Remmer	Lisa Remmer
-Candidate	Cristina Osmeña	Cristina Osmeña
+Candidate	Cristina OsmeÃ±a	Cristina OsmeÃ±a
 Candidate	Alejandro Fernandez	Alejandro Fernandez
 Candidate	Keith Bogdon	Keith Bogdon
 Candidate	Josh Harder	Josh Harder
@@ -2878,7 +2878,7 @@ Candidate	Daniel Mercuri	Daniel Mercuri
 Candidate	George Papadopoulos	George Papadopoulos
 Candidate	Christopher C. Smith	Christopher C. Smith
 Candidate	Cenk Uygur	Cenk Uygur
-Candidate	Aníbal Valdéz-Ortega	Aníbal Valdéz-Ortega
+Candidate	AnÃ­bal ValdÃ©z-Ortega	AnÃ­bal ValdÃ©z-Ortega
 Candidate	Enrique Petris	Enrique Petris
 Candidate	Robert L. Salas	Robert L. Salas
 Candidate	Beatrice Cardenas	Beatrice Cardenas
@@ -2891,7 +2891,7 @@ Candidate	Sal Genovese	Sal Genovese
 Candidate	Ara Khachig Manoogian	Ara Khachig Manoogian
 Candidate	G. 'Maebe A. Girl' Pudlo	G. 'Maebe A. Girl' Pudlo
 Candidate	Brian Perras	Brian Perras
-Candidate	Angélica María Dueñas	Angélica María Dueñas
+Candidate	AngÃ©lica MarÃ­a DueÃ±as	AngÃ©lica MarÃ­a DueÃ±as
 Candidate	Michael R. Guzik	Michael R. Guzik
 Candidate	Raji Rab	Raji Rab
 Candidate	Courtney 'CJ' Berina	Courtney 'CJ' Berina
@@ -2909,7 +2909,7 @@ Candidate	Joanne L. Wright	Joanne L. Wright
 Candidate	Mike Cargile	Mike Cargile
 Candidate	Larry Thompson	Larry Thompson
 Candidate	Errol Webber	Errol Webber
-Candidate	Linda T. Sánchez	Linda T. Sánchez
+Candidate	Linda T. SÃ¡nchez	Linda T. SÃ¡nchez
 Candidate	Michael Tolar	Michael Tolar
 Candidate	Steve Cox	Steve Cox
 Candidate	Anthony Felix Jr.	Anthony Felix Jr.
@@ -2918,7 +2918,7 @@ Candidate	David John Sanchez	David John Sanchez
 Candidate	C Antonio Delgado	C Antonio Delgado
 Candidate	Joe E. Collins III	Joe E. Collins III
 Candidate	Morris F. Griffin	Morris F. Griffin
-Candidate	Nanette Diaz Barragán	Nanette Diaz Barragan
+Candidate	Nanette Diaz BarragÃ¡n	Nanette Diaz Barragan
 Candidate	Billy Z. Earley	Billy Z. Earley
 Candidate	Analilia Joya	Analilia Joya
 Candidate	Sou Moua	Sou Moua
@@ -2956,7 +2956,7 @@ Candidate	Denise Pedrow	Denise Pedrow
 Candidate	Jeffi Girgenti	Jeffi Girgenti
 Candidate	Denise Feldman	Denise Feldman
 Candidate	Lanira K. Murphy	Lanira K. Murphy
-Candidate	Bryan Mesinas Peréz	Bryan Mesinas Peréz
+Candidate	Bryan Mesinas PerÃ©z	Bryan Mesinas PerÃ©z
 Candidate	Priscilla Silva	Priscilla Silva
 Candidate	Will Hess	Will Hess
 Candidate	Jim King	Jim King
@@ -2988,7 +2988,7 @@ Candidate	Ron Sondergaard	Ron Sondergaard
 Candidate	Guadalupe Salazar	Guadalupe Salazar
 Candidate	Joel Gutierrez Campos	Joel Gutierrez Campos
 Candidate	Jeff Gorman	Jeff Gorman
-Candidate	Adam Bolaños Scow	Adam Bolaños Scow
+Candidate	Adam BolaÃ±os Scow	Adam BolaÃ±os Scow
 Candidate	Maria Cadenas	Maria Cadenas
 Candidate	John Laird	John Laird
 Candidate	John M. Nevill	John M. Nevill
@@ -3066,7 +3066,7 @@ Candidate	Chris Richardson	Chris Richardson
 Candidate	Jim Ridenour	Jim Ridenour
 Candidate	Kathleen A Garcia	Kathleen A Garcia
 Candidate	Mani Grewal	Mani Grewal
-Candidate	Jesús Andrade	Jesús Andrade
+Candidate	JesÃºs Andrade	JesÃºs Andrade
 Candidate	James O Just	James O Just
 Candidate	Cathy Cook	Cathy Cook
 Candidate	Mushtaq A Tahirkheli	Mushtaq A Tahirkheli
@@ -3091,7 +3091,7 @@ Candidate	Jose Caballero	Jose Caballero
 Candidate	Joseph R. Fountain	Joseph R. Fountain
 Candidate	Fernando Garcia	Fernando Garcia
 Candidate	Janessa Goldbeck	Janessa Goldbeck
-Candidate	Georgette Gómez	Georgette Gómez
+Candidate	Georgette GÃ³mez	Georgette GÃ³mez
 Candidate	Sara Jacobs	Sara Jacobs
 Candidate	Eric Roger Kutner	Eric Roger Kutner
 Candidate	Annette Meza	Annette Meza
@@ -3099,7 +3099,7 @@ Candidate	Michael Patrick Oristian	Michael Patrick Oristian
 Candidate	Famela Ramos	Famela Ramos
 Candidate	Suzette Santori	Suzette Santori
 Candidate	Chris Stoddard	Chris Stoddard
-Candidate	Joaquín Vazquez	Joaquín Vazquez
+Candidate	JoaquÃ­n Vazquez	JoaquÃ­n Vazquez
 Candidate	Tom Wong	Tom Wong
 Candidate	Linda Blankenship	Linda Blankenship
 Candidate	Melanie Burkholder	Melanie Burkholder
@@ -3174,7 +3174,7 @@ Candidate	Michael R. Bloomberg	Michael R. Bloomberg
 Candidate	Cory Booker	Cory Booker
 Candidate	Mosie Boyd	Mosie Boyd
 Candidate	Pete Buttigieg	Pete Buttigieg
-Candidate	Julián Castro	Julián Castro
+Candidate	JuliÃ¡n Castro	JuliÃ¡n Castro
 Candidate	Roque 'Rocky' De La Fuente III	Roque 'Rocky' De La Fuente III
 Candidate	John K. Delaney	John K. Delaney
 Candidate	Michael A. Ellinger	Michael A. Ellinger
@@ -3224,7 +3224,7 @@ Candidate	Steven A Richey	Steven A Richey
 Candidate	Sam Robb	Sam Robb
 Candidate	Kim Ruff	Kim Ruff
 Candidate	Vermin Supreme	Vermin Supreme
-Candidate	Geby Eva Espínosa	Geby Eva Espínosa
+Candidate	Geby Eva EspÃ­nosa	Geby Eva EspÃ­nosa
 Candidate	James Orlando Ogle	James Orlando Ogle
 Candidate	Nicholas D'Artagnan Dumas	Nicholas D'Artagnan Dumas
 Candidate	Sorinne Ardeleanu	Sorinne Ardeleanu

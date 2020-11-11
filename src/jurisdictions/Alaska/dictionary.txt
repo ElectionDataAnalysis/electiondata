@@ -117,25 +117,21 @@ CandidateContest	AK House District 12	House District 12''
 CandidateContest	AK House District 11	House District 11''
 CandidateContest	AK House District 10	House District 10''
 CandidateContest	AK House District 1	House District 1''
-
 Election	2020 General	2020 General
 Election	2020 Primary	2020 Primary
 Election	2018 General	2018 General
 Election	2016 General	2016 General
-
 Party	Democratic Party	DEM
 Party	Republican Party	REP
 Party	Green Party	GRE
 Party	Libertarian Party	LIB
 Party	Constitution Party	CON
 Party	Independence Party	AI
-
 CountItemType	election-day	election-day
 CountItemType	absentee	Absentee
 CountItemType	provisional	Question
 CountItemType	early	Early Voting
 CountItemType	absentee-fwab	Fed Overseas Absentee
-
 ReportingUnit	Alaska;AK House District 1	Alaska;AK House District 1
 ReportingUnit	Alaska;AK House District 2	Alaska;AK House District 2
 ReportingUnit	Alaska;AK House District 3	Alaska;AK House District 3
@@ -197,7 +193,6 @@ ReportingUnit	Alaska;AK Senate District 18	Alaska;AK Senate District 18
 ReportingUnit	Alaska;AK Senate District 19	Alaska;AK Senate District 19
 ReportingUnit	Alaska;AK Senate District 20	Alaska;AK Senate District 20
 ReportingUnit	Alaska;US House AK District 1	Alaska;US House AK District 1
-
 ReportingUnit	Alaska	Alaska
 ReportingUnit	Alaska;AK House District 1;Aurora	01-446 Aurora
 ReportingUnit	Alaska;AK House District 1;Fairbanks No. 1	01-455 Fairbanks No. 1
@@ -643,8 +638,6 @@ ReportingUnit	Alaska;AK House District 40;Wainwright	40-040 Wainwright
 ReportingUnit	Alaska;AK House District 40;Allakaket	40-326 Allakaket
 ReportingUnit	Alaska;AK House District 40;Bettles	40-328 Bettles
 ReportingUnit	Alaska;AK House District 40;Hughes	40-330 Hughes
-
-ReportingUnit	Alaska
 ReportingUnit	Alaska;AK House District 1	District 1
 ReportingUnit	Alaska;AK House District 10	District 10
 ReportingUnit	Alaska;AK House District 11	District 11
@@ -685,9 +678,7 @@ ReportingUnit	Alaska;AK House District 6	District 6
 ReportingUnit	Alaska;AK House District 7	District 7
 ReportingUnit	Alaska;AK House District 8	District 8
 ReportingUnit	Alaska;AK House District 9	District 9
-
 ReportingUnit	Alaska	HD99
-
 Candidate	Alexander, Ed	Alexander, Ed
 Candidate	Baker, Thomas C.	Baker  Thomas C. - R
 Candidate	Batten, Bruce T.	Batten  Bruce T. - D
@@ -880,7 +871,7 @@ Candidate	Miller, Joe	Miller, Joe
 Candidate	Millett, Charisse E.	Millett, Charisse E.
 Candidate	Morris, Julie M.	Morris  Julie M. - R
 Candidate	Moto, Calvin D. II	Moto  Calvin D. II - R
-Candidate	MuÃ±oz, Cathy	MuÃ±oz, Cathy
+Candidate	MuÃÂ±oz, Cathy	MuÃÂ±oz, Cathy
 Candidate	Murkowski, Lisa	Murkowski, Lisa
 Candidate	Myers, J. R.	Myers, J. R.
 Candidate	Myers, Robert H. Jr.	Myers  Robert H. Jr. - R
@@ -1016,4 +1007,4 @@ Candidate	row should be dropped	Times Counted
 Candidate	row should be dropped	Number of Precincts Reporting
 Candidate	row should be dropped	Number of Precincts for Race
 Candidate	row should be dropped	Number of Precincts
-Candidate	Muñoz, Cathy	Muñoz, Cathy
+Candidate	MuÃ±oz, Cathy	MuÃ±oz, Cathy
