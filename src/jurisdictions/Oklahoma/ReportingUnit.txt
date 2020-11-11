@@ -47,6 +47,59 @@ Oklahoma;OK House District 45	state-house
 Oklahoma;OK House District 46	state-house
 Oklahoma;OK House District 47	state-house
 Oklahoma;OK House District 48	state-house
+Oklahoma;OK House District 49	state-house
+Oklahoma;OK House District 50	state-house
+Oklahoma;OK House District 51	state-house
+Oklahoma;OK House District 52	state-house
+Oklahoma;OK House District 53	state-house
+Oklahoma;OK House District 54	state-house
+Oklahoma;OK House District 55	state-house
+Oklahoma;OK House District 56	state-house
+Oklahoma;OK House District 57	state-house
+Oklahoma;OK House District 58	state-house
+Oklahoma;OK House District 59	state-house
+Oklahoma;OK House District 60	state-house
+Oklahoma;OK House District 61	state-house
+Oklahoma;OK House District 62	state-house
+Oklahoma;OK House District 63	state-house
+Oklahoma;OK House District 64	state-house
+Oklahoma;OK House District 65	state-house
+Oklahoma;OK House District 66	state-house
+Oklahoma;OK House District 67	state-house
+Oklahoma;OK House District 68	state-house
+Oklahoma;OK House District 69	state-house
+Oklahoma;OK House District 70	state-house
+Oklahoma;OK House District 71	state-house
+Oklahoma;OK House District 72	state-house
+Oklahoma;OK House District 73	state-house
+Oklahoma;OK House District 74	state-house
+Oklahoma;OK House District 75	state-house
+Oklahoma;OK House District 76	state-house
+Oklahoma;OK House District 77	state-house
+Oklahoma;OK House District 78	state-house
+Oklahoma;OK House District 79	state-house
+Oklahoma;OK House District 80	state-house
+Oklahoma;OK House District 81	state-house
+Oklahoma;OK House District 82	state-house
+Oklahoma;OK House District 83	state-house
+Oklahoma;OK House District 84	state-house
+Oklahoma;OK House District 85	state-house
+Oklahoma;OK House District 86	state-house
+Oklahoma;OK House District 87	state-house
+Oklahoma;OK House District 88	state-house
+Oklahoma;OK House District 89	state-house
+Oklahoma;OK House District 90	state-house
+Oklahoma;OK House District 91	state-house
+Oklahoma;OK House District 92	state-house
+Oklahoma;OK House District 93	state-house
+Oklahoma;OK House District 94	state-house
+Oklahoma;OK House District 95	state-house
+Oklahoma;OK House District 96	state-house
+Oklahoma;OK House District 97	state-house
+Oklahoma;OK House District 98	state-house
+Oklahoma;OK House District 99	state-house
+Oklahoma;OK House District 100	state-house
+Oklahoma;OK House District 101	state-house
 Oklahoma;OK Senate District 1	state-senate
 Oklahoma;OK Senate District 2	state-senate
 Oklahoma;OK Senate District 3	state-senate
@@ -154,56 +207,81 @@ Oklahoma;US House OK District 3	congressional
 Oklahoma;US House OK District 4	congressional
 Oklahoma;US House OK District 5	congressional
 Oklahoma	state
-Oklahoma;OK House District 49	state-house
-Oklahoma;OK House District 50	state-house
-Oklahoma;OK House District 51	state-house
-Oklahoma;OK House District 52	state-house
-Oklahoma;OK House District 53	state-house
-Oklahoma;OK House District 54	state-house
-Oklahoma;OK House District 55	state-house
-Oklahoma;OK House District 56	state-house
-Oklahoma;OK House District 57	state-house
-Oklahoma;OK House District 58	state-house
-Oklahoma;OK House District 59	state-house
-Oklahoma;OK House District 60	state-house
-Oklahoma;OK House District 61	state-house
-Oklahoma;OK House District 62	state-house
-Oklahoma;OK House District 63	state-house
-Oklahoma;OK House District 64	state-house
-Oklahoma;OK House District 65	state-house
-Oklahoma;OK House District 66	state-house
-Oklahoma;OK House District 67	state-house
-Oklahoma;OK House District 68	state-house
-Oklahoma;OK House District 69	state-house
-Oklahoma;OK House District 70	state-house
-Oklahoma;OK House District 71	state-house
-Oklahoma;OK House District 72	state-house
-Oklahoma;OK House District 73	state-house
-Oklahoma;OK House District 74	state-house
-Oklahoma;OK House District 75	state-house
-Oklahoma;OK House District 76	state-house
-Oklahoma;OK House District 77	state-house
-Oklahoma;OK House District 78	state-house
-Oklahoma;OK House District 79	state-house
-Oklahoma;OK House District 80	state-house
-Oklahoma;OK House District 81	state-house
-Oklahoma;OK House District 82	state-house
-Oklahoma;OK House District 83	state-house
-Oklahoma;OK House District 84	state-house
-Oklahoma;OK House District 85	state-house
-Oklahoma;OK House District 86	state-house
-Oklahoma;OK House District 87	state-house
-Oklahoma;OK House District 88	state-house
-Oklahoma;OK House District 89	state-house
-Oklahoma;OK House District 90	state-house
-Oklahoma;OK House District 91	state-house
-Oklahoma;OK House District 92	state-house
-Oklahoma;OK House District 93	state-house
-Oklahoma;OK House District 94	state-house
-Oklahoma;OK House District 95	state-house
-Oklahoma;OK House District 96	state-house
-Oklahoma;OK House District 97	state-house
-Oklahoma;OK House District 98	state-house
-Oklahoma;OK House District 99	state-house
-Oklahoma;OK House District 100	state-house
-Oklahoma;OK House District 101	state-house
+Oklahoma;Adair County	county
+Oklahoma;Alfalfa County	county
+Oklahoma;Atoka County	county
+Oklahoma;Beaver County	county
+Oklahoma;Beckham County	county
+Oklahoma;Blaine County	county
+Oklahoma;Bryan County	county
+Oklahoma;Caddo County	county
+Oklahoma;Canadian County	county
+Oklahoma;Carter County	county
+Oklahoma;Cherokee County	county
+Oklahoma;Choctaw County	county
+Oklahoma;Cimarron County	county
+Oklahoma;Cleveland County	county
+Oklahoma;Coal County	county
+Oklahoma;Comanche County	county
+Oklahoma;Cotton County	county
+Oklahoma;Craig County	county
+Oklahoma;Creek County	county
+Oklahoma;Custer County	county
+Oklahoma;Delaware County	county
+Oklahoma;Dewey County	county
+Oklahoma;Ellis County	county
+Oklahoma;Garfield County	county
+Oklahoma;Garvin County	county
+Oklahoma;Grady County	county
+Oklahoma;Grant County	county
+Oklahoma;Greer County	county
+Oklahoma;Harmon County	county
+Oklahoma;Harper County	county
+Oklahoma;Haskell County	county
+Oklahoma;Hughes County	county
+Oklahoma;Jackson County	county
+Oklahoma;Jefferson County	county
+Oklahoma;Johnston County	county
+Oklahoma;Kay County	county
+Oklahoma;Kingfisher County	county
+Oklahoma;Kiowa County	county
+Oklahoma;Latimer County	county
+Oklahoma;Leflore County	county
+Oklahoma;Lincoln County	county
+Oklahoma;Logan County	county
+Oklahoma;Love County	county
+Oklahoma;Mcclain County	county
+Oklahoma;Mccurtain County	county
+Oklahoma;Mcintosh County	county
+Oklahoma;Major County	county
+Oklahoma;Marshall County	county
+Oklahoma;Mayes County	county
+Oklahoma;Murray County	county
+Oklahoma;Muskogee County	county
+Oklahoma;Noble County	county
+Oklahoma;Nowata County	county
+Oklahoma;Okfuskee County	county
+Oklahoma;Oklahoma County	county
+Oklahoma;Okmulgee County	county
+Oklahoma;Osage County	county
+Oklahoma;Ottawa County	county
+Oklahoma;Pawnee County	county
+Oklahoma;Payne County	county
+Oklahoma;Pittsburg County	county
+Oklahoma;Pontotoc County	county
+Oklahoma;Pottawatomie County	county
+Oklahoma;Pushmataha County	county
+Oklahoma;Roger Mills County	county
+Oklahoma;Rogers County	county
+Oklahoma;Seminole County	county
+Oklahoma;Sequoyah County	county
+Oklahoma;Stephens County	county
+Oklahoma;Texas County	county
+Oklahoma;Tillman County	county
+Oklahoma;Tulsa County	county
+Oklahoma;Wagoner County	county
+Oklahoma;Washington County	county
+Oklahoma;Washita County	county
+Oklahoma;Woods County	county
+Oklahoma;Woodward County	county
+
