@@ -24,7 +24,7 @@ total_ssd_votes = 13071
 single_vote_type = 'early'  # pick any one from your file
 pres_votes_vote_type = 36030
 single_county = 'Alaska;AK House District 29'  # pick any one from your file -
-pres_votes_county = 5702  # total votes for pres of that county
+pres_votes_county = 5701  # total votes for pres of that county
 county_or_other = "state-house"
 
 
