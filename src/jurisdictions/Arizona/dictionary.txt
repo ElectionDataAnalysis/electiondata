@@ -894,7 +894,7 @@ Candidate	Flayer, Jordan	Flayer, Jordan
 Candidate	Martin, Brandon	Martin, Brandon
 Candidate	Morgan, Joseph	Morgan, Joseph
 Candidate	Ruden, Noran Eric	Ruden, Noran Eric
-Candidate	Grijalva, RaÃºl	Grijalva, RaÃºl
+Candidate	Grijalva, Raúl	Grijalva, Raúl
 Candidate	Jolley, Richard	Jolley, Richard
 Candidate	Wood, Daniel	Wood, Daniel
 Candidate	DiSanto, Delina	DiSanto, Delina
@@ -924,7 +924,7 @@ Candidate	Huang, Sam	Huang, Sam
 Candidate	Tutora, Nicholas	Tutora, Nicholas
 Candidate	Carillo, Gilbert 'Gilbert'	Carillo, Gilbert 'Gilbert'
 Candidate	Fann, Karen Elizabeth	Fann, Karen Elizabeth
-Candidate	GabaldÃ³n, Rosanna	GabaldÃ³n, Rosanna
+Candidate	Gabaldón, Rosanna	Gabaldón, Rosanna
 Candidate	Workman, Mark	Workman, Mark
 Candidate	Gonzales, Sally Ann	Gonzales, Sally Ann
 Candidate	Otondo, Lisa	Otondo, Lisa
@@ -981,7 +981,7 @@ Candidate	Rios, Rebecca	Rios, Rebecca
 Candidate	Shreves, Garland	Shreves, Garland
 Candidate	Marsh, Christine	Marsh, Christine
 Candidate	Brophy McGee, Kate	Brophy McGee, Kate
-Candidate	Quezada, MartÃ­n J.	Quezada, MartÃ­n J.
+Candidate	Quezada, Martín J.	Quezada, Martín J.
 Candidate	Wilson, John	Wilson, John
 Candidate	Navarrete, Otoniel 'Tony'	Navarrete, Otoniel 'Tony'
 Candidate	Porter, C. Curtis	Porter, C. Curtis
@@ -996,7 +996,7 @@ Candidate	Hernandez, Daniel, Jr.	Hernandez, Daniel, Jr.
 Candidate	Parra, Luis	Parra, Luis
 Candidate	Peard, Billy	Peard, Billy
 Candidate	McEwen, Deborah	McEwen, Deborah
-Candidate	Cano, AndrÃ©s	Cano, AndrÃ©s
+Candidate	Cano, Andrés	Cano, Andrés
 Candidate	Hernandez, Alma	Hernandez, Alma
 Candidate	Soto, Javier	Soto, Javier
 Candidate	Fernandez, Charlene	Fernandez, Charlene
@@ -1090,7 +1090,7 @@ Candidate	Sifuentes, Seth 'Marcus'	Sifuentes, Seth ''Marcus''
 Candidate	Bolding, Reginald	Bolding, Reginald
 Candidate	Miranda, Catherine	Miranda, Catherine
 Candidate	Rodriguez, Diego	Rodriguez, Diego
-Candidate	PeÃ±a M., Tatiana	PeÃ±a M., Tatiana
+Candidate	Peña M., Tatiana	Peña M., Tatiana
 Candidate	Butler, Kelli	Butler, Kelli
 Candidate	Lieberman, Aaron	Lieberman, Aaron
 Candidate	Bowers, Kenneth R 'Ken', Jr	Bowers, Kenneth R 'Ken', Jr
@@ -1102,7 +1102,7 @@ Candidate	Bragg, Billy	Bragg, Billy
 Candidate	FokszanskyJ-Conti, Helen	FokszanskyJ-Conti, Helen
 Candidate	McMillan, Alysia 'Ariesuptop'	McMillan, Alysia 'Ariesuptop'
 Candidate	Meza, Robert	Meza, Robert
-Candidate	TerÃ¡n, Raquel	TerÃ¡n, Raquel
+Candidate	Terán, Raquel	Terán, Raquel
 Candidate	Spears, Gary	Spears, Gary
 Candidate	Mundell, William 'Bill'	Mundell, William 'Bill'
 Candidate	Stanfield, Shea	Stanfield, Shea
@@ -1118,7 +1118,7 @@ CandidateContest	US President (AZ) (Libertarian Party)	President of the United S
 CandidateContest	US President (AZ) (Green Party)	President of the United States (Green)
 Candidate	Joseph Biden	Joseph Biden
 Candidate	Pete Buttigieg	Pete Buttigieg
-Candidate	JuliÃ¡n Castro	JuliÃ¡n Castro
+Candidate	Julián Castro	Julián Castro
 Candidate	Roque 'Rocky' De La Fuente	Roque 'Rocky' De La Fuente
 Candidate	Michael Ellinger	Michael Ellinger
 Candidate	Tulsi Gabbard	Tulsi Gabbard

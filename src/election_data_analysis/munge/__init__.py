@@ -392,6 +392,9 @@ def replace_raw_with_internal_ids(
     ].copy()
 
     if element == "Candidate":
+        # remove any lines with nulls
+        raw_ids_for_element = raw_ids_for_element[raw_ids_for_element.notnull().all(axis=1)]
+
         # Change all upper-case-only internal candidate names to title case in dictionary
         mask = raw_ids_for_element["cdf_internal_name"].str.isupper()
         if mask.any():

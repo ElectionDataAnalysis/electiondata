@@ -436,7 +436,8 @@ def ensure_juris_files(juris_path, ignore_empty=False) -> Optional[dict]:
                 dedupe(cf_path)
 
                 # delete lines with one or more nulls
-                drop_lines_with_any_nulls(cf_path)
+                # TODO this mucks up encodings. We track encodings of results files, but not of jurisdictions.
+                # drop_lines_with_any_nulls(cf_path)
             else:
                 # dedupe the file
                 dedupe(cf_path)
@@ -703,6 +704,7 @@ def dedupe(f_path):
 
 
 def drop_lines_with_any_nulls(f_path):
+    # TODO tech debt: this can muck up encodings. needs to be fixed.
     df = pd.read_csv(f_path, sep = "\t", encoding="iso-8859-1", quoting=csv.QUOTE_MINIMAL)
     df = df[df.notnull().all(axis=1)]
     df.to_csv(f_path, sep="\t", index=False)

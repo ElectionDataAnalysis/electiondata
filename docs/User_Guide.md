@@ -431,8 +431,6 @@ remove_vote_counts(connection, cursor, id)
 
 Replace any double-quotes in Candidate.txt and dictionary.txt with single quotes. I.e., `Rosa Maria 'Rosy' Palomino`, not `Rosa Maria "Rosy" Palomino`.
 
-Lines with empty strings in any field will be removed automatically from the `dictionary.txt` file when the system runs.
-
 Some jurisdictions combine other counts with election results in ways that can be inconvenient. E.g., from a results file for the Alaska 2016 General Election:
 ```
 "01-446 Aurora" ,"US PRESIDENT" ,"Registered Voters" ,"NP" ,"Total" ,2486 ,
