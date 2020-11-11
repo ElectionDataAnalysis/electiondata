@@ -1,1 +1,667 @@
 cdf_element	cdf_internal_name	raw_identifier_value
+CandidateContest	OK House District 1	FOR STATE REPRESENTATIVE DISTRICT 1
+CandidateContest	OK House District 2	FOR STATE REPRESENTATIVE DISTRICT 2
+CandidateContest	OK House District 3	FOR STATE REPRESENTATIVE DISTRICT 3
+CandidateContest	OK House District 4	FOR STATE REPRESENTATIVE DISTRICT 4
+CandidateContest	OK House District 5	FOR STATE REPRESENTATIVE DISTRICT 5
+CandidateContest	OK House District 6	FOR STATE REPRESENTATIVE DISTRICT 6
+CandidateContest	OK House District 7	FOR STATE REPRESENTATIVE DISTRICT 7
+CandidateContest	OK House District 8	FOR STATE REPRESENTATIVE DISTRICT 8
+CandidateContest	OK House District 9	FOR STATE REPRESENTATIVE DISTRICT 9
+CandidateContest	OK House District 10	FOR STATE REPRESENTATIVE DISTRICT 10
+CandidateContest	OK House District 11	FOR STATE REPRESENTATIVE DISTRICT 11
+CandidateContest	OK House District 12	FOR STATE REPRESENTATIVE DISTRICT 12
+CandidateContest	OK House District 13	FOR STATE REPRESENTATIVE DISTRICT 13
+CandidateContest	OK House District 14	FOR STATE REPRESENTATIVE DISTRICT 14
+CandidateContest	OK House District 15	FOR STATE REPRESENTATIVE DISTRICT 15
+CandidateContest	OK House District 16	FOR STATE REPRESENTATIVE DISTRICT 16
+CandidateContest	OK House District 17	FOR STATE REPRESENTATIVE DISTRICT 17
+CandidateContest	OK House District 18	FOR STATE REPRESENTATIVE DISTRICT 18
+CandidateContest	OK House District 19	FOR STATE REPRESENTATIVE DISTRICT 19
+CandidateContest	OK House District 20	FOR STATE REPRESENTATIVE DISTRICT 20
+CandidateContest	OK House District 21	FOR STATE REPRESENTATIVE DISTRICT 21
+CandidateContest	OK House District 22	FOR STATE REPRESENTATIVE DISTRICT 22
+CandidateContest	OK House District 23	FOR STATE REPRESENTATIVE DISTRICT 23
+CandidateContest	OK House District 24	FOR STATE REPRESENTATIVE DISTRICT 24
+CandidateContest	OK House District 25	FOR STATE REPRESENTATIVE DISTRICT 25
+CandidateContest	OK House District 26	FOR STATE REPRESENTATIVE DISTRICT 26
+CandidateContest	OK House District 27	FOR STATE REPRESENTATIVE DISTRICT 27
+CandidateContest	OK House District 28	FOR STATE REPRESENTATIVE DISTRICT 28
+CandidateContest	OK House District 29	FOR STATE REPRESENTATIVE DISTRICT 29
+CandidateContest	OK House District 30	FOR STATE REPRESENTATIVE DISTRICT 30
+CandidateContest	OK House District 31	FOR STATE REPRESENTATIVE DISTRICT 31
+CandidateContest	OK House District 32	FOR STATE REPRESENTATIVE DISTRICT 32
+CandidateContest	OK House District 33	FOR STATE REPRESENTATIVE DISTRICT 33
+CandidateContest	OK House District 34	FOR STATE REPRESENTATIVE DISTRICT 34
+CandidateContest	OK House District 35	FOR STATE REPRESENTATIVE DISTRICT 35
+CandidateContest	OK House District 36	FOR STATE REPRESENTATIVE DISTRICT 36
+CandidateContest	OK House District 37	FOR STATE REPRESENTATIVE DISTRICT 37
+CandidateContest	OK House District 38	FOR STATE REPRESENTATIVE DISTRICT 38
+CandidateContest	OK House District 39	FOR STATE REPRESENTATIVE DISTRICT 39
+CandidateContest	OK House District 40	FOR STATE REPRESENTATIVE DISTRICT 40
+CandidateContest	OK House District 41	FOR STATE REPRESENTATIVE DISTRICT 41
+CandidateContest	OK House District 42	FOR STATE REPRESENTATIVE DISTRICT 42
+CandidateContest	OK House District 43	FOR STATE REPRESENTATIVE DISTRICT 43
+CandidateContest	OK House District 44	FOR STATE REPRESENTATIVE DISTRICT 44
+CandidateContest	OK House District 45	FOR STATE REPRESENTATIVE DISTRICT 45
+CandidateContest	OK House District 46	FOR STATE REPRESENTATIVE DISTRICT 46
+CandidateContest	OK House District 47	FOR STATE REPRESENTATIVE DISTRICT 47
+CandidateContest	OK House District 48	FOR STATE REPRESENTATIVE DISTRICT 48
+CandidateContest	OK House District 49	FOR STATE REPRESENTATIVE DISTRICT 49
+CandidateContest	OK House District 50	FOR STATE REPRESENTATIVE DISTRICT 50
+CandidateContest	OK House District 51	FOR STATE REPRESENTATIVE DISTRICT 51
+CandidateContest	OK House District 52	FOR STATE REPRESENTATIVE DISTRICT 52
+CandidateContest	OK House District 53	FOR STATE REPRESENTATIVE DISTRICT 53
+CandidateContest	OK House District 54	FOR STATE REPRESENTATIVE DISTRICT 54
+CandidateContest	OK House District 55	FOR STATE REPRESENTATIVE DISTRICT 55
+CandidateContest	OK House District 56	FOR STATE REPRESENTATIVE DISTRICT 56
+CandidateContest	OK House District 57	FOR STATE REPRESENTATIVE DISTRICT 57
+CandidateContest	OK House District 58	FOR STATE REPRESENTATIVE DISTRICT 58
+CandidateContest	OK House District 59	FOR STATE REPRESENTATIVE DISTRICT 59
+CandidateContest	OK House District 60	FOR STATE REPRESENTATIVE DISTRICT 60
+CandidateContest	OK House District 61	FOR STATE REPRESENTATIVE DISTRICT 61
+CandidateContest	OK House District 62	FOR STATE REPRESENTATIVE DISTRICT 62
+CandidateContest	OK House District 63	FOR STATE REPRESENTATIVE DISTRICT 63
+CandidateContest	OK House District 64	FOR STATE REPRESENTATIVE DISTRICT 64
+CandidateContest	OK House District 65	FOR STATE REPRESENTATIVE DISTRICT 65
+CandidateContest	OK House District 66	FOR STATE REPRESENTATIVE DISTRICT 66
+CandidateContest	OK House District 67	FOR STATE REPRESENTATIVE DISTRICT 67
+CandidateContest	OK House District 68	FOR STATE REPRESENTATIVE DISTRICT 68
+CandidateContest	OK House District 69	FOR STATE REPRESENTATIVE DISTRICT 69
+CandidateContest	OK House District 70	FOR STATE REPRESENTATIVE DISTRICT 70
+CandidateContest	OK House District 71	FOR STATE REPRESENTATIVE DISTRICT 71
+CandidateContest	OK House District 72	FOR STATE REPRESENTATIVE DISTRICT 72
+CandidateContest	OK House District 73	FOR STATE REPRESENTATIVE DISTRICT 73
+CandidateContest	OK House District 74	FOR STATE REPRESENTATIVE DISTRICT 74
+CandidateContest	OK House District 75	FOR STATE REPRESENTATIVE DISTRICT 75
+CandidateContest	OK House District 76	FOR STATE REPRESENTATIVE DISTRICT 76
+CandidateContest	OK House District 77	FOR STATE REPRESENTATIVE DISTRICT 77
+CandidateContest	OK House District 78	FOR STATE REPRESENTATIVE DISTRICT 78
+CandidateContest	OK House District 79	FOR STATE REPRESENTATIVE DISTRICT 79
+CandidateContest	OK House District 80	FOR STATE REPRESENTATIVE DISTRICT 80
+CandidateContest	OK House District 81	FOR STATE REPRESENTATIVE DISTRICT 81
+CandidateContest	OK House District 82	FOR STATE REPRESENTATIVE DISTRICT 82
+CandidateContest	OK House District 83	FOR STATE REPRESENTATIVE DISTRICT 83
+CandidateContest	OK House District 84	FOR STATE REPRESENTATIVE DISTRICT 84
+CandidateContest	OK House District 85	FOR STATE REPRESENTATIVE DISTRICT 85
+CandidateContest	OK House District 86	FOR STATE REPRESENTATIVE DISTRICT 86
+CandidateContest	OK House District 87	FOR STATE REPRESENTATIVE DISTRICT 87
+CandidateContest	OK House District 88	FOR STATE REPRESENTATIVE DISTRICT 88
+CandidateContest	OK House District 89	FOR STATE REPRESENTATIVE DISTRICT 89
+CandidateContest	OK House District 90	FOR STATE REPRESENTATIVE DISTRICT 90
+CandidateContest	OK House District 91	FOR STATE REPRESENTATIVE DISTRICT 91
+CandidateContest	OK House District 92	FOR STATE REPRESENTATIVE DISTRICT 92
+CandidateContest	OK House District 93	FOR STATE REPRESENTATIVE DISTRICT 93
+CandidateContest	OK House District 94	FOR STATE REPRESENTATIVE DISTRICT 94
+CandidateContest	OK House District 95	FOR STATE REPRESENTATIVE DISTRICT 95
+CandidateContest	OK House District 96	FOR STATE REPRESENTATIVE DISTRICT 96
+CandidateContest	OK House District 97	FOR STATE REPRESENTATIVE DISTRICT 97
+CandidateContest	OK House District 98	FOR STATE REPRESENTATIVE DISTRICT 98
+CandidateContest	OK House District 99	FOR STATE REPRESENTATIVE DISTRICT 99
+CandidateContest	OK House District 100	FOR STATE REPRESENTATIVE DISTRICT 100
+CandidateContest	OK House District 101	FOR STATE REPRESENTATIVE DISTRICT 101
+CandidateContest	OK Senate District 1	FOR STATE SENATOR DISTRICT 1
+CandidateContest	OK Senate District 2	FOR STATE SENATOR DISTRICT 2
+CandidateContest	OK Senate District 3	FOR STATE SENATOR DISTRICT 3
+CandidateContest	OK Senate District 4	FOR STATE SENATOR DISTRICT 4
+CandidateContest	OK Senate District 5	FOR STATE SENATOR DISTRICT 5
+CandidateContest	OK Senate District 6	FOR STATE SENATOR DISTRICT 6
+CandidateContest	OK Senate District 7	FOR STATE SENATOR DISTRICT 7
+CandidateContest	OK Senate District 8	FOR STATE SENATOR DISTRICT 8
+CandidateContest	OK Senate District 9	FOR STATE SENATOR DISTRICT 9
+CandidateContest	OK Senate District 10	FOR STATE SENATOR DISTRICT 10
+CandidateContest	OK Senate District 11	FOR STATE SENATOR DISTRICT 11
+CandidateContest	OK Senate District 12	FOR STATE SENATOR DISTRICT 12
+CandidateContest	OK Senate District 13	FOR STATE SENATOR DISTRICT 13
+CandidateContest	OK Senate District 14	FOR STATE SENATOR DISTRICT 14
+CandidateContest	OK Senate District 15	FOR STATE SENATOR DISTRICT 15
+CandidateContest	OK Senate District 16	FOR STATE SENATOR DISTRICT 16
+CandidateContest	OK Senate District 17	FOR STATE SENATOR DISTRICT 17
+CandidateContest	OK Senate District 18	FOR STATE SENATOR DISTRICT 18
+CandidateContest	OK Senate District 19	FOR STATE SENATOR DISTRICT 19
+CandidateContest	OK Senate District 20	FOR STATE SENATOR DISTRICT 20
+CandidateContest	OK Senate District 21	FOR STATE SENATOR DISTRICT 21
+CandidateContest	OK Senate District 22	FOR STATE SENATOR DISTRICT 22
+CandidateContest	OK Senate District 23	FOR STATE SENATOR DISTRICT 23
+CandidateContest	OK Senate District 24	FOR STATE SENATOR DISTRICT 24
+CandidateContest	OK Senate District 25	FOR STATE SENATOR DISTRICT 25
+CandidateContest	OK Senate District 26	FOR STATE SENATOR DISTRICT 26
+CandidateContest	OK Senate District 27	FOR STATE SENATOR DISTRICT 27
+CandidateContest	OK Senate District 28	FOR STATE SENATOR DISTRICT 28
+CandidateContest	OK Senate District 29	FOR STATE SENATOR DISTRICT 29
+CandidateContest	OK Senate District 30	FOR STATE SENATOR DISTRICT 30
+CandidateContest	OK Senate District 31	FOR STATE SENATOR DISTRICT 31
+CandidateContest	OK Senate District 32	FOR STATE SENATOR DISTRICT 32
+CandidateContest	OK Senate District 33	FOR STATE SENATOR DISTRICT 33
+CandidateContest	OK Senate District 34	FOR STATE SENATOR DISTRICT 34
+CandidateContest	OK Senate District 35	FOR STATE SENATOR DISTRICT 35
+CandidateContest	OK Senate District 36	FOR STATE SENATOR DISTRICT 36
+CandidateContest	OK Senate District 37	FOR STATE SENATOR DISTRICT 37
+CandidateContest	OK Senate District 38	FOR STATE SENATOR DISTRICT 38
+CandidateContest	OK Senate District 39	FOR STATE SENATOR DISTRICT 39
+CandidateContest	OK Senate District 40	FOR STATE SENATOR DISTRICT 40
+CandidateContest	OK Senate District 41	FOR STATE SENATOR DISTRICT 41
+CandidateContest	OK Senate District 42	FOR STATE SENATOR DISTRICT 42
+CandidateContest	OK Senate District 43	FOR STATE SENATOR DISTRICT 43
+CandidateContest	OK Senate District 44	FOR STATE SENATOR DISTRICT 44
+CandidateContest	OK Senate District 45	FOR STATE SENATOR DISTRICT 45
+CandidateContest	OK Senate District 46	FOR STATE SENATOR DISTRICT 46
+CandidateContest	OK Senate District 47	FOR STATE SENATOR DISTRICT 47
+CandidateContest	OK Senate District 48	FOR STATE SENATOR DISTRICT 48
+CandidateContest	US House OK District 1	FOR UNITED STATES REPRESENTATIVE DISTRICT 01
+CandidateContest	US House OK District 2	FOR UNITED STATES REPRESENTATIVE DISTRICT 02
+CandidateContest	US House OK District 3	FOR UNITED STATES REPRESENTATIVE DISTRICT 03
+CandidateContest	US House OK District 4	FOR UNITED STATES REPRESENTATIVE DISTRICT 04
+CandidateContest	US House OK District 5	FOR UNITED STATES REPRESENTATIVE DISTRICT 05
+CandidateContest	US President (OK)	FOR ELECTORS FOR PRESIDENT AND VICE PRESIDENT
+CandidateContest	US Senate OK	FOR UNITED STATES SENATOR
+Election	2020 General	2020 General
+Election	2020 Primary	2020 Primary
+Election	2018 General	2018 General
+Election	2016 General	2016 General
+Party	Democratic Party	DEM
+Party	Republican Party	REP
+Party	Independent Party	IND
+Party	Libertarian Party	LIB
+ReportingUnit	Oklahoma;OK House District 1	Oklahoma;OK House District 1
+ReportingUnit	Oklahoma;OK House District 2	Oklahoma;OK House District 2
+ReportingUnit	Oklahoma;OK House District 3	Oklahoma;OK House District 3
+ReportingUnit	Oklahoma;OK House District 4	Oklahoma;OK House District 4
+ReportingUnit	Oklahoma;OK House District 5	Oklahoma;OK House District 5
+ReportingUnit	Oklahoma;OK House District 6	Oklahoma;OK House District 6
+ReportingUnit	Oklahoma;OK House District 7	Oklahoma;OK House District 7
+ReportingUnit	Oklahoma;OK House District 8	Oklahoma;OK House District 8
+ReportingUnit	Oklahoma;OK House District 9	Oklahoma;OK House District 9
+ReportingUnit	Oklahoma;OK House District 10	Oklahoma;OK House District 10
+ReportingUnit	Oklahoma;OK House District 11	Oklahoma;OK House District 11
+ReportingUnit	Oklahoma;OK House District 12	Oklahoma;OK House District 12
+ReportingUnit	Oklahoma;OK House District 13	Oklahoma;OK House District 13
+ReportingUnit	Oklahoma;OK House District 14	Oklahoma;OK House District 14
+ReportingUnit	Oklahoma;OK House District 15	Oklahoma;OK House District 15
+ReportingUnit	Oklahoma;OK House District 16	Oklahoma;OK House District 16
+ReportingUnit	Oklahoma;OK House District 17	Oklahoma;OK House District 17
+ReportingUnit	Oklahoma;OK House District 18	Oklahoma;OK House District 18
+ReportingUnit	Oklahoma;OK House District 19	Oklahoma;OK House District 19
+ReportingUnit	Oklahoma;OK House District 20	Oklahoma;OK House District 20
+ReportingUnit	Oklahoma;OK House District 21	Oklahoma;OK House District 21
+ReportingUnit	Oklahoma;OK House District 22	Oklahoma;OK House District 22
+ReportingUnit	Oklahoma;OK House District 23	Oklahoma;OK House District 23
+ReportingUnit	Oklahoma;OK House District 24	Oklahoma;OK House District 24
+ReportingUnit	Oklahoma;OK House District 25	Oklahoma;OK House District 25
+ReportingUnit	Oklahoma;OK House District 26	Oklahoma;OK House District 26
+ReportingUnit	Oklahoma;OK House District 27	Oklahoma;OK House District 27
+ReportingUnit	Oklahoma;OK House District 28	Oklahoma;OK House District 28
+ReportingUnit	Oklahoma;OK House District 29	Oklahoma;OK House District 29
+ReportingUnit	Oklahoma;OK House District 30	Oklahoma;OK House District 30
+ReportingUnit	Oklahoma;OK House District 31	Oklahoma;OK House District 31
+ReportingUnit	Oklahoma;OK House District 32	Oklahoma;OK House District 32
+ReportingUnit	Oklahoma;OK House District 33	Oklahoma;OK House District 33
+ReportingUnit	Oklahoma;OK House District 34	Oklahoma;OK House District 34
+ReportingUnit	Oklahoma;OK House District 35	Oklahoma;OK House District 35
+ReportingUnit	Oklahoma;OK House District 36	Oklahoma;OK House District 36
+ReportingUnit	Oklahoma;OK House District 37	Oklahoma;OK House District 37
+ReportingUnit	Oklahoma;OK House District 38	Oklahoma;OK House District 38
+ReportingUnit	Oklahoma;OK House District 39	Oklahoma;OK House District 39
+ReportingUnit	Oklahoma;OK House District 40	Oklahoma;OK House District 40
+ReportingUnit	Oklahoma;OK House District 41	Oklahoma;OK House District 41
+ReportingUnit	Oklahoma;OK House District 42	Oklahoma;OK House District 42
+ReportingUnit	Oklahoma;OK House District 43	Oklahoma;OK House District 43
+ReportingUnit	Oklahoma;OK House District 44	Oklahoma;OK House District 44
+ReportingUnit	Oklahoma;OK House District 45	Oklahoma;OK House District 45
+ReportingUnit	Oklahoma;OK House District 46	Oklahoma;OK House District 46
+ReportingUnit	Oklahoma;OK House District 47	Oklahoma;OK House District 47
+ReportingUnit	Oklahoma;OK House District 48	Oklahoma;OK House District 48
+ReportingUnit	Oklahoma;OK Senate District 1	Oklahoma;OK Senate District 1
+ReportingUnit	Oklahoma;OK Senate District 2	Oklahoma;OK Senate District 2
+ReportingUnit	Oklahoma;OK Senate District 3	Oklahoma;OK Senate District 3
+ReportingUnit	Oklahoma;OK Senate District 4	Oklahoma;OK Senate District 4
+ReportingUnit	Oklahoma;OK Senate District 5	Oklahoma;OK Senate District 5
+ReportingUnit	Oklahoma;OK Senate District 6	Oklahoma;OK Senate District 6
+ReportingUnit	Oklahoma;OK Senate District 7	Oklahoma;OK Senate District 7
+ReportingUnit	Oklahoma;OK Senate District 8	Oklahoma;OK Senate District 8
+ReportingUnit	Oklahoma;OK Senate District 9	Oklahoma;OK Senate District 9
+ReportingUnit	Oklahoma;OK Senate District 10	Oklahoma;OK Senate District 10
+ReportingUnit	Oklahoma;OK Senate District 11	Oklahoma;OK Senate District 11
+ReportingUnit	Oklahoma;OK Senate District 12	Oklahoma;OK Senate District 12
+ReportingUnit	Oklahoma;OK Senate District 13	Oklahoma;OK Senate District 13
+ReportingUnit	Oklahoma;OK Senate District 14	Oklahoma;OK Senate District 14
+ReportingUnit	Oklahoma;OK Senate District 15	Oklahoma;OK Senate District 15
+ReportingUnit	Oklahoma;OK Senate District 16	Oklahoma;OK Senate District 16
+ReportingUnit	Oklahoma;OK Senate District 17	Oklahoma;OK Senate District 17
+ReportingUnit	Oklahoma;OK Senate District 18	Oklahoma;OK Senate District 18
+ReportingUnit	Oklahoma;OK Senate District 19	Oklahoma;OK Senate District 19
+ReportingUnit	Oklahoma;OK Senate District 20	Oklahoma;OK Senate District 20
+ReportingUnit	Oklahoma;OK Senate District 21	Oklahoma;OK Senate District 21
+ReportingUnit	Oklahoma;OK Senate District 22	Oklahoma;OK Senate District 22
+ReportingUnit	Oklahoma;OK Senate District 23	Oklahoma;OK Senate District 23
+ReportingUnit	Oklahoma;OK Senate District 24	Oklahoma;OK Senate District 24
+ReportingUnit	Oklahoma;OK Senate District 25	Oklahoma;OK Senate District 25
+ReportingUnit	Oklahoma;OK Senate District 26	Oklahoma;OK Senate District 26
+ReportingUnit	Oklahoma;OK Senate District 27	Oklahoma;OK Senate District 27
+ReportingUnit	Oklahoma;OK Senate District 28	Oklahoma;OK Senate District 28
+ReportingUnit	Oklahoma;OK Senate District 29	Oklahoma;OK Senate District 29
+ReportingUnit	Oklahoma;OK Senate District 30	Oklahoma;OK Senate District 30
+ReportingUnit	Oklahoma;OK Senate District 31	Oklahoma;OK Senate District 31
+ReportingUnit	Oklahoma;OK Senate District 32	Oklahoma;OK Senate District 32
+ReportingUnit	Oklahoma;OK Senate District 33	Oklahoma;OK Senate District 33
+ReportingUnit	Oklahoma;OK Senate District 34	Oklahoma;OK Senate District 34
+ReportingUnit	Oklahoma;OK Senate District 35	Oklahoma;OK Senate District 35
+ReportingUnit	Oklahoma;OK Senate District 36	Oklahoma;OK Senate District 36
+ReportingUnit	Oklahoma;OK Senate District 37	Oklahoma;OK Senate District 37
+ReportingUnit	Oklahoma;OK Senate District 38	Oklahoma;OK Senate District 38
+ReportingUnit	Oklahoma;OK Senate District 39	Oklahoma;OK Senate District 39
+ReportingUnit	Oklahoma;OK Senate District 40	Oklahoma;OK Senate District 40
+ReportingUnit	Oklahoma;OK Senate District 41	Oklahoma;OK Senate District 41
+ReportingUnit	Oklahoma;OK Senate District 42	Oklahoma;OK Senate District 42
+ReportingUnit	Oklahoma;OK Senate District 43	Oklahoma;OK Senate District 43
+ReportingUnit	Oklahoma;OK Senate District 44	Oklahoma;OK Senate District 44
+ReportingUnit	Oklahoma;OK Senate District 45	Oklahoma;OK Senate District 45
+ReportingUnit	Oklahoma;OK Senate District 46	Oklahoma;OK Senate District 46
+ReportingUnit	Oklahoma;OK Senate District 47	Oklahoma;OK Senate District 47
+ReportingUnit	Oklahoma;OK Senate District 48	Oklahoma;OK Senate District 48
+ReportingUnit	Oklahoma;OK Senate District 49	Oklahoma;OK Senate District 49
+ReportingUnit	Oklahoma;OK Senate District 50	Oklahoma;OK Senate District 50
+ReportingUnit	Oklahoma;OK Senate District 51	Oklahoma;OK Senate District 51
+ReportingUnit	Oklahoma;OK Senate District 52	Oklahoma;OK Senate District 52
+ReportingUnit	Oklahoma;OK Senate District 53	Oklahoma;OK Senate District 53
+ReportingUnit	Oklahoma;OK Senate District 54	Oklahoma;OK Senate District 54
+ReportingUnit	Oklahoma;OK Senate District 55	Oklahoma;OK Senate District 55
+ReportingUnit	Oklahoma;OK Senate District 56	Oklahoma;OK Senate District 56
+ReportingUnit	Oklahoma;OK Senate District 57	Oklahoma;OK Senate District 57
+ReportingUnit	Oklahoma;OK Senate District 58	Oklahoma;OK Senate District 58
+ReportingUnit	Oklahoma;OK Senate District 59	Oklahoma;OK Senate District 59
+ReportingUnit	Oklahoma;OK Senate District 60	Oklahoma;OK Senate District 60
+ReportingUnit	Oklahoma;OK Senate District 61	Oklahoma;OK Senate District 61
+ReportingUnit	Oklahoma;OK Senate District 62	Oklahoma;OK Senate District 62
+ReportingUnit	Oklahoma;OK Senate District 63	Oklahoma;OK Senate District 63
+ReportingUnit	Oklahoma;OK Senate District 64	Oklahoma;OK Senate District 64
+ReportingUnit	Oklahoma;OK Senate District 65	Oklahoma;OK Senate District 65
+ReportingUnit	Oklahoma;OK Senate District 66	Oklahoma;OK Senate District 66
+ReportingUnit	Oklahoma;OK Senate District 67	Oklahoma;OK Senate District 67
+ReportingUnit	Oklahoma;OK Senate District 68	Oklahoma;OK Senate District 68
+ReportingUnit	Oklahoma;OK Senate District 69	Oklahoma;OK Senate District 69
+ReportingUnit	Oklahoma;OK Senate District 70	Oklahoma;OK Senate District 70
+ReportingUnit	Oklahoma;OK Senate District 71	Oklahoma;OK Senate District 71
+ReportingUnit	Oklahoma;OK Senate District 72	Oklahoma;OK Senate District 72
+ReportingUnit	Oklahoma;OK Senate District 73	Oklahoma;OK Senate District 73
+ReportingUnit	Oklahoma;OK Senate District 74	Oklahoma;OK Senate District 74
+ReportingUnit	Oklahoma;OK Senate District 75	Oklahoma;OK Senate District 75
+ReportingUnit	Oklahoma;OK Senate District 76	Oklahoma;OK Senate District 76
+ReportingUnit	Oklahoma;OK Senate District 77	Oklahoma;OK Senate District 77
+ReportingUnit	Oklahoma;OK Senate District 78	Oklahoma;OK Senate District 78
+ReportingUnit	Oklahoma;OK Senate District 79	Oklahoma;OK Senate District 79
+ReportingUnit	Oklahoma;OK Senate District 80	Oklahoma;OK Senate District 80
+ReportingUnit	Oklahoma;OK Senate District 81	Oklahoma;OK Senate District 81
+ReportingUnit	Oklahoma;OK Senate District 82	Oklahoma;OK Senate District 82
+ReportingUnit	Oklahoma;OK Senate District 83	Oklahoma;OK Senate District 83
+ReportingUnit	Oklahoma;OK Senate District 84	Oklahoma;OK Senate District 84
+ReportingUnit	Oklahoma;OK Senate District 85	Oklahoma;OK Senate District 85
+ReportingUnit	Oklahoma;OK Senate District 86	Oklahoma;OK Senate District 86
+ReportingUnit	Oklahoma;OK Senate District 87	Oklahoma;OK Senate District 87
+ReportingUnit	Oklahoma;OK Senate District 88	Oklahoma;OK Senate District 88
+ReportingUnit	Oklahoma;OK Senate District 89	Oklahoma;OK Senate District 89
+ReportingUnit	Oklahoma;OK Senate District 90	Oklahoma;OK Senate District 90
+ReportingUnit	Oklahoma;OK Senate District 91	Oklahoma;OK Senate District 91
+ReportingUnit	Oklahoma;OK Senate District 92	Oklahoma;OK Senate District 92
+ReportingUnit	Oklahoma;OK Senate District 93	Oklahoma;OK Senate District 93
+ReportingUnit	Oklahoma;OK Senate District 94	Oklahoma;OK Senate District 94
+ReportingUnit	Oklahoma;OK Senate District 95	Oklahoma;OK Senate District 95
+ReportingUnit	Oklahoma;OK Senate District 96	Oklahoma;OK Senate District 96
+ReportingUnit	Oklahoma;OK Senate District 97	Oklahoma;OK Senate District 97
+ReportingUnit	Oklahoma;OK Senate District 98	Oklahoma;OK Senate District 98
+ReportingUnit	Oklahoma;OK Senate District 99	Oklahoma;OK Senate District 99
+ReportingUnit	Oklahoma;OK Senate District 100	Oklahoma;OK Senate District 100
+ReportingUnit	Oklahoma;OK Senate District 101	Oklahoma;OK Senate District 101
+ReportingUnit	Oklahoma;US House OK District 1	Oklahoma;US House OK District 1
+ReportingUnit	Oklahoma;US House OK District 2	Oklahoma;US House OK District 2
+ReportingUnit	Oklahoma;US House OK District 3	Oklahoma;US House OK District 3
+ReportingUnit	Oklahoma;US House OK District 4	Oklahoma;US House OK District 4
+ReportingUnit	Oklahoma;US House OK District 5	Oklahoma;US House OK District 5
+ReportingUnit	Oklahoma	Oklahoma
+ReportingUnit	Oklahoma;Adair County	ADAIR
+ReportingUnit	Oklahoma;Alfalfa County	ALFALFA
+ReportingUnit	Oklahoma;Atoka County	ATOKA
+ReportingUnit	Oklahoma;Beaver County	BEAVER
+ReportingUnit	Oklahoma;Beckham County	BECKHAM
+ReportingUnit	Oklahoma;Blaine County	BLAINE
+ReportingUnit	Oklahoma;Bryan County	BRYAN
+ReportingUnit	Oklahoma;Caddo County	CADDO
+ReportingUnit	Oklahoma;Canadian County	CANADIAN
+ReportingUnit	Oklahoma;Carter County	CARTER
+ReportingUnit	Oklahoma;Cherokee County	CHEROKEE
+ReportingUnit	Oklahoma;Choctaw County	CHOCTAW
+ReportingUnit	Oklahoma;Cimarron County	CIMARRON
+ReportingUnit	Oklahoma;Cleveland County	CLEVELAND
+ReportingUnit	Oklahoma;Coal County	COAL
+ReportingUnit	Oklahoma;Comanche County	COMANCHE
+ReportingUnit	Oklahoma;Cotton County	COTTON
+ReportingUnit	Oklahoma;Craig County	CRAIG
+ReportingUnit	Oklahoma;Creek County	CREEK
+ReportingUnit	Oklahoma;Custer County	CUSTER
+ReportingUnit	Oklahoma;Delaware County	DELAWARE
+ReportingUnit	Oklahoma;Dewey County	DEWEY
+ReportingUnit	Oklahoma;Ellis County	ELLIS
+ReportingUnit	Oklahoma;Garfield County	GARFIELD
+ReportingUnit	Oklahoma;Garvin County	GARVIN
+ReportingUnit	Oklahoma;Grady County	GRADY
+ReportingUnit	Oklahoma;Grant County	GRANT
+ReportingUnit	Oklahoma;Greer County	GREER
+ReportingUnit	Oklahoma;Harmon County	HARMON
+ReportingUnit	Oklahoma;Harper County	HARPER
+ReportingUnit	Oklahoma;Haskell County	HASKELL
+ReportingUnit	Oklahoma;Hughes County	HUGHES
+ReportingUnit	Oklahoma;Jackson County	JACKSON
+ReportingUnit	Oklahoma;Jefferson County	JEFFERSON
+ReportingUnit	Oklahoma;Johnston County	JOHNSTON
+ReportingUnit	Oklahoma;Kay County	KAY
+ReportingUnit	Oklahoma;Kingfisher County	KINGFISHER
+ReportingUnit	Oklahoma;Kiowa County	KIOWA
+ReportingUnit	Oklahoma;Latimer County	LATIMER
+ReportingUnit	Oklahoma;Leflore County	LEFLORE
+ReportingUnit	Oklahoma;Lincoln County	LINCOLN
+ReportingUnit	Oklahoma;Logan County	LOGAN
+ReportingUnit	Oklahoma;Love County	LOVE
+ReportingUnit	Oklahoma;Mcclain County	MCCLAIN
+ReportingUnit	Oklahoma;Mccurtain County	MCCURTAIN
+ReportingUnit	Oklahoma;Mcintosh County	MCINTOSH
+ReportingUnit	Oklahoma;Major County	MAJOR
+ReportingUnit	Oklahoma;Marshall County	MARSHALL
+ReportingUnit	Oklahoma;Mayes County	MAYES
+ReportingUnit	Oklahoma;Murray County	MURRAY
+ReportingUnit	Oklahoma;Muskogee County	MUSKOGEE
+ReportingUnit	Oklahoma;Noble County	NOBLE
+ReportingUnit	Oklahoma;Nowata County	NOWATA
+ReportingUnit	Oklahoma;Okfuskee County	OKFUSKEE
+ReportingUnit	Oklahoma;Oklahoma County	OKLAHOMA
+ReportingUnit	Oklahoma;Okmulgee County	OKMULGEE
+ReportingUnit	Oklahoma;Osage County	OSAGE
+ReportingUnit	Oklahoma;Ottawa County	OTTAWA
+ReportingUnit	Oklahoma;Pawnee County	PAWNEE
+ReportingUnit	Oklahoma;Payne County	PAYNE
+ReportingUnit	Oklahoma;Pittsburg County	PITTSBURG
+ReportingUnit	Oklahoma;Pontotoc County	PONTOTOC
+ReportingUnit	Oklahoma;Pottawatomie County	POTTAWATOMIE
+ReportingUnit	Oklahoma;Pushmataha County	PUSHMATAHA
+ReportingUnit	Oklahoma;Roger Mills County	ROGER MILLS
+ReportingUnit	Oklahoma;Rogers County	ROGERS
+ReportingUnit	Oklahoma;Seminole County	SEMINOLE
+ReportingUnit	Oklahoma;Sequoyah County	SEQUOYAH
+ReportingUnit	Oklahoma;Stephens County	STEPHENS
+ReportingUnit	Oklahoma;Texas County	TEXAS
+ReportingUnit	Oklahoma;Tillman County	TILLMAN
+ReportingUnit	Oklahoma;Tulsa County	TULSA
+ReportingUnit	Oklahoma;Wagoner County	WAGONER
+ReportingUnit	Oklahoma;Washington County	WASHINGTON
+ReportingUnit	Oklahoma;Washita County	WASHITA
+ReportingUnit	Oklahoma;Woods County	WOODS
+ReportingUnit	Oklahoma;Woodward County	WOODWARD
+Candidate	DONALD J. TRUMP	DONALD J. TRUMP | MICHAEL R. PENCE
+Candidate	JO JORGENSEN	JO JORGENSEN | JEREMY SPIKE COHEN
+Candidate	JOSEPH R. BIDEN	JOSEPH R. BIDEN | KAMALA D. HARRIS
+Candidate	JADE SIMMONS	JADE SIMMONS | CLAUDELIAH J. ROZE
+Candidate	KANYE WEST	KANYE WEST | MICHELLE TIDBALL
+Candidate	BROCK PIERCE	BROCK PIERCE | KARLA BALLARD
+Candidate	TODD HIETT	TODD HIETT
+Candidate	TODD HAGOPIAN	TODD HAGOPIAN
+Candidate	JIM INHOFE	JIM INHOFE
+Candidate	ROBERT MURPHY	ROBERT MURPHY
+Candidate	ABBY BROYLES	ABBY BROYLES
+Candidate	JOAN FARR	JOAN FARR
+Candidate	A. D. NESBIT	A. D. NESBIT
+Candidate	MARKWAYNE MULLIN	MARKWAYNE MULLIN
+Candidate	RICHIE CASTALDO	RICHIE CASTALDO
+Candidate	DANYELL LANIER	DANYELL LANIER
+Candidate	BLAKE COWBOY STEPHENS	BLAKE COWBOY STEPHENS
+Candidate	DYLLON FITE	DYLLON FITE
+Candidate	JOHN R. BERRY	JOHN R. BERRY
+Candidate	JASON RITCHIE	JASON RITCHIE
+Candidate	FRANK D. LUCAS	FRANK D. LUCAS
+Candidate	ZOE MIDYETT	ZOE MIDYETT
+Candidate	GEORGE H BURNS	GEORGE H BURNS
+Candidate	RANDY COLEMAN	RANDY COLEMAN
+Candidate	SPIKE EAVES	SPIKE EAVES
+Candidate	DALE SHEFFIELD	DALE SHEFFIELD
+Candidate	TODD RUSS	TODD RUSS
+Candidate	AUSTIN GIPSON-BLACK	AUSTIN GIPSON-BLACK
+Candidate	ANTHONY MOORE	ANTHONY MOORE
+Candidate	JUAN GARCIA	JUAN GARCIA
+Candidate	TATE J. FINNELL	TATE J. FINNELL
+Candidate	BARRY GOWDY	BARRY GOWDY
+Candidate	D. JENNIFER HAIGLER	D. JENNIFER HAIGLER
+Candidate	TRACY D. WALKER	TRACY D. WALKER
+Candidate	TRAVIS DAUGHERTY	TRAVIS DAUGHERTY
+Candidate	BRIAN  A. JOHNSON	BRIAN  A. JOHNSON
+Candidate	TONY SIMMONS	TONY SIMMONS
+Candidate	BILLY W. ADAMS	BILLY W. ADAMS
+Candidate	DICK LOWE	DICK LOWE
+Candidate	CRAIG PARHAM	CRAIG PARHAM
+Candidate	TONI HASENBECK	TONI HASENBECK
+Candidate	JENNIFER KERSTETTER	JENNIFER KERSTETTER
+Candidate	TOM COLE	TOM COLE
+Candidate	BOB WHITE	BOB WHITE
+Candidate	MARY BRANNON	MARY BRANNON
+Candidate	PAUL ROSINO	PAUL ROSINO
+Candidate	JENNIFER WILKINSON	JENNIFER WILKINSON
+Candidate	JAY STEAGALL	JAY STEAGALL
+Candidate	CASSIE KINET	CASSIE KINET
+Candidate	STEVE JENSEN	STEVE JENSEN
+Candidate	JACQUELINE STEVENSON-SMITH	JACQUELINE STEVENSON-SMITH
+Candidate	DEWAYNE PEMBERTON	DEWAYNE PEMBERTON
+Candidate	JACK REAVIS	JACK REAVIS
+Candidate	BOB ED CULVER	BOB ED CULVER
+Candidate	MATT MEREDITH	MATT MEREDITH
+Candidate	MANUEL A. HOLLAND	MANUEL A. HOLLAND
+Candidate	JASON CHENNAULT	JASON CHENNAULT
+Candidate	RANDY ROBERTSON	RANDY ROBERTSON
+Candidate	CARROLL SARGENT	CARROLL SARGENT
+Candidate	ROB STANDRIDGE	ROB STANDRIDGE
+Candidate	ALEX SCOTT	ALEX SCOTT
+Candidate	PHILLIP HILLIAN	PHILLIP HILLIAN
+Candidate	MERLEYN BELL	MERLEYN BELL
+Candidate	NANCY SANGIRARDI	NANCY SANGIRARDI
+Candidate	JACOB ROSECRANTS	JACOB ROSECRANTS
+Candidate	JON ECHOLS	JON ECHOLS
+Candidate	WAYNE HUGHES	WAYNE HUGHES
+Candidate	CHRIS AMASON	CHRIS AMASON
+Candidate	KELLY OWINGS	KELLY OWINGS
+Candidate	DARRY STACY	DARRY STACY
+Candidate	MICHAEL D. THOMAS	MICHAEL D. THOMAS
+Candidate	WINNIE RUSSELL	WINNIE RUSSELL
+Candidate	JENEENA PALMS	JENEENA PALMS
+Candidate	STEVEN FLOWERS	STEVEN FLOWERS
+Candidate	BRYAN JUMP	BRYAN JUMP
+Candidate	JOHN McCOLLUM	JOHN McCOLLUM
+Candidate	NICK LEE	NICK LEE
+Candidate	DANIEL PAE	DANIEL PAE
+Candidate	LARRY BUSH	LARRY BUSH
+Candidate	RANDE WORTHEN	RANDE WORTHEN
+Candidate	KYLE EMMETT MERAZ	KYLE EMMETT MERAZ
+Candidate	DELL GALLOWAY	DELL GALLOWAY
+Candidate	KENNY STRADLEY	KENNY STRADLEY
+Candidate	HUGH A. GORDON	HUGH A. GORDON
+Candidate	MIKE FITZPATRICK	MIKE FITZPATRICK
+Candidate	KEVIN HERN	KEVIN HERN
+Candidate	KOJO ASAMOA-CAESAR	KOJO ASAMOA-CAESAR
+Candidate	EVELYN L. ROGERS	EVELYN L. ROGERS
+Candidate	KYLE HILBERT	KYLE HILBERT
+Candidate	RICK PARRIS	RICK PARRIS
+Candidate	MARK LAWSON	MARK LAWSON
+Candidate	CHUCK THREADGILL	CHUCK THREADGILL
+Candidate	LONNIE SIMS	LONNIE SIMS
+Candidate	MICHAEL ROSS	MICHAEL ROSS
+Candidate	TERRI LOCKHART	TERRI LOCKHART
+Candidate	RICK MILLER	RICK MILLER
+Candidate	WARREN GOLDMANN	WARREN GOLDMANN
+Candidate	LEZLEY BELL	LEZLEY BELL
+Candidate	MUSTAFA SAMI	MUSTAFA SAMI
+Candidate	PAUL L BROWN	PAUL L BROWN
+Candidate	DAVID BERRONG	DAVID BERRONG
+Candidate	JESSICA GARVIN	JESSICA GARVIN
+Candidate	TERRI REIMER	TERRI REIMER
+Candidate	GARY D. AYRES	GARY D. AYRES
+Candidate	DAVID KENNEDY	DAVID KENNEDY
+Candidate	JILL LOCKE	JILL LOCKE
+Candidate	FRIEDA K. WILLIS	FRIEDA K. WILLIS
+Candidate	TIFFANY BUCHANAN	TIFFANY BUCHANAN
+Candidate	LEANNE COFFMAN	LEANNE COFFMAN
+Candidate	JEANNA BELL SCOTT	JEANNA BELL SCOTT
+Candidate	RHONDA HENRY	RHONDA HENRY
+Candidate	MARK BARNES	MARK BARNES
+Candidate	TERRY NICKELL	TERRY NICKELL
+Candidate	WARREN HAMILTON	WARREN HAMILTON
+Candidate	JERRY L. DONATHAN	JERRY L. DONATHAN
+Candidate	STEVEN FIORETTI	STEVEN FIORETTI
+Candidate	TIM TURNER	TIM TURNER
+Candidate	LOGAN J. PHILLIPS	LOGAN J. PHILLIPS
+Candidate	STEVE KOUPLEN	STEVE KOUPLEN
+Candidate	ANGELA KAY BROOKS	ANGELA KAY BROOKS
+Candidate	TAMMY JONES BIBLE	TAMMY JONES BIBLE
+Candidate	JEREMIE WILSON	JEREMIE WILSON
+Candidate	MICHAEL W. BRYANT	MICHAEL W. BRYANT
+Candidate	GARY W. DODD	GARY W. DODD
+Candidate	RANDY WHITE	RANDY WHITE
+Candidate	CACY CRIBBS	CACY CRIBBS
+Candidate	MICHAEL G. WEST	MICHAEL G. WEST
+Candidate	JASON SHANKS	JASON SHANKS
+Candidate	CHRIS DeBOARD	CHRIS DeBOARD
+Candidate	ADAM  WOODRUFF	ADAM  WOODRUFF
+Candidate	JEREMIE GREEN	JEREMIE GREEN
+Candidate	RICK WEST	RICK WEST
+Candidate	MIKE SULLIVAN	MIKE SULLIVAN
+Candidate	KATHY GRAY	KATHY GRAY
+Candidate	MISTY WILLISTON MANNING	MISTY WILLISTON MANNING
+Candidate	MARK JENNINGS	MARK JENNINGS
+Candidate	TONY HILL	TONY HILL
+Candidate	MONTY GRIDER	MONTY GRIDER
+Candidate	CLIFFORD GLEN SHATSWELL JR.	CLIFFORD GLEN SHATSWELL JR.
+Candidate	POLLY IRVING	POLLY IRVING
+Candidate	DIANNA COPE	DIANNA COPE
+Candidate	KEITH HYSLOP	KEITH HYSLOP
+Candidate	STEPHEN WRIGHT	STEPHEN WRIGHT
+Candidate	TIMMIE BENSON	TIMMIE BENSON
+Candidate	DOUG SONENBERG	DOUG SONENBERG
+Candidate	JOHN WOODS	JOHN WOODS
+Candidate	JAMES JIM RASMUSSEN	JAMES JIM RASMUSSEN
+Candidate	STEPHANIE BICE	STEPHANIE BICE
+Candidate	KENDRA S. HORN	KENDRA S. HORN
+Candidate	SHANE DAVID JETT	SHANE DAVID JETT
+Candidate	GREG SADLER	GREG SADLER
+Candidate	GREG TREAT	GREG TREAT
+Candidate	ANDREA STONE	ANDREA STONE
+Candidate	MIKE OSBURN	MIKE OSBURN
+Candidate	JACOB BACCUS	JACOB BACCUS
+Candidate	ERIC ROBERTS	ERIC ROBERTS
+Candidate	CHELSEY BRANHAM	CHELSEY BRANHAM
+Candidate	BILL ROBINSON	BILL ROBINSON
+Candidate	CYNDI MUNSON	CYNDI MUNSON
+Candidate	VALERIE WALKER	VALERIE WALKER
+Candidate	COLLIN WALKE	COLLIN WALKE
+Candidate	KELLY BARLEAN	KELLY BARLEAN
+Candidate	MAUREE TURNER	MAUREE TURNER
+Candidate	JOHN HUTTON	JOHN HUTTON
+Candidate	JOSE CRUZ	JOSE CRUZ
+Candidate	MIKE CHRISTIAN	MIKE CHRISTIAN
+Candidate	MICKEY DOLLENS	MICKEY DOLLENS
+Candidate	LAUREN RODEBUSH	LAUREN RODEBUSH
+Candidate	ANDY FUGATE	ANDY FUGATE
+Candidate	MAX WOLFLEY	MAX WOLFLEY
+Candidate	KELLY ALBRIGHT	KELLY ALBRIGHT
+Candidate	BEN M JANLOO	BEN M JANLOO
+Candidate	JASON LOWE	JASON LOWE
+Candidate	MARILYN STARK	MARILYN STARK
+Candidate	SUMMER WESLEY	SUMMER WESLEY
+Candidate	ROBERT MANGER	ROBERT MANGER
+Candidate	A.J. BAILEY	A.J. BAILEY
+Candidate	MADELINE SCOTT	MADELINE SCOTT
+Candidate	DAVID B. HOOTEN	DAVID B. HOOTEN
+Candidate	CHRISTINA  MALLORY CHICORASKE	CHRISTINA  MALLORY CHICORASKE
+Candidate	TOMMIE JOHNSON III	TOMMIE JOHNSON III
+Candidate	WAYLAND CUBIT	WAYLAND CUBIT
+Candidate	RICK WARREN	RICK WARREN
+Candidate	CHARLES DE COUNE	CHARLES DE COUNE
+Candidate	BRIAN MAUGHAN	BRIAN MAUGHAN
+Candidate	SPENCER L. HICKS	SPENCER L. HICKS
+Candidate	R. DAVID WALKER	R. DAVID WALKER
+Candidate	R.C. MORROW	R.C. MORROW
+Candidate	RASHID ABDULLA	RASHID ABDULLA
+Candidate	JADINE NOLLAN	JADINE NOLLAN
+Candidate	GREG LAIRD	GREG LAIRD
+Candidate	STEVE TALBURT	STEVE TALBURT
+Candidate	JOE WILLIAMS	JOE WILLIAMS
+Candidate	JEREMY FLOYD	JEREMY FLOYD
+Candidate	DAVID DEAN	DAVID DEAN
+Candidate	STEVEN CHASTEEN	STEVEN CHASTEEN
+Candidate	CHAD MASTERSON	CHAD MASTERSON
+Candidate	DANNY CRAFTON JR.	DANNY CRAFTON JR.
+Candidate	KENNETH L. LEGGETT JR	KENNETH L. LEGGETT JR
+Candidate	ELIJAH REDDEN	ELIJAH REDDEN
+Candidate	JACKIE SMITH	JACKIE SMITH
+Candidate	DARRIN VARNELL	DARRIN VARNELL
+Candidate	MIKE WATERS	MIKE WATERS
+Candidate	ILA POTTS	ILA POTTS
+Candidate	JANET DALLAS	JANET DALLAS
+Candidate	JERRY SKIDGEL	JERRY SKIDGEL
+Candidate	CHARLES BENES	CHARLES BENES
+Candidate	JERRI SHAW	JERRI SHAW
+Candidate	TOM J. DUGGER	TOM J. DUGGER
+Candidate	RICK DUNHAM	RICK DUNHAM
+Candidate	AARON MEANS	AARON MEANS
+Candidate	TRISH RANSON	TRISH RANSON
+Candidate	DELL KERBS	DELL KERBS
+Candidate	BRYCE BARFIELD	BRYCE BARFIELD
+Candidate	DANNY WILLIAMS	DANNY WILLIAMS
+Candidate	YASMINDA CHOATE	YASMINDA CHOATE
+Candidate	VALERIE UELTZEN	VALERIE UELTZEN
+Candidate	BUD JEFFREY	BUD JEFFREY
+Candidate	RANDY THOMAS	RANDY THOMAS
+Candidate	NORMAN SMITH	NORMAN SMITH
+Candidate	RYAN WIGINTON	RYAN WIGINTON
+Candidate	DON BRADLEY	DON BRADLEY
+Candidate	JYMAY WHITSON McLEOD	JYMAY WHITSON McLEOD
+Candidate	JANICE L. CONWAY	JANICE L. CONWAY
+Candidate	WENDI STEARMAN	WENDI STEARMAN
+Candidate	EMILIE TINDLE	EMILIE TINDLE
+Candidate	TERRY O'DONNELL	TERRY O'DONNELL
+Candidate	SUSAN CARLE YOUNG	SUSAN CARLE YOUNG
+Candidate	GREG WOLTERS	GREG WOLTERS
+Candidate	MATTHEW HINSON	MATTHEW HINSON
+Candidate	VALARIE HOGUE	VALARIE HOGUE
+Candidate	TAHASHA WILCOTS	TAHASHA WILCOTS
+Candidate	TIMOTHY M. PORTER	TIMOTHY M. PORTER
+Candidate	FRED COMBS	FRED COMBS
+Candidate	GINA COX	GINA COX
+Candidate	VICKI BEATY	VICKI BEATY
+Candidate	BEAU BURLISON	BEAU BURLISON
+Candidate	STEVE CARTER	STEVE CARTER
+Candidate	TODD CHURCHMAN	TODD CHURCHMAN
+Candidate	LONNIE L ESTES	LONNIE L ESTES
+Candidate	CHERYL BABER	CHERYL BABER
+Candidate	JO ANNA DOSSETT	JO ANNA DOSSETT
+Candidate	CODY ROGERS	CODY ROGERS
+Candidate	ALLISON IKLEY-FREEMAN	ALLISON IKLEY-FREEMAN
+Candidate	DAVE RADER	DAVE RADER
+Candidate	SHAWNA MOTT-WRIGHT	SHAWNA MOTT-WRIGHT
+Candidate	MIKE MASTERS	MIKE MASTERS
+Candidate	DENISE BREWER	DENISE BREWER
+Candidate	PAUL ROYSE	PAUL ROYSE
+Candidate	MELOYDE BLANCETT	MELOYDE BLANCETT
+Candidate	MARGIE ALFONSO	MARGIE ALFONSO
+Candidate	MELISSA PROVENZANO	MELISSA PROVENZANO
+Candidate	JOSH TURLEY	JOSH TURLEY
+Candidate	KAREN KEITH	KAREN KEITH
+Candidate	MYKEY ARTHRELL	MYKEY ARTHRELL
+Candidate	CASS FAHLER	CASS FAHLER
+Candidate	CONNIE DODSON	CONNIE DODSON
+Candidate	CHRISTIAN BENGEL	CHRISTIAN BENGEL
+Candidate	LORI DECTER WRIGHT	LORI DECTER WRIGHT
+Candidate	JUSTIN VAN KIRK	JUSTIN VAN KIRK
+Candidate	RENEE HILLHOUSE	RENEE HILLHOUSE
+Candidate	RON WHITELOCK	RON WHITELOCK
+Candidate	PAUL STUART	PAUL STUART
+Candidate	JASON A. HERR	JASON A. HERR
+Candidate	JAMES S. CURD JR.	JAMES S. CURD JR.
+Candidate	ERIK TERWEY	ERIK TERWEY
+Candidate	LYNDA VERMILLION	LYNDA VERMILLION
+Candidate	KIM BATT	KIM BATT
+Candidate	LEO GOERINGER	LEO GOERINGER
+Candidate	STEPHEN TAYLOR	STEPHEN TAYLOR
