@@ -960,7 +960,7 @@ def raw_elements_to_cdf(
                     os.path.join(juris.path_to_juris_dir, "dictionary.txt"), sep="\t"
                 )
                 r_i = r_i[r_i.cdf_element == "CountItemType"]
-                recognized = r_i.cdf_internal_name.unique()
+                recognized = r_i.raw_identifier_value.unique()
                 matched = (working.CountItemType_raw.isin(recognized))
                 if not matched.all():
                     unmatched = "\n".join((working[~matched]["CountItemType_raw"]).unique())
