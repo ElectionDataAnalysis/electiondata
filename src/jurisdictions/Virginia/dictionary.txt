@@ -1131,6 +1131,7 @@ Candidate	DANIEL FRANSIS MACCA	DANIEL FRANSIS MACCA
 Candidate	DANIEL J SCHMITT	DANIEL J SCHMITT
 Candidate	DANIEL LEE PLAUGHER	DANIEL LEE PLAUGHER
 Candidate	DANIEL LEE RUTHERFORD	DANIEL LEE RUTHERFORD
+Candidate	DANIEL MAC ARTHUR GADE	Daniel M. Gade
 Candidate	DANIEL MAC ARTHUR GADE	DANIEL MAC ARTHUR GADE
 Candidate	DANIEL RICHARD FLEMING	DANIEL RICHARD FLEMING
 Candidate	DANIEL SCOTT FINK	DANIEL SCOTT FINK
@@ -1573,9 +1574,11 @@ Candidate	JANE D. DITTMAR	Jane D. Dittmar
 Candidate	JANICE ALLEN BOYD	Janice Allen Boyd
 Candidate	JEFFREY BURKE THOMAS JR.	Jeffrey burke Thomas Jr.
 Candidate	JILL STEIN	Jill Stein
+Candidate	JO JORGENSEN	Jo Jorgensen
 Candidate	JOHN MARCUS DYER	John Marcus Dyer
 Candidate	JOHNNIE SMITH	Johnnie Smith
 Candidate	JONATHAN MARK CRUISE	Jonathan Mark Cruise
+Candidate	JOSEPH ROBINETTE BIDEN JR.	Joseph R. Biden
 Candidate	JOSEPH ROBINETTE BIDEN JR.	Joseph Robinette Biden Jr.
 Candidate	JULIÁN CASTRO	Julián Castro
 Candidate	KAREN BEARDSLEE KWASNY	KAREN BEARDSLEE KWASNY
@@ -1704,6 +1707,7 @@ Candidate	MARK LEO SHIFFER	MARK LEO SHIFFER
 Candidate	MARK MCALLISTER MALONE	MARK MCALLISTER MALONE
 Candidate	MARK MICAIAH WHITAKER	MARK MICAIAH WHITAKER
 Candidate	MARK RICHARD LEONARD	MARK RICHARD LEONARD
+Candidate	MARK R. WARNER	Mark R. Warner
 Candidate	MARK WAYNE MITCHELL	MARK WAYNE MITCHELL
 Candidate	MARLOW ANTONIO JONES SR.	MARLOW ANTONIO JONES Sr.
 Candidate	MARSHALL JOHN BROWN	MARSHALL JOHN BROWN
@@ -2133,6 +2137,7 @@ Candidate	WILLIAM WESLEY NANCE	WILLIAM WESLEY NANCE
 Candidate	WILLIS EUGENE HUNT JR.	WILLIS EUGENE HUNT Jr.
 Candidate	WILMA GRAY SUTHERLAND	WILMA GRAY SUTHERLAND
 Candidate	WOODY WRAY ZEMBER	WOODY WRAY ZEMBER
+Candidate	WRITE IN	Write In
 Candidate	WRITE IN VOTES	WRITE IN VOTES
 Candidate	WILLIAM LEONARD DELLAR	William Leonard Dellar
 Candidate	YOLANDA GRACE HINES	YOLANDA GRACE HINES
@@ -2304,6 +2309,7 @@ CandidateContest	US House VA District 8	Member House of Representatives District
 CandidateContest	US House VA District 9	Member House of Representatives District 09
 CandidateContest	US House VA District 10	Member House of Representatives District 10
 CandidateContest	US House VA District 11	Member House of Representatives District 11
+CandidateContest	US Senate VA	Member United States Senate
 CandidateContest	US Senate VA	Member United States Senate District 01
 CandidateContest	US Senate VA	Member United States Senate District 02
 CandidateContest	US Senate VA	Member United States Senate District 03
@@ -2315,6 +2321,7 @@ CandidateContest	US Senate VA	Member United States Senate District 08
 CandidateContest	US Senate VA	Member United States Senate District 09
 CandidateContest	US Senate VA	Member United States Senate District 10
 CandidateContest	US Senate VA	Member United States Senate District 11
+CandidateContest	US President (VA)	President and Vice President
 CandidateContest	US President (VA)	President and Vice President District 01
 CandidateContest	US President (VA)	President and Vice President District 02
 CandidateContest	US President (VA)	President and Vice President District 03
@@ -5226,3 +5233,4 @@ ReportingUnit	Virginia;Alexandria City;309 - Olympus Condo	ALEXANDRIA CITY;309 -
 ReportingUnit	Virginia;Chesapeake City;015 - Greenbrier Middle School	CHESAPEAKE CITY;015 - GREENBRIER MIDDLE SCHOOL
 ReportingUnit	Virginia;Radford City;004 - New River Precinct	RADFORD CITY;004 - NEW RIVER PRECINCT
 CountItemType	total	TOTAL_VOTES
+CountItemType	total	Votes
