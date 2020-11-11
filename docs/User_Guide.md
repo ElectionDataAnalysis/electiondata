@@ -142,6 +142,8 @@ you can refer to the field that appears in the first column by `first_column`
 Some jurisdictions require regular expression (regex) analysis to extract information from the data. For example, in a primary both the Party and the Candidate may be in the same string (e.g., "Robin Perez (DEM)"). Curly brackets indicate that regex analysis is needed. Inside the curly brackets there are two parts, separated by a comma. The first part is the concatenation formula for creating a string from the data in the file. The second is a python regex formula whose first group (enclosed by parentheses) marks the desired substring.
 ```Party	{<header_1>,^.*\(([a-zA-Z]{3})\)$}	row```
 
+The system will report (in the `.warnings` files) any strings that did not match the regex. 
+
 ### The concatenated-blocks file type
 As of 2020, states using ExpressVote state wide have text files with a series of blocks of data, one for each contest. A sample of one such file:
 ```
@@ -428,3 +430,23 @@ remove_vote_counts(connection, cursor, id)
 ```
 
 Replace any double-quotes in Candidate.txt and dictionary.txt with single quotes. I.e., `Rosa Maria 'Rosy' Palomino`, not `Rosa Maria "Rosy" Palomino`.
+
+Lines with empty strings in any field will be removed automatically from the `dictionary.txt` file when the system runs.
+
+Some jurisdictions combine other counts with election results in ways that can be inconvenient. E.g., from a results file for the Alaska 2016 General Election:
+```
+"01-446 Aurora" ,"US PRESIDENT" ,"Registered Voters" ,"NP" ,"Total" ,2486 ,
+"01-446 Aurora" ,"US PRESIDENT" ,"Times Counted" ,"NP" ,"Total" ,874 ,
+"01-446 Aurora" ,"US PRESIDENT" ,"Castle, Darrell L." ,"CON" ,"Total" ,5 ,
+"01-446 Aurora" ,"US PRESIDENT" ,"Clinton, Hillary" ,"DEM" ,"Total" ,295 ,
+```
+We don't want to add the "Registered Voters" number to the contest total, but it is in the same column as the candidates.
+You can specify that such rows should be dropped by using the cdf_internal_name "row should be dropped" in the dictionary, e.g.:
+```
+cdf_element	cdf_internal_name	raw_identifier_value
+Candidate	row should be dropped	Registered Voters
+Candidate	row should be dropped	Times Counted
+Candidate	Castle, Darrell L	Castle, Darrell L
+
+```
+
