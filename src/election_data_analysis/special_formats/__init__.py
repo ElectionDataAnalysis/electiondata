@@ -1,6 +1,9 @@
-import pandas as pd
 import io
+import json
+import pandas as pd
+import traceback
 import xml.etree.ElementTree as et
+from copy import deepcopy
 from pathlib import Path
 from typing import Optional, Dict, List
 from election_data_analysis import munge as m
@@ -78,6 +81,8 @@ def read_alternate_munger(
         raw_results, err = read_multi_sheet_excel(f_path, munger, err)
     elif file_type in ["xml"]:
         raw_results, err = read_xml(f_path, munger, err)
+    elif file_type in ["json-nested"]:
+        raw_results, err = read_nested_json(f_path, munger, err)
     else:
         err = ui.add_new_error(
             err, "munger", munger.name, f"file type not recognized: {file_type}"
@@ -457,6 +462,40 @@ def read_nested_json(f_path: str,
     recursively, similar to the case of xml.
     """
 
+    # read data from file
+    try:
+        with open(f_path, 'r') as f:
+            j = json.load(f)
+    except FileNotFoundError:
+        traceback.print_exc()
+        err = ui.add_new_error(err, "file", Path(f_path).name, "File not found")
+        return pd.DataFrame(), err
+
+    # Identify keys for counts and other raw data (attributes) we want
+    count_keys = set(munger.options["count_columns_by_name"])
+    attribute_keys = set(munger.field_list)
+
+    try:
+        current_values = {}
+        results_list = json_results_below(j,
+                                          count_keys,
+                                          attribute_keys,
+                                          current_values)
+        raw_results = pd.DataFrame(results_list)
+        for c in munger.options["count_columns_by_name"]:
+            raw_results[c] = pd.to_numeric(raw_results[c], errors="coerce")
+        raw_results, err_df = m.clean_count_cols(
+            raw_results,
+            munger.options["count_columns_by_name"],
+        )
+        if not err_df.empty:
+            err = ui.add_err_df(err, err_df, munger, f_path)
+    except Exception as e:
+        traceback.print_exc()
+        err = ui.add_new_error(err, "munger", munger.name, f"Error reading xml: {e}")
+        raw_results = pd.DataFrame()
+    return raw_results, err
+
 
 def json_results_below(j: dict or list,
                        count_keys: set,
@@ -493,7 +532,8 @@ def json_results_below(j: dict or list,
                                               attribute_keys,
                                               current_values)
 
-        # Return current_values if we've reached the counts
+        # Return current_values if we've reached the counts,
+        # since each count value can only occur in one row.
         for k in j.keys():
             if k in count_keys:
                 return [deepcopy(current_values)]
