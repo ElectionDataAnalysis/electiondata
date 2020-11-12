@@ -2,7 +2,7 @@ name	raw_identifier_formula	source
 ReportingUnit	<N>	row
 Party	<C.P>	row
 CandidateContest	<ON>	row
-Candidate	<C.N>	row
+Candidate	{<C.N>,^(.*) \(*.*$}	row
 BallotMeasureContest	<ON>	row
 BallotMeasureSelection	<C.N>	row
 CountItemType	total	row
