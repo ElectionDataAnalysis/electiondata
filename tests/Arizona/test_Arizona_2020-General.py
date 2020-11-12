@@ -11,17 +11,17 @@ import election_data_analysis as e
 election = "2020 General"
 jurisdiction = 'Arizona'
 abbr = 'AZ'
-total_pres_votes = -1  # total of all votes for President
+total_pres_votes = 2913997  # total of all votes for President
 cd = 3  # congressional district
-total_cd_votes = -1  # total votes in the chosen cd
+total_cd_votes = 231838  # total votes in the chosen cd
 shd = 1   # state house district
-total_shd_votes = -1
+total_shd_votes = 207499
 ssd = 15  # state senate district
-total_ssd_votes = -1
+total_ssd_votes = 77698
 single_vote_type = 'early'  # pick any one from your file
-pres_votes_vote_type = -1
+pres_votes_vote_type = 0
 single_county = 'Arizona;Maricopa County'  # pick any one from your file
-pres_votes_county = -1  # total votes for pres of that county
+pres_votes_county = 1775065  # total votes for pres of that county
 
 
 def test_data_exists(dbname):
