@@ -472,12 +472,15 @@ def read_nested_json(f_path: str,
         return pd.DataFrame(), err
 
     # Identify keys for counts and other raw data (attributes) we want
-    count_keys = set(munger.options["count_columns_by_name"])
-    attribute_keys = set(munger.field_list)
-    if 'nested_keys' in munger.options:
-        nested_keys = set(munger.options["nested_keys"])
-    else:
-        nested_keys = {}
+
+    # The last value is the final key
+    count_keys = {k.split('.')[-1] for k in munger.options["count_columns_by_name"]}
+    attribute_keys = {k.split('.')[-1] for k in munger.field_list}
+
+    # Any prior values are nested keys
+    nested_keys = set()
+    for k in set(munger.options["count_columns_by_name"]) | set(munger.field_list):
+        nested_keys |= set(k.split('.')[:-1])
 
     try:
         current_values = {}
@@ -489,6 +492,12 @@ def read_nested_json(f_path: str,
                                           current_values,
                                           current_nested_keys)
         raw_results = pd.DataFrame(results_list)
+
+        # Only keep columns that we want, so the other ones don't cause trouble later.
+        cols_we_want = list(munger.options["count_columns_by_name"]) + list(munger.field_list)
+        raw_results = raw_results[cols_we_want]
+
+        # Perform standard cleaning
         for c in munger.options["count_columns_by_name"]:
             raw_results[c] = pd.to_numeric(raw_results[c], errors="coerce")
         raw_results, err_df = m.clean_count_cols(
