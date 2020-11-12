@@ -11,7 +11,7 @@ import election_data_analysis as e
 election = "2020 General"
 jurisdiction = 'Virginia'
 abbr = 'VA'
-total_pres_votes = 3176898  # total of all votes for President
+total_pres_votes = 4346435  # total of all votes for President
 cd = 3  # congressional district
 total_cd_votes = -1  # total votes in the chosen cd
 shd = 1   # state house district
@@ -19,7 +19,7 @@ total_shd_votes = -1
 ssd = 15  # state senate district
 total_ssd_votes = -1
 single_vote_type = 'total'  # pick any one from your file
-pres_votes_vote_type = 3176898
+pres_votes_vote_type = 4346435
 single_county = 'Virginia;Bath County'  # pick any one from your file
 pres_votes_county = 2490  # total votes for pres of that county
 
