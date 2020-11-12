@@ -157,6 +157,7 @@ CandidateContest	US House WA District 8	Congressional District 8 U.S. Representa
 CandidateContest	US House WA District 9	Congressional District 9 U.S. Representative
 CandidateContest	US House WA District 10	Congressional District 10 U.S. Representative
 CandidateContest	US President (WA)	United States President/Vice President
+CandidateContest	US President (WA)	President/Vice President
 CandidateContest	US President (WA) (Democratic / Republican Party)	United States President Democratic Party
 CandidateContest	US President (WA) (Democratic / Republican Party)	United States President Republican Party
 CandidateContest	WA Governor	Washington State Governor
