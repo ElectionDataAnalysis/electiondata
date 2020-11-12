@@ -39,26 +39,26 @@ AK House District 37	1	AK House District 37
 AK House District 38	1	AK House District 38
 AK House District 39	1	AK House District 39
 AK House District 40	1	AK House District 40
-AK Senate District A	1	AK Senate District 1
-AK Senate District 2	1	AK Senate District 2
-AK Senate District 3	1	AK Senate District 3
-AK Senate District 4	1	AK Senate District 4
-AK Senate District 5	1	AK Senate District 5
-AK Senate District 6	1	AK Senate District 6
-AK Senate District 7	1	AK Senate District 7
-AK Senate District 8	1	AK Senate District 8
-AK Senate District 9	1	AK Senate District 9
-AK Senate District 10	1	AK Senate District 10
-AK Senate District 11	1	AK Senate District 11
-AK Senate District 12	1	AK Senate District 12
-AK Senate District 13	1	AK Senate District 13
-AK Senate District 14	1	AK Senate District 14
-AK Senate District 15	1	AK Senate District 15
-AK Senate District 16	1	AK Senate District 16
-AK Senate District 17	1	AK Senate District 17
-AK Senate District 18	1	AK Senate District 18
-AK Senate District 19	1	AK Senate District 19
-AK Senate District 20	1	AK Senate District 20
+AK Senate District A	1	AK Senate District A	
+AK Senate District B	1	AK Senate District B	
+AK Senate District C	1	AK Senate District C	
+AK Senate District D	1	AK Senate District D	
+AK Senate District E	1	AK Senate District E	
+AK Senate District F	1	AK Senate District F	
+AK Senate District G	1	AK Senate District G	
+AK Senate District H	1	AK Senate District H	
+AK Senate District I	1	AK Senate District I	
+AK Senate District J	1	AK Senate District J	
+AK Senate District K	1	AK Senate District K	
+AK Senate District L	1	AK Senate District L	
+AK Senate District M	1	AK Senate District M	
+AK Senate District N	1	AK Senate District N	
+AK Senate District O	1	AK Senate District O	
+AK Senate District P	1	AK Senate District P	
+AK Senate District Q	1	AK Senate District Q	
+AK Senate District R	1	AK Senate District R	
+AK Senate District S	1	AK Senate District S	
+AK Senate District T	1	AK Senate District T	
 
 US House AK District 1	1	US House AK District 1
 US President (AK)	1	US President (AK)

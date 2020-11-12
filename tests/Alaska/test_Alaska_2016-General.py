@@ -19,7 +19,7 @@ cd = 1  # congressional district
 total_cd_votes = 308198  # total votes in the chosen cd
 shd = 12   # state house district
 total_shd_votes = 8633
-ssd = 6  # state senate district
+ssd = "F"  # state senate district
 total_ssd_votes = 17126
 single_vote_type = 'provisional'  # pick any one from your file
 pres_votes_vote_type = 19309 ## based on filters in my gsheets munger file. filter for "Question" in District... and then filter for President and remove Number Precincts and other rows...
@@ -37,6 +37,7 @@ def test_presidential(dbname):
         election,
         jurisdiction,
         f"US President ({abbr})",
+        sub_unit_type='state',  # TODO pull reportingunit type of jurisdiction
         dbname=dbname,
         )
         == total_pres_votes
@@ -48,6 +49,7 @@ def test_congressional_totals(dbname):
         election,
         jurisdiction,
         f"US House {abbr} District {cd}",
+        sub_unit_type='state',
         dbname=dbname,
         )
         == total_cd_votes
@@ -59,6 +61,7 @@ def test_state_senate_totals(dbname):
         election,
         jurisdiction,
         f"{abbr} Senate District {ssd}",
+        sub_unit_type='state',
         dbname=dbname,
         )
         == total_ssd_votes
@@ -70,6 +73,7 @@ def test_state_house_totals(dbname):
         election,
         jurisdiction,
         f"{abbr} House District {shd}",
+        sub_unit_type='state',
         dbname=dbname,
         )
         == total_shd_votes
@@ -89,6 +93,7 @@ def test_count_type_subtotal(dbname):
         election,
         jurisdiction,
         f"US President ({abbr})",
+        sub_unit_type='state',
         dbname=dbname,
         vote_type=single_vote_type,
         )

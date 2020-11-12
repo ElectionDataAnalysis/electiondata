@@ -180,7 +180,7 @@ def run2(
             return err
 
     if not db_removed:
-        ui.run_tests(
+        result = ui.run_tests(
             test_dir, dbname, election_jurisdiction_list=election_jurisdiction_list
         )
 

@@ -40,43 +40,43 @@ CandidateContest	AK House District 6	HOUSE DISTRICT 6
 CandidateContest	AK House District 7	HOUSE DISTRICT 7
 CandidateContest	AK House District 8	HOUSE DISTRICT 8
 CandidateContest	AK House District 9	HOUSE DISTRICT 9
-CandidateContest	AK Senate District 1	SENATE DISTRICT A
-CandidateContest	AK Senate District 2	SENATE DISTRICT B
-CandidateContest	AK Senate District 3	SENATE DISTRICT C
-CandidateContest	AK Senate District 4	SENATE DISTRICT D
-CandidateContest	AK Senate District 5	SENATE DISTRICT E
-CandidateContest	AK Senate District 6	SENATE DISTRICT F
-CandidateContest	AK Senate District 7	SENATE DISTRICT G
-CandidateContest	AK Senate District 8	SENATE DISTRICT H
-CandidateContest	AK Senate District 9	SENATE DISTRICT I
-CandidateContest	AK Senate District 10	SENATE DISTRICT J
-CandidateContest	AK Senate District 11	SENATE DISTRICT K
-CandidateContest	AK Senate District 12	SENATE DISTRICT L
-CandidateContest	AK Senate District 13	SENATE DISTRICT M
-CandidateContest	AK Senate District 14	SENATE DISTRICT N
-CandidateContest	AK Senate District 15	SENATE DISTRICT O
-CandidateContest	AK Senate District 16	SENATE DISTRICT P
-CandidateContest	AK Senate District 17	SENATE DISTRICT Q
-CandidateContest	AK Senate District 18	SENATE DISTRICT R
-CandidateContest	AK Senate District 19	SENATE DISTRICT S
-CandidateContest	AK Senate District 20	SENATE DISTRICT T
+CandidateContest	AK Senate District A	SENATE DISTRICT A
+CandidateContest	AK Senate District B	SENATE DISTRICT B
+CandidateContest	AK Senate District C	SENATE DISTRICT C
+CandidateContest	AK Senate District D	SENATE DISTRICT D
+CandidateContest	AK Senate District E	SENATE DISTRICT E
+CandidateContest	AK Senate District F	SENATE DISTRICT F
+CandidateContest	AK Senate District G	SENATE DISTRICT G
+CandidateContest	AK Senate District H	SENATE DISTRICT H
+CandidateContest	AK Senate District I	SENATE DISTRICT I
+CandidateContest	AK Senate District J	SENATE DISTRICT J
+CandidateContest	AK Senate District K	SENATE DISTRICT K
+CandidateContest	AK Senate District L	SENATE DISTRICT L
+CandidateContest	AK Senate District M	SENATE DISTRICT M
+CandidateContest	AK Senate District N	SENATE DISTRICT N
+CandidateContest	AK Senate District O	SENATE DISTRICT O
+CandidateContest	AK Senate District P	SENATE DISTRICT P
+CandidateContest	AK Senate District Q	SENATE DISTRICT Q
+CandidateContest	AK Senate District R	SENATE DISTRICT R
+CandidateContest	AK Senate District S	SENATE DISTRICT S
+CandidateContest	AK Senate District T	SENATE DISTRICT T
 CandidateContest	US President (AK)	US PRESIDENT
 CandidateContest	US House AK District 1	US REPRESENTATIVE
 CandidateContest	US Senate AK	US SENATOR
 CandidateContest	US Senate AK	U.S. Senator''
 CandidateContest	US House AK District 1	U.S. Representative''
 CandidateContest	US President (AK)	U.S. President / Vice President''
-CandidateContest	AK Senate District 20	Senate District T''
-CandidateContest	AK Senate District 18	Senate District R''
-CandidateContest	AK Senate District 16	Senate District P''
-CandidateContest	AK Senate District 14	Senate District N''
-CandidateContest	AK Senate District 13	Senate District M''
-CandidateContest	AK Senate District 12	Senate District L''
-CandidateContest	AK Senate District 10	Senate District J''
-CandidateContest	AK Senate District 8	Senate District H''
-CandidateContest	AK Senate District 6	Senate District F''
-CandidateContest	AK Senate District 4	Senate District D''
-CandidateContest	AK Senate District 2	Senate District B''
+CandidateContest	AK Senate District T	Senate District T''
+CandidateContest	AK Senate District R	Senate District R''
+CandidateContest	AK Senate District P	Senate District P''
+CandidateContest	AK Senate District N	Senate District N''
+CandidateContest	AK Senate District M	Senate District M''
+CandidateContest	AK Senate District L	Senate District L''
+CandidateContest	AK Senate District J	Senate District J''
+CandidateContest	AK Senate District H	Senate District H''
+CandidateContest	AK Senate District F	Senate District F''
+CandidateContest	AK Senate District D	Senate District D''
+CandidateContest	AK Senate District B	Senate District B''
 CandidateContest	AK House District 9	House District 9''
 CandidateContest	AK House District 8	House District 8''
 CandidateContest	AK House District 7	House District 7''
@@ -129,12 +129,22 @@ Party	Green Party	GRE
 Party	Libertarian Party	LIB
 Party	Constitution Party	CON
 Party	Independence Party	AI
+Party	Democratic Party	DEM''
+Party	Republican Party	REP''
+Party	Green Party	GRE''
+Party	Libertarian Party	LIB''
+Party	Constitution Party	CON''
+Party	Independence Party	AI''
+Party	NOM	NOM''
+Party	ALI	ALI''
+Party	AIP	AIP''
 
 CountItemType	election-day	election-day
 CountItemType	absentee	Absentee
 CountItemType	provisional	Question
 CountItemType	early	Early Voting
 CountItemType	absentee-fwab	FWAB
+CountItemType	absentee-fwab	Fed Overseas Absentee
 
 ReportingUnit	Alaska;AK House District 1	Alaska;AK House District 1
 ReportingUnit	Alaska;AK House District 2	Alaska;AK House District 2
@@ -643,7 +653,6 @@ ReportingUnit	Alaska;AK House District 40;Wainwright	40-040 Wainwright
 ReportingUnit	Alaska;AK House District 40;Allakaket	40-326 Allakaket
 ReportingUnit	Alaska;AK House District 40;Bettles	40-328 Bettles
 ReportingUnit	Alaska;AK House District 40;Hughes	40-330 Hughes
-
 ReportingUnit	Alaska
 ReportingUnit	Alaska;AK House District 1	District 1
 ReportingUnit	Alaska;AK House District 10	District 10
@@ -685,10 +694,7 @@ ReportingUnit	Alaska;AK House District 6	District 6
 ReportingUnit	Alaska;AK House District 7	District 7
 ReportingUnit	Alaska;AK House District 8	District 8
 ReportingUnit	Alaska;AK House District 9	District 9
-
-ReportingUnit	Alaska;AK House District 9	District 9 - Question
 ReportingUnit	Alaska	HD99
-
 Candidate	Alexander, Ed	Alexander, Ed
 Candidate	Baker, Thomas C.	Baker  Thomas C. - R
 Candidate	Batten, Bruce T.	Batten  Bruce T. - D
@@ -881,7 +887,7 @@ Candidate	Miller, Joe	Miller, Joe
 Candidate	Millett, Charisse E.	Millett, Charisse E.
 Candidate	Morris, Julie M.	Morris  Julie M. - R
 Candidate	Moto, Calvin D. II	Moto  Calvin D. II - R
-Candidate	MuÃ±oz, Cathy	MuÃ±oz, Cathy
+Candidate	Muñoz, Cathy	MuÒoz, Cathy
 Candidate	Murkowski, Lisa	Murkowski, Lisa
 Candidate	Myers, J. R.	Myers, J. R.
 Candidate	Myers, Robert H. Jr.	Myers  Robert H. Jr. - R
@@ -1012,5 +1018,118 @@ Candidate	Young, Don	Young Don''
 Candidate	Zulkosky, Tiffany	Zulkosky  Tiffany - D
 Candidate	Zulkosky, Tiffany	Zulkosky, Tiffany
 Candidate	Zulkosky, Tiffany	Zulkosky Tiffany''
-
-
+Candidate	row should be dropped	Registered Voters
+Candidate	row should be dropped	Times Counted
+Candidate	row should be dropped	Number of Precincts Reporting
+Candidate	row should be dropped	Number of Precincts for Race
+Candidate	row should be dropped	Number of Precincts
+Candidate	MuÃ±oz, Cathy	MuÃ±oz, Cathy
+Candidate	Wool Adam L.	Wool Adam L.''
+Candidate	Wilson David S.	Wilson David S.''
+Candidate	Wielechowski Bill	Wielechowski Bill''
+Candidate	Verhagen Elijah M.	Verhagen Elijah M.''
+Candidate	Vance Sarah L.	Vance Sarah L.''
+Candidate	Tuck Chris S.	Tuck Chris S.''
+Candidate	Trump Donald J. / Pence Michael R.	Trump Donald J. / Pence Michael R.''
+Candidate	Trimble Stephen T.	Trimble Stephen T.''
+Candidate	Tilton Cathy L.	Tilton Cathy L.''
+Candidate	Thompson Steve M.	Thompson Steve M.''
+Candidate	Tarr Geran	Tarr Geran''
+Candidate	Sullivan Dan	Sullivan Dan''
+Candidate	Stutes Louise B.	Stutes Louise B.''
+Candidate	Story Andrea 'Andi'	Story Andrea 'Andi'''
+Candidate	Stevens Gary	Stevens Gary''
+Candidate	Stein-Olson Monica L.	Stein-Olson Monica L.''
+Candidate	Stedman Bert K.	Stedman Bert K.''
+Candidate	Spohnholz Ivy A.	Spohnholz Ivy A.''
+Candidate	Snyder Liz	Snyder Liz''
+Candidate	Skaflestad Kenny	Skaflestad Kenny''
+Candidate	Shaw Laddie H.	Shaw Laddie H.''
+Candidate	Schrage Calvin R.	Schrage Calvin R.''
+Candidate	Sanford Marna L.	Sanford Marna L.''
+Candidate	Risinger Michael W. 'Mike'	Risinger Michael W. 'Mike'''
+Candidate	Riley Deborah W.	Riley Deborah W.''
+Candidate	Revak Joshua C.	Revak Joshua C.''
+Candidate	Rauscher George	Rauscher George''
+Candidate	Rasmussen Sara E.	Rasmussen Sara E.''
+Candidate	Quist Christopher	Quist Christopher''
+Candidate	Pruitt Lance D.	Pruitt Lance D.''
+Candidate	Prax Glenn M. 'Mike'	Prax Glenn M. 'Mike'''
+Candidate	Pierce Brock / Ballard Karla	Pierce Brock / Ballard Karla''
+Candidate	Patkotak Josiah 'Aullaqsruaq'	Patkotak Josiah 'Aullaqsruaq'''
+Candidate	Ortiz Daniel H. 'Dan'	Ortiz Daniel H. 'Dan'''
+Candidate	Olson Donald C. 'Donny'	Olson Donald C. 'Donny'''
+Candidate	Nelson David	Nelson David''
+Candidate	Nees David W.	Nees David W.''
+Candidate	Myers Robert H. Jr.	Myers Robert H. Jr.''
+Candidate	Merrick Kelly R.	Merrick Kelly R.''
+Candidate	McKinley Kevin M.	McKinley Kevin M.''
+Candidate	McKay Thomas W. 'Tom'	McKay Thomas W. 'Tom'''
+Candidate	McCarty Ken	McCarty Ken''
+Candidate	McCabe Kevin J.	McCabe Kevin J.''
+Candidate	Mayfield James D. 'Dan'	Mayfield James D. 'Dan'''
+Candidate	Madden Greg	Madden Greg''
+Candidate	Levi Sue	Levi Sue''
+Candidate	Lebon Barton S. 'Bart'	Lebon Barton S. 'Bart'''
+Candidate	Largent Lynette A.	Largent Lynette A.''
+Candidate	Lamb Thomas	Lamb Thomas''
+Candidate	LaFrance Suzanne M.	LaFrance Suzanne M.''
+Candidate	Kurka Christopher	Kurka Christopher''
+Candidate	Kurber Keith	Kurber Keith''
+Candidate	Kreiss-Tomkins Jonathan S.	Kreiss-Tomkins Jonathan S.''
+Candidate	Kohlhaas Scott A.	Kohlhaas Scott A.''
+Candidate	King Edward M. 'Ed'	King Edward M. 'Ed'''
+Candidate	Keppel Willy	Keppel Willy''
+Candidate	Kaufman James D.	Kaufman James D.''
+Candidate	Josephson Andrew L. 'Andy'	Josephson Andrew L. 'Andy'''
+Candidate	Jorgensen Jo / Cohen Jeremy 'Spike'	Jorgensen Jo / Cohen Jeremy 'Spike'''
+Candidate	Johnson DeLena	Johnson DeLena''
+Candidate	Johnson Carl	Johnson Carl''
+Candidate	Johnson Bill	Johnson Bill''
+Candidate	Janos James G. 'Jesse Ventura' / McKinney Cynthia	Janos James G. 'Jesse Ventura' / McKinney Cynthia''
+Candidate	Huit Timothy R.	Huit Timothy R.''
+Candidate	Hughes Shelley	Hughes Shelley''
+Candidate	Howe John Wayne	Howe John Wayne''
+Candidate	Hopkins Grier H.	Hopkins Grier H.''
+Candidate	Holmes Dan	Holmes Dan''
+Candidate	Holleman Andy	Holleman Andy''
+Candidate	Holland Roger	Holland Roger''
+Candidate	Hnilicka Julia A.	Hnilicka Julia A.''
+Candidate	Henslee Katherine J. 'Kathy'	Henslee Katherine J. 'Kathy'''
+Candidate	Hartley Alma N.	Hartley Alma N.''
+Candidate	Hannan Sara	Hannan Sara''
+Candidate	Hackbarth Andrea L.	Hackbarth Andrea L.''
+Candidate	Gross Al	Gross Al''
+Candidate	Gillis Mel	Gillis Mel''
+Candidate	Gillham Ronald D. 'Ron'	Gillham Ronald D. 'Ron'''
+Candidate	Galvin Alyse S.	Galvin Alyse S.''
+Candidate	Gaiser Madeleine	Gaiser Madeleine''
+Candidate	Franks Lyn D.	Franks Lyn D.''
+Candidate	Foster Neal W.	Foster Neal W.''
+Candidate	Fletcher Benjamin R.	Fletcher Benjamin R.''
+Candidate	Fields William Z. 'Zack'	Fields William Z. 'Zack'''
+Candidate	Ferguson Elizabeth	Ferguson Elizabeth''
+Candidate	Edgmon Bryce	Edgmon Bryce''
+Candidate	Eastman David	Eastman David''
+Candidate	Eads Evan A.	Eads Evan A.''
+Candidate	Drummond Harriet A.	Drummond Harriet A.''
+Candidate	De La Fuente Rocque 'Rocky' / Richardson Darcy G.	De La Fuente Rocque 'Rocky' / Richardson Darcy G.''
+Candidate	Dale Paul D.	Dale Paul D.''
+Candidate	Cronk Mike	Cronk Mike''
+Candidate	Cooper Kelly	Cooper Kelly''
+Candidate	Cooper Jim	Cooper Jim''
+Candidate	Clift Carolyn C. 'Care'	Clift Carolyn C. 'Care'''
+Candidate	Claman Matt	Claman Matt''
+Candidate	Christiansen Gavin S.	Christiansen Gavin S.''
+Candidate	Carpenter Benjamin E.	Carpenter Benjamin E.''
+Candidate	Carlson Vernon J.	Carlson Vernon J.''
+Candidate	Canitz James A. Sr.	Canitz James A. Sr.''
+Candidate	Cacy Roselynn	Cacy Roselynn''
+Candidate	Burton Jamin L.	Burton Jamin L.''
+Candidate	Blankenship Don / Mohr William	Blankenship Don / Mohr William''
+Candidate	Biden Joseph R. Jr. / Harris Kamala D.	Biden Joseph R. Jr. / Harris Kamala D.''
+Candidate	Begich Tom	Begich Tom''
+Candidate	Becker Leslie	Becker Leslie''
+Candidate	Bauer Paul A.	Bauer Paul A.''
+Candidate	Baker Thomas C.	Baker Thomas C.''
+Candidate	Baisden James	Baisden James''

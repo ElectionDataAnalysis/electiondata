@@ -196,7 +196,14 @@ def add_regex_column(
     err = None
     working = df.copy()
     p = re.compile(pattern_str)
-    working[new_col] = working[old_col].str.replace(p, "\\1")
+
+    # replace via regex if possible; otherwise msg
+    # # put informative error message in new_col
+    old = working[old_col].copy()
+    working[new_col] = working[old_col].str.cat (old, f" <- did not match regex {pattern_str}")
+    # # where regex succeeds, replace error message with good value
+    mask = working[old_col].str.match(p)
+    working.loc[mask,new_col] = working[mask][old_col].str.replace(p,"\\1")
 
     return working, err
 
@@ -277,7 +284,6 @@ def add_column_from_formula(
                 )
                 return w, err
 
-        # use regex to pull info out of the concatenation formula (e.g., 'DEM' from 'DEM - US Senate')
     except Exception as e:
         err = ui.add_new_error(
             err, "system", "munge.add_column_from_formula", f"Unexpected error: {e}"
@@ -360,6 +366,7 @@ def replace_raw_with_internal_ids(
     internal_name_column: str,
     error: dict,
     drop_unmatched: bool = False,
+    drop_extraneous: bool = True,
     mode: str = "row",
     unmatched_id: int = 0,
     drop_all_ok: bool = False,
@@ -367,6 +374,8 @@ def replace_raw_with_internal_ids(
     """replace columns in <working> with raw_identifier values by columns with internal names and Ids
     from <table_df>, which has structure of a db table for <element>.
     <unmatched_id> is the id to assign to unmatched records.
+    If <drop_extraneous> = True and dictionary matches raw_identifier to "row should be dropped",
+    drop that row EVEN IF <drop_unmatched> = False.
     """
     working = df.copy()
     # join the 'cdf_internal_name' from the raw_identifier table -- this is the internal name field value,
@@ -383,10 +392,15 @@ def replace_raw_with_internal_ids(
     ].copy()
 
     if element == "Candidate":
-        # Change all internal candidate names to title case in dictionary
-        raw_ids_for_element["cdf_internal_name"] = raw_ids_for_element.copy()[
-            "cdf_internal_name"
-        ].str.title()
+        # remove any lines with nulls
+        raw_ids_for_element = raw_ids_for_element[raw_ids_for_element.notnull().all(axis=1)]
+
+        # Change all upper-case-only internal candidate names to title case in dictionary
+        mask = raw_ids_for_element["cdf_internal_name"].str.isupper()
+        if mask.any():
+            raw_ids_for_element.loc[mask,"cdf_internal_name"] = raw_ids_for_element.copy()[mask][
+                "cdf_internal_name"
+            ].str.title()
         raw_ids_for_element.drop_duplicates(inplace=True)
 
     working = working.merge(
@@ -397,6 +411,7 @@ def replace_raw_with_internal_ids(
         suffixes=["", f"_{element}_ei"],
     )
 
+    # identify unmatched
     unmatched = working[working["cdf_internal_name"].isnull()]
     unmatched_raw = sorted(unmatched[f"{element}_raw"].unique(), reverse=True)
     if len(unmatched_raw) > 0 and element != "BallotMeasureContest":
@@ -407,8 +422,14 @@ def replace_raw_with_internal_ids(
     if drop_unmatched:
         working = working[working["cdf_internal_name"].notnull()]
 
+    if drop_extraneous:
+        # TODO tech debt - note change of case for Candidate above which, if
+        #  changed, might affect this in unexpected ways
+        # drop extraneous rows identified in dictionary
+        working = working[working["cdf_internal_name"] != "row should be dropped"]
+
     if working.empty:
-        e = f"No raw {element} in 'dictionary.txt' matched any raw {element} derived from the result file"
+        e = f"No true raw {element} in 'dictionary.txt' matched any raw {element} derived from the result file"
         if drop_unmatched and not drop_all_ok:
             error = ui.add_new_error(
                 error,
@@ -445,7 +466,9 @@ def replace_raw_with_internal_ids(
                 (working["raw_identifier_value"].isnull())
                 | (working["cdf_internal_name"].notnull())
             ]
-            # TODO more efficient to drop these earlier, before melting
+            if drop_extraneous:
+                working = working[working["cdf_internal_name"] != "row should be dropped"]
+            # TODO tech debt more efficient to drop these earlier, before melting
 
     # unmatched elements get nan in fields from dictionary table. Change these to "none or unknown"
     if not drop_unmatched:
@@ -937,7 +960,7 @@ def raw_elements_to_cdf(
                     os.path.join(juris.path_to_juris_dir, "dictionary.txt"), sep="\t"
                 )
                 r_i = r_i[r_i.cdf_element == "CountItemType"]
-                recognized = r_i.cdf_internal_name.unique()
+                recognized = r_i.raw_identifier_value.unique()
                 matched = (working.CountItemType_raw.isin(recognized))
                 if not matched.all():
                     unmatched = "\n".join((working[~matched]["CountItemType_raw"]).unique())
@@ -1030,14 +1053,13 @@ def raw_elements_to_cdf(
     working = working[vc_cols]
     working, e = clean_count_cols(working, ["Count"])
 
-    if mu.alt != dict():
-        # TODO there are edge cases where this might include dupes
-        #  that should be omitted. E.g., if data mistakenly read twice
-        # Sum any rows that were disambiguated (otherwise dupes will be dropped
-        #  when VoteCount is filled)
-        group_cols = [c for c in working.columns if c != "Count"]
-        working = working.groupby(group_cols).sum().reset_index()
-        # TODO clean before inserting? All should be already clean, no?
+    # TODO there are edge cases where this might include dupes
+    #  that should be omitted. E.g., if data mistakenly read twice
+    # Sum any rows that were disambiguated (otherwise dupes will be dropped
+    #  when VoteCount is filled)
+    group_cols = [c for c in working.columns if c != "Count"]
+    working = working.groupby(group_cols).sum().reset_index()
+    # TODO clean before inserting? All should be already clean, no?
 
     # Fill VoteCount
     try:

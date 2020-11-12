@@ -268,7 +268,7 @@ def test_connection(paramfile="run_time.ini", dbname=None) -> (bool, dict):
         err = ui.add_new_error(
             err,
             "system",
-            "database.test_connection"
+            "database.test_connection",
             f"Unexpected exception while connecting to database: {e}",
         )
         return False, err
@@ -1119,6 +1119,9 @@ def get_filtered_input_options(session, input_str, filters):
             "type": [None for election in elections],
         }
         df = pd.DataFrame(data=data)
+        df[["year", "election_type"]] = df["name"].str.split(" ", expand=True)
+        df.sort_values(["year", "election_type"], ascending=[False, True], inplace=True)
+        df.drop(columns=["year", "election_type"], inplace=True)
     elif input_str == "category":
         election_id = list_to_id(session, "Election", filters)
         reporting_unit_id = list_to_id(session, "ReportingUnit", filters)

@@ -1,4 +1,5 @@
 cdf_element	cdf_internal_name	raw_identifier_value
+CandidateContest	NC Supreme Court Chief Justice	NC SUPREME COURT CHIEF JUSTICE SEAT 01
 CandidateContest	NC House District 1 (Democratic Party)	NC HOUSE OF REPRESENTATIVES DISTRICT 001 (DEM)
 CandidateContest	NC House District 2 (Democratic Party)	NC HOUSE OF REPRESENTATIVES DISTRICT 002 (DEM)
 CandidateContest	NC House District 3 (Democratic Party)	NC HOUSE OF REPRESENTATIVES DISTRICT 003 (DEM)
@@ -14725,3 +14726,6 @@ ReportingUnit	North Carolina;Ashe County;TRANSFER - N	ASHE;TRANSFER - N
 ReportingUnit	North Carolina;Alamance County;TRANSFER - N	ALAMANCE;TRANSFER - N
 ReportingUnit	North Carolina;Alamance County;10S1 - Y	ALAMANCE;10S1 - Y
 ReportingUnit	North Carolina;Alamance County;104 - Y	ALAMANCE;104 - Y
+Candidate	Paul Newby	Paul Newby
+Candidate	Cheri Beasley	Cheri Beasley
+
