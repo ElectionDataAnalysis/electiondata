@@ -1,4 +1,5 @@
 Name	ElectionDistrict
+NC Supreme Court Chief Justice	North Carolina
 NC House District 1	North Carolina;NC House District 1
 NC House District 2	North Carolina;NC House District 2
 NC House District 3	North Carolina;NC House District 3
