@@ -1246,6 +1246,8 @@ def get_jurisdiction_hierarchy(session, jurisdiction_id):
     Omit particular types that are contest types, not true reporting unit types"""
     q = sql.SQL(
         """
+        SELECT  *
+        FROM    (
         SELECT  rut."Id"
         FROM    "ComposingReportingUnitJoin" cruj
                 JOIN "ReportingUnit" ru on cruj."ChildReportingUnit_Id" = ru."Id"
@@ -1253,13 +1255,30 @@ def get_jurisdiction_hierarchy(session, jurisdiction_id):
         WHERE   rut."Txt" not in %s
                 AND ARRAY_LENGTH(regexp_split_to_array("Name", ';'), 1) = 2
                 AND "ParentReportingUnit_Id" = %s
+        UNION
+        -- This union accommodates Alaska without breaking other states
+        SELECT  rut."Id"
+        FROM    "ComposingReportingUnitJoin" cruj
+                JOIN "ReportingUnit" ru on cruj."ChildReportingUnit_Id" = ru."Id"
+                JOIN "ReportingUnitType" rut on ru."ReportingUnitType_Id" = rut."Id"
+        WHERE   rut."Txt" not in (    
+                    'state',
+                    'congressional',
+                    'judicial',
+                    'state-senate'
+                )
+                AND ARRAY_LENGTH(regexp_split_to_array("Name", ';'), 1) = 2
+                AND "ParentReportingUnit_Id" = %s
+        ) c
         LIMIT   1
     """
     )
     connection = session.bind.raw_connection()
     cursor = connection.cursor()
     try:
-        cursor.execute(q, [tuple(contest_types_model), jurisdiction_id])
+        cursor.execute(q, [
+            tuple(contest_types_model), jurisdiction_id, jurisdiction_id
+        ])
         result = cursor.fetchall()
         subdivision_type_id = result[0][0]
     except:
