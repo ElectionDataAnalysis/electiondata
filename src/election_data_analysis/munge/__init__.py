@@ -395,12 +395,10 @@ def replace_raw_with_internal_ids(
         # remove any lines with nulls
         raw_ids_for_element = raw_ids_for_element[raw_ids_for_element.notnull().all(axis=1)]
 
-        # Change all upper-case-only internal candidate names to title case in dictionary
-        mask = raw_ids_for_element["cdf_internal_name"].str.isupper()
-        if mask.any():
-            raw_ids_for_element.loc[mask,"cdf_internal_name"] = raw_ids_for_element.copy()[mask][
-                "cdf_internal_name"
-            ].str.title()
+        # Regularize candidate names (to match what's done during upload of candidates to Candidate
+        #  table in db)
+        raw_ids_for_element["cdf_internal_name"] = regularize_candidate_names(
+            raw_ids_for_element["cdf_internal_name"])
         raw_ids_for_element.drop_duplicates(inplace=True)
 
     working = working.merge(
@@ -1081,6 +1079,26 @@ def raw_elements_to_cdf(
         )
 
     return err
+
+
+def regularize_candidate_names(
+        candidate_column: pd.Series,
+) -> pd.Series:
+    ws = candidate_column.copy()
+
+    mask = ws.str.isupper()
+    # if original is all caps
+    if mask.any():
+        # change to title case
+        ws[mask] = candidate_column[mask].str.title()
+        # TODO test out NameCleaver from SunlightLabs
+        # respect the Irish
+
+    # if original is not all upper case
+    else:
+        # do nothing
+        pass
+    return ws
 
 
 if __name__ == "__main__":
