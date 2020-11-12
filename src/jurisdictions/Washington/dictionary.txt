@@ -157,6 +157,7 @@ CandidateContest	US House WA District 8	Congressional District 8 U.S. Representa
 CandidateContest	US House WA District 9	Congressional District 9 U.S. Representative
 CandidateContest	US House WA District 10	Congressional District 10 U.S. Representative
 CandidateContest	US President (WA)	United States President/Vice President
+CandidateContest	US President (WA)	President/Vice President
 CandidateContest	US President (WA) (Democratic / Republican Party)	United States President Democratic Party
 CandidateContest	US President (WA) (Democratic / Republican Party)	United States President Republican Party
 CandidateContest	WA Governor	Washington State Governor
@@ -3369,6 +3370,11 @@ Candidate	Lars Hanson	Lars Hanson
 Candidate	KATHLEEN ALTICK	KATHLEEN ALTICK
 Candidate	Lauri Palmer	Lauri Palmer
 Candidate	"David R. Weyeneth, Sr."	"David R. Weyeneth, Sr."
+Candidate	Joseph R. Biden / Kamala D. Harris	Joseph R. Biden / Kamala D. Harris
+Candidate	Jo Jorgensen / Jeremy &quot;Spike&quot; Cohen	Jo Jorgensen / Jeremy &quot;Spike&quot; Cohen
+Candidate	Howie Hawkins / Angela Walker	Howie Hawkins / Angela Walker
+Candidate	Gloria La Riva / Sunil Freeman	Gloria La Riva / Sunil Freeman
+Candidate	Alyson Kennedy / Malcolm M. Jarrett	Alyson Kennedy / Malcolm M. Jarrett
 CountItemType	total	total
 ReportingUnit	Washington;Adams County	Adams
 ReportingUnit	Washington;Asotin County	Asotin

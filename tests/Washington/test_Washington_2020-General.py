@@ -9,19 +9,19 @@ import election_data_analysis as e
 
 # # # constants - CHANGE THESE!! - use internal db names
 election = "2020 General"
-jurisdiction = 'Minnesota'
-abbr = 'MN'
-total_pres_votes = 3267046  # total of all votes for President
+jurisdiction = 'Washington'
+abbr = 'WA'
+total_pres_votes = 3773594  # total of all votes for President
 cd = 7  # congressional district
-total_cd_votes = 363211  # total votes in the chosen cd
-shd = "47A"   # state house district
-total_shd_votes = 28601
-ssd = 13  # state senate district
-total_ssd_votes = 46962
+total_cd_votes = 455053  # total votes in the chosen cd
+shd = 11   # state house district
+total_shd_votes = 57802
+ssd = 14  # state senate district
+total_ssd_votes = 37859
 single_vote_type = 'early'  # pick any one from your file
 pres_votes_vote_type = 0
-single_county = 'Minnesota;Aitkin County'  # pick any one from your file
-pres_votes_county = 10020  # total votes for pres of that county
+single_county = 'Washington;Pierce County'  # pick any one from your file
+pres_votes_county = 447600  # total votes for pres of that county
 
 
 def test_data_exists(dbname):
