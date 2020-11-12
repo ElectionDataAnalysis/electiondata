@@ -472,13 +472,8 @@ def insert_to_cdf_db(
 
     working = df.copy()
     if element == "Candidate":
-        # enforce title case, except for 'none or unknown'
-        # TODO enforce title case only if names are all caps
-        working.loc[working.BallotName != "none or unknown", "BallotName"] = (
-            working.copy()
-            .loc[working.BallotName != "none or unknown", "BallotName"]
-            .str.title()
-        )
+        # regularize name and drop dupes
+        working["BallotName"] = m.regularize_candidate_names(working["BallotName"])
         working.drop_duplicates(inplace=True)
 
     # initialize connection and cursor
@@ -620,10 +615,10 @@ def append_id_to_dframe(
         col_map = {element: get_name_field(element)}
 
     if element == "Candidate":
-        # enforce title case
+        # regularize names
         for k, v in col_map.items():
             if v == "BallotName" and k in df.columns:
-                df[k] = df[k].str.title()
+                df[k] = m.regularize_candidate_names(df[k])
 
     connection = engine.raw_connection()
 

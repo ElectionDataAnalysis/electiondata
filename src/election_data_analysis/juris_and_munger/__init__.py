@@ -832,17 +832,29 @@ def juris_dependency_dictionary():
     return d
 
 
-# TODO before processing jurisdiction files into db, alert user to any duplicate names.
-#  Enforce name change? Or just suggest?
-def load_juris_dframe_into_cdf(session, element, juris_path, error) -> dict:
+def load_juris_dframe_into_cdf(
+        session, 
+        element, 
+        juris_path, 
+        error: Optional[dict]) -> Optional[dict]:
     """TODO"""
+    
+    # define paths
     project_root = Path(__file__).parents[1].absolute()
     cdf_schema_def_dir = os.path.join(
         project_root,
         "CDF_schema_def_info",
     )
-    element_fpath = os.path.join(juris_path, f"{element}.txt")
-    if not os.path.exists(element_fpath):
+    element_file = os.path.join(juris_path, f"{element}.txt")
+    enum_file = os.path.join(
+        cdf_schema_def_dir, "elements", element, "enumerations.txt"
+    )
+    fk_file = os.path.join(
+        cdf_schema_def_dir, "elements", element, "foreign_keys.txt"
+    )
+
+    # fail if <element>.txt does not exist
+    if not os.path.exists(element_file):
         error = ui.add_new_error(
             error,
             "jurisdiction",
@@ -850,8 +862,10 @@ def load_juris_dframe_into_cdf(session, element, juris_path, error) -> dict:
             f"File {element}.txt not found",
         )
         return error
+    
+    # read info from <element>.txt, filling null fields with 'none or unknown'
     df = pd.read_csv(
-        element_fpath, sep="\t", encoding="utf_8", quoting=csv.QUOTE_MINIMAL
+        element_file, sep="\t", encoding="utf_8", quoting=csv.QUOTE_MINIMAL
     ).fillna("none or unknown")
     # TODO check that df has the right format
 
@@ -869,9 +883,6 @@ def load_juris_dframe_into_cdf(session, element, juris_path, error) -> dict:
         )
 
     # replace plain text enumerations from file system with id/othertext from db
-    enum_file = os.path.join(
-        cdf_schema_def_dir, "elements", element, "enumerations.txt"
-    )
     if os.path.isfile(enum_file):  # (if not, there are no enums for this element)
         enums = pd.read_csv(enum_file, sep="\t")
         # get all relevant enumeration tables
@@ -885,11 +896,8 @@ def load_juris_dframe_into_cdf(session, element, juris_path, error) -> dict:
             df[f"Other{e}"] = df[f"Other{e}"].fillna("")
 
     # get Ids for any foreign key (or similar) in the table, e.g., Party_Id, etc.
-    fk_file_path = os.path.join(
-        cdf_schema_def_dir, "elements", element, "foreign_keys.txt"
-    )
-    if os.path.isfile(fk_file_path):
-        foreign_keys = pd.read_csv(fk_file_path, sep="\t", index_col="fieldname")
+    if os.path.isfile(fk_file):
+        foreign_keys = pd.read_csv(fk_file, sep="\t", index_col="fieldname")
 
         for fn in foreign_keys.index:
             ref = foreign_keys.loc[
