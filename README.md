@@ -88,6 +88,7 @@ The jurisdiction files in this repository follow certain conventions. Many of th
  * Eric Tsai, Hatfield School of Government (Portland State University)
  * Bryan Loy
  * Jon Wolgamott
+ * Elliot Meyerson
 
 # Funding
 Funding provided October 2019 - April 2021 by the National Science Foundation
