@@ -1,4 +1,8 @@
 cdf_element	cdf_internal_name	raw_identifier_value
+CountItemType	absentee-mail	cand_absmail_votes
+CountItemType	early	cand_early_votes
+CountItemType	election-day	cand_elecday_votes
+CountItemType	total	cand_tot_votes
 CandidateContest	OK House District 1	FOR STATE REPRESENTATIVE DISTRICT 1
 CandidateContest	OK House District 2	FOR STATE REPRESENTATIVE DISTRICT 2
 CandidateContest	OK House District 3	FOR STATE REPRESENTATIVE DISTRICT 3
