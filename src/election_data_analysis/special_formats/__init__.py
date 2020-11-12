@@ -474,13 +474,20 @@ def read_nested_json(f_path: str,
     # Identify keys for counts and other raw data (attributes) we want
     count_keys = set(munger.options["count_columns_by_name"])
     attribute_keys = set(munger.field_list)
+    if 'nested_keys' in munger.options:
+        nested_keys = set(munger.options["nested_keys"])
+    else:
+        nested_keys = {}
 
     try:
         current_values = {}
+        current_nested_keys = []
         results_list = json_results_below(j,
                                           count_keys,
                                           attribute_keys,
-                                          current_values)
+                                          nested_keys,
+                                          current_values,
+                                          current_nested_keys)
         raw_results = pd.DataFrame(results_list)
         for c in munger.options["count_columns_by_name"]:
             raw_results[c] = pd.to_numeric(raw_results[c], errors="coerce")
@@ -500,7 +507,9 @@ def read_nested_json(f_path: str,
 def json_results_below(j: dict or list,
                        count_keys: set,
                        attribute_keys: set,
-                       current_values: dict) -> list:
+                       nested_keys: set,
+                       current_values: dict,
+                       current_nested_keys: list) -> list:
     """
     Traverse entire json, keeping info for attribute_key's, and returning
     rows when a count_key is reached.
@@ -513,7 +522,9 @@ def json_results_below(j: dict or list,
             results += json_results_below(v,
                                           count_keys,
                                           attribute_keys,
-                                          current_values)
+                                          nested_keys,
+                                          current_values,
+                                          current_nested_keys)
         return results
 
     else: # json is dict
@@ -521,16 +532,22 @@ def json_results_below(j: dict or list,
         # Update values at current level
         for k, v in j.items():
             if k in attribute_keys | count_keys:
-                current_values[k] = v
+                current_values['.'.join(current_nested_keys + [k])] = v
 
         # Recursively update values
         results = []
         for k, v in j.items():
+            if k in nested_keys:
+                child_nested_keys = current_nested_keys + [k]
+            else:
+                child_nested_keys = current_nested_keys[:]
             if isinstance(v, dict) or isinstance(v, list):
                 results += json_results_below(v,
                                               count_keys,
                                               attribute_keys,
-                                              current_values)
+                                              nested_keys,
+                                              current_values,
+                                              child_nested_keys)
 
         # Return current_values if we've reached the counts,
         # since each count value can only occur in one row.
