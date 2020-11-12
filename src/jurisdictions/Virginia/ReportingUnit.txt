@@ -246,44 +246,44 @@ Virginia;Westmoreland County	county
 Virginia;Wise County	county
 Virginia;Wythe County	county
 Virginia;York County	county
-Virginia;Alexandria City	city
-Virginia;Bristol City	city
-Virginia;Buena Vista City	city
-Virginia;Charlottesville City	city
-Virginia;Chesapeake City	city
-Virginia;Colonial Heights City	city
-Virginia;Covington City	city
-Virginia;Danville City	city
-Virginia;Emporia City	city
-Virginia;Fairfax City	city
-Virginia;Falls Church City	city
-Virginia;Franklin City	city
-Virginia;Fredericksburg City	city
-Virginia;Galax City	city
-Virginia;Hampton City	city
-Virginia;Harrisonburg City	city
-Virginia;Hopewell City	city
-Virginia;Lexington City	city
-Virginia;Lynchburg City	city
-Virginia;Manassas City	city
-Virginia;Manassas Park City	city
-Virginia;Martinsville City	city
-Virginia;Newport News City	city
-Virginia;Norfolk City	city
-Virginia;Norton City	city
-Virginia;Petersburg City	city
-Virginia;Poquoson City	city
-Virginia;Portsmouth City	city
-Virginia;Radford City	city
-Virginia;Richmond City	city
-Virginia;Roanoke City	city
-Virginia;Salem City	city
-Virginia;Staunton City	city
-Virginia;Suffolk City	city
-Virginia;Virginia Beach City	city
-Virginia;Waynesboro City	city
-Virginia;Williamsburg City	city
-Virginia;Winchester City	city
+Virginia;Alexandria City	county
+Virginia;Bristol City	county
+Virginia;Buena Vista City	county
+Virginia;Charlottesville City	county
+Virginia;Chesapeake City	county
+Virginia;Colonial Heights City	county
+Virginia;Covington City	county
+Virginia;Danville City	county
+Virginia;Emporia City	county
+Virginia;Fairfax City	county
+Virginia;Falls Church City	county
+Virginia;Franklin City	county
+Virginia;Fredericksburg City	county
+Virginia;Galax City	county
+Virginia;Hampton City	county
+Virginia;Harrisonburg City	county
+Virginia;Hopewell City	county
+Virginia;Lexington City	county
+Virginia;Lynchburg City	county
+Virginia;Manassas City	county
+Virginia;Manassas Park City	county
+Virginia;Martinsville City	county
+Virginia;Newport News City	county
+Virginia;Norfolk City	county
+Virginia;Norton City	county
+Virginia;Petersburg City	county
+Virginia;Poquoson City	county
+Virginia;Portsmouth City	county
+Virginia;Radford City	county
+Virginia;Richmond City	county
+Virginia;Roanoke City	county
+Virginia;Salem City	county
+Virginia;Staunton City	county
+Virginia;Suffolk City	county
+Virginia;Virginia Beach City	county
+Virginia;Waynesboro City	county
+Virginia;Williamsburg City	county
+Virginia;Winchester City	county
 Virginia;Accomack County;# Ab - Central Absentee Precinct	precinct
 Virginia;Accomack County;## Provisional	precinct
 Virginia;Accomack County;101 - Chincoteague	precinct
