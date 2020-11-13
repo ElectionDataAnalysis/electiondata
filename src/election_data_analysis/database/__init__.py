@@ -1120,6 +1120,16 @@ def get_filtered_input_options(session, input_str, filters):
     elif input_str == "category":
         election_id = list_to_id(session, "Election", filters)
         reporting_unit_id = list_to_id(session, "ReportingUnit", filters)
+
+        # get the census data
+        connection = session.bind.raw_connection()
+        cursor = connection.cursor()
+        election = name_from_id(cursor, "Election", election_id)
+        census_df = read_external(cursor, int(election[0:4]), reporting_unit_id, ["Label"])
+        print(census_df)
+        input()
+
+
         type_df = read_vote_count(
             session,
             election_id,
@@ -1647,3 +1657,23 @@ def is_preliminary(cursor, election_id, jurisdiction_id):
     if election.startswith("2020 General"):
         return True
     return False
+
+
+def read_external(cursor, election_year: int, top_ru_id: int, fields: list):
+    q = sql.SQL("""
+        SELECT  DISTINCT "Category", "InCategoryOrder", {fields}
+        FROM    "External"
+        WHERE   "ElectionYear" = %s
+                AND "TopReportingUnit_Id" = %s
+        ORDER BY "Category", "InCategoryOrder"
+    """
+    ).format(
+        fields=sql.SQL(",").join(sql.Identifier(field) for field in fields),
+    )
+    try:
+        cursor.execute(q, [election_year, top_ru_id])
+        results = cursor.fetchall()
+        results_df = pd.DataFrame(results, columns=["Category", "InCategoryOrder"] + fields)
+        return results_df[fields]
+    except Exception as exc:
+        return pd.DataFrame()
