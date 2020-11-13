@@ -1,0 +1,133 @@
+Name	ReportingUnitType
+Oregon;OR House District 1	state-house
+Oregon;OR House District 2	state-house
+Oregon;OR House District 3	state-house
+Oregon;OR House District 4	state-house
+Oregon;OR House District 5	state-house
+Oregon;OR House District 6	state-house
+Oregon;OR House District 7	state-house
+Oregon;OR House District 8	state-house
+Oregon;OR House District 9	state-house
+Oregon;OR House District 10	state-house
+Oregon;OR House District 11	state-house
+Oregon;OR House District 12	state-house
+Oregon;OR House District 13	state-house
+Oregon;OR House District 14	state-house
+Oregon;OR House District 15	state-house
+Oregon;OR House District 16	state-house
+Oregon;OR House District 17	state-house
+Oregon;OR House District 18	state-house
+Oregon;OR House District 19	state-house
+Oregon;OR House District 20	state-house
+Oregon;OR House District 21	state-house
+Oregon;OR House District 22	state-house
+Oregon;OR House District 23	state-house
+Oregon;OR House District 24	state-house
+Oregon;OR House District 25	state-house
+Oregon;OR House District 26	state-house
+Oregon;OR House District 27	state-house
+Oregon;OR House District 28	state-house
+Oregon;OR House District 29	state-house
+Oregon;OR House District 30	state-house
+Oregon;OR House District 31	state-house
+Oregon;OR House District 32	state-house
+Oregon;OR House District 33	state-house
+Oregon;OR House District 34	state-house
+Oregon;OR House District 35	state-house
+Oregon;OR House District 36	state-house
+Oregon;OR House District 37	state-house
+Oregon;OR House District 38	state-house
+Oregon;OR House District 39	state-house
+Oregon;OR House District 40	state-house
+Oregon;OR House District 41	state-house
+Oregon;OR House District 42	state-house
+Oregon;OR House District 43	state-house
+Oregon;OR House District 44	state-house
+Oregon;OR House District 45	state-house
+Oregon;OR House District 46	state-house
+Oregon;OR House District 47	state-house
+Oregon;OR House District 48	state-house
+Oregon;OR House District 49	state-house
+Oregon;OR House District 50	state-house
+Oregon;OR House District 51	state-house
+Oregon;OR House District 52	state-house
+Oregon;OR House District 53	state-house
+Oregon;OR House District 54	state-house
+Oregon;OR House District 55	state-house
+Oregon;OR House District 56	state-house
+Oregon;OR House District 57	state-house
+Oregon;OR House District 58	state-house
+Oregon;OR House District 59	state-house
+Oregon;OR House District 60	state-house
+Oregon;OR Senate District 1	state-senate
+Oregon;OR Senate District 2	state-senate
+Oregon;OR Senate District 3	state-senate
+Oregon;OR Senate District 4	state-senate
+Oregon;OR Senate District 5	state-senate
+Oregon;OR Senate District 6	state-senate
+Oregon;OR Senate District 7	state-senate
+Oregon;OR Senate District 8	state-senate
+Oregon;OR Senate District 9	state-senate
+Oregon;OR Senate District 10	state-senate
+Oregon;OR Senate District 11	state-senate
+Oregon;OR Senate District 12	state-senate
+Oregon;OR Senate District 13	state-senate
+Oregon;OR Senate District 14	state-senate
+Oregon;OR Senate District 15	state-senate
+Oregon;OR Senate District 16	state-senate
+Oregon;OR Senate District 17	state-senate
+Oregon;OR Senate District 18	state-senate
+Oregon;OR Senate District 19	state-senate
+Oregon;OR Senate District 20	state-senate
+Oregon;OR Senate District 21	state-senate
+Oregon;OR Senate District 22	state-senate
+Oregon;OR Senate District 23	state-senate
+Oregon;OR Senate District 24	state-senate
+Oregon;OR Senate District 25	state-senate
+Oregon;OR Senate District 26	state-senate
+Oregon;OR Senate District 27	state-senate
+Oregon;OR Senate District 28	state-senate
+Oregon;OR Senate District 29	state-senate
+Oregon;OR Senate District 30	state-senate
+Oregon;US House OR District 1	congressional
+Oregon;US House OR District 2	congressional
+Oregon;US House OR District 3	congressional
+Oregon;US House OR District 4	congressional
+Oregon;US House OR District 5	congressional
+Oregon	state
+Oregon;Baker County	county
+Oregon;Benton County	county
+Oregon;Clackamas County	county
+Oregon;Clatsop County	county
+Oregon;Columbia County	county
+Oregon;Coos County	county
+Oregon;Crook County	county
+Oregon;Curry County	county
+Oregon;Deschutes County	county
+Oregon;Douglas County	county
+Oregon;Gilliam County	county
+Oregon;Grant County	county
+Oregon;Harney County	county
+Oregon;Hood River County	county
+Oregon;Jackson County	county
+Oregon;Jefferson County	county
+Oregon;Josephine County	county
+Oregon;Klamath County	county
+Oregon;Lake County	county
+Oregon;Lane County	county
+Oregon;Lincoln County	county
+Oregon;Linn County	county
+Oregon;Malheur County	county
+Oregon;Marion County	county
+Oregon;Morrow County	county
+Oregon;Multnomah County	county
+Oregon;Polk County	county
+Oregon;Sherman County	county
+Oregon;Tillamook County	county
+Oregon;Umatilla County	county
+Oregon;Union County	county
+Oregon;Wallowa County	county
+Oregon;Wasco County	county
+Oregon;Washington County	county
+Oregon;Wheeler County	county
+Oregon;Yamhill County	county

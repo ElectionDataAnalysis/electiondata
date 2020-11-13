@@ -1,0 +1,103 @@
+Name	ElectionDistrict
+OR House District 1	Oregon;OR House District 1
+OR House District 2	Oregon;OR House District 2
+OR House District 3	Oregon;OR House District 3
+OR House District 4	Oregon;OR House District 4
+OR House District 5	Oregon;OR House District 5
+OR House District 6	Oregon;OR House District 6
+OR House District 7	Oregon;OR House District 7
+OR House District 8	Oregon;OR House District 8
+OR House District 9	Oregon;OR House District 9
+OR House District 10	Oregon;OR House District 10
+OR House District 11	Oregon;OR House District 11
+OR House District 12	Oregon;OR House District 12
+OR House District 13	Oregon;OR House District 13
+OR House District 14	Oregon;OR House District 14
+OR House District 15	Oregon;OR House District 15
+OR House District 16	Oregon;OR House District 16
+OR House District 17	Oregon;OR House District 17
+OR House District 18	Oregon;OR House District 18
+OR House District 19	Oregon;OR House District 19
+OR House District 20	Oregon;OR House District 20
+OR House District 21	Oregon;OR House District 21
+OR House District 22	Oregon;OR House District 22
+OR House District 23	Oregon;OR House District 23
+OR House District 24	Oregon;OR House District 24
+OR House District 25	Oregon;OR House District 25
+OR House District 26	Oregon;OR House District 26
+OR House District 27	Oregon;OR House District 27
+OR House District 28	Oregon;OR House District 28
+OR House District 29	Oregon;OR House District 29
+OR House District 30	Oregon;OR House District 30
+OR House District 31	Oregon;OR House District 31
+OR House District 32	Oregon;OR House District 32
+OR House District 33	Oregon;OR House District 33
+OR House District 34	Oregon;OR House District 34
+OR House District 35	Oregon;OR House District 35
+OR House District 36	Oregon;OR House District 36
+OR House District 37	Oregon;OR House District 37
+OR House District 38	Oregon;OR House District 38
+OR House District 39	Oregon;OR House District 39
+OR House District 40	Oregon;OR House District 40
+OR House District 41	Oregon;OR House District 41
+OR House District 42	Oregon;OR House District 42
+OR House District 43	Oregon;OR House District 43
+OR House District 44	Oregon;OR House District 44
+OR House District 45	Oregon;OR House District 45
+OR House District 46	Oregon;OR House District 46
+OR House District 47	Oregon;OR House District 47
+OR House District 48	Oregon;OR House District 48
+OR House District 49	Oregon;OR House District 49
+OR House District 50	Oregon;OR House District 50
+OR House District 51	Oregon;OR House District 51
+OR House District 52	Oregon;OR House District 52
+OR House District 53	Oregon;OR House District 53
+OR House District 54	Oregon;OR House District 54
+OR House District 55	Oregon;OR House District 55
+OR House District 56	Oregon;OR House District 56
+OR House District 57	Oregon;OR House District 57
+OR House District 58	Oregon;OR House District 58
+OR House District 59	Oregon;OR House District 59
+OR House District 60	Oregon;OR House District 60
+OR Senate District 1	Oregon;OR Senate District 1
+OR Senate District 2	Oregon;OR Senate District 2
+OR Senate District 3	Oregon;OR Senate District 3
+OR Senate District 4	Oregon;OR Senate District 4
+OR Senate District 5	Oregon;OR Senate District 5
+OR Senate District 6	Oregon;OR Senate District 6
+OR Senate District 7	Oregon;OR Senate District 7
+OR Senate District 8	Oregon;OR Senate District 8
+OR Senate District 9	Oregon;OR Senate District 9
+OR Senate District 10	Oregon;OR Senate District 10
+OR Senate District 11	Oregon;OR Senate District 11
+OR Senate District 12	Oregon;OR Senate District 12
+OR Senate District 13	Oregon;OR Senate District 13
+OR Senate District 14	Oregon;OR Senate District 14
+OR Senate District 15	Oregon;OR Senate District 15
+OR Senate District 16	Oregon;OR Senate District 16
+OR Senate District 17	Oregon;OR Senate District 17
+OR Senate District 18	Oregon;OR Senate District 18
+OR Senate District 19	Oregon;OR Senate District 19
+OR Senate District 20	Oregon;OR Senate District 20
+OR Senate District 21	Oregon;OR Senate District 21
+OR Senate District 22	Oregon;OR Senate District 22
+OR Senate District 23	Oregon;OR Senate District 23
+OR Senate District 24	Oregon;OR Senate District 24
+OR Senate District 25	Oregon;OR Senate District 25
+OR Senate District 26	Oregon;OR Senate District 26
+OR Senate District 27	Oregon;OR Senate District 27
+OR Senate District 28	Oregon;OR Senate District 28
+OR Senate District 29	Oregon;OR Senate District 29
+OR Senate District 30	Oregon;OR Senate District 30
+US House OR District 1	Oregon;US House OR District 1
+US House OR District 2	Oregon;US House OR District 2
+US House OR District 3	Oregon;US House OR District 3
+US House OR District 4	Oregon;US House OR District 4
+US House OR District 5	Oregon;US House OR District 5
+US President (OR)	Oregon
+OR Governor	Oregon
+US Senate OR	Oregon
+OR Attorney General	Oregon
+OR Lieutenant Governor	Oregon
+OR Treasurer	Oregon
+OR Secretary of State	Oregon
