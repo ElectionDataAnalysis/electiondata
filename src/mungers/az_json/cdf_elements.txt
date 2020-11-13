@@ -1,0 +1,8 @@
+name	raw_identifier_formula	source
+ReportingUnit	<CountyName>	row
+Party	{<ChoiceName>,^.* \((.*)\)$}	row
+CandidateContest	<ContestName>	row
+Candidate	{<ChoiceName>,^(.*) \(.*\)$}	row
+BallotMeasureContest	<ContestName>	row
+BallotMeasureSelection	<ChoiceName>	row
+CountItemType	total	row
