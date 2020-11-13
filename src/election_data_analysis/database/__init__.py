@@ -1120,6 +1120,18 @@ def get_filtered_input_options(session, input_str, filters):
     elif input_str == "category":
         election_id = list_to_id(session, "Election", filters)
         reporting_unit_id = list_to_id(session, "ReportingUnit", filters)
+
+        # get the census data
+        connection = session.bind.raw_connection()
+        cursor = connection.cursor()
+        election = name_from_id(cursor, "Election", election_id)
+        census_df = read_external(cursor, int(election[0:4]), reporting_unit_id, ["Label"])
+        cursor.close()
+        if census_df.empty:
+            census = []
+        else:
+            census = ["Census data"]
+
         type_df = read_vote_count(
             session,
             election_id,
@@ -1138,13 +1150,16 @@ def get_filtered_input_options(session, input_str, filters):
         data = {
             "parent": [filters[0] for count_type in count_types]
             + [filters[0] for count_type in count_types]
-            + [filters[0] for count_type in count_types],
+            + [filters[0] for count_type in count_types]
+            + [filters[0] for c in census],
             "name": [f"Candidate {count_type}" for count_type in count_types]
             + [f"Contest {count_type}" for count_type in count_types]
-            + [f"Party {count_type}" for count_type in count_types],
+            + [f"Party {count_type}" for count_type in count_types]
+            + [c for c in census],
             "type": [None for count_type in count_types]
             + [None for count_type in count_types]
-            + [None for count_type in count_types],
+            + [None for count_type in count_types]
+            + [None for c in census],
         }
         df = pd.DataFrame(data=data)
     # check if it's looking for a count of contests
@@ -1174,6 +1189,17 @@ def get_filtered_input_options(session, input_str, filters):
         )
         df = clean_candidate_names(df_unordered)
         df = df[["parent", "name", "unit_type"]].rename(columns={"unit_type": "type"})
+    # check if it's looking for census data
+    elif input_str == "count" and "Census data" in filters:
+        election_id = list_to_id(session, "Election", filters)
+        reporting_unit_id = list_to_id(session, "ReportingUnit", filters)
+        connection = session.bind.raw_connection()
+        cursor = connection.cursor()
+        election = name_from_id(cursor, "Election", election_id)
+        df = read_external(
+            cursor, int(election[0:4]), reporting_unit_id, ["Source", "Label", "Category"]
+        )
+        cursor.close()
     # check if it's looking for a count by party
     elif input_str == "count":
         election_id = list_to_id(session, "Election", filters)
@@ -1647,3 +1673,30 @@ def is_preliminary(cursor, election_id, jurisdiction_id):
     if election.startswith("2020 General"):
         return True
     return False
+
+
+def read_external(cursor, election_year: int, top_ru_id: int, fields: list, restrict=None):
+    if restrict:
+        census = f"""AND "Label" = '{restrict}'"""
+    else:
+        census = ""
+    q = sql.SQL("""
+        SELECT  DISTINCT "Category", "InCategoryOrder", {fields}
+        FROM    "External"
+        WHERE   "ElectionYear" = %s
+                AND "TopReportingUnit_Id" = %s
+                {census}
+        ORDER BY "Category", "InCategoryOrder"
+    """
+    ).format(
+        fields=sql.SQL(",").join(sql.Identifier(field) for field in fields),
+        census=sql.SQL(census),
+    )
+    try:
+        cursor.execute(q, [election_year, top_ru_id])
+        results = cursor.fetchall()
+        results_df = pd.DataFrame(results, columns=["Category", "InCategoryOrder"] + fields)
+        # return unique columns (by name, not value)
+        return results_df.loc[:, ~results_df.columns.duplicated()][fields]
+    except Exception as exc:
+        return pd.DataFrame()

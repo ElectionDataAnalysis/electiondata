@@ -276,6 +276,83 @@ def get_data_for_scatter(
     filter_str,
     count_type,
 ):
+    if count_type == "census":
+        return get_census_data(
+            session,
+            jurisdiction_id,
+            election_id,
+            count_item_type,
+            filter_str,
+            count_type,  
+        )
+    else:
+        return get_votecount_data(
+            session,
+            jurisdiction_id,
+            subdivision_type_id,
+            election_id,
+            count_item_type,
+            filter_str,
+            count_type,    
+        ) 
+
+
+def get_census_data(
+    session,
+    jurisdiction_id,
+    election_id,
+    count_item_type,
+    filter_str,
+    count_type,      
+):
+    # get the census data
+    connection = session.bind.raw_connection()
+    cursor = connection.cursor()
+    election = db.name_from_id(cursor, "Election", election_id)
+    census_df = db.read_external(
+        cursor,
+        int(election[0:4]),
+        jurisdiction_id,
+        ["County", "Category", "Label", "Value"],
+        restrict=filter_str
+    )
+    cursor.close()
+
+    # reshape data so it can be unioned with other results
+    if not census_df.empty:
+        census_df["Election_Id"] = election_id
+        census_df["Contest_Id"] = 0
+        census_df["Candidate_Id"] = 0
+        census_df["Contest"] = "Census data"
+        census_df["CountItemType"] = "total"
+        census_df.rename(columns={
+            "County": "Name",
+            "Label": "Selection",
+            "Value": "Count"
+        }, inplace=True)
+        census_df = census_df[[
+            "Election_Id",
+            "Name",
+            "Selection",
+            "Contest_Id",
+            "Candidate_Id",
+            "Contest",
+            "CountItemType",
+            "Count",
+        ]]
+        return census_df
+    return pd.DataFrame()
+
+
+def get_votecount_data(
+    session,
+    jurisdiction_id,
+    subdivision_type_id,
+    election_id,
+    count_item_type,
+    filter_str,
+    count_type,    
+):
     # Since this could be data across 2 elections, grab data one election at a time
     unsummed = db.get_candidate_votecounts(
         session, election_id, jurisdiction_id, subdivision_type_id

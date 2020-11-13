@@ -1575,6 +1575,8 @@ class Analyzer:
             return "contests", input_str.replace("Contest", "").strip()
         elif input_str.startswith("Party"):
             return "parties", input_str.replace("Party", "").strip()
+        elif input_str == "Census data":
+            return "census", "total"
 
     def export_outlier_data(
         self,
@@ -1699,6 +1701,33 @@ def data_exists(election, jurisdiction, p_path=None, dbname=None):
 
     # read all contests with records in the VoteCount table
     df = db.read_vote_count(an.session, election_id, reporting_unit_id, ["Name"],["contest_name"])
+    # if no contest found
+    if df.empty:
+        # no data exists.
+        return False
+    # otherwise
+    else:
+        # then data exists!
+        return True
+
+
+def census_data_exists(election, jurisdiction, p_path=None, dbname=None):
+    an = Analyzer(param_file=p_path, dbname=dbname)
+    if not an:
+        return False
+
+    reporting_unit_id = db.name_to_id(an.session, "ReportingUnit", jurisdiction)
+
+    # if the database doesn't have the reporting unit
+    if not reporting_unit_id:
+        # data doesn't exist
+        return False
+
+    connection = an.session.bind.raw_connection()
+    cursor = connection.cursor()
+    df = db.read_external(cursor, int(election[0:4]), reporting_unit_id, ["Label"])
+    cursor.close()
+    
     # if no contest found
     if df.empty:
         # no data exists.
