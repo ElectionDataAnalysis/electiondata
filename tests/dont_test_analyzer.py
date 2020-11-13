@@ -3,6 +3,7 @@ import os
 from election_data_analysis import Analyzer
 from election_data_analysis import database as db
 from election_data_analysis import data_exists
+from election_data_analysis import census_data_exists
 from psycopg2 import sql
 import pytest
 
@@ -24,6 +25,7 @@ ok = {
     "ga20p": data_exists("2020 Primary", "Georgia"),
     "nc18g": data_exists("2018 General", "North Carolina"),
     "ak16g": data_exists("2016 General", "Alaska"),
+    "ga18census": census_data_exists("2018 General", "Georgia")
 }
 
 
@@ -106,13 +108,13 @@ def test_election_display():
     )
 
 
-@pytest.mark.skipif(not ok["ga18g"], reason="No Georgia 2018 General data")
+@pytest.mark.skipif(not ok["nc18g"], reason="No North Carolina 2018 General data")
 def test_category_display():
     assert (
         analyzer.display_options(
-            "category", verbose=True, filters=["Georgia", "county", "2018 General"]
+            "category", verbose=True, filters=["North Carolina", "county", "2018 General"]
         )
-        == results.ga_2018_category
+        == results.nc_2018_category
     )
 
 
@@ -293,4 +295,50 @@ def test_alaska_non_county_hierarchy():
             "US President (AK)"
         )
         == results.ak_2016_scatter
+    )
+
+
+@pytest.mark.skipif(
+    not ok["ga18g"] or not ok["ga18census"], reason="No Georgia 2018 General or Census data"
+)
+def test_census_count_display():
+    assert (
+        analyzer.display_options(
+            "count",
+            verbose=True,
+            filters=["Georgia", "2018 General", "Census data"]
+        )
+        == results.ga_2018_census_display_count
+    )
+
+
+@pytest.mark.skipif(
+    not ok["ga18g"] or not ok["ga18census"], reason="No Georgia 2018 General or Census data"
+)
+def test_census_category_display():
+    assert (
+        analyzer.display_options(
+            "category",
+            verbose=True,
+            filters=["Georgia", "county", "2018 General"]
+        )
+        == results.ga_2018_census_display_category
+    )
+
+
+@pytest.mark.skipif(
+    not ok["ga18g"] or not ok["ga18census"], reason="No Georgia 2018 General or Census data"
+)
+def test_census_scatter():
+    assert (
+        analyzer.scatter(
+            "Georgia",
+            "2018 General",
+            "Candidate absentee-mail",
+            "Stacey Abrams",
+            "2018 General",
+            "Census data",
+            "White",
+        )
+        == results.ga_2018_census_scatter
     )

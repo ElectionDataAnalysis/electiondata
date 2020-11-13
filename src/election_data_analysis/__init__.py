@@ -1711,6 +1711,33 @@ def data_exists(election, jurisdiction, p_path=None, dbname=None):
         return True
 
 
+def census_data_exists(election, jurisdiction, p_path=None, dbname=None):
+    an = Analyzer(param_file=p_path, dbname=dbname)
+    if not an:
+        return False
+
+    reporting_unit_id = db.name_to_id(an.session, "ReportingUnit", jurisdiction)
+
+    # if the database doesn't have the reporting unit
+    if not reporting_unit_id:
+        # data doesn't exist
+        return False
+
+    connection = an.session.bind.raw_connection()
+    cursor = connection.cursor()
+    df = db.read_external(cursor, int(election[0:4]), reporting_unit_id, ["Label"])
+    cursor.close()
+    
+    # if no contest found
+    if df.empty:
+        # no data exists.
+        return False
+    # otherwise
+    else:
+        # then data exists!
+        return True
+
+
 def check_totals_match_vote_types(
         election, 
         jurisdiction, 
