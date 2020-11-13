@@ -23,6 +23,7 @@ ok = {
     "ga18g": data_exists("2018 General", "Georgia"),
     "ga20p": data_exists("2020 Primary", "Georgia"),
     "nc18g": data_exists("2018 General", "North Carolina"),
+    "ak16g": data_exists("2016 General", "Alaska"),
 }
 
 
@@ -276,4 +277,20 @@ def test_contest_updatelabels_display():
             filters=["2018 General", "Georgia", "State Senate"],
         )
         == results.ga_2018_congressional_contests_state_senate
+    )
+
+
+@pytest.mark.skipif(not ok["ak16g"], reason="No Alaska 2016 General data")
+def test_alaska_non_county_hierarchy():
+    assert (
+        analyzer.scatter(
+            "Alaska",
+            "2016 General",
+            "Contest early",
+            "US President (AK)",
+            "2016 General",
+            "Contest election-day",
+            "US President (AK)"
+        )
+        == results.ak_2016_scatter
     )
