@@ -26,6 +26,8 @@ ssd = 15  # state senate district
 total_ssd_votes = -1  # total votes in that State Senate contest
 single_vote_type = 'early'  # pick any one with corresponding data in your file, but use internal db name
 pres_votes_vote_type = -1  # total votes for US President of that vote type
+county_or_other = "county"   # Change this only if results are subdivided by something other than counties
+                            #  e.g., 'parish' in LA, 'state-house' in Alaska, 'ward' in Philadelphia
 single_county = 'North Carolina;Bertie County'  # pick any one from your file, but use internal db name
 pres_votes_county = -1  # total votes for US President in that county
 
@@ -105,6 +107,7 @@ def test_county_subtotal(dbname):
         f"US President ({abbr})",
         dbname=dbname,
         county=single_county,
+        sub_unit_type=county_or_other,
         )
         == pres_votes_county
             )
