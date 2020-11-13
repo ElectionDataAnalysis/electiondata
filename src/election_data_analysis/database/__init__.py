@@ -1626,7 +1626,7 @@ def clean_candidate_names(df):
 
 def data_file_download(cursor, election_id: int, reporting_unit_id: int) -> int:
     q = sql.SQL("""
-        SELECT  MIN(download_date)::text as download_date
+        SELECT  MAX(download_date)::text as download_date
         FROM    _datafile d
         WHERE   d."Election_Id" = %s
                 AND d."ReportingUnit_Id" = %s
