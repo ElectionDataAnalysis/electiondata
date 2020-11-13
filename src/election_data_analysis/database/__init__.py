@@ -1675,21 +1675,28 @@ def is_preliminary(cursor, election_id, jurisdiction_id):
     return False
 
 
-def read_external(cursor, election_year: int, top_ru_id: int, fields: list):
+def read_external(cursor, election_year: int, top_ru_id: int, fields: list, restrict=None):
+    if restrict:
+        census = f"""AND "Label" = '{restrict}'"""
+    else:
+        census = ""
     q = sql.SQL("""
         SELECT  DISTINCT "Category", "InCategoryOrder", {fields}
         FROM    "External"
         WHERE   "ElectionYear" = %s
                 AND "TopReportingUnit_Id" = %s
+                {census}
         ORDER BY "Category", "InCategoryOrder"
     """
     ).format(
         fields=sql.SQL(",").join(sql.Identifier(field) for field in fields),
+        census=sql.SQL(census),
     )
     try:
         cursor.execute(q, [election_year, top_ru_id])
         results = cursor.fetchall()
         results_df = pd.DataFrame(results, columns=["Category", "InCategoryOrder"] + fields)
-        return results_df[fields]
+        # return unique columns (by name, not value)
+        return results_df.loc[:, ~results_df.columns.duplicated()][fields]
     except Exception as exc:
         return pd.DataFrame()
