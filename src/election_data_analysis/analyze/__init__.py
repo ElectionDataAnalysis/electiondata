@@ -319,27 +319,29 @@ def get_census_data(
     cursor.close()
 
     # reshape data so it can be unioned with other results
-    census_df["Election_Id"] = election_id
-    census_df["Contest_Id"] = 0
-    census_df["Candidate_Id"] = 0
-    census_df["Contest"] = "Census data"
-    census_df["CountItemType"] = "total"
-    census_df.rename(columns={
-        "County": "Name",
-        "Label": "Selection",
-        "Value": "Count"
-    }, inplace=True)
-    census_df = census_df[[
-        "Election_Id",
-        "Name",
-        "Selection",
-        "Contest_Id",
-        "Candidate_Id",
-        "Contest",
-        "CountItemType",
-        "Count",
-    ]]
-    return census_df
+    if not census_df.empty:
+        census_df["Election_Id"] = election_id
+        census_df["Contest_Id"] = 0
+        census_df["Candidate_Id"] = 0
+        census_df["Contest"] = "Census data"
+        census_df["CountItemType"] = "total"
+        census_df.rename(columns={
+            "County": "Name",
+            "Label": "Selection",
+            "Value": "Count"
+        }, inplace=True)
+        census_df = census_df[[
+            "Election_Id",
+            "Name",
+            "Selection",
+            "Contest_Id",
+            "Candidate_Id",
+            "Contest",
+            "CountItemType",
+            "Count",
+        ]]
+        return census_df
+    return pd.DataFrame()
 
 
 def get_votecount_data(
