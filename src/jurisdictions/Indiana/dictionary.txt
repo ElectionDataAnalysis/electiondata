@@ -21618,3 +21618,342 @@ Candidate	Keith E. Hartman, Jr.	Keith E. Hartman, Jr.
 Candidate	Doug Scheffel	Doug Scheffel
 Candidate	Kevin Joseph Kelly	Kevin Joseph Kelly
 Candidate	Stephen E Pittman	Stephen E Pittman
+Candidate	Woodrow (Woody) Myers	Woodrow (Woody) Myers & Linda C Lawson
+Candidate	Valerie Mccray (W/I)	Valerie Mccray (W/I)
+Candidate	Tonya L. Millis	Tonya L. Millis
+Candidate	Timothy Jaycox	Timothy Jaycox
+Candidate	Shawn Howard (W/I)	Shawn Howard (W/I)
+Candidate	Russell (Russ) Brooksbank	Russell (Russ) Brooksbank
+Candidate	Randall F (W/I)	Randall F (W/I)
+Candidate	Paul J. Tinkle	Paul J. Tinkle
+Candidate	Morgan Rigg	Morgan Rigg
+Candidate	Mitchell Williams (W/I)	Mitchell Williams (W/I)
+Candidate	Michael Strauss	Michael Strauss
+Candidate	Martha 'Marty' Lemert	Martha 'Marty' Lemert
+Candidate	Mark A Renholzberger	Mark A Renholzberger
+Candidate	Kent Yeager	Kent Yeager
+Candidate	Kenneth Tucker	Kenneth Tucker
+Candidate	Katrina (Kat) Hardwick	Katrina (Kat) Hardwick
+Candidate	Kasey Wells (W/I)	Kasey Wells (W/I)
+Candidate	Joseph R. Biden	Joseph R. Biden & Kamala D. Harris
+Candidate	Jonathan Weinzapfel	Jonathan Weinzapfel
+Candidate	Joe Schriner (W/I)	Joe Schriner (W/I)
+Candidate	Jo Jorgensen	Jo Jorgensen & Jeremy (Spike) Cohen
+Candidate	Jason Eicholtz	Jason Eicholtz
+Candidate	James L Johnson Jr. (W/I)	James L Johnson Jr. (W/I)
+Candidate	James D. Rodenberger	James D. Rodenberger
+Candidate	Howie Hawkins (W/I)	Howie Hawkins (W/I)
+Candidate	Gregory L. Peete	Gregory L. Peete
+Candidate	Eric Holcomb	Eric Holcomb & Suzanne Crouch
+Candidate	Eric C. Shotwell	Eric C. Shotwell
+Candidate	Emma Steele	Emma Steele
+Candidate	Donald J. Trump	Donald J. Trump & Michael R. Pence
+Candidate	Donald G. Rainwater Ii	Donald G. Rainwater Ii & William E. Henry
+Candidate	Deborah Rouse	Deborah Rouse & Sheila Marie Cannon (W/I)
+Candidate	Crystal A. Henry	Crystal A. Henry
+Candidate	Brian Carroll (W/I)	Brian Carroll (W/I)
+Candidate	Abram Loeb (W/I)	Abram Loeb (W/I)
+ReportingUnit	Indiana;Vermillion County;Vermillion 2	Vermillion;Vermillion 2
+ReportingUnit	Indiana;Vermillion County;Vermillion 1	Vermillion;Vermillion 1
+ReportingUnit	Indiana;Vermillion County;St Bernice	Vermillion;St Bernice
+ReportingUnit	Indiana;Vermillion County;Highland	Vermillion;Highland
+ReportingUnit	Indiana;Vermillion County;Fairview 2	Vermillion;Fairview 2
+ReportingUnit	Indiana;Vermillion County;Fairview 1	Vermillion;Fairview 1
+ReportingUnit	Indiana;Vermillion County;Eugene	Vermillion;Eugene
+ReportingUnit	Indiana;Vermillion County;East Helt	Vermillion;East Helt
+ReportingUnit	Indiana;Vermillion County;Dana	Vermillion;Dana
+ReportingUnit	Indiana;Vermillion County;Clinton Twp 3	Vermillion;Clinton Twp 3
+ReportingUnit	Indiana;Vermillion County;Clinton Twp 2	Vermillion;Clinton Twp 2
+ReportingUnit	Indiana;Vermillion County;Clinton Twp 1	Vermillion;Clinton Twp 1
+ReportingUnit	Indiana;Vermillion County;Clinton City 4	Vermillion;Clinton City 4
+ReportingUnit	Indiana;Vermillion County;Clinton City 3	Vermillion;Clinton City 3
+ReportingUnit	Indiana;Vermillion County;Clinton City 2	Vermillion;Clinton City 2
+ReportingUnit	Indiana;Vermillion County;Clinton City 1	Vermillion;Clinton City 1
+ReportingUnit	Indiana;Vermillion County;Cayuga	Vermillion;Cayuga
+ReportingUnit	Indiana;Steuben County;York	Steuben;York
+ReportingUnit	Indiana;Steuben County;Steuben 2	Steuben;Steuben 2
+ReportingUnit	Indiana;Steuben County;Steuben 1	Steuben;Steuben 1
+ReportingUnit	Indiana;Steuben County;Scott	Steuben;Scott
+ReportingUnit	Indiana;Steuben County;Salem	Steuben;Salem
+ReportingUnit	Indiana;Steuben County;Richland	Steuben;Richland
+ReportingUnit	Indiana;Steuben County;Pleasant 7	Steuben;Pleasant 7
+ReportingUnit	Indiana;Steuben County;Pleasant 6	Steuben;Pleasant 6
+ReportingUnit	Indiana;Steuben County;Pleasant 5	Steuben;Pleasant 5
+ReportingUnit	Indiana;Steuben County;Pleasant 4	Steuben;Pleasant 4
+ReportingUnit	Indiana;Steuben County;Pleasant 3	Steuben;Pleasant 3
+ReportingUnit	Indiana;Steuben County;Pleasant 2	Steuben;Pleasant 2
+ReportingUnit	Indiana;Steuben County;Pleasant 1	Steuben;Pleasant 1
+ReportingUnit	Indiana;Steuben County;Otsego 2	Steuben;Otsego 2
+ReportingUnit	Indiana;Steuben County;Otsego 1	Steuben;Otsego 1
+ReportingUnit	Indiana;Steuben County;Millgrove	Steuben;Millgrove
+ReportingUnit	Indiana;Steuben County;Jamestown 2	Steuben;Jamestown 2
+ReportingUnit	Indiana;Steuben County;Jamestown 1	Steuben;Jamestown 1
+ReportingUnit	Indiana;Steuben County;Jackson	Steuben;Jackson
+ReportingUnit	Indiana;Steuben County;Fremont 3	Steuben;Fremont 3
+ReportingUnit	Indiana;Steuben County;Fremont 2	Steuben;Fremont 2
+ReportingUnit	Indiana;Steuben County;Fremont 1	Steuben;Fremont 1
+ReportingUnit	Indiana;Steuben County;Clear Lake	Steuben;Clear Lake
+ReportingUnit	Indiana;Shelby County;Washington	Shelby;Washington
+ReportingUnit	Indiana;Shelby County;Van Buren	Shelby;Van Buren
+ReportingUnit	Indiana;Shelby County;Union	Shelby;Union
+ReportingUnit	Indiana;Shelby County;Sugar Creek	Shelby;Sugar Creek
+ReportingUnit	Indiana;Shelby County;Shelby West	Shelby;Shelby West
+ReportingUnit	Indiana;Shelby County;Shelby East	Shelby;Shelby East
+ReportingUnit	Indiana;Shelby County;Noble	Shelby;Noble
+ReportingUnit	Indiana;Shelby County;Moral Sw	Shelby;Moral Sw
+ReportingUnit	Indiana;Shelby County;Moral South	Shelby;Moral South
+ReportingUnit	Indiana;Shelby County;Moral Nw	Shelby;Moral Nw
+ReportingUnit	Indiana;Shelby County;Moral North	Shelby;Moral North
+ReportingUnit	Indiana;Shelby County;Marion	Shelby;Marion
+ReportingUnit	Indiana;Shelby County;Liberty West	Shelby;Liberty West
+ReportingUnit	Indiana;Shelby County;Liberty East	Shelby;Liberty East
+ReportingUnit	Indiana;Shelby County;Jackson	Shelby;Jackson
+ReportingUnit	Indiana;Shelby County;Hendricks	Shelby;Hendricks
+ReportingUnit	Indiana;Shelby County;Hanover South	Shelby;Hanover South
+ReportingUnit	Indiana;Shelby County;Hanover North	Shelby;Hanover North
+ReportingUnit	Indiana;Shelby County;Brandywine Nw	Shelby;Brandywine Nw
+ReportingUnit	Indiana;Shelby County;Brandywine	Shelby;Brandywine
+ReportingUnit	Indiana;Shelby County;Addison West	Shelby;Addison West
+ReportingUnit	Indiana;Shelby County;Addison East	Shelby;Addison East
+ReportingUnit	Indiana;Shelby County;5 South	Shelby;5 South
+ReportingUnit	Indiana;Shelby County;5 Northwest	Shelby;5 Northwest
+ReportingUnit	Indiana;Shelby County;5 East	Shelby;5 East
+ReportingUnit	Indiana;Shelby County;4 Northeast	Shelby;4 Northeast
+ReportingUnit	Indiana;Shelby County;4 North	Shelby;4 North
+ReportingUnit	Indiana;Shelby County;4 East	Shelby;4 East
+ReportingUnit	Indiana;Shelby County;3 West	Shelby;3 West
+ReportingUnit	Indiana;Shelby County;3 Southeast	Shelby;3 Southeast
+ReportingUnit	Indiana;Shelby County;3 South	Shelby;3 South
+ReportingUnit	Indiana;Shelby County;3 Northeast	Shelby;3 Northeast
+ReportingUnit	Indiana;Shelby County;3 East	Shelby;3 East
+ReportingUnit	Indiana;Shelby County;2 West	Shelby;2 West
+ReportingUnit	Indiana;Shelby County;2 Southeast	Shelby;2 Southeast
+ReportingUnit	Indiana;Shelby County;2 South	Shelby;2 South
+ReportingUnit	Indiana;Shelby County;2 East	Shelby;2 East
+ReportingUnit	Indiana;Shelby County;1 West	Shelby;1 West
+ReportingUnit	Indiana;Shelby County;1 South	Shelby;1 South
+ReportingUnit	Indiana;Shelby County;1 North	Shelby;1 North
+ReportingUnit	Indiana;Ohio County;Union 9	Ohio;Union 9
+ReportingUnit	Indiana;Ohio County;Randolph 11	Ohio;Randolph 11
+ReportingUnit	Indiana;Ohio County;Randolph 10	Ohio;Randolph 10
+ReportingUnit	Indiana;Ohio County;Randolph 06	Ohio;Randolph 06
+ReportingUnit	Indiana;Ohio County;Randolph 05	Ohio;Randolph 05
+ReportingUnit	Indiana;Ohio County;Randolph 04	Ohio;Randolph 04
+ReportingUnit	Indiana;Ohio County;Randolph 03	Ohio;Randolph 03
+ReportingUnit	Indiana;Ohio County;Randolph 02	Ohio;Randolph 02
+ReportingUnit	Indiana;Ohio County;Randolph 01	Ohio;Randolph 01
+ReportingUnit	Indiana;Ohio County;Pike 8	Ohio;Pike 8
+ReportingUnit	Indiana;Ohio County;Cass 7	Ohio;Cass 7
+ReportingUnit	Indiana;Jefferson County;43953	Jefferson;5-2
+ReportingUnit	Indiana;Jefferson County;43952	Jefferson;5-1
+ReportingUnit	Indiana;Jefferson County;43924	Jefferson;4-3
+ReportingUnit	Indiana;Jefferson County;43923	Jefferson;4-2
+ReportingUnit	Indiana;Jefferson County;43922	Jefferson;4-1
+ReportingUnit	Indiana;Jefferson County;43863	Jefferson;2-2
+ReportingUnit	Indiana;Jefferson County;43862	Jefferson;2-1
+ReportingUnit	Indiana;Jefferson County;43832	Jefferson;1-2
+ReportingUnit	Indiana;Jefferson County;43831	Jefferson;1-1
+ReportingUnit	Indiana;Hamilton County;Wayne 06 Nv	Hamilton;Wayne 06 Nv
+ReportingUnit	Indiana;Hamilton County;Morse 3 Nv	Hamilton;Morse 3 Nv
+ReportingUnit	Indiana;Hamilton County;Morse 2 Nv	Hamilton;Morse 2 Nv
+ReportingUnit	Indiana;Hamilton County;Morse 1 Nv	Hamilton;Morse 1 Nv
+ReportingUnit	Indiana;Grant County;Washington 4	Grant;Washington 4
+ReportingUnit	Indiana;Grant County;Washington 3	Grant;Washington 3
+ReportingUnit	Indiana;Grant County;Washington 2	Grant;Washington 2
+ReportingUnit	Indiana;Grant County;Washington 1	Grant;Washington 1
+ReportingUnit	Indiana;Grant County;Van Buren 1	Grant;Van Buren 1
+ReportingUnit	Indiana;Grant County;Sims 1	Grant;Sims 1
+ReportingUnit	Indiana;Grant County;Richland 1	Grant;Richland 1
+ReportingUnit	Indiana;Grant County;Pleasant 7	Grant;Pleasant 7
+ReportingUnit	Indiana;Grant County;Pleasant 6	Grant;Pleasant 6
+ReportingUnit	Indiana;Grant County;Pleasant 5	Grant;Pleasant 5
+ReportingUnit	Indiana;Grant County;Pleasant 4	Grant;Pleasant 4
+ReportingUnit	Indiana;Grant County;Pleasant 3	Grant;Pleasant 3
+ReportingUnit	Indiana;Grant County;Pleasant 2	Grant;Pleasant 2
+ReportingUnit	Indiana;Grant County;Pleasant 1	Grant;Pleasant 1
+ReportingUnit	Indiana;Grant County;Monroe 1	Grant;Monroe 1
+ReportingUnit	Indiana;Grant County;Mill 11	Grant;Mill 11
+ReportingUnit	Indiana;Grant County;Mill 10	Grant;Mill 10
+ReportingUnit	Indiana;Grant County;Mill 09	Grant;Mill 09
+ReportingUnit	Indiana;Grant County;Mill 08	Grant;Mill 08
+ReportingUnit	Indiana;Grant County;Mill 07	Grant;Mill 07
+ReportingUnit	Indiana;Grant County;Mill 06	Grant;Mill 06
+ReportingUnit	Indiana;Grant County;Mill 05	Grant;Mill 05
+ReportingUnit	Indiana;Grant County;Mill 04	Grant;Mill 04
+ReportingUnit	Indiana;Grant County;Mill 03	Grant;Mill 03
+ReportingUnit	Indiana;Grant County;Mill 02	Grant;Mill 02
+ReportingUnit	Indiana;Grant County;Mill 01	Grant;Mill 01
+ReportingUnit	Indiana;Grant County;Liberty 1	Grant;Liberty 1
+ReportingUnit	Indiana;Grant County;Jefferson 3	Grant;Jefferson 3
+ReportingUnit	Indiana;Grant County;Jefferson 2	Grant;Jefferson 2
+ReportingUnit	Indiana;Grant County;Jefferson 1	Grant;Jefferson 1
+ReportingUnit	Indiana;Grant County;Green 1	Grant;Green 1
+ReportingUnit	Indiana;Grant County;Franklin 7	Grant;Franklin 7
+ReportingUnit	Indiana;Grant County;Franklin 6	Grant;Franklin 6
+ReportingUnit	Indiana;Grant County;Franklin 5	Grant;Franklin 5
+ReportingUnit	Indiana;Grant County;Franklin 4	Grant;Franklin 4
+ReportingUnit	Indiana;Grant County;Franklin 3	Grant;Franklin 3
+ReportingUnit	Indiana;Grant County;Franklin 2	Grant;Franklin 2
+ReportingUnit	Indiana;Grant County;Franklin 1	Grant;Franklin 1
+ReportingUnit	Indiana;Grant County;Fairmount 4	Grant;Fairmount 4
+ReportingUnit	Indiana;Grant County;Fairmount 3	Grant;Fairmount 3
+ReportingUnit	Indiana;Grant County;Fairmount 2	Grant;Fairmount 2
+ReportingUnit	Indiana;Grant County;Fairmount 1	Grant;Fairmount 1
+ReportingUnit	Indiana;Grant County;Center 24	Grant;Center 24
+ReportingUnit	Indiana;Grant County;Center 20	Grant;Center 20
+ReportingUnit	Indiana;Grant County;Center 19	Grant;Center 19
+ReportingUnit	Indiana;Grant County;Center 18	Grant;Center 18
+ReportingUnit	Indiana;Grant County;Center 17	Grant;Center 17
+ReportingUnit	Indiana;Grant County;Center 16	Grant;Center 16
+ReportingUnit	Indiana;Grant County;Center 15	Grant;Center 15
+ReportingUnit	Indiana;Grant County;Center 14	Grant;Center 14
+ReportingUnit	Indiana;Grant County;Center 13	Grant;Center 13
+ReportingUnit	Indiana;Grant County;Center 12	Grant;Center 12
+ReportingUnit	Indiana;Grant County;Center 11	Grant;Center 11
+ReportingUnit	Indiana;Grant County;Center 10	Grant;Center 10
+ReportingUnit	Indiana;Grant County;Center 09	Grant;Center 09
+ReportingUnit	Indiana;Grant County;Center 08	Grant;Center 08
+ReportingUnit	Indiana;Grant County;Center 07	Grant;Center 07
+ReportingUnit	Indiana;Grant County;Center 06	Grant;Center 06
+ReportingUnit	Indiana;Grant County;Center 05	Grant;Center 05
+ReportingUnit	Indiana;Grant County;Center 04	Grant;Center 04
+ReportingUnit	Indiana;Grant County;Center 03	Grant;Center 03
+ReportingUnit	Indiana;Grant County;Center 02	Grant;Center 02
+ReportingUnit	Indiana;Grant County;Center 01	Grant;Center 01
+ReportingUnit	Indiana;Fulton County;Wayne 17	Fulton;Wayne 17
+ReportingUnit	Indiana;Fulton County;Union 16	Fulton;Union 16
+ReportingUnit	Indiana;Fulton County;Rochester 8	Fulton;Rochester 8
+ReportingUnit	Indiana;Fulton County;Rochester 7	Fulton;Rochester 7
+ReportingUnit	Indiana;Fulton County;Rochester 6	Fulton;Rochester 6
+ReportingUnit	Indiana;Fulton County;Rochester 5	Fulton;Rochester 5
+ReportingUnit	Indiana;Fulton County;Rochester 4	Fulton;Rochester 4
+ReportingUnit	Indiana;Fulton County;Rochester 3	Fulton;Rochester 3
+ReportingUnit	Indiana;Fulton County;Rochester 2	Fulton;Rochester 2
+ReportingUnit	Indiana;Fulton County;Rochester 1	Fulton;Rochester 1
+ReportingUnit	Indiana;Fulton County;Richland 15	Fulton;Richland 15
+ReportingUnit	Indiana;Fulton County;New Castle 14	Fulton;New Castle 14
+ReportingUnit	Indiana;Fulton County;Liberty 13	Fulton;Liberty 13
+ReportingUnit	Indiana;Fulton County;Henry 3	Fulton;Henry 3
+ReportingUnit	Indiana;Fulton County;Henry 2	Fulton;Henry 2
+ReportingUnit	Indiana;Fulton County;Henry 1	Fulton;Henry 1
+ReportingUnit	Indiana;Fulton County;Aubbeenaubbee 9	Fulton;Aubbeenaubbee 9
+ReportingUnit	Indiana;Franklin County;Whitewater 2	Franklin;Whitewater 2
+ReportingUnit	Indiana;Franklin County;Whitewater 1	Franklin;Whitewater 1
+ReportingUnit	Indiana;Franklin County;Springfield 1	Franklin;Springfield 1
+ReportingUnit	Indiana;Franklin County;Salt Creek 2	Franklin;Salt Creek 2
+ReportingUnit	Indiana;Franklin County;Salt Creek 1	Franklin;Salt Creek 1
+ReportingUnit	Indiana;Franklin County;Ray 2	Franklin;Ray 2
+ReportingUnit	Indiana;Franklin County;Ray 1	Franklin;Ray 1
+ReportingUnit	Indiana;Franklin County;Posey 1	Franklin;Posey 1
+ReportingUnit	Indiana;Franklin County;Oldenburg 1	Franklin;Oldenburg 1
+ReportingUnit	Indiana;Franklin County;Metamora 1	Franklin;Metamora 1
+ReportingUnit	Indiana;Franklin County;Laurel 1	Franklin;Laurel 1
+ReportingUnit	Indiana;Franklin County;Highland 2	Franklin;Highland 2
+ReportingUnit	Indiana;Franklin County;Highland 1	Franklin;Highland 1
+ReportingUnit	Indiana;Franklin County;Fairfield 1	Franklin;Fairfield 1
+ReportingUnit	Indiana;Franklin County;Butler 1	Franklin;Butler 1
+ReportingUnit	Indiana;Franklin County;Brookville 5	Franklin;Brookville 5
+ReportingUnit	Indiana;Franklin County;Brookville 4	Franklin;Brookville 4
+ReportingUnit	Indiana;Franklin County;Brookville 3	Franklin;Brookville 3
+ReportingUnit	Indiana;Franklin County;Brookville 2	Franklin;Brookville 2
+ReportingUnit	Indiana;Franklin County;Brookville 1	Franklin;Brookville 1
+ReportingUnit	Indiana;Franklin County;Blooming Grv 1	Franklin;Blooming Grv 1
+ReportingUnit	Indiana;Franklin County;Bath 1	Franklin;Bath 1
+ReportingUnit	Indiana;Franklin County;Batesville 1	Franklin;Batesville 1
+ReportingUnit	Indiana;Delaware County;Washington 57	Delaware;Washington 57
+ReportingUnit	Indiana;Delaware County;Union 77	Delaware;Union 77
+ReportingUnit	Indiana;Delaware County;Union 61	Delaware;Union 61
+ReportingUnit	Indiana;Delaware County;Salem 94	Delaware;Salem 94
+ReportingUnit	Indiana;Delaware County;Salem 52	Delaware;Salem 52
+ReportingUnit	Indiana;Delaware County;Salem 51	Delaware;Salem 51
+ReportingUnit	Indiana;Delaware County;Perry 62	Delaware;Perry 62
+ReportingUnit	Indiana;Delaware County;Niles 68	Delaware;Niles 68
+ReportingUnit	Indiana;Delaware County;Niles 67	Delaware;Niles 67
+ReportingUnit	Indiana;Delaware County;Mt Pleasant 98	Delaware;Mt Pleasant 98
+ReportingUnit	Indiana;Delaware County;Mt Pleasant 95	Delaware;Mt Pleasant 95
+ReportingUnit	Indiana;Delaware County;Mt Pleasant 88	Delaware;Mt Pleasant 88
+ReportingUnit	Indiana;Delaware County;Mt Pleasant 87	Delaware;Mt Pleasant 87
+ReportingUnit	Indiana;Delaware County;Mt Pleasant 81	Delaware;Mt Pleasant 81
+ReportingUnit	Indiana;Delaware County;Mt Pleasant 74	Delaware;Mt Pleasant 74
+ReportingUnit	Indiana;Delaware County;Mt Pleasant 71	Delaware;Mt Pleasant 71
+ReportingUnit	Indiana;Delaware County;Mt Pleasant 55	Delaware;Mt Pleasant 55
+ReportingUnit	Indiana;Delaware County;Mt Pleasant 54	Delaware;Mt Pleasant 54
+ReportingUnit	Indiana;Delaware County;Mt Pleasant 53	Delaware;Mt Pleasant 53
+ReportingUnit	Indiana;Delaware County;Monroe 73	Delaware;Monroe 73
+ReportingUnit	Indiana;Delaware County;Monroe 59	Delaware;Monroe 59
+ReportingUnit	Indiana;Delaware County;Liberty 75	Delaware;Liberty 75
+ReportingUnit	Indiana;Delaware County;Liberty 64	Delaware;Liberty 64
+ReportingUnit	Indiana;Delaware County;Liberty 63	Delaware;Liberty 63
+ReportingUnit	Indiana;Delaware County;Harrison 78	Delaware;Harrison 78
+ReportingUnit	Indiana;Delaware County;Harrison 58	Delaware;Harrison 58
+ReportingUnit	Indiana;Delaware County;Harrison 56	Delaware;Harrison 56
+ReportingUnit	Indiana;Delaware County;Hamilton 93	Delaware;Hamilton 93
+ReportingUnit	Indiana;Delaware County;Hamilton 92	Delaware;Hamilton 92
+ReportingUnit	Indiana;Delaware County;Hamilton 91	Delaware;Hamilton 91
+ReportingUnit	Indiana;Delaware County;Hamilton 90	Delaware;Hamilton 90
+ReportingUnit	Indiana;Delaware County;Hamilton 70	Delaware;Hamilton 70
+ReportingUnit	Indiana;Delaware County;Hamilton 69	Delaware;Hamilton 69
+ReportingUnit	Indiana;Delaware County;Hamilton 60	Delaware;Hamilton 60
+ReportingUnit	Indiana;Delaware County;Delaware 66	Delaware;Delaware 66
+ReportingUnit	Indiana;Delaware County;Delaware 65	Delaware;Delaware 65
+ReportingUnit	Indiana;Delaware County;Center 50	Delaware;Center 50
+ReportingUnit	Indiana;Delaware County;Center 49	Delaware;Center 49
+ReportingUnit	Indiana;Delaware County;Center 48	Delaware;Center 48
+ReportingUnit	Indiana;Delaware County;Center 47	Delaware;Center 47
+ReportingUnit	Indiana;Delaware County;Center 46	Delaware;Center 46
+ReportingUnit	Indiana;Delaware County;Center 45	Delaware;Center 45
+ReportingUnit	Indiana;Delaware County;Center 44	Delaware;Center 44
+ReportingUnit	Indiana;Delaware County;Center 43	Delaware;Center 43
+ReportingUnit	Indiana;Delaware County;Center 42	Delaware;Center 42
+ReportingUnit	Indiana;Delaware County;Center 41	Delaware;Center 41
+ReportingUnit	Indiana;Delaware County;Center 40	Delaware;Center 40
+ReportingUnit	Indiana;Delaware County;Center 39	Delaware;Center 39
+ReportingUnit	Indiana;Delaware County;Center 38	Delaware;Center 38
+ReportingUnit	Indiana;Delaware County;Center 36	Delaware;Center 36
+ReportingUnit	Indiana;Delaware County;Center 35	Delaware;Center 35
+ReportingUnit	Indiana;Delaware County;Center 34	Delaware;Center 34
+ReportingUnit	Indiana;Delaware County;Center 33	Delaware;Center 33
+ReportingUnit	Indiana;Delaware County;Center 29	Delaware;Center 29
+ReportingUnit	Indiana;Delaware County;Center 28	Delaware;Center 28
+ReportingUnit	Indiana;Delaware County;Center 27	Delaware;Center 27
+ReportingUnit	Indiana;Delaware County;Center 26	Delaware;Center 26
+ReportingUnit	Indiana;Delaware County;Center 25	Delaware;Center 25
+ReportingUnit	Indiana;Delaware County;Center 23	Delaware;Center 23
+ReportingUnit	Indiana;Delaware County;Center 22	Delaware;Center 22
+ReportingUnit	Indiana;Delaware County;Center 20	Delaware;Center 20
+ReportingUnit	Indiana;Delaware County;Center 19	Delaware;Center 19
+ReportingUnit	Indiana;Delaware County;Center 18	Delaware;Center 18
+ReportingUnit	Indiana;Delaware County;Center 15	Delaware;Center 15
+ReportingUnit	Indiana;Delaware County;Center 14	Delaware;Center 14
+ReportingUnit	Indiana;Delaware County;Center 13	Delaware;Center 13
+ReportingUnit	Indiana;Delaware County;Center 12	Delaware;Center 12
+ReportingUnit	Indiana;Delaware County;Center 11	Delaware;Center 11
+ReportingUnit	Indiana;Delaware County;Center 10	Delaware;Center 10
+ReportingUnit	Indiana;Delaware County;Center 09	Delaware;Center 09
+ReportingUnit	Indiana;Delaware County;Center 08	Delaware;Center 08
+ReportingUnit	Indiana;Delaware County;Center 07	Delaware;Center 07
+ReportingUnit	Indiana;Delaware County;Center 06	Delaware;Center 06
+ReportingUnit	Indiana;Delaware County;Center 05	Delaware;Center 05
+ReportingUnit	Indiana;Delaware County;Center 04	Delaware;Center 04
+ReportingUnit	Indiana;Delaware County;Center 03	Delaware;Center 03
+ReportingUnit	Indiana;Delaware County;Center 02	Delaware;Center 02
+ReportingUnit	Indiana;Delaware County;Center 01	Delaware;Center 01
+ReportingUnit	Indiana;Crawford County;Whiskey Run 2	Crawford;Whiskey Run 2
+ReportingUnit	Indiana;Crawford County;Whiskey Run 1	Crawford;Whiskey Run 1
+ReportingUnit	Indiana;Crawford County;Union 2	Crawford;Union 2
+ReportingUnit	Indiana;Crawford County;Union 1	Crawford;Union 1
+ReportingUnit	Indiana;Crawford County;Sterling 3	Crawford;Sterling 3
+ReportingUnit	Indiana;Crawford County;Sterling 2	Crawford;Sterling 2
+ReportingUnit	Indiana;Crawford County;Sterling 1	Crawford;Sterling 1
+ReportingUnit	Indiana;Crawford County;Patoka 2	Crawford;Patoka 2
+ReportingUnit	Indiana;Crawford County;Patoka 1	Crawford;Patoka 1
+ReportingUnit	Indiana;Crawford County;Ohio 2	Crawford;Ohio 2
+ReportingUnit	Indiana;Crawford County;Ohio 1	Crawford;Ohio 1
+ReportingUnit	Indiana;Crawford County;Liberty 2	Crawford;Liberty 2
+ReportingUnit	Indiana;Crawford County;Liberty 1	Crawford;Liberty 1
+ReportingUnit	Indiana;Crawford County;Johnson 2	Crawford;Johnson 2
+ReportingUnit	Indiana;Crawford County;Johnson 1	Crawford;Johnson 1
+ReportingUnit	Indiana;Crawford County;Jennings 2	Crawford;Jennings 2
+ReportingUnit	Indiana;Crawford County;Jennings 1	Crawford;Jennings 1
+ReportingUnit	Indiana;Crawford County;Boone	Crawford;Boone
+Party	American Solidarity Party	American Solidarity
