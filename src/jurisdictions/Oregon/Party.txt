@@ -1,0 +1,10 @@
+Name
+Democratic Party
+Libertarian Party
+Pacific Green Party
+Progressive Party
+Republican Party
+Constitution Party
+Independent Party
+None Party
+
