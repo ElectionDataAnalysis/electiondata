@@ -1126,9 +1126,11 @@ def get_filtered_input_options(session, input_str, filters):
         cursor = connection.cursor()
         election = name_from_id(cursor, "Election", election_id)
         census_df = read_external(cursor, int(election[0:4]), reporting_unit_id, ["Label"])
-        print(census_df)
-        input()
-
+        cursor.close()
+        if census_df.empty:
+            census = []
+        else:
+            census = ["Census data"]
 
         type_df = read_vote_count(
             session,
@@ -1148,13 +1150,16 @@ def get_filtered_input_options(session, input_str, filters):
         data = {
             "parent": [filters[0] for count_type in count_types]
             + [filters[0] for count_type in count_types]
-            + [filters[0] for count_type in count_types],
+            + [filters[0] for count_type in count_types]
+            + [filters[0] for c in census],
             "name": [f"Candidate {count_type}" for count_type in count_types]
             + [f"Contest {count_type}" for count_type in count_types]
-            + [f"Party {count_type}" for count_type in count_types],
+            + [f"Party {count_type}" for count_type in count_types]
+            + [c for c in census],
             "type": [None for count_type in count_types]
             + [None for count_type in count_types]
-            + [None for count_type in count_types],
+            + [None for count_type in count_types]
+            + [None for c in census],
         }
         df = pd.DataFrame(data=data)
     # check if it's looking for a count of contests
@@ -1184,6 +1189,17 @@ def get_filtered_input_options(session, input_str, filters):
         )
         df = clean_candidate_names(df_unordered)
         df = df[["parent", "name", "unit_type"]].rename(columns={"unit_type": "type"})
+    # check if it's looking for census data
+    elif input_str == "count" and "Census data" in filters:
+        election_id = list_to_id(session, "Election", filters)
+        reporting_unit_id = list_to_id(session, "ReportingUnit", filters)
+        connection = session.bind.raw_connection()
+        cursor = connection.cursor()
+        election = name_from_id(cursor, "Election", election_id)
+        df = read_external(
+            cursor, int(election[0:4]), reporting_unit_id, ["Source", "Label", "Category"]
+        )
+        cursor.close()
     # check if it's looking for a count by party
     elif input_str == "count":
         election_id = list_to_id(session, "Election", filters)
