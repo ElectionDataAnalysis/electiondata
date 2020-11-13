@@ -1243,7 +1243,7 @@ def get_jurisdiction_hierarchy(session, jurisdiction_id):
         """
         SELECT  *
         FROM    (
-        SELECT  rut."Id"
+        SELECT  rut."Id", 1 AS ordering
         FROM    "ComposingReportingUnitJoin" cruj
                 JOIN "ReportingUnit" ru on cruj."ChildReportingUnit_Id" = ru."Id"
                 JOIN "ReportingUnitType" rut on ru."ReportingUnitType_Id" = rut."Id"
@@ -1252,7 +1252,7 @@ def get_jurisdiction_hierarchy(session, jurisdiction_id):
                 AND "ParentReportingUnit_Id" = %s
         UNION
         -- This union accommodates Alaska without breaking other states
-        SELECT  rut."Id"
+        SELECT  rut."Id", 2 AS ordering
         FROM    "ComposingReportingUnitJoin" cruj
                 JOIN "ReportingUnit" ru on cruj."ChildReportingUnit_Id" = ru."Id"
                 JOIN "ReportingUnitType" rut on ru."ReportingUnitType_Id" = rut."Id"
@@ -1265,6 +1265,7 @@ def get_jurisdiction_hierarchy(session, jurisdiction_id):
                 AND ARRAY_LENGTH(regexp_split_to_array("Name", ';'), 1) = 2
                 AND "ParentReportingUnit_Id" = %s
         ) c
+        ORDER BY ordering
         LIMIT   1
     """
     )
