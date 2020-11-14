@@ -600,7 +600,7 @@ def archive_from_param_file(param_file: str, current_dir: str, archive_dir: str)
     )
     # TODO error handling
     # if the ini file specifies an aux_data_directory
-    if params["aux_data_dir"] and params["aux_data_dir"] != "":
+    if "aux_data_dir" in params.keys() and params["aux_data_dir"] and params["aux_data_dir"] != "":
         archive(params["aux_data_dir"], current_dir, archive_dir)
     archive(params["results_file"], current_dir, archive_dir)
     archive(param_file, current_dir, archive_dir)
