@@ -373,8 +373,16 @@ def read_single_datafile(
             kwargs["names"] = munger.options["field_names_if_no_field_name_row"]
             kwargs["index_col"] = False
         else:
-            kwargs["header"] = list(range(munger.options["header_row_count"]))
-            kwargs["index_col"] = None
+            # if not a multi-index
+            if munger.options["header_row_count"] == 1:
+                # can protect against a problem with pandas.read_csv and read_excel
+                #  see https://github.com/pandas-dev/pandas/issues/11733
+                # TODO how to protect in case of multi-index?
+                kwargs["header"] = 0
+                kwargs["index_col"] = False
+            else:
+                kwargs["header"] = list(range(munger.options["header_row_count"]))
+                kwargs["index_col"] = None
 
         if munger.options["count_of_top_lines_to_skip"]:
             kwargs["skiprows"] = range(munger.options["count_of_top_lines_to_skip"])

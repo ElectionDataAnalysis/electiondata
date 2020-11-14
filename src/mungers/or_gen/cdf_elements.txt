@@ -5,4 +5,4 @@ CandidateContest	<ContestName>	row
 Candidate	<CandidateName>	row
 BallotMeasureContest	None	row
 BallotMeasureSelection	None	row
-CountItemType	<0>	column
+CountItemType		ini
