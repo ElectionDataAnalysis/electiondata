@@ -960,7 +960,7 @@ def create_param_file(
 
 def run_tests(
     test_dir: str, dbname: str, election_jurisdiction_list: Optional[list] = None
-):
+) -> dict():
     """move to tests directory, run tests, move back
     db_params must have host, user, pass, db_name.
     test_param_file is a reference run_time.ini file"""
@@ -971,10 +971,12 @@ def run_tests(
     # move to tests directory
     os.chdir(test_dir)
 
-    result = -1    # initialize result to failure if pytest is not run
+    result = dict()    # initialize result report
     # run pytest
     if election_jurisdiction_list is None:
-        result = os.system(f"pytest --dbname {dbname}")
+        r = os.system(f"pytest --dbname {dbname}")
+        if r != 0:
+            result["all"] = "At least one test failed"
     else:
         for (election, juris) in election_jurisdiction_list:
             if election is None and juris is not None:
@@ -985,7 +987,9 @@ def run_tests(
                 keyword = f"{juris.replace(' ','-')}_{election.replace(' ','-')}"
             else:
                 keyword = "_"
-            result = os.system(f"pytest --dbname {dbname} -k {keyword}")
+            r = os.system(f"pytest --dbname {dbname} -k {keyword}")
+            if r != 0:
+                result[f"{keyword}"] = "all did not pass"
 
     # move back to original directory
     os.chdir(original_dir)
