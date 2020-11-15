@@ -71,6 +71,9 @@ def optional_remove(dl: eda.DataLoader, dir_path: str) -> (Optional[dict], bool)
         err = close_and_erase(dl)
         if not err:
             db_removed = True
+            print(f"db removed")
+        else:
+            print(f"db not removed due to error: {err['system']}")
         # define parameters to connect to postgres db
 
     # give user option to remove directory
@@ -113,9 +116,9 @@ def get_testing_data(
 
     else:
         print(f"Tests will use data in existing directory: {Path(results_dir).absolute()}")
-        if path_to_repo is None:
-            path_to_repo = Path(__file__).resolve().parents[1].absolute()
-        grab_ini_files(results_dir, path_to_repo)
+    if path_to_repo is None:
+        path_to_repo = Path(__file__).resolve().parents[1].absolute()
+    grab_ini_files(results_dir, path_to_repo)
     return
 
 
@@ -162,7 +165,6 @@ def run2(
             )
             if not success:
                 print("At least one file did not load correctly.")
-                err, db_removed = optional_remove(dl, "TestingData")
         except Exception as exc:
             print(f"Exception occurred: {exc}")
             if dl:
@@ -183,6 +185,7 @@ def run2(
         result = ui.run_tests(
             test_dir, dbname, election_jurisdiction_list=election_jurisdiction_list
         )
+        print(f"test results:\n{result}")
 
         # remove all .ini files
         par_files = [x for x in os.listdir("TestingData") if x[-4:] == ".ini"]

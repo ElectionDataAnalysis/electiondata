@@ -70,13 +70,15 @@ def clean_strings(
             working[c] = working[c].fillna("")
             # replace any double quotes with single quotes
             try:
-                mask = working[c].str.contains('"')
+                # replace any " by '
+                mask = working[c].str.contains('"').fillna(False)
                 working.loc[mask, c] = working[c].str.replace('"', "'")[mask]
             except AttributeError or TypeError:
                 pass
             try:
-                # strip extraneous whitespace
-                working[c] = working[c].apply(compress_whitespace)
+                # strip extraneous whitespace from any value recognized as string
+                mask = working[c].apply(lambda x: isinstance(x,str))
+                working.loc[mask,c] = working[c][mask].apply(compress_whitespace)
             except (AttributeError, TypeError):
                 pass
     return working

@@ -136,7 +136,9 @@ class DataLoader:
         """Processes all .ini files in the DataLoader's results directory.
         By default, loads (or reloads) the info from the jurisdiction files
         into the db first. By default, moves files to the DataLoader's archive directory.
-        Returns a post-reporting error dictionary, and a flag to indicate whether all loaded successfully"""
+        Returns a post-reporting error dictionary, and a flag to indicate whether all loaded successfully.
+        (Note: errors initializing loading process (e.g., results file not found) do *not* generate
+        <success> = False, though those errors are reported in <err>"""
         # initialize error dictionary and success flag
         err = None
         success = True
@@ -267,8 +269,7 @@ class DataLoader:
 
                 # if fatal error, print warning
                 if ui.fatal_error(new_err):
-                    print(f"Fatal error; data not loaded from {f}")
-                    success = False
+                    print(f"Fatal error before loading; data not loaded from {f}")
                 # if no fatal error from SDL initialization, continue
                 else:
                     # try to load data
@@ -288,7 +289,7 @@ class DataLoader:
                         )
                     # if there was a fatal load error
                     elif ui.fatal_error(load_error):
-                        print(f"\tFatal errors. {f} and its results file not loaded (and not archived)")
+                        print(f"\tFatal loading errors. {f} and its results file not loaded (and not archived)")
                         success = False
 
                     # if move_files is false and there is no fatal error
