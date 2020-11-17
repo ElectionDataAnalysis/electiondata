@@ -9554,7 +9554,7 @@ ga_2018_census_display_count = [
     },
     {"parent": "Census", "name": "<$30,000", "type": "Income", "order_by": 6},
     {"parent": "Census", "name": "$30,000 to $49,999", "type": "Income", "order_by": 7},
-    {"parent": "Census", "name": "$49,999 to $99,999", "type": "Income", "order_by": 8},
+    {"parent": "Census", "name": "$50,000 to $99,999", "type": "Income", "order_by": 8},
     {
         "parent": "Census",
         "name": "$100,000 to $109,999",
