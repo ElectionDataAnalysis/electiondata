@@ -570,7 +570,7 @@ def create_bar(
             "title"
         ] = f"""{results["count_item_type"].replace("-", " ").title()} Ballots Reported"""
         download_date = db.data_file_download(cursor, election_id, top_ru_id)
-        if results["election"] == "2020 General" and download_date:
+        if db.is_preliminary(cursor, election_id, top_ru_id) and download_date:
             results["title"] = f"""{results["title"]} as of {download_date} (preliminary)""" 
 
         result_list.append(results)

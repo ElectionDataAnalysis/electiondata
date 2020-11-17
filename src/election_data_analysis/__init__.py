@@ -37,6 +37,7 @@ sdl_pars_opt = [
     "CountItemType",
     "ReportingUnit",
     "Contest",
+    "is_preliminary",
 ]
 
 multi_data_loader_pars = [
@@ -373,6 +374,15 @@ class SingleDataLoader:
         ]:
             self.d["aux_data_dir"] = None
 
+        # assign True to is_preliminary if necessary
+        if "is_preliminary" not in self.d.keys() or self.d["is_preliminary"] in [
+            "",
+            "True",
+            "true",
+            None,
+        ]:
+            self.d["is_preliminary"] = True
+
         # change any blank parameters describing the results file to 'none'
         for k in self.d.keys():
             if self.d[k] == "" and k[:8] == "results_":
@@ -444,6 +454,7 @@ class SingleDataLoader:
                     top_reporting_unit_id,
                     election_id,
                     datetime.datetime.now(),
+                    self.d["is_preliminary"],
                 ]
             ],
             columns=[
@@ -455,6 +466,7 @@ class SingleDataLoader:
                 "ReportingUnit_Id",
                 "Election_Id",
                 "created_at",
+                "is_preliminary",
             ],
         )
         data = m.clean_strings(data, ["short_name"])

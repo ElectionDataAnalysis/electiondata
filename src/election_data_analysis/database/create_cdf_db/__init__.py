@@ -14,6 +14,7 @@ from sqlalchemy import (
     String,
     ForeignKey,
     Index,
+    Boolean,
 )
 from sqlalchemy import Date, TIMESTAMP
 from psycopg2 import sql
