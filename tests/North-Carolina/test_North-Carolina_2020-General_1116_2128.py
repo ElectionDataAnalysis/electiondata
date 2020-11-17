@@ -11,17 +11,17 @@ import election_data_analysis as e
 election = "2020 General"
 jurisdiction = 'North Carolina'
 abbr = 'NC'
-total_pres_votes = 5481666  # total of all votes for President
+total_pres_votes = 5523888  # total of all votes for President
 cd = 3  # congressional district
-total_cd_votes = 358780 # total votes in the chosen cd
+total_cd_votes = 362552 # total votes in the chosen cd
 shd = 1   # state house district
-total_shd_votes = 37814
+total_shd_votes = 37987
 ssd =  15  # state senate district
-total_ssd_votes = 123267
+total_ssd_votes = 123598
 single_vote_type = 'early'  # pick any one from your file
-pres_votes_vote_type = 3567688
+pres_votes_vote_type = 3618046
 single_county = 'North Carolina;Bertie County'  # pick any one from your file
-pres_votes_county = 9682  # total votes for pres of that county & vote type
+pres_votes_county = 9815  # total votes for pres of that county & vote type
 
 def test_data_exists(dbname):
     assert e.data_exists(election, jurisdiction, dbname=dbname)
