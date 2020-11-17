@@ -4,3 +4,4 @@ file_name	String
 download_date	Date
 source	String
 note	String
+is_preliminary	Boolean
