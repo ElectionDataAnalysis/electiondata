@@ -1669,10 +1669,24 @@ def is_preliminary(cursor, election_id, jurisdiction_id):
     """ get the preliminary flag from the _datafile table.
     Since this flag doesn't exist yet, parsing the election name for
     2020 because we expect all data for 2020 to be preliminary for awhile."""
-    election = name_from_id(cursor, "Election", election_id)
-    if election.startswith("2020 General"):
-        return True
-    return False
+    q = sql.SQL("""
+        SELECT  DISTINCT is_preliminary
+        FROM    _datafile
+        WHERE   "Election_Id" = %s
+                AND "ReportingUnit_Id" = %s
+        ORDER BY is_preliminary
+        LIMIT   1
+    """
+    )
+    try:
+        cursor.execute(q, [election_id, jurisdiction_id])
+        results = cursor.fetchall()
+        return results[0][0]
+    except Exception as exc:
+        election = name_from_id(cursor, "Election", election_id)
+        if election.startswith("2020 General"):
+            return True
+        return False
 
 
 def read_external(cursor, election_year: int, top_ru_id: int, fields: list, restrict=None):
