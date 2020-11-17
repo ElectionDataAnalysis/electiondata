@@ -1771,17 +1771,20 @@ def check_totals_match_vote_types(
         )
         df_total_type_only = pd.concat([df_candidate, df_ballot])
 
+        # pull all types but total
         df_candidate = aggregate_results(
             election,
             jurisdiction,
             contest_type="Candidate",
             sub_unit_type=sub_unit_type,
+            exclude_redundant_total=True,
             dbname=dbname,
         )
         df_ballot = aggregate_results(
             election,
             jurisdiction,
             contest_type="BallotMeasure",
+            exclude_redundant_total=True,
             sub_unit_type=sub_unit_type,
             dbname=dbname,
         )

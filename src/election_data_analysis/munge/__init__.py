@@ -633,6 +633,26 @@ def good_syntax(s):
     return good
 
 
+def regularize_candidate_names(
+        candidate_column: pd.Series,
+) -> pd.Series:
+    ws = candidate_column.copy()
+
+    mask = ws.str.isupper()
+    # if original is all caps
+    if mask.any():
+        # change to title case
+        ws[mask] = candidate_column[mask].str.title()
+        # TODO test out NameCleaver from SunlightLabs
+        # respect the Irish
+
+    # if original is not all upper case
+    else:
+        # do nothing
+        pass
+    return ws
+
+
 def munge_and_melt(
     mu: jm.Munger, raw: pd.DataFrame, count_cols: List[str], err: Optional[dict]
 ) -> (pd.DataFrame, Optional[dict]):
@@ -887,62 +907,16 @@ def add_selection_id(
     return working, err
 
 
-def raw_elements_to_cdf(
-    session,
-    juris: jm.Jurisdiction,
-    mu: jm.Munger,
-    raw: pd.DataFrame,
-    count_cols: List[str],
-    err: dict,
-    constants: dict,
-) -> dict:
-    """load data from <raw> into the database."""
-    working = raw.copy()
+def row_and_col_sourced_ids(
+        df: pd.DataFrame,
+        juris: jm.Jurisdiction,
+        element_list: list,
+        session,
+) -> (pd.DataFrame, Optional[dict]):
+    """ Append ids to <df> for any row- or column- sourced elements given in <element_list>"""
 
-    try:
-        working, new_err = munge_and_melt(mu, working, count_cols, err)
-        if new_err:
-            err = ui.consolidate_errors([err, new_err])
-            if ui.fatal_error(new_err):
-                return err
-    except Exception as exc:
-        err = ui.add_new_error(
-            err,
-            "system",
-            "munge.raw_elements_to_cdf",
-            f"Unexpected exception during munge_and_melt: {exc}",
-        )
-        return err
-
-    # enter elements from sources outside raw data, including creating id column(s)
-    for k in constants.keys():
-        working = add_constant_column(working, k, constants[k])
-
-    # add Contest_Id (unless it was passed in ids)
-    if "Contest_Id" not in working.columns:
-        try:
-            working, err = add_contest_id(working, juris, err, session)
-        except Exception as exc:
-            err = ui.add_new_error(
-                err,
-                "system",
-                "munge.raw_elements_to_cdf",
-                f"Unexpected exception while adding Contest_Id: {exc}",
-            )
-            return err
-        if ui.fatal_error(err):
-            return err
-
-    # get ids for remaining info sourced from rows and columns (except Selection_Id)
-    element_list = [
-        t
-        for t in mu.cdf_elements.index
-        if (
-            t[-7:] != "Contest"
-            and (t[-9:] != "Selection")
-            and f"{t}_Id" not in constants.keys()
-        )
-    ]
+    err = None
+    working = df.copy()
     for t in element_list:
         try:
             # capture id from db in new column and erase any now-redundant cols
@@ -1016,6 +990,100 @@ def raw_elements_to_cdf(
                 f"Exception ({exc}) while adding internal ids for {t}.",
             )
 
+    return working, err
+
+
+def ensure_total_counts(
+        df: pd.DataFrame,
+        session,
+) -> pd.DataFrame:
+    """Assumes cols of df include Count and CountItemType_Id, OtherCountItemType
+    If there are no records with CountItemType 'total', add records"""
+
+    # find CountItemType_Id for 'total'
+    total_idx = db.name_to_id(session, "CountItemType", "total")
+
+    # find groups that have no total CountItemType
+
+    # add total for each of those groups, but not for others.
+    group_cols = [x for x in df.columns if x not in ["Count","CountItemType_Id","OtherCountItemType"]]
+
+    # get all totals
+    sums = df.groupby(group_cols)["Count"].sum()
+
+    # keep only sums that already involve a total
+    no_total = df.groupby(group_cols)["CountItemType_Id"].apply(list).apply(lambda x: total_idx not in x)
+    sums = sums[no_total]
+    sums_df = sums.reset_index()
+
+    sums_df = add_constant_column(sums_df, "CountItemType_Id", total_idx)
+    sums_df = add_constant_column(sums_df, "OtherCountItemType", "")
+
+    working = pd.concat([df, sums_df])
+
+    return working
+
+
+def raw_elements_to_cdf(
+    session,
+    juris: jm.Jurisdiction,
+    mu: jm.Munger,
+    raw: pd.DataFrame,
+    count_cols: List[str],
+    err: dict,
+    constants: dict,
+) -> dict:
+    """load data from <raw> into the database."""
+    working = raw.copy()
+
+    try:
+        working, new_err = munge_and_melt(mu, working, count_cols, err)
+        if new_err:
+            err = ui.consolidate_errors([err, new_err])
+            if ui.fatal_error(new_err):
+                return err
+    except Exception as exc:
+        err = ui.add_new_error(
+            err,
+            "system",
+            "munge.raw_elements_to_cdf",
+            f"Unexpected exception during munge_and_melt: {exc}",
+        )
+        return err
+
+    # enter elements from sources outside raw data, including creating id column(s)
+    for k in constants.keys():
+        working = add_constant_column(working, k, constants[k])
+
+    # add Contest_Id (unless it was passed in ids)
+    if "Contest_Id" not in working.columns:
+        try:
+            working, err = add_contest_id(working, juris, err, session)
+        except Exception as exc:
+            err = ui.add_new_error(
+                err,
+                "system",
+                "munge.raw_elements_to_cdf",
+                f"Unexpected exception while adding Contest_Id: {exc}",
+            )
+            return err
+        if ui.fatal_error(err):
+            return err
+
+    # get ids for remaining info sourced from rows and columns (except Selection_Id)
+    element_list = [
+        t
+        for t in mu.cdf_elements.index
+        if (
+            t[-7:] != "Contest"
+            and (t[-9:] != "Selection")
+            and f"{t}_Id" not in constants.keys()
+        )
+    ]
+    working, new_err = row_and_col_sourced_ids(working, juris, element_list, session)
+    if new_err:
+        err = ui.consolidate_errors([err, new_err])
+        if ui.fatal_error(new_err):
             return err
 
     # add Selection_Id (combines info from BallotMeasureSelection and CandidateContestSelection)
@@ -1053,6 +1121,7 @@ def raw_elements_to_cdf(
     working = working[vc_cols]
     working, e = clean_count_cols(working, ["Count"])
 
+    working = ensure_total_counts(working, session)
     # TODO there are edge cases where this might include dupes
     #  that should be omitted. E.g., if data mistakenly read twice
     # Sum any rows that were disambiguated (otherwise dupes will be dropped
@@ -1081,26 +1150,6 @@ def raw_elements_to_cdf(
         )
 
     return err
-
-
-def regularize_candidate_names(
-        candidate_column: pd.Series,
-) -> pd.Series:
-    ws = candidate_column.copy()
-
-    mask = ws.str.isupper()
-    # if original is all caps
-    if mask.any():
-        # change to title case
-        ws[mask] = candidate_column[mask].str.title()
-        # TODO test out NameCleaver from SunlightLabs
-        # respect the Irish
-
-    # if original is not all upper case
-    else:
-        # do nothing
-        pass
-    return ws
 
 
 if __name__ == "__main__":
