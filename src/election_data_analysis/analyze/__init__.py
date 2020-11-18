@@ -216,14 +216,12 @@ def create_scatter(
     )
     results["x-count_item_type"] = h_category
     results["y-count_item_type"] = v_category
-    x_title = dedupe_scatter_title(
-        results["x"], results["x-election"], dfh.iloc[0]["Contest"]
+    results["x-title"] = scatter_axis_title(
+        cursor, results["x"], results["x-election"], dfh.iloc[0]["Contest"], jurisdiction_id
     )
-    results["x-title"] = ui.get_contest_type_display(x_title)
-    y_title = dedupe_scatter_title(
-        results["y"], results["y-election"], dfv.iloc[0]["Contest"]
+    results["y-title"] = scatter_axis_title(
+        cursor, results["y"], results["y-election"], dfv.iloc[0]["Contest"], jurisdiction_id
     )
-    results["y-title"] = ui.get_contest_type_display(y_title)
     h_preliminary = db.is_preliminary(cursor, h_election_id, jurisdiction_id)
     v_preliminary = db.is_preliminary(cursor, v_election_id, jurisdiction_id)
     results["preliminary"] = h_preliminary or v_preliminary
@@ -1115,3 +1113,15 @@ def dedupe_scatter_title(category, election, contest):
     if category != contest:
         title = f"{title} - {contest}"
     return title
+
+
+def scatter_axis_title(cursor, category, election, contest, jurisdiction_id):
+    if contest == "Census data":
+        # get the actual year of data here
+        census_year = db.read_external(
+            cursor, int(election[0:4]), jurisdiction_id, ["CensusYear"], restrict=category
+        )["CensusYear"].iloc[0]
+        return f"{category} - {census_year} American Community Survey"
+    else:
+        title = dedupe_scatter_title(category, election, contest)
+        return ui.get_contest_type_display(title)

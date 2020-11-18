@@ -10744,7 +10744,7 @@ ga_2018_census_scatter = {
     "x-count_item_type": "absentee-mail",
     "y-count_item_type": "total",
     "x-title": "Stacey Abrams - 2018 General - GA Governor",
-    "y-title": "White - 2018 General - Census data",
+    "y-title": "White - 2018 American Community Survey",
     "preliminary": False,
 }
 nc_2018_category = [
