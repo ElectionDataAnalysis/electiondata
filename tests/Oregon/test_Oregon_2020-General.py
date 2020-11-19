@@ -15,9 +15,9 @@ total_pres_votes = 2349187  # total of all votes for President
 cd = 3  # congressional district
 total_cd_votes = 467590  # total votes in the chosen cd
 shd = 1   # state house district
-total_shd_votes = -1
-ssd = 15  # state senate district
-total_ssd_votes = -1
+total_shd_votes = 40521
+ssd = 9  # state senate district
+total_ssd_votes = 75196
 single_vote_type = 'total'  # pick any one from your file
 pres_votes_vote_type = -1
 single_county = 'Oregon;Multnomah County'  # pick any one from your file
@@ -49,7 +49,7 @@ def test_congressional_totals(dbname):
         == total_cd_votes
     )
 
-"""
+
 def test_state_senate_totals(dbname):
     assert (e.contest_total(
         election,
@@ -75,7 +75,7 @@ def test_state_house_totals(dbname):
 def test_standard_vote_types(dbname):
     assert e.check_count_types_standard(election, jurisdiction, dbname=dbname)
 
-
+"""
 def test_vote_type_counts_consistent(dbname):
     assert e.check_totals_match_vote_types(election, jurisdiction, dbname=dbname)
 
