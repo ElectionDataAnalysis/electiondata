@@ -37,6 +37,7 @@ sdl_pars_opt = [
     "CountItemType",
     "ReportingUnit",
     "Contest",
+    "is_preliminary",
 ]
 
 multi_data_loader_pars = [
@@ -136,7 +137,9 @@ class DataLoader:
         """Processes all .ini files in the DataLoader's results directory.
         By default, loads (or reloads) the info from the jurisdiction files
         into the db first. By default, moves files to the DataLoader's archive directory.
-        Returns a post-reporting error dictionary, and a flag to indicate whether all loaded successfully"""
+        Returns a post-reporting error dictionary, and a flag to indicate whether all loaded successfully.
+        (Note: errors initializing loading process (e.g., results file not found) do *not* generate
+        <success> = False, though those errors are reported in <err>"""
         # initialize error dictionary and success flag
         err = None
         success = True
@@ -267,8 +270,7 @@ class DataLoader:
 
                 # if fatal error, print warning
                 if ui.fatal_error(new_err):
-                    print(f"Fatal error; data not loaded from {f}")
-                    success = False
+                    print(f"Fatal error before loading; data not loaded from {f}")
                 # if no fatal error from SDL initialization, continue
                 else:
                     # try to load data
@@ -288,7 +290,7 @@ class DataLoader:
                         )
                     # if there was a fatal load error
                     elif ui.fatal_error(load_error):
-                        print(f"\tFatal errors. {f} and its results file not loaded (and not archived)")
+                        print(f"\tFatal loading errors. {f} and its results file not loaded (and not archived)")
                         success = False
 
                     # if move_files is false and there is no fatal error
@@ -372,6 +374,15 @@ class SingleDataLoader:
         ]:
             self.d["aux_data_dir"] = None
 
+        # assign True to is_preliminary if necessary
+        if "is_preliminary" not in self.d.keys() or self.d["is_preliminary"] in [
+            "",
+            "True",
+            "true",
+            None,
+        ]:
+            self.d["is_preliminary"] = True
+
         # change any blank parameters describing the results file to 'none'
         for k in self.d.keys():
             if self.d[k] == "" and k[:8] == "results_":
@@ -443,6 +454,7 @@ class SingleDataLoader:
                     top_reporting_unit_id,
                     election_id,
                     datetime.datetime.now(),
+                    self.d["is_preliminary"],
                 ]
             ],
             columns=[
@@ -454,6 +466,7 @@ class SingleDataLoader:
                 "ReportingUnit_Id",
                 "Election_Id",
                 "created_at",
+                "is_preliminary",
             ],
         )
         data = m.clean_strings(data, ["short_name"])
@@ -1213,7 +1226,7 @@ class JurisdictionPrepper:
                 error = ui.consolidate_errors([error, new_err])
 
             if not ui.fatal_error(error):
-                if d["aux_data_dir"] is None or d["aux_data_dir"] == "":
+                if "aux_data_dir" in d.keys() and (d["aux_data_dir"] is None or d["aux_data_dir"] == ""):
                     aux_data_path = None
                 else:
                     aux_data_path = os.path.join(dir, d["aux_data_dir"])
@@ -1575,6 +1588,8 @@ class Analyzer:
             return "contests", input_str.replace("Contest", "").strip()
         elif input_str.startswith("Party"):
             return "parties", input_str.replace("Party", "").strip()
+        elif input_str == "Census data":
+            return "census", "total"
 
     def export_outlier_data(
         self,
@@ -1709,6 +1724,33 @@ def data_exists(election, jurisdiction, p_path=None, dbname=None):
         return True
 
 
+def census_data_exists(election, jurisdiction, p_path=None, dbname=None):
+    an = Analyzer(param_file=p_path, dbname=dbname)
+    if not an:
+        return False
+
+    reporting_unit_id = db.name_to_id(an.session, "ReportingUnit", jurisdiction)
+
+    # if the database doesn't have the reporting unit
+    if not reporting_unit_id:
+        # data doesn't exist
+        return False
+
+    connection = an.session.bind.raw_connection()
+    cursor = connection.cursor()
+    df = db.read_external(cursor, int(election[0:4]), reporting_unit_id, ["Label"])
+    cursor.close()
+    
+    # if no contest found
+    if df.empty:
+        # no data exists.
+        return False
+    # otherwise
+    else:
+        # then data exists!
+        return True
+
+
 def check_totals_match_vote_types(
         election, 
         jurisdiction, 
@@ -1741,17 +1783,20 @@ def check_totals_match_vote_types(
         )
         df_total_type_only = pd.concat([df_candidate, df_ballot])
 
+        # pull all types but total
         df_candidate = aggregate_results(
             election,
             jurisdiction,
             contest_type="Candidate",
             sub_unit_type=sub_unit_type,
+            exclude_redundant_total=True,
             dbname=dbname,
         )
         df_ballot = aggregate_results(
             election,
             jurisdiction,
             contest_type="BallotMeasure",
+            exclude_redundant_total=True,
             sub_unit_type=sub_unit_type,
             dbname=dbname,
         )
