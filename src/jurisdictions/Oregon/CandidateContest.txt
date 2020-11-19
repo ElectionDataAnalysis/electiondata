@@ -1,0 +1,103 @@
+Name	NumberElected	Office	PrimaryParty
+OR House District 1	1	OR House District 1	
+OR House District 2	1	OR House District 2	
+OR House District 3	1	OR House District 3	
+OR House District 4	1	OR House District 4	
+OR House District 5	1	OR House District 5	
+OR House District 6	1	OR House District 6	
+OR House District 7	1	OR House District 7	
+OR House District 8	1	OR House District 8	
+OR House District 9	1	OR House District 9	
+OR House District 10	1	OR House District 10	
+OR House District 11	1	OR House District 11	
+OR House District 12	1	OR House District 12	
+OR House District 13	1	OR House District 13	
+OR House District 14	1	OR House District 14	
+OR House District 15	1	OR House District 15	
+OR House District 16	1	OR House District 16	
+OR House District 17	1	OR House District 17	
+OR House District 18	1	OR House District 18	
+OR House District 19	1	OR House District 19	
+OR House District 20	1	OR House District 20	
+OR House District 21	1	OR House District 21	
+OR House District 22	1	OR House District 22	
+OR House District 23	1	OR House District 23	
+OR House District 24	1	OR House District 24	
+OR House District 25	1	OR House District 25	
+OR House District 26	1	OR House District 26	
+OR House District 27	1	OR House District 27	
+OR House District 28	1	OR House District 28	
+OR House District 29	1	OR House District 29	
+OR House District 30	1	OR House District 30	
+OR House District 31	1	OR House District 31	
+OR House District 32	1	OR House District 32	
+OR House District 33	1	OR House District 33	
+OR House District 34	1	OR House District 34	
+OR House District 35	1	OR House District 35	
+OR House District 36	1	OR House District 36	
+OR House District 37	1	OR House District 37	
+OR House District 38	1	OR House District 38	
+OR House District 39	1	OR House District 39	
+OR House District 40	1	OR House District 40	
+OR House District 41	1	OR House District 41	
+OR House District 42	1	OR House District 42	
+OR House District 43	1	OR House District 43	
+OR House District 44	1	OR House District 44	
+OR House District 45	1	OR House District 45	
+OR House District 46	1	OR House District 46	
+OR House District 47	1	OR House District 47	
+OR House District 48	1	OR House District 48	
+OR House District 49	1	OR House District 49	
+OR House District 50	1	OR House District 50	
+OR House District 51	1	OR House District 51	
+OR House District 52	1	OR House District 52	
+OR House District 53	1	OR House District 53	
+OR House District 54	1	OR House District 54	
+OR House District 55	1	OR House District 55	
+OR House District 56	1	OR House District 56	
+OR House District 57	1	OR House District 57	
+OR House District 58	1	OR House District 58	
+OR House District 59	1	OR House District 59	
+OR House District 60	1	OR House District 60	
+OR Senate District 1	1	OR Senate District 1	
+OR Senate District 2	1	OR Senate District 2	
+OR Senate District 3	1	OR Senate District 3	
+OR Senate District 4	1	OR Senate District 4	
+OR Senate District 5	1	OR Senate District 5	
+OR Senate District 6	1	OR Senate District 6	
+OR Senate District 7	1	OR Senate District 7	
+OR Senate District 8	1	OR Senate District 8	
+OR Senate District 9	1	OR Senate District 9	
+OR Senate District 10	1	OR Senate District 10	
+OR Senate District 11	1	OR Senate District 11	
+OR Senate District 12	1	OR Senate District 12	
+OR Senate District 13	1	OR Senate District 13	
+OR Senate District 14	1	OR Senate District 14	
+OR Senate District 15	1	OR Senate District 15	
+OR Senate District 16	1	OR Senate District 16	
+OR Senate District 17	1	OR Senate District 17	
+OR Senate District 18	1	OR Senate District 18	
+OR Senate District 19	1	OR Senate District 19	
+OR Senate District 20	1	OR Senate District 20	
+OR Senate District 21	1	OR Senate District 21	
+OR Senate District 22	1	OR Senate District 22	
+OR Senate District 23	1	OR Senate District 23	
+OR Senate District 24	1	OR Senate District 24	
+OR Senate District 25	1	OR Senate District 25	
+OR Senate District 26	1	OR Senate District 26	
+OR Senate District 27	1	OR Senate District 27	
+OR Senate District 28	1	OR Senate District 28	
+OR Senate District 29	1	OR Senate District 29	
+OR Senate District 30	1	OR Senate District 30	
+US House OR District 1	1	US House OR District 1	
+US House OR District 2	1	US House OR District 2	
+US House OR District 3	1	US House OR District 3	
+US House OR District 4	1	US House OR District 4	
+US House OR District 5	1	US House OR District 5	
+US President (OR)	1	US President (OR)	
+OR Governor	1	OR Governor	
+US Senate OR	1	US Senate OR	
+OR Attorney General	1	OR Attorney General	
+OR Lieutenant Governor	1	OR Lieutenant Governor	
+OR Treasurer	1	OR Treasurer	
+OR Secretary of State	1	OR Secretary of State	

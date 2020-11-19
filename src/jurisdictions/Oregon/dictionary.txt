@@ -1,0 +1,356 @@
+cdf_element	cdf_internal_name	raw_identifier_value
+CandidateContest	OR House District 1	STATE REPRESENTATIVE, 1ST DISTRICT
+CandidateContest	OR House District 2	STATE REPRESENTATIVE, 2ND DISTRICT
+CandidateContest	OR House District 3	STATE REPRESENTATIVE, 3RD DISTRICT
+CandidateContest	OR House District 4	STATE REPRESENTATIVE, 4TH DISTRICT
+CandidateContest	OR House District 5	STATE REPRESENTATIVE, 5TH DISTRICT
+CandidateContest	OR House District 6	STATE REPRESENTATIVE, 6TH DISTRICT
+CandidateContest	OR House District 7	STATE REPRESENTATIVE, 7TH DISTRICT
+CandidateContest	OR House District 8	STATE REPRESENTATIVE, 8TH DISTRICT
+CandidateContest	OR House District 9	STATE REPRESENTATIVE, 9TH DISTRICT
+CandidateContest	OR House District 10	STATE REPRESENTATIVE, 10TH DISTRICT
+CandidateContest	OR House District 11	STATE REPRESENTATIVE, 11TH DISTRICT
+CandidateContest	OR House District 12	STATE REPRESENTATIVE, 12TH DISTRICT
+CandidateContest	OR House District 13	STATE REPRESENTATIVE, 13TH DISTRICT
+CandidateContest	OR House District 14	STATE REPRESENTATIVE, 14TH DISTRICT
+CandidateContest	OR House District 15	STATE REPRESENTATIVE, 15TH DISTRICT
+CandidateContest	OR House District 16	STATE REPRESENTATIVE, 16TH DISTRICT
+CandidateContest	OR House District 17	STATE REPRESENTATIVE, 17TH DISTRICT
+CandidateContest	OR House District 18	STATE REPRESENTATIVE, 18TH DISTRICT
+CandidateContest	OR House District 19	STATE REPRESENTATIVE, 19TH DISTRICT
+CandidateContest	OR House District 20	STATE REPRESENTATIVE, 20TH DISTRICT
+CandidateContest	OR House District 21	STATE REPRESENTATIVE, 21ST DISTRICT
+CandidateContest	OR House District 22	STATE REPRESENTATIVE, 22ND DISTRICT
+CandidateContest	OR House District 23	STATE REPRESENTATIVE, 23RD DISTRICT
+CandidateContest	OR House District 24	STATE REPRESENTATIVE, 24TH DISTRICT
+CandidateContest	OR House District 25	STATE REPRESENTATIVE, 25TH DISTRICT
+CandidateContest	OR House District 26	STATE REPRESENTATIVE, 26TH DISTRICT
+CandidateContest	OR House District 27	STATE REPRESENTATIVE, 27TH DISTRICT
+CandidateContest	OR House District 28	STATE REPRESENTATIVE, 28TH DISTRICT
+CandidateContest	OR House District 29	STATE REPRESENTATIVE, 29TH DISTRICT
+CandidateContest	OR House District 30	STATE REPRESENTATIVE, 30TH DISTRICT
+CandidateContest	OR House District 31	STATE REPRESENTATIVE, 31ST DISTRICT
+CandidateContest	OR House District 32	STATE REPRESENTATIVE, 32ND DISTRICT
+CandidateContest	OR House District 33	STATE REPRESENTATIVE, 33RD DISTRICT
+CandidateContest	OR House District 34	STATE REPRESENTATIVE, 34TH DISTRICT
+CandidateContest	OR House District 35	STATE REPRESENTATIVE, 35TH DISTRICT
+CandidateContest	OR House District 36	STATE REPRESENTATIVE, 36TH DISTRICT
+CandidateContest	OR House District 37	STATE REPRESENTATIVE, 37TH DISTRICT
+CandidateContest	OR House District 38	STATE REPRESENTATIVE, 38TH DISTRICT
+CandidateContest	OR House District 39	STATE REPRESENTATIVE, 39TH DISTRICT
+CandidateContest	OR House District 40	STATE REPRESENTATIVE, 40TH DISTRICT
+CandidateContest	OR House District 41	STATE REPRESENTATIVE, 41ST DISTRICT
+CandidateContest	OR House District 42	STATE REPRESENTATIVE, 42ND DISTRICT
+CandidateContest	OR House District 43	STATE REPRESENTATIVE, 43RD DISTRICT
+CandidateContest	OR House District 44	STATE REPRESENTATIVE, 44TH DISTRICT
+CandidateContest	OR House District 45	STATE REPRESENTATIVE, 45TH DISTRICT
+CandidateContest	OR House District 46	STATE REPRESENTATIVE, 46TH DISTRICT
+CandidateContest	OR House District 47	STATE REPRESENTATIVE, 47TH DISTRICT
+CandidateContest	OR House District 48	STATE REPRESENTATIVE, 48TH DISTRICT
+CandidateContest	OR House District 49	STATE REPRESENTATIVE, 49TH DISTRICT
+CandidateContest	OR House District 50	STATE REPRESENTATIVE, 50TH DISTRICT
+CandidateContest	OR House District 51	STATE REPRESENTATIVE, 51ST DISTRICT
+CandidateContest	OR House District 52	STATE REPRESENTATIVE, 52ND DISTRICT
+CandidateContest	OR House District 53	STATE REPRESENTATIVE, 53RD DISTRICT
+CandidateContest	OR House District 54	STATE REPRESENTATIVE, 54TH DISTRICT
+CandidateContest	OR House District 55	STATE REPRESENTATIVE, 55TH DISTRICT
+CandidateContest	OR House District 56	STATE REPRESENTATIVE, 56TH DISTRICT
+CandidateContest	OR House District 57	STATE REPRESENTATIVE, 57TH DISTRICT
+CandidateContest	OR House District 58	STATE REPRESENTATIVE, 58TH DISTRICT
+CandidateContest	OR House District 59	STATE REPRESENTATIVE, 59TH DISTRICT
+CandidateContest	OR House District 60	STATE REPRESENTATIVE, 60TH DISTRICT
+CandidateContest	OR Senate District 1	STATE SENATOR, 1ST DISTRICT
+CandidateContest	OR Senate District 2	STATE SENATOR, 2ND DISTRICT
+CandidateContest	OR Senate District 3	STATE SENATOR, 3RD DISTRICT
+CandidateContest	OR Senate District 4	STATE SENATOR, 4TH DISTRICT
+CandidateContest	OR Senate District 5	STATE SENATOR, 5TH DISTRICT
+CandidateContest	OR Senate District 6	STATE SENATOR, 6TH DISTRICT
+CandidateContest	OR Senate District 7	STATE SENATOR, 7TH DISTRICT
+CandidateContest	OR Senate District 8	STATE SENATOR, 8TH DISTRICT
+CandidateContest	OR Senate District 9	STATE SENATOR, 9TH DISTRICT
+CandidateContest	OR Senate District 10	STATE SENATOR, 10TH DISTRICT
+CandidateContest	OR Senate District 11	STATE SENATOR, 11TH DISTRICT
+CandidateContest	OR Senate District 12	STATE SENATOR, 12TH DISTRICT
+CandidateContest	OR Senate District 13	STATE SENATOR, 13TH DISTRICT
+CandidateContest	OR Senate District 14	STATE SENATOR, 14TH DISTRICT
+CandidateContest	OR Senate District 15	STATE SENATOR, 15TH DISTRICT
+CandidateContest	OR Senate District 16	STATE SENATOR, 16TH DISTRICT
+CandidateContest	OR Senate District 17	STATE SENATOR, 17TH DISTRICT
+CandidateContest	OR Senate District 18	STATE SENATOR, 18TH DISTRICT
+CandidateContest	OR Senate District 19	STATE SENATOR, 19TH DISTRICT
+CandidateContest	OR Senate District 20	STATE SENATOR, 20TH DISTRICT
+CandidateContest	OR Senate District 21	STATE SENATOR, 21TH DISTRICT
+CandidateContest	OR Senate District 22	STATE SENATOR, 22TH DISTRICT
+CandidateContest	OR Senate District 23	STATE SENATOR, 23TH DISTRICT
+CandidateContest	OR Senate District 24	STATE SENATOR, 24TH DISTRICT
+CandidateContest	OR Senate District 25	STATE SENATOR, 25TH DISTRICT
+CandidateContest	OR Senate District 26	STATE SENATOR, 26TH DISTRICT
+CandidateContest	OR Senate District 27	STATE SENATOR, 27TH DISTRICT
+CandidateContest	OR Senate District 28	STATE SENATOR, 28TH DISTRICT
+CandidateContest	OR Senate District 29	STATE SENATOR, 29TH DISTRICT
+CandidateContest	OR Senate District 30	STATE SENATOR, 30TH DISTRICT
+CandidateContest	US House OR District 1	US REPRESENTATIVE, 1ST DISTRICT
+CandidateContest	US House OR District 2	US REPRESENTATIVE, 2ND DISTRICT
+CandidateContest	US House OR District 3	US REPRESENTATIVE, 3RD DISTRICT
+CandidateContest	US House OR District 4	US REPRESENTATIVE, 4TH DISTRICT
+CandidateContest	US House OR District 5	US REPRESENTATIVE, 5TH DISTRICT
+CandidateContest	US President (OR)	PRESIDENT AND VICE PRESIDENT
+CandidateContest	US Senate OR	US SENATOR
+CandidateContest	OR Attorney General	ATTORNEY GENERAL
+CandidateContest	OR Treasurer	STATE TREASURER
+CandidateContest	OR Secretary of State	SECRETARY OF STATE
+Election	2020 General	2020 General
+Election	2020 Primary	2020 Primary
+Election	2018 General	2018 General
+Election	2016 General	2016 General
+Party	Democratic Party	DEMOCRAT
+Party	Libertarian Party	LIBERTARIAN
+Party	Pacific Green Party	PACIFIC GREEN
+Party	Progressive Party	PROGRESSIVE
+Party	Republican Party	REPUBLICAN
+Party	Democratic Party	DEMOCRAT, INDEPENDENT, WORKING FAMILIES
+Party	Progressive Party	PACIFIC GREEN, PROGRESSIVE
+Party	Democratic Party	DEMOCRAT, WORKING FAMILIES
+Party	Republican Party	REPUBLICAN, INDEPENDENT
+Party	Constitution Party	CONSTITUTION
+Party	Independent Party	INDEPENDENT, PROGRESSIVE, PACIFIC GREEN
+Party	Republican Party	REPUBLICAN, LIBERTARIAN
+Party	None Party	NONPARTISAN INCUMBENT
+Party	None Party	NONPARTISAN
+ReportingUnit	Oregon;OR House District 1	Oregon;OR House District 1
+ReportingUnit	Oregon;OR House District 2	Oregon;OR House District 2
+ReportingUnit	Oregon;OR House District 3	Oregon;OR House District 3
+ReportingUnit	Oregon;OR House District 4	Oregon;OR House District 4
+ReportingUnit	Oregon;OR House District 5	Oregon;OR House District 5
+ReportingUnit	Oregon;OR House District 6	Oregon;OR House District 6
+ReportingUnit	Oregon;OR House District 7	Oregon;OR House District 7
+ReportingUnit	Oregon;OR House District 8	Oregon;OR House District 8
+ReportingUnit	Oregon;OR House District 9	Oregon;OR House District 9
+ReportingUnit	Oregon;OR House District 10	Oregon;OR House District 10
+ReportingUnit	Oregon;OR House District 11	Oregon;OR House District 11
+ReportingUnit	Oregon;OR House District 12	Oregon;OR House District 12
+ReportingUnit	Oregon;OR House District 13	Oregon;OR House District 13
+ReportingUnit	Oregon;OR House District 14	Oregon;OR House District 14
+ReportingUnit	Oregon;OR House District 15	Oregon;OR House District 15
+ReportingUnit	Oregon;OR House District 16	Oregon;OR House District 16
+ReportingUnit	Oregon;OR House District 17	Oregon;OR House District 17
+ReportingUnit	Oregon;OR House District 18	Oregon;OR House District 18
+ReportingUnit	Oregon;OR House District 19	Oregon;OR House District 19
+ReportingUnit	Oregon;OR House District 20	Oregon;OR House District 20
+ReportingUnit	Oregon;OR House District 21	Oregon;OR House District 21
+ReportingUnit	Oregon;OR House District 22	Oregon;OR House District 22
+ReportingUnit	Oregon;OR House District 23	Oregon;OR House District 23
+ReportingUnit	Oregon;OR House District 24	Oregon;OR House District 24
+ReportingUnit	Oregon;OR House District 25	Oregon;OR House District 25
+ReportingUnit	Oregon;OR House District 26	Oregon;OR House District 26
+ReportingUnit	Oregon;OR House District 27	Oregon;OR House District 27
+ReportingUnit	Oregon;OR House District 28	Oregon;OR House District 28
+ReportingUnit	Oregon;OR House District 29	Oregon;OR House District 29
+ReportingUnit	Oregon;OR House District 30	Oregon;OR House District 30
+ReportingUnit	Oregon;OR House District 31	Oregon;OR House District 31
+ReportingUnit	Oregon;OR House District 32	Oregon;OR House District 32
+ReportingUnit	Oregon;OR House District 33	Oregon;OR House District 33
+ReportingUnit	Oregon;OR House District 34	Oregon;OR House District 34
+ReportingUnit	Oregon;OR House District 35	Oregon;OR House District 35
+ReportingUnit	Oregon;OR House District 36	Oregon;OR House District 36
+ReportingUnit	Oregon;OR House District 37	Oregon;OR House District 37
+ReportingUnit	Oregon;OR House District 38	Oregon;OR House District 38
+ReportingUnit	Oregon;OR House District 39	Oregon;OR House District 39
+ReportingUnit	Oregon;OR House District 40	Oregon;OR House District 40
+ReportingUnit	Oregon;OR House District 41	Oregon;OR House District 41
+ReportingUnit	Oregon;OR House District 42	Oregon;OR House District 42
+ReportingUnit	Oregon;OR House District 43	Oregon;OR House District 43
+ReportingUnit	Oregon;OR House District 44	Oregon;OR House District 44
+ReportingUnit	Oregon;OR House District 45	Oregon;OR House District 45
+ReportingUnit	Oregon;OR House District 46	Oregon;OR House District 46
+ReportingUnit	Oregon;OR House District 47	Oregon;OR House District 47
+ReportingUnit	Oregon;OR House District 48	Oregon;OR House District 48
+ReportingUnit	Oregon;OR House District 49	Oregon;OR House District 49
+ReportingUnit	Oregon;OR House District 50	Oregon;OR House District 50
+ReportingUnit	Oregon;OR House District 51	Oregon;OR House District 51
+ReportingUnit	Oregon;OR House District 52	Oregon;OR House District 52
+ReportingUnit	Oregon;OR House District 53	Oregon;OR House District 53
+ReportingUnit	Oregon;OR House District 54	Oregon;OR House District 54
+ReportingUnit	Oregon;OR House District 55	Oregon;OR House District 55
+ReportingUnit	Oregon;OR House District 56	Oregon;OR House District 56
+ReportingUnit	Oregon;OR House District 57	Oregon;OR House District 57
+ReportingUnit	Oregon;OR House District 58	Oregon;OR House District 58
+ReportingUnit	Oregon;OR House District 59	Oregon;OR House District 59
+ReportingUnit	Oregon;OR House District 60	Oregon;OR House District 60
+ReportingUnit	Oregon;OR Senate District 1	Oregon;OR Senate District 1
+ReportingUnit	Oregon;OR Senate District 2	Oregon;OR Senate District 2
+ReportingUnit	Oregon;OR Senate District 3	Oregon;OR Senate District 3
+ReportingUnit	Oregon;OR Senate District 4	Oregon;OR Senate District 4
+ReportingUnit	Oregon;OR Senate District 5	Oregon;OR Senate District 5
+ReportingUnit	Oregon;OR Senate District 6	Oregon;OR Senate District 6
+ReportingUnit	Oregon;OR Senate District 7	Oregon;OR Senate District 7
+ReportingUnit	Oregon;OR Senate District 8	Oregon;OR Senate District 8
+ReportingUnit	Oregon;OR Senate District 9	Oregon;OR Senate District 9
+ReportingUnit	Oregon;OR Senate District 10	Oregon;OR Senate District 10
+ReportingUnit	Oregon;OR Senate District 11	Oregon;OR Senate District 11
+ReportingUnit	Oregon;OR Senate District 12	Oregon;OR Senate District 12
+ReportingUnit	Oregon;OR Senate District 13	Oregon;OR Senate District 13
+ReportingUnit	Oregon;OR Senate District 14	Oregon;OR Senate District 14
+ReportingUnit	Oregon;OR Senate District 15	Oregon;OR Senate District 15
+ReportingUnit	Oregon;OR Senate District 16	Oregon;OR Senate District 16
+ReportingUnit	Oregon;OR Senate District 17	Oregon;OR Senate District 17
+ReportingUnit	Oregon;OR Senate District 18	Oregon;OR Senate District 18
+ReportingUnit	Oregon;OR Senate District 19	Oregon;OR Senate District 19
+ReportingUnit	Oregon;OR Senate District 20	Oregon;OR Senate District 20
+ReportingUnit	Oregon;OR Senate District 21	Oregon;OR Senate District 21
+ReportingUnit	Oregon;OR Senate District 22	Oregon;OR Senate District 22
+ReportingUnit	Oregon;OR Senate District 23	Oregon;OR Senate District 23
+ReportingUnit	Oregon;OR Senate District 24	Oregon;OR Senate District 24
+ReportingUnit	Oregon;OR Senate District 25	Oregon;OR Senate District 25
+ReportingUnit	Oregon;OR Senate District 26	Oregon;OR Senate District 26
+ReportingUnit	Oregon;OR Senate District 27	Oregon;OR Senate District 27
+ReportingUnit	Oregon;OR Senate District 28	Oregon;OR Senate District 28
+ReportingUnit	Oregon;OR Senate District 29	Oregon;OR Senate District 29
+ReportingUnit	Oregon;OR Senate District 30	Oregon;OR Senate District 30
+ReportingUnit	Oregon;US House OR District 1	Oregon;US House OR District 1
+ReportingUnit	Oregon;US House OR District 2	Oregon;US House OR District 2
+ReportingUnit	Oregon;US House OR District 3	Oregon;US House OR District 3
+ReportingUnit	Oregon;US House OR District 4	Oregon;US House OR District 4
+ReportingUnit	Oregon;US House OR District 5	Oregon;US House OR District 5
+ReportingUnit	Oregon	Oregon
+Candidate	Joseph R Biden	JOSEPH R BIDEN / KAMALA D HARRIS
+Candidate	Jo Jorgensen	JO JORGENSEN / JEREMY (SPIKE) COHEN
+Candidate	Howie Hawkins	HOWIE HAWKINS / ANGELA WALKER
+Candidate	Dario Hunter	DARIO HUNTER / DAWN NEPTUNE ADAMS
+Candidate	Donald J Trump	DONALD J TRUMP / MICHAEL R PENCE
+Candidate	Jeff Merkley	JEFF MERKLEY
+Candidate	Gary Dye	GARY DYE
+Candidate	Ibrahim A Taher	IBRAHIM A TAHER
+Candidate	Jo Rae Perkins	JO RAE PERKINS
+Candidate	Alex Spenser	ALEX SPENSER
+Candidate	Robert Werch	ROBERT WERCH
+Candidate	Cliff Bentz	CLIFF BENTZ
+Candidate	Shemia Fagan	SHEMIA FAGAN
+Candidate	Kyle Markley	KYLE MARKLEY
+Candidate	Nathalie Paravicini	NATHALIE PARAVICINI
+Candidate	Kim Thatcher	KIM THATCHER
+Candidate	Michael P Marsh	MICHAEL P MARSH
+Candidate	Tobias Read	TOBIAS READ
+Candidate	Chris Henry	CHRIS HENRY
+Candidate	Jeff Gudman	JEFF GUDMAN
+Candidate	Ellen Rosenblum	ELLEN ROSENBLUM
+Candidate	Lars D H Hedbor	LARS D H HEDBOR
+Candidate	Michael Cross	MICHAEL CROSS
+Candidate	Carina M Miller	CARINA M MILLER
+Candidate	Lynn P Findley	LYNN P FINDLEY
+Candidate	Beth E Spell	BETH E SPELL
+Candidate	Mark Owens	MARK OWENS
+Candidate	Matt Shirtcliff	MATT SHIRTCLIFF
+Candidate	Travis Ash	TRAVIS ASH
+Candidate	Betty J Milliman	BETTY J MILLIMAN
+Candidate	Kerry Mcquisten	KERRY MCQUISTEN
+Candidate	Johnny Waggoner Sr	JOHNNY WAGGONER SR
+Candidate	James C Thomas	JAMES C THOMAS
+Candidate	Arvid E Andersen	ARVID E ANDERSEN
+Candidate	Shane Alderson	SHANE ALDERSON
+Candidate	Doni Bruland	DONI BRULAND
+Candidate	Damon Rose	DAMON ROSE
+Candidate	Annie Croucher	ANNIE CROUCHER
+Candidate	Joanna Dixon	JOANNA DIXON
+Candidate	Jason Spriet	JASON SPRIET
+Candidate	Gretchen Stadler	GRETCHEN STADLER
+Candidate	Heather Sells	HEATHER SELLS
+Candidate	Brian Pound	BRIAN POUND
+Candidate	James H Brown	JAMES H BROWN
+Candidate	Dennis Anthony	DENNIS ANTHONY
+Candidate	Ken Bain	KEN BAIN
+Candidate	Peter Hall	PETER HALL
+Candidate	No Candidate Filed	NO CANDIDATE FILED
+Candidate	Alan J Hanley	ALAN J HANLEY
+Candidate	Thomas A Trujillo	THOMAS A TRUJILLO
+Candidate	Tony Alexander	TONY ALEXANDER
+Candidate	Wade Boxberger	WADE BOXBERGER
+Candidate	Kevin Jones	KEVIN JONES
+Candidate	Patrick L Lattin	PATRICK L LATTIN
+Candidate	Faith Powell	FAITH POWELL
+Candidate	Nancy L Nelson	NANCY L NELSON
+Candidate	Deloris Dennis	DELORIS DENNIS
+Candidate	Jennifer Lake	JENNIFER LAKE
+Candidate	Greg Lucas	GREG LUCAS
+Candidate	Marsha Demaris	MARSHA DEMARIS
+Candidate	Christopher L Garrett	CHRISTOPHER L GARRETT
+Candidate	Jacqueline S Kamins	JACQUELINE S KAMINS
+Candidate	Rick Jackson	RICK JACKSON
+Candidate	Ronald R Still Jr	RONALD R STILL JR
+Candidate	Deryl Leggett	DERYL LEGGETT
+Candidate	Tracy Lehman	TRACY LEHMAN
+Candidate	Joel Rohner	JOEL ROHNER
+Candidate	Dean Defrees	DEAN DEFREES
+Candidate	Tim A Kerns	TIM A KERNS
+Candidate	Skyler Martin	SKYLER MARTIN
+Candidate	Peter Defazio	PETER DEFAZIO
+Candidate	Daniel Hoffay	DANIEL HOFFAY
+Candidate	Alek Skarlatos	ALEK SKARLATOS
+Candidate	Kurt Schrader	KURT SCHRADER
+Candidate	Matthew James Rix	MATTHEW JAMES RIX
+Candidate	Amy Ryan Courser	AMY RYAN COURSER
+Candidate	Bernadette Hansen	BERNADETTE HANSEN
+Candidate	Brian J Boquist	BRIAN J BOQUIST
+Candidate	Miriam G Cummins	MIRIAM G CUMMINS
+Candidate	Shelly Boshart Davis	SHELLY BOSHART DAVIS
+Candidate	Dan Rayfield	DAN RAYFIELD
+Candidate	Jason Hughes	JASON HUGHES
+Candidate	Xan Augerot	XAN AUGEROT
+Candidate	Mike Beilstein	MIKE BEILSTEIN
+Candidate	Tom Cordier	TOM CORDIER
+Candidate	Nancy V Wyse	NANCY V WYSE
+Candidate	Cody Serdar	CODY SERDAR
+Candidate	John E Sarna	JOHN E SARNA
+Candidate	Joan E Demarest	JOAN E DEMAREST
+Candidate	Bill Currier	BILL CURRIER
+Candidate	Sean K Scorvo	SEAN K SCORVO
+Candidate	Scott D Clawson	SCOTT D CLAWSON
+Candidate	Alex Polikoff	ALEX POLIKOFF
+Candidate	Mike Nearman	MIKE NEARMAN
+Candidate	Alan W Rowe	ALAN W ROWE
+Candidate	Sharon Konopa	SHARON KONOPA
+Candidate	Alex Johnson Ii	ALEX JOHNSON II
+Candidate	Keith Kolkow	KEITH KOLKOW
+Candidate	Matilda Novak	MATILDA NOVAK
+Candidate	Sean Knowles	SEAN KNOWLES
+Candidate	Jan Napack	JAN NAPACK
+Candidate	Charles F Maughan	CHARLES F MAUGHAN
+Candidate	Hyatt Lytle	HYATT LYTLE
+Candidate	Gabe Shepherd	GABE SHEPHERD
+Candidate	Charlyn Ellis	CHARLYN ELLIS
+Candidate	Laurie J K Chaplen	LAURIE J K CHAPLEN
+Candidate	Paul W Shaffer	PAUL W SHAFFER
+Candidate	Nic Bowman	NIC BOWMAN
+Candidate	Ed Junkins	ED JUNKINS
+Candidate	Andrew Struthers	ANDREW STRUTHERS
+Candidate	Daniel Sheets	DANIEL SHEETS
+Candidate	Floyd Billings	FLOYD BILLINGS
+Candidate	Lisa D Lindner	LISA D LINDNER
+Candidate	Katherine Larkin	KATHERINE LARKIN
+Candidate	Nicholas Ritch	NICHOLAS RITCH
+Candidate	Clifford Frank Thayer	CLIFFORD FRANK THAYER
+Candidate	Doug Edmonds	DOUG EDMONDS
+Candidate	Chas Jones	CHAS JONES
+Candidate	David M Low	DAVID M LOW
+Candidate	Ruth Causey	RUTH CAUSEY
+Candidate	Matt Lehman	MATT LEHMAN
+Candidate	Teresa Nielson	TERESA NIELSON
+Candidate	Jason Richards	JASON RICHARDS
+Candidate	Jessica Andrade	JESSICA ANDRADE
+Candidate	Peggy Yoder	PEGGY YODER
+Candidate	Joey Mcglinchy	JOEY MCGLINCHY
+Candidate	Matthew Thomas	MATTHEW THOMAS
+Candidate	Thomas Sullivan	THOMAS SULLIVAN
+Candidate	Catherine Biscoe	CATHERINE BISCOE
+Candidate	Lawrence E Johnson	LAWRENCE E JOHNSON
+Candidate	Henry Storch	HENRY STORCH
+Candidate	Faye M Yoshihara	FAYE M YOSHIHARA
+Candidate	Jerry L Paul	JERRY L PAUL
+Candidate	Robert Morris	ROBERT MORRIS
+Candidate	Eliza Mason	ELIZA MASON
+Candidate	Suzanne Bonamici	SUZANNE BONAMICI
+Candidate	Christopher C Christensen	CHRISTOPHER C CHRISTENSEN
+Candidate	Earl Blumenauer	EARL BLUMENAUER
+Candidate	Josh Solomon	JOSH SOLOMON
+Candidate	Alex C Diblasi	ALEX C DIBLASI
+Candidate	Joanna Harbour	JOANNA HARBOUR
