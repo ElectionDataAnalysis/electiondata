@@ -1,6 +1,4 @@
 from configparser import ConfigParser, MissingSectionHeaderError
-from distutils.dir_util import copy_tree
-
 from election_data_analysis import munge as m
 from election_data_analysis import special_formats as sf
 from election_data_analysis import database as db
@@ -1213,29 +1211,3 @@ def get_contest_type_display(item: str) -> str:
                 item_list[index] = contest_type_mappings[key] 
                 break
     return " ".join(item_list)
-
-
-def grab_ini_files(results_dir, path_to_repo):
-    jurisdictions = [
-        name for name in os.listdir(results_dir) if os.path.isdir(os.path.join(results_dir, name))
-    ]
-    path_to_ini = os.path.join(path_to_repo, "src", "ini_files_for_results")
-    for j in jurisdictions:
-        copy_path = os.path.join(path_to_ini, j)
-        if os.path.isdir(copy_path):
-            copy_tree(copy_path, results_dir)
-
-    par_files = [f for f in os.listdir(results_dir) if f[-4:] == ".ini"]
-
-    # if the results file not found, delete the .ini file & warn user
-    for par_file in par_files:
-        d, err = get_runtime_parameters(
-            required_keys=["results_file"],
-            header="election_data_analysis",
-            param_file=os.path.join(results_dir, par_file),
-        )
-        # delete any .ini files whose results file is not found
-        if not os.path.isfile(os.path.join(results_dir,d["results_file"])):
-            print(f"File referenced in .ini file, but not found: {d['results_file']}")
-            os.remove(os.path.join(results_dir, par_file))
-    return

@@ -154,9 +154,9 @@ class DataLoader:
         )
         if new_err:
             err = ui.consolidate_errors([err, new_err])
-            if ui.fatal_error(new_err):
-                err = ui.report(err)
-                return err, False
+        if ui.fatal_error(new_err):
+            err = ui.report(err)
+            return err, False
 
         # specify directories for archiving and reporting warnings
         success_dir = os.path.join(self.d["archive_dir"], db_param["dbname"])
@@ -1145,9 +1145,7 @@ class JurisdictionPrepper:
         """For each .ini file in <dir>, finds specified results file.
         For each results file, adds all elements in <elements> to <element>.txt and, naively, to <dictionary.txt>
         for each file in <dir> named (with munger) in a .ini file in the directory"""
-
         print(f"\nStarting {inspect.currentframe().f_code.co_name}")
-        project_root =  Path(__file__).parents[2].absolute()
 
         environment_d, new_err = ui.get_runtime_parameters(
             required_keys=["mungers_dir"],
@@ -1160,7 +1158,6 @@ class JurisdictionPrepper:
             if ui.fatal_error(new_err):
                 return error
 
-        ui.grab_ini_files(dir, project_root)
         for par_file_name in [x for x in os.listdir(dir) if x[-4:] == ".ini"]:
             par_file = os.path.join(dir, par_file_name)
             d, new_err = ui.get_runtime_parameters(
@@ -1196,13 +1193,6 @@ class JurisdictionPrepper:
                 if new_err:
                     error = ui.consolidate_errors([error, new_err])
         ui.report(error)
-
-        # remove all .ini files
-        par_files = [x for x in os.listdir(dir) if x[-4:] == ".ini"]
-        for f in par_files:
-            os.remove(os.path.join(dir,f))
-
-
         return error
 
     def add_elements_from_multi_results_file(
@@ -1212,7 +1202,6 @@ class JurisdictionPrepper:
         for each file in <dir> named (with munger) in a .ini file in the directory"""
 
         print(f"\nStarting {inspect.currentframe().f_code.co_name}")
-        project_root =  Path(__file__).parents[2].absolute()
         # get path to mungers directory
         environment_d, new_err = ui.get_runtime_parameters(
             required_keys=["mungers_dir"],
@@ -1223,7 +1212,6 @@ class JurisdictionPrepper:
         if new_err:
             ui.consolidate_errors([error, new_err])
 
-        ui.grab_ini_files(dir, project_root)
         for par_file_name in [x for x in os.listdir(dir) if x[-4:] == ".ini"]:
             # pull parameters for results file
             par_file = os.path.join(dir, par_file_name)
@@ -1254,12 +1242,6 @@ class JurisdictionPrepper:
                     )
                     error = ui.consolidate_errors([error, new_err])
         ui.report(error)
-
-        # remove all .ini files
-        par_files = [x for x in os.listdir(dir) if x[-4:] == ".ini"]
-        for f in par_files:
-            os.remove(os.path.join(dir,f))
-
         return error
 
     def add_elements_from_results_file(
