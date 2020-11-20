@@ -8,7 +8,6 @@ from typing import Optional
 import election_data_analysis as eda
 from election_data_analysis import database as db
 from election_data_analysis import user_interface as ui
-from distutils.dir_util import copy_tree
 
 def io(argv) -> Optional[list]:
     election = None
@@ -35,31 +34,6 @@ def io(argv) -> Optional[list]:
         ej_list = [(election, jurisdiction)]
     return ej_list
 
-
-def grab_ini_files(results_dir, path_to_repo):
-    jurisdictions = [
-        name for name in os.listdir(results_dir) if os.path.isdir(os.path.join(results_dir, name))
-    ]
-    path_to_ini = os.path.join(path_to_repo, "src", "ini_files_for_results")
-    for j in jurisdictions:
-        copy_path = os.path.join(path_to_ini, j)
-        if os.path.isdir(copy_path):
-            copy_tree(copy_path, results_dir)
-
-    par_files = [f for f in os.listdir(results_dir) if f[-4:] == ".ini"]
-
-    # if the results file not found, delete the .ini file & warn user
-    for par_file in par_files:
-        d, err = ui.get_runtime_parameters(
-            required_keys=["results_file"],
-            header="election_data_analysis",
-            param_file=os.path.join(results_dir, par_file),
-        )
-        # delete any .ini files whose results file is not found
-        if not os.path.isfile(os.path.join(results_dir,d["results_file"])):
-            print(f"File referenced in .ini file, but not found: {d['results_file']}")
-            os.remove(os.path.join(results_dir, par_file))
-    return
 
 def optional_remove(dl: eda.DataLoader, dir_path: str) -> (Optional[dict], bool):
     err = None
@@ -118,7 +92,7 @@ def get_testing_data(
         print(f"Tests will use data in existing directory: {Path(results_dir).absolute()}")
     if path_to_repo is None:
         path_to_repo = Path(__file__).resolve().parents[1].absolute()
-    grab_ini_files(results_dir, path_to_repo)
+    ui.grab_ini_files(results_dir, path_to_repo)
     return
 
 
