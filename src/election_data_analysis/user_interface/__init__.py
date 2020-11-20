@@ -968,7 +968,7 @@ def create_param_file(
 
 def run_tests(
     test_dir: str, dbname: str, election_jurisdiction_list: Optional[list] = None
-) -> dict():
+) -> (dict(), int):
     """move to tests directory, run tests, move back
     db_params must have host, user, pass, db_name.
     test_param_file is a reference run_time.ini file"""
@@ -1002,7 +1002,7 @@ def run_tests(
     # move back to original directory
     os.chdir(original_dir)
     # result is 0 if all tests pass, non-zero if something went wrong
-    return result
+    return result, r
 
 
 def confirm_essential_info(
@@ -1083,7 +1083,7 @@ def reload_juris_election(
     election_name: str,
     test_dir: str,
     from_cron: bool = None,
-):
+) -> bool:
     """Assumes run_time.ini in directory, and results to be loaded are in the results_dir named in run_time.ini"""
     # initialize dataloader
     dl = e.DataLoader()
@@ -1119,7 +1119,7 @@ def reload_juris_election(
     dl.load_all(move_files=False)
 
     # run test files on temp db
-    results = run_tests(
+    _, results = run_tests(
         test_dir,
         dl.d["dbname"],
         election_jurisdiction_list=[(election_name, juris_name)],
@@ -1135,7 +1135,7 @@ def reload_juris_election(
         print("Something went wrong, new data not loaded")
         # cleanup
         db.remove_database(db_params)
-        return
+        return False
 
     # switch to live db and get info needed later
     dl.change_db(live_db)
@@ -1179,7 +1179,7 @@ def reload_juris_election(
 
     #cleanup
     db.remove_database(db_params)
-    return
+    return True
 
 
 def get_contest_type_mappings(filters: list) -> list:
