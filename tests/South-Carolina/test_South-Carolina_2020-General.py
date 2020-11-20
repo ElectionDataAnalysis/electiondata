@@ -71,10 +71,11 @@ def test_state_house_totals(dbname):
         == total_shd_votes
     )
 
-
+""" 
+# SC has non-standard vote types failsafe and failsafe-provisional
 def test_standard_vote_types(dbname):
     assert e.check_count_types_standard(election, jurisdiction, dbname=dbname)
-
+"""
 
 def test_vote_type_counts_consistent(dbname):
     assert e.check_totals_match_vote_types(election, jurisdiction, dbname=dbname)
