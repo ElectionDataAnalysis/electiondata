@@ -209,5 +209,5 @@ MO Governor	1	MO Governor
 US Senate MO	1	US Senate MO	
 MO Attorney General	1	MO Attorney General	
 MO Lieutenant Governor	1	MO Lieutenant Governor	
-MO Treasurer	1	MO Treasurer	
+MO State Treasurer	1	MO State Treasurer
 MO Secretary of State	1	MO Secretary of State	

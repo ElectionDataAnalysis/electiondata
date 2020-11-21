@@ -205,3 +205,119 @@ Missouri;US House MO District 6	congressional
 Missouri;US House MO District 7	congressional
 Missouri;US House MO District 8	congressional
 Missouri	state
+Missouri;Adair County	county
+Missouri;Andrew County	county
+Missouri;Atchison County	county
+Missouri;Audrain County	county
+Missouri;Barry County	county
+Missouri;Barton County	county
+Missouri;Bates County	county
+Missouri;Benton County	county
+Missouri;Bollinger County	county
+Missouri;Boone County	county
+Missouri;Buchanan County	county
+Missouri;Butler County	county
+Missouri;Caldwell County	county
+Missouri;Callaway County	county
+Missouri;Camden County	county
+Missouri;Cape Girardeau County	county
+Missouri;Carroll County	county
+Missouri;Carter County	county
+Missouri;Cass County	county
+Missouri;Cedar County	county
+Missouri;Chariton County	county
+Missouri;Christian County	county
+Missouri;Clark County	county
+Missouri;Clay County	county
+Missouri;Clinton County	county
+Missouri;Cole County	county
+Missouri;Cooper County	county
+Missouri;Crawford County	county
+Missouri;Dade County	county
+Missouri;Dallas County	county
+Missouri;Daviess County	county
+Missouri;De Kalb County	county
+Missouri;Dent County	county
+Missouri;Douglas County	county
+Missouri;Dunklin County	county
+Missouri;Franklin County	county
+Missouri;Gasconade County	county
+Missouri;Gentry County	county
+Missouri;Greene County	county
+Missouri;Grundy County	county
+Missouri;Harrison County	county
+Missouri;Henry County	county
+Missouri;Hickory County	county
+Missouri;Holt County	county
+Missouri;Howard County	county
+Missouri;Howell County	county
+Missouri;Iron County	county
+Missouri;Jackson County	county
+Missouri;Jasper County	county
+Missouri;Jefferson County	county
+Missouri;Johnson County	county
+Missouri;Kansas City County	county
+Missouri;Knox County	county
+Missouri;Laclede County	county
+Missouri;Lafayette County	county
+Missouri;Lawrence County	county
+Missouri;Lewis County	county
+Missouri;Lincoln County	county
+Missouri;Linn County	county
+Missouri;Livingston County	county
+Missouri;Macon County	county
+Missouri;Madison County	county
+Missouri;Maries County	county
+Missouri;Marion County	county
+Missouri;McDonald County	county
+Missouri;Mercer County	county
+Missouri;Miller County	county
+Missouri;Mississippi County	county
+Missouri;Moniteau County	county
+Missouri;Monroe County	county
+Missouri;Montgomery County	county
+Missouri;Morgan County	county
+Missouri;New Madrid County	county
+Missouri;Newton County	county
+Missouri;Nodaway County	county
+Missouri;Oregon County	county
+Missouri;Osage County	county
+Missouri;Ozark County	county
+Missouri;Pemiscot County	county
+Missouri;Perry County	county
+Missouri;Pettis County	county
+Missouri;Phelps County	county
+Missouri;Pike County	county
+Missouri;Platte County	county
+Missouri;Polk County	county
+Missouri;Pulaski County	county
+Missouri;Putnam County	county
+Missouri;Ralls County	county
+Missouri;Randolph County	county
+Missouri;Ray County	county
+Missouri;Reynolds County	county
+Missouri;Ripley County	county
+Missouri;Saline County	county
+Missouri;Schuyler County	county
+Missouri;Scotland County	county
+Missouri;Scott County	county
+Missouri;Shannon County	county
+Missouri;Shelby County	county
+Missouri;St. Charles County	county
+Missouri;St. Clair County	county
+Missouri;St. Francois County	county
+Missouri;St. Louis County	county
+Missouri;St. Louis City County	county
+Missouri;Ste. Genevieve County	county
+Missouri;Stoddard County	county
+Missouri;Stone County	county
+Missouri;Sullivan County	county
+Missouri;Taney County	county
+Missouri;Texas County	county
+Missouri;Vernon County	county
+Missouri;Warren County	county
+Missouri;Washington County	county
+Missouri;Wayne County	county
+Missouri;Webster County	county
+Missouri;Worth County	county
+Missouri;Wright County	county

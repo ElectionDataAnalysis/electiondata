@@ -209,5 +209,5 @@ MO Governor	Missouri
 US Senate MO	Missouri
 MO Attorney General	Missouri
 MO Lieutenant Governor	Missouri
-MO Treasurer	Missouri
+MO State Treasurer	Missouri
 MO Secretary of State	Missouri

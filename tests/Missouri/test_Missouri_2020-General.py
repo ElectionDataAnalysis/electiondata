@@ -89,6 +89,7 @@ def test_vote_type_counts_consistent(dbname):
     assert e.check_totals_match_vote_types(election, jurisdiction, dbname=dbname)
 
 
+""" no sub vote types
 def test_count_type_subtotal(dbname):
     assert (e.contest_total(
         election,
@@ -99,7 +100,7 @@ def test_count_type_subtotal(dbname):
         )
         == pres_votes_vote_type
     )
-
+"""
 
 def test_county_subtotal(dbname):
     assert (e.contest_total(
