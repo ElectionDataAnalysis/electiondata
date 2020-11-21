@@ -24,8 +24,8 @@ def clean_count_cols(
         working = df.copy()
         for c in cols:
             if c in working.columns:
-                # remove the thousands separator
-                if thousands:
+                # remove the thousands separator if the column is not already int64
+                if thousands and (df.dtypes[c] == "object"):
                     working[c] = working[c].str.replace(thousands,"")
                 mask = ~working[c].astype(str).str.isdigit()
                 if mask.any():

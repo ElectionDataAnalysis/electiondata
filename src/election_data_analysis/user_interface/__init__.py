@@ -973,6 +973,7 @@ def run_tests(
     db_params must have host, user, pass, db_name.
     test_param_file is a reference run_time.ini file"""
 
+    r = -1
     # note current directory
     original_dir = os.getcwd()
 
