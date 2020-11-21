@@ -1,0 +1,323 @@
+Name	ReportingUnitType
+Missouri;MO House District 1	state-house
+Missouri;MO House District 2	state-house
+Missouri;MO House District 3	state-house
+Missouri;MO House District 4	state-house
+Missouri;MO House District 5	state-house
+Missouri;MO House District 6	state-house
+Missouri;MO House District 7	state-house
+Missouri;MO House District 8	state-house
+Missouri;MO House District 9	state-house
+Missouri;MO House District 10	state-house
+Missouri;MO House District 11	state-house
+Missouri;MO House District 12	state-house
+Missouri;MO House District 13	state-house
+Missouri;MO House District 14	state-house
+Missouri;MO House District 15	state-house
+Missouri;MO House District 16	state-house
+Missouri;MO House District 17	state-house
+Missouri;MO House District 18	state-house
+Missouri;MO House District 19	state-house
+Missouri;MO House District 20	state-house
+Missouri;MO House District 21	state-house
+Missouri;MO House District 22	state-house
+Missouri;MO House District 23	state-house
+Missouri;MO House District 24	state-house
+Missouri;MO House District 25	state-house
+Missouri;MO House District 26	state-house
+Missouri;MO House District 27	state-house
+Missouri;MO House District 28	state-house
+Missouri;MO House District 29	state-house
+Missouri;MO House District 30	state-house
+Missouri;MO House District 31	state-house
+Missouri;MO House District 32	state-house
+Missouri;MO House District 33	state-house
+Missouri;MO House District 34	state-house
+Missouri;MO House District 35	state-house
+Missouri;MO House District 36	state-house
+Missouri;MO House District 37	state-house
+Missouri;MO House District 38	state-house
+Missouri;MO House District 39	state-house
+Missouri;MO House District 40	state-house
+Missouri;MO House District 41	state-house
+Missouri;MO House District 42	state-house
+Missouri;MO House District 43	state-house
+Missouri;MO House District 44	state-house
+Missouri;MO House District 45	state-house
+Missouri;MO House District 46	state-house
+Missouri;MO House District 47	state-house
+Missouri;MO House District 48	state-house
+Missouri;MO House District 49	state-house
+Missouri;MO House District 50	state-house
+Missouri;MO House District 51	state-house
+Missouri;MO House District 52	state-house
+Missouri;MO House District 53	state-house
+Missouri;MO House District 54	state-house
+Missouri;MO House District 55	state-house
+Missouri;MO House District 56	state-house
+Missouri;MO House District 57	state-house
+Missouri;MO House District 58	state-house
+Missouri;MO House District 59	state-house
+Missouri;MO House District 60	state-house
+Missouri;MO House District 61	state-house
+Missouri;MO House District 62	state-house
+Missouri;MO House District 63	state-house
+Missouri;MO House District 64	state-house
+Missouri;MO House District 65	state-house
+Missouri;MO House District 66	state-house
+Missouri;MO House District 67	state-house
+Missouri;MO House District 68	state-house
+Missouri;MO House District 69	state-house
+Missouri;MO House District 70	state-house
+Missouri;MO House District 71	state-house
+Missouri;MO House District 72	state-house
+Missouri;MO House District 73	state-house
+Missouri;MO House District 74	state-house
+Missouri;MO House District 75	state-house
+Missouri;MO House District 76	state-house
+Missouri;MO House District 77	state-house
+Missouri;MO House District 78	state-house
+Missouri;MO House District 79	state-house
+Missouri;MO House District 80	state-house
+Missouri;MO House District 81	state-house
+Missouri;MO House District 82	state-house
+Missouri;MO House District 83	state-house
+Missouri;MO House District 84	state-house
+Missouri;MO House District 85	state-house
+Missouri;MO House District 86	state-house
+Missouri;MO House District 87	state-house
+Missouri;MO House District 88	state-house
+Missouri;MO House District 89	state-house
+Missouri;MO House District 90	state-house
+Missouri;MO House District 91	state-house
+Missouri;MO House District 92	state-house
+Missouri;MO House District 93	state-house
+Missouri;MO House District 94	state-house
+Missouri;MO House District 95	state-house
+Missouri;MO House District 96	state-house
+Missouri;MO House District 97	state-house
+Missouri;MO House District 98	state-house
+Missouri;MO House District 99	state-house
+Missouri;MO House District 100	state-house
+Missouri;MO House District 101	state-house
+Missouri;MO House District 102	state-house
+Missouri;MO House District 103	state-house
+Missouri;MO House District 104	state-house
+Missouri;MO House District 105	state-house
+Missouri;MO House District 106	state-house
+Missouri;MO House District 107	state-house
+Missouri;MO House District 108	state-house
+Missouri;MO House District 109	state-house
+Missouri;MO House District 110	state-house
+Missouri;MO House District 111	state-house
+Missouri;MO House District 112	state-house
+Missouri;MO House District 113	state-house
+Missouri;MO House District 114	state-house
+Missouri;MO House District 115	state-house
+Missouri;MO House District 116	state-house
+Missouri;MO House District 117	state-house
+Missouri;MO House District 118	state-house
+Missouri;MO House District 119	state-house
+Missouri;MO House District 120	state-house
+Missouri;MO House District 121	state-house
+Missouri;MO House District 122	state-house
+Missouri;MO House District 123	state-house
+Missouri;MO House District 124	state-house
+Missouri;MO House District 125	state-house
+Missouri;MO House District 126	state-house
+Missouri;MO House District 127	state-house
+Missouri;MO House District 128	state-house
+Missouri;MO House District 129	state-house
+Missouri;MO House District 130	state-house
+Missouri;MO House District 131	state-house
+Missouri;MO House District 132	state-house
+Missouri;MO House District 133	state-house
+Missouri;MO House District 134	state-house
+Missouri;MO House District 135	state-house
+Missouri;MO House District 136	state-house
+Missouri;MO House District 137	state-house
+Missouri;MO House District 138	state-house
+Missouri;MO House District 139	state-house
+Missouri;MO House District 140	state-house
+Missouri;MO House District 141	state-house
+Missouri;MO House District 142	state-house
+Missouri;MO House District 143	state-house
+Missouri;MO House District 144	state-house
+Missouri;MO House District 145	state-house
+Missouri;MO House District 146	state-house
+Missouri;MO House District 147	state-house
+Missouri;MO House District 148	state-house
+Missouri;MO House District 149	state-house
+Missouri;MO House District 150	state-house
+Missouri;MO House District 151	state-house
+Missouri;MO House District 152	state-house
+Missouri;MO House District 153	state-house
+Missouri;MO House District 154	state-house
+Missouri;MO House District 155	state-house
+Missouri;MO House District 156	state-house
+Missouri;MO House District 157	state-house
+Missouri;MO House District 158	state-house
+Missouri;MO House District 159	state-house
+Missouri;MO House District 160	state-house
+Missouri;MO House District 161	state-house
+Missouri;MO House District 162	state-house
+Missouri;MO House District 163	state-house
+Missouri;MO Senate District 1	state-senate
+Missouri;MO Senate District 2	state-senate
+Missouri;MO Senate District 3	state-senate
+Missouri;MO Senate District 4	state-senate
+Missouri;MO Senate District 5	state-senate
+Missouri;MO Senate District 6	state-senate
+Missouri;MO Senate District 7	state-senate
+Missouri;MO Senate District 8	state-senate
+Missouri;MO Senate District 9	state-senate
+Missouri;MO Senate District 10	state-senate
+Missouri;MO Senate District 11	state-senate
+Missouri;MO Senate District 12	state-senate
+Missouri;MO Senate District 13	state-senate
+Missouri;MO Senate District 14	state-senate
+Missouri;MO Senate District 15	state-senate
+Missouri;MO Senate District 16	state-senate
+Missouri;MO Senate District 17	state-senate
+Missouri;MO Senate District 18	state-senate
+Missouri;MO Senate District 19	state-senate
+Missouri;MO Senate District 20	state-senate
+Missouri;MO Senate District 21	state-senate
+Missouri;MO Senate District 22	state-senate
+Missouri;MO Senate District 23	state-senate
+Missouri;MO Senate District 24	state-senate
+Missouri;MO Senate District 25	state-senate
+Missouri;MO Senate District 26	state-senate
+Missouri;MO Senate District 27	state-senate
+Missouri;MO Senate District 28	state-senate
+Missouri;MO Senate District 29	state-senate
+Missouri;MO Senate District 30	state-senate
+Missouri;MO Senate District 31	state-senate
+Missouri;MO Senate District 32	state-senate
+Missouri;MO Senate District 33	state-senate
+Missouri;MO Senate District 34	state-senate
+Missouri;US House MO District 1	congressional
+Missouri;US House MO District 2	congressional
+Missouri;US House MO District 3	congressional
+Missouri;US House MO District 4	congressional
+Missouri;US House MO District 5	congressional
+Missouri;US House MO District 6	congressional
+Missouri;US House MO District 7	congressional
+Missouri;US House MO District 8	congressional
+Missouri	state
+Missouri;Adair County	county
+Missouri;Andrew County	county
+Missouri;Atchison County	county
+Missouri;Audrain County	county
+Missouri;Barry County	county
+Missouri;Barton County	county
+Missouri;Bates County	county
+Missouri;Benton County	county
+Missouri;Bollinger County	county
+Missouri;Boone County	county
+Missouri;Buchanan County	county
+Missouri;Butler County	county
+Missouri;Caldwell County	county
+Missouri;Callaway County	county
+Missouri;Camden County	county
+Missouri;Cape Girardeau County	county
+Missouri;Carroll County	county
+Missouri;Carter County	county
+Missouri;Cass County	county
+Missouri;Cedar County	county
+Missouri;Chariton County	county
+Missouri;Christian County	county
+Missouri;Clark County	county
+Missouri;Clay County	county
+Missouri;Clinton County	county
+Missouri;Cole County	county
+Missouri;Cooper County	county
+Missouri;Crawford County	county
+Missouri;Dade County	county
+Missouri;Dallas County	county
+Missouri;Daviess County	county
+Missouri;De Kalb County	county
+Missouri;Dent County	county
+Missouri;Douglas County	county
+Missouri;Dunklin County	county
+Missouri;Franklin County	county
+Missouri;Gasconade County	county
+Missouri;Gentry County	county
+Missouri;Greene County	county
+Missouri;Grundy County	county
+Missouri;Harrison County	county
+Missouri;Henry County	county
+Missouri;Hickory County	county
+Missouri;Holt County	county
+Missouri;Howard County	county
+Missouri;Howell County	county
+Missouri;Iron County	county
+Missouri;Jackson County	county
+Missouri;Jasper County	county
+Missouri;Jefferson County	county
+Missouri;Johnson County	county
+Missouri;Kansas City County	county
+Missouri;Knox County	county
+Missouri;Laclede County	county
+Missouri;Lafayette County	county
+Missouri;Lawrence County	county
+Missouri;Lewis County	county
+Missouri;Lincoln County	county
+Missouri;Linn County	county
+Missouri;Livingston County	county
+Missouri;Macon County	county
+Missouri;Madison County	county
+Missouri;Maries County	county
+Missouri;Marion County	county
+Missouri;McDonald County	county
+Missouri;Mercer County	county
+Missouri;Miller County	county
+Missouri;Mississippi County	county
+Missouri;Moniteau County	county
+Missouri;Monroe County	county
+Missouri;Montgomery County	county
+Missouri;Morgan County	county
+Missouri;New Madrid County	county
+Missouri;Newton County	county
+Missouri;Nodaway County	county
+Missouri;Oregon County	county
+Missouri;Osage County	county
+Missouri;Ozark County	county
+Missouri;Pemiscot County	county
+Missouri;Perry County	county
+Missouri;Pettis County	county
+Missouri;Phelps County	county
+Missouri;Pike County	county
+Missouri;Platte County	county
+Missouri;Polk County	county
+Missouri;Pulaski County	county
+Missouri;Putnam County	county
+Missouri;Ralls County	county
+Missouri;Randolph County	county
+Missouri;Ray County	county
+Missouri;Reynolds County	county
+Missouri;Ripley County	county
+Missouri;Saline County	county
+Missouri;Schuyler County	county
+Missouri;Scotland County	county
+Missouri;Scott County	county
+Missouri;Shannon County	county
+Missouri;Shelby County	county
+Missouri;St. Charles County	county
+Missouri;St. Clair County	county
+Missouri;St. Francois County	county
+Missouri;St. Louis County	county
+Missouri;St. Louis City County	county
+Missouri;Ste. Genevieve County	county
+Missouri;Stoddard County	county
+Missouri;Stone County	county
+Missouri;Sullivan County	county
+Missouri;Taney County	county
+Missouri;Texas County	county
+Missouri;Vernon County	county
+Missouri;Warren County	county
+Missouri;Washington County	county
+Missouri;Wayne County	county
+Missouri;Webster County	county
+Missouri;Worth County	county
+Missouri;Wright County	county
