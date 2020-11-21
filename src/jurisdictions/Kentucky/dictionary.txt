@@ -137,12 +137,12 @@ CandidateContest	KY Senate District 35	State Senator, 35th Senatorial District
 CandidateContest	KY Senate District 36	State Senator, 36th Senatorial District
 CandidateContest	KY Senate District 37	State Senator, 37th Senatorial District
 CandidateContest	KY Senate District 38	State Senator, 38th Senatorial District
-Candidate Contest	US House KY District 1	US Representative, 1st Congressional District
-Candidate Contest	US House KY District 2	US Representative, 2nd Congressional District
-Candidate Contest	US House KY District 3	US Representative, 3rd Congressional District
-Candidate Contest	US House KY District 4	US Representative, 4th Congressional District
-Candidate Contest	US House KY District 5	US Representative, 5th Congressional District
-Candidate Contest	US House KY District 6	US Representative, 6th Congressional District
+CandidateContest	US House KY District 1	US Representative, 1st Congressional District
+CandidateContest	US House KY District 2	US Representative, 2nd Congressional District
+CandidateContest	US House KY District 3	US Representative, 3rd Congressional District
+CandidateContest	US House KY District 4	US Representative, 4th Congressional District
+CandidateContest	US House KY District 5	US Representative, 5th Congressional District
+CandidateContest	US House KY District 6	US Representative, 6th Congressional District
 CandidateContest	US President (KY)	President and Vice President of the United States
 CandidateContest	KY Governor	KY Governor
 CandidateContest	US Senate KY	US Senator
@@ -1384,6 +1384,217 @@ Candidate	Russ Feingold	Russ Feingold
 Candidate	Phillip N. Anderson	Phillip N. Anderson
 Candidate	John Schiess (write-in)	John Schiess (write-in)
 Candidate	SCATTERING	SCATTERING
-Party	REP	REP
-Party	DEM	DEM
-Party	LIB	LIB
+Party	Republican Party	REP
+Party	Democratic Party	DEM
+Party	Libertarian Party	LIB
+Party	Independent Party	IND
+Candidate	William Matt REYNOLDS	William Matt REYNOLDS
+Candidate	William Lee LAWRENCE	William Lee LAWRENCE
+Candidate	William H. 'Bill' REDWINE	William H. 'Bill' REDWINE
+Candidate	Will HURST	Will HURST
+Candidate	Will BARNETT	Will BARNETT
+Candidate	Whitney H. WESTERFIELD	Whitney H. WESTERFIELD
+Candidate	Walter TREBOLO III.	Walter TREBOLO III.
+Candidate	Walker Wood THOMAS	Walker Wood THOMAS
+Candidate	Tom O'Dell SMITH	Tom O'Dell SMITH
+Candidate	Tom BURCH	Tom BURCH
+Candidate	Todd NEACE	Todd NEACE
+Candidate	Tina BOJANOWSKI	Tina BOJANOWSKI
+Candidate	Tim FILBACK	Tim FILBACK
+Candidate	Thomas HUFF	Thomas HUFF
+Candidate	Terry MILLS	Terry MILLS
+Candidate	Terri Branham CLARK	Terri Branham CLARK
+Candidate	Suzanne MILES	Suzanne MILES
+Candidate	Suzanne KUGLER	Suzanne KUGLER
+Candidate	Susan WESTROM	Susan WESTROM
+Candidate	Steven Jack RUDY	Steven Jack RUDY
+Candidate	Steve WEST	Steve WEST
+Candidate	Steve SHELDON	Steve SHELDON
+Candidate	Steve RILEY	Steve RILEY
+Candidate	Steve JONES	Steve JONES
+Candidate	Stephen L. MEREDITH	Stephen L. MEREDITH
+Candidate	Shirley Flynn MITCHELL	Shirley Flynn MITCHELL
+Candidate	Shawn McPHERSON	Shawn McPHERSON
+Candidate	Shannon DAVIS-ROBERTS	Shannon DAVIS-ROBERTS
+Candidate	Shane BAKER	Shane BAKER
+Candidate	Scott LEWIS	Scott LEWIS
+Candidate	Scott L. SHARP	Scott L. SHARP
+Candidate	Savannah MADDOX	Savannah MADDOX
+Candidate	Samara HEAVRIN	Samara HEAVRIN
+Candidate	Sal SANTORO	Sal SANTORO
+Candidate	Ryan OLEXIA	Ryan OLEXIA
+Candidate	Ryan NEAVES	Ryan NEAVES
+Candidate	Ryan DOTSON	Ryan DOTSON
+Candidate	Ruth Ann PALUMBO	Ruth Ann PALUMBO
+Candidate	Russell WEBBER	Russell WEBBER
+Candidate	Rod VARNEY	Rod VARNEY
+Candidate	Roberto HENRIQUEZ	Roberto HENRIQUEZ
+Candidate	Robert STIVERS	Robert STIVERS
+Candidate	Robert GOFORTH	Robert GOFORTH
+Candidate	Robert 'Rob' WIEDERSTEIN	Robert 'Rob' WIEDERSTEIN
+Candidate	Rick GIRDLER	Rick GIRDLER
+Candidate	Richard WHITE	Richard WHITE
+Candidate	Richard STEELE	Richard STEELE
+Candidate	Richard HEATH	Richard HEATH
+Candidate	Reginald THOMAS	Reginald THOMAS
+Candidate	Reginald K. MEEKS	Reginald K. MEEKS
+Candidate	Regina Petrey HUFF	Regina Petrey HUFF
+Candidate	Randy BRIDGES	Randy BRIDGES
+Candidate	Randall DANIEL	Randall DANIEL
+Candidate	Ralph HOSKINS	Ralph HOSKINS
+Candidate	Rachel ROBERTS	Rachel ROBERTS
+Candidate	Phillip WHEELER	Phillip WHEELER
+Candidate	Phillip R. PRATT	Phillip R. PRATT
+Candidate	Paula CLEMONS-COMBS	Paula CLEMONS-COMBS
+Candidate	Patti MINTER	Patti MINTER
+Candidate	Patrick FLANNERY	Patrick FLANNERY
+Candidate	Pamela D. STEVENSON	Pamela D. STEVENSON
+Candidate	Pam DOSSETT	Pam DOSSETT
+Candidate	Norma KIRK-McCORMICK	Norma KIRK-McCORMICK
+Candidate	Nima KULKARNI	Nima KULKARNI
+Candidate	Nancy J. TATE	Nancy J. TATE
+Candidate	Nancy BARDGETT	Nancy BARDGETT
+Candidate	Myron B. DOSSETT	Myron B. DOSSETT
+Candidate	Morgan McGARVEY	Morgan McGARVEY
+Candidate	Mitch RUSHING	Mitch RUSHING
+Candidate	Mitch McCONNELL	Mitch McCONNELL
+Candidate	Mike VanWINKLE	Mike VanWINKLE
+Candidate	Mike EAVES	Mike EAVES
+Candidate	Michael Lee MEREDITH	Michael Lee MEREDITH
+Candidate	Melinda Gibbons PRUNTY	Melinda Gibbons PRUNTY
+Candidate	McKenzie CANTRELL	McKenzie CANTRELL
+Candidate	Matt LOCKETT	Matt LOCKETT
+Candidate	Matt KOCH	Matt KOCH
+Candidate	Mary Lou MARZIAN	Mary Lou MARZIAN
+Candidate	Mary Beth IMES	Mary Beth IMES
+Candidate	Mark HART	Mark HART
+Candidate	Maria SOROLIS	Maria SOROLIS
+Candidate	Margaret S. PLATTNER	Margaret S. PLATTNER
+Candidate	Lynn BECHLER	Lynn BECHLER
+Candidate	Lydia COFFEY	Lydia COFFEY
+Candidate	Lisa WILLNER	Lisa WILLNER
+Candidate	Leanette LOPEZ	Leanette LOPEZ
+Candidate	LeAnna HOMANDBERG	LeAnna HOMANDBERG
+Candidate	Larry VARNEY	Larry VARNEY
+Candidate	Lamar ALLEN	Lamar ALLEN
+Candidate	Kory MILLER	Kory MILLER
+Candidate	Kimberly Poore MOSER	Kimberly Poore MOSER
+Candidate	Kim KING	Kim KING
+Candidate	Kim BANTA	Kim BANTA
+Candidate	Killian TIMONEY	Killian TIMONEY
+Candidate	Kevin D. BRATCHER	Kevin D. BRATCHER
+Candidate	Kenny BLAIR	Kenny BLAIR
+Candidate	Kenneth R. HALL	Kenneth R. HALL
+Candidate	Ken UPCHURCH	Ken UPCHURCH
+Candidate	Ken FLEMING	Ken FLEMING
+Candidate	Ken CARROLL	Ken CARROLL
+Candidate	Kelly FLOOD	Kelly FLOOD
+Candidate	Kathy HINKLE	Kathy HINKLE
+Candidate	Kanye WEST / Michelle TIDBALL	Kanye WEST / Michelle TIDBALL
+Candidate	Josie RAYMOND	Josie RAYMOND
+Candidate	Joshua GILPIN	Joshua GILPIN
+Candidate	Joshua BRANSCUM	Joshua BRANSCUM
+Candidate	Josh CALLOWAY	Josh CALLOWAY
+Candidate	Josh BRAY	Josh BRAY
+Candidate	Joseph R. BIDEN / Kamala D. HARRIS	Joseph R. BIDEN / Kamala D. HARRIS
+Candidate	Joseph M. FISCHER	Joseph M. FISCHER
+Candidate	Joni JENKINS	Joni JENKINS
+Candidate	Jonathan DIXON	Jonathan DIXON
+Candidate	Jonathan CACCIATORE	Jonathan CACCIATORE
+Candidate	Jon LARSON	Jon LARSON
+Candidate	Johnny Ray TURNER	Johnny Ray TURNER
+Candidate	Johnnie L. TURNER	Johnnie L. TURNER
+Candidate	John WHIPPLE	John WHIPPLE
+Candidate	John W. PENNINGTON	John W. PENNINGTON
+Candidate	John SCHICKEL	John SCHICKEL
+Candidate	John C. BLANTON	John C. BLANTON
+Candidate	John 'Bam' CARNEY	John 'Bam' CARNEY
+Candidate	Joe GRAVISS	Joe GRAVISS
+Candidate	Jo JORGENSEN / Jeremy 'Spike' COHEN	Jo JORGENSEN / Jeremy 'Spike' COHEN
+Candidate	Jimmy MARICLE	Jimmy MARICLE
+Candidate	Jim GOOCH JR.	Jim GOOCH JR.
+Candidate	Jim GLENN	Jim GLENN
+Candidate	Jim DuPLESSIS	Jim DuPLESSIS
+Candidate	Jerry T. MILLER	Jerry T. MILLER
+Candidate	Jennifer Henson DECKER	Jennifer Henson DECKER
+Candidate	Jeffery Martin DONOHUE	Jeffery Martin DONOHUE
+Candidate	Jeff SPRADLING	Jeff SPRADLING
+Candidate	Jeff GRAMMER	Jeff GRAMMER
+Candidate	Jason STROUDE	Jason STROUDE
+Candidate	Jason PETRIE	Jason PETRIE
+Candidate	Jason NEMES	Jason NEMES
+Candidate	Jason G. HOWELL	Jason G. HOWELL
+Candidate	James TOLLER	James TOLLER
+Candidate	James FIORELLI	James FIORELLI
+Candidate	James Allen TIPTON	James Allen TIPTON
+Candidate	Jacob CLARK	Jacob CLARK
+Candidate	Jack COUCH	Jack COUCH
+Candidate	J. DAVIS	J. DAVIS
+Candidate	Guy M. MILLER	Guy M. MILLER
+Candidate	Glenn Martin HAMMOND	Glenn Martin HAMMOND
+Candidate	Gerald A. NEAL	Gerald A. NEAL
+Candidate	George A. BROWN JR.	George A. BROWN JR.
+Candidate	Gary Reed STRATTON	Gary Reed STRATTON
+Candidate	G. Hunt ROUNSAVALL JR.	G. Hunt ROUNSAVALL JR.
+Candidate	Felicia RABOURN	Felicia RABOURN
+Candidate	Dustin BURLEY	Dustin BURLEY
+Candidate	Donald J. TRUMP / Michael R. PENCE	Donald J. TRUMP / Michael R. PENCE
+Candidate	Derrick W. GRAHAM	Derrick W. GRAHAM
+Candidate	Derek LEWIS	Derek LEWIS
+Candidate	Denise Harper ANGEL	Denise Harper ANGEL
+Candidate	Deanna L. FRAZIER	Deanna L. FRAZIER
+Candidate	Dean SCHAMORE	Dean SCHAMORE
+Candidate	David YATES	David YATES
+Candidate	David W. OSBORNE	David W. OSBORNE
+Candidate	David R. YOUNG	David R. YOUNG
+Candidate	David P. GIVENS	David P. GIVENS
+Candidate	David MEADE	David MEADE
+Candidate	David MAYO	David MAYO
+Candidate	David HALE	David HALE
+Candidate	Danny R. BENTLEY	Danny R. BENTLEY
+Candidate	Daniel Wayne JOHNSON	Daniel Wayne JOHNSON
+Candidate	Daniel B. ELLIOTT	Daniel B. ELLIOTT
+Candidate	Daniel A. FISTER	Daniel A. FISTER
+Candidate	Damon THAYER	Damon THAYER
+Candidate	D. J. JOHNSON	D. J. JOHNSON
+Candidate	D. Chad McCOY	D. Chad McCOY
+Candidate	Crystal CHAPPELL	Crystal CHAPPELL
+Candidate	Cristi KENDRICK	Cristi KENDRICK
+Candidate	Craig MILLER	Craig MILLER
+Candidate	Corbin SNARDON	Corbin SNARDON
+Candidate	Chris McDANIEL	Chris McDANIEL
+Candidate	Chris FUGATE	Chris FUGATE
+Candidate	Chris FREELAND	Chris FREELAND
+Candidate	Cherlynn STEVENSON	Cherlynn STEVENSON
+Candidate	Charles W. MILLER	Charles W. MILLER
+Candidate	Charles 'Buddy' WHEATLEY	Charles 'Buddy' WHEATLEY
+Candidate	Carolyn DUPONT	Carolyn DUPONT
+Candidate	C. Ed MASSEY	C. Ed MASSEY
+Candidate	Bryan Shumate SHORT	Bryan Shumate SHORT
+Candidate	Brock PIERCE / Karla BALLARD	Brock PIERCE / Karla BALLARD
+Candidate	Brian T. CHISM	Brian T. CHISM
+Candidate	Brian Pedigo	Brian Pedigo
+Candidate	Brandon REED	Brandon REED
+Candidate	Brandon Jackson STORM	Brandon Jackson STORM
+Candidate	Brad BARRON	Brad BARRON
+Candidate	Bobby W. McCOOL	Bobby W. McCOOL
+Candidate	Bob DeVORE	Bob DeVORE
+Candidate	Billy WESLEY	Billy WESLEY
+Candidate	Bill MITCHELL	Bill MITCHELL
+Candidate	Bart T. ROWLAND	Bart T. ROWLAND
+Candidate	Austin VALENTINE JR.	Austin VALENTINE JR.
+Candidate	Attica Woodson SCOTT	Attica Woodson SCOTT
+Candidate	Ashley WILLIAMS	Ashley WILLIAMS
+Candidate	Ashley Tackett LAFERTY	Ashley Tackett LAFERTY
+Candidate	Arthur 'Art' McLAUGHLIN	Arthur 'Art' McLAUGHLIN
+Candidate	Angie HATTON	Angie HATTON
+Candidate	Ancel SMITH	Ancel SMITH
+Candidate	Amy McGRATH	Amy McGRATH
+Candidate	Amanda BILLINGS	Amanda BILLINGS
+Candidate	Alonzo PENNINGTON	Alonzo PENNINGTON
+Candidate	Alan 'Al' GENTRY	Alan 'Al' GENTRY
+Candidate	Al CUNNINGHAM	Al CUNNINGHAM
+Candidate	Adrienne E. SOUTHWORTH	Adrienne E. SOUTHWORTH
+Candidate	Adam KOENIG	Adam KOENIG
+Candidate	Adam BOWLING	Adam BOWLING
+Candidate	Aaron YATES	Aaron YATES
