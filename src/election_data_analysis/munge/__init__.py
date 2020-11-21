@@ -13,6 +13,7 @@ from sqlalchemy.orm.session import Session
 def clean_count_cols(
     df: pd.DataFrame,
     cols: Optional[List[str]],
+    thousands: Optional[str] = None
 ) -> (pd.DataFrame, pd.DataFrame):
     """Casts the given columns as integers, replacing any bad
     values with 0 and reporting a dataframe of any rows so changed."""
@@ -23,7 +24,10 @@ def clean_count_cols(
         working = df.copy()
         for c in cols:
             if c in working.columns:
-                mask = working[c] != pd.to_numeric(working[c], errors="coerce")
+                # remove the thousands separator
+                if thousands:
+                    working[c] = working[c].str.replace(thousands,"")
+                mask = ~working[c].astype(str).str.isdigit()
                 if mask.any():
                     # return bad rows for error reporting
                     err_df = pd.concat([err_df, working[mask]]).drop_duplicates()

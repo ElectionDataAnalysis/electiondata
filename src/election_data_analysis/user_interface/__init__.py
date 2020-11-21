@@ -445,7 +445,7 @@ def read_single_datafile(
                 err = add_new_error(err, "warn-file", Path(f_path).name, err_str)
 
             # clean the count columns
-            df, err_df = m.clean_count_cols(df, count_cols_by_name)
+            df, err_df = m.clean_count_cols(df, count_cols_by_name, thousands=munger.thousands_separator)
             if not err_df.empty:
                 err = add_err_df(err, err_df, munger, f_path)
                 # show all columns of dataframe holding rows where counts were set to 0
