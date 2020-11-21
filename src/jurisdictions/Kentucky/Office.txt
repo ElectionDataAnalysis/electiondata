@@ -1,0 +1,152 @@
+Name	ElectionDistrict
+KY House District 1	Kentucky;KY House District 1
+KY House District 2	Kentucky;KY House District 2
+KY House District 3	Kentucky;KY House District 3
+KY House District 4	Kentucky;KY House District 4
+KY House District 5	Kentucky;KY House District 5
+KY House District 6	Kentucky;KY House District 6
+KY House District 7	Kentucky;KY House District 7
+KY House District 8	Kentucky;KY House District 8
+KY House District 9	Kentucky;KY House District 9
+KY House District 10	Kentucky;KY House District 10
+KY House District 11	Kentucky;KY House District 11
+KY House District 12	Kentucky;KY House District 12
+KY House District 13	Kentucky;KY House District 13
+KY House District 14	Kentucky;KY House District 14
+KY House District 15	Kentucky;KY House District 15
+KY House District 16	Kentucky;KY House District 16
+KY House District 17	Kentucky;KY House District 17
+KY House District 18	Kentucky;KY House District 18
+KY House District 19	Kentucky;KY House District 19
+KY House District 20	Kentucky;KY House District 20
+KY House District 21	Kentucky;KY House District 21
+KY House District 22	Kentucky;KY House District 22
+KY House District 23	Kentucky;KY House District 23
+KY House District 24	Kentucky;KY House District 24
+KY House District 25	Kentucky;KY House District 25
+KY House District 26	Kentucky;KY House District 26
+KY House District 27	Kentucky;KY House District 27
+KY House District 28	Kentucky;KY House District 28
+KY House District 29	Kentucky;KY House District 29
+KY House District 30	Kentucky;KY House District 30
+KY House District 31	Kentucky;KY House District 31
+KY House District 32	Kentucky;KY House District 32
+KY House District 33	Kentucky;KY House District 33
+KY House District 34	Kentucky;KY House District 34
+KY House District 35	Kentucky;KY House District 35
+KY House District 36	Kentucky;KY House District 36
+KY House District 37	Kentucky;KY House District 37
+KY House District 38	Kentucky;KY House District 38
+KY House District 39	Kentucky;KY House District 39
+KY House District 40	Kentucky;KY House District 40
+KY House District 41	Kentucky;KY House District 41
+KY House District 42	Kentucky;KY House District 42
+KY House District 43	Kentucky;KY House District 43
+KY House District 44	Kentucky;KY House District 44
+KY House District 45	Kentucky;KY House District 45
+KY House District 46	Kentucky;KY House District 46
+KY House District 47	Kentucky;KY House District 47
+KY House District 48	Kentucky;KY House District 48
+KY House District 49	Kentucky;KY House District 49
+KY House District 50	Kentucky;KY House District 50
+KY House District 51	Kentucky;KY House District 51
+KY House District 52	Kentucky;KY House District 52
+KY House District 53	Kentucky;KY House District 53
+KY House District 54	Kentucky;KY House District 54
+KY House District 55	Kentucky;KY House District 55
+KY House District 56	Kentucky;KY House District 56
+KY House District 57	Kentucky;KY House District 57
+KY House District 58	Kentucky;KY House District 58
+KY House District 59	Kentucky;KY House District 59
+KY House District 60	Kentucky;KY House District 60
+KY House District 61	Kentucky;KY House District 61
+KY House District 62	Kentucky;KY House District 62
+KY House District 63	Kentucky;KY House District 63
+KY House District 64	Kentucky;KY House District 64
+KY House District 65	Kentucky;KY House District 65
+KY House District 66	Kentucky;KY House District 66
+KY House District 67	Kentucky;KY House District 67
+KY House District 68	Kentucky;KY House District 68
+KY House District 69	Kentucky;KY House District 69
+KY House District 70	Kentucky;KY House District 70
+KY House District 71	Kentucky;KY House District 71
+KY House District 72	Kentucky;KY House District 72
+KY House District 73	Kentucky;KY House District 73
+KY House District 74	Kentucky;KY House District 74
+KY House District 75	Kentucky;KY House District 75
+KY House District 76	Kentucky;KY House District 76
+KY House District 77	Kentucky;KY House District 77
+KY House District 78	Kentucky;KY House District 78
+KY House District 79	Kentucky;KY House District 79
+KY House District 80	Kentucky;KY House District 80
+KY House District 81	Kentucky;KY House District 81
+KY House District 82	Kentucky;KY House District 82
+KY House District 83	Kentucky;KY House District 83
+KY House District 84	Kentucky;KY House District 84
+KY House District 85	Kentucky;KY House District 85
+KY House District 86	Kentucky;KY House District 86
+KY House District 87	Kentucky;KY House District 87
+KY House District 88	Kentucky;KY House District 88
+KY House District 89	Kentucky;KY House District 89
+KY House District 90	Kentucky;KY House District 90
+KY House District 91	Kentucky;KY House District 91
+KY House District 92	Kentucky;KY House District 92
+KY House District 93	Kentucky;KY House District 93
+KY House District 94	Kentucky;KY House District 94
+KY House District 95	Kentucky;KY House District 95
+KY House District 96	Kentucky;KY House District 96
+KY House District 97	Kentucky;KY House District 97
+KY House District 98	Kentucky;KY House District 98
+KY House District 99	Kentucky;KY House District 99
+KY House District 100	Kentucky;KY House District 100
+KY Senate District 1	Kentucky;KY Senate District 1
+KY Senate District 2	Kentucky;KY Senate District 2
+KY Senate District 3	Kentucky;KY Senate District 3
+KY Senate District 4	Kentucky;KY Senate District 4
+KY Senate District 5	Kentucky;KY Senate District 5
+KY Senate District 6	Kentucky;KY Senate District 6
+KY Senate District 7	Kentucky;KY Senate District 7
+KY Senate District 8	Kentucky;KY Senate District 8
+KY Senate District 9	Kentucky;KY Senate District 9
+KY Senate District 10	Kentucky;KY Senate District 10
+KY Senate District 11	Kentucky;KY Senate District 11
+KY Senate District 12	Kentucky;KY Senate District 12
+KY Senate District 13	Kentucky;KY Senate District 13
+KY Senate District 14	Kentucky;KY Senate District 14
+KY Senate District 15	Kentucky;KY Senate District 15
+KY Senate District 16	Kentucky;KY Senate District 16
+KY Senate District 17	Kentucky;KY Senate District 17
+KY Senate District 18	Kentucky;KY Senate District 18
+KY Senate District 19	Kentucky;KY Senate District 19
+KY Senate District 20	Kentucky;KY Senate District 20
+KY Senate District 21	Kentucky;KY Senate District 21
+KY Senate District 22	Kentucky;KY Senate District 22
+KY Senate District 23	Kentucky;KY Senate District 23
+KY Senate District 24	Kentucky;KY Senate District 24
+KY Senate District 25	Kentucky;KY Senate District 25
+KY Senate District 26	Kentucky;KY Senate District 26
+KY Senate District 27	Kentucky;KY Senate District 27
+KY Senate District 28	Kentucky;KY Senate District 28
+KY Senate District 29	Kentucky;KY Senate District 29
+KY Senate District 30	Kentucky;KY Senate District 30
+KY Senate District 31	Kentucky;KY Senate District 31
+KY Senate District 32	Kentucky;KY Senate District 32
+KY Senate District 33	Kentucky;KY Senate District 33
+KY Senate District 34	Kentucky;KY Senate District 34
+KY Senate District 35	Kentucky;KY Senate District 35
+KY Senate District 36	Kentucky;KY Senate District 36
+KY Senate District 37	Kentucky;KY Senate District 37
+KY Senate District 38	Kentucky;KY Senate District 38
+US House KY District 1	Kentucky;US House KY District 1
+US House KY District 2	Kentucky;US House KY District 2
+US House KY District 3	Kentucky;US House KY District 3
+US House KY District 4	Kentucky;US House KY District 4
+US House KY District 5	Kentucky;US House KY District 5
+US House KY District 6	Kentucky;US House KY District 6
+US President (KY)	Kentucky
+KY Governor	Kentucky
+US Senate KY	Kentucky
+KY Attorney General	Kentucky
+KY Lieutenant Governor	Kentucky
+KY Treasurer	Kentucky
+KY Secretary of State	Kentucky
