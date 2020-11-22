@@ -1,0 +1,7 @@
+name	raw_identifier_formula	source
+Party	t	ini
+Candidate	t<1>	column
+ReportingUnit	t<County>	row
+CandidateContest	t	ini
+
+
