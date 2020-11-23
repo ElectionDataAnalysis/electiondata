@@ -807,7 +807,7 @@ def add_contest_id(
     return working, err
 
 
-def add_selection_id(
+def add_selection_id(  # TODO tech debt: why does this add columns 'I' and 'd'?
     df: pd.DataFrame, engine, jurisdiction: jm.Jurisdiction, err: dict
 ) -> (pd.DataFrame, dict):
     """Assumes <df> has contest_type, BallotMeasureSelection_raw, Candidate_Id column.
@@ -908,7 +908,7 @@ def add_selection_id(
 
     working = pd.concat([w["BallotMeasure"], w["Candidate"]])
 
-    return working, err
+    return working, err  #
 
 
 def row_and_col_sourced_ids(
@@ -924,7 +924,7 @@ def row_and_col_sourced_ids(
     for t in element_list:
         try:
             # capture id from db in new column and erase any now-redundant cols
-            df = pd.read_sql_table(t, session.bind)
+            element_df = pd.read_sql_table(t, session.bind)
             name_field = db.get_name_field(t)
             # set drop_unmatched = True for fields necessary to BallotMeasure rows,
             #  drop_unmatched = False otherwise to prevent losing BallotMeasureContests for BM-inessential fields
@@ -968,7 +968,7 @@ def row_and_col_sourced_ids(
                 working, new_err = replace_raw_with_internal_ids(
                     working,
                     juris,
-                    df,
+                    element_df,
                     t,
                     name_field,
                     err,
