@@ -1,0 +1,6 @@
+name	raw_identifier_formula	source
+ReportingUnit	<0>	column
+Party	{<Candidate>,^.* \(([A-Z]{3})\)$}	row
+CandidateContest	<Contest>	row
+Candidate	{<Candidate>,^(.*) \([A-Z]{3}\)$}	row
+CountItemType		ini

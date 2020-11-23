@@ -1,0 +1,15 @@
+Name
+Democratic Party
+Republican Party
+Green Party
+Libertarian Party
+UNA
+CON
+REP
+GRN
+LIB
+DEM
+<- did not match regex ^.* \(([A-Z]{3})\)$
+County <- did not match regex ^.* \(([A-Z]{3})\)$County
+UUP
+IAP
