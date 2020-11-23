@@ -118,10 +118,14 @@ Election	2020 General	2020 General
 Election	2020 Primary	2020 Primary
 Election	2018 General	2018 General
 Election	2016 General	2016 General
-Party	Democratic Party	Democratic Party
-Party	Republican Party	Republican Party
-Party	Green Party	Green Party
-Party	Libertarian Party	Libertarian Party
+Party	Democratic Party	DEM
+Party	Republican Party	REP
+Party	Green Party	GRN
+Party	Libertarian Party	LIB
+Party	Unaffiliated	UNA
+Party	Constitution Party	CON
+Party	United Utah Party	UUP
+Party	Independent American Party	IAP
 ReportingUnit	Utah;UT House District 1	Utah;UT House District 1
 ReportingUnit	Utah;UT House District 2	Utah;UT House District 2
 ReportingUnit	Utah;UT House District 3	Utah;UT House District 3
@@ -291,13 +295,3 @@ Candidate	SPENCER J. COX DEIDRE M. HENDERSON	SPENCER J. COX DEIDRE M. HENDERSON
 Candidate	GREG SKORDAS	GREG SKORDAS
 Candidate	RUDY J. BAUTISTA	RUDY J. BAUTISTA
 Candidate	SEAN D. REYES	SEAN D. REYES
-Party	UNA	UNA
-Party	CON	CON
-Party	REP	REP
-Party	GRN	GRN
-Party	LIB	LIB
-Party	DEM	DEM
-Party	<- did not match regex ^.* \(([A-Z]{3})\)$	<- did not match regex ^.* \(([A-Z]{3})\)$
-Party	County <- did not match regex ^.* \(([A-Z]{3})\)$County	County <- did not match regex ^.* \(([A-Z]{3})\)$County
-Party	UUP	UUP
-Party	IAP	IAP
