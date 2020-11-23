@@ -129,15 +129,21 @@ Party	Green Party	GRE
 Party	Libertarian Party	LIB
 Party	Constitution Party	CON
 Party	Independence Party	AI
+Party	Independence Party	AIP
+Party	Independence Party	AIP''
 Party	Democratic Party	DEM''
 Party	Republican Party	REP''
 Party	Green Party	GRE''
+Party	Green Party	GRN''
 Party	Libertarian Party	LIB''
 Party	Constitution Party	CON''
 Party	Independence Party	AI''
-Party	NOM	NOM''
-Party	ALI	ALI''
-Party	AIP	AIP''
+Party	Petition Nominee	NOM''
+Party	Alliance Party	ALI''
+Party	Alliance Party	ALI
+Party	No Party	NP
+
+
 
 CountItemType	election-day	election-day
 CountItemType	absentee	Absentee
@@ -700,9 +706,9 @@ Candidate	Baker, Thomas C.	Baker  Thomas C. - R
 Candidate	Batten, Bruce T.	Batten  Bruce T. - D
 Candidate	Bauer, Paul A.	Bauer  Paul A. - R
 Candidate	Becker, Leslie	Becker  Leslie - R
-Candidate	Begich, Tom	Begich  Tom - D
-Candidate	Begich, Tom	Begich, Tom
-Candidate	Begich/Call	Begich/Call
+Candidate	Tom Begich	Begich  Tom - D
+Candidate	Tom Begich	Begich, Tom
+Candidate	Tom Begich	Begich/Call
 Candidate	Beltrami, Vince	Beltrami, Vince
 Candidate	Birch, Chris	Birch, Chris
 Candidate	Bishop, Click	Bishop, Click
@@ -725,7 +731,7 @@ Candidate	Coghill, John B. Jr.	Coghill, John B. Jr.
 Candidate	Colbert, Bennie D.	Colbert  Bennie D. - D
 Candidate	Costello, Mia	Costello, Mia
 Candidate	Cote, Shirley A.	Cote, Shirley A.
-Candidate	"Cox, John R. ""Bear"""	"Cox  John R. ""Bear"" - R"
+CandidateCox, John R. 'Bear'"Cox  John R. ""Bear"" - R"
 Candidate	Craig, Breck A.	Craig, Breck A.
 Candidate	Crawford, Harry T. J	Crawford, Harry T. J
 Candidate	Crawford, Jim	Crawford, Jim
@@ -743,7 +749,7 @@ Candidate	Dougherty, Connie	Dougherty  Connie - R
 Candidate	Dougherty, Connie R.	Dougherty, Connie R.
 Candidate	Drummond, Harriet A.	Drummond  Harriet A. - D
 Candidate	Drummond, Harriet A.	Drummond, Harriet A.
-Candidate	Dunleavy/Meyer	Dunleavy/Meyer
+Candidate	Dunleavy	Dunleavy/Meyer
 Candidate	Duplantis, Stephen J.	Duplantis  Stephen J. - R
 Candidate	Eastman, David	Eastman  David - R
 Candidate	Eastman, David	Eastman, David
@@ -756,7 +762,7 @@ Candidate	Ferguson, Elizabeth	Ferguson  Elizabeth - D
 Candidate	Fetta, Alex	Fetta  Alex - R
 Candidate	Fields, Duncan	Fields, Duncan
 Candidate	Fields, William Z.	Fields, William Z.
-Candidate	"Fields, William Z. ""Zack"""	"Fields  William Z. ""Zack"" - D"
+Candidate	Fields, William Z. 'Zack'	Fields, William Z. 'Zack'
 Candidate	Finkenbinder, Sheila	Finkenbinder, Sheila
 Candidate	Fish, Mark	Fish, Mark
 Candidate	Foster, Neal W.	Foster  Neal W. - D
@@ -772,7 +778,7 @@ Candidate	Gianoutsos, Ted	Gianoutsos, Ted
 Candidate	Giessel, Catherine A	Giessel, Catherine A
 Candidate	Giessel, Cathy	Giessel  Cathy - R
 Candidate	Gillespie, David M.	Gillespie, David M.
-Candidate	"Gillham, Ronald D. ""Ron"""	"Gillham  Ronald D. ""Ron"" - R"
+Candidate	Gillham, Ronald D. 'Ron'	Gillham, Ronald D. 'Ron'
 Candidate	Gillis, Mel	Gillis  Mel - R
 Candidate	Goode, Pamela	Goode, Pamela
 Candidate	Gordon, Michael W.	Gordon, Michael W.
@@ -789,9 +795,9 @@ Candidate	Hannan, Sara	Hannan  Sara - D
 Candidate	Hannan, Sara	Hannan, Sara
 Candidate	Harris, Dennis P.	Harris, Dennis P.
 Candidate	Hartley, Alma N.	Hartley  Alma N. - D
-Candidate	"Heikes, Gerald L. ""Jer"""	"Heikes  Gerald L. ""Jer"" - R"
-Candidate	"Henslee, Katherine J. ""Kathy"""	"Henslee  Katherine J. ""Kathy"" - R"
-Candidate	"Hibler, William ""Bill"""	"Hibler  William ""Bill"" - D"
+Candidate	Heikes, Gerald L. 'Jer'	Heikes, Gerald L. 'Jer'
+Candidate	Henslee, Katherine J. 'Kathy'	Henslee, Katherine J. 'Kathy'
+Candidate	Hibler, William 'Bill'	Hibler, William 'Bill'
 Candidate	Higgins, Pat	Higgins, Pat
 Candidate	Hinz, Lynette Moreno	Hinz  Lynette Moreno - D
 Candidate	Hnilicka, Julia A.	Hnilicka  Julia A. - D
@@ -803,7 +809,7 @@ Candidate	Holmes, Doyle E.	Holmes, Doyle E.
 Candidate	Hopkins, Grier	Hopkins, Grier
 Candidate	Hopkins, Grier H.	Hopkins  Grier H. - D
 Candidate	Hopkins, Luke	Hopkins, Luke
-Candidate	"Howard, Lucas D. ""LD"""	"Howard  Lucas D. ""LD"" - R"
+Candidate	Howard, Lucas D. 'LD'	Howard, Lucas D. 'LD'
 Candidate	Howe, John Wayne	Howe  John Wayne - A
 Candidate	Hughes, Shelley	Hughes  Shelley - R
 Candidate	Hughes, Shelley	Hughes, Shelley
@@ -826,7 +832,7 @@ Candidate	Johnston, Jennifer B	Johnston, Jennifer B
 Candidate	Johnston, Jennifer B.	Johnston  Jennifer B. - R
 Candidate	Jones, Gregory I.	Jones, Gregory I.
 Candidate	Josephson, Andrew L.	Josephson, Andrew L.
-Candidate	"Josephson, Andrew L. ""Andy"""	"Josephson  Andrew L. ""Andy"" - D"
+Candidate	Josephson, Andrew L. 'Andy'	Josephson, Andrew L. 'Andy'
 Candidate	Kastner, Kevin D.	Kastner, Kevin D.
 Candidate	Katelnikoff-Lester	Katelnikoff-Lester
 Candidate	Kaufman, James D.	Kaufman  James D. - R
@@ -851,9 +857,9 @@ Candidate	Land, Jason T.	Land, Jason T.
 Candidate	Largent, Lynette A.	Largent  Lynette A. - R
 Candidate	Lawrence, Van	Lawrence, Van
 Candidate	LeBon, Barton S.	LeBon, Barton S.
-Candidate	"Lebon, Barton S. ""Bart"""	"Lebon  Barton S. ""Bart"" - R"
+Candidate	Lebon, Barton S. 'Bart'	Lebon, Barton S. 'Bart'
 Candidate	LeDoux, Gabrielle	LeDoux, Gabrielle
-Candidate	"LeDoux, Gabrielle R. ""Gabby"""	"LeDoux  Gabrielle R. ""Gabby"" - R"
+Candidate	LeDoux, Gabrielle R. 'Gabby'	LeDoux, Gabrielle R. 'Gabby'
 Candidate	Lee, Amber M.	Lee, Amber M.
 Candidate	Lee, Huhnkie	Lee  Huhnkie - R
 Candidate	Lees, Adam S.	Lees  Adam S. - D
@@ -875,7 +881,7 @@ Candidate	McCormack, Patrick M	McCormack, Patrick M
 Candidate	McCormack, Patrick M.	McCormack  Patrick M. - D
 Candidate	McDermott, Jim C.	McDermott, Jim C.
 Candidate	McDonald, Forrest J.	McDonald, Forrest J.
-Candidate	"McKay, Thomas W. ""Tom"""	"McKay  Thomas W. ""Tom"" - R"
+Candidate	McKay, Thomas W. 'Tom'	McKay, Thomas W. 'Tom'
 Candidate	McKinley, Kevin	McKinley, Kevin
 Candidate	McKinley, Kevin M.	McKinley  Kevin M. - R
 Candidate	Merrick, Kelly R.	Merrick  Kelly R. - R
@@ -894,12 +900,12 @@ Candidate	Myers, Robert H. Jr.	Myers  Robert H. Jr. - R
 Candidate	Nankervis, Jerry A.	Nankervis, Jerry A.
 Candidate	Nees, David W.	Nees  David W. - A
 Candidate	Nelson, David	Nelson  David - R
-Candidate	"Nelson, T. ""John"""	"Nelson  T. ""John"" - R"
+Candidate	Nelson, T. 'John'	Nelson, T. 'John'
 Candidate	Neuman, Mark	Neuman, Mark
 Candidate	Neuman, Mark A.	Neuman  Mark A. - R
 Candidate	Neuman, Mark A.	Neuman, Mark A.
 Candidate	Olson, Donald C.	Olson, Donald C.
-Candidate	"Olson, Donald C. ""Donny"""	"Olson  Donald C. ""Donny"" - D"
+Candidate	Olson, Donald C. 'Donny'	Olson, Donald C. 'Donny'
 Candidate	Olson, Jeanne L.	Olson, Jeanne L.
 Candidate	Olson, Sherie A.	Olson, Sherie A.
 Candidate	Ortiz, Daniel H.	Ortiz, Daniel H.
@@ -909,7 +915,7 @@ Candidate	Park, Janice Lynn	Park  Janice Lynn - D
 Candidate	Patterson, Eileen E.	Patterson, Eileen E.
 Candidate	Perry, Karen	Perry, Karen
 Candidate	Phillips, Rick	Phillips  Rick - D
-Candidate	"Prax, Glenn M. ""Mike"""	"Prax  Glenn M. ""Mike"" - R"
+Candidate	Prax, Glenn M. 'Mike'	Prax, Glenn M. 'Mike'
 Candidate	Pruitt, Lance	Pruitt, Lance
 Candidate	Pruitt, Lance D.	Pruitt  Lance D. - R
 Candidate	Quist, Christopher	Quist  Christopher - D
@@ -922,7 +928,7 @@ Candidate	Reinbold, Lora H.	Reinbold, Lora H.
 Candidate	Revak, Josh C.	Revak, Josh C.
 Candidate	Revak, Joshua C.	Revak  Joshua C. - R
 Candidate	Rodriguez, Benjamin	Rodriguez  Benjamin - R
-Candidate	"Rupright, Bernadette ""Bee"""	"Rupright  Bernadette ""Bee"" - R"
+Candidate	Rupright, Bernadette 'Bee'	Rupright, Bernadette 'Bee'
 Candidate	Sackett, Jim	Sackett, Jim
 Candidate	Saddler, Dan	Saddler, Dan
 Candidate	Sanders, Marcus	Sanders, Marcus
@@ -959,7 +965,7 @@ Candidate	Stevens, Gary	Stevens, Gary
 Candidate	Stewart, Marilyn	Stewart, Marilyn
 Candidate	Stock, Margaret	Stock, Margaret
 Candidate	Story, Andrea	Story, Andrea
-Candidate	"Story, Andrea ""Andi"""	"Story  Andrea ""Andi"" - D"
+Candidate	Story, Andrea 'Andi'	Story, Andrea 'Andi'
 Candidate	Stutes, Louise	Stutes, Louise
 Candidate	Stutes, Louise B.	Stutes  Louise B. - R
 Candidate	Sullivan-Leonard, Co	Sullivan-Leonard, Co
@@ -974,11 +980,11 @@ Candidate	Thompson, Steve M.	Thompson, Steve M.
 Candidate	Thorne, Anita	Thorne, Anita
 Candidate	Thorne, Anita L.	Thorne  Anita L. - D
 Candidate	Thornton, Shauna	Thornton, Shauna
-Candidate	"Thurman, Loy ""Santa"""	"Thurman  Loy ""Santa"" - R"
+Candidate	Thurman, Loy 'Santa'	Thurman, Loy 'Santa'
 Candidate	Tilton, Cathy L.	Tilton  Cathy L. - R
 Candidate	Tilton, Cathy L.	Tilton, Cathy L.
-Candidate	Toien/Clift	Toien/Clift
-Candidate	Trump, Donald J.	Trump, Donald J.
+Candidate	Toien	Toien/Clift
+Candidate	Donald J. Trump	Trump, Donald J.
 Candidate	Tuck, Chris	Tuck, Chris
 Candidate	Tuck, Chris S.	Tuck  Chris S. - D
 Candidate	Tuck, Chris S.	Tuck, Chris S.
@@ -991,7 +997,7 @@ Candidate	Von Imhof, Natasha A	Von Imhof, Natasha A
 Candidate	Von Imhof, Natasha A.	Von Imhof  Natasha A. - R
 Candidate	Von Imhof, Natasha A.	von Imhof Natasha A.''
 Candidate	Walker, David G.	Walker  David G. - R
-Candidate	Walker/Mallott	Walker/Mallott
+Candidate	Walker	Walker
 Candidate	Watkins, Brent L.	Watkins, Brent L.
 Candidate	Weatherby, William W	Weatherby, William W
 Candidate	Wehmhoff, Gretchen L	Wehmhoff, Gretchen L
@@ -1030,7 +1036,7 @@ Candidate	Wielechowski Bill	Wielechowski Bill''
 Candidate	Verhagen Elijah M.	Verhagen Elijah M.''
 Candidate	Vance Sarah L.	Vance Sarah L.''
 Candidate	Tuck Chris S.	Tuck Chris S.''
-Candidate	Trump Donald J. / Pence Michael R.	Trump Donald J. / Pence Michael R.''
+Candidate	Donald J. Trump	Trump Donald J. / Pence Michael R.''
 Candidate	Trimble Stephen T.	Trimble Stephen T.''
 Candidate	Tilton Cathy L.	Tilton Cathy L.''
 Candidate	Thompson Steve M.	Thompson Steve M.''
@@ -1055,7 +1061,7 @@ Candidate	Rasmussen Sara E.	Rasmussen Sara E.''
 Candidate	Quist Christopher	Quist Christopher''
 Candidate	Pruitt Lance D.	Pruitt Lance D.''
 Candidate	Prax Glenn M. 'Mike'	Prax Glenn M. 'Mike'''
-Candidate	Pierce Brock / Ballard Karla	Pierce Brock / Ballard Karla''
+Candidate	Brock Pierce	Pierce Brock / Ballard Karla''
 Candidate	Patkotak Josiah 'Aullaqsruaq'	Patkotak Josiah 'Aullaqsruaq'''
 Candidate	Ortiz Daniel H. 'Dan'	Ortiz Daniel H. 'Dan'''
 Candidate	Olson Donald C. 'Donny'	Olson Donald C. 'Donny'''
@@ -1082,11 +1088,11 @@ Candidate	King Edward M. 'Ed'	King Edward M. 'Ed'''
 Candidate	Keppel Willy	Keppel Willy''
 Candidate	Kaufman James D.	Kaufman James D.''
 Candidate	Josephson Andrew L. 'Andy'	Josephson Andrew L. 'Andy'''
-Candidate	Jorgensen Jo / Cohen Jeremy 'Spike'	Jorgensen Jo / Cohen Jeremy 'Spike'''
+Candidate	Jo Jorgensen	Jorgensen Jo / Cohen Jeremy 'Spike'''
 Candidate	Johnson DeLena	Johnson DeLena''
 Candidate	Johnson Carl	Johnson Carl''
 Candidate	Johnson Bill	Johnson Bill''
-Candidate	Janos James G. 'Jesse Ventura' / McKinney Cynthia	Janos James G. 'Jesse Ventura' / McKinney Cynthia''
+Candidate	James G. 'Jesse Ventura' Janos	Janos James G. 'Jesse Ventura' / McKinney Cynthia''
 Candidate	Huit Timothy R.	Huit Timothy R.''
 Candidate	Hughes Shelley	Hughes Shelley''
 Candidate	Howe John Wayne	Howe John Wayne''
@@ -1113,7 +1119,7 @@ Candidate	Edgmon Bryce	Edgmon Bryce''
 Candidate	Eastman David	Eastman David''
 Candidate	Eads Evan A.	Eads Evan A.''
 Candidate	Drummond Harriet A.	Drummond Harriet A.''
-Candidate	De La Fuente Rocque 'Rocky' / Richardson Darcy G.	De La Fuente Rocque 'Rocky' / Richardson Darcy G.''
+Candidate	Rocque 'Rocky' De La Fuente	De La Fuente Rocque 'Rocky' / Richardson Darcy G.''
 Candidate	Dale Paul D.	Dale Paul D.''
 Candidate	Cronk Mike	Cronk Mike''
 Candidate	Cooper Kelly	Cooper Kelly''
@@ -1126,9 +1132,9 @@ Candidate	Carlson Vernon J.	Carlson Vernon J.''
 Candidate	Canitz James A. Sr.	Canitz James A. Sr.''
 Candidate	Cacy Roselynn	Cacy Roselynn''
 Candidate	Burton Jamin L.	Burton Jamin L.''
-Candidate	Blankenship Don / Mohr William	Blankenship Don / Mohr William''
-Candidate	Biden Joseph R. Jr. / Harris Kamala D.	Biden Joseph R. Jr. / Harris Kamala D.''
-Candidate	Begich Tom	Begich Tom''
+Candidate	Don Blankenship	Blankenship Don / Mohr William''
+Candidate	Joseph R. Biden	Biden Joseph R. Jr. / Harris Kamala D.''
+Candidate	Tom Begich	Begich Tom''
 Candidate	Becker Leslie	Becker Leslie''
 Candidate	Bauer Paul A.	Bauer Paul A.''
 Candidate	Baker Thomas C.	Baker Thomas C.''
