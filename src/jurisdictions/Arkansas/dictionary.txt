@@ -1660,13 +1660,6 @@ CandidateContest	US House AR District 1	U.S. Congress District 1
 CandidateContest	US House AR District 2	U.S. Congress District 2
 CandidateContest	US House AR District 3	U.S. Congress District 3
 CandidateContest	US House AR District 4	U.S. Congress District 4
-Election	2020 General	2020 General
-Election	2020 Primary	2020 Primary
-Election	2020 Presidential Preference Primary	2020 Presidential Preference Primary
-Election	2018 General	2018 General
-Election	2018 Primary	2018 Primary
-Election	2016 General	2016 General
-Election	2016 Primary	2016 Primary
 ReportingUnit	Arkansas;AR House District 1	State House District 1
 ReportingUnit	Arkansas;AR House District 2	State House District 2
 ReportingUnit	Arkansas;AR House District 3	State House District 3

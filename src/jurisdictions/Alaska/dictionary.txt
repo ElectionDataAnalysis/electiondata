@@ -129,15 +129,21 @@ Party	Green Party	GRE
 Party	Libertarian Party	LIB
 Party	Constitution Party	CON
 Party	Independence Party	AI
+Party	Independence Party	AIP
+Party	Independence Party	AIP''
 Party	Democratic Party	DEM''
 Party	Republican Party	REP''
 Party	Green Party	GRE''
+Party	Green Party	GRN''
 Party	Libertarian Party	LIB''
 Party	Constitution Party	CON''
 Party	Independence Party	AI''
-Party	NOM	NOM''
-Party	ALI	ALI''
-Party	AIP	AIP''
+Party	Petition Nominee	NOM''
+Party	Alliance Party	ALI''
+Party	Alliance Party	ALI
+Party	No Party	NP
+
+
 
 CountItemType	election-day	election-day
 CountItemType	absentee	Absentee
