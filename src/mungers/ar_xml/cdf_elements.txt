@@ -1,6 +1,6 @@
 name	raw_identifier_formula	source
-ReportingUnit	<jurisdiction.name>	xml
-Party	<choice.party>	xml
-CandidateContest	<contest.contestLongName>	xml
-Candidate	<choice.choiceName>	xml
-CountItemType	<voteType.voteTypeName>	xml
+ReportingUnit	<County.name>	xml
+Party	<Choice.party>	xml
+CandidateContest	<Contest.text>	xml
+Candidate	<Choice.text>	xml
+CountItemType	<VoteType.name>	xml
