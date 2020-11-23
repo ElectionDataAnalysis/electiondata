@@ -14,17 +14,17 @@ abbr = 'AK'
 
 # # # Data from https://www.elections.alaska.gov/results/16GENR/data/results.htm
 
-total_pres_votes = 1313176  # total of all votes for President
+total_pres_votes = 356845  # total of all votes for President
 cd = 1  # congressional district
-total_cd_votes = 189673  # total votes in the chosen cd
+total_cd_votes = 351316  # total votes in the chosen cd
 shd = 12   # state house district
-total_shd_votes = 5752
+total_shd_votes = 8862
 ssd = "F"  # state senate district
-total_ssd_votes = 13071
+total_ssd_votes = 20653
 single_vote_type = 'early'  # pick any one from your file
-pres_votes_vote_type = 27503 + 12010
+pres_votes_vote_type = 52819
 single_county = 'Alaska;AK House District 29'  # pick any one from your file -
-pres_votes_county = 37842  # total votes for pres of that county
+pres_votes_county = 10737  # total votes for pres of that county
 county_or_other = "state-house"
 
 
