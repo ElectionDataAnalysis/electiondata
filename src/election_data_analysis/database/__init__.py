@@ -411,7 +411,7 @@ def name_from_id(cursor, element, idx):
     return name
 
 
-def name_to_id_cursor(cursor, element, name):
+def name_to_id_cursor(cursor, element, name) -> Optional[int]:
     if element == "CandidateContest":
         q = sql.SQL(
             'SELECT "Id" FROM "Contest" where "Name" = %s AND contest_type = \'Candidate\''
@@ -1383,6 +1383,30 @@ def get_candidate_votecounts(session, election_id, top_ru_id, subdivision_type_i
         "Party",
     ]
     return result_df
+
+
+def get_contest_with_unknown(session, election_id, top_ru_id) -> List[str]:
+    connection = session.bind.raw_connection()
+    cursor = connection.cursor()
+
+    q = sql.SQL("""select distinct c."Name"
+from "VoteCount" vc
+left join "Contest" c on vc."Contest_Id" = c."Id"
+left join "CandidateSelection" cs on cs."Id" = vc."Selection_Id"
+left join "Candidate" can on cs."Candidate_Id" = can."Id"
+left join "ReportingUnit" child_ru on vc."ReportingUnit_Id" = child_ru."Id"
+left join "ComposingReportingUnitJoin" cruj on child_ru."Id" = cruj."ChildReportingUnit_Id"
+where
+    can."BallotName" = 'none or unknown'
+ and vc."Election_Id" = %s
+and cruj."ParentReportingUnit_Id" = %s
+;""")
+    cursor.execute(
+        q, (election_id, top_ru_id)
+    )
+    result = cursor.fetchall()
+    contests = [x[0] for x in result]
+    return contests
 
 
 def export_rollup_from_db(
