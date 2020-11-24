@@ -231,7 +231,6 @@ Tovar, Anna
 Marquez Peterson, Lea
 O'Connor, James 'Jim'
 Sloan, Eric
-Joseph Biden
 Pete Buttigieg
 Julián Castro
 Michael Ellinger
@@ -243,3 +242,7 @@ Elizabeth Warren
 Marianne Williamson
 Andrew Yang
 Roque 'Rocky' De La Fuente
+Joseph R. Biden
+Donald J. Trump
+Jo Jorgensen
+Art Babbott
