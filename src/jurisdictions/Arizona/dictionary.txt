@@ -1116,7 +1116,9 @@ CandidateContest	US President (AZ) (Democratic Party)	President of the United St
 CandidateContest	US President (AZ) (Republican Party)	President of the United States (Republican)
 CandidateContest	US President (AZ) (Libertarian Party)	President of the United States (Libertarian)
 CandidateContest	US President (AZ) (Green Party)	President of the United States (Green)
-Candidate	Joseph Biden	Joseph Biden
+Candidate	Joseph R. Biden	Joseph Biden
+Candidate	Donald J. Trump	Trump, Donald J.
+Candidate	Joseph R. Biden	Biden, Joseph
 Candidate	Pete Buttigieg	Pete Buttigieg
 Candidate	Julián Castro	Julián Castro
 Candidate	Roque 'Rocky' De La Fuente	Roque 'Rocky' De La Fuente
@@ -1128,4 +1130,6 @@ Candidate	Bernie Sanders	Bernie Sanders
 Candidate	Elizabeth Warren	Elizabeth Warren
 Candidate	Marianne Williamson	Marianne Williamson
 Candidate	Andrew Yang	Andrew Yang
+Candidate	Jo Jorgensen	Jorgensen, Jo
+Candidate	Art Babbott	Babbott, Art
 CountItemType	total	total

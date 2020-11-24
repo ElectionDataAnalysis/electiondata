@@ -2173,6 +2173,7 @@ Party	Republican Party	r
 Party	Green Party	g
 Party	Libertarian Party	l
 Party	Libertarian Party	Jorgensen and Cohen lib
+Party	Libertarian Party	lib
 ReportingUnit	New Hampshire;NH House District 1	New Hampshire;NH House District 1
 ReportingUnit	New Hampshire;NH House District 2	New Hampshire;NH House District 2
 ReportingUnit	New Hampshire;NH House District 3	New Hampshire;NH House District 3
@@ -4818,3 +4819,7 @@ Candidate	Andy Martin	Andy Martin
 Candidate	Donald J. Trump	Trump and Pence
 Candidate	Jo Jorgensen	Jorgensen and Cohen lib
 Candidate	Joseph R. Biden	Biden and Harris
+Candidate	Darryl W. Perry	Darryl W. Perry
+Candidate	Dan Feltes	Dan Feltes
+Candidate	Chris Sununu	Chris Sununu
+Candidate	Justin O'Donnell	Justin O'Donnell
