@@ -102,7 +102,7 @@ Tony Gumina
 Susie Lee
 Danny Tarkanian
 Harry L. Vickers
-Jack "Fat Jack" Cochran
+Jack 'Fat Jack' Cochran
 Glen Leavitt
 Ralph Preta
 JOE HARDY
@@ -117,7 +117,7 @@ Tiffany Jones
 Melanie Scheible
 Sandra Jauregui
 Paris Wade
-Richard "Rick" Bronstein
+Richard 'Rick' Bronstein
 Julie Pazina
 Keith Pickard
 Lesley Elizabeth Cohen
@@ -166,7 +166,7 @@ Richard McArthur
 Connie Munk
 Leonard Foster
 Tom Roberts
-Patricia "Pat" Little
+Patricia 'Pat' Little
 Ronald Newsome
 Tyrone THOMPSON
 Maggie CARLTON
@@ -174,7 +174,7 @@ Sandra Ramaker
 Geno Withelder
 David P. Ballweg
 George H. Gault
-Ann "Annie" Black
+Ann 'Annie' Black
 Karen Fielding
 Duane L. Thurston
 John Burrows
@@ -189,7 +189,7 @@ Erik L. Laub
 DARRYLL B. DODENBIER
 Brian Douglas Haviland
 Edgar Flores
-Calvin "Cal" Border
+Calvin 'Cal' Border
 MO DENIS
 Shannon Bilbray-Axelrod
 Janice E. Wesen
@@ -210,7 +210,7 @@ Gianna Miceli
 Stan Vaughan
 III Watts
 Trish Marsh
-"Tick" Segerblom
+'Tick' Segerblom
 Michael L. McDonald
 Ellen Spiegel
 Richard Carrillo
@@ -254,19 +254,19 @@ Gennady II Stolyarov
 Matt Bernard
 Bill Driscoll
 Richard Sr. Koontz
-William R. "Bill" Souligny
+William R. 'Bill' Souligny
 Roxanne Stangle
-Charles "Chuck" Fagen
+Charles 'Chuck' Fagen
 Keith E. Fertala
 Hunter Harris
 Janet Murphy
 Carl N. Ruschmeyer
-William "Bill" Kirschner
+William 'Bill' Kirschner
 Dan Norman
-Sandra "Sandy" Parks
+Sandra 'Sandy' Parks
 Darya Vogt
 KATRINKA S. RUSSELL
-KRISTINE "KRIS" JAKEMAN
+KRISTINE 'KRIS' JAKEMAN
 CHERYL PAUL
 DELMO ANDREOZZI
 CLIFF EKLUND
@@ -291,7 +291,7 @@ John C. Ellison
 CAMERON KINNEY
 SABRA ESPARZA
 WAYNE A. EVENSON
-PATRICIA "PAM" GRISWOLD
+PATRICIA 'PAM' GRISWOLD
 LINCOLN LITCHFIELD
 DANA DON HOLBROOK
 JONATHAN GOOLSBY
@@ -300,7 +300,7 @@ ROBERT WOOLSEY
 LAYLA WALZ
 JEFF R. DURHAM
 KATHY DURHAM
-ISMAEL "IZZY" GUTIERREZ
+ISMAEL 'IZZY' GUTIERREZ
 JOHN B. HANSON
 JASIE HOLM
 MICHAEL CHRISTENSEN
@@ -310,8 +310,8 @@ JARED F. CARTER
 GERARDO RODRIGUEZ
 RUTH P. LEE
 VERA BOYER
-PATRICIA "PATTY" HUBER-BETH
-LaCinda "CINDY" ELGAN
+PATRICIA 'PATTY' HUBER-BETH
+LaCinda 'CINDY' ELGAN
 TIMOTHY HIPP
 MARK STEZAKER
 ROBERT E. III GLENNEN
@@ -324,7 +324,7 @@ LISA L. HOEHNE
 AMANDA JEAN PEARCE
 RICH MCKAY
 BEVERLY CONLEY
-THEODORE "TED" BEUTEL
+THEODORE 'TED' BEUTEL
 DOROTHY ROWLEY
 MELYNDA SHARKOZY
 MELISSA FITZWATER
@@ -338,7 +338,7 @@ Jim Billingsley
 Fredrick Bryant
 Paige Brooks
 Rich Stone
-WILLIAM "JEFF" JOHNSON
+WILLIAM 'JEFF' JOHNSON
 Tami Rae Spero
 Ronald L. Cerri
 Jim French
@@ -389,13 +389,13 @@ Greg Hunewill
 Brenda K. Cullen
 Margie Kassebaum
 Stephen B. Rye
-Douglas "Doug" Kassebaum
-Cary "Rick" Smith
+Douglas 'Doug' Kassebaum
+Cary 'Rick' Smith
 Cassandra Aveiro
 Barbara Jean Jones
 Frank Hunewill
 AL MCNEIL
-Charles "Chuck" Kennedy
+Charles 'Chuck' Kennedy
 Kathy McIntosh
 Avis Moniz
 Alicia Norris
@@ -423,7 +423,7 @@ Randy Adams
 Earl William Perry
 ANDY ALBERTI
 SHEREE STRINGER
-SANDRA "SAM" MERLINO
+SANDRA 'SAM' MERLINO
 SHEILA WINN
 DEBORAH BEATTY
 MICHAEL S. NOYES
@@ -467,7 +467,7 @@ Sam Toll
 Eddie Lorton
 Hillary Schieve
 Michael E. Clark
-Hugh "Chip" Evans
+Hugh 'Chip' Evans
 Nancy Parent
 Emil Tudorache
 Lawrence Burtness
@@ -516,7 +516,7 @@ Ellen Minetto
 Dian Vanderwell
 Andrew Benjamin Caudill
 Debra Smith Feemster
-Richard "Skip" Daly
+Richard 'Skip' Daly
 Jill Ann Dickman
 Sandra Ainsworth
 Suzanne Dutra
@@ -563,3 +563,7 @@ ESTEBAN, JONATHAN ROYCE
 BROWN, STEVE
 BRIDGES II, EDWARD
 BENTLEY, JOYCE
+Jo Jorgensen
+Don Blankenship
+Joseph R. Biden
+None Of These Candidates

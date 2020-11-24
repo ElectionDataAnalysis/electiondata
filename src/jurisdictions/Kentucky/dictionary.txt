@@ -424,9 +424,9 @@ ReportingUnit	Kentucky;Whitley County	Whitley
 ReportingUnit	Kentucky;Wolfe County	Wolfe
 ReportingUnit	Kentucky;Woodford County	Woodford
 Candidate	SANDERS, BERNARD	SANDERS, BERNARD
-Candidate	BIDEN, JOSEPH ROBINETTE JR	BIDEN, JOSEPH ROBINETTE JR
+Candidate	Joseph R. Biden	BIDEN, JOSEPH ROBINETTE JR
 Candidate	GABBARD, TULSI	GABBARD, TULSI
-Candidate	TRUMP, DONALD J.	TRUMP, DONALD J.
+Candidate	Donald J. Trump.	TRUMP, DONALD J.
 Candidate	DE LA FUENTE, ROQUE ROCKY	DE LA FUENTE, ROQUE ROCKY
 Candidate	WELD, WILLIAM F	WELD, WILLIAM F
 Candidate	SHAPIRO , JOSHUA D	SHAPIRO , JOSHUA D
@@ -1321,11 +1321,11 @@ Candidate	GROVE, SETH MICHAEL	GROVE, SETH MICHAEL
 Party	Democratic Party	Democratic
 Party	Republican Party	Republican
 Candidate	Write-in	Write-in
-Candidate	JOSEPH R BIDEN / KAMALA D HARRIS	JOSEPH R BIDEN / KAMALA D HARRIS
-Candidate	JO JORGENSEN / JEREMY (SPIKE) COHEN	JO JORGENSEN / JEREMY (SPIKE) COHEN
+Candidate	Joseph R. Biden	JOSEPH R BIDEN / KAMALA D HARRIS
+Candidate	Jo Jorgensen	JO JORGENSEN / JEREMY (SPIKE) COHEN
 Candidate	HOWIE HAWKINS / ANGELA WALKER	HOWIE HAWKINS / ANGELA WALKER
-Candidate	DARIO HUNTER / DAWN NEPTUNE ADAMS	DARIO HUNTER / DAWN NEPTUNE ADAMS
-Candidate	DONALD J TRUMP / MICHAEL R PENCE	DONALD J TRUMP / MICHAEL R PENCE
+Candidate	Dario Hunter	DARIO HUNTER / DAWN NEPTUNE ADAMS
+Candidate	Donald J. Trump	DONALD J TRUMP / MICHAEL R PENCE
 Candidate	JEFF MERKLEY	JEFF MERKLEY
 Candidate	GARY DYE	GARY DYE
 Candidate	IBRAHIM A TAHER	IBRAHIM A TAHER
@@ -1496,7 +1496,7 @@ Candidate	Joshua GILPIN	Joshua GILPIN
 Candidate	Joshua BRANSCUM	Joshua BRANSCUM
 Candidate	Josh CALLOWAY	Josh CALLOWAY
 Candidate	Josh BRAY	Josh BRAY
-Candidate	Joseph R. BIDEN / Kamala D. HARRIS	Joseph R. BIDEN / Kamala D. HARRIS
+Candidate	Joseph R. Biden	Joseph R. BIDEN / Kamala D. HARRIS
 Candidate	Joseph M. FISCHER	Joseph M. FISCHER
 Candidate	Joni JENKINS	Joni JENKINS
 Candidate	Jonathan DIXON	Jonathan DIXON
@@ -1510,7 +1510,7 @@ Candidate	John SCHICKEL	John SCHICKEL
 Candidate	John C. BLANTON	John C. BLANTON
 Candidate	John 'Bam' CARNEY	John 'Bam' CARNEY
 Candidate	Joe GRAVISS	Joe GRAVISS
-Candidate	Jo JORGENSEN / Jeremy 'Spike' COHEN	Jo JORGENSEN / Jeremy 'Spike' COHEN
+Candidate	Jo Jorgensen	Jo JORGENSEN / Jeremy 'Spike' COHEN
 Candidate	Jimmy MARICLE	Jimmy MARICLE
 Candidate	Jim GOOCH JR.	Jim GOOCH JR.
 Candidate	Jim GLENN	Jim GLENN
@@ -1538,7 +1538,7 @@ Candidate	Gary Reed STRATTON	Gary Reed STRATTON
 Candidate	G. Hunt ROUNSAVALL JR.	G. Hunt ROUNSAVALL JR.
 Candidate	Felicia RABOURN	Felicia RABOURN
 Candidate	Dustin BURLEY	Dustin BURLEY
-Candidate	Donald J. TRUMP / Michael R. PENCE	Donald J. TRUMP / Michael R. PENCE
+Candidate	Donald J. Trump	Donald J. TRUMP / Michael R. PENCE
 Candidate	Derrick W. GRAHAM	Derrick W. GRAHAM
 Candidate	Derek LEWIS	Derek LEWIS
 Candidate	Denise Harper ANGEL	Denise Harper ANGEL
@@ -1571,7 +1571,7 @@ Candidate	Charles 'Buddy' WHEATLEY	Charles 'Buddy' WHEATLEY
 Candidate	Carolyn DUPONT	Carolyn DUPONT
 Candidate	C. Ed MASSEY	C. Ed MASSEY
 Candidate	Bryan Shumate SHORT	Bryan Shumate SHORT
-Candidate	Brock PIERCE / Karla BALLARD	Brock PIERCE / Karla BALLARD
+Candidate	Brock Pierce	Brock PIERCE / Karla BALLARD
 Candidate	Brian T. CHISM	Brian T. CHISM
 Candidate	Brian Pedigo	Brian Pedigo
 Candidate	Brandon REED	Brandon REED
@@ -1598,3 +1598,19 @@ Candidate	Adrienne E. SOUTHWORTH	Adrienne E. SOUTHWORTH
 Candidate	Adam KOENIG	Adam KOENIG
 Candidate	Adam BOWLING	Adam BOWLING
 Candidate	Aaron YATES	Aaron YATES
+Candidate	Thomas MASSIE	Thomas MASSIE
+Candidate	S. Brett GUTHRIE	S. Brett GUTHRIE
+Candidate	Robert Lee PERRY	Robert Lee PERRY
+Candidate	Rhonda PALAZZO	Rhonda PALAZZO
+Candidate	Matthew Ryan BEST	Matthew Ryan BEST
+Candidate	Lewis CARTER	Lewis CARTER
+Candidate	Josh HICKS	Josh HICKS
+Candidate	John A. YARMUTH	John A. YARMUTH
+Candidate	James RHODES	James RHODES
+Candidate	James R. COMER	James R. COMER
+Candidate	Harold 'Hal' ROGERS	Harold 'Hal' ROGERS
+Candidate	Hank LINDERMAN	Hank LINDERMAN
+Candidate	Frank HARRIS	Frank HARRIS
+Candidate	Andy BARR	Andy BARR
+Candidate	Alexandra OWENSBY	Alexandra OWENSBY
+Party	Populist Party	POP
