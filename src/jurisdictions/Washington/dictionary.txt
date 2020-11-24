@@ -166,13 +166,15 @@ CandidateContest	WA Attorney General	Washington State Attorney General
 CandidateContest	WA Lieutenant Governor	Washington State Lt. Governor
 CandidateContest	WA Treasurer	Washington State State Treasurer
 CandidateContest	WA Secretary of State	Washington State Secretary of State
-Candidate	Hillary Clinton / Tim Kaine	Hillary Clinton / Tim Kaine
-Candidate	Donald J. Trump / Michael R. Pence	Donald J. Trump / Michael R. Pence
-Candidate	Alyson Kennedy / Osborne Hart	Alyson Kennedy / Osborne Hart
-Candidate	Gloria Estela La Riva / Eugene Puryear	Gloria Estela La Riva / Eugene Puryear
-Candidate	Jill Stein / Ajamu Baraka	Jill Stein / Ajamu Baraka
-Candidate	Darrell L. Castle / Scott N. Bradley	Darrell L. Castle / Scott N. Bradley
-Candidate	Gary Johnson / Bill Weld	Gary Johnson / Bill Weld
+Candidate	Hillary Clinton	Hillary Clinton / Tim Kaine
+Candidate	Donald J. Trump	Donald J. Trump / Michael R. Pence
+Candidate	Alyson Kennedy	Alyson Kennedy / Osborne Hart
+Candidate	Alyson Kennedy	Alyson Kennedy / Malcolm M. Jarrett
+Candidate	Gloria Estela La Riva 	Gloria Estela La Riva / Eugene Puryear
+Candidate	Gloria Estela La Riva 	Gloria La Riva / Sunil Freeman
+Candidate	Jill Stein	Jill Stein / Ajamu Baraka
+Candidate	Darrell L. Castle	Darrell L. Castle / Scott N. Bradley
+Candidate	Gary Johnson	Gary Johnson / Bill Weld
 Candidate	Patty Murray	Patty Murray
 Candidate	Chris Vance	Chris Vance
 Candidate	Dan Newhouse	Dan Newhouse
@@ -767,7 +769,7 @@ Candidate	Sherri L Brewer	Sherri L Brewer
 Candidate	Heidi K. Hunt	Heidi K. Hunt
 Candidate	Paulette J. Teske	Paulette J. Teske
 Candidate	Terry Thompson	Terry Thompson
-Candidate	Miguel A. &quot;Mike&quot; Garza	Miguel A. &quot;Mike&quot; Garza
+Candidate	Miguel A. 'Mike' Garza	Miguel A. 'Mike' Garza
 Candidate	Randy J. Flyckt	Randy J. Flyckt
 Candidate	Kayla M. Meise	Kayla M. Meise
 Candidate	Janet L. Manke	Janet L. Manke
@@ -805,7 +807,7 @@ Candidate	Jamie Raebel	Jamie Raebel
 Candidate	Andy Miller	Andy Miller
 Candidate	Jerry Hatcher	Jerry Hatcher
 Candidate	Ken Spencer	Ken Spencer
-Candidate	Talesha &quot;Tali&quot; Sams	Talesha &quot;Tali&quot; Sams
+Candidate	Talesha 'Tali' Sams	Talesha 'Tali' Sams
 Candidate	Terry M. Tanner	Terry M. Tanner
 Candidate	Dan Kathren	Dan Kathren
 Candidate	John S. Ziobro	John S. Ziobro
@@ -964,7 +966,7 @@ Candidate	Curtis McGary	Curtis McGary
 Candidate	Shawn P Sant	Shawn P Sant
 Candidate	Jim Raymond	Jim Raymond
 Candidate	Josie Koelzer	Josie Koelzer
-Candidate	Gerald F. &quot;Jerry&quot; Roach	Gerald F. &quot;Jerry&quot; Roach
+Candidate	Gerald F. 'Jerry' Roach	Gerald F. 'Jerry' Roach
 Candidate	Approved 	Approved 
 Candidate	Cynthia N. Parker	Cynthia N. Parker
 Candidate	Stu Nelson	Stu Nelson
@@ -1299,7 +1301,7 @@ Candidate	William (Bill) Colyar	William (Bill) Colyar
 Candidate	Bruce P. Walker	Bruce P. Walker
 Candidate	Joyce Kidd	Joyce Kidd
 Candidate	Virginia A. Leach	Virginia A. Leach
-Candidate	Michael &quot;Hawk&quot; Runyon	Michael &quot;Hawk&quot; Runyon
+Candidate	Michael 'Hawk' Runyon	Michael 'Hawk' Runyon
 Candidate	Todd P. Stephens	Todd P. Stephens
 Candidate	Scott L. Johnson	Scott L. Johnson
 Candidate	Robin Souvenir	Robin Souvenir
@@ -1402,7 +1404,7 @@ Candidate	John Doyle	John Doyle
 Candidate	Ed Stauffer	Ed Stauffer
 Candidate	Andrew Miller	Andrew Miller
 Candidate	Matt Miller	Matt Miller
-Candidate	&quot;ska je tah lo&quot; Lona Wilbur	&quot;ska je tah lo&quot; Lona Wilbur
+Candidate	'ska je tah lo' Lona Wilbur	'ska je tah lo' Lona Wilbur
 Candidate	Larry Wasserman	Larry Wasserman
 Candidate	Celia Ponce Sanchez	Celia Ponce Sanchez
 Candidate	Stephen (Steve) Orsini	Stephen (Steve) Orsini
@@ -1559,7 +1561,7 @@ Candidate	Nicci Bergseng 	Nicci Bergseng
 Candidate	Matt Kuhl 	Matt Kuhl 
 Candidate	Kay M. Holland	Kay M. Holland
 Candidate	Blair H. Brady 	Blair H. Brady 
-Candidate	Eugene C &quot;Gene&quot; Strong 	Eugene C &quot;Gene&quot; Strong 
+Candidate	Eugene C 'Gene' Strong 	Eugene C 'Gene' Strong 
 Candidate	Heidi Heywood	Heidi Heywood
 Candidate	Dan Bigelow	Dan Bigelow
 Candidate	Stewart D. Feil	Stewart D. Feil
@@ -1626,6 +1628,7 @@ Candidate	Donald W. Engel	Donald W. Engel
 Candidate	Alfred G. Schweppe	Alfred G. Schweppe
 Candidate	Michael Bennet	Michael Bennet
 Candidate	Joseph R. Biden	Joseph R. Biden
+Candidate	Joseph R. Biden	Joseph R. Biden / Kamala D. Harris
 Candidate	Michael Bloomberg	Michael Bloomberg
 Candidate	Cory Booker	Cory Booker
 Candidate	Pete Buttigieg	Pete Buttigieg
@@ -1639,7 +1642,7 @@ Candidate	Elizabeth Warren	Elizabeth Warren
 Candidate	Andrew Yang	Andrew Yang
 Candidate	Donald J. Trump	Donald J. Trump
 Candidate	Ryan Cooper	Ryan Cooper
-Candidate	Tracy &quot;Justice&quot; Wright	Tracy &quot;Justice&quot; Wright
+Candidate	Tracy 'Justice' Wright	Tracy 'Justice' Wright
 Candidate	Douglas E. McKinley	Douglas E. McKinley
 Candidate	Evan Jones	Evan Jones
 Candidate	Sarena Sloot	Sarena Sloot
@@ -1724,7 +1727,7 @@ Candidate	R. Victor Bottomly	R. Victor Bottomly
 Candidate	Larry Stanley	Larry Stanley
 Candidate	Perry Dozier	Perry Dozier
 Candidate	Danielle Garbe Reser	Danielle Garbe Reser
-Candidate	William &quot;Bill&quot; Jenkin	William &quot;Bill&quot; Jenkin
+Candidate	William 'Bill' Jenkin	William 'Bill' Jenkin
 Candidate	Frances Chvatal	Frances Chvatal
 Candidate	Mark Klicker	Mark Klicker
 Candidate	Carly Coburn	Carly Coburn
@@ -2054,7 +2057,7 @@ Candidate	Darrell Smith - REP	Darrell Smith - REP
 Candidate	Kenneth Roberts - DEM	Kenneth Roberts - DEM
 Candidate	Rhonda Walker - DEM	Rhonda Walker - DEM
 Candidate	Deborah Idlett - DEM	Deborah Idlett - DEM
-Candidate	R. W. &quot;Ric&quot; King - DEM	R. W. &quot;Ric&quot; King - DEM
+Candidate	R. W. 'Ric' King - DEM	R. W. 'Ric' King - DEM
 Candidate	Christine Myers - DEM	Christine Myers - DEM
 Candidate	Jerry Marston - REP	Jerry Marston - REP
 Candidate	Jeff Nading - REP	Jeff Nading - REP
@@ -3156,7 +3159,7 @@ Candidate	Michael R Bell	Michael R Bell
 Candidate	Christal Olivia Irwin	Christal Olivia Irwin
 Candidate	Malcolm R Friedman	Malcolm R Friedman
 Candidate	Greg J Young	Greg J Young
-Candidate	Dewey &quot;Dude&quot; Simmons	Dewey &quot;Dude&quot; Simmons
+Candidate	Dewey 'Dude' Simmons	Dewey 'Dude' Simmons
 Candidate	Jack Sandberg	Jack Sandberg
 Candidate	Mykle Arvidson	Mykle Arvidson
 Candidate	John Smith	John Smith
@@ -3410,3 +3413,41 @@ ReportingUnit	Washington;Walla Walla County	Walla Walla
 ReportingUnit	Washington;Whatcom County	Whatcom
 ReportingUnit	Washington;Whitman County	Whitman
 ReportingUnit	Washington;Yakima County	Yakima
+Candidate	Kerry French	Kerry French
+Candidate	Jo Jorgensen	Jo Jorgensen / Jeremy 'Spike' Cohen
+Candidate	Howie Hawkins	Howie Hawkins / Angela Walker
+Party	Democratic Party	Democratic Party Nominees
+Party	Democratic Party	(Prefers Democratic Party)
+Party	Democratic Party	(Prefers Independent Dem. Party)
+Party	Democratic Party	(Prefers Democrat Party)
+Party	Democratic Party	(Prefers DEM Party)
+Party	Democratic Party	(Prefers Democratic  Party)
+Party	Democratic Party	(Prefers Democtratic Party)
+Party	Democratic Party	(Prefers Democractic Party)
+Party	Democratic Party	(Prefers Independent Dem Party)
+Party	Democratic Party	(Prefers Dem/Working Fmly Party)
+Party	Republican Party	(Prefers Independent Rep Party)
+Party	Republican Party	Republican Party Nominees
+Party	Republican Party	(Prefers Republican Party)
+Party	Republican Party	(Prefers G.O.P Party)
+Party	Republican Party	(Prefers Independent GOP Party)
+Party	Republican Party	(Prefers G.O.P. Party)
+Party	Republican Party	(Prefers Ind. Republican Party)
+Party	Republican Party	(Prefers Trump Republican Party)
+Party	Republican Party	(Prefers Republican  Party)
+Party	Republican Party	(Prefers Republicans Party)
+Party	Republican Party	(Prefers Ind Republican Party)
+Party	Republican Party	(Prefers R Party)
+Party	Republican Party	(Prefers GOP/Independent Party)
+Party	Republican Party	(Prefers GOP Party)
+Party	Socialist Workers Party	Socialist Workers Party Nominees
+Party	Socialist Workers Party	(Prefers Socialist Workers Party)
+Party	Socialist Workers Party	(Prefers Socialist Party)
+Party	Socialism & Liberation Party	Socialism & Liberation Party Nominees
+Party	Green Party	Green Party Nominees
+Party	Green Party	(Prefers Green Party)
+Party	Constitution Party	Constitution Party Nominees
+Party	Libertarian Party	Libertarian Party Nominees
+Party	Libertarian Party	(Prefers Libertarian Party)
+
+
