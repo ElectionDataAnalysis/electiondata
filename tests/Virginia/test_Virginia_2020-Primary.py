@@ -1,5 +1,6 @@
 import election_data_analysis as e
-
+election = "2020 Primary"
+jurisdiction = "Virginia"
 # VA20 tests
 def test_data_exists(dbname):
     assert e.data_exists("2020 Primary", "Virginia", dbname=dbname)

@@ -1,5 +1,6 @@
 import election_data_analysis as e
-
+election = "2020 Primary"
+jurisdiction = "Michigan"
 
 def test_data_exists(dbname):
     assert e.data_exists("2020 Primary", "Michigan", dbname=dbname)

@@ -1,5 +1,6 @@
 import election_data_analysis as e
-
+election = "2020 Primary"
+jurisdiction = "Iowa"
 # IA20 tests
 
 
