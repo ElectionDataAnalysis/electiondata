@@ -2,5 +2,5 @@ name	raw_identifier_formula	source
 ReportingUnit	<County.name>	xml
 Party	<Choice.party>	xml
 CandidateContest	<Contest.text>	xml
-Candidate	{<Choice.text>,^(?:[A-Z]{3}\s+(.*)|(Write-in)|(Write-In)$}	xml
+Candidate	{<Choice.text>,^(?:[A-Z]{3} )?(Write-In|Write-in|.*)$}	xml
 CountItemType	<VoteType.name>	xml

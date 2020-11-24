@@ -4818,6 +4818,7 @@ Candidate	Corky Messner	Corky Messner
 Candidate	Andy Martin	Andy Martin
 Candidate	Donald J. Trump	Trump and Pence
 Candidate	Jo Jorgensen	Jorgensen and Cohen lib
+Candidate	Jo Jorgensen	Jorgensen and Cohen
 Candidate	Joseph R. Biden	Biden and Harris
 Candidate	Darryl W. Perry	Darryl W. Perry
 Candidate	Dan Feltes	Dan Feltes
