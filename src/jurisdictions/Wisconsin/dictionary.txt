@@ -147,7 +147,7 @@ Candidate	Erik Brooks	Erik Brooks
 Candidate	Erin Tracy	Erin Tracy
 Candidate	Evan Goyke	Evan Goyke
 Candidate	Evan McMullin	Evan McMullin
-Candidate	F. James Sensenbrenner, Jr.	F. James Sensenbrenner, Jr.
+Candidate	"F. James Sensenbrenner, Jr."	"F. James Sensenbrenner, Jr."
 Candidate	Francesca Hong	Francesca Hong
 Candidate	Frank T. Buress	Frank T. Buress
 Candidate	Gabriel A. Gomez	Gabriel A. Gomez
@@ -261,7 +261,7 @@ Candidate	Kelly Lynn Tenpas (write-in)	Kelly Lynn Tenpas (write-in)
 Candidate	Ken Driessen	Ken Driessen
 Candidate	Ken Holdorf	Ken Holdorf
 Candidate	Ken Skowronski	Ken Skowronski
-Candidate	Ken Van Dyke, Sr.	Ken Van Dyke, Sr.
+Candidate	"Ken Van Dyke, Sr."	"Ken Van Dyke, Sr."
 Candidate	Ken Yorgan	Ken Yorgan
 Candidate	Kerry Trask	Kerry Trask
 Candidate	Kevin A. Bauer	Kevin A. Bauer
@@ -504,6 +504,12 @@ Candidate	Wendy Sue Johnson	Wendy Sue Johnson
 Candidate	Will Leverson	Will Leverson
 Candidate	William Henry Davis III	William Henry Davis III
 Candidate	Wren Keturi	Wren Keturi
+Candidate	Biden/Harris	Biden/Harris
+Candidate	Trump/Pence	Trump/Pence
+Candidate	Blankenship/Moore	Blankenship/Moore
+Candidate	Jorgensen/Cohen	Jorgensen/Cohen
+Candidate	Carroll/Patel	Carroll/Patel
+Candidate	Write-in/Scattering	Write-in/Scattering
 CandidateContest	WI Attorney General	ATTORNEY GENERAL
 CandidateContest	WI Attorney General (Constitution Party)	ATTORNEY GENERAL - CON
 CandidateContest	WI Attorney General (Constitution Party)	ATTORNEY GENERAL - Constitution
@@ -2187,3 +2193,4 @@ Party	Libertarian Party	LIB
 Party	Republican Party	REP
 Party	Republican Party	Republican
 Party	Green Party	WGR
+Party	Unknown	
