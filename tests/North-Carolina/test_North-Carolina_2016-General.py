@@ -1,5 +1,6 @@
 import election_data_analysis as e
-
+election = "2016 General"
+jurisdiction = "North Carolina"
 
 def test_data(dbname):
     assert e.data_exists("2016 General", "North Carolina", dbname=dbname)
@@ -71,3 +72,8 @@ def test_nc_totals_match_vote_type_16(dbname):
         e.check_totals_match_vote_types("2016 General", "North Carolina", dbname=dbname)
         == True
     )
+
+
+
+def test_all_candidates_known(dbname):
+    assert e.get_contest_with_unknown_candidates(election, jurisdiction, dbname=dbname) == []

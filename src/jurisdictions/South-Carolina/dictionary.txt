@@ -6362,6 +6362,7 @@ Candidate	Andrew Yang - WITHDREW	Andrew Yang - WITHDREW
 Candidate	James Smith / Mandy Powers Norrell	James Smith / Mandy Powers Norrell
 Candidate	Henry McMaster / Pamela Evette	Henry McMaster / Pamela Evette
 Candidate	Write-In	Write-In
+Candidate	Write-In	Write-in
 Candidate	Melvin T Whittenburg	Melvin T Whittenburg
 Candidate	Mark Hammond	Mark Hammond
 Candidate	Rosalyn L Glenn	Rosalyn L Glenn

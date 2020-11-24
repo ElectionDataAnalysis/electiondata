@@ -1,5 +1,6 @@
 import election_data_analysis as e
-
+election = "2020 General"
+jurisdiction = "Alabama"
 # Instructions:
 #   Add in the Jurisdiction and abbreviation
 #   Delete any tests for contest types your state doesn't have in 2020 (e.g., Florida has no US Senate contest)
@@ -46,3 +47,8 @@ def test_congressional_totals(dbname):
 # No state legislature contests, since state legislature elections for Alabama
 # occure during midterm years, e.g., 2010, 2014, 2018, ...
 
+
+
+
+def test_all_candidates_known(dbname):
+    assert e.get_contest_with_unknown_candidates(election, jurisdiction, dbname=dbname) == []

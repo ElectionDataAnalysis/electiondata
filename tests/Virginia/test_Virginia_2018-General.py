@@ -1,5 +1,6 @@
 import election_data_analysis as e
-
+election = "2018 General"
+jurisdiction = "Virginia"
 # VA18 tests
 def test_data_exists(dbname):
     assert e.data_exists("2018 General", "Virginia", dbname=dbname)
@@ -26,3 +27,8 @@ def test_house_totals(dbname):
     )
 
 
+
+
+
+def test_all_candidates_known(dbname):
+    assert e.get_contest_with_unknown_candidates(election, jurisdiction, dbname=dbname) == []

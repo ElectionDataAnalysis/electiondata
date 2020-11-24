@@ -1,5 +1,6 @@
 import election_data_analysis as e
-
+election = "2018 General"
+jurisdiction = "Texas"
 # IA18 tests
 
 
@@ -56,3 +57,8 @@ def test_state_rep_totals(dbname):
 
 
 # # no tests by vote type
+
+
+
+def test_all_candidates_known(dbname):
+    assert e.get_contest_with_unknown_candidates(election, jurisdiction, dbname=dbname) == []

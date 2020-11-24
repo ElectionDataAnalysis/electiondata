@@ -1,5 +1,6 @@
 import election_data_analysis as e
-
+election = "2016 General"
+jurisdiction = "Indiana"
 def test_data_exists(dbname):
     assert e.data_exists("2016 General", "Indiana", dbname=dbname)
 
@@ -57,3 +58,8 @@ def test_in_house_totals_16(dbname):
 
 
 # Vote Type not available
+
+
+
+def test_all_candidates_known(dbname):
+    assert e.get_contest_with_unknown_candidates(election, jurisdiction, dbname=dbname) == []

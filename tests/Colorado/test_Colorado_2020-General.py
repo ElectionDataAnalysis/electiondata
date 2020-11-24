@@ -1,5 +1,6 @@
 import election_data_analysis as e
-
+election = "2020 General"
+jurisdiction = "Colorado"
 #CO20g test
 # Instructions:
 #   Delete any tests for contest types your state doesn't have in 2020 (e.g., Florida has no US Senate contest)
@@ -62,3 +63,8 @@ def test_state_house_totals(dbname):
         == 32937 + 22752 + 2264
     )
 
+
+
+
+def test_all_candidates_known(dbname):
+    assert e.get_contest_with_unknown_candidates(election, jurisdiction, dbname=dbname) == []

@@ -1,5 +1,6 @@
 import election_data_analysis as e
-
+election = "2020 Primary"
+jurisdiction = "Arizona"
 # AZ20 tests
 
 def test_data_exists(dbname):
@@ -64,3 +65,8 @@ def test_congressional_totals(dbname):
         )
         == 3651 + 29218 + 4592 + 42538
     )
+
+
+
+def test_all_candidates_known(dbname):
+    assert e.get_contest_with_unknown_candidates(election, jurisdiction, dbname=dbname) == []

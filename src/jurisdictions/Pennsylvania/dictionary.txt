@@ -1864,6 +1864,8 @@ Party	No Affiliation	No Affiliation
 Party	usaminutemen	usaminutemen
 Party	Kate McGraw Independent	Kate McGraw Independent
 Party	Constitution Party	Constitution Party
+Party	United Party	United Party
+Party	Abolitionist Society	Abolitionist Society Pennsylvania
 CandidateContest	PA Governor	Governor Statewide
 CandidateContest	US House PA District 1	Representative in Congress 1st Congressional District
 CandidateContest	US House PA District 2	Representative in Congress 2nd Congressional District
@@ -2632,9 +2634,9 @@ CountItemType	total	Votes
 CountItemType	total	Yes Votes
 CountItemType	total	No Votes
 Candidate	SANDERS, BERNARD	SANDERS, BERNARD
-Candidate	BIDEN, JOSEPH ROBINETTE JR	BIDEN, JOSEPH ROBINETTE JR
+Candidate	Joseph R. Biden	BIDEN, JOSEPH ROBINETTE JR
 Candidate	GABBARD, TULSI	GABBARD, TULSI
-Candidate	TRUMP, DONALD J.	TRUMP, DONALD J.
+Candidate	Donald J. Trump	TRUMP, DONALD J.
 Candidate	DE LA FUENTE, ROQUE ROCKY	DE LA FUENTE, ROQUE ROCKY
 Candidate	WELD, WILLIAM F	WELD, WILLIAM F
 Candidate	SHAPIRO , JOSHUA D	SHAPIRO , JOSHUA D
@@ -3462,7 +3464,7 @@ CandidateContest	PA Senate District 39	Senator in the General Assembly 39th Sena
 CandidateContest	PA Senate District 39 (Democratic Party)	Senator in the General Assembly 39th Senatorial District (Democratic)
 CandidateContest	PA Senate District 39 (Republican Party)	Senator in the General Assembly 39th Senatorial District (Republican)
 Candidate	CLINTON, HILLARY	CLINTON, HILLARY
-Candidate	TRUMP, DONALD J	TRUMP, DONALD J
+Candidate	Donald J. Trump	TRUMP, DONALD J
 Candidate	CASTLE, DARRELL L	CASTLE, DARRELL L
 Candidate	STEIN, JILL	STEIN, JILL
 Candidate	JOHNSON, GARY E	JOHNSON, GARY E
@@ -3705,3 +3707,33 @@ CountItemType	absentee	Mail No Votes
 CountItemType	provisional	Provisional Votes
 CountItemType	provisional	Provisional Yes Votes
 CountItemType	provisional	Provisional No Votes
+Candidate	WISSERT, DANIEL J	WISSERT, DANIEL J
+Candidate	WEISS, RICHARD L	WEISS, RICHARD L
+Candidate	WEINRICH, JOHN SR	WEINRICH, JOHN SR
+Candidate	WASSMER, DANIEL	WASSMER, DANIEL
+Candidate	WALTERS, BRYAN D	WALTERS, BRYAN D
+Candidate	SCHMOLZE, NATHANAEL	SCHMOLZE, NATHANAEL
+Candidate	RUNKLE, TIMOTHY	RUNKLE, TIMOTHY
+Candidate	PEFFER, JOHNATHAN D	PEFFER, JOHNATHAN D
+Candidate	OWENS, DONALD ALFRED	OWENS, DONALD ALFRED
+Candidate	NUSS, ROGER W	NUSS, ROGER W
+Candidate	NOLDY, MARY ALICE	NOLDY, MARY ALICE
+Candidate	MOORE, JENNIFER LYNN	MOORE, JENNIFER LYNN
+Candidate	MIHALEK STUCK, NATALIE NICOLE	MIHALEK STUCK, NATALIE NICOLE
+Candidate	MICHAEL, WILLIAM ANDREW	MICHAEL, WILLIAM ANDREW
+Candidate	MCCREARY, MICHAEL L	MCCREARY, MICHAEL L
+Candidate	MARTIN, JARED DANIEL	MARTIN, JARED DANIEL
+Candidate	LAWTON, NOYES J	LAWTON, NOYES J
+Candidate	KORINKO, KURT P JR	KORINKO, KURT P JR
+Candidate	Jo Jorgensen	JORGENSEN, JO
+Candidate	Jo Jorgensen	JORGENSEN JO
+Candidate	JONES, KEVIN D	JONES, KEVIN D
+Candidate	HERRIN, DIANNE	HERRIN, DIANNE
+Candidate	HAYES, GREG S	HAYES, GREG S
+Candidate	FREY, LAWRENCE D III	FREY, LAWRENCE D III
+Candidate	FAISON, OLIVIA	FAISON, OLIVIA
+Candidate	EVANS, KATHLEEN M	EVANS, KATHLEEN M
+Candidate	BOURINSKI, RYAN	BOURINSKI, RYAN
+Candidate	BOOK, LINDA J	BOOK, LINDA J
+Candidate	BASIST, MARC I	BASIST, MARC I
+Candidate	AUDIA, DARRYL J	AUDIA, DARRYL J

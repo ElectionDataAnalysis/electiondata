@@ -1854,6 +1854,7 @@ def count_type_total(election, jurisdiction, contest, count_item_type, sub_unit_
     else:
         return df["count"].sum()
 
+
 def check_count_types_standard(election, jurisdiction, dbname=None):
     an = Analyzer(dbname=dbname)
     standard_ct_list = db.get_input_options(an.session,'count_item_type',False)
@@ -1866,3 +1867,19 @@ def check_count_types_standard(election, jurisdiction, dbname=None):
             return False
     # if nothing failed, count types are standard
     return True
+
+
+def get_contest_with_unknown_candidates(election, jurisdiction, dbname=None) -> List[str]:
+    an = Analyzer(dbname=dbname)
+    if not an:
+        return [f"Failure to connect to database"]
+    election_id = db.name_to_id(an.session, "Election", election)
+    if not election_id:
+        return[f"Election {election} not found"]
+    jurisdiction_id = db.name_to_id(an.session, "ReportingUnit", jurisdiction)
+    if not jurisdiction_id:
+        return[f"Jurisdiction {jurisdiction} not found"]
+
+    contests = db.get_contest_with_unknown(an.session, election_id, jurisdiction_id)
+    return contests
+

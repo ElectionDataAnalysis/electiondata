@@ -4223,13 +4223,12 @@ CandidateContest	US Senate CO	United States Senator
 CandidateContest	CO Attorney General	Attorney General
 CandidateContest	CO State Treasurer	State Treasurer
 CandidateContest	CO Secretary of State	Secretary of State
-Election	2020 General	2020 General
-Election	2020 Primary	2020 Primary
-Election	2020 Presidential Preference Primary	2020 Presidential Preference Primary
-Election	2018 General	2018 General
-Election	2018 Primary	2018 Primary
-Election	2016 General	2016 General
-Election	2016 Primary	2016 Primary
+Party	American Constitution Party	ACN
+Party	Alliance Party	ALL
+Party	American Solidarity Party	ASP
+Party	American Independent Party	IAP
+Party	Progressive Party	PRG
+Party	Prohibition Party	PRO
 Party	Democratic Party	DEM
 Party	Democratic Party	Democratic Party
 Party	Republican Party	Republican Party
@@ -4250,8 +4249,10 @@ Party	Veterans Party	Veterans Party of America
 Party	Unaffiliated / Republican	Unaffiliated / Republican
 Party	Unaffiliated / Libertarian	Unaffiliated / Libertarian
 Party	Socialist Workers Party	Socialist Workers Party
+Party	Socialist Workers Party	SWP
 Party	Socialist Party USA	Socialist Party USA
 Party	Socialism and Liberation	Socialism and Liberation
+Party	Socialism and Liberation	SAL
 Party	Prohibition Party	Prohibition Party
 Party	Nutrition Party	Nutrition Party
 Party	Nonviolent Resistance/Pacifist	Nonviolent Resistance/Pacifist
@@ -4263,6 +4264,7 @@ Party	American Solidarity Party	American Solidarity Party
 Party	American Delta Party	American Delta Party
 Party	America's Party	America's Party
 Party	Unaffiliated	UAF
+Party	Socialist Equality Party	SEP
 ReportingUnit	Colorado;CO House District 1	Colorado;State Representative - District 1
 ReportingUnit	Colorado;CO House District 2	Colorado;State Representative - District 2
 ReportingUnit	Colorado;CO House District 3	Colorado;State Representative - District 3
@@ -4840,7 +4842,7 @@ Candidate	Darrell L. Castle	Darrell L. Castle / Scott N. Bradley
 Candidate	Gary Johnson	Gary Johnson / Bill Weld
 Candidate	Jill Stein	Jill Stein / Ajamu Baraka
 Candidate	Frank Atwood	Frank Atwood / Blake Huber
-Candidate	Rocky Roque De La Fuente	Rocky Roque De La Fuente / Michael Steinberg
+Candidate	Roque 'Rocky' De La Fuente	Rocky Roque De La Fuente / Michael Steinberg
 Candidate	James Hedges	James Hedges / Bill Bayes
 Candidate	Tom Hoefling	Tom Hoefling / Steve Schulin
 Candidate	Chris Keniston	Chris Keniston / Deacon Taylor
@@ -5306,8 +5308,8 @@ Candidate	Bernie Sanders	Bernie Sanders
 Candidate	Elizabeth Warren	Elizabeth Warren
 Candidate	Roque 'Rocky' De La Fuente III	Roque 'Rocky' De La Fuente III
 Candidate	Roque 'Rocky' De La Fuente III	Roque ''Rocky'' De La Fuente III
-Candidate	Roque 'Rocky' De La Fuente III Total Votes	Roque ''Rocky'' De La Fuente III Total Votes
-Candidate	Roque 'Rocky' De La Fuente III Vote %	Roque ''Rocky'' De La Fuente III Vote %
+Candidate	Roque 'Rocky' De La Fuente III	Roque ''Rocky'' De La Fuente III Total Votes
+Candidate	Roque 'Rocky' De La Fuente III	Roque ''Rocky'' De La Fuente III Vote %
 Candidate	Marianne Williamson	Marianne Williamson
 Candidate	Deval Patrick	Deval Patrick
 Candidate	Michael R. Bloomberg	Michael R. Bloomberg
@@ -5647,7 +5649,5 @@ Candidate	Bobby Dishell	Bobby Dishell
 Candidate	Julien Bouquet	Julien Bouquet
 Candidate	Roger Edwards	Roger Edwards
 Candidate	Marjorie Sloan	Marjorie Sloan
-Candidate	Yes	Yes
-Candidate	No	No
-Candidate	Yes/For	Yes/For
-Candidate	No/Against	No/Against
+Candidate	Martín Mendez	Martín Mendez
+

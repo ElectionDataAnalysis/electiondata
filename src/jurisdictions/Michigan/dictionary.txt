@@ -12221,3 +12221,62 @@ Candidate	KERRY LEE MORGAN	KERRY LEE MORGAN
 Candidate	STEPHEN L. BORRELLO	STEPHEN L. BORRELLO
 Candidate	NO	NO
 Candidate	YES	YES
+Candidate	Valerie L. Willis	Valerie L. Willis
+Candidate	Tim Yow	Tim Yow
+Candidate	Theodore Gerrard	Theodore Gerrard
+Candidate	Stephen Boyle	Stephen Boyle
+Candidate	Simone R. Coleman	Simone R. Coleman
+Candidate	Sherry A. Wells	Sherry A. Wells
+Candidate	Sam Johnson	Sam Johnson
+Candidate	Rocky De La Fuente	Rocky De La Fuente
+Candidate	Rick Sauermilch	Rick Sauermilch
+Candidate	Rafael Wolf	Rafael Wolf
+Candidate	Philip Kolody	Philip Kolody
+Candidate	Norman Peterson	Norman Peterson
+Candidate	Mike Saliba	Mike Saliba
+Candidate	Melissa Noelle Lambert	Melissa Noelle Lambert
+Candidate	Md Rabbi Alam	Md Rabbi Alam
+Candidate	Max Riekse	Max Riekse
+Candidate	Mark E. Huizenga	Mark E. Huizenga
+Candidate	Marco T. Bulnes	Marco T. Bulnes
+Candidate	Marcia Squier	Marcia Squier
+Candidate	Louis Palus	Louis Palus
+Candidate	Lisa Lane Gioia	Lisa Lane Gioia
+Candidate	Linda Rayburn	Linda Rayburn
+Candidate	Leonard Schwartz	Leonard Schwartz
+Candidate	Larry Darnell Betts	Larry Darnell Betts
+Candidate	Kimberly Givens	Kimberly Givens
+Candidate	Kathy Goodwin	Kathy Goodwin
+Candidate	Joseph R. Biden	Joseph R. Biden
+Candidate	John Lawrence	John Lawrence
+Candidate	John Anthony La Pietra	John Anthony La Pietra
+Candidate	Joe Hartman	Joe Hartman
+Candidate	Jo Jorgensen	Jo Jorgensen
+Candidate	Jim Hafeman	Jim Hafeman
+Candidate	Jeffrey Jon Rubley II	Jeffrey Jon Rubley II
+Candidate	Jeff DePoy	Jeff DePoy
+Candidate	Jean-Michel Creviere	Jean-Michel Creviere
+Candidate	Jason Crum	Jason Crum
+Candidate	James K. Young	James K. Young
+Candidate	James Harris	James Harris
+Candidate	Howie Hawkins	Howie Hawkins
+Candidate	Gregory Scott Stempfle	Gregory Scott Stempfle
+Candidate	Gregory Creswell	Gregory Creswell
+Candidate	Gerald T. Van Sickle	Gerald T. Van Sickle
+Candidate	Gene Gutierrez	Gene Gutierrez
+Candidate	Gary Walkowicz	Gary Walkowicz
+Candidate	Frederick Horndt	Frederick Horndt
+Candidate	Doug Dern	Doug Dern
+Candidate	Don Blankenship	Don Blankenship
+Candidate	David Canny	David Canny
+Candidate	Dalton R. McCuiston	Dalton R. McCuiston
+Candidate	DaNetta L. Simpson	DaNetta L. Simpson
+Candidate	D.Etta Wilcoxon	D.Etta Wilcoxon
+Candidate	Clyde K. Shabazz	Clyde K. Shabazz
+Candidate	Ben Boren	Ben Boren
+Candidate	Articia Bomer	Articia Bomer
+Candidate	Anthony Croff	Anthony Croff
+Candidate	Anita Belle	Anita Belle
+Candidate	Andrew J. Warner	Andrew J. Warner
+Candidate	Andrea L. Kirby	Andrea L. Kirby
+Candidate	Amy Slepr	Amy Slepr

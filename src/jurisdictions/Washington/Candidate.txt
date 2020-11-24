@@ -1,11 +1,15 @@
 BallotName
-Hillary Clinton / Tim Kaine
-Donald J. Trump / Michael R. Pence
-Alyson Kennedy / Osborne Hart
-Gloria Estela La Riva / Eugene Puryear
-Jill Stein / Ajamu Baraka
-Darrell L. Castle / Scott N. Bradley
-Gary Johnson / Bill Weld
+Kerry French
+Joseph R. Biden
+Jo Jorgensen
+Howie Hawkins
+Alyson Kennedy
+Hillary Clinton
+Donald J. Trump
+Gloria Estela La Riva
+Jill Stein
+Darrell L. Castle
+Gary Johnson
 Patty Murray
 Chris Vance
 Dan Newhouse
@@ -600,7 +604,7 @@ Sherri L Brewer
 Heidi K. Hunt
 Paulette J. Teske
 Terry Thompson
-Miguel A. &quot;Mike&quot; Garza
+Miguel A. 'Mike' Garza
 Randy J. Flyckt
 Kayla M. Meise
 Janet L. Manke
@@ -638,7 +642,7 @@ Jamie Raebel
 Andy Miller
 Jerry Hatcher
 Ken Spencer
-Talesha &quot;Tali&quot; Sams
+Talesha 'Tali' Sams
 Terry M. Tanner
 Dan Kathren
 John S. Ziobro
@@ -797,7 +801,7 @@ Curtis McGary
 Shawn P Sant
 Jim Raymond
 Josie Koelzer
-Gerald F. &quot;Jerry&quot; Roach
+Gerald F. 'Jerry' Roach
 Approved 
 Cynthia N. Parker
 Stu Nelson
@@ -1132,7 +1136,7 @@ William (Bill) Colyar
 Bruce P. Walker
 Joyce Kidd
 Virginia A. Leach
-Michael &quot;Hawk&quot; Runyon
+Michael 'Hawk' Runyon
 Todd P. Stephens
 Scott L. Johnson
 Robin Souvenir
@@ -1235,7 +1239,7 @@ John Doyle
 Ed Stauffer
 Andrew Miller
 Matt Miller
-&quot;ska je tah lo&quot; Lona Wilbur
+'ska je tah lo' Lona Wilbur
 Larry Wasserman
 Celia Ponce Sanchez
 Stephen (Steve) Orsini
@@ -1392,7 +1396,7 @@ Nicci Bergseng
 Matt Kuhl 
 Kay M. Holland
 Blair H. Brady 
-Eugene C &quot;Gene&quot; Strong 
+Eugene C 'Gene' Strong 
 Heidi Heywood
 Dan Bigelow
 Stewart D. Feil
@@ -1458,7 +1462,6 @@ Brian Sanderson
 Donald W. Engel
 Alfred G. Schweppe
 Michael Bennet
-Joseph R. Biden
 Michael Bloomberg
 Cory Booker
 Pete Buttigieg
@@ -1470,9 +1473,8 @@ Bernie Sanders
 Tom Steyer
 Elizabeth Warren
 Andrew Yang
-Donald J. Trump
 Ryan Cooper
-Tracy &quot;Justice&quot; Wright
+Tracy 'Justice' Wright
 Douglas E. McKinley
 Evan Jones
 Sarena Sloot
@@ -1557,7 +1559,6 @@ R. Victor Bottomly
 Larry Stanley
 Perry Dozier
 Danielle Garbe Reser
-William &quot;Bill&quot; Jenkin
 Frances Chvatal
 Mark Klicker
 Carly Coburn
@@ -1887,7 +1888,7 @@ Darrell Smith - REP
 Kenneth Roberts - DEM
 Rhonda Walker - DEM
 Deborah Idlett - DEM
-R. W. &quot;Ric&quot; King - DEM
+R. W. 'Ric' King - DEM
 Christine Myers - DEM
 Jerry Marston - REP
 Jeff Nading - REP
@@ -2989,7 +2990,7 @@ Michael R Bell
 Christal Olivia Irwin
 Malcolm R Friedman
 Greg J Young
-Dewey &quot;Dude&quot; Simmons
+Dewey 'Dude' Simmons
 Jack Sandberg
 Mykle Arvidson
 John Smith
@@ -3203,8 +3204,3 @@ Lars Hanson
 KATHLEEN ALTICK
 Lauri Palmer
 David R. Weyeneth, Sr.
-Joseph R. Biden / Kamala D. Harris
-Jo Jorgensen / Jeremy &quot;Spike&quot; Cohen
-Howie Hawkins / Angela Walker
-Gloria La Riva / Sunil Freeman
-Alyson Kennedy / Malcolm M. Jarrett

@@ -1,151 +1,151 @@
 Name	ElectionDistrict
-WA House District 1	Washington;WA House District 1
-WA House District 2	Washington;WA House District 2
-WA House District 3	Washington;WA House District 3
-WA House District 4	Washington;WA House District 4
-WA House District 5	Washington;WA House District 5
-WA House District 6	Washington;WA House District 6
-WA House District 7	Washington;WA House District 7
-WA House District 8	Washington;WA House District 8
-WA House District 9	Washington;WA House District 9
-WA House District 10	Washington;WA House District 10
-WA House District 11	Washington;WA House District 11
-WA House District 12	Washington;WA House District 12
-WA House District 13	Washington;WA House District 13
-WA House District 14	Washington;WA House District 14
-WA House District 15	Washington;WA House District 15
-WA House District 16	Washington;WA House District 16
-WA House District 17	Washington;WA House District 17
-WA House District 18	Washington;WA House District 18
-WA House District 19	Washington;WA House District 19
-WA House District 20	Washington;WA House District 20
-WA House District 21	Washington;WA House District 21
-WA House District 22	Washington;WA House District 22
-WA House District 23	Washington;WA House District 23
-WA House District 24	Washington;WA House District 24
-WA House District 25	Washington;WA House District 25
-WA House District 26	Washington;WA House District 26
-WA House District 27	Washington;WA House District 27
-WA House District 28	Washington;WA House District 28
-WA House District 29	Washington;WA House District 29
-WA House District 30	Washington;WA House District 30
-WA House District 31	Washington;WA House District 31
-WA House District 32	Washington;WA House District 32
-WA House District 33	Washington;WA House District 33
-WA House District 34	Washington;WA House District 34
-WA House District 35	Washington;WA House District 35
-WA House District 36	Washington;WA House District 36
-WA House District 37	Washington;WA House District 37
-WA House District 38	Washington;WA House District 38
-WA House District 39	Washington;WA House District 39
-WA House District 40	Washington;WA House District 40
-WA House District 41	Washington;WA House District 41
-WA House District 42	Washington;WA House District 42
-WA House District 43	Washington;WA House District 43
-WA House District 44	Washington;WA House District 44
-WA House District 45	Washington;WA House District 45
-WA House District 46	Washington;WA House District 46
-WA House District 47	Washington;WA House District 47
-WA House District 48	Washington;WA House District 48
-WA House District 49	Washington;WA House District 49
-WA House District 50	Washington;WA House District 50
-WA House District 51	Washington;WA House District 51
-WA House District 52	Washington;WA House District 52
-WA House District 53	Washington;WA House District 53
-WA House District 54	Washington;WA House District 54
-WA House District 55	Washington;WA House District 55
-WA House District 56	Washington;WA House District 56
-WA House District 57	Washington;WA House District 57
-WA House District 58	Washington;WA House District 58
-WA House District 59	Washington;WA House District 59
-WA House District 60	Washington;WA House District 60
-WA House District 61	Washington;WA House District 61
-WA House District 62	Washington;WA House District 62
-WA House District 63	Washington;WA House District 63
-WA House District 64	Washington;WA House District 64
-WA House District 65	Washington;WA House District 65
-WA House District 66	Washington;WA House District 66
-WA House District 67	Washington;WA House District 67
-WA House District 68	Washington;WA House District 68
-WA House District 69	Washington;WA House District 69
-WA House District 70	Washington;WA House District 70
-WA House District 71	Washington;WA House District 71
-WA House District 72	Washington;WA House District 72
-WA House District 73	Washington;WA House District 73
-WA House District 74	Washington;WA House District 74
-WA House District 75	Washington;WA House District 75
-WA House District 76	Washington;WA House District 76
-WA House District 77	Washington;WA House District 77
-WA House District 78	Washington;WA House District 78
-WA House District 79	Washington;WA House District 79
-WA House District 80	Washington;WA House District 80
-WA House District 81	Washington;WA House District 81
-WA House District 82	Washington;WA House District 82
-WA House District 83	Washington;WA House District 83
-WA House District 84	Washington;WA House District 84
-WA House District 85	Washington;WA House District 85
-WA House District 86	Washington;WA House District 86
-WA House District 87	Washington;WA House District 87
-WA House District 88	Washington;WA House District 88
-WA House District 89	Washington;WA House District 89
-WA House District 90	Washington;WA House District 90
-WA House District 91	Washington;WA House District 91
-WA House District 92	Washington;WA House District 92
-WA House District 93	Washington;WA House District 93
-WA House District 94	Washington;WA House District 94
-WA House District 95	Washington;WA House District 95
-WA House District 96	Washington;WA House District 96
-WA House District 97	Washington;WA House District 97
-WA House District 98	Washington;WA House District 98
-WA Senate District 1	Washington;WA Senate District 1
-WA Senate District 2	Washington;WA Senate District 2
-WA Senate District 3	Washington;WA Senate District 3
-WA Senate District 4	Washington;WA Senate District 4
-WA Senate District 5	Washington;WA Senate District 5
-WA Senate District 6	Washington;WA Senate District 6
-WA Senate District 7	Washington;WA Senate District 7
-WA Senate District 8	Washington;WA Senate District 8
-WA Senate District 9	Washington;WA Senate District 9
-WA Senate District 10	Washington;WA Senate District 10
-WA Senate District 11	Washington;WA Senate District 11
-WA Senate District 12	Washington;WA Senate District 12
-WA Senate District 13	Washington;WA Senate District 13
-WA Senate District 14	Washington;WA Senate District 14
-WA Senate District 15	Washington;WA Senate District 15
-WA Senate District 16	Washington;WA Senate District 16
-WA Senate District 17	Washington;WA Senate District 17
-WA Senate District 18	Washington;WA Senate District 18
-WA Senate District 19	Washington;WA Senate District 19
-WA Senate District 20	Washington;WA Senate District 20
-WA Senate District 21	Washington;WA Senate District 21
-WA Senate District 22	Washington;WA Senate District 22
-WA Senate District 23	Washington;WA Senate District 23
-WA Senate District 24	Washington;WA Senate District 24
-WA Senate District 25	Washington;WA Senate District 25
-WA Senate District 26	Washington;WA Senate District 26
-WA Senate District 27	Washington;WA Senate District 27
-WA Senate District 28	Washington;WA Senate District 28
-WA Senate District 29	Washington;WA Senate District 29
-WA Senate District 30	Washington;WA Senate District 30
-WA Senate District 31	Washington;WA Senate District 31
-WA Senate District 32	Washington;WA Senate District 32
-WA Senate District 33	Washington;WA Senate District 33
-WA Senate District 34	Washington;WA Senate District 34
-WA Senate District 35	Washington;WA Senate District 35
-WA Senate District 36	Washington;WA Senate District 36
-WA Senate District 37	Washington;WA Senate District 37
-WA Senate District 38	Washington;WA Senate District 38
-WA Senate District 39	Washington;WA Senate District 39
-WA Senate District 40	Washington;WA Senate District 40
-WA Senate District 41	Washington;WA Senate District 41
-WA Senate District 42	Washington;WA Senate District 42
-WA Senate District 43	Washington;WA Senate District 43
-WA Senate District 44	Washington;WA Senate District 44
-WA Senate District 45	Washington;WA Senate District 45
-WA Senate District 46	Washington;WA Senate District 46
-WA Senate District 47	Washington;WA Senate District 47
-WA Senate District 48	Washington;WA Senate District 48
-WA Senate District 49	Washington;WA Senate District 49
+WA House District 1 Position 1	Washington;WA Legislative District 1
+WA House District 1 Position 2	Washington;WA Legislative District 1
+WA Senate District 1	Washington;WA Legislative District 1
+WA House District 2 Position 1	Washington;WA Legislative District 2
+WA House District 2 Position 2	Washington;WA Legislative District 2
+WA Senate District 2	Washington;WA Legislative District 2
+WA House District 3 Position 1	Washington;WA Legislative District 3
+WA House District 3 Position 2	Washington;WA Legislative District 3
+WA Senate District 3	Washington;WA Legislative District 3
+WA House District 4 Position 1	Washington;WA Legislative District 4
+WA House District 4 Position 2	Washington;WA Legislative District 4
+WA Senate District 4	Washington;WA Legislative District 4
+WA House District 5 Position 1	Washington;WA Legislative District 5
+WA House District 5 Position 2	Washington;WA Legislative District 5
+WA Senate District 5	Washington;WA Legislative District 5
+WA House District 6 Position 1	Washington;WA Legislative District 6
+WA House District 6 Position 2	Washington;WA Legislative District 6
+WA Senate District 6	Washington;WA Legislative District 6
+WA House District 7 Position 1	Washington;WA Legislative District 7
+WA House District 7 Position 2	Washington;WA Legislative District 7
+WA Senate District 7	Washington;WA Legislative District 7
+WA House District 8 Position 1	Washington;WA Legislative District 8
+WA House District 8 Position 2	Washington;WA Legislative District 8
+WA Senate District 8	Washington;WA Legislative District 8
+WA House District 9 Position 1	Washington;WA Legislative District 9
+WA House District 9 Position 2	Washington;WA Legislative District 9
+WA Senate District 9	Washington;WA Legislative District 9
+WA House District 10 Position 1	Washington;WA Legislative District 10
+WA House District 10 Position 2	Washington;WA Legislative District 10
+WA Senate District 10	Washington;WA Legislative District 10
+WA House District 11 Position 1	Washington;WA Legislative District 11
+WA House District 11 Position 2	Washington;WA Legislative District 11
+WA Senate District 11	Washington;WA Legislative District 11
+WA House District 12 Position 1	Washington;WA Legislative District 12
+WA House District 12 Position 2	Washington;WA Legislative District 12
+WA Senate District 12	Washington;WA Legislative District 12
+WA House District 13 Position 1	Washington;WA Legislative District 13
+WA House District 13 Position 2	Washington;WA Legislative District 13
+WA Senate District 13	Washington;WA Legislative District 13
+WA House District 14 Position 1	Washington;WA Legislative District 14
+WA House District 14 Position 2	Washington;WA Legislative District 14
+WA Senate District 14	Washington;WA Legislative District 14
+WA House District 15 Position 1	Washington;WA Legislative District 15
+WA House District 15 Position 2	Washington;WA Legislative District 15
+WA Senate District 15	Washington;WA Legislative District 15
+WA House District 16 Position 1	Washington;WA Legislative District 16
+WA House District 16 Position 2	Washington;WA Legislative District 16
+WA Senate District 16	Washington;WA Legislative District 16
+WA House District 17 Position 1	Washington;WA Legislative District 17
+WA House District 17 Position 2	Washington;WA Legislative District 17
+WA Senate District 17	Washington;WA Legislative District 17
+WA House District 18 Position 1	Washington;WA Legislative District 18
+WA House District 18 Position 2	Washington;WA Legislative District 18
+WA Senate District 18	Washington;WA Legislative District 18
+WA House District 19 Position 1	Washington;WA Legislative District 19
+WA House District 19 Position 2	Washington;WA Legislative District 19
+WA Senate District 19	Washington;WA Legislative District 19
+WA House District 20 Position 1	Washington;WA Legislative District 20
+WA House District 20 Position 2	Washington;WA Legislative District 20
+WA Senate District 20	Washington;WA Legislative District 20
+WA House District 21 Position 1	Washington;WA Legislative District 21
+WA House District 21 Position 2	Washington;WA Legislative District 21
+WA Senate District 21	Washington;WA Legislative District 21
+WA House District 22 Position 1	Washington;WA Legislative District 22
+WA House District 22 Position 2	Washington;WA Legislative District 22
+WA Senate District 22	Washington;WA Legislative District 22
+WA House District 23 Position 1	Washington;WA Legislative District 23
+WA House District 23 Position 2	Washington;WA Legislative District 23
+WA Senate District 23	Washington;WA Legislative District 23
+WA House District 24 Position 1	Washington;WA Legislative District 24
+WA House District 24 Position 2	Washington;WA Legislative District 24
+WA Senate District 24	Washington;WA Legislative District 24
+WA House District 25 Position 1	Washington;WA Legislative District 25
+WA House District 25 Position 2	Washington;WA Legislative District 25
+WA Senate District 25	Washington;WA Legislative District 25
+WA House District 26 Position 1	Washington;WA Legislative District 26
+WA House District 26 Position 2	Washington;WA Legislative District 26
+WA Senate District 26	Washington;WA Legislative District 26
+WA House District 27 Position 1	Washington;WA Legislative District 27
+WA House District 27 Position 2	Washington;WA Legislative District 27
+WA Senate District 27	Washington;WA Legislative District 27
+WA House District 28 Position 1	Washington;WA Legislative District 28
+WA House District 28 Position 2	Washington;WA Legislative District 28
+WA Senate District 28	Washington;WA Legislative District 28
+WA House District 29 Position 1	Washington;WA Legislative District 29
+WA House District 29 Position 2	Washington;WA Legislative District 29
+WA Senate District 29	Washington;WA Legislative District 29
+WA House District 30 Position 1	Washington;WA Legislative District 30
+WA House District 30 Position 2	Washington;WA Legislative District 30
+WA Senate District 30	Washington;WA Legislative District 30
+WA House District 31 Position 1	Washington;WA Legislative District 31
+WA House District 31 Position 2	Washington;WA Legislative District 31
+WA Senate District 31	Washington;WA Legislative District 31
+WA House District 32 Position 1	Washington;WA Legislative District 32
+WA House District 32 Position 2	Washington;WA Legislative District 32
+WA Senate District 32	Washington;WA Legislative District 32
+WA House District 33 Position 1	Washington;WA Legislative District 33
+WA House District 33 Position 2	Washington;WA Legislative District 33
+WA Senate District 33	Washington;WA Legislative District 33
+WA House District 34 Position 1	Washington;WA Legislative District 34
+WA House District 34 Position 2	Washington;WA Legislative District 34
+WA Senate District 34	Washington;WA Legislative District 34
+WA House District 35 Position 1	Washington;WA Legislative District 35
+WA House District 35 Position 2	Washington;WA Legislative District 35
+WA Senate District 35	Washington;WA Legislative District 35
+WA House District 36 Position 1	Washington;WA Legislative District 36
+WA House District 36 Position 2	Washington;WA Legislative District 36
+WA Senate District 36	Washington;WA Legislative District 36
+WA House District 37 Position 1	Washington;WA Legislative District 37
+WA House District 37 Position 2	Washington;WA Legislative District 37
+WA Senate District 37	Washington;WA Legislative District 37
+WA House District 38 Position 1	Washington;WA Legislative District 38
+WA House District 38 Position 2	Washington;WA Legislative District 38
+WA Senate District 38	Washington;WA Legislative District 38
+WA House District 39 Position 1	Washington;WA Legislative District 39
+WA House District 39 Position 2	Washington;WA Legislative District 39
+WA Senate District 39	Washington;WA Legislative District 39
+WA House District 40 Position 1	Washington;WA Legislative District 40
+WA House District 40 Position 2	Washington;WA Legislative District 40
+WA Senate District 40	Washington;WA Legislative District 40
+WA House District 41 Position 1	Washington;WA Legislative District 41
+WA House District 41 Position 2	Washington;WA Legislative District 41
+WA Senate District 41	Washington;WA Legislative District 41
+WA House District 42 Position 1	Washington;WA Legislative District 42
+WA House District 42 Position 2	Washington;WA Legislative District 42
+WA Senate District 42	Washington;WA Legislative District 42
+WA House District 43 Position 1	Washington;WA Legislative District 43
+WA House District 43 Position 2	Washington;WA Legislative District 43
+WA Senate District 43	Washington;WA Legislative District 43
+WA House District 44 Position 1	Washington;WA Legislative District 44
+WA House District 44 Position 2	Washington;WA Legislative District 44
+WA Senate District 44	Washington;WA Legislative District 44
+WA House District 45 Position 1	Washington;WA Legislative District 45
+WA House District 45 Position 2	Washington;WA Legislative District 45
+WA Senate District 45	Washington;WA Legislative District 45
+WA House District 46 Position 1	Washington;WA Legislative District 46
+WA House District 46 Position 2	Washington;WA Legislative District 46
+WA Senate District 46	Washington;WA Legislative District 46
+WA House District 47 Position 1	Washington;WA Legislative District 47
+WA House District 47 Position 2	Washington;WA Legislative District 47
+WA Senate District 47	Washington;WA Legislative District 47
+WA House District 48 Position 1	Washington;WA Legislative District 48
+WA House District 48 Position 2	Washington;WA Legislative District 48
+WA Senate District 48	Washington;WA Legislative District 48
+WA House District 49 Position 1	Washington;WA Legislative District 49
+WA House District 49 Position 2	Washington;WA Legislative District 49
+WA Senate District 49	Washington;WA Legislative District 49
 US House WA District 1	Washington;US House WA District 1
 US House WA District 2	Washington;US House WA District 2
 US House WA District 3	Washington;US House WA District 3

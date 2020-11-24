@@ -1,4 +1,6 @@
 import election_data_analysis as e
+election = "2018 General"
+jurisdiction = "Ohio"
 
 
 def test_data_exists(dbname):
@@ -39,3 +41,8 @@ def test_oh_house_totals_18(dbname):
         )
         == 44213
     )
+
+
+
+def test_all_candidates_known(dbname):
+    assert e.get_contest_with_unknown_candidates(election, jurisdiction, dbname=dbname) == []
