@@ -14417,4 +14417,5 @@ Candidate	Michael A. Laboch	Laboch / Pope
 Candidate	Jade Simmons	Simmons / Nixon
 Candidate	Angela Marie Walls-Windhauser	Walls-Windhauser / Tolbert
 Candidate	Kasey Wells	Walls-Wells / Wells
+Candidate	Kasey Wells	Walls-Wells / Wells
 
