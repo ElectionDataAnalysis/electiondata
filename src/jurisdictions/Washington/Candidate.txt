@@ -1462,7 +1462,6 @@ Brian Sanderson
 Donald W. Engel
 Alfred G. Schweppe
 Michael Bennet
-Joseph R. Biden
 Michael Bloomberg
 Cory Booker
 Pete Buttigieg
@@ -1474,7 +1473,6 @@ Bernie Sanders
 Tom Steyer
 Elizabeth Warren
 Andrew Yang
-Donald J. Trump
 Ryan Cooper
 Tracy 'Justice' Wright
 Douglas E. McKinley
@@ -1561,7 +1559,6 @@ R. Victor Bottomly
 Larry Stanley
 Perry Dozier
 Danielle Garbe Reser
-William 'Bill' Jenkin
 Frances Chvatal
 Mark Klicker
 Carly Coburn

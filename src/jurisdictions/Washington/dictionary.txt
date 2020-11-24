@@ -1727,7 +1727,6 @@ Candidate	R. Victor Bottomly	R. Victor Bottomly
 Candidate	Larry Stanley	Larry Stanley
 Candidate	Perry Dozier	Perry Dozier
 Candidate	Danielle Garbe Reser	Danielle Garbe Reser
-Candidate	William 'Bill' Jenkin	William 'Bill' Jenkin
 Candidate	Frances Chvatal	Frances Chvatal
 Candidate	Mark Klicker	Mark Klicker
 Candidate	Carly Coburn	Carly Coburn
@@ -3449,5 +3448,3 @@ Party	Green Party	(Prefers Green Party)
 Party	Constitution Party	Constitution Party Nominees
 Party	Libertarian Party	Libertarian Party Nominees
 Party	Libertarian Party	(Prefers Libertarian Party)
-
-

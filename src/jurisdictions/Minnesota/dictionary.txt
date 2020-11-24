@@ -10699,7 +10699,7 @@ Candidate	Aarica L. Coleman	Aarica L. Coleman
 Candidate	Greg Pulles	Greg Pulles
 Candidate	Zina Alston-Fizer	Zina Alston-Fizer
 Candidate	Ann Johnson Stewart	Ann Johnson Stewart
-Candidate	Julie DuprÃÂÃÂ©	Julie DuprÃÂÃÂ©
+Candidate	Julie Dupré	Julie DuprÃÂÃÂ©
 Candidate	Jenny Rhoades	Jenny Rhoades
 Candidate	Melisa Lopez Franzen	Melisa Lopez Franzen
 Candidate	Paul Anderson	Paul Anderson
@@ -11342,7 +11342,7 @@ Candidate	Justin R. Anderson	Justin R. Anderson
 Candidate	Paul Groneberg	Paul Groneberg
 Candidate	Randy C. Larson	Randy C. Larson
 Candidate	Joe McDonald	Joe McDonald
-Candidate	RenÃÂÃÂ©e Cardarelle	RenÃÂÃÂ©e Cardarelle
+Candidate	Renée Cardarelle	RenÃÂÃÂ©e Cardarelle
 Candidate	Eric Lucero	Eric Lucero
 Candidate	Margaret Fernandez	Margaret Fernandez
 Candidate	Jerry Hertaus	Jerry Hertaus
@@ -13192,7 +13192,7 @@ Candidate	Roger Steinkamp	Roger Steinkamp
 Candidate	Robyn Smith	Robyn Smith
 Candidate	Robert Farnsworth	Robert Farnsworth
 Candidate	Rita Albrecht	Rita Albrecht
-Candidate	RenÃ©e Cardarelle	RenÃ©e Cardarelle
+Candidate	Renée Cardarelle	RenÃ©e Cardarelle
 Candidate	Reed Perkins	Reed Perkins
 Candidate	Randy Brock	Randy Brock
 Candidate	Ralph Kaehler	Ralph Kaehler
@@ -13233,7 +13233,7 @@ Candidate	Karla Bigham	Karla Bigham
 Candidate	Karen Attia	Karen Attia
 Candidate	Kaela Berg	Kaela Berg
 Candidate	Justin Stofferahn	Justin Stofferahn
-Candidate	Julie DuprÃ©	Julie DuprÃ©
+Candidate	Julie Dupré	Julie DuprÃ©
 Candidate	Julie Buria	Julie Buria
 Candidate	Julie A. Rosen	Julie A. Rosen
 Candidate	Joshua Prine	Joshua Prine
