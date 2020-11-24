@@ -797,14 +797,22 @@ def active_vote_types(session, election, jurisdiction):
 def remove_vote_counts(connection, cursor, id: int, active_confirm: bool = True) -> str:
     """Remove all VoteCount data from a particular file, and remove that file from _datafile"""
     try:
-        q = 'SELECT * FROM _datafile WHERE _datafile."Id"=%s;'
+        q = 'SELECT "Id", file_name, download_date, created_at, is_preliminary FROM _datafile WHERE _datafile."Id"=%s;'
         cursor.execute(q, [id])
-        record = cursor.fetchall()[0]
+        (datafile_id, file_name, download_date, created_at, preliminary) = cursor.fetchall()[0]
+        record = "\n\t".join([
+            f"datafile_id: {datafile_id}",
+            f"file_name: {file_name}",
+            f"download_date: {download_date}",
+            f"datafile_id: {datafile_id}",
+            f"created_at: {created_at}",
+            f"preliminary: {preliminary}",
+        ])
     except KeyError as exc:
         return f"No datafile found with Id = {id}"
     if active_confirm:
         confirm = input(
-            f"Confirm: delete all VoteCount data from this results file: {record} (y/n)?"
+            f"Confirm: delete all VoteCount data from this results file (y/n)?\n\t{record}\n"
         )
     # if active_confirm is False, consider it confirmed.
     else:
@@ -814,12 +822,14 @@ def remove_vote_counts(connection, cursor, id: int, active_confirm: bool = True)
             q = 'DELETE FROM "VoteCount" where "_datafile_Id"=%s;Delete from _datafile where "Id"=%s;'
             cursor.execute(q, [id, id])
             connection.commit()
-            print(f'VoteCounts deleted from results file {record["short_name"]}')
+            print(f'{file_name}: VoteCounts deleted from results file\n')
             err_str = None
         except Exception as exc:
-            err_str = f"Error deleting data: {exc}"
+            err_str = f"{file_name}: Error deleting data: {exc}"
+            print(err_str)
     else:
-        err_str = "Deletion not confirmed by user"
+        err_str = f"{file_name}: Deletion not confirmed by user\n"
+        print(err_str)
     return err_str
 
 
