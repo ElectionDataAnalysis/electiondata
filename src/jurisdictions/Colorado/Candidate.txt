@@ -395,7 +395,7 @@ Darrell L. Castle
 Gary Johnson
 Jill Stein
 Frank Atwood
-Rocky Roque De La Fuente
+Roque 'Rocky' De La Fuente
 James Hedges
 Tom Hoefling
 Chris Keniston
@@ -1022,14 +1022,13 @@ Jo Jorgensen
 Brian Carroll
 Mark Charles
 Phil Collins
-Roque ''Rocky'' De La Fuente
 Dario Hunter
 Princess Khadijah Maryam Jacob-Fambro
 Joseph Kishore
 Gloria La Riva
 Joe McHugh
 Brock Pierce
-Jordan ''Cancer'' Scott
+Jordan 'Cancer' Scott
 Kanye West
 Lisa EscÃ¡rcega
 Zachary Laddison
@@ -1042,7 +1041,4 @@ Bobby Dishell
 Julien Bouquet
 Roger Edwards
 Marjorie Sloan
-Yes
-No
-Yes/For
-No/Against
+Martín Mendez
