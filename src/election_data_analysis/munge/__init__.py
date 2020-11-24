@@ -195,21 +195,42 @@ def munge_clean(
 
 
 def add_regex_column(
-    df: pd.DataFrame, old_col: str, new_col: str, pattern_str: str
+        df: pd.DataFrame,
+        old_col: str,
+        new_col: str,
+        pattern_str: str,
+        munger_name: str,
 ) -> (pd.DataFrame, [dict, None]):
     """Return <df> with <new_col> appended, where <new_col> is pulled from <old_col> by the <pattern>.
     Note that only the first group (per <pattern>) is returned"""
     err = None
     working = df.copy()
-    p = re.compile(pattern_str)
+    try:
+        p = re.compile(pattern_str)
+        # replace via regex if possible; otherwise msg
+        # # put informative error message in new_col
+        old = working[old_col].copy()
+        working[new_col] = working[old_col].str.cat(old, f" <- did not match regex {pattern_str}")
+        # # where regex succeeds, replace error message with good value
+        mask = working[old_col].str.match(p)
+        working.loc[mask, new_col] = working[mask][old_col].str.replace(p, "\\1")
 
-    # replace via regex if possible; otherwise msg
-    # # put informative error message in new_col
-    old = working[old_col].copy()
-    working[new_col] = working[old_col].str.cat (old, f" <- did not match regex {pattern_str}")
-    # # where regex succeeds, replace error message with good value
-    mask = working[old_col].str.match(p)
-    working.loc[mask,new_col] = working[mask][old_col].str.replace(p,"\\1")
+    except re.error as e:
+        err = ui.add_new_error(
+            err,
+            "munger",
+            munger_name,
+            f"Regex error in {pattern_str}"
+        )
+    except Exception as e:
+        err = ui.add_new_error(
+            err,
+            "system",
+            "munge.add_regex_column",
+            f"Unexpected exception: {e}"
+        )
+
+
 
     return working, err
 
@@ -254,7 +275,7 @@ def add_column_from_formula(
             # create a new column with the extracted info
             old_col, pattern_str = x.groups()
             temp_col = f"extracted_from_{old_col}"
-            w, new_err = add_regex_column(w, old_col, temp_col, pattern_str)
+            w, new_err = add_regex_column(w, old_col, temp_col, pattern_str, munger_name)
             # change the formula to use the temp column
             formula = formula.replace(f"{{<{old_col}>,{pattern_str}}}", f"<{temp_col}>")
             if new_err:
