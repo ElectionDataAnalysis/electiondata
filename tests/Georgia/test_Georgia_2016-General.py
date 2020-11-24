@@ -73,3 +73,8 @@ def test_ga_totals_match_vote_type_16(dbname):
         or e.check_totals_match_vote_types("2016 General", "Georgia", dbname=dbname)
         == True
     )
+
+
+
+def test_all_candidates_known(dbname):
+    assert e.get_contest_with_unknown_candidates(election, jurisdiction, dbname=dbname) == []

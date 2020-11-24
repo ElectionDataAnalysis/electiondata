@@ -66,3 +66,8 @@ def test_state_treasurer_republican(dbname):
         )
         == 669036
     )
+
+
+
+def test_all_candidates_known(dbname):
+    assert e.get_contest_with_unknown_candidates(election, jurisdiction, dbname=dbname) == []

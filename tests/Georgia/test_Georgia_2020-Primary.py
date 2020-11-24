@@ -66,3 +66,8 @@ def test_ga_totals_match_vote_type_20(dbname):
     assert (e.check_totals_match_vote_types(election, jurisdiction, dbname=dbname)
         == True
     )
+
+
+
+def test_all_candidates_known(dbname):
+    assert e.get_contest_with_unknown_candidates(election, jurisdiction, dbname=dbname) == []

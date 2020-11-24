@@ -1,4 +1,6 @@
 import election_data_analysis as e
+election = "2020 Primary"
+jurisdiction = "Ohio"
 
 
 def test_data_exists(dbname):
@@ -66,3 +68,8 @@ def test_oh_contest_by_vote_type_20(dbname):
         )
         == 13248
     )
+
+
+
+def test_all_candidates_known(dbname):
+    assert e.get_contest_with_unknown_candidates(election, jurisdiction, dbname=dbname) == []
