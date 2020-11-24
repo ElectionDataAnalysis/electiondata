@@ -1,5 +1,6 @@
 import election_data_analysis as e
-
+election = "2016 General"
+jurisdiction = "Georgia"
 
 def test_ga_presidential_16(dbname):
     assert (

@@ -1,5 +1,6 @@
 import election_data_analysis as e
-
+election = "2016 General"
+jurisdiction = "Texas"
 # IA18 tests
 
 

@@ -1,5 +1,6 @@
 import election_data_analysis as e
-
+election = "2020 General"
+jurisdiction = "Florida"
 #FL20g test
 # Instructions:
 #   Delete any tests for contest types your state doesn't have in 2020 (e.g., Florida has no US Senate contest)
