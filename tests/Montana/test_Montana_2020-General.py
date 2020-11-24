@@ -106,3 +106,8 @@ def test_one_county_vote_type(dbname):
         )
         == 142 + 2184 + 2562
             )
+
+
+
+def test_all_candidates_known(dbname):
+    assert e.get_contest_with_unknown_candidates(election, jurisdiction, dbname=dbname) == []

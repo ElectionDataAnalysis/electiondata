@@ -51,3 +51,8 @@ def test_state_rep_totals(dbname):
         )
         == 2990
     )
+
+
+
+def test_all_candidates_known(dbname):
+    assert e.get_contest_with_unknown_candidates(election, jurisdiction, dbname=dbname) == []

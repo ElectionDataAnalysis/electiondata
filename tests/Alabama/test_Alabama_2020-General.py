@@ -46,3 +46,8 @@ def test_congressional_totals(dbname):
 # No state legislature contests, since state legislature elections for Alabama
 # occure during midterm years, e.g., 2010, 2014, 2018, ...
 
+
+
+
+def test_all_candidates_known(dbname):
+    assert e.get_contest_with_unknown_candidates(election, jurisdiction, dbname=dbname) == []

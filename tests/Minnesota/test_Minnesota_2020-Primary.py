@@ -51,3 +51,8 @@ def test_mn_house_totals_20(dbname):
         )
         == 2244
     )
+
+
+
+def test_all_candidates_known(dbname):
+    assert e.get_contest_with_unknown_candidates(election, jurisdiction, dbname=dbname) == []
