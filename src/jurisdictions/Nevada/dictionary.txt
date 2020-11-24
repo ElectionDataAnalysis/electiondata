@@ -1,71 +1,138 @@
 cdf_element	cdf_internal_name	raw_identifier_value
 CandidateContest	US President (NV)	President and Vice President of the United States
+CandidateContest	NV House District 1	State Assembly, District 1
 CandidateContest	NV House District 1	'State Assembly, District 1'
+CandidateContest	NV House District 2	State Assembly, District 2
 CandidateContest	NV House District 2	'State Assembly, District 2'
+CandidateContest	NV House District 3	State Assembly, District 3
 CandidateContest	NV House District 3	'State Assembly, District 3'
+CandidateContest	NV House District 4	State Assembly, District 4
 CandidateContest	NV House District 4	'State Assembly, District 4'
+CandidateContest	NV House District 5	State Assembly, District 5
 CandidateContest	NV House District 5	'State Assembly, District 5'
+CandidateContest	NV House District 6	State Assembly, District 6
 CandidateContest	NV House District 6	'State Assembly, District 6'
+CandidateContest	NV House District 7	State Assembly, District 7
 CandidateContest	NV House District 7	'State Assembly, District 7'
+CandidateContest	NV House District 8	State Assembly, District 8
 CandidateContest	NV House District 8	'State Assembly, District 8'
+CandidateContest	NV House District 9	State Assembly, District 9
 CandidateContest	NV House District 9	'State Assembly, District 9'
+CandidateContest	NV House District 10	State Assembly, District 10
 CandidateContest	NV House District 10	'State Assembly, District 10'
+CandidateContest	NV House District 11	State Assembly, District 11
 CandidateContest	NV House District 11	'State Assembly, District 11'
+CandidateContest	NV House District 12	State Assembly, District 12
 CandidateContest	NV House District 12	'State Assembly, District 12'
+CandidateContest	NV House District 13	State Assembly, District 13
 CandidateContest	NV House District 13	'State Assembly, District 13'
+CandidateContest	NV House District 14	State Assembly, District 14
 CandidateContest	NV House District 14	'State Assembly, District 14'
+CandidateContest	NV House District 15	State Assembly, District 15
 CandidateContest	NV House District 15	'State Assembly, District 15'
+CandidateContest	NV House District 16	State Assembly, District 16
 CandidateContest	NV House District 16	'State Assembly, District 16'
+CandidateContest	NV House District 17	State Assembly, District 17
 CandidateContest	NV House District 17	'State Assembly, District 17'
+CandidateContest	NV House District 18	State Assembly, District 18
 CandidateContest	NV House District 18	'State Assembly, District 18'
+CandidateContest	NV House District 19	State Assembly, District 19
 CandidateContest	NV House District 19	'State Assembly, District 19'
+CandidateContest	NV House District 20	State Assembly, District 20
 CandidateContest	NV House District 20	'State Assembly, District 20'
+CandidateContest	NV House District 21	State Assembly, District 21
 CandidateContest	NV House District 21	'State Assembly, District 21'
+CandidateContest	NV House District 22	State Assembly, District 22
 CandidateContest	NV House District 22	'State Assembly, District 22'
+CandidateContest	NV House District 23	State Assembly, District 23
 CandidateContest	NV House District 23	'State Assembly, District 23'
+CandidateContest	NV House District 24	State Assembly, District 24
 CandidateContest	NV House District 24	'State Assembly, District 24'
+CandidateContest	NV House District 25	State Assembly, District 25
 CandidateContest	NV House District 25	'State Assembly, District 25'
+CandidateContest	NV House District 26	State Assembly, District 26
 CandidateContest	NV House District 26	'State Assembly, District 26'
+CandidateContest	NV House District 27	State Assembly, District 27
 CandidateContest	NV House District 27	'State Assembly, District 27'
+CandidateContest	NV House District 28	State Assembly, District 28
 CandidateContest	NV House District 28	'State Assembly, District 28'
+CandidateContest	NV House District 29	State Assembly, District 29
 CandidateContest	NV House District 29	'State Assembly, District 29'
+CandidateContest	NV House District 30	State Assembly, District 30
 CandidateContest	NV House District 30	'State Assembly, District 30'
+CandidateContest	NV House District 31	State Assembly, District 31
 CandidateContest	NV House District 31	'State Assembly, District 31'
+CandidateContest	NV House District 32	State Assembly, District 32
 CandidateContest	NV House District 32	'State Assembly, District 32'
+CandidateContest	NV House District 33	State Assembly, District 33
 CandidateContest	NV House District 33	'State Assembly, District 33'
+CandidateContest	NV House District 34	State Assembly, District 34
 CandidateContest	NV House District 34	'State Assembly, District 34'
+CandidateContest	NV House District 35	State Assembly, District 35
 CandidateContest	NV House District 35	'State Assembly, District 35'
+CandidateContest	NV House District 36	State Assembly, District 36
 CandidateContest	NV House District 36	'State Assembly, District 36'
+CandidateContest	NV House District 37	State Assembly, District 37
 CandidateContest	NV House District 37	'State Assembly, District 37'
+CandidateContest	NV House District 38	State Assembly, District 38
 CandidateContest	NV House District 38	'State Assembly, District 38'
+CandidateContest	NV House District 39	State Assembly, District 39
 CandidateContest	NV House District 39	'State Assembly, District 39'
+CandidateContest	NV House District 40	State Assembly, District 40
 CandidateContest	NV House District 40	'State Assembly, District 40'
+CandidateContest	NV House District 41	State Assembly, District 41
 CandidateContest	NV House District 41	'State Assembly, District 41'
+CandidateContest	NV House District 42	State Assembly, District 42
 CandidateContest	NV House District 42	'State Assembly, District 42'
+CandidateContest	NV Senate District 1	State Senate, District 1
 CandidateContest	NV Senate District 1	'State Senate, District 1'
+CandidateContest	NV Senate District 2	State Senate, District 2
 CandidateContest	NV Senate District 2	'State Senate, District 2'
+CandidateContest	NV Senate District 3	State Senate, District 3
 CandidateContest	NV Senate District 3	'State Senate, District 3'
+CandidateContest	NV Senate District 4	State Senate, District 4
 CandidateContest	NV Senate District 4	'State Senate, District 4'
+CandidateContest	NV Senate District 5	State Senate, District 5
 CandidateContest	NV Senate District 5	'State Senate, District 5'
+CandidateContest	NV Senate District 6	State Senate, District 6
 CandidateContest	NV Senate District 6	'State Senate, District 6'
+CandidateContest	NV Senate District 7	State Senate, District 7
 CandidateContest	NV Senate District 7	'State Senate, District 7'
+CandidateContest	NV Senate District 8	State Senate, District 8
 CandidateContest	NV Senate District 8	'State Senate, District 8'
+CandidateContest	NV Senate District 9	State Senate, District 9
 CandidateContest	NV Senate District 9	'State Senate, District 9'
+CandidateContest	NV Senate District 10	State Senate, District 10
 CandidateContest	NV Senate District 10	'State Senate, District 10'
+CandidateContest	NV Senate District 11	State Senate, District 11
 CandidateContest	NV Senate District 11	'State Senate, District 11'
+CandidateContest	NV Senate District 12	State Senate, District 12
 CandidateContest	NV Senate District 12	'State Senate, District 12'
+CandidateContest	NV Senate District 13	State Senate, District 13
 CandidateContest	NV Senate District 13	'State Senate, District 13'
+CandidateContest	NV Senate District 14	State Senate, District 14
 CandidateContest	NV Senate District 14	'State Senate, District 14'
+CandidateContest	NV Senate District 15	State Senate, District 15
 CandidateContest	NV Senate District 15	'State Senate, District 15'
+CandidateContest	NV Senate District 16	State Senate, District 16
 CandidateContest	NV Senate District 16	'State Senate, District 16'
+CandidateContest	NV Senate District 17	State Senate, District 17
 CandidateContest	NV Senate District 17	'State Senate, District 17'
+CandidateContest	NV Senate District 18	State Senate, District 18
 CandidateContest	NV Senate District 18	'State Senate, District 18'
+CandidateContest	NV Senate District 19	State Senate, District 19
 CandidateContest	NV Senate District 19	'State Senate, District 19'
+CandidateContest	NV Senate District 20	State Senate, District 20
 CandidateContest	NV Senate District 20	'State Senate, District 20'
+CandidateContest	NV Senate District 21	State Senate, District 21
 CandidateContest	NV Senate District 21	'State Senate, District 21'
+CandidateContest	US House NV District 1	U.S. Representative in Congress, Dist. 1
 CandidateContest	US House NV District 1	'U.S. Representative in Congress, Dist. 1'
+CandidateContest	US House NV District 2	U.S. Representative in Congress, Dist. 2
 CandidateContest	US House NV District 2	'U.S. Representative in Congress, Dist. 2'
+CandidateContest	US House NV District 3	U.S. Representative in Congress, Dist. 3
 CandidateContest	US House NV District 3	'U.S. Representative in Congress, Dist. 3'
+CandidateContest	US House NV District 4	U.S. Representative in Congress, Dist. 4
 CandidateContest	US House NV District 4	'U.S. Representative in Congress, Dist. 4'
 CandidateContest	NV Governor	Governor
 CandidateContest	US Senate NV	United States Senator
@@ -74,72 +141,139 @@ CandidateContest	NV Lieutenant Governor	Lieutenant Governor
 CandidateContest	NV State Treasurer	State Treasurer
 CandidateContest	NV Secretary of State	Secretary of State
 CandidateContest	NV State Controller	State Controller
+CandidateContest	NV House District 1 (Democratic Party)	State Assembly, District 1 (Democratic)
 CandidateContest	NV House District 1 (Democratic Party)	'State Assembly, District 1 (Democratic)'
+CandidateContest	NV House District 2 (Democratic Party)	State Assembly, District 2 (Democratic)
 CandidateContest	NV House District 2 (Democratic Party)	'State Assembly, District 2 (Democratic)'
+CandidateContest	NV House District 3 (Democratic Party)	State Assembly, District 3 (Democratic)
 CandidateContest	NV House District 3 (Democratic Party)	'State Assembly, District 3 (Democratic)'
+CandidateContest	NV House District 4 (Democratic Party)	State Assembly, District 4 (Democratic)
 CandidateContest	NV House District 4 (Democratic Party)	'State Assembly, District 4 (Democratic)'
+CandidateContest	NV House District 5 (Democratic Party)	State Assembly, District 5 (Democratic)
 CandidateContest	NV House District 5 (Democratic Party)	'State Assembly, District 5 (Democratic)'
+CandidateContest	NV House District 6 (Democratic Party)	State Assembly, District 6 (Democratic)
 CandidateContest	NV House District 6 (Democratic Party)	'State Assembly, District 6 (Democratic)'
+CandidateContest	NV House District 7 (Democratic Party)	State Assembly, District 7 (Democratic)
 CandidateContest	NV House District 7 (Democratic Party)	'State Assembly, District 7 (Democratic)'
+CandidateContest	NV House District 8 (Democratic Party)	State Assembly, District 8 (Democratic)
 CandidateContest	NV House District 8 (Democratic Party)	'State Assembly, District 8 (Democratic)'
+CandidateContest	NV House District 9 (Democratic Party)	State Assembly, District 9 (Democratic)
 CandidateContest	NV House District 9 (Democratic Party)	'State Assembly, District 9 (Democratic)'
+CandidateContest	NV House District 10 (Democratic Party)	State Assembly, District 10 (Democratic)
 CandidateContest	NV House District 10 (Democratic Party)	'State Assembly, District 10 (Democratic)'
+CandidateContest	NV House District 11 (Democratic Party)	State Assembly, District 11 (Democratic)
 CandidateContest	NV House District 11 (Democratic Party)	'State Assembly, District 11 (Democratic)'
+CandidateContest	NV House District 12 (Democratic Party)	State Assembly, District 12 (Democratic)
 CandidateContest	NV House District 12 (Democratic Party)	'State Assembly, District 12 (Democratic)'
+CandidateContest	NV House District 13 (Democratic Party)	State Assembly, District 13 (Democratic)
 CandidateContest	NV House District 13 (Democratic Party)	'State Assembly, District 13 (Democratic)'
+CandidateContest	NV House District 14 (Democratic Party)	State Assembly, District 14 (Democratic)
 CandidateContest	NV House District 14 (Democratic Party)	'State Assembly, District 14 (Democratic)'
+CandidateContest	NV House District 15 (Democratic Party)	State Assembly, District 15 (Democratic)
 CandidateContest	NV House District 15 (Democratic Party)	'State Assembly, District 15 (Democratic)'
+CandidateContest	NV House District 16 (Democratic Party)	State Assembly, District 16 (Democratic)
 CandidateContest	NV House District 16 (Democratic Party)	'State Assembly, District 16 (Democratic)'
+CandidateContest	NV House District 17 (Democratic Party)	State Assembly, District 17 (Democratic)
 CandidateContest	NV House District 17 (Democratic Party)	'State Assembly, District 17 (Democratic)'
+CandidateContest	NV House District 18 (Democratic Party)	State Assembly, District 18 (Democratic)
 CandidateContest	NV House District 18 (Democratic Party)	'State Assembly, District 18 (Democratic)'
+CandidateContest	NV House District 19 (Democratic Party)	State Assembly, District 19 (Democratic)
 CandidateContest	NV House District 19 (Democratic Party)	'State Assembly, District 19 (Democratic)'
+CandidateContest	NV House District 20 (Democratic Party)	State Assembly, District 20 (Democratic)
 CandidateContest	NV House District 20 (Democratic Party)	'State Assembly, District 20 (Democratic)'
+CandidateContest	NV House District 21 (Democratic Party)	State Assembly, District 21 (Democratic)
 CandidateContest	NV House District 21 (Democratic Party)	'State Assembly, District 21 (Democratic)'
+CandidateContest	NV House District 22 (Democratic Party)	State Assembly, District 22 (Democratic)
 CandidateContest	NV House District 22 (Democratic Party)	'State Assembly, District 22 (Democratic)'
+CandidateContest	NV House District 23 (Democratic Party)	State Assembly, District 23 (Democratic)
 CandidateContest	NV House District 23 (Democratic Party)	'State Assembly, District 23 (Democratic)'
+CandidateContest	NV House District 24 (Democratic Party)	State Assembly, District 24 (Democratic)
 CandidateContest	NV House District 24 (Democratic Party)	'State Assembly, District 24 (Democratic)'
+CandidateContest	NV House District 25 (Democratic Party)	State Assembly, District 25 (Democratic)
 CandidateContest	NV House District 25 (Democratic Party)	'State Assembly, District 25 (Democratic)'
+CandidateContest	NV House District 26 (Democratic Party)	State Assembly, District 26 (Democratic)
 CandidateContest	NV House District 26 (Democratic Party)	'State Assembly, District 26 (Democratic)'
+CandidateContest	NV House District 27 (Democratic Party)	State Assembly, District 27 (Democratic)
 CandidateContest	NV House District 27 (Democratic Party)	'State Assembly, District 27 (Democratic)'
+CandidateContest	NV House District 28 (Democratic Party)	State Assembly, District 28 (Democratic)
 CandidateContest	NV House District 28 (Democratic Party)	'State Assembly, District 28 (Democratic)'
+CandidateContest	NV House District 29 (Democratic Party)	State Assembly, District 29 (Democratic)
 CandidateContest	NV House District 29 (Democratic Party)	'State Assembly, District 29 (Democratic)'
+CandidateContest	NV House District 30 (Democratic Party)	State Assembly, District 30 (Democratic)
 CandidateContest	NV House District 30 (Democratic Party)	'State Assembly, District 30 (Democratic)'
+CandidateContest	NV House District 31 (Democratic Party)	State Assembly, District 31 (Democratic)
 CandidateContest	NV House District 31 (Democratic Party)	'State Assembly, District 31 (Democratic)'
+CandidateContest	NV House District 32 (Democratic Party)	State Assembly, District 32 (Democratic)
 CandidateContest	NV House District 32 (Democratic Party)	'State Assembly, District 32 (Democratic)'
+CandidateContest	NV House District 33 (Democratic Party)	State Assembly, District 33 (Democratic)
 CandidateContest	NV House District 33 (Democratic Party)	'State Assembly, District 33 (Democratic)'
+CandidateContest	NV House District 34 (Democratic Party)	State Assembly, District 34 (Democratic)
 CandidateContest	NV House District 34 (Democratic Party)	'State Assembly, District 34 (Democratic)'
+CandidateContest	NV House District 35 (Democratic Party)	State Assembly, District 35 (Democratic)
 CandidateContest	NV House District 35 (Democratic Party)	'State Assembly, District 35 (Democratic)'
+CandidateContest	NV House District 36 (Democratic Party)	State Assembly, District 36 (Democratic)
 CandidateContest	NV House District 36 (Democratic Party)	'State Assembly, District 36 (Democratic)'
+CandidateContest	NV House District 37 (Democratic Party)	State Assembly, District 37 (Democratic)
 CandidateContest	NV House District 37 (Democratic Party)	'State Assembly, District 37 (Democratic)'
+CandidateContest	NV House District 38 (Democratic Party)	State Assembly, District 38 (Democratic)
 CandidateContest	NV House District 38 (Democratic Party)	'State Assembly, District 38 (Democratic)'
+CandidateContest	NV House District 39 (Democratic Party)	State Assembly, District 39 (Democratic)
 CandidateContest	NV House District 39 (Democratic Party)	'State Assembly, District 39 (Democratic)'
+CandidateContest	NV House District 40 (Democratic Party)	State Assembly, District 40 (Democratic)
 CandidateContest	NV House District 40 (Democratic Party)	'State Assembly, District 40 (Democratic)'
+CandidateContest	NV House District 41 (Democratic Party)	State Assembly, District 41 (Democratic)
 CandidateContest	NV House District 41 (Democratic Party)	'State Assembly, District 41 (Democratic)'
+CandidateContest	NV House District 42 (Democratic Party)	State Assembly, District 42 (Democratic)
 CandidateContest	NV House District 42 (Democratic Party)	'State Assembly, District 42 (Democratic)'
+CandidateContest	NV Senate District 1 (Democratic Party)	State Senate, District 1 (Democratic)
 CandidateContest	NV Senate District 1 (Democratic Party)	'State Senate, District 1 (Democratic)'
+CandidateContest	NV Senate District 2 (Democratic Party)	State Senate, District 2 (Democratic)
 CandidateContest	NV Senate District 2 (Democratic Party)	'State Senate, District 2 (Democratic)'
+CandidateContest	NV Senate District 3 (Democratic Party)	State Senate, District 3 (Democratic)
 CandidateContest	NV Senate District 3 (Democratic Party)	'State Senate, District 3 (Democratic)'
+CandidateContest	NV Senate District 4 (Democratic Party)	State Senate, District 4 (Democratic)
 CandidateContest	NV Senate District 4 (Democratic Party)	'State Senate, District 4 (Democratic)'
+CandidateContest	NV Senate District 5 (Democratic Party)	State Senate, District 5 (Democratic)
 CandidateContest	NV Senate District 5 (Democratic Party)	'State Senate, District 5 (Democratic)'
+CandidateContest	NV Senate District 6 (Democratic Party)	State Senate, District 6 (Democratic)
 CandidateContest	NV Senate District 6 (Democratic Party)	'State Senate, District 6 (Democratic)'
+CandidateContest	NV Senate District 7 (Democratic Party)	State Senate, District 7 (Democratic)
 CandidateContest	NV Senate District 7 (Democratic Party)	'State Senate, District 7 (Democratic)'
+CandidateContest	NV Senate District 8 (Democratic Party)	State Senate, District 8 (Democratic)
 CandidateContest	NV Senate District 8 (Democratic Party)	'State Senate, District 8 (Democratic)'
+CandidateContest	NV Senate District 9 (Democratic Party)	State Senate, District 9 (Democratic)
 CandidateContest	NV Senate District 9 (Democratic Party)	'State Senate, District 9 (Democratic)'
+CandidateContest	NV Senate District 10 (Democratic Party)	State Senate, District 10 (Democratic)
 CandidateContest	NV Senate District 10 (Democratic Party)	'State Senate, District 10 (Democratic)'
+CandidateContest	NV Senate District 11 (Democratic Party)	State Senate, District 11 (Democratic)
 CandidateContest	NV Senate District 11 (Democratic Party)	'State Senate, District 11 (Democratic)'
+CandidateContest	NV Senate District 12 (Democratic Party)	State Senate, District 12 (Democratic)
 CandidateContest	NV Senate District 12 (Democratic Party)	'State Senate, District 12 (Democratic)'
+CandidateContest	NV Senate District 13 (Democratic Party)	State Senate, District 13 (Democratic)
 CandidateContest	NV Senate District 13 (Democratic Party)	'State Senate, District 13 (Democratic)'
+CandidateContest	NV Senate District 14 (Democratic Party)	State Senate, District 14 (Democratic)
 CandidateContest	NV Senate District 14 (Democratic Party)	'State Senate, District 14 (Democratic)'
+CandidateContest	NV Senate District 15 (Democratic Party)	State Senate, District 15 (Democratic)
 CandidateContest	NV Senate District 15 (Democratic Party)	'State Senate, District 15 (Democratic)'
+CandidateContest	NV Senate District 16 (Democratic Party)	State Senate, District 16 (Democratic)
 CandidateContest	NV Senate District 16 (Democratic Party)	'State Senate, District 16 (Democratic)'
+CandidateContest	NV Senate District 17 (Democratic Party)	State Senate, District 17 (Democratic)
 CandidateContest	NV Senate District 17 (Democratic Party)	'State Senate, District 17 (Democratic)'
+CandidateContest	NV Senate District 18 (Democratic Party)	State Senate, District 18 (Democratic)
 CandidateContest	NV Senate District 18 (Democratic Party)	'State Senate, District 18 (Democratic)'
+CandidateContest	NV Senate District 19 (Democratic Party)	State Senate, District 19 (Democratic)
 CandidateContest	NV Senate District 19 (Democratic Party)	'State Senate, District 19 (Democratic)'
+CandidateContest	NV Senate District 20 (Democratic Party)	State Senate, District 20 (Democratic)
 CandidateContest	NV Senate District 20 (Democratic Party)	'State Senate, District 20 (Democratic)'
+CandidateContest	NV Senate District 21 (Democratic Party)	State Senate, District 21 (Democratic)
 CandidateContest	NV Senate District 21 (Democratic Party)	'State Senate, District 21 (Democratic)'
+CandidateContest	US House NV District 1 (Democratic Party)	U.S. Representative in Congress, District 1 (Democratic)
 CandidateContest	US House NV District 1 (Democratic Party)	'U.S. Representative in Congress, District 1 (Democratic)'
+CandidateContest	US House NV District 2 (Democratic Party)	U.S. Representative in Congress, District 2 (Democratic)
 CandidateContest	US House NV District 2 (Democratic Party)	'U.S. Representative in Congress, District 2 (Democratic)'
+CandidateContest	US House NV District 3 (Democratic Party)	U.S. Representative in Congress, District 3 (Democratic)
 CandidateContest	US House NV District 3 (Democratic Party)	'U.S. Representative in Congress, District 3 (Democratic)'
+CandidateContest	US House NV District 4 (Democratic Party)	U.S. Representative in Congress, District 4 (Democratic)
 CandidateContest	US House NV District 4 (Democratic Party)	'U.S. Representative in Congress, District 4 (Democratic)'
 CandidateContest	NV Governor (Democratic Party)	Governor (Democratic)
 CandidateContest	US Senate NV (Democratic Party)	United States Senator (Democratic)
@@ -148,72 +282,139 @@ CandidateContest	NV Lieutenant Governor (Democratic Party)	Lieutenant Governor (
 CandidateContest	NV State Treasurer (Democratic Party)	State Treasurer (Democratic)
 CandidateContest	NV Secretary of State (Democratic Party)	Secretary of State (Democratic)
 CandidateContest	NV State Controller (Democratic Party)	State Controller (Democratic)
+CandidateContest	NV House District 1 (Republican Party)	State Assembly, District 1 (Republican)
 CandidateContest	NV House District 1 (Republican Party)	'State Assembly, District 1 (Republican)'
+CandidateContest	NV House District 2 (Republican Party)	State Assembly, District 2 (Republican)
 CandidateContest	NV House District 2 (Republican Party)	'State Assembly, District 2 (Republican)'
+CandidateContest	NV House District 3 (Republican Party)	State Assembly, District 3 (Republican)
 CandidateContest	NV House District 3 (Republican Party)	'State Assembly, District 3 (Republican)'
+CandidateContest	NV House District 4 (Republican Party)	State Assembly, District 4 (Republican)
 CandidateContest	NV House District 4 (Republican Party)	'State Assembly, District 4 (Republican)'
+CandidateContest	NV House District 5 (Republican Party)	State Assembly, District 5 (Republican)
 CandidateContest	NV House District 5 (Republican Party)	'State Assembly, District 5 (Republican)'
+CandidateContest	NV House District 6 (Republican Party)	State Assembly, District 6 (Republican)
 CandidateContest	NV House District 6 (Republican Party)	'State Assembly, District 6 (Republican)'
+CandidateContest	NV House District 7 (Republican Party)	State Assembly, District 7 (Republican)
 CandidateContest	NV House District 7 (Republican Party)	'State Assembly, District 7 (Republican)'
+CandidateContest	NV House District 8 (Republican Party)	State Assembly, District 8 (Republican)
 CandidateContest	NV House District 8 (Republican Party)	'State Assembly, District 8 (Republican)'
+CandidateContest	NV House District 9 (Republican Party)	State Assembly, District 9 (Republican)
 CandidateContest	NV House District 9 (Republican Party)	'State Assembly, District 9 (Republican)'
+CandidateContest	NV House District 10 (Republican Party)	State Assembly, District 10 (Republican)
 CandidateContest	NV House District 10 (Republican Party)	'State Assembly, District 10 (Republican)'
+CandidateContest	NV House District 11 (Republican Party)	State Assembly, District 11 (Republican)
 CandidateContest	NV House District 11 (Republican Party)	'State Assembly, District 11 (Republican)'
+CandidateContest	NV House District 12 (Republican Party)	State Assembly, District 12 (Republican)
 CandidateContest	NV House District 12 (Republican Party)	'State Assembly, District 12 (Republican)'
+CandidateContest	NV House District 13 (Republican Party)	State Assembly, District 13 (Republican)
 CandidateContest	NV House District 13 (Republican Party)	'State Assembly, District 13 (Republican)'
+CandidateContest	NV House District 14 (Republican Party)	State Assembly, District 14 (Republican)
 CandidateContest	NV House District 14 (Republican Party)	'State Assembly, District 14 (Republican)'
+CandidateContest	NV House District 15 (Republican Party)	State Assembly, District 15 (Republican)
 CandidateContest	NV House District 15 (Republican Party)	'State Assembly, District 15 (Republican)'
+CandidateContest	NV House District 16 (Republican Party)	State Assembly, District 16 (Republican)
 CandidateContest	NV House District 16 (Republican Party)	'State Assembly, District 16 (Republican)'
+CandidateContest	NV House District 17 (Republican Party)	State Assembly, District 17 (Republican)
 CandidateContest	NV House District 17 (Republican Party)	'State Assembly, District 17 (Republican)'
+CandidateContest	NV House District 18 (Republican Party)	State Assembly, District 18 (Republican)
 CandidateContest	NV House District 18 (Republican Party)	'State Assembly, District 18 (Republican)'
+CandidateContest	NV House District 19 (Republican Party)	State Assembly, District 19 (Republican)
 CandidateContest	NV House District 19 (Republican Party)	'State Assembly, District 19 (Republican)'
+CandidateContest	NV House District 20 (Republican Party)	State Assembly, District 20 (Republican)
 CandidateContest	NV House District 20 (Republican Party)	'State Assembly, District 20 (Republican)'
+CandidateContest	NV House District 21 (Republican Party)	State Assembly, District 21 (Republican)
 CandidateContest	NV House District 21 (Republican Party)	'State Assembly, District 21 (Republican)'
+CandidateContest	NV House District 22 (Republican Party)	State Assembly, District 22 (Republican)
 CandidateContest	NV House District 22 (Republican Party)	'State Assembly, District 22 (Republican)'
+CandidateContest	NV House District 23 (Republican Party)	State Assembly, District 23 (Republican)
 CandidateContest	NV House District 23 (Republican Party)	'State Assembly, District 23 (Republican)'
+CandidateContest	NV House District 24 (Republican Party)	State Assembly, District 24 (Republican)
 CandidateContest	NV House District 24 (Republican Party)	'State Assembly, District 24 (Republican)'
+CandidateContest	NV House District 25 (Republican Party)	State Assembly, District 25 (Republican)
 CandidateContest	NV House District 25 (Republican Party)	'State Assembly, District 25 (Republican)'
+CandidateContest	NV House District 26 (Republican Party)	State Assembly, District 26 (Republican)
 CandidateContest	NV House District 26 (Republican Party)	'State Assembly, District 26 (Republican)'
+CandidateContest	NV House District 27 (Republican Party)	State Assembly, District 27 (Republican)
 CandidateContest	NV House District 27 (Republican Party)	'State Assembly, District 27 (Republican)'
+CandidateContest	NV House District 28 (Republican Party)	State Assembly, District 28 (Republican)
 CandidateContest	NV House District 28 (Republican Party)	'State Assembly, District 28 (Republican)'
+CandidateContest	NV House District 29 (Republican Party)	State Assembly, District 29 (Republican)
 CandidateContest	NV House District 29 (Republican Party)	'State Assembly, District 29 (Republican)'
+CandidateContest	NV House District 30 (Republican Party)	State Assembly, District 30 (Republican)
 CandidateContest	NV House District 30 (Republican Party)	'State Assembly, District 30 (Republican)'
+CandidateContest	NV House District 31 (Republican Party)	State Assembly, District 31 (Republican)
 CandidateContest	NV House District 31 (Republican Party)	'State Assembly, District 31 (Republican)'
+CandidateContest	NV House District 32 (Republican Party)	State Assembly, District 32 (Republican)
 CandidateContest	NV House District 32 (Republican Party)	'State Assembly, District 32 (Republican)'
+CandidateContest	NV House District 33 (Republican Party)	State Assembly, District 33 (Republican)
 CandidateContest	NV House District 33 (Republican Party)	'State Assembly, District 33 (Republican)'
+CandidateContest	NV House District 34 (Republican Party)	State Assembly, District 34 (Republican)
 CandidateContest	NV House District 34 (Republican Party)	'State Assembly, District 34 (Republican)'
+CandidateContest	NV House District 35 (Republican Party)	State Assembly, District 35 (Republican)
 CandidateContest	NV House District 35 (Republican Party)	'State Assembly, District 35 (Republican)'
+CandidateContest	NV House District 36 (Republican Party)	State Assembly, District 36 (Republican)
 CandidateContest	NV House District 36 (Republican Party)	'State Assembly, District 36 (Republican)'
+CandidateContest	NV House District 37 (Republican Party)	State Assembly, District 37 (Republican)
 CandidateContest	NV House District 37 (Republican Party)	'State Assembly, District 37 (Republican)'
+CandidateContest	NV House District 38 (Republican Party)	State Assembly, District 38 (Republican)
 CandidateContest	NV House District 38 (Republican Party)	'State Assembly, District 38 (Republican)'
+CandidateContest	NV House District 39 (Republican Party)	State Assembly, District 39 (Republican)
 CandidateContest	NV House District 39 (Republican Party)	'State Assembly, District 39 (Republican)'
+CandidateContest	NV House District 40 (Republican Party)	State Assembly, District 40 (Republican)
 CandidateContest	NV House District 40 (Republican Party)	'State Assembly, District 40 (Republican)'
+CandidateContest	NV House District 41 (Republican Party)	State Assembly, District 41 (Republican)
 CandidateContest	NV House District 41 (Republican Party)	'State Assembly, District 41 (Republican)'
+CandidateContest	NV House District 42 (Republican Party)	State Assembly, District 42 (Republican)
 CandidateContest	NV House District 42 (Republican Party)	'State Assembly, District 42 (Republican)'
+CandidateContest	NV Senate District 1 (Republican Party)	State Senate, District 1 (Republican)
 CandidateContest	NV Senate District 1 (Republican Party)	'State Senate, District 1 (Republican)'
+CandidateContest	NV Senate District 2 (Republican Party)	State Senate, District 2 (Republican)
 CandidateContest	NV Senate District 2 (Republican Party)	'State Senate, District 2 (Republican)'
+CandidateContest	NV Senate District 3 (Republican Party)	State Senate, District 3 (Republican)
 CandidateContest	NV Senate District 3 (Republican Party)	'State Senate, District 3 (Republican)'
+CandidateContest	NV Senate District 4 (Republican Party)	State Senate, District 4 (Republican)
 CandidateContest	NV Senate District 4 (Republican Party)	'State Senate, District 4 (Republican)'
+CandidateContest	NV Senate District 5 (Republican Party)	State Senate, District 5 (Republican)
 CandidateContest	NV Senate District 5 (Republican Party)	'State Senate, District 5 (Republican)'
+CandidateContest	NV Senate District 6 (Republican Party)	State Senate, District 6 (Republican)
 CandidateContest	NV Senate District 6 (Republican Party)	'State Senate, District 6 (Republican)'
+CandidateContest	NV Senate District 7 (Republican Party)	State Senate, District 7 (Republican)
 CandidateContest	NV Senate District 7 (Republican Party)	'State Senate, District 7 (Republican)'
+CandidateContest	NV Senate District 8 (Republican Party)	State Senate, District 8 (Republican)
 CandidateContest	NV Senate District 8 (Republican Party)	'State Senate, District 8 (Republican)'
+CandidateContest	NV Senate District 9 (Republican Party)	State Senate, District 9 (Republican)
 CandidateContest	NV Senate District 9 (Republican Party)	'State Senate, District 9 (Republican)'
+CandidateContest	NV Senate District 10 (Republican Party)	State Senate, District 10 (Republican)
 CandidateContest	NV Senate District 10 (Republican Party)	'State Senate, District 10 (Republican)'
+CandidateContest	NV Senate District 11 (Republican Party)	State Senate, District 11 (Republican)
 CandidateContest	NV Senate District 11 (Republican Party)	'State Senate, District 11 (Republican)'
+CandidateContest	NV Senate District 12 (Republican Party)	State Senate, District 12 (Republican)
 CandidateContest	NV Senate District 12 (Republican Party)	'State Senate, District 12 (Republican)'
+CandidateContest	NV Senate District 13 (Republican Party)	State Senate, District 13 (Republican)
 CandidateContest	NV Senate District 13 (Republican Party)	'State Senate, District 13 (Republican)'
+CandidateContest	NV Senate District 14 (Republican Party)	State Senate, District 14 (Republican)
 CandidateContest	NV Senate District 14 (Republican Party)	'State Senate, District 14 (Republican)'
+CandidateContest	NV Senate District 15 (Republican Party)	State Senate, District 15 (Republican)
 CandidateContest	NV Senate District 15 (Republican Party)	'State Senate, District 15 (Republican)'
+CandidateContest	NV Senate District 16 (Republican Party)	State Senate, District 16 (Republican)
 CandidateContest	NV Senate District 16 (Republican Party)	'State Senate, District 16 (Republican)'
+CandidateContest	NV Senate District 17 (Republican Party)	State Senate, District 17 (Republican)
 CandidateContest	NV Senate District 17 (Republican Party)	'State Senate, District 17 (Republican)'
+CandidateContest	NV Senate District 18 (Republican Party)	State Senate, District 18 (Republican)
 CandidateContest	NV Senate District 18 (Republican Party)	'State Senate, District 18 (Republican)'
+CandidateContest	NV Senate District 19 (Republican Party)	State Senate, District 19 (Republican)
 CandidateContest	NV Senate District 19 (Republican Party)	'State Senate, District 19 (Republican)'
+CandidateContest	NV Senate District 20 (Republican Party)	State Senate, District 20 (Republican)
 CandidateContest	NV Senate District 20 (Republican Party)	'State Senate, District 20 (Republican)'
+CandidateContest	NV Senate District 21 (Republican Party)	State Senate, District 21 (Republican)
 CandidateContest	NV Senate District 21 (Republican Party)	'State Senate, District 21 (Republican)'
+CandidateContest	US House NV District 1 (Republican Party)	U.S. Representative in Congress, District 1 (Republican)
 CandidateContest	US House NV District 1 (Republican Party)	'U.S. Representative in Congress, District 1 (Republican)'
+CandidateContest	US House NV District 2 (Republican Party)	U.S. Representative in Congress, District 2 (Republican)
 CandidateContest	US House NV District 2 (Republican Party)	'U.S. Representative in Congress, District 2 (Republican)'
+CandidateContest	US House NV District 3 (Republican Party)	U.S. Representative in Congress, District 3 (Republican)
 CandidateContest	US House NV District 3 (Republican Party)	'U.S. Representative in Congress, District 3 (Republican)'
+CandidateContest	US House NV District 4 (Republican Party)	U.S. Representative in Congress, District 4 (Republican)
 CandidateContest	US House NV District 4 (Republican Party)	'U.S. Representative in Congress, District 4 (Republican)'
 CandidateContest	NV Governor (Republican Party)	Governor (Republican)
 CandidateContest	US Senate NV (Republican Party)	United States Senator (Republican)
@@ -222,72 +423,139 @@ CandidateContest	NV Lieutenant Governor (Republican Party)	Lieutenant Governor (
 CandidateContest	NV State Treasurer (Republican Party)	State Treasurer (Republican)
 CandidateContest	NV Secretary of State (Republican Party)	Secretary of State (Republican)
 CandidateContest	NV State Controller (Republican Party)	State Controller (Republican)
+CandidateContest	NV House District 1 (Green Party)	State Assembly, District 1 (Green)
 CandidateContest	NV House District 1 (Green Party)	'State Assembly, District 1 (Green)'
+CandidateContest	NV House District 2 (Green Party)	State Assembly, District 2 (Green)
 CandidateContest	NV House District 2 (Green Party)	'State Assembly, District 2 (Green)'
+CandidateContest	NV House District 3 (Green Party)	State Assembly, District 3 (Green)
 CandidateContest	NV House District 3 (Green Party)	'State Assembly, District 3 (Green)'
+CandidateContest	NV House District 4 (Green Party)	State Assembly, District 4 (Green)
 CandidateContest	NV House District 4 (Green Party)	'State Assembly, District 4 (Green)'
+CandidateContest	NV House District 5 (Green Party)	State Assembly, District 5 (Green)
 CandidateContest	NV House District 5 (Green Party)	'State Assembly, District 5 (Green)'
+CandidateContest	NV House District 6 (Green Party)	State Assembly, District 6 (Green)
 CandidateContest	NV House District 6 (Green Party)	'State Assembly, District 6 (Green)'
+CandidateContest	NV House District 7 (Green Party)	State Assembly, District 7 (Green)
 CandidateContest	NV House District 7 (Green Party)	'State Assembly, District 7 (Green)'
+CandidateContest	NV House District 8 (Green Party)	State Assembly, District 8 (Green)
 CandidateContest	NV House District 8 (Green Party)	'State Assembly, District 8 (Green)'
+CandidateContest	NV House District 9 (Green Party)	State Assembly, District 9 (Green)
 CandidateContest	NV House District 9 (Green Party)	'State Assembly, District 9 (Green)'
+CandidateContest	NV House District 10 (Green Party)	State Assembly, District 10 (Green)
 CandidateContest	NV House District 10 (Green Party)	'State Assembly, District 10 (Green)'
+CandidateContest	NV House District 11 (Green Party)	State Assembly, District 11 (Green)
 CandidateContest	NV House District 11 (Green Party)	'State Assembly, District 11 (Green)'
+CandidateContest	NV House District 12 (Green Party)	State Assembly, District 12 (Green)
 CandidateContest	NV House District 12 (Green Party)	'State Assembly, District 12 (Green)'
+CandidateContest	NV House District 13 (Green Party)	State Assembly, District 13 (Green)
 CandidateContest	NV House District 13 (Green Party)	'State Assembly, District 13 (Green)'
+CandidateContest	NV House District 14 (Green Party)	State Assembly, District 14 (Green)
 CandidateContest	NV House District 14 (Green Party)	'State Assembly, District 14 (Green)'
+CandidateContest	NV House District 15 (Green Party)	State Assembly, District 15 (Green)
 CandidateContest	NV House District 15 (Green Party)	'State Assembly, District 15 (Green)'
+CandidateContest	NV House District 16 (Green Party)	State Assembly, District 16 (Green)
 CandidateContest	NV House District 16 (Green Party)	'State Assembly, District 16 (Green)'
+CandidateContest	NV House District 17 (Green Party)	State Assembly, District 17 (Green)
 CandidateContest	NV House District 17 (Green Party)	'State Assembly, District 17 (Green)'
+CandidateContest	NV House District 18 (Green Party)	State Assembly, District 18 (Green)
 CandidateContest	NV House District 18 (Green Party)	'State Assembly, District 18 (Green)'
+CandidateContest	NV House District 19 (Green Party)	State Assembly, District 19 (Green)
 CandidateContest	NV House District 19 (Green Party)	'State Assembly, District 19 (Green)'
+CandidateContest	NV House District 20 (Green Party)	State Assembly, District 20 (Green)
 CandidateContest	NV House District 20 (Green Party)	'State Assembly, District 20 (Green)'
+CandidateContest	NV House District 21 (Green Party)	State Assembly, District 21 (Green)
 CandidateContest	NV House District 21 (Green Party)	'State Assembly, District 21 (Green)'
+CandidateContest	NV House District 22 (Green Party)	State Assembly, District 22 (Green)
 CandidateContest	NV House District 22 (Green Party)	'State Assembly, District 22 (Green)'
+CandidateContest	NV House District 23 (Green Party)	State Assembly, District 23 (Green)
 CandidateContest	NV House District 23 (Green Party)	'State Assembly, District 23 (Green)'
+CandidateContest	NV House District 24 (Green Party)	State Assembly, District 24 (Green)
 CandidateContest	NV House District 24 (Green Party)	'State Assembly, District 24 (Green)'
+CandidateContest	NV House District 25 (Green Party)	State Assembly, District 25 (Green)
 CandidateContest	NV House District 25 (Green Party)	'State Assembly, District 25 (Green)'
+CandidateContest	NV House District 26 (Green Party)	State Assembly, District 26 (Green)
 CandidateContest	NV House District 26 (Green Party)	'State Assembly, District 26 (Green)'
+CandidateContest	NV House District 27 (Green Party)	State Assembly, District 27 (Green)
 CandidateContest	NV House District 27 (Green Party)	'State Assembly, District 27 (Green)'
+CandidateContest	NV House District 28 (Green Party)	State Assembly, District 28 (Green)
 CandidateContest	NV House District 28 (Green Party)	'State Assembly, District 28 (Green)'
+CandidateContest	NV House District 29 (Green Party)	State Assembly, District 29 (Green)
 CandidateContest	NV House District 29 (Green Party)	'State Assembly, District 29 (Green)'
+CandidateContest	NV House District 30 (Green Party)	State Assembly, District 30 (Green)
 CandidateContest	NV House District 30 (Green Party)	'State Assembly, District 30 (Green)'
+CandidateContest	NV House District 31 (Green Party)	State Assembly, District 31 (Green)
 CandidateContest	NV House District 31 (Green Party)	'State Assembly, District 31 (Green)'
+CandidateContest	NV House District 32 (Green Party)	State Assembly, District 32 (Green)
 CandidateContest	NV House District 32 (Green Party)	'State Assembly, District 32 (Green)'
+CandidateContest	NV House District 33 (Green Party)	State Assembly, District 33 (Green)
 CandidateContest	NV House District 33 (Green Party)	'State Assembly, District 33 (Green)'
+CandidateContest	NV House District 34 (Green Party)	State Assembly, District 34 (Green)
 CandidateContest	NV House District 34 (Green Party)	'State Assembly, District 34 (Green)'
+CandidateContest	NV House District 35 (Green Party)	State Assembly, District 35 (Green)
 CandidateContest	NV House District 35 (Green Party)	'State Assembly, District 35 (Green)'
+CandidateContest	NV House District 36 (Green Party)	State Assembly, District 36 (Green)
 CandidateContest	NV House District 36 (Green Party)	'State Assembly, District 36 (Green)'
+CandidateContest	NV House District 37 (Green Party)	State Assembly, District 37 (Green)
 CandidateContest	NV House District 37 (Green Party)	'State Assembly, District 37 (Green)'
+CandidateContest	NV House District 38 (Green Party)	State Assembly, District 38 (Green)
 CandidateContest	NV House District 38 (Green Party)	'State Assembly, District 38 (Green)'
+CandidateContest	NV House District 39 (Green Party)	State Assembly, District 39 (Green)
 CandidateContest	NV House District 39 (Green Party)	'State Assembly, District 39 (Green)'
+CandidateContest	NV House District 40 (Green Party)	State Assembly, District 40 (Green)
 CandidateContest	NV House District 40 (Green Party)	'State Assembly, District 40 (Green)'
+CandidateContest	NV House District 41 (Green Party)	State Assembly, District 41 (Green)
 CandidateContest	NV House District 41 (Green Party)	'State Assembly, District 41 (Green)'
+CandidateContest	NV House District 42 (Green Party)	State Assembly, District 42 (Green)
 CandidateContest	NV House District 42 (Green Party)	'State Assembly, District 42 (Green)'
+CandidateContest	NV Senate District 1 (Green Party)	State Senate, District 1 (Green)
 CandidateContest	NV Senate District 1 (Green Party)	'State Senate, District 1 (Green)'
+CandidateContest	NV Senate District 2 (Green Party)	State Senate, District 2 (Green)
 CandidateContest	NV Senate District 2 (Green Party)	'State Senate, District 2 (Green)'
+CandidateContest	NV Senate District 3 (Green Party)	State Senate, District 3 (Green)
 CandidateContest	NV Senate District 3 (Green Party)	'State Senate, District 3 (Green)'
+CandidateContest	NV Senate District 4 (Green Party)	State Senate, District 4 (Green)
 CandidateContest	NV Senate District 4 (Green Party)	'State Senate, District 4 (Green)'
+CandidateContest	NV Senate District 5 (Green Party)	State Senate, District 5 (Green)
 CandidateContest	NV Senate District 5 (Green Party)	'State Senate, District 5 (Green)'
+CandidateContest	NV Senate District 6 (Green Party)	State Senate, District 6 (Green)
 CandidateContest	NV Senate District 6 (Green Party)	'State Senate, District 6 (Green)'
+CandidateContest	NV Senate District 7 (Green Party)	State Senate, District 7 (Green)
 CandidateContest	NV Senate District 7 (Green Party)	'State Senate, District 7 (Green)'
+CandidateContest	NV Senate District 8 (Green Party)	State Senate, District 8 (Green)
 CandidateContest	NV Senate District 8 (Green Party)	'State Senate, District 8 (Green)'
+CandidateContest	NV Senate District 9 (Green Party)	State Senate, District 9 (Green)
 CandidateContest	NV Senate District 9 (Green Party)	'State Senate, District 9 (Green)'
+CandidateContest	NV Senate District 10 (Green Party)	State Senate, District 10 (Green)
 CandidateContest	NV Senate District 10 (Green Party)	'State Senate, District 10 (Green)'
+CandidateContest	NV Senate District 11 (Green Party)	State Senate, District 11 (Green)
 CandidateContest	NV Senate District 11 (Green Party)	'State Senate, District 11 (Green)'
+CandidateContest	NV Senate District 12 (Green Party)	State Senate, District 12 (Green)
 CandidateContest	NV Senate District 12 (Green Party)	'State Senate, District 12 (Green)'
+CandidateContest	NV Senate District 13 (Green Party)	State Senate, District 13 (Green)
 CandidateContest	NV Senate District 13 (Green Party)	'State Senate, District 13 (Green)'
+CandidateContest	NV Senate District 14 (Green Party)	State Senate, District 14 (Green)
 CandidateContest	NV Senate District 14 (Green Party)	'State Senate, District 14 (Green)'
+CandidateContest	NV Senate District 15 (Green Party)	State Senate, District 15 (Green)
 CandidateContest	NV Senate District 15 (Green Party)	'State Senate, District 15 (Green)'
+CandidateContest	NV Senate District 16 (Green Party)	State Senate, District 16 (Green)
 CandidateContest	NV Senate District 16 (Green Party)	'State Senate, District 16 (Green)'
+CandidateContest	NV Senate District 17 (Green Party)	State Senate, District 17 (Green)
 CandidateContest	NV Senate District 17 (Green Party)	'State Senate, District 17 (Green)'
+CandidateContest	NV Senate District 18 (Green Party)	State Senate, District 18 (Green)
 CandidateContest	NV Senate District 18 (Green Party)	'State Senate, District 18 (Green)'
+CandidateContest	NV Senate District 19 (Green Party)	State Senate, District 19 (Green)
 CandidateContest	NV Senate District 19 (Green Party)	'State Senate, District 19 (Green)'
+CandidateContest	NV Senate District 20 (Green Party)	State Senate, District 20 (Green)
 CandidateContest	NV Senate District 20 (Green Party)	'State Senate, District 20 (Green)'
+CandidateContest	NV Senate District 21 (Green Party)	State Senate, District 21 (Green)
 CandidateContest	NV Senate District 21 (Green Party)	'State Senate, District 21 (Green)'
+CandidateContest	US House NV District 1 (Green Party)	U.S. Representative in Congress, Dist. 1 (Green)
 CandidateContest	US House NV District 1 (Green Party)	'U.S. Representative in Congress, Dist. 1 (Green)'
+CandidateContest	US House NV District 2 (Green Party)	U.S. Representative in Congress, Dist. 2 (Green)
 CandidateContest	US House NV District 2 (Green Party)	'U.S. Representative in Congress, Dist. 2 (Green)'
+CandidateContest	US House NV District 3 (Green Party)	U.S. Representative in Congress, Dist. 3 (Green)
 CandidateContest	US House NV District 3 (Green Party)	'U.S. Representative in Congress, Dist. 3 (Green)'
+CandidateContest	US House NV District 4 (Green Party)	U.S. Representative in Congress, Dist. 4 (Green)
 CandidateContest	US House NV District 4 (Green Party)	'U.S. Representative in Congress, Dist. 4 (Green)'
 CandidateContest	NV Governor (Green Party)	Governor (Green)
 CandidateContest	US Senate NV (Green Party)	United States Senator (Green)
@@ -296,72 +564,139 @@ CandidateContest	NV Lieutenant Governor (Green Party)	Lieutenant Governor (Green
 CandidateContest	NV State Treasurer (Green Party)	State Treasurer (Green)
 CandidateContest	NV Secretary of State (Green Party)	Secretary of State (Green)
 CandidateContest	NV State Controller (Green Party)	State Controller (Green)
+CandidateContest	NV House District 1 (Libertarian Party)	State Assembly, District 1 (Libertarian)
 CandidateContest	NV House District 1 (Libertarian Party)	'State Assembly, District 1 (Libertarian)'
+CandidateContest	NV House District 2 (Libertarian Party)	State Assembly, District 2 (Libertarian)
 CandidateContest	NV House District 2 (Libertarian Party)	'State Assembly, District 2 (Libertarian)'
+CandidateContest	NV House District 3 (Libertarian Party)	State Assembly, District 3 (Libertarian)
 CandidateContest	NV House District 3 (Libertarian Party)	'State Assembly, District 3 (Libertarian)'
+CandidateContest	NV House District 4 (Libertarian Party)	State Assembly, District 4 (Libertarian)
 CandidateContest	NV House District 4 (Libertarian Party)	'State Assembly, District 4 (Libertarian)'
+CandidateContest	NV House District 5 (Libertarian Party)	State Assembly, District 5 (Libertarian)
 CandidateContest	NV House District 5 (Libertarian Party)	'State Assembly, District 5 (Libertarian)'
+CandidateContest	NV House District 6 (Libertarian Party)	State Assembly, District 6 (Libertarian)
 CandidateContest	NV House District 6 (Libertarian Party)	'State Assembly, District 6 (Libertarian)'
+CandidateContest	NV House District 7 (Libertarian Party)	State Assembly, District 7 (Libertarian)
 CandidateContest	NV House District 7 (Libertarian Party)	'State Assembly, District 7 (Libertarian)'
+CandidateContest	NV House District 8 (Libertarian Party)	State Assembly, District 8 (Libertarian)
 CandidateContest	NV House District 8 (Libertarian Party)	'State Assembly, District 8 (Libertarian)'
+CandidateContest	NV House District 9 (Libertarian Party)	State Assembly, District 9 (Libertarian)
 CandidateContest	NV House District 9 (Libertarian Party)	'State Assembly, District 9 (Libertarian)'
+CandidateContest	NV House District 10 (Libertarian Party)	State Assembly, District 10 (Libertarian)
 CandidateContest	NV House District 10 (Libertarian Party)	'State Assembly, District 10 (Libertarian)'
+CandidateContest	NV House District 11 (Libertarian Party)	State Assembly, District 11 (Libertarian)
 CandidateContest	NV House District 11 (Libertarian Party)	'State Assembly, District 11 (Libertarian)'
+CandidateContest	NV House District 12 (Libertarian Party)	State Assembly, District 12 (Libertarian)
 CandidateContest	NV House District 12 (Libertarian Party)	'State Assembly, District 12 (Libertarian)'
+CandidateContest	NV House District 13 (Libertarian Party)	State Assembly, District 13 (Libertarian)
 CandidateContest	NV House District 13 (Libertarian Party)	'State Assembly, District 13 (Libertarian)'
+CandidateContest	NV House District 14 (Libertarian Party)	State Assembly, District 14 (Libertarian)
 CandidateContest	NV House District 14 (Libertarian Party)	'State Assembly, District 14 (Libertarian)'
+CandidateContest	NV House District 15 (Libertarian Party)	State Assembly, District 15 (Libertarian)
 CandidateContest	NV House District 15 (Libertarian Party)	'State Assembly, District 15 (Libertarian)'
+CandidateContest	NV House District 16 (Libertarian Party)	State Assembly, District 16 (Libertarian)
 CandidateContest	NV House District 16 (Libertarian Party)	'State Assembly, District 16 (Libertarian)'
+CandidateContest	NV House District 17 (Libertarian Party)	State Assembly, District 17 (Libertarian)
 CandidateContest	NV House District 17 (Libertarian Party)	'State Assembly, District 17 (Libertarian)'
+CandidateContest	NV House District 18 (Libertarian Party)	State Assembly, District 18 (Libertarian)
 CandidateContest	NV House District 18 (Libertarian Party)	'State Assembly, District 18 (Libertarian)'
+CandidateContest	NV House District 19 (Libertarian Party)	State Assembly, District 19 (Libertarian)
 CandidateContest	NV House District 19 (Libertarian Party)	'State Assembly, District 19 (Libertarian)'
+CandidateContest	NV House District 20 (Libertarian Party)	State Assembly, District 20 (Libertarian)
 CandidateContest	NV House District 20 (Libertarian Party)	'State Assembly, District 20 (Libertarian)'
+CandidateContest	NV House District 21 (Libertarian Party)	State Assembly, District 21 (Libertarian)
 CandidateContest	NV House District 21 (Libertarian Party)	'State Assembly, District 21 (Libertarian)'
+CandidateContest	NV House District 22 (Libertarian Party)	State Assembly, District 22 (Libertarian)
 CandidateContest	NV House District 22 (Libertarian Party)	'State Assembly, District 22 (Libertarian)'
+CandidateContest	NV House District 23 (Libertarian Party)	State Assembly, District 23 (Libertarian)
 CandidateContest	NV House District 23 (Libertarian Party)	'State Assembly, District 23 (Libertarian)'
+CandidateContest	NV House District 24 (Libertarian Party)	State Assembly, District 24 (Libertarian)
 CandidateContest	NV House District 24 (Libertarian Party)	'State Assembly, District 24 (Libertarian)'
+CandidateContest	NV House District 25 (Libertarian Party)	State Assembly, District 25 (Libertarian)
 CandidateContest	NV House District 25 (Libertarian Party)	'State Assembly, District 25 (Libertarian)'
+CandidateContest	NV House District 26 (Libertarian Party)	State Assembly, District 26 (Libertarian)
 CandidateContest	NV House District 26 (Libertarian Party)	'State Assembly, District 26 (Libertarian)'
+CandidateContest	NV House District 27 (Libertarian Party)	State Assembly, District 27 (Libertarian)
 CandidateContest	NV House District 27 (Libertarian Party)	'State Assembly, District 27 (Libertarian)'
+CandidateContest	NV House District 28 (Libertarian Party)	State Assembly, District 28 (Libertarian)
 CandidateContest	NV House District 28 (Libertarian Party)	'State Assembly, District 28 (Libertarian)'
+CandidateContest	NV House District 29 (Libertarian Party)	State Assembly, District 29 (Libertarian)
 CandidateContest	NV House District 29 (Libertarian Party)	'State Assembly, District 29 (Libertarian)'
+CandidateContest	NV House District 30 (Libertarian Party)	State Assembly, District 30 (Libertarian)
 CandidateContest	NV House District 30 (Libertarian Party)	'State Assembly, District 30 (Libertarian)'
+CandidateContest	NV House District 31 (Libertarian Party)	State Assembly, District 31 (Libertarian)
 CandidateContest	NV House District 31 (Libertarian Party)	'State Assembly, District 31 (Libertarian)'
+CandidateContest	NV House District 32 (Libertarian Party)	State Assembly, District 32 (Libertarian)
 CandidateContest	NV House District 32 (Libertarian Party)	'State Assembly, District 32 (Libertarian)'
+CandidateContest	NV House District 33 (Libertarian Party)	State Assembly, District 33 (Libertarian)
 CandidateContest	NV House District 33 (Libertarian Party)	'State Assembly, District 33 (Libertarian)'
+CandidateContest	NV House District 34 (Libertarian Party)	State Assembly, District 34 (Libertarian)
 CandidateContest	NV House District 34 (Libertarian Party)	'State Assembly, District 34 (Libertarian)'
+CandidateContest	NV House District 35 (Libertarian Party)	State Assembly, District 35 (Libertarian)
 CandidateContest	NV House District 35 (Libertarian Party)	'State Assembly, District 35 (Libertarian)'
+CandidateContest	NV House District 36 (Libertarian Party)	State Assembly, District 36 (Libertarian)
 CandidateContest	NV House District 36 (Libertarian Party)	'State Assembly, District 36 (Libertarian)'
+CandidateContest	NV House District 37 (Libertarian Party)	State Assembly, District 37 (Libertarian)
 CandidateContest	NV House District 37 (Libertarian Party)	'State Assembly, District 37 (Libertarian)'
+CandidateContest	NV House District 38 (Libertarian Party)	State Assembly, District 38 (Libertarian)
 CandidateContest	NV House District 38 (Libertarian Party)	'State Assembly, District 38 (Libertarian)'
+CandidateContest	NV House District 39 (Libertarian Party)	State Assembly, District 39 (Libertarian)
 CandidateContest	NV House District 39 (Libertarian Party)	'State Assembly, District 39 (Libertarian)'
+CandidateContest	NV House District 40 (Libertarian Party)	State Assembly, District 40 (Libertarian)
 CandidateContest	NV House District 40 (Libertarian Party)	'State Assembly, District 40 (Libertarian)'
+CandidateContest	NV House District 41 (Libertarian Party)	State Assembly, District 41 (Libertarian)
 CandidateContest	NV House District 41 (Libertarian Party)	'State Assembly, District 41 (Libertarian)'
+CandidateContest	NV House District 42 (Libertarian Party)	State Assembly, District 42 (Libertarian)
 CandidateContest	NV House District 42 (Libertarian Party)	'State Assembly, District 42 (Libertarian)'
+CandidateContest	NV Senate District 1 (Libertarian Party)	State Senate, District 1 (Libertarian)
 CandidateContest	NV Senate District 1 (Libertarian Party)	'State Senate, District 1 (Libertarian)'
+CandidateContest	NV Senate District 2 (Libertarian Party)	State Senate, District 2 (Libertarian)
 CandidateContest	NV Senate District 2 (Libertarian Party)	'State Senate, District 2 (Libertarian)'
+CandidateContest	NV Senate District 3 (Libertarian Party)	State Senate, District 3 (Libertarian)
 CandidateContest	NV Senate District 3 (Libertarian Party)	'State Senate, District 3 (Libertarian)'
+CandidateContest	NV Senate District 4 (Libertarian Party)	State Senate, District 4 (Libertarian)
 CandidateContest	NV Senate District 4 (Libertarian Party)	'State Senate, District 4 (Libertarian)'
+CandidateContest	NV Senate District 5 (Libertarian Party)	State Senate, District 5 (Libertarian)
 CandidateContest	NV Senate District 5 (Libertarian Party)	'State Senate, District 5 (Libertarian)'
+CandidateContest	NV Senate District 6 (Libertarian Party)	State Senate, District 6 (Libertarian)
 CandidateContest	NV Senate District 6 (Libertarian Party)	'State Senate, District 6 (Libertarian)'
+CandidateContest	NV Senate District 7 (Libertarian Party)	State Senate, District 7 (Libertarian)
 CandidateContest	NV Senate District 7 (Libertarian Party)	'State Senate, District 7 (Libertarian)'
+CandidateContest	NV Senate District 8 (Libertarian Party)	State Senate, District 8 (Libertarian)
 CandidateContest	NV Senate District 8 (Libertarian Party)	'State Senate, District 8 (Libertarian)'
+CandidateContest	NV Senate District 9 (Libertarian Party)	State Senate, District 9 (Libertarian)
 CandidateContest	NV Senate District 9 (Libertarian Party)	'State Senate, District 9 (Libertarian)'
+CandidateContest	NV Senate District 10 (Libertarian Party)	State Senate, District 10 (Libertarian)
 CandidateContest	NV Senate District 10 (Libertarian Party)	'State Senate, District 10 (Libertarian)'
+CandidateContest	NV Senate District 11 (Libertarian Party)	State Senate, District 11 (Libertarian)
 CandidateContest	NV Senate District 11 (Libertarian Party)	'State Senate, District 11 (Libertarian)'
+CandidateContest	NV Senate District 12 (Libertarian Party)	State Senate, District 12 (Libertarian)
 CandidateContest	NV Senate District 12 (Libertarian Party)	'State Senate, District 12 (Libertarian)'
+CandidateContest	NV Senate District 13 (Libertarian Party)	State Senate, District 13 (Libertarian)
 CandidateContest	NV Senate District 13 (Libertarian Party)	'State Senate, District 13 (Libertarian)'
+CandidateContest	NV Senate District 14 (Libertarian Party)	State Senate, District 14 (Libertarian)
 CandidateContest	NV Senate District 14 (Libertarian Party)	'State Senate, District 14 (Libertarian)'
+CandidateContest	NV Senate District 15 (Libertarian Party)	State Senate, District 15 (Libertarian)
 CandidateContest	NV Senate District 15 (Libertarian Party)	'State Senate, District 15 (Libertarian)'
+CandidateContest	NV Senate District 16 (Libertarian Party)	State Senate, District 16 (Libertarian)
 CandidateContest	NV Senate District 16 (Libertarian Party)	'State Senate, District 16 (Libertarian)'
+CandidateContest	NV Senate District 17 (Libertarian Party)	State Senate, District 17 (Libertarian)
 CandidateContest	NV Senate District 17 (Libertarian Party)	'State Senate, District 17 (Libertarian)'
+CandidateContest	NV Senate District 18 (Libertarian Party)	State Senate, District 18 (Libertarian)
 CandidateContest	NV Senate District 18 (Libertarian Party)	'State Senate, District 18 (Libertarian)'
+CandidateContest	NV Senate District 19 (Libertarian Party)	State Senate, District 19 (Libertarian)
 CandidateContest	NV Senate District 19 (Libertarian Party)	'State Senate, District 19 (Libertarian)'
+CandidateContest	NV Senate District 20 (Libertarian Party)	State Senate, District 20 (Libertarian)
 CandidateContest	NV Senate District 20 (Libertarian Party)	'State Senate, District 20 (Libertarian)'
+CandidateContest	NV Senate District 21 (Libertarian Party)	State Senate, District 21 (Libertarian)
 CandidateContest	NV Senate District 21 (Libertarian Party)	'State Senate, District 21 (Libertarian)'
+CandidateContest	US House NV District 1 (Libertarian Party)	U.S. Representative in Congress, Dist. 1 (Libertarian)
 CandidateContest	US House NV District 1 (Libertarian Party)	'U.S. Representative in Congress, Dist. 1 (Libertarian)'
+CandidateContest	US House NV District 2 (Libertarian Party)	U.S. Representative in Congress, Dist. 2 (Libertarian)
 CandidateContest	US House NV District 2 (Libertarian Party)	'U.S. Representative in Congress, Dist. 2 (Libertarian)'
+CandidateContest	US House NV District 3 (Libertarian Party)	U.S. Representative in Congress, Dist. 3 (Libertarian)
 CandidateContest	US House NV District 3 (Libertarian Party)	'U.S. Representative in Congress, Dist. 3 (Libertarian)'
+CandidateContest	US House NV District 4 (Libertarian Party)	U.S. Representative in Congress, Dist. 4 (Libertarian)
 CandidateContest	US House NV District 4 (Libertarian Party)	'U.S. Representative in Congress, Dist. 4 (Libertarian)'
 CandidateContest	NV Governor (Libertarian Party)	Governor (Libertarian)
 CandidateContest	US Senate NV (Libertarian Party)	United States Senator (Libertarian)
@@ -377,72 +712,139 @@ Election	2018 General	2018 General
 Election	2018 Primary	2018 Primary
 Election	2016 General	2016 General
 Election	2016 Primary	2016 Primary
+Office	NV House District 1	State Assembly, District 1
 Office	NV House District 1	'State Assembly, District 1'
+Office	NV House District 2	State Assembly, District 2
 Office	NV House District 2	'State Assembly, District 2'
+Office	NV House District 3	State Assembly, District 3
 Office	NV House District 3	'State Assembly, District 3'
+Office	NV House District 4	State Assembly, District 4
 Office	NV House District 4	'State Assembly, District 4'
+Office	NV House District 5	State Assembly, District 5
 Office	NV House District 5	'State Assembly, District 5'
+Office	NV House District 6	State Assembly, District 6
 Office	NV House District 6	'State Assembly, District 6'
+Office	NV House District 7	State Assembly, District 7
 Office	NV House District 7	'State Assembly, District 7'
+Office	NV House District 8	State Assembly, District 8
 Office	NV House District 8	'State Assembly, District 8'
+Office	NV House District 9	State Assembly, District 9
 Office	NV House District 9	'State Assembly, District 9'
+Office	NV House District 10	State Assembly, District 10
 Office	NV House District 10	'State Assembly, District 10'
+Office	NV House District 11	State Assembly, District 11
 Office	NV House District 11	'State Assembly, District 11'
+Office	NV House District 12	State Assembly, District 12
 Office	NV House District 12	'State Assembly, District 12'
+Office	NV House District 13	State Assembly, District 13
 Office	NV House District 13	'State Assembly, District 13'
+Office	NV House District 14	State Assembly, District 14
 Office	NV House District 14	'State Assembly, District 14'
+Office	NV House District 15	State Assembly, District 15
 Office	NV House District 15	'State Assembly, District 15'
+Office	NV House District 16	State Assembly, District 16
 Office	NV House District 16	'State Assembly, District 16'
+Office	NV House District 17	State Assembly, District 17
 Office	NV House District 17	'State Assembly, District 17'
+Office	NV House District 18	State Assembly, District 18
 Office	NV House District 18	'State Assembly, District 18'
+Office	NV House District 19	State Assembly, District 19
 Office	NV House District 19	'State Assembly, District 19'
+Office	NV House District 20	State Assembly, District 20
 Office	NV House District 20	'State Assembly, District 20'
+Office	NV House District 21	State Assembly, District 21
 Office	NV House District 21	'State Assembly, District 21'
+Office	NV House District 22	State Assembly, District 22
 Office	NV House District 22	'State Assembly, District 22'
+Office	NV House District 23	State Assembly, District 23
 Office	NV House District 23	'State Assembly, District 23'
+Office	NV House District 24	State Assembly, District 24
 Office	NV House District 24	'State Assembly, District 24'
+Office	NV House District 25	State Assembly, District 25
 Office	NV House District 25	'State Assembly, District 25'
+Office	NV House District 26	State Assembly, District 26
 Office	NV House District 26	'State Assembly, District 26'
+Office	NV House District 27	State Assembly, District 27
 Office	NV House District 27	'State Assembly, District 27'
+Office	NV House District 28	State Assembly, District 28
 Office	NV House District 28	'State Assembly, District 28'
+Office	NV House District 29	State Assembly, District 29
 Office	NV House District 29	'State Assembly, District 29'
+Office	NV House District 30	State Assembly, District 30
 Office	NV House District 30	'State Assembly, District 30'
+Office	NV House District 31	State Assembly, District 31
 Office	NV House District 31	'State Assembly, District 31'
+Office	NV House District 32	State Assembly, District 32
 Office	NV House District 32	'State Assembly, District 32'
+Office	NV House District 33	State Assembly, District 33
 Office	NV House District 33	'State Assembly, District 33'
+Office	NV House District 34	State Assembly, District 34
 Office	NV House District 34	'State Assembly, District 34'
+Office	NV House District 35	State Assembly, District 35
 Office	NV House District 35	'State Assembly, District 35'
+Office	NV House District 36	State Assembly, District 36
 Office	NV House District 36	'State Assembly, District 36'
+Office	NV House District 37	State Assembly, District 37
 Office	NV House District 37	'State Assembly, District 37'
+Office	NV House District 38	State Assembly, District 38
 Office	NV House District 38	'State Assembly, District 38'
+Office	NV House District 39	State Assembly, District 39
 Office	NV House District 39	'State Assembly, District 39'
+Office	NV House District 40	State Assembly, District 40
 Office	NV House District 40	'State Assembly, District 40'
+Office	NV House District 41	State Assembly, District 41
 Office	NV House District 41	'State Assembly, District 41'
+Office	NV House District 42	State Assembly, District 42
 Office	NV House District 42	'State Assembly, District 42'
+Office	NV Senate District 1	State Senate, District 1
 Office	NV Senate District 1	'State Senate, District 1'
+Office	NV Senate District 2	State Senate, District 2
 Office	NV Senate District 2	'State Senate, District 2'
+Office	NV Senate District 3	State Senate, District 3
 Office	NV Senate District 3	'State Senate, District 3'
+Office	NV Senate District 4	State Senate, District 4
 Office	NV Senate District 4	'State Senate, District 4'
+Office	NV Senate District 5	State Senate, District 5
 Office	NV Senate District 5	'State Senate, District 5'
+Office	NV Senate District 6	State Senate, District 6
 Office	NV Senate District 6	'State Senate, District 6'
+Office	NV Senate District 7	State Senate, District 7
 Office	NV Senate District 7	'State Senate, District 7'
+Office	NV Senate District 8	State Senate, District 8
 Office	NV Senate District 8	'State Senate, District 8'
+Office	NV Senate District 9	State Senate, District 9
 Office	NV Senate District 9	'State Senate, District 9'
+Office	NV Senate District 10	State Senate, District 10
 Office	NV Senate District 10	'State Senate, District 10'
+Office	NV Senate District 11	State Senate, District 11
 Office	NV Senate District 11	'State Senate, District 11'
+Office	NV Senate District 12	State Senate, District 12
 Office	NV Senate District 12	'State Senate, District 12'
+Office	NV Senate District 13	State Senate, District 13
 Office	NV Senate District 13	'State Senate, District 13'
+Office	NV Senate District 14	State Senate, District 14
 Office	NV Senate District 14	'State Senate, District 14'
+Office	NV Senate District 15	State Senate, District 15
 Office	NV Senate District 15	'State Senate, District 15'
+Office	NV Senate District 16	State Senate, District 16
 Office	NV Senate District 16	'State Senate, District 16'
+Office	NV Senate District 17	State Senate, District 17
 Office	NV Senate District 17	'State Senate, District 17'
+Office	NV Senate District 18	State Senate, District 18
 Office	NV Senate District 18	'State Senate, District 18'
+Office	NV Senate District 19	State Senate, District 19
 Office	NV Senate District 19	'State Senate, District 19'
+Office	NV Senate District 20	State Senate, District 20
 Office	NV Senate District 20	'State Senate, District 20'
+Office	NV Senate District 21	State Senate, District 21
 Office	NV Senate District 21	'State Senate, District 21'
+Office	US House NV District 1	U.S. Representative in Congress, Dist. 1
 Office	US House NV District 1	'U.S. Representative in Congress, Dist. 1'
+Office	US House NV District 2	U.S. Representative in Congress, Dist. 2
 Office	US House NV District 2	'U.S. Representative in Congress, Dist. 2'
+Office	US House NV District 3	U.S. Representative in Congress, Dist. 3
 Office	US House NV District 3	'U.S. Representative in Congress, Dist. 3'
+Office	US House NV District 4	U.S. Representative in Congress, Dist. 4
 Office	US House NV District 4	'U.S. Representative in Congress, Dist. 4'
 Office	NV Governor	Governor
 Office	US Senate NV	United States Senator
@@ -2926,8 +3328,8 @@ Candidate	Davis, Russell	Davis, Russell
 Candidate	Davis, Russell	'Davis, Russell'
 Candidate	Sacco, Joseph	Sacco, Joseph
 Candidate	Sacco, Joseph	'Sacco, Joseph'
-Candidate	GonzÃ¡lez, Cecelia	GonzÃ¡lez, Cecelia
-Candidate	GonzÃ¡lez, Cecelia	'GonzÃ¡lez, Cecelia'
+Candidate	GonzÃÂ¡lez, Cecelia	GonzÃÂ¡lez, Cecelia
+Candidate	GonzÃÂ¡lez, Cecelia	'GonzÃÂ¡lez, Cecelia'
 Candidate	Vanderpal, Geoffrey	Vanderpal, Geoffrey
 Candidate	Vanderpal, Geoffrey	'Vanderpal, Geoffrey'
 Candidate	Hafen, II, Gregory T.	Hafen, II, Gregory T.
@@ -3178,8 +3580,8 @@ Candidate	FERRIS, SHARON	'FERRIS, SHARON'
 Candidate	MITCHELL, STEVE	MITCHELL, STEVE
 Candidate	MITCHELL, STEVE	'MITCHELL, STEVE'
 Candidate	TAYLOR, JERRY 'BRANDON'	TAYLOR, JERRY 'BRANDON'
-Candidate	EVERTSEN, GARY âRADARâ	EVERTSEN, GARY âRADARâ
-Candidate	EVERTSEN, GARY âRADARâ	'EVERTSEN, GARY âRADARâ'
+Candidate	EVERTSEN, GARY Ã¢ÂÂRADARÃ¢ÂÂ	EVERTSEN, GARY Ã¢ÂÂRADARÃ¢ÂÂ
+Candidate	EVERTSEN, GARY Ã¢ÂÂRADARÃ¢ÂÂ	'EVERTSEN, GARY Ã¢ÂÂRADARÃ¢ÂÂ'
 Candidate	STENINGER, REX	STENINGER, REX
 Candidate	STENINGER, REX	'STENINGER, REX'
 Candidate	FISH, KIETH	FISH, KIETH
@@ -3251,8 +3653,8 @@ Candidate	MATHEUS, JAMES R.	MATHEUS, JAMES R.
 Candidate	MATHEUS, JAMES R.	'MATHEUS, JAMES R.'
 Candidate	MILLS, DOUG	MILLS, DOUG
 Candidate	MILLS, DOUG	'MILLS, DOUG'
-Candidate	DâAYR, GABRIELLE âBRIEâ	DâAYR, GABRIELLE âBRIEâ
-Candidate	DâAYR, GABRIELLE âBRIEâ	'DâAYR, GABRIELLE âBRIEâ'
+Candidate	DÃ¢ÂÂAYR, GABRIELLE Ã¢ÂÂBRIEÃ¢ÂÂ	DÃ¢ÂÂAYR, GABRIELLE Ã¢ÂÂBRIEÃ¢ÂÂ
+Candidate	DÃ¢ÂÂAYR, GABRIELLE Ã¢ÂÂBRIEÃ¢ÂÂ	'DÃ¢ÂÂAYR, GABRIELLE Ã¢ÂÂBRIEÃ¢ÂÂ'
 Candidate	HAFEN II, GREGORY T.	HAFEN II, GREGORY T.
 Candidate	HAFEN II, GREGORY T.	'HAFEN II, GREGORY T.'
 Candidate	KELLEY, PAT	KELLEY, PAT
@@ -3386,8 +3788,8 @@ Candidate	CONLEY, CASEY	CONLEY, CASEY
 Candidate	CONLEY, CASEY	'CONLEY, CASEY'
 Candidate	THOMPSON, TOM	THOMPSON, TOM
 Candidate	THOMPSON, TOM	'THOMPSON, TOM'
-Candidate	SCHIFFMAN, STEVE âPRAGMATICâ	SCHIFFMAN, STEVE âPRAGMATICâ
-Candidate	SCHIFFMAN, STEVE âPRAGMATICâ	'SCHIFFMAN, STEVE âPRAGMATICâ'
+Candidate	SCHIFFMAN, STEVE Ã¢ÂÂPRAGMATICÃ¢ÂÂ	SCHIFFMAN, STEVE Ã¢ÂÂPRAGMATICÃ¢ÂÂ
+Candidate	SCHIFFMAN, STEVE Ã¢ÂÂPRAGMATICÃ¢ÂÂ	'SCHIFFMAN, STEVE Ã¢ÂÂPRAGMATICÃ¢ÂÂ'
 Candidate	DOLLINGER, PAIGE	DOLLINGER, PAIGE
 Candidate	DOLLINGER, PAIGE	'DOLLINGER, PAIGE'
 Candidate	SHANNON, GREG	SHANNON, GREG
@@ -5227,8 +5629,8 @@ Candidate	CLINTON, HILLARY	'CLINTON, HILLARY'
 Candidate	DE LA FUENTE, ROQUE 'ROCKY'	DE LA FUENTE, ROQUE 'ROCKY'
 Candidate	JOHNSON, GARY	JOHNSON, GARY
 Candidate	JOHNSON, GARY	'JOHNSON, GARY'
-Candidate	TRUMP, DONALD J.	TRUMP, DONALD J.
-Candidate	TRUMP, DONALD J.	'TRUMP, DONALD J.'
+Candidate	Donald J. Trump	TRUMP, DONALD J.
+Candidate	Donald J. Trump	'TRUMP, DONALD J.'
 Candidate	REYNOLDS, STEVEN	REYNOLDS, STEVEN
 Candidate	REYNOLDS, STEVEN	'REYNOLDS, STEVEN'
 Candidate	WALKER, MICHAEL B.	WALKER, MICHAEL B.
@@ -6330,34 +6732,62 @@ Candidate	Sawyer, Ray	Sawyer, Ray
 Candidate	Sawyer, Ray	'Sawyer, Ray'
 Candidate	Skye, Ericson	Skye, Ericson
 Candidate	Skye, Ericson	'Skye, Ericson'
+Candidate	ACKERMAN, PATRICIA	Ackerman, Patricia
 Candidate	ACKERMAN, PATRICIA	'Ackerman, Patricia'
+Candidate	AMODEI, MARK E.	Amodei, Mark E.
 Candidate	AMODEI, MARK E.	'Amodei, Mark E.'
 Candidate	None Of These Candidates	NONE OF THESE CANDIDATES
+Candidate	FUMO, OZZIE	FUMO, Ozzie
 Candidate	FUMO, OZZIE	'FUMO, Ozzie'
+Candidate	Titus, Dina	TITUS, Dina
 Candidate	Titus, Dina	'TITUS, Dina'
+Candidate	Carlton, Maggie	CARLTON, Maggie
 Candidate	Carlton, Maggie	'CARLTON, Maggie'
+Candidate	HORSFORD, STEVEN A.	Horsford, Steven A.
 Candidate	HORSFORD, STEVEN A.	'Horsford, Steven A.'
+Candidate	KRASNER, LISA	Krasner, Lisa
 Candidate	KRASNER, LISA	'Krasner, Lisa'
+Candidate	Ford, Aaron	FORD, AARON
 Candidate	Ford, Aaron	'FORD, AARON'
+Candidate	Duncan, Wes	DUNCAN, WES
 Candidate	Duncan, Wes	'DUNCAN, WES'
+Candidate	Sisolak, Steve	SISOLAK, STEVE
 Candidate	Sisolak, Steve	'SISOLAK, STEVE'
+Candidate	Laxalt, Adam Paul	LAXALT, ADAM PAUL
 Candidate	Laxalt, Adam Paul	'LAXALT, ADAM PAUL'
+Candidate	Marshall, Kate	MARSHALL, KATE
 Candidate	Marshall, Kate	'MARSHALL, KATE'
+Candidate	Roberson, Michael	ROBERSON, MICHAEL
 Candidate	Roberson, Michael	'ROBERSON, MICHAEL'
+Candidate	Beers, Bob	BEERS, BOB
 Candidate	Beers, Bob	'BEERS, BOB'
+Candidate	Rosen, Jacky	ROSEN, JACKY
 Candidate	Rosen, Jacky	'ROSEN, JACKY'
+Candidate	COHEN, LESLEY elizabeth	Cohen, Lesley Elizabeth
 Candidate	COHEN, LESLEY elizabeth	'Cohen, Lesley Elizabeth'
+Candidate	CANCELA, YVANNA	Cancela, Yvanna
 Candidate	CANCELA, YVANNA	'Cancela, Yvanna'
+Candidate	ELLISON, JOHN C.	Ellison, John C.
 Candidate	ELLISON, JOHN C.	'Ellison, John C.'
+Candidate	Hansen, Alexis M.	HANSEN, ALEXIS M.
 Candidate	Hansen, Alexis M.	'HANSEN, ALEXIS M.'
+Candidate	SMITH, RODNEY	Smith, Rodney
 Candidate	SMITH, RODNEY	'Smith, Rodney'
+Candidate	Conine, Zach	CONINE, ZACH
 Candidate	Conine, Zach	'CONINE, ZACH'
+Candidate	GUMINA, TONY	Gumina, Tony
 Candidate	GUMINA, TONY	'Gumina, Tony'
+Candidate	Bakari, Kamau A.	BAKARI, KAMAU A.
 Candidate	Bakari, Kamau A.	'BAKARI, KAMAU A.'
+Candidate	Hagan, Tim	HAGAN, TIM
 Candidate	Hagan, Tim	'HAGAN, TIM'
+Candidate	Hansen, Janine	HANSEN, JANINE
 Candidate	Hansen, Janine	'HANSEN, JANINE'
+Candidate	Thompson, Tyrone	THOMPSON, Tyrone
 Candidate	Thompson, Tyrone	'THOMPSON, Tyrone'
+Candidate	Hansen, Ira	HANSEN, IRA
 Candidate	Hansen, Ira	'HANSEN, IRA'
+Candidate	WAGNER, JOHN	Wagner, John
 Candidate	WAGNER, JOHN	'Wagner, John'
 Candidate	Tarkanian, Danny	Tarkanian, Danny
 Candidate	Tarkanian, Danny	'Tarkanian, Danny'
