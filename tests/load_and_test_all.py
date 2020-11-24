@@ -61,6 +61,7 @@ def grab_ini_files(results_dir, path_to_repo):
             os.remove(os.path.join(results_dir, par_file))
     return
 
+
 def optional_remove(dl: eda.DataLoader, dir_path: str) -> (Optional[dict], bool):
     err = None
     db_removed = False
