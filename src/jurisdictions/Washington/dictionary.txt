@@ -1,102 +1,200 @@
 cdf_element	cdf_internal_name	raw_identifier_value
-CandidateContest	WA House District 1	Legislative District 1 State Representative Pos. 1
-CandidateContest	WA House District 2	Legislative District 2 State Representative Pos. 1
-CandidateContest	WA House District 3	Legislative District 3 State Representative Pos. 1
-CandidateContest	WA House District 4	Legislative District 4 State Representative Pos. 1
-CandidateContest	WA House District 5	Legislative District 5 State Representative Pos. 1
-CandidateContest	WA House District 6	Legislative District 6 State Representative Pos. 1
-CandidateContest	WA House District 7	Legislative District 7 State Representative Pos. 1
-CandidateContest	WA House District 8	Legislative District 8 State Representative Pos. 1
-CandidateContest	WA House District 9	Legislative District 9 State Representative Pos. 1
-CandidateContest	WA House District 10	Legislative District 10 State Representative Pos. 1
-CandidateContest	WA House District 11	Legislative District 11 State Representative Pos. 1
-CandidateContest	WA House District 12	Legislative District 12 State Representative Pos. 1
-CandidateContest	WA House District 13	Legislative District 13 State Representative Pos. 1
-CandidateContest	WA House District 14	Legislative District 14 State Representative Pos. 1
-CandidateContest	WA House District 15	Legislative District 15 State Representative Pos. 1
-CandidateContest	WA House District 16	Legislative District 16 State Representative Pos. 1
-CandidateContest	WA House District 17	Legislative District 17 State Representative Pos. 1
-CandidateContest	WA House District 18	Legislative District 18 State Representative Pos. 1
-CandidateContest	WA House District 19	Legislative District 19 State Representative Pos. 1
-CandidateContest	WA House District 20	Legislative District 20 State Representative Pos. 1
-CandidateContest	WA House District 21	Legislative District 21 State Representative Pos. 1
-CandidateContest	WA House District 22	Legislative District 22 State Representative Pos. 1
-CandidateContest	WA House District 23	Legislative District 23 State Representative Pos. 1
-CandidateContest	WA House District 24	Legislative District 24 State Representative Pos. 1
-CandidateContest	WA House District 25	Legislative District 25 State Representative Pos. 1
-CandidateContest	WA House District 26	Legislative District 26 State Representative Pos. 1
-CandidateContest	WA House District 27	Legislative District 27 State Representative Pos. 1
-CandidateContest	WA House District 28	Legislative District 28 State Representative Pos. 1
-CandidateContest	WA House District 29	Legislative District 29 State Representative Pos. 1
-CandidateContest	WA House District 30	Legislative District 30 State Representative Pos. 1
-CandidateContest	WA House District 31	Legislative District 31 State Representative Pos. 1
-CandidateContest	WA House District 32	Legislative District 32 State Representative Pos. 1
-CandidateContest	WA House District 33	Legislative District 33 State Representative Pos. 1
-CandidateContest	WA House District 34	Legislative District 34 State Representative Pos. 1
-CandidateContest	WA House District 35	Legislative District 35 State Representative Pos. 1
-CandidateContest	WA House District 36	Legislative District 36 State Representative Pos. 1
-CandidateContest	WA House District 37	Legislative District 37 State Representative Pos. 1
-CandidateContest	WA House District 38	Legislative District 38 State Representative Pos. 1
-CandidateContest	WA House District 39	Legislative District 39 State Representative Pos. 1
-CandidateContest	WA House District 40	Legislative District 40 State Representative Pos. 1
-CandidateContest	WA House District 41	Legislative District 41 State Representative Pos. 1
-CandidateContest	WA House District 42	Legislative District 42 State Representative Pos. 1
-CandidateContest	WA House District 43	Legislative District 43 State Representative Pos. 1
-CandidateContest	WA House District 44	Legislative District 44 State Representative Pos. 1
-CandidateContest	WA House District 45	Legislative District 45 State Representative Pos. 1
-CandidateContest	WA House District 46	Legislative District 46 State Representative Pos. 1
-CandidateContest	WA House District 47	Legislative District 47 State Representative Pos. 1
-CandidateContest	WA House District 48	Legislative District 48 State Representative Pos. 1
-CandidateContest	WA House District 49	Legislative District 49 State Representative Pos. 1
-CandidateContest	WA House District 50	Legislative District 50 State Representative Pos. 1
-CandidateContest	WA House District 51	Legislative District 51 State Representative Pos. 1
-CandidateContest	WA House District 52	Legislative District 52 State Representative Pos. 1
-CandidateContest	WA House District 53	Legislative District 53 State Representative Pos. 1
-CandidateContest	WA House District 54	Legislative District 54 State Representative Pos. 1
-CandidateContest	WA House District 55	Legislative District 55 State Representative Pos. 1
-CandidateContest	WA House District 56	Legislative District 56 State Representative Pos. 1
-CandidateContest	WA House District 57	Legislative District 57 State Representative Pos. 1
-CandidateContest	WA House District 58	Legislative District 58 State Representative Pos. 1
-CandidateContest	WA House District 59	Legislative District 59 State Representative Pos. 1
-CandidateContest	WA House District 60	Legislative District 60 State Representative Pos. 1
-CandidateContest	WA House District 61	Legislative District 61 State Representative Pos. 1
-CandidateContest	WA House District 62	Legislative District 62 State Representative Pos. 1
-CandidateContest	WA House District 63	Legislative District 63 State Representative Pos. 1
-CandidateContest	WA House District 64	Legislative District 64 State Representative Pos. 1
-CandidateContest	WA House District 65	Legislative District 65 State Representative Pos. 1
-CandidateContest	WA House District 66	Legislative District 66 State Representative Pos. 1
-CandidateContest	WA House District 67	Legislative District 67 State Representative Pos. 1
-CandidateContest	WA House District 68	Legislative District 68 State Representative Pos. 1
-CandidateContest	WA House District 69	Legislative District 69 State Representative Pos. 1
-CandidateContest	WA House District 70	Legislative District 70 State Representative Pos. 1
-CandidateContest	WA House District 71	Legislative District 71 State Representative Pos. 1
-CandidateContest	WA House District 72	Legislative District 72 State Representative Pos. 1
-CandidateContest	WA House District 73	Legislative District 73 State Representative Pos. 1
-CandidateContest	WA House District 74	Legislative District 74 State Representative Pos. 1
-CandidateContest	WA House District 75	Legislative District 75 State Representative Pos. 1
-CandidateContest	WA House District 76	Legislative District 76 State Representative Pos. 1
-CandidateContest	WA House District 77	Legislative District 77 State Representative Pos. 1
-CandidateContest	WA House District 78	Legislative District 78 State Representative Pos. 1
-CandidateContest	WA House District 79	Legislative District 79 State Representative Pos. 1
-CandidateContest	WA House District 80	Legislative District 80 State Representative Pos. 1
-CandidateContest	WA House District 81	Legislative District 81 State Representative Pos. 1
-CandidateContest	WA House District 82	Legislative District 82 State Representative Pos. 1
-CandidateContest	WA House District 83	Legislative District 83 State Representative Pos. 1
-CandidateContest	WA House District 84	Legislative District 84 State Representative Pos. 1
-CandidateContest	WA House District 85	Legislative District 85 State Representative Pos. 1
-CandidateContest	WA House District 86	Legislative District 86 State Representative Pos. 1
-CandidateContest	WA House District 87	Legislative District 87 State Representative Pos. 1
-CandidateContest	WA House District 88	Legislative District 88 State Representative Pos. 1
-CandidateContest	WA House District 89	Legislative District 89 State Representative Pos. 1
-CandidateContest	WA House District 90	Legislative District 90 State Representative Pos. 1
-CandidateContest	WA House District 91	Legislative District 91 State Representative Pos. 1
-CandidateContest	WA House District 92	Legislative District 92 State Representative Pos. 1
-CandidateContest	WA House District 93	Legislative District 93 State Representative Pos. 1
-CandidateContest	WA House District 94	Legislative District 94 State Representative Pos. 1
-CandidateContest	WA House District 95	Legislative District 95 State Representative Pos. 1
-CandidateContest	WA House District 96	Legislative District 96 State Representative Pos. 1
-CandidateContest	WA House District 97	Legislative District 97 State Representative Pos. 1
-CandidateContest	WA House District 98	Legislative District 98 State Representative Pos. 1
+CandidateContest	WA House District 1 Position 1	Legislative District 1 State Representative Pos. 1
+CandidateContest	WA House District 1 Position 2	Legislative District 1 State Representative Pos. 2
+CandidateContest	WA House District 2 Position 1	Legislative District 2 State Representative Pos. 1
+CandidateContest	WA House District 2 Position 2	Legislative District 2 State Representative Pos. 2
+CandidateContest	WA House District 3 Position 1	Legislative District 3 State Representative Pos. 1
+CandidateContest	WA House District 3 Position 2	Legislative District 3 State Representative Pos. 2
+CandidateContest	WA House District 4 Position 1	Legislative District 4 State Representative Pos. 1
+CandidateContest	WA House District 4 Position 2	Legislative District 4 State Representative Pos. 2
+CandidateContest	WA House District 5 Position 1	Legislative District 5 State Representative Pos. 1
+CandidateContest	WA House District 5 Position 2	Legislative District 5 State Representative Pos. 2
+CandidateContest	WA House District 6 Position 1	Legislative District 6 State Representative Pos. 1
+CandidateContest	WA House District 6 Position 2	Legislative District 6 State Representative Pos. 2
+CandidateContest	WA House District 7 Position 1	Legislative District 7 State Representative Pos. 1
+CandidateContest	WA House District 7 Position 2	Legislative District 7 State Representative Pos. 2
+CandidateContest	WA House District 8 Position 1	Legislative District 8 State Representative Pos. 1
+CandidateContest	WA House District 8 Position 2	Legislative District 8 State Representative Pos. 2
+CandidateContest	WA House District 9 Position 1	Legislative District 9 State Representative Pos. 1
+CandidateContest	WA House District 9 Position 2	Legislative District 9 State Representative Pos. 2
+CandidateContest	WA House District 10 Position 1	Legislative District 10 State Representative Pos. 1
+CandidateContest	WA House District 10 Position 2	Legislative District 10 State Representative Pos. 2
+CandidateContest	WA House District 11 Position 1	Legislative District 11 State Representative Pos. 1
+CandidateContest	WA House District 11 Position 2	Legislative District 11 State Representative Pos. 2
+CandidateContest	WA House District 12 Position 1	Legislative District 12 State Representative Pos. 1
+CandidateContest	WA House District 12 Position 2	Legislative District 12 State Representative Pos. 2
+CandidateContest	WA House District 13 Position 1	Legislative District 13 State Representative Pos. 1
+CandidateContest	WA House District 13 Position 2	Legislative District 13 State Representative Pos. 2
+CandidateContest	WA House District 14 Position 1	Legislative District 14 State Representative Pos. 1
+CandidateContest	WA House District 14 Position 2	Legislative District 14 State Representative Pos. 2
+CandidateContest	WA House District 15 Position 1	Legislative District 15 State Representative Pos. 1
+CandidateContest	WA House District 15 Position 2	Legislative District 15 State Representative Pos. 2
+CandidateContest	WA House District 16 Position 1	Legislative District 16 State Representative Pos. 1
+CandidateContest	WA House District 16 Position 2	Legislative District 16 State Representative Pos. 2
+CandidateContest	WA House District 17 Position 1	Legislative District 17 State Representative Pos. 1
+CandidateContest	WA House District 17 Position 2	Legislative District 17 State Representative Pos. 2
+CandidateContest	WA House District 18 Position 1	Legislative District 18 State Representative Pos. 1
+CandidateContest	WA House District 18 Position 2	Legislative District 18 State Representative Pos. 2
+CandidateContest	WA House District 19 Position 1	Legislative District 19 State Representative Pos. 1
+CandidateContest	WA House District 19 Position 2	Legislative District 19 State Representative Pos. 2
+CandidateContest	WA House District 20 Position 1	Legislative District 20 State Representative Pos. 1
+CandidateContest	WA House District 20 Position 2	Legislative District 20 State Representative Pos. 2
+CandidateContest	WA House District 21 Position 1	Legislative District 21 State Representative Pos. 1
+CandidateContest	WA House District 21 Position 2	Legislative District 21 State Representative Pos. 2
+CandidateContest	WA House District 22 Position 1	Legislative District 22 State Representative Pos. 1
+CandidateContest	WA House District 22 Position 2	Legislative District 22 State Representative Pos. 2
+CandidateContest	WA House District 23 Position 1	Legislative District 23 State Representative Pos. 1
+CandidateContest	WA House District 23 Position 2	Legislative District 23 State Representative Pos. 2
+CandidateContest	WA House District 24 Position 1	Legislative District 24 State Representative Pos. 1
+CandidateContest	WA House District 24 Position 2	Legislative District 24 State Representative Pos. 2
+CandidateContest	WA House District 25 Position 1	Legislative District 25 State Representative Pos. 1
+CandidateContest	WA House District 25 Position 2	Legislative District 25 State Representative Pos. 2
+CandidateContest	WA House District 26 Position 1	Legislative District 26 State Representative Pos. 1
+CandidateContest	WA House District 26 Position 2	Legislative District 26 State Representative Pos. 2
+CandidateContest	WA House District 27 Position 1	Legislative District 27 State Representative Pos. 1
+CandidateContest	WA House District 27 Position 2	Legislative District 27 State Representative Pos. 2
+CandidateContest	WA House District 28 Position 1	Legislative District 28 State Representative Pos. 1
+CandidateContest	WA House District 28 Position 2	Legislative District 28 State Representative Pos. 2
+CandidateContest	WA House District 29 Position 1	Legislative District 29 State Representative Pos. 1
+CandidateContest	WA House District 29 Position 2	Legislative District 29 State Representative Pos. 2
+CandidateContest	WA House District 30 Position 1	Legislative District 30 State Representative Pos. 1
+CandidateContest	WA House District 30 Position 2	Legislative District 30 State Representative Pos. 2
+CandidateContest	WA House District 31 Position 1	Legislative District 31 State Representative Pos. 1
+CandidateContest	WA House District 31 Position 2	Legislative District 31 State Representative Pos. 2
+CandidateContest	WA House District 32 Position 1	Legislative District 32 State Representative Pos. 1
+CandidateContest	WA House District 32 Position 2	Legislative District 32 State Representative Pos. 2
+CandidateContest	WA House District 33 Position 1	Legislative District 33 State Representative Pos. 1
+CandidateContest	WA House District 33 Position 2	Legislative District 33 State Representative Pos. 2
+CandidateContest	WA House District 34 Position 1	Legislative District 34 State Representative Pos. 1
+CandidateContest	WA House District 34 Position 2	Legislative District 34 State Representative Pos. 2
+CandidateContest	WA House District 35 Position 1	Legislative District 35 State Representative Pos. 1
+CandidateContest	WA House District 35 Position 2	Legislative District 35 State Representative Pos. 2
+CandidateContest	WA House District 36 Position 1	Legislative District 36 State Representative Pos. 1
+CandidateContest	WA House District 36 Position 2	Legislative District 36 State Representative Pos. 2
+CandidateContest	WA House District 37 Position 1	Legislative District 37 State Representative Pos. 1
+CandidateContest	WA House District 37 Position 2	Legislative District 37 State Representative Pos. 2
+CandidateContest	WA House District 38 Position 1	Legislative District 38 State Representative Pos. 1
+CandidateContest	WA House District 38 Position 2	Legislative District 38 State Representative Pos. 2
+CandidateContest	WA House District 39 Position 1	Legislative District 39 State Representative Pos. 1
+CandidateContest	WA House District 39 Position 2	Legislative District 39 State Representative Pos. 2
+CandidateContest	WA House District 40 Position 1	Legislative District 40 State Representative Pos. 1
+CandidateContest	WA House District 40 Position 2	Legislative District 40 State Representative Pos. 2
+CandidateContest	WA House District 41 Position 1	Legislative District 41 State Representative Pos. 1
+CandidateContest	WA House District 41 Position 2	Legislative District 41 State Representative Pos. 2
+CandidateContest	WA House District 42 Position 1	Legislative District 42 State Representative Pos. 1
+CandidateContest	WA House District 42 Position 2	Legislative District 42 State Representative Pos. 2
+CandidateContest	WA House District 43 Position 1	Legislative District 43 State Representative Pos. 1
+CandidateContest	WA House District 43 Position 2	Legislative District 43 State Representative Pos. 2
+CandidateContest	WA House District 44 Position 1	Legislative District 44 State Representative Pos. 1
+CandidateContest	WA House District 44 Position 2	Legislative District 44 State Representative Pos. 2
+CandidateContest	WA House District 45 Position 1	Legislative District 45 State Representative Pos. 1
+CandidateContest	WA House District 45 Position 2	Legislative District 45 State Representative Pos. 2
+CandidateContest	WA House District 46 Position 1	Legislative District 46 State Representative Pos. 1
+CandidateContest	WA House District 46 Position 2	Legislative District 46 State Representative Pos. 2
+CandidateContest	WA House District 47 Position 1	Legislative District 47 State Representative Pos. 1
+CandidateContest	WA House District 47 Position 2	Legislative District 47 State Representative Pos. 2
+CandidateContest	WA House District 48 Position 1	Legislative District 48 State Representative Pos. 1
+CandidateContest	WA House District 48 Position 2	Legislative District 48 State Representative Pos. 2
+CandidateContest	WA House District 49 Position 1	Legislative District 49 State Representative Pos. 1
+CandidateContest	WA House District 49 Position 2	Legislative District 49 State Representative Pos. 2
+CandidateContest	WA House District 50 Position 1	Legislative District 50 State Representative Pos. 1
+CandidateContest	WA House District 50 Position 2	Legislative District 50 State Representative Pos. 2
+CandidateContest	WA House District 51 Position 1	Legislative District 51 State Representative Pos. 1
+CandidateContest	WA House District 51 Position 2	Legislative District 51 State Representative Pos. 2
+CandidateContest	WA House District 52 Position 1	Legislative District 52 State Representative Pos. 1
+CandidateContest	WA House District 52 Position 2	Legislative District 52 State Representative Pos. 2
+CandidateContest	WA House District 53 Position 1	Legislative District 53 State Representative Pos. 1
+CandidateContest	WA House District 53 Position 2	Legislative District 53 State Representative Pos. 2
+CandidateContest	WA House District 54 Position 1	Legislative District 54 State Representative Pos. 1
+CandidateContest	WA House District 54 Position 2	Legislative District 54 State Representative Pos. 2
+CandidateContest	WA House District 55 Position 1	Legislative District 55 State Representative Pos. 1
+CandidateContest	WA House District 55 Position 2	Legislative District 55 State Representative Pos. 2
+CandidateContest	WA House District 56 Position 1	Legislative District 56 State Representative Pos. 1
+CandidateContest	WA House District 56 Position 2	Legislative District 56 State Representative Pos. 2
+CandidateContest	WA House District 57 Position 1	Legislative District 57 State Representative Pos. 1
+CandidateContest	WA House District 57 Position 2	Legislative District 57 State Representative Pos. 2
+CandidateContest	WA House District 58 Position 1	Legislative District 58 State Representative Pos. 1
+CandidateContest	WA House District 58 Position 2	Legislative District 58 State Representative Pos. 2
+CandidateContest	WA House District 59 Position 1	Legislative District 59 State Representative Pos. 1
+CandidateContest	WA House District 59 Position 2	Legislative District 59 State Representative Pos. 2
+CandidateContest	WA House District 60 Position 1	Legislative District 60 State Representative Pos. 1
+CandidateContest	WA House District 60 Position 2	Legislative District 60 State Representative Pos. 2
+CandidateContest	WA House District 61 Position 1	Legislative District 61 State Representative Pos. 1
+CandidateContest	WA House District 61 Position 2	Legislative District 61 State Representative Pos. 2
+CandidateContest	WA House District 62 Position 1	Legislative District 62 State Representative Pos. 1
+CandidateContest	WA House District 62 Position 2	Legislative District 62 State Representative Pos. 2
+CandidateContest	WA House District 63 Position 1	Legislative District 63 State Representative Pos. 1
+CandidateContest	WA House District 63 Position 2	Legislative District 63 State Representative Pos. 2
+CandidateContest	WA House District 64 Position 1	Legislative District 64 State Representative Pos. 1
+CandidateContest	WA House District 64 Position 2	Legislative District 64 State Representative Pos. 2
+CandidateContest	WA House District 65 Position 1	Legislative District 65 State Representative Pos. 1
+CandidateContest	WA House District 65 Position 2	Legislative District 65 State Representative Pos. 2
+CandidateContest	WA House District 66 Position 1	Legislative District 66 State Representative Pos. 1
+CandidateContest	WA House District 66 Position 2	Legislative District 66 State Representative Pos. 2
+CandidateContest	WA House District 67 Position 1	Legislative District 67 State Representative Pos. 1
+CandidateContest	WA House District 67 Position 2	Legislative District 67 State Representative Pos. 2
+CandidateContest	WA House District 68 Position 1	Legislative District 68 State Representative Pos. 1
+CandidateContest	WA House District 68 Position 2	Legislative District 68 State Representative Pos. 2
+CandidateContest	WA House District 69 Position 1	Legislative District 69 State Representative Pos. 1
+CandidateContest	WA House District 69 Position 2	Legislative District 69 State Representative Pos. 2
+CandidateContest	WA House District 70 Position 1	Legislative District 70 State Representative Pos. 1
+CandidateContest	WA House District 70 Position 2	Legislative District 70 State Representative Pos. 2
+CandidateContest	WA House District 71 Position 1	Legislative District 71 State Representative Pos. 1
+CandidateContest	WA House District 71 Position 2	Legislative District 71 State Representative Pos. 2
+CandidateContest	WA House District 72 Position 1	Legislative District 72 State Representative Pos. 1
+CandidateContest	WA House District 72 Position 2	Legislative District 72 State Representative Pos. 2
+CandidateContest	WA House District 73 Position 1	Legislative District 73 State Representative Pos. 1
+CandidateContest	WA House District 73 Position 2	Legislative District 73 State Representative Pos. 2
+CandidateContest	WA House District 74 Position 1	Legislative District 74 State Representative Pos. 1
+CandidateContest	WA House District 74 Position 2	Legislative District 74 State Representative Pos. 2
+CandidateContest	WA House District 75 Position 1	Legislative District 75 State Representative Pos. 1
+CandidateContest	WA House District 75 Position 2	Legislative District 75 State Representative Pos. 2
+CandidateContest	WA House District 76 Position 1	Legislative District 76 State Representative Pos. 1
+CandidateContest	WA House District 76 Position 2	Legislative District 76 State Representative Pos. 2
+CandidateContest	WA House District 77 Position 1	Legislative District 77 State Representative Pos. 1
+CandidateContest	WA House District 77 Position 2	Legislative District 77 State Representative Pos. 2
+CandidateContest	WA House District 78 Position 1	Legislative District 78 State Representative Pos. 1
+CandidateContest	WA House District 78 Position 2	Legislative District 78 State Representative Pos. 2
+CandidateContest	WA House District 79 Position 1	Legislative District 79 State Representative Pos. 1
+CandidateContest	WA House District 79 Position 2	Legislative District 79 State Representative Pos. 2
+CandidateContest	WA House District 80 Position 1	Legislative District 80 State Representative Pos. 1
+CandidateContest	WA House District 80 Position 2	Legislative District 80 State Representative Pos. 2
+CandidateContest	WA House District 81 Position 1	Legislative District 81 State Representative Pos. 1
+CandidateContest	WA House District 81 Position 2	Legislative District 81 State Representative Pos. 2
+CandidateContest	WA House District 82 Position 1	Legislative District 82 State Representative Pos. 1
+CandidateContest	WA House District 82 Position 2	Legislative District 82 State Representative Pos. 2
+CandidateContest	WA House District 83 Position 1	Legislative District 83 State Representative Pos. 1
+CandidateContest	WA House District 83 Position 2	Legislative District 83 State Representative Pos. 2
+CandidateContest	WA House District 84 Position 1	Legislative District 84 State Representative Pos. 1
+CandidateContest	WA House District 84 Position 2	Legislative District 84 State Representative Pos. 2
+CandidateContest	WA House District 85 Position 1	Legislative District 85 State Representative Pos. 1
+CandidateContest	WA House District 85 Position 2	Legislative District 85 State Representative Pos. 2
+CandidateContest	WA House District 86 Position 1	Legislative District 86 State Representative Pos. 1
+CandidateContest	WA House District 86 Position 2	Legislative District 86 State Representative Pos. 2
+CandidateContest	WA House District 87 Position 1	Legislative District 87 State Representative Pos. 1
+CandidateContest	WA House District 87 Position 2	Legislative District 87 State Representative Pos. 2
+CandidateContest	WA House District 88 Position 1	Legislative District 88 State Representative Pos. 1
+CandidateContest	WA House District 88 Position 2	Legislative District 88 State Representative Pos. 2
+CandidateContest	WA House District 89 Position 1	Legislative District 89 State Representative Pos. 1
+CandidateContest	WA House District 89 Position 2	Legislative District 89 State Representative Pos. 2
+CandidateContest	WA House District 90 Position 1	Legislative District 90 State Representative Pos. 1
+CandidateContest	WA House District 90 Position 2	Legislative District 90 State Representative Pos. 2
+CandidateContest	WA House District 91 Position 1	Legislative District 91 State Representative Pos. 1
+CandidateContest	WA House District 91 Position 2	Legislative District 91 State Representative Pos. 2
+CandidateContest	WA House District 92 Position 1	Legislative District 92 State Representative Pos. 1
+CandidateContest	WA House District 92 Position 2	Legislative District 92 State Representative Pos. 2
+CandidateContest	WA House District 93 Position 1	Legislative District 93 State Representative Pos. 1
+CandidateContest	WA House District 93 Position 2	Legislative District 93 State Representative Pos. 2
+CandidateContest	WA House District 94 Position 1	Legislative District 94 State Representative Pos. 1
+CandidateContest	WA House District 94 Position 2	Legislative District 94 State Representative Pos. 2
+CandidateContest	WA House District 95 Position 1	Legislative District 95 State Representative Pos. 1
+CandidateContest	WA House District 95 Position 2	Legislative District 95 State Representative Pos. 2
+CandidateContest	WA House District 96 Position 1	Legislative District 96 State Representative Pos. 1
+CandidateContest	WA House District 96 Position 2	Legislative District 96 State Representative Pos. 2
+CandidateContest	WA House District 97 Position 1	Legislative District 97 State Representative Pos. 1
+CandidateContest	WA House District 97 Position 2	Legislative District 97 State Representative Pos. 2
+CandidateContest	WA House District 98 Position 1	Legislative District 98 State Representative Pos. 1
+CandidateContest	WA House District 98 Position 2	Legislative District 98 State Representative Pos. 2
 CandidateContest	WA Senate District 1	Legislative District 1 State Senator
 CandidateContest	WA Senate District 2	Legislative District 2 State Senator
 CandidateContest	WA Senate District 3	Legislative District 3 State Senator
@@ -170,8 +268,8 @@ Candidate	Hillary Clinton	Hillary Clinton / Tim Kaine
 Candidate	Donald J. Trump	Donald J. Trump / Michael R. Pence
 Candidate	Alyson Kennedy	Alyson Kennedy / Osborne Hart
 Candidate	Alyson Kennedy	Alyson Kennedy / Malcolm M. Jarrett
-Candidate	Gloria Estela La Riva 	Gloria Estela La Riva / Eugene Puryear
-Candidate	Gloria Estela La Riva 	Gloria La Riva / Sunil Freeman
+Candidate	Gloria Estela La Riva	Gloria Estela La Riva / Eugene Puryear
+Candidate	Gloria Estela La Riva	Gloria La Riva / Sunil Freeman
 Candidate	Jill Stein	Jill Stein / Ajamu Baraka
 Candidate	Darrell L. Castle	Darrell L. Castle / Scott N. Bradley
 Candidate	Gary Johnson	Gary Johnson / Bill Weld
@@ -3414,6 +3512,7 @@ ReportingUnit	Washington;Whitman County	Whitman
 ReportingUnit	Washington;Yakima County	Yakima
 Candidate	Kerry French	Kerry French
 Candidate	Jo Jorgensen	Jo Jorgensen / Jeremy 'Spike' Cohen
+Candidate	Jo Jorgensen	Jo Jorgensen / Jeremy &quot;Spike&quot; Cohen
 Candidate	Howie Hawkins	Howie Hawkins / Angela Walker
 Party	Democratic Party	Democratic Party Nominees
 Party	Democratic Party	(Prefers Democratic Party)
@@ -3448,3 +3547,4 @@ Party	Green Party	(Prefers Green Party)
 Party	Constitution Party	Constitution Party Nominees
 Party	Libertarian Party	Libertarian Party Nominees
 Party	Libertarian Party	(Prefers Libertarian Party)
+Candidate	Devin Kuh	Devin Kuh

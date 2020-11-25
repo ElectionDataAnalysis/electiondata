@@ -14728,4 +14728,6 @@ ReportingUnit	North Carolina;Alamance County;10S1 - Y	ALAMANCE;10S1 - Y
 ReportingUnit	North Carolina;Alamance County;104 - Y	ALAMANCE;104 - Y
 Candidate	Paul Newby	Paul Newby
 Candidate	Cheri Beasley	Cheri Beasley
-
+Candidate	Theresa (Terri) Everett (Write-In)	Theresa (Terri) Everett (Write-In)
+Candidate	Jade Simmons (Write-In)	Jade Simmons (Write-In)
+Candidate	Darren Joiner (Write-In)	Darren Joiner (Write-In)
