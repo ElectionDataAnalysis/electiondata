@@ -1,5 +1,6 @@
 name	raw_identifier_formula	source
-Party	t	tini
-Candidate	t<1>	tcolumn
-ReportingUnit	t<County>	trow
-CandidateContest	t	tini
+Party		ini
+Candidate	<1>	column
+ReportingUnit	<County>	row
+CandidateContest		ini
+
