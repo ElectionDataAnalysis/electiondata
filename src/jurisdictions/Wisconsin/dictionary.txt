@@ -504,12 +504,12 @@ Candidate	Wendy Sue Johnson	Wendy Sue Johnson
 Candidate	Will Leverson	Will Leverson
 Candidate	William Henry Davis III	William Henry Davis III
 Candidate	Wren Keturi	Wren Keturi
-Candidate	Biden/Harris	Biden/Harris
-Candidate	Trump/Pence	Trump/Pence
-Candidate	Blankenship/Moore	Blankenship/Moore
-Candidate	Jorgensen/Cohen	Jorgensen/Cohen
-Candidate	Carroll/Patel	Carroll/Patel
-Candidate	Write-in/Scattering	Write-in/Scattering
+Candidate	Joseph R. Biden	Biden/Harris
+Candidate	Donald J. Trump	Trump/Pence
+Candidate	Don Blankenship	Blankenship/Moore
+Candidate	Jo Jorgensen	Jorgensen/Cohen
+Candidate	Brian Carroll	Carroll/Patel
+Candidate	Write-in or Scattering	Write-in/Scattering
 CandidateContest	WI Attorney General	ATTORNEY GENERAL
 CandidateContest	WI Attorney General (Constitution Party)	ATTORNEY GENERAL - CON
 CandidateContest	WI Attorney General (Constitution Party)	ATTORNEY GENERAL - Constitution
@@ -1971,77 +1971,150 @@ CandidateContest	US Senate WI (Republican Party)	UNITED STATES SENATOR - REP
 CandidateContest	US Senate WI (Republican Party)	UNITED STATES SENATOR - Republican
 CandidateContest	US Senate WI (Green Party)	UNITED STATES SENATOR - WGR
 ReportingUnit	Wisconsin;Adams County	ADAMS
+ReportingUnit	Wisconsin;Adams County	Adams
 ReportingUnit	Wisconsin;Ashland County	ASHLAND
+ReportingUnit	Wisconsin;Ashland County	Ashland
 ReportingUnit	Wisconsin;Barron County	BARRON
+ReportingUnit	Wisconsin;Barron County	Barron
 ReportingUnit	Wisconsin;Bayfield County	BAYFIELD
+ReportingUnit	Wisconsin;Bayfield County	Bayfield
 ReportingUnit	Wisconsin;Brown County	BROWN
+ReportingUnit	Wisconsin;Brown County	Brown
 ReportingUnit	Wisconsin;Buffalo County	BUFFALO
+ReportingUnit	Wisconsin;Buffalo County	Buffalo
 ReportingUnit	Wisconsin;Burnett County	BURNETT
+ReportingUnit	Wisconsin;Burnett County	Burnett
 ReportingUnit	Wisconsin;Calumet County	CALUMET
+ReportingUnit	Wisconsin;Calumet County	Calumet
 ReportingUnit	Wisconsin;Chippewa County	CHIPPEWA
+ReportingUnit	Wisconsin;Chippewa County	Chippewa
 ReportingUnit	Wisconsin;Clark County	CLARK
+ReportingUnit	Wisconsin;Clark County	Clark
 ReportingUnit	Wisconsin;Columbia County	COLUMBIA
+ReportingUnit	Wisconsin;Columbia County	Columbia
 ReportingUnit	Wisconsin;Crawford County	CRAWFORD
+ReportingUnit	Wisconsin;Crawford County	Crawford
 ReportingUnit	Wisconsin;Dane County	DANE
+ReportingUnit	Wisconsin;Dane County	Dane
 ReportingUnit	Wisconsin;Dodge County	DODGE
+ReportingUnit	Wisconsin;Dodge County	Dodge
 ReportingUnit	Wisconsin;Door County	DOOR
+ReportingUnit	Wisconsin;Door County	Door
 ReportingUnit	Wisconsin;Douglas County	DOUGLAS
+ReportingUnit	Wisconsin;Douglas County	Douglas
 ReportingUnit	Wisconsin;Dunn County	DUNN
+ReportingUnit	Wisconsin;Dunn County	Dunn
 ReportingUnit	Wisconsin;Eau Claire County	EAU CLAIRE
+ReportingUnit	Wisconsin;Eau Claire County	Eau Claire
 ReportingUnit	Wisconsin;Florence County	FLORENCE
-ReportingUnit	Wisconsin;Fond Du Lac County	FOND DU LAC
+ReportingUnit	Wisconsin;Florence County	Florence
+ReportingUnit	Wisconsin;Fond du Lac County	FOND DU LAC
+ReportingUnit	Wisconsin;Fond du Lac County	Fond du Lac
 ReportingUnit	Wisconsin;Forest County	FOREST
+ReportingUnit	Wisconsin;Forest County	Forest
 ReportingUnit	Wisconsin;Grant County	GRANT
+ReportingUnit	Wisconsin;Grant County	Grant
 ReportingUnit	Wisconsin;Green County	GREEN
+ReportingUnit	Wisconsin;Green County	Green
 ReportingUnit	Wisconsin;Green Lake County	GREEN LAKE
+ReportingUnit	Wisconsin;Green Lake County	Green Lake
 ReportingUnit	Wisconsin;Iowa County	IOWA
+ReportingUnit	Wisconsin;Iowa County	Iowa
 ReportingUnit	Wisconsin;Iron County	IRON
+ReportingUnit	Wisconsin;Iron County	Iron
 ReportingUnit	Wisconsin;Jackson County	JACKSON
+ReportingUnit	Wisconsin;Jackson County	Jackson
 ReportingUnit	Wisconsin;Jefferson County	JEFFERSON
+ReportingUnit	Wisconsin;Jefferson County	Jefferson
 ReportingUnit	Wisconsin;Juneau County	JUNEAU
+ReportingUnit	Wisconsin;Juneau County	Juneau
 ReportingUnit	Wisconsin;Kenosha County	KENOSHA
+ReportingUnit	Wisconsin;Kenosha County	Kenosha
 ReportingUnit	Wisconsin;Kewaunee County	KEWAUNEE
+ReportingUnit	Wisconsin;Kewaunee County	Kewaunee
 ReportingUnit	Wisconsin;La Crosse County	LA CROSSE
+ReportingUnit	Wisconsin;La Crosse County	La Crosse
 ReportingUnit	Wisconsin;Lafayette County	LAFAYETTE
+ReportingUnit	Wisconsin;Lafayette County	Lafayette
 ReportingUnit	Wisconsin;Langlade County	LANGLADE
+ReportingUnit	Wisconsin;Langlade County	Langlade
 ReportingUnit	Wisconsin;Lincoln County	LINCOLN
+ReportingUnit	Wisconsin;Lincoln County	Lincoln
 ReportingUnit	Wisconsin;Manitowoc County	MANITOWOC
+ReportingUnit	Wisconsin;Manitowoc County	Manitowoc
 ReportingUnit	Wisconsin;Marathon County	MARATHON
+ReportingUnit	Wisconsin;Marathon County	Marathon
 ReportingUnit	Wisconsin;Marinette County	MARINETTE
+ReportingUnit	Wisconsin;Marinette County	Marinette
 ReportingUnit	Wisconsin;Marquette County	MARQUETTE
+ReportingUnit	Wisconsin;Marquette County	Marquette
 ReportingUnit	Wisconsin;Menominee County	MENOMINEE
+ReportingUnit	Wisconsin;Menominee County	Menominee
 ReportingUnit	Wisconsin;Milwaukee County	MILWAUKEE
+ReportingUnit	Wisconsin;Milwaukee County	Milwaukee
 ReportingUnit	Wisconsin;Monroe County	MONROE
+ReportingUnit	Wisconsin;Monroe County	Monroe
 ReportingUnit	Wisconsin;Oconto County	OCONTO
+ReportingUnit	Wisconsin;Oconto County	Oconto
 ReportingUnit	Wisconsin;Oneida County	ONEIDA
+ReportingUnit	Wisconsin;Oneida County	Oneida
 ReportingUnit	Wisconsin;Outagamie County	OUTAGAMIE
+ReportingUnit	Wisconsin;Outagamie County	Outagamie
 ReportingUnit	Wisconsin;Ozaukee County	OZAUKEE
+ReportingUnit	Wisconsin;Ozaukee County	Ozaukee
 ReportingUnit	Wisconsin;Pepin County	PEPIN
+ReportingUnit	Wisconsin;Pepin County	Pepin
 ReportingUnit	Wisconsin;Pierce County	PIERCE
+ReportingUnit	Wisconsin;Pierce County	Pierce
 ReportingUnit	Wisconsin;Polk County	POLK
+ReportingUnit	Wisconsin;Polk County	Polk
 ReportingUnit	Wisconsin;Portage County	PORTAGE
+ReportingUnit	Wisconsin;Portage County	Portage
 ReportingUnit	Wisconsin;Price County	PRICE
+ReportingUnit	Wisconsin;Price County	Price
 ReportingUnit	Wisconsin;Racine County	RACINE
+ReportingUnit	Wisconsin;Racine County	Racine
 ReportingUnit	Wisconsin;Richland County	RICHLAND
+ReportingUnit	Wisconsin;Richland County	Richland
 ReportingUnit	Wisconsin;Rock County	ROCK
+ReportingUnit	Wisconsin;Rock County	Rock
 ReportingUnit	Wisconsin;Rusk County	RUSK
+ReportingUnit	Wisconsin;Rusk County	Rusk
 ReportingUnit	Wisconsin;Sauk County	SAUK
+ReportingUnit	Wisconsin;Sauk County	Sauk
 ReportingUnit	Wisconsin;Sawyer County	SAWYER
+ReportingUnit	Wisconsin;Sawyer County	Sawyer
 ReportingUnit	Wisconsin;Shawano County	SHAWANO
+ReportingUnit	Wisconsin;Shawano County	Shawano
 ReportingUnit	Wisconsin;Sheboygan County	SHEBOYGAN
+ReportingUnit	Wisconsin;Sheboygan County	Sheboygan
 ReportingUnit	Wisconsin;St. Croix County	ST. CROIX
+ReportingUnit	Wisconsin;St. Croix County	St. Croix
+ReportingUnit	Wisconsin;St. Croix County	St.Croix
 ReportingUnit	Wisconsin;Taylor County	TAYLOR
+ReportingUnit	Wisconsin;Taylor County	Taylor
 ReportingUnit	Wisconsin;Trempealeau County	TREMPEALEAU
+ReportingUnit	Wisconsin;Trempealeau County	Trempealeau
 ReportingUnit	Wisconsin;Vernon County	VERNON
+ReportingUnit	Wisconsin;Vernon County	Vernon
 ReportingUnit	Wisconsin;Vilas County	VILAS
+ReportingUnit	Wisconsin;Vilas County	Vilas
 ReportingUnit	Wisconsin;Walworth County	WALWORTH
+ReportingUnit	Wisconsin;Walworth County	Walworth
 ReportingUnit	Wisconsin;Washburn County	WASHBURN
+ReportingUnit	Wisconsin;Washburn County	Washburn
 ReportingUnit	Wisconsin;Washington County	WASHINGTON
+ReportingUnit	Wisconsin;Washington County	Washington
 ReportingUnit	Wisconsin;Waukesha County	WAUKESHA
+ReportingUnit	Wisconsin;Waukesha County	Waukesha
 ReportingUnit	Wisconsin;Waupaca County	WAUPACA
+ReportingUnit	Wisconsin;Waupaca County	Waupaca
 ReportingUnit	Wisconsin;Waushara County	WAUSHARA
+ReportingUnit	Wisconsin;Waushara County	Waushara
 ReportingUnit	Wisconsin;Winnebago County	WINNEBAGO
+ReportingUnit	Wisconsin;Winnebago County	Winnebago
 ReportingUnit	Wisconsin;Wood County	WOOD
+ReportingUnit	Wisconsin;Wood County	Wood
 ReportingUnit	Wisconsin	Wisconsin
 ReportingUnit	Wisconsin;US House WI District 1	Wisconsin;US House WI District 1
 ReportingUnit	Wisconsin;US House WI District 2	Wisconsin;US House WI District 2

@@ -19,7 +19,7 @@ Wisconsin;Douglas County	county
 Wisconsin;Dunn County	county
 Wisconsin;Eau Claire County	county
 Wisconsin;Florence County	county
-Wisconsin;Fond Du Lac County	county
+Wisconsin;Fond du Lac County	county
 Wisconsin;Forest County	county
 Wisconsin;Grant County	county
 Wisconsin;Green County	county
