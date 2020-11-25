@@ -2330,7 +2330,6 @@ Jesse Caruthers
 Ronnie Richardson
 Christopher Furst
 Michael Bennet
-Joe Biden
 Michael R. Bloomberg
 Cory Booker
 Pete Buttigieg
@@ -2930,3 +2929,5 @@ Alan Grayson
 Wells
 Michael A. Laboch
 Jade Simmons
+Brian Carroll
+Joseph R. Biden
