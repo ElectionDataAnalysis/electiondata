@@ -13967,8 +13967,8 @@ ReportingUnit	Florida;Seminole County;Precinct 79	SEMINOLE;Precinct 79
 ReportingUnit	Florida;Seminole County;Precinct 80	Seminole;Precinct 080
 ReportingUnit	Florida;Seminole County;Precinct 80	SEMINOLE;Precinct 80
 Candidate	Michael Bennet	Bennet, Michael
-Candidate	Joe Biden	Biden, Joe
-Candidate	Joe Biden	Biden / Harris
+Candidate	Joseph R. Biden	Biden, Joe
+Candidate	Joseph R. Biden	Biden / Harris
 Candidate	Michael R. Bloomberg	Bloomberg, Michael R.
 Candidate	Cory Booker	Booker, Cory
 Candidate	Pete Buttigieg	Buttigieg, Pete
