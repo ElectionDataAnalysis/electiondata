@@ -4091,18 +4091,12 @@ Louisiana;Acadia Parish;Ward 4	ward
 Louisiana;Acadia Parish;Ward 5	ward
 Louisiana;Acadia Parish;Ward 6	ward
 Louisiana;Acadia Parish;Ward 7	ward
-Louisiana;Acadia Parish;Ward Early Voting	vote-center
-Louisiana;Acadia Parish;Ward Provisional Votes	provisional
 Louisiana;Allen Parish;Ward 1	ward
 Louisiana;Allen Parish;Ward 2	ward
 Louisiana;Allen Parish;Ward 3	ward
 Louisiana;Allen Parish;Ward 4	ward
 Louisiana;Allen Parish;Ward 5	ward
-Louisiana;Allen Parish;Ward Early Voting	vote-center
-Louisiana;Allen Parish;Ward Provisional Votes	provisional
 Louisiana;Ascension Parish;Ward 0	ward
-Louisiana;Ascension Parish;Ward Early Voting	vote-center
-Louisiana;Ascension Parish;Ward Provisional Votes	provisional
 Louisiana;Assumption Parish;Ward 1	ward
 Louisiana;Assumption Parish;Ward 2	ward
 Louisiana;Assumption Parish;Ward 3	ward
@@ -4112,8 +4106,6 @@ Louisiana;Assumption Parish;Ward 6	ward
 Louisiana;Assumption Parish;Ward 7	ward
 Louisiana;Assumption Parish;Ward 8	ward
 Louisiana;Assumption Parish;Ward 9	ward
-Louisiana;Assumption Parish;Ward Early Voting	vote-center
-Louisiana;Assumption Parish;Ward Provisional Votes	provisional
 Louisiana;Avoyelles Parish;Ward 1	ward
 Louisiana;Avoyelles Parish;Ward 2	ward
 Louisiana;Avoyelles Parish;Ward 3	ward
@@ -4125,11 +4117,7 @@ Louisiana;Avoyelles Parish;Ward 8	ward
 Louisiana;Avoyelles Parish;Ward 9	ward
 Louisiana;Avoyelles Parish;Ward 10	ward
 Louisiana;Avoyelles Parish;Ward 11	ward
-Louisiana;Avoyelles Parish;Ward Early Voting	vote-center
-Louisiana;Avoyelles Parish;Ward Provisional Votes	provisional
 Louisiana;Beauregard Parish;Ward 0	ward
-Louisiana;Beauregard Parish;Ward Early Voting	vote-center
-Louisiana;Beauregard Parish;Ward Provisional Votes	provisional
 Louisiana;Bienville Parish;Ward 1	ward
 Louisiana;Bienville Parish;Ward 2	ward
 Louisiana;Bienville Parish;Ward 3	ward
@@ -4137,20 +4125,12 @@ Louisiana;Bienville Parish;Ward 4	ward
 Louisiana;Bienville Parish;Ward 5	ward
 Louisiana;Bienville Parish;Ward 6	ward
 Louisiana;Bienville Parish;Ward 7	ward
-Louisiana;Bienville Parish;Ward Early Voting	vote-center
-Louisiana;Bienville Parish;Ward Provisional Votes	provisional
 Louisiana;Bossier Parish;Ward 1	ward
 Louisiana;Bossier Parish;Ward 2	ward
 Louisiana;Bossier Parish;Ward 3	ward
 Louisiana;Bossier Parish;Ward 4	ward
-Louisiana;Bossier Parish;Ward Early Voting	vote-center
-Louisiana;Bossier Parish;Ward Provisional Votes	provisional
 Louisiana;Caddo Parish;Ward 0	ward
-Louisiana;Caddo Parish;Ward Early Voting	vote-center
-Louisiana;Caddo Parish;Ward Provisional Votes	provisional
 Louisiana;Calcasieu Parish;Ward 0	ward
-Louisiana;Calcasieu Parish;Ward Early Voting	vote-center
-Louisiana;Calcasieu Parish;Ward Provisional Votes	provisional
 Louisiana;Caldwell Parish;Ward 1	ward
 Louisiana;Caldwell Parish;Ward 2	ward
 Louisiana;Caldwell Parish;Ward 3	ward
@@ -4158,11 +4138,7 @@ Louisiana;Caldwell Parish;Ward 4	ward
 Louisiana;Caldwell Parish;Ward 5	ward
 Louisiana;Caldwell Parish;Ward 6	ward
 Louisiana;Caldwell Parish;Ward 7	ward
-Louisiana;Caldwell Parish;Ward Early Voting	vote-center
-Louisiana;Caldwell Parish;Ward Provisional Votes	provisional
 Louisiana;Cameron Parish;Ward 0	ward
-Louisiana;Cameron Parish;Ward Early Voting	vote-center
-Louisiana;Cameron Parish;Ward Provisional Votes	provisional
 Louisiana;Catahoula Parish;Ward 1	ward
 Louisiana;Catahoula Parish;Ward 2	ward
 Louisiana;Catahoula Parish;Ward 3	ward
@@ -4172,38 +4148,20 @@ Louisiana;Catahoula Parish;Ward 6	ward
 Louisiana;Catahoula Parish;Ward 7	ward
 Louisiana;Catahoula Parish;Ward 8	ward
 Louisiana;Catahoula Parish;Ward 9	ward
-Louisiana;Catahoula Parish;Ward Early Voting	vote-center
-Louisiana;Catahoula Parish;Ward Provisional Votes	provisional
 Louisiana;Claiborne Parish;Ward 0	ward
-Louisiana;Claiborne Parish;Ward Early Voting	vote-center
-Louisiana;Claiborne Parish;Ward Provisional Votes	provisional
 Louisiana;Concordia Parish;Ward 0	ward
-Louisiana;Concordia Parish;Ward Early Voting	vote-center
-Louisiana;Concordia Parish;Ward Provisional Votes	provisional
 Louisiana;De Soto Parish;Ward 0	ward
-Louisiana;De Soto Parish;Ward Early Voting	vote-center
-Louisiana;De Soto Parish;Ward Provisional Votes	provisional
 Louisiana;East Baton Rouge Parish;Ward 1	ward
 Louisiana;East Baton Rouge Parish;Ward 2	ward
 Louisiana;East Baton Rouge Parish;Ward 3	ward
-Louisiana;East Baton Rouge Parish;Ward Early Voting	vote-center
-Louisiana;East Baton Rouge Parish;Ward Provisional Votes	provisional
 Louisiana;East Carroll Parish;Ward 0	ward
-Louisiana;East Carroll Parish;Ward Early Voting	vote-center
-Louisiana;East Carroll Parish;Ward Provisional Votes	provisional
 Louisiana;East Feliciana Parish;Ward 0	ward
-Louisiana;East Feliciana Parish;Ward Early Voting	vote-center
-Louisiana;East Feliciana Parish;Ward Provisional Votes	provisional
 Louisiana;Evangeline Parish;Ward 1	ward
 Louisiana;Evangeline Parish;Ward 2	ward
 Louisiana;Evangeline Parish;Ward 3	ward
 Louisiana;Evangeline Parish;Ward 4	ward
 Louisiana;Evangeline Parish;Ward 5	ward
-Louisiana;Evangeline Parish;Ward Early Voting	vote-center
-Louisiana;Evangeline Parish;Ward Provisional Votes	provisional
 Louisiana;Franklin Parish;Ward 0	ward
-Louisiana;Franklin Parish;Ward Early Voting	vote-center
-Louisiana;Franklin Parish;Ward Provisional Votes	provisional
 Louisiana;Grant Parish;Ward 1	ward
 Louisiana;Grant Parish;Ward 2	ward
 Louisiana;Grant Parish;Ward 3	ward
@@ -4212,8 +4170,6 @@ Louisiana;Grant Parish;Ward 5	ward
 Louisiana;Grant Parish;Ward 6	ward
 Louisiana;Grant Parish;Ward 7	ward
 Louisiana;Grant Parish;Ward 8	ward
-Louisiana;Grant Parish;Ward Early Voting	vote-center
-Louisiana;Grant Parish;Ward Provisional Votes	provisional
 Louisiana;Iberia Parish;Ward 1	ward
 Louisiana;Iberia Parish;Ward 2	ward
 Louisiana;Iberia Parish;Ward 3	ward
@@ -4228,23 +4184,11 @@ Louisiana;Iberia Parish;Ward 11	ward
 Louisiana;Iberia Parish;Ward 12	ward
 Louisiana;Iberia Parish;Ward 13	ward
 Louisiana;Iberia Parish;Ward 14	ward
-Louisiana;Iberia Parish;Ward Early Voting	vote-center
-Louisiana;Iberia Parish;Ward Provisional Votes	provisional
 Louisiana;Iberville Parish;Ward 0	ward
-Louisiana;Iberville Parish;Ward Early Voting	vote-center
-Louisiana;Iberville Parish;Ward Provisional Votes	provisional
 Louisiana;Jackson Parish;Ward 0	ward
-Louisiana;Jackson Parish;Ward Early Voting	vote-center
-Louisiana;Jackson Parish;Ward Provisional Votes	provisional
 Louisiana;Jefferson Parish;Ward 0	ward
-Louisiana;Jefferson Parish;Ward Early Voting	vote-center
-Louisiana;Jefferson Parish;Ward Provisional Votes	provisional
 Louisiana;Jefferson Davis Parish;Ward 0	ward
-Louisiana;Jefferson Davis Parish;Ward Early Voting	vote-center
-Louisiana;Jefferson Davis Parish;Ward Provisional Votes	provisional
 Louisiana;Lafayette Parish;Ward 0	ward
-Louisiana;Lafayette Parish;Ward Early Voting	vote-center
-Louisiana;Lafayette Parish;Ward Provisional Votes	provisional
 Louisiana;Lafourche Parish;Ward 1	ward
 Louisiana;Lafourche Parish;Ward 2	ward
 Louisiana;Lafourche Parish;Ward 3	ward
@@ -4256,8 +4200,6 @@ Louisiana;Lafourche Parish;Ward 8	ward
 Louisiana;Lafourche Parish;Ward 9	ward
 Louisiana;Lafourche Parish;Ward 10	ward
 Louisiana;Lafourche Parish;Ward 11	ward
-Louisiana;Lafourche Parish;Ward Early Voting	vote-center
-Louisiana;Lafourche Parish;Ward Provisional Votes	provisional
 Louisiana;Lasalle Parish;Ward 1	ward
 Louisiana;Lasalle Parish;Ward 2	ward
 Louisiana;Lasalle Parish;Ward 3	ward
@@ -4268,8 +4210,6 @@ Louisiana;Lasalle Parish;Ward 7	ward
 Louisiana;Lasalle Parish;Ward 8	ward
 Louisiana;Lasalle Parish;Ward 9	ward
 Louisiana;Lasalle Parish;Ward 10	ward
-Louisiana;Lasalle Parish;Ward Early Voting	vote-center
-Louisiana;Lasalle Parish;Ward Provisional Votes	provisional
 Louisiana;Lincoln Parish;Ward 1	ward
 Louisiana;Lincoln Parish;Ward 2	ward
 Louisiana;Lincoln Parish;Ward 3	ward
@@ -4282,23 +4222,13 @@ Louisiana;Lincoln Parish;Ward 9	ward
 Louisiana;Lincoln Parish;Ward 10	ward
 Louisiana;Lincoln Parish;Ward 11	ward
 Louisiana;Lincoln Parish;Ward 12	ward
-Louisiana;Lincoln Parish;Ward Early Voting	vote-center
-Louisiana;Lincoln Parish;Ward Provisional Votes	provisional
 Louisiana;Livingston Parish;Ward 0	ward
-Louisiana;Livingston Parish;Ward Early Voting	vote-center
-Louisiana;Livingston Parish;Ward Provisional Votes	provisional
 Louisiana;Madison Parish;Ward 0	ward
-Louisiana;Madison Parish;Ward Early Voting	vote-center
-Louisiana;Madison Parish;Ward Provisional Votes	provisional
 Louisiana;Morehouse Parish;Ward 0	ward
-Louisiana;Morehouse Parish;Ward Early Voting	vote-center
-Louisiana;Morehouse Parish;Ward Provisional Votes	provisional
 Louisiana;Natchitoches Parish;Ward 1	ward
 Louisiana;Natchitoches Parish;Ward 2	ward
 Louisiana;Natchitoches Parish;Ward 3	ward
 Louisiana;Natchitoches Parish;Ward 4	ward
-Louisiana;Natchitoches Parish;Ward Early Voting	vote-center
-Louisiana;Natchitoches Parish;Ward Provisional Votes	provisional
 Louisiana;Orleans Parish;Ward 1	ward
 Louisiana;Orleans Parish;Ward 2	ward
 Louisiana;Orleans Parish;Ward 3	ward
@@ -4316,11 +4246,7 @@ Louisiana;Orleans Parish;Ward 14	ward
 Louisiana;Orleans Parish;Ward 15	ward
 Louisiana;Orleans Parish;Ward 16	ward
 Louisiana;Orleans Parish;Ward 17	ward
-Louisiana;Orleans Parish;Ward Early Voting	vote-center
-Louisiana;Orleans Parish;Ward Provisional Votes	provisional
 Louisiana;Ouachita Parish;Ward 0	ward
-Louisiana;Ouachita Parish;Ward Early Voting	vote-center
-Louisiana;Ouachita Parish;Ward Provisional Votes	provisional
 Louisiana;Plaquemines Parish;Ward 1	ward
 Louisiana;Plaquemines Parish;Ward 2	ward
 Louisiana;Plaquemines Parish;Ward 3	ward
@@ -4330,14 +4256,8 @@ Louisiana;Plaquemines Parish;Ward 6	ward
 Louisiana;Plaquemines Parish;Ward 7	ward
 Louisiana;Plaquemines Parish;Ward 8	ward
 Louisiana;Plaquemines Parish;Ward 9	ward
-Louisiana;Plaquemines Parish;Ward Early Voting	vote-center
-Louisiana;Plaquemines Parish;Ward Provisional Votes	provisional
 Louisiana;Pointe Coupee Parish;Ward 0	ward
-Louisiana;Pointe Coupee Parish;Ward Early Voting	vote-center
-Louisiana;Pointe Coupee Parish;Ward Provisional Votes	provisional
 Louisiana;Rapides Parish;Ward 0	ward
-Louisiana;Rapides Parish;Ward Early Voting	vote-center
-Louisiana;Rapides Parish;Ward Provisional Votes	provisional
 Louisiana;Red River Parish;Ward 1	ward
 Louisiana;Red River Parish;Ward 2	ward
 Louisiana;Red River Parish;Ward 3	ward
@@ -4345,17 +4265,9 @@ Louisiana;Red River Parish;Ward 4	ward
 Louisiana;Red River Parish;Ward 5	ward
 Louisiana;Red River Parish;Ward 6	ward
 Louisiana;Red River Parish;Ward 7	ward
-Louisiana;Red River Parish;Ward Early Voting	vote-center
-Louisiana;Red River Parish;Ward Provisional Votes	provisional
 Louisiana;Richland Parish;Ward 0	ward
-Louisiana;Richland Parish;Ward Early Voting	vote-center
-Louisiana;Richland Parish;Ward Provisional Votes	provisional
 Louisiana;Sabine Parish;Ward 0	ward
-Louisiana;Sabine Parish;Ward Early Voting	vote-center
-Louisiana;Sabine Parish;Ward Provisional Votes	provisional
 Louisiana;St. Bernard Parish;Ward 0	ward
-Louisiana;St. Bernard Parish;Ward Early Voting	vote-center
-Louisiana;St. Bernard Parish;Ward Provisional Votes	provisional
 Louisiana;St. Charles Parish;Ward 1	ward
 Louisiana;St. Charles Parish;Ward 2	ward
 Louisiana;St. Charles Parish;Ward 3	ward
@@ -4363,19 +4275,13 @@ Louisiana;St. Charles Parish;Ward 4	ward
 Louisiana;St. Charles Parish;Ward 5	ward
 Louisiana;St. Charles Parish;Ward 6	ward
 Louisiana;St. Charles Parish;Ward 7	ward
-Louisiana;St. Charles Parish;Ward Early Voting	vote-center
-Louisiana;St. Charles Parish;Ward Provisional Votes	provisional
 Louisiana;St. Helena Parish;Ward 1	ward
 Louisiana;St. Helena Parish;Ward 2	ward
 Louisiana;St. Helena Parish;Ward 3	ward
 Louisiana;St. Helena Parish;Ward 4	ward
 Louisiana;St. Helena Parish;Ward 5	ward
 Louisiana;St. Helena Parish;Ward 6	ward
-Louisiana;St. Helena Parish;Ward Early Voting	vote-center
-Louisiana;St. Helena Parish;Ward Provisional Votes	provisional
 Louisiana;St. James Parish;Ward 0	ward
-Louisiana;St. James Parish;Ward Early Voting	vote-center
-Louisiana;St. James Parish;Ward Provisional Votes	provisional
 Louisiana;St. John The Baptist Parish;Ward 1	ward
 Louisiana;St. John The Baptist Parish;Ward 2	ward
 Louisiana;St. John The Baptist Parish;Ward 3	ward
@@ -4383,40 +4289,20 @@ Louisiana;St. John The Baptist Parish;Ward 4	ward
 Louisiana;St. John The Baptist Parish;Ward 5	ward
 Louisiana;St. John The Baptist Parish;Ward 6	ward
 Louisiana;St. John The Baptist Parish;Ward 7	ward
-Louisiana;St. John The Baptist Parish;Ward Early Voting	vote-center
-Louisiana;St. John The Baptist Parish;Ward Provisional Votes	provisional
 Louisiana;St. Landry Parish;Ward 1	ward
 Louisiana;St. Landry Parish;Ward 2	ward
 Louisiana;St. Landry Parish;Ward 3	ward
 Louisiana;St. Landry Parish;Ward 4	ward
 Louisiana;St. Landry Parish;Ward 5	ward
 Louisiana;St. Landry Parish;Ward 6	ward
-Louisiana;St. Landry Parish;Ward Early Voting	vote-center
-Louisiana;St. Landry Parish;Ward Provisional Votes	provisional
 Louisiana;St. Martin Parish;Ward 0	ward
-Louisiana;St. Martin Parish;Ward Early Voting	vote-center
-Louisiana;St. Martin Parish;Ward Provisional Votes	provisional
 Louisiana;St. Mary Parish;Ward 0	ward
-Louisiana;St. Mary Parish;Ward Early Voting	vote-center
-Louisiana;St. Mary Parish;Ward Provisional Votes	provisional
 Louisiana;St. Tammany Parish;Ward 0	ward
-Louisiana;St. Tammany Parish;Ward Early Voting	vote-center
-Louisiana;St. Tammany Parish;Ward Provisional Votes	provisional
 Louisiana;Tangipahoa Parish;Ward 0	ward
-Louisiana;Tangipahoa Parish;Ward Early Voting	vote-center
-Louisiana;Tangipahoa Parish;Ward Provisional Votes	provisional
 Louisiana;Tensas Parish;Ward 0	ward
-Louisiana;Tensas Parish;Ward Early Voting	vote-center
-Louisiana;Tensas Parish;Ward Provisional Votes	provisional
 Louisiana;Terrebonne Parish;Ward 0	ward
-Louisiana;Terrebonne Parish;Ward Early Voting	vote-center
-Louisiana;Terrebonne Parish;Ward Provisional Votes	provisional
 Louisiana;Union Parish;Ward 0	ward
-Louisiana;Union Parish;Ward Early Voting	vote-center
-Louisiana;Union Parish;Ward Provisional Votes	provisional
 Louisiana;Vermilion Parish;Ward 0	ward
-Louisiana;Vermilion Parish;Ward Early Voting	vote-center
-Louisiana;Vermilion Parish;Ward Provisional Votes	provisional
 Louisiana;Vernon Parish;Ward 1	ward
 Louisiana;Vernon Parish;Ward 2	ward
 Louisiana;Vernon Parish;Ward 3	ward
@@ -4425,8 +4311,6 @@ Louisiana;Vernon Parish;Ward 5	ward
 Louisiana;Vernon Parish;Ward 6	ward
 Louisiana;Vernon Parish;Ward 7	ward
 Louisiana;Vernon Parish;Ward 8	ward
-Louisiana;Vernon Parish;Ward Early Voting	vote-center
-Louisiana;Vernon Parish;Ward Provisional Votes	provisional
 Louisiana;Washington Parish;Ward 1	ward
 Louisiana;Washington Parish;Ward 2	ward
 Louisiana;Washington Parish;Ward 3	ward
@@ -4436,17 +4320,9 @@ Louisiana;Washington Parish;Ward 6	ward
 Louisiana;Washington Parish;Ward 7	ward
 Louisiana;Washington Parish;Ward 8	ward
 Louisiana;Washington Parish;Ward 9	ward
-Louisiana;Washington Parish;Ward Early Voting	vote-center
-Louisiana;Washington Parish;Ward Provisional Votes	provisional
 Louisiana;Webster Parish;Ward 0	ward
-Louisiana;Webster Parish;Ward Early Voting	vote-center
-Louisiana;Webster Parish;Ward Provisional Votes	provisional
 Louisiana;West Baton Rouge Parish;Ward 0	ward
-Louisiana;West Baton Rouge Parish;Ward Early Voting	vote-center
-Louisiana;West Baton Rouge Parish;Ward Provisional Votes	provisional
 Louisiana;West Carroll Parish;Ward 0	ward
-Louisiana;West Carroll Parish;Ward Early Voting	vote-center
-Louisiana;West Carroll Parish;Ward Provisional Votes	provisional
 Louisiana;West Feliciana Parish;Ward 1	ward
 Louisiana;West Feliciana Parish;Ward 2	ward
 Louisiana;West Feliciana Parish;Ward 3	ward
@@ -4454,8 +4330,6 @@ Louisiana;West Feliciana Parish;Ward 4	ward
 Louisiana;West Feliciana Parish;Ward 5	ward
 Louisiana;West Feliciana Parish;Ward 6	ward
 Louisiana;West Feliciana Parish;Ward 7	ward
-Louisiana;West Feliciana Parish;Ward Early Voting	vote-center
-Louisiana;West Feliciana Parish;Ward Provisional Votes	provisional
 Louisiana;Winn Parish;Ward 1	ward
 Louisiana;Winn Parish;Ward 2	ward
 Louisiana;Winn Parish;Ward 3	ward
@@ -4463,69 +4337,67 @@ Louisiana;Winn Parish;Ward 4	ward
 Louisiana;Winn Parish;Ward 5	ward
 Louisiana;Winn Parish;Ward 6	ward
 Louisiana;Winn Parish;Ward 7	ward
-Louisiana;Winn Parish;Ward Early Voting	vote-center
-Louisiana;Winn Parish;Ward Provisional Votes	provisional
-Louisiana;Acadia Parish	county
-Louisiana;Allen Parish	county
-Louisiana;Ascension Parish	county
-Louisiana;Assumption Parish	county
-Louisiana;Avoyelles Parish	county
-Louisiana;Beauregard Parish	county
-Louisiana;Bienville Parish	county
-Louisiana;Bossier Parish	county
-Louisiana;Caddo Parish	county
-Louisiana;Calcasieu Parish	county
-Louisiana;Caldwell Parish	county
-Louisiana;Cameron Parish	county
-Louisiana;Catahoula Parish	county
-Louisiana;Claiborne Parish	county
-Louisiana;Concordia Parish	county
-Louisiana;De Soto Parish	county
-Louisiana;East Baton Rouge Parish	county
-Louisiana;East Carroll Parish	county
-Louisiana;East Feliciana Parish	county
-Louisiana;Evangeline Parish	county
-Louisiana;Franklin Parish	county
-Louisiana;Grant Parish	county
-Louisiana;Iberia Parish	county
-Louisiana;Iberville Parish	county
-Louisiana;Jackson Parish	county
-Louisiana;Jefferson Parish	county
-Louisiana;Jefferson Davis Parish	county
-Louisiana;Lafayette Parish	county
-Louisiana;Lafourche Parish	county
-Louisiana;Lasalle Parish	county
-Louisiana;Lincoln Parish	county
-Louisiana;Livingston Parish	county
-Louisiana;Madison Parish	county
-Louisiana;Morehouse Parish	county
-Louisiana;Natchitoches Parish	county
-Louisiana;Orleans Parish	county
-Louisiana;Ouachita Parish	county
-Louisiana;Plaquemines Parish	county
-Louisiana;Pointe Coupee Parish	county
-Louisiana;Rapides Parish	county
-Louisiana;Red River Parish	county
-Louisiana;Richland Parish	county
-Louisiana;Sabine Parish	county
-Louisiana;St. Bernard Parish	county
-Louisiana;St. Charles Parish	county
-Louisiana;St. Helena Parish	county
-Louisiana;St. James Parish	county
-Louisiana;St. John The Baptist Parish	county
-Louisiana;St. Landry Parish	county
-Louisiana;St. Martin Parish	county
-Louisiana;St. Mary Parish	county
-Louisiana;St. Tammany Parish	county
-Louisiana;Tangipahoa Parish	county
-Louisiana;Tensas Parish	county
-Louisiana;Terrebonne Parish	county
-Louisiana;Union Parish	county
-Louisiana;Vermilion Parish	county
-Louisiana;Vernon Parish	county
-Louisiana;Washington Parish	county
-Louisiana;Webster Parish	county
-Louisiana;West Baton Rouge Parish	county
-Louisiana;West Carroll Parish	county
-Louisiana;West Feliciana Parish	county
-Louisiana;Winn Parish	county
+Louisiana;Acadia Parish	Parish
+Louisiana;Allen Parish	Parish
+Louisiana;Ascension Parish	Parish
+Louisiana;Assumption Parish	Parish
+Louisiana;Avoyelles Parish	Parish
+Louisiana;Beauregard Parish	Parish
+Louisiana;Bienville Parish	Parish
+Louisiana;Bossier Parish	Parish
+Louisiana;Caddo Parish	Parish
+Louisiana;Calcasieu Parish	Parish
+Louisiana;Caldwell Parish	Parish
+Louisiana;Cameron Parish	Parish
+Louisiana;Catahoula Parish	Parish
+Louisiana;Claiborne Parish	Parish
+Louisiana;Concordia Parish	Parish
+Louisiana;De Soto Parish	Parish
+Louisiana;East Baton Rouge Parish	Parish
+Louisiana;East Carroll Parish	Parish
+Louisiana;East Feliciana Parish	Parish
+Louisiana;Evangeline Parish	Parish
+Louisiana;Franklin Parish	Parish
+Louisiana;Grant Parish	Parish
+Louisiana;Iberia Parish	Parish
+Louisiana;Iberville Parish	Parish
+Louisiana;Jackson Parish	Parish
+Louisiana;Jefferson Parish	Parish
+Louisiana;Jefferson Davis Parish	Parish
+Louisiana;Lafayette Parish	Parish
+Louisiana;Lafourche Parish	Parish
+Louisiana;Lasalle Parish	Parish
+Louisiana;Lincoln Parish	Parish
+Louisiana;Livingston Parish	Parish
+Louisiana;Madison Parish	Parish
+Louisiana;Morehouse Parish	Parish
+Louisiana;Natchitoches Parish	Parish
+Louisiana;Orleans Parish	Parish
+Louisiana;Ouachita Parish	Parish
+Louisiana;Plaquemines Parish	Parish
+Louisiana;Pointe Coupee Parish	Parish
+Louisiana;Rapides Parish	Parish
+Louisiana;Red River Parish	Parish
+Louisiana;Richland Parish	Parish
+Louisiana;Sabine Parish	Parish
+Louisiana;St. Bernard Parish	Parish
+Louisiana;St. Charles Parish	Parish
+Louisiana;St. Helena Parish	Parish
+Louisiana;St. James Parish	Parish
+Louisiana;St. John The Baptist Parish	Parish
+Louisiana;St. Landry Parish	Parish
+Louisiana;St. Martin Parish	Parish
+Louisiana;St. Mary Parish	Parish
+Louisiana;St. Tammany Parish	Parish
+Louisiana;Tangipahoa Parish	Parish
+Louisiana;Tensas Parish	Parish
+Louisiana;Terrebonne Parish	Parish
+Louisiana;Union Parish	Parish
+Louisiana;Vermilion Parish	Parish
+Louisiana;Vernon Parish	Parish
+Louisiana;Washington Parish	Parish
+Louisiana;Webster Parish	Parish
+Louisiana;West Baton Rouge Parish	Parish
+Louisiana;West Carroll Parish	Parish
+Louisiana;West Feliciana Parish	Parish
+Louisiana;Winn Parish	Parish
