@@ -8,49 +8,49 @@ import election_data_analysis as e
 #   Move this testing file to the correct jurisdiction folder in `election_data_analysis/tests`
 
 # # # constants - CHANGE THESE!! - use internal db names
-election = "2020 Primary"
-jurisdiction = 'Texas'
-abbr = 'TX'
+election = "2011 Primary"
+jurisdiction = 'Philadelphia'
+abbr = 'Phila'
 
 party1 = "Democratic Party"
 party2 = "Republican Party"
-pres_total_party1 = -1  # total of all votes for President in that party
+mayor_total_party1 = 149514  # total of all votes for Mayor in the party
 cd = 3  # congressional district
-total_cd_votes_party2 = -1  # total votes for Congressional rep in the chosen cd and party
+total_cd_votes_party2 = -1  # total votes in the chosen cd
 shd = 101   # state house district
 total_shd_votes_party1 = -1
 ssd = 13  # state senate district
 total_ssd_votes_party2 = -1
 single_vote_type = 'total'  # pick any one from your file
-pres_votes_vote_type_party2 = -1
-single_county = 'Texas;Montgomery County'  # pick any one from your file
-county_or_other = "county"   # Change this only if results are subdivided by something other than counties
+mayor_votes_vote_type_party2 = 16674
+single_county = 'Philadelphia;Ward 8'  # pick any one from your file
+county_or_other = "ward"   # Change this only if results are subdivided by something other than counties
                             #  e.g., 'parish' in LA, 'state-house' in Alaska, 'ward' in Philadelphia
-pres_votes_county_party1 = -1  # total votes for US President in that county for party1
+mayor_votes_county_party1 = 4131  # total votes for US President in that county for party1
 
 
 def test_data_exists(dbname):
     assert e.data_exists(election, jurisdiction, dbname=dbname)
 
-
+"""
 def test_vote_type_counts_consistent(dbname):
     assert e.check_totals_match_vote_types(election, jurisdiction, dbname=dbname)
 
-
+"""
 def test_standard_vote_types(dbname):
     assert e.check_count_types_standard(election, jurisdiction, dbname=dbname)
 
 
-def test_presidential_vote_type(dbname):
+def test_mayor_vote_type(dbname):
     assert (
         e.contest_total(
             election,
             jurisdiction,
-            f"US President ({abbr}) ({party2})",
+            f"Mayor of {jurisdiction} ({party2})",
             vote_type=single_vote_type,
             dbname=dbname,
         )
-        == pres_votes_vote_type_party2
+        == mayor_votes_vote_type_party2
     )
 
 
@@ -58,15 +58,15 @@ def test_county_subtotal(dbname):
     assert (e.contest_total(
         election,
         jurisdiction,
-        f"US President ({abbr}) ({party1})",
+        f"Mayor of {jurisdiction} ({party1})",
         dbname=dbname,
         county=single_county,
         sub_unit_type=county_or_other,
         )
-        == pres_votes_county_party1
+        == mayor_votes_county_party1
             )
 
-
+"""
 def test_presidential(dbname):
     assert (
         e.contest_total(
@@ -75,7 +75,7 @@ def test_presidential(dbname):
             f"US President ({abbr}) ({party1})",
             dbname=dbname,
         )
-        == pres_total_party1
+        == mayor_total_party1
     )
 
 
@@ -113,4 +113,6 @@ def test_state_rep_totals(dbname):
         )
         == total_shd_votes_party1
     )
+"""
+
 

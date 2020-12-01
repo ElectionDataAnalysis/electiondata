@@ -6,7 +6,13 @@ PA Attorney General (Phila)	1	PA Attorney General
 PA Auditor General (Phila)	1	PA Auditor General	
 PA Lieutenant Governor (Phila)	1	PA Lieutenant Governor	
 PA Treasurer (Phila)	1	PA Treasurer	
-PA Secretary of State (Phila)	1	PA Secretary of State	
+Mayor of Philadelphia (Democratic Party)	1	Mayor of Philadelphia	Democratic Party
+Mayor of Philadelphia (Republican Party)	1	Mayor of Philadelphia	Republican Party
+Mayor of Philadelphia	1	Mayor of Philadelphia	
+Philadelphia City Commissioner (Democratic Party)	2	Philadelphia City Commissioner	Democratic Party
+Philadelphia City Commissioner (Republican Party)	2	Philadelphia City Commissioner	Republican Party
+Philadelphia City Commissioner	3	Philadelphia City Commissioner
+PA Secretary of State (Phila)	1	PA Secretary of State
 PA Senate District 1 (Phila)	1	PA Senate District 1	
 PA Senate District 2 (Phila)	1	PA Senate District 2	
 PA Senate District 3 (Phila)	1	PA Senate District 3	
