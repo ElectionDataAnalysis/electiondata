@@ -3940,18 +3940,12 @@ ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	Acadia;4
 ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	Acadia;5
 ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	Acadia;6
 ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	Acadia;7
-ReportingUnit	Louisiana;vote-center Parish;Ward ReportingUnit	Acadia;Early Voting
-ReportingUnit	Louisiana;provisional Parish;Ward ReportingUnit	Acadia;Provisional Votes
 ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	Allen;1
 ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	Allen;2
 ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	Allen;3
 ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	Allen;4
 ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	Allen;5
-ReportingUnit	Louisiana;vote-center Parish;Ward ReportingUnit	Allen;Early Voting
-ReportingUnit	Louisiana;provisional Parish;Ward ReportingUnit	Allen;Provisional Votes
 ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	Ascension;0
-ReportingUnit	Louisiana;vote-center Parish;Ward ReportingUnit	Ascension;Early Voting
-ReportingUnit	Louisiana;provisional Parish;Ward ReportingUnit	Ascension;Provisional Votes
 ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	Assumption;1
 ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	Assumption;2
 ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	Assumption;3
@@ -3961,8 +3955,6 @@ ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	Assumption;6
 ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	Assumption;7
 ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	Assumption;8
 ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	Assumption;9
-ReportingUnit	Louisiana;vote-center Parish;Ward ReportingUnit	Assumption;Early Voting
-ReportingUnit	Louisiana;provisional Parish;Ward ReportingUnit	Assumption;Provisional Votes
 ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	Avoyelles;1
 ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	Avoyelles;2
 ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	Avoyelles;3
@@ -3974,11 +3966,7 @@ ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	Avoyelles;8
 ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	Avoyelles;9
 ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	Avoyelles;10
 ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	Avoyelles;11
-ReportingUnit	Louisiana;vote-center Parish;Ward ReportingUnit	Avoyelles;Early Voting
-ReportingUnit	Louisiana;provisional Parish;Ward ReportingUnit	Avoyelles;Provisional Votes
 ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	Beauregard;0
-ReportingUnit	Louisiana;vote-center Parish;Ward ReportingUnit	Beauregard;Early Voting
-ReportingUnit	Louisiana;provisional Parish;Ward ReportingUnit	Beauregard;Provisional Votes
 ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	Bienville;1
 ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	Bienville;2
 ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	Bienville;3
@@ -3986,20 +3974,12 @@ ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	Bienville;4
 ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	Bienville;5
 ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	Bienville;6
 ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	Bienville;7
-ReportingUnit	Louisiana;vote-center Parish;Ward ReportingUnit	Bienville;Early Voting
-ReportingUnit	Louisiana;provisional Parish;Ward ReportingUnit	Bienville;Provisional Votes
 ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	Bossier;1
 ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	Bossier;2
 ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	Bossier;3
 ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	Bossier;4
-ReportingUnit	Louisiana;vote-center Parish;Ward ReportingUnit	Bossier;Early Voting
-ReportingUnit	Louisiana;provisional Parish;Ward ReportingUnit	Bossier;Provisional Votes
 ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	Caddo;0
-ReportingUnit	Louisiana;vote-center Parish;Ward ReportingUnit	Caddo;Early Voting
-ReportingUnit	Louisiana;provisional Parish;Ward ReportingUnit	Caddo;Provisional Votes
 ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	Calcasieu;0
-ReportingUnit	Louisiana;vote-center Parish;Ward ReportingUnit	Calcasieu;Early Voting
-ReportingUnit	Louisiana;provisional Parish;Ward ReportingUnit	Calcasieu;Provisional Votes
 ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	Caldwell;1
 ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	Caldwell;2
 ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	Caldwell;3
@@ -4007,11 +3987,7 @@ ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	Caldwell;4
 ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	Caldwell;5
 ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	Caldwell;6
 ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	Caldwell;7
-ReportingUnit	Louisiana;vote-center Parish;Ward ReportingUnit	Caldwell;Early Voting
-ReportingUnit	Louisiana;provisional Parish;Ward ReportingUnit	Caldwell;Provisional Votes
 ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	Cameron;0
-ReportingUnit	Louisiana;vote-center Parish;Ward ReportingUnit	Cameron;Early Voting
-ReportingUnit	Louisiana;provisional Parish;Ward ReportingUnit	Cameron;Provisional Votes
 ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	Catahoula;1
 ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	Catahoula;2
 ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	Catahoula;3
@@ -4021,38 +3997,20 @@ ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	Catahoula;6
 ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	Catahoula;7
 ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	Catahoula;8
 ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	Catahoula;9
-ReportingUnit	Louisiana;vote-center Parish;Ward ReportingUnit	Catahoula;Early Voting
-ReportingUnit	Louisiana;provisional Parish;Ward ReportingUnit	Catahoula;Provisional Votes
 ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	Claiborne;0
-ReportingUnit	Louisiana;vote-center Parish;Ward ReportingUnit	Claiborne;Early Voting
-ReportingUnit	Louisiana;provisional Parish;Ward ReportingUnit	Claiborne;Provisional Votes
 ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	Concordia;0
-ReportingUnit	Louisiana;vote-center Parish;Ward ReportingUnit	Concordia;Early Voting
-ReportingUnit	Louisiana;provisional Parish;Ward ReportingUnit	Concordia;Provisional Votes
 ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	De Soto;0
-ReportingUnit	Louisiana;vote-center Parish;Ward ReportingUnit	De Soto;Early Voting
-ReportingUnit	Louisiana;provisional Parish;Ward ReportingUnit	De Soto;Provisional Votes
 ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	East Baton Rouge;1
 ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	East Baton Rouge;2
 ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	East Baton Rouge;3
-ReportingUnit	Louisiana;vote-center Parish;Ward ReportingUnit	East Baton Rouge;Early Voting
-ReportingUnit	Louisiana;provisional Parish;Ward ReportingUnit	East Baton Rouge;Provisional Votes
 ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	East Carroll;0
-ReportingUnit	Louisiana;vote-center Parish;Ward ReportingUnit	East Carroll;Early Voting
-ReportingUnit	Louisiana;provisional Parish;Ward ReportingUnit	East Carroll;Provisional Votes
 ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	East Feliciana;0
-ReportingUnit	Louisiana;vote-center Parish;Ward ReportingUnit	East Feliciana;Early Voting
-ReportingUnit	Louisiana;provisional Parish;Ward ReportingUnit	East Feliciana;Provisional Votes
 ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	Evangeline;1
 ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	Evangeline;2
 ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	Evangeline;3
 ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	Evangeline;4
 ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	Evangeline;5
-ReportingUnit	Louisiana;vote-center Parish;Ward ReportingUnit	Evangeline;Early Voting
-ReportingUnit	Louisiana;provisional Parish;Ward ReportingUnit	Evangeline;Provisional Votes
 ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	Franklin;0
-ReportingUnit	Louisiana;vote-center Parish;Ward ReportingUnit	Franklin;Early Voting
-ReportingUnit	Louisiana;provisional Parish;Ward ReportingUnit	Franklin;Provisional Votes
 ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	Grant;1
 ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	Grant;2
 ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	Grant;3
@@ -4061,8 +4019,6 @@ ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	Grant;5
 ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	Grant;6
 ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	Grant;7
 ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	Grant;8
-ReportingUnit	Louisiana;vote-center Parish;Ward ReportingUnit	Grant;Early Voting
-ReportingUnit	Louisiana;provisional Parish;Ward ReportingUnit	Grant;Provisional Votes
 ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	Iberia;1
 ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	Iberia;2
 ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	Iberia;3
@@ -4077,23 +4033,11 @@ ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	Iberia;11
 ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	Iberia;12
 ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	Iberia;13
 ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	Iberia;14
-ReportingUnit	Louisiana;vote-center Parish;Ward ReportingUnit	Iberia;Early Voting
-ReportingUnit	Louisiana;provisional Parish;Ward ReportingUnit	Iberia;Provisional Votes
 ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	Iberville;0
-ReportingUnit	Louisiana;vote-center Parish;Ward ReportingUnit	Iberville;Early Voting
-ReportingUnit	Louisiana;provisional Parish;Ward ReportingUnit	Iberville;Provisional Votes
 ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	Jackson;0
-ReportingUnit	Louisiana;vote-center Parish;Ward ReportingUnit	Jackson;Early Voting
-ReportingUnit	Louisiana;provisional Parish;Ward ReportingUnit	Jackson;Provisional Votes
 ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	Jefferson;0
-ReportingUnit	Louisiana;vote-center Parish;Ward ReportingUnit	Jefferson;Early Voting
-ReportingUnit	Louisiana;provisional Parish;Ward ReportingUnit	Jefferson;Provisional Votes
 ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	Jefferson Davis;0
-ReportingUnit	Louisiana;vote-center Parish;Ward ReportingUnit	Jefferson Davis;Early Voting
-ReportingUnit	Louisiana;provisional Parish;Ward ReportingUnit	Jefferson Davis;Provisional Votes
 ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	Lafayette;0
-ReportingUnit	Louisiana;vote-center Parish;Ward ReportingUnit	Lafayette;Early Voting
-ReportingUnit	Louisiana;provisional Parish;Ward ReportingUnit	Lafayette;Provisional Votes
 ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	Lafourche;1
 ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	Lafourche;2
 ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	Lafourche;3
@@ -4105,8 +4049,6 @@ ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	Lafourche;8
 ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	Lafourche;9
 ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	Lafourche;10
 ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	Lafourche;11
-ReportingUnit	Louisiana;vote-center Parish;Ward ReportingUnit	Lafourche;Early Voting
-ReportingUnit	Louisiana;provisional Parish;Ward ReportingUnit	Lafourche;Provisional Votes
 ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	Lasalle;1
 ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	Lasalle;2
 ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	Lasalle;3
@@ -4117,8 +4059,6 @@ ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	Lasalle;7
 ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	Lasalle;8
 ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	Lasalle;9
 ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	Lasalle;10
-ReportingUnit	Louisiana;vote-center Parish;Ward ReportingUnit	Lasalle;Early Voting
-ReportingUnit	Louisiana;provisional Parish;Ward ReportingUnit	Lasalle;Provisional Votes
 ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	Lincoln;1
 ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	Lincoln;2
 ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	Lincoln;3
@@ -4131,23 +4071,13 @@ ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	Lincoln;9
 ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	Lincoln;10
 ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	Lincoln;11
 ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	Lincoln;12
-ReportingUnit	Louisiana;vote-center Parish;Ward ReportingUnit	Lincoln;Early Voting
-ReportingUnit	Louisiana;provisional Parish;Ward ReportingUnit	Lincoln;Provisional Votes
 ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	Livingston;0
-ReportingUnit	Louisiana;vote-center Parish;Ward ReportingUnit	Livingston;Early Voting
-ReportingUnit	Louisiana;provisional Parish;Ward ReportingUnit	Livingston;Provisional Votes
 ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	Madison;0
-ReportingUnit	Louisiana;vote-center Parish;Ward ReportingUnit	Madison;Early Voting
-ReportingUnit	Louisiana;provisional Parish;Ward ReportingUnit	Madison;Provisional Votes
 ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	Morehouse;0
-ReportingUnit	Louisiana;vote-center Parish;Ward ReportingUnit	Morehouse;Early Voting
-ReportingUnit	Louisiana;provisional Parish;Ward ReportingUnit	Morehouse;Provisional Votes
 ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	Natchitoches;1
 ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	Natchitoches;2
 ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	Natchitoches;3
 ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	Natchitoches;4
-ReportingUnit	Louisiana;vote-center Parish;Ward ReportingUnit	Natchitoches;Early Voting
-ReportingUnit	Louisiana;provisional Parish;Ward ReportingUnit	Natchitoches;Provisional Votes
 ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	Orleans;1
 ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	Orleans;2
 ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	Orleans;3
@@ -4165,11 +4095,7 @@ ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	Orleans;14
 ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	Orleans;15
 ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	Orleans;16
 ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	Orleans;17
-ReportingUnit	Louisiana;vote-center Parish;Ward ReportingUnit	Orleans;Early Voting
-ReportingUnit	Louisiana;provisional Parish;Ward ReportingUnit	Orleans;Provisional Votes
 ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	Ouachita;0
-ReportingUnit	Louisiana;vote-center Parish;Ward ReportingUnit	Ouachita;Early Voting
-ReportingUnit	Louisiana;provisional Parish;Ward ReportingUnit	Ouachita;Provisional Votes
 ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	Plaquemines;1
 ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	Plaquemines;2
 ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	Plaquemines;3
@@ -4179,14 +4105,8 @@ ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	Plaquemines;6
 ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	Plaquemines;7
 ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	Plaquemines;8
 ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	Plaquemines;9
-ReportingUnit	Louisiana;vote-center Parish;Ward ReportingUnit	Plaquemines;Early Voting
-ReportingUnit	Louisiana;provisional Parish;Ward ReportingUnit	Plaquemines;Provisional Votes
 ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	Pointe Coupee;0
-ReportingUnit	Louisiana;vote-center Parish;Ward ReportingUnit	Pointe Coupee;Early Voting
-ReportingUnit	Louisiana;provisional Parish;Ward ReportingUnit	Pointe Coupee;Provisional Votes
 ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	Rapides;0
-ReportingUnit	Louisiana;vote-center Parish;Ward ReportingUnit	Rapides;Early Voting
-ReportingUnit	Louisiana;provisional Parish;Ward ReportingUnit	Rapides;Provisional Votes
 ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	Red River;1
 ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	Red River;2
 ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	Red River;3
@@ -4194,17 +4114,9 @@ ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	Red River;4
 ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	Red River;5
 ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	Red River;6
 ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	Red River;7
-ReportingUnit	Louisiana;vote-center Parish;Ward ReportingUnit	Red River;Early Voting
-ReportingUnit	Louisiana;provisional Parish;Ward ReportingUnit	Red River;Provisional Votes
 ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	Richland;0
-ReportingUnit	Louisiana;vote-center Parish;Ward ReportingUnit	Richland;Early Voting
-ReportingUnit	Louisiana;provisional Parish;Ward ReportingUnit	Richland;Provisional Votes
 ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	Sabine;0
-ReportingUnit	Louisiana;vote-center Parish;Ward ReportingUnit	Sabine;Early Voting
-ReportingUnit	Louisiana;provisional Parish;Ward ReportingUnit	Sabine;Provisional Votes
 ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	St. Bernard;0
-ReportingUnit	Louisiana;vote-center Parish;Ward ReportingUnit	St. Bernard;Early Voting
-ReportingUnit	Louisiana;provisional Parish;Ward ReportingUnit	St. Bernard;Provisional Votes
 ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	St. Charles;1
 ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	St. Charles;2
 ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	St. Charles;3
@@ -4212,19 +4124,13 @@ ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	St. Charles;4
 ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	St. Charles;5
 ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	St. Charles;6
 ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	St. Charles;7
-ReportingUnit	Louisiana;vote-center Parish;Ward ReportingUnit	St. Charles;Early Voting
-ReportingUnit	Louisiana;provisional Parish;Ward ReportingUnit	St. Charles;Provisional Votes
 ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	St. Helena;1
 ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	St. Helena;2
 ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	St. Helena;3
 ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	St. Helena;4
 ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	St. Helena;5
 ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	St. Helena;6
-ReportingUnit	Louisiana;vote-center Parish;Ward ReportingUnit	St. Helena;Early Voting
-ReportingUnit	Louisiana;provisional Parish;Ward ReportingUnit	St. Helena;Provisional Votes
 ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	St. James;0
-ReportingUnit	Louisiana;vote-center Parish;Ward ReportingUnit	St. James;Early Voting
-ReportingUnit	Louisiana;provisional Parish;Ward ReportingUnit	St. James;Provisional Votes
 ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	St. John The Baptist;1
 ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	St. John The Baptist;2
 ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	St. John The Baptist;3
@@ -4232,40 +4138,20 @@ ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	St. John The Baptist;4
 ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	St. John The Baptist;5
 ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	St. John The Baptist;6
 ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	St. John The Baptist;7
-ReportingUnit	Louisiana;vote-center Parish;Ward ReportingUnit	St. John The Baptist;Early Voting
-ReportingUnit	Louisiana;provisional Parish;Ward ReportingUnit	St. John The Baptist;Provisional Votes
 ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	St. Landry;1
 ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	St. Landry;2
 ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	St. Landry;3
 ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	St. Landry;4
 ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	St. Landry;5
 ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	St. Landry;6
-ReportingUnit	Louisiana;vote-center Parish;Ward ReportingUnit	St. Landry;Early Voting
-ReportingUnit	Louisiana;provisional Parish;Ward ReportingUnit	St. Landry;Provisional Votes
 ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	St. Martin;0
-ReportingUnit	Louisiana;vote-center Parish;Ward ReportingUnit	St. Martin;Early Voting
-ReportingUnit	Louisiana;provisional Parish;Ward ReportingUnit	St. Martin;Provisional Votes
 ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	St. Mary;0
-ReportingUnit	Louisiana;vote-center Parish;Ward ReportingUnit	St. Mary;Early Voting
-ReportingUnit	Louisiana;provisional Parish;Ward ReportingUnit	St. Mary;Provisional Votes
 ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	St. Tammany;0
-ReportingUnit	Louisiana;vote-center Parish;Ward ReportingUnit	St. Tammany;Early Voting
-ReportingUnit	Louisiana;provisional Parish;Ward ReportingUnit	St. Tammany;Provisional Votes
 ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	Tangipahoa;0
-ReportingUnit	Louisiana;vote-center Parish;Ward ReportingUnit	Tangipahoa;Early Voting
-ReportingUnit	Louisiana;provisional Parish;Ward ReportingUnit	Tangipahoa;Provisional Votes
 ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	Tensas;0
-ReportingUnit	Louisiana;vote-center Parish;Ward ReportingUnit	Tensas;Early Voting
-ReportingUnit	Louisiana;provisional Parish;Ward ReportingUnit	Tensas;Provisional Votes
 ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	Terrebonne;0
-ReportingUnit	Louisiana;vote-center Parish;Ward ReportingUnit	Terrebonne;Early Voting
-ReportingUnit	Louisiana;provisional Parish;Ward ReportingUnit	Terrebonne;Provisional Votes
 ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	Union;0
-ReportingUnit	Louisiana;vote-center Parish;Ward ReportingUnit	Union;Early Voting
-ReportingUnit	Louisiana;provisional Parish;Ward ReportingUnit	Union;Provisional Votes
 ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	Vermilion;0
-ReportingUnit	Louisiana;vote-center Parish;Ward ReportingUnit	Vermilion;Early Voting
-ReportingUnit	Louisiana;provisional Parish;Ward ReportingUnit	Vermilion;Provisional Votes
 ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	Vernon;1
 ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	Vernon;2
 ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	Vernon;3
@@ -4274,8 +4160,6 @@ ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	Vernon;5
 ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	Vernon;6
 ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	Vernon;7
 ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	Vernon;8
-ReportingUnit	Louisiana;vote-center Parish;Ward ReportingUnit	Vernon;Early Voting
-ReportingUnit	Louisiana;provisional Parish;Ward ReportingUnit	Vernon;Provisional Votes
 ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	Washington;1
 ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	Washington;2
 ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	Washington;3
@@ -4285,17 +4169,9 @@ ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	Washington;6
 ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	Washington;7
 ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	Washington;8
 ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	Washington;9
-ReportingUnit	Louisiana;vote-center Parish;Ward ReportingUnit	Washington;Early Voting
-ReportingUnit	Louisiana;provisional Parish;Ward ReportingUnit	Washington;Provisional Votes
 ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	Webster;0
-ReportingUnit	Louisiana;vote-center Parish;Ward ReportingUnit	Webster;Early Voting
-ReportingUnit	Louisiana;provisional Parish;Ward ReportingUnit	Webster;Provisional Votes
 ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	West Baton Rouge;0
-ReportingUnit	Louisiana;vote-center Parish;Ward ReportingUnit	West Baton Rouge;Early Voting
-ReportingUnit	Louisiana;provisional Parish;Ward ReportingUnit	West Baton Rouge;Provisional Votes
 ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	West Carroll;0
-ReportingUnit	Louisiana;vote-center Parish;Ward ReportingUnit	West Carroll;Early Voting
-ReportingUnit	Louisiana;provisional Parish;Ward ReportingUnit	West Carroll;Provisional Votes
 ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	West Feliciana;1
 ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	West Feliciana;2
 ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	West Feliciana;3
@@ -4303,8 +4179,6 @@ ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	West Feliciana;4
 ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	West Feliciana;5
 ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	West Feliciana;6
 ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	West Feliciana;7
-ReportingUnit	Louisiana;vote-center Parish;Ward ReportingUnit	West Feliciana;Early Voting
-ReportingUnit	Louisiana;provisional Parish;Ward ReportingUnit	West Feliciana;Provisional Votes
 ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	Winn;1
 ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	Winn;2
 ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	Winn;3
@@ -4312,8 +4186,6 @@ ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	Winn;4
 ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	Winn;5
 ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	Winn;6
 ReportingUnit	Louisiana;ward Parish;Ward ReportingUnit	Winn;7
-ReportingUnit	Louisiana;vote-center Parish;Ward ReportingUnit	Winn;Early Voting
-ReportingUnit	Louisiana;provisional Parish;Ward ReportingUnit	Winn;Provisional Votes
 ReportingUnit	Louisiana;Acadia Parish	Acadia
 ReportingUnit	Louisiana;Allen Parish	Allen
 ReportingUnit	Louisiana;Ascension Parish	Ascension
@@ -4561,7 +4433,7 @@ ReportingUnit	Louisiana	Louisiana
 Candidate	Lee Ann Dugas	Lee Ann Dugas
 Candidate	Howard Kearney	Howard Kearney
 Candidate	Steve Scalise	Steve Scalise
-Candidate	"Belden ""Noonie Man"" Batiste"	"Belden ""Noonie Man"" Batiste"
+Candidate	Belden "Noonie Man" Batiste	Belden "Noonie Man" Batiste
 Candidate	Glenn Adrain Harris	Glenn Adrain Harris
 Candidate	Colby James	Colby James
 Candidate	Cedric L. Richmond	Cedric L. Richmond
@@ -4575,7 +4447,7 @@ Candidate	Ben Gibson	Ben Gibson
 Candidate	Kenny Houston	Kenny Houston
 Candidate	Mike Johnson	Mike Johnson
 Candidate	Ryan Trundle	Ryan Trundle
-Candidate	"Sandra ""Candy"" Christophe"	"Sandra ""Candy"" Christophe"
+Candidate	Sandra "Candy" Christophe	Sandra "Candy" Christophe
 Candidate	Allen Guillory, Sr.	Allen Guillory, Sr.
 Candidate	Lance Harris	Lance Harris
 Candidate	Matt Hasty	Matt Hasty
@@ -4586,8 +4458,8 @@ Candidate	Scotty Robinson	Scotty Robinson
 Candidate	Phillip Snowden	Phillip Snowden
 Candidate	Garret Graves	Garret Graves
 Candidate	Shannon Sloan	Shannon Sloan
-Candidate	"Richard ""RPT"" Torregano"	"Richard ""RPT"" Torregano"
-Candidate	"Dartanyon ""DAW"" Williams"	"Dartanyon ""DAW"" Williams"
+Candidate	Richard "RPT" Torregano	Richard "RPT" Torregano
+Candidate	Dartanyon "DAW" Williams	Dartanyon "DAW" Williams
 ReportingUnit	Louisiana;Winn Parish;Ward 7;Prcinct 7	Winn;07;7
 ReportingUnit	Louisiana;Winn Parish;Ward 7;Prcinct 2A	Winn;07;2A
 ReportingUnit	Louisiana;Winn Parish;Ward 7;Prcinct 2	Winn;07;2
@@ -8423,3 +8295,4 @@ ReportingUnit	Louisiana;Acadia Parish;Ward 1;Prcinct 02A	Acadia;01;02A
 ReportingUnit	Louisiana;Acadia Parish;Ward 1;Prcinct 1	Acadia;01;01
 CountItemType	early	Early Voting
 CountItemType	provisional	Provisional Votes
+CountItemType	election-day	election-day
