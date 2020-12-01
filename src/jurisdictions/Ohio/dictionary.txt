@@ -765,6 +765,7 @@ CandidateContest	US House OH District 15	Representative to Congress - District 1
 CandidateContest	US House OH District 16	Representative to Congress - District 16
 CandidateContest	US President (OH)	President (at-large)
 CandidateContest	US President (OH)	President
+CandidateContest	US President (OH)	President and Vice President
 CandidateContest	OH Governor	Governor and Lieutenant Governor
 CandidateContest	US Senate OH	U.S. Senator
 CandidateContest	OH Attorney General	Attorney General
@@ -2295,5 +2296,47 @@ Candidate	Richard A. Olivito	Richard A. Olivito
 Candidate	Alaina Swope	Alaina Swope
 Candidate	Todd E Beegle	Todd E Beegle
 Candidate	Richard Dana	Richard Dana
+Candidate	Todd E. Beegle	Todd E. Beegle
+Candidate	Ted McClenen	Ted McClenen
+Candidate	Ted Jones	Ted Jones
+Candidate	Ted Greek	Ted Greek
+Candidate	Tad Saunders	Tad Saunders
+Candidate	Shane Hoffman	Shane Hoffman
+Candidate	Sarah Fowler Arthur	Sarah Fowler Arthur
+Candidate	Sam Grady	Sam Grady
+Candidate	Ryan Hunger	Ryan Hunger
+Candidate	Robert Taylor	Robert Taylor
+Candidate	Robert Leist	Robert Leist
+Candidate	Quentin Potter	Quentin Potter
+Candidate	Nicholas D. Moss	Nicholas D. Moss
+Candidate	Michael Johnson	Michael Johnson
+Candidate	Marci McCaulay	Marci McCaulay
+Candidate	Kyle Bruckman	Kyle Bruckman
+Candidate	Kent Keller	Kent Keller
+Candidate	Kaitlyn Clark	Kaitlyn Clark
+Candidate	John S. Stewart	John S. Stewart
+Candidate	Jim Lewis	Jim Lewis
+Candidate	Jerry V. Powell	Jerry V. Powell
+Candidate	Jean Mastin	Jean Mastin
+Candidate	Jay A. Conrad	Jay A. Conrad
+Candidate	Jason Stephens	Jason Stephens
+Candidate	Isaac Reed	Isaac Reed
+Candidate	Harrison T. Stanley	Harrison T. Stanley
+Candidate	Elecia Wobler	Elecia Wobler
+Candidate	Daniel Harrington	Daniel Harrington
+Candidate	Dale Stein	Dale Stein
+Candidate	Brian S. Stewart	Brian S. Stewart
+Candidate	Angela Davis	Angela Davis
+Candidate	Alicia Gee	Alicia Gee
+Candidate	Al Cutrona	Al Cutrona
+Candidate	Joseph R. Biden and Kamala D. Harris	Joseph R. Biden and Kamala D. Harris
+Candidate	President R19 Boddie and Eric Stoneham	President R19 Boddie and Eric Stoneham
+Candidate	Brian Carroll and Amar Patel	Brian Carroll and Amar Patel
+Candidate	Howie Hawkins and Angela Walker	Howie Hawkins and Angela Walker
+Candidate	Tom Hoefling and Andy Prior	Tom Hoefling and Andy Prior
+Candidate	Dario Hunter and Dawn Neptune Adams	Dario Hunter and Dawn Neptune Adams
+Candidate	Jo Jorgensen and Spike Cohen	Jo Jorgensen and Spike Cohen
+Candidate	Jade Simmons and Claudeliah J. Roze	Jade Simmons and Claudeliah J. Roze
+Candidate	Donald J. Trump and Michael R. Pence	Donald J. Trump and Michael R. Pence
+Candidate	Kasey Wells and Rachel Wells	Kasey Wells and Rachel Wells
 CountItemType	total	total
-
