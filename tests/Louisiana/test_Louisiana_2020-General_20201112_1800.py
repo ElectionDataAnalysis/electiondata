@@ -42,6 +42,7 @@ def test_presidential(dbname):
         jurisdiction,
         f"US President ({abbr})",
         dbname=dbname,
+        sub_unit_type=county_or_other,
         )
         == total_pres_votes
     )
@@ -99,6 +100,7 @@ def test_count_type_subtotal(dbname):
         f"US President ({abbr})",
         dbname=dbname,
         vote_type=single_vote_type,
+        sub_unit_type=county_or_other,
         )
         == pres_votes_vote_type
     )
