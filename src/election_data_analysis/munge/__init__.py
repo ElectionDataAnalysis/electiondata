@@ -652,7 +652,8 @@ def enum_col_to_id_othertext(
 
     # create list of non-standard items found
     non_standard = list(df.loc[mask, f"Other{type_col}"].unique())
-    non_standard.remove('')
+    if "" in non_standard:
+        non_standard.remove("")
     return df, non_standard
 
 
