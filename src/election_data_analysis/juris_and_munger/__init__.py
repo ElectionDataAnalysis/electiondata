@@ -890,10 +890,15 @@ def load_juris_dframe_into_cdf(
             cdf_e = pd.read_sql_table(e, session.bind)
             # for every instance of the enumeration in the current table, add id and othertype columns to the dataframe
             if e in df.columns:
-                df = m.enum_col_to_id_othertext(df, e, cdf_e)
-            # clean
-            df, err_df = m.clean_ids(df, [f"{e}_Id"])
-            df[f"Other{e}"] = df[f"Other{e}"].fillna("")
+                df, non_standard = m.enum_col_to_id_othertext(df, e, cdf_e)
+                if non_standard:
+                    ns = "\n\t".join(non_standard)
+                    error = ui.add_new_error(
+                        error,
+                        "warn-jurisdiction",
+                        Path(juris_path).name,
+                        f"Some {e}s are non-standard:\n\t{ns}",
+                    )
 
     # get Ids for any foreign key (or similar) in the table, e.g., Party_Id, etc.
     if os.path.isfile(fk_file):

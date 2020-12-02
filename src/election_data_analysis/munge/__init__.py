@@ -570,7 +570,12 @@ def replace_raw_with_internal_ids(
     return working, error
 
 
-def enum_col_from_id_othertext(df, enum, enum_df, drop_old=True):
+def enum_col_from_id_othertext(
+        df: pd.DataFrame,
+        enum: str,
+        enum_df: pd.DataFrame,
+        drop_old: bool = True
+) -> pd.DataFrame:
     """Returns a copy of dataframe <df>, replacing id and othertext columns
     (e.g., 'CountItemType_Id' and 'OtherCountItemType)
     with a plaintext <type> column (e.g., 'CountItemType')
@@ -593,18 +598,24 @@ def enum_col_from_id_othertext(df, enum, enum_df, drop_old=True):
     return df
 
 
-def enum_col_to_id_othertext(df, type_col, enum_df, drop_old=True):
+def enum_col_to_id_othertext(
+        df: pd.DataFrame,
+        type_col: str,
+        enum_df: pd.DataFrame,
+        drop_type_col: bool = True,
+) -> (pd.DataFrame, List[str]):
     """Returns a copy of dataframe <df>, replacing a plaintext <type_col> column (e.g., 'CountItemType') with
     the corresponding two id and othertext columns (e.g., 'CountItemType_Id' and 'OtherCountItemType
-    using the enumeration given in <enum_df>"""
+    using the enumeration given in <enum_df>. Optionally drops the original column <type_col>"""
     if df.empty:
         # add two columns
         df[f"{type_col}_Id"] = df[f"Other{type_col}"] = df.iloc[:, 0]
     else:
+        assert type_col not in ["Id", "Txt"], "type_col cannot be Id or Txt"
         # get the Id of 'other' in the enumeration
         other_id = enum_df[enum_df.Txt == 'other']['Id'].iloc[0]
+
         # ensure Id is a column, not the index, of enum_df (otherwise df index will be lost in merge)
-        assert type_col not in ["Id", "Txt"], "type_col cannot be Id or Txt"
         if "Id" not in enum_df.columns:
             enum_df["Id"] = enum_df.index
 
@@ -636,9 +647,13 @@ def enum_col_to_id_othertext(df, type_col, enum_df, drop_old=True):
         for c in ["Id", "Txt"]:
             if c * 3 in df.columns:
                 df.rename(columns={c * 3: c}, inplace=True)
-    if drop_old:
+    if drop_type_col:
         df = df.drop([type_col], axis=1)
-    return df
+
+    # create list of non-standard items found
+    non_standard = list(df.loc[mask, f"Other{type_col}"].unique())
+    non_standard.remove('')
+    return df, non_standard
 
 
 def good_syntax(s):
@@ -984,7 +999,15 @@ def row_and_col_sourced_ids(
 
                 # join CountItemType_Id and OtherCountItemType
                 cit = pd.read_sql_table("CountItemType", session.bind)
-                working = enum_col_to_id_othertext(working, "CountItemType", cit)
+                working, non_standard = enum_col_to_id_othertext(working, "CountItemType", cit)
+                if non_standard:
+                    ns = "\n\t".join(non_standard)
+                    err = ui.add_new_error(
+                        err,
+                        "warn-jurisdiction",
+                        juris.short_name,
+                        f"Some recognized CountItemTypes are not standard:\n\t{ns}"
+                    )
                 working, err_df = clean_ids(working, ["CountItemType_Id"])
                 working = clean_strings(working, ["OtherCountItemType"])
                 working = working.drop(
