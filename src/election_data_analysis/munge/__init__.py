@@ -230,8 +230,6 @@ def add_regex_column(
             f"Unexpected exception: {e}"
         )
 
-
-
     return working, err
 
 
@@ -572,7 +570,12 @@ def replace_raw_with_internal_ids(
     return working, error
 
 
-def enum_col_from_id_othertext(df, enum, enum_df, drop_old=True):
+def enum_col_from_id_othertext(
+        df: pd.DataFrame,
+        enum: str,
+        enum_df: pd.DataFrame,
+        drop_old: bool = True
+) -> pd.DataFrame:
     """Returns a copy of dataframe <df>, replacing id and othertext columns
     (e.g., 'CountItemType_Id' and 'OtherCountItemType)
     with a plaintext <type> column (e.g., 'CountItemType')
@@ -595,16 +598,24 @@ def enum_col_from_id_othertext(df, enum, enum_df, drop_old=True):
     return df
 
 
-def enum_col_to_id_othertext(df, type_col, enum_df, drop_old=True):
+def enum_col_to_id_othertext(
+        df: pd.DataFrame,
+        type_col: str,
+        enum_df: pd.DataFrame,
+        drop_type_col: bool = True,
+) -> (pd.DataFrame, List[str]):
     """Returns a copy of dataframe <df>, replacing a plaintext <type_col> column (e.g., 'CountItemType') with
     the corresponding two id and othertext columns (e.g., 'CountItemType_Id' and 'OtherCountItemType
-    using the enumeration given in <enum_df>"""
+    using the enumeration given in <enum_df>. Optionally drops the original column <type_col>"""
     if df.empty:
         # add two columns
         df[f"{type_col}_Id"] = df[f"Other{type_col}"] = df.iloc[:, 0]
     else:
-        # ensure Id is a column, not the index, of enum_df (otherwise df index will be lost in merge)
         assert type_col not in ["Id", "Txt"], "type_col cannot be Id or Txt"
+        # get the Id of 'other' in the enumeration
+        other_id = enum_df[enum_df.Txt == 'other']['Id'].iloc[0]
+
+        # ensure Id is a column, not the index, of enum_df (otherwise df index will be lost in merge)
         if "Id" not in enum_df.columns:
             enum_df["Id"] = enum_df.index
 
@@ -615,25 +626,35 @@ def enum_col_to_id_othertext(df, type_col, enum_df, drop_old=True):
                     "Column name " + c * 3 + " conflicts with variable used in code"
                 )
                 df.rename(columns={c: c * 3}, inplace=True)
-        df = df.merge(enum_df, how="left", left_on=type_col, right_on="Txt")
-        df.rename(columns={"Id": f"{type_col}_Id"}, inplace=True)
-        add_constant_column(df, f"Other{type_col}", "")
 
-        other_id_df = enum_df[enum_df["Txt"] == "other"]
-        if not other_id_df.empty:
-            other_id = other_id_df.iloc[0]["Id"]
-            df[f"{type_col}_Id"] = df[f"{type_col}_Id"].fillna(other_id)
-            df.loc[df[f"{type_col}_Id"] == other_id, "Other" + type_col] = df.loc[
-                df[f"{type_col}_Id"] == other_id, type_col
-            ]
+        # create and fill the *_Id column
+        df = df.merge(
+            enum_df, how="left", left_on=type_col, right_on="Txt"
+        ).rename(
+            columns={"Id": f"{type_col}_Id"}
+        )
+        df[f"{type_col}_Id"].fillna(other_id, inplace=True)
+
+        # create and fill the Other* column (type_col if *_Id = other_id, otherwise '')
+        df = add_constant_column(df, f"Other{type_col}", "")
+        mask = df[f"{type_col}_Id"] == other_id
+        df.loc[mask, f"Other{type_col}"] = df.loc[mask, type_col]
+
+        # drop the Txt column from the enumeration
         df = df.drop(["Txt"], axis=1)
+
+        # if we renamed, then undo the renaming
         for c in ["Id", "Txt"]:
             if c * 3 in df.columns:
-                # avoid restore name renaming the column in the main dataframe
                 df.rename(columns={c * 3: c}, inplace=True)
-    if drop_old:
+    if drop_type_col:
         df = df.drop([type_col], axis=1)
-    return df
+
+    # create list of non-standard items found
+    non_standard = list(df.loc[mask, f"Other{type_col}"].unique())
+    if "" in non_standard:
+        non_standard.remove("")
+    return df, non_standard
 
 
 def good_syntax(s):
@@ -963,13 +984,14 @@ def row_and_col_sourced_ids(
                 matched = (working.CountItemType_raw.isin(recognized))
                 if not matched.all():
                     unmatched = "\n".join((working[~matched]["CountItemType_raw"]).unique())
-                    ui.add_new_error(
+                    err = ui.add_new_error(
                         err,
                         "warn-jurisdiction",
                         juris.short_name,
                         f"Some unmatched CountItemTypes:\n{unmatched}",
                     )
-                working = working.merge(
+                # get CountItemType for all matched lines
+                working = working[matched].merge(
                     r_i,
                     how="left",
                     left_on="CountItemType_raw",
@@ -978,7 +1000,15 @@ def row_and_col_sourced_ids(
 
                 # join CountItemType_Id and OtherCountItemType
                 cit = pd.read_sql_table("CountItemType", session.bind)
-                working = enum_col_to_id_othertext(working, "CountItemType", cit)
+                working, non_standard = enum_col_to_id_othertext(working, "CountItemType", cit)
+                if non_standard:
+                    ns = "\n\t".join(non_standard)
+                    err = ui.add_new_error(
+                        err,
+                        "warn-jurisdiction",
+                        juris.short_name,
+                        f"Some recognized CountItemTypes are not standard:\n\t{ns}"
+                    )
                 working, err_df = clean_ids(working, ["CountItemType_Id"])
                 working = clean_strings(working, ["OtherCountItemType"])
                 working = working.drop(

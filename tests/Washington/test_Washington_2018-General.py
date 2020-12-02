@@ -35,7 +35,7 @@ def test_wa_house_totals_18(dbname):
         e.contest_total(
             "2018 General",
             "Washington",
-            "WA House District 9",
+            "WA House District 9 Position 1",
             dbname=dbname,
         )
         == 52909
