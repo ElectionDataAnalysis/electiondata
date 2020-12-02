@@ -230,8 +230,6 @@ def add_regex_column(
             f"Unexpected exception: {e}"
         )
 
-
-
     return working, err
 
 
@@ -603,6 +601,8 @@ def enum_col_to_id_othertext(df, type_col, enum_df, drop_old=True):
         # add two columns
         df[f"{type_col}_Id"] = df[f"Other{type_col}"] = df.iloc[:, 0]
     else:
+        # get the Id of 'other' in the enumeration
+        other_id = enum_df[enum_df.Txt == 'other']['Id'].iloc[0]
         # ensure Id is a column, not the index, of enum_df (otherwise df index will be lost in merge)
         assert type_col not in ["Id", "Txt"], "type_col cannot be Id or Txt"
         if "Id" not in enum_df.columns:
@@ -615,21 +615,26 @@ def enum_col_to_id_othertext(df, type_col, enum_df, drop_old=True):
                     "Column name " + c * 3 + " conflicts with variable used in code"
                 )
                 df.rename(columns={c: c * 3}, inplace=True)
-        df = df.merge(enum_df, how="left", left_on=type_col, right_on="Txt")
-        df.rename(columns={"Id": f"{type_col}_Id"}, inplace=True)
-        add_constant_column(df, f"Other{type_col}", "")
 
-        other_id_df = enum_df[enum_df["Txt"] == "other"]
-        if not other_id_df.empty:
-            other_id = other_id_df.iloc[0]["Id"]
-            df[f"{type_col}_Id"] = df[f"{type_col}_Id"].fillna(other_id)
-            df.loc[df[f"{type_col}_Id"] == other_id, "Other" + type_col] = df.loc[
-                df[f"{type_col}_Id"] == other_id, type_col
-            ]
+        # create and fill the *_Id column
+        df = df.merge(
+            enum_df, how="left", left_on=type_col, right_on="Txt"
+        ).rename(
+            columns={"Id": f"{type_col}_Id"}
+        )
+        df[f"{type_col}_Id"].fillna(other_id, inplace=True)
+
+        # create and fill the Other* column (type_col if *_Id = other_id, otherwise '')
+        df = add_constant_column(df, f"Other{type_col}", "")
+        mask = df[f"{type_col}_Id"] == other_id
+        df.loc[mask, f"Other{type_col}"] = df.loc[mask, type_col]
+
+        # drop the Txt column from the enumeration
         df = df.drop(["Txt"], axis=1)
+
+        # if we renamed, then undo the renaming
         for c in ["Id", "Txt"]:
             if c * 3 in df.columns:
-                # avoid restore name renaming the column in the main dataframe
                 df.rename(columns={c * 3: c}, inplace=True)
     if drop_old:
         df = df.drop([type_col], axis=1)
@@ -963,13 +968,14 @@ def row_and_col_sourced_ids(
                 matched = (working.CountItemType_raw.isin(recognized))
                 if not matched.all():
                     unmatched = "\n".join((working[~matched]["CountItemType_raw"]).unique())
-                    ui.add_new_error(
+                    err = ui.add_new_error(
                         err,
                         "warn-jurisdiction",
                         juris.short_name,
                         f"Some unmatched CountItemTypes:\n{unmatched}",
                     )
-                working = working.merge(
+                # get CountItemType for all matched lines
+                working = working[matched].merge(
                     r_i,
                     how="left",
                     left_on="CountItemType_raw",

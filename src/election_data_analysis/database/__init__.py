@@ -1500,8 +1500,8 @@ def export_rollup_from_db(
         WHERE C.contest_type = 'Candidate'
             AND e."Name" = %s -- election name
             AND TopRU."Name" = %s  -- top RU
-            AND IntermediateRUT."Txt" = %s  -- intermediate_reporting_unit_type
-            AND d.{by} in %s  -- tuple of datafile short_names (if by='short_name) or Ids (if by="Id")
+             AND %s in (IntermediateRUT."Txt", IntermediateRU."OtherReportingUnitType")  -- intermediate_reporting_unit_type
+           AND d.{by} in %s  -- tuple of datafile short_names (if by='short_name) or Ids (if by="Id")
             {restrict}
         GROUP BY {group_and_order_by}
         ORDER BY {group_and_order_by};
@@ -1544,7 +1544,7 @@ def export_rollup_from_db(
         WHERE C.contest_type = 'BallotMeasure'
             AND e."Name" = %s -- election name
             AND TopRU."Name" = %s  -- top RU
-            AND IntermediateRUT."Txt" = %s  -- intermediate_reporting_unit_type
+            AND %s in (IntermediateRUT."Txt", IntermediateRU."OtherReportingUnitType")  -- intermediate_reporting_unit_type
             AND d.{by} in %s  -- tuple of datafile short_names
             {restrict}
         GROUP BY {group_and_order_by}
