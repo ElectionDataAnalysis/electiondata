@@ -10207,12 +10207,13 @@ Party	Independent Progressive Liberal	IPL
 Party	Legal Marijuana Now	LMN
 Party	Libertarian Party	LIB
 Party	Libertarian Party	LP
-Party	Minnesota Green Party	MGP
+Party	Green Party	MGP
 Party	Nonpartisan	NP
 Party	Republican Party	R
 Party	Socialist Workers Party	SWP
 Party	Unaffiliated	UA
 Party	Write-In	WI
+Party	I	I
 ReportingUnit	Minnesota;MN House District 1	Minnesota;MN House District 1
 ReportingUnit	Minnesota;MN House District 2	Minnesota;MN House District 2
 ReportingUnit	Minnesota;MN House District 3	Minnesota;MN House District 3
@@ -13159,10 +13160,11 @@ Candidate	Jo Jorgensen	Jo Jorgensen and Jeremy 'Spike' Cohen
 Candidate	Write-In	WRITE-IN
 Candidate	Zach Duckworth	Zach Duckworth
 Candidate	William A Johnston	William A Johnston
-Party	VPM	VPM
-Party	SLP	SLP
-Party	IND	IND
-Party	IA	IA
+y	VPM	VPM
+y	SLP	SLP
+y	IND	IND
+y	IA	IA
+y	I	I
 Candidate	Tyler Kistner	Tyler Kistner
 Candidate	Tyler Becvar	Tyler Becvar
 Candidate	Tomas Settell	Tomas Settell
@@ -13334,3 +13336,11 @@ Candidate	Jason Ruffalo	Jason Ruffalo
 Candidate	David L. Nelson	David L. Nelson
 Candidate	Cal K. Bahr	Cal K. Bahr
 Candidate	Bryan P. Björnson	Bryan P. Björnson
+Candidate	Julián Castro	Julián Castro
+Candidate	Margaret E. Martín	Margaret E. Martín
+Candidate	Margaret E. Martín	Margaret E. MartÃÂÃÂ­n
+Candidate	Julián Castro	JuliÃÂÃÂ¡n Castro
+Candidate	Joseph Patiño	Joseph Patiño
+Candidate	Joseph Patiño	Joseph PatiÃÂÃÂ±o
+Candidate	Barbara Dröher Kline	Barbara Dröher Kline
+Candidate	Barbara Dröher Kline	Barbara DrÃÂÃÂ¶her Kline

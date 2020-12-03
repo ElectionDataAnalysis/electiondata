@@ -42,7 +42,7 @@ Roger L. Hartwig
 Kenneth Johnson
 Dale J. Wagner
 Mary Yu
-David DeWolf 
+David DeWolf
 Barbara Madsen
 Greg Zempel
 Charles (Charlie) Wiggins
@@ -82,7 +82,7 @@ Lori Sanders
 Dave Reichert
 Tony Ventrella
 Brad Hawkins
-Jon Wyss 
+Jon Wyss
 Cary Condotta
 Dan Maher
 Mike Steele
@@ -161,7 +161,7 @@ Arne Mortensen
 Michael A. Karnofski
 Shawn Nyman
 Dennis Weber
-Joshua J. Baldwin 
+Joshua J. Baldwin
 Gary B. Bashor
 Dave Quinn
 Lonnie Knowles
@@ -216,7 +216,7 @@ David Mistachkin
 Stephen E. Brown
 David L. Edwards
 Mark McCauley
-David Jennings 
+David Jennings
 David F. Timmons
 Rick Larsen
 Marc Hennemann
@@ -240,7 +240,7 @@ David W. Sullivan
 Keith C. Harper
 Barney Burke
 Jeff Randall
-Suzan DelBene 
+Suzan DelBene
 Robert J. Sutherland
 Pramila Jayapal
 Brady Pinero Walkinshaw
@@ -274,7 +274,7 @@ Lane Walthers
 Cindy Ryu
 Alvin Rutledge
 Ruth Kagi
-David D. Schirle 
+David D. Schirle
 Tina L. Orwall
 John Potter
 Mia Su-Ling Gregerson
@@ -422,7 +422,7 @@ Frank Wolfe
 Fred H. Hill
 Douglas E. Goelz
 Michael S. Turner
-Dick  Anderson
+Dick Anderson
 Michael (Mike) Lignoski
 Karen Skoog
 Bob Eugene
@@ -458,7 +458,7 @@ Jessica Garcia
 Rick Talbert
 Bruce Dammeier
 Mike Lonergan
-Paul A. Pastor 
+Paul A. Pastor
 Pam Roach
 Carolyn Edmonds
 Jim McCune
@@ -476,7 +476,7 @@ Grant Blinn
 Dwayne L. Christopher
 Karena Kirkendoll
 Tom Quinlan
-Kevin Ranker 
+Kevin Ranker
 Daniel R. Miller
 Kristine Lytton
 Jeff Morris
@@ -562,11 +562,11 @@ Laura M. Murphy
 John C. Skinder
 Jim Foley
 Russ Olsen
-Greg Prestegard 
-Mike Backman 
-Dan L. Cothren 
-Robert L. Jungers 
-Dennis R. Reid 
+Greg Prestegard
+Mike Backman
+Dan L. Cothren
+Robert L. Jungers
+Dennis R. Reid
 Jim Johnson
 Jared Frerichs
 Randal Son
@@ -636,7 +636,7 @@ Skyler Rude
 Bill Spencer
 Brenda Chilton
 Josie Delvin
-Shon Small 
+Shon Small
 William 'Bill' Leach
 Jamie Raebel
 Andy Miller
@@ -655,17 +655,17 @@ Keith Goehner
 Ann Diamond
 Valerie Sarratt
 Deanna Walter
-Kevin Ohme 
+Kevin Ohme
 Skip Moore
 Kim Morrison
 Shon D. Smith
 Bob Bugert
-Wayne E. Harris 
+Wayne E. Harris
 Douglas J. Shae
 Brian Burnett
 Jennifer Tyler
 David E. Griffiths
-Roy S. Fore 
+Roy S. Fore
 Allen F. Blackmon
 Kyle Mott
 Rob Lawrence-Berrey
@@ -802,7 +802,7 @@ Shawn P Sant
 Jim Raymond
 Josie Koelzer
 Gerald F. 'Jerry' Roach
-Approved 
+Approved
 Cynthia N. Parker
 Stu Nelson
 Brian Bartels
@@ -829,7 +829,7 @@ James (Jim) Liebrecht
 Kimberly A Allen
 Tyson R. Hill
 Cindy Carter
-Jeff Foster 
+Jeff Foster
 Craig Morrison
 Garth Dano
 Tom Jones
@@ -891,7 +891,6 @@ Noah Harrison
 Mindy Walker
 Daniel Toepper
 Tom Brotherton
-Suzan DelBene
 Jeffrey Beeler
 Craig Keller
 Sarah Smith
@@ -1080,7 +1079,7 @@ Bob Russell
 Martha J. Hunt
 Jerry Lord
 Lola Toloba
-Stan Bowman 
+Stan Bowman
 Pete Hammer
 F. Lee Grose
 Rodger Cool
@@ -1101,7 +1100,7 @@ Jeffrey S. Barkdull
 Wade W. Magers
 Jody Howard
 Loren Rux
-Joseph Brumbles 
+Joseph Brumbles
 Melody Peterson
 Patti McLean
 Paddy McGuire
@@ -1390,23 +1389,22 @@ Sam Meyer
 Brett Buckley
 Linda L. Oosterman
 Andrew Saturn
-Brian McClain 
+Brian McClain
 Bill Coons
-Nicci Bergseng 
-Matt Kuhl 
+Nicci Bergseng
+Matt Kuhl
 Kay M. Holland
-Blair H. Brady 
-Eugene C 'Gene' Strong 
+Blair H. Brady
+Eugene C 'Gene' Strong
 Heidi Heywood
 Dan Bigelow
 Stewart D. Feil
-Mark C. Howie 
-Graham Phalen 
-Tammy Peterson 
-Robert L. Jungers
+Mark C. Howie
+Graham Phalen
+Tammy Peterson
 Debra Antes
 Karen Martin
-Kathy Martin 
+Kathy Martin
 Kathy Mulkerin
 Jim Duncan
 Richard Greenwood
@@ -1512,7 +1510,6 @@ Joshua Wolf
 Loren Culp
 Richard L. Carpenter
 Bill Hirt
-Joseph Brumbles
 Ann Davison Sattler
 James R. Rafferty
 Matt Seymour
@@ -1975,7 +1972,7 @@ Greg Gilday
 Suzanne Woodard
 Taylor Zimmermann
 Bill Bruch
-Bruce  King
+Bruce King
 Charles Cheshvan Sias
 Rob Toyer
 Ed Jenkins
@@ -3080,7 +3077,6 @@ Dalten Hansen-White
 Doris E. Atkinson
 Clay Johnson
 Christopher Stegman
-Mike Backman
 Lee Tischer
 Tim Lawry
 Dan L Cothren
@@ -3205,3 +3201,5 @@ KATHLEEN ALTICK
 Lauri Palmer
 David R. Weyeneth, Sr.
 Devin Kuh
+Write-in
+Uncommitted Delegates

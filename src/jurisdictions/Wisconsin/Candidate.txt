@@ -27,7 +27,6 @@ Andi Rich
 Andrew McKinney
 Andrew Yang
 Andrew Zuelke
-AndrÃÂ© Jacque
 Andy Craig
 Angel C. Sanchez
 Ann Groves Lloyd
@@ -493,3 +492,4 @@ Don Blankenship
 Jo Jorgensen
 Brian Carroll
 Write-in or Scattering
+André Jacque

@@ -256,8 +256,8 @@ CandidateContest	US House WA District 9	Congressional District 9 U.S. Representa
 CandidateContest	US House WA District 10	Congressional District 10 U.S. Representative
 CandidateContest	US President (WA)	United States President/Vice President
 CandidateContest	US President (WA)	President/Vice President
-CandidateContest	US President (WA) (Democratic / Republican Party)	United States President Democratic Party
-CandidateContest	US President (WA) (Democratic / Republican Party)	United States President Republican Party
+CandidateContest	US President (WA) (Democratic Party)	United States President Democratic Party
+CandidateContest	US President (WA) (Republican Party)	United States President Republican Party
 CandidateContest	WA Governor	Washington State Governor
 CandidateContest	US Senate WA	United States U.S. Senator
 CandidateContest	WA Attorney General	Washington State Attorney General
@@ -305,7 +305,7 @@ Candidate	Roger L. Hartwig	Roger L. Hartwig
 Candidate	Kenneth Johnson	Kenneth Johnson
 Candidate	Dale J. Wagner	Dale J. Wagner
 Candidate	Mary Yu	Mary Yu
-Candidate	David DeWolf 	David DeWolf 
+Candidate	David DeWolf	David DeWolf
 Candidate	Barbara Madsen	Barbara Madsen
 Candidate	Greg Zempel	Greg Zempel
 Candidate	Charles (Charlie) Wiggins	Charles (Charlie) Wiggins
@@ -345,7 +345,7 @@ Candidate	Lori Sanders	Lori Sanders
 Candidate	Dave Reichert	Dave Reichert
 Candidate	Tony Ventrella	Tony Ventrella
 Candidate	Brad Hawkins	Brad Hawkins
-Candidate	Jon Wyss 	Jon Wyss 
+Candidate	Jon Wyss	Jon Wyss
 Candidate	Cary Condotta	Cary Condotta
 Candidate	Dan Maher	Dan Maher
 Candidate	Mike Steele	Mike Steele
@@ -424,7 +424,7 @@ Candidate	Arne Mortensen	Arne Mortensen
 Candidate	Michael A. Karnofski	Michael A. Karnofski
 Candidate	Shawn Nyman	Shawn Nyman
 Candidate	Dennis Weber	Dennis Weber
-Candidate	Joshua J. Baldwin 	Joshua J. Baldwin 
+Candidate	Joshua J. Baldwin	Joshua J. Baldwin
 Candidate	Gary B. Bashor	Gary B. Bashor
 Candidate	Dave Quinn	Dave Quinn
 Candidate	Lonnie Knowles	Lonnie Knowles
@@ -479,7 +479,7 @@ Candidate	David Mistachkin	David Mistachkin
 Candidate	Stephen E. Brown	Stephen E. Brown
 Candidate	David L. Edwards	David L. Edwards
 Candidate	Mark McCauley	Mark McCauley
-Candidate	David Jennings 	David Jennings 
+Candidate	David Jennings	David Jennings
 Candidate	David F. Timmons	David F. Timmons
 Candidate	Rick Larsen	Rick Larsen
 Candidate	Marc Hennemann	Marc Hennemann
@@ -503,7 +503,7 @@ Candidate	David W. Sullivan	David W. Sullivan
 Candidate	Keith C. Harper	Keith C. Harper
 Candidate	Barney Burke	Barney Burke
 Candidate	Jeff Randall	Jeff Randall
-Candidate	Suzan DelBene 	Suzan DelBene 
+Candidate	Suzan DelBene	Suzan DelBene
 Candidate	Robert J. Sutherland	Robert J. Sutherland
 Candidate	Pramila Jayapal	Pramila Jayapal
 Candidate	Brady Pinero Walkinshaw	Brady Pinero Walkinshaw
@@ -537,7 +537,7 @@ Candidate	Lane Walthers	Lane Walthers
 Candidate	Cindy Ryu	Cindy Ryu
 Candidate	Alvin Rutledge	Alvin Rutledge
 Candidate	Ruth Kagi	Ruth Kagi
-Candidate	David D. Schirle 	David D. Schirle 
+Candidate	David D. Schirle	David D. Schirle
 Candidate	Tina L. Orwall	Tina L. Orwall
 Candidate	John Potter	John Potter
 Candidate	Mia Su-Ling Gregerson	Mia Su-Ling Gregerson
@@ -685,7 +685,7 @@ Candidate	Frank Wolfe	Frank Wolfe
 Candidate	Fred H. Hill	Fred H. Hill
 Candidate	Douglas E. Goelz	Douglas E. Goelz
 Candidate	Michael S. Turner	Michael S. Turner
-Candidate	Dick  Anderson	Dick  Anderson
+Candidate	Dick Anderson	Dick Anderson
 Candidate	Michael (Mike) Lignoski	Michael (Mike) Lignoski
 Candidate	Karen Skoog	Karen Skoog
 Candidate	Bob Eugene	Bob Eugene
@@ -721,7 +721,7 @@ Candidate	Jessica Garcia	Jessica Garcia
 Candidate	Rick Talbert	Rick Talbert
 Candidate	Bruce Dammeier	Bruce Dammeier
 Candidate	Mike Lonergan	Mike Lonergan
-Candidate	Paul A. Pastor 	Paul A. Pastor 
+Candidate	Paul A. Pastor	Paul A. Pastor
 Candidate	Pam Roach	Pam Roach
 Candidate	Carolyn Edmonds	Carolyn Edmonds
 Candidate	Jim McCune	Jim McCune
@@ -739,7 +739,7 @@ Candidate	Grant Blinn	Grant Blinn
 Candidate	Dwayne L. Christopher	Dwayne L. Christopher
 Candidate	Karena Kirkendoll	Karena Kirkendoll
 Candidate	Tom Quinlan	Tom Quinlan
-Candidate	Kevin Ranker 	Kevin Ranker 
+Candidate	Kevin Ranker	Kevin Ranker
 Candidate	Daniel R. Miller	Daniel R. Miller
 Candidate	Kristine Lytton	Kristine Lytton
 Candidate	Jeff Morris	Jeff Morris
@@ -825,11 +825,11 @@ Candidate	Laura M. Murphy	Laura M. Murphy
 Candidate	John C. Skinder	John C. Skinder
 Candidate	Jim Foley	Jim Foley
 Candidate	Russ Olsen	Russ Olsen
-Candidate	Greg Prestegard 	Greg Prestegard 
-Candidate	Mike Backman 	Mike Backman 
-Candidate	Dan L. Cothren 	Dan L. Cothren 
-Candidate	Robert L. Jungers 	Robert L. Jungers 
-Candidate	Dennis R. Reid 	Dennis R. Reid 
+Candidate	Greg Prestegard	Greg Prestegard
+Candidate	Mike Backman	Mike Backman
+Candidate	Dan L. Cothren	Dan L. Cothren
+Candidate	Robert L. Jungers	Robert L. Jungers
+Candidate	Dennis R. Reid	Dennis R. Reid
 Candidate	Jim Johnson	Jim Johnson
 Candidate	Jared Frerichs	Jared Frerichs
 Candidate	Randal Son	Randal Son
@@ -899,7 +899,7 @@ Candidate	Skyler Rude	Skyler Rude
 Candidate	Bill Spencer	Bill Spencer
 Candidate	Brenda Chilton	Brenda Chilton
 Candidate	Josie Delvin	Josie Delvin
-Candidate	Shon Small 	Shon Small 
+Candidate	Shon Small	Shon Small
 Candidate	William 'Bill' Leach	William 'Bill' Leach
 Candidate	Jamie Raebel	Jamie Raebel
 Candidate	Andy Miller	Andy Miller
@@ -918,17 +918,17 @@ Candidate	Keith Goehner	Keith Goehner
 Candidate	Ann Diamond	Ann Diamond
 Candidate	Valerie Sarratt	Valerie Sarratt
 Candidate	Deanna Walter	Deanna Walter
-Candidate	Kevin Ohme 	Kevin Ohme 
+Candidate	Kevin Ohme	Kevin Ohme
 Candidate	Skip Moore	Skip Moore
 Candidate	Kim Morrison	Kim Morrison
 Candidate	Shon D. Smith	Shon D. Smith
 Candidate	Bob Bugert	Bob Bugert
-Candidate	Wayne E. Harris 	Wayne E. Harris 
+Candidate	Wayne E. Harris	Wayne E. Harris
 Candidate	Douglas J. Shae	Douglas J. Shae
 Candidate	Brian Burnett	Brian Burnett
 Candidate	Jennifer Tyler	Jennifer Tyler
 Candidate	David E. Griffiths	David E. Griffiths
-Candidate	Roy S. Fore 	Roy S. Fore 
+Candidate	Roy S. Fore	Roy S. Fore
 Candidate	Allen F. Blackmon	Allen F. Blackmon
 Candidate	Kyle Mott	Kyle Mott
 Candidate	Rob Lawrence-Berrey	Rob Lawrence-Berrey
@@ -1065,7 +1065,7 @@ Candidate	Shawn P Sant	Shawn P Sant
 Candidate	Jim Raymond	Jim Raymond
 Candidate	Josie Koelzer	Josie Koelzer
 Candidate	Gerald F. 'Jerry' Roach	Gerald F. 'Jerry' Roach
-Candidate	Approved 	Approved 
+Candidate	Approved	Approved
 Candidate	Cynthia N. Parker	Cynthia N. Parker
 Candidate	Stu Nelson	Stu Nelson
 Candidate	Brian Bartels	Brian Bartels
@@ -1092,7 +1092,7 @@ Candidate	James (Jim) Liebrecht	James (Jim) Liebrecht
 Candidate	Kimberly A Allen	Kimberly A Allen
 Candidate	Tyson R. Hill	Tyson R. Hill
 Candidate	Cindy Carter	Cindy Carter
-Candidate	Jeff Foster 	Jeff Foster 
+Candidate	Jeff Foster	Jeff Foster
 Candidate	Craig Morrison	Craig Morrison
 Candidate	Garth Dano	Garth Dano
 Candidate	Tom Jones	Tom Jones
@@ -1154,7 +1154,6 @@ Candidate	Noah Harrison	Noah Harrison
 Candidate	Mindy Walker	Mindy Walker
 Candidate	Daniel Toepper	Daniel Toepper
 Candidate	Tom Brotherton	Tom Brotherton
-Candidate	Suzan DelBene	Suzan DelBene
 Candidate	Jeffrey Beeler	Jeffrey Beeler
 Candidate	Craig Keller	Craig Keller
 Candidate	Sarah Smith	Sarah Smith
@@ -1343,7 +1342,7 @@ Candidate	Bob Russell	Bob Russell
 Candidate	Martha J. Hunt	Martha J. Hunt
 Candidate	Jerry Lord	Jerry Lord
 Candidate	Lola Toloba	Lola Toloba
-Candidate	Stan Bowman 	Stan Bowman 
+Candidate	Stan Bowman	Stan Bowman
 Candidate	Pete Hammer	Pete Hammer
 Candidate	F. Lee Grose	F. Lee Grose
 Candidate	Rodger Cool	Rodger Cool
@@ -1364,7 +1363,7 @@ Candidate	Jeffrey S. Barkdull	Jeffrey S. Barkdull
 Candidate	Wade W. Magers	Wade W. Magers
 Candidate	Jody Howard	Jody Howard
 Candidate	Loren Rux	Loren Rux
-Candidate	Joseph Brumbles 	Joseph Brumbles 
+Candidate	Joseph Brumbles	Joseph Brumbles
 Candidate	Melody Peterson	Melody Peterson
 Candidate	Patti McLean	Patti McLean
 Candidate	Paddy McGuire	Paddy McGuire
@@ -1653,23 +1652,22 @@ Candidate	Sam Meyer	Sam Meyer
 Candidate	Brett Buckley	Brett Buckley
 Candidate	Linda L. Oosterman	Linda L. Oosterman
 Candidate	Andrew Saturn	Andrew Saturn
-Candidate	Brian McClain 	Brian McClain 
+Candidate	Brian McClain	Brian McClain
 Candidate	Bill Coons	Bill Coons
-Candidate	Nicci Bergseng 	Nicci Bergseng 
-Candidate	Matt Kuhl 	Matt Kuhl 
+Candidate	Nicci Bergseng	Nicci Bergseng
+Candidate	Matt Kuhl	Matt Kuhl
 Candidate	Kay M. Holland	Kay M. Holland
-Candidate	Blair H. Brady 	Blair H. Brady 
-Candidate	Eugene C 'Gene' Strong 	Eugene C 'Gene' Strong 
+Candidate	Blair H. Brady	Blair H. Brady
+Candidate	Eugene C 'Gene' Strong	Eugene C 'Gene' Strong
 Candidate	Heidi Heywood	Heidi Heywood
 Candidate	Dan Bigelow	Dan Bigelow
 Candidate	Stewart D. Feil	Stewart D. Feil
-Candidate	Mark C. Howie 	Mark C. Howie 
-Candidate	Graham Phalen 	Graham Phalen 
-Candidate	Tammy Peterson 	Tammy Peterson 
-Candidate	Robert L. Jungers	Robert L. Jungers
+Candidate	Mark C. Howie	Mark C. Howie
+Candidate	Graham Phalen	Graham Phalen
+Candidate	Tammy Peterson	Tammy Peterson
 Candidate	Debra Antes	Debra Antes
 Candidate	Karen Martin	Karen Martin
-Candidate	Kathy Martin 	Kathy Martin 
+Candidate	Kathy Martin	Kathy Martin
 Candidate	Kathy Mulkerin	Kathy Mulkerin
 Candidate	Jim Duncan	Jim Duncan
 Candidate	Richard Greenwood	Richard Greenwood
@@ -1778,7 +1776,6 @@ Candidate	Joshua Wolf	Joshua Wolf
 Candidate	Loren Culp	Loren Culp
 Candidate	Richard L. Carpenter	Richard L. Carpenter
 Candidate	Bill Hirt	Bill Hirt
-Candidate	Joseph Brumbles	Joseph Brumbles
 Candidate	Ann Davison Sattler	Ann Davison Sattler
 Candidate	James R. Rafferty	James R. Rafferty
 Candidate	Matt Seymour	Matt Seymour
@@ -2241,7 +2238,7 @@ Candidate	Greg Gilday	Greg Gilday
 Candidate	Suzanne Woodard	Suzanne Woodard
 Candidate	Taylor Zimmermann	Taylor Zimmermann
 Candidate	Bill Bruch	Bill Bruch
-Candidate	Bruce  King	Bruce  King
+Candidate	Bruce King	Bruce King
 Candidate	Charles Cheshvan Sias	Charles Cheshvan Sias
 Candidate	Rob Toyer	Rob Toyer
 Candidate	Ed Jenkins	Ed Jenkins
@@ -3346,7 +3343,6 @@ Candidate	Dalten Hansen-White	Dalten Hansen-White
 Candidate	Doris E. Atkinson	Doris E. Atkinson
 Candidate	Clay Johnson	Clay Johnson
 Candidate	Christopher Stegman	Christopher Stegman
-Candidate	Mike Backman	Mike Backman
 Candidate	Lee Tischer	Lee Tischer
 Candidate	Tim Lawry	Tim Lawry
 Candidate	Dan L Cothren	Dan L Cothren
@@ -3519,7 +3515,6 @@ Party	Democratic Party	(Prefers Democratic Party)
 Party	Democratic Party	(Prefers Independent Dem. Party)
 Party	Democratic Party	(Prefers Democrat Party)
 Party	Democratic Party	(Prefers DEM Party)
-Party	Democratic Party	(Prefers Democratic  Party)
 Party	Democratic Party	(Prefers Democtratic Party)
 Party	Democratic Party	(Prefers Democractic Party)
 Party	Democratic Party	(Prefers Independent Dem Party)
@@ -3532,7 +3527,6 @@ Party	Republican Party	(Prefers Independent GOP Party)
 Party	Republican Party	(Prefers G.O.P. Party)
 Party	Republican Party	(Prefers Ind. Republican Party)
 Party	Republican Party	(Prefers Trump Republican Party)
-Party	Republican Party	(Prefers Republican  Party)
 Party	Republican Party	(Prefers Republicans Party)
 Party	Republican Party	(Prefers Ind Republican Party)
 Party	Republican Party	(Prefers R Party)
@@ -3547,4 +3541,11 @@ Party	Green Party	(Prefers Green Party)
 Party	Constitution Party	Constitution Party Nominees
 Party	Libertarian Party	Libertarian Party Nominees
 Party	Libertarian Party	(Prefers Libertarian Party)
+Party	No Party Preference	(States No Party Preference)
+Party	Independent Party	(Prefers Independent Party)
 Candidate	Devin Kuh	Devin Kuh
+Candidate	Write-in	Write-in
+Candidate	Uncommitted Delegates	Uncommitted Delegates
+Candidate	William 'Bill' Jenkin	William &quot;Bill&quot; Jenkin
+Candidate	Tracy 'Justice' Wright	Tracy &quot;Justice&quot; Wright
+

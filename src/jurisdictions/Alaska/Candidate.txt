@@ -169,7 +169,6 @@ Miller, Joe
 Millett, Charisse E.
 Morris, Julie M.
 Moto, Calvin D. II
-MuÃ±oz, Cathy
 Murkowski, Lisa
 Myers, J. R.
 Myers, Robert H. Jr.
@@ -389,3 +388,10 @@ Baker Thomas C.
 Baisden James
 Von Imhof, Natasha A.
 Forrest J.,McDonald, Forrest J.
+Write-in 70
+Write-in 60
+Write-in 50
+Write-in 40
+Write-in 30
+Write-in 20
+Muñoz, Cathy
