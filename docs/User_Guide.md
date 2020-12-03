@@ -22,13 +22,12 @@ Ensure that the munger files are appropriate for your results file(s).
  `file_type`: controls which pandas function reads the file contents
   * 'excel'
     * (optional) a list `sheets_to_read` of spreadsheets to read, or a list `sheets_to_skip`. Default is to read the first sheet only
-  * 'json'
+  * 'nested-json'
   * 'xml'
   * 'flat_text' Any tab-, comma-, or other-separated table in a plain tabular text file.
     * (required) a field separator `sep` to be specified (usually `sep=,` for csv or `sep=\t` for .txt)
     * (optional) a quote character `quoting`. Default is `quoting="`
-  * [[ will be obsolete: `structured_text` Any plain text file whose format is not strictly tabular
-    * (required) `structure` specified, e.g., `structure=concatenated-blocks`]]
+  * [[ will be obsolete: `concatenated-blocks` Clarity format derived from xml]]
   
   `count_location`: controls how the system looks for counts
   * 'by_field_name'
@@ -42,12 +41,14 @@ Ensure that the munger files are appropriate for your results file(s).
     * (required) list `string_fields` of names of fields containing character strings
   * 'in_count_headers' this is used, e.g., when each candidate has a separate column in a tabular file. In this case there may be a single header row with relevant info, or there may be several rows (e.g., Contest in one row, Candidate in another row)
     * (required) list `string_header_rows` of integers for rows containing necessary character strings. (NB: top row not skipped is 0, next row is 1, etc.)
-  * 'in_constant_rows' list of integer row numbers which contain relevant character strings constant over the entire table
+  * 'in_full_rows' list of integer row numbers which contain relevant character strings constant over the entire table
     
    Available if appropriate for any file type:
    * (optional) `thousands_separator`. In the US the separator is almost always ',' if it is used. Watch out for Excel files which may show a comma when you look at them in Excel -- there may not be a comma in the underlying data.
    * (optional) `encoding` (If not specified or recognized, `iso-8859-1` will be used. Recognized encodings are limited [python's list of recognized encodings and aliases](https://docs.python.org/3/library/codecs.html#standard-encodings).)
-   * (optional) `rows_to_skip` (for a flat file). Note that this parameter will affect any integer parameters designating particular rows.
+
+   Available for flat_text and excel file types:
+   * (optional) `rows_to_skip` (for a flat file). Note that this parameter will affect any integer parameters designating particular rows -- row 0 is the first row not skipped.
 
  
  #### OLD VERSION:
@@ -94,12 +95,12 @@ Applying a munger with file_type `xls` to a multi-sheet excel file will read onl
    * thousands_separator
    * encoding (If not specified or recognized, `iso-8859-1` will be used. Recognized encodings are limited [python's list of recognized encodings and aliases](https://docs.python.org/3/library/codecs.html#standard-encodings).)
    * count_of_top_lines_to_skip
-
+#### END OF OLD VERSION
 
  (3) Put formulas for parsing information from the results file into `cdf_elements.txt`. You may find it helpful to follow the example of the mungers in the repository.
 
 ### Formulas for parsing information
-For many data formats, it is enough to create concatenation formulas, referencing field names from your file by putting them in angle brackets. 
+For many results files, it is enough to create concatenation formulas, referencing field names from your file by putting them in angle brackets. 
 
 For simple `txt`, `csv` and `xls` file types, here is an example.
 ```
