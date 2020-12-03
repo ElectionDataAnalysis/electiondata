@@ -27,7 +27,7 @@ Candidate	Andi Rich	Andi Rich
 Candidate	Andrew McKinney	Andrew McKinney
 Candidate	Andrew Yang	Andrew Yang
 Candidate	Andrew Zuelke	Andrew Zuelke
-Candidate	André Jacque	André Jacque
+Candidate	AndrÃ© Jacque	AndrÃ© Jacque
 Candidate	Andy Craig	Andy Craig
 Candidate	Angel C. Sanchez	Angel C. Sanchez
 Candidate	Ann Groves Lloyd	Ann Groves Lloyd
@@ -147,7 +147,7 @@ Candidate	Erik Brooks	Erik Brooks
 Candidate	Erin Tracy	Erin Tracy
 Candidate	Evan Goyke	Evan Goyke
 Candidate	Evan McMullin	Evan McMullin
-Candidate	"F. James Sensenbrenner, Jr."	"F. James Sensenbrenner, Jr."
+Candidate	F. James Sensenbrenner, Jr.	F. James Sensenbrenner, Jr.
 Candidate	Francesca Hong	Francesca Hong
 Candidate	Frank T. Buress	Frank T. Buress
 Candidate	Gabriel A. Gomez	Gabriel A. Gomez
@@ -261,7 +261,7 @@ Candidate	Kelly Lynn Tenpas (write-in)	Kelly Lynn Tenpas (write-in)
 Candidate	Ken Driessen	Ken Driessen
 Candidate	Ken Holdorf	Ken Holdorf
 Candidate	Ken Skowronski	Ken Skowronski
-Candidate	"Ken Van Dyke, Sr."	"Ken Van Dyke, Sr."
+Candidate	Ken Van Dyke, Sr.	Ken Van Dyke, Sr.
 Candidate	Ken Yorgan	Ken Yorgan
 Candidate	Kerry Trask	Kerry Trask
 Candidate	Kevin A. Bauer	Kevin A. Bauer
@@ -509,8 +509,8 @@ Candidate	Donald J. Trump	Trump/Pence
 Candidate	Don Blankenship	Blankenship/Moore
 Candidate	Jo Jorgensen	Jorgensen/Cohen
 Candidate	Brian Carroll	Carroll/Patel
+Candidate	André Jacque	AndrÃÂÃÂ© Jacque
 Candidate	André Jacque	André Jacque
-Candidate	André Jacque	AndrÃÂ© Jacque
 Candidate	Write-in or Scattering	Write-in/Scattering
 CandidateContest	WI Attorney General	ATTORNEY GENERAL
 CandidateContest	WI Attorney General (Constitution Party)	ATTORNEY GENERAL - CON

@@ -3546,3 +3546,6 @@ Party	Independent Party	(Prefers Independent Party)
 Candidate	Devin Kuh	Devin Kuh
 Candidate	Write-in	Write-in
 Candidate	Uncommitted Delegates	Uncommitted Delegates
+Candidate	William 'Bill' Jenkin	William &quot;Bill&quot; Jenkin
+Candidate	Tracy 'Justice' Wright	Tracy &quot;Justice&quot; Wright
+
