@@ -17,6 +17,39 @@ See the template file (`src/parameter_file_templates/run_time.ini.template`).
 Ensure that the munger files are appropriate for your results file(s). 
  (1) If the munger doesn't already exist, pick a name for your munger and create a directory with that name in the `mungers` directory to hold `format.config` and `cdf_elements.txt`.
  (2) Copy the templates from `templates/munger_templates` to your munger directory. Every munger must have a value for `file_type`; depending your `file_type` other parameters may be required. Types currently supported are:
+ 
+ #### NEW VERSION:
+ `file_type`: controls which pandas function reads the file contents
+  * 'excel'
+    * (optional) a list `sheets_to_read` of spreadsheets to read, or a list `sheets_to_skip`. Default is to read the first sheet only
+  * 'json'
+  * 'xml'
+  * 'flat_text' Any tab-, comma-, or other-separated table in a plain tabular text file.
+    * (required) a field separator `sep` to be specified (usually `sep=,` for csv or `sep=\t` for .txt)
+    * (optional) a quote character `quoting`. Default is `quoting="`
+  * [[ will be obsolete: `structured_text` Any plain text file whose format is not strictly tabular
+    * (required) `structure` specified, e.g., `structure=concatenated-blocks`]]
+  
+  `count_location`: controls how the system looks for counts
+  * 'by_field_name'
+    * (required) list `count_fields` of names of fields containing counts. 
+    * (required for any but xml and json file_types) specify location of field names for count columns. For `excel` and `flat_text` file types, need integer `count_field_name_row` (NB: top row is 0, next row is 1, etc.)
+  * 'by column_number'
+    * (required) list of column numbers containing counts. 
+  
+  `string_location`: controls how the system looks for the character strings used to munge the non-count information (Candidate, Party, etc.)
+  * 'by_field_name'
+    * (required) list `string_fields` of names of fields containing character strings
+  * 'in_count_headers' this is used, e.g., when each candidate has a separate column in a tabular file. In this case there may be a single header row with relevant info, or there may be several rows (e.g., Contest in one row, Candidate in another row)
+    * (required) list `string_header_rows` of integers for rows containing necessary character strings. (NB: top row is 0, next row is 1, etc.)
+    
+   Available if appropriate for any file type:
+   * (optional) thousands_separator
+   * (optional) encoding (If not specified or recognized, `iso-8859-1` will be used. Recognized encodings are limited [python's list of recognized encodings and aliases](https://docs.python.org/3/library/codecs.html#standard-encodings).)
+
+ 
+ #### OLD VERSION:
+ file_type:
   * `xml`
   * `txt`
   * `csv`
