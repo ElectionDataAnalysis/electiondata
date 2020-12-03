@@ -8174,7 +8174,7 @@ Candidate	Darshun Kendrick	DARSHUN KENDRICK (I)
 Candidate	Karen Bennett	KAREN BENNETT (I)
 Candidate	Scott Hilton	SCOTT HILTON
 Candidate	Richard 'Rick' Underwood	RICHARD 'RICK' UNDERWOOD
-Candidate	Pedro 'Pete' Marin	PEDRO 'PETE' MARIN (I)
+Candidate	Pedro 'Pete' Marin (I)	PEDRO 'PETE' MARIN (I)
 Candidate	Brooks Coleman	BROOKS COLEMAN (I)
 Candidate	David Clark	DAVID CLARK (I)
 Candidate	Brenda Lopez	BRENDA LOPEZ
@@ -8432,7 +8432,6 @@ Candidate	TERI ANULEWICZ (I)	TERI ANULEWICZ (I)
 Candidate	LUISA WAKEMAN	LUISA WAKEMAN
 Candidate	CHINITA ALLEN	CHINITA ALLEN
 Candidate	ESSENCE JOHNSON	ESSENCE JOHNSON
-Candidate	KARÃÂÃÂN SANDIFORD	KARÃÂÃÂN SANDIFORD
 Candidate	ANDREA NUGENT	ANDREA NUGENT
 Candidate	MARY ROBICHAUX	MARY ROBICHAUX
 Candidate	CHARLES E. 'CHUCK' MARTIN (I)	CHARLES E. 'CHUCK' MARTIN (I)
@@ -8544,15 +8543,15 @@ Candidate	DICK DONOVAN (I)	DICK DONOVAN (I)
 Candidate	YES	YES
 Candidate	NO	NO
 Candidate	Shane Hazel	Shane Hazel
-Candidate	Pedro ''Pete'' Marin (I)	Pedro ''Pete'' Marin (I)
+Candidate	Pedro 'Pete' Marin (I)	Pedro ''Pete'' Marin (I)
 Candidate	Nikema Williams	Nikema Williams
 Candidate	Marcus A. Wiedower (I)	Marcus A. Wiedower (I)
 Candidate	Lester G. Jackson, III (I)	Lester G. Jackson, III (I)
 Candidate	Joe Reed	Joe Reed
 Candidate	Jo Jorgensen	Jo Jorgensen
-Candidate	Henry C. ''Hank'' Johnson, Jr. (I)	Henry C. ''Hank'' Johnson, Jr. (I)
+Candidate	Henry C. 'Hank' Johnson, Jr. (I)	Henry C. ''Hank'' Johnson, Jr. (I)
 Candidate	Billy Hickman (I)	Billy Hickman (I)
-Candidate	''Mokah'' Jasmine Johnson	''Mokah'' Jasmine Johnson
+Candidate	'Mokah' Jasmine Johnson	''Mokah'' Jasmine Johnson
 Candidate	Valencia Stovall	Valencia Stovall
 Candidate	Tamara Johnson-Shealey	Tamara Johnson-Shealey
 Candidate	Richard Dien Winfield	Richard Dien Winfield
@@ -8578,3 +8577,6 @@ Candidate	EARL 'BUDDY' CARTER (I)	EARL “BUDDY” CARTER (I)
 Candidate	'Able' Mable Thomas	ABLE MABLE THOMAS (I)
 Candidate	KARÍN SANDIFORD	KARÍN SANDIFORD
 Candidate	KARÍN SANDIFORD	KARÃÂN SANDIFORD
+Candidate	KARÍN SANDIFORD	KARÃN SANDIFORD
+Candidate	KARÍN SANDIFORD	KARÃÂÃÂN SANDIFORD
+

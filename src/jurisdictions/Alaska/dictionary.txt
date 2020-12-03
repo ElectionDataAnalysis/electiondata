@@ -732,7 +732,7 @@ Candidate	Coghill, John B. Jr.	Coghill, John B. Jr.
 Candidate	Colbert, Bennie D.	Colbert  Bennie D. - D
 Candidate	Costello, Mia	Costello, Mia
 Candidate	Cote, Shirley A.	Cote, Shirley A.
-CandidateCox, John R. 'Bear'"Cox  John R. ""Bear"" - R"
+Candidate	Cox, John R. 'Bear'	"Cox  John R. ""Bear"" - R"
 Candidate	Craig, Breck A.	Craig, Breck A.
 Candidate	Crawford, Harry T. J	Crawford, Harry T. J
 Candidate	Crawford, Jim	Crawford, Jim
@@ -1141,10 +1141,10 @@ Candidate	Bauer Paul A.	Bauer Paul A.''
 Candidate	Baker Thomas C.	Baker Thomas C.''
 Candidate	Baisden James	Baisden James''
 Candidate	Write-in 70	Write-in 70
-Candidate	Write-in 60	Write-in 70
-Candidate	Write-in 50	Write-in 70
-Write-in 40
-Write-in 30
-Write-in 20
+Candidate	Write-in 60	Write-in 60
+Candidate	Write-in 50	Write-in 50
+Candidate	Write-in 40	Write-in 40
+Candidate	Write-in 30	Write-in 30
+Candidate	Write-in 20	Write-in 20
 Candidate	Muñoz, Cathy	Muñoz, Cathy
 Candidate	Muñoz, Cathy	MuÃ±oz, Cathy
