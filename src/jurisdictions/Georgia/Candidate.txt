@@ -810,6 +810,7 @@ Allen Buckley
 Tim Echols
 Eric Hoskins
 Earl 'Buddy' Carter
+Earl 'Buddy' Carter (I)
 Greg Duke
 Angela Pendley
 Victor Armendariz
@@ -1072,7 +1073,7 @@ TERI ANULEWICZ (I)
 LUISA WAKEMAN
 CHINITA ALLEN
 ESSENCE JOHNSON
-KARÃÂN SANDIFORD
+KARÍN SANDIFORD
 ANDREA NUGENT
 MARY ROBICHAUX
 CHARLES E. 'CHUCK' MARTIN (I)
@@ -1187,9 +1188,9 @@ Marcus A. Wiedower (I)
 Lester G. Jackson, III (I)
 Joe Reed
 Jo Jorgensen
-Henry C. ''Hank'' Johnson, Jr. (I)
+Henry C. 'Hank' Johnson, Jr. (I)
 Billy Hickman (I)
-''Mokah'' Jasmine Johnson
+'Mokah' Jasmine Johnson
 Richard Dien Winfield
 Raphael Warnock
 Michael Todd Greene

@@ -1130,6 +1130,8 @@ Party	Republican Party	Republican Party
 Party	Republican Party	REP
 Party	Green Party	Green Party
 Party	Libertarian Party	LBT
+Party	Independent Party	IND
+Party	Green Party	GRN
 ReportingUnit	Maricopa County;AZ House District 1	Maricopa County;AZ House District 1
 ReportingUnit	Maricopa County;AZ House District 2	Maricopa County;AZ House District 2
 ReportingUnit	Maricopa County;AZ House District 3	Maricopa County;AZ House District 3

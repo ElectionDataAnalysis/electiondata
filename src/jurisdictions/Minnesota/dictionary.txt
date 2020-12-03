@@ -13334,3 +13334,7 @@ Candidate	Jason Ruffalo	Jason Ruffalo
 Candidate	David L. Nelson	David L. Nelson
 Candidate	Cal K. Bahr	Cal K. Bahr
 Candidate	Bryan P. Björnson	Bryan P. Björnson
+Candidate	Julián Castro	Julián Castro
+Candidate	Margaret E. Martín	Margaret E. Martín
+Candidate	Margaret E. Martín	Margaret E. MartÃÂÃÂ­n
+Candidate	Julián Castro	JuliÃÂÃÂ¡n Castro

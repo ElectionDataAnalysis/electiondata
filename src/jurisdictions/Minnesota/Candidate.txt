@@ -346,7 +346,6 @@ Deval Patrick
 Tom Steyer
 Pete Buttigieg
 Amy Klobuchar
-JuliÃÂÃÂ¡n Castro
 John K. Delaney
 Marianne Williamson
 Bernie Sanders
@@ -2086,7 +2085,6 @@ Paul Rosenthal
 Tim Johnson
 Linda Slocum
 Jessica Newville
-Margaret E. MartÃÂÃÂ­n
 Gabe Barnett
 Abdimalik Askar
 Brian Rosenblatt
@@ -2803,3 +2801,5 @@ Cal K. Bahr
 Bryan P. Björnson
 Julie Dupré
 Renée Cardarelle
+Julián Castro
+Margaret E. Martín

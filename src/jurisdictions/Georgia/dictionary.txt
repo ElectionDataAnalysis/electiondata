@@ -8575,4 +8575,6 @@ Candidate	Al Bartell	Al Bartell
 Candidate	A. Wayne Johnson	A. Wayne Johnson
 Candidate	HENRY C 'HANK' JOHNSON JR (I)	HENRY C “HANK” JOHNSON JR (I)
 Candidate	EARL 'BUDDY' CARTER (I)	EARL “BUDDY” CARTER (I)
-Candidate	ABLE MABLE THOMAS (I)	ABLE MABLE THOMAS (I)
+Candidate	'Able' Mable Thomas	ABLE MABLE THOMAS (I)
+Candidate	KARÍN SANDIFORD	KARÍN SANDIFORD
+Candidate	KARÍN SANDIFORD	KARÃÂN SANDIFORD
