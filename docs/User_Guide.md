@@ -33,19 +33,21 @@ Ensure that the munger files are appropriate for your results file(s).
   `count_location`: controls how the system looks for counts
   * 'by_field_name'
     * (required) list `count_fields` of names of fields containing counts. 
-    * (required for any but xml and json file_types) specify location of field names for count columns. For `excel` and `flat_text` file types, need integer `count_field_name_row` (NB: top row is 0, next row is 1, etc.)
+    * (required for any but xml and json file_types) specify location of field names for count columns. For `excel` and `flat_text` file types, need integer `count_field_name_row` (NB: top row not skipped is 0, next row is 1, etc.)
   * 'by column_number'
     * (required) list of column numbers containing counts. 
   
-  `string_location`: controls how the system looks for the character strings used to munge the non-count information (Candidate, Party, etc.)
+  `string_locations`: controls how the system looks for the character strings used to munge the non-count information (Candidate, Party, etc.). There may be multiple, so the value is a list 
   * 'by_field_name'
     * (required) list `string_fields` of names of fields containing character strings
   * 'in_count_headers' this is used, e.g., when each candidate has a separate column in a tabular file. In this case there may be a single header row with relevant info, or there may be several rows (e.g., Contest in one row, Candidate in another row)
-    * (required) list `string_header_rows` of integers for rows containing necessary character strings. (NB: top row is 0, next row is 1, etc.)
+    * (required) list `string_header_rows` of integers for rows containing necessary character strings. (NB: top row not skipped is 0, next row is 1, etc.)
+  * 'in_constant_rows' list of integer row numbers which contain relevant character strings constant over the entire table
     
    Available if appropriate for any file type:
-   * (optional) thousands_separator
-   * (optional) encoding (If not specified or recognized, `iso-8859-1` will be used. Recognized encodings are limited [python's list of recognized encodings and aliases](https://docs.python.org/3/library/codecs.html#standard-encodings).)
+   * (optional) `thousands_separator`. In the US the separator is almost always ',' if it is used. Watch out for Excel files which may show a comma when you look at them in Excel -- there may not be a comma in the underlying data.
+   * (optional) `encoding` (If not specified or recognized, `iso-8859-1` will be used. Recognized encodings are limited [python's list of recognized encodings and aliases](https://docs.python.org/3/library/codecs.html#standard-encodings).)
+   * (optional) `rows_to_skip` (for a flat file). Note that this parameter will affect any integer parameters designating particular rows.
 
  
  #### OLD VERSION:
