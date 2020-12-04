@@ -566,7 +566,7 @@ class SingleDataLoader:
             # load results to db
             for mu in self.munger_list:
                 f_path = os.path.join(self.results_dir, self.d["results_file"])
-                new_err = ui.new_datafile(
+                new_err = ui.load_datafile(
                     self.session,
                     self.munger[mu],
                     f_path,

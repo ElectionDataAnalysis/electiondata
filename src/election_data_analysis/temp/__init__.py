@@ -121,7 +121,7 @@ def count_fields(
     return cf
 
 
-def read_and_process(
+def create_munger_files(
         ini_dir,
         old_mungers_dir,
         new_mungers_dir,
@@ -237,6 +237,23 @@ def read_and_process(
     return err
 
 
+def load_datafile(
+    session,
+    munger: jm.Munger,
+    raw_path: str,
+    juris: jm.Jurisdiction,
+    results_info: dict,
+    aux_data_path: str = None,
+) -> Optional[dict]:
+    # TODO
+    # read df(s) from file
+
+    # for each df:
+        # transform to df where all columns are count columns and all raw munge info is in row multi-index
+        # transform raw multi-index to munged multi-index
+        # load counts to db
+    return
+
 if __name__ == "__main__":
     ini_directory = '/Users/singer3/PycharmProjects/election_data_analysis/src/ini_files_for_results'
     old_mungers_directory = '/Users/singer3/PycharmProjects/election_data_analysis/src/mungers'
@@ -252,7 +269,7 @@ if __name__ == "__main__":
 
     aa = count_fields(ini_directory, old_mungers_directory, results_directory)
 
-    new_sections = read_and_process(
+    err = create_munger_files(
         ini_directory,
         old_mungers_directory,
         new_mungers_directory,
