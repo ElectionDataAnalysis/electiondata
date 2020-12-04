@@ -121,12 +121,17 @@ def count_fields(
     return cf
 
 
-def run(ini_dir, old_mungers_dir, new_mungers_dir, results_dir):
+def read_and_process(
+        ini_dir,
+        old_mungers_dir,
+        new_mungers_dir,
+        results_dir
+) -> dict:
     err = None
 
-    headers = ["format", "by_field_name", "in_count_headers", "in_constant_row"]
-
     count_field_dict = count_fields(ini_dir, old_mungers_dir, results_dir)
+    if not os.path.isdir(new_mungers_dir):
+        os.mkdir(new_mungers_directory)
 
     for mu in os.listdir(old_mungers_dir):
         mu_dir = os.path.join(old_mungers_dir, mu)
@@ -135,8 +140,6 @@ def run(ini_dir, old_mungers_dir, new_mungers_dir, results_dir):
 
             # initialize dict to hold info to be written
             new_sections = dict()
-            for h in headers:
-                new_sections[h] = [f"[{h}]"]
 
             # get contents of format.config
             d, err = ui.get_runtime_parameters(
@@ -147,8 +150,16 @@ def run(ini_dir, old_mungers_dir, new_mungers_dir, results_dir):
                 err=err,
             )
             # get contents of cdf_elements
-            cdf_elements_df = pd.read_csv(os.path.join(mu_dir, "cdf_elements.txt"))
+            cdf_elements_df = pd.read_csv(os.path.join(mu_dir, "cdf_elements.txt"), sep="\t")
 
+            # initialize format header
+            new_sections["format"] = ["[format]"]
+            # copy simple parameters
+            for param in ["encoding", "thousands_separator"]:
+                if d[param] is not None:
+                    new_sections["format"].append(f"{param}={d[param]}")
+
+            # set file_type and related params
             if d["file_type"] == "csv":
                 new_sections["format"].append(f"file_type=flat_text")
                 new_sections["format"].append(f"sep=,")
@@ -163,7 +174,10 @@ def run(ini_dir, old_mungers_dir, new_mungers_dir, results_dir):
             elif d["file_type"] == "xls-multi":
                 new_sections["format"].append(f"file_type=excel")
                 new_sections["format"].append(f"sheets_to_skip={d['sheets_to_skip']}")
+            elif d["file_type"] in ["json-nested", "xml"]:
+                new_sections["format"].append(f"file_type={d['file_type']}")
 
+            # set count_location and related params
             if d["count_columns"] is not None:
                 new_sections["format"].append(f"count_location=by_column_number")
                 new_sections["format"].append(f"count_columns={d['count_columns']}")
@@ -174,13 +188,53 @@ def run(ini_dir, old_mungers_dir, new_mungers_dir, results_dir):
                 new_sections["format"].append(f"count_location=by_column_number")
                 new_sections["format"].append(f"count_columns={d['count_columns']}")
 
-                # create contents for 'by_field_name' header
+            # set string_location and related params 
+            str_locations = []
+            if {"row", "xml"}.intersection(set(cdf_elements_df["source"].unique())):
+                str_locations.append('from_field_values')
+            if {"column"}.issubset(set(cdf_elements_df["source"].unique())):
+                str_locations.append("in_count_headers")
+            if {"ini"}.issubset(set(cdf_elements_df["source"].unique())):
+                str_locations.append("constant_over_file")
+            if (d["file_type"] == "xls-multi" 
+                    and 
+                cdf_elements_df["raw_identifier_formula"].str.contains("constant_line").any()
+            ):
+                str_locations.append("constant_over_sheet")
 
-                # create contents for 'in_count_headers' header
-
-                # create contents for 'in_constant_row' header
-
-    return
+            if "from_field_values" in str_locations:
+                # initialize the section
+                new_sections["from_field_values"] = ["[from_field_values]"]
+                # fill the section
+                for idx, r in cdf_elements_df.iterrows():
+                    if r["source"] in ["row", "xml"]:
+                        new_sections["from_field_values"].append(f"{r['name']}={r['raw_identifier_formula']}")
+            if "in_count_headers" in str_locations:
+                # initialize the section
+                new_sections["in_count_headers"] = ["[in_count_headers]"]
+                # fill the section
+                for idx, r in cdf_elements_df.iterrows():
+                    if r["source"] == "column":
+                        new_sections["in_count_headers"].append(f"{r['name']}={r['raw_identifier_formula']}")
+            if "constant_over_file" in str_locations:
+                # create the corresponding parameter
+                constant_list = list(
+                    cdf_elements_df[cdf_elements_df["source"]=="ini"]["name"].unique()
+                )
+                cl = ",".join(constant_list)
+                new_sections["format"].append(f"constant_over_file={cl}")
+            if "constant_over_sheet" in str_locations:
+                # initialize the section
+                new_sections["constant_over_sheet"] = ["[constant_over_sheet]"]
+                # fill the section
+                for idx, r in cdf_elements_df.iterrows():
+                    pass  # TODO
+            section_strings = ["\n".join(new_sections[k]) for k in new_sections.keys()]
+            file_string = "\n\n".join(section_strings)
+            new_mu_file_path = os.path.join(new_mungers_dir,f"{mu}.config")
+            with open(new_mu_file_path,"w") as f:
+                f.write(file_string)
+    return err
 
 
 if __name__ == "__main__":
@@ -198,7 +252,7 @@ if __name__ == "__main__":
 
     aa = count_fields(ini_directory, old_mungers_directory, results_directory)
 
-    run(
+    new_sections = read_and_process(
         ini_directory,
         old_mungers_directory,
         new_mungers_directory,
