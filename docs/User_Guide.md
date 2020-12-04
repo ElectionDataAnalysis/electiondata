@@ -34,8 +34,8 @@ Ensure that the munger files are appropriate for your results file(s).
     * (required) list `count_fields` of names of fields containing counts. 
     * (required for any but xml and json file_types) specify location of field names for count columns. For `excel` and `flat_text` file types, need integer `count_field_name_row` (NB: top row not skipped is 0, next row is 1, etc.)
   * 'by column_number'
-    * (required) list of column numbers containing counts. 
-  
+    * (required) list `count_columns` of column numbers containing counts. 
+    
   `string_locations`: controls how the system looks for the character strings used to munge the non-count information (Candidate, Party, etc.). There may be multiple, so the value is a list 
   * 'by_field_name'
     * (required) list `string_fields` of names of fields containing character strings
