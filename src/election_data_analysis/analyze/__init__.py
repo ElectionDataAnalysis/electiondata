@@ -110,8 +110,9 @@ def create_rollup(
             )
 
         df, err_str = db.export_rollup_from_db(
-            cursor=cursor,
+            session,
             top_ru=top_ru,
+            election=election,
             sub_unit_type=sub_rutype,
             contest_type=contest_type,
             datafile_list=datafile_list,
@@ -127,6 +128,7 @@ def create_rollup(
 
     # export to inventory file
     inv_df.to_csv(inventory_file, index=False, sep="\t")
+    cursor.close()
     return err_str
 
 
