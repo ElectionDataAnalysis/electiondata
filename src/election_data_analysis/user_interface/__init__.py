@@ -636,7 +636,7 @@ def archive(relative_path: str, current_dir: str, archive_dir: str):
     return
 
 
-def new_datafile(
+def load_datafile(
     session,
     munger: jm.Munger,
     raw_path: str,
