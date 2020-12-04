@@ -22,7 +22,7 @@ Ensure that the munger files are appropriate for your results file(s).
  `file_type`: controls which pandas function reads the file contents
   * 'excel'
     * (optional) a list `sheets_to_read` of spreadsheets to read, or a list `sheets_to_skip`. Default is to read the first sheet only
-  * 'nested-json'
+  * 'json-nested'
   * 'xml'
   * 'flat_text' Any tab-, comma-, or other-separated table in a plain tabular text file.
     * (required) a field separator `sep` to be specified (usually `sep=,` for csv or `sep=\t` for .txt)
@@ -37,11 +37,12 @@ Ensure that the munger files are appropriate for your results file(s).
     * (required) list `count_columns` of column numbers containing counts. 
     
   `string_locations`: controls how the system looks for the character strings used to munge the non-count information (Candidate, Party, etc.). There may be multiple, so the value is a list 
-  * 'by_field_name'
+  * 'from_field_values'
     * (required) list `string_fields` of names of fields containing character strings
   * 'in_count_headers' this is used, e.g., when each candidate has a separate column in a tabular file. In this case there may be a single header row with relevant info, or there may be several rows (e.g., Contest in one row, Candidate in another row)
     * (required) list `string_header_rows` of integers for rows containing necessary character strings. (NB: top row not skipped is 0, next row is 1, etc.)
-  * 'in_full_rows' list of integer row numbers which contain relevant character strings constant over the entire table
+  * 'constant_over_file'
+  * 'constant_over_sheet'
     
    Available if appropriate for any file type:
    * (optional) `thousands_separator`. In the US the separator is almost always ',' if it is used. Watch out for Excel files which may show a comma when you look at them in Excel -- there may not be a comma in the underlying data.
