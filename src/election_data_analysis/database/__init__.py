@@ -1424,7 +1424,7 @@ and cruj."ParentReportingUnit_Id" = %s
 
 
 def export_rollup_from_db(
-    cursor,
+    session,
     top_ru: str,
     election: str,
     sub_unit_type: str,
@@ -1439,6 +1439,8 @@ def export_rollup_from_db(
     If by_vote_type, return separate rows for each vote type.
     If exclude_redundant_total then, if both total and other vote types are given, exclude total"""
 
+    connection = session.bind.raw_connection()
+    cursor = connection.cursor()
     # define the 'where' sql clause based on restrictions from parameters
     # and the string variables to be passed to query
     restrict = ""
@@ -1574,6 +1576,7 @@ def export_rollup_from_db(
     except Exception as exc:
         results_df = pd.DataFrame()
         err_str = f"No results exported due to database error: {exc}"
+    cursor.close()
     return results_df, err_str
 
 
