@@ -601,7 +601,7 @@ def read_combine_results(
 
 
 def archive_from_param_file(param_file: str, current_dir: str, archive_dir: str):
-    params, err = get_runtime_parameters(
+    params, err = get_parameters(
         required_keys=["results_file", "aux_data_dir"],
         header="election_data_analysis",
         param_file=os.path.join(current_dir, param_file),
@@ -707,7 +707,7 @@ def load_datafile(
     return err
 
 
-def get_runtime_parameters(
+def get_parameters(
     required_keys: list,
     param_file: str,
     header: str,
@@ -1021,7 +1021,7 @@ def confirm_essential_info(
         p_path = os.path.join(directory, f)
         file_confirmed = False
         while not file_confirmed:
-            param_dict, err = get_runtime_parameters(
+            param_dict, err = get_parameters(
                 required_keys=param_list + list(known.keys()),
                 header=header,
                 param_file=p_path,
@@ -1065,7 +1065,7 @@ def election_juris_list(dir_path: str) -> list:
     ej_list = []
     for f in os.listdir(dir_path):
         if f[-4:] == ".ini":
-            d, err = get_runtime_parameters(
+            d, err = get_parameters(
                 param_file=os.path.join(dir_path, f),
                 header="election_data_analysis",
                 required_keys=["election", "top_reporting_unit"],
@@ -1088,7 +1088,7 @@ def reload_juris_election(
     """Assumes run_time.ini in directory, and results to be loaded are in the results_dir named in run_time.ini"""
     # initialize dataloader
     dl = e.DataLoader()
-    db_params = get_runtime_parameters(
+    db_params = get_parameters(
         ["host", "port", "dbname", "user", "password",],
         "run_time.ini",
         "postgresql",
@@ -1151,7 +1151,7 @@ def reload_juris_election(
         unloaded_directory = os.path.join(archive_directory, "unloaded")
     for f in [f for f in os.listdir(archive_directory) if f[-4:] == ".ini"]:
         param_file = os.path.join(archive_directory, f)
-        params, err = get_runtime_parameters(
+        params, err = get_parameters(
             required_keys=["election", "top_reporting_unit", "results_file"],
             header="election_data_analysis",
             param_file=param_file,

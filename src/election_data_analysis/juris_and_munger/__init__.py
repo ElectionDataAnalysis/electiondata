@@ -300,7 +300,7 @@ def read_munger_info_from_files(dir_path):
     # read formatting info
     required_keys = munger_pars_req
     optional_keys = list(munger_pars_opt.keys())
-    options, missing_required_params = ui.get_runtime_parameters(
+    options, missing_required_params = ui.get_parameters(
         required_keys=required_keys,
         param_file=os.path.join(dir_path, "format.config"),
         header="format",
@@ -518,7 +518,7 @@ def check_munger_file_format(
     if munger_file == "cdf_elements.txt":
         pass  # nothing to check now that entries may vary
     elif munger_file == "format.config":
-        d, err = ui.get_runtime_parameters(
+        d, err = ui.get_parameters(
             required_keys=munger_pars_req,
             param_file=os.path.join(munger_path, munger_file),
             header="format",
@@ -591,7 +591,7 @@ def check_munger_file_contents(munger_path, munger_file, err):
             )
 
     elif munger_file == "format.config":
-        format_d, err = ui.get_runtime_parameters(
+        format_d, err = ui.get_parameters(
             required_keys=munger_pars_req,
             param_file=os.path.join(munger_path, "format.config"),
             header="format",

@@ -50,7 +50,7 @@ def grab_ini_files(results_dir, path_to_repo):
 
     # if the results file not found, delete the .ini file & warn user
     for par_file in par_files:
-        d, err = ui.get_runtime_parameters(
+        d, err = ui.get_parameters(
             required_keys=["results_file"],
             header="election_data_analysis",
             param_file=os.path.join(results_dir, par_file),

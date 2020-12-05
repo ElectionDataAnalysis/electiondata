@@ -220,7 +220,7 @@ def test_connection(paramfile="run_time.ini", dbname=None) -> (bool, dict):
     err = None
 
     try:
-        params = ui.get_runtime_parameters(
+        params = ui.get_parameters(
             required_keys=db_pars, param_file=paramfile, header="postgresql"
         )[0]
     except MissingSectionHeaderError as e:
@@ -283,7 +283,7 @@ def create_or_reset_db(
     """if no dbname is given, name will be taken from param_file"""
 
     project_root = Path(__file__).absolute().parents[1]
-    params, err = ui.get_runtime_parameters(
+    params, err = ui.get_parameters(
         required_keys=db_pars, param_file=param_file, header="postgresql"
     )
     if err:
@@ -343,7 +343,7 @@ def sql_alchemy_connect(
     param_file: str = "run_time.ini", dbname: Optional[str] = None
 ) -> (sqlalchemy.engine, Optional[dict]):
     """Returns an engine and a metadata object"""
-    params, err = ui.get_runtime_parameters(
+    params, err = ui.get_parameters(
         required_keys=db_pars, param_file=param_file, header="postgresql"
     )
     if err:
