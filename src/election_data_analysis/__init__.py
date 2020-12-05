@@ -69,7 +69,7 @@ class DataLoader:
     def __new__(cls):
         """Checks if parameter file exists and is correct. If not, does
         not create DataLoader object."""
-        d, err = ui.get_runtime_parameters(
+        d, err = ui.get_parameters(
             required_keys=multi_data_loader_pars,
             optional_keys=optional_mdl_pars,
             param_file="run_time.ini",
@@ -84,7 +84,7 @@ class DataLoader:
 
     def __init__(self):
         # grab parameters
-        self.d, self.parameter_err = ui.get_runtime_parameters(
+        self.d, self.parameter_err = ui.get_parameters(
             required_keys=multi_data_loader_pars,
             optional_keys=optional_mdl_pars,
             param_file="run_time.ini",
@@ -149,7 +149,7 @@ class DataLoader:
         mungers_path = self.d["mungers_dir"]
 
         # define directory for archiving successfully loaded files (and storing warnings)
-        db_param, new_err = ui.get_runtime_parameters(
+        db_param, new_err = ui.get_parameters(
             required_keys=["dbname"], param_file="run_time.ini", header="postgresql"
         )
         if new_err:
@@ -189,7 +189,7 @@ class DataLoader:
         for f in par_files:
             # grab parameters
             par_file = os.path.join(self.d["results_dir"], f)
-            params[f], new_err = ui.get_runtime_parameters(
+            params[f], new_err = ui.get_parameters(
                 required_keys=sdl_pars_req,
                 optional_keys=sdl_pars_opt,
                 param_file=par_file,
@@ -359,7 +359,7 @@ class SingleDataLoader:
 
         # grab parameters (known to exist from __new__, so can ignore error variable)
         par_file = os.path.join(results_dir, par_file_name)
-        self.d, dummy_err = ui.get_runtime_parameters(
+        self.d, dummy_err = ui.get_parameters(
             required_keys=sdl_pars_req,
             optional_keys=sdl_pars_opt,
             param_file=par_file,
@@ -671,7 +671,7 @@ def check_and_init_singledataloader(
     error dictionary (including munger errors noted in SDL initialization)"""
     # test parameters
     par_file = os.path.join(results_dir, par_file_name)
-    d, err = ui.get_runtime_parameters(
+    d, err = ui.get_parameters(
         required_keys=sdl_pars_req,
         optional_keys=sdl_pars_opt,
         param_file=par_file,
@@ -727,7 +727,7 @@ class JurisdictionPrepper:
             ("run_time.ini", ["jurisdictions_dir","mungers_dir"]),
         ]:
             try:
-                d, parameter_err = ui.get_runtime_parameters(
+                d, parameter_err = ui.get_parameters(
                     required_keys=required,
                     param_file=param_file,
                     header="election_data_analysis",
@@ -1147,7 +1147,7 @@ class JurisdictionPrepper:
         for each file in <dir> named (with munger) in a .ini file in the directory"""
         print(f"\nStarting {inspect.currentframe().f_code.co_name}")
 
-        environment_d, new_err = ui.get_runtime_parameters(
+        environment_d, new_err = ui.get_parameters(
             required_keys=["mungers_dir"],
             param_file="run_time.ini",
             header="election_data_analysis",
@@ -1160,7 +1160,7 @@ class JurisdictionPrepper:
 
         for par_file_name in [x for x in os.listdir(dir) if x[-4:] == ".ini"]:
             par_file = os.path.join(dir, par_file_name)
-            d, new_err = ui.get_runtime_parameters(
+            d, new_err = ui.get_parameters(
                 required_keys=sdl_pars_req,
                 param_file=par_file,
                 header="election_data_analysis",
@@ -1203,7 +1203,7 @@ class JurisdictionPrepper:
 
         print(f"\nStarting {inspect.currentframe().f_code.co_name}")
         # get path to mungers directory
-        environment_d, new_err = ui.get_runtime_parameters(
+        environment_d, new_err = ui.get_parameters(
             required_keys=["mungers_dir"],
             param_file="run_time.ini",
             header="election_data_analysis",
@@ -1215,7 +1215,7 @@ class JurisdictionPrepper:
         for par_file_name in [x for x in os.listdir(dir) if x[-4:] == ".ini"]:
             # pull parameters for results file
             par_file = os.path.join(dir, par_file_name)
-            d, new_err = ui.get_runtime_parameters(
+            d, new_err = ui.get_parameters(
                 required_keys=["results_file", "munger_name"],
                 header="election_data_analysis",
                 optional_keys=["aux_data_dir"],
@@ -1391,7 +1391,7 @@ class JurisdictionPrepper:
             ("jurisdiction_prep.ini",prep_pars),
             ("run_time.ini", ["jurisdictions_dir","mungers_dir"]),
         ]:
-            d, parameter_err = ui.get_runtime_parameters(
+            d, parameter_err = ui.get_parameters(
                 required_keys=required,
                 param_file=param_file,
                 header="election_data_analysis",
@@ -1438,12 +1438,12 @@ class Analyzer:
         try:
             if not param_file:
                 param_file = "run_time.ini"
-            d, postgres_param_err = ui.get_runtime_parameters(
+            d, postgres_param_err = ui.get_parameters(
                 required_keys=["dbname"],
                 param_file=param_file,
                 header="postgresql",
             )
-            d, eda_err = ui.get_runtime_parameters(
+            d, eda_err = ui.get_parameters(
                 required_keys=["rollup_directory"],
                 param_file=param_file,
                 header="election_data_analysis",
@@ -1469,7 +1469,7 @@ class Analyzer:
             param_file = "run_time.ini"
 
         # read rollup_directory from param_file
-        d, error = ui.get_runtime_parameters(
+        d, error = ui.get_parameters(
             required_keys=["rollup_directory"],
             param_file=param_file,
             header="election_data_analysis",
