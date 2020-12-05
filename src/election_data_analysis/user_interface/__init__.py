@@ -358,115 +358,162 @@ def find_dupes(df):
 
 
 def read_single_datafile(
-    munger: jm.Munger, f_path: str, err: Optional[dict]
-) -> (pd.DataFrame, dict):
+    p: Dict[str, Any], f_path: str, err: Optional[dict] = None
+) -> (Dict[str, pd.DataFrame], dict):
+    """Length of returned dictionary is the number of sheets read -- usually 1 except for multi-sheet Excel"""
     try:
-        dtype = {c: str for c in munger.field_list}
-        kwargs = {"dtype": dtype}
-        if munger.thousands_separator is not None:
-            kwargs["thousands"] = munger.thousands_separator
+        # create dictionary of keyword arguments
+        kwargs = dict()
 
-        if munger.options["file_type"] in ["json"]:
-            pass
-        elif munger.options["field_name_row"] is None:
-            kwargs["header"] = None
-            kwargs["names"] = munger.options["field_names_if_no_field_name_row"]
-            kwargs["index_col"] = False
-        else:
-            # if not a multi-index
-            if munger.options["header_row_count"] == 1:
-                # can protect against a problem with pandas.read_csv and read_excel
-                #  see https://github.com/pandas-dev/pandas/issues/11733
-                # TODO how to protect in case of multi-index?
-                kwargs["header"] = 0
+        # ensure that string-location field values will be read as strings
+        if "from_field_values" in p["string_locations"]:
+            dtype = {c: str for c in p["string_field_names"]}
+            kwargs["dtype"] = dtype
+
+        if p["file_type"] in ["excel", "flat_text"]:
+            # designate header rows (for both count columns or string-location info/columns)
+            header_rows = set()
+            # if count_locations are by field name, need count_field_name_row
+            if p["count_locations"] == "by_field_name":
+                header_rows.update({p["count_field_name_row"]})
+            # if any string locations are from field values AND field names are in the table, need string_field_name_row
+            if p["all_rows"] == None and "from_field_values" in p["string_locations"]:
+                header_rows.update({p["string_field_name_row"]})
+            # if any string locations are in count headers need string_header_row_numbers
+            if "in_count_headers" in p["string_locations"]:
+                header_rows.update(p["string_header_row_numbers"])
+            kwargs["header"] = header_rows
+
+            # designate rows to skip
+            if p["rows_to_skip"]:
+                kwargs["skiprows"] = p["rows_to_skip"]
+
+        # other parameters
+        if p["thousands_separator"]:
+            kwargs["thousands"] = p["thousands_separator"]
+        if p["quoting"]:
+            kwargs["quoting"] = p["quoting"]
+
+        # read file
+        if p["file_type"] == "excel":
+            if p["sheets_to_read_names"] or p["sheets_to_read_numbers"]:
+                kwargs["sheet_name"] = p["sheets_to_read_numbers"] + p["sheets_to_read_names"]
+            else:
+                kwargs["sheet_name"] = None
+            df_dict = pd.read_excel(f_path, **kwargs)
+        elif p["file_type"] == "flat_text":
+            kwargs["sep"] = p["flat_file_delimiter"]
+            df = pd.read_csv(f_path, **kwargs)
+        elif p["file_type"] in ["json-nested", "xml"]:
+            pass  # TODO
+
+        if False:
+            dtype = {c: str for c in munger.field_list}
+            kwargs = {"dtype": dtype}
+            if munger.thousands_separator is not None:
+                kwargs["thousands"] = munger.thousands_separator
+
+            if munger.options["file_type"] in ["json"]:
+                pass
+            elif munger.options["field_name_row"] is None:
+                kwargs["header"] = None
+                kwargs["names"] = munger.options["field_names_if_no_field_name_row"]
                 kwargs["index_col"] = False
             else:
-                kwargs["header"] = list(range(munger.options["header_row_count"]))
-                kwargs["index_col"] = None
+                # if not a multi-index
+                if munger.options["header_row_count"] == 1:
+                    # can protect against a problem with pandas.read_csv and read_excel
+                    #  see https://github.com/pandas-dev/pandas/issues/11733
+                    # TODO how to protect in case of multi-index?
+                    kwargs["header"] = 0
+                    kwargs["index_col"] = False
+                else:
+                    kwargs["header"] = list(range(munger.options["header_row_count"]))
+                    kwargs["index_col"] = None
 
-        if munger.options["count_of_top_lines_to_skip"]:
-            kwargs["skiprows"] = range(munger.options["count_of_top_lines_to_skip"])
+            if munger.options["count_of_top_lines_to_skip"]:
+                kwargs["skiprows"] = range(munger.options["count_of_top_lines_to_skip"])
 
-        if munger.file_type in ["txt", "csv", "txt-semicolon-separated"]:
-            kwargs["encoding"] = munger.encoding
-            kwargs["quoting"] = csv.QUOTE_MINIMAL
-            if munger.file_type == "txt":
-                kwargs["sep"] = "\t"
-            elif munger.file_type == "txt-semicolon-separated":
-                kwargs["sep"] = ";"
-            df = pd.read_csv(f_path, **kwargs)
-        elif munger.file_type in ["xls", "xlsx"]:
-            df = pd.read_excel(f_path, **kwargs)
-        elif munger.file_type in ["json"]:
-            kwargs["encoding"] = munger.encoding
-            df = pd.read_json(f_path, **kwargs)
-        elif munger.file_type in ["concatenated-blocks", "xls-multi", "xml", "json-nested"]:
-            err = add_new_error(
-                err,
-                "system",
-                "user_interface.read_single_datafile",
-                f"Munger ({munger.name}) with file_type {munger.file_type} "
-                f"should not have reached this part of the code.",
-            )
-            return pd.DataFrame(), err
-        else:
-            err = add_new_error(
-                err,
-                "munger",
-                munger.name,
-                f"Unrecognized file_type: {munger.file_type}",
-            )
-            return pd.DataFrame(), err
-        if df.empty:
-            err = add_new_error(
-                err,
-                "munger",
-                munger.name,
-                f"Nothing read from datafile. Munger may be inconsistent, or datafile may be empty.",
-            )
-        else:
-            # get count columns by name
-            if munger.options["count_columns_by_name"]:
-                count_cols_by_name = munger.options["count_columns_by_name"]
-            elif munger.options["count_columns"]:
-                count_cols_by_name = [
-                    df.columns[j]
-                    for j in munger.options["count_columns"]
-                    if j < df.shape[1]
-                ]
-            else:
-                count_cols_by_name = None
-
-            # clean the column names
-            df, count_cols_by_name, err_str = m.clean_column_names(
-                df, count_cols_by_name
-            )
-            if err_str:
-                err = add_new_error(err, "warn-file", Path(f_path).name, err_str)
-
-            # clean the count columns
-            df, err_df = m.clean_count_cols(df, count_cols_by_name, thousands=munger.thousands_separator)
-            if not err_df.empty:
-                err = add_err_df(err, err_df, munger, f_path)
-                # show all columns of dataframe holding rows where counts were set to 0
-                pd.set_option("max_columns", None)
+            if munger.file_type in ["txt", "csv", "txt-semicolon-separated"]:
+                kwargs["encoding"] = munger.encoding
+                kwargs["quoting"] = csv.QUOTE_MINIMAL
+                if munger.file_type == "txt":
+                    kwargs["sep"] = "\t"
+                elif munger.file_type == "txt-semicolon-separated":
+                    kwargs["sep"] = ";"
+                df = pd.read_csv(f_path, **kwargs)
+            elif munger.file_type in ["xls", "xlsx"]:
+                df = pd.read_excel(f_path, **kwargs)
+            elif munger.file_type in ["json"]:
+                kwargs["encoding"] = munger.encoding
+                df = pd.read_json(f_path, **kwargs)
+            elif munger.file_type in ["concatenated-blocks", "xls-multi", "xml", "json-nested"]:
                 err = add_new_error(
                     err,
-                    "warn-munger",
-                    munger.name,
-                    f"At least one count was set to 0 in certain rows of {Path(f_path).name}:\n{err_df}",
+                    "system",
+                    "user_interface.read_single_datafile",
+                    f"Munger ({munger.name}) with file_type {munger.file_type} "
+                    f"should not have reached this part of the code.",
                 )
-                pd.reset_option("max_columns")
+                return pd.DataFrame(), err
+            else:
+                err = add_new_error(
+                    err,
+                    "munger",
+                    munger.name,
+                    f"Unrecognized file_type: {munger.file_type}",
+                )
+                return pd.DataFrame(), err
+            if df.empty:
+                err = add_new_error(
+                    err,
+                    "munger",
+                    munger.name,
+                    f"Nothing read from datafile. Munger may be inconsistent, or datafile may be empty.",
+                )
+            else:
+                # get count columns by name
+                if munger.options["count_columns_by_name"]:
+                    count_cols_by_name = munger.options["count_columns_by_name"]
+                elif munger.options["count_columns"]:
+                    count_cols_by_name = [
+                        df.columns[j]
+                        for j in munger.options["count_columns"]
+                        if j < df.shape[1]
+                    ]
+                else:
+                    count_cols_by_name = None
 
-            # clean the string columns
-            str_cols = [c for c in df.columns if df.dtypes[c] == np.object]
-            df = m.clean_strings(df, str_cols)
+                # clean the column names
+                df, count_cols_by_name, err_str = m.clean_column_names(
+                    df, count_cols_by_name
+                )
+                if err_str:
+                    err = add_new_error(err, "warn-file", Path(f_path).name, err_str)
 
-            err = jm.check_results_munger_compatibility(
-                munger, df, Path(f_path).name, err
-            )
-        return df, err
-    except FileNotFoundError as fnfe:
+                # clean the count columns
+                df, err_df = m.clean_count_cols(df, count_cols_by_name, thousands=munger.thousands_separator)
+                if not err_df.empty:
+                    err = add_err_df(err, err_df, munger, f_path)
+                    # show all columns of dataframe holding rows where counts were set to 0
+                    pd.set_option("max_columns", None)
+                    err = add_new_error(
+                        err,
+                        "warn-munger",
+                        munger.name,
+                        f"At least one count was set to 0 in certain rows of {Path(f_path).name}:\n{err_df}",
+                    )
+                    pd.reset_option("max_columns")
+
+                # clean the string columns
+                str_cols = [c for c in df.columns if df.dtypes[c] == np.object]
+                df = m.clean_strings(df, str_cols)
+
+                err = jm.check_results_munger_compatibility(
+                    munger, df, Path(f_path).name, err
+                )
+            return df, err
+    except FileNotFoundError:
         e = f"File not found: {f_path}"
     except UnicodeDecodeError as ude:
         e = f"Encoding error. Datafile not read completely.\n{ude}"
@@ -531,7 +578,7 @@ def read_combine_results(
     # if results are a flat file or json
     else:
         try:
-            working, new_err = read_single_datafile(mu, results_file_path, None)
+            working, new_err = read_single_datafile(mu, results_file_path)
         except Exception as exc:
             err = add_new_error(
                 err,

@@ -1,0 +1,10 @@
+[format]
+file_type=excel
+sheets_to_skip_names=None
+
+[from_field_values]
+ReportingUnit=<first_column>
+Party={<header_0>,^.*\n(.*)$}
+CandidateContest=<constant_column_0> ({<header_0>,^.*\n(.*)$})
+Candidate={<header_0>,^(.*)\n.*$}
+CountItemType=total

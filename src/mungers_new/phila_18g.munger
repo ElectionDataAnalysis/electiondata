@@ -1,0 +1,14 @@
+[format]
+encoding=utf_8
+thousands_separator=None
+file_type=flat_text
+sep=,
+count_locations=by_column_number
+count_columns=6
+
+[from_field_values]
+ReportingUnit=<WARD>;<DIVISION>
+Party=<PARTY>
+CandidateContest=<CATEGORY>
+Candidate=<SELECTION>
+CountItemType=<TYPE>

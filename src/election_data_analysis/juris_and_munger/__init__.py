@@ -17,6 +17,7 @@ munger_pars_req = ["file_type"]
 munger_pars_opt = {
     "header_row_count": "int",
     "field_name_row": "int",
+    "header_row": "int",
     "field_names_if_no_field_name_row": "list-of-strings",
     "count_columns_by_name": "list-of-strings",
     "count_columns": "list-of-integers",
@@ -196,7 +197,7 @@ class Munger:
                 aux_path = os.path.join(aux_data_path, aux_filename_list[0])
 
             # read and clean the auxiliary data file, including setting primary key columns as int
-            df, err = ui.read_single_datafile(aux_mu, aux_path, err)
+            df, err = ui.read_single_datafile(aux_mu, aux_path, err=err)
 
             # cast primary key(s) as int if possible, and set as (multi-)index
             primary_keys = self.aux_meta.loc[abbrev, "primary_key"].split(",")

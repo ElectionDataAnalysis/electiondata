@@ -1,0 +1,13 @@
+[format]
+encoding=iso-8859-1
+thousands_separator=None
+file_type=excel
+count_locations=by_column_number
+count_columns=4
+constant_over_file=Party,CandidateContest,CountItemType
+
+[from_field_values]
+ReportingUnit=<County>
+
+[in_count_headers]
+Candidate=<0>

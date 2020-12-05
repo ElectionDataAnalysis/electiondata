@@ -1,0 +1,13 @@
+[format]
+encoding=utf_8
+file_type=flat_text
+sep=,
+count_locations=by_column_number
+count_columns=4
+
+[from_field_values]
+ReportingUnit=<County>
+Party=<Party>
+CandidateContest=<Race>
+Candidate=<Candidate>
+CountItemType=total
