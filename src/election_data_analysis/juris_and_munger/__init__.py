@@ -34,6 +34,8 @@ munger_pars_opt = {
 
 
 def recast_options(options: dict, types: dict) -> dict:
+    """Convert a dictionary <options> of string parameter values to typed objects,
+    where type is determined by <types>"""
     keys = {k for k in options.keys() if k in types.keys()}
     for k in keys:
         if types[k] == "int":
@@ -47,7 +49,9 @@ def recast_options(options: dict, types: dict) -> dict:
             except:
                 options[k] = list()
         if types[k] == "str":
-            pass
+            if options[k] == "":
+                # null string is read as None
+                options[k] = None
         if types[k] == "list-of-strings":
             try:
                 options[k] = [s for s in options[k].split(",")]

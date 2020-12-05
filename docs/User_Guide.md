@@ -21,26 +21,28 @@ Ensure that the munger files are appropriate for your results file(s).
  #### NEW VERSION:
  `file_type`: controls which pandas function reads the file contents
   * 'excel'
-    * (optional) a list `sheets_to_read` of spreadsheets to read, or a list `sheets_to_skip`. Default is to read the first sheet only
+    * (optional) a list `sheets_to_read_names` (or "sheets_to_read_numbers") of spreadsheets to read, 
+    * (optional) a list `sheets_to_skip_names` ( or "sheets_to_skip_numbers") of spreadsheets to skip
+    * Default is to read the first sheet only
   * 'json-nested'
   * 'xml'
   * 'flat_text' Any tab-, comma-, or other-separated table in a plain tabular text file.
-    * (required) a field separator `sep` to be specified (usually `sep=,` for csv or `sep=\t` for .txt)
+    * (required) a field separator `flat_file_separator` to be specified (usually `flat_file_separator=,` for csv or `flat_file_separator=\t` for .txt)
     * (optional) a quote character `quoting`. Default is `quoting="`
   * [[ will be obsolete: `concatenated-blocks` Clarity format derived from xml]]
   
-  `count_location`: controls how the system looks for counts
+  `count_locations`: controls how the system looks for counts
   * 'by_field_name'
-    * (required) list `count_fields` of names of fields containing counts. 
-    * (required for any but xml and json file_types) specify location of field names for count columns. For `excel` and `flat_text` file types, need integer `count_field_name_row` (NB: top row not skipped is 0, next row is 1, etc.)
-  * 'by column_number'
-    * (required) list `count_columns` of column numbers containing counts. 
+    * (required) list `count_fields_by_name` of names of fields containing counts. 
+    * (required for any but 'xml' and 'json-nested' file_types) specify location of field names for count columns. For `excel` and `flat_text` file types, need integer `count_field_name_row` (NB: top row not skipped is 0, next row is 1, etc.)
+  * 'by_column_number'
+    * (required) list `count_column_numbers` of column numbers containing counts. 
     
   `string_locations`: controls how the system looks for the character strings used to munge the non-count information (Candidate, Party, etc.). There may be multiple, so the value is a list 
   * 'from_field_values'
-    * (required) list `string_fields` of names of fields containing character strings
+    * (required) list `string_field_names` of names of fields containing character strings
   * 'in_count_headers' this is used, e.g., when each candidate has a separate column in a tabular file. In this case there may be a single header row with relevant info, or there may be several rows (e.g., Contest in one row, Candidate in another row)
-    * (required) list `string_header_rows` of integers for rows containing necessary character strings. (NB: top row not skipped is 0, next row is 1, etc.)
+    * (required) list `string_header_row_numbers` of integers for rows containing necessary character strings. (NB: top row not skipped is 0, next row is 1, etc.)
   * 'constant_over_file'
   * 'constant_over_sheet'
     

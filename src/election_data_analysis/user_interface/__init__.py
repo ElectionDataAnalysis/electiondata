@@ -708,12 +708,12 @@ def load_datafile(
 
 
 def get_parameters(
-    required_keys: list,
-    param_file: str,
-    header: str,
-    err: Optional[Dict[Any, dict]] = None,
-    optional_keys: list = None,
-) -> (dict, Optional[dict]):
+        required_keys: List[str],
+        param_file: str,
+        header: str,
+        err: Optional[Dict] = None,
+        optional_keys: Optional[List[str]] = None,
+) -> (dict, dict):
     d = {}
 
     # read info from file
