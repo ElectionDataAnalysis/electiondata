@@ -1,0 +1,15 @@
+[format]
+encoding=ASCII
+file_type=flat_text
+sep=	
+count_locations=by_column_number
+count_columns=15
+
+[from_field_values]
+ReportingUnit=<CountyName>
+Party=<PartyName>
+CandidateContest=<OfficeDescription> (<PartyName>)
+Candidate=<CandidateFirstName> <CandidateMiddleName> <CandidateLastName>
+BallotMeasureContest=<OfficeDescription>
+BallotMeasureSelection=<CandidateLastName>
+CountItemType=total

@@ -1,0 +1,15 @@
+[format]
+encoding=utf-8
+file_type=flat_text
+sep=,
+count_locations=by_column_number
+count_columns=10
+
+[from_field_values]
+ReportingUnit=<Reporting County Name>;<DataEntry Jurisdiction Name>
+Party=<Political Party>
+CandidateContest=<Office>
+Candidate=<Name on Ballot>
+BallotMeasureContest=<Office>
+BallotMeasureSelection=<Name on Ballot>
+CountItemType=total

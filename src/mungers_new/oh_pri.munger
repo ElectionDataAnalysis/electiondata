@@ -1,0 +1,12 @@
+[format]
+file_type=excel
+sheets_to_skip_names=Contents,Presidential Delegates,Statewide Offices,U.S. Congress,Ohio Gen Assembly,State Board of Education,Judicial,Ohio General Assembly
+
+[from_field_values]
+ReportingUnit=<first_column>
+Party={<header_1>,^.* \((.*)\)[^\)\n]*$}
+CandidateContest=<header_0> ({<header_1>,^.* \((.*)\)[^\)\n]*$})
+Candidate={<header_1>,^(.*) \(.*\)[^\)\n]*$}
+BallotMeasureContest=<header_0>
+BallotMeasureSelection=<header_1>
+CountItemType=total

@@ -1,0 +1,13 @@
+[format]
+file_type=json-nested
+count_locations=by_field_name
+count_fields=['C.V']
+
+[from_field_values]
+ReportingUnit=<N>
+Party=<C.P>
+CandidateContest=<ON>
+Candidate={<C.N>,^(.*)(?:(?:\(I\))|)$}
+BallotMeasureContest=<ON>
+BallotMeasureSelection=<C.N>
+CountItemType=total
