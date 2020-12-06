@@ -22,7 +22,7 @@ Ensure that the munger files are appropriate for your results file(s).
  `file_type`: controls which pandas function reads the file contents
   * 'excel'
     * (optional) a list `sheets_to_read_names` (and/or `sheets_to_read_numbers`) of spreadsheets to read, 
-    * (optional) a list `sheets_to_skip_names` (and/or `sheets_to_skip_numbers`) of spreadsheets to skip
+    * (optional) a list `sheets_to_skip` of names of spreadsheets to skip
     * Default is to read all sheets
   * 'json-nested'
   * 'xml'
@@ -43,7 +43,7 @@ Ensure that the munger files are appropriate for your results file(s).
     * (required) list `string_field_names` of names of fields containing character strings
     * (required for 'excel' and 'flat_text' file_types) specify location of field names for string columns. with integer `string_field_name_row` (NB: top row not skipped is 0, next row is 1, etc.)
   * 'in_count_headers' this is used, e.g., when each candidate has a separate column in a tabular file. In this case there may be a single header row with relevant info, or there may be several rows (e.g., Contest in one row, Candidate in another row)
-    * (required) list `string_header_row_numbers` of integers for rows containing necessary character strings. (NB: top row not skipped is 0, next row is 1, etc.)
+    * (required) list `count_header_row_numbers` of integers for rows containing necessary character strings. (NB: top row not skipped is 0, next row is 1, etc.)
   * 'constant_over_file'
   * 'constant_over_sheet'
   
@@ -54,8 +54,8 @@ Ensure that the munger files are appropriate for your results file(s).
       * (required) A path `auxiliary_data_directory` indicating the directory where the file(s) with the auxiliary information can be found. 
 
    Available for flat_text and excel file types:
-   * (optional) `rows_to_skip` Note that this parameter will affect any integer parameters designating particular rows -- row 0 is the first row not skipped.
-   * (optional) `all_rows` If the file has no column headers but only data, set this parameter to 'data'
+   * (optional) `rows_to_skip` An integer giving the number of rows to skip. Note that this parameter will affect any integer parameters designating particular rows -- row 0 is the first row not skipped.
+   * (optional) `missing` If the file has no column headers but only data rows with counts, set this parameter to 'field_names'
 
 
  

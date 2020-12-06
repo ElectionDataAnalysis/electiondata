@@ -4,9 +4,7 @@ from election_data_analysis import special_formats as sf
 from election_data_analysis import database as db
 import election_data_analysis as e
 import pandas as pd
-import numpy as np
-from pandas.errors import ParserError, ParserWarning
-import csv
+from pandas.errors import ParserError
 import os
 from pathlib import Path
 from election_data_analysis import juris_and_munger as jm
@@ -335,11 +333,14 @@ def read_results(
     return wr, mu, error
 
 
-def pick_juris_from_filesystem(juris_path, err, check_files=False):
+def pick_juris_from_filesystem(
+        juris_path: str,
+        err: Optional[dict],
+        check_files: bool =False):
     """Returns a Jurisdiction object. <juris_path> is the path to the directory containing the
     defining files for the particular jurisdiction.
     """
-
+    new_err = None
     if check_files:
         new_err = jm.ensure_jurisdiction_dir(juris_path)
     err = consolidate_errors([err, new_err])
@@ -379,10 +380,14 @@ def read_single_datafile(
             # if any string locations are from field values AND field names are in the table, need string_field_name_row
             if p["all_rows"] == None and "from_field_values" in p["string_locations"]:
                 header_rows.update({p["string_field_name_row"]})
-            # if any string locations are in count headers need string_header_row_numbers
+            # if any string locations are in count headers need count_header_row_numbers
             if "in_count_headers" in p["string_locations"]:
-                header_rows.update(p["string_header_row_numbers"])
-            kwargs["header"] = header_rows
+                header_rows.update(p["count_header_row_numbers"])
+            if header_rows:
+                kwargs["header"] = list(header_rows)
+            else:
+                kwargs["header"] = None
+
 
             # designate rows to skip
             if p["rows_to_skip"]:
@@ -393,6 +398,7 @@ def read_single_datafile(
             kwargs["thousands"] = p["thousands_separator"]
         if p["quoting"]:
             kwargs["quoting"] = p["quoting"]
+        kwargs["index_col"] = False
 
         # read file
         if p["file_type"] == "excel":
@@ -404,115 +410,17 @@ def read_single_datafile(
         elif p["file_type"] == "flat_text":
             kwargs["sep"] = p["flat_file_delimiter"]
             df = pd.read_csv(f_path, **kwargs)
+            df_dict = {"Sheet1": df}
         elif p["file_type"] in ["json-nested", "xml"]:
             pass  # TODO
+            df_dict = dict()
+            err = add_new_error(
+                err,
+                "system",
+                "user_interface.read_single_datafile",
+                f"file type {p['file_type']} not yet programmed"
+            )
 
-        if False:
-            dtype = {c: str for c in munger.field_list}
-            kwargs = {"dtype": dtype}
-            if munger.thousands_separator is not None:
-                kwargs["thousands"] = munger.thousands_separator
-
-            if munger.options["file_type"] in ["json"]:
-                pass
-            elif munger.options["field_name_row"] is None:
-                kwargs["header"] = None
-                kwargs["names"] = munger.options["field_names_if_no_field_name_row"]
-                kwargs["index_col"] = False
-            else:
-                # if not a multi-index
-                if munger.options["header_row_count"] == 1:
-                    # can protect against a problem with pandas.read_csv and read_excel
-                    #  see https://github.com/pandas-dev/pandas/issues/11733
-                    # TODO how to protect in case of multi-index?
-                    kwargs["header"] = 0
-                    kwargs["index_col"] = False
-                else:
-                    kwargs["header"] = list(range(munger.options["header_row_count"]))
-                    kwargs["index_col"] = None
-
-            if munger.options["count_of_top_lines_to_skip"]:
-                kwargs["skiprows"] = range(munger.options["count_of_top_lines_to_skip"])
-
-            if munger.file_type in ["txt", "csv", "txt-semicolon-separated"]:
-                kwargs["encoding"] = munger.encoding
-                kwargs["quoting"] = csv.QUOTE_MINIMAL
-                if munger.file_type == "txt":
-                    kwargs["sep"] = "\t"
-                elif munger.file_type == "txt-semicolon-separated":
-                    kwargs["sep"] = ";"
-                df = pd.read_csv(f_path, **kwargs)
-            elif munger.file_type in ["xls", "xlsx"]:
-                df = pd.read_excel(f_path, **kwargs)
-            elif munger.file_type in ["json"]:
-                kwargs["encoding"] = munger.encoding
-                df = pd.read_json(f_path, **kwargs)
-            elif munger.file_type in ["concatenated-blocks", "xls-multi", "xml", "json-nested"]:
-                err = add_new_error(
-                    err,
-                    "system",
-                    "user_interface.read_single_datafile",
-                    f"Munger ({munger.name}) with file_type {munger.file_type} "
-                    f"should not have reached this part of the code.",
-                )
-                return pd.DataFrame(), err
-            else:
-                err = add_new_error(
-                    err,
-                    "munger",
-                    munger.name,
-                    f"Unrecognized file_type: {munger.file_type}",
-                )
-                return pd.DataFrame(), err
-            if df.empty:
-                err = add_new_error(
-                    err,
-                    "munger",
-                    munger.name,
-                    f"Nothing read from datafile. Munger may be inconsistent, or datafile may be empty.",
-                )
-            else:
-                # get count columns by name
-                if munger.options["count_columns_by_name"]:
-                    count_cols_by_name = munger.options["count_columns_by_name"]
-                elif munger.options["count_columns"]:
-                    count_cols_by_name = [
-                        df.columns[j]
-                        for j in munger.options["count_columns"]
-                        if j < df.shape[1]
-                    ]
-                else:
-                    count_cols_by_name = None
-
-                # clean the column names
-                df, count_cols_by_name, err_str = m.clean_column_names(
-                    df, count_cols_by_name
-                )
-                if err_str:
-                    err = add_new_error(err, "warn-file", Path(f_path).name, err_str)
-
-                # clean the count columns
-                df, err_df = m.clean_count_cols(df, count_cols_by_name, thousands=munger.thousands_separator)
-                if not err_df.empty:
-                    err = add_err_df(err, err_df, munger, f_path)
-                    # show all columns of dataframe holding rows where counts were set to 0
-                    pd.set_option("max_columns", None)
-                    err = add_new_error(
-                        err,
-                        "warn-munger",
-                        munger.name,
-                        f"At least one count was set to 0 in certain rows of {Path(f_path).name}:\n{err_df}",
-                    )
-                    pd.reset_option("max_columns")
-
-                # clean the string columns
-                str_cols = [c for c in df.columns if df.dtypes[c] == np.object]
-                df = m.clean_strings(df, str_cols)
-
-                err = jm.check_results_munger_compatibility(
-                    munger, df, Path(f_path).name, err
-                )
-            return df, err
     except FileNotFoundError:
         e = f"File not found: {f_path}"
     except UnicodeDecodeError as ude:
@@ -520,14 +428,15 @@ def read_single_datafile(
     except ParserError as pe:
         # DFs have trouble comparing against None. So we return an empty DF and
         # check for emptiness below as an indication of an error.
-        e = f"Error parsing results file.\n{pe}"
-    err = add_new_error(
-        err,
-        "file",
-        Path(f_path).name,
-        e,
-    )
-    return pd.DataFrame(), err
+        err_str = f"Error parsing results file.\n{pe}"
+        err = add_new_error(
+            err,
+            "file",
+            Path(f_path).name,
+            err_str,
+        )
+
+    return df_dict, err
 
 
 def add_err_df(err, err_df, munger, f_path):
@@ -1015,7 +924,7 @@ def create_param_file(
 
 def run_tests(
     test_dir: str, dbname: str, election_jurisdiction_list: Optional[list] = None
-) -> (dict(), int):
+) -> (dict, int):
     """move to tests directory, run tests, move back
     db_params must have host, user, pass, db_name.
     test_param_file is a reference run_time.ini file"""
@@ -1038,7 +947,7 @@ def run_tests(
             if election is None and juris is not None:
                 keyword = f"{juris.replace(' ','-')}"
             elif juris is None and election is not None:
-                keyword = f"{juris.replace(' ','-')}"
+                keyword = f"{election.replace(' ','-')}"
             elif juris is not None and election is not None:
                 keyword = f"{juris.replace(' ','-')}_{election.replace(' ','-')}"
             else:

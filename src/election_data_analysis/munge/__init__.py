@@ -16,7 +16,8 @@ def clean_count_cols(
     thousands: Optional[str] = None
 ) -> (pd.DataFrame, pd.DataFrame):
     """Casts the given columns as integers, replacing any bad
-    values with 0 and reporting a dataframe of any rows so changed."""
+    values with 0 and reporting a dataframe of any rows so changed.
+    If <thousands> separator is given, check for it"""
     if cols is None:
         return df, pd.DataFrame(columns=df.columns)
     else:
@@ -190,7 +191,7 @@ def munge_clean(
         renamer = {x: f"{x}_SOURCE" for x in munger_formula_row_sourced}
         working.rename(columns=renamer, inplace=True)
     except Exception as e:
-        err = ui.add_new_error(err, "system", "munge.munge_clean", "Unspecified error")
+        err = ui.add_new_error(err, "system", "munge.munge_clean", f"Unexpected error: {e}")
     return working, err
 
 
