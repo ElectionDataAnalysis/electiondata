@@ -3,11 +3,12 @@ encoding=iso-8859-1
 file_type=excel
 count_locations=by_column_number
 count_columns=1,2,3,4,5,6
-string_locations=in_count_headers,constant_over_file,from_field_values
+string_locations=in_count_headers,from_field_values,constant_over_file
 constant_over_file=Party,CandidateContest
+rows_to_skip=1
 
 [from_field_values]
 ReportingUnit=<County>
 
 [in_count_headers]
-Candidate=<1>
+Candidate=<0>
