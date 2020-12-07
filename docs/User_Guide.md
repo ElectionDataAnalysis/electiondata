@@ -45,7 +45,9 @@ Ensure that the munger files are appropriate for your results file(s).
   * 'in_count_headers' this is used, e.g., when each candidate has a separate column in a tabular file. In this case there may be a single header row with relevant info, or there may be several rows (e.g., Contest in one row, Candidate in another row)
     * (required) list `count_header_row_numbers` of integers for rows containing necessary character strings. (NB: top row not skipped is 0, next row is 1, etc.)
   * 'constant_over_file'
+    * (required) the `*.ini` file for the results file must specify the values
   * 'constant_over_sheet'
+    * The system can extract strings from sheet names in Excel (designated as <sheet_name>) and/or from entire rows of a spreadsheet (designated as <row_3>, e.g.)
   
    Available if appropriate for any file type:
    * (optional) `thousands_separator`. In the US the separator is almost always ',' if it is used. Watch out for Excel files which may show a comma when you look at them in Excel -- there may not be a comma in the underlying data.
@@ -54,7 +56,7 @@ Ensure that the munger files are appropriate for your results file(s).
       * (required) A path `auxiliary_data_directory` indicating the directory where the file(s) with the auxiliary information can be found. 
 
    Available for flat_text and excel file types:
-   * (optional) `rows_to_skip` An integer giving the number of rows to skip at the top. Note that this parameter will affect any integer parameters designating particular rows -- row 0 is the first row not skipped.
+   * (optional) `rows_to_skip` An integer giving the number of rows to skip at the top to get to the table of counts. This parameter will affect integers designating header rows -- '<header_0>' is the first row not skipped. However, this parameter will *not* affect integers designating rows (e.g., for finding information constant over sheets), which are designated, e.g., '<row_3>'.
    * (optional) `missing` If the file has no column headers but only data rows with counts, set this parameter to 'field_names'
 
 

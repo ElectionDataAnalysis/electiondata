@@ -59,6 +59,7 @@ def count_columns_by_name(
             sep = "\t"
         elif d_mu["file_type"] == "txt-semicolon-separated":
             sep = ";"
+
         # read the header rows from the dataframe
         rf_path = os.path.join(
             results_dir[d_ini["election"]],
@@ -261,8 +262,8 @@ def create_munger_files(
                 # initialize the section
                 new_sections["constant_over_sheet"] = ["[constant_over_sheet]"]
                 # fill the section
-                for idx, r in cdf_elements_df.iterrows():
-                    pass  # TODO
+                if mu == "wi_pri":
+                    new_sections["constant_over_sheet"] = ["CandidateContest=<row_4><row_5>"]
 
             # write to new munger file
             section_strings = ["\n".join(new_sections[k]) for k in new_sections.keys()]
@@ -412,9 +413,33 @@ def get_and_check_munger_params(munger_path: str) -> (dict, Optional[dict]):
                     munger_name,
                     f"{k0} is in list of string locations, but {v2} not found"
                 )
-
+    # TODO check formats (e.g., formulas for constant_over_sheet use only <sheet_name> and <row_{i}>
     return format_options, err
 
+
+def get_string_fields(sources: list) -> (Dict[str,List[str]], Optional[dict]):
+    err = None
+    pattern = re.compile(r'<([^>]+)>')
+    munge_field_lists = dict()
+    for source in sources:
+        munge_field_set = set()
+        formulas, new_err = ui.get_parameters(
+            required_keys=[],
+            optional_keys=all_munge_elements,
+            header=source,
+            param_file=munger_path,
+        )
+        if new_err:
+            err = ui.consolidate_errors([err, new_err])
+            if ui.fatal_error(new_err):
+                return dict(), err
+
+        for k in formulas.keys():
+            if formulas[k]:
+                munge_field_set.update(pattern.findall(formulas[k]))
+        munge_field_lists[source] = list(munge_field_set)
+
+    return munge_field_lists, err
 
 def read_results_from_file(f_path, format_options) -> (Dict[str,pd.DataFrame], dict):
     # TODO
@@ -422,7 +447,8 @@ def read_results_from_file(f_path, format_options) -> (Dict[str,pd.DataFrame], d
 
 
 def to_standard_count_frame(f_path: str, munger_path: str) -> (pd.DataFrame, Optional[dict]):
-    """Read data from file at <f_path>; return a standard dataframe with one clean count column"""
+    """Read data from file at <f_path>; return a standard dataframe with one clean count column
+    and all other columns typed as 'string' """
     munger_name = Path(munger_path).name
     # read parameters from munger file
     p, err = get_and_check_munger_params(munger_path)
@@ -437,22 +463,13 @@ def to_standard_count_frame(f_path: str, munger_path: str) -> (pd.DataFrame, Opt
             return err
 
     # get lists of string fields expected in raw file
-    pattern = re.compile(r'<([^>]+)>')
-    field_list = set()
-    for source in p["string_locations"]:
-        formulas, new_err = ui.get_parameters(
-            required_keys=[],
-            optional_keys=all_munge_elements,
-            header=source,
-            param_file=munger_path,
-        )
-        if new_err:
-            err = ui.consolidate_errors([err, new_err])
-            if ui.fatal_error(new_err):
-                return err
-        for k in formulas.keys():
-            field_list.update(pattern.findall(formulas[k]))
-
+    munge_field_lists, new_err = get_string_fields(
+        [x for x in p["string_locations"] if x != "constant_over_file"]
+    )
+    if new_err:
+        err = ui.consolidate_errors([err, new_err])
+        if ui.fatal_error(new_err):
+            return pd.DataFrame(), err
     # remove any sheets designated to be removed
     if p["sheets_to_skip"]:
         for k in p["sheets_to_skip"]:
@@ -467,19 +484,57 @@ def to_standard_count_frame(f_path: str, munger_path: str) -> (pd.DataFrame, Opt
             if ui.fatal_error(k_err):
                 return err
         # TODO add columns for any constant-over-sheet elements
+        if "constant_over_sheet" in p["string_locations"]:
+            # see if <sheet_name> is needed
+            if "sheet_name" in munge_field_lists["constant_over_sheet"]:
+                standard[k] = m.add_constant_column(standard[k], "sheet_name", k)
+            # find max row needed
+            try:
+                rows_needed = [int(var[4:]) for var in munge_field_lists["constant_over_sheet"] if var != "sheet_name"]
+                if rows_needed:
+                    max_row = max(rows_needed)
+                    data = pd.read_excel(f_path, nrows=max_row+1)
+                    for row in rows_needed:
+                        standard[k] = m.add_constant_column(
+                            standard[k],
+                            f"row_{row}",
+                            data.loc[row,data.loc[row].first_valid_index()],
+                        )
+            except ValueError as ve:
+                err = ui.add_new_error(
+                    err,
+                    "munger",
+                    munger_name,
+                    f"Ill-formed reference to row of file in munger formulas in {ve}"
+                )
+                return pd.DataFrame(), err
+            except KeyError() as ke:
+                variables = ",".join(munge_field_lists["constant_over_sheet"])
+                err = ui.add_new_error(
+                    err,
+                    "file",
+                    Path(f_path).name,
+                    f"No data found for one of these: \n\t{variables}",
+                )
+                return pd.DataFrame(), err
 
-        # drop unnecessary columns
-        standard[k] = standard[k][list(field_list) + ["Count"]]
+        # keep only necessary columns
+        necessary = [item for sublist in munge_field_lists.values() for item in sublist] + ["Count"]
+        standard[k] = standard[k][necessary]
 
         # clean Count column
         standard[k], bad_rows = m.clean_count_cols(standard[k], ["Count"], p["thousands_separator"])
         if not bad_rows.empty:
             err = ui.add_err_df(err, bad_rows, munger_name, f_path)
 
+        # cast other columns as string
+
     df = pd.concat(standard.values())
 
-
     # TODO add columns for any constant-over-file elements
+
+    non_count = [c for c in df.columns if c != "Count"]
+    df[non_count] = df[non_count].astype("string")
 
     return df, err
 
@@ -499,7 +554,7 @@ def load_results_file(
 
     # # transform raw to munged (possibly with foreign keys if there is aux data)
     df, new_err = m.munge_clean(df, munger_path, ["Count"]) # TODO munge_clean uses list of fields used in munge formulas.
-    # # replace any foreign keys with true values
+    # #  TODO replace any foreign keys with true values
     # # load counts to db
     return err
 
