@@ -2,6 +2,7 @@ from election_data_analysis import user_interface as ui
 from election_data_analysis import juris_and_munger as jm
 from election_data_analysis import munge as m
 import os
+import re
 from pathlib import Path
 import pandas as pd
 from typing import List, Dict, Optional
@@ -245,7 +246,10 @@ def create_munger_files(
                 # fill the section
                 for idx, r in cdf_elements_df.iterrows():
                     if r["source"] == "column":
-                        new_sections["in_count_headers"].append(f"{r['name']}={r['raw_identifier_formula']}")
+                        # TODO replace, e.g., <0> by <header_0>
+                        p = re.compile(r"<(\d)>")
+                        form = re.sub(p, r"<header_\1>", r['raw_identifier_formula'])
+                        new_sections["in_count_headers"].append(f"{r['name']}={form}")
             if "constant_over_file" in str_locations:
                 # create the corresponding parameter
                 constant_list = list(
@@ -316,6 +320,17 @@ string_location_reqs: Dict[str, List[str]] = {
     "constant_over_file": [],
     "constant_over_sheet": ["constant_over_sheet"],
 }
+
+all_munge_elements = [
+    "BallotMeasureContest",
+    "CandidateContest",
+    "BallotMeasureSelection",
+    "Candidate",
+    "Party",
+    "ReportingUnit",
+    "Election",
+    "CountItemType",
+]
 
 
 def get_and_check_munger_params(munger_path: str) -> (dict, Optional[dict]):
@@ -405,16 +420,10 @@ def read_results_from_file(f_path, format_options) -> (Dict[str,pd.DataFrame], d
     # TODO
     return results, err
 
-def load_results_file(
-        # session,
-        munger_path: str,
-        f_path: str,
-        # juris: jm.Jurisdiction,
-        # results_info: dict,
-) -> Optional[dict]:
-    # get name of munger
+
+def to_standard_count_frame(f_path: str, munger_path: str) -> (pd.DataFrame, Optional[dict]):
+    """Read data from file at <f_path>; return a standard dataframe with one clean count column"""
     munger_name = Path(munger_path).name
-    # TODO complete this routine
     # read parameters from munger file
     p, err = get_and_check_munger_params(munger_path)
     if ui.fatal_error(err):
@@ -427,29 +436,71 @@ def load_results_file(
         if ui.fatal_error(read_err):
             return err
 
+    # get lists of string fields expected in raw file
+    pattern = re.compile(r'<([^>]+)>')
+    field_list = set()
+    for source in p["string_locations"]:
+        formulas, new_err = ui.get_parameters(
+            required_keys=[],
+            optional_keys=all_munge_elements,
+            header=source,
+            param_file=munger_path,
+        )
+        if new_err:
+            err = ui.consolidate_errors([err, new_err])
+            if ui.fatal_error(new_err):
+                return err
+        for k in formulas.keys():
+            field_list.update(pattern.findall(formulas[k]))
+
     # remove any sheets designated to be removed
     if p["sheets_to_skip"]:
         for k in p["sheets_to_skip"]:
             raw_dict.pop(k)
     # for each df:
+    standard = dict()
     for k, raw in raw_dict.items():
-        # transform to df with single count column and all raw munge info in other columns
-        df, k_err = m.melt_to_one_count_column(raw, p, munger_name)
+        # transform to df with single count column 'Count' and all raw munge info in other columns
+        standard[k], k_err = m.melt_to_one_count_column(raw, p, munger_name)
         if k_err:
             err = ui.consolidate_errors([err, k_err])
             if ui.fatal_error(k_err):
                 return err
+        # TODO add columns for any constant-over-sheet elements
 
-        # # clean Count column
-        df, bad_rows = m.clean_count_cols(df, ["Count"], p["thousands_separator"])
+        # drop unnecessary columns
+        standard[k] = standard[k][list(field_list) + ["Count"]]
+
+        # clean Count column
+        standard[k], bad_rows = m.clean_count_cols(standard[k], ["Count"], p["thousands_separator"])
         if not bad_rows.empty:
             err = ui.add_err_df(err, bad_rows, munger_name, f_path)
 
-        # # transform raw to munged (possibly with foreign keys if there is aux data)
-        df, new_err = m.munge_clean(df, munger_name, ["Count"]) # TODO munge_clean uses list of fields used in munge formulas.
-        # # add columns for any constant-over-sheet elements
-        # # replace any foreign keys with true values
-        # # load counts to db
+    df = pd.concat(standard.values())
+
+
+    # TODO add columns for any constant-over-file elements
+
+    return df, err
+
+
+def load_results_file(
+        # session,
+        munger_path: str,
+        f_path: str,
+        # juris: jm.Jurisdiction,
+        # results_info: dict,
+) -> Optional[dict]:
+    # get name of munger
+    # TODO complete this routine
+            
+    # read data into standard count format dataframe
+    df, err = to_standard_count_frame(f_path, munger_path)
+
+    # # transform raw to munged (possibly with foreign keys if there is aux data)
+    df, new_err = m.munge_clean(df, munger_path, ["Count"]) # TODO munge_clean uses list of fields used in munge formulas.
+    # # replace any foreign keys with true values
+    # # load counts to db
     return err
 
 

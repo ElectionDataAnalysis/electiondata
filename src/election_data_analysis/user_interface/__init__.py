@@ -444,7 +444,7 @@ def add_err_df(err, err_df, munger, f_path):
     err = add_new_error(
         err,
         "warn-munger",
-        munger.name,
+        munger,
         f"At least one count was set to 0 in certain rows of {Path(f_path).name}:\n{err_df}",
     )
     pd.reset_option("max_columns")
