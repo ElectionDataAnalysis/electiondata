@@ -118,7 +118,7 @@ Party	<Party Name>	row
 CandidateContest	<Office Name> <District Name>	row
 Candidate	<Candidate Name>	row
 BallotMeasureContest	<Office Name> <District Name>	row
-BallotMeasureSelection	<0>	column
+BallotMeasureSelection	<header_0>	column
 CountItemType	total	row
 ```
 NB: for constants (like the CountItemType 'total' in this example), use `row` for the source. Row-source fields should be the field names from the header row or, if there is no header row, from `format.config`. Column-source fields should be identified by the number of the row in which the information is found. Our convention is that the top row is 0. Use source `ini` for values that are constant over the entire results file and specified in `*.ini`.
@@ -141,7 +141,7 @@ ALAMANCE	11/06/2018	064	1228	S	NC COURT OF APPEALS JUDGE SEAT 3	Michael Monaco, 
 ALAMANCE	11/06/2018	03N	1228	S	NC COURT OF APPEALS JUDGE SEAT 3	Michael Monaco, Sr.	LIB	1	59	38	1	0	98	Y
 ALAMANCE	11/06/2018	03S	1228	S	NC COURT OF APPEALS JUDGE SEAT 3	Michael Monaco, Sr.	LIB	1	106	108	0	3	217	Y
 ```
-Here the CountItemType value ('Election Day','One Stop' a.k.a. early voting, 'Absentee by Mail','Provisional' must be read from the column headers, i.e., the information in row 0 of the file. For the first data row, the formula <0> would yield CountItemType 'Election Day' for the VoteCount of 59, 'One Stop' for the vote count of 65, etc.
+Here the CountItemType value ('Election Day','One Stop' a.k.a. early voting, 'Absentee by Mail','Provisional' must be read from the column headers, i.e., the information in row 0 of the file. For the first data row, the formula <header_0> would yield CountItemType 'Election Day' for the VoteCount of 59, 'One Stop' for the vote count of 65, etc.
 
 ### ini-source example
 Whenever an element is constant for all data in a results file, you can specify it in the parameter (`*.ini`) file instead of the `cdf_elements.txt` file. In this case, you can either omit the corresponding line from `cdf_elements.txt` or keep the line and put 'ini' in the `source` column.
