@@ -700,6 +700,55 @@ def regularize_candidate_names(
     return ws
 
 
+def melt_to_one_count_column(df: pd.DataFrame, p: dict, mu_name: str) -> (pd.DataFrame, Optional[dict]):
+    """transform to df with single count column and all raw munge info in other columns"""
+    err = None
+    if isinstance(df.columns,pd.MultiIndex):
+        multi = True
+    else:
+        multi = False
+
+    if multi:
+        # transform multi-index to plain index
+        df.columns = [";:;".join([f"{x}" for x in tup]) for tup in df.columns]
+
+    # define count columns
+    if p["count_locations"] == "by_column_number":
+        count_columns = [
+            df.columns[idx] for idx in p["count_column_numbers"]
+        ]
+    elif p["count_locations"] == "by_field_name":
+        assert not multi, "If there are multiple header rows, need to have count_locations=by_column_number, "
+        count_columns = p["count_fields_by_name"]
+    else:
+        err = ui.add_new_error(
+            err,
+            "munger",
+            mu_name,
+            f"count_locations parameter must be either by_column_number or by_field_name"
+        )
+        return pd.DataFrame(), err
+
+    # melt so that there is one single count column
+    id_columns = [c for c in df.columns if c not in count_columns]
+    melted = df.melt(id_vars=id_columns, value_vars=count_columns, var_name="header_0", value_name="Count")
+    if multi:
+        # remove extraneous text from columns headers, leaving only field name row
+        for idx in len(melted.columns):
+            if melted.columns[idx] in id_columns:
+                melted.columns[idx] = melted.columns[idx].split(";:;")[p["string_field_name_row"]]
+        if "in_count_headers" in p["string_locations"]:
+
+            # split header_0 column into separate columns
+            melted[
+                [f"header_{idx}" for idx in p["count_header_row_numbers"]]
+            ] = pd.DataFrame(
+                melted["header_0"].str.split(";:;", expand=True).values
+            )
+    
+    return melted, err
+
+
 def munge_and_melt(
     mu: jm.Munger, raw: pd.DataFrame, count_cols: List[str], err: Optional[dict]
 ) -> (pd.DataFrame, Optional[dict]):
