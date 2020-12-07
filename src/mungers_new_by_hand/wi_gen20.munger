@@ -12,4 +12,4 @@ rows_to_skip=1
 ReportingUnit=<County>
 
 [in_count_headers]
-Candidate=<0>
+Candidate=<header_0>
