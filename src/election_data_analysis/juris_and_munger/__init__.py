@@ -39,7 +39,7 @@ def recast_options(options: dict, types: dict) -> dict:
     where type is determined by <types>"""
     keys = {k for k in options.keys() if k in types.keys()}
     for k in keys:
-        if types[k] == "int":
+        if types[k] in ["int","integer"]:
             try:
                 options[k] = int(options[k])
             except:

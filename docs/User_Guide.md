@@ -32,7 +32,7 @@ Ensure that the munger files are appropriate for your results file(s).
   * [[ will be obsolete: `concatenated-blocks` Clarity format derived from xml]]
   
   `count_locations`: controls how the system looks for counts
-  * 'by_field_name'
+  * 'by_field_name' (NB: as of 12/2020, for this case system can handle only files with only one field-name row for the count fields. If there are multiple header rows for the count columns, use the 'by_column_number' option.)
     * (required) list `count_fields_by_name` of names of fields containing counts. 
     * (required for 'excel' and 'flat_text' file_types) specify location of field names for count columns. with integer `count_field_name_row` (NB: top row not skipped is 0, next row is 1, etc.)
   * 'by_column_number'
@@ -54,7 +54,7 @@ Ensure that the munger files are appropriate for your results file(s).
       * (required) A path `auxiliary_data_directory` indicating the directory where the file(s) with the auxiliary information can be found. 
 
    Available for flat_text and excel file types:
-   * (optional) `rows_to_skip` An integer giving the number of rows to skip. Note that this parameter will affect any integer parameters designating particular rows -- row 0 is the first row not skipped.
+   * (optional) `rows_to_skip` An integer giving the number of rows to skip at the top. Note that this parameter will affect any integer parameters designating particular rows -- row 0 is the first row not skipped.
    * (optional) `missing` If the file has no column headers but only data rows with counts, set this parameter to 'field_names'
 
 

@@ -378,7 +378,7 @@ def read_single_datafile(
             if p["count_locations"] == "by_field_name":
                 header_rows.update({p["count_field_name_row"]})
             # if any string locations are from field values AND field names are in the table, need string_field_name_row
-            if p["all_rows"] == None and "from_field_values" in p["string_locations"]:
+            if (not p["all_rows"]) and "from_field_values" in p["string_locations"]:
                 header_rows.update({p["string_field_name_row"]})
             # if any string locations are in count headers need count_header_row_numbers
             if "in_count_headers" in p["string_locations"]:
@@ -388,10 +388,9 @@ def read_single_datafile(
             else:
                 kwargs["header"] = None
 
-
             # designate rows to skip
             if p["rows_to_skip"]:
-                kwargs["skiprows"] = p["rows_to_skip"]
+                kwargs["skiprows"] = range(p["rows_to_skip"])
 
         # other parameters
         if p["thousands_separator"]:

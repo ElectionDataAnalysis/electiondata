@@ -200,13 +200,13 @@ def create_munger_files(
             # set count_locations and related params
             if d["count_columns"] is not None:
                 new_sections["format"].append(f"count_locations=by_column_number")
-                new_sections["format"].append(f"count_columns={d['count_columns']}")
+                new_sections["format"].append(f"count_column_numbers={d['count_columns']}")
             elif mu in count_field_dict.keys():
                 new_sections["format"].append(f"count_locations=by_field_name")
                 new_sections["format"].append(f"count_fields={count_field_dict[mu]}")
             elif d["field_names_if_no_field_name_row"] is not None:
                 new_sections["format"].append(f"count_locations=by_column_number")
-                new_sections["format"].append(f"count_columns={d['count_columns']}")
+                new_sections["format"].append(f"count_column_numbers={d['count_columns']}")
 
             # set string_location and related params 
             str_locations = []
@@ -225,7 +225,7 @@ def create_munger_files(
 
             # set rows to skip
             if d["count_of_top_lines_to_skip"]:
-                new_sections["format"].append(f"rows_to_skip={d['rows_to_skip']}")
+                new_sections["format"].append(f"rows_to_skip={d['count_of_top_lines_to_skip']}")
 
             # note if all rows of a flat file contain only data (not field names)
             if d["field_names_if_no_field_name_row"]:
@@ -280,7 +280,7 @@ opt_munger_params: Dict[str, str] = {
     "sheets_to_skip": "list-of-strings",
     "sheets_to_read_numbers": "list-of-integers",
     "sheets_to_skip_numbers": "list-of-integers",
-    "rows_to_skip": "list-of-integers",
+    "rows_to_skip": "integer",
     "flat_file_delimiter": "string",
     "quoting": "string",
     "thousands_separator": "string",
@@ -324,7 +324,7 @@ def get_and_check_munger_params(munger_path: str) -> (dict, Optional[dict]):
         optional_keys=list(opt_munger_params.keys()),
         param_file=munger_path,
         header="format",
-        err=dict(),
+        err=None,
     )
     # get name of munger for error reporting
     munger_name = Path(munger_path).name[:-7]
@@ -363,15 +363,30 @@ def get_and_check_munger_params(munger_path: str) -> (dict, Optional[dict]):
                         munger_name,
                         f"{k0}={k1}', but {v2} not found"
                     )
-    # # count_field_name_row is given where required
-    if (format_options["file_type"] in ["excel", "flat_text"]) and (format_options["count_locations"] == "by_field_name"):
-        if format_options["count_field_name_row"] is None:
+
+    # # extra compatibility requirements for excel or flat text files
+    if (format_options["file_type"] in ["excel", "flat_text"]) :
+        # # count_field_name_row is given where required
+        if (format_options["count_field_name_row"] is None) and (format_options["count_locations"] == "by_field_name"):
             err = ui.add_new_error(
                 err,
                 "munger",
                 munger_name,
                 f"file_type={format_options['file_type']}' but count_field_name_row not found"
             )
+
+        # # if all rows are not data, need field names
+        if (format_options["all_rows"] is None):
+            if format_options["string_field_name_row"] is None:
+                err = ui.add_new_error(
+                    err,
+                    "munger",
+                    munger_name,
+                    f"file_type={format_options['file_type']}' and absence of"
+                    f" all_rows=data means field names must be in the "
+                    f"file. But string_field_name_row not given."
+                )
+
     # # for each value in list of string locations, requirements are met
     for k0 in format_options["string_locations"]:
         for v2 in string_location_reqs[k0]:
@@ -411,35 +426,27 @@ def load_results_file(
         err = ui.consolidate_errors([err,read_err])
         if ui.fatal_error(read_err):
             return err
+
     # remove any sheets designated to be removed
     if p["sheets_to_skip"]:
         for k in p["sheets_to_skip"]:
             raw_dict.pop(k)
     # for each df:
     for k, raw in raw_dict.items():
-        # # transform to df where all columns are count columns and all raw munge info is in row multi-index
-        df = raw_dict[k].copy()
-        if p["count_locations"] == "by_field_name":
-            string_columns = [c for c in df.columns if c not in p["count_fields_by_name"]]
-        elif p["count_locations"] == "by_column_number":
-            string_columns = [x for x in df.columns if df.columns.index(x) not in p["count_column_numbers"]]
-        else:
-            err = ui.add_new_error(
-                err,
-                "system",
-                "load_results_file",
-                "TODO: system should check munger file to avoid this error"
-            )
-            return err
-        df.set_index(string_columns, inplace=True)
+        # transform to df with single count column and all raw munge info in other columns
+        df, k_err = m.melt_to_one_count_column(raw, p, munger_name)
+        if k_err:
+            err = ui.consolidate_errors([err, k_err])
+            if ui.fatal_error(k_err):
+                return err
 
-        # # clean all columns (they are all count columns now!) and report any rows with bad counts
-        df, bad_rows = m.clean_count_cols(df, df.columns, p["thousands_separator"])
+        # # clean Count column
+        df, bad_rows = m.clean_count_cols(df, ["Count"], p["thousands_separator"])
         if not bad_rows.empty:
             err = ui.add_err_df(err, bad_rows, munger_name, f_path)
 
-        # # transform raw multi-index to munged multi-index (possibly with foreign keys if there is aux data)
-
+        # # transform raw to munged (possibly with foreign keys if there is aux data)
+        df, new_err = m.munge_clean(df, munger_name, ["Count"]) # TODO munge_clean uses list of fields used in munge formulas.
         # # add columns for any constant-over-sheet elements
         # # replace any foreign keys with true values
         # # load counts to db
@@ -469,6 +476,6 @@ if __name__ == "__main__":
         munger_list=["wi_gen20"]
     )
     results_path = "/Users/singer3/PycharmProjects/election_data_analysis/tests/TestingData/_000-Final-2020-General/archived/Wisconsin/UNOFFICIAL WI Election Results 2020 by County 11-5-2020.xlsx"
-    munger_path = "/mungers_new_by_hand/wi_gen20.munger"
-    load_results_file(munger_path, results_path)
+    munger_path = "/Users/singer3/PycharmProjects/election_data_analysis/src/mungers_new_by_hand/wi_gen20.munger"
+    load_error = load_results_file(munger_path, results_path)
     exit()
