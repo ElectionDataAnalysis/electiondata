@@ -392,17 +392,15 @@ def munge_raw_to_ids(
     for element in other_constants:
         # CountItemType is the only enumeration
         if element == "CountItemType":
-            enum_df = pd.read_sql_table(element, session.bind)
-            one_line = pd.DataFrame([[constants[element]]],columns=[element])
-            id_txt_one_line, non_standard = m.enum_col_to_id_othertext(
-                one_line, element, enum_df, drop_type_col=False
+            working = m.add_constant_column(
+                working, element, constants[element]
             )
-            for c in [f"{element}_Id", f"Other{element}"]:
-                working = m.add_constant_column(
-                    working,
-                    c,
-                    id_txt_one_line.loc[0,c]
-                )
+            working, new_err = m.raw_to_id_simple(
+                working, juris, ["CountItemType"], session
+            )
+            if new_err:
+                #  unrecognized CountItemType error can't be fatal
+                err = ui.consolidate_errors([err, new_err])
         else:
             working = m.add_constant_column(
                 working,
