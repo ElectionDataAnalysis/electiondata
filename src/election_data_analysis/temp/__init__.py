@@ -340,7 +340,8 @@ all_munge_elements = [
 def munge_raw_to_ids(
         df: pd.DataFrame,
         constants: dict,
-        juris,
+        juris: jm.Jurisdiction,
+        munger_name: str,
         session,
 ) -> (pd.DataFrame, Optional[dict]):
 
@@ -392,15 +393,18 @@ def munge_raw_to_ids(
     for element in other_constants:
         # CountItemType is the only enumeration
         if element == "CountItemType":
-            working = m.add_constant_column(
-                working, element, constants[element]
+            enum_df = pd.read_sql_table(element, session.bind)
+            one_line = pd.DataFrame([[constants[element]]],columns=[element])
+            id_txt_one_line, non_standard = m.enum_col_to_id_othertext(
+                one_line, element, enum_df, drop_type_col=False
             )
-            working, new_err = m.raw_to_id_simple(
-                working, juris, ["CountItemType"], session
-            )
-            if new_err:
-                #  unrecognized CountItemType error can't be fatal
-                err = ui.consolidate_errors([err, new_err])
+            for c in [f"{element}_Id", f"Other{element}"]:
+                working = m.add_constant_column(
+                    working,
+                    c,
+                    id_txt_one_line.loc[0, c]
+                )
+            working.drop(element, axis=1, inplace=True)
         else:
             working = m.add_constant_column(
                 working,
@@ -408,6 +412,14 @@ def munge_raw_to_ids(
                 db.name_to_id(session, element, constants[element])
             )
             working.drop(element, axis=1, inplace=True)
+            working, err_df = m.clean_ids(working, ["CountItemType_Id"])
+            if not err_df.empty:
+                err = ui.add_new_error(
+                    err,
+                    "warn-munger",
+                    munger_name,
+                    f"Problem cleaning these Ids:\nerr_df"
+                )
 
     other_elements = [
         t for t in all_munge_elements
@@ -723,12 +735,63 @@ def to_standard_count_frame(f_path: str, munger_path: str, p) -> (pd.DataFrame, 
     return df, err
 
 
+def fill_vote_count(
+        df: pd.DataFrame,
+        session,
+        err: Optional[dict],
+) -> Optional[dict]:
+
+    working = df.copy()
+    # restrict to just the VoteCount columns (so that groupby.sum will work)
+    vc_cols = [
+        "Count",
+        "CountItemType_Id",
+        "OtherCountItemType",
+        "ReportingUnit_Id",
+        "Contest_Id",
+        "Selection_Id",
+        "Election_Id",
+        "_datafile_Id",
+    ]
+    working = working[vc_cols]
+
+    # add CountItemType total if it's not already there
+    working = m.ensure_total_counts(working, session)
+    # TODO there are edge cases where this might include dupes
+    #  that should be omitted. E.g., if data mistakenly read twice
+    # Sum any rows that were disambiguated (otherwise dupes will be dropped
+    #  when VoteCount is filled)
+    group_cols = [c for c in working.columns if c != "Count"]
+    working = working.groupby(group_cols).sum().reset_index()
+
+    # Fill VoteCount
+    try:
+        err_str = db.insert_to_cdf_db(session.bind, working, "VoteCount")
+        if err_str:
+            err = ui.add_new_error(
+                err,
+                "system",
+                f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
+                f"database insertion error {err_str}",
+            )
+            return err
+    except Exception as exc:
+        err = ui.add_new_error(
+            err,
+            "system",
+            f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
+            f"Error filling VoteCount:\n{exc}",
+        )
+
+    return err
+
+
 def load_results_file(
         session,
         munger_path: str,
         f_path: str,
         juris: jm.Jurisdiction,
-        election_jurisdiction_ids,
+        election_datafile_ids: dict,
         constants: Dict[str, str],
 ) -> Optional[dict]:
 
@@ -768,11 +831,17 @@ def load_results_file(
         )
 
     # # add Id columns for all but Count, removing raw-munged
-    df, new_err = munge_raw_to_ids(df, constants, juris, session)
-
+    df, new_err = munge_raw_to_ids(df, constants, juris, munger_name, session)
+    if new_err:
+        err = ui.consolidate_errors([err, new_err])
+        if ui.fatal_error(new_err):
+            return err
     # #  TODO replace any foreign keys with true values
-    # # TODO _datafile_Id and Election_Id columns
-    # #  TODO load counts to db
+    # add_datafile_Id and Election_Id columns
+    for c in ["_datafile_Id", "Election_Id"]:
+        df = m.add_constant_column(df, c, results_info[c])
+    # load counts to db
+    err = fill_vote_count(df, session, err)
     return err
 
 
@@ -807,7 +876,7 @@ if __name__ == "__main__":
         "CandidateContest": "US President (WI)",
         "CountItemType": "total",
     }
-    results_info = [909, 808]
+    results_info = {"_datafile_Id": 909, "Election_Id": 1352}
 
     juris, juris_err = ui.pick_juris_from_filesystem(
         juris_path=juris_path,

@@ -614,6 +614,7 @@ def enum_col_to_id_othertext(
     if df.empty:
         # add two columns
         df[f"{type_col}_Id"] = df[f"Other{type_col}"] = df.iloc[:, 0]
+        non_standard = list()
     else:
         assert type_col not in ["Id", "Txt"], "type_col cannot be Id or Txt"
         # get the Id of 'other' in the enumeration
@@ -651,13 +652,14 @@ def enum_col_to_id_othertext(
         for c in ["Id", "Txt"]:
             if c * 3 in df.columns:
                 df.rename(columns={c * 3: c}, inplace=True)
+        # create list of non-standard items found
+        non_standard = list(df.loc[mask, f"Other{type_col}"].unique())
+        if "" in non_standard:
+            non_standard.remove("")
+
     if drop_type_col:
         df = df.drop([type_col], axis=1)
 
-    # create list of non-standard items found
-    non_standard = list(df.loc[mask, f"Other{type_col}"].unique())
-    if "" in non_standard:
-        non_standard.remove("")
     return df, non_standard
 
 
@@ -1266,7 +1268,6 @@ def raw_elements_to_cdf(
             "munge.raw_elements_to_cdf",
             f"Error filling VoteCount:\n{exc}",
         )
-
     return err
 
 

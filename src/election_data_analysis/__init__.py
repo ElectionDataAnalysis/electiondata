@@ -394,41 +394,7 @@ class SingleDataLoader:
         self.munger_err = dict()
         # TODO document
         self.munger_list = [x.strip() for x in self.d["munger_name"].split(",")]
-
-        # initialize each munger (or collect error)
-        m_err = dict()
-        for mu in self.munger_list:
-            self.munger[mu], m_err[mu] = jm.check_and_init_munger(
-                os.path.join(mungers_path, mu)
-            )
-            print(f"Munger initialized: {mu}")
-
-            # check whether all items to be specified in param file (per munger cdf_elements.txt)
-            #  are actually in the param file!
-            for i, r in self.munger[mu].cdf_elements[self.munger[mu].cdf_elements["source"] == "ini"].iterrows():
-                if i[-7:] == "Contest":
-                    if self.d["Contest"] is None:
-                        m_err[mu] = ui.add_new_error(
-                            m_err[mu],
-                            "ini",
-                            par_file,
-                            f"Munger {mu} requires {i} to be specified in ini file",
-                        )
-                    if self.d["contest_type"] is None:
-                        m_err[mu] = ui.add_new_error(
-                            m_err[mu],
-                            "ini",
-                            par_file,
-                            f"Munger {mu} requires contest_type={i[:-7]} to be specified in ini file",
-                        )
-                elif self.d[i] is None:
-                    m_err[mu] = ui.add_new_error(
-                        m_err[mu],
-                        "ini",
-                        par_file,
-                        f"Munger {mu} requires {i} to be specified in ini file"
-                    )
-        self.munger_err = ui.consolidate_errors([m_err[mu] for mu in self.munger_list])
+        # TODO check mungers for consistency?
 
     def track_results(self) -> (dict, Optional[str]):
         """insert a record for the _datafile, recording any error string <e>.
