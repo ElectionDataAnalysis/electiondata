@@ -821,7 +821,7 @@ def add_constant_column(df, col_name, col_value):
 
 
 def add_contest_id(
-    df: pd.DataFrame, juris: jm.Jurisdiction, err: dict, session: Session
+    df: pd.DataFrame, juris: jm.Jurisdiction, err: Optional[dict], session: Session
 ) -> (pd.DataFrame, dict):
     working = df.copy()
     """Append Contest_Id and contest_type. Add contest_type column and fill it correctly.
@@ -1003,7 +1003,7 @@ def add_selection_id(  # TODO tech debt: why does this add columns 'I' and 'd'?
     return working, err  #
 
 
-def row_and_col_sourced_ids(
+def raw_to_id_simple(
         df: pd.DataFrame,
         juris: jm.Jurisdiction,
         element_list: list,
@@ -1185,7 +1185,7 @@ def raw_elements_to_cdf(
             and f"{t}_Id" not in constants.keys()
         )
     ]
-    working, new_err = row_and_col_sourced_ids(working, juris, element_list, session)
+    working, new_err = raw_to_id_simple(working, juris, element_list, session)
     if new_err:
         err = ui.consolidate_errors([err, new_err])
         if ui.fatal_error(new_err):

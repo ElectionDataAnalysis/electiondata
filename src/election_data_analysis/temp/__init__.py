@@ -1,8 +1,10 @@
 from election_data_analysis import user_interface as ui
 from election_data_analysis import juris_and_munger as jm
 from election_data_analysis import munge as m
+import election_data_analysis as e
 import os
 import re
+import inspect
 from pathlib import Path
 import pandas as pd
 from typing import List, Dict, Optional, Any
@@ -298,6 +300,7 @@ opt_munger_params: Dict[str, str] = {
     "string_field_name_row": "int",
     "auxiliary_data_location": "string",
     "all_rows": "string",
+    "constant_over_file": "list-of-strings",
 }
 
 munger_dependent_reqs: Dict[str, Dict[str, List[str]]] = {
@@ -331,7 +334,63 @@ all_munge_elements = [
     "ReportingUnit",
     "Election",
     "CountItemType",
+    "_datafile",
 ]
+
+
+def munge_raw_to_ids(
+        df: pd.DataFrame,
+        juris,
+        session,
+) -> (pd.DataFrame, Optional[dict]):
+
+    err = None
+    working = df.copy()
+    # add Contest_Id (unless it was passed in ids)
+    if "Contest_Id" not in working.columns:
+        try:
+            working, err = m.add_contest_id(working, juris, err, session)
+        except Exception as exc:
+            err = ui.add_new_error(
+                err,
+                "system",
+                "munge.raw_elements_to_cdf",
+                f"Unexpected exception while adding Contest_Id: {exc}",
+            )
+            return err
+        if ui.fatal_error(err):
+            return working, err
+
+    # add all other _Ids except Selection_Id
+    elements = [t for t in all_munge_elements if t[-7:] != "Contest" and (t[-9:] != "Selection")]
+    working, new_err = m.raw_to_id_simple(working, juris, elements, session)
+    if new_err:
+        err = ui.consolidate_errors([err, new_err])
+        if ui.fatal_error(new_err):
+            return working, err
+
+    # add Selection_Id (combines info from BallotMeasureSelection and CandidateContestSelection)
+    try:
+        working, err = m.add_selection_id(working, session.bind, juris, err)
+        working, err_df = clean_ids(working, ["Selection_Id"])
+    except Exception as exc:
+        err = ui.add_new_error(
+            err,
+            "system",
+            f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
+            f"Unexpected exception while adding Selection_Id:\n{exc}",
+        )
+        return err
+    if working.empty:
+        err = ui.add_new_error(
+            err,
+            "jurisdiction",
+            juris.short_name,
+            "No contests found, or no selections found for contests.",
+        )
+        return err
+
+    return working, err
 
 
 def munge_source_to_raw(
@@ -478,7 +537,10 @@ def get_and_check_munger_params(munger_path: str) -> (dict, Optional[dict]):
     return format_options, err
 
 
-def get_string_fields(sources: list) -> (Dict[str,List[str]], Optional[dict]):
+def get_string_fields(
+        sources: list,
+        munger_path: str,
+) -> (Dict[str,List[str]], Optional[dict]):
     err = None
     pattern = re.compile(r'<([^>]+)>')
     munge_field_lists = dict()
@@ -512,6 +574,7 @@ def to_standard_count_frame(f_path: str, munger_path: str, p, constants: Dict[st
     """Read data from file at <f_path>; return a standard dataframe with one clean count column
     and all other columns typed as 'string' """
     munger_name = Path(munger_path).name
+    err = None
 
     # check that all necessary constants were passed
     if p["constant_over_file"] is not None:
@@ -524,18 +587,19 @@ def to_standard_count_frame(f_path: str, munger_path: str, p, constants: Dict[st
                 f_path,
                 f"Required constants not given in .ini file:\n\t{bad_str}",
             )
-            return err
+            return pd.DataFrame(), err
 
     # read count dataframe(s) from file
     raw_dict, read_err = ui.read_single_datafile(p, f_path)
     if read_err:
         err = ui.consolidate_errors([err,read_err])
         if ui.fatal_error(read_err):
-            return err
+            return pd.DataFrame(), err
 
     # get lists of string fields expected in raw file
     munge_field_lists, new_err = get_string_fields(
-        [x for x in p["string_locations"] if x != "constant_over_file"]
+        [x for x in p["string_locations"] if x != "constant_over_file"],
+        munger_path,
     )
     if new_err:
         err = ui.consolidate_errors([err, new_err])
@@ -617,6 +681,7 @@ def load_results_file(
         juris: jm.Jurisdiction,
         constants: Dict[str, str],
 ) -> Optional[dict]:
+
     # TODO complete this routine
     munger_name = Path(munger_path).name
     # read parameters from munger file
@@ -636,20 +701,15 @@ def load_results_file(
 
     # transform source to completely munged (possibly with foreign keys if there is aux data)
     # # add raw-munged column for each element, removing old
-    df, new_err = munge_source_to_raw(munger_path, p, original_string_columns)
-    # # add Contest_Id
-    try:
-        df, err = m.add_contest_id(df, juris, err, session)
-    except Exception as exc:
-        err = ui.add_new_error(
-            err,
-            "system",
-            "munge.raw_elements_to_cdf",
-            f"Unexpected exception while adding Contest_Id: {exc}",
-        )
-        return err
-    if ui.fatal_error(err):
-        return err
+    df, new_err = munge_source_to_raw(
+        df,
+        munger_path,
+        p,
+        original_string_columns,
+        "_SOURCE",
+    )
+
+    # # add Id columns, removing raw-munged
 
     # #  TODO replace any foreign keys with true values
     # #  TODO load counts to db
@@ -670,7 +730,7 @@ if __name__ == "__main__":
     }
 
     """    aa = count_fields(ini_directory, old_mungers_directory, results_directory)
-    """
+    
     error = create_munger_files(
         ini_directory,
         old_mungers_directory,
@@ -678,7 +738,14 @@ if __name__ == "__main__":
         results_directory,
         munger_list=["wi_gen20"]
     )
+    """
     results_path = "/Users/singer3/PycharmProjects/election_data_analysis/tests/TestingData/_000-Final-2020-General/archived/Wisconsin/UNOFFICIAL WI Election Results 2020 by County 11-5-2020.xlsx"
+    juris_path = "/Users/singer3/PycharmProjects/election_data_analysis/src/jurisdictions/Wisconsin"
     mu_path = "/Users/singer3/PycharmProjects/election_data_analysis/src/mungers_new_by_hand/wi_gen20.munger"
-    load_error = load_results_file(mu_path, results_path)
+    jurisdiction = jm.Jurisdiction(juris_path)
+    constants = {"Party":"Democratic Party", "CandidateContest": "US President (WI)"}
+
+    dl = e.DataLoader()
+
+    load_error = load_results_file(dl.session, mu_path, results_path, jurisdiction,constants)
     exit()
