@@ -1,5 +1,5 @@
 Name	ReportingUnitType
-Wisconsin	State
+Wisconsin	state
 Wisconsin;Adams County	county
 Wisconsin;Ashland County	county
 Wisconsin;Barron County	county

@@ -656,7 +656,7 @@ def append_id_to_dframe(
     connection.commit()
     connection.close()
     df_appended = df.join(w[["Id"]]).rename(columns={"Id": f"{element}_Id"})
-    df_appended, err_df = m.clean_ids(df_appended, "Id")
+    df_appended, err_df = m.clean_ids(df_appended, [f"{element}_Id"])
     return df_appended
 
 

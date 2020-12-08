@@ -5,7 +5,7 @@ count_locations=by_column_number
 count_column_numbers=1,2,3,4,5,6
 string_locations=in_count_headers,from_field_values,constant_over_file
 string_field_name_row=0
-constant_over_file=Party,CandidateContest
+constant_over_file=Party,CandidateContest,CountItemType
 rows_to_skip=1
 
 [from_field_values]
