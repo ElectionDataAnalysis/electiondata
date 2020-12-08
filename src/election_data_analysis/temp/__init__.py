@@ -1,6 +1,7 @@
 from election_data_analysis import user_interface as ui
 from election_data_analysis import juris_and_munger as jm
 from election_data_analysis import munge as m
+from election_data_analysis import database as db
 import election_data_analysis as e
 import os
 import re
@@ -332,22 +333,46 @@ all_munge_elements = [
     "Candidate",
     "Party",
     "ReportingUnit",
-    "Election",
     "CountItemType",
-    "_datafile",
 ]
 
 
 def munge_raw_to_ids(
         df: pd.DataFrame,
+        constants: dict,
         juris,
         session,
 ) -> (pd.DataFrame, Optional[dict]):
 
     err = None
     working = df.copy()
-    # add Contest_Id (unless it was passed in ids)
-    if "Contest_Id" not in working.columns:
+
+    # add Contest_Id column and contest_type column
+    if "CandidateContest" in constants.keys():
+        working = m.add_constant_column(
+            working,
+            "Contest_Id",
+            db.name_to_id(session, "Contest", constants["CandidateContest"])
+        )
+        working = m.add_constant_column(
+            working,
+            "contest_type",
+            "Candidate"
+        )
+        working.drop("CandidateContest", axis=1, inplace=True)
+    elif "BallotMeasureContest" in constants.keys():
+        working = m.add_constant_column(
+            working,
+            "Contest_Id",
+            db.name_to_id(session, "Contest", constants["BallotMeasureContest"])
+        )
+        working.drop("BallotMeasureContest", axis=1, inplace=True)
+        working = m.add_constant_column(
+            working,
+            "contest_type",
+            "BallotMeasure"
+        )
+    else:
         try:
             working, err = m.add_contest_id(working, juris, err, session)
         except Exception as exc:
@@ -361,9 +386,36 @@ def munge_raw_to_ids(
         if ui.fatal_error(err):
             return working, err
 
-    # add all other _Ids except Selection_Id
-    elements = [t for t in all_munge_elements if t[-7:] != "Contest" and (t[-9:] != "Selection")]
-    working, new_err = m.raw_to_id_simple(working, juris, elements, session)
+    # add all other _Ids/Other except Selection_Id
+    # # for constants
+    other_constants = [t for t in constants.keys() if t[-7:] != "Contest" and (t[-9:] != "Selection")]
+    for element in other_constants:
+        # CountItemType is the only enumeration
+        if element == "CountItemType":
+            enum_df = pd.read_sql_table(element, session.bind)
+            one_line = pd.DataFrame([[constants[element]]],columns=[element])
+            id_txt_one_line, non_standard = m.enum_col_to_id_othertext(
+                one_line, element, enum_df, drop_type_col=False
+            )
+            for c in [f"{element}_Id", f"Other{element}"]:
+                working = m.add_constant_column(
+                    working,
+                    c,
+                    id_txt_one_line.loc[0,c]
+                )
+        else:
+            working = m.add_constant_column(
+                working,
+                f"{element}_Id",
+                db.name_to_id(session, element, constants[element])
+            )
+            working.drop(element, axis=1, inplace=True)
+
+    other_elements = [
+        t for t in all_munge_elements
+        if (t[-7:] != "Contest") and (t[-9:] != "Selection") and (t not in constants.keys())
+    ]
+    working, new_err = m.raw_to_id_simple(working, juris, other_elements, session)
     if new_err:
         err = ui.consolidate_errors([err, new_err])
         if ui.fatal_error(new_err):
@@ -372,7 +424,7 @@ def munge_raw_to_ids(
     # add Selection_Id (combines info from BallotMeasureSelection and CandidateContestSelection)
     try:
         working, err = m.add_selection_id(working, session.bind, juris, err)
-        working, err_df = clean_ids(working, ["Selection_Id"])
+        working, err_df = m.clean_ids(working, ["Selection_Id"])
     except Exception as exc:
         err = ui.add_new_error(
             err,
@@ -408,6 +460,7 @@ def munge_source_to_raw(
     working = df.copy()
 
     # # get munge formulas
+    # # for all but constant-over-file
     sources = [x for x in p["string_locations"] if x != "constant_over_file"]
     for source in sources:
         formulas, new_err = ui.get_parameters(
@@ -449,6 +502,7 @@ def munge_source_to_raw(
             working.loc[:, f"{element}_raw"] = working[f"{element}_raw"].apply(
                 m.compress_whitespace
             )
+
     # drop the original columns
     working.drop([f"{x}{suffix}" for x in orig_string_cols], axis=1, inplace=True)
     return working, err
@@ -570,7 +624,7 @@ def read_results_from_file(f_path, format_options) -> (Dict[str,pd.DataFrame], d
     return results, err
 
 
-def to_standard_count_frame(f_path: str, munger_path: str, p, constants: Dict[str, str]) -> (pd.DataFrame, Optional[dict]):
+def to_standard_count_frame(f_path: str, munger_path: str, p) -> (pd.DataFrame, Optional[dict]):
     """Read data from file at <f_path>; return a standard dataframe with one clean count column
     and all other columns typed as 'string' """
     munger_name = Path(munger_path).name
@@ -618,6 +672,7 @@ def to_standard_count_frame(f_path: str, munger_path: str, p, constants: Dict[st
             err = ui.consolidate_errors([err, k_err])
             if ui.fatal_error(k_err):
                 return err
+
         # add columns for any constant-over-sheet elements
         if "constant_over_sheet" in p["string_locations"]:
             # see if <sheet_name> is needed
@@ -664,10 +719,6 @@ def to_standard_count_frame(f_path: str, munger_path: str, p, constants: Dict[st
 
     df = pd.concat(standard.values())
 
-    # add columns for any constant-over-file elements
-    for k in constants.keys():
-        df = m.add_constant_column(df, k, constants[k])
-
     non_count = [c for c in df.columns if c != "Count"]
     df[non_count] = df[non_count].astype("string")
 
@@ -679,6 +730,7 @@ def load_results_file(
         munger_path: str,
         f_path: str,
         juris: jm.Jurisdiction,
+        election_jurisdiction_ids,
         constants: Dict[str, str],
 ) -> Optional[dict]:
 
@@ -690,7 +742,7 @@ def load_results_file(
         return err
 
     # read data into standard count format dataframe
-    df, err = to_standard_count_frame(f_path, munger_path, p, constants)
+    df, err = to_standard_count_frame(f_path, munger_path, p,)
     if ui.fatal_error(err):
         return err
     # TODO what if returned df is empty?
@@ -709,9 +761,19 @@ def load_results_file(
         "_SOURCE",
     )
 
-    # # add Id columns, removing raw-munged
+    # # add columns for constant-over-file elements
+    for element in constants.keys():
+        df = m.add_constant_column(
+            df,
+            element,
+            constants[element],
+        )
+
+    # # add Id columns for all but Count, removing raw-munged
+    df, new_err = munge_raw_to_ids(df, constants, juris, session)
 
     # #  TODO replace any foreign keys with true values
+    # # TODO _datafile_Id and Election_Id columns
     # #  TODO load counts to db
     return err
 
@@ -742,10 +804,22 @@ if __name__ == "__main__":
     results_path = "/Users/singer3/PycharmProjects/election_data_analysis/tests/TestingData/_000-Final-2020-General/archived/Wisconsin/UNOFFICIAL WI Election Results 2020 by County 11-5-2020.xlsx"
     juris_path = "/Users/singer3/PycharmProjects/election_data_analysis/src/jurisdictions/Wisconsin"
     mu_path = "/Users/singer3/PycharmProjects/election_data_analysis/src/mungers_new_by_hand/wi_gen20.munger"
-    jurisdiction = jm.Jurisdiction(juris_path)
-    constants = {"Party":"Democratic Party", "CandidateContest": "US President (WI)"}
+    constants = {
+        "Party": "Democratic Party",
+        "CandidateContest": "US President (WI)",
+        "CountItemType": "total",
+    }
+    results_info = [909, 808]
+
+    juris, juris_err = ui.pick_juris_from_filesystem(
+        juris_path=juris_path,
+        err=None,
+        check_files=False,
+    )
 
     dl = e.DataLoader()
 
-    load_error = load_results_file(dl.session, mu_path, results_path, jurisdiction,constants)
+    jurs_load_err = juris.load_juris_to_db(dl.session)
+
+    load_error = load_results_file(dl.session, mu_path, results_path, juris, results_info, constants)
     exit()

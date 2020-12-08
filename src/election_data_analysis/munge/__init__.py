@@ -49,6 +49,9 @@ def clean_ids(
     """changes only the columns to of numeric type; changes them
     to integer, with any nulls changed to 0. Reports a dataframe of
     any rows so changed. Non-numeric-type columns are changed to all 0"""
+
+    if cols == list():
+        return df, pd.DataFrame()
     err_df = pd.DataFrame()
     working = df.copy()
     for c in cols:
@@ -937,6 +940,13 @@ def add_selection_id(  # TODO tech debt: why does this add columns 'I' and 'd'?
 
         # clean Ids and drop any that were null (i.e., 0 after cleaning)
         c_df, err_df = clean_ids(c_df, ["Candidate_Id", "Party_Id"])
+        if not err_df.empty:
+            err = ui.add_new_error(
+                err,
+                "warn-system",
+                f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
+                f"some Candidate_Ids or Party_Ids null\n{err_df}",
+            )
         c_df = c_df[c_df.Candidate_Id != 0]
 
         # pull any existing Ids into a new CandidateSelection_Id column
@@ -1000,7 +1010,10 @@ def add_selection_id(  # TODO tech debt: why does this add columns 'I' and 'd'?
 
     working = pd.concat([w["BallotMeasure"], w["Candidate"]])
 
-    return working, err  #
+    # drop Candidate_Id if it is still a column
+    if "Candidate_Id" in working.columns:
+        working.drop("Candidate_Id", axis=1, inplace=True)
+    return working, err
 
 
 def raw_to_id_simple(

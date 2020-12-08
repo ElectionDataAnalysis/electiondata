@@ -13,6 +13,7 @@ from election_data_analysis import analyze as a
 from election_data_analysis import visualize as viz
 from election_data_analysis import juris_and_munger as jm
 from election_data_analysis import preparation as prep
+from election_data_analysis import temp
 
 # constants
 sdl_pars_req = [
@@ -503,76 +504,30 @@ class SingleDataLoader:
             return err
 
         else:
-            if self.d["aux_data_dir"] is None:
-                aux_data_path = None
-            else:
-                aux_data_path = os.path.join(self.results_dir, self.d["aux_data_dir"])
-
-            # if Contest was given in .ini file
-            if self.d["Contest"] is not None:
-                # check that contest_type is given and recognized
-                if ("contest_type" not in self.d.keys()) or self.d[
-                    "contest_type"
-                ] not in ["Candidate", "BallotMeasure"]:
-                    err = ui.add_new_error(
-                        err,
-                        "ini",
-                        self.par_file_name,
-                        f"Contest is given, but contest_type is not, or is neither 'Candidate' nor 'BallotMeasure'",
-                    )
-                    return err
-                else:
-                    results_info["contest_type"] = self.d["contest_type"]
-                # collect Contest_Id (or fail gracefully)
-                contest_id = db.name_to_id(self.session, "Contest", self.d["Contest"])
-                if contest_id is None:
-                    err = ui.add_new_error(
-                        err,
-                        "ini",
-                        self.par_file_name,
-                        f"Contest defined in .ini file ({self.d['Contest']}) not found in database",
-                    )
-                    return err
-                else:
-                    results_info["Contest_Id"] = contest_id
-
-            for k in ["Party", "ReportingUnit", "CountItemType", "Contest"]:
+            # collect constant elements from .ini file
+            constants = dict()
+            for k in ["Party",
+                      "ReportingUnit",
+                      "CountItemType",
+                      "CandidateContest",
+                      "BallotMeasureContest",
+                      "BallotMeasureSelection",
+                      "Candidate",
+                      ]:
                 # if element was given in .ini file
                 if self.d[k] is not None:
-                    # collect <k>_Id or fail gracefully
-                    k_id = db.name_to_id(self.session, k, self.d[k])
-                    # CountItemType is different because it's an enumeration
-                    if k == "CountItemType":
-                        if k_id is None:
-                            # put CountItemType value into OtherCountItemType field
-                            # and set k_id to id for 'other'
-                            k_id = db.name_to_id(self.session, k, "other")
-                            results_info["OtherCountItemType"] = self.d[k]
-                        else:
-                            # set OtherCountItemType to "" since type was recognized
-                            results_info["OtherCountItemType"] = ""
-                    else:
-                        if k_id is None:
-                            err = ui.add_new_error(
-                                err,
-                                "ini",
-                                self.par_file_name,
-                                f"{k} defined in .ini file ({self.d[k]}) not found in database",
-                            )
-                            return err
-
-                    results_info[f"{k}_Id"] = k_id
+                    constants[k] = self.d[k]
 
             # load results to db
             for mu in self.munger_list:
                 f_path = os.path.join(self.results_dir, self.d["results_file"])
-                new_err = ui.load_datafile(
+                new_err = temp.load_results_file(
                     self.session,
-                    self.munger[mu],
+                    mu,
                     f_path,
                     self.juris,
-                    results_info=results_info,
-                    aux_data_path=aux_data_path,
+                    results_info,
+                    constants,
                 )
                 if new_err:
                     err = ui.consolidate_errors([err, new_err])
