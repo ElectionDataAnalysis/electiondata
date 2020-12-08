@@ -5,7 +5,7 @@ import os
 import re
 from pathlib import Path
 import pandas as pd
-from typing import List, Dict, Optional
+from typing import List, Dict, Optional, Any
 
 # TODO remove the below
 """
@@ -334,6 +334,67 @@ all_munge_elements = [
 ]
 
 
+def munge_source_to_raw(
+        df: pd.DataFrame,
+        munger_path: str,
+        p: Dict[str, Any],
+        orig_string_cols: List[str],
+        suffix: str,
+) -> (pd.DataFrame, Optional[dict]):
+    """NB: assumes columns of dataframe have <suffix> appended already"""
+    err = None
+    if df.empty:
+        return df, err
+    munger_name = Path(munger_path).name
+    working = df.copy()
+
+    # # get munge formulas
+    sources = [x for x in p["string_locations"] if x != "constant_over_file"]
+    for source in sources:
+        formulas, new_err = ui.get_parameters(
+            required_keys=[],
+            optional_keys=all_munge_elements,
+            header=source,
+            param_file=munger_path,
+        )
+        elements = [k for k in formulas.keys() if formulas[k] is not None]
+        for element in elements:
+            try:
+                formula = formulas[element]
+                # append suffix to formula fields
+                for c in orig_string_cols:
+                    formula = formula.replace(f"<{c}>", f"<{c}{suffix}>")
+                # add col with munged values
+                working, new_err = m.add_column_from_formula(
+                    working, formula, f"{element}_raw", err, munger_name
+                )
+                if new_err:
+                    err = ui.consolidate_errors([err, new_err])
+                    if ui.fatal_error(new_err):
+                        return working, err
+                # TODO how to handle disambiguation? Here's how we did it before:
+                """
+                # correct any disambiguated names back to the original
+                if element in munger.alt.keys():
+                    working.replace({f"{element}_raw": munger.alt[element]}, inplace=True)
+                """
+            except Exception as exc:
+                err = ui.add_new_error(
+                    err,
+                    "munger",
+                    munger_name,
+                    f"Error interpreting formula for {element} in cdf_element.txt. {exc}",
+                )
+                return working, err
+            # compress whitespace for <element>_raw
+            working.loc[:, f"{element}_raw"] = working[f"{element}_raw"].apply(
+                m.compress_whitespace
+            )
+    # drop the original columns
+    working.drop([f"{x}{suffix}" for x in orig_string_cols], axis=1, inplace=True)
+    return working, err
+
+
 def get_and_check_munger_params(munger_path: str) -> (dict, Optional[dict]):
     params, err = ui.get_parameters(
         required_keys=list(req_munger_params.keys()),
@@ -441,19 +502,29 @@ def get_string_fields(sources: list) -> (Dict[str,List[str]], Optional[dict]):
 
     return munge_field_lists, err
 
+
 def read_results_from_file(f_path, format_options) -> (Dict[str,pd.DataFrame], dict):
     # TODO
     return results, err
 
 
-def to_standard_count_frame(f_path: str, munger_path: str) -> (pd.DataFrame, Optional[dict]):
+def to_standard_count_frame(f_path: str, munger_path: str, p, constants: Dict[str, str]) -> (pd.DataFrame, Optional[dict]):
     """Read data from file at <f_path>; return a standard dataframe with one clean count column
     and all other columns typed as 'string' """
     munger_name = Path(munger_path).name
-    # read parameters from munger file
-    p, err = get_and_check_munger_params(munger_path)
-    if ui.fatal_error(err):
-        return err
+
+    # check that all necessary constants were passed
+    if p["constant_over_file"] is not None:
+        bad = [x for x in p["constant_over_file"] if x not in constants.keys()]
+        if bad:
+            bad_str = ",".join(bad)
+            err = ui.add_new_error(
+                err,
+                "file",
+                f_path,
+                f"Required constants not given in .ini file:\n\t{bad_str}",
+            )
+            return err
 
     # read count dataframe(s) from file
     raw_dict, read_err = ui.read_single_datafile(p, f_path)
@@ -483,7 +554,7 @@ def to_standard_count_frame(f_path: str, munger_path: str) -> (pd.DataFrame, Opt
             err = ui.consolidate_errors([err, k_err])
             if ui.fatal_error(k_err):
                 return err
-        # TODO add columns for any constant-over-sheet elements
+        # add columns for any constant-over-sheet elements
         if "constant_over_sheet" in p["string_locations"]:
             # see if <sheet_name> is needed
             if "sheet_name" in munge_field_lists["constant_over_sheet"]:
@@ -527,11 +598,11 @@ def to_standard_count_frame(f_path: str, munger_path: str) -> (pd.DataFrame, Opt
         if not bad_rows.empty:
             err = ui.add_err_df(err, bad_rows, munger_name, f_path)
 
-        # cast other columns as string
-
     df = pd.concat(standard.values())
 
-    # TODO add columns for any constant-over-file elements
+    # add columns for any constant-over-file elements
+    for k in constants.keys():
+        df = m.add_constant_column(df, k, constants[k])
 
     non_count = [c for c in df.columns if c != "Count"]
     df[non_count] = df[non_count].astype("string")
@@ -540,22 +611,48 @@ def to_standard_count_frame(f_path: str, munger_path: str) -> (pd.DataFrame, Opt
 
 
 def load_results_file(
-        # session,
+        session,
         munger_path: str,
         f_path: str,
-        # juris: jm.Jurisdiction,
-        # results_info: dict,
+        juris: jm.Jurisdiction,
+        constants: Dict[str, str],
 ) -> Optional[dict]:
-    # get name of munger
     # TODO complete this routine
-            
-    # read data into standard count format dataframe
-    df, err = to_standard_count_frame(f_path, munger_path)
+    munger_name = Path(munger_path).name
+    # read parameters from munger file
+    p, err = get_and_check_munger_params(munger_path)
+    if ui.fatal_error(err):
+        return err
 
-    # # transform raw to munged (possibly with foreign keys if there is aux data)
-    df, new_err = m.munge_clean(df, munger_path, ["Count"]) # TODO munge_clean uses list of fields used in munge formulas.
+    # read data into standard count format dataframe
+    df, err = to_standard_count_frame(f_path, munger_path, p, constants)
+    if ui.fatal_error(err):
+        return err
+    # TODO what if returned df is empty?
+
+    # append "_SOURCE" to all non-Count column names (to avoid confilcts if e.g., source has col names 'Party'
+    original_string_columns = [c for c in df.columns if c != "Count"]
+    df.columns = [c if c == "Count" else f"{c}_SOURCE" for c in df.columns]
+
+    # transform source to completely munged (possibly with foreign keys if there is aux data)
+    # # add raw-munged column for each element, removing old
+    df, new_err = munge_source_to_raw(munger_path, p, original_string_columns)
+    # # add Contest_Id
+    try:
+        df, err = m.add_contest_id(df, juris, err, session)
+    except Exception as exc:
+        err = ui.add_new_error(
+            err,
+            "system",
+            "munge.raw_elements_to_cdf",
+            f"Unexpected exception while adding Contest_Id: {exc}",
+        )
+        return err
+    if ui.fatal_error(err):
+        return err
+
     # #  TODO replace any foreign keys with true values
-    # # load counts to db
+    # #  TODO load counts to db
     return err
 
 
@@ -582,6 +679,6 @@ if __name__ == "__main__":
         munger_list=["wi_gen20"]
     )
     results_path = "/Users/singer3/PycharmProjects/election_data_analysis/tests/TestingData/_000-Final-2020-General/archived/Wisconsin/UNOFFICIAL WI Election Results 2020 by County 11-5-2020.xlsx"
-    munger_path = "/Users/singer3/PycharmProjects/election_data_analysis/src/mungers_new_by_hand/wi_gen20.munger"
-    load_error = load_results_file(munger_path, results_path)
+    mu_path = "/Users/singer3/PycharmProjects/election_data_analysis/src/mungers_new_by_hand/wi_gen20.munger"
+    load_error = load_results_file(mu_path, results_path)
     exit()
