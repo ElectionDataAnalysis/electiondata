@@ -1,6 +1,0 @@
-name	raw_identifier_formula	source
-ReportingUnit	<CountyName>	row
-Party	<PartyCode>	row
-CandidateContest	<RaceName>	row
-Candidate	<CanNameFirst> <CanNameMiddle> <CanNameLast>	row
-CountItemType		ini
