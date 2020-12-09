@@ -15,8 +15,8 @@ from election_data_analysis import juris_and_munger as jm
 from election_data_analysis import preparation as prep
 
 # constants
-from election_data_analysis.munge import get_and_check_munger_params, to_standard_count_frame, munge_source_to_raw, \
-    munge_raw_to_ids, fill_vote_count
+# from election_data_analysis.munge import get_and_check_munger_params, to_standard_count_frame, munge_source_to_raw, \
+    # munge_raw_to_ids, fill_vote_count
 
 sdl_pars_req = [
     "munger_name",
@@ -1812,29 +1812,57 @@ def load_results_file(
     # TODO complete this routine
     munger_name = Path(munger_path).name
     # read parameters from munger file
-    p, err = get_and_check_munger_params(munger_path)
+    p, err = m.get_and_check_munger_params(munger_path)
     if ui.fatal_error(err):
         return err
 
     # read data into standard count format dataframe
-    df, err = to_standard_count_frame(f_path, munger_path, p, constants)
-    if ui.fatal_error(err):
+    try:
+        df, err = m.to_standard_count_frame(f_path, munger_path, p, constants)
+        if ui.fatal_error(err):
+            return err
+    except Exception as exc:
+        err = ui.add_new_error(
+            err,
+            "system",
+            f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
+            f"Exception while reading data from file: {exc}"
+        )
         return err
+
     # TODO what if returned df is empty?
 
     # append "_SOURCE" to all non-Count column names (to avoid confilcts if e.g., source has col names 'Party'
-    original_string_columns = [c for c in df.columns if c != "Count"]
-    df.columns = [c if c == "Count" else f"{c}_SOURCE" for c in df.columns]
+    try:
+        original_string_columns = [c for c in df.columns if c != "Count"]
+        df.columns = [c if c == "Count" else f"{c}_SOURCE" for c in df.columns]
+    except Exception as exc:
+        err = ui.add_new_error(
+            err,
+            "system",
+            f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
+            f"Exception while appending _SOURCE: {exc}"
+        )
+        return err
 
     # transform source to completely munged (possibly with foreign keys if there is aux data)
     # # add raw-munged column for each element, removing old
-    df, new_err = munge_source_to_raw(
-        df,
-        munger_path,
-        p,
-        original_string_columns,
-        "_SOURCE",
-    )
+    try:
+        df, new_err = m.munge_source_to_raw(
+            df,
+            munger_path,
+            p,
+            original_string_columns,
+            "_SOURCE",
+        )
+    except Exception as exc:
+        err = ui.add_new_error(
+            err,
+            "system",
+            f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
+            f"Exception while munging source to raw: {exc}"
+        )
+        return err
 
     # # add columns for constant-over-file elements
     for element in constants.keys():
@@ -1845,15 +1873,34 @@ def load_results_file(
         )
 
     # # add Id columns for all but Count, removing raw-munged
-    df, new_err = munge_raw_to_ids(df, constants, juris, munger_name, session)
-    if new_err:
-        err = ui.consolidate_errors([err, new_err])
-        if ui.fatal_error(new_err):
-            return err
+    try:
+        df, new_err = m.munge_raw_to_ids(df, constants, juris, munger_name, session)
+        if new_err:
+            err = ui.consolidate_errors([err, new_err])
+            if ui.fatal_error(new_err):
+                return err
+    except Exception as exc:
+        err = ui.add_new_error(
+            err,
+            "system",
+            f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
+            f"Exception while munging raw to ids: {exc}"
+        )
+        return err
+
     # #  TODO replace any foreign keys with true values
     # add_datafile_Id and Election_Id columns
     for c in ["_datafile_Id", "Election_Id"]:
         df = m.add_constant_column(df, c, election_datafile_ids[c])
     # load counts to db
-    err = fill_vote_count(df, session, err)
+    try:
+        err = m.fill_vote_count(df, session, err)
+    except Exception as exc:
+        err = ui.add_new_error(
+            err,
+            "system",
+            f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
+            f"Exception while filling vote count table: {exc}"
+        )
+        return err
     return err
