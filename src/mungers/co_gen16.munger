@@ -1,0 +1,17 @@
+[format]
+encoding=utf-8
+file_type=excel
+count_locations=by_column_number
+count_column_numbers=4,6
+string_locations=in_count_headers,from_field_values
+
+[from_field_values]
+ReportingUnit=<COUNTY>
+Party=<PARTY>
+CandidateContest=<OFFICE / BALLOT ISSUE>
+Candidate=<CANDIDATE / BALLOT ISSUE TITLE>
+BallotMeasureContest=<OFFICE / BALLOT ISSUE>
+CountItemType=total
+
+[in_count_headers]
+BallotMeasureSelection=<header_0>

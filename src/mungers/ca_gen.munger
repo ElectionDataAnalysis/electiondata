@@ -1,0 +1,17 @@
+[format]
+encoding=windows-1252
+thousands_separator=,
+file_type=excel
+count_locations=by_column_number
+count_column_numbers=12
+string_locations=from_field_values
+missing=field_names
+
+[from_field_values]
+ReportingUnit=<COUNTY_NAME>
+Party=<PARTY_NAME>
+CandidateContest=<CONTEST_NAME>
+Candidate=<CANDIDATE_NAME>
+BallotMeasureContest=None
+BallotMeasureSelection=None
+CountItemType=total

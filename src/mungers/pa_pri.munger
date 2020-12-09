@@ -1,0 +1,20 @@
+[format]
+encoding=iso-8859-1
+thousands_separator=,
+file_type=flat_text
+sep=,
+count_locations=by_column_number
+count_column_numbers=6,7,8
+string_locations=from_field_values,in_count_headers
+missing=field_names
+
+[from_field_values]
+ReportingUnit=<County Name>
+Party=<Party Name>
+CandidateContest=<Office Name> <District Name> (<Party Name>)
+Candidate=<Candidate Name>
+BallotMeasureContest=<Office Name> <District Name>
+CountItemType=total
+
+[in_count_headers]
+BallotMeasureSelection=<header_0>

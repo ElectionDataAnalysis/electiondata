@@ -1,0 +1,13 @@
+[format]
+encoding=ASCII
+file_type=xml
+count_locations=by_field_name
+count_fields=['voteType.votes']
+string_locations=from_field_values
+
+[from_field_values]
+ReportingUnit=<jurisdiction.name>
+Party=<choice.party>
+CandidateContest=<contest.contestLongName>
+Candidate=<choice.choiceName>
+CountItemType=<voteType.voteTypeName>
