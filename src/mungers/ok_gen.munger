@@ -5,7 +5,8 @@ file_type=flat_text
 sep=,
 count_locations=by_column_number
 count_column_numbers=11,12,13,14
-string_locations=in_count_headers,from_field_values
+string_locations=from_field_values,in_count_headers
+all_rows=data
 missing=field_names
 
 [from_field_values]

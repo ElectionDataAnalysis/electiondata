@@ -1,0 +1,9 @@
+name	raw_identifier_formula	source
+ReportingUnit		other
+Election		other
+Party		other
+CandidateContest	<Office Description>	other
+Candidate		other
+BallotMeasureContest	<Office Description>	other
+BallotMeasureSelection		other
+CountItemType		other

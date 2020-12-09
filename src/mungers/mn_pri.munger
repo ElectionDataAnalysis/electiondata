@@ -4,7 +4,8 @@ file_type=flat_text
 sep=;
 count_locations=by_column_number
 count_column_numbers=13
-string_locations=from_field_values,constant_over_file
+string_locations=constant_over_file,from_field_values
+all_rows=data
 missing=field_names
 constant_over_file=CountItemType
 

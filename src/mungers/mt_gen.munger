@@ -3,6 +3,7 @@ file_type=excel
 sheets_to_skip=None
 string_locations=from_field_values
 rows_to_skip=6
+string_field_name_row=None
 
 [from_field_values]
 ReportingUnit=<first_column>

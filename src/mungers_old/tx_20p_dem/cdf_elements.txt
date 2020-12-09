@@ -1,0 +1,6 @@
+name	raw_identifier_formula	source
+ReportingUnit	<COUNTY NAME>	row
+Party		ini
+CandidateContest	<OFFICE NAME> (DEMOCRATIC)	row
+Candidate	<CANDIDATE NAME>	row
+CountItemType		ini

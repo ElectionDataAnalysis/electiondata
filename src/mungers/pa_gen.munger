@@ -6,6 +6,7 @@ sep=,
 count_locations=by_column_number
 count_column_numbers=6,7,8
 string_locations=from_field_values,in_count_headers
+all_rows=data
 missing=field_names
 
 [from_field_values]

@@ -10,6 +10,7 @@ from pathlib import Path
 from election_data_analysis import juris_and_munger as jm
 from typing import Optional, Dict, Any, List
 import datetime
+import csv
 
 # constants
 recognized_encodings = {
@@ -368,7 +369,10 @@ def read_single_datafile(
 
         # ensure that string-location field values will be read as strings
         if "from_field_values" in p["string_locations"]:
-            dtype = {c: str for c in p["string_field_names"]}
+            if p["all_rows"] == "data":
+                dtype = "string"
+            else:
+                dtype = {c: str for c in p["string_field_names"]}
             kwargs["dtype"] = dtype
 
         if p["file_type"] in ["excel", "flat_text"]:
@@ -395,8 +399,6 @@ def read_single_datafile(
         # other parameters
         if p["thousands_separator"]:
             kwargs["thousands"] = p["thousands_separator"]
-        if p["quoting"]:
-            kwargs["quoting"] = p["quoting"]
         kwargs["index_col"] = False
 
         # read file
@@ -407,6 +409,7 @@ def read_single_datafile(
                 kwargs["sheet_name"] = None
             df_dict = pd.read_excel(f_path, **kwargs)
         elif p["file_type"] == "flat_text":
+            kwargs["quoting"] = csv.QUOTE_MINIMAL
             kwargs["sep"] = p["flat_file_delimiter"]
             df = pd.read_csv(f_path, **kwargs)
             df_dict = {"Sheet1": df}
@@ -421,9 +424,13 @@ def read_single_datafile(
             )
 
     except FileNotFoundError:
-        e = f"File not found: {f_path}"
+        err_str = f"File not found: {f_path}"
+        df_dict = dict()
+        err = add_new_error(err, "file", f_path, err_str)
     except UnicodeDecodeError as ude:
-        e = f"Encoding error. Datafile not read completely.\n{ude}"
+        err_str = f"Encoding error. Datafile not read completely.\n{ude}"
+        df_dict = dict()
+        err = add_new_error(err, "file", f_path, err_str)
     except ParserError as pe:
         # DFs have trouble comparing against None. So we return an empty DF and
         # check for emptiness below as an indication of an error.
@@ -434,7 +441,8 @@ def read_single_datafile(
             Path(f_path).name,
             err_str,
         )
-
+        df_dict = dict()
+        err = add_new_error(err, "file", f_path, err_str)
     return df_dict, err
 
 

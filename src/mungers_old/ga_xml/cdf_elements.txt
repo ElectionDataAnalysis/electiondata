@@ -1,0 +1,6 @@
+name	raw_identifier_formula	source
+ReportingUnit	<County.name>	xml
+Party	{<Choice.text>,^.* \((.*)\)$}	xml
+CandidateContest	<Contest.text>	xml
+Candidate	{<Choice.text>,^(.*) \(.*\)$}	xml
+CountItemType	<VoteType.name>	xml
