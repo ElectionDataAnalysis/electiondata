@@ -1,0 +1,14 @@
+[format]
+file_type=json-nested
+count_locations=by_field_name
+count_fields=['Votes']
+string_locations=from_field_values
+
+[from_field_values]
+ReportingUnit=<LocalityName>
+Party=<PoliticalParty>
+CandidateContest=<RaceName>
+Candidate=<BallotName>
+BallotMeasureContest=<RaceName>
+BallotMeasureSelection=<BallotName>
+CountItemType=Votes

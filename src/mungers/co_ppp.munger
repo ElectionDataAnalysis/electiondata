@@ -1,0 +1,16 @@
+[format]
+encoding=utf-8
+thousands_separator=,
+file_type=excel
+count_locations=by_column_number
+count_column_numbers=4
+string_locations=from_field_values
+
+[from_field_values]
+ReportingUnit=<County>
+Party=<Party>
+CandidateContest=<Office> (<Party>)
+Candidate=<Candidate>
+BallotMeasureContest=<Office>
+BallotMeasureSelection=<Candidate>
+CountItemType=total

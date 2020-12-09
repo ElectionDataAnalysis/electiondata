@@ -1,0 +1,14 @@
+[format]
+file_type=json-nested
+count_locations=by_field_name
+count_fields=['ChoiceTotalVotes']
+string_locations=from_field_values
+
+[from_field_values]
+ReportingUnit=<CountyName>
+Party={<ChoiceName>,^.* \((.*)\)$}
+CandidateContest=<ContestName>
+Candidate={<ChoiceName>,^(.*) \(.*\)$}
+BallotMeasureContest=<ContestName>
+BallotMeasureSelection=<ChoiceName>
+CountItemType=total

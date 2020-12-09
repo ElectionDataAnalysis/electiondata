@@ -1,0 +1,16 @@
+[format]
+encoding=utf_8
+thousands_separator=None
+file_type=flat_text
+sep=	
+count_locations=by_column_number
+count_column_numbers=14
+string_locations=from_field_values,constant_over_file
+missing=field_names
+constant_over_file=CountItemType
+
+[from_field_values]
+ReportingUnit=<CountyName>
+Party=<PartyCode>
+CandidateContest=<RaceName>
+Candidate=<CanNameFirst> <CanNameMiddle> <CanNameLast>
