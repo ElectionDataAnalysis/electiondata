@@ -32,8 +32,10 @@ sdl_pars_opt = [
     "jurisdiction_path",
     "jurisdiction_directory",
     "aux_data_dir",
-    "Contest",
-    "contest_type",
+    "CandidateContest",
+    "BallotMeasureContest",
+    "BallotMeasureSelection",
+    "Candidate",
     "Party",
     "CountItemType",
     "ReportingUnit",
@@ -393,6 +395,7 @@ class SingleDataLoader:
         self.munger = dict()
         self.munger_err = dict()
         # TODO document
+        self.mungers_dir = mungers_path
         self.munger_list = [x.strip() for x in self.d["munger_name"].split(",")]
         # TODO check mungers for consistency?
 
@@ -459,13 +462,13 @@ class SingleDataLoader:
         print(f'\n\nProcessing {self.d["results_file"]}')
 
         # Enter datafile info to db and collect _datafile_Id and Election_Id
-        results_info, e = self.track_results()
-        if e:
+        results_info, err_str = self.track_results()
+        if err_str:
             err = ui.add_new_error(
                 err,
                 "system",
                 "SingleDataLoader.load_results",
-                f"Error inserting _datafile record:\n{e}" f" ",
+                f"Error inserting _datafile record:\n{err_str}" f" ",
             )
             return err
 
@@ -487,9 +490,10 @@ class SingleDataLoader:
             # load results to db
             for mu in self.munger_list:
                 f_path = os.path.join(self.results_dir, self.d["results_file"])
+                mu_path = os.path.join(self.mungers_dir, f"{mu}.munger")
                 new_err = temp.load_results_file(
                     self.session,
-                    mu,
+                    mu_path,
                     f_path,
                     self.juris,
                     results_info,
@@ -552,32 +556,10 @@ def check_par_file_elements(
         elt_from_par_file.remove("Contest")
         elt_from_par_file.extend(["BallotMeasureContest", "CandidateContest"])
 
-    # for each munger, check that no element defined elsewhere is sourced as 'row' or 'column'
+    # for each munger,
     for mu in d["munger_name"].split(","):
-        elt_file = os.path.join(mungers_path, mu, "cdf_elements.txt")
-        try:
-            elt = pd.read_csv(elt_file, sep="\t")
-        except Exception as e:
-            err = ui.add_new_error(
-                err,
-                "ini",
-                par_file_name,
-                f"Error reading cdf_elements.txt file for munger {mu}",
-            )
-        else:
-            rc_from_mu = elt[(elt.source == "row") | (elt.source == "column")][
-                "name"
-            ].unique()
-            duped = [x for x in elt_from_par_file if x in rc_from_mu]
-            if duped:
-                err = ui.add_new_error(
-                    err,
-                    "ini",
-                    par_file_name,
-                    f"Some elements given in the parameter file are also designated "
-                    f"as row- or column-sourced in munger {mu}:\n"
-                    f"{duped}",
-                )
+        # TODO check that no element is defined more than once
+        pass
     return err
 
 
@@ -612,21 +594,6 @@ def check_and_init_singledataloader(
         err = ui.consolidate_errors([err, new_err, new_err_2])
         sdl = None
         return sdl, err
-
-    ##################
-    # for backward compatibility
-    if ("jurisdiction_directory" not in d.keys()) and (
-        "jurisdiction_path" not in d.keys()
-    ):
-        err = ui.add_new_error(
-            dict(),
-            "ini",
-            par_file_name,
-            f"Neither jurisdiction_directory nor jurisdiction_path specified",
-        )
-        sdl = None
-        return sdl, err
-    ######################
 
     sdl = SingleDataLoader(
         results_dir,

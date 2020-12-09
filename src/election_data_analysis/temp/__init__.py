@@ -526,6 +526,8 @@ def get_and_check_munger_params(munger_path: str) -> (dict, Optional[dict]):
         header="format",
         err=None,
     )
+    if ui.fatal_error(err):
+        return dict(), err
     # get name of munger for error reporting
     munger_name = Path(munger_path).name[:-7]
     # define dictionary of munger parameters
@@ -629,12 +631,7 @@ def get_string_fields(
     return munge_field_lists, err
 
 
-def read_results_from_file(f_path, format_options) -> (Dict[str,pd.DataFrame], dict):
-    # TODO
-    return results, err
-
-
-def to_standard_count_frame(f_path: str, munger_path: str, p) -> (pd.DataFrame, Optional[dict]):
+def to_standard_count_frame(f_path: str, munger_path: str, p, constants) -> (pd.DataFrame, Optional[dict]):
     """Read data from file at <f_path>; return a standard dataframe with one clean count column
     and all other columns typed as 'string' """
     munger_name = Path(munger_path).name
@@ -803,7 +800,7 @@ def load_results_file(
         return err
 
     # read data into standard count format dataframe
-    df, err = to_standard_count_frame(f_path, munger_path, p,)
+    df, err = to_standard_count_frame(f_path, munger_path, p, constants)
     if ui.fatal_error(err):
         return err
     # TODO what if returned df is empty?
@@ -839,7 +836,7 @@ def load_results_file(
     # #  TODO replace any foreign keys with true values
     # add_datafile_Id and Election_Id columns
     for c in ["_datafile_Id", "Election_Id"]:
-        df = m.add_constant_column(df, c, results_info[c])
+        df = m.add_constant_column(df, c, election_datafile_ids[c])
     # load counts to db
     err = fill_vote_count(df, session, err)
     return err
@@ -871,7 +868,7 @@ if __name__ == "__main__":
     results_path = "/Users/singer3/PycharmProjects/election_data_analysis/tests/TestingData/_000-Final-2020-General/archived/Wisconsin/UNOFFICIAL WI Election Results 2020 by County 11-5-2020.xlsx"
     juris_path = "/Users/singer3/PycharmProjects/election_data_analysis/src/jurisdictions/Wisconsin"
     mu_path = "/Users/singer3/PycharmProjects/election_data_analysis/src/mungers_new_by_hand/wi_gen20.munger"
-    constants = {
+    cons = {
         "Party": "Democratic Party",
         "CandidateContest": "US President (WI)",
         "CountItemType": "total",
@@ -888,5 +885,5 @@ if __name__ == "__main__":
 
     jurs_load_err = juris.load_juris_to_db(dl.session)
 
-    load_error = load_results_file(dl.session, mu_path, results_path, juris, results_info, constants)
+    load_error = load_results_file(dl.session, mu_path, results_path, juris, results_info, cons)
     exit()
