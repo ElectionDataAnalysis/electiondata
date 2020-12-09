@@ -5,6 +5,8 @@ count_locations=by_column_number
 count_column_numbers=1,2,3,4,5,6,7,8,9,10,11
 string_locations=constant_over_file,from_field_values,in_count_headers
 rows_to_skip=3
+all_rows=data
+string_field_name_row=0
 constant_over_file=CandidateContest,CountItemType
 
 [from_field_values]

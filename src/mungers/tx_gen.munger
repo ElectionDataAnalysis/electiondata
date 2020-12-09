@@ -4,6 +4,7 @@ thousands_separator=,
 count_locations=by_column_number
 count_column_numbers=4
 string_locations=from_field_values
+all_rows=data
 missing=field_names
 
 [from_field_values]

@@ -5,6 +5,7 @@ file_type=excel
 sheets_to_skip=Document map
 string_locations=constant_over_sheet,from_field_values
 rows_to_skip=2
+string_field_name_row=None
 
 [from_field_values]
 ReportingUnit=<first_column>

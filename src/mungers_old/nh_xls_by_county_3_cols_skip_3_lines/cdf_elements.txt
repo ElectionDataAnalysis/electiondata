@@ -1,0 +1,6 @@
+name	raw_identifier_formula	source
+ReportingUnit	<Summary By Counties>	row
+Party	{<0>,^.*[ |,]([a-z]{1,3})$}	column
+CandidateContest		ini
+Candidate	{<0>,^(.*?)\W+[a-z]+$}	column
+CountItemType		ini

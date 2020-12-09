@@ -1,0 +1,6 @@
+name	raw_identifier_formula	source
+ReportingUnit	{<District>,^(?:(.*?) - (?:Absentee|Early Voting|Question))+(?:| - [0-9])$}	row
+CountItemType	{<District>,^.*(Absentee|Early Voting|Question).*$}	row
+Party	<Party>	row
+CandidateContest	<Contest Name>	row
+Candidate	<Candidate Name>	row

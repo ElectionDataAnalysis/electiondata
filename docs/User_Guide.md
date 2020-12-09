@@ -28,7 +28,6 @@ Ensure that the munger files are appropriate for your results file(s).
   * 'xml'
   * 'flat_text' Any tab-, comma-, or other-separated table in a plain tabular text file.
     * (required) a field delimiter `flat_file_delimiter` to be specified (usually `flat_file_delimiter=,` for csv or `flat_file_delimiter=\t` for .txt)
-    * (optional) a quote character `quoting`. Default is `quoting="`
   * [[ will be obsolete: `concatenated-blocks` Clarity format derived from xml]]
   
   `count_locations`: controls how the system looks for counts

@@ -1,0 +1,8 @@
+name	raw_identifier_formula	source
+ReportingUnit	<County Name>	row
+Party	<Party Code>	row
+CandidateContest	<Contest Title>	row
+Candidate	<Candidate Name>	row
+BallotMeasureContest	<Contest Title>	row
+BallotMeasureSelection	<Candidate Name>	row
+CountItemType		ini

@@ -55,7 +55,7 @@ def count_columns_by_name(
         if d_mu["file_type"] == "csv":
             sep = ","
         elif d_mu["file_type"] == "txt":
-            sep = "\t"
+            sep = r"\\t"
         elif d_mu["file_type"] == "txt-semicolon-separated":
             sep = ";"
 
@@ -186,7 +186,7 @@ def create_munger_files(
                     new_sections["format"].append(f"sep=,")
                 elif d["file_type"] == "txt":
                     new_sections["format"].append(f"file_type=flat_text")
-                    new_sections["format"].append(f"sep=\t")
+                    new_sections["format"].append(f"sep=\\t")
                 elif d["file_type"] == "txt-semicolon-separated":
                     new_sections["format"].append(f"file_type=flat_text")
                     new_sections["format"].append(f"sep=;")
@@ -228,6 +228,10 @@ def create_munger_files(
                 # set rows to skip
                 if d["count_of_top_lines_to_skip"]:
                     new_sections["format"].append(f"rows_to_skip={d['count_of_top_lines_to_skip']}")
+
+                # set all_rows=data if required
+                if d["field_names_if_no_field_name_row"] is not None:
+                    new_sections["format"].append(f"all_rows=data")
 
                 # note if all rows of a flat file contain only data (not field names)
                 if d["field_names_if_no_field_name_row"]:
@@ -275,12 +279,13 @@ def create_munger_files(
                 new_mu_file_path = os.path.join(new_mungers_dir, f"{mu}.munger")
                 with open(new_mu_file_path, "w") as f:
                     f.write(file_string)
+                    """
                     # if revising single directory
-                    if old_mungers_dir ==  new_mungers_dir:
+                    if old_mungers_dir == new_mungers_dir:
                         # delete old files
                         for fi in os.listdir(mu_dir):
                             os.remove(os.path.join(mu_dir, fi))
-                        os.rmdir(mu_dir)
+                        os.rmdir(mu_dir)"""
             except Exception as exc:
                 print(f"Skipping {mu}: {exc}")
     return err
@@ -332,8 +337,8 @@ def create_ini_files(
 
 if __name__ == "__main__":
     ini_directory = '/Users/singer3/PycharmProjects/election_data_analysis/src/ini_files_for_results'
-    old_mungers_directory = '/Users/singer3/PycharmProjects/election_data_analysis/src/mungers'
-    new_mungers_directory = '/Users/singer3/PycharmProjects/election_data_analysis/src/mungers_new'
+    old_mungers_directory = '/Users/singer3/PycharmProjects/election_data_analysis/src/mungers_old'
+    new_mungers_directory = '/Users/singer3/PycharmProjects/election_data_analysis/src/mungers'
     g_drive = '/Users/singer3/PycharmProjects/election_data_analysis/tests/TestingData/'
     results_directory = {
         "2020 General": os.path.join(g_drive, "_000-Final-2020-General", "archived"),
@@ -348,9 +353,9 @@ if __name__ == "__main__":
     error = create_munger_files(
         ini_directory,
         old_mungers_directory,
-        old_mungers_directory,
+        new_mungers_directory,
         results_directory,
-        munger_list=["al_gen"],
+        munger_list=["nc_gen"],
     )
 
     # err = create_ini_files(ini_directory)
