@@ -2,7 +2,6 @@ from election_data_analysis import user_interface as ui
 from election_data_analysis import juris_and_munger as jm
 from election_data_analysis import munge as m
 from election_data_analysis import database as db
-import election_data_analysis as e
 import os
 import re
 import inspect
@@ -274,6 +273,50 @@ def create_munger_files(
             new_mu_file_path = os.path.join(new_mungers_dir, f"{mu}.munger")
             with open(new_mu_file_path, "w") as f:
                 f.write(file_string)
+    return err
+
+
+def create_ini_files(
+        ini_directory,
+        ini_list: Optional[List[str]] = None,
+) -> Optional[dict]:
+    err = None
+
+    if not os.path.isdir(ini_directory):
+        return {"ini_directory": "not found"}
+
+    contest_name_pattern = re.compile(r"\nContest=(.+)\n")
+    contest_type_pattern = re.compile(r"\ncontest_type=(\w+)\s*\n")
+    for state in [x for x in os.listdir(ini_directory) if "." not in x]:
+        state_directory = os.path.join(ini_directory,state)
+        if ini_list:
+            inis_to_do = [x for x in os.listdir(state_directory) if x in ini_list]
+        else:
+            inis_to_do = os.listdir(state_directory)
+        for ini in inis_to_do:
+            # for each genuine ini
+            if ini[-4:] == ".ini":
+                ini_path = os.path.join(state_directory, ini)
+                # get contents of *.ini
+                with open(ini_path, "r") as fi:
+                    old_contents = fi.read()
+
+                try:
+                # get contest type
+                    contest_type = contest_type_pattern.findall(old_contents)[0]
+                    contest_name = contest_name_pattern.findall(old_contents)[0]
+
+                    new_contents = old_contents.replace(
+                        f"\ncontest_type={contest_type}",""
+                    ).replace(
+                        f"Contest={contest_name}",f"{contest_type}Contest={contest_name}"
+                    )
+
+                    # write to new ini file
+                    with open(ini_path, "w") as f:
+                        f.write(new_contents)
+                except:
+                    pass
     return err
 
 
@@ -856,15 +899,19 @@ if __name__ == "__main__":
     }
 
     """    aa = count_fields(ini_directory, old_mungers_directory, results_directory)
-    
+    """
     error = create_munger_files(
         ini_directory,
         old_mungers_directory,
-        new_mungers_directory,
+        old_mungers_directory,
         results_directory,
         munger_list=["wi_gen20"]
     )
-    """
+
+    err = create_ini_files(ini_directory)
+
+
+
     results_path = "/Users/singer3/PycharmProjects/election_data_analysis/tests/TestingData/_000-Final-2020-General/archived/Wisconsin/UNOFFICIAL WI Election Results 2020 by County 11-5-2020.xlsx"
     juris_path = "/Users/singer3/PycharmProjects/election_data_analysis/src/jurisdictions/Wisconsin"
     mu_path = "/Users/singer3/PycharmProjects/election_data_analysis/src/mungers_new_by_hand/wi_gen20.munger"
@@ -874,7 +921,7 @@ if __name__ == "__main__":
         "CountItemType": "total",
     }
     results_info = {"_datafile_Id": 909, "Election_Id": 1352}
-
+"""
     juris, juris_err = ui.pick_juris_from_filesystem(
         juris_path=juris_path,
         err=None,
@@ -886,4 +933,5 @@ if __name__ == "__main__":
     jurs_load_err = juris.load_juris_to_db(dl.session)
 
     load_error = load_results_file(dl.session, mu_path, results_path, juris, results_info, cons)
-    exit()
+"""
+exit()
