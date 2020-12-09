@@ -221,6 +221,7 @@ def create_munger_files(
                         and
                         cdf_elements_df["raw_identifier_formula"].str.contains("constant_line").any()):
                     str_locations.append("constant_over_sheet")
+
                 str_l_str = ",".join(set(str_locations))
                 new_sections["format"].append(f"string_locations={str_l_str}")
 
@@ -237,6 +238,10 @@ def create_munger_files(
                     # initialize the section
                     new_sections["from_field_values"] = ["[from_field_values]"]
                     # fill the section
+                    if d["file_type"] in ["xls", "flat_file", "xls-multi"]:
+                        new_sections["format"].append(
+                            f"string_field_name_row={d['field_name_row']}"
+                        )
                     for idx, r in cdf_elements_df.iterrows():
                         if r["source"] in ["row", "xml"]:
                             new_sections["from_field_values"].append(f"{r['name']}={r['raw_identifier_formula']}")
@@ -345,6 +350,7 @@ if __name__ == "__main__":
         old_mungers_directory,
         old_mungers_directory,
         results_directory,
+        munger_list=["al_gen"],
     )
 
     # err = create_ini_files(ini_directory)

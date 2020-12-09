@@ -783,7 +783,7 @@ def melt_to_one_count_column(df: pd.DataFrame, p: dict, mu_name: str) -> (pd.Dat
     # define count columns
     if p["count_locations"] == "by_column_number":
         count_columns = [
-            df.columns[idx] for idx in p["count_column_numbers"]
+            df.columns[idx] for idx in p["count_column_numbers"] if idx < df.shape[1]
         ]
     elif p["count_locations"] == "by_field_name":
         assert not multi, "If there are multiple header rows, need to have count_locations=by_column_number, "
@@ -1352,32 +1352,32 @@ def munge_raw_to_ids(
 
     # add Contest_Id column and contest_type column
     if "CandidateContest" in constants.keys():
-        working = m.add_constant_column(
+        working = add_constant_column(
             working,
             "Contest_Id",
             db.name_to_id(session, "Contest", constants["CandidateContest"])
         )
-        working = m.add_constant_column(
+        working = add_constant_column(
             working,
             "contest_type",
             "Candidate"
         )
         working.drop("CandidateContest", axis=1, inplace=True)
     elif "BallotMeasureContest" in constants.keys():
-        working = m.add_constant_column(
+        working = add_constant_column(
             working,
             "Contest_Id",
             db.name_to_id(session, "Contest", constants["BallotMeasureContest"])
         )
         working.drop("BallotMeasureContest", axis=1, inplace=True)
-        working = m.add_constant_column(
+        working = add_constant_column(
             working,
             "contest_type",
             "BallotMeasure"
         )
     else:
         try:
-            working, err = m.add_contest_id(working, juris, err, session)
+            working, err = add_contest_id(working, juris, err, session)
         except Exception as exc:
             err = ui.add_new_error(
                 err,
@@ -1397,24 +1397,24 @@ def munge_raw_to_ids(
         if element == "CountItemType":
             enum_df = pd.read_sql_table(element, session.bind)
             one_line = pd.DataFrame([[constants[element]]],columns=[element])
-            id_txt_one_line, non_standard = m.enum_col_to_id_othertext(
+            id_txt_one_line, non_standard = enum_col_to_id_othertext(
                 one_line, element, enum_df, drop_type_col=False
             )
             for c in [f"{element}_Id", f"Other{element}"]:
-                working = m.add_constant_column(
+                working = add_constant_column(
                     working,
                     c,
                     id_txt_one_line.loc[0, c]
                 )
             working.drop(element, axis=1, inplace=True)
         else:
-            working = m.add_constant_column(
+            working = add_constant_column(
                 working,
                 f"{element}_Id",
                 db.name_to_id(session, element, constants[element])
             )
             working.drop(element, axis=1, inplace=True)
-            working, err_df = m.clean_ids(working, ["CountItemType_Id"])
+            working, err_df = clean_ids(working, ["CountItemType_Id"])
             if not err_df.empty:
                 err = ui.add_new_error(
                     err,
@@ -1427,7 +1427,7 @@ def munge_raw_to_ids(
         t for t in all_munge_elements
         if (t[-7:] != "Contest") and (t[-9:] != "Selection") and (t not in constants.keys())
     ]
-    working, new_err = m.raw_to_id_simple(working, juris, other_elements, session)
+    working, new_err = raw_to_id_simple(working, juris, other_elements, session)
     if new_err:
         err = ui.consolidate_errors([err, new_err])
         if ui.fatal_error(new_err):
@@ -1435,8 +1435,8 @@ def munge_raw_to_ids(
 
     # add Selection_Id (combines info from BallotMeasureSelection and CandidateContestSelection)
     try:
-        working, err = m.add_selection_id(working, session.bind, juris, err)
-        working, err_df = m.clean_ids(working, ["Selection_Id"])
+        working, err = add_selection_id(working, session.bind, juris, err)
+        working, err_df = clean_ids(working, ["Selection_Id"])
     except Exception as exc:
         err = ui.add_new_error(
             err,
@@ -1489,7 +1489,7 @@ def munge_source_to_raw(
                 for c in orig_string_cols:
                     formula = formula.replace(f"<{c}>", f"<{c}{suffix}>")
                 # add col with munged values
-                working, new_err = m.add_column_from_formula(
+                working, new_err = add_column_from_formula(
                     working, formula, f"{element}_raw", err, munger_name
                 )
                 if new_err:
@@ -1512,7 +1512,7 @@ def munge_source_to_raw(
                 return working, err
             # compress whitespace for <element>_raw
             working.loc[:, f"{element}_raw"] = working[f"{element}_raw"].apply(
-                m.compress_whitespace
+                compress_whitespace
             )
 
     # drop the original columns
@@ -1660,10 +1660,18 @@ def to_standard_count_frame(f_path: str, munger_path: str, p, constants) -> (pd.
             return pd.DataFrame(), err
 
     # get lists of string fields expected in raw file
-    munge_field_lists, new_err = get_string_fields(
-        [x for x in p["string_locations"] if x != "constant_over_file"],
-        munger_path,
-    )
+    try:
+        munge_field_lists, new_err = get_string_fields(
+            [x for x in p["string_locations"] if x != "constant_over_file"],
+            munger_path,
+        )
+    except Exception as exc:
+        new_err = ui.add_new_error(
+            None,
+            "system",
+            f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
+            f"Exception while getting string fields: {exc}"
+        )
     if new_err:
         err = ui.consolidate_errors([err, new_err])
         if ui.fatal_error(new_err):
@@ -1676,7 +1684,10 @@ def to_standard_count_frame(f_path: str, munger_path: str, p, constants) -> (pd.
     standard = dict()
     for k, raw in raw_dict.items():
         # transform to df with single count column 'Count' and all raw munge info in other columns
-        standard[k], k_err = m.melt_to_one_count_column(raw, p, munger_name)
+        try:
+            standard[k], k_err = melt_to_one_count_column(raw, p, munger_name)
+        except Exception as exc:
+            k_err = ui.add_new_error(None, "file", f_path, f"Unable to pivot dataframe {k}")
         if k_err:
             err = ui.consolidate_errors([err, k_err])
             if ui.fatal_error(k_err):
@@ -1686,7 +1697,7 @@ def to_standard_count_frame(f_path: str, munger_path: str, p, constants) -> (pd.
         if "constant_over_sheet" in p["string_locations"]:
             # see if <sheet_name> is needed
             if "sheet_name" in munge_field_lists["constant_over_sheet"]:
-                standard[k] = m.add_constant_column(standard[k], "sheet_name", k)
+                standard[k] = add_constant_column(standard[k], "sheet_name", k)
             # find max row needed
             try:
                 rows_needed = [int(var[4:]) for var in munge_field_lists["constant_over_sheet"] if var != "sheet_name"]
@@ -1694,7 +1705,7 @@ def to_standard_count_frame(f_path: str, munger_path: str, p, constants) -> (pd.
                     max_row = max(rows_needed)
                     data = pd.read_excel(f_path, nrows=max_row+1)
                     for row in rows_needed:
-                        standard[k] = m.add_constant_column(
+                        standard[k] = add_constant_column(
                             standard[k],
                             f"row_{row}",
                             data.loc[row,data.loc[row].first_valid_index()],
@@ -1722,7 +1733,7 @@ def to_standard_count_frame(f_path: str, munger_path: str, p, constants) -> (pd.
         standard[k] = standard[k][necessary]
 
         # clean Count column
-        standard[k], bad_rows = m.clean_count_cols(standard[k], ["Count"], p["thousands_separator"])
+        standard[k], bad_rows =clean_count_cols(standard[k], ["Count"], p["thousands_separator"])
         if not bad_rows.empty:
             err = ui.add_err_df(err, bad_rows, munger_name, f_path)
 
@@ -1755,7 +1766,7 @@ def fill_vote_count(
     working = working[vc_cols]
 
     # add CountItemType total if it's not already there
-    working = m.ensure_total_counts(working, session)
+    working = ensure_total_counts(working, session)
     # TODO there are edge cases where this might include dupes
     #  that should be omitted. E.g., if data mistakenly read twice
     # Sum any rows that were disambiguated (otherwise dupes will be dropped
