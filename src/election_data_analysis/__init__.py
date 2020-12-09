@@ -1,4 +1,4 @@
-from election_data_analysis import database as db
+from election_data_analysis import database as db, juris_and_munger as jm, user_interface as ui, munge as m
 from election_data_analysis import user_interface as ui
 from election_data_analysis import munge as m
 from sqlalchemy.orm import sessionmaker
@@ -13,9 +13,12 @@ from election_data_analysis import analyze as a
 from election_data_analysis import visualize as viz
 from election_data_analysis import juris_and_munger as jm
 from election_data_analysis import preparation as prep
-from election_data_analysis import temp
+# from election_data_analysis import temp
 
 # constants
+from election_data_analysis.munge import get_and_check_munger_params, to_standard_count_frame, munge_source_to_raw, \
+    munge_raw_to_ids, fill_vote_count
+
 sdl_pars_req = [
     "munger_name",
     "results_file",
@@ -491,7 +494,7 @@ class SingleDataLoader:
             for mu in self.munger_list:
                 f_path = os.path.join(self.results_dir, self.d["results_file"])
                 mu_path = os.path.join(self.mungers_dir, f"{mu}.munger")
-                new_err = temp.load_results_file(
+                new_err = load_results_file(
                     self.session,
                     mu_path,
                     f_path,
@@ -1797,3 +1800,61 @@ def get_contest_with_unknown_candidates(election, jurisdiction, dbname=None) -> 
     contests = db.get_contest_with_unknown(an.session, election_id, jurisdiction_id)
     return contests
 
+
+def load_results_file(
+        session,
+        munger_path: str,
+        f_path: str,
+        juris: jm.Jurisdiction,
+        election_datafile_ids: dict,
+        constants: Dict[str, str],
+) -> Optional[dict]:
+
+    # TODO complete this routine
+    munger_name = Path(munger_path).name
+    # read parameters from munger file
+    p, err = get_and_check_munger_params(munger_path)
+    if ui.fatal_error(err):
+        return err
+
+    # read data into standard count format dataframe
+    df, err = to_standard_count_frame(f_path, munger_path, p, constants)
+    if ui.fatal_error(err):
+        return err
+    # TODO what if returned df is empty?
+
+    # append "_SOURCE" to all non-Count column names (to avoid confilcts if e.g., source has col names 'Party'
+    original_string_columns = [c for c in df.columns if c != "Count"]
+    df.columns = [c if c == "Count" else f"{c}_SOURCE" for c in df.columns]
+
+    # transform source to completely munged (possibly with foreign keys if there is aux data)
+    # # add raw-munged column for each element, removing old
+    df, new_err = munge_source_to_raw(
+        df,
+        munger_path,
+        p,
+        original_string_columns,
+        "_SOURCE",
+    )
+
+    # # add columns for constant-over-file elements
+    for element in constants.keys():
+        df = m.add_constant_column(
+            df,
+            element,
+            constants[element],
+        )
+
+    # # add Id columns for all but Count, removing raw-munged
+    df, new_err = munge_raw_to_ids(df, constants, juris, munger_name, session)
+    if new_err:
+        err = ui.consolidate_errors([err, new_err])
+        if ui.fatal_error(new_err):
+            return err
+    # #  TODO replace any foreign keys with true values
+    # add_datafile_Id and Election_Id columns
+    for c in ["_datafile_Id", "Election_Id"]:
+        df = m.add_constant_column(df, c, election_datafile_ids[c])
+    # load counts to db
+    err = fill_vote_count(df, session, err)
+    return err
