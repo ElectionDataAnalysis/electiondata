@@ -13,7 +13,6 @@ from election_data_analysis import analyze as a
 from election_data_analysis import visualize as viz
 from election_data_analysis import juris_and_munger as jm
 from election_data_analysis import preparation as prep
-# from election_data_analysis import temp
 
 # constants
 from election_data_analysis.munge import get_and_check_munger_params, to_standard_count_frame, munge_source_to_raw, \

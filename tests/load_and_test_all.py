@@ -165,7 +165,7 @@ def run2(
                 move_files=False, election_jurisdiction_list=election_jurisdiction_list
             )
             if not success:
-                print("At least one file did not load correctly.")
+                print(f"At least one file did not load correctly.\n{err}")
         except Exception as exc:
             print(f"Exception occurred: {exc}")
             if dl:
