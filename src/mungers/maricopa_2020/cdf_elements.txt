@@ -1,6 +1,0 @@
-name	raw_identifier_formula	source
-ReportingUnit	<PrecinctName>	row
-Party	<CandidateAffiliation>	row
-CandidateContest	<ContestName>	row
-Candidate	<CandidateName>	row
-CountItemType	<0>	column

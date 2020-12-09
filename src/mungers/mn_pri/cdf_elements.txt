@@ -1,6 +1,0 @@
-name	raw_identifier_formula	source
-ReportingUnit	<County ID>	row
-Party	<Party Abbreviation>	row
-CandidateContest	<Office Name> (<Party Abbreviation>)	row
-Candidate	<Candidate Name>	row
-CountItemType		ini

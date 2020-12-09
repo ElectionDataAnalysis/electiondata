@@ -47,7 +47,7 @@ def count_columns_by_name(
         header="format",
         param_file=format_file_path
     )
-    if d_mu["count_columns"] is not None:
+    if ("count_columns" not in d_mu.keys()) or (d_mu["count_columns"] is not None):
         pass
     # if we can get column names from file
     elif (
@@ -161,118 +161,126 @@ def create_munger_files(
         mu_dir = os.path.join(old_mungers_dir, mu)
         # for each genuine munger
         if os.path.isdir(mu_dir):
+            try:
+                # initialize dict to hold info to be written
+                new_sections = dict()
 
-            # initialize dict to hold info to be written
-            new_sections = dict()
-
-            # get contents of format.config
-            d, err = ui.get_parameters(
-                required_keys=jm.munger_pars_req,
-                optional_keys=jm.munger_pars_opt,
-                header="format",
-                param_file=os.path.join(mu_dir, "format.config"),
-                err=err,
-            )
-            # get contents of cdf_elements
-            cdf_elements_df = pd.read_csv(os.path.join(mu_dir, "cdf_elements.txt"), sep="\t")
-
-            # initialize format header
-            new_sections["format"] = ["[format]"]
-            # copy simple parameters
-            for param in ["encoding", "thousands_separator"]:
-                if d[param] is not None:
-                    new_sections["format"].append(f"{param}={d[param]}")
-
-            # set file_type and related params
-            if d["file_type"] == "csv":
-                new_sections["format"].append(f"file_type=flat_text")
-                new_sections["format"].append(f"sep=,")
-            elif d["file_type"] == "txt":
-                new_sections["format"].append(f"file_type=flat_text")
-                new_sections["format"].append(f"sep=\t")
-            elif d["file_type"] == "txt-semicolon-separated":
-                new_sections["format"].append(f"file_type=flat_text")
-                new_sections["format"].append(f"sep=;")
-            elif d["file_type"] == "xls":
-                new_sections["format"].append(f"file_type=excel")
-            elif d["file_type"] == "xls-multi":
-                new_sections["format"].append(f"file_type=excel")
-                new_sections["format"].append(f"sheets_to_skip={d['sheets_to_skip']}")
-            elif d["file_type"] in ["json-nested", "xml"]:
-                new_sections["format"].append(f"file_type={d['file_type']}")
-
-            # set count_locations and related params
-            if d["count_columns"] is not None:
-                new_sections["format"].append(f"count_locations=by_column_number")
-                new_sections["format"].append(f"count_column_numbers={d['count_columns']}")
-            elif mu in count_field_dict.keys():
-                new_sections["format"].append(f"count_locations=by_field_name")
-                new_sections["format"].append(f"count_fields={count_field_dict[mu]}")
-            elif d["field_names_if_no_field_name_row"] is not None:
-                new_sections["format"].append(f"count_locations=by_column_number")
-                new_sections["format"].append(f"count_column_numbers={d['count_columns']}")
-
-            # set string_location and related params 
-            str_locations = []
-            if {"row", "xml"}.intersection(set(cdf_elements_df["source"].unique())):
-                str_locations.append('from_field_values')
-            if {"column"}.issubset(set(cdf_elements_df["source"].unique())):
-                str_locations.append("in_count_headers")
-            if {"ini"}.issubset(set(cdf_elements_df["source"].unique())):
-                str_locations.append("constant_over_file")
-            if (d["file_type"] == "xls-multi"
-                    and
-                    cdf_elements_df["raw_identifier_formula"].str.contains("constant_line").any()):
-                str_locations.append("constant_over_sheet")
-            str_l_str = ",".join(set(str_locations))
-            new_sections["format"].append(f"string_locations={str_l_str}")
-
-            # set rows to skip
-            if d["count_of_top_lines_to_skip"]:
-                new_sections["format"].append(f"rows_to_skip={d['count_of_top_lines_to_skip']}")
-
-            # note if all rows of a flat file contain only data (not field names)
-            if d["field_names_if_no_field_name_row"]:
-                new_sections["format"].append("missing=field_names")
-
-            # create other parameter sections as needed
-            if "from_field_values" in str_locations:
-                # initialize the section
-                new_sections["from_field_values"] = ["[from_field_values]"]
-                # fill the section
-                for idx, r in cdf_elements_df.iterrows():
-                    if r["source"] in ["row", "xml"]:
-                        new_sections["from_field_values"].append(f"{r['name']}={r['raw_identifier_formula']}")
-            if "in_count_headers" in str_locations:
-                # initialize the section
-                new_sections["in_count_headers"] = ["[in_count_headers]"]
-                # fill the section
-                for idx, r in cdf_elements_df.iterrows():
-                    if r["source"] == "column":
-                        # TODO replace, e.g., <0> by <header_0>
-                        p = re.compile(r"<(\d)>")
-                        form = re.sub(p, r"<header_\1>", r['raw_identifier_formula'])
-                        new_sections["in_count_headers"].append(f"{r['name']}={form}")
-            if "constant_over_file" in str_locations:
-                # create the corresponding parameter
-                constant_list = list(
-                    cdf_elements_df[cdf_elements_df["source"] == "ini"]["name"].unique()
+                # get contents of format.config
+                d, err = ui.get_parameters(
+                    required_keys=jm.munger_pars_req,
+                    optional_keys=jm.munger_pars_opt,
+                    header="format",
+                    param_file=os.path.join(mu_dir, "format.config"),
+                    err=err,
                 )
-                cl = ",".join(constant_list)
-                new_sections["format"].append(f"constant_over_file={cl}")
-            if "constant_over_sheet" in str_locations:
-                # initialize the section
-                new_sections["constant_over_sheet"] = ["[constant_over_sheet]"]
-                # fill the section
-                if mu == "wi_pri":
-                    new_sections["constant_over_sheet"] = ["CandidateContest=<row_4><row_5>"]
+                # get contents of cdf_elements
+                cdf_elements_df = pd.read_csv(os.path.join(mu_dir, "cdf_elements.txt"), sep="\t")
 
-            # write to new munger file
-            section_strings = ["\n".join(new_sections[k]) for k in new_sections.keys()]
-            file_string = "\n\n".join(section_strings)
-            new_mu_file_path = os.path.join(new_mungers_dir, f"{mu}.munger")
-            with open(new_mu_file_path, "w") as f:
-                f.write(file_string)
+                # initialize format header
+                new_sections["format"] = ["[format]"]
+                # copy simple parameters
+                for param in ["encoding", "thousands_separator"]:
+                    if d[param] is not None:
+                        new_sections["format"].append(f"{param}={d[param]}")
+
+                # set file_type and related params
+                if d["file_type"] == "csv":
+                    new_sections["format"].append(f"file_type=flat_text")
+                    new_sections["format"].append(f"sep=,")
+                elif d["file_type"] == "txt":
+                    new_sections["format"].append(f"file_type=flat_text")
+                    new_sections["format"].append(f"sep=\t")
+                elif d["file_type"] == "txt-semicolon-separated":
+                    new_sections["format"].append(f"file_type=flat_text")
+                    new_sections["format"].append(f"sep=;")
+                elif d["file_type"] == "xls":
+                    new_sections["format"].append(f"file_type=excel")
+                elif d["file_type"] == "xls-multi":
+                    new_sections["format"].append(f"file_type=excel")
+                    new_sections["format"].append(f"sheets_to_skip={d['sheets_to_skip']}")
+                elif d["file_type"] in ["json-nested", "xml"]:
+                    new_sections["format"].append(f"file_type={d['file_type']}")
+
+                # set count_locations and related params
+                if d["count_columns"] is not None:
+                    new_sections["format"].append(f"count_locations=by_column_number")
+                    new_sections["format"].append(f"count_column_numbers={d['count_columns']}")
+                elif mu in count_field_dict.keys():
+                    new_sections["format"].append(f"count_locations=by_field_name")
+                    new_sections["format"].append(f"count_fields={count_field_dict[mu]}")
+                elif d["field_names_if_no_field_name_row"] is not None:
+                    new_sections["format"].append(f"count_locations=by_column_number")
+                    new_sections["format"].append(f"count_column_numbers={d['count_columns']}")
+
+                # set string_location and related params
+                str_locations = []
+                if {"row", "xml"}.intersection(set(cdf_elements_df["source"].unique())):
+                    str_locations.append('from_field_values')
+                if {"column"}.issubset(set(cdf_elements_df["source"].unique())):
+                    str_locations.append("in_count_headers")
+                if {"ini"}.issubset(set(cdf_elements_df["source"].unique())):
+                    str_locations.append("constant_over_file")
+                if (d["file_type"] == "xls-multi"
+                        and
+                        cdf_elements_df["raw_identifier_formula"].str.contains("constant_line").any()):
+                    str_locations.append("constant_over_sheet")
+                str_l_str = ",".join(set(str_locations))
+                new_sections["format"].append(f"string_locations={str_l_str}")
+
+                # set rows to skip
+                if d["count_of_top_lines_to_skip"]:
+                    new_sections["format"].append(f"rows_to_skip={d['count_of_top_lines_to_skip']}")
+
+                # note if all rows of a flat file contain only data (not field names)
+                if d["field_names_if_no_field_name_row"]:
+                    new_sections["format"].append("missing=field_names")
+
+                # create other parameter sections as needed
+                if "from_field_values" in str_locations:
+                    # initialize the section
+                    new_sections["from_field_values"] = ["[from_field_values]"]
+                    # fill the section
+                    for idx, r in cdf_elements_df.iterrows():
+                        if r["source"] in ["row", "xml"]:
+                            new_sections["from_field_values"].append(f"{r['name']}={r['raw_identifier_formula']}")
+                if "in_count_headers" in str_locations:
+                    # initialize the section
+                    new_sections["in_count_headers"] = ["[in_count_headers]"]
+                    # fill the section
+                    for idx, r in cdf_elements_df.iterrows():
+                        if r["source"] == "column":
+                            # TODO replace, e.g., <0> by <header_0>
+                            p = re.compile(r"<(\d)>")
+                            form = re.sub(p, r"<header_\1>", r['raw_identifier_formula'])
+                            new_sections["in_count_headers"].append(f"{r['name']}={form}")
+                if "constant_over_file" in str_locations:
+                    # create the corresponding parameter
+                    constant_list = list(
+                        cdf_elements_df[cdf_elements_df["source"] == "ini"]["name"].unique()
+                    )
+                    cl = ",".join(constant_list)
+                    new_sections["format"].append(f"constant_over_file={cl}")
+                if "constant_over_sheet" in str_locations:
+                    # initialize the section
+                    new_sections["constant_over_sheet"] = ["[constant_over_sheet]"]
+                    # fill the section
+                    if mu == "wi_pri":
+                        new_sections["constant_over_sheet"] = ["CandidateContest=<row_4><row_5>"]
+
+                # write to new munger file
+                section_strings = ["\n".join(new_sections[k]) for k in new_sections.keys()]
+                file_string = "\n\n".join(section_strings)
+                new_mu_file_path = os.path.join(new_mungers_dir, f"{mu}.munger")
+                with open(new_mu_file_path, "w") as f:
+                    f.write(file_string)
+                    # if revising single directory
+                    if old_mungers_dir ==  new_mungers_dir:
+                        # delete old files
+                        for fi in os.listdir(mu_dir):
+                            os.remove(os.path.join(mu_dir, fi))
+                        os.rmdir(mu_dir)
+            except Exception as exc:
+                print(f"Skipping {mu}: {exc}")
     return err
 
 
@@ -905,10 +913,9 @@ if __name__ == "__main__":
         old_mungers_directory,
         old_mungers_directory,
         results_directory,
-        munger_list=["wi_gen20"]
     )
 
-    err = create_ini_files(ini_directory)
+    # err = create_ini_files(ini_directory)
 
 
 

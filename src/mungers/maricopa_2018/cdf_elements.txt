@@ -1,6 +1,0 @@
-name	raw_identifier_formula	source
-ReportingUnit	<PRECINCT_NAME>	row
-Party	{<CANDIDATE_FULL_NAME>,^([A-Z]{3}) - .*|Write-In Candidate$}	row
-CandidateContest	<CONTEST_FULL_NAME>	row
-Candidate	{<CANDIDATE_FULL_NAME>,^(?:(?:[A-Z]* - )|)(.*)$}	row
-CountItemType		ini
