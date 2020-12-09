@@ -55,9 +55,9 @@ def count_columns_by_name(
         if d_mu["file_type"] == "csv":
             sep = ","
         elif d_mu["file_type"] == "txt":
-            sep = r"\\t"
+             sep = "tab"
         elif d_mu["file_type"] == "txt-semicolon-separated":
-            sep = ";"
+             sep = ";"
 
         # read the header rows from the dataframe
         rf_path = os.path.join(
@@ -183,13 +183,13 @@ def create_munger_files(
                 # set file_type and related params
                 if d["file_type"] == "csv":
                     new_sections["format"].append(f"file_type=flat_text")
-                    new_sections["format"].append(f"sep=,")
+                    new_sections["format"].append(f"flat_file_delimiter=,")
                 elif d["file_type"] == "txt":
                     new_sections["format"].append(f"file_type=flat_text")
-                    new_sections["format"].append(f"sep=\\t")
+                    new_sections["format"].append(f"flat_file_delimiter=tab")
                 elif d["file_type"] == "txt-semicolon-separated":
                     new_sections["format"].append(f"file_type=flat_text")
-                    new_sections["format"].append(f"sep=;")
+                    new_sections["format"].append(f"flat_file_delimiter=;")
                 elif d["file_type"] == "xls":
                     new_sections["format"].append(f"file_type=excel")
                 elif d["file_type"] == "xls-multi":
@@ -242,10 +242,6 @@ def create_munger_files(
                     # initialize the section
                     new_sections["from_field_values"] = ["[from_field_values]"]
                     # fill the section
-                    if d["file_type"] in ["xls", "flat_file", "xls-multi"]:
-                        new_sections["format"].append(
-                            f"string_field_name_row={d['field_name_row']}"
-                        )
                     for idx, r in cdf_elements_df.iterrows():
                         if r["source"] in ["row", "xml"]:
                             new_sections["from_field_values"].append(f"{r['name']}={r['raw_identifier_formula']}")

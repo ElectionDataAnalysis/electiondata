@@ -370,7 +370,7 @@ def read_single_datafile(
         # ensure that string-location field values will be read as strings
         if "from_field_values" in p["string_locations"]:
             if p["all_rows"] == "data":
-                dtype = "string"
+                dtype = str
             else:
                 dtype = {c: str for c in p["string_field_names"]}
             kwargs["dtype"] = dtype
@@ -410,7 +410,7 @@ def read_single_datafile(
             df_dict = pd.read_excel(f_path, **kwargs)
         elif p["file_type"] == "flat_text":
             kwargs["quoting"] = csv.QUOTE_MINIMAL
-            kwargs["sep"] = p["flat_file_delimiter"]
+            kwargs["sep"] = p["flat_file_delimiter"].replace("tab", r"\t")
             df = pd.read_csv(f_path, **kwargs)
             df_dict = {"Sheet1": df}
         elif p["file_type"] in ["json-nested", "xml"]:
