@@ -2,10 +2,10 @@
 encoding=iso-8859-1
 thousands_separator=None
 file_type=flat_text
-sep=\t
+flat_file_delimiter=tab
 count_locations=by_column_number
 count_column_numbers=9,10,11,12,13
-string_locations=in_count_headers,from_field_values
+string_locations=from_field_values,in_count_headers
 all_rows=data
 missing=field_names
 

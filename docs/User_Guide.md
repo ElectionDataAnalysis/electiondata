@@ -27,7 +27,7 @@ Ensure that the munger files are appropriate for your results file(s).
   * 'json-nested'
   * 'xml'
   * 'flat_text' Any tab-, comma-, or other-separated table in a plain tabular text file.
-    * (required) a field delimiter `flat_file_delimiter` to be specified (usually `flat_file_delimiter=,` for csv or `flat_file_delimiter=\t` for .txt)
+    * (required) a field delimiter `flat_file_delimiter` to be specified (usually `flat_file_delimiter=,` for csv or `flat_file_delimiter=tab` for .txt)
   * [[ will be obsolete: `concatenated-blocks` Clarity format derived from xml]]
   
   `count_locations`: controls how the system looks for counts
@@ -40,7 +40,7 @@ Ensure that the munger files are appropriate for your results file(s).
   `string_locations`: controls how the system looks for the character strings used to munge the non-count information (Candidate, Party, etc.). There may be multiple, so the value is a list 
   * 'from_field_values'
     * (required) list `string_field_names` of names of fields containing character strings
-    * (required for 'excel' and 'flat_text' file_types) specify location of field names for string columns. with integer `string_field_name_row` (NB: top row not skipped is 0, next row is 1, etc.)
+    * (required for 'excel' and 'flat_text' file_types where not all rows are data) specify location of field names for string columns. Need integer `string_field_name_row` (NB: top row not skipped is 0, next row is 1, etc.)
   * 'in_count_headers' this is used, e.g., when each candidate has a separate column in a tabular file. In this case there may be a single header row with relevant info, or there may be several rows (e.g., Contest in one row, Candidate in another row)
     * (required) list `count_header_row_numbers` of integers for rows containing necessary character strings. (NB: top row not skipped is 0, next row is 1, etc.)
   * 'constant_over_file'
@@ -56,7 +56,7 @@ Ensure that the munger files are appropriate for your results file(s).
 
    Available for flat_text and excel file types:
    * (optional) `rows_to_skip` An integer giving the number of rows to skip at the top to get to the table of counts. This parameter will affect integers designating header rows -- '<header_0>' is the first row not skipped. However, this parameter will *not* affect integers designating rows (e.g., for finding information constant over sheets), which are designated, e.g., '<row_3>'.
-   * (optional) `missing` If the file has no column headers but only data rows with counts, set this parameter to 'field_names'
+   * (optional) `all_rows` If the file has no column headers but only data rows with counts, set this parameter to 'data'
 
 
  
