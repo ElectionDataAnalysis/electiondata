@@ -339,7 +339,6 @@ if __name__ == "__main__":
     ini_directory = '/Users/singer3/PycharmProjects/election_data_analysis/src/ini_files_for_results'
     old_mungers_directory = '/Users/singer3/PycharmProjects/election_data_analysis/src/mungers_old'
     new_mungers_directory = '/Users/singer3/PycharmProjects/election_data_analysis/src/mungers'
-    g_drive = '/Users/singer3/PycharmProjects/election_data_analysis/tests/TestingData/'
     results_directory = {
         "2020 General": os.path.join(g_drive, "_000-Final-2020-General", "archived"),
         "2020 Primary": os.path.join(g_drive, "_001-Final-2020-Primary", "Processed"),
@@ -355,21 +354,19 @@ if __name__ == "__main__":
         old_mungers_directory,
         new_mungers_directory,
         results_directory,
-        skip_list=["nc_gen", "al_gen", "wi_gen20","or_gen","ne_3_cand"],
+        skip_list=[
+            "nc_gen",
+            "al_gen",
+            "wi_gen20",
+            "or_gen",
+            "ne_3_cand",
+            "ut_gen",
+            "wa_gen20",
+            "phila_11p",
+            "ok_gen",
+            "pa_gen_by_votetype",
+        ],
     )
 
-    # err = create_ini_files(ini_directory)
-
-
-
-    results_path = "/Users/singer3/PycharmProjects/election_data_analysis/tests/TestingData/_000-Final-2020-General/archived/Wisconsin/UNOFFICIAL WI Election Results 2020 by County 11-5-2020.xlsx"
-    juris_path = "/Users/singer3/PycharmProjects/election_data_analysis/src/jurisdictions/Wisconsin"
-    mu_path = "/mungers_that_work/wi_gen20.munger"
-    cons = {
-        "Party": "Democratic Party",
-        "CandidateContest": "US President (WI)",
-        "CountItemType": "total",
-    }
-    results_info = {"_datafile_Id": 909, "Election_Id": 1352}
 
 exit()
