@@ -415,6 +415,7 @@ def read_xml(
         root = tree.getroot()
         results_list = results_below(root, tags, attributes)
         raw_results = pd.DataFrame(results_list)
+        # TODO tech debt is the for loop necessary before clean_count_cols?
         for c in p["count_fields_by_name"]:
             raw_results[c] = pd.to_numeric(raw_results[c], errors="coerce")
         raw_results, err_df = m.clean_count_cols(

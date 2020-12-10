@@ -1,0 +1,16 @@
+[format]
+encoding=iso-8859-1
+thousands_separator=,
+count_locations=by_column_number
+count_column_numbers=4
+string_locations=from_field_values,constant_over_file
+all_rows=data
+missing=field_names
+constant_over_file=Party,CountItemType
+
+[from_field_values]
+ReportingUnit=<COUNTY NAME>
+CandidateContest=<OFFICE NAME> (REPUBLICAN)
+Candidate=<CANDIDATE NAME>
+BallotMeasureContest=<OFFICE NAME>
+BallotMeasureSelection=<CANDIDATE NAME>

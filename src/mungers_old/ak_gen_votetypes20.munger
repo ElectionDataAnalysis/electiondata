@@ -1,0 +1,16 @@
+[format]
+encoding=iso-8859-1
+file_type=flat_text
+sep=,
+count_locations=by_column_number
+count_column_numbers=7
+string_locations=from_field_values
+all_rows=data
+missing=field_names
+
+[from_field_values]
+ReportingUnit={<District>,^(?:(.*?) - (?:Absentee|Early Voting|Question))+(?:| - [0-9])$}
+CountItemType={<District>,^.*(Absentee|Early Voting|Question).*$}
+Party=<Party>
+CandidateContest=<Contest Name>
+Candidate=<Candidate Name>

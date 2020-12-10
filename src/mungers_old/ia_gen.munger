@@ -1,0 +1,13 @@
+[format]
+encoding=utf_8
+string_locations=from_field_values
+rows_to_skip=106
+
+[from_field_values]
+ReportingUnit=<first_column>
+Party=placeholder
+CandidateContest={<header_0>,^([^\(\)]*)\(\ 1\)$}
+Candidate=<header_1>
+BallotMeasureContest={<header_0>,^([^\(\)]*)\(\ 1\)$}
+BallotMeasureSelection=<header_1>
+CountItemType=<header_2>

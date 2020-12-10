@@ -1,0 +1,19 @@
+[format]
+encoding=iso-8859-1
+thousands_separator=None
+file_type=flat_text
+sep=	
+count_locations=by_column_number
+count_column_numbers=14
+string_locations=from_field_values
+all_rows=data
+missing=field_names
+
+[from_field_values]
+ReportingUnit=<CountyName>
+Party=<PartyCode>
+CandidateContest=<OfficeDesc> <Juris1num>
+Candidate=<CanNameFirst> <CanNameMiddle> <CanNameLast>
+BallotMeasureContest=<OfficeDesc>
+BallotMeasureSelection=<CanNameLast>
+CountItemType=total
