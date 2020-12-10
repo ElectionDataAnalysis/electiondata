@@ -407,10 +407,8 @@ def read_xml(
 
     # identify tags with counts or other raw data (the info we want)
     # and list data to be pulled from each tag
-    # TODO tech debt: simplify
-    fields = set(p["count_fields_by_name"]).union(p["string_field_names"])
+    fields = set(p["count_fields_by_name"]).union(p["munge_fields"]["from_field_values"])
     tags = {f.split(".")[0] for f in fields}
-    # if munger has nesting tags in format.config
     attributes = {t: [x.split(".")[1] for x in fields if x.split(".")[0] == t] for t in tags}
 
     try:

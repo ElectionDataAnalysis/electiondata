@@ -1,7 +1,7 @@
 [format]
 file_type=flat_text
 count_locations=by_column_number
-string_locations=from_field_values,constant_over_file
+string_locations=constant_over_file,from_field_values
 
 encoding=iso-8859-1
 flat_file_delimiter=;

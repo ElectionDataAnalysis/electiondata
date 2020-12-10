@@ -206,7 +206,8 @@ def create_munger_files(
                     new_sections["format"].append(f"count_column_numbers={d['count_columns']}")
                 elif mu in count_field_dict.keys():
                     new_sections["format_top_lines"].append(f"count_locations=by_field_name")
-                    new_sections["format"].append(f"count_fields={count_field_dict[mu]}")
+                    cf_str = ",".join(count_field_dict[mu])
+                    new_sections["format"].append(f"count_fields_by_name={cf_str}")
                 elif d["field_names_if_no_field_name_row"] is not None:
                     new_sections["format_top_lines"].append(f"count_locations=by_column_number")
                     new_sections["format"].append(f"count_column_numbers={d['count_columns']}")
@@ -339,6 +340,7 @@ if __name__ == "__main__":
     ini_directory = '/Users/singer3/PycharmProjects/election_data_analysis/src/ini_files_for_results'
     old_mungers_directory = '/Users/singer3/PycharmProjects/election_data_analysis/src/mungers_old'
     new_mungers_directory = '/Users/singer3/PycharmProjects/election_data_analysis/src/mungers'
+    g_drive = '/Users/singer3/PycharmProjects/election_data_analysis/tests/TestingData/'
     results_directory = {
         "2020 General": os.path.join(g_drive, "_000-Final-2020-General", "archived"),
         "2020 Primary": os.path.join(g_drive, "_001-Final-2020-Primary", "Processed"),
@@ -366,6 +368,7 @@ if __name__ == "__main__":
             "ok_gen",
             "pa_gen_by_votetype",
             "nv_gen20",
+            "co_xml",
         ],
     )
 

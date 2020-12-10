@@ -3,7 +3,7 @@ file_type=json-nested
 count_locations=by_field_name
 string_locations=from_field_values
 
-count_fields=['Votes']
+count_fields_by_name=Votes
 
 [from_field_values]
 ReportingUnit=<LocalityName>

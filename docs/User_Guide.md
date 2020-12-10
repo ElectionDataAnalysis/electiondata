@@ -32,6 +32,7 @@ Ensure that the munger files are appropriate for your results file(s).
     * Default is to read all sheets
   * 'json-nested'
   * 'xml'
+    * (required) must have `string_locations=from_field_values` or `string_locations=from_field_values,constant_over_file`
   * 'flat_text' Any tab-, comma-, or other-separated table in a plain tabular text file.
     * (required) a field delimiter `flat_file_delimiter` to be specified (usually `flat_file_delimiter=,` for csv or `flat_file_delimiter=tab` for .txt)
   * [[ will be obsolete: `concatenated-blocks` Clarity format derived from xml]]
