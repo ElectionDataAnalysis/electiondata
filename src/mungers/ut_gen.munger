@@ -1,12 +1,12 @@
 [format]
-encoding=utf_8
 file_type=excel
 count_locations=by_column_number
+string_locations=from_field_values,in_count_headers,constant_over_file
+
+encoding=utf_8
 count_column_numbers=4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33
-string_locations=constant_over_file,from_field_values,in_count_headers
-all_rows=data
-missing=field_names
 string_field_name_row=0
+count_field_name_row=0
 constant_over_file=CountItemType
 
 [from_field_values]

@@ -1,8 +1,9 @@
 [format]
 file_type=json-nested
 count_locations=by_field_name
-count_fields=['C.V']
 string_locations=from_field_values
+
+count_fields=['C.V']
 
 [from_field_values]
 ReportingUnit=<N>

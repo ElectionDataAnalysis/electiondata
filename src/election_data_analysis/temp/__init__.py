@@ -142,7 +142,8 @@ def create_munger_files(
         old_mungers_dir,
         new_mungers_dir,
         results_dir,
-        munger_list = None,
+        munger_list=None,
+        skip_list=None,
 ) -> dict:
     err = None
 
@@ -151,7 +152,7 @@ def create_munger_files(
         os.mkdir(new_mungers_directory)
 
     if munger_list:
-        mungers_to_make = [x for x in os.listdir(old_mungers_dir) if x in munger_list]
+        mungers_to_make = [x for x in os.listdir(old_mungers_dir) if (x in munger_list) and (x not in skip_list)]
     else:
         mungers_to_make = os.listdir(old_mungers_dir)
     for mu in mungers_to_make:
@@ -354,7 +355,7 @@ if __name__ == "__main__":
         old_mungers_directory,
         new_mungers_directory,
         results_directory,
-        munger_list=["nc_gen"],
+        skip_list=["nc_gen", "al_gen", "wi_gen20","or_gen"],
     )
 
     # err = create_ini_files(ini_directory)
@@ -363,24 +364,12 @@ if __name__ == "__main__":
 
     results_path = "/Users/singer3/PycharmProjects/election_data_analysis/tests/TestingData/_000-Final-2020-General/archived/Wisconsin/UNOFFICIAL WI Election Results 2020 by County 11-5-2020.xlsx"
     juris_path = "/Users/singer3/PycharmProjects/election_data_analysis/src/jurisdictions/Wisconsin"
-    mu_path = "/Users/singer3/PycharmProjects/election_data_analysis/src/mungers_new_by_hand/wi_gen20.munger"
+    mu_path = "/mungers_that_work/wi_gen20.munger"
     cons = {
         "Party": "Democratic Party",
         "CandidateContest": "US President (WI)",
         "CountItemType": "total",
     }
     results_info = {"_datafile_Id": 909, "Election_Id": 1352}
-"""
-    juris, juris_err = ui.pick_juris_from_filesystem(
-        juris_path=juris_path,
-        err=None,
-        check_files=False,
-    )
 
-    dl = e.DataLoader()
-
-    jurs_load_err = juris.load_juris_to_db(dl.session)
-
-    load_error = load_results_file(dl.session, mu_path, results_path, juris, results_info, cons)
-"""
 exit()

@@ -1,11 +1,13 @@
 [format]
-encoding=iso-8859-1
-thousands_separator=None
 file_type=flat_text
-sep=,
 count_locations=by_column_number
-count_column_numbers=4
 string_locations=from_field_values
+
+encoding=iso-8859-1
+flat_file_delimiter=,
+count_column_numbers=4
+string_field_name_row=0
+count_field_name_row=0
 rows_to_skip=2
 
 [from_field_values]
