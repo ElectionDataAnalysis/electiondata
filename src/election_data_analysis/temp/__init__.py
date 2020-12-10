@@ -233,6 +233,9 @@ def create_munger_files(
                     new_sections["format"].append(f"string_field_name_row={d['field_name_row']}")
                     new_sections["format"].append(f"count_field_name_row={d['field_name_row']}")
 
+                # set sheets to skip
+                if d["file_type"] == "excel":
+                    new_sections["format"].append("sheets_to_read_numbers=0")
 
                 # set rows to skip
                 if d["count_of_top_lines_to_skip"]:
@@ -369,6 +372,9 @@ if __name__ == "__main__":
             "pa_gen_by_votetype",
             "nv_gen20",
             "co_xml",
+            "sc_xml",
+            "nh_xls_by_county_3_cols_skip_3_lines",
+            "tx_json",
         ],
     )
 

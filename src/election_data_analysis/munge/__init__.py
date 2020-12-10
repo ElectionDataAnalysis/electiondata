@@ -1690,7 +1690,8 @@ def to_standard_count_frame(f_path: str, munger_path: str, p, constants) -> (pd.
     # remove any sheets designated to be removed
     if p["sheets_to_skip"]:
         for k in p["sheets_to_skip"]:
-            raw_dict.pop(k)
+            if k in raw_dict.keys():
+                raw_dict.pop(k)
     # for each df:
     standard = dict()
     for k, raw in raw_dict.items():
@@ -1744,7 +1745,7 @@ def to_standard_count_frame(f_path: str, munger_path: str, p, constants) -> (pd.
         standard[k] = standard[k][necessary]
 
         # clean Count column
-        standard[k], bad_rows =clean_count_cols(standard[k], ["Count"], p["thousands_separator"])
+        standard[k], bad_rows = clean_count_cols(standard[k], ["Count"], p["thousands_separator"])
         if not bad_rows.empty:
             err = ui.add_err_df(err, bad_rows, munger_name, f_path)
 

@@ -453,7 +453,8 @@ def results_below(node: et.Element, good_tags: set, good_pairs: dict) -> list:
 
 
 def read_nested_json(f_path: str,
-                     munger: jm.Munger,
+                     p: Dict[str, Any],
+                     munger_name: str,
                      err: Optional[Dict]) -> (pd.DataFrame, Optional[Dict]):
     """
     Create dataframe from a nested json file, by traversing the json dictionary
@@ -472,12 +473,12 @@ def read_nested_json(f_path: str,
     # Identify keys for counts and other raw data (attributes) we want
 
     # The last value is the final key
-    count_keys = {k.split('.')[-1] for k in munger.options["count_columns_by_name"]}
-    attribute_keys = {k.split('.')[-1] for k in munger.field_list}
+    count_keys = {k.split('.')[-1] for k in p["count_fields_by_name"]}
+    attribute_keys = {k.split('.')[-1] for k in p["munge_fields"]["from_field_values"]}
 
     # Any prior values are nested keys
     nested_keys = set()
-    for k in set(munger.options["count_columns_by_name"]) | set(munger.field_list):
+    for k in set(p["count_fields_by_name"]) | set(p["munge_fields"]["from_field_values"]):
         nested_keys |= set(k.split('.')[:-1])
 
     try:
@@ -492,21 +493,22 @@ def read_nested_json(f_path: str,
         raw_results = pd.DataFrame(results_list)
 
         # Only keep columns that we want, so the other ones don't cause trouble later.
-        cols_we_want = list(munger.options["count_columns_by_name"]) + list(munger.field_list)
+        cols_we_want = list(p["count_fields_by_name"]) + list(p["munge_fields"]["from_field_values"])
         raw_results = raw_results[cols_we_want]
 
         # Perform standard cleaning
-        for c in munger.options["count_columns_by_name"]:
+        # TODO tech debt: for loop probably unnecessary before clean_count_cols
+        for c in p["count_fields_by_name"]:
             raw_results[c] = pd.to_numeric(raw_results[c], errors="coerce")
         raw_results, err_df = m.clean_count_cols(
             raw_results,
-            munger.options["count_columns_by_name"],
+            p["count_fields_by_name"],
         )
         if not err_df.empty:
-            err = ui.add_err_df(err, err_df, munger, f_path)
+            err = ui.add_err_df(err, err_df, munger_name, f_path)
     except Exception as e:
         traceback.print_exc()
-        err = ui.add_new_error(err, "munger", munger.name, f"Error reading xml: {e}")
+        err = ui.add_new_error(err, "munger", munger_name, f"Error reading xml: {e}")
         raw_results = pd.DataFrame()
     return raw_results, err
 

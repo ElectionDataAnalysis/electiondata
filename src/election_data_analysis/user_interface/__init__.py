@@ -414,15 +414,9 @@ def read_single_datafile(
 ) -> (Dict[str, pd.DataFrame], dict):
     """Length of returned dictionary is the number of sheets read -- usually 1 except for multi-sheet Excel"""
     kwargs = dict()  # for syntax checker
-    if p["file_type"] in ["xml"]:
-        df, err = sf.read_xml(f_path, p, munger_name, err)
-        if fatal_error(err):
-            df_dict = dict()
-        else:
-            df_dict = {"Sheet1": df}
-        return df_dict, err
 
-    elif p["file_type"] in ["excel"]:
+    # prepare keyword arguments for pandas read_* function
+    if p["file_type"] in ["excel"]:
         kwargs = basic_kwargs(p, dict())
         kwargs = tabular_kwargs(p, kwargs)
         if p["sheets_to_read_names"] or p["sheets_to_read_numbers"]:
@@ -438,20 +432,23 @@ def read_single_datafile(
 
     # read file
     try:
-        if p["file_type"] == "excel":
+        if p["file_type"] in ["xml"]:
+            df, err = sf.read_xml(f_path, p, munger_name, err)
+            if fatal_error(err):
+                df_dict = dict()
+            else:
+                df_dict = {"Sheet1": df}
+        elif p["file_type"] in ["json-nested"]:
+            df, err = sf.read_nested_json(f_path, p, munger_name, err)
+            if fatal_error(err):
+                df_dict = dict()
+            else:
+                df_dict = {"Sheet1": df}
+        elif p["file_type"] == "excel":
             df_dict = pd.read_excel(f_path, **kwargs)
         elif p["file_type"] == "flat_text":
             df = pd.read_csv(f_path, **kwargs)
             df_dict = {"Sheet1": df}
-        elif p["file_type"] in ["json-nested"]:
-            pass  # TODO
-            df_dict = dict()
-            err = add_new_error(
-                err,
-                "system",
-                "user_interface.read_single_datafile",
-                f"file type {p['file_type']} not yet programmed"
-            )
 
     except FileNotFoundError:
         err_str = f"File not found: {f_path}"
