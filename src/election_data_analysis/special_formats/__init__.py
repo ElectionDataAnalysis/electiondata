@@ -5,7 +5,7 @@ import traceback
 import xml.etree.ElementTree as et
 from copy import deepcopy
 from pathlib import Path
-from typing import Optional, Dict, List
+from typing import Optional, Dict, List, Any
 from election_data_analysis import munge as m
 from election_data_analysis import juris_and_munger as jm
 from election_data_analysis import user_interface as ui
@@ -391,7 +391,8 @@ def add_info(node: et.Element, info: dict, counts: dict, raws: dict) -> (dict, b
 
 def read_xml(
     f_path: str,
-    munger: jm.Munger,
+    p: Dict[str, Any],
+    munger_name: str,
     err: Optional[Dict],
 ) -> (pd.DataFrame, Optional[Dict]):
     """Create dataframe from the xml file, with column names matching the fields in the raw_identifier formulas.
@@ -407,27 +408,25 @@ def read_xml(
     # identify tags with counts or other raw data (the info we want)
     # and list data to be pulled from each tag
     # TODO tech debt: simplify
-    fields = set(munger.options["count_columns_by_name"]).union(munger.field_list)
+    fields = set(p["count_fields_by_name"]).union(p["string_field_names"])
     tags = {f.split(".")[0] for f in fields}
     # if munger has nesting tags in format.config
-    if munger.options["nesting_tags"] is not None:
-        tags.update(munger.options["nesting_tags"])
     attributes = {t: [x.split(".")[1] for x in fields if x.split(".")[0] == t] for t in tags}
 
     try:
         root = tree.getroot()
         results_list = results_below(root, tags, attributes)
         raw_results = pd.DataFrame(results_list)
-        for c in munger.options["count_columns_by_name"]:
+        for c in p["count_fields_by_name"]:
             raw_results[c] = pd.to_numeric(raw_results[c], errors="coerce")
         raw_results, err_df = m.clean_count_cols(
             raw_results,
-            munger.options["count_columns_by_name"],
+            p["count_fields_by_name"],
         )
         if not err_df.empty:
-            err = ui.add_err_df(err, err_df, munger, f_path)
-    except Exception as e:
-        err = ui.add_new_error(err, "munger", munger.name, f"Error reading xml: {e}")
+            err = ui.add_err_df(err, err_df, munger_name, f_path)
+    except Exception as exc:
+        err = ui.add_new_error(err, "munger", munger_name, f"Error reading xml: {exc}")
         raw_results = pd.DataFrame()
     return raw_results, err
 
