@@ -374,7 +374,11 @@ def read_single_datafile(
             else:
                 dtype = {c: str for c in p["string_field_names"]}
             kwargs["dtype"] = dtype
-            kwargs["encoding"] = d["encoding"]
+
+            if p["encoding"] is None:
+                kwargs["encoding"] = p["encoding"]
+            else:
+                kwargs["encoding"] = e.default_encoding
 
         if p["file_type"] in ["excel", "flat_text"]:
             # designate header rows (for both count columns or string-location info/columns)
@@ -383,15 +387,13 @@ def read_single_datafile(
             if p["count_locations"] == "by_field_name":
                 header_rows.update({p["count_field_name_row"]})
             # if any string locations are from field values AND field names are in the table, need string_field_name_row
-            if (not p["all_rows"]) and "from_field_values" in p["string_locations"]:
+            if (p["all_rows"] is None) and "from_field_values" in p["string_locations"]:
                 header_rows.update({p["string_field_name_row"]})
             # if any string locations are in count headers need count_header_row_numbers
             if "in_count_headers" in p["string_locations"]:
                 header_rows.update(p["count_header_row_numbers"])
             if header_rows:
-                kwargs["header"] = list(header_rows)
-            else:
-                kwargs["header"] = None
+                kwargs["header"] = sorted(header_rows)
 
             # designate rows to skip
             if p["rows_to_skip"]:
@@ -411,7 +413,7 @@ def read_single_datafile(
             df_dict = pd.read_excel(f_path, **kwargs)
         elif p["file_type"] == "flat_text":
             kwargs["quoting"] = csv.QUOTE_MINIMAL
-            kwargs["sep"] = p["flat_file_delimiter"].replace("tab", r"\t")
+            kwargs["sep"] = p["flat_file_delimiter"].replace("tab", "\t")
             df = pd.read_csv(f_path, **kwargs)
             df_dict = {"Sheet1": df}
         elif p["file_type"] in ["json-nested", "xml"]:

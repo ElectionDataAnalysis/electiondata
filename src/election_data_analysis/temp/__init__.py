@@ -175,7 +175,7 @@ def create_munger_files(
 
                 # initialize format header
                 new_sections["format_top_lines"] = ["[format]"]
-                new_sections["format"] = ["\n"]
+                new_sections["format"] = []
                 # copy simple parameters
                 for param in ["encoding", "thousands_separator"]:
                     if (d[param] is not None) and (d[param] != "None"):
@@ -237,7 +237,7 @@ def create_munger_files(
                     new_sections["format"].append(f"rows_to_skip={d['count_of_top_lines_to_skip']}")
 
                 # note if all rows of a flat file contain only data (not field names)
-                if (d["field_names_if_no_field_name_row"] is not None):
+                if (d["field_names_if_no_field_name_row"] is not None) and (d["field_names_if_no_field_name_row"] != "None"):
                     new_sections["format"].append("all_rows=data")
 
                 # create other parameter sections as needed

@@ -17,6 +17,7 @@ from election_data_analysis import preparation as prep
 # constants
 # from election_data_analysis.munge import get_and_check_munger_params, to_standard_count_frame, munge_source_to_raw, \
     # munge_raw_to_ids, fill_vote_count
+default_encoding = "utf_8"
 
 sdl_pars_req = [
     "munger_name",
