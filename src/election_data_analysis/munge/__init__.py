@@ -32,6 +32,7 @@ opt_munger_params: Dict[str, str] = {
     "count_field_name_row": "int",  # TODO allow multi-rows here?
     "count_column_numbers": "list-of-integers",
     "count_header_row_numbers": "list-of-integers",
+    "string_field_column_numbers": "list-of-integers",
     "string_field_names": "list-of-strings",
     "string_field_name_row": "int",
     "auxiliary_data_location": "string",
@@ -1481,7 +1482,7 @@ def munge_source_to_raw(
             header=source,
             param_file=munger_path,
         )
-        elements = [k for k in formulas.keys() if formulas[k] is not None]
+        elements = [k for k in formulas.keys() if (formulas[k] is not None) and (formulas[k] != "None")]
         for element in elements:
             try:
                 formula = formulas[element]

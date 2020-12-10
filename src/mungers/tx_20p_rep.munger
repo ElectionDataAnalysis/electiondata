@@ -1,11 +1,12 @@
 [format]
+count_locations=by_column_number
+string_locations=from_field_values,constant_over_file
+
 encoding=iso-8859-1
 thousands_separator=,
-count_locations=by_column_number
 count_column_numbers=4
-string_locations=constant_over_file,from_field_values
-all_rows=data
-missing=field_names
+string_field_name_row=0
+count_field_name_row=0
 constant_over_file=Party,CountItemType
 
 [from_field_values]

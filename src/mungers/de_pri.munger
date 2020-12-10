@@ -1,7 +1,8 @@
 [format]
 count_locations=by_field_name
-count_fields=['Machine Votes,Absentee Votes,Total Votes']
 string_locations=from_field_values,in_count_headers
+
+count_fields=['Machine Votes,Absentee Votes,Total Votes']
 
 [from_field_values]
 ReportingUnit=<Election District>

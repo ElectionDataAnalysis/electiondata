@@ -1,10 +1,10 @@
 [format]
-encoding=utf_8
 file_type=excel
+string_locations=from_field_values,constant_over_sheet
+
+encoding=utf_8
 sheets_to_skip=State Canvass Master Repo
-string_locations=constant_over_sheet,from_field_values
 rows_to_skip=22
-string_field_name_row=None
 
 [from_field_values]
 ReportingUnit=<header_0>

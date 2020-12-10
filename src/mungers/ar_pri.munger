@@ -1,6 +1,7 @@
 [format]
-encoding=iso-8859-1
 string_locations=from_field_values
+
+encoding=iso-8859-1
 rows_to_skip=83
 
 [from_field_values]

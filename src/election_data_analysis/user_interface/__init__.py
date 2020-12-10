@@ -393,7 +393,11 @@ def read_single_datafile(
             if "in_count_headers" in p["string_locations"]:
                 header_rows.update(p["count_header_row_numbers"])
             if header_rows:
-                kwargs["header"] = sorted(header_rows)
+                # if multi-index
+                if len(header_rows) > 1:
+                    kwargs["header"] = sorted(header_rows)
+                else:
+                    kwargs["header"] = header_rows.pop()
 
             # designate rows to skip
             if p["rows_to_skip"]:

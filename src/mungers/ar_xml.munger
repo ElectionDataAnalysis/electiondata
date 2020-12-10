@@ -1,9 +1,10 @@
 [format]
-encoding=ASCII
 file_type=xml
 count_locations=by_field_name
-count_fields=['VoteType.votes']
 string_locations=from_field_values
+
+encoding=ASCII
+count_fields=['VoteType.votes']
 
 [from_field_values]
 ReportingUnit=<County.name>

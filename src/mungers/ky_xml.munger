@@ -1,9 +1,10 @@
 [format]
-encoding=ASCII
 file_type=xml
 count_locations=by_field_name
+string_locations=from_field_values,constant_over_file
+
+encoding=ASCII
 count_fields=['County.votes']
-string_locations=constant_over_file,from_field_values
 constant_over_file=CountItemType
 
 [from_field_values]

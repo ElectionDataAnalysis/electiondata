@@ -19,6 +19,7 @@ Ensure that the munger files are appropriate for your results file(s).
  (2) Copy the templates from `templates/munger_templates` to your munger directory. Every munger must have a value for `file_type`; depending your `file_type` other parameters may be required. Types currently supported are:
  
  #### NEW VERSION:
+ There are three main required parameters: `file_type`, `count_locations` and `string_locations`. Depending on the values of these, there are other required and optional fields.
  `file_type`: controls which pandas function reads the file contents
   * 'excel'
     * (optional) a list `sheets_to_read_names` (and/or `sheets_to_read_numbers`) of spreadsheets to read, 
@@ -39,7 +40,9 @@ Ensure that the munger files are appropriate for your results file(s).
     
   `string_locations`: controls how the system looks for the character strings used to munge the non-count information (Candidate, Party, etc.). There may be multiple, so the value is a list 
   * 'from_field_values'
-    * (required) list `string_field_names` of names of fields containing character strings
+    * (required) either:
+      * if all_rows=data (i.e., no field names) list `string_field_column_numbers` of integers designating columns (leftmost column is 0, next is 1, etc.)
+      * otherwise, list `string_field_names` of names of fields containing character strings
     * (required for 'excel' and 'flat_text' file_types where not all rows are data) specify location of field names for string columns. Need integer `string_field_name_row` (NB: top row not skipped is 0, next row is 1, etc.)
   * 'in_count_headers' this is used, e.g., when each candidate has a separate column in a tabular file. In this case there may be a single header row with relevant info, or there may be several rows (e.g., Contest in one row, Candidate in another row)
     * (required) list `count_header_row_numbers` of integers for rows containing necessary character strings. (NB: top row not skipped is 0, next row is 1, etc.)
@@ -58,7 +61,13 @@ Ensure that the munger files are appropriate for your results file(s).
    * (optional) `rows_to_skip` An integer giving the number of rows to skip at the top to get to the table of counts. This parameter will affect integers designating header rows -- '<header_0>' is the first row not skipped. However, this parameter will *not* affect integers designating rows (e.g., for finding information constant over sheets), which are designated, e.g., '<row_3>'.
    * (optional) `all_rows` If the file has no column headers but only data rows with counts, set this parameter to 'data'
 
-
+Finally, if the election agency provides counts by ids for, say, counties or candidates, and also provides definitions for those ids, information about how to look up values (e.g., BallotName) by id. In this case, each item requiring lookups gets a section in the .munger file. For example:
+```
+[BallotName lookup]
+source_file=2018GEN/2018name.txt
+id_col_number=5
+BallotName=<column_7> <column_8> <column_6>
+```
  
  #### OLD VERSION:
  file_type:
