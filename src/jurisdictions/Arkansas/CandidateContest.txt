@@ -591,3 +591,16 @@ AR State Treasurer (Libertarian Party)	1	AR State Treasurer	Libertarian Party
 AR Secretary of State (Libertarian Party)	1	AR Secretary of State	Libertarian Party
 AR Commissioner of State Lands (Libertarian Party)	1	AR Commissioner of State Lands	Libertarian Party
 AR Auditor of State (Libertarian Party)	1	AR Auditor of State	Libertarian Party
+"Circuit Judge, District 4, Division 8"	1	"Circuit Judge, District 4, Division 8"	
+"Circuit Judge, District 18-East, Division 02"	1	"Circuit Judge, District 18-East, Division 02"	
+"Circuit Judge, District 12, Division 06"	1	"Circuit Judge, District 12, Division 06"	
+"Circuit Judge, District 11-West, Division 3, Subdistrict 11.2"	1	"Circuit Judge, District 11-West, Division 3, Subdistrict 11.2"	
+"Circuit Judge, District 10, Division 01, Subdistrict 10.2"	1	"Circuit Judge, District 10, Division 01, Subdistrict 10.2"	
+"Circuit Judge, District 06, Division 15, Subdistrict 6.2"	1	"Circuit Judge, District 06, Division 15, Subdistrict 6.2"	
+"Circuit Judge, District 06, Division 14, Subdistrict 6.2"	1	"Circuit Judge, District 06, Division 14, Subdistrict 6.2"	
+"Circuit Judge, District 06, Division 10, Subdistrict 6.1"	1	"Circuit Judge, District 06, Division 10, Subdistrict 6.1"	
+"Circuit Judge, District 06, Division 02, Subdistrict 6.2"	1	"Circuit Judge, District 06, Division 02, Subdistrict 6.2"	
+"Circuit Judge, District 03, Division 03"	1	"Circuit Judge, District 03, Division 03"	
+State District Judge District 33	1	State District Judge District 33	
+"State District Judge District 2, Division 4"	1	"State District Judge District 2, Division 4"	
+State District Judge District 12	1	State District Judge District 12	
