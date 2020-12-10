@@ -374,6 +374,7 @@ def read_single_datafile(
             else:
                 dtype = {c: str for c in p["string_field_names"]}
             kwargs["dtype"] = dtype
+            kwargs["encoding"] = d["encoding"]
 
         if p["file_type"] in ["excel", "flat_text"]:
             # designate header rows (for both count columns or string-location info/columns)
