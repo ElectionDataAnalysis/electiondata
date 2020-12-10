@@ -57,7 +57,6 @@ def grab_ini_files(results_dir, path_to_repo):
         )
         # delete any .ini files whose results file is not found
         if not os.path.isfile(os.path.join(results_dir,d["results_file"])):
-            print(f"File referenced in .ini file, but not found: {d['results_file']}")
             os.remove(os.path.join(results_dir, par_file))
     return
 
