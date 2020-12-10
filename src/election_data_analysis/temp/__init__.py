@@ -174,39 +174,40 @@ def create_munger_files(
                 cdf_elements_df = pd.read_csv(os.path.join(mu_dir, "cdf_elements.txt"), sep="\t")
 
                 # initialize format header
-                new_sections["format"] = ["[format]"]
+                new_sections["format_top_lines"] = ["[format]"]
+                new_sections["format"] = ["\n"]
                 # copy simple parameters
                 for param in ["encoding", "thousands_separator"]:
-                    if d[param] is not None:
+                    if (d[param] is not None) and (d[param] != "None"):
                         new_sections["format"].append(f"{param}={d[param]}")
 
                 # set file_type and related params
                 if d["file_type"] == "csv":
-                    new_sections["format"].append(f"file_type=flat_text")
+                    new_sections["format_top_lines"].append(f"file_type=flat_text")
                     new_sections["format"].append(f"flat_file_delimiter=,")
                 elif d["file_type"] == "txt":
-                    new_sections["format"].append(f"file_type=flat_text")
+                    new_sections["format_top_lines"].append(f"file_type=flat_text")
                     new_sections["format"].append(f"flat_file_delimiter=tab")
                 elif d["file_type"] == "txt-semicolon-separated":
-                    new_sections["format"].append(f"file_type=flat_text")
+                    new_sections["format_top_lines"].append(f"file_type=flat_text")
                     new_sections["format"].append(f"flat_file_delimiter=;")
                 elif d["file_type"] == "xls":
-                    new_sections["format"].append(f"file_type=excel")
+                    new_sections["format_top_lines"].append(f"file_type=excel")
                 elif d["file_type"] == "xls-multi":
-                    new_sections["format"].append(f"file_type=excel")
+                    new_sections["format_top_lines"].append(f"file_type=excel")
                     new_sections["format"].append(f"sheets_to_skip={d['sheets_to_skip']}")
                 elif d["file_type"] in ["json-nested", "xml"]:
-                    new_sections["format"].append(f"file_type={d['file_type']}")
+                    new_sections["format_top_lines"].append(f"file_type={d['file_type']}")
 
                 # set count_locations and related params
                 if d["count_columns"] is not None:
-                    new_sections["format"].append(f"count_locations=by_column_number")
+                    new_sections["format_top_lines"].append(f"count_locations=by_column_number")
                     new_sections["format"].append(f"count_column_numbers={d['count_columns']}")
                 elif mu in count_field_dict.keys():
-                    new_sections["format"].append(f"count_locations=by_field_name")
+                    new_sections["format_top_lines"].append(f"count_locations=by_field_name")
                     new_sections["format"].append(f"count_fields={count_field_dict[mu]}")
                 elif d["field_names_if_no_field_name_row"] is not None:
-                    new_sections["format"].append(f"count_locations=by_column_number")
+                    new_sections["format_top_lines"].append(f"count_locations=by_column_number")
                     new_sections["format"].append(f"count_column_numbers={d['count_columns']}")
 
                 # set string_location and related params
@@ -223,19 +224,21 @@ def create_munger_files(
                     str_locations.append("constant_over_sheet")
 
                 str_l_str = ",".join(set(str_locations))
-                new_sections["format"].append(f"string_locations={str_l_str}")
+                new_sections["format_top_lines"].append(f"string_locations={str_l_str}")
+
+                # get info from field_name_row
+                if d["field_name_row"] is not None:
+                    new_sections["format"].append(f"string_field_name_row={d['field_name_row']}")
+                    new_sections["format"].append(f"count_field_name_row={d['field_name_row']}")
+
 
                 # set rows to skip
                 if d["count_of_top_lines_to_skip"]:
                     new_sections["format"].append(f"rows_to_skip={d['count_of_top_lines_to_skip']}")
 
-                # set all_rows=data if required
-                if d["field_names_if_no_field_name_row"] is not None:
-                    new_sections["format"].append(f"all_rows=data")
-
                 # note if all rows of a flat file contain only data (not field names)
-                if d["field_names_if_no_field_name_row"]:
-                    new_sections["format"].append("missing=field_names")
+                if (d["field_names_if_no_field_name_row"] is not None):
+                    new_sections["format"].append("all_rows=data")
 
                 # create other parameter sections as needed
                 if "from_field_values" in str_locations:
