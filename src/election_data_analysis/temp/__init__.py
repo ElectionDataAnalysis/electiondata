@@ -365,6 +365,7 @@ if __name__ == "__main__":
             "phila_11p",
             "ok_gen",
             "pa_gen_by_votetype",
+            "nv_gen20",
         ],
     )
 
