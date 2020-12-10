@@ -1,6 +1,6 @@
 [format]
 file_type=excel
-string_locations=from_field_values,constant_over_sheet
+string_locations=constant_over_sheet,from_field_values
 
 encoding=iso-8859-1
 thousands_separator=,

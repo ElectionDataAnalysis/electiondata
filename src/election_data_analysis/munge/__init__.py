@@ -1605,6 +1605,16 @@ def get_and_check_munger_params(munger_path: str) -> (dict, Optional[dict]):
     # TODO check formats (e.g., formulas for constant_over_sheet use only <sheet_name> and <row_{i}>)
     # TODO check that required headers are present (see User_Guide) per string_locations list
     # TODO check that required headers are present (see User_Guide) per lookups list
+
+    # # add parameter listing all munge fields
+    # get lists of string fields expected in raw file
+    # TODO why can't munge_fields and string_fields be the same?
+    params["munge_fields"], new_err = get_string_fields(
+        [x for x in params["string_locations"] if x != "constant_over_file"],
+        munger_path,
+    )
+    if new_err:
+        ui.consolidate_errors([err, new_err])
     return format_options, err
 
 
@@ -1656,11 +1666,9 @@ def to_standard_count_frame(f_path: str, munger_path: str, p, constants) -> (pd.
             return pd.DataFrame(), err
 
     # read count dataframe(s) from file
-    raw_dict, read_err = ui.read_single_datafile(p, f_path)
-    if read_err:
-        err = ui.consolidate_errors([err,read_err])
-        if ui.fatal_error(read_err):
-            return pd.DataFrame(), err
+    raw_dict, err = ui.read_single_datafile(f_path, p, munger_name, err)
+    if ui.fatal_error(err):
+        return pd.DataFrame(), err
 
     # get lists of string fields expected in raw file
     try:
