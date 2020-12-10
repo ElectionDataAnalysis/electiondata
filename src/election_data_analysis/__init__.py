@@ -492,6 +492,7 @@ class SingleDataLoader:
 
             # load results to db
             for mu in self.munger_list:
+                print(f"\twith munger {mu}")
                 f_path = os.path.join(self.results_dir, self.d["results_file"])
                 mu_path = os.path.join(self.mungers_dir, f"{mu}.munger")
                 new_err = load_results_file(

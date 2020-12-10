@@ -355,7 +355,7 @@ if __name__ == "__main__":
         old_mungers_directory,
         new_mungers_directory,
         results_directory,
-        skip_list=["nc_gen", "al_gen", "wi_gen20","or_gen"],
+        skip_list=["nc_gen", "al_gen", "wi_gen20","or_gen","ne_3_cand"],
     )
 
     # err = create_ini_files(ini_directory)

@@ -375,11 +375,6 @@ def read_single_datafile(
                 dtype = {c: str for c in p["string_field_names"]}
             kwargs["dtype"] = dtype
 
-            if p["encoding"] is None:
-                kwargs["encoding"] = p["encoding"]
-            else:
-                kwargs["encoding"] = e.default_encoding
-
         if p["file_type"] in ["excel", "flat_text"]:
             # designate header rows (for both count columns or string-location info/columns)
             header_rows = set()
@@ -404,9 +399,16 @@ def read_single_datafile(
                 kwargs["skiprows"] = range(p["rows_to_skip"])
 
         # other parameters
+        kwargs["index_col"] = False
         if p["thousands_separator"]:
             kwargs["thousands"] = p["thousands_separator"]
-        kwargs["index_col"] = False
+        if p["file_type"] in ["flat_file"]:
+            if p["encoding"] is None:
+                kwargs["encoding"] = p["encoding"]
+            else:
+                kwargs["encoding"] = e.default_encoding
+
+
 
         # read file
         if p["file_type"] == "excel":
