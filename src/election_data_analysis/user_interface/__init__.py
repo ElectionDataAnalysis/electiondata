@@ -359,70 +359,91 @@ def find_dupes(df):
     return dupes_df, deduped
 
 
+def tabular_kwargs(p: Dict[str, Any], kwargs: Dict[str, Any]) -> Dict[str, Any]:
+    # designate header rows (for both count columns or string-location info/columns)
+    header_rows = set()
+    # if count_locations are by field name, need count_field_name_row
+    if p["count_locations"] == "by_field_name":
+        header_rows.update({p["count_field_name_row"]})
+    # if any string locations are from field values AND field names are in the table, need string_field_name_row
+    if (p["all_rows"] is None) and "from_field_values" in p["string_locations"]:
+        header_rows.update({p["string_field_name_row"]})
+    # if any string locations are in count headers need count_header_row_numbers
+    if "in_count_headers" in p["string_locations"]:
+        header_rows.update(p["count_header_row_numbers"])
+    if header_rows:
+        # if multi-index
+        if len(header_rows) > 1:
+            kwargs["header"] = sorted(header_rows)
+        else:
+            kwargs["header"] = header_rows.pop()
+
+    # designate rows to skip
+    if p["rows_to_skip"]:
+        kwargs["skiprows"] = range(p["rows_to_skip"])
+    return kwargs
+
+
+def basic_kwargs(p: Dict[str, Any], kwargs: Dict[str, Any]) -> Dict[str, Any]:
+    # ensure that string-location field values will be read as strings
+    if "from_field_values" in p["string_locations"]:
+        if p["all_rows"] == "data":
+            dtype = str
+        else:
+            dtype = {c: str for c in p["string_field_names"]}
+        kwargs["dtype"] = dtype
+
+    # other parameters
+    kwargs["index_col"] = False
+    if p["thousands_separator"]:
+        kwargs["thousands"] = p["thousands_separator"]
+    if p["file_type"] in ["flat_file"]:
+        if p["encoding"] is None:
+            kwargs["encoding"] = p["encoding"]
+        else:
+            kwargs["encoding"] = e.default_encoding
+
+    return kwargs
+
+
 def read_single_datafile(
-    p: Dict[str, Any], f_path: str, err: Optional[dict] = None
+    f_path: str,
+    p: Dict[str, Any],
+    munger_name: str,
+    err: Optional[Dict],
 ) -> (Dict[str, pd.DataFrame], dict):
     """Length of returned dictionary is the number of sheets read -- usually 1 except for multi-sheet Excel"""
+    kwargs = dict()  # for syntax checker
+    if p["file_type"] in ["xml"]:
+        df, err = sf.read_xml(f_path, p, munger_name, err)
+        if fatal_error(err):
+            df_dict = dict()
+        else:
+            df_dict = {"Sheet1": df}
+        return df_dict, err
+
+    elif p["file_type"] in ["excel"]:
+        kwargs = basic_kwargs(p, dict())
+        kwargs = tabular_kwargs(p, kwargs)
+        if p["sheets_to_read_names"] or p["sheets_to_read_numbers"]:
+            kwargs["sheet_name"] = p["sheets_to_read_numbers"] + p["sheets_to_read_names"]
+        else:
+            kwargs["sheet_name"] = None
+            df_dict = pd.read_excel(f_path, **kwargs)
+    elif p["file_type"] in ["flat_text"]:
+        kwargs = basic_kwargs(p, dict())
+        kwargs = tabular_kwargs(p, kwargs)
+        kwargs["quoting"] = csv.QUOTE_MINIMAL
+        kwargs["sep"] = p["flat_file_delimiter"].replace("tab", "\t")
+
+    # read file
     try:
-        # create dictionary of keyword arguments
-        kwargs = dict()
-
-        # ensure that string-location field values will be read as strings
-        if "from_field_values" in p["string_locations"]:
-            if p["all_rows"] == "data":
-                dtype = str
-            else:
-                dtype = {c: str for c in p["string_field_names"]}
-            kwargs["dtype"] = dtype
-
-        if p["file_type"] in ["excel", "flat_text"]:
-            # designate header rows (for both count columns or string-location info/columns)
-            header_rows = set()
-            # if count_locations are by field name, need count_field_name_row
-            if p["count_locations"] == "by_field_name":
-                header_rows.update({p["count_field_name_row"]})
-            # if any string locations are from field values AND field names are in the table, need string_field_name_row
-            if (p["all_rows"] is None) and "from_field_values" in p["string_locations"]:
-                header_rows.update({p["string_field_name_row"]})
-            # if any string locations are in count headers need count_header_row_numbers
-            if "in_count_headers" in p["string_locations"]:
-                header_rows.update(p["count_header_row_numbers"])
-            if header_rows:
-                # if multi-index
-                if len(header_rows) > 1:
-                    kwargs["header"] = sorted(header_rows)
-                else:
-                    kwargs["header"] = header_rows.pop()
-
-            # designate rows to skip
-            if p["rows_to_skip"]:
-                kwargs["skiprows"] = range(p["rows_to_skip"])
-
-        # other parameters
-        kwargs["index_col"] = False
-        if p["thousands_separator"]:
-            kwargs["thousands"] = p["thousands_separator"]
-        if p["file_type"] in ["flat_file"]:
-            if p["encoding"] is None:
-                kwargs["encoding"] = p["encoding"]
-            else:
-                kwargs["encoding"] = e.default_encoding
-
-
-
-        # read file
         if p["file_type"] == "excel":
-            if p["sheets_to_read_names"] or p["sheets_to_read_numbers"]:
-                kwargs["sheet_name"] = p["sheets_to_read_numbers"] + p["sheets_to_read_names"]
-            else:
-                kwargs["sheet_name"] = None
             df_dict = pd.read_excel(f_path, **kwargs)
         elif p["file_type"] == "flat_text":
-            kwargs["quoting"] = csv.QUOTE_MINIMAL
-            kwargs["sep"] = p["flat_file_delimiter"].replace("tab", "\t")
             df = pd.read_csv(f_path, **kwargs)
             df_dict = {"Sheet1": df}
-        elif p["file_type"] in ["json-nested", "xml"]:
+        elif p["file_type"] in ["json-nested"]:
             pass  # TODO
             df_dict = dict()
             err = add_new_error(
@@ -455,13 +476,13 @@ def read_single_datafile(
     return df_dict, err
 
 
-def add_err_df(err, err_df, munger, f_path):
+def add_err_df(err, err_df, munger_name, f_path):
     # show all columns of dataframe holding rows where counts were set to 0
     pd.set_option("max_columns", None)
     err = add_new_error(
         err,
         "warn-munger",
-        munger,
+        munger_name,
         f"At least one count was set to 0 in certain rows of {Path(f_path).name}:\n{err_df}",
     )
     pd.reset_option("max_columns")
