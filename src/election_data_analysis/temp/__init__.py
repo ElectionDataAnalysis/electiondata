@@ -375,6 +375,8 @@ if __name__ == "__main__":
             "sc_xml",
             "nh_xls_by_county_3_cols_skip_3_lines",
             "tx_json",
+            "va_json",
+            "az_json",
         ],
     )
 
