@@ -1133,3 +1133,27 @@ Candidate	Andrew Yang	Andrew Yang
 Candidate	Jo Jorgensen	Jorgensen, Jo
 Candidate	Art Babbott	Babbott, Art
 CountItemType	total	total
+Candidate	Cano, Andrés	Cano, AndrÃ©s
+Candidate	Gabaldón, Rosanna	GabaldÃ³n, Rosanna
+Candidate	Terán, Raquel	TerÃ¡n, Raquel
+Candidate	Grijalva, Raúl	Grijalva, RaÃºl
+Candidate	Peña M., Tatiana	PeÃ±a M., Tatiana
+Candidate	Quezada, Martín J.	Quezada, MartÃ­n J.
+Candidate	Sifuentes, Seth 'Marcus'	Sifuentes, Seth ""Marcus""
+Candidate	Shope, Thomas 'T.J.'	Shope, Thomas "T.J."
+Candidate	Peten, Geraldine 'Gerae'	Peten, Geraldine "Gerae"
+Candidate	Parks, James 'Jim'	Parks, James "Jim"
+Candidate	O'Connor, James 'Jim'	O'Connor, James "Jim"
+Candidate	Navarrete, Otoniel 'Tony'	Navarrete, Otoniel "Tony"
+Candidate	Mundell, William 'Bill'	Mundell, William "Bill"
+Candidate	Leach, Venden 'Vince'	Leach, Venden "Vince"
+Candidate	Kurdoglu, Ajlan 'A.J.'	Kurdoglu, Ajlan "A.J."
+Candidate	Honne, Mary 'Kathleen'	Honne, Mary "Kathleen"
+Candidate	Friese, Randall 'Randy'	Friese, Randall "Randy"
+Candidate	Epstein, Denise 'Mitzi'	Epstein, Denise "Mitzi"
+Candidate	Dunn, Timothy 'Tim'	Dunn, Timothy "Tim"
+Candidate	Carillo, Gilbert 'Gilbert'	Carillo, Gilbert "Gilbert"
+Candidate	Bowers, Russell W. 'Rusty'	Bowers, Russell W. "Rusty"
+Candidate	Bowers, Kenneth R 'Ken', Jr	Bowers, Kenneth R "Ken", Jr
+Candidate	Blackman, Walter 'Walt'	Blackman, Walter "Walt"
+Candidate	Beach - Moschetti, Kimberly 'Kim'	Beach - Moschetti, Kimberly "Kim"
