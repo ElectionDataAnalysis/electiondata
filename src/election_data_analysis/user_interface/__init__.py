@@ -470,6 +470,11 @@ def read_single_datafile(
         )
         df_dict = dict()
         err = add_new_error(err, "file", f_path, err_str)
+
+    # rename any columns from header-less tables to column_0, column_1, etc.
+    if p["count_column_numbers"]:  # not None and not []
+        for k in df_dict.keys():
+            df_dict[k].columns = [f"column_{j}" for j in range(df_dict[k].shape[1])]
     return df_dict, err
 
 
@@ -521,7 +526,7 @@ def read_combine_results(
     # if results are a flat file or json
     else:
         try:
-            working, new_err = read_single_datafile(mu, results_file_path)
+            working, err = read_single_datafile(results_file_path, p, mu, err)
         except Exception as exc:
             err = add_new_error(
                 err,
@@ -531,10 +536,8 @@ def read_combine_results(
             )
             return pd.DataFrame(), err
 
-        if new_err:
-            err = consolidate_errors([err, new_err])
-            if fatal_error(new_err):
-                return pd.DataFrame(), err
+        if fatal_error(err):
+            return pd.DataFrame(), err
 
         else:
             # if json
@@ -624,77 +627,6 @@ def archive(relative_path: str, current_dir: str, archive_dir: str):
     except Exception as exc:
         print(f"File {relative_path} not moved: {exc}")
     return
-
-
-def load_datafile(
-    session,
-    munger: jm.Munger,
-    raw_path: str,
-    juris: jm.Jurisdiction,
-    results_info: dict,
-    aux_data_path: str = None,
-) -> Optional[dict]:
-    """Guide user through process of uploading data in <raw_file>
-    into common data format.
-    Assumes cdf db exists already"""
-    err = None
-    raw, err = read_combine_results(munger, raw_path, err, aux_data_path=aux_data_path)
-    if fatal_error(err):
-        return err
-    elif raw.empty:
-        err = add_new_error(
-            err,
-            "file",
-            raw_path,
-            f"No data read from file",
-        )
-        return err
-    # ensure that there is at least one count column
-    if not munger.options["count_columns"]:
-        err = add_new_error(
-            err, "munger", munger.name, f"No count_columns specified for munger"
-        )
-        return err
-    else:
-        count_columns_by_name = [
-            raw.columns[x] for x in munger.options["count_columns"] if x < raw.shape[1]
-        ]
-
-    try:
-        new_err = m.raw_elements_to_cdf(
-            session,
-            juris,
-            munger,
-            raw,
-            count_columns_by_name,
-            err,
-            constants=results_info,
-        )
-        if new_err:
-            # append munger name to jurisdiction errors/warnings key
-            keys = [x for x in new_err["warn-jurisdiction"].keys()]
-            for k in keys:
-                new_err["warn-jurisdiction"][f"{k}-{munger.name}"] = new_err[
-                    "warn-jurisdiction"
-                ].pop(k)
-            err = consolidate_errors([err, new_err])
-            if fatal_error(new_err):
-                return err
-    except Exception as exc:
-        err = add_new_error(
-            err,
-            "system",
-            "user_interface.new_datafile",
-            f"Unexpected error during munging: {exc}",
-        )
-        return err
-
-    print(
-        f"\n\tResults uploaded with munger {munger.name} "
-        f"to database {session.bind.engine}\nfrom file {raw_path}\n"
-        f"assuming jurisdiction {juris.path_to_juris_dir}"
-    )
-    return err
 
 
 def get_parameters(

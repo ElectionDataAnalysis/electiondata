@@ -1,121 +1,239 @@
 cdf_element	cdf_internal_name	raw_identifier_value
+CandidateContest	AK Governor	GOVERNOR/LT. GOVERNOR""
 CandidateContest	AK Governor	GOVERNOR/LT. GOVERNOR
+CandidateContest	AK House District 1	HOUSE DISTRICT 1""
 CandidateContest	AK House District 1	HOUSE DISTRICT 1
+CandidateContest	AK House District 10	HOUSE DISTRICT 10""
 CandidateContest	AK House District 10	HOUSE DISTRICT 10
+CandidateContest	AK House District 11	HOUSE DISTRICT 11""
 CandidateContest	AK House District 11	HOUSE DISTRICT 11
+CandidateContest	AK House District 12	HOUSE DISTRICT 12""
 CandidateContest	AK House District 12	HOUSE DISTRICT 12
+CandidateContest	AK House District 13	HOUSE DISTRICT 13""
 CandidateContest	AK House District 13	HOUSE DISTRICT 13
+CandidateContest	AK House District 14	HOUSE DISTRICT 14""
 CandidateContest	AK House District 14	HOUSE DISTRICT 14
+CandidateContest	AK House District 15	HOUSE DISTRICT 15""
 CandidateContest	AK House District 15	HOUSE DISTRICT 15
+CandidateContest	AK House District 16	HOUSE DISTRICT 16""
 CandidateContest	AK House District 16	HOUSE DISTRICT 16
+CandidateContest	AK House District 17	HOUSE DISTRICT 17""
 CandidateContest	AK House District 17	HOUSE DISTRICT 17
+CandidateContest	AK House District 18	HOUSE DISTRICT 18""
 CandidateContest	AK House District 18	HOUSE DISTRICT 18
+CandidateContest	AK House District 19	HOUSE DISTRICT 19""
 CandidateContest	AK House District 19	HOUSE DISTRICT 19
+CandidateContest	AK House District 2	HOUSE DISTRICT 2""
 CandidateContest	AK House District 2	HOUSE DISTRICT 2
+CandidateContest	AK House District 20	HOUSE DISTRICT 20""
 CandidateContest	AK House District 20	HOUSE DISTRICT 20
+CandidateContest	AK House District 21	HOUSE DISTRICT 21""
 CandidateContest	AK House District 21	HOUSE DISTRICT 21
+CandidateContest	AK House District 22	HOUSE DISTRICT 22""
 CandidateContest	AK House District 22	HOUSE DISTRICT 22
+CandidateContest	AK House District 23	HOUSE DISTRICT 23""
 CandidateContest	AK House District 23	HOUSE DISTRICT 23
+CandidateContest	AK House District 24	HOUSE DISTRICT 24""
 CandidateContest	AK House District 24	HOUSE DISTRICT 24
+CandidateContest	AK House District 25	HOUSE DISTRICT 25""
 CandidateContest	AK House District 25	HOUSE DISTRICT 25
+CandidateContest	AK House District 26	HOUSE DISTRICT 26""
 CandidateContest	AK House District 26	HOUSE DISTRICT 26
+CandidateContest	AK House District 27	HOUSE DISTRICT 27""
 CandidateContest	AK House District 27	HOUSE DISTRICT 27
+CandidateContest	AK House District 28	HOUSE DISTRICT 28""
 CandidateContest	AK House District 28	HOUSE DISTRICT 28
+CandidateContest	AK House District 29	HOUSE DISTRICT 29""
 CandidateContest	AK House District 29	HOUSE DISTRICT 29
+CandidateContest	AK House District 3	HOUSE DISTRICT 3""
 CandidateContest	AK House District 3	HOUSE DISTRICT 3
+CandidateContest	AK House District 30	HOUSE DISTRICT 30""
 CandidateContest	AK House District 30	HOUSE DISTRICT 30
+CandidateContest	AK House District 31	HOUSE DISTRICT 31""
 CandidateContest	AK House District 31	HOUSE DISTRICT 31
+CandidateContest	AK House District 32	HOUSE DISTRICT 32""
 CandidateContest	AK House District 32	HOUSE DISTRICT 32
+CandidateContest	AK House District 33	HOUSE DISTRICT 33""
 CandidateContest	AK House District 33	HOUSE DISTRICT 33
+CandidateContest	AK House District 34	HOUSE DISTRICT 34""
 CandidateContest	AK House District 34	HOUSE DISTRICT 34
+CandidateContest	AK House District 35	HOUSE DISTRICT 35""
 CandidateContest	AK House District 35	HOUSE DISTRICT 35
+CandidateContest	AK House District 36	HOUSE DISTRICT 36""
 CandidateContest	AK House District 36	HOUSE DISTRICT 36
+CandidateContest	AK House District 37	HOUSE DISTRICT 37""
 CandidateContest	AK House District 37	HOUSE DISTRICT 37
+CandidateContest	AK House District 38	HOUSE DISTRICT 38""
 CandidateContest	AK House District 38	HOUSE DISTRICT 38
+CandidateContest	AK House District 39	HOUSE DISTRICT 39""
 CandidateContest	AK House District 39	HOUSE DISTRICT 39
+CandidateContest	AK House District 4	HOUSE DISTRICT 4""
 CandidateContest	AK House District 4	HOUSE DISTRICT 4
+CandidateContest	AK House District 40	HOUSE DISTRICT 40""
 CandidateContest	AK House District 40	HOUSE DISTRICT 40
+CandidateContest	AK House District 5	HOUSE DISTRICT 5""
 CandidateContest	AK House District 5	HOUSE DISTRICT 5
+CandidateContest	AK House District 6	HOUSE DISTRICT 6""
 CandidateContest	AK House District 6	HOUSE DISTRICT 6
+CandidateContest	AK House District 7	HOUSE DISTRICT 7""
 CandidateContest	AK House District 7	HOUSE DISTRICT 7
+CandidateContest	AK House District 8	HOUSE DISTRICT 8""
 CandidateContest	AK House District 8	HOUSE DISTRICT 8
+CandidateContest	AK House District 9	HOUSE DISTRICT 9""
 CandidateContest	AK House District 9	HOUSE DISTRICT 9
+CandidateContest	AK Senate District A	SENATE DISTRICT A""
 CandidateContest	AK Senate District A	SENATE DISTRICT A
+CandidateContest	AK Senate District B	SENATE DISTRICT B""
 CandidateContest	AK Senate District B	SENATE DISTRICT B
+CandidateContest	AK Senate District C	SENATE DISTRICT C""
 CandidateContest	AK Senate District C	SENATE DISTRICT C
+CandidateContest	AK Senate District D	SENATE DISTRICT D""
 CandidateContest	AK Senate District D	SENATE DISTRICT D
+CandidateContest	AK Senate District E	SENATE DISTRICT E""
 CandidateContest	AK Senate District E	SENATE DISTRICT E
+CandidateContest	AK Senate District F	SENATE DISTRICT F""
 CandidateContest	AK Senate District F	SENATE DISTRICT F
+CandidateContest	AK Senate District G	SENATE DISTRICT G""
 CandidateContest	AK Senate District G	SENATE DISTRICT G
+CandidateContest	AK Senate District H	SENATE DISTRICT H""
 CandidateContest	AK Senate District H	SENATE DISTRICT H
+CandidateContest	AK Senate District I	SENATE DISTRICT I""
 CandidateContest	AK Senate District I	SENATE DISTRICT I
+CandidateContest	AK Senate District J	SENATE DISTRICT J""
 CandidateContest	AK Senate District J	SENATE DISTRICT J
+CandidateContest	AK Senate District K	SENATE DISTRICT K""
 CandidateContest	AK Senate District K	SENATE DISTRICT K
+CandidateContest	AK Senate District L	SENATE DISTRICT L""
 CandidateContest	AK Senate District L	SENATE DISTRICT L
+CandidateContest	AK Senate District M	SENATE DISTRICT M""
 CandidateContest	AK Senate District M	SENATE DISTRICT M
+CandidateContest	AK Senate District N	SENATE DISTRICT N""
 CandidateContest	AK Senate District N	SENATE DISTRICT N
+CandidateContest	AK Senate District O	SENATE DISTRICT O""
 CandidateContest	AK Senate District O	SENATE DISTRICT O
+CandidateContest	AK Senate District P	SENATE DISTRICT P""
 CandidateContest	AK Senate District P	SENATE DISTRICT P
+CandidateContest	AK Senate District Q	SENATE DISTRICT Q""
 CandidateContest	AK Senate District Q	SENATE DISTRICT Q
+CandidateContest	AK Senate District R	SENATE DISTRICT R""
 CandidateContest	AK Senate District R	SENATE DISTRICT R
+CandidateContest	AK Senate District S	SENATE DISTRICT S""
 CandidateContest	AK Senate District S	SENATE DISTRICT S
+CandidateContest	AK Senate District T	SENATE DISTRICT T""
 CandidateContest	AK Senate District T	SENATE DISTRICT T
+CandidateContest	US President (AK)	US PRESIDENT""
 CandidateContest	US President (AK)	US PRESIDENT
+CandidateContest	US House AK District 1	US REPRESENTATIVE""
 CandidateContest	US House AK District 1	US REPRESENTATIVE
+CandidateContest	US Senate AK	US SENATOR""
 CandidateContest	US Senate AK	US SENATOR
+CandidateContest	US Senate AK	U.S. Senator""
 CandidateContest	US Senate AK	U.S. Senator''
+CandidateContest	US House AK District 1	U.S. Representative""
 CandidateContest	US House AK District 1	U.S. Representative''
+CandidateContest	US President (AK)	U.S. President / Vice President""
 CandidateContest	US President (AK)	U.S. President / Vice President''
+CandidateContest	AK Senate District T	Senate District T""
 CandidateContest	AK Senate District T	Senate District T''
+CandidateContest	AK Senate District R	Senate District R""
 CandidateContest	AK Senate District R	Senate District R''
+CandidateContest	AK Senate District P	Senate District P""
 CandidateContest	AK Senate District P	Senate District P''
+CandidateContest	AK Senate District N	Senate District N""
 CandidateContest	AK Senate District N	Senate District N''
+CandidateContest	AK Senate District M	Senate District M""
 CandidateContest	AK Senate District M	Senate District M''
+CandidateContest	AK Senate District L	Senate District L""
 CandidateContest	AK Senate District L	Senate District L''
+CandidateContest	AK Senate District J	Senate District J""
 CandidateContest	AK Senate District J	Senate District J''
+CandidateContest	AK Senate District H	Senate District H""
 CandidateContest	AK Senate District H	Senate District H''
+CandidateContest	AK Senate District F	Senate District F""
 CandidateContest	AK Senate District F	Senate District F''
+CandidateContest	AK Senate District D	Senate District D""
 CandidateContest	AK Senate District D	Senate District D''
+CandidateContest	AK Senate District B	Senate District B""
 CandidateContest	AK Senate District B	Senate District B''
+CandidateContest	AK House District 9	House District 9""
 CandidateContest	AK House District 9	House District 9''
+CandidateContest	AK House District 8	House District 8""
 CandidateContest	AK House District 8	House District 8''
+CandidateContest	AK House District 7	House District 7""
 CandidateContest	AK House District 7	House District 7''
+CandidateContest	AK House District 6	House District 6""
 CandidateContest	AK House District 6	House District 6''
+CandidateContest	AK House District 5	House District 5""
 CandidateContest	AK House District 5	House District 5''
+CandidateContest	AK House District 40	House District 40""
 CandidateContest	AK House District 40	House District 40''
+CandidateContest	AK House District 4	House District 4""
 CandidateContest	AK House District 4	House District 4''
+CandidateContest	AK House District 39	House District 39""
 CandidateContest	AK House District 39	House District 39''
+CandidateContest	AK House District 38	House District 38""
 CandidateContest	AK House District 38	House District 38''
+CandidateContest	AK House District 37	House District 37""
 CandidateContest	AK House District 37	House District 37''
+CandidateContest	AK House District 36	House District 36""
 CandidateContest	AK House District 36	House District 36''
+CandidateContest	AK House District 35	House District 35""
 CandidateContest	AK House District 35	House District 35''
+CandidateContest	AK House District 34	House District 34""
 CandidateContest	AK House District 34	House District 34''
+CandidateContest	AK House District 33	House District 33""
 CandidateContest	AK House District 33	House District 33''
+CandidateContest	AK House District 32	House District 32""
 CandidateContest	AK House District 32	House District 32''
+CandidateContest	AK House District 31	House District 31""
 CandidateContest	AK House District 31	House District 31''
+CandidateContest	AK House District 30	House District 30""
 CandidateContest	AK House District 30	House District 30''
+CandidateContest	AK House District 3	House District 3""
 CandidateContest	AK House District 3	House District 3''
+CandidateContest	AK House District 29	House District 29""
 CandidateContest	AK House District 29	House District 29''
+CandidateContest	AK House District 28	House District 28""
 CandidateContest	AK House District 28	House District 28''
+CandidateContest	AK House District 27	House District 27""
 CandidateContest	AK House District 27	House District 27''
+CandidateContest	AK House District 26	House District 26""
 CandidateContest	AK House District 26	House District 26''
+CandidateContest	AK House District 25	House District 25""
 CandidateContest	AK House District 25	House District 25''
+CandidateContest	AK House District 24	House District 24""
 CandidateContest	AK House District 24	House District 24''
+CandidateContest	AK House District 23	House District 23""
 CandidateContest	AK House District 23	House District 23''
+CandidateContest	AK House District 22	House District 22""
 CandidateContest	AK House District 22	House District 22''
+CandidateContest	AK House District 21	House District 21""
 CandidateContest	AK House District 21	House District 21''
+CandidateContest	AK House District 20	House District 20""
 CandidateContest	AK House District 20	House District 20''
+CandidateContest	AK House District 2	House District 2""
 CandidateContest	AK House District 2	House District 2''
+CandidateContest	AK House District 19	House District 19""
 CandidateContest	AK House District 19	House District 19''
+CandidateContest	AK House District 18	House District 18""
 CandidateContest	AK House District 18	House District 18''
+CandidateContest	AK House District 17	House District 17""
 CandidateContest	AK House District 17	House District 17''
+CandidateContest	AK House District 16	House District 16""
 CandidateContest	AK House District 16	House District 16''
+CandidateContest	AK House District 15	House District 15""
 CandidateContest	AK House District 15	House District 15''
+CandidateContest	AK House District 14	House District 14""
 CandidateContest	AK House District 14	House District 14''
+CandidateContest	AK House District 13	House District 13""
 CandidateContest	AK House District 13	House District 13''
+CandidateContest	AK House District 12	House District 12""
 CandidateContest	AK House District 12	House District 12''
+CandidateContest	AK House District 11	House District 11""
 CandidateContest	AK House District 11	House District 11''
+CandidateContest	AK House District 10	House District 10""
 CandidateContest	AK House District 10	House District 10''
+CandidateContest	AK House District 1	House District 1""
 CandidateContest	AK House District 1	House District 1''
 
 Election	2020 General	2020 General
@@ -997,6 +1115,7 @@ Candidate	Verrall, Bert	Verrall, Bert
 Candidate	Von Imhof, Natasha A	Von Imhof, Natasha A
 Candidate	Von Imhof, Natasha A.	Von Imhof  Natasha A. - R
 Candidate	Von Imhof, Natasha A.	von Imhof Natasha A.''
+Candidate	Von Imhof, Natasha A.	von Imhof Natasha A.""
 Candidate	Walker, David G.	Walker  David G. - R
 Candidate	Walker	Walker
 Candidate	Watkins, Brent L.	Watkins, Brent L.
@@ -1148,3 +1267,116 @@ Candidate	Write-in 30	Write-in 30
 Candidate	Write-in 20	Write-in 20
 Candidate	Muñoz, Cathy	Muñoz, Cathy
 Candidate	Muñoz, Cathy	MuÃ±oz, Cathy
+Candidate	von Imhof Natasha A.	von Imhof Natasha A.""
+Candidate	Zulkosky Tiffany	Zulkosky Tiffany""
+Candidate	Young Don	Young Don""
+Candidate	Youmans Jeremiah A.	Youmans Jeremiah A.""
+Candidate	Wool Adam L.	Wool Adam L.""
+Candidate	Wilson David S.	Wilson David S.""
+Candidate	Wielechowski Bill	Wielechowski Bill""
+Candidate	Verhagen Elijah M.	Verhagen Elijah M.""
+Candidate	Vance Sarah L.	Vance Sarah L.""
+Candidate	Tuck Chris S.	Tuck Chris S.""
+Candidate	Donald J. Trump	Trump Donald J. / Pence Michael R.""
+Candidate	Trimble Stephen T.	Trimble Stephen T.""
+Candidate	Tilton Cathy L.	Tilton Cathy L.""
+Candidate	Thompson Steve M.	Thompson Steve M.""
+Candidate	Tarr Geran	Tarr Geran""
+Candidate	Sullivan Dan	Sullivan Dan""
+Candidate	Stutes Louise B.	Stutes Louise B.""
+Candidate	Story Andrea 'Andi'	Story Andrea "Andi"""
+Candidate	Stevens Gary	Stevens Gary""
+Candidate	Stein-Olson Monica L.	Stein-Olson Monica L.""
+Candidate	Stedman Bert K.	Stedman Bert K.""
+Candidate	Spohnholz Ivy A.	Spohnholz Ivy A.""
+Candidate	Snyder Liz	Snyder Liz""
+Candidate	Skaflestad Kenny	Skaflestad Kenny""
+Candidate	Shaw Laddie H.	Shaw Laddie H.""
+Candidate	Schrage Calvin R.	Schrage Calvin R.""
+Candidate	Sanford Marna L.	Sanford Marna L.""
+Candidate	Risinger Michael W. 'Mike'	Risinger Michael W. "Mike"""
+Candidate	Riley Deborah W.	Riley Deborah W.""
+Candidate	Revak Joshua C.	Revak Joshua C.""
+Candidate	Rauscher George	Rauscher George""
+Candidate	Rasmussen Sara E.	Rasmussen Sara E.""
+Candidate	Quist Christopher	Quist Christopher""
+Candidate	Pruitt Lance D.	Pruitt Lance D.""
+Candidate	Prax Glenn M. 'Mike'	Prax Glenn M. "Mike"""
+Candidate	Pierce Brock	Pierce Brock / Ballard Karla""
+Candidate	Patkotak Josiah 'Aullaqsruaq'	Patkotak Josiah "Aullaqsruaq"""
+Candidate	Ortiz Daniel H. 'Dan'	Ortiz Daniel H. "Dan"""
+Candidate	Olson Donald C. 'Donny'	Olson Donald C. "Donny"""
+Candidate	Nelson David	Nelson David""
+Candidate	Nees David W.	Nees David W.""
+Candidate	Myers Robert H. Jr.	Myers Robert H. Jr.""
+Candidate	Merrick Kelly R.	Merrick Kelly R.""
+Candidate	McKinley Kevin M.	McKinley Kevin M.""
+Candidate	McKay Thomas W. 'Tom'	McKay Thomas W. "Tom"""
+Candidate	McCarty Ken	McCarty Ken""
+Candidate	McCabe Kevin J.	McCabe Kevin J.""
+Candidate	Mayfield James D. 'Dan'	Mayfield James D. "Dan"""
+Candidate	Madden Greg	Madden Greg""
+Candidate	Levi Sue	Levi Sue""
+Candidate	Lebon Barton S. 'Bart'	Lebon Barton S. "Bart"""
+Candidate	Largent Lynette A.	Largent Lynette A.""
+Candidate	Lamb Thomas	Lamb Thomas""
+Candidate	LaFrance Suzanne M.	LaFrance Suzanne M.""
+Candidate	Kurka Christopher	Kurka Christopher""
+Candidate	Kurber Keith	Kurber Keith""
+Candidate	Kreiss-Tomkins Jonathan S.	Kreiss-Tomkins Jonathan S.""
+Candidate	Kohlhaas Scott A.	Kohlhaas Scott A.""
+Candidate	King Edward M. 'Ed'	King Edward M. "Ed"""
+Candidate	Keppel Willy	Keppel Willy""
+Candidate	Kaufman James D.	Kaufman James D.""
+Candidate	Josephson Andrew L. 'Andy'	Josephson Andrew L. "Andy"""
+Candidate	Jo Jorgensen	Jorgensen Jo / Cohen Jeremy "Spike"""
+Candidate	Johnson DeLena	Johnson DeLena""
+Candidate	Johnson Carl	Johnson Carl""
+Candidate	Johnson Bill	Johnson Bill""
+Candidate	Janos James G. 'Jesse Ventura'	Janos James G. "Jesse Ventura" / McKinney Cynthia""
+Candidate	Huit Timothy R.	Huit Timothy R.""
+Candidate	Hughes Shelley	Hughes Shelley""
+Candidate	Howe John Wayne	Howe John Wayne""
+Candidate	Hopkins Grier H.	Hopkins Grier H.""
+Candidate	Holmes Dan	Holmes Dan""
+Candidate	Holleman Andy	Holleman Andy""
+Candidate	Holland Roger	Holland Roger""
+Candidate	Hnilicka Julia A.	Hnilicka Julia A.""
+Candidate	Henslee Katherine J. 'Kathy'	Henslee Katherine J. "Kathy"""
+Candidate	Hartley Alma N.	Hartley Alma N.""
+Candidate	Hannan Sara	Hannan Sara""
+Candidate	Hackbarth Andrea L.	Hackbarth Andrea L.""
+Candidate	Gross Al	Gross Al""
+Candidate	Gillis Mel	Gillis Mel""
+Candidate	Gillham Ronald D. 'Ron'	Gillham Ronald D. "Ron"""
+Candidate	Galvin Alyse S.	Galvin Alyse S.""
+Candidate	Gaiser Madeleine	Gaiser Madeleine""
+Candidate	Franks Lyn D.	Franks Lyn D.""
+Candidate	Foster Neal W.	Foster Neal W.""
+Candidate	Fletcher Benjamin R.	Fletcher Benjamin R.""
+Candidate	Fields William Z. 'Zack'	Fields William Z. "Zack"""
+Candidate	Ferguson Elizabeth	Ferguson Elizabeth""
+Candidate	Edgmon Bryce	Edgmon Bryce""
+Candidate	Eastman David	Eastman David""
+Candidate	Eads Evan A.	Eads Evan A.""
+Candidate	Drummond Harriet A.	Drummond Harriet A.""
+Candidate	Roque 'Rocky' De La Fuente	De La Fuente Rocque "Rocky" / Richardson Darcy G.""
+Candidate	Dale Paul D.	Dale Paul D.""
+Candidate	Cronk Mike	Cronk Mike""
+Candidate	Cooper Kelly	Cooper Kelly""
+Candidate	Cooper Jim	Cooper Jim""
+Candidate	Clift Carolyn C. 'Care'	Clift Carolyn C. "Care"""
+Candidate	Claman Matt	Claman Matt""
+Candidate	Christiansen Gavin S.	Christiansen Gavin S.""
+Candidate	Carpenter Benjamin E.	Carpenter Benjamin E.""
+Candidate	Carlson Vernon J.	Carlson Vernon J.""
+Candidate	Canitz James A. Sr.	Canitz James A. Sr.""
+Candidate	Cacy Roselynn	Cacy Roselynn""
+Candidate	Burton Jamin L.	Burton Jamin L.""
+Candidate	Blankenship Don	Blankenship Don / Mohr William""
+Candidate	Joseph R. Biden	Biden Joseph R. Jr. / Harris Kamala D.""
+Candidate	Begich Tom	Begich Tom""
+Candidate	Becker Leslie	Becker Leslie""
+Candidate	Bauer Paul A.	Bauer Paul A.""
+Candidate	Baker Thomas C.	Baker Thomas C.""
+Candidate	Baisden James	Baisden James""
