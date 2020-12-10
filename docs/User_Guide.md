@@ -19,8 +19,13 @@ Ensure that the munger files are appropriate for your results file(s).
  (2) Copy the templates from `templates/munger_templates` to your munger directory. Every munger must have a value for `file_type`; depending your `file_type` other parameters may be required. Types currently supported are:
  
  #### NEW VERSION:
- There are three main required parameters: `file_type`, `count_locations` and `string_locations`. Depending on the values of these, there are other required and optional fields.
- `file_type`: controls which pandas function reads the file contents
+ The file with munger parameters, which must have the extension `.munger`, has one or more sections, each with a header:
+  * (required) `[format]` for the main parameters
+  * (may be required) one section each string locations `from_field_values` and `in_count_headers` if these are listed in the `string_locations` parameter (defined below). 
+  * (may be required) one section for each element in the `lookups` list. E.g., if `lookups=Candidate,Party` then there must be  `[Candidate lookup]` and `[Party lookup]` sections
+ 
+ There are three main required parameters: `file_type`, `count_locations` and `string_locations`. Depending on the values of these, there are other required and optional fields. 
+ `file_type`: controls which pandas function reads the file contents. Related optional and required parameters must be given under the `[file_type]` header.
   * 'excel'
     * (optional) a list `sheets_to_read_names` (and/or `sheets_to_read_numbers`) of spreadsheets to read, 
     * (optional) a list `sheets_to_skip` of names of spreadsheets to skip
@@ -31,14 +36,14 @@ Ensure that the munger files are appropriate for your results file(s).
     * (required) a field delimiter `flat_file_delimiter` to be specified (usually `flat_file_delimiter=,` for csv or `flat_file_delimiter=tab` for .txt)
   * [[ will be obsolete: `concatenated-blocks` Clarity format derived from xml]]
   
-  `count_locations`: controls how the system looks for counts
+  `count_locations`: controls how the system looks for counts. Related optional and required parameters must be given under the `[count_locations]` header.
   * 'by_field_name' (NB: as of 12/2020, for this case system can handle only files with only one field-name row for the count fields. If there are multiple header rows for the count columns, use the 'by_column_number' option.)
     * (required) list `count_fields_by_name` of names of fields containing counts. 
     * (required for 'excel' and 'flat_text' file_types) specify location of field names for count columns. with integer `count_field_name_row` (NB: top row not skipped is 0, next row is 1, etc.)
   * 'by_column_number'
     * (required) list `count_column_numbers` of column numbers containing counts. 
     
-  `string_locations`: controls how the system looks for the character strings used to munge the non-count information (Candidate, Party, etc.). There may be multiple, so the value is a list 
+  `string_locations`: controls how the system looks for the character strings used to munge the non-count information (Candidate, Party, etc.). There may be multiple, so the value is a list. Related optional and required parameters must be given under the `[string_locations]` header.
   * 'from_field_values'
     * (required) either:
       * if all_rows=data (i.e., no field names) list `string_field_column_numbers` of integers designating columns (leftmost column is 0, next is 1, etc.)
@@ -51,23 +56,25 @@ Ensure that the munger files are appropriate for your results file(s).
   * 'constant_over_sheet'
     * The system can extract strings from sheet names in Excel (designated as <sheet_name>) and/or from entire rows of a spreadsheet (designated as <row_3>, e.g.)
   
-   Available if appropriate for any file type:
+   Available if appropriate for any file type, under the `[format]` header:
    * (optional) `thousands_separator`. In the US the separator is almost always ',' if it is used. Watch out for Excel files which may show a comma when you look at them in Excel -- there may not be a comma in the underlying data.
    * (optional) `encoding` (If not specified or recognized, `iso-8859-1` will be used. Recognized encodings are limited [python's list of recognized encodings and aliases](https://docs.python.org/3/library/codecs.html#standard-encodings).)
-   * 'auxiliary_data' Sometimes character strings are in a separate file, e.g., if the data was exported as separate tables from a relational database. Note: in this case the foreign keys in the file with the counts should be treated as character strings -- i.e., the `string_locations` parameter and its associated parameters should be set as if the foreign keys were the strings of interest.
-      * (required) A path `auxiliary_data_directory` indicating the directory where the file(s) with the auxiliary information can be found. 
+   * (optional) `lookups` Sometimes the election agency provides counts by ids for, say, candidates, and also provides definitions for those ids. For example, the data may be in the NIST common data format, or it may have been exported as separate tables from a relational database. The value of `lookups` is a comma-separated list of elements (e.g., 'Candidate') that need to be looked up elsewhere. For each element in the list, there must be a corresponding section in the `*.munger` file. Parameters in this section may be any of the 
+   For example:
+```
+[Candidate lookup]
+source_file=2018GEN/2018name.txt
+file_type=flat_file
+
+flat_file_delimiter=tab
+id_col_number=5
+Candidate=<column_7> <column_8> <column_6>
+```
+
 
    Available for flat_text and excel file types:
    * (optional) `rows_to_skip` An integer giving the number of rows to skip at the top to get to the table of counts. This parameter will affect integers designating header rows -- '<header_0>' is the first row not skipped. However, this parameter will *not* affect integers designating rows (e.g., for finding information constant over sheets), which are designated, e.g., '<row_3>'.
    * (optional) `all_rows` If the file has no column headers but only data rows with counts, set this parameter to 'data'
-
-Finally, if the election agency provides counts by ids for, say, counties or candidates, and also provides definitions for those ids, information about how to look up values (e.g., BallotName) by id. In this case, each item requiring lookups gets a section in the .munger file. For example:
-```
-[BallotName lookup]
-source_file=2018GEN/2018name.txt
-id_col_number=5
-BallotName=<column_7> <column_8> <column_6>
-```
  
  #### OLD VERSION:
  file_type:

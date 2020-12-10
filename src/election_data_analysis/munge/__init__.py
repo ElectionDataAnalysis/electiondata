@@ -1602,7 +1602,9 @@ def get_and_check_munger_params(munger_path: str) -> (dict, Optional[dict]):
                     munger_name,
                     f"{k0} is in list of string locations, but {v2} not found"
                 )
-    # TODO check formats (e.g., formulas for constant_over_sheet use only <sheet_name> and <row_{i}>
+    # TODO check formats (e.g., formulas for constant_over_sheet use only <sheet_name> and <row_{i}>)
+    # TODO check that required headers are present (see User_Guide) per string_locations list
+    # TODO check that required headers are present (see User_Guide) per lookups list
     return format_options, err
 
 
