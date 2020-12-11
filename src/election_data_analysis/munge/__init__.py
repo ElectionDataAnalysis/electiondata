@@ -278,7 +278,7 @@ def add_regex_column(
         # replace via regex if possible; otherwise msg
         # # put informative error message in new_col
         old = working[old_col].copy()
-        working[new_col] = working[old_col].str.cat(old, f" <- did not match regex {pattern_str}")
+        working[new_col] = working[old_col].str.cat(old, f"Does not match regex {pattern_str}: ")
         # # where regex succeeds, replace error message with good value
         mask = working[old_col].str.match(p)
         working.loc[mask, new_col] = working[mask][old_col].str.replace(p, "\\1")

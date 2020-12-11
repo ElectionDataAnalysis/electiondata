@@ -377,6 +377,9 @@ if __name__ == "__main__":
             "tx_json",
             "va_json",
             "az_json",
+            "ak_gen20",
+            "ak_gen_fwab20",
+            "ak_gen_votetypes20",
         ],
     )
 
