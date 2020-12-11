@@ -395,3 +395,4 @@ Write-in 40
 Write-in 30
 Write-in 20
 Muñoz, Cathy
+Roque 'Rocky' De La Fuente
