@@ -1,8 +1,0 @@
-name	raw_identifier_formula	source
-ReportingUnit	<first_column>	row
-Party	DEM	row
-CandidateContest	{<header_0>,^(.*)\s+\(.*\)$} (DEM)	row
-Candidate	<header_1>	row
-BallotMeasureContest	{<header_0>,^(.*)\s+\(.*\)$}	row
-BallotMeasureSelection	<header_1>	row
-CountItemType	<header_2>	row

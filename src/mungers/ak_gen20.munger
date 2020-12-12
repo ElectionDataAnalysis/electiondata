@@ -9,10 +9,10 @@ count_column_numbers=7
 all_rows=data
 
 [from_field_values]
-ReportingUnit=<column_0>
-Party=<column_3>
-CandidateContest=<column_1>
-Candidate=<column_4>
-BallotMeasureContest=<column_1>
-BallotMeasureSelection=<column_4>
+ReportingUnit=<District>
+Party=<Party>
+CandidateContest=<Contest Name>
+Candidate=<Candidate Name>
+BallotMeasureContest=<Contest Name>
+BallotMeasureSelection=<Candidate Name>
 CountItemType=election-day

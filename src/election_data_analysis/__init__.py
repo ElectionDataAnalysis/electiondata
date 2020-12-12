@@ -167,8 +167,8 @@ class DataLoader:
         # specify directories for archiving and reporting warnings
         success_dir = os.path.join(self.d["archive_dir"], db_param["dbname"])
         loc_dict = {
-            "munger": self.d["results_dir"],
-            "jurisdiction": self.d["results_dir"],
+            "munger": success_dir,
+            "jurisdiction": success_dir,
             "warn-munger": success_dir,
             "warn-jurisdiction": success_dir,
         }

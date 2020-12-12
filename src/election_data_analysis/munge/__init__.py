@@ -136,8 +136,15 @@ def clean_strings(
 ) -> pd.DataFrame():
 
     working = df.copy()
+
     for c in cols:
-        if c in working.columns:
+        # cast all specified columns as strings
+        try:
+            working[c] = working[c].astype("string")
+        except Exception as exc:
+            print(f"Could not convert column {c} to strings")
+
+        if c in cols:
             # change nulls to the empty string
             working[c] = working[c].fillna("")
             # replace any double quotes with single quotes
@@ -150,7 +157,7 @@ def clean_strings(
             try:
                 # strip extraneous whitespace from any value recognized as string
                 mask = working[c].apply(lambda x: isinstance(x,str))
-                working.loc[mask,c] = working[c][mask].apply(compress_whitespace)
+                working.loc[mask, c] = working[c][mask].apply(compress_whitespace)
             except (AttributeError, TypeError):
                 pass
     return working
@@ -1741,8 +1748,17 @@ def to_standard_count_frame(f_path: str, munger_path: str, p, constants) -> (pd.
                 return pd.DataFrame(), err
 
         # keep only necessary columns
-        necessary = [item for sublist in munge_field_lists.values() for item in sublist] + ["Count"]
-        standard[k] = standard[k][necessary]
+        try:
+            necessary = [item for sublist in munge_field_lists.values() for item in sublist] + ["Count"]
+            standard[k] = standard[k][necessary]
+        except KeyError as ke:
+            err = ui.add_new_error(
+                err,
+                "munger",
+                munger_name,
+                f"Field in munge formulas not found in file column headers read from file: {ke}",
+            )
+            return pd.DataFrame(), err
 
         # clean Count column
         standard[k], bad_rows = clean_count_cols(standard[k], ["Count"], p["thousands_separator"])
@@ -1751,8 +1767,9 @@ def to_standard_count_frame(f_path: str, munger_path: str, p, constants) -> (pd.
 
     df = pd.concat(standard.values())
 
+    # clean non-count columns
     non_count = [c for c in df.columns if c != "Count"]
-    df[non_count] = df[non_count].astype("string")
+    df = clean_strings(df, non_count)
 
     return df, err
 
