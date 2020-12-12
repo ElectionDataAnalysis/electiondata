@@ -3075,7 +3075,10 @@ Party	Democratic Party	Democratic
 Party	Republican Party	Republican
 Party	Libertarian Party	Libertarian
 Party	Green Party	Green
+Party	LMN	LMN
 Party	Independent Party	Independent
+Party	Independent Party	IND
+Party	CWP	CWP
 ReportingUnit	Iowa;IA House District 1	Iowa;IA House District 1
 ReportingUnit	Iowa;IA House District 2	Iowa;IA House District 2
 ReportingUnit	Iowa;IA House District 3	Iowa;IA House District 3
