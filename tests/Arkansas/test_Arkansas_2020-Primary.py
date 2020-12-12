@@ -14,7 +14,7 @@ abbr = 'AR'
 
 party1 = "Democratic Party"
 party2 = "Republican Party"
-pres_total_party1 = 229122  # total of all votes for President in that party
+pres_total_party1 = 229120  # total of all votes for President in that party.
 cd = 3  # congressional district
 total_cd_votes_party2 = -1  # total votes for Congressional rep in the chosen cd and party
 shd = 34   # state house district
