@@ -5574,6 +5574,9 @@ Party	Green Party	GRN
 Party	Libertarian Party	Libertarian Party
 Party	Libertarian Party	LIB
 Party	Working Families Party	Working Families Party
+Party	Working Families Party	WFM
+Party	UNC	UNC
+Party	AMR	AMR
 Party	no party	NON
 ReportingUnit	South Carolina;SC House District 1	South Carolina;SC House District 1
 ReportingUnit	South Carolina;SC House District 2	South Carolina;SC House District 2

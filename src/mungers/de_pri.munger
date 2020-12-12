@@ -1,6 +1,6 @@
 [format]
 count_locations=by_field_name
-string_locations=from_field_values,in_count_headers
+string_locations=in_count_headers,from_field_values
 
 count_fields_by_name=Machine Votes,Absentee Votes,Total Votes
 
