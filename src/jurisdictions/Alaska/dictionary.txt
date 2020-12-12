@@ -1380,3 +1380,6 @@ Candidate	Becker Leslie	Becker Leslie""
 Candidate	Bauer Paul A.	Bauer Paul A.""
 Candidate	Baker Thomas C.	Baker Thomas C.""
 Candidate	Baisden James	Baisden James""
+Candidate	César J Blanco	CÃSAR J BLANCO
+
+
