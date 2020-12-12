@@ -79,7 +79,7 @@ def test_presidential(dbname):
     )
 
 
-def test_state_house_totals(dbname):
+def test_us_house_totals(dbname):
     assert (
         e.contest_total(
             election,
