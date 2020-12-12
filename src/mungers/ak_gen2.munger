@@ -9,8 +9,8 @@ count_column_numbers=5
 all_rows=data
 
 [from_field_values]
-ReportingUnit={<column_0>,^(?:(.*?) - (?:Absentee|Early Voting|Question))+(?:| - [0-9])$}
-CountItemType={<column_0>,^.*(Absentee|Early Voting|Question).*$}
-Party=<column_3>
-CandidateContest=<column_1>
-Candidate=<column_4>
+ReportingUnit={<District>,^(?:(.*?) - (?:Absentee|Early Voting|Question))+(?:| - [0-9])$}
+CountItemType={<District>,^.*(Absentee|Early Voting|Question).*$}
+Party=<Party>
+CandidateContest=<Contest Name>
+Candidate=<Candidate Name>

@@ -9,8 +9,8 @@ count_column_numbers=5
 all_rows=data
 
 [from_field_values]
-ReportingUnit={<column_0>,^(.*)\s+Fed Overseas Absentee$}
-Party=<column_3>
-CandidateContest=<column_1>
-Candidate=<column_4>
-CountItemType={<column_0>,^HD99\s+(Fed Overseas Absentee)$}
+ReportingUnit={<District>,^(.*)\s+Fed Overseas Absentee$}
+Party=<Party>
+CandidateContest=<Contest Name>
+Candidate=<Candidate Name>
+CountItemType={<District>,^HD99\s+(Fed Overseas Absentee)$}

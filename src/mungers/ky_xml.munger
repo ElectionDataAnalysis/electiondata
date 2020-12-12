@@ -1,7 +1,7 @@
 [format]
 file_type=xml
 count_locations=by_field_name
-string_locations=constant_over_file,from_field_values
+string_locations=from_field_values,constant_over_file
 
 encoding=ASCII
 count_fields_by_name=County.votes

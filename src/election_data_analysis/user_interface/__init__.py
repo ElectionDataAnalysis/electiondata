@@ -423,7 +423,6 @@ def read_single_datafile(
             kwargs["sheet_name"] = p["sheets_to_read_numbers"] + p["sheets_to_read_names"]
         else:
             kwargs["sheet_name"] = None
-            df_dict = pd.read_excel(f_path, **kwargs)
     elif p["file_type"] in ["flat_text"]:
         kwargs = basic_kwargs(p, dict())
         kwargs = tabular_kwargs(p, kwargs)
@@ -472,7 +471,7 @@ def read_single_datafile(
         err = add_new_error(err, "file", f_path, err_str)
 
     # rename any columns from header-less tables to column_0, column_1, etc.
-    if p["count_column_numbers"]:  # not None and not []
+    if p["all_rows"] == 'data':
         for k in df_dict.keys():
             df_dict[k].columns = [f"column_{j}" for j in range(df_dict[k].shape[1])]
     return df_dict, err
