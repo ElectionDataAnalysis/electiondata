@@ -1,7 +1,7 @@
 [format]
 file_type=excel
 count_locations=by_column_number
-string_locations=from_field_values,in_count_headers
+string_locations=in_count_headers,from_field_values
 
 encoding=utf-8
 count_column_numbers=4,6

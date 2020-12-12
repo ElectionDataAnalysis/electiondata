@@ -167,10 +167,10 @@ class DataLoader:
         # specify directories for archiving and reporting warnings
         success_dir = os.path.join(self.d["archive_dir"], db_param["dbname"])
         loc_dict = {
-            "munger": success_dir,
-            "jurisdiction": success_dir,
-            "warn-munger": success_dir,
-            "warn-jurisdiction": success_dir,
+            "munger": self.d["results_dir"],
+            "jurisdiction": self.d["results_dir"],
+            "warn-munger": self.d["results_dir"],
+            "warn-jurisdiction": self.d["results_dir"],
         }
 
         # list .ini files and pull their jurisdiction_paths
@@ -323,8 +323,8 @@ class DataLoader:
         loc_dict = {
             "munger": self.d["results_dir"],
             "jurisdiction": self.d["results_dir"],
-            "warn-munger": success_dir,
-            "warn-jurisdiction": success_dir,
+            "warn-munger": self.d["results_dir"],
+            "warn-jurisdiction": self.d["results_dir"],
         }
         ui.report(err, loc_dict)
         return err, success
