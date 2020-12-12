@@ -2,3 +2,8 @@ Name
 Democratic Party
 Republican Party
 Libertarian Party
+Rep
+NON
+Lib
+IND
+Dem
