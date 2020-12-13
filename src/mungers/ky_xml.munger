@@ -1,14 +1,15 @@
 [format]
 file_type=xml
 count_locations=by_field_name
-string_locations=from_field_values,constant_over_file
+string_locations=from_field_values
 
 encoding=ASCII
 count_fields_by_name=County.votes
-constant_over_file=CountItemType
+
 
 [from_field_values]
 ReportingUnit=<County.name>
 Party=<Choice.party>
 CandidateContest=<Contest.text>
 Candidate=<Choice.text>
+CountItemType=<VoteType.name>

@@ -222,7 +222,8 @@ class DataLoader:
                 juris_directory[f] = params[f]["jurisdiction_directory"]
 
         # group .ini files by jurisdiction_directory name
-        jurisdiction_dirs = {juris_directory[f] for f in good_par_files}
+        jurisdiction_dirs = list({juris_directory[f] for f in good_par_files})
+        jurisdiction_dirs.sort()
 
         # for each jurisdiction, create Jurisdiction or throw error
         good_jurisdictions = list()
