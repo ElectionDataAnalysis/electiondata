@@ -1,4 +1,5 @@
 [format]
+file_type=excel
 count_locations=by_column_number
 string_locations=from_field_values
 

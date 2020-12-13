@@ -10,7 +10,7 @@ all_rows=data
 constant_over_file=CountItemType
 
 [from_field_values]
-ReportingUnit=<County ID>
-Party=<Party Abbreviation>
-CandidateContest=<Office Name> (<Party Abbreviation>)
-Candidate=<Candidate Name>
+ReportingUnit=<column_1>
+Party=<column_10>
+CandidateContest=<column_4> (<column_10>)
+Candidate=<column_7>

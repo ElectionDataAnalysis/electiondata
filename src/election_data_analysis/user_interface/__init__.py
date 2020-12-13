@@ -397,11 +397,11 @@ def basic_kwargs(p: Dict[str, Any], kwargs: Dict[str, Any]) -> Dict[str, Any]:
     kwargs["index_col"] = False
     if p["thousands_separator"]:
         kwargs["thousands"] = p["thousands_separator"]
-    if p["file_type"] in ["flat_file"]:
+    if p["file_type"] in ["flat_text"]:
         if p["encoding"] is None:
-            kwargs["encoding"] = p["encoding"]
-        else:
             kwargs["encoding"] = e.default_encoding
+        else:
+            kwargs["encoding"] = p["encoding"]
 
     return kwargs
 
