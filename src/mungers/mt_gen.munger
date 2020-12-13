@@ -1,13 +1,21 @@
 [format]
 file_type=excel
-string_locations=from_field_values
+string_locations=from_field_values,in_count_headers,constant_over_sheet,constant_over_file
+count_locations=by_column_number
 
 sheets_to_skip=None
 rows_to_skip=6
+count_column_numbers=2,3,4,5,6,7,8,9,10,11,12,13
+string_field_names=County
+string_field_name_row=0
+count_header_row_numbers=0
 
 [from_field_values]
-ReportingUnit=<first_column>
+ReportingUnit=<County>
+
+[in_count_headers]
 Party={<header_0>,^.*\n(.*)$}
-CandidateContest=<constant_column_0>
 Candidate={<header_0>,^(.*)\n.*$}
-CountItemType=total
+
+[constant_over_sheet]
+CandidateContest=<sheet_name>

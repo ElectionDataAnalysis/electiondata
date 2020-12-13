@@ -2202,3 +2202,136 @@ Candidate	DOUG CAMPBELL	DOUG CAMPBELL
 Candidate	DEVIN BRAATEN	DEVIN BRAATEN
 Candidate	CADE STILES	CADE STILES
 Candidate	ANDREW SCHAEFER	ANDREW SCHAEFER
+CandidateContest	MT Senate District 47	SD 47 STATE SENATOR DISTRICT 47
+CandidateContest	MT Senate District 46	SD 46 STATE SENATOR DISTRICT 46
+CandidateContest	MT Senate District 45	SD 45 STATE SENATOR DISTRICT 45
+CandidateContest	MT Senate District 44	SD 44 STATE SENATOR DISTRICT 44
+CandidateContest	MT Senate District 40	SD 40 STATE SENATOR DISTRICT 40
+CandidateContest	MT Senate District 39	SD 39 STATE SENATOR DISTRICT 39
+CandidateContest	MT Senate District 38	SD 38 STATE SENATOR DISTRICT 38
+CandidateContest	MT Senate District 37	SD 37 STATE SENATOR DISTRICT 37
+CandidateContest	MT Senate District 36	SD 36 STATE SENATOR DISTRICT 36
+CandidateContest	MT Senate District 35	SD 35 STATE SENATOR DISTRICT 35
+CandidateContest	MT Senate District 31	SD 31 STATE SENATOR DISTRICT 31
+CandidateContest	MT Senate District 28	SD 28 STATE SENATOR DISTRICT 28
+CandidateContest	MT Senate District 26	SD 26 STATE SENATOR DISTRICT 26
+CandidateContest	MT Senate District 25	SD 25 STATE SENATOR DISTRICT 25
+CandidateContest	MT Senate District 23	SD 23 STATE SENATOR DISTRICT 23
+CandidateContest	MT Senate District 21	SD 21 STATE SENATOR DISTRICT 21
+CandidateContest	MT Senate District 18	SD 18 STATE SENATOR DISTRICT 18
+CandidateContest	MT Senate District 17	SD 17 STATE SENATOR DISTRICT 17
+CandidateContest	MT Senate District 16	SD 16 STATE SENATOR DISTRICT 16
+CandidateContest	MT Senate District 15	SD 15 STATE SENATOR DISTRICT 15
+CandidateContest	MT Senate District 10	SD 10 STATE SENATOR DISTRICT 10
+CandidateContest	MT Senate District 7	SD 07 STATE SENATOR DISTRICT 7
+CandidateContest	MT Senate District 6	SD 06 STATE SENATOR DISTRICT 6
+CandidateContest	MT Senate District 3	SD 03 STATE SENATOR DISTRICT 3
+CandidateContest	MT Senate District 2	SD 02 STATE SENATOR DISTRICT 2
+CandidateContest	MT House District 100	HD 100 STATE REPRESENTATIVE DI
+CandidateContest	MT House District 99	HD 099 STATE REPRESENTATIVE DI
+CandidateContest	MT House District 98	HD 098 STATE REPRESENTATIVE DI
+CandidateContest	MT House District 97	HD 097 STATE REPRESENTATIVE DI
+CandidateContest	MT House District 96	HD 096 STATE REPRESENTATIVE DI
+CandidateContest	MT House District 95	HD 095 STATE REPRESENTATIVE DI
+CandidateContest	MT House District 94	HD 094 STATE REPRESENTATIVE DI
+CandidateContest	MT House District 93	HD 093 STATE REPRESENTATIVE DI
+CandidateContest	MT House District 92	HD 092 STATE REPRESENTATIVE DI
+CandidateContest	MT House District 91	HD 091 STATE REPRESENTATIVE DI
+CandidateContest	MT House District 90	HD 090 STATE REPRESENTATIVE DI
+CandidateContest	MT House District 89	HD 089 STATE REPRESENTATIVE DI
+CandidateContest	MT House District 88	HD 088 STATE REPRESENTATIVE DI
+CandidateContest	MT House District 87	HD 087 STATE REPRESENTATIVE DI
+CandidateContest	MT House District 86	HD 086 STATE REPRESENTATIVE DI
+CandidateContest	MT House District 85	HD 085 STATE REPRESENTATIVE DI
+CandidateContest	MT House District 84	HD 084 STATE REPRESENTATIVE DI
+CandidateContest	MT House District 83	HD 083 STATE REPRESENTATIVE DI
+CandidateContest	MT House District 82	HD 082 STATE REPRESENTATIVE DI
+CandidateContest	MT House District 81	HD 081 STATE REPRESENTATIVE DI
+CandidateContest	MT House District 80	HD 080 STATE REPRESENTATIVE DI
+CandidateContest	MT House District 79	HD 079 STATE REPRESENTATIVE DI
+CandidateContest	MT House District 78	HD 078 STATE REPRESENTATIVE DI
+CandidateContest	MT House District 77	HD 077 STATE REPRESENTATIVE DI
+CandidateContest	MT House District 76	HD 076 STATE REPRESENTATIVE DI
+CandidateContest	MT House District 75	HD 075 STATE REPRESENTATIVE DI
+CandidateContest	MT House District 74	HD 074 STATE REPRESENTATIVE DI
+CandidateContest	MT House District 73	HD 073 STATE REPRESENTATIVE DI
+CandidateContest	MT House District 72	HD 072 STATE REPRESENTATIVE DI
+CandidateContest	MT House District 71	HD 071 STATE REPRESENTATIVE DI
+CandidateContest	MT House District 70	HD 070 STATE REPRESENTATIVE DI
+CandidateContest	MT House District 69	HD 069 STATE REPRESENTATIVE DI
+CandidateContest	MT House District 68	HD 068 STATE REPRESENTATIVE DI
+CandidateContest	MT House District 67	HD 067 STATE REPRESENTATIVE DI
+CandidateContest	MT House District 66	HD 066 STATE REPRESENTATIVE DI
+CandidateContest	MT House District 65	HD 065 STATE REPRESENTATIVE DI
+CandidateContest	MT House District 64	HD 064 STATE REPRESENTATIVE DI
+CandidateContest	MT House District 63	HD 063 STATE REPRESENTATIVE DI
+CandidateContest	MT House District 62	HD 062 STATE REPRESENTATIVE DI
+CandidateContest	MT House District 61	HD 061 STATE REPRESENTATIVE DI
+CandidateContest	MT House District 60	HD 060 STATE REPRESENTATIVE DI
+CandidateContest	MT House District 59	HD 059 STATE REPRESENTATIVE DI
+CandidateContest	MT House District 58	HD 058 STATE REPRESENTATIVE DI
+CandidateContest	MT House District 57	HD 057 STATE REPRESENTATIVE DI
+CandidateContest	MT House District 56	HD 056 STATE REPRESENTATIVE DI
+CandidateContest	MT House District 55	HD 055 STATE REPRESENTATIVE DI
+CandidateContest	MT House District 54	HD 054 STATE REPRESENTATIVE DI
+CandidateContest	MT House District 53	HD 053 STATE REPRESENTATIVE DI
+CandidateContest	MT House District 52	HD 052 STATE REPRESENTATIVE DI
+CandidateContest	MT House District 51	HD 051 STATE REPRESENTATIVE DI
+CandidateContest	MT House District 50	HD 050 STATE REPRESENTATIVE DI
+CandidateContest	MT House District 49	HD 049 STATE REPRESENTATIVE DI
+CandidateContest	MT House District 48	HD 048 STATE REPRESENTATIVE DI
+CandidateContest	MT House District 47	HD 047 STATE REPRESENTATIVE DI
+CandidateContest	MT House District 46	HD 046 STATE REPRESENTATIVE DI
+CandidateContest	MT House District 45	HD 045 STATE REPRESENTATIVE DI
+CandidateContest	MT House District 44	HD 044 STATE REPRESENTATIVE DI
+CandidateContest	MT House District 43	HD 043 STATE REPRESENTATIVE DI
+CandidateContest	MT House District 42	HD 042 STATE REPRESENTATIVE DI
+CandidateContest	MT House District 41	HD 041 STATE REPRESENTATIVE DI
+CandidateContest	MT House District 40	HD 040 STATE REPRESENTATIVE DI
+CandidateContest	MT House District 39	HD 039 STATE REPRESENTATIVE DI
+CandidateContest	MT House District 38	HD 038 STATE REPRESENTATIVE DI
+CandidateContest	MT House District 37	HD 037 STATE REPRESENTATIVE DI
+CandidateContest	MT House District 36	HD 036 STATE REPRESENTATIVE DI
+CandidateContest	MT House District 35	HD 035 STATE REPRESENTATIVE DI
+CandidateContest	MT House District 34	HD 034 STATE REPRESENTATIVE DI
+CandidateContest	MT House District 33	HD 033 STATE REPRESENTATIVE DI
+CandidateContest	MT House District 32	HD 032 STATE REPRESENTATIVE DI
+CandidateContest	MT House District 31	HD 031 STATE REPRESENTATIVE DI
+CandidateContest	MT House District 30	HD 030 STATE REPRESENTATIVE DI
+CandidateContest	MT House District 29	HD 029 STATE REPRESENTATIVE DI
+CandidateContest	MT House District 28	HD 028 STATE REPRESENTATIVE DI
+CandidateContest	MT House District 27	HD 027 STATE REPRESENTATIVE DI
+CandidateContest	MT House District 26	HD 026 STATE REPRESENTATIVE DI
+CandidateContest	MT House District 25	HD 025 STATE REPRESENTATIVE DI
+CandidateContest	MT House District 24	HD 024 STATE REPRESENTATIVE DI
+CandidateContest	MT House District 23	HD 023 STATE REPRESENTATIVE DI
+CandidateContest	MT House District 22	HD 022 STATE REPRESENTATIVE DI
+CandidateContest	MT House District 21	HD 021 STATE REPRESENTATIVE DI
+CandidateContest	MT House District 20	HD 020 STATE REPRESENTATIVE DI
+CandidateContest	MT House District 19	HD 019 STATE REPRESENTATIVE DI
+CandidateContest	MT House District 18	HD 018 STATE REPRESENTATIVE DI
+CandidateContest	MT House District 17	HD 017 STATE REPRESENTATIVE DI
+CandidateContest	MT House District 16	HD 016 STATE REPRESENTATIVE DI
+CandidateContest	MT House District 15	HD 015 STATE REPRESENTATIVE DI
+CandidateContest	MT House District 14	HD 014 STATE REPRESENTATIVE DI
+CandidateContest	MT House District 13	HD 013 STATE REPRESENTATIVE DI
+CandidateContest	MT House District 12	HD 012 STATE REPRESENTATIVE DI
+CandidateContest	MT House District 11	HD 011 STATE REPRESENTATIVE DI
+CandidateContest	MT House District 10	HD 010 STATE REPRESENTATIVE DI
+CandidateContest	MT House District 9	HD 009 STATE REPRESENTATIVE DI
+CandidateContest	MT House District 8	HD 008 STATE REPRESENTATIVE DI
+CandidateContest	MT House District 7	HD 007 STATE REPRESENTATIVE DI
+CandidateContest	MT House District 6	HD 006 STATE REPRESENTATIVE DI
+CandidateContest	MT House District 5	HD 005 STATE REPRESENTATIVE DI
+CandidateContest	MT House District 4	HD 004 STATE REPRESENTATIVE DI
+CandidateContest	MT House District 3	HD 003 STATE REPRESENTATIVE DI
+CandidateContest	MT House District 2	HD 002 STATE REPRESENTATIVE DI
+CandidateContest	MT House District 1	HD 001 STATE REPRESENTATIVE DI
+CandidateContest	MT Governor	GOVERNOR & LT. GOVERNOR 9064
+CandidateContest	MT Attorney General	ATTORNEY GENERAL 9065
+CandidateContest	US President (MT)	PRESIDENT 9063
+CandidateContest	MT State Superintendent	STATE SUPERINTENDENT OF P 9068
+CandidateContest	MT State Auditor	STATE AUDITOR 9066
+CandidateContest	MT Secretary of State	SECRETARY OF STATE 9067
+CandidateContest	US Senate MT	UNITED STATES SENATOR 9061
+CandidateContest	US House MT District 1	UNITED STATES REPRESENTAT 9062
