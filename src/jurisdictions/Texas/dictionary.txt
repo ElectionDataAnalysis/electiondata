@@ -7401,8 +7401,8 @@ Candidate	ALEX DOMINGUEZ (I)	ALEX DOMINGUEZ (I)
 Candidate	AL GREEN (I)	AL GREEN (I)
 Candidate	ABRAM LOEB/JENNIFER JAIRALA	ABRAM LOEB/JENNIFER JAIRALA
 Candidate	ABEL HERRERO (I)	ABEL HERRERO (I)
-Candidate	JuliÃ¡n Villarreal	JULIÃN VILLARREAL
-Candidate	JuliÃ¡n Villarreal	JULIÃÂN VILLARREAL
+Candidate	Julián Villarreal	JULIÃN VILLARREAL
+Candidate	Julián Villarreal	JULIÃÂN VILLARREAL
 Candidate	JOSÉ MENÉNDEZ (I)	JOSEÌ MENEÌNDEZ (I)
 Candidate	JOSÉ MENÉNDEZ	JOSÉ MENÉNDEZ
 Candidate	JOSÉ MENÉNDEZ	JOSÃ MENÃNDEZ
