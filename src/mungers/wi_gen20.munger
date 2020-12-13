@@ -14,4 +14,4 @@ constant_over_file=Party,CandidateContest
 ReportingUnit=<County>
 
 [in_count_headers]
-Candidate=<header_1>
+Candidate=<header_0>

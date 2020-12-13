@@ -4435,7 +4435,7 @@ Candidate	Ricardo Perkins	Ricardo Perkins
 Candidate	Jose Menendez	Jose Menendez
 Candidate	Fidel 'TwoBears' Castillo	"Fidel ""TwoBears"" Castillo"
 Candidate	Scott Pusich	Scott Pusich
-Candidate	Diana ArÃÂÃÂÃÂÃÂ©valo	Diana ArÃÂÃÂÃÂÃÂ©valo
+Candidate	Diana ArÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ©valo	Diana ArÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ©valo
 Candidate	Rick Galindo	Rick Galindo
 Candidate	Philip Cortez	Philip Cortez
 Candidate	Carlos Antonio Raymond	Carlos Antonio Raymond
@@ -4459,7 +4459,7 @@ Candidate	Libby Wiedermann	Libby Wiedermann
 Candidate	Catherine Torrres-Stahl	Catherine Torrres-Stahl
 Candidate	Ron Rangel	Ron Rangel
 Candidate	Laura Parker	Laura Parker
-Candidate	Arcelia TreviÃÂÃÂÃÂÃÂ±o	Arcelia TreviÃÂÃÂÃÂÃÂ±o
+Candidate	Arcelia TreviÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ±o	Arcelia TreviÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ±o
 Candidate	Jan Ischy-Prins	Jan Ischy-Prins
 Candidate	Frank J. Castro	Frank J. Castro
 Candidate	Karen Pozza	Karen Pozza
@@ -4500,7 +4500,7 @@ Candidate	Kyle Kacal	Kyle Kacal
 Candidate	John Raney	John Raney
 Candidate	Travis Bryan, III	Travis Bryan, III
 Candidate	Jarvis Parsons	Jarvis Parsons
-Candidate	Poncho NevÃÂÃÂÃÂÃÂ¡rez	Poncho NevÃÂÃÂÃÂÃÂ¡rez
+Candidate	Poncho NevÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¡rez	Poncho NevÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¡rez
 Candidate	Roy Ferguson	Roy Ferguson
 Candidate	Sandy Wilson	Sandy Wilson
 Candidate	Jaime Escuder	Jaime Escuder
@@ -4608,7 +4608,7 @@ Candidate	Tom Craddick	Tom Craddick
 Candidate	Amanda Navarette	Amanda Navarette
 Candidate	Laurie K. English	Laurie K. English
 Candidate	Ruben G. Reyes	Ruben G. Reyes
-Candidate	JosÃÂÃÂÃÂÃÂ© Rodriguez	JosÃÂÃÂÃÂÃÂ© Rodriguez
+Candidate	JosÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ© Rodriguez	JosÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ© Rodriguez
 Candidate	Jaime Esparza	Jaime Esparza
 Candidate	John Smithee	John Smithee
 Candidate	David M. Green	David M. Green
@@ -4703,8 +4703,8 @@ Candidate	Cindy Ermatinger	Cindy Ermatinger
 Candidate	Beto O'Rourke	Beto O'Rourke
 Candidate	Jaime O. Perez	Jaime O. Perez
 Candidate	Mary L. Gourdoux	Mary L. Gourdoux
-Candidate	Mary E. GonzÃÂÃÂÃÂÃÂ¡lez	Mary E. GonzÃÂÃÂÃÂÃÂ¡lez
-Candidate	CÃÂÃÂÃÂÃÂ©sar J. Blanco	CÃÂÃÂÃÂÃÂ©sar J. Blanco
+Candidate	Mary E. GonzÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¡lez	Mary E. GonzÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¡lez
+Candidate	CÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ©sar J. Blanco	CÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ©sar J. Blanco
 Candidate	Evelina 'Lina' Ortega	"Evelina ""Lina"" Ortega"
 Candidate	Jeffrey Lane	Jeffrey Lane
 Candidate	Joe Moody	Joe Moody
@@ -5265,7 +5265,7 @@ Candidate	Cynthia Marie Chapa	Cynthia Marie Chapa
 Candidate	Daphne Previti Austin	Daphne Previti Austin
 Candidate	Carlos Quezada	Carlos Quezada
 Candidate	Melisa Skinner	Melisa Skinner
-Candidate	Jennifer PeÃÂÃÂÃÂÃÂ±a	Jennifer PeÃÂÃÂÃÂÃÂ±a
+Candidate	Jennifer PeÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ±a	Jennifer PeÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ±a
 Candidate	Lisa K. Jarrett	Lisa K. Jarrett
 Candidate	Lori I. Valenzuela	Lori I. Valenzuela
 Candidate	Tylden Shaeffer	Tylden Shaeffer
@@ -5575,7 +5575,7 @@ Candidate	Jesse McClure	Jesse McClure
 Candidate	Danilo 'Danny' Lacayo	"Danilo ""Danny"" Lacayo"
 Candidate	Vanessa Velasquez	Vanessa Velasquez
 Candidate	Chuck Silverman	Chuck Silverman
-Candidate	ReneÃÂÃÂÃÂÃÂ© Magee	ReneÃÂÃÂÃÂÃÂ© Magee
+Candidate	ReneÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ© Magee	ReneÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ© Magee
 Candidate	Abigail Anastasio	Abigail Anastasio
 Candidate	Jason Luong	Jason Luong
 Candidate	Scot 'dolli' Dollinger	"Scot ""dolli"" Dollinger"
@@ -5641,15 +5641,15 @@ Candidate	Keith Bell	Keith Bell
 Candidate	Eston Williams	Eston Williams
 Candidate	D. Allen Miller	D. Allen Miller
 Candidate	Dan Moore	Dan Moore
-Candidate	Sergio MuÃÂÃÂÃÂÃÂ±oz, Jr.	Sergio MuÃÂÃÂÃÂÃÂ±oz, Jr.
-Candidate	Armando 'Mando' MartÃÂÃÂÃÂÃÂ­nez	"Armando ""Mando"" MartÃÂÃÂÃÂÃÂ­nez"
+Candidate	Sergio MuÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ±oz, Jr.	Sergio MuÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ±oz, Jr.
+Candidate	Armando 'Mando' MartÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ­nez	"Armando ""Mando"" MartÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ­nez"
 Candidate	Hilda Garza DeShazo	Hilda Garza DeShazo
 Candidate	Jennifer Morales	Jennifer Morales
 Candidate	Fernando Mancias	Fernando Mancias
 Candidate	Rose Guerra Reyna	Rose Guerra Reyna
 Candidate	Marla Cuellar	Marla Cuellar
-Candidate	Noe GonzÃÂÃÂÃÂÃÂ¡lez	Noe GonzÃÂÃÂÃÂÃÂ¡lez
-Candidate	Ricardo RodrÃÂÃÂÃÂÃÂ­guez	Ricardo RodrÃÂÃÂÃÂÃÂ­guez
+Candidate	Noe GonzÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¡lez	Noe GonzÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¡lez
+Candidate	Ricardo RodrÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ­guez	Ricardo RodrÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ­guez
 Candidate	Lee Harris	Lee Harris
 Candidate	Ralph Walton	Ralph Walton
 Candidate	Bill Brannon	Bill Brannon
@@ -5787,7 +5787,7 @@ Candidate	Constance Filley Johnson	Constance Filley Johnson
 Candidate	Will Durham	Will Durham
 Candidate	Elton Raymond Mathis, Jr.	Elton Raymond Mathis, Jr.
 Candidate	Luis De La Garza	Luis De La Garza
-Candidate	Richard PeÃÂÃÂÃÂÃÂ±a Raymond	Richard PeÃÂÃÂÃÂÃÂ±a Raymond
+Candidate	Richard PeÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ±a Raymond	Richard PeÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ±a Raymond
 Candidate	Joe Lopez	Joe Lopez
 Candidate	Monica Zapata Notzon	Monica Zapata Notzon
 Candidate	Randy M. Clapp	Randy M. Clapp
@@ -5848,8 +5848,8 @@ Candidate	PATRICK BRAMBLETT	PATRICK BRAMBLETT
 Candidate	LUCILA FLORES	LUCILA FLORES
 Candidate	LYDA NESS GARCIA	LYDA NESS GARCIA
 Candidate	PATRICK M. GARCIA	PATRICK M. GARCIA
-Candidate	ARCELIA TREVIÃÂO	ARCELIA TREVIÃÂO
-Candidate	JACQUELINE 'JACKIE' VALDÃÂZ	"JACQUELINE ""JACKIE"" VALDÃÂZ"
+Candidate	ARCELIA TREVIÃÂÃÂO	ARCELIA TREVIÃÂÃÂO
+Candidate	JACQUELINE 'JACKIE' VALDÃÂÃÂZ	"JACQUELINE ""JACKIE"" VALDÃÂÃÂZ"
 Candidate	JANET BUENING HEPPARD	JANET BUENING HEPPARD
 Candidate	JAMIE ZAND	JAMIE ZAND
 Candidate	MARLENE GONZALEZ	MARLENE GONZALEZ
@@ -5918,7 +5918,7 @@ Candidate	YVONNE ROSALES	YVONNE ROSALES
 Candidate	MIKE FOUTS	MIKE FOUTS
 Candidate	STALEY HEATLY	STALEY HEATLY
 Candidate	ISIDRO R. ALANIZ	ISIDRO R. ALANIZ
-Candidate	JOSÃÂ GARZA	JOSÃÂ GARZA
+Candidate	JOSÃÂÃÂ GARZA	JOSÃÂÃÂ GARZA
 Candidate	ERIN MARTINSON	ERIN MARTINSON
 Candidate	MARGARET MOORE	MARGARET MOORE
 Candidate	CARLOS OMAR GARCIA	CARLOS OMAR GARCIA
@@ -5990,7 +5990,7 @@ Candidate	RONNY JACKSON	RONNY JACKSON
 Candidate	DIANE KNOWLTON	DIANE KNOWLTON
 Candidate	MATT MCARTHUR	MATT MCARTHUR
 Candidate	MARK NEESE	MARK NEESE
-Candidate	ASUSENA RESÃÂNDIZ	ASUSENA RESÃÂNDIZ
+Candidate	ASUSENA RESÃÂÃÂNDIZ	ASUSENA RESÃÂÃÂNDIZ
 Candidate	VANCE SNIDER II	VANCE SNIDER II
 Candidate	JOSH WINEGARNER	JOSH WINEGARNER
 Candidate	MONIQUE WORTHY	MONIQUE WORTHY
@@ -6015,7 +6015,7 @@ Candidate	KRISTEN ALAMO ROWIN	KRISTEN ALAMO ROWIN
 Candidate	DAVID SAUCEDO	DAVID SAUCEDO
 Candidate	PETE SESSIONS	PETE SESSIONS
 Candidate	TRENT SUTTON	TRENT SUTTON
-Candidate	RENÃÂE SWANN	RENÃÂE SWANN
+Candidate	RENÃÂÃÂE SWANN	RENÃÂÃÂE SWANN
 Candidate	ELIANOR VESSALI	ELIANOR VESSALI
 Candidate	ROBERT M. CADENA	ROBERT M. CADENA
 Candidate	WENDELL CHAMPION	WENDELL CHAMPION
@@ -6053,7 +6053,7 @@ Candidate	CECIL B. 'BURT' JONES	"CECIL B. ""BURT"" JONES"
 Candidate	JEFF MCFARLIN	JEFF MCFARLIN
 Candidate	RAUL REYES	RAUL REYES
 Candidate	SHARON BRECKENRIDGE THOMAS	SHARON BRECKENRIDGE THOMAS
-Candidate	ALÃÂA URESTE	ALÃÂA URESTE
+Candidate	ALÃÂÃÂA URESTE	ALÃÂÃÂA URESTE
 Candidate	BEN VAN WINKLE	BEN VAN WINKLE
 Candidate	SUNNY CHAPARALA	SUNNY CHAPARALA
 Candidate	DAVID FEGAN	DAVID FEGAN
@@ -6632,7 +6632,7 @@ Candidate	JOSEPH R. BIDEN	JOSEPH R. BIDEN
 Candidate	MICHAEL R. BLOOMBERG	MICHAEL R. BLOOMBERG
 Candidate	CORY BOOKER	CORY BOOKER
 Candidate	PETE BUTTIGIEG	PETE BUTTIGIEG
-Candidate	JULIÃÂN CASTRO	JULIÃÂN CASTRO
+Candidate	JULIÃÂÃÂN CASTRO	JULIÃÂÃÂN CASTRO
 Candidate	ROQUE 'ROCKY' DE LA FUENTE	"ROQUE ""ROCKY"" DE LA FUENTE"
 Candidate	JOHN K. DELANEY	JOHN K. DELANEY
 Candidate	TULSI GABBARD	TULSI GABBARD
@@ -6648,7 +6648,7 @@ Candidate	CHRIS BELL	CHRIS BELL
 Candidate	MICHAEL COOPER	MICHAEL COOPER
 Candidate	AMANDA K. EDWARDS	AMANDA K. EDWARDS
 Candidate	JACK DANIEL FOSTER JR	JACK DANIEL FOSTER JR
-Candidate	ANNIE 'MAMÃÂ' GARCIA	"ANNIE ""MAMÃÂ"" GARCIA"
+Candidate	ANNIE 'MAMÃÂÃÂ' GARCIA	"ANNIE ""MAMÃÂÃÂ"" GARCIA"
 Candidate	VICTOR HUGO HARRIS	VICTOR HUGO HARRIS
 Candidate	MARY 'MJ' HEGAR	"MARY ""MJ"" HEGAR"
 Candidate	SEMA HERNANDEZ	SEMA HERNANDEZ
@@ -6748,7 +6748,7 @@ Candidate	RAFAEL ALCOSER III	RAFAEL ALCOSER III
 Candidate	LLOYD DOGGETT	LLOYD DOGGETT
 Candidate	RASHAD LEWIS	RASHAD LEWIS
 Candidate	ROBERTO R. 'BETO' ALONZO	"ROBERTO R. ""BETO"" ALONZO"
-Candidate	CHRYSTA CASTAÃÂEDA	CHRYSTA CASTAÃÂEDA
+Candidate	CHRYSTA CASTAÃÂÃÂEDA	CHRYSTA CASTAÃÂÃÂEDA
 Candidate	KELLY STONE	KELLY STONE
 Candidate	MARK WATSON	MARK WATSON
 Candidate	AMY CLARK MEACHUM	AMY CLARK MEACHUM
@@ -6789,16 +6789,16 @@ Candidate	MELISSA MORRIS	MELISSA MORRIS
 Candidate	MICHAEL ANTALAN	MICHAEL ANTALAN
 Candidate	ROLAND GUTIERREZ	ROLAND GUTIERREZ
 Candidate	FREDDY RAMIREZ	FREDDY RAMIREZ
-Candidate	XOCHIL PEÃÂA RODRIGUEZ	XOCHIL PEÃÂA RODRIGUEZ
+Candidate	XOCHIL PEÃÂÃÂA RODRIGUEZ	XOCHIL PEÃÂÃÂA RODRIGUEZ
 Candidate	JUAN 'CHUY' HINOJOSA	"JUAN ""CHUY"" HINOJOSA"
 Candidate	JUDITH ZAFFIRINI	JUDITH ZAFFIRINI
 Candidate	ROBERT VICK	ROBERT VICK
 Candidate	CLAYTON TUCKER	CLAYTON TUCKER
-Candidate	JOSÃÂ MENÃÂNDEZ	JOSÃÂ MENÃÂNDEZ
+Candidate	JoseÌ MeneÌndez	JOSÃÂÃÂ MENÃÂÃÂNDEZ
 Candidate	RUBEN CORTEZ	RUBEN CORTEZ
 Candidate	EDDIE LUCIO JR	EDDIE LUCIO JR
 Candidate	SARA STAPLETON BARRERA	SARA STAPLETON BARRERA
-Candidate	CÃÂSAR J BLANCO	CÃÂSAR J BLANCO
+Candidate	CÃÂÃÂSAR J BLANCO	CÃÂÃÂSAR J BLANCO
 Candidate	BILL BRANNON	BILL BRANNON
 Candidate	MARTIN SHUPP	MARTIN SHUPP
 Candidate	LAWYANDA PRINCE	LAWYANDA PRINCE
@@ -7012,7 +7012,7 @@ Candidate	NICOLE GARZA	NICOLE GARZA
 Candidate	MICHAEL MERY	MICHAEL MERY
 Candidate	ANNABELL 'ANNA' PEREZ	"ANNABELL ""ANNA"" PEREZ"
 Candidate	LAWRENCE MEYERS	LAWRENCE MEYERS
-Candidate	MARIA CANTÃÂ HEXSEL	MARIA CANTÃÂ HEXSEL
+Candidate	MARIA CANTÃÂÃÂ HEXSEL	MARIA CANTÃÂÃÂ HEXSEL
 Candidate	KENNON WOOTEN	KENNON WOOTEN
 Candidate	GEORGE LINDSEY	GEORGE LINDSEY
 Candidate	ANTONIA 'TONI' ARTEAGA	"ANTONIA ""TONI"" ARTEAGA"
@@ -7091,17 +7091,17 @@ Candidate	PATY BACA	PATY BACA
 Candidate	RUBEN NUNEZ	RUBEN NUNEZ
 Candidate	ROQUE 'ROCKY' DE LA FUENTE GUERRA	ROQUE 'ROCKY' DE LA FUENTE GUERRA
 Candidate	ROBERT 'ZACK' RADER	ROBERT 'ZACK' RADER
-Candidate	RENÃE SWANN	RENÃE SWANN
+Candidate	RENÃÂE SWANN	RENÃÂE SWANN
 Candidate	PETER P. 'PETE' FLORES	PETER P. 'PETE' FLORES
 Candidate	KENT 'BUD' WYMORE	KENT 'BUD' WYMORE
 Candidate	DWAYNE 'DOC' COLLINS	DWAYNE 'DOC' COLLINS
 Candidate	CHARLES 'DOC' ANDERSON	CHARLES 'DOC' ANDERSON
 Candidate	CECIL B. 'BURT' JONES	CECIL B. 'BURT' JONES
 Candidate	CATHERINE 'I SWEAR' CARR	CATHERINE 'I SWEAR' CARR
-Candidate	ASUSENA RESÃNDIZ	ASUSENA RESÃNDIZ
-Candidate	ALÃA URESTE	ALÃA URESTE
+Candidate	ASUSENA RESÃÂNDIZ	ASUSENA RESÃÂNDIZ
+Candidate	ALÃÂA URESTE	ALÃÂA URESTE
 Candidate	'GUILLERMO' WILLIAM HAYWARD	'GUILLERMO' WILLIAM HAYWARD
-Candidate	XOCHIL PEÃA RODRIGUEZ	XOCHIL PEÃA RODRIGUEZ
+Candidate	XOCHIL PEÃÂA RODRIGUEZ	XOCHIL PEÃÂA RODRIGUEZ
 Candidate	SHENITA 'SHAE' CLEVELAND	SHENITA 'SHAE' CLEVELAND
 Candidate	ROSALINDA 'ROSEY' RAMOS ABUABARA	ROSALINDA 'ROSEY' RAMOS ABUABARA
 Candidate	ROQUE 'ROCKY' DE LA FUENTE	ROQUE 'ROCKY' DE LA FUENTE
@@ -7110,13 +7110,13 @@ Candidate	RICARDO 'RICK' DE LA FUENTE	RICARDO 'RICK' DE LA FUENTE
 Candidate	MARY 'MJ' HEGAR	MARY 'MJ' HEGAR
 Candidate	LIKEITHIA 'KEKE' WILLIAMS	LIKEITHIA 'KEKE' WILLIAMS
 Candidate	L. 'SARAH' DEMERCHANT	L. 'SARAH' DEMERCHANT
-Candidate	JULIÃN CASTRO	JULIÃN CASTRO
+Candidate	JULIÃÂN CASTRO	JULIÃÂN CASTRO
 Candidate	JUAN 'CHUY' HINOJOSA	JUAN 'CHUY' HINOJOSA
-Candidate	JOSÃ MENÃNDEZ	JOSÃ MENÃNDEZ
+Candidate	JoseÌ MeneÌndez	JOSÃÂ MENÃÂNDEZ
 Candidate	ELIZABETH 'LIZ' CAMPOS	ELIZABETH 'LIZ' CAMPOS
-Candidate	CÃSAR J BLANCO	CÃSAR J BLANCO
+Candidate	CÃÂSAR J BLANCO	CÃÂSAR J BLANCO
 Candidate	ARMANDO 'MANDO' MARTINEZ	ARMANDO 'MANDO' MARTINEZ
-Candidate	ANNIE 'MAMÃ' GARCIA	ANNIE 'MAMÃ' GARCIA
+Candidate	ANNIE 'MAMÃÂ' GARCIA	ANNIE 'MAMÃÂ' GARCIA
 CountItemType	total	total
 Candidate	YVONNE DAVIS (I)	YVONNE DAVIS (I)
 Candidate	WILL METCALF (I)	WILL METCALF (I)
@@ -7244,12 +7244,12 @@ Candidate	KAY GRANGER (I)	KAY GRANGER (I)
 Candidate	KASEY WELLS/RACHEL WELLS	KASEY WELLS/RACHEL WELLS
 Candidate	K. NICOLE SPRABARY	K. NICOLE SPRABARY
 Candidate	JUSTIN HOLLAND (I)	JUSTIN HOLLAND (I)
-Candidate	JULIÃN VILLARREAL	JULIÃN VILLARREAL
+Candidate	JULIÃÂN VILLARREAL	JULIÃÂN VILLARREAL
 Candidate	JULIE JOHNSON (I)	JULIE JOHNSON (I)
 Candidate	JULIAN MARDOCK	JULIAN MARDOCK
 Candidate	JUDITH ZAFFIRINI (I)	JUDITH ZAFFIRINI (I)
 Candidate	JUAN &QUOT;CHUY&QUOT; HINOJOSA (I)	JUAN &QUOT;CHUY&QUOT; HINOJOSA (I)
-Candidate	JOSEÌ MENEÌNDEZ (I)	JOSEÌ MENEÌNDEZ (I)
+Candidate	JoseÌ MeneÌndez (I)	JOSEÃÂ MENEÃÂNDEZ (I)
 Candidate	JOSEPH R. BIDEN/KAMALA D. HARRIS	JOSEPH R. BIDEN/KAMALA D. HARRIS
 Candidate	JOSEPH LEBLANC JR	JOSEPH LEBLANC JR
 Candidate	JOSE R. SOSA	JOSE R. SOSA
@@ -7401,13 +7401,33 @@ Candidate	ALEX DOMINGUEZ (I)	ALEX DOMINGUEZ (I)
 Candidate	AL GREEN (I)	AL GREEN (I)
 Candidate	ABRAM LOEB/JENNIFER JAIRALA	ABRAM LOEB/JENNIFER JAIRALA
 Candidate	ABEL HERRERO (I)	ABEL HERRERO (I)
-Candidate	Julián Villarreal	JULIÁN VILLARREAL
-Candidate	Julián Villarreal	JULIÃN VILLARREAL
-Candidate	José Menéndez (I)	JOSÉ MENÉNDEZ (I)
-Candidate	José Menéndez (I)	JOSEÌ MENEÌNDEZ (I)
-Candidate	José Menéndez (I)	JOSÃÂ MENÃÂNDEZ
-Candidate	Jo Jorgensen	JO JORGENSEN/JEREMY "SPIKE" COHEN
-Candidate	ELIZABETH 'ELIZ' MARKOWITZ	ELIZABETH "ELIZ" MARKOWITZ
-Candidate	César J Blanco	CÉSAR J BLANCO
+Candidate	JuliÃ¡n Villarreal	JULIÃN VILLARREAL
+Candidate	JuliÃ¡n Villarreal	JULIÃÂN VILLARREAL
+Candidate	JOSÉ MENÉNDEZ (I)	JOSEÌ MENEÌNDEZ (I)
+Candidate	JOSÉ MENÉNDEZ	JOSÉ MENÉNDEZ
+Candidate	JOSÉ MENÉNDEZ	JOSÃ MENÃNDEZ
+Candidate	JOSÉ MENÉNDEZ (I)	JOSÃÂÃÂ MENÃÂÃÂNDEZ
+Candidate	Jo Jorgensen	"JO JORGENSEN/JEREMY ""SPIKE"" COHEN"
+Candidate	ELIZABETH 'ELIZ' MARKOWITZ	"ELIZABETH ""ELIZ"" MARKOWITZ"
 Candidate	César J Blanco	CÃSAR J BLANCO
-Candidate	Julián Castro	JULIÃÂÃÂN CASTRO
+Candidate	César J Blanco	CÃ©sar J Blanco
+Candidate	César J Blanco	CÃÂSAR J BLANCO
+Candidate	César J Blanco	CÉSAR J BLANCO
+Candidate	Julián Castro	JULIÃÂÃÂÃÂÃÂN CASTRO
+Candidate	Julián Castro	JuliÃ¡n Castro
+Candidate	Julián Castro	JULIÃN CASTRO
+Candidate	Julián Castro	JULIÁN CASTRO
+Candidate	XOCHIL PEÑA RODRIGUEZ	XOCHIL PEÃÂÃÂA RODRIGUEZ
+Candidate	XOCHIL PEÑA RODRIGUEZ	XOCHIL PEÃA RODRIGUEZ
+Candidate	XOCHIL PEÑA RODRIGUEZ	XOCHIL PEÑA RODRIGUEZ
+Candidate	ANNIE 'MAMÁ' GARCIA	ANNIE 'MAMÃ' GARCIA
+Candidate	ANNIE 'MAMÁ' GARCIA	ANNIE 'MAMÃÂÃÂÃÂÃÂ' GARCIA
+Candidate	RENÉE SWANN	RENÉE SWANN
+Candidate	RENÉE SWANN	RenÃÂ©e Swann
+Candidate	RENÉE SWANN	RENÃÂE SWANN
+Candidate	ASUSENA RESÉNDIZ	ASUSENA RESÉNDIZ
+Candidate	ASUSENA RESÉNDIZ	ASUSENA RESÃÂNDIZ
+Candidate	ASUSENA RESÉNDIZ	Asusena ResÃÂ©ndiz
+Candidate	ALÍA URESTE	ALÍA URESTE
+Candidate	ALÍA URESTE	AlÃÂ­a Ureste
+Candidate	ALÍA URESTE	ALÃÂÃÂA URESTE
