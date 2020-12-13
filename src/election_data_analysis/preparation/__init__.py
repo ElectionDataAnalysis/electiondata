@@ -2,6 +2,7 @@
 import pandas as pd
 import os
 from election_data_analysis import user_interface as ui
+import election_data_analysis as eda
 
 
 def primary(row: pd.Series, party: str, contest_field: str) -> str:
@@ -34,7 +35,12 @@ def get_element(juris_path: str, element: str) -> pd.DataFrame:
     empty dataframe returned"""
     f_path = os.path.join(juris_path, f"{element}.txt")
     if os.path.isfile(f_path):
-        element_df = pd.read_csv(f_path, sep="\t", dtype="object")
+        element_df = pd.read_csv(
+            f_path,
+            sep="\t",
+            dtype="object",
+            encoding=eda.default_encoding,
+        )
     else:
         element_df = pd.DataFrame()
     return element_df
@@ -69,6 +75,7 @@ def write_element(
             os.path.join(juris_path, file_name),
             index=False,
             sep="\t",
+            encoding=eda.default_encoding,
         )
     except Exception as e:
         err = ui.add_new_error(

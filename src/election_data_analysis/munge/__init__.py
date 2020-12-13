@@ -1,6 +1,6 @@
 import inspect
 from pathlib import Path
-
+import election_data_analysis as eda
 from election_data_analysis import database as db
 from election_data_analysis import user_interface as ui
 from election_data_analysis import juris_and_munger as jm
@@ -483,7 +483,9 @@ def replace_raw_with_internal_ids(
     # use dictionary.txt from jurisdiction
 
     raw_identifiers = pd.read_csv(
-        os.path.join(juris.path_to_juris_dir, "dictionary.txt"), sep="\t"
+        os.path.join(juris.path_to_juris_dir, "dictionary.txt"),
+        sep="\t",
+        encoding=eda.default_encoding,
     )
 
     # restrict to the element at hand
@@ -1113,7 +1115,9 @@ def raw_to_id_simple(
             if t == "CountItemType":
                 # munge raw to internal CountItemType
                 r_i = pd.read_csv(
-                    os.path.join(juris.path_to_juris_dir, "dictionary.txt"), sep="\t"
+                    os.path.join(juris.path_to_juris_dir, "dictionary.txt"),
+                    sep="\t",
+                    encoding=eda.default_encoding,
                 )
                 r_i = r_i[r_i.cdf_element == "CountItemType"]
                 recognized = r_i.raw_identifier_value.unique()
@@ -1428,7 +1432,7 @@ def munge_raw_to_ids(
                     err,
                     "warn-munger",
                     munger_name,
-                    f"Problem cleaning these Ids:\nerr_df"
+                    f"Problem cleaning these Ids:\n{err_df}"
                 )
 
     other_elements = [
@@ -1460,7 +1464,7 @@ def munge_raw_to_ids(
             juris.short_name,
             "No contests found, or no selections found for contests.",
         )
-        return err
+        return working, err
 
     return working, err
 
