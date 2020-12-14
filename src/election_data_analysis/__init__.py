@@ -1911,6 +1911,8 @@ def load_results_file(
         )
         return err
 
+    # # TODO for each contest, if none or unknown candidate has total votes 0, remove that candidate
+
     # #  TODO replace any foreign keys with true values
     # add_datafile_Id and Election_Id columns
     for c in ["_datafile_Id", "Election_Id"]:

@@ -1173,6 +1173,7 @@ def raw_to_id_simple(
                 if ui.fatal_error(new_err):
                     return working, err
                 working.drop(t, axis=1, inplace=True)
+
         except KeyError as exc:
             err = ui.add_new_error(
                 err,
