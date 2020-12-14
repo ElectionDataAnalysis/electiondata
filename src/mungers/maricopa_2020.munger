@@ -5,7 +5,7 @@ string_locations=in_count_headers,from_field_values
 
 encoding=utf_8
 flat_file_delimiter=tab,Votes_Election Day,Votes_Early Vote
-string_field_name_rows=0
+string_field_name_row=0
 count_field_name_row=0
 
 [from_field_values]
