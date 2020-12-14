@@ -1423,6 +1423,18 @@ and cruj."ParentReportingUnit_Id" = %s
     return contests
 
 
+def selection_ids_from_candidate_id(session, candidate_id):
+    connection = session.bind.raw_connection()
+    cursor = connection.cursor()
+
+    q = sql.SQL("""SELECT "Id" from "CandidateSelection" where "Candidate_Id" = %s""")
+
+    cursor.execute(q,(candidate_id,))
+    selection_id_list = [x for (x,) in cursor.fetchall()]
+
+    return selection_id_list
+
+
 def export_rollup_from_db(
     session,
     top_ru: str,
