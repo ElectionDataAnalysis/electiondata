@@ -781,7 +781,7 @@ def regularize_candidate_names(
 def melt_to_one_count_column(df: pd.DataFrame, p: dict, mu_name: str) -> (pd.DataFrame, Optional[dict]):
     """transform to df with single count column and all raw munge info in other columns"""
     err = None
-    if isinstance(df.columns,pd.MultiIndex):
+    if isinstance(df.columns, pd.MultiIndex):
         multi = True
     else:
         multi = False
@@ -811,11 +811,13 @@ def melt_to_one_count_column(df: pd.DataFrame, p: dict, mu_name: str) -> (pd.Dat
     id_columns = [c for c in df.columns if c not in count_columns]
     melted = df.melt(id_vars=id_columns, value_vars=count_columns, var_name="header_0", value_name="Count")
     if multi:
-        # remove extraneous text from columns headers, leaving only field name row
+       # remove extraneous text from columns headers, leaving only field name row
+        new_columns = list(melted.columns)
         for idx in range(melted.shape[1]):
             if melted.columns[idx] in id_columns:
                 index_of_string_field_names = p["string_field_name_row"] - min(p["count_header_row_numbers"])
-                melted.columns[idx] = melted.columns[idx].split(";:;")[index_of_string_field_names]
+                new_columns[idx] = melted.columns[idx].split(";:;")[index_of_string_field_names]
+        melted.columns = new_columns
         if "in_count_headers" in p["string_locations"]:
 
             # split header_0 column into separate columns
@@ -1678,9 +1680,22 @@ def to_standard_count_frame(f_path: str, munger_path: str, p, constants) -> (pd.
             return pd.DataFrame(), err
 
     # read count dataframe(s) from file
-    raw_dict, err = ui.read_single_datafile(f_path, p, munger_name, err)
-    if ui.fatal_error(err):
+    try:
+        raw_dict, err = ui.read_single_datafile(f_path, p, munger_name, err)
+        if len(raw_dict) == 0:  # no dfs at all returned
+            err = ui.add_new_error(err, "munger", munger_name, f"No data found in file {Path(f_path).name}")
+
+        if ui.fatal_error(err):
+            return pd.DataFrame(), err
+    except Exception as exc:
+        err = ui.add_new_error(
+            err,
+            "system",
+            f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
+            f"Unexpected exception while reading data from file:\n\t{exc}"
+        )
         return pd.DataFrame(), err
+
 
     # get lists of string fields expected in raw file
     try:
@@ -1715,6 +1730,7 @@ def to_standard_count_frame(f_path: str, munger_path: str, p, constants) -> (pd.
         except Exception as exc:
             error_by_sheet[k] = ui.add_new_error(None, "file", f_path, f"Unable to pivot dataframe {k}")
             continue  # goes to next k in loop
+
         # add columns for any constant-over-sheet elements
         if "constant_over_sheet" in p["string_locations"]:
             # see if <sheet_name> is needed
@@ -1725,12 +1741,20 @@ def to_standard_count_frame(f_path: str, munger_path: str, p, constants) -> (pd.
                 rows_needed = [int(var[4:]) for var in munge_field_lists["constant_over_sheet"] if var != "sheet_name"]
                 if rows_needed:
                     max_row = max(rows_needed)
-                    data = pd.read_excel(f_path, nrows=max_row+1)
+                    data = pd.read_excel(
+                        f_path,
+                        sheet_name=k,
+                        header=None,
+                        skiprows=p["rows_to_skip"],
+                        nrows=max_row+1,
+                    )
                     for row in rows_needed:
+                        # get index of first valid entry in row (or "" if none)
+                        first_valid_idx = data.loc[row].fillna("").first_valid_index()
                         standard[k] = add_constant_column(
                             standard[k],
                             f"row_{row}",
-                            data.loc[row,data.loc[row].first_valid_index()],
+                            data.loc[row, first_valid_idx],
                         )
             except ValueError as ve:
                 error_by_sheet[k] = ui.add_new_error(
@@ -1739,6 +1763,7 @@ def to_standard_count_frame(f_path: str, munger_path: str, p, constants) -> (pd.
                     munger_name,
                     f"In sheet {k}: Ill-formed reference to row of file in munger formulas in {ve}"
                 )
+                continue
 
             except KeyError() as ke:
                 variables = ",".join(munge_field_lists["constant_over_sheet"])
@@ -1748,6 +1773,34 @@ def to_standard_count_frame(f_path: str, munger_path: str, p, constants) -> (pd.
                     Path(f_path).name,
                     f"In sheet {k}: No data found for one of these: \n\t{variables}",
                 )
+                continue
+            except Exception as exc:
+                error_by_sheet[k] = ui.add_new_error(
+                    error_by_sheet[k],
+                    "file",
+                    Path(f_path).name,
+                    f"In sheet {k}: Unexpected exeption: {exc}",
+                )
+
+        # delete any rows with items to be ignored
+        ig, new_err = ui.get_parameters(
+            header="ignore",
+            required_keys=[],
+            optional_keys=[
+                "Candidate",
+                "CandidateContest",
+                "BallotMeasureSelection",
+                "BallotMeasureContest",
+                "Party",
+            ],
+            param_file=munger_path,
+        )
+        if new_err:
+            pass  # errors ignored, as header is not required
+        for element in ig.keys():
+            value_list = ig[element].split(",")
+            mask = standard[k][element].notin(value_list)
+            standard[k] = standard[k][mask]
 
         # keep only necessary columns
         try:
@@ -1760,6 +1813,7 @@ def to_standard_count_frame(f_path: str, munger_path: str, p, constants) -> (pd.
                 munger_name,
                 f"In sheet {k}: Field in munge formulas not found in file column headers read from file: {ke}",
             )
+            continue
 
         # clean Count column
         standard[k], bad_rows = clean_count_cols(standard[k], ["Count"], p["thousands_separator"])

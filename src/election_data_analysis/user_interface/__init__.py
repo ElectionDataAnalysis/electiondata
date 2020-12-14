@@ -433,7 +433,6 @@ def read_single_datafile(
     if p["file_type"] in ["excel"]:
         kwargs = basic_kwargs(p, dict())
         kwargs = tabular_kwargs(p, kwargs)
-        kwargs["sheet_name"] = list_desired_excel_sheets(f_path, p)
     elif p["file_type"] in ["flat_text"]:
         kwargs = basic_kwargs(p, dict())
         kwargs = tabular_kwargs(p, kwargs)
@@ -455,9 +454,23 @@ def read_single_datafile(
             else:
                 df_dict = {"Sheet1": df}
         elif p["file_type"] == "excel":
-            kwargs.pop("index_col")  # TODO: tech debt can we omit index_col for all?
+            kwargs["index_col"] = None # TODO: tech debt can we omit index_col for all?
                                         #  need to omit index_col here since multi-index headers are possible
-            df_dict = pd.read_excel(f_path, **kwargs)
+            # to avoid getting fatal error when a sheet doesn't read in correctly
+            df_dict = dict()
+            for sheet in list_desired_excel_sheets(f_path, p):
+                kwargs["sheet_name"] = sheet
+                try:
+                    df_dict[sheet] = pd.read_excel(f_path, **kwargs)
+                except Exception as exc:
+                    df_dict[sheet] = pd.DataFrame()
+                    err = add_new_error(
+                        err,
+                        "warn-file",
+                        Path(f_path).name,
+                        f"Sheet {sheet} not read due to exception:\n\t{exc}",
+                    )
+
         elif p["file_type"] == "flat_text":
             df = pd.read_csv(f_path, **kwargs)
             df_dict = {"Sheet1": df}
@@ -465,11 +478,11 @@ def read_single_datafile(
     except FileNotFoundError:
         err_str = f"File not found: {f_path}"
         df_dict = dict()
-        err = add_new_error(err, "file", f_path, err_str)
+        err = add_new_error(err, "file", Path(f_path).name, err_str)
     except UnicodeDecodeError as ude:
-        err_str = f"Encoding error. Datafile not read completely.\n{ude}"
+        err_str = f"Encoding error. Datafile not read completely.\n\t{ude}"
         df_dict = dict()
-        err = add_new_error(err, "file", f_path, err_str)
+        err = add_new_error(err, "file", Path(f_path).name, err_str)
     except ParserError as pe:
         # DFs have trouble comparing against None. So we return an empty DF and
         # check for emptiness below as an indication of an error.
@@ -489,9 +502,7 @@ def read_single_datafile(
             df_dict[k].columns = [f"column_{j}" for j in range(df_dict[k].shape[1])]
 
     # drop any empty dataframes
-    for k in df_dict.keys():
-        if df_dict[k].empty:
-            df_dict.pop(k)
+    df_dict = {k:v for k,v in df_dict.items() if not v.empty}
     return df_dict, err
 
 
