@@ -34,7 +34,7 @@ opt_munger_params: Dict[str, str] = {
     "count_header_row_numbers": "list-of-integers",
     "string_field_column_numbers": "list-of-integers",
     "string_field_names": "list-of-strings",
-    "string_field_name_rows": "list-of-integers",
+    "string_field_name_row": "list-of-integers",
     "auxiliary_data_location": "string",
     "all_rows": "string",
     "constant_over_file": "list-of-strings",
@@ -814,7 +814,8 @@ def melt_to_one_count_column(df: pd.DataFrame, p: dict, mu_name: str) -> (pd.Dat
         # remove extraneous text from columns headers, leaving only field name row
         for idx in range(melted.shape[1]):
             if melted.columns[idx] in id_columns:
-                melted.columns[idx] = melted.columns[idx].split(";:;")[p["string_field_name_rows"]]
+                index_of_string_field_names = p["string_field_name_row"] - min(p["count_header_row_numbers"])
+                melted.columns[idx] = melted.columns[idx].split(";:;")[index_of_string_field_names]
         if "in_count_headers" in p["string_locations"]:
 
             # split header_0 column into separate columns
@@ -1593,14 +1594,14 @@ def get_and_check_munger_params(munger_path: str) -> (dict, Optional[dict]):
 
         # # if all rows are not data, need field names
         if (format_options["all_rows"] is None):
-            if format_options["string_field_name_rows"] is None:
+            if format_options["string_field_name_row"] is None:
                 err = ui.add_new_error(
                     err,
                     "munger",
                     munger_name,
                     f"file_type={format_options['file_type']}' and absence of"
                     f" all_rows=data means field names must be in the "
-                    f"file. But string_field_name_rows not given."
+                    f"file. But string_field_name_row not given."
                 )
 
     # # for each value in list of string locations, requirements are met
