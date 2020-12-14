@@ -23,4 +23,4 @@ Party=<header_2>
 Candidate={<header_3>,^(.*)\n*.*$}
 
 [ignore]
-Candidate=Total Votes Cast
+Party=Total Votes Cast

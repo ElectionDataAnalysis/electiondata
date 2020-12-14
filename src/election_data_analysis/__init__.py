@@ -1848,6 +1848,27 @@ def load_results_file(
             constants[element],
         )
 
+    # # delete any rows with items to be ignored
+    ig, new_err = ui.get_parameters(
+        header="ignore",
+        required_keys=[],
+        optional_keys=[
+            "Candidate",
+            "CandidateContest",
+            "BallotMeasureSelection",
+            "BallotMeasureContest",
+            "Party",
+        ],
+        param_file=munger_path,
+    )
+    if new_err:
+        pass  # errors ignored, as header is not required
+    real_ig_keys = [x for x in ig.keys() if ig[x] is not None]
+    for element in real_ig_keys:
+        value_list = ig[element].split(",")
+        mask = ~df[f"{element}_raw"].isin(value_list)
+        df = df[mask]
+
     # # add Id columns for all but Count, removing raw-munged
     try:
         df, new_err = m.munge_raw_to_ids(df, constants, juris, munger_name, session)

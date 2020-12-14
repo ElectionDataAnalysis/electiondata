@@ -1782,26 +1782,6 @@ def to_standard_count_frame(f_path: str, munger_path: str, p, constants) -> (pd.
                     f"In sheet {k}: Unexpected exeption: {exc}",
                 )
 
-        # delete any rows with items to be ignored
-        ig, new_err = ui.get_parameters(
-            header="ignore",
-            required_keys=[],
-            optional_keys=[
-                "Candidate",
-                "CandidateContest",
-                "BallotMeasureSelection",
-                "BallotMeasureContest",
-                "Party",
-            ],
-            param_file=munger_path,
-        )
-        if new_err:
-            pass  # errors ignored, as header is not required
-        for element in ig.keys():
-            value_list = ig[element].split(",")
-            mask = standard[k][element].notin(value_list)
-            standard[k] = standard[k][mask]
-
         # keep only necessary columns
         try:
             necessary = [item for sublist in munge_field_lists.values() for item in sublist] + ["Count"]

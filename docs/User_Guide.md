@@ -23,12 +23,12 @@ Ensure that the munger files are appropriate for your results file(s).
   * (required) `[format]` for the main parameters
   * (may be required) one section each string locations `from_field_values` and `in_count_headers` if these are listed in the `string_locations` parameter (defined below). 
   * (may be required) one section for each element in the `lookups` list. E.g., if `lookups=Candidate,Party` then there must be  `[Candidate lookup]` and `[Party lookup]` sections
-  * (optional) `[ignore]` Unrecognized Contests, Candidates and Parties are collected as "none or unknown". Some states (e.g., Wisconsin 2018 General) report total votes over a contest next to individual candidates' votes. The system may read, e.g., "Total Votes Cast" as an unrecognized candidate name. In this case include the lines:
+  * (optional) `[ignore]` Unrecognized Contests, Candidates and Parties are collected as "none or unknown". Some states (e.g., Wisconsin 2018 General) report total votes over a contest next to individual candidates' votes. The system may read, e.g., "Total Votes Cast" as an unrecognized party name. In this case include the lines:
   ```
 [ignore]
-Candidate=Total Votes Cast
+Party=Total Votes Cast
 ```
-and similarly, if necessary, for any Contest, Selection or Party. If there is more than one "Candidate" to be ignored, use a comma-separated list: `Candidate=Total Votes Cast,Registered Voters`
+and similarly, if necessary, for any Contest or Selection. If there is more than one "Party" to be ignored, use a comma-separated list: `Candidate=Total Votes Cast,Registered Voters`
  
  There are three main required parameters: `file_type`, `count_locations` and `string_locations`. Depending on the values of these, there are other required and optional fields. 
  `file_type`: controls which pandas function reads the file contents. Related optional and required parameters must be given under the `[file_type]` header.
