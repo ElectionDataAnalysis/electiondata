@@ -1798,6 +1798,7 @@ def load_results_file(
         df, err = m.to_standard_count_frame(f_path, munger_path, p, constants)
         if ui.fatal_error(err):
             return err
+
     except Exception as exc:
         err = ui.add_new_error(
             err,
@@ -1806,8 +1807,6 @@ def load_results_file(
             f"Exception while converting data to standard form: {exc}"
         )
         return err
-
-    # TODO what if returned df is empty?
 
     # append "_SOURCE" to all non-Count column names (to avoid confilcts if e.g., source has col names 'Party'
     try:
