@@ -365,9 +365,9 @@ def tabular_kwargs(p: Dict[str, Any], kwargs: Dict[str, Any]) -> Dict[str, Any]:
     # if count_locations are by field name, need count_field_name_row
     if p["count_locations"] == "by_field_name":
         header_rows.update({p["count_field_name_row"]})
-    # if any string locations are from field values AND field names are in the table, need string_field_name_row
+    # if any string locations are from field values AND field names are in the table, need string_field_name_rows
     if (p["all_rows"] is None) and "from_field_values" in p["string_locations"]:
-        header_rows.update({p["string_field_name_row"]})
+        header_rows.update({p["string_field_name_rows"]})
     # if any string locations are in count headers need count_header_row_numbers
     if "in_count_headers" in p["string_locations"]:
         header_rows.update(p["count_header_row_numbers"])
@@ -406,6 +406,20 @@ def basic_kwargs(p: Dict[str, Any], kwargs: Dict[str, Any]) -> Dict[str, Any]:
     return kwargs
 
 
+def list_desired_excel_sheets(f_path: str, p: dict) -> Optional[list]:
+    if p["sheets_to_read_names"]:
+        sheets_to_read = p["sheets_to_read_names"]
+    elif p["sheets_to_read_numbers"]:
+        sheets_to_read = p["sheets_to_read_numbers"]
+    elif p["sheets_to_skip"]:
+        xl = pd.ExcelFile(f_path)
+        all_sheets = xl.sheet_names
+        sheets_to_read = [s for s in all_sheets if s not in p["sheets_to_skip"]]
+    else:
+        sheets_to_read = None
+    return sheets_to_read
+
+
 def read_single_datafile(
     f_path: str,
     p: Dict[str, Any],
@@ -419,10 +433,7 @@ def read_single_datafile(
     if p["file_type"] in ["excel"]:
         kwargs = basic_kwargs(p, dict())
         kwargs = tabular_kwargs(p, kwargs)
-        if p["sheets_to_read_names"] or p["sheets_to_read_numbers"]:
-            kwargs["sheet_name"] = p["sheets_to_read_numbers"] + p["sheets_to_read_names"]
-        else:
-            kwargs["sheet_name"] = None
+        kwargs["sheet_name"] = list_desired_excel_sheets(f_path, p)
     elif p["file_type"] in ["flat_text"]:
         kwargs = basic_kwargs(p, dict())
         kwargs = tabular_kwargs(p, kwargs)
@@ -444,6 +455,8 @@ def read_single_datafile(
             else:
                 df_dict = {"Sheet1": df}
         elif p["file_type"] == "excel":
+            kwargs.pop("index_col")  # TODO: tech debt can we omit index_col for all?
+                                        #  need to omit index_col here since multi-index headers are possible
             df_dict = pd.read_excel(f_path, **kwargs)
         elif p["file_type"] == "flat_text":
             df = pd.read_csv(f_path, **kwargs)
@@ -474,6 +487,11 @@ def read_single_datafile(
     if p["all_rows"] == 'data':
         for k in df_dict.keys():
             df_dict[k].columns = [f"column_{j}" for j in range(df_dict[k].shape[1])]
+
+    # drop any empty dataframes
+    for k in df_dict.keys():
+        if df_dict[k].empty:
+            df_dict.pop(k)
     return df_dict, err
 
 
@@ -822,6 +840,29 @@ def report(
     return remaining
 
 
+def fatal_to_warning(err: Optional[Dict[Any, dict]]) -> Optional[Dict[Any, dict]]:
+    """Returns the same dictionary, but with all fatal errors downgraded to nonfatal errors"""
+    non_fatal_err = None
+    for k in err.keys():
+        if k[:5] == "warn-":
+            for j in err[k].keys():
+                non_fatal_err = ui.add_new_error(
+                    non_fatal_err,
+                    k,
+                    j,
+                    err[k][j]
+                )
+        else:
+            for j in err[k].keys():
+                non_fatal_err = ui.add_new_error(
+                    non_fatal_err,
+                    f"warn-{k}",
+                    j,
+                    err[k][j],
+            )
+    return non_fatal_err
+
+
 def add_new_error(
     err: Optional[Dict[Any, dict]], err_type: str, key: str, msg: str
 ) -> dict:
@@ -844,6 +885,15 @@ def add_new_error(
         err[err_type][key] = [msg]
     return err
 
+
+def fatal_err_to_non(err: Optional[Dict[Any, dict]]) -> Optional[Dict[Any, dict]]:
+    """Returns the same dictionary, but with all fatal errors downgraded to nonfatal errors"""
+    non_fatal_err = err.copy()
+    for k in err.keys():
+        if k[:5] != "warn-":
+            non_fatal_err[f"warn-{k}"] = non_fatal_err.pop(k)
+
+    return non_fatal_err
 
 def fatal_error(err, error_type_list=None, name_key_list=None) -> bool:
     """Returns true if there is a fatal error in the error dictionary <err>
