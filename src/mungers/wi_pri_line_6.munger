@@ -1,6 +1,6 @@
 [format]
 file_type=excel
-string_locations=constant_over_sheet,from_field_values
+string_locations=constant_over_sheet,from_field_values,in_count_headers
 count_locations=by_column_number
 
 encoding=iso-8859-1
@@ -8,13 +8,16 @@ thousands_separator=,
 sheets_to_skip=Document map
 rows_to_skip=2
 count_column_numbers=2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20
-string_field_name_row=
+string_field_name_row=3
+count_header_row_numbers=3,4
 
 [from_field_values]
 ReportingUnit=<County>
-Party=<header_0>
-Candidate={<header_1>,^(.*)\n*.*$}
 CountItemType=total
 
 [constant_over_sheet]
-CandidateContest=<row_4><row_5>
+CandidateContest=<row_2><row_3>
+
+[in_count_headers]
+Party=<header_0>
+Candidate={<header_1>,^(.*)\n*.*$}

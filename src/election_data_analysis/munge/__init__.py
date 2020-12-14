@@ -34,7 +34,7 @@ opt_munger_params: Dict[str, str] = {
     "count_header_row_numbers": "list-of-integers",
     "string_field_column_numbers": "list-of-integers",
     "string_field_names": "list-of-strings",
-    "string_field_name_row": "int",
+    "string_field_name_rows": "list-of-integers",
     "auxiliary_data_location": "string",
     "all_rows": "string",
     "constant_over_file": "list-of-strings",
@@ -812,9 +812,9 @@ def melt_to_one_count_column(df: pd.DataFrame, p: dict, mu_name: str) -> (pd.Dat
     melted = df.melt(id_vars=id_columns, value_vars=count_columns, var_name="header_0", value_name="Count")
     if multi:
         # remove extraneous text from columns headers, leaving only field name row
-        for idx in len(melted.columns):
+        for idx in range(melted.shape[1]):
             if melted.columns[idx] in id_columns:
-                melted.columns[idx] = melted.columns[idx].split(";:;")[p["string_field_name_row"]]
+                melted.columns[idx] = melted.columns[idx].split(";:;")[p["string_field_name_rows"]]
         if "in_count_headers" in p["string_locations"]:
 
             # split header_0 column into separate columns
@@ -1593,14 +1593,14 @@ def get_and_check_munger_params(munger_path: str) -> (dict, Optional[dict]):
 
         # # if all rows are not data, need field names
         if (format_options["all_rows"] is None):
-            if format_options["string_field_name_row"] is None:
+            if format_options["string_field_name_rows"] is None:
                 err = ui.add_new_error(
                     err,
                     "munger",
                     munger_name,
                     f"file_type={format_options['file_type']}' and absence of"
                     f" all_rows=data means field names must be in the "
-                    f"file. But string_field_name_row not given."
+                    f"file. But string_field_name_rows not given."
                 )
 
     # # for each value in list of string locations, requirements are met
@@ -1698,24 +1698,22 @@ def to_standard_count_frame(f_path: str, munger_path: str, p, constants) -> (pd.
         err = ui.consolidate_errors([err, new_err])
         if ui.fatal_error(new_err):
             return pd.DataFrame(), err
-    # remove any sheets designated to be removed
-    if p["sheets_to_skip"]:
-        for k in p["sheets_to_skip"]:
-            if k in raw_dict.keys():
-                raw_dict.pop(k)
+
     # for each df:
     standard = dict()
-    for k, raw in raw_dict.items():
+
+    # loop over sheets
+    error_by_sheet = dict()
+    keys_in_order = list(raw_dict.keys())
+    keys_in_order.sort()
+    for k in keys_in_order:
+        raw = raw_dict[k]
         # transform to df with single count column 'Count' and all raw munge info in other columns
         try:
-            standard[k], k_err = melt_to_one_count_column(raw, p, munger_name)
+            standard[k], error_by_sheet[k] = melt_to_one_count_column(raw, p, munger_name)
         except Exception as exc:
-            k_err = ui.add_new_error(None, "file", f_path, f"Unable to pivot dataframe {k}")
-        if k_err:
-            err = ui.consolidate_errors([err, k_err])
-            if ui.fatal_error(k_err):
-                return err
-
+            error_by_sheet[k] = ui.add_new_error(None, "file", f_path, f"Unable to pivot dataframe {k}")
+            continue  # goes to next k in loop
         # add columns for any constant-over-sheet elements
         if "constant_over_sheet" in p["string_locations"]:
             # see if <sheet_name> is needed
@@ -1734,47 +1732,53 @@ def to_standard_count_frame(f_path: str, munger_path: str, p, constants) -> (pd.
                             data.loc[row,data.loc[row].first_valid_index()],
                         )
             except ValueError as ve:
-                err = ui.add_new_error(
-                    err,
+                error_by_sheet[k] = ui.add_new_error(
+                    error_by_sheet[k],
                     "munger",
                     munger_name,
-                    f"Ill-formed reference to row of file in munger formulas in {ve}"
+                    f"In sheet {k}: Ill-formed reference to row of file in munger formulas in {ve}"
                 )
-                return pd.DataFrame(), err
+
             except KeyError() as ke:
                 variables = ",".join(munge_field_lists["constant_over_sheet"])
-                err = ui.add_new_error(
-                    err,
+                error_by_sheet[k] = ui.add_new_error(
+                    error_by_sheet[k],
                     "file",
                     Path(f_path).name,
-                    f"No data found for one of these: \n\t{variables}",
+                    f"In sheet {k}: No data found for one of these: \n\t{variables}",
                 )
-                return pd.DataFrame(), err
 
         # keep only necessary columns
         try:
             necessary = [item for sublist in munge_field_lists.values() for item in sublist] + ["Count"]
             standard[k] = standard[k][necessary]
         except KeyError as ke:
-            err = ui.add_new_error(
-                err,
+            error_by_sheet[k]= ui.add_new_error(
+                error_by_sheet[k],
                 "munger",
                 munger_name,
-                f"Field in munge formulas not found in file column headers read from file: {ke}",
+                f"In sheet {k}: Field in munge formulas not found in file column headers read from file: {ke}",
             )
-            return pd.DataFrame(), err
 
         # clean Count column
         standard[k], bad_rows = clean_count_cols(standard[k], ["Count"], p["thousands_separator"])
         if not bad_rows.empty:
-            err = ui.add_err_df(err, bad_rows, munger_name, f_path)
+            error_by_sheet[k] = ui.add_err_df(error_by_sheet[k], bad_rows, munger_name, f_path)
 
-    df = pd.concat(standard.values())
+    # if even one sheet lacks a fatal error, consider all errors non-fatal
+    non_fatal = [k for k in raw_dict.keys() if not ui.fatal_error(error_by_sheet[k])]
+    fatal = [k for k in raw_dict.keys() if ui.fatal_error(error_by_sheet[k])]
+    if non_fatal:
+        for k in fatal:
+            error_by_sheet[k] = ui.fatal_err_to_non(error_by_sheet[k])
+        df = pd.concat([standard[k] for k in non_fatal])
+        # clean non-count columns
+        non_count = [c for c in df.columns if c != "Count"]
+        df = clean_strings(df, non_count)
 
-    # clean non-count columns
-    non_count = [c for c in df.columns if c != "Count"]
-    df = clean_strings(df, non_count)
-
+    else:
+        df = pd.DataFrame
+    err = ui.consolidate_errors([error_by_sheet[k] for k in raw_dict.keys()])
     return df, err
 
 

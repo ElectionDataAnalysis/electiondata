@@ -230,7 +230,7 @@ def create_munger_files(
 
                 # get info from field_name_row
                 if d["field_name_row"] is not None:
-                    new_sections["format"].append(f"string_field_name_row={d['field_name_row']}")
+                    new_sections["format"].append(f"string_field_name_rows={d['field_name_row']}")
                     new_sections["format"].append(f"count_field_name_row={d['field_name_row']}")
 
                 # set sheets to skip

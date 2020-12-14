@@ -1829,7 +1829,7 @@ def load_results_file(
             err,
             "system",
             f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
-            f"Exception while reading data from file: {exc}"
+            f"Exception while converting data to standard form: {exc}"
         )
         return err
 
