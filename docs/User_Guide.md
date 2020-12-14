@@ -49,7 +49,7 @@ Ensure that the munger files are appropriate for your results file(s).
     * (required) either:
       * if all_rows=data (i.e., no field names) list `string_field_column_numbers` of integers designating columns (leftmost column is 0, next is 1, etc.)
       * otherwise, list `string_field_names` of names of fields containing character strings
-    * (required for 'excel' and 'flat_text' file_types where not all rows are data) specify location of field names for string columns. Need list of integers `string_field_name_rows` (NB: top row not skipped is 0, next row is 1, etc.)
+    * (required for 'excel' and 'flat_text' file_types where not all rows are data) specify location of field names for string columns. Need integer `string_field_name_row` (NB: top row not skipped is 0, next row is 1, etc.)
   * 'in_count_headers' this is used, e.g., when each candidate has a separate column in a tabular file. In this case there may be a single header row with relevant info, or there may be several rows (e.g., Contest in one row, Candidate in another row)
     * (required) list `count_header_row_numbers` of integers for rows containing necessary character strings. (NB: top row not skipped is 0, next row is 1, etc.)
   * 'constant_over_file'

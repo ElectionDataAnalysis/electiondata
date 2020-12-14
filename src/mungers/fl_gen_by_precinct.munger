@@ -6,7 +6,7 @@ string_locations=from_field_values
 encoding=iso-8859-1
 flat_file_delimiter=tab
 count_column_numbers=18
-string_field_name_row=None
+string_field_name_rows=None
 count_field_name_row=None
 all_rows=data
 

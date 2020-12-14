@@ -365,9 +365,9 @@ def tabular_kwargs(p: Dict[str, Any], kwargs: Dict[str, Any]) -> Dict[str, Any]:
     # if count_locations are by field name, need count_field_name_row
     if p["count_locations"] == "by_field_name":
         header_rows.update({p["count_field_name_row"]})
-    # if any string locations are from field values AND field names are in the table, need string_field_name_rows
+    # if any string locations are from field values AND field names are in the table, need string_field_name_row
     if (p["all_rows"] is None) and "from_field_values" in p["string_locations"]:
-        header_rows.update({p["string_field_name_rows"]})
+        header_rows.update({p["string_field_name_row"]})
     # if any string locations are in count headers need count_header_row_numbers
     if "in_count_headers" in p["string_locations"]:
         header_rows.update(p["count_header_row_numbers"])
