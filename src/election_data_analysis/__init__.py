@@ -1885,7 +1885,13 @@ def load_results_file(
         )
         return err
 
-    # # TODO for each contest, if none or unknown candidate has total votes 0, remove that candidate
+    # # TODO for each contest, if none or unknown candidate has total votes 0, remove rows with that contest & candidate
+    nou_candidate_id = db.name_to_id(session, "Candidate", "none or unknown")
+    nou_selection_ids = db.selection_ids_from_candidate_id(session, nou_candidate_id)
+    unknown = df[df.Selection_Id.isin(nou_selection_ids)].groupby(["Contest_Id","Selection_Id"]).sum()
+    for (contest_id, selection_id) in unknown.index:
+        mask = df[['Contest_Id', 'Selection_Id']] == (contest_id, selection_id)
+        df = df[~mask.all(axis=1)]
 
     # #  TODO replace any foreign keys with true values
     # add_datafile_Id and Election_Id columns
