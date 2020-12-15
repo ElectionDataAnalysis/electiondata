@@ -39,6 +39,7 @@ and similarly, if necessary, for any Contest or Selection. If there is more than
   * 'json-nested'
   * 'xml'
     * (required) must have `string_locations=from_field_values` or `string_locations=from_field_values,constant_over_file`
+    * (optional) if there are tags in the vote-count hierarchy that do not themselves contain data we want, list them in the `nesting_tags` parameter, e.g., `nesting_tags=contests,choices,jurisdictions,voteTypes`
   * 'flat_text' Any tab-, comma-, or other-separated table in a plain tabular text file.
     * (required) a field delimiter `flat_file_delimiter` to be specified (usually `flat_file_delimiter=,` for csv or `flat_file_delimiter=tab` for .txt)
   * [[ will be obsolete: `concatenated-blocks` Clarity format derived from xml]]
@@ -54,11 +55,11 @@ and similarly, if necessary, for any Contest or Selection. If there is more than
   * 'from_field_values'
     * (required) either:
       * if all_rows=data (i.e., no field names) list `string_field_column_numbers` of integers designating columns (leftmost column is 0, next is 1, etc.)
-      * otherwise, list `string_field_names` of names of fields containing character strings
     * (required for 'excel' and 'flat_text' file_types where not all rows are data) specify location of field names for string columns. Need integer `string_field_name_row` (NB: top row not skipped is 0, next row is 1, etc.)
   * 'in_count_headers' this is used, e.g., when each candidate has a separate column in a tabular file. In this case there may be a single header row with relevant info, or there may be several rows (e.g., Contest in one row, Candidate in another row)
     * (required) list `count_header_row_numbers` of integers for rows containing necessary character strings. (NB: top row not skipped is 0, next row is 1, etc.)
   * 'constant_over_file'
+    * (required) list of items constant over file `constant_over_file=CountItemType,CandidateContest`
     * (required) the `*.ini` file for the results file must specify the values
   * 'constant_over_sheet'
     * The system can extract strings from sheet names in Excel (designated as <sheet_name>) and/or from entire rows of a spreadsheet (designated as <row_0>, e.g.)

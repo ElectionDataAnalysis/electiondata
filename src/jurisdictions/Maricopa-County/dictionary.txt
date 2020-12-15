@@ -1236,6 +1236,7 @@ CountItemType	election-day	Votes_ELECTION DAY
 CountItemType	early	Votes_Early Vote
 CountItemType	early	Votes_EARLY VOTE
 CountItemType	provisional	Votes_PROVISIONAL
+CountItemType	total	Votes
 Candidate	Garcia, Bo 'Heir Archy'	Garcia, Bo 'Heir Archy'
 Candidate	Garcia, Bo 'Heir Archy'	Garcia, Bo &quot;Heir Archy&quot;
 Candidate	Kelly, Mark	Kelly, Mark

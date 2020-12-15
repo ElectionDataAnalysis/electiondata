@@ -4,6 +4,7 @@ count_locations=by_field_name
 string_locations=from_field_values
 
 encoding=ASCII
+nesting_tags=contests,choices,jurisdictions,voteTypes
 count_fields_by_name=voteType.votes
 
 [from_field_values]

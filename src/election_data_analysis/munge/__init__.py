@@ -33,11 +33,11 @@ opt_munger_params: Dict[str, str] = {
     "count_column_numbers": "list-of-integers",
     "count_header_row_numbers": "list-of-integers",
     "string_field_column_numbers": "list-of-integers",
-    "string_field_names": "list-of-strings",
     "string_field_name_row": "int",
     "auxiliary_data_location": "string",
     "all_rows": "string",
     "constant_over_file": "list-of-strings",
+    "nesting_tags": "list-of-strings",
 }
 
 munger_dependent_reqs: Dict[str, Dict[str, List[str]]] = {
@@ -55,7 +55,7 @@ req_munger_param_values: Dict[str, List[str]] = {
 }
 
 string_location_reqs: Dict[str, List[str]] = {
-    "from_field_values": ["string_field_names"],
+    "from_field_values": [],
     "in_count_headers": ["count_header_row_numbers"],
     "auxiliary_data": ["auxiliary_data_directory"],
     "constant_over_file": [],
@@ -71,7 +71,6 @@ all_munge_elements = [
     "ReportingUnit",
     "CountItemType",
 ]
-
 
 
 def clean_count_cols(
@@ -796,8 +795,15 @@ def melt_to_one_count_column(df: pd.DataFrame, p: dict, mu_name: str) -> (pd.Dat
             df.columns[idx] for idx in p["count_column_numbers"] if idx < df.shape[1]
         ]
     elif p["count_locations"] == "by_field_name":
-        assert not multi, "If there are multiple header rows, need to have count_locations=by_column_number, "
-        count_columns = p["count_fields_by_name"]
+        if multi:
+            err = ui.add_new_error(
+                err,
+                "munger",
+                mu_name,
+                "If there are multiple header rows, need to have count_locations=by_column_number ",
+            )
+            return pd.DataFrame(), err
+        count_columns = [c for c in p["count_fields_by_name"] if c in df.columns]
     else:
         err = ui.add_new_error(
             err,
@@ -811,23 +817,43 @@ def melt_to_one_count_column(df: pd.DataFrame, p: dict, mu_name: str) -> (pd.Dat
     id_columns = [c for c in df.columns if c not in count_columns]
     melted = df.melt(id_vars=id_columns, value_vars=count_columns, var_name="header_0", value_name="Count")
     if multi:
-       # remove extraneous text from columns headers, leaving only field name row
+        # remove extraneous text from column multi-headers for string fields (id_columns),
+        #  leaving only string field name row
+        tab_to_df = df_header_rows_from_sheet_header_rows(p)
         new_columns = list(melted.columns)
         for idx in range(melted.shape[1]):
             if melted.columns[idx] in id_columns:
-                index_of_string_field_names = p["string_field_name_row"] - min(p["count_header_row_numbers"])
-                new_columns[idx] = melted.columns[idx].split(";:;")[index_of_string_field_names]
+                new_columns[idx] = melted.columns[idx].split(";:;")[tab_to_df[p["string_field_name_row"]]]
         melted.columns = new_columns
         if "in_count_headers" in p["string_locations"]:
 
             # split header_0 column into separate columns
+            # # get header_rows
+            min_ct_header_row = min(p["count_header_row_numbers"])
             melted[
-                [f"header_{idx}" for idx in p["count_header_row_numbers"]]
+                [f"header_{idx-min_ct_header_row}" for idx in p["count_header_row_numbers"]]
             ] = pd.DataFrame(
                 melted["header_0"].str.split(";:;", expand=True).values
-            )
+            )[
+                [tab_to_df[idx] for idx in p["count_header_row_numbers"]]
+            ]
     
     return melted, err
+
+
+def df_header_rows_from_sheet_header_rows(
+        p: Dict[str, Any]
+) -> Dict[int, int]:
+    """produces mapping from the header row numbering in the tabular file -- which could be
+    any collection of rows -- to the header numbering in the dataframe
+    (which must be 0 - n for some n). """
+    if p["count_header_row_numbers"] or p["string_field_name_row"]:
+        # create sorted list with no dupes
+        table_rows = sorted(set(p["count_header_row_numbers"] + [p["string_field_name_row"]]))
+        tab_to_df = {table_rows[idx]: idx for idx in range(len(table_rows))}
+    else:
+        tab_to_df = dict()
+    return tab_to_df
 
 
 def munge_and_melt(
@@ -1729,7 +1755,7 @@ def to_standard_count_frame(f_path: str, munger_path: str, p, constants) -> (pd.
         try:
             standard[k], error_by_sheet[k] = melt_to_one_count_column(raw, p, munger_name)
         except Exception as exc:
-            error_by_sheet[k] = ui.add_new_error(None, "file", f_path, f"Unable to pivot dataframe {k}")
+            error_by_sheet[k] = ui.add_new_error(None, "file", f_path, f"Unable to pivot dataframe {k}:\n {exc}")
             continue  # goes to next k in loop
 
         # add columns for any constant-over-sheet elements

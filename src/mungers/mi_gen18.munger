@@ -7,12 +7,33 @@ encoding=ASCII
 flat_file_delimiter=tab
 count_column_numbers=11
 all_rows=data
+constant_over_file=CountItemType
 
 [from_field_values]
 ReportingUnit=<county[County Name]>;<cit[City/Township Description]>;Ward <Ward Number>;Precinct <Precinct Number> Label <Precinct Label>
 Party=<name[Candidate Party Name]>
 CandidateContest=<off[Office Description]>
-Candidate=<name[Candidate First Name]> <name[Candidate Middle Name]> <name[Candidate Last Name]>
-BallotMeasureContest=<off[Office Description]>
-BallotMeasureSelection=<name[Candidate Last Name]>
-CountItemType=total
+Candidate=<column_5>
+
+
+[Candidate lookup]
+source_file=2018GEN/2018name.txt
+file_type=flat_file
+flat_file_delimiter=tab
+encoding=ASCII
+lookup_id=<column_5>
+Candidate=<column_7> <column_8> <column_6>
+all_rows=data
+
+[CandidateContest lookup]
+source_file=2018GEN/2018off.txt
+file_type=flat_file
+flat_file_delimiter=tab
+encoding=ASCII
+lookup_id=<column_2>
+CandidateContest=<column_5>
+all_rows=data
+
+
+
+

@@ -1157,3 +1157,4 @@ Candidate	Bowers, Russell W. 'Rusty'	Bowers, Russell W. "Rusty"
 Candidate	Bowers, Kenneth R 'Ken', Jr	Bowers, Kenneth R "Ken", Jr
 Candidate	Blackman, Walter 'Walt'	Blackman, Walter "Walt"
 Candidate	Beach - Moschetti, Kimberly 'Kim'	Beach - Moschetti, Kimberly "Kim"
+Candidate	Julián Castro	JuliÃ¡n Castro
