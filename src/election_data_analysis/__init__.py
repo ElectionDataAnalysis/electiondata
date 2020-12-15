@@ -1632,6 +1632,22 @@ class Analyzer:
         return err
 
 
+    def export_nist(self, election: str, jurisdiction: str):
+        election_id = db.name_to_id(self.session, "Election", election)
+        jurisdiction_id = db.name_to_id(self.session, "ReportingUnit", jurisdiction)
+
+        election_report = {}
+
+        election_report["Contest"] = a.nist_candidate_contest(self.session, election_id, jurisdiction_id)
+        election_report["GpUnit"] = a.nist_reporting_unit(self.session, election_id, jurisdiction_id)
+        election_report["Party"] = a.nist_party(self.session, election_id, jurisdiction_id) 
+        election_report["Election"] = a.nist_election(self.session, election_id, jurisdiction_id) 
+        election_report["Office"] = a.nist_office(self.session, election_id, jurisdiction_id) 
+        election_report["Candidate"] = a.nist_candidate(self.session, election_id, jurisdiction_id)
+
+        return election_report
+
+
 def get_filename(path: str) -> str:
     head, tail = ntpath.split(path)
     return tail or ntpath.basename(head)
