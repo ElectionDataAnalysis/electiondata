@@ -377,6 +377,8 @@ def tabular_kwargs(p: Dict[str, Any], kwargs: Dict[str, Any]) -> Dict[str, Any]:
             kwargs["header"] = sorted(header_rows)
         else:
             kwargs["header"] = header_rows.pop()
+    else:
+        kwargs["header"] = 0
 
     # designate rows to skip
     if p["rows_to_skip"]:
@@ -390,7 +392,7 @@ def basic_kwargs(p: Dict[str, Any], kwargs: Dict[str, Any]) -> Dict[str, Any]:
         if p["all_rows"] == "data":
             dtype = str
         else:
-            dtype = {c: str for c in p["string_field_names"]}
+            dtype = {c: str for c in p["munge_fields"]["from_field_values"]}
         kwargs["dtype"] = dtype
 
     # other parameters

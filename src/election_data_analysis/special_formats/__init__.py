@@ -409,6 +409,7 @@ def read_xml(
     # and list data to be pulled from each tag
     fields = set(p["count_fields_by_name"]).union(p["munge_fields"]["from_field_values"])
     tags = {f.split(".")[0] for f in fields}
+    tags.update(p["nesting_tags"])
     attributes = {t: [x.split(".")[1] for x in fields if x.split(".")[0] == t] for t in tags}
 
     try:

@@ -13,24 +13,7 @@ import csv
 
 
 # constants
-munger_pars_req = ["file_type"]
-munger_pars_opt = {
-    "header_row_count": "int",
-    "field_name_row": "int",
-    "header_row": "int",
-    "field_names_if_no_field_name_row": "list-of-strings",
-    "count_columns_by_name": "list-of-strings",
-    "count_columns": "list-of-integers",
-    "thousands_separator": "str",
-    "encoding": "str",
-    "count_of_top_lines_to_skip": "int",
-    "columns_to_skip": "list-of-integers",
-    "last_header_column_count": "int",
-    "column_width": "int",
-    "sheets_to_skip": "list-of-strings",
-    "constant_line_count": "int",
-    "constant_column_count": "int",
-}
+
 
 
 def recast_options(options: dict, types: dict) -> dict:
