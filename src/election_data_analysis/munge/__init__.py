@@ -363,14 +363,20 @@ def add_column_from_formula(
 
         # add column to <working> dataframe via the concatenation formula
         if last_text:
-            w.loc[:, new_col] = last_text[0]
+            w = add_constant_column(w, new_col, last_text[0], dtype="string")
         else:
-            w.loc[:, new_col] = ""
+            err = ui.add_new_error(
+                err,
+                "system",
+                f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
+                f"No last_text found by text_fragments_and_fields for {formula}"
+            )
+            return w, err
         text_field_list.reverse()
         for t, f in text_field_list:
             try:
-                w.loc[:, new_col] = (
-                    w.loc[:, f].apply(lambda x: f"{t}{x}") + w.loc[:, new_col]
+                w[new_col] = (
+                    t + w[f].map(str) + w[new_col].map(str)
                 )
             except KeyError as ke:
                 err = ui.add_new_error(
@@ -921,8 +927,12 @@ def munge_and_melt(
     return working, err
 
 
-def add_constant_column(df, col_name, col_value):
+def add_constant_column(
+        df: pd.DataFrame, col_name: str, col_value: Any, dtype: Optional[str] = None
+) -> pd.DataFrame:
     new_df = df.assign(**dict.fromkeys([col_name], col_value))
+    if dtype:
+        new_df[col_name] = new_df[col_name].astype(dtype)
     return new_df
 
 
@@ -1538,9 +1548,6 @@ def munge_source_to_raw(
                         aux_info, aux_directory_path, munger_name, suffix,
                     )
 
-                # append suffix to formula fields
-                for c in orig_string_cols:
-                    formula = formula.replace(f"<{c}>", f"<{c}{suffix}>")
                 # add col with munged values
                 working, new_err = add_column_from_formula(
                     working, formula, f"{element}_raw", err, munger_name
@@ -1563,11 +1570,11 @@ def munge_source_to_raw(
                     f"Error interpreting formula for {element} in cdf_element.txt. {exc}",
                 )
                 return working, err
-            # compress whitespace for <element>_raw
+
             working.loc[:, f"{element}_raw"] = working[f"{element}_raw"].apply(
                 compress_whitespace
             )
-
+            print(f"Column {element}_raw added")
     # drop the original columns
     working.drop([f"{x}{suffix}" for x in orig_string_cols], axis=1, inplace=True)
     return working, err
@@ -1911,12 +1918,13 @@ def get_aux_info(
         formulas: Dict[str, str],
         elements: List[str],
         munger_path: str
-) -> (Dict[str, Dict[str, Dict[str, Any]]], List[str]):
+) -> (Dict[str, Dict[str, Dict[str, Any]]], Dict[str,List[str]]):
     """returns a dictionary whose keys are elements. For each element, a dictionary whose keys are fields
     in that element's formula"""
     aux = dict()
-    foreign_key_fields = list()
+    foreign_key_fields = dict()
     for element in elements:
+        fk_list = list()
         aux[element] = dict()
         # for each field appearing in the element's formula
         fk_candidates = get_fields_from_formula(formulas[element])
@@ -1931,11 +1939,12 @@ def get_aux_info(
             )
             if not f_err:
                 # add the foreign key to the list
-                foreign_key_fields.append(field)
+                fk_list.append(field)
                 # grab replacement formula, lookup_id, list of fields in replacement formula
                 aux[element][field]["r_formula"] = f_p[f"{element}_replacement"]
                 aux[element][field]["params"] = f_p
                 aux[element][field]["r_fields"] = get_fields_from_formula(f_p[f"{element}_replacement"])
+            foreign_key_fields[element] = fk_list
     return aux, foreign_key_fields
 
 
@@ -1943,7 +1952,7 @@ def incorporate_aux_info(
         df: pd.DataFrame,
         element: str,
         formula: str,
-        foreign_key_fields: List[str],
+        foreign_key_fields: Dict[str,List[str]],
         aux: Dict[str, Dict[str, Dict[str, Any]]],
         aux_directory_path: str,
         munger_name: str,   # for error reporting
@@ -1954,28 +1963,30 @@ def incorporate_aux_info(
     Note cols are assumed to have suffix, but aux does not include suffix"""
     w_df = df.copy()
     err = None  # TODO error handline
-    for fk in foreign_key_fields:
+    for fk in foreign_key_fields[element]:
         r_formula = aux[element][fk]["r_formula"]
-        lookup_id = aux[element][fk]["params"]["lookup_id"]
         r_fields = aux[element][fk]["r_fields"]
-        p = aux[element][fk]["params"]
-        # grab the lookup table
-        lt_path = os.path.join(aux_directory_path, aux[element][fk]["params"]["source_file"])
-        lookup_df, fk_err = ui.read_single_datafile(lt_path, aux[element][fk]["params"], munger_name, dict(), aux=True)
 
-        # add all lookup columns to table and rename to e.g. 'County_id LOOKUP County_name'
-        rename = {c: f"{fk} LOOKUP {c}{suffix}" for c in lookup_df.columns}
-        w_df = w_df.merge(
-            lookup_df,
-            left_on=f"{fk}{suffix}",
-            right_on=aux[element][fk]["params"]["lookup_id"],
-        ).rename(columns=rename)
+        # have lookup table columns already been appended? Don't append them again!
+        if not any([f"{fk} LOOKUP" in c for c in w_df.columns]):
+            # grab the lookup table
+            lt_path = os.path.join(aux_directory_path, aux[element][fk]["params"]["source_file"])
+            lookup_df_dict, fk_err = ui.read_single_datafile(lt_path, aux[element][fk]["params"], munger_name, dict(), aux=True)
+
+            lookup_df = lookup_df_dict["Sheet1"]
+            # add all lookup columns to table and rename to e.g. 'County_id LOOKUP County_name'
+            rename = {c: f"{fk} LOOKUP {c}{suffix}" for c in lookup_df.columns}
+            w_df = w_df.merge(
+                lookup_df,
+                left_on=f"{fk}{suffix}",
+                right_on=aux[element][fk]["params"]["lookup_id"],
+            ).rename(columns=rename)
 
         # revise formula
         r_formula_new_col_names = r_formula
         for c in r_fields:
-            r_formula_new_col_names = r_formula_new_col_names.replace(f"<{c}>", f"{rename[c]}")
-        w_formula = w_formula.replace(f"<{fk}>",r_formula_new_col_names)
+            r_formula_new_col_names = r_formula_new_col_names.replace(f"<{c}>", f"<{rename[c]}>")
+        w_formula = formula.replace(f"<{fk}>",r_formula_new_col_names)
 
     return w_df, w_formula, err
 
