@@ -503,6 +503,7 @@ class SingleDataLoader:
                     self.juris,
                     results_info,
                     constants,
+                    self.results_dir,
                 )
                 if new_err:
                     err = ui.consolidate_errors([err, new_err])
@@ -1769,9 +1770,10 @@ def load_results_file(
         juris: jm.Jurisdiction,
         election_datafile_ids: dict,
         constants: Dict[str, str],
+        results_directory_path,
 ) -> Optional[dict]:
 
-    # TODO complete this routine
+    # TODO tech debt: redundant to pass results_directory_path and f_path
     munger_name = Path(munger_path).name
     # read parameters from munger file
     p, err = m.get_and_check_munger_params(munger_path)
@@ -1815,6 +1817,7 @@ def load_results_file(
             p,
             original_string_columns,
             "_SOURCE",
+            results_directory_path,
         )
     except Exception as exc:
         err = ui.add_new_error(

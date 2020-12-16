@@ -22,7 +22,7 @@ Ensure that the munger files are appropriate for your results file(s).
  The file with munger parameters, which must have the extension `.munger`, has one or more sections, each with a header:
   * (required) `[format]` for the main parameters
   * (may be required) one section each string locations `from_field_values` and `in_count_headers` if these are listed in the `string_locations` parameter (defined below). 
-  * (may be required) one section for each element in the `lookups` list. E.g., if `lookups=Candidate,Party` then there must be  `[Candidate lookup]` and `[Party lookup]` sections
+  * (may be required) one section for each element in the `lookups` list. E.g., if `lookups=Candidate,Party` then there must be  `[Candidate lookup]` and `[Party lookup]` sections. 
   * (optional) `[ignore]` Unrecognized Contests, Candidates and Parties are collected as "none or unknown". Some states (e.g., Wisconsin 2018 General) report total votes over a contest next to individual candidates' votes. The system may read, e.g., "Total Votes Cast" as an unrecognized party name. In this case include the lines:
   ```
 [ignore]
@@ -55,7 +55,13 @@ and similarly, if necessary, for any Contest or Selection. If there is more than
   * 'from_field_values'
     * (required) either:
       * if all_rows=data (i.e., no field names) list `string_field_column_numbers` of integers designating columns (leftmost column is 0, next is 1, etc.)
-      * if some of the field values are foreign keys, must give lookup information. [**** FILL THIS IN ***]
+      * if some of the field values are foreign keys, must give lookup information. For each foreign key, need a separate section with corresponding header (field name plus " lookup", e.g. `[county_id lookup]`. This section needs:
+        * `source_file` the path to the source file, relative to the results directory given in `run_time.ini`
+        * all the usual basic format parameters except `count_locations` -- but not the usual formulas
+        * `lookup_id` is the single field name holding the key to the lookup table. (If there are no headers in the lookup source file, use, e.g., `column_0`)
+        * for each element whose formula looks something up from this table, a formula for the foreign key replacement.
+       
+       [**** FILL THIS IN *** SHOW FULL .munger file FROM mi 2018]
     * (required for 'excel' and 'flat_text' file_types where not all rows are data) specify location of field names for string columns. Need integer `string_field_name_row` (NB: top row not skipped is 0, next row is 1, etc.)
   * 'in_count_headers' this is used, e.g., when each candidate has a separate column in a tabular file. In this case there may be a single header row with relevant info, or there may be several rows (e.g., Contest in one row, Candidate in another row)
     * (required) list `count_header_row_numbers` of integers for rows containing necessary character strings. (NB: top row not skipped is 0, next row is 1, etc.)
