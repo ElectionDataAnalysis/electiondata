@@ -359,26 +359,29 @@ def find_dupes(df):
     return dupes_df, deduped
 
 
-def tabular_kwargs(p: Dict[str, Any], kwargs: Dict[str, Any]) -> Dict[str, Any]:
+def tabular_kwargs(p: Dict[str, Any], kwargs: Dict[str, Any], aux=False) -> Dict[str, Any]:
     # designate header rows (for both count columns or string-location info/columns)
-    header_rows = set()
-    # if count_locations are by field name, need count_field_name_row
-    if p["count_locations"] == "by_field_name":
-        header_rows.update({p["count_field_name_row"]})
-    # if any string locations are from field values AND field names are in the table, need string_field_name_row
-    if (p["all_rows"] is None) and "from_field_values" in p["string_locations"]:
-        header_rows.update({p["string_field_name_row"]})
-    # if any string locations are in count headers need count_header_row_numbers
-    if "in_count_headers" in p["string_locations"]:
-        header_rows.update(p["count_header_row_numbers"])
-    if header_rows:
-        # if multi-index
-        if len(header_rows) > 1:
-            kwargs["header"] = sorted(header_rows)
-        else:
-            kwargs["header"] = header_rows.pop()
+    if p["all_rows"] == "data":
+        kwargs["header"] = None
     else:
-        kwargs["header"] = 0
+        header_rows = set()
+        # if count_locations are by field name, need count_field_name_row
+        if not aux and p["count_locations"] == "by_field_name":
+            header_rows.update({p["count_field_name_row"]})
+        # if any string locations are from field values AND field names are in the table, need string_field_name_row
+        if "from_field_values" in p["string_locations"]:
+            header_rows.update({p["string_field_name_row"]})
+        # if any string locations are in count headers need count_header_row_numbers
+        if "in_count_headers" in p["string_locations"]:
+            header_rows.update(p["count_header_row_numbers"])
+        if header_rows:
+            # if multi-index
+            if len(header_rows) > 1:
+                kwargs["header"] = sorted(header_rows)
+            else:
+                kwargs["header"] = header_rows.pop()
+        else:
+            kwargs["header"] = 0
 
     # designate rows to skip
     if p["rows_to_skip"]:
@@ -386,10 +389,10 @@ def tabular_kwargs(p: Dict[str, Any], kwargs: Dict[str, Any]) -> Dict[str, Any]:
     return kwargs
 
 
-def basic_kwargs(p: Dict[str, Any], kwargs: Dict[str, Any]) -> Dict[str, Any]:
+def basic_kwargs(p: Dict[str, Any], kwargs: Dict[str, Any], aux: bool = False) -> Dict[str, Any]:
     # ensure that string-location field values will be read as strings
     if "from_field_values" in p["string_locations"]:
-        if p["all_rows"] == "data":
+        if aux or (p["all_rows"] == "data"):
             dtype = str
         else:
             dtype = {c: str for c in p["munge_fields"]["from_field_values"]}
@@ -427,17 +430,19 @@ def read_single_datafile(
     p: Dict[str, Any],
     munger_name: str,
     err: Optional[Dict],
+    aux: bool = False,
 ) -> (Dict[str, pd.DataFrame], dict):
-    """Length of returned dictionary is the number of sheets read -- usually 1 except for multi-sheet Excel"""
+    """Length of returned dictionary is the number of sheets read -- usually 1 except for multi-sheet Excel.
+    Auxiliary files have different parameters (e.g., no count locations)"""
     kwargs = dict()  # for syntax checker
 
     # prepare keyword arguments for pandas read_* function
     if p["file_type"] in ["excel"]:
-        kwargs = basic_kwargs(p, dict())
-        kwargs = tabular_kwargs(p, kwargs)
+        kwargs = basic_kwargs(p, dict(), aux=aux)
+        kwargs = tabular_kwargs(p, kwargs, aux=aux)
     elif p["file_type"] in ["flat_text"]:
-        kwargs = basic_kwargs(p, dict())
-        kwargs = tabular_kwargs(p, kwargs)
+        kwargs = basic_kwargs(p, dict(), aux=aux)
+        kwargs = tabular_kwargs(p, kwargs, aux=aux)
         kwargs["quoting"] = csv.QUOTE_MINIMAL
         kwargs["sep"] = p["flat_file_delimiter"].replace("tab", "\t")
 
@@ -456,8 +461,8 @@ def read_single_datafile(
             else:
                 df_dict = {"Sheet1": df}
         elif p["file_type"] == "excel":
-            kwargs["index_col"] = None # TODO: tech debt can we omit index_col for all?
-                                        #  need to omit index_col here since multi-index headers are possible
+            kwargs["index_col"] = None  # TODO: tech debt can we omit index_col for all?
+            #  need to omit index_col here since multi-index headers are possible
             # to avoid getting fatal error when a sheet doesn't read in correctly
             df_dict = dict()
             for sheet in list_desired_excel_sheets(f_path, p):
@@ -506,10 +511,15 @@ def read_single_datafile(
     # drop any empty dataframes
     df_dict = {k:v for k,v in df_dict.items() if not v.empty}
 
-    # drop any empty columns
-    for k in df_dict.keys():
-        mask = ~(df_dict[k].isnull() | df_dict[k].isin([0,""])).all()
-        df_dict[k] = df_dict[k].loc[:, mask]
+    if not aux:
+        # drop any empty columns (except columns in string munge_fields)
+        for k in df_dict.keys():
+            mask = ~(df_dict[k].isnull() | df_dict[k].isin([0,""])).all()
+            # ensure mask is "True" for munge fields
+            for mf_k in p["munge_fields"].keys():
+                for c in p["munge_fields"][mf_k]:
+                    mask[c] = True
+            df_dict[k] = df_dict[k].loc[:, mask]
     return df_dict, err
 
 
