@@ -680,8 +680,8 @@ def get_parameters(
         header: str,
         err: Optional[Dict] = None,
         optional_keys: Optional[List[str]] = None,
-) -> (dict, dict):
-    d = {}
+) -> (Dict[str, str], Optional[Dict[str,dict]]):
+    d = dict()
 
     # read info from file
     parser = ConfigParser()

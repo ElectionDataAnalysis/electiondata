@@ -21,9 +21,9 @@ file_type= flat_text
 flat_file_delimiter=tab
 string_locations=from_field_values
 encoding=ASCII
+all_rows=data
 lookup_id=column_2
 CandidateContest_replacement=<column_5>
-all_rows=data
 
 [column_5 lookup]
 source_file=Michigan/2018GEN/2018name.txt
@@ -31,10 +31,11 @@ file_type= flat_text
 flat_file_delimiter=tab
 string_locations=from_field_values
 encoding=ASCII
+all_rows=data
 lookup_id=column_5
 Candidate_replacement=<column_7> <column_8> <column_6>
 Party_replacement=<column_5>
-all_rows=data
+
 
 [column_6 lookup]
 source_file=Michigan/2018GEN/county.txt
@@ -42,9 +43,9 @@ file_type= flat_text
 flat_file_delimiter=tab
 string_locations=from_field_values
 encoding=ASCII
+all_rows=data
 lookup_id=column_2
 ReportingUnit_replacement=<column_5>
-all_rows=data
 
 [column_7 lookup]
 source_file=Michigan/2018GEN/2018city.txt
@@ -52,9 +53,10 @@ file_type= flat_text
 flat_file_delimiter=tab
 string_locations=from_field_values
 encoding=ASCII
+all_rows=data
 lookup_id=column_2
 ReportingUnit_replacement=<column_5>
-all_rows=data
+
 
 
 

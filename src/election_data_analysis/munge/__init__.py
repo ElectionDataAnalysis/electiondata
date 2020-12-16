@@ -306,7 +306,7 @@ def add_regex_column(
     return working, err
 
 
-def text_fragments_and_fields(formula):
+def text_fragments_and_fields(formula: str) -> (List[List[str]], str):
     """Given a formula with fields enclosed in angle brackets,
     return a list of text-fragment,field pairs (in order of appearance) and a final text fragment.
     E.g., if formula is <County>;<Precinct>, returned are [(None,County),(';',Precinct)] and None."""
@@ -1508,7 +1508,6 @@ def munge_source_to_raw(
 ) -> (pd.DataFrame, Optional[dict]):
     """NB: assumes columns of dataframe have <suffix> appended already"""
     err = None
-    pattern = re.compile("<([^>])>")
 
     if df.empty:
         return df, err
@@ -1526,39 +1525,19 @@ def munge_source_to_raw(
             param_file=munger_path,
         )
         elements = [k for k in formulas.keys() if (formulas[k] is not None) and (formulas[k] != "None")]
-        # TODO if source is "from_field_values", capture any lookup info
-        if source == "from_field_values":
-            ldf = dict()
-            lp = dict()
-            reqs = ["source_file", "file_type", "lookup_id", "string_locations"]
-            opts = [f"{el}_replacement" for el in elements] + list(opt_munger_params.keys())
-            for c in orig_string_cols:
-                c_p, c_err = ui.get_parameters(required_keys=reqs, optional_keys=opts, param_file=munger_path, header=f"{c} lookup")
-                if not c_err:  # NB in particular, this means header exists
-                    lp[c] = c_p
-                    c_file_path = os.path.join(aux_directory_path, c_p["source_file"])
-                    ldf[c], c_err = ui.read_single_datafile(c_file_path, c_p, munger_name, None, aux=True)
+        # get any aux info (NB: does not include suffix)
+        aux_info, foreign_key_fields = get_aux_info(p, formulas, elements, munger_path)
 
         for element in elements:
             try:
                 formula = formulas[element]
-                # TODO for each item needing lookup, add lookup column
-                # # get list of items in formula that are lookups
-                for lk in lookup.keys():
-                    if f"<{lk}>" in formula:
-                        # add lookup column
-                        # TODO assumes unique keys in lookup table
+                # if formula refers to any fields that need to be looked up, make appropriate replacements
+                if element in aux_info.keys():
+                    working, formula, err = incorporate_aux_info(
+                        working, element, formula, foreign_key_fields,
+                        aux_info, aux_directory_path, munger_name, suffix,
+                    )
 
-                        # TODO get these formulas right!
-                        replacement_cols = [lp[c]["lookup_id"]] + pattern.findall(lp[c][f"{element}_replacement"])
-                        working = working.merge(
-                            ldf[lk][replacement_cols],
-                            left_on=f"{c}{suffix}",
-                            right_on=lp[c]["lookup_id"],
-
-                        )
-
-                # TODO if formula refers to any fields that need to be looked up, make appropriate replacements
                 # append suffix to formula fields
                 for c in orig_string_cols:
                     formula = formula.replace(f"<{c}>", f"<{c}{suffix}>")
@@ -1925,3 +1904,84 @@ def fill_vote_count(
         )
 
     return err
+
+
+def get_aux_info(
+        p: Dict[str, Any],
+        formulas: Dict[str, str],
+        elements: List[str],
+        munger_path: str
+) -> (Dict[str, Dict[str, Dict[str, Any]]], List[str]):
+    """returns a dictionary whose keys are elements. For each element, a dictionary whose keys are fields
+    in that element's formula"""
+    aux = dict()
+    foreign_key_fields = list()
+    for element in elements:
+        aux[element] = dict()
+        # for each field appearing in the element's formula
+        fk_candidates = get_fields_from_formula(formulas[element])
+        for field in fk_candidates:
+            aux[element][field] = dict()
+            # if there is a lookup for this field, grab it
+            f_p, f_err = ui.get_parameters(
+                required_keys=["source_file", "file_type", "string_locations", "lookup_id"],
+                optional_keys=list(opt_munger_params.keys()) + [f"{element}_replacement"],
+                header=f"{field} lookup",
+                param_file=munger_path,
+            )
+            if not f_err:
+                # add the foreign key to the list
+                foreign_key_fields.append(field)
+                # grab replacement formula, lookup_id, list of fields in replacement formula
+                aux[element][field]["r_formula"] = f_p[f"{element}_replacement"]
+                aux[element][field]["params"] = f_p
+                aux[element][field]["r_fields"] = get_fields_from_formula(f_p[f"{element}_replacement"])
+    return aux, foreign_key_fields
+
+
+def incorporate_aux_info(
+        df: pd.DataFrame,
+        element: str,
+        formula: str,
+        foreign_key_fields: List[str],
+        aux: Dict[str, Dict[str, Dict[str, Any]]],
+        aux_directory_path: str,
+        munger_name: str,   # for error reporting
+        suffix: str,
+) -> (pd.DataFrame, str, Optional[Dict[str, Any]]):
+    """revises the dataframe, adding necessary columns obtained from lookup tables,
+    and revises the formula to pull from those columns instead of foreign key columns
+    Note cols are assumed to have suffix, but aux does not include suffix"""
+    w_df = df.copy()
+    err = None  # TODO error handline
+    for fk in foreign_key_fields:
+        r_formula = aux[element][fk]["r_formula"]
+        lookup_id = aux[element][fk]["params"]["lookup_id"]
+        r_fields = aux[element][fk]["r_fields"]
+        p = aux[element][fk]["params"]
+        # grab the lookup table
+        lt_path = os.path.join(aux_directory_path, aux[element][fk]["params"]["source_file"])
+        lookup_df, fk_err = ui.read_single_datafile(lt_path, aux[element][fk]["params"], munger_name, dict(), aux=True)
+
+        # add all lookup columns to table and rename to e.g. 'County_id LOOKUP County_name'
+        rename = {c: f"{fk} LOOKUP {c}{suffix}" for c in lookup_df.columns}
+        w_df = w_df.merge(
+            lookup_df,
+            left_on=f"{fk}{suffix}",
+            right_on=aux[element][fk]["params"]["lookup_id"],
+        ).rename(columns=rename)
+
+        # revise formula
+        r_formula_new_col_names = r_formula
+        for c in r_fields:
+            r_formula_new_col_names = r_formula_new_col_names.replace(f"<{c}>", f"{rename[c]}")
+        w_formula = w_formula.replace(f"<{fk}>",r_formula_new_col_names)
+
+    return w_df, w_formula, err
+
+
+def get_fields_from_formula(formula: str) -> List[str]:
+    texts_and_fields, final_text = text_fragments_and_fields(formula)
+    fields = [x[1] for x in texts_and_fields]
+    return fields
+
