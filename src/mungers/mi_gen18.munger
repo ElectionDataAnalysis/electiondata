@@ -10,30 +10,51 @@ all_rows=data
 constant_over_file=CountItemType
 
 [from_field_values]
-ReportingUnit=<county[County Name]>;<cit[City/Township Description]>;Ward <Ward Number>;Precinct <Precinct Number> Label <Precinct Label>
-Party=<name[Candidate Party Name]>
-CandidateContest=<off[Office Description]>
+ReportingUnit=<column_6>;<column_7>;Ward <column_8>;Precinct <column_9> Label <column_10>
+Party=<column_5>
+CandidateContest=<column_2>
 Candidate=<column_5>
 
-
-[Candidate lookup]
-source_file=2018GEN/2018name.txt
-file_type=flat_file
+[column_2 lookup]
+source_file=Michigan/2018GEN/2018offc.txt
+file_type= flat_text
 flat_file_delimiter=tab
+string_locations=from_field_values
 encoding=ASCII
-lookup_id=<column_5>
-Candidate=<column_7> <column_8> <column_6>
+lookup_id=column_2
+CandidateContest_replacement=<column_5>
 all_rows=data
 
-[CandidateContest lookup]
-source_file=2018GEN/2018off.txt
-file_type=flat_file
+[column_5 lookup]
+source_file=Michigan/2018GEN/2018name.txt
+file_type= flat_text
 flat_file_delimiter=tab
+string_locations=from_field_values
 encoding=ASCII
-lookup_id=<column_2>
-CandidateContest=<column_5>
+lookup_id=column_5
+Candidate_replacement=<column_7> <column_8> <column_6>
+Party_replacement=<column_5>
 all_rows=data
 
+[column_6 lookup]
+source_file=Michigan/2018GEN/county.txt
+file_type= flat_text
+flat_file_delimiter=tab
+string_locations=from_field_values
+encoding=ASCII
+lookup_id=column_2
+ReportingUnit_replacement=<column_5>
+all_rows=data
+
+[column_7 lookup]
+source_file=Michigan/2018GEN/2018city.txt
+file_type= flat_text
+flat_file_delimiter=tab
+string_locations=from_field_values
+encoding=ASCII
+lookup_id=column_2
+ReportingUnit_replacement=<column_5>
+all_rows=data
 
 
 

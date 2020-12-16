@@ -34,7 +34,6 @@ opt_munger_params: Dict[str, str] = {
     "count_header_row_numbers": "list-of-integers",
     "string_field_column_numbers": "list-of-integers",
     "string_field_name_row": "int",
-    "auxiliary_data_location": "string",
     "all_rows": "string",
     "constant_over_file": "list-of-strings",
     "nesting_tags": "list-of-strings",
@@ -1505,9 +1504,12 @@ def munge_source_to_raw(
         p: Dict[str, Any],
         orig_string_cols: List[str],
         suffix: str,
+        aux_directory_path,
 ) -> (pd.DataFrame, Optional[dict]):
     """NB: assumes columns of dataframe have <suffix> appended already"""
     err = None
+    pattern = re.compile("<([^>])>")
+
     if df.empty:
         return df, err
     munger_name = Path(munger_path).name
@@ -1524,9 +1526,39 @@ def munge_source_to_raw(
             param_file=munger_path,
         )
         elements = [k for k in formulas.keys() if (formulas[k] is not None) and (formulas[k] != "None")]
+        # TODO if source is "from_field_values", capture any lookup info
+        if source == "from_field_values":
+            ldf = dict()
+            lp = dict()
+            reqs = ["source_file", "file_type", "lookup_id", "string_locations"]
+            opts = [f"{el}_replacement" for el in elements] + list(opt_munger_params.keys())
+            for c in orig_string_cols:
+                c_p, c_err = ui.get_parameters(required_keys=reqs, optional_keys=opts, param_file=munger_path, header=f"{c} lookup")
+                if not c_err:  # NB in particular, this means header exists
+                    lp[c] = c_p
+                    c_file_path = os.path.join(aux_directory_path, c_p["source_file"])
+                    ldf[c], c_err = ui.read_single_datafile(c_file_path, c_p, munger_name, None, aux=True)
+
         for element in elements:
             try:
                 formula = formulas[element]
+                # TODO for each item needing lookup, add lookup column
+                # # get list of items in formula that are lookups
+                for lk in lookup.keys():
+                    if f"<{lk}>" in formula:
+                        # add lookup column
+                        # TODO assumes unique keys in lookup table
+
+                        # TODO get these formulas right!
+                        replacement_cols = [lp[c]["lookup_id"]] + pattern.findall(lp[c][f"{element}_replacement"])
+                        working = working.merge(
+                            ldf[lk][replacement_cols],
+                            left_on=f"{c}{suffix}",
+                            right_on=lp[c]["lookup_id"],
+
+                        )
+
+                # TODO if formula refers to any fields that need to be looked up, make appropriate replacements
                 # append suffix to formula fields
                 for c in orig_string_cols:
                     formula = formula.replace(f"<{c}>", f"<{c}{suffix}>")

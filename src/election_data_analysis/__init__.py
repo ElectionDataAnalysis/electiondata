@@ -509,39 +509,6 @@ class SingleDataLoader:
         return err
 
 
-def check_aux_data_setup(
-    params, aux_data_dir_parent, mungers_path, par_file_name
-) -> dict:
-
-    err = None
-    # if aux_data_dir is given
-    if "aux_data_dir" in params.keys() and params["aux_data_dir"] is not None:
-        # check that it is a bona fide subdirectory of the results directory
-        if not os.path.isdir(os.path.join(aux_data_dir_parent, params["aux_data_dir"])):
-            # TODO test this error
-            err = ui.add_new_error(
-                err,
-                "ini",
-                par_file_name,
-                f"Specified aux_data_dir ({params['aux_data_dir']}) is not a subdirectory of {aux_data_dir_parent}",
-            )
-            return err
-    # and if aux_data_dir is not given
-    else:
-        # check that no munger expects an aux_data_dir
-        for m_name in params["munger_name"].split(","):
-            if os.path.isfile(os.path.join(mungers_path, m_name, "aux_meta.txt")):
-                err = ui.add_new_error(
-                    err,
-                    "ini",
-                    par_file_name,
-                    f"Munger {m_name} has an aux_meta.txt file, "
-                    f"indicating that an auxiliary data directory is expected, but "
-                    f"no aux_data_dir is given",
-                )
-    return err
-
-
 def check_par_file_elements(
     d: dict, mungers_path: str, par_file_name: str
 ) -> Optional[dict]:
@@ -589,16 +556,8 @@ def check_and_init_singledataloader(
         sdl = None
         return sdl, err
 
-    # check consistency of munger and .ini file regarding aux data
-    new_err = check_aux_data_setup(d, results_dir, mungers_path, par_file_name)
-
     # check consistency of munger and .ini file regarding elements to be read from ini file
     new_err_2 = check_par_file_elements(d, mungers_path, par_file_name)
-
-    if ui.fatal_error(new_err) or ui.fatal_error(new_err_2):
-        err = ui.consolidate_errors([err, new_err, new_err_2])
-        sdl = None
-        return sdl, err
 
     sdl = SingleDataLoader(
         results_dir,
@@ -1919,7 +1878,7 @@ def load_results_file(
         mask = df[['Contest_Id', 'Selection_Id']] == (contest_id, selection_id)
         df = df[~mask.all(axis=1)]
 
-    # #  TODO replace any foreign keys with true values
+
 
     # add_datafile_Id and Election_Id columns
     for c in ["_datafile_Id", "Election_Id"]:
