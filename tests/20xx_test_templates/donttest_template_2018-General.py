@@ -109,10 +109,10 @@ def test_county_subtotal(dbname):
     assert (e.contest_total(
         election,
         jurisdiction,
-        f"US President ({abbr})",
+        statewide_contest,
         dbname=dbname,
         county=single_county,
         sub_unit_type=county_or_other,
         )
-        == pres_votes_county
+        == statewide_votes_county
             )

@@ -394,8 +394,8 @@ def basic_kwargs(p: Dict[str, Any], kwargs: Dict[str, Any], aux: bool = False) -
     if "from_field_values" in p["string_locations"]:
         if aux or (p["all_rows"] == "data"):
             dtype = str
-        else:
-            dtype = {c: str for c in p["munge_fields"]["from_field_values"]}
+        """else:
+            dtype = {c: str for c in p["munge_fields"]["from_field_values"]}""" # TODO tech debt: remove?
         kwargs["dtype"] = dtype
 
     # other parameters

@@ -12,17 +12,17 @@ constant_over_file=CountItemType
 [from_field_values]
 ReportingUnit=<column_6>;<column_6,column_7>;Ward <column_8>;Precinct <column_9> Label <column_10>
 Party=<column_5>
-CandidateContest=<column_2>
+CandidateContest=<column_2,column_3>
 Candidate=<column_5>
 
-[column_2 lookup]
+[column_2,column_3 lookup]
 source_file=Michigan/2018GEN/2018offc.txt
 file_type=flat_text
 flat_file_delimiter=tab
 string_locations=from_field_values
 encoding=ASCII
 all_rows=data
-lookup_id=column_2
+lookup_id=column_2,column_3
 CandidateContest_replacement=<column_5>
 
 [column_5 lookup]
