@@ -1599,6 +1599,8 @@ def munge_source_to_raw(
     # drop all source columns
     source_cols = [c for c in working.columns if c[-len(suffix):] == suffix]
     working.drop(source_cols, axis=1, inplace=True)
+
+    string_cols = [c for c in working.columns if c != "Count"]
     return working, err
 
 
@@ -1994,12 +1996,13 @@ def incorporate_aux_info(
         assert isinstance(r_formula, str)  # to keep syntax-checker happy
         r_fields = aux[element][fk]["r_fields"]
 
-
         # grab the lookup table
         lt_path = os.path.join(aux_directory_path, aux[element][fk]["params"]["source_file"])
         lookup_df_dict, fk_err = ui.read_single_datafile(lt_path, aux[element][fk]["params"], munger_name, dict(),
                                                          aux=True)
         lookup_df = lookup_df_dict["Sheet1"]
+        # clean the lookup table
+        lookup_df = clean_strings(lookup_df, lookup_df.columns)
         # define new column names to e.g. 'County_id LOOKUP County_name'
         rename = {c: f"{fk} LOOKUP {c}{suffix}" for c in lookup_df.columns}
 
