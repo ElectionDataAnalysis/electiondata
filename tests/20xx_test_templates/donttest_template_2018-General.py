@@ -18,19 +18,19 @@ election = "2018 General"
 jurisdiction = 'Michigan'
 abbr = 'MI'
 statewide_contest = f"{abbr} Governor"
-total_statewide_votes = 4250585  # total of all votes for the statewide contest
+total_statewide_votes = -1  # total of all votes for the statewide contest
 cd = 3  # US House congressional district
-total_cd_votes = 310740  # total votes in that US House contest in the chosen cd
+total_cd_votes = -1  # total votes in that US House contest in the chosen cd
 hd = 8   # state house district
-total_shd_votes = 28017  # total votes in that State House contest
+total_shd_votes = -1  # total votes in that State House contest
 sd = 37  # state senate district
-total_ssd_votes = 124414  # total votes in that State Senate contest
+total_ssd_votes = -1  # total votes in that State Senate contest
 single_vote_type = 'early'  # pick any one with corresponding data in your file, but use internal db name
-statewide_votes_vote_type = 0  # total votes for the statewide contest of that vote type
+statewide_votes_vote_type = -1  # total votes for the statewide contest of that vote type
 county_or_other = "county"   # Change this only if results are subdivided by something other than counties
                             #  e.g., 'parish' in LA, 'state-house' in Alaska, 'ward' in Philadelphia
 single_county = 'Michigan;Wayne County'  # pick any one from your file, but use internal db name
-statewide_votes_county = 659859  # total votes for the statewide contest in that county
+statewide_votes_county = -1  # total votes for the statewide contest in that county
 
 
 def test_data_exists(dbname):
