@@ -390,13 +390,8 @@ def tabular_kwargs(p: Dict[str, Any], kwargs: Dict[str, Any], aux=False) -> Dict
 
 
 def basic_kwargs(p: Dict[str, Any], kwargs: Dict[str, Any], aux: bool = False) -> Dict[str, Any]:
-    # ensure that string-location field values will be read as strings
-    if "from_field_values" in p["string_locations"]:
-        if aux or (p["all_rows"] == "data"):
-            dtype = str
-        """else:
-            dtype = {c: str for c in p["munge_fields"]["from_field_values"]}""" # TODO tech debt: remove?
-        kwargs["dtype"] = dtype
+    # ensure that all field values will be read as strings
+    kwargs["dtype"] = "string"
 
     # other parameters
     kwargs["index_col"] = False
@@ -874,7 +869,7 @@ def fatal_to_warning(err: Optional[Dict[Any, dict]]) -> Optional[Dict[Any, dict]
     for k in err.keys():
         if k[:5] == "warn-":
             for j in err[k].keys():
-                non_fatal_err = ui.add_new_error(
+                non_fatal_err = add_new_error(
                     non_fatal_err,
                     k,
                     j,
@@ -882,7 +877,7 @@ def fatal_to_warning(err: Optional[Dict[Any, dict]]) -> Optional[Dict[Any, dict]
                 )
         else:
             for j in err[k].keys():
-                non_fatal_err = ui.add_new_error(
+                non_fatal_err = add_new_error(
                     non_fatal_err,
                     f"warn-{k}",
                     j,
