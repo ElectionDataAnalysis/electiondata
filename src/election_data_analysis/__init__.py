@@ -1855,8 +1855,6 @@ def load_results_file(
         mask = df[['Contest_Id', 'Selection_Id']] == (contest_id, selection_id)
         df = df[~mask.all(axis=1)]
 
-
-
     # add_datafile_Id and Election_Id columns
     for c in ["_datafile_Id", "Election_Id"]:
         df = m.add_constant_column(df, c, election_datafile_ids[c])
