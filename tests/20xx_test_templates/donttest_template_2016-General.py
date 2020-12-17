@@ -15,22 +15,22 @@ import election_data_analysis as e
 
 # # # constants - CHANGE THESE!! - use internal db names
 election = "2016 General"
-jurisdiction = 'Wisconsin'
-abbr = 'WI'
-total_pres_votes = 2976150 # total of all votes for US President
-cd = 5  # US House congressional district
-total_cd_votes = 390844
+jurisdiction = 'Georgia'
+abbr = 'GA'
+total_pres_votes = -1 # total of all votes for US President
+cd = 9  # US House congressional district
+total_cd_votes = -1
  # total votes in that US House contest in the chosen cd
 ssd = 13  # state senate district
 total_ssd_votes = -1  # total votes in that State Senate contest
 shd = 7   # state house district
 total_shd_votes = -1  # total votes in that State House contest
 single_vote_type = 'absentee-mail'  # pick any one with corresponding data in your file, but use internal db name
-pres_votes_vote_type = 0  # total votes for US President of that vote type
+pres_votes_vote_type = -1  # total votes for US President of that vote type
 county_or_other = "county"   # Change this only if results are subdivided by something other than counties
                             #  e.g., 'parish' in LA, 'state-house' in Alaska, 'ward' in Philadelphia
-single_county = 'Wisconsin;Chippewa'  # pick any one from your file, but use internal db name
-pres_votes_county = 31568  # total votes for US President in that county
+single_county = 'Georgia;Bacon County'  # pick any one from your file, but use internal db name
+pres_votes_county = -1  # total votes for US President in that county
 
 
 def test_data_exists(dbname):
@@ -58,7 +58,7 @@ def test_congressional_totals(dbname):
         == total_cd_votes
     )
 
-"""
+
 def test_state_senate_totals(dbname):
     assert (e.contest_total(
         election,
@@ -80,7 +80,7 @@ def test_state_house_totals(dbname):
         == total_shd_votes
     )
 
-"""
+
 def test_standard_vote_types(dbname):
     assert e.check_count_types_standard(election, jurisdiction, dbname=dbname)
 
