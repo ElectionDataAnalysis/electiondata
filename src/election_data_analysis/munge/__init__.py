@@ -211,7 +211,7 @@ def cast_cols_as_int(
         err = ui.add_new_error(
             err,
             "system",
-            "munge.cast_cols_as_int",
+            f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
             f"Mode {mode} not recognized",
         )
         return df, err
@@ -263,7 +263,12 @@ def munge_clean(
         renamer = {x: f"{x}_SOURCE" for x in munger_formula_row_sourced}
         working.rename(columns=renamer, inplace=True)
     except Exception as e:
-        err = ui.add_new_error(err, "system", "munge.munge_clean", f"Unexpected error: {e}")
+        err = ui.add_new_error(
+            err,
+            "system",
+            f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
+            f"Unexpected error: {e}",
+        )
     return working, err
 
 
@@ -299,7 +304,7 @@ def add_regex_column(
         err = ui.add_new_error(
             err,
             "system",
-            "munge.add_regex_column",
+            f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
             f"Unexpected exception: {e}"
         )
 
@@ -390,7 +395,10 @@ def add_column_from_formula(
 
     except Exception as e:
         err = ui.add_new_error(
-            err, "system", "munge.add_column_from_formula", f"Unexpected error: {e}"
+            err,
+            "system",
+            f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
+            f"Unexpected error: {e}",
         )
 
     # delete temporary columns
@@ -1099,7 +1107,7 @@ def add_selection_id(  # TODO tech debt: why does this add columns 'I' and 'd'?
             err = ui.add_new_error(
                 err,
                 "system",
-                "munge.add_selection_id",
+                f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
                 f"Problem with Candidate_Id or Party_Id in some rows:\n{err_df}",
             )
             pd.reset_option("max_columns")
@@ -1213,14 +1221,14 @@ def raw_to_id_simple(
             err = ui.add_new_error(
                 err,
                 "system",
-                "munge.raw_elements_to_cdf",
+                f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
                 f"KeyError ({exc}) while adding internal ids for {t}.",
             )
         except Exception as exc:
             err = ui.add_new_error(
                 err,
                 "system",
-                "munge.raw_elements_to_cdf",
+                f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
                 f"Exception ({exc}) while adding internal ids for {t}.",
             )
 
@@ -1280,7 +1288,7 @@ def raw_elements_to_cdf(
         err = ui.add_new_error(
             err,
             "system",
-            "munge.raw_elements_to_cdf",
+            f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
             f"Unexpected exception during munge_and_melt: {exc}",
         )
         return err
@@ -1297,7 +1305,7 @@ def raw_elements_to_cdf(
             err = ui.add_new_error(
                 err,
                 "system",
-                "munge.raw_elements_to_cdf",
+                f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
                 f"Unexpected exception while adding Contest_Id: {exc}",
             )
             return err
@@ -1328,7 +1336,7 @@ def raw_elements_to_cdf(
         err = ui.add_new_error(
             err,
             "system",
-            "munge.raw_elements_to_cdf",
+            f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
             f"Unexpected exception while adding Selection_Id:\n{exc}",
         )
         return err
@@ -1371,7 +1379,7 @@ def raw_elements_to_cdf(
             err = ui.add_new_error(
                 err,
                 "system",
-                "munge.raw_elements_to_cdf",
+                f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
                 f"database insertion error {e}",
             )
             return err
@@ -1379,7 +1387,7 @@ def raw_elements_to_cdf(
         err = ui.add_new_error(
             err,
             "system",
-            "munge.raw_elements_to_cdf",
+            f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
             f"Error filling VoteCount:\n{exc}",
         )
     return err
@@ -1433,7 +1441,7 @@ def munge_raw_to_ids(
             err = ui.add_new_error(
                 err,
                 "system",
-                "munge.raw_elements_to_cdf",
+                f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
                 f"Unexpected exception while adding Contest_Id: {exc}",
             )
             return err
@@ -1548,6 +1556,10 @@ def munge_source_to_raw(
                         aux_info, aux_directory_path, munger_name, suffix,
                     )
 
+                # append suffix to any fields from the original table
+                for c in orig_string_cols:
+                    formula = formula.replace(f"<{c}>",f"<{c}{suffix}>")
+
                 # add col with munged values
                 working, new_err = add_column_from_formula(
                     working, formula, f"{element}_raw", err, munger_name
@@ -1571,12 +1583,22 @@ def munge_source_to_raw(
                 )
                 return working, err
 
-            working.loc[:, f"{element}_raw"] = working[f"{element}_raw"].apply(
-                compress_whitespace
+            # compress whitespace for <element>_raw
+            compression = pd.DataFrame(
+                [[x, compress_whitespace(x)] for x in working[f"{element}_raw"].unique()],
+                columns=['uncompressed','compressed']
+            )
+            working = working.merge(
+                compression, left_on=f"{element}_raw", right_on="uncompressed",
+            ).drop(
+                [f"{element}_raw", "uncompressed"], axis=1
+            ).rename(
+                columns={"compressed": f"{element}_raw"}
             )
             print(f"Column {element}_raw added")
-    # drop the original columns
-    working.drop([f"{x}{suffix}" for x in orig_string_cols], axis=1, inplace=True)
+    # drop all source columns
+    source_cols = [c for c in working.columns if c[-len(suffix):] == suffix]
+    working.drop(source_cols, axis=1, inplace=True)
     return working, err
 
 
@@ -1682,7 +1704,7 @@ def get_string_fields(
         munger_path: str,
 ) -> (Dict[str,List[str]], Optional[dict]):
     err = None
-    pattern = re.compile(r'<([^>]+)>')
+    pattern = re.compile(r'<([^>,]+)(?:,([^>,]+))*>')
     munge_field_lists = dict()
     for source in sources:
         munge_field_set = set()
@@ -1700,7 +1722,10 @@ def get_string_fields(
         for k in formulas.keys():
             if formulas[k]:
                 munge_field_set.update(pattern.findall(formulas[k]))
-        munge_field_lists[source] = list(munge_field_set)
+        flat = {x for y in munge_field_set for x in y}
+        if "" in flat:
+            flat.remove("")
+        munge_field_lists[source] = list(flat)
 
     return munge_field_lists, err
 
@@ -1962,31 +1987,38 @@ def incorporate_aux_info(
     and revises the formula to pull from those columns instead of foreign key columns
     Note cols are assumed to have suffix, but aux does not include suffix"""
     w_df = df.copy()
-    err = None  # TODO error handline
+    w_formula = formula
+    err = None  # TODO error handling
     for fk in foreign_key_fields[element]:
         r_formula = aux[element][fk]["r_formula"]
+        assert isinstance(r_formula, str)  # to keep syntax-checker happy
         r_fields = aux[element][fk]["r_fields"]
 
-        # have lookup table columns already been appended? Don't append them again!
-        if not any([f"{fk} LOOKUP" in c for c in w_df.columns]):
-            # grab the lookup table
-            lt_path = os.path.join(aux_directory_path, aux[element][fk]["params"]["source_file"])
-            lookup_df_dict, fk_err = ui.read_single_datafile(lt_path, aux[element][fk]["params"], munger_name, dict(), aux=True)
 
-            lookup_df = lookup_df_dict["Sheet1"]
-            # add all lookup columns to table and rename to e.g. 'County_id LOOKUP County_name'
-            rename = {c: f"{fk} LOOKUP {c}{suffix}" for c in lookup_df.columns}
+        # grab the lookup table
+        lt_path = os.path.join(aux_directory_path, aux[element][fk]["params"]["source_file"])
+        lookup_df_dict, fk_err = ui.read_single_datafile(lt_path, aux[element][fk]["params"], munger_name, dict(),
+                                                         aux=True)
+        lookup_df = lookup_df_dict["Sheet1"]
+        # define new column names to e.g. 'County_id LOOKUP County_name'
+        rename = {c: f"{fk} LOOKUP {c}{suffix}" for c in lookup_df.columns}
+
+        # if lookup columns not already in w_df
+        if not any([f"{fk} LOOKUP" in c for c in w_df.columns]):
+            # append lookup columns
+            left_merge_cols = [f"{c}{suffix}" for c in fk.split(",")]
+            right_merge_cols = aux[element][fk]["params"]["lookup_id"].split(",")
             w_df = w_df.merge(
                 lookup_df,
-                left_on=f"{fk}{suffix}",
-                right_on=aux[element][fk]["params"]["lookup_id"],
+                left_on=left_merge_cols,
+                right_on=right_merge_cols,
             ).rename(columns=rename)
 
         # revise formula
         r_formula_new_col_names = r_formula
         for c in r_fields:
             r_formula_new_col_names = r_formula_new_col_names.replace(f"<{c}>", f"<{rename[c]}>")
-        w_formula = formula.replace(f"<{fk}>",r_formula_new_col_names)
+        w_formula = w_formula.replace(f"<{fk}>",r_formula_new_col_names)
 
     return w_df, w_formula, err
 
