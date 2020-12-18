@@ -1625,6 +1625,9 @@ class Analyzer:
     ) -> Optional[str]:
         rollup_unit_id = db.name_to_id(self.session, "ReportingUnit", rollup_unit)
         sub_unit_id = db.name_to_id(self.session, "ReportingUnitType", sub_unit)
+        sub_rutype_othertext = ''
+        if sub_unit_id is None:
+            sub_rutype_othertext = sub_unit
         election_id = db.name_to_id(self.session, "Election", election)
         err = a.create_rollup(
             self.session,
@@ -1633,6 +1636,7 @@ class Analyzer:
             sub_rutype_id=sub_unit_id,
             election_id=election_id,
             by_vote_type=by_vote_type,
+            sub_rutype_othertext = sub_rutype_othertext,
         )
         return err
 
