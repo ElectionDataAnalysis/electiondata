@@ -9,6 +9,7 @@ from typing import Optional, Dict, List, Any
 from election_data_analysis import munge as m
 from election_data_analysis import juris_and_munger as jm
 from election_data_analysis import user_interface as ui
+import re
 
 
 def disambiguate(li: list) -> (list, dict):
@@ -569,3 +570,37 @@ def json_results_below(j: dict or list,
 
         # Otherwise, return the results below current node
         return results
+
+
+def nist_lookup(f_path: str) -> dict:
+    """ The NIST format stores data about each entity separately from where
+    they may be referenced. For example, a ReportingUnit ID and Name may be 
+    defined in one section, and then the ID will be referenced in the VoteCounts. 
+    In order to match the ReportingUnit to particular VoteCounts, we build a
+    dictionary of IDs and Names that we can later reference."""
+
+    # when this function is called, it's already been accessed. So we omit
+    # the normal error checking here because we can assume it exists.
+    tree = et.parse(f_path)
+    root = tree.getroot()
+
+    # get the namespaces in the XML and return error if the one we're expecting
+    # is not found
+    namespaces = dict([
+        node for _, node in et.iterparse(
+            f_path, events=["start-ns"]
+        )
+    ])
+    try:
+        namespace = namespaces["xsi"]
+    except:
+        return dict()
+
+    nist = {} 
+    for child in root.iter():
+        if "Name" in child.attrib and "ObjectId" in child.attrib:
+            type_ = child.attrib.get(f"{{{namespace}}}type")
+            if type_ not in nist:
+                nist[type_] = {}
+            nist[type_][child.attrib.get("ObjectId")] = child.attrib.get("Name")
+    return nist
