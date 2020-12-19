@@ -1704,7 +1704,8 @@ def aggregate_results(
         return empty_df_with_good_cols
 
     df, err_str = db.export_rollup_from_db(
-        cursor=cursor,
+        # cursor=cursor,
+        session = an.session,
         top_ru=jurisdiction,
         election=election,
         sub_unit_type=sub_unit_type,
