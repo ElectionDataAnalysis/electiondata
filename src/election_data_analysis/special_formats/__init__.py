@@ -415,10 +415,16 @@ def read_xml(
 
     try:
         root = tree.getroot()
+        if munger_name == "nist_xml.munger":
+            namespace = nist_namespace(f_path, "")
+            tags, attributes = nist_tags(tags, attributes, namespace)
         results_list = results_below(root, tags, attributes)
         raw_results = pd.DataFrame(results_list)
         if raw_results.empty:
             err = ui.add_new_error(err, "file", Path(f_path).name, "No results read from file")
+        if munger_name == "nist_xml.munger":
+            raw_results = clean_nist_columns(raw_results, namespace)
+            raw_results = replace_id_values(raw_results, f_path)
         # TODO tech debt is the for loop necessary before clean_count_cols?
         for c in p["count_fields_by_name"]:
             raw_results[c] = pd.to_numeric(raw_results[c], errors="coerce")
@@ -434,25 +440,55 @@ def read_xml(
     return raw_results, err
 
 
+def nist_tags(good_tags, good_pairs, namespace):
+    """ NIST file requires some finessing of values for the parsing """
+    good_tags.add("Election")
+    good_tags.add("ContestCollection")
+    good_tags.add("BallotSelection")
+    good_tags.add("VoteCountsCollection")
+    good_tags.add("BallotName")
+
+    new_tags = set()
+    new_pairs = {}
+    for tag in good_tags:
+        new_tags.add(f"{{{namespace}}}{tag}")
+
+    for key in good_pairs:
+        new_pairs[f"{{{namespace}}}{key}"] = good_pairs[key]
+
+    return new_tags, new_pairs
+
 def results_below(node: et.Element, good_tags: set, good_pairs: dict) -> list:
     """appends all (possibly incomplete) results records that can be
     read from nodes below to the list self.results"""
     r_below = []
 
     if node.getchildren() == list():
-        r_below = [{f"{node.tag}.{k}": node.attrib.get(k, "") for k in good_pairs[node.tag]}]
+        r_below = {}
+        for k in good_pairs[node.tag]:
+            if k == "text":
+                r_below[f"{node.tag}.{k}"] = node.text
+            else:
+                r_below[f"{node.tag}.{k}"] = node.attrib.get(k, "")
+        r_below = [r_below]
     else:
         for child in node:
+            r_below_child = [] 
             if child.tag in good_tags:
                 # get list of all (possibly incomplete) results records from below the child
-                r_below_child = results_below(child, good_tags, good_pairs)
-                # add info from the current node to each record and append result to self.results
+                r_below_child = r_below_child + results_below(child, good_tags, good_pairs)
                 for result in r_below_child:
-                    if node.tag in good_tags:
+                    if node.tag in good_pairs.keys():
                         result.update(
                             {f"{node.tag}.{k}": node.attrib.get(k, "") for k in good_pairs[node.tag]}
                         )
-                    r_below.append(result)
+                    # handle special cases for NIST here
+                    if len(result.keys()) == 1:
+                        for r in r_below:
+                            if list(result.keys())[0] not in list(r.keys()):
+                                r.update(result)
+                    else:
+                        r_below.append(result)
     return r_below
 
 
@@ -584,17 +620,7 @@ def nist_lookup(f_path: str) -> dict:
     tree = et.parse(f_path)
     root = tree.getroot()
 
-    # get the namespaces in the XML and return error if the one we're expecting
-    # is not found
-    namespaces = dict([
-        node for _, node in et.iterparse(
-            f_path, events=["start-ns"]
-        )
-    ])
-    try:
-        namespace = namespaces["xsi"]
-    except:
-        return dict()
+    namespace = nist_namespace(f_path, "xsi")
 
     nist = {} 
     for child in root.iter():
@@ -603,4 +629,62 @@ def nist_lookup(f_path: str) -> dict:
             if type_ not in nist:
                 nist[type_] = {}
             nist[type_][child.attrib.get("ObjectId")] = child.attrib.get("Name")
+        print(child.tag)
+        input()
+    # this works to grab the GpUnitId
+    # namespace = "http://grouper.ieee.org/groups/1622/groups/2/V1/1622_2-election_results_reporting.xsd"
+    # for child in root.iter():
+    #     print(child.tag)
+    #     if "GpUnitId" in child.tag:
+    #         print(child.text)
+    #         input()
+
     return nist
+
+
+def nist_namespace(f_path, key):
+    """ get the namespaces in the XML and return error if the one we're expecting
+    is not found """
+    namespaces = dict([
+        node for _, node in et.iterparse(
+            f_path, events=["start-ns"]
+        )
+    ])
+    try:
+        namespace = namespaces[key]
+        return namespace
+    except:
+        return None
+
+
+def clean_nist_columns(df, namespace):
+    col = df.columns
+    new_headers = []
+    for i in range(len(col)):
+        new_headers.append(col[i].replace(f"{{{namespace}}}", ""))
+    df.columns = new_headers
+    return df
+
+
+def replace_id_values(df, f_path):
+    print(df)
+    lookup = nist_lookup(f_path)
+    ru_lookup_df = pd.DataFrame({
+        "Id": list(lookup["ReportingUnit"].keys()),
+        "ReportingUnit": list(lookup["ReportingUnit"].values()),
+    })
+    ru_lookup_df = ru_lookup_df[ru_lookup_df["ReportingUnit"] != "Statewide"]
+
+    df = df.merge(ru_lookup_df, left_on="GpUnitId.text", right_on="Id")
+    df = df[[
+        "VoteCounts.Type",
+        "VoteCounts.Count",
+        "CandidateId.text",
+        "Contest.Name",
+        "ReportingUnit"
+    ]].rename(columns={"ReportingUnit": "GpUnitId.text"})
+    
+
+    print(df.columns)
+    input()
+    return df
