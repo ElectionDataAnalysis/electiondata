@@ -612,34 +612,65 @@ def nist_lookup(f_path: str) -> dict:
     """ The NIST format stores data about each entity separately from where
     they may be referenced. For example, a ReportingUnit ID and Name may be 
     defined in one section, and then the ID will be referenced in the VoteCounts. 
-    In order to match the ReportingUnit to particular VoteCounts, we build a
-    dictionary of IDs and Names that we can later reference."""
+    In order to match the ReportingUnit to particular VoteCounts, we parse the
+    XML and build dataframes tha we can reference."""
 
     # when this function is called, it's already been accessed. So we omit
     # the normal error checking here because we can assume it exists.
     tree = et.parse(f_path)
     root = tree.getroot()
 
-    namespace = nist_namespace(f_path, "xsi")
+    # this namespace for reportingUnit info
+    namespace_xsi = nist_namespace(f_path, "xsi")
+    # this namespace for others
+    namespace_blank = nist_namespace(f_path, "")
 
-    nist = {} 
+    candidates = []
+    reporting_units = []
+    parties = []
+
+    # loop through the XML
     for child in root.iter():
-        if "Name" in child.attrib and "ObjectId" in child.attrib:
-            type_ = child.attrib.get(f"{{{namespace}}}type")
-            if type_ not in nist:
-                nist[type_] = {}
-            nist[type_][child.attrib.get("ObjectId")] = child.attrib.get("Name")
-        print(child.tag)
-        input()
-    # this works to grab the GpUnitId
-    # namespace = "http://grouper.ieee.org/groups/1622/groups/2/V1/1622_2-election_results_reporting.xsd"
-    # for child in root.iter():
-    #     print(child.tag)
-    #     if "GpUnitId" in child.tag:
-    #         print(child.text)
-    #         input()
+        # get candidate info
+        if child.tag == f"{{{namespace_blank}}}CandidateCollection":
+            for grandchild in child.iter():
+                if grandchild.tag == f"{{{namespace_blank}}}Candidate":
+                    candidate = {
+                        "ObjectId": grandchild.attrib.get("ObjectId")
+                    }
+                    for g in grandchild:
+                        if g.tag == f"{{{namespace_blank}}}BallotName":
+                            for h in g:
+                                candidate["BallotName"] = h.text
+                        elif g.tag == f"{{{namespace_blank}}}PartyId":
+                            candidate["PartyId"] = g.text
+                    candidates.append(candidate)
+        # get reportingUnit info
+        if child.tag == f"{{{namespace_blank}}}GpUnit" and "ReportingUnit" == child.attrib.get(f"{{{namespace_xsi}}}type"):
+            reporting_units.append({
+                "ObjectId": child.attrib.get("ObjectId"),
+                "Name": child.attrib.get("Name")
+            })
+        # get party info
+        if child.tag == f"{{{namespace_blank}}}Party":
+            parties.append({
+                "ObjectId": child.attrib.get("ObjectId"),
+                "PartyName": child.attrib.get("Abbreviation") 
+            })
 
-    return nist
+    # prep dataframes
+    reporting_unit_df = pd.DataFrame(reporting_units)
+    reporting_unit_df = reporting_unit_df[
+        reporting_unit_df["Name"] != "Statewide"
+    ]
+
+    candidate_df = pd.DataFrame(candidates)
+    party_df = pd.DataFrame(parties)
+    candidate_df = candidate_df.merge(
+        party_df, left_on="PartyId", right_on="ObjectId", suffixes=(None, "_y")
+    )[["ObjectId", "BallotName", "PartyName"]]
+
+    return candidate_df, reporting_unit_df
 
 
 def nist_namespace(f_path, key):
@@ -667,24 +698,29 @@ def clean_nist_columns(df, namespace):
 
 
 def replace_id_values(df, f_path):
-    print(df)
-    lookup = nist_lookup(f_path)
-    ru_lookup_df = pd.DataFrame({
-        "Id": list(lookup["ReportingUnit"].keys()),
-        "ReportingUnit": list(lookup["ReportingUnit"].values()),
-    })
-    ru_lookup_df = ru_lookup_df[ru_lookup_df["ReportingUnit"] != "Statewide"]
+    candidate_df, reporting_unit_df = nist_lookup(f_path)
 
-    df = df.merge(ru_lookup_df, left_on="GpUnitId.text", right_on="Id")
+    # Add reporting unit info
+    df = df.merge(reporting_unit_df, left_on="GpUnitId.text", right_on="ObjectId")
     df = df[[
         "VoteCounts.Type",
         "VoteCounts.Count",
         "CandidateId.text",
         "Contest.Name",
-        "ReportingUnit"
-    ]].rename(columns={"ReportingUnit": "GpUnitId.text"})
+        "Name"
+    ]].rename(columns={"Name": "GpUnitId.text"})
     
-
-    print(df.columns)
-    input()
+    # add candidate, party info
+    df = df.merge(candidate_df, left_on="CandidateId.text", right_on="ObjectId")
+    df = df[[
+        "VoteCounts.Type",
+        "VoteCounts.Count",
+        "BallotName",
+        "Contest.Name",
+        "PartyName",
+        "GpUnitId.text"
+    ]].rename(columns={
+        "BallotName": "CandidateId.text",
+        "PartyName": "PartyId.text",
+    })
     return df
