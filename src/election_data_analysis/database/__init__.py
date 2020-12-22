@@ -1180,7 +1180,7 @@ def get_filtered_input_options(session, input_str, filters):
             session,
             election_id,
             reporting_unit_id,
-            ["ReportingUnitName", "Name", "unit_type"],
+            ["ReportingUnitName", "ContestName", "unit_type"],
             ["parent", "name", "type"],
         )
         df = df.sort_values(["parent", "name"]).reset_index(drop=True)
@@ -1194,7 +1194,7 @@ def get_filtered_input_options(session, input_str, filters):
             session,
             election_id,
             reporting_unit_id,
-            ["Name", "BallotName", "PartyName", "unit_type"],
+            ["ContestName", "BallotName", "PartyName", "unit_type"],
             ["parent", "name", "type", "unit_type"],
         )
         df = clean_candidate_names(df_unordered)
@@ -1230,7 +1230,7 @@ def get_filtered_input_options(session, input_str, filters):
             session,
             election_id,
             reporting_unit_id,
-            ["Name", "BallotName", "PartyName", "unit_type"],
+            ["ContestName", "BallotName", "PartyName", "unit_type"],
             ["parent", "name", "type", "unit_type"],
         )
         df_unordered = df_unordered[df_unordered["unit_type"].isin(filters)].copy()
@@ -1260,7 +1260,7 @@ def get_relevant_contests(session, filters):
     election_id = list_to_id(session, "Election", filters)
     reporting_unit_id = list_to_id(session, "ReportingUnit", filters)
     contest_df = read_vote_count(
-        session, election_id, reporting_unit_id, ["Name"], ["contest_name"]
+        session, election_id, reporting_unit_id, ["ContestName"], ["contest_name"]
     )
 
     result = get_input_options(session, "candidate_contest", True)

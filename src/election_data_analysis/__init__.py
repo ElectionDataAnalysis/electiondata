@@ -1481,18 +1481,23 @@ class Analyzer:
         Session = sessionmaker(bind=eng)
         self.session = Session()
 
-    def display_options(self, input: str, verbose: bool = False, filters: list = None):
+    def display_options(
+        self,
+        input_str: str,
+        verbose: bool = False,
+        filters: list = None
+    ):
         if not verbose:
-            results = db.get_input_options(self.session, input, False)
+            results = db.get_input_options(self.session, input_str, False)
         else:
             if not filters:
-                df = pd.DataFrame(db.get_input_options(self.session, input, True))
+                df = pd.DataFrame(db.get_input_options(self.session, input_str, True))
                 results = db.package_display_results(df)
             else:
                 try:
                     filters_mapped = ui.get_contest_type_mappings(filters)
                     results = db.get_filtered_input_options(
-                        self.session, input, filters_mapped
+                        self.session, input_str, filters_mapped
                     )
                 except:
                     results = None
@@ -1729,7 +1734,7 @@ def data_exists(election, jurisdiction, p_path=None, dbname=None):
         return False
 
     # read all contests with records in the VoteCount table
-    df = db.read_vote_count(an.session, election_id, reporting_unit_id, ["Name"],["contest_name"])
+    df = db.read_vote_count(an.session, election_id, reporting_unit_id, ["ContestName"],["contest_name"])
     # if no contest found
     if df.empty:
         # no data exists.
