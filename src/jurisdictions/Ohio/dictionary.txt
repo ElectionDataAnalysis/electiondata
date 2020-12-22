@@ -765,6 +765,7 @@ CandidateContest	US House OH District 15	Representative to Congress - District 1
 CandidateContest	US House OH District 16	Representative to Congress - District 16
 CandidateContest	US President (OH)	President (at-large)
 CandidateContest	US President (OH)	President
+CandidateContest	US President (OH)	President and Vice President
 CandidateContest	OH Governor	Governor and Lieutenant Governor
 CandidateContest	US Senate OH	U.S. Senator
 CandidateContest	OH Attorney General	Attorney General
@@ -782,6 +783,10 @@ Party	Democratic Party	D
 Party	Republican Party	R
 Party	Green Party	G
 Party	Libertarian Party	L
+Party	Democratic Party	DEM
+Party	Republican Party	REP
+Party	Independent Party	Indep
+Party	Libertarian Party	LIB
 ReportingUnit	Ohio;OH House District 1	Ohio;OH House District 1
 ReportingUnit	Ohio;OH House District 2	Ohio;OH House District 2
 ReportingUnit	Ohio;OH House District 3	Ohio;OH House District 3
@@ -2295,5 +2300,136 @@ Candidate	Richard A. Olivito	Richard A. Olivito
 Candidate	Alaina Swope	Alaina Swope
 Candidate	Todd E Beegle	Todd E Beegle
 Candidate	Richard Dana	Richard Dana
+Candidate	Aaron Godfrey	Aaron Godfrey
+Candidate	Adam Bird	Adam Bird
+Candidate	Al Cutrona	Al Cutrona
+Candidate	Alice Nicks	Alice Nicks
+Candidate	Alicia Gee	Alicia Gee
+Candidate	Angela Davis	Angela Davis
+Candidate	Anita Mays	Anita Mays
+Candidate	Bradley Lacko	Bradley Lacko
+Candidate	Brendan Shea	Brendan Shea
+Candidate	Brett Hillyer	Brett Hillyer
+Candidate	Brian Carroll	Brian Carroll
+Candidate	Brian Simeone	Brian Simeone
+Candidate	Bride Sweeney	Bride Sweeney
+Candidate	Carol Robb	Carol Robb
+Candidate	Cheryl Waite	Cheryl Waite
+Candidate	Christian Johnson	Christian Johnson
+Candidate	Christina Collins	Christina Collins
+Candidate	Christina Hagan	Christina Hagan
+Candidate	Dale Stein	Dale Stein
+Candidate	Daniel Harrington	Daniel Harrington
+Candidate	Daniel Troy	Daniel Troy
+Candidate	Dario Hunter	Dario Hunter
+Candidate	Darrell Kick	Darrell Kick
+Candidate	David Joyce	David Joyce
+Candidate	David Simon	David Simon
+Candidate	Diana Fessler	Diana Fessler
+Candidate	Diane Grendell	Diane Grendell
+Candidate	Donald Trump	Donald Trump
+Candidate	Dustin Russell	Dustin Russell
+Candidate	Elecia Wobler	Elecia Wobler
+Candidate	Emanuella Groves	Emanuella Groves
+Candidate	Erica Crawley	Erica Crawley
+Candidate	Gary Click	Gary Click
+Candidate	George Phillips	George Phillips
+Candidate	Haraz Ghanbari	Haraz Ghanbari
+Candidate	Harrison Stanley	Harrison Stanley
+Candidate	Hillary Mueri	Hillary Mueri
+Candidate	Howie Hawkins	Howie Hawkins
+Candidate	Isaac Reed	Isaac Reed
+Candidate	Jade Simmons	Jade Simmons
+Candidate	Jaime Castle	Jaime Castle
+Candidate	James Condit	James Condit
+Candidate	James Hoops	James Hoops
+Candidate	Jason Stephens	Jason Stephens
+Candidate	Jay Conrad	Jay Conrad
+Candidate	Jean Mastin	Jean Mastin
+Candidate	Jeffrey Crossman	Jeffrey Crossman
+Candidate	Jennifer Gross	Jennifer Gross
+Candidate	Jerry  Powell	Jerry  Powell
+Candidate	Jim Lewis	Jim Lewis
+Candidate	Jo Jorgensen	Jo Jorgensen
+Candidate	Joan Sweeny	Joan Sweeny
+Candidate	John Mullins	John Mullins
+Candidate	John O'Donnell	John O'Donnell
+Candidate	John Stewart	John Stewart
+Candidate	Johnny Hamilton	Johnny Hamilton
+Candidate	Joseph Biden	Joseph Biden
+Candidate	Julie Schafer	Julie Schafer
+Candidate	Kaitlyn Clark	Kaitlyn Clark
+Candidate	Kasey Wells	Kasey Wells
+Candidate	Kayla Packard	Kayla Packard
+Candidate	Kent Keller	Kent Keller
+Candidate	Kevin Kahn	Kevin Kahn
+Candidate	Kevin Kussmaul	Kevin Kussmaul
+Candidate	Kristy Wilkin	Kristy Wilkin
+Candidate	Kyle Bruckman	Kyle Bruckman
+Candidate	Larry Jones	Larry Jones
+Candidate	Lisa Sadler	Lisa Sadler
+Candidate	Louis Blessing	Louis Blessing
+Candidate	Marci McCaulay	Marci McCaulay
+Candidate	Marcia Fudge	Marcia Fudge
+Candidate	Mark Fraizer	Mark Fraizer
+Candidate	Mark Miller	Mark Miller
+Candidate	Mark Richardson	Mark Richardson
+Candidate	Marshall Lachman	Marshall Lachman
+Candidate	Mary Binegar	Mary Binegar
+Candidate	Mary Harshfield	Mary Harshfield
+Candidate	Mary Hill	Mary Hill
+Candidate	Michael Johnson	Michael Johnson
+Candidate	Michael Mentel	Michael Mentel
+Candidate	Michael O'Brien	Michael O'Brien
+Candidate	Michael Sheehy	Michael Sheehy
+Candidate	Michael Skindell	Michael Skindell
+Candidate	Michele Elba	Michele Elba
+Candidate	Michelle Newman	Michelle Newman
+Candidate	Michelle Novak	Michelle Novak
+Candidate	Myron Duhart	Myron Duhart
+Candidate	Nicholas Moss	Nicholas Moss
+Candidate	Pamela Hawkins	Pamela Hawkins
+Candidate	Peter Abele	Peter Abele
+Candidate	President Boddie	President Boddie
+Candidate	Quentin Potter	Quentin Potter
+Candidate	Richard Olivito	Richard Olivito
+Candidate	Riordan McClain	Riordan McClain
+Candidate	Robert Hackett	Robert Hackett
+Candidate	Robert Hendrickson	Robert Hendrickson
+Candidate	Robert Leist	Robert Leist
+Candidate	Robert Taylor	Robert Taylor
+Candidate	Rocky Neale	Rocky Neale
+Candidate	Russell Mock	Russell Mock
+Candidate	Ryan Hunger	Ryan Hunger
+Candidate	Sam Grady	Sam Grady
+Candidate	Sara Carruthers	Sara Carruthers
+Candidate	Sarah Fowler Arthur	Sarah Fowler Arthur
+Candidate	Sarah Kovoor	Sarah Kovoor
+Candidate	Scott Dailey	Scott Dailey
+Candidate	Sean Gallagher	Sean Gallagher
+Candidate	Sean O'Brien	Sean O'Brien
+Candidate	Shane Hoffman	Shane Hoffman
+Candidate	Shannon Freshour	Shannon Freshour
+Candidate	Sharon Kennedy	Sharon Kennedy
+Candidate	Sharon Ray	Sharon Ray
+Candidate	Stacy Brooks	Stacy Brooks
+Candidate	Stephanie Kunze	Stephanie Kunze
+Candidate	Steven Mount	Steven Mount
+Candidate	Steven Salander	Steven Salander
+Candidate	Tad Saunders	Tad Saunders
+Candidate	Ted Greek	Ted Greek
+Candidate	Ted Jones	Ted Jones
+Candidate	Ted McClenen	Ted McClenen
+Candidate	Terry Johnson	Terry Johnson
+Candidate	Thomas Osowik	Thomas Osowik
+Candidate	Thomas Patton	Thomas Patton
+Candidate	Thomas West	Thomas West
+Candidate	Tim Haske	Tim Haske
+Candidate	Timothy Cannon	Timothy Cannon
+Candidate	Todd Beegle	Todd Beegle
+Candidate	Tom Roll	Tom Roll
+Candidate	William Hoffman	William Hoffman
+Candidate	Willis Blackshear	Willis Blackshear
 CountItemType	total	total
+CountItemType	total	Total
 
