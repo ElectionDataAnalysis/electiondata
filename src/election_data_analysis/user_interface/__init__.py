@@ -505,16 +505,6 @@ def read_single_datafile(
 
     # drop any empty dataframes
     df_dict = {k:v for k,v in df_dict.items() if not v.empty}
-
-    if not aux:
-        # drop any empty columns (except columns in string munge_fields)
-        for k in df_dict.keys():
-            mask = ~(df_dict[k].isnull() | df_dict[k].isin([0,""])).all()
-            # ensure mask is "True" for munge fields
-            for mf_k in p["munge_fields"].keys():
-                for c in p["munge_fields"][mf_k]:
-                    mask[c] = True
-            df_dict[k] = df_dict[k].loc[:, mask]
     return df_dict, err
 
 
