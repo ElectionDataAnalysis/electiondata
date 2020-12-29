@@ -15,4 +15,4 @@ ReportingUnit=<Summary By Counties>
 
 [in_count_headers]
 Party={<header_0>,^.*[ |,]([a-z]{1,3})$}
-Candidate={<header_0>,(Scatter$|\*corrections submitted by clerks$|\*corrections received by clerks$|\*corrections received from clerks$|^[\w .]+|^[\w ]+, Sr\.|^[\w ]+, Jr\.)(?:$|\W+[a-z]+$)}
+Candidate={<header_0>,(Scatter$|\*corrections submitted by clerks$|\*corrections received by clerks$|\*corrections received from clerks$|^[\w .\']+|^[\w \']+, Sr\.|^[\w \']+, Jr\.)(?:$|\W+[a-z]+$)}
