@@ -1224,6 +1224,13 @@ def raw_to_id_simple(
                 f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
                 f"KeyError ({exc}) while adding internal ids for {t}.",
             )
+        except AttributeError as exc:
+            err = ui.add_new_error(
+                err,
+                "system",
+                f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
+                f"AttributeError ({exc}) while adding internal ids for {t}.",
+            )
         except Exception as exc:
             err = ui.add_new_error(
                 err,
@@ -1955,7 +1962,7 @@ def get_aux_info(
         # for each field appearing in the element's formula
         fk_candidates = get_fields_from_formula(formulas[element])
         for field in fk_candidates:
-            aux[element][field] = dict()
+
             # if there is a lookup for this field, grab it
             f_p, f_err = ui.get_parameters(
                 required_keys=["source_file", "file_type", "string_locations", "lookup_id"],
@@ -1964,13 +1971,19 @@ def get_aux_info(
                 param_file=munger_path,
             )
             if not f_err:
+                # prepare dictionary to hold info for this lookup
+                aux[element][field] = dict()
                 # add the foreign key to the list
                 fk_list.append(field)
                 # grab replacement formula, lookup_id, list of fields in replacement formula
                 aux[element][field]["r_formula"] = f_p[f"{element}_replacement"]
                 aux[element][field]["params"] = f_p
                 aux[element][field]["r_fields"] = get_fields_from_formula(f_p[f"{element}_replacement"])
+        # if this element's source values will need to be lookup up
+        if fk_list:
             foreign_key_fields[element] = fk_list
+        else:
+            aux.pop(element)
     return aux, foreign_key_fields
 
 
