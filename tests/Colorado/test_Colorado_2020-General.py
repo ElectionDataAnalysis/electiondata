@@ -1,70 +1,117 @@
 import election_data_analysis as e
-election = "2020 General"
-jurisdiction = "Colorado"
-#CO20g test
+
 # Instructions:
-#   Delete any tests for contest types your state doesn't have in 2020 (e.g., Florida has no US Senate contest)
+#   Copy this template and rename, including your jurisdiction and the timestamp of the results file
+#       following this model: test_North-Carolina_2020_General_20201113_1645.py
+#           * start with test_ so pytest will find the file
+#           * get the underscores and hyphens right, so the system will find the file
+#           * timestamp is YYYYMMDD_xxxx, where xxxx is the military-time Pacific Standard Time
+#           * (timestamp is crucial for files collected during recounts and evolving canvass counts)
+#   Change the constants to values from your file
+#   "triple-quote" out any tests for contest types your state doesn't have in 2020 (e.g., Florida has no US Senate contest)
 #   (Optional) Change district numbers
 #   Replace each '-1' with the correct number calculated from the results file.
 #   Move this testing file to the correct jurisdiction folder in `election_data_analysis/tests`
 
+# # # constants - from https://results.enr.clarityelections.com/CO/Boulder/105983/web.264614/#/summary on 2020-12-29
+election = "2020 General"
+jurisdiction = 'Colorado'
+abbr = 'CO'
+total_pres_votes = 3256952  # total of all votes for US President
+cd = 3  # US House congressional district
+total_cd_votes = 429319  # total votes in that US House contest in the chosen cd
+shd = 1   # state house district
+total_shd_votes = 34032  # total votes in that State House contest
+ssd = 17  # state senate district
+total_ssd_votes = 96074  # total votes in that State Senate contest
+single_vote_type = 'early'  # pick any one with corresponding data in your file, but use internal db name
+pres_votes_vote_type = -1  # total votes for US President of that vote type
+county_or_other = "county"   # Change this only if results are subdivided by something other than counties
+                            #  e.g., 'parish' in LA, 'state-house' in Alaska, 'ward' in Philadelphia
+single_county = 'Colorado;Boulder County'  # pick any one from your file, but use internal db name
+pres_votes_county = 206111  # total votes for US President in that county
+
+
 def test_data_exists(dbname):
-    assert e.data_exists("2020 General","Colorado",dbname=dbname)
+    assert e.data_exists(election, jurisdiction, dbname=dbname)
+
 
 def test_presidential(dbname):
     assert(e.contest_total(
-        "2020 General",
-        "Colorado",
-        "US President (CO)",
+        election,
+        jurisdiction,
+        f"US President ({abbr})",
         dbname=dbname,
         )
-        == 1634546 + 1224304 + 4484 + 2333 + 7323 + 298 + 42723 + 2090 +
-           1740 + 483 + 532 + 312 + 371 + 288 + 160 + 665 + 778 + 541 + 483 +
-           143 + 6295
+        == total_pres_votes
     )
 
-def test_senate_totals(dbname):
-    assert (e.contest_total(
-        "2020 General",
-        "Colorado",
-        "US Senate CO",
-        dbname=dbname,
-        )
-        == 1569209 + 1283954 + 8429 + 7105 + 45914
-    )
 
 def test_congressional_totals(dbname):
     assert (e.contest_total(
-        "2020 General",
-        "Colorado",
-        "US House CO District 1",
+        election,
+        jurisdiction,
+        f"US House {abbr} District {cd}",
         dbname=dbname,
         )
-        == 79979 + 265478 + 1578 + 969 + 5524
+        == total_cd_votes
     )
+
 
 def test_state_senate_totals(dbname):
     assert (e.contest_total(
-        "2020 General",
-        "Colorado",
-        "CO Senate District 4",
+        election,
+        jurisdiction,
+        f"{abbr} Senate District {ssd}",
         dbname=dbname,
         )
-        == 70311 + 40381 + 2957
+        == total_ssd_votes
     )
+
 
 def test_state_house_totals(dbname):
-    assert ( e.contest_total(
-        "2020 General",
-        "Colorado",
-        "CO House District 56",
+    assert (e.contest_total(
+        election,
+        jurisdiction,
+        f"{abbr} House District {shd}",
         dbname=dbname,
         )
-        == 32937 + 22752 + 2264
+        == total_shd_votes
     )
 
 
+def test_standard_vote_types(dbname):
+    assert e.check_count_types_standard(election, jurisdiction, dbname=dbname)
+
+
+def test_vote_type_counts_consistent(dbname):
+    assert e.check_totals_match_vote_types(election, jurisdiction, dbname=dbname)
 
 
 def test_all_candidates_known(dbname):
     assert e.get_contest_with_unknown_candidates(election, jurisdiction, dbname=dbname) == []
+
+"""
+def test_count_type_subtotal(dbname):
+    assert (e.contest_total(
+        election,
+        jurisdiction,
+        f"US President ({abbr})",
+        dbname=dbname,
+        vote_type=single_vote_type,
+        )
+        == pres_votes_vote_type
+    )
+
+"""
+def test_county_subtotal(dbname):
+    assert (e.contest_total(
+        election,
+        jurisdiction,
+        f"US President ({abbr})",
+        dbname=dbname,
+        county=single_county,
+        sub_unit_type=county_or_other,
+        )
+        == pres_votes_county
+            )
