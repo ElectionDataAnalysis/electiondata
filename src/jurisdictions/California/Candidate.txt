@@ -851,7 +851,7 @@ Ran S. Petel
 Eric Taylor
 Jackie Fielder
 Erin Smith
-Starchild *
+Starchild
 John P. McDonnell
 Ted Howze
 Michael J. 'Mike' Barkley
@@ -962,3 +962,8 @@ Nicholas D'Artagnan Dumas
 Sorinne Ardeleanu
 Gloria La Riva
 Ryan Downing
+Mark Charles
+Joseph Kishore
+Jesse Ventura
+Brock Pierce
+Brian Carroll
