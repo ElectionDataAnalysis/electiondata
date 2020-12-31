@@ -1,8 +1,0 @@
-name	raw_identifier_formula	source
-ReportingUnit	<Election District>	row
-Party	<Party Name>	row
-CandidateContest	<Contest Title> (<Party Name>)	row
-Candidate	<Candidate Name>	row
-BallotMeasureContest	<Contest Title>	row
-BallotMeasureSelection	<Candidate Name>	row
-CountItemType	<0>	column
