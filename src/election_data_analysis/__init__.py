@@ -874,60 +874,7 @@ class JurisdictionPrepper:
 
         munger_name = Path(munger_path).name
 
-        # read data from file (appending _SOURCE)
-        wr, munger, new_err = ui.read_results(
-            results_file_path=results_file_path,
-            munger_path=munger_path,
-            aux_data_path=aux_data_path,
-            error=None,
-        )
-        if new_err:
-            error = ui.consolidate_errors([error, new_err])
-            if ui.fatal_error(new_err):
-                return error
-
-        if wr.empty:
-            error = ui.add_new_error(
-                error,
-                "file",
-                Path(results_file_path).name,
-                f"No results read via munger {Path(munger_path).name}",
-            )
-            return error
-
-        # clean the dataframe read from the results
-        # reduce <wr> in size
-        fields = [
-            f"{field}_SOURCE"
-            for field in munger.cdf_elements.loc["ReportingUnit", "fields"]
-        ]
-        # TODO generalize to mungers with aux_data
-        bad_fields = [f for f in fields if f not in wr.columns]
-        if bad_fields:
-            error = ui.add_new_error(
-                error,
-                "munger",
-                munger.name,
-                f"\n(ignore _SOURCE suffix below)\n"
-                f"ReportingUnit formula fields not found in file ({Path(results_file_path).name}): "
-                f"{bad_fields}\n"
-                f"file fields are:\n{wr.columns}",
-            )
-            return error
-        wr = wr[fields].drop_duplicates()
-
-        # get rid of all-blank rows
-        wr = wr[(wr != "").any(axis=1)]
-        if wr.empty:
-            error = ui.add_new_error(
-                error,
-                "file",
-                Path(results_file_path).name,
-                f"No relevant information read from results file.",
-            )
-            return error
-
-        # get formulas from munger
+        wr, new_err = m.to_standard_count_frame(f_path, munger_path, p, constants)        # get formulas from munger
         ru_formula = munger.cdf_elements.loc["ReportingUnit", "raw_identifier_formula"]
         try:
             # text up to first ; is the County -- the part following is the sub_ru

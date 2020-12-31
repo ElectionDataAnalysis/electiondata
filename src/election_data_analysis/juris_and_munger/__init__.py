@@ -6,14 +6,11 @@ from pandas.api.types import is_numeric_dtype
 from typing import Optional
 from election_data_analysis import munge as m
 from election_data_analysis import user_interface as ui
+import election_data_analysis as eda
 import re
 import numpy as np
 from pathlib import Path
 import csv
-
-
-# constants
-
 
 
 def recast_options(options: dict, types: dict) -> dict:
@@ -387,7 +384,7 @@ def ensure_juris_files(juris_path, ignore_empty=False) -> Optional[dict]:
         # if file does not exist
         if not os.path.isfile(cf_path):
             # create the file
-            temp.to_csv(cf_path, sep="\t", index=False)
+            temp.to_csv(cf_path, sep="\t", index=False, encoding=eda.default_encoding)
             created = True
 
         # if file exists, check format against template
@@ -696,7 +693,7 @@ def clean_and_dedupe(f_path: str):
                 pass
     dupes_df, df = ui.find_dupes(df)
     if not dupes_df.empty:
-        df.to_csv(f_path, sep="\t", index=False)
+        df.to_csv(f_path, sep="\t", index=False, encoding=eda.default_encoding)
     return
 
 
@@ -704,7 +701,7 @@ def drop_lines_with_any_nulls(f_path):
     # TODO tech debt: this can muck up encodings. needs to be fixed.
     df = pd.read_csv(f_path, sep = "\t", encoding="iso-8859-1", quoting=csv.QUOTE_MINIMAL)
     df = df[df.notnull().all(axis=1)]
-    df.to_csv(f_path, sep="\t", index=False)
+    df.to_csv(f_path, sep="\t", index=False, encoding=eda.default_encoding)
     return
 
 
