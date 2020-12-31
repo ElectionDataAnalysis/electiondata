@@ -243,11 +243,19 @@ class DataLoader:
                 # if asked to load the jurisdiction, load it.
                 if load_jurisdictions:
                     print(f"Loading jurisdiction from {jp} to {self.session.bind}")
-                    new_err = juris[jp].load_juris_to_db(
-                        self.session,
-                    )
-                    if new_err:
-                        err = ui.consolidate_errors([err, new_err])
+                    try:
+                        new_err = juris[jp].load_juris_to_db(
+                            self.session,
+                        )
+                        if new_err:
+                            err = ui.consolidate_errors([err, new_err])
+                    except Exception as exc:
+                        err = ui.add_new_error(
+                            err,
+                            "jurisdiction",
+                            jp,
+                            f"Exception during loading: {exc}"
+                        )
                     if not ui.fatal_error(new_err):
                         good_jurisdictions.append(jp)
                 # if not asked to load jurisdiction, assume it's loaded
