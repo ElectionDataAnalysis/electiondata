@@ -1,6 +1,0 @@
-name	raw_identifier_formula	source
-ReportingUnit	<County>	row
-Party	<Party>	row
-CandidateContest	<Race>	row
-Candidate	<Candidate>	row
-CountItemType	total	row

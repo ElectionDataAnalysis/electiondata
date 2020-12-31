@@ -1,9 +1,0 @@
-name	raw_identifier_formula	source
-ReportingUnit		other
-Election		other
-Party		other
-CandidateContest		other
-Candidate		other
-BallotMeasureContest		other
-BallotMeasureSelection		other
-CountItemType		other
