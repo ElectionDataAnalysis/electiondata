@@ -783,6 +783,8 @@ Party	Democratic Party	D
 Party	Republican Party	R
 Party	Green Party	G
 Party	Libertarian Party	L
+Party	WI	WI
+Party	Independent	IN
 ReportingUnit	Ohio;OH House District 1	Ohio;OH House District 1
 ReportingUnit	Ohio;OH House District 2	Ohio;OH House District 2
 ReportingUnit	Ohio;OH House District 3	Ohio;OH House District 3
@@ -2339,4 +2341,5 @@ Candidate	Jo Jorgensen and Spike Cohen	Jo Jorgensen and Spike Cohen
 Candidate	Jade Simmons and Claudeliah J. Roze	Jade Simmons and Claudeliah J. Roze
 Candidate	Donald J. Trump and Michael R. Pence	Donald J. Trump and Michael R. Pence
 Candidate	Kasey Wells and Rachel Wells	Kasey Wells and Rachel Wells
+Candidate	Tom Roll	Tom Roll
 CountItemType	total	total

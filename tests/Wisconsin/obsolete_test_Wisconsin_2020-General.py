@@ -15,21 +15,21 @@ import election_data_analysis as e
 
 # # # constants - CHANGE THESE!! - use internal db names
 election = "2020 General"
-jurisdiction = 'Ohio'
-abbr = 'OH'
-total_pres_votes = 5922202  # total of all votes for US President
-cd = 1  # US House congressional district
-total_cd_votes = 385285  # total votes in that US House contest in the chosen cd
-shd = 32   # state house district
-total_shd_votes = 42055  # total votes in that State House contest
-ssd = 18  # state senate district
-total_ssd_votes = 191289  # total votes in that State Senate contest
+jurisdiction = 'Wisconsin'
+abbr = 'WI'
+total_pres_votes = 3296650  # total of all votes for US President
+cd = 3  # US House congressional district
+total_cd_votes = 0  # total votes in that US House contest in the chosen cd
+shd = 1   # state house district
+total_shd_votes = 0  # total votes in that State House contest
+ssd = 15  # state senate district
+total_ssd_votes = 0  # total votes in that State Senate contest
 single_vote_type = 'early'  # pick any one with corresponding data in your file, but use internal db name
 pres_votes_vote_type = 0  # total votes for US President of that vote type
 county_or_other = "county"   # Change this only if results are subdivided by something other than counties
                             #  e.g., 'parish' in LA, 'state-house' in Alaska, 'ward' in Philadelphia
-single_county = 'Ohio;Butler County'  # pick any one from your file, but use internal db name
-pres_votes_county = 186737  # total votes for US President in that county
+single_county = 'Wisconsin;Vernon County'  # pick any one from your file, but use internal db name
+pres_votes_county = 15910  # total votes for US President in that county
 
 
 def test_data_exists(dbname):
@@ -86,10 +86,6 @@ def test_standard_vote_types(dbname):
 
 def test_vote_type_counts_consistent(dbname):
     assert e.check_totals_match_vote_types(election, jurisdiction, dbname=dbname)
-
-
-def test_all_candidates_known(dbname):
-    assert e.get_contest_with_unknown_candidates(election, jurisdiction, dbname=dbname) == []
 
 
 def test_count_type_subtotal(dbname):

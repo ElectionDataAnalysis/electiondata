@@ -1,0 +1,6 @@
+name	raw_identifier_formula	source
+Party		ini
+Candidate	<0>	column
+ReportingUnit	<Reporting Unit>	row
+CandidateContest		ini
+CountItemType	total	row
