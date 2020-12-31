@@ -1,0 +1,335 @@
+Name	NumberElected	Office	PrimaryParty
+NY Senate District 1	1	NY Senate District 1	
+NY Senate District 2	1	NY Senate District 2	
+NY Senate District 3	1	NY Senate District 3	
+NY Senate District 4	1	NY Senate District 4	
+NY Senate District 5	1	NY Senate District 5	
+NY Senate District 6	1	NY Senate District 6	
+NY Senate District 7	1	NY Senate District 7	
+NY Senate District 8	1	NY Senate District 8	
+NY Senate District 9	1	NY Senate District 9	
+NY Senate District 10	1	NY Senate District 10	
+NY Senate District 11	1	NY Senate District 11	
+NY Senate District 12	1	NY Senate District 12	
+NY Senate District 13	1	NY Senate District 13	
+NY Senate District 14	1	NY Senate District 14	
+NY Senate District 15	1	NY Senate District 15	
+NY Senate District 16	1	NY Senate District 16	
+NY Senate District 17	1	NY Senate District 17	
+NY Senate District 18	1	NY Senate District 18	
+NY Senate District 19	1	NY Senate District 19	
+NY Senate District 20	1	NY Senate District 20	
+NY Senate District 21	1	NY Senate District 21	
+NY Senate District 22	1	NY Senate District 22	
+NY Senate District 23	1	NY Senate District 23	
+NY Senate District 24	1	NY Senate District 24	
+NY Senate District 25	1	NY Senate District 25	
+NY Senate District 26	1	NY Senate District 26	
+NY Senate District 27	1	NY Senate District 27	
+NY Senate District 28	1	NY Senate District 28	
+NY Senate District 29	1	NY Senate District 29	
+NY Senate District 30	1	NY Senate District 30	
+NY Senate District 31	1	NY Senate District 31	
+NY Senate District 32	1	NY Senate District 32	
+NY Senate District 33	1	NY Senate District 33	
+NY Senate District 34	1	NY Senate District 34	
+NY Senate District 35	1	NY Senate District 35	
+NY Senate District 36	1	NY Senate District 36	
+NY Senate District 37	1	NY Senate District 37	
+NY Senate District 38	1	NY Senate District 38	
+NY Senate District 39	1	NY Senate District 39	
+NY Senate District 40	1	NY Senate District 40	
+NY Senate District 41	1	NY Senate District 41	
+NY Senate District 42	1	NY Senate District 42	
+NY Senate District 43	1	NY Senate District 43	
+NY Senate District 44	1	NY Senate District 44	
+NY Senate District 45	1	NY Senate District 45	
+NY Senate District 46	1	NY Senate District 46	
+NY Senate District 47	1	NY Senate District 47	
+NY Senate District 48	1	NY Senate District 48	
+NY Senate District 49	1	NY Senate District 49	
+NY Senate District 50	1	NY Senate District 50	
+NY Senate District 51	1	NY Senate District 51	
+NY Senate District 52	1	NY Senate District 52	
+NY Senate District 53	1	NY Senate District 53	
+NY Senate District 54	1	NY Senate District 54	
+NY Senate District 55	1	NY Senate District 55	
+NY Senate District 56	1	NY Senate District 56	
+NY Senate District 57	1	NY Senate District 57	
+NY Senate District 58	1	NY Senate District 58	
+NY Senate District 59	1	NY Senate District 59	
+NY Senate District 60	1	NY Senate District 60	
+NY Senate District 61	1	NY Senate District 61	
+NY Senate District 62	1	NY Senate District 62	
+NY Senate District 63	1	NY Senate District 63	
+NY House District 1	1	NY House District 1	
+NY House District 2	1	NY House District 2	
+NY House District 3	1	NY House District 3	
+NY House District 4	1	NY House District 4	
+NY House District 5	1	NY House District 5	
+NY House District 6	1	NY House District 6	
+NY House District 7	1	NY House District 7	
+NY House District 8	1	NY House District 8	
+NY House District 9	1	NY House District 9	
+NY House District 10	1	NY House District 10	
+NY House District 11	1	NY House District 11	
+NY House District 12	1	NY House District 12	
+NY House District 13	1	NY House District 13	
+NY House District 14	1	NY House District 14	
+NY House District 15	1	NY House District 15	
+NY House District 16	1	NY House District 16	
+NY House District 17	1	NY House District 17	
+NY House District 18	1	NY House District 18	
+NY House District 19	1	NY House District 19	
+NY House District 20	1	NY House District 20	
+NY House District 21	1	NY House District 21	
+NY House District 22	1	NY House District 22	
+NY House District 23	1	NY House District 23	
+NY House District 24	1	NY House District 24	
+NY House District 25	1	NY House District 25	
+NY House District 26	1	NY House District 26	
+NY House District 27	1	NY House District 27	
+NY House District 28	1	NY House District 28	
+NY House District 29	1	NY House District 29	
+NY House District 30	1	NY House District 30	
+NY House District 31	1	NY House District 31	
+NY House District 32	1	NY House District 32	
+NY House District 33	1	NY House District 33	
+NY House District 34	1	NY House District 34	
+NY House District 35	1	NY House District 35	
+NY House District 36	1	NY House District 36	
+NY House District 37	1	NY House District 37	
+NY House District 38	1	NY House District 38	
+NY House District 39	1	NY House District 39	
+NY House District 40	1	NY House District 40	
+NY House District 41	1	NY House District 41	
+NY House District 42	1	NY House District 42	
+NY House District 43	1	NY House District 43	
+NY House District 44	1	NY House District 44	
+NY House District 45	1	NY House District 45	
+NY House District 46	1	NY House District 46	
+NY House District 47	1	NY House District 47	
+NY House District 48	1	NY House District 48	
+NY House District 49	1	NY House District 49	
+NY House District 50	1	NY House District 50	
+NY House District 51	1	NY House District 51	
+NY House District 52	1	NY House District 52	
+NY House District 53	1	NY House District 53	
+NY House District 54	1	NY House District 54	
+NY House District 55	1	NY House District 55	
+NY House District 56	1	NY House District 56	
+NY House District 57	1	NY House District 57	
+NY House District 58	1	NY House District 58	
+NY House District 59	1	NY House District 59	
+NY House District 60	1	NY House District 60	
+NY House District 61	1	NY House District 61	
+NY House District 62	1	NY House District 62	
+NY House District 63	1	NY House District 63	
+NY House District 64	1	NY House District 64	
+NY House District 65	1	NY House District 65	
+NY House District 66	1	NY House District 66	
+NY House District 67	1	NY House District 67	
+NY House District 68	1	NY House District 68	
+NY House District 69	1	NY House District 69	
+NY House District 70	1	NY House District 70	
+NY House District 71	1	NY House District 71	
+NY House District 72	1	NY House District 72	
+NY House District 73	1	NY House District 73	
+NY House District 74	1	NY House District 74	
+NY House District 75	1	NY House District 75	
+NY House District 76	1	NY House District 76	
+NY House District 77	1	NY House District 77	
+NY House District 78	1	NY House District 78	
+NY House District 79	1	NY House District 79	
+NY House District 80	1	NY House District 80	
+NY House District 81	1	NY House District 81	
+NY House District 82	1	NY House District 82	
+NY House District 83	1	NY House District 83	
+NY House District 84	1	NY House District 84	
+NY House District 85	1	NY House District 85	
+NY House District 86	1	NY House District 86	
+NY House District 87	1	NY House District 87	
+NY House District 88	1	NY House District 88	
+NY House District 89	1	NY House District 89	
+NY House District 90	1	NY House District 90	
+NY House District 91	1	NY House District 91	
+NY House District 92	1	NY House District 92	
+NY House District 93	1	NY House District 93	
+NY House District 94	1	NY House District 94	
+NY House District 95	1	NY House District 95	
+NY House District 96	1	NY House District 96	
+NY House District 97	1	NY House District 97	
+NY House District 98	1	NY House District 98	
+NY House District 99	1	NY House District 99	
+NY House District 100	1	NY House District 100	
+NY House District 101	1	NY House District 101	
+NY House District 102	1	NY House District 102	
+NY House District 103	1	NY House District 103	
+NY House District 104	1	NY House District 104	
+NY House District 105	1	NY House District 105	
+NY House District 106	1	NY House District 106	
+NY House District 107	1	NY House District 107	
+NY House District 108	1	NY House District 108	
+NY House District 109	1	NY House District 109	
+NY House District 110	1	NY House District 110	
+NY House District 111	1	NY House District 111	
+NY House District 112	1	NY House District 112	
+NY House District 113	1	NY House District 113	
+NY House District 114	1	NY House District 114	
+NY House District 115	1	NY House District 115	
+NY House District 116	1	NY House District 116	
+NY House District 117	1	NY House District 117	
+NY House District 118	1	NY House District 118	
+NY House District 119	1	NY House District 119	
+NY House District 120	1	NY House District 120	
+NY House District 121	1	NY House District 121	
+NY House District 122	1	NY House District 122	
+NY House District 123	1	NY House District 123	
+NY House District 124	1	NY House District 124	
+NY House District 125	1	NY House District 125	
+NY House District 126	1	NY House District 126	
+NY House District 127	1	NY House District 127	
+NY House District 128	1	NY House District 128	
+NY House District 129	1	NY House District 129	
+NY House District 130	1	NY House District 130	
+NY House District 131	1	NY House District 131	
+NY House District 132	1	NY House District 132	
+NY House District 133	1	NY House District 133	
+NY House District 134	1	NY House District 134	
+NY House District 135	1	NY House District 135	
+NY House District 136	1	NY House District 136	
+NY House District 137	1	NY House District 137	
+NY House District 138	1	NY House District 138	
+NY House District 139	1	NY House District 139	
+NY House District 140	1	NY House District 140	
+NY House District 141	1	NY House District 141	
+NY House District 142	1	NY House District 142	
+NY House District 143	1	NY House District 143	
+NY House District 144	1	NY House District 144	
+NY House District 145	1	NY House District 145	
+NY House District 146	1	NY House District 146	
+NY House District 147	1	NY House District 147	
+NY House District 148	1	NY House District 148	
+NY House District 149	1	NY House District 149	
+NY House District 150	1	NY House District 150	
+US House NY District 1	1	US House NY District 1	
+US House NY District 2	1	US House NY District 2	
+US House NY District 3	1	US House NY District 3	
+US House NY District 4	1	US House NY District 4	
+US House NY District 5	1	US House NY District 5	
+US House NY District 6	1	US House NY District 6	
+US House NY District 7	1	US House NY District 7	
+US House NY District 8	1	US House NY District 8	
+US House NY District 9	1	US House NY District 9	
+US House NY District 10	1	US House NY District 10	
+US House NY District 11	1	US House NY District 11	
+US House NY District 12	1	US House NY District 12	
+US House NY District 13	1	US House NY District 13	
+US House NY District 14	1	US House NY District 14	
+US House NY District 15	1	US House NY District 15	
+US House NY District 16	1	US House NY District 16	
+US House NY District 17	1	US House NY District 17	
+US House NY District 18	1	US House NY District 18	
+US House NY District 19	1	US House NY District 19	
+US House NY District 20	1	US House NY District 20	
+US House NY District 21	1	US House NY District 21	
+US House NY District 22	1	US House NY District 22	
+US House NY District 23	1	US House NY District 23	
+US House NY District 24	1	US House NY District 24	
+US House NY District 25	1	US House NY District 25	
+US House NY District 26	1	US House NY District 26	
+US House NY District 27	1	US House NY District 27	
+US President (NY)	1	US President (NY)	
+NY Governor	1	NY Governor	
+US Senate NY	1	US Senate NY	
+NY Attorney General	1	NY Attorney General	
+NY Lieutenant Governor	1	NY Lieutenant Governor	
+NY Treasurer	1	NY Treasurer	
+NY Secretary of State	1	NY Secretary of State	
+NY Senate District 64	1	NY Senate District 64	
+NY Senate District 65	1	NY Senate District 65	
+NY Senate District 66	1	NY Senate District 66	
+NY Senate District 67	1	NY Senate District 67	
+NY Senate District 68	1	NY Senate District 68	
+NY Senate District 69	1	NY Senate District 69	
+NY Senate District 70	1	NY Senate District 70	
+NY Senate District 71	1	NY Senate District 71	
+NY Senate District 72	1	NY Senate District 72	
+NY Senate District 73	1	NY Senate District 73	
+NY Senate District 74	1	NY Senate District 74	
+NY Senate District 75	1	NY Senate District 75	
+NY Senate District 76	1	NY Senate District 76	
+NY Senate District 77	1	NY Senate District 77	
+NY Senate District 78	1	NY Senate District 78	
+NY Senate District 79	1	NY Senate District 79	
+NY Senate District 80	1	NY Senate District 80	
+NY Senate District 81	1	NY Senate District 81	
+NY Senate District 82	1	NY Senate District 82	
+NY Senate District 83	1	NY Senate District 83	
+NY Senate District 84	1	NY Senate District 84	
+NY Senate District 85	1	NY Senate District 85	
+NY Senate District 86	1	NY Senate District 86	
+NY Senate District 87	1	NY Senate District 87	
+NY Senate District 88	1	NY Senate District 88	
+NY Senate District 89	1	NY Senate District 89	
+NY Senate District 90	1	NY Senate District 90	
+NY Senate District 91	1	NY Senate District 91	
+NY Senate District 92	1	NY Senate District 92	
+NY Senate District 93	1	NY Senate District 93	
+NY Senate District 94	1	NY Senate District 94	
+NY Senate District 95	1	NY Senate District 95	
+NY Senate District 96	1	NY Senate District 96	
+NY Senate District 97	1	NY Senate District 97	
+NY Senate District 98	1	NY Senate District 98	
+NY Senate District 99	1	NY Senate District 99	
+NY Senate District 100	1	NY Senate District 100	
+NY Senate District 101	1	NY Senate District 101	
+NY Senate District 102	1	NY Senate District 102	
+NY Senate District 103	1	NY Senate District 103	
+NY Senate District 104	1	NY Senate District 104	
+NY Senate District 105	1	NY Senate District 105	
+NY Senate District 106	1	NY Senate District 106	
+NY Senate District 107	1	NY Senate District 107	
+NY Senate District 108	1	NY Senate District 108	
+NY Senate District 109	1	NY Senate District 109	
+NY Senate District 110	1	NY Senate District 110	
+NY Senate District 111	1	NY Senate District 111	
+NY Senate District 112	1	NY Senate District 112	
+NY Senate District 113	1	NY Senate District 113	
+NY Senate District 114	1	NY Senate District 114	
+NY Senate District 115	1	NY Senate District 115	
+NY Senate District 116	1	NY Senate District 116	
+NY Senate District 117	1	NY Senate District 117	
+NY Senate District 118	1	NY Senate District 118	
+NY Senate District 119	1	NY Senate District 119	
+NY Senate District 120	1	NY Senate District 120	
+NY Senate District 121	1	NY Senate District 121	
+NY Senate District 122	1	NY Senate District 122	
+NY Senate District 123	1	NY Senate District 123	
+NY Senate District 124	1	NY Senate District 124	
+NY Senate District 125	1	NY Senate District 125	
+NY Senate District 126	1	NY Senate District 126	
+NY Senate District 127	1	NY Senate District 127	
+NY Senate District 128	1	NY Senate District 128	
+NY Senate District 129	1	NY Senate District 129	
+NY Senate District 130	1	NY Senate District 130	
+NY Senate District 131	1	NY Senate District 131	
+NY Senate District 132	1	NY Senate District 132	
+NY Senate District 133	1	NY Senate District 133	
+NY Senate District 134	1	NY Senate District 134	
+NY Senate District 135	1	NY Senate District 135	
+NY Senate District 136	1	NY Senate District 136	
+NY Senate District 137	1	NY Senate District 137	
+NY Senate District 138	1	NY Senate District 138	
+NY Senate District 139	1	NY Senate District 139	
+NY Senate District 140	1	NY Senate District 140	
+NY Senate District 141	1	NY Senate District 141	
+NY Senate District 142	1	NY Senate District 142	
+NY Senate District 143	1	NY Senate District 143	
+NY Senate District 144	1	NY Senate District 144	
+NY Senate District 145	1	NY Senate District 145	
+NY Senate District 146	1	NY Senate District 146	
+NY Senate District 147	1	NY Senate District 147	
+NY Senate District 148	1	NY Senate District 148	
+NY Senate District 149	1	NY Senate District 149	
+NY Senate District 150	1	NY Senate District 150	

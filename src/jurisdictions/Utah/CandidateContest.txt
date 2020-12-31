@@ -114,3 +114,118 @@ UT Attorney General	1	UT Attorney General
 UT Lieutenant Governor	1	UT Lieutenant Governor	
 UT Treasurer	1	UT Treasurer	
 UT Secretary of State	1	UT Secretary of State	
+UT House District 1	1	UT House District 1	
+UT House District 2	1	UT House District 2	
+UT House District 3	1	UT House District 3	
+UT House District 4	1	UT House District 4	
+UT House District 5	1	UT House District 5	
+UT House District 6	1	UT House District 6	
+UT House District 7	1	UT House District 7	
+UT House District 8	1	UT House District 8	
+UT House District 9	1	UT House District 9	
+UT House District 10	1	UT House District 10	
+UT House District 11	1	UT House District 11	
+UT House District 12	1	UT House District 12	
+UT House District 13	1	UT House District 13	
+UT House District 14	1	UT House District 14	
+UT House District 15	1	UT House District 15	
+UT House District 16	1	UT House District 16	
+UT House District 17	1	UT House District 17	
+UT House District 18	1	UT House District 18	
+UT House District 19	1	UT House District 19	
+UT House District 20	1	UT House District 20	
+UT House District 21	1	UT House District 21	
+UT House District 22	1	UT House District 22	
+UT House District 23	1	UT House District 23	
+UT House District 24	1	UT House District 24	
+UT House District 25	1	UT House District 25	
+UT House District 26	1	UT House District 26	
+UT House District 27	1	UT House District 27	
+UT House District 28	1	UT House District 28	
+UT House District 29	1	UT House District 29	
+UT House District 30	1	UT House District 30	
+UT House District 31	1	UT House District 31	
+UT House District 32	1	UT House District 32	
+UT House District 33	1	UT House District 33	
+UT House District 34	1	UT House District 34	
+UT House District 35	1	UT House District 35	
+UT House District 36	1	UT House District 36	
+UT House District 37	1	UT House District 37	
+UT House District 38	1	UT House District 38	
+UT House District 39	1	UT House District 39	
+UT House District 40	1	UT House District 40	
+UT House District 41	1	UT House District 41	
+UT House District 42	1	UT House District 42	
+UT House District 43	1	UT House District 43	
+UT House District 44	1	UT House District 44	
+UT House District 45	1	UT House District 45	
+UT House District 46	1	UT House District 46	
+UT House District 47	1	UT House District 47	
+UT House District 48	1	UT House District 48	
+UT House District 49	1	UT House District 49	
+UT House District 50	1	UT House District 50	
+UT House District 51	1	UT House District 51	
+UT House District 52	1	UT House District 52	
+UT House District 53	1	UT House District 53	
+UT House District 54	1	UT House District 54	
+UT House District 55	1	UT House District 55	
+UT House District 56	1	UT House District 56	
+UT House District 57	1	UT House District 57	
+UT House District 58	1	UT House District 58	
+UT House District 59	1	UT House District 59	
+UT House District 60	1	UT House District 60	
+UT House District 61	1	UT House District 61	
+UT House District 62	1	UT House District 62	
+UT House District 63	1	UT House District 63	
+UT House District 64	1	UT House District 64	
+UT House District 65	1	UT House District 65	
+UT House District 66	1	UT House District 66	
+UT House District 67	1	UT House District 67	
+UT House District 68	1	UT House District 68	
+UT House District 69	1	UT House District 69	
+UT House District 70	1	UT House District 70	
+UT House District 71	1	UT House District 71	
+UT House District 72	1	UT House District 72	
+UT House District 73	1	UT House District 73	
+UT House District 74	1	UT House District 74	
+UT House District 75	1	UT House District 75	
+UT Senate District 1	1	UT Senate District 1	
+UT Senate District 2	1	UT Senate District 2	
+UT Senate District 3	1	UT Senate District 3	
+UT Senate District 4	1	UT Senate District 4	
+UT Senate District 5	1	UT Senate District 5	
+UT Senate District 6	1	UT Senate District 6	
+UT Senate District 7	1	UT Senate District 7	
+UT Senate District 8	1	UT Senate District 8	
+UT Senate District 9	1	UT Senate District 9	
+UT Senate District 10	1	UT Senate District 10	
+UT Senate District 11	1	UT Senate District 11	
+UT Senate District 12	1	UT Senate District 12	
+UT Senate District 13	1	UT Senate District 13	
+UT Senate District 14	1	UT Senate District 14	
+UT Senate District 15	1	UT Senate District 15	
+UT Senate District 16	1	UT Senate District 16	
+UT Senate District 17	1	UT Senate District 17	
+UT Senate District 18	1	UT Senate District 18	
+UT Senate District 19	1	UT Senate District 19	
+UT Senate District 20	1	UT Senate District 20	
+UT Senate District 21	1	UT Senate District 21	
+UT Senate District 22	1	UT Senate District 22	
+UT Senate District 23	1	UT Senate District 23	
+UT Senate District 24	1	UT Senate District 24	
+UT Senate District 25	1	UT Senate District 25	
+UT Senate District 26	1	UT Senate District 26	
+UT Senate District 27	1	UT Senate District 27	
+UT Senate District 28	1	UT Senate District 28	
+UT Senate District 29	1	UT Senate District 29	
+US House UT District 1	1	US House UT District 1	
+US House UT District 2	1	US House UT District 2	
+US House UT District 3	1	US House UT District 3	
+US House UT District 4	1	US House UT District 4	
+US President (UT)	1	US President (UT)	
+UT Governor	1	UT Governor	
+US Senate UT	1	US Senate UT	
+UT Attorney General	1	UT Attorney General	
+UT Lieutenant Governor	1	UT Lieutenant Governor	
+UT Treasurer	1	UT Treasurer	
+UT Secretary of State	1	UT Secretary of State	

@@ -14,5 +14,3 @@ constant_over_file=ReportingUnit,CountItemType
 Party=<NominatingParty>
 CandidateContest=<ContestName>
 Candidate=<CandidateName>
-BallotMeasureContest=nan
-BallotMeasureSelection=nan

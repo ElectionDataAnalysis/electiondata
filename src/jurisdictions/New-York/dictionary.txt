@@ -1,0 +1,841 @@
+cdf_element	cdf_internal_name	raw_identifier_value
+CandidateContest	NY Senate District 1	1st SD
+CandidateContest	NY Senate District 2	2nd SD
+CandidateContest	NY Senate District 3	3rd SD
+CandidateContest	NY Senate District 4	4th SD
+CandidateContest	NY Senate District 5	5th SD
+CandidateContest	NY Senate District 6	6th SD
+CandidateContest	NY Senate District 7	7th SD
+CandidateContest	NY Senate District 8	8th SD
+CandidateContest	NY Senate District 9	9th SD
+CandidateContest	NY Senate District 10	10th SD
+CandidateContest	NY Senate District 11	11th SD
+CandidateContest	NY Senate District 12	12th SD
+CandidateContest	NY Senate District 13	13th SD
+CandidateContest	NY Senate District 14	14th SD
+CandidateContest	NY Senate District 15	15th SD
+CandidateContest	NY Senate District 16	16th SD
+CandidateContest	NY Senate District 17	17th SD
+CandidateContest	NY Senate District 18	18th SD
+CandidateContest	NY Senate District 19	19th SD
+CandidateContest	NY Senate District 20	20th SD
+CandidateContest	NY Senate District 21	21st SD
+CandidateContest	NY Senate District 22	22nd SD
+CandidateContest	NY Senate District 23	23rd SD
+CandidateContest	NY Senate District 24	24th SD
+CandidateContest	NY Senate District 25	25th SD
+CandidateContest	NY Senate District 26	26th SD
+CandidateContest	NY Senate District 27	27th SD
+CandidateContest	NY Senate District 28	28th SD
+CandidateContest	NY Senate District 29	29th SD
+CandidateContest	NY Senate District 30	30th SD
+CandidateContest	NY Senate District 31	31st SD
+CandidateContest	NY Senate District 32	32nd SD
+CandidateContest	NY Senate District 33	33rd SD
+CandidateContest	NY Senate District 34	34th SD
+CandidateContest	NY Senate District 35	35th SD
+CandidateContest	NY Senate District 36	36th SD
+CandidateContest	NY Senate District 37	37th SD
+CandidateContest	NY Senate District 38	38th SD
+CandidateContest	NY Senate District 39	39th SD
+CandidateContest	NY Senate District 40	40th SD
+CandidateContest	NY Senate District 41	41st SD
+CandidateContest	NY Senate District 42	42nd SD
+CandidateContest	NY Senate District 43	43rd SD
+CandidateContest	NY Senate District 44	44th SD
+CandidateContest	NY Senate District 45	45th SD
+CandidateContest	NY Senate District 46	46th SD
+CandidateContest	NY Senate District 47	47th SD
+CandidateContest	NY Senate District 48	48th SD
+CandidateContest	NY Senate District 49	49th SD
+CandidateContest	NY Senate District 50	50th SD
+CandidateContest	NY Senate District 51	51st SD
+CandidateContest	NY Senate District 52	52nd SD
+CandidateContest	NY Senate District 53	53rd SD
+CandidateContest	NY Senate District 54	54th SD
+CandidateContest	NY Senate District 55	55th SD
+CandidateContest	NY Senate District 56	56th SD
+CandidateContest	NY Senate District 57	57th SD
+CandidateContest	NY Senate District 58	58th SD
+CandidateContest	NY Senate District 59	59th SD
+CandidateContest	NY Senate District 60	60th SD
+CandidateContest	NY Senate District 61	61st SD
+CandidateContest	NY Senate District 62	62nd SD
+CandidateContest	NY Senate District 63	63rd SD
+CandidateContest	NY House District 1	1st AD
+CandidateContest	NY House District 2	2nd AD
+CandidateContest	NY House District 3	3rd AD
+CandidateContest	NY House District 4	4th AD
+CandidateContest	NY House District 5	5th AD
+CandidateContest	NY House District 6	6th AD
+CandidateContest	NY House District 7	7th AD
+CandidateContest	NY House District 8	8th AD
+CandidateContest	NY House District 9	9th AD
+CandidateContest	NY House District 10	10th AD
+CandidateContest	NY House District 11	11th AD
+CandidateContest	NY House District 12	12th AD
+CandidateContest	NY House District 13	13th AD
+CandidateContest	NY House District 14	14th AD
+CandidateContest	NY House District 15	15th AD
+CandidateContest	NY House District 16	16th AD
+CandidateContest	NY House District 17	17th AD
+CandidateContest	NY House District 18	18th AD
+CandidateContest	NY House District 19	19th AD
+CandidateContest	NY House District 20	20th AD
+CandidateContest	NY House District 21	21st AD
+CandidateContest	NY House District 22	22nd AD
+CandidateContest	NY House District 23	23rd AD
+CandidateContest	NY House District 24	24th AD
+CandidateContest	NY House District 25	25th AD
+CandidateContest	NY House District 26	26th AD
+CandidateContest	NY House District 27	27th AD
+CandidateContest	NY House District 28	28th AD
+CandidateContest	NY House District 29	29th AD
+CandidateContest	NY House District 30	30th AD
+CandidateContest	NY House District 31	31st AD
+CandidateContest	NY House District 32	32nd AD
+CandidateContest	NY House District 33	33rd AD
+CandidateContest	NY House District 34	34th AD
+CandidateContest	NY House District 35	35th AD
+CandidateContest	NY House District 36	36th AD
+CandidateContest	NY House District 37	37th AD
+CandidateContest	NY House District 38	38th AD
+CandidateContest	NY House District 39	39th AD
+CandidateContest	NY House District 40	40th AD
+CandidateContest	NY House District 41	41st AD
+CandidateContest	NY House District 42	42nd AD
+CandidateContest	NY House District 43	43rd AD
+CandidateContest	NY House District 44	44th AD
+CandidateContest	NY House District 45	45th AD
+CandidateContest	NY House District 46	46th AD
+CandidateContest	NY House District 47	47th AD
+CandidateContest	NY House District 48	48th AD
+CandidateContest	NY House District 49	49th AD
+CandidateContest	NY House District 50	50th AD
+CandidateContest	NY House District 51	51st AD
+CandidateContest	NY House District 52	52nd AD
+CandidateContest	NY House District 53	53rd AD
+CandidateContest	NY House District 54	54th AD
+CandidateContest	NY House District 55	55th AD
+CandidateContest	NY House District 56	56th AD
+CandidateContest	NY House District 57	57th AD
+CandidateContest	NY House District 58	58th AD
+CandidateContest	NY House District 59	59th AD
+CandidateContest	NY House District 60	60th AD
+CandidateContest	NY House District 61	61st AD
+CandidateContest	NY House District 62	62nd AD
+CandidateContest	NY House District 63	63rd AD
+CandidateContest	NY House District 64	64th AD
+CandidateContest	NY House District 65	65th AD
+CandidateContest	NY House District 66	66th AD
+CandidateContest	NY House District 67	67th AD
+CandidateContest	NY House District 68	68th AD
+CandidateContest	NY House District 69	69th AD
+CandidateContest	NY House District 70	70th AD
+CandidateContest	NY House District 71	71st AD
+CandidateContest	NY House District 72	72nd AD
+CandidateContest	NY House District 73	73rd AD
+CandidateContest	NY House District 74	74th AD
+CandidateContest	NY House District 75	75th AD
+CandidateContest	NY House District 76	76th AD
+CandidateContest	NY House District 77	77th AD
+CandidateContest	NY House District 78	78th AD
+CandidateContest	NY House District 79	79th AD
+CandidateContest	NY House District 80	80th AD
+CandidateContest	NY House District 81	81st AD
+CandidateContest	NY House District 82	82nd AD
+CandidateContest	NY House District 83	83rd AD
+CandidateContest	NY House District 84	84th AD
+CandidateContest	NY House District 85	85th AD
+CandidateContest	NY House District 86	86th AD
+CandidateContest	NY House District 87	87th AD
+CandidateContest	NY House District 88	88th AD
+CandidateContest	NY House District 89	89th AD
+CandidateContest	NY House District 90	90th AD
+CandidateContest	NY House District 91	91st AD
+CandidateContest	NY House District 92	92nd AD
+CandidateContest	NY House District 93	93rd AD
+CandidateContest	NY House District 94	94th AD
+CandidateContest	NY House District 95	95th AD
+CandidateContest	NY House District 96	96th AD
+CandidateContest	NY House District 97	97th AD
+CandidateContest	NY House District 98	98th AD
+CandidateContest	NY House District 99	99th AD
+CandidateContest	NY House District 100	100th AD
+CandidateContest	NY House District 101	101st AD
+CandidateContest	NY House District 102	102nd AD
+CandidateContest	NY House District 103	103rd AD
+CandidateContest	NY House District 104	104th AD
+CandidateContest	NY House District 105	105th AD
+CandidateContest	NY House District 106	106th AD
+CandidateContest	NY House District 107	107th AD
+CandidateContest	NY House District 108	108th AD
+CandidateContest	NY House District 109	109th AD
+CandidateContest	NY House District 110	110th AD
+CandidateContest	NY House District 111	111th AD
+CandidateContest	NY House District 112	112th AD
+CandidateContest	NY House District 113	113th AD
+CandidateContest	NY House District 114	114th AD
+CandidateContest	NY House District 115	115th AD
+CandidateContest	NY House District 116	116th AD
+CandidateContest	NY House District 117	117th AD
+CandidateContest	NY House District 118	118th AD
+CandidateContest	NY House District 119	119th AD
+CandidateContest	NY House District 120	120th AD
+CandidateContest	NY House District 121	121st AD
+CandidateContest	NY House District 122	122nd AD
+CandidateContest	NY House District 123	123rd AD
+CandidateContest	NY House District 124	124th AD
+CandidateContest	NY House District 125	125th AD
+CandidateContest	NY House District 126	126th AD
+CandidateContest	NY House District 127	127th AD
+CandidateContest	NY House District 128	128th AD
+CandidateContest	NY House District 129	129th AD
+CandidateContest	NY House District 130	130th AD
+CandidateContest	NY House District 131	131st AD
+CandidateContest	NY House District 132	132nd AD
+CandidateContest	NY House District 133	133rd AD
+CandidateContest	NY House District 134	134th AD
+CandidateContest	NY House District 135	135th AD
+CandidateContest	NY House District 136	136th AD
+CandidateContest	NY House District 137	137th AD
+CandidateContest	NY House District 138	138th AD
+CandidateContest	NY House District 139	139th AD
+CandidateContest	NY House District 140	140th AD
+CandidateContest	NY House District 141	141st AD
+CandidateContest	NY House District 142	142nd AD
+CandidateContest	NY House District 143	143rd AD
+CandidateContest	NY House District 144	144th AD
+CandidateContest	NY House District 145	145th AD
+CandidateContest	NY House District 146	146th AD
+CandidateContest	NY House District 147	147th AD
+CandidateContest	NY House District 148	148th AD
+CandidateContest	NY House District 149	149th AD
+CandidateContest	NY House District 150	150th AD
+CandidateContest	US House NY District 1	1st CD
+CandidateContest	US House NY District 2	2nd CD
+CandidateContest	US House NY District 3	3rd CD
+CandidateContest	US House NY District 4	4th CD
+CandidateContest	US House NY District 5	5th CD
+CandidateContest	US House NY District 6	6th CD
+CandidateContest	US House NY District 7	7th CD
+CandidateContest	US House NY District 8	8th CD
+CandidateContest	US House NY District 9	9th CD
+CandidateContest	US House NY District 10	10th CD
+CandidateContest	US House NY District 11	11th CD
+CandidateContest	US House NY District 12	12th CD
+CandidateContest	US House NY District 13	13th CD
+CandidateContest	US House NY District 14	14th CD
+CandidateContest	US House NY District 15	15th CD
+CandidateContest	US House NY District 16	16th CD
+CandidateContest	US House NY District 17	17th CD
+CandidateContest	US House NY District 18	18th CD
+CandidateContest	US House NY District 19	19th CD
+CandidateContest	US House NY District 20	20th CD
+CandidateContest	US House NY District 21	21st CD
+CandidateContest	US House NY District 22	22nd CD
+CandidateContest	US House NY District 23	23rd CD
+CandidateContest	US House NY District 24	24th CD
+CandidateContest	US House NY District 25	25th CD
+CandidateContest	US House NY District 26	26th CD
+CandidateContest	US House NY District 27	27th CD
+CandidateContest	US President (NY)	President
+CandidateContest	NY Governor	NY Governor
+CandidateContest	US Senate NY	US Senate NY
+CandidateContest	NY Attorney General	NY Attorney General
+CandidateContest	NY Lieutenant Governor	NY Lieutenant Governor
+CandidateContest	NY Treasurer	NY Treasurer
+CandidateContest	NY Secretary of State	NY Secretary of State
+Election	2020 General	2020 General
+Election	2020 Primary	2020 Primary
+Election	2018 General	2018 General
+Election	2016 General	2016 General
+Party	Democratic Party	DEM
+Party	Republican Party	REP
+Party	Green Party	GRE
+Party	Libertarian Party	LBT
+Party	Write-In	Write-In
+Party	Working Families Party	WOR
+Party	IND	IND
+Party	CON	CON
+Party	SAM	SAM
+Party	ECL	ECL
+Party	Protect the Taxpayer	Protect the Taxpayer
+ReportingUnit	New York	New York
+ReportingUnit	New York;Albany County	Albany County
+ReportingUnit	New York;Allegany County	Allegany County
+ReportingUnit	New York;Broome County	Broome County
+ReportingUnit	New York;Cattaraugus County	Cattaraugus County
+ReportingUnit	New York;Cayuga County	Cayuga County
+ReportingUnit	New York;Chautauqua County	Chautauqua County
+ReportingUnit	New York;Chemung County	Chemung County
+ReportingUnit	New York;Chenango County	Chenango County
+ReportingUnit	New York;Clinton County	Clinton County
+ReportingUnit	New York;Columbia County	Columbia County
+ReportingUnit	New York;Cortland County	Cortland County
+ReportingUnit	New York;Delaware County	Delaware County
+ReportingUnit	New York;Dutchess County	Dutchess County
+ReportingUnit	New York;Erie County	Erie County
+ReportingUnit	New York;Essex County	Essex County
+ReportingUnit	New York;Franklin County	Franklin County
+ReportingUnit	New York;Fulton County	Fulton County
+ReportingUnit	New York;Genesee County	Genesee County
+ReportingUnit	New York;Greene County	Greene County
+ReportingUnit	New York;Hamilton County	Hamilton County
+ReportingUnit	New York;Herkimer County	Herkimer County
+ReportingUnit	New York;Jefferson County	Jefferson County
+ReportingUnit	New York;Lewis County	Lewis County
+ReportingUnit	New York;Livingston County	Livingston County
+ReportingUnit	New York;Madison County	Madison County
+ReportingUnit	New York;Monroe County	Monroe County
+ReportingUnit	New York;Montgomery County	Montgomery County
+ReportingUnit	New York;Nassau County	Nassau County
+ReportingUnit	New York;Niagara County	Niagara County
+ReportingUnit	New York;Oneida County	Oneida County
+ReportingUnit	New York;Onondaga County	Onondaga County
+ReportingUnit	New York;Ontario County	Ontario County
+ReportingUnit	New York;Orange County	Orange County
+ReportingUnit	New York;Orleans County	Orleans County
+ReportingUnit	New York;Oswego County	Oswego County
+ReportingUnit	New York;Otsego County	Otsego County
+ReportingUnit	New York;Putnam County	Putnam County
+ReportingUnit	New York;Rensselaer County	Rensselaer County
+ReportingUnit	New York;Rockland County	Rockland County
+ReportingUnit	New York;St. Lawrence County	St. Lawrence County
+ReportingUnit	New York;Saratoga County	Saratoga County
+ReportingUnit	New York;Schenectady County	Schenectady County
+ReportingUnit	New York;Schoharie County	Schoharie County
+ReportingUnit	New York;Schuyler County	Schuyler County
+ReportingUnit	New York;Seneca County	Seneca County
+ReportingUnit	New York;Steuben County	Steuben County
+ReportingUnit	New York;Suffolk County	Suffolk County
+ReportingUnit	New York;Sullivan County	Sullivan County
+ReportingUnit	New York;Tioga County	Tioga County
+ReportingUnit	New York;Tompkins County	Tompkins County
+ReportingUnit	New York;Ulster County	Ulster County
+ReportingUnit	New York;Warren County	Warren County
+ReportingUnit	New York;Washington County	Washington County
+ReportingUnit	New York;Wayne County	Wayne County
+ReportingUnit	New York;Westchester County	Westchester County
+ReportingUnit	New York;Wyoming County	Wyoming County
+ReportingUnit	New York;Yates County	Yates County
+ReportingUnit	New York;Bronx County	Bronx County
+ReportingUnit	New York;Kings County	Kings County
+ReportingUnit	New York;New York County	New York County
+ReportingUnit	New York;Queens County	Queens County
+ReportingUnit	New York;Richmond County	Richmond County
+Candidate	Donald J. Trump	Donald J. Trump
+Candidate	Shawn Howard	Shawn Howard
+Candidate	Roque 'Rocky' De La Fuente	Roque âRockyâ De La Fuente
+Candidate	Roque 'Rocky' De La Fuente	Roque “Rocky” De La Fuente
+Candidate	Richard Charles Montanye	Richard Charles Montanye
+Candidate	Phil Collins	Phil Collins
+Candidate	Paul Hodges	Paul Hodges
+Candidate	Mark Charles	Mark Charles
+Candidate	Kasey Wells	Kasey Wells
+Candidate	Kanye West	Kanye West
+Candidate	Joseph R. Biden Kamala D. Harris	Joseph R. Biden Kamala D. Harris
+Candidate	Joseph R. Biden	Joseph R. Biden
+Candidate	Joseph Kishore	Joseph Kishore
+Candidate	John Manimas	John Manimas
+Candidate	Joe McHugh	Joe McHugh
+Candidate	Jo Jorgensen	Jo Jorgensen
+Candidate	Jade Simmons	Jade Simmons
+Candidate	Howie Hawkins Angela Nicole Walker	Howie Hawkins Angela Nicole Walker
+Candidate	Gloria La Riva	Gloria La Riva
+Candidate	Don Blankenship	Don Blankenship
+Candidate	David A. Martin	David A. Martin
+Candidate	Dario Hunter	Dario Hunter
+Candidate	Brock Pierce	Brock Pierce
+Candidate	Brian Carroll	Brian Carroll
+Candidate	Barbara Bellar	Barbara Bellar
+Candidate	Yvette D. Clarke	Yvette D. Clarke
+Candidate	Yvette D. Clark	Yvette D. Clark
+Candidate	Yehudis Gottesfeld	Yehudis Gottesfeld
+Candidate	Victoria N. Alexander	Victoria N. Alexander
+Candidate	Tracy Mitrano	Tracy Mitrano
+Candidate	Tom Reed	Tom Reed
+Candidate	Thomas R. Suozzi	Thomas R. Suozzi
+Candidate	Thomas J. Zmich	Thomas J. Zmich
+Candidate	Tedra L. Cobb	Tedra L. Cobb
+Candidate	Steven Williams	Steven Williams
+Candidate	Steven Kolln	Steven Kolln
+Candidate	Steven Greenfield	Steven Greenfield
+Candidate	Sean Patrick Maloney	Sean Patrick Maloney
+Candidate	Scott A. Smith	Scott A. Smith
+Candidate	Ritchie Torres	Ritchie Torres
+Candidate	Ricky T. Donovan, Sr.	Ricky T. Donovan, Sr.
+Candidate	Paul D. Tonko	Paul D. Tonko
+Candidate	Patrick McManus	Patrick McManus
+Candidate	Patrick Delices	Patrick Delices
+Candidate	Nydia M. Velazquez	Nydia M. Velazquez
+Candidate	Nicole Malliotakis	Nicole Malliotakis
+Candidate	Nathan D. McMurray	Nathan D. McMurray
+Candidate	Nancy S. Goroff	Nancy S. Goroff
+Candidate	Mondaire Jones	Mondaire Jones
+Candidate	Michelle Caruso-Cabrera	Michelle Caruso-Cabrera
+Candidate	Michael P. Raleigh	Michael P. Raleigh
+Candidate	Michael Madrid	Michael Madrid
+Candidate	Michael I. Parietti	Michael I. Parietti
+Candidate	Max N. Rose	Max N. Rose
+Candidate	Maureen McArdle-Schulman	Maureen McArdle-Schulman
+Candidate	Lovelynn Gwinn	Lovelynn Gwinn
+Candidate	Lee M. Zeldin	Lee M. Zeldin
+Candidate	Kyle Van De Water	Kyle Van De Water
+Candidate	Kevin A. Wilson	Kevin A. Wilson
+Candidate	Keith D. Price, Jr.	Keith D. Price, Jr.
+Candidate	Kathleen M. Rice	Kathleen M. Rice
+Candidate	Joshua Eisen	Joshua Eisen
+Candidate	Joseph R. Naham	Joseph R. Naham
+Candidate	Joseph D. Morelle	Joseph D. Morelle
+Candidate	John M. Katko	John M. Katko
+Candidate	John C. Cummings	John C. Cummings
+Candidate	Joel B. Anabilah-Azumah	Joel B. Anabilah-Azumah
+Candidate	Jerrold L. Nadler	Jerrold L. Nadler
+Candidate	Jamaal Bowman	Jamaal Bowman
+Candidate	Jackie Gordon	Jackie Gordon
+Candidate	Howard Rabin	Howard Rabin
+Candidate	Harry R. Burger	Harry R. Burger
+Candidate	Hakeem S. Jeffries	Hakeem S. Jeffries
+Candidate	Gregory W. Meeks	Gregory W. Meeks
+Candidate	Grace Meng	Grace Meng
+Candidate	Gilbert Midonnet	Gilbert Midonnet
+Candidate	George Mitris	George Mitris
+Candidate	George A.D. Santos	George A.D. Santos
+Candidate	Gary Popkin	Gary Popkin
+Candidate	Garfield H. Wallace	Garfield H. Wallace
+Candidate	Elizabeth L. Joy	Elizabeth L. Joy
+Candidate	Elise M. Stefanik	Elise M. Stefanik
+Candidate	Duane J. Whitmer	Duane J. Whitmer
+Candidate	Douglas L. Tuman	Douglas L. Tuman
+Candidate	Dana Balter	Dana Balter
+Candidate	Constantine Jean-Pierre	Constantine Jean-Pierre
+Candidate	Claudia Tenney	Claudia Tenney
+Candidate	Christopher Morris-Perry	Christopher Morris-Perry
+Candidate	Chris Jacobs	Chris Jacobs
+Candidate	Chele C. Farley	Chele C. Farley
+Candidate	Cathy A. Bernstein	Cathy A. Bernstein
+Candidate	Carolyn B. Maloney	Carolyn B. Maloney
+Candidate	Carlos Santiago-Cano	Carlos Santiago-Cano
+Candidate	Brian W. Kelly	Brian W. Kelly
+Candidate	Brian Higgins	Brian Higgins
+Candidate	Antonio Delgado	Antonio Delgado
+Candidate	Anthony J. Brindisi	Anthony J. Brindisi
+Candidate	Andrew R. Garbarino	Andrew R. Garbarino
+Candidate	Andrew M. Kolstee	Andrew M. Kolstee
+Candidate	Alexandria Ocasio-Cortez	Alexandria Ocasio-Cortez
+Candidate	Adriano Espaillat	Adriano Espaillat
+Candidate	Zohran Kwame Mamdani	Zohran Kwame Mamdani
+Candidate	Yuh-Line Niou	Yuh-Line Niou
+Candidate	William E. Britt, Jr.	William E. Britt, Jr.
+Candidate	William Colton	William Colton
+Candidate	William C. Conrad, III	William C. Conrad, III
+Candidate	William B. Magnarelli	William B. Magnarelli
+Candidate	William A. Marquez	William A. Marquez
+Candidate	William A. Barclay	William A. Barclay
+Candidate	Walter T. Mosley, III	Walter T. Mosley, III
+Candidate	W. Ross Scott	W. Ross Scott
+Candidate	Vivian E. Cook	Vivian E. Cook
+Candidate	Victor M. Pichardo	Victor M. Pichardo
+Candidate	Thomas J. Abinanti	Thomas J. Abinanti
+Candidate	Taylor R. Darling	Taylor R. Darling
+Candidate	Tanya Carmichael	Tanya Carmichael
+Candidate	Tamara Lashchyk	Tamara Lashchyk
+Candidate	Steven Otis	Steven Otis
+Candidate	Steven Lee	Steven Lee
+Candidate	Steven G. Becker	Steven G. Becker
+Candidate	Steven Englebright	Steven Englebright
+Candidate	Steven Cymbrowitz	Steven Cymbrowitz
+Candidate	Steve Stern	Steve Stern
+Candidate	Stephen M. Hawley	Stephen M. Hawley
+Candidate	Stephanie M. Jackson	Stephanie M. Jackson
+Candidate	Stephanie J. Keegan	Stephanie J. Keegan
+Candidate	Stefani L. Zinerman	Stefani L. Zinerman
+Candidate	Stacey G. Pheffer Amato	Stacey G. Pheffer Amato
+Candidate	Simcha Eichenstein	Simcha Eichenstein
+Candidate	Sean Miles	Sean Miles
+Candidate	Scott Hutchins	Scott Hutchins
+Candidate	Scott Comegys	Scott Comegys
+Candidate	Sarita Bhandarkar	Sarita Bhandarkar
+Candidate	Sarah Clark	Sarah Clark
+Candidate	Sandra R. Galef	Sandra R. Galef
+Candidate	Sam Fein	Sam Fein
+Candidate	Salvatore P. Barrera	Salvatore P. Barrera
+Candidate	Ryan S. Skelly	Ryan S. Skelly
+Candidate	Ruben Cartagena, Jr.	Ruben Cartagena, Jr.
+Candidate	Rosaline Nieves	Rosaline Nieves
+Candidate	Ron Kim	Ron Kim
+Candidate	Rodneyse Bichotte	Rodneyse Bichotte
+Candidate	Robin L. Wolfgang	Robin L. Wolfgang
+Candidate	Robert J. Smullen	Robert J. Smullen
+Candidate	Robert J. Rodriguez	Robert J. Rodriguez
+Candidate	Robert G. Porter	Robert G. Porter
+Candidate	Robert E. Pecoraro	Robert E. Pecoraro
+Candidate	Robert C. Carroll	Robert C. Carroll
+Candidate	Richard O. Shaw	Richard O. Shaw
+Candidate	Richard N. Gottfried	Richard N. Gottfried
+Candidate	Rex Bridges	Rex Bridges
+Candidate	Regina Cartagena	Regina Cartagena
+Candidate	Rebecca A. Seawright	Rebecca A. Seawright
+Candidate	Randy Reid	Randy Reid
+Candidate	Ramona Johnson	Ramona Johnson
+Candidate	Ragini Srivastava	Ragini Srivastava
+Candidate	Phillip G. Steck	Phillip G. Steck
+Candidate	Philip R. Ramos	Philip R. Ramos
+Candidate	Philip A. Palmesano	Philip A. Palmesano
+Candidate	Phara Souffrant Forrest	Phara Souffrant Forrest
+Candidate	Petros Papanicolaou	Petros Papanicolaou
+Candidate	Peter Vazquez	Peter Vazquez
+Candidate	Peter J. Abbate, Jr.	Peter J. Abbate, Jr.
+Candidate	Peter D. Hatzipetros	Peter D. Hatzipetros
+Candidate	Paul E. DeLorenzo	Paul E. DeLorenzo
+Candidate	Paul Ciurcina, Jr.	Paul Ciurcina, Jr.
+Candidate	Patrick B. Burke	Patrick B. Burke
+Candidate	Patricia M. Canzoneri-Fitzpatrick	Patricia M. Canzoneri-Fitzpatrick
+Candidate	Patricia A. Fahy	Patricia A. Fahy
+Candidate	Pamela Jo Hunter	Pamela Jo Hunter
+Candidate	Nily D. Rozic	Nily D. Rozic
+Candidate	Nicole J. Torres	Nicole J. Torres
+Candidate	Nicholas M. Zacchea	Nicholas M. Zacchea
+Candidate	Nathalia Fernandez	Nathalia Fernandez
+Candidate	Nader J. Sayegh	Nader J. Sayegh
+Candidate	N. Nick Perry	N. Nick Perry
+Candidate	Monica Piga-Wallace	Monica Piga-Wallace
+Candidate	Michelle Castillo	Michelle Castillo
+Candidate	Michaelle C. Solages	Michaelle C. Solages
+Candidate	Michael W. Reilly, Jr.	Michael W. Reilly, Jr.
+Candidate	Michael V. Lawler	Michael V. Lawler
+Candidate	Michael Tannousis	Michael Tannousis
+Candidate	Michael S. Ross	Michael S. Ross
+Candidate	Michael R. Benedetto	Michael R. Benedetto
+Candidate	Michael J. Norris	Michael J. Norris
+Candidate	Michael J. Fitzpatrick	Michael J. Fitzpatrick
+Candidate	Michael J. Cusick	Michael J. Cusick
+Candidate	Michael Dister	Michael Dister
+Candidate	Michael C. Gentile	Michael C. Gentile
+Candidate	Michael A. Montesano	Michael A. Montesano
+Candidate	Michael A. Marcantonio	Michael A. Marcantonio
+Candidate	Michael A. Durso	Michael A. Durso
+Candidate	Menachem M. Raitport	Menachem M. Raitport
+Candidate	Melissa L. Miller	Melissa L. Miller
+Candidate	Matthew S. Szalkowski	Matthew S. Szalkowski
+Candidate	Matthew Miller	Matthew Miller
+Candidate	Matthew McIntyre	Matthew McIntyre
+Candidate	Matthew J. Simpson	Matthew J. Simpson
+Candidate	Mathylde Frontus	Mathylde Frontus
+Candidate	Mary Beth Walsh	Mary Beth Walsh
+Candidate	Mark Szuszkiewicz	Mark Szuszkiewicz
+Candidate	Mark R. Venesky	Mark R. Venesky
+Candidate	Mark E. Glogowski	Mark E. Glogowski
+Candidate	Mark C. Walczyk	Mark C. Walczyk
+Candidate	Mark C. Johns	Mark C. Johns
+Candidate	Mark A. Engelman	Mark A. Engelman
+Candidate	Marjorie L. Byrnes	Marjorie L. Byrnes
+Candidate	Maritza Davila	Maritza Davila
+Candidate	Marianne Buttenschon	Marianne Buttenschon
+Candidate	Marcela Mitaynes	Marcela Mitaynes
+Candidate	Louis Puliafito	Louis Puliafito
+Candidate	Lorraine E. Zeigler	Lorraine E. Zeigler
+Candidate	Linda Ortiz	Linda Ortiz
+Candidate	Linda B. Rosenthal	Linda B. Rosenthal
+Candidate	Lawrence A. Chiulli	Lawrence A. Chiulli
+Candidate	Laurette Giardino	Laurette Giardino
+Candidate	Latrice Walker	Latrice Walker
+Candidate	Latoya Joyner	Latoya Joyner
+Candidate	Kimberly Jean-Pierre	Kimberly Jean-Pierre
+Candidate	Kieran Michael Lalor	Kieran Michael Lalor
+Candidate	Khorshed A. Chowdhury	Khorshed A. Chowdhury
+Candidate	Khaleel Anderson	Khaleel Anderson
+Candidate	Kevin C. Gorman	Kevin C. Gorman
+Candidate	Kevin Byrne	Kevin Byrne
+Candidate	Kevin A. Cahill	Kevin A. Cahill
+Candidate	Kenneth P. Zebrowski	Kenneth P. Zebrowski
+Candidate	Kenneth Burgos	Kenneth Burgos
+Candidate	Kenneth Blankenbush	Kenneth Blankenbush
+Candidate	Keith Brown	Keith Brown
+Candidate	Karl A. Brabenec	Karl A. Brabenec
+Candidate	Karines Reyes	Karines Reyes
+Candidate	Karen M. McMahon	Karen M. McMahon
+Candidate	Justin F. Wilcox	Justin F. Wilcox
+Candidate	Judy A. Griffin	Judy A. Griffin
+Candidate	Judith Graham	Judith Graham
+Candidate	Juan G. DeJesus	Juan G. DeJesus
+Candidate	Josh Jensen	Josh Jensen
+Candidate	Joseph Totaro	Joseph Totaro
+Candidate	Joseph S. Seeman	Joseph S. Seeman
+Candidate	Joseph M. Giglio	Joseph M. Giglio
+Candidate	Joseph J. Sackman, III	Joseph J. Sackman, III
+Candidate	Joseph A. Cullina	Joseph A. Cullina
+Candidate	Jose Rivera	Jose Rivera
+Candidate	Jonathan G. Jacobson	Jonathan G. Jacobson
+Candidate	Jonathan D. Rivera	Jonathan D. Rivera
+Candidate	John-Alexander M. Sakelos	John-Alexander M. Sakelos
+Candidate	John T. McDonald, III	John T. McDonald, III
+Candidate	John S. Zielinski	John S. Zielinski
+Candidate	John Nuculovic	John Nuculovic
+Candidate	John Lemondes, Jr.	John Lemondes, Jr.
+Candidate	John K. Mikulin	John K. Mikulin
+Candidate	John J. Salka	John J. Salka
+Candidate	John A. DeStefano	John A. DeStefano
+Candidate	Joe G. Angelino	Joe G. Angelino
+Candidate	Jo Anne Simon	Jo Anne Simon
+Candidate	Jessica Gonzalez-Rojas	Jessica Gonzalez-Rojas
+Candidate	Jennifer A. Lunsford	Jennifer A. Lunsford
+Candidate	Jenifer Rajkumar	Jenifer Rajkumar
+Candidate	Jeffrion L. Aubry	Jeffrion L. Aubry
+Candidate	Jeffrey Dinowitz	Jeffrey Dinowitz
+Candidate	Jeff L. Gallahan	Jeff L. Gallahan
+Candidate	Jarett C. Gandolfo	Jarett C. Gandolfo
+Candidate	Janelle King	Janelle King
+Candidate	Jamie R. Silvestri	Jamie R. Silvestri
+Candidate	Jake Gutowitz	Jake Gutowitz
+Candidate	Jake Cornell	Jake Cornell
+Candidate	Jaime R. Williams	Jaime R. Williams
+Candidate	Jacob C. Ashby	Jacob C. Ashby
+Candidate	J. Gary Pretlow	J. Gary Pretlow
+Candidate	Inez E. Dickens	Inez E. Dickens
+Candidate	Helene E. Weinstein	Helene E. Weinstein
+Candidate	Harvey Epstein	Harvey Epstein
+Candidate	Harry B. Bronson	Harry B. Bronson
+Candidate	Han-Kohn To	Han-Kohn To
+Candidate	Gregory S. Marks	Gregory S. Marks
+Candidate	Giovanni A. Perna	Giovanni A. Perna
+Candidate	Gina L. Sillitti	Gina L. Sillitti
+Candidate	Gene A. DeFrancis	Gene A. DeFrancis
+Candidate	Gary B. Port	Gary B. Port
+Candidate	Gail E. Tosh	Gail E. Tosh
+Candidate	Gabriel Eronosele	Gabriel Eronosele
+Candidate	Frank C. Smierciak, II	Frank C. Smierciak, II
+Candidate	Francis T. Genco	Francis T. Genco
+Candidate	Evelyn M. Wood	Evelyn M. Wood
+Candidate	Eugene M. Murray	Eugene M. Murray
+Candidate	Erik Martin Dilan	Erik Martin Dilan
+Candidate	Ericka Jones	Ericka Jones
+Candidate	Emily E. Gallagher	Emily E. Gallagher
+Candidate	Ellen C. Jaffee	Ellen C. Jaffee
+Candidate	Elizabeth Perri	Elizabeth Perri
+Candidate	Edward P. Ra	Edward P. Ra
+Candidate	Edward G. Weber, Jr.	Edward G. Weber, Jr.
+Candidate	Edward C. Braunstein	Edward C. Braunstein
+Candidate	Dylan P. Dailor	Dylan P. Dailor
+Candidate	Dylan G. Rice	Dylan G. Rice
+Candidate	Douglas M. Smith	Douglas M. Smith
+Candidate	Donna A. Lupardo	Donna A. Lupardo
+Candidate	Donald Skinner	Donald Skinner
+Candidate	Dion Powell	Dion Powell
+Candidate	Didi Barrett	Didi Barrett
+Candidate	Diana Richardson	Diana Richardson
+Candidate	Dia Carabajal	Dia Carabajal
+Candidate	Demond L. Meeks	Demond L. Meeks
+Candidate	Deborah J. Glick	Deborah J. Glick
+Candidate	Dean Michael	Dean Michael
+Candidate	David M. Catalfamo	David M. Catalfamo
+Candidate	David J. DiPietro	David J. DiPietro
+Candidate	David I. Weprin	David I. Weprin
+Candidate	David G. McDonough	David G. McDonough
+Candidate	Dave M. Feiden	Dave M. Feiden
+Candidate	Danniel S. Maio	Danniel S. Maio
+Candidate	Daniel Rosenthal	Daniel Rosenthal
+Candidate	Daniel J. O'Donnell	Daniel J. O'Donnell
+Candidate	Daniel J. O'Donnell	Daniel J. O’Donnell
+Candidate	Dan Quart	Dan Quart
+Candidate	Dan Buttermann	Dan Buttermann
+Candidate	Daby Benjamine Carreras	Daby Benjamine Carreras
+Candidate	D. Billy Jones	D. Billy Jones
+Candidate	Cynthia L. Wade	Cynthia L. Wade
+Candidate	Crystal D. Peoples	Crystal D. Peoples
+Candidate	Craig Schley	Craig Schley
+Candidate	Corey J. Mosher	Corey J. Mosher
+Candidate	Colin J. Schmitt	Colin J. Schmitt
+Candidate	Clyde Vanel	Clyde Vanel
+Candidate	Claudia K. Braymer	Claudia K. Braymer
+Candidate	Christopher Tague	Christopher Tague
+Candidate	Christopher S. Friend	Christopher S. Friend
+Candidate	Christina Cardinale	Christina Cardinale
+Candidate	Chris Burdick	Chris Burdick
+Candidate	Cherice P. Vanderhall	Cherice P. Vanderhall
+Candidate	Charles D. Lavine	Charles D. Lavine
+Candidate	Charles D. Fall	Charles D. Fall
+Candidate	Charles Barron	Charles Barron
+Candidate	Charles A. Senrick	Charles A. Senrick
+Candidate	Chantel Jackson	Chantel Jackson
+Candidate	Chad J. McEvoy	Chad J. McEvoy
+Candidate	ChaRon K. Sattler-Leblanc	ChaRon K. Sattler-Leblanc
+Candidate	Catherine Nolan	Catherine Nolan
+Candidate	Catalina Cruz	Catalina Cruz
+Candidate	Carrie Woerner	Carrie Woerner
+Candidate	Carolyn D. Carrol	Carolyn D. Carrol
+Candidate	Carmen E. ArroyoCarmen De La Rosa	Carmen E. ArroyoCarmen De La Rosa
+Candidate	Carl Lundgren	Carl Lundgren
+Candidate	Carl Heastie	Carl Heastie
+Candidate	Brittany L. Vogel	Brittany L. Vogel
+Candidate	Brian D. Miller	Brian D. Miller
+Candidate	Brian D. Manktelow	Brian D. Manktelow
+Candidate	Brian Barnwell	Brian Barnwell
+Candidate	Brenton Ritchie	Brenton Ritchie
+Candidate	Brandon S. Patterson	Brandon S. Patterson
+Candidate	Blay Tarnoff	Blay Tarnoff
+Candidate		
+Candidate	Betsy Kraat	Betsy Kraat
+Candidate	Berneda W. Jackson	Berneda W. Jackson
+Candidate	Benjamin Eggleston	Benjamin Eggleston
+Candidate	Barry Leon	Barry Leon
+Candidate	Barbara Marino	Barbara Marino
+Candidate	Barbara A. Kidney	Barbara A. Kidney
+Candidate	Anthony M. DeGuerre	Anthony M. DeGuerre
+Candidate	Anthony K. Baney	Anthony K. Baney
+Candidate	Anna Kelles	Anna Kelles
+Candidate	Ann M. Brancato	Ann M. Brancato
+Candidate	Angelo L. Santabarbara	Angelo L. Santabarbara
+Candidate	Angelo J. Morinello	Angelo J. Morinello
+Candidate	Andrew W. Goodell	Andrew W. Goodell
+Candidate	Andrew Gauzza, IV	Andrew Gauzza, IV
+Candidate	Andrew D. Hevesi	Andrew D. Hevesi
+Candidate	Andrew A. Monteleone	Andrew A. Monteleone
+Candidate	Amy R. Paulin	Amy R. Paulin
+Candidate	Amanda N. Septimo	Amanda N. Septimo
+Candidate	Alicia L. Hyndman	Alicia L. Hyndman
+Candidate	Alfred Ianacci	Alfred Ianacci
+Candidate	Alfred E. Taylor	Alfred E. Taylor
+Candidate	Alex V. Hammond	Alex V. Hammond
+Candidate	Albert A. Stirpe, Jr.	Albert A. Stirpe, Jr.
+Candidate	Alan H. Reed	Alan H. Reed
+Candidate	Aileen M. Gunther	Aileen M. Gunther
+Candidate	Adam Fischer-Gledhill	Adam Fischer-Gledhill
+Party	Schley for 70 Assy	Schley for 70 Assy
+Party	Save Our City	Save Our City
+Party	Safe Neighborhoods	Safe Neighborhoods
+Party	Rise and Unite	Rise and Unite
+Party	Rebuild Our State	Rebuild Our State
+Party	Proven Leader	Proven Leader
+Party	Liberal	Liberal
+Party	New Moderate	New Moderate
+Party	Justice & Peace	Justice & Peace
+Party	COVID19 Stories	COVID19 Stories
+Candidate	William V. Van Helmond	William V. Van Helmond
+Candidate	Steven Polgar	Steven Polgar
+Candidate	Laura M. Jens-Smith	Laura M. Jens-Smith
+Candidate	Joseph P. De Stefano	Joseph P. De Stefano
+Candidate	Jodi A. Giglio	Jodi A. Giglio
+Candidate	Heather C. Collins	Heather C. Collins
+Candidate	Fred W. Thiele, Jr.	Fred W. Thiele, Jr.
+Candidate	Carmen E. Arroyo	Carmen E. Arroyo
+Candidate	Carmen De La Rosa	Carmen De La Rosa
+Candidate	Adam Martin	Adam Martin
+Candidate	Susan J. Serino	Susan J. Serino
+Candidate	Robert Jackson	Robert Jackson
+Candidate	Peter Oberacker	Peter Oberacker
+Candidate	Melinda Crump	Melinda Crump
+Candidate	Laura A. Ahearn	Laura A. Ahearn
+Candidate	Kevin S. Parker	Kevin S. Parker
+Candidate	Karen S. Smythe	Karen S. Smythe
+Candidate	Jim Barber	Jim Barber
+Candidate	Jacqualine G. Berger	Jacqualine G. Berger
+Candidate	Edward A. Rath, III	Edward A. Rath, III
+Candidate	Anthony H. Palumbo	Anthony H. Palumbo
+Candidate	Zellnor Y. Myrie	Zellnor Y. Myrie
+Candidate	William J. Weber, Jr.	William J. Weber, Jr.
+Candidate	Vito J. Bruno	Vito J. Bruno
+Candidate	Victoria M. Johnson	Victoria M. Johnson
+Candidate	Tucker Coburn	Tucker Coburn
+Candidate	Todd D. Kaminsky	Todd D. Kaminsky
+Candidate	Toby Ann Stavisky	Toby Ann Stavisky
+Candidate	Timothy M. Kennedy	Timothy M. Kennedy
+Candidate	Thomas P. Sullivan	Thomas P. Sullivan
+Candidate	Thomas F. O’Mara	Thomas F. O’Mara
+Candidate	Thomas Daniel Quiter	Thomas Daniel Quiter
+Candidate	Thearse McCalmon	Thearse McCalmon
+Candidate	Steven M. Stern	Steven M. Stern
+Candidate	Steve Brescia	Steve Brescia
+Candidate	Simcha Felder	Simcha Felder
+Candidate	Shelley B. Mayer	Shelley B. Mayer
+Candidate	Shauna O’Toole	Shauna O’Toole
+Candidate	Sean M. Ryan	Sean M. Ryan
+Candidate	Samra G. Brouk	Samra G. Brouk
+Candidate	Sam Rodgers	Sam Rodgers
+Candidate	Russell Penner	Russell Penner
+Candidate	Roxanne J. Persaud	Roxanne J. Persaud
+Candidate	Robert G. Ortt	Robert G. Ortt
+Candidate	Robert Diamond	Robert Diamond
+Candidate	Robert D. Alft, Jr.	Robert D. Alft, Jr.
+Candidate	Rob Astorino	Rob Astorino
+Candidate	Richard M. Amedure, Jr.	Richard M. Amedure, Jr.
+Candidate	Rachel May	Rachel May
+Candidate	Philip M. Boyle	Philip M. Boyle
+Candidate	Peter B. Harckham	Peter B. Harckham
+Candidate	Patrick M. Gallivan	Patrick M. Gallivan
+Candidate	Patrick F. Nelson	Patrick F. Nelson
+Candidate	Patricia A. Ritchie	Patricia A. Ritchie
+Candidate	Pamela A. Helming	Pamela A. Helming
+Candidate	Oz Sultan	Oz Sultan
+Candidate	Neil D. Breslin	Neil D. Breslin
+Candidate	Monica R. Martinez	Monica R. Martinez
+Candidate	Mike Martucci	Mike Martucci
+Candidate	Mike Barry	Mike Barry
+Candidate	Michelle Hinchey	Michelle Hinchey
+Candidate	Michael Zumbluskas	Michael Zumbluskas
+Candidate	Michael N. Gianaris	Michael N. Gianaris
+Candidate	Michael G. Siderakis	Michael G. Siderakis
+Candidate	Mario R. Mattera	Mario R. Mattera
+Candidate	Luis R. Sepulveda	Luis R. Sepulveda
+Candidate	Liz Krueger	Liz Krueger
+Candidate	Liviu Saimovici	Liviu Saimovici
+Candidate	Lester Chang	Lester Chang
+Candidate	Leslie Danks Burke	Leslie Danks Burke
+Candidate	Leroy G. Comrie, Jr.	Leroy G. Comrie, Jr.
+Candidate	Kimberly A. Davis	Kimberly A. Davis
+Candidate	Kevin M. Thomas	Kevin M. Thomas
+Candidate	Justin DeFillippo	Justin DeFillippo
+Candidate	Julia Salazar	Julia Salazar
+Candidate	Joshua Mertzlufft	Joshua Mertzlufft
+Candidate	Joseph P. Addabbo, Jr.	Joseph P. Addabbo, Jr.
+Candidate	Joseph A. Griffo	Joseph A. Griffo
+Candidate	Jose M. Serrano	Jose M. Serrano
+Candidate	Jose A. Colon	Jose A. Colon
+Candidate	Jonathon Weiner	Jonathon Weiner
+Candidate	Jonathan Gunther	Jonathan Gunther
+Candidate	John W. Mannion	John W. Mannion
+Candidate	John Jairo Rodriguez	John Jairo Rodriguez
+Candidate	John E. Brooks	John E. Brooks
+Candidate	John C. Liu	John C. Liu
+Candidate	Jesus Gonzalez	Jesus Gonzalez
+Candidate	Jessica Ramos	Jessica Ramos
+Candidate	Jeremy A. Cooney	Jeremy A. Cooney
+Candidate	Jen Metzger	Jen Metzger
+Candidate	Jason W. Klimek	Jason W. Klimek
+Candidate	James Sanders, Jr.	James Sanders, Jr.
+Candidate	James N. Tedisco	James N. Tedisco
+Candidate	James G. Skoufis	James G. Skoufis
+Candidate	James F. Gaughran	James F. Gaughran
+Candidate	James B. Gisondi	James B. Gisondi
+Candidate	Jamaal T. Bailey	Jamaal T. Bailey
+Candidate	Jabari Brisport	Jabari Brisport
+Candidate	J. Gustavo Rivera	J. Gustavo Rivera
+Candidate	George M. Borrello	George M. Borrello
+Candidate	Frederick J. Akshar, II	Frederick J. Akshar, II
+Candidate	Frank V. Puglisi	Frank V. Puglisi
+Candidate	Elisa Nahoum	Elisa Nahoum
+Candidate	Elijah Reichlin-Melnick	Elijah Reichlin-Melnick
+Candidate	Edmund J. Smyth	Edmund J. Smyth
+Candidate	Dustin Martinez	Dustin Martinez
+Candidate	Diane J. Savino	Diane J. Savino
+Candidate	Dennis Dunne, Sr.	Dennis Dunne, Sr.
+Candidate	David R. Yule	David R. Yule
+Candidate	David C. Franklin	David C. Franklin
+Candidate	Daphne V. Jordan	Daphne V. Jordan
+Candidate	Daniel G. Stec	Daniel G. Stec
+Candidate	Daniel Christmann	Daniel Christmann
+Candidate	Christopher M. Missick	Christopher M. Missick
+Candidate	Christine Pellegrino	Christine Pellegrino
+Candidate	Brian Kavanagh	Brian Kavanagh
+Candidate	Brian A. Benjamin	Brian A. Benjamin
+Candidate	Brad M. Hoylman	Brad M. Hoylman
+Candidate	Barbara S. Wagner	Barbara S. Wagner
+Candidate	Antonio Vitiello	Antonio Vitiello
+Candidate	Anna M. Kaplan	Anna M. Kaplan
+Candidate	Angi Renna	Angi Renna
+Candidate	Andrew S. Gounardes	Andrew S. Gounardes
+Candidate	Andrew J. Lanza	Andrew J. Lanza
+Candidate	Andrea Stewart-Cousins	Andrea Stewart-Cousins
+Candidate	Alexis Weik	Alexis Weik
+Candidate	Alessandra Biaggi	Alessandra Biaggi
