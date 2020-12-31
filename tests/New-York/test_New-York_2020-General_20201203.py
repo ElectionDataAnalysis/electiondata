@@ -13,23 +13,23 @@ import election_data_analysis as e
 #   Replace each '-1' with the correct number calculated from the results file.
 #   Move this testing file to the correct jurisdiction folder in `election_data_analysis/tests`
 
-# # # constants - from https://results.enr.clarityelections.com/CO/Boulder/105983/web.264614/#/summary on 2020-12-29
+# # # constants - CHANGE THESE!! - use internal db names
 election = "2020 General"
-jurisdiction = 'Colorado'
-abbr = 'CO'
-total_pres_votes = 3256952  # total of all votes for US President
-cd = 3  # US House congressional district
-total_cd_votes = 429319  # total votes in that US House contest in the chosen cd
+jurisdiction = 'New York'
+abbr = 'NY'
+total_pres_votes = 8594826  # total of all votes for US President
+cd = 1  # US House congressional district
+total_cd_votes = 357247  # total votes in that US House contest in the chosen cd
 shd = 1   # state house district
-total_shd_votes = 34032  # total votes in that State House contest
-ssd = 17  # state senate district
-total_ssd_votes = 96074  # total votes in that State Senate contest
-single_vote_type = 'early'  # pick any one with corresponding data in your file, but use internal db name
-pres_votes_vote_type = -1  # total votes for US President of that vote type
+total_shd_votes = 67083  # total votes in that State House contest
+ssd = 1  # state senate district
+total_ssd_votes = 168240  # total votes in that State Senate contest
+single_vote_type = 'total'  # pick any one with corresponding data in your file, but use internal db name ***NA***
+pres_votes_vote_type = -1  # total votes for US President of that vote type ***NA***
 county_or_other = "county"   # Change this only if results are subdivided by something other than counties
                             #  e.g., 'parish' in LA, 'state-house' in Alaska, 'ward' in Philadelphia
-single_county = 'Colorado;Boulder County'  # pick any one from your file, but use internal db name
-pres_votes_county = 206111  # total votes for US President in that county
+single_county = 'New York;Albany County'  # pick any one from your file, but use internal db name
+pres_votes_county = 153586  # total votes for US President in that county
 
 
 def test_data_exists(dbname):

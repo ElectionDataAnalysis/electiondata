@@ -1,6 +1,0 @@
-name	raw_identifier_formula	source
-ReportingUnit	<0>	column
-Party	{<SUMMARY BY COUNTIES>,^.*,(.*)$}	row
-CandidateContest		ini
-Candidate	{<SUMMARY BY COUNTIES>,^(.*),.*$}	row
-CountItemType		ini

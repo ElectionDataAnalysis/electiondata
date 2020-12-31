@@ -91,51 +91,7 @@ Candidate=<column_7> <column_8> <column_6>
    * (optional) `rows_to_skip` An integer giving the number of rows to skip at the top to get to the table of counts. This parameter will affect integers designating header rows -- '<header_0>' is the first row not skipped. However, this parameter will *not* affect integers designating rows (e.g., for finding information constant over sheets), which are designated, e.g., '<row_0>'. Note that if, e.g., skip_rows = 2, then row_0 will denote the third row of the actual Excel sheet -- the highest unskipped row. The system recognizes the leftmost non-blank cell as the content to be read.
    * (optional) `all_rows` If the file has no column headers but only data rows with counts, set this parameter to 'data'
  
- #### OLD VERSION:
- file_type:
-  * `xml`
-  * `txt`
-  * `csv`
-  * `xls` (which handles both `.xls` and `.xlsx` files)
-  * `xls-multi` (which handles both `.xls` and `.xlsx` files with multiple sheets, and some variation in the structure of each sheet)
-  * `json`
-  * `concatenated-blocks` (for the format produced by Clarity results reporting system, e.g. for South Carolina.)
-
-Different file types need different parameters to be specified.
- * Required for `txt`, `csv` or `xls` (flat file) type:
-   * header_row_count
-   * field_name_row
-   * field_names_if_no_field_name_row
-   * count_columns
-   
-Applying a munger with file_type `xls` to a multi-sheet excel file will read only the first sheet. If other sheets are necessary, use `xls-multi` file type.
- NB: the header_row_count should count only rows with data the system needs to read. If there are blank lines, or lines with inessential information -- such as the election date, which is not munged -- use the optional parameter count_of_top_lines_to_skip.
  
- * Required for `xml` type:
-   * `count_columns_by_name`
- * Available for `xml` type:
-   * `nested_tags` if there are elements without relevant info in their attributes, but with relevant relevant elements nested below, it is required to list the tags. See e.g. `ia_xml` munger  
- 
- * Required for `concatenated-blocks` type:
-   * count_of_top_lines_to_skip
-   * columns_to_skip
-   * last_header_column_count
-   * column_width
-   
- * Required for `xls-multi`:
-   * sheets_to_skip
-   * count_of_top_lines_to_skip
-   * constant_line_count
-   * constant_column_count
-   * header_row_count
-   * columns_to_skip
- * Required for `json`:
-   * count_column_field_names
- * Available if appropriate for any file type:
-   * thousands_separator
-   * encoding (If not specified or recognized, `iso-8859-1` will be used. Recognized encodings are limited [python's list of recognized encodings and aliases](https://docs.python.org/3/library/codecs.html#standard-encodings).)
-   * count_of_top_lines_to_skip
-#### END OF OLD VERSION
 
  (3) Put formulas for parsing information from the results file into `cdf_elements.txt`. You may find it helpful to follow the example of the mungers in the repository.
 

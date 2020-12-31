@@ -411,12 +411,13 @@ def list_desired_excel_sheets(f_path: str, p: dict) -> Optional[list]:
         sheets_to_read = p["sheets_to_read_names"]
     elif p["sheets_to_read_numbers"]:
         sheets_to_read = p["sheets_to_read_numbers"]
-    elif p["sheets_to_skip"]:
+    else:
         xl = pd.ExcelFile(f_path)
         all_sheets = xl.sheet_names
-        sheets_to_read = [s for s in all_sheets if s not in p["sheets_to_skip"]]
-    else:
-        sheets_to_read = None
+        if p["sheets_to_skip"]:
+            sheets_to_read = [s for s in all_sheets if s not in p["sheets_to_skip"]]
+        else:
+            sheets_to_read = all_sheets
     return sheets_to_read
 
 
@@ -477,6 +478,11 @@ def read_single_datafile(
             df = pd.read_csv(f_path, **kwargs)
             df_dict = {"Sheet1": df}
 
+        # rename any columns from header-less tables to column_0, column_1, etc.
+        if p["all_rows"] == 'data':
+            for k in df_dict.keys():
+                df_dict[k].columns = [f"column_{j}" for j in range(df_dict[k].shape[1])]
+
     except FileNotFoundError:
         err_str = f"File not found: {f_path}"
         df_dict = dict()
@@ -497,11 +503,6 @@ def read_single_datafile(
         )
         df_dict = dict()
         err = add_new_error(err, "file", f_path, err_str)
-
-    # rename any columns from header-less tables to column_0, column_1, etc.
-    if p["all_rows"] == 'data':
-        for k in df_dict.keys():
-            df_dict[k].columns = [f"column_{j}" for j in range(df_dict[k].shape[1])]
 
     # drop any empty dataframes
     df_dict = {k:v for k,v in df_dict.items() if not v.empty}

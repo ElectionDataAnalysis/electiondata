@@ -76,12 +76,12 @@ def optional_remove(dl: eda.DataLoader, dir_path: str) -> (Optional[dict], bool)
             print(f"db not removed due to error: {err['system']}")
         # define parameters to connect to postgres db
 
-    # give user option to remove directory
-    remove_dir = input(f"Remove {dir_path} directory and all its contents (y/n)?\n")
-    if remove_dir == "y":
-        # remove testing data
-        os.system(f"rm -rf {dir_path}")
-
+    """    # give user option to remove directory
+        remove_dir = input(f"Remove {dir_path} directory and all its contents (y/n)?\n")
+        if remove_dir == "y":
+            # remove testing data
+            os.system(f"rm -rf {dir_path}")
+    """
     return err, db_removed
 
 

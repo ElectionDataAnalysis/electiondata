@@ -6,14 +6,11 @@ from pandas.api.types import is_numeric_dtype
 from typing import Optional
 from election_data_analysis import munge as m
 from election_data_analysis import user_interface as ui
+import election_data_analysis as eda
 import re
 import numpy as np
 from pathlib import Path
 import csv
-
-
-# constants
-
 
 
 def recast_options(options: dict, types: dict) -> dict:
@@ -58,7 +55,7 @@ class Jurisdiction:
             error[f"{contest_type}Contest.txt"] = "file not found"
             return error
         df = pd.read_csv(
-            element_fpath, sep="\t", encoding="iso-8859-1", quoting=csv.QUOTE_MINIMAL
+            element_fpath, sep="\t", encoding=eda.default_encoding, quoting=csv.QUOTE_MINIMAL
         ).fillna("none or unknown")
 
         # add contest_type column
@@ -272,7 +269,7 @@ def read_munger_info_from_files(dir_path):
         os.path.join(dir_path, "cdf_elements.txt"),
         sep="\t",
         index_col="name",
-        encoding="iso-8859-1",
+        encoding=eda.default_encoding,
         quoting=csv.QUOTE_MINIMAL,
     ).fillna("")
 
@@ -299,7 +296,7 @@ def read_munger_info_from_files(dir_path):
     if "encoding" in options.keys():
         encoding = options["encoding"]
     else:
-        encoding = "iso-8859-1"
+        encoding = eda.default_encoding
     if "thousands_separator" in options.keys() and options[
         "thousands_separator"
     ] not in ["", "None"]:
@@ -373,7 +370,7 @@ def ensure_juris_files(juris_path, ignore_empty=False) -> Optional[dict]:
             temp = pd.read_csv(
                 os.path.join(templates_dir, f"{juris_file}.txt"),
                 sep="\t",
-                encoding="iso-8859-1",
+                encoding=eda.default_encoding,
             )
         except pd.errors.EmptyDataError:
             if not ignore_empty:
@@ -387,7 +384,7 @@ def ensure_juris_files(juris_path, ignore_empty=False) -> Optional[dict]:
         # if file does not exist
         if not os.path.isfile(cf_path):
             # create the file
-            temp.to_csv(cf_path, sep="\t", index=False)
+            temp.to_csv(cf_path, sep="\t", index=False, encoding=eda.default_encoding)
             created = True
 
         # if file exists, check format against template
@@ -530,7 +527,7 @@ def check_munger_file_contents(munger_path, munger_file, err):
         cdf_elements = pd.read_csv(
             os.path.join(munger_path, "cdf_elements.txt"),
             sep="\t",
-            encoding="iso-8859-1",
+            encoding=eda.default_encoding,
         ).fillna("")
 
         # every source in cdf_elements is either row, column, ini, xml or other
@@ -683,7 +680,7 @@ def check_munger_file_contents(munger_path, munger_file, err):
 def clean_and_dedupe(f_path: str):
     "Dedupe the file, removing any leading or trailing whitespace and compressing any internal whitespace"
     # TODO allow specification of unique constraints
-    df = pd.read_csv(f_path, sep="\t", encoding="iso-8859-1", quoting=csv.QUOTE_MINIMAL)
+    df = pd.read_csv(f_path, sep="\t", encoding=eda.default_encoding, quoting=csv.QUOTE_MINIMAL)
 
     for c in df.columns:
         if not is_numeric_dtype(df.dtypes[c]):
@@ -696,15 +693,15 @@ def clean_and_dedupe(f_path: str):
                 pass
     dupes_df, df = ui.find_dupes(df)
     if not dupes_df.empty:
-        df.to_csv(f_path, sep="\t", index=False)
+        df.to_csv(f_path, sep="\t", index=False, encoding=eda.default_encoding)
     return
 
 
 def drop_lines_with_any_nulls(f_path):
     # TODO tech debt: this can muck up encodings. needs to be fixed.
-    df = pd.read_csv(f_path, sep = "\t", encoding="iso-8859-1", quoting=csv.QUOTE_MINIMAL)
+    df = pd.read_csv(f_path, sep = "\t", encoding=eda.default_encoding, quoting=csv.QUOTE_MINIMAL)
     df = df[df.notnull().all(axis=1)]
-    df.to_csv(f_path, sep="\t", index=False)
+    df.to_csv(f_path, sep="\t", index=False, encoding=eda.default_encoding)
     return
 
 
@@ -718,8 +715,8 @@ def check_nulls(element, f_path, project_root):
         element,
         "not_null_fields.txt",
     )
-    not_nulls = pd.read_csv(nn_path, sep="\t", encoding="iso-8859-1")
-    df = pd.read_csv(f_path, sep="\t", encoding="iso-8859-1", quoting=csv.QUOTE_MINIMAL)
+    not_nulls = pd.read_csv(nn_path, sep="\t", encoding=eda.default_encoding)
+    df = pd.read_csv(f_path, sep="\t", encoding=eda.default_encoding, quoting=csv.QUOTE_MINIMAL)
 
     problem_columns = []
 
@@ -749,7 +746,7 @@ def check_dependencies(juris_dir, element) -> (list, dict):
             f_path,
             sep="\t",
             index_col=None,
-            encoding="iso-8859-1",
+            encoding=eda.default_encoding,
             quoting=csv.QUOTE_MINIMAL,
         )
     except FileNotFoundError:
@@ -770,7 +767,7 @@ def check_dependencies(juris_dir, element) -> (list, dict):
                 os.path.join(juris_dir, f"{element}.txt"),
                 sep="\t",
                 header=0,
-                encoding="iso-8859-1",
+                encoding=eda.default_encoding,
                 quoting=csv.QUOTE_MINIMAL,
             )
             .fillna("")
@@ -783,7 +780,7 @@ def check_dependencies(juris_dir, element) -> (list, dict):
             pd.read_csv(
                 os.path.join(juris_dir, f"{target}.txt"),
                 sep="\t",
-                encoding="iso-8859-1",
+                encoding=eda.default_encoding,
                 quoting=csv.QUOTE_MINIMAL,
             )
             .fillna("")
