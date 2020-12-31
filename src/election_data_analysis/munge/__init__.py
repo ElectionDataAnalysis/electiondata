@@ -1602,7 +1602,6 @@ def munge_source_to_raw(
             ).rename(
                 columns={"compressed": f"{element}_raw"}
             )
-            print(f"Column {element}_raw added")
     # drop all source columns
     source_cols = [c for c in working.columns if c[-len(suffix):] == suffix]
     working.drop(source_cols, axis=1, inplace=True)
