@@ -314,26 +314,6 @@ contest_type_mappings = {
 }
 
 
-def read_results(
-    results_file_path, munger_path, aux_data_path, error: Optional[dict]
-) -> (pd.DataFrame, jm.Munger, dict):
-    """Reads results (appending '_SOURCE' to the columns)
-    and initiates munger."""
-
-    # check munger files and (if no error) create munger
-    mu, mu_err = jm.check_and_init_munger(munger_path, aux_data_path=aux_data_path)
-    error = consolidate_errors([error, mu_err])
-    if fatal_error(mu_err):
-        wr = pd.DataFrame()
-    else:
-        # read info from results file (and auxiliary files, if any)
-        wr, error = read_combine_results(
-            mu, results_file_path, error, aux_data_path=aux_data_path
-        )
-        wr.columns = [f"{x}_SOURCE" for x in wr.columns]
-    return wr, mu, error
-
-
 def pick_juris_from_filesystem(
         juris_path: str,
         err: Optional[dict],

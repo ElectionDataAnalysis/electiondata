@@ -479,7 +479,6 @@ def replace_raw_with_internal_ids(
     error: dict,
     drop_unmatched: bool = False,
     drop_extraneous: bool = True,
-    mode: str = "row",
     unmatched_id: int = 0,
     drop_all_ok: bool = False,
 ) -> (pd.DataFrame, dict):
@@ -568,19 +567,6 @@ def replace_raw_with_internal_ids(
         working = pd.DataFrame(columns=new_cols)
 
         return working, error
-    else:
-        if mode == "column":
-            # drop rows that melted from unrecognized columns, EVEN IF drop_unmatched=False.
-            #  These rows are ALWAYS extraneous. Drop cols where raw_identifier is not null
-            #  but no cdf_internal_name was found (pd.merge yields nulls)
-            #
-            working = working[
-                (working["raw_identifier_value"].isnull())
-                | (working["cdf_internal_name"].notnull())
-            ]
-            if drop_extraneous:
-                working = working[working["cdf_internal_name"] != "row should be dropped"]
-            # TODO tech debt more efficient to drop these earlier, before melting
 
     # unmatched elements get nan in fields from dictionary table. Change these to "none or unknown"
     if not drop_unmatched:
@@ -1738,11 +1724,19 @@ def get_string_fields(
     return munge_field_lists, err
 
 
-def to_standard_count_frame(f_path: str, munger_path: str, p, constants) -> (pd.DataFrame, Optional[dict]):
+def to_standard_count_frame(
+        f_path: str,
+        munger_path: str,
+        p: dict,
+        constants: dict,
+        suffix: Optional[str] = None,
+) -> (pd.DataFrame, Optional[list], Optional[dict]):
     """Read data from file at <f_path>; return a standard dataframe with one clean count column
-    and all other columns typed as 'string' """
+    and all other columns typed as 'string'.
+     If <suffix> is given, append <suffix> to all non-count columns"""
     munger_name = Path(munger_path).name
     err = None
+    original_string_columns = None
 
     # check that all necessary constants were passed
     if p["constant_over_file"] is not None:
@@ -1755,7 +1749,7 @@ def to_standard_count_frame(f_path: str, munger_path: str, p, constants) -> (pd.
                 f_path,
                 f"Required constants not given in .ini file:\n\t{bad_str}",
             )
-            return pd.DataFrame(), err
+            return pd.DataFrame(), original_string_columns, err
 
     # read count dataframe(s) from file
     try:
@@ -1764,7 +1758,7 @@ def to_standard_count_frame(f_path: str, munger_path: str, p, constants) -> (pd.
             err = ui.add_new_error(err, "munger", munger_name, f"No data found in file {Path(f_path).name}")
 
         if ui.fatal_error(err):
-            return pd.DataFrame(), err
+            return pd.DataFrame(), original_string_columns, err
     except Exception as exc:
         err = ui.add_new_error(
             err,
@@ -1772,7 +1766,7 @@ def to_standard_count_frame(f_path: str, munger_path: str, p, constants) -> (pd.
             f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
             f"Unexpected exception while reading data from file:\n\t{exc}"
         )
-        return pd.DataFrame(), err
+        return pd.DataFrame(), original_string_columns, err
 
     # get lists of string fields expected in raw file
     try:
@@ -1790,7 +1784,7 @@ def to_standard_count_frame(f_path: str, munger_path: str, p, constants) -> (pd.
     if new_err:
         err = ui.consolidate_errors([err, new_err])
         if ui.fatal_error(new_err):
-            return pd.DataFrame(), err
+            return pd.DataFrame(), original_string_columns, err
 
     # for each df:
     standard = dict()
@@ -1891,7 +1885,22 @@ def to_standard_count_frame(f_path: str, munger_path: str, p, constants) -> (pd.
     else:
         df = pd.DataFrame
     err = ui.consolidate_errors([error_by_sheet[k] for k in raw_dict.keys()])
-    return df, err
+
+    if suffix:
+        # append suffix to all non-Count column names (to avoid confilcts if e.g., source has col names 'Party'
+        try:
+            original_string_columns = [c for c in df.columns if c != "Count"]
+            df.columns = [c if c == "Count" else f"{c}{suffix}" for c in df.columns]
+        except Exception as exc:
+            err = ui.add_new_error(
+                err,
+                "system",
+                f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
+                f"Exception while appending suffix {suffix}: {exc}"
+            )
+            return df, original_string_columns, err
+
+    return df, original_string_columns, err
 
 
 def fill_vote_count(
