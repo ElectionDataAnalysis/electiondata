@@ -282,6 +282,10 @@ class DataLoader:
                 )
                 if new_err:
                     err = ui.consolidate_errors([err, new_err])
+                elif sdl is None:
+                    new_err = ui.add_new_error(
+                        new_err, "ini", f, f"Unexpected failure to load data (no SingleDataLoader object created)",
+                    )
 
                 # if fatal error, print warning
                 if ui.fatal_error(new_err):
@@ -556,7 +560,7 @@ def check_and_init_singledataloader(
     session,
     mungers_path: str,
     juris: jm.Jurisdiction,
-) -> (SingleDataLoader, Optional[dict]):
+) -> (Optional[SingleDataLoader], Optional[dict]):
     """Return SDL if it could be successfully initialized, and
     error dictionary (including munger errors noted in SDL initialization)"""
     # test parameters
@@ -575,6 +579,7 @@ def check_and_init_singledataloader(
     new_err_2 = check_par_file_elements(d, mungers_path, par_file_name)
     if new_err_2:
         err = ui.consolidate_errors([err, new_err_2])
+        sdl = None
     if not ui.fatal_error(new_err_2):
         sdl = SingleDataLoader(
             results_dir,
