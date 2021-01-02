@@ -4400,4 +4400,4 @@ Louisiana;Webster Parish	parish
 Louisiana;West Baton Rouge Parish	parish
 Louisiana;West Carroll Parish	parish
 Louisiana;West Feliciana Parish	parish
-Louisiana;Winn Parish	Parish
+Louisiana;Winn Parish	parish

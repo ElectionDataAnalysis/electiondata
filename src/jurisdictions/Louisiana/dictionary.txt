@@ -4430,36 +4430,6 @@ ReportingUnit	Louisiana;US House LA District 4	Louisiana;US House LA District 4
 ReportingUnit	Louisiana;US House LA District 5	Louisiana;US House LA District 5
 ReportingUnit	Louisiana;US House LA District 6	Louisiana;US House LA District 6
 ReportingUnit	Louisiana	Louisiana
-Candidate	Lee Ann Dugas	Lee Ann Dugas
-Candidate	Howard Kearney	Howard Kearney
-Candidate	Steve Scalise	Steve Scalise
-Candidate	Belden "Noonie Man" Batiste	Belden "Noonie Man" Batiste
-Candidate	Glenn Adrain Harris	Glenn Adrain Harris
-Candidate	Colby James	Colby James
-Candidate	Cedric L. Richmond	Cedric L. Richmond
-Candidate	David M. Schilling	David M. Schilling
-Candidate	Sheldon C. Vincent, Sr.	Sheldon C. Vincent, Sr.
-Candidate	Rob Anderson	Rob Anderson
-Candidate	Braylon Harris	Braylon Harris
-Candidate	Clay Higgins	Clay Higgins
-Candidate	Brandon LeLeux	Brandon LeLeux
-Candidate	Ben Gibson	Ben Gibson
-Candidate	Kenny Houston	Kenny Houston
-Candidate	Mike Johnson	Mike Johnson
-Candidate	Ryan Trundle	Ryan Trundle
-Candidate	Sandra "Candy" Christophe	Sandra "Candy" Christophe
-Candidate	Allen Guillory, Sr.	Allen Guillory, Sr.
-Candidate	Lance Harris	Lance Harris
-Candidate	Matt Hasty	Matt Hasty
-Candidate	Jesse P. Lagarde	Jesse P. Lagarde
-Candidate	Martin Lemelle, Jr.	Martin Lemelle, Jr.
-Candidate	Luke J. Letlow	Luke J. Letlow
-Candidate	Scotty Robinson	Scotty Robinson
-Candidate	Phillip Snowden	Phillip Snowden
-Candidate	Garret Graves	Garret Graves
-Candidate	Shannon Sloan	Shannon Sloan
-Candidate	Richard "RPT" Torregano	Richard "RPT" Torregano
-Candidate	Dartanyon "DAW" Williams	Dartanyon "DAW" Williams
 ReportingUnit	Louisiana;Winn Parish;Ward 7;Precinct 7	Winn;07;7
 ReportingUnit	Louisiana;Winn Parish;Ward 7;Precinct 2A	Winn;07;2A
 ReportingUnit	Louisiana;Winn Parish;Ward 7;Precinct 2	Winn;07;2
@@ -8296,3 +8266,48 @@ ReportingUnit	Louisiana;Acadia Parish;Ward 1;Precinct 1	Acadia;01;01
 CountItemType	early	Early Voting
 CountItemType	provisional	Provisional Votes
 CountItemType	election-day	election-day
+Candidate	Beryl Billiot	Beryl Billiot
+Candidate	John Paul Bourgeois	John Paul Bourgeois
+Candidate	'Bill' Cassidy	"Bill" Cassidy
+Candidate	Reno Jean Daret III	Reno Jean Daret III
+Candidate	Derrick 'Champ' Edwards	Derrick "Champ" Edwards
+Candidate	'Xan' John	""Xan"" John
+Candidate	David Drew Knight	David Drew Knight
+Candidate	M.V. 'Vinny' Mendoza	M.V. "Vinny" Mendoza
+Candidate	Jamar Montgomery	Jamar Montgomery
+Candidate	Dustin Murphy	Dustin Murphy
+Candidate	Adrian Perkins	Adrian Perkins
+Candidate	Antoine Pierce	Antoine Pierce
+Candidate	Melinda Mary Price	Melinda Mary Price
+Candidate	Aaron C. Sigler	Aaron C. Sigler
+Candidate	Peter Wenstrup	Peter Wenstrup
+Candidate	Lee Ann Dugas	Lee Ann Dugas
+Candidate	Howard Kearney	Howard Kearney
+Candidate	Steve Scalise	Steve Scalise
+Candidate	Belden 'Noonie Man' Batiste	Belden "Noonie Man" Batiste
+Candidate	Glenn Adrain Harris	Glenn Adrain Harris
+Candidate	Colby James	Colby James
+Candidate	Cedric L. Richmond	Cedric L. Richmond
+Candidate	David M. Schilling	David M. Schilling
+Candidate	Sheldon C. Vincent, Sr.	Sheldon C. Vincent, Sr.
+Candidate	Rob Anderson	Rob Anderson
+Candidate	Braylon Harris	Braylon Harris
+Candidate	Clay Higgins	Clay Higgins
+Candidate	Brandon LeLeux	Brandon LeLeux
+Candidate	Ben Gibson	Ben Gibson
+Candidate	Kenny Houston	Kenny Houston
+Candidate	Mike Johnson	Mike Johnson
+Candidate	Ryan Trundle	Ryan Trundle
+Candidate	Sandra 'Candy' Christophe	Sandra "Candy" Christophe
+Candidate	Allen Guillory, Sr.	Allen Guillory, Sr.
+Candidate	Lance Harris	Lance Harris
+Candidate	Matt Hasty	Matt Hasty
+Candidate	Jesse P. Lagarde	Jesse P. Lagarde
+Candidate	Martin Lemelle, Jr.	Martin Lemelle, Jr.
+Candidate	Luke J. Letlow	Luke J. Letlow
+Candidate	Scotty Robinson	Scotty Robinson
+Candidate	Phillip Snowden	Phillip Snowden
+Candidate	Garret Graves	Garret Graves
+Candidate	Shannon Sloan	Shannon Sloan
+Candidate	Richard 'RPT' Torregano	Richard "RPT" Torregano
+Candidate	Dartanyon 'DAW' Williams	Dartanyon "DAW" Williams
