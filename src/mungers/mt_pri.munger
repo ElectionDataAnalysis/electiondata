@@ -1,11 +1,11 @@
 [format]
 file_type=excel
-string_locations=from_field_values
+munge_strings=in_field_values
 
-sheets_to_skip=None
+sheets_to_skip_names=None
 rows_to_skip=6
 
-[from_field_values]
+[in_field_values]
 ReportingUnit=<first_column>
 Party={<header_0>,^.*\n(.*)$}
 CandidateContest=<constant_column_0> ({<header_0>,^.*\n(.*)$})

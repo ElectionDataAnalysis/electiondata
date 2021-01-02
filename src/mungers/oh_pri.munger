@@ -1,11 +1,11 @@
 [format]
 file_type=excel
-string_locations=from_field_values
+munge_strings=in_field_values
 
-sheets_to_skip=Contents,Presidential Delegates,Statewide Offices,U.S. Congress,Ohio Gen Assembly,State Board of Education,Judicial,Ohio General Assembly
+sheets_to_skip_names=Contents,Presidential Delegates,Statewide Offices,U.S. Congress,Ohio Gen Assembly,State Board of Education,Judicial,Ohio General Assembly
 rows_to_skip=0
 
-[from_field_values]
+[in_field_values]
 ReportingUnit=<first_column>
 Party={<header_1>,^.* \((.*)\)[^\)\n]*$}
 CandidateContest=<header_0> ({<header_1>,^.* \((.*)\)[^\)\n]*$})

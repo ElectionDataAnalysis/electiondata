@@ -1,10 +1,10 @@
 [format]
-count_locations=by_field_name
-string_locations=in_count_headers,from_field_values
+count_locations=by_field_names
+munge_strings=in_count_headers,in_field_values
 
 count_fields_by_name=Machine Votes,Absentee Votes,Total Votes
 
-[from_field_values]
+[in_field_values]
 ReportingUnit=<Election District>
 Party=<Party Name>
 CandidateContest=<Contest Title> (<Party Name>)
