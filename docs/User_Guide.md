@@ -15,13 +15,13 @@ See the template file (`src/parameter_file_templates/run_time.ini.template`).
    
 ## Choose a Munger
 Ensure that the munger files are appropriate for your results file(s). 
- (1) If the munger doesn't already exist, pick a name for your munger and create a directory with that name in the `mungers` directory to hold `format.config` and `cdf_elements.txt`.
+ (1) If the munger doesn't already exist, pick a name for your munger and create a file with that name and extension `.munger` in the `mungers` directory. E.g., `me_excel.munger`
  (2) Copy the templates from `templates/munger_templates` to your munger directory. Every munger must have a value for `file_type`; depending your `file_type` other parameters may be required. Types currently supported are:
  
- #### NEW VERSION:
+
  The file with munger parameters, which must have the extension `.munger`, has one or more sections, each with a header:
   * (required) `[format]` for the main parameters
-  * (may be required) one section each string locations `from_field_values` and `in_count_headers` if these are listed in the `string_locations` parameter (defined below). 
+  * (may be required) one section each string locations `in_field_values` and `in_count_headers` if these are listed in the `munge_strings` parameter (defined below). 
   * (may be required) one section for each element in the `lookups` list. E.g., if `lookups=Candidate,Party` then there must be  `[Candidate lookup]` and `[Party lookup]` sections. 
   * (optional) `[ignore]` Unrecognized Contests, Candidates and Parties are collected as "none or unknown". Some states (e.g., Wisconsin 2018 General) report total votes over a contest next to individual candidates' votes. The system may read, e.g., "Total Votes Cast" as an unrecognized party name. In this case include the lines:
   ```
@@ -30,29 +30,29 @@ Party=Total Votes Cast
 ```
 and similarly, if necessary, for any Contest or Selection. If there is more than one "Party" to be ignored, use a comma-separated list: `Candidate=Total Votes Cast,Registered Voters`
  
- There are three main required parameters: `file_type`, `count_locations` and `string_locations`. Depending on the values of these, there are other required and optional fields. 
+ There are three main required parameters: `file_type`, `count_locations` and `munge_strings`. Depending on the values of these, there are other required and optional fields. 
  `file_type`: controls which pandas function reads the file contents. Related optional and required parameters must be given under the `[file_type]` header.
   * 'excel'
     * (optional) a list `sheets_to_read_names` (and/or `sheets_to_read_numbers`) of spreadsheets to read, 
-    * (optional) a list `sheets_to_skip` of names of spreadsheets to skip
+    * (optional) a list `sheets_to_skip_names` of names of spreadsheets to skip
     * Default is to read all sheets
   * 'json-nested'
   * 'xml'
-    * (required) must have `string_locations=from_field_values` or `string_locations=from_field_values,constant_over_file`
+    * (required) must have `munge_strings=in_field_values` or `munge_strings=in_field_values,constant_over_file`
     * (optional) if there are tags in the vote-count hierarchy that do not themselves contain data we want, list them in the `nesting_tags` parameter, e.g., `nesting_tags=contests,choices,jurisdictions,voteTypes`
   * 'flat_text' Any tab-, comma-, or other-separated table in a plain tabular text file.
-    * (required) a field delimiter `flat_file_delimiter` to be specified (usually `flat_file_delimiter=,` for csv or `flat_file_delimiter=tab` for .txt)
+    * (required) a field delimiter `flat_text_delimiter` to be specified (usually `flat_text_delimiter=,` for csv or `flat_text_delimiter=tab` for .txt)
   * [[ will be obsolete: `concatenated-blocks` Clarity format derived from xml]]
   
   `count_locations`: controls how the system looks for counts. Related optional and required parameters must be given under the `[count_locations]` header.
-  * 'by_field_name' (NB: as of 12/2020, for this case system can handle only files with only one field-name row for the count fields. If there are multiple header rows for the count columns, use the 'by_column_number' option.)
+  * 'by_field_names' (NB: as of 12/2020, for this case system can handle only files with only one field-name row for the count fields. If there are multiple header rows for the count columns, use the 'by_column_number' option.)
     * (required) list `count_fields_by_name` of names of fields containing counts. 
     * (required for 'excel' and 'flat_text' file_types) specify location of field names for count columns. with integer `count_field_name_row` (NB: top row not skipped is 0, next row is 1, etc.)
   * 'by_column_number'
     * (required) list `count_column_numbers` of column numbers containing counts. 
     
-  `string_locations`: controls how the system looks for the character strings used to munge the non-count information (Candidate, Party, etc.). There may be multiple, so the value is a list. Related optional and required parameters must be given under the `[string_locations]` header.
-  * 'from_field_values'
+  `munge_strings`: controls how the system looks for the character strings used to munge the non-count information (Candidate, Party, etc.). There may be multiple, so the value is a list. Related optional and required parameters must be given under the `[munge_strings]` header.
+  * 'in_field_values'
     * (required) either:
       * if all_rows=data (i.e., no field names) list `string_field_column_numbers` of integers designating columns (leftmost column is 0, next is 1, etc.)
       * if some of the field values are foreign keys, must give lookup information. For each foreign key, need a separate section with corresponding header (field name plus " lookup", e.g. `[county_id lookup]`. This section needs:
@@ -79,9 +79,9 @@ and similarly, if necessary, for any Contest or Selection. If there is more than
 ```
 [Candidate lookup]
 source_file=2018GEN/2018name.txt
-file_type=flat_file
+file_type=flat_text
 
-flat_file_delimiter=tab
+flat_text_delimiter=tab
 id_col_number=5
 Candidate=<column_7> <column_8> <column_6>
 ```

@@ -1,17 +1,17 @@
 [format]
 file_type=excel
-string_locations=constant_over_sheet,from_field_values,in_count_headers
-count_locations=by_column_number
+munge_strings=constant_over_sheet,in_field_values,in_count_headers
+count_locations=by_column_numbers
 
 encoding=iso-8859-1
 thousands_separator=,
-sheets_to_skip=Document map
+sheets_to_skip_names=Document map
 rows_to_skip=2
 count_column_numbers=2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20
 string_field_name_row=3
 count_header_row_numbers=3,4
 
-[from_field_values]
+[in_field_values]
 ReportingUnit=<County>
 CountItemType=total
 

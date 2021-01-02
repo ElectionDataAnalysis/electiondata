@@ -1,15 +1,15 @@
 [format]
 file_type=flat_text
-count_locations=by_field_name
-string_locations=in_count_headers,from_field_values
+count_locations=by_field_names
+munge_strings=in_count_headers,in_field_values
 
 encoding=utf_8
-flat_file_delimiter=tab
+flat_text_delimiter=tab
 string_field_name_row=0
 count_field_name_row=0
 count_fields_by_name=Votes_Early Vote,Votes_Election Day,Votes
 
-[from_field_values]
+[in_field_values]
 ReportingUnit=<PrecinctName>
 Party=<CandidateAffiliation>
 CandidateContest=<ContestName>

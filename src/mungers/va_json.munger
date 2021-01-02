@@ -1,11 +1,11 @@
 [format]
 file_type=json-nested
-count_locations=by_field_name
-string_locations=from_field_values
+count_locations=by_field_names
+munge_strings=in_field_values
 
 count_fields_by_name=Votes
 
-[from_field_values]
+[in_field_values]
 ReportingUnit=<LocalityName>
 Party=<PoliticalParty>
 CandidateContest=<RaceName>
