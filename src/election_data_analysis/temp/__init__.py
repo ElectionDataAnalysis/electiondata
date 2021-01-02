@@ -202,14 +202,14 @@ def create_munger_files(
 
                 # set count_locations and related params
                 if d["count_columns"] is not None:
-                    new_sections["format_top_lines"].append(f"count_locations=by_column_number")
+                    new_sections["format_top_lines"].append(f"count_locations=by_column_numbers")
                     new_sections["format"].append(f"count_column_numbers={d['count_columns']}")
                 elif mu in count_field_dict.keys():
                     new_sections["format_top_lines"].append(f"count_locations=by_field_names")
                     cf_str = ",".join(count_field_dict[mu])
                     new_sections["format"].append(f"count_fields_by_name={cf_str}")
                 elif d["field_names_if_no_field_name_row"] is not None:
-                    new_sections["format_top_lines"].append(f"count_locations=by_column_number")
+                    new_sections["format_top_lines"].append(f"count_locations=by_column_numbers")
                     new_sections["format"].append(f"count_column_numbers={d['count_columns']}")
 
                 # set string_location and related params
