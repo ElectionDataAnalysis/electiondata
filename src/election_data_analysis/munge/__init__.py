@@ -1883,10 +1883,11 @@ def to_standard_count_frame(
         df = clean_strings(df, non_count)
 
     else:
-        df = pd.DataFrame
+        df = pd.DataFrame()
     err = ui.consolidate_errors([error_by_sheet[k] for k in raw_dict.keys()])
 
-    if suffix:
+    # if even one sheet was not fatally flawed
+    if suffix and non_fatal:
         # append suffix to all non-Count column names (to avoid confilcts if e.g., source has col names 'Party'
         try:
             original_string_columns = [c for c in df.columns if c != "Count"]
