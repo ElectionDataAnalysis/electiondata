@@ -13,12 +13,11 @@ In the directory from which you will run the system -- which can be outside your
   
 See the template file (`src/parameter_file_templates/run_time.ini.template`). 
    
-## Choose a Munger
-Ensure that the munger files are appropriate for your results file(s). 
- (1) If the munger doesn't already exist, pick a name for your munger and create a file with that name and extension `.munger` in the `mungers` directory. E.g., `me_excel.munger`
- (2) Copy the templates from `templates/munger_templates` to your munger directory. Every munger must have a value for `file_type`; depending your `file_type` other parameters may be required. Types currently supported are:
+## Determining a Munger
+Ensure that the munger files are appropriate for your results file(s). If the munger doesn't already exist:
+ * pick a name for your munger 
+ * create a file with that name and extension `.munger` in the `mungers` directory (e.g., `me_excel.munger`) with sections and parameters described below. You may find it helpful to work with the template from `src/parameter_file_templates/template.munger`. 
  
-
  The file with munger parameters, which must have the extension `.munger`, has one or more sections, each with a header:
   * (required) `[format]` for the main parameters
   * (may be required) one section each string locations `in_field_values` and `in_count_headers` if these are listed in the `munge_strings` parameter (defined below). 
