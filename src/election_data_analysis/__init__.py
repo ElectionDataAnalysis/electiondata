@@ -505,7 +505,7 @@ class SingleDataLoader:
                     err = ui.consolidate_errors([err, new_err])
         return err
 
-    def collect_constants_from_ini(self) -> dict():
+    def collect_constants_from_ini(self) -> dict:
         """collect constant elements from .ini file"""
         constants = dict()
         for k in ["Party",
@@ -523,28 +523,30 @@ class SingleDataLoader:
 
 
 def check_par_file_elements(
-    d: dict, mungers_path: str, par_file_name: str
+    ini_d: dict,
+    mungers_path: str,
+    ini_file_name: str,
 ) -> Optional[dict]:
-    """<d> is the dictionary of parameters pulled from the parameter file"""
+    """<d> is the dictionary of parameters pulled from the ini file"""
     err = None
-    # create list of elements pulled from .ini file
-    elt_from_par_file = [
-        x
-        for x in sdl_pars_opt
-        if (
-            (x in ["Party", "ReportingUnit", "Contest", "CountItemType"])
-            and (d[x] is not None)
-        )
-    ]
-    if "Contest" in elt_from_par_file:
-        # replace "Contest" by its two possibilities
-        elt_from_par_file.remove("Contest")
-        elt_from_par_file.extend(["BallotMeasureContest", "CandidateContest"])
 
     # for each munger,
-    for mu in d["munger_name"].split(","):
-        # TODO check that no element is defined more than once
-        pass
+    for mu in ini_d["munger_name"].split(","):
+        # check any constant_over_file elements are defined in .ini file
+        munger_file = os.path.join(mungers_path,f"{mu}.munger")
+        params, p_err = ui.get_parameters(
+            required_keys=list(), param_file=munger_file, optional_keys=["constant_over_file"], header="format",
+        )
+        if p_err:
+            err = ui.consolidate_errors([err, p_err])
+        elif params["constant_over_file"]:
+            bad_constants = list()
+            for c in params["constant_over_file"].split(","):
+                if c not in ini_d.keys() or ini_d[c] is None:
+                    bad_constants.append(c)
+            if bad_constants:
+                err = ui.add_new_error(err, "ini", ini_file_name, f"Munger {mu} requires constants to be defined:\n{bad_constants}")
+
     return err
 
 
@@ -571,15 +573,17 @@ def check_and_init_singledataloader(
 
     # check consistency of munger and .ini file regarding elements to be read from ini file
     new_err_2 = check_par_file_elements(d, mungers_path, par_file_name)
-
-    sdl = SingleDataLoader(
-        results_dir,
-        par_file_name,
-        session,
-        mungers_path,
-        juris,
-    )
-    err = ui.consolidate_errors([err, sdl.munger_err])
+    if new_err_2:
+        err = ui.consolidate_errors([err, new_err_2])
+    if not ui.fatal_error(new_err_2):
+        sdl = SingleDataLoader(
+            results_dir,
+            par_file_name,
+            session,
+            mungers_path,
+            juris,
+        )
+        err = ui.consolidate_errors([err, sdl.munger_err])
     return sdl, err
 
 
