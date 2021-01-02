@@ -185,8 +185,8 @@ CandidateContest	ME Senate District 32	ME Senate District 32
 CandidateContest	ME Senate District 33	ME Senate District 33
 CandidateContest	ME Senate District 34	ME Senate District 34
 CandidateContest	ME Senate District 35	ME Senate District 35
-CandidateContest	US House ME District 1	US House ME District 1
-CandidateContest	US House ME District 2	US House ME District 2
+CandidateContest	US House ME District 1	US Congress District 1
+CandidateContest	US House ME District 2	US Congress District 2
 CandidateContest	US President (ME)	US President (ME)
 CandidateContest	ME Governor	ME Governor
 CandidateContest	US Senate ME	US Senate ME
@@ -200,8 +200,8 @@ Election	2018 General	2018 General
 Election	2018 Primary	2018 Primary
 Election	2016 General	2016 General
 Election	2016 Primary	2016 Primary
-Party	Democratic Party	Democratic Party
-Party	Republican Party	Republican Party
+Party	Democratic Party	Democratic
+Party	Republican Party	Republican
 Party	Green Party	Green Party
 Party	Libertarian Party	Libertarian Party
 ReportingUnit	Maine;ME House District 1	Maine;ME House District 1
@@ -1417,3 +1417,8 @@ ReportingUnit	Maine;Washington County;WAITE	WAS;Waite
 ReportingUnit	Maine;Washington County;WESLEY	WAS;Wesley
 ReportingUnit	Maine;Washington County;WHITING	WAS;Whiting
 ReportingUnit	Maine;Washington County;WHITNEYVILLE	WAS;Whitneyville
+Candidate	Pingree, Chellie M.	Pingree, Chellie M.
+Candidate	none or unknown	Others
+Candidate	Golden, Jared F.	Golden, Jared F.
+Candidate	Crafts, Dale John	Crafts, Dale John
+Candidate	Allen, Jay T.	Allen, Jay T.
