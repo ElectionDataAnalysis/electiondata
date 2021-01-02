@@ -43,13 +43,13 @@ munger_dependent_reqs: Dict[str, Dict[str, List[str]]] = {
     "file_type": {"flat_text": ["flat_text_delimiter"]},
     "count_locations": {
         "by_field_names": ["count_fields_by_name"],
-        "by_column_number": ["count_column_numbers"],
+        "by_column_numbers": ["count_column_numbers"],
     },
 }
 
 req_munger_param_values: Dict[str, List[str]] = {
     "munge_strings": ["in_field_values", "in_count_headers", "constant_over_file", "constant_over_sheet", "auxiliary_data"],
-    "count_locations": ["by_field_names", "by_column_number"],
+    "count_locations": ["by_field_names", "by_column_numbers"],
     "file_type": ["excel", "json-nested", "xml", "flat_text"],
 }
 
@@ -789,7 +789,7 @@ def melt_to_one_count_column(df: pd.DataFrame, p: dict, mu_name: str) -> (pd.Dat
         df.columns = [";:;".join([f"{x}" for x in tup]) for tup in df.columns]
 
     # define count columns
-    if p["count_locations"] == "by_column_number":
+    if p["count_locations"] == "by_column_numbers":
         count_columns = [
             df.columns[idx] for idx in p["count_column_numbers"] if idx < df.shape[1]
         ]
@@ -799,7 +799,7 @@ def melt_to_one_count_column(df: pd.DataFrame, p: dict, mu_name: str) -> (pd.Dat
                 err,
                 "munger",
                 mu_name,
-                "If there are multiple header rows, need to have count_locations=by_column_number ",
+                "If there are multiple header rows, need to have count_locations=by_column_numbers ",
             )
             return pd.DataFrame(), err
         count_columns = [c for c in p["count_fields_by_name"] if c in df.columns]
@@ -808,7 +808,7 @@ def melt_to_one_count_column(df: pd.DataFrame, p: dict, mu_name: str) -> (pd.Dat
             err,
             "munger",
             mu_name,
-            f"count_locations parameter must be either by_column_number or by_field_names"
+            f"count_locations parameter must be either by_column_numbers or by_field_names"
         )
         return pd.DataFrame(), err
 
