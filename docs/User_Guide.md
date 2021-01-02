@@ -451,3 +451,10 @@ Candidate	Castle, Darrell L	Castle, Darrell L
 
 ```
 
+### NIST Exports
+This package also provides functionality to export the data according to the [NIST](https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.1500-100r2.pdf) common data format specifications. This is as simple as identifying an election and jurisdiciton of interest:
+```
+from election_data_analysis import Analyzer
+analyzer = Analyzer()
+election_report = analyzer.export_nist("2020 General", "Georgia")
+```

@@ -1,0 +1,6 @@
+name	raw_identifier_formula	source
+ReportingUnit	<WARD>;<DIVISION>	row
+Party	{<0>,^.* - .*-(.*)$}	column
+CandidateContest	{<0>,^.* - (.*-.*)$}	column
+Candidate	{<0>,^(.*) - .*-.*$}	column
+CountItemType		ini

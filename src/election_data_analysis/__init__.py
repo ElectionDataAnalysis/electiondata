@@ -1481,18 +1481,23 @@ class Analyzer:
         Session = sessionmaker(bind=eng)
         self.session = Session()
 
-    def display_options(self, input: str, verbose: bool = False, filters: list = None):
+    def display_options(
+        self,
+        input_str: str,
+        verbose: bool = False,
+        filters: list = None
+    ):
         if not verbose:
-            results = db.get_input_options(self.session, input, False)
+            results = db.get_input_options(self.session, input_str, False)
         else:
             if not filters:
-                df = pd.DataFrame(db.get_input_options(self.session, input, True))
+                df = pd.DataFrame(db.get_input_options(self.session, input_str, True))
                 results = db.package_display_results(df)
             else:
                 try:
                     filters_mapped = ui.get_contest_type_mappings(filters)
                     results = db.get_filtered_input_options(
-                        self.session, input, filters_mapped
+                        self.session, input_str, filters_mapped
                     )
                 except:
                     results = None
@@ -1620,6 +1625,9 @@ class Analyzer:
     ) -> Optional[str]:
         rollup_unit_id = db.name_to_id(self.session, "ReportingUnit", rollup_unit)
         sub_unit_id = db.name_to_id(self.session, "ReportingUnitType", sub_unit)
+        sub_rutype_othertext = ''
+        if sub_unit_id is None:
+            sub_rutype_othertext = sub_unit
         election_id = db.name_to_id(self.session, "Election", election)
         err = a.create_rollup(
             self.session,
@@ -1628,8 +1636,25 @@ class Analyzer:
             sub_rutype_id=sub_unit_id,
             election_id=election_id,
             by_vote_type=by_vote_type,
+            sub_rutype_othertext = sub_rutype_othertext,
         )
         return err
+
+
+    def export_nist(self, election: str, jurisdiction: str):
+        election_id = db.name_to_id(self.session, "Election", election)
+        jurisdiction_id = db.name_to_id(self.session, "ReportingUnit", jurisdiction)
+
+        election_report = {}
+
+        election_report["Contest"] = a.nist_candidate_contest(self.session, election_id, jurisdiction_id)
+        election_report["GpUnit"] = a.nist_reporting_unit(self.session, election_id, jurisdiction_id)
+        election_report["Party"] = a.nist_party(self.session, election_id, jurisdiction_id) 
+        election_report["Election"] = a.nist_election(self.session, election_id, jurisdiction_id) 
+        election_report["Office"] = a.nist_office(self.session, election_id, jurisdiction_id) 
+        election_report["Candidate"] = a.nist_candidate(self.session, election_id, jurisdiction_id)
+
+        return election_report
 
 
 def get_filename(path: str) -> str:
@@ -1679,7 +1704,8 @@ def aggregate_results(
         return empty_df_with_good_cols
 
     df, err_str = db.export_rollup_from_db(
-        cursor=cursor,
+        # cursor=cursor,
+        session = an.session,
         top_ru=jurisdiction,
         election=election,
         sub_unit_type=sub_unit_type,
@@ -1713,7 +1739,7 @@ def data_exists(election, jurisdiction, p_path=None, dbname=None):
         return False
 
     # read all contests with records in the VoteCount table
-    df = db.read_vote_count(an.session, election_id, reporting_unit_id, ["Name"],["contest_name"])
+    df = db.read_vote_count(an.session, election_id, reporting_unit_id, ["ContestName"],["contest_name"])
     # if no contest found
     if df.empty:
         # no data exists.

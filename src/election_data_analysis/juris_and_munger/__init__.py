@@ -433,14 +433,14 @@ def ensure_juris_files(juris_path, ignore_empty=False) -> Optional[dict]:
 
             if juris_file == "dictionary":
                 # dedupe the dictionary
-                dedupe(cf_path)
+                clean_and_dedupe(cf_path)
 
                 # delete lines with one or more nulls
                 # TODO this mucks up encodings. We track encodings of results files, but not of jurisdictions.
                 # drop_lines_with_any_nulls(cf_path)
             else:
                 # dedupe the file
-                dedupe(cf_path)
+                clean_and_dedupe(cf_path)
                 # check for problematic null entries
                 null_columns = check_nulls(juris_file, cf_path, project_root)
                 if null_columns:
@@ -693,10 +693,20 @@ def check_munger_file_contents(munger_path, munger_file, err):
     return err
 
 
-def dedupe(f_path):
+def clean_and_dedupe(f_path: str):
+    "Dedupe the file, removing any leading or trailing whitespace and compressing any internal whitespace"
     # TODO allow specification of unique constraints
     df = pd.read_csv(f_path, sep="\t", encoding="iso-8859-1", quoting=csv.QUOTE_MINIMAL)
-    dupe = ""
+
+    for c in df.columns:
+        if not is_numeric_dtype(df.dtypes[c]):
+            df[c].fillna("", inplace=True)
+            try:
+                df[c] = df[c].apply(m.compress_whitespace)
+            except Exception:
+                # failure shouldn't break anything
+                print(f"No whitespace compression on column {c} of {f_path}")
+                pass
     dupes_df, df = ui.find_dupes(df)
     if not dupes_df.empty:
         df.to_csv(f_path, sep="\t", index=False)
@@ -890,10 +900,15 @@ def load_juris_dframe_into_cdf(
             cdf_e = pd.read_sql_table(e, session.bind)
             # for every instance of the enumeration in the current table, add id and othertype columns to the dataframe
             if e in df.columns:
-                df = m.enum_col_to_id_othertext(df, e, cdf_e)
-            # clean
-            df, err_df = m.clean_ids(df, [f"{e}_Id"])
-            df[f"Other{e}"] = df[f"Other{e}"].fillna("")
+                df, non_standard = m.enum_col_to_id_othertext(df, e, cdf_e)
+                if non_standard:
+                    ns = "\n\t".join(non_standard)
+                    error = ui.add_new_error(
+                        error,
+                        "warn-jurisdiction",
+                        Path(juris_path).name,
+                        f"Some {e}s are non-standard:\n\t{ns}",
+                    )
 
     # get Ids for any foreign key (or similar) in the table, e.g., Party_Id, etc.
     if os.path.isfile(fk_file):

@@ -27,7 +27,6 @@ Andi Rich
 Andrew McKinney
 Andrew Yang
 Andrew Zuelke
-AndrÃÂÃÂ© Jacque
 Andy Craig
 Angel C. Sanchez
 Ann Groves Lloyd
@@ -510,3 +509,5 @@ Gloria La Riva
 Erin Schmidt
 Dominic Jessy McClain
 Dennis C. Walton
+André Jacque
+

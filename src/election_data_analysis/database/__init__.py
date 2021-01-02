@@ -1180,7 +1180,7 @@ def get_filtered_input_options(session, input_str, filters):
             session,
             election_id,
             reporting_unit_id,
-            ["ReportingUnitName", "Name", "unit_type"],
+            ["ReportingUnitName", "ContestName", "unit_type"],
             ["parent", "name", "type"],
         )
         df = df.sort_values(["parent", "name"]).reset_index(drop=True)
@@ -1194,7 +1194,7 @@ def get_filtered_input_options(session, input_str, filters):
             session,
             election_id,
             reporting_unit_id,
-            ["Name", "BallotName", "PartyName", "unit_type"],
+            ["ContestName", "BallotName", "PartyName", "unit_type"],
             ["parent", "name", "type", "unit_type"],
         )
         df = clean_candidate_names(df_unordered)
@@ -1230,7 +1230,7 @@ def get_filtered_input_options(session, input_str, filters):
             session,
             election_id,
             reporting_unit_id,
-            ["Name", "BallotName", "PartyName", "unit_type"],
+            ["ContestName", "BallotName", "PartyName", "unit_type"],
             ["parent", "name", "type", "unit_type"],
         )
         df_unordered = df_unordered[df_unordered["unit_type"].isin(filters)].copy()
@@ -1260,7 +1260,7 @@ def get_relevant_contests(session, filters):
     election_id = list_to_id(session, "Election", filters)
     reporting_unit_id = list_to_id(session, "ReportingUnit", filters)
     contest_df = read_vote_count(
-        session, election_id, reporting_unit_id, ["Name"], ["contest_name"]
+        session, election_id, reporting_unit_id, ["ContestName"], ["contest_name"]
     )
 
     result = get_input_options(session, "candidate_contest", True)
@@ -1283,8 +1283,12 @@ def get_jurisdiction_hierarchy(session, jurisdiction_id):
         FROM    "ComposingReportingUnitJoin" cruj
                 JOIN "ReportingUnit" ru on cruj."ChildReportingUnit_Id" = ru."Id"
                 JOIN "ReportingUnitType" rut on ru."ReportingUnitType_Id" = rut."Id"
+                CROSS JOIN (
+                    SELECT  ARRAY_LENGTH(regexp_split_to_array("Name", ';'), 1) AS len 
+                    FROM    "ReportingUnit" WHERE "Id" = %s
+                ) l
         WHERE   rut."Txt" not in %s
-                AND ARRAY_LENGTH(regexp_split_to_array("Name", ';'), 1) = 2
+                AND ARRAY_LENGTH(regexp_split_to_array("Name", ';'), 1) = len + 1
                 AND "ParentReportingUnit_Id" = %s
         UNION
         -- This union accommodates Alaska without breaking other states
@@ -1309,7 +1313,7 @@ def get_jurisdiction_hierarchy(session, jurisdiction_id):
     cursor = connection.cursor()
     try:
         cursor.execute(q, [
-            tuple(contest_types_model), jurisdiction_id, jurisdiction_id
+            jurisdiction_id, tuple(contest_types_model), jurisdiction_id, jurisdiction_id
         ])
         result = cursor.fetchall()
         subdivision_type_id = result[0][0]
@@ -1420,7 +1424,7 @@ and cruj."ParentReportingUnit_Id" = %s
 
 
 def export_rollup_from_db(
-    cursor,
+    session,
     top_ru: str,
     election: str,
     sub_unit_type: str,
@@ -1435,6 +1439,8 @@ def export_rollup_from_db(
     If by_vote_type, return separate rows for each vote type.
     If exclude_redundant_total then, if both total and other vote types are given, exclude total"""
 
+    connection = session.bind.raw_connection()
+    cursor = connection.cursor()
     # define the 'where' sql clause based on restrictions from parameters
     # and the string variables to be passed to query
     restrict = ""
@@ -1500,8 +1506,8 @@ def export_rollup_from_db(
         WHERE C.contest_type = 'Candidate'
             AND e."Name" = %s -- election name
             AND TopRU."Name" = %s  -- top RU
-            AND IntermediateRUT."Txt" = %s  -- intermediate_reporting_unit_type
-            AND d.{by} in %s  -- tuple of datafile short_names (if by='short_name) or Ids (if by="Id")
+             AND %s in (IntermediateRUT."Txt", IntermediateRU."OtherReportingUnitType")  -- intermediate_reporting_unit_type
+           AND d.{by} in %s  -- tuple of datafile short_names (if by='short_name) or Ids (if by="Id")
             {restrict}
         GROUP BY {group_and_order_by}
         ORDER BY {group_and_order_by};
@@ -1544,7 +1550,7 @@ def export_rollup_from_db(
         WHERE C.contest_type = 'BallotMeasure'
             AND e."Name" = %s -- election name
             AND TopRU."Name" = %s  -- top RU
-            AND IntermediateRUT."Txt" = %s  -- intermediate_reporting_unit_type
+            AND %s in (IntermediateRUT."Txt", IntermediateRU."OtherReportingUnitType")  -- intermediate_reporting_unit_type
             AND d.{by} in %s  -- tuple of datafile short_names
             {restrict}
         GROUP BY {group_and_order_by}
@@ -1570,6 +1576,7 @@ def export_rollup_from_db(
     except Exception as exc:
         results_df = pd.DataFrame()
         err_str = f"No results exported due to database error: {exc}"
+    cursor.close()
     return results_df, err_str
 
 
@@ -1586,16 +1593,27 @@ def read_vote_count(
     q = sql.SQL(
         """
         SELECT  DISTINCT {fields}
-        FROM    "VoteCount" vc
-                JOIN "Contest" on vc."Contest_Id" = "Contest"."Id"
+        FROM    (
+                    SELECT  "Id" as "VoteCount_Id", "Contest_Id", "Selection_Id",
+                            "ReportingUnit_Id", "Election_Id", "CountItemType_Id", "Count"
+                    FROM    "VoteCount"
+                ) vc
+                JOIN (SELECT "Id", "Name" as "ContestName" , contest_type as "ContestType" FROM "Contest") con on vc."Contest_Id" = con."Id"
                 JOIN "ComposingReportingUnitJoin" cruj ON vc."ReportingUnit_Id" = cruj."ChildReportingUnit_Id"
                 JOIN "CandidateSelection" cs ON vc."Selection_Id" = cs."Id"
                 JOIN "Candidate" c on cs."Candidate_Id" = c."Id"
                 JOIN (SELECT "Id", "Name" AS "PartyName" FROM "Party") p ON cs."Party_Id" = p."Id"
-                JOIN "CandidateContest" cc ON "Contest"."Id" = cc."Id"
-                JOIN (SELECT "Id", "ElectionDistrict_Id" FROM "Office") o on cc."Office_Id" = o."Id"
-                JOIN (SELECT "Id", "Name" as "ReportingUnitName", "ReportingUnitType_Id" FROM "ReportingUnit") ru on o."ElectionDistrict_Id" = ru."Id"
+                JOIN "CandidateContest" cc ON con."Id" = cc."Id"
+                JOIN (SELECT "Id", "Name" as "OfficeName", "ElectionDistrict_Id" FROM "Office") o on cc."Office_Id" = o."Id"
+                -- this reporting unit info refers to the districts (state house, state senate, etc)
+                JOIN (SELECT "Id", "Name" AS "ReportingUnitName", "ReportingUnitType_Id" FROM "ReportingUnit") ru on o."ElectionDistrict_Id" = ru."Id"
                 JOIN (SELECT "Id", "Txt" AS unit_type FROM "ReportingUnitType") rut on ru."ReportingUnitType_Id" = rut."Id"
+                -- this reporting unit info refers to the geopolitical divisions (county, state, etc)
+                JOIN (SELECT "Id" as "GP_Id", "Name" AS "GPReportingUnitName", "ReportingUnitType_Id" AS "GPReportingUnitType_Id" FROM "ReportingUnit") gpru on vc."ReportingUnit_Id" = gpru."GP_Id"
+                JOIN (SELECT "Id", "Txt" AS "GPType" FROM "ReportingUnitType") gprut on gpru."GPReportingUnitType_Id" = gprut."Id"
+                JOIN (SELECT "Id", "Name" as "ElectionName", "ElectionType_Id" FROM "Election") e on vc."Election_Id" = e."Id"
+                JOIN (SELECT "Id", "Txt" as "ElectionType" FROM "ElectionType") et on e."ElectionType_Id" = et."Id"
+                JOIN (SELECT "Id", "Txt" as "CountItemType" FROM "CountItemType") cit on vc."CountItemType_Id" = cit."Id"
         WHERE   "Election_Id" = %s
                 AND "ParentReportingUnit_Id" = %s
         """

@@ -5897,3 +5897,2220 @@ ReportingUnit	City of NEKOOSA Wards 1-4	City of NEKOOSA Wards 1-4
 ReportingUnit	City of PITTSVILLE Ward 1	City of PITTSVILLE Ward 1
 ReportingUnit	"City of WISCONSIN RAPIDS Wards 1-10,22-23"	"City of WISCONSIN RAPIDS Wards 1-10,22-23"
 ReportingUnit	"City of WISCONSIN RAPIDS Wards 11-21,24-29"	"City of WISCONSIN RAPIDS Wards 11-21,24-29"
+=======
+cdf_element	cdf_internal_name	raw_identifier_value
+Candidate	Aaron A. LaFave	Aaron A. LaFave
+Candidate	Aaron D. Perry	Aaron D. Perry
+Candidate	Aaron Elaine Camacho	Aaron Elaine Camacho
+Candidate	Aaron M. Wojciechowski	Aaron M. Wojciechowski
+Candidate	Aaron Matteson	Aaron Matteson
+Candidate	Abie Eisenbach	Abie Eisenbach
+Candidate	Abigail Lowery	Abigail Lowery
+Candidate	Adam Murphy	Adam Murphy
+Candidate	Adam Neylon	Adam Neylon
+Candidate	Adam Nicholas Paul (write-in)	Adam Nicholas Paul (write-in)
+Candidate	Aisha Moe	Aisha Moe
+Candidate	Alan R. DeYoung	Alan R. DeYoung
+Candidate	Albert Rohland	Albert Rohland
+Candidate	Alberta Darling	Alberta Darling
+Candidate	Alciro Deacon	Alciro Deacon
+Candidate	Alex A. Dallman	Alex A. Dallman
+Candidate	Ali Holzman	Ali Holzman
+Candidate	Ali Maresh	Ali Maresh
+Candidate	Alyson Leahy	Alyson Leahy
+Candidate	Amanda Stuck	Amanda Stuck
+Candidate	Amanda WhiteEagle	Amanda WhiteEagle
+Candidate	Amani Latimer Burris	Amani Latimer Burris
+Candidate	Amy Klobuchar	Amy Klobuchar
+Candidate	Amy Loudenbeck	Amy Loudenbeck
+Candidate	Andi Rich	Andi Rich
+Candidate	Andrew McKinney	Andrew McKinney
+Candidate	Andrew Yang	Andrew Yang
+Candidate	Andrew Zuelke	Andrew Zuelke
+Candidate	AndrÃ© Jacque	AndrÃ© Jacque
+Candidate	Andy Craig	Andy Craig
+Candidate	Angel C. Sanchez	Angel C. Sanchez
+Candidate	Ann Groves Lloyd	Ann Groves Lloyd
+Candidate	Arnie Enz	Arnie Enz
+Candidate	Arnie Enz	Arnie Enz No Candidate
+Candidate	Arthur L. Shrader	Arthur L. Shrader
+Candidate	August Schutz	August Schutz
+Candidate	Barbara Dittrich	Barbara Dittrich
+Candidate	Barret Galauner (write-in)	Barret Galauner (write-in)
+Candidate	Barry Hammarback	Barry Hammarback
+Candidate	Beau Liegeois	Beau Liegeois
+Candidate	Bernie Sanders	Bernie Sanders
+Candidate	Beth Drew	Beth Drew
+Candidate	Beth Meyers	Beth Meyers
+Candidate	Bob Kulp	Bob Kulp
+Candidate	Bob Look (write-in)	Bob Look (write-in)
+Candidate	Bonnie Lee	Bonnie Lee
+Candidate	Brad Karas (write-in)	Brad Karas (write-in)
+Candidate	Brad Pfaff	Brad Pfaff
+Candidate	Brad Schimel	Brad Schimel
+Candidate	Bradley Jason Burt (write-in)	Bradley Jason Burt (write-in)
+Candidate	Brandon White	Brandon White
+Candidate	Brian Adams (Write-In)	Brian Adams (Write-In)
+Candidate	Brian Benford	Brian Benford
+Candidate	Brian Corriea	Brian Corriea
+Candidate	Brian Giles	Brian Giles
+Candidate	Brittany Keyes	Brittany Keyes
+Candidate	Bryan Steil	Bryan Steil
+Candidate	Caleb Frostman	Caleb Frostman
+Candidate	Calvin Callahan	Calvin Callahan
+Candidate	Cari Fay	Cari Fay
+Candidate	Carl Gates	Carl Gates
+Candidate	Casey Helbach	Casey Helbach
+Candidate	Charlene Charlie Warner	Charlene Charlie Warner
+Candidate	Charlie Walker	Charlie Walker
+Candidate	Chase Binnie	Chase Binnie
+Candidate	Cherie Link	Cherie Link
+Candidate	Cherunda Fox	Cherunda Fox
+Candidate	Chris Kapenga	Chris Kapenga
+Candidate	Chris Kapsner	Chris Kapsner
+Candidate	Chris Keniston	Chris Keniston
+Candidate	Chris Larson	Chris Larson
+Candidate	Chris Meier	Chris Meier
+Candidate	Chris Rahlf	Chris Rahlf
+Candidate	Chris Reimer	Chris Reimer
+Candidate	Chris Taylor	Chris Taylor
+Candidate	Chris Walton	Chris Walton
+Candidate	Christian Saldivar	Christian Saldivar
+Candidate	Christine M. Sinicki	Christine M. Sinicki
+Candidate	Christine M. Sinicki	Christine Sinicki
+Candidate	Chuck Harsh	Chuck Harsh
+Candidate	Chuck Wichgers	Chuck Wichgers
+Candidate	Cindi Duchow	Cindi Duchow
+Candidate	Cindy Werner	Cindy Werner
+Candidate	Cliff DeTemple	Cliff DeTemple
+Candidate	Clint Moses	Clint Moses
+Candidate	Cody Horlacher	Cody Horlacher
+Candidate	Cody J. Horlacher	Cody J. Horlacher
+Candidate	Criste Greening	Criste Greening
+Candidate	Crystal J. Miller	Crystal J. Miller
+Candidate	Curtis Cook II	Curtis Cook II
+Candidate	Dale Kooyenga	Dale Kooyenga
+Candidate	Dan Feyen	Dan Feyen
+Candidate	Dan Griffin	Dan Griffin
+Candidate	Dan Kapanke	Dan Kapanke
+Candidate	Dan Knodl	Dan Knodl
+Candidate	Dan Kohl	Dan Kohl
+Candidate	Dan Schierl	Dan Schierl
+Candidate	Daniel G. Riemer	Daniel G. Riemer
+Candidate	Daniel Schierl	Daniel Schierl
+Candidate	Darrell L. Castle	Darrell L. Castle
+Candidate	Dave Considine	Dave Considine
+Candidate	Dave Murphy	Dave Murphy
+Candidate	David Armstrong	David Armstrong
+Candidate	David Bowen	David Bowen
+Candidate	David C. Crowley	David C. Crowley
+Candidate	David Gorski	David Gorski
+Candidate	David J. Dahlke	David J. Dahlke
+Candidate	David Steffen	David Steffen
+Candidate	Deb Andraca	Deb Andraca
+Candidate	Deb Kolste	Deb Kolste
+Candidate	Deb Silvers	Deb Silvers
+Candidate	Dennis D. Degenhardt	Dennis D. Degenhardt
+Candidate	Dennis Raymond McBride	Dennis Raymond McBride
+Candidate	Derrick Van Orden	Derrick Van Orden
+Candidate	Deval Patrick	Deval Patrick
+Candidate	Devin LeMahieu	Devin LeMahieu
+Candidate	Dewey Bredeson	Dewey Bredeson
+Candidate	Diana Lawrence	Diana Lawrence
+Candidate	Dianne H. Hesselbein	Dianne H. Hesselbein
+Candidate	Dianne Hesselbein	Dianne Hesselbein
+Candidate	Don Vruwink	Don Vruwink
+Candidate	Donald J. Trump	Donald J. Trump
+Candidate	Donald Nelson	Donald Nelson
+Candidate	Donna M. Rozar	Donna M. Rozar
+Candidate	Donny Herman	Donny Herman
+Candidate	Dora Drake	Dora Drake
+Candidate	Doug La Follette	Doug La Follette
+Candidate	Drew Kirsteatter	Drew Kirsteatter
+Candidate	DuWayne Severson	DuWayne Severson
+Candidate	Duey Stroebel	Duey Stroebel
+Candidate	Echo Reardon	Echo Reardon
+Candidate	Ed Hibsch	Ed Hibsch
+Candidate	Ed Vocke	Ed Vocke
+Candidate	Elisha Barudin	Elisha Barudin
+Candidate	Elizabeth Lochner-Abel	Elizabeth Lochner-Abel
+Candidate	Elizabeth Riley	Elizabeth Riley
+Candidate	Elizabeth Warren	Elizabeth Warren
+Candidate	Emidio Soltysik	Emidio Soltysik
+Candidate	Emily Berge	Emily Berge
+Candidate	Emily Siegrist	Emily Siegrist
+Candidate	Emily Voight	Emily Voight
+Candidate	Eric J. Beach	Eric J. Beach
+Candidate	Eric Wimberger	Eric Wimberger
+Candidate	Erica Flynn	Erica Flynn
+Candidate	Erik Brooks	Erik Brooks
+Candidate	Erin Tracy	Erin Tracy
+Candidate	Evan Goyke	Evan Goyke
+Candidate	Evan McMullin	Evan McMullin
+Candidate	F. James Sensenbrenner, Jr.	F. James Sensenbrenner, Jr.
+Candidate	Francesca Hong	Francesca Hong
+Candidate	Frank T. Buress	Frank T. Buress
+Candidate	Gabriel A. Gomez	Gabriel A. Gomez
+Candidate	Gabriel Szerlong	Gabriel Szerlong
+Candidate	Gae Magnafici	Gae Magnafici
+Candidate	Gary A. Will	Gary A. Will
+Candidate	Gary Alan Hebl	Gary Alan Hebl
+Candidate	Gary Alan Hebl	Gary Hebl
+Candidate	Gary Johnson	Gary Johnson
+Candidate	Gary Tauchen	Gary Tauchen
+Candidate	Gina Walkington	Gina Walkington
+Candidate	Glenn Grothman	Glenn Grothman
+Candidate	Gordon Hintz	Gordon Hintz
+Candidate	Gregory Alan Neumann (wr-in)	Gregory Alan Neumann (wr-in)
+Candidate	Greta Neubauer	Greta Neubauer
+Candidate	Gwen S. Moore	Gwen S. Moore
+Candidate	Heather Driscoll	Heather Driscoll
+Candidate	Helmut Fritz	Helmut Fritz
+Candidate	Hillary Clinton	Hillary Clinton
+Candidate	Howard Marklein	Howard Marklein
+Candidate	Izzy Hassey Nevarez	Izzy Hassey Nevarez
+Candidate	Jacob Malinowski	Jacob Malinowski
+Candidate	James Bolen	James Bolen
+Candidate	James Krus	James Krus
+Candidate	James W. Edming	James W. Edming
+Candidate	Janel Brandtjen	Janel Brandtjen
+Candidate	Janet Bewley	Janet Bewley
+Candidate	Janis Ringhand	Janis Ringhand
+Candidate	Jared William Landry (Write-in)	Jared William Landry (Write-in)
+Candidate	Jason J. Sellnow	Jason J. Sellnow
+Candidate	Jason Lebeck	Jason Lebeck
+Candidate	Jason M. Fields	Jason M. Fields
+Candidate	Jason Red Arnold	Jason Red Arnold
+Candidate	Jason Vangalis	Jason Vangalis
+Candidate	Jay Schroeder	Jay Schroeder
+Candidate	Jayne Swiggum	Jayne Swiggum
+Candidate	Jeff Dahlke	Jeff Dahlke
+Candidate	Jeff Johnson	Jeff Johnson
+Candidate	Jeff Smith	Jeff Smith
+Candidate	Jeff Wright	Jeff Wright
+Candidate	Jeffery L. Monaghan (write-in)	Jeffery L. Monaghan (write-in)
+Candidate	Jeffrey Fahl	Jeffrey Fahl
+Candidate	Jeffrey L. Mursau	Jeffrey L. Mursau
+Candidate	Jennifer Estrada	Jennifer Estrada
+Candidate	Jeremiah Sutton (wr-in)	Jeremiah Sutton (wr-in)
+Candidate	Jeremy Thiesfeldt	Jeremy Thiesfeldt
+Candidate	Jerome Gundersen	Jerome Gundersen
+Candidate	Jerry Kobishop (wr-in)	Jerry Kobishop (wr-in)
+Candidate	Jerry Petrowski	Jerry Petrowski
+Candidate	Jesse James	Jesse James
+Candidate	Jessi Ebben	Jessi Ebben
+Candidate	Jessica J. King	Jessica J. King
+Candidate	Jessica Katzenmeyer	Jessica Katzenmeyer
+Candidate	Jessie Rodriguez	Jessie Rodriguez
+Candidate	Jill Billings	Jill Billings
+Candidate	Jill Stein	Jill Stein
+Candidate	Jim Brownlow	Jim Brownlow
+Candidate	Jim Engstrand	Jim Engstrand
+Candidate	Jim Ott	Jim Ott
+Candidate	Jim Steineke	Jim Steineke
+Candidate	Jimmy Anderson	Jimmy Anderson
+Candidate	JoAnna Bautch	JoAnna Bautch
+Candidate	JoCasta Zamarripa	JoCasta Zamarripa
+Candidate	Joan A. Ballweg	Joan A. Ballweg
+Candidate	Joan A. Ballweg	Joan Ballweg
+Candidate	Jodi Emerson	Jodi Emerson
+Candidate	Joe Biden	Joe Biden
+Candidate	Joe Lavrenz	Joe Lavrenz
+Candidate	Joe Sanfelippo	Joe Sanfelippo
+Candidate	Joel C. Kitchens	Joel C. Kitchens
+Candidate	Joel Jacobsen	Joel Jacobsen
+Candidate	Joel C. Kitchens	Joel Kitchens
+Candidate	Joey Wayne Reed (write-in)	Joey Wayne Reed (write-in)
+Candidate	John Arndt	John Arndt
+Candidate	John C. Ellenson	John C. Ellenson
+Candidate	John Delaney	John Delaney
+Candidate	John Imes	John Imes
+Candidate	John Iver Baldus	John Iver Baldus
+Candidate	John Jagler	John Jagler
+Candidate	John Lehman	John Lehman
+Candidate	John Macco	John Macco
+Candidate	John Nygren	John Nygren
+Candidate	John Rocco Calabrese	John Rocco Calabrese
+Candidate	John Schiess (write-in)	John Schiess (write-in)
+Candidate	John Spiros	John Spiros
+Candidate	Jon B. Erpenbach	Jon B. Erpenbach
+Candidate	Jon Plumer	Jon Plumer
+Candidate	Jonathan Brostoff	Jonathan Brostoff
+Candidate	Jonathon Hansen	Jonathon Hansen
+Candidate	Joni D. Anderson	Joni D. Anderson
+Candidate	Josefine Jaynes	Josefine Jaynes
+Candidate	Joseph Kexel (write-in)	Joseph Kexel (write-in)
+Candidate	Joseph Maldonado (write-in)	Joseph Maldonado (write-in)
+Candidate	Josh Kaul	Josh Kaul
+Candidate	Josh Pade	Josh Pade
+Candidate	Joshua Young (write-in)	Joshua Young (write-in)
+Candidate	Julian Bradley	Julian Bradley
+Candidate	Julie Henszey	Julie Henszey
+Candidate	Julie Schroeder	Julie Schroeder
+Candidate	Kalan Haywood	Kalan Haywood
+Candidate	Karl Jaeger	Karl Jaeger
+Candidate	Katherine R. Gaulke	Katherine Gaulke
+Candidate	Katherine R. Gaulke	Katherine R. Gaulke
+Candidate	Kathleen M. Rulka (wr-in)	Kathleen M. Rulka (wr-in)
+Candidate	Kathy A. Hinkfuss	Kathy A. Hinkfuss
+Candidate	Kathy Bernier	Kathy Bernier
+Candidate	Katrina Shankland	Katrina Shankland
+Candidate	Keith Kern	Keith Kern
+Candidate	Kelda Helen Roys	Kelda Helen Roys
+Candidate	Kelly Lynn Tenpas (write-in)	Kelly Lynn Tenpas (write-in)
+Candidate	Ken Driessen	Ken Driessen
+Candidate	Ken Holdorf	Ken Holdorf
+Candidate	Ken Skowronski	Ken Skowronski
+Candidate	Ken Van Dyke, Sr.	Ken Van Dyke, Sr.
+Candidate	Ken Yorgan	Ken Yorgan
+Candidate	Kerry Trask	Kerry Trask
+Candidate	Kevin A. Bauer	Kevin A. Bauer
+Candidate	Kevin Booth	Kevin Booth
+Candidate	Kevin Hoyer	Kevin Hoyer
+Candidate	Kevin Petersen	Kevin Petersen
+Candidate	Khary Penebaker	Khary Penebaker
+Candidate	Kim Butler	Kim Butler
+Candidate	Kim Delorit Jensen	Kim Delorit Jensen
+Candidate	Kimberly Smith	Kimberly Smith
+Candidate	Kirk Bangstad	Kirk Bangstad
+Candidate	Kriss Marion	Kriss Marion
+Candidate	Kristin Lyerly	Kristin Lyerly
+Candidate	Kristina Shelton	Kristina Shelton
+Candidate	Kyle Whelton	Kyle Whelton
+Candidate	LaKeshia N. Myers	LaKeshia N. Myers
+Candidate	LaTonya Johnson	LaTonya Johnson
+Candidate	Laurence Kotlikoff	Laurence Kotlikoff
+Candidate	Lauri Asbury	Lauri Asbury
+Candidate	Leah Vukmir	Leah Vukmir
+Candidate	Lee Snodgrass	Lee Snodgrass
+Candidate	Lena C. Taylor	Lena C. Taylor
+Candidate	Lillian Cheesman	Lillian Cheesman
+Candidate	Linda Boucher	Linda Boucher
+Candidate	Lindsay Lemmer	Lindsay Lemmer
+Candidate	Lisa B. Subeck	Lisa B. Subeck
+Candidate	Lisa B. Subeck	Lisa Subeck
+Candidate	Liz Sumner	Liz Sumner
+Candidate	Loren Oldenburg	Loren Oldenburg
+Candidate	Lori Hawkins	Lori Hawkins
+Candidate	Luke Dretske	Luke Dretske
+Candidate	Maggie Turnbull	Maggie Turnbull
+Candidate	Maggie Turnbull	Maggie Turnbull Wil Losch
+Candidate	Margaret Engebretson	Margaret Engebretson
+Candidate	Marina Croft	Marina Croft
+Candidate	Marisabel Cabrera	Marisabel Cabrera
+Candidate	Mark A. Martello	Mark A. Martello
+Candidate	Mark Grams	Mark Grams
+Candidate	Mark Kiley	Mark Kiley
+Candidate	Mark L. Born	Mark L. Born
+Candidate	Mark Neumann	Mark Neumann
+Candidate	Mark Pocan	Mark Pocan
+Candidate	Mark S. Grimek (Write-in)	Mark S. Grimek (Write-in)
+Candidate	Mark Spreitzer	Mark Spreitzer
+Candidate	Mark Waldon	Mark Waldon
+Candidate	Marsha A. Rummel	Marsha A. Rummel
+Candidate	Marshall Schoenke	Marshall Schoenke
+Candidate	Mary Czaja-Felzkowski	Mary Czaja-Felzkowski
+Candidate	Mary Hoeft	Mary Hoeft
+Candidate	Mary Jo Walters (write-in)	Mary Jo Walters (write-in)
+Candidate	Mary Larson (write-in)	Mary Larson (write-in)
+Candidate	Mary Lynne Donohue	Mary Lynne Donohue
+Candidate	Mason Becker	Mason Becker
+Candidate	Matt Adamczyk	Matt Adamczyk
+Candidate	Matt Lederer	Matt Lederer
+Candidate	Matthew F. Windheuser	Matthew F. Windheuser
+Candidate	Matthew J. Bughman	Matthew J. Bughman
+Candidate	Matthew L. Boor	Matthew L. Boor
+Candidate	Mel Pittman	Mel Pittman
+Candidate	Melisa Arndt	Melisa Arndt
+Candidate	Melissa Agard Sargent	Melissa Agard Sargent
+Candidate	Melissa Winker	Melissa Winker
+Candidate	Michael A. Maturen	Michael A. Maturen
+Candidate	Michael A. Tauschek	Michael A. Tauschek
+Candidate	Michael Bennet	Michael Bennet
+Candidate	Michael G. Beardsley	Michael G. Beardsley
+Candidate	Michael J. White	Michael J. White
+Candidate	Michael J. White	Michael J. White Tiffany Anderson
+Candidate	Michael R. Bloomberg	Michael R. Bloomberg
+Candidate	Michael Rivera (write-in)	Michael Rivera (write-in)
+Candidate	Michael Schraa	Michael Schraa
+Candidate	Michael V. Smith	Michael V. Smith
+Candidate	Michele Divelbiss (write-in)	Michele Divelbiss (write-in)
+Candidate	Michelle Bryant	Michelle Bryant
+Candidate	Michelle Zahn	Michelle Zahn
+Candidate	Mike Brox	Mike Brox
+Candidate	Mike Gallagher	Mike Gallagher
+Candidate	Mike Hammond	Mike Hammond
+Candidate	Mike Kuglitsch	Mike Kuglitsch
+Candidate	Mike Mooney	Mike Mooney
+Candidate	Mike Rohrkaste	Mike Rohrkaste
+Candidate	Monica Moorehead	Monica Moorehead
+Candidate	Nada Elmikashfi	Nada Elmikashfi
+Candidate	Nancy Lynn VanderMeer	Nancy Lynn Vander Meer
+Candidate	Nancy Lynn VanderMeer	Nancy Lynn VanderMeer
+Candidate	Nancy Stencil	Nancy Stencil
+Candidate	Nanette Bulebosh	Nanette Bulebosh
+Candidate	Nate Zimdars	Nate Zimdars
+Candidate	Neal Plotkin	Neal Plotkin
+Candidate	Neil R. Kline	Neil R. Kline
+Candidate	Nick Milroy	Nick Milroy
+Candidate	Nicki Vander Meulen	Nicki Vander Meulen
+Candidate	No Candidate	No Candidate
+Candidate	Orlando Owens	Orlando Owens
+Candidate	Ozell Cox	Ozell Cox
+Candidate	Patrick Hull	Patrick Hull
+Candidate	Patrick Snyder	Patrick Snyder
+Candidate	Patrick Testin	Patrick Testin
+Candidate	Patty Schachtner	Patty Schachtner
+Candidate	Paul Boucher (Write-in)	Paul Boucher (Write-in)
+Candidate	Paul Buhr	Paul Buhr
+Candidate	Paul McCreary	Paul McCreary
+Candidate	Paul Michael Weber	Paul Michael Weber
+Candidate	Paul Piotrowski	Paul Piotrowski
+Candidate	Paul Ryan	Paul Ryan
+Candidate	Paul Tittl	Paul Tittl
+Candidate	Pete Buttigieg	Pete Buttigieg
+Candidate	Pete Kohlhoff	Pete Kohlhoff
+Candidate	Peter Theron	Peter Theron
+Candidate	Peter W. Barca	Peter W. Barca
+Candidate	Phillip N. Anderson	Phil Anderson
+Candidate	Phillip Anderson	Phillip Anderson
+Candidate	Phillip N. Anderson	Phillip Anderson Patrick Baird
+Candidate	Phillip N. Anderson	Phillip N. Anderson
+Candidate	Rachael Cabral-Guevara	Rachael Cabral-Guevara
+Candidate	Ramon Garcia (write-in)	Ramon Garcia (write-in)
+Candidate	Randy Bryce	Randy Bryce
+Candidate	Rebecca Clarke	Rebecca Clarke
+Candidate	Reese Wood	Reese Wood
+Candidate	Richard Michael Turtenwald (Write-in)	Richard Michael Turtenwald (Write-in)
+Candidate	Richard Pulcher	Richard Pulcher
+Candidate	Richard Sarnwick	Richard Sarnwick
+Candidate	Rick Braun	Rick Braun
+Candidate	Rick Cruz (Write-in)	Rick Cruz (Write-in)
+Candidate	Rick Gundrum	Rick Gundrum
+Candidate	Rob Grover	Rob Grover
+Candidate	Rob Hutton	Rob Hutton
+Candidate	Rob Ochoa	Rob Ochoa
+Candidate	Rob Slamka	Rob Slamka
+Candidate	Rob Stafsholt	Rob Stafsholt
+Candidate	Rob Summerfield	Rob Summerfield
+Candidate	Rob Swearingen	Rob Swearingen
+Candidate	Robbie Hoffman (Write-in)	Robbie Hoffman (Write-in)
+Candidate	Robert Brooks	Robert Brooks
+Candidate	Robert L. Cowles	Robert L. Cowles
+Candidate	Robert R. Raymond	Robert R. Raymond
+Candidate	Robert W. Wirch	Robert W. Wirch
+Candidate	Robert Wittke	Robert Wittke
+Candidate	Roberta Thelen	Roberta Thelen
+Candidate	Robin J. Vos	Robin J. Vos
+Candidate	Robin Vos	Robin Vos
+Candidate	Robyn Vining	Robyn Vining
+Candidate	Rocky Roque De La Fuente	Rocky Roque De La Fuente
+Candidate	Roger Polack	Roger Polack
+Candidate	Roger Roth	Roger Roth
+Candidate	Romaine Robert Quinn	Romaine Robert Quinn
+Candidate	Ron Johnson	Ron Johnson
+Candidate	Ron Kind	Ron Kind
+Candidate	Ron Tusler	Ron Tusler
+Candidate	Ruben Velez	Ruben Velez
+Candidate	Russ Feingold	Russ Feingold
+Candidate	Ryan Cason (Write-in)	Ryan Cason (Write-in)
+Candidate	Ryan Peterson (write-in)	Ryan Peterson (write-in)
+Candidate	Ryan Sherley	Ryan Sherley
+Candidate	Ryan Solen	Ryan Solen
+Candidate	SCATTERING	SCATTERING
+Candidate	Samantha Kerkman	Samantha Kerkman
+Candidate	Samba Baldeh	Samba Baldeh
+Candidate	Samuel Anderson	Samuel Anderson
+Candidate	Sandra Ewald	Sandra Ewald
+Candidate	Sara Rodriguez	Sara Rodriguez
+Candidate	Sarah Godlewski	Sarah Godlewski
+Candidate	Sarah Lloyd	Sarah Lloyd
+Candidate	Sarah Yacoub	Sarah Yacoub
+Candidate	Scott Allen	Scott Allen
+Candidate	Scott Barker	Scott Barker
+Candidate	Scott C. Soik	Scott C. Soik
+Candidate	Scott Fitzgerald	Scott Fitzgerald
+Candidate	Scott Gavin	Scott Gavin
+Candidate	Scott S. Krug	Scott S. Krug
+Candidate	Scott Walker	Scott Walker
+Candidate	Scott Walker	Scott Walker Rebecca Kleefisch
+Candidate	Sean P. Duffy	Sean Duffy
+Candidate	Sean P. Duffy	Sean P. Duffy
+Candidate	Shae Sortwell	Shae Sortwell
+Candidate	Shannon Zimmerman	Shannon Zimmerman
+Candidate	Shaun Murphy-Lopez	Shaun Murphy-Lopez
+Candidate	Shelia Stubbs	Shelia Stubbs
+Candidate	Simon A. Moesch	Simon A. Moesch
+Candidate	Sondy Pope	Sondy Pope
+Candidate	Spencer Zimmerman	Spencer Zimmerman
+Candidate	Staush Gruszynski	Staush Gruszynski
+Candidate	Steve Bobowski	Steve Bobowski
+Candidate	Steve Doyle	Steve Doyle
+Candidate	Steve Kundert (write-in)	Steve Kundert (write-in)
+Candidate	Steve Michael Johnson (Write In)	Steve Michael Johnson (Write In)
+Candidate	Steve Nass	Steve Nass
+Candidate	Steve Toft	Steve Toft
+Candidate	Steven Shevey	Steven Shevey
+Candidate	Sue Conley	Sue Conley
+Candidate	Supreme Moore Omokunde	Supreme Moore Omokunde
+Candidate	Sylvia Ortiz-Velez	Sylvia Ortiz-Velez
+Candidate	Tammy Baldwin	Tammy Baldwin
+Candidate	Tawny Gustina	Tawny Gustina
+Candidate	Terry Katsma	Terry Katsma
+Candidate	Terry Larson	Terry Larson
+Candidate	Terry Lee	Terry Lee
+Candidate	Terry Lyon	Terry Lyon
+Candidate	Theodore D. Kafkas	Theodore D. Kafkas
+Candidate	Thomas Harland	Thomas Harland
+Candidate	Thomas Leager (write-in)	Thomas Leager (write-in)
+Candidate	Tim Carpenter	Tim Carpenter
+Candidate	Tim Comer	Tim Comer
+Candidate	Tim Miller	Tim Miller
+Candidate	Tim Rogers	Tim Rogers
+Candidate	Timothy S. Ramthun	Timothy Ramthun
+Candidate	Timothy S. Ramthun	Timothy S. Ramthun
+Candidate	Tip McGuire	Tip McGuire
+Candidate	Tod Ohnstad	Tod Ohnstad
+Candidate	Todd Novak	Todd Novak
+Candidate	Tom Hoefling	Tom Hoefling
+Candidate	Tom Nelson	Tom Nelson
+Candidate	Tom Palzewicz	Tom Palzewicz
+Candidate	Tom Sieber	Tom Sieber
+Candidate	Tom Steyer	Tom Steyer
+Candidate	Tom Tiffany	Tom Tiffany
+Candidate	Tomika S. Vukovic	Tomika S. Vukovic
+Candidate	Tony Evers	Tony Evers
+Candidate	Tony Evers	Tony Evers Mandela Barnes
+Candidate	Tony Kurtz	Tony Kurtz
+Candidate	Tony Lee (write-in)	Tony Lee (write-in)
+Candidate	Travis Hartwig	Travis Hartwig
+Candidate	Travis Tranel	Travis Tranel
+Candidate	Treig E. Pronschinske	Treig E. Pronschinske
+Candidate	Tricia Zunker	Tricia Zunker
+Candidate	Tucker Gretebeck	Tucker Gretebeck
+Candidate	Tulsi Gabbard	Tulsi Gabbard
+Candidate	Tyler August	Tyler August
+Candidate	Tyler E. Ruprecht	Tyler E. Ruprecht
+Candidate	Tyler Vorpagel	Tyler Vorpagel
+Candidate	Tyrone Cratic Williams	Tyrone Cratic Williams
+Candidate	Uninstructed Delegate	Uninstructed Delegate
+Candidate	Van H. Wanggaard	Van H. Wanggaard
+Candidate	Veronica Diaz	Veronica Diaz
+Candidate	Victoria Fueger	Victoria Fueger
+Candidate	Walter Stewart	Walter Stewart
+Candidate	Warren Petryk	Warren Petryk
+Candidate	Wendy Gribben (write-in)	Wendy Gribben (write-in)
+Candidate	Wendy Sue Johnson	Wendy Sue Johnson
+Candidate	Will Leverson	Will Leverson
+Candidate	William Henry Davis III	William Henry Davis III
+Candidate	Wren Keturi	Wren Keturi
+Candidate	Joseph R. Biden	Biden/Harris
+Candidate	Donald J. Trump	Trump/Pence
+Candidate	Don Blankenship	Blankenship/Moore
+Candidate	Jo Jorgensen	Jorgensen/Cohen
+Candidate	Brian Carroll	Carroll/Patel
+Candidate	André Jacque	AndrÃÂÃÂ© Jacque
+Candidate	André Jacque	André Jacque
+Candidate	Write-in or Scattering	Write-in/Scattering
+CandidateContest	WI Attorney General	ATTORNEY GENERAL
+CandidateContest	WI Attorney General (Constitution Party)	ATTORNEY GENERAL - CON
+CandidateContest	WI Attorney General (Constitution Party)	ATTORNEY GENERAL - Constitution
+CandidateContest	WI Attorney General (Democratic Party)	ATTORNEY GENERAL - DEM
+CandidateContest	WI Attorney General (Democratic Party)	ATTORNEY GENERAL - Democratic
+CandidateContest	WI Attorney General (Independent Party)	ATTORNEY GENERAL - IND
+CandidateContest	WI Attorney General (Libertarian Party)	ATTORNEY GENERAL - LIB
+CandidateContest	WI Attorney General (Republican Party)	ATTORNEY GENERAL - REP
+CandidateContest	WI Attorney General (Republican Party)	ATTORNEY GENERAL - Republican
+CandidateContest	WI Attorney General (Green Party)	ATTORNEY GENERAL - WGR
+CandidateContest	WI Governor	GOVERNOR/LIEUTENANT GOVERNOR
+CandidateContest	WI Governor (Constitution Party)	GOVERNOR/LIEUTENANT GOVERNOR - CON
+CandidateContest	WI Governor (Constitution Party)	GOVERNOR/LIEUTENANT GOVERNOR - Constitution
+CandidateContest	WI Governor (Democratic Party)	GOVERNOR/LIEUTENANT GOVERNOR - DEM
+CandidateContest	WI Governor (Democratic Party)	GOVERNOR/LIEUTENANT GOVERNOR - Democratic
+CandidateContest	WI Governor (Independent Party)	GOVERNOR/LIEUTENANT GOVERNOR - IND
+CandidateContest	WI Governor (Libertarian Party)	GOVERNOR/LIEUTENANT GOVERNOR - LIB
+CandidateContest	WI Governor (Republican Party)	GOVERNOR/LIEUTENANT GOVERNOR - REP
+CandidateContest	WI Governor (Republican Party)	GOVERNOR/LIEUTENANT GOVERNOR - Republican
+CandidateContest	WI Governor (Green Party)	GOVERNOR/LIEUTENANT GOVERNOR - WGR
+CandidateContest	US President (WI)	PRESIDENT OF THE UNITED STATES
+CandidateContest	US President (WI) (Constitution Party)	PRESIDENT OF THE UNITED STATES - CON
+CandidateContest	US President (WI) (Constitution Party)	PRESIDENT OF THE UNITED STATES - Constitution
+CandidateContest	US President (WI) (Democratic Party)	PRESIDENT OF THE UNITED STATES - DEM
+CandidateContest	US President (WI) (Democratic Party)	PRESIDENT OF THE UNITED STATES - Democratic
+CandidateContest	US President (WI) (Independent Party)	PRESIDENT OF THE UNITED STATES - IND
+CandidateContest	US President (WI) (Libertarian Party)	PRESIDENT OF THE UNITED STATES - LIB
+CandidateContest	US President (WI) (Republican Party)	PRESIDENT OF THE UNITED STATES - REP
+CandidateContest	US President (WI) (Republican Party)	PRESIDENT OF THE UNITED STATES - Republican
+CandidateContest	US President (WI) (Green Party)	PRESIDENT OF THE UNITED STATES - WGR
+CandidateContest	US House WI District 1	REPRESENTATIVE IN CONGRESS DISTRICT 1
+CandidateContest	US House WI District 1 (Constitution Party)	REPRESENTATIVE IN CONGRESS DISTRICT 1 - CON
+CandidateContest	US House WI District 1 (Constitution Party)	REPRESENTATIVE IN CONGRESS DISTRICT 1 - Constitution
+CandidateContest	US House WI District 1 (Democratic Party)	REPRESENTATIVE IN CONGRESS DISTRICT 1 - DEM
+CandidateContest	US House WI District 1 (Democratic Party)	REPRESENTATIVE IN CONGRESS DISTRICT 1 - Democratic
+CandidateContest	US House WI District 1 (Independent Party)	REPRESENTATIVE IN CONGRESS DISTRICT 1 - IND
+CandidateContest	US House WI District 1 (Libertarian Party)	REPRESENTATIVE IN CONGRESS DISTRICT 1 - LIB
+CandidateContest	US House WI District 1 (Republican Party)	REPRESENTATIVE IN CONGRESS DISTRICT 1 - REP
+CandidateContest	US House WI District 1 (Republican Party)	REPRESENTATIVE IN CONGRESS DISTRICT 1 - Republican
+CandidateContest	US House WI District 1 (Green Party)	REPRESENTATIVE IN CONGRESS DISTRICT 1 - WGR
+CandidateContest	US House WI District 2	REPRESENTATIVE IN CONGRESS DISTRICT 2
+CandidateContest	US House WI District 2 (Constitution Party)	REPRESENTATIVE IN CONGRESS DISTRICT 2 - CON
+CandidateContest	US House WI District 2 (Constitution Party)	REPRESENTATIVE IN CONGRESS DISTRICT 2 - Constitution
+CandidateContest	US House WI District 2 (Democratic Party)	REPRESENTATIVE IN CONGRESS DISTRICT 2 - DEM
+CandidateContest	US House WI District 2 (Democratic Party)	REPRESENTATIVE IN CONGRESS DISTRICT 2 - Democratic
+CandidateContest	US House WI District 2 (Independent Party)	REPRESENTATIVE IN CONGRESS DISTRICT 2 - IND
+CandidateContest	US House WI District 2 (Libertarian Party)	REPRESENTATIVE IN CONGRESS DISTRICT 2 - LIB
+CandidateContest	US House WI District 2 (Republican Party)	REPRESENTATIVE IN CONGRESS DISTRICT 2 - REP
+CandidateContest	US House WI District 2 (Republican Party)	REPRESENTATIVE IN CONGRESS DISTRICT 2 - Republican
+CandidateContest	US House WI District 2 (Green Party)	REPRESENTATIVE IN CONGRESS DISTRICT 2 - WGR
+CandidateContest	US House WI District 3	REPRESENTATIVE IN CONGRESS DISTRICT 3
+CandidateContest	US House WI District 3 (Constitution Party)	REPRESENTATIVE IN CONGRESS DISTRICT 3 - CON
+CandidateContest	US House WI District 3 (Constitution Party)	REPRESENTATIVE IN CONGRESS DISTRICT 3 - Constitution
+CandidateContest	US House WI District 3 (Democratic Party)	REPRESENTATIVE IN CONGRESS DISTRICT 3 - DEM
+CandidateContest	US House WI District 3 (Democratic Party)	REPRESENTATIVE IN CONGRESS DISTRICT 3 - Democratic
+CandidateContest	US House WI District 3 (Independent Party)	REPRESENTATIVE IN CONGRESS DISTRICT 3 - IND
+CandidateContest	US House WI District 3 (Libertarian Party)	REPRESENTATIVE IN CONGRESS DISTRICT 3 - LIB
+CandidateContest	US House WI District 3 (Republican Party)	REPRESENTATIVE IN CONGRESS DISTRICT 3 - REP
+CandidateContest	US House WI District 3 (Republican Party)	REPRESENTATIVE IN CONGRESS DISTRICT 3 - Republican
+CandidateContest	US House WI District 3 (Green Party)	REPRESENTATIVE IN CONGRESS DISTRICT 3 - WGR
+CandidateContest	US House WI District 4	REPRESENTATIVE IN CONGRESS DISTRICT 4
+CandidateContest	US House WI District 4 (Constitution Party)	REPRESENTATIVE IN CONGRESS DISTRICT 4 - CON
+CandidateContest	US House WI District 4 (Constitution Party)	REPRESENTATIVE IN CONGRESS DISTRICT 4 - Constitution
+CandidateContest	US House WI District 4 (Democratic Party)	REPRESENTATIVE IN CONGRESS DISTRICT 4 - DEM
+CandidateContest	US House WI District 4 (Democratic Party)	REPRESENTATIVE IN CONGRESS DISTRICT 4 - Democratic
+CandidateContest	US House WI District 4 (Independent Party)	REPRESENTATIVE IN CONGRESS DISTRICT 4 - IND
+CandidateContest	US House WI District 4 (Libertarian Party)	REPRESENTATIVE IN CONGRESS DISTRICT 4 - LIB
+CandidateContest	US House WI District 4 (Republican Party)	REPRESENTATIVE IN CONGRESS DISTRICT 4 - REP
+CandidateContest	US House WI District 4 (Republican Party)	REPRESENTATIVE IN CONGRESS DISTRICT 4 - Republican
+CandidateContest	US House WI District 4 (Green Party)	REPRESENTATIVE IN CONGRESS DISTRICT 4 - WGR
+CandidateContest	US House WI District 5	REPRESENTATIVE IN CONGRESS DISTRICT 5
+CandidateContest	US House WI District 5 (Constitution Party)	REPRESENTATIVE IN CONGRESS DISTRICT 5 - CON
+CandidateContest	US House WI District 5 (Constitution Party)	REPRESENTATIVE IN CONGRESS DISTRICT 5 - Constitution
+CandidateContest	US House WI District 5 (Democratic Party)	REPRESENTATIVE IN CONGRESS DISTRICT 5 - DEM
+CandidateContest	US House WI District 5 (Democratic Party)	REPRESENTATIVE IN CONGRESS DISTRICT 5 - Democratic
+CandidateContest	US House WI District 5 (Independent Party)	REPRESENTATIVE IN CONGRESS DISTRICT 5 - IND
+CandidateContest	US House WI District 5 (Libertarian Party)	REPRESENTATIVE IN CONGRESS DISTRICT 5 - LIB
+CandidateContest	US House WI District 5 (Republican Party)	REPRESENTATIVE IN CONGRESS DISTRICT 5 - REP
+CandidateContest	US House WI District 5 (Republican Party)	REPRESENTATIVE IN CONGRESS DISTRICT 5 - Republican
+CandidateContest	US House WI District 5 (Green Party)	REPRESENTATIVE IN CONGRESS DISTRICT 5 - WGR
+CandidateContest	US House WI District 6	REPRESENTATIVE IN CONGRESS DISTRICT 6
+CandidateContest	US House WI District 6 (Constitution Party)	REPRESENTATIVE IN CONGRESS DISTRICT 6 - CON
+CandidateContest	US House WI District 6 (Constitution Party)	REPRESENTATIVE IN CONGRESS DISTRICT 6 - Constitution
+CandidateContest	US House WI District 6 (Democratic Party)	REPRESENTATIVE IN CONGRESS DISTRICT 6 - DEM
+CandidateContest	US House WI District 6 (Democratic Party)	REPRESENTATIVE IN CONGRESS DISTRICT 6 - Democratic
+CandidateContest	US House WI District 6 (Independent Party)	REPRESENTATIVE IN CONGRESS DISTRICT 6 - IND
+CandidateContest	US House WI District 6 (Libertarian Party)	REPRESENTATIVE IN CONGRESS DISTRICT 6 - LIB
+CandidateContest	US House WI District 6 (Republican Party)	REPRESENTATIVE IN CONGRESS DISTRICT 6 - REP
+CandidateContest	US House WI District 6 (Republican Party)	REPRESENTATIVE IN CONGRESS DISTRICT 6 - Republican
+CandidateContest	US House WI District 6 (Green Party)	REPRESENTATIVE IN CONGRESS DISTRICT 6 - WGR
+CandidateContest	US House WI District 7	REPRESENTATIVE IN CONGRESS DISTRICT 7
+CandidateContest	US House WI District 7 (Constitution Party)	REPRESENTATIVE IN CONGRESS DISTRICT 7 - CON
+CandidateContest	US House WI District 7 (Constitution Party)	REPRESENTATIVE IN CONGRESS DISTRICT 7 - Constitution
+CandidateContest	US House WI District 7 (Democratic Party)	REPRESENTATIVE IN CONGRESS DISTRICT 7 - DEM
+CandidateContest	US House WI District 7 (Democratic Party)	REPRESENTATIVE IN CONGRESS DISTRICT 7 - Democratic
+CandidateContest	US House WI District 7 (Independent Party)	REPRESENTATIVE IN CONGRESS DISTRICT 7 - IND
+CandidateContest	US House WI District 7 (Libertarian Party)	REPRESENTATIVE IN CONGRESS DISTRICT 7 - LIB
+CandidateContest	US House WI District 7 (Republican Party)	REPRESENTATIVE IN CONGRESS DISTRICT 7 - REP
+CandidateContest	US House WI District 7 (Republican Party)	REPRESENTATIVE IN CONGRESS DISTRICT 7 - Republican
+CandidateContest	US House WI District 7 (Green Party)	REPRESENTATIVE IN CONGRESS DISTRICT 7 - WGR
+CandidateContest	US House WI District 8	REPRESENTATIVE IN CONGRESS DISTRICT 8
+CandidateContest	US House WI District 8 (Constitution Party)	REPRESENTATIVE IN CONGRESS DISTRICT 8 - CON
+CandidateContest	US House WI District 8 (Constitution Party)	REPRESENTATIVE IN CONGRESS DISTRICT 8 - Constitution
+CandidateContest	US House WI District 8 (Democratic Party)	REPRESENTATIVE IN CONGRESS DISTRICT 8 - DEM
+CandidateContest	US House WI District 8 (Democratic Party)	REPRESENTATIVE IN CONGRESS DISTRICT 8 - Democratic
+CandidateContest	US House WI District 8 (Independent Party)	REPRESENTATIVE IN CONGRESS DISTRICT 8 - IND
+CandidateContest	US House WI District 8 (Libertarian Party)	REPRESENTATIVE IN CONGRESS DISTRICT 8 - LIB
+CandidateContest	US House WI District 8 (Republican Party)	REPRESENTATIVE IN CONGRESS DISTRICT 8 - REP
+CandidateContest	US House WI District 8 (Republican Party)	REPRESENTATIVE IN CONGRESS DISTRICT 8 - Republican
+CandidateContest	US House WI District 8 (Green Party)	REPRESENTATIVE IN CONGRESS DISTRICT 8 - WGR
+CandidateContest	WI House District 1	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 1
+CandidateContest	WI House District 1 (Constitution Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 1 - CON
+CandidateContest	WI House District 1 (Constitution Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 1 - Constitution
+CandidateContest	WI House District 1 (Democratic Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 1 - DEM
+CandidateContest	WI House District 1 (Democratic Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 1 - Democratic
+CandidateContest	WI House District 1 (Independent Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 1 - IND
+CandidateContest	WI House District 1 (Libertarian Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 1 - LIB
+CandidateContest	WI House District 1 (Republican Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 1 - REP
+CandidateContest	WI House District 1 (Republican Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 1 - Republican
+CandidateContest	WI House District 1 (Green Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 1 - WGR
+CandidateContest	WI House District 10	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 10
+CandidateContest	WI House District 10 (Constitution Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 10 - CON
+CandidateContest	WI House District 10 (Constitution Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 10 - Constitution
+CandidateContest	WI House District 10 (Democratic Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 10 - DEM
+CandidateContest	WI House District 10 (Democratic Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 10 - Democratic
+CandidateContest	WI House District 10 (Independent Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 10 - IND
+CandidateContest	WI House District 10 (Libertarian Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 10 - LIB
+CandidateContest	WI House District 10 (Republican Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 10 - REP
+CandidateContest	WI House District 10 (Republican Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 10 - Republican
+CandidateContest	WI House District 10 (Green Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 10 - WGR
+CandidateContest	WI House District 11	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 11
+CandidateContest	WI House District 11 (Constitution Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 11 - CON
+CandidateContest	WI House District 11 (Constitution Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 11 - Constitution
+CandidateContest	WI House District 11 (Democratic Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 11 - DEM
+CandidateContest	WI House District 11 (Democratic Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 11 - Democratic
+CandidateContest	WI House District 11 (Independent Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 11 - IND
+CandidateContest	WI House District 11 (Libertarian Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 11 - LIB
+CandidateContest	WI House District 11 (Republican Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 11 - REP
+CandidateContest	WI House District 11 (Republican Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 11 - Republican
+CandidateContest	WI House District 11 (Green Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 11 - WGR
+CandidateContest	WI House District 12	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 12
+CandidateContest	WI House District 12 (Constitution Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 12 - CON
+CandidateContest	WI House District 12 (Constitution Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 12 - Constitution
+CandidateContest	WI House District 12 (Democratic Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 12 - DEM
+CandidateContest	WI House District 12 (Democratic Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 12 - Democratic
+CandidateContest	WI House District 12 (Independent Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 12 - IND
+CandidateContest	WI House District 12 (Libertarian Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 12 - LIB
+CandidateContest	WI House District 12 (Republican Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 12 - REP
+CandidateContest	WI House District 12 (Republican Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 12 - Republican
+CandidateContest	WI House District 12 (Green Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 12 - WGR
+CandidateContest	WI House District 13	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 13
+CandidateContest	WI House District 13 (Constitution Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 13 - CON
+CandidateContest	WI House District 13 (Constitution Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 13 - Constitution
+CandidateContest	WI House District 13 (Democratic Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 13 - DEM
+CandidateContest	WI House District 13 (Democratic Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 13 - Democratic
+CandidateContest	WI House District 13 (Independent Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 13 - IND
+CandidateContest	WI House District 13 (Libertarian Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 13 - LIB
+CandidateContest	WI House District 13 (Republican Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 13 - REP
+CandidateContest	WI House District 13 (Republican Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 13 - Republican
+CandidateContest	WI House District 13 (Green Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 13 - WGR
+CandidateContest	WI House District 14	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 14
+CandidateContest	WI House District 14 (Constitution Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 14 - CON
+CandidateContest	WI House District 14 (Constitution Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 14 - Constitution
+CandidateContest	WI House District 14 (Democratic Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 14 - DEM
+CandidateContest	WI House District 14 (Democratic Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 14 - Democratic
+CandidateContest	WI House District 14 (Independent Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 14 - IND
+CandidateContest	WI House District 14 (Libertarian Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 14 - LIB
+CandidateContest	WI House District 14 (Republican Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 14 - REP
+CandidateContest	WI House District 14 (Republican Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 14 - Republican
+CandidateContest	WI House District 14 (Green Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 14 - WGR
+CandidateContest	WI House District 15	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 15
+CandidateContest	WI House District 15 (Constitution Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 15 - CON
+CandidateContest	WI House District 15 (Constitution Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 15 - Constitution
+CandidateContest	WI House District 15 (Democratic Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 15 - DEM
+CandidateContest	WI House District 15 (Democratic Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 15 - Democratic
+CandidateContest	WI House District 15 (Independent Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 15 - IND
+CandidateContest	WI House District 15 (Libertarian Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 15 - LIB
+CandidateContest	WI House District 15 (Republican Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 15 - REP
+CandidateContest	WI House District 15 (Republican Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 15 - Republican
+CandidateContest	WI House District 15 (Green Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 15 - WGR
+CandidateContest	WI House District 16	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 16
+CandidateContest	WI House District 16 (Constitution Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 16 - CON
+CandidateContest	WI House District 16 (Constitution Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 16 - Constitution
+CandidateContest	WI House District 16 (Democratic Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 16 - DEM
+CandidateContest	WI House District 16 (Democratic Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 16 - Democratic
+CandidateContest	WI House District 16 (Independent Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 16 - IND
+CandidateContest	WI House District 16 (Libertarian Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 16 - LIB
+CandidateContest	WI House District 16 (Republican Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 16 - REP
+CandidateContest	WI House District 16 (Republican Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 16 - Republican
+CandidateContest	WI House District 16 (Green Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 16 - WGR
+CandidateContest	WI House District 17	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 17
+CandidateContest	WI House District 17 (Constitution Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 17 - CON
+CandidateContest	WI House District 17 (Constitution Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 17 - Constitution
+CandidateContest	WI House District 17 (Democratic Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 17 - DEM
+CandidateContest	WI House District 17 (Democratic Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 17 - Democratic
+CandidateContest	WI House District 17 (Independent Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 17 - IND
+CandidateContest	WI House District 17 (Libertarian Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 17 - LIB
+CandidateContest	WI House District 17 (Republican Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 17 - REP
+CandidateContest	WI House District 17 (Republican Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 17 - Republican
+CandidateContest	WI House District 17 (Green Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 17 - WGR
+CandidateContest	WI House District 18	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 18
+CandidateContest	WI House District 18 (Constitution Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 18 - CON
+CandidateContest	WI House District 18 (Constitution Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 18 - Constitution
+CandidateContest	WI House District 18 (Democratic Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 18 - DEM
+CandidateContest	WI House District 18 (Democratic Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 18 - Democratic
+CandidateContest	WI House District 18 (Independent Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 18 - IND
+CandidateContest	WI House District 18 (Libertarian Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 18 - LIB
+CandidateContest	WI House District 18 (Republican Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 18 - REP
+CandidateContest	WI House District 18 (Republican Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 18 - Republican
+CandidateContest	WI House District 18 (Green Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 18 - WGR
+CandidateContest	WI House District 19	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 19
+CandidateContest	WI House District 19 (Constitution Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 19 - CON
+CandidateContest	WI House District 19 (Constitution Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 19 - Constitution
+CandidateContest	WI House District 19 (Democratic Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 19 - DEM
+CandidateContest	WI House District 19 (Democratic Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 19 - Democratic
+CandidateContest	WI House District 19 (Independent Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 19 - IND
+CandidateContest	WI House District 19 (Libertarian Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 19 - LIB
+CandidateContest	WI House District 19 (Republican Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 19 - REP
+CandidateContest	WI House District 19 (Republican Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 19 - Republican
+CandidateContest	WI House District 19 (Green Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 19 - WGR
+CandidateContest	WI House District 2	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 2
+CandidateContest	WI House District 2 (Constitution Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 2 - CON
+CandidateContest	WI House District 2 (Constitution Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 2 - Constitution
+CandidateContest	WI House District 2 (Democratic Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 2 - DEM
+CandidateContest	WI House District 2 (Democratic Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 2 - Democratic
+CandidateContest	WI House District 2 (Independent Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 2 - IND
+CandidateContest	WI House District 2 (Libertarian Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 2 - LIB
+CandidateContest	WI House District 2 (Republican Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 2 - REP
+CandidateContest	WI House District 2 (Republican Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 2 - Republican
+CandidateContest	WI House District 2 (Green Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 2 - WGR
+CandidateContest	WI House District 20	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 20
+CandidateContest	WI House District 20 (Constitution Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 20 - CON
+CandidateContest	WI House District 20 (Constitution Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 20 - Constitution
+CandidateContest	WI House District 20 (Democratic Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 20 - DEM
+CandidateContest	WI House District 20 (Democratic Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 20 - Democratic
+CandidateContest	WI House District 20 (Independent Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 20 - IND
+CandidateContest	WI House District 20 (Libertarian Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 20 - LIB
+CandidateContest	WI House District 20 (Republican Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 20 - REP
+CandidateContest	WI House District 20 (Republican Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 20 - Republican
+CandidateContest	WI House District 20 (Green Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 20 - WGR
+CandidateContest	WI House District 21	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 21
+CandidateContest	WI House District 21 (Constitution Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 21 - CON
+CandidateContest	WI House District 21 (Constitution Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 21 - Constitution
+CandidateContest	WI House District 21 (Democratic Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 21 - DEM
+CandidateContest	WI House District 21 (Democratic Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 21 - Democratic
+CandidateContest	WI House District 21 (Independent Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 21 - IND
+CandidateContest	WI House District 21 (Libertarian Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 21 - LIB
+CandidateContest	WI House District 21 (Republican Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 21 - REP
+CandidateContest	WI House District 21 (Republican Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 21 - Republican
+CandidateContest	WI House District 21 (Green Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 21 - WGR
+CandidateContest	WI House District 22	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 22
+CandidateContest	WI House District 22 (Constitution Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 22 - CON
+CandidateContest	WI House District 22 (Constitution Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 22 - Constitution
+CandidateContest	WI House District 22 (Democratic Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 22 - DEM
+CandidateContest	WI House District 22 (Democratic Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 22 - Democratic
+CandidateContest	WI House District 22 (Independent Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 22 - IND
+CandidateContest	WI House District 22 (Libertarian Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 22 - LIB
+CandidateContest	WI House District 22 (Republican Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 22 - REP
+CandidateContest	WI House District 22 (Republican Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 22 - Republican
+CandidateContest	WI House District 22 (Green Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 22 - WGR
+CandidateContest	WI House District 23	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 23
+CandidateContest	WI House District 23 (Constitution Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 23 - CON
+CandidateContest	WI House District 23 (Constitution Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 23 - Constitution
+CandidateContest	WI House District 23 (Democratic Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 23 - DEM
+CandidateContest	WI House District 23 (Democratic Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 23 - Democratic
+CandidateContest	WI House District 23 (Independent Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 23 - IND
+CandidateContest	WI House District 23 (Libertarian Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 23 - LIB
+CandidateContest	WI House District 23 (Republican Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 23 - REP
+CandidateContest	WI House District 23 (Republican Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 23 - Republican
+CandidateContest	WI House District 23 (Green Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 23 - WGR
+CandidateContest	WI House District 24	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 24
+CandidateContest	WI House District 24 (Constitution Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 24 - CON
+CandidateContest	WI House District 24 (Constitution Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 24 - Constitution
+CandidateContest	WI House District 24 (Democratic Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 24 - DEM
+CandidateContest	WI House District 24 (Democratic Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 24 - Democratic
+CandidateContest	WI House District 24 (Independent Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 24 - IND
+CandidateContest	WI House District 24 (Libertarian Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 24 - LIB
+CandidateContest	WI House District 24 (Republican Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 24 - REP
+CandidateContest	WI House District 24 (Republican Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 24 - Republican
+CandidateContest	WI House District 24 (Green Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 24 - WGR
+CandidateContest	WI House District 25	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 25
+CandidateContest	WI House District 25 (Constitution Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 25 - CON
+CandidateContest	WI House District 25 (Constitution Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 25 - Constitution
+CandidateContest	WI House District 25 (Democratic Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 25 - DEM
+CandidateContest	WI House District 25 (Democratic Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 25 - Democratic
+CandidateContest	WI House District 25 (Independent Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 25 - IND
+CandidateContest	WI House District 25 (Libertarian Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 25 - LIB
+CandidateContest	WI House District 25 (Republican Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 25 - REP
+CandidateContest	WI House District 25 (Republican Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 25 - Republican
+CandidateContest	WI House District 25 (Green Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 25 - WGR
+CandidateContest	WI House District 26	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 26
+CandidateContest	WI House District 26 (Constitution Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 26 - CON
+CandidateContest	WI House District 26 (Constitution Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 26 - Constitution
+CandidateContest	WI House District 26 (Democratic Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 26 - DEM
+CandidateContest	WI House District 26 (Democratic Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 26 - Democratic
+CandidateContest	WI House District 26 (Independent Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 26 - IND
+CandidateContest	WI House District 26 (Libertarian Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 26 - LIB
+CandidateContest	WI House District 26 (Republican Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 26 - REP
+CandidateContest	WI House District 26 (Republican Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 26 - Republican
+CandidateContest	WI House District 26 (Green Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 26 - WGR
+CandidateContest	WI House District 27	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 27
+CandidateContest	WI House District 27 (Constitution Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 27 - CON
+CandidateContest	WI House District 27 (Constitution Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 27 - Constitution
+CandidateContest	WI House District 27 (Democratic Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 27 - DEM
+CandidateContest	WI House District 27 (Democratic Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 27 - Democratic
+CandidateContest	WI House District 27 (Independent Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 27 - IND
+CandidateContest	WI House District 27 (Libertarian Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 27 - LIB
+CandidateContest	WI House District 27 (Republican Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 27 - REP
+CandidateContest	WI House District 27 (Republican Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 27 - Republican
+CandidateContest	WI House District 27 (Green Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 27 - WGR
+CandidateContest	WI House District 28	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 28
+CandidateContest	WI House District 28 (Constitution Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 28 - CON
+CandidateContest	WI House District 28 (Constitution Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 28 - Constitution
+CandidateContest	WI House District 28 (Democratic Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 28 - DEM
+CandidateContest	WI House District 28 (Democratic Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 28 - Democratic
+CandidateContest	WI House District 28 (Independent Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 28 - IND
+CandidateContest	WI House District 28 (Libertarian Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 28 - LIB
+CandidateContest	WI House District 28 (Republican Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 28 - REP
+CandidateContest	WI House District 28 (Republican Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 28 - Republican
+CandidateContest	WI House District 28 (Green Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 28 - WGR
+CandidateContest	WI House District 29	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 29
+CandidateContest	WI House District 29 (Constitution Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 29 - CON
+CandidateContest	WI House District 29 (Constitution Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 29 - Constitution
+CandidateContest	WI House District 29 (Democratic Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 29 - DEM
+CandidateContest	WI House District 29 (Democratic Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 29 - Democratic
+CandidateContest	WI House District 29 (Independent Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 29 - IND
+CandidateContest	WI House District 29 (Libertarian Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 29 - LIB
+CandidateContest	WI House District 29 (Republican Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 29 - REP
+CandidateContest	WI House District 29 (Republican Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 29 - Republican
+CandidateContest	WI House District 29 (Green Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 29 - WGR
+CandidateContest	WI House District 3	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 3
+CandidateContest	WI House District 3 (Constitution Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 3 - CON
+CandidateContest	WI House District 3 (Constitution Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 3 - Constitution
+CandidateContest	WI House District 3 (Democratic Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 3 - DEM
+CandidateContest	WI House District 3 (Democratic Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 3 - Democratic
+CandidateContest	WI House District 3 (Independent Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 3 - IND
+CandidateContest	WI House District 3 (Libertarian Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 3 - LIB
+CandidateContest	WI House District 3 (Republican Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 3 - REP
+CandidateContest	WI House District 3 (Republican Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 3 - Republican
+CandidateContest	WI House District 3 (Green Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 3 - WGR
+CandidateContest	WI House District 30	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 30
+CandidateContest	WI House District 30 (Constitution Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 30 - CON
+CandidateContest	WI House District 30 (Constitution Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 30 - Constitution
+CandidateContest	WI House District 30 (Democratic Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 30 - DEM
+CandidateContest	WI House District 30 (Democratic Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 30 - Democratic
+CandidateContest	WI House District 30 (Independent Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 30 - IND
+CandidateContest	WI House District 30 (Libertarian Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 30 - LIB
+CandidateContest	WI House District 30 (Republican Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 30 - REP
+CandidateContest	WI House District 30 (Republican Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 30 - Republican
+CandidateContest	WI House District 30 (Green Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 30 - WGR
+CandidateContest	WI House District 31	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 31
+CandidateContest	WI House District 31 (Constitution Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 31 - CON
+CandidateContest	WI House District 31 (Constitution Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 31 - Constitution
+CandidateContest	WI House District 31 (Democratic Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 31 - DEM
+CandidateContest	WI House District 31 (Democratic Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 31 - Democratic
+CandidateContest	WI House District 31 (Independent Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 31 - IND
+CandidateContest	WI House District 31 (Libertarian Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 31 - LIB
+CandidateContest	WI House District 31 (Republican Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 31 - REP
+CandidateContest	WI House District 31 (Republican Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 31 - Republican
+CandidateContest	WI House District 31 (Green Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 31 - WGR
+CandidateContest	WI House District 32	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 32
+CandidateContest	WI House District 32 (Constitution Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 32 - CON
+CandidateContest	WI House District 32 (Constitution Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 32 - Constitution
+CandidateContest	WI House District 32 (Democratic Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 32 - DEM
+CandidateContest	WI House District 32 (Democratic Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 32 - Democratic
+CandidateContest	WI House District 32 (Independent Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 32 - IND
+CandidateContest	WI House District 32 (Libertarian Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 32 - LIB
+CandidateContest	WI House District 32 (Republican Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 32 - REP
+CandidateContest	WI House District 32 (Republican Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 32 - Republican
+CandidateContest	WI House District 32 (Green Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 32 - WGR
+CandidateContest	WI House District 33	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 33
+CandidateContest	WI House District 33 (Constitution Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 33 - CON
+CandidateContest	WI House District 33 (Constitution Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 33 - Constitution
+CandidateContest	WI House District 33 (Democratic Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 33 - DEM
+CandidateContest	WI House District 33 (Democratic Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 33 - Democratic
+CandidateContest	WI House District 33 (Independent Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 33 - IND
+CandidateContest	WI House District 33 (Libertarian Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 33 - LIB
+CandidateContest	WI House District 33 (Republican Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 33 - REP
+CandidateContest	WI House District 33 (Republican Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 33 - Republican
+CandidateContest	WI House District 33 (Green Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 33 - WGR
+CandidateContest	WI House District 34	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 34
+CandidateContest	WI House District 34 (Constitution Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 34 - CON
+CandidateContest	WI House District 34 (Constitution Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 34 - Constitution
+CandidateContest	WI House District 34 (Democratic Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 34 - DEM
+CandidateContest	WI House District 34 (Democratic Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 34 - Democratic
+CandidateContest	WI House District 34 (Independent Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 34 - IND
+CandidateContest	WI House District 34 (Libertarian Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 34 - LIB
+CandidateContest	WI House District 34 (Republican Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 34 - REP
+CandidateContest	WI House District 34 (Republican Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 34 - Republican
+CandidateContest	WI House District 34 (Green Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 34 - WGR
+CandidateContest	WI House District 35	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 35
+CandidateContest	WI House District 35 (Constitution Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 35 - CON
+CandidateContest	WI House District 35 (Constitution Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 35 - Constitution
+CandidateContest	WI House District 35 (Democratic Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 35 - DEM
+CandidateContest	WI House District 35 (Democratic Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 35 - Democratic
+CandidateContest	WI House District 35 (Independent Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 35 - IND
+CandidateContest	WI House District 35 (Libertarian Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 35 - LIB
+CandidateContest	WI House District 35 (Republican Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 35 - REP
+CandidateContest	WI House District 35 (Republican Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 35 - Republican
+CandidateContest	WI House District 35 (Green Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 35 - WGR
+CandidateContest	WI House District 36	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 36
+CandidateContest	WI House District 36 (Constitution Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 36 - CON
+CandidateContest	WI House District 36 (Constitution Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 36 - Constitution
+CandidateContest	WI House District 36 (Democratic Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 36 - DEM
+CandidateContest	WI House District 36 (Democratic Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 36 - Democratic
+CandidateContest	WI House District 36 (Independent Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 36 - IND
+CandidateContest	WI House District 36 (Libertarian Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 36 - LIB
+CandidateContest	WI House District 36 (Republican Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 36 - REP
+CandidateContest	WI House District 36 (Republican Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 36 - Republican
+CandidateContest	WI House District 36 (Green Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 36 - WGR
+CandidateContest	WI House District 37	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 37
+CandidateContest	WI House District 37 (Constitution Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 37 - CON
+CandidateContest	WI House District 37 (Constitution Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 37 - Constitution
+CandidateContest	WI House District 37 (Democratic Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 37 - DEM
+CandidateContest	WI House District 37 (Democratic Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 37 - Democratic
+CandidateContest	WI House District 37 (Independent Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 37 - IND
+CandidateContest	WI House District 37 (Libertarian Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 37 - LIB
+CandidateContest	WI House District 37 (Republican Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 37 - REP
+CandidateContest	WI House District 37 (Republican Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 37 - Republican
+CandidateContest	WI House District 37 (Green Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 37 - WGR
+CandidateContest	WI House District 38	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 38
+CandidateContest	WI House District 38 (Constitution Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 38 - CON
+CandidateContest	WI House District 38 (Constitution Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 38 - Constitution
+CandidateContest	WI House District 38 (Democratic Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 38 - DEM
+CandidateContest	WI House District 38 (Democratic Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 38 - Democratic
+CandidateContest	WI House District 38 (Independent Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 38 - IND
+CandidateContest	WI House District 38 (Libertarian Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 38 - LIB
+CandidateContest	WI House District 38 (Republican Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 38 - REP
+CandidateContest	WI House District 38 (Republican Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 38 - Republican
+CandidateContest	WI House District 38 (Green Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 38 - WGR
+CandidateContest	WI House District 39	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 39
+CandidateContest	WI House District 39 (Constitution Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 39 - CON
+CandidateContest	WI House District 39 (Constitution Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 39 - Constitution
+CandidateContest	WI House District 39 (Democratic Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 39 - DEM
+CandidateContest	WI House District 39 (Democratic Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 39 - Democratic
+CandidateContest	WI House District 39 (Independent Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 39 - IND
+CandidateContest	WI House District 39 (Libertarian Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 39 - LIB
+CandidateContest	WI House District 39 (Republican Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 39 - REP
+CandidateContest	WI House District 39 (Republican Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 39 - Republican
+CandidateContest	WI House District 39 (Green Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 39 - WGR
+CandidateContest	WI House District 4	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 4
+CandidateContest	WI House District 4 (Constitution Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 4 - CON
+CandidateContest	WI House District 4 (Constitution Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 4 - Constitution
+CandidateContest	WI House District 4 (Democratic Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 4 - DEM
+CandidateContest	WI House District 4 (Democratic Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 4 - Democratic
+CandidateContest	WI House District 4 (Independent Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 4 - IND
+CandidateContest	WI House District 4 (Libertarian Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 4 - LIB
+CandidateContest	WI House District 4 (Republican Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 4 - REP
+CandidateContest	WI House District 4 (Republican Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 4 - Republican
+CandidateContest	WI House District 4 (Green Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 4 - WGR
+CandidateContest	WI House District 40	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 40
+CandidateContest	WI House District 40 (Constitution Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 40 - CON
+CandidateContest	WI House District 40 (Constitution Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 40 - Constitution
+CandidateContest	WI House District 40 (Democratic Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 40 - DEM
+CandidateContest	WI House District 40 (Democratic Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 40 - Democratic
+CandidateContest	WI House District 40 (Independent Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 40 - IND
+CandidateContest	WI House District 40 (Libertarian Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 40 - LIB
+CandidateContest	WI House District 40 (Republican Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 40 - REP
+CandidateContest	WI House District 40 (Republican Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 40 - Republican
+CandidateContest	WI House District 40 (Green Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 40 - WGR
+CandidateContest	WI House District 41	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 41
+CandidateContest	WI House District 41 (Constitution Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 41 - CON
+CandidateContest	WI House District 41 (Constitution Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 41 - Constitution
+CandidateContest	WI House District 41 (Democratic Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 41 - DEM
+CandidateContest	WI House District 41 (Democratic Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 41 - Democratic
+CandidateContest	WI House District 41 (Independent Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 41 - IND
+CandidateContest	WI House District 41 (Libertarian Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 41 - LIB
+CandidateContest	WI House District 41 (Republican Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 41 - REP
+CandidateContest	WI House District 41 (Republican Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 41 - Republican
+CandidateContest	WI House District 41 (Green Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 41 - WGR
+CandidateContest	WI House District 42	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 42
+CandidateContest	WI House District 42 (Constitution Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 42 - CON
+CandidateContest	WI House District 42 (Constitution Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 42 - Constitution
+CandidateContest	WI House District 42 (Democratic Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 42 - DEM
+CandidateContest	WI House District 42 (Democratic Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 42 - Democratic
+CandidateContest	WI House District 42 (Independent Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 42 - IND
+CandidateContest	WI House District 42 (Libertarian Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 42 - LIB
+CandidateContest	WI House District 42 (Republican Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 42 - REP
+CandidateContest	WI House District 42 (Republican Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 42 - Republican
+CandidateContest	WI House District 42 (Green Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 42 - WGR
+CandidateContest	WI House District 43	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 43
+CandidateContest	WI House District 43 (Constitution Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 43 - CON
+CandidateContest	WI House District 43 (Constitution Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 43 - Constitution
+CandidateContest	WI House District 43 (Democratic Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 43 - DEM
+CandidateContest	WI House District 43 (Democratic Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 43 - Democratic
+CandidateContest	WI House District 43 (Independent Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 43 - IND
+CandidateContest	WI House District 43 (Libertarian Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 43 - LIB
+CandidateContest	WI House District 43 (Republican Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 43 - REP
+CandidateContest	WI House District 43 (Republican Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 43 - Republican
+CandidateContest	WI House District 43 (Green Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 43 - WGR
+CandidateContest	WI House District 44	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 44
+CandidateContest	WI House District 44 (Constitution Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 44 - CON
+CandidateContest	WI House District 44 (Constitution Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 44 - Constitution
+CandidateContest	WI House District 44 (Democratic Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 44 - DEM
+CandidateContest	WI House District 44 (Democratic Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 44 - Democratic
+CandidateContest	WI House District 44 (Independent Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 44 - IND
+CandidateContest	WI House District 44 (Libertarian Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 44 - LIB
+CandidateContest	WI House District 44 (Republican Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 44 - REP
+CandidateContest	WI House District 44 (Republican Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 44 - Republican
+CandidateContest	WI House District 44 (Green Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 44 - WGR
+CandidateContest	WI House District 45	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 45
+CandidateContest	WI House District 45 (Constitution Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 45 - CON
+CandidateContest	WI House District 45 (Constitution Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 45 - Constitution
+CandidateContest	WI House District 45 (Democratic Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 45 - DEM
+CandidateContest	WI House District 45 (Democratic Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 45 - Democratic
+CandidateContest	WI House District 45 (Independent Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 45 - IND
+CandidateContest	WI House District 45 (Libertarian Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 45 - LIB
+CandidateContest	WI House District 45 (Republican Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 45 - REP
+CandidateContest	WI House District 45 (Republican Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 45 - Republican
+CandidateContest	WI House District 45 (Green Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 45 - WGR
+CandidateContest	WI House District 46	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 46
+CandidateContest	WI House District 46 (Constitution Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 46 - CON
+CandidateContest	WI House District 46 (Constitution Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 46 - Constitution
+CandidateContest	WI House District 46 (Democratic Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 46 - DEM
+CandidateContest	WI House District 46 (Democratic Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 46 - Democratic
+CandidateContest	WI House District 46 (Independent Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 46 - IND
+CandidateContest	WI House District 46 (Libertarian Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 46 - LIB
+CandidateContest	WI House District 46 (Republican Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 46 - REP
+CandidateContest	WI House District 46 (Republican Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 46 - Republican
+CandidateContest	WI House District 46 (Green Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 46 - WGR
+CandidateContest	WI House District 47	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 47
+CandidateContest	WI House District 47 (Constitution Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 47 - CON
+CandidateContest	WI House District 47 (Constitution Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 47 - Constitution
+CandidateContest	WI House District 47 (Democratic Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 47 - DEM
+CandidateContest	WI House District 47 (Democratic Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 47 - Democratic
+CandidateContest	WI House District 47 (Independent Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 47 - IND
+CandidateContest	WI House District 47 (Libertarian Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 47 - LIB
+CandidateContest	WI House District 47 (Republican Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 47 - REP
+CandidateContest	WI House District 47 (Republican Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 47 - Republican
+CandidateContest	WI House District 47 (Green Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 47 - WGR
+CandidateContest	WI House District 48	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 48
+CandidateContest	WI House District 48 (Constitution Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 48 - CON
+CandidateContest	WI House District 48 (Constitution Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 48 - Constitution
+CandidateContest	WI House District 48 (Democratic Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 48 - DEM
+CandidateContest	WI House District 48 (Democratic Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 48 - Democratic
+CandidateContest	WI House District 48 (Independent Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 48 - IND
+CandidateContest	WI House District 48 (Libertarian Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 48 - LIB
+CandidateContest	WI House District 48 (Republican Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 48 - REP
+CandidateContest	WI House District 48 (Republican Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 48 - Republican
+CandidateContest	WI House District 48 (Green Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 48 - WGR
+CandidateContest	WI House District 49	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 49
+CandidateContest	WI House District 49 (Constitution Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 49 - CON
+CandidateContest	WI House District 49 (Constitution Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 49 - Constitution
+CandidateContest	WI House District 49 (Democratic Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 49 - DEM
+CandidateContest	WI House District 49 (Democratic Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 49 - Democratic
+CandidateContest	WI House District 49 (Independent Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 49 - IND
+CandidateContest	WI House District 49 (Libertarian Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 49 - LIB
+CandidateContest	WI House District 49 (Republican Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 49 - REP
+CandidateContest	WI House District 49 (Republican Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 49 - Republican
+CandidateContest	WI House District 49 (Green Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 49 - WGR
+CandidateContest	WI House District 5	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 5
+CandidateContest	WI House District 5 (Constitution Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 5 - CON
+CandidateContest	WI House District 5 (Constitution Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 5 - Constitution
+CandidateContest	WI House District 5 (Democratic Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 5 - DEM
+CandidateContest	WI House District 5 (Democratic Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 5 - Democratic
+CandidateContest	WI House District 5 (Independent Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 5 - IND
+CandidateContest	WI House District 5 (Libertarian Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 5 - LIB
+CandidateContest	WI House District 5 (Republican Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 5 - REP
+CandidateContest	WI House District 5 (Republican Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 5 - Republican
+CandidateContest	WI House District 5 (Green Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 5 - WGR
+CandidateContest	WI House District 50	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 50
+CandidateContest	WI House District 50 (Constitution Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 50 - CON
+CandidateContest	WI House District 50 (Constitution Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 50 - Constitution
+CandidateContest	WI House District 50 (Democratic Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 50 - DEM
+CandidateContest	WI House District 50 (Democratic Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 50 - Democratic
+CandidateContest	WI House District 50 (Independent Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 50 - IND
+CandidateContest	WI House District 50 (Libertarian Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 50 - LIB
+CandidateContest	WI House District 50 (Republican Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 50 - REP
+CandidateContest	WI House District 50 (Republican Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 50 - Republican
+CandidateContest	WI House District 50 (Green Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 50 - WGR
+CandidateContest	WI House District 51	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 51
+CandidateContest	WI House District 51 (Constitution Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 51 - CON
+CandidateContest	WI House District 51 (Constitution Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 51 - Constitution
+CandidateContest	WI House District 51 (Democratic Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 51 - DEM
+CandidateContest	WI House District 51 (Democratic Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 51 - Democratic
+CandidateContest	WI House District 51 (Independent Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 51 - IND
+CandidateContest	WI House District 51 (Libertarian Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 51 - LIB
+CandidateContest	WI House District 51 (Republican Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 51 - REP
+CandidateContest	WI House District 51 (Republican Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 51 - Republican
+CandidateContest	WI House District 51 (Green Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 51 - WGR
+CandidateContest	WI House District 52	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 52
+CandidateContest	WI House District 52 (Constitution Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 52 - CON
+CandidateContest	WI House District 52 (Constitution Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 52 - Constitution
+CandidateContest	WI House District 52 (Democratic Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 52 - DEM
+CandidateContest	WI House District 52 (Democratic Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 52 - Democratic
+CandidateContest	WI House District 52 (Independent Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 52 - IND
+CandidateContest	WI House District 52 (Libertarian Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 52 - LIB
+CandidateContest	WI House District 52 (Republican Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 52 - REP
+CandidateContest	WI House District 52 (Republican Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 52 - Republican
+CandidateContest	WI House District 52 (Green Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 52 - WGR
+CandidateContest	WI House District 53	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 53
+CandidateContest	WI House District 53 (Constitution Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 53 - CON
+CandidateContest	WI House District 53 (Constitution Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 53 - Constitution
+CandidateContest	WI House District 53 (Democratic Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 53 - DEM
+CandidateContest	WI House District 53 (Democratic Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 53 - Democratic
+CandidateContest	WI House District 53 (Independent Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 53 - IND
+CandidateContest	WI House District 53 (Libertarian Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 53 - LIB
+CandidateContest	WI House District 53 (Republican Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 53 - REP
+CandidateContest	WI House District 53 (Republican Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 53 - Republican
+CandidateContest	WI House District 53 (Green Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 53 - WGR
+CandidateContest	WI House District 54	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 54
+CandidateContest	WI House District 54 (Constitution Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 54 - CON
+CandidateContest	WI House District 54 (Constitution Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 54 - Constitution
+CandidateContest	WI House District 54 (Democratic Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 54 - DEM
+CandidateContest	WI House District 54 (Democratic Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 54 - Democratic
+CandidateContest	WI House District 54 (Independent Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 54 - IND
+CandidateContest	WI House District 54 (Libertarian Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 54 - LIB
+CandidateContest	WI House District 54 (Republican Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 54 - REP
+CandidateContest	WI House District 54 (Republican Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 54 - Republican
+CandidateContest	WI House District 54 (Green Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 54 - WGR
+CandidateContest	WI House District 55	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 55
+CandidateContest	WI House District 55 (Constitution Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 55 - CON
+CandidateContest	WI House District 55 (Constitution Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 55 - Constitution
+CandidateContest	WI House District 55 (Democratic Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 55 - DEM
+CandidateContest	WI House District 55 (Democratic Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 55 - Democratic
+CandidateContest	WI House District 55 (Independent Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 55 - IND
+CandidateContest	WI House District 55 (Libertarian Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 55 - LIB
+CandidateContest	WI House District 55 (Republican Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 55 - REP
+CandidateContest	WI House District 55 (Republican Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 55 - Republican
+CandidateContest	WI House District 55 (Green Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 55 - WGR
+CandidateContest	WI House District 56	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 56
+CandidateContest	WI House District 56 (Constitution Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 56 - CON
+CandidateContest	WI House District 56 (Constitution Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 56 - Constitution
+CandidateContest	WI House District 56 (Democratic Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 56 - DEM
+CandidateContest	WI House District 56 (Democratic Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 56 - Democratic
+CandidateContest	WI House District 56 (Independent Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 56 - IND
+CandidateContest	WI House District 56 (Libertarian Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 56 - LIB
+CandidateContest	WI House District 56 (Republican Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 56 - REP
+CandidateContest	WI House District 56 (Republican Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 56 - Republican
+CandidateContest	WI House District 56 (Green Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 56 - WGR
+CandidateContest	WI House District 57	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 57
+CandidateContest	WI House District 57 (Constitution Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 57 - CON
+CandidateContest	WI House District 57 (Constitution Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 57 - Constitution
+CandidateContest	WI House District 57 (Democratic Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 57 - DEM
+CandidateContest	WI House District 57 (Democratic Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 57 - Democratic
+CandidateContest	WI House District 57 (Independent Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 57 - IND
+CandidateContest	WI House District 57 (Libertarian Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 57 - LIB
+CandidateContest	WI House District 57 (Republican Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 57 - REP
+CandidateContest	WI House District 57 (Republican Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 57 - Republican
+CandidateContest	WI House District 57 (Green Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 57 - WGR
+CandidateContest	WI House District 58	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 58
+CandidateContest	WI House District 58 (Constitution Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 58 - CON
+CandidateContest	WI House District 58 (Constitution Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 58 - Constitution
+CandidateContest	WI House District 58 (Democratic Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 58 - DEM
+CandidateContest	WI House District 58 (Democratic Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 58 - Democratic
+CandidateContest	WI House District 58 (Independent Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 58 - IND
+CandidateContest	WI House District 58 (Libertarian Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 58 - LIB
+CandidateContest	WI House District 58 (Republican Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 58 - REP
+CandidateContest	WI House District 58 (Republican Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 58 - Republican
+CandidateContest	WI House District 58 (Green Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 58 - WGR
+CandidateContest	WI House District 59	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 59
+CandidateContest	WI House District 59 (Constitution Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 59 - CON
+CandidateContest	WI House District 59 (Constitution Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 59 - Constitution
+CandidateContest	WI House District 59 (Democratic Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 59 - DEM
+CandidateContest	WI House District 59 (Democratic Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 59 - Democratic
+CandidateContest	WI House District 59 (Independent Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 59 - IND
+CandidateContest	WI House District 59 (Libertarian Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 59 - LIB
+CandidateContest	WI House District 59 (Republican Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 59 - REP
+CandidateContest	WI House District 59 (Republican Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 59 - Republican
+CandidateContest	WI House District 59 (Green Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 59 - WGR
+CandidateContest	WI House District 6	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 6
+CandidateContest	WI House District 6 (Constitution Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 6 - CON
+CandidateContest	WI House District 6 (Constitution Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 6 - Constitution
+CandidateContest	WI House District 6 (Democratic Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 6 - DEM
+CandidateContest	WI House District 6 (Democratic Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 6 - Democratic
+CandidateContest	WI House District 6 (Independent Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 6 - IND
+CandidateContest	WI House District 6 (Libertarian Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 6 - LIB
+CandidateContest	WI House District 6 (Republican Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 6 - REP
+CandidateContest	WI House District 6 (Republican Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 6 - Republican
+CandidateContest	WI House District 6 (Green Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 6 - WGR
+CandidateContest	WI House District 60	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 60
+CandidateContest	WI House District 60 (Constitution Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 60 - CON
+CandidateContest	WI House District 60 (Constitution Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 60 - Constitution
+CandidateContest	WI House District 60 (Democratic Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 60 - DEM
+CandidateContest	WI House District 60 (Democratic Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 60 - Democratic
+CandidateContest	WI House District 60 (Independent Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 60 - IND
+CandidateContest	WI House District 60 (Libertarian Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 60 - LIB
+CandidateContest	WI House District 60 (Republican Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 60 - REP
+CandidateContest	WI House District 60 (Republican Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 60 - Republican
+CandidateContest	WI House District 60 (Green Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 60 - WGR
+CandidateContest	WI House District 61	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 61
+CandidateContest	WI House District 61 (Constitution Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 61 - CON
+CandidateContest	WI House District 61 (Constitution Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 61 - Constitution
+CandidateContest	WI House District 61 (Democratic Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 61 - DEM
+CandidateContest	WI House District 61 (Democratic Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 61 - Democratic
+CandidateContest	WI House District 61 (Independent Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 61 - IND
+CandidateContest	WI House District 61 (Libertarian Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 61 - LIB
+CandidateContest	WI House District 61 (Republican Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 61 - REP
+CandidateContest	WI House District 61 (Republican Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 61 - Republican
+CandidateContest	WI House District 61 (Green Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 61 - WGR
+CandidateContest	WI House District 62	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 62
+CandidateContest	WI House District 62 (Constitution Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 62 - CON
+CandidateContest	WI House District 62 (Constitution Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 62 - Constitution
+CandidateContest	WI House District 62 (Democratic Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 62 - DEM
+CandidateContest	WI House District 62 (Democratic Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 62 - Democratic
+CandidateContest	WI House District 62 (Independent Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 62 - IND
+CandidateContest	WI House District 62 (Libertarian Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 62 - LIB
+CandidateContest	WI House District 62 (Republican Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 62 - REP
+CandidateContest	WI House District 62 (Republican Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 62 - Republican
+CandidateContest	WI House District 62 (Green Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 62 - WGR
+CandidateContest	WI House District 63	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 63
+CandidateContest	WI House District 63 (Constitution Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 63 - CON
+CandidateContest	WI House District 63 (Constitution Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 63 - Constitution
+CandidateContest	WI House District 63 (Democratic Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 63 - DEM
+CandidateContest	WI House District 63 (Democratic Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 63 - Democratic
+CandidateContest	WI House District 63 (Independent Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 63 - IND
+CandidateContest	WI House District 63 (Libertarian Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 63 - LIB
+CandidateContest	WI House District 63 (Republican Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 63 - REP
+CandidateContest	WI House District 63 (Republican Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 63 - Republican
+CandidateContest	WI House District 63 (Green Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 63 - WGR
+CandidateContest	WI House District 64	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 64
+CandidateContest	WI House District 64 (Constitution Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 64 - CON
+CandidateContest	WI House District 64 (Constitution Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 64 - Constitution
+CandidateContest	WI House District 64 (Democratic Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 64 - DEM
+CandidateContest	WI House District 64 (Democratic Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 64 - Democratic
+CandidateContest	WI House District 64 (Independent Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 64 - IND
+CandidateContest	WI House District 64 (Libertarian Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 64 - LIB
+CandidateContest	WI House District 64 (Republican Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 64 - REP
+CandidateContest	WI House District 64 (Republican Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 64 - Republican
+CandidateContest	WI House District 64 (Green Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 64 - WGR
+CandidateContest	WI House District 65	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 65
+CandidateContest	WI House District 65 (Constitution Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 65 - CON
+CandidateContest	WI House District 65 (Constitution Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 65 - Constitution
+CandidateContest	WI House District 65 (Democratic Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 65 - DEM
+CandidateContest	WI House District 65 (Democratic Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 65 - Democratic
+CandidateContest	WI House District 65 (Independent Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 65 - IND
+CandidateContest	WI House District 65 (Libertarian Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 65 - LIB
+CandidateContest	WI House District 65 (Republican Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 65 - REP
+CandidateContest	WI House District 65 (Republican Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 65 - Republican
+CandidateContest	WI House District 65 (Green Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 65 - WGR
+CandidateContest	WI House District 66	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 66
+CandidateContest	WI House District 66 (Constitution Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 66 - CON
+CandidateContest	WI House District 66 (Constitution Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 66 - Constitution
+CandidateContest	WI House District 66 (Democratic Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 66 - DEM
+CandidateContest	WI House District 66 (Democratic Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 66 - Democratic
+CandidateContest	WI House District 66 (Independent Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 66 - IND
+CandidateContest	WI House District 66 (Libertarian Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 66 - LIB
+CandidateContest	WI House District 66 (Republican Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 66 - REP
+CandidateContest	WI House District 66 (Republican Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 66 - Republican
+CandidateContest	WI House District 66 (Green Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 66 - WGR
+CandidateContest	WI House District 67	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 67
+CandidateContest	WI House District 67 (Constitution Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 67 - CON
+CandidateContest	WI House District 67 (Constitution Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 67 - Constitution
+CandidateContest	WI House District 67 (Democratic Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 67 - DEM
+CandidateContest	WI House District 67 (Democratic Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 67 - Democratic
+CandidateContest	WI House District 67 (Independent Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 67 - IND
+CandidateContest	WI House District 67 (Libertarian Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 67 - LIB
+CandidateContest	WI House District 67 (Republican Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 67 - REP
+CandidateContest	WI House District 67 (Republican Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 67 - Republican
+CandidateContest	WI House District 67 (Green Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 67 - WGR
+CandidateContest	WI House District 68	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 68
+CandidateContest	WI House District 68 (Constitution Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 68 - CON
+CandidateContest	WI House District 68 (Constitution Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 68 - Constitution
+CandidateContest	WI House District 68 (Democratic Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 68 - DEM
+CandidateContest	WI House District 68 (Democratic Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 68 - Democratic
+CandidateContest	WI House District 68 (Independent Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 68 - IND
+CandidateContest	WI House District 68 (Libertarian Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 68 - LIB
+CandidateContest	WI House District 68 (Republican Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 68 - REP
+CandidateContest	WI House District 68 (Republican Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 68 - Republican
+CandidateContest	WI House District 68 (Green Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 68 - WGR
+CandidateContest	WI House District 69	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 69
+CandidateContest	WI House District 69 (Constitution Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 69 - CON
+CandidateContest	WI House District 69 (Constitution Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 69 - Constitution
+CandidateContest	WI House District 69 (Democratic Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 69 - DEM
+CandidateContest	WI House District 69 (Democratic Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 69 - Democratic
+CandidateContest	WI House District 69 (Independent Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 69 - IND
+CandidateContest	WI House District 69 (Libertarian Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 69 - LIB
+CandidateContest	WI House District 69 (Republican Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 69 - REP
+CandidateContest	WI House District 69 (Republican Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 69 - Republican
+CandidateContest	WI House District 69 (Green Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 69 - WGR
+CandidateContest	WI House District 7	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 7
+CandidateContest	WI House District 7 (Constitution Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 7 - CON
+CandidateContest	WI House District 7 (Constitution Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 7 - Constitution
+CandidateContest	WI House District 7 (Democratic Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 7 - DEM
+CandidateContest	WI House District 7 (Democratic Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 7 - Democratic
+CandidateContest	WI House District 7 (Independent Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 7 - IND
+CandidateContest	WI House District 7 (Libertarian Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 7 - LIB
+CandidateContest	WI House District 7 (Republican Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 7 - REP
+CandidateContest	WI House District 7 (Republican Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 7 - Republican
+CandidateContest	WI House District 7 (Green Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 7 - WGR
+CandidateContest	WI House District 70	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 70
+CandidateContest	WI House District 70 (Constitution Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 70 - CON
+CandidateContest	WI House District 70 (Constitution Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 70 - Constitution
+CandidateContest	WI House District 70 (Democratic Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 70 - DEM
+CandidateContest	WI House District 70 (Democratic Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 70 - Democratic
+CandidateContest	WI House District 70 (Independent Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 70 - IND
+CandidateContest	WI House District 70 (Libertarian Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 70 - LIB
+CandidateContest	WI House District 70 (Republican Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 70 - REP
+CandidateContest	WI House District 70 (Republican Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 70 - Republican
+CandidateContest	WI House District 70 (Green Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 70 - WGR
+CandidateContest	WI House District 71	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 71
+CandidateContest	WI House District 71 (Constitution Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 71 - CON
+CandidateContest	WI House District 71 (Constitution Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 71 - Constitution
+CandidateContest	WI House District 71 (Democratic Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 71 - DEM
+CandidateContest	WI House District 71 (Democratic Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 71 - Democratic
+CandidateContest	WI House District 71 (Independent Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 71 - IND
+CandidateContest	WI House District 71 (Libertarian Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 71 - LIB
+CandidateContest	WI House District 71 (Republican Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 71 - REP
+CandidateContest	WI House District 71 (Republican Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 71 - Republican
+CandidateContest	WI House District 71 (Green Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 71 - WGR
+CandidateContest	WI House District 72	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 72
+CandidateContest	WI House District 72 (Constitution Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 72 - CON
+CandidateContest	WI House District 72 (Constitution Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 72 - Constitution
+CandidateContest	WI House District 72 (Democratic Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 72 - DEM
+CandidateContest	WI House District 72 (Democratic Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 72 - Democratic
+CandidateContest	WI House District 72 (Independent Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 72 - IND
+CandidateContest	WI House District 72 (Libertarian Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 72 - LIB
+CandidateContest	WI House District 72 (Republican Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 72 - REP
+CandidateContest	WI House District 72 (Republican Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 72 - Republican
+CandidateContest	WI House District 72 (Green Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 72 - WGR
+CandidateContest	WI House District 73	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 73
+CandidateContest	WI House District 73 (Constitution Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 73 - CON
+CandidateContest	WI House District 73 (Constitution Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 73 - Constitution
+CandidateContest	WI House District 73 (Democratic Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 73 - DEM
+CandidateContest	WI House District 73 (Democratic Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 73 - Democratic
+CandidateContest	WI House District 73 (Independent Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 73 - IND
+CandidateContest	WI House District 73 (Libertarian Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 73 - LIB
+CandidateContest	WI House District 73 (Republican Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 73 - REP
+CandidateContest	WI House District 73 (Republican Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 73 - Republican
+CandidateContest	WI House District 73 (Green Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 73 - WGR
+CandidateContest	WI House District 74	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 74
+CandidateContest	WI House District 74 (Constitution Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 74 - CON
+CandidateContest	WI House District 74 (Constitution Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 74 - Constitution
+CandidateContest	WI House District 74 (Democratic Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 74 - DEM
+CandidateContest	WI House District 74 (Democratic Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 74 - Democratic
+CandidateContest	WI House District 74 (Independent Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 74 - IND
+CandidateContest	WI House District 74 (Libertarian Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 74 - LIB
+CandidateContest	WI House District 74 (Republican Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 74 - REP
+CandidateContest	WI House District 74 (Republican Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 74 - Republican
+CandidateContest	WI House District 74 (Green Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 74 - WGR
+CandidateContest	WI House District 75	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 75
+CandidateContest	WI House District 75 (Constitution Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 75 - CON
+CandidateContest	WI House District 75 (Constitution Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 75 - Constitution
+CandidateContest	WI House District 75 (Democratic Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 75 - DEM
+CandidateContest	WI House District 75 (Democratic Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 75 - Democratic
+CandidateContest	WI House District 75 (Independent Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 75 - IND
+CandidateContest	WI House District 75 (Libertarian Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 75 - LIB
+CandidateContest	WI House District 75 (Republican Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 75 - REP
+CandidateContest	WI House District 75 (Republican Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 75 - Republican
+CandidateContest	WI House District 75 (Green Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 75 - WGR
+CandidateContest	WI House District 76	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 76
+CandidateContest	WI House District 76 (Constitution Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 76 - CON
+CandidateContest	WI House District 76 (Constitution Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 76 - Constitution
+CandidateContest	WI House District 76 (Democratic Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 76 - DEM
+CandidateContest	WI House District 76 (Democratic Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 76 - Democratic
+CandidateContest	WI House District 76 (Independent Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 76 - IND
+CandidateContest	WI House District 76 (Libertarian Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 76 - LIB
+CandidateContest	WI House District 76 (Republican Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 76 - REP
+CandidateContest	WI House District 76 (Republican Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 76 - Republican
+CandidateContest	WI House District 76 (Green Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 76 - WGR
+CandidateContest	WI House District 77	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 77
+CandidateContest	WI House District 77 (Constitution Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 77 - CON
+CandidateContest	WI House District 77 (Constitution Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 77 - Constitution
+CandidateContest	WI House District 77 (Democratic Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 77 - DEM
+CandidateContest	WI House District 77 (Democratic Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 77 - Democratic
+CandidateContest	WI House District 77 (Independent Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 77 - IND
+CandidateContest	WI House District 77 (Libertarian Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 77 - LIB
+CandidateContest	WI House District 77 (Republican Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 77 - REP
+CandidateContest	WI House District 77 (Republican Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 77 - Republican
+CandidateContest	WI House District 77 (Green Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 77 - WGR
+CandidateContest	WI House District 78	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 78
+CandidateContest	WI House District 78 (Constitution Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 78 - CON
+CandidateContest	WI House District 78 (Constitution Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 78 - Constitution
+CandidateContest	WI House District 78 (Democratic Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 78 - DEM
+CandidateContest	WI House District 78 (Democratic Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 78 - Democratic
+CandidateContest	WI House District 78 (Independent Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 78 - IND
+CandidateContest	WI House District 78 (Libertarian Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 78 - LIB
+CandidateContest	WI House District 78 (Republican Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 78 - REP
+CandidateContest	WI House District 78 (Republican Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 78 - Republican
+CandidateContest	WI House District 78 (Green Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 78 - WGR
+CandidateContest	WI House District 79	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 79
+CandidateContest	WI House District 79 (Constitution Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 79 - CON
+CandidateContest	WI House District 79 (Constitution Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 79 - Constitution
+CandidateContest	WI House District 79 (Democratic Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 79 - DEM
+CandidateContest	WI House District 79 (Democratic Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 79 - Democratic
+CandidateContest	WI House District 79 (Independent Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 79 - IND
+CandidateContest	WI House District 79 (Libertarian Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 79 - LIB
+CandidateContest	WI House District 79 (Republican Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 79 - REP
+CandidateContest	WI House District 79 (Republican Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 79 - Republican
+CandidateContest	WI House District 79 (Green Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 79 - WGR
+CandidateContest	WI House District 8	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 8
+CandidateContest	WI House District 8 (Constitution Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 8 - CON
+CandidateContest	WI House District 8 (Constitution Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 8 - Constitution
+CandidateContest	WI House District 8 (Democratic Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 8 - DEM
+CandidateContest	WI House District 8 (Democratic Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 8 - Democratic
+CandidateContest	WI House District 8 (Independent Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 8 - IND
+CandidateContest	WI House District 8 (Libertarian Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 8 - LIB
+CandidateContest	WI House District 8 (Republican Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 8 - REP
+CandidateContest	WI House District 8 (Republican Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 8 - Republican
+CandidateContest	WI House District 8 (Green Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 8 - WGR
+CandidateContest	WI House District 80	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 80
+CandidateContest	WI House District 80 (Constitution Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 80 - CON
+CandidateContest	WI House District 80 (Constitution Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 80 - Constitution
+CandidateContest	WI House District 80 (Democratic Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 80 - DEM
+CandidateContest	WI House District 80 (Democratic Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 80 - Democratic
+CandidateContest	WI House District 80 (Independent Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 80 - IND
+CandidateContest	WI House District 80 (Libertarian Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 80 - LIB
+CandidateContest	WI House District 80 (Republican Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 80 - REP
+CandidateContest	WI House District 80 (Republican Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 80 - Republican
+CandidateContest	WI House District 80 (Green Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 80 - WGR
+CandidateContest	WI House District 81	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 81
+CandidateContest	WI House District 81 (Constitution Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 81 - CON
+CandidateContest	WI House District 81 (Constitution Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 81 - Constitution
+CandidateContest	WI House District 81 (Democratic Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 81 - DEM
+CandidateContest	WI House District 81 (Democratic Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 81 - Democratic
+CandidateContest	WI House District 81 (Independent Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 81 - IND
+CandidateContest	WI House District 81 (Libertarian Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 81 - LIB
+CandidateContest	WI House District 81 (Republican Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 81 - REP
+CandidateContest	WI House District 81 (Republican Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 81 - Republican
+CandidateContest	WI House District 81 (Green Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 81 - WGR
+CandidateContest	WI House District 82	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 82
+CandidateContest	WI House District 82 (Constitution Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 82 - CON
+CandidateContest	WI House District 82 (Constitution Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 82 - Constitution
+CandidateContest	WI House District 82 (Democratic Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 82 - DEM
+CandidateContest	WI House District 82 (Democratic Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 82 - Democratic
+CandidateContest	WI House District 82 (Independent Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 82 - IND
+CandidateContest	WI House District 82 (Libertarian Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 82 - LIB
+CandidateContest	WI House District 82 (Republican Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 82 - REP
+CandidateContest	WI House District 82 (Republican Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 82 - Republican
+CandidateContest	WI House District 82 (Green Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 82 - WGR
+CandidateContest	WI House District 83	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 83
+CandidateContest	WI House District 83 (Constitution Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 83 - CON
+CandidateContest	WI House District 83 (Constitution Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 83 - Constitution
+CandidateContest	WI House District 83 (Democratic Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 83 - DEM
+CandidateContest	WI House District 83 (Democratic Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 83 - Democratic
+CandidateContest	WI House District 83 (Independent Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 83 - IND
+CandidateContest	WI House District 83 (Libertarian Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 83 - LIB
+CandidateContest	WI House District 83 (Republican Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 83 - REP
+CandidateContest	WI House District 83 (Republican Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 83 - Republican
+CandidateContest	WI House District 83 (Green Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 83 - WGR
+CandidateContest	WI House District 84	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 84
+CandidateContest	WI House District 84 (Constitution Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 84 - CON
+CandidateContest	WI House District 84 (Constitution Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 84 - Constitution
+CandidateContest	WI House District 84 (Democratic Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 84 - DEM
+CandidateContest	WI House District 84 (Democratic Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 84 - Democratic
+CandidateContest	WI House District 84 (Independent Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 84 - IND
+CandidateContest	WI House District 84 (Libertarian Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 84 - LIB
+CandidateContest	WI House District 84 (Republican Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 84 - REP
+CandidateContest	WI House District 84 (Republican Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 84 - Republican
+CandidateContest	WI House District 84 (Green Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 84 - WGR
+CandidateContest	WI House District 85	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 85
+CandidateContest	WI House District 85 (Constitution Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 85 - CON
+CandidateContest	WI House District 85 (Constitution Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 85 - Constitution
+CandidateContest	WI House District 85 (Democratic Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 85 - DEM
+CandidateContest	WI House District 85 (Democratic Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 85 - Democratic
+CandidateContest	WI House District 85 (Independent Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 85 - IND
+CandidateContest	WI House District 85 (Libertarian Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 85 - LIB
+CandidateContest	WI House District 85 (Republican Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 85 - REP
+CandidateContest	WI House District 85 (Republican Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 85 - Republican
+CandidateContest	WI House District 85 (Green Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 85 - WGR
+CandidateContest	WI House District 86	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 86
+CandidateContest	WI House District 86 (Constitution Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 86 - CON
+CandidateContest	WI House District 86 (Constitution Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 86 - Constitution
+CandidateContest	WI House District 86 (Democratic Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 86 - DEM
+CandidateContest	WI House District 86 (Democratic Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 86 - Democratic
+CandidateContest	WI House District 86 (Independent Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 86 - IND
+CandidateContest	WI House District 86 (Libertarian Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 86 - LIB
+CandidateContest	WI House District 86 (Republican Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 86 - REP
+CandidateContest	WI House District 86 (Republican Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 86 - Republican
+CandidateContest	WI House District 86 (Green Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 86 - WGR
+CandidateContest	WI House District 87	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 87
+CandidateContest	WI House District 87 (Constitution Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 87 - CON
+CandidateContest	WI House District 87 (Constitution Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 87 - Constitution
+CandidateContest	WI House District 87 (Democratic Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 87 - DEM
+CandidateContest	WI House District 87 (Democratic Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 87 - Democratic
+CandidateContest	WI House District 87 (Independent Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 87 - IND
+CandidateContest	WI House District 87 (Libertarian Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 87 - LIB
+CandidateContest	WI House District 87 (Republican Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 87 - REP
+CandidateContest	WI House District 87 (Republican Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 87 - Republican
+CandidateContest	WI House District 87 (Green Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 87 - WGR
+CandidateContest	WI House District 88	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 88
+CandidateContest	WI House District 88 (Constitution Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 88 - CON
+CandidateContest	WI House District 88 (Constitution Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 88 - Constitution
+CandidateContest	WI House District 88 (Democratic Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 88 - DEM
+CandidateContest	WI House District 88 (Democratic Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 88 - Democratic
+CandidateContest	WI House District 88 (Independent Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 88 - IND
+CandidateContest	WI House District 88 (Libertarian Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 88 - LIB
+CandidateContest	WI House District 88 (Republican Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 88 - REP
+CandidateContest	WI House District 88 (Republican Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 88 - Republican
+CandidateContest	WI House District 88 (Green Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 88 - WGR
+CandidateContest	WI House District 89	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 89
+CandidateContest	WI House District 89 (Constitution Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 89 - CON
+CandidateContest	WI House District 89 (Constitution Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 89 - Constitution
+CandidateContest	WI House District 89 (Democratic Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 89 - DEM
+CandidateContest	WI House District 89 (Democratic Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 89 - Democratic
+CandidateContest	WI House District 89 (Independent Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 89 - IND
+CandidateContest	WI House District 89 (Libertarian Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 89 - LIB
+CandidateContest	WI House District 89 (Republican Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 89 - REP
+CandidateContest	WI House District 89 (Republican Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 89 - Republican
+CandidateContest	WI House District 89 (Green Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 89 - WGR
+CandidateContest	WI House District 9	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 9
+CandidateContest	WI House District 9 (Constitution Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 9 - CON
+CandidateContest	WI House District 9 (Constitution Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 9 - Constitution
+CandidateContest	WI House District 9 (Democratic Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 9 - DEM
+CandidateContest	WI House District 9 (Democratic Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 9 - Democratic
+CandidateContest	WI House District 9 (Independent Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 9 - IND
+CandidateContest	WI House District 9 (Libertarian Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 9 - LIB
+CandidateContest	WI House District 9 (Republican Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 9 - REP
+CandidateContest	WI House District 9 (Republican Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 9 - Republican
+CandidateContest	WI House District 9 (Green Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 9 - WGR
+CandidateContest	WI House District 90	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 90
+CandidateContest	WI House District 90 (Constitution Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 90 - CON
+CandidateContest	WI House District 90 (Constitution Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 90 - Constitution
+CandidateContest	WI House District 90 (Democratic Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 90 - DEM
+CandidateContest	WI House District 90 (Democratic Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 90 - Democratic
+CandidateContest	WI House District 90 (Independent Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 90 - IND
+CandidateContest	WI House District 90 (Libertarian Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 90 - LIB
+CandidateContest	WI House District 90 (Republican Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 90 - REP
+CandidateContest	WI House District 90 (Republican Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 90 - Republican
+CandidateContest	WI House District 90 (Green Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 90 - WGR
+CandidateContest	WI House District 91	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 91
+CandidateContest	WI House District 91 (Constitution Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 91 - CON
+CandidateContest	WI House District 91 (Constitution Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 91 - Constitution
+CandidateContest	WI House District 91 (Democratic Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 91 - DEM
+CandidateContest	WI House District 91 (Democratic Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 91 - Democratic
+CandidateContest	WI House District 91 (Independent Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 91 - IND
+CandidateContest	WI House District 91 (Libertarian Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 91 - LIB
+CandidateContest	WI House District 91 (Republican Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 91 - REP
+CandidateContest	WI House District 91 (Republican Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 91 - Republican
+CandidateContest	WI House District 91 (Green Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 91 - WGR
+CandidateContest	WI House District 92	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 92
+CandidateContest	WI House District 92 (Constitution Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 92 - CON
+CandidateContest	WI House District 92 (Constitution Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 92 - Constitution
+CandidateContest	WI House District 92 (Democratic Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 92 - DEM
+CandidateContest	WI House District 92 (Democratic Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 92 - Democratic
+CandidateContest	WI House District 92 (Independent Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 92 - IND
+CandidateContest	WI House District 92 (Libertarian Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 92 - LIB
+CandidateContest	WI House District 92 (Republican Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 92 - REP
+CandidateContest	WI House District 92 (Republican Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 92 - Republican
+CandidateContest	WI House District 92 (Green Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 92 - WGR
+CandidateContest	WI House District 93	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 93
+CandidateContest	WI House District 93 (Constitution Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 93 - CON
+CandidateContest	WI House District 93 (Constitution Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 93 - Constitution
+CandidateContest	WI House District 93 (Democratic Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 93 - DEM
+CandidateContest	WI House District 93 (Democratic Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 93 - Democratic
+CandidateContest	WI House District 93 (Independent Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 93 - IND
+CandidateContest	WI House District 93 (Libertarian Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 93 - LIB
+CandidateContest	WI House District 93 (Republican Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 93 - REP
+CandidateContest	WI House District 93 (Republican Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 93 - Republican
+CandidateContest	WI House District 93 (Green Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 93 - WGR
+CandidateContest	WI House District 94	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 94
+CandidateContest	WI House District 94 (Constitution Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 94 - CON
+CandidateContest	WI House District 94 (Constitution Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 94 - Constitution
+CandidateContest	WI House District 94 (Democratic Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 94 - DEM
+CandidateContest	WI House District 94 (Democratic Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 94 - Democratic
+CandidateContest	WI House District 94 (Independent Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 94 - IND
+CandidateContest	WI House District 94 (Libertarian Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 94 - LIB
+CandidateContest	WI House District 94 (Republican Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 94 - REP
+CandidateContest	WI House District 94 (Republican Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 94 - Republican
+CandidateContest	WI House District 94 (Green Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 94 - WGR
+CandidateContest	WI House District 95	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 95
+CandidateContest	WI House District 95 (Constitution Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 95 - CON
+CandidateContest	WI House District 95 (Constitution Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 95 - Constitution
+CandidateContest	WI House District 95 (Democratic Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 95 - DEM
+CandidateContest	WI House District 95 (Democratic Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 95 - Democratic
+CandidateContest	WI House District 95 (Independent Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 95 - IND
+CandidateContest	WI House District 95 (Libertarian Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 95 - LIB
+CandidateContest	WI House District 95 (Republican Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 95 - REP
+CandidateContest	WI House District 95 (Republican Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 95 - Republican
+CandidateContest	WI House District 95 (Green Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 95 - WGR
+CandidateContest	WI House District 96	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 96
+CandidateContest	WI House District 96 (Constitution Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 96 - CON
+CandidateContest	WI House District 96 (Constitution Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 96 - Constitution
+CandidateContest	WI House District 96 (Democratic Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 96 - DEM
+CandidateContest	WI House District 96 (Democratic Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 96 - Democratic
+CandidateContest	WI House District 96 (Independent Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 96 - IND
+CandidateContest	WI House District 96 (Libertarian Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 96 - LIB
+CandidateContest	WI House District 96 (Republican Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 96 - REP
+CandidateContest	WI House District 96 (Republican Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 96 - Republican
+CandidateContest	WI House District 96 (Green Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 96 - WGR
+CandidateContest	WI House District 97	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 97
+CandidateContest	WI House District 97 (Constitution Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 97 - CON
+CandidateContest	WI House District 97 (Constitution Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 97 - Constitution
+CandidateContest	WI House District 97 (Democratic Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 97 - DEM
+CandidateContest	WI House District 97 (Democratic Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 97 - Democratic
+CandidateContest	WI House District 97 (Independent Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 97 - IND
+CandidateContest	WI House District 97 (Libertarian Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 97 - LIB
+CandidateContest	WI House District 97 (Republican Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 97 - REP
+CandidateContest	WI House District 97 (Republican Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 97 - Republican
+CandidateContest	WI House District 97 (Green Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 97 - WGR
+CandidateContest	WI House District 98	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 98
+CandidateContest	WI House District 98 (Constitution Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 98 - CON
+CandidateContest	WI House District 98 (Constitution Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 98 - Constitution
+CandidateContest	WI House District 98 (Democratic Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 98 - DEM
+CandidateContest	WI House District 98 (Democratic Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 98 - Democratic
+CandidateContest	WI House District 98 (Independent Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 98 - IND
+CandidateContest	WI House District 98 (Libertarian Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 98 - LIB
+CandidateContest	WI House District 98 (Republican Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 98 - REP
+CandidateContest	WI House District 98 (Republican Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 98 - Republican
+CandidateContest	WI House District 98 (Green Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 98 - WGR
+CandidateContest	WI House District 99	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 99
+CandidateContest	WI House District 99 (Constitution Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 99 - CON
+CandidateContest	WI House District 99 (Constitution Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 99 - Constitution
+CandidateContest	WI House District 99 (Democratic Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 99 - DEM
+CandidateContest	WI House District 99 (Democratic Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 99 - Democratic
+CandidateContest	WI House District 99 (Independent Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 99 - IND
+CandidateContest	WI House District 99 (Libertarian Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 99 - LIB
+CandidateContest	WI House District 99 (Republican Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 99 - REP
+CandidateContest	WI House District 99 (Republican Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 99 - Republican
+CandidateContest	WI House District 99 (Green Party)	REPRESENTATIVE TO THE ASSEMBLY DISTRICT 99 - WGR
+CandidateContest	WI Secretary of State	SECRETARY OF STATE
+CandidateContest	WI Secretary of State (Constitution Party)	SECRETARY OF STATE - CON
+CandidateContest	WI Secretary of State (Constitution Party)	SECRETARY OF STATE - Constitution
+CandidateContest	WI Secretary of State (Democratic Party)	SECRETARY OF STATE - DEM
+CandidateContest	WI Secretary of State (Democratic Party)	SECRETARY OF STATE - Democratic
+CandidateContest	WI Secretary of State (Independent Party)	SECRETARY OF STATE - IND
+CandidateContest	WI Secretary of State (Libertarian Party)	SECRETARY OF STATE - LIB
+CandidateContest	WI Secretary of State (Republican Party)	SECRETARY OF STATE - REP
+CandidateContest	WI Secretary of State (Republican Party)	SECRETARY OF STATE - Republican
+CandidateContest	WI Secretary of State (Green Party)	SECRETARY OF STATE - WGR
+CandidateContest	WI Senate District 1	STATE SENATOR DISTRICT 1
+CandidateContest	WI Senate District 1 (Constitution Party)	STATE SENATOR DISTRICT 1 - CON
+CandidateContest	WI Senate District 1 (Constitution Party)	STATE SENATOR DISTRICT 1 - Constitution
+CandidateContest	WI Senate District 1 (Democratic Party)	STATE SENATOR DISTRICT 1 - DEM
+CandidateContest	WI Senate District 1 (Democratic Party)	STATE SENATOR DISTRICT 1 - Democratic
+CandidateContest	WI Senate District 1 (Independent Party)	STATE SENATOR DISTRICT 1 - IND
+CandidateContest	WI Senate District 1 (Libertarian Party)	STATE SENATOR DISTRICT 1 - LIB
+CandidateContest	WI Senate District 1 (Republican Party)	STATE SENATOR DISTRICT 1 - REP
+CandidateContest	WI Senate District 1 (Republican Party)	STATE SENATOR DISTRICT 1 - Republican
+CandidateContest	WI Senate District 1 (Green Party)	STATE SENATOR DISTRICT 1 - WGR
+CandidateContest	WI Senate District 10	STATE SENATOR DISTRICT 10
+CandidateContest	WI Senate District 10 (Constitution Party)	STATE SENATOR DISTRICT 10 - CON
+CandidateContest	WI Senate District 10 (Constitution Party)	STATE SENATOR DISTRICT 10 - Constitution
+CandidateContest	WI Senate District 10 (Democratic Party)	STATE SENATOR DISTRICT 10 - DEM
+CandidateContest	WI Senate District 10 (Democratic Party)	STATE SENATOR DISTRICT 10 - Democratic
+CandidateContest	WI Senate District 10 (Independent Party)	STATE SENATOR DISTRICT 10 - IND
+CandidateContest	WI Senate District 10 (Libertarian Party)	STATE SENATOR DISTRICT 10 - LIB
+CandidateContest	WI Senate District 10 (Republican Party)	STATE SENATOR DISTRICT 10 - REP
+CandidateContest	WI Senate District 10 (Republican Party)	STATE SENATOR DISTRICT 10 - Republican
+CandidateContest	WI Senate District 10 (Green Party)	STATE SENATOR DISTRICT 10 - WGR
+CandidateContest	WI Senate District 11	STATE SENATOR DISTRICT 11
+CandidateContest	WI Senate District 11 (Constitution Party)	STATE SENATOR DISTRICT 11 - CON
+CandidateContest	WI Senate District 11 (Constitution Party)	STATE SENATOR DISTRICT 11 - Constitution
+CandidateContest	WI Senate District 11 (Democratic Party)	STATE SENATOR DISTRICT 11 - DEM
+CandidateContest	WI Senate District 11 (Democratic Party)	STATE SENATOR DISTRICT 11 - Democratic
+CandidateContest	WI Senate District 11 (Independent Party)	STATE SENATOR DISTRICT 11 - IND
+CandidateContest	WI Senate District 11 (Libertarian Party)	STATE SENATOR DISTRICT 11 - LIB
+CandidateContest	WI Senate District 11 (Republican Party)	STATE SENATOR DISTRICT 11 - REP
+CandidateContest	WI Senate District 11 (Republican Party)	STATE SENATOR DISTRICT 11 - Republican
+CandidateContest	WI Senate District 11 (Green Party)	STATE SENATOR DISTRICT 11 - WGR
+CandidateContest	WI Senate District 12	STATE SENATOR DISTRICT 12
+CandidateContest	WI Senate District 12 (Constitution Party)	STATE SENATOR DISTRICT 12 - CON
+CandidateContest	WI Senate District 12 (Constitution Party)	STATE SENATOR DISTRICT 12 - Constitution
+CandidateContest	WI Senate District 12 (Democratic Party)	STATE SENATOR DISTRICT 12 - DEM
+CandidateContest	WI Senate District 12 (Democratic Party)	STATE SENATOR DISTRICT 12 - Democratic
+CandidateContest	WI Senate District 12 (Independent Party)	STATE SENATOR DISTRICT 12 - IND
+CandidateContest	WI Senate District 12 (Libertarian Party)	STATE SENATOR DISTRICT 12 - LIB
+CandidateContest	WI Senate District 12 (Republican Party)	STATE SENATOR DISTRICT 12 - REP
+CandidateContest	WI Senate District 12 (Republican Party)	STATE SENATOR DISTRICT 12 - Republican
+CandidateContest	WI Senate District 12 (Green Party)	STATE SENATOR DISTRICT 12 - WGR
+CandidateContest	WI Senate District 13	STATE SENATOR DISTRICT 13
+CandidateContest	WI Senate District 13 (Constitution Party)	STATE SENATOR DISTRICT 13 - CON
+CandidateContest	WI Senate District 13 (Constitution Party)	STATE SENATOR DISTRICT 13 - Constitution
+CandidateContest	WI Senate District 13 (Democratic Party)	STATE SENATOR DISTRICT 13 - DEM
+CandidateContest	WI Senate District 13 (Democratic Party)	STATE SENATOR DISTRICT 13 - Democratic
+CandidateContest	WI Senate District 13 (Independent Party)	STATE SENATOR DISTRICT 13 - IND
+CandidateContest	WI Senate District 13 (Libertarian Party)	STATE SENATOR DISTRICT 13 - LIB
+CandidateContest	WI Senate District 13 (Republican Party)	STATE SENATOR DISTRICT 13 - REP
+CandidateContest	WI Senate District 13 (Republican Party)	STATE SENATOR DISTRICT 13 - Republican
+CandidateContest	WI Senate District 13 (Green Party)	STATE SENATOR DISTRICT 13 - WGR
+CandidateContest	WI Senate District 14	STATE SENATOR DISTRICT 14
+CandidateContest	WI Senate District 14 (Constitution Party)	STATE SENATOR DISTRICT 14 - CON
+CandidateContest	WI Senate District 14 (Constitution Party)	STATE SENATOR DISTRICT 14 - Constitution
+CandidateContest	WI Senate District 14 (Democratic Party)	STATE SENATOR DISTRICT 14 - DEM
+CandidateContest	WI Senate District 14 (Democratic Party)	STATE SENATOR DISTRICT 14 - Democratic
+CandidateContest	WI Senate District 14 (Independent Party)	STATE SENATOR DISTRICT 14 - IND
+CandidateContest	WI Senate District 14 (Libertarian Party)	STATE SENATOR DISTRICT 14 - LIB
+CandidateContest	WI Senate District 14 (Republican Party)	STATE SENATOR DISTRICT 14 - REP
+CandidateContest	WI Senate District 14 (Republican Party)	STATE SENATOR DISTRICT 14 - Republican
+CandidateContest	WI Senate District 14 (Green Party)	STATE SENATOR DISTRICT 14 - WGR
+CandidateContest	WI Senate District 15	STATE SENATOR DISTRICT 15
+CandidateContest	WI Senate District 15 (Constitution Party)	STATE SENATOR DISTRICT 15 - CON
+CandidateContest	WI Senate District 15 (Constitution Party)	STATE SENATOR DISTRICT 15 - Constitution
+CandidateContest	WI Senate District 15 (Democratic Party)	STATE SENATOR DISTRICT 15 - DEM
+CandidateContest	WI Senate District 15 (Democratic Party)	STATE SENATOR DISTRICT 15 - Democratic
+CandidateContest	WI Senate District 15 (Independent Party)	STATE SENATOR DISTRICT 15 - IND
+CandidateContest	WI Senate District 15 (Libertarian Party)	STATE SENATOR DISTRICT 15 - LIB
+CandidateContest	WI Senate District 15 (Republican Party)	STATE SENATOR DISTRICT 15 - REP
+CandidateContest	WI Senate District 15 (Republican Party)	STATE SENATOR DISTRICT 15 - Republican
+CandidateContest	WI Senate District 15 (Green Party)	STATE SENATOR DISTRICT 15 - WGR
+CandidateContest	WI Senate District 16	STATE SENATOR DISTRICT 16
+CandidateContest	WI Senate District 16 (Constitution Party)	STATE SENATOR DISTRICT 16 - CON
+CandidateContest	WI Senate District 16 (Constitution Party)	STATE SENATOR DISTRICT 16 - Constitution
+CandidateContest	WI Senate District 16 (Democratic Party)	STATE SENATOR DISTRICT 16 - DEM
+CandidateContest	WI Senate District 16 (Democratic Party)	STATE SENATOR DISTRICT 16 - Democratic
+CandidateContest	WI Senate District 16 (Independent Party)	STATE SENATOR DISTRICT 16 - IND
+CandidateContest	WI Senate District 16 (Libertarian Party)	STATE SENATOR DISTRICT 16 - LIB
+CandidateContest	WI Senate District 16 (Republican Party)	STATE SENATOR DISTRICT 16 - REP
+CandidateContest	WI Senate District 16 (Republican Party)	STATE SENATOR DISTRICT 16 - Republican
+CandidateContest	WI Senate District 16 (Green Party)	STATE SENATOR DISTRICT 16 - WGR
+CandidateContest	WI Senate District 17	STATE SENATOR DISTRICT 17
+CandidateContest	WI Senate District 17 (Constitution Party)	STATE SENATOR DISTRICT 17 - CON
+CandidateContest	WI Senate District 17 (Constitution Party)	STATE SENATOR DISTRICT 17 - Constitution
+CandidateContest	WI Senate District 17 (Democratic Party)	STATE SENATOR DISTRICT 17 - DEM
+CandidateContest	WI Senate District 17 (Democratic Party)	STATE SENATOR DISTRICT 17 - Democratic
+CandidateContest	WI Senate District 17 (Independent Party)	STATE SENATOR DISTRICT 17 - IND
+CandidateContest	WI Senate District 17 (Libertarian Party)	STATE SENATOR DISTRICT 17 - LIB
+CandidateContest	WI Senate District 17 (Republican Party)	STATE SENATOR DISTRICT 17 - REP
+CandidateContest	WI Senate District 17 (Republican Party)	STATE SENATOR DISTRICT 17 - Republican
+CandidateContest	WI Senate District 17 (Green Party)	STATE SENATOR DISTRICT 17 - WGR
+CandidateContest	WI Senate District 18	STATE SENATOR DISTRICT 18
+CandidateContest	WI Senate District 18 (Constitution Party)	STATE SENATOR DISTRICT 18 - CON
+CandidateContest	WI Senate District 18 (Constitution Party)	STATE SENATOR DISTRICT 18 - Constitution
+CandidateContest	WI Senate District 18 (Democratic Party)	STATE SENATOR DISTRICT 18 - DEM
+CandidateContest	WI Senate District 18 (Democratic Party)	STATE SENATOR DISTRICT 18 - Democratic
+CandidateContest	WI Senate District 18 (Independent Party)	STATE SENATOR DISTRICT 18 - IND
+CandidateContest	WI Senate District 18 (Libertarian Party)	STATE SENATOR DISTRICT 18 - LIB
+CandidateContest	WI Senate District 18 (Republican Party)	STATE SENATOR DISTRICT 18 - REP
+CandidateContest	WI Senate District 18 (Republican Party)	STATE SENATOR DISTRICT 18 - Republican
+CandidateContest	WI Senate District 18 (Green Party)	STATE SENATOR DISTRICT 18 - WGR
+CandidateContest	WI Senate District 19	STATE SENATOR DISTRICT 19
+CandidateContest	WI Senate District 19 (Constitution Party)	STATE SENATOR DISTRICT 19 - CON
+CandidateContest	WI Senate District 19 (Constitution Party)	STATE SENATOR DISTRICT 19 - Constitution
+CandidateContest	WI Senate District 19 (Democratic Party)	STATE SENATOR DISTRICT 19 - DEM
+CandidateContest	WI Senate District 19 (Democratic Party)	STATE SENATOR DISTRICT 19 - Democratic
+CandidateContest	WI Senate District 19 (Independent Party)	STATE SENATOR DISTRICT 19 - IND
+CandidateContest	WI Senate District 19 (Libertarian Party)	STATE SENATOR DISTRICT 19 - LIB
+CandidateContest	WI Senate District 19 (Republican Party)	STATE SENATOR DISTRICT 19 - REP
+CandidateContest	WI Senate District 19 (Republican Party)	STATE SENATOR DISTRICT 19 - Republican
+CandidateContest	WI Senate District 19 (Green Party)	STATE SENATOR DISTRICT 19 - WGR
+CandidateContest	WI Senate District 2	STATE SENATOR DISTRICT 2
+CandidateContest	WI Senate District 2 (Constitution Party)	STATE SENATOR DISTRICT 2 - CON
+CandidateContest	WI Senate District 2 (Constitution Party)	STATE SENATOR DISTRICT 2 - Constitution
+CandidateContest	WI Senate District 2 (Democratic Party)	STATE SENATOR DISTRICT 2 - DEM
+CandidateContest	WI Senate District 2 (Democratic Party)	STATE SENATOR DISTRICT 2 - Democratic
+CandidateContest	WI Senate District 2 (Independent Party)	STATE SENATOR DISTRICT 2 - IND
+CandidateContest	WI Senate District 2 (Libertarian Party)	STATE SENATOR DISTRICT 2 - LIB
+CandidateContest	WI Senate District 2 (Republican Party)	STATE SENATOR DISTRICT 2 - REP
+CandidateContest	WI Senate District 2 (Republican Party)	STATE SENATOR DISTRICT 2 - Republican
+CandidateContest	WI Senate District 2 (Green Party)	STATE SENATOR DISTRICT 2 - WGR
+CandidateContest	WI Senate District 20	STATE SENATOR DISTRICT 20
+CandidateContest	WI Senate District 20 (Constitution Party)	STATE SENATOR DISTRICT 20 - CON
+CandidateContest	WI Senate District 20 (Constitution Party)	STATE SENATOR DISTRICT 20 - Constitution
+CandidateContest	WI Senate District 20 (Democratic Party)	STATE SENATOR DISTRICT 20 - DEM
+CandidateContest	WI Senate District 20 (Democratic Party)	STATE SENATOR DISTRICT 20 - Democratic
+CandidateContest	WI Senate District 20 (Independent Party)	STATE SENATOR DISTRICT 20 - IND
+CandidateContest	WI Senate District 20 (Libertarian Party)	STATE SENATOR DISTRICT 20 - LIB
+CandidateContest	WI Senate District 20 (Republican Party)	STATE SENATOR DISTRICT 20 - REP
+CandidateContest	WI Senate District 20 (Republican Party)	STATE SENATOR DISTRICT 20 - Republican
+CandidateContest	WI Senate District 20 (Green Party)	STATE SENATOR DISTRICT 20 - WGR
+CandidateContest	WI Senate District 21	STATE SENATOR DISTRICT 21
+CandidateContest	WI Senate District 21 (Constitution Party)	STATE SENATOR DISTRICT 21 - CON
+CandidateContest	WI Senate District 21 (Constitution Party)	STATE SENATOR DISTRICT 21 - Constitution
+CandidateContest	WI Senate District 21 (Democratic Party)	STATE SENATOR DISTRICT 21 - DEM
+CandidateContest	WI Senate District 21 (Democratic Party)	STATE SENATOR DISTRICT 21 - Democratic
+CandidateContest	WI Senate District 21 (Independent Party)	STATE SENATOR DISTRICT 21 - IND
+CandidateContest	WI Senate District 21 (Libertarian Party)	STATE SENATOR DISTRICT 21 - LIB
+CandidateContest	WI Senate District 21 (Republican Party)	STATE SENATOR DISTRICT 21 - REP
+CandidateContest	WI Senate District 21 (Republican Party)	STATE SENATOR DISTRICT 21 - Republican
+CandidateContest	WI Senate District 21 (Green Party)	STATE SENATOR DISTRICT 21 - WGR
+CandidateContest	WI Senate District 22	STATE SENATOR DISTRICT 22
+CandidateContest	WI Senate District 22 (Constitution Party)	STATE SENATOR DISTRICT 22 - CON
+CandidateContest	WI Senate District 22 (Constitution Party)	STATE SENATOR DISTRICT 22 - Constitution
+CandidateContest	WI Senate District 22 (Democratic Party)	STATE SENATOR DISTRICT 22 - DEM
+CandidateContest	WI Senate District 22 (Democratic Party)	STATE SENATOR DISTRICT 22 - Democratic
+CandidateContest	WI Senate District 22 (Independent Party)	STATE SENATOR DISTRICT 22 - IND
+CandidateContest	WI Senate District 22 (Libertarian Party)	STATE SENATOR DISTRICT 22 - LIB
+CandidateContest	WI Senate District 22 (Republican Party)	STATE SENATOR DISTRICT 22 - REP
+CandidateContest	WI Senate District 22 (Republican Party)	STATE SENATOR DISTRICT 22 - Republican
+CandidateContest	WI Senate District 22 (Green Party)	STATE SENATOR DISTRICT 22 - WGR
+CandidateContest	WI Senate District 23	STATE SENATOR DISTRICT 23
+CandidateContest	WI Senate District 23 (Constitution Party)	STATE SENATOR DISTRICT 23 - CON
+CandidateContest	WI Senate District 23 (Constitution Party)	STATE SENATOR DISTRICT 23 - Constitution
+CandidateContest	WI Senate District 23 (Democratic Party)	STATE SENATOR DISTRICT 23 - DEM
+CandidateContest	WI Senate District 23 (Democratic Party)	STATE SENATOR DISTRICT 23 - Democratic
+CandidateContest	WI Senate District 23 (Independent Party)	STATE SENATOR DISTRICT 23 - IND
+CandidateContest	WI Senate District 23 (Libertarian Party)	STATE SENATOR DISTRICT 23 - LIB
+CandidateContest	WI Senate District 23 (Republican Party)	STATE SENATOR DISTRICT 23 - REP
+CandidateContest	WI Senate District 23 (Republican Party)	STATE SENATOR DISTRICT 23 - Republican
+CandidateContest	WI Senate District 23 (Green Party)	STATE SENATOR DISTRICT 23 - WGR
+CandidateContest	WI Senate District 24	STATE SENATOR DISTRICT 24
+CandidateContest	WI Senate District 24 (Constitution Party)	STATE SENATOR DISTRICT 24 - CON
+CandidateContest	WI Senate District 24 (Constitution Party)	STATE SENATOR DISTRICT 24 - Constitution
+CandidateContest	WI Senate District 24 (Democratic Party)	STATE SENATOR DISTRICT 24 - DEM
+CandidateContest	WI Senate District 24 (Democratic Party)	STATE SENATOR DISTRICT 24 - Democratic
+CandidateContest	WI Senate District 24 (Independent Party)	STATE SENATOR DISTRICT 24 - IND
+CandidateContest	WI Senate District 24 (Libertarian Party)	STATE SENATOR DISTRICT 24 - LIB
+CandidateContest	WI Senate District 24 (Republican Party)	STATE SENATOR DISTRICT 24 - REP
+CandidateContest	WI Senate District 24 (Republican Party)	STATE SENATOR DISTRICT 24 - Republican
+CandidateContest	WI Senate District 24 (Green Party)	STATE SENATOR DISTRICT 24 - WGR
+CandidateContest	WI Senate District 25	STATE SENATOR DISTRICT 25
+CandidateContest	WI Senate District 25 (Constitution Party)	STATE SENATOR DISTRICT 25 - CON
+CandidateContest	WI Senate District 25 (Constitution Party)	STATE SENATOR DISTRICT 25 - Constitution
+CandidateContest	WI Senate District 25 (Democratic Party)	STATE SENATOR DISTRICT 25 - DEM
+CandidateContest	WI Senate District 25 (Democratic Party)	STATE SENATOR DISTRICT 25 - Democratic
+CandidateContest	WI Senate District 25 (Independent Party)	STATE SENATOR DISTRICT 25 - IND
+CandidateContest	WI Senate District 25 (Libertarian Party)	STATE SENATOR DISTRICT 25 - LIB
+CandidateContest	WI Senate District 25 (Republican Party)	STATE SENATOR DISTRICT 25 - REP
+CandidateContest	WI Senate District 25 (Republican Party)	STATE SENATOR DISTRICT 25 - Republican
+CandidateContest	WI Senate District 25 (Green Party)	STATE SENATOR DISTRICT 25 - WGR
+CandidateContest	WI Senate District 26	STATE SENATOR DISTRICT 26
+CandidateContest	WI Senate District 26 (Constitution Party)	STATE SENATOR DISTRICT 26 - CON
+CandidateContest	WI Senate District 26 (Constitution Party)	STATE SENATOR DISTRICT 26 - Constitution
+CandidateContest	WI Senate District 26 (Democratic Party)	STATE SENATOR DISTRICT 26 - DEM
+CandidateContest	WI Senate District 26 (Democratic Party)	STATE SENATOR DISTRICT 26 - Democratic
+CandidateContest	WI Senate District 26 (Independent Party)	STATE SENATOR DISTRICT 26 - IND
+CandidateContest	WI Senate District 26 (Libertarian Party)	STATE SENATOR DISTRICT 26 - LIB
+CandidateContest	WI Senate District 26 (Republican Party)	STATE SENATOR DISTRICT 26 - REP
+CandidateContest	WI Senate District 26 (Republican Party)	STATE SENATOR DISTRICT 26 - Republican
+CandidateContest	WI Senate District 26 (Green Party)	STATE SENATOR DISTRICT 26 - WGR
+CandidateContest	WI Senate District 27	STATE SENATOR DISTRICT 27
+CandidateContest	WI Senate District 27 (Constitution Party)	STATE SENATOR DISTRICT 27 - CON
+CandidateContest	WI Senate District 27 (Constitution Party)	STATE SENATOR DISTRICT 27 - Constitution
+CandidateContest	WI Senate District 27 (Democratic Party)	STATE SENATOR DISTRICT 27 - DEM
+CandidateContest	WI Senate District 27 (Democratic Party)	STATE SENATOR DISTRICT 27 - Democratic
+CandidateContest	WI Senate District 27 (Independent Party)	STATE SENATOR DISTRICT 27 - IND
+CandidateContest	WI Senate District 27 (Libertarian Party)	STATE SENATOR DISTRICT 27 - LIB
+CandidateContest	WI Senate District 27 (Republican Party)	STATE SENATOR DISTRICT 27 - REP
+CandidateContest	WI Senate District 27 (Republican Party)	STATE SENATOR DISTRICT 27 - Republican
+CandidateContest	WI Senate District 27 (Green Party)	STATE SENATOR DISTRICT 27 - WGR
+CandidateContest	WI Senate District 28	STATE SENATOR DISTRICT 28
+CandidateContest	WI Senate District 28 (Constitution Party)	STATE SENATOR DISTRICT 28 - CON
+CandidateContest	WI Senate District 28 (Constitution Party)	STATE SENATOR DISTRICT 28 - Constitution
+CandidateContest	WI Senate District 28 (Democratic Party)	STATE SENATOR DISTRICT 28 - DEM
+CandidateContest	WI Senate District 28 (Democratic Party)	STATE SENATOR DISTRICT 28 - Democratic
+CandidateContest	WI Senate District 28 (Independent Party)	STATE SENATOR DISTRICT 28 - IND
+CandidateContest	WI Senate District 28 (Libertarian Party)	STATE SENATOR DISTRICT 28 - LIB
+CandidateContest	WI Senate District 28 (Republican Party)	STATE SENATOR DISTRICT 28 - REP
+CandidateContest	WI Senate District 28 (Republican Party)	STATE SENATOR DISTRICT 28 - Republican
+CandidateContest	WI Senate District 28 (Green Party)	STATE SENATOR DISTRICT 28 - WGR
+CandidateContest	WI Senate District 29	STATE SENATOR DISTRICT 29
+CandidateContest	WI Senate District 29 (Constitution Party)	STATE SENATOR DISTRICT 29 - CON
+CandidateContest	WI Senate District 29 (Constitution Party)	STATE SENATOR DISTRICT 29 - Constitution
+CandidateContest	WI Senate District 29 (Democratic Party)	STATE SENATOR DISTRICT 29 - DEM
+CandidateContest	WI Senate District 29 (Democratic Party)	STATE SENATOR DISTRICT 29 - Democratic
+CandidateContest	WI Senate District 29 (Independent Party)	STATE SENATOR DISTRICT 29 - IND
+CandidateContest	WI Senate District 29 (Libertarian Party)	STATE SENATOR DISTRICT 29 - LIB
+CandidateContest	WI Senate District 29 (Republican Party)	STATE SENATOR DISTRICT 29 - REP
+CandidateContest	WI Senate District 29 (Republican Party)	STATE SENATOR DISTRICT 29 - Republican
+CandidateContest	WI Senate District 29 (Green Party)	STATE SENATOR DISTRICT 29 - WGR
+CandidateContest	WI Senate District 3	STATE SENATOR DISTRICT 3
+CandidateContest	WI Senate District 3 (Constitution Party)	STATE SENATOR DISTRICT 3 - CON
+CandidateContest	WI Senate District 3 (Constitution Party)	STATE SENATOR DISTRICT 3 - Constitution
+CandidateContest	WI Senate District 3 (Democratic Party)	STATE SENATOR DISTRICT 3 - DEM
+CandidateContest	WI Senate District 3 (Democratic Party)	STATE SENATOR DISTRICT 3 - Democratic
+CandidateContest	WI Senate District 3 (Independent Party)	STATE SENATOR DISTRICT 3 - IND
+CandidateContest	WI Senate District 3 (Libertarian Party)	STATE SENATOR DISTRICT 3 - LIB
+CandidateContest	WI Senate District 3 (Republican Party)	STATE SENATOR DISTRICT 3 - REP
+CandidateContest	WI Senate District 3 (Republican Party)	STATE SENATOR DISTRICT 3 - Republican
+CandidateContest	WI Senate District 3 (Green Party)	STATE SENATOR DISTRICT 3 - WGR
+CandidateContest	WI Senate District 30	STATE SENATOR DISTRICT 30
+CandidateContest	WI Senate District 30 (Constitution Party)	STATE SENATOR DISTRICT 30 - CON
+CandidateContest	WI Senate District 30 (Constitution Party)	STATE SENATOR DISTRICT 30 - Constitution
+CandidateContest	WI Senate District 30 (Democratic Party)	STATE SENATOR DISTRICT 30 - DEM
+CandidateContest	WI Senate District 30 (Democratic Party)	STATE SENATOR DISTRICT 30 - Democratic
+CandidateContest	WI Senate District 30 (Independent Party)	STATE SENATOR DISTRICT 30 - IND
+CandidateContest	WI Senate District 30 (Libertarian Party)	STATE SENATOR DISTRICT 30 - LIB
+CandidateContest	WI Senate District 30 (Republican Party)	STATE SENATOR DISTRICT 30 - REP
+CandidateContest	WI Senate District 30 (Republican Party)	STATE SENATOR DISTRICT 30 - Republican
+CandidateContest	WI Senate District 30 (Green Party)	STATE SENATOR DISTRICT 30 - WGR
+CandidateContest	WI Senate District 31	STATE SENATOR DISTRICT 31
+CandidateContest	WI Senate District 31 (Constitution Party)	STATE SENATOR DISTRICT 31 - CON
+CandidateContest	WI Senate District 31 (Constitution Party)	STATE SENATOR DISTRICT 31 - Constitution
+CandidateContest	WI Senate District 31 (Democratic Party)	STATE SENATOR DISTRICT 31 - DEM
+CandidateContest	WI Senate District 31 (Democratic Party)	STATE SENATOR DISTRICT 31 - Democratic
+CandidateContest	WI Senate District 31 (Independent Party)	STATE SENATOR DISTRICT 31 - IND
+CandidateContest	WI Senate District 31 (Libertarian Party)	STATE SENATOR DISTRICT 31 - LIB
+CandidateContest	WI Senate District 31 (Republican Party)	STATE SENATOR DISTRICT 31 - REP
+CandidateContest	WI Senate District 31 (Republican Party)	STATE SENATOR DISTRICT 31 - Republican
+CandidateContest	WI Senate District 31 (Green Party)	STATE SENATOR DISTRICT 31 - WGR
+CandidateContest	WI Senate District 32	STATE SENATOR DISTRICT 32
+CandidateContest	WI Senate District 32 (Constitution Party)	STATE SENATOR DISTRICT 32 - CON
+CandidateContest	WI Senate District 32 (Constitution Party)	STATE SENATOR DISTRICT 32 - Constitution
+CandidateContest	WI Senate District 32 (Democratic Party)	STATE SENATOR DISTRICT 32 - DEM
+CandidateContest	WI Senate District 32 (Democratic Party)	STATE SENATOR DISTRICT 32 - Democratic
+CandidateContest	WI Senate District 32 (Independent Party)	STATE SENATOR DISTRICT 32 - IND
+CandidateContest	WI Senate District 32 (Libertarian Party)	STATE SENATOR DISTRICT 32 - LIB
+CandidateContest	WI Senate District 32 (Republican Party)	STATE SENATOR DISTRICT 32 - REP
+CandidateContest	WI Senate District 32 (Republican Party)	STATE SENATOR DISTRICT 32 - Republican
+CandidateContest	WI Senate District 32 (Green Party)	STATE SENATOR DISTRICT 32 - WGR
+CandidateContest	WI Senate District 33	STATE SENATOR DISTRICT 33
+CandidateContest	WI Senate District 33 (Constitution Party)	STATE SENATOR DISTRICT 33 - CON
+CandidateContest	WI Senate District 33 (Constitution Party)	STATE SENATOR DISTRICT 33 - Constitution
+CandidateContest	WI Senate District 33 (Democratic Party)	STATE SENATOR DISTRICT 33 - DEM
+CandidateContest	WI Senate District 33 (Democratic Party)	STATE SENATOR DISTRICT 33 - Democratic
+CandidateContest	WI Senate District 33 (Independent Party)	STATE SENATOR DISTRICT 33 - IND
+CandidateContest	WI Senate District 33 (Libertarian Party)	STATE SENATOR DISTRICT 33 - LIB
+CandidateContest	WI Senate District 33 (Republican Party)	STATE SENATOR DISTRICT 33 - REP
+CandidateContest	WI Senate District 33 (Republican Party)	STATE SENATOR DISTRICT 33 - Republican
+CandidateContest	WI Senate District 33 (Green Party)	STATE SENATOR DISTRICT 33 - WGR
+CandidateContest	WI Senate District 4	STATE SENATOR DISTRICT 4
+CandidateContest	WI Senate District 4 (Constitution Party)	STATE SENATOR DISTRICT 4 - CON
+CandidateContest	WI Senate District 4 (Constitution Party)	STATE SENATOR DISTRICT 4 - Constitution
+CandidateContest	WI Senate District 4 (Democratic Party)	STATE SENATOR DISTRICT 4 - DEM
+CandidateContest	WI Senate District 4 (Democratic Party)	STATE SENATOR DISTRICT 4 - Democratic
+CandidateContest	WI Senate District 4 (Independent Party)	STATE SENATOR DISTRICT 4 - IND
+CandidateContest	WI Senate District 4 (Libertarian Party)	STATE SENATOR DISTRICT 4 - LIB
+CandidateContest	WI Senate District 4 (Republican Party)	STATE SENATOR DISTRICT 4 - REP
+CandidateContest	WI Senate District 4 (Republican Party)	STATE SENATOR DISTRICT 4 - Republican
+CandidateContest	WI Senate District 4 (Green Party)	STATE SENATOR DISTRICT 4 - WGR
+CandidateContest	WI Senate District 5	STATE SENATOR DISTRICT 5
+CandidateContest	WI Senate District 5 (Constitution Party)	STATE SENATOR DISTRICT 5 - CON
+CandidateContest	WI Senate District 5 (Constitution Party)	STATE SENATOR DISTRICT 5 - Constitution
+CandidateContest	WI Senate District 5 (Democratic Party)	STATE SENATOR DISTRICT 5 - DEM
+CandidateContest	WI Senate District 5 (Democratic Party)	STATE SENATOR DISTRICT 5 - Democratic
+CandidateContest	WI Senate District 5 (Independent Party)	STATE SENATOR DISTRICT 5 - IND
+CandidateContest	WI Senate District 5 (Libertarian Party)	STATE SENATOR DISTRICT 5 - LIB
+CandidateContest	WI Senate District 5 (Republican Party)	STATE SENATOR DISTRICT 5 - REP
+CandidateContest	WI Senate District 5 (Republican Party)	STATE SENATOR DISTRICT 5 - Republican
+CandidateContest	WI Senate District 5 (Green Party)	STATE SENATOR DISTRICT 5 - WGR
+CandidateContest	WI Senate District 6	STATE SENATOR DISTRICT 6
+CandidateContest	WI Senate District 6 (Constitution Party)	STATE SENATOR DISTRICT 6 - CON
+CandidateContest	WI Senate District 6 (Constitution Party)	STATE SENATOR DISTRICT 6 - Constitution
+CandidateContest	WI Senate District 6 (Democratic Party)	STATE SENATOR DISTRICT 6 - DEM
+CandidateContest	WI Senate District 6 (Democratic Party)	STATE SENATOR DISTRICT 6 - Democratic
+CandidateContest	WI Senate District 6 (Independent Party)	STATE SENATOR DISTRICT 6 - IND
+CandidateContest	WI Senate District 6 (Libertarian Party)	STATE SENATOR DISTRICT 6 - LIB
+CandidateContest	WI Senate District 6 (Republican Party)	STATE SENATOR DISTRICT 6 - REP
+CandidateContest	WI Senate District 6 (Republican Party)	STATE SENATOR DISTRICT 6 - Republican
+CandidateContest	WI Senate District 6 (Green Party)	STATE SENATOR DISTRICT 6 - WGR
+CandidateContest	WI Senate District 7	STATE SENATOR DISTRICT 7
+CandidateContest	WI Senate District 7 (Constitution Party)	STATE SENATOR DISTRICT 7 - CON
+CandidateContest	WI Senate District 7 (Constitution Party)	STATE SENATOR DISTRICT 7 - Constitution
+CandidateContest	WI Senate District 7 (Democratic Party)	STATE SENATOR DISTRICT 7 - DEM
+CandidateContest	WI Senate District 7 (Democratic Party)	STATE SENATOR DISTRICT 7 - Democratic
+CandidateContest	WI Senate District 7 (Independent Party)	STATE SENATOR DISTRICT 7 - IND
+CandidateContest	WI Senate District 7 (Libertarian Party)	STATE SENATOR DISTRICT 7 - LIB
+CandidateContest	WI Senate District 7 (Republican Party)	STATE SENATOR DISTRICT 7 - REP
+CandidateContest	WI Senate District 7 (Republican Party)	STATE SENATOR DISTRICT 7 - Republican
+CandidateContest	WI Senate District 7 (Green Party)	STATE SENATOR DISTRICT 7 - WGR
+CandidateContest	WI Senate District 8	STATE SENATOR DISTRICT 8
+CandidateContest	WI Senate District 8 (Constitution Party)	STATE SENATOR DISTRICT 8 - CON
+CandidateContest	WI Senate District 8 (Constitution Party)	STATE SENATOR DISTRICT 8 - Constitution
+CandidateContest	WI Senate District 8 (Democratic Party)	STATE SENATOR DISTRICT 8 - DEM
+CandidateContest	WI Senate District 8 (Democratic Party)	STATE SENATOR DISTRICT 8 - Democratic
+CandidateContest	WI Senate District 8 (Independent Party)	STATE SENATOR DISTRICT 8 - IND
+CandidateContest	WI Senate District 8 (Libertarian Party)	STATE SENATOR DISTRICT 8 - LIB
+CandidateContest	WI Senate District 8 (Republican Party)	STATE SENATOR DISTRICT 8 - REP
+CandidateContest	WI Senate District 8 (Republican Party)	STATE SENATOR DISTRICT 8 - Republican
+CandidateContest	WI Senate District 8 (Green Party)	STATE SENATOR DISTRICT 8 - WGR
+CandidateContest	WI Senate District 9	STATE SENATOR DISTRICT 9
+CandidateContest	WI Senate District 9 (Constitution Party)	STATE SENATOR DISTRICT 9 - CON
+CandidateContest	WI Senate District 9 (Constitution Party)	STATE SENATOR DISTRICT 9 - Constitution
+CandidateContest	WI Senate District 9 (Democratic Party)	STATE SENATOR DISTRICT 9 - DEM
+CandidateContest	WI Senate District 9 (Democratic Party)	STATE SENATOR DISTRICT 9 - Democratic
+CandidateContest	WI Senate District 9 (Independent Party)	STATE SENATOR DISTRICT 9 - IND
+CandidateContest	WI Senate District 9 (Libertarian Party)	STATE SENATOR DISTRICT 9 - LIB
+CandidateContest	WI Senate District 9 (Republican Party)	STATE SENATOR DISTRICT 9 - REP
+CandidateContest	WI Senate District 9 (Republican Party)	STATE SENATOR DISTRICT 9 - Republican
+CandidateContest	WI Senate District 9 (Green Party)	STATE SENATOR DISTRICT 9 - WGR
+CandidateContest	WI State Treasurer	STATE TREASURER
+CandidateContest	WI State Treasurer (Constitution Party)	STATE TREASURER - CON
+CandidateContest	WI State Treasurer (Constitution Party)	STATE TREASURER - Constitution
+CandidateContest	WI State Treasurer (Democratic Party)	STATE TREASURER - DEM
+CandidateContest	WI State Treasurer (Democratic Party)	STATE TREASURER - Democratic
+CandidateContest	WI State Treasurer (Independent Party)	STATE TREASURER - IND
+CandidateContest	WI State Treasurer (Libertarian Party)	STATE TREASURER - LIB
+CandidateContest	WI State Treasurer (Republican Party)	STATE TREASURER - REP
+CandidateContest	WI State Treasurer (Republican Party)	STATE TREASURER - Republican
+CandidateContest	WI State Treasurer (Green Party)	STATE TREASURER - WGR
+CandidateContest	US Senate WI	UNITED STATES SENATOR
+CandidateContest	US Senate WI (Constitution Party)	UNITED STATES SENATOR - CON
+CandidateContest	US Senate WI (Constitution Party)	UNITED STATES SENATOR - Constitution
+CandidateContest	US Senate WI (Democratic Party)	UNITED STATES SENATOR - DEM
+CandidateContest	US Senate WI (Democratic Party)	UNITED STATES SENATOR - Democratic
+CandidateContest	US Senate WI (Independent Party)	UNITED STATES SENATOR - IND
+CandidateContest	US Senate WI (Libertarian Party)	UNITED STATES SENATOR - LIB
+CandidateContest	US Senate WI (Republican Party)	UNITED STATES SENATOR - REP
+CandidateContest	US Senate WI (Republican Party)	UNITED STATES SENATOR - Republican
+CandidateContest	US Senate WI (Green Party)	UNITED STATES SENATOR - WGR
+ReportingUnit	Wisconsin;Adams County	ADAMS
+ReportingUnit	Wisconsin;Adams County	Adams
+ReportingUnit	Wisconsin;Ashland County	ASHLAND
+ReportingUnit	Wisconsin;Ashland County	Ashland
+ReportingUnit	Wisconsin;Barron County	BARRON
+ReportingUnit	Wisconsin;Barron County	Barron
+ReportingUnit	Wisconsin;Bayfield County	BAYFIELD
+ReportingUnit	Wisconsin;Bayfield County	Bayfield
+ReportingUnit	Wisconsin;Brown County	BROWN
+ReportingUnit	Wisconsin;Brown County	Brown
+ReportingUnit	Wisconsin;Buffalo County	BUFFALO
+ReportingUnit	Wisconsin;Buffalo County	Buffalo
+ReportingUnit	Wisconsin;Burnett County	BURNETT
+ReportingUnit	Wisconsin;Burnett County	Burnett
+ReportingUnit	Wisconsin;Calumet County	CALUMET
+ReportingUnit	Wisconsin;Calumet County	Calumet
+ReportingUnit	Wisconsin;Chippewa County	CHIPPEWA
+ReportingUnit	Wisconsin;Chippewa County	Chippewa
+ReportingUnit	Wisconsin;Clark County	CLARK
+ReportingUnit	Wisconsin;Clark County	Clark
+ReportingUnit	Wisconsin;Columbia County	COLUMBIA
+ReportingUnit	Wisconsin;Columbia County	Columbia
+ReportingUnit	Wisconsin;Crawford County	CRAWFORD
+ReportingUnit	Wisconsin;Crawford County	Crawford
+ReportingUnit	Wisconsin;Dane County	DANE
+ReportingUnit	Wisconsin;Dane County	Dane
+ReportingUnit	Wisconsin;Dodge County	DODGE
+ReportingUnit	Wisconsin;Dodge County	Dodge
+ReportingUnit	Wisconsin;Door County	DOOR
+ReportingUnit	Wisconsin;Door County	Door
+ReportingUnit	Wisconsin;Douglas County	DOUGLAS
+ReportingUnit	Wisconsin;Douglas County	Douglas
+ReportingUnit	Wisconsin;Dunn County	DUNN
+ReportingUnit	Wisconsin;Dunn County	Dunn
+ReportingUnit	Wisconsin;Eau Claire County	EAU CLAIRE
+ReportingUnit	Wisconsin;Eau Claire County	Eau Claire
+ReportingUnit	Wisconsin;Florence County	FLORENCE
+ReportingUnit	Wisconsin;Florence County	Florence
+ReportingUnit	Wisconsin;Fond du Lac County	FOND DU LAC
+ReportingUnit	Wisconsin;Fond du Lac County	Fond du Lac
+ReportingUnit	Wisconsin;Forest County	FOREST
+ReportingUnit	Wisconsin;Forest County	Forest
+ReportingUnit	Wisconsin;Grant County	GRANT
+ReportingUnit	Wisconsin;Grant County	Grant
+ReportingUnit	Wisconsin;Green County	GREEN
+ReportingUnit	Wisconsin;Green County	Green
+ReportingUnit	Wisconsin;Green Lake County	GREEN LAKE
+ReportingUnit	Wisconsin;Green Lake County	Green Lake
+ReportingUnit	Wisconsin;Iowa County	IOWA
+ReportingUnit	Wisconsin;Iowa County	Iowa
+ReportingUnit	Wisconsin;Iron County	IRON
+ReportingUnit	Wisconsin;Iron County	Iron
+ReportingUnit	Wisconsin;Jackson County	JACKSON
+ReportingUnit	Wisconsin;Jackson County	Jackson
+ReportingUnit	Wisconsin;Jefferson County	JEFFERSON
+ReportingUnit	Wisconsin;Jefferson County	Jefferson
+ReportingUnit	Wisconsin;Juneau County	JUNEAU
+ReportingUnit	Wisconsin;Juneau County	Juneau
+ReportingUnit	Wisconsin;Kenosha County	KENOSHA
+ReportingUnit	Wisconsin;Kenosha County	Kenosha
+ReportingUnit	Wisconsin;Kewaunee County	KEWAUNEE
+ReportingUnit	Wisconsin;Kewaunee County	Kewaunee
+ReportingUnit	Wisconsin;La Crosse County	LA CROSSE
+ReportingUnit	Wisconsin;La Crosse County	La Crosse
+ReportingUnit	Wisconsin;Lafayette County	LAFAYETTE
+ReportingUnit	Wisconsin;Lafayette County	Lafayette
+ReportingUnit	Wisconsin;Langlade County	LANGLADE
+ReportingUnit	Wisconsin;Langlade County	Langlade
+ReportingUnit	Wisconsin;Lincoln County	LINCOLN
+ReportingUnit	Wisconsin;Lincoln County	Lincoln
+ReportingUnit	Wisconsin;Manitowoc County	MANITOWOC
+ReportingUnit	Wisconsin;Manitowoc County	Manitowoc
+ReportingUnit	Wisconsin;Marathon County	MARATHON
+ReportingUnit	Wisconsin;Marathon County	Marathon
+ReportingUnit	Wisconsin;Marinette County	MARINETTE
+ReportingUnit	Wisconsin;Marinette County	Marinette
+ReportingUnit	Wisconsin;Marquette County	MARQUETTE
+ReportingUnit	Wisconsin;Marquette County	Marquette
+ReportingUnit	Wisconsin;Menominee County	MENOMINEE
+ReportingUnit	Wisconsin;Menominee County	Menominee
+ReportingUnit	Wisconsin;Milwaukee County	MILWAUKEE
+ReportingUnit	Wisconsin;Milwaukee County	Milwaukee
+ReportingUnit	Wisconsin;Monroe County	MONROE
+ReportingUnit	Wisconsin;Monroe County	Monroe
+ReportingUnit	Wisconsin;Oconto County	OCONTO
+ReportingUnit	Wisconsin;Oconto County	Oconto
+ReportingUnit	Wisconsin;Oneida County	ONEIDA
+ReportingUnit	Wisconsin;Oneida County	Oneida
+ReportingUnit	Wisconsin;Outagamie County	OUTAGAMIE
+ReportingUnit	Wisconsin;Outagamie County	Outagamie
+ReportingUnit	Wisconsin;Ozaukee County	OZAUKEE
+ReportingUnit	Wisconsin;Ozaukee County	Ozaukee
+ReportingUnit	Wisconsin;Pepin County	PEPIN
+ReportingUnit	Wisconsin;Pepin County	Pepin
+ReportingUnit	Wisconsin;Pierce County	PIERCE
+ReportingUnit	Wisconsin;Pierce County	Pierce
+ReportingUnit	Wisconsin;Polk County	POLK
+ReportingUnit	Wisconsin;Polk County	Polk
+ReportingUnit	Wisconsin;Portage County	PORTAGE
+ReportingUnit	Wisconsin;Portage County	Portage
+ReportingUnit	Wisconsin;Price County	PRICE
+ReportingUnit	Wisconsin;Price County	Price
+ReportingUnit	Wisconsin;Racine County	RACINE
+ReportingUnit	Wisconsin;Racine County	Racine
+ReportingUnit	Wisconsin;Richland County	RICHLAND
+ReportingUnit	Wisconsin;Richland County	Richland
+ReportingUnit	Wisconsin;Rock County	ROCK
+ReportingUnit	Wisconsin;Rock County	Rock
+ReportingUnit	Wisconsin;Rusk County	RUSK
+ReportingUnit	Wisconsin;Rusk County	Rusk
+ReportingUnit	Wisconsin;Sauk County	SAUK
+ReportingUnit	Wisconsin;Sauk County	Sauk
+ReportingUnit	Wisconsin;Sawyer County	SAWYER
+ReportingUnit	Wisconsin;Sawyer County	Sawyer
+ReportingUnit	Wisconsin;Shawano County	SHAWANO
+ReportingUnit	Wisconsin;Shawano County	Shawano
+ReportingUnit	Wisconsin;Sheboygan County	SHEBOYGAN
+ReportingUnit	Wisconsin;Sheboygan County	Sheboygan
+ReportingUnit	Wisconsin;St. Croix County	ST. CROIX
+ReportingUnit	Wisconsin;St. Croix County	St. Croix
+ReportingUnit	Wisconsin;St. Croix County	St.Croix
+ReportingUnit	Wisconsin;Taylor County	TAYLOR
+ReportingUnit	Wisconsin;Taylor County	Taylor
+ReportingUnit	Wisconsin;Trempealeau County	TREMPEALEAU
+ReportingUnit	Wisconsin;Trempealeau County	Trempealeau
+ReportingUnit	Wisconsin;Vernon County	VERNON
+ReportingUnit	Wisconsin;Vernon County	Vernon
+ReportingUnit	Wisconsin;Vilas County	VILAS
+ReportingUnit	Wisconsin;Vilas County	Vilas
+ReportingUnit	Wisconsin;Walworth County	WALWORTH
+ReportingUnit	Wisconsin;Walworth County	Walworth
+ReportingUnit	Wisconsin;Washburn County	WASHBURN
+ReportingUnit	Wisconsin;Washburn County	Washburn
+ReportingUnit	Wisconsin;Washington County	WASHINGTON
+ReportingUnit	Wisconsin;Washington County	Washington
+ReportingUnit	Wisconsin;Waukesha County	WAUKESHA
+ReportingUnit	Wisconsin;Waukesha County	Waukesha
+ReportingUnit	Wisconsin;Waupaca County	WAUPACA
+ReportingUnit	Wisconsin;Waupaca County	Waupaca
+ReportingUnit	Wisconsin;Waushara County	WAUSHARA
+ReportingUnit	Wisconsin;Waushara County	Waushara
+ReportingUnit	Wisconsin;Winnebago County	WINNEBAGO
+ReportingUnit	Wisconsin;Winnebago County	Winnebago
+ReportingUnit	Wisconsin;Wood County	WOOD
+ReportingUnit	Wisconsin;Wood County	Wood
+ReportingUnit	Wisconsin	Wisconsin
+ReportingUnit	Wisconsin;US House WI District 1	Wisconsin;US House WI District 1
+ReportingUnit	Wisconsin;US House WI District 2	Wisconsin;US House WI District 2
+ReportingUnit	Wisconsin;US House WI District 3	Wisconsin;US House WI District 3
+ReportingUnit	Wisconsin;US House WI District 4	Wisconsin;US House WI District 4
+ReportingUnit	Wisconsin;US House WI District 5	Wisconsin;US House WI District 5
+ReportingUnit	Wisconsin;US House WI District 6	Wisconsin;US House WI District 6
+ReportingUnit	Wisconsin;US House WI District 7	Wisconsin;US House WI District 7
+ReportingUnit	Wisconsin;US House WI District 8	Wisconsin;US House WI District 8
+ReportingUnit	Wisconsin;WI House District 1	Wisconsin;WI House District 1
+ReportingUnit	Wisconsin;WI House District 10	Wisconsin;WI House District 10
+ReportingUnit	Wisconsin;WI House District 11	Wisconsin;WI House District 11
+ReportingUnit	Wisconsin;WI House District 12	Wisconsin;WI House District 12
+ReportingUnit	Wisconsin;WI House District 13	Wisconsin;WI House District 13
+ReportingUnit	Wisconsin;WI House District 14	Wisconsin;WI House District 14
+ReportingUnit	Wisconsin;WI House District 15	Wisconsin;WI House District 15
+ReportingUnit	Wisconsin;WI House District 16	Wisconsin;WI House District 16
+ReportingUnit	Wisconsin;WI House District 17	Wisconsin;WI House District 17
+ReportingUnit	Wisconsin;WI House District 18	Wisconsin;WI House District 18
+ReportingUnit	Wisconsin;WI House District 19	Wisconsin;WI House District 19
+ReportingUnit	Wisconsin;WI House District 2	Wisconsin;WI House District 2
+ReportingUnit	Wisconsin;WI House District 20	Wisconsin;WI House District 20
+ReportingUnit	Wisconsin;WI House District 21	Wisconsin;WI House District 21
+ReportingUnit	Wisconsin;WI House District 22	Wisconsin;WI House District 22
+ReportingUnit	Wisconsin;WI House District 23	Wisconsin;WI House District 23
+ReportingUnit	Wisconsin;WI House District 24	Wisconsin;WI House District 24
+ReportingUnit	Wisconsin;WI House District 25	Wisconsin;WI House District 25
+ReportingUnit	Wisconsin;WI House District 26	Wisconsin;WI House District 26
+ReportingUnit	Wisconsin;WI House District 27	Wisconsin;WI House District 27
+ReportingUnit	Wisconsin;WI House District 28	Wisconsin;WI House District 28
+ReportingUnit	Wisconsin;WI House District 29	Wisconsin;WI House District 29
+ReportingUnit	Wisconsin;WI House District 3	Wisconsin;WI House District 3
+ReportingUnit	Wisconsin;WI House District 30	Wisconsin;WI House District 30
+ReportingUnit	Wisconsin;WI House District 31	Wisconsin;WI House District 31
+ReportingUnit	Wisconsin;WI House District 32	Wisconsin;WI House District 32
+ReportingUnit	Wisconsin;WI House District 33	Wisconsin;WI House District 33
+ReportingUnit	Wisconsin;WI House District 34	Wisconsin;WI House District 34
+ReportingUnit	Wisconsin;WI House District 35	Wisconsin;WI House District 35
+ReportingUnit	Wisconsin;WI House District 36	Wisconsin;WI House District 36
+ReportingUnit	Wisconsin;WI House District 37	Wisconsin;WI House District 37
+ReportingUnit	Wisconsin;WI House District 38	Wisconsin;WI House District 38
+ReportingUnit	Wisconsin;WI House District 39	Wisconsin;WI House District 39
+ReportingUnit	Wisconsin;WI House District 4	Wisconsin;WI House District 4
+ReportingUnit	Wisconsin;WI House District 40	Wisconsin;WI House District 40
+ReportingUnit	Wisconsin;WI House District 41	Wisconsin;WI House District 41
+ReportingUnit	Wisconsin;WI House District 42	Wisconsin;WI House District 42
+ReportingUnit	Wisconsin;WI House District 43	Wisconsin;WI House District 43
+ReportingUnit	Wisconsin;WI House District 44	Wisconsin;WI House District 44
+ReportingUnit	Wisconsin;WI House District 45	Wisconsin;WI House District 45
+ReportingUnit	Wisconsin;WI House District 46	Wisconsin;WI House District 46
+ReportingUnit	Wisconsin;WI House District 47	Wisconsin;WI House District 47
+ReportingUnit	Wisconsin;WI House District 48	Wisconsin;WI House District 48
+ReportingUnit	Wisconsin;WI House District 49	Wisconsin;WI House District 49
+ReportingUnit	Wisconsin;WI House District 5	Wisconsin;WI House District 5
+ReportingUnit	Wisconsin;WI House District 50	Wisconsin;WI House District 50
+ReportingUnit	Wisconsin;WI House District 51	Wisconsin;WI House District 51
+ReportingUnit	Wisconsin;WI House District 52	Wisconsin;WI House District 52
+ReportingUnit	Wisconsin;WI House District 53	Wisconsin;WI House District 53
+ReportingUnit	Wisconsin;WI House District 54	Wisconsin;WI House District 54
+ReportingUnit	Wisconsin;WI House District 55	Wisconsin;WI House District 55
+ReportingUnit	Wisconsin;WI House District 56	Wisconsin;WI House District 56
+ReportingUnit	Wisconsin;WI House District 57	Wisconsin;WI House District 57
+ReportingUnit	Wisconsin;WI House District 58	Wisconsin;WI House District 58
+ReportingUnit	Wisconsin;WI House District 59	Wisconsin;WI House District 59
+ReportingUnit	Wisconsin;WI House District 6	Wisconsin;WI House District 6
+ReportingUnit	Wisconsin;WI House District 60	Wisconsin;WI House District 60
+ReportingUnit	Wisconsin;WI House District 61	Wisconsin;WI House District 61
+ReportingUnit	Wisconsin;WI House District 62	Wisconsin;WI House District 62
+ReportingUnit	Wisconsin;WI House District 63	Wisconsin;WI House District 63
+ReportingUnit	Wisconsin;WI House District 64	Wisconsin;WI House District 64
+ReportingUnit	Wisconsin;WI House District 65	Wisconsin;WI House District 65
+ReportingUnit	Wisconsin;WI House District 66	Wisconsin;WI House District 66
+ReportingUnit	Wisconsin;WI House District 67	Wisconsin;WI House District 67
+ReportingUnit	Wisconsin;WI House District 68	Wisconsin;WI House District 68
+ReportingUnit	Wisconsin;WI House District 69	Wisconsin;WI House District 69
+ReportingUnit	Wisconsin;WI House District 7	Wisconsin;WI House District 7
+ReportingUnit	Wisconsin;WI House District 70	Wisconsin;WI House District 70
+ReportingUnit	Wisconsin;WI House District 71	Wisconsin;WI House District 71
+ReportingUnit	Wisconsin;WI House District 72	Wisconsin;WI House District 72
+ReportingUnit	Wisconsin;WI House District 73	Wisconsin;WI House District 73
+ReportingUnit	Wisconsin;WI House District 74	Wisconsin;WI House District 74
+ReportingUnit	Wisconsin;WI House District 75	Wisconsin;WI House District 75
+ReportingUnit	Wisconsin;WI House District 76	Wisconsin;WI House District 76
+ReportingUnit	Wisconsin;WI House District 77	Wisconsin;WI House District 77
+ReportingUnit	Wisconsin;WI House District 78	Wisconsin;WI House District 78
+ReportingUnit	Wisconsin;WI House District 79	Wisconsin;WI House District 79
+ReportingUnit	Wisconsin;WI House District 8	Wisconsin;WI House District 8
+ReportingUnit	Wisconsin;WI House District 80	Wisconsin;WI House District 80
+ReportingUnit	Wisconsin;WI House District 81	Wisconsin;WI House District 81
+ReportingUnit	Wisconsin;WI House District 82	Wisconsin;WI House District 82
+ReportingUnit	Wisconsin;WI House District 83	Wisconsin;WI House District 83
+ReportingUnit	Wisconsin;WI House District 84	Wisconsin;WI House District 84
+ReportingUnit	Wisconsin;WI House District 85	Wisconsin;WI House District 85
+ReportingUnit	Wisconsin;WI House District 86	Wisconsin;WI House District 86
+ReportingUnit	Wisconsin;WI House District 87	Wisconsin;WI House District 87
+ReportingUnit	Wisconsin;WI House District 88	Wisconsin;WI House District 88
+

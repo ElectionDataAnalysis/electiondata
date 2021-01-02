@@ -14,6 +14,7 @@ from election_data_analysis import database as db
 import scipy.spatial.distance as dist
 from scipy import stats
 import math
+import json
 
 
 def child_rus_by_id(session, parents, ru_type=None):
@@ -110,8 +111,9 @@ def create_rollup(
             )
 
         df, err_str = db.export_rollup_from_db(
-            cursor=cursor,
+            session,
             top_ru=top_ru,
+            election=election,
             sub_unit_type=sub_rutype,
             contest_type=contest_type,
             datafile_list=datafile_list,
@@ -127,6 +129,7 @@ def create_rollup(
 
     # export to inventory file
     inv_df.to_csv(inventory_file, index=False, sep="\t")
+    cursor.close()
     return err_str
 
 
@@ -1125,3 +1128,130 @@ def scatter_axis_title(cursor, category, election, contest, jurisdiction_id):
     else:
         title = dedupe_scatter_title(category, election, contest)
         return ui.get_contest_type_display(title)
+
+
+def nist_candidate_contest(session, election_id, jurisdiction_id):
+    """ return all the candidate contest info, including info related to
+    the contest, the selection, and the actual vote counts themselves """
+    vote_count_df = db.read_vote_count(
+        session,
+        election_id,
+        jurisdiction_id,
+        ["VoteCount_Id", "ReportingUnit_Id", "CountItemType", "Count", "Selection_Id"],
+        ["Id", "GpUnitId", "CountItemType", "Count", "Selection_Id"],
+    )
+
+    selection_df = db.read_vote_count(
+        session,
+        election_id,
+        jurisdiction_id,
+        ["Selection_Id", "Party_Id", "Candidate_Id", "Contest_Id"],
+        ["Id", "PartyId", "CandidateId", "ContestId"],
+    )
+
+    contest_df = db.read_vote_count(
+        session,
+        election_id,
+        jurisdiction_id,
+        ["Contest_Id", "ContestName", "ContestType"],
+        ["Id", "ContestName", "ContestType"],
+    )
+    contest_df = contest_df[contest_df["ContestType"] == "Candidate"]
+    contest_df["Type"] = "CandidateContest"
+    contest_df.drop(columns="ContestType", inplace=True)
+
+    result = contest_df.to_json(orient="records")
+    contests = json.loads(result)
+    # for each contest, get the selections
+    for contest in contests:
+        contest["BallotSelection"] = []
+        contest_id = contest["Id"]
+        tmp_selection_df = selection_df[selection_df["ContestId"] == contest_id]
+        selection_ids = tmp_selection_df["Id"].unique()
+
+        # for each selection, get the selection/candidate info and vote count info
+        for selection_id in selection_ids:
+            # first the selection info
+            selection_result_df = tmp_selection_df[
+                tmp_selection_df["Id"] == selection_id
+            ][["Id", "CandidateId"]].drop_duplicates()
+            selection_result_df["Type"] = "CandidateSelection"
+            selection_result = json.loads(selection_result_df.to_json(orient="records"))[0]
+
+            # then the votecount info
+            vote_count_by_selection_df = vote_count_df[
+                vote_count_df["Selection_Id"] == selection_id
+            ][["GpUnitId", "CountItemType", "Count"]]
+            vote_count_result = vote_count_by_selection_df.to_json(orient="records")
+            selection_result["VoteCounts"] = json.loads(vote_count_result)
+            contest["BallotSelection"].append(selection_result)
+
+    return contests
+
+
+def nist_reporting_unit(session, election_id, jurisdiction_id):
+    """ A ReportingUnit is a GPUnit """
+    df = db.read_vote_count(
+        session,
+        election_id,
+        jurisdiction_id,
+        ["GP_Id", "GPReportingUnitName", "GPType"],
+        ["Id", "Name", "ReportingUnitType"],
+    )
+    df["Type"] = "ReportingUnit"
+    result = df.to_json(orient="records")
+    return json.loads(result)
+
+
+def nist_party(session, election_id, jurisdiction_id):
+    df = db.read_vote_count(
+        session,
+        election_id,
+        jurisdiction_id,
+        ["Party_Id", "PartyName"],
+        ["Id", "Name"],
+    )
+    result = df.to_json(orient="records")
+    return json.loads(result)
+
+
+def nist_election(session, election_id, jurisdiction_id):
+    df = db.read_vote_count(
+        session,
+        election_id,
+        jurisdiction_id,
+        ["Election_Id", "ElectionName", "ElectionType"],
+        ["Id", "Name", "Type"],
+    )
+    # Currently all our elections are at the state level.
+    # Once we start handling local elections, this might need to be updated.
+    df["ReportingUnit"] = jurisdiction_id
+    # we also do not collect start date or end date of election at the moment
+    df["StartDate"] = "uncollected"
+    df["EndDate"] = "uncollected"
+    result = df.to_json(orient="records")
+    return json.loads(result)
+
+
+def nist_office(session, election_id, jurisdiction_id):
+    df = db.read_vote_count(
+        session,
+        election_id,
+        jurisdiction_id,
+        ["Office_Id", "OfficeName"],
+        ["Id", "Name"],
+    )
+    result = df.to_json(orient="records")
+    return json.loads(result) 
+
+
+def nist_candidate(session, election_id, jurisdiction_id):
+    df = db.read_vote_count(
+        session,
+        election_id,
+        jurisdiction_id,
+        ["Candidate_Id", "BallotName", "Party_Id"],
+        ["Id", "BallotName", "PartyId"],
+    )
+    result = df.to_json(orient="records")
+    return json.loads(result) 

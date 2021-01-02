@@ -7,6 +7,8 @@ PA Auditor General	Philadelphia
 PA Lieutenant Governor	Philadelphia
 PA Treasurer	Philadelphia
 PA Secretary of State	Philadelphia
+Mayor of Philadelphia	Philadelphia
+Philadelphia City Commissioner	Philadelphia
 PA Senate District 1	Philadelphia;PA Senate District 1
 PA Senate District 2	Philadelphia;PA Senate District 2
 PA Senate District 3	Philadelphia;PA Senate District 3

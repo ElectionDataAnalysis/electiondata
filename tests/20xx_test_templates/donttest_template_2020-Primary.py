@@ -14,17 +14,19 @@ abbr = 'TX'
 
 party1 = "Democratic Party"
 party2 = "Republican Party"
-pres_total_party1 = 2094428  # total of all votes for President
+pres_total_party1 = -1  # total of all votes for President in that party
 cd = 3  # congressional district
-total_cd_votes_party2 = 53938  # total votes in the chosen cd
+total_cd_votes_party2 = -1  # total votes for Congressional rep in the chosen cd and party
 shd = 101   # state house district
-total_shd_votes_party1 = 10924
+total_shd_votes_party1 = -1
 ssd = 13  # state senate district
-total_ssd_votes_party2 = 8247
+total_ssd_votes_party2 = -1
 single_vote_type = 'total'  # pick any one from your file
-pres_votes_vote_type_party2 = 2017167
+pres_votes_vote_type_party2 = -1
 single_county = 'Texas;Montgomery County'  # pick any one from your file
-pres_votes_county_party1 = 25612  # total votes for pres of that county
+county_or_other = "county"   # Change this only if results are subdivided by something other than counties
+                            #  e.g., 'parish' in LA, 'state-house' in Alaska, 'ward' in Philadelphia
+pres_votes_county_party1 = -1  # total votes for US President in that county for party1
 
 
 def test_data_exists(dbname):
@@ -59,6 +61,7 @@ def test_county_subtotal(dbname):
         f"US President ({abbr}) ({party1})",
         dbname=dbname,
         county=single_county,
+        sub_unit_type=county_or_other,
         )
         == pres_votes_county_party1
             )
