@@ -1,7 +1,7 @@
 [format]
 file_type=excel
-count_locations=by_column_number
-string_locations=in_count_headers,from_field_values
+count_locations=by_column_numbers
+munge_strings=in_count_headers,in_field_values
 
 encoding=utf-8
 count_column_numbers=4,5
@@ -11,7 +11,7 @@ sheets_to_read_numbers=0
 
 thousands_separator=,
 
-[from_field_values]
+[in_field_values]
 ReportingUnit=<County>
 Party=<Party>
 CandidateContest=<Office/Ballot Issue>

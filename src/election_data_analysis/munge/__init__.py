@@ -15,16 +15,16 @@ from sqlalchemy.orm.session import Session
 req_munger_params: Dict[str, str] = {
     "file_type": "string",
     "count_locations": "string",
-    "string_locations": "list-of-strings",
+    "munge_strings": "list-of-strings",
 }
 
 opt_munger_params: Dict[str, str] = {
     "sheets_to_read_names": "list-of-strings",
-    "sheets_to_skip": "list-of-strings",
+    "sheets_to_skip_names": "list-of-strings",
     "sheets_to_read_numbers": "list-of-integers",
-    "sheets_to_skip_numbers": "list-of-integers",
+    "sheets_to_skip_names_numbers": "list-of-integers",
     "rows_to_skip": "integer",
-    "flat_file_delimiter": "string",
+    "flat_text_delimiter": "string",
     "quoting": "string",
     "thousands_separator": "string",
     "encoding": "string",
@@ -40,21 +40,21 @@ opt_munger_params: Dict[str, str] = {
 }
 
 munger_dependent_reqs: Dict[str, Dict[str, List[str]]] = {
-    "file_type": {"flat_text": ["flat_file_delimiter"]},
+    "file_type": {"flat_text": ["flat_text_delimiter"]},
     "count_locations": {
-        "by_field_name": ["count_fields_by_name"],
+        "by_field_names": ["count_fields_by_name"],
         "by_column_number": ["count_column_numbers"],
     },
 }
 
 req_munger_param_values: Dict[str, List[str]] = {
-    "string_locations": ["from_field_values", "in_count_headers", "constant_over_file", "constant_over_sheet", "auxiliary_data"],
-    "count_locations": ["by_field_name", "by_column_number"],
+    "munge_strings": ["in_field_values", "in_count_headers", "constant_over_file", "constant_over_sheet", "auxiliary_data"],
+    "count_locations": ["by_field_names", "by_column_number"],
     "file_type": ["excel", "json-nested", "xml", "flat_text"],
 }
 
 string_location_reqs: Dict[str, List[str]] = {
-    "from_field_values": [],
+    "in_field_values": [],
     "in_count_headers": ["count_header_row_numbers"],
     "auxiliary_data": ["auxiliary_data_directory"],
     "constant_over_file": [],
@@ -793,7 +793,7 @@ def melt_to_one_count_column(df: pd.DataFrame, p: dict, mu_name: str) -> (pd.Dat
         count_columns = [
             df.columns[idx] for idx in p["count_column_numbers"] if idx < df.shape[1]
         ]
-    elif p["count_locations"] == "by_field_name":
+    elif p["count_locations"] == "by_field_names":
         if multi:
             err = ui.add_new_error(
                 err,
@@ -808,7 +808,7 @@ def melt_to_one_count_column(df: pd.DataFrame, p: dict, mu_name: str) -> (pd.Dat
             err,
             "munger",
             mu_name,
-            f"count_locations parameter must be either by_column_number or by_field_name"
+            f"count_locations parameter must be either by_column_number or by_field_names"
         )
         return pd.DataFrame(), err
 
@@ -824,7 +824,7 @@ def melt_to_one_count_column(df: pd.DataFrame, p: dict, mu_name: str) -> (pd.Dat
             if melted.columns[idx] in id_columns:
                 new_columns[idx] = melted.columns[idx].split(";:;")[tab_to_df[p["string_field_name_row"]]]
         melted.columns = new_columns
-        if "in_count_headers" in p["string_locations"]:
+        if "in_count_headers" in p["munge_strings"]:
 
             # split header_0 column into separate columns
             # # get header_rows
@@ -1527,7 +1527,7 @@ def munge_source_to_raw(
 
     # # get munge formulas
     # # for all but constant-over-file
-    sources = [x for x in p["string_locations"] if x != "constant_over_file"]
+    sources = [x for x in p["munge_strings"] if x != "constant_over_file"]
     for source in sources:
         formulas, new_err = ui.get_parameters(
             required_keys=[],
@@ -1647,7 +1647,7 @@ def get_and_check_munger_params(munger_path: str) -> (dict, Optional[dict]):
     # # extra compatibility requirements for excel or flat text files
     if (format_options["file_type"] in ["excel", "flat_text"]) :
         # # count_field_name_row is given where required
-        if (format_options["count_field_name_row"] is None) and (format_options["count_locations"] == "by_field_name"):
+        if (format_options["count_field_name_row"] is None) and (format_options["count_locations"] == "by_field_names"):
             err = ui.add_new_error(
                 err,
                 "munger",
@@ -1668,7 +1668,7 @@ def get_and_check_munger_params(munger_path: str) -> (dict, Optional[dict]):
                 )
 
     # # for each value in list of string locations, requirements are met
-    for k0 in format_options["string_locations"]:
+    for k0 in format_options["munge_strings"]:
         for v2 in string_location_reqs[k0]:
             if v2 is None:
                 err = ui.add_new_error(
@@ -1678,14 +1678,14 @@ def get_and_check_munger_params(munger_path: str) -> (dict, Optional[dict]):
                     f"{k0} is in list of string locations, but {v2} not found"
                 )
     # TODO check formats (e.g., formulas for constant_over_sheet use only <sheet_name> and <row_{i}>)
-    # TODO check that required headers are present (see User_Guide) per string_locations list
+    # TODO check that required headers are present (see User_Guide) per munge_strings list
     # TODO check that required headers are present (see User_Guide) per lookups list
 
     # # add parameter listing all munge fields
     # get lists of string fields expected in raw file
     # TODO why can't munge_fields and string_fields be the same?
     params["munge_fields"], new_err = get_string_fields(
-        [x for x in params["string_locations"] if x != "constant_over_file"],
+        [x for x in params["munge_strings"] if x != "constant_over_file"],
         munger_path,
     )
     if new_err:
@@ -1771,7 +1771,7 @@ def to_standard_count_frame(
     # get lists of string fields expected in raw file
     try:
         munge_field_lists, new_err = get_string_fields(
-            [x for x in p["string_locations"] if x != "constant_over_file"],
+            [x for x in p["munge_strings"] if x != "constant_over_file"],
             munger_path,
         )
     except Exception as exc:
@@ -1803,7 +1803,7 @@ def to_standard_count_frame(
             continue  # goes to next k in loop
 
         # add columns for any constant-over-sheet elements
-        if "constant_over_sheet" in p["string_locations"]:
+        if "constant_over_sheet" in p["munge_strings"]:
             # see if <sheet_name> is needed
             if "sheet_name" in munge_field_lists["constant_over_sheet"]:
                 standard[k] = add_constant_column(standard[k], "sheet_name", k)
@@ -1973,7 +1973,7 @@ def get_aux_info(
 
             # if there is a lookup for this field, grab it
             f_p, f_err = ui.get_parameters(
-                required_keys=["source_file", "file_type", "string_locations", "lookup_id"],
+                required_keys=["source_file", "file_type", "munge_strings", "lookup_id"],
                 optional_keys=list(opt_munger_params.keys()) + [f"{element}_replacement"],
                 header=f"{field} lookup",
                 param_file=munger_path,

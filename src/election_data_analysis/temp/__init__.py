@@ -185,18 +185,18 @@ def create_munger_files(
                 # set file_type and related params
                 if d["file_type"] == "csv":
                     new_sections["format_top_lines"].append(f"file_type=flat_text")
-                    new_sections["format"].append(f"flat_file_delimiter=,")
+                    new_sections["format"].append(f"flat_text_delimiter=,")
                 elif d["file_type"] == "txt":
                     new_sections["format_top_lines"].append(f"file_type=flat_text")
-                    new_sections["format"].append(f"flat_file_delimiter=tab")
+                    new_sections["format"].append(f"flat_text_delimiter=tab")
                 elif d["file_type"] == "txt-semicolon-separated":
                     new_sections["format_top_lines"].append(f"file_type=flat_text")
-                    new_sections["format"].append(f"flat_file_delimiter=;")
+                    new_sections["format"].append(f"flat_text_delimiter=;")
                 elif d["file_type"] == "xls":
                     new_sections["format_top_lines"].append(f"file_type=excel")
                 elif d["file_type"] == "xls-multi":
                     new_sections["format_top_lines"].append(f"file_type=excel")
-                    new_sections["format"].append(f"sheets_to_skip={d['sheets_to_skip']}")
+                    new_sections["format"].append(f"sheets_to_skip_names={d['sheets_to_skip_names']}")
                 elif d["file_type"] in ["json-nested", "xml"]:
                     new_sections["format_top_lines"].append(f"file_type={d['file_type']}")
 
@@ -205,7 +205,7 @@ def create_munger_files(
                     new_sections["format_top_lines"].append(f"count_locations=by_column_number")
                     new_sections["format"].append(f"count_column_numbers={d['count_columns']}")
                 elif mu in count_field_dict.keys():
-                    new_sections["format_top_lines"].append(f"count_locations=by_field_name")
+                    new_sections["format_top_lines"].append(f"count_locations=by_field_names")
                     cf_str = ",".join(count_field_dict[mu])
                     new_sections["format"].append(f"count_fields_by_name={cf_str}")
                 elif d["field_names_if_no_field_name_row"] is not None:
@@ -215,7 +215,7 @@ def create_munger_files(
                 # set string_location and related params
                 str_locations = []
                 if {"row", "xml"}.intersection(set(cdf_elements_df["source"].unique())):
-                    str_locations.append('from_field_values')
+                    str_locations.append('in_field_values')
                 if {"column"}.issubset(set(cdf_elements_df["source"].unique())):
                     str_locations.append("in_count_headers")
                 if {"ini"}.issubset(set(cdf_elements_df["source"].unique())):
@@ -226,7 +226,7 @@ def create_munger_files(
                     str_locations.append("constant_over_sheet")
 
                 str_l_str = ",".join(set(str_locations))
-                new_sections["format_top_lines"].append(f"string_locations={str_l_str}")
+                new_sections["format_top_lines"].append(f"munge_strings={str_l_str}")
 
                 # get info from field_name_row
                 if d["field_name_row"] is not None:
@@ -246,13 +246,13 @@ def create_munger_files(
                     new_sections["format"].append("all_rows=data")
 
                 # create other parameter sections as needed
-                if "from_field_values" in str_locations:
+                if "in_field_values" in str_locations:
                     # initialize the section
-                    new_sections["from_field_values"] = ["[from_field_values]"]
+                    new_sections["in_field_values"] = ["[in_field_values]"]
                     # fill the section
                     for idx, r in cdf_elements_df.iterrows():
                         if r["source"] in ["row", "xml"]:
-                            new_sections["from_field_values"].append(f"{r['name']}={r['raw_identifier_formula']}")
+                            new_sections["in_field_values"].append(f"{r['name']}={r['raw_identifier_formula']}")
                 if "in_count_headers" in str_locations:
                     # initialize the section
                     new_sections["in_count_headers"] = ["[in_count_headers]"]

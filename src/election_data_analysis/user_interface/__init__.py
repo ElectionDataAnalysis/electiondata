@@ -346,13 +346,13 @@ def tabular_kwargs(p: Dict[str, Any], kwargs: Dict[str, Any], aux=False) -> Dict
     else:
         header_rows = set()
         # if count_locations are by field name, need count_field_name_row
-        if not aux and p["count_locations"] == "by_field_name":
+        if not aux and p["count_locations"] == "by_field_names":
             header_rows.update({p["count_field_name_row"]})
         # if any string locations are from field values AND field names are in the table, need string_field_name_row
-        if "from_field_values" in p["string_locations"]:
+        if "in_field_values" in p["munge_strings"]:
             header_rows.update({p["string_field_name_row"]})
         # if any string locations are in count headers need count_header_row_numbers
-        if "in_count_headers" in p["string_locations"]:
+        if "in_count_headers" in p["munge_strings"]:
             header_rows.update(p["count_header_row_numbers"])
         if header_rows:
             # if multi-index
@@ -394,8 +394,8 @@ def list_desired_excel_sheets(f_path: str, p: dict) -> Optional[list]:
     else:
         xl = pd.ExcelFile(f_path)
         all_sheets = xl.sheet_names
-        if p["sheets_to_skip"]:
-            sheets_to_read = [s for s in all_sheets if s not in p["sheets_to_skip"]]
+        if p["sheets_to_skip_names"]:
+            sheets_to_read = [s for s in all_sheets if s not in p["sheets_to_skip_names"]]
         else:
             sheets_to_read = all_sheets
     return sheets_to_read
@@ -420,7 +420,7 @@ def read_single_datafile(
         kwargs = basic_kwargs(p, dict(), aux=aux)
         kwargs = tabular_kwargs(p, kwargs, aux=aux)
         kwargs["quoting"] = csv.QUOTE_MINIMAL
-        kwargs["sep"] = p["flat_file_delimiter"].replace("tab", "\t")
+        kwargs["sep"] = p["flat_text_delimiter"].replace("tab", "\t")
 
     # read file
     try:
