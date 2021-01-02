@@ -61,7 +61,6 @@ and similarly, if necessary, for any Contest or Selection. If there is more than
         * `lookup_id` is the single field name holding the key to the lookup table. (If there are no headers in the lookup source file, use, e.g., `column_0`)
         * for each element whose formula looks something up from this table, a formula for the foreign key replacement.
        
-       [**** FILL THIS IN *** SHOW FULL .munger file FROM mi 2018]
     * (required for 'excel' and 'flat_text' file_types where not all rows are data) specify location of field names for string columns. Need integer `string_field_name_row` (NB: top row not skipped is 0, next row is 1, etc.)
   * 'in_count_headers' this is used, e.g., when each candidate has a separate column in a tabular file. In this case there may be a single header row with relevant info, or there may be several rows (e.g., Contest in one row, Candidate in another row)
     * (required) list `count_header_row_numbers` of integers for rows containing necessary character strings. (NB: top row not skipped is 0, next row is 1, etc.)
@@ -73,27 +72,86 @@ and similarly, if necessary, for any Contest or Selection. If there is more than
   
    Available if appropriate for any file type, under the `[format]` header:
    * (optional) `thousands_separator`. In the US the separator is almost always ',' if it is used. Watch out for Excel files which may show a comma when you look at them in Excel -- there may not be a comma in the underlying data.
-   * (optional) `encoding` (If not specified or recognized, `iso-8859-1` will be used. Recognized encodings are limited [python's list of recognized encodings and aliases](https://docs.python.org/3/library/codecs.html#standard-encodings).)
-   * (optional) `lookups` Sometimes the election agency provides counts by ids for, say, candidates, and also provides definitions for those ids. For example, the data may be in the NIST common data format, or it may have been exported as separate tables from a relational database. The value of `lookups` is a comma-separated list of elements (e.g., 'Candidate') that need to be looked up elsewhere. For each element in the list, there must be a corresponding section in the `*.munger` file. Parameters in this section may be any of the 
-   For example:
-```
-[Candidate lookup]
-source_file=2018GEN/2018name.txt
-file_type=flat_text
-
-flat_text_delimiter=tab
-id_col_number=5
-Candidate=<column_7> <column_8> <column_6>
-```
-
+   * (optional) `encoding` (If not specified or recognized, a default encoding will be used. Recognized encodings are limited [python's list of recognized encodings and aliases](https://docs.python.org/3/library/codecs.html#standard-encodings).)
 
    Available for flat_text and excel file types:
    * (optional) `rows_to_skip` An integer giving the number of rows to skip at the top to get to the table of counts. This parameter will affect integers designating header rows -- '<header_0>' is the first row not skipped. However, this parameter will *not* affect integers designating rows (e.g., for finding information constant over sheets), which are designated, e.g., '<row_0>'. Note that if, e.g., skip_rows = 2, then row_0 will denote the third row of the actual Excel sheet -- the highest unskipped row. The system recognizes the leftmost non-blank cell as the content to be read.
    * (optional) `all_rows` If the file has no column headers but only data rows with counts, set this parameter to 'data'
  
  
+Put each formula for parsing information from the results file into the corresponding munge formula section (`[in_field_values]`, `[in_count_headers]` or `[constant_over_sheet]`. Constant items can be give either:
+ * as comma separated list in constant_over_sheet parameter in .munger file, with values in the .ini file
+ * as a constant formula in any of the munge formula sections, in which case a corresponding entry must be made in the jurisdictions `dictionary.txt`.
+ 
+Sometimes the election agency provides counts by ids for, say, candidates, and also provides definitions for those ids. For example, the data may be in the NIST common data format, or it may have been exported as separate tables from a relational database. In this case the file containing the counts may have foreign keys. The lookup formulas are given in lookup sections named by each foreign key column (or set of columns). Each lookup section must have:
+ * a `source_file` parameter with a path to the file with the information to be looked up
+ * a `lookup_id` parameter indicating the location of the primary key in that file. 
+ * for each item that uses this lookup, a formula for what should replace the foreign key in the main formula for the item. E.g., to define what should replace the foreign key in the `Candidate=` formula previously defined, the lookup section should have a `Candidate_replacement=` formula.
+For example, here is a munger for Michigan 2018 General election results using lookups.
+```
+[format]
+file_type=flat_text
+count_locations=by_column_numbers
+munge_strings=in_field_values
 
- (3) Put formulas for parsing information from the results file into `cdf_elements.txt`. You may find it helpful to follow the example of the mungers in the repository.
+encoding=ASCII
+flat_text_delimiter=tab
+count_column_numbers=11
+all_rows=data
+constant_over_file=CountItemType
+
+[in_field_values]
+ReportingUnit=<column_6>;<column_6,column_7>;Ward <column_8>;Precinct <column_9> Label <column_10>
+Party=<column_5>
+CandidateContest=<column_2,column_3>
+Candidate=<column_5>
+
+[column_2,column_3 lookup]
+source_file=Michigan/2018GEN/2018offc.txt
+file_type=flat_text
+flat_text_delimiter=tab
+munge_strings=in_field_values
+encoding=ASCII
+all_rows=data
+lookup_id=column_2,column_3
+CandidateContest_replacement=<column_5>
+
+[column_5 lookup]
+source_file=Michigan/2018GEN/2018name.txt
+file_type=flat_text
+flat_text_delimiter=tab
+munge_strings=in_field_values
+encoding=ASCII
+all_rows=data
+lookup_id=column_5
+Candidate_replacement=<column_7> <column_8> <column_6>
+Party_replacement=<column_9>
+
+[column_6 lookup]
+source_file=Michigan/2018GEN/county.txt
+file_type=flat_text
+flat_text_delimiter=tab
+munge_strings=in_field_values
+encoding=ASCII
+all_rows=data
+lookup_id=column_0
+ReportingUnit_replacement=<column_1>
+
+[column_6,column_7 lookup]
+source_file=Michigan/2018GEN/2018city.txt
+file_type= flat_text
+flat_text_delimiter=tab
+munge_strings=in_field_values
+encoding=ASCII
+all_rows=data
+lookup_id=column_2,column_3
+ReportingUnit_replacement=<column_4>
+
+```
+
+
+ 
+ You may find it helpful to follow the example of the mungers in the repository.
 
 ### Formulas for parsing information
 For many results files, it is enough to create concatenation formulas, referencing field names from your file by putting them in angle brackets. 
