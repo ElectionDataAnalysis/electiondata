@@ -959,6 +959,7 @@ class JurisdictionPrepper:
             self,
             par_file_name: str,
             sub_ru_type: str ="precinct",
+            county_type="county",
     ) -> Optional[dict]:
         err_list = list()
         dl = DataLoader()
@@ -971,7 +972,7 @@ class JurisdictionPrepper:
             # get parameters
             m_path = os.path.join(sdl.mungers_dir, f"{mu}.munger")
             mu_d, new_err = m.get_and_check_munger_params(m_path)
-            # check that ReportingUnit formula is <county>;<sub_ru>
+            # get ReportingUnit formula
             ru_formula = ''
             for header in m.req_munger_param_values["munge_strings"]:
                 formulas, formula_err = ui.get_parameters(
@@ -984,64 +985,65 @@ class JurisdictionPrepper:
                     pass
                 else:  # TODO tech debt: we assume at most one formula
                     ru_formula = formulas["ReportingUnit"]
-                    if ";" not in ru_formula:
-                            new_err = ui.add_new_error(
-                                new_err, "warn-munger", mu, "ReportingUnit formula has no ';'",
+            # check that ReportingUnit formula is <county_type>;<sub_ru>
+            if ";" not in ru_formula:
+                    new_err = ui.add_new_error(
+                        new_err, "warn-munger", mu, "ReportingUnit formula has no ';'",
+                    )
+                    if new_err:
+                        err_list.append(new_err)
+            else:
+                # create raw -> internal dictionary of county_type names
+                jd_df = prep.get_element(self.d["jurisdiction_path"], "dictionary")
+                ru_df = prep.get_element(self.d["jurisdiction_path"], "ReportingUnit")
+                internal = jd_df[jd_df["cdf_element"] == "ReportingUnit"].merge(
+                    ru_df[ru_df["ReportingUnitType"] == county_type], left_on="cdf_internal_name", right_on="Name",
+                    how="inner"
+                )[["raw_identifier_value", "cdf_internal_name"]].set_index("raw_identifier_value").to_dict()[
+                    "cdf_internal_name"]
+                # get list of ReportingUnit raw values from results file
+                vals, new_err = sdl.list_values("ReportingUnit")
+                county = {v: v.split(";")[0] for v in vals}
+                remainder = {v: v[len(county[v]) + 1:] for v in vals}
+                good_vals = [v for v in vals if county[v] in internal.keys()]
+
+                # write to ReportingUnit.txt
+                new_err = prep.write_element(
+                    self.d["jurisdiction_path"],
+                    "ReportingUnit",
+                    pd.concat(
+                        [
+                            ru_df, pd.DataFrame(
+                            [
+                                [f"{internal[county[v]]};{remainder[v]}", sub_ru_type]
+                                for v in good_vals
+                            ],
+                                columns=["Name", "ReportingUnitType"],
                             )
-                            if new_err:
-                                err_list.append(new_err)
-                    else:
-                        # create raw -> internal dictionary of county names
-                        jd_df = prep.get_element(self.d["jurisdiction_path"], "dictionary")
-                        ru_df = prep.get_element(self.d["jurisdiction_path"], "ReportingUnit")
-                        internal = jd_df[jd_df["cdf_element"] == "ReportingUnit"].merge(
-                            ru_df[ru_df["ReportingUnitType"] == "county"], left_on="cdf_internal_name", right_on="Name",
-                            how="inner"
-                        )[["raw_identifier_value", "cdf_internal_name"]].set_index("raw_identifier_value").to_dict()[
-                            "cdf_internal_name"]
-                        # get list of ReportingUnit raw values from results file
-                        vals, new_err = sdl.list_values("ReportingUnit")
-                        county = {v: v.split(";")[0] for v in vals}
-                        remainder = {v: v[len(county[v]) + 1:] for v in vals}
-                        good_vals = [v for v in vals if county[v] in internal.keys()]
+                        ]
+                    ),
+                )
+                if new_err:
+                    err_list.append(new_err)
 
-                        # write to ReportingUnit.txt
-                        new_err = prep.write_element(
-                            self.d["jurisdiction_path"],
-                            "ReportingUnit",
-                            pd.concat(
-                                [
-                                    ru_df, pd.DataFrame(
-                                    [
-                                        [f"{internal[county[v]]};{remainder[v]}", sub_ru_type]
-                                        for v in good_vals
-                                    ],
-                                        columns=["Name", "ReportingUnitType"],
-                                    )
-                                ]
-                            ),
-                        )
-                        if new_err:
-                            err_list.append(new_err)
-
-                        # write to dictionary.txt
-                        new_err = prep.write_element(
-                            self.d["jurisdiction_path"],
-                            "dictionary",
-                            pd.concat(
-                                [
-                                    jd_df, pd.DataFrame(
-                                        [["ReportingUnit",
-                                          f"{internal[county[v]]};{remainder[v]}",
-                                          v,
-                                          ] for v in good_vals],
-                                        columns=["cdf_element", "cdf_internal_name", "raw_identifier_value"],
-                                    )
-                                ]
-                            ),
-                        )
-                        if new_err:
-                            err_list.append(new_err)
+                # write to dictionary.txt
+                new_err = prep.write_element(
+                    self.d["jurisdiction_path"],
+                    "dictionary",
+                    pd.concat(
+                        [
+                            jd_df, pd.DataFrame(
+                                [["ReportingUnit",
+                                  f"{internal[county[v]]};{remainder[v]}",
+                                  v,
+                                  ] for v in good_vals],
+                                columns=["cdf_element", "cdf_internal_name", "raw_identifier_value"],
+                            )
+                        ]
+                    ),
+                )
+                if new_err:
+                    err_list.append(new_err)
         err = ui.consolidate_errors(err_list)
         return err
 
