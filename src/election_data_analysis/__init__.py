@@ -959,6 +959,7 @@ class JurisdictionPrepper:
             self,
             par_file_name: str,
             sub_ru_type: str ="precinct",
+            county_type="county",
     ) -> Optional[dict]:
         err_list = list()
         dl = DataLoader()
@@ -971,7 +972,7 @@ class JurisdictionPrepper:
             # get parameters
             m_path = os.path.join(sdl.mungers_dir, f"{mu}.munger")
             mu_d, new_err = m.get_and_check_munger_params(m_path)
-            # check that ReportingUnit formula is <county>;<sub_ru>
+            # check that ReportingUnit formula is <county_type>;<sub_ru>
             ru_formula = ''
             for header in m.req_munger_param_values["munge_strings"]:
                 formulas, formula_err = ui.get_parameters(
@@ -991,11 +992,11 @@ class JurisdictionPrepper:
                             if new_err:
                                 err_list.append(new_err)
                     else:
-                        # create raw -> internal dictionary of county names
+                        # create raw -> internal dictionary of county_type names
                         jd_df = prep.get_element(self.d["jurisdiction_path"], "dictionary")
                         ru_df = prep.get_element(self.d["jurisdiction_path"], "ReportingUnit")
                         internal = jd_df[jd_df["cdf_element"] == "ReportingUnit"].merge(
-                            ru_df[ru_df["ReportingUnitType"] == "county"], left_on="cdf_internal_name", right_on="Name",
+                            ru_df[ru_df["ReportingUnitType"] == county_type], left_on="cdf_internal_name", right_on="Name",
                             how="inner"
                         )[["raw_identifier_value", "cdf_internal_name"]].set_index("raw_identifier_value").to_dict()[
                             "cdf_internal_name"]
