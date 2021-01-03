@@ -543,7 +543,7 @@ class SingleDataLoader:
                         return values, err
 
                     df, original_string_columns, err = m.to_standard_count_frame(
-                        self.results_dir, self.mungers_dir, p, dict(), suffix="_SOURCE",
+                        f_path, munger_path, p, dict(), suffix="_SOURCE",
                     )
                     if ui.fatal_error(err):
                         return values, err
@@ -558,7 +558,7 @@ class SingleDataLoader:
                     err = ui.consolidate_errors([err, new_err])
                     if ui.fatal_error(new_err):
                         return values, err
-                    values = list(set(values.extend(df[element].unique())))
+                    values = list(set(values.extend(df[f"{element}_raw"].unique())))
 
             except Exception as exc:
                 err = ui.add_new_error(
@@ -956,9 +956,17 @@ class JurisdictionPrepper:
         return err
 
     def add_sub_county_rus(
-            self, sdl: SingleDataLoader, sub_ru_type="precinct"
+            self,
+            par_file_name: str,
+            sub_ru_type: str ="precinct",
     ) -> Optional[dict]:
         err_list = list()
+        dl = DataLoader()
+        juris = jm.Jurisdiction(self.d["jurisdiction_path"])
+        sdl, err = check_and_init_singledataloader(
+            dl.d["results_dir"],
+            par_file_name, dl.session, dl.d["mungers_dir"], juris)
+
         for mu in sdl.munger_list:
             # get parameters
             m_path = os.path.join(sdl.mungers_dir, f"{mu}.munger")
@@ -984,8 +992,8 @@ class JurisdictionPrepper:
                                 err_list.append(new_err)
                     else:
                         # create raw -> internal dictionary of county names
-                        jd_df = prep.get_element(sdl.juris.path_to_juris_dir, "dictionary")
-                        ru_df = prep.get_element(sdl.juris.path_to_juris_dir, "ReportingUnit")
+                        jd_df = prep.get_element(self.d["jurisdiction_path"], "dictionary")
+                        ru_df = prep.get_element(self.d["jurisdiction_path"], "ReportingUnit")
                         internal = jd_df[jd_df["cdf_element"] == "ReportingUnit"].merge(
                             ru_df[ru_df["ReportingUnitType"] == "county"], left_on="cdf_internal_name", right_on="Name",
                             how="inner"
@@ -994,16 +1002,20 @@ class JurisdictionPrepper:
                         # get list of ReportingUnit raw values from results file
                         vals, new_err = sdl.list_values("ReportingUnit")
                         county = {v: v.split(";")[0] for v in vals}
-                        remainder = {v: v[len(county[v]):] for v in vals}
+                        remainder = {v: v[len(county[v]) + 1:] for v in vals}
+                        good_vals = [v for v in vals if county[v] in internal.keys()]
 
                         # write to ReportingUnit.txt
                         new_err = prep.write_element(
-                            sdl.juris.path_to_juris_dir,
+                            self.d["jurisdiction_path"],
                             "ReportingUnit",
                             pd.concat(
                                 [
                                     ru_df, pd.DataFrame(
-                                        [[f"{internal[county[v]]};{remainder[v]}", sub_ru_type] for v in vals],
+                                    [
+                                        [f"{internal[county[v]]};{remainder[v]}", sub_ru_type]
+                                        for v in good_vals
+                                    ],
                                         columns=["Name", "ReportingUnitType"],
                                     )
                                 ]
@@ -1014,7 +1026,7 @@ class JurisdictionPrepper:
 
                         # write to dictionary.txt
                         new_err = prep.write_element(
-                            sdl.juris.path_to_juris_dir,
+                            self.d["jurisdiction_path"],
                             "dictionary",
                             pd.concat(
                                 [
@@ -1022,7 +1034,7 @@ class JurisdictionPrepper:
                                         [["ReportingUnit",
                                           f"{internal[county[v]]};{remainder[v]}",
                                           v,
-                                          ] for v in vals],
+                                          ] for v in good_vals],
                                         columns=["cdf_element", "cdf_internal_name", "raw_identifier_value"],
                                     )
                                 ]
