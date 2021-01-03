@@ -203,7 +203,12 @@ Election	2016 Primary	2016 Primary
 Party	Democratic Party	Democratic
 Party	Republican Party	Republican
 Party	Green Party	Green Party
-Party	Libertarian Party	Libertarian Party
+Party	Alliance Party	Alliance Party
+Party	Green Independent Party	Green Independent
+Party	Independent Party	Independent
+Party	Libertarian Party	Libertarian
+Green Independent		
+Alliance Party		
 ReportingUnit	Maine;ME House District 1	Maine;ME House District 1
 ReportingUnit	Maine;ME House District 2	Maine;ME House District 2
 ReportingUnit	Maine;ME House District 3	Maine;ME House District 3
@@ -413,21 +418,42 @@ CountItemType	total	total
 CountItemType	uocava	uocava
 CountItemType	not-uocava	all-but-uocava
 CountItemType	not-uocava	not-uocava
+Candidate	Donald J. Trump	Donald J. Trump
 Candidate	Donald J. Trump	TRUMP, DONALD J.
+Candidate	Donald J. Trump	Trump, Donald J.
+Candidate	Jo Jorgensen	Jorgensen, Jo
+Candidate	Howard Hawkins	Hawkins, Howard
+Candidate	Roque De La Fuente	De La Fuente, Roque
+Candidate	Joseph R. Biden, Jr.	Biden, Joseph R.
+Candidate	Joseph R. Biden, Jr.	Joseph R. Biden, Jr.
 Candidate	Joseph R. Biden, Jr.	BIDEN, JOSEPH R., JR.
+Candidate	Michael R. Bloomberg	Michael R. Bloomberg
 Candidate	Michael R. Bloomberg	BLOOMBERG, MICHAEL R.
+Candidate	Cory A. Booker	Cory A. Booker
 Candidate	Cory A. Booker	BOOKER, CORY A.
+Candidate	Peter Buttigieg	Peter Buttigieg
 Candidate	Peter Buttigieg	BUTTIGIEG, PETER
+Candidate	Tulsi Gabbard	Tulsi Gabbard
 Candidate	Tulsi Gabbard	GABBARD, TULSI
+Candidate	Amy J. Klobuchar	Amy J. Klobuchar
 Candidate	Amy J. Klobuchar	KLOBUCHAR, AMY J.
+Candidate	Deval Patrick	Deval Patrick
 Candidate	Deval Patrick	PATRICK, DEVAL
+Candidate	Bernard Sanders	Bernard Sanders
 Candidate	Bernard Sanders	SANDERS, BERNARD
+Candidate	Thomas F. Steyer	Thomas F. Steyer
 Candidate	Thomas F. Steyer	STEYER, THOMAS F.
+Candidate	Elizabeth A. Warren	Elizabeth A. Warren
 Candidate	Elizabeth A. Warren	WARREN, ELIZABETH A.
+Candidate	Marianne Williamson	Marianne Williamson
 Candidate	Marianne Williamson	WILLIAMSON, MARIANNE
+Candidate	Andrew Yang	Andrew Yang
 Candidate	Andrew Yang	YANG, ANDREW
+Candidate	Elizabeth A. Sweet	Elizabeth A. Sweet
 Candidate	Elizabeth A. Sweet	Sweet, Elizabeth A.
+Candidate	Bre Kidman	Bre Kidman
 Candidate	Bre Kidman	Kidman, Bre
+Candidate	Sara I. Gideon	Sara I. Gideon
 Candidate	Sara I. Gideon	Gideon, Sara I.
 CountItemType	uocava	UOCAVA
 ReportingUnit	Maine;Cumberland County;Baldwin	CUM;Baldwin
@@ -834,6 +860,7 @@ ReportingUnit	Maine;Piscataquis County;Sebec	PIS;Sebec
 ReportingUnit	Maine;Piscataquis County;Shirley	PIS;Shirley
 ReportingUnit	Maine;Piscataquis County;Wellington	PIS;Wellington
 ReportingUnit	Maine;Piscataquis County;Willimantic	PIS;Willimantic
+ReportingUnit	Maine;Piscataquis County;Milo/Ornveille Twp	PIS;Milo/Ornveille Twp
 ReportingUnit	Maine;Somerset County;Anson	SOM;Anson
 ReportingUnit	Maine;Somerset County;Athens	SOM;Athens
 ReportingUnit	Maine;Somerset County;Bingham	SOM;Bingham
@@ -952,3 +979,5 @@ Candidate	Others	Others
 Candidate	Golden, Jared F.	Golden, Jared F.
 Candidate	Crafts, Dale John	Crafts, Dale John
 Candidate	Allen, Jay T.	Allen, Jay T.
+Candidate	Savage, Lisa	Savage, Lisa
+Candidate	Linn, Max Patrick	Linn, Max Patrick
