@@ -42,6 +42,7 @@ def test_statewide(dbname):
         election,
         jurisdiction,
         statewide_contest,
+        sub_unit_type=county_or_other,
         dbname=dbname,
         )
         == total_statewide_votes
@@ -53,6 +54,7 @@ def test_congressional_totals(dbname):
         election,
         jurisdiction,
         f"US House {abbr} District {cd}",
+        sub_unit_type=county_or_other,
         dbname=dbname,
         )
         == total_cd_votes
@@ -64,6 +66,7 @@ def test_state_senate_totals(dbname):
         election,
         jurisdiction,
         f"{abbr} Senate District {sd}",
+        sub_unit_type=county_or_other,
         dbname=dbname,
         )
         == total_ssd_votes
@@ -75,6 +78,7 @@ def test_state_house_totals(dbname):
         election,
         jurisdiction,
         f"{abbr} House District {hd}",
+        sub_unit_type=county_or_other,
         dbname=dbname,
         )
         == total_shd_votes
@@ -98,6 +102,7 @@ def test_count_type_subtotal(dbname):
         election,
         jurisdiction,
         statewide_contest,
+        sub_unit_type=county_or_other,
         dbname=dbname,
         vote_type=single_vote_type,
         )
