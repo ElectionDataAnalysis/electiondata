@@ -48,7 +48,7 @@ munger_dependent_reqs: Dict[str, Dict[str, List[str]]] = {
 }
 
 req_munger_param_values: Dict[str, List[str]] = {
-    "munge_strings": ["in_field_values", "in_count_headers", "constant_over_file", "constant_over_sheet", "auxiliary_data"],
+    "munge_strings": ["in_field_values", "in_count_headers", "constant_over_file", "constant_over_sheet"],
     "count_locations": ["by_field_names", "by_column_numbers"],
     "file_type": ["excel", "json-nested", "xml", "flat_text"],
 }
@@ -56,7 +56,6 @@ req_munger_param_values: Dict[str, List[str]] = {
 string_location_reqs: Dict[str, List[str]] = {
     "in_field_values": [],
     "in_count_headers": ["count_header_row_numbers"],
-    "auxiliary_data": ["auxiliary_data_directory"],
     "constant_over_file": [],
     "constant_over_sheet": ["constant_over_sheet"],
 }
@@ -228,50 +227,6 @@ def cast_cols_as_int(
     return df, err
 
 
-def munge_clean(
-    raw: pd.DataFrame, munger: jm.Munger, count_columns_by_name: List[str]
-) -> (pd.DataFrame, dict):
-    """Drop unnecessary columns.
-    Append '_SOURCE' suffix to raw column names to avoid conflicts"""
-    err = None
-    working = raw.copy()
-    working, count_columns_by_name, e = clean_column_names(
-        working, count_cols=count_columns_by_name
-    )
-    try:
-        #  define columns named in munger formulas (both plain from 'row' sourced info and
-        #  'variable_j' from column-sourced)
-        munger_formula_row_sourced = [
-            x for x in munger.field_list if x in working.columns
-        ]
-        munger_formula_column_sourced = [
-            f"variable_{j}"
-            for j in munger.field_list
-            if f"variable_{j}" in working.columns
-        ]
-
-        # keep columns named in munger formulas; keep count columns; drop all else.
-        working = working[
-            munger_formula_row_sourced
-            + munger_formula_column_sourced
-            + count_columns_by_name
-        ]
-
-        # add suffix '_SOURCE' to certain columns to avoid any conflict with db table names
-        # (since no db table name ends with _SOURCE)
-
-        renamer = {x: f"{x}_SOURCE" for x in munger_formula_row_sourced}
-        working.rename(columns=renamer, inplace=True)
-    except Exception as e:
-        err = ui.add_new_error(
-            err,
-            "system",
-            f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
-            f"Unexpected error: {e}",
-        )
-    return working, err
-
-
 def add_regex_column(
         df: pd.DataFrame,
         old_col: str,
@@ -404,61 +359,6 @@ def add_column_from_formula(
     # delete temporary columns
     w.drop(temp_cols, axis=1, inplace=True)
     return w, err
-
-
-def add_munged_column(
-    raw: pd.DataFrame,
-    munger: jm.Munger,
-    element: str,
-    err: Optional[dict],
-    mode: str = "row",
-    inplace: bool = True,
-) -> (pd.DataFrame, dict):
-    """Alters dataframe <raw>, adding or redefining <element>_raw column
-    via the <formula>. Assumes "_SOURCE" has been appended to all columns of raw
-    Does not alter row count."""
-    if raw.empty:
-        return raw, err
-    if inplace:
-        working = raw
-    else:
-        working = raw.copy()
-
-    try:
-        formula = munger.cdf_elements.loc[element, "raw_identifier_formula"]
-        if mode == "row":
-            for field in munger.field_list:
-                formula = formula.replace(f"<{field}>", f"<{field}_SOURCE>")
-        elif mode == "column":
-            for i in range(munger.options["header_row_count"]):
-                formula = formula.replace(f"<{i}>", f"<variable_{i}>")
-
-        working, new_err = add_column_from_formula(
-            working, formula, f"{element}_raw", err, munger.name
-        )
-        if new_err:
-            err = ui.consolidate_errors([err, new_err])
-            if ui.fatal_error(new_err):
-                return working, err
-
-        # correct any disambiguated names back to the original
-        if element in munger.alt.keys():
-            working.replace({f"{element}_raw": munger.alt[element]}, inplace=True)
-
-    except Exception as e:
-        err = ui.add_new_error(
-            err,
-            "munger",
-            munger.name,
-            f"Error interpreting formula for {element} in cdf_element.txt. {e}",
-        )
-        return working, err
-
-    # compress whitespace for <element>_raw
-    working.loc[:, f"{element}_raw"] = working[f"{element}_raw"].apply(
-        compress_whitespace
-    )
-    return working, err
 
 
 def compress_whitespace(s: str) -> str:
@@ -855,72 +755,6 @@ def df_header_rows_from_sheet_header_rows(
     return tab_to_df
 
 
-def munge_and_melt(
-    mu: jm.Munger, raw: pd.DataFrame, count_cols: List[str], err: Optional[dict]
-) -> (pd.DataFrame, Optional[dict]):
-    """Does not alter raw; returns transformation of raw:
-     all row- and column-sourced mungeable info into columns (but doesn't translate via dictionary)
-    new column names are, e.g., ReportingUnit_raw, Candidate_raw, etc.
-    """
-    working = raw.copy()
-
-    # melt all column (multi-) index info into columns
-    non_count_cols = [x for x in working.columns if x not in count_cols]
-    working = working.melt(id_vars=non_count_cols)
-
-    # ensure all columns have string names
-    # (i.e., get rid of any tuples from column multi-index)
-    new_col_index = [
-        c[mu.options["field_name_row"]] if isinstance(c, tuple) else c
-        for c in working.columns
-    ]
-    working.columns = new_col_index
-
-    #  if only one header row, rename variable to variable_0 for consistency
-    working.rename(columns={"variable": "variable_0"}, inplace=True)
-
-    # clean and append "_SOURCE" to each original non-count column name
-    working, new_err = munge_clean(working, mu, ["value"])
-    if new_err:
-        err = ui.consolidate_errors([err, new_err])
-        if ui.fatal_error(new_err):
-            return working, err
-
-    # NB: if there is just one numerical column, melt still creates dummy variable col
-    #  in which each value is 'value'
-
-    # rename value to Count
-    #  NB: any unnecessary numerical cols (e.g., Contest Group ID) will not matter
-    #  as they will be be missing from dictionary.txt and hence will be ignored.
-    working.rename(columns={"value": "Count"}, inplace=True)
-
-    # apply munging formula from row sources (after renaming fields in raw formula as necessary)
-    for t in mu.cdf_elements[mu.cdf_elements.source == "row"].index:
-        working, new_err = add_munged_column(working, mu, t, None, mode="row")
-        if new_err:
-            err = ui.consolidate_errors([err, new_err])
-            if ui.fatal_error(new_err):
-                return working, err
-
-    # remove original row-munge columns
-    munged = [x for x in working.columns if x[-7:] == "_SOURCE"]
-    working.drop(munged, axis=1, inplace=True)
-
-    # apply munge formulas for column sources
-    for t in mu.cdf_elements[mu.cdf_elements.source == "column"].index:
-        working, new_err = add_munged_column(working, mu, t, None, mode="column")
-        if new_err:
-            err = ui.consolidate_errors([err, new_err])
-            if ui.fatal_error(new_err):
-                return working, err
-
-    # remove unnecessary columns
-    not_needed = [c for c in working.columns if c[:9] == "variable_"]
-    working.drop(not_needed, axis=1, inplace=True)
-
-    return working, err
-
-
 def add_constant_column(
         df: pd.DataFrame, col_name: str, col_value: Any, dtype: Optional[str] = None
 ) -> pd.DataFrame:
@@ -1259,133 +1093,6 @@ def ensure_total_counts(
     return working
 
 
-def raw_elements_to_cdf(
-    session,
-    juris: jm.Jurisdiction,
-    mu: jm.Munger,
-    raw: pd.DataFrame,
-    count_cols: List[str],
-    err: dict,
-    constants: dict,
-) -> dict:
-    """load data from <raw> into the database."""
-    working = raw.copy()
-
-    try:
-        working, new_err = munge_and_melt(mu, working, count_cols, err)
-        if new_err:
-            err = ui.consolidate_errors([err, new_err])
-            if ui.fatal_error(new_err):
-                return err
-    except Exception as exc:
-        err = ui.add_new_error(
-            err,
-            "system",
-            f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
-            f"Unexpected exception during munge_and_melt: {exc}",
-        )
-        return err
-
-    # enter elements from sources outside raw data, including creating id column(s)
-    for k in constants.keys():
-        working = add_constant_column(working, k, constants[k])
-
-    # add Contest_Id (unless it was passed in ids)
-    if "Contest_Id" not in working.columns:
-        try:
-            working, err = add_contest_id(working, juris, err, session)
-        except Exception as exc:
-            err = ui.add_new_error(
-                err,
-                "system",
-                f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
-                f"Unexpected exception while adding Contest_Id: {exc}",
-            )
-            return err
-        if ui.fatal_error(err):
-            return err
-
-    # get ids for remaining info sourced from rows and columns (except Selection_Id)
-    element_list = [
-        t
-        for t in mu.cdf_elements.index
-        if (
-            t[-7:] != "Contest"
-            and (t[-9:] != "Selection")
-            and f"{t}_Id" not in constants.keys()
-        )
-    ]
-    working, new_err = raw_to_id_simple(working, juris, element_list, session)
-    if new_err:
-        err = ui.consolidate_errors([err, new_err])
-        if ui.fatal_error(new_err):
-            return err
-
-    # add Selection_Id (combines info from BallotMeasureSelection and CandidateContestSelection)
-    try:
-        working, err = add_selection_id(working, session.bind, juris, err)
-        working, err_df = clean_ids(working, ["Selection_Id"])
-    except Exception as exc:
-        err = ui.add_new_error(
-            err,
-            "system",
-            f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
-            f"Unexpected exception while adding Selection_Id:\n{exc}",
-        )
-        return err
-    if working.empty:
-        err = ui.add_new_error(
-            err,
-            "jurisdiction",
-            juris.short_name,
-            "No contests found, or no selections found for contests.",
-        )
-        return err
-
-    # restrict to just the VoteCount columns (so that groupby.sum will work)
-    vc_cols = [
-        "Count",
-        "CountItemType_Id",
-        "OtherCountItemType",
-        "ReportingUnit_Id",
-        "Contest_Id",
-        "Selection_Id",
-        "Election_Id",
-        "_datafile_Id",
-    ]
-    working = working[vc_cols]
-    working, e = clean_count_cols(working, ["Count"])
-
-    working = ensure_total_counts(working, session)
-    # TODO there are edge cases where this might include dupes
-    #  that should be omitted. E.g., if data mistakenly read twice
-    # Sum any rows that were disambiguated (otherwise dupes will be dropped
-    #  when VoteCount is filled)
-    group_cols = [c for c in working.columns if c != "Count"]
-    working = working.groupby(group_cols).sum().reset_index()
-    # TODO clean before inserting? All should be already clean, no?
-
-    # Fill VoteCount
-    try:
-        e = db.insert_to_cdf_db(session.bind, working, "VoteCount")
-        if e:
-            err = ui.add_new_error(
-                err,
-                "system",
-                f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
-                f"database insertion error {e}",
-            )
-            return err
-    except Exception as exc:
-        err = ui.add_new_error(
-            err,
-            "system",
-            f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
-            f"Error filling VoteCount:\n{exc}",
-        )
-    return err
-
-
 if __name__ == "__main__":
     pass
     exit()
@@ -1680,6 +1387,7 @@ def get_and_check_munger_params(munger_path: str) -> (dict, Optional[dict]):
     # TODO check formats (e.g., formulas for constant_over_sheet use only <sheet_name> and <row_{i}>)
     # TODO check that required headers are present (see User_Guide) per munge_strings list
     # TODO check that required headers are present (see User_Guide) per lookups list
+    # TODO check that each element is defined by a single formula
 
     # # add parameter listing all munge fields
     # get lists of string fields expected in raw file
