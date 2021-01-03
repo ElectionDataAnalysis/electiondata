@@ -1417,3 +1417,519 @@ ReportingUnit	Maine;Washington County;WAITE	WAS;Waite
 ReportingUnit	Maine;Washington County;WESLEY	WAS;Wesley
 ReportingUnit	Maine;Washington County;WHITING	WAS;Whiting
 ReportingUnit	Maine;Washington County;WHITNEYVILLE	WAS;Whitneyville
+ReportingUnit	Maine;Cumberland County;Baldwin	CUM;Baldwin
+ReportingUnit	Maine;Cumberland County;Bridgton	CUM;Bridgton
+ReportingUnit	Maine;Cumberland County;Brunswick	CUM;Brunswick
+ReportingUnit	Maine;Cumberland County;Cape Elizabeth	CUM;Cape Elizabeth
+ReportingUnit	Maine;Cumberland County;Casco	CUM;Casco
+ReportingUnit	Maine;Cumberland County;Chebeague Island	CUM;Chebeague Island
+ReportingUnit	Maine;Cumberland County;Cumberland	CUM;Cumberland
+ReportingUnit	Maine;Cumberland County;Falmouth	CUM;Falmouth
+ReportingUnit	Maine;Cumberland County;Freeport	CUM;Freeport
+ReportingUnit	Maine;Cumberland County;Frye Island	CUM;Frye Island
+ReportingUnit	Maine;Cumberland County;Gorham	CUM;Gorham
+ReportingUnit	Maine;Cumberland County;Gray	CUM;Gray
+ReportingUnit	Maine;Cumberland County;Harpswell	CUM;Harpswell
+ReportingUnit	Maine;Cumberland County;Harrison	CUM;Harrison
+ReportingUnit	Maine;Cumberland County;Long Island	CUM;Long Island
+ReportingUnit	Maine;Cumberland County;Naples	CUM;Naples
+ReportingUnit	Maine;Cumberland County;New Gloucester	CUM;New Gloucester
+ReportingUnit	Maine;Cumberland County;North Yarmouth	CUM;North Yarmouth
+ReportingUnit	Maine;Cumberland County;Portland	CUM;Portland
+ReportingUnit	Maine;Cumberland County;Pownal	CUM;Pownal
+ReportingUnit	Maine;Cumberland County;Raymond	CUM;Raymond
+ReportingUnit	Maine;Cumberland County;Scarborough	CUM;Scarborough
+ReportingUnit	Maine;Cumberland County;Sebago	CUM;Sebago
+ReportingUnit	Maine;Cumberland County;South Portland	CUM;South Portland
+ReportingUnit	Maine;Cumberland County;Standish	CUM;Standish
+ReportingUnit	Maine;Cumberland County;Westbrook	CUM;Westbrook
+ReportingUnit	Maine;Cumberland County;Windham	CUM;Windham
+ReportingUnit	Maine;Cumberland County;Yarmouth	CUM;Yarmouth
+ReportingUnit	Maine;Kennebec County;Augusta	KEN;Augusta
+ReportingUnit	Maine;Kennebec County;Chelsea	KEN;Chelsea
+ReportingUnit	Maine;Kennebec County;China	KEN;China
+ReportingUnit	Maine;Kennebec County;Farmingdale	KEN;Farmingdale
+ReportingUnit	Maine;Kennebec County;Hallowell	KEN;Hallowell
+ReportingUnit	Maine;Kennebec County;Manchester	KEN;Manchester
+ReportingUnit	Maine;Kennebec County;Pittston	KEN;Pittston
+ReportingUnit	Maine;Kennebec County;Readfield	KEN;Readfield
+ReportingUnit	Maine;Kennebec County;Vassalboro	KEN;Vassalboro
+ReportingUnit	Maine;Kennebec County;Waterville	KEN;Waterville
+ReportingUnit	Maine;Kennebec County;Windsor	KEN;Windsor
+ReportingUnit	Maine;Kennebec County;Winslow	KEN;Winslow
+ReportingUnit	Maine;Kennebec County;Winthrop	KEN;Winthrop
+ReportingUnit	Maine;Knox County;Appleton	KNO;Appleton
+ReportingUnit	Maine;Knox County;Camden	KNO;Camden
+ReportingUnit	Maine;Knox County;Cushing	KNO;Cushing
+ReportingUnit	Maine;Knox County;Friendship	KNO;Friendship
+ReportingUnit	Maine;Knox County;Hope	KNO;Hope
+ReportingUnit	Maine;Knox County;Isle Au Haut	KNO;Isle Au Haut
+ReportingUnit	Maine;Knox County;Matinicus Isle Plt	KNO;Matinicus Isle Plt
+ReportingUnit	Maine;Knox County;North Haven	KNO;North Haven
+ReportingUnit	Maine;Knox County;Owls Head	KNO;Owls Head
+ReportingUnit	Maine;Knox County;Rockland	KNO;Rockland
+ReportingUnit	Maine;Knox County;Rockport	KNO;Rockport
+ReportingUnit	Maine;Knox County;Saint George	KNO;Saint George
+ReportingUnit	Maine;Knox County;South Thomaston	KNO;South Thomaston
+ReportingUnit	Maine;Knox County;Thomaston	KNO;Thomaston
+ReportingUnit	Maine;Knox County;Union	KNO;Union
+ReportingUnit	Maine;Knox County;Vinalhaven	KNO;Vinalhaven
+ReportingUnit	Maine;Knox County;Warren	KNO;Warren
+ReportingUnit	Maine;Knox County;Washington	KNO;Washington
+ReportingUnit	Maine;Lincoln County;Alna	LIN;Alna
+ReportingUnit	Maine;Lincoln County;Boothbay	LIN;Boothbay
+ReportingUnit	Maine;Lincoln County;Boothbay Harbor	LIN;Boothbay Harbor
+ReportingUnit	Maine;Lincoln County;Bremen	LIN;Bremen
+ReportingUnit	Maine;Lincoln County;Bristol	LIN;Bristol
+ReportingUnit	Maine;Lincoln County;Damariscotta	LIN;Damariscotta
+ReportingUnit	Maine;Lincoln County;Dresden	LIN;Dresden
+ReportingUnit	Maine;Lincoln County;Edgecomb	LIN;Edgecomb
+ReportingUnit	Maine;Lincoln County;Jefferson	LIN;Jefferson
+ReportingUnit	Maine;Lincoln County;Monhegan Island Plt	LIN;Monhegan Island Plt
+ReportingUnit	Maine;Lincoln County;Newcastle	LIN;Newcastle
+ReportingUnit	Maine;Lincoln County;Nobleboro	LIN;Nobleboro
+ReportingUnit	Maine;Lincoln County;Somerville	LIN;Somerville
+ReportingUnit	Maine;Lincoln County;South Bristol	LIN;South Bristol
+ReportingUnit	Maine;Lincoln County;Southport	LIN;Southport
+ReportingUnit	Maine;Lincoln County;Waldoboro	LIN;Waldoboro
+ReportingUnit	Maine;Lincoln County;Westport Island	LIN;Westport Island
+ReportingUnit	Maine;Lincoln County;Whitefield	LIN;Whitefield
+ReportingUnit	Maine;Lincoln County;Wiscasset	LIN;Wiscasset
+ReportingUnit	Maine;Sagadahoc County;Arrowsic	SAG;Arrowsic
+ReportingUnit	Maine;Sagadahoc County;Bath	SAG;Bath
+ReportingUnit	Maine;Sagadahoc County;Bowdoin	SAG;Bowdoin
+ReportingUnit	Maine;Sagadahoc County;Bowdoinham	SAG;Bowdoinham
+ReportingUnit	Maine;Sagadahoc County;Georgetown	SAG;Georgetown
+ReportingUnit	Maine;Sagadahoc County;Phippsburg	SAG;Phippsburg
+ReportingUnit	Maine;Sagadahoc County;Richmond	SAG;Richmond
+ReportingUnit	Maine;Sagadahoc County;Topsham	SAG;Topsham
+ReportingUnit	Maine;Sagadahoc County;West Bath	SAG;West Bath
+ReportingUnit	Maine;Sagadahoc County;Woolwich	SAG;Woolwich
+ReportingUnit	Maine;York County;Acton	YOR;Acton
+ReportingUnit	Maine;York County;Alfred	YOR;Alfred
+ReportingUnit	Maine;York County;Arundel	YOR;Arundel
+ReportingUnit	Maine;York County;Berwick	YOR;Berwick
+ReportingUnit	Maine;York County;Biddeford	YOR;Biddeford
+ReportingUnit	Maine;York County;Buxton	YOR;Buxton
+ReportingUnit	Maine;York County;Cornish	YOR;Cornish
+ReportingUnit	Maine;York County;Dayton	YOR;Dayton
+ReportingUnit	Maine;York County;Eliot	YOR;Eliot
+ReportingUnit	Maine;York County;Hollis	YOR;Hollis
+ReportingUnit	Maine;York County;Kennebunk	YOR;Kennebunk
+ReportingUnit	Maine;York County;Kennebunkport	YOR;Kennebunkport
+ReportingUnit	Maine;York County;Kittery	YOR;Kittery
+ReportingUnit	Maine;York County;Lebanon	YOR;Lebanon
+ReportingUnit	Maine;York County;Limerick	YOR;Limerick
+ReportingUnit	Maine;York County;Limington	YOR;Limington
+ReportingUnit	Maine;York County;Lyman	YOR;Lyman
+ReportingUnit	Maine;York County;Newfield	YOR;Newfield
+ReportingUnit	Maine;York County;North Berwick	YOR;North Berwick
+ReportingUnit	Maine;York County;Ogunquit	YOR;Ogunquit
+ReportingUnit	Maine;York County;Old Orchard Beach	YOR;Old Orchard Beach
+ReportingUnit	Maine;York County;Parsonsfield	YOR;Parsonsfield
+ReportingUnit	Maine;York County;Saco	YOR;Saco
+ReportingUnit	Maine;York County;Sanford	YOR;Sanford
+ReportingUnit	Maine;York County;Shapleigh	YOR;Shapleigh
+ReportingUnit	Maine;York County;South Berwick	YOR;South Berwick
+ReportingUnit	Maine;York County;Waterboro	YOR;Waterboro
+ReportingUnit	Maine;York County;Wells	YOR;Wells
+ReportingUnit	Maine;York County;York	YOR;York
+ReportingUnit	Maine;Androscoggin County;Auburn	AND;Auburn
+ReportingUnit	Maine;Androscoggin County;Durham	AND;Durham
+ReportingUnit	Maine;Androscoggin County;Greene	AND;Greene
+ReportingUnit	Maine;Androscoggin County;Leeds	AND;Leeds
+ReportingUnit	Maine;Androscoggin County;Lewiston	AND;Lewiston
+ReportingUnit	Maine;Androscoggin County;Lisbon	AND;Lisbon
+ReportingUnit	Maine;Androscoggin County;Livermore	AND;Livermore
+ReportingUnit	Maine;Androscoggin County;Livermore Falls	AND;Livermore Falls
+ReportingUnit	Maine;Androscoggin County;Mechanic Falls	AND;Mechanic Falls
+ReportingUnit	Maine;Androscoggin County;Minot	AND;Minot
+ReportingUnit	Maine;Androscoggin County;Poland	AND;Poland
+ReportingUnit	Maine;Androscoggin County;Sabattus	AND;Sabattus
+ReportingUnit	Maine;Androscoggin County;Turner	AND;Turner
+ReportingUnit	Maine;Androscoggin County;Wales	AND;Wales
+ReportingUnit	Maine;Aroostook County;Allagash	ARO;Allagash
+ReportingUnit	Maine;Aroostook County;Amity	ARO;Amity
+ReportingUnit	Maine;Aroostook County;Ashland/T8 R11 Twp	ARO;Ashland/T8 R11 Twp
+ReportingUnit	Maine;Aroostook County;Blaine	ARO;Blaine
+ReportingUnit	Maine;Aroostook County;Bridgewater	ARO;Bridgewater
+ReportingUnit	Maine;Aroostook County;Caribou/Connor Twp	ARO;Caribou/Connor Twp
+ReportingUnit	Maine;Aroostook County;Castle Hill	ARO;Castle Hill
+ReportingUnit	Maine;Aroostook County;Caswell	ARO;Caswell
+ReportingUnit	Maine;Aroostook County;Chapman	ARO;Chapman
+ReportingUnit	Maine;Aroostook County;Cross Lake Twp	ARO;Cross Lake Twp
+ReportingUnit	Maine;Aroostook County;Crystal	ARO;Crystal
+ReportingUnit	Maine;Aroostook County;Cyr Plt	ARO;Cyr Plt
+ReportingUnit	Maine;Aroostook County;Dyer Brook	ARO;Dyer Brook
+ReportingUnit	Maine;Aroostook County;E Twp	ARO;E Twp
+ReportingUnit	Maine;Aroostook County;Eagle Lake/T15 R6 Twp	ARO;Eagle Lake/T15 R6 Twp
+ReportingUnit	Maine;Aroostook County;Easton	ARO;Easton
+ReportingUnit	Maine;Aroostook County;Fort Fairfield	ARO;Fort Fairfield
+ReportingUnit	Maine;Aroostook County;Fort Kent/Big Twenty Twp/T15 R15 Wels	ARO;Fort Kent/Big Twenty Twp/T15 R15 Wels
+ReportingUnit	Maine;Aroostook County;Frenchville	ARO;Frenchville
+ReportingUnit	Maine;Aroostook County;Garfield Plt	ARO;Garfield Plt
+ReportingUnit	Maine;Aroostook County;Glenwood Plt	ARO;Glenwood Plt
+ReportingUnit	Maine;Aroostook County;Grand Isle	ARO;Grand Isle
+ReportingUnit	Maine;Aroostook County;Hamlin	ARO;Hamlin
+ReportingUnit	Maine;Aroostook County;Hammond	ARO;Hammond
+ReportingUnit	Maine;Aroostook County;Haynesville	ARO;Haynesville
+ReportingUnit	Maine;Aroostook County;Hersey	ARO;Hersey
+ReportingUnit	Maine;Aroostook County;Hodgdon	ARO;Hodgdon
+ReportingUnit	Maine;Aroostook County;Houlton	ARO;Houlton
+ReportingUnit	Maine;Aroostook County;Island Falls	ARO;Island Falls
+ReportingUnit	Maine;Aroostook County;Limestone	ARO;Limestone
+ReportingUnit	Maine;Aroostook County;Linneus	ARO;Linneus
+ReportingUnit	Maine;Aroostook County;Littleton	ARO;Littleton
+ReportingUnit	Maine;Aroostook County;Ludlow	ARO;Ludlow
+ReportingUnit	Maine;Aroostook County;Macwahoc Plt	ARO;Macwahoc Plt
+ReportingUnit	Maine;Aroostook County;Madawaska	ARO;Madawaska
+ReportingUnit	Maine;Aroostook County;Madawaska Lake	ARO;Madawaska Lake
+ReportingUnit	Maine;Aroostook County;Mapleton	ARO;Mapleton
+ReportingUnit	Maine;Aroostook County;Mars Hill	ARO;Mars Hill
+ReportingUnit	Maine;Aroostook County;Masardis	ARO;Masardis
+ReportingUnit	Maine;Aroostook County;Merrill	ARO;Merrill
+ReportingUnit	Maine;Aroostook County;Monticello	ARO;Monticello
+ReportingUnit	Maine;Aroostook County;Moro Plt	ARO;Moro Plt
+ReportingUnit	Maine;Aroostook County;Nashville Plt	ARO;Nashville Plt
+ReportingUnit	Maine;Aroostook County;New Canada	ARO;New Canada
+ReportingUnit	Maine;Aroostook County;New Limerick	ARO;New Limerick
+ReportingUnit	Maine;Aroostook County;New Sweden	ARO;New Sweden
+ReportingUnit	Maine;Aroostook County;Oakfield	ARO;Oakfield
+ReportingUnit	Maine;Aroostook County;Orient	ARO;Orient
+ReportingUnit	Maine;Aroostook County;Oxbow North Twp	ARO;Oxbow North Twp
+ReportingUnit	Maine;Aroostook County;Perham	ARO;Perham
+ReportingUnit	Maine;Aroostook County;Portage Lake	ARO;Portage Lake
+ReportingUnit	Maine;Aroostook County;Presque Isle	ARO;Presque Isle
+ReportingUnit	Maine;Aroostook County;Reed Plt	ARO;Reed Plt
+ReportingUnit	Maine;Aroostook County;Saint Agatha/Sinclair	ARO;Saint Agatha/Sinclair
+ReportingUnit	Maine;Aroostook County;Saint Francis	ARO;Saint Francis
+ReportingUnit	Maine;Aroostook County;Saint John Plt	ARO;Saint John Plt
+ReportingUnit	Maine;Aroostook County;Sherman/Benedicta/Silver Ridge	ARO;Sherman/Benedicta/Silver Ridge
+ReportingUnit	Maine;Aroostook County;Smyrna	ARO;Smyrna
+ReportingUnit	Maine;Aroostook County;Stockholm	ARO;Stockholm
+ReportingUnit	Maine;Aroostook County;T11 R4 WELS	ARO;T11 R4 WELS
+ReportingUnit	Maine;Aroostook County;T15 R6 WELS TWP	ARO;T15 R6 WELS TWP
+ReportingUnit	Maine;Aroostook County;T4 R3 Twp	ARO;T4 R3 Twp
+ReportingUnit	Maine;Aroostook County;TD R2 TWP	ARO;TD R2 TWP
+ReportingUnit	Maine;Aroostook County;Van Buren/Van Buren Cove	ARO;Van Buren/Van Buren Cove
+ReportingUnit	Maine;Aroostook County;Wade	ARO;Wade
+ReportingUnit	Maine;Aroostook County;Wallagrass	ARO;Wallagrass
+ReportingUnit	Maine;Aroostook County;Washburn	ARO;Washburn
+ReportingUnit	Maine;Aroostook County;Westfield	ARO;Westfield
+ReportingUnit	Maine;Aroostook County;Westmanland	ARO;Westmanland
+ReportingUnit	Maine;Aroostook County;Weston	ARO;Weston
+ReportingUnit	Maine;Aroostook County;Winterville Plt.	ARO;Winterville Plt.
+ReportingUnit	Maine;Aroostook County;Woodland	ARO;Woodland
+ReportingUnit	Maine;Franklin County;Avon	FRA;Avon
+ReportingUnit	Maine;Franklin County;Carrabassett Valley/Wyman Twp	FRA;Carrabassett Valley/Wyman Twp
+ReportingUnit	Maine;Franklin County;Carthage	FRA;Carthage
+ReportingUnit	Maine;Franklin County;Chesterville	FRA;Chesterville
+ReportingUnit	Maine;Franklin County;Coplin Plt	FRA;Coplin Plt
+ReportingUnit	Maine;Franklin County;Dallas Plt	FRA;Dallas Plt
+ReportingUnit	Maine;Franklin County;Eustis	FRA;Eustis
+ReportingUnit	Maine;Franklin County;Farmington	FRA;Farmington
+ReportingUnit	Maine;Franklin County;Industry	FRA;Industry
+ReportingUnit	Maine;Franklin County;Jay	FRA;Jay
+ReportingUnit	Maine;Franklin County;Kingfield	FRA;Kingfield
+ReportingUnit	Maine;Franklin County;New Sharon	FRA;New Sharon
+ReportingUnit	Maine;Franklin County;New Vineyard	FRA;New Vineyard
+ReportingUnit	Maine;Franklin County;Perkins Twp	FRA;Perkins Twp
+ReportingUnit	Maine;Franklin County;Phillips	FRA;Phillips
+ReportingUnit	Maine;Franklin County;Rangeley/Adamstown Twp	FRA;Rangeley/Adamstown Twp
+ReportingUnit	Maine;Franklin County;Rangeley Plt	FRA;Rangeley Plt
+ReportingUnit	Maine;Franklin County;Sandy River Plt	FRA;Sandy River Plt
+ReportingUnit	Maine;Franklin County;Strong/Freeman Twp	FRA;Strong/Freeman Twp
+ReportingUnit	Maine;Franklin County;Temple	FRA;Temple
+ReportingUnit	Maine;Franklin County;Weld	FRA;Weld
+ReportingUnit	Maine;Franklin County;Wilton/Washington Twp	FRA;Wilton/Washington Twp
+ReportingUnit	Maine;Franklin County;Wyman Twp	FRA;Wyman Twp
+ReportingUnit	Maine;Hancock County;Amherst	HAN;Amherst
+ReportingUnit	Maine;Hancock County;Aurora	HAN;Aurora
+ReportingUnit	Maine;Hancock County;Bar Harbor	HAN;Bar Harbor
+ReportingUnit	Maine;Hancock County;Blue Hill	HAN;Blue Hill
+ReportingUnit	Maine;Hancock County;Brooklin	HAN;Brooklin
+ReportingUnit	Maine;Hancock County;Brooksville	HAN;Brooksville
+ReportingUnit	Maine;Hancock County;Bucksport	HAN;Bucksport
+ReportingUnit	Maine;Hancock County;Castine	HAN;Castine
+ReportingUnit	Maine;Hancock County;Cranberry Isles	HAN;Cranberry Isles
+ReportingUnit	Maine;Hancock County;Dedham	HAN;Dedham
+ReportingUnit	Maine;Hancock County;Deer Isle	HAN;Deer Isle
+ReportingUnit	Maine;Hancock County;Eastbrook	HAN;Eastbrook
+ReportingUnit	Maine;Hancock County;Ellsworth	HAN;Ellsworth
+ReportingUnit	Maine;Hancock County;Franklin/T9 T10 SD	HAN;Franklin/T9 T10 SD
+ReportingUnit	Maine;Hancock County;Frenchboro	HAN;Frenchboro
+ReportingUnit	Maine;Hancock County;Gouldsboro	HAN;Gouldsboro
+ReportingUnit	Maine;Hancock County;Great Pond	HAN;Great Pond
+ReportingUnit	Maine;Hancock County;Hancock	HAN;Hancock
+ReportingUnit	Maine;Hancock County;Lamoine	HAN;Lamoine
+ReportingUnit	Maine;Hancock County;Mariaville	HAN;Mariaville
+ReportingUnit	Maine;Hancock County;Mount Desert	HAN;Mount Desert
+ReportingUnit	Maine;Hancock County;Orland	HAN;Orland
+ReportingUnit	Maine;Hancock County;Osborn	HAN;Osborn
+ReportingUnit	Maine;Hancock County;Otis	HAN;Otis
+ReportingUnit	Maine;Hancock County;Penobscot	HAN;Penobscot
+ReportingUnit	Maine;Hancock County;Sedgwick	HAN;Sedgwick
+ReportingUnit	Maine;Hancock County;Sorrento	HAN;Sorrento
+ReportingUnit	Maine;Hancock County;Southwest Harbor	HAN;Southwest Harbor
+ReportingUnit	Maine;Hancock County;Stonington	HAN;Stonington
+ReportingUnit	Maine;Hancock County;Sullivan	HAN;Sullivan
+ReportingUnit	Maine;Hancock County;Surry	HAN;Surry
+ReportingUnit	Maine;Hancock County;Swans Island	HAN;Swans Island
+ReportingUnit	Maine;Hancock County;T22 MD Twp	HAN;T22 MD Twp
+ReportingUnit	Maine;Hancock County;T3 ND Twp	HAN;T3 ND Twp
+ReportingUnit	Maine;Hancock County;Tremont	HAN;Tremont
+ReportingUnit	Maine;Hancock County;Trenton	HAN;Trenton
+ReportingUnit	Maine;Hancock County;Verona Island	HAN;Verona Island
+ReportingUnit	Maine;Hancock County;Waltham	HAN;Waltham
+ReportingUnit	Maine;Hancock County;Winter Harbor	HAN;Winter Harbor
+ReportingUnit	Maine;Kennebec County;Albion	KEN;Albion
+ReportingUnit	Maine;Kennebec County;Belgrade	KEN;Belgrade
+ReportingUnit	Maine;Kennebec County;Benton	KEN;Benton
+ReportingUnit	Maine;Kennebec County;Clinton	KEN;Clinton
+ReportingUnit	Maine;Kennebec County;Fayette	KEN;Fayette
+ReportingUnit	Maine;Kennebec County;Gardiner	KEN;Gardiner
+ReportingUnit	Maine;Kennebec County;Litchfield	KEN;Litchfield
+ReportingUnit	Maine;Kennebec County;Monmouth	KEN;Monmouth
+ReportingUnit	Maine;Kennebec County;Mount Vernon	KEN;Mount Vernon
+ReportingUnit	Maine;Kennebec County;Oakland	KEN;Oakland
+ReportingUnit	Maine;Kennebec County;Randolph	KEN;Randolph
+ReportingUnit	Maine;Kennebec County;Rome	KEN;Rome
+ReportingUnit	Maine;Kennebec County;Sidney	KEN;Sidney
+ReportingUnit	Maine;Kennebec County;Vienna	KEN;Vienna
+ReportingUnit	Maine;Kennebec County;Wayne	KEN;Wayne
+ReportingUnit	Maine;Kennebec County;West Gardiner	KEN;West Gardiner
+ReportingUnit	Maine;Oxford County;Albany Twp	OXF;Albany Twp
+ReportingUnit	Maine;Oxford County;Andover	OXF;Andover
+ReportingUnit	Maine;Oxford County;Bethel/Mason Twp	OXF;Bethel/Mason Twp
+ReportingUnit	Maine;Oxford County;Brownfield	OXF;Brownfield
+ReportingUnit	Maine;Oxford County;Buckfield	OXF;Buckfield
+ReportingUnit	Maine;Oxford County;Byron	OXF;Byron
+ReportingUnit	Maine;Oxford County;Canton	OXF;Canton
+ReportingUnit	Maine;Oxford County;Denmark	OXF;Denmark
+ReportingUnit	Maine;Oxford County;Dixfield	OXF;Dixfield
+ReportingUnit	Maine;Oxford County;Fryeburg	OXF;Fryeburg
+ReportingUnit	Maine;Oxford County;Gilead	OXF;Gilead
+ReportingUnit	Maine;Oxford County;Greenwood	OXF;Greenwood
+ReportingUnit	Maine;Oxford County;Hanover	OXF;Hanover
+ReportingUnit	Maine;Oxford County;Hartford	OXF;Hartford
+ReportingUnit	Maine;Oxford County;Hebron	OXF;Hebron
+ReportingUnit	Maine;Oxford County;Hiram	OXF;Hiram
+ReportingUnit	Maine;Oxford County;Lincoln Plt	OXF;Lincoln Plt
+ReportingUnit	Maine;Oxford County;Lovell	OXF;Lovell
+ReportingUnit	Maine;Oxford County;Magalloway Plt	OXF;Magalloway Plt
+ReportingUnit	Maine;Oxford County;Mexico	OXF;Mexico
+ReportingUnit	Maine;Oxford County;Newry	OXF;Newry
+ReportingUnit	Maine;Oxford County;Norway	OXF;Norway
+ReportingUnit	Maine;Oxford County;Otisfield	OXF;Otisfield
+ReportingUnit	Maine;Oxford County;Oxford	OXF;Oxford
+ReportingUnit	Maine;Oxford County;Paris	OXF;Paris
+ReportingUnit	Maine;Oxford County;Peru	OXF;Peru
+ReportingUnit	Maine;Oxford County;Porter	OXF;Porter
+ReportingUnit	Maine;Oxford County;Roxbury	OXF;Roxbury
+ReportingUnit	Maine;Oxford County;Rumford	OXF;Rumford
+ReportingUnit	Maine;Oxford County;Stoneham	OXF;Stoneham
+ReportingUnit	Maine;Oxford County;Stow	OXF;Stow
+ReportingUnit	Maine;Oxford County;Sumner	OXF;Sumner
+ReportingUnit	Maine;Oxford County;Sweden	OXF;Sweden
+ReportingUnit	Maine;Oxford County;Upton	OXF;Upton
+ReportingUnit	Maine;Oxford County;Waterford	OXF;Waterford
+ReportingUnit	Maine;Oxford County;West Paris	OXF;West Paris
+ReportingUnit	Maine;Oxford County;Woodstock/Milton Twp	OXF;Woodstock/Milton Twp
+ReportingUnit	Maine;Penobscot County;Alton	PEN;Alton
+ReportingUnit	Maine;Penobscot County;Argyle Twp	PEN;Argyle Twp
+ReportingUnit	Maine;Penobscot County;Bangor	PEN;Bangor
+ReportingUnit	Maine;Penobscot County;Bradford	PEN;Bradford
+ReportingUnit	Maine;Penobscot County;Bradley	PEN;Bradley
+ReportingUnit	Maine;Penobscot County;Brewer	PEN;Brewer
+ReportingUnit	Maine;Penobscot County;Burlington	PEN;Burlington
+ReportingUnit	Maine;Penobscot County;Carmel	PEN;Carmel
+ReportingUnit	Maine;Penobscot County;Carroll Plt	PEN;Carroll Plt
+ReportingUnit	Maine;Penobscot County;Charleston	PEN;Charleston
+ReportingUnit	Maine;Penobscot County;Chester	PEN;Chester
+ReportingUnit	Maine;Penobscot County;Clifton	PEN;Clifton
+ReportingUnit	Maine;Penobscot County;Corinna	PEN;Corinna
+ReportingUnit	Maine;Penobscot County;Corinth	PEN;Corinth
+ReportingUnit	Maine;Penobscot County;Dexter	PEN;Dexter
+ReportingUnit	Maine;Penobscot County;Dixmont	PEN;Dixmont
+ReportingUnit	Maine;Penobscot County;Drew Plt	PEN;Drew Plt
+ReportingUnit	Maine;Penobscot County;East Millinocket	PEN;East Millinocket
+ReportingUnit	Maine;Penobscot County;Eddington	PEN;Eddington
+ReportingUnit	Maine;Penobscot County;Edinburg	PEN;Edinburg
+ReportingUnit	Maine;Penobscot County;Enfield	PEN;Enfield
+ReportingUnit	Maine;Penobscot County;Etna	PEN;Etna
+ReportingUnit	Maine;Penobscot County;Exeter	PEN;Exeter
+ReportingUnit	Maine;Penobscot County;Garland	PEN;Garland
+ReportingUnit	Maine;Penobscot County;Glenburn	PEN;Glenburn
+ReportingUnit	Maine;Penobscot County;Grand Falls Twp	PEN;Grand Falls Twp
+ReportingUnit	Maine;Penobscot County;Greenbush	PEN;Greenbush
+ReportingUnit	Maine;Penobscot County;Hampden	PEN;Hampden
+ReportingUnit	Maine;Penobscot County;Hermon	PEN;Hermon
+ReportingUnit	Maine;Penobscot County;Herseytown Twp	PEN;Herseytown Twp
+ReportingUnit	Maine;Penobscot County;Holden	PEN;Holden
+ReportingUnit	Maine;Penobscot County;Howland	PEN;Howland
+ReportingUnit	Maine;Penobscot County;Hudson	PEN;Hudson
+ReportingUnit	Maine;Penobscot County;Kenduskeag	PEN;Kenduskeag
+ReportingUnit	Maine;Penobscot County;Kingman Twp	PEN;Kingman Twp
+ReportingUnit	Maine;Penobscot County;Lagrange/Orneville Twp	PEN;Lagrange/Orneville Twp
+ReportingUnit	Maine;Penobscot County;Lakeville	PEN;Lakeville
+ReportingUnit	Maine;Penobscot County;Lee	PEN;Lee
+ReportingUnit	Maine;Penobscot County;Levant	PEN;Levant
+ReportingUnit	Maine;Penobscot County;Lincoln	PEN;Lincoln
+ReportingUnit	Maine;Penobscot County;Lowell	PEN;Lowell
+ReportingUnit	Maine;Penobscot County;Mattamiscontis Twp	PEN;Mattamiscontis Twp
+ReportingUnit	Maine;Penobscot County;Mattawamkeag/Molunkus Twp	PEN;Mattawamkeag/Molunkus Twp
+ReportingUnit	Maine;Penobscot County;Maxfield	PEN;Maxfield
+ReportingUnit	Maine;Penobscot County;Medway/Townships	PEN;Medway/Townships
+ReportingUnit	Maine;Penobscot County;Milford/Greenfield Twp	PEN;Milford/Greenfield Twp
+ReportingUnit	Maine;Penobscot County;Millinocket	PEN;Millinocket
+ReportingUnit	Maine;Penobscot County;Millinocket Penobscot Twps	PEN;Millinocket Penobscot Twps
+ReportingUnit	Maine;Penobscot County;Mount Chase	PEN;Mount Chase
+ReportingUnit	Maine;Penobscot County;Newburgh	PEN;Newburgh
+ReportingUnit	Maine;Penobscot County;Newport	PEN;Newport
+ReportingUnit	Maine;Penobscot County;Old Town/Argyle Twp	PEN;Old Town/Argyle Twp
+ReportingUnit	Maine;Penobscot County;Orono	PEN;Orono
+ReportingUnit	Maine;Penobscot County;Orrington	PEN;Orrington
+ReportingUnit	Maine;Penobscot County;Passadumkeag	PEN;Passadumkeag
+ReportingUnit	Maine;Penobscot County;Patten	PEN;Patten
+ReportingUnit	Maine;Penobscot County;Penobscot Nation Voting District	PEN;Penobscot Nation Voting District
+ReportingUnit	Maine;Penobscot County;Plymouth	PEN;Plymouth
+ReportingUnit	Maine;Penobscot County;Prentiss Twp	PEN;Prentiss Twp
+ReportingUnit	Maine;Penobscot County;Seboeis Plt	PEN;Seboeis Plt
+ReportingUnit	Maine;Penobscot County;Springfield	PEN;Springfield
+ReportingUnit	Maine;Penobscot County;Stacyville	PEN;Stacyville
+ReportingUnit	Maine;Penobscot County;Stetson	PEN;Stetson
+ReportingUnit	Maine;Penobscot County;T5 R7 Twp/T5 R8 Twp/T6 R8 Twp	PEN;T5 R7 Twp/T5 R8 Twp/T6 R8 Twp
+ReportingUnit	Maine;Penobscot County;Veazie	PEN;Veazie
+ReportingUnit	Maine;Penobscot County;Webster Plt	PEN;Webster Plt
+ReportingUnit	Maine;Penobscot County;Winn	PEN;Winn
+ReportingUnit	Maine;Penobscot County;Woodville	PEN;Woodville
+ReportingUnit	Maine;Piscataquis County;Abbot	PIS;Abbot
+ReportingUnit	Maine;Piscataquis County;Atkinson Township	PIS;Atkinson Township
+ReportingUnit	Maine;Piscataquis County;Beaver Cove	PIS;Beaver Cove
+ReportingUnit	Maine;Piscataquis County;Bowerbank	PIS;Bowerbank
+ReportingUnit	Maine;Piscataquis County;Brownville/Twps	PIS;Brownville/Twps
+ReportingUnit	Maine;Piscataquis County;Dover-Foxcroft	PIS;Dover-Foxcroft
+ReportingUnit	Maine;Piscataquis County;Greenville	PIS;Greenville
+ReportingUnit	Maine;Piscataquis County;Guilford/Kingsbury Plt	PIS;Guilford/Kingsbury Plt
+ReportingUnit	Maine;Piscataquis County;Lake View Plt	PIS;Lake View Plt
+ReportingUnit	Maine;Piscataquis County;Medford	PIS;Medford
+ReportingUnit	Maine;Piscataquis County;Millinocket Piscataquis Twps	PIS;Millinocket Piscataquis Twps
+ReportingUnit	Maine;Piscataquis County;Milo/Orneville Twp	PIS;Milo/Orneville Twp
+ReportingUnit	Maine;Piscataquis County;Monson/Elliotsville Twp	PIS;Monson/Elliotsville Twp
+ReportingUnit	Maine;Piscataquis County;Parkman	PIS;Parkman
+ReportingUnit	Maine;Piscataquis County;Sangerville	PIS;Sangerville
+ReportingUnit	Maine;Piscataquis County;Sebec	PIS;Sebec
+ReportingUnit	Maine;Piscataquis County;Shirley	PIS;Shirley
+ReportingUnit	Maine;Piscataquis County;Wellington	PIS;Wellington
+ReportingUnit	Maine;Piscataquis County;Willimantic	PIS;Willimantic
+ReportingUnit	Maine;Somerset County;Anson	SOM;Anson
+ReportingUnit	Maine;Somerset County;Athens	SOM;Athens
+ReportingUnit	Maine;Somerset County;Bingham	SOM;Bingham
+ReportingUnit	Maine;Somerset County;Brighton Plt	SOM;Brighton Plt
+ReportingUnit	Maine;Somerset County;Cambridge	SOM;Cambridge
+ReportingUnit	Maine;Somerset County;Canaan	SOM;Canaan
+ReportingUnit	Maine;Somerset County;Caratunk	SOM;Caratunk
+ReportingUnit	Maine;Somerset County;Cornville	SOM;Cornville
+ReportingUnit	Maine;Somerset County;Dennistown Plt	SOM;Dennistown Plt
+ReportingUnit	Maine;Somerset County;Detroit	SOM;Detroit
+ReportingUnit	Maine;Somerset County;Embden	SOM;Embden
+ReportingUnit	Maine;Somerset County;Fairfield	SOM;Fairfield
+ReportingUnit	Maine;Somerset County;Harmony	SOM;Harmony
+ReportingUnit	Maine;Somerset County;Hartland	SOM;Hartland
+ReportingUnit	Maine;Somerset County;Highland Plt	SOM;Highland Plt
+ReportingUnit	Maine;Somerset County;Jackman	SOM;Jackman
+ReportingUnit	Maine;Somerset County;Lexington Twp/Spring Lake Twp	SOM;Lexington Twp/Spring Lake Twp
+ReportingUnit	Maine;Somerset County;Madison	SOM;Madison
+ReportingUnit	Maine;Somerset County;Mercer	SOM;Mercer
+ReportingUnit	Maine;Somerset County;Moose River	SOM;Moose River
+ReportingUnit	Maine;Somerset County;Moscow	SOM;Moscow
+ReportingUnit	Maine;Somerset County;New Portland	SOM;New Portland
+ReportingUnit	Maine;Somerset County;Norridgewock	SOM;Norridgewock
+ReportingUnit	Maine;Somerset County;Palmyra	SOM;Palmyra
+ReportingUnit	Maine;Somerset County;Pittsfield	SOM;Pittsfield
+ReportingUnit	Maine;Somerset County;Pleasant Ridge Plt	SOM;Pleasant Ridge Plt
+ReportingUnit	Maine;Somerset County;Ripley	SOM;Ripley
+ReportingUnit	Maine;Somerset County;Rockwood Strip Twp	SOM;Rockwood Strip Twp
+ReportingUnit	Maine;Somerset County;Saint Albans	SOM;Saint Albans
+ReportingUnit	Maine;Somerset County;Skowhegan	SOM;Skowhegan
+ReportingUnit	Maine;Somerset County;Smithfield	SOM;Smithfield
+ReportingUnit	Maine;Somerset County;Solon/Concord Twp	SOM;Solon/Concord Twp
+ReportingUnit	Maine;Somerset County;Spring Lake Twp	SOM;Spring Lake Twp
+ReportingUnit	Maine;Somerset County;Starks	SOM;Starks
+ReportingUnit	Maine;Somerset County;The Forks Plt	SOM;The Forks Plt
+ReportingUnit	Maine;Somerset County;West Forks Plt	SOM;West Forks Plt
+ReportingUnit	Maine;Waldo County;Belfast	WAL;Belfast
+ReportingUnit	Maine;Waldo County;Belmont	WAL;Belmont
+ReportingUnit	Maine;Waldo County;Brooks	WAL;Brooks
+ReportingUnit	Maine;Waldo County;Burnham	WAL;Burnham
+ReportingUnit	Maine;Waldo County;Frankfort	WAL;Frankfort
+ReportingUnit	Maine;Waldo County;Freedom	WAL;Freedom
+ReportingUnit	Maine;Waldo County;Islesboro	WAL;Islesboro
+ReportingUnit	Maine;Waldo County;Jackson	WAL;Jackson
+ReportingUnit	Maine;Waldo County;Knox	WAL;Knox
+ReportingUnit	Maine;Waldo County;Liberty	WAL;Liberty
+ReportingUnit	Maine;Waldo County;Lincolnville	WAL;Lincolnville
+ReportingUnit	Maine;Waldo County;Monroe	WAL;Monroe
+ReportingUnit	Maine;Waldo County;Montville	WAL;Montville
+ReportingUnit	Maine;Waldo County;Morrill	WAL;Morrill
+ReportingUnit	Maine;Waldo County;Northport	WAL;Northport
+ReportingUnit	Maine;Waldo County;Palermo	WAL;Palermo
+ReportingUnit	Maine;Waldo County;Prospect	WAL;Prospect
+ReportingUnit	Maine;Waldo County;Searsmont	WAL;Searsmont
+ReportingUnit	Maine;Waldo County;Searsport	WAL;Searsport
+ReportingUnit	Maine;Waldo County;Stockton Springs	WAL;Stockton Springs
+ReportingUnit	Maine;Waldo County;Swanville	WAL;Swanville
+ReportingUnit	Maine;Waldo County;Thorndike	WAL;Thorndike
+ReportingUnit	Maine;Waldo County;Troy	WAL;Troy
+ReportingUnit	Maine;Waldo County;Unity	WAL;Unity
+ReportingUnit	Maine;Waldo County;Waldo	WAL;Waldo
+ReportingUnit	Maine;Waldo County;Winterport	WAL;Winterport
+ReportingUnit	Maine;Washington County;Addison	WAS;Addison
+ReportingUnit	Maine;Washington County;Alexander	WAS;Alexander
+ReportingUnit	Maine;Washington County;Baileyville	WAS;Baileyville
+ReportingUnit	Maine;Washington County;Baring Plt	WAS;Baring Plt
+ReportingUnit	Maine;Washington County;Beals	WAS;Beals
+ReportingUnit	Maine;Washington County;Beddington	WAS;Beddington
+ReportingUnit	Maine;Washington County;Calais	WAS;Calais
+ReportingUnit	Maine;Washington County;Cathance Twp	WAS;Cathance Twp
+ReportingUnit	Maine;Washington County;Centerville Twp	WAS;Centerville Twp
+ReportingUnit	Maine;Washington County;Charlotte	WAS;Charlotte
+ReportingUnit	Maine;Washington County;Cherryfield/T10	WAS;Cherryfield/T10
+ReportingUnit	Maine;Washington County;Columbia	WAS;Columbia
+ReportingUnit	Maine;Washington County;Columbia Falls	WAS;Columbia Falls
+ReportingUnit	Maine;Washington County;Cooper	WAS;Cooper
+ReportingUnit	Maine;Washington County;Crawford	WAS;Crawford
+ReportingUnit	Maine;Washington County;Cutler	WAS;Cutler
+ReportingUnit	Maine;Washington County;Danforth	WAS;Danforth
+ReportingUnit	Maine;Washington County;Deblois	WAS;Deblois
+ReportingUnit	Maine;Washington County;Dennysville	WAS;Dennysville
+ReportingUnit	Maine;Washington County;East Machias/Twps	WAS;East Machias/Twps
+ReportingUnit	Maine;Washington County;Eastport	WAS;Eastport
+ReportingUnit	Maine;Washington County;Grand Lake Stream Plt	WAS;Grand Lake Stream Plt
+ReportingUnit	Maine;Washington County;Harrington	WAS;Harrington
+ReportingUnit	Maine;Washington County;Indian Township	WAS;Indian Township
+ReportingUnit	Maine;Washington County;Jonesboro	WAS;Jonesboro
+ReportingUnit	Maine;Washington County;Jonesport	WAS;Jonesport
+ReportingUnit	Maine;Washington County;Lubec	WAS;Lubec
+ReportingUnit	Maine;Washington County;Machias	WAS;Machias
+ReportingUnit	Maine;Washington County;Machiasport	WAS;Machiasport
+ReportingUnit	Maine;Washington County;Marshfield	WAS;Marshfield
+ReportingUnit	Maine;Washington County;Meddybemps	WAS;Meddybemps
+ReportingUnit	Maine;Washington County;Milbridge/T10	WAS;Milbridge/T10
+ReportingUnit	Maine;Washington County;Northfield	WAS;Northfield
+ReportingUnit	Maine;Washington County;Pembroke	WAS;Pembroke
+ReportingUnit	Maine;Washington County;Perry	WAS;Perry
+ReportingUnit	Maine;Washington County;Pleasant Point Voting District	WAS;Pleasant Point Voting District
+ReportingUnit	Maine;Washington County;Princeton	WAS;Princeton
+ReportingUnit	Maine;Washington County;Robbinston	WAS;Robbinston
+ReportingUnit	Maine;Washington County;Roque Bluffs	WAS;Roque Bluffs
+ReportingUnit	Maine;Washington County;Sakom Twp	WAS;Sakom Twp
+ReportingUnit	Maine;Washington County;Steuben/T7SD	WAS;Steuben/T7SD
+ReportingUnit	Maine;Washington County;T26 ED BPP	WAS;T26 ED BPP
+ReportingUnit	Maine;Washington County;Talmadge	WAS;Talmadge
+ReportingUnit	Maine;Washington County;Topsfield	WAS;Topsfield
+ReportingUnit	Maine;Washington County;Vanceboro	WAS;Vanceboro
+ReportingUnit	Maine;Washington County;Waite	WAS;Waite
+ReportingUnit	Maine;Washington County;Wesley	WAS;Wesley
+ReportingUnit	Maine;Washington County;Whiting	WAS;Whiting
+ReportingUnit	Maine;Washington County;Whitneyville	WAS;Whitneyville
