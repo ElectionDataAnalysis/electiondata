@@ -1,0 +1,381 @@
+cdf_element	cdf_internal_name	raw_identifier_value
+CandidateContest	CT Senate District 1	State Senator 01
+CandidateContest	CT Senate District 2	State Senator 02
+CandidateContest	CT Senate District 3	State Senator 03
+CandidateContest	CT Senate District 4	State Senator 04
+CandidateContest	CT Senate District 5	State Senator 05
+CandidateContest	CT Senate District 6	State Senator 06
+CandidateContest	CT Senate District 7	State Senator 07
+CandidateContest	CT Senate District 8	State Senator 08
+CandidateContest	CT Senate District 9	State Senator 09
+CandidateContest	CT Senate District 10	State Senator 10
+CandidateContest	CT Senate District 11	State Senator 11
+CandidateContest	CT Senate District 12	State Senator 12
+CandidateContest	CT Senate District 13	State Senator 13
+CandidateContest	CT Senate District 14	State Senator 14
+CandidateContest	CT Senate District 15	State Senator 15
+CandidateContest	CT Senate District 16	State Senator 16
+CandidateContest	CT Senate District 17	State Senator 17
+CandidateContest	CT Senate District 18	State Senator 18
+CandidateContest	CT Senate District 19	State Senator 19
+CandidateContest	CT Senate District 20	State Senator 20
+CandidateContest	CT Senate District 21	State Senator 21
+CandidateContest	CT Senate District 22	State Senator 22
+CandidateContest	CT Senate District 23	State Senator 23
+CandidateContest	CT Senate District 24	State Senator 24
+CandidateContest	CT Senate District 25	State Senator 25
+CandidateContest	CT Senate District 26	State Senator 26
+CandidateContest	CT Senate District 27	State Senator 27
+CandidateContest	CT Senate District 28	State Senator 28
+CandidateContest	CT Senate District 29	State Senator 29
+CandidateContest	CT Senate District 30	State Senator 30
+CandidateContest	CT Senate District 31	State Senator 31
+CandidateContest	CT Senate District 32	State Senator 32
+CandidateContest	CT Senate District 33	State Senator 33
+CandidateContest	CT Senate District 34	State Senator 34
+CandidateContest	CT Senate District 35	State Senator 35
+CandidateContest	CT Senate District 36	State Senator 36
+CandidateContest	CT House District 1	State Representative 1
+CandidateContest	CT House District 2	State Representative 2
+CandidateContest	CT House District 3	State Representative 3
+CandidateContest	CT House District 4	State Representative 4
+CandidateContest	CT House District 5	State Representative 5
+CandidateContest	CT House District 6	State Representative 6
+CandidateContest	CT House District 7	State Representative 7
+CandidateContest	CT House District 8	State Representative 8
+CandidateContest	CT House District 9	State Representative 9
+CandidateContest	CT House District 10	State Representative 10
+CandidateContest	CT House District 11	State Representative 11
+CandidateContest	CT House District 12	State Representative 12
+CandidateContest	CT House District 13	State Representative 13
+CandidateContest	CT House District 14	State Representative 14
+CandidateContest	CT House District 15	State Representative 15
+CandidateContest	CT House District 16	State Representative 16
+CandidateContest	CT House District 17	State Representative 17
+CandidateContest	CT House District 18	State Representative 18
+CandidateContest	CT House District 19	State Representative 19
+CandidateContest	CT House District 20	State Representative 20
+CandidateContest	CT House District 21	State Representative 21
+CandidateContest	CT House District 22	State Representative 22
+CandidateContest	CT House District 23	State Representative 23
+CandidateContest	CT House District 24	State Representative 24
+CandidateContest	CT House District 25	State Representative 25
+CandidateContest	CT House District 26	State Representative 26
+CandidateContest	CT House District 27	State Representative 27
+CandidateContest	CT House District 28	State Representative 28
+CandidateContest	CT House District 29	State Representative 29
+CandidateContest	CT House District 30	State Representative 30
+CandidateContest	CT House District 31	State Representative 31
+CandidateContest	CT House District 32	State Representative 32
+CandidateContest	CT House District 33	State Representative 33
+CandidateContest	CT House District 34	State Representative 34
+CandidateContest	CT House District 35	State Representative 35
+CandidateContest	CT House District 36	State Representative 36
+CandidateContest	CT House District 37	State Representative 37
+CandidateContest	CT House District 38	State Representative 38
+CandidateContest	CT House District 39	State Representative 39
+CandidateContest	CT House District 40	State Representative 40
+CandidateContest	CT House District 41	State Representative 41
+CandidateContest	CT House District 42	State Representative 42
+CandidateContest	CT House District 43	State Representative 43
+CandidateContest	CT House District 44	State Representative 44
+CandidateContest	CT House District 45	State Representative 45
+CandidateContest	CT House District 46	State Representative 46
+CandidateContest	CT House District 47	State Representative 47
+CandidateContest	CT House District 48	State Representative 48
+CandidateContest	CT House District 49	State Representative 49
+CandidateContest	CT House District 50	State Representative 50
+CandidateContest	CT House District 51	State Representative 51
+CandidateContest	CT House District 52	State Representative 52
+CandidateContest	CT House District 53	State Representative 53
+CandidateContest	CT House District 54	State Representative 54
+CandidateContest	CT House District 55	State Representative 55
+CandidateContest	CT House District 56	State Representative 56
+CandidateContest	CT House District 57	State Representative 57
+CandidateContest	CT House District 58	State Representative 58
+CandidateContest	CT House District 59	State Representative 59
+CandidateContest	CT House District 60	State Representative 60
+CandidateContest	CT House District 61	State Representative 61
+CandidateContest	CT House District 62	State Representative 62
+CandidateContest	CT House District 63	State Representative 63
+CandidateContest	CT House District 64	State Representative 64
+CandidateContest	CT House District 65	State Representative 65
+CandidateContest	CT House District 66	State Representative 66
+CandidateContest	CT House District 67	State Representative 67
+CandidateContest	CT House District 68	State Representative 68
+CandidateContest	CT House District 69	State Representative 69
+CandidateContest	CT House District 70	State Representative 70
+CandidateContest	CT House District 71	State Representative 71
+CandidateContest	CT House District 72	State Representative 72
+CandidateContest	CT House District 73	State Representative 73
+CandidateContest	CT House District 74	State Representative 74
+CandidateContest	CT House District 75	State Representative 75
+CandidateContest	CT House District 76	State Representative 76
+CandidateContest	CT House District 77	State Representative 77
+CandidateContest	CT House District 78	State Representative 78
+CandidateContest	CT House District 79	State Representative 79
+CandidateContest	CT House District 80	State Representative 80
+CandidateContest	CT House District 81	State Representative 81
+CandidateContest	CT House District 82	State Representative 82
+CandidateContest	CT House District 83	State Representative 83
+CandidateContest	CT House District 84	State Representative 84
+CandidateContest	CT House District 85	State Representative 85
+CandidateContest	CT House District 86	State Representative 86
+CandidateContest	CT House District 87	State Representative 87
+CandidateContest	CT House District 88	State Representative 88
+CandidateContest	CT House District 89	State Representative 89
+CandidateContest	CT House District 90	State Representative 90
+CandidateContest	CT House District 91	State Representative 91
+CandidateContest	CT House District 92	State Representative 92
+CandidateContest	CT House District 93	State Representative 93
+CandidateContest	CT House District 94	State Representative 94
+CandidateContest	CT House District 95	State Representative 95
+CandidateContest	CT House District 96	State Representative 96
+CandidateContest	CT House District 97	State Representative 97
+CandidateContest	CT House District 98	State Representative 98
+CandidateContest	CT House District 99	State Representative 99
+CandidateContest	CT House District 100	State Representative 100
+CandidateContest	CT House District 101	State Representative 101
+CandidateContest	CT House District 102	State Representative 102
+CandidateContest	CT House District 103	State Representative 103
+CandidateContest	CT House District 104	State Representative 104
+CandidateContest	CT House District 105	State Representative 105
+CandidateContest	CT House District 106	State Representative 106
+CandidateContest	CT House District 107	State Representative 107
+CandidateContest	CT House District 108	State Representative 108
+CandidateContest	CT House District 109	State Representative 109
+CandidateContest	CT House District 110	State Representative 110
+CandidateContest	CT House District 111	State Representative 111
+CandidateContest	CT House District 112	State Representative 112
+CandidateContest	CT House District 113	State Representative 113
+CandidateContest	CT House District 114	State Representative 114
+CandidateContest	CT House District 115	State Representative 115
+CandidateContest	CT House District 116	State Representative 116
+CandidateContest	CT House District 117	State Representative 117
+CandidateContest	CT House District 118	State Representative 118
+CandidateContest	CT House District 119	State Representative 119
+CandidateContest	CT House District 120	State Representative 120
+CandidateContest	CT House District 121	State Representative 121
+CandidateContest	CT House District 122	State Representative 122
+CandidateContest	CT House District 123	State Representative 123
+CandidateContest	CT House District 124	State Representative 124
+CandidateContest	CT House District 125	State Representative 125
+CandidateContest	CT House District 126	State Representative 126
+CandidateContest	CT House District 127	State Representative 127
+CandidateContest	CT House District 128	State Representative 128
+CandidateContest	CT House District 129	State Representative 129
+CandidateContest	CT House District 130	State Representative 130
+CandidateContest	CT House District 131	State Representative 131
+CandidateContest	CT House District 132	State Representative 132
+CandidateContest	CT House District 133	State Representative 133
+CandidateContest	CT House District 134	State Representative 134
+CandidateContest	CT House District 135	State Representative 135
+CandidateContest	CT House District 136	State Representative 136
+CandidateContest	CT House District 137	State Representative 137
+CandidateContest	CT House District 138	State Representative 138
+CandidateContest	CT House District 139	State Representative 139
+CandidateContest	CT House District 140	State Representative 140
+CandidateContest	CT House District 141	State Representative 141
+CandidateContest	CT House District 142	State Representative 142
+CandidateContest	CT House District 143	State Representative 143
+CandidateContest	CT House District 144	State Representative 144
+CandidateContest	CT House District 145	State Representative 145
+CandidateContest	CT House District 146	State Representative 146
+CandidateContest	CT House District 147	State Representative 147
+CandidateContest	CT House District 148	State Representative 148
+CandidateContest	CT House District 149	State Representative 149
+CandidateContest	CT House District 150	State Representative 150
+CandidateContest	CT House District 151	State Representative 151
+CandidateContest	US House CT District 1	Representative in Congress 01
+CandidateContest	US House CT District 2	Representative in Congress 02
+CandidateContest	US House CT District 3	Representative in Congress 03
+CandidateContest	US House CT District 4	Representative in Congress 04
+CandidateContest	US House CT District 5	Representative in Congress 05
+CandidateContest	US President (CT)	Presidential Electors for
+CandidateContest	CT Governor	CT Governor
+CandidateContest	US Senate CT	US Senate CT
+CandidateContest	CT Attorney General	CT Attorney General
+CandidateContest	CT Lieutenant Governor	CT Lieutenant Governor
+CandidateContest	CT Treasurer	CT Treasurer
+CandidateContest	CT Secretary of State	CT Secretary of State
+Election	2020 General	2020 General
+Election	2020 Primary	2020 Primary
+Election	2018 General	2018 General
+Election	2016 General	2016 General
+Party	Democratic Party	Democratic Party
+Party	Republican Party	Republican Party
+Party	Green Party	Green Party
+Party	Libertarian Party	Libertarian Party
+ReportingUnit	Connecticut	Connecticut
+ReportingUnit	Connecticut;Andover	Andover
+ReportingUnit	Connecticut;Ansonia	Ansonia
+ReportingUnit	Connecticut;Ashford	Ashford
+ReportingUnit	Connecticut;Avon	Avon
+ReportingUnit	Connecticut;Barkhamsted	Barkhamsted
+ReportingUnit	Connecticut;Beacon Falls	Beacon Falls
+ReportingUnit	Connecticut;Berlin	Berlin
+ReportingUnit	Connecticut;Bethany	Bethany
+ReportingUnit	Connecticut;Bethel	Bethel
+ReportingUnit	Connecticut;Bethlehem	Bethlehem
+ReportingUnit	Connecticut;Bloomfield	Bloomfield
+ReportingUnit	Connecticut;Bolton	Bolton
+ReportingUnit	Connecticut;Bozrah	Bozrah
+ReportingUnit	Connecticut;Branford	Branford
+ReportingUnit	Connecticut;Bridgeport	Bridgeport
+ReportingUnit	Connecticut;Bridgewater	Bridgewater
+ReportingUnit	Connecticut;Bristol	Bristol
+ReportingUnit	Connecticut;Brookfield	Brookfield
+ReportingUnit	Connecticut;Brooklyn	Brooklyn
+ReportingUnit	Connecticut;Burlington	Burlington
+ReportingUnit	Connecticut;Canaan	Canaan
+ReportingUnit	Connecticut;Canterbury	Canterbury
+ReportingUnit	Connecticut;Canton	Canton
+ReportingUnit	Connecticut;Chaplin	Chaplin
+ReportingUnit	Connecticut;Cheshire	Cheshire
+ReportingUnit	Connecticut;Chester	Chester
+ReportingUnit	Connecticut;Clinton	Clinton
+ReportingUnit	Connecticut;Colchester	Colchester
+ReportingUnit	Connecticut;Colebrook	Colebrook
+ReportingUnit	Connecticut;Columbia	Columbia
+ReportingUnit	Connecticut;Cornwall	Cornwall
+ReportingUnit	Connecticut;Coventry	Coventry
+ReportingUnit	Connecticut;Cromwell	Cromwell
+ReportingUnit	Connecticut;Danbury	Danbury
+ReportingUnit	Connecticut;Darien	Darien
+ReportingUnit	Connecticut;Deep River	Deep River
+ReportingUnit	Connecticut;Derby	Derby
+ReportingUnit	Connecticut;Durham	Durham
+ReportingUnit	Connecticut;East Granby	East Granby
+ReportingUnit	Connecticut;East Haddam	East Haddam
+ReportingUnit	Connecticut;East Hampton	East Hampton
+ReportingUnit	Connecticut;East Hartford	East Hartford
+ReportingUnit	Connecticut;East Haven	East Haven
+ReportingUnit	Connecticut;East Lyme	East Lyme
+ReportingUnit	Connecticut;East Windsor	East Windsor
+ReportingUnit	Connecticut;Eastford	Eastford
+ReportingUnit	Connecticut;Easton	Easton
+ReportingUnit	Connecticut;ElectionDescription	ElectionDescription
+ReportingUnit	Connecticut;Ellington	Ellington
+ReportingUnit	Connecticut;Enfield	Enfield
+ReportingUnit	Connecticut;Essex	Essex
+ReportingUnit	Connecticut;Fairfield	Fairfield
+ReportingUnit	Connecticut;Farmington	Farmington
+ReportingUnit	Connecticut;Franklin	Franklin
+ReportingUnit	Connecticut;Glastonbury	Glastonbury
+ReportingUnit	Connecticut;Goshen	Goshen
+ReportingUnit	Connecticut;Granby	Granby
+ReportingUnit	Connecticut;Greenwich	Greenwich
+ReportingUnit	Connecticut;Griswold	Griswold
+ReportingUnit	Connecticut;Groton	Groton
+ReportingUnit	Connecticut;Guilford	Guilford
+ReportingUnit	Connecticut;Haddam	Haddam
+ReportingUnit	Connecticut;Hamden	Hamden
+ReportingUnit	Connecticut;Hampton	Hampton
+ReportingUnit	Connecticut;Hartford	Hartford
+ReportingUnit	Connecticut;Hartland	Hartland
+ReportingUnit	Connecticut;Harwinton	Harwinton
+ReportingUnit	Connecticut;Hebron	Hebron
+ReportingUnit	Connecticut;Kent	Kent
+ReportingUnit	Connecticut;Killingly	Killingly
+ReportingUnit	Connecticut;Killingworth	Killingworth
+ReportingUnit	Connecticut;Lebanon	Lebanon
+ReportingUnit	Connecticut;Ledyard	Ledyard
+ReportingUnit	Connecticut;Lisbon	Lisbon
+ReportingUnit	Connecticut;Litchfield	Litchfield
+ReportingUnit	Connecticut;Lyme	Lyme
+ReportingUnit	Connecticut;Madison	Madison
+ReportingUnit	Connecticut;Manchester	Manchester
+ReportingUnit	Connecticut;Mansfield	Mansfield
+ReportingUnit	Connecticut;Marlborough	Marlborough
+ReportingUnit	Connecticut;Meriden	Meriden
+ReportingUnit	Connecticut;Middlebury	Middlebury
+ReportingUnit	Connecticut;Middlefield	Middlefield
+ReportingUnit	Connecticut;Middletown	Middletown
+ReportingUnit	Connecticut;Milford	Milford
+ReportingUnit	Connecticut;Monroe	Monroe
+ReportingUnit	Connecticut;Montville	Montville
+ReportingUnit	Connecticut;Morris	Morris
+ReportingUnit	Connecticut;Naugatuck	Naugatuck
+ReportingUnit	Connecticut;New Britain	New Britain
+ReportingUnit	Connecticut;New Canaan	New Canaan
+ReportingUnit	Connecticut;New Fairfield	New Fairfield
+ReportingUnit	Connecticut;New Hartford	New Hartford
+ReportingUnit	Connecticut;New Haven	New Haven
+ReportingUnit	Connecticut;New London	New London
+ReportingUnit	Connecticut;New Milford	New Milford
+ReportingUnit	Connecticut;Newington	Newington
+ReportingUnit	Connecticut;Newtown	Newtown
+ReportingUnit	Connecticut;Norfolk	Norfolk
+ReportingUnit	Connecticut;North Branford	North Branford
+ReportingUnit	Connecticut;North Canaan	North Canaan
+ReportingUnit	Connecticut;North Haven	North Haven
+ReportingUnit	Connecticut;North Stonington	North Stonington
+ReportingUnit	Connecticut;Norwalk	Norwalk
+ReportingUnit	Connecticut;Norwich	Norwich
+ReportingUnit	Connecticut;Old Lyme	Old Lyme
+ReportingUnit	Connecticut;Old Saybrook	Old Saybrook
+ReportingUnit	Connecticut;Orange	Orange
+ReportingUnit	Connecticut;Oxford	Oxford
+ReportingUnit	Connecticut;Plainfield	Plainfield
+ReportingUnit	Connecticut;Plainville	Plainville
+ReportingUnit	Connecticut;Plymouth	Plymouth
+ReportingUnit	Connecticut;Polling_Place_Name	Polling_Place_Name
+ReportingUnit	Connecticut;Pomfret	Pomfret
+ReportingUnit	Connecticut;Portland	Portland
+ReportingUnit	Connecticut;Preston	Preston
+ReportingUnit	Connecticut;Prospect	Prospect
+ReportingUnit	Connecticut;Putnam	Putnam
+ReportingUnit	Connecticut;Redding	Redding
+ReportingUnit	Connecticut;Ridgefield	Ridgefield
+ReportingUnit	Connecticut;Rocky Hill	Rocky Hill
+ReportingUnit	Connecticut;Roxbury	Roxbury
+ReportingUnit	Connecticut;Salem	Salem
+ReportingUnit	Connecticut;Salisbury	Salisbury
+ReportingUnit	Connecticut;Scotland	Scotland
+ReportingUnit	Connecticut;Seymour	Seymour
+ReportingUnit	Connecticut;Sharon	Sharon
+ReportingUnit	Connecticut;Shelton	Shelton
+ReportingUnit	Connecticut;Sherman	Sherman
+ReportingUnit	Connecticut;Simsbury	Simsbury
+ReportingUnit	Connecticut;Somers	Somers
+ReportingUnit	Connecticut;South Windsor	South Windsor
+ReportingUnit	Connecticut;Southbury	Southbury
+ReportingUnit	Connecticut;Southington	Southington
+ReportingUnit	Connecticut;Sprague	Sprague
+ReportingUnit	Connecticut;Stafford	Stafford
+ReportingUnit	Connecticut;Stamford	Stamford
+ReportingUnit	Connecticut;State Election  	State Election
+ReportingUnit	Connecticut;Sterling	Sterling
+ReportingUnit	Connecticut;Stonington	Stonington
+ReportingUnit	Connecticut;Stratford	Stratford
+ReportingUnit	Connecticut;Suffield	Suffield
+ReportingUnit	Connecticut;Thomaston	Thomaston
+ReportingUnit	Connecticut;Thompson	Thompson
+ReportingUnit	Connecticut;Tolland	Tolland
+ReportingUnit	Connecticut;Torrington	Torrington
+ReportingUnit	Connecticut;Trumbull	Trumbull
+ReportingUnit	Connecticut;Union	Union
+ReportingUnit	Connecticut;Vernon	Vernon
+ReportingUnit	Connecticut;Voluntown	Voluntown
+ReportingUnit	Connecticut;Wallingford	Wallingford
+ReportingUnit	Connecticut;Warren	Warren
+ReportingUnit	Connecticut;Washington	Washington
+ReportingUnit	Connecticut;Waterbury	Waterbury
+ReportingUnit	Connecticut;Waterford	Waterford
+ReportingUnit	Connecticut;Watertown	Watertown
+ReportingUnit	Connecticut;West Hartford	West Hartford
+ReportingUnit	Connecticut;West Haven	West Haven
+ReportingUnit	Connecticut;Westbrook	Westbrook
+ReportingUnit	Connecticut;Weston	Weston
+ReportingUnit	Connecticut;Westport	Westport
+ReportingUnit	Connecticut;Wethersfield	Wethersfield
+ReportingUnit	Connecticut;Willington	Willington
+ReportingUnit	Connecticut;Wilton	Wilton
+ReportingUnit	Connecticut;Winchester	Winchester
+ReportingUnit	Connecticut;Windham	Windham
+ReportingUnit	Connecticut;Windsor	Windsor
+ReportingUnit	Connecticut;Windsor Locks	Windsor Locks
+ReportingUnit	Connecticut;Wolcott	Wolcott
+ReportingUnit	Connecticut;Woodbridge	Woodbridge
+ReportingUnit	Connecticut;Woodbury	Woodbury
+ReportingUnit	Connecticut;Woodstock	Woodstock

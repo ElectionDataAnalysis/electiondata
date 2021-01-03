@@ -1,0 +1,366 @@
+Name	ReportingUnitType
+Connecticut;CT House District 1	state-house
+Connecticut;CT House District 2	state-house
+Connecticut;CT House District 3	state-house
+Connecticut;CT House District 4	state-house
+Connecticut;CT House District 5	state-house
+Connecticut;CT House District 6	state-house
+Connecticut;CT House District 7	state-house
+Connecticut;CT House District 8	state-house
+Connecticut;CT House District 9	state-house
+Connecticut;CT House District 10	state-house
+Connecticut;CT House District 11	state-house
+Connecticut;CT House District 12	state-house
+Connecticut;CT House District 13	state-house
+Connecticut;CT House District 14	state-house
+Connecticut;CT House District 15	state-house
+Connecticut;CT House District 16	state-house
+Connecticut;CT House District 17	state-house
+Connecticut;CT House District 18	state-house
+Connecticut;CT House District 19	state-house
+Connecticut;CT House District 20	state-house
+Connecticut;CT House District 21	state-house
+Connecticut;CT House District 22	state-house
+Connecticut;CT House District 23	state-house
+Connecticut;CT House District 24	state-house
+Connecticut;CT House District 25	state-house
+Connecticut;CT House District 26	state-house
+Connecticut;CT House District 27	state-house
+Connecticut;CT House District 28	state-house
+Connecticut;CT House District 29	state-house
+Connecticut;CT House District 30	state-house
+Connecticut;CT House District 31	state-house
+Connecticut;CT House District 32	state-house
+Connecticut;CT House District 33	state-house
+Connecticut;CT House District 34	state-house
+Connecticut;CT House District 35	state-house
+Connecticut;CT House District 36	state-house
+Connecticut;CT Senate District 1	state-senate
+Connecticut;CT Senate District 2	state-senate
+Connecticut;CT Senate District 3	state-senate
+Connecticut;CT Senate District 4	state-senate
+Connecticut;CT Senate District 5	state-senate
+Connecticut;CT Senate District 6	state-senate
+Connecticut;CT Senate District 7	state-senate
+Connecticut;CT Senate District 8	state-senate
+Connecticut;CT Senate District 9	state-senate
+Connecticut;CT Senate District 10	state-senate
+Connecticut;CT Senate District 11	state-senate
+Connecticut;CT Senate District 12	state-senate
+Connecticut;CT Senate District 13	state-senate
+Connecticut;CT Senate District 14	state-senate
+Connecticut;CT Senate District 15	state-senate
+Connecticut;CT Senate District 16	state-senate
+Connecticut;CT Senate District 17	state-senate
+Connecticut;CT Senate District 18	state-senate
+Connecticut;CT Senate District 19	state-senate
+Connecticut;CT Senate District 20	state-senate
+Connecticut;CT Senate District 21	state-senate
+Connecticut;CT Senate District 22	state-senate
+Connecticut;CT Senate District 23	state-senate
+Connecticut;CT Senate District 24	state-senate
+Connecticut;CT Senate District 25	state-senate
+Connecticut;CT Senate District 26	state-senate
+Connecticut;CT Senate District 27	state-senate
+Connecticut;CT Senate District 28	state-senate
+Connecticut;CT Senate District 29	state-senate
+Connecticut;CT Senate District 30	state-senate
+Connecticut;CT Senate District 31	state-senate
+Connecticut;CT Senate District 32	state-senate
+Connecticut;CT Senate District 33	state-senate
+Connecticut;CT Senate District 34	state-senate
+Connecticut;CT Senate District 35	state-senate
+Connecticut;CT Senate District 36	state-senate
+Connecticut;CT Senate District 37	state-senate
+Connecticut;CT Senate District 38	state-senate
+Connecticut;CT Senate District 39	state-senate
+Connecticut;CT Senate District 40	state-senate
+Connecticut;CT Senate District 41	state-senate
+Connecticut;CT Senate District 42	state-senate
+Connecticut;CT Senate District 43	state-senate
+Connecticut;CT Senate District 44	state-senate
+Connecticut;CT Senate District 45	state-senate
+Connecticut;CT Senate District 46	state-senate
+Connecticut;CT Senate District 47	state-senate
+Connecticut;CT Senate District 48	state-senate
+Connecticut;CT Senate District 49	state-senate
+Connecticut;CT Senate District 50	state-senate
+Connecticut;CT Senate District 51	state-senate
+Connecticut;CT Senate District 52	state-senate
+Connecticut;CT Senate District 53	state-senate
+Connecticut;CT Senate District 54	state-senate
+Connecticut;CT Senate District 55	state-senate
+Connecticut;CT Senate District 56	state-senate
+Connecticut;CT Senate District 57	state-senate
+Connecticut;CT Senate District 58	state-senate
+Connecticut;CT Senate District 59	state-senate
+Connecticut;CT Senate District 60	state-senate
+Connecticut;CT Senate District 61	state-senate
+Connecticut;CT Senate District 62	state-senate
+Connecticut;CT Senate District 63	state-senate
+Connecticut;CT Senate District 64	state-senate
+Connecticut;CT Senate District 65	state-senate
+Connecticut;CT Senate District 66	state-senate
+Connecticut;CT Senate District 67	state-senate
+Connecticut;CT Senate District 68	state-senate
+Connecticut;CT Senate District 69	state-senate
+Connecticut;CT Senate District 70	state-senate
+Connecticut;CT Senate District 71	state-senate
+Connecticut;CT Senate District 72	state-senate
+Connecticut;CT Senate District 73	state-senate
+Connecticut;CT Senate District 74	state-senate
+Connecticut;CT Senate District 75	state-senate
+Connecticut;CT Senate District 76	state-senate
+Connecticut;CT Senate District 77	state-senate
+Connecticut;CT Senate District 78	state-senate
+Connecticut;CT Senate District 79	state-senate
+Connecticut;CT Senate District 80	state-senate
+Connecticut;CT Senate District 81	state-senate
+Connecticut;CT Senate District 82	state-senate
+Connecticut;CT Senate District 83	state-senate
+Connecticut;CT Senate District 84	state-senate
+Connecticut;CT Senate District 85	state-senate
+Connecticut;CT Senate District 86	state-senate
+Connecticut;CT Senate District 87	state-senate
+Connecticut;CT Senate District 88	state-senate
+Connecticut;CT Senate District 89	state-senate
+Connecticut;CT Senate District 90	state-senate
+Connecticut;CT Senate District 91	state-senate
+Connecticut;CT Senate District 92	state-senate
+Connecticut;CT Senate District 93	state-senate
+Connecticut;CT Senate District 94	state-senate
+Connecticut;CT Senate District 95	state-senate
+Connecticut;CT Senate District 96	state-senate
+Connecticut;CT Senate District 97	state-senate
+Connecticut;CT Senate District 98	state-senate
+Connecticut;CT Senate District 99	state-senate
+Connecticut;CT Senate District 100	state-senate
+Connecticut;CT Senate District 101	state-senate
+Connecticut;CT Senate District 102	state-senate
+Connecticut;CT Senate District 103	state-senate
+Connecticut;CT Senate District 104	state-senate
+Connecticut;CT Senate District 105	state-senate
+Connecticut;CT Senate District 106	state-senate
+Connecticut;CT Senate District 107	state-senate
+Connecticut;CT Senate District 108	state-senate
+Connecticut;CT Senate District 109	state-senate
+Connecticut;CT Senate District 110	state-senate
+Connecticut;CT Senate District 111	state-senate
+Connecticut;CT Senate District 112	state-senate
+Connecticut;CT Senate District 113	state-senate
+Connecticut;CT Senate District 114	state-senate
+Connecticut;CT Senate District 115	state-senate
+Connecticut;CT Senate District 116	state-senate
+Connecticut;CT Senate District 117	state-senate
+Connecticut;CT Senate District 118	state-senate
+Connecticut;CT Senate District 119	state-senate
+Connecticut;CT Senate District 120	state-senate
+Connecticut;CT Senate District 121	state-senate
+Connecticut;CT Senate District 122	state-senate
+Connecticut;CT Senate District 123	state-senate
+Connecticut;CT Senate District 124	state-senate
+Connecticut;CT Senate District 125	state-senate
+Connecticut;CT Senate District 126	state-senate
+Connecticut;CT Senate District 127	state-senate
+Connecticut;CT Senate District 128	state-senate
+Connecticut;CT Senate District 129	state-senate
+Connecticut;CT Senate District 130	state-senate
+Connecticut;CT Senate District 131	state-senate
+Connecticut;CT Senate District 132	state-senate
+Connecticut;CT Senate District 133	state-senate
+Connecticut;CT Senate District 134	state-senate
+Connecticut;CT Senate District 135	state-senate
+Connecticut;CT Senate District 136	state-senate
+Connecticut;CT Senate District 137	state-senate
+Connecticut;CT Senate District 138	state-senate
+Connecticut;CT Senate District 139	state-senate
+Connecticut;CT Senate District 140	state-senate
+Connecticut;CT Senate District 141	state-senate
+Connecticut;CT Senate District 142	state-senate
+Connecticut;CT Senate District 143	state-senate
+Connecticut;CT Senate District 144	state-senate
+Connecticut;CT Senate District 145	state-senate
+Connecticut;CT Senate District 146	state-senate
+Connecticut;CT Senate District 147	state-senate
+Connecticut;CT Senate District 148	state-senate
+Connecticut;CT Senate District 149	state-senate
+Connecticut;CT Senate District 150	state-senate
+Connecticut;CT Senate District 151	state-senate
+Connecticut;US House CT District 1	congressional
+Connecticut;US House CT District 2	congressional
+Connecticut;US House CT District 3	congressional
+Connecticut;US House CT District 4	congressional
+Connecticut;US House CT District 5	congressional
+Connecticut	state
+Connecticut;Andover	town
+Connecticut;Ansonia	town
+Connecticut;Ashford	town
+Connecticut;Avon	town
+Connecticut;Barkhamsted	town
+Connecticut;Beacon Falls	town
+Connecticut;Berlin	town
+Connecticut;Bethany	town
+Connecticut;Bethel	town
+Connecticut;Bethlehem	town
+Connecticut;Bloomfield	town
+Connecticut;Bolton	town
+Connecticut;Bozrah	town
+Connecticut;Branford	town
+Connecticut;Bridgeport	town
+Connecticut;Bridgewater	town
+Connecticut;Bristol	town
+Connecticut;Brookfield	town
+Connecticut;Brooklyn	town
+Connecticut;Burlington	town
+Connecticut;Canaan	town
+Connecticut;Canterbury	town
+Connecticut;Canton	town
+Connecticut;Chaplin	town
+Connecticut;Cheshire	town
+Connecticut;Chester	town
+Connecticut;Clinton	town
+Connecticut;Colchester	town
+Connecticut;Colebrook	town
+Connecticut;Columbia	town
+Connecticut;Cornwall	town
+Connecticut;Coventry	town
+Connecticut;Cromwell	town
+Connecticut;Danbury	town
+Connecticut;Darien	town
+Connecticut;Deep River	town
+Connecticut;Derby	town
+Connecticut;Durham	town
+Connecticut;East Granby	town
+Connecticut;East Haddam	town
+Connecticut;East Hampton	town
+Connecticut;East Hartford	town
+Connecticut;East Haven	town
+Connecticut;East Lyme	town
+Connecticut;East Windsor	town
+Connecticut;Eastford	town
+Connecticut;Easton	town
+Connecticut;ElectionDescription	town
+Connecticut;Ellington	town
+Connecticut;Enfield	town
+Connecticut;Essex	town
+Connecticut;Fairfield	town
+Connecticut;Farmington	town
+Connecticut;Franklin	town
+Connecticut;Glastonbury	town
+Connecticut;Goshen	town
+Connecticut;Granby	town
+Connecticut;Greenwich	town
+Connecticut;Griswold	town
+Connecticut;Groton	town
+Connecticut;Guilford	town
+Connecticut;Haddam	town
+Connecticut;Hamden	town
+Connecticut;Hampton	town
+Connecticut;Hartford	town
+Connecticut;Hartland	town
+Connecticut;Harwinton	town
+Connecticut;Hebron	town
+Connecticut;Kent	town
+Connecticut;Killingly	town
+Connecticut;Killingworth	town
+Connecticut;Lebanon	town
+Connecticut;Ledyard	town
+Connecticut;Lisbon	town
+Connecticut;Litchfield	town
+Connecticut;Lyme	town
+Connecticut;Madison	town
+Connecticut;Manchester	town
+Connecticut;Mansfield	town
+Connecticut;Marlborough	town
+Connecticut;Meriden	town
+Connecticut;Middlebury	town
+Connecticut;Middlefield	town
+Connecticut;Middletown	town
+Connecticut;Milford	town
+Connecticut;Monroe	town
+Connecticut;Montville	town
+Connecticut;Morris	town
+Connecticut;Naugatuck	town
+Connecticut;New Britain	town
+Connecticut;New Canaan	town
+Connecticut;New Fairfield	town
+Connecticut;New Hartford	town
+Connecticut;New Haven	town
+Connecticut;New London	town
+Connecticut;New Milford	town
+Connecticut;Newington	town
+Connecticut;Newtown	town
+Connecticut;Norfolk	town
+Connecticut;North Branford	town
+Connecticut;North Canaan	town
+Connecticut;North Haven	town
+Connecticut;North Stonington	town
+Connecticut;Norwalk	town
+Connecticut;Norwich	town
+Connecticut;Old Lyme	town
+Connecticut;Old Saybrook	town
+Connecticut;Orange	town
+Connecticut;Oxford	town
+Connecticut;Plainfield	town
+Connecticut;Plainville	town
+Connecticut;Plymouth	town
+Connecticut;Polling_Place_Name	town
+Connecticut;Pomfret	town
+Connecticut;Portland	town
+Connecticut;Preston	town
+Connecticut;Prospect	town
+Connecticut;Putnam	town
+Connecticut;Redding	town
+Connecticut;Ridgefield	town
+Connecticut;Rocky Hill	town
+Connecticut;Roxbury	town
+Connecticut;Salem	town
+Connecticut;Salisbury	town
+Connecticut;Scotland	town
+Connecticut;Seymour	town
+Connecticut;Sharon	town
+Connecticut;Shelton	town
+Connecticut;Sherman	town
+Connecticut;Simsbury	town
+Connecticut;Somers	town
+Connecticut;South Windsor	town
+Connecticut;Southbury	town
+Connecticut;Southington	town
+Connecticut;Sprague	town
+Connecticut;Stafford	town
+Connecticut;Stamford	town
+Connecticut;State Election	town
+Connecticut;Sterling	town
+Connecticut;Stonington	town
+Connecticut;Stratford	town
+Connecticut;Suffield	town
+Connecticut;Thomaston	town
+Connecticut;Thompson	town
+Connecticut;Tolland	town
+Connecticut;Torrington	town
+Connecticut;Trumbull	town
+Connecticut;Union	town
+Connecticut;Vernon	town
+Connecticut;Voluntown	town
+Connecticut;Wallingford	town
+Connecticut;Warren	town
+Connecticut;Washington	town
+Connecticut;Waterbury	town
+Connecticut;Waterford	town
+Connecticut;Watertown	town
+Connecticut;West Hartford	town
+Connecticut;West Haven	town
+Connecticut;Westbrook	town
+Connecticut;Weston	town
+Connecticut;Westport	town
+Connecticut;Wethersfield	town
+Connecticut;Willington	town
+Connecticut;Wilton	town
+Connecticut;Winchester	town
+Connecticut;Windham	town
+Connecticut;Windsor	town
+Connecticut;Windsor Locks	town
+Connecticut;Wolcott	town
+Connecticut;Woodbridge	town
+Connecticut;Woodbury	town
+Connecticut;Woodstock	town
