@@ -65,12 +65,17 @@ def write_element(
     from <element>.txt file in that directory.
     <element>.txt is overwritten with info in <df>"""
     err = None
+    # set name of target file
     if not file_name:
         file_name = f"{element}.txt"
+    # dedupe the input df
     dupes_df, deduped = ui.find_dupes(df)
+
     if element == "dictionary":
+        # remove empty lines
         deduped = remove_empty_lines(deduped, element)
     try:
+        # write info to file (note: this overwrites existing info in file!)
         deduped.drop_duplicates().fillna("").to_csv(
             os.path.join(juris_path, file_name),
             index=False,

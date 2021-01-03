@@ -589,12 +589,13 @@ def get_parameters(
     return d, err
 
 
-def consolidate_errors(list_of_err: list) -> Optional[Dict[Any, dict]]:
+def consolidate_errors(list_of_err: Optional[list]) -> Optional[Dict[Any, dict]]:
     """Takes two error dictionaries (assumed to have same bottom-level keys)
     and consolidates them, concatenating the error messages"""
     """Consolidate the error dictionaries in <list_of_err>. If any dictionary is None, ignore it.
     If all dictionaries are None, return None"""
-
+    if list_of_err is None:
+        return None
     # take union of all error-types appearing
     err_types = set().union(*[x.keys() for x in list_of_err if x])
     # if errs are all empty or none

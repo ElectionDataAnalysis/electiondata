@@ -48,7 +48,7 @@ and similarly, if necessary, for any Contest or Selection. If there is more than
     * (required) list `count_fields_by_name` of names of fields containing counts. 
     * (required for 'excel' and 'flat_text' file_types) specify location of field names for count columns. with integer `count_field_name_row` (NB: top row not skipped is 0, next row is 1, etc.)
   * 'by_column_number'
-    * (required) list `count_column_numbers` of column numbers containing counts. 
+    * (required) list `count_column_numbers` of column numbers which may contain counts. There is no problem if this list contains spurious columns.
     
   `munge_strings`: controls how the system looks for the character strings used to munge the non-count information (Candidate, Party, etc.). There may be multiple, so the value is a list. Related optional and required parameters must be given under the `[munge_strings]` header.
   * 'in_field_values'
@@ -540,3 +540,4 @@ Candidate	Castle, Darrell L	Castle, Darrell L
 
 ```
 
+If your sheets or files have a variable number of count columns (e.g., if columns are labeled by candidates), err on the side of including extra columns in count_column_numbers. Columns without data will be ignored. Be careful, however, not to include in your count columns any columns containing strings needed for munging.
