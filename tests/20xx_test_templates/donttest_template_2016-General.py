@@ -42,6 +42,7 @@ def test_presidential(dbname):
         election,
         jurisdiction,
         f"US President ({abbr})",
+        sub_unit_type=county_or_other,
         dbname=dbname,
         )
         == total_pres_votes
@@ -53,6 +54,7 @@ def test_congressional_totals(dbname):
         election,
         jurisdiction,
         f"US House {abbr} District {cd}",
+        sub_unit_type=county_or_other,
         dbname=dbname,
         )
         == total_cd_votes
@@ -64,6 +66,7 @@ def test_state_senate_totals(dbname):
         election,
         jurisdiction,
         f"{abbr} Senate District {ssd}",
+        sub_unit_type=county_or_other,
         dbname=dbname,
         )
         == total_ssd_votes
@@ -75,6 +78,7 @@ def test_state_house_totals(dbname):
         election,
         jurisdiction,
         f"{abbr} House District {shd}",
+        sub_unit_type=county_or_other,
         dbname=dbname,
         )
         == total_shd_votes
@@ -88,18 +92,19 @@ def test_standard_vote_types(dbname):
 def test_vote_type_counts_consistent(dbname):
     assert e.check_totals_match_vote_types(election, jurisdiction, dbname=dbname)
 
-"""
+
 def test_count_type_subtotal(dbname):
     assert (e.contest_total(
         election,
         jurisdiction,
         f"US President ({abbr})",
+        sub_unit_type=county_or_other,
         dbname=dbname,
         vote_type=single_vote_type,
         )
         == pres_votes_vote_type
     )
-"""
+
 
 def test_county_subtotal(dbname):
     assert (e.contest_total(
