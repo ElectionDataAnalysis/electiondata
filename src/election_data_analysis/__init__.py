@@ -525,6 +525,53 @@ class SingleDataLoader:
                 constants[k] = self.d[k]
         return constants
 
+    def list_values(self, element: str) -> (list, Optional[dict]):
+        """lists all values for the element found in the file"""
+        err = None
+        values = list()
+        constants = self.collect_constants_from_ini()
+        if element in constants.keys():
+            return [constants[element], None]
+        else:
+            try:
+                for mu in self.munger_list:
+                    print(f"\twith munger {mu}")
+                    f_path = os.path.join(self.results_dir, self.d["results_file"])
+                    munger_path = os.path.join(self.mungers_dir, f"{mu}.munger")
+                    p, err = m.get_and_check_munger_params(munger_path)
+                    if ui.fatal_error(err):
+                        return values, err
+
+                    df, original_string_columns, err = m.to_standard_count_frame(
+                        self.results_dir, self.mungers_dir, p, dict(), suffix="_SOURCE",
+                    )
+                    if ui.fatal_error(err):
+                        return values, err
+                    df, new_err = m.munge_source_to_raw(
+                        df,
+                        munger_path,
+                        p,
+                        original_string_columns,
+                        "_SOURCE",
+                        self.results_dir,
+                    )
+                    err = ui.consolidate_errors([err, new_err])
+                    if ui.fatal_error(new_err):
+                        return values, err
+                    values = list(set(values.extend(df[element].unique())))
+
+            except Exception as exc:
+                err = ui.add_new_error(
+                    err,
+                    "system",
+                    f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
+                    f"Unexpected exception while converting data to standard form or munging to raw: {exc}"
+                )
+                return values, err
+
+
+        # TODO complete
+        return values, err
 
 def check_par_file_elements(
     ini_d: dict,
@@ -906,6 +953,84 @@ class JurisdictionPrepper:
         print(
             f"Starter dictionary created in current directory (not in jurisdiction directory):\n{starter_file_name}"
         )
+        return err
+
+    def add_sub_county_rus(
+            self, sdl: SingleDataLoader, sub_ru_type="precinct"
+    ) -> Optional[dict]:
+        err_list = list()
+        for mu in sdl.munger_list:
+            # get parameters
+            m_path = os.path.join(sdl.mungers_dir, f"{mu}.munger")
+            mu_d, new_err = m.get_and_check_munger_params(m_path)
+            # check that ReportingUnit formula is <county>;<sub_ru>
+            ru_formula = ''
+            for header in m.req_munger_param_values["munge_strings"]:
+                formulas, formula_err = ui.get_parameters(
+                    required_keys=[],
+                    optional_keys=["ReportingUnit"],
+                    header=header,
+                    param_file=m_path,
+                )
+                if formula_err or (formulas["ReportingUnit"] is None):
+                    pass
+                else:  # TODO tech debt: we assume at most one formula
+                    ru_formula = formulas["ReportingUnit"]
+                    if ";" not in ru_formula:
+                            new_err = ui.add_new_error(
+                                new_err, "warn-munger", mu, "ReportingUnit formula has no ';'",
+                            )
+                            if new_err:
+                                err_list.append(new_err)
+                    else:
+                        # create raw -> internal dictionary of county names
+                        jd_df = prep.get_element(sdl.juris.path_to_juris_dir, "dictionary")
+                        ru_df = prep.get_element(sdl.juris.path_to_juris_dir, "ReportingUnit")
+                        internal = jd_df[jd_df["cdf_element"] == "ReportingUnit"].merge(
+                            ru_df[ru_df["ReportingUnitType"] == "county"], left_on="cdf_internal_name", right_on="Name",
+                            how="inner"
+                        )[["raw_identifier_value", "cdf_internal_name"]].set_index("raw_identifier_value").to_dict()[
+                            "cdf_internal_name"]
+                        # get list of ReportingUnit raw values from results file
+                        vals, new_err = sdl.list_values("ReportingUnit")
+                        county = {v: v.split(";")[0] for v in vals}
+                        remainder = {v: v[len(county[v]):] for v in vals}
+
+                        # write to ReportingUnit.txt
+                        new_err = prep.write_element(
+                            sdl.juris.path_to_juris_dir,
+                            "ReportingUnit",
+                            pd.concat(
+                                [
+                                    ru_df, pd.DataFrame(
+                                        [[f"{internal[county[v]]};{remainder[v]}", sub_ru_type] for v in vals],
+                                        columns=["Name", "ReportingUnitType"],
+                                    )
+                                ]
+                            ),
+                        )
+                        if new_err:
+                            err_list.append(new_err)
+
+                        # write to dictionary.txt
+                        new_err = prep.write_element(
+                            sdl.juris.path_to_juris_dir,
+                            "dictionary",
+                            pd.concat(
+                                [
+                                    jd_df, pd.DataFrame(
+                                        [["ReportingUnit",
+                                          f"{internal[county[v]]};{remainder[v]}",
+                                          v,
+                                          ] for v in vals],
+                                        columns=["cdf_element", "cdf_internal_name", "raw_identifier_value"],
+                                    )
+                                ]
+                            ),
+                        )
+                        if new_err:
+                            err_list.append(new_err)
+        err = ui.consolidate_errors(err_list)
         return err
 
     def __init__(self):
