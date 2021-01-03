@@ -1,1 +1,405 @@
 BallotName
+Yusheng Peng
+Wilm Donath
+William J. Buckbee
+William H. Russell
+William A. Petit, Jr.
+Will Haskell
+Wilfredo Martinez
+Whit Betts
+Weston Ulbrich
+West
+Weruche U. George
+Wells
+Weinstein
+Wanda R. Simmons
+Vincent J. Mase, Sr.
+Vincent J. Candelora
+Vernon R. Matthews
+Travis Simms
+Tony Sutton
+Tony Hwang
+Tony Gennaro
+Toni E. Walker
+Tom Delnicki
+Tom Arnone
+Thomas P. O'Dea , Jr.
+Thomas E. McCormick
+Terrie E. Wood
+Terrence A. Sullivan
+Tammy Nuccio
+Tammy Exum
+Tami Zawistowski
+Susan Johnson
+Susan Chapman
+Sujata Gadkar-Wilcox
+Stewart Chip' BeckettMachine/Polling Place/EDRAbsenteeTotal'Does not match regex ^(.+)Machine/Polling Place/EDRAbsenteeTotal$: Stewart Chip' BeckettMachine/Polling Place/EDRAbsenteeTotal'
+Steven Stafstrom
+Steven S. Choi
+Steve Weir
+Steve Meskers
+Steve Cassano
+Stephen Samela
+Stephen G. Harding
+Stephen Dincher
+Stephanie Thomas
+Stephanie Cummings
+Simmons and Roze
+Simmons and Dow
+Sean Scanlon
+Sean Butterly
+Scott A. Storms
+Saud Anwar
+Salvatore V. Sena, Jr.
+Ryan Fazio
+Rosa L. DeLauro
+Rosa C. Rebimbas
+Ronald A. Napoli, Jr.
+Roland Lemar
+Robyn Porter
+Robin Green
+Robin Comey
+Robert W. Lawrence
+Robert T. Keeley, Jr.
+Robert Siegrist
+Robert E. Halstead
+Robert Bobby' SanchezMachine/Polling Place/EDRAbsenteeTotal'Does not match regex ^(.+)Machine/Polling Place/EDRAbsenteeTotal$: Robert Bobby' SanchezMachine/Polling Place/EDRAbsenteeTotal'
+Robert Bell
+Rob Sampson
+Rick Lopes
+Rick L. Hayes
+Rick Bush
+Richard Ruglio
+Richard Cordero
+Rebekah Harriman-Stites
+Quentin Phipps
+Piotr S. Ceglarz
+Phillip Chabot
+Philip L. Young
+Peter Tercyak
+Peter Perillo
+Paul M. Formica
+Paul J. Small
+Paul Honig
+Paul Cicarella
+Patrizia Zucaro
+Patrick Pentalow
+Patrick Callahan
+Patricia Dillon
+Patricia Billie Miller
+Pat Wilson Pheanious
+Pat Boyd
+Pam Salamone
+Norm Needleman
+Noreen Kokoruda
+Noel Rodriquez
+Nicole Klarides-Ditria
+Myra Rivers
+Mitch Bolinsky
+Mike Skelps
+Mike France
+Mike Demicco
+Michelle McCabe
+Michelle L. Cook
+Michele Zommer
+Michael Winkler
+Michael Southworth
+Michael Henry
+Michael DiMassa
+Michael DiGiovancarlo
+Michael D. Quinn
+Michael Camillo
+Michael C. D'Agostino
+Melissa E. Osborne
+Matthew M. Corey
+Matthew D. Dyer
+Matt Lesser
+Matt Harper
+Matt Geren
+Matt Blumenthal
+Mary Welander
+Mary Mushinsky
+Mary L. Sanders
+Mary Fay
+Mary Daugherty Abrams
+Mary B. Fortier
+Mary Ann Turner
+Martin M. Looney
+Martha Marx
+Mark W. Anderson
+Mark DePonte
+Marilyn Moore
+Maria Horn
+Margaret Streicker
+Marc Riccio
+Mae Flexer
+Lucy Dathan
+Lou Arata
+Liz Linehan
+Lisa Thomas
+Linda Szynkowicz
+Lezlye W. Zupkus
+Leslee Hill
+Len Suzio
+Lee V. Grisby, II
+Lauren Gauthier
+Laura Devlin
+Laura B. Bush
+Larry Groh, Jr.
+Larry B. Butler
+Lance Lusignan
+Kurt Vail
+Kimberly Fiorello
+Kim Healy
+Kevin Witkos
+Kevin Ryan
+Kevin C. Kelly
+Kerry Szeps Wood
+Kerri Colombo
+Kenneth Gucker
+Kelly Elizabeth Green
+Keith James McConnell
+Kathy Kennedy
+Kathy Grant
+Kathleen Stowe
+Kathleen M. McCarty
+Kathleen Hoyt
+Kate Rotella
+Kate Farrar
+Kate Donnelly
+Kat Goulart
+Kara Rochelle
+Justin C. Paglino
+Justin Anderson
+Julie Shilosky
+Julie Kushner
+Judd Melon
+Juan Candelaria
+Josiah Israel
+Josh Elliott
+Joseph Taraya
+Joseph Polletta
+Joseph P. Gresko
+Joseph A. Bongiorno
+Jose Goncalves
+Jo Jorgensen
+Jorge Cabrera
+Jonathan Steinberg
+Jonathan Riddle
+Jonathan Milon Johnson
+John-Michael Parker
+John W. Fonfara
+John W. Brockelman
+John Shaban
+John Piscopo
+John May
+John M. Traceski
+John L. Hall, III
+John K. Hampton
+John J.Flynn
+John Fusco
+John Corky Mazurek
+John Collins
+John B. Larson
+John A. Kissel
+John (Jack) F. Hennessy
+Joelle Nawrocki
+Joe de la Cruz
+Joe Zullo
+Joe LaPorta
+Joe Kelly
+Joe Courtney
+Joanne Romano-Csonka
+Joan V. Hartley
+JoAnn Angelico-Stetson
+Jim Jinks
+Jim Himes
+Jim Feehan
+Jillian Gilchrest
+Jill Barry
+Jessica Alba
+Jerrell Hargraves
+Jennifer Leeper
+Jeffrey Desmarais
+Jeff Sullivan
+Jeff Currey
+Jay Case
+Jason W. Bartlett
+Jason Perillo
+Jason Doucette
+Jasmin Sanchez
+Jane Garibay
+Jameson White
+James Maroney
+Jaime Foster
+Jahana Hayes
+Jack Perry
+Jack Henrie
+JP Sredzinski
+J.D. Ospina
+Irene M. Haines
+Howard and Howard
+Holly H. Cheeseman
+Hilda E. Santiago
+Hilary Ram
+Henry Vasel
+Henry Thayer
+Henry J. Genga
+Henri Martin
+Helene S. Kouassi
+Hector Arzeno
+Heather Somers
+Hawkins
+Harry Arora
+Harold S. Harris
+Gregg Haddad
+Greg Post
+Greg Howard
+Geraldo C. Reyes, Jr.
+Gerald Calnen
+George Logan
+George Hallenbeck
+Geoff Luxenberg
+Gennaro Bizzarro
+Genevieve Coursey
+Gary Winfield
+Gary Turco
+Gale L. Mastrofrancesco
+Frederick A. Moffa
+Fred Wilms
+Frank Smith
+Eva A. Maldonado
+Ethan Book, Jr.
+Erycka Ortiz
+Ernestine Holloway
+Erin Reilly
+Erin M. Domenech
+Erik A. Smith
+Eric Michael Mastroianni, Sr.
+Eric C. Berthel
+Emmett D. Riley
+Emmanuel Manny' SanchezMachine/Polling Place/EDRAbsenteeTotal'Does not match regex ^(.+)Machine/Polling Place/EDRAbsenteeTotal$: Emmanuel Manny' SanchezMachine/Polling Place/EDRAbsenteeTotal'
+Emile Buzaid
+Ellie Kousidis
+Ellen G. Wink
+Eleni Kavros DeGraw
+Elaine Matto
+Edward J. Scinto
+E.J. Maher
+Douglas McCrory
+Doug Dubitsky
+Dorinda Borer
+Donna Veach
+Don Vaniah Alexander
+Devon Brown
+Devin R. Carney
+Derek Slap
+Dennis Bradley
+Rocky Roque De La Fuente
+David Yaccarino
+David X. Sullivan
+David T. Wilson
+David Rutigliano
+David Rackliffe
+David R. Gronbach
+David Paul Kramer
+David Michel
+David K. Labriola
+David E. Stavens
+David Bedell
+David Arconti, Jr.
+David A. Rubino
+Dave Yaccarino
+Danielle Cecil Wong
+Daniel Reale
+Daniel J. Fox
+Danette Onofrio
+Dan Maymin
+Dan DeBarba
+Dan Champagne
+Dagmara Scalise
+Cristin McCarthy Vahey
+Craig Miner
+Craig Fishbein
+Cindy Harrison
+Christopher Ziogas
+Christopher Rosario
+Christopher E. Bowen
+Christopher Chris' DeMatteoMachine/Polling Place/EDRAbsenteeTotal'Does not match regex ^(.+)Machine/Polling Place/EDRAbsenteeTotal$: Christopher Chris' DeMatteoMachine/Polling Place/EDRAbsenteeTotal'
+Christopher Beyus
+Christine Rosati Randall
+Christine Palm
+Christine Goupil
+Christine Conley
+Christine Cohen
+Christie M. Carpino
+Chris Perone
+Chip Stephens
+Charlie Stallworth
+Charles
+Charles Ferraro
+Catherine Abercrombie
+Catherine A. Osten
+Cate Steel
+Cassandra Martineau
+Brian Carroll
+Caroline Simmons
+Carol Hall
+Carlos M. Alvarado
+Carlo Leone
+Carla Volpe
+Cara Pavalock-D'Amato
+Caleb Espinosa
+Bryan Anderson
+Bruce W. Walczak
+Brian Smith
+Brian Merlen
+Brian Marois
+Brian M. Ohler
+Brian Lanoue
+Brian Farnen
+Brendan Saunders
+Brandon Chafee
+Bobby Gibson
+Bob Statchen
+Bob Hebert
+Bob Godfrey
+Bob Duff
+Joseph R. Biden
+Ben McGorty
+Barbara Ruhe
+Baird Welch-Collins
+Audrey Lampert
+April Capone
+Antonio Felipe
+Anthony Nolan
+Anthony J. D'Amelio
+Anne Hughes
+Anne Dubay Dauphinais
+Andrew M. Rasmussen-Tuller
+Andre F. Baker
+Amy Morrin Bello
+Alphonse Paolillo, Jr.
+Alexander Taubes
+Alex Kasser
+Alden Russell
+Aimee Berger-Girvalo
+Aileen Abrams
+Donald J. Trump
+Timothy Ackert
+Raghib Allie-Brennan
+Minnie Gonzalez
+Matthew Ritter
+Mark Stewart Greenstein
+Julio A. Concepcion
+Joshua M. Hall
+Jason Rojas
+Edwin Vargas, Jr.
+Daniel Adam Piper
+Dan Carter
+Charles Jackson
+Cathy Hopperstad
+Brenda Falusi
+Brandon L. McGee
+Barry J. D'Andrea
+
