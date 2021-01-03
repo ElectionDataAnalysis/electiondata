@@ -1417,8 +1417,3 @@ ReportingUnit	Maine;Washington County;WAITE	WAS;Waite
 ReportingUnit	Maine;Washington County;WESLEY	WAS;Wesley
 ReportingUnit	Maine;Washington County;WHITING	WAS;Whiting
 ReportingUnit	Maine;Washington County;WHITNEYVILLE	WAS;Whitneyville
-Candidate	Pingree, Chellie M.	Pingree, Chellie M.
-Candidate	none or unknown	Others
-Candidate	Golden, Jared F.	Golden, Jared F.
-Candidate	Crafts, Dale John	Crafts, Dale John
-Candidate	Allen, Jay T.	Allen, Jay T.
