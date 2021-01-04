@@ -101,7 +101,8 @@ US House AZ District 9	1	US House AZ District 9
 US President (AZ)	1	US President (AZ)	
 AZ Governor	1	AZ Governor	
 US Senate AZ	1	US Senate AZ	
-AZ Corporation Commissioner	1	AZ Corporation Commissioner	
+US Senate AZ (until 2023)	1	US Senate AZ
+AZ Corporation Commissioner	1	AZ Corporation Commissioner
 AZ Attorney General	1	AZ Attorney General	
 AZ Lieutenant Governor	1	AZ Lieutenant Governor	
 AZ Treasurer	1	AZ Treasurer	
