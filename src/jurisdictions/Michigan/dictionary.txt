@@ -1,4 +1,22 @@
 cdf_element	cdf_internal_name	raw_identifier_value
+Candidate	Tom Hoefling	Tom Hoefling
+Candidate	Tara Renee Hunter	Tara Renee Hunter
+Candidate	Stephanie L. Moore	Stephanie L. Moore
+Candidate	Shannon Ruth Hogan	Shannon Ruth Hogan
+Candidate	Ronald Lee Heeren	Ronald Lee Heeren
+Candidate	Ronald Lee Hawkins	Ronald Lee Hawkins
+Candidate	Robert William Carr	Robert William Carr
+Candidate	Richard David Fuentes	Richard David Fuentes
+Candidate	Leonard Paul Gadzinski	Leonard Paul Gadzinski
+Candidate	Kurt Allan Hausauer	Kurt Allan Hausauer
+Candidate	Kasey Wells	Kasey Wells
+Candidate	Jerry Solis	Jerry Solis
+Candidate	Jade Simmons	Jade Simmons
+Candidate	Jack Daniel Coleman	Jack Daniel Coleman
+Candidate	Douglas Allen Troszak	Douglas Allen Troszak
+Candidate	Donald Eason	Donald Eason
+Candidate	Deborah Sue LaFaive	Deborah Sue LaFaive
+Candidate	Brian T. Carroll	Brian T. Carroll
 CandidateContest	MI House District 1 (Democratic Party)	1ST DISTRICT REPRESENTATIVE IN STATE LEGISLATURE 2 YEAR TERM (1) POSITION (DEMOCRATIC PARTY)
 CandidateContest	MI House District 1 (Democratic Party)	1st District Representative in State Legislature 2 Year Term (1) Position (Democratic Party)
 CandidateContest	MI House District 1 (Democratic Party)	1ST DISTRICT REPRESENTATIVE IN STATE LEGISLATURE 2 YEAR TERM (1) POSITION FILES IN WAYNE COUNTY (DEMOCRATIC PARTY)
