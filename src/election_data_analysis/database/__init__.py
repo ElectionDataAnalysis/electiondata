@@ -1087,10 +1087,6 @@ def get_relevant_contests(session, filters):
     finds all contests for that combination."""
     election_id = list_to_id(session, "Election", filters)
     reporting_unit_id = list_to_id(session, "ReportingUnit", filters)
-    contest_df = read_vote_count(
-        session, election_id, reporting_unit_id, ["ContestName"], ["contest_name"]
-    )
-
     result_df = read_vote_count(
         session,
         election_id,
@@ -1098,9 +1094,6 @@ def get_relevant_contests(session, filters):
         ["ReportingUnitName", "ContestName", "unit_type"],
         ["parent", "name", "type"]
     )
-    result_df = result_df.merge(
-        contest_df, how="inner", left_on="name", right_on="contest_name"
-    )[result_df.columns]
     return result_df
 
 
