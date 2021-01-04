@@ -1144,6 +1144,7 @@ class Analyzer:
         Session = sessionmaker(bind=eng)
         self.session = Session()
 
+<<<<<<< HEAD
     def display_options(
         self,
         input_str: str,
@@ -1167,6 +1168,22 @@ class Analyzer:
         if results:
             return results
         return None
+=======
+    # `verbose` param is not used. See github issue #524 for details
+    def display_options(self, input: str, verbose: bool = True, filters: list = None):
+        if not filters:
+            df = pd.DataFrame(db.get_input_options(self.session, input, True))
+            results = db.package_display_results(df)
+        else:
+            try:
+                filters_mapped = ui.get_contest_type_mappings(filters)
+                results = db.get_filtered_input_options(
+                    self.session, input, filters_mapped
+                )
+            except:
+                results = None
+        return results
+>>>>>>> remove verbose flag
 
     def scatter(
         self,
