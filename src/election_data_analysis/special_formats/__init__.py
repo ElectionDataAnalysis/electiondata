@@ -9,6 +9,7 @@ from typing import Optional, Dict, List, Any
 from election_data_analysis import munge as m
 from election_data_analysis import juris_and_munger as jm
 from election_data_analysis import user_interface as ui
+import re
 
 
 def disambiguate(li: list) -> (list, dict):
@@ -97,10 +98,16 @@ def read_xml(
 
     try:
         root = tree.getroot()
+        if munger_name == "nist_xml.munger":
+            namespace = nist_namespace(f_path, "")
+            tags, attributes = nist_tags(tags, attributes, namespace)
         results_list = results_below(root, tags, attributes)
         raw_results = pd.DataFrame(results_list)
         if raw_results.empty:
             err = ui.add_new_error(err, "file", Path(f_path).name, "No results read from file")
+        if munger_name == "nist_xml.munger":
+            raw_results = clean_nist_columns(raw_results, namespace)
+            raw_results = replace_id_values(raw_results, f_path)
         # TODO tech debt is the for loop necessary before clean_count_cols?
         for c in p["count_fields_by_name"]:
             raw_results[c] = pd.to_numeric(raw_results[c], errors="coerce")
@@ -116,25 +123,55 @@ def read_xml(
     return raw_results, err
 
 
+def nist_tags(good_tags, good_pairs, namespace):
+    """ NIST file requires some finessing of values for the parsing """
+    good_tags.add("Election")
+    good_tags.add("ContestCollection")
+    good_tags.add("BallotSelection")
+    good_tags.add("VoteCountsCollection")
+    good_tags.add("BallotName")
+
+    new_tags = set()
+    new_pairs = {}
+    for tag in good_tags:
+        new_tags.add(f"{{{namespace}}}{tag}")
+
+    for key in good_pairs:
+        new_pairs[f"{{{namespace}}}{key}"] = good_pairs[key]
+
+    return new_tags, new_pairs
+
 def results_below(node: et.Element, good_tags: set, good_pairs: dict) -> list:
     """appends all (possibly incomplete) results records that can be
     read from nodes below to the list self.results"""
     r_below = []
 
     if node.getchildren() == list():
-        r_below = [{f"{node.tag}.{k}": node.attrib.get(k, "") for k in good_pairs[node.tag]}]
+        r_below = {}
+        for k in good_pairs[node.tag]:
+            if k == "text":
+                r_below[f"{node.tag}.{k}"] = node.text
+            else:
+                r_below[f"{node.tag}.{k}"] = node.attrib.get(k, "")
+        r_below = [r_below]
     else:
         for child in node:
+            r_below_child = [] 
             if child.tag in good_tags:
                 # get list of all (possibly incomplete) results records from below the child
-                r_below_child = results_below(child, good_tags, good_pairs)
-                # add info from the current node to each record and append result to self.results
+                r_below_child = r_below_child + results_below(child, good_tags, good_pairs)
                 for result in r_below_child:
-                    if node.tag in good_tags:
+                    if node.tag in good_pairs.keys():
                         result.update(
                             {f"{node.tag}.{k}": node.attrib.get(k, "") for k in good_pairs[node.tag]}
                         )
-                    r_below.append(result)
+                    # handle special cases for NIST here
+                    if len(result.keys()) == 1:
+                        for r in r_below:
+                            if list(result.keys())[0] not in list(r.keys()):
+                                r.update(result)
+                    else:
+                        r_below.append(result)
     return r_below
 
 
@@ -252,3 +289,121 @@ def json_results_below(j: dict or list,
 
         # Otherwise, return the results below current node
         return results
+
+
+def nist_lookup(f_path: str) -> dict:
+    """ The NIST format stores data about each entity separately from where
+    they may be referenced. For example, a ReportingUnit ID and Name may be 
+    defined in one section, and then the ID will be referenced in the VoteCounts. 
+    In order to match the ReportingUnit to particular VoteCounts, we parse the
+    XML and build dataframes tha we can reference."""
+
+    # when this function is called, it's already been accessed. So we omit
+    # the normal error checking here because we can assume it exists.
+    tree = et.parse(f_path)
+    root = tree.getroot()
+
+    # this namespace for reportingUnit info
+    namespace_xsi = nist_namespace(f_path, "xsi")
+    # this namespace for others
+    namespace_blank = nist_namespace(f_path, "")
+
+    candidates = []
+    reporting_units = []
+    parties = []
+
+    # loop through the XML
+    for child in root.iter():
+        # get candidate info
+        if child.tag == f"{{{namespace_blank}}}CandidateCollection":
+            for grandchild in child.iter():
+                if grandchild.tag == f"{{{namespace_blank}}}Candidate":
+                    candidate = {
+                        "ObjectId": grandchild.attrib.get("ObjectId")
+                    }
+                    for g in grandchild:
+                        if g.tag == f"{{{namespace_blank}}}BallotName":
+                            for h in g:
+                                candidate["BallotName"] = h.text
+                        elif g.tag == f"{{{namespace_blank}}}PartyId":
+                            candidate["PartyId"] = g.text
+                    candidates.append(candidate)
+        # get reportingUnit info
+        if child.tag == f"{{{namespace_blank}}}GpUnit" and "ReportingUnit" == child.attrib.get(f"{{{namespace_xsi}}}type"):
+            reporting_units.append({
+                "ObjectId": child.attrib.get("ObjectId"),
+                "Name": child.attrib.get("Name")
+            })
+        # get party info
+        if child.tag == f"{{{namespace_blank}}}Party":
+            parties.append({
+                "ObjectId": child.attrib.get("ObjectId"),
+                "PartyName": child.attrib.get("Abbreviation") 
+            })
+
+    # prep dataframes
+    reporting_unit_df = pd.DataFrame(reporting_units)
+    reporting_unit_df = reporting_unit_df[
+        reporting_unit_df["Name"] != "Statewide"
+    ]
+
+    candidate_df = pd.DataFrame(candidates)
+    party_df = pd.DataFrame(parties)
+    candidate_df = candidate_df.merge(
+        party_df, left_on="PartyId", right_on="ObjectId", suffixes=(None, "_y")
+    )[["ObjectId", "BallotName", "PartyName"]]
+
+    return candidate_df, reporting_unit_df
+
+
+def nist_namespace(f_path, key):
+    """ get the namespaces in the XML and return error if the one we're expecting
+    is not found """
+    namespaces = dict([
+        node for _, node in et.iterparse(
+            f_path, events=["start-ns"]
+        )
+    ])
+    try:
+        namespace = namespaces[key]
+        return namespace
+    except:
+        return None
+
+
+def clean_nist_columns(df, namespace):
+    col = df.columns
+    new_headers = []
+    for i in range(len(col)):
+        new_headers.append(col[i].replace(f"{{{namespace}}}", ""))
+    df.columns = new_headers
+    return df
+
+
+def replace_id_values(df, f_path):
+    candidate_df, reporting_unit_df = nist_lookup(f_path)
+
+    # Add reporting unit info
+    df = df.merge(reporting_unit_df, left_on="GpUnitId.text", right_on="ObjectId")
+    df = df[[
+        "VoteCounts.Type",
+        "VoteCounts.Count",
+        "CandidateId.text",
+        "Contest.Name",
+        "Name"
+    ]].rename(columns={"Name": "GpUnitId.text"})
+    
+    # add candidate, party info
+    df = df.merge(candidate_df, left_on="CandidateId.text", right_on="ObjectId")
+    df = df[[
+        "VoteCounts.Type",
+        "VoteCounts.Count",
+        "BallotName",
+        "Contest.Name",
+        "PartyName",
+        "GpUnitId.text"
+    ]].rename(columns={
+        "BallotName": "CandidateId.text",
+        "PartyName": "PartyId.text",
+    })
+    return df
