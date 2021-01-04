@@ -1049,6 +1049,8 @@ def reload_juris_election(
 
 def get_contest_type_mappings(filters: list) -> list:
     """get mappings for a list to the contest type database labels"""
+    if not filters:
+        return None
     contest_types = contest_type_mappings.items()
     for index, item in enumerate(filters):
         for contest_type in contest_types:

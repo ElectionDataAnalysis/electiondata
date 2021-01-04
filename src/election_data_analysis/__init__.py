@@ -1144,46 +1144,16 @@ class Analyzer:
         Session = sessionmaker(bind=eng)
         self.session = Session()
 
-<<<<<<< HEAD
-    def display_options(
-        self,
-        input_str: str,
-        verbose: bool = False,
-        filters: list = None
-    ):
-        if not verbose:
-            results = db.get_input_options(self.session, input_str, False)
-        else:
-            if not filters:
-                df = pd.DataFrame(db.get_input_options(self.session, input_str, True))
-                results = db.package_display_results(df)
-            else:
-                try:
-                    filters_mapped = ui.get_contest_type_mappings(filters)
-                    results = db.get_filtered_input_options(
-                        self.session, input_str, filters_mapped
-                    )
-                except:
-                    results = None
-        if results:
-            return results
-        return None
-=======
     # `verbose` param is not used. See github issue #524 for details
     def display_options(self, input: str, verbose: bool = True, filters: list = None):
-        if not filters:
-            df = pd.DataFrame(db.get_input_options(self.session, input, True))
-            results = db.package_display_results(df)
-        else:
-            try:
-                filters_mapped = ui.get_contest_type_mappings(filters)
-                results = db.get_filtered_input_options(
-                    self.session, input, filters_mapped
-                )
-            except:
-                results = None
+        try:
+            filters_mapped = ui.get_contest_type_mappings(filters)
+            results = db.get_filtered_input_options(
+                self.session, input, filters_mapped
+            )
+        except:
+            results = None
         return results
->>>>>>> remove verbose flag
 
     def scatter(
         self,
@@ -1563,9 +1533,19 @@ def count_type_total(election, jurisdiction, contest, count_item_type, sub_unit_
 
 def check_count_types_standard(election, jurisdiction, dbname=None):
     an = Analyzer(dbname=dbname)
-    standard_ct_list = db.get_input_options(an.session,'count_item_type',False)
+    election_id = db.name_to_id(an.session, "Election", election)
+    reporting_unit_id = db.name_to_id(an.session, "ReportingUnit", jurisdiction)
+    standard_ct_list = list(db.read_vote_count(
+        an.session,
+        election_id,
+        reporting_unit_id,
+        ["CountItemType"],
+        ["CountItemType"]    
+    )["CountItemType"].unique())
+
     # don't want type "other"
-    standard_ct_list.remove("other")
+    if "other" in standard_ct_list:
+        standard_ct_list.remove("other")
     active = db.active_vote_types(an.session, election, jurisdiction)
     for vt in active:
         # if even one fails, count types are not standard
