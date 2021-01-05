@@ -1766,3 +1766,26 @@ def read_external(cursor, election_year: int, top_ru_id: int, fields: list, rest
         return results_df.loc[:, ~results_df.columns.duplicated()][fields]
     except Exception as exc:
         return pd.DataFrame()
+
+def presidential_candidates(session, election_id, top_ru_id, contest_id) -> List[str]:
+    connection = session.bind.raw_connection()
+    cursor = connection.cursor()
+
+    q = sql.SQL("""select distinct can."BallotName"
+from "VoteCount" vc
+left join "Contest" c on vc."Contest_Id" = c."Id"
+left join "CandidateSelection" cs on cs."Id" = vc."Selection_Id"
+left join "Candidate" can on cs."Candidate_Id" = can."Id"
+left join "ReportingUnit" child_ru on vc."ReportingUnit_Id" = child_ru."Id"
+left join "ComposingReportingUnitJoin" cruj on child_ru."Id" = cruj."ChildReportingUnit_Id"
+where
+    c."Id" = %s
+ and vc."Election_Id" = %s
+and cruj."ParentReportingUnit_Id" = %s
+;""")
+    cursor.execute(
+        q, (contest_id,election_id, top_ru_id,)
+    )
+    result = cursor.fetchall()
+    contests = [x[0] for x in result]
+    return contests

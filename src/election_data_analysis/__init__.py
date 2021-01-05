@@ -1909,3 +1909,32 @@ def get_contest_with_unknown_candidates(election, jurisdiction, dbname=None) -> 
     contests = db.get_contest_with_unknown(an.session, election_id, jurisdiction_id)
     return contests
 
+def check_candidate_name_presence(
+        election,
+        jurisdiction,
+        contest,
+        pres_candidates,
+        dbname
+):
+
+    an = Analyzer(dbname=dbname)
+    if not an:
+        return [f"Failure to connect to database"]
+    election_id = db.name_to_id(an.session, "Election", election)
+    if not election_id:
+        return[f"Election {election} not found"]
+    jurisdiction_id = db.name_to_id(an.session, "ReportingUnit", jurisdiction)
+    if not jurisdiction_id:
+        return[f"Jurisdiction {jurisdiction} not found"]
+    contest_id = db.name_to_id(an.session, "Contest", contest)
+    if not contest_id:
+        return [f"Contest {contest} not found"]
+
+    candidates = db.presidential_candidates(an.session, election_id, jurisdiction_id, contest_id)
+    flag=0
+    if (set(pres_candidates).issubset(set(candidates))):
+        flag = 1
+    if (flag):
+        return []
+    else:
+        return["Given candidates not found, correct the names in Candidate.txt of jurisdiction files and reload"]

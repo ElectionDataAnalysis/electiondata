@@ -24,14 +24,13 @@ shd = 1   # state house district
 total_shd_votes = -1  # total votes in that State House contest
 ssd = 15  # state senate district
 total_ssd_votes = -1  # total votes in that State Senate contest
-single_vote_type = 'early'  # pick any one with corresponding data in your file, but use internal db name
+single_vote_type = 'early21'  # pick any one with corresponding data in your file, but use internal db name
 pres_votes_vote_type = 979089  # total votes for US President of that vote type
 county_or_other = "parish"   # Change this only if results are subdivided by something other than counties
                             #  e.g., 'parish' in LA, 'state-house' in Alaska, 'ward' in Philadelphia
 single_county = 'Louisiana;Assumption Parish'  # pick any one from your file, but use internal db name
 pres_votes_county = 11235  # total votes for US President in that county
-pres_candidates = ["Donald J. Trump","Joseph R. Biden"]
-
+dbname = 'LA'
 
 def test_data_exists(dbname):
     assert e.data_exists(election, jurisdiction, dbname=dbname)
@@ -119,12 +118,6 @@ def test_county_subtotal(dbname):
         == pres_votes_county
             )
 
-def test_presidential_candidates(dbname):
-    assert (e.check_candidate_name_presence(
-        election,
-        jurisdiction,
-        f"US President ({abbr})",
-        pres_candidates,
-        dbname=dbname,
-        ) == []
-            )
+print(test_data_exists(dbname))
+print(test_presidential(dbname))
+
