@@ -46,7 +46,7 @@ def test_presidential(dbname):
         == total_pres_votes
     )
 
-
+"""
 def test_congressional_totals(dbname):
     assert (e.contest_total(
         election,
@@ -78,7 +78,7 @@ def test_state_house_totals(dbname):
         )
         == total_shd_votes
     )
-
+"""
 
 def test_standard_vote_types(dbname):
     assert e.check_count_types_standard(election, jurisdiction, dbname=dbname)

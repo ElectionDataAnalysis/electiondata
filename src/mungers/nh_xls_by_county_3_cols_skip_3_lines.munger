@@ -17,3 +17,6 @@ ReportingUnit=<Summary By Counties>
 [in_count_headers]
 Party={<header_0>,^.*[ |,]([a-z]{1,3})$}
 Candidate={<header_0>,(Scatter$|\*corrections submitted by clerks$|\*corrections received by clerks$|\*corrections received from clerks$|^[\w .\']+|^[\w \']+, Sr\.|^[\w \']+, Jr\.)(?:$|\W+[a-z]+$)}
+
+[ignore]
+ReportingUnit=Belknap County,Alton,Barnstead,Belmont,Center Harbor,Gilford,Gilmanton,Laconia Ward 1,Laconia Ward 2,Laconia Ward 3,Laconia Ward 4,Laconia Ward 5,Laconia Ward 6,Meredith,New Hampton,Sanbornton,Tilton
