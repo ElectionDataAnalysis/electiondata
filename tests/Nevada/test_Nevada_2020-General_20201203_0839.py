@@ -20,7 +20,7 @@ ssd =  0  # state senate district ***NOT AVAILABLE***
 total_ssd_votes = 0  #***NOT AVAILABLE***
 single_vote_type = ''  # pick any one from your file ***NOT AVAILABLE***
 pres_votes_vote_type = 0 #***NOT AVAILABLE***
-single_county = 'Nevada;Clark'  # pick any one from your file
+single_county = 'Nevada;Clark County'  # pick any one from your file
 pres_votes_county = 972510   # total votes for pres of that county
 
 
