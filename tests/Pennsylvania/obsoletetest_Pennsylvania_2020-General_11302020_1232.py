@@ -17,13 +17,13 @@ import election_data_analysis as e
 election = "2020 General"
 jurisdiction = 'Pennsylvania'
 abbr = 'PA'
-total_pres_votes = 6917583  # total of all votes for US President
+total_pres_votes = 6915283  # total of all votes for US President
 cd = 16  # US House congressional district
-total_cd_votes = 353875  # total votes in that US House contest in the chosen cd
+total_cd_votes = 354050  # total votes in that US House contest in the chosen cd
 shd = 15   # state house district
-total_shd_votes = 34648  # total votes in that State House contest
+total_shd_votes = 34660  # total votes in that State House contest
 ssd = 47  # state senate district
-total_ssd_votes = 132947  # total votes in that State Senate contest
+total_ssd_votes = 116725  # total votes in that State Senate contest
 single_vote_type = 'provisional'  # pick any one with corresponding data in your file, but use internal db name
 pres_votes_vote_type = 105319  # total votes for US President of that vote type
 county_or_other = "county"   # Change this only if results are subdivided by something other than counties
