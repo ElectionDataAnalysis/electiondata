@@ -864,13 +864,9 @@ def get_filtered_input_options(session, input_str, filters):
     if input_str == "election":
         df = display_elections(session)
     elif input_str == "jurisdiction":
-        result = display_jurisdictions(session)
-        result_df = pd.DataFrame(result)
-        result_df.columns = df_cols
+        df = display_jurisdictions(session, df_cols)
         if filters:
-            df = result_df[result_df["parent"].isin(filters)]
-        else:
-            df = result_df
+            df = df[df["parent"].isin(filters)]
     # contest_type is a special case because we don't have a contest_type table.
     # instead, this is the reporting unit type of the election district
     elif input_str == "contest_type":
@@ -1622,7 +1618,7 @@ def display_elections(session):
     return result_df
 
 
-def display_jurisdictions(session):
+def display_jurisdictions(session, cols):
     q = sql.SQL(
         """
         WITH states(states) AS (
@@ -1663,5 +1659,7 @@ def display_jurisdictions(session):
     cursor = connection.cursor()
     cursor.execute(q)
     result = cursor.fetchall()
+    result_df = pd.DataFrame(result)
+    result_df.columns = cols
     cursor.close()
-    return result
+    return result_df
