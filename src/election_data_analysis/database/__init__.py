@@ -900,44 +900,6 @@ def get_filtered_input_options(session, input_str, filters):
         contest_df = get_relevant_contests(session, filters)
         contest_df = contest_df[contest_df["type"].isin(filters)]
         df = pd.concat([contest_type_df, contest_df])
-    # Assume these others are candidate searching. This is handled differently
-    # because the results variable is structured slightly differently
-    elif input_str == "subdivision_type":
-        # TODO: refactor this ugly mess
-        hierarchy_df = pd.read_sql_table(
-            "ComposingReportingUnitJoin", session.bind, index_col="Id"
-        )
-        unit_df = pd.read_sql_table("ReportingUnit", session.bind, index_col="Id")
-        hierarchy_df = hierarchy_df.merge(
-            unit_df, how="inner", left_on="ParentReportingUnit_Id", right_on="Id"
-        )
-        hierarchy_df = hierarchy_df[hierarchy_df["Name"].isin(filters)]
-        hierarchy_df = hierarchy_df.merge(
-            unit_df,
-            how="inner",
-            left_on="ChildReportingUnit_Id",
-            right_on="Id",
-            suffixes=["_x", None],
-        )[unit_df.columns]
-        unit_type_df = pd.read_sql_table(
-            "ReportingUnitType", session.bind, index_col="Id"
-        )
-        hierarchy_df = hierarchy_df.merge(
-            unit_type_df, how="inner", left_on="ReportingUnitType_Id", right_on="Id"
-        )
-        subdivision_types = list(hierarchy_df["Txt"].unique())
-        # Currently we don't distinguish between "location" RU types (like county)
-        # and "office" RU types (like state-senate, judicial). For now, we're
-        # hard-coding the location types to keep, though this may change in the future.
-        types_to_keep = ["county", "precinct", "ward"]
-        subdivision_types = list(set(subdivision_types) & set(types_to_keep))
-        subdivision_types.sort()
-        data = {
-            "parent": [filters[0] for subdivision_types in subdivision_types],
-            "name": subdivision_types,
-            "type": [None for subdivision_types in subdivision_types],
-        }
-        df = pd.DataFrame(data=data)
     elif input_str == "election":
         election_df = get_relevant_election(session, filters)
         elections = list(election_df["Name"].unique())
