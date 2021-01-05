@@ -857,18 +857,29 @@ def package_display_results(data):
     return results
 
 
-# this gets called when there are filters in the FE
 def get_filtered_input_options(session, input_str, filters):
+    """ Display dropdown options for user selection """
     df_cols = ["parent", "name", "type"]
-    # election input will never have filters applied
     if input_str == "election":
-        df = display_elections(session)
+        if filters:
+            election_df = get_relevant_election(session, filters)
+            elections = list(election_df["Name"].unique())
+            elections.sort(reverse=True)
+            data = {
+                "parent": [filters[0] for election in elections],
+                "name": elections,
+                "type": [None for election in elections],
+            }
+            df = pd.DataFrame(data=data)
+            df[["year", "election_type"]] = df["name"].str.split(" ", expand=True)
+            df.sort_values(["year", "election_type"], ascending=[False, True], inplace=True)
+            df.drop(columns=["year", "election_type"], inplace=True)
+        else:
+            df = display_elections(session)
     elif input_str == "jurisdiction":
         df = display_jurisdictions(session, df_cols)
         if filters:
             df = df[df["parent"].isin(filters)]
-    # contest_type is a special case because we don't have a contest_type table.
-    # instead, this is the reporting unit type of the election district
     elif input_str == "contest_type":
         contest_df = get_relevant_contests(session, filters)
         contest_types = contest_df["type"].unique()
@@ -900,19 +911,6 @@ def get_filtered_input_options(session, input_str, filters):
         contest_df = get_relevant_contests(session, filters)
         contest_df = contest_df[contest_df["type"].isin(filters)]
         df = pd.concat([contest_type_df, contest_df])
-    elif input_str == "election":
-        election_df = get_relevant_election(session, filters)
-        elections = list(election_df["Name"].unique())
-        elections.sort(reverse=True)
-        data = {
-            "parent": [filters[0] for election in elections],
-            "name": elections,
-            "type": [None for election in elections],
-        }
-        df = pd.DataFrame(data=data)
-        df[["year", "election_type"]] = df["name"].str.split(" ", expand=True)
-        df.sort_values(["year", "election_type"], ascending=[False, True], inplace=True)
-        df.drop(columns=["year", "election_type"], inplace=True)
     elif input_str == "category":
         election_id = list_to_id(session, "Election", filters)
         reporting_unit_id = list_to_id(session, "ReportingUnit", filters)
@@ -1009,6 +1007,7 @@ def get_filtered_input_options(session, input_str, filters):
         )
         df["name"] = df["parent"].str.replace(" Party", "") + " " + df["type"]
         df = df[df_cols].sort_values(["parent", "type"])
+    # Otherwise search for candidate
     else:
         election_id = list_to_id(session, "Election", filters)
         reporting_unit_id = list_to_id(session, "ReportingUnit", filters)
