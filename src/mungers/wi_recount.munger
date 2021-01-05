@@ -1,0 +1,34 @@
+# Format parameters section (required) #
+[format]
+## Required format parameters:
+#### File type must be one of: excel,json-nested,xml,flat_text
+file_type=excel
+#### Counts are found in one way of: by_field_names,by_column_numbers
+count_locations=by_column_numbers
+#### Munge string locations must be sublist of: in_field_values,in_count_headers,constant_over_sheet,constant_over_file ##
+munge_strings=constant_over_file,in_field_values,in_count_headers
+
+## Sometimes required format parameters:
+#### if count_locations is 'by_column_numbers':
+count_column_numbers=6,7,8,9,10,11,12,13,14,15,16,17,18
+#### if 'in_count_headers' is in munge_strings:
+count_header_row_numbers=0
+#### if 'constant_over_file' is in munge_strings:
+#########. Put `CandidateContest=US President (WI)` into the .ini file.
+#########. Put `CountItemType=total` into the .ini file.
+constant_over_file=CandidateContest,CountItemType
+#### if file type is flat_text or excel and not all rows are data:
+string_field_name_row=0
+
+# Munge formula sections (required if in munge_strings list) #
+[in_field_values]
+ReportingUnit=<County Name>;<Reporting Unit>
+
+[in_count_headers]
+Candidate=<header_0>
+
+# Values to ignore (optional) #
+[ignore]
+## E.g: Candidate=Total Votes Cast,Registered Voters ##
+
+
