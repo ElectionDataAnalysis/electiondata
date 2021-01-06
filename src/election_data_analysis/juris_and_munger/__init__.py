@@ -6,37 +6,19 @@ from pandas.api.types import is_numeric_dtype
 from typing import Optional
 from election_data_analysis import munge as m
 from election_data_analysis import user_interface as ui
+import election_data_analysis as eda
 import re
 import numpy as np
 from pathlib import Path
 import csv
 
 
-# constants
-munger_pars_req = ["file_type"]
-munger_pars_opt = {
-    "header_row_count": "int",
-    "field_name_row": "int",
-    "field_names_if_no_field_name_row": "list-of-strings",
-    "count_columns_by_name": "list-of-strings",
-    "count_columns": "list-of-integers",
-    "thousands_separator": "str",
-    "encoding": "str",
-    "count_of_top_lines_to_skip": "int",
-    "columns_to_skip": "list-of-integers",
-    "last_header_column_count": "int",
-    "column_width": "int",
-    "sheets_to_skip": "list-of-strings",
-    "constant_line_count": "int",
-    "constant_column_count": "int",
-    "nesting_tags": "list-of-strings",
-}
-
-
 def recast_options(options: dict, types: dict) -> dict:
+    """Convert a dictionary <options> of string parameter values to typed objects,
+    where type is determined by <types>"""
     keys = {k for k in options.keys() if k in types.keys()}
     for k in keys:
-        if types[k] == "int":
+        if types[k] in ["int","integer"]:
             try:
                 options[k] = int(options[k])
             except:
@@ -47,7 +29,9 @@ def recast_options(options: dict, types: dict) -> dict:
             except:
                 options[k] = list()
         if types[k] == "str":
-            pass
+            if options[k] == "":
+                # null string is read as None
+                options[k] = None
         if types[k] == "list-of-strings":
             try:
                 options[k] = [s for s in options[k].split(",")]
@@ -71,7 +55,7 @@ class Jurisdiction:
             error[f"{contest_type}Contest.txt"] = "file not found"
             return error
         df = pd.read_csv(
-            element_fpath, sep="\t", encoding="iso-8859-1", quoting=csv.QUOTE_MINIMAL
+            element_fpath, sep="\t", encoding=eda.default_encoding, quoting=csv.QUOTE_MINIMAL
         ).fillna("none or unknown")
 
         # add contest_type column
@@ -155,178 +139,6 @@ class Jurisdiction:
         self.path_to_juris_dir = path_to_juris_dir
 
 
-class Munger:
-    def get_aux_data(self, aux_data_path, err) -> (dict, dict):
-        """creates dictionary of dataframes, one for each auxiliary datafile.
-        DataFrames returned are (multi-)indexed by the primary key(s)"""
-        aux_data_dict = {}  # will hold dataframe for each abbreviated file name
-
-        field_list = list(set([x[0] for x in self.auxiliary_fields()]))
-        for abbrev in field_list:
-            # get munger for the auxiliary file
-            munger_path = os.path.join(self.path_to_munger_dir, abbrev)
-            aux_mu, mu_err = check_and_init_munger(munger_path)
-            if ui.fatal_error(mu_err):
-                err = ui.consolidate_errors([err, mu_err])
-                return dict(), err
-
-            # find file in aux_data_path whose name contains the string <afn>
-            aux_filename_list = [x for x in os.listdir(aux_data_path) if abbrev in x]
-            if len(aux_filename_list) == 0:
-                # TODO check this error
-                err = ui.add_new_error(
-                    err,
-                    "file",
-                    aux_data_path,
-                    f"No file found with name containing {abbrev}",
-                )
-            elif len(aux_filename_list) > 1:
-                # TODO check this error
-                err = ui.add_new_error(
-                    err,
-                    "file",
-                    aux_data_path,
-                    f"Too many files found with name containing {abbrev}",
-                )
-            else:
-                aux_path = os.path.join(aux_data_path, aux_filename_list[0])
-
-            # read and clean the auxiliary data file, including setting primary key columns as int
-            df, err = ui.read_single_datafile(aux_mu, aux_path, err)
-
-            # cast primary key(s) as int if possible, and set as (multi-)index
-            primary_keys = self.aux_meta.loc[abbrev, "primary_key"].split(",")
-            df, new_err = m.cast_cols_as_int(
-                df,
-                primary_keys,
-                error_msg=f"In dataframe for {abbrev}",
-                munger_name=aux_mu.name,
-            )
-            if new_err:
-                err = ui.consolidate_errors([err, new_err])
-                if ui.fatal_error(new_err):
-                    return aux_data_dict, err
-
-            df.set_index(primary_keys, inplace=True)
-
-            aux_data_dict[abbrev] = df
-
-        return aux_data_dict, err
-
-    def auxiliary_fields(self):
-        """Return set of [file_abbrev,field] pairs, one for each
-        field in <self>.cdf_elements.fields referring to auxilliary files"""
-        pat = re.compile("([^\\[]+)\\[([^\\[\\]]+)\\]")
-        all_set = set().union(*list(self.cdf_elements.fields))
-        aux_field_list = [re.findall(pat, x)[0] for x in all_set if re.findall(pat, x)]
-        return aux_field_list
-
-    def __init__(
-        self,
-        munger_path,
-        aux_data_path=None,
-    ):
-        """<dir_path> is the directory for the munger. If munger deals with auxiliary data files,
-        <aux_data_path> is the absolute path of the directory holding those files."""
-        self.name = os.path.basename(munger_path)  # e.g., 'nc_general'
-        self.path_to_munger_dir = munger_path
-        self.alt = (
-            dict()
-        )  # to hold any alt names, e.g., from disambiguation of cross-listed candidates
-        [
-            self.cdf_elements,
-            self.file_type,
-            self.encoding,
-            self.thousands_separator,
-            self.aux_meta,
-            self.options,
-        ] = read_munger_info_from_files(self.path_to_munger_dir)
-
-        if aux_data_path:
-            # NB err is not used here, but was checked in check_and_init routine
-            self.aux_data, err = self.get_aux_data(aux_data_path, err=dict())
-        else:
-            self.aux_data = {}
-        self.aux_data_path = aux_data_path
-
-        # used repeatedly, so calculated once for convenience
-        self.field_list = set()
-        for t, r in self.cdf_elements.iterrows():
-            self.field_list = self.field_list.union(r["fields"])
-
-
-def check_and_init_munger(
-    munger_path: str, aux_data_path: str = None
-) -> (Munger, dict):
-    err = check_munger_files(munger_path)
-    if ui.fatal_error(err):
-        munger = None
-    else:
-        munger = Munger(munger_path, aux_data_path=aux_data_path)
-    return munger, err
-
-
-def read_munger_info_from_files(dir_path):
-    """"""
-    # create auxiliary dataframe
-    if "aux_meta.txt" in os.listdir(dir_path):
-        # if some elements are reported in separate files per auxilliary.txt file, read from file
-        aux_meta = pd.read_csv(
-            os.path.join(dir_path, "aux_meta.txt"),
-            sep="\t",
-            index_col="abbreviated_file_name",
-        )
-    else:
-        # set auxiliary dataframe to empty
-        aux_meta = pd.DataFrame([[]])
-
-    # read cdf_element info
-    cdf_elements = pd.read_csv(
-        os.path.join(dir_path, "cdf_elements.txt"),
-        sep="\t",
-        index_col="name",
-        encoding="iso-8859-1",
-        quoting=csv.QUOTE_MINIMAL,
-    ).fillna("")
-
-    # add column for list of fields used in formulas
-    cdf_elements["fields"] = [[]] * cdf_elements.shape[0]
-    for i, r in cdf_elements.iterrows():
-        text_field_list, last_text = m.text_fragments_and_fields(
-            cdf_elements.loc[i, "raw_identifier_formula"]
-        )
-        cdf_elements.loc[i, "fields"] = [f for t, f in text_field_list]
-
-    # read formatting info
-    required_keys = munger_pars_req
-    optional_keys = list(munger_pars_opt.keys())
-    options, missing_required_params = ui.get_runtime_parameters(
-        required_keys=required_keys,
-        param_file=os.path.join(dir_path, "format.config"),
-        header="format",
-        optional_keys=optional_keys,
-    )
-    options = recast_options(options, munger_pars_opt)
-
-    file_type = options["file_type"]
-    if "encoding" in options.keys():
-        encoding = options["encoding"]
-    else:
-        encoding = "iso-8859-1"
-    if "thousands_separator" in options.keys() and options[
-        "thousands_separator"
-    ] not in ["", "None"]:
-        thousands_separator = options["thousands_separator"]
-    else:
-        thousands_separator = None
-
-    # json files act like one-header-row flat files as soon as they are read in
-    if options["file_type"] == "json":
-        options["header_row_count"] = 1
-    # TODO have options hold all optional parameters (and maybe even all parameters)
-    #  and remove explicit attributes entirely?
-    return [cdf_elements, file_type, encoding, thousands_separator, aux_meta, options]
-
 
 # TODO combine ensure_jurisdiction_dir with ensure_juris_files
 def ensure_jurisdiction_dir(juris_path, ignore_empty=False) -> dict:
@@ -386,7 +198,7 @@ def ensure_juris_files(juris_path, ignore_empty=False) -> Optional[dict]:
             temp = pd.read_csv(
                 os.path.join(templates_dir, f"{juris_file}.txt"),
                 sep="\t",
-                encoding="iso-8859-1",
+                encoding=eda.default_encoding,
             )
         except pd.errors.EmptyDataError:
             if not ignore_empty:
@@ -400,7 +212,7 @@ def ensure_juris_files(juris_path, ignore_empty=False) -> Optional[dict]:
         # if file does not exist
         if not os.path.isfile(cf_path):
             # create the file
-            temp.to_csv(cf_path, sep="\t", index=False)
+            temp.to_csv(cf_path, sep="\t", index=False, encoding=eda.default_encoding)
             created = True
 
         # if file exists, check format against template
@@ -435,9 +247,6 @@ def ensure_juris_files(juris_path, ignore_empty=False) -> Optional[dict]:
                 # dedupe the dictionary
                 clean_and_dedupe(cf_path)
 
-                # delete lines with one or more nulls
-                # TODO this mucks up encodings. We track encodings of results files, but not of jurisdictions.
-                # drop_lines_with_any_nulls(cf_path)
             else:
                 # dedupe the file
                 clean_and_dedupe(cf_path)
@@ -460,243 +269,10 @@ def ensure_juris_files(juris_path, ignore_empty=False) -> Optional[dict]:
     return err
 
 
-def check_munger_files(munger_path: str) -> dict:
-    """Check that the munger files are complete and consistent with one another.
-    Assumes munger directory exists. Assumes dictionary.txt is in the template file.
-    <munger_path> is the path to the directory of the particular munger
-    """
-
-    err = None
-    project_root = Path(__file__).parents[1].absolute()
-    munger_name = Path(munger_path).name
-
-    # check whether directory exists
-    if not os.path.isdir(munger_path):
-        err = ui.add_new_error(
-            err, "munger", munger_name, f"Directory does not exist: {munger_path}"
-        )
-        return err
-
-    # check whether all files exist
-    templates = os.path.join(project_root, "juris_and_munger", "munger_templates")
-    template_with_extension_list = os.listdir(templates)
-    for munger_file in template_with_extension_list:
-        # TODO create optional template for aux_meta.txt
-        cf_path = os.path.join(munger_path, munger_file)
-        # if file does not already exist in munger dir, throw error
-        file_exists = os.path.isfile(cf_path)
-
-        # if file exists, check format against template and then contents
-        if file_exists:
-            err = check_munger_file_format(munger_path, munger_file, templates, err)
-
-            # if no errors found so far, check contents
-            if not ui.fatal_error(
-                err, error_type_list=["munger"], name_key_list=[munger_file]
-            ):
-                err = check_munger_file_contents(munger_path, munger_file, err)
-        else:
-            err = ui.add_new_error(err, "munger", munger_name, "File does not exist")
-
-    # if the munger requires auxiliary data
-    if os.path.isfile(os.path.join(munger_path, "aux_meta.txt")):
-        # TODO check that each abbrev in aux_meta.txt has an associated sub_munger
-        # check sub-mungers (in sub-directories of munger)
-        sub_mungers = os.listdir(munger_path)
-        for f in sub_mungers:
-            if os.path.isdir(f):
-                new_err = check_munger_files(f)
-                if new_err:
-                    ui.add_new_error([err, new_err])
-    return err
-
-
-def check_munger_file_format(
-    munger_path: str, munger_file: str, templates: str, err: dict
-) -> dict:
-
-    if munger_file == "cdf_elements.txt":
-        pass  # nothing to check now that entries may vary
-    elif munger_file == "format.config":
-        d, err = ui.get_runtime_parameters(
-            required_keys=munger_pars_req,
-            param_file=os.path.join(munger_path, munger_file),
-            header="format",
-            err=err,
-            optional_keys=list(munger_pars_opt.keys()),
-        )
-    else:
-        err = ui.add_new_error(
-            err,
-            "munger",
-            munger_path,
-            f"Unrecognized file in munger: {munger_file}",
-        )
-    return err
-
-
-def check_munger_file_contents(munger_path, munger_file, err):
-    """check whether munger files are internally consistent"""
-    munger_name = Path(munger_path).name
-    if munger_file == "cdf_elements.txt":
-        # read cdf_elements and format from files
-        cdf_elements = pd.read_csv(
-            os.path.join(munger_path, "cdf_elements.txt"),
-            sep="\t",
-            encoding="iso-8859-1",
-        ).fillna("")
-
-        # every source in cdf_elements is either row, column, ini, xml or other
-        bad_source = [
-            x for x in cdf_elements.source if x not in ["row", "column", "ini", "xml"]
-        ]
-        if bad_source:
-            err = ui.add_new_error(
-                err,
-                "warn-munger",
-                munger_name,
-                f"Source(s) in cdf_elements.txt not recognized: {bad_source}",
-            )
-
-        # formulas have good syntax
-        bad_formula = [
-            x
-            for x in cdf_elements.raw_identifier_formula.unique()
-            if not m.good_syntax(x)
-        ]
-        if bad_formula:
-            f_str = ",".join(bad_formula)
-            err = ui.add_new_error(
-                err,
-                "warn-munger",
-                munger_name,
-                f"At least one formula in cdf_elements.txt has bad syntax: {f_str}",
-            )
-
-        # for each column-source record in cdf_element, contents of bracket are numbers in the header_rows
-        p_not_just_digits = re.compile(r"<.*\D.*>")
-        p_catch_digits = re.compile(r"<(\d+)>")
-        bad_column_formula = set()
-
-        # TODO check: can this error out now?
-        for i, r in cdf_elements[cdf_elements.source == "column"].iterrows():
-            if p_not_just_digits.search(r["raw_identifier_formula"]):
-                bad_column_formula.add(r["raw_identifier_formula"])
-        if bad_column_formula:
-            err = ui.add_new_error(
-                err,
-                "munger",
-                munger_name,
-                f"At least one column-source formula in cdf_elements.txt has bad syntax: {bad_column_formula}",
-            )
-
-    elif munger_file == "format.config":
-        format_d, err = ui.get_runtime_parameters(
-            required_keys=munger_pars_req,
-            param_file=os.path.join(munger_path, "format.config"),
-            header="format",
-            err=err,
-            optional_keys=list(munger_pars_opt.keys()),
-        )
-
-        # stop and return error if fatal
-        if ui.fatal_error(err):
-            return err
-
-        # print (but don't store) warning if encoding missing or is not recognized
-        # because it happens often with no real problem
-        if "encoding" not in format_d.keys():
-            print(
-                f"No encoding specified; iso-8859-1 will be used",
-            )
-        elif not format_d["encoding"] in ui.recognized_encodings:
-            print(
-                f"Encoding {format_d['encoding']} in format file is not recognized;"
-                f"iso-8859-1 will be used"
-            )
-
-        # check all parameters for flat files
-        if format_d["file_type"] in ["txt", "csv", "xls", "txt-semicolon-separated"]:
-            # Either field_name_row is a number, or field_names_if_no_field_name_row is a non-empty list
-            if (not format_d["field_name_row"]) or (
-                not format_d["field_name_row"].isnumeric()
-            ):
-                if (not format_d["field_names_if_no_field_name_row"]) or (
-                    len(format_d["field_names_if_no_field_name_row"]) == 0
-                ):
-                    err = ui.add_new_error(
-                        err,
-                        "munger",
-                        munger_name,
-                        (
-                            f"field_name_row is not an integer, "
-                            f"but no field names are given in field_names_if_no_field_name_row."
-                        ),
-                    )
-
-            # other entries in format.config are of correct type
-            try:
-                int(format_d["header_row_count"])
-            except (TypeError, ValueError):
-                err = ui.add_new_error(
-                    err,
-                    "munger",
-                    munger_name,
-                    f'header_row_count is not an integer:  {format_d["header_row_count"]}',
-                )
-
-        # check all parameters for concatenated blocks (e.g., Georgia ExpressVote output)
-        elif format_d["file_type"] in ["concatenated-blocks"]:
-            for key in [
-                "count_of_top_lines_to_skip",
-                "last_header_column_count",
-                "column_width",
-            ]:
-                try:
-                    int(format_d[key])
-                except (ValueError, TypeError):
-                    err = ui.add_new_error(
-                        err,
-                        "munger",
-                        munger_name,
-                        f"{key} is not an integer:  {format_d[key]}",
-                    )
-        # TODO get rid of duplicated code in these checks
-        # check all parameters for the multi-sheet excel format
-        elif format_d["file_type"] in ["xls-multi"]:
-            for key in [
-                "count_of_top_lines_to_skip",
-                "constant_line_count",
-                "constant_column_count",
-                "header_row_count",
-            ]:
-                try:
-                    int(format_d[key])
-                except (ValueError, TypeError):
-                    err = ui.add_new_error(
-                        err,
-                        "munger",
-                        munger_name,
-                        f"{key} is not an integer:  {format_d[key]}",
-                    )
-
-        # note: json has no numeric parameters to test!
-
-    else:
-        err = ui.add_new_error(
-            err,
-            "system",
-            "juris_and_munger.check_munger_file_contents",
-            f"Munger template file not recognized: {munger_file}",
-        )
-
-    return err
-
-
 def clean_and_dedupe(f_path: str):
     "Dedupe the file, removing any leading or trailing whitespace and compressing any internal whitespace"
     # TODO allow specification of unique constraints
-    df = pd.read_csv(f_path, sep="\t", encoding="iso-8859-1", quoting=csv.QUOTE_MINIMAL)
+    df = pd.read_csv(f_path, sep="\t", encoding=eda.default_encoding, quoting=csv.QUOTE_MINIMAL)
 
     for c in df.columns:
         if not is_numeric_dtype(df.dtypes[c]):
@@ -709,15 +285,15 @@ def clean_and_dedupe(f_path: str):
                 pass
     dupes_df, df = ui.find_dupes(df)
     if not dupes_df.empty:
-        df.to_csv(f_path, sep="\t", index=False)
+        df.to_csv(f_path, sep="\t", index=False, encoding=eda.default_encoding)
     return
 
 
 def drop_lines_with_any_nulls(f_path):
     # TODO tech debt: this can muck up encodings. needs to be fixed.
-    df = pd.read_csv(f_path, sep = "\t", encoding="iso-8859-1", quoting=csv.QUOTE_MINIMAL)
+    df = pd.read_csv(f_path, sep = "\t", encoding=eda.default_encoding, quoting=csv.QUOTE_MINIMAL)
     df = df[df.notnull().all(axis=1)]
-    df.to_csv(f_path, sep="\t", index=False)
+    df.to_csv(f_path, sep="\t", index=False, encoding=eda.default_encoding)
     return
 
 
@@ -731,8 +307,8 @@ def check_nulls(element, f_path, project_root):
         element,
         "not_null_fields.txt",
     )
-    not_nulls = pd.read_csv(nn_path, sep="\t", encoding="iso-8859-1")
-    df = pd.read_csv(f_path, sep="\t", encoding="iso-8859-1", quoting=csv.QUOTE_MINIMAL)
+    not_nulls = pd.read_csv(nn_path, sep="\t", encoding=eda.default_encoding)
+    df = pd.read_csv(f_path, sep="\t", encoding=eda.default_encoding, quoting=csv.QUOTE_MINIMAL)
 
     problem_columns = []
 
@@ -762,7 +338,7 @@ def check_dependencies(juris_dir, element) -> (list, dict):
             f_path,
             sep="\t",
             index_col=None,
-            encoding="iso-8859-1",
+            encoding=eda.default_encoding,
             quoting=csv.QUOTE_MINIMAL,
         )
     except FileNotFoundError:
@@ -783,7 +359,7 @@ def check_dependencies(juris_dir, element) -> (list, dict):
                 os.path.join(juris_dir, f"{element}.txt"),
                 sep="\t",
                 header=0,
-                encoding="iso-8859-1",
+                encoding=eda.default_encoding,
                 quoting=csv.QUOTE_MINIMAL,
             )
             .fillna("")
@@ -796,7 +372,7 @@ def check_dependencies(juris_dir, element) -> (list, dict):
             pd.read_csv(
                 os.path.join(juris_dir, f"{target}.txt"),
                 sep="\t",
-                encoding="iso-8859-1",
+                encoding=eda.default_encoding,
                 quoting=csv.QUOTE_MINIMAL,
             )
             .fillna("")
@@ -978,34 +554,6 @@ def get_ids_for_foreign_keys(
                     f"For some {element} records, {foreign_elt} was not found",
                 )
     return df
-
-
-def check_results_munger_compatibility(
-    mu: Munger, df: pd.DataFrame, file_name, error: dict
-) -> dict:
-    # check that count columns exist
-    missing = [i for i in mu.options["count_columns"] if i >= df.shape[1]]
-    if missing:
-        error = ui.add_new_error(
-            error,
-            "warn-munger",
-            mu.name,
-            f"Some count_columns missing from results file {file_name}:\n{missing}",
-        )
-    else:
-        # check that count cols are numeric
-        for i in mu.options["count_columns"]:
-            if not is_numeric_dtype(df.iloc[:, i]):
-                try:
-                    df.iloc[:, i] = df.iloc[:, i].astype(int)
-                except ValueError as ve:
-                    error = ui.add_new_error(
-                        error,
-                        "munger",
-                        mu.name,
-                        f"Column {i} ({df.columns[i]}) cannot be parsed as an integer.\n{ve}",
-                    )
-    return error
 
 
 def add_none_or_unknown(df: pd.DataFrame, contest_type: str = None) -> pd.DataFrame:

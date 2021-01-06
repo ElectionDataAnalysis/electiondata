@@ -50,14 +50,13 @@ def grab_ini_files(results_dir, path_to_repo):
 
     # if the results file not found, delete the .ini file & warn user
     for par_file in par_files:
-        d, err = ui.get_runtime_parameters(
+        d, err = ui.get_parameters(
             required_keys=["results_file"],
             header="election_data_analysis",
             param_file=os.path.join(results_dir, par_file),
         )
         # delete any .ini files whose results file is not found
         if not os.path.isfile(os.path.join(results_dir,d["results_file"])):
-            print(f"File referenced in .ini file, but not found: {d['results_file']}")
             os.remove(os.path.join(results_dir, par_file))
     return
 
@@ -77,12 +76,12 @@ def optional_remove(dl: eda.DataLoader, dir_path: str) -> (Optional[dict], bool)
             print(f"db not removed due to error: {err['system']}")
         # define parameters to connect to postgres db
 
-    # give user option to remove directory
-    remove_dir = input(f"Remove {dir_path} directory and all its contents (y/n)?\n")
-    if remove_dir == "y":
-        # remove testing data
-        os.system(f"rm -rf {dir_path}")
-
+    """    # give user option to remove directory
+        remove_dir = input(f"Remove {dir_path} directory and all its contents (y/n)?\n")
+        if remove_dir == "y":
+            # remove testing data
+            os.system(f"rm -rf {dir_path}")
+    """
     return err, db_removed
 
 
@@ -165,7 +164,7 @@ def run2(
                 move_files=False, election_jurisdiction_list=election_jurisdiction_list
             )
             if not success:
-                print("At least one file did not load correctly.")
+                print(f"At least one file did not load correctly.\n{err}")
         except Exception as exc:
             print(f"Exception occurred: {exc}")
             if dl:

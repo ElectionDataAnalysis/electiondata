@@ -173,7 +173,7 @@ Ricardo Perkins
 Jose Menendez
 Fidel 'TwoBears' Castillo
 Scott Pusich
-Diana ArÃ©valo
+Diana ArÃÂÃÂÃÂÃÂ©valo
 Rick Galindo
 Philip Cortez
 Carlos Antonio Raymond
@@ -197,7 +197,7 @@ Libby Wiedermann
 Catherine Torrres-Stahl
 Ron Rangel
 Laura Parker
-Arcelia TreviÃ±o
+Arcelia TreviÃÂÃÂÃÂÃÂ±o
 Jan Ischy-Prins
 Frank J. Castro
 Karen Pozza
@@ -238,7 +238,7 @@ Kyle Kacal
 John Raney
 Travis Bryan, III
 Jarvis Parsons
-Poncho NevÃ¡rez
+Poncho NevÃÂÃÂÃÂÃÂ¡rez
 Roy Ferguson
 Sandy Wilson
 Jaime Escuder
@@ -346,7 +346,7 @@ Tom Craddick
 Amanda Navarette
 Laurie K. English
 Ruben G. Reyes
-JosÃ© Rodriguez
+JosÃÂÃÂÃÂÃÂ© Rodriguez
 Jaime Esparza
 John Smithee
 David M. Green
@@ -441,8 +441,8 @@ Cindy Ermatinger
 Beto O'Rourke
 Jaime O. Perez
 Mary L. Gourdoux
-Mary E. GonzÃ¡lez
-CÃ©sar J. Blanco
+Mary E. GonzÃÂÃÂÃÂÃÂ¡lez
+CÃÂÃÂÃÂÃÂ©sar J. Blanco
 Evelina 'Lina' Ortega
 Jeffrey Lane
 Joe Moody
@@ -871,7 +871,6 @@ RONNY JACKSON
 DIANE KNOWLTON
 MATT MCARTHUR
 MARK NEESE
-ASUSENA RESÉNDIZ
 VANCE SNIDER II
 JOSH WINEGARNER
 MONIQUE WORTHY
@@ -893,13 +892,12 @@ JEFF OPPENHEIM
 KRISTEN ALAMO ROWIN
 DAVID SAUCEDO
 TRENT SUTTON
-RENÉE SWANN
 ELIANOR VESSALI
 ROBERT M. CADENA
 WENDELL CHAMPION
 TRULY HEISKELL
 T.C. MANNING
-NATHAN J.  MILLIRON
+NATHAN J. MILLIRON
 AVA REYNERO PATE
 JODEY C. ARRINGTON
 VANCE W. BOYD
@@ -931,7 +929,6 @@ CECIL B. 'BURT' JONES
 JEFF MCFARLIN
 RAUL REYES
 SHARON BRECKENRIDGE THOMAS
-ALÃA URESTE
 BEN VAN WINKLE
 SUNNY CHAPARALA
 DAVID FEGAN
@@ -1017,7 +1014,7 @@ VANESSA HICKS-CALLAWAY
 MARIAN KNOWLTON
 JAMES HERNANDEZ
 ERASMO CASTRO
-JOHN (DOC) ROBERT  GUERRA
+JOHN (DOC) ROBERT GUERRA
 CARRIE ISAAC
 AUSTIN TALLEY
 KENT 'BUD' WYMORE
@@ -1081,7 +1078,7 @@ JUSTIN RAY
 MIKE GUEVARA
 JOSH FLYNN
 LACEY HULL
-CLAVER T.  KAMAU-IMANI
+CLAVER T. KAMAU-IMANI
 JASON ROWE
 TONY SALAS
 MARTHA ELENA FIERRO
@@ -1287,7 +1284,7 @@ JOSEPH R. BIDEN
 MICHAEL R. BLOOMBERG
 CORY BOOKER
 PETE BUTTIGIEG
-JULIÃN CASTRO
+JuliÃ¡n Castro
 ROQUE 'ROCKY' DE LA FUENTE
 JOHN K. DELANEY
 TULSI GABBARD
@@ -1303,7 +1300,6 @@ CHRIS BELL
 MICHAEL COOPER
 AMANDA K. EDWARDS
 JACK DANIEL FOSTER JR
-ANNIE 'MAMÃ' GARCIA
 VICTOR HUGO HARRIS
 MARY 'MJ' HEGAR
 SEMA HERNANDEZ
@@ -1392,7 +1388,7 @@ DIEGO ZAVALA
 RAFAEL ALCOSER III
 RASHAD LEWIS
 ROBERTO R. 'BETO' ALONZO
-CHRYSTA CASTAÑEDA
+CHRYSTA CASTAÃÂÃÂEDA
 KELLY STONE
 MARK WATSON
 AMY CLARK MEACHUM
@@ -1428,14 +1424,12 @@ BORRIS L MILES
 MELISSA MORRIS
 MICHAEL ANTALAN
 FREDDY RAMIREZ
-XOCHIL PEÑA RODRIGUEZ
 ROBERT VICK
 CLAYTON TUCKER
-JOSÉ MENÉNDEZ
+JoseÌ MeneÌndez (I)
 RUBEN CORTEZ
 EDDIE LUCIO JR
 SARA STAPLETON BARRERA
-CÉSAR J BLANCO
 BILL BRANNON
 MARTIN SHUPP
 LAWYANDA PRINCE
@@ -1604,7 +1598,7 @@ ERIC V. MOYE
 BRIAN MCCONNELL
 NICOLE GARZA
 LAWRENCE MEYERS
-MARIA CANTÃ HEXSEL
+MARIA CANTÃÂÃÂÃÂÃÂ HEXSEL
 KENNON WOOTEN
 GEORGE LINDSEY
 F. DAVID ORTIZ
@@ -1663,7 +1657,7 @@ PATRICK BRAMBLETT
 LUCILA FLORES
 LYDA NESS GARCIA
 PATRICK M. GARCIA
-JACQUELINE 'JACKIE' VALDÉZ
+JACQUELINE 'JACKIE' VALDÃÂÃÂZ
 JANET BUENING HEPPARD
 JAMIE ZAND
 MARLENE GONZALEZ
@@ -1714,7 +1708,7 @@ KAREN DYKES
 JAMES MONTOYA - CURRENT HOMICIDE PROSECUTOR
 ROGER MONTOYA - FORMER FELONY PROSECUTOR
 YVONNE ROSALES
-JOSÉ GARZA
+JOSÃÂÃÂ GARZA
 ERIN MARTINSON
 RUMY SOLIS
 MARK A GONZALEZ
@@ -1724,17 +1718,11 @@ TODD OVERSTREET
 RANDALL REYNOLDS
 GOCHA RAMIREZ
 ALBERTO RODRIGUEZ
-NATHAN J. MILLIRON
-JOHN (DOC) ROBERT GUERRA
-CLAVER T. KAMAU-IMANI
 L. 'SARAH' DEMERCHANT
 JUAN 'CHUY' HINOJOSA
 ARMANDO 'MANDO' MARTINEZ
 CHARLES 'DOC' ANDERSON
 'GUILLERMO' WILLIAM HAYWARD
-Asusena Reséndiz
-Renée Swann
-Alía Ureste
 YVONNE DAVIS (I)
 WILL METCALF (I)
 WACEY ALPHA CODY
@@ -1861,12 +1849,10 @@ KAY GRANGER (I)
 KASEY WELLS/RACHEL WELLS
 K. NICOLE SPRABARY
 JUSTIN HOLLAND (I)
-JULIÁN VILLARREAL
 JULIE JOHNSON (I)
 JULIAN MARDOCK
 JUDITH ZAFFIRINI (I)
 JUAN &QUOT;CHUY&QUOT; HINOJOSA (I)
-JOSÉ MENÉNDEZ (I)
 JOSEPH R. BIDEN/KAMALA D. HARRIS
 JOSEPH LEBLANC JR
 JOSE R. SOSA
@@ -1887,7 +1873,7 @@ JOE BURNES
 JODEY C. ARRINGTON (I)
 JOAQUIN CASTRO (I)
 JO-ANNE VALDIVIA
-JO JORGENSEN/JEREMY 'SPIKE' COHEN
+JO JORGENSEN
 JJ CAMPBELL
 JIM MURPHY (I)
 JESSICA PALLETT
@@ -2018,3 +2004,217 @@ ALEX DOMINGUEZ (I)
 AL GREEN (I)
 ABRAM LOEB/JENNIFER JAIRALA
 ABEL HERRERO (I)
+CÃ©sar J Blanco
+JuliÃ¡n Villarreal
+Jo Jorgensen
+Jan Mcdowell
+Eddie Lucio Iii
+JoseÌ MeneÌndez
+ANNIE 'MAMÃ' GARCIA
+Gary Vandeaver
+Dewayne Burns
+RENÃE SWANN
+ASUSENA RESÃNDIZ
+ALÃA URESTE
+JOSÃ MENÃNDEZ
+Xochil PeÃ±a Rodriguez
+Thresa 'Terry' Meza
+Richard PeÃ±a Raymond
+Poncho NevÃ¡rez
+Mary Jennings 'MJ' Hegar
+Gilberto 'Gil' Velasquez, Jr.
+Armando 'Mando' MartÃ­nez
+Ted Cruz
+Neal M. Dikeman
+Greg Abbott
+Lupe Valdez
+Mark Jay Tippetts
+Dan Patrick
+Mike Collier
+Kerry Douglas McKennon
+Ken Paxton
+Justin Nelson
+Michael Ray Harris
+Glenn Hegar
+Joi Chevalier
+Ben Sanders
+George P. Bush
+Miguel Suazo
+Matt Pina
+Sid Miller
+Richard Carpenter
+Christi Craddick
+Roman McAllen
+Mike Wright
+Robert Nichols
+Shirley Layton
+Bruce Quarles
+Wesley D. Ratcliff
+Kel Seliger
+Armando Gamboa
+Jeff Callaway
+Daniel Tinus
+James Duerr
+Robin Hayter
+Kevin Lopez
+James Frank
+Ezekiel Barron
+Arthur Thomas IV
+Mike Ryan
+Cecil Ray Webster, Sr.
+Miguel Levario
+Joseph Kopser
+Lee Santos
+Peter Churchman
+Kirk Watson
+Micah M. Verlander
+Michelle Ryan
+Dee Ann Torres Miller
+Desarae Lindsey
+Jason Hope
+Kathy Richerson
+Ruben Corvalan
+David Smalling
+Donna Campbell
+Steven Kling
+Michael Berlanga
+Celina D. Montoya
+Mallory Olfers
+Diego Bernanl
+Johnny S. Arredondo
+Eric S. Pina
+Ken Strange
+Drew Landry
+Catherine Krantz
+Don E. Conley III
+John B. McElligott
+Kellen Sweny
+Joan Huffman
+Rita Lucido
+Lauren LaCount
+Charles Schwertner
+Meg Walsh
+Amy Lyons
+Marianne Arnold
+Josh Wilkinson
+Stephen M. Wyman
+Bill Liebbe
+Dayna Steele
+Amanda Jamrok
+Lawrence Johnson
+Lorie Burch
+Jeff Simmons
+Melina Baker
+Angela Paxton
+Mark Phariss
+Laura Gunn
+Sarah Depew
+Julie Luton
+Ray Ash
+Spencer Bounds
+Mike Purcell
+Kenny E Marchant
+Linsey Fagan
+Willie Billups
+Bob Hall
+Kendall Scudder
+Kelly Hancock
+Gwenn Burud
+Don Huffines
+Nathan Johnson
+Jerry Fortenberry
+Deanna Maria Metzger
+Carl Sherman
+Casey Littlejohn
+Brandy K Chambers
+Jonathan Boos
+Lisa Luby Ryan
+Valerie N. Hefner
+David Schaab
+Laura Haines
+Andrew Morris
+Nick Dietrich
+Ramona Thompson
+Jana Lynne Sanchez
+Jason Allen Harber
+Kimberly Emery
+Rick Seeberger
+Ben Mendoza
+Cesar J. Blanco
+Joe C. Pickett
+Benjamin Hernandez
+Kesha Rogers
+L. SARAH DEMERCHANT
+MEGHAN SCOGGINS
+Jennifer Cantu
+John Y. Phelps
+Steven David
+John D. Rodgers
+Sherry Williams
+Todd Litton
+Patrick Gunnels
+Lizzie Pannill Fletcher
+Phillip Aronoff
+Cullen Burns
+Johnathan Garza
+Paul Bettencourt
+David Romero
+Tom Glass
+Randy Orr
+John Whitmire
+Ryan Woods
+Alexander Jonathan Karjeker
+Joseph Majsterski
+Fred Infortunio
+Syed S. Ali
+Daniel Arevalo
+Marty Schexnayder
+Allison Lami Sawyer
+Adam Milasincic
+Demetrius Walker
+Jarvis D Johnson
+Shohn Trojacek
+Ruben Villarreal
+Clayton Hunt
+JJ Campbell
+Thomas Wang
+Ryan T. McConnico
+Aaron Close
+Eston Williams
+D. Allen Miller
+Hilda Garza DeShazo
+Sam Hatton
+Fred Lemond
+Samantha Carrillo Fields
+Lisa Seger
+Lorena Perez McGill
+Mike Midler
+Chris Hale
+Vanessa Adia
+Jacob Leddy
+Neal Katz
+Konni Burton
+Beverly Powell
+Steve Riddell
+Eric P. Espinoza
+Finnigan Jones
+Stephen A. West
+Joshua G. Burns
+Ryan E. Ray
+Stephen Parmer
+Beth Llewellyn McLaughlin
+Mica J. Ringo
+H. Todd J. Moore
+Michael Stackhouse
+James Allen
+Paul D. Workman
+Kyle Austin
+Luis De La Garza
+Cynthia Flores
+John H Bucy III
+Zack Parks
+Poncho Nevárez
+Sergio Muñoz
+Armando 'Mando' Martínez
+Richard Peña Raymond
+Sergio Muñoz, Jr.

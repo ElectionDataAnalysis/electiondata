@@ -13,58 +13,147 @@ In the directory from which you will run the system -- which can be outside your
   
 See the template file (`src/parameter_file_templates/run_time.ini.template`). 
    
-## Choose a Munger
-Ensure that the munger files are appropriate for your results file(s). 
- (1) If the munger doesn't already exist, pick a name for your munger and create a directory with that name in the `mungers` directory to hold `format.config` and `cdf_elements.txt`.
- (2) Copy the templates from `templates/munger_templates` to your munger directory. Every munger must have a value for `file_type`; depending your `file_type` other parameters may be required. Types currently supported are:
-  * `xml`
-  * `txt`
-  * `csv`
-  * `xls` (which handles both `.xls` and `.xlsx` files)
-  * `xls-multi` (which handles both `.xls` and `.xlsx` files with multiple sheets, and some variation in the structure of each sheet)
-  * `json`
-  * `concatenated-blocks` (for the format produced by Clarity results reporting system, e.g. for South Carolina.)
-
-Different file types need different parameters to be specified.
- * Required for `txt`, `csv` or `xls` (flat file) type:
-   * header_row_count
-   * field_name_row
-   * field_names_if_no_field_name_row
-   * count_columns
-   
-Applying a munger with file_type `xls` to a multi-sheet excel file will read only the first sheet. If other sheets are necessary, use `xls-multi` file type.
- NB: the header_row_count should count only rows with data the system needs to read. If there are blank lines, or lines with inessential information -- such as the election date, which is not munged -- use the optional parameter count_of_top_lines_to_skip.
+## Determining a Munger
+Ensure that the munger files are appropriate for your results file(s). If the munger doesn't already exist:
+ * pick a name for your munger 
+ * create a file with that name and extension `.munger` in the `mungers` directory (e.g., `me_excel.munger`) with sections and parameters described below. You may find it helpful to work with the template from `src/parameter_file_templates/template.munger`. 
  
- * Required for `xml` type:
-   * `count_columns_by_name`
- * Available for `xml` type:
-   * `nested_tags` if there are elements without relevant info in their attributes, but with relevant relevant elements nested below, it is required to list the tags. See e.g. `ia_xml` munger  
+ The file with munger parameters, which must have the extension `.munger`, has one or more sections, each with a header:
+  * (required) `[format]` for the main parameters
+  * (may be required) one section each string locations `in_field_values` and `in_count_headers` if these are listed in the `munge_strings` parameter (defined below). 
+  * (may be required) one section for each element in the `lookups` list. E.g., if `lookups=Candidate,Party` then there must be  `[Candidate lookup]` and `[Party lookup]` sections. 
+  * (optional) `[ignore]` Unrecognized Contests, Candidates and Parties are collected as "none or unknown". Some states (e.g., Wisconsin 2018 General) report total votes over a contest next to individual candidates' votes. The system may read, e.g., "Total Votes Cast" as an unrecognized party name. In this case include the lines:
+  ```
+[ignore]
+Party=Total Votes Cast
+```
+and similarly, if necessary, for any Contest or Selection. If there is more than one "Party" to be ignored, use a comma-separated list: `Candidate=Total Votes Cast,Registered Voters`
  
- * Required for `concatenated-blocks` type:
-   * count_of_top_lines_to_skip
-   * columns_to_skip
-   * last_header_column_count
-   * column_width
-   
- * Required for `xls-multi`:
-   * sheets_to_skip
-   * count_of_top_lines_to_skip
-   * constant_line_count
-   * constant_column_count
-   * header_row_count
-   * columns_to_skip
- * Required for `json`:
-   * count_column_field_names
- * Available if appropriate for any file type:
-   * thousands_separator
-   * encoding (If not specified or recognized, `iso-8859-1` will be used. Recognized encodings are limited [python's list of recognized encodings and aliases](https://docs.python.org/3/library/codecs.html#standard-encodings).)
-   * count_of_top_lines_to_skip
+ There are three main required parameters: `file_type`, `count_locations` and `munge_strings`. Depending on the values of these, there are other required and optional fields. 
+ `file_type`: controls which pandas function reads the file contents. Related optional and required parameters must be given under the `[file_type]` header.
+  * 'excel'
+    * (optional) a list `sheets_to_read_names` (and/or `sheets_to_read_numbers`) of spreadsheets to read, 
+    * (optional) a list `sheets_to_skip_names` of names of spreadsheets to skip
+    * Default is to read all sheets
+  * 'json-nested'
+  * 'xml'
+    * (required) must have `munge_strings=in_field_values` or `munge_strings=in_field_values,constant_over_file`
+    * (optional) if there are tags in the vote-count hierarchy that do not themselves contain data we want, list them in the `nesting_tags` parameter, e.g., `nesting_tags=contests,choices,jurisdictions,voteTypes`
+  * 'flat_text' Any tab-, comma-, or other-separated table in a plain tabular text file.
+    * (required) a field delimiter `flat_text_delimiter` to be specified (usually `flat_text_delimiter=,` for csv or `flat_text_delimiter=tab` for .txt)
+  * [[ will be obsolete: `concatenated-blocks` Clarity format derived from xml]]
+  
+  `count_locations`: controls how the system looks for counts. Related optional and required parameters must be given under the `[count_locations]` header.
+  * 'by_field_names' (NB: as of 12/2020, for this case system can handle only files with only one field-name row for the count fields. If there are multiple header rows for the count columns, use the 'by_column_number' option.)
+    * (required) list `count_fields_by_name` of names of fields containing counts. 
+    * (required for 'excel' and 'flat_text' file_types) specify location of field names for count columns. with integer `count_field_name_row` (NB: top row not skipped is 0, next row is 1, etc.)
+  * 'by_column_number'
+    * (required) list `count_column_numbers` of column numbers which may contain counts. There is no problem if this list contains spurious columns.
+    
+  `munge_strings`: controls how the system looks for the character strings used to munge the non-count information (Candidate, Party, etc.). There may be multiple, so the value is a list. Related optional and required parameters must be given under the `[munge_strings]` header.
+  * 'in_field_values'
+    * (required) either:
+      * if all_rows=data (i.e., no field names) list `string_field_column_numbers` of integers designating columns (leftmost column is 0, next is 1, etc.)
+      * if some of the field values are foreign keys, must give lookup information. For each foreign key, need a separate section with corresponding header (field name plus " lookup", e.g. `[county_id lookup]`. This section needs:
+        * `source_file` the path to the source file, relative to the results directory given in `run_time.ini`
+        * all the usual basic format parameters except `count_locations` -- but not the usual formulas
+        * `lookup_id` is the single field name holding the key to the lookup table. (If there are no headers in the lookup source file, use, e.g., `column_0`)
+        * for each element whose formula looks something up from this table, a formula for the foreign key replacement.
+       
+    * (required for 'excel' and 'flat_text' file_types where not all rows are data) specify location of field names for string columns. Need integer `string_field_name_row` (NB: top row not skipped is 0, next row is 1, etc.)
+  * 'in_count_headers' this is used, e.g., when each candidate has a separate column in a tabular file. In this case there may be a single header row with relevant info, or there may be several rows (e.g., Contest in one row, Candidate in another row)
+    * (required) list `count_header_row_numbers` of integers for rows containing necessary character strings. (NB: top row not skipped is 0, next row is 1, etc.)
+  * 'constant_over_file'
+    * (required) list of items constant over file `constant_over_file=CountItemType,CandidateContest`
+    * (required) the `*.ini` file for the results file must specify the values
+  * 'constant_over_sheet'
+    * The system can extract strings from sheet names in Excel (designated as <sheet_name>) and/or from entire rows of a spreadsheet (designated as <row_0>, e.g.)
+  
+   Available if appropriate for any file type, under the `[format]` header:
+   * (optional) `thousands_separator`. In the US the separator is almost always ',' if it is used. Watch out for Excel files which may show a comma when you look at them in Excel -- there may not be a comma in the underlying data.
+   * (optional) `encoding` (If not specified or recognized, a default encoding will be used. Recognized encodings are limited [python's list of recognized encodings and aliases](https://docs.python.org/3/library/codecs.html#standard-encodings).)
+
+   Available for flat_text and excel file types:
+   * (optional) `rows_to_skip` An integer giving the number of rows to skip at the top to get to the table of counts. This parameter will affect integers designating header rows -- '<header_0>' is the first row not skipped. However, this parameter will *not* affect integers designating rows (e.g., for finding information constant over sheets), which are designated, e.g., '<row_0>'. Note that if, e.g., skip_rows = 2, then row_0 will denote the third row of the actual Excel sheet -- the highest unskipped row. The system recognizes the leftmost non-blank cell as the content to be read.
+   * (optional) `all_rows` If the file has no column headers but only data rows with counts, set this parameter to 'data'
+ 
+ 
+Put each formula for parsing information from the results file into the corresponding munge formula section (`[in_field_values]`, `[in_count_headers]` or `[constant_over_sheet]`. Constant items can be give either:
+ * as comma separated list in constant_over_sheet parameter in .munger file, with values in the .ini file
+ * as a constant formula in any of the munge formula sections, in which case a corresponding entry must be made in the jurisdictions `dictionary.txt`.
+ 
+Sometimes the election agency provides counts by ids for, say, candidates, and also provides definitions for those ids. For example, the data may be in the NIST common data format, or it may have been exported as separate tables from a relational database. In this case the file containing the counts may have foreign keys. The lookup formulas are given in lookup sections named by each foreign key column (or set of columns). Each lookup section must have:
+ * a `source_file` parameter with a path to the file with the information to be looked up
+ * a `lookup_id` parameter indicating the location of the primary key in that file. 
+ * for each item that uses this lookup, a formula for what should replace the foreign key in the main formula for the item. E.g., to define what should replace the foreign key in the `Candidate=` formula previously defined, the lookup section should have a `Candidate_replacement=` formula.
+For example, here is a munger for Michigan 2018 General election results using lookups.
+```
+[format]
+file_type=flat_text
+count_locations=by_column_numbers
+munge_strings=in_field_values
+
+encoding=ASCII
+flat_text_delimiter=tab
+count_column_numbers=11
+all_rows=data
+constant_over_file=CountItemType
+
+[in_field_values]
+ReportingUnit=<column_6>;<column_6,column_7>;Ward <column_8>;Precinct <column_9> Label <column_10>
+Party=<column_5>
+CandidateContest=<column_2,column_3>
+Candidate=<column_5>
+
+[column_2,column_3 lookup]
+source_file=Michigan/2018GEN/2018offc.txt
+file_type=flat_text
+flat_text_delimiter=tab
+munge_strings=in_field_values
+encoding=ASCII
+all_rows=data
+lookup_id=column_2,column_3
+CandidateContest_replacement=<column_5>
+
+[column_5 lookup]
+source_file=Michigan/2018GEN/2018name.txt
+file_type=flat_text
+flat_text_delimiter=tab
+munge_strings=in_field_values
+encoding=ASCII
+all_rows=data
+lookup_id=column_5
+Candidate_replacement=<column_7> <column_8> <column_6>
+Party_replacement=<column_9>
+
+[column_6 lookup]
+source_file=Michigan/2018GEN/county.txt
+file_type=flat_text
+flat_text_delimiter=tab
+munge_strings=in_field_values
+encoding=ASCII
+all_rows=data
+lookup_id=column_0
+ReportingUnit_replacement=<column_1>
+
+[column_6,column_7 lookup]
+source_file=Michigan/2018GEN/2018city.txt
+file_type= flat_text
+flat_text_delimiter=tab
+munge_strings=in_field_values
+encoding=ASCII
+all_rows=data
+lookup_id=column_2,column_3
+ReportingUnit_replacement=<column_4>
+
+```
 
 
- (3) Put formulas for parsing information from the results file into `cdf_elements.txt`. You may find it helpful to follow the example of the mungers in the repository.
+ 
+ You may find it helpful to follow the example of the mungers in the repository.
 
 ### Formulas for parsing information
-For many data formats, it is enough to create concatenation formulas, referencing field names from your file by putting them in angle brackets. 
+For many results files, it is enough to create concatenation formulas, referencing field names from your file by putting them in angle brackets. 
 
 For simple `txt`, `csv` and `xls` file types, here is an example.
 ```
@@ -74,7 +163,7 @@ Party	<Party Name>	row
 CandidateContest	<Office Name> <District Name>	row
 Candidate	<Candidate Name>	row
 BallotMeasureContest	<Office Name> <District Name>	row
-BallotMeasureSelection	<0>	column
+BallotMeasureSelection	<header_0>	column
 CountItemType	total	row
 ```
 NB: for constants (like the CountItemType 'total' in this example), use `row` for the source. Row-source fields should be the field names from the header row or, if there is no header row, from `format.config`. Column-source fields should be identified by the number of the row in which the information is found. Our convention is that the top row is 0. Use source `ini` for values that are constant over the entire results file and specified in `*.ini`.
@@ -97,7 +186,7 @@ ALAMANCE	11/06/2018	064	1228	S	NC COURT OF APPEALS JUDGE SEAT 3	Michael Monaco, 
 ALAMANCE	11/06/2018	03N	1228	S	NC COURT OF APPEALS JUDGE SEAT 3	Michael Monaco, Sr.	LIB	1	59	38	1	0	98	Y
 ALAMANCE	11/06/2018	03S	1228	S	NC COURT OF APPEALS JUDGE SEAT 3	Michael Monaco, Sr.	LIB	1	106	108	0	3	217	Y
 ```
-Here the CountItemType value ('Election Day','One Stop' a.k.a. early voting, 'Absentee by Mail','Provisional' must be read from the column headers, i.e., the information in row 0 of the file. For the first data row, the formula <0> would yield CountItemType 'Election Day' for the VoteCount of 59, 'One Stop' for the vote count of 65, etc.
+Here the CountItemType value ('Election Day','One Stop' a.k.a. early voting, 'Absentee by Mail','Provisional' must be read from the column headers, i.e., the information in row 0 of the file. For the first data row, the formula <header_0> would yield CountItemType 'Election Day' for the VoteCount of 59, 'One Stop' for the vote count of 65, etc.
 
 ### ini-source example
 Whenever an element is constant for all data in a results file, you can specify it in the parameter (`*.ini`) file instead of the `cdf_elements.txt` file. In this case, you can either omit the corresponding line from `cdf_elements.txt` or keep the line and put 'ini' in the `source` column.
@@ -450,6 +539,8 @@ Candidate	row should be dropped	Times Counted
 Candidate	Castle, Darrell L	Castle, Darrell L
 
 ```
+
+If your sheets or files have a variable number of count columns (e.g., if columns are labeled by candidates), err on the side of including extra columns in count_column_numbers. Columns without data will be ignored. Be careful, however, not to include in your count columns any columns containing strings needed for munging.
 
 ### NIST Exports
 This package also provides functionality to export the data according to the [NIST](https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.1500-100r2.pdf) common data format specifications. This is as simple as identifying an election and jurisdiciton of interest:

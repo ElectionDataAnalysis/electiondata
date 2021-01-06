@@ -1,4 +1,4 @@
-from election_data_analysis import database as db
+from election_data_analysis import database as db, juris_and_munger as jm, user_interface as ui, munge as m
 from election_data_analysis import user_interface as ui
 from election_data_analysis import munge as m
 from sqlalchemy.orm import sessionmaker
@@ -15,6 +15,10 @@ from election_data_analysis import juris_and_munger as jm
 from election_data_analysis import preparation as prep
 
 # constants
+# from election_data_analysis.munge import get_and_check_munger_params, to_standard_count_frame, munge_source_to_raw, \
+    # munge_raw_to_ids, fill_vote_count
+default_encoding = "utf_8"
+
 sdl_pars_req = [
     "munger_name",
     "results_file",
@@ -31,8 +35,10 @@ sdl_pars_opt = [
     "jurisdiction_path",
     "jurisdiction_directory",
     "aux_data_dir",
-    "Contest",
-    "contest_type",
+    "CandidateContest",
+    "BallotMeasureContest",
+    "BallotMeasureSelection",
+    "Candidate",
     "Party",
     "CountItemType",
     "ReportingUnit",
@@ -69,7 +75,7 @@ class DataLoader:
     def __new__(cls):
         """Checks if parameter file exists and is correct. If not, does
         not create DataLoader object."""
-        d, err = ui.get_runtime_parameters(
+        d, err = ui.get_parameters(
             required_keys=multi_data_loader_pars,
             optional_keys=optional_mdl_pars,
             param_file="run_time.ini",
@@ -84,7 +90,7 @@ class DataLoader:
 
     def __init__(self):
         # grab parameters
-        self.d, self.parameter_err = ui.get_runtime_parameters(
+        self.d, self.parameter_err = ui.get_parameters(
             required_keys=multi_data_loader_pars,
             optional_keys=optional_mdl_pars,
             param_file="run_time.ini",
@@ -149,7 +155,7 @@ class DataLoader:
         mungers_path = self.d["mungers_dir"]
 
         # define directory for archiving successfully loaded files (and storing warnings)
-        db_param, new_err = ui.get_runtime_parameters(
+        db_param, new_err = ui.get_parameters(
             required_keys=["dbname"], param_file="run_time.ini", header="postgresql"
         )
         if new_err:
@@ -163,8 +169,8 @@ class DataLoader:
         loc_dict = {
             "munger": self.d["results_dir"],
             "jurisdiction": self.d["results_dir"],
-            "warn-munger": success_dir,
-            "warn-jurisdiction": success_dir,
+            "warn-munger": self.d["results_dir"],
+            "warn-jurisdiction": self.d["results_dir"],
         }
 
         # list .ini files and pull their jurisdiction_paths
@@ -189,7 +195,7 @@ class DataLoader:
         for f in par_files:
             # grab parameters
             par_file = os.path.join(self.d["results_dir"], f)
-            params[f], new_err = ui.get_runtime_parameters(
+            params[f], new_err = ui.get_parameters(
                 required_keys=sdl_pars_req,
                 optional_keys=sdl_pars_opt,
                 param_file=par_file,
@@ -216,7 +222,8 @@ class DataLoader:
                 juris_directory[f] = params[f]["jurisdiction_directory"]
 
         # group .ini files by jurisdiction_directory name
-        jurisdiction_dirs = {juris_directory[f] for f in good_par_files}
+        jurisdiction_dirs = list({juris_directory[f] for f in good_par_files})
+        jurisdiction_dirs.sort()
 
         # for each jurisdiction, create Jurisdiction or throw error
         good_jurisdictions = list()
@@ -236,11 +243,19 @@ class DataLoader:
                 # if asked to load the jurisdiction, load it.
                 if load_jurisdictions:
                     print(f"Loading jurisdiction from {jp} to {self.session.bind}")
-                    new_err = juris[jp].load_juris_to_db(
-                        self.session,
-                    )
-                    if new_err:
-                        err = ui.consolidate_errors([err, new_err])
+                    try:
+                        new_err = juris[jp].load_juris_to_db(
+                            self.session,
+                        )
+                        if new_err:
+                            err = ui.consolidate_errors([err, new_err])
+                    except Exception as exc:
+                        err = ui.add_new_error(
+                            err,
+                            "jurisdiction",
+                            jp,
+                            f"Exception during loading: {exc}"
+                        )
                     if not ui.fatal_error(new_err):
                         good_jurisdictions.append(jp)
                 # if not asked to load jurisdiction, assume it's loaded
@@ -267,6 +282,10 @@ class DataLoader:
                 )
                 if new_err:
                     err = ui.consolidate_errors([err, new_err])
+                elif sdl is None:
+                    new_err = ui.add_new_error(
+                        new_err, "ini", f, f"Unexpected failure to load data (no SingleDataLoader object created)",
+                    )
 
                 # if fatal error, print warning
                 if ui.fatal_error(new_err):
@@ -317,8 +336,8 @@ class DataLoader:
         loc_dict = {
             "munger": self.d["results_dir"],
             "jurisdiction": self.d["results_dir"],
-            "warn-munger": success_dir,
-            "warn-jurisdiction": success_dir,
+            "warn-munger": self.d["results_dir"],
+            "warn-jurisdiction": self.d["results_dir"],
         }
         ui.report(err, loc_dict)
         return err, success
@@ -359,7 +378,7 @@ class SingleDataLoader:
 
         # grab parameters (known to exist from __new__, so can ignore error variable)
         par_file = os.path.join(results_dir, par_file_name)
-        self.d, dummy_err = ui.get_runtime_parameters(
+        self.d, dummy_err = ui.get_parameters(
             required_keys=sdl_pars_req,
             optional_keys=sdl_pars_opt,
             param_file=par_file,
@@ -392,42 +411,9 @@ class SingleDataLoader:
         self.munger = dict()
         self.munger_err = dict()
         # TODO document
+        self.mungers_dir = mungers_path
         self.munger_list = [x.strip() for x in self.d["munger_name"].split(",")]
-
-        # initialize each munger (or collect error)
-        m_err = dict()
-        for mu in self.munger_list:
-            self.munger[mu], m_err[mu] = jm.check_and_init_munger(
-                os.path.join(mungers_path, mu)
-            )
-            print(f"Munger initialized: {mu}")
-
-            # check whether all items to be specified in param file (per munger cdf_elements.txt)
-            #  are actually in the param file!
-            for i, r in self.munger[mu].cdf_elements[self.munger[mu].cdf_elements["source"] == "ini"].iterrows():
-                if i[-7:] == "Contest":
-                    if self.d["Contest"] is None:
-                        m_err[mu] = ui.add_new_error(
-                            m_err[mu],
-                            "ini",
-                            par_file,
-                            f"Munger {mu} requires {i} to be specified in ini file",
-                        )
-                    if self.d["contest_type"] is None:
-                        m_err[mu] = ui.add_new_error(
-                            m_err[mu],
-                            "ini",
-                            par_file,
-                            f"Munger {mu} requires contest_type={i[:-7]} to be specified in ini file",
-                        )
-                elif self.d[i] is None:
-                    m_err[mu] = ui.add_new_error(
-                        m_err[mu],
-                        "ini",
-                        par_file,
-                        f"Munger {mu} requires {i} to be specified in ini file"
-                    )
-        self.munger_err = ui.consolidate_errors([m_err[mu] for mu in self.munger_list])
+        # TODO check mungers for consistency?
 
     def track_results(self) -> (dict, Optional[str]):
         """insert a record for the _datafile, recording any error string <e>.
@@ -492,171 +478,126 @@ class SingleDataLoader:
         print(f'\n\nProcessing {self.d["results_file"]}')
 
         # Enter datafile info to db and collect _datafile_Id and Election_Id
-        results_info, e = self.track_results()
-        if e:
+        results_info, err_str = self.track_results()
+        if err_str:
             err = ui.add_new_error(
                 err,
                 "system",
                 "SingleDataLoader.load_results",
-                f"Error inserting _datafile record:\n{e}" f" ",
+                f"Error inserting _datafile record:\n{err_str}" f" ",
             )
             return err
 
         else:
-            if self.d["aux_data_dir"] is None:
-                aux_data_path = None
-            else:
-                aux_data_path = os.path.join(self.results_dir, self.d["aux_data_dir"])
-
-            # if Contest was given in .ini file
-            if self.d["Contest"] is not None:
-                # check that contest_type is given and recognized
-                if ("contest_type" not in self.d.keys()) or self.d[
-                    "contest_type"
-                ] not in ["Candidate", "BallotMeasure"]:
-                    err = ui.add_new_error(
-                        err,
-                        "ini",
-                        self.par_file_name,
-                        f"Contest is given, but contest_type is not, or is neither 'Candidate' nor 'BallotMeasure'",
-                    )
-                    return err
-                else:
-                    results_info["contest_type"] = self.d["contest_type"]
-                # collect Contest_Id (or fail gracefully)
-                contest_id = db.name_to_id(self.session, "Contest", self.d["Contest"])
-                if contest_id is None:
-                    err = ui.add_new_error(
-                        err,
-                        "ini",
-                        self.par_file_name,
-                        f"Contest defined in .ini file ({self.d['Contest']}) not found in database",
-                    )
-                    return err
-                else:
-                    results_info["Contest_Id"] = contest_id
-
-            for k in ["Party", "ReportingUnit", "CountItemType", "Contest"]:
-                # if element was given in .ini file
-                if self.d[k] is not None:
-                    # collect <k>_Id or fail gracefully
-                    k_id = db.name_to_id(self.session, k, self.d[k])
-                    # CountItemType is different because it's an enumeration
-                    if k == "CountItemType":
-                        if k_id is None:
-                            # put CountItemType value into OtherCountItemType field
-                            # and set k_id to id for 'other'
-                            k_id = db.name_to_id(self.session, k, "other")
-                            results_info["OtherCountItemType"] = self.d[k]
-                        else:
-                            # set OtherCountItemType to "" since type was recognized
-                            results_info["OtherCountItemType"] = ""
-                    else:
-                        if k_id is None:
-                            err = ui.add_new_error(
-                                err,
-                                "ini",
-                                self.par_file_name,
-                                f"{k} defined in .ini file ({self.d[k]}) not found in database",
-                            )
-                            return err
-
-                    results_info[f"{k}_Id"] = k_id
+            constants = self.collect_constants_from_ini()
 
             # load results to db
             for mu in self.munger_list:
+                print(f"\twith munger {mu}")
                 f_path = os.path.join(self.results_dir, self.d["results_file"])
-                new_err = ui.new_datafile(
+                mu_path = os.path.join(self.mungers_dir, f"{mu}.munger")
+                new_err = load_results_file(
                     self.session,
-                    self.munger[mu],
+                    mu_path,
                     f_path,
                     self.juris,
-                    results_info=results_info,
-                    aux_data_path=aux_data_path,
+                    results_info,
+                    constants,
+                    self.results_dir,
                 )
                 if new_err:
                     err = ui.consolidate_errors([err, new_err])
         return err
 
+    def collect_constants_from_ini(self) -> dict:
+        """collect constant elements from .ini file"""
+        constants = dict()
+        for k in ["Party",
+                  "ReportingUnit",
+                  "CountItemType",
+                  "CandidateContest",
+                  "BallotMeasureContest",
+                  "BallotMeasureSelection",
+                  "Candidate",
+                  ]:
+            # if element was given in .ini file
+            if self.d[k] is not None:
+                constants[k] = self.d[k]
+        return constants
 
-def check_aux_data_setup(
-    params, aux_data_dir_parent, mungers_path, par_file_name
-) -> dict:
+    def list_values(self, element: str) -> (list, Optional[dict]):
+        """lists all values for the element found in the file"""
+        err = None
+        values = list()
+        constants = self.collect_constants_from_ini()
+        if element in constants.keys():
+            return [constants[element], None]
+        else:
+            try:
+                for mu in self.munger_list:
+                    print(f"\twith munger {mu}")
+                    f_path = os.path.join(self.results_dir, self.d["results_file"])
+                    munger_path = os.path.join(self.mungers_dir, f"{mu}.munger")
+                    p, err = m.get_and_check_munger_params(munger_path)
+                    if ui.fatal_error(err):
+                        return values, err
 
-    err = None
-    # if aux_data_dir is given
-    if "aux_data_dir" in params.keys() and params["aux_data_dir"] is not None:
-        # check that it is a bona fide subdirectory of the results directory
-        if not os.path.isdir(os.path.join(aux_data_dir_parent, params["aux_data_dir"])):
-            # TODO test this error
-            err = ui.add_new_error(
-                err,
-                "ini",
-                par_file_name,
-                f"Specified aux_data_dir ({params['aux_data_dir']}) is not a subdirectory of {aux_data_dir_parent}",
-            )
-            return err
-    # and if aux_data_dir is not given
-    else:
-        # check that no munger expects an aux_data_dir
-        for m_name in params["munger_name"].split(","):
-            if os.path.isfile(os.path.join(mungers_path, m_name, "aux_meta.txt")):
+                    df, original_string_columns, err = m.to_standard_count_frame(
+                        f_path, munger_path, p, dict(), suffix="_SOURCE",
+                    )
+                    if ui.fatal_error(err):
+                        return values, err
+                    df, new_err = m.munge_source_to_raw(
+                        df,
+                        munger_path,
+                        p,
+                        original_string_columns,
+                        "_SOURCE",
+                        self.results_dir,
+                    )
+                    err = ui.consolidate_errors([err, new_err])
+                    if ui.fatal_error(new_err):
+                        return values, err
+                    values = list(set(values.extend(df[f"{element}_raw"].unique())))
+
+            except Exception as exc:
                 err = ui.add_new_error(
                     err,
-                    "ini",
-                    par_file_name,
-                    f"Munger {m_name} has an aux_meta.txt file, "
-                    f"indicating that an auxiliary data directory is expected, but "
-                    f"no aux_data_dir is given",
+                    "system",
+                    f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
+                    f"Unexpected exception while converting data to standard form or munging to raw: {exc}"
                 )
-    return err
+                return values, err
 
+
+        # TODO complete
+        return values, err
 
 def check_par_file_elements(
-    d: dict, mungers_path: str, par_file_name: str
+    ini_d: dict,
+    mungers_path: str,
+    ini_file_name: str,
 ) -> Optional[dict]:
-    """<d> is the dictionary of parameters pulled from the parameter file"""
+    """<d> is the dictionary of parameters pulled from the ini file"""
     err = None
-    # create list of elements pulled from .ini file
-    elt_from_par_file = [
-        x
-        for x in sdl_pars_opt
-        if (
-            (x in ["Party", "ReportingUnit", "Contest", "CountItemType"])
-            and (d[x] is not None)
-        )
-    ]
-    if "Contest" in elt_from_par_file:
-        # replace "Contest" by its two possibilities
-        elt_from_par_file.remove("Contest")
-        elt_from_par_file.extend(["BallotMeasureContest", "CandidateContest"])
 
-    # for each munger, check that no element defined elsewhere is sourced as 'row' or 'column'
-    for mu in d["munger_name"].split(","):
-        elt_file = os.path.join(mungers_path, mu, "cdf_elements.txt")
-        try:
-            elt = pd.read_csv(elt_file, sep="\t")
-        except Exception as e:
-            err = ui.add_new_error(
-                err,
-                "ini",
-                par_file_name,
-                f"Error reading cdf_elements.txt file for munger {mu}",
-            )
-        else:
-            rc_from_mu = elt[(elt.source == "row") | (elt.source == "column")][
-                "name"
-            ].unique()
-            duped = [x for x in elt_from_par_file if x in rc_from_mu]
-            if duped:
-                err = ui.add_new_error(
-                    err,
-                    "ini",
-                    par_file_name,
-                    f"Some elements given in the parameter file are also designated "
-                    f"as row- or column-sourced in munger {mu}:\n"
-                    f"{duped}",
-                )
+    # for each munger,
+    for mu in ini_d["munger_name"].split(","):
+        # check any constant_over_file elements are defined in .ini file
+        munger_file = os.path.join(mungers_path,f"{mu}.munger")
+        params, p_err = ui.get_parameters(
+            required_keys=list(), param_file=munger_file, optional_keys=["constant_over_file"], header="format",
+        )
+        if p_err:
+            err = ui.consolidate_errors([err, p_err])
+        elif params["constant_over_file"]:
+            bad_constants = list()
+            for c in params["constant_over_file"].split(","):
+                if c not in ini_d.keys() or ini_d[c] is None:
+                    bad_constants.append(c)
+            if bad_constants:
+                err = ui.add_new_error(err, "ini", ini_file_name, f"Munger {mu} requires constants to be defined:\n{bad_constants}")
+
     return err
 
 
@@ -666,12 +607,12 @@ def check_and_init_singledataloader(
     session,
     mungers_path: str,
     juris: jm.Jurisdiction,
-) -> (SingleDataLoader, Optional[dict]):
+) -> (Optional[SingleDataLoader], Optional[dict]):
     """Return SDL if it could be successfully initialized, and
     error dictionary (including munger errors noted in SDL initialization)"""
     # test parameters
     par_file = os.path.join(results_dir, par_file_name)
-    d, err = ui.get_runtime_parameters(
+    d, err = ui.get_parameters(
         required_keys=sdl_pars_req,
         optional_keys=sdl_pars_opt,
         param_file=par_file,
@@ -681,40 +622,20 @@ def check_and_init_singledataloader(
         sdl = None
         return sdl, err
 
-    # check consistency of munger and .ini file regarding aux data
-    new_err = check_aux_data_setup(d, results_dir, mungers_path, par_file_name)
-
     # check consistency of munger and .ini file regarding elements to be read from ini file
     new_err_2 = check_par_file_elements(d, mungers_path, par_file_name)
-
-    if ui.fatal_error(new_err) or ui.fatal_error(new_err_2):
-        err = ui.consolidate_errors([err, new_err, new_err_2])
+    if new_err_2:
+        err = ui.consolidate_errors([err, new_err_2])
         sdl = None
-        return sdl, err
-
-    ##################
-    # for backward compatibility
-    if ("jurisdiction_directory" not in d.keys()) and (
-        "jurisdiction_path" not in d.keys()
-    ):
-        err = ui.add_new_error(
-            dict(),
-            "ini",
+    if not ui.fatal_error(new_err_2):
+        sdl = SingleDataLoader(
+            results_dir,
             par_file_name,
-            f"Neither jurisdiction_directory nor jurisdiction_path specified",
+            session,
+            mungers_path,
+            juris,
         )
-        sdl = None
-        return sdl, err
-    ######################
-
-    sdl = SingleDataLoader(
-        results_dir,
-        par_file_name,
-        session,
-        mungers_path,
-        juris,
-    )
-    err = ui.consolidate_errors([err, sdl.munger_err])
+        err = ui.consolidate_errors([err, sdl.munger_err])
     return sdl, err
 
 
@@ -727,7 +648,7 @@ class JurisdictionPrepper:
             ("run_time.ini", ["jurisdictions_dir","mungers_dir"]),
         ]:
             try:
-                d, parameter_err = ui.get_runtime_parameters(
+                d, parameter_err = ui.get_parameters(
                     required_keys=required,
                     param_file=param_file,
                     header="election_data_analysis",
@@ -957,29 +878,28 @@ class JurisdictionPrepper:
                 return err
         return err
 
-    def add_primaries_to_candidate_contest(self):
-
+    def add_primaries_to_candidate_contest(self) -> Optional[str]:
         print(f"\nStarting {inspect.currentframe().f_code.co_name}")
 
         primaries = {}
-        error = None
+        err_str = None
 
         # get contests that are not already primaries
         contests = prep.get_element(self.d["jurisdiction_path"], "CandidateContest")
         # TODO might have to check for '' as well as nulls
         non_p_contests = contests[contests["PrimaryParty"].isnull()]
         if non_p_contests.empty:
-            error = "CandidateContest.txt is missing or has no non-primary contests. No primary contests added."
-            return error
+            err_str = "CandidateContest.txt is missing or has no non-primary contests. No primary contests added."
+            return err_str
 
         # get parties
         parties = prep.get_element(self.d["jurisdiction_path"], "Party")
         if parties.empty:
-            if error:
-                error += "\n Party.txt is missing or empty. No primary contests added."
+            if err_str:
+                err_str += "\n Party.txt is missing or empty. No primary contests added."
             else:
-                error = "\n Party.txt is missing or empty. No primary contests added."
-            return error
+                err_str = "\n Party.txt is missing or empty. No primary contests added."
+            return err_str
 
         for i, party in parties.iterrows():
             p = party["Name"]
@@ -995,357 +915,8 @@ class JurisdictionPrepper:
             "CandidateContest",
             pd.concat([contests] + all_primaries),
         )
-        error = ui.consolidate_errors([error, new_err])
-        return error
-
-    def add_sub_county_rus_from_results_file(
-        self,
-        results_file_path,
-        munger_path,
-        aux_data_path=None,
-        sub_ru_type: str = "precinct",
-        error: dict = None,
-    ) -> Optional[dict]:
-        """Assumes precincts (or other sub-county reporting units)
-        are munged from row of the results file.
-        Adds corresponding rows to ReportingUnit.txt and dictionary.txt
-        using internal County name correctly"""
-
-        munger_name = Path(munger_path).name
-
-        # read data from file (appending _SOURCE)
-        wr, munger, new_err = ui.read_results(
-            results_file_path=results_file_path,
-            munger_path=munger_path,
-            aux_data_path=aux_data_path,
-            error=None,
-        )
-        if new_err:
-            error = ui.consolidate_errors([error, new_err])
-            if ui.fatal_error(new_err):
-                return error
-
-        if wr.empty:
-            error = ui.add_new_error(
-                error,
-                "file",
-                Path(results_file_path).name,
-                f"No results read via munger {Path(munger_path).name}",
-            )
-            return error
-
-        # clean the dataframe read from the results
-        # reduce <wr> in size
-        fields = [
-            f"{field}_SOURCE"
-            for field in munger.cdf_elements.loc["ReportingUnit", "fields"]
-        ]
-        # TODO generalize to mungers with aux_data
-        bad_fields = [f for f in fields if f not in wr.columns]
-        if bad_fields:
-            error = ui.add_new_error(
-                error,
-                "munger",
-                munger.name,
-                f"\n(ignore _SOURCE suffix below)\n"
-                f"ReportingUnit formula fields not found in file ({Path(results_file_path).name}): "
-                f"{bad_fields}\n"
-                f"file fields are:\n{wr.columns}",
-            )
-            return error
-        wr = wr[fields].drop_duplicates()
-
-        # get rid of all-blank rows
-        wr = wr[(wr != "").any(axis=1)]
-        if wr.empty:
-            error = ui.add_new_error(
-                error,
-                "file",
-                Path(results_file_path).name,
-                f"No relevant information read from results file.",
-            )
-            return error
-
-        # get formulas from munger
-        ru_formula = munger.cdf_elements.loc["ReportingUnit", "raw_identifier_formula"]
-        try:
-            # text up to first ; is the County -- the part following is the sub_ru
-            ru_parts = ru_formula.split(";")
-            county_formula = ru_parts[0]
-            sub_list = ru_parts[1:]
-            sub_ru_formula = ";".join(sub_list)
-
-        except ValueError:
-            error = ui.add_new_error(
-                error,
-                "munger",
-                munger.name,
-                f"ReportingUnit formula has wrong format for adding sub-county units. "
-                f"If counties and sub-county units can be identified by this munger, "
-                f"they should be separated by ;",
-            )
-            return error
-
-        # add columns for county and sub_ru
-        wr, error = m.add_column_from_formula(
-            wr, county_formula, "County_raw", error, munger_name, suffix="_SOURCE"
-        )
-        wr, error = m.add_column_from_formula(
-            wr, sub_ru_formula, "Sub_County_raw", error, munger_name, suffix="_SOURCE"
-        )
-
-        # add column for county internal name
-        ru_dict_old = prep.get_element(self.d["jurisdiction_path"], "dictionary")
-        ru_dict_new = ru_dict_old[ru_dict_old.cdf_element == "ReportingUnit"]
-        wr = wr.merge(
-            ru_dict_new,
-            how="left",
-            left_on="County_raw",
-            right_on="raw_identifier_value",
-        ).rename(columns={"cdf_internal_name": "County_internal"})
-
-        # add required new columns
-        wr = m.add_constant_column(wr, "ReportingUnitType", sub_ru_type)
-        wr = m.add_constant_column(wr, "cdf_element", "ReportingUnit")
-        wr["Name"] = wr.apply(
-            lambda x: f'{x["County_internal"]};{x["Sub_County_raw"]}', axis=1
-        )
-        wr["raw_identifier_value"] = wr.apply(
-            lambda x: f'{x["County_raw"]};{x["Sub_County_raw"]}', axis=1
-        )
-
-        # add info to ReportingUnit.txt
-        ru_add = wr[["Name", "ReportingUnitType"]]
-        ru_old = prep.get_element(self.d["jurisdiction_path"], "ReportingUnit")
-        new_err = prep.write_element(
-            self.d["jurisdiction_path"], "ReportingUnit", pd.concat([ru_old, ru_add])
-        )
-        if new_err:
-            error = ui.consolidate_errors([error, new_err])
-            if ui.fatal_error(new_err):
-                return error
-
-        # add info to dictionary
-        wr.rename(columns={"Name": "cdf_internal_name"}, inplace=True)
-        dict_add = wr[["cdf_element", "cdf_internal_name", "raw_identifier_value"]]
-        new_err = prep.write_element(
-            self.d["jurisdiction_path"],
-            "dictionary",
-            pd.concat([ru_dict_old, dict_add]),
-        )
-        error = ui.consolidate_errors([error, new_err])
-        return error
-
-    def add_sub_county_rus_from_multi_results_file(
-        self,
-        dir: str,
-        error: dict = None,
-        sub_ru_type: str = "precinct",
-    ) -> dict:
-        """For each .ini file in <dir>, finds specified results file.
-        For each results file, adds all elements in <elements> to <element>.txt and, naively, to <dictionary.txt>
-        for each file in <dir> named (with munger) in a .ini file in the directory"""
-        print(f"\nStarting {inspect.currentframe().f_code.co_name}")
-
-        environment_d, new_err = ui.get_runtime_parameters(
-            required_keys=["mungers_dir"],
-            param_file="run_time.ini",
-            header="election_data_analysis",
-            err=None,
-        )
-        if new_err:
-            error = ui.consolidate_errors([error, new_err])
-            if ui.fatal_error(new_err):
-                return error
-
-        for par_file_name in [x for x in os.listdir(dir) if x[-4:] == ".ini"]:
-            par_file = os.path.join(dir, par_file_name)
-            d, new_err = ui.get_runtime_parameters(
-                required_keys=sdl_pars_req,
-                param_file=par_file,
-                header="election_data_analysis",
-                err=None,
-                optional_keys=sdl_pars_opt,
-            )
-            if new_err:
-                error = ui.consolidate_errors([error, new_err])
-                if ui.fatal_error(new_err):
-                    return error
-
-            # set aux_data_path
-            if (
-                "aux_data_dir" in d.keys()
-                and d["aux_data_dir"] is not None
-                and d["aux_data_dir"] != ""
-            ):
-                aux_data_path = os.path.join(dir, d["aux_data_dir"])
-            else:
-                aux_data_path = None
-
-            for m_name in d["munger_name"].split(","):
-                new_err = self.add_sub_county_rus_from_results_file(
-                    error=None,
-                    sub_ru_type=sub_ru_type,
-                    results_file_path=os.path.join(dir, d["results_file"]),
-                    munger_path=os.path.join(environment_d["mungers_dir"], m_name),
-                    aux_data_path=aux_data_path,
-                )
-                if new_err:
-                    error = ui.consolidate_errors([error, new_err])
-        ui.report(error)
-        return error
-
-    def add_elements_from_multi_results_file(
-        self, elements: iter, dir: str, error: dict
-    ) -> dict:
-        """Adds all elements in <elements> to <element>.txt and, naively, to <dictionary.txt>
-        for each file in <dir> named (with munger) in a .ini file in the directory"""
-
-        print(f"\nStarting {inspect.currentframe().f_code.co_name}")
-        # get path to mungers directory
-        environment_d, new_err = ui.get_runtime_parameters(
-            required_keys=["mungers_dir"],
-            param_file="run_time.ini",
-            header="election_data_analysis",
-            err=None,
-        )
-        if new_err:
-            ui.consolidate_errors([error, new_err])
-
-        for par_file_name in [x for x in os.listdir(dir) if x[-4:] == ".ini"]:
-            # pull parameters for results file
-            par_file = os.path.join(dir, par_file_name)
-            d, new_err = ui.get_runtime_parameters(
-                required_keys=["results_file", "munger_name"],
-                header="election_data_analysis",
-                optional_keys=["aux_data_dir"],
-                param_file=par_file,
-                err=None,
-            )
-            if new_err:
-                error = ui.consolidate_errors([error, new_err])
-
-            if not ui.fatal_error(error):
-                if "aux_data_dir" in d.keys() and (d["aux_data_dir"] is None or d["aux_data_dir"] == ""):
-                    aux_data_path = None
-                else:
-                    aux_data_path = os.path.join(dir, d["aux_data_dir"])
-                # loop through mungers in the "munger_name" list
-                for m_name in d["munger_name"].split(","):
-                    # add elements
-                    new_err = self.add_elements_from_results_file(
-                        elements=elements,
-                        results_file_path=os.path.join(dir, d["results_file"]),
-                        munger_path=os.path.join(environment_d["mungers_dir"], m_name),
-                        aux_data_path=aux_data_path,
-                        error=None,
-                    )
-                    error = ui.consolidate_errors([error, new_err])
-        ui.report(error)
-        return error
-
-    def add_elements_from_results_file(
-        self,
-        elements: iter,
-        results_file_path: str,
-        munger_path: str,
-        aux_data_path: str = None,
-        error: dict = None,
-    ) -> dict:
-        """For a single munger, add lines in dictionary.txt and <element>.txt
-        corresponding to munged names not already in dictionary
-        or not already in <element>.txt for each <element> in <elements>"""
-
-        # read data from file (appending _SOURCE)
-        wr, mu, new_err = ui.read_results(
-            results_file_path=results_file_path,
-            munger_path=munger_path,
-            aux_data_path=aux_data_path,
-            error=dict(),
-        )
-        if new_err:
-            error = ui.consolidate_errors([error, new_err])
-            if ui.fatal_error(new_err):
-                return error
-
-        for element in elements:
-            name_field = db.get_name_field(element)
-            # append <element>_raw column
-            w_new, new_err = m.add_munged_column(
-                wr,
-                mu,
-                element,
-                error,
-                mode=mu.cdf_elements.loc[element, "source"],
-                inplace=False,
-            )
-            if new_err:
-                error = ui.consolidate_errors([error, new_err])
-                if ui.fatal_error(new_err):
-                    return error
-
-            # get set of name_field values from results file
-            names_from_results = w_new[f"{element}_raw"].unique()
-
-            # delete any named '""' and warn user
-            if '""' in names_from_results:
-                names_from_results.remove('""')
-                error = ui.add_new_error(
-                    error,
-                    "warn-file",
-                    results_file_path,
-                    f"An {element} named '\"\"' was found in the file and ignored. If you want it in {element}.txt "
-                    f"or dictionary.txt, you will have to add it by hand.",
-                )
-
-            # change any double double-quotes to single quotes; remove enclosing double-quotes
-            names_from_results = [
-                x.replace('""', "'").strip('"') for x in names_from_results
-            ]
-
-            # find <element>_raw values not in dictionary.txt.raw_identifier_value;
-            #  add corresponding lines to dictionary.txt
-            wd = prep.get_element(self.d["jurisdiction_path"], "dictionary")
-            old_raw = wd[wd.cdf_element == element]["raw_identifier_value"].to_list()
-            new_raw = [x for x in names_from_results if x not in old_raw]
-            new_raw_df = pd.DataFrame(
-                [[element, x, x] for x in new_raw],
-                columns=["cdf_element", "cdf_internal_name", "raw_identifier_value"],
-            )
-            wd = pd.concat([wd, new_raw_df]).drop_duplicates()
-            new_err = prep.write_element(self.d["jurisdiction_path"], "dictionary", wd)
-            if new_err:
-                error = ui.consolidate_errors([error, new_err])
-                if ui.fatal_error(new_err):
-                    return error
-
-            # find cdf_internal_names that are not in <element>.txt and add them to <element>.txt
-            we = prep.get_element(self.d["jurisdiction_path"], element)
-            old_internal = we[name_field].to_list()
-            new_internal = [
-                x
-                for x in wd[wd.cdf_element == element]["cdf_internal_name"]
-                if x not in old_internal
-            ]
-
-            new_internal_df = pd.DataFrame(
-                [[x] for x in new_internal], columns=[name_field]
-            )
-            we = pd.concat([we, new_internal_df]).drop_duplicates()
-            new_err = prep.write_element(self.d["jurisdiction_path"], element, we)
-            if new_err:
-                ui.consolidate_errors([error, new_err])
-                if ui.fatal_error(new_err):
-                    return error
-            # if <element>.txt has columns other than <name_field>, notify user
-            if we.shape[1] > 1 and not new_internal_df.empty:
-                error = ui.add_new_error(
-                    error,
-                    "warn-jurisdiction",
-                    Path(self.d["jurisdiction_path"]).name,
-                    f"Check {element}.txt for new rows missing data in some fields.",
-                )
-        return error
+        err_str = ui.consolidate_errors([err_str, new_err])
+        return err_str
 
     def starter_dictionary(self, include_existing=True) -> dict:
         """Creates a starter file for dictionary.txt, assuming raw_identifiers are the same as cdf_internal names.
@@ -1384,6 +955,98 @@ class JurisdictionPrepper:
         )
         return err
 
+    def add_sub_county_rus(
+            self,
+            par_file_name: str,
+            sub_ru_type: str ="precinct",
+            county_type="county",
+    ) -> Optional[dict]:
+        err_list = list()
+        dl = DataLoader()
+        juris = jm.Jurisdiction(self.d["jurisdiction_path"])
+        sdl, err = check_and_init_singledataloader(
+            dl.d["results_dir"],
+            par_file_name, dl.session, dl.d["mungers_dir"], juris)
+
+        for mu in sdl.munger_list:
+            # get parameters
+            m_path = os.path.join(sdl.mungers_dir, f"{mu}.munger")
+            mu_d, new_err = m.get_and_check_munger_params(m_path)
+            # get ReportingUnit formula
+            ru_formula = ''
+            for header in m.req_munger_param_values["munge_strings"]:
+                formulas, formula_err = ui.get_parameters(
+                    required_keys=[],
+                    optional_keys=["ReportingUnit"],
+                    header=header,
+                    param_file=m_path,
+                )
+                if formula_err or (formulas["ReportingUnit"] is None):
+                    pass
+                else:  # TODO tech debt: we assume at most one formula
+                    ru_formula = formulas["ReportingUnit"]
+            # check that ReportingUnit formula is <county_type>;<sub_ru>
+            if ";" not in ru_formula:
+                    new_err = ui.add_new_error(
+                        new_err, "warn-munger", mu, "ReportingUnit formula has no ';'",
+                    )
+                    if new_err:
+                        err_list.append(new_err)
+            else:
+                # create raw -> internal dictionary of county_type names
+                jd_df = prep.get_element(self.d["jurisdiction_path"], "dictionary")
+                ru_df = prep.get_element(self.d["jurisdiction_path"], "ReportingUnit")
+                internal = jd_df[jd_df["cdf_element"] == "ReportingUnit"].merge(
+                    ru_df[ru_df["ReportingUnitType"] == county_type], left_on="cdf_internal_name", right_on="Name",
+                    how="inner"
+                )[["raw_identifier_value", "cdf_internal_name"]].set_index("raw_identifier_value").to_dict()[
+                    "cdf_internal_name"]
+                # get list of ReportingUnit raw values from results file
+                vals, new_err = sdl.list_values("ReportingUnit")
+                county = {v: v.split(";")[0] for v in vals}
+                remainder = {v: v[len(county[v]) + 1:] for v in vals}
+                good_vals = [v for v in vals if county[v] in internal.keys()]
+
+                # write to ReportingUnit.txt
+                new_err = prep.write_element(
+                    self.d["jurisdiction_path"],
+                    "ReportingUnit",
+                    pd.concat(
+                        [
+                            ru_df, pd.DataFrame(
+                            [
+                                [f"{internal[county[v]]};{remainder[v]}", sub_ru_type]
+                                for v in good_vals
+                            ],
+                                columns=["Name", "ReportingUnitType"],
+                            )
+                        ]
+                    ),
+                )
+                if new_err:
+                    err_list.append(new_err)
+
+                # write to dictionary.txt
+                new_err = prep.write_element(
+                    self.d["jurisdiction_path"],
+                    "dictionary",
+                    pd.concat(
+                        [
+                            jd_df, pd.DataFrame(
+                                [["ReportingUnit",
+                                  f"{internal[county[v]]};{remainder[v]}",
+                                  v,
+                                  ] for v in good_vals],
+                                columns=["cdf_element", "cdf_internal_name", "raw_identifier_value"],
+                            )
+                        ]
+                    ),
+                )
+                if new_err:
+                    err_list.append(new_err)
+        err = ui.consolidate_errors(err_list)
+        return err
+
     def __init__(self):
         self.d = dict()
         # get parameters from jurisdiction_prep.ini and run_time.ini
@@ -1391,7 +1054,7 @@ class JurisdictionPrepper:
             ("jurisdiction_prep.ini",prep_pars),
             ("run_time.ini", ["jurisdictions_dir","mungers_dir"]),
         ]:
-            d, parameter_err = ui.get_runtime_parameters(
+            d, parameter_err = ui.get_parameters(
                 required_keys=required,
                 param_file=param_file,
                 header="election_data_analysis",
@@ -1438,12 +1101,12 @@ class Analyzer:
         try:
             if not param_file:
                 param_file = "run_time.ini"
-            d, postgres_param_err = ui.get_runtime_parameters(
+            d, postgres_param_err = ui.get_parameters(
                 required_keys=["dbname"],
                 param_file=param_file,
                 header="postgresql",
             )
-            d, eda_err = ui.get_runtime_parameters(
+            d, eda_err = ui.get_parameters(
                 required_keys=["rollup_directory"],
                 param_file=param_file,
                 header="election_data_analysis",
@@ -1469,7 +1132,7 @@ class Analyzer:
             param_file = "run_time.ini"
 
         # read rollup_directory from param_file
-        d, error = ui.get_runtime_parameters(
+        d, error = ui.get_parameters(
             required_keys=["rollup_directory"],
             param_file=param_file,
             header="election_data_analysis",
@@ -1909,3 +1572,128 @@ def get_contest_with_unknown_candidates(election, jurisdiction, dbname=None) -> 
     contests = db.get_contest_with_unknown(an.session, election_id, jurisdiction_id)
     return contests
 
+
+def load_results_file(
+        session,
+        munger_path: str,
+        f_path: str,
+        juris: jm.Jurisdiction,
+        election_datafile_ids: dict,
+        constants: Dict[str, str],
+        results_directory_path,
+) -> Optional[dict]:
+
+    # TODO tech debt: redundant to pass results_directory_path and f_path
+    munger_name = Path(munger_path).name
+    # read parameters from munger file
+    p, err = m.get_and_check_munger_params(munger_path)
+    if ui.fatal_error(err):
+        return err
+
+    # read data into standard count format dataframe
+    #  append "_SOURCE" to all non-Count column names
+    #  (to avoid confilcts if e.g., source has col names 'Party')
+    try:
+        df, original_string_columns, err = m.to_standard_count_frame(
+            f_path, munger_path, p, constants, suffix="_SOURCE",
+        )
+        if ui.fatal_error(err):
+            return err
+
+    except Exception as exc:
+        err = ui.add_new_error(
+            err,
+            "system",
+            f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
+            f"Exception while converting data to standard form: {exc}"
+        )
+        return err
+
+    # transform source to completely munged (possibly with foreign keys if there is aux data)
+    # # add raw-munged column for each element, removing old
+    try:
+        df, new_err = m.munge_source_to_raw(
+            df,
+            munger_path,
+            p,
+            original_string_columns,
+            "_SOURCE",
+            results_directory_path,
+        )
+    except Exception as exc:
+        err = ui.add_new_error(
+            err,
+            "system",
+            f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
+            f"Exception while munging source to raw: {exc}"
+        )
+        return err
+
+    # # add columns for constant-over-file elements
+    for element in constants.keys():
+        df = m.add_constant_column(
+            df,
+            element,
+            constants[element],
+        )
+
+    # # delete any rows with items to be ignored
+    ig, new_err = ui.get_parameters(
+        header="ignore",
+        required_keys=[],
+        optional_keys=[
+            "Candidate",
+            "CandidateContest",
+            "BallotMeasureSelection",
+            "BallotMeasureContest",
+            "Party",
+        ],
+        param_file=munger_path,
+    )
+    if new_err:
+        pass  # errors ignored, as header is not required
+    real_ig_keys = [x for x in ig.keys() if ig[x] is not None]
+    for element in real_ig_keys:
+        value_list = ig[element].split(",")
+        mask = ~df[f"{element}_raw"].isin(value_list)
+        df = df[mask]
+
+    # # add Id columns for all but Count, removing raw-munged
+    try:
+        df, new_err = m.munge_raw_to_ids(df, constants, juris, munger_name, session)
+        if new_err:
+            err = ui.consolidate_errors([err, new_err])
+            if ui.fatal_error(new_err):
+                return err
+    except Exception as exc:
+        err = ui.add_new_error(
+            err,
+            "system",
+            f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
+            f"Exception while munging raw to ids: {exc}"
+        )
+        return err
+
+    # # for each contest, if none or unknown candidate has total votes 0, remove rows with that contest & candidate
+    nou_candidate_id = db.name_to_id(session, "Candidate", "none or unknown")
+    nou_selection_ids = db.selection_ids_from_candidate_id(session, nou_candidate_id)
+    unknown = df[df.Selection_Id.isin(nou_selection_ids)].groupby(["Contest_Id","Selection_Id"]).sum()
+    for (contest_id, selection_id) in unknown.index:
+        mask = df[['Contest_Id', 'Selection_Id']] == (contest_id, selection_id)
+        df = df[~mask.all(axis=1)]
+
+    # add_datafile_Id and Election_Id columns
+    for c in ["_datafile_Id", "Election_Id"]:
+        df = m.add_constant_column(df, c, election_datafile_ids[c])
+    # load counts to db
+    try:
+        err = m.fill_vote_count(df, session, err)
+    except Exception as exc:
+        err = ui.add_new_error(
+            err,
+            "system",
+            f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
+            f"Exception while filling vote count table: {exc}"
+        )
+        return err
+    return err

@@ -743,6 +743,7 @@ CandidateContest	US House AZ District 9	U.S. Representative in Congress - Distri
 CandidateContest	US President (AZ)	US President (AZ)
 CandidateContest	AZ Governor	AZ Governor
 CandidateContest	US Senate AZ	U.S. Senator
+CandidateContest	US Senate AZ (until 2023)	U.S. Senator (Term Expires Jan. 2023)
 CandidateContest	AZ Corporation Commissioner	Corporation Commissioner
 CandidateContest	AZ Attorney General	AZ Attorney General
 CandidateContest	AZ Lieutenant Governor	AZ Lieutenant Governor
@@ -757,6 +758,8 @@ Party	Democratic Party	DEM
 Party	Republican Party	Republican Party
 Party	Republican Party	REP
 Party	Green Party	Green Party
+Party	UPA	UPA
+Party	IRP	IRP
 Party	Libertarian Party	LBT
 ReportingUnit	Arizona;AZ House District 1	Arizona;AZ House District 1
 ReportingUnit	Arizona;AZ House District 2	Arizona;AZ House District 2
@@ -1133,3 +1136,87 @@ Candidate	Andrew Yang	Andrew Yang
 Candidate	Jo Jorgensen	Jorgensen, Jo
 Candidate	Art Babbott	Babbott, Art
 CountItemType	total	total
+Candidate	Cano, Andrés	Cano, AndrÃ©s
+Candidate	Gabaldón, Rosanna	GabaldÃ³n, Rosanna
+Candidate	Terán, Raquel	TerÃ¡n, Raquel
+Candidate	Grijalva, Raúl	Grijalva, RaÃºl
+Candidate	Peña M., Tatiana	PeÃ±a M., Tatiana
+Candidate	Quezada, Martín J.	Quezada, MartÃ­n J.
+Candidate	Sifuentes, Seth 'Marcus'	Sifuentes, Seth ""Marcus""
+Candidate	Shope, Thomas 'T.J.'	Shope, Thomas "T.J."
+Candidate	Peten, Geraldine 'Gerae'	Peten, Geraldine "Gerae"
+Candidate	Parks, James 'Jim'	Parks, James "Jim"
+Candidate	O'Connor, James 'Jim'	O'Connor, James "Jim"
+Candidate	Navarrete, Otoniel 'Tony'	Navarrete, Otoniel "Tony"
+Candidate	Mundell, William 'Bill'	Mundell, William "Bill"
+Candidate	Leach, Venden 'Vince'	Leach, Venden "Vince"
+Candidate	Kurdoglu, Ajlan 'A.J.'	Kurdoglu, Ajlan "A.J."
+Candidate	Honne, Mary 'Kathleen'	Honne, Mary "Kathleen"
+Candidate	Friese, Randall 'Randy'	Friese, Randall "Randy"
+Candidate	Epstein, Denise 'Mitzi'	Epstein, Denise "Mitzi"
+Candidate	Dunn, Timothy 'Tim'	Dunn, Timothy "Tim"
+Candidate	Carillo, Gilbert 'Gilbert'	Carillo, Gilbert "Gilbert"
+Candidate	Bowers, Russell W. 'Rusty'	Bowers, Russell W. "Rusty"
+Candidate	Bowers, Kenneth R 'Ken', Jr	Bowers, Kenneth R "Ken", Jr
+Candidate	Blackman, Walter 'Walt'	Blackman, Walter "Walt"
+Candidate	Beach - Moschetti, Kimberly 'Kim'	Beach - Moschetti, Kimberly "Kim"
+Candidate	Julián Castro	JuliÃ¡n Castro
+Candidate	Wisener, Dylan	Wisener, Dylan
+Candidate	Wilson, Chris	Wilson, Chris
+Candidate	Stephens, Karen	Stephens, Karen
+Candidate	Smith, Matt	Smith, Matt
+Candidate	Simmons, Jade	Simmons, Jade
+Candidate	Schul, Zachary	Schul, Zachary
+Candidate	Schlass, Brandon	Schlass, Brandon
+Candidate	Romack, Joe	Romack, Joe
+Candidate	Rodriguez, Roxanne	Rodriguez, Roxanne
+Candidate	Robinson, Emily	Robinson, Emily
+Candidate	Quijada, Joe	Quijada, Joe
+Candidate	Perez Gissy, Ana	Perez Gissy, Ana
+Candidate	Overholser, Don	Overholser, Don
+Candidate	Murray, Amanda	Murray, Amanda
+Candidate	Murphy, Wade	Murphy, Wade
+Candidate	Lessard, Cristefano	Lessard, Cristefano
+Candidate	La Riva, Gloria	La Riva, Gloria
+Candidate	Kirsch, Kyle	Kirsch, Kyle
+Candidate	Kirkham, J.Travis	Kirkham, J.Travis
+Candidate	Jones, Miko	Jones, Miko
+Candidate	Hendrix, Taliban	Hendrix, Taliban
+Candidate	Hawkins, Howie	Hawkins, Howie
+Candidate	Hart, John Ross	Hart, John Ross
+Candidate	Hampton, Joshua	Hampton, Joshua
+Candidate	Grayson, Richard	Grayson, Richard
+Candidate	Gibson, Christina	Gibson, Christina
+Candidate	Finerd, Patrick	Finerd, Patrick
+Candidate	Fierro, Nick	Fierro, Nick
+Candidate	Cummings, Daniel Clyde	Cummings, Daniel Clyde
+Candidate	Clark, Kristin	Clark, Kristin
+Candidate	Carpenter, Charles	Carpenter, Charles
+Candidate	Brennan, Brett	Brennan, Brett
+Candidate	Boddie, President R.	Boddie, President R.
+Candidate	Bah, Iman	Bah, Iman
+Candidate	Backus, Brent	Backus, Brent
+ReportingUnit	Arizona	State
+Party	Party for Socialism and Liberation	Party for Socialism and Liberation
+Party	None	None
+Party	IND	IND
+Party	Green Party	Green
+Party	CSM	CSM
+Party	ACN	ACN
+Candidate	Thomas, Patrick 'Pat'	Thomas, Patrick 'Pat'
+Candidate	Stewart, Buzz	Stewart, Buzz
+Candidate	Stevens, Jim	Stevens, Jim
+Candidate	Simmons, Debbie	Simmons, Debbie
+Candidate	Schiess, John	Schiess, John
+Candidate	Saenz, Frank	Saenz, Frank
+Candidate	Rodriguez, Joshua	Rodriguez, Joshua
+Candidate	Rodriguez, Benjamin	Rodriguez, Benjamin
+Candidate	Kapadia, Perry	Kapadia, Perry
+Candidate	Haupt, Mathew	Haupt, Mathew
+Candidate	Glenn, Nicholas N.	Glenn, Nicholas N.
+Candidate	Dorchester, Matthew 'Doc'	Dorchester, Matthew 'Doc'
+Candidate	Decker, William 'Will'	Decker, William 'Will'
+Candidate	Davida, Edward	Davida, Edward
+Candidate	Chilton, Adam	Chilton, Adam
+Candidate	Beckett, Christopher	Beckett, Christopher
+Candidate	Arif, Mohammad 'Mike Obama'	Arif, Mohammad 'Mike Obama'

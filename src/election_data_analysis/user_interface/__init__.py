@@ -4,14 +4,13 @@ from election_data_analysis import special_formats as sf
 from election_data_analysis import database as db
 import election_data_analysis as e
 import pandas as pd
-import numpy as np
-from pandas.errors import ParserError, ParserWarning
-import csv
+from pandas.errors import ParserError
 import os
 from pathlib import Path
 from election_data_analysis import juris_and_munger as jm
 from typing import Optional, Dict, Any, List
 import datetime
+import csv
 
 # constants
 recognized_encodings = {
@@ -315,31 +314,14 @@ contest_type_mappings = {
 }
 
 
-def read_results(
-    results_file_path, munger_path, aux_data_path, error: Optional[dict]
-) -> (pd.DataFrame, jm.Munger, dict):
-    """Reads results (appending '_SOURCE' to the columns)
-    and initiates munger."""
-
-    # check munger files and (if no error) create munger
-    mu, mu_err = jm.check_and_init_munger(munger_path, aux_data_path=aux_data_path)
-    error = consolidate_errors([error, mu_err])
-    if fatal_error(mu_err):
-        wr = pd.DataFrame()
-    else:
-        # read info from results file (and auxiliary files, if any)
-        wr, error = read_combine_results(
-            mu, results_file_path, error, aux_data_path=aux_data_path
-        )
-        wr.columns = [f"{x}_SOURCE" for x in wr.columns]
-    return wr, mu, error
-
-
-def pick_juris_from_filesystem(juris_path, err, check_files=False):
+def pick_juris_from_filesystem(
+        juris_path: str,
+        err: Optional[dict],
+        check_files: bool =False):
     """Returns a Jurisdiction object. <juris_path> is the path to the directory containing the
     defining files for the particular jurisdiction.
     """
-
+    new_err = None
     if check_files:
         new_err = jm.ensure_jurisdiction_dir(juris_path)
     err = consolidate_errors([err, new_err])
@@ -357,251 +339,171 @@ def find_dupes(df):
     return dupes_df, deduped
 
 
+def tabular_kwargs(p: Dict[str, Any], kwargs: Dict[str, Any], aux=False) -> Dict[str, Any]:
+    # designate header rows (for both count columns or string-location info/columns)
+    if p["all_rows"] == "data":
+        kwargs["header"] = None
+    else:
+        header_rows = set()
+        # if count_locations are by field name, need count_field_name_row
+        if not aux and p["count_locations"] == "by_field_names":
+            header_rows.update({p["count_field_name_row"]})
+        # if any string locations are from field values AND field names are in the table, need string_field_name_row
+        if "in_field_values" in p["munge_strings"]:
+            header_rows.update({p["string_field_name_row"]})
+        # if any string locations are in count headers need count_header_row_numbers
+        if "in_count_headers" in p["munge_strings"]:
+            header_rows.update(p["count_header_row_numbers"])
+        if header_rows:
+            # if multi-index
+            if len(header_rows) > 1:
+                kwargs["header"] = sorted(header_rows)
+            else:
+                kwargs["header"] = header_rows.pop()
+        else:
+            kwargs["header"] = 0
+
+    # designate rows to skip
+    if p["rows_to_skip"]:
+        kwargs["skiprows"] = range(p["rows_to_skip"])
+    return kwargs
+
+
+def basic_kwargs(p: Dict[str, Any], kwargs: Dict[str, Any], aux: bool = False) -> Dict[str, Any]:
+    # ensure that all field values will be read as strings
+    kwargs["dtype"] = "string"
+
+    # other parameters
+    kwargs["index_col"] = False
+    if p["thousands_separator"]:
+        kwargs["thousands"] = p["thousands_separator"]
+    if p["file_type"] in ["flat_text"]:
+        if p["encoding"] is None:
+            kwargs["encoding"] = e.default_encoding
+        else:
+            kwargs["encoding"] = p["encoding"]
+
+    return kwargs
+
+
+def list_desired_excel_sheets(f_path: str, p: dict) -> Optional[list]:
+    if p["sheets_to_read_names"]:
+        sheets_to_read = p["sheets_to_read_names"]
+    elif p["sheets_to_read_numbers"]:
+        sheets_to_read = p["sheets_to_read_numbers"]
+    else:
+        xl = pd.ExcelFile(f_path)
+        all_sheets = xl.sheet_names
+        if p["sheets_to_skip_names"]:
+            sheets_to_read = [s for s in all_sheets if s not in p["sheets_to_skip_names"]]
+        else:
+            sheets_to_read = all_sheets
+    return sheets_to_read
+
+
 def read_single_datafile(
-    munger: jm.Munger, f_path: str, err: Optional[dict]
-) -> (pd.DataFrame, dict):
+    f_path: str,
+    p: Dict[str, Any],
+    munger_name: str,
+    err: Optional[Dict],
+    aux: bool = False,
+) -> (Dict[str, pd.DataFrame], dict):
+    """Length of returned dictionary is the number of sheets read -- usually 1 except for multi-sheet Excel.
+    Auxiliary files have different parameters (e.g., no count locations)"""
+    kwargs = dict()  # for syntax checker
+
+    # prepare keyword arguments for pandas read_* function
+    if p["file_type"] in ["excel"]:
+        kwargs = basic_kwargs(p, dict(), aux=aux)
+        kwargs = tabular_kwargs(p, kwargs, aux=aux)
+    elif p["file_type"] in ["flat_text"]:
+        kwargs = basic_kwargs(p, dict(), aux=aux)
+        kwargs = tabular_kwargs(p, kwargs, aux=aux)
+        kwargs["quoting"] = csv.QUOTE_MINIMAL
+        kwargs["sep"] = p["flat_text_delimiter"].replace("tab", "\t")
+
+    # read file
     try:
-        dtype = {c: str for c in munger.field_list}
-        kwargs = {"dtype": dtype}
-        if munger.thousands_separator is not None:
-            kwargs["thousands"] = munger.thousands_separator
-
-        if munger.options["file_type"] in ["json"]:
-            pass
-        elif munger.options["field_name_row"] is None:
-            kwargs["header"] = None
-            kwargs["names"] = munger.options["field_names_if_no_field_name_row"]
-            kwargs["index_col"] = False
-        else:
-            # if not a multi-index
-            if munger.options["header_row_count"] == 1:
-                # can protect against a problem with pandas.read_csv and read_excel
-                #  see https://github.com/pandas-dev/pandas/issues/11733
-                # TODO how to protect in case of multi-index?
-                kwargs["header"] = 0
-                kwargs["index_col"] = False
+        if p["file_type"] in ["xml"]:
+            df, err = sf.read_xml(f_path, p, munger_name, err)
+            if fatal_error(err):
+                df_dict = dict()
             else:
-                kwargs["header"] = list(range(munger.options["header_row_count"]))
-                kwargs["index_col"] = None
+                df_dict = {"Sheet1": df}
+        elif p["file_type"] in ["json-nested"]:
+            df, err = sf.read_nested_json(f_path, p, munger_name, err)
+            if fatal_error(err):
+                df_dict = dict()
+            else:
+                df_dict = {"Sheet1": df}
+        elif p["file_type"] == "excel":
+            kwargs["index_col"] = None  # TODO: tech debt can we omit index_col for all?
+            #  need to omit index_col here since multi-index headers are possible
+            # to avoid getting fatal error when a sheet doesn't read in correctly
+            df_dict = dict()
+            for sheet in list_desired_excel_sheets(f_path, p):
+                kwargs["sheet_name"] = sheet
+                try:
+                    df_dict[sheet] = pd.read_excel(f_path, **kwargs)
+                except Exception as exc:
+                    df_dict[sheet] = pd.DataFrame()
+                    err = add_new_error(
+                        err,
+                        "warn-file",
+                        Path(f_path).name,
+                        f"Sheet {sheet} not read due to exception:\n\t{exc}",
+                    )
 
-        if munger.options["count_of_top_lines_to_skip"]:
-            kwargs["skiprows"] = range(munger.options["count_of_top_lines_to_skip"])
-
-        if munger.file_type in ["txt", "csv", "txt-semicolon-separated"]:
-            kwargs["encoding"] = munger.encoding
-            kwargs["quoting"] = csv.QUOTE_MINIMAL
-            if munger.file_type == "txt":
-                kwargs["sep"] = "\t"
-            elif munger.file_type == "txt-semicolon-separated":
-                kwargs["sep"] = ";"
+        elif p["file_type"] == "flat_text":
             df = pd.read_csv(f_path, **kwargs)
-        elif munger.file_type in ["xls", "xlsx"]:
-            df = pd.read_excel(f_path, **kwargs)
-        elif munger.file_type in ["json"]:
-            kwargs["encoding"] = munger.encoding
-            df = pd.read_json(f_path, **kwargs)
-        elif munger.file_type in ["concatenated-blocks", "xls-multi", "xml", "json-nested"]:
-            err = add_new_error(
-                err,
-                "system",
-                "user_interface.read_single_datafile",
-                f"Munger ({munger.name}) with file_type {munger.file_type} "
-                f"should not have reached this part of the code.",
-            )
-            return pd.DataFrame(), err
-        else:
-            err = add_new_error(
-                err,
-                "munger",
-                munger.name,
-                f"Unrecognized file_type: {munger.file_type}",
-            )
-            return pd.DataFrame(), err
-        if df.empty:
-            err = add_new_error(
-                err,
-                "munger",
-                munger.name,
-                f"Nothing read from datafile. Munger may be inconsistent, or datafile may be empty.",
-            )
-        else:
-            # get count columns by name
-            if munger.options["count_columns_by_name"]:
-                count_cols_by_name = munger.options["count_columns_by_name"]
-            elif munger.options["count_columns"]:
-                count_cols_by_name = [
-                    df.columns[j]
-                    for j in munger.options["count_columns"]
-                    if j < df.shape[1]
-                ]
-            else:
-                count_cols_by_name = None
+            df_dict = {"Sheet1": df}
 
-            # clean the column names
-            df, count_cols_by_name, err_str = m.clean_column_names(
-                df, count_cols_by_name
-            )
-            if err_str:
-                err = add_new_error(err, "warn-file", Path(f_path).name, err_str)
+        # rename any columns from header-less tables to column_0, column_1, etc.
+        if p["all_rows"] == 'data':
+            for k in df_dict.keys():
+                df_dict[k].columns = [f"column_{j}" for j in range(df_dict[k].shape[1])]
 
-            # clean the count columns
-            df, err_df = m.clean_count_cols(df, count_cols_by_name, thousands=munger.thousands_separator)
-            if not err_df.empty:
-                err = add_err_df(err, err_df, munger, f_path)
-                # show all columns of dataframe holding rows where counts were set to 0
-                pd.set_option("max_columns", None)
-                err = add_new_error(
-                    err,
-                    "warn-munger",
-                    munger.name,
-                    f"At least one count was set to 0 in certain rows of {Path(f_path).name}:\n{err_df}",
-                )
-                pd.reset_option("max_columns")
-
-            # clean the string columns
-            str_cols = [c for c in df.columns if df.dtypes[c] == np.object]
-            df = m.clean_strings(df, str_cols)
-
-            err = jm.check_results_munger_compatibility(
-                munger, df, Path(f_path).name, err
-            )
-        return df, err
-    except FileNotFoundError as fnfe:
-        e = f"File not found: {f_path}"
+    except FileNotFoundError:
+        err_str = f"File not found: {f_path}"
+        df_dict = dict()
+        err = add_new_error(err, "file", Path(f_path).name, err_str)
     except UnicodeDecodeError as ude:
-        e = f"Encoding error. Datafile not read completely.\n{ude}"
+        err_str = f"Encoding error. Datafile not read completely.\n\t{ude}"
+        df_dict = dict()
+        err = add_new_error(err, "file", Path(f_path).name, err_str)
     except ParserError as pe:
         # DFs have trouble comparing against None. So we return an empty DF and
         # check for emptiness below as an indication of an error.
-        e = f"Error parsing results file.\n{pe}"
-    err = add_new_error(
-        err,
-        "file",
-        Path(f_path).name,
-        e,
-    )
-    return pd.DataFrame(), err
+        err_str = f"Error parsing results file.\n{pe}"
+        err = add_new_error(
+            err,
+            "file",
+            Path(f_path).name,
+            err_str,
+        )
+        df_dict = dict()
+        err = add_new_error(err, "file", f_path, err_str)
+
+    # drop any empty dataframes
+    df_dict = {k:v for k,v in df_dict.items() if not v.empty}
+    return df_dict, err
 
 
-def add_err_df(err, err_df, munger, f_path):
+def add_err_df(err, err_df, munger_name, f_path):
     # show all columns of dataframe holding rows where counts were set to 0
     pd.set_option("max_columns", None)
     err = add_new_error(
         err,
         "warn-munger",
-        munger.name,
+        munger_name,
         f"At least one count was set to 0 in certain rows of {Path(f_path).name}:\n{err_df}",
     )
     pd.reset_option("max_columns")
     return err
 
 
-def read_combine_results(
-    mu: jm.Munger,
-    results_file_path: str,
-    err: Optional[dict],
-    aux_data_path: str = None,
-) -> (pd.DataFrame, dict):
-    # if results are not a flat file type or json
-    if mu.options["file_type"] in ["concatenated-blocks", "xls-multi", "xml", "json-nested"]:
-        working, new_err = sf.read_alternate_munger(
-            mu.options["file_type"],
-            results_file_path,
-            mu,
-            None,
-        )
-        if new_err:
-            err = consolidate_errors([err, new_err])
-        if working.empty or fatal_error(new_err):
-            return working, err
-
-        # revise munger as appropriate
-        mu.options["header_row_count"] = 1
-        mu.options["field_name_row"] = 0
-        if mu.options["file_type"] in ["concatenated-blocks", "xls-multi"]:
-            mu.options["count_columns"] = [working.columns.to_list().index("count")]
-
-        elif mu.file_type in ["xml", "json-nested"]:
-            # TODO tech debt some of this may not be necessary
-            # change formulas in cdf_elements to match column names inserted by read_xml
-            mu.cdf_elements["idx"] = mu.cdf_elements.index
-            mu.cdf_elements["source"] = "row"
-            mu.options["count_columns"] = [working.columns.to_list().index(c) for c in mu.options["count_columns_by_name"]]
-
-    # if results are a flat file or json
-    else:
-        try:
-            working, new_err = read_single_datafile(mu, results_file_path, None)
-        except Exception as exc:
-            err = add_new_error(
-                err,
-                "file",
-                results_file_path,
-                f"Unexpected exception while reading file: {exc}",
-            )
-            return pd.DataFrame(), err
-
-        if new_err:
-            err = consolidate_errors([err, new_err])
-            if fatal_error(new_err):
-                return pd.DataFrame(), err
-
-        else:
-            # if json
-            if mu.options["file_type"] in ["json"]:
-                # get numbers of count columns (now that we've read in the data)
-                mu.options["count_columns"] = [
-                    working.columns.to_list().index(c)
-                    for c in mu.options["count_columns_by_name"]
-                ]
-            working, new_err = m.cast_cols_as_int(
-                working,
-                mu.options["count_columns"],
-                mode="index",
-                munger_name=mu.name,
-            )
-            if new_err:
-                err = consolidate_errors([err, new_err])
-                if fatal_error(new_err):
-                    return working, err
-
-        # merge with auxiliary files (if any)
-        if aux_data_path is not None:
-            # get auxiliary data (includes cleaning and setting (multi-)index of primary key column(s))
-            aux_data, new_err = mu.get_aux_data(
-                aux_data_path,
-                None,
-            )
-            if new_err:
-                err = consolidate_errors([err, new_err])
-                if fatal_error(new_err):
-                    return pd.DataFrame(), err
-            for abbrev, r in mu.aux_meta.iterrows():
-                # cast foreign key columns of main results file as int if possible
-                foreign_key = r["foreign_key"].split(",")
-                working, new_err = m.cast_cols_as_int(
-                    working, foreign_key, munger_name=mu.name
-                )
-                if new_err:
-                    err = consolidate_errors([err, new_err])
-                    if fatal_error(new_err):
-                        return working, err
-
-                # rename columns
-                col_rename = {
-                    f"{c}": f"{abbrev}[{c}]" for c in aux_data[abbrev].columns
-                }
-                # merge auxiliary info into <working>
-                a_d = aux_data[abbrev].rename(columns=col_rename)
-                working = working.merge(
-                    a_d, how="left", left_on=foreign_key, right_index=True
-                )
-
-    return working, err
-
-
 def archive_from_param_file(param_file: str, current_dir: str, archive_dir: str):
-    params, err = get_runtime_parameters(
+    params, err = get_parameters(
         required_keys=["results_file", "aux_data_dir"],
         header="election_data_analysis",
         param_file=os.path.join(current_dir, param_file),
@@ -636,85 +538,14 @@ def archive(relative_path: str, current_dir: str, archive_dir: str):
     return
 
 
-def new_datafile(
-    session,
-    munger: jm.Munger,
-    raw_path: str,
-    juris: jm.Jurisdiction,
-    results_info: dict,
-    aux_data_path: str = None,
-) -> Optional[dict]:
-    """Guide user through process of uploading data in <raw_file>
-    into common data format.
-    Assumes cdf db exists already"""
-    err = None
-    raw, err = read_combine_results(munger, raw_path, err, aux_data_path=aux_data_path)
-    if fatal_error(err):
-        return err
-    elif raw.empty:
-        err = add_new_error(
-            err,
-            "file",
-            raw_path,
-            f"No data read from file",
-        )
-        return err
-    # ensure that there is at least one count column
-    if not munger.options["count_columns"]:
-        err = add_new_error(
-            err, "munger", munger.name, f"No count_columns specified for munger"
-        )
-        return err
-    else:
-        count_columns_by_name = [
-            raw.columns[x] for x in munger.options["count_columns"] if x < raw.shape[1]
-        ]
-
-    try:
-        new_err = m.raw_elements_to_cdf(
-            session,
-            juris,
-            munger,
-            raw,
-            count_columns_by_name,
-            err,
-            constants=results_info,
-        )
-        if new_err:
-            # append munger name to jurisdiction errors/warnings key
-            keys = [x for x in new_err["warn-jurisdiction"].keys()]
-            for k in keys:
-                new_err["warn-jurisdiction"][f"{k}-{munger.name}"] = new_err[
-                    "warn-jurisdiction"
-                ].pop(k)
-            err = consolidate_errors([err, new_err])
-            if fatal_error(new_err):
-                return err
-    except Exception as exc:
-        err = add_new_error(
-            err,
-            "system",
-            "user_interface.new_datafile",
-            f"Unexpected error during munging: {exc}",
-        )
-        return err
-
-    print(
-        f"\n\tResults uploaded with munger {munger.name} "
-        f"to database {session.bind.engine}\nfrom file {raw_path}\n"
-        f"assuming jurisdiction {juris.path_to_juris_dir}"
-    )
-    return err
-
-
-def get_runtime_parameters(
-    required_keys: list,
-    param_file: str,
-    header: str,
-    err: Optional[Dict[Any, dict]] = None,
-    optional_keys: list = None,
-) -> (dict, Optional[dict]):
-    d = {}
+def get_parameters(
+        required_keys: List[str],
+        param_file: str,
+        header: str,
+        err: Optional[Dict] = None,
+        optional_keys: Optional[List[str]] = None,
+) -> (Dict[str, str], Optional[Dict[str,dict]]):
+    d = dict()
 
     # read info from file
     parser = ConfigParser()
@@ -758,12 +589,13 @@ def get_runtime_parameters(
     return d, err
 
 
-def consolidate_errors(list_of_err: list) -> Optional[Dict[Any, dict]]:
+def consolidate_errors(list_of_err: Optional[list]) -> Optional[Dict[Any, dict]]:
     """Takes two error dictionaries (assumed to have same bottom-level keys)
     and consolidates them, concatenating the error messages"""
     """Consolidate the error dictionaries in <list_of_err>. If any dictionary is None, ignore it.
     If all dictionaries are None, return None"""
-
+    if list_of_err is None:
+        return None
     # take union of all error-types appearing
     err_types = set().union(*[x.keys() for x in list_of_err if x])
     # if errs are all empty or none
@@ -901,6 +733,29 @@ def report(
     return remaining
 
 
+def fatal_to_warning(err: Optional[Dict[Any, dict]]) -> Optional[Dict[Any, dict]]:
+    """Returns the same dictionary, but with all fatal errors downgraded to nonfatal errors"""
+    non_fatal_err = None
+    for k in err.keys():
+        if k[:5] == "warn-":
+            for j in err[k].keys():
+                non_fatal_err = add_new_error(
+                    non_fatal_err,
+                    k,
+                    j,
+                    err[k][j]
+                )
+        else:
+            for j in err[k].keys():
+                non_fatal_err = add_new_error(
+                    non_fatal_err,
+                    f"warn-{k}",
+                    j,
+                    err[k][j],
+            )
+    return non_fatal_err
+
+
 def add_new_error(
     err: Optional[Dict[Any, dict]], err_type: str, key: str, msg: str
 ) -> dict:
@@ -923,6 +778,15 @@ def add_new_error(
         err[err_type][key] = [msg]
     return err
 
+
+def fatal_err_to_non(err: Optional[Dict[Any, dict]]) -> Optional[Dict[Any, dict]]:
+    """Returns the same dictionary, but with all fatal errors downgraded to nonfatal errors"""
+    non_fatal_err = err.copy()
+    for k in err.keys():
+        if k[:5] != "warn-":
+            non_fatal_err[f"warn-{k}"] = non_fatal_err.pop(k)
+
+    return non_fatal_err
 
 def fatal_error(err, error_type_list=None, name_key_list=None) -> bool:
     """Returns true if there is a fatal error in the error dictionary <err>
@@ -968,7 +832,7 @@ def create_param_file(
 
 def run_tests(
     test_dir: str, dbname: str, election_jurisdiction_list: Optional[list] = None
-) -> (dict(), int):
+) -> (dict, int):
     """move to tests directory, run tests, move back
     db_params must have host, user, pass, db_name.
     test_param_file is a reference run_time.ini file"""
@@ -991,7 +855,7 @@ def run_tests(
             if election is None and juris is not None:
                 keyword = f"{juris.replace(' ','-')}"
             elif juris is None and election is not None:
-                keyword = f"{juris.replace(' ','-')}"
+                keyword = f"{election.replace(' ','-')}"
             elif juris is not None and election is not None:
                 keyword = f"{juris.replace(' ','-')}_{election.replace(' ','-')}"
             else:
@@ -1021,7 +885,7 @@ def confirm_essential_info(
         p_path = os.path.join(directory, f)
         file_confirmed = False
         while not file_confirmed:
-            param_dict, err = get_runtime_parameters(
+            param_dict, err = get_parameters(
                 required_keys=param_list + list(known.keys()),
                 header=header,
                 param_file=p_path,
@@ -1065,7 +929,7 @@ def election_juris_list(dir_path: str) -> list:
     ej_list = []
     for f in os.listdir(dir_path):
         if f[-4:] == ".ini":
-            d, err = get_runtime_parameters(
+            d, err = get_parameters(
                 param_file=os.path.join(dir_path, f),
                 header="election_data_analysis",
                 required_keys=["election", "top_reporting_unit"],
@@ -1088,7 +952,7 @@ def reload_juris_election(
     """Assumes run_time.ini in directory, and results to be loaded are in the results_dir named in run_time.ini"""
     # initialize dataloader
     dl = e.DataLoader()
-    db_params = get_runtime_parameters(
+    db_params = get_parameters(
         ["host", "port", "dbname", "user", "password",],
         "run_time.ini",
         "postgresql",
@@ -1151,7 +1015,7 @@ def reload_juris_election(
         unloaded_directory = os.path.join(archive_directory, "unloaded")
     for f in [f for f in os.listdir(archive_directory) if f[-4:] == ".ini"]:
         param_file = os.path.join(archive_directory, f)
-        params, err = get_runtime_parameters(
+        params, err = get_parameters(
             required_keys=["election", "top_reporting_unit", "results_file"],
             header="election_data_analysis",
             param_file=param_file,

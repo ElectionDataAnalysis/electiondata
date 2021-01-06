@@ -1,0 +1,13 @@
+[format]
+file_type=excel
+munge_strings=in_field_values
+
+sheets_to_skip_names=None
+rows_to_skip=6
+
+[in_field_values]
+ReportingUnit=<first_column>
+Party={<header_0>,^.*\n(.*)$}
+CandidateContest=<constant_column_0> ({<header_0>,^.*\n(.*)$})
+Candidate={<header_0>,^(.*)\n.*$}
+CountItemType=total

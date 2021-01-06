@@ -220,7 +220,7 @@ def test_connection(paramfile="run_time.ini", dbname=None) -> (bool, dict):
     err = None
 
     try:
-        params = ui.get_runtime_parameters(
+        params = ui.get_parameters(
             required_keys=db_pars, param_file=paramfile, header="postgresql"
         )[0]
     except MissingSectionHeaderError as e:
@@ -283,7 +283,7 @@ def create_or_reset_db(
     """if no dbname is given, name will be taken from param_file"""
 
     project_root = Path(__file__).absolute().parents[1]
-    params, err = ui.get_runtime_parameters(
+    params, err = ui.get_parameters(
         required_keys=db_pars, param_file=param_file, header="postgresql"
     )
     if err:
@@ -343,7 +343,7 @@ def sql_alchemy_connect(
     param_file: str = "run_time.ini", dbname: Optional[str] = None
 ) -> (sqlalchemy.engine, Optional[dict]):
     """Returns an engine and a metadata object"""
-    params, err = ui.get_runtime_parameters(
+    params, err = ui.get_parameters(
         required_keys=db_pars, param_file=param_file, header="postgresql"
     )
     if err:
@@ -656,7 +656,7 @@ def append_id_to_dframe(
     connection.commit()
     connection.close()
     df_appended = df.join(w[["Id"]]).rename(columns={"Id": f"{element}_Id"})
-    df_appended, err_df = m.clean_ids(df_appended, "Id")
+    df_appended, err_df = m.clean_ids(df_appended, [f"{element}_Id"])
     return df_appended
 
 
@@ -1421,6 +1421,18 @@ and cruj."ParentReportingUnit_Id" = %s
     result = cursor.fetchall()
     contests = [x[0] for x in result]
     return contests
+
+
+def selection_ids_from_candidate_id(session, candidate_id):
+    connection = session.bind.raw_connection()
+    cursor = connection.cursor()
+
+    q = sql.SQL("""SELECT "Id" from "CandidateSelection" where "Candidate_Id" = %s""")
+
+    cursor.execute(q,(candidate_id,))
+    selection_id_list = [x for (x,) in cursor.fetchall()]
+
+    return selection_id_list
 
 
 def export_rollup_from_db(

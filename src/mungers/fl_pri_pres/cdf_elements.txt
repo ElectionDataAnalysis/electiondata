@@ -1,8 +1,0 @@
-name	raw_identifier_formula	source
-ReportingUnit	<CountyName>	row
-Party	<PartyName>	row
-CandidateContest	<OfficeDesc> (<PartyName>)	row
-Candidate	<CanNameLast>, <CanNameFirst> <CanNameMiddle>	row
-BallotMeasureContest	<OfficeDesc>	row
-BallotMeasureSelection	<CanNameLast>	row
-CountItemType	total	row

@@ -1,6 +1,0 @@
-name	raw_identifier_formula	source
-ReportingUnit	<Parish>;<Ward>;<Precinct>	row
-Party	{<0>,^.*\(([a-zA-Z]{3,})\)$}	column
-CandidateContest	<Office>	row
-Candidate	{<0>,^(.*)\([a-zA-Z]{3,}\)$}	column
-CountItemType	election-day	row

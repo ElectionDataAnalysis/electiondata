@@ -1,0 +1,14 @@
+[format]
+file_type=xml
+count_locations=by_field_names
+munge_strings=in_field_values
+
+encoding=ASCII
+count_fields_by_name=County.votes
+
+[in_field_values]
+ReportingUnit=<County.name>
+Party={<Choice.text>,^.* \((.*)\)$}
+CandidateContest=<Contest.text> runoff
+Candidate={<Choice.text>,^(.*) \(.*\)$}
+CountItemType=<VoteType.name>

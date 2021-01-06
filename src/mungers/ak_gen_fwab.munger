@@ -1,0 +1,16 @@
+[format]
+file_type=flat_text
+count_locations=by_column_numbers
+munge_strings=in_field_values
+
+encoding=iso-8859-1
+flat_text_delimiter=,
+count_column_numbers=5
+all_rows=data
+
+[in_field_values]
+ReportingUnit={<column_0>,^(.*)\s+Fed Overseas Absentee$}
+Party=<column_5>
+CandidateContest=<column_1>
+Candidate=<column_4>
+CountItemType={<column_0>,^HD99\s+(Fed Overseas Absentee)$}

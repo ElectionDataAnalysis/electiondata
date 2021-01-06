@@ -1,0 +1,19 @@
+[format]
+file_type=excel
+count_locations=by_column_numbers
+munge_strings=in_field_values
+
+encoding=iso-8859-1
+count_column_numbers=10
+string_field_name_row=0
+count_field_name_row=0
+sheets_to_read_numbers=0
+
+[in_field_values]
+ReportingUnit=<County>
+Party=<PartyName>
+CandidateContest=<OfficeName>
+Candidate=<CanFirstName> <CanLastName>
+BallotMeasureContest=None
+BallotMeasureSelection=None
+CountItemType=total

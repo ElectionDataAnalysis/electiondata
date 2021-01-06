@@ -3119,7 +3119,7 @@ Candidate	Ran S. Petel	Ran S. Petel
 Candidate	Eric Taylor	Eric Taylor
 Candidate	Jackie Fielder	Jackie Fielder
 Candidate	Erin Smith	Erin Smith
-Candidate	Starchild *	Starchild *
+Candidate	Starchild	Starchild *
 Candidate	John P. McDonnell	John P. McDonnell
 Candidate	Ted Howze	Ted Howze
 Candidate	Michael J. 'Mike' Barkley	Michael J. 'Mike' Barkley
@@ -3229,3 +3229,14 @@ Candidate	James Orlando Ogle	James Orlando Ogle
 Candidate	Nicholas D'Artagnan Dumas	Nicholas D'Artagnan Dumas
 Candidate	Sorinne Ardeleanu	Sorinne Ardeleanu
 Candidate	Gloria La Riva	Gloria La Riva
+Candidate	Starchild	Starchild
+Candidate	S. Monique Limón	S. Monique LimÃ³n
+Candidate	Roque 'Rocky' De La Fuente	Roque 'Rocky' De La Fuente Guerra
+Candidate	Mark Charles	Mark Charles
+Candidate	Linda T. Sánchez	Linda T. SÃ¡nchez
+Candidate	Joseph Kishore	Joseph Kishore
+Candidate	Jesse Ventura	Jesse Ventura
+Candidate	Georgette Gómez	Georgette GÃ³mez
+Candidate	Brock Pierce	Brock Pierce
+Candidate	Brian Carroll	Brian Carroll
+Candidate	Angélica María Dueñas	AngÃ©lica MarÃ­a DueÃ±as

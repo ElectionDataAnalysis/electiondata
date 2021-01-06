@@ -1,0 +1,16 @@
+[format]
+count_locations=by_field_names
+munge_strings=in_count_headers,in_field_values
+
+count_fields_by_name=Machine Votes,Absentee Votes,Total Votes
+
+[in_field_values]
+ReportingUnit=<Election District>
+Party=<Party Name>
+CandidateContest=<Contest Title> (<Party Name>)
+Candidate=<Candidate Name>
+BallotMeasureContest=<Contest Title>
+BallotMeasureSelection=<Candidate Name>
+
+[in_count_headers]
+CountItemType=<header_0>

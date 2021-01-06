@@ -469,10 +469,10 @@ CandidateContest	AR Senate District 34 (Democratic Party)	State Senate District 
 CandidateContest	AR Senate District 34 (Democratic Party)	State Senate District 34 - DEM
 CandidateContest	AR Senate District 35 (Democratic Party)	State Senate District 35 (DEM)
 CandidateContest	AR Senate District 35 (Democratic Party)	State Senate District 35 - DEM
-CandidateContest	US House AR District 1 (Democratic Party)	U.S. Congress District 1
-CandidateContest	US House AR District 2 (Democratic Party)	U.S. Congress District 2
-CandidateContest	US House AR District 3 (Democratic Party)	U.S. Congress District 3
-CandidateContest	US House AR District 4 (Democratic Party)	U.S. Congress District 4
+CandidateContest	US House AR District 1 (Democratic Party)	U.S. Congress District 1 (Dem)
+CandidateContest	US House AR District 2 (Democratic Party)	U.S. Congress District 2 (Dem)
+CandidateContest	US House AR District 3 (Democratic Party)	U.S. Congress District 3 (Dem)
+CandidateContest	US House AR District 4 (Democratic Party)	U.S. Congress District 4 (Dem)
 CandidateContest	AR House District 1 (Republican Party)	State Representative District 1 (REP)
 CandidateContest	AR House District 1 (Republican Party)	State House District 1 (REP)
 CandidateContest	AR House District 1 (Republican Party)	State Representative District 1 - REP
@@ -943,10 +943,10 @@ CandidateContest	AR Senate District 34 (Republican Party)	State Senate District 
 CandidateContest	AR Senate District 34 (Republican Party)	State Senate District 34 - REP
 CandidateContest	AR Senate District 35 (Republican Party)	State Senate District 35 (REP)
 CandidateContest	AR Senate District 35 (Republican Party)	State Senate District 35 - REP
-CandidateContest	US House AR District 1 (Republican Party)	U.S. Congress District 1
-CandidateContest	US House AR District 2 (Republican Party)	U.S. Congress District 2
-CandidateContest	US House AR District 3 (Republican Party)	U.S. Congress District 3
-CandidateContest	US House AR District 4 (Republican Party)	U.S. Congress District 4
+CandidateContest	US House AR District 1 (Republican Party)	U.S. Congress District 1 (Rep)
+CandidateContest	US House AR District 2 (Republican Party)	U.S. Congress District 2 (Rep)
+CandidateContest	US House AR District 3 (Republican Party)	U.S. Congress District 3 (Rep)
+CandidateContest	US House AR District 4 (Republican Party)	U.S. Congress District 4 (Rep)
 CandidateContest	AR House District 1 (Libertarian Party)	State Representative District 1 (LIB)
 CandidateContest	AR House District 1 (Libertarian Party)	State House District 1 (LIB)
 CandidateContest	AR House District 1 (Libertarian Party)	State Representative District 1 - LIB
@@ -1417,10 +1417,10 @@ CandidateContest	AR Senate District 34 (Libertarian Party)	State Senate District
 CandidateContest	AR Senate District 34 (Libertarian Party)	State Senate District 34 - LIB
 CandidateContest	AR Senate District 35 (Libertarian Party)	State Senate District 35 (LIB)
 CandidateContest	AR Senate District 35 (Libertarian Party)	State Senate District 35 - LIB
-CandidateContest	US House AR District 1 (Libertarian Party)	U.S. Congress District 1
-CandidateContest	US House AR District 2 (Libertarian Party)	U.S. Congress District 2
-CandidateContest	US House AR District 3 (Libertarian Party)	U.S. Congress District 3
-CandidateContest	US House AR District 4 (Libertarian Party)	U.S. Congress District 4
+CandidateContest	US House AR District 1 (Libertarian Party)	U.S. Congress District 1  (Lib)
+CandidateContest	US House AR District 2 (Libertarian Party)	U.S. Congress District 2 (Lib)
+CandidateContest	US House AR District 3 (Libertarian Party)	U.S. Congress District 3 (Lib)
+CandidateContest	US House AR District 4 (Libertarian Party)	U.S. Congress District 4 (Lib)
 CandidateContest	AR House District 1	State Representative District 1
 CandidateContest	AR House District 1	State House District 1
 CandidateContest	AR House District 2	State Representative District 2
@@ -1799,7 +1799,6 @@ ReportingUnit	Arkansas;US House AR District 1	State House District 1
 ReportingUnit	Arkansas;US House AR District 2	State House District 2
 ReportingUnit	Arkansas;US House AR District 3	State House District 3
 ReportingUnit	Arkansas;US House AR District 4	State House District 4
-ReportingUnit	Arkansas	Arkansas
 ReportingUnit	Arkansas;Arkansas County	Arkansas
 ReportingUnit	Arkansas;Ashley County	Ashley
 ReportingUnit	Arkansas;Baxter County	Baxter
@@ -2268,6 +2267,11 @@ Candidate	Meredith Switzer	Meredith Switzer
 Party	Democratic Party	DEM
 Party	Republican Party	REP
 Party	Libertarian Party	LIB
+Party	Democratic Party	Dem
+Party	Republican Party	Rep
+Party	Libertarian Party	Lib
+Party	IND	IND
+Party	NON	NON
 CandidateContest	US President (AR) (Republican Party)	U.S. President - REP
 CandidateContest	US President (AR) (Democratic Party)	U.S. President - DEM
 CandidateContest	US President (AR)	U.S. President

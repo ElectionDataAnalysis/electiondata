@@ -1,0 +1,16 @@
+[format]
+file_type=flat_text
+count_locations=by_column_numbers
+munge_strings=in_field_values,constant_over_file
+
+encoding=iso-8859-1
+flat_text_delimiter=;
+count_column_numbers=13
+all_rows=data
+constant_over_file=CountItemType
+
+[in_field_values]
+ReportingUnit=<column_1>
+Party=<column_10>
+CandidateContest=<column_4>
+Candidate=<column_7>

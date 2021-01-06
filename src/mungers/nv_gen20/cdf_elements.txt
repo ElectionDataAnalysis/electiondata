@@ -1,6 +1,0 @@
-name	raw_identifier_formula	source
-ReportingUnit	<0>	column
-Party		ini
-CandidateContest	<Contest>	row
-Candidate	<Candidate>	row
-CountItemType		ini

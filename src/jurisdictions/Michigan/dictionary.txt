@@ -1,4 +1,22 @@
 cdf_element	cdf_internal_name	raw_identifier_value
+Candidate	Tom Hoefling	Tom Hoefling
+Candidate	Tara Renee Hunter	Tara Renee Hunter
+Candidate	Stephanie L. Moore	Stephanie L. Moore
+Candidate	Shannon Ruth Hogan	Shannon Ruth Hogan
+Candidate	Ronald Lee Heeren	Ronald Lee Heeren
+Candidate	Ronald Lee Hawkins	Ronald Lee Hawkins
+Candidate	Robert William Carr	Robert William Carr
+Candidate	Richard David Fuentes	Richard David Fuentes
+Candidate	Leonard Paul Gadzinski	Leonard Paul Gadzinski
+Candidate	Kurt Allan Hausauer	Kurt Allan Hausauer
+Candidate	Kasey Wells	Kasey Wells
+Candidate	Jerry Solis	Jerry Solis
+Candidate	Jade Simmons	Jade Simmons
+Candidate	Jack Daniel Coleman	Jack Daniel Coleman
+Candidate	Douglas Allen Troszak	Douglas Allen Troszak
+Candidate	Donald Eason	Donald Eason
+Candidate	Deborah Sue LaFaive	Deborah Sue LaFaive
+Candidate	Brian T. Carroll	Brian T. Carroll
 CandidateContest	MI House District 1 (Democratic Party)	1ST DISTRICT REPRESENTATIVE IN STATE LEGISLATURE 2 YEAR TERM (1) POSITION (DEMOCRATIC PARTY)
 CandidateContest	MI House District 1 (Democratic Party)	1st District Representative in State Legislature 2 Year Term (1) Position (Democratic Party)
 CandidateContest	MI House District 1 (Democratic Party)	1ST DISTRICT REPRESENTATIVE IN STATE LEGISLATURE 2 YEAR TERM (1) POSITION FILES IN WAYNE COUNTY (DEMOCRATIC PARTY)
@@ -5406,168 +5424,6 @@ Party	Libertarian Party	LIB
 Party	U.S. Taxpayers Party	UST
 Party	Working Class Party	WCP
 Party	Natural Law Party	NLP
-ReportingUnit	Michigan;MI House District 1	Michigan;MI House District 1
-ReportingUnit	Michigan;MI House District 2	Michigan;MI House District 2
-ReportingUnit	Michigan;MI House District 3	Michigan;MI House District 3
-ReportingUnit	Michigan;MI House District 4	Michigan;MI House District 4
-ReportingUnit	Michigan;MI House District 5	Michigan;MI House District 5
-ReportingUnit	Michigan;MI House District 6	Michigan;MI House District 6
-ReportingUnit	Michigan;MI House District 7	Michigan;MI House District 7
-ReportingUnit	Michigan;MI House District 8	Michigan;MI House District 8
-ReportingUnit	Michigan;MI House District 9	Michigan;MI House District 9
-ReportingUnit	Michigan;MI House District 10	Michigan;MI House District 10
-ReportingUnit	Michigan;MI House District 11	Michigan;MI House District 11
-ReportingUnit	Michigan;MI House District 12	Michigan;MI House District 12
-ReportingUnit	Michigan;MI House District 13	Michigan;MI House District 13
-ReportingUnit	Michigan;MI House District 14	Michigan;MI House District 14
-ReportingUnit	Michigan;MI House District 15	Michigan;MI House District 15
-ReportingUnit	Michigan;MI House District 16	Michigan;MI House District 16
-ReportingUnit	Michigan;MI House District 17	Michigan;MI House District 17
-ReportingUnit	Michigan;MI House District 18	Michigan;MI House District 18
-ReportingUnit	Michigan;MI House District 19	Michigan;MI House District 19
-ReportingUnit	Michigan;MI House District 20	Michigan;MI House District 20
-ReportingUnit	Michigan;MI House District 21	Michigan;MI House District 21
-ReportingUnit	Michigan;MI House District 22	Michigan;MI House District 22
-ReportingUnit	Michigan;MI House District 23	Michigan;MI House District 23
-ReportingUnit	Michigan;MI House District 24	Michigan;MI House District 24
-ReportingUnit	Michigan;MI House District 25	Michigan;MI House District 25
-ReportingUnit	Michigan;MI House District 26	Michigan;MI House District 26
-ReportingUnit	Michigan;MI House District 27	Michigan;MI House District 27
-ReportingUnit	Michigan;MI House District 28	Michigan;MI House District 28
-ReportingUnit	Michigan;MI House District 29	Michigan;MI House District 29
-ReportingUnit	Michigan;MI House District 30	Michigan;MI House District 30
-ReportingUnit	Michigan;MI House District 31	Michigan;MI House District 31
-ReportingUnit	Michigan;MI House District 32	Michigan;MI House District 32
-ReportingUnit	Michigan;MI House District 33	Michigan;MI House District 33
-ReportingUnit	Michigan;MI House District 34	Michigan;MI House District 34
-ReportingUnit	Michigan;MI House District 35	Michigan;MI House District 35
-ReportingUnit	Michigan;MI House District 36	Michigan;MI House District 36
-ReportingUnit	Michigan;MI House District 37	Michigan;MI House District 37
-ReportingUnit	Michigan;MI House District 38	Michigan;MI House District 38
-ReportingUnit	Michigan;MI House District 39	Michigan;MI House District 39
-ReportingUnit	Michigan;MI House District 40	Michigan;MI House District 40
-ReportingUnit	Michigan;MI House District 41	Michigan;MI House District 41
-ReportingUnit	Michigan;MI House District 42	Michigan;MI House District 42
-ReportingUnit	Michigan;MI House District 43	Michigan;MI House District 43
-ReportingUnit	Michigan;MI House District 44	Michigan;MI House District 44
-ReportingUnit	Michigan;MI House District 45	Michigan;MI House District 45
-ReportingUnit	Michigan;MI House District 46	Michigan;MI House District 46
-ReportingUnit	Michigan;MI House District 47	Michigan;MI House District 47
-ReportingUnit	Michigan;MI House District 48	Michigan;MI House District 48
-ReportingUnit	Michigan;MI House District 49	Michigan;MI House District 49
-ReportingUnit	Michigan;MI House District 50	Michigan;MI House District 50
-ReportingUnit	Michigan;MI House District 51	Michigan;MI House District 51
-ReportingUnit	Michigan;MI House District 52	Michigan;MI House District 52
-ReportingUnit	Michigan;MI House District 53	Michigan;MI House District 53
-ReportingUnit	Michigan;MI House District 54	Michigan;MI House District 54
-ReportingUnit	Michigan;MI House District 55	Michigan;MI House District 55
-ReportingUnit	Michigan;MI House District 56	Michigan;MI House District 56
-ReportingUnit	Michigan;MI House District 57	Michigan;MI House District 57
-ReportingUnit	Michigan;MI House District 58	Michigan;MI House District 58
-ReportingUnit	Michigan;MI House District 59	Michigan;MI House District 59
-ReportingUnit	Michigan;MI House District 60	Michigan;MI House District 60
-ReportingUnit	Michigan;MI House District 61	Michigan;MI House District 61
-ReportingUnit	Michigan;MI House District 62	Michigan;MI House District 62
-ReportingUnit	Michigan;MI House District 63	Michigan;MI House District 63
-ReportingUnit	Michigan;MI House District 64	Michigan;MI House District 64
-ReportingUnit	Michigan;MI House District 65	Michigan;MI House District 65
-ReportingUnit	Michigan;MI House District 66	Michigan;MI House District 66
-ReportingUnit	Michigan;MI House District 67	Michigan;MI House District 67
-ReportingUnit	Michigan;MI House District 68	Michigan;MI House District 68
-ReportingUnit	Michigan;MI House District 69	Michigan;MI House District 69
-ReportingUnit	Michigan;MI House District 70	Michigan;MI House District 70
-ReportingUnit	Michigan;MI House District 71	Michigan;MI House District 71
-ReportingUnit	Michigan;MI House District 72	Michigan;MI House District 72
-ReportingUnit	Michigan;MI House District 73	Michigan;MI House District 73
-ReportingUnit	Michigan;MI House District 74	Michigan;MI House District 74
-ReportingUnit	Michigan;MI House District 75	Michigan;MI House District 75
-ReportingUnit	Michigan;MI House District 76	Michigan;MI House District 76
-ReportingUnit	Michigan;MI House District 77	Michigan;MI House District 77
-ReportingUnit	Michigan;MI House District 78	Michigan;MI House District 78
-ReportingUnit	Michigan;MI House District 79	Michigan;MI House District 79
-ReportingUnit	Michigan;MI House District 80	Michigan;MI House District 80
-ReportingUnit	Michigan;MI House District 81	Michigan;MI House District 81
-ReportingUnit	Michigan;MI House District 82	Michigan;MI House District 82
-ReportingUnit	Michigan;MI House District 83	Michigan;MI House District 83
-ReportingUnit	Michigan;MI House District 84	Michigan;MI House District 84
-ReportingUnit	Michigan;MI House District 85	Michigan;MI House District 85
-ReportingUnit	Michigan;MI House District 86	Michigan;MI House District 86
-ReportingUnit	Michigan;MI House District 87	Michigan;MI House District 87
-ReportingUnit	Michigan;MI House District 88	Michigan;MI House District 88
-ReportingUnit	Michigan;MI House District 89	Michigan;MI House District 89
-ReportingUnit	Michigan;MI House District 90	Michigan;MI House District 90
-ReportingUnit	Michigan;MI House District 91	Michigan;MI House District 91
-ReportingUnit	Michigan;MI House District 92	Michigan;MI House District 92
-ReportingUnit	Michigan;MI House District 93	Michigan;MI House District 93
-ReportingUnit	Michigan;MI House District 94	Michigan;MI House District 94
-ReportingUnit	Michigan;MI House District 95	Michigan;MI House District 95
-ReportingUnit	Michigan;MI House District 96	Michigan;MI House District 96
-ReportingUnit	Michigan;MI House District 97	Michigan;MI House District 97
-ReportingUnit	Michigan;MI House District 98	Michigan;MI House District 98
-ReportingUnit	Michigan;MI House District 99	Michigan;MI House District 99
-ReportingUnit	Michigan;MI House District 100	Michigan;MI House District 100
-ReportingUnit	Michigan;MI House District 101	Michigan;MI House District 101
-ReportingUnit	Michigan;MI House District 102	Michigan;MI House District 102
-ReportingUnit	Michigan;MI House District 103	Michigan;MI House District 103
-ReportingUnit	Michigan;MI House District 104	Michigan;MI House District 104
-ReportingUnit	Michigan;MI House District 105	Michigan;MI House District 105
-ReportingUnit	Michigan;MI House District 106	Michigan;MI House District 106
-ReportingUnit	Michigan;MI House District 107	Michigan;MI House District 107
-ReportingUnit	Michigan;MI House District 108	Michigan;MI House District 108
-ReportingUnit	Michigan;MI House District 109	Michigan;MI House District 109
-ReportingUnit	Michigan;MI House District 110	Michigan;MI House District 110
-ReportingUnit	Michigan;MI Senate District 1	Michigan;MI Senate District 1
-ReportingUnit	Michigan;MI Senate District 2	Michigan;MI Senate District 2
-ReportingUnit	Michigan;MI Senate District 3	Michigan;MI Senate District 3
-ReportingUnit	Michigan;MI Senate District 4	Michigan;MI Senate District 4
-ReportingUnit	Michigan;MI Senate District 5	Michigan;MI Senate District 5
-ReportingUnit	Michigan;MI Senate District 6	Michigan;MI Senate District 6
-ReportingUnit	Michigan;MI Senate District 7	Michigan;MI Senate District 7
-ReportingUnit	Michigan;MI Senate District 8	Michigan;MI Senate District 8
-ReportingUnit	Michigan;MI Senate District 9	Michigan;MI Senate District 9
-ReportingUnit	Michigan;MI Senate District 10	Michigan;MI Senate District 10
-ReportingUnit	Michigan;MI Senate District 11	Michigan;MI Senate District 11
-ReportingUnit	Michigan;MI Senate District 12	Michigan;MI Senate District 12
-ReportingUnit	Michigan;MI Senate District 13	Michigan;MI Senate District 13
-ReportingUnit	Michigan;MI Senate District 14	Michigan;MI Senate District 14
-ReportingUnit	Michigan;MI Senate District 15	Michigan;MI Senate District 15
-ReportingUnit	Michigan;MI Senate District 16	Michigan;MI Senate District 16
-ReportingUnit	Michigan;MI Senate District 17	Michigan;MI Senate District 17
-ReportingUnit	Michigan;MI Senate District 18	Michigan;MI Senate District 18
-ReportingUnit	Michigan;MI Senate District 19	Michigan;MI Senate District 19
-ReportingUnit	Michigan;MI Senate District 20	Michigan;MI Senate District 20
-ReportingUnit	Michigan;MI Senate District 21	Michigan;MI Senate District 21
-ReportingUnit	Michigan;MI Senate District 22	Michigan;MI Senate District 22
-ReportingUnit	Michigan;MI Senate District 23	Michigan;MI Senate District 23
-ReportingUnit	Michigan;MI Senate District 24	Michigan;MI Senate District 24
-ReportingUnit	Michigan;MI Senate District 25	Michigan;MI Senate District 25
-ReportingUnit	Michigan;MI Senate District 26	Michigan;MI Senate District 26
-ReportingUnit	Michigan;MI Senate District 27	Michigan;MI Senate District 27
-ReportingUnit	Michigan;MI Senate District 28	Michigan;MI Senate District 28
-ReportingUnit	Michigan;MI Senate District 29	Michigan;MI Senate District 29
-ReportingUnit	Michigan;MI Senate District 30	Michigan;MI Senate District 30
-ReportingUnit	Michigan;MI Senate District 31	Michigan;MI Senate District 31
-ReportingUnit	Michigan;MI Senate District 32	Michigan;MI Senate District 32
-ReportingUnit	Michigan;MI Senate District 33	Michigan;MI Senate District 33
-ReportingUnit	Michigan;MI Senate District 34	Michigan;MI Senate District 34
-ReportingUnit	Michigan;MI Senate District 35	Michigan;MI Senate District 35
-ReportingUnit	Michigan;MI Senate District 36	Michigan;MI Senate District 36
-ReportingUnit	Michigan;MI Senate District 37	Michigan;MI Senate District 37
-ReportingUnit	Michigan;MI Senate District 38	Michigan;MI Senate District 38
-ReportingUnit	Michigan;US House MI District 1	Michigan;US House MI District 1
-ReportingUnit	Michigan;US House MI District 2	Michigan;US House MI District 2
-ReportingUnit	Michigan;US House MI District 3	Michigan;US House MI District 3
-ReportingUnit	Michigan;US House MI District 4	Michigan;US House MI District 4
-ReportingUnit	Michigan;US House MI District 5	Michigan;US House MI District 5
-ReportingUnit	Michigan;US House MI District 6	Michigan;US House MI District 6
-ReportingUnit	Michigan;US House MI District 7	Michigan;US House MI District 7
-ReportingUnit	Michigan;US House MI District 8	Michigan;US House MI District 8
-ReportingUnit	Michigan;US House MI District 9	Michigan;US House MI District 9
-ReportingUnit	Michigan;US House MI District 10	Michigan;US House MI District 10
-ReportingUnit	Michigan;US House MI District 11	Michigan;US House MI District 11
-ReportingUnit	Michigan;US House MI District 12	Michigan;US House MI District 12
-ReportingUnit	Michigan;US House MI District 13	Michigan;US House MI District 13
-ReportingUnit	Michigan;US House MI District 14	Michigan;US House MI District 14
 ReportingUnit	Michigan	Michigan
 ReportingUnit	Michigan;Alcona County	ALCONA
 ReportingUnit	Michigan;Alger County	ALGER

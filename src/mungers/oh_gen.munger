@@ -1,0 +1,15 @@
+[format]
+file_type=excel
+munge_strings=in_field_values
+
+sheets_to_skip_names=Contents,Statewide Offices,President,U.S. Congress,General Assembly,State Board of Education,Judicial
+rows_to_skip=0
+
+[in_field_values]
+ReportingUnit=<first_column>
+Party={<header_1>,^.* \((.*)\)[^\)\n]*$}
+CandidateContest=<header_0>
+Candidate={<header_1>,^(.*) \(.*\)[^\)\n]*$}
+BallotMeasureContest=<header_0>
+BallotMeasureSelection=<header_1>
+CountItemType=total

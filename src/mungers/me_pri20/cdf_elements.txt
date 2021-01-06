@@ -1,8 +1,0 @@
-name	raw_identifier_formula	source
-ReportingUnit	<CTY>;<TOWN>	row
-Party		ini
-CandidateContest		ini
-Candidate	<0>	column
-BallotMeasureContest		ini
-BallotMeasureSelection	<0>	column
-CountItemType	not-uocava	row

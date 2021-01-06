@@ -204,501 +204,520 @@ Maine;Somerset County	county
 Maine;Waldo County	county
 Maine;Washington County	county
 Maine;York County	county
-Maine;Cumberland County;BALDWIN	precinct
-Maine;Cumberland County;BRIDGTON	precinct
-Maine;Cumberland County;BRUNSWICK	precinct
-Maine;Cumberland County;CAPE ELIZABETH	precinct
-Maine;Cumberland County;CASCO	precinct
-Maine;Cumberland County;CHEBEAGUE ISLAND	precinct
-Maine;Cumberland County;CUMBERLAND	precinct
-Maine;Cumberland County;FALMOUTH	precinct
-Maine;Cumberland County;FREEPORT	precinct
-Maine;Cumberland County;FRYE ISLAND	precinct
-Maine;Cumberland County;GORHAM	precinct
-Maine;Cumberland County;GRAY	precinct
-Maine;Cumberland County;HARPSWELL	precinct
-Maine;Cumberland County;HARRISON	precinct
-Maine;Cumberland County;LONG ISLAND	precinct
-Maine;Cumberland County;NAPLES	precinct
-Maine;Cumberland County;NEW GLOUCESTER	precinct
-Maine;Cumberland County;NORTH YARMOUTH	precinct
-Maine;Cumberland County;PORTLAND	precinct
-Maine;Cumberland County;POWNAL	precinct
-Maine;Cumberland County;RAYMOND	precinct
-Maine;Cumberland County;SCARBOROUGH	precinct
-Maine;Cumberland County;SEBAGO	precinct
-Maine;Cumberland County;SOUTH PORTLAND	precinct
-Maine;Cumberland County;STANDISH	precinct
-Maine;Cumberland County;WESTBROOK	precinct
-Maine;Cumberland County;WINDHAM	precinct
-Maine;Cumberland County;YARMOUTH	precinct
-nan;COUNTY TOTALS	precinct
-Maine;Kennebec County;AUGUSTA	precinct
-Maine;Kennebec County;CHELSEA	precinct
-Maine;Kennebec County;CHINA	precinct
-Maine;Kennebec County;FARMINGDALE	precinct
-Maine;Kennebec County;HALLOWELL	precinct
-Maine;Kennebec County;MANCHESTER	precinct
-Maine;Kennebec County;PITTSTON	precinct
-Maine;Kennebec County;READFIELD	precinct
-Maine;Kennebec County;VASSALBORO	precinct
-Maine;Kennebec County;WATERVILLE	precinct
-Maine;Kennebec County;WINDSOR	precinct
-Maine;Kennebec County;WINSLOW	precinct
-Maine;Kennebec County;WINTHROP	precinct
-Maine;Knox County;APPLETON	precinct
-Maine;Knox County;CAMDEN	precinct
-Maine;Knox County;CUSHING	precinct
-Maine;Knox County;FRIENDSHIP	precinct
-Maine;Knox County;HOPE	precinct
-Maine;Knox County;ISLE AU HAUT	precinct
-Maine;Knox County;MATINICUS ISLE PLT	precinct
-Maine;Knox County;NORTH HAVEN	precinct
-Maine;Knox County;OWLS HEAD	precinct
-Maine;Knox County;ROCKLAND	precinct
-Maine;Knox County;ROCKPORT	precinct
-Maine;Knox County;SAINT GEORGE	precinct
-Maine;Knox County;SOUTH THOMASTON	precinct
-Maine;Knox County;THOMASTON	precinct
-Maine;Knox County;UNION	precinct
-Maine;Knox County;VINALHAVEN	precinct
-Maine;Knox County;WARREN	precinct
-Maine;Knox County;WASHINGTON	precinct
-Maine;Lincoln County;ALNA	precinct
-Maine;Lincoln County;BOOTHBAY	precinct
-Maine;Lincoln County;BOOTHBAY HARBOR	precinct
-Maine;Lincoln County;BREMEN	precinct
-Maine;Lincoln County;BRISTOL	precinct
-Maine;Lincoln County;DAMARISCOTTA	precinct
-Maine;Lincoln County;DRESDEN	precinct
-Maine;Lincoln County;EDGECOMB	precinct
-Maine;Lincoln County;JEFFERSON	precinct
-Maine;Lincoln County;MONHEGAN ISLAND PLT	precinct
-Maine;Lincoln County;NEWCASTLE	precinct
-Maine;Lincoln County;NOBLEBORO	precinct
-Maine;Lincoln County;SOMERVILLE	precinct
-Maine;Lincoln County;SOUTH BRISTOL	precinct
-Maine;Lincoln County;SOUTHPORT	precinct
-Maine;Lincoln County;WALDOBORO	precinct
-Maine;Lincoln County;WESTPORT ISLAND	precinct
-Maine;Lincoln County;WHITEFIELD	precinct
-Maine;Lincoln County;WISCASSET	precinct
-Maine;Sagadahoc County;ARROWSIC	precinct
-Maine;Sagadahoc County;BATH	precinct
-Maine;Sagadahoc County;BOWDOIN	precinct
-Maine;Sagadahoc County;BOWDOINHAM	precinct
-Maine;Sagadahoc County;GEORGETOWN	precinct
-Maine;Sagadahoc County;PHIPPSBURG	precinct
-Maine;Sagadahoc County;RICHMOND	precinct
-Maine;Sagadahoc County;TOPSHAM	precinct
-Maine;Sagadahoc County;WEST BATH	precinct
-Maine;Sagadahoc County;WOOLWICH	precinct
-Maine;York County;ACTON	precinct
-Maine;York County;ALFRED	precinct
-Maine;York County;ARUNDEL	precinct
-Maine;York County;BERWICK	precinct
-Maine;York County;BIDDEFORD	precinct
-Maine;York County;BUXTON	precinct
-Maine;York County;CORNISH	precinct
-Maine;York County;DAYTON	precinct
-Maine;York County;ELIOT	precinct
-Maine;York County;HOLLIS	precinct
-Maine;York County;KENNEBUNK	precinct
-Maine;York County;KENNEBUNKPORT	precinct
-Maine;York County;KITTERY	precinct
-Maine;York County;LEBANON	precinct
-Maine;York County;LIMERICK	precinct
-Maine;York County;LIMINGTON	precinct
-Maine;York County;LYMAN	precinct
-Maine;York County;NEWFIELD	precinct
-Maine;York County;NORTH BERWICK	precinct
-Maine;York County;OGUNQUIT	precinct
-Maine;York County;OLD ORCHARD BEACH	precinct
-Maine;York County;PARSONSFIELD	precinct
-Maine;York County;SACO	precinct
-Maine;York County;SANFORD	precinct
-Maine;York County;SHAPLEIGH	precinct
-Maine;York County;SOUTH BERWICK	precinct
-Maine;York County;WATERBORO	precinct
-Maine;York County;WELLS	precinct
-Maine;York County;YORK	precinct
-nan;UOCAVA -- CG 1	precinct
-nan;CG 1 TOTALS	precinct
-Maine;Androscoggin County;AUBURN	precinct
-Maine;Androscoggin County;DURHAM	precinct
-Maine;Androscoggin County;GREENE	precinct
-Maine;Androscoggin County;LEEDS	precinct
-Maine;Androscoggin County;LEWISTON	precinct
-Maine;Androscoggin County;LISBON	precinct
-Maine;Androscoggin County;LIVERMORE	precinct
-Maine;Androscoggin County;LIVERMORE FALLS	precinct
-Maine;Androscoggin County;MECHANIC FALLS	precinct
-Maine;Androscoggin County;MINOT	precinct
-Maine;Androscoggin County;POLAND	precinct
-Maine;Androscoggin County;SABATTUS	precinct
-Maine;Androscoggin County;TURNER	precinct
-Maine;Androscoggin County;WALES	precinct
-Maine;Aroostook County;ALLAGASH	precinct
-Maine;Aroostook County;AMITY	precinct
-Maine;Aroostook County;ASHLAND	precinct
-Maine;Aroostook County;BLAINE	precinct
-Maine;Aroostook County;BRIDGEWATER	precinct
-Maine;Aroostook County;CARIBOU	precinct
-Maine;Aroostook County;CASTLE HILL	precinct
-Maine;Aroostook County;CASWELL	precinct
-Maine;Aroostook County;CHAPMAN	precinct
-Maine;Aroostook County;CRYSTAL	precinct
-Maine;Aroostook County;CYR PLT	precinct
-Maine;Aroostook County;DYER BROOK	precinct
-Maine;Aroostook County;EAGLE LAKE	precinct
-Maine;Aroostook County;EASTON	precinct
-Maine;Aroostook County;FORT FAIRFIELD	precinct
-Maine;Aroostook County;FORT KENT	precinct
-Maine;Aroostook County;FRENCHVILLE	precinct
-Maine;Aroostook County;GARFIELD PLT	precinct
-Maine;Aroostook County;GLENWOOD PLT	precinct
-Maine;Aroostook County;GRAND ISLE	precinct
-Maine;Aroostook County;HAMLIN	precinct
-Maine;Aroostook County;HAMMOND	precinct
-Maine;Aroostook County;HAYNESVILLE	precinct
-Maine;Aroostook County;HERSEY	precinct
-Maine;Aroostook County;HODGDON	precinct
-Maine;Aroostook County;HOULTON	precinct
-Maine;Aroostook County;ISLAND FALLS	precinct
-Maine;Aroostook County;LIMESTONE	precinct
-Maine;Aroostook County;LINNEUS	precinct
-Maine;Aroostook County;LITTLETON	precinct
-Maine;Aroostook County;LUDLOW	precinct
-Maine;Aroostook County;MACWAHOC PLT	precinct
-Maine;Aroostook County;MADAWASKA	precinct
-Maine;Aroostook County;MADAWASKA LAKE TWP	precinct
-Maine;Aroostook County;MAPLETON	precinct
-Maine;Aroostook County;MARS HILL	precinct
-Maine;Aroostook County;MASARDIS	precinct
-Maine;Aroostook County;MERRILL	precinct
-Maine;Aroostook County;MONTICELLO	precinct
-Maine;Aroostook County;MORO PLT	precinct
-Maine;Aroostook County;NASHVILLE PLT	precinct
-Maine;Aroostook County;NEW CANADA	precinct
-Maine;Aroostook County;NEW LIMERICK	precinct
-Maine;Aroostook County;NEW SWEDEN	precinct
-Maine;Aroostook County;OAKFIELD	precinct
-Maine;Aroostook County;ORIENT	precinct
-Maine;Aroostook County;PERHAM	precinct
-Maine;Aroostook County;PORTAGE LAKE	precinct
-Maine;Aroostook County;PRESQUE ISLE	precinct
-Maine;Aroostook County;REED PLT	precinct
-Maine;Aroostook County;SAINT AGATHA	precinct
-Maine;Aroostook County;SAINT FRANCIS	precinct
-Maine;Aroostook County;SAINT JOHN PLT	precinct
-Maine;Aroostook County;SHERMAN	precinct
-Maine;Aroostook County;SMYRNA	precinct
-Maine;Aroostook County;STOCKHOLM	precinct
-Maine;Aroostook County;VAN BUREN	precinct
-Maine;Aroostook County;WADE	precinct
-Maine;Aroostook County;WALLAGRASS	precinct
-Maine;Aroostook County;WASHBURN	precinct
-Maine;Aroostook County;WESTFIELD	precinct
-Maine;Aroostook County;WESTMANLAND	precinct
-Maine;Aroostook County;WESTON	precinct
-Maine;Aroostook County;WINTERVILLE PLT	precinct
-Maine;Aroostook County;WOODLAND	precinct
-Maine;Franklin County;AVON	precinct
-Maine;Franklin County;CARRABASSETT VALLEY	precinct
-Maine;Franklin County;CARTHAGE	precinct
-Maine;Franklin County;CHESTERVILLE	precinct
-Maine;Franklin County;COPLIN PLT	precinct
-Maine;Franklin County;DALLAS PLT	precinct
-Maine;Franklin County;EUSTIS	precinct
-Maine;Franklin County;FARMINGTON	precinct
-Maine;Franklin County;INDUSTRY	precinct
-Maine;Franklin County;JAY	precinct
-Maine;Franklin County;KINGFIELD	precinct
-Maine;Franklin County;NEW SHARON	precinct
-Maine;Franklin County;NEW VINEYARD	precinct
-Maine;Franklin County;PHILLIPS	precinct
-Maine;Franklin County;RANGELEY	precinct
-Maine;Franklin County;RANGELEY PLT	precinct
-Maine;Franklin County;SANDY RIVER PLT	precinct
-Maine;Franklin County;STRONG	precinct
-Maine;Franklin County;TEMPLE	precinct
-Maine;Franklin County;WELD	precinct
-Maine;Franklin County;WILTON	precinct
-Maine;Hancock County;AMHERST	precinct
-Maine;Hancock County;AURORA	precinct
-Maine;Hancock County;BAR HARBOR	precinct
-Maine;Hancock County;BLUE HILL	precinct
-Maine;Hancock County;BROOKLIN	precinct
-Maine;Hancock County;BROOKSVILLE	precinct
-Maine;Hancock County;BUCKSPORT	precinct
-Maine;Hancock County;CASTINE	precinct
-Maine;Hancock County;CRANBERRY ISLES	precinct
-Maine;Hancock County;DEDHAM	precinct
-Maine;Hancock County;DEER ISLE	precinct
-Maine;Hancock County;EASTBROOK	precinct
-Maine;Hancock County;ELLSWORTH	precinct
-Maine;Hancock County;FRANKLIN	precinct
-Maine;Hancock County;FRENCHBORO	precinct
-Maine;Hancock County;GOULDSBORO	precinct
-Maine;Hancock County;GREAT POND	precinct
-Maine;Hancock County;HANCOCK	precinct
-Maine;Hancock County;LAMOINE	precinct
-Maine;Hancock County;MARIAVILLE	precinct
-Maine;Hancock County;MOUNT DESERT	precinct
-Maine;Hancock County;ORLAND	precinct
-Maine;Hancock County;OSBORN	precinct
-Maine;Hancock County;OTIS	precinct
-Maine;Hancock County;PENOBSCOT	precinct
-Maine;Hancock County;SEDGWICK	precinct
-Maine;Hancock County;SORRENTO	precinct
-Maine;Hancock County;SOUTHWEST HARBOR	precinct
-Maine;Hancock County;STONINGTON	precinct
-Maine;Hancock County;SULLIVAN	precinct
-Maine;Hancock County;SURRY	precinct
-Maine;Hancock County;SWANS ISLAND	precinct
-Maine;Hancock County;TREMONT	precinct
-Maine;Hancock County;TRENTON	precinct
-Maine;Hancock County;VERONA ISLAND	precinct
-Maine;Hancock County;WALTHAM	precinct
-Maine;Hancock County;WINTER HARBOR	precinct
-Maine;Kennebec County;ALBION	precinct
-Maine;Kennebec County;BELGRADE	precinct
-Maine;Kennebec County;BENTON	precinct
-Maine;Kennebec County;CLINTON	precinct
-Maine;Kennebec County;FAYETTE	precinct
-Maine;Kennebec County;GARDINER	precinct
-Maine;Kennebec County;LITCHFIELD	precinct
-Maine;Kennebec County;MONMOUTH	precinct
-Maine;Kennebec County;MOUNT VERNON	precinct
-Maine;Kennebec County;OAKLAND	precinct
-Maine;Kennebec County;RANDOLPH	precinct
-Maine;Kennebec County;ROME	precinct
-Maine;Kennebec County;SIDNEY	precinct
-Maine;Kennebec County;VIENNA	precinct
-Maine;Kennebec County;WAYNE	precinct
-Maine;Kennebec County;WEST GARDINER	precinct
-Maine;Oxford County;ALBANY TWP	precinct
-Maine;Oxford County;ANDOVER	precinct
-Maine;Oxford County;BETHEL	precinct
-Maine;Oxford County;BROWNFIELD	precinct
-Maine;Oxford County;BUCKFIELD	precinct
-Maine;Oxford County;BYRON	precinct
-Maine;Oxford County;CANTON	precinct
-Maine;Oxford County;DENMARK	precinct
-Maine;Oxford County;DIXFIELD	precinct
-Maine;Oxford County;FRYEBURG	precinct
-Maine;Oxford County;GILEAD	precinct
-Maine;Oxford County;GREENWOOD	precinct
-Maine;Oxford County;HANOVER	precinct
-Maine;Oxford County;HARTFORD	precinct
-Maine;Oxford County;HEBRON	precinct
-Maine;Oxford County;HIRAM	precinct
-Maine;Oxford County;LINCOLN PLT	precinct
-Maine;Oxford County;LOVELL	precinct
-Maine;Oxford County;MAGALLOWAY PLT	precinct
-Maine;Oxford County;MEXICO	precinct
-Maine;Oxford County;MILTON TOWNSHIP (WOODSTOCK)	precinct
-Maine;Oxford County;NEWRY	precinct
-Maine;Oxford County;NORWAY	precinct
-Maine;Oxford County;OTISFIELD	precinct
-Maine;Oxford County;OXFORD	precinct
-Maine;Oxford County;PARIS	precinct
-Maine;Oxford County;PERU	precinct
-Maine;Oxford County;PORTER	precinct
-Maine;Oxford County;ROXBURY	precinct
-Maine;Oxford County;RUMFORD	precinct
-Maine;Oxford County;STONEHAM	precinct
-Maine;Oxford County;STOW	precinct
-Maine;Oxford County;SUMNER	precinct
-Maine;Oxford County;SWEDEN	precinct
-Maine;Oxford County;UPTON	precinct
-Maine;Oxford County;WATERFORD	precinct
-Maine;Oxford County;WEST PARIS	precinct
-Maine;Oxford County;WOODSTOCK	precinct
-Maine;Penobscot County;ALTON	precinct
-Maine;Penobscot County;BANGOR	precinct
-Maine;Penobscot County;BRADFORD	precinct
-Maine;Penobscot County;BRADLEY	precinct
-Maine;Penobscot County;BREWER	precinct
-Maine;Penobscot County;BURLINGTON	precinct
-Maine;Penobscot County;CARMEL	precinct
-Maine;Penobscot County;CARROLL PLT	precinct
-Maine;Penobscot County;CHARLESTON	precinct
-Maine;Penobscot County;CHESTER	precinct
-Maine;Penobscot County;CLIFTON	precinct
-Maine;Penobscot County;CORINNA	precinct
-Maine;Penobscot County;CORINTH	precinct
-Maine;Penobscot County;DEXTER	precinct
-Maine;Penobscot County;DIXMONT	precinct
-Maine;Penobscot County;DREW PLT	precinct
-Maine;Penobscot County;EAST MILLINOCKET	precinct
-Maine;Penobscot County;EDDINGTON	precinct
-Maine;Penobscot County;EDINBURG	precinct
-Maine;Penobscot County;ENFIELD	precinct
-Maine;Penobscot County;ETNA	precinct
-Maine;Penobscot County;EXETER	precinct
-Maine;Penobscot County;GARLAND	precinct
-Maine;Penobscot County;GLENBURN	precinct
-Maine;Penobscot County;GREENBUSH	precinct
-Maine;Penobscot County;HAMPDEN	precinct
-Maine;Penobscot County;HERMON	precinct
-Maine;Penobscot County;HOLDEN	precinct
-Maine;Penobscot County;HOWLAND	precinct
-Maine;Penobscot County;HUDSON	precinct
-Maine;Penobscot County;KENDUSKEAG	precinct
-Maine;Penobscot County;KINGMAN TWP	precinct
-Maine;Penobscot County;LAGRANGE	precinct
-Maine;Penobscot County;LAKEVILLE	precinct
-Maine;Penobscot County;LEE	precinct
-Maine;Penobscot County;LEVANT	precinct
-Maine;Penobscot County;LINCOLN	precinct
-Maine;Penobscot County;LOWELL	precinct
-Maine;Penobscot County;MATTAWAMKEAG	precinct
-Maine;Penobscot County;MAXFIELD	precinct
-Maine;Penobscot County;MEDWAY	precinct
-Maine;Penobscot County;MILFORD	precinct
-Maine;Penobscot County;MILLINOCKET	precinct
-Maine;Penobscot County;MILLINOCKET PENOBSCOT TWPS	precinct
-Maine;Penobscot County;MOUNT CHASE	precinct
-Maine;Penobscot County;NEWBURGH	precinct
-Maine;Penobscot County;NEWPORT	precinct
-Maine;Penobscot County;OLD TOWN	precinct
-Maine;Penobscot County;ORONO	precinct
-Maine;Penobscot County;ORRINGTON	precinct
-Maine;Penobscot County;PASSADUMKEAG	precinct
-Maine;Penobscot County;PATTEN	precinct
-Maine;Penobscot County;PENOBSCOT NATION VOTING DISTRICT	precinct
-Maine;Penobscot County;PLYMOUTH	precinct
-Maine;Penobscot County;PRENTISS TWP	precinct
-Maine;Penobscot County;SEBOEIS PLT	precinct
-Maine;Penobscot County;SPRINGFIELD	precinct
-Maine;Penobscot County;STACYVILLE	precinct
-Maine;Penobscot County;STETSON	precinct
-Maine;Penobscot County;VEAZIE	precinct
-Maine;Penobscot County;WEBSTER PLT	precinct
-Maine;Penobscot County;WINN	precinct
-Maine;Penobscot County;WOODVILLE	precinct
-Maine;Piscataquis County;ABBOT	precinct
-Maine;Piscataquis County;BEAVER COVE	precinct
-Maine;Piscataquis County;BOWERBANK	precinct
-Maine;Piscataquis County;BROWNVILLE	precinct
-Maine;Piscataquis County;DOVER-FOXCROFT	precinct
-Maine;Piscataquis County;GREENVILLE	precinct
-Maine;Piscataquis County;GUILFORD	precinct
-Maine;Piscataquis County;KINGSBURY PLT	precinct
-Maine;Piscataquis County;LAKE VIEW PLT	precinct
-Maine;Piscataquis County;MEDFORD	precinct
-Maine;Piscataquis County;MILLINOCKET PISCATAQUIS TWPS	precinct
-Maine;Piscataquis County;MILO	precinct
-Maine;Piscataquis County;MONSON	precinct
-Maine;Piscataquis County;PARKMAN	precinct
-Maine;Piscataquis County;SANGERVILLE	precinct
-Maine;Piscataquis County;SEBEC (INC ATKINSON TWP)	precinct
-Maine;Piscataquis County;SHIRLEY	precinct
-Maine;Piscataquis County;WELLINGTON	precinct
-Maine;Piscataquis County;WILLIMANTIC	precinct
-Maine;Somerset County;ANSON	precinct
-Maine;Somerset County;ATHENS	precinct
-Maine;Somerset County;BINGHAM	precinct
-Maine;Somerset County;BRIGHTON PLT	precinct
-Maine;Somerset County;CAMBRIDGE	precinct
-Maine;Somerset County;CANAAN	precinct
-Maine;Somerset County;CARATUNK	precinct
-Maine;Somerset County;CORNVILLE	precinct
-Maine;Somerset County;DENNISTOWN PLT	precinct
-Maine;Somerset County;DETROIT	precinct
-Maine;Somerset County;EMBDEN	precinct
-Maine;Somerset County;FAIRFIELD	precinct
-Maine;Somerset County;HARMONY	precinct
-Maine;Somerset County;HARTLAND	precinct
-Maine;Somerset County;HIGHLAND PLT	precinct
-Maine;Somerset County;JACKMAN	precinct
-Maine;Somerset County;MADISON	precinct
-Maine;Somerset County;MERCER	precinct
-Maine;Somerset County;MOOSE RIVER	precinct
-Maine;Somerset County;MOSCOW	precinct
-Maine;Somerset County;NEW PORTLAND	precinct
-Maine;Somerset County;NORRIDGEWOCK	precinct
-Maine;Somerset County;PALMYRA	precinct
-Maine;Somerset County;PITTSFIELD	precinct
-Maine;Somerset County;PLEASANT RIDGE PLT	precinct
-Maine;Somerset County;RIPLEY	precinct
-Maine;Somerset County;ROCKWOOD STRIP TWP	precinct
-Maine;Somerset County;SAINT ALBANS	precinct
-Maine;Somerset County;SKOWHEGAN	precinct
-Maine;Somerset County;SMITHFIELD	precinct
-Maine;Somerset County;SOLON	precinct
-Maine;Somerset County;STARKS	precinct
-Maine;Somerset County;THE FORKS PLT	precinct
-Maine;Somerset County;WEST FORKS PLT	precinct
-Maine;Waldo County;BELFAST	precinct
-Maine;Waldo County;BELMONT	precinct
-Maine;Waldo County;BROOKS	precinct
-Maine;Waldo County;BURNHAM	precinct
-Maine;Waldo County;FRANKFORT	precinct
-Maine;Waldo County;FREEDOM	precinct
-Maine;Waldo County;ISLESBORO	precinct
-Maine;Waldo County;JACKSON	precinct
-Maine;Waldo County;KNOX	precinct
-Maine;Waldo County;LIBERTY	precinct
-Maine;Waldo County;LINCOLNVILLE	precinct
-Maine;Waldo County;MONROE	precinct
-Maine;Waldo County;MONTVILLE	precinct
-Maine;Waldo County;MORRILL	precinct
-Maine;Waldo County;NORTHPORT	precinct
-Maine;Waldo County;PALERMO	precinct
-Maine;Waldo County;PROSPECT	precinct
-Maine;Waldo County;SEARSMONT	precinct
-Maine;Waldo County;SEARSPORT	precinct
-Maine;Waldo County;STOCKTON SPRINGS	precinct
-Maine;Waldo County;SWANVILLE	precinct
-Maine;Waldo County;THORNDIKE	precinct
-Maine;Waldo County;TROY	precinct
-Maine;Waldo County;UNITY	precinct
-Maine;Waldo County;WALDO	precinct
-Maine;Waldo County;WINTERPORT	precinct
-Maine;Washington County;ADDISON	precinct
-Maine;Washington County;ALEXANDER	precinct
-Maine;Washington County;BAILEYVILLE	precinct
-Maine;Washington County;BARING PLT	precinct
-Maine;Washington County;BEALS	precinct
-Maine;Washington County;BEDDINGTON	precinct
-Maine;Washington County;CALAIS	precinct
-Maine;Washington County;CHARLOTTE	precinct
-Maine;Washington County;CHERRYFIELD	precinct
-Maine;Washington County;COLUMBIA	precinct
-Maine;Washington County;COLUMBIA FALLS	precinct
-Maine;Washington County;COOPER	precinct
-Maine;Washington County;CRAWFORD	precinct
-Maine;Washington County;CUTLER	precinct
-Maine;Washington County;DANFORTH (INC BROOKTON TWP)	precinct
-Maine;Washington County;DEBLOIS	precinct
-Maine;Washington County;DENNYSVILLE (INC EDMUNDS TWP)	precinct
-Maine;Washington County;EAST MACHIAS	precinct
-Maine;Washington County;EASTPORT	precinct
-Maine;Washington County;GRAND LAKE STREAM PLT	precinct
-Maine;Washington County;HARRINGTON	precinct
-Maine;Washington County;INDIAN TOWNSHIP	precinct
-Maine;Washington County;JONESBORO	precinct
-Maine;Washington County;JONESPORT	precinct
-Maine;Washington County;LUBEC	precinct
-Maine;Washington County;MACHIAS	precinct
-Maine;Washington County;MACHIASPORT	precinct
-Maine;Washington County;MARSHFIELD	precinct
-Maine;Washington County;MEDDYBEMPS	precinct
-Maine;Washington County;MILBRIDGE	precinct
-Maine;Washington County;NORTHFIELD	precinct
-Maine;Washington County;PEMBROKE	precinct
-Maine;Washington County;PERRY	precinct
-Maine;Washington County;PLEASANT POINT VOTING DISTRICT	precinct
-Maine;Washington County;PRINCETON	precinct
-Maine;Washington County;ROBBINSTON	precinct
-Maine;Washington County;ROQUE BLUFFS	precinct
-Maine;Washington County;STEUBEN	precinct
-Maine;Washington County;TALMADGE	precinct
-Maine;Washington County;TOPSFIELD	precinct
-Maine;Washington County;VANCEBORO	precinct
-Maine;Washington County;WAITE	precinct
-Maine;Washington County;WESLEY	precinct
-Maine;Washington County;WHITING	precinct
-Maine;Washington County;WHITNEYVILLE	precinct
+Maine;Cumberland County;Baldwin	municipality
+Maine;Cumberland County;Bridgton	municipality
+Maine;Cumberland County;Brunswick	municipality
+Maine;Cumberland County;Cape Elizabeth	municipality
+Maine;Cumberland County;Casco	municipality
+Maine;Cumberland County;Chebeague Island	municipality
+Maine;Cumberland County;Cumberland	municipality
+Maine;Cumberland County;Falmouth	municipality
+Maine;Cumberland County;Freeport	municipality
+Maine;Cumberland County;Frye Island	municipality
+Maine;Cumberland County;Gorham	municipality
+Maine;Cumberland County;Gray	municipality
+Maine;Cumberland County;Harpswell	municipality
+Maine;Cumberland County;Harrison	municipality
+Maine;Cumberland County;Long Island	municipality
+Maine;Cumberland County;Naples	municipality
+Maine;Cumberland County;New Gloucester	municipality
+Maine;Cumberland County;North Yarmouth	municipality
+Maine;Cumberland County;Portland	municipality
+Maine;Cumberland County;Pownal	municipality
+Maine;Cumberland County;Raymond	municipality
+Maine;Cumberland County;Scarborough	municipality
+Maine;Cumberland County;Sebago	municipality
+Maine;Cumberland County;South Portland	municipality
+Maine;Cumberland County;Standish	municipality
+Maine;Cumberland County;Westbrook	municipality
+Maine;Cumberland County;Windham	municipality
+Maine;Cumberland County;Yarmouth	municipality
+Maine;Kennebec County;Augusta	municipality
+Maine;Kennebec County;Chelsea	municipality
+Maine;Kennebec County;China	municipality
+Maine;Kennebec County;Farmingdale	municipality
+Maine;Kennebec County;Hallowell	municipality
+Maine;Kennebec County;Manchester	municipality
+Maine;Kennebec County;Pittston	municipality
+Maine;Kennebec County;Readfield	municipality
+Maine;Kennebec County;Vassalboro	municipality
+Maine;Kennebec County;Waterville	municipality
+Maine;Kennebec County;Windsor	municipality
+Maine;Kennebec County;Winslow	municipality
+Maine;Kennebec County;Winthrop	municipality
+Maine;Knox County;Appleton	municipality
+Maine;Knox County;Camden	municipality
+Maine;Knox County;Cushing	municipality
+Maine;Knox County;Friendship	municipality
+Maine;Knox County;Hope	municipality
+Maine;Knox County;Isle Au Haut	municipality
+Maine;Knox County;Matinicus Isle Plt	municipality
+Maine;Knox County;North Haven	municipality
+Maine;Knox County;Owls Head	municipality
+Maine;Knox County;Rockland	municipality
+Maine;Knox County;Rockport	municipality
+Maine;Knox County;Saint George	municipality
+Maine;Knox County;South Thomaston	municipality
+Maine;Knox County;Thomaston	municipality
+Maine;Knox County;Union	municipality
+Maine;Knox County;Vinalhaven	municipality
+Maine;Knox County;Warren	municipality
+Maine;Knox County;Washington	municipality
+Maine;Lincoln County;Alna	municipality
+Maine;Lincoln County;Boothbay	municipality
+Maine;Lincoln County;Boothbay Harbor	municipality
+Maine;Lincoln County;Bremen	municipality
+Maine;Lincoln County;Bristol	municipality
+Maine;Lincoln County;Damariscotta	municipality
+Maine;Lincoln County;Dresden	municipality
+Maine;Lincoln County;Edgecomb	municipality
+Maine;Lincoln County;Jefferson	municipality
+Maine;Lincoln County;Monhegan Island Plt	municipality
+Maine;Lincoln County;Newcastle	municipality
+Maine;Lincoln County;Nobleboro	municipality
+Maine;Lincoln County;Somerville	municipality
+Maine;Lincoln County;South Bristol	municipality
+Maine;Lincoln County;Southport	municipality
+Maine;Lincoln County;Waldoboro	municipality
+Maine;Lincoln County;Westport Island	municipality
+Maine;Lincoln County;Whitefield	municipality
+Maine;Lincoln County;Wiscasset	municipality
+Maine;Sagadahoc County;Arrowsic	municipality
+Maine;Sagadahoc County;Bath	municipality
+Maine;Sagadahoc County;Bowdoin	municipality
+Maine;Sagadahoc County;Bowdoinham	municipality
+Maine;Sagadahoc County;Georgetown	municipality
+Maine;Sagadahoc County;Phippsburg	municipality
+Maine;Sagadahoc County;Richmond	municipality
+Maine;Sagadahoc County;Topsham	municipality
+Maine;Sagadahoc County;West Bath	municipality
+Maine;Sagadahoc County;Woolwich	municipality
+Maine;York County;Acton	municipality
+Maine;York County;Alfred	municipality
+Maine;York County;Arundel	municipality
+Maine;York County;Berwick	municipality
+Maine;York County;Biddeford	municipality
+Maine;York County;Buxton	municipality
+Maine;York County;Cornish	municipality
+Maine;York County;Dayton	municipality
+Maine;York County;Eliot	municipality
+Maine;York County;Hollis	municipality
+Maine;York County;Kennebunk	municipality
+Maine;York County;Kennebunkport	municipality
+Maine;York County;Kittery	municipality
+Maine;York County;Lebanon	municipality
+Maine;York County;Limerick	municipality
+Maine;York County;Limington	municipality
+Maine;York County;Lyman	municipality
+Maine;York County;Newfield	municipality
+Maine;York County;North Berwick	municipality
+Maine;York County;Ogunquit	municipality
+Maine;York County;Old Orchard Beach	municipality
+Maine;York County;Parsonsfield	municipality
+Maine;York County;Saco	municipality
+Maine;York County;Sanford	municipality
+Maine;York County;Shapleigh	municipality
+Maine;York County;South Berwick	municipality
+Maine;York County;Waterboro	municipality
+Maine;York County;Wells	municipality
+Maine;York County;York	municipality
+Maine;Androscoggin County;Auburn	municipality
+Maine;Androscoggin County;Durham	municipality
+Maine;Androscoggin County;Greene	municipality
+Maine;Androscoggin County;Leeds	municipality
+Maine;Androscoggin County;Lewiston	municipality
+Maine;Androscoggin County;Lisbon	municipality
+Maine;Androscoggin County;Livermore	municipality
+Maine;Androscoggin County;Livermore Falls	municipality
+Maine;Androscoggin County;Mechanic Falls	municipality
+Maine;Androscoggin County;Minot	municipality
+Maine;Androscoggin County;Poland	municipality
+Maine;Androscoggin County;Sabattus	municipality
+Maine;Androscoggin County;Turner	municipality
+Maine;Androscoggin County;Wales	municipality
+Maine;Aroostook County;Allagash	municipality
+Maine;Aroostook County;Amity	municipality
+Maine;Aroostook County;Ashland/T8 R11 Twp	municipality
+Maine;Aroostook County;Blaine	municipality
+Maine;Aroostook County;Bridgewater	municipality
+Maine;Aroostook County;Caribou/Connor Twp	municipality
+Maine;Aroostook County;Castle Hill	municipality
+Maine;Aroostook County;Caswell	municipality
+Maine;Aroostook County;Chapman	municipality
+Maine;Aroostook County;Cross Lake Twp	municipality
+Maine;Aroostook County;Crystal	municipality
+Maine;Aroostook County;Cyr Plt	municipality
+Maine;Aroostook County;Dyer Brook	municipality
+Maine;Aroostook County;E Twp	municipality
+Maine;Aroostook County;Eagle Lake/T15 R6 Twp	municipality
+Maine;Aroostook County;Easton	municipality
+Maine;Aroostook County;Fort Fairfield	municipality
+Maine;Aroostook County;Fort Kent/Big Twenty Twp/T15 R15 Wels	municipality
+Maine;Aroostook County;Frenchville	municipality
+Maine;Aroostook County;Garfield Plt	municipality
+Maine;Aroostook County;Glenwood Plt	municipality
+Maine;Aroostook County;Grand Isle	municipality
+Maine;Aroostook County;Hamlin	municipality
+Maine;Aroostook County;Hammond	municipality
+Maine;Aroostook County;Haynesville	municipality
+Maine;Aroostook County;Hersey	municipality
+Maine;Aroostook County;Hodgdon	municipality
+Maine;Aroostook County;Houlton	municipality
+Maine;Aroostook County;Island Falls	municipality
+Maine;Aroostook County;Limestone	municipality
+Maine;Aroostook County;Linneus	municipality
+Maine;Aroostook County;Littleton	municipality
+Maine;Aroostook County;Ludlow	municipality
+Maine;Aroostook County;Macwahoc Plt	municipality
+Maine;Aroostook County;Madawaska	municipality
+Maine;Aroostook County;Madawaska Lake	municipality
+Maine;Aroostook County;Mapleton	municipality
+Maine;Aroostook County;Mars Hill	municipality
+Maine;Aroostook County;Masardis	municipality
+Maine;Aroostook County;Merrill	municipality
+Maine;Aroostook County;Monticello	municipality
+Maine;Aroostook County;Moro Plt	municipality
+Maine;Aroostook County;Nashville Plt	municipality
+Maine;Aroostook County;New Canada	municipality
+Maine;Aroostook County;New Limerick	municipality
+Maine;Aroostook County;New Sweden	municipality
+Maine;Aroostook County;Oakfield	municipality
+Maine;Aroostook County;Orient	municipality
+Maine;Aroostook County;Oxbow North Twp	municipality
+Maine;Aroostook County;Perham	municipality
+Maine;Aroostook County;Portage Lake	municipality
+Maine;Aroostook County;Presque Isle	municipality
+Maine;Aroostook County;Reed Plt	municipality
+Maine;Aroostook County;Saint Agatha/Sinclair	municipality
+Maine;Aroostook County;Saint Francis	municipality
+Maine;Aroostook County;Saint John Plt	municipality
+Maine;Aroostook County;Sherman/Benedicta/Silver Ridge	municipality
+Maine;Aroostook County;Smyrna	municipality
+Maine;Aroostook County;Stockholm	municipality
+Maine;Aroostook County;T11 R4 WELS	municipality
+Maine;Aroostook County;T15 R6 WELS TWP	municipality
+Maine;Aroostook County;T4 R3 Twp	municipality
+Maine;Aroostook County;TD R2 TWP	municipality
+Maine;Aroostook County;Van Buren/Van Buren Cove	municipality
+Maine;Aroostook County;Wade	municipality
+Maine;Aroostook County;Wallagrass	municipality
+Maine;Aroostook County;Washburn	municipality
+Maine;Aroostook County;Westfield	municipality
+Maine;Aroostook County;Westmanland	municipality
+Maine;Aroostook County;Weston	municipality
+Maine;Aroostook County;Winterville Plt.	municipality
+Maine;Aroostook County;Woodland	municipality
+Maine;Franklin County;Avon	municipality
+Maine;Franklin County;Carrabassett Valley/Wyman Twp	municipality
+Maine;Franklin County;Carthage	municipality
+Maine;Franklin County;Chesterville	municipality
+Maine;Franklin County;Coplin Plt	municipality
+Maine;Franklin County;Dallas Plt	municipality
+Maine;Franklin County;Eustis	municipality
+Maine;Franklin County;Farmington	municipality
+Maine;Franklin County;Industry	municipality
+Maine;Franklin County;Jay	municipality
+Maine;Franklin County;Kingfield	municipality
+Maine;Franklin County;New Sharon	municipality
+Maine;Franklin County;New Vineyard	municipality
+Maine;Franklin County;Perkins Twp	municipality
+Maine;Franklin County;Phillips	municipality
+Maine;Franklin County;Rangeley/Adamstown Twp	municipality
+Maine;Franklin County;Rangeley Plt	municipality
+Maine;Franklin County;Sandy River Plt	municipality
+Maine;Franklin County;Strong/Freeman Twp	municipality
+Maine;Franklin County;Temple	municipality
+Maine;Franklin County;Weld	municipality
+Maine;Franklin County;Wilton/Washington Twp	municipality
+Maine;Franklin County;Wyman Twp	municipality
+Maine;Hancock County;Amherst	municipality
+Maine;Hancock County;Aurora	municipality
+Maine;Hancock County;Bar Harbor	municipality
+Maine;Hancock County;Blue Hill	municipality
+Maine;Hancock County;Brooklin	municipality
+Maine;Hancock County;Brooksville	municipality
+Maine;Hancock County;Bucksport	municipality
+Maine;Hancock County;Castine	municipality
+Maine;Hancock County;Cranberry Isles	municipality
+Maine;Hancock County;Dedham	municipality
+Maine;Hancock County;Deer Isle	municipality
+Maine;Hancock County;Eastbrook	municipality
+Maine;Hancock County;Ellsworth	municipality
+Maine;Hancock County;Franklin/T9 T10 SD	municipality
+Maine;Hancock County;Frenchboro	municipality
+Maine;Hancock County;Gouldsboro	municipality
+Maine;Hancock County;Great Pond	municipality
+Maine;Hancock County;Hancock	municipality
+Maine;Hancock County;Lamoine	municipality
+Maine;Hancock County;Mariaville	municipality
+Maine;Hancock County;Mount Desert	municipality
+Maine;Hancock County;Orland	municipality
+Maine;Hancock County;Osborn	municipality
+Maine;Hancock County;Otis	municipality
+Maine;Hancock County;Penobscot	municipality
+Maine;Hancock County;Sedgwick	municipality
+Maine;Hancock County;Sorrento	municipality
+Maine;Hancock County;Southwest Harbor	municipality
+Maine;Hancock County;Stonington	municipality
+Maine;Hancock County;Sullivan	municipality
+Maine;Hancock County;Surry	municipality
+Maine;Hancock County;Swans Island	municipality
+Maine;Hancock County;T22 MD Twp	municipality
+Maine;Hancock County;T3 ND Twp	municipality
+Maine;Hancock County;Tremont	municipality
+Maine;Hancock County;Trenton	municipality
+Maine;Hancock County;Verona Island	municipality
+Maine;Hancock County;Waltham	municipality
+Maine;Hancock County;Winter Harbor	municipality
+Maine;Kennebec County;Albion	municipality
+Maine;Kennebec County;Belgrade	municipality
+Maine;Kennebec County;Benton	municipality
+Maine;Kennebec County;Clinton	municipality
+Maine;Kennebec County;Fayette	municipality
+Maine;Kennebec County;Gardiner	municipality
+Maine;Kennebec County;Litchfield	municipality
+Maine;Kennebec County;Monmouth	municipality
+Maine;Kennebec County;Mount Vernon	municipality
+Maine;Kennebec County;Oakland	municipality
+Maine;Kennebec County;Randolph	municipality
+Maine;Kennebec County;Rome	municipality
+Maine;Kennebec County;Sidney	municipality
+Maine;Kennebec County;Vienna	municipality
+Maine;Kennebec County;Wayne	municipality
+Maine;Kennebec County;West Gardiner	municipality
+Maine;Oxford County;Albany Twp	municipality
+Maine;Oxford County;Andover	municipality
+Maine;Oxford County;Bethel/Mason Twp	municipality
+Maine;Oxford County;Brownfield	municipality
+Maine;Oxford County;Buckfield	municipality
+Maine;Oxford County;Byron	municipality
+Maine;Oxford County;Canton	municipality
+Maine;Oxford County;Denmark	municipality
+Maine;Oxford County;Dixfield	municipality
+Maine;Oxford County;Fryeburg	municipality
+Maine;Oxford County;Gilead	municipality
+Maine;Oxford County;Greenwood	municipality
+Maine;Oxford County;Hanover	municipality
+Maine;Oxford County;Hartford	municipality
+Maine;Oxford County;Hebron	municipality
+Maine;Oxford County;Hiram	municipality
+Maine;Oxford County;Lincoln Plt	municipality
+Maine;Oxford County;Lovell	municipality
+Maine;Oxford County;Magalloway Plt	municipality
+Maine;Oxford County;Mexico	municipality
+Maine;Oxford County;Newry	municipality
+Maine;Oxford County;Norway	municipality
+Maine;Oxford County;Otisfield	municipality
+Maine;Oxford County;Oxford	municipality
+Maine;Oxford County;Paris	municipality
+Maine;Oxford County;Peru	municipality
+Maine;Oxford County;Porter	municipality
+Maine;Oxford County;Roxbury	municipality
+Maine;Oxford County;Rumford	municipality
+Maine;Oxford County;Stoneham	municipality
+Maine;Oxford County;Stow	municipality
+Maine;Oxford County;Sumner	municipality
+Maine;Oxford County;Sweden	municipality
+Maine;Oxford County;Upton	municipality
+Maine;Oxford County;Waterford	municipality
+Maine;Oxford County;West Paris	municipality
+Maine;Oxford County;Woodstock/Milton Twp	municipality
+Maine;Penobscot County;Alton	municipality
+Maine;Penobscot County;Argyle Twp	municipality
+Maine;Penobscot County;Bangor	municipality
+Maine;Penobscot County;Bradford	municipality
+Maine;Penobscot County;Bradley	municipality
+Maine;Penobscot County;Brewer	municipality
+Maine;Penobscot County;Burlington	municipality
+Maine;Penobscot County;Carmel	municipality
+Maine;Penobscot County;Carroll Plt	municipality
+Maine;Penobscot County;Charleston	municipality
+Maine;Penobscot County;Chester	municipality
+Maine;Penobscot County;Clifton	municipality
+Maine;Penobscot County;Corinna	municipality
+Maine;Penobscot County;Corinth	municipality
+Maine;Penobscot County;Dexter	municipality
+Maine;Penobscot County;Dixmont	municipality
+Maine;Penobscot County;Drew Plt	municipality
+Maine;Penobscot County;East Millinocket	municipality
+Maine;Penobscot County;Eddington	municipality
+Maine;Penobscot County;Edinburg	municipality
+Maine;Penobscot County;Enfield	municipality
+Maine;Penobscot County;Etna	municipality
+Maine;Penobscot County;Exeter	municipality
+Maine;Penobscot County;Garland	municipality
+Maine;Penobscot County;Glenburn	municipality
+Maine;Penobscot County;Grand Falls Twp	municipality
+Maine;Penobscot County;Greenbush	municipality
+Maine;Penobscot County;Hampden	municipality
+Maine;Penobscot County;Hermon	municipality
+Maine;Penobscot County;Herseytown Twp	municipality
+Maine;Penobscot County;Holden	municipality
+Maine;Penobscot County;Howland	municipality
+Maine;Penobscot County;Hudson	municipality
+Maine;Penobscot County;Kenduskeag	municipality
+Maine;Penobscot County;Kingman Twp	municipality
+Maine;Penobscot County;Lagrange/Orneville Twp	municipality
+Maine;Penobscot County;Lakeville	municipality
+Maine;Penobscot County;Lee	municipality
+Maine;Penobscot County;Levant	municipality
+Maine;Penobscot County;Lincoln	municipality
+Maine;Penobscot County;Lowell	municipality
+Maine;Penobscot County;Mattamiscontis Twp	municipality
+Maine;Penobscot County;Mattawamkeag/Molunkus Twp	municipality
+Maine;Penobscot County;Maxfield	municipality
+Maine;Penobscot County;Medway/Townships	municipality
+Maine;Penobscot County;Milford/Greenfield Twp	municipality
+Maine;Penobscot County;Millinocket	municipality
+Maine;Penobscot County;Millinocket Penobscot Twps	municipality
+Maine;Penobscot County;Mount Chase	municipality
+Maine;Penobscot County;Newburgh	municipality
+Maine;Penobscot County;Newport	municipality
+Maine;Penobscot County;Old Town/Argyle Twp	municipality
+Maine;Penobscot County;Orono	municipality
+Maine;Penobscot County;Orrington	municipality
+Maine;Penobscot County;Passadumkeag	municipality
+Maine;Penobscot County;Patten	municipality
+Maine;Penobscot County;Penobscot Nation Voting District	municipality
+Maine;Penobscot County;Plymouth	municipality
+Maine;Penobscot County;Prentiss Twp	municipality
+Maine;Penobscot County;Seboeis Plt	municipality
+Maine;Penobscot County;Springfield	municipality
+Maine;Penobscot County;Stacyville	municipality
+Maine;Penobscot County;Stetson	municipality
+Maine;Penobscot County;T5 R7 Twp/T5 R8 Twp/T6 R8 Twp	municipality
+Maine;Penobscot County;Veazie	municipality
+Maine;Penobscot County;Webster Plt	municipality
+Maine;Penobscot County;Winn	municipality
+Maine;Penobscot County;Woodville	municipality
+Maine;Piscataquis County;Abbot	municipality
+Maine;Piscataquis County;Beaver Cove	municipality
+Maine;Piscataquis County;Bowerbank	municipality
+Maine;Piscataquis County;Brownville/Twps	municipality
+Maine;Piscataquis County;Dover-Foxcroft	municipality
+Maine;Piscataquis County;Greenville	municipality
+Maine;Piscataquis County;Guilford/Kingsbury Plt	municipality
+Maine;Piscataquis County;Lake View Plt	municipality
+Maine;Piscataquis County;Medford	municipality
+Maine;Piscataquis County;Millinocket Piscataquis Twps	municipality
+Maine;Piscataquis County;Milo/Orneville Twp	municipality
+Maine;Piscataquis County;Monson/Elliotsville Twp	municipality
+Maine;Piscataquis County;Parkman	municipality
+Maine;Piscataquis County;Sangerville	municipality
+Maine;Piscataquis County;Sebec	municipality
+Maine;Piscataquis County;Shirley	municipality
+Maine;Piscataquis County;Wellington	municipality
+Maine;Piscataquis County;Willimantic	municipality
+Maine;Somerset County;Anson	municipality
+Maine;Somerset County;Athens	municipality
+Maine;Somerset County;Bingham	municipality
+Maine;Somerset County;Brighton Plt	municipality
+Maine;Somerset County;Cambridge	municipality
+Maine;Somerset County;Canaan	municipality
+Maine;Somerset County;Caratunk	municipality
+Maine;Somerset County;Cornville	municipality
+Maine;Somerset County;Dennistown Plt	municipality
+Maine;Somerset County;Detroit	municipality
+Maine;Somerset County;Embden	municipality
+Maine;Somerset County;Fairfield	municipality
+Maine;Somerset County;Harmony	municipality
+Maine;Somerset County;Hartland	municipality
+Maine;Somerset County;Highland Plt	municipality
+Maine;Somerset County;Jackman	municipality
+Maine;Somerset County;Lexington Twp/Spring Lake Twp	municipality
+Maine;Somerset County;Madison	municipality
+Maine;Somerset County;Mercer	municipality
+Maine;Somerset County;Moose River	municipality
+Maine;Somerset County;Moscow	municipality
+Maine;Somerset County;New Portland	municipality
+Maine;Somerset County;Norridgewock	municipality
+Maine;Somerset County;Palmyra	municipality
+Maine;Somerset County;Pittsfield	municipality
+Maine;Somerset County;Pleasant Ridge Plt	municipality
+Maine;Somerset County;Ripley	municipality
+Maine;Somerset County;Rockwood Strip Twp	municipality
+Maine;Somerset County;Saint Albans	municipality
+Maine;Somerset County;Skowhegan	municipality
+Maine;Somerset County;Smithfield	municipality
+Maine;Somerset County;Solon/Concord Twp	municipality
+Maine;Somerset County;Spring Lake Twp	municipality
+Maine;Somerset County;Starks	municipality
+Maine;Somerset County;The Forks Plt	municipality
+Maine;Somerset County;West Forks Plt	municipality
+Maine;Waldo County;Belfast	municipality
+Maine;Waldo County;Belmont	municipality
+Maine;Waldo County;Brooks	municipality
+Maine;Waldo County;Burnham	municipality
+Maine;Waldo County;Frankfort	municipality
+Maine;Waldo County;Freedom	municipality
+Maine;Waldo County;Islesboro	municipality
+Maine;Waldo County;Jackson	municipality
+Maine;Waldo County;Knox	municipality
+Maine;Waldo County;Liberty	municipality
+Maine;Waldo County;Lincolnville	municipality
+Maine;Waldo County;Monroe	municipality
+Maine;Waldo County;Montville	municipality
+Maine;Waldo County;Morrill	municipality
+Maine;Waldo County;Northport	municipality
+Maine;Waldo County;Palermo	municipality
+Maine;Waldo County;Prospect	municipality
+Maine;Waldo County;Searsmont	municipality
+Maine;Waldo County;Searsport	municipality
+Maine;Waldo County;Stockton Springs	municipality
+Maine;Waldo County;Swanville	municipality
+Maine;Waldo County;Thorndike	municipality
+Maine;Waldo County;Troy	municipality
+Maine;Waldo County;Unity	municipality
+Maine;Waldo County;Waldo	municipality
+Maine;Waldo County;Winterport	municipality
+Maine;Washington County;Addison	municipality
+Maine;Washington County;Alexander	municipality
+Maine;Washington County;Baileyville	municipality
+Maine;Washington County;Baring Plt	municipality
+Maine;Washington County;Beals	municipality
+Maine;Washington County;Beddington	municipality
+Maine;Washington County;Calais	municipality
+Maine;Washington County;Cathance Twp	municipality
+Maine;Washington County;Centerville Twp	municipality
+Maine;Washington County;Charlotte	municipality
+Maine;Washington County;Cherryfield/T10	municipality
+Maine;Washington County;Columbia	municipality
+Maine;Washington County;Columbia Falls	municipality
+Maine;Washington County;Cooper	municipality
+Maine;Washington County;Crawford	municipality
+Maine;Washington County;Cutler	municipality
+Maine;Washington County;Danforth	municipality
+Maine;Washington County;Deblois	municipality
+Maine;Washington County;Dennysville	municipality
+Maine;Washington County;East Machias/Twps	municipality
+Maine;Washington County;Eastport	municipality
+Maine;Washington County;Grand Lake Stream Plt	municipality
+Maine;Washington County;Harrington	municipality
+Maine;Washington County;Indian Township	municipality
+Maine;Washington County;Jonesboro	municipality
+Maine;Washington County;Jonesport	municipality
+Maine;Washington County;Lubec	municipality
+Maine;Washington County;Machias	municipality
+Maine;Washington County;Machiasport	municipality
+Maine;Washington County;Marshfield	municipality
+Maine;Washington County;Meddybemps	municipality
+Maine;Washington County;Milbridge/T10	municipality
+Maine;Washington County;Northfield	municipality
+Maine;Washington County;Pembroke	municipality
+Maine;Washington County;Perry	municipality
+Maine;Washington County;Pleasant Point Voting District	municipality
+Maine;Washington County;Princeton	municipality
+Maine;Washington County;Robbinston	municipality
+Maine;Washington County;Roque Bluffs	municipality
+Maine;Washington County;Sakom Twp	municipality
+Maine;Washington County;Steuben/T7SD	municipality
+Maine;Washington County;T26 ED BPP	municipality
+Maine;Washington County;Talmadge	municipality
+Maine;Washington County;Topsfield	municipality
+Maine;Washington County;Vanceboro	municipality
+Maine;Washington County;Waite	municipality
+Maine;Washington County;Wesley	municipality
+Maine;Washington County;Whiting	municipality
+Maine;Washington County;Whitneyville	municipality
+Maine;Piscataquis County;Atkinson Township	municipality
+Maine;Piscataquis County;Milo/Ornveille Twp	municipality

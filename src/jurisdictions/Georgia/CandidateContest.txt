@@ -251,6 +251,8 @@ US House GA District 13	1	US House GA District 13
 US House GA District 14	1	US House GA District 14	
 US President (GA)	1	US President (GA)	
 GA Governor	1	GA Governor	
+US Senate GA (runoff)	1	US Senate GA	
+US Senate GA (partial term runoff)	1	US Senate GA
 US Senate GA	1	US Senate GA	
 US Senate GA (partial term)	1	US Senate GA
 GA Attorney General	1	GA Attorney General

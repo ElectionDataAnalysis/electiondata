@@ -1,13 +1,74 @@
+import inspect
+from pathlib import Path
+import election_data_analysis as eda
 from election_data_analysis import database as db
 from election_data_analysis import user_interface as ui
 from election_data_analysis import juris_and_munger as jm
 import pandas as pd
 from pandas.api.types import is_numeric_dtype
-from typing import Optional, List, Dict
+from typing import Optional, List, Dict, Any
 import re
 import os
-import numpy as np
 from sqlalchemy.orm.session import Session
+
+# constants
+req_munger_params: Dict[str, str] = {
+    "file_type": "string",
+    "count_locations": "string",
+    "munge_strings": "list-of-strings",
+}
+
+opt_munger_params: Dict[str, str] = {
+    "sheets_to_read_names": "list-of-strings",
+    "sheets_to_skip_names": "list-of-strings",
+    "sheets_to_read_numbers": "list-of-integers",
+    "sheets_to_skip_names_numbers": "list-of-integers",
+    "rows_to_skip": "integer",
+    "flat_text_delimiter": "string",
+    "quoting": "string",
+    "thousands_separator": "string",
+    "encoding": "string",
+    "count_fields_by_name": "list-of-strings",
+    "count_field_name_row": "int",  # TODO allow multi-rows here?
+    "count_column_numbers": "list-of-integers",
+    "count_header_row_numbers": "list-of-integers",
+    "string_field_column_numbers": "list-of-integers",
+    "string_field_name_row": "int",
+    "all_rows": "string",
+    "constant_over_file": "list-of-strings",
+    "nesting_tags": "list-of-strings",
+}
+
+munger_dependent_reqs: Dict[str, Dict[str, List[str]]] = {
+    "file_type": {"flat_text": ["flat_text_delimiter"]},
+    "count_locations": {
+        "by_field_names": ["count_fields_by_name"],
+        "by_column_numbers": ["count_column_numbers"],
+    },
+}
+
+req_munger_param_values: Dict[str, List[str]] = {
+    "munge_strings": ["in_field_values", "in_count_headers", "constant_over_file", "constant_over_sheet"],
+    "count_locations": ["by_field_names", "by_column_numbers"],
+    "file_type": ["excel", "json-nested", "xml", "flat_text"],
+}
+
+string_location_reqs: Dict[str, List[str]] = {
+    "in_field_values": [],
+    "in_count_headers": ["count_header_row_numbers"],
+    "constant_over_file": [],
+    "constant_over_sheet": ["constant_over_sheet"],
+}
+
+all_munge_elements = [
+    "BallotMeasureContest",
+    "CandidateContest",
+    "BallotMeasureSelection",
+    "Candidate",
+    "Party",
+    "ReportingUnit",
+    "CountItemType",
+]
 
 
 def clean_count_cols(
@@ -16,7 +77,8 @@ def clean_count_cols(
     thousands: Optional[str] = None
 ) -> (pd.DataFrame, pd.DataFrame):
     """Casts the given columns as integers, replacing any bad
-    values with 0 and reporting a dataframe of any rows so changed."""
+    values with 0 and reporting a dataframe of any rows so changed.
+    If <thousands> separator is given, check for it"""
     if cols is None:
         return df, pd.DataFrame(columns=df.columns)
     else:
@@ -48,6 +110,9 @@ def clean_ids(
     """changes only the columns to of numeric type; changes them
     to integer, with any nulls changed to 0. Reports a dataframe of
     any rows so changed. Non-numeric-type columns are changed to all 0"""
+
+    if cols == list():
+        return df, pd.DataFrame()
     err_df = pd.DataFrame()
     working = df.copy()
     for c in cols:
@@ -68,8 +133,15 @@ def clean_strings(
 ) -> pd.DataFrame():
 
     working = df.copy()
+
     for c in cols:
-        if c in working.columns:
+        # cast all specified columns as strings
+        try:
+            working[c] = working[c].astype("string")
+        except Exception as exc:
+            print(f"Could not convert column {c} to strings")
+
+        if c in cols:
             # change nulls to the empty string
             working[c] = working[c].fillna("")
             # replace any double quotes with single quotes
@@ -82,7 +154,7 @@ def clean_strings(
             try:
                 # strip extraneous whitespace from any value recognized as string
                 mask = working[c].apply(lambda x: isinstance(x,str))
-                working.loc[mask,c] = working[c][mask].apply(compress_whitespace)
+                working.loc[mask, c] = working[c][mask].apply(compress_whitespace)
             except (AttributeError, TypeError):
                 pass
     return working
@@ -138,7 +210,7 @@ def cast_cols_as_int(
         err = ui.add_new_error(
             err,
             "system",
-            "munge.cast_cols_as_int",
+            f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
             f"Mode {mode} not recognized",
         )
         return df, err
@@ -153,45 +225,6 @@ def cast_cols_as_int(
                 f"{error_msg}\nColumn {c} cannot be cast as integer:\n{e}",
             )
     return df, err
-
-
-def munge_clean(
-    raw: pd.DataFrame, munger: jm.Munger, count_columns_by_name: List[str]
-) -> (pd.DataFrame, dict):
-    """Drop unnecessary columns.
-    Append '_SOURCE' suffix to raw column names to avoid conflicts"""
-    err = None
-    working = raw.copy()
-    working, count_columns_by_name, e = clean_column_names(
-        working, count_cols=count_columns_by_name
-    )
-    try:
-        #  define columns named in munger formulas (both plain from 'row' sourced info and
-        #  'variable_j' from column-sourced)
-        munger_formula_row_sourced = [
-            x for x in munger.field_list if x in working.columns
-        ]
-        munger_formula_column_sourced = [
-            f"variable_{j}"
-            for j in munger.field_list
-            if f"variable_{j}" in working.columns
-        ]
-
-        # keep columns named in munger formulas; keep count columns; drop all else.
-        working = working[
-            munger_formula_row_sourced
-            + munger_formula_column_sourced
-            + count_columns_by_name
-        ]
-
-        # add suffix '_SOURCE' to certain columns to avoid any conflict with db table names
-        # (since no db table name ends with _SOURCE)
-
-        renamer = {x: f"{x}_SOURCE" for x in munger_formula_row_sourced}
-        working.rename(columns=renamer, inplace=True)
-    except Exception as e:
-        err = ui.add_new_error(err, "system", "munge.munge_clean", "Unspecified error")
-    return working, err
 
 
 def add_regex_column(
@@ -210,7 +243,7 @@ def add_regex_column(
         # replace via regex if possible; otherwise msg
         # # put informative error message in new_col
         old = working[old_col].copy()
-        working[new_col] = working[old_col].str.cat(old, f" <- did not match regex {pattern_str}")
+        working[new_col] = working[old_col].str.cat(old, f"Does not match regex {pattern_str}: ")
         # # where regex succeeds, replace error message with good value
         mask = working[old_col].str.match(p)
         working.loc[mask, new_col] = working[mask][old_col].str.replace(p, "\\1")
@@ -226,14 +259,14 @@ def add_regex_column(
         err = ui.add_new_error(
             err,
             "system",
-            "munge.add_regex_column",
+            f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
             f"Unexpected exception: {e}"
         )
 
     return working, err
 
 
-def text_fragments_and_fields(formula):
+def text_fragments_and_fields(formula: str) -> (List[List[str]], str):
     """Given a formula with fields enclosed in angle brackets,
     return a list of text-fragment,field pairs (in order of appearance) and a final text fragment.
     E.g., if formula is <County>;<Precinct>, returned are [(None,County),(';',Precinct)] and None."""
@@ -290,14 +323,20 @@ def add_column_from_formula(
 
         # add column to <working> dataframe via the concatenation formula
         if last_text:
-            w.loc[:, new_col] = last_text[0]
+            w = add_constant_column(w, new_col, last_text[0], dtype="string")
         else:
-            w.loc[:, new_col] = ""
+            err = ui.add_new_error(
+                err,
+                "system",
+                f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
+                f"No last_text found by text_fragments_and_fields for {formula}"
+            )
+            return w, err
         text_field_list.reverse()
         for t, f in text_field_list:
             try:
-                w.loc[:, new_col] = (
-                    w.loc[:, f].apply(lambda x: f"{t}{x}") + w.loc[:, new_col]
+                w[new_col] = (
+                    t + w[f].map(str) + w[new_col].map(str)
                 )
             except KeyError as ke:
                 err = ui.add_new_error(
@@ -311,67 +350,15 @@ def add_column_from_formula(
 
     except Exception as e:
         err = ui.add_new_error(
-            err, "system", "munge.add_column_from_formula", f"Unexpected error: {e}"
+            err,
+            "system",
+            f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
+            f"Unexpected error: {e}",
         )
 
     # delete temporary columns
     w.drop(temp_cols, axis=1, inplace=True)
     return w, err
-
-
-def add_munged_column(
-    raw: pd.DataFrame,
-    munger: jm.Munger,
-    element: str,
-    err: Optional[dict],
-    mode: str = "row",
-    inplace: bool = True,
-) -> (pd.DataFrame, dict):
-    """Alters dataframe <raw>, adding or redefining <element>_raw column
-    via the <formula>. Assumes "_SOURCE" has been appended to all columns of raw
-    Does not alter row count."""
-    if raw.empty:
-        return raw, err
-    if inplace:
-        working = raw
-    else:
-        working = raw.copy()
-
-    try:
-        formula = munger.cdf_elements.loc[element, "raw_identifier_formula"]
-        if mode == "row":
-            for field in munger.field_list:
-                formula = formula.replace(f"<{field}>", f"<{field}_SOURCE>")
-        elif mode == "column":
-            for i in range(munger.options["header_row_count"]):
-                formula = formula.replace(f"<{i}>", f"<variable_{i}>")
-
-        working, new_err = add_column_from_formula(
-            working, formula, f"{element}_raw", err, munger.name
-        )
-        if new_err:
-            err = ui.consolidate_errors([err, new_err])
-            if ui.fatal_error(new_err):
-                return working, err
-
-        # correct any disambiguated names back to the original
-        if element in munger.alt.keys():
-            working.replace({f"{element}_raw": munger.alt[element]}, inplace=True)
-
-    except Exception as e:
-        err = ui.add_new_error(
-            err,
-            "munger",
-            munger.name,
-            f"Error interpreting formula for {element} in cdf_element.txt. {e}",
-        )
-        return working, err
-
-    # compress whitespace for <element>_raw
-    working.loc[:, f"{element}_raw"] = working[f"{element}_raw"].apply(
-        compress_whitespace
-    )
-    return working, err
 
 
 def compress_whitespace(s: str) -> str:
@@ -392,7 +379,6 @@ def replace_raw_with_internal_ids(
     error: dict,
     drop_unmatched: bool = False,
     drop_extraneous: bool = True,
-    mode: str = "row",
     unmatched_id: int = 0,
     drop_all_ok: bool = False,
 ) -> (pd.DataFrame, dict):
@@ -408,7 +394,9 @@ def replace_raw_with_internal_ids(
     # use dictionary.txt from jurisdiction
 
     raw_identifiers = pd.read_csv(
-        os.path.join(juris.path_to_juris_dir, "dictionary.txt"), sep="\t"
+        os.path.join(juris.path_to_juris_dir, "dictionary.txt"),
+        sep="\t",
+        encoding=eda.default_encoding,
     )
 
     # restrict to the element at hand
@@ -479,19 +467,6 @@ def replace_raw_with_internal_ids(
         working = pd.DataFrame(columns=new_cols)
 
         return working, error
-    else:
-        if mode == "column":
-            # drop rows that melted from unrecognized columns, EVEN IF drop_unmatched=False.
-            #  These rows are ALWAYS extraneous. Drop cols where raw_identifier is not null
-            #  but no cdf_internal_name was found (pd.merge yields nulls)
-            #
-            working = working[
-                (working["raw_identifier_value"].isnull())
-                | (working["cdf_internal_name"].notnull())
-            ]
-            if drop_extraneous:
-                working = working[working["cdf_internal_name"] != "row should be dropped"]
-            # TODO tech debt more efficient to drop these earlier, before melting
 
     # unmatched elements get nan in fields from dictionary table. Change these to "none or unknown"
     if not drop_unmatched:
@@ -610,6 +585,7 @@ def enum_col_to_id_othertext(
     if df.empty:
         # add two columns
         df[f"{type_col}_Id"] = df[f"Other{type_col}"] = df.iloc[:, 0]
+        non_standard = list()
     else:
         assert type_col not in ["Id", "Txt"], "type_col cannot be Id or Txt"
         # get the Id of 'other' in the enumeration
@@ -647,13 +623,14 @@ def enum_col_to_id_othertext(
         for c in ["Id", "Txt"]:
             if c * 3 in df.columns:
                 df.rename(columns={c * 3: c}, inplace=True)
+        # create list of non-standard items found
+        non_standard = list(df.loc[mask, f"Other{type_col}"].unique())
+        if "" in non_standard:
+            non_standard.remove("")
+
     if drop_type_col:
         df = df.drop([type_col], axis=1)
 
-    # create list of non-standard items found
-    non_standard = list(df.loc[mask, f"Other{type_col}"].unique())
-    if "" in non_standard:
-        non_standard.remove("")
     return df, non_standard
 
 
@@ -699,79 +676,96 @@ def regularize_candidate_names(
     return ws
 
 
-def munge_and_melt(
-    mu: jm.Munger, raw: pd.DataFrame, count_cols: List[str], err: Optional[dict]
-) -> (pd.DataFrame, Optional[dict]):
-    """Does not alter raw; returns transformation of raw:
-     all row- and column-sourced mungeable info into columns (but doesn't translate via dictionary)
-    new column names are, e.g., ReportingUnit_raw, Candidate_raw, etc.
-    """
-    working = raw.copy()
+def melt_to_one_count_column(df: pd.DataFrame, p: dict, mu_name: str) -> (pd.DataFrame, Optional[dict]):
+    """transform to df with single count column and all raw munge info in other columns"""
+    err = None
+    if isinstance(df.columns, pd.MultiIndex):
+        multi = True
+    else:
+        multi = False
 
-    # melt all column (multi-) index info into columns
-    non_count_cols = [x for x in working.columns if x not in count_cols]
-    working = working.melt(id_vars=non_count_cols)
+    if multi:
+        # transform multi-index to plain index
+        df.columns = [";:;".join([f"{x}" for x in tup]) for tup in df.columns]
 
-    # ensure all columns have string names
-    # (i.e., get rid of any tuples from column multi-index)
-    new_col_index = [
-        c[mu.options["field_name_row"]] if isinstance(c, tuple) else c
-        for c in working.columns
-    ]
-    working.columns = new_col_index
+    # define count columns
+    if p["count_locations"] == "by_column_numbers":
+        count_columns = [
+            df.columns[idx] for idx in p["count_column_numbers"] if idx < df.shape[1]
+        ]
+    elif p["count_locations"] == "by_field_names":
+        if multi:
+            err = ui.add_new_error(
+                err,
+                "munger",
+                mu_name,
+                "If there are multiple header rows, need to have count_locations=by_column_numbers ",
+            )
+            return pd.DataFrame(), err
+        count_columns = [c for c in p["count_fields_by_name"] if c in df.columns]
+    else:
+        err = ui.add_new_error(
+            err,
+            "munger",
+            mu_name,
+            f"count_locations parameter must be either by_column_numbers or by_field_names"
+        )
+        return pd.DataFrame(), err
 
-    #  if only one header row, rename variable to variable_0 for consistency
-    working.rename(columns={"variable": "variable_0"}, inplace=True)
+    # melt so that there is one single count column
+    id_columns = [c for c in df.columns if c not in count_columns]
+    melted = df.melt(id_vars=id_columns, value_vars=count_columns, var_name="header_0", value_name="Count")
+    if multi:
+        # remove extraneous text from column multi-headers for string fields (id_columns),
+        #  leaving only string field name row
+        tab_to_df = df_header_rows_from_sheet_header_rows(p)
+        new_columns = list(melted.columns)
+        for idx in range(melted.shape[1]):
+            if melted.columns[idx] in id_columns:
+                new_columns[idx] = melted.columns[idx].split(";:;")[tab_to_df[p["string_field_name_row"]]]
+        melted.columns = new_columns
+        if "in_count_headers" in p["munge_strings"]:
 
-    # clean and append "_SOURCE" to each original non-count column name
-    working, new_err = munge_clean(working, mu, ["value"])
-    if new_err:
-        err = ui.consolidate_errors([err, new_err])
-        if ui.fatal_error(new_err):
-            return working, err
-
-    # NB: if there is just one numerical column, melt still creates dummy variable col
-    #  in which each value is 'value'
-
-    # rename value to Count
-    #  NB: any unnecessary numerical cols (e.g., Contest Group ID) will not matter
-    #  as they will be be missing from dictionary.txt and hence will be ignored.
-    working.rename(columns={"value": "Count"}, inplace=True)
-
-    # apply munging formula from row sources (after renaming fields in raw formula as necessary)
-    for t in mu.cdf_elements[mu.cdf_elements.source == "row"].index:
-        working, new_err = add_munged_column(working, mu, t, None, mode="row")
-        if new_err:
-            err = ui.consolidate_errors([err, new_err])
-            if ui.fatal_error(new_err):
-                return working, err
-
-    # remove original row-munge columns
-    munged = [x for x in working.columns if x[-7:] == "_SOURCE"]
-    working.drop(munged, axis=1, inplace=True)
-
-    # apply munge formulas for column sources
-    for t in mu.cdf_elements[mu.cdf_elements.source == "column"].index:
-        working, new_err = add_munged_column(working, mu, t, None, mode="column")
-        if new_err:
-            err = ui.consolidate_errors([err, new_err])
-            if ui.fatal_error(new_err):
-                return working, err
-
-    # remove unnecessary columns
-    not_needed = [c for c in working.columns if c[:9] == "variable_"]
-    working.drop(not_needed, axis=1, inplace=True)
-
-    return working, err
+            # split header_0 column into separate columns
+            # # get header_rows
+            min_ct_header_row = min(p["count_header_row_numbers"])
+            melted[
+                [f"header_{idx-min_ct_header_row}" for idx in p["count_header_row_numbers"]]
+            ] = pd.DataFrame(
+                melted["header_0"].str.split(";:;", expand=True).values
+            )[
+                [tab_to_df[idx] for idx in p["count_header_row_numbers"]]
+            ]
+    
+    return melted, err
 
 
-def add_constant_column(df, col_name, col_value):
+def df_header_rows_from_sheet_header_rows(
+        p: Dict[str, Any]
+) -> Dict[int, int]:
+    """produces mapping from the header row numbering in the tabular file -- which could be
+    any collection of rows -- to the header numbering in the dataframe
+    (which must be 0 - n for some n). """
+    if p["count_header_row_numbers"] or p["string_field_name_row"]:
+        # create sorted list with no dupes
+        table_rows = sorted(set(p["count_header_row_numbers"] + [p["string_field_name_row"]]))
+        tab_to_df = {table_rows[idx]: idx for idx in range(len(table_rows))}
+    else:
+        tab_to_df = dict()
+    return tab_to_df
+
+
+def add_constant_column(
+        df: pd.DataFrame, col_name: str, col_value: Any, dtype: Optional[str] = None
+) -> pd.DataFrame:
     new_df = df.assign(**dict.fromkeys([col_name], col_value))
+    if dtype:
+        new_df[col_name] = new_df[col_name].astype(dtype)
     return new_df
 
 
 def add_contest_id(
-    df: pd.DataFrame, juris: jm.Jurisdiction, err: dict, session: Session
+    df: pd.DataFrame, juris: jm.Jurisdiction, err: Optional[dict], session: Session
 ) -> (pd.DataFrame, dict):
     working = df.copy()
     """Append Contest_Id and contest_type. Add contest_type column and fill it correctly.
@@ -887,6 +881,13 @@ def add_selection_id(  # TODO tech debt: why does this add columns 'I' and 'd'?
 
         # clean Ids and drop any that were null (i.e., 0 after cleaning)
         c_df, err_df = clean_ids(c_df, ["Candidate_Id", "Party_Id"])
+        if not err_df.empty:
+            err = ui.add_new_error(
+                err,
+                "warn-system",
+                f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
+                f"some Candidate_Ids or Party_Ids null\n{err_df}",
+            )
         c_df = c_df[c_df.Candidate_Id != 0]
 
         # pull any existing Ids into a new CandidateSelection_Id column
@@ -926,7 +927,7 @@ def add_selection_id(  # TODO tech debt: why does this add columns 'I' and 'd'?
             err = ui.add_new_error(
                 err,
                 "system",
-                "munge.add_selection_id",
+                f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
                 f"Problem with Candidate_Id or Party_Id in some rows:\n{err_df}",
             )
             pd.reset_option("max_columns")
@@ -950,10 +951,13 @@ def add_selection_id(  # TODO tech debt: why does this add columns 'I' and 'd'?
 
     working = pd.concat([w["BallotMeasure"], w["Candidate"]])
 
-    return working, err  #
+    # drop Candidate_Id if it is still a column
+    if "Candidate_Id" in working.columns:
+        working.drop("Candidate_Id", axis=1, inplace=True)
+    return working, err
 
 
-def row_and_col_sourced_ids(
+def raw_to_id_simple(
         df: pd.DataFrame,
         juris: jm.Jurisdiction,
         element_list: list,
@@ -977,7 +981,9 @@ def row_and_col_sourced_ids(
             if t == "CountItemType":
                 # munge raw to internal CountItemType
                 r_i = pd.read_csv(
-                    os.path.join(juris.path_to_juris_dir, "dictionary.txt"), sep="\t"
+                    os.path.join(juris.path_to_juris_dir, "dictionary.txt"),
+                    sep="\t",
+                    encoding=eda.default_encoding,
                 )
                 r_i = r_i[r_i.cdf_element == "CountItemType"]
                 recognized = r_i.raw_identifier_value.unique()
@@ -1030,18 +1036,26 @@ def row_and_col_sourced_ids(
                 if ui.fatal_error(new_err):
                     return working, err
                 working.drop(t, axis=1, inplace=True)
+
         except KeyError as exc:
             err = ui.add_new_error(
                 err,
                 "system",
-                "munge.raw_elements_to_cdf",
+                f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
                 f"KeyError ({exc}) while adding internal ids for {t}.",
+            )
+        except AttributeError as exc:
+            err = ui.add_new_error(
+                err,
+                "system",
+                f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
+                f"AttributeError ({exc}) while adding internal ids for {t}.",
             )
         except Exception as exc:
             err = ui.add_new_error(
                 err,
                 "system",
-                "munge.raw_elements_to_cdf",
+                f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
                 f"Exception ({exc}) while adding internal ids for {t}.",
             )
 
@@ -1079,67 +1093,104 @@ def ensure_total_counts(
     return working
 
 
-def raw_elements_to_cdf(
-    session,
-    juris: jm.Jurisdiction,
-    mu: jm.Munger,
-    raw: pd.DataFrame,
-    count_cols: List[str],
-    err: dict,
-    constants: dict,
-) -> dict:
-    """load data from <raw> into the database."""
-    working = raw.copy()
+if __name__ == "__main__":
+    pass
+    exit()
 
-    try:
-        working, new_err = munge_and_melt(mu, working, count_cols, err)
-        if new_err:
-            err = ui.consolidate_errors([err, new_err])
-            if ui.fatal_error(new_err):
-                return err
-    except Exception as exc:
-        err = ui.add_new_error(
-            err,
-            "system",
-            "munge.raw_elements_to_cdf",
-            f"Unexpected exception during munge_and_melt: {exc}",
+
+def munge_raw_to_ids(
+        df: pd.DataFrame,
+        constants: dict,
+        juris: jm.Jurisdiction,
+        munger_name: str,
+        session,
+) -> (pd.DataFrame, Optional[dict]):
+
+    err = None
+    working = df.copy()
+
+    # add Contest_Id column and contest_type column
+    if "CandidateContest" in constants.keys():
+        working = add_constant_column(
+            working,
+            "Contest_Id",
+            db.name_to_id(session, "Contest", constants["CandidateContest"])
         )
-        return err
-
-    # enter elements from sources outside raw data, including creating id column(s)
-    for k in constants.keys():
-        working = add_constant_column(working, k, constants[k])
-
-    # add Contest_Id (unless it was passed in ids)
-    if "Contest_Id" not in working.columns:
+        working = add_constant_column(
+            working,
+            "contest_type",
+            "Candidate"
+        )
+        working.drop("CandidateContest", axis=1, inplace=True)
+    elif "BallotMeasureContest" in constants.keys():
+        working = add_constant_column(
+            working,
+            "Contest_Id",
+            db.name_to_id(session, "Contest", constants["BallotMeasureContest"])
+        )
+        working.drop("BallotMeasureContest", axis=1, inplace=True)
+        working = add_constant_column(
+            working,
+            "contest_type",
+            "BallotMeasure"
+        )
+    else:
         try:
             working, err = add_contest_id(working, juris, err, session)
         except Exception as exc:
             err = ui.add_new_error(
                 err,
                 "system",
-                "munge.raw_elements_to_cdf",
+                f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
                 f"Unexpected exception while adding Contest_Id: {exc}",
             )
             return err
         if ui.fatal_error(err):
-            return err
+            return working, err
 
-    # get ids for remaining info sourced from rows and columns (except Selection_Id)
-    element_list = [
-        t
-        for t in mu.cdf_elements.index
-        if (
-            t[-7:] != "Contest"
-            and (t[-9:] != "Selection")
-            and f"{t}_Id" not in constants.keys()
-        )
+    # add all other _Ids/Other except Selection_Id
+    # # for constants
+    other_constants = [t for t in constants.keys() if t[-7:] != "Contest" and (t[-9:] != "Selection")]
+    for element in other_constants:
+        # CountItemType is the only enumeration
+        if element == "CountItemType":
+            enum_df = pd.read_sql_table(element, session.bind)
+            one_line = pd.DataFrame([[constants[element]]],columns=[element])
+            id_txt_one_line, non_standard = enum_col_to_id_othertext(
+                one_line, element, enum_df, drop_type_col=False
+            )
+            for c in [f"{element}_Id", f"Other{element}"]:
+                working = add_constant_column(
+                    working,
+                    c,
+                    id_txt_one_line.loc[0, c]
+                )
+            working.drop(element, axis=1, inplace=True)
+        else:
+            working = add_constant_column(
+                working,
+                f"{element}_Id",
+                db.name_to_id(session, element, constants[element])
+            )
+            working.drop(element, axis=1, inplace=True)
+            working, err_df = clean_ids(working, ["CountItemType_Id"])
+            if not err_df.empty:
+                err = ui.add_new_error(
+                    err,
+                    "warn-munger",
+                    munger_name,
+                    f"Problem cleaning these Ids:\n{err_df}"
+                )
+
+    other_elements = [
+        t for t in all_munge_elements
+        if (t[-7:] != "Contest") and (t[-9:] != "Selection") and (t not in constants.keys())
     ]
-    working, new_err = row_and_col_sourced_ids(working, juris, element_list, session)
+    working, new_err = raw_to_id_simple(working, juris, other_elements, session)
     if new_err:
         err = ui.consolidate_errors([err, new_err])
         if ui.fatal_error(new_err):
-            return err
+            return working, err
 
     # add Selection_Id (combines info from BallotMeasureSelection and CandidateContestSelection)
     try:
@@ -1149,7 +1200,7 @@ def raw_elements_to_cdf(
         err = ui.add_new_error(
             err,
             "system",
-            "munge.raw_elements_to_cdf",
+            f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
             f"Unexpected exception while adding Selection_Id:\n{exc}",
         )
         return err
@@ -1160,8 +1211,414 @@ def raw_elements_to_cdf(
             juris.short_name,
             "No contests found, or no selections found for contests.",
         )
-        return err
+        return working, err
 
+    return working, err
+
+
+def munge_source_to_raw(
+        df: pd.DataFrame,
+        munger_path: str,
+        p: Dict[str, Any],
+        orig_string_cols: List[str],
+        suffix: str,
+        aux_directory_path,
+) -> (pd.DataFrame, Optional[dict]):
+    """NB: assumes columns of dataframe have <suffix> appended already"""
+    err = None
+
+    if df.empty:
+        return df, err
+    munger_name = Path(munger_path).name
+    working = df.copy()
+
+    # # get munge formulas
+    # # for all but constant-over-file
+    sources = [x for x in p["munge_strings"] if x != "constant_over_file"]
+    for source in sources:
+        formulas, new_err = ui.get_parameters(
+            required_keys=[],
+            optional_keys=all_munge_elements,
+            header=source,
+            param_file=munger_path,
+        )
+        elements = [k for k in formulas.keys() if (formulas[k] is not None) and (formulas[k] != "None")]
+        # get any aux info (NB: does not include suffix)
+        aux_info, foreign_key_fields = get_aux_info(p, formulas, elements, munger_path)
+
+        for element in elements:
+            try:
+                formula = formulas[element]
+                # if formula refers to any fields that need to be looked up, make appropriate replacements
+                if element in aux_info.keys():
+                    working, formula, err = incorporate_aux_info(
+                        working, element, formula, foreign_key_fields,
+                        aux_info, aux_directory_path, munger_name, suffix,
+                    )
+
+                # append suffix to any fields from the original table
+                for c in orig_string_cols:
+                    formula = formula.replace(f"<{c}>",f"<{c}{suffix}>")
+
+                # add col with munged values
+                working, new_err = add_column_from_formula(
+                    working, formula, f"{element}_raw", err, munger_name
+                )
+                if new_err:
+                    err = ui.consolidate_errors([err, new_err])
+                    if ui.fatal_error(new_err):
+                        return working, err
+                # TODO how to handle disambiguation? Here's how we did it before:
+                """
+                # correct any disambiguated names back to the original
+                if element in munger.alt.keys():
+                    working.replace({f"{element}_raw": munger.alt[element]}, inplace=True)
+                """
+            except Exception as exc:
+                err = ui.add_new_error(
+                    err,
+                    "munger",
+                    munger_name,
+                    f"Error interpreting formula for {element} in cdf_element.txt. {exc}",
+                )
+                return working, err
+
+            # compress whitespace for <element>_raw
+            compression = pd.DataFrame(
+                [[x, compress_whitespace(x)] for x in working[f"{element}_raw"].unique()],
+                columns=['uncompressed','compressed']
+            )
+            working = working.merge(
+                compression, left_on=f"{element}_raw", right_on="uncompressed",
+            ).drop(
+                [f"{element}_raw", "uncompressed"], axis=1
+            ).rename(
+                columns={"compressed": f"{element}_raw"}
+            )
+    # drop all source columns
+    source_cols = [c for c in working.columns if c[-len(suffix):] == suffix]
+    working.drop(source_cols, axis=1, inplace=True)
+
+    string_cols = [c for c in working.columns if c != "Count"]
+    return working, err
+
+
+def get_and_check_munger_params(munger_path: str) -> (dict, Optional[dict]):
+    params, err = ui.get_parameters(
+        required_keys=list(req_munger_params.keys()),
+        optional_keys=list(opt_munger_params.keys()),
+        param_file=munger_path,
+        header="format",
+        err=None,
+    )
+    if ui.fatal_error(err):
+        return dict(), err
+    # get name of munger for error reporting
+    munger_name = Path(munger_path).name[:-7]
+    # define dictionary of munger parameters
+    format_options = jm.recast_options(params, {**opt_munger_params, **req_munger_params})
+
+    # Check munger values
+    # # main parameters recognized
+    for k in req_munger_param_values.keys():
+        if req_munger_params[k] == "string":
+            if not format_options[k] in req_munger_param_values[k]:
+                err = ui.add_new_error(
+                    err,
+                    "munger",
+                    munger_name,
+                    f"Value of {k} must be one of these: {req_munger_param_values[k]}"
+                )
+        elif req_munger_params[k] == "list_of_strings":
+            bad = [x for x in format_options[k] if x not in req_munger_param_values]
+            if bad:
+                err = ui.add_new_error(
+                    err,
+                    "munger",
+                    munger_name,
+                    f"Each listed value of {k} must be one of these: {req_munger_param_values[k]}"
+                )
+
+    # # simple non-null dependencies
+    for k0 in munger_dependent_reqs.keys():
+        for k1 in munger_dependent_reqs[k0]:
+            for v2 in munger_dependent_reqs[k0][k1]:
+                if format_options[k0] == k1 and v2 is None:
+                    err = ui.add_new_error(
+                        err,
+                        "munger",
+                        munger_name,
+                        f"{k0}={k1}', but {v2} not found"
+                    )
+
+    # # extra compatibility requirements for excel or flat text files
+    if (format_options["file_type"] in ["excel", "flat_text"]) :
+        # # count_field_name_row is given where required
+        if (format_options["count_field_name_row"] is None) and (format_options["count_locations"] == "by_field_names"):
+            err = ui.add_new_error(
+                err,
+                "munger",
+                munger_name,
+                f"file_type={format_options['file_type']}' but count_field_name_row not found"
+            )
+
+        # # if all rows are not data, need field names
+        if (format_options["all_rows"] is None):
+            if format_options["string_field_name_row"] is None:
+                err = ui.add_new_error(
+                    err,
+                    "munger",
+                    munger_name,
+                    f"file_type={format_options['file_type']}' and absence of"
+                    f" all_rows=data means field names must be in the "
+                    f"file. But string_field_name_row not given."
+                )
+
+    # # for each value in list of string locations, requirements are met
+    for k0 in format_options["munge_strings"]:
+        for v2 in string_location_reqs[k0]:
+            if v2 is None:
+                err = ui.add_new_error(
+                    err,
+                    "munger",
+                    munger_name,
+                    f"{k0} is in list of string locations, but {v2} not found"
+                )
+    # TODO check formats (e.g., formulas for constant_over_sheet use only <sheet_name> and <row_{i}>)
+    # TODO check that required headers are present (see User_Guide) per munge_strings list
+    # TODO check that required headers are present (see User_Guide) per lookups list
+    # TODO check that each element is defined by a single formula
+
+    # # add parameter listing all munge fields
+    # get lists of string fields expected in raw file
+    # TODO why can't munge_fields and string_fields be the same?
+    params["munge_fields"], new_err = get_string_fields(
+        [x for x in params["munge_strings"] if x != "constant_over_file"],
+        munger_path,
+    )
+    if new_err:
+        ui.consolidate_errors([err, new_err])
+    return format_options, err
+
+
+def get_string_fields(
+        sources: list,
+        munger_path: str,
+) -> (Dict[str,List[str]], Optional[dict]):
+    err = None
+    pattern = re.compile(r'<([^>,]+)(?:,([^>,]+))*>')
+    munge_field_lists = dict()
+    for source in sources:
+        munge_field_set = set()
+        formulas, new_err = ui.get_parameters(
+            required_keys=[],
+            optional_keys=all_munge_elements,
+            header=source,
+            param_file=munger_path,
+        )
+        if new_err:
+            err = ui.consolidate_errors([err, new_err])
+            if ui.fatal_error(new_err):
+                return dict(), err
+
+        for k in formulas.keys():
+            if formulas[k]:
+                munge_field_set.update(pattern.findall(formulas[k]))
+        flat = {x for y in munge_field_set for x in y}
+        if "" in flat:
+            flat.remove("")
+        munge_field_lists[source] = list(flat)
+
+    return munge_field_lists, err
+
+
+def to_standard_count_frame(
+        f_path: str,
+        munger_path: str,
+        p: dict,
+        constants: dict,
+        suffix: Optional[str] = None,
+) -> (pd.DataFrame, Optional[list], Optional[dict]):
+    """Read data from file at <f_path>; return a standard dataframe with one clean count column
+    and all other columns typed as 'string'.
+     If <suffix> is given, append <suffix> to all non-count columns"""
+    munger_name = Path(munger_path).name
+    err = None
+    original_string_columns = None
+
+    # check that all necessary constants were passed
+    if p["constant_over_file"] is not None:
+        bad = [x for x in p["constant_over_file"] if x not in constants.keys()]
+        if bad:
+            bad_str = ",".join(bad)
+            err = ui.add_new_error(
+                err,
+                "file",
+                f_path,
+                f"Required constants not given in .ini file:\n\t{bad_str}",
+            )
+            return pd.DataFrame(), original_string_columns, err
+
+    # read count dataframe(s) from file
+    try:
+        raw_dict, err = ui.read_single_datafile(f_path, p, munger_name, err)
+        if len(raw_dict) == 0:  # no dfs at all returned
+            err = ui.add_new_error(err, "munger", munger_name, f"No data found in file {Path(f_path).name}")
+
+        if ui.fatal_error(err):
+            return pd.DataFrame(), original_string_columns, err
+    except Exception as exc:
+        err = ui.add_new_error(
+            err,
+            "system",
+            f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
+            f"Unexpected exception while reading data from file:\n\t{exc}"
+        )
+        return pd.DataFrame(), original_string_columns, err
+
+    # get lists of string fields expected in raw file
+    try:
+        munge_field_lists, new_err = get_string_fields(
+            [x for x in p["munge_strings"] if x != "constant_over_file"],
+            munger_path,
+        )
+    except Exception as exc:
+        new_err = ui.add_new_error(
+            None,
+            "system",
+            f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
+            f"Exception while getting string fields: {exc}"
+        )
+    if new_err:
+        err = ui.consolidate_errors([err, new_err])
+        if ui.fatal_error(new_err):
+            return pd.DataFrame(), original_string_columns, err
+
+    # for each df:
+    standard = dict()
+
+    # loop over sheets
+    error_by_sheet = dict()
+    keys_in_order = list(raw_dict.keys())
+    keys_in_order.sort()
+    for k in keys_in_order:
+        raw = raw_dict[k]
+        # transform to df with single count column 'Count' and all raw munge info in other columns
+        try:
+            standard[k], error_by_sheet[k] = melt_to_one_count_column(raw, p, munger_name)
+        except Exception as exc:
+            error_by_sheet[k] = ui.add_new_error(None, "file", f_path, f"Unable to pivot dataframe {k}:\n {exc}")
+            continue  # goes to next k in loop
+
+        # add columns for any constant-over-sheet elements
+        if "constant_over_sheet" in p["munge_strings"]:
+            # see if <sheet_name> is needed
+            if "sheet_name" in munge_field_lists["constant_over_sheet"]:
+                standard[k] = add_constant_column(standard[k], "sheet_name", k)
+            # find max row needed
+            try:
+                rows_needed = [int(var[4:]) for var in munge_field_lists["constant_over_sheet"] if var != "sheet_name"]
+                if rows_needed:
+                    max_row = max(rows_needed)
+                    data = pd.read_excel(
+                        f_path,
+                        sheet_name=k,
+                        header=None,
+                        skiprows=p["rows_to_skip"],
+                        nrows=max_row+1,
+                    )
+                    for row in rows_needed:
+                        # get index of first valid entry in row (or "" if none)
+                        first_valid_idx = data.loc[row].fillna("").first_valid_index()
+                        standard[k] = add_constant_column(
+                            standard[k],
+                            f"row_{row}",
+                            data.loc[row, first_valid_idx],
+                        )
+            except ValueError as ve:
+                error_by_sheet[k] = ui.add_new_error(
+                    error_by_sheet[k],
+                    "munger",
+                    munger_name,
+                    f"In sheet {k}: Ill-formed reference to row of file in munger formulas in {ve}"
+                )
+                continue
+
+            except KeyError() as ke:
+                variables = ",".join(munge_field_lists["constant_over_sheet"])
+                error_by_sheet[k] = ui.add_new_error(
+                    error_by_sheet[k],
+                    "file",
+                    Path(f_path).name,
+                    f"In sheet {k}: No data found for one of these: \n\t{variables}",
+                )
+                continue
+            except Exception as exc:
+                error_by_sheet[k] = ui.add_new_error(
+                    error_by_sheet[k],
+                    "file",
+                    Path(f_path).name,
+                    f"In sheet {k}: Unexpected exeption: {exc}",
+                )
+
+        # keep only necessary columns
+        try:
+            necessary = [item for sublist in munge_field_lists.values() for item in sublist] + ["Count"]
+            standard[k] = standard[k][necessary]
+        except KeyError as ke:
+            error_by_sheet[k]= ui.add_new_error(
+                error_by_sheet[k],
+                "munger",
+                munger_name,
+                f"In sheet {k}: Field in munge formulas not found in file column headers read from file: {ke}",
+            )
+            continue
+
+        # clean Count column
+        standard[k], bad_rows = clean_count_cols(standard[k], ["Count"], p["thousands_separator"])
+        if not bad_rows.empty:
+            error_by_sheet[k] = ui.add_err_df(error_by_sheet[k], bad_rows, munger_name, f_path)
+
+    # if even one sheet lacks a fatal error, consider all errors non-fatal
+    non_fatal = [k for k in raw_dict.keys() if not ui.fatal_error(error_by_sheet[k])]
+    fatal = [k for k in raw_dict.keys() if ui.fatal_error(error_by_sheet[k])]
+    if non_fatal:
+        for k in fatal:
+            error_by_sheet[k] = ui.fatal_err_to_non(error_by_sheet[k])
+        df = pd.concat([standard[k] for k in non_fatal])
+        # clean non-count columns
+        non_count = [c for c in df.columns if c != "Count"]
+        df = clean_strings(df, non_count)
+
+    else:
+        df = pd.DataFrame()
+    err = ui.consolidate_errors([error_by_sheet[k] for k in raw_dict.keys()])
+
+    # if even one sheet was not fatally flawed
+    if suffix and non_fatal:
+        # append suffix to all non-Count column names (to avoid confilcts if e.g., source has col names 'Party'
+        try:
+            original_string_columns = [c for c in df.columns if c != "Count"]
+            df.columns = [c if c == "Count" else f"{c}{suffix}" for c in df.columns]
+        except Exception as exc:
+            err = ui.add_new_error(
+                err,
+                "system",
+                f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
+                f"Exception while appending suffix {suffix}: {exc}"
+            )
+            return df, original_string_columns, err
+
+    return df, original_string_columns, err
+
+
+def fill_vote_count(
+        df: pd.DataFrame,
+        session,
+        err: Optional[dict],
+) -> Optional[dict]:
+
+    working = df.copy()
     # restrict to just the VoteCount columns (so that groupby.sum will work)
     vc_cols = [
         "Count",
@@ -1174,8 +1631,8 @@ def raw_elements_to_cdf(
         "_datafile_Id",
     ]
     working = working[vc_cols]
-    working, e = clean_count_cols(working, ["Count"])
 
+    # add CountItemType total if it's not already there
     working = ensure_total_counts(working, session)
     # TODO there are edge cases where this might include dupes
     #  that should be omitted. E.g., if data mistakenly read twice
@@ -1183,30 +1640,123 @@ def raw_elements_to_cdf(
     #  when VoteCount is filled)
     group_cols = [c for c in working.columns if c != "Count"]
     working = working.groupby(group_cols).sum().reset_index()
-    # TODO clean before inserting? All should be already clean, no?
 
     # Fill VoteCount
     try:
-        e = db.insert_to_cdf_db(session.bind, working, "VoteCount")
-        if e:
+        err_str = db.insert_to_cdf_db(session.bind, working, "VoteCount")
+        if err_str:
             err = ui.add_new_error(
                 err,
                 "system",
-                "munge.raw_elements_to_cdf",
-                f"database insertion error {e}",
+                f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
+                f"database insertion error {err_str}",
             )
             return err
     except Exception as exc:
         err = ui.add_new_error(
             err,
             "system",
-            "munge.raw_elements_to_cdf",
+            f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
             f"Error filling VoteCount:\n{exc}",
         )
 
     return err
 
 
-if __name__ == "__main__":
-    pass
-    exit()
+def get_aux_info(
+        p: Dict[str, Any],
+        formulas: Dict[str, str],
+        elements: List[str],
+        munger_path: str
+) -> (Dict[str, Dict[str, Dict[str, Any]]], Dict[str,List[str]]):
+    """returns a dictionary whose keys are elements. For each element, a dictionary whose keys are fields
+    in that element's formula"""
+    aux = dict()
+    foreign_key_fields = dict()
+    for element in elements:
+        fk_list = list()
+        aux[element] = dict()
+        # for each field appearing in the element's formula
+        fk_candidates = get_fields_from_formula(formulas[element])
+        for field in fk_candidates:
+
+            # if there is a lookup for this field, grab it
+            f_p, f_err = ui.get_parameters(
+                required_keys=["source_file", "file_type", "munge_strings", "lookup_id"],
+                optional_keys=list(opt_munger_params.keys()) + [f"{element}_replacement"],
+                header=f"{field} lookup",
+                param_file=munger_path,
+            )
+            if not f_err:
+                # prepare dictionary to hold info for this lookup
+                aux[element][field] = dict()
+                # add the foreign key to the list
+                fk_list.append(field)
+                # grab replacement formula, lookup_id, list of fields in replacement formula
+                aux[element][field]["r_formula"] = f_p[f"{element}_replacement"]
+                aux[element][field]["params"] = f_p
+                aux[element][field]["r_fields"] = get_fields_from_formula(f_p[f"{element}_replacement"])
+        # if this element's source values will need to be lookup up
+        if fk_list:
+            foreign_key_fields[element] = fk_list
+        else:
+            aux.pop(element)
+    return aux, foreign_key_fields
+
+
+def incorporate_aux_info(
+        df: pd.DataFrame,
+        element: str,
+        formula: str,
+        foreign_key_fields: Dict[str,List[str]],
+        aux: Dict[str, Dict[str, Dict[str, Any]]],
+        aux_directory_path: str,
+        munger_name: str,   # for error reporting
+        suffix: str,
+) -> (pd.DataFrame, str, Optional[Dict[str, Any]]):
+    """revises the dataframe, adding necessary columns obtained from lookup tables,
+    and revises the formula to pull from those columns instead of foreign key columns
+    Note cols are assumed to have suffix, but aux does not include suffix"""
+    w_df = df.copy()
+    w_formula = formula
+    err = None  # TODO error handling
+    for fk in foreign_key_fields[element]:
+        r_formula = aux[element][fk]["r_formula"]
+        assert isinstance(r_formula, str)  # to keep syntax-checker happy
+        r_fields = aux[element][fk]["r_fields"]
+
+        # grab the lookup table
+        lt_path = os.path.join(aux_directory_path, aux[element][fk]["params"]["source_file"])
+        lookup_df_dict, fk_err = ui.read_single_datafile(lt_path, aux[element][fk]["params"], munger_name, dict(),
+                                                         aux=True)
+        lookup_df = lookup_df_dict["Sheet1"]
+        # clean the lookup table
+        lookup_df = clean_strings(lookup_df, lookup_df.columns)
+        # define new column names to e.g. 'County_id LOOKUP County_name'
+        rename = {c: f"{fk} LOOKUP {c}{suffix}" for c in lookup_df.columns}
+
+        # if lookup columns not already in w_df
+        if not any([f"{fk} LOOKUP" in c for c in w_df.columns]):
+            # append lookup columns
+            left_merge_cols = [f"{c}{suffix}" for c in fk.split(",")]
+            right_merge_cols = aux[element][fk]["params"]["lookup_id"].split(",")
+            w_df = w_df.merge(
+                lookup_df,
+                left_on=left_merge_cols,
+                right_on=right_merge_cols,
+            ).rename(columns=rename)
+
+        # revise formula
+        r_formula_new_col_names = r_formula
+        for c in r_fields:
+            r_formula_new_col_names = r_formula_new_col_names.replace(f"<{c}>", f"<{rename[c]}>")
+        w_formula = w_formula.replace(f"<{fk}>",r_formula_new_col_names)
+
+    return w_df, w_formula, err
+
+
+def get_fields_from_formula(formula: str) -> List[str]:
+    texts_and_fields, final_text = text_fragments_and_fields(formula)
+    fields = [x[1] for x in texts_and_fields]
+    return fields
+
