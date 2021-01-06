@@ -30,7 +30,7 @@ county_or_other = "parish"   # Change this only if results are subdivided by som
                             #  e.g., 'parish' in LA, 'state-house' in Alaska, 'ward' in Philadelphia
 single_county = 'Louisiana;Assumption Parish'  # pick any one from your file, but use internal db name
 pres_votes_county = 11235  # total votes for US President in that county
-pres_candidates = ["Donald J. Trump","Joseph R Biden"]
+pres_candidates = ["Donald J. Trump","Joseph R Biden"] #List of presidential Candidates that must be present in the loaded results.
 
 
 def test_data_exists(dbname):
