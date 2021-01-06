@@ -11,6 +11,7 @@ from election_data_analysis import juris_and_munger as jm
 from typing import Optional, Dict, Any, List
 import datetime
 import csv
+import numpy as np
 
 # constants
 recognized_encodings = {
@@ -1078,3 +1079,250 @@ def get_contest_type_display(item: str) -> str:
                 item_list[index] = contest_type_mappings[key] 
                 break
     return " ".join(item_list)
+
+
+def get_filtered_input_options(session, input_str, filters):
+    """ Display dropdown options for user selection """
+    df_cols = ["parent", "name", "type"]
+    if input_str == "election":
+        if filters:
+            election_df = db.get_relevant_election(session, filters)
+            elections = list(election_df["Name"].unique())
+            elections.sort(reverse=True)
+            data = {
+                "parent": [filters[0] for election in elections],
+                "name": elections,
+                "type": [None for election in elections],
+            }
+            df = pd.DataFrame(data=data)
+            df[["year", "election_type"]] = df["name"].str.split(" ", expand=True)
+            df.sort_values(["year", "election_type"], ascending=[False, True], inplace=True)
+            df.drop(columns=["year", "election_type"], inplace=True)
+        else:
+            df = db.display_elections(session)
+    elif input_str == "jurisdiction":
+        df = db.display_jurisdictions(session, df_cols)
+        if filters:
+            df = df[df["parent"].isin(filters)]
+    elif input_str == "contest_type":
+        contest_df = db.get_relevant_contests(session, filters)
+        contest_types = contest_df["type"].unique()
+        contest_types.sort()
+        data = {
+            "parent": [filters[0] for contest_type in contest_types],
+            "name": contest_types,
+            "type": [None for contest_type in contest_types],
+        }
+        df = pd.DataFrame(data=data)
+    elif input_str == "contest":
+        contest_type = list(set(db.contest_types_model) & set(filters))[0]
+
+        connection = session.bind.raw_connection()
+        cursor = connection.cursor()
+        reporting_unit_id = db.list_to_id(session, "ReportingUnit", filters)
+        reporting_unit = db.name_from_id(cursor, "ReportingUnit", reporting_unit_id)
+        connection.close()
+
+        contest_type_df = pd.DataFrame(
+            [
+                {
+                    "parent": reporting_unit,
+                    "name": f"All {contest_type_mappings[contest_type]}",
+                    "type": contest_type,
+                }
+            ]
+        )
+        contest_df = db.get_relevant_contests(session, filters)
+        contest_df = contest_df[contest_df["type"].isin(filters)]
+        df = pd.concat([contest_type_df, contest_df])
+    elif input_str == "category":
+        election_id = db.list_to_id(session, "Election", filters)
+        reporting_unit_id = db.list_to_id(session, "ReportingUnit", filters)
+
+        # get the census data
+        connection = session.bind.raw_connection()
+        cursor = connection.cursor()
+        election = db.name_from_id(cursor, "Election", election_id)
+        census_df = db.read_external(cursor, int(election[0:4]), reporting_unit_id, ["Label"])
+        cursor.close()
+        if census_df.empty:
+            census = []
+        else:
+            census = ["Census data"]
+
+        type_df = db.read_vote_count(
+            session,
+            election_id,
+            reporting_unit_id,
+            ["CountItemType_Id"],
+            ["CountItemType_Id"],
+        )
+        count_type_ids = type_df["CountItemType_Id"].unique()
+        count_types_df = pd.read_sql_table(
+            "CountItemType", session.bind, index_col="Id"
+        )
+        count_types = list(
+            count_types_df[count_types_df.index.isin(count_type_ids)]["Txt"].unique()
+        )
+        count_types.sort()
+        data = {
+            "parent": [filters[0] for count_type in count_types]
+            + [filters[0] for count_type in count_types]
+            + [filters[0] for count_type in count_types]
+            + [filters[0] for c in census],
+            "name": [f"Candidate {count_type}" for count_type in count_types]
+            + [f"Contest {count_type}" for count_type in count_types]
+            + [f"Party {count_type}" for count_type in count_types]
+            + [c for c in census],
+            "type": [None for count_type in count_types]
+            + [None for count_type in count_types]
+            + [None for count_type in count_types]
+            + [None for c in census],
+        }
+        df = pd.DataFrame(data=data)
+    # check if it's looking for a count of contests
+    elif input_str == "count" and bool([f for f in filters if f.startswith("Contest")]):
+        election_id = db.list_to_id(session, "Election", filters)
+        reporting_unit_id = db.list_to_id(session, "ReportingUnit", filters)
+        df = db.read_vote_count(
+            session,
+            election_id,
+            reporting_unit_id,
+            ["ReportingUnitName", "ContestName", "unit_type"],
+            ["parent", "name", "type"],
+        )
+        df = df.sort_values(["parent", "name"]).reset_index(drop=True)
+    # check if it's looking for a count of candidates
+    elif input_str == "count" and bool(
+        [f for f in filters if f.startswith("Candidate")]
+    ):
+        election_id = db.list_to_id(session, "Election", filters)
+        reporting_unit_id = db.list_to_id(session, "ReportingUnit", filters)
+        df_unordered = db.read_vote_count(
+            session,
+            election_id,
+            reporting_unit_id,
+            ["ContestName", "BallotName", "PartyName", "unit_type"],
+            ["parent", "name", "type", "unit_type"],
+        )
+        df = clean_candidate_names(df_unordered)
+        df = df[["parent", "name", "unit_type"]].rename(columns={"unit_type": "type"})
+    # check if it's looking for census data
+    elif input_str == "count" and "Census data" in filters:
+        election_id = db.list_to_id(session, "Election", filters)
+        reporting_unit_id = db.list_to_id(session, "ReportingUnit", filters)
+        connection = session.bind.raw_connection()
+        cursor = connection.cursor()
+        election = db.name_from_id(cursor, "Election", election_id)
+        df = db.read_external(
+            cursor, int(election[0:4]), reporting_unit_id, ["Source", "Label", "Category"]
+        )
+        cursor.close()
+    # check if it's looking for a count by party
+    elif input_str == "count":
+        election_id = db.list_to_id(session, "Election", filters)
+        reporting_unit_id = db.list_to_id(session, "ReportingUnit", filters)
+        df = db.read_vote_count(
+            session,
+            election_id,
+            reporting_unit_id,
+            ["PartyName", "unit_type"],
+            ["parent", "type"],
+        )
+        df["name"] = df["parent"].str.replace(" Party", "") + " " + df["type"]
+        df = df[df_cols].sort_values(["parent", "type"])
+    # Otherwise search for candidate
+    else:
+        election_id = db.list_to_id(session, "Election", filters)
+        reporting_unit_id = db.list_to_id(session, "ReportingUnit", filters)
+        df_unordered = db.read_vote_count(
+            session,
+            election_id,
+            reporting_unit_id,
+            ["ContestName", "BallotName", "PartyName", "unit_type"],
+            ["parent", "name", "type", "unit_type"],
+        )
+        df_unordered = df_unordered[df_unordered["unit_type"].isin(filters)].copy()
+        df_filtered = df_unordered[
+            df_unordered["name"].str.contains(input_str, case=False)
+        ].copy()
+        df = clean_candidate_names(df_filtered[df_cols].copy())
+    # TODO: handle the "All" and "other" options better
+    # TODO: handle sorting numbers better
+    return package_display_results(df)
+
+
+def package_display_results(data):
+    """takes a result set and packages into JSON to return"""
+    results = []
+    for i, row in data.iterrows():
+        if row[1] in contest_type_mappings:
+            row[1] = contest_type_mappings[row[1]]
+        temp = {"parent": row[0], "name": row[1], "type": row[2], "order_by": i + 1}
+        results.append(temp)
+    return results
+
+
+def clean_candidate_names(df):
+    """takes a df that has contest, candidate name, and party in the columns. Cleans the
+    data as described in https://github.com/ElectionDataAnalysis/election_data_analysis/issues/207"""
+    # Get first letter of each word in the party name except for "Party"
+    # if "Party" is not in the name, then it's "None"
+    cols = df.columns
+    df_cols = ["parent", "name", "type"]
+    extra_cols = [col for col in cols if col not in df_cols]
+    extra_df = df[extra_cols]
+    df = df[df_cols]
+    df["party"] = df["type"].str.split(" ")
+    df["party"] = np.where(
+        df["party"].str.contains("party", case=False),
+        df["party"]
+        .map(lambda x: x[0:-1])
+        .map(lambda words: "".join([word[0] for word in words])),
+        "None",
+    )
+
+    # create the abbreviated contest name
+    df["contest"] = df["parent"].str.replace(r"\(.*\)", "")
+    df["jurisdiction"] = df["contest"].map(lambda x: x[0:2])
+    mask_us_pres = df["contest"].str.contains("president", case=False)
+    mask_us_sen = (df["jurisdiction"] == "US") & (
+        df["contest"].str.contains("senate", case=False)
+    )
+    mask_us_house = (df["jurisdiction"] == "US") & (
+        df["contest"].str.contains("house", case=False)
+    )
+    mask_st_sen = (df["jurisdiction"] != "US") & (
+        df["contest"].str.contains("senate", case=False)
+    )
+    mask_st_house = (df["jurisdiction"] != "US") & (
+        df["contest"].str.contains("house", case=False)
+    )
+    df["chamber"] = None
+    df.loc[mask_us_pres, "chamber"] = "Pres"
+    df.loc[mask_us_sen, "chamber"] = "Sen"
+    df.loc[mask_us_house, "chamber"] = "House"
+    df.loc[mask_st_sen, "chamber"] = "S"
+    df.loc[mask_st_house, "chamber"] = "H"
+    df["chamber"] = df["chamber"].fillna("unknown")
+    df["district"] = df["contest"].str.extract(r"(\d+)")
+    df["contest_short"] = ""
+    df["contest_short"] = np.where(
+        df["chamber"] != "unknown",
+        df[df.columns[5:]].apply(lambda x: "".join(x.dropna().astype(str)), axis=1),
+        df["contest_short"],
+    )
+    df["contest_short"] = np.where(
+        df["chamber"] == "unknown",
+        df["contest"]
+        .str.split(" ")
+        .map(lambda words: "".join([word[0:3] for word in words if word != "of"])),
+        df["contest_short"],
+    )
+    df["name"] = df[["name", "party", "contest_short"]].apply(
+        lambda x: " - ".join(x.dropna().astype(str)), axis=1
+    )
+    df = df.sort_values(by=["contest_short", "party", "name"])
+    df = df[df_cols].merge(extra_df, how="inner", left_index=True, right_index=True)
+    df.reset_index(drop=True, inplace=True)
+    return df

@@ -1148,7 +1148,7 @@ class Analyzer:
     def display_options(self, input: str, verbose: bool = True, filters: list = None):
         try:
             filters_mapped = ui.get_contest_type_mappings(filters)
-            results = db.get_filtered_input_options(
+            results = ui.get_filtered_input_options(
                 self.session, input, filters_mapped
             )
         except:
