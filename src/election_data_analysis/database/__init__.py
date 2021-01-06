@@ -1789,3 +1789,27 @@ and cruj."ParentReportingUnit_Id" = %s
     result = cursor.fetchall()
     contests = [x[0] for x in result]
     return contests
+
+def get_contest_with_unknown_parties(session, election_id, top_ru_id) -> List[str]:
+    connection = session.bind.raw_connection()
+    cursor = connection.cursor()
+
+    q = sql.SQL("""select distinct c."Name"
+from "VoteCount" vc
+left join "Contest" c on vc."Contest_Id" = c."Id"
+left join "CandidateSelection" cs on cs."Id" = vc."Selection_Id"
+left join "Candidate" can on cs."Candidate_Id" = can."Id"
+left join "Party" p on cs."Party_Id" = p."Id"
+left join "ReportingUnit" child_ru on vc."ReportingUnit_Id" = child_ru."Id"
+left join "ComposingReportingUnitJoin" cruj on child_ru."Id" = cruj."ChildReportingUnit_Id"
+where
+    p."Name"='none or unknown'
+ and vc."Election_Id" = %s
+and cruj."ParentReportingUnit_Id" = %s
+;""")
+    cursor.execute(
+        q, (election_id, top_ru_id)
+    )
+    result = cursor.fetchall()
+    contests = [x[0] for x in result]
+    return contests

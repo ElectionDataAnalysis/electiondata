@@ -93,7 +93,6 @@ def test_vote_type_counts_consistent(dbname):
 def test_all_candidates_known(dbname):
     assert e.get_contest_with_unknown_candidates(election, jurisdiction, dbname=dbname) == []
 
-
 def test_count_type_subtotal(dbname):
     assert (e.contest_total(
         election,
@@ -128,3 +127,6 @@ def test_presidential_candidates(dbname):
         dbname=dbname,
         ) == []
             )
+
+def test_all_parties_known(dbname):
+    assert e.get_contest_with_unknown_parties(election, jurisdiction, dbname=dbname) == []

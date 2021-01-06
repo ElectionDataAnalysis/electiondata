@@ -1938,3 +1938,17 @@ def check_candidate_name_presence(
         return []
     else:
         return["Given candidates not found, correct the names in Candidate.txt of jurisdiction files and reload"]
+
+def get_contest_with_unknown_parties(election, jurisdiction, dbname=None) -> List[str]:
+    an = Analyzer(dbname=dbname)
+    if not an:
+        return [f"Failure to connect to database"]
+    election_id = db.name_to_id(an.session, "Election", election)
+    if not election_id:
+        return[f"Election {election} not found"]
+    jurisdiction_id = db.name_to_id(an.session, "ReportingUnit", jurisdiction)
+    if not jurisdiction_id:
+        return[f"Jurisdiction {jurisdiction} not found"]
+
+    contests = db.get_contest_with_unknown_parties(an.session, election_id, jurisdiction_id)
+    return contests
