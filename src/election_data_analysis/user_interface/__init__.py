@@ -1154,16 +1154,10 @@ def get_filtered_input_options(session, input_str, filters):
             session,
             election_id,
             reporting_unit_id,
-            ["CountItemType_Id"],
-            ["CountItemType_Id"],
+            ["CountItemType"],
+            ["CountItemType"],
         )
-        count_type_ids = type_df["CountItemType_Id"].unique()
-        count_types_df = pd.read_sql_table(
-            "CountItemType", session.bind, index_col="Id"
-        )
-        count_types = list(
-            count_types_df[count_types_df.index.isin(count_type_ids)]["Txt"].unique()
-        )
+        count_types = list(type_df["CountItemType"].unique())
         count_types.sort()
         data = {
             "parent": [filters[0] for count_type in count_types]
