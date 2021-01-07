@@ -1,0 +1,2218 @@
+Name	ReportingUnitType
+Tennessee;TN House District 1	state-house
+Tennessee;TN House District 2	state-house
+Tennessee;TN House District 3	state-house
+Tennessee;TN House District 4	state-house
+Tennessee;TN House District 5	state-house
+Tennessee;TN House District 6	state-house
+Tennessee;TN House District 7	state-house
+Tennessee;TN House District 8	state-house
+Tennessee;TN House District 9	state-house
+Tennessee;TN House District 10	state-house
+Tennessee;TN House District 11	state-house
+Tennessee;TN House District 12	state-house
+Tennessee;TN House District 13	state-house
+Tennessee;TN House District 14	state-house
+Tennessee;TN House District 15	state-house
+Tennessee;TN House District 16	state-house
+Tennessee;TN House District 17	state-house
+Tennessee;TN House District 18	state-house
+Tennessee;TN House District 19	state-house
+Tennessee;TN House District 20	state-house
+Tennessee;TN House District 21	state-house
+Tennessee;TN House District 22	state-house
+Tennessee;TN House District 23	state-house
+Tennessee;TN House District 24	state-house
+Tennessee;TN House District 25	state-house
+Tennessee;TN House District 26	state-house
+Tennessee;TN House District 27	state-house
+Tennessee;TN House District 28	state-house
+Tennessee;TN House District 29	state-house
+Tennessee;TN House District 30	state-house
+Tennessee;TN House District 31	state-house
+Tennessee;TN House District 32	state-house
+Tennessee;TN House District 33	state-house
+Tennessee;TN House District 34	state-house
+Tennessee;TN House District 35	state-house
+Tennessee;TN House District 36	state-house
+Tennessee;TN House District 37	state-house
+Tennessee;TN House District 38	state-house
+Tennessee;TN House District 39	state-house
+Tennessee;TN House District 40	state-house
+Tennessee;TN House District 41	state-house
+Tennessee;TN House District 42	state-house
+Tennessee;TN House District 43	state-house
+Tennessee;TN House District 44	state-house
+Tennessee;TN House District 45	state-house
+Tennessee;TN House District 46	state-house
+Tennessee;TN House District 47	state-house
+Tennessee;TN House District 48	state-house
+Tennessee;TN House District 49	state-house
+Tennessee;TN House District 50	state-house
+Tennessee;TN House District 51	state-house
+Tennessee;TN House District 52	state-house
+Tennessee;TN House District 53	state-house
+Tennessee;TN House District 54	state-house
+Tennessee;TN House District 55	state-house
+Tennessee;TN House District 56	state-house
+Tennessee;TN House District 57	state-house
+Tennessee;TN House District 58	state-house
+Tennessee;TN House District 59	state-house
+Tennessee;TN House District 60	state-house
+Tennessee;TN House District 61	state-house
+Tennessee;TN House District 62	state-house
+Tennessee;TN House District 63	state-house
+Tennessee;TN House District 64	state-house
+Tennessee;TN House District 65	state-house
+Tennessee;TN House District 66	state-house
+Tennessee;TN House District 67	state-house
+Tennessee;TN House District 68	state-house
+Tennessee;TN House District 69	state-house
+Tennessee;TN House District 70	state-house
+Tennessee;TN House District 71	state-house
+Tennessee;TN House District 72	state-house
+Tennessee;TN House District 73	state-house
+Tennessee;TN House District 74	state-house
+Tennessee;TN House District 75	state-house
+Tennessee;TN House District 76	state-house
+Tennessee;TN House District 77	state-house
+Tennessee;TN House District 78	state-house
+Tennessee;TN House District 79	state-house
+Tennessee;TN House District 80	state-house
+Tennessee;TN House District 81	state-house
+Tennessee;TN House District 82	state-house
+Tennessee;TN House District 83	state-house
+Tennessee;TN House District 84	state-house
+Tennessee;TN House District 85	state-house
+Tennessee;TN House District 86	state-house
+Tennessee;TN House District 87	state-house
+Tennessee;TN House District 88	state-house
+Tennessee;TN House District 89	state-house
+Tennessee;TN House District 90	state-house
+Tennessee;TN House District 91	state-house
+Tennessee;TN House District 92	state-house
+Tennessee;TN House District 93	state-house
+Tennessee;TN House District 94	state-house
+Tennessee;TN House District 95	state-house
+Tennessee;TN House District 96	state-house
+Tennessee;TN House District 97	state-house
+Tennessee;TN House District 98	state-house
+Tennessee;TN House District 99	state-house
+Tennessee;TN Senate District 1	state-senate
+Tennessee;TN Senate District 2	state-senate
+Tennessee;TN Senate District 3	state-senate
+Tennessee;TN Senate District 4	state-senate
+Tennessee;TN Senate District 5	state-senate
+Tennessee;TN Senate District 6	state-senate
+Tennessee;TN Senate District 7	state-senate
+Tennessee;TN Senate District 8	state-senate
+Tennessee;TN Senate District 9	state-senate
+Tennessee;TN Senate District 10	state-senate
+Tennessee;TN Senate District 11	state-senate
+Tennessee;TN Senate District 12	state-senate
+Tennessee;TN Senate District 13	state-senate
+Tennessee;TN Senate District 14	state-senate
+Tennessee;TN Senate District 15	state-senate
+Tennessee;TN Senate District 16	state-senate
+Tennessee;TN Senate District 17	state-senate
+Tennessee;TN Senate District 18	state-senate
+Tennessee;TN Senate District 19	state-senate
+Tennessee;TN Senate District 20	state-senate
+Tennessee;TN Senate District 21	state-senate
+Tennessee;TN Senate District 22	state-senate
+Tennessee;TN Senate District 23	state-senate
+Tennessee;TN Senate District 24	state-senate
+Tennessee;TN Senate District 25	state-senate
+Tennessee;TN Senate District 26	state-senate
+Tennessee;TN Senate District 27	state-senate
+Tennessee;TN Senate District 28	state-senate
+Tennessee;TN Senate District 29	state-senate
+Tennessee;TN Senate District 30	state-senate
+Tennessee;TN Senate District 31	state-senate
+Tennessee;TN Senate District 32	state-senate
+Tennessee;TN Senate District 33	state-senate
+Tennessee;US House TN District 1	congressional
+Tennessee;US House TN District 2	congressional
+Tennessee;US House TN District 3	congressional
+Tennessee;US House TN District 4	congressional
+Tennessee;US House TN District 5	congressional
+Tennessee;US House TN District 6	congressional
+Tennessee;US House TN District 7	congressional
+Tennessee;US House TN District 8	congressional
+Tennessee;US House TN District 9	congressional
+Tennessee	state
+Tennessee;Anderson County	county
+Tennessee;Bedford County	county
+Tennessee;Benton County	county
+Tennessee;Bledsoe County	county
+Tennessee;Blount County	county
+Tennessee;Bradley County	county
+Tennessee;Campbell County	county
+Tennessee;Cannon County	county
+Tennessee;Carroll County	county
+Tennessee;Carter County	county
+Tennessee;Cheatham County	county
+Tennessee;Chester County	county
+Tennessee;Claiborne County	county
+Tennessee;Clay County	county
+Tennessee;Cocke County	county
+Tennessee;Coffee County	county
+Tennessee;Crockett County	county
+Tennessee;Cumberland County	county
+Tennessee;Davidson County	county
+Tennessee;Decatur County	county
+Tennessee;Dekalb County	county
+Tennessee;Dickson County	county
+Tennessee;Dyer County	county
+Tennessee;Fayette County	county
+Tennessee;Fentress County	county
+Tennessee;Franklin County	county
+Tennessee;Gibson County	county
+Tennessee;Giles County	county
+Tennessee;Grainger County	county
+Tennessee;Greene County	county
+Tennessee;Grundy County	county
+Tennessee;Hamblen County	county
+Tennessee;Hamilton County	county
+Tennessee;Hancock County	county
+Tennessee;Hardeman County	county
+Tennessee;Hardin County	county
+Tennessee;Hawkins County	county
+Tennessee;Haywood County	county
+Tennessee;Henderson County	county
+Tennessee;Henry County	county
+Tennessee;Hickman County	county
+Tennessee;Houston County	county
+Tennessee;Humphreys County	county
+Tennessee;Jackson County	county
+Tennessee;Jefferson County	county
+Tennessee;Johnson County	county
+Tennessee;Knox County	county
+Tennessee;Lake County	county
+Tennessee;Lauderdale County	county
+Tennessee;Lawrence County	county
+Tennessee;Lewis County	county
+Tennessee;Lincoln County	county
+Tennessee;Loudon County	county
+Tennessee;Macon County	county
+Tennessee;Madison County	county
+Tennessee;Marion County	county
+Tennessee;Marshall County	county
+Tennessee;Maury County	county
+Tennessee;McMinn County	county
+Tennessee;McNairy County	county
+Tennessee;Meigs County	county
+Tennessee;Monroe County	county
+Tennessee;Montgomery County	county
+Tennessee;Moore County	county
+Tennessee;Morgan County	county
+Tennessee;Obion County	county
+Tennessee;Overton County	county
+Tennessee;Perry County	county
+Tennessee;Pickett County	county
+Tennessee;Polk County	county
+Tennessee;Putnam County	county
+Tennessee;Rhea County	county
+Tennessee;Roane County	county
+Tennessee;Robertson County	county
+Tennessee;Rutherford County	county
+Tennessee;Scott County	county
+Tennessee;Sequatchie County	county
+Tennessee;Sevier County	county
+Tennessee;Shelby County	county
+Tennessee;Smith County	county
+Tennessee;Stewart County	county
+Tennessee;Sullivan County	county
+Tennessee;Sumner County	county
+Tennessee;Tipton County	county
+Tennessee;Trousdale County	county
+Tennessee;Unicoi County	county
+Tennessee;Union County	county
+Tennessee;Van Buren County	county
+Tennessee;Warren County	county
+Tennessee;Washington County	county
+Tennessee;Wayne County	county
+Tennessee;Weakley County	county
+Tennessee;White County	county
+Tennessee;Williamson County	county
+Tennessee;Wilson County	county
+Tennessee;Anderson County;Andersonville	precinct
+Tennessee;Anderson County;Briceville	precinct
+Tennessee;Anderson County;Bull Run	precinct
+Tennessee;Anderson County;Clinton	precinct
+Tennessee;Anderson County;Clinton High	precinct
+Tennessee;Anderson County;Claxton	precinct
+Tennessee;Anderson County;Clinton Middle	precinct
+Tennessee;Anderson County;Dutch Valley	precinct
+Tennessee;Anderson County;Emory Valley	precinct
+Tennessee;Anderson County;Fairview	precinct
+Tennessee;Anderson County;Glen Alpine	precinct
+Tennessee;Anderson County;Glenwood	precinct
+Tennessee;Anderson County;Hendrix Creek	precinct
+Tennessee;Anderson County;Highland View	precinct
+Tennessee;Anderson County;Lake City MS	precinct
+Tennessee;Anderson County;Marlow	precinct
+Tennessee;Anderson County;North Clinton	precinct
+Tennessee;Anderson County;Norris	precinct
+Tennessee;Anderson County;Norwood	precinct
+Tennessee;Anderson County;Oak Ridge	precinct
+Tennessee;Anderson County;Pine Valley	precinct
+Tennessee;Anderson County;Robertsville	precinct
+Tennessee;Anderson County;Rosedale	precinct
+Tennessee;Anderson County;Rocky Top	precinct
+Tennessee;Anderson County;South Clinton	precinct
+Tennessee;Anderson County;Woodland	precinct
+Tennessee;Anderson County;West Hills	precinct
+Tennessee;Bedford County;1-1 Wartrace	precinct
+Tennessee;Bedford County;1-2 Bell Buckle	precinct
+Tennessee;Bedford County;2-3 Fair Haven	precinct
+Tennessee;Bedford County;3-3 Unionville	precinct
+Tennessee;Bedford County;4-3 Bedford	precinct
+Tennessee;Bedford County;5-2 Flat Creek	precinct
+Tennessee;Bedford County;5-5 Normandy	precinct
+Tennessee;Bedford County;6-1 East Side	precinct
+Tennessee;Bedford County;7-1 Deery Eakin	precinct
+Tennessee;Bedford County;8-1 Thomas	precinct
+Tennessee;Bedford County;9-2 Southside	precinct
+Tennessee;Benton County;1 Holladay	precinct
+Tennessee;Benton County;2 Camden Jr High	precinct
+Tennessee;Benton County;3 Camden City Hall	precinct
+Tennessee;Benton County;4 Camden Elementary	precinct
+Tennessee;Benton County;5 Library	precinct
+Tennessee;Benton County;6 Big Sandy	precinct
+Tennessee;Bledsoe County;1-1 Dill	precinct
+Tennessee;Bledsoe County;1-2 Griffith	precinct
+Tennessee;Bledsoe County;1-3 Mt. Crest	precinct
+Tennessee;Bledsoe County;2-1 Cold Springs	precinct
+Tennessee;Bledsoe County;2-2 Luminary	precinct
+Tennessee;Bledsoe County;3-1 Brayton	precinct
+Tennessee;Bledsoe County;3-2 Rigsby	precinct
+Tennessee;Bledsoe County;4-1 Pikeville	precinct
+Tennessee;Bledsoe County;5-1 Bellview	precinct
+Tennessee;Bledsoe County;5-2 Nine Mile	precinct
+Tennessee;Bledsoe County;6-1 Lee Station	precinct
+Tennessee;Bledsoe County;6-2 Lusk	precinct
+Tennessee;Blount County;Alcoa	precinct
+Tennessee;Blount County;Big Springs	precinct
+Tennessee;Blount County;Board of Education	precinct
+Tennessee;Blount County;Carpenters	precinct
+Tennessee;Blount County;Chilhowee View	precinct
+Tennessee;Blount County;Eagleton MS Cafeteria	precinct
+Tennessee;Blount County;Everett	precinct
+Tennessee;Blount County;Fairview	precinct
+Tennessee;Blount County;Friendsville	precinct
+Tennessee;Blount County;Heritage	precinct
+Tennessee;Blount County;John Sevier	precinct
+Tennessee;Blount County;Lanier	precinct
+Tennessee;Blount County;Louisville	precinct
+Tennessee;Blount County;Martin Luther King	precinct
+Tennessee;Blount County;Maryville College	precinct
+Tennessee;Blount County;Maryville HS	precinct
+Tennessee;Blount County;Maryville Jr High	precinct
+Tennessee;Blount County;Maryville Municipal	precinct
+Tennessee;Blount County;Mentor	precinct
+Tennessee;Blount County;Middlesettlements	precinct
+Tennessee;Blount County;Montvale	precinct
+Tennessee;Blount County;Oak Street	precinct
+Tennessee;Blount County;Oakview	precinct
+Tennessee;Blount County;Pellissippi Campus	precinct
+Tennessee;Blount County;Porter	precinct
+Tennessee;Blount County;Prospect	precinct
+Tennessee;Blount County;Rockford	precinct
+Tennessee;Blount County;Townsend	precinct
+Tennessee;Blount County;Walland	precinct
+Tennessee;Blount County;William Blount HS	precinct
+Tennessee;Blount County;Wm Blount Academy	precinct
+Tennessee;Bradley County;1-1 McDonald	precinct
+Tennessee;Bradley County;1-2 Prospect	precinct
+Tennessee;Bradley County;1-3 Hopewell	precinct
+Tennessee;Bradley County;2-1 E.L. Ross	precinct
+Tennessee;Bradley County;2-2 Walker Valley	precinct
+Tennessee;Bradley County;3-1 Lee University	precinct
+Tennessee;Bradley County;3-2 Senior Center	precinct
+Tennessee;Bradley County;4-1 Oak Grove	precinct
+Tennessee;Bradley County;4-2 Michigan Ave	precinct
+Tennessee;Bradley County;5-1 Blythe/Bower	precinct
+Tennessee;Bradley County;5-2 Museum	precinct
+Tennessee;Bradley County;6-1 Valley View	precinct
+Tennessee;Bradley County;6-2 Blue Springs	precinct
+Tennessee;Bradley County;6-3 Waterville	precinct
+Tennessee;Bradley County;6-4 Black Fox	precinct
+Tennessee;Bradley County;7-1 Stuart	precinct
+Tennessee;Bradley County;7-2 Cleveland High	precinct
+Tennessee;Campbell County;1-1 Alder Springs	precinct
+Tennessee;Campbell County;1-2 Demory	precinct
+Tennessee;Campbell County;1-3 Pinecrest	precinct
+Tennessee;Campbell County;1-4 Valley View	precinct
+Tennessee;Campbell County;1-5 Well Springs	precinct
+Tennessee;Campbell County;2-1 College Hill	precinct
+Tennessee;Campbell County;2-2 East LaFollette	precinct
+Tennessee;Campbell County;2-3 LaFollette ES	precinct
+Tennessee;Campbell County;3-1 CCHS	precinct
+Tennessee;Campbell County;3-2 Jacksboro Sta	precinct
+Tennessee;Campbell County;3-3 West LaFollette	precinct
+Tennessee;Campbell County;4-1 Caryville	precinct
+Tennessee;Campbell County;4-2 Clinchmore	precinct
+Tennessee;Campbell County;4-3 Jacksboro	precinct
+Tennessee;Campbell County;4-4 Ridgewood	precinct
+Tennessee;Campbell County;5-1 Elk Valley	precinct
+Tennessee;Campbell County;5-2 Habersham	precinct
+Tennessee;Campbell County;5-3 Jellico	precinct
+Tennessee;Campbell County;5-4 Newcomb	precinct
+Tennessee;Campbell County;5-5 White Oak	precinct
+Tennessee;Cannon County;1-1 Westside	precinct
+Tennessee;Cannon County;2-1 Auburntown	precinct
+Tennessee;Cannon County;2-2 Gassaway	precinct
+Tennessee;Cannon County;2-3 Pleasant Ridge	precinct
+Tennessee;Cannon County;2-4 Short Mountain	precinct
+Tennessee;Cannon County;3-2 Woodland	precinct
+Tennessee;Cannon County;4-1 Eastside	precinct
+Tennessee;Cannon County;4-2 Short Mountain	precinct
+Tennessee;Cannon County;5-1 Woodbury	precinct
+Tennessee;Cannon County;Absentee	precinct
+Tennessee;Carroll County;Lavinia	precinct
+Tennessee;Carroll County;Trezevant	precinct
+Tennessee;Carroll County;McLemoresville	precinct
+Tennessee;Carroll County;Cedar Grove	precinct
+Tennessee;Carroll County;Clarksburg	precinct
+Tennessee;Carroll County;Macedonia	precinct
+Tennessee;Carroll County;Civic Center	precinct
+Tennessee;Carroll County;Hunt-Police Station	precinct
+Tennessee;Carroll County;Buena Vista	precinct
+Tennessee;Carroll County;Bruceton	precinct
+Tennessee;Carroll County;Hollow Rock	precinct
+Tennessee;Carroll County;Vale	precinct
+Tennessee;Carroll County;Atwood	precinct
+Tennessee;Carroll County;Senior Citizens	precinct
+Tennessee;Carroll County;Cannon	precinct
+Tennessee;Carroll County;Concord	precinct
+Tennessee;Carroll County;Westport	precinct
+Tennessee;Carroll County;Church of Christ	precinct
+Tennessee;Carroll County;McKenzie	precinct
+Tennessee;Carter County;Hunter	precinct
+Tennessee;Carter County;Midway	precinct
+Tennessee;Carter County;Unaka	precinct
+Tennessee;Carter County;Roan Mountain	precinct
+Tennessee;Carter County;Tiger Valley	precinct
+Tennessee;Carter County;Central	precinct
+Tennessee;Carter County;Keenburg	precinct
+Tennessee;Carter County;Range	precinct
+Tennessee;Carter County;Watauga	precinct
+Tennessee;Carter County;Courthouse	precinct
+Tennessee;Carter County;Eastside	precinct
+Tennessee;Carter County;National Guard	precinct
+Tennessee;Carter County;Siam	precinct
+Tennessee;Carter County;Happy Valley	precinct
+Tennessee;Carter County;Elk Mills	precinct
+Tennessee;Carter County;Hampton	precinct
+Tennessee;Carter County;Little Milligan	precinct
+Tennessee;Carter County;Valley Forge	precinct
+Tennessee;Carter County;Gap Creek	precinct
+Tennessee;Carter County;Westside	precinct
+Tennessee;Carter County;Harold McCormick	precinct
+Tennessee;Carter County;High School	precinct
+Tennessee;Cheatham County;1-1 County Library	precinct
+Tennessee;Cheatham County;2-2 East Cheatham	precinct
+Tennessee;Cheatham County;3-1 Pleasant View	precinct
+Tennessee;Cheatham County;4-1 West Cheatham	precinct
+Tennessee;Cheatham County;4-3 Sycamore	precinct
+Tennessee;Cheatham County;5-1 Greenbrier	precinct
+Tennessee;Cheatham County;5-2 Pegram	precinct
+Tennessee;Cheatham County;6-1 Harpeth	precinct
+Tennessee;Chester County;1-2 Enville	precinct
+Tennessee;Chester County;1-5 Sweetlips	precinct
+Tennessee;Chester County;1-6 Harmony	precinct
+Tennessee;Chester County;2-1 Jacks Creek	precinct
+Tennessee;Chester County;2-2 Friendship	precinct
+Tennessee;Chester County;3-2 Montezuma	precinct
+Tennessee;Chester County;3-4 Masseyville	precinct
+Tennessee;Chester County;3-6 Deanburg	precinct
+Tennessee;Chester County;4-1 West Chester	precinct
+Tennessee;Chester County;5-1 East Chester	precinct
+Tennessee;Chester County;6-1 City Hall	precinct
+Tennessee;Claiborne County;1-1 Tazewell	precinct
+Tennessee;Claiborne County;2-1 Clouds	precinct
+Tennessee;Claiborne County;2-2 Goin	precinct
+Tennessee;Claiborne County;2-3 Sandlick	precinct
+Tennessee;Claiborne County;3-1 Lone Mountain	precinct
+Tennessee;Claiborne County;3-2 New Tazewell	precinct
+Tennessee;Claiborne County;4-2 Howard's Quarter	precinct
+Tennessee;Claiborne County;4-3 Liberty	precinct
+Tennessee;Claiborne County;4-4 Springdale	precinct
+Tennessee;Claiborne County;5-1 Big Spring Union	precinct
+Tennessee;Claiborne County;6-1 Harrogate	precinct
+Tennessee;Claiborne County;7-1 Arthur	precinct
+Tennessee;Claiborne County;7-2 Cumberland Gap	precinct
+Tennessee;Claiborne County;8-1 Rogers Mill	precinct
+Tennessee;Claiborne County;8-2 Vanbebber Sprngs	precinct
+Tennessee;Claiborne County;9-1 Clairfield	precinct
+Tennessee;Clay County;1 Dentons Cross Road	precinct
+Tennessee;Clay County;2 Hermitage Springs	precinct
+Tennessee;Clay County;3 Celina	precinct
+Tennessee;Clay County;4-1 Maple Grove	precinct
+Tennessee;Clay County;4-2 Butlers Landing	precinct
+Tennessee;Clay County;5-1 Beech Bethany	precinct
+Tennessee;Clay County;5-2 Pea Ridge	precinct
+Tennessee;Cocke County;Del Rio	precinct
+Tennessee;Cocke County;Grassy Fork	precinct
+Tennessee;Cocke County;Edwina	precinct
+Tennessee;Cocke County;Bridgeport	precinct
+Tennessee;Cocke County;Long Creek	precinct
+Tennessee;Cocke County;Houston Valley	precinct
+Tennessee;Cocke County;Parrottsville	precinct
+Tennessee;Cocke County;Centerview	precinct
+Tennessee;Cocke County;Forest Hill	precinct
+Tennessee;Cocke County;Rankin	precinct
+Tennessee;Cocke County;Armory	precinct
+Tennessee;Cocke County;Edgemont	precinct
+Tennessee;Cocke County;Cocke County High	precinct
+Tennessee;Cocke County;Cosby	precinct
+Tennessee;Cocke County;Smoky Mountain	precinct
+Tennessee;Cocke County;Newport Grammar	precinct
+Tennessee;Cocke County;Central	precinct
+Tennessee;Cocke County;Northport	precinct
+Tennessee;Cocke County;West End	precinct
+Tennessee;Coffee County;1 Ada Wright CC	precinct
+Tennessee;Coffee County;2 St Paul	precinct
+Tennessee;Coffee County;3 Trinity	precinct
+Tennessee;Coffee County;4 First Baptist	precinct
+Tennessee;Coffee County;5 Hillsboro	precinct
+Tennessee;Coffee County;6 TN Vocational Center	precinct
+Tennessee;Coffee County;7 Forest Mill	precinct
+Tennessee;Coffee County;8 New Union	precinct
+Tennessee;Coffee County;9-1 Pocahontas	precinct
+Tennessee;Coffee County;9-2 Summitville	precinct
+Tennessee;Coffee County;10 Mt. Ararat	precinct
+Tennessee;Coffee County;11 Fredonia	precinct
+Tennessee;Coffee County;12 North Coffee	precinct
+Tennessee;Coffee County;13-1 Blanton's Chapel	precinct
+Tennessee;Coffee County;13-2 Grace Baptist	precinct
+Tennessee;Coffee County;13-4 Grace Baptist	precinct
+Tennessee;Coffee County;14 Hickerson	precinct
+Tennessee;Coffee County;15 Grace Baptist	precinct
+Tennessee;Coffee County;16 Lion's Club	precinct
+Tennessee;Coffee County;17 National Guard Armory	precinct
+Tennessee;Coffee County;18 First Christian	precinct
+Tennessee;Coffee County;19 CD Stamps Center	precinct
+Tennessee;Coffee County;20 Sr Citizens Center	precinct
+Tennessee;Coffee County;21 Wilson Ave	precinct
+Tennessee;Crockett County;01	precinct
+Tennessee;Crockett County;02	precinct
+Tennessee;Crockett County;03	precinct
+Tennessee;Crockett County;04	precinct
+Tennessee;Crockett County;05	precinct
+Tennessee;Crockett County;06	precinct
+Tennessee;Crockett County;07	precinct
+Tennessee;Crockett County;08	precinct
+Tennessee;Crockett County;09	precinct
+Tennessee;Crockett County;10	precinct
+Tennessee;Crockett County;11	precinct
+Tennessee;Crockett County;12	precinct
+Tennessee;Cumberland County;1 Cornerstone	precinct
+Tennessee;Cumberland County;2 Complex 2	precinct
+Tennessee;Cumberland County;3 Homestead	precinct
+Tennessee;Cumberland County;3 Dorton	precinct
+Tennessee;Cumberland County;3 Linary	precinct
+Tennessee;Cumberland County;3 Big Lick	precinct
+Tennessee;Cumberland County;4 Tabor	precinct
+Tennessee;Cumberland County;4 Bakers	precinct
+Tennessee;Cumberland County;4 Oak Hill	precinct
+Tennessee;Cumberland County;5 Lantana	precinct
+Tennessee;Cumberland County;5 Vandever	precinct
+Tennessee;Cumberland County;5 Tansi	precinct
+Tennessee;Cumberland County;6 Crab Orchard	precinct
+Tennessee;Cumberland County;6 Chestnut Hill	precinct
+Tennessee;Cumberland County;6 Ozone-Pineview	precinct
+Tennessee;Cumberland County;6 Grassy Cove	precinct
+Tennessee;Cumberland County;7 Rinnie	precinct
+Tennessee;Cumberland County;7 Woody	precinct
+Tennessee;Cumberland County;7 Mayland	precinct
+Tennessee;Cumberland County;8 Pleasant Hill	precinct
+Tennessee;Cumberland County;8 Pomona	precinct
+Tennessee;Cumberland County;8 Midway	precinct
+Tennessee;Cumberland County;9 Fairfield North	precinct
+Tennessee;Cumberland County;9 Fairfield South	precinct
+Tennessee;Davidson County;01-1	precinct
+Tennessee;Davidson County;01-2	precinct
+Tennessee;Davidson County;01-3	precinct
+Tennessee;Davidson County;01-4	precinct
+Tennessee;Davidson County;01-5	precinct
+Tennessee;Davidson County;02-1	precinct
+Tennessee;Davidson County;02-2	precinct
+Tennessee;Davidson County;02-3	precinct
+Tennessee;Davidson County;02-4	precinct
+Tennessee;Davidson County;02-5	precinct
+Tennessee;Davidson County;03-1	precinct
+Tennessee;Davidson County;03-2	precinct
+Tennessee;Davidson County;03-3	precinct
+Tennessee;Davidson County;03-4	precinct
+Tennessee;Davidson County;03-5	precinct
+Tennessee;Davidson County;03-6	precinct
+Tennessee;Davidson County;04-1	precinct
+Tennessee;Davidson County;04-2	precinct
+Tennessee;Davidson County;04-3	precinct
+Tennessee;Davidson County;04-4	precinct
+Tennessee;Davidson County;05-1	precinct
+Tennessee;Davidson County;05-2	precinct
+Tennessee;Davidson County;05-3	precinct
+Tennessee;Davidson County;05-4	precinct
+Tennessee;Davidson County;05-5	precinct
+Tennessee;Davidson County;06-1	precinct
+Tennessee;Davidson County;06-2	precinct
+Tennessee;Davidson County;06-3	precinct
+Tennessee;Davidson County;06-4	precinct
+Tennessee;Davidson County;06-5	precinct
+Tennessee;Davidson County;07-1	precinct
+Tennessee;Davidson County;07-2	precinct
+Tennessee;Davidson County;07-3	precinct
+Tennessee;Davidson County;07-4	precinct
+Tennessee;Davidson County;07-5	precinct
+Tennessee;Davidson County;07-6	precinct
+Tennessee;Davidson County;08-1	precinct
+Tennessee;Davidson County;08-2	precinct
+Tennessee;Davidson County;08-3	precinct
+Tennessee;Davidson County;08-4	precinct
+Tennessee;Davidson County;09-1	precinct
+Tennessee;Davidson County;09-2	precinct
+Tennessee;Davidson County;09-3	precinct
+Tennessee;Davidson County;10-1	precinct
+Tennessee;Davidson County;10-2	precinct
+Tennessee;Davidson County;10-3	precinct
+Tennessee;Davidson County;10-4	precinct
+Tennessee;Davidson County;10-5	precinct
+Tennessee;Davidson County;10-6	precinct
+Tennessee;Davidson County;11-1	precinct
+Tennessee;Davidson County;11-2	precinct
+Tennessee;Davidson County;11-3	precinct
+Tennessee;Davidson County;11-4	precinct
+Tennessee;Davidson County;12-1	precinct
+Tennessee;Davidson County;12-2	precinct
+Tennessee;Davidson County;12-3	precinct
+Tennessee;Davidson County;12-4	precinct
+Tennessee;Davidson County;12-5	precinct
+Tennessee;Davidson County;13-1	precinct
+Tennessee;Davidson County;13-2	precinct
+Tennessee;Davidson County;13-3	precinct
+Tennessee;Davidson County;13-4	precinct
+Tennessee;Davidson County;14-1	precinct
+Tennessee;Davidson County;14-2	precinct
+Tennessee;Davidson County;14-3	precinct
+Tennessee;Davidson County;14-4	precinct
+Tennessee;Davidson County;14-5	precinct
+Tennessee;Davidson County;15-1	precinct
+Tennessee;Davidson County;15-2	precinct
+Tennessee;Davidson County;15-3	precinct
+Tennessee;Davidson County;15-4	precinct
+Tennessee;Davidson County;15-5	precinct
+Tennessee;Davidson County;16-1	precinct
+Tennessee;Davidson County;16-2	precinct
+Tennessee;Davidson County;16-3	precinct
+Tennessee;Davidson County;16-4	precinct
+Tennessee;Davidson County;16-5	precinct
+Tennessee;Davidson County;17-1	precinct
+Tennessee;Davidson County;17-2	precinct
+Tennessee;Davidson County;17-3	precinct
+Tennessee;Davidson County;17-4	precinct
+Tennessee;Davidson County;17-5	precinct
+Tennessee;Davidson County;17-6	precinct
+Tennessee;Davidson County;17-7	precinct
+Tennessee;Davidson County;18-1	precinct
+Tennessee;Davidson County;18-2	precinct
+Tennessee;Davidson County;18-3	precinct
+Tennessee;Davidson County;18-4	precinct
+Tennessee;Davidson County;18-5	precinct
+Tennessee;Davidson County;19-1	precinct
+Tennessee;Davidson County;19-2	precinct
+Tennessee;Davidson County;19-3	precinct
+Tennessee;Davidson County;19-4	precinct
+Tennessee;Davidson County;19-5	precinct
+Tennessee;Davidson County;19-6	precinct
+Tennessee;Davidson County;20-1	precinct
+Tennessee;Davidson County;20-2	precinct
+Tennessee;Davidson County;20-3	precinct
+Tennessee;Davidson County;21-1	precinct
+Tennessee;Davidson County;21-2	precinct
+Tennessee;Davidson County;21-3	precinct
+Tennessee;Davidson County;21-4	precinct
+Tennessee;Davidson County;22-1	precinct
+Tennessee;Davidson County;22-2	precinct
+Tennessee;Davidson County;22-3	precinct
+Tennessee;Davidson County;22-4	precinct
+Tennessee;Davidson County;23-1	precinct
+Tennessee;Davidson County;23-2	precinct
+Tennessee;Davidson County;23-3	precinct
+Tennessee;Davidson County;23-4	precinct
+Tennessee;Davidson County;23-5	precinct
+Tennessee;Davidson County;24-1	precinct
+Tennessee;Davidson County;24-2	precinct
+Tennessee;Davidson County;24-3	precinct
+Tennessee;Davidson County;24-4	precinct
+Tennessee;Davidson County;24-5	precinct
+Tennessee;Davidson County;24-6	precinct
+Tennessee;Davidson County;25-1	precinct
+Tennessee;Davidson County;25-2	precinct
+Tennessee;Davidson County;25-3	precinct
+Tennessee;Davidson County;25-4	precinct
+Tennessee;Davidson County;26-1	precinct
+Tennessee;Davidson County;26-2	precinct
+Tennessee;Davidson County;26-3	precinct
+Tennessee;Davidson County;26-4	precinct
+Tennessee;Davidson County;27-1	precinct
+Tennessee;Davidson County;27-2	precinct
+Tennessee;Davidson County;27-3	precinct
+Tennessee;Davidson County;28-1	precinct
+Tennessee;Davidson County;28-2	precinct
+Tennessee;Davidson County;28-3	precinct
+Tennessee;Davidson County;29-1	precinct
+Tennessee;Davidson County;29-2	precinct
+Tennessee;Davidson County;29-3	precinct
+Tennessee;Davidson County;29-4	precinct
+Tennessee;Davidson County;30-1	precinct
+Tennessee;Davidson County;30-2	precinct
+Tennessee;Davidson County;30-3	precinct
+Tennessee;Davidson County;30-4	precinct
+Tennessee;Davidson County;31-1	precinct
+Tennessee;Davidson County;31-2	precinct
+Tennessee;Davidson County;31-3	precinct
+Tennessee;Davidson County;31-4	precinct
+Tennessee;Davidson County;32-1	precinct
+Tennessee;Davidson County;32-2	precinct
+Tennessee;Davidson County;32-3	precinct
+Tennessee;Davidson County;32-4	precinct
+Tennessee;Davidson County;33-1	precinct
+Tennessee;Davidson County;33-2	precinct
+Tennessee;Davidson County;33-3	precinct
+Tennessee;Davidson County;33-4	precinct
+Tennessee;Davidson County;34-1	precinct
+Tennessee;Davidson County;34-2	precinct
+Tennessee;Davidson County;34-3	precinct
+Tennessee;Davidson County;34-4	precinct
+Tennessee;Davidson County;34-5	precinct
+Tennessee;Davidson County;35-1	precinct
+Tennessee;Davidson County;35-2	precinct
+Tennessee;Davidson County;35-3	precinct
+Tennessee;Davidson County;35-4	precinct
+Tennessee;Davidson County;Absentee	precinct
+Tennessee;Decatur County;1-1 Dunbar	precinct
+Tennessee;Decatur County;2-1 Liberty	precinct
+Tennessee;Decatur County;2-2 Scotts Hill	precinct
+Tennessee;Decatur County;3-1 Beacon	precinct
+Tennessee;Decatur County;3-2 Decaturville	precinct
+Tennessee;Decatur County;4-1 Decaturville	precinct
+Tennessee;Decatur County;5-1 Parsons	precinct
+Tennessee;Decatur County;6-1 Parsons	precinct
+Tennessee;Decatur County;7-1 Jeanette	precinct
+Tennessee;Decatur County;7-2 Perryville	precinct
+Tennessee;Decatur County;8-1 Parsons	precinct
+Tennessee;Decatur County;9-1 Beacon	precinct
+Tennessee;Decatur County;9-2 Hydro	precinct
+Tennessee;Dekalb County;1-1 Alexandria	precinct
+Tennessee;Dekalb County;1-2 Temperence Hall	precinct
+Tennessee;Dekalb County;1-3 Edgar Evins Park	precinct
+Tennessee;Dekalb County;2-1 Liberty	precinct
+Tennessee;Dekalb County;2-2 Dowelltown	precinct
+Tennessee;Dekalb County;2-3 Snows Hill	precinct
+Tennessee;Dekalb County;3-1 Church of God	precinct
+Tennessee;Dekalb County;4-2 Rock Castle	precinct
+Tennessee;Dekalb County;4-3 Courthouse	precinct
+Tennessee;Dekalb County;5-1 Johnson Chapel	precinct
+Tennessee;Dekalb County;5-2 County Complex	precinct
+Tennessee;Dekalb County;6-1 Belk	precinct
+Tennessee;Dekalb County;6-2 Keltonburg	precinct
+Tennessee;Dekalb County;6-3 Blue Springs	precinct
+Tennessee;Dekalb County;7-1 Church of Christ	precinct
+Tennessee;Dickson County;1-1	precinct
+Tennessee;Dickson County;1-2	precinct
+Tennessee;Dickson County;2-1	precinct
+Tennessee;Dickson County;2-2	precinct
+Tennessee;Dickson County;3-1	precinct
+Tennessee;Dickson County;3-2	precinct
+Tennessee;Dickson County;4-1	precinct
+Tennessee;Dickson County;5-1	precinct
+Tennessee;Dickson County;6-1	precinct
+Tennessee;Dickson County;6-2	precinct
+Tennessee;Dickson County;7-1	precinct
+Tennessee;Dickson County;8-1	precinct
+Tennessee;Dickson County;9-1	precinct
+Tennessee;Dickson County;10-1	precinct
+Tennessee;Dickson County;11-1	precinct
+Tennessee;Dickson County;12-1	precinct
+Tennessee;Dickson County;12-2	precinct
+Tennessee;Dyer County;A1- Bonicord	precinct
+Tennessee;Dyer County;A2- Fowlkes	precinct
+Tennessee;Dyer County;B- Newbern	precinct
+Tennessee;Dyer County;C1- Tatumville	precinct
+Tennessee;Dyer County;C2- Trimble	precinct
+Tennessee;Dyer County;C3- Roellen	precinct
+Tennessee;Dyer County;D1- Millsfield	precinct
+Tennessee;Dyer County;D2- Bogota	precinct
+Tennessee;Dyer County;E1- Finley	precinct
+Tennessee;Dyer County;E2- Lenox	precinct
+Tennessee;Dyer County;F- Dyer Co Central	precinct
+Tennessee;Dyer County;G- Courthouse	precinct
+Tennessee;Dyer County;H- E. Dyersburg	precinct
+Tennessee;Dyer County;I1- Community Center	precinct
+Tennessee;Dyer County;I2- Hurricane Hill	precinct
+Tennessee;Dyer County;J- North Dyersburg	precinct
+Tennessee;Fayette County;Somerville	precinct
+Tennessee;Fayette County;Fayette Corner	precinct
+Tennessee;Fayette County;Garnett	precinct
+Tennessee;Fayette County;Braden	precinct
+Tennessee;Fayette County;Gallaway	precinct
+Tennessee;Fayette County;Oakland	precinct
+Tennessee;Fayette County;Hickory Withe	precinct
+Tennessee;Fayette County;Elba	precinct
+Tennessee;Fayette County;Piperton	precinct
+Tennessee;Fayette County;Rossville	precinct
+Tennessee;Fayette County;Macon	precinct
+Tennessee;Fayette County;Williston	precinct
+Tennessee;Fayette County;Moscow	precinct
+Tennessee;Fayette County;Parks	precinct
+Tennessee;Fayette County;LaGrange	precinct
+Tennessee;Fentress County;Allardt	precinct
+Tennessee;Fentress County;Armathwaite	precinct
+Tennessee;Fentress County;Banner	precinct
+Tennessee;Fentress County;Community Center	precinct
+Tennessee;Fentress County;Courthouse	precinct
+Tennessee;Fentress County;Clarkrange	precinct
+Tennessee;Fentress County;Crossroads	precinct
+Tennessee;Fentress County;East Jamestown	precinct
+Tennessee;Fentress County;Grimsley	precinct
+Tennessee;Fentress County;Pine Haven	precinct
+Tennessee;Fentress County;Pall Mall	precinct
+Tennessee;Fentress County;Tinchtown	precinct
+Tennessee;Fentress County;West Fentress	precinct
+Tennessee;Franklin County;1-1 Annex	precinct
+Tennessee;Franklin County;2-1 Clark Memorial	precinct
+Tennessee;Franklin County;3-1 Broadview	precinct
+Tennessee;Franklin County;3-2 Huntland	precinct
+Tennessee;Franklin County;3-3 Walnut Grove	precinct
+Tennessee;Franklin County;4-1 Belvidere	precinct
+Tennessee;Franklin County;4-2 Cowan	precinct
+Tennessee;Franklin County;4-3 Liberty	precinct
+Tennessee;Franklin County;5-1 Keith Springs	precinct
+Tennessee;Franklin County;5-2 Sewanee	precinct
+Tennessee;Franklin County;5-3 Sherwood	precinct
+Tennessee;Franklin County;6-1 Alto/Oak Grove	precinct
+Tennessee;Franklin County;6-2 Capitol Hill	precinct
+Tennessee;Franklin County;6-3 UTSI	precinct
+Tennessee;Franklin County;7-1 North Lake	precinct
+Tennessee;Franklin County;7-2 CG/Winchester Springs	precinct
+Tennessee;Franklin County;8-1 Decherd	precinct
+Tennessee;Franklin County;8-2 Estill Springs	precinct
+Tennessee;Gibson County;1-1 Medina	precinct
+Tennessee;Gibson County;1-2 Sitka	precinct
+Tennessee;Gibson County;2-6 Humboldt Church	precinct
+Tennessee;Gibson County;3-7 Bailey Park	precinct
+Tennessee;Gibson County;4-8 St James Baptist	precinct
+Tennessee;Gibson County;5-9 Lane Chapel Church	precinct
+Tennessee;Gibson County;6-10 Humboldt HS	precinct
+Tennessee;Gibson County;6-4 Gibson	precinct
+Tennessee;Gibson County;7-13 Fruitland	precinct
+Tennessee;Gibson County;8-12 Edison	precinct
+Tennessee;Gibson County;8-14 Brazil	precinct
+Tennessee;Gibson County;9-20 JC Building	precinct
+Tennessee;Gibson County;10-22 Agri-Plex	precinct
+Tennessee;Gibson County;11-24 Moore's Chapel	precinct
+Tennessee;Gibson County;11-26 Union Central	precinct
+Tennessee;Gibson County;11-27 Skullbone	precinct
+Tennessee;Gibson County;12-28 Milan CPC	precinct
+Tennessee;Gibson County;13-29 Milan Polk Clark	precinct
+Tennessee;Gibson County;14-30 Milan 1stAssembly	precinct
+Tennessee;Gibson County;15-31 Milan Municipal	precinct
+Tennessee;Gibson County;16-40 Rutherford	precinct
+Tennessee;Gibson County;16-17 Yorkville	precinct
+Tennessee;Gibson County;16-18 Kenton	precinct
+Tennessee;Gibson County;17-32 Bradford	precinct
+Tennessee;Gibson County;18-34 Laneview	precinct
+Tennessee;Gibson County;18-37 Good Luck	precinct
+Tennessee;Gibson County;19-38 Dyer	precinct
+Tennessee;Gibson County;19-39 Currie	precinct
+Tennessee;Giles County;1A Ardmore	precinct
+Tennessee;Giles County;1B Prospect	precinct
+Tennessee;Giles County;2A Minor Hill	precinct
+Tennessee;Giles County;2B Airport	precinct
+Tennessee;Giles County;3A Richland Trace	precinct
+Tennessee;Giles County;3B Campbellsville	precinct
+Tennessee;Giles County;4A Lynnville	precinct
+Tennessee;Giles County;4B Odd Fellows Hall	precinct
+Tennessee;Giles County;5A TCAT	precinct
+Tennessee;Giles County;5B Agri Park	precinct
+Tennessee;Giles County;6A Martin	precinct
+Tennessee;Giles County;6B Bridgeforth	precinct
+Tennessee;Giles County;7A GCHS	precinct
+Tennessee;Giles County;7B Rec Center	precinct
+Tennessee;Grainger County;1-1	precinct
+Tennessee;Grainger County;1-2	precinct
+Tennessee;Grainger County;2-1	precinct
+Tennessee;Grainger County;2-2	precinct
+Tennessee;Grainger County;3-1	precinct
+Tennessee;Grainger County;3-2	precinct
+Tennessee;Grainger County;4-1	precinct
+Tennessee;Grainger County;4-2	precinct
+Tennessee;Grainger County;5-1	precinct
+Tennessee;Grainger County;5-2	precinct
+Tennessee;Greene County;1 Baileyton	precinct
+Tennessee;Greene County;4 Camp Creek	precinct
+Tennessee;Greene County;2 Chuckey Doak	precinct
+Tennessee;Greene County;4 Courthouse	precinct
+Tennessee;Greene County;2 Chuckey	precinct
+Tennessee;Greene County;5 Debusk	precinct
+Tennessee;Greene County;3 Doak	precinct
+Tennessee;Greene County;7 Glenwood	precinct
+Tennessee;Greene County;7 High School	precinct
+Tennessee;Greene County;6 McDonald	precinct
+Tennessee;Greene County;6 Mosheim	precinct
+Tennessee;Greene County;5 Middle School	precinct
+Tennessee;Greene County;5 Nolachuckey	precinct
+Tennessee;Greene County;1 Ottway	precinct
+Tennessee;Greene County;5 South Greene	precinct
+Tennessee;Greene County;3 Tusculum View	precinct
+Tennessee;Greene County;1 West Pines	precinct
+Tennessee;Grundy County;Altamont	precinct
+Tennessee;Grundy County;Beersheba Springs	precinct
+Tennessee;Grundy County;Central	precinct
+Tennessee;Grundy County;Collins	precinct
+Tennessee;Grundy County;Pelham Valley	precinct
+Tennessee;Grundy County;Coalmont	precinct
+Tennessee;Grundy County;Gruetli-Laager	precinct
+Tennessee;Grundy County;Palmer	precinct
+Tennessee;Grundy County;Monteagle	precinct
+Tennessee;Grundy County;Tracy City	precinct
+Tennessee;Hamblen County;01-1	precinct
+Tennessee;Hamblen County;02-1	precinct
+Tennessee;Hamblen County;03-1	precinct
+Tennessee;Hamblen County;04-1	precinct
+Tennessee;Hamblen County;05-1	precinct
+Tennessee;Hamblen County;06-1	precinct
+Tennessee;Hamblen County;07-1	precinct
+Tennessee;Hamblen County;08-1	precinct
+Tennessee;Hamblen County;09-1	precinct
+Tennessee;Hamblen County;09-2	precinct
+Tennessee;Hamblen County;10-1	precinct
+Tennessee;Hamblen County;11-1	precinct
+Tennessee;Hamblen County;11-2	precinct
+Tennessee;Hamblen County;12-1	precinct
+Tennessee;Hamblen County;13-1	precinct
+Tennessee;Hamblen County;14-1	precinct
+Tennessee;Hamilton County;088 Airport	precinct
+Tennessee;Hamilton County;048 Alton Park 1	precinct
+Tennessee;Hamilton County;047 Alton Park 2	precinct
+Tennessee;Hamilton County;127 Alton Park 3	precinct
+Tennessee;Hamilton County;057 Amnicola	precinct
+Tennessee;Hamilton County;110 Apison 1	precinct
+Tennessee;Hamilton County;109 Apison 2	precinct
+Tennessee;Hamilton County;111 Apison 3	precinct
+Tennessee;Hamilton County;055 Avondale	precinct
+Tennessee;Hamilton County;009 Bakewell 1	precinct
+Tennessee;Hamilton County;011 Bakewell 2	precinct
+Tennessee;Hamilton County;013 Bakewell 3	precinct
+Tennessee;Hamilton County;115 Birchwood	precinct
+Tennessee;Hamilton County;096 Bonny Oaks	precinct
+Tennessee;Hamilton County;074 Brainerd	precinct
+Tennessee;Hamilton County;076 Brainerd Hills	precinct
+Tennessee;Hamilton County;054 Bushtown	precinct
+Tennessee;Hamilton County;108 Collegedale 1	precinct
+Tennessee;Hamilton County;112 Collegedale 2	precinct
+Tennessee;Hamilton County;121 Collegedale 3	precinct
+Tennessee;Hamilton County;123 Collegedale 4	precinct
+Tennessee;Hamilton County;077 Concord 1	precinct
+Tennessee;Hamilton County;078 Concord 2	precinct
+Tennessee;Hamilton County;079 Concord 3	precinct
+Tennessee;Hamilton County;006 Concord 4	precinct
+Tennessee;Hamilton County;080 Concord 5	precinct
+Tennessee;Hamilton County;105 Concord 6	precinct
+Tennessee;Hamilton County;098 Concord 7	precinct
+Tennessee;Hamilton County;040 Courthouse 1	precinct
+Tennessee;Hamilton County;039 Courthouse 2	precinct
+Tennessee;Hamilton County;090 Dalewood	precinct
+Tennessee;Hamilton County;015 Dallas 1	precinct
+Tennessee;Hamilton County;016 Dallas 2	precinct
+Tennessee;Hamilton County;041 Downtown 1	precinct
+Tennessee;Hamilton County;038 Downtown 2	precinct
+Tennessee;Hamilton County;129 Downtown 3	precinct
+Tennessee;Hamilton County;061 DuPont	precinct
+Tennessee;Hamilton County;099 East Brainerd 1	precinct
+Tennessee;Hamilton County;100 East Brainerd 2	precinct
+Tennessee;Hamilton County;056 East Chattanooga 1	precinct
+Tennessee;Hamilton County;089 East Chattanooga 2	precinct
+Tennessee;Hamilton County;049 East Lake	precinct
+Tennessee;Hamilton County;071 East Ridge 1	precinct
+Tennessee;Hamilton County;072 East Ridge 2	precinct
+Tennessee;Hamilton County;073 East Ridge 3	precinct
+Tennessee;Hamilton County;075 East Ridge 4	precinct
+Tennessee;Hamilton County;082 Eastdale	precinct
+Tennessee;Hamilton County;084 Eastgate 1	precinct
+Tennessee;Hamilton County;085 Eastgate 2	precinct
+Tennessee;Hamilton County;050 Eastside 1	precinct
+Tennessee;Hamilton County;051 Eastside 2	precinct
+Tennessee;Hamilton County;021 Fairmount 1	precinct
+Tennessee;Hamilton County;027 Fairmount 2	precinct
+Tennessee;Hamilton County;001 Falling Water	precinct
+Tennessee;Hamilton County;010 Flat Top Mountain	precinct
+Tennessee;Hamilton County;067 Ganns	precinct
+Tennessee;Hamilton County;081 Glenwood	precinct
+Tennessee;Hamilton County;125 Harrison 1	precinct
+Tennessee;Hamilton County;135 Harrison 2	precinct
+Tennessee;Hamilton County;133 Harrison 3	precinct
+Tennessee;Hamilton County;119 Harrison 4	precinct
+Tennessee;Hamilton County;118 Harrison 5	precinct
+Tennessee;Hamilton County;126 Harrison 6	precinct
+Tennessee;Hamilton County;134 Harrison 7	precinct
+Tennessee;Hamilton County;064 Hixson 1	precinct
+Tennessee;Hamilton County;063 Hixson 2	precinct
+Tennessee;Hamilton County;062 Hixson 3	precinct
+Tennessee;Hamilton County;091 Kingspoint 1	precinct
+Tennessee;Hamilton County;058 Kingspoint 2	precinct
+Tennessee;Hamilton County;092 Kingspoint 3	precinct
+Tennessee;Hamilton County;093 Lake Hills	precinct
+Tennessee;Hamilton County;003 Lakesite	precinct
+Tennessee;Hamilton County;035 Lookout Mountain	precinct
+Tennessee;Hamilton County;033 Lookout Valley 1	precinct
+Tennessee;Hamilton County;034 Lookout Valley 2	precinct
+Tennessee;Hamilton County;029 Lupton City	precinct
+Tennessee;Hamilton County;116 Meadowview	precinct
+Tennessee;Hamilton County;068 Middle Valley 1	precinct
+Tennessee;Hamilton County;069 Middle Valley 2	precinct
+Tennessee;Hamilton County;070 Missionary Ridge	precinct
+Tennessee;Hamilton County;042 Moccasin Bend	precinct
+Tennessee;Hamilton County;026 Mountain Creek 1	precinct
+Tennessee;Hamilton County;031 Mountain Creek 2	precinct
+Tennessee;Hamilton County;032 Mountain Creek 3	precinct
+Tennessee;Hamilton County;014 Mowbray	precinct
+Tennessee;Hamilton County;005 Murray Hills 1	precinct
+Tennessee;Hamilton County;128 Murray Hills 2	precinct
+Tennessee;Hamilton County;044 North Chattanooga 1	precinct
+Tennessee;Hamilton County;043 North Chattanooga 2	precinct
+Tennessee;Hamilton County;059 Northgate 1	precinct
+Tennessee;Hamilton County;060 Northgate 2	precinct
+Tennessee;Hamilton County;020 Northwoods 1	precinct
+Tennessee;Hamilton County;019 Northwoods 2	precinct
+Tennessee;Hamilton County;132 Northwoods 3	precinct
+Tennessee;Hamilton County;107 Ooltewah 1	precinct
+Tennessee;Hamilton County;106 Ooltewah 2	precinct
+Tennessee;Hamilton County;113 Ooltewah 3	precinct
+Tennessee;Hamilton County;007 Ooltewah 4	precinct
+Tennessee;Hamilton County;124 Ooltewah 5	precinct
+Tennessee;Hamilton County;122 Ooltewah 6	precinct
+Tennessee;Hamilton County;066 Pleasant Grove 1	precinct
+Tennessee;Hamilton County;065 Pleasant Grove 2	precinct
+Tennessee;Hamilton County;045 Red Bank 1	precinct
+Tennessee;Hamilton County;046 Red Bank 2	precinct
+Tennessee;Hamilton County;028 Red Bank 3	precinct
+Tennessee;Hamilton County;053 Ridgedale 1	precinct
+Tennessee;Hamilton County;052 Ridgedale 2	precinct
+Tennessee;Hamilton County;083 Ridgeside	precinct
+Tennessee;Hamilton County;004 Riverview	precinct
+Tennessee;Hamilton County;008 Sale Creek	precinct
+Tennessee;Hamilton County;022 Signal Mountain 1	precinct
+Tennessee;Hamilton County;002 Signal Mountain 2	precinct
+Tennessee;Hamilton County;117 Snowhill 1	precinct
+Tennessee;Hamilton County;120 Snowhill 2	precinct
+Tennessee;Hamilton County;012 Soddy Daisy 1	precinct
+Tennessee;Hamilton County;017 Soddy Daisy 2	precinct
+Tennessee;Hamilton County;018 Soddy Daisy 3	precinct
+Tennessee;Hamilton County;036 St. Elmo 1	precinct
+Tennessee;Hamilton County;037 St. Elmo 2	precinct
+Tennessee;Hamilton County;030 Stuart Heights	precinct
+Tennessee;Hamilton County;097 Summit 1	precinct
+Tennessee;Hamilton County;130 Summit 2	precinct
+Tennessee;Hamilton County;114 Summit 3	precinct
+Tennessee;Hamilton County;095 Summit 4	precinct
+Tennessee;Hamilton County;094 Tyner 1	precinct
+Tennessee;Hamilton County;104 Tyner 2	precinct
+Tennessee;Hamilton County;131 Tyner 3	precinct
+Tennessee;Hamilton County;024 Valdeau 1	precinct
+Tennessee;Hamilton County;025 Valdeau 2	precinct
+Tennessee;Hamilton County;023 Walden	precinct
+Tennessee;Hamilton County;102 Westview 1	precinct
+Tennessee;Hamilton County;101 Westview 2	precinct
+Tennessee;Hamilton County;103 Westview 3	precinct
+Tennessee;Hamilton County;086 Woodmore 1	precinct
+Tennessee;Hamilton County;087 Woodmore 2	precinct
+Tennessee;Hancock County;1st	precinct
+Tennessee;Hancock County;2nd	precinct
+Tennessee;Hancock County;3rd	precinct
+Tennessee;Hancock County;4th	precinct
+Tennessee;Hancock County;5th	precinct
+Tennessee;Hancock County;6th	precinct
+Tennessee;Hancock County;7th	precinct
+Tennessee;Hardeman County;West Bolivar	precinct
+Tennessee;Hardeman County;Bolivar	precinct
+Tennessee;Hardeman County;Whiteville	precinct
+Tennessee;Hardeman County;Hickory Valley	precinct
+Tennessee;Hardeman County;Grand Junction	precinct
+Tennessee;Hardeman County;Saulsbury	precinct
+Tennessee;Hardeman County;Middleton	precinct
+Tennessee;Hardeman County;Pocahontas	precinct
+Tennessee;Hardeman County;Lacy	precinct
+Tennessee;Hardeman County;Hornsby	precinct
+Tennessee;Hardeman County;Silerton	precinct
+Tennessee;Hardeman County;Dixie Hills	precinct
+Tennessee;Hardeman County;Toone	precinct
+Tennessee;Hardin County;Olivet 1-1	precinct
+Tennessee;Hardin County;Nixon 2-1	precinct
+Tennessee;Hardin County;Counce 3-1	precinct
+Tennessee;Hardin County;Crump 4-1	precinct
+Tennessee;Hardin County;Saltillo 5-1	precinct
+Tennessee;Hardin County;Morris Chapel 5-2	precinct
+Tennessee;Hardin County;Cerro Gordo 6-1	precinct
+Tennessee;Hardin County;Rhodes 6-2	precinct
+Tennessee;Hardin County;Olive Hill 6-3	precinct
+Tennessee;Hardin County;Whites 7-1	precinct
+Tennessee;Hardin County;Walnut Grove 7-2	precinct
+Tennessee;Hardin County;North 8-1	precinct
+Tennessee;Hardin County;Library 9-1	precinct
+Tennessee;Hardin County;Fairground 10-1	precinct
+Tennessee;Hawkins County;1 Allandale	precinct
+Tennessee;Hawkins County;6 Alum Well	precinct
+Tennessee;Hawkins County;7 Bulls Gap	precinct
+Tennessee;Hawkins County;3 Carter's Valley	precinct
+Tennessee;Hawkins County;7 Cherokee	precinct
+Tennessee;Hawkins County;6 Choptack	precinct
+Tennessee;Hawkins County;2 Church Hill	precinct
+Tennessee;Hawkins County;6 Clinch	precinct
+Tennessee;Hawkins County;4 Dykes	precinct
+Tennessee;Hawkins County;4 Keplar	precinct
+Tennessee;Hawkins County;2 McPheeter's Bend	precinct
+Tennessee;Hawkins County;6 Mooresburg	precinct
+Tennessee;Hawkins County;1 Mount Carmel	precinct
+Tennessee;Hawkins County;5 Rogersville 5th	precinct
+Tennessee;Hawkins County;4 Rogersville North	precinct
+Tennessee;Hawkins County;7 St. Clair	precinct
+Tennessee;Hawkins County;4 Surgoinsville	precinct
+Tennessee;Hawkins County;4 Upper Beech	precinct
+Tennessee;Hawkins County;3 Wallace	precinct
+Tennessee;Hawkins County;3 Watterson	precinct
+Tennessee;Haywood County;1-1	precinct
+Tennessee;Haywood County;2-1	precinct
+Tennessee;Haywood County;3-1	precinct
+Tennessee;Haywood County;4-1	precinct
+Tennessee;Haywood County;5-1	precinct
+Tennessee;Haywood County;6-1	precinct
+Tennessee;Haywood County;7-1	precinct
+Tennessee;Haywood County;8-1	precinct
+Tennessee;Haywood County;9-1	precinct
+Tennessee;Haywood County;9-2	precinct
+Tennessee;Haywood County;10-1	precinct
+Tennessee;Henderson County;1-1 Bargerton	precinct
+Tennessee;Henderson County;1-2 Beaver	precinct
+Tennessee;Henderson County;3-3 Fire Station #4	precinct
+Tennessee;Henderson County;5-5 TN Tech Center	precinct
+Tennessee;Henderson County;4-6 Natchez Trace	precinct
+Tennessee;Henderson County;3-7 Darden	precinct
+Tennessee;Henderson County;6-8 Broad Street	precinct
+Tennessee;Henderson County;7-9 Middleburg	precinct
+Tennessee;Henderson County;3-10 Fire Station #10	precinct
+Tennessee;Henderson County;7-11 Reagan	precinct
+Tennessee;Henderson County;7-12 Sardis	precinct
+Tennessee;Henderson County;7-13 Scotts Hill	precinct
+Tennessee;Henderson County;2-14 South Haven	precinct
+Tennessee;Henderson County;2-15 Westover	precinct
+Tennessee;Henry County;1-1 Puryear	precinct
+Tennessee;Henry County;1-2 Cottage Grove	precinct
+Tennessee;Henry County;1-3 Buchanan	precinct
+Tennessee;Henry County;2-1 Henry	precinct
+Tennessee;Henry County;2-2 Mansfield	precinct
+Tennessee;Henry County;2-3 Oakland	precinct
+Tennessee;Henry County;3-1 Russwood	precinct
+Tennessee;Henry County;3-2 Springville	precinct
+Tennessee;Henry County;3-3 Jones Chapel	precinct
+Tennessee;Henry County;4-1 Grove	precinct
+Tennessee;Henry County;4-2 City Hall	precinct
+Tennessee;Henry County;5-1 Henry Co High	precinct
+Tennessee;Henry County;5-2 TN Tech Center	precinct
+Tennessee;Hickman County;1-1 Nunnelly	precinct
+Tennessee;Hickman County;1-2 Pinewood	precinct
+Tennessee;Hickman County;2-2 Fairfield	precinct
+Tennessee;Hickman County;2-3 East Bank	precinct
+Tennessee;Hickman County;3-1 East CC	precinct
+Tennessee;Hickman County;4-1 Lake Benson	precinct
+Tennessee;Hickman County;5-1 Mt. Pleasant	precinct
+Tennessee;Hickman County;5-2 Middle School	precinct
+Tennessee;Hickman County;5-3 Shady Grove	precinct
+Tennessee;Hickman County;6-1 Justice Center	precinct
+Tennessee;Hickman County;7-1 Nunnelly	precinct
+Tennessee;Hickman County;7-2 Pleasantville	precinct
+Tennessee;Hickman County;7-3 Brushy	precinct
+Tennessee;Hickman County;7-4 Coble	precinct
+Tennessee;Houston County;Stewart	precinct
+Tennessee;Houston County;Tennessee Ridge	precinct
+Tennessee;Houston County;Erin	precinct
+Tennessee;Houston County;Arlington	precinct
+Tennessee;Houston County;Erin Elementary	precinct
+Tennessee;Houston County;Houston Co Middle	precinct
+Tennessee;Houston County;Griffins Chapel	precinct
+Tennessee;Humphreys County;1-1 Jera	precinct
+Tennessee;Humphreys County;1-2 Compassion Church	precinct
+Tennessee;Humphreys County;2-3 WFS	precinct
+Tennessee;Humphreys County;3-4 MLEC	precinct
+Tennessee;Humphreys County;4-5 NJMC	precinct
+Tennessee;Humphreys County;5-6 Wildwood	precinct
+Tennessee;Humphreys County;6-7 South McEwen	precinct
+Tennessee;Humphreys County;7-8 North McEwen	precinct
+Tennessee;Jackson County;1-1	precinct
+Tennessee;Jackson County;1-2	precinct
+Tennessee;Jackson County;2-1	precinct
+Tennessee;Jackson County;2-2	precinct
+Tennessee;Jackson County;3-1	precinct
+Tennessee;Jackson County;3-2	precinct
+Tennessee;Jackson County;4-1	precinct
+Tennessee;Jackson County;4-2	precinct
+Tennessee;Jackson County;5-1	precinct
+Tennessee;Jackson County;5-2	precinct
+Tennessee;Jackson County;6-1	precinct
+Tennessee;Jackson County;6-2	precinct
+Tennessee;Jefferson County;1 Dandridge ES	precinct
+Tennessee;Jefferson County;2 Piedmont	precinct
+Tennessee;Jefferson County;3 White Pine	precinct
+Tennessee;Jefferson County;4 Jefferson ES	precinct
+Tennessee;Jefferson County;5 Jefferson Middle	precinct
+Tennessee;Jefferson County;6 Rush Strong	precinct
+Tennessee;Jefferson County;7 New Market	precinct
+Tennessee;Jefferson County;8-1 Chestnut Hill	precinct
+Tennessee;Jefferson County;8-2 Swannsylvania	precinct
+Tennessee;Jefferson County;9 Talbott School	precinct
+Tennessee;Jefferson County;10 Jeff City Fire Dp	precinct
+Tennessee;Johnson County;1A Laurel	precinct
+Tennessee;Johnson County;1B Cold Springs	precinct
+Tennessee;Johnson County;2 Forge/Shouns	precinct
+Tennessee;Johnson County;3A Trade	precinct
+Tennessee;Johnson County;3B Neva	precinct
+Tennessee;Johnson County;4A Dry Run	precinct
+Tennessee;Johnson County;4B Butler	precinct
+Tennessee;Johnson County;5 Doe	precinct
+Tennessee;Johnson County;6 Shady	precinct
+Tennessee;Johnson County;7 City	precinct
+Tennessee;Knox County;06 Green School	precinct
+Tennessee;Knox County;09 Eternal Life Harvest	precinct
+Tennessee;Knox County;10N Fort Sanders	precinct
+Tennessee;Knox County;10S Howard Baker Center	precinct
+Tennessee;Knox County;10W Howard Baker Center	precinct
+Tennessee;Knox County;11 Central UMC	precinct
+Tennessee;Knox County;12 Eastport	precinct
+Tennessee;Knox County;13 Fair Garden	precinct
+Tennessee;Knox County;14 Austin-East	precinct
+Tennessee;Knox County;15 John T. O'Connor	precinct
+Tennessee;Knox County;16 Larry Cox Sr Center	precinct
+Tennessee;Knox County;17 Christenberry	precinct
+Tennessee;Knox County;18 Lincoln Park	precinct
+Tennessee;Knox County;19E Thrive Lonsdale	precinct
+Tennessee;Knox County;19W Thrive Lonsdale	precinct
+Tennessee;Knox County;20 Beaumont	precinct
+Tennessee;Knox County;23 Westview	precinct
+Tennessee;Knox County;24Q Sequoyah Hills	precinct
+Tennessee;Knox County;25 South Knox CC	precinct
+Tennessee;Knox County;26 Dogwood	precinct
+Tennessee;Knox County;27 South Knox	precinct
+Tennessee;Knox County;29 Anderson	precinct
+Tennessee;Knox County;30 Sarah Moore Greene	precinct
+Tennessee;Knox County;31 Chilhowee	precinct
+Tennessee;Knox County;32 Spring Hill	precinct
+Tennessee;Knox County;33 Richard Yoakley	precinct
+Tennessee;Knox County;34 Central	precinct
+Tennessee;Knox County;35 Shannondale	precinct
+Tennessee;Knox County;36 Gresham	precinct
+Tennessee;Knox County;37 Inskip Elementary	precinct
+Tennessee;Knox County;39 Inskip Rec Center	precinct
+Tennessee;Knox County;40 Norwood	precinct
+Tennessee;Knox County;41 Norwood	precinct
+Tennessee;Knox County;42 Pleasant Ridge	precinct
+Tennessee;Knox County;43 West Haven	precinct
+Tennessee;Knox County;44 Ridgedale	precinct
+Tennessee;Knox County;45 Bearden Middle	precinct
+Tennessee;Knox County;46 1st Nazarene	precinct
+Tennessee;Knox County;47 Bearden High	precinct
+Tennessee;Knox County;48 Pond Gap	precinct
+Tennessee;Knox County;49 Bearden Elementary	precinct
+Tennessee;Knox County;50N West High	precinct
+Tennessee;Knox County;50S West High	precinct
+Tennessee;Knox County;51 Deane Hill Rec Ctr	precinct
+Tennessee;Knox County;55 Lonas	precinct
+Tennessee;Knox County;56 Heiskell	precinct
+Tennessee;Knox County;57 Hills	precinct
+Tennessee;Knox County;58N Pedigo	precinct
+Tennessee;Knox County;58S Pedigo	precinct
+Tennessee;Knox County;59 Brickey	precinct
+Tennessee;Knox County;60 Fort Sumter	precinct
+Tennessee;Knox County;61 Halls	precinct
+Tennessee;Knox County;62 Hardin Valley	precinct
+Tennessee;Knox County;63 Karns	precinct
+Tennessee;Knox County;63N Karns North	precinct
+Tennessee;Knox County;64 Solway	precinct
+Tennessee;Knox County;65E Shoreline	precinct
+Tennessee;Knox County;65N Concord North	precinct
+Tennessee;Knox County;65W Farragut Town Hall	precinct
+Tennessee;Knox County;66N Farragut I	precinct
+Tennessee;Knox County;66S Farragut II	precinct
+Tennessee;Knox County;67 North Cedar Bluff	precinct
+Tennessee;Knox County;68 South Cedar Bluff	precinct
+Tennessee;Knox County;68E East Cedar Bluff	precinct
+Tennessee;Knox County;69E Bluegrass	precinct
+Tennessee;Knox County;69N West Valley	precinct
+Tennessee;Knox County;69S Northshore	precinct
+Tennessee;Knox County;69W A. L. Lotts	precinct
+Tennessee;Knox County;70E Amherst	precinct
+Tennessee;Knox County;70W Ball Camp	precinct
+Tennessee;Knox County;71 Rocky Hill	precinct
+Tennessee;Knox County;72 Dante	precinct
+Tennessee;Knox County;73 Powell	precinct
+Tennessee;Knox County;74 Shannondale	precinct
+Tennessee;Knox County;76 Sunnyview	precinct
+Tennessee;Knox County;77 Ramsey	precinct
+Tennessee;Knox County;78 Riverdale	precinct
+Tennessee;Knox County;79 Dora Kennedy	precinct
+Tennessee;Knox County;80 Corryton	precinct
+Tennessee;Knox County;81 Gibbs	precinct
+Tennessee;Knox County;82 Ellistown	precinct
+Tennessee;Knox County;84 Ritta	precinct
+Tennessee;Knox County;85 Skaggston	precinct
+Tennessee;Knox County;86 Carter	precinct
+Tennessee;Knox County;87 Thorngrove	precinct
+Tennessee;Knox County;89 Mt. Olive	precinct
+Tennessee;Knox County;90 South Doyle	precinct
+Tennessee;Knox County;92 Gap Creek	precinct
+Tennessee;Knox County;93 Hopewell	precinct
+Tennessee;Lake County;1 Tiptonville SR Citizens	precinct
+Tennessee;Lake County;2 Courthouse	precinct
+Tennessee;Lake County;3 Lake Co Middle	precinct
+Tennessee;Lauderdale County;Henning 1	precinct
+Tennessee;Lauderdale County;McBride 1	precinct
+Tennessee;Lauderdale County;Ripley 2	precinct
+Tennessee;Lauderdale County;Ripley 3	precinct
+Tennessee;Lauderdale County;Ripley 4	precinct
+Tennessee;Lauderdale County;Lightfoot 5	precinct
+Tennessee;Lauderdale County;Central 6	precinct
+Tennessee;Lauderdale County;Edith 7	precinct
+Tennessee;Lauderdale County;Gates 7	precinct
+Tennessee;Lauderdale County;Halls 8	precinct
+Tennessee;Lawrence County;01-1 St. Joseph	precinct
+Tennessee;Lawrence County;01-2 West Loretto	precinct
+Tennessee;Lawrence County;02-1 Loretto Civ Ctr	precinct
+Tennessee;Lawrence County;03-1 SE Lawrence	precinct
+Tennessee;Lawrence County;03-2 Centerpoint	precinct
+Tennessee;Lawrence County;04-1 Crossroads	precinct
+Tennessee;Lawrence County;05-1 Leoma	precinct
+Tennessee;Lawrence County;05-2 Gandy	precinct
+Tennessee;Lawrence County;06-1 Iron City	precinct
+Tennessee;Lawrence County;06-2 West Point	precinct
+Tennessee;Lawrence County;07-1 Lawrenceburg	precinct
+Tennessee;Lawrence County;08-1 New Prospect	precinct
+Tennessee;Lawrence County;09-1 Ethridge	precinct
+Tennessee;Lawrence County;09-2 Mars Hill	precinct
+Tennessee;Lawrence County;10-1 Howards	precinct
+Tennessee;Lawrence County;11-1 Summertown	precinct
+Tennessee;Lawrence County;12-1 Center	precinct
+Tennessee;Lawrence County;12-2 Henryville	precinct
+Tennessee;Lawrence County;13-1 West End	precinct
+Tennessee;Lawrence County;14-1 Crawfish Valley	precinct
+Tennessee;Lawrence County;15-1 David Crockett	precinct
+Tennessee;Lawrence County;16-1 Rotary Park	precinct
+Tennessee;Lawrence County;17-1 Sowell	precinct
+Tennessee;Lawrence County;18-1 PSCoC	precinct
+Tennessee;Lewis County;1-1	precinct
+Tennessee;Lewis County;2-1	precinct
+Tennessee;Lewis County;3-1	precinct
+Tennessee;Lewis County;4-1	precinct
+Tennessee;Lewis County;5-1	precinct
+Tennessee;Lewis County;6-1	precinct
+Tennessee;Lewis County;7-1	precinct
+Tennessee;Lewis County;8-1	precinct
+Tennessee;Lewis County;9-1	precinct
+Tennessee;Lincoln County;1-1 Blanche	precinct
+Tennessee;Lincoln County;1-2 Molino	precinct
+Tennessee;Lincoln County;1-3 Taft	precinct
+Tennessee;Lincoln County;2-1 Boonshill	precinct
+Tennessee;Lincoln County;2-2 Howell	precinct
+Tennessee;Lincoln County;2-3 Petersburg	precinct
+Tennessee;Lincoln County;3-1 Recreation Center	precinct
+Tennessee;Lincoln County;3-2 Liberty	precinct
+Tennessee;Lincoln County;4-1 Maranatha	precinct
+Tennessee;Lincoln County;4-2 FNB	precinct
+Tennessee;Lincoln County;5-1 Calvary	precinct
+Tennessee;Lincoln County;5-2 Armory	precinct
+Tennessee;Lincoln County;6-1 Fayetteville CPC	precinct
+Tennessee;Lincoln County;6-2 Belleville	precinct
+Tennessee;Lincoln County;6-3 Mulberry	precinct
+Tennessee;Lincoln County;7-1 Elora	precinct
+Tennessee;Lincoln County;7-2 Flintville	precinct
+Tennessee;Lincoln County;7-3 Kelso	precinct
+Tennessee;Lincoln County;8-1 Lincoln	precinct
+Tennessee;Lincoln County;8-2 South Lincoln	precinct
+Tennessee;Loudon County;Loudon Mt Zion	precinct
+Tennessee;Loudon County;Loudon	precinct
+Tennessee;Loudon County;Loudon Outside	precinct
+Tennessee;Loudon County;Lenoir City	precinct
+Tennessee;Loudon County;Lenoir City Outside	precinct
+Tennessee;Loudon County;Greenback	precinct
+Tennessee;Loudon County;Glendale	precinct
+Tennessee;Loudon County;Davis	precinct
+Tennessee;Loudon County;Luttrell	precinct
+Tennessee;Loudon County;Philadelphia	precinct
+Tennessee;Loudon County;Browder	precinct
+Tennessee;Loudon County;Eaton	precinct
+Tennessee;Loudon County;Highland Park	precinct
+Tennessee;Loudon County;Tellico V. North	precinct
+Tennessee;Loudon County;Tellico V. South	precinct
+Tennessee;Macon County;Red Boiling Springs	precinct
+Tennessee;Macon County;Willette	precinct
+Tennessee;Macon County;County High School	precinct
+Tennessee;Macon County;County Junior High	precinct
+Tennessee;Macon County;Westside	precinct
+Tennessee;Macon County;Cross Roads	precinct
+Tennessee;Macon County;Armory	precinct
+Tennessee;Macon County;Welcome Center	precinct
+Tennessee;Macon County;Central	precinct
+Tennessee;Macon County;Lafayette	precinct
+Tennessee;Madison County;1-1 Civic Center	precinct
+Tennessee;Madison County;1-2 Mt Moriah	precinct
+Tennessee;Madison County;2-1 Alexander	precinct
+Tennessee;Madison County;2-2 Aldersgate	precinct
+Tennessee;Madison County;2-3 Montessori	precinct
+Tennessee;Madison County;3-1 Board of Education	precinct
+Tennessee;Madison County;3-2 Old Bells Fire Statio	precinct
+Tennessee;Madison County;3-3 MCVS	precinct
+Tennessee;Madison County;4-1 Masonic Lodge	precinct
+Tennessee;Madison County;4-2 Andrew Jackson	precinct
+Tennessee;Madison County;4-3 Festivities	precinct
+Tennessee;Madison County;5-1 JCTS	precinct
+Tennessee;Madison County;5-2 Macedonia	precinct
+Tennessee;Madison County;5-3 North Parkway	precinct
+Tennessee;Madison County;6-1 South Side	precinct
+Tennessee;Madison County;6-2 South	precinct
+Tennessee;Madison County;6-3 Malesus	precinct
+Tennessee;Madison County;6-4 Medon	precinct
+Tennessee;Madison County;7-1 UT Experiment Station	precinct
+Tennessee;Madison County;7-2 TN Tech Ctr	precinct
+Tennessee;Madison County;7-3 Denmark	precinct
+Tennessee;Madison County;7-4 Mercer	precinct
+Tennessee;Madison County;8-1 Beech Bluff	precinct
+Tennessee;Madison County;8-2 Browns	precinct
+Tennessee;Madison County;8-3 Mifflin	precinct
+Tennessee;Madison County;8-4 East Union	precinct
+Tennessee;Madison County;8-5 Lesters	precinct
+Tennessee;Madison County;9-1 VFW	precinct
+Tennessee;Madison County;9-2 Pope	precinct
+Tennessee;Madison County;9-3 Three Way	precinct
+Tennessee;Madison County;10-1 Spring Creek	precinct
+Tennessee;Madison County;10-2 North East	precinct
+Tennessee;Madison County;10-3 North Side	precinct
+Tennessee;Marion County;South Pittsburg	precinct
+Tennessee;Marion County;New Hope	precinct
+Tennessee;Marion County;Orme	precinct
+Tennessee;Marion County;Lodge	precinct
+Tennessee;Marion County;Monteagle	precinct
+Tennessee;Marion County;Kimball	precinct
+Tennessee;Marion County;Shellmound	precinct
+Tennessee;Marion County;Haletown-Ladd	precinct
+Tennessee;Marion County;Jasper	precinct
+Tennessee;Marion County;Foster Falls	precinct
+Tennessee;Marion County;Whitwell Mountain	precinct
+Tennessee;Marion County;Sequatchie	precinct
+Tennessee;Marion County;Walden's Ridge	precinct
+Tennessee;Marion County;Elder Mountain	precinct
+Tennessee;Marion County;River Canyon	precinct
+Tennessee;Marion County;Whitwell	precinct
+Tennessee;Marion County;Powells Crossroad	precinct
+Tennessee;Marshall County;1 Chapel Hill	precinct
+Tennessee;Marshall County;2 Henry Horton Park	precinct
+Tennessee;Marshall County;3 Belfast	precinct
+Tennessee;Marshall County;4 Cornersville	precinct
+Tennessee;Marshall County;5 Recreation Center	precinct
+Tennessee;Marshall County;6 Parkview	precinct
+Tennessee;Marshall County;7 Hardison	precinct
+Tennessee;Marshall County;8 Lewisburg Gas	precinct
+Tennessee;Marshall County;9 McKnight Center	precinct
+Tennessee;Maury County;Riverside 1-1	precinct
+Tennessee;Maury County;West End 1-2	precinct
+Tennessee;Maury County;First Family 2-1	precinct
+Tennessee;Maury County;Highland 2-2	precinct
+Tennessee;Maury County;College Hill 3-1	precinct
+Tennessee;Maury County;St. Catherine 4-1	precinct
+Tennessee;Maury County;CP Church 5-1	precinct
+Tennessee;Maury County;Neapolis 5-2	precinct
+Tennessee;Maury County;Santa Fe 6-1	precinct
+Tennessee;Maury County;Spring Hill MS 6-2	precinct
+Tennessee;Maury County;Theta 6-3	precinct
+Tennessee;Maury County;Armory 7-1	precinct
+Tennessee;Maury County;Hampshire 7-2	precinct
+Tennessee;Maury County;Bear Creek 8-1	precinct
+Tennessee;Maury County;Culleoka 8-2	precinct
+Tennessee;Maury County;Bigbyville 9-1	precinct
+Tennessee;Maury County;Pleasant Heights 9-2	precinct
+Tennessee;Maury County;Mt. Pleasant 10-1	precinct
+Tennessee;Maury County;Rally Hill 11-1	precinct
+Tennessee;Maury County;Spring Hill 11-2	precinct
+Tennessee;Maury County;Northfield 11-3	precinct
+Tennessee;McMinn County;City Park	precinct
+Tennessee;McMinn County;Etowah	precinct
+Tennessee;McMinn County;Central	precinct
+Tennessee;McMinn County;Englewood	precinct
+Tennessee;McMinn County;Rogers Creek	precinct
+Tennessee;McMinn County;Riceville	precinct
+Tennessee;McMinn County;Calhoun	precinct
+Tennessee;McMinn County;Niota	precinct
+Tennessee;McMinn County;Ingleside	precinct
+Tennessee;McMinn County;TCAT	precinct
+Tennessee;McMinn County;Courthouse	precinct
+Tennessee;McMinn County;North City	precinct
+Tennessee;McMinn County;Jones Chapel	precinct
+Tennessee;McMinn County;E K Baker	precinct
+Tennessee;McMinn County;Mountain View	precinct
+Tennessee;McNairy County;Bethel Springs 1-1	precinct
+Tennessee;McNairy County;Finger 1-2	precinct
+Tennessee;McNairy County;McNairy 1-3	precinct
+Tennessee;McNairy County;Adamsville 2-1	precinct
+Tennessee;McNairy County;Lawton 2-2	precinct
+Tennessee;McNairy County;Leapwood 3-1	precinct
+Tennessee;McNairy County;Northeast 3-2	precinct
+Tennessee;McNairy County;Purdy 3-3	precinct
+Tennessee;McNairy County;North Selmer 4-1	precinct
+Tennessee;McNairy County;Rose Creek 4-2	precinct
+Tennessee;McNairy County;East View 5-2	precinct
+Tennessee;McNairy County;Guys 5-3	precinct
+Tennessee;McNairy County;Ramer 5-4	precinct
+Tennessee;McNairy County;Courthouse SE 6-1	precinct
+Tennessee;McNairy County;Michie 7-1	precinct
+Tennessee;McNairy County;Stantonville 7-2	precinct
+Tennessee;Meigs County;1 Eastview	precinct
+Tennessee;Meigs County;2 Meigs South	precinct
+Tennessee;Meigs County;3-1 City Hall	precinct
+Tennessee;Meigs County;3-2 Courthouse	precinct
+Tennessee;Meigs County;4 Meigs North	precinct
+Tennessee;Meigs County;5 Ten Mile	precinct
+Tennessee;Monroe County;01	precinct
+Tennessee;Monroe County;02	precinct
+Tennessee;Monroe County;03	precinct
+Tennessee;Monroe County;04	precinct
+Tennessee;Monroe County;05	precinct
+Tennessee;Monroe County;06	precinct
+Tennessee;Monroe County;07	precinct
+Tennessee;Monroe County;08	precinct
+Tennessee;Monroe County;09	precinct
+Tennessee;Monroe County;10	precinct
+Tennessee;Monroe County;11	precinct
+Tennessee;Monroe County;12	precinct
+Tennessee;Monroe County;14	precinct
+Tennessee;Montgomery County;1A St B ES	precinct
+Tennessee;Montgomery County;1B Emmanuel	precinct
+Tennessee;Montgomery County;2A St B MC	precinct
+Tennessee;Montgomery County;2B St B CC	precinct
+Tennessee;Montgomery County;3 East Montgomery	precinct
+Tennessee;Montgomery County;4A MCMS	precinct
+Tennessee;Montgomery County;4B WR Event Center	precinct
+Tennessee;Montgomery County;5A Smith	precinct
+Tennessee;Montgomery County;5B Madison	precinct
+Tennessee;Montgomery County;6A Cumberland	precinct
+Tennessee;Montgomery County;6B Bethel	precinct
+Tennessee;Montgomery County;7 Woodlawn	precinct
+Tennessee;Montgomery County;8A Bethel	precinct
+Tennessee;Montgomery County;8B Barkers Mill	precinct
+Tennessee;Montgomery County;9 Outlaw	precinct
+Tennessee;Montgomery County;10 Minglewood	precinct
+Tennessee;Montgomery County;11 Northwest	precinct
+Tennessee;Montgomery County;12 Ringgold	precinct
+Tennessee;Montgomery County;13 Byrns Darden	precinct
+Tennessee;Montgomery County;14 Glenellen	precinct
+Tennessee;Montgomery County;15 Sango	precinct
+Tennessee;Montgomery County;16 New Providence	precinct
+Tennessee;Montgomery County;17 Grace	precinct
+Tennessee;Montgomery County;18 Hazelwood	precinct
+Tennessee;Montgomery County;19 Oakland	precinct
+Tennessee;Montgomery County;20A Clarksville	precinct
+Tennessee;Montgomery County;20B Barksdale	precinct
+Tennessee;Montgomery County;21A Cumberland	precinct
+Tennessee;Montgomery County;21B Hilldale	precinct
+Tennessee;Montgomery County;Absentee	precinct
+Tennessee;Moore County;1 Masonic Lodge	precinct
+Tennessee;Moore County;2 High School	precinct
+Tennessee;Moore County;3 Moore County Bldg	precinct
+Tennessee;Moore County;4 Public Library	precinct
+Tennessee;Moore County;5 Motlow College	precinct
+Tennessee;Morgan County;1-1 Coalfield	precinct
+Tennessee;Morgan County;2-1 Oakdale High	precinct
+Tennessee;Morgan County;2-2 Oakdale	precinct
+Tennessee;Morgan County;3-1 Wartburg	precinct
+Tennessee;Morgan County;4-1 Lancing	precinct
+Tennessee;Morgan County;4-2 Deer Lodge	precinct
+Tennessee;Morgan County;4-3 Chestnut Ridge	precinct
+Tennessee;Morgan County;5-1 Sunbright	precinct
+Tennessee;Morgan County;5-2 Burrville	precinct
+Tennessee;Morgan County;6-1 Kellys	precinct
+Tennessee;Morgan County;6-2 Petros	precinct
+Tennessee;Morgan County;6-3 Mossy Grove	precinct
+Tennessee;Obion County;1-1 South Fulton	precinct
+Tennessee;Obion County;2-1 Eddie Cox Sr Ctr	precinct
+Tennessee;Obion County;2-4 Woodland	precinct
+Tennessee;Obion County;3-2 Kenton	precinct
+Tennessee;Obion County;3-4 Rives	precinct
+Tennessee;Obion County;4-1 Fair Grounds	precinct
+Tennessee;Obion County;5-2 Cloverdale	precinct
+Tennessee;Obion County;5-4 Hornbeak	precinct
+Tennessee;Obion County;5-5 Samburg	precinct
+Tennessee;Obion County;6-1 Troy Sr Ctr	precinct
+Tennessee;Obion County;6-2 Obion Sr Ctr	precinct
+Tennessee;Obion County;7-2 Obion Co Library	precinct
+Tennessee;Overton County;1 Livingston	precinct
+Tennessee;Overton County;2-1 Allons	precinct
+Tennessee;Overton County;2-3 Monroe	precinct
+Tennessee;Overton County;3-2 Poteet	precinct
+Tennessee;Overton County;3-3 Wilson	precinct
+Tennessee;Overton County;3-4 Rushing Springs	precinct
+Tennessee;Overton County;4-2 Rickman	precinct
+Tennessee;Overton County;5-1 Hilham	precinct
+Tennessee;Overton County;5-2 Fairgrounds	precinct
+Tennessee;Perry County;1-1 Cedar Creek	precinct
+Tennessee;Perry County;1-2 Marsh Creek	precinct
+Tennessee;Perry County;2-1 Pineview	precinct
+Tennessee;Perry County;2-2 Pope	precinct
+Tennessee;Perry County;3-1 Coon Creek	precinct
+Tennessee;Perry County;3-2 Flatwoods	precinct
+Tennessee;Perry County;4-1 Brush Creek	precinct
+Tennessee;Perry County;4-3 Lobelville	precinct
+Tennessee;Perry County;5-1 Linden	precinct
+Tennessee;Perry County;6-1 Lobelville	precinct
+Tennessee;Pickett County;Community Center 1-1	precinct
+Tennessee;Pickett County;Moodyville 1-2	precinct
+Tennessee;Pickett County;High School 2-1	precinct
+Tennessee;Pickett County;Chanute 3-1	precinct
+Tennessee;Pickett County;Travisville 3-2	precinct
+Tennessee;Pickett County;Boom 4-1	precinct
+Tennessee;Pickett County;Oak Hill 4-2	precinct
+Tennessee;Pickett County;Barnes Ridge 4-3	precinct
+Tennessee;Pickett County;Bolestown 4-4	precinct
+Tennessee;Polk County;Delano	precinct
+Tennessee;Polk County;Polk County HS	precinct
+Tennessee;Polk County;Chilhowee MS	precinct
+Tennessee;Polk County;Greasy Creek	precinct
+Tennessee;Polk County;Springtown Firehall	precinct
+Tennessee;Polk County;South Polk School	precinct
+Tennessee;Polk County;Shiloh Baptist	precinct
+Tennessee;Polk County;Community Center	precinct
+Tennessee;Polk County;Turtletown	precinct
+Tennessee;Putnam County;1A Capshaw	precinct
+Tennessee;Putnam County;2A Northeast	precinct
+Tennessee;Putnam County;3A University	precinct
+Tennessee;Putnam County;4A Burks	precinct
+Tennessee;Putnam County;4B Monterey City	precinct
+Tennessee;Putnam County;4C Poplar Grove	precinct
+Tennessee;Putnam County;5A Cookeville CC	precinct
+Tennessee;Putnam County;5C Prescott South	precinct
+Tennessee;Putnam County;5F Dry Valley	precinct
+Tennessee;Putnam County;6A Cane Creek	precinct
+Tennessee;Putnam County;7A Burgess Falls	precinct
+Tennessee;Putnam County;7D Twin Oak	precinct
+Tennessee;Putnam County;8D Boma	precinct
+Tennessee;Putnam County;8E Buffalo Valley	precinct
+Tennessee;Putnam County;8G Upperman	precinct
+Tennessee;Putnam County;9B Double Springs	precinct
+Tennessee;Putnam County;10A Pavilion	precinct
+Tennessee;Putnam County;10B Sycamore	precinct
+Tennessee;Putnam County;11A Bangham	precinct
+Tennessee;Putnam County;11B Cookeville High	precinct
+Tennessee;Putnam County;12A Algood Inside	precinct
+Tennessee;Putnam County;12B Algood Outside	precinct
+Tennessee;Rhea County;1-1 Spring City North	precinct
+Tennessee;Rhea County;1-2 Grandview	precinct
+Tennessee;Rhea County;2-1 Spring City South	precinct
+Tennessee;Rhea County;3-1 Wolf Creek	precinct
+Tennessee;Rhea County;3-2 Evensville North	precinct
+Tennessee;Rhea County;4-1 Evensville South	precinct
+Tennessee;Rhea County;5-1 Dayton North	precinct
+Tennessee;Rhea County;6-1 Dayton West	precinct
+Tennessee;Rhea County;7-1 Frazier	precinct
+Tennessee;Rhea County;8-1 Garrison	precinct
+Tennessee;Rhea County;9-1 Graysville	precinct
+Tennessee;Rhea County;9-2 Waldens Ridge	precinct
+Tennessee;Roane County;Cave Creek	precinct
+Tennessee;Roane County;Cherokee	precinct
+Tennessee;Roane County;Emory Heights	precinct
+Tennessee;Roane County;Emory	precinct
+Tennessee;Roane County;Fairview	precinct
+Tennessee;Roane County;Glen Alice	precinct
+Tennessee;Roane County;Midtown	precinct
+Tennessee;Roane County;Midway	precinct
+Tennessee;Roane County;Oak Hills	precinct
+Tennessee;Roane County;Oliver Springs	precinct
+Tennessee;Roane County;Orchard View	precinct
+Tennessee;Roane County;Paw Paw	precinct
+Tennessee;Roane County;Paint Rock	precinct
+Tennessee;Roane County;South Harriman	precinct
+Tennessee;Roane County;Dyllis	precinct
+Tennessee;Roane County;Eureka	precinct
+Tennessee;Roane County;Harriman Ward 1	precinct
+Tennessee;Roane County;Johnson Sch House	precinct
+Tennessee;Roane County;Kingston Ward 1	precinct
+Tennessee;Roane County;Kingston Ward 2	precinct
+Tennessee;Roane County;Lawnville	precinct
+Tennessee;Roane County;Renfro	precinct
+Tennessee;Roane County;Rockwood Ward 1	precinct
+Tennessee;Roane County;Rockwood Ward 2	precinct
+Tennessee;Robertson County;01-1 East Robertson	precinct
+Tennessee;Robertson County;02-1 Woodall	precinct
+Tennessee;Robertson County;03-1 Ebenezer	precinct
+Tennessee;Robertson County;03-2 Heritage	precinct
+Tennessee;Robertson County;04-1 Watauga	precinct
+Tennessee;Robertson County;05-1 Greenbrier	precinct
+Tennessee;Robertson County;06-1 Coopertown	precinct
+Tennessee;Robertson County;06-2 Mt. Sharon	precinct
+Tennessee;Robertson County;07-1 Jo Byrns	precinct
+Tennessee;Robertson County;07-2 Stroudsville	precinct
+Tennessee;Robertson County;08-1 Krisle	precinct
+Tennessee;Robertson County;08-2 HATS	precinct
+Tennessee;Robertson County;08-3 Owens Chapel	precinct
+Tennessee;Robertson County;09-1 Fair Assoc.	precinct
+Tennessee;Robertson County;10-1 South Haven	precinct
+Tennessee;Robertson County;11-1 Westside	precinct
+Tennessee;Robertson County;11-2 Heads	precinct
+Tennessee;Robertson County;12-1 Bransford	precinct
+Tennessee;Rutherford County;1-1	precinct
+Tennessee;Rutherford County;2-1	precinct
+Tennessee;Rutherford County;2-2	precinct
+Tennessee;Rutherford County;2-3	precinct
+Tennessee;Rutherford County;3-1	precinct
+Tennessee;Rutherford County;3-2	precinct
+Tennessee;Rutherford County;4-1	precinct
+Tennessee;Rutherford County;4-2	precinct
+Tennessee;Rutherford County;4-3	precinct
+Tennessee;Rutherford County;4-4	precinct
+Tennessee;Rutherford County;5-1	precinct
+Tennessee;Rutherford County;5-2	precinct
+Tennessee;Rutherford County;6-1	precinct
+Tennessee;Rutherford County;6-2	precinct
+Tennessee;Rutherford County;7-1	precinct
+Tennessee;Rutherford County;7-2	precinct
+Tennessee;Rutherford County;8-1	precinct
+Tennessee;Rutherford County;8-2	precinct
+Tennessee;Rutherford County;8-3	precinct
+Tennessee;Rutherford County;8-4	precinct
+Tennessee;Rutherford County;9-1	precinct
+Tennessee;Rutherford County;9-2	precinct
+Tennessee;Rutherford County;10-1	precinct
+Tennessee;Rutherford County;10-2	precinct
+Tennessee;Rutherford County;11-1	precinct
+Tennessee;Rutherford County;11-2	precinct
+Tennessee;Rutherford County;12-1	precinct
+Tennessee;Rutherford County;12-2	precinct
+Tennessee;Rutherford County;12-3	precinct
+Tennessee;Rutherford County;13-1	precinct
+Tennessee;Rutherford County;13-2	precinct
+Tennessee;Rutherford County;14-1	precinct
+Tennessee;Rutherford County;14-2	precinct
+Tennessee;Rutherford County;15-1	precinct
+Tennessee;Rutherford County;15-2	precinct
+Tennessee;Rutherford County;16-1	precinct
+Tennessee;Rutherford County;16-2	precinct
+Tennessee;Rutherford County;16-3	precinct
+Tennessee;Rutherford County;17-1	precinct
+Tennessee;Rutherford County;17-2	precinct
+Tennessee;Rutherford County;17-3	precinct
+Tennessee;Rutherford County;18-1	precinct
+Tennessee;Rutherford County;18-2	precinct
+Tennessee;Rutherford County;19-1	precinct
+Tennessee;Rutherford County;19-2	precinct
+Tennessee;Rutherford County;20-1	precinct
+Tennessee;Rutherford County;20-2	precinct
+Tennessee;Rutherford County;21-1	precinct
+Tennessee;Rutherford County;21-2	precinct
+Tennessee;Scott County;1-1 Fairview	precinct
+Tennessee;Scott County;2-1 Elgin	precinct
+Tennessee;Scott County;2-2 Robbins	precinct
+Tennessee;Scott County;3-1 Huntsville	precinct
+Tennessee;Scott County;3-2 Paint Rock	precinct
+Tennessee;Scott County;4-1 Helenwood	precinct
+Tennessee;Scott County;5-1 Pine Hill	precinct
+Tennessee;Scott County;5-2 Winfield	precinct
+Tennessee;Scott County;6-1 Oneida	precinct
+Tennessee;Scott County;7-1 West Oneida	precinct
+Tennessee;Sequatchie County;1 Lewis Chapel	precinct
+Tennessee;Sequatchie County;2 Cagle	precinct
+Tennessee;Sequatchie County;3 Courthouse	precinct
+Tennessee;Sequatchie County;4 Electric Co-op	precinct
+Tennessee;Sequatchie County;5 Chapel Hill	precinct
+Tennessee;Sequatchie County;6 Daus	precinct
+Tennessee;Sequatchie County;7 Ewton's Annex	precinct
+Tennessee;Sequatchie County;8 Lone Oak	precinct
+Tennessee;Sequatchie County;9 Fredonia	precinct
+Tennessee;Sevier County;1-1 Caton's Chapel	precinct
+Tennessee;Sevier County;1-2 Caton's Chapel	precinct
+Tennessee;Sevier County;1-3 Jones Cove	precinct
+Tennessee;Sevier County;1-4 Jones Cove	precinct
+Tennessee;Sevier County;2-1 Waldens Creek	precinct
+Tennessee;Sevier County;2-2 Wearwood	precinct
+Tennessee;Sevier County;3-1 Harrisburg	precinct
+Tennessee;Sevier County;3-2 New Center	precinct
+Tennessee;Sevier County;4-1 Pigeon Forge	precinct
+Tennessee;Sevier County;4-2 Sevierville Elementary	precinct
+Tennessee;Sevier County;5-1 Sevierville	precinct
+Tennessee;Sevier County;5-2 Senior Center	precinct
+Tennessee;Sevier County;6-1 Seymour	precinct
+Tennessee;Sevier County;7-1 Catlettsburg	precinct
+Tennessee;Sevier County;7-2 Catlettsburg	precinct
+Tennessee;Sevier County;7-3 Walnut Grove	precinct
+Tennessee;Sevier County;8-1 Kodak	precinct
+Tennessee;Sevier County;8-2 Kodak	precinct
+Tennessee;Sevier County;8-3 Underwood	precinct
+Tennessee;Sevier County;9-1 Seymour Primary	precinct
+Tennessee;Sevier County;10-1 Boyds Creek	precinct
+Tennessee;Sevier County;10-2 Whites	precinct
+Tennessee;Sevier County;10-3 DuPont	precinct
+Tennessee;Sevier County;11-1 Gatlinburg	precinct
+Tennessee;Sevier County;11-2 Pittman Center	precinct
+Tennessee;Shelby County;Memphis 01	precinct
+Tennessee;Shelby County;Memphis 02	precinct
+Tennessee;Shelby County;Memphis 11	precinct
+Tennessee;Shelby County;Memphis 12	precinct
+Tennessee;Shelby County;Memphis 13	precinct
+Tennessee;Shelby County;Memphis 16-1	precinct
+Tennessee;Shelby County;Memphis 16-3	precinct
+Tennessee;Shelby County;Memphis 17	precinct
+Tennessee;Shelby County;Memphis 20-1	precinct
+Tennessee;Shelby County;Memphis 20-3	precinct
+Tennessee;Shelby County;Memphis 21	precinct
+Tennessee;Shelby County;Memphis 26	precinct
+Tennessee;Shelby County;Memphis 28	precinct
+Tennessee;Shelby County;Memphis 31-2	precinct
+Tennessee;Shelby County;Memphis 31-4	precinct
+Tennessee;Shelby County;Memphis 33	precinct
+Tennessee;Shelby County;Memphis 34-2	precinct
+Tennessee;Shelby County;Memphis 36-1	precinct
+Tennessee;Shelby County;Memphis 36-2	precinct
+Tennessee;Shelby County;Memphis 37	precinct
+Tennessee;Shelby County;Memphis 41-3	precinct
+Tennessee;Shelby County;Memphis 42-1	precinct
+Tennessee;Shelby County;Memphis 44-1	precinct
+Tennessee;Shelby County;Memphis 44-5	precinct
+Tennessee;Shelby County;Memphis 45-2	precinct
+Tennessee;Shelby County;Memphis 45-4	precinct
+Tennessee;Shelby County;Memphis 46-2	precinct
+Tennessee;Shelby County;Memphis 47	precinct
+Tennessee;Shelby County;Memphis 49	precinct
+Tennessee;Shelby County;Memphis 50-1	precinct
+Tennessee;Shelby County;Memphis 50-2	precinct
+Tennessee;Shelby County;Memphis 52-1	precinct
+Tennessee;Shelby County;Memphis 53-1	precinct
+Tennessee;Shelby County;Memphis 54	precinct
+Tennessee;Shelby County;Memphis 55-2	precinct
+Tennessee;Shelby County;Memphis 57	precinct
+Tennessee;Shelby County;Memphis 58-1	precinct
+Tennessee;Shelby County;Memphis 58-4	precinct
+Tennessee;Shelby County;Memphis 59-5	precinct
+Tennessee;Shelby County;Memphis 60-3	precinct
+Tennessee;Shelby County;Memphis 60-5	precinct
+Tennessee;Shelby County;Memphis 60-6	precinct
+Tennessee;Shelby County;Memphis 60-7	precinct
+Tennessee;Shelby County;Memphis 60-9	precinct
+Tennessee;Shelby County;Memphis 61	precinct
+Tennessee;Shelby County;Memphis 62	precinct
+Tennessee;Shelby County;Memphis 64	precinct
+Tennessee;Shelby County;Memphis 66	precinct
+Tennessee;Shelby County;Memphis 67-1	precinct
+Tennessee;Shelby County;Memphis 67-3	precinct
+Tennessee;Shelby County;Memphis 68-1	precinct
+Tennessee;Shelby County;Memphis 68-3	precinct
+Tennessee;Shelby County;Memphis 69-2	precinct
+Tennessee;Shelby County;Memphis 70-1	precinct
+Tennessee;Shelby County;Memphis 70-2	precinct
+Tennessee;Shelby County;Memphis 71-4	precinct
+Tennessee;Shelby County;Memphis 72-3	precinct
+Tennessee;Shelby County;Memphis 72-7	precinct
+Tennessee;Shelby County;Memphis 73-1	precinct
+Tennessee;Shelby County;Memphis 73-3	precinct
+Tennessee;Shelby County;Memphis 74-1	precinct
+Tennessee;Shelby County;Memphis 74-2	precinct
+Tennessee;Shelby County;Memphis 74-5	precinct
+Tennessee;Shelby County;Memphis 74-9	precinct
+Tennessee;Shelby County;Memphis 75-1	precinct
+Tennessee;Shelby County;Memphis 75-6	precinct
+Tennessee;Shelby County;Memphis 75-7	precinct
+Tennessee;Shelby County;Memphis 75-11	precinct
+Tennessee;Shelby County;Memphis 76-4	precinct
+Tennessee;Shelby County;Memphis 76-5	precinct
+Tennessee;Shelby County;Memphis 76-6	precinct
+Tennessee;Shelby County;Memphis 77-1	precinct
+Tennessee;Shelby County;Memphis 77-3	precinct
+Tennessee;Shelby County;Memphis 78-3	precinct
+Tennessee;Shelby County;Memphis 79-1	precinct
+Tennessee;Shelby County;Memphis 79-2	precinct
+Tennessee;Shelby County;Memphis 79-3	precinct
+Tennessee;Shelby County;Memphis 79-7	precinct
+Tennessee;Shelby County;Memphis 80-2	precinct
+Tennessee;Shelby County;Memphis 81-1	precinct
+Tennessee;Shelby County;Memphis 81-3	precinct
+Tennessee;Shelby County;Memphis 81-5	precinct
+Tennessee;Shelby County;Memphis 81-7	precinct
+Tennessee;Shelby County;Memphis 82-2	precinct
+Tennessee;Shelby County;Memphis 83	precinct
+Tennessee;Shelby County;Memphis 84-2	precinct
+Tennessee;Shelby County;Memphis 86	precinct
+Tennessee;Shelby County;Memphis 87-2	precinct
+Tennessee;Shelby County;Memphis 87-3	precinct
+Tennessee;Shelby County;Memphis 87-4	precinct
+Tennessee;Shelby County;Memphis 88-2	precinct
+Tennessee;Shelby County;Memphis 88-3	precinct
+Tennessee;Shelby County;Memphis 88-4	precinct
+Tennessee;Shelby County;Memphis 89-1	precinct
+Tennessee;Shelby County;Memphis 89-2	precinct
+Tennessee;Shelby County;Memphis 90-2	precinct
+Tennessee;Shelby County;Memphis 90-3	precinct
+Tennessee;Shelby County;Memphis 91-1	precinct
+Tennessee;Shelby County;Memphis 91-2	precinct
+Tennessee;Shelby County;Memphis 91-4	precinct
+Tennessee;Shelby County;Memphis 92-1	precinct
+Tennessee;Shelby County;Memphis 93-1	precinct
+Tennessee;Shelby County;Memphis 93-3	precinct
+Tennessee;Shelby County;Memphis 94-3	precinct
+Tennessee;Shelby County;Memphis 94-6	precinct
+Tennessee;Shelby County;Memphis 94-7	precinct
+Tennessee;Shelby County;Memphis 94-8	precinct
+Tennessee;Shelby County;Memphis 95-1	precinct
+Tennessee;Shelby County;Memphis 95-5	precinct
+Tennessee;Shelby County;Memphis 95-6	precinct
+Tennessee;Shelby County;Memphis 95-7	precinct
+Tennessee;Shelby County;Memphis 95-8	precinct
+Tennessee;Shelby County;Memphis 96-1	precinct
+Tennessee;Shelby County;Memphis 96-2	precinct
+Tennessee;Shelby County;Arlington 01	precinct
+Tennessee;Shelby County;Arlington 02	precinct
+Tennessee;Shelby County;Bartlett 03	precinct
+Tennessee;Shelby County;Bartlett 04	precinct
+Tennessee;Shelby County;Bartlett 05	precinct
+Tennessee;Shelby County;Bartlett 06	precinct
+Tennessee;Shelby County;Bartlett 08	precinct
+Tennessee;Shelby County;Bartlett 09	precinct
+Tennessee;Shelby County;Bartlett 11	precinct
+Tennessee;Shelby County;Bartlett 13	precinct
+Tennessee;Shelby County;Brunswick 01	precinct
+Tennessee;Shelby County;Brunswick 02	precinct
+Tennessee;Shelby County;Collierville 01	precinct
+Tennessee;Shelby County;Collierville 02	precinct
+Tennessee;Shelby County;Collierville 03	precinct
+Tennessee;Shelby County;Collierville 04	precinct
+Tennessee;Shelby County;Collierville 05	precinct
+Tennessee;Shelby County;Collierville 06	precinct
+Tennessee;Shelby County;Collierville 07	precinct
+Tennessee;Shelby County;Collierville 08	precinct
+Tennessee;Shelby County;Collierville 09	precinct
+Tennessee;Shelby County;Cordova 03	precinct
+Tennessee;Shelby County;Cordova 04	precinct
+Tennessee;Shelby County;Cordova 05	precinct
+Tennessee;Shelby County;Eads	precinct
+Tennessee;Shelby County;Forest Hills 01	precinct
+Tennessee;Shelby County;Forest Hills 02	precinct
+Tennessee;Shelby County;Forest Hills 03	precinct
+Tennessee;Shelby County;Germantown 02	precinct
+Tennessee;Shelby County;Germantown 03	precinct
+Tennessee;Shelby County;Germantown 04	precinct
+Tennessee;Shelby County;Germantown 05	precinct
+Tennessee;Shelby County;Germantown 06	precinct
+Tennessee;Shelby County;Germantown 08	precinct
+Tennessee;Shelby County;Germantown 10	precinct
+Tennessee;Shelby County;Germantown 11	precinct
+Tennessee;Shelby County;Germantown 12	precinct
+Tennessee;Shelby County;Lakeland 01	precinct
+Tennessee;Shelby County;Lakeland 02	precinct
+Tennessee;Shelby County;Lucy 01	precinct
+Tennessee;Shelby County;Lucy 03	precinct
+Tennessee;Shelby County;McConnell's	precinct
+Tennessee;Shelby County;Millington 01	precinct
+Tennessee;Shelby County;Millington 02	precinct
+Tennessee;Shelby County;Morning Sun 01	precinct
+Tennessee;Shelby County;Morning Sun 02	precinct
+Tennessee;Shelby County;Ross 05	precinct
+Tennessee;Shelby County;Ross 13	precinct
+Tennessee;Shelby County;Ross 14	precinct
+Tennessee;Shelby County;Ross 15	precinct
+Tennessee;Shelby County;Ross 16	precinct
+Tennessee;Shelby County;Stewartville	precinct
+Tennessee;Smith County;01 Defeated	precinct
+Tennessee;Smith County;02 Tanglewood	precinct
+Tennessee;Smith County;03 New Middleton	precinct
+Tennessee;Smith County;04 Rock City	precinct
+Tennessee;Smith County;05 Gordonsville	precinct
+Tennessee;Smith County;06 Carthage	precinct
+Tennessee;Smith County;07 South Carthage	precinct
+Tennessee;Smith County;08 Elmwood	precinct
+Tennessee;Stewart County;1-1 Indian Mound	precinct
+Tennessee;Stewart County;2-1 Big Rock	precinct
+Tennessee;Stewart County;3-1 Bumpus Mills	precinct
+Tennessee;Stewart County;4-1 Church Street	precinct
+Tennessee;Stewart County;5-1 Visitors Center	precinct
+Tennessee;Stewart County;6-1 Public Library	precinct
+Tennessee;Stewart County;7-1 Cumberland City	precinct
+Tennessee;Sullivan County;1A	precinct
+Tennessee;Sullivan County;2A	precinct
+Tennessee;Sullivan County;2B	precinct
+Tennessee;Sullivan County;2C	precinct
+Tennessee;Sullivan County;3A	precinct
+Tennessee;Sullivan County;4A	precinct
+Tennessee;Sullivan County;4B	precinct
+Tennessee;Sullivan County;4C	precinct
+Tennessee;Sullivan County;5A	precinct
+Tennessee;Sullivan County;5B	precinct
+Tennessee;Sullivan County;5C	precinct
+Tennessee;Sullivan County;6A	precinct
+Tennessee;Sullivan County;6B	precinct
+Tennessee;Sullivan County;6C	precinct
+Tennessee;Sullivan County;7A	precinct
+Tennessee;Sullivan County;7B	precinct
+Tennessee;Sullivan County;7C	precinct
+Tennessee;Sullivan County;8A	precinct
+Tennessee;Sullivan County;8B	precinct
+Tennessee;Sullivan County;9A	precinct
+Tennessee;Sullivan County;9B	precinct
+Tennessee;Sullivan County;10A	precinct
+Tennessee;Sullivan County;10B	precinct
+Tennessee;Sullivan County;11A	precinct
+Tennessee;Sullivan County;11B	precinct
+Tennessee;Sumner County;1-1 Westmoreland	precinct
+Tennessee;Sumner County;1-3 Corinth	precinct
+Tennessee;Sumner County;2-1 Portland	precinct
+Tennessee;Sumner County;2-2 Wiseman	precinct
+Tennessee;Sumner County;3-1 Civic Center	precinct
+Tennessee;Sumner County;3-3 Creekside	precinct
+Tennessee;Sumner County;4-1 Howard	precinct
+Tennessee;Sumner County;4-2 Station Camp	precinct
+Tennessee;Sumner County;4-3 Cottontown	precinct
+Tennessee;Sumner County;4-4 Union	precinct
+Tennessee;Sumner County;5-1 FB Gallatin	precinct
+Tennessee;Sumner County;5-2 Guild	precinct
+Tennessee;Sumner County;6-1 Vol State	precinct
+Tennessee;Sumner County;6-2 Gallatin HS	precinct
+Tennessee;Sumner County;6-3 Jack Anderson	precinct
+Tennessee;Sumner County;7-1 Whitten	precinct
+Tennessee;Sumner County;7-3 Long Hollow	precinct
+Tennessee;Sumner County;8-1 Brown	precinct
+Tennessee;Sumner County;8-2 Hawkins	precinct
+Tennessee;Sumner County;9-1 Hendersonville	precinct
+Tennessee;Sumner County;9-2 Indian Lake	precinct
+Tennessee;Sumner County;10-1 Walton Ferry	precinct
+Tennessee;Sumner County;10-2 Merrol Hyde	precinct
+Tennessee;Sumner County;11-1 Beech	precinct
+Tennessee;Sumner County;11-2 Goodlettsville	precinct
+Tennessee;Sumner County;11-3 Millersville	precinct
+Tennessee;Sumner County;12-1 Oakmont	precinct
+Tennessee;Sumner County;12-3 White House	precinct
+Tennessee;Tipton County;1-1 NE Covington	precinct
+Tennessee;Tipton County;2-3 SE Covington	precinct
+Tennessee;Tipton County;3-6 Tipton West	precinct
+Tennessee;Tipton County;4-11 Atoka	precinct
+Tennessee;Tipton County;5-12 Munford	precinct
+Tennessee;Tipton County;6-14 SW Tipton	precinct
+Tennessee;Tipton County;7-19 Austin Peay	precinct
+Tennessee;Tipton County;8-21 Wilkinsville	precinct
+Tennessee;Tipton County;9-22 Brighton	precinct
+Tennessee;Tipton County;Early Voting - Write-Ins	precinct
+Tennessee;Trousdale County;01 Senior Center	precinct
+Tennessee;Trousdale County;02 Cato	precinct
+Tennessee;Trousdale County;03 Beech Grove	precinct
+Tennessee;Trousdale County;04 Halltown	precinct
+Tennessee;Trousdale County;05 Templow	precinct
+Tennessee;Trousdale County;06 Walnut Grove	precinct
+Tennessee;Trousdale County;07 High School	precinct
+Tennessee;Trousdale County;08 Willard	precinct
+Tennessee;Trousdale County;09 City	precinct
+Tennessee;Trousdale County;10 Providence	precinct
+Tennessee;Unicoi County;Flag Pond	precinct
+Tennessee;Unicoi County;Temple Hill	precinct
+Tennessee;Unicoi County;Love Chapel	precinct
+Tennessee;Unicoi County;High School	precinct
+Tennessee;Unicoi County;Rock Creek	precinct
+Tennessee;Unicoi County;Fishery	precinct
+Tennessee;Unicoi County;Limestone Cove	precinct
+Tennessee;Unicoi County;Unicoi	precinct
+Tennessee;Union County;1-1 UCHS	precinct
+Tennessee;Union County;2-1 Luttrell	precinct
+Tennessee;Union County;3-1 Cedar Grove	precinct
+Tennessee;Union County;3-2 Brock	precinct
+Tennessee;Union County;4-1 Big Ridge	precinct
+Tennessee;Union County;5-1 Sharps Chapel	precinct
+Tennessee;Union County;5-2 Braden Chapel	precinct
+Tennessee;Union County;6-1 Paulette	precinct
+Tennessee;Union County;7-1 Plainview	precinct
+Tennessee;Van Buren County;Spencer 1	precinct
+Tennessee;Van Buren County;Cummingsville	precinct
+Tennessee;Van Buren County;Cedar Grove	precinct
+Tennessee;Van Buren County;Fall Creek Falls	precinct
+Tennessee;Van Buren County;Piney	precinct
+Tennessee;Van Buren County;White Hill	precinct
+Tennessee;Van Buren County;Spencer 5	precinct
+Tennessee;Warren County;1-1 Christ Community Church	precinct
+Tennessee;Warren County;2-1 Courthouse	precinct
+Tennessee;Warren County;2-2 Airport	precinct
+Tennessee;Warren County;3-1 Westwood	precinct
+Tennessee;Warren County;3-2 Smartt	precinct
+Tennessee;Warren County;4-1 TSU	precinct
+Tennessee;Warren County;5-1 Mall	precinct
+Tennessee;Warren County;5-2 Chamber	precinct
+Tennessee;Warren County;6-1 Caney Fork	precinct
+Tennessee;Warren County;7-1 Friendship	precinct
+Tennessee;Warren County;8-1 Shellsford	precinct
+Tennessee;Warren County;8-3 Bonner	precinct
+Tennessee;Warren County;9-1 Morrison	precinct
+Tennessee;Warren County;9-2 Viola	precinct
+Tennessee;Warren County;10-1 Centertown UMC	precinct
+Tennessee;Warren County;10-2 Centertown CIC	precinct
+Tennessee;Warren County;11-1 Midway	precinct
+Tennessee;Warren County;11-2 Hwy 56 North	precinct
+Tennessee;Warren County;12-1 Highway Dept	precinct
+Tennessee;Warren County;12-2 Lucky	precinct
+Tennessee;Washington County;01 Fall Branch	precinct
+Tennessee;Washington County;02 Harmony	precinct
+Tennessee;Washington County;03 Bowmantown	precinct
+Tennessee;Washington County;04 Sulphur Springs	precinct
+Tennessee;Washington County;05 B.C. West	precinct
+Tennessee;Washington County;06 B.C. Central	precinct
+Tennessee;Washington County;07 Gray County	precinct
+Tennessee;Washington County;08 Gray City	precinct
+Tennessee;Washington County;09 B.C. East	precinct
+Tennessee;Washington County;10 B.C. City	precinct
+Tennessee;Washington County;11 Asbury	precinct
+Tennessee;Washington County;12 Town Acres City	precinct
+Tennessee;Washington County;13 Woodland	precinct
+Tennessee;Washington County;14 Indian Trail	precinct
+Tennessee;Washington County;15 Princeton	precinct
+Tennessee;Washington County;16 Lakeridge	precinct
+Tennessee;Washington County;17 Fairmont	precinct
+Tennessee;Washington County;18 Carver	precinct
+Tennessee;Washington County;19 Henry Johnson 6	precinct
+Tennessee;Washington County;20 Henry Johnson 7	precinct
+Tennessee;Washington County;21 Keystone	precinct
+Tennessee;Washington County;22 South Side	precinct
+Tennessee;Washington County;23 Grace East	precinct
+Tennessee;Washington County;24 Grace City	precinct
+Tennessee;Washington County;25 Grace West	precinct
+Tennessee;Washington County;26 Fairhaven	precinct
+Tennessee;Washington County;27 Courthouse	precinct
+Tennessee;Washington County;28 Visitor's Center	precinct
+Tennessee;Washington County;29 Lamar	precinct
+Tennessee;Washington County;30 New Victory	precinct
+Tennessee;Washington County;31 Embreeville	precinct
+Tennessee;Washington County;32 New Salem	precinct
+Tennessee;Washington County;33 South Central 7	precinct
+Tennessee;Washington County;34 South Central 6	precinct
+Tennessee;Washington County;35 Town Acres County	precinct
+Tennessee;Wayne County;1-1 Waynesboro	precinct
+Tennessee;Wayne County;2-1 Clifton	precinct
+Tennessee;Wayne County;3-1 Beech Creek	precinct
+Tennessee;Wayne County;3-2 Crazy Horse	precinct
+Tennessee;Wayne County;3-3 Eagle Creek	precinct
+Tennessee;Wayne County;4-1 Collinwood	precinct
+Tennessee;Wayne County;4-2 Shawnettee	precinct
+Tennessee;Wayne County;5-1 Big Cypress	precinct
+Tennessee;Wayne County;5-2 Lutts	precinct
+Tennessee;Wayne County;5-3 Woodmen	precinct
+Tennessee;Wayne County;6-1 Holly Creek	precinct
+Tennessee;Wayne County;6-2 South Gate	precinct
+Tennessee;Wayne County;7-1 Buffalo River	precinct
+Tennessee;Wayne County;7-2 Ovilla	precinct
+Tennessee;Weakley County;1A Palmersville	precinct
+Tennessee;Weakley County;1B Latham	precinct
+Tennessee;Weakley County;2A Gleason	precinct
+Tennessee;Weakley County;3A Greenfield	precinct
+Tennessee;Weakley County;4A Sharon	precinct
+Tennessee;Weakley County;5A Martin CoC	precinct
+Tennessee;Weakley County;6A Trinity	precinct
+Tennessee;Weakley County;7A Martin Shepherd's	precinct
+Tennessee;Weakley County;8A Martin FUMC	precinct
+Tennessee;Weakley County;9A Dresden	precinct
+Tennessee;White County;1-1 Sparta Civic	precinct
+Tennessee;White County;1-2 Sparta Civic	precinct
+Tennessee;White County;2-1 Ag Fair Complex	precinct
+Tennessee;White County;2-2 Woodland Park	precinct
+Tennessee;White County;3-1 Ag Fair Complex	precinct
+Tennessee;White County;4-1 Woodland Park	precinct
+Tennessee;White County;4-2 Bondecroft	precinct
+Tennessee;White County;5-1 Doyle Civic	precinct
+Tennessee;White County;6-1 Central View	precinct
+Tennessee;White County;6-2 Cassville	precinct
+Tennessee;White County;7-1 Northfield	precinct
+Tennessee;Williamson County;1-1	precinct
+Tennessee;Williamson County;1-2	precinct
+Tennessee;Williamson County;1-3	precinct
+Tennessee;Williamson County;1-4	precinct
+Tennessee;Williamson County;1-5	precinct
+Tennessee;Williamson County;2-1	precinct
+Tennessee;Williamson County;2-2	precinct
+Tennessee;Williamson County;2-3	precinct
+Tennessee;Williamson County;2-4	precinct
+Tennessee;Williamson County;2-5	precinct
+Tennessee;Williamson County;3-1	precinct
+Tennessee;Williamson County;3-2	precinct
+Tennessee;Williamson County;3-3	precinct
+Tennessee;Williamson County;4-1	precinct
+Tennessee;Williamson County;4-2	precinct
+Tennessee;Williamson County;4-3	precinct
+Tennessee;Williamson County;5-1	precinct
+Tennessee;Williamson County;5-2	precinct
+Tennessee;Williamson County;5-3	precinct
+Tennessee;Williamson County;5-4	precinct
+Tennessee;Williamson County;6-1	precinct
+Tennessee;Williamson County;6-2	precinct
+Tennessee;Williamson County;6-3	precinct
+Tennessee;Williamson County;7-1	precinct
+Tennessee;Williamson County;7-2	precinct
+Tennessee;Williamson County;7-3	precinct
+Tennessee;Williamson County;8-1	precinct
+Tennessee;Williamson County;8-2	precinct
+Tennessee;Williamson County;8-3	precinct
+Tennessee;Williamson County;9-1	precinct
+Tennessee;Williamson County;9-2	precinct
+Tennessee;Williamson County;9-3	precinct
+Tennessee;Williamson County;9-4	precinct
+Tennessee;Williamson County;9-5	precinct
+Tennessee;Williamson County;10-1	precinct
+Tennessee;Williamson County;10-2	precinct
+Tennessee;Williamson County;10-3	precinct
+Tennessee;Williamson County;11-1	precinct
+Tennessee;Williamson County;11-2	precinct
+Tennessee;Williamson County;11-3	precinct
+Tennessee;Williamson County;12-1	precinct
+Tennessee;Williamson County;12-2	precinct
+Tennessee;Williamson County;12-3	precinct
+Tennessee;Wilson County;1-1	precinct
+Tennessee;Wilson County;2-1	precinct
+Tennessee;Wilson County;3-1	precinct
+Tennessee;Wilson County;4-1	precinct
+Tennessee;Wilson County;4-2	precinct
+Tennessee;Wilson County;5-1	precinct
+Tennessee;Wilson County;6-1	precinct
+Tennessee;Wilson County;7-1	precinct
+Tennessee;Wilson County;7-2	precinct
+Tennessee;Wilson County;8-1	precinct
+Tennessee;Wilson County;9-1	precinct
+Tennessee;Wilson County;9-2	precinct
+Tennessee;Wilson County;10-1	precinct
+Tennessee;Wilson County;11-1	precinct
+Tennessee;Wilson County;12-1	precinct
+Tennessee;Wilson County;12-2	precinct
+Tennessee;Wilson County;13-1	precinct
+Tennessee;Wilson County;14-1	precinct
+Tennessee;Wilson County;15-1	precinct
+Tennessee;Wilson County;16-1	precinct
+Tennessee;Wilson County;17-1	precinct
+Tennessee;Wilson County;18-1	precinct
+Tennessee;Wilson County;19-1	precinct
+Tennessee;Wilson County;20-1	precinct
+Tennessee;Wilson County;21-1	precinct
+Tennessee;Wilson County;21-2	precinct
+Tennessee;Wilson County;22-1	precinct
+Tennessee;Wilson County;23-1	precinct
+Tennessee;Wilson County;24-1	precinct
+Tennessee;Wilson County;25-1	precinct
+Tennessee;Wilson County;25-2	precinct
+Tennessee;DeKalb County;7-1 Church of Christ	precinct
+Tennessee;DeKalb County;6-3 Blue Springs	precinct
+Tennessee;DeKalb County;6-2 Keltonburg	precinct
+Tennessee;DeKalb County;6-1 Belk	precinct
+Tennessee;DeKalb County;5-2 County Complex	precinct
+Tennessee;DeKalb County;5-1 Johnson Chapel	precinct
+Tennessee;DeKalb County;4-3 Courthouse	precinct
+Tennessee;DeKalb County;4-2 Rock Castle	precinct
+Tennessee;DeKalb County;3-1 Church of God	precinct
+Tennessee;DeKalb County;2-3 Snows Hill	precinct
+Tennessee;DeKalb County;2-2 Dowelltown	precinct
+Tennessee;DeKalb County;2-1 Liberty	precinct
+Tennessee;DeKalb County;1-3 Edgar Evins Park	precinct
+Tennessee;DeKalb County;1-2 Temperence Hall	precinct
+Tennessee;DeKalb County;1-1 Alexandria	precinct

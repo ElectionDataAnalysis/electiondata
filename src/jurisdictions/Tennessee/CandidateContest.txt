@@ -1,0 +1,149 @@
+Name	NumberElected	Office	PrimaryParty
+TN House District 1	1	TN House District 1	
+TN House District 2	1	TN House District 2	
+TN House District 3	1	TN House District 3	
+TN House District 4	1	TN House District 4	
+TN House District 5	1	TN House District 5	
+TN House District 6	1	TN House District 6	
+TN House District 7	1	TN House District 7	
+TN House District 8	1	TN House District 8	
+TN House District 9	1	TN House District 9	
+TN House District 10	1	TN House District 10	
+TN House District 11	1	TN House District 11	
+TN House District 12	1	TN House District 12	
+TN House District 13	1	TN House District 13	
+TN House District 14	1	TN House District 14	
+TN House District 15	1	TN House District 15	
+TN House District 16	1	TN House District 16	
+TN House District 17	1	TN House District 17	
+TN House District 18	1	TN House District 18	
+TN House District 19	1	TN House District 19	
+TN House District 20	1	TN House District 20	
+TN House District 21	1	TN House District 21	
+TN House District 22	1	TN House District 22	
+TN House District 23	1	TN House District 23	
+TN House District 24	1	TN House District 24	
+TN House District 25	1	TN House District 25	
+TN House District 26	1	TN House District 26	
+TN House District 27	1	TN House District 27	
+TN House District 28	1	TN House District 28	
+TN House District 29	1	TN House District 29	
+TN House District 30	1	TN House District 30	
+TN House District 31	1	TN House District 31	
+TN House District 32	1	TN House District 32	
+TN House District 33	1	TN House District 33	
+TN House District 34	1	TN House District 34	
+TN House District 35	1	TN House District 35	
+TN House District 36	1	TN House District 36	
+TN House District 37	1	TN House District 37	
+TN House District 38	1	TN House District 38	
+TN House District 39	1	TN House District 39	
+TN House District 40	1	TN House District 40	
+TN House District 41	1	TN House District 41	
+TN House District 42	1	TN House District 42	
+TN House District 43	1	TN House District 43	
+TN House District 44	1	TN House District 44	
+TN House District 45	1	TN House District 45	
+TN House District 46	1	TN House District 46	
+TN House District 47	1	TN House District 47	
+TN House District 48	1	TN House District 48	
+TN House District 49	1	TN House District 49	
+TN House District 50	1	TN House District 50	
+TN House District 51	1	TN House District 51	
+TN House District 52	1	TN House District 52	
+TN House District 53	1	TN House District 53	
+TN House District 54	1	TN House District 54	
+TN House District 55	1	TN House District 55	
+TN House District 56	1	TN House District 56	
+TN House District 57	1	TN House District 57	
+TN House District 58	1	TN House District 58	
+TN House District 59	1	TN House District 59	
+TN House District 60	1	TN House District 60	
+TN House District 61	1	TN House District 61	
+TN House District 62	1	TN House District 62	
+TN House District 63	1	TN House District 63	
+TN House District 64	1	TN House District 64	
+TN House District 65	1	TN House District 65	
+TN House District 66	1	TN House District 66	
+TN House District 67	1	TN House District 67	
+TN House District 68	1	TN House District 68	
+TN House District 69	1	TN House District 69	
+TN House District 70	1	TN House District 70	
+TN House District 71	1	TN House District 71	
+TN House District 72	1	TN House District 72	
+TN House District 73	1	TN House District 73	
+TN House District 74	1	TN House District 74	
+TN House District 75	1	TN House District 75	
+TN House District 76	1	TN House District 76	
+TN House District 77	1	TN House District 77	
+TN House District 78	1	TN House District 78	
+TN House District 79	1	TN House District 79	
+TN House District 80	1	TN House District 80	
+TN House District 81	1	TN House District 81	
+TN House District 82	1	TN House District 82	
+TN House District 83	1	TN House District 83	
+TN House District 84	1	TN House District 84	
+TN House District 85	1	TN House District 85	
+TN House District 86	1	TN House District 86	
+TN House District 87	1	TN House District 87	
+TN House District 88	1	TN House District 88	
+TN House District 89	1	TN House District 89	
+TN House District 90	1	TN House District 90	
+TN House District 91	1	TN House District 91	
+TN House District 92	1	TN House District 92	
+TN House District 93	1	TN House District 93	
+TN House District 94	1	TN House District 94	
+TN House District 95	1	TN House District 95	
+TN House District 96	1	TN House District 96	
+TN House District 97	1	TN House District 97	
+TN House District 98	1	TN House District 98	
+TN House District 99	1	TN House District 99	
+TN Senate District 1	1	TN Senate District 1	
+TN Senate District 2	1	TN Senate District 2	
+TN Senate District 3	1	TN Senate District 3	
+TN Senate District 4	1	TN Senate District 4	
+TN Senate District 5	1	TN Senate District 5	
+TN Senate District 6	1	TN Senate District 6	
+TN Senate District 7	1	TN Senate District 7	
+TN Senate District 8	1	TN Senate District 8	
+TN Senate District 9	1	TN Senate District 9	
+TN Senate District 10	1	TN Senate District 10	
+TN Senate District 11	1	TN Senate District 11	
+TN Senate District 12	1	TN Senate District 12	
+TN Senate District 13	1	TN Senate District 13	
+TN Senate District 14	1	TN Senate District 14	
+TN Senate District 15	1	TN Senate District 15	
+TN Senate District 16	1	TN Senate District 16	
+TN Senate District 17	1	TN Senate District 17	
+TN Senate District 18	1	TN Senate District 18	
+TN Senate District 19	1	TN Senate District 19	
+TN Senate District 20	1	TN Senate District 20	
+TN Senate District 21	1	TN Senate District 21	
+TN Senate District 22	1	TN Senate District 22	
+TN Senate District 23	1	TN Senate District 23	
+TN Senate District 24	1	TN Senate District 24	
+TN Senate District 25	1	TN Senate District 25	
+TN Senate District 26	1	TN Senate District 26	
+TN Senate District 27	1	TN Senate District 27	
+TN Senate District 28	1	TN Senate District 28	
+TN Senate District 29	1	TN Senate District 29	
+TN Senate District 30	1	TN Senate District 30	
+TN Senate District 31	1	TN Senate District 31	
+TN Senate District 32	1	TN Senate District 32	
+TN Senate District 33	1	TN Senate District 33	
+US House TN District 1	1	US House TN District 1	
+US House TN District 2	1	US House TN District 2	
+US House TN District 3	1	US House TN District 3	
+US House TN District 4	1	US House TN District 4	
+US House TN District 5	1	US House TN District 5	
+US House TN District 6	1	US House TN District 6	
+US House TN District 7	1	US House TN District 7	
+US House TN District 8	1	US House TN District 8	
+US House TN District 9	1	US House TN District 9	
+US President (TN)	1	US President (TN)	
+TN Governor	1	TN Governor	
+US Senate TN	1	US Senate TN	
+TN Attorney General	1	TN Attorney General	
+TN Lieutenant Governor	1	TN Lieutenant Governor	
+TN Treasurer	1	TN Treasurer	
+TN Secretary of State	1	TN Secretary of State	

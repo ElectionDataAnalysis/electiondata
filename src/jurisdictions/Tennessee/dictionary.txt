@@ -1,0 +1,2476 @@
+cdf_element	cdf_internal_name	raw_identifier_value
+CandidateContest	TN House District 1	Tennessee House of Representatives District 1
+CandidateContest	TN House District 2	Tennessee House of Representatives District 2
+CandidateContest	TN House District 3	Tennessee House of Representatives District 3
+CandidateContest	TN House District 4	Tennessee House of Representatives District 4
+CandidateContest	TN House District 5	Tennessee House of Representatives District 5
+CandidateContest	TN House District 6	Tennessee House of Representatives District 6
+CandidateContest	TN House District 7	Tennessee House of Representatives District 7
+CandidateContest	TN House District 8	Tennessee House of Representatives District 8
+CandidateContest	TN House District 9	Tennessee House of Representatives District 9
+CandidateContest	TN House District 10	Tennessee House of Representatives District 10
+CandidateContest	TN House District 11	Tennessee House of Representatives District 11
+CandidateContest	TN House District 12	Tennessee House of Representatives District 12
+CandidateContest	TN House District 13	Tennessee House of Representatives District 13
+CandidateContest	TN House District 14	Tennessee House of Representatives District 14
+CandidateContest	TN House District 15	Tennessee House of Representatives District 15
+CandidateContest	TN House District 16	Tennessee House of Representatives District 16
+CandidateContest	TN House District 17	Tennessee House of Representatives District 17
+CandidateContest	TN House District 18	Tennessee House of Representatives District 18
+CandidateContest	TN House District 19	Tennessee House of Representatives District 19
+CandidateContest	TN House District 20	Tennessee House of Representatives District 20
+CandidateContest	TN House District 21	Tennessee House of Representatives District 21
+CandidateContest	TN House District 22	Tennessee House of Representatives District 22
+CandidateContest	TN House District 23	Tennessee House of Representatives District 23
+CandidateContest	TN House District 24	Tennessee House of Representatives District 24
+CandidateContest	TN House District 25	Tennessee House of Representatives District 25
+CandidateContest	TN House District 26	Tennessee House of Representatives District 26
+CandidateContest	TN House District 27	Tennessee House of Representatives District 27
+CandidateContest	TN House District 28	Tennessee House of Representatives District 28
+CandidateContest	TN House District 29	Tennessee House of Representatives District 29
+CandidateContest	TN House District 30	Tennessee House of Representatives District 30
+CandidateContest	TN House District 31	Tennessee House of Representatives District 31
+CandidateContest	TN House District 32	Tennessee House of Representatives District 32
+CandidateContest	TN House District 33	Tennessee House of Representatives District 33
+CandidateContest	TN House District 34	Tennessee House of Representatives District 34
+CandidateContest	TN House District 35	Tennessee House of Representatives District 35
+CandidateContest	TN House District 36	Tennessee House of Representatives District 36
+CandidateContest	TN House District 37	Tennessee House of Representatives District 37
+CandidateContest	TN House District 38	Tennessee House of Representatives District 38
+CandidateContest	TN House District 39	Tennessee House of Representatives District 39
+CandidateContest	TN House District 40	Tennessee House of Representatives District 40
+CandidateContest	TN House District 41	Tennessee House of Representatives District 41
+CandidateContest	TN House District 42	Tennessee House of Representatives District 42
+CandidateContest	TN House District 43	Tennessee House of Representatives District 43
+CandidateContest	TN House District 44	Tennessee House of Representatives District 44
+CandidateContest	TN House District 45	Tennessee House of Representatives District 45
+CandidateContest	TN House District 46	Tennessee House of Representatives District 46
+CandidateContest	TN House District 47	Tennessee House of Representatives District 47
+CandidateContest	TN House District 48	Tennessee House of Representatives District 48
+CandidateContest	TN House District 49	Tennessee House of Representatives District 49
+CandidateContest	TN House District 50	Tennessee House of Representatives District 50
+CandidateContest	TN House District 51	Tennessee House of Representatives District 51
+CandidateContest	TN House District 52	Tennessee House of Representatives District 52
+CandidateContest	TN House District 53	Tennessee House of Representatives District 53
+CandidateContest	TN House District 54	Tennessee House of Representatives District 54
+CandidateContest	TN House District 55	Tennessee House of Representatives District 55
+CandidateContest	TN House District 56	Tennessee House of Representatives District 56
+CandidateContest	TN House District 57	Tennessee House of Representatives District 57
+CandidateContest	TN House District 58	Tennessee House of Representatives District 58
+CandidateContest	TN House District 59	Tennessee House of Representatives District 59
+CandidateContest	TN House District 60	Tennessee House of Representatives District 60
+CandidateContest	TN House District 61	Tennessee House of Representatives District 61
+CandidateContest	TN House District 62	Tennessee House of Representatives District 62
+CandidateContest	TN House District 63	Tennessee House of Representatives District 63
+CandidateContest	TN House District 64	Tennessee House of Representatives District 64
+CandidateContest	TN House District 65	Tennessee House of Representatives District 65
+CandidateContest	TN House District 66	Tennessee House of Representatives District 66
+CandidateContest	TN House District 67	Tennessee House of Representatives District 67
+CandidateContest	TN House District 68	Tennessee House of Representatives District 68
+CandidateContest	TN House District 69	Tennessee House of Representatives District 69
+CandidateContest	TN House District 70	Tennessee House of Representatives District 70
+CandidateContest	TN House District 71	Tennessee House of Representatives District 71
+CandidateContest	TN House District 72	Tennessee House of Representatives District 72
+CandidateContest	TN House District 73	Tennessee House of Representatives District 73
+CandidateContest	TN House District 74	Tennessee House of Representatives District 74
+CandidateContest	TN House District 75	Tennessee House of Representatives District 75
+CandidateContest	TN House District 76	Tennessee House of Representatives District 76
+CandidateContest	TN House District 77	Tennessee House of Representatives District 77
+CandidateContest	TN House District 78	Tennessee House of Representatives District 78
+CandidateContest	TN House District 79	Tennessee House of Representatives District 79
+CandidateContest	TN House District 80	Tennessee House of Representatives District 80
+CandidateContest	TN House District 81	Tennessee House of Representatives District 81
+CandidateContest	TN House District 82	Tennessee House of Representatives District 82
+CandidateContest	TN House District 83	Tennessee House of Representatives District 83
+CandidateContest	TN House District 84	Tennessee House of Representatives District 84
+CandidateContest	TN House District 85	Tennessee House of Representatives District 85
+CandidateContest	TN House District 86	Tennessee House of Representatives District 86
+CandidateContest	TN House District 87	Tennessee House of Representatives District 87
+CandidateContest	TN House District 88	Tennessee House of Representatives District 88
+CandidateContest	TN House District 89	Tennessee House of Representatives District 89
+CandidateContest	TN House District 90	Tennessee House of Representatives District 90
+CandidateContest	TN House District 91	Tennessee House of Representatives District 91
+CandidateContest	TN House District 92	Tennessee House of Representatives District 92
+CandidateContest	TN House District 93	Tennessee House of Representatives District 93
+CandidateContest	TN House District 94	Tennessee House of Representatives District 94
+CandidateContest	TN House District 95	Tennessee House of Representatives District 95
+CandidateContest	TN House District 96	Tennessee House of Representatives District 96
+CandidateContest	TN House District 97	Tennessee House of Representatives District 97
+CandidateContest	TN House District 98	Tennessee House of Representatives District 98
+CandidateContest	TN House District 99	Tennessee House of Representatives District 99
+CandidateContest	TN Senate District 1	Tennessee Senate District 1
+CandidateContest	TN Senate District 2	Tennessee Senate District 2
+CandidateContest	TN Senate District 3	Tennessee Senate District 3
+CandidateContest	TN Senate District 4	Tennessee Senate District 4
+CandidateContest	TN Senate District 5	Tennessee Senate District 5
+CandidateContest	TN Senate District 6	Tennessee Senate District 6
+CandidateContest	TN Senate District 7	Tennessee Senate District 7
+CandidateContest	TN Senate District 8	Tennessee Senate District 8
+CandidateContest	TN Senate District 9	Tennessee Senate District 9
+CandidateContest	TN Senate District 10	Tennessee Senate District 10
+CandidateContest	TN Senate District 11	Tennessee Senate District 11
+CandidateContest	TN Senate District 12	Tennessee Senate District 12
+CandidateContest	TN Senate District 13	Tennessee Senate District 13
+CandidateContest	TN Senate District 14	Tennessee Senate District 14
+CandidateContest	TN Senate District 15	Tennessee Senate District 15
+CandidateContest	TN Senate District 16	Tennessee Senate District 16
+CandidateContest	TN Senate District 17	Tennessee Senate District 17
+CandidateContest	TN Senate District 18	Tennessee Senate District 18
+CandidateContest	TN Senate District 19	Tennessee Senate District 19
+CandidateContest	TN Senate District 20	Tennessee Senate District 20
+CandidateContest	TN Senate District 21	Tennessee Senate District 21
+CandidateContest	TN Senate District 22	Tennessee Senate District 22
+CandidateContest	TN Senate District 23	Tennessee Senate District 23
+CandidateContest	TN Senate District 24	Tennessee Senate District 24
+CandidateContest	TN Senate District 25	Tennessee Senate District 25
+CandidateContest	TN Senate District 26	Tennessee Senate District 26
+CandidateContest	TN Senate District 27	Tennessee Senate District 27
+CandidateContest	TN Senate District 28	Tennessee Senate District 28
+CandidateContest	TN Senate District 29	Tennessee Senate District 29
+CandidateContest	TN Senate District 30	Tennessee Senate District 30
+CandidateContest	TN Senate District 31	Tennessee Senate District 31
+CandidateContest	TN Senate District 32	Tennessee Senate District 32
+CandidateContest	TN Senate District 33	Tennessee Senate District 33
+CandidateContest	US House TN District 1	United States House of Representatives District 1
+CandidateContest	US House TN District 2	United States House of Representatives District 2
+CandidateContest	US House TN District 3	United States House of Representatives District 3
+CandidateContest	US House TN District 4	United States House of Representatives District 4
+CandidateContest	US House TN District 5	United States House of Representatives District 5
+CandidateContest	US House TN District 6	United States House of Representatives District 6
+CandidateContest	US House TN District 7	United States House of Representatives District 7
+CandidateContest	US House TN District 8	United States House of Representatives District 8
+CandidateContest	US House TN District 9	United States House of Representatives District 9
+CandidateContest	US President (TN)	United States President
+CandidateContest	TN Governor	TN Governor
+CandidateContest	US Senate TN	United States Senate
+CandidateContest	TN Attorney General	TN Attorney General
+CandidateContest	TN Lieutenant Governor	TN Lieutenant Governor
+CandidateContest	TN Treasurer	TN Treasurer
+CandidateContest	TN Secretary of State	TN Secretary of State
+Election	2020 General	2020 General
+Election	2020 Primary	2020 Primary
+Election	2018 General	2018 General
+Election	2016 General	2016 General
+Party	Democratic Party	Democratic
+Party	Republican Party	Republican
+Party	Green Party	Green Party
+Party	Libertarian Party	Libertarian Party
+Party	Independent	Independent
+ReportingUnit	Tennessee;Anderson County	Anderson
+ReportingUnit	Tennessee;Bedford County	Bedford
+ReportingUnit	Tennessee;Benton County	Benton
+ReportingUnit	Tennessee;Bledsoe County	Bledsoe
+ReportingUnit	Tennessee;Blount County	Blount
+ReportingUnit	Tennessee;Bradley County	Bradley
+ReportingUnit	Tennessee;Campbell County	Campbell
+ReportingUnit	Tennessee;Cannon County	Cannon
+ReportingUnit	Tennessee;Carroll County	Carroll
+ReportingUnit	Tennessee;Carter County	Carter
+ReportingUnit	Tennessee;Cheatham County	Cheatham
+ReportingUnit	Tennessee;Chester County	Chester
+ReportingUnit	Tennessee;Claiborne County	Claiborne
+ReportingUnit	Tennessee;Clay County	Clay
+ReportingUnit	Tennessee;Cocke County	Cocke
+ReportingUnit	Tennessee;Coffee County	Coffee
+ReportingUnit	Tennessee;Crockett County	Crockett
+ReportingUnit	Tennessee;Cumberland County	Cumberland
+ReportingUnit	Tennessee;Davidson County	Davidson
+ReportingUnit	Tennessee;Decatur County	Decatur
+ReportingUnit	Tennessee;Dekalb County	Dekalb
+ReportingUnit	Tennessee;Dickson County	Dickson
+ReportingUnit	Tennessee;Dyer County	Dyer
+ReportingUnit	Tennessee;Fayette County	Fayette
+ReportingUnit	Tennessee;Fentress County	Fentress
+ReportingUnit	Tennessee;Franklin County	Franklin
+ReportingUnit	Tennessee;Gibson County	Gibson
+ReportingUnit	Tennessee;Giles County	Giles
+ReportingUnit	Tennessee;Grainger County	Grainger
+ReportingUnit	Tennessee;Greene County	Greene
+ReportingUnit	Tennessee;Grundy County	Grundy
+ReportingUnit	Tennessee;Hamblen County	Hamblen
+ReportingUnit	Tennessee;Hamilton County	Hamilton
+ReportingUnit	Tennessee;Hancock County	Hancock
+ReportingUnit	Tennessee;Hardeman County	Hardeman
+ReportingUnit	Tennessee;Hardin County	Hardin
+ReportingUnit	Tennessee;Hawkins County	Hawkins
+ReportingUnit	Tennessee;Haywood County	Haywood
+ReportingUnit	Tennessee;Henderson County	Henderson
+ReportingUnit	Tennessee;Henry County	Henry
+ReportingUnit	Tennessee;Hickman County	Hickman
+ReportingUnit	Tennessee;Houston County	Houston
+ReportingUnit	Tennessee;Humphreys County	Humphreys
+ReportingUnit	Tennessee;Jackson County	Jackson
+ReportingUnit	Tennessee;Jefferson County	Jefferson
+ReportingUnit	Tennessee;Johnson County	Johnson
+ReportingUnit	Tennessee;Knox County	Knox
+ReportingUnit	Tennessee;Lake County	Lake
+ReportingUnit	Tennessee;Lauderdale County	Lauderdale
+ReportingUnit	Tennessee;Lawrence County	Lawrence
+ReportingUnit	Tennessee;Lewis County	Lewis
+ReportingUnit	Tennessee;Lincoln County	Lincoln
+ReportingUnit	Tennessee;Loudon County	Loudon
+ReportingUnit	Tennessee;Macon County	Macon
+ReportingUnit	Tennessee;Madison County	Madison
+ReportingUnit	Tennessee;Marion County	Marion
+ReportingUnit	Tennessee;Marshall County	Marshall
+ReportingUnit	Tennessee;Maury County	Maury
+ReportingUnit	Tennessee;McMinn County	McMinn
+ReportingUnit	Tennessee;McNairy County	McNairy
+ReportingUnit	Tennessee;Meigs County	Meigs
+ReportingUnit	Tennessee;Monroe County	Monroe
+ReportingUnit	Tennessee;Montgomery County	Montgomery
+ReportingUnit	Tennessee;Moore County	Moore
+ReportingUnit	Tennessee;Morgan County	Morgan
+ReportingUnit	Tennessee;Obion County	Obion
+ReportingUnit	Tennessee;Overton County	Overton
+ReportingUnit	Tennessee;Perry County	Perry
+ReportingUnit	Tennessee;Pickett County	Pickett
+ReportingUnit	Tennessee;Polk County	Polk
+ReportingUnit	Tennessee;Putnam County	Putnam
+ReportingUnit	Tennessee;Rhea County	Rhea
+ReportingUnit	Tennessee;Roane County	Roane
+ReportingUnit	Tennessee;Robertson County	Robertson
+ReportingUnit	Tennessee;Rutherford County	Rutherford
+ReportingUnit	Tennessee;Scott County	Scott
+ReportingUnit	Tennessee;Sequatchie County	Sequatchie
+ReportingUnit	Tennessee;Sevier County	Sevier
+ReportingUnit	Tennessee;Shelby County	Shelby
+ReportingUnit	Tennessee;Smith County	Smith
+ReportingUnit	Tennessee;Stewart County	Stewart
+ReportingUnit	Tennessee;Sullivan County	Sullivan
+ReportingUnit	Tennessee;Sumner County	Sumner
+ReportingUnit	Tennessee;Tipton County	Tipton
+ReportingUnit	Tennessee;Trousdale County	Trousdale
+ReportingUnit	Tennessee;Unicoi County	Unicoi
+ReportingUnit	Tennessee;Union County	Union
+ReportingUnit	Tennessee;Van Buren County	Van Buren
+ReportingUnit	Tennessee;Warren County	Warren
+ReportingUnit	Tennessee;Washington County	Washington
+ReportingUnit	Tennessee;Wayne County	Wayne
+ReportingUnit	Tennessee;Weakley County	Weakley
+ReportingUnit	Tennessee;White County	White
+ReportingUnit	Tennessee;Williamson County	Williamson
+ReportingUnit	Tennessee;Wilson County	Wilson
+Candidate	Yusuf A. Hakeem	Yusuf A. Hakeem
+Candidate	Write-In - Brian Carroll	Write-In - Brian Carroll
+Candidate	William Lamberth	William Lamberth
+Candidate	William Kevin Vaughan	William Kevin Vaughan
+Candidate	Vincent Dixie	Vincent Dixie
+Candidate	Torrey C. Harris	Torrey C. Harris
+Candidate	Tom Leatherwood	Tom Leatherwood
+Candidate	Todd Warner	Todd Warner
+Candidate	Todd Gardenhire	Todd Gardenhire
+Candidate	Tim Rudd	Tim Rudd
+Candidate	Tim Hicks	Tim Hicks
+Candidate	Tim Burchett	Tim Burchett
+Candidate	Terri Lynn Weaver	Terri Lynn Weaver
+Candidate	Tandy Darby	Tandy Darby
+Candidate	Susan M Lynn	Susan M Lynn
+Candidate	Steven Reid Dickerson	Steven Reid Dickerson
+Candidate	Shane Reeves	Shane Reeves
+Candidate	Scotty Campbell	Scotty Campbell
+Candidate	Scott E. Cepicky	Scott E. Cepicky
+Candidate	Scott DesJarlais	Scott DesJarlais
+Candidate	Sara P. Kyle	Sara P. Kyle
+Candidate	Sam Whitson	Sam Whitson
+Candidate	Sam McKenzie	Sam McKenzie
+Candidate	Sabi (Doc) Kumar	Sabi (Doc) Kumar
+Candidate	Ryan Williams	Ryan Williams
+Candidate	Rusty Grills	Rusty Grills
+Candidate	Rush Bricken	Rush Bricken
+Candidate	Ron Travis	Ron Travis
+Candidate	Ron M. Gant	Ron M. Gant
+Candidate	Robin T. Smith	Robin T. Smith
+Candidate	Rob White	Rob White
+Candidate	Rick Eldridge	Rick Eldridge
+Candidate	Rebecca Keefauver Alexander	Rebecca Keefauver Alexander
+Candidate	Paul W. Rose	Paul W. Rose
+Candidate	Paul Sherrell	Paul Sherrell
+Candidate	Patsy Hazlewood	Patsy Hazlewood
+Candidate	Patricia 'Patti' Possel	Patricia 'Patti' Possel
+Candidate	Pat Marsh	Pat Marsh
+Candidate	Page Walley	Page Walley
+Candidate	Mike Sparks	Mike Sparks
+Candidate	Mike Carter	Mike Carter
+Candidate	Michele Carringer	Michele Carringer
+Candidate	Michael G. Curcio	Michael G. Curcio
+Candidate	Mary Littleton	Mary Littleton
+Candidate	Mark White	Mark White
+Candidate	Mark Hall	Mark Hall
+Candidate	Mark E. Green	Mark E. Green
+Candidate	Mark Cochran	Mark Cochran
+Candidate	Lowell Russell	Lowell Russell
+Candidate	London Lamar	London Lamar
+Candidate	Larry J. Miller	Larry J. Miller
+Candidate	Kirk Haston	Kirk Haston
+Candidate	Kent Calfee	Kent Calfee
+Candidate	Ken Yager	Ken Yager
+Candidate	Kelly T Keisling	Kelly T Keisling
+Candidate	Karen Camper	Karen Camper
+Candidate	Justin Lafferty	Justin Lafferty
+Candidate	Jon C. Lundberg	Jon C. Lundberg
+Candidate	Johnny W. Shaw	Johnny W. Shaw
+Candidate	Johnny Garrett	Johnny Garrett
+Candidate	John W. Dawson	John W. Dawson
+Candidate	John Rose	John Rose
+Candidate	John Ray Clemmons	John Ray Clemmons
+Candidate	John Mark Windle	John Mark Windle
+Candidate	John K. Crawford	John K. Crawford
+Candidate	John Gillespie	John Gillespie
+Candidate	John D. Stevens	John D. Stevens
+Candidate	John D Ragan	John D Ragan
+Candidate	John B. Holsclaw Jr	John B. Holsclaw Jr
+Candidate	Joey Hensley	Joey Hensley
+Candidate	Joe Towns Jr.	Joe Towns Jr.
+Candidate	Jim Cooper	Jim Cooper
+Candidate	Jesse Chism	Jesse Chism
+Candidate	Jerry Sexton	Jerry Sexton
+Candidate	Jerome F. Moon	Jerome F. Moon
+Candidate	Jeremy Faison	Jeremy Faison
+Candidate	Jay D. Reedy	Jay D. Reedy
+Candidate	Jason Zachary	Jason Zachary
+Candidate	Jason Potts	Jason Potts
+Candidate	Jason L. Powell	Jason L. Powell
+Candidate	Janice Bowling	Janice Bowling
+Candidate	Iris Rudder	Iris Rudder
+Candidate	Harold M. Love	Harold M. Love
+Candidate	Glen Casada	Glen Casada
+Candidate	Gary W Hicks Jr	Gary W Hicks Jr
+Candidate	G.A. Hardaway	G.A. Hardaway
+Candidate	Frank S. Niceley	Frank S. Niceley
+Candidate	Ferrell Haile	Ferrell Haile
+Candidate	Esther Helton	Esther Helton
+Candidate	Eric William Stansberry	Eric William Stansberry
+Candidate	Elaine Davis	Elaine Davis
+Candidate	Eddie Mannis	Eddie Mannis
+Candidate	Donna Tees	Donna Tees
+Candidate	Donald J. Trump	Donald J. Trump
+Candidate	Diane Michel Canada	Diane Michel Canada
+Candidate	Diana Harshbarger	Diana Harshbarger
+Candidate	Dennis Powers	Dennis Powers
+Candidate	Debra F. Moody	Debra F. Moody
+Candidate	David Kustoff	David Kustoff
+Candidate	David B. Hawk	David B. Hawk
+Candidate	David 'Coach' Byrd	David 'Coach' Byrd
+Candidate	Dave Wright	Dave Wright
+Candidate	Darren Jernigan	Darren Jernigan
+Candidate	Dan Howell	Dan Howell
+Candidate	Dale Carr	Dale Carr
+Candidate	Curtis Johnson	Curtis Johnson
+Candidate	Curtis Halford	Curtis Halford
+Candidate	Clay Doggett	Clay Doggett
+Candidate	Clark Boyd	Clark Boyd
+Candidate	Chuck Fleischmann	Chuck Fleischmann
+Candidate	Chris Todd	Chris Todd
+Candidate	Chris Hurt	Chris Hurt
+Candidate	Charlotte Bergmann	Charlotte Bergmann
+Candidate	Charlie Baum	Charlie Baum
+Candidate	Cameron Sexton	Cameron Sexton
+Candidate	Bud Hulsey	Bud Hulsey
+Candidate	Bryan Terry	Bryan Terry
+Candidate	Bruce I. Griffey	Bruce I. Griffey
+Candidate	Brandon Ogles	Brandon Ogles
+Candidate	Bob Ramsey	Bob Ramsey
+Candidate	Bo Mitchell	Bo Mitchell
+Candidate	Bill Powers	Bill Powers
+Candidate	Bill Hagerty	Bill Hagerty
+Candidate	Bill Beck	Bill Beck
+Candidate	Becky Duncan Massey	Becky Duncan Massey
+Candidate	Art Swann	Art Swann
+Candidate	Antonio Parkinson	Antonio Parkinson
+Candidate	Andrew Ellis Farmer	Andrew Ellis Farmer
+ReportingUnit	Tennessee;Anderson County;Andersonville	Anderson;Andersonville
+ReportingUnit	Tennessee;Anderson County;Briceville	Anderson;Briceville
+ReportingUnit	Tennessee;Anderson County;Bull Run	Anderson;Bull Run
+ReportingUnit	Tennessee;Anderson County;Clinton	Anderson;Clinton
+ReportingUnit	Tennessee;Anderson County;Clinton High	Anderson;Clinton High
+ReportingUnit	Tennessee;Anderson County;Claxton	Anderson;Claxton
+ReportingUnit	Tennessee;Anderson County;Clinton Middle	Anderson;Clinton Middle
+ReportingUnit	Tennessee;Anderson County;Dutch Valley	Anderson;Dutch Valley
+ReportingUnit	Tennessee;Anderson County;Emory Valley	Anderson;Emory Valley
+ReportingUnit	Tennessee;Anderson County;Fairview	Anderson;Fairview
+ReportingUnit	Tennessee;Anderson County;Glen Alpine	Anderson;Glen Alpine
+ReportingUnit	Tennessee;Anderson County;Glenwood	Anderson;Glenwood
+ReportingUnit	Tennessee;Anderson County;Hendrix Creek	Anderson;Hendrix Creek
+ReportingUnit	Tennessee;Anderson County;Highland View	Anderson;Highland View
+ReportingUnit	Tennessee;Anderson County;Lake City MS	Anderson;Lake City MS
+ReportingUnit	Tennessee;Anderson County;Marlow	Anderson;Marlow
+ReportingUnit	Tennessee;Anderson County;North Clinton	Anderson;North Clinton
+ReportingUnit	Tennessee;Anderson County;Norris	Anderson;Norris
+ReportingUnit	Tennessee;Anderson County;Norwood	Anderson;Norwood
+ReportingUnit	Tennessee;Anderson County;Oak Ridge	Anderson;Oak Ridge
+ReportingUnit	Tennessee;Anderson County;Pine Valley	Anderson;Pine Valley
+ReportingUnit	Tennessee;Anderson County;Robertsville	Anderson;Robertsville
+ReportingUnit	Tennessee;Anderson County;Rosedale	Anderson;Rosedale
+ReportingUnit	Tennessee;Anderson County;Rocky Top	Anderson;Rocky Top
+ReportingUnit	Tennessee;Anderson County;South Clinton	Anderson;South Clinton
+ReportingUnit	Tennessee;Anderson County;Woodland	Anderson;Woodland
+ReportingUnit	Tennessee;Anderson County;West Hills	Anderson;West Hills
+ReportingUnit	Tennessee;Bedford County;1-1 Wartrace	Bedford;1-1 Wartrace
+ReportingUnit	Tennessee;Bedford County;1-2 Bell Buckle	Bedford;1-2 Bell Buckle
+ReportingUnit	Tennessee;Bedford County;2-3 Fair Haven	Bedford;2-3 Fair Haven
+ReportingUnit	Tennessee;Bedford County;3-3 Unionville	Bedford;3-3 Unionville
+ReportingUnit	Tennessee;Bedford County;4-3 Bedford	Bedford;4-3 Bedford
+ReportingUnit	Tennessee;Bedford County;5-2 Flat Creek	Bedford;5-2 Flat Creek
+ReportingUnit	Tennessee;Bedford County;5-5 Normandy	Bedford;5-5 Normandy
+ReportingUnit	Tennessee;Bedford County;6-1 East Side	Bedford;6-1 East Side
+ReportingUnit	Tennessee;Bedford County;7-1 Deery Eakin	Bedford;7-1 Deery Eakin
+ReportingUnit	Tennessee;Bedford County;8-1 Thomas	Bedford;8-1 Thomas
+ReportingUnit	Tennessee;Bedford County;9-2 Southside	Bedford;9-2 Southside
+ReportingUnit	Tennessee;Benton County;1 Holladay	Benton;1 Holladay
+ReportingUnit	Tennessee;Benton County;2 Camden Jr High	Benton;2 Camden Jr High
+ReportingUnit	Tennessee;Benton County;3 Camden City Hall	Benton;3 Camden City Hall
+ReportingUnit	Tennessee;Benton County;4 Camden Elementary	Benton;4 Camden Elementary
+ReportingUnit	Tennessee;Benton County;5 Library	Benton;5 Library
+ReportingUnit	Tennessee;Benton County;6 Big Sandy	Benton;6 Big Sandy
+ReportingUnit	Tennessee;Bledsoe County;1-1 Dill	Bledsoe;1-1 Dill
+ReportingUnit	Tennessee;Bledsoe County;1-2 Griffith	Bledsoe;1-2 Griffith
+ReportingUnit	Tennessee;Bledsoe County;1-3 Mt. Crest	Bledsoe;1-3 Mt. Crest
+ReportingUnit	Tennessee;Bledsoe County;2-1 Cold Springs	Bledsoe;2-1 Cold Springs
+ReportingUnit	Tennessee;Bledsoe County;2-2 Luminary	Bledsoe;2-2 Luminary
+ReportingUnit	Tennessee;Bledsoe County;3-1 Brayton	Bledsoe;3-1 Brayton
+ReportingUnit	Tennessee;Bledsoe County;3-2 Rigsby	Bledsoe;3-2 Rigsby
+ReportingUnit	Tennessee;Bledsoe County;4-1 Pikeville	Bledsoe;4-1 Pikeville
+ReportingUnit	Tennessee;Bledsoe County;5-1 Bellview	Bledsoe;5-1 Bellview
+ReportingUnit	Tennessee;Bledsoe County;5-2 Nine Mile	Bledsoe;5-2 Nine Mile
+ReportingUnit	Tennessee;Bledsoe County;6-1 Lee Station	Bledsoe;6-1 Lee Station
+ReportingUnit	Tennessee;Bledsoe County;6-2 Lusk	Bledsoe;6-2 Lusk
+ReportingUnit	Tennessee;Blount County;Alcoa	Blount;Alcoa
+ReportingUnit	Tennessee;Blount County;Big Springs	Blount;Big Springs
+ReportingUnit	Tennessee;Blount County;Board of Education	Blount;Board of Education
+ReportingUnit	Tennessee;Blount County;Carpenters	Blount;Carpenters
+ReportingUnit	Tennessee;Blount County;Chilhowee View	Blount;Chilhowee View
+ReportingUnit	Tennessee;Blount County;Eagleton MS Cafeteria	Blount;Eagleton MS Cafeteria
+ReportingUnit	Tennessee;Blount County;Everett	Blount;Everett
+ReportingUnit	Tennessee;Blount County;Fairview	Blount;Fairview
+ReportingUnit	Tennessee;Blount County;Friendsville	Blount;Friendsville
+ReportingUnit	Tennessee;Blount County;Heritage	Blount;Heritage
+ReportingUnit	Tennessee;Blount County;John Sevier	Blount;John Sevier
+ReportingUnit	Tennessee;Blount County;Lanier	Blount;Lanier
+ReportingUnit	Tennessee;Blount County;Louisville	Blount;Louisville
+ReportingUnit	Tennessee;Blount County;Martin Luther King	Blount;Martin Luther King
+ReportingUnit	Tennessee;Blount County;Maryville College	Blount;Maryville College
+ReportingUnit	Tennessee;Blount County;Maryville HS	Blount;Maryville HS
+ReportingUnit	Tennessee;Blount County;Maryville Jr High	Blount;Maryville Jr High
+ReportingUnit	Tennessee;Blount County;Maryville Municipal	Blount;Maryville Municipal
+ReportingUnit	Tennessee;Blount County;Mentor	Blount;Mentor
+ReportingUnit	Tennessee;Blount County;Middlesettlements	Blount;Middlesettlements
+ReportingUnit	Tennessee;Blount County;Montvale	Blount;Montvale
+ReportingUnit	Tennessee;Blount County;Oak Street	Blount;Oak Street
+ReportingUnit	Tennessee;Blount County;Oakview	Blount;Oakview
+ReportingUnit	Tennessee;Blount County;Pellissippi Campus	Blount;Pellissippi Campus
+ReportingUnit	Tennessee;Blount County;Porter	Blount;Porter
+ReportingUnit	Tennessee;Blount County;Prospect	Blount;Prospect
+ReportingUnit	Tennessee;Blount County;Rockford	Blount;Rockford
+ReportingUnit	Tennessee;Blount County;Townsend	Blount;Townsend
+ReportingUnit	Tennessee;Blount County;Walland	Blount;Walland
+ReportingUnit	Tennessee;Blount County;William Blount HS	Blount;William Blount HS
+ReportingUnit	Tennessee;Blount County;Wm Blount Academy	Blount;Wm Blount Academy
+ReportingUnit	Tennessee;Bradley County;1-1 McDonald	Bradley;1-1 McDonald
+ReportingUnit	Tennessee;Bradley County;1-2 Prospect	Bradley;1-2 Prospect
+ReportingUnit	Tennessee;Bradley County;1-3 Hopewell	Bradley;1-3 Hopewell
+ReportingUnit	Tennessee;Bradley County;2-1 E.L. Ross	Bradley;2-1 E.L. Ross
+ReportingUnit	Tennessee;Bradley County;2-2 Walker Valley	Bradley;2-2 Walker Valley
+ReportingUnit	Tennessee;Bradley County;3-1 Lee University	Bradley;3-1 Lee University
+ReportingUnit	Tennessee;Bradley County;3-2 Senior Center	Bradley;3-2 Senior Center
+ReportingUnit	Tennessee;Bradley County;4-1 Oak Grove	Bradley;4-1 Oak Grove
+ReportingUnit	Tennessee;Bradley County;4-2 Michigan Ave	Bradley;4-2 Michigan Ave
+ReportingUnit	Tennessee;Bradley County;5-1 Blythe/Bower	Bradley;5-1 Blythe/Bower
+ReportingUnit	Tennessee;Bradley County;5-2 Museum	Bradley;5-2 Museum
+ReportingUnit	Tennessee;Bradley County;6-1 Valley View	Bradley;6-1 Valley View
+ReportingUnit	Tennessee;Bradley County;6-2 Blue Springs	Bradley;6-2 Blue Springs
+ReportingUnit	Tennessee;Bradley County;6-3 Waterville	Bradley;6-3 Waterville
+ReportingUnit	Tennessee;Bradley County;6-4 Black Fox	Bradley;6-4 Black Fox
+ReportingUnit	Tennessee;Bradley County;7-1 Stuart	Bradley;7-1 Stuart
+ReportingUnit	Tennessee;Bradley County;7-2 Cleveland High	Bradley;7-2 Cleveland High
+ReportingUnit	Tennessee;Campbell County;1-1 Alder Springs	Campbell;1-1 Alder Springs
+ReportingUnit	Tennessee;Campbell County;1-2 Demory	Campbell;1-2 Demory
+ReportingUnit	Tennessee;Campbell County;1-3 Pinecrest	Campbell;1-3 Pinecrest
+ReportingUnit	Tennessee;Campbell County;1-4 Valley View	Campbell;1-4 Valley View
+ReportingUnit	Tennessee;Campbell County;1-5 Well Springs	Campbell;1-5 Well Springs
+ReportingUnit	Tennessee;Campbell County;2-1 College Hill	Campbell;2-1 College Hill
+ReportingUnit	Tennessee;Campbell County;2-2 East LaFollette	Campbell;2-2 East LaFollette
+ReportingUnit	Tennessee;Campbell County;2-3 LaFollette ES	Campbell;2-3 LaFollette ES
+ReportingUnit	Tennessee;Campbell County;3-1 CCHS	Campbell;3-1 CCHS
+ReportingUnit	Tennessee;Campbell County;3-2 Jacksboro Sta	Campbell;3-2 Jacksboro Sta
+ReportingUnit	Tennessee;Campbell County;3-3 West LaFollette	Campbell;3-3 West LaFollette
+ReportingUnit	Tennessee;Campbell County;4-1 Caryville	Campbell;4-1 Caryville
+ReportingUnit	Tennessee;Campbell County;4-2 Clinchmore	Campbell;4-2 Clinchmore
+ReportingUnit	Tennessee;Campbell County;4-3 Jacksboro	Campbell;4-3 Jacksboro
+ReportingUnit	Tennessee;Campbell County;4-4 Ridgewood	Campbell;4-4 Ridgewood
+ReportingUnit	Tennessee;Campbell County;5-1 Elk Valley	Campbell;5-1 Elk Valley
+ReportingUnit	Tennessee;Campbell County;5-2 Habersham	Campbell;5-2 Habersham
+ReportingUnit	Tennessee;Campbell County;5-3 Jellico	Campbell;5-3 Jellico
+ReportingUnit	Tennessee;Campbell County;5-4 Newcomb	Campbell;5-4 Newcomb
+ReportingUnit	Tennessee;Campbell County;5-5 White Oak	Campbell;5-5 White Oak
+ReportingUnit	Tennessee;Cannon County;1-1 Westside	Cannon;1-1 Westside
+ReportingUnit	Tennessee;Cannon County;2-1 Auburntown	Cannon;2-1 Auburntown
+ReportingUnit	Tennessee;Cannon County;2-2 Gassaway	Cannon;2-2 Gassaway
+ReportingUnit	Tennessee;Cannon County;2-3 Pleasant Ridge	Cannon;2-3 Pleasant Ridge
+ReportingUnit	Tennessee;Cannon County;2-4 Short Mountain	Cannon;2-4 Short Mountain
+ReportingUnit	Tennessee;Cannon County;3-2 Woodland	Cannon;3-2 Woodland
+ReportingUnit	Tennessee;Cannon County;4-1 Eastside	Cannon;4-1 Eastside
+ReportingUnit	Tennessee;Cannon County;4-2 Short Mountain	Cannon;4-2 Short Mountain
+ReportingUnit	Tennessee;Cannon County;5-1 Woodbury	Cannon;5-1 Woodbury
+ReportingUnit	Tennessee;Cannon County;Absentee	Cannon;Absentee
+ReportingUnit	Tennessee;Carroll County;Lavinia	Carroll;Lavinia
+ReportingUnit	Tennessee;Carroll County;Trezevant	Carroll;Trezevant
+ReportingUnit	Tennessee;Carroll County;McLemoresville	Carroll;McLemoresville
+ReportingUnit	Tennessee;Carroll County;Cedar Grove	Carroll;Cedar Grove
+ReportingUnit	Tennessee;Carroll County;Clarksburg	Carroll;Clarksburg
+ReportingUnit	Tennessee;Carroll County;Macedonia	Carroll;Macedonia
+ReportingUnit	Tennessee;Carroll County;Civic Center	Carroll;Civic Center
+ReportingUnit	Tennessee;Carroll County;Hunt-Police Station	Carroll;Hunt-Police Station
+ReportingUnit	Tennessee;Carroll County;Buena Vista	Carroll;Buena Vista
+ReportingUnit	Tennessee;Carroll County;Bruceton	Carroll;Bruceton
+ReportingUnit	Tennessee;Carroll County;Hollow Rock	Carroll;Hollow Rock
+ReportingUnit	Tennessee;Carroll County;Vale	Carroll;Vale
+ReportingUnit	Tennessee;Carroll County;Atwood	Carroll;Atwood
+ReportingUnit	Tennessee;Carroll County;Senior Citizens	Carroll;Senior Citizens
+ReportingUnit	Tennessee;Carroll County;Cannon	Carroll;Cannon
+ReportingUnit	Tennessee;Carroll County;Concord	Carroll;Concord
+ReportingUnit	Tennessee;Carroll County;Westport	Carroll;Westport
+ReportingUnit	Tennessee;Carroll County;Church of Christ	Carroll;Church of Christ
+ReportingUnit	Tennessee;Carroll County;McKenzie	Carroll;McKenzie
+ReportingUnit	Tennessee;Carter County;Hunter	Carter;Hunter
+ReportingUnit	Tennessee;Carter County;Midway	Carter;Midway
+ReportingUnit	Tennessee;Carter County;Unaka	Carter;Unaka
+ReportingUnit	Tennessee;Carter County;Roan Mountain	Carter;Roan Mountain
+ReportingUnit	Tennessee;Carter County;Tiger Valley	Carter;Tiger Valley
+ReportingUnit	Tennessee;Carter County;Central	Carter;Central
+ReportingUnit	Tennessee;Carter County;Keenburg	Carter;Keenburg
+ReportingUnit	Tennessee;Carter County;Range	Carter;Range
+ReportingUnit	Tennessee;Carter County;Watauga	Carter;Watauga
+ReportingUnit	Tennessee;Carter County;Courthouse	Carter;Courthouse
+ReportingUnit	Tennessee;Carter County;Eastside	Carter;Eastside
+ReportingUnit	Tennessee;Carter County;National Guard	Carter;National Guard
+ReportingUnit	Tennessee;Carter County;Siam	Carter;Siam
+ReportingUnit	Tennessee;Carter County;Happy Valley	Carter;Happy Valley
+ReportingUnit	Tennessee;Carter County;Elk Mills	Carter;Elk Mills
+ReportingUnit	Tennessee;Carter County;Hampton	Carter;Hampton
+ReportingUnit	Tennessee;Carter County;Little Milligan	Carter;Little Milligan
+ReportingUnit	Tennessee;Carter County;Valley Forge	Carter;Valley Forge
+ReportingUnit	Tennessee;Carter County;Gap Creek	Carter;Gap Creek
+ReportingUnit	Tennessee;Carter County;Westside	Carter;Westside
+ReportingUnit	Tennessee;Carter County;Harold McCormick	Carter;Harold McCormick
+ReportingUnit	Tennessee;Carter County;High School	Carter;High School
+ReportingUnit	Tennessee;Cheatham County;1-1 County Library	Cheatham;1-1 County Library
+ReportingUnit	Tennessee;Cheatham County;2-2 East Cheatham	Cheatham;2-2 East Cheatham
+ReportingUnit	Tennessee;Cheatham County;3-1 Pleasant View	Cheatham;3-1 Pleasant View
+ReportingUnit	Tennessee;Cheatham County;4-1 West Cheatham	Cheatham;4-1 West Cheatham
+ReportingUnit	Tennessee;Cheatham County;4-3 Sycamore	Cheatham;4-3 Sycamore
+ReportingUnit	Tennessee;Cheatham County;5-1 Greenbrier	Cheatham;5-1 Greenbrier
+ReportingUnit	Tennessee;Cheatham County;5-2 Pegram	Cheatham;5-2 Pegram
+ReportingUnit	Tennessee;Cheatham County;6-1 Harpeth	Cheatham;6-1 Harpeth
+ReportingUnit	Tennessee;Chester County;1-2 Enville	Chester;1-2 Enville
+ReportingUnit	Tennessee;Chester County;1-5 Sweetlips	Chester;1-5 Sweetlips
+ReportingUnit	Tennessee;Chester County;1-6 Harmony	Chester;1-6 Harmony
+ReportingUnit	Tennessee;Chester County;2-1 Jacks Creek	Chester;2-1 Jacks Creek
+ReportingUnit	Tennessee;Chester County;2-2 Friendship	Chester;2-2 Friendship
+ReportingUnit	Tennessee;Chester County;3-2 Montezuma	Chester;3-2 Montezuma
+ReportingUnit	Tennessee;Chester County;3-4 Masseyville	Chester;3-4 Masseyville
+ReportingUnit	Tennessee;Chester County;3-6 Deanburg	Chester;3-6 Deanburg
+ReportingUnit	Tennessee;Chester County;4-1 West Chester	Chester;4-1 West Chester
+ReportingUnit	Tennessee;Chester County;5-1 East Chester	Chester;5-1 East Chester
+ReportingUnit	Tennessee;Chester County;6-1 City Hall	Chester;6-1 City Hall
+ReportingUnit	Tennessee;Claiborne County;1-1 Tazewell	Claiborne;1-1 Tazewell
+ReportingUnit	Tennessee;Claiborne County;2-1 Clouds	Claiborne;2-1 Clouds
+ReportingUnit	Tennessee;Claiborne County;2-2 Goin	Claiborne;2-2 Goin
+ReportingUnit	Tennessee;Claiborne County;2-3 Sandlick	Claiborne;2-3 Sandlick
+ReportingUnit	Tennessee;Claiborne County;3-1 Lone Mountain	Claiborne;3-1 Lone Mountain
+ReportingUnit	Tennessee;Claiborne County;3-2 New Tazewell	Claiborne;3-2 New Tazewell
+ReportingUnit	Tennessee;Claiborne County;4-2 Howard's Quarter	Claiborne;4-2 Howard's Quarter
+ReportingUnit	Tennessee;Claiborne County;4-3 Liberty	Claiborne;4-3 Liberty
+ReportingUnit	Tennessee;Claiborne County;4-4 Springdale	Claiborne;4-4 Springdale
+ReportingUnit	Tennessee;Claiborne County;5-1 Big Spring Union	Claiborne;5-1 Big Spring Union
+ReportingUnit	Tennessee;Claiborne County;6-1 Harrogate	Claiborne;6-1 Harrogate
+ReportingUnit	Tennessee;Claiborne County;7-1 Arthur	Claiborne;7-1 Arthur
+ReportingUnit	Tennessee;Claiborne County;7-2 Cumberland Gap	Claiborne;7-2 Cumberland Gap
+ReportingUnit	Tennessee;Claiborne County;8-1 Rogers Mill	Claiborne;8-1 Rogers Mill
+ReportingUnit	Tennessee;Claiborne County;8-2 Vanbebber Sprngs	Claiborne;8-2 Vanbebber Sprngs
+ReportingUnit	Tennessee;Claiborne County;9-1 Clairfield	Claiborne;9-1 Clairfield
+ReportingUnit	Tennessee;Clay County;1 Dentons Cross Road	Clay;1 Dentons Cross Road
+ReportingUnit	Tennessee;Clay County;2 Hermitage Springs	Clay;2 Hermitage Springs
+ReportingUnit	Tennessee;Clay County;3 Celina	Clay;3 Celina
+ReportingUnit	Tennessee;Clay County;4-1 Maple Grove	Clay;4-1 Maple Grove
+ReportingUnit	Tennessee;Clay County;4-2 Butlers Landing	Clay;4-2 Butlers Landing
+ReportingUnit	Tennessee;Clay County;5-1 Beech Bethany	Clay;5-1 Beech Bethany
+ReportingUnit	Tennessee;Clay County;5-2 Pea Ridge	Clay;5-2 Pea Ridge
+ReportingUnit	Tennessee;Cocke County;Del Rio	Cocke;Del Rio
+ReportingUnit	Tennessee;Cocke County;Grassy Fork	Cocke;Grassy Fork
+ReportingUnit	Tennessee;Cocke County;Edwina	Cocke;Edwina
+ReportingUnit	Tennessee;Cocke County;Bridgeport	Cocke;Bridgeport
+ReportingUnit	Tennessee;Cocke County;Long Creek	Cocke;Long Creek
+ReportingUnit	Tennessee;Cocke County;Houston Valley	Cocke;Houston Valley
+ReportingUnit	Tennessee;Cocke County;Parrottsville	Cocke;Parrottsville
+ReportingUnit	Tennessee;Cocke County;Centerview	Cocke;Centerview
+ReportingUnit	Tennessee;Cocke County;Forest Hill	Cocke;Forest Hill
+ReportingUnit	Tennessee;Cocke County;Rankin	Cocke;Rankin
+ReportingUnit	Tennessee;Cocke County;Armory	Cocke;Armory
+ReportingUnit	Tennessee;Cocke County;Edgemont	Cocke;Edgemont
+ReportingUnit	Tennessee;Cocke County;Cocke County High	Cocke;Cocke County High
+ReportingUnit	Tennessee;Cocke County;Cosby	Cocke;Cosby
+ReportingUnit	Tennessee;Cocke County;Smoky Mountain	Cocke;Smoky Mountain
+ReportingUnit	Tennessee;Cocke County;Newport Grammar	Cocke;Newport Grammar
+ReportingUnit	Tennessee;Cocke County;Central	Cocke;Central
+ReportingUnit	Tennessee;Cocke County;Northport	Cocke;Northport
+ReportingUnit	Tennessee;Cocke County;West End	Cocke;West End
+ReportingUnit	Tennessee;Coffee County;1 Ada Wright CC	Coffee;1 Ada Wright CC
+ReportingUnit	Tennessee;Coffee County;2 St Paul	Coffee;2 St Paul
+ReportingUnit	Tennessee;Coffee County;3 Trinity	Coffee;3 Trinity
+ReportingUnit	Tennessee;Coffee County;4 First Baptist	Coffee;4 First Baptist
+ReportingUnit	Tennessee;Coffee County;5 Hillsboro	Coffee;5 Hillsboro
+ReportingUnit	Tennessee;Coffee County;6 TN Vocational Center	Coffee;6 TN Vocational Center
+ReportingUnit	Tennessee;Coffee County;7 Forest Mill	Coffee;7 Forest Mill
+ReportingUnit	Tennessee;Coffee County;8 New Union	Coffee;8 New Union
+ReportingUnit	Tennessee;Coffee County;9-1 Pocahontas	Coffee;9-1 Pocahontas
+ReportingUnit	Tennessee;Coffee County;9-2 Summitville	Coffee;9-2 Summitville
+ReportingUnit	Tennessee;Coffee County;10 Mt. Ararat	Coffee;10 Mt. Ararat
+ReportingUnit	Tennessee;Coffee County;11 Fredonia	Coffee;11 Fredonia
+ReportingUnit	Tennessee;Coffee County;12 North Coffee	Coffee;12 North Coffee
+ReportingUnit	Tennessee;Coffee County;13-1 Blanton's Chapel	Coffee;13-1 Blanton's Chapel
+ReportingUnit	Tennessee;Coffee County;13-2 Grace Baptist	Coffee;13-2 Grace Baptist
+ReportingUnit	Tennessee;Coffee County;13-4 Grace Baptist	Coffee;13-4 Grace Baptist
+ReportingUnit	Tennessee;Coffee County;14 Hickerson	Coffee;14 Hickerson
+ReportingUnit	Tennessee;Coffee County;15 Grace Baptist	Coffee;15 Grace Baptist
+ReportingUnit	Tennessee;Coffee County;16 Lion's Club	Coffee;16 Lion's Club
+ReportingUnit	Tennessee;Coffee County;17 National Guard Armory	Coffee;17 National Guard Armory
+ReportingUnit	Tennessee;Coffee County;18 First Christian	Coffee;18 First Christian
+ReportingUnit	Tennessee;Coffee County;19 CD Stamps Center	Coffee;19 CD Stamps Center
+ReportingUnit	Tennessee;Coffee County;20 Sr Citizens Center	Coffee;20 Sr Citizens Center
+ReportingUnit	Tennessee;Coffee County;21 Wilson Ave	Coffee;21 Wilson Ave
+ReportingUnit	Tennessee;Crockett County;01	Crockett;01
+ReportingUnit	Tennessee;Crockett County;02	Crockett;02
+ReportingUnit	Tennessee;Crockett County;03	Crockett;03
+ReportingUnit	Tennessee;Crockett County;04	Crockett;04
+ReportingUnit	Tennessee;Crockett County;05	Crockett;05
+ReportingUnit	Tennessee;Crockett County;06	Crockett;06
+ReportingUnit	Tennessee;Crockett County;07	Crockett;07
+ReportingUnit	Tennessee;Crockett County;08	Crockett;08
+ReportingUnit	Tennessee;Crockett County;09	Crockett;09
+ReportingUnit	Tennessee;Crockett County;10	Crockett;10
+ReportingUnit	Tennessee;Crockett County;11	Crockett;11
+ReportingUnit	Tennessee;Crockett County;12	Crockett;12
+ReportingUnit	Tennessee;Cumberland County;1 Cornerstone	Cumberland;1 Cornerstone
+ReportingUnit	Tennessee;Cumberland County;2 Complex 2	Cumberland;2 Complex 2
+ReportingUnit	Tennessee;Cumberland County;3 Homestead	Cumberland;3 Homestead
+ReportingUnit	Tennessee;Cumberland County;3 Dorton	Cumberland;3 Dorton
+ReportingUnit	Tennessee;Cumberland County;3 Linary	Cumberland;3 Linary
+ReportingUnit	Tennessee;Cumberland County;3 Big Lick	Cumberland;3 Big Lick
+ReportingUnit	Tennessee;Cumberland County;4 Tabor	Cumberland;4 Tabor
+ReportingUnit	Tennessee;Cumberland County;4 Bakers	Cumberland;4 Bakers
+ReportingUnit	Tennessee;Cumberland County;4 Oak Hill	Cumberland;4 Oak Hill
+ReportingUnit	Tennessee;Cumberland County;5 Lantana	Cumberland;5 Lantana
+ReportingUnit	Tennessee;Cumberland County;5 Vandever	Cumberland;5 Vandever
+ReportingUnit	Tennessee;Cumberland County;5 Tansi	Cumberland;5 Tansi
+ReportingUnit	Tennessee;Cumberland County;6 Crab Orchard	Cumberland;6 Crab Orchard
+ReportingUnit	Tennessee;Cumberland County;6 Chestnut Hill	Cumberland;6 Chestnut Hill
+ReportingUnit	Tennessee;Cumberland County;6 Ozone-Pineview	Cumberland;6 Ozone-Pineview
+ReportingUnit	Tennessee;Cumberland County;6 Grassy Cove	Cumberland;6 Grassy Cove
+ReportingUnit	Tennessee;Cumberland County;7 Rinnie	Cumberland;7 Rinnie
+ReportingUnit	Tennessee;Cumberland County;7 Woody	Cumberland;7 Woody
+ReportingUnit	Tennessee;Cumberland County;7 Mayland	Cumberland;7 Mayland
+ReportingUnit	Tennessee;Cumberland County;8 Pleasant Hill	Cumberland;8 Pleasant Hill
+ReportingUnit	Tennessee;Cumberland County;8 Pomona	Cumberland;8 Pomona
+ReportingUnit	Tennessee;Cumberland County;8 Midway	Cumberland;8 Midway
+ReportingUnit	Tennessee;Cumberland County;9 Fairfield North	Cumberland;9 Fairfield North
+ReportingUnit	Tennessee;Cumberland County;9 Fairfield South	Cumberland;9 Fairfield South
+ReportingUnit	Tennessee;Davidson County;01-1	Davidson;01-1
+ReportingUnit	Tennessee;Davidson County;01-2	Davidson;01-2
+ReportingUnit	Tennessee;Davidson County;01-3	Davidson;01-3
+ReportingUnit	Tennessee;Davidson County;01-4	Davidson;01-4
+ReportingUnit	Tennessee;Davidson County;01-5	Davidson;01-5
+ReportingUnit	Tennessee;Davidson County;02-1	Davidson;02-1
+ReportingUnit	Tennessee;Davidson County;02-2	Davidson;02-2
+ReportingUnit	Tennessee;Davidson County;02-3	Davidson;02-3
+ReportingUnit	Tennessee;Davidson County;02-4	Davidson;02-4
+ReportingUnit	Tennessee;Davidson County;02-5	Davidson;02-5
+ReportingUnit	Tennessee;Davidson County;03-1	Davidson;03-1
+ReportingUnit	Tennessee;Davidson County;03-2	Davidson;03-2
+ReportingUnit	Tennessee;Davidson County;03-3	Davidson;03-3
+ReportingUnit	Tennessee;Davidson County;03-4	Davidson;03-4
+ReportingUnit	Tennessee;Davidson County;03-5	Davidson;03-5
+ReportingUnit	Tennessee;Davidson County;03-6	Davidson;03-6
+ReportingUnit	Tennessee;Davidson County;04-1	Davidson;04-1
+ReportingUnit	Tennessee;Davidson County;04-2	Davidson;04-2
+ReportingUnit	Tennessee;Davidson County;04-3	Davidson;04-3
+ReportingUnit	Tennessee;Davidson County;04-4	Davidson;04-4
+ReportingUnit	Tennessee;Davidson County;05-1	Davidson;05-1
+ReportingUnit	Tennessee;Davidson County;05-2	Davidson;05-2
+ReportingUnit	Tennessee;Davidson County;05-3	Davidson;05-3
+ReportingUnit	Tennessee;Davidson County;05-4	Davidson;05-4
+ReportingUnit	Tennessee;Davidson County;05-5	Davidson;05-5
+ReportingUnit	Tennessee;Davidson County;06-1	Davidson;06-1
+ReportingUnit	Tennessee;Davidson County;06-2	Davidson;06-2
+ReportingUnit	Tennessee;Davidson County;06-3	Davidson;06-3
+ReportingUnit	Tennessee;Davidson County;06-4	Davidson;06-4
+ReportingUnit	Tennessee;Davidson County;06-5	Davidson;06-5
+ReportingUnit	Tennessee;Davidson County;07-1	Davidson;07-1
+ReportingUnit	Tennessee;Davidson County;07-2	Davidson;07-2
+ReportingUnit	Tennessee;Davidson County;07-3	Davidson;07-3
+ReportingUnit	Tennessee;Davidson County;07-4	Davidson;07-4
+ReportingUnit	Tennessee;Davidson County;07-5	Davidson;07-5
+ReportingUnit	Tennessee;Davidson County;07-6	Davidson;07-6
+ReportingUnit	Tennessee;Davidson County;08-1	Davidson;08-1
+ReportingUnit	Tennessee;Davidson County;08-2	Davidson;08-2
+ReportingUnit	Tennessee;Davidson County;08-3	Davidson;08-3
+ReportingUnit	Tennessee;Davidson County;08-4	Davidson;08-4
+ReportingUnit	Tennessee;Davidson County;09-1	Davidson;09-1
+ReportingUnit	Tennessee;Davidson County;09-2	Davidson;09-2
+ReportingUnit	Tennessee;Davidson County;09-3	Davidson;09-3
+ReportingUnit	Tennessee;Davidson County;10-1	Davidson;10-1
+ReportingUnit	Tennessee;Davidson County;10-2	Davidson;10-2
+ReportingUnit	Tennessee;Davidson County;10-3	Davidson;10-3
+ReportingUnit	Tennessee;Davidson County;10-4	Davidson;10-4
+ReportingUnit	Tennessee;Davidson County;10-5	Davidson;10-5
+ReportingUnit	Tennessee;Davidson County;10-6	Davidson;10-6
+ReportingUnit	Tennessee;Davidson County;11-1	Davidson;11-1
+ReportingUnit	Tennessee;Davidson County;11-2	Davidson;11-2
+ReportingUnit	Tennessee;Davidson County;11-3	Davidson;11-3
+ReportingUnit	Tennessee;Davidson County;11-4	Davidson;11-4
+ReportingUnit	Tennessee;Davidson County;12-1	Davidson;12-1
+ReportingUnit	Tennessee;Davidson County;12-2	Davidson;12-2
+ReportingUnit	Tennessee;Davidson County;12-3	Davidson;12-3
+ReportingUnit	Tennessee;Davidson County;12-4	Davidson;12-4
+ReportingUnit	Tennessee;Davidson County;12-5	Davidson;12-5
+ReportingUnit	Tennessee;Davidson County;13-1	Davidson;13-1
+ReportingUnit	Tennessee;Davidson County;13-2	Davidson;13-2
+ReportingUnit	Tennessee;Davidson County;13-3	Davidson;13-3
+ReportingUnit	Tennessee;Davidson County;13-4	Davidson;13-4
+ReportingUnit	Tennessee;Davidson County;14-1	Davidson;14-1
+ReportingUnit	Tennessee;Davidson County;14-2	Davidson;14-2
+ReportingUnit	Tennessee;Davidson County;14-3	Davidson;14-3
+ReportingUnit	Tennessee;Davidson County;14-4	Davidson;14-4
+ReportingUnit	Tennessee;Davidson County;14-5	Davidson;14-5
+ReportingUnit	Tennessee;Davidson County;15-1	Davidson;15-1
+ReportingUnit	Tennessee;Davidson County;15-2	Davidson;15-2
+ReportingUnit	Tennessee;Davidson County;15-3	Davidson;15-3
+ReportingUnit	Tennessee;Davidson County;15-4	Davidson;15-4
+ReportingUnit	Tennessee;Davidson County;15-5	Davidson;15-5
+ReportingUnit	Tennessee;Davidson County;16-1	Davidson;16-1
+ReportingUnit	Tennessee;Davidson County;16-2	Davidson;16-2
+ReportingUnit	Tennessee;Davidson County;16-3	Davidson;16-3
+ReportingUnit	Tennessee;Davidson County;16-4	Davidson;16-4
+ReportingUnit	Tennessee;Davidson County;16-5	Davidson;16-5
+ReportingUnit	Tennessee;Davidson County;17-1	Davidson;17-1
+ReportingUnit	Tennessee;Davidson County;17-2	Davidson;17-2
+ReportingUnit	Tennessee;Davidson County;17-3	Davidson;17-3
+ReportingUnit	Tennessee;Davidson County;17-4	Davidson;17-4
+ReportingUnit	Tennessee;Davidson County;17-5	Davidson;17-5
+ReportingUnit	Tennessee;Davidson County;17-6	Davidson;17-6
+ReportingUnit	Tennessee;Davidson County;17-7	Davidson;17-7
+ReportingUnit	Tennessee;Davidson County;18-1	Davidson;18-1
+ReportingUnit	Tennessee;Davidson County;18-2	Davidson;18-2
+ReportingUnit	Tennessee;Davidson County;18-3	Davidson;18-3
+ReportingUnit	Tennessee;Davidson County;18-4	Davidson;18-4
+ReportingUnit	Tennessee;Davidson County;18-5	Davidson;18-5
+ReportingUnit	Tennessee;Davidson County;19-1	Davidson;19-1
+ReportingUnit	Tennessee;Davidson County;19-2	Davidson;19-2
+ReportingUnit	Tennessee;Davidson County;19-3	Davidson;19-3
+ReportingUnit	Tennessee;Davidson County;19-4	Davidson;19-4
+ReportingUnit	Tennessee;Davidson County;19-5	Davidson;19-5
+ReportingUnit	Tennessee;Davidson County;19-6	Davidson;19-6
+ReportingUnit	Tennessee;Davidson County;20-1	Davidson;20-1
+ReportingUnit	Tennessee;Davidson County;20-2	Davidson;20-2
+ReportingUnit	Tennessee;Davidson County;20-3	Davidson;20-3
+ReportingUnit	Tennessee;Davidson County;21-1	Davidson;21-1
+ReportingUnit	Tennessee;Davidson County;21-2	Davidson;21-2
+ReportingUnit	Tennessee;Davidson County;21-3	Davidson;21-3
+ReportingUnit	Tennessee;Davidson County;21-4	Davidson;21-4
+ReportingUnit	Tennessee;Davidson County;22-1	Davidson;22-1
+ReportingUnit	Tennessee;Davidson County;22-2	Davidson;22-2
+ReportingUnit	Tennessee;Davidson County;22-3	Davidson;22-3
+ReportingUnit	Tennessee;Davidson County;22-4	Davidson;22-4
+ReportingUnit	Tennessee;Davidson County;23-1	Davidson;23-1
+ReportingUnit	Tennessee;Davidson County;23-2	Davidson;23-2
+ReportingUnit	Tennessee;Davidson County;23-3	Davidson;23-3
+ReportingUnit	Tennessee;Davidson County;23-4	Davidson;23-4
+ReportingUnit	Tennessee;Davidson County;23-5	Davidson;23-5
+ReportingUnit	Tennessee;Davidson County;24-1	Davidson;24-1
+ReportingUnit	Tennessee;Davidson County;24-2	Davidson;24-2
+ReportingUnit	Tennessee;Davidson County;24-3	Davidson;24-3
+ReportingUnit	Tennessee;Davidson County;24-4	Davidson;24-4
+ReportingUnit	Tennessee;Davidson County;24-5	Davidson;24-5
+ReportingUnit	Tennessee;Davidson County;24-6	Davidson;24-6
+ReportingUnit	Tennessee;Davidson County;25-1	Davidson;25-1
+ReportingUnit	Tennessee;Davidson County;25-2	Davidson;25-2
+ReportingUnit	Tennessee;Davidson County;25-3	Davidson;25-3
+ReportingUnit	Tennessee;Davidson County;25-4	Davidson;25-4
+ReportingUnit	Tennessee;Davidson County;26-1	Davidson;26-1
+ReportingUnit	Tennessee;Davidson County;26-2	Davidson;26-2
+ReportingUnit	Tennessee;Davidson County;26-3	Davidson;26-3
+ReportingUnit	Tennessee;Davidson County;26-4	Davidson;26-4
+ReportingUnit	Tennessee;Davidson County;27-1	Davidson;27-1
+ReportingUnit	Tennessee;Davidson County;27-2	Davidson;27-2
+ReportingUnit	Tennessee;Davidson County;27-3	Davidson;27-3
+ReportingUnit	Tennessee;Davidson County;28-1	Davidson;28-1
+ReportingUnit	Tennessee;Davidson County;28-2	Davidson;28-2
+ReportingUnit	Tennessee;Davidson County;28-3	Davidson;28-3
+ReportingUnit	Tennessee;Davidson County;29-1	Davidson;29-1
+ReportingUnit	Tennessee;Davidson County;29-2	Davidson;29-2
+ReportingUnit	Tennessee;Davidson County;29-3	Davidson;29-3
+ReportingUnit	Tennessee;Davidson County;29-4	Davidson;29-4
+ReportingUnit	Tennessee;Davidson County;30-1	Davidson;30-1
+ReportingUnit	Tennessee;Davidson County;30-2	Davidson;30-2
+ReportingUnit	Tennessee;Davidson County;30-3	Davidson;30-3
+ReportingUnit	Tennessee;Davidson County;30-4	Davidson;30-4
+ReportingUnit	Tennessee;Davidson County;31-1	Davidson;31-1
+ReportingUnit	Tennessee;Davidson County;31-2	Davidson;31-2
+ReportingUnit	Tennessee;Davidson County;31-3	Davidson;31-3
+ReportingUnit	Tennessee;Davidson County;31-4	Davidson;31-4
+ReportingUnit	Tennessee;Davidson County;32-1	Davidson;32-1
+ReportingUnit	Tennessee;Davidson County;32-2	Davidson;32-2
+ReportingUnit	Tennessee;Davidson County;32-3	Davidson;32-3
+ReportingUnit	Tennessee;Davidson County;32-4	Davidson;32-4
+ReportingUnit	Tennessee;Davidson County;33-1	Davidson;33-1
+ReportingUnit	Tennessee;Davidson County;33-2	Davidson;33-2
+ReportingUnit	Tennessee;Davidson County;33-3	Davidson;33-3
+ReportingUnit	Tennessee;Davidson County;33-4	Davidson;33-4
+ReportingUnit	Tennessee;Davidson County;34-1	Davidson;34-1
+ReportingUnit	Tennessee;Davidson County;34-2	Davidson;34-2
+ReportingUnit	Tennessee;Davidson County;34-3	Davidson;34-3
+ReportingUnit	Tennessee;Davidson County;34-4	Davidson;34-4
+ReportingUnit	Tennessee;Davidson County;34-5	Davidson;34-5
+ReportingUnit	Tennessee;Davidson County;35-1	Davidson;35-1
+ReportingUnit	Tennessee;Davidson County;35-2	Davidson;35-2
+ReportingUnit	Tennessee;Davidson County;35-3	Davidson;35-3
+ReportingUnit	Tennessee;Davidson County;35-4	Davidson;35-4
+ReportingUnit	Tennessee;Davidson County;Absentee	Davidson;Absentee
+ReportingUnit	Tennessee;Decatur County;1-1 Dunbar	Decatur;1-1 Dunbar
+ReportingUnit	Tennessee;Decatur County;2-1 Liberty	Decatur;2-1 Liberty
+ReportingUnit	Tennessee;Decatur County;2-2 Scotts Hill	Decatur;2-2 Scotts Hill
+ReportingUnit	Tennessee;Decatur County;3-1 Beacon	Decatur;3-1 Beacon
+ReportingUnit	Tennessee;Decatur County;3-2 Decaturville	Decatur;3-2 Decaturville
+ReportingUnit	Tennessee;Decatur County;4-1 Decaturville	Decatur;4-1 Decaturville
+ReportingUnit	Tennessee;Decatur County;5-1 Parsons	Decatur;5-1 Parsons
+ReportingUnit	Tennessee;Decatur County;6-1 Parsons	Decatur;6-1 Parsons
+ReportingUnit	Tennessee;Decatur County;7-1 Jeanette	Decatur;7-1 Jeanette
+ReportingUnit	Tennessee;Decatur County;7-2 Perryville	Decatur;7-2 Perryville
+ReportingUnit	Tennessee;Decatur County;8-1 Parsons	Decatur;8-1 Parsons
+ReportingUnit	Tennessee;Decatur County;9-1 Beacon	Decatur;9-1 Beacon
+ReportingUnit	Tennessee;Decatur County;9-2 Hydro	Decatur;9-2 Hydro
+ReportingUnit	Tennessee;Dekalb County;1-1 Alexandria	Dekalb;1-1 Alexandria
+ReportingUnit	Tennessee;Dekalb County;1-1 Alexandria	DeKalb;1-1 Alexandria
+ReportingUnit	Tennessee;Dekalb County;1-2 Temperence Hall	Dekalb;1-2 Temperence Hall
+ReportingUnit	Tennessee;Dekalb County;1-2 Temperence Hall	DeKalb;1-2 Temperence Hall
+ReportingUnit	Tennessee;Dekalb County;1-3 Edgar Evins Park	Dekalb;1-3 Edgar Evins Park
+ReportingUnit	Tennessee;Dekalb County;1-3 Edgar Evins Park	DeKalb;1-3 Edgar Evins Park
+ReportingUnit	Tennessee;Dekalb County;2-1 Liberty	Dekalb;2-1 Liberty
+ReportingUnit	Tennessee;Dekalb County;2-1 Liberty	DeKalb;2-1 Liberty
+ReportingUnit	Tennessee;Dekalb County;2-2 Dowelltown	Dekalb;2-2 Dowelltown
+ReportingUnit	Tennessee;Dekalb County;2-2 Dowelltown	DeKalb;2-2 Dowelltown
+ReportingUnit	Tennessee;Dekalb County;2-3 Snows Hill	Dekalb;2-3 Snows Hill
+ReportingUnit	Tennessee;Dekalb County;2-3 Snows Hill	DeKalb;2-3 Snows Hill
+ReportingUnit	Tennessee;Dekalb County;3-1 Church of God	Dekalb;3-1 Church of God
+ReportingUnit	Tennessee;Dekalb County;3-1 Church of God	DeKalb;3-1 Church of God
+ReportingUnit	Tennessee;Dekalb County;4-2 Rock Castle	Dekalb;4-2 Rock Castle
+ReportingUnit	Tennessee;Dekalb County;4-2 Rock Castle	DeKalb;4-2 Rock Castle
+ReportingUnit	Tennessee;Dekalb County;4-3 Courthouse	Dekalb;4-3 Courthouse
+ReportingUnit	Tennessee;Dekalb County;4-3 Courthouse	DeKalb;4-3 Courthouse
+ReportingUnit	Tennessee;Dekalb County;5-1 Johnson Chapel	Dekalb;5-1 Johnson Chapel
+ReportingUnit	Tennessee;Dekalb County;5-1 Johnson Chapel	DeKalb;5-1 Johnson Chapel
+ReportingUnit	Tennessee;Dekalb County;5-2 County Complex	Dekalb;5-2 County Complex
+ReportingUnit	Tennessee;Dekalb County;5-2 County Complex	DeKalb;5-2 County Complex
+ReportingUnit	Tennessee;Dekalb County;6-1 Belk	Dekalb;6-1 Belk
+ReportingUnit	Tennessee;Dekalb County;6-1 Belk	DeKalb;6-1 Belk
+ReportingUnit	Tennessee;Dekalb County;6-2 Keltonburg	Dekalb;6-2 Keltonburg
+ReportingUnit	Tennessee;Dekalb County;6-2 Keltonburg	DeKalb;6-2 Keltonburg
+ReportingUnit	Tennessee;Dekalb County;6-3 Blue Springs	Dekalb;6-3 Blue Springs
+ReportingUnit	Tennessee;Dekalb County;6-3 Blue Springs	DeKalb;6-3 Blue Springs
+ReportingUnit	Tennessee;Dekalb County;7-1 Church of Christ	Dekalb;7-1 Church of Christ
+ReportingUnit	Tennessee;Dekalb County;7-1 Church of Christ	DeKalb;7-1 Church of Christ
+ReportingUnit	Tennessee;Dickson County;1-1	Dickson;1-1
+ReportingUnit	Tennessee;Dickson County;1-2	Dickson;1-2
+ReportingUnit	Tennessee;Dickson County;2-1	Dickson;2-1
+ReportingUnit	Tennessee;Dickson County;2-2	Dickson;2-2
+ReportingUnit	Tennessee;Dickson County;3-1	Dickson;3-1
+ReportingUnit	Tennessee;Dickson County;3-2	Dickson;3-2
+ReportingUnit	Tennessee;Dickson County;4-1	Dickson;4-1
+ReportingUnit	Tennessee;Dickson County;5-1	Dickson;5-1
+ReportingUnit	Tennessee;Dickson County;6-1	Dickson;6-1
+ReportingUnit	Tennessee;Dickson County;6-2	Dickson;6-2
+ReportingUnit	Tennessee;Dickson County;7-1	Dickson;7-1
+ReportingUnit	Tennessee;Dickson County;8-1	Dickson;8-1
+ReportingUnit	Tennessee;Dickson County;9-1	Dickson;9-1
+ReportingUnit	Tennessee;Dickson County;10-1	Dickson;10-1
+ReportingUnit	Tennessee;Dickson County;11-1	Dickson;11-1
+ReportingUnit	Tennessee;Dickson County;12-1	Dickson;12-1
+ReportingUnit	Tennessee;Dickson County;12-2	Dickson;12-2
+ReportingUnit	Tennessee;Dyer County;A1- Bonicord	Dyer;A1- Bonicord
+ReportingUnit	Tennessee;Dyer County;A2- Fowlkes	Dyer;A2- Fowlkes
+ReportingUnit	Tennessee;Dyer County;B- Newbern	Dyer;B- Newbern
+ReportingUnit	Tennessee;Dyer County;C1- Tatumville	Dyer;C1- Tatumville
+ReportingUnit	Tennessee;Dyer County;C2- Trimble	Dyer;C2- Trimble
+ReportingUnit	Tennessee;Dyer County;C3- Roellen	Dyer;C3- Roellen
+ReportingUnit	Tennessee;Dyer County;D1- Millsfield	Dyer;D1- Millsfield
+ReportingUnit	Tennessee;Dyer County;D2- Bogota	Dyer;D2- Bogota
+ReportingUnit	Tennessee;Dyer County;E1- Finley	Dyer;E1- Finley
+ReportingUnit	Tennessee;Dyer County;E2- Lenox	Dyer;E2- Lenox
+ReportingUnit	Tennessee;Dyer County;F- Dyer Co Central	Dyer;F- Dyer Co Central
+ReportingUnit	Tennessee;Dyer County;G- Courthouse	Dyer;G- Courthouse
+ReportingUnit	Tennessee;Dyer County;H- E. Dyersburg	Dyer;H- E. Dyersburg
+ReportingUnit	Tennessee;Dyer County;I1- Community Center	Dyer;I1- Community Center
+ReportingUnit	Tennessee;Dyer County;I2- Hurricane Hill	Dyer;I2- Hurricane Hill
+ReportingUnit	Tennessee;Dyer County;J- North Dyersburg	Dyer;J- North Dyersburg
+ReportingUnit	Tennessee;Fayette County;Somerville	Fayette;Somerville
+ReportingUnit	Tennessee;Fayette County;Fayette Corner	Fayette;Fayette Corner
+ReportingUnit	Tennessee;Fayette County;Garnett	Fayette;Garnett
+ReportingUnit	Tennessee;Fayette County;Braden	Fayette;Braden
+ReportingUnit	Tennessee;Fayette County;Gallaway	Fayette;Gallaway
+ReportingUnit	Tennessee;Fayette County;Oakland	Fayette;Oakland
+ReportingUnit	Tennessee;Fayette County;Hickory Withe	Fayette;Hickory Withe
+ReportingUnit	Tennessee;Fayette County;Elba	Fayette;Elba
+ReportingUnit	Tennessee;Fayette County;Piperton	Fayette;Piperton
+ReportingUnit	Tennessee;Fayette County;Rossville	Fayette;Rossville
+ReportingUnit	Tennessee;Fayette County;Macon	Fayette;Macon
+ReportingUnit	Tennessee;Fayette County;Williston	Fayette;Williston
+ReportingUnit	Tennessee;Fayette County;Moscow	Fayette;Moscow
+ReportingUnit	Tennessee;Fayette County;Parks	Fayette;Parks
+ReportingUnit	Tennessee;Fayette County;LaGrange	Fayette;LaGrange
+ReportingUnit	Tennessee;Fentress County;Allardt	Fentress;Allardt
+ReportingUnit	Tennessee;Fentress County;Armathwaite	Fentress;Armathwaite
+ReportingUnit	Tennessee;Fentress County;Banner	Fentress;Banner
+ReportingUnit	Tennessee;Fentress County;Community Center	Fentress;Community Center
+ReportingUnit	Tennessee;Fentress County;Courthouse	Fentress;Courthouse
+ReportingUnit	Tennessee;Fentress County;Clarkrange	Fentress;Clarkrange
+ReportingUnit	Tennessee;Fentress County;Crossroads	Fentress;Crossroads
+ReportingUnit	Tennessee;Fentress County;East Jamestown	Fentress;East Jamestown
+ReportingUnit	Tennessee;Fentress County;Grimsley	Fentress;Grimsley
+ReportingUnit	Tennessee;Fentress County;Pine Haven	Fentress;Pine Haven
+ReportingUnit	Tennessee;Fentress County;Pall Mall	Fentress;Pall Mall
+ReportingUnit	Tennessee;Fentress County;Tinchtown	Fentress;Tinchtown
+ReportingUnit	Tennessee;Fentress County;West Fentress	Fentress;West Fentress
+ReportingUnit	Tennessee;Franklin County;1-1 Annex	Franklin;1-1 Annex
+ReportingUnit	Tennessee;Franklin County;2-1 Clark Memorial	Franklin;2-1 Clark Memorial
+ReportingUnit	Tennessee;Franklin County;3-1 Broadview	Franklin;3-1 Broadview
+ReportingUnit	Tennessee;Franklin County;3-2 Huntland	Franklin;3-2 Huntland
+ReportingUnit	Tennessee;Franklin County;3-3 Walnut Grove	Franklin;3-3 Walnut Grove
+ReportingUnit	Tennessee;Franklin County;4-1 Belvidere	Franklin;4-1 Belvidere
+ReportingUnit	Tennessee;Franklin County;4-2 Cowan	Franklin;4-2 Cowan
+ReportingUnit	Tennessee;Franklin County;4-3 Liberty	Franklin;4-3 Liberty
+ReportingUnit	Tennessee;Franklin County;5-1 Keith Springs	Franklin;5-1 Keith Springs
+ReportingUnit	Tennessee;Franklin County;5-2 Sewanee	Franklin;5-2 Sewanee
+ReportingUnit	Tennessee;Franklin County;5-3 Sherwood	Franklin;5-3 Sherwood
+ReportingUnit	Tennessee;Franklin County;6-1 Alto/Oak Grove	Franklin;6-1 Alto/Oak Grove
+ReportingUnit	Tennessee;Franklin County;6-2 Capitol Hill	Franklin;6-2 Capitol Hill
+ReportingUnit	Tennessee;Franklin County;6-3 UTSI	Franklin;6-3 UTSI
+ReportingUnit	Tennessee;Franklin County;7-1 North Lake	Franklin;7-1 North Lake
+ReportingUnit	Tennessee;Franklin County;7-2 CG/Winchester Springs	Franklin;7-2 CG/Winchester Springs
+ReportingUnit	Tennessee;Franklin County;8-1 Decherd	Franklin;8-1 Decherd
+ReportingUnit	Tennessee;Franklin County;8-2 Estill Springs	Franklin;8-2 Estill Springs
+ReportingUnit	Tennessee;Gibson County;1-1 Medina	Gibson;1-1 Medina
+ReportingUnit	Tennessee;Gibson County;1-2 Sitka	Gibson;1-2 Sitka
+ReportingUnit	Tennessee;Gibson County;2-6 Humboldt Church	Gibson;2-6 Humboldt Church
+ReportingUnit	Tennessee;Gibson County;3-7 Bailey Park	Gibson;3-7 Bailey Park
+ReportingUnit	Tennessee;Gibson County;4-8 St James Baptist	Gibson;4-8 St James Baptist
+ReportingUnit	Tennessee;Gibson County;5-9 Lane Chapel Church	Gibson;5-9 Lane Chapel Church
+ReportingUnit	Tennessee;Gibson County;6-10 Humboldt HS	Gibson;6-10 Humboldt HS
+ReportingUnit	Tennessee;Gibson County;6-4 Gibson	Gibson;6-4 Gibson
+ReportingUnit	Tennessee;Gibson County;7-13 Fruitland	Gibson;7-13 Fruitland
+ReportingUnit	Tennessee;Gibson County;8-12 Edison	Gibson;8-12 Edison
+ReportingUnit	Tennessee;Gibson County;8-14 Brazil	Gibson;8-14 Brazil
+ReportingUnit	Tennessee;Gibson County;9-20 JC Building	Gibson;9-20 JC Building
+ReportingUnit	Tennessee;Gibson County;10-22 Agri-Plex	Gibson;10-22 Agri-Plex
+ReportingUnit	Tennessee;Gibson County;11-24 Moore's Chapel	Gibson;11-24 Moore's Chapel
+ReportingUnit	Tennessee;Gibson County;11-26 Union Central	Gibson;11-26 Union Central
+ReportingUnit	Tennessee;Gibson County;11-27 Skullbone	Gibson;11-27 Skullbone
+ReportingUnit	Tennessee;Gibson County;12-28 Milan CPC	Gibson;12-28 Milan CPC
+ReportingUnit	Tennessee;Gibson County;13-29 Milan Polk Clark	Gibson;13-29 Milan Polk Clark
+ReportingUnit	Tennessee;Gibson County;14-30 Milan 1stAssembly	Gibson;14-30 Milan 1stAssembly
+ReportingUnit	Tennessee;Gibson County;15-31 Milan Municipal	Gibson;15-31 Milan Municipal
+ReportingUnit	Tennessee;Gibson County;16-40 Rutherford	Gibson;16-40 Rutherford
+ReportingUnit	Tennessee;Gibson County;16-17 Yorkville	Gibson;16-17 Yorkville
+ReportingUnit	Tennessee;Gibson County;16-18 Kenton	Gibson;16-18 Kenton
+ReportingUnit	Tennessee;Gibson County;17-32 Bradford	Gibson;17-32 Bradford
+ReportingUnit	Tennessee;Gibson County;18-34 Laneview	Gibson;18-34 Laneview
+ReportingUnit	Tennessee;Gibson County;18-37 Good Luck	Gibson;18-37 Good Luck
+ReportingUnit	Tennessee;Gibson County;19-38 Dyer	Gibson;19-38 Dyer
+ReportingUnit	Tennessee;Gibson County;19-39 Currie	Gibson;19-39 Currie
+ReportingUnit	Tennessee;Giles County;1A Ardmore	Giles;1A Ardmore
+ReportingUnit	Tennessee;Giles County;1B Prospect	Giles;1B Prospect
+ReportingUnit	Tennessee;Giles County;2A Minor Hill	Giles;2A Minor Hill
+ReportingUnit	Tennessee;Giles County;2B Airport	Giles;2B Airport
+ReportingUnit	Tennessee;Giles County;3A Richland Trace	Giles;3A Richland Trace
+ReportingUnit	Tennessee;Giles County;3B Campbellsville	Giles;3B Campbellsville
+ReportingUnit	Tennessee;Giles County;4A Lynnville	Giles;4A Lynnville
+ReportingUnit	Tennessee;Giles County;4B Odd Fellows Hall	Giles;4B Odd Fellows Hall
+ReportingUnit	Tennessee;Giles County;5A TCAT	Giles;5A TCAT
+ReportingUnit	Tennessee;Giles County;5B Agri Park	Giles;5B Agri Park
+ReportingUnit	Tennessee;Giles County;6A Martin	Giles;6A Martin
+ReportingUnit	Tennessee;Giles County;6B Bridgeforth	Giles;6B Bridgeforth
+ReportingUnit	Tennessee;Giles County;7A GCHS	Giles;7A GCHS
+ReportingUnit	Tennessee;Giles County;7B Rec Center	Giles;7B Rec Center
+ReportingUnit	Tennessee;Grainger County;1-1	Grainger;1-1
+ReportingUnit	Tennessee;Grainger County;1-2	Grainger;1-2
+ReportingUnit	Tennessee;Grainger County;2-1	Grainger;2-1
+ReportingUnit	Tennessee;Grainger County;2-2	Grainger;2-2
+ReportingUnit	Tennessee;Grainger County;3-1	Grainger;3-1
+ReportingUnit	Tennessee;Grainger County;3-2	Grainger;3-2
+ReportingUnit	Tennessee;Grainger County;4-1	Grainger;4-1
+ReportingUnit	Tennessee;Grainger County;4-2	Grainger;4-2
+ReportingUnit	Tennessee;Grainger County;5-1	Grainger;5-1
+ReportingUnit	Tennessee;Grainger County;5-2	Grainger;5-2
+ReportingUnit	Tennessee;Greene County;1 Baileyton	Greene;1 Baileyton
+ReportingUnit	Tennessee;Greene County;4 Camp Creek	Greene;4 Camp Creek
+ReportingUnit	Tennessee;Greene County;2 Chuckey Doak	Greene;2 Chuckey Doak
+ReportingUnit	Tennessee;Greene County;4 Courthouse	Greene;4 Courthouse
+ReportingUnit	Tennessee;Greene County;2 Chuckey	Greene;2 Chuckey
+ReportingUnit	Tennessee;Greene County;5 Debusk	Greene;5 Debusk
+ReportingUnit	Tennessee;Greene County;3 Doak	Greene;3 Doak
+ReportingUnit	Tennessee;Greene County;7 Glenwood	Greene;7 Glenwood
+ReportingUnit	Tennessee;Greene County;7 High School	Greene;7 High School
+ReportingUnit	Tennessee;Greene County;6 McDonald	Greene;6 McDonald
+ReportingUnit	Tennessee;Greene County;6 Mosheim	Greene;6 Mosheim
+ReportingUnit	Tennessee;Greene County;5 Middle School	Greene;5 Middle School
+ReportingUnit	Tennessee;Greene County;5 Nolachuckey	Greene;5 Nolachuckey
+ReportingUnit	Tennessee;Greene County;1 Ottway	Greene;1 Ottway
+ReportingUnit	Tennessee;Greene County;5 South Greene	Greene;5 South Greene
+ReportingUnit	Tennessee;Greene County;3 Tusculum View	Greene;3 Tusculum View
+ReportingUnit	Tennessee;Greene County;1 West Pines	Greene;1 West Pines
+ReportingUnit	Tennessee;Grundy County;Altamont	Grundy;Altamont
+ReportingUnit	Tennessee;Grundy County;Beersheba Springs	Grundy;Beersheba Springs
+ReportingUnit	Tennessee;Grundy County;Central	Grundy;Central
+ReportingUnit	Tennessee;Grundy County;Collins	Grundy;Collins
+ReportingUnit	Tennessee;Grundy County;Pelham Valley	Grundy;Pelham Valley
+ReportingUnit	Tennessee;Grundy County;Coalmont	Grundy;Coalmont
+ReportingUnit	Tennessee;Grundy County;Gruetli-Laager	Grundy;Gruetli-Laager
+ReportingUnit	Tennessee;Grundy County;Palmer	Grundy;Palmer
+ReportingUnit	Tennessee;Grundy County;Monteagle	Grundy;Monteagle
+ReportingUnit	Tennessee;Grundy County;Tracy City	Grundy;Tracy City
+ReportingUnit	Tennessee;Hamblen County;01-1	Hamblen;01-1
+ReportingUnit	Tennessee;Hamblen County;02-1	Hamblen;02-1
+ReportingUnit	Tennessee;Hamblen County;03-1	Hamblen;03-1
+ReportingUnit	Tennessee;Hamblen County;04-1	Hamblen;04-1
+ReportingUnit	Tennessee;Hamblen County;05-1	Hamblen;05-1
+ReportingUnit	Tennessee;Hamblen County;06-1	Hamblen;06-1
+ReportingUnit	Tennessee;Hamblen County;07-1	Hamblen;07-1
+ReportingUnit	Tennessee;Hamblen County;08-1	Hamblen;08-1
+ReportingUnit	Tennessee;Hamblen County;09-1	Hamblen;09-1
+ReportingUnit	Tennessee;Hamblen County;09-2	Hamblen;09-2
+ReportingUnit	Tennessee;Hamblen County;10-1	Hamblen;10-1
+ReportingUnit	Tennessee;Hamblen County;11-1	Hamblen;11-1
+ReportingUnit	Tennessee;Hamblen County;11-2	Hamblen;11-2
+ReportingUnit	Tennessee;Hamblen County;12-1	Hamblen;12-1
+ReportingUnit	Tennessee;Hamblen County;13-1	Hamblen;13-1
+ReportingUnit	Tennessee;Hamblen County;14-1	Hamblen;14-1
+ReportingUnit	Tennessee;Hamilton County;088 Airport	Hamilton;088 Airport
+ReportingUnit	Tennessee;Hamilton County;048 Alton Park 1	Hamilton;048 Alton Park 1
+ReportingUnit	Tennessee;Hamilton County;047 Alton Park 2	Hamilton;047 Alton Park 2
+ReportingUnit	Tennessee;Hamilton County;127 Alton Park 3	Hamilton;127 Alton Park 3
+ReportingUnit	Tennessee;Hamilton County;057 Amnicola	Hamilton;057 Amnicola
+ReportingUnit	Tennessee;Hamilton County;110 Apison 1	Hamilton;110 Apison 1
+ReportingUnit	Tennessee;Hamilton County;109 Apison 2	Hamilton;109 Apison 2
+ReportingUnit	Tennessee;Hamilton County;111 Apison 3	Hamilton;111 Apison 3
+ReportingUnit	Tennessee;Hamilton County;055 Avondale	Hamilton;055 Avondale
+ReportingUnit	Tennessee;Hamilton County;009 Bakewell 1	Hamilton;009 Bakewell 1
+ReportingUnit	Tennessee;Hamilton County;011 Bakewell 2	Hamilton;011 Bakewell 2
+ReportingUnit	Tennessee;Hamilton County;013 Bakewell 3	Hamilton;013 Bakewell 3
+ReportingUnit	Tennessee;Hamilton County;115 Birchwood	Hamilton;115 Birchwood
+ReportingUnit	Tennessee;Hamilton County;096 Bonny Oaks	Hamilton;096 Bonny Oaks
+ReportingUnit	Tennessee;Hamilton County;074 Brainerd	Hamilton;074 Brainerd
+ReportingUnit	Tennessee;Hamilton County;076 Brainerd Hills	Hamilton;076 Brainerd Hills
+ReportingUnit	Tennessee;Hamilton County;054 Bushtown	Hamilton;054 Bushtown
+ReportingUnit	Tennessee;Hamilton County;108 Collegedale 1	Hamilton;108 Collegedale 1
+ReportingUnit	Tennessee;Hamilton County;112 Collegedale 2	Hamilton;112 Collegedale 2
+ReportingUnit	Tennessee;Hamilton County;121 Collegedale 3	Hamilton;121 Collegedale 3
+ReportingUnit	Tennessee;Hamilton County;123 Collegedale 4	Hamilton;123 Collegedale 4
+ReportingUnit	Tennessee;Hamilton County;077 Concord 1	Hamilton;077 Concord 1
+ReportingUnit	Tennessee;Hamilton County;078 Concord 2	Hamilton;078 Concord 2
+ReportingUnit	Tennessee;Hamilton County;079 Concord 3	Hamilton;079 Concord 3
+ReportingUnit	Tennessee;Hamilton County;006 Concord 4	Hamilton;006 Concord 4
+ReportingUnit	Tennessee;Hamilton County;080 Concord 5	Hamilton;080 Concord 5
+ReportingUnit	Tennessee;Hamilton County;105 Concord 6	Hamilton;105 Concord 6
+ReportingUnit	Tennessee;Hamilton County;098 Concord 7	Hamilton;098 Concord 7
+ReportingUnit	Tennessee;Hamilton County;040 Courthouse 1	Hamilton;040 Courthouse 1
+ReportingUnit	Tennessee;Hamilton County;039 Courthouse 2	Hamilton;039 Courthouse 2
+ReportingUnit	Tennessee;Hamilton County;090 Dalewood	Hamilton;090 Dalewood
+ReportingUnit	Tennessee;Hamilton County;015 Dallas 1	Hamilton;015 Dallas 1
+ReportingUnit	Tennessee;Hamilton County;016 Dallas 2	Hamilton;016 Dallas 2
+ReportingUnit	Tennessee;Hamilton County;041 Downtown 1	Hamilton;041 Downtown 1
+ReportingUnit	Tennessee;Hamilton County;038 Downtown 2	Hamilton;038 Downtown 2
+ReportingUnit	Tennessee;Hamilton County;129 Downtown 3	Hamilton;129 Downtown 3
+ReportingUnit	Tennessee;Hamilton County;061 DuPont	Hamilton;061 DuPont
+ReportingUnit	Tennessee;Hamilton County;099 East Brainerd 1	Hamilton;099 East Brainerd 1
+ReportingUnit	Tennessee;Hamilton County;100 East Brainerd 2	Hamilton;100 East Brainerd 2
+ReportingUnit	Tennessee;Hamilton County;056 East Chattanooga 1	Hamilton;056 East Chattanooga 1
+ReportingUnit	Tennessee;Hamilton County;089 East Chattanooga 2	Hamilton;089 East Chattanooga 2
+ReportingUnit	Tennessee;Hamilton County;049 East Lake	Hamilton;049 East Lake
+ReportingUnit	Tennessee;Hamilton County;071 East Ridge 1	Hamilton;071 East Ridge 1
+ReportingUnit	Tennessee;Hamilton County;072 East Ridge 2	Hamilton;072 East Ridge 2
+ReportingUnit	Tennessee;Hamilton County;073 East Ridge 3	Hamilton;073 East Ridge 3
+ReportingUnit	Tennessee;Hamilton County;075 East Ridge 4	Hamilton;075 East Ridge 4
+ReportingUnit	Tennessee;Hamilton County;082 Eastdale	Hamilton;082 Eastdale
+ReportingUnit	Tennessee;Hamilton County;084 Eastgate 1	Hamilton;084 Eastgate 1
+ReportingUnit	Tennessee;Hamilton County;085 Eastgate 2	Hamilton;085 Eastgate 2
+ReportingUnit	Tennessee;Hamilton County;050 Eastside 1	Hamilton;050 Eastside 1
+ReportingUnit	Tennessee;Hamilton County;051 Eastside 2	Hamilton;051 Eastside 2
+ReportingUnit	Tennessee;Hamilton County;021 Fairmount 1	Hamilton;021 Fairmount 1
+ReportingUnit	Tennessee;Hamilton County;027 Fairmount 2	Hamilton;027 Fairmount 2
+ReportingUnit	Tennessee;Hamilton County;001 Falling Water	Hamilton;001 Falling Water
+ReportingUnit	Tennessee;Hamilton County;010 Flat Top Mountain	Hamilton;010 Flat Top Mountain
+ReportingUnit	Tennessee;Hamilton County;067 Ganns	Hamilton;067 Ganns
+ReportingUnit	Tennessee;Hamilton County;081 Glenwood	Hamilton;081 Glenwood
+ReportingUnit	Tennessee;Hamilton County;125 Harrison 1	Hamilton;125 Harrison 1
+ReportingUnit	Tennessee;Hamilton County;135 Harrison 2	Hamilton;135 Harrison 2
+ReportingUnit	Tennessee;Hamilton County;133 Harrison 3	Hamilton;133 Harrison 3
+ReportingUnit	Tennessee;Hamilton County;119 Harrison 4	Hamilton;119 Harrison 4
+ReportingUnit	Tennessee;Hamilton County;118 Harrison 5	Hamilton;118 Harrison 5
+ReportingUnit	Tennessee;Hamilton County;126 Harrison 6	Hamilton;126 Harrison 6
+ReportingUnit	Tennessee;Hamilton County;134 Harrison 7	Hamilton;134 Harrison 7
+ReportingUnit	Tennessee;Hamilton County;064 Hixson 1	Hamilton;064 Hixson 1
+ReportingUnit	Tennessee;Hamilton County;063 Hixson 2	Hamilton;063 Hixson 2
+ReportingUnit	Tennessee;Hamilton County;062 Hixson 3	Hamilton;062 Hixson 3
+ReportingUnit	Tennessee;Hamilton County;091 Kingspoint 1	Hamilton;091 Kingspoint 1
+ReportingUnit	Tennessee;Hamilton County;058 Kingspoint 2	Hamilton;058 Kingspoint 2
+ReportingUnit	Tennessee;Hamilton County;092 Kingspoint 3	Hamilton;092 Kingspoint 3
+ReportingUnit	Tennessee;Hamilton County;093 Lake Hills	Hamilton;093 Lake Hills
+ReportingUnit	Tennessee;Hamilton County;003 Lakesite	Hamilton;003 Lakesite
+ReportingUnit	Tennessee;Hamilton County;035 Lookout Mountain	Hamilton;035 Lookout Mountain
+ReportingUnit	Tennessee;Hamilton County;033 Lookout Valley 1	Hamilton;033 Lookout Valley 1
+ReportingUnit	Tennessee;Hamilton County;034 Lookout Valley 2	Hamilton;034 Lookout Valley 2
+ReportingUnit	Tennessee;Hamilton County;029 Lupton City	Hamilton;029 Lupton City
+ReportingUnit	Tennessee;Hamilton County;116 Meadowview	Hamilton;116 Meadowview
+ReportingUnit	Tennessee;Hamilton County;068 Middle Valley 1	Hamilton;068 Middle Valley 1
+ReportingUnit	Tennessee;Hamilton County;069 Middle Valley 2	Hamilton;069 Middle Valley 2
+ReportingUnit	Tennessee;Hamilton County;070 Missionary Ridge	Hamilton;070 Missionary Ridge
+ReportingUnit	Tennessee;Hamilton County;042 Moccasin Bend	Hamilton;042 Moccasin Bend
+ReportingUnit	Tennessee;Hamilton County;026 Mountain Creek 1	Hamilton;026 Mountain Creek 1
+ReportingUnit	Tennessee;Hamilton County;031 Mountain Creek 2	Hamilton;031 Mountain Creek 2
+ReportingUnit	Tennessee;Hamilton County;032 Mountain Creek 3	Hamilton;032 Mountain Creek 3
+ReportingUnit	Tennessee;Hamilton County;014 Mowbray	Hamilton;014 Mowbray
+ReportingUnit	Tennessee;Hamilton County;005 Murray Hills 1	Hamilton;005 Murray Hills 1
+ReportingUnit	Tennessee;Hamilton County;128 Murray Hills 2	Hamilton;128 Murray Hills 2
+ReportingUnit	Tennessee;Hamilton County;044 North Chattanooga 1	Hamilton;044 North Chattanooga 1
+ReportingUnit	Tennessee;Hamilton County;043 North Chattanooga 2	Hamilton;043 North Chattanooga 2
+ReportingUnit	Tennessee;Hamilton County;059 Northgate 1	Hamilton;059 Northgate 1
+ReportingUnit	Tennessee;Hamilton County;060 Northgate 2	Hamilton;060 Northgate 2
+ReportingUnit	Tennessee;Hamilton County;020 Northwoods 1	Hamilton;020 Northwoods 1
+ReportingUnit	Tennessee;Hamilton County;019 Northwoods 2	Hamilton;019 Northwoods 2
+ReportingUnit	Tennessee;Hamilton County;132 Northwoods 3	Hamilton;132 Northwoods 3
+ReportingUnit	Tennessee;Hamilton County;107 Ooltewah 1	Hamilton;107 Ooltewah 1
+ReportingUnit	Tennessee;Hamilton County;106 Ooltewah 2	Hamilton;106 Ooltewah 2
+ReportingUnit	Tennessee;Hamilton County;113 Ooltewah 3	Hamilton;113 Ooltewah 3
+ReportingUnit	Tennessee;Hamilton County;007 Ooltewah 4	Hamilton;007 Ooltewah 4
+ReportingUnit	Tennessee;Hamilton County;124 Ooltewah 5	Hamilton;124 Ooltewah 5
+ReportingUnit	Tennessee;Hamilton County;122 Ooltewah 6	Hamilton;122 Ooltewah 6
+ReportingUnit	Tennessee;Hamilton County;066 Pleasant Grove 1	Hamilton;066 Pleasant Grove 1
+ReportingUnit	Tennessee;Hamilton County;065 Pleasant Grove 2	Hamilton;065 Pleasant Grove 2
+ReportingUnit	Tennessee;Hamilton County;045 Red Bank 1	Hamilton;045 Red Bank 1
+ReportingUnit	Tennessee;Hamilton County;046 Red Bank 2	Hamilton;046 Red Bank 2
+ReportingUnit	Tennessee;Hamilton County;028 Red Bank 3	Hamilton;028 Red Bank 3
+ReportingUnit	Tennessee;Hamilton County;053 Ridgedale 1	Hamilton;053 Ridgedale 1
+ReportingUnit	Tennessee;Hamilton County;052 Ridgedale 2	Hamilton;052 Ridgedale 2
+ReportingUnit	Tennessee;Hamilton County;083 Ridgeside	Hamilton;083 Ridgeside
+ReportingUnit	Tennessee;Hamilton County;004 Riverview	Hamilton;004 Riverview
+ReportingUnit	Tennessee;Hamilton County;008 Sale Creek	Hamilton;008 Sale Creek
+ReportingUnit	Tennessee;Hamilton County;022 Signal Mountain 1	Hamilton;022 Signal Mountain 1
+ReportingUnit	Tennessee;Hamilton County;002 Signal Mountain 2	Hamilton;002 Signal Mountain 2
+ReportingUnit	Tennessee;Hamilton County;117 Snowhill 1	Hamilton;117 Snowhill 1
+ReportingUnit	Tennessee;Hamilton County;120 Snowhill 2	Hamilton;120 Snowhill 2
+ReportingUnit	Tennessee;Hamilton County;012 Soddy Daisy 1	Hamilton;012 Soddy Daisy 1
+ReportingUnit	Tennessee;Hamilton County;017 Soddy Daisy 2	Hamilton;017 Soddy Daisy 2
+ReportingUnit	Tennessee;Hamilton County;018 Soddy Daisy 3	Hamilton;018 Soddy Daisy 3
+ReportingUnit	Tennessee;Hamilton County;036 St. Elmo 1	Hamilton;036 St. Elmo 1
+ReportingUnit	Tennessee;Hamilton County;037 St. Elmo 2	Hamilton;037 St. Elmo 2
+ReportingUnit	Tennessee;Hamilton County;030 Stuart Heights	Hamilton;030 Stuart Heights
+ReportingUnit	Tennessee;Hamilton County;097 Summit 1	Hamilton;097 Summit 1
+ReportingUnit	Tennessee;Hamilton County;130 Summit 2	Hamilton;130 Summit 2
+ReportingUnit	Tennessee;Hamilton County;114 Summit 3	Hamilton;114 Summit 3
+ReportingUnit	Tennessee;Hamilton County;095 Summit 4	Hamilton;095 Summit 4
+ReportingUnit	Tennessee;Hamilton County;094 Tyner 1	Hamilton;094 Tyner 1
+ReportingUnit	Tennessee;Hamilton County;104 Tyner 2	Hamilton;104 Tyner 2
+ReportingUnit	Tennessee;Hamilton County;131 Tyner 3	Hamilton;131 Tyner 3
+ReportingUnit	Tennessee;Hamilton County;024 Valdeau 1	Hamilton;024 Valdeau 1
+ReportingUnit	Tennessee;Hamilton County;025 Valdeau 2	Hamilton;025 Valdeau 2
+ReportingUnit	Tennessee;Hamilton County;023 Walden	Hamilton;023 Walden
+ReportingUnit	Tennessee;Hamilton County;102 Westview 1	Hamilton;102 Westview 1
+ReportingUnit	Tennessee;Hamilton County;101 Westview 2	Hamilton;101 Westview 2
+ReportingUnit	Tennessee;Hamilton County;103 Westview 3	Hamilton;103 Westview 3
+ReportingUnit	Tennessee;Hamilton County;086 Woodmore 1	Hamilton;086 Woodmore 1
+ReportingUnit	Tennessee;Hamilton County;087 Woodmore 2	Hamilton;087 Woodmore 2
+ReportingUnit	Tennessee;Hancock County;1st	Hancock;1st
+ReportingUnit	Tennessee;Hancock County;2nd	Hancock;2nd
+ReportingUnit	Tennessee;Hancock County;3rd	Hancock;3rd
+ReportingUnit	Tennessee;Hancock County;4th	Hancock;4th
+ReportingUnit	Tennessee;Hancock County;5th	Hancock;5th
+ReportingUnit	Tennessee;Hancock County;6th	Hancock;6th
+ReportingUnit	Tennessee;Hancock County;7th	Hancock;7th
+ReportingUnit	Tennessee;Hardeman County;West Bolivar	Hardeman;West Bolivar
+ReportingUnit	Tennessee;Hardeman County;Bolivar	Hardeman;Bolivar
+ReportingUnit	Tennessee;Hardeman County;Whiteville	Hardeman;Whiteville
+ReportingUnit	Tennessee;Hardeman County;Hickory Valley	Hardeman;Hickory Valley
+ReportingUnit	Tennessee;Hardeman County;Grand Junction	Hardeman;Grand Junction
+ReportingUnit	Tennessee;Hardeman County;Saulsbury	Hardeman;Saulsbury
+ReportingUnit	Tennessee;Hardeman County;Middleton	Hardeman;Middleton
+ReportingUnit	Tennessee;Hardeman County;Pocahontas	Hardeman;Pocahontas
+ReportingUnit	Tennessee;Hardeman County;Lacy	Hardeman;Lacy
+ReportingUnit	Tennessee;Hardeman County;Hornsby	Hardeman;Hornsby
+ReportingUnit	Tennessee;Hardeman County;Silerton	Hardeman;Silerton
+ReportingUnit	Tennessee;Hardeman County;Dixie Hills	Hardeman;Dixie Hills
+ReportingUnit	Tennessee;Hardeman County;Toone	Hardeman;Toone
+ReportingUnit	Tennessee;Hardin County;Olivet 1-1	Hardin;Olivet 1-1
+ReportingUnit	Tennessee;Hardin County;Nixon 2-1	Hardin;Nixon 2-1
+ReportingUnit	Tennessee;Hardin County;Counce 3-1	Hardin;Counce 3-1
+ReportingUnit	Tennessee;Hardin County;Crump 4-1	Hardin;Crump 4-1
+ReportingUnit	Tennessee;Hardin County;Saltillo 5-1	Hardin;Saltillo 5-1
+ReportingUnit	Tennessee;Hardin County;Morris Chapel 5-2	Hardin;Morris Chapel 5-2
+ReportingUnit	Tennessee;Hardin County;Cerro Gordo 6-1	Hardin;Cerro Gordo 6-1
+ReportingUnit	Tennessee;Hardin County;Rhodes 6-2	Hardin;Rhodes 6-2
+ReportingUnit	Tennessee;Hardin County;Olive Hill 6-3	Hardin;Olive Hill 6-3
+ReportingUnit	Tennessee;Hardin County;Whites 7-1	Hardin;Whites 7-1
+ReportingUnit	Tennessee;Hardin County;Walnut Grove 7-2	Hardin;Walnut Grove 7-2
+ReportingUnit	Tennessee;Hardin County;North 8-1	Hardin;North 8-1
+ReportingUnit	Tennessee;Hardin County;Library 9-1	Hardin;Library 9-1
+ReportingUnit	Tennessee;Hardin County;Fairground 10-1	Hardin;Fairground 10-1
+ReportingUnit	Tennessee;Hawkins County;1 Allandale	Hawkins;1 Allandale
+ReportingUnit	Tennessee;Hawkins County;6 Alum Well	Hawkins;6 Alum Well
+ReportingUnit	Tennessee;Hawkins County;7 Bulls Gap	Hawkins;7 Bulls Gap
+ReportingUnit	Tennessee;Hawkins County;3 Carter's Valley	Hawkins;3 Carter's Valley
+ReportingUnit	Tennessee;Hawkins County;7 Cherokee	Hawkins;7 Cherokee
+ReportingUnit	Tennessee;Hawkins County;6 Choptack	Hawkins;6 Choptack
+ReportingUnit	Tennessee;Hawkins County;2 Church Hill	Hawkins;2 Church Hill
+ReportingUnit	Tennessee;Hawkins County;6 Clinch	Hawkins;6 Clinch
+ReportingUnit	Tennessee;Hawkins County;4 Dykes	Hawkins;4 Dykes
+ReportingUnit	Tennessee;Hawkins County;4 Keplar	Hawkins;4 Keplar
+ReportingUnit	Tennessee;Hawkins County;2 McPheeter's Bend	Hawkins;2 McPheeter's Bend
+ReportingUnit	Tennessee;Hawkins County;6 Mooresburg	Hawkins;6 Mooresburg
+ReportingUnit	Tennessee;Hawkins County;1 Mount Carmel	Hawkins;1 Mount Carmel
+ReportingUnit	Tennessee;Hawkins County;5 Rogersville 5th	Hawkins;5 Rogersville 5th
+ReportingUnit	Tennessee;Hawkins County;4 Rogersville North	Hawkins;4 Rogersville North
+ReportingUnit	Tennessee;Hawkins County;7 St. Clair	Hawkins;7 St. Clair
+ReportingUnit	Tennessee;Hawkins County;4 Surgoinsville	Hawkins;4 Surgoinsville
+ReportingUnit	Tennessee;Hawkins County;4 Upper Beech	Hawkins;4 Upper Beech
+ReportingUnit	Tennessee;Hawkins County;3 Wallace	Hawkins;3 Wallace
+ReportingUnit	Tennessee;Hawkins County;3 Watterson	Hawkins;3 Watterson
+ReportingUnit	Tennessee;Haywood County;1-1	Haywood;1-1
+ReportingUnit	Tennessee;Haywood County;2-1	Haywood;2-1
+ReportingUnit	Tennessee;Haywood County;3-1	Haywood;3-1
+ReportingUnit	Tennessee;Haywood County;4-1	Haywood;4-1
+ReportingUnit	Tennessee;Haywood County;5-1	Haywood;5-1
+ReportingUnit	Tennessee;Haywood County;6-1	Haywood;6-1
+ReportingUnit	Tennessee;Haywood County;7-1	Haywood;7-1
+ReportingUnit	Tennessee;Haywood County;8-1	Haywood;8-1
+ReportingUnit	Tennessee;Haywood County;9-1	Haywood;9-1
+ReportingUnit	Tennessee;Haywood County;9-2	Haywood;9-2
+ReportingUnit	Tennessee;Haywood County;10-1	Haywood;10-1
+ReportingUnit	Tennessee;Henderson County;1-1 Bargerton	Henderson;1-1 Bargerton
+ReportingUnit	Tennessee;Henderson County;1-2 Beaver	Henderson;1-2 Beaver
+ReportingUnit	Tennessee;Henderson County;3-3 Fire Station #4	Henderson;3-3 Fire Station #4
+ReportingUnit	Tennessee;Henderson County;5-5 TN Tech Center	Henderson;5-5 TN Tech Center
+ReportingUnit	Tennessee;Henderson County;4-6 Natchez Trace	Henderson;4-6 Natchez Trace
+ReportingUnit	Tennessee;Henderson County;3-7 Darden	Henderson;3-7 Darden
+ReportingUnit	Tennessee;Henderson County;6-8 Broad Street	Henderson;6-8 Broad Street
+ReportingUnit	Tennessee;Henderson County;7-9 Middleburg	Henderson;7-9 Middleburg
+ReportingUnit	Tennessee;Henderson County;3-10 Fire Station #10	Henderson;3-10 Fire Station #10
+ReportingUnit	Tennessee;Henderson County;7-11 Reagan	Henderson;7-11 Reagan
+ReportingUnit	Tennessee;Henderson County;7-12 Sardis	Henderson;7-12 Sardis
+ReportingUnit	Tennessee;Henderson County;7-13 Scotts Hill	Henderson;7-13 Scotts Hill
+ReportingUnit	Tennessee;Henderson County;2-14 South Haven	Henderson;2-14 South Haven
+ReportingUnit	Tennessee;Henderson County;2-15 Westover	Henderson;2-15 Westover
+ReportingUnit	Tennessee;Henry County;1-1 Puryear	Henry;1-1 Puryear
+ReportingUnit	Tennessee;Henry County;1-2 Cottage Grove	Henry;1-2 Cottage Grove
+ReportingUnit	Tennessee;Henry County;1-3 Buchanan	Henry;1-3 Buchanan
+ReportingUnit	Tennessee;Henry County;2-1 Henry	Henry;2-1 Henry
+ReportingUnit	Tennessee;Henry County;2-2 Mansfield	Henry;2-2 Mansfield
+ReportingUnit	Tennessee;Henry County;2-3 Oakland	Henry;2-3 Oakland
+ReportingUnit	Tennessee;Henry County;3-1 Russwood	Henry;3-1 Russwood
+ReportingUnit	Tennessee;Henry County;3-2 Springville	Henry;3-2 Springville
+ReportingUnit	Tennessee;Henry County;3-3 Jones Chapel	Henry;3-3 Jones Chapel
+ReportingUnit	Tennessee;Henry County;4-1 Grove	Henry;4-1 Grove
+ReportingUnit	Tennessee;Henry County;4-2 City Hall	Henry;4-2 City Hall
+ReportingUnit	Tennessee;Henry County;5-1 Henry Co High	Henry;5-1 Henry Co High
+ReportingUnit	Tennessee;Henry County;5-2 TN Tech Center	Henry;5-2 TN Tech Center
+ReportingUnit	Tennessee;Hickman County;1-1 Nunnelly	Hickman;1-1 Nunnelly
+ReportingUnit	Tennessee;Hickman County;1-2 Pinewood	Hickman;1-2 Pinewood
+ReportingUnit	Tennessee;Hickman County;2-2 Fairfield	Hickman;2-2 Fairfield
+ReportingUnit	Tennessee;Hickman County;2-3 East Bank	Hickman;2-3 East Bank
+ReportingUnit	Tennessee;Hickman County;3-1 East CC	Hickman;3-1 East CC
+ReportingUnit	Tennessee;Hickman County;4-1 Lake Benson	Hickman;4-1 Lake Benson
+ReportingUnit	Tennessee;Hickman County;5-1 Mt. Pleasant	Hickman;5-1 Mt. Pleasant
+ReportingUnit	Tennessee;Hickman County;5-2 Middle School	Hickman;5-2 Middle School
+ReportingUnit	Tennessee;Hickman County;5-3 Shady Grove	Hickman;5-3 Shady Grove
+ReportingUnit	Tennessee;Hickman County;6-1 Justice Center	Hickman;6-1 Justice Center
+ReportingUnit	Tennessee;Hickman County;7-1 Nunnelly	Hickman;7-1 Nunnelly
+ReportingUnit	Tennessee;Hickman County;7-2 Pleasantville	Hickman;7-2 Pleasantville
+ReportingUnit	Tennessee;Hickman County;7-3 Brushy	Hickman;7-3 Brushy
+ReportingUnit	Tennessee;Hickman County;7-4 Coble	Hickman;7-4 Coble
+ReportingUnit	Tennessee;Houston County;Stewart	Houston;Stewart
+ReportingUnit	Tennessee;Houston County;Tennessee Ridge	Houston;Tennessee Ridge
+ReportingUnit	Tennessee;Houston County;Erin	Houston;Erin
+ReportingUnit	Tennessee;Houston County;Arlington	Houston;Arlington
+ReportingUnit	Tennessee;Houston County;Erin Elementary	Houston;Erin Elementary
+ReportingUnit	Tennessee;Houston County;Houston Co Middle	Houston;Houston Co Middle
+ReportingUnit	Tennessee;Houston County;Griffins Chapel	Houston;Griffins Chapel
+ReportingUnit	Tennessee;Humphreys County;1-1 Jera	Humphreys;1-1 Jera
+ReportingUnit	Tennessee;Humphreys County;1-2 Compassion Church	Humphreys;1-2 Compassion Church
+ReportingUnit	Tennessee;Humphreys County;2-3 WFS	Humphreys;2-3 WFS
+ReportingUnit	Tennessee;Humphreys County;3-4 MLEC	Humphreys;3-4 MLEC
+ReportingUnit	Tennessee;Humphreys County;4-5 NJMC	Humphreys;4-5 NJMC
+ReportingUnit	Tennessee;Humphreys County;5-6 Wildwood	Humphreys;5-6 Wildwood
+ReportingUnit	Tennessee;Humphreys County;6-7 South McEwen	Humphreys;6-7 South McEwen
+ReportingUnit	Tennessee;Humphreys County;7-8 North McEwen	Humphreys;7-8 North McEwen
+ReportingUnit	Tennessee;Jackson County;1-1	Jackson;1-1
+ReportingUnit	Tennessee;Jackson County;1-2	Jackson;1-2
+ReportingUnit	Tennessee;Jackson County;2-1	Jackson;2-1
+ReportingUnit	Tennessee;Jackson County;2-2	Jackson;2-2
+ReportingUnit	Tennessee;Jackson County;3-1	Jackson;3-1
+ReportingUnit	Tennessee;Jackson County;3-2	Jackson;3-2
+ReportingUnit	Tennessee;Jackson County;4-1	Jackson;4-1
+ReportingUnit	Tennessee;Jackson County;4-2	Jackson;4-2
+ReportingUnit	Tennessee;Jackson County;5-1	Jackson;5-1
+ReportingUnit	Tennessee;Jackson County;5-2	Jackson;5-2
+ReportingUnit	Tennessee;Jackson County;6-1	Jackson;6-1
+ReportingUnit	Tennessee;Jackson County;6-2	Jackson;6-2
+ReportingUnit	Tennessee;Jefferson County;1 Dandridge ES	Jefferson;1 Dandridge ES
+ReportingUnit	Tennessee;Jefferson County;2 Piedmont	Jefferson;2 Piedmont
+ReportingUnit	Tennessee;Jefferson County;3 White Pine	Jefferson;3 White Pine
+ReportingUnit	Tennessee;Jefferson County;4 Jefferson ES	Jefferson;4 Jefferson ES
+ReportingUnit	Tennessee;Jefferson County;5 Jefferson Middle	Jefferson;5 Jefferson Middle
+ReportingUnit	Tennessee;Jefferson County;6 Rush Strong	Jefferson;6 Rush Strong
+ReportingUnit	Tennessee;Jefferson County;7 New Market	Jefferson;7 New Market
+ReportingUnit	Tennessee;Jefferson County;8-1 Chestnut Hill	Jefferson;8-1 Chestnut Hill
+ReportingUnit	Tennessee;Jefferson County;8-2 Swannsylvania	Jefferson;8-2 Swannsylvania
+ReportingUnit	Tennessee;Jefferson County;9 Talbott School	Jefferson;9 Talbott School
+ReportingUnit	Tennessee;Jefferson County;10 Jeff City Fire Dp	Jefferson;10 Jeff City Fire Dp
+ReportingUnit	Tennessee;Johnson County;1A Laurel	Johnson;1A Laurel
+ReportingUnit	Tennessee;Johnson County;1B Cold Springs	Johnson;1B Cold Springs
+ReportingUnit	Tennessee;Johnson County;2 Forge/Shouns	Johnson;2 Forge/Shouns
+ReportingUnit	Tennessee;Johnson County;3A Trade	Johnson;3A Trade
+ReportingUnit	Tennessee;Johnson County;3B Neva	Johnson;3B Neva
+ReportingUnit	Tennessee;Johnson County;4A Dry Run	Johnson;4A Dry Run
+ReportingUnit	Tennessee;Johnson County;4B Butler	Johnson;4B Butler
+ReportingUnit	Tennessee;Johnson County;5 Doe	Johnson;5 Doe
+ReportingUnit	Tennessee;Johnson County;6 Shady	Johnson;6 Shady
+ReportingUnit	Tennessee;Johnson County;7 City	Johnson;7 City
+ReportingUnit	Tennessee;Knox County;06 Green School	Knox;06 Green School
+ReportingUnit	Tennessee;Knox County;09 Eternal Life Harvest	Knox;09 Eternal Life Harvest
+ReportingUnit	Tennessee;Knox County;10N Fort Sanders	Knox;10N Fort Sanders
+ReportingUnit	Tennessee;Knox County;10S Howard Baker Center	Knox;10S Howard Baker Center
+ReportingUnit	Tennessee;Knox County;10W Howard Baker Center	Knox;10W Howard Baker Center
+ReportingUnit	Tennessee;Knox County;11 Central UMC	Knox;11 Central UMC
+ReportingUnit	Tennessee;Knox County;12 Eastport	Knox;12 Eastport
+ReportingUnit	Tennessee;Knox County;13 Fair Garden	Knox;13 Fair Garden
+ReportingUnit	Tennessee;Knox County;14 Austin-East	Knox;14 Austin-East
+ReportingUnit	Tennessee;Knox County;15 John T. O'Connor	Knox;15 John T. O'Connor
+ReportingUnit	Tennessee;Knox County;16 Larry Cox Sr Center	Knox;16 Larry Cox Sr Center
+ReportingUnit	Tennessee;Knox County;17 Christenberry	Knox;17 Christenberry
+ReportingUnit	Tennessee;Knox County;18 Lincoln Park	Knox;18 Lincoln Park
+ReportingUnit	Tennessee;Knox County;19E Thrive Lonsdale	Knox;19E Thrive Lonsdale
+ReportingUnit	Tennessee;Knox County;19W Thrive Lonsdale	Knox;19W Thrive Lonsdale
+ReportingUnit	Tennessee;Knox County;20 Beaumont	Knox;20 Beaumont
+ReportingUnit	Tennessee;Knox County;23 Westview	Knox;23 Westview
+ReportingUnit	Tennessee;Knox County;24Q Sequoyah Hills	Knox;24Q Sequoyah Hills
+ReportingUnit	Tennessee;Knox County;25 South Knox CC	Knox;25 South Knox CC
+ReportingUnit	Tennessee;Knox County;26 Dogwood	Knox;26 Dogwood
+ReportingUnit	Tennessee;Knox County;27 South Knox	Knox;27 South Knox
+ReportingUnit	Tennessee;Knox County;29 Anderson	Knox;29 Anderson
+ReportingUnit	Tennessee;Knox County;30 Sarah Moore Greene	Knox;30 Sarah Moore Greene
+ReportingUnit	Tennessee;Knox County;31 Chilhowee	Knox;31 Chilhowee
+ReportingUnit	Tennessee;Knox County;32 Spring Hill	Knox;32 Spring Hill
+ReportingUnit	Tennessee;Knox County;33 Richard Yoakley	Knox;33 Richard Yoakley
+ReportingUnit	Tennessee;Knox County;34 Central	Knox;34 Central
+ReportingUnit	Tennessee;Knox County;35 Shannondale	Knox;35 Shannondale
+ReportingUnit	Tennessee;Knox County;36 Gresham	Knox;36 Gresham
+ReportingUnit	Tennessee;Knox County;37 Inskip Elementary	Knox;37 Inskip Elementary
+ReportingUnit	Tennessee;Knox County;39 Inskip Rec Center	Knox;39 Inskip Rec Center
+ReportingUnit	Tennessee;Knox County;40 Norwood	Knox;40 Norwood
+ReportingUnit	Tennessee;Knox County;41 Norwood	Knox;41 Norwood
+ReportingUnit	Tennessee;Knox County;42 Pleasant Ridge	Knox;42 Pleasant Ridge
+ReportingUnit	Tennessee;Knox County;43 West Haven	Knox;43 West Haven
+ReportingUnit	Tennessee;Knox County;44 Ridgedale	Knox;44 Ridgedale
+ReportingUnit	Tennessee;Knox County;45 Bearden Middle	Knox;45 Bearden Middle
+ReportingUnit	Tennessee;Knox County;46 1st Nazarene	Knox;46 1st Nazarene
+ReportingUnit	Tennessee;Knox County;47 Bearden High	Knox;47 Bearden High
+ReportingUnit	Tennessee;Knox County;48 Pond Gap	Knox;48 Pond Gap
+ReportingUnit	Tennessee;Knox County;49 Bearden Elementary	Knox;49 Bearden Elementary
+ReportingUnit	Tennessee;Knox County;50N West High	Knox;50N West High
+ReportingUnit	Tennessee;Knox County;50S West High	Knox;50S West High
+ReportingUnit	Tennessee;Knox County;51 Deane Hill Rec Ctr	Knox;51 Deane Hill Rec Ctr
+ReportingUnit	Tennessee;Knox County;55 Lonas	Knox;55 Lonas
+ReportingUnit	Tennessee;Knox County;56 Heiskell	Knox;56 Heiskell
+ReportingUnit	Tennessee;Knox County;57 Hills	Knox;57 Hills
+ReportingUnit	Tennessee;Knox County;58N Pedigo	Knox;58N Pedigo
+ReportingUnit	Tennessee;Knox County;58S Pedigo	Knox;58S Pedigo
+ReportingUnit	Tennessee;Knox County;59 Brickey	Knox;59 Brickey
+ReportingUnit	Tennessee;Knox County;60 Fort Sumter	Knox;60 Fort Sumter
+ReportingUnit	Tennessee;Knox County;61 Halls	Knox;61 Halls
+ReportingUnit	Tennessee;Knox County;62 Hardin Valley	Knox;62 Hardin Valley
+ReportingUnit	Tennessee;Knox County;63 Karns	Knox;63 Karns
+ReportingUnit	Tennessee;Knox County;63N Karns North	Knox;63N Karns North
+ReportingUnit	Tennessee;Knox County;64 Solway	Knox;64 Solway
+ReportingUnit	Tennessee;Knox County;65E Shoreline	Knox;65E Shoreline
+ReportingUnit	Tennessee;Knox County;65N Concord North	Knox;65N Concord North
+ReportingUnit	Tennessee;Knox County;65W Farragut Town Hall	Knox;65W Farragut Town Hall
+ReportingUnit	Tennessee;Knox County;66N Farragut I	Knox;66N Farragut I
+ReportingUnit	Tennessee;Knox County;66S Farragut II	Knox;66S Farragut II
+ReportingUnit	Tennessee;Knox County;67 North Cedar Bluff	Knox;67 North Cedar Bluff
+ReportingUnit	Tennessee;Knox County;68 South Cedar Bluff	Knox;68 South Cedar Bluff
+ReportingUnit	Tennessee;Knox County;68E East Cedar Bluff	Knox;68E East Cedar Bluff
+ReportingUnit	Tennessee;Knox County;69E Bluegrass	Knox;69E Bluegrass
+ReportingUnit	Tennessee;Knox County;69N West Valley	Knox;69N West Valley
+ReportingUnit	Tennessee;Knox County;69S Northshore	Knox;69S Northshore
+ReportingUnit	Tennessee;Knox County;69W A. L. Lotts	Knox;69W A. L. Lotts
+ReportingUnit	Tennessee;Knox County;70E Amherst	Knox;70E Amherst
+ReportingUnit	Tennessee;Knox County;70W Ball Camp	Knox;70W Ball Camp
+ReportingUnit	Tennessee;Knox County;71 Rocky Hill	Knox;71 Rocky Hill
+ReportingUnit	Tennessee;Knox County;72 Dante	Knox;72 Dante
+ReportingUnit	Tennessee;Knox County;73 Powell	Knox;73 Powell
+ReportingUnit	Tennessee;Knox County;74 Shannondale	Knox;74 Shannondale
+ReportingUnit	Tennessee;Knox County;76 Sunnyview	Knox;76 Sunnyview
+ReportingUnit	Tennessee;Knox County;77 Ramsey	Knox;77 Ramsey
+ReportingUnit	Tennessee;Knox County;78 Riverdale	Knox;78 Riverdale
+ReportingUnit	Tennessee;Knox County;79 Dora Kennedy	Knox;79 Dora Kennedy
+ReportingUnit	Tennessee;Knox County;80 Corryton	Knox;80 Corryton
+ReportingUnit	Tennessee;Knox County;81 Gibbs	Knox;81 Gibbs
+ReportingUnit	Tennessee;Knox County;82 Ellistown	Knox;82 Ellistown
+ReportingUnit	Tennessee;Knox County;84 Ritta	Knox;84 Ritta
+ReportingUnit	Tennessee;Knox County;85 Skaggston	Knox;85 Skaggston
+ReportingUnit	Tennessee;Knox County;86 Carter	Knox;86 Carter
+ReportingUnit	Tennessee;Knox County;87 Thorngrove	Knox;87 Thorngrove
+ReportingUnit	Tennessee;Knox County;89 Mt. Olive	Knox;89 Mt. Olive
+ReportingUnit	Tennessee;Knox County;90 South Doyle	Knox;90 South Doyle
+ReportingUnit	Tennessee;Knox County;92 Gap Creek	Knox;92 Gap Creek
+ReportingUnit	Tennessee;Knox County;93 Hopewell	Knox;93 Hopewell
+ReportingUnit	Tennessee;Lake County;1 Tiptonville SR Citizens	Lake;1 Tiptonville SR Citizens
+ReportingUnit	Tennessee;Lake County;2 Courthouse	Lake;2 Courthouse
+ReportingUnit	Tennessee;Lake County;3 Lake Co Middle	Lake;3 Lake Co Middle
+ReportingUnit	Tennessee;Lauderdale County;Henning 1	Lauderdale;Henning 1
+ReportingUnit	Tennessee;Lauderdale County;McBride 1	Lauderdale;McBride 1
+ReportingUnit	Tennessee;Lauderdale County;Ripley 2	Lauderdale;Ripley 2
+ReportingUnit	Tennessee;Lauderdale County;Ripley 3	Lauderdale;Ripley 3
+ReportingUnit	Tennessee;Lauderdale County;Ripley 4	Lauderdale;Ripley 4
+ReportingUnit	Tennessee;Lauderdale County;Lightfoot 5	Lauderdale;Lightfoot 5
+ReportingUnit	Tennessee;Lauderdale County;Central 6	Lauderdale;Central 6
+ReportingUnit	Tennessee;Lauderdale County;Edith 7	Lauderdale;Edith 7
+ReportingUnit	Tennessee;Lauderdale County;Gates 7	Lauderdale;Gates 7
+ReportingUnit	Tennessee;Lauderdale County;Halls 8	Lauderdale;Halls 8
+ReportingUnit	Tennessee;Lawrence County;01-1 St. Joseph	Lawrence;01-1 St. Joseph
+ReportingUnit	Tennessee;Lawrence County;01-2 West Loretto	Lawrence;01-2 West Loretto
+ReportingUnit	Tennessee;Lawrence County;02-1 Loretto Civ Ctr	Lawrence;02-1 Loretto Civ Ctr
+ReportingUnit	Tennessee;Lawrence County;03-1 SE Lawrence	Lawrence;03-1 SE Lawrence
+ReportingUnit	Tennessee;Lawrence County;03-2 Centerpoint	Lawrence;03-2 Centerpoint
+ReportingUnit	Tennessee;Lawrence County;04-1 Crossroads	Lawrence;04-1 Crossroads
+ReportingUnit	Tennessee;Lawrence County;05-1 Leoma	Lawrence;05-1 Leoma
+ReportingUnit	Tennessee;Lawrence County;05-2 Gandy	Lawrence;05-2 Gandy
+ReportingUnit	Tennessee;Lawrence County;06-1 Iron City	Lawrence;06-1 Iron City
+ReportingUnit	Tennessee;Lawrence County;06-2 West Point	Lawrence;06-2 West Point
+ReportingUnit	Tennessee;Lawrence County;07-1 Lawrenceburg	Lawrence;07-1 Lawrenceburg
+ReportingUnit	Tennessee;Lawrence County;08-1 New Prospect	Lawrence;08-1 New Prospect
+ReportingUnit	Tennessee;Lawrence County;09-1 Ethridge	Lawrence;09-1 Ethridge
+ReportingUnit	Tennessee;Lawrence County;09-2 Mars Hill	Lawrence;09-2 Mars Hill
+ReportingUnit	Tennessee;Lawrence County;10-1 Howards	Lawrence;10-1 Howards
+ReportingUnit	Tennessee;Lawrence County;11-1 Summertown	Lawrence;11-1 Summertown
+ReportingUnit	Tennessee;Lawrence County;12-1 Center	Lawrence;12-1 Center
+ReportingUnit	Tennessee;Lawrence County;12-2 Henryville	Lawrence;12-2 Henryville
+ReportingUnit	Tennessee;Lawrence County;13-1 West End	Lawrence;13-1 West End
+ReportingUnit	Tennessee;Lawrence County;14-1 Crawfish Valley	Lawrence;14-1 Crawfish Valley
+ReportingUnit	Tennessee;Lawrence County;15-1 David Crockett	Lawrence;15-1 David Crockett
+ReportingUnit	Tennessee;Lawrence County;16-1 Rotary Park	Lawrence;16-1 Rotary Park
+ReportingUnit	Tennessee;Lawrence County;17-1 Sowell	Lawrence;17-1 Sowell
+ReportingUnit	Tennessee;Lawrence County;18-1 PSCoC	Lawrence;18-1 PSCoC
+ReportingUnit	Tennessee;Lewis County;1-1	Lewis;1-1
+ReportingUnit	Tennessee;Lewis County;2-1	Lewis;2-1
+ReportingUnit	Tennessee;Lewis County;3-1	Lewis;3-1
+ReportingUnit	Tennessee;Lewis County;4-1	Lewis;4-1
+ReportingUnit	Tennessee;Lewis County;5-1	Lewis;5-1
+ReportingUnit	Tennessee;Lewis County;6-1	Lewis;6-1
+ReportingUnit	Tennessee;Lewis County;7-1	Lewis;7-1
+ReportingUnit	Tennessee;Lewis County;8-1	Lewis;8-1
+ReportingUnit	Tennessee;Lewis County;9-1	Lewis;9-1
+ReportingUnit	Tennessee;Lincoln County;1-1 Blanche	Lincoln;1-1 Blanche
+ReportingUnit	Tennessee;Lincoln County;1-2 Molino	Lincoln;1-2 Molino
+ReportingUnit	Tennessee;Lincoln County;1-3 Taft	Lincoln;1-3 Taft
+ReportingUnit	Tennessee;Lincoln County;2-1 Boonshill	Lincoln;2-1 Boonshill
+ReportingUnit	Tennessee;Lincoln County;2-2 Howell	Lincoln;2-2 Howell
+ReportingUnit	Tennessee;Lincoln County;2-3 Petersburg	Lincoln;2-3 Petersburg
+ReportingUnit	Tennessee;Lincoln County;3-1 Recreation Center	Lincoln;3-1 Recreation Center
+ReportingUnit	Tennessee;Lincoln County;3-2 Liberty	Lincoln;3-2 Liberty
+ReportingUnit	Tennessee;Lincoln County;4-1 Maranatha	Lincoln;4-1 Maranatha
+ReportingUnit	Tennessee;Lincoln County;4-2 FNB	Lincoln;4-2 FNB
+ReportingUnit	Tennessee;Lincoln County;5-1 Calvary	Lincoln;5-1 Calvary
+ReportingUnit	Tennessee;Lincoln County;5-2 Armory	Lincoln;5-2 Armory
+ReportingUnit	Tennessee;Lincoln County;6-1 Fayetteville CPC	Lincoln;6-1 Fayetteville CPC
+ReportingUnit	Tennessee;Lincoln County;6-2 Belleville	Lincoln;6-2 Belleville
+ReportingUnit	Tennessee;Lincoln County;6-3 Mulberry	Lincoln;6-3 Mulberry
+ReportingUnit	Tennessee;Lincoln County;7-1 Elora	Lincoln;7-1 Elora
+ReportingUnit	Tennessee;Lincoln County;7-2 Flintville	Lincoln;7-2 Flintville
+ReportingUnit	Tennessee;Lincoln County;7-3 Kelso	Lincoln;7-3 Kelso
+ReportingUnit	Tennessee;Lincoln County;8-1 Lincoln	Lincoln;8-1 Lincoln
+ReportingUnit	Tennessee;Lincoln County;8-2 South Lincoln	Lincoln;8-2 South Lincoln
+ReportingUnit	Tennessee;Loudon County;Loudon Mt Zion	Loudon;Loudon Mt Zion
+ReportingUnit	Tennessee;Loudon County;Loudon	Loudon;Loudon
+ReportingUnit	Tennessee;Loudon County;Loudon Outside	Loudon;Loudon Outside
+ReportingUnit	Tennessee;Loudon County;Lenoir City	Loudon;Lenoir City
+ReportingUnit	Tennessee;Loudon County;Lenoir City Outside	Loudon;Lenoir City Outside
+ReportingUnit	Tennessee;Loudon County;Greenback	Loudon;Greenback
+ReportingUnit	Tennessee;Loudon County;Glendale	Loudon;Glendale
+ReportingUnit	Tennessee;Loudon County;Davis	Loudon;Davis
+ReportingUnit	Tennessee;Loudon County;Luttrell	Loudon;Luttrell
+ReportingUnit	Tennessee;Loudon County;Philadelphia	Loudon;Philadelphia
+ReportingUnit	Tennessee;Loudon County;Browder	Loudon;Browder
+ReportingUnit	Tennessee;Loudon County;Eaton	Loudon;Eaton
+ReportingUnit	Tennessee;Loudon County;Highland Park	Loudon;Highland Park
+ReportingUnit	Tennessee;Loudon County;Tellico V. North	Loudon;Tellico V. North
+ReportingUnit	Tennessee;Loudon County;Tellico V. South	Loudon;Tellico V. South
+ReportingUnit	Tennessee;Macon County;Red Boiling Springs	Macon;Red Boiling Springs
+ReportingUnit	Tennessee;Macon County;Willette	Macon;Willette
+ReportingUnit	Tennessee;Macon County;County High School	Macon;County High School
+ReportingUnit	Tennessee;Macon County;County Junior High	Macon;County Junior High
+ReportingUnit	Tennessee;Macon County;Westside	Macon;Westside
+ReportingUnit	Tennessee;Macon County;Cross Roads	Macon;Cross Roads
+ReportingUnit	Tennessee;Macon County;Armory	Macon;Armory
+ReportingUnit	Tennessee;Macon County;Welcome Center	Macon;Welcome Center
+ReportingUnit	Tennessee;Macon County;Central	Macon;Central
+ReportingUnit	Tennessee;Macon County;Lafayette	Macon;Lafayette
+ReportingUnit	Tennessee;Madison County;1-1 Civic Center	Madison;1-1 Civic Center
+ReportingUnit	Tennessee;Madison County;1-2 Mt Moriah	Madison;1-2 Mt Moriah
+ReportingUnit	Tennessee;Madison County;2-1 Alexander	Madison;2-1 Alexander
+ReportingUnit	Tennessee;Madison County;2-2 Aldersgate	Madison;2-2 Aldersgate
+ReportingUnit	Tennessee;Madison County;2-3 Montessori	Madison;2-3 Montessori
+ReportingUnit	Tennessee;Madison County;3-1 Board of Education	Madison;3-1 Board of Education
+ReportingUnit	Tennessee;Madison County;3-2 Old Bells Fire Statio	Madison;3-2 Old Bells Fire Statio
+ReportingUnit	Tennessee;Madison County;3-3 MCVS	Madison;3-3 MCVS
+ReportingUnit	Tennessee;Madison County;4-1 Masonic Lodge	Madison;4-1 Masonic Lodge
+ReportingUnit	Tennessee;Madison County;4-2 Andrew Jackson	Madison;4-2 Andrew Jackson
+ReportingUnit	Tennessee;Madison County;4-3 Festivities	Madison;4-3 Festivities
+ReportingUnit	Tennessee;Madison County;5-1 JCTS	Madison;5-1 JCTS
+ReportingUnit	Tennessee;Madison County;5-2 Macedonia	Madison;5-2 Macedonia
+ReportingUnit	Tennessee;Madison County;5-3 North Parkway	Madison;5-3 North Parkway
+ReportingUnit	Tennessee;Madison County;6-1 South Side	Madison;6-1 South Side
+ReportingUnit	Tennessee;Madison County;6-2 South	Madison;6-2 South
+ReportingUnit	Tennessee;Madison County;6-3 Malesus	Madison;6-3 Malesus
+ReportingUnit	Tennessee;Madison County;6-4 Medon	Madison;6-4 Medon
+ReportingUnit	Tennessee;Madison County;7-1 UT Experiment Station	Madison;7-1 UT Experiment Station
+ReportingUnit	Tennessee;Madison County;7-2 TN Tech Ctr	Madison;7-2 TN Tech Ctr
+ReportingUnit	Tennessee;Madison County;7-3 Denmark	Madison;7-3 Denmark
+ReportingUnit	Tennessee;Madison County;7-4 Mercer	Madison;7-4 Mercer
+ReportingUnit	Tennessee;Madison County;8-1 Beech Bluff	Madison;8-1 Beech Bluff
+ReportingUnit	Tennessee;Madison County;8-2 Browns	Madison;8-2 Browns
+ReportingUnit	Tennessee;Madison County;8-3 Mifflin	Madison;8-3 Mifflin
+ReportingUnit	Tennessee;Madison County;8-4 East Union	Madison;8-4 East Union
+ReportingUnit	Tennessee;Madison County;8-5 Lesters	Madison;8-5 Lesters
+ReportingUnit	Tennessee;Madison County;9-1 VFW	Madison;9-1 VFW
+ReportingUnit	Tennessee;Madison County;9-2 Pope	Madison;9-2 Pope
+ReportingUnit	Tennessee;Madison County;9-3 Three Way	Madison;9-3 Three Way
+ReportingUnit	Tennessee;Madison County;10-1 Spring Creek	Madison;10-1 Spring Creek
+ReportingUnit	Tennessee;Madison County;10-2 North East	Madison;10-2 North East
+ReportingUnit	Tennessee;Madison County;10-3 North Side	Madison;10-3 North Side
+ReportingUnit	Tennessee;Marion County;South Pittsburg	Marion;South Pittsburg
+ReportingUnit	Tennessee;Marion County;New Hope	Marion;New Hope
+ReportingUnit	Tennessee;Marion County;Orme	Marion;Orme
+ReportingUnit	Tennessee;Marion County;Lodge	Marion;Lodge
+ReportingUnit	Tennessee;Marion County;Monteagle	Marion;Monteagle
+ReportingUnit	Tennessee;Marion County;Kimball	Marion;Kimball
+ReportingUnit	Tennessee;Marion County;Shellmound	Marion;Shellmound
+ReportingUnit	Tennessee;Marion County;Haletown-Ladd	Marion;Haletown-Ladd
+ReportingUnit	Tennessee;Marion County;Jasper	Marion;Jasper
+ReportingUnit	Tennessee;Marion County;Foster Falls	Marion;Foster Falls
+ReportingUnit	Tennessee;Marion County;Whitwell Mountain	Marion;Whitwell Mountain
+ReportingUnit	Tennessee;Marion County;Sequatchie	Marion;Sequatchie
+ReportingUnit	Tennessee;Marion County;Walden's Ridge	Marion;Walden's Ridge
+ReportingUnit	Tennessee;Marion County;Elder Mountain	Marion;Elder Mountain
+ReportingUnit	Tennessee;Marion County;River Canyon	Marion;River Canyon
+ReportingUnit	Tennessee;Marion County;Whitwell	Marion;Whitwell
+ReportingUnit	Tennessee;Marion County;Powells Crossroad	Marion;Powells Crossroad
+ReportingUnit	Tennessee;Marshall County;1 Chapel Hill	Marshall;1 Chapel Hill
+ReportingUnit	Tennessee;Marshall County;2 Henry Horton Park	Marshall;2 Henry Horton Park
+ReportingUnit	Tennessee;Marshall County;3 Belfast	Marshall;3 Belfast
+ReportingUnit	Tennessee;Marshall County;4 Cornersville	Marshall;4 Cornersville
+ReportingUnit	Tennessee;Marshall County;5 Recreation Center	Marshall;5 Recreation Center
+ReportingUnit	Tennessee;Marshall County;6 Parkview	Marshall;6 Parkview
+ReportingUnit	Tennessee;Marshall County;7 Hardison	Marshall;7 Hardison
+ReportingUnit	Tennessee;Marshall County;8 Lewisburg Gas	Marshall;8 Lewisburg Gas
+ReportingUnit	Tennessee;Marshall County;9 McKnight Center	Marshall;9 McKnight Center
+ReportingUnit	Tennessee;Maury County;Riverside 1-1	Maury;Riverside 1-1
+ReportingUnit	Tennessee;Maury County;West End 1-2	Maury;West End 1-2
+ReportingUnit	Tennessee;Maury County;First Family 2-1	Maury;First Family 2-1
+ReportingUnit	Tennessee;Maury County;Highland 2-2	Maury;Highland 2-2
+ReportingUnit	Tennessee;Maury County;College Hill 3-1	Maury;College Hill 3-1
+ReportingUnit	Tennessee;Maury County;St. Catherine 4-1	Maury;St. Catherine 4-1
+ReportingUnit	Tennessee;Maury County;CP Church 5-1	Maury;CP Church 5-1
+ReportingUnit	Tennessee;Maury County;Neapolis 5-2	Maury;Neapolis 5-2
+ReportingUnit	Tennessee;Maury County;Santa Fe 6-1	Maury;Santa Fe 6-1
+ReportingUnit	Tennessee;Maury County;Spring Hill MS 6-2	Maury;Spring Hill MS 6-2
+ReportingUnit	Tennessee;Maury County;Theta 6-3	Maury;Theta 6-3
+ReportingUnit	Tennessee;Maury County;Armory 7-1	Maury;Armory 7-1
+ReportingUnit	Tennessee;Maury County;Hampshire 7-2	Maury;Hampshire 7-2
+ReportingUnit	Tennessee;Maury County;Bear Creek 8-1	Maury;Bear Creek 8-1
+ReportingUnit	Tennessee;Maury County;Culleoka 8-2	Maury;Culleoka 8-2
+ReportingUnit	Tennessee;Maury County;Bigbyville 9-1	Maury;Bigbyville 9-1
+ReportingUnit	Tennessee;Maury County;Pleasant Heights 9-2	Maury;Pleasant Heights 9-2
+ReportingUnit	Tennessee;Maury County;Mt. Pleasant 10-1	Maury;Mt. Pleasant 10-1
+ReportingUnit	Tennessee;Maury County;Rally Hill 11-1	Maury;Rally Hill 11-1
+ReportingUnit	Tennessee;Maury County;Spring Hill 11-2	Maury;Spring Hill 11-2
+ReportingUnit	Tennessee;Maury County;Northfield 11-3	Maury;Northfield 11-3
+ReportingUnit	Tennessee;McMinn County;City Park	McMinn;City Park
+ReportingUnit	Tennessee;McMinn County;Etowah	McMinn;Etowah
+ReportingUnit	Tennessee;McMinn County;Central	McMinn;Central
+ReportingUnit	Tennessee;McMinn County;Englewood	McMinn;Englewood
+ReportingUnit	Tennessee;McMinn County;Rogers Creek	McMinn;Rogers Creek
+ReportingUnit	Tennessee;McMinn County;Riceville	McMinn;Riceville
+ReportingUnit	Tennessee;McMinn County;Calhoun	McMinn;Calhoun
+ReportingUnit	Tennessee;McMinn County;Niota	McMinn;Niota
+ReportingUnit	Tennessee;McMinn County;Ingleside	McMinn;Ingleside
+ReportingUnit	Tennessee;McMinn County;TCAT	McMinn;TCAT
+ReportingUnit	Tennessee;McMinn County;Courthouse	McMinn;Courthouse
+ReportingUnit	Tennessee;McMinn County;North City	McMinn;North City
+ReportingUnit	Tennessee;McMinn County;Jones Chapel	McMinn;Jones Chapel
+ReportingUnit	Tennessee;McMinn County;E K Baker	McMinn;E K Baker
+ReportingUnit	Tennessee;McMinn County;Mountain View	McMinn;Mountain View
+ReportingUnit	Tennessee;McNairy County;Bethel Springs 1-1	McNairy;Bethel Springs 1-1
+ReportingUnit	Tennessee;McNairy County;Finger 1-2	McNairy;Finger 1-2
+ReportingUnit	Tennessee;McNairy County;McNairy 1-3	McNairy;McNairy 1-3
+ReportingUnit	Tennessee;McNairy County;Adamsville 2-1	McNairy;Adamsville 2-1
+ReportingUnit	Tennessee;McNairy County;Lawton 2-2	McNairy;Lawton 2-2
+ReportingUnit	Tennessee;McNairy County;Leapwood 3-1	McNairy;Leapwood 3-1
+ReportingUnit	Tennessee;McNairy County;Northeast 3-2	McNairy;Northeast 3-2
+ReportingUnit	Tennessee;McNairy County;Purdy 3-3	McNairy;Purdy 3-3
+ReportingUnit	Tennessee;McNairy County;North Selmer 4-1	McNairy;North Selmer 4-1
+ReportingUnit	Tennessee;McNairy County;Rose Creek 4-2	McNairy;Rose Creek 4-2
+ReportingUnit	Tennessee;McNairy County;East View 5-2	McNairy;East View 5-2
+ReportingUnit	Tennessee;McNairy County;Guys 5-3	McNairy;Guys 5-3
+ReportingUnit	Tennessee;McNairy County;Ramer 5-4	McNairy;Ramer 5-4
+ReportingUnit	Tennessee;McNairy County;Courthouse SE 6-1	McNairy;Courthouse SE 6-1
+ReportingUnit	Tennessee;McNairy County;Michie 7-1	McNairy;Michie 7-1
+ReportingUnit	Tennessee;McNairy County;Stantonville 7-2	McNairy;Stantonville 7-2
+ReportingUnit	Tennessee;Meigs County;1 Eastview	Meigs;1 Eastview
+ReportingUnit	Tennessee;Meigs County;2 Meigs South	Meigs;2 Meigs South
+ReportingUnit	Tennessee;Meigs County;3-1 City Hall	Meigs;3-1 City Hall
+ReportingUnit	Tennessee;Meigs County;3-2 Courthouse	Meigs;3-2 Courthouse
+ReportingUnit	Tennessee;Meigs County;4 Meigs North	Meigs;4 Meigs North
+ReportingUnit	Tennessee;Meigs County;5 Ten Mile	Meigs;5 Ten Mile
+ReportingUnit	Tennessee;Monroe County;01	Monroe;01
+ReportingUnit	Tennessee;Monroe County;02	Monroe;02
+ReportingUnit	Tennessee;Monroe County;03	Monroe;03
+ReportingUnit	Tennessee;Monroe County;04	Monroe;04
+ReportingUnit	Tennessee;Monroe County;05	Monroe;05
+ReportingUnit	Tennessee;Monroe County;06	Monroe;06
+ReportingUnit	Tennessee;Monroe County;07	Monroe;07
+ReportingUnit	Tennessee;Monroe County;08	Monroe;08
+ReportingUnit	Tennessee;Monroe County;09	Monroe;09
+ReportingUnit	Tennessee;Monroe County;10	Monroe;10
+ReportingUnit	Tennessee;Monroe County;11	Monroe;11
+ReportingUnit	Tennessee;Monroe County;12	Monroe;12
+ReportingUnit	Tennessee;Monroe County;14	Monroe;14
+ReportingUnit	Tennessee;Montgomery County;1A St B ES	Montgomery;1A St B ES
+ReportingUnit	Tennessee;Montgomery County;1B Emmanuel	Montgomery;1B Emmanuel
+ReportingUnit	Tennessee;Montgomery County;2A St B MC	Montgomery;2A St B MC
+ReportingUnit	Tennessee;Montgomery County;2B St B CC	Montgomery;2B St B CC
+ReportingUnit	Tennessee;Montgomery County;3 East Montgomery	Montgomery;3 East Montgomery
+ReportingUnit	Tennessee;Montgomery County;4A MCMS	Montgomery;4A MCMS
+ReportingUnit	Tennessee;Montgomery County;4B WR Event Center	Montgomery;4B WR Event Center
+ReportingUnit	Tennessee;Montgomery County;5A Smith	Montgomery;5A Smith
+ReportingUnit	Tennessee;Montgomery County;5B Madison	Montgomery;5B Madison
+ReportingUnit	Tennessee;Montgomery County;6A Cumberland	Montgomery;6A Cumberland
+ReportingUnit	Tennessee;Montgomery County;6B Bethel	Montgomery;6B Bethel
+ReportingUnit	Tennessee;Montgomery County;7 Woodlawn	Montgomery;7 Woodlawn
+ReportingUnit	Tennessee;Montgomery County;8A Bethel	Montgomery;8A Bethel
+ReportingUnit	Tennessee;Montgomery County;8B Barkers Mill	Montgomery;8B Barkers Mill
+ReportingUnit	Tennessee;Montgomery County;9 Outlaw	Montgomery;9 Outlaw
+ReportingUnit	Tennessee;Montgomery County;10 Minglewood	Montgomery;10 Minglewood
+ReportingUnit	Tennessee;Montgomery County;11 Northwest	Montgomery;11 Northwest
+ReportingUnit	Tennessee;Montgomery County;12 Ringgold	Montgomery;12 Ringgold
+ReportingUnit	Tennessee;Montgomery County;13 Byrns Darden	Montgomery;13 Byrns Darden
+ReportingUnit	Tennessee;Montgomery County;14 Glenellen	Montgomery;14 Glenellen
+ReportingUnit	Tennessee;Montgomery County;15 Sango	Montgomery;15 Sango
+ReportingUnit	Tennessee;Montgomery County;16 New Providence	Montgomery;16 New Providence
+ReportingUnit	Tennessee;Montgomery County;17 Grace	Montgomery;17 Grace
+ReportingUnit	Tennessee;Montgomery County;18 Hazelwood	Montgomery;18 Hazelwood
+ReportingUnit	Tennessee;Montgomery County;19 Oakland	Montgomery;19 Oakland
+ReportingUnit	Tennessee;Montgomery County;20A Clarksville	Montgomery;20A Clarksville
+ReportingUnit	Tennessee;Montgomery County;20B Barksdale	Montgomery;20B Barksdale
+ReportingUnit	Tennessee;Montgomery County;21A Cumberland	Montgomery;21A Cumberland
+ReportingUnit	Tennessee;Montgomery County;21B Hilldale	Montgomery;21B Hilldale
+ReportingUnit	Tennessee;Montgomery County;Absentee	Montgomery;Absentee
+ReportingUnit	Tennessee;Moore County;1 Masonic Lodge	Moore;1 Masonic Lodge
+ReportingUnit	Tennessee;Moore County;2 High School	Moore;2 High School
+ReportingUnit	Tennessee;Moore County;3 Moore County Bldg	Moore;3 Moore County Bldg
+ReportingUnit	Tennessee;Moore County;4 Public Library	Moore;4 Public Library
+ReportingUnit	Tennessee;Moore County;5 Motlow College	Moore;5 Motlow College
+ReportingUnit	Tennessee;Morgan County;1-1 Coalfield	Morgan;1-1 Coalfield
+ReportingUnit	Tennessee;Morgan County;2-1 Oakdale High	Morgan;2-1 Oakdale High
+ReportingUnit	Tennessee;Morgan County;2-2 Oakdale	Morgan;2-2 Oakdale
+ReportingUnit	Tennessee;Morgan County;3-1 Wartburg	Morgan;3-1 Wartburg
+ReportingUnit	Tennessee;Morgan County;4-1 Lancing	Morgan;4-1 Lancing
+ReportingUnit	Tennessee;Morgan County;4-2 Deer Lodge	Morgan;4-2 Deer Lodge
+ReportingUnit	Tennessee;Morgan County;4-3 Chestnut Ridge	Morgan;4-3 Chestnut Ridge
+ReportingUnit	Tennessee;Morgan County;5-1 Sunbright	Morgan;5-1 Sunbright
+ReportingUnit	Tennessee;Morgan County;5-2 Burrville	Morgan;5-2 Burrville
+ReportingUnit	Tennessee;Morgan County;6-1 Kellys	Morgan;6-1 Kellys
+ReportingUnit	Tennessee;Morgan County;6-2 Petros	Morgan;6-2 Petros
+ReportingUnit	Tennessee;Morgan County;6-3 Mossy Grove	Morgan;6-3 Mossy Grove
+ReportingUnit	Tennessee;Obion County;1-1 South Fulton	Obion;1-1 South Fulton
+ReportingUnit	Tennessee;Obion County;2-1 Eddie Cox Sr Ctr	Obion;2-1 Eddie Cox Sr Ctr
+ReportingUnit	Tennessee;Obion County;2-4 Woodland	Obion;2-4 Woodland
+ReportingUnit	Tennessee;Obion County;3-2 Kenton	Obion;3-2 Kenton
+ReportingUnit	Tennessee;Obion County;3-4 Rives	Obion;3-4 Rives
+ReportingUnit	Tennessee;Obion County;4-1 Fair Grounds	Obion;4-1 Fair Grounds
+ReportingUnit	Tennessee;Obion County;5-2 Cloverdale	Obion;5-2 Cloverdale
+ReportingUnit	Tennessee;Obion County;5-4 Hornbeak	Obion;5-4 Hornbeak
+ReportingUnit	Tennessee;Obion County;5-5 Samburg	Obion;5-5 Samburg
+ReportingUnit	Tennessee;Obion County;6-1 Troy Sr Ctr	Obion;6-1 Troy Sr Ctr
+ReportingUnit	Tennessee;Obion County;6-2 Obion Sr Ctr	Obion;6-2 Obion Sr Ctr
+ReportingUnit	Tennessee;Obion County;7-2 Obion Co Library	Obion;7-2 Obion Co Library
+ReportingUnit	Tennessee;Overton County;1 Livingston	Overton;1 Livingston
+ReportingUnit	Tennessee;Overton County;2-1 Allons	Overton;2-1 Allons
+ReportingUnit	Tennessee;Overton County;2-3 Monroe	Overton;2-3 Monroe
+ReportingUnit	Tennessee;Overton County;3-2 Poteet	Overton;3-2 Poteet
+ReportingUnit	Tennessee;Overton County;3-3 Wilson	Overton;3-3 Wilson
+ReportingUnit	Tennessee;Overton County;3-4 Rushing Springs	Overton;3-4 Rushing Springs
+ReportingUnit	Tennessee;Overton County;4-2 Rickman	Overton;4-2 Rickman
+ReportingUnit	Tennessee;Overton County;5-1 Hilham	Overton;5-1 Hilham
+ReportingUnit	Tennessee;Overton County;5-2 Fairgrounds	Overton;5-2 Fairgrounds
+ReportingUnit	Tennessee;Perry County;1-1 Cedar Creek	Perry;1-1 Cedar Creek
+ReportingUnit	Tennessee;Perry County;1-2 Marsh Creek	Perry;1-2 Marsh Creek
+ReportingUnit	Tennessee;Perry County;2-1 Pineview	Perry;2-1 Pineview
+ReportingUnit	Tennessee;Perry County;2-2 Pope	Perry;2-2 Pope
+ReportingUnit	Tennessee;Perry County;3-1 Coon Creek	Perry;3-1 Coon Creek
+ReportingUnit	Tennessee;Perry County;3-2 Flatwoods	Perry;3-2 Flatwoods
+ReportingUnit	Tennessee;Perry County;4-1 Brush Creek	Perry;4-1 Brush Creek
+ReportingUnit	Tennessee;Perry County;4-3 Lobelville	Perry;4-3 Lobelville
+ReportingUnit	Tennessee;Perry County;5-1 Linden	Perry;5-1 Linden
+ReportingUnit	Tennessee;Perry County;6-1 Lobelville	Perry;6-1 Lobelville
+ReportingUnit	Tennessee;Pickett County;Community Center 1-1	Pickett;Community Center 1-1
+ReportingUnit	Tennessee;Pickett County;Moodyville 1-2	Pickett;Moodyville 1-2
+ReportingUnit	Tennessee;Pickett County;High School 2-1	Pickett;High School 2-1
+ReportingUnit	Tennessee;Pickett County;Chanute 3-1	Pickett;Chanute 3-1
+ReportingUnit	Tennessee;Pickett County;Travisville 3-2	Pickett;Travisville 3-2
+ReportingUnit	Tennessee;Pickett County;Boom 4-1	Pickett;Boom 4-1
+ReportingUnit	Tennessee;Pickett County;Oak Hill 4-2	Pickett;Oak Hill 4-2
+ReportingUnit	Tennessee;Pickett County;Barnes Ridge 4-3	Pickett;Barnes Ridge 4-3
+ReportingUnit	Tennessee;Pickett County;Bolestown 4-4	Pickett;Bolestown 4-4
+ReportingUnit	Tennessee;Polk County;Delano	Polk;Delano
+ReportingUnit	Tennessee;Polk County;Polk County HS	Polk;Polk County HS
+ReportingUnit	Tennessee;Polk County;Chilhowee MS	Polk;Chilhowee MS
+ReportingUnit	Tennessee;Polk County;Greasy Creek	Polk;Greasy Creek
+ReportingUnit	Tennessee;Polk County;Springtown Firehall	Polk;Springtown Firehall
+ReportingUnit	Tennessee;Polk County;South Polk School	Polk;South Polk School
+ReportingUnit	Tennessee;Polk County;Shiloh Baptist	Polk;Shiloh Baptist
+ReportingUnit	Tennessee;Polk County;Community Center	Polk;Community Center
+ReportingUnit	Tennessee;Polk County;Turtletown	Polk;Turtletown
+ReportingUnit	Tennessee;Putnam County;1A Capshaw	Putnam;1A Capshaw
+ReportingUnit	Tennessee;Putnam County;2A Northeast	Putnam;2A Northeast
+ReportingUnit	Tennessee;Putnam County;3A University	Putnam;3A University
+ReportingUnit	Tennessee;Putnam County;4A Burks	Putnam;4A Burks
+ReportingUnit	Tennessee;Putnam County;4B Monterey City	Putnam;4B Monterey City
+ReportingUnit	Tennessee;Putnam County;4C Poplar Grove	Putnam;4C Poplar Grove
+ReportingUnit	Tennessee;Putnam County;5A Cookeville CC	Putnam;5A Cookeville CC
+ReportingUnit	Tennessee;Putnam County;5C Prescott South	Putnam;5C Prescott South
+ReportingUnit	Tennessee;Putnam County;5F Dry Valley	Putnam;5F Dry Valley
+ReportingUnit	Tennessee;Putnam County;6A Cane Creek	Putnam;6A Cane Creek
+ReportingUnit	Tennessee;Putnam County;7A Burgess Falls	Putnam;7A Burgess Falls
+ReportingUnit	Tennessee;Putnam County;7D Twin Oak	Putnam;7D Twin Oak
+ReportingUnit	Tennessee;Putnam County;8D Boma	Putnam;8D Boma
+ReportingUnit	Tennessee;Putnam County;8E Buffalo Valley	Putnam;8E Buffalo Valley
+ReportingUnit	Tennessee;Putnam County;8G Upperman	Putnam;8G Upperman
+ReportingUnit	Tennessee;Putnam County;9B Double Springs	Putnam;9B Double Springs
+ReportingUnit	Tennessee;Putnam County;10A Pavilion	Putnam;10A Pavilion
+ReportingUnit	Tennessee;Putnam County;10B Sycamore	Putnam;10B Sycamore
+ReportingUnit	Tennessee;Putnam County;11A Bangham	Putnam;11A Bangham
+ReportingUnit	Tennessee;Putnam County;11B Cookeville High	Putnam;11B Cookeville High
+ReportingUnit	Tennessee;Putnam County;12A Algood Inside	Putnam;12A Algood Inside
+ReportingUnit	Tennessee;Putnam County;12B Algood Outside	Putnam;12B Algood Outside
+ReportingUnit	Tennessee;Rhea County;1-1 Spring City North	Rhea;1-1 Spring City North
+ReportingUnit	Tennessee;Rhea County;1-2 Grandview	Rhea;1-2 Grandview
+ReportingUnit	Tennessee;Rhea County;2-1 Spring City South	Rhea;2-1 Spring City South
+ReportingUnit	Tennessee;Rhea County;3-1 Wolf Creek	Rhea;3-1 Wolf Creek
+ReportingUnit	Tennessee;Rhea County;3-2 Evensville North	Rhea;3-2 Evensville North
+ReportingUnit	Tennessee;Rhea County;4-1 Evensville South	Rhea;4-1 Evensville South
+ReportingUnit	Tennessee;Rhea County;5-1 Dayton North	Rhea;5-1 Dayton North
+ReportingUnit	Tennessee;Rhea County;6-1 Dayton West	Rhea;6-1 Dayton West
+ReportingUnit	Tennessee;Rhea County;7-1 Frazier	Rhea;7-1 Frazier
+ReportingUnit	Tennessee;Rhea County;8-1 Garrison	Rhea;8-1 Garrison
+ReportingUnit	Tennessee;Rhea County;9-1 Graysville	Rhea;9-1 Graysville
+ReportingUnit	Tennessee;Rhea County;9-2 Waldens Ridge	Rhea;9-2 Waldens Ridge
+ReportingUnit	Tennessee;Roane County;Cave Creek	Roane;Cave Creek
+ReportingUnit	Tennessee;Roane County;Cherokee	Roane;Cherokee
+ReportingUnit	Tennessee;Roane County;Emory Heights	Roane;Emory Heights
+ReportingUnit	Tennessee;Roane County;Emory	Roane;Emory
+ReportingUnit	Tennessee;Roane County;Fairview	Roane;Fairview
+ReportingUnit	Tennessee;Roane County;Glen Alice	Roane;Glen Alice
+ReportingUnit	Tennessee;Roane County;Midtown	Roane;Midtown
+ReportingUnit	Tennessee;Roane County;Midway	Roane;Midway
+ReportingUnit	Tennessee;Roane County;Oak Hills	Roane;Oak Hills
+ReportingUnit	Tennessee;Roane County;Oliver Springs	Roane;Oliver Springs
+ReportingUnit	Tennessee;Roane County;Orchard View	Roane;Orchard View
+ReportingUnit	Tennessee;Roane County;Paw Paw	Roane;Paw Paw
+ReportingUnit	Tennessee;Roane County;Paint Rock	Roane;Paint Rock
+ReportingUnit	Tennessee;Roane County;South Harriman	Roane;South Harriman
+ReportingUnit	Tennessee;Roane County;Dyllis	Roane;Dyllis
+ReportingUnit	Tennessee;Roane County;Eureka	Roane;Eureka
+ReportingUnit	Tennessee;Roane County;Harriman Ward 1	Roane;Harriman Ward 1
+ReportingUnit	Tennessee;Roane County;Johnson Sch House	Roane;Johnson Sch House
+ReportingUnit	Tennessee;Roane County;Kingston Ward 1	Roane;Kingston Ward 1
+ReportingUnit	Tennessee;Roane County;Kingston Ward 2	Roane;Kingston Ward 2
+ReportingUnit	Tennessee;Roane County;Lawnville	Roane;Lawnville
+ReportingUnit	Tennessee;Roane County;Renfro	Roane;Renfro
+ReportingUnit	Tennessee;Roane County;Rockwood Ward 1	Roane;Rockwood Ward 1
+ReportingUnit	Tennessee;Roane County;Rockwood Ward 2	Roane;Rockwood Ward 2
+ReportingUnit	Tennessee;Robertson County;01-1 East Robertson	Robertson;01-1 East Robertson
+ReportingUnit	Tennessee;Robertson County;02-1 Woodall	Robertson;02-1 Woodall
+ReportingUnit	Tennessee;Robertson County;03-1 Ebenezer	Robertson;03-1 Ebenezer
+ReportingUnit	Tennessee;Robertson County;03-2 Heritage	Robertson;03-2 Heritage
+ReportingUnit	Tennessee;Robertson County;04-1 Watauga	Robertson;04-1 Watauga
+ReportingUnit	Tennessee;Robertson County;05-1 Greenbrier	Robertson;05-1 Greenbrier
+ReportingUnit	Tennessee;Robertson County;06-1 Coopertown	Robertson;06-1 Coopertown
+ReportingUnit	Tennessee;Robertson County;06-2 Mt. Sharon	Robertson;06-2 Mt. Sharon
+ReportingUnit	Tennessee;Robertson County;07-1 Jo Byrns	Robertson;07-1 Jo Byrns
+ReportingUnit	Tennessee;Robertson County;07-2 Stroudsville	Robertson;07-2 Stroudsville
+ReportingUnit	Tennessee;Robertson County;08-1 Krisle	Robertson;08-1 Krisle
+ReportingUnit	Tennessee;Robertson County;08-2 HATS	Robertson;08-2 HATS
+ReportingUnit	Tennessee;Robertson County;08-3 Owens Chapel	Robertson;08-3 Owens Chapel
+ReportingUnit	Tennessee;Robertson County;09-1 Fair Assoc.	Robertson;09-1 Fair Assoc.
+ReportingUnit	Tennessee;Robertson County;10-1 South Haven	Robertson;10-1 South Haven
+ReportingUnit	Tennessee;Robertson County;11-1 Westside	Robertson;11-1 Westside
+ReportingUnit	Tennessee;Robertson County;11-2 Heads	Robertson;11-2 Heads
+ReportingUnit	Tennessee;Robertson County;12-1 Bransford	Robertson;12-1 Bransford
+ReportingUnit	Tennessee;Rutherford County;1-1	Rutherford;1-1
+ReportingUnit	Tennessee;Rutherford County;2-1	Rutherford;2-1
+ReportingUnit	Tennessee;Rutherford County;2-2	Rutherford;2-2
+ReportingUnit	Tennessee;Rutherford County;2-3	Rutherford;2-3
+ReportingUnit	Tennessee;Rutherford County;3-1	Rutherford;3-1
+ReportingUnit	Tennessee;Rutherford County;3-2	Rutherford;3-2
+ReportingUnit	Tennessee;Rutherford County;4-1	Rutherford;4-1
+ReportingUnit	Tennessee;Rutherford County;4-2	Rutherford;4-2
+ReportingUnit	Tennessee;Rutherford County;4-3	Rutherford;4-3
+ReportingUnit	Tennessee;Rutherford County;4-4	Rutherford;4-4
+ReportingUnit	Tennessee;Rutherford County;5-1	Rutherford;5-1
+ReportingUnit	Tennessee;Rutherford County;5-2	Rutherford;5-2
+ReportingUnit	Tennessee;Rutherford County;6-1	Rutherford;6-1
+ReportingUnit	Tennessee;Rutherford County;6-2	Rutherford;6-2
+ReportingUnit	Tennessee;Rutherford County;7-1	Rutherford;7-1
+ReportingUnit	Tennessee;Rutherford County;7-2	Rutherford;7-2
+ReportingUnit	Tennessee;Rutherford County;8-1	Rutherford;8-1
+ReportingUnit	Tennessee;Rutherford County;8-2	Rutherford;8-2
+ReportingUnit	Tennessee;Rutherford County;8-3	Rutherford;8-3
+ReportingUnit	Tennessee;Rutherford County;8-4	Rutherford;8-4
+ReportingUnit	Tennessee;Rutherford County;9-1	Rutherford;9-1
+ReportingUnit	Tennessee;Rutherford County;9-2	Rutherford;9-2
+ReportingUnit	Tennessee;Rutherford County;10-1	Rutherford;10-1
+ReportingUnit	Tennessee;Rutherford County;10-2	Rutherford;10-2
+ReportingUnit	Tennessee;Rutherford County;11-1	Rutherford;11-1
+ReportingUnit	Tennessee;Rutherford County;11-2	Rutherford;11-2
+ReportingUnit	Tennessee;Rutherford County;12-1	Rutherford;12-1
+ReportingUnit	Tennessee;Rutherford County;12-2	Rutherford;12-2
+ReportingUnit	Tennessee;Rutherford County;12-3	Rutherford;12-3
+ReportingUnit	Tennessee;Rutherford County;13-1	Rutherford;13-1
+ReportingUnit	Tennessee;Rutherford County;13-2	Rutherford;13-2
+ReportingUnit	Tennessee;Rutherford County;14-1	Rutherford;14-1
+ReportingUnit	Tennessee;Rutherford County;14-2	Rutherford;14-2
+ReportingUnit	Tennessee;Rutherford County;15-1	Rutherford;15-1
+ReportingUnit	Tennessee;Rutherford County;15-2	Rutherford;15-2
+ReportingUnit	Tennessee;Rutherford County;16-1	Rutherford;16-1
+ReportingUnit	Tennessee;Rutherford County;16-2	Rutherford;16-2
+ReportingUnit	Tennessee;Rutherford County;16-3	Rutherford;16-3
+ReportingUnit	Tennessee;Rutherford County;17-1	Rutherford;17-1
+ReportingUnit	Tennessee;Rutherford County;17-2	Rutherford;17-2
+ReportingUnit	Tennessee;Rutherford County;17-3	Rutherford;17-3
+ReportingUnit	Tennessee;Rutherford County;18-1	Rutherford;18-1
+ReportingUnit	Tennessee;Rutherford County;18-2	Rutherford;18-2
+ReportingUnit	Tennessee;Rutherford County;19-1	Rutherford;19-1
+ReportingUnit	Tennessee;Rutherford County;19-2	Rutherford;19-2
+ReportingUnit	Tennessee;Rutherford County;20-1	Rutherford;20-1
+ReportingUnit	Tennessee;Rutherford County;20-2	Rutherford;20-2
+ReportingUnit	Tennessee;Rutherford County;21-1	Rutherford;21-1
+ReportingUnit	Tennessee;Rutherford County;21-2	Rutherford;21-2
+ReportingUnit	Tennessee;Scott County;1-1 Fairview	Scott;1-1 Fairview
+ReportingUnit	Tennessee;Scott County;2-1 Elgin	Scott;2-1 Elgin
+ReportingUnit	Tennessee;Scott County;2-2 Robbins	Scott;2-2 Robbins
+ReportingUnit	Tennessee;Scott County;3-1 Huntsville	Scott;3-1 Huntsville
+ReportingUnit	Tennessee;Scott County;3-2 Paint Rock	Scott;3-2 Paint Rock
+ReportingUnit	Tennessee;Scott County;4-1 Helenwood	Scott;4-1 Helenwood
+ReportingUnit	Tennessee;Scott County;5-1 Pine Hill	Scott;5-1 Pine Hill
+ReportingUnit	Tennessee;Scott County;5-2 Winfield	Scott;5-2 Winfield
+ReportingUnit	Tennessee;Scott County;6-1 Oneida	Scott;6-1 Oneida
+ReportingUnit	Tennessee;Scott County;7-1 West Oneida	Scott;7-1 West Oneida
+ReportingUnit	Tennessee;Sequatchie County;1 Lewis Chapel	Sequatchie;1 Lewis Chapel
+ReportingUnit	Tennessee;Sequatchie County;2 Cagle	Sequatchie;2 Cagle
+ReportingUnit	Tennessee;Sequatchie County;3 Courthouse	Sequatchie;3 Courthouse
+ReportingUnit	Tennessee;Sequatchie County;4 Electric Co-op	Sequatchie;4 Electric Co-op
+ReportingUnit	Tennessee;Sequatchie County;5 Chapel Hill	Sequatchie;5 Chapel Hill
+ReportingUnit	Tennessee;Sequatchie County;6 Daus	Sequatchie;6 Daus
+ReportingUnit	Tennessee;Sequatchie County;7 Ewton's Annex	Sequatchie;7 Ewton's Annex
+ReportingUnit	Tennessee;Sequatchie County;8 Lone Oak	Sequatchie;8 Lone Oak
+ReportingUnit	Tennessee;Sequatchie County;9 Fredonia	Sequatchie;9 Fredonia
+ReportingUnit	Tennessee;Sevier County;1-1 Caton's Chapel	Sevier;1-1 Caton's Chapel
+ReportingUnit	Tennessee;Sevier County;1-2 Caton's Chapel	Sevier;1-2 Caton's Chapel
+ReportingUnit	Tennessee;Sevier County;1-3 Jones Cove	Sevier;1-3 Jones Cove
+ReportingUnit	Tennessee;Sevier County;1-4 Jones Cove	Sevier;1-4 Jones Cove
+ReportingUnit	Tennessee;Sevier County;2-1 Waldens Creek	Sevier;2-1 Waldens Creek
+ReportingUnit	Tennessee;Sevier County;2-2 Wearwood	Sevier;2-2 Wearwood
+ReportingUnit	Tennessee;Sevier County;3-1 Harrisburg	Sevier;3-1 Harrisburg
+ReportingUnit	Tennessee;Sevier County;3-2 New Center	Sevier;3-2 New Center
+ReportingUnit	Tennessee;Sevier County;4-1 Pigeon Forge	Sevier;4-1 Pigeon Forge
+ReportingUnit	Tennessee;Sevier County;4-2 Sevierville Elementary	Sevier;4-2 Sevierville Elementary
+ReportingUnit	Tennessee;Sevier County;5-1 Sevierville	Sevier;5-1 Sevierville
+ReportingUnit	Tennessee;Sevier County;5-2 Senior Center	Sevier;5-2 Senior Center
+ReportingUnit	Tennessee;Sevier County;6-1 Seymour	Sevier;6-1 Seymour
+ReportingUnit	Tennessee;Sevier County;7-1 Catlettsburg	Sevier;7-1 Catlettsburg
+ReportingUnit	Tennessee;Sevier County;7-2 Catlettsburg	Sevier;7-2 Catlettsburg
+ReportingUnit	Tennessee;Sevier County;7-3 Walnut Grove	Sevier;7-3 Walnut Grove
+ReportingUnit	Tennessee;Sevier County;8-1 Kodak	Sevier;8-1 Kodak
+ReportingUnit	Tennessee;Sevier County;8-2 Kodak	Sevier;8-2 Kodak
+ReportingUnit	Tennessee;Sevier County;8-3 Underwood	Sevier;8-3 Underwood
+ReportingUnit	Tennessee;Sevier County;9-1 Seymour Primary	Sevier;9-1 Seymour Primary
+ReportingUnit	Tennessee;Sevier County;10-1 Boyds Creek	Sevier;10-1 Boyds Creek
+ReportingUnit	Tennessee;Sevier County;10-2 Whites	Sevier;10-2 Whites
+ReportingUnit	Tennessee;Sevier County;10-3 DuPont	Sevier;10-3 DuPont
+ReportingUnit	Tennessee;Sevier County;11-1 Gatlinburg	Sevier;11-1 Gatlinburg
+ReportingUnit	Tennessee;Sevier County;11-2 Pittman Center	Sevier;11-2 Pittman Center
+ReportingUnit	Tennessee;Shelby County;Memphis 01	Shelby;Memphis 01
+ReportingUnit	Tennessee;Shelby County;Memphis 02	Shelby;Memphis 02
+ReportingUnit	Tennessee;Shelby County;Memphis 11	Shelby;Memphis 11
+ReportingUnit	Tennessee;Shelby County;Memphis 12	Shelby;Memphis 12
+ReportingUnit	Tennessee;Shelby County;Memphis 13	Shelby;Memphis 13
+ReportingUnit	Tennessee;Shelby County;Memphis 16-1	Shelby;Memphis 16-1
+ReportingUnit	Tennessee;Shelby County;Memphis 16-3	Shelby;Memphis 16-3
+ReportingUnit	Tennessee;Shelby County;Memphis 17	Shelby;Memphis 17
+ReportingUnit	Tennessee;Shelby County;Memphis 20-1	Shelby;Memphis 20-1
+ReportingUnit	Tennessee;Shelby County;Memphis 20-3	Shelby;Memphis 20-3
+ReportingUnit	Tennessee;Shelby County;Memphis 21	Shelby;Memphis 21
+ReportingUnit	Tennessee;Shelby County;Memphis 26	Shelby;Memphis 26
+ReportingUnit	Tennessee;Shelby County;Memphis 28	Shelby;Memphis 28
+ReportingUnit	Tennessee;Shelby County;Memphis 31-2	Shelby;Memphis 31-2
+ReportingUnit	Tennessee;Shelby County;Memphis 31-4	Shelby;Memphis 31-4
+ReportingUnit	Tennessee;Shelby County;Memphis 33	Shelby;Memphis 33
+ReportingUnit	Tennessee;Shelby County;Memphis 34-2	Shelby;Memphis 34-2
+ReportingUnit	Tennessee;Shelby County;Memphis 36-1	Shelby;Memphis 36-1
+ReportingUnit	Tennessee;Shelby County;Memphis 36-2	Shelby;Memphis 36-2
+ReportingUnit	Tennessee;Shelby County;Memphis 37	Shelby;Memphis 37
+ReportingUnit	Tennessee;Shelby County;Memphis 41-3	Shelby;Memphis 41-3
+ReportingUnit	Tennessee;Shelby County;Memphis 42-1	Shelby;Memphis 42-1
+ReportingUnit	Tennessee;Shelby County;Memphis 44-1	Shelby;Memphis 44-1
+ReportingUnit	Tennessee;Shelby County;Memphis 44-5	Shelby;Memphis 44-5
+ReportingUnit	Tennessee;Shelby County;Memphis 45-2	Shelby;Memphis 45-2
+ReportingUnit	Tennessee;Shelby County;Memphis 45-4	Shelby;Memphis 45-4
+ReportingUnit	Tennessee;Shelby County;Memphis 46-2	Shelby;Memphis 46-2
+ReportingUnit	Tennessee;Shelby County;Memphis 47	Shelby;Memphis 47
+ReportingUnit	Tennessee;Shelby County;Memphis 49	Shelby;Memphis 49
+ReportingUnit	Tennessee;Shelby County;Memphis 50-1	Shelby;Memphis 50-1
+ReportingUnit	Tennessee;Shelby County;Memphis 50-2	Shelby;Memphis 50-2
+ReportingUnit	Tennessee;Shelby County;Memphis 52-1	Shelby;Memphis 52-1
+ReportingUnit	Tennessee;Shelby County;Memphis 53-1	Shelby;Memphis 53-1
+ReportingUnit	Tennessee;Shelby County;Memphis 54	Shelby;Memphis 54
+ReportingUnit	Tennessee;Shelby County;Memphis 55-2	Shelby;Memphis 55-2
+ReportingUnit	Tennessee;Shelby County;Memphis 57	Shelby;Memphis 57
+ReportingUnit	Tennessee;Shelby County;Memphis 58-1	Shelby;Memphis 58-1
+ReportingUnit	Tennessee;Shelby County;Memphis 58-4	Shelby;Memphis 58-4
+ReportingUnit	Tennessee;Shelby County;Memphis 59-5	Shelby;Memphis 59-5
+ReportingUnit	Tennessee;Shelby County;Memphis 60-3	Shelby;Memphis 60-3
+ReportingUnit	Tennessee;Shelby County;Memphis 60-5	Shelby;Memphis 60-5
+ReportingUnit	Tennessee;Shelby County;Memphis 60-6	Shelby;Memphis 60-6
+ReportingUnit	Tennessee;Shelby County;Memphis 60-7	Shelby;Memphis 60-7
+ReportingUnit	Tennessee;Shelby County;Memphis 60-9	Shelby;Memphis 60-9
+ReportingUnit	Tennessee;Shelby County;Memphis 61	Shelby;Memphis 61
+ReportingUnit	Tennessee;Shelby County;Memphis 62	Shelby;Memphis 62
+ReportingUnit	Tennessee;Shelby County;Memphis 64	Shelby;Memphis 64
+ReportingUnit	Tennessee;Shelby County;Memphis 66	Shelby;Memphis 66
+ReportingUnit	Tennessee;Shelby County;Memphis 67-1	Shelby;Memphis 67-1
+ReportingUnit	Tennessee;Shelby County;Memphis 67-3	Shelby;Memphis 67-3
+ReportingUnit	Tennessee;Shelby County;Memphis 68-1	Shelby;Memphis 68-1
+ReportingUnit	Tennessee;Shelby County;Memphis 68-3	Shelby;Memphis 68-3
+ReportingUnit	Tennessee;Shelby County;Memphis 69-2	Shelby;Memphis 69-2
+ReportingUnit	Tennessee;Shelby County;Memphis 70-1	Shelby;Memphis 70-1
+ReportingUnit	Tennessee;Shelby County;Memphis 70-2	Shelby;Memphis 70-2
+ReportingUnit	Tennessee;Shelby County;Memphis 71-4	Shelby;Memphis 71-4
+ReportingUnit	Tennessee;Shelby County;Memphis 72-3	Shelby;Memphis 72-3
+ReportingUnit	Tennessee;Shelby County;Memphis 72-7	Shelby;Memphis 72-7
+ReportingUnit	Tennessee;Shelby County;Memphis 73-1	Shelby;Memphis 73-1
+ReportingUnit	Tennessee;Shelby County;Memphis 73-3	Shelby;Memphis 73-3
+ReportingUnit	Tennessee;Shelby County;Memphis 74-1	Shelby;Memphis 74-1
+ReportingUnit	Tennessee;Shelby County;Memphis 74-2	Shelby;Memphis 74-2
+ReportingUnit	Tennessee;Shelby County;Memphis 74-5	Shelby;Memphis 74-5
+ReportingUnit	Tennessee;Shelby County;Memphis 74-9	Shelby;Memphis 74-9
+ReportingUnit	Tennessee;Shelby County;Memphis 75-1	Shelby;Memphis 75-1
+ReportingUnit	Tennessee;Shelby County;Memphis 75-6	Shelby;Memphis 75-6
+ReportingUnit	Tennessee;Shelby County;Memphis 75-7	Shelby;Memphis 75-7
+ReportingUnit	Tennessee;Shelby County;Memphis 75-11	Shelby;Memphis 75-11
+ReportingUnit	Tennessee;Shelby County;Memphis 76-4	Shelby;Memphis 76-4
+ReportingUnit	Tennessee;Shelby County;Memphis 76-5	Shelby;Memphis 76-5
+ReportingUnit	Tennessee;Shelby County;Memphis 76-6	Shelby;Memphis 76-6
+ReportingUnit	Tennessee;Shelby County;Memphis 77-1	Shelby;Memphis 77-1
+ReportingUnit	Tennessee;Shelby County;Memphis 77-3	Shelby;Memphis 77-3
+ReportingUnit	Tennessee;Shelby County;Memphis 78-3	Shelby;Memphis 78-3
+ReportingUnit	Tennessee;Shelby County;Memphis 79-1	Shelby;Memphis 79-1
+ReportingUnit	Tennessee;Shelby County;Memphis 79-2	Shelby;Memphis 79-2
+ReportingUnit	Tennessee;Shelby County;Memphis 79-3	Shelby;Memphis 79-3
+ReportingUnit	Tennessee;Shelby County;Memphis 79-7	Shelby;Memphis 79-7
+ReportingUnit	Tennessee;Shelby County;Memphis 80-2	Shelby;Memphis 80-2
+ReportingUnit	Tennessee;Shelby County;Memphis 81-1	Shelby;Memphis 81-1
+ReportingUnit	Tennessee;Shelby County;Memphis 81-3	Shelby;Memphis 81-3
+ReportingUnit	Tennessee;Shelby County;Memphis 81-5	Shelby;Memphis 81-5
+ReportingUnit	Tennessee;Shelby County;Memphis 81-7	Shelby;Memphis 81-7
+ReportingUnit	Tennessee;Shelby County;Memphis 82-2	Shelby;Memphis 82-2
+ReportingUnit	Tennessee;Shelby County;Memphis 83	Shelby;Memphis 83
+ReportingUnit	Tennessee;Shelby County;Memphis 84-2	Shelby;Memphis 84-2
+ReportingUnit	Tennessee;Shelby County;Memphis 86	Shelby;Memphis 86
+ReportingUnit	Tennessee;Shelby County;Memphis 87-2	Shelby;Memphis 87-2
+ReportingUnit	Tennessee;Shelby County;Memphis 87-3	Shelby;Memphis 87-3
+ReportingUnit	Tennessee;Shelby County;Memphis 87-4	Shelby;Memphis 87-4
+ReportingUnit	Tennessee;Shelby County;Memphis 88-2	Shelby;Memphis 88-2
+ReportingUnit	Tennessee;Shelby County;Memphis 88-3	Shelby;Memphis 88-3
+ReportingUnit	Tennessee;Shelby County;Memphis 88-4	Shelby;Memphis 88-4
+ReportingUnit	Tennessee;Shelby County;Memphis 89-1	Shelby;Memphis 89-1
+ReportingUnit	Tennessee;Shelby County;Memphis 89-2	Shelby;Memphis 89-2
+ReportingUnit	Tennessee;Shelby County;Memphis 90-2	Shelby;Memphis 90-2
+ReportingUnit	Tennessee;Shelby County;Memphis 90-3	Shelby;Memphis 90-3
+ReportingUnit	Tennessee;Shelby County;Memphis 91-1	Shelby;Memphis 91-1
+ReportingUnit	Tennessee;Shelby County;Memphis 91-2	Shelby;Memphis 91-2
+ReportingUnit	Tennessee;Shelby County;Memphis 91-4	Shelby;Memphis 91-4
+ReportingUnit	Tennessee;Shelby County;Memphis 92-1	Shelby;Memphis 92-1
+ReportingUnit	Tennessee;Shelby County;Memphis 93-1	Shelby;Memphis 93-1
+ReportingUnit	Tennessee;Shelby County;Memphis 93-3	Shelby;Memphis 93-3
+ReportingUnit	Tennessee;Shelby County;Memphis 94-3	Shelby;Memphis 94-3
+ReportingUnit	Tennessee;Shelby County;Memphis 94-6	Shelby;Memphis 94-6
+ReportingUnit	Tennessee;Shelby County;Memphis 94-7	Shelby;Memphis 94-7
+ReportingUnit	Tennessee;Shelby County;Memphis 94-8	Shelby;Memphis 94-8
+ReportingUnit	Tennessee;Shelby County;Memphis 95-1	Shelby;Memphis 95-1
+ReportingUnit	Tennessee;Shelby County;Memphis 95-5	Shelby;Memphis 95-5
+ReportingUnit	Tennessee;Shelby County;Memphis 95-6	Shelby;Memphis 95-6
+ReportingUnit	Tennessee;Shelby County;Memphis 95-7	Shelby;Memphis 95-7
+ReportingUnit	Tennessee;Shelby County;Memphis 95-8	Shelby;Memphis 95-8
+ReportingUnit	Tennessee;Shelby County;Memphis 96-1	Shelby;Memphis 96-1
+ReportingUnit	Tennessee;Shelby County;Memphis 96-2	Shelby;Memphis 96-2
+ReportingUnit	Tennessee;Shelby County;Arlington 01	Shelby;Arlington 01
+ReportingUnit	Tennessee;Shelby County;Arlington 02	Shelby;Arlington 02
+ReportingUnit	Tennessee;Shelby County;Bartlett 03	Shelby;Bartlett 03
+ReportingUnit	Tennessee;Shelby County;Bartlett 04	Shelby;Bartlett 04
+ReportingUnit	Tennessee;Shelby County;Bartlett 05	Shelby;Bartlett 05
+ReportingUnit	Tennessee;Shelby County;Bartlett 06	Shelby;Bartlett 06
+ReportingUnit	Tennessee;Shelby County;Bartlett 08	Shelby;Bartlett 08
+ReportingUnit	Tennessee;Shelby County;Bartlett 09	Shelby;Bartlett 09
+ReportingUnit	Tennessee;Shelby County;Bartlett 11	Shelby;Bartlett 11
+ReportingUnit	Tennessee;Shelby County;Bartlett 13	Shelby;Bartlett 13
+ReportingUnit	Tennessee;Shelby County;Brunswick 01	Shelby;Brunswick 01
+ReportingUnit	Tennessee;Shelby County;Brunswick 02	Shelby;Brunswick 02
+ReportingUnit	Tennessee;Shelby County;Collierville 01	Shelby;Collierville 01
+ReportingUnit	Tennessee;Shelby County;Collierville 02	Shelby;Collierville 02
+ReportingUnit	Tennessee;Shelby County;Collierville 03	Shelby;Collierville 03
+ReportingUnit	Tennessee;Shelby County;Collierville 04	Shelby;Collierville 04
+ReportingUnit	Tennessee;Shelby County;Collierville 05	Shelby;Collierville 05
+ReportingUnit	Tennessee;Shelby County;Collierville 06	Shelby;Collierville 06
+ReportingUnit	Tennessee;Shelby County;Collierville 07	Shelby;Collierville 07
+ReportingUnit	Tennessee;Shelby County;Collierville 08	Shelby;Collierville 08
+ReportingUnit	Tennessee;Shelby County;Collierville 09	Shelby;Collierville 09
+ReportingUnit	Tennessee;Shelby County;Cordova 03	Shelby;Cordova 03
+ReportingUnit	Tennessee;Shelby County;Cordova 04	Shelby;Cordova 04
+ReportingUnit	Tennessee;Shelby County;Cordova 05	Shelby;Cordova 05
+ReportingUnit	Tennessee;Shelby County;Eads	Shelby;Eads
+ReportingUnit	Tennessee;Shelby County;Forest Hills 01	Shelby;Forest Hills 01
+ReportingUnit	Tennessee;Shelby County;Forest Hills 02	Shelby;Forest Hills 02
+ReportingUnit	Tennessee;Shelby County;Forest Hills 03	Shelby;Forest Hills 03
+ReportingUnit	Tennessee;Shelby County;Germantown 02	Shelby;Germantown 02
+ReportingUnit	Tennessee;Shelby County;Germantown 03	Shelby;Germantown 03
+ReportingUnit	Tennessee;Shelby County;Germantown 04	Shelby;Germantown 04
+ReportingUnit	Tennessee;Shelby County;Germantown 05	Shelby;Germantown 05
+ReportingUnit	Tennessee;Shelby County;Germantown 06	Shelby;Germantown 06
+ReportingUnit	Tennessee;Shelby County;Germantown 08	Shelby;Germantown 08
+ReportingUnit	Tennessee;Shelby County;Germantown 10	Shelby;Germantown 10
+ReportingUnit	Tennessee;Shelby County;Germantown 11	Shelby;Germantown 11
+ReportingUnit	Tennessee;Shelby County;Germantown 12	Shelby;Germantown 12
+ReportingUnit	Tennessee;Shelby County;Lakeland 01	Shelby;Lakeland 01
+ReportingUnit	Tennessee;Shelby County;Lakeland 02	Shelby;Lakeland 02
+ReportingUnit	Tennessee;Shelby County;Lucy 01	Shelby;Lucy 01
+ReportingUnit	Tennessee;Shelby County;Lucy 03	Shelby;Lucy 03
+ReportingUnit	Tennessee;Shelby County;McConnell's	Shelby;McConnell's
+ReportingUnit	Tennessee;Shelby County;Millington 01	Shelby;Millington 01
+ReportingUnit	Tennessee;Shelby County;Millington 02	Shelby;Millington 02
+ReportingUnit	Tennessee;Shelby County;Morning Sun 01	Shelby;Morning Sun 01
+ReportingUnit	Tennessee;Shelby County;Morning Sun 02	Shelby;Morning Sun 02
+ReportingUnit	Tennessee;Shelby County;Ross 05	Shelby;Ross 05
+ReportingUnit	Tennessee;Shelby County;Ross 13	Shelby;Ross 13
+ReportingUnit	Tennessee;Shelby County;Ross 14	Shelby;Ross 14
+ReportingUnit	Tennessee;Shelby County;Ross 15	Shelby;Ross 15
+ReportingUnit	Tennessee;Shelby County;Ross 16	Shelby;Ross 16
+ReportingUnit	Tennessee;Shelby County;Stewartville	Shelby;Stewartville
+ReportingUnit	Tennessee;Smith County;01 Defeated	Smith;01 Defeated
+ReportingUnit	Tennessee;Smith County;02 Tanglewood	Smith;02 Tanglewood
+ReportingUnit	Tennessee;Smith County;03 New Middleton	Smith;03 New Middleton
+ReportingUnit	Tennessee;Smith County;04 Rock City	Smith;04 Rock City
+ReportingUnit	Tennessee;Smith County;05 Gordonsville	Smith;05 Gordonsville
+ReportingUnit	Tennessee;Smith County;06 Carthage	Smith;06 Carthage
+ReportingUnit	Tennessee;Smith County;07 South Carthage	Smith;07 South Carthage
+ReportingUnit	Tennessee;Smith County;08 Elmwood	Smith;08 Elmwood
+ReportingUnit	Tennessee;Stewart County;1-1 Indian Mound	Stewart;1-1 Indian Mound
+ReportingUnit	Tennessee;Stewart County;2-1 Big Rock	Stewart;2-1 Big Rock
+ReportingUnit	Tennessee;Stewart County;3-1 Bumpus Mills	Stewart;3-1 Bumpus Mills
+ReportingUnit	Tennessee;Stewart County;4-1 Church Street	Stewart;4-1 Church Street
+ReportingUnit	Tennessee;Stewart County;5-1 Visitors Center	Stewart;5-1 Visitors Center
+ReportingUnit	Tennessee;Stewart County;6-1 Public Library	Stewart;6-1 Public Library
+ReportingUnit	Tennessee;Stewart County;7-1 Cumberland City	Stewart;7-1 Cumberland City
+ReportingUnit	Tennessee;Sullivan County;1A	Sullivan;1A
+ReportingUnit	Tennessee;Sullivan County;2A	Sullivan;2A
+ReportingUnit	Tennessee;Sullivan County;2B	Sullivan;2B
+ReportingUnit	Tennessee;Sullivan County;2C	Sullivan;2C
+ReportingUnit	Tennessee;Sullivan County;3A	Sullivan;3A
+ReportingUnit	Tennessee;Sullivan County;4A	Sullivan;4A
+ReportingUnit	Tennessee;Sullivan County;4B	Sullivan;4B
+ReportingUnit	Tennessee;Sullivan County;4C	Sullivan;4C
+ReportingUnit	Tennessee;Sullivan County;5A	Sullivan;5A
+ReportingUnit	Tennessee;Sullivan County;5B	Sullivan;5B
+ReportingUnit	Tennessee;Sullivan County;5C	Sullivan;5C
+ReportingUnit	Tennessee;Sullivan County;6A	Sullivan;6A
+ReportingUnit	Tennessee;Sullivan County;6B	Sullivan;6B
+ReportingUnit	Tennessee;Sullivan County;6C	Sullivan;6C
+ReportingUnit	Tennessee;Sullivan County;7A	Sullivan;7A
+ReportingUnit	Tennessee;Sullivan County;7B	Sullivan;7B
+ReportingUnit	Tennessee;Sullivan County;7C	Sullivan;7C
+ReportingUnit	Tennessee;Sullivan County;8A	Sullivan;8A
+ReportingUnit	Tennessee;Sullivan County;8B	Sullivan;8B
+ReportingUnit	Tennessee;Sullivan County;9A	Sullivan;9A
+ReportingUnit	Tennessee;Sullivan County;9B	Sullivan;9B
+ReportingUnit	Tennessee;Sullivan County;10A	Sullivan;10A
+ReportingUnit	Tennessee;Sullivan County;10B	Sullivan;10B
+ReportingUnit	Tennessee;Sullivan County;11A	Sullivan;11A
+ReportingUnit	Tennessee;Sullivan County;11B	Sullivan;11B
+ReportingUnit	Tennessee;Sumner County;1-1 Westmoreland	Sumner;1-1 Westmoreland
+ReportingUnit	Tennessee;Sumner County;1-3 Corinth	Sumner;1-3 Corinth
+ReportingUnit	Tennessee;Sumner County;2-1 Portland	Sumner;2-1 Portland
+ReportingUnit	Tennessee;Sumner County;2-2 Wiseman	Sumner;2-2 Wiseman
+ReportingUnit	Tennessee;Sumner County;3-1 Civic Center	Sumner;3-1 Civic Center
+ReportingUnit	Tennessee;Sumner County;3-3 Creekside	Sumner;3-3 Creekside
+ReportingUnit	Tennessee;Sumner County;4-1 Howard	Sumner;4-1 Howard
+ReportingUnit	Tennessee;Sumner County;4-2 Station Camp	Sumner;4-2 Station Camp
+ReportingUnit	Tennessee;Sumner County;4-3 Cottontown	Sumner;4-3 Cottontown
+ReportingUnit	Tennessee;Sumner County;4-4 Union	Sumner;4-4 Union
+ReportingUnit	Tennessee;Sumner County;5-1 FB Gallatin	Sumner;5-1 FB Gallatin
+ReportingUnit	Tennessee;Sumner County;5-2 Guild	Sumner;5-2 Guild
+ReportingUnit	Tennessee;Sumner County;6-1 Vol State	Sumner;6-1 Vol State
+ReportingUnit	Tennessee;Sumner County;6-2 Gallatin HS	Sumner;6-2 Gallatin HS
+ReportingUnit	Tennessee;Sumner County;6-3 Jack Anderson	Sumner;6-3 Jack Anderson
+ReportingUnit	Tennessee;Sumner County;7-1 Whitten	Sumner;7-1 Whitten
+ReportingUnit	Tennessee;Sumner County;7-3 Long Hollow	Sumner;7-3 Long Hollow
+ReportingUnit	Tennessee;Sumner County;8-1 Brown	Sumner;8-1 Brown
+ReportingUnit	Tennessee;Sumner County;8-2 Hawkins	Sumner;8-2 Hawkins
+ReportingUnit	Tennessee;Sumner County;9-1 Hendersonville	Sumner;9-1 Hendersonville
+ReportingUnit	Tennessee;Sumner County;9-2 Indian Lake	Sumner;9-2 Indian Lake
+ReportingUnit	Tennessee;Sumner County;10-1 Walton Ferry	Sumner;10-1 Walton Ferry
+ReportingUnit	Tennessee;Sumner County;10-2 Merrol Hyde	Sumner;10-2 Merrol Hyde
+ReportingUnit	Tennessee;Sumner County;11-1 Beech	Sumner;11-1 Beech
+ReportingUnit	Tennessee;Sumner County;11-2 Goodlettsville	Sumner;11-2 Goodlettsville
+ReportingUnit	Tennessee;Sumner County;11-3 Millersville	Sumner;11-3 Millersville
+ReportingUnit	Tennessee;Sumner County;12-1 Oakmont	Sumner;12-1 Oakmont
+ReportingUnit	Tennessee;Sumner County;12-3 White House	Sumner;12-3 White House
+ReportingUnit	Tennessee;Tipton County;1-1 NE Covington	Tipton;1-1 NE Covington
+ReportingUnit	Tennessee;Tipton County;2-3 SE Covington	Tipton;2-3 SE Covington
+ReportingUnit	Tennessee;Tipton County;3-6 Tipton West	Tipton;3-6 Tipton West
+ReportingUnit	Tennessee;Tipton County;4-11 Atoka	Tipton;4-11 Atoka
+ReportingUnit	Tennessee;Tipton County;5-12 Munford	Tipton;5-12 Munford
+ReportingUnit	Tennessee;Tipton County;6-14 SW Tipton	Tipton;6-14 SW Tipton
+ReportingUnit	Tennessee;Tipton County;7-19 Austin Peay	Tipton;7-19 Austin Peay
+ReportingUnit	Tennessee;Tipton County;8-21 Wilkinsville	Tipton;8-21 Wilkinsville
+ReportingUnit	Tennessee;Tipton County;9-22 Brighton	Tipton;9-22 Brighton
+ReportingUnit	Tennessee;Tipton County;Early Voting - Write-Ins	Tipton;Early Voting - Write-Ins
+ReportingUnit	Tennessee;Trousdale County;01 Senior Center	Trousdale;01 Senior Center
+ReportingUnit	Tennessee;Trousdale County;02 Cato	Trousdale;02 Cato
+ReportingUnit	Tennessee;Trousdale County;03 Beech Grove	Trousdale;03 Beech Grove
+ReportingUnit	Tennessee;Trousdale County;04 Halltown	Trousdale;04 Halltown
+ReportingUnit	Tennessee;Trousdale County;05 Templow	Trousdale;05 Templow
+ReportingUnit	Tennessee;Trousdale County;06 Walnut Grove	Trousdale;06 Walnut Grove
+ReportingUnit	Tennessee;Trousdale County;07 High School	Trousdale;07 High School
+ReportingUnit	Tennessee;Trousdale County;08 Willard	Trousdale;08 Willard
+ReportingUnit	Tennessee;Trousdale County;09 City	Trousdale;09 City
+ReportingUnit	Tennessee;Trousdale County;10 Providence	Trousdale;10 Providence
+ReportingUnit	Tennessee;Unicoi County;Flag Pond	Unicoi;Flag Pond
+ReportingUnit	Tennessee;Unicoi County;Temple Hill	Unicoi;Temple Hill
+ReportingUnit	Tennessee;Unicoi County;Love Chapel	Unicoi;Love Chapel
+ReportingUnit	Tennessee;Unicoi County;High School	Unicoi;High School
+ReportingUnit	Tennessee;Unicoi County;Rock Creek	Unicoi;Rock Creek
+ReportingUnit	Tennessee;Unicoi County;Fishery	Unicoi;Fishery
+ReportingUnit	Tennessee;Unicoi County;Limestone Cove	Unicoi;Limestone Cove
+ReportingUnit	Tennessee;Unicoi County;Unicoi	Unicoi;Unicoi
+ReportingUnit	Tennessee;Union County;1-1 UCHS	Union;1-1 UCHS
+ReportingUnit	Tennessee;Union County;2-1 Luttrell	Union;2-1 Luttrell
+ReportingUnit	Tennessee;Union County;3-1 Cedar Grove	Union;3-1 Cedar Grove
+ReportingUnit	Tennessee;Union County;3-2 Brock	Union;3-2 Brock
+ReportingUnit	Tennessee;Union County;4-1 Big Ridge	Union;4-1 Big Ridge
+ReportingUnit	Tennessee;Union County;5-1 Sharps Chapel	Union;5-1 Sharps Chapel
+ReportingUnit	Tennessee;Union County;5-2 Braden Chapel	Union;5-2 Braden Chapel
+ReportingUnit	Tennessee;Union County;6-1 Paulette	Union;6-1 Paulette
+ReportingUnit	Tennessee;Union County;7-1 Plainview	Union;7-1 Plainview
+ReportingUnit	Tennessee;Van Buren County;Spencer 1	Van Buren;Spencer 1
+ReportingUnit	Tennessee;Van Buren County;Cummingsville	Van Buren;Cummingsville
+ReportingUnit	Tennessee;Van Buren County;Cedar Grove	Van Buren;Cedar Grove
+ReportingUnit	Tennessee;Van Buren County;Fall Creek Falls	Van Buren;Fall Creek Falls
+ReportingUnit	Tennessee;Van Buren County;Piney	Van Buren;Piney
+ReportingUnit	Tennessee;Van Buren County;White Hill	Van Buren;White Hill
+ReportingUnit	Tennessee;Van Buren County;Spencer 5	Van Buren;Spencer 5
+ReportingUnit	Tennessee;Warren County;1-1 Christ Community Church	Warren;1-1 Christ Community Church
+ReportingUnit	Tennessee;Warren County;2-1 Courthouse	Warren;2-1 Courthouse
+ReportingUnit	Tennessee;Warren County;2-2 Airport	Warren;2-2 Airport
+ReportingUnit	Tennessee;Warren County;3-1 Westwood	Warren;3-1 Westwood
+ReportingUnit	Tennessee;Warren County;3-2 Smartt	Warren;3-2 Smartt
+ReportingUnit	Tennessee;Warren County;4-1 TSU	Warren;4-1 TSU
+ReportingUnit	Tennessee;Warren County;5-1 Mall	Warren;5-1 Mall
+ReportingUnit	Tennessee;Warren County;5-2 Chamber	Warren;5-2 Chamber
+ReportingUnit	Tennessee;Warren County;6-1 Caney Fork	Warren;6-1 Caney Fork
+ReportingUnit	Tennessee;Warren County;7-1 Friendship	Warren;7-1 Friendship
+ReportingUnit	Tennessee;Warren County;8-1 Shellsford	Warren;8-1 Shellsford
+ReportingUnit	Tennessee;Warren County;8-3 Bonner	Warren;8-3 Bonner
+ReportingUnit	Tennessee;Warren County;9-1 Morrison	Warren;9-1 Morrison
+ReportingUnit	Tennessee;Warren County;9-2 Viola	Warren;9-2 Viola
+ReportingUnit	Tennessee;Warren County;10-1 Centertown UMC	Warren;10-1 Centertown UMC
+ReportingUnit	Tennessee;Warren County;10-2 Centertown CIC	Warren;10-2 Centertown CIC
+ReportingUnit	Tennessee;Warren County;11-1 Midway	Warren;11-1 Midway
+ReportingUnit	Tennessee;Warren County;11-2 Hwy 56 North	Warren;11-2 Hwy 56 North
+ReportingUnit	Tennessee;Warren County;12-1 Highway Dept	Warren;12-1 Highway Dept
+ReportingUnit	Tennessee;Warren County;12-2 Lucky	Warren;12-2 Lucky
+ReportingUnit	Tennessee;Washington County;01 Fall Branch	Washington;01 Fall Branch
+ReportingUnit	Tennessee;Washington County;02 Harmony	Washington;02 Harmony
+ReportingUnit	Tennessee;Washington County;03 Bowmantown	Washington;03 Bowmantown
+ReportingUnit	Tennessee;Washington County;04 Sulphur Springs	Washington;04 Sulphur Springs
+ReportingUnit	Tennessee;Washington County;05 B.C. West	Washington;05 B.C. West
+ReportingUnit	Tennessee;Washington County;06 B.C. Central	Washington;06 B.C. Central
+ReportingUnit	Tennessee;Washington County;07 Gray County	Washington;07 Gray County
+ReportingUnit	Tennessee;Washington County;08 Gray City	Washington;08 Gray City
+ReportingUnit	Tennessee;Washington County;09 B.C. East	Washington;09 B.C. East
+ReportingUnit	Tennessee;Washington County;10 B.C. City	Washington;10 B.C. City
+ReportingUnit	Tennessee;Washington County;11 Asbury	Washington;11 Asbury
+ReportingUnit	Tennessee;Washington County;12 Town Acres City	Washington;12 Town Acres City
+ReportingUnit	Tennessee;Washington County;13 Woodland	Washington;13 Woodland
+ReportingUnit	Tennessee;Washington County;14 Indian Trail	Washington;14 Indian Trail
+ReportingUnit	Tennessee;Washington County;15 Princeton	Washington;15 Princeton
+ReportingUnit	Tennessee;Washington County;16 Lakeridge	Washington;16 Lakeridge
+ReportingUnit	Tennessee;Washington County;17 Fairmont	Washington;17 Fairmont
+ReportingUnit	Tennessee;Washington County;18 Carver	Washington;18 Carver
+ReportingUnit	Tennessee;Washington County;19 Henry Johnson 6	Washington;19 Henry Johnson 6
+ReportingUnit	Tennessee;Washington County;20 Henry Johnson 7	Washington;20 Henry Johnson 7
+ReportingUnit	Tennessee;Washington County;21 Keystone	Washington;21 Keystone
+ReportingUnit	Tennessee;Washington County;22 South Side	Washington;22 South Side
+ReportingUnit	Tennessee;Washington County;23 Grace East	Washington;23 Grace East
+ReportingUnit	Tennessee;Washington County;24 Grace City	Washington;24 Grace City
+ReportingUnit	Tennessee;Washington County;25 Grace West	Washington;25 Grace West
+ReportingUnit	Tennessee;Washington County;26 Fairhaven	Washington;26 Fairhaven
+ReportingUnit	Tennessee;Washington County;27 Courthouse	Washington;27 Courthouse
+ReportingUnit	Tennessee;Washington County;28 Visitor's Center	Washington;28 Visitor's Center
+ReportingUnit	Tennessee;Washington County;29 Lamar	Washington;29 Lamar
+ReportingUnit	Tennessee;Washington County;30 New Victory	Washington;30 New Victory
+ReportingUnit	Tennessee;Washington County;31 Embreeville	Washington;31 Embreeville
+ReportingUnit	Tennessee;Washington County;32 New Salem	Washington;32 New Salem
+ReportingUnit	Tennessee;Washington County;33 South Central 7	Washington;33 South Central 7
+ReportingUnit	Tennessee;Washington County;34 South Central 6	Washington;34 South Central 6
+ReportingUnit	Tennessee;Washington County;35 Town Acres County	Washington;35 Town Acres County
+ReportingUnit	Tennessee;Wayne County;1-1 Waynesboro	Wayne;1-1 Waynesboro
+ReportingUnit	Tennessee;Wayne County;2-1 Clifton	Wayne;2-1 Clifton
+ReportingUnit	Tennessee;Wayne County;3-1 Beech Creek	Wayne;3-1 Beech Creek
+ReportingUnit	Tennessee;Wayne County;3-2 Crazy Horse	Wayne;3-2 Crazy Horse
+ReportingUnit	Tennessee;Wayne County;3-3 Eagle Creek	Wayne;3-3 Eagle Creek
+ReportingUnit	Tennessee;Wayne County;4-1 Collinwood	Wayne;4-1 Collinwood
+ReportingUnit	Tennessee;Wayne County;4-2 Shawnettee	Wayne;4-2 Shawnettee
+ReportingUnit	Tennessee;Wayne County;5-1 Big Cypress	Wayne;5-1 Big Cypress
+ReportingUnit	Tennessee;Wayne County;5-2 Lutts	Wayne;5-2 Lutts
+ReportingUnit	Tennessee;Wayne County;5-3 Woodmen	Wayne;5-3 Woodmen
+ReportingUnit	Tennessee;Wayne County;6-1 Holly Creek	Wayne;6-1 Holly Creek
+ReportingUnit	Tennessee;Wayne County;6-2 South Gate	Wayne;6-2 South Gate
+ReportingUnit	Tennessee;Wayne County;7-1 Buffalo River	Wayne;7-1 Buffalo River
+ReportingUnit	Tennessee;Wayne County;7-2 Ovilla	Wayne;7-2 Ovilla
+ReportingUnit	Tennessee;Weakley County;1A Palmersville	Weakley;1A Palmersville
+ReportingUnit	Tennessee;Weakley County;1B Latham	Weakley;1B Latham
+ReportingUnit	Tennessee;Weakley County;2A Gleason	Weakley;2A Gleason
+ReportingUnit	Tennessee;Weakley County;3A Greenfield	Weakley;3A Greenfield
+ReportingUnit	Tennessee;Weakley County;4A Sharon	Weakley;4A Sharon
+ReportingUnit	Tennessee;Weakley County;5A Martin CoC	Weakley;5A Martin CoC
+ReportingUnit	Tennessee;Weakley County;6A Trinity	Weakley;6A Trinity
+ReportingUnit	Tennessee;Weakley County;7A Martin Shepherd's	Weakley;7A Martin Shepherd's
+ReportingUnit	Tennessee;Weakley County;8A Martin FUMC	Weakley;8A Martin FUMC
+ReportingUnit	Tennessee;Weakley County;9A Dresden	Weakley;9A Dresden
+ReportingUnit	Tennessee;White County;1-1 Sparta Civic	White;1-1 Sparta Civic
+ReportingUnit	Tennessee;White County;1-2 Sparta Civic	White;1-2 Sparta Civic
+ReportingUnit	Tennessee;White County;2-1 Ag Fair Complex	White;2-1 Ag Fair Complex
+ReportingUnit	Tennessee;White County;2-2 Woodland Park	White;2-2 Woodland Park
+ReportingUnit	Tennessee;White County;3-1 Ag Fair Complex	White;3-1 Ag Fair Complex
+ReportingUnit	Tennessee;White County;4-1 Woodland Park	White;4-1 Woodland Park
+ReportingUnit	Tennessee;White County;4-2 Bondecroft	White;4-2 Bondecroft
+ReportingUnit	Tennessee;White County;5-1 Doyle Civic	White;5-1 Doyle Civic
+ReportingUnit	Tennessee;White County;6-1 Central View	White;6-1 Central View
+ReportingUnit	Tennessee;White County;6-2 Cassville	White;6-2 Cassville
+ReportingUnit	Tennessee;White County;7-1 Northfield	White;7-1 Northfield
+ReportingUnit	Tennessee;Williamson County;1-1	Williamson;1-1
+ReportingUnit	Tennessee;Williamson County;1-2	Williamson;1-2
+ReportingUnit	Tennessee;Williamson County;1-3	Williamson;1-3
+ReportingUnit	Tennessee;Williamson County;1-4	Williamson;1-4
+ReportingUnit	Tennessee;Williamson County;1-5	Williamson;1-5
+ReportingUnit	Tennessee;Williamson County;2-1	Williamson;2-1
+ReportingUnit	Tennessee;Williamson County;2-2	Williamson;2-2
+ReportingUnit	Tennessee;Williamson County;2-3	Williamson;2-3
+ReportingUnit	Tennessee;Williamson County;2-4	Williamson;2-4
+ReportingUnit	Tennessee;Williamson County;2-5	Williamson;2-5
+ReportingUnit	Tennessee;Williamson County;3-1	Williamson;3-1
+ReportingUnit	Tennessee;Williamson County;3-2	Williamson;3-2
+ReportingUnit	Tennessee;Williamson County;3-3	Williamson;3-3
+ReportingUnit	Tennessee;Williamson County;4-1	Williamson;4-1
+ReportingUnit	Tennessee;Williamson County;4-2	Williamson;4-2
+ReportingUnit	Tennessee;Williamson County;4-3	Williamson;4-3
+ReportingUnit	Tennessee;Williamson County;5-1	Williamson;5-1
+ReportingUnit	Tennessee;Williamson County;5-2	Williamson;5-2
+ReportingUnit	Tennessee;Williamson County;5-3	Williamson;5-3
+ReportingUnit	Tennessee;Williamson County;5-4	Williamson;5-4
+ReportingUnit	Tennessee;Williamson County;6-1	Williamson;6-1
+ReportingUnit	Tennessee;Williamson County;6-2	Williamson;6-2
+ReportingUnit	Tennessee;Williamson County;6-3	Williamson;6-3
+ReportingUnit	Tennessee;Williamson County;7-1	Williamson;7-1
+ReportingUnit	Tennessee;Williamson County;7-2	Williamson;7-2
+ReportingUnit	Tennessee;Williamson County;7-3	Williamson;7-3
+ReportingUnit	Tennessee;Williamson County;8-1	Williamson;8-1
+ReportingUnit	Tennessee;Williamson County;8-2	Williamson;8-2
+ReportingUnit	Tennessee;Williamson County;8-3	Williamson;8-3
+ReportingUnit	Tennessee;Williamson County;9-1	Williamson;9-1
+ReportingUnit	Tennessee;Williamson County;9-2	Williamson;9-2
+ReportingUnit	Tennessee;Williamson County;9-3	Williamson;9-3
+ReportingUnit	Tennessee;Williamson County;9-4	Williamson;9-4
+ReportingUnit	Tennessee;Williamson County;9-5	Williamson;9-5
+ReportingUnit	Tennessee;Williamson County;10-1	Williamson;10-1
+ReportingUnit	Tennessee;Williamson County;10-2	Williamson;10-2
+ReportingUnit	Tennessee;Williamson County;10-3	Williamson;10-3
+ReportingUnit	Tennessee;Williamson County;11-1	Williamson;11-1
+ReportingUnit	Tennessee;Williamson County;11-2	Williamson;11-2
+ReportingUnit	Tennessee;Williamson County;11-3	Williamson;11-3
+ReportingUnit	Tennessee;Williamson County;12-1	Williamson;12-1
+ReportingUnit	Tennessee;Williamson County;12-2	Williamson;12-2
+ReportingUnit	Tennessee;Williamson County;12-3	Williamson;12-3
+ReportingUnit	Tennessee;Wilson County;1-1	Wilson;1-1
+ReportingUnit	Tennessee;Wilson County;2-1	Wilson;2-1
+ReportingUnit	Tennessee;Wilson County;3-1	Wilson;3-1
+ReportingUnit	Tennessee;Wilson County;4-1	Wilson;4-1
+ReportingUnit	Tennessee;Wilson County;4-2	Wilson;4-2
+ReportingUnit	Tennessee;Wilson County;5-1	Wilson;5-1
+ReportingUnit	Tennessee;Wilson County;6-1	Wilson;6-1
+ReportingUnit	Tennessee;Wilson County;7-1	Wilson;7-1
+ReportingUnit	Tennessee;Wilson County;7-2	Wilson;7-2
+ReportingUnit	Tennessee;Wilson County;8-1	Wilson;8-1
+ReportingUnit	Tennessee;Wilson County;9-1	Wilson;9-1
+ReportingUnit	Tennessee;Wilson County;9-2	Wilson;9-2
+ReportingUnit	Tennessee;Wilson County;10-1	Wilson;10-1
+ReportingUnit	Tennessee;Wilson County;11-1	Wilson;11-1
+ReportingUnit	Tennessee;Wilson County;12-1	Wilson;12-1
+ReportingUnit	Tennessee;Wilson County;12-2	Wilson;12-2
+ReportingUnit	Tennessee;Wilson County;13-1	Wilson;13-1
+ReportingUnit	Tennessee;Wilson County;14-1	Wilson;14-1
+ReportingUnit	Tennessee;Wilson County;15-1	Wilson;15-1
+ReportingUnit	Tennessee;Wilson County;16-1	Wilson;16-1
+ReportingUnit	Tennessee;Wilson County;17-1	Wilson;17-1
+ReportingUnit	Tennessee;Wilson County;18-1	Wilson;18-1
+ReportingUnit	Tennessee;Wilson County;19-1	Wilson;19-1
+ReportingUnit	Tennessee;Wilson County;20-1	Wilson;20-1
+ReportingUnit	Tennessee;Wilson County;21-1	Wilson;21-1
+ReportingUnit	Tennessee;Wilson County;21-2	Wilson;21-2
+ReportingUnit	Tennessee;Wilson County;22-1	Wilson;22-1
+ReportingUnit	Tennessee;Wilson County;23-1	Wilson;23-1
+ReportingUnit	Tennessee;Wilson County;24-1	Wilson;24-1
+ReportingUnit	Tennessee;Wilson County;25-1	Wilson;25-1
+ReportingUnit	Tennessee;Wilson County;25-2	Wilson;25-2
+Candidate	Write-In - Trevor Killian Murphy	Write-In - Trevor Killian Murphy
+Candidate	Write-In - Ronald Cornell Jr.	Write-In - Ronald Cornell Jr.
+Candidate	Write-In - Kasey Wells	Write-In - Kasey Wells
+Candidate	Write-In - Josh Berger	Write-In - Josh Berger
+Candidate	Scott Anthony Vieira Jr	Scott Anthony Vieira Jr
+Candidate	Roque 'Rocky' De La Fuente	Roque 'Rocky' De La Fuente
+Candidate	Keith Douglas Sweitzer	Keith Douglas Sweitzer
+Candidate	Jeffrey Alan Grunau	Jeffrey Alan Grunau
+Candidate	James Hart	James Hart
+Candidate	Bobby Lyons	Bobby Lyons
+Candidate	Write-In - R19 Boddie	Write-In - R19 Boddie
+Candidate	Kacey Morgan	Kacey Morgan
+Candidate	Yahweh Yahweh	Yahweh Yahweh
+Candidate	Write-In - Tre Stewart	Write-In - Tre Stewart
+Candidate	Write-In - Tom Hoefling	Write-In - Tom Hoefling
+Candidate	Write-In - Patti Larimer Young	Write-In - Patti Larimer Young
+Candidate	Write-In - Natisha Brooks	Write-In - Natisha Brooks
+Candidate	Write-In - Michael A Minnis	Write-In - Michael A Minnis
+Candidate	Write-In - John A. Gentry	Write-In - John A. Gentry
+Candidate	Write-In - Houston Butler Jr.	Write-In - Houston Butler Jr.
+Candidate	Virginia Couch	Virginia Couch
+Candidate	Troy B. Jones	Troy B. Jones
+Candidate	Tom Sottek	Tom Sottek
+Candidate	Susan Sneed	Susan Sneed
+Candidate	Steve Cohen	Steve Cohen
+Candidate	Sheila Younglove	Sheila Younglove
+Candidate	Sam Bledsoe	Sam Bledsoe
+Candidate	Ronnie L. Glynn	Ronnie L. Glynn
+Candidate	Robyn Deck	Robyn Deck
+Candidate	Renee Hoyos	Renee Hoyos
+Candidate	Paddy Sizemore	Paddy Sizemore
+Candidate	Mike Stewart	Mike Stewart
+Candidate	Meg Gorman	Meg Gorman
+Candidate	Matt Ferry	Matt Ferry
+Candidate	Mary R. Vaughn	Mary R. Vaughn
+Candidate	Marquita Bradshaw	Marquita Bradshaw
+Candidate	Mariah N. Phillips	Mariah N. Phillips
+Candidate	Lynnette P. Williams	Lynnette P. Williams
+Candidate	Luke Cameron	Luke Cameron
+Candidate	Kiran Sreepada	Kiran Sreepada
+Candidate	Justin Davis	Justin Davis
+Candidate	Julie Byrd Ashworth	Julie Byrd Ashworth
+Candidate	Joseph Udeaja	Joseph Udeaja
+Candidate	Joseph R. Biden	Joseph R. Biden
+Candidate	John J. Deberry Jr.	John J. Deberry Jr.
+Candidate	John A. Gentry	John A. Gentry
+Candidate	Joan Farrell	Joan Farrell
+Candidate	Jerri Green	Jerri Green
+Candidate	Jennifer Foley	Jennifer Foley
+Candidate	Jeffery T. Washburn	Jeffery T. Washburn
+Candidate	Jay Clark	Jay Clark
+Candidate	Jason Hodges	Jason Hodges
+Candidate	Jarvus M. Turnley	Jarvus M. Turnley
+Candidate	Jane George	Jane George
+Candidate	James Gray	James Gray
+Candidate	James Campbell	James Campbell
+Candidate	Holly Spann	Holly Spann
+Candidate	Heidi Campbell	Heidi Campbell
+Candidate	Greg Mills	Greg Mills
+Candidate	Gloria Johnson	Gloria Johnson
+Candidate	Glenn Scruggs	Glenn Scruggs
+Candidate	Gabby Salinas	Gabby Salinas
+Candidate	Erika Stotts Pearson	Erika Stotts Pearson
+Candidate	Elizabeth Rowland	Elizabeth Rowland
+Candidate	Elizabeth Madeira	Elizabeth Madeira
+Candidate	Eddie Johnson	Eddie Johnson
+Candidate	Dwayne Thompson	Dwayne Thompson
+Candidate	Delynn McCash	Delynn McCash
+Candidate	Dean Sparks	Dean Sparks
+Candidate	David G.E. Fankhauser	David G.E. Fankhauser
+Candidate	Daniel Jones	Daniel Jones
+Candidate	Civil Miller-Watkins	Civil Miller-Watkins
+Candidate	Christopher Martin Finley	Christopher Martin Finley
+Candidate	Christopher J. Hale	Christopher J. Hale
+Candidate	Chase Clemons	Chase Clemons
+Candidate	Carol Abney	Carol Abney
+Candidate	CJ Mitchell	CJ Mitchell
+Candidate	Brandon Thomas	Brandon Thomas
+Candidate	Brad Batt	Brad Batt
+Candidate	Bobby Patrick Harrell	Bobby Patrick Harrell
+Candidate	Bob Freeman	Bob Freeman
+Candidate	Blair Walsingham	Blair Walsingham
+Candidate	Bennett H Lapides	Bennett H Lapides
+Candidate	Barbara Cooper	Barbara Cooper
+Candidate	Arvil Love Jr	Arvil Love Jr
+Candidate	Andrea Bond-Johnson	Andrea Bond-Johnson
+Candidate	Amber Riddle	Amber Riddle
+Candidate	Kanye West	Kanye West
+Candidate	Elizabeth McLeod	Elizabeth McLeod
+Candidate	Gloria La Riva	Gloria La Riva
+Candidate	Aaron James	Aaron James
+Candidate	Steven J. Hooper	Steven J. Hooper
+Candidate	Alyson Kennedy	Alyson Kennedy
+Candidate	Jo Jorgensen	Jo Jorgensen
+Candidate	G. Dean Hill	G. Dean Hill
+Candidate	Yomi 'Fapas' Faparusi Sr.	Yomi 'Fapas' Faparusi Sr.
+Candidate	Write-In - Kari Keeling	Write-In - Kari Keeling
+Candidate	Write-In - John Miglietta	Write-In - John Miglietta
+Candidate	Write-In - James R. Trusty	Write-In - James R. Trusty
+Candidate	Write-In - Jade Simmons	Write-In - Jade Simmons
+Candidate	Write-In - Al Green	Write-In - Al Green
+Candidate	Steve Holder	Steve Holder
+Candidate	Ronald Brown	Ronald Brown
+Candidate	Matthew L. Campbell	Matthew L. Campbell
+Candidate	Jon Dillard	Jon Dillard
+Candidate	Don Blankenship	Don Blankenship
+Candidate	Dennis Clark	Dennis Clark
+Candidate	Christopher B. Monday	Christopher B. Monday
+Candidate	Bradley Fiscus	Bradley Fiscus
+Candidate	Amber L. Hysell	Amber L. Hysell
+Candidate	Write-In - Scott D. James	Write-In - Scott D. James
+Candidate	Write-In - David Dockery	Write-In - David Dockery
+Candidate	Write-In - Charles Shappley	Write-In - Charles Shappley
+Candidate	Ronnie Henley	Ronnie Henley
+Candidate	Howie Hawkins	Howie Hawkins
