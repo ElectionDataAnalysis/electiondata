@@ -975,7 +975,7 @@ class JurisdictionPrepper:
             # get ReportingUnit formula
             ru_formula = ''
             headers = [x for x in m.req_munger_param_values["munge_strings"] if x != "constant_over_file"]
-            for header in m.req_munger_param_values["munge_strings"]:
+            for header in headers:
                 formulas, formula_err = ui.get_parameters(
                     required_keys=[],
                     optional_keys=["ReportingUnit"],

@@ -2201,3 +2201,18 @@ Tennessee;Wilson County;23-1	precinct
 Tennessee;Wilson County;24-1	precinct
 Tennessee;Wilson County;25-1	precinct
 Tennessee;Wilson County;25-2	precinct
+Tennessee;DeKalb County;7-1 Church of Christ	precinct
+Tennessee;DeKalb County;6-3 Blue Springs	precinct
+Tennessee;DeKalb County;6-2 Keltonburg	precinct
+Tennessee;DeKalb County;6-1 Belk	precinct
+Tennessee;DeKalb County;5-2 County Complex	precinct
+Tennessee;DeKalb County;5-1 Johnson Chapel	precinct
+Tennessee;DeKalb County;4-3 Courthouse	precinct
+Tennessee;DeKalb County;4-2 Rock Castle	precinct
+Tennessee;DeKalb County;3-1 Church of God	precinct
+Tennessee;DeKalb County;2-3 Snows Hill	precinct
+Tennessee;DeKalb County;2-2 Dowelltown	precinct
+Tennessee;DeKalb County;2-1 Liberty	precinct
+Tennessee;DeKalb County;1-3 Edgar Evins Park	precinct
+Tennessee;DeKalb County;1-2 Temperence Hall	precinct
+Tennessee;DeKalb County;1-1 Alexandria	precinct

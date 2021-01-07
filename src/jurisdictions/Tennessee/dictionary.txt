@@ -2344,3 +2344,118 @@ ReportingUnit	Tennessee;Wilson County;23-1	Wilson;23-1
 ReportingUnit	Tennessee;Wilson County;24-1	Wilson;24-1
 ReportingUnit	Tennessee;Wilson County;25-1	Wilson;25-1
 ReportingUnit	Tennessee;Wilson County;25-2	Wilson;25-2
+Candidate	Write-In - Trevor Killian Murphy	Write-In - Trevor Killian Murphy
+Candidate	Write-In - Ronald Cornell Jr.	Write-In - Ronald Cornell Jr.
+Candidate	Write-In - Kasey Wells	Write-In - Kasey Wells
+Candidate	Write-In - Josh Berger	Write-In - Josh Berger
+Candidate	Scott Anthony Vieira Jr	Scott Anthony Vieira Jr
+Candidate	Roque 'Rocky' De La Fuente	Roque 'Rocky' De La Fuente
+Candidate	Keith Douglas Sweitzer	Keith Douglas Sweitzer
+Candidate	Jeffrey Alan Grunau	Jeffrey Alan Grunau
+Candidate	James Hart	James Hart
+Candidate	Bobby Lyons	Bobby Lyons
+Candidate	Write-In - R19 Boddie	Write-In - R19 Boddie
+Candidate	Kacey Morgan	Kacey Morgan
+Candidate	Yahweh Yahweh	Yahweh Yahweh
+Candidate	Write-In - Tre Stewart	Write-In - Tre Stewart
+Candidate	Write-In - Tom Hoefling	Write-In - Tom Hoefling
+Candidate	Write-In - Patti Larimer Young	Write-In - Patti Larimer Young
+Candidate	Write-In - Natisha Brooks	Write-In - Natisha Brooks
+Candidate	Write-In - Michael A Minnis	Write-In - Michael A Minnis
+Candidate	Write-In - John A. Gentry	Write-In - John A. Gentry
+Candidate	Write-In - Houston Butler Jr.	Write-In - Houston Butler Jr.
+Candidate	Virginia Couch	Virginia Couch
+Candidate	Troy B. Jones	Troy B. Jones
+Candidate	Tom Sottek	Tom Sottek
+Candidate	Susan Sneed	Susan Sneed
+Candidate	Steve Cohen	Steve Cohen
+Candidate	Sheila Younglove	Sheila Younglove
+Candidate	Sam Bledsoe	Sam Bledsoe
+Candidate	Ronnie L. Glynn	Ronnie L. Glynn
+Candidate	Robyn Deck	Robyn Deck
+Candidate	Renee Hoyos	Renee Hoyos
+Candidate	Paddy Sizemore	Paddy Sizemore
+Candidate	Mike Stewart	Mike Stewart
+Candidate	Meg Gorman	Meg Gorman
+Candidate	Matt Ferry	Matt Ferry
+Candidate	Mary R. Vaughn	Mary R. Vaughn
+Candidate	Marquita Bradshaw	Marquita Bradshaw
+Candidate	Mariah N. Phillips	Mariah N. Phillips
+Candidate	Lynnette P. Williams	Lynnette P. Williams
+Candidate	Luke Cameron	Luke Cameron
+Candidate	Kiran Sreepada	Kiran Sreepada
+Candidate	Justin Davis	Justin Davis
+Candidate	Julie Byrd Ashworth	Julie Byrd Ashworth
+Candidate	Joseph Udeaja	Joseph Udeaja
+Candidate	Joseph R. Biden	Joseph R. Biden
+Candidate	John J. Deberry Jr.	John J. Deberry Jr.
+Candidate	John A. Gentry	John A. Gentry
+Candidate	Joan Farrell	Joan Farrell
+Candidate	Jerri Green	Jerri Green
+Candidate	Jennifer Foley	Jennifer Foley
+Candidate	Jeffery T. Washburn	Jeffery T. Washburn
+Candidate	Jay Clark	Jay Clark
+Candidate	Jason Hodges	Jason Hodges
+Candidate	Jarvus M. Turnley	Jarvus M. Turnley
+Candidate	Jane George	Jane George
+Candidate	James Gray	James Gray
+Candidate	James Campbell	James Campbell
+Candidate	Holly Spann	Holly Spann
+Candidate	Heidi Campbell	Heidi Campbell
+Candidate	Greg Mills	Greg Mills
+Candidate	Gloria Johnson	Gloria Johnson
+Candidate	Glenn Scruggs	Glenn Scruggs
+Candidate	Gabby Salinas	Gabby Salinas
+Candidate	Erika Stotts Pearson	Erika Stotts Pearson
+Candidate	Elizabeth Rowland	Elizabeth Rowland
+Candidate	Elizabeth Madeira	Elizabeth Madeira
+Candidate	Eddie Johnson	Eddie Johnson
+Candidate	Dwayne Thompson	Dwayne Thompson
+Candidate	Delynn McCash	Delynn McCash
+Candidate	Dean Sparks	Dean Sparks
+Candidate	David G.E. Fankhauser	David G.E. Fankhauser
+Candidate	Daniel Jones	Daniel Jones
+Candidate	Civil Miller-Watkins	Civil Miller-Watkins
+Candidate	Christopher Martin Finley	Christopher Martin Finley
+Candidate	Christopher J. Hale	Christopher J. Hale
+Candidate	Chase Clemons	Chase Clemons
+Candidate	Carol Abney	Carol Abney
+Candidate	CJ Mitchell	CJ Mitchell
+Candidate	Brandon Thomas	Brandon Thomas
+Candidate	Brad Batt	Brad Batt
+Candidate	Bobby Patrick Harrell	Bobby Patrick Harrell
+Candidate	Bob Freeman	Bob Freeman
+Candidate	Blair Walsingham	Blair Walsingham
+Candidate	Bennett H Lapides	Bennett H Lapides
+Candidate	Barbara Cooper	Barbara Cooper
+Candidate	Arvil Love Jr	Arvil Love Jr
+Candidate	Andrea Bond-Johnson	Andrea Bond-Johnson
+Candidate	Amber Riddle	Amber Riddle
+Candidate	Kanye West	Kanye West
+Candidate	Elizabeth McLeod	Elizabeth McLeod
+Candidate	Gloria La Riva	Gloria La Riva
+Candidate	Aaron James	Aaron James
+Candidate	Steven J. Hooper	Steven J. Hooper
+Candidate	Alyson Kennedy	Alyson Kennedy
+Candidate	Jo Jorgensen	Jo Jorgensen
+Candidate	G. Dean Hill	G. Dean Hill
+Candidate	Yomi 'Fapas' Faparusi Sr.	Yomi 'Fapas' Faparusi Sr.
+Candidate	Write-In - Kari Keeling	Write-In - Kari Keeling
+Candidate	Write-In - John Miglietta	Write-In - John Miglietta
+Candidate	Write-In - James R. Trusty	Write-In - James R. Trusty
+Candidate	Write-In - Jade Simmons	Write-In - Jade Simmons
+Candidate	Write-In - Al Green	Write-In - Al Green
+Candidate	Steve Holder	Steve Holder
+Candidate	Ronald Brown	Ronald Brown
+Candidate	Matthew L. Campbell	Matthew L. Campbell
+Candidate	Jon Dillard	Jon Dillard
+Candidate	Don Blankenship	Don Blankenship
+Candidate	Dennis Clark	Dennis Clark
+Candidate	Christopher B. Monday	Christopher B. Monday
+Candidate	Bradley Fiscus	Bradley Fiscus
+Candidate	Amber L. Hysell	Amber L. Hysell
+Candidate	Write-In - Scott D. James	Write-In - Scott D. James
+Candidate	Write-In - David Dockery	Write-In - David Dockery
+Candidate	Write-In - Charles Shappley	Write-In - Charles Shappley
+Candidate	Ronnie Henley	Ronnie Henley
+Candidate	Howie Hawkins	Howie Hawkins
