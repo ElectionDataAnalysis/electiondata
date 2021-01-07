@@ -1,0 +1,238 @@
+Name	ReportingUnitType
+Tennessee;TN House District 1	state-house
+Tennessee;TN House District 2	state-house
+Tennessee;TN House District 3	state-house
+Tennessee;TN House District 4	state-house
+Tennessee;TN House District 5	state-house
+Tennessee;TN House District 6	state-house
+Tennessee;TN House District 7	state-house
+Tennessee;TN House District 8	state-house
+Tennessee;TN House District 9	state-house
+Tennessee;TN House District 10	state-house
+Tennessee;TN House District 11	state-house
+Tennessee;TN House District 12	state-house
+Tennessee;TN House District 13	state-house
+Tennessee;TN House District 14	state-house
+Tennessee;TN House District 15	state-house
+Tennessee;TN House District 16	state-house
+Tennessee;TN House District 17	state-house
+Tennessee;TN House District 18	state-house
+Tennessee;TN House District 19	state-house
+Tennessee;TN House District 20	state-house
+Tennessee;TN House District 21	state-house
+Tennessee;TN House District 22	state-house
+Tennessee;TN House District 23	state-house
+Tennessee;TN House District 24	state-house
+Tennessee;TN House District 25	state-house
+Tennessee;TN House District 26	state-house
+Tennessee;TN House District 27	state-house
+Tennessee;TN House District 28	state-house
+Tennessee;TN House District 29	state-house
+Tennessee;TN House District 30	state-house
+Tennessee;TN House District 31	state-house
+Tennessee;TN House District 32	state-house
+Tennessee;TN House District 33	state-house
+Tennessee;TN House District 34	state-house
+Tennessee;TN House District 35	state-house
+Tennessee;TN House District 36	state-house
+Tennessee;TN House District 37	state-house
+Tennessee;TN House District 38	state-house
+Tennessee;TN House District 39	state-house
+Tennessee;TN House District 40	state-house
+Tennessee;TN House District 41	state-house
+Tennessee;TN House District 42	state-house
+Tennessee;TN House District 43	state-house
+Tennessee;TN House District 44	state-house
+Tennessee;TN House District 45	state-house
+Tennessee;TN House District 46	state-house
+Tennessee;TN House District 47	state-house
+Tennessee;TN House District 48	state-house
+Tennessee;TN House District 49	state-house
+Tennessee;TN House District 50	state-house
+Tennessee;TN House District 51	state-house
+Tennessee;TN House District 52	state-house
+Tennessee;TN House District 53	state-house
+Tennessee;TN House District 54	state-house
+Tennessee;TN House District 55	state-house
+Tennessee;TN House District 56	state-house
+Tennessee;TN House District 57	state-house
+Tennessee;TN House District 58	state-house
+Tennessee;TN House District 59	state-house
+Tennessee;TN House District 60	state-house
+Tennessee;TN House District 61	state-house
+Tennessee;TN House District 62	state-house
+Tennessee;TN House District 63	state-house
+Tennessee;TN House District 64	state-house
+Tennessee;TN House District 65	state-house
+Tennessee;TN House District 66	state-house
+Tennessee;TN House District 67	state-house
+Tennessee;TN House District 68	state-house
+Tennessee;TN House District 69	state-house
+Tennessee;TN House District 70	state-house
+Tennessee;TN House District 71	state-house
+Tennessee;TN House District 72	state-house
+Tennessee;TN House District 73	state-house
+Tennessee;TN House District 74	state-house
+Tennessee;TN House District 75	state-house
+Tennessee;TN House District 76	state-house
+Tennessee;TN House District 77	state-house
+Tennessee;TN House District 78	state-house
+Tennessee;TN House District 79	state-house
+Tennessee;TN House District 80	state-house
+Tennessee;TN House District 81	state-house
+Tennessee;TN House District 82	state-house
+Tennessee;TN House District 83	state-house
+Tennessee;TN House District 84	state-house
+Tennessee;TN House District 85	state-house
+Tennessee;TN House District 86	state-house
+Tennessee;TN House District 87	state-house
+Tennessee;TN House District 88	state-house
+Tennessee;TN House District 89	state-house
+Tennessee;TN House District 90	state-house
+Tennessee;TN House District 91	state-house
+Tennessee;TN House District 92	state-house
+Tennessee;TN House District 93	state-house
+Tennessee;TN House District 94	state-house
+Tennessee;TN House District 95	state-house
+Tennessee;TN House District 96	state-house
+Tennessee;TN House District 97	state-house
+Tennessee;TN House District 98	state-house
+Tennessee;TN House District 99	state-house
+Tennessee;TN Senate District 1	state-senate
+Tennessee;TN Senate District 2	state-senate
+Tennessee;TN Senate District 3	state-senate
+Tennessee;TN Senate District 4	state-senate
+Tennessee;TN Senate District 5	state-senate
+Tennessee;TN Senate District 6	state-senate
+Tennessee;TN Senate District 7	state-senate
+Tennessee;TN Senate District 8	state-senate
+Tennessee;TN Senate District 9	state-senate
+Tennessee;TN Senate District 10	state-senate
+Tennessee;TN Senate District 11	state-senate
+Tennessee;TN Senate District 12	state-senate
+Tennessee;TN Senate District 13	state-senate
+Tennessee;TN Senate District 14	state-senate
+Tennessee;TN Senate District 15	state-senate
+Tennessee;TN Senate District 16	state-senate
+Tennessee;TN Senate District 17	state-senate
+Tennessee;TN Senate District 18	state-senate
+Tennessee;TN Senate District 19	state-senate
+Tennessee;TN Senate District 20	state-senate
+Tennessee;TN Senate District 21	state-senate
+Tennessee;TN Senate District 22	state-senate
+Tennessee;TN Senate District 23	state-senate
+Tennessee;TN Senate District 24	state-senate
+Tennessee;TN Senate District 25	state-senate
+Tennessee;TN Senate District 26	state-senate
+Tennessee;TN Senate District 27	state-senate
+Tennessee;TN Senate District 28	state-senate
+Tennessee;TN Senate District 29	state-senate
+Tennessee;TN Senate District 30	state-senate
+Tennessee;TN Senate District 31	state-senate
+Tennessee;TN Senate District 32	state-senate
+Tennessee;TN Senate District 33	state-senate
+Tennessee;US House TN District 1	congressional
+Tennessee;US House TN District 2	congressional
+Tennessee;US House TN District 3	congressional
+Tennessee;US House TN District 4	congressional
+Tennessee;US House TN District 5	congressional
+Tennessee;US House TN District 6	congressional
+Tennessee;US House TN District 7	congressional
+Tennessee;US House TN District 8	congressional
+Tennessee;US House TN District 9	congressional
+Tennessee	state
+Tennessee;Anderson County	county
+Tennessee;Bedford County	county
+Tennessee;Benton County	county
+Tennessee;Bledsoe County	county
+Tennessee;Blount County	county
+Tennessee;Bradley County	county
+Tennessee;Campbell County	county
+Tennessee;Cannon County	county
+Tennessee;Carroll County	county
+Tennessee;Carter County	county
+Tennessee;Cheatham County	county
+Tennessee;Chester County	county
+Tennessee;Claiborne County	county
+Tennessee;Clay County	county
+Tennessee;Cocke County	county
+Tennessee;Coffee County	county
+Tennessee;Crockett County	county
+Tennessee;Cumberland County	county
+Tennessee;Davidson County	county
+Tennessee;Decatur County	county
+Tennessee;Dekalb County	county
+Tennessee;Dickson County	county
+Tennessee;Dyer County	county
+Tennessee;Fayette County	county
+Tennessee;Fentress County	county
+Tennessee;Franklin County	county
+Tennessee;Gibson County	county
+Tennessee;Giles County	county
+Tennessee;Grainger County	county
+Tennessee;Greene County	county
+Tennessee;Grundy County	county
+Tennessee;Hamblen County	county
+Tennessee;Hamilton County	county
+Tennessee;Hancock County	county
+Tennessee;Hardeman County	county
+Tennessee;Hardin County	county
+Tennessee;Hawkins County	county
+Tennessee;Haywood County	county
+Tennessee;Henderson County	county
+Tennessee;Henry County	county
+Tennessee;Hickman County	county
+Tennessee;Houston County	county
+Tennessee;Humphreys County	county
+Tennessee;Jackson County	county
+Tennessee;Jefferson County	county
+Tennessee;Johnson County	county
+Tennessee;Knox County	county
+Tennessee;Lake County	county
+Tennessee;Lauderdale County	county
+Tennessee;Lawrence County	county
+Tennessee;Lewis County	county
+Tennessee;Lincoln County	county
+Tennessee;Loudon County	county
+Tennessee;Macon County	county
+Tennessee;Madison County	county
+Tennessee;Marion County	county
+Tennessee;Marshall County	county
+Tennessee;Maury County	county
+Tennessee;McMinn County	county
+Tennessee;McNairy County	county
+Tennessee;Meigs County	county
+Tennessee;Monroe County	county
+Tennessee;Montgomery County	county
+Tennessee;Moore County	county
+Tennessee;Morgan County	county
+Tennessee;Obion County	county
+Tennessee;Overton County	county
+Tennessee;Perry County	county
+Tennessee;Pickett County	county
+Tennessee;Polk County	county
+Tennessee;Putnam County	county
+Tennessee;Rhea County	county
+Tennessee;Roane County	county
+Tennessee;Robertson County	county
+Tennessee;Rutherford County	county
+Tennessee;Scott County	county
+Tennessee;Sequatchie County	county
+Tennessee;Sevier County	county
+Tennessee;Shelby County	county
+Tennessee;Smith County	county
+Tennessee;Stewart County	county
+Tennessee;Sullivan County	county
+Tennessee;Sumner County	county
+Tennessee;Tipton County	county
+Tennessee;Trousdale County	county
+Tennessee;Unicoi County	county
+Tennessee;Union County	county
+Tennessee;Van Buren County	county
+Tennessee;Warren County	county
+Tennessee;Washington County	county
+Tennessee;Wayne County	county
+Tennessee;Weakley County	county
+Tennessee;White County	county
+Tennessee;Williamson County	county
+Tennessee;Wilson County	county
