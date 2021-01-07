@@ -1,0 +1,149 @@
+Name	ElectionDistrict
+TN House District 1	Tennessee;TN House District 1
+TN House District 2	Tennessee;TN House District 2
+TN House District 3	Tennessee;TN House District 3
+TN House District 4	Tennessee;TN House District 4
+TN House District 5	Tennessee;TN House District 5
+TN House District 6	Tennessee;TN House District 6
+TN House District 7	Tennessee;TN House District 7
+TN House District 8	Tennessee;TN House District 8
+TN House District 9	Tennessee;TN House District 9
+TN House District 10	Tennessee;TN House District 10
+TN House District 11	Tennessee;TN House District 11
+TN House District 12	Tennessee;TN House District 12
+TN House District 13	Tennessee;TN House District 13
+TN House District 14	Tennessee;TN House District 14
+TN House District 15	Tennessee;TN House District 15
+TN House District 16	Tennessee;TN House District 16
+TN House District 17	Tennessee;TN House District 17
+TN House District 18	Tennessee;TN House District 18
+TN House District 19	Tennessee;TN House District 19
+TN House District 20	Tennessee;TN House District 20
+TN House District 21	Tennessee;TN House District 21
+TN House District 22	Tennessee;TN House District 22
+TN House District 23	Tennessee;TN House District 23
+TN House District 24	Tennessee;TN House District 24
+TN House District 25	Tennessee;TN House District 25
+TN House District 26	Tennessee;TN House District 26
+TN House District 27	Tennessee;TN House District 27
+TN House District 28	Tennessee;TN House District 28
+TN House District 29	Tennessee;TN House District 29
+TN House District 30	Tennessee;TN House District 30
+TN House District 31	Tennessee;TN House District 31
+TN House District 32	Tennessee;TN House District 32
+TN House District 33	Tennessee;TN House District 33
+TN House District 34	Tennessee;TN House District 34
+TN House District 35	Tennessee;TN House District 35
+TN House District 36	Tennessee;TN House District 36
+TN House District 37	Tennessee;TN House District 37
+TN House District 38	Tennessee;TN House District 38
+TN House District 39	Tennessee;TN House District 39
+TN House District 40	Tennessee;TN House District 40
+TN House District 41	Tennessee;TN House District 41
+TN House District 42	Tennessee;TN House District 42
+TN House District 43	Tennessee;TN House District 43
+TN House District 44	Tennessee;TN House District 44
+TN House District 45	Tennessee;TN House District 45
+TN House District 46	Tennessee;TN House District 46
+TN House District 47	Tennessee;TN House District 47
+TN House District 48	Tennessee;TN House District 48
+TN House District 49	Tennessee;TN House District 49
+TN House District 50	Tennessee;TN House District 50
+TN House District 51	Tennessee;TN House District 51
+TN House District 52	Tennessee;TN House District 52
+TN House District 53	Tennessee;TN House District 53
+TN House District 54	Tennessee;TN House District 54
+TN House District 55	Tennessee;TN House District 55
+TN House District 56	Tennessee;TN House District 56
+TN House District 57	Tennessee;TN House District 57
+TN House District 58	Tennessee;TN House District 58
+TN House District 59	Tennessee;TN House District 59
+TN House District 60	Tennessee;TN House District 60
+TN House District 61	Tennessee;TN House District 61
+TN House District 62	Tennessee;TN House District 62
+TN House District 63	Tennessee;TN House District 63
+TN House District 64	Tennessee;TN House District 64
+TN House District 65	Tennessee;TN House District 65
+TN House District 66	Tennessee;TN House District 66
+TN House District 67	Tennessee;TN House District 67
+TN House District 68	Tennessee;TN House District 68
+TN House District 69	Tennessee;TN House District 69
+TN House District 70	Tennessee;TN House District 70
+TN House District 71	Tennessee;TN House District 71
+TN House District 72	Tennessee;TN House District 72
+TN House District 73	Tennessee;TN House District 73
+TN House District 74	Tennessee;TN House District 74
+TN House District 75	Tennessee;TN House District 75
+TN House District 76	Tennessee;TN House District 76
+TN House District 77	Tennessee;TN House District 77
+TN House District 78	Tennessee;TN House District 78
+TN House District 79	Tennessee;TN House District 79
+TN House District 80	Tennessee;TN House District 80
+TN House District 81	Tennessee;TN House District 81
+TN House District 82	Tennessee;TN House District 82
+TN House District 83	Tennessee;TN House District 83
+TN House District 84	Tennessee;TN House District 84
+TN House District 85	Tennessee;TN House District 85
+TN House District 86	Tennessee;TN House District 86
+TN House District 87	Tennessee;TN House District 87
+TN House District 88	Tennessee;TN House District 88
+TN House District 89	Tennessee;TN House District 89
+TN House District 90	Tennessee;TN House District 90
+TN House District 91	Tennessee;TN House District 91
+TN House District 92	Tennessee;TN House District 92
+TN House District 93	Tennessee;TN House District 93
+TN House District 94	Tennessee;TN House District 94
+TN House District 95	Tennessee;TN House District 95
+TN House District 96	Tennessee;TN House District 96
+TN House District 97	Tennessee;TN House District 97
+TN House District 98	Tennessee;TN House District 98
+TN House District 99	Tennessee;TN House District 99
+TN Senate District 1	Tennessee;TN Senate District 1
+TN Senate District 2	Tennessee;TN Senate District 2
+TN Senate District 3	Tennessee;TN Senate District 3
+TN Senate District 4	Tennessee;TN Senate District 4
+TN Senate District 5	Tennessee;TN Senate District 5
+TN Senate District 6	Tennessee;TN Senate District 6
+TN Senate District 7	Tennessee;TN Senate District 7
+TN Senate District 8	Tennessee;TN Senate District 8
+TN Senate District 9	Tennessee;TN Senate District 9
+TN Senate District 10	Tennessee;TN Senate District 10
+TN Senate District 11	Tennessee;TN Senate District 11
+TN Senate District 12	Tennessee;TN Senate District 12
+TN Senate District 13	Tennessee;TN Senate District 13
+TN Senate District 14	Tennessee;TN Senate District 14
+TN Senate District 15	Tennessee;TN Senate District 15
+TN Senate District 16	Tennessee;TN Senate District 16
+TN Senate District 17	Tennessee;TN Senate District 17
+TN Senate District 18	Tennessee;TN Senate District 18
+TN Senate District 19	Tennessee;TN Senate District 19
+TN Senate District 20	Tennessee;TN Senate District 20
+TN Senate District 21	Tennessee;TN Senate District 21
+TN Senate District 22	Tennessee;TN Senate District 22
+TN Senate District 23	Tennessee;TN Senate District 23
+TN Senate District 24	Tennessee;TN Senate District 24
+TN Senate District 25	Tennessee;TN Senate District 25
+TN Senate District 26	Tennessee;TN Senate District 26
+TN Senate District 27	Tennessee;TN Senate District 27
+TN Senate District 28	Tennessee;TN Senate District 28
+TN Senate District 29	Tennessee;TN Senate District 29
+TN Senate District 30	Tennessee;TN Senate District 30
+TN Senate District 31	Tennessee;TN Senate District 31
+TN Senate District 32	Tennessee;TN Senate District 32
+TN Senate District 33	Tennessee;TN Senate District 33
+US House TN District 1	Tennessee;US House TN District 1
+US House TN District 2	Tennessee;US House TN District 2
+US House TN District 3	Tennessee;US House TN District 3
+US House TN District 4	Tennessee;US House TN District 4
+US House TN District 5	Tennessee;US House TN District 5
+US House TN District 6	Tennessee;US House TN District 6
+US House TN District 7	Tennessee;US House TN District 7
+US House TN District 8	Tennessee;US House TN District 8
+US House TN District 9	Tennessee;US House TN District 9
+US President (TN)	Tennessee
+TN Governor	Tennessee
+US Senate TN	Tennessee
+TN Attorney General	Tennessee
+TN Lieutenant Governor	Tennessee
+TN Treasurer	Tennessee
+TN Secretary of State	Tennessee
