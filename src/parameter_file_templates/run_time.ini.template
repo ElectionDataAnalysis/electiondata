@@ -1,7 +1,7 @@
 [election_data_analysis]
 results_dir=</path/to/folder/containing/result/and/parameter/files/for/batch/upload>
 archive_dir=</path/to/folder/for/archiving/uploaded/files>
-obsolete_dir=</path/to/folder/for/archiving/files/unloaded/from/db>
+rollup_directory=</path/to/folder/for/archiving/files/unloaded/from/db>
 mungers_dir=</path/to/directory/holding/individual/munger/directories>
 jurisdictions_dir=</path/to/directory/holding/individual/jurisdiction/directories>
 
