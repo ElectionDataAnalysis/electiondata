@@ -1,5 +1,6 @@
 import plotly.graph_objects as go
 import os
+import pathlib
 
 
 def plot(type, data, fig_type, target_dir):
@@ -33,7 +34,7 @@ def plot(type, data, fig_type, target_dir):
         )
         fig.update_layout(
             title=dict(
-                text=f"""{data['contest']}<br>{data['subdivision_type']}<br>{data['count_item_type']}""",
+                text=f"""{data["contest"]}<br>{data["subdivision_type"]}<br>{data["count_item_type"]}""",
                 x=0.5,
                 font=dict(family="Courier New, monospace", size=18),
             ),
@@ -44,11 +45,13 @@ def plot(type, data, fig_type, target_dir):
     x_clean = data["x"].replace(" ", "-").replace("/", "") 
     y_clean = data["y"].replace(" ", "-").replace("/", "") 
     file_name = (
-        f'{x_clean}_{y_clean}.{fig_type}'
+        f"{x_clean}_{y_clean}.{fig_type}"
     )
     file_path = os.path.join(image_dir, file_name)
 
     if not os.path.isdir(image_dir):
+        path = pathlib.Path(image_dir)
+        path.parent.mkdir(parents=True, exist_ok=True)
         os.mkdir(image_dir)
 
     if fig_type == "html":
