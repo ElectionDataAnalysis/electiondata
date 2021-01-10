@@ -1,0 +1,25 @@
+# Format parameters section (required) #
+[format]
+file_type=flat_text
+count_locations=by_field_names
+munge_strings=in_field_values,in_count_headers
+
+flat_text_delimiter=,
+count_fields_by_name=Early Voting Votes,Election Day Votes,By Mail Votes,Prov. Votes,By Mail 2 Votes,Total Votes
+#### if 'in_count_headers' is in munge_strings:
+count_header_row_numbers=0
+#### if file type is flat_text or excel and count_locations is 'by_field_names':
+count_field_name_row=0
+string_field_name_row=0
+
+# Munge formula sections (required if in munge_strings list) #
+[in_field_values]
+ReportingUnit=<County>;District <Election District> Precinct <Election Precinct>
+CandidateContest=<Office Name> District <Office District>
+Candidate=<Candidate Name>
+Party=<Party>
+
+[in_count_headers]
+CountItemType=<header_0>
+
+[ignore]
