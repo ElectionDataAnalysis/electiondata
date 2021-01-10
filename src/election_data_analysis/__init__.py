@@ -967,6 +967,8 @@ class JurisdictionPrepper:
         sdl, err = check_and_init_singledataloader(
             dl.d["results_dir"],
             par_file_name, dl.session, dl.d["mungers_dir"], juris)
+        if not sdl:
+            return err
 
         for mu in sdl.munger_list:
             # get parameters

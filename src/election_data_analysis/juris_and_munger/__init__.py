@@ -140,7 +140,6 @@ class Jurisdiction:
 
 
 
-# TODO combine ensure_jurisdiction_dir with ensure_juris_files
 def ensure_jurisdiction_dir(juris_path, ignore_empty=False) -> dict:
     # create directory if it doesn't exist
     try:
@@ -286,14 +285,6 @@ def clean_and_dedupe(f_path: str):
     dupes_df, df = ui.find_dupes(df)
     if not dupes_df.empty:
         df.to_csv(f_path, sep="\t", index=False, encoding=eda.default_encoding)
-    return
-
-
-def drop_lines_with_any_nulls(f_path):
-    # TODO tech debt: this can muck up encodings. needs to be fixed.
-    df = pd.read_csv(f_path, sep = "\t", encoding=eda.default_encoding, quoting=csv.QUOTE_MINIMAL)
-    df = df[df.notnull().all(axis=1)]
-    df.to_csv(f_path, sep="\t", index=False, encoding=eda.default_encoding)
     return
 
 
@@ -511,51 +502,6 @@ def load_juris_dframe_into_cdf(
     return error
 
 
-def get_ids_for_foreign_keys(
-    session, df1, element, foreign_key, refs, load_refs, error
-):
-    """ TODO <fn> is foreign key"""
-    df = df1.copy()
-    # append the Id corresponding to <fn> from the db
-    foreign_elt = f"{foreign_key[:-3]}"
-    interim = f"{foreign_elt}_Name"
-
-    target_list = []
-    for r in refs:
-        ref_name_field = db.get_name_field(r)
-
-        r_target = pd.read_sql_table(r, session.bind)[["Id", ref_name_field]]
-        r_target.rename(
-            columns={"Id": foreign_key, ref_name_field: interim}, inplace=True
-        )
-
-        target_list.append(r_target)
-
-    target = pd.concat(target_list)
-
-    df = df.merge(target, how="left", left_on=foreign_elt, right_on=interim)
-
-    # TODO might have to check for '' or 0 as well as nulls
-    missing = df[(df[foreign_elt].notnull()) & (df[interim].isnull())]
-    if missing.empty:
-        df.drop([interim], axis=1)
-    else:
-        if load_refs:
-            # Always try to handle/fill in the missing IDs
-            raise ForeignKeyException(
-                f"For some {element} records, {foreign_elt} was not found"
-            )
-        else:
-            if not element in error:
-                error = ui.add_new_error(
-                    error,
-                    "system",
-                    "juris_and_munger.get_ids_for_foreign_keys",
-                    f"For some {element} records, {foreign_elt} was not found",
-                )
-    return df
-
-
 def add_none_or_unknown(df: pd.DataFrame, contest_type: str = None) -> pd.DataFrame:
     new_row = dict()
     for c in df.columns:
@@ -570,10 +516,6 @@ def add_none_or_unknown(df: pd.DataFrame, contest_type: str = None) -> pd.DataFr
     # append row to the dataframe
     df = df.append(new_row, ignore_index=True)
     return df
-
-
-class ForeignKeyException(Exception):
-    pass
 
 
 if __name__ == "__main__":
