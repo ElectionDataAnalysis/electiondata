@@ -539,28 +539,6 @@ def enum_col_to_id_othertext(
     return df, non_standard
 
 
-def good_syntax(s):
-    """Returns true if formula string <s> passes certain syntax check(s)"""
-    good = True
-    # check that angle brackets match
-    #  split the string by opening angle bracket:
-    split = s.split("<")
-    lead = split[0]  # must be free of close angle brackets
-    if ">" in lead:
-        good = False
-        return good
-    else:
-        p1 = re.compile(r"^\S")  # must start with non-whitespace
-        p2 = re.compile(
-            r"^[^>]*\S>[^>]*$"
-        )  # must contain exactly one >, preceded by non-whitespace
-        for x in split[1:]:
-            if not (p1.search(x) and p2.search(x)):
-                good = False
-                return good
-    return good
-
-
 def regularize_candidate_names(
         candidate_column: pd.Series,
 ) -> pd.Series:
