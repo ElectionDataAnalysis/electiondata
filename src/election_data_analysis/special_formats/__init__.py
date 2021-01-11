@@ -26,24 +26,6 @@ def strip_empties(li: list) -> list:
     return li
 
 
-def remove_by_index(main_list: list, idx_list: list):
-    """creates new list by removing from <new_list> indices indicated in <idx_list>.
-    Indices in <idx_list> can be negative or positive. Positive indices are
-    removed first."""
-    # TODO error checking for overlapping neg & pos indices
-    new_list = main_list.copy()
-    not_neg = [idx for idx in idx_list if idx >= 0]
-    not_neg.sort()
-    not_neg.reverse()
-    for idx in not_neg:
-        new_list.pop(idx)
-    neg = [idx for idx in idx_list if idx < 0]
-    neg.sort()
-    for idx in neg:
-        new_list.pop(idx)
-    return new_list
-
-
 def extract_items(line: str, w: int) -> list:
     """assume line ends in \n.
     drops any trailing empty strings from list"""
