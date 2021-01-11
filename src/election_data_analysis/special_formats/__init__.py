@@ -26,16 +26,6 @@ def strip_empties(li: list) -> list:
     return li
 
 
-def extract_items(line: str, w: int) -> list:
-    """assume line ends in \n.
-    drops any trailing empty strings from list"""
-    item_list = [
-        line[idx * w : (idx + 1) * w].strip() for idx in range(int((len(line) - 1) / w))
-    ]
-    item_list = strip_empties(item_list)
-    return item_list
-
-
 def read_xml(
     f_path: str,
     p: Dict[str, Any],
