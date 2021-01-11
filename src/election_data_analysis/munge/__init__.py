@@ -160,40 +160,6 @@ def clean_strings(
     return working
 
 
-def cast_cols_as_int(
-    df: pd.DataFrame,
-    col_list: list,
-    mode="name",
-    error_msg="",
-    munger_name="unknown",
-) -> (pd.DataFrame, dict):
-    """recast columns as integer where possible, leaving columns with text entries as non-numeric)"""
-    err = None
-    if mode == "index":
-        num_columns = [df.columns[idx] for idx in col_list]
-    elif mode == "name":
-        num_columns = [c for c in df.columns if c in col_list]
-    else:
-        err = ui.add_new_error(
-            err,
-            "system",
-            f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
-            f"Mode {mode} not recognized",
-        )
-        return df, err
-    for c in num_columns:
-        try:
-            df[c] = df[c].astype("int64", errors="raise")
-        except ValueError as e:
-            err = ui.add_new_error(
-                err,
-                "warn-munger",
-                munger_name,
-                f"{error_msg}\nColumn {c} cannot be cast as integer:\n{e}",
-            )
-    return df, err
-
-
 def add_regex_column(
         df: pd.DataFrame,
         old_col: str,
