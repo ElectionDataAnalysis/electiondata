@@ -930,18 +930,6 @@ def create_ballot_measure_contests(df, columns):
     return ballotmeasure_df
 
 
-def create_vote_selections(df, contest_selection, election_id):
-    votecount_df = df["VoteCount"].reset_index()
-    ecj = votecount_df[votecount_df.Election_Id == election_id]
-    contest_ids = ecj.Contest_Id.unique()
-    csj = contest_selection[contest_selection.Contest_Id.isin(contest_ids)]
-    ecsvcj = votecount_df[
-        (votecount_df.Id.isin(ecj.index)) & (votecount_df.Id.isin(csj.index))
-    ]
-    ecsvcj.rename(columns={"Id": "VoteCount_Id"}, inplace=True)
-    return ecsvcj["VoteCount_Id"].reset_index()
-
-
 def create_vote_counts(df, ecsvcj, contest_selection, ru_children, sub_ru):
     unsummed = (
         ecsvcj.merge(df["VoteCount"], left_on="VoteCount_Id", right_index=True)
