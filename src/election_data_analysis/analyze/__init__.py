@@ -930,28 +930,6 @@ def create_ballot_measure_contests(df, columns):
     return ballotmeasure_df
 
 
-def create_contests(
-    df, reporting_units, candidate_columns=None, ballotmeasure_columns=None
-):
-    c_df = pd.DataFrame()
-    bm_df = pd.DataFrame()
-    if candidate_columns:
-        c_df = create_candidate_contests(df, candidate_columns)
-    if ballotmeasure_columns:
-        bm_df = create_ballot_measure_contests(df, candidate_columns)
-    contest_selection = pd.concat([c_df, bm_df])
-    contest_selection = contest_selection.merge(
-        reporting_units, how="left", left_on="ElectionDistrict_Id", right_index=True
-    )
-    contest_selection = m.enum_col_from_id_othertext(
-        contest_selection, "ReportingUnitType", df["ReportingUnitType"]
-    )
-    contest_selection.rename(
-        columns={"ReportingUnitType": "contest_district_type"}, inplace=True
-    )
-    return contest_selection
-
-
 def create_hierarchies(
     session, df, jurisdiction_id, subdivision_type_id=None, subdivision_type_other=None
 ):
