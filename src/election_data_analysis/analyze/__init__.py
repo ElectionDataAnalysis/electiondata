@@ -877,29 +877,6 @@ def calculate_votes_at_stake(data):
     return df
 
 
-def pull_data_tables(session):
-    # pull relevant tables
-    df = {}
-    for element in [
-        "VoteCount",
-        "ComposingReportingUnitJoin",
-        "Election",
-        "ReportingUnit",
-        "CandidateContest",
-        "CandidateSelection",
-        "BallotMeasureContest",
-        "BallotMeasureSelection",
-        "Office",
-        "Candidate",
-        "Contest",
-    ]:
-        # pull directly from db, using 'Id' as index
-        df[element] = pd.read_sql_table(element, session.bind, index_col="Id")
-    for enum in ["ReportingUnitType", "CountItemType"]:
-        df[enum] = pd.read_sql_table(enum, session.bind)
-    return df
-
-
 def create_candidate_contests(df, columns):
     contest_df = (
         df["VoteCount"]
