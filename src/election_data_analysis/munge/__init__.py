@@ -160,39 +160,6 @@ def clean_strings(
     return working
 
 
-def clean_column_names(
-    df: pd.DataFrame,
-    count_cols: List[str],
-) -> (pd.DataFrame, List[str], Optional[str]):
-    working = df.copy()
-
-    err_str = None
-    # remove any columns with duplicate names
-    new_working = working.loc[:, ~working.columns.duplicated()]
-    # if something dropped, warn user
-    if new_working.shape != working.shape:
-        err_str = f"Duplicate column names found; these columns were dropped"
-    # restrict count_cols to columns of working
-    if count_cols:
-        new_count_cols = [c for c in working.columns if c in count_cols]
-    else:
-        new_count_cols = None
-
-    # strip any whitespace from column names
-    if isinstance(working.columns, pd.MultiIndex):
-        for j in range(len(working.columns.levels)):
-            # strip whitespace at level j
-            working.columns = working.columns.set_levels(
-                working.columns.levels[j].str.strip(), level=j
-            )
-        # TODO strip whitespace from each item in count_cols as well
-    else:
-        working.columns = [c.strip() for c in working.columns]
-        if new_count_cols:
-            new_count_cols = [c.strip() for c in new_count_cols]
-    return working, new_count_cols, err_str
-
-
 def cast_cols_as_int(
     df: pd.DataFrame,
     col_list: list,
