@@ -478,34 +478,6 @@ def replace_raw_with_internal_ids(
     return working, error
 
 
-def enum_col_from_id_othertext(
-        df: pd.DataFrame,
-        enum: str,
-        enum_df: pd.DataFrame,
-        drop_old: bool = True
-) -> pd.DataFrame:
-    """Returns a copy of dataframe <df>, replacing id and othertext columns
-    (e.g., 'CountItemType_Id' and 'OtherCountItemType)
-    with a plaintext <type> column (e.g., 'CountItemType')
-        using the enumeration given in <enum_df>"""
-    assert f"{enum}_Id" in df.columns, f"Dataframe lacks {enum}_Id column"
-    assert f"Other{enum}" in df.columns, f"Dataframe lacks Other{enum} column"
-    assert "Txt" in enum_df.columns, "Enumeration dataframe should have column 'Txt'"
-
-    # ensure Id is in the index of enum_df (otherwise df index will be lost in merge)
-    if "Id" in enum_df.columns:
-        enum_df = enum_df.set_index("Id")
-
-    df = df.merge(enum_df, left_on=f"{enum}_Id", right_index=True)
-
-    # if Txt value is 'other', use Other{enum} value instead
-    df["Txt"].mask(df["Txt"] != "other", other=df[f"Other{enum}"])
-    df.rename(columns={"Txt": enum}, inplace=True)
-    if drop_old:
-        df.drop([f"{enum}_Id", f"Other{enum}"], axis=1, inplace=True)
-    return df
-
-
 def enum_col_to_id_othertext(
         df: pd.DataFrame,
         type_col: str,
