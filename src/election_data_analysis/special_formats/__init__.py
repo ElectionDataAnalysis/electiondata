@@ -12,25 +12,6 @@ from election_data_analysis import user_interface as ui
 import re
 
 
-def disambiguate(li: list) -> (list, dict):
-    """returns new list, with numbers added to any repeat entries
-    (e.g., ['foo','foo','bar'] yields ['foo','foo 1','bar'])
-    and a dictionary for the alternatives (e.g., alts = {'foo 1':'foo'})"""
-    c = dict()
-    alts = dict()
-    new_li = []
-    for x in li:
-        if x in c.keys():
-            new = f"{x} {c[x]}"
-            new_li.append(new)
-            alts[new] = x
-            c[x] += 1
-        else:
-            new_li.append(x)
-            c[x] = 1
-    return new_li, alts
-
-
 def strip_empties(li: list) -> list:
     # get rid of leading empty strings
     first_useful = next(idx for idx in range(len(li)) if li[idx] != "")
@@ -43,34 +24,6 @@ def strip_empties(li: list) -> list:
     li.reverse()
 
     return li
-
-
-def remove_by_index(main_list: list, idx_list: list):
-    """creates new list by removing from <new_list> indices indicated in <idx_list>.
-    Indices in <idx_list> can be negative or positive. Positive indices are
-    removed first."""
-    # TODO error checking for overlapping neg & pos indices
-    new_list = main_list.copy()
-    not_neg = [idx for idx in idx_list if idx >= 0]
-    not_neg.sort()
-    not_neg.reverse()
-    for idx in not_neg:
-        new_list.pop(idx)
-    neg = [idx for idx in idx_list if idx < 0]
-    neg.sort()
-    for idx in neg:
-        new_list.pop(idx)
-    return new_list
-
-
-def extract_items(line: str, w: int) -> list:
-    """assume line ends in \n.
-    drops any trailing empty strings from list"""
-    item_list = [
-        line[idx * w : (idx + 1) * w].strip() for idx in range(int((len(line) - 1) / w))
-    ]
-    item_list = strip_empties(item_list)
-    return item_list
 
 
 def read_xml(

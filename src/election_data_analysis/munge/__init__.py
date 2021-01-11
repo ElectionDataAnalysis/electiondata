@@ -160,73 +160,6 @@ def clean_strings(
     return working
 
 
-def clean_column_names(
-    df: pd.DataFrame,
-    count_cols: List[str],
-) -> (pd.DataFrame, List[str], Optional[str]):
-    working = df.copy()
-
-    err_str = None
-    # remove any columns with duplicate names
-    new_working = working.loc[:, ~working.columns.duplicated()]
-    # if something dropped, warn user
-    if new_working.shape != working.shape:
-        err_str = f"Duplicate column names found; these columns were dropped"
-    # restrict count_cols to columns of working
-    if count_cols:
-        new_count_cols = [c for c in working.columns if c in count_cols]
-    else:
-        new_count_cols = None
-
-    # strip any whitespace from column names
-    if isinstance(working.columns, pd.MultiIndex):
-        for j in range(len(working.columns.levels)):
-            # strip whitespace at level j
-            working.columns = working.columns.set_levels(
-                working.columns.levels[j].str.strip(), level=j
-            )
-        # TODO strip whitespace from each item in count_cols as well
-    else:
-        working.columns = [c.strip() for c in working.columns]
-        if new_count_cols:
-            new_count_cols = [c.strip() for c in new_count_cols]
-    return working, new_count_cols, err_str
-
-
-def cast_cols_as_int(
-    df: pd.DataFrame,
-    col_list: list,
-    mode="name",
-    error_msg="",
-    munger_name="unknown",
-) -> (pd.DataFrame, dict):
-    """recast columns as integer where possible, leaving columns with text entries as non-numeric)"""
-    err = None
-    if mode == "index":
-        num_columns = [df.columns[idx] for idx in col_list]
-    elif mode == "name":
-        num_columns = [c for c in df.columns if c in col_list]
-    else:
-        err = ui.add_new_error(
-            err,
-            "system",
-            f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
-            f"Mode {mode} not recognized",
-        )
-        return df, err
-    for c in num_columns:
-        try:
-            df[c] = df[c].astype("int64", errors="raise")
-        except ValueError as e:
-            err = ui.add_new_error(
-                err,
-                "warn-munger",
-                munger_name,
-                f"{error_msg}\nColumn {c} cannot be cast as integer:\n{e}",
-            )
-    return df, err
-
-
 def add_regex_column(
         df: pd.DataFrame,
         old_col: str,
@@ -545,34 +478,6 @@ def replace_raw_with_internal_ids(
     return working, error
 
 
-def enum_col_from_id_othertext(
-        df: pd.DataFrame,
-        enum: str,
-        enum_df: pd.DataFrame,
-        drop_old: bool = True
-) -> pd.DataFrame:
-    """Returns a copy of dataframe <df>, replacing id and othertext columns
-    (e.g., 'CountItemType_Id' and 'OtherCountItemType)
-    with a plaintext <type> column (e.g., 'CountItemType')
-        using the enumeration given in <enum_df>"""
-    assert f"{enum}_Id" in df.columns, f"Dataframe lacks {enum}_Id column"
-    assert f"Other{enum}" in df.columns, f"Dataframe lacks Other{enum} column"
-    assert "Txt" in enum_df.columns, "Enumeration dataframe should have column 'Txt'"
-
-    # ensure Id is in the index of enum_df (otherwise df index will be lost in merge)
-    if "Id" in enum_df.columns:
-        enum_df = enum_df.set_index("Id")
-
-    df = df.merge(enum_df, left_on=f"{enum}_Id", right_index=True)
-
-    # if Txt value is 'other', use Other{enum} value instead
-    df["Txt"].mask(df["Txt"] != "other", other=df[f"Other{enum}"])
-    df.rename(columns={"Txt": enum}, inplace=True)
-    if drop_old:
-        df.drop([f"{enum}_Id", f"Other{enum}"], axis=1, inplace=True)
-    return df
-
-
 def enum_col_to_id_othertext(
         df: pd.DataFrame,
         type_col: str,
@@ -632,28 +537,6 @@ def enum_col_to_id_othertext(
         df = df.drop([type_col], axis=1)
 
     return df, non_standard
-
-
-def good_syntax(s):
-    """Returns true if formula string <s> passes certain syntax check(s)"""
-    good = True
-    # check that angle brackets match
-    #  split the string by opening angle bracket:
-    split = s.split("<")
-    lead = split[0]  # must be free of close angle brackets
-    if ">" in lead:
-        good = False
-        return good
-    else:
-        p1 = re.compile(r"^\S")  # must start with non-whitespace
-        p2 = re.compile(
-            r"^[^>]*\S>[^>]*$"
-        )  # must contain exactly one >, preceded by non-whitespace
-        for x in split[1:]:
-            if not (p1.search(x) and p2.search(x)):
-                good = False
-                return good
-    return good
 
 
 def regularize_candidate_names(

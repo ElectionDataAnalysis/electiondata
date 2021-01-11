@@ -809,28 +809,6 @@ def fatal_error(err, error_type_list=None, name_key_list=None) -> bool:
     return False
 
 
-def create_param_file(
-    db_params: dict, multi_data_loader_pars: dict, target_dir: str
-) -> Optional[str]:
-    err_str = None
-    if not os.path.isdir(target_dir):
-        return f"Directory not found: {target_dir}"
-    db_params_str = "\n".join([f"{s}={db_params[s]}" for s in db_params.keys()])
-    mdlp_str = "\n".join(
-        [f"{s}={multi_data_loader_pars[s]}" for s in multi_data_loader_pars.keys()]
-    )
-
-    with open(os.path.join(target_dir, "run_time.ini"), "w") as f:
-        f.write(
-            "[postgresql]\n"
-            + db_params_str
-            + "\n\n[election_data_analysis]\n"
-            + mdlp_str
-        )
-
-    return err_str
-
-
 def run_tests(
     test_dir: str, dbname: str, election_jurisdiction_list: Optional[list] = None
 ) -> (dict, int):

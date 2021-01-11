@@ -1307,11 +1307,6 @@ class Analyzer:
         return election_report
 
 
-def get_filename(path: str) -> str:
-    head, tail = ntpath.split(path)
-    return tail or ntpath.basename(head)
-
-
 def aggregate_results(
         election,
         jurisdiction,

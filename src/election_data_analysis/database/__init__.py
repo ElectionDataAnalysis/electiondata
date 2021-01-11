@@ -833,19 +833,6 @@ def remove_vote_counts(connection, cursor, id: int, active_confirm: bool = True)
     return err_str
 
 
-def candidate_to_id(session, name):
-    """fuzzy string matching on name field, may return multiple results"""
-    name_field = get_name_field("Candidate")
-    q = f"""SELECT "Id" FROM "{element}" WHERE "{name_field}" = '{name}' """
-    idx_df = pd.read_sql(q, session.bind)
-    try:
-        idx = idx_df.loc[0, "Id"]
-    except KeyError:
-        # if no record with name <name> was found
-        idx = None
-    return idx
-
-
 def get_relevant_election(session, filters):
     unit_df = pd.read_sql_table("ReportingUnit", session.bind, index_col="Id")
     unit_df = unit_df[unit_df["Name"].isin(filters)]

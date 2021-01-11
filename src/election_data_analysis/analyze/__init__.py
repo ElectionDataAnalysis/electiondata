@@ -877,29 +877,6 @@ def calculate_votes_at_stake(data):
     return df
 
 
-def pull_data_tables(session):
-    # pull relevant tables
-    df = {}
-    for element in [
-        "VoteCount",
-        "ComposingReportingUnitJoin",
-        "Election",
-        "ReportingUnit",
-        "CandidateContest",
-        "CandidateSelection",
-        "BallotMeasureContest",
-        "BallotMeasureSelection",
-        "Office",
-        "Candidate",
-        "Contest",
-    ]:
-        # pull directly from db, using 'Id' as index
-        df[element] = pd.read_sql_table(element, session.bind, index_col="Id")
-    for enum in ["ReportingUnitType", "CountItemType"]:
-        df[enum] = pd.read_sql_table(enum, session.bind)
-    return df
-
-
 def create_candidate_contests(df, columns):
     contest_df = (
         df["VoteCount"]
@@ -951,97 +928,6 @@ def create_ballot_measure_contests(df, columns):
             ballotmeasure_df, "contest_type", "BallotMeasure"
         )
     return ballotmeasure_df
-
-
-def create_contests(
-    df, reporting_units, candidate_columns=None, ballotmeasure_columns=None
-):
-    c_df = pd.DataFrame()
-    bm_df = pd.DataFrame()
-    if candidate_columns:
-        c_df = create_candidate_contests(df, candidate_columns)
-    if ballotmeasure_columns:
-        bm_df = create_ballot_measure_contests(df, candidate_columns)
-    contest_selection = pd.concat([c_df, bm_df])
-    contest_selection = contest_selection.merge(
-        reporting_units, how="left", left_on="ElectionDistrict_Id", right_index=True
-    )
-    contest_selection = m.enum_col_from_id_othertext(
-        contest_selection, "ReportingUnitType", df["ReportingUnitType"]
-    )
-    contest_selection.rename(
-        columns={"ReportingUnitType": "contest_district_type"}, inplace=True
-    )
-    return contest_selection
-
-
-def create_hierarchies(
-    session, df, jurisdiction_id, subdivision_type_id=None, subdivision_type_other=None
-):
-    ru = df["ReportingUnit"][["ReportingUnitType_Id", "OtherReportingUnitType"]]
-    if not subdivision_type_id:
-        return ru
-    # find ReportingUnits of the correct type that are subunits of top_ru
-    if not subdivision_type_other:
-        subdivision_type_other = ""
-    sub_ru_ids = child_rus_by_id(
-        session,
-        [jurisdiction_id],
-        ru_type=[subdivision_type_id, subdivision_type_other],
-    )
-    if not sub_ru_ids:
-        # TODO better error handling (while not sub_ru_list....)
-        raise Exception(
-            f"Database shows no ReportingUnits of selected subdivision type nested in jursidiction"
-        )
-    sub_ru = df["ReportingUnit"].loc[sub_ru_ids]
-    # find all children of subReportingUnits
-    children_of_subs_ids = child_rus_by_id(session, sub_ru_ids)
-    ru_children = df["ReportingUnit"].loc[children_of_subs_ids]
-    return ru, sub_ru, ru_children
-
-
-def create_vote_selections(df, contest_selection, election_id):
-    votecount_df = df["VoteCount"].reset_index()
-    ecj = votecount_df[votecount_df.Election_Id == election_id]
-    contest_ids = ecj.Contest_Id.unique()
-    csj = contest_selection[contest_selection.Contest_Id.isin(contest_ids)]
-    ecsvcj = votecount_df[
-        (votecount_df.Id.isin(ecj.index)) & (votecount_df.Id.isin(csj.index))
-    ]
-    ecsvcj.rename(columns={"Id": "VoteCount_Id"}, inplace=True)
-    return ecsvcj["VoteCount_Id"].reset_index()
-
-
-def create_vote_counts(df, ecsvcj, contest_selection, ru_children, sub_ru):
-    unsummed = (
-        ecsvcj.merge(df["VoteCount"], left_on="VoteCount_Id", right_index=True)
-        .merge(
-            df["ComposingReportingUnitJoin"],
-            left_on="ReportingUnit_Id",
-            right_on="ChildReportingUnit_Id",
-        )
-        .merge(ru_children, left_on="ChildReportingUnit_Id", right_index=True)
-        .merge(
-            sub_ru,
-            left_on="ParentReportingUnit_Id",
-            right_index=True,
-            suffixes=["", "_Parent"],
-        )
-    )
-    rename = {
-        "Name_Parent": "ParentName",
-        "ReportingUnitType_Id_Parent": "ParentReportingUnitType_Id",
-    }
-    unsummed.rename(columns=rename, inplace=True)
-    # add columns with names
-    unsummed = m.enum_col_from_id_othertext(
-        unsummed, "CountItemType", df["CountItemType"], drop_old=False
-    )
-    unsummed = unsummed.merge(
-        contest_selection, how="left", on=["Selection_Id", "Contest_Id"]
-    )
-    return unsummed
 
 
 def get_unit_by_column(data, column):
