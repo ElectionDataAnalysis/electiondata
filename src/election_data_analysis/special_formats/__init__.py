@@ -12,25 +12,6 @@ from election_data_analysis import user_interface as ui
 import re
 
 
-def disambiguate(li: list) -> (list, dict):
-    """returns new list, with numbers added to any repeat entries
-    (e.g., ['foo','foo','bar'] yields ['foo','foo 1','bar'])
-    and a dictionary for the alternatives (e.g., alts = {'foo 1':'foo'})"""
-    c = dict()
-    alts = dict()
-    new_li = []
-    for x in li:
-        if x in c.keys():
-            new = f"{x} {c[x]}"
-            new_li.append(new)
-            alts[new] = x
-            c[x] += 1
-        else:
-            new_li.append(x)
-            c[x] = 1
-    return new_li, alts
-
-
 def strip_empties(li: list) -> list:
     # get rid of leading empty strings
     first_useful = next(idx for idx in range(len(li)) if li[idx] != "")
