@@ -930,37 +930,6 @@ def create_ballot_measure_contests(df, columns):
     return ballotmeasure_df
 
 
-def create_vote_counts(df, ecsvcj, contest_selection, ru_children, sub_ru):
-    unsummed = (
-        ecsvcj.merge(df["VoteCount"], left_on="VoteCount_Id", right_index=True)
-        .merge(
-            df["ComposingReportingUnitJoin"],
-            left_on="ReportingUnit_Id",
-            right_on="ChildReportingUnit_Id",
-        )
-        .merge(ru_children, left_on="ChildReportingUnit_Id", right_index=True)
-        .merge(
-            sub_ru,
-            left_on="ParentReportingUnit_Id",
-            right_index=True,
-            suffixes=["", "_Parent"],
-        )
-    )
-    rename = {
-        "Name_Parent": "ParentName",
-        "ReportingUnitType_Id_Parent": "ParentReportingUnitType_Id",
-    }
-    unsummed.rename(columns=rename, inplace=True)
-    # add columns with names
-    unsummed = m.enum_col_from_id_othertext(
-        unsummed, "CountItemType", df["CountItemType"], drop_old=False
-    )
-    unsummed = unsummed.merge(
-        contest_selection, how="left", on=["Selection_Id", "Contest_Id"]
-    )
-    return unsummed
-
-
 def get_unit_by_column(data, column):
     """Given a dataframe of results, return a list of unique unit_ids
     that are sorted in desc order by the column's value"""
