@@ -295,50 +295,6 @@ def create_munger_files(
     return err
 
 
-def create_ini_files(
-        ini_directory,
-        ini_list: Optional[List[str]] = None,
-) -> Optional[dict]:
-    err = None
-
-    if not os.path.isdir(ini_directory):
-        return {"ini_directory": "not found"}
-
-    contest_name_pattern = re.compile(r"\nContest=(.+)\n")
-    contest_type_pattern = re.compile(r"\ncontest_type=(\w+)\s*\n")
-    for state in [x for x in os.listdir(ini_directory) if "." not in x]:
-        state_directory = os.path.join(ini_directory,state)
-        if ini_list:
-            inis_to_do = [x for x in os.listdir(state_directory) if x in ini_list]
-        else:
-            inis_to_do = os.listdir(state_directory)
-        for ini in inis_to_do:
-            # for each genuine ini
-            if ini[-4:] == ".ini":
-                ini_path = os.path.join(state_directory, ini)
-                # get contents of *.ini
-                with open(ini_path, "r") as fi:
-                    old_contents = fi.read()
-
-                try:
-                # get contest type
-                    contest_type = contest_type_pattern.findall(old_contents)[0]
-                    contest_name = contest_name_pattern.findall(old_contents)[0]
-
-                    new_contents = old_contents.replace(
-                        f"\ncontest_type={contest_type}",""
-                    ).replace(
-                        f"Contest={contest_name}",f"{contest_type}Contest={contest_name}"
-                    )
-
-                    # write to new ini file
-                    with open(ini_path, "w") as f:
-                        f.write(new_contents)
-                except:
-                    pass
-    return err
-
-
 if __name__ == "__main__":
     ini_directory = '/Users/singer3/PycharmProjects/election_data_analysis/src/ini_files_for_results'
     old_mungers_directory = '/Users/singer3/PycharmProjects/election_data_analysis/src/mungers_old'
