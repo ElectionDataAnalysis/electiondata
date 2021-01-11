@@ -930,32 +930,6 @@ def create_ballot_measure_contests(df, columns):
     return ballotmeasure_df
 
 
-def create_hierarchies(
-    session, df, jurisdiction_id, subdivision_type_id=None, subdivision_type_other=None
-):
-    ru = df["ReportingUnit"][["ReportingUnitType_Id", "OtherReportingUnitType"]]
-    if not subdivision_type_id:
-        return ru
-    # find ReportingUnits of the correct type that are subunits of top_ru
-    if not subdivision_type_other:
-        subdivision_type_other = ""
-    sub_ru_ids = child_rus_by_id(
-        session,
-        [jurisdiction_id],
-        ru_type=[subdivision_type_id, subdivision_type_other],
-    )
-    if not sub_ru_ids:
-        # TODO better error handling (while not sub_ru_list....)
-        raise Exception(
-            f"Database shows no ReportingUnits of selected subdivision type nested in jursidiction"
-        )
-    sub_ru = df["ReportingUnit"].loc[sub_ru_ids]
-    # find all children of subReportingUnits
-    children_of_subs_ids = child_rus_by_id(session, sub_ru_ids)
-    ru_children = df["ReportingUnit"].loc[children_of_subs_ids]
-    return ru, sub_ru, ru_children
-
-
 def create_vote_selections(df, contest_selection, election_id):
     votecount_df = df["VoteCount"].reset_index()
     ecj = votecount_df[votecount_df.Election_Id == election_id]
