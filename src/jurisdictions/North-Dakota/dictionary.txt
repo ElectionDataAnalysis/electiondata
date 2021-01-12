@@ -655,9 +655,7 @@ Candidate	Megan Kummer	Megan Kummer
 Candidate	Joseph Hanson	Joseph Hanson
 Candidate	Tonya Lynn Duffy	Tonya Lynn Duffy
 Candidate	Lilie Ann Schoenack	Lilie Ann Schoenack
-Candidate	Jayme Tenneson	Jayme Tenneson
 Candidate	David M Crane	David M Crane
-Candidate	Joshua Frey	Joshua Frey
 Candidate	Tom Nikolaisen Jr	Tom Nikolaisen Jr
 Candidate	Carrie K. Krause	Carrie K. Krause
 Candidate	Jody Pfaff	Jody Pfaff
