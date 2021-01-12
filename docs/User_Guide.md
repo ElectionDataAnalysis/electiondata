@@ -74,7 +74,7 @@ and similarly, if necessary, for any Contest or Selection. If there is more than
    * (optional) `encoding` (If not specified or recognized, a default encoding will be used. Recognized encodings are limited [python's list of recognized encodings and aliases](https://docs.python.org/3/library/codecs.html#standard-encodings).)
 
    Available for flat_text and excel file types:
-   * (optional) `rows_to_skip` An integer giving the number of rows to skip at the top to get to the table of counts. This parameter will affect integers designating header rows -- '<header_0>' is the first row not skipped. However, this parameter will *not* affect integers designating rows (e.g., for finding information constant over sheets), which are designated, e.g., '<row_0>'. Note that if, e.g., skip_rows = 2, then row_0 will denote the third row of the actual Excel sheet -- the highest unskipped row. The system recognizes the leftmost non-blank cell as the content to be read.
+   * (optional) `rows_to_skip` An integer giving the number of rows to skip at the top to get to the table of counts. This parameter will affect all integers designating rows -- e.g., '<header_0>' is the first row not skipped. This affects the numbering of rows for munge strings that are constant over the sheet as well. If `rows_to_skip = 2`, then '<row_0>' will denote the third row of the actual Excel sheet -- the highest unskipped row. The system recognizes the leftmost non-blank cell as the content to be read.
    * (optional) `all_rows` If the file has no column headers but only data rows with counts, set this parameter to 'data'
  
  
@@ -152,33 +152,48 @@ ReportingUnit_replacement=<column_4>
  
  You may find it helpful to follow the example of the mungers in the repository.
 
-### Formulas for parsing information
+## Formulas for parsing munge string information
 For many results files, it is enough to create concatenation formulas, referencing field names from your file by putting them in angle brackets. 
 
-For simple `txt`, `csv` and `xls` file types, here is an example.
-```
-name	raw_identifier_formula	source
-ReportingUnit	<County Name>	row
-Party	<Party Name>	row
-CandidateContest	<Office Name> <District Name>	row
-Candidate	<Candidate Name>	row
-BallotMeasureContest	<Office Name> <District Name>	row
-BallotMeasureSelection	<header_0>	column
-CountItemType	total	row
-```
-NB: for constants (like the CountItemType 'total' in this example), use `row` for the source. Row-source fields should be the field names from the header row or, if there is no header row, from `format.config`. Column-source fields should be identified by the number of the row in which the information is found. Our convention is that the top row is 0. Use source `ini` for values that are constant over the entire results file and specified in `*.ini`.
-
-### row-sourced formula example
-Consider this snippet from a comma-separated Philadelphia, Pennsylvania voting results file:
+### flat text `[in_field_values]` 
+ Consider this snippet from a comma-separated Philadelphia, Pennsylvania voting results file:
 ```
 WARD,DIVISION,VOTE TYPE,CATEGORY,SELECTION,PARTY,VOTE COUNT
 01,01,A,JUDGE OF THE SUPERIOR COURT,AMANDA GREEN-HAWKINS,DEMOCRATIC,2
 01,01,M,JUDGE OF THE SUPERIOR COURT,AMANDA GREEN-HAWKINS,DEMOCRATIC,146
 01,01,P,JUDGE OF THE SUPERIOR COURT,AMANDA GREEN-HAWKINS,DEMOCRATIC,0
 ```
-The formula `Ward <WARD>;Division <DIVISION>` would yield `Ward 01;Division 01`.
+The formula `Ward <WARD>;Division <DIVISION>` would yield 'Ward 01;Division 01'.
 
-### column-source formula example
+### xml `[in_field_values]`
+Consider this snippet from a Georgia voting results file:
+ ```
+        <Choice key="25" text="Raphael Warnock (Dem)" totalVotes="2279559">
+            <VoteType name="Election Day Votes" votes="485573">
+                <County name="Appling" votes="391" />
+                <County name="Atkinson" votes="262" />
+                <County name="Bacon" votes="162" />
+```
+The formula `<VoteType.name>` would yield 'Election Day Votes'.
+
+### json-nested `[in_field_values]` 
+Consider this snippet from the beginning of a Texas results file (with tabs and line breaks for clarity -- original is all one line):
+ ```
+{
+  "48001":{
+    "N":"ANDERSON","TV":29274,"C":"#ffa11e","Races":{
+      "1001":{"OID":1001,"ON":"PRESIDENT/VICE-PRESIDENT","T":19155,"C":{
+        "9240":{"id":9240,"N":"DONALD J. TRUMP/MICHAEL R. PENCE (I)","P":"REP","V":15062,"PE":51.45,"C":"#E30202","O":1,"EV":11103},
+        "9160":{"id":9160,"N":"JOSEPH R. BIDEN/KAMALA D. HARRIS","P":"DEM","V":3934,"PE":13.44,"C":"#007BBD","O":2,"EV":3234},
+        "9156":{"id":9156,"N":"JO JORGENSEN/JEREMY \"SPIKE\" COHEN","P":"LIB","V":132,"PE":0.45,"C":"#e0b30e","O":3,"EV":96}
+```
+The colons (:) and braces ({}) determine the nesting and the syntax. Leaving out a lot of information we have
+```
+{"48001":{ ... "Races":{"1001":{..."ON":"PRESIDENT/VICE-PRESIDENT" ... "C":{"9240":{..."P":"REP"...}...}...}...}...}...}
+```
+The party ("REP") is nested with keys `48001`, `Races`, `1001`, `C`, `9240` and `P`. The formula `Party=<C.P>` tells the system to find the string whose nested keys contain `C` and then `P`, in that order. Note that json files from other jurisdictions may have different nesting conventions. 
+
+### flat text `[in_count_headers]`
 Consider this snippet from a tab-separated North Carolina voting results file:
 ```
 County	Election Date	Precinct	Contest Group ID	Contest Type	Contest Name	Choice	Choice Party	Vote For	Election Day	One Stop	Absentee by Mail	Provisional	Total Votes	Real Precinct
@@ -188,9 +203,11 @@ ALAMANCE	11/06/2018	03S	1228	S	NC COURT OF APPEALS JUDGE SEAT 3	Michael Monaco, 
 ```
 Here the CountItemType value ('Election Day','One Stop' a.k.a. early voting, 'Absentee by Mail','Provisional' must be read from the column headers, i.e., the information in row 0 of the file. For the first data row, the formula <header_0> would yield CountItemType 'Election Day' for the VoteCount of 59, 'One Stop' for the vote count of 65, etc.
 
-### ini-source example
-Whenever an element is constant for all data in a results file, you can specify it in the parameter (`*.ini`) file instead of the `cdf_elements.txt` file. In this case, you can either omit the corresponding line from `cdf_elements.txt` or keep the line and put 'ini' in the `source` column.
+### excel `[constant_over_sheet]`
+To be read automatically, information that is constant over a sheet must be read either from the sheet name (using `<sheet_name>`) or from the left-most, non-blank entry in a row of the sheet using `<row_j>`, where `j` is the row number. Row numbers start with `0` after skipping the number of rows given in `rows_to_skip`.
 
+### Values constant over a file
+Whenever an element is constant for all data in a results file, you can specify it in the parameter (`*.ini`) file. 
 Maine publishes results in separate files for each contest, and the contests are not specified in the file contents. Here is an example from a file for the 2018 Governor contest.
 ```
 		Hayes, Teresea M.	Mills, Janet T.	Moody, Shawn H.	Others	Blank	
@@ -203,60 +220,27 @@ AND	Greene	151	620	1,249	0	28	2,048
 AND	Leeds	85	372	565	0	16	1,038
 AND	Lewiston	962	7,056	5,497	13	350	13,878
 ```
-In this case `cdf_elements.txt` has this line:
-```CandidateContest		ini``` 
-while the `*.ini` file for the file containing the Governor contest results has these lines:
+In this case the munger needs the line `constant_over_file=CandidateContest` 
+while the `*.ini` file for the file containing the Governor contest results has the line `CandidateContest=ME Governor`. 
+Note what is capitalized and what is not. The CandidateContest name (here `ME Governor`) should match the internal database name given in `CandidateContest.txt`.
+
+Another option is to specify the element with a constant concatenation formula in any one of the other munge string locations. E.g., 
 ```
-Contest=ME Governor
-contest_type=Candidate
+`[in_field_values]`
+ReportingUnit=<CTY>;<TOWN>
+CandidateContest=Guv
 ```
-Note what is capitalized and what is not. The Contest name (here `ME Governor` should match the Name given in `CandidateContest.txt`)
+In this case there must be an entry in `dictionary.txt` matching the constant formula to the internal database name given in `CandidateContest.txt`:
+```CandidateContest	ME Governor	Guv```
 
 ### Regular Expressions
-Sometimes it is necessary to use regular expressions to extract information from fields in the results file. For example, a single field might hold a candidate name along with the candidate's party ()
-
-For the `concatenated-blocks` file type, here is an example (with regular expressions for Party and Candidate -- see below:
-```
-name	raw_identifier_formula	source
-ReportingUnit	<first_column>	row
-Party	{<header_1>,^.*\(([a-zA-Z]{3})\)$}	row
-CandidateContest	<header_0>	row
-Candidate	{<header_1>,^(.*)\([a-zA-Z]{3}\)$}	row
-BallotMeasureContest	<header_0>	row
-BallotMeasureSelection	<header_1>	row
-CountItemType	<header_2>	row
-```
-you can refer to the field that appears in the first column by `first_column`
+Sometimes it is necessary to use regular expressions to extract information from fields in the results file. For example, a single field might hold a candidate name along with the candidate's party.
 
 Some jurisdictions require regular expression (regex) analysis to extract information from the data. For example, in a primary both the Party and the Candidate may be in the same string (e.g., "Robin Perez (DEM)"). Curly brackets indicate that regex analysis is needed. Inside the curly brackets there are two parts, separated by a comma. The first part is the concatenation formula for creating a string from the data in the file. The second is a python regex formula whose first group (enclosed by parentheses) marks the desired substring.
 ```Party	{<header_1>,^.*\(([a-zA-Z]{3})\)$}	row```
 
 The system will report (in the `.warnings` files) any strings that did not match the regex. 
 
-### The concatenated-blocks file type
-As of 2020, states using ExpressVote state wide have text files with a series of blocks of data, one for each contest. A sample of one such file:
-```
-                                                                                                                                                                                                                                                       Governor
-                                                            BRIAN KEMP  (REP)                                                                                                                                     STACEY ABRAMS  (DEM)                                                                                                                                  TED METZ (LIB)                                                                                                                                        
-County                        Registered Voters             Election Day                  Absentee by Mail              Advance in Person             Provisional                   Choice Total                  Election Day                  Absentee by Mail              Advance in Person             Provisional                   Choice Total                  Election Day                  Absentee by Mail              Advance in Person             Provisional                   Choice Total                  Total                         
-Appling                       10613                         2334                          357                           2735                          2                             5428                          630                           170                           557                           1                             1358                          14                            3                             6                             0                             23                            6809                          
-Atkinson                      4252                          808                           45                            1022                          1                             1876                          333                           43                            260                           1                             637                           6                             0                             3                             0                             9                             2522                          
-
-```
-Note that the columns are fixed-width.
-
-### The json file type
-To see the field names in a json file -- and to check that it can be read by the program -- use `read_json` from the python pandas package. E.g.:
-```
->>> import pandas as pd
->>> b = pd.read_json('/Users/singer3/Documents/Temp/DE_2020p.json')
->>> b.columns
-Index(['Election Id', 'Election Name', 'Results Type', 'Election District',
-       'Party Name', 'Contest Sorting Order', 'Contest Title',
-       'Candidate Name', 'Pos', 'Machine Votes', 'Absentee Votes',
-       'Total Votes', 'Percentage'],
-      dtype='object')
-```
 
 ## Create or Improve a Jurisdiction
 It's easiest to use the JurisdictionPrepper() object to create or update jurisdiction files.
@@ -285,7 +269,7 @@ Texas;Angelina County	county
 Texas;Gregg County	county
 Texas;Harrison County	county
 ```
-Currently counties must be added by hand. (NB: in some states, the word 'county' is not used. For instance, Louisiana's major subdivisions are called 'parish'.)
+Counties must be added by hand. (NB: in some states, the word 'county' is not used. For instance, Louisiana's major subdivisions are called 'parish'.)
 
 To find the raw_identifiers for the dictionary, look in your results files to see how counties are written. For example, if your results file looks like this (example from Texas):
 ```
@@ -366,14 +350,19 @@ CountItemType	total	total
 
  (9) Move `XX_starter_dictionary.txt` from the current directory and to the jurisdiction's directory, and rename it to `dictionary.txt` . 
 
- (10) If your results file is precinct based instead of county based, run `add_sub_county_rus_from_multi_results_file(<directory>,<error>)` to add any reporting units in the results files in <directory>. E.g.: 
+ (10) If your results file is precinct based instead of county based, and you would like to use the results file to add precincts to your `ReportingUnit.txt` file, run `add_sub_county_rus`, e.g.: 
 ```
->>> jp.add_sub_county_rus_from_multi_results_file('/Users/singer3/Documents/Temp/000_to-be-loaded')
+>>> jp.add_sub_county_rus('my_results.ini')
 ```
 These will be added as precincts, unless another reporting unit type is specified with the optional argument `sub_ru_type`, e.g.:
 ```
->>> jp.add_sub_county_rus_from_multi_results_file('/Users/singer3/Documents/Temp/000_to-be-loaded',sub_ru_type='congressional')
+>>> jp.add_sub_county_rus_from_multi_results_file('my_results.ini',sub_ru_type='town')
 ```
+If the jurisdiction's major subdivision is not county but something else (e.g., state house district, as in Alaska, or parish as in Louisiana), use the optional argument `county_type`:
+```
+>>> jp.add_sub_county_rus_from_multi_results_file('my_results.ini',county_type='state-house')
+```
+
 
  (11) Look at the newly added items in `ReportingUnit.txt` and `dictionary.txt`, and remove or revise as appropriate.
 
@@ -388,11 +377,11 @@ Corresponding entries will be made in `dictionary.txt`, using the munged name fo
       * Look for non-candidate lines in the file. Take a look at `Candidate.txt` to see if there are lines (such as undervotes) that you may not want included in your final results. 
       * Look in `Candidate.txt` for BallotMeasureSelections you might not have noticed before. Remove these from `Candidate.txt` and revise their lines in `dictionary.txt`.   
       * Our convention for internal names for candidates with quoted nicknames is to use single quotes. Make sure there are no double-quotes in the Name column in `Candidate.txt` and none in the cdf_internal_name column of `dictionary.txt`. E.g., use `Rosa Maria 'Rosy' Palomino`, not `Rosa Maria "Rosy" Palomino`. However, if your results file has `Rosa Maria "Rosy" Palomino`, you will need double-quotes in the raw_identifier column in `dictionary.txt`:
-      * Our convention for internal names for multiple-candidate tickets (e.g., 'Trump/Pence' is to use the full name of the top candidate, e.g., 'Donald J. Trump'). There should be a line in `dictionary.txt` for each variation used in the results files. E.g.:
+      * Our convention for internal names for multiple-candidate tickets (e.g., 'Biden/Harris' is to use the full name of the top candidate, e.g., 'Joseph R. Biden'). There should be a line in `dictionary.txt` for each variation used in the results files.
 ```
 cdf_element	cdf_internal_name	raw_identifier_value
-Candidate	Donald J. Trump	Trump / Pence
-Candidate	Donald J. Trump	Donald J. Trump
+Candidate	Joseph R. Biden	Biden / Harris
+Candidate	Joseph R. Biden	Joseph R. Biden
 Candidate	Rosa Maria 'Rosy' Palomino	Rosa Maria "Rosy" Palomino
 ```
 
