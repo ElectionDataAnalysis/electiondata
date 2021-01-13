@@ -16,8 +16,8 @@ ReportingUnit=<County>
 CountItemType=total
 
 [in_count_headers]
-Party={<header_0>,^.*\n(.*)$}
-Candidate={<header_0>,^(.*)\n.*$}
+Party={<header_0>,^.*\s+\n*(.*)$|write-in}
+Candidate={<header_0>,^(.*\s+|write-in)\n*.*$}
 
 [constant_over_sheet]
 CandidateContest=<row_0> <row_1>
