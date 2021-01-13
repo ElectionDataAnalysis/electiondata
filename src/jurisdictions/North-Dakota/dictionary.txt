@@ -938,3 +938,98 @@ Candidate	Morris Holen Jr	Morris Holen Jr
 Candidate	Lisa Finley-DeVille	Lisa Finley-DeVille
 Candidate	Jordan Kannianen	Jordan Kannianen
 Candidate	David S Rust	David S Rust
+Candidate	Zachary Stephen Tomczik	Zachary Stephen Tomczik
+Candidate	Zachary Blotsky	Zachary Blotsky
+Candidate	Tracey L Wilkie	Tracey L Wilkie
+Candidate	Todd Porter	Todd Porter
+Candidate	Tim Flakoll	Tim Flakoll
+Candidate	Terry Burton Jones	Terry Burton Jones
+Candidate	Terri Hedman	Terri Hedman
+Candidate	Steve Vetter	Steve Vetter
+Candidate	Steve Krebs	Steve Krebs
+Candidate	Shannon Roers Jones	Shannon Roers Jones
+Candidate	Scott Wagner	Scott Wagner
+Candidate	Scott Meyer	Scott Meyer
+Candidate	Robin Weisz	Robin Weisz
+Candidate	Robert S Erbele	Robert S Erbele
+Candidate	Robert E Kibler	Robert E Kibler
+Candidate	Richard Lynne	Richard Lynne
+Candidate	Paul R Hanson	Paul R Hanson
+Candidate	Paul J Thomas	Paul J Thomas
+Candidate	Pat Heinert	Pat Heinert
+Candidate	Pam Musland	Pam Musland
+Candidate	Naomi T Muscha	Naomi T Muscha
+Candidate	Mitch Ostlie	Mitch Ostlie
+Candidate	Mike Wobbema	Mike Wobbema
+Candidate	Mike Schatz	Mike Schatz
+Candidate	Mike Nathe	Mike Nathe
+Candidate	Mike Brandenburg	Mike Brandenburg
+Candidate	Mike Beltz	Mike Beltz
+Candidate	Michael Howe	Michael Howe
+Candidate	Merrill Piepkorn	Merrill Piepkorn
+Candidate	Melissa Gjellstad	Melissa Gjellstad
+Candidate	Melissa Anderson	Melissa Anderson
+Candidate	Matthew Ruby	Matthew Ruby
+Candidate	Mark Weber	Mark Weber
+Candidate	Mark Nelson	Mark Nelson
+Candidate	Luke Simons	Luke Simons
+Candidate	Lisa Meier	Lisa Meier
+Candidate	Linda Weiss	Linda Weiss
+Candidate	Linda Babb	Linda Babb
+Candidate	Larry J Robinson	Larry J Robinson
+Candidate	Larry Bellew	Larry Bellew
+Candidate	Laetitia Hellerud	Laetitia Hellerud
+Candidate	Kyle Thorson	Kyle Thorson
+Candidate	Krisanna Holkup Peterson	Krisanna Holkup Peterson
+Candidate	Kathy Skroch	Kathy Skroch
+Candidate	Kari Breker	Kari Breker
+Candidate	Karen Kay Krebsbach	Karen Kay Krebsbach
+Candidate	Kalyn June Dewitt	Kalyn June Dewitt
+Candidate	Jon Nelson	Jon Nelson
+Candidate	John Martin Pederson	John Martin Pederson
+Candidate	John M Hokana	John M Hokana
+Candidate	John Grabinger	John Grabinger
+Candidate	Jodi Meisch	Jodi Meisch
+Candidate	Jim Roers	Jim Roers
+Candidate	Jerry Klein	Jerry Klein
+Candidate	Jenna Vanhorne	Jenna Vanhorne
+Candidate	Jeffery J Magrum	Jeffery J Magrum
+Candidate	Jay Elkin	Jay Elkin
+Candidate	Janne Myrdal	Janne Myrdal
+Candidate	Hunter L Andes	Hunter L Andes
+Candidate	Hamida Dakane	Hamida Dakane
+Candidate	Glenn Bosch	Glenn Bosch
+Candidate	Emily OBrien	Emily OBrien
+Candidate	Elsie Blair Magnus	Elsie Blair Magnus
+Candidate	Dwight Kiefert	Dwight Kiefert
+Candidate	Doug Larsen	Doug Larsen
+Candidate	Dick Dever	Dick Dever
+Candidate	Diane Larson	Diane Larson
+Candidate	David Monson	David Monson
+Candidate	David Hogue	David Hogue
+Candidate	David Andahl	David Andahl
+Candidate	David A Clemens	David A Clemens
+Candidate	Dan Ruby	Dan Ruby
+Candidate	Curt Kreun	Curt Kreun
+Candidate	Corey Mock	Corey Mock
+Candidate	Cole Conley	Cole Conley
+Candidate	Cole Christensen	Cole Christensen
+Candidate	Clayton Fegley	Clayton Fegley
+Candidate	Claire Cory	Claire Cory
+Candidate	Cindy Kaml	Cindy Kaml
+Candidate	Chuck Damschen	Chuck Damschen
+Candidate	Charlie Hart	Charlie Hart
+Candidate	Brandy L Pyle	Brandy L Pyle
+Candidate	Bradley Edin	Bradley Edin
+Candidate	Bert Anderson	Bert Anderson
+Candidate	Bernie Satrom	Bernie Satrom
+Candidate	Bernie Parkhurst	Bernie Parkhurst
+Candidate	Ben W Hanson	Ben W Hanson
+Candidate	Ben M Hanson	Ben M Hanson
+Candidate	Ben Koppelman	Ben Koppelman
+Candidate	Arnold W Langehaug	Arnold W Langehaug
+Candidate	Andrew Marschall	Andrew Marschall
+Candidate	Amelia Doll	Amelia Doll
+Candidate	Alan J Peterson	Alan J Peterson
+Candidate	Adam Michal	Adam Michal
+Party	Independent Party	independent nomination
