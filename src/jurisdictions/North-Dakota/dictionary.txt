@@ -903,3 +903,38 @@ Candidate	Natalie Bugbee	Natalie Bugbee
 Candidate	Tim Christianson	Tim Christianson
 Candidate	Nikki Davidson	Nikki Davidson
 Candidate	Tara Mosley	Tara Mosley
+Candidate	Joseph R Biden	Biden and Harris
+Candidate	Donald J Trump	Trump and Pence
+Candidate	Jo Jorgensen	Jorgensen and Cohen
+CountItemType	total	total
+Candidate	Howard C Anderson Jr	Howard C Anderson Jr
+Candidate	Zach Raknerud	Zach Raknerud
+Candidate	Will Thompson	Will Thompson
+Candidate	Trygve Hammer	Trygve Hammer
+Candidate	Thomasina Mandan	Thomasina Mandan
+Candidate	Sebastian Ertelt	Sebastian Ertelt
+Candidate	Richard Anderson	Richard Anderson
+Candidate	Rebecca Phillips	Rebecca Phillips
+Candidate	Rebecca Ferderer	Rebecca Ferderer
+Candidate	Randy D Lemm	Randy D Lemm
+Candidate	Randy A Schobinger	Randy A Schobinger
+Candidate	Nathan Toman	Nathan Toman
+Candidate	Kathrin Volochenko	Kathrin Volochenko
+Candidate	Karla Rose Hanson	Karla Rose Hanson
+Candidate	Joshua Johnson	Joshua Johnson
+Candidate	Joshua A Boschee	Joshua A Boschee
+Candidate	Jim Kasper	Jim Kasper
+Candidate	Jason Heitkamp	Jason Heitkamp
+Candidate	Jared Hagert	Jared Hagert
+Candidate	Jacqueline Hoffarth	Jacqueline Hoffarth
+Candidate	George Barnes	George Barnes
+Candidate	Donald Longmuir	Donald Longmuir
+Candidate	Dave Nehring	Dave Nehring
+Candidate	Carl Young	Carl Young
+Candidate	Adam Fortwengler	Adam Fortwengler
+Candidate	Steven James Peterson	Steven James Peterson
+Candidate	Shawn Vedaa	Shawn Vedaa
+Candidate	Morris Holen Jr	Morris Holen Jr
+Candidate	Lisa Finley-DeVille	Lisa Finley-DeVille
+Candidate	Jordan Kannianen	Jordan Kannianen
+Candidate	David S Rust	David S Rust
