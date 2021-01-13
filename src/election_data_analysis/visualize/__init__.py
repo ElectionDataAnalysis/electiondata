@@ -3,10 +3,10 @@ import os
 import pathlib
 
 
-def plot(type, data, fig_type, target_dir):
+def plot(plot_type, data, fig_type, target_dir):
     labels, x, y = parse_data(data)
     fig = go.Figure()
-    if type == "scatter":
+    if plot_type == "scatter":
         fig.add_trace(
             go.Scatter(
                 x=x,
@@ -21,7 +21,7 @@ def plot(type, data, fig_type, target_dir):
             yaxis_title=data["y"],
             font=dict(family="Courier New, monospace", size=18),
         )
-    elif type == "bar":
+    elif plot_type == "bar":
         total = [x + y for x, y in zip(x, y)]
         x_pct = [x / ttl for x, ttl in zip(x, total)]
         y_pct = [y / ttl for y, ttl in zip(y, total)]

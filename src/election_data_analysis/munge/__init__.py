@@ -139,7 +139,7 @@ def clean_strings(
         try:
             working[c] = working[c].astype("string")
         except Exception as exc:
-            print(f"Could not convert column {c} to strings")
+            print(f"Could not convert column {c} to strings: {exc}")
 
         if c in cols:
             # change nulls to the empty string
@@ -186,7 +186,7 @@ def add_regex_column(
             err,
             "munger",
             munger_name,
-            f"Regex error in {pattern_str}"
+            f"Regex error ({e}) in pattern:\n {pattern_str}"
         )
     except Exception as e:
         err = ui.add_new_error(
@@ -277,7 +277,7 @@ def add_column_from_formula(
                     "munger",
                     munger_name,
                     f"Expected transformed column '{f}' not found, "
-                    f"perhaps because of mismatch between munger and results file.",
+                    f"perhaps because of mismatch between munger and results file. KeyError: {ke}",
                 )
                 return w, err
 
@@ -288,6 +288,7 @@ def add_column_from_formula(
             f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
             f"Unexpected error: {e}",
         )
+        return w, err
 
     # delete temporary columns
     w.drop(temp_cols, axis=1, inplace=True)
@@ -440,7 +441,8 @@ def replace_raw_with_internal_ids(
         unmatched_str = "\n\t".join(unmatched_pairs)
         e = (
             f"Warning: Results for {working_unmatched.shape[0]} rows with unmatched {element}s "
-            f"will not be loaded to database. These records (raw name, internal name) were found in dictionary.txt, but "
+            f"will not be loaded to database. "
+            f"These records (raw name, internal name) were found in dictionary.txt, but "
             f"no corresponding record was found in the {element} table in the database: \n\t{unmatched_str}"
         )
         error = ui.add_new_error(
@@ -1127,7 +1129,7 @@ def munge_source_to_raw(
         )
         elements = [k for k in formulas.keys() if (formulas[k] is not None) and (formulas[k] != "None")]
         # get any aux info (NB: does not include suffix)
-        aux_info, foreign_key_fields = get_aux_info(p, formulas, elements, munger_path)
+        aux_info, foreign_key_fields = get_aux_info(formulas, elements, munger_path)
 
         for element in elements:
             try:
@@ -1182,7 +1184,6 @@ def munge_source_to_raw(
     source_cols = [c for c in working.columns if c[-len(suffix):] == suffix]
     working.drop(source_cols, axis=1, inplace=True)
 
-    string_cols = [c for c in working.columns if c != "Count"]
     return working, err
 
 
@@ -1235,7 +1236,7 @@ def get_and_check_munger_params(munger_path: str) -> (dict, Optional[dict]):
                     )
 
     # # extra compatibility requirements for excel or flat text files
-    if (format_options["file_type"] in ["excel", "flat_text"]) :
+    if format_options["file_type"] in ["excel", "flat_text"]:
         # # count_field_name_row is given where required
         if (format_options["count_field_name_row"] is None) and (format_options["count_locations"] == "by_field_names"):
             err = ui.add_new_error(
@@ -1246,7 +1247,7 @@ def get_and_check_munger_params(munger_path: str) -> (dict, Optional[dict]):
             )
 
         # # if all rows are not data, need field names
-        if (format_options["all_rows"] is None):
+        if format_options["all_rows"] is None:
             if format_options["string_field_name_row"] is None:
                 err = ui.add_new_error(
                     err,
@@ -1372,6 +1373,7 @@ def to_standard_count_frame(
             f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
             f"Exception while getting string fields: {exc}"
         )
+        munge_field_lists = dict()
     if new_err:
         err = ui.consolidate_errors([err, new_err])
         if ui.fatal_error(new_err):
@@ -1433,7 +1435,7 @@ def to_standard_count_frame(
                     error_by_sheet[k],
                     "file",
                     Path(f_path).name,
-                    f"In sheet {k}: No data found for one of these: \n\t{variables}",
+                    f"KeyError ({ke}) in sheet {k}: No data found for one of these: \n\t{variables}",
                 )
                 continue
             except Exception as exc:
@@ -1441,7 +1443,7 @@ def to_standard_count_frame(
                     error_by_sheet[k],
                     "file",
                     Path(f_path).name,
-                    f"In sheet {k}: Unexpected exeption: {exc}",
+                    f"In sheet {k}: Unexpected exception: {exc}",
                 )
 
         # keep only necessary columns
@@ -1479,7 +1481,7 @@ def to_standard_count_frame(
 
     # if even one sheet was not fatally flawed
     if suffix and non_fatal:
-        # append suffix to all non-Count column names (to avoid confilcts if e.g., source has col names 'Party'
+        # append suffix to all non-Count column names (to avoid conflicts if e.g., source has col names 'Party'
         try:
             original_string_columns = [c for c in df.columns if c != "Count"]
             df.columns = [c if c == "Count" else f"{c}{suffix}" for c in df.columns]
@@ -1547,7 +1549,6 @@ def fill_vote_count(
 
 
 def get_aux_info(
-        p: Dict[str, Any],
         formulas: Dict[str, str],
         elements: List[str],
         munger_path: str
@@ -1642,4 +1643,3 @@ def get_fields_from_formula(formula: str) -> List[str]:
     texts_and_fields, final_text = text_fragments_and_fields(formula)
     fields = [x[1] for x in texts_and_fields]
     return fields
-
