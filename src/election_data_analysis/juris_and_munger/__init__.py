@@ -7,10 +7,10 @@ from typing import Optional
 from election_data_analysis import munge as m
 from election_data_analysis import user_interface as ui
 import election_data_analysis as eda
-import re
 import numpy as np
 from pathlib import Path
 import csv
+import inspect
 
 
 def recast_options(options: dict, types: dict) -> dict:
@@ -21,12 +21,12 @@ def recast_options(options: dict, types: dict) -> dict:
         if types[k] in ["int","integer"]:
             try:
                 options[k] = int(options[k])
-            except:
+            except Exception:
                 options[k] = None
         if types[k] == "list-of-integers":
             try:
                 options[k] = [int(s) for s in options[k].split(",")]
-            except:
+            except Exception:
                 options[k] = list()
         if types[k] == "str":
             if options[k] == "":
@@ -35,12 +35,12 @@ def recast_options(options: dict, types: dict) -> dict:
         if types[k] == "list-of-strings":
             try:
                 options[k] = [s for s in options[k].split(",")]
-            except:
+            except Exception:
                 options[k] = list()
         if types[k] == "int":
             try:
                 options[k] = int(options[k])
-            except:
+            except Exception:
                 options[k] = None
     return options
 
@@ -70,12 +70,19 @@ class Jurisdiction:
             print(
                 f"WARNING: duplicates removed from dataframe, may indicate a problem.\n"
             )
-            if not f"{contest_type}Contest" in error:
+            if f"{contest_type}Contest" not in error:
                 error[f"{contest_type}Contest"] = {}
             error[f"{contest_type}Contest"]["found_duplicates"] = True
 
         # insert into in Contest table
         e = db.insert_to_cdf_db(engine, df[["Name", "contest_type"]], "Contest")
+        if e:
+            error = ui.add_new_error(
+                error,
+                "warn-system",
+                f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
+                f"On Contest table insertion: {e}",
+            )
 
         # append Contest_Id
         col_map = {"Name": "Name", "contest_type": "contest_type"}
@@ -137,7 +144,6 @@ class Jurisdiction:
     def __init__(self, path_to_juris_dir):
         self.short_name = Path(path_to_juris_dir).name
         self.path_to_juris_dir = path_to_juris_dir
-
 
 
 # TODO combine ensure_jurisdiction_dir with ensure_juris_files
@@ -205,7 +211,7 @@ def ensure_juris_files(juris_path, ignore_empty=False) -> Optional[dict]:
                 err = ui.add_new_error(
                     err,
                     "system",
-                    "juris_and_munger.ensure_juris_files",
+                    f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
                     "Template file {" + juris_file + "}.txt has no contents",
                 )
             temp = pd.DataFrame()
@@ -270,7 +276,7 @@ def ensure_juris_files(juris_path, ignore_empty=False) -> Optional[dict]:
 
 
 def clean_and_dedupe(f_path: str):
-    "Dedupe the file, removing any leading or trailing whitespace and compressing any internal whitespace"
+    """Dedupe the file, removing any leading or trailing whitespace and compressing any internal whitespace"""
     # TODO allow specification of unique constraints
     df = pd.read_csv(f_path, sep="\t", encoding=eda.default_encoding, quoting=csv.QUOTE_MINIMAL)
 
@@ -291,7 +297,7 @@ def clean_and_dedupe(f_path: str):
 
 def drop_lines_with_any_nulls(f_path):
     # TODO tech debt: this can muck up encodings. needs to be fixed.
-    df = pd.read_csv(f_path, sep = "\t", encoding=eda.default_encoding, quoting=csv.QUOTE_MINIMAL)
+    df = pd.read_csv(f_path, sep="\t", encoding=eda.default_encoding, quoting=csv.QUOTE_MINIMAL)
     df = df[df.notnull().all(axis=1)]
     df.to_csv(f_path, sep="\t", index=False, encoding=eda.default_encoding)
     return
@@ -345,12 +351,13 @@ def check_dependencies(juris_dir, element) -> (list, dict):
         err = ui.add_new_error(
             err,
             "system",
-            "juris_and_munger.check_dependencies",
+            f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
             f"file doesn't exist: {f_path}",
         )
+        return list(), err
 
     # Find all dependent columns
-    dependent = [c for c in element_df if c in d.keys()]
+    dependent = [c for c in element_df.columns if c in d.keys()]
     changed_elements = set()
     for c in dependent:
         target = d[c]
@@ -505,55 +512,10 @@ def load_juris_dframe_into_cdf(
         error = ui.add_new_error(
             error,
             "system",
-            "juris_and_munger.load_juris_dframe_into_cdf",
-            f"Error loading {element} to database: {e}",
+            f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
+            f"Error loading {element} to database: {err_string}",
         )
     return error
-
-
-def get_ids_for_foreign_keys(
-    session, df1, element, foreign_key, refs, load_refs, error
-):
-    """ TODO <fn> is foreign key"""
-    df = df1.copy()
-    # append the Id corresponding to <fn> from the db
-    foreign_elt = f"{foreign_key[:-3]}"
-    interim = f"{foreign_elt}_Name"
-
-    target_list = []
-    for r in refs:
-        ref_name_field = db.get_name_field(r)
-
-        r_target = pd.read_sql_table(r, session.bind)[["Id", ref_name_field]]
-        r_target.rename(
-            columns={"Id": foreign_key, ref_name_field: interim}, inplace=True
-        )
-
-        target_list.append(r_target)
-
-    target = pd.concat(target_list)
-
-    df = df.merge(target, how="left", left_on=foreign_elt, right_on=interim)
-
-    # TODO might have to check for '' or 0 as well as nulls
-    missing = df[(df[foreign_elt].notnull()) & (df[interim].isnull())]
-    if missing.empty:
-        df.drop([interim], axis=1)
-    else:
-        if load_refs:
-            # Always try to handle/fill in the missing IDs
-            raise ForeignKeyException(
-                f"For some {element} records, {foreign_elt} was not found"
-            )
-        else:
-            if not element in error:
-                error = ui.add_new_error(
-                    error,
-                    "system",
-                    "juris_and_munger.get_ids_for_foreign_keys",
-                    f"For some {element} records, {foreign_elt} was not found",
-                )
-    return df
 
 
 def add_none_or_unknown(df: pd.DataFrame, contest_type: str = None) -> pd.DataFrame:

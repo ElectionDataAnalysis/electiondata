@@ -1,4 +1,3 @@
-import csv
 import os.path
 
 import pandas as pd
@@ -7,13 +6,10 @@ from election_data_analysis import munge as m
 import datetime
 import os
 import numpy as np
-import matplotlib.pyplot as plt
 from pathlib import Path
-from pandas.api.types import is_numeric_dtype
 from election_data_analysis import database as db
 import scipy.spatial.distance as dist
 from scipy import stats
-import math
 import json
 
 
@@ -282,9 +278,7 @@ def get_data_for_scatter(
             session,
             jurisdiction_id,
             election_id,
-            count_item_type,
             filter_str,
-            count_type,  
         )
     else:
         return get_votecount_data(
@@ -302,9 +296,7 @@ def get_census_data(
     session,
     jurisdiction_id,
     election_id,
-    count_item_type,
     filter_str,
-    count_type,      
 ):
     # get the census data
     connection = session.bind.raw_connection()
@@ -459,7 +451,6 @@ def create_bar(
     multiple_ballot_types = len(unsummed["CountItemType"].unique()) > 1
 
     # Now process data - this is the heart of the scoring/ranking algorithm
-    top_ranked = pd.DataFrame()
     try:
         ranked = assign_anomaly_score(unsummed)
         ranked["margins_pct"] = ranked["Count"] / ranked["reporting_unit_total"]
@@ -469,7 +460,7 @@ def create_bar(
             top_ranked = get_most_anomalous(votes_at_stake, 3)
         else:
             top_ranked = votes_at_stake
-    except:
+    except Exception:
         connection.close()
         return None
     if top_ranked.empty:
@@ -479,8 +470,8 @@ def create_bar(
     # package into list of dictionary
     result_list = []
     ids = top_ranked["unit_id"].unique()
-    for id in ids:
-        temp_df = top_ranked[top_ranked["unit_id"] == id]
+    for idx in ids:
+        temp_df = top_ranked[top_ranked["unit_id"] == idx]
         # some cleaning here to make the pivoting work
         scores_df = temp_df[temp_df["rank"] != 1]
         scores_df = scores_df[["ReportingUnit_Id", "score", "margins_pct"]]
@@ -668,7 +659,6 @@ def assign_anomaly_score(data):
     for unit_id_tmp in unit_ids_tmp:
         # grab all the data there
         temp_df = df_with_units[df_with_units["unit_id_tmp"] == unit_id_tmp]
-        scored_df = pd.DataFrame()
         for i in range(2, int(temp_df["rank"].max()) + 1):
             selection_df = temp_df[temp_df["rank"].isin([1, i])].copy()
             selection_df["unit_id"] = unit_id
@@ -768,8 +758,8 @@ def get_most_anomalous(data, n):
     # now we get the top 8 reporting unit IDs, in terms of anomaly score, of the winner and most anomalous
     ids = data["unit_id"].unique()
     df = pd.DataFrame()
-    for id in ids:
-        temp_df = data[data["unit_id"] == id]
+    for idx in ids:
+        temp_df = data[data["unit_id"] == idx]
         max_score = temp_df["score"].max()
         if max_score > 0:
             rank = temp_df[temp_df["score"] == max_score].iloc[0]["rank"]
@@ -789,7 +779,7 @@ def euclidean_zscore(li):
         return list(stats.zscore(distance_list))
 
 
-def calculate_votes_at_stake(data):
+def calculate_votes_at_stake(data) -> pd.DataFrame:
     """Move the most anomalous pairing to the equivalent of the second-most anomalous
     and calculate the differences in votes that would be returned"""
     df = pd.DataFrame()
@@ -870,7 +860,7 @@ def calculate_votes_at_stake(data):
             )
             temp_df["votes_at_stake"] = contest_margin - adj_contest_margin
             temp_df["margin_ratio"] = temp_df["votes_at_stake"] / contest_margin_ttl
-        except:
+        except Exception:
             temp_df["margin_ratio"] = 0
             temp_df["votes_at_stake"] = 0
         df = pd.concat([df, temp_df])
@@ -1140,4 +1130,4 @@ def nist_candidate(session, election_id, jurisdiction_id):
         ["Id", "BallotName", "PartyId"],
     )
     result = df.to_json(orient="records")
-    return json.loads(result) 
+    return json.loads(result)

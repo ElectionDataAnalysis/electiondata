@@ -6,7 +6,6 @@ from typing import List, Dict, Optional
 import datetime
 import os
 import pandas as pd
-import ntpath
 import inspect
 from pathlib import Path
 from election_data_analysis import analyze as a
@@ -15,8 +14,6 @@ from election_data_analysis import juris_and_munger as jm
 from election_data_analysis import preparation as prep
 
 # constants
-# from election_data_analysis.munge import get_and_check_munger_params, to_standard_count_frame, munge_source_to_raw, \
-    # munge_raw_to_ids, fill_vote_count
 default_encoding = "utf_8"
 
 sdl_pars_req = [
@@ -101,6 +98,8 @@ class DataLoader:
         err = db.create_db_if_not_ok()
 
         # connect to db
+        self.engine = None  # will be set in connect_to_db
+        self.session = None  # will be set in connect_to_db
         self.connect_to_db(err=err)
 
     def connect_to_db(self, dbname: Optional[str] = None, err: Optional[dict] = None):
@@ -110,7 +109,7 @@ class DataLoader:
             Session = sessionmaker(bind=self.engine)
             self.session = Session()
         except Exception as e:
-            print("Cannot connect to database. Exiting.")
+            print(f"Cannot connect to database. Exiting. Exception:\n{e}")
             quit()
         if new_err:
             print("Unexpected error connecting to database.")
@@ -612,6 +611,7 @@ def check_and_init_singledataloader(
     error dictionary (including munger errors noted in SDL initialization)"""
     # test parameters
     par_file = os.path.join(results_dir, par_file_name)
+    sdl = None
     d, err = ui.get_parameters(
         required_keys=sdl_pars_req,
         optional_keys=sdl_pars_opt,
@@ -619,7 +619,6 @@ def check_and_init_singledataloader(
         header="election_data_analysis",
     )
     if err:
-        sdl = None
         return sdl, err
 
     # check consistency of munger and .ini file regarding elements to be read from ini file
@@ -653,7 +652,7 @@ class JurisdictionPrepper:
                     param_file=param_file,
                     header="election_data_analysis",
                 )
-            except FileNotFoundError as e:
+            except FileNotFoundError:
                 print(
                     f"File {param_file} not found. Ensure that it is located"
                     " in the current directory. DataLoader object not created."
@@ -987,11 +986,11 @@ class JurisdictionPrepper:
                     ru_formula = formulas["ReportingUnit"]
             # check that ReportingUnit formula is <county_type>;<sub_ru>
             if ";" not in ru_formula:
-                    new_err = ui.add_new_error(
-                        new_err, "warn-munger", mu, "ReportingUnit formula has no ';'",
-                    )
-                    if new_err:
-                        err_list.append(new_err)
+                new_err = ui.add_new_error(
+                    new_err, "warn-munger", mu, "ReportingUnit formula has no ';'",
+                )
+                if new_err:
+                    err_list.append(new_err)
             else:
                 # create raw -> internal dictionary of county_type names
                 jd_df = prep.get_element(self.d["jurisdiction_path"], "dictionary")
@@ -1014,10 +1013,10 @@ class JurisdictionPrepper:
                     pd.concat(
                         [
                             ru_df, pd.DataFrame(
-                            [
-                                [f"{internal[county[v]]};{remainder[v]}", sub_ru_type]
-                                for v in good_vals
-                            ],
+                                [
+                                    [f"{internal[county[v]]};{remainder[v]}", sub_ru_type]
+                                    for v in good_vals
+                                ],
                                 columns=["Name", "ReportingUnitType"],
                             )
                         ]
@@ -1069,7 +1068,7 @@ class JurisdictionPrepper:
 
 
 def make_par_files(
-    dir: str,
+    directory: str,
     munger_name: str,
     jurisdiction_path: str,
     top_ru: str,
@@ -1078,9 +1077,10 @@ def make_par_files(
     source: str = "unknown",
     results_note: str = "none",
 ):
-    """Utility to create parameter files for multiple files. Makes a parameter file for each (non-.ini,non .*) file in <dir>,
+    """Utility to create parameter files for multiple files.
+    Makes a parameter file for each (non-.ini,non .*) file in <dir>,
     once all other necessary parameters are specified."""
-    data_file_list = [f for f in os.listdir(dir) if (f[-4:] != ".ini") & (f[0] != ".")]
+    data_file_list = [f for f in os.listdir(directory) if (f[-4:] != ".ini") & (f[0] != ".")]
     for f in data_file_list:
         par_text = (
             f"[election_data_analysis]\nresults_file={f}\njurisdiction_path={jurisdiction_path}\n"
@@ -1089,13 +1089,13 @@ def make_par_files(
             f"results_source={source}\nresults_note={results_note}\n"
         )
         par_name = ".".join(f.split(".")[:-1]) + ".ini"
-        with open(os.path.join(dir, par_name), "w") as p:
+        with open(os.path.join(directory, par_name), "w") as p:
             p.write(par_text)
     return
 
 
 class Analyzer:
-    def __new__(self, param_file=None, dbname=None):
+    def __new__(cls, param_file=None, dbname=None):
         """Checks if parameter file exists and is correct. If not, does
         not create DataLoader object."""
         try:
@@ -1111,7 +1111,7 @@ class Analyzer:
                 param_file=param_file,
                 header="election_data_analysis",
             )
-        except FileNotFoundError as e:
+        except FileNotFoundError:
             print(
                 "Parameter file 'run_time.ini' not found. Ensure that it is located"
                 " in the current directory. Analyzer object not created."
@@ -1125,7 +1125,7 @@ class Analyzer:
             print("Analyzer object not created.")
             return None
 
-        return super().__new__(self)
+        return super().__new__(cls)
 
     def __init__(self, param_file=None, dbname=None):
         if not param_file:
@@ -1144,14 +1144,14 @@ class Analyzer:
         Session = sessionmaker(bind=eng)
         self.session = Session()
 
-    # `verbose` param is not used. See github issue #524 for details
-    def display_options(self, input: str, verbose: bool = True, filters: list = None):
+    # `verbose` param is not used but may be necessary. See github issue #524 for details
+    def display_options(self, input_str: str, verbose: bool = True, filters: list = None):
         try:
             filters_mapped = ui.get_contest_type_mappings(filters)
             results = ui.get_filtered_input_options(
-                self.session, input, filters_mapped
+                self.session, input_str, filters_mapped
             )
-        except:
+        except Exception:
             results = None
         return results
 
@@ -1213,7 +1213,6 @@ class Analyzer:
         jurisdiction_id = db.name_to_id(self.session, "ReportingUnit", jurisdiction)
         # for now, bar charts can only handle jurisdictions where county is one level
         # down from the jurisdiction
-        most_granular_id = db.name_to_id(self.session, "ReportingUnitType", "county")
         subdivision_type_id = db.get_jurisdiction_hierarchy(
             self.session, jurisdiction_id
         )
@@ -1286,7 +1285,7 @@ class Analyzer:
             sub_rutype_id=sub_unit_id,
             election_id=election_id,
             by_vote_type=by_vote_type,
-            sub_rutype_othertext = sub_rutype_othertext,
+            sub_rutype_othertext=sub_rutype_othertext,
         )
         return err
 
@@ -1295,7 +1294,7 @@ class Analyzer:
         election_id = db.name_to_id(self.session, "Election", election)
         jurisdiction_id = db.name_to_id(self.session, "ReportingUnit", jurisdiction)
 
-        election_report = {}
+        election_report = dict()
 
         election_report["Contest"] = a.nist_candidate_contest(self.session, election_id, jurisdiction_id)
         election_report["GpUnit"] = a.nist_reporting_unit(self.session, election_id, jurisdiction_id)
@@ -1584,7 +1583,7 @@ def load_results_file(
 
     # read data into standard count format dataframe
     #  append "_SOURCE" to all non-Count column names
-    #  (to avoid confilcts if e.g., source has col names 'Party')
+    #  (to avoid conflicts if e.g., source has col names 'Party')
     try:
         df, original_string_columns, err = m.to_standard_count_frame(
             f_path, munger_path, p, constants, suffix="_SOURCE",
