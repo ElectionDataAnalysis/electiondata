@@ -7,48 +7,47 @@ from election_data_analysis import census_data_exists
 from psycopg2 import sql
 import pytest
 
+@pytest.fixture
+def data(runtime):
+    pytest.ok =  {
+        "ga16g": data_exists("2016 General", "Georgia", p_path=runtime),
+        "ga18g": data_exists("2018 General", "Georgia", p_path=runtime),
+        "ga20p": data_exists("2020 Primary", "Georgia", p_path=runtime),
+        "nc18g": data_exists("2018 General", "North Carolina", p_path=runtime),
+        "ak16g": data_exists("2016 General", "Alaska", p_path=runtime),
+        "ga18census": census_data_exists("2018 General", "Georgia", p_path=runtime)
+    }
 
-def get_analyzer(p_path: str = None):
-    one_up = os.path.dirname(os.getcwd())
-    if p_path:
-        param_file = p_path
-    else:
-        param_file = os.path.join(one_up, "src", "run_time.ini")
-    a = Analyzer(param_file)
-    return a
 
-
-analyzer = get_analyzer()
-ok = {
-    "ga16g": data_exists("2016 General", "Georgia"),
-    "ga18g": data_exists("2018 General", "Georgia"),
-    "ga20p": data_exists("2020 Primary", "Georgia"),
-    "nc18g": data_exists("2018 General", "North Carolina"),
-    "ak16g": data_exists("2016 General", "Alaska"),
-    "ga18census": census_data_exists("2018 General", "Georgia")
-}
+# Required to initialize the pytest.ok variable
+def test_config(data):
+    return pytest.ok
 
 
 # should be non-null on DB with any data
-def test_election_display():
+def test_election_display(runtime):
+    analyzer = Analyzer(runtime)
     assert analyzer.display_options("election", verbose=True)
 
 
 # should be non-null on DB with any data
-def test_jurisdiction_display():
+def test_jurisdiction_display(runtime):
+    analyzer = Analyzer(runtime)
     assert analyzer.display_options("jurisdiction", verbose=True)
 
 
 # should be non-null on DB with data from 2018 General
-def test_jurisdiction_display_filtered():
+def test_jurisdiction_display_filtered(runtime):
+    analyzer = Analyzer(runtime)
     assert analyzer.display_options(
         "jurisdiction", verbose=True, filters=["2018 General"]
     )
 
 
-### Test bar chart flow ###
-@pytest.mark.skipif(not ok["ga18g"], reason="No Georgia 2018 General data")
-def test_contest_type_display():
+# ### Test bar chart flow ###
+def test_contest_type_display(runtime):
+    assert pytest.ok["ga18g"], "No Georgia 2018 General data" 
+    analyzer = Analyzer(runtime)
     assert (
         analyzer.display_options(
             "contest_type", verbose=True, filters=["2018 General", "Georgia"]
@@ -57,8 +56,9 @@ def test_contest_type_display():
     )
 
 
-@pytest.mark.skipif(not ok["ga18g"], reason="No Georgia 2018 General data")
-def test_contest_display():
+def test_contest_display(runtime):
+    assert pytest.ok["ga18g"], "No Georgia 2018 General data" 
+    analyzer = Analyzer(runtime)
     assert (
         analyzer.display_options(
             "contest",
@@ -69,8 +69,9 @@ def test_contest_display():
     )
 
 
-@pytest.mark.skipif(not ok["ga18g"], reason="No Georgia 2018 General data")
-def test_bar_congressional():
+def test_bar_congressional(runtime):
+    assert pytest.ok["ga18g"], "No Georgia 2018 General data" 
+    analyzer = Analyzer(runtime)
     assert (
         analyzer.bar(
             "2018 General", "Georgia", "Congressional", "US House GA District 3"
@@ -79,16 +80,18 @@ def test_bar_congressional():
     )
 
 
-@pytest.mark.skipif(not ok["nc18g"], reason="No North Carolina 2018 General data")
-def test_bar_all_state():
+def test_bar_all_state(runtime):
+    assert pytest.ok["nc18g"], "No North Carolina 2018 General data" 
+    analyzer = Analyzer(runtime)
     assert (
         analyzer.bar("2018 General", "North Carolina", "State House", "All State House")
         == results.nc_2018_bar_statehouse
     )
 
 
-@pytest.mark.skipif(not ok["nc18g"], reason="No North Carolina 2018 General data")
-def test_bar_all_congressional():
+def test_bar_all_congressional(runtime):
+    assert pytest.ok["nc18g"], "No North Carolina 2018 General data" 
+    analyzer = Analyzer(runtime)
     assert (
         analyzer.bar(
             "2018 General", "North Carolina", "Congressional", "All Congressional"
@@ -99,17 +102,19 @@ def test_bar_all_congressional():
 
 ### check scatter flow ###
 # should be non-null if there is any georgia data in the DB
-@pytest.mark.skipif(
-    not ok["ga16g"] and not ok["ga18g"] and not ok["ga20p"], reason="No Georgai data"
-)
-def test_election_display():
+def test_election_display(runtime):
+    assert (
+        pytest.ok["ga16g"] or pytest.ok["ga18g"] or pytest.ok["ga20p"]
+    ), "No Georgia data" 
+    analyzer = Analyzer(runtime)
     assert analyzer.display_options(
         "election", verbose=True, filters=["Georgia", "county"]
     )
 
 
-@pytest.mark.skipif(not ok["nc18g"], reason="No North Carolina 2018 General data")
-def test_category_display():
+def test_category_display(runtime):
+    assert pytest.ok["nc18g"], "No North Carolina 2018 General data" 
+    analyzer = Analyzer(runtime)
     assert (
         analyzer.display_options(
             "category", verbose=True, filters=["North Carolina", "county", "2018 General"]
@@ -118,8 +123,9 @@ def test_category_display():
     )
 
 
-@pytest.mark.skipif(not ok["ga18g"], reason="No Georgia 2018 General data")
-def test_count_display():
+def test_count_display(runtime):
+    assert pytest.ok["ga18g"], "No Georgia 2018 General data" 
+    analyzer = Analyzer(runtime)
     assert (
         analyzer.display_options(
             "count",
@@ -130,8 +136,9 @@ def test_count_display():
     )
 
 
-@pytest.mark.skipif(not ok["ga18g"], reason="No Georgia 2018 General data")
-def test_scatter_candidates():
+def test_scatter_candidates(runtime):
+    assert pytest.ok["ga18g"], "No Georgia 2018 General data" 
+    analyzer = Analyzer(runtime)
     assert (
         analyzer.scatter(
             "Georgia",
@@ -146,8 +153,9 @@ def test_scatter_candidates():
     )
 
 
-@pytest.mark.skipif(not ok["ga18g"], reason="No Georgia 2018 General data")
-def test_scatter_candidates_longname():
+def test_scatter_candidates_longname(runtime):
+    assert pytest.ok["ga18g"], "No Georgia 2018 General data" 
+    analyzer = Analyzer(runtime)
     assert (
         analyzer.scatter(
             "Georgia",
@@ -162,8 +170,9 @@ def test_scatter_candidates_longname():
     )
 
 
-@pytest.mark.skipif(not ok["ga18g"], reason="No Georgia 2018 General data")
-def test_scatter_candidates_votetype():
+def test_scatter_candidates_votetype(runtime):
+    assert pytest.ok["ga18g"], "No Georgia 2018 General data" 
+    analyzer = Analyzer(runtime)
     assert (
         analyzer.scatter(
             "Georgia",
@@ -178,10 +187,9 @@ def test_scatter_candidates_votetype():
     )
 
 
-@pytest.mark.skipif(
-    not ok["ga18g"] or not ok["ga16g"], reason="No Georgia 2016 or 2018 General data"
-)
-def test_scatter_multi_electio():
+def test_scatter_multi_election(runtime):
+    assert pytest.ok["ga16g"] and pytest.ok["ga18g"], "No Georgia 2018 General data" 
+    analyzer = Analyzer(runtime)
     assert (
         analyzer.scatter(
             "Georgia",
@@ -196,8 +204,9 @@ def test_scatter_multi_electio():
     )
 
 
-@pytest.mark.skipif(not ok["ga18g"], reason="No Georgia 2018 General data")
-def test_scatter_party():
+def test_scatter_party(runtime):
+    assert pytest.ok["ga18g"], "No Georgia 2018 General data" 
+    analyzer = Analyzer(runtime)
     assert (
         analyzer.scatter(
             "Georgia",
@@ -212,8 +221,9 @@ def test_scatter_party():
     )
 
 
-@pytest.mark.skipif(not ok["ga18g"], reason="No Georgia 2018 General data")
-def test_scatter_party_votetype():
+def test_scatter_party_votetype(runtime):
+    assert pytest.ok["ga18g"], "No Georgia 2018 General data" 
+    analyzer = Analyzer(runtime)
     assert (
         analyzer.scatter(
             "Georgia",
@@ -229,8 +239,9 @@ def test_scatter_party_votetype():
 
 
 # check that rollup to county level works correctly
-@pytest.mark.skipif(not ok["nc18g"], reason="No North Carolina 2018 General data")
-def test_scatter_county_rollup():
+def test_scatter_county_rollup(runtime):
+    assert pytest.ok["nc18g"], "No North Carolina 2018 General data" 
+    analyzer = Analyzer(runtime)
     assert (
         analyzer.scatter(
             "North Carolina",
@@ -246,8 +257,9 @@ def test_scatter_county_rollup():
 
 
 # check that search works correctly
-@pytest.mark.skipif(not ok["ga18g"], reason="No Georgia 2018 General data")
-def test_candidate_search_display():
+def test_candidate_search_display(runtime):
+    assert pytest.ok["ga18g"], "No Georgia 2018 General data" 
+    analyzer = Analyzer(runtime)
     assert (
         analyzer.display_options(
             "bishop",
@@ -258,8 +270,9 @@ def test_candidate_search_display():
     )
 
 
-@pytest.mark.skipif(not ok["ga18g"], reason="No Georgia 2018 General data")
-def test_count_contest_display():
+def test_count_contest_display(runtime):
+    assert pytest.ok["ga18g"], "No Georgia 2018 General data" 
+    analyzer = Analyzer(runtime)
     assert (
         analyzer.display_options(
             "count",
@@ -270,8 +283,9 @@ def test_count_contest_display():
     )
 
 
-@pytest.mark.skipif(not ok["ga18g"], reason="No Georgia 2018 General data")
-def test_contest_updatelabels_display():
+def test_contest_updatelabels_display(runtime):
+    assert pytest.ok["ga18g"], "No Georgia 2018 General data" 
+    analyzer = Analyzer(runtime)
     assert (
         analyzer.display_options(
             "contest",
@@ -282,8 +296,9 @@ def test_contest_updatelabels_display():
     )
 
 
-@pytest.mark.skipif(not ok["ak16g"], reason="No Alaska 2016 General data")
-def test_alaska_non_county_hierarchy():
+def test_alaska_non_county_hierarchy(runtime):
+    assert pytest.ok["ak16g"], "No Alaska 2016 General data" 
+    analyzer = Analyzer(runtime)
     assert (
         analyzer.scatter(
             "Alaska",
@@ -298,10 +313,11 @@ def test_alaska_non_county_hierarchy():
     )
 
 
-@pytest.mark.skipif(
-    not ok["ga18g"] or not ok["ga18census"], reason="No Georgia 2018 General or Census data"
-)
-def test_census_count_display():
+def test_census_count_display(runtime):
+    assert (
+        pytest.ok["ga16g"] and pytest.ok["ga18g"]
+    ), "No Georgia 2018 General data" 
+    analyzer = Analyzer(runtime)
     assert (
         analyzer.display_options(
             "count",
@@ -312,10 +328,11 @@ def test_census_count_display():
     )
 
 
-@pytest.mark.skipif(
-    not ok["ga18g"] or not ok["ga18census"], reason="No Georgia 2018 General or Census data"
-)
-def test_census_category_display():
+def test_census_category_display(runtime):
+    assert (
+        pytest.ok["ga18g"] and pytest.ok["ga18census"]
+    ), "No Georgia 2018 General or Census data" 
+    analyzer = Analyzer(runtime)
     assert (
         analyzer.display_options(
             "category",
@@ -326,10 +343,11 @@ def test_census_category_display():
     )
 
 
-@pytest.mark.skipif(
-    not ok["ga18g"] or not ok["ga18census"], reason="No Georgia 2018 General or Census data"
-)
-def test_census_scatter():
+def test_census_scatter(runtime):
+    assert (
+        pytest.ok["ga18g"] and pytest.ok["ga18census"]
+    ), "No Georgia 2018 General or Census data" 
+    analyzer = Analyzer(runtime)
     assert (
         analyzer.scatter(
             "Georgia",
