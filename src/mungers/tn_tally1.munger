@@ -1,0 +1,20 @@
+# Format parameters section (required) #
+[format]
+## Required format parameters:
+file_type=excel
+count_locations= by_field_names
+munge_strings= in_field_values,constant_over_file
+
+#### if count_locations is 'by_field_names':
+count_fields_by_name=PVTALLY1
+#### if 'constant_over_file' is in munge_strings:
+constant_over_file=CountItemType
+count_field_name_row=0
+string_field_name_row=0
+
+
+[in_field_values]
+ReportingUnit=<COUNTY>;<PRECINCT>
+CandidateContest=<OFFICENAME>
+Candidate=<RNAME1>
+Party=<PARTY1>

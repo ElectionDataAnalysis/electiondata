@@ -893,7 +893,10 @@ def raw_to_id_simple(
                 cit = pd.read_sql_table("CountItemType", session.bind)
                 working, non_standard = enum_col_to_id_othertext(working, "CountItemType", cit)
                 if non_standard:
-                    ns = "\n\t".join(non_standard)
+                    try:
+                        ns = "\n\t".join(non_standard)
+                    except TypeError:
+                        ns = non_standard
                     err = ui.add_new_error(
                         err,
                         "warn-jurisdiction",

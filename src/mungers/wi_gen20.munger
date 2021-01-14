@@ -3,7 +3,7 @@ file_type=excel
 count_locations=by_column_numbers
 munge_strings=in_count_headers,in_field_values,constant_over_file
 
-encoding=iso-8859-1
+
 count_column_numbers=1,2,3,4,5,6
 string_field_name_row=1
 count_field_name_row=1

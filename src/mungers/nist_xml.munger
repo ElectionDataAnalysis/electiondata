@@ -1,12 +1,12 @@
 [format]
 file_type=xml
-count_locations=by_field_name
-string_locations=from_field_values
+count_locations=by_field_names
+munge_strings=in_field_values
 
 encoding=utf_8
 count_fields_by_name=VoteCounts.Count
 
-[from_field_values]
+[in_field_values]
 ReportingUnit=<GpUnitId.text>
 Party=<PartyId.text>
 CandidateContest=<Contest.Name>

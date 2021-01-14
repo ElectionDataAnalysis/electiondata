@@ -146,7 +146,6 @@ class Jurisdiction:
         self.path_to_juris_dir = path_to_juris_dir
 
 
-# TODO combine ensure_jurisdiction_dir with ensure_juris_files
 def ensure_jurisdiction_dir(juris_path, ignore_empty=False) -> dict:
     # create directory if it doesn't exist
     try:
@@ -292,14 +291,6 @@ def clean_and_dedupe(f_path: str):
     dupes_df, df = ui.find_dupes(df)
     if not dupes_df.empty:
         df.to_csv(f_path, sep="\t", index=False, encoding=eda.default_encoding)
-    return
-
-
-def drop_lines_with_any_nulls(f_path):
-    # TODO tech debt: this can muck up encodings. needs to be fixed.
-    df = pd.read_csv(f_path, sep="\t", encoding=eda.default_encoding, quoting=csv.QUOTE_MINIMAL)
-    df = df[df.notnull().all(axis=1)]
-    df.to_csv(f_path, sep="\t", index=False, encoding=eda.default_encoding)
     return
 
 
@@ -532,10 +523,6 @@ def add_none_or_unknown(df: pd.DataFrame, contest_type: str = None) -> pd.DataFr
     # append row to the dataframe
     df = df.append(new_row, ignore_index=True)
     return df
-
-
-class ForeignKeyException(Exception):
-    pass
 
 
 if __name__ == "__main__":

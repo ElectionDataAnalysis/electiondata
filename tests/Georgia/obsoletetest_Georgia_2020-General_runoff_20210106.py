@@ -15,21 +15,50 @@ import election_data_analysis as e
 
 # # # constants - CHANGE THESE!! - use internal db names
 election = "2020 General"
-jurisdiction = 'Pennsylvania'
-abbr = 'PA'
-total_pres_votes = 6917583  # total of all votes for US President
-cd = 16  # US House congressional district
-total_cd_votes = 353875  # total votes in that US House contest in the chosen cd
-shd = 15   # state house district
-total_shd_votes = 34648  # total votes in that State House contest
-ssd = 47  # state senate district
-total_ssd_votes = 132947  # total votes in that State Senate contest
-single_vote_type = 'provisional'  # pick any one with corresponding data in your file, but use internal db name
-pres_votes_vote_type = 105319  # total votes for US President of that vote type
+jurisdiction = 'Georgia'
+abbr = 'GA'
+total_pres_votes = 4998482 # total of all votes for US President
+cd = 9  # US House congressional district
+total_cd_votes = 372547 # total votes in that US House contest in the chosen cd
+shd = 3   # state house district
+total_shd_votes = 23054  # total votes in that State House contest
+ssd = 10  # state senate district
+total_ssd_votes = 84994  # total votes in that State Senate contest
+single_vote_type = 'election-day'  # pick any one with corresponding data in your file, but use internal db name
+pres_votes_vote_type = 975540  # total votes for US President of that vote type
 county_or_other = "county"   # Change this only if results are subdivided by something other than counties
                             #  e.g., 'parish' in LA, 'state-house' in Alaska, 'ward' in Philadelphia
-single_county = 'Pennsylvania;Snyder County'  # pick any one from your file, but use internal db name
-pres_votes_county = 19140  # total votes for US President in that county
+single_county = 'Georgia;Bacon County'  # pick any one from your file, but use internal db name
+pres_votes_county = 4668  # total votes for US President in that county
+
+# # # # Runoff constants # # # #
+runoff = [
+    {
+        "contest": "US Senate GA (runoff)",
+        "vote_type": "election-day",
+        "count": 1314793,
+    },
+    {
+        "contest": "US Senate GA (partial term runoff)",
+        "vote_type": "absentee-mail",
+        "count": 1019897,
+    },
+]
+
+
+def test_runoff(dbname):
+    """fails if any one condition is not met"""
+    for condition in runoff:
+        assert(e.contest_total(
+            election,
+            jurisdiction,
+            condition["contest"],
+            vote_type=condition["vote_type"],
+            dbname=dbname,
+            )
+            == condition["count"]
+        )
+
 
 
 def test_data_exists(dbname):
@@ -88,10 +117,6 @@ def test_vote_type_counts_consistent(dbname):
     assert e.check_totals_match_vote_types(election, jurisdiction, dbname=dbname)
 
 
-def test_all_candidates_known(dbname):
-    assert e.get_contest_with_unknown_candidates(election, jurisdiction, dbname=dbname) == []
-
-
 def test_count_type_subtotal(dbname):
     assert (e.contest_total(
         election,
@@ -115,3 +140,7 @@ def test_county_subtotal(dbname):
         )
         == pres_votes_county
             )
+
+
+def test_all_candidates_known(dbname):
+    assert e.get_contest_with_unknown_candidates(election, jurisdiction, dbname=dbname) == []

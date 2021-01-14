@@ -10214,6 +10214,10 @@ Party	Socialist Workers Party	SWP
 Party	Unaffiliated	UA
 Party	Write-In	WI
 Party	I	I
+Party	VPM	VPM
+Party	SLP	SLP
+Party	IND	IND
+Party	IA	IA
 ReportingUnit	Minnesota;MN House District 1	Minnesota;MN House District 1
 ReportingUnit	Minnesota;MN House District 2	Minnesota;MN House District 2
 ReportingUnit	Minnesota;MN House District 3	Minnesota;MN House District 3

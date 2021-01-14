@@ -542,7 +542,7 @@ class SingleDataLoader:
                         return values, err
 
                     df, original_string_columns, err = m.to_standard_count_frame(
-                        f_path, munger_path, p, dict(), suffix="_SOURCE",
+                        f_path, munger_path, p, constants, suffix="_SOURCE",
                     )
                     if ui.fatal_error(err):
                         return values, err
@@ -966,6 +966,8 @@ class JurisdictionPrepper:
         sdl, err = check_and_init_singledataloader(
             dl.d["results_dir"],
             par_file_name, dl.session, dl.d["mungers_dir"], juris)
+        if not sdl:
+            return err
 
         for mu in sdl.munger_list:
             # get parameters
@@ -973,7 +975,8 @@ class JurisdictionPrepper:
             mu_d, new_err = m.get_and_check_munger_params(m_path)
             # get ReportingUnit formula
             ru_formula = ''
-            for header in m.req_munger_param_values["munge_strings"]:
+            headers = [x for x in m.req_munger_param_values["munge_strings"] if x != "constant_over_file"]
+            for header in headers:
                 formulas, formula_err = ui.get_parameters(
                     required_keys=[],
                     optional_keys=["ReportingUnit"],

@@ -1,0 +1,2257 @@
+Name	ReportingUnitType
+Maryland;MD House District 1	state-house
+Maryland;MD House District 2	state-house
+Maryland;MD House District 3	state-house
+Maryland;MD House District 4	state-house
+Maryland;MD House District 5	state-house
+Maryland;MD House District 6	state-house
+Maryland;MD House District 7	state-house
+Maryland;MD House District 8	state-house
+Maryland;MD House District 9	state-house
+Maryland;MD House District 10	state-house
+Maryland;MD House District 11	state-house
+Maryland;MD House District 12	state-house
+Maryland;MD House District 13	state-house
+Maryland;MD House District 14	state-house
+Maryland;MD House District 15	state-house
+Maryland;MD House District 16	state-house
+Maryland;MD House District 17	state-house
+Maryland;MD House District 18	state-house
+Maryland;MD House District 19	state-house
+Maryland;MD House District 20	state-house
+Maryland;MD House District 21	state-house
+Maryland;MD House District 22	state-house
+Maryland;MD House District 23	state-house
+Maryland;MD House District 24	state-house
+Maryland;MD House District 25	state-house
+Maryland;MD House District 26	state-house
+Maryland;MD House District 27	state-house
+Maryland;MD House District 28	state-house
+Maryland;MD House District 29	state-house
+Maryland;MD House District 30	state-house
+Maryland;MD House District 31	state-house
+Maryland;MD House District 32	state-house
+Maryland;MD House District 33	state-house
+Maryland;MD House District 34	state-house
+Maryland;MD House District 35	state-house
+Maryland;MD House District 36	state-house
+Maryland;MD House District 37	state-house
+Maryland;MD House District 38	state-house
+Maryland;MD House District 39	state-house
+Maryland;MD House District 40	state-house
+Maryland;MD House District 41	state-house
+Maryland;MD House District 42	state-house
+Maryland;MD House District 43	state-house
+Maryland;MD House District 44	state-house
+Maryland;MD House District 45	state-house
+Maryland;MD House District 46	state-house
+Maryland;MD House District 47	state-house
+Maryland;MD House District 48	state-house
+Maryland;MD House District 49	state-house
+Maryland;MD House District 50	state-house
+Maryland;MD House District 51	state-house
+Maryland;MD House District 52	state-house
+Maryland;MD House District 53	state-house
+Maryland;MD House District 54	state-house
+Maryland;MD House District 55	state-house
+Maryland;MD House District 56	state-house
+Maryland;MD House District 57	state-house
+Maryland;MD House District 58	state-house
+Maryland;MD House District 59	state-house
+Maryland;MD House District 60	state-house
+Maryland;MD House District 61	state-house
+Maryland;MD House District 62	state-house
+Maryland;MD House District 63	state-house
+Maryland;MD House District 64	state-house
+Maryland;MD House District 65	state-house
+Maryland;MD House District 66	state-house
+Maryland;MD House District 67	state-house
+Maryland;MD House District 68	state-house
+Maryland;MD House District 69	state-house
+Maryland;MD House District 70	state-house
+Maryland;MD House District 71	state-house
+Maryland;MD House District 72	state-house
+Maryland;MD House District 73	state-house
+Maryland;MD House District 74	state-house
+Maryland;MD House District 75	state-house
+Maryland;MD House District 76	state-house
+Maryland;MD House District 77	state-house
+Maryland;MD House District 78	state-house
+Maryland;MD House District 79	state-house
+Maryland;MD House District 80	state-house
+Maryland;MD House District 81	state-house
+Maryland;MD House District 82	state-house
+Maryland;MD House District 83	state-house
+Maryland;MD House District 84	state-house
+Maryland;MD House District 85	state-house
+Maryland;MD House District 86	state-house
+Maryland;MD House District 87	state-house
+Maryland;MD House District 88	state-house
+Maryland;MD House District 89	state-house
+Maryland;MD House District 90	state-house
+Maryland;MD House District 91	state-house
+Maryland;MD House District 92	state-house
+Maryland;MD House District 93	state-house
+Maryland;MD House District 94	state-house
+Maryland;MD House District 95	state-house
+Maryland;MD House District 96	state-house
+Maryland;MD House District 97	state-house
+Maryland;MD House District 98	state-house
+Maryland;MD House District 99	state-house
+Maryland;MD House District 100	state-house
+Maryland;MD House District 101	state-house
+Maryland;MD House District 102	state-house
+Maryland;MD House District 103	state-house
+Maryland;MD House District 104	state-house
+Maryland;MD House District 105	state-house
+Maryland;MD House District 106	state-house
+Maryland;MD House District 107	state-house
+Maryland;MD House District 108	state-house
+Maryland;MD House District 109	state-house
+Maryland;MD House District 110	state-house
+Maryland;MD House District 111	state-house
+Maryland;MD House District 112	state-house
+Maryland;MD House District 113	state-house
+Maryland;MD House District 114	state-house
+Maryland;MD House District 115	state-house
+Maryland;MD House District 116	state-house
+Maryland;MD House District 117	state-house
+Maryland;MD House District 118	state-house
+Maryland;MD House District 119	state-house
+Maryland;MD House District 120	state-house
+Maryland;MD House District 121	state-house
+Maryland;MD House District 122	state-house
+Maryland;MD House District 123	state-house
+Maryland;MD House District 124	state-house
+Maryland;MD House District 125	state-house
+Maryland;MD House District 126	state-house
+Maryland;MD House District 127	state-house
+Maryland;MD House District 128	state-house
+Maryland;MD House District 129	state-house
+Maryland;MD House District 130	state-house
+Maryland;MD House District 131	state-house
+Maryland;MD House District 132	state-house
+Maryland;MD House District 133	state-house
+Maryland;MD House District 134	state-house
+Maryland;MD House District 135	state-house
+Maryland;MD House District 136	state-house
+Maryland;MD House District 137	state-house
+Maryland;MD House District 138	state-house
+Maryland;MD House District 139	state-house
+Maryland;MD House District 140	state-house
+Maryland;MD House District 141	state-house
+Maryland;MD Senate District 1	state-senate
+Maryland;MD Senate District 2	state-senate
+Maryland;MD Senate District 3	state-senate
+Maryland;MD Senate District 4	state-senate
+Maryland;MD Senate District 5	state-senate
+Maryland;MD Senate District 6	state-senate
+Maryland;MD Senate District 7	state-senate
+Maryland;MD Senate District 8	state-senate
+Maryland;MD Senate District 9	state-senate
+Maryland;MD Senate District 10	state-senate
+Maryland;MD Senate District 11	state-senate
+Maryland;MD Senate District 12	state-senate
+Maryland;MD Senate District 13	state-senate
+Maryland;MD Senate District 14	state-senate
+Maryland;MD Senate District 15	state-senate
+Maryland;MD Senate District 16	state-senate
+Maryland;MD Senate District 17	state-senate
+Maryland;MD Senate District 18	state-senate
+Maryland;MD Senate District 19	state-senate
+Maryland;MD Senate District 20	state-senate
+Maryland;MD Senate District 21	state-senate
+Maryland;MD Senate District 22	state-senate
+Maryland;MD Senate District 23	state-senate
+Maryland;MD Senate District 24	state-senate
+Maryland;MD Senate District 25	state-senate
+Maryland;MD Senate District 26	state-senate
+Maryland;MD Senate District 27	state-senate
+Maryland;MD Senate District 28	state-senate
+Maryland;MD Senate District 29	state-senate
+Maryland;MD Senate District 30	state-senate
+Maryland;MD Senate District 31	state-senate
+Maryland;MD Senate District 32	state-senate
+Maryland;MD Senate District 33	state-senate
+Maryland;MD Senate District 34	state-senate
+Maryland;MD Senate District 35	state-senate
+Maryland;MD Senate District 36	state-senate
+Maryland;MD Senate District 37	state-senate
+Maryland;MD Senate District 38	state-senate
+Maryland;MD Senate District 39	state-senate
+Maryland;MD Senate District 40	state-senate
+Maryland;MD Senate District 41	state-senate
+Maryland;MD Senate District 42	state-senate
+Maryland;MD Senate District 43	state-senate
+Maryland;MD Senate District 44	state-senate
+Maryland;MD Senate District 45	state-senate
+Maryland;MD Senate District 46	state-senate
+Maryland;MD Senate District 47	state-senate
+Maryland;US House MD District 1	congressional
+Maryland;US House MD District 2	congressional
+Maryland;US House MD District 3	congressional
+Maryland;US House MD District 4	congressional
+Maryland;US House MD District 5	congressional
+Maryland;US House MD District 6	congressional
+Maryland;US House MD District 7	congressional
+Maryland;US House MD District 8	congressional
+Maryland	state
+Maryland;Allegany County	county
+Maryland;Anne Arundel County	county
+Maryland;Baltimore City	county
+Maryland;Baltimore County	county
+Maryland;Calvert County	county
+Maryland;Caroline County	county
+Maryland;Carroll County	county
+Maryland;Cecil County	county
+Maryland;Charles County	county
+Maryland;Dorchester County	county
+Maryland;Frederick County	county
+Maryland;Garrett County	county
+Maryland;Harford County	county
+Maryland;Howard County	county
+Maryland;Kent County	county
+Maryland;Montgomery County	county
+Maryland;Prince George's County	county
+Maryland;Queen Anne's County	county
+Maryland;St. Mary's County	county
+Maryland;Somerset County	county
+Maryland;Talbot County	county
+Maryland;Washington County	county
+Maryland;Wicomico County	county
+Maryland;Worcester County	county
+Maryland;Allegany County;District 001 Precinct 000	precinct
+Maryland;Allegany County;District 002 Precinct 000	precinct
+Maryland;Allegany County;District 003 Precinct 000	precinct
+Maryland;Allegany County;District 004 Precinct 002	precinct
+Maryland;Allegany County;District 004 Precinct 003	precinct
+Maryland;Allegany County;District 004 Precinct 004	precinct
+Maryland;Allegany County;District 004 Precinct 005	precinct
+Maryland;Allegany County;District 004 Precinct 008	precinct
+Maryland;Allegany County;District 005 Precinct 004	precinct
+Maryland;Allegany County;District 005 Precinct 006	precinct
+Maryland;Allegany County;District 006 Precinct 001	precinct
+Maryland;Allegany County;District 006 Precinct 003	precinct
+Maryland;Allegany County;District 006 Precinct 005	precinct
+Maryland;Allegany County;District 006 Precinct 006	precinct
+Maryland;Allegany County;District 007 Precinct 001	precinct
+Maryland;Allegany County;District 007 Precinct 002	precinct
+Maryland;Allegany County;District 008 Precinct 000	precinct
+Maryland;Allegany County;District 009 Precinct 000	precinct
+Maryland;Allegany County;District 010 Precinct 000	precinct
+Maryland;Allegany County;District 011 Precinct 000	precinct
+Maryland;Allegany County;District 012 Precinct 000	precinct
+Maryland;Allegany County;District 013 Precinct 000	precinct
+Maryland;Allegany County;District 014 Precinct 000	precinct
+Maryland;Allegany County;District 016 Precinct 000	precinct
+Maryland;Allegany County;District 018 Precinct 000	precinct
+Maryland;Allegany County;District 020 Precinct 000	precinct
+Maryland;Allegany County;District 021 Precinct 000	precinct
+Maryland;Allegany County;District 022 Precinct 001	precinct
+Maryland;Allegany County;District 022 Precinct 002	precinct
+Maryland;Allegany County;District 023 Precinct 000	precinct
+Maryland;Allegany County;District 024 Precinct 000	precinct
+Maryland;Allegany County;District 026 Precinct 000	precinct
+Maryland;Allegany County;District 029 Precinct 001	precinct
+Maryland;Allegany County;District 029 Precinct 002	precinct
+Maryland;Allegany County;District 029 Precinct 003	precinct
+Maryland;Allegany County;District 031 Precinct 000	precinct
+Maryland;Allegany County;District 034 Precinct 000	precinct
+Maryland;Anne Arundel County;District 001 Precinct 001	precinct
+Maryland;Anne Arundel County;District 001 Precinct 002	precinct
+Maryland;Anne Arundel County;District 001 Precinct 003	precinct
+Maryland;Anne Arundel County;District 001 Precinct 004	precinct
+Maryland;Anne Arundel County;District 001 Precinct 005	precinct
+Maryland;Anne Arundel County;District 001 Precinct 006	precinct
+Maryland;Anne Arundel County;District 001 Precinct 007	precinct
+Maryland;Anne Arundel County;District 001 Precinct 008	precinct
+Maryland;Anne Arundel County;District 001 Precinct 009	precinct
+Maryland;Anne Arundel County;District 001 Precinct 010	precinct
+Maryland;Anne Arundel County;District 001 Precinct 011	precinct
+Maryland;Anne Arundel County;District 001 Precinct 012	precinct
+Maryland;Anne Arundel County;District 001 Precinct 013	precinct
+Maryland;Anne Arundel County;District 001 Precinct 014	precinct
+Maryland;Anne Arundel County;District 001 Precinct 015	precinct
+Maryland;Anne Arundel County;District 001 Precinct 016	precinct
+Maryland;Anne Arundel County;District 001 Precinct 017	precinct
+Maryland;Anne Arundel County;District 001 Precinct 018	precinct
+Maryland;Anne Arundel County;District 001 Precinct 019	precinct
+Maryland;Anne Arundel County;District 001 Precinct 020	precinct
+Maryland;Anne Arundel County;District 001 Precinct 021	precinct
+Maryland;Anne Arundel County;District 001 Precinct 022	precinct
+Maryland;Anne Arundel County;District 001 Precinct 023	precinct
+Maryland;Anne Arundel County;District 001 Precinct 024	precinct
+Maryland;Anne Arundel County;District 001 Precinct 025	precinct
+Maryland;Anne Arundel County;District 001 Precinct 026	precinct
+Maryland;Anne Arundel County;District 002 Precinct 001	precinct
+Maryland;Anne Arundel County;District 002 Precinct 002	precinct
+Maryland;Anne Arundel County;District 002 Precinct 003	precinct
+Maryland;Anne Arundel County;District 002 Precinct 004	precinct
+Maryland;Anne Arundel County;District 002 Precinct 005	precinct
+Maryland;Anne Arundel County;District 002 Precinct 006	precinct
+Maryland;Anne Arundel County;District 002 Precinct 007	precinct
+Maryland;Anne Arundel County;District 002 Precinct 008	precinct
+Maryland;Anne Arundel County;District 002 Precinct 009	precinct
+Maryland;Anne Arundel County;District 002 Precinct 010	precinct
+Maryland;Anne Arundel County;District 002 Precinct 011	precinct
+Maryland;Anne Arundel County;District 002 Precinct 012	precinct
+Maryland;Anne Arundel County;District 002 Precinct 013	precinct
+Maryland;Anne Arundel County;District 002 Precinct 014	precinct
+Maryland;Anne Arundel County;District 002 Precinct 015	precinct
+Maryland;Anne Arundel County;District 002 Precinct 016	precinct
+Maryland;Anne Arundel County;District 002 Precinct 017	precinct
+Maryland;Anne Arundel County;District 002 Precinct 018	precinct
+Maryland;Anne Arundel County;District 002 Precinct 019	precinct
+Maryland;Anne Arundel County;District 002 Precinct 020	precinct
+Maryland;Anne Arundel County;District 002 Precinct 021	precinct
+Maryland;Anne Arundel County;District 002 Precinct 022	precinct
+Maryland;Anne Arundel County;District 002 Precinct 023	precinct
+Maryland;Anne Arundel County;District 002 Precinct 024	precinct
+Maryland;Anne Arundel County;District 003 Precinct 001	precinct
+Maryland;Anne Arundel County;District 003 Precinct 002	precinct
+Maryland;Anne Arundel County;District 003 Precinct 003	precinct
+Maryland;Anne Arundel County;District 003 Precinct 004	precinct
+Maryland;Anne Arundel County;District 003 Precinct 005	precinct
+Maryland;Anne Arundel County;District 003 Precinct 006	precinct
+Maryland;Anne Arundel County;District 003 Precinct 007	precinct
+Maryland;Anne Arundel County;District 003 Precinct 008	precinct
+Maryland;Anne Arundel County;District 003 Precinct 009	precinct
+Maryland;Anne Arundel County;District 003 Precinct 010	precinct
+Maryland;Anne Arundel County;District 003 Precinct 011	precinct
+Maryland;Anne Arundel County;District 003 Precinct 012	precinct
+Maryland;Anne Arundel County;District 003 Precinct 013	precinct
+Maryland;Anne Arundel County;District 003 Precinct 014	precinct
+Maryland;Anne Arundel County;District 003 Precinct 015	precinct
+Maryland;Anne Arundel County;District 003 Precinct 016	precinct
+Maryland;Anne Arundel County;District 003 Precinct 017	precinct
+Maryland;Anne Arundel County;District 003 Precinct 018	precinct
+Maryland;Anne Arundel County;District 003 Precinct 019	precinct
+Maryland;Anne Arundel County;District 003 Precinct 020	precinct
+Maryland;Anne Arundel County;District 003 Precinct 021	precinct
+Maryland;Anne Arundel County;District 003 Precinct 022	precinct
+Maryland;Anne Arundel County;District 003 Precinct 023	precinct
+Maryland;Anne Arundel County;District 003 Precinct 024	precinct
+Maryland;Anne Arundel County;District 003 Precinct 025	precinct
+Maryland;Anne Arundel County;District 004 Precinct 001	precinct
+Maryland;Anne Arundel County;District 004 Precinct 002	precinct
+Maryland;Anne Arundel County;District 004 Precinct 003	precinct
+Maryland;Anne Arundel County;District 004 Precinct 004	precinct
+Maryland;Anne Arundel County;District 004 Precinct 005	precinct
+Maryland;Anne Arundel County;District 004 Precinct 006	precinct
+Maryland;Anne Arundel County;District 004 Precinct 007	precinct
+Maryland;Anne Arundel County;District 004 Precinct 008	precinct
+Maryland;Anne Arundel County;District 004 Precinct 009	precinct
+Maryland;Anne Arundel County;District 004 Precinct 010	precinct
+Maryland;Anne Arundel County;District 004 Precinct 011	precinct
+Maryland;Anne Arundel County;District 004 Precinct 012	precinct
+Maryland;Anne Arundel County;District 004 Precinct 013	precinct
+Maryland;Anne Arundel County;District 004 Precinct 014	precinct
+Maryland;Anne Arundel County;District 004 Precinct 015	precinct
+Maryland;Anne Arundel County;District 004 Precinct 016	precinct
+Maryland;Anne Arundel County;District 004 Precinct 017	precinct
+Maryland;Anne Arundel County;District 004 Precinct 018	precinct
+Maryland;Anne Arundel County;District 004 Precinct 019	precinct
+Maryland;Anne Arundel County;District 004 Precinct 020	precinct
+Maryland;Anne Arundel County;District 004 Precinct 021	precinct
+Maryland;Anne Arundel County;District 004 Precinct 022	precinct
+Maryland;Anne Arundel County;District 004 Precinct 023	precinct
+Maryland;Anne Arundel County;District 004 Precinct 024	precinct
+Maryland;Anne Arundel County;District 004 Precinct 025	precinct
+Maryland;Anne Arundel County;District 004 Precinct 026	precinct
+Maryland;Anne Arundel County;District 005 Precinct 001	precinct
+Maryland;Anne Arundel County;District 005 Precinct 002	precinct
+Maryland;Anne Arundel County;District 005 Precinct 003	precinct
+Maryland;Anne Arundel County;District 005 Precinct 004	precinct
+Maryland;Anne Arundel County;District 005 Precinct 005	precinct
+Maryland;Anne Arundel County;District 005 Precinct 006	precinct
+Maryland;Anne Arundel County;District 005 Precinct 007	precinct
+Maryland;Anne Arundel County;District 005 Precinct 008	precinct
+Maryland;Anne Arundel County;District 005 Precinct 009	precinct
+Maryland;Anne Arundel County;District 005 Precinct 010	precinct
+Maryland;Anne Arundel County;District 005 Precinct 011	precinct
+Maryland;Anne Arundel County;District 005 Precinct 012	precinct
+Maryland;Anne Arundel County;District 005 Precinct 013	precinct
+Maryland;Anne Arundel County;District 005 Precinct 014	precinct
+Maryland;Anne Arundel County;District 005 Precinct 015	precinct
+Maryland;Anne Arundel County;District 005 Precinct 016	precinct
+Maryland;Anne Arundel County;District 005 Precinct 017	precinct
+Maryland;Anne Arundel County;District 005 Precinct 018	precinct
+Maryland;Anne Arundel County;District 005 Precinct 019	precinct
+Maryland;Anne Arundel County;District 005 Precinct 020	precinct
+Maryland;Anne Arundel County;District 005 Precinct 021	precinct
+Maryland;Anne Arundel County;District 005 Precinct 022	precinct
+Maryland;Anne Arundel County;District 005 Precinct 023	precinct
+Maryland;Anne Arundel County;District 005 Precinct 024	precinct
+Maryland;Anne Arundel County;District 005 Precinct 025	precinct
+Maryland;Anne Arundel County;District 005 Precinct 026	precinct
+Maryland;Anne Arundel County;District 005 Precinct 027	precinct
+Maryland;Anne Arundel County;District 005 Precinct 028	precinct
+Maryland;Anne Arundel County;District 005 Precinct 029	precinct
+Maryland;Anne Arundel County;District 005 Precinct 030	precinct
+Maryland;Anne Arundel County;District 005 Precinct 031	precinct
+Maryland;Anne Arundel County;District 005 Precinct 032	precinct
+Maryland;Anne Arundel County;District 005 Precinct 033	precinct
+Maryland;Anne Arundel County;District 005 Precinct 034	precinct
+Maryland;Anne Arundel County;District 005 Precinct 035	precinct
+Maryland;Anne Arundel County;District 006 Precinct 001	precinct
+Maryland;Anne Arundel County;District 006 Precinct 002	precinct
+Maryland;Anne Arundel County;District 006 Precinct 003	precinct
+Maryland;Anne Arundel County;District 006 Precinct 004	precinct
+Maryland;Anne Arundel County;District 006 Precinct 005	precinct
+Maryland;Anne Arundel County;District 006 Precinct 006	precinct
+Maryland;Anne Arundel County;District 006 Precinct 007	precinct
+Maryland;Anne Arundel County;District 006 Precinct 008	precinct
+Maryland;Anne Arundel County;District 006 Precinct 009	precinct
+Maryland;Anne Arundel County;District 006 Precinct 010	precinct
+Maryland;Anne Arundel County;District 006 Precinct 011	precinct
+Maryland;Anne Arundel County;District 006 Precinct 012	precinct
+Maryland;Anne Arundel County;District 006 Precinct 013	precinct
+Maryland;Anne Arundel County;District 006 Precinct 014	precinct
+Maryland;Anne Arundel County;District 006 Precinct 015	precinct
+Maryland;Anne Arundel County;District 006 Precinct 016	precinct
+Maryland;Anne Arundel County;District 006 Precinct 017	precinct
+Maryland;Anne Arundel County;District 006 Precinct 018	precinct
+Maryland;Anne Arundel County;District 006 Precinct 019	precinct
+Maryland;Anne Arundel County;District 006 Precinct 020	precinct
+Maryland;Anne Arundel County;District 006 Precinct 021	precinct
+Maryland;Anne Arundel County;District 006 Precinct 022	precinct
+Maryland;Anne Arundel County;District 006 Precinct 023	precinct
+Maryland;Anne Arundel County;District 006 Precinct 024	precinct
+Maryland;Anne Arundel County;District 006 Precinct 025	precinct
+Maryland;Anne Arundel County;District 006 Precinct 026	precinct
+Maryland;Anne Arundel County;District 006 Precinct 027	precinct
+Maryland;Anne Arundel County;District 006 Precinct 028	precinct
+Maryland;Anne Arundel County;District 006 Precinct 029	precinct
+Maryland;Anne Arundel County;District 006 Precinct 030	precinct
+Maryland;Anne Arundel County;District 006 Precinct 031	precinct
+Maryland;Anne Arundel County;District 006 Precinct 032	precinct
+Maryland;Anne Arundel County;District 007 Precinct 001	precinct
+Maryland;Anne Arundel County;District 007 Precinct 002	precinct
+Maryland;Anne Arundel County;District 007 Precinct 003	precinct
+Maryland;Anne Arundel County;District 007 Precinct 004	precinct
+Maryland;Anne Arundel County;District 007 Precinct 005	precinct
+Maryland;Anne Arundel County;District 007 Precinct 006	precinct
+Maryland;Anne Arundel County;District 007 Precinct 007	precinct
+Maryland;Anne Arundel County;District 007 Precinct 008	precinct
+Maryland;Anne Arundel County;District 007 Precinct 009	precinct
+Maryland;Anne Arundel County;District 007 Precinct 010	precinct
+Maryland;Anne Arundel County;District 007 Precinct 011	precinct
+Maryland;Anne Arundel County;District 007 Precinct 012	precinct
+Maryland;Anne Arundel County;District 007 Precinct 013	precinct
+Maryland;Anne Arundel County;District 007 Precinct 014	precinct
+Maryland;Anne Arundel County;District 007 Precinct 015	precinct
+Maryland;Anne Arundel County;District 007 Precinct 016	precinct
+Maryland;Anne Arundel County;District 007 Precinct 017	precinct
+Maryland;Anne Arundel County;District 007 Precinct 018	precinct
+Maryland;Anne Arundel County;District 007 Precinct 019	precinct
+Maryland;Anne Arundel County;District 007 Precinct 020	precinct
+Maryland;Anne Arundel County;District 007 Precinct 021	precinct
+Maryland;Anne Arundel County;District 007 Precinct 022	precinct
+Maryland;Anne Arundel County;District 007 Precinct 023	precinct
+Maryland;Anne Arundel County;District 007 Precinct 024	precinct
+Maryland;Anne Arundel County;District 007 Precinct 025	precinct
+Maryland;Anne Arundel County;District 007 Precinct 026	precinct
+Maryland;Anne Arundel County;District 007 Precinct 027	precinct
+Maryland;Baltimore City;District 001 Precinct 001	precinct
+Maryland;Baltimore City;District 001 Precinct 002	precinct
+Maryland;Baltimore City;District 001 Precinct 003	precinct
+Maryland;Baltimore City;District 001 Precinct 004	precinct
+Maryland;Baltimore City;District 001 Precinct 005	precinct
+Maryland;Baltimore City;District 002 Precinct 001	precinct
+Maryland;Baltimore City;District 002 Precinct 002	precinct
+Maryland;Baltimore City;District 002 Precinct 003	precinct
+Maryland;Baltimore City;District 003 Precinct 001	precinct
+Maryland;Baltimore City;District 003 Precinct 002	precinct
+Maryland;Baltimore City;District 003 Precinct 003	precinct
+Maryland;Baltimore City;District 004 Precinct 001	precinct
+Maryland;Baltimore City;District 004 Precinct 002	precinct
+Maryland;Baltimore City;District 004 Precinct 003	precinct
+Maryland;Baltimore City;District 005 Precinct 001	precinct
+Maryland;Baltimore City;District 005 Precinct 002	precinct
+Maryland;Baltimore City;District 006 Precinct 001	precinct
+Maryland;Baltimore City;District 006 Precinct 002	precinct
+Maryland;Baltimore City;District 006 Precinct 003	precinct
+Maryland;Baltimore City;District 006 Precinct 004	precinct
+Maryland;Baltimore City;District 006 Precinct 005	precinct
+Maryland;Baltimore City;District 007 Precinct 001	precinct
+Maryland;Baltimore City;District 007 Precinct 002	precinct
+Maryland;Baltimore City;District 007 Precinct 003	precinct
+Maryland;Baltimore City;District 007 Precinct 004	precinct
+Maryland;Baltimore City;District 008 Precinct 001	precinct
+Maryland;Baltimore City;District 008 Precinct 002	precinct
+Maryland;Baltimore City;District 008 Precinct 003	precinct
+Maryland;Baltimore City;District 008 Precinct 004	precinct
+Maryland;Baltimore City;District 008 Precinct 005	precinct
+Maryland;Baltimore City;District 008 Precinct 006	precinct
+Maryland;Baltimore City;District 008 Precinct 007	precinct
+Maryland;Baltimore City;District 008 Precinct 008	precinct
+Maryland;Baltimore City;District 008 Precinct 009	precinct
+Maryland;Baltimore City;District 008 Precinct 010	precinct
+Maryland;Baltimore City;District 008 Precinct 011	precinct
+Maryland;Baltimore City;District 009 Precinct 001	precinct
+Maryland;Baltimore City;District 009 Precinct 002	precinct
+Maryland;Baltimore City;District 009 Precinct 003	precinct
+Maryland;Baltimore City;District 009 Precinct 004	precinct
+Maryland;Baltimore City;District 009 Precinct 005	precinct
+Maryland;Baltimore City;District 009 Precinct 006	precinct
+Maryland;Baltimore City;District 009 Precinct 007	precinct
+Maryland;Baltimore City;District 009 Precinct 008	precinct
+Maryland;Baltimore City;District 009 Precinct 009	precinct
+Maryland;Baltimore City;District 009 Precinct 010	precinct
+Maryland;Baltimore City;District 009 Precinct 011	precinct
+Maryland;Baltimore City;District 009 Precinct 012	precinct
+Maryland;Baltimore City;District 009 Precinct 013	precinct
+Maryland;Baltimore City;District 009 Precinct 014	precinct
+Maryland;Baltimore City;District 009 Precinct 015	precinct
+Maryland;Baltimore City;District 010 Precinct 001	precinct
+Maryland;Baltimore City;District 010 Precinct 002	precinct
+Maryland;Baltimore City;District 010 Precinct 003	precinct
+Maryland;Baltimore City;District 010 Precinct 004	precinct
+Maryland;Baltimore City;District 011 Precinct 001	precinct
+Maryland;Baltimore City;District 011 Precinct 002	precinct
+Maryland;Baltimore City;District 011 Precinct 003	precinct
+Maryland;Baltimore City;District 011 Precinct 004	precinct
+Maryland;Baltimore City;District 011 Precinct 005	precinct
+Maryland;Baltimore City;District 011 Precinct 006	precinct
+Maryland;Baltimore City;District 011 Precinct 007	precinct
+Maryland;Baltimore City;District 012 Precinct 001	precinct
+Maryland;Baltimore City;District 012 Precinct 002	precinct
+Maryland;Baltimore City;District 012 Precinct 003	precinct
+Maryland;Baltimore City;District 012 Precinct 004	precinct
+Maryland;Baltimore City;District 012 Precinct 005	precinct
+Maryland;Baltimore City;District 012 Precinct 006	precinct
+Maryland;Baltimore City;District 012 Precinct 007	precinct
+Maryland;Baltimore City;District 012 Precinct 008	precinct
+Maryland;Baltimore City;District 012 Precinct 009	precinct
+Maryland;Baltimore City;District 012 Precinct 010	precinct
+Maryland;Baltimore City;District 012 Precinct 011	precinct
+Maryland;Baltimore City;District 012 Precinct 012	precinct
+Maryland;Baltimore City;District 012 Precinct 013	precinct
+Maryland;Baltimore City;District 013 Precinct 001	precinct
+Maryland;Baltimore City;District 013 Precinct 002	precinct
+Maryland;Baltimore City;District 013 Precinct 003	precinct
+Maryland;Baltimore City;District 013 Precinct 004	precinct
+Maryland;Baltimore City;District 013 Precinct 005	precinct
+Maryland;Baltimore City;District 013 Precinct 006	precinct
+Maryland;Baltimore City;District 013 Precinct 007	precinct
+Maryland;Baltimore City;District 013 Precinct 008	precinct
+Maryland;Baltimore City;District 013 Precinct 009	precinct
+Maryland;Baltimore City;District 013 Precinct 010	precinct
+Maryland;Baltimore City;District 013 Precinct 011	precinct
+Maryland;Baltimore City;District 013 Precinct 012	precinct
+Maryland;Baltimore City;District 013 Precinct 013	precinct
+Maryland;Baltimore City;District 014 Precinct 001	precinct
+Maryland;Baltimore City;District 014 Precinct 002	precinct
+Maryland;Baltimore City;District 014 Precinct 003	precinct
+Maryland;Baltimore City;District 014 Precinct 004	precinct
+Maryland;Baltimore City;District 014 Precinct 005	precinct
+Maryland;Baltimore City;District 015 Precinct 001	precinct
+Maryland;Baltimore City;District 015 Precinct 002	precinct
+Maryland;Baltimore City;District 015 Precinct 003	precinct
+Maryland;Baltimore City;District 015 Precinct 004	precinct
+Maryland;Baltimore City;District 015 Precinct 005	precinct
+Maryland;Baltimore City;District 015 Precinct 006	precinct
+Maryland;Baltimore City;District 015 Precinct 007	precinct
+Maryland;Baltimore City;District 015 Precinct 008	precinct
+Maryland;Baltimore City;District 015 Precinct 009	precinct
+Maryland;Baltimore City;District 015 Precinct 010	precinct
+Maryland;Baltimore City;District 015 Precinct 011	precinct
+Maryland;Baltimore City;District 015 Precinct 012	precinct
+Maryland;Baltimore City;District 015 Precinct 013	precinct
+Maryland;Baltimore City;District 015 Precinct 014	precinct
+Maryland;Baltimore City;District 015 Precinct 015	precinct
+Maryland;Baltimore City;District 015 Precinct 016	precinct
+Maryland;Baltimore City;District 015 Precinct 017	precinct
+Maryland;Baltimore City;District 015 Precinct 018	precinct
+Maryland;Baltimore City;District 015 Precinct 019	precinct
+Maryland;Baltimore City;District 015 Precinct 020	precinct
+Maryland;Baltimore City;District 015 Precinct 021	precinct
+Maryland;Baltimore City;District 015 Precinct 022	precinct
+Maryland;Baltimore City;District 015 Precinct 023	precinct
+Maryland;Baltimore City;District 015 Precinct 024	precinct
+Maryland;Baltimore City;District 015 Precinct 025	precinct
+Maryland;Baltimore City;District 016 Precinct 001	precinct
+Maryland;Baltimore City;District 016 Precinct 002	precinct
+Maryland;Baltimore City;District 016 Precinct 003	precinct
+Maryland;Baltimore City;District 016 Precinct 004	precinct
+Maryland;Baltimore City;District 016 Precinct 005	precinct
+Maryland;Baltimore City;District 016 Precinct 006	precinct
+Maryland;Baltimore City;District 016 Precinct 007	precinct
+Maryland;Baltimore City;District 016 Precinct 008	precinct
+Maryland;Baltimore City;District 016 Precinct 009	precinct
+Maryland;Baltimore City;District 016 Precinct 010	precinct
+Maryland;Baltimore City;District 016 Precinct 011	precinct
+Maryland;Baltimore City;District 016 Precinct 012	precinct
+Maryland;Baltimore City;District 016 Precinct 013	precinct
+Maryland;Baltimore City;District 016 Precinct 014	precinct
+Maryland;Baltimore City;District 017 Precinct 001	precinct
+Maryland;Baltimore City;District 017 Precinct 002	precinct
+Maryland;Baltimore City;District 018 Precinct 001	precinct
+Maryland;Baltimore City;District 018 Precinct 002	precinct
+Maryland;Baltimore City;District 019 Precinct 001	precinct
+Maryland;Baltimore City;District 019 Precinct 002	precinct
+Maryland;Baltimore City;District 019 Precinct 003	precinct
+Maryland;Baltimore City;District 020 Precinct 001	precinct
+Maryland;Baltimore City;District 020 Precinct 002	precinct
+Maryland;Baltimore City;District 020 Precinct 003	precinct
+Maryland;Baltimore City;District 020 Precinct 004	precinct
+Maryland;Baltimore City;District 020 Precinct 005	precinct
+Maryland;Baltimore City;District 020 Precinct 006	precinct
+Maryland;Baltimore City;District 020 Precinct 007	precinct
+Maryland;Baltimore City;District 020 Precinct 008	precinct
+Maryland;Baltimore City;District 020 Precinct 009	precinct
+Maryland;Baltimore City;District 020 Precinct 010	precinct
+Maryland;Baltimore City;District 020 Precinct 011	precinct
+Maryland;Baltimore City;District 020 Precinct 012	precinct
+Maryland;Baltimore City;District 021 Precinct 001	precinct
+Maryland;Baltimore City;District 021 Precinct 002	precinct
+Maryland;Baltimore City;District 021 Precinct 003	precinct
+Maryland;Baltimore City;District 021 Precinct 004	precinct
+Maryland;Baltimore City;District 021 Precinct 005	precinct
+Maryland;Baltimore City;District 022 Precinct 001	precinct
+Maryland;Baltimore City;District 022 Precinct 002	precinct
+Maryland;Baltimore City;District 023 Precinct 001	precinct
+Maryland;Baltimore City;District 023 Precinct 002	precinct
+Maryland;Baltimore City;District 023 Precinct 003	precinct
+Maryland;Baltimore City;District 024 Precinct 001	precinct
+Maryland;Baltimore City;District 024 Precinct 002	precinct
+Maryland;Baltimore City;District 024 Precinct 003	precinct
+Maryland;Baltimore City;District 024 Precinct 004	precinct
+Maryland;Baltimore City;District 024 Precinct 005	precinct
+Maryland;Baltimore City;District 025 Precinct 001	precinct
+Maryland;Baltimore City;District 025 Precinct 002	precinct
+Maryland;Baltimore City;District 025 Precinct 003	precinct
+Maryland;Baltimore City;District 025 Precinct 004	precinct
+Maryland;Baltimore City;District 025 Precinct 005	precinct
+Maryland;Baltimore City;District 025 Precinct 006	precinct
+Maryland;Baltimore City;District 025 Precinct 007	precinct
+Maryland;Baltimore City;District 025 Precinct 008	precinct
+Maryland;Baltimore City;District 025 Precinct 009	precinct
+Maryland;Baltimore City;District 025 Precinct 010	precinct
+Maryland;Baltimore City;District 025 Precinct 011	precinct
+Maryland;Baltimore City;District 025 Precinct 012	precinct
+Maryland;Baltimore City;District 025 Precinct 013	precinct
+Maryland;Baltimore City;District 025 Precinct 014	precinct
+Maryland;Baltimore City;District 025 Precinct 015	precinct
+Maryland;Baltimore City;District 025 Precinct 016	precinct
+Maryland;Baltimore City;District 025 Precinct 017	precinct
+Maryland;Baltimore City;District 025 Precinct 018	precinct
+Maryland;Baltimore City;District 026 Precinct 001	precinct
+Maryland;Baltimore City;District 026 Precinct 002	precinct
+Maryland;Baltimore City;District 026 Precinct 003	precinct
+Maryland;Baltimore City;District 026 Precinct 004	precinct
+Maryland;Baltimore City;District 026 Precinct 005	precinct
+Maryland;Baltimore City;District 026 Precinct 006	precinct
+Maryland;Baltimore City;District 026 Precinct 007	precinct
+Maryland;Baltimore City;District 026 Precinct 008	precinct
+Maryland;Baltimore City;District 026 Precinct 009	precinct
+Maryland;Baltimore City;District 026 Precinct 010	precinct
+Maryland;Baltimore City;District 026 Precinct 011	precinct
+Maryland;Baltimore City;District 026 Precinct 012	precinct
+Maryland;Baltimore City;District 026 Precinct 013	precinct
+Maryland;Baltimore City;District 026 Precinct 014	precinct
+Maryland;Baltimore City;District 026 Precinct 015	precinct
+Maryland;Baltimore City;District 026 Precinct 016	precinct
+Maryland;Baltimore City;District 026 Precinct 017	precinct
+Maryland;Baltimore City;District 026 Precinct 018	precinct
+Maryland;Baltimore City;District 026 Precinct 019	precinct
+Maryland;Baltimore City;District 026 Precinct 020	precinct
+Maryland;Baltimore City;District 026 Precinct 021	precinct
+Maryland;Baltimore City;District 026 Precinct 022	precinct
+Maryland;Baltimore City;District 026 Precinct 023	precinct
+Maryland;Baltimore City;District 026 Precinct 024	precinct
+Maryland;Baltimore City;District 026 Precinct 025	precinct
+Maryland;Baltimore City;District 026 Precinct 026	precinct
+Maryland;Baltimore City;District 026 Precinct 027	precinct
+Maryland;Baltimore City;District 026 Precinct 028	precinct
+Maryland;Baltimore City;District 026 Precinct 029	precinct
+Maryland;Baltimore City;District 026 Precinct 030	precinct
+Maryland;Baltimore City;District 026 Precinct 031	precinct
+Maryland;Baltimore City;District 026 Precinct 032	precinct
+Maryland;Baltimore City;District 026 Precinct 033	precinct
+Maryland;Baltimore City;District 027 Precinct 001	precinct
+Maryland;Baltimore City;District 027 Precinct 002	precinct
+Maryland;Baltimore City;District 027 Precinct 003	precinct
+Maryland;Baltimore City;District 027 Precinct 004	precinct
+Maryland;Baltimore City;District 027 Precinct 005	precinct
+Maryland;Baltimore City;District 027 Precinct 006	precinct
+Maryland;Baltimore City;District 027 Precinct 007	precinct
+Maryland;Baltimore City;District 027 Precinct 008	precinct
+Maryland;Baltimore City;District 027 Precinct 009	precinct
+Maryland;Baltimore City;District 027 Precinct 010	precinct
+Maryland;Baltimore City;District 027 Precinct 011	precinct
+Maryland;Baltimore City;District 027 Precinct 012	precinct
+Maryland;Baltimore City;District 027 Precinct 013	precinct
+Maryland;Baltimore City;District 027 Precinct 014	precinct
+Maryland;Baltimore City;District 027 Precinct 015	precinct
+Maryland;Baltimore City;District 027 Precinct 016	precinct
+Maryland;Baltimore City;District 027 Precinct 017	precinct
+Maryland;Baltimore City;District 027 Precinct 018	precinct
+Maryland;Baltimore City;District 027 Precinct 019	precinct
+Maryland;Baltimore City;District 027 Precinct 020	precinct
+Maryland;Baltimore City;District 027 Precinct 021	precinct
+Maryland;Baltimore City;District 027 Precinct 022	precinct
+Maryland;Baltimore City;District 027 Precinct 023	precinct
+Maryland;Baltimore City;District 027 Precinct 024	precinct
+Maryland;Baltimore City;District 027 Precinct 025	precinct
+Maryland;Baltimore City;District 027 Precinct 026	precinct
+Maryland;Baltimore City;District 027 Precinct 027	precinct
+Maryland;Baltimore City;District 027 Precinct 028	precinct
+Maryland;Baltimore City;District 027 Precinct 029	precinct
+Maryland;Baltimore City;District 027 Precinct 030	precinct
+Maryland;Baltimore City;District 027 Precinct 031	precinct
+Maryland;Baltimore City;District 027 Precinct 032	precinct
+Maryland;Baltimore City;District 027 Precinct 033	precinct
+Maryland;Baltimore City;District 027 Precinct 034	precinct
+Maryland;Baltimore City;District 027 Precinct 035	precinct
+Maryland;Baltimore City;District 027 Precinct 036	precinct
+Maryland;Baltimore City;District 027 Precinct 037	precinct
+Maryland;Baltimore City;District 027 Precinct 038	precinct
+Maryland;Baltimore City;District 027 Precinct 039	precinct
+Maryland;Baltimore City;District 027 Precinct 040	precinct
+Maryland;Baltimore City;District 027 Precinct 041	precinct
+Maryland;Baltimore City;District 027 Precinct 042	precinct
+Maryland;Baltimore City;District 027 Precinct 043	precinct
+Maryland;Baltimore City;District 027 Precinct 044	precinct
+Maryland;Baltimore City;District 027 Precinct 045	precinct
+Maryland;Baltimore City;District 027 Precinct 046	precinct
+Maryland;Baltimore City;District 027 Precinct 047	precinct
+Maryland;Baltimore City;District 027 Precinct 048	precinct
+Maryland;Baltimore City;District 027 Precinct 049	precinct
+Maryland;Baltimore City;District 027 Precinct 050	precinct
+Maryland;Baltimore City;District 027 Precinct 051	precinct
+Maryland;Baltimore City;District 027 Precinct 052	precinct
+Maryland;Baltimore City;District 027 Precinct 053	precinct
+Maryland;Baltimore City;District 027 Precinct 054	precinct
+Maryland;Baltimore City;District 027 Precinct 055	precinct
+Maryland;Baltimore City;District 027 Precinct 056	precinct
+Maryland;Baltimore City;District 027 Precinct 057	precinct
+Maryland;Baltimore City;District 027 Precinct 058	precinct
+Maryland;Baltimore City;District 027 Precinct 059	precinct
+Maryland;Baltimore City;District 027 Precinct 060	precinct
+Maryland;Baltimore City;District 027 Precinct 061	precinct
+Maryland;Baltimore City;District 027 Precinct 062	precinct
+Maryland;Baltimore City;District 027 Precinct 063	precinct
+Maryland;Baltimore City;District 027 Precinct 064	precinct
+Maryland;Baltimore City;District 027 Precinct 065	precinct
+Maryland;Baltimore City;District 027 Precinct 066	precinct
+Maryland;Baltimore City;District 027 Precinct 067	precinct
+Maryland;Baltimore City;District 028 Precinct 001	precinct
+Maryland;Baltimore City;District 028 Precinct 002	precinct
+Maryland;Baltimore City;District 028 Precinct 003	precinct
+Maryland;Baltimore City;District 028 Precinct 004	precinct
+Maryland;Baltimore City;District 028 Precinct 005	precinct
+Maryland;Baltimore City;District 028 Precinct 006	precinct
+Maryland;Baltimore City;District 028 Precinct 007	precinct
+Maryland;Baltimore City;District 028 Precinct 008	precinct
+Maryland;Baltimore City;District 028 Precinct 009	precinct
+Maryland;Baltimore City;District 028 Precinct 010	precinct
+Maryland;Baltimore City;District 028 Precinct 011	precinct
+Maryland;Baltimore City;District 028 Precinct 012	precinct
+Maryland;Baltimore City;District 028 Precinct 013	precinct
+Maryland;Baltimore City;District 028 Precinct 014	precinct
+Maryland;Baltimore City;District 028 Precinct 015	precinct
+Maryland;Baltimore County;District 001 Precinct 001	precinct
+Maryland;Baltimore County;District 001 Precinct 002	precinct
+Maryland;Baltimore County;District 001 Precinct 003	precinct
+Maryland;Baltimore County;District 001 Precinct 004	precinct
+Maryland;Baltimore County;District 001 Precinct 005	precinct
+Maryland;Baltimore County;District 001 Precinct 006	precinct
+Maryland;Baltimore County;District 001 Precinct 007	precinct
+Maryland;Baltimore County;District 001 Precinct 008	precinct
+Maryland;Baltimore County;District 001 Precinct 009	precinct
+Maryland;Baltimore County;District 001 Precinct 010	precinct
+Maryland;Baltimore County;District 001 Precinct 011	precinct
+Maryland;Baltimore County;District 001 Precinct 012	precinct
+Maryland;Baltimore County;District 001 Precinct 013	precinct
+Maryland;Baltimore County;District 001 Precinct 014	precinct
+Maryland;Baltimore County;District 001 Precinct 015	precinct
+Maryland;Baltimore County;District 001 Precinct 016	precinct
+Maryland;Baltimore County;District 001 Precinct 017	precinct
+Maryland;Baltimore County;District 002 Precinct 001	precinct
+Maryland;Baltimore County;District 002 Precinct 002	precinct
+Maryland;Baltimore County;District 002 Precinct 003	precinct
+Maryland;Baltimore County;District 002 Precinct 004	precinct
+Maryland;Baltimore County;District 002 Precinct 005	precinct
+Maryland;Baltimore County;District 002 Precinct 006	precinct
+Maryland;Baltimore County;District 002 Precinct 007	precinct
+Maryland;Baltimore County;District 002 Precinct 008	precinct
+Maryland;Baltimore County;District 002 Precinct 009	precinct
+Maryland;Baltimore County;District 002 Precinct 010	precinct
+Maryland;Baltimore County;District 002 Precinct 011	precinct
+Maryland;Baltimore County;District 002 Precinct 012	precinct
+Maryland;Baltimore County;District 002 Precinct 013	precinct
+Maryland;Baltimore County;District 002 Precinct 014	precinct
+Maryland;Baltimore County;District 002 Precinct 015	precinct
+Maryland;Baltimore County;District 002 Precinct 016	precinct
+Maryland;Baltimore County;District 002 Precinct 017	precinct
+Maryland;Baltimore County;District 002 Precinct 018	precinct
+Maryland;Baltimore County;District 002 Precinct 019	precinct
+Maryland;Baltimore County;District 002 Precinct 020	precinct
+Maryland;Baltimore County;District 002 Precinct 021	precinct
+Maryland;Baltimore County;District 002 Precinct 022	precinct
+Maryland;Baltimore County;District 002 Precinct 023	precinct
+Maryland;Baltimore County;District 002 Precinct 024	precinct
+Maryland;Baltimore County;District 002 Precinct 025	precinct
+Maryland;Baltimore County;District 002 Precinct 026	precinct
+Maryland;Baltimore County;District 002 Precinct 027	precinct
+Maryland;Baltimore County;District 002 Precinct 028	precinct
+Maryland;Baltimore County;District 002 Precinct 029	precinct
+Maryland;Baltimore County;District 002 Precinct 030	precinct
+Maryland;Baltimore County;District 002 Precinct 031	precinct
+Maryland;Baltimore County;District 003 Precinct 001	precinct
+Maryland;Baltimore County;District 003 Precinct 002	precinct
+Maryland;Baltimore County;District 003 Precinct 003	precinct
+Maryland;Baltimore County;District 003 Precinct 004	precinct
+Maryland;Baltimore County;District 003 Precinct 005	precinct
+Maryland;Baltimore County;District 003 Precinct 006	precinct
+Maryland;Baltimore County;District 003 Precinct 007	precinct
+Maryland;Baltimore County;District 003 Precinct 008	precinct
+Maryland;Baltimore County;District 003 Precinct 009	precinct
+Maryland;Baltimore County;District 003 Precinct 010	precinct
+Maryland;Baltimore County;District 003 Precinct 011	precinct
+Maryland;Baltimore County;District 003 Precinct 012	precinct
+Maryland;Baltimore County;District 003 Precinct 013	precinct
+Maryland;Baltimore County;District 003 Precinct 014	precinct
+Maryland;Baltimore County;District 004 Precinct 001	precinct
+Maryland;Baltimore County;District 004 Precinct 002	precinct
+Maryland;Baltimore County;District 004 Precinct 003	precinct
+Maryland;Baltimore County;District 004 Precinct 004	precinct
+Maryland;Baltimore County;District 004 Precinct 005	precinct
+Maryland;Baltimore County;District 004 Precinct 006	precinct
+Maryland;Baltimore County;District 004 Precinct 007	precinct
+Maryland;Baltimore County;District 004 Precinct 008	precinct
+Maryland;Baltimore County;District 004 Precinct 009	precinct
+Maryland;Baltimore County;District 004 Precinct 010	precinct
+Maryland;Baltimore County;District 004 Precinct 011	precinct
+Maryland;Baltimore County;District 004 Precinct 012	precinct
+Maryland;Baltimore County;District 004 Precinct 013	precinct
+Maryland;Baltimore County;District 004 Precinct 014	precinct
+Maryland;Baltimore County;District 004 Precinct 015	precinct
+Maryland;Baltimore County;District 005 Precinct 001	precinct
+Maryland;Baltimore County;District 005 Precinct 002	precinct
+Maryland;Baltimore County;District 006 Precinct 001	precinct
+Maryland;Baltimore County;District 006 Precinct 002	precinct
+Maryland;Baltimore County;District 007 Precinct 001	precinct
+Maryland;Baltimore County;District 007 Precinct 002	precinct
+Maryland;Baltimore County;District 007 Precinct 003	precinct
+Maryland;Baltimore County;District 008 Precinct 001	precinct
+Maryland;Baltimore County;District 008 Precinct 002	precinct
+Maryland;Baltimore County;District 008 Precinct 003	precinct
+Maryland;Baltimore County;District 008 Precinct 004	precinct
+Maryland;Baltimore County;District 008 Precinct 005	precinct
+Maryland;Baltimore County;District 008 Precinct 006	precinct
+Maryland;Baltimore County;District 008 Precinct 007	precinct
+Maryland;Baltimore County;District 008 Precinct 008	precinct
+Maryland;Baltimore County;District 008 Precinct 009	precinct
+Maryland;Baltimore County;District 008 Precinct 010	precinct
+Maryland;Baltimore County;District 008 Precinct 011	precinct
+Maryland;Baltimore County;District 008 Precinct 012	precinct
+Maryland;Baltimore County;District 008 Precinct 013	precinct
+Maryland;Baltimore County;District 008 Precinct 014	precinct
+Maryland;Baltimore County;District 008 Precinct 015	precinct
+Maryland;Baltimore County;District 008 Precinct 016	precinct
+Maryland;Baltimore County;District 008 Precinct 017	precinct
+Maryland;Baltimore County;District 008 Precinct 018	precinct
+Maryland;Baltimore County;District 008 Precinct 019	precinct
+Maryland;Baltimore County;District 008 Precinct 020	precinct
+Maryland;Baltimore County;District 008 Precinct 021	precinct
+Maryland;Baltimore County;District 008 Precinct 022	precinct
+Maryland;Baltimore County;District 008 Precinct 023	precinct
+Maryland;Baltimore County;District 008 Precinct 024	precinct
+Maryland;Baltimore County;District 008 Precinct 025	precinct
+Maryland;Baltimore County;District 008 Precinct 026	precinct
+Maryland;Baltimore County;District 008 Precinct 027	precinct
+Maryland;Baltimore County;District 008 Precinct 028	precinct
+Maryland;Baltimore County;District 009 Precinct 001	precinct
+Maryland;Baltimore County;District 009 Precinct 002	precinct
+Maryland;Baltimore County;District 009 Precinct 003	precinct
+Maryland;Baltimore County;District 009 Precinct 004	precinct
+Maryland;Baltimore County;District 009 Precinct 005	precinct
+Maryland;Baltimore County;District 009 Precinct 006	precinct
+Maryland;Baltimore County;District 009 Precinct 007	precinct
+Maryland;Baltimore County;District 009 Precinct 008	precinct
+Maryland;Baltimore County;District 009 Precinct 009	precinct
+Maryland;Baltimore County;District 009 Precinct 010	precinct
+Maryland;Baltimore County;District 009 Precinct 011	precinct
+Maryland;Baltimore County;District 009 Precinct 012	precinct
+Maryland;Baltimore County;District 009 Precinct 013	precinct
+Maryland;Baltimore County;District 009 Precinct 014	precinct
+Maryland;Baltimore County;District 009 Precinct 015	precinct
+Maryland;Baltimore County;District 009 Precinct 016	precinct
+Maryland;Baltimore County;District 009 Precinct 017	precinct
+Maryland;Baltimore County;District 009 Precinct 018	precinct
+Maryland;Baltimore County;District 009 Precinct 019	precinct
+Maryland;Baltimore County;District 009 Precinct 020	precinct
+Maryland;Baltimore County;District 009 Precinct 021	precinct
+Maryland;Baltimore County;District 009 Precinct 022	precinct
+Maryland;Baltimore County;District 009 Precinct 023	precinct
+Maryland;Baltimore County;District 009 Precinct 024	precinct
+Maryland;Baltimore County;District 009 Precinct 025	precinct
+Maryland;Baltimore County;District 009 Precinct 026	precinct
+Maryland;Baltimore County;District 009 Precinct 027	precinct
+Maryland;Baltimore County;District 009 Precinct 028	precinct
+Maryland;Baltimore County;District 009 Precinct 029	precinct
+Maryland;Baltimore County;District 010 Precinct 001	precinct
+Maryland;Baltimore County;District 010 Precinct 002	precinct
+Maryland;Baltimore County;District 010 Precinct 003	precinct
+Maryland;Baltimore County;District 010 Precinct 004	precinct
+Maryland;Baltimore County;District 010 Precinct 005	precinct
+Maryland;Baltimore County;District 010 Precinct 006	precinct
+Maryland;Baltimore County;District 010 Precinct 007	precinct
+Maryland;Baltimore County;District 011 Precinct 001	precinct
+Maryland;Baltimore County;District 011 Precinct 002	precinct
+Maryland;Baltimore County;District 011 Precinct 003	precinct
+Maryland;Baltimore County;District 011 Precinct 004	precinct
+Maryland;Baltimore County;District 011 Precinct 005	precinct
+Maryland;Baltimore County;District 011 Precinct 006	precinct
+Maryland;Baltimore County;District 011 Precinct 007	precinct
+Maryland;Baltimore County;District 011 Precinct 008	precinct
+Maryland;Baltimore County;District 011 Precinct 009	precinct
+Maryland;Baltimore County;District 011 Precinct 010	precinct
+Maryland;Baltimore County;District 011 Precinct 011	precinct
+Maryland;Baltimore County;District 011 Precinct 012	precinct
+Maryland;Baltimore County;District 011 Precinct 013	precinct
+Maryland;Baltimore County;District 011 Precinct 014	precinct
+Maryland;Baltimore County;District 011 Precinct 015	precinct
+Maryland;Baltimore County;District 011 Precinct 016	precinct
+Maryland;Baltimore County;District 011 Precinct 017	precinct
+Maryland;Baltimore County;District 011 Precinct 018	precinct
+Maryland;Baltimore County;District 011 Precinct 019	precinct
+Maryland;Baltimore County;District 011 Precinct 020	precinct
+Maryland;Baltimore County;District 011 Precinct 021	precinct
+Maryland;Baltimore County;District 011 Precinct 022	precinct
+Maryland;Baltimore County;District 011 Precinct 023	precinct
+Maryland;Baltimore County;District 011 Precinct 024	precinct
+Maryland;Baltimore County;District 011 Precinct 026	precinct
+Maryland;Baltimore County;District 011 Precinct 027	precinct
+Maryland;Baltimore County;District 012 Precinct 001	precinct
+Maryland;Baltimore County;District 012 Precinct 002	precinct
+Maryland;Baltimore County;District 012 Precinct 003	precinct
+Maryland;Baltimore County;District 012 Precinct 004	precinct
+Maryland;Baltimore County;District 012 Precinct 005	precinct
+Maryland;Baltimore County;District 012 Precinct 006	precinct
+Maryland;Baltimore County;District 012 Precinct 007	precinct
+Maryland;Baltimore County;District 012 Precinct 008	precinct
+Maryland;Baltimore County;District 012 Precinct 009	precinct
+Maryland;Baltimore County;District 012 Precinct 010	precinct
+Maryland;Baltimore County;District 012 Precinct 011	precinct
+Maryland;Baltimore County;District 012 Precinct 012	precinct
+Maryland;Baltimore County;District 012 Precinct 013	precinct
+Maryland;Baltimore County;District 013 Precinct 001	precinct
+Maryland;Baltimore County;District 013 Precinct 002	precinct
+Maryland;Baltimore County;District 013 Precinct 003	precinct
+Maryland;Baltimore County;District 013 Precinct 004	precinct
+Maryland;Baltimore County;District 013 Precinct 005	precinct
+Maryland;Baltimore County;District 013 Precinct 006	precinct
+Maryland;Baltimore County;District 013 Precinct 007	precinct
+Maryland;Baltimore County;District 013 Precinct 008	precinct
+Maryland;Baltimore County;District 013 Precinct 009	precinct
+Maryland;Baltimore County;District 014 Precinct 001	precinct
+Maryland;Baltimore County;District 014 Precinct 002	precinct
+Maryland;Baltimore County;District 014 Precinct 003	precinct
+Maryland;Baltimore County;District 014 Precinct 004	precinct
+Maryland;Baltimore County;District 014 Precinct 005	precinct
+Maryland;Baltimore County;District 014 Precinct 006	precinct
+Maryland;Baltimore County;District 014 Precinct 007	precinct
+Maryland;Baltimore County;District 014 Precinct 008	precinct
+Maryland;Baltimore County;District 014 Precinct 009	precinct
+Maryland;Baltimore County;District 014 Precinct 010	precinct
+Maryland;Baltimore County;District 014 Precinct 011	precinct
+Maryland;Baltimore County;District 014 Precinct 012	precinct
+Maryland;Baltimore County;District 014 Precinct 013	precinct
+Maryland;Baltimore County;District 014 Precinct 014	precinct
+Maryland;Baltimore County;District 015 Precinct 001	precinct
+Maryland;Baltimore County;District 015 Precinct 002	precinct
+Maryland;Baltimore County;District 015 Precinct 003	precinct
+Maryland;Baltimore County;District 015 Precinct 004	precinct
+Maryland;Baltimore County;District 015 Precinct 005	precinct
+Maryland;Baltimore County;District 015 Precinct 006	precinct
+Maryland;Baltimore County;District 015 Precinct 007	precinct
+Maryland;Baltimore County;District 015 Precinct 008	precinct
+Maryland;Baltimore County;District 015 Precinct 009	precinct
+Maryland;Baltimore County;District 015 Precinct 010	precinct
+Maryland;Baltimore County;District 015 Precinct 011	precinct
+Maryland;Baltimore County;District 015 Precinct 012	precinct
+Maryland;Baltimore County;District 015 Precinct 013	precinct
+Maryland;Baltimore County;District 015 Precinct 014	precinct
+Maryland;Baltimore County;District 015 Precinct 015	precinct
+Maryland;Baltimore County;District 015 Precinct 016	precinct
+Maryland;Baltimore County;District 015 Precinct 017	precinct
+Maryland;Baltimore County;District 015 Precinct 018	precinct
+Maryland;Baltimore County;District 015 Precinct 019	precinct
+Maryland;Baltimore County;District 015 Precinct 020	precinct
+Maryland;Baltimore County;District 015 Precinct 021	precinct
+Maryland;Baltimore County;District 015 Precinct 022	precinct
+Maryland;Baltimore County;District 015 Precinct 023	precinct
+Maryland;Baltimore County;District 015 Precinct 024	precinct
+Maryland;Baltimore County;District 015 Precinct 025	precinct
+Maryland;Baltimore County;District 015 Precinct 026	precinct
+Maryland;Calvert County;District 001 Precinct 001	precinct
+Maryland;Calvert County;District 001 Precinct 002	precinct
+Maryland;Calvert County;District 001 Precinct 003	precinct
+Maryland;Calvert County;District 001 Precinct 004	precinct
+Maryland;Calvert County;District 001 Precinct 005	precinct
+Maryland;Calvert County;District 001 Precinct 006	precinct
+Maryland;Calvert County;District 001 Precinct 007	precinct
+Maryland;Calvert County;District 002 Precinct 001	precinct
+Maryland;Calvert County;District 002 Precinct 002	precinct
+Maryland;Calvert County;District 002 Precinct 003	precinct
+Maryland;Calvert County;District 002 Precinct 004	precinct
+Maryland;Calvert County;District 002 Precinct 005	precinct
+Maryland;Calvert County;District 002 Precinct 006	precinct
+Maryland;Calvert County;District 002 Precinct 007	precinct
+Maryland;Calvert County;District 002 Precinct 008	precinct
+Maryland;Calvert County;District 003 Precinct 001	precinct
+Maryland;Calvert County;District 003 Precinct 002	precinct
+Maryland;Calvert County;District 003 Precinct 003	precinct
+Maryland;Calvert County;District 003 Precinct 004	precinct
+Maryland;Calvert County;District 003 Precinct 005	precinct
+Maryland;Calvert County;District 003 Precinct 006	precinct
+Maryland;Calvert County;District 003 Precinct 007	precinct
+Maryland;Calvert County;District 003 Precinct 008	precinct
+Maryland;Caroline County;District 001 Precinct 001	precinct
+Maryland;Caroline County;District 002 Precinct 001	precinct
+Maryland;Caroline County;District 003 Precinct 001	precinct
+Maryland;Caroline County;District 004 Precinct 001	precinct
+Maryland;Caroline County;District 005 Precinct 001	precinct
+Maryland;Caroline County;District 006 Precinct 001	precinct
+Maryland;Caroline County;District 007 Precinct 001	precinct
+Maryland;Caroline County;District 008 Precinct 001	precinct
+Maryland;Carroll County;District 001 Precinct 001	precinct
+Maryland;Carroll County;District 001 Precinct 002	precinct
+Maryland;Carroll County;District 002 Precinct 001	precinct
+Maryland;Carroll County;District 002 Precinct 002	precinct
+Maryland;Carroll County;District 003 Precinct 001	precinct
+Maryland;Carroll County;District 004 Precinct 001	precinct
+Maryland;Carroll County;District 004 Precinct 002	precinct
+Maryland;Carroll County;District 004 Precinct 003	precinct
+Maryland;Carroll County;District 005 Precinct 001	precinct
+Maryland;Carroll County;District 005 Precinct 002	precinct
+Maryland;Carroll County;District 005 Precinct 003	precinct
+Maryland;Carroll County;District 005 Precinct 004	precinct
+Maryland;Carroll County;District 005 Precinct 005	precinct
+Maryland;Carroll County;District 005 Precinct 006	precinct
+Maryland;Carroll County;District 006 Precinct 001	precinct
+Maryland;Carroll County;District 006 Precinct 002	precinct
+Maryland;Carroll County;District 007 Precinct 001	precinct
+Maryland;Carroll County;District 007 Precinct 002	precinct
+Maryland;Carroll County;District 007 Precinct 003	precinct
+Maryland;Carroll County;District 007 Precinct 004	precinct
+Maryland;Carroll County;District 007 Precinct 005	precinct
+Maryland;Carroll County;District 007 Precinct 006	precinct
+Maryland;Carroll County;District 007 Precinct 007	precinct
+Maryland;Carroll County;District 007 Precinct 008	precinct
+Maryland;Carroll County;District 008 Precinct 001	precinct
+Maryland;Carroll County;District 008 Precinct 002	precinct
+Maryland;Carroll County;District 008 Precinct 003	precinct
+Maryland;Carroll County;District 009 Precinct 001	precinct
+Maryland;Carroll County;District 009 Precinct 002	precinct
+Maryland;Carroll County;District 010 Precinct 001	precinct
+Maryland;Carroll County;District 011 Precinct 001	precinct
+Maryland;Carroll County;District 012 Precinct 001	precinct
+Maryland;Carroll County;District 013 Precinct 001	precinct
+Maryland;Carroll County;District 014 Precinct 001	precinct
+Maryland;Carroll County;District 014 Precinct 002	precinct
+Maryland;Carroll County;District 014 Precinct 003	precinct
+Maryland;Cecil County;District 001 Precinct 001	precinct
+Maryland;Cecil County;District 002 Precinct 001	precinct
+Maryland;Cecil County;District 002 Precinct 002	precinct
+Maryland;Cecil County;District 003 Precinct 001	precinct
+Maryland;Cecil County;District 003 Precinct 002	precinct
+Maryland;Cecil County;District 003 Precinct 003	precinct
+Maryland;Cecil County;District 003 Precinct 004	precinct
+Maryland;Cecil County;District 003 Precinct 005	precinct
+Maryland;Cecil County;District 003 Precinct 006	precinct
+Maryland;Cecil County;District 003 Precinct 007	precinct
+Maryland;Cecil County;District 004 Precinct 001	precinct
+Maryland;Cecil County;District 004 Precinct 002	precinct
+Maryland;Cecil County;District 005 Precinct 001	precinct
+Maryland;Cecil County;District 005 Precinct 002	precinct
+Maryland;Cecil County;District 005 Precinct 003	precinct
+Maryland;Cecil County;District 005 Precinct 004	precinct
+Maryland;Cecil County;District 005 Precinct 005	precinct
+Maryland;Cecil County;District 005 Precinct 006	precinct
+Maryland;Cecil County;District 006 Precinct 001	precinct
+Maryland;Cecil County;District 006 Precinct 002	precinct
+Maryland;Cecil County;District 006 Precinct 003	precinct
+Maryland;Cecil County;District 007 Precinct 001	precinct
+Maryland;Cecil County;District 007 Precinct 002	precinct
+Maryland;Cecil County;District 007 Precinct 003	precinct
+Maryland;Cecil County;District 007 Precinct 004	precinct
+Maryland;Cecil County;District 008 Precinct 001	precinct
+Maryland;Cecil County;District 009 Precinct 001	precinct
+Maryland;Cecil County;District 009 Precinct 002	precinct
+Maryland;Charles County;District 001 Precinct 001	precinct
+Maryland;Charles County;District 001 Precinct 002	precinct
+Maryland;Charles County;District 001 Precinct 003	precinct
+Maryland;Charles County;District 001 Precinct 004	precinct
+Maryland;Charles County;District 002 Precinct 001	precinct
+Maryland;Charles County;District 003 Precinct 001	precinct
+Maryland;Charles County;District 004 Precinct 001	precinct
+Maryland;Charles County;District 004 Precinct 002	precinct
+Maryland;Charles County;District 005 Precinct 001	precinct
+Maryland;Charles County;District 006 Precinct 001	precinct
+Maryland;Charles County;District 006 Precinct 002	precinct
+Maryland;Charles County;District 006 Precinct 003	precinct
+Maryland;Charles County;District 006 Precinct 004	precinct
+Maryland;Charles County;District 006 Precinct 005	precinct
+Maryland;Charles County;District 006 Precinct 006	precinct
+Maryland;Charles County;District 006 Precinct 007	precinct
+Maryland;Charles County;District 006 Precinct 008	precinct
+Maryland;Charles County;District 006 Precinct 009	precinct
+Maryland;Charles County;District 006 Precinct 010	precinct
+Maryland;Charles County;District 006 Precinct 011	precinct
+Maryland;Charles County;District 006 Precinct 012	precinct
+Maryland;Charles County;District 006 Precinct 013	precinct
+Maryland;Charles County;District 006 Precinct 014	precinct
+Maryland;Charles County;District 006 Precinct 015	precinct
+Maryland;Charles County;District 006 Precinct 016	precinct
+Maryland;Charles County;District 006 Precinct 017	precinct
+Maryland;Charles County;District 006 Precinct 018	precinct
+Maryland;Charles County;District 006 Precinct 019	precinct
+Maryland;Charles County;District 006 Precinct 020	precinct
+Maryland;Charles County;District 006 Precinct 021	precinct
+Maryland;Charles County;District 006 Precinct 022	precinct
+Maryland;Charles County;District 007 Precinct 001	precinct
+Maryland;Charles County;District 007 Precinct 002	precinct
+Maryland;Charles County;District 007 Precinct 003	precinct
+Maryland;Charles County;District 007 Precinct 004	precinct
+Maryland;Charles County;District 008 Precinct 001	precinct
+Maryland;Charles County;District 008 Precinct 002	precinct
+Maryland;Charles County;District 008 Precinct 003	precinct
+Maryland;Charles County;District 008 Precinct 004	precinct
+Maryland;Charles County;District 008 Precinct 005	precinct
+Maryland;Charles County;District 009 Precinct 001	precinct
+Maryland;Charles County;District 009 Precinct 002	precinct
+Maryland;Charles County;District 010 Precinct 001	precinct
+Maryland;Dorchester County;District 001 Precinct 001	precinct
+Maryland;Dorchester County;District 002 Precinct 001	precinct
+Maryland;Dorchester County;District 002 Precinct 002	precinct
+Maryland;Dorchester County;District 002 Precinct 003	precinct
+Maryland;Dorchester County;District 002 Precinct 004	precinct
+Maryland;Dorchester County;District 003 Precinct 001	precinct
+Maryland;Dorchester County;District 003 Precinct 002	precinct
+Maryland;Dorchester County;District 004 Precinct 001	precinct
+Maryland;Dorchester County;District 005 Precinct 001	precinct
+Maryland;Dorchester County;District 006 Precinct 001	precinct
+Maryland;Dorchester County;District 007 Precinct 001	precinct
+Maryland;Dorchester County;District 007 Precinct 002	precinct
+Maryland;Dorchester County;District 007 Precinct 003	precinct
+Maryland;Dorchester County;District 007 Precinct 004	precinct
+Maryland;Dorchester County;District 007 Precinct 005	precinct
+Maryland;Dorchester County;District 007 Precinct 006	precinct
+Maryland;Dorchester County;District 007 Precinct 007	precinct
+Maryland;Dorchester County;District 007 Precinct 008	precinct
+Maryland;Dorchester County;District 007 Precinct 009	precinct
+Maryland;Dorchester County;District 007 Precinct 010	precinct
+Maryland;Dorchester County;District 007 Precinct 011	precinct
+Maryland;Dorchester County;District 008 Precinct 001	precinct
+Maryland;Dorchester County;District 009 Precinct 001	precinct
+Maryland;Dorchester County;District 010 Precinct 001	precinct
+Maryland;Dorchester County;District 011 Precinct 001	precinct
+Maryland;Dorchester County;District 012 Precinct 001	precinct
+Maryland;Dorchester County;District 012 Precinct 002	precinct
+Maryland;Dorchester County;District 013 Precinct 001	precinct
+Maryland;Dorchester County;District 013 Precinct 002	precinct
+Maryland;Dorchester County;District 014 Precinct 001	precinct
+Maryland;Dorchester County;District 014 Precinct 002	precinct
+Maryland;Dorchester County;District 014 Precinct 003	precinct
+Maryland;Dorchester County;District 014 Precinct 004	precinct
+Maryland;Dorchester County;District 015 Precinct 001	precinct
+Maryland;Dorchester County;District 015 Precinct 002	precinct
+Maryland;Dorchester County;District 015 Precinct 003	precinct
+Maryland;Dorchester County;District 016 Precinct 001	precinct
+Maryland;Dorchester County;District 017 Precinct 001	precinct
+Maryland;Dorchester County;District 017 Precinct 002	precinct
+Maryland;Dorchester County;District 018 Precinct 001	precinct
+Maryland;Frederick County;District 001 Precinct 001	precinct
+Maryland;Frederick County;District 001 Precinct 002	precinct
+Maryland;Frederick County;District 001 Precinct 003	precinct
+Maryland;Frederick County;District 002 Precinct 001	precinct
+Maryland;Frederick County;District 002 Precinct 002	precinct
+Maryland;Frederick County;District 002 Precinct 003	precinct
+Maryland;Frederick County;District 002 Precinct 004	precinct
+Maryland;Frederick County;District 002 Precinct 005	precinct
+Maryland;Frederick County;District 002 Precinct 006	precinct
+Maryland;Frederick County;District 002 Precinct 007	precinct
+Maryland;Frederick County;District 002 Precinct 008	precinct
+Maryland;Frederick County;District 002 Precinct 010	precinct
+Maryland;Frederick County;District 002 Precinct 011	precinct
+Maryland;Frederick County;District 002 Precinct 013	precinct
+Maryland;Frederick County;District 002 Precinct 014	precinct
+Maryland;Frederick County;District 002 Precinct 015	precinct
+Maryland;Frederick County;District 002 Precinct 016	precinct
+Maryland;Frederick County;District 002 Precinct 017	precinct
+Maryland;Frederick County;District 002 Precinct 018	precinct
+Maryland;Frederick County;District 003 Precinct 001	precinct
+Maryland;Frederick County;District 003 Precinct 002	precinct
+Maryland;Frederick County;District 003 Precinct 003	precinct
+Maryland;Frederick County;District 004 Precinct 001	precinct
+Maryland;Frederick County;District 005 Precinct 001	precinct
+Maryland;Frederick County;District 006 Precinct 001	precinct
+Maryland;Frederick County;District 007 Precinct 001	precinct
+Maryland;Frederick County;District 007 Precinct 002	precinct
+Maryland;Frederick County;District 007 Precinct 003	precinct
+Maryland;Frederick County;District 007 Precinct 004	precinct
+Maryland;Frederick County;District 007 Precinct 005	precinct
+Maryland;Frederick County;District 007 Precinct 006	precinct
+Maryland;Frederick County;District 007 Precinct 007	precinct
+Maryland;Frederick County;District 008 Precinct 001	precinct
+Maryland;Frederick County;District 009 Precinct 001	precinct
+Maryland;Frederick County;District 009 Precinct 002	precinct
+Maryland;Frederick County;District 009 Precinct 003	precinct
+Maryland;Frederick County;District 009 Precinct 004	precinct
+Maryland;Frederick County;District 009 Precinct 005	precinct
+Maryland;Frederick County;District 009 Precinct 006	precinct
+Maryland;Frederick County;District 009 Precinct 007	precinct
+Maryland;Frederick County;District 009 Precinct 008	precinct
+Maryland;Frederick County;District 009 Precinct 009	precinct
+Maryland;Frederick County;District 010 Precinct 001	precinct
+Maryland;Frederick County;District 011 Precinct 001	precinct
+Maryland;Frederick County;District 012 Precinct 001	precinct
+Maryland;Frederick County;District 012 Precinct 002	precinct
+Maryland;Frederick County;District 013 Precinct 001	precinct
+Maryland;Frederick County;District 013 Precinct 002	precinct
+Maryland;Frederick County;District 013 Precinct 003	precinct
+Maryland;Frederick County;District 014 Precinct 001	precinct
+Maryland;Frederick County;District 014 Precinct 002	precinct
+Maryland;Frederick County;District 015 Precinct 001	precinct
+Maryland;Frederick County;District 015 Precinct 002	precinct
+Maryland;Frederick County;District 016 Precinct 001	precinct
+Maryland;Frederick County;District 017 Precinct 001	precinct
+Maryland;Frederick County;District 018 Precinct 001	precinct
+Maryland;Frederick County;District 018 Precinct 002	precinct
+Maryland;Frederick County;District 018 Precinct 003	precinct
+Maryland;Frederick County;District 019 Precinct 001	precinct
+Maryland;Frederick County;District 020 Precinct 001	precinct
+Maryland;Frederick County;District 020 Precinct 002	precinct
+Maryland;Frederick County;District 021 Precinct 001	precinct
+Maryland;Frederick County;District 021 Precinct 002	precinct
+Maryland;Frederick County;District 021 Precinct 003	precinct
+Maryland;Frederick County;District 021 Precinct 004	precinct
+Maryland;Frederick County;District 021 Precinct 005	precinct
+Maryland;Frederick County;District 021 Precinct 006	precinct
+Maryland;Frederick County;District 021 Precinct 007	precinct
+Maryland;Frederick County;District 021 Precinct 008	precinct
+Maryland;Frederick County;District 022 Precinct 001	precinct
+Maryland;Frederick County;District 022 Precinct 002	precinct
+Maryland;Frederick County;District 023 Precinct 001	precinct
+Maryland;Frederick County;District 023 Precinct 002	precinct
+Maryland;Frederick County;District 023 Precinct 003	precinct
+Maryland;Frederick County;District 023 Precinct 004	precinct
+Maryland;Frederick County;District 024 Precinct 001	precinct
+Maryland;Frederick County;District 024 Precinct 002	precinct
+Maryland;Frederick County;District 024 Precinct 003	precinct
+Maryland;Frederick County;District 024 Precinct 004	precinct
+Maryland;Frederick County;District 024 Precinct 005	precinct
+Maryland;Frederick County;District 024 Precinct 006	precinct
+Maryland;Frederick County;District 025 Precinct 001	precinct
+Maryland;Frederick County;District 026 Precinct 001	precinct
+Maryland;Frederick County;District 026 Precinct 002	precinct
+Maryland;Garrett County;District 001 Precinct 000	precinct
+Maryland;Garrett County;District 002 Precinct 000	precinct
+Maryland;Garrett County;District 003 Precinct 001	precinct
+Maryland;Garrett County;District 003 Precinct 002	precinct
+Maryland;Garrett County;District 004 Precinct 000	precinct
+Maryland;Garrett County;District 005 Precinct 000	precinct
+Maryland;Garrett County;District 006 Precinct 000	precinct
+Maryland;Garrett County;District 007 Precinct 000	precinct
+Maryland;Garrett County;District 008 Precinct 001	precinct
+Maryland;Garrett County;District 008 Precinct 002	precinct
+Maryland;Garrett County;District 009 Precinct 000	precinct
+Maryland;Garrett County;District 010 Precinct 000	precinct
+Maryland;Garrett County;District 011 Precinct 000	precinct
+Maryland;Garrett County;District 012 Precinct 000	precinct
+Maryland;Garrett County;District 013 Precinct 000	precinct
+Maryland;Garrett County;District 014 Precinct 001	precinct
+Maryland;Garrett County;District 014 Precinct 002	precinct
+Maryland;Garrett County;District 015 Precinct 000	precinct
+Maryland;Garrett County;District 016 Precinct 000	precinct
+Maryland;Harford County;District 001 Precinct 001	precinct
+Maryland;Harford County;District 001 Precinct 002	precinct
+Maryland;Harford County;District 001 Precinct 003	precinct
+Maryland;Harford County;District 001 Precinct 004	precinct
+Maryland;Harford County;District 001 Precinct 005	precinct
+Maryland;Harford County;District 001 Precinct 006	precinct
+Maryland;Harford County;District 001 Precinct 007	precinct
+Maryland;Harford County;District 001 Precinct 008	precinct
+Maryland;Harford County;District 001 Precinct 009	precinct
+Maryland;Harford County;District 001 Precinct 010	precinct
+Maryland;Harford County;District 001 Precinct 011	precinct
+Maryland;Harford County;District 001 Precinct 012	precinct
+Maryland;Harford County;District 001 Precinct 013	precinct
+Maryland;Harford County;District 001 Precinct 014	precinct
+Maryland;Harford County;District 001 Precinct 015	precinct
+Maryland;Harford County;District 001 Precinct 016	precinct
+Maryland;Harford County;District 001 Precinct 017	precinct
+Maryland;Harford County;District 001 Precinct 018	precinct
+Maryland;Harford County;District 001 Precinct 019	precinct
+Maryland;Harford County;District 001 Precinct 020	precinct
+Maryland;Harford County;District 001 Precinct 021	precinct
+Maryland;Harford County;District 001 Precinct 022	precinct
+Maryland;Harford County;District 001 Precinct 023	precinct
+Maryland;Harford County;District 001 Precinct 024	precinct
+Maryland;Harford County;District 001 Precinct 025	precinct
+Maryland;Harford County;District 001 Precinct 026	precinct
+Maryland;Harford County;District 001 Precinct 027	precinct
+Maryland;Harford County;District 001 Precinct 041	precinct
+Maryland;Harford County;District 001 Precinct 045	precinct
+Maryland;Harford County;District 002 Precinct 001	precinct
+Maryland;Harford County;District 002 Precinct 002	precinct
+Maryland;Harford County;District 002 Precinct 003	precinct
+Maryland;Harford County;District 002 Precinct 004	precinct
+Maryland;Harford County;District 002 Precinct 005	precinct
+Maryland;Harford County;District 002 Precinct 006	precinct
+Maryland;Harford County;District 002 Precinct 007	precinct
+Maryland;Harford County;District 002 Precinct 010	precinct
+Maryland;Harford County;District 002 Precinct 011	precinct
+Maryland;Harford County;District 002 Precinct 014	precinct
+Maryland;Harford County;District 002 Precinct 015	precinct
+Maryland;Harford County;District 002 Precinct 019	precinct
+Maryland;Harford County;District 002 Precinct 020	precinct
+Maryland;Harford County;District 002 Precinct 021	precinct
+Maryland;Harford County;District 002 Precinct 022	precinct
+Maryland;Harford County;District 003 Precinct 002	precinct
+Maryland;Harford County;District 003 Precinct 003	precinct
+Maryland;Harford County;District 003 Precinct 004	precinct
+Maryland;Harford County;District 003 Precinct 005	precinct
+Maryland;Harford County;District 003 Precinct 006	precinct
+Maryland;Harford County;District 003 Precinct 007	precinct
+Maryland;Harford County;District 003 Precinct 008	precinct
+Maryland;Harford County;District 003 Precinct 009	precinct
+Maryland;Harford County;District 003 Precinct 010	precinct
+Maryland;Harford County;District 003 Precinct 011	precinct
+Maryland;Harford County;District 003 Precinct 012	precinct
+Maryland;Harford County;District 003 Precinct 013	precinct
+Maryland;Harford County;District 003 Precinct 014	precinct
+Maryland;Harford County;District 003 Precinct 015	precinct
+Maryland;Harford County;District 003 Precinct 016	precinct
+Maryland;Harford County;District 003 Precinct 017	precinct
+Maryland;Harford County;District 003 Precinct 018	precinct
+Maryland;Harford County;District 003 Precinct 019	precinct
+Maryland;Harford County;District 003 Precinct 020	precinct
+Maryland;Harford County;District 003 Precinct 021	precinct
+Maryland;Harford County;District 003 Precinct 022	precinct
+Maryland;Harford County;District 003 Precinct 023	precinct
+Maryland;Harford County;District 003 Precinct 024	precinct
+Maryland;Harford County;District 003 Precinct 025	precinct
+Maryland;Harford County;District 003 Precinct 026	precinct
+Maryland;Harford County;District 003 Precinct 027	precinct
+Maryland;Harford County;District 004 Precinct 001	precinct
+Maryland;Harford County;District 004 Precinct 002	precinct
+Maryland;Harford County;District 004 Precinct 003	precinct
+Maryland;Harford County;District 004 Precinct 004	precinct
+Maryland;Harford County;District 004 Precinct 005	precinct
+Maryland;Harford County;District 004 Precinct 006	precinct
+Maryland;Harford County;District 004 Precinct 007	precinct
+Maryland;Harford County;District 004 Precinct 008	precinct
+Maryland;Harford County;District 005 Precinct 001	precinct
+Maryland;Harford County;District 005 Precinct 002	precinct
+Maryland;Harford County;District 005 Precinct 003	precinct
+Maryland;Harford County;District 005 Precinct 004	precinct
+Maryland;Harford County;District 006 Precinct 001	precinct
+Maryland;Harford County;District 006 Precinct 002	precinct
+Maryland;Harford County;District 006 Precinct 003	precinct
+Maryland;Harford County;District 006 Precinct 004	precinct
+Maryland;Harford County;District 006 Precinct 005	precinct
+Maryland;Harford County;District 006 Precinct 006	precinct
+Maryland;Harford County;District 006 Precinct 007	precinct
+Maryland;Howard County;District 001 Precinct 001	precinct
+Maryland;Howard County;District 001 Precinct 002	precinct
+Maryland;Howard County;District 001 Precinct 003	precinct
+Maryland;Howard County;District 001 Precinct 004	precinct
+Maryland;Howard County;District 001 Precinct 005	precinct
+Maryland;Howard County;District 001 Precinct 006	precinct
+Maryland;Howard County;District 001 Precinct 007	precinct
+Maryland;Howard County;District 001 Precinct 008	precinct
+Maryland;Howard County;District 001 Precinct 009	precinct
+Maryland;Howard County;District 001 Precinct 010	precinct
+Maryland;Howard County;District 001 Precinct 011	precinct
+Maryland;Howard County;District 001 Precinct 012	precinct
+Maryland;Howard County;District 001 Precinct 013	precinct
+Maryland;Howard County;District 001 Precinct 014	precinct
+Maryland;Howard County;District 001 Precinct 015	precinct
+Maryland;Howard County;District 001 Precinct 016	precinct
+Maryland;Howard County;District 001 Precinct 017	precinct
+Maryland;Howard County;District 001 Precinct 018	precinct
+Maryland;Howard County;District 001 Precinct 019	precinct
+Maryland;Howard County;District 001 Precinct 020	precinct
+Maryland;Howard County;District 001 Precinct 021	precinct
+Maryland;Howard County;District 002 Precinct 001	precinct
+Maryland;Howard County;District 002 Precinct 002	precinct
+Maryland;Howard County;District 002 Precinct 003	precinct
+Maryland;Howard County;District 002 Precinct 004	precinct
+Maryland;Howard County;District 002 Precinct 005	precinct
+Maryland;Howard County;District 002 Precinct 006	precinct
+Maryland;Howard County;District 002 Precinct 007	precinct
+Maryland;Howard County;District 002 Precinct 008	precinct
+Maryland;Howard County;District 002 Precinct 009	precinct
+Maryland;Howard County;District 002 Precinct 010	precinct
+Maryland;Howard County;District 002 Precinct 011	precinct
+Maryland;Howard County;District 002 Precinct 012	precinct
+Maryland;Howard County;District 002 Precinct 013	precinct
+Maryland;Howard County;District 002 Precinct 014	precinct
+Maryland;Howard County;District 002 Precinct 015	precinct
+Maryland;Howard County;District 002 Precinct 016	precinct
+Maryland;Howard County;District 002 Precinct 017	precinct
+Maryland;Howard County;District 002 Precinct 018	precinct
+Maryland;Howard County;District 002 Precinct 019	precinct
+Maryland;Howard County;District 002 Precinct 020	precinct
+Maryland;Howard County;District 002 Precinct 021	precinct
+Maryland;Howard County;District 002 Precinct 022	precinct
+Maryland;Howard County;District 002 Precinct 023	precinct
+Maryland;Howard County;District 002 Precinct 024	precinct
+Maryland;Howard County;District 002 Precinct 025	precinct
+Maryland;Howard County;District 002 Precinct 026	precinct
+Maryland;Howard County;District 003 Precinct 001	precinct
+Maryland;Howard County;District 003 Precinct 002	precinct
+Maryland;Howard County;District 003 Precinct 003	precinct
+Maryland;Howard County;District 003 Precinct 004	precinct
+Maryland;Howard County;District 003 Precinct 005	precinct
+Maryland;Howard County;District 003 Precinct 006	precinct
+Maryland;Howard County;District 004 Precinct 001	precinct
+Maryland;Howard County;District 004 Precinct 002	precinct
+Maryland;Howard County;District 004 Precinct 003	precinct
+Maryland;Howard County;District 004 Precinct 004	precinct
+Maryland;Howard County;District 004 Precinct 005	precinct
+Maryland;Howard County;District 004 Precinct 006	precinct
+Maryland;Howard County;District 005 Precinct 001	precinct
+Maryland;Howard County;District 005 Precinct 002	precinct
+Maryland;Howard County;District 005 Precinct 003	precinct
+Maryland;Howard County;District 005 Precinct 004	precinct
+Maryland;Howard County;District 005 Precinct 005	precinct
+Maryland;Howard County;District 005 Precinct 006	precinct
+Maryland;Howard County;District 005 Precinct 007	precinct
+Maryland;Howard County;District 005 Precinct 008	precinct
+Maryland;Howard County;District 005 Precinct 009	precinct
+Maryland;Howard County;District 005 Precinct 010	precinct
+Maryland;Howard County;District 005 Precinct 011	precinct
+Maryland;Howard County;District 005 Precinct 012	precinct
+Maryland;Howard County;District 005 Precinct 013	precinct
+Maryland;Howard County;District 005 Precinct 014	precinct
+Maryland;Howard County;District 005 Precinct 015	precinct
+Maryland;Howard County;District 005 Precinct 016	precinct
+Maryland;Howard County;District 005 Precinct 017	precinct
+Maryland;Howard County;District 005 Precinct 018	precinct
+Maryland;Howard County;District 005 Precinct 019	precinct
+Maryland;Howard County;District 005 Precinct 020	precinct
+Maryland;Howard County;District 005 Precinct 021	precinct
+Maryland;Howard County;District 005 Precinct 022	precinct
+Maryland;Howard County;District 005 Precinct 023	precinct
+Maryland;Howard County;District 005 Precinct 024	precinct
+Maryland;Howard County;District 006 Precinct 001	precinct
+Maryland;Howard County;District 006 Precinct 002	precinct
+Maryland;Howard County;District 006 Precinct 003	precinct
+Maryland;Howard County;District 006 Precinct 004	precinct
+Maryland;Howard County;District 006 Precinct 005	precinct
+Maryland;Howard County;District 006 Precinct 006	precinct
+Maryland;Howard County;District 006 Precinct 007	precinct
+Maryland;Howard County;District 006 Precinct 008	precinct
+Maryland;Howard County;District 006 Precinct 009	precinct
+Maryland;Howard County;District 006 Precinct 010	precinct
+Maryland;Howard County;District 006 Precinct 011	precinct
+Maryland;Howard County;District 006 Precinct 012	precinct
+Maryland;Howard County;District 006 Precinct 013	precinct
+Maryland;Howard County;District 006 Precinct 014	precinct
+Maryland;Howard County;District 006 Precinct 015	precinct
+Maryland;Howard County;District 006 Precinct 016	precinct
+Maryland;Howard County;District 006 Precinct 017	precinct
+Maryland;Howard County;District 006 Precinct 018	precinct
+Maryland;Howard County;District 006 Precinct 019	precinct
+Maryland;Howard County;District 006 Precinct 020	precinct
+Maryland;Howard County;District 006 Precinct 021	precinct
+Maryland;Howard County;District 006 Precinct 022	precinct
+Maryland;Howard County;District 006 Precinct 023	precinct
+Maryland;Howard County;District 006 Precinct 024	precinct
+Maryland;Howard County;District 006 Precinct 025	precinct
+Maryland;Howard County;District 006 Precinct 026	precinct
+Maryland;Howard County;District 006 Precinct 027	precinct
+Maryland;Howard County;District 006 Precinct 028	precinct
+Maryland;Howard County;District 006 Precinct 029	precinct
+Maryland;Howard County;District 006 Precinct 030	precinct
+Maryland;Howard County;District 006 Precinct 031	precinct
+Maryland;Howard County;District 006 Precinct 032	precinct
+Maryland;Howard County;District 006 Precinct 033	precinct
+Maryland;Howard County;District 006 Precinct 034	precinct
+Maryland;Howard County;District 006 Precinct 035	precinct
+Maryland;Kent County;District 001 Precinct 001	precinct
+Maryland;Kent County;District 001 Precinct 002	precinct
+Maryland;Kent County;District 002 Precinct 001	precinct
+Maryland;Kent County;District 003 Precinct 001	precinct
+Maryland;Kent County;District 003 Precinct 002	precinct
+Maryland;Kent County;District 004 Precinct 001	precinct
+Maryland;Kent County;District 004 Precinct 002	precinct
+Maryland;Kent County;District 005 Precinct 001	precinct
+Maryland;Kent County;District 006 Precinct 001	precinct
+Maryland;Kent County;District 007 Precinct 001	precinct
+Maryland;Montgomery County;District 001 Precinct 001	precinct
+Maryland;Montgomery County;District 001 Precinct 002	precinct
+Maryland;Montgomery County;District 001 Precinct 003	precinct
+Maryland;Montgomery County;District 001 Precinct 004	precinct
+Maryland;Montgomery County;District 001 Precinct 005	precinct
+Maryland;Montgomery County;District 001 Precinct 006	precinct
+Maryland;Montgomery County;District 001 Precinct 007	precinct
+Maryland;Montgomery County;District 002 Precinct 001	precinct
+Maryland;Montgomery County;District 002 Precinct 002	precinct
+Maryland;Montgomery County;District 002 Precinct 003	precinct
+Maryland;Montgomery County;District 002 Precinct 004	precinct
+Maryland;Montgomery County;District 002 Precinct 005	precinct
+Maryland;Montgomery County;District 002 Precinct 006	precinct
+Maryland;Montgomery County;District 002 Precinct 007	precinct
+Maryland;Montgomery County;District 002 Precinct 008	precinct
+Maryland;Montgomery County;District 002 Precinct 009	precinct
+Maryland;Montgomery County;District 002 Precinct 010	precinct
+Maryland;Montgomery County;District 002 Precinct 011	precinct
+Maryland;Montgomery County;District 003 Precinct 001	precinct
+Maryland;Montgomery County;District 003 Precinct 002	precinct
+Maryland;Montgomery County;District 004 Precinct 001	precinct
+Maryland;Montgomery County;District 004 Precinct 002	precinct
+Maryland;Montgomery County;District 004 Precinct 003	precinct
+Maryland;Montgomery County;District 004 Precinct 004	precinct
+Maryland;Montgomery County;District 004 Precinct 005	precinct
+Maryland;Montgomery County;District 004 Precinct 006	precinct
+Maryland;Montgomery County;District 004 Precinct 007	precinct
+Maryland;Montgomery County;District 004 Precinct 008	precinct
+Maryland;Montgomery County;District 004 Precinct 009	precinct
+Maryland;Montgomery County;District 004 Precinct 010	precinct
+Maryland;Montgomery County;District 004 Precinct 011	precinct
+Maryland;Montgomery County;District 004 Precinct 012	precinct
+Maryland;Montgomery County;District 004 Precinct 013	precinct
+Maryland;Montgomery County;District 004 Precinct 014	precinct
+Maryland;Montgomery County;District 004 Precinct 015	precinct
+Maryland;Montgomery County;District 004 Precinct 016	precinct
+Maryland;Montgomery County;District 004 Precinct 017	precinct
+Maryland;Montgomery County;District 004 Precinct 018	precinct
+Maryland;Montgomery County;District 004 Precinct 019	precinct
+Maryland;Montgomery County;District 004 Precinct 020	precinct
+Maryland;Montgomery County;District 004 Precinct 021	precinct
+Maryland;Montgomery County;District 004 Precinct 023	precinct
+Maryland;Montgomery County;District 004 Precinct 024	precinct
+Maryland;Montgomery County;District 004 Precinct 025	precinct
+Maryland;Montgomery County;District 004 Precinct 026	precinct
+Maryland;Montgomery County;District 004 Precinct 027	precinct
+Maryland;Montgomery County;District 004 Precinct 028	precinct
+Maryland;Montgomery County;District 004 Precinct 029	precinct
+Maryland;Montgomery County;District 004 Precinct 030	precinct
+Maryland;Montgomery County;District 004 Precinct 031	precinct
+Maryland;Montgomery County;District 004 Precinct 032	precinct
+Maryland;Montgomery County;District 004 Precinct 033	precinct
+Maryland;Montgomery County;District 004 Precinct 034	precinct
+Maryland;Montgomery County;District 004 Precinct 035	precinct
+Maryland;Montgomery County;District 004 Precinct 036	precinct
+Maryland;Montgomery County;District 004 Precinct 037	precinct
+Maryland;Montgomery County;District 004 Precinct 038	precinct
+Maryland;Montgomery County;District 004 Precinct 040	precinct
+Maryland;Montgomery County;District 004 Precinct 041	precinct
+Maryland;Montgomery County;District 004 Precinct 042	precinct
+Maryland;Montgomery County;District 004 Precinct 043	precinct
+Maryland;Montgomery County;District 005 Precinct 001	precinct
+Maryland;Montgomery County;District 005 Precinct 002	precinct
+Maryland;Montgomery County;District 005 Precinct 003	precinct
+Maryland;Montgomery County;District 005 Precinct 004	precinct
+Maryland;Montgomery County;District 005 Precinct 005	precinct
+Maryland;Montgomery County;District 005 Precinct 006	precinct
+Maryland;Montgomery County;District 005 Precinct 008	precinct
+Maryland;Montgomery County;District 005 Precinct 009	precinct
+Maryland;Montgomery County;District 005 Precinct 010	precinct
+Maryland;Montgomery County;District 005 Precinct 011	precinct
+Maryland;Montgomery County;District 005 Precinct 012	precinct
+Maryland;Montgomery County;District 005 Precinct 013	precinct
+Maryland;Montgomery County;District 005 Precinct 014	precinct
+Maryland;Montgomery County;District 005 Precinct 015	precinct
+Maryland;Montgomery County;District 005 Precinct 016	precinct
+Maryland;Montgomery County;District 005 Precinct 017	precinct
+Maryland;Montgomery County;District 005 Precinct 018	precinct
+Maryland;Montgomery County;District 005 Precinct 019	precinct
+Maryland;Montgomery County;District 005 Precinct 021	precinct
+Maryland;Montgomery County;District 005 Precinct 022	precinct
+Maryland;Montgomery County;District 005 Precinct 023	precinct
+Maryland;Montgomery County;District 006 Precinct 001	precinct
+Maryland;Montgomery County;District 006 Precinct 002	precinct
+Maryland;Montgomery County;District 006 Precinct 003	precinct
+Maryland;Montgomery County;District 006 Precinct 004	precinct
+Maryland;Montgomery County;District 006 Precinct 005	precinct
+Maryland;Montgomery County;District 006 Precinct 006	precinct
+Maryland;Montgomery County;District 006 Precinct 007	precinct
+Maryland;Montgomery County;District 006 Precinct 008	precinct
+Maryland;Montgomery County;District 006 Precinct 009	precinct
+Maryland;Montgomery County;District 006 Precinct 010	precinct
+Maryland;Montgomery County;District 006 Precinct 011	precinct
+Maryland;Montgomery County;District 006 Precinct 013	precinct
+Maryland;Montgomery County;District 006 Precinct 014	precinct
+Maryland;Montgomery County;District 006 Precinct 015	precinct
+Maryland;Montgomery County;District 006 Precinct 016	precinct
+Maryland;Montgomery County;District 007 Precinct 001	precinct
+Maryland;Montgomery County;District 007 Precinct 002	precinct
+Maryland;Montgomery County;District 007 Precinct 003	precinct
+Maryland;Montgomery County;District 007 Precinct 004	precinct
+Maryland;Montgomery County;District 007 Precinct 005	precinct
+Maryland;Montgomery County;District 007 Precinct 006	precinct
+Maryland;Montgomery County;District 007 Precinct 007	precinct
+Maryland;Montgomery County;District 007 Precinct 008	precinct
+Maryland;Montgomery County;District 007 Precinct 009	precinct
+Maryland;Montgomery County;District 007 Precinct 010	precinct
+Maryland;Montgomery County;District 007 Precinct 011	precinct
+Maryland;Montgomery County;District 007 Precinct 012	precinct
+Maryland;Montgomery County;District 007 Precinct 013	precinct
+Maryland;Montgomery County;District 007 Precinct 015	precinct
+Maryland;Montgomery County;District 007 Precinct 016	precinct
+Maryland;Montgomery County;District 007 Precinct 018	precinct
+Maryland;Montgomery County;District 007 Precinct 019	precinct
+Maryland;Montgomery County;District 007 Precinct 020	precinct
+Maryland;Montgomery County;District 007 Precinct 021	precinct
+Maryland;Montgomery County;District 007 Precinct 022	precinct
+Maryland;Montgomery County;District 007 Precinct 023	precinct
+Maryland;Montgomery County;District 007 Precinct 024	precinct
+Maryland;Montgomery County;District 007 Precinct 025	precinct
+Maryland;Montgomery County;District 007 Precinct 026	precinct
+Maryland;Montgomery County;District 007 Precinct 027	precinct
+Maryland;Montgomery County;District 007 Precinct 028	precinct
+Maryland;Montgomery County;District 007 Precinct 031	precinct
+Maryland;Montgomery County;District 007 Precinct 032	precinct
+Maryland;Montgomery County;District 008 Precinct 001	precinct
+Maryland;Montgomery County;District 008 Precinct 002	precinct
+Maryland;Montgomery County;District 008 Precinct 003	precinct
+Maryland;Montgomery County;District 008 Precinct 004	precinct
+Maryland;Montgomery County;District 008 Precinct 005	precinct
+Maryland;Montgomery County;District 008 Precinct 006	precinct
+Maryland;Montgomery County;District 008 Precinct 007	precinct
+Maryland;Montgomery County;District 008 Precinct 008	precinct
+Maryland;Montgomery County;District 008 Precinct 009	precinct
+Maryland;Montgomery County;District 008 Precinct 010	precinct
+Maryland;Montgomery County;District 008 Precinct 011	precinct
+Maryland;Montgomery County;District 008 Precinct 012	precinct
+Maryland;Montgomery County;District 008 Precinct 014	precinct
+Maryland;Montgomery County;District 008 Precinct 015	precinct
+Maryland;Montgomery County;District 009 Precinct 001	precinct
+Maryland;Montgomery County;District 009 Precinct 002	precinct
+Maryland;Montgomery County;District 009 Precinct 003	precinct
+Maryland;Montgomery County;District 009 Precinct 004	precinct
+Maryland;Montgomery County;District 009 Precinct 005	precinct
+Maryland;Montgomery County;District 009 Precinct 006	precinct
+Maryland;Montgomery County;District 009 Precinct 007	precinct
+Maryland;Montgomery County;District 009 Precinct 008	precinct
+Maryland;Montgomery County;District 009 Precinct 009	precinct
+Maryland;Montgomery County;District 009 Precinct 010	precinct
+Maryland;Montgomery County;District 009 Precinct 011	precinct
+Maryland;Montgomery County;District 009 Precinct 012	precinct
+Maryland;Montgomery County;District 009 Precinct 013	precinct
+Maryland;Montgomery County;District 009 Precinct 014	precinct
+Maryland;Montgomery County;District 009 Precinct 015	precinct
+Maryland;Montgomery County;District 009 Precinct 016	precinct
+Maryland;Montgomery County;District 009 Precinct 018	precinct
+Maryland;Montgomery County;District 009 Precinct 020	precinct
+Maryland;Montgomery County;District 009 Precinct 021	precinct
+Maryland;Montgomery County;District 009 Precinct 022	precinct
+Maryland;Montgomery County;District 009 Precinct 024	precinct
+Maryland;Montgomery County;District 009 Precinct 025	precinct
+Maryland;Montgomery County;District 009 Precinct 026	precinct
+Maryland;Montgomery County;District 009 Precinct 027	precinct
+Maryland;Montgomery County;District 009 Precinct 028	precinct
+Maryland;Montgomery County;District 009 Precinct 029	precinct
+Maryland;Montgomery County;District 009 Precinct 030	precinct
+Maryland;Montgomery County;District 009 Precinct 031	precinct
+Maryland;Montgomery County;District 009 Precinct 032	precinct
+Maryland;Montgomery County;District 009 Precinct 033	precinct
+Maryland;Montgomery County;District 009 Precinct 034	precinct
+Maryland;Montgomery County;District 009 Precinct 035	precinct
+Maryland;Montgomery County;District 009 Precinct 036	precinct
+Maryland;Montgomery County;District 009 Precinct 037	precinct
+Maryland;Montgomery County;District 009 Precinct 038	precinct
+Maryland;Montgomery County;District 009 Precinct 039	precinct
+Maryland;Montgomery County;District 009 Precinct 040	precinct
+Maryland;Montgomery County;District 009 Precinct 041	precinct
+Maryland;Montgomery County;District 010 Precinct 001	precinct
+Maryland;Montgomery County;District 010 Precinct 002	precinct
+Maryland;Montgomery County;District 010 Precinct 003	precinct
+Maryland;Montgomery County;District 010 Precinct 004	precinct
+Maryland;Montgomery County;District 010 Precinct 005	precinct
+Maryland;Montgomery County;District 010 Precinct 006	precinct
+Maryland;Montgomery County;District 010 Precinct 007	precinct
+Maryland;Montgomery County;District 010 Precinct 009	precinct
+Maryland;Montgomery County;District 010 Precinct 010	precinct
+Maryland;Montgomery County;District 010 Precinct 011	precinct
+Maryland;Montgomery County;District 010 Precinct 012	precinct
+Maryland;Montgomery County;District 010 Precinct 013	precinct
+Maryland;Montgomery County;District 011 Precinct 000	precinct
+Maryland;Montgomery County;District 012 Precinct 001	precinct
+Maryland;Montgomery County;District 012 Precinct 002	precinct
+Maryland;Montgomery County;District 012 Precinct 003	precinct
+Maryland;Montgomery County;District 012 Precinct 004	precinct
+Maryland;Montgomery County;District 012 Precinct 005	precinct
+Maryland;Montgomery County;District 013 Precinct 001	precinct
+Maryland;Montgomery County;District 013 Precinct 002	precinct
+Maryland;Montgomery County;District 013 Precinct 003	precinct
+Maryland;Montgomery County;District 013 Precinct 004	precinct
+Maryland;Montgomery County;District 013 Precinct 005	precinct
+Maryland;Montgomery County;District 013 Precinct 006	precinct
+Maryland;Montgomery County;District 013 Precinct 007	precinct
+Maryland;Montgomery County;District 013 Precinct 008	precinct
+Maryland;Montgomery County;District 013 Precinct 010	precinct
+Maryland;Montgomery County;District 013 Precinct 011	precinct
+Maryland;Montgomery County;District 013 Precinct 013	precinct
+Maryland;Montgomery County;District 013 Precinct 014	precinct
+Maryland;Montgomery County;District 013 Precinct 015	precinct
+Maryland;Montgomery County;District 013 Precinct 016	precinct
+Maryland;Montgomery County;District 013 Precinct 018	precinct
+Maryland;Montgomery County;District 013 Precinct 019	precinct
+Maryland;Montgomery County;District 013 Precinct 020	precinct
+Maryland;Montgomery County;District 013 Precinct 021	precinct
+Maryland;Montgomery County;District 013 Precinct 022	precinct
+Maryland;Montgomery County;District 013 Precinct 023	precinct
+Maryland;Montgomery County;District 013 Precinct 024	precinct
+Maryland;Montgomery County;District 013 Precinct 025	precinct
+Maryland;Montgomery County;District 013 Precinct 027	precinct
+Maryland;Montgomery County;District 013 Precinct 028	precinct
+Maryland;Montgomery County;District 013 Precinct 029	precinct
+Maryland;Montgomery County;District 013 Precinct 030	precinct
+Maryland;Montgomery County;District 013 Precinct 031	precinct
+Maryland;Montgomery County;District 013 Precinct 032	precinct
+Maryland;Montgomery County;District 013 Precinct 033	precinct
+Maryland;Montgomery County;District 013 Precinct 034	precinct
+Maryland;Montgomery County;District 013 Precinct 035	precinct
+Maryland;Montgomery County;District 013 Precinct 036	precinct
+Maryland;Montgomery County;District 013 Precinct 037	precinct
+Maryland;Montgomery County;District 013 Precinct 038	precinct
+Maryland;Montgomery County;District 013 Precinct 039	precinct
+Maryland;Montgomery County;District 013 Precinct 040	precinct
+Maryland;Montgomery County;District 013 Precinct 042	precinct
+Maryland;Montgomery County;District 013 Precinct 043	precinct
+Maryland;Montgomery County;District 013 Precinct 044	precinct
+Maryland;Montgomery County;District 013 Precinct 045	precinct
+Maryland;Montgomery County;District 013 Precinct 046	precinct
+Maryland;Montgomery County;District 013 Precinct 047	precinct
+Maryland;Montgomery County;District 013 Precinct 049	precinct
+Maryland;Montgomery County;District 013 Precinct 050	precinct
+Maryland;Montgomery County;District 013 Precinct 051	precinct
+Maryland;Montgomery County;District 013 Precinct 052	precinct
+Maryland;Montgomery County;District 013 Precinct 053	precinct
+Maryland;Montgomery County;District 013 Precinct 054	precinct
+Maryland;Montgomery County;District 013 Precinct 055	precinct
+Maryland;Montgomery County;District 013 Precinct 056	precinct
+Maryland;Montgomery County;District 013 Precinct 057	precinct
+Maryland;Montgomery County;District 013 Precinct 058	precinct
+Maryland;Montgomery County;District 013 Precinct 059	precinct
+Maryland;Montgomery County;District 013 Precinct 060	precinct
+Maryland;Montgomery County;District 013 Precinct 061	precinct
+Maryland;Montgomery County;District 013 Precinct 063	precinct
+Maryland;Montgomery County;District 013 Precinct 064	precinct
+Maryland;Montgomery County;District 013 Precinct 065	precinct
+Maryland;Montgomery County;District 013 Precinct 067	precinct
+Maryland;Montgomery County;District 013 Precinct 068	precinct
+Maryland;Montgomery County;District 013 Precinct 069	precinct
+Maryland;Montgomery County;District 013 Precinct 070	precinct
+Maryland;Montgomery County;District 013 Precinct 071	precinct
+Maryland;Prince George's County;District 001 Precinct 001	precinct
+Maryland;Prince George's County;District 001 Precinct 002	precinct
+Maryland;Prince George's County;District 001 Precinct 003	precinct
+Maryland;Prince George's County;District 001 Precinct 004	precinct
+Maryland;Prince George's County;District 001 Precinct 005	precinct
+Maryland;Prince George's County;District 001 Precinct 006	precinct
+Maryland;Prince George's County;District 001 Precinct 007	precinct
+Maryland;Prince George's County;District 001 Precinct 008	precinct
+Maryland;Prince George's County;District 002 Precinct 001	precinct
+Maryland;Prince George's County;District 002 Precinct 002	precinct
+Maryland;Prince George's County;District 002 Precinct 003	precinct
+Maryland;Prince George's County;District 002 Precinct 004	precinct
+Maryland;Prince George's County;District 002 Precinct 005	precinct
+Maryland;Prince George's County;District 002 Precinct 006	precinct
+Maryland;Prince George's County;District 002 Precinct 007	precinct
+Maryland;Prince George's County;District 002 Precinct 008	precinct
+Maryland;Prince George's County;District 002 Precinct 009	precinct
+Maryland;Prince George's County;District 002 Precinct 010	precinct
+Maryland;Prince George's County;District 002 Precinct 096	precinct
+Maryland;Prince George's County;District 002 Precinct 097	precinct
+Maryland;Prince George's County;District 002 Precinct 098	precinct
+Maryland;Prince George's County;District 002 Precinct 099	precinct
+Maryland;Prince George's County;District 003 Precinct 001	precinct
+Maryland;Prince George's County;District 003 Precinct 002	precinct
+Maryland;Prince George's County;District 003 Precinct 003	precinct
+Maryland;Prince George's County;District 003 Precinct 004	precinct
+Maryland;Prince George's County;District 003 Precinct 005	precinct
+Maryland;Prince George's County;District 003 Precinct 006	precinct
+Maryland;Prince George's County;District 003 Precinct 007	precinct
+Maryland;Prince George's County;District 003 Precinct 008	precinct
+Maryland;Prince George's County;District 004 Precinct 001	precinct
+Maryland;Prince George's County;District 005 Precinct 001	precinct
+Maryland;Prince George's County;District 005 Precinct 002	precinct
+Maryland;Prince George's County;District 005 Precinct 003	precinct
+Maryland;Prince George's County;District 005 Precinct 004	precinct
+Maryland;Prince George's County;District 005 Precinct 005	precinct
+Maryland;Prince George's County;District 005 Precinct 006	precinct
+Maryland;Prince George's County;District 005 Precinct 007	precinct
+Maryland;Prince George's County;District 005 Precinct 008	precinct
+Maryland;Prince George's County;District 005 Precinct 009	precinct
+Maryland;Prince George's County;District 005 Precinct 010	precinct
+Maryland;Prince George's County;District 005 Precinct 011	precinct
+Maryland;Prince George's County;District 005 Precinct 012	precinct
+Maryland;Prince George's County;District 006 Precinct 001	precinct
+Maryland;Prince George's County;District 006 Precinct 002	precinct
+Maryland;Prince George's County;District 006 Precinct 003	precinct
+Maryland;Prince George's County;District 006 Precinct 004	precinct
+Maryland;Prince George's County;District 006 Precinct 005	precinct
+Maryland;Prince George's County;District 006 Precinct 006	precinct
+Maryland;Prince George's County;District 006 Precinct 007	precinct
+Maryland;Prince George's County;District 006 Precinct 008	precinct
+Maryland;Prince George's County;District 006 Precinct 009	precinct
+Maryland;Prince George's County;District 006 Precinct 010	precinct
+Maryland;Prince George's County;District 006 Precinct 011	precinct
+Maryland;Prince George's County;District 006 Precinct 012	precinct
+Maryland;Prince George's County;District 006 Precinct 013	precinct
+Maryland;Prince George's County;District 006 Precinct 014	precinct
+Maryland;Prince George's County;District 006 Precinct 015	precinct
+Maryland;Prince George's County;District 006 Precinct 016	precinct
+Maryland;Prince George's County;District 006 Precinct 017	precinct
+Maryland;Prince George's County;District 006 Precinct 018	precinct
+Maryland;Prince George's County;District 006 Precinct 019	precinct
+Maryland;Prince George's County;District 006 Precinct 020	precinct
+Maryland;Prince George's County;District 006 Precinct 021	precinct
+Maryland;Prince George's County;District 006 Precinct 022	precinct
+Maryland;Prince George's County;District 006 Precinct 023	precinct
+Maryland;Prince George's County;District 006 Precinct 024	precinct
+Maryland;Prince George's County;District 006 Precinct 025	precinct
+Maryland;Prince George's County;District 006 Precinct 026	precinct
+Maryland;Prince George's County;District 006 Precinct 027	precinct
+Maryland;Prince George's County;District 006 Precinct 028	precinct
+Maryland;Prince George's County;District 006 Precinct 029	precinct
+Maryland;Prince George's County;District 006 Precinct 097	precinct
+Maryland;Prince George's County;District 006 Precinct 098	precinct
+Maryland;Prince George's County;District 006 Precinct 099	precinct
+Maryland;Prince George's County;District 007 Precinct 001	precinct
+Maryland;Prince George's County;District 007 Precinct 002	precinct
+Maryland;Prince George's County;District 007 Precinct 003	precinct
+Maryland;Prince George's County;District 007 Precinct 004	precinct
+Maryland;Prince George's County;District 007 Precinct 005	precinct
+Maryland;Prince George's County;District 007 Precinct 006	precinct
+Maryland;Prince George's County;District 007 Precinct 007	precinct
+Maryland;Prince George's County;District 007 Precinct 008	precinct
+Maryland;Prince George's County;District 007 Precinct 009	precinct
+Maryland;Prince George's County;District 007 Precinct 010	precinct
+Maryland;Prince George's County;District 007 Precinct 011	precinct
+Maryland;Prince George's County;District 007 Precinct 012	precinct
+Maryland;Prince George's County;District 007 Precinct 013	precinct
+Maryland;Prince George's County;District 007 Precinct 014	precinct
+Maryland;Prince George's County;District 007 Precinct 015	precinct
+Maryland;Prince George's County;District 007 Precinct 016	precinct
+Maryland;Prince George's County;District 007 Precinct 017	precinct
+Maryland;Prince George's County;District 007 Precinct 018	precinct
+Maryland;Prince George's County;District 007 Precinct 019	precinct
+Maryland;Prince George's County;District 007 Precinct 020	precinct
+Maryland;Prince George's County;District 007 Precinct 021	precinct
+Maryland;Prince George's County;District 007 Precinct 022	precinct
+Maryland;Prince George's County;District 007 Precinct 023	precinct
+Maryland;Prince George's County;District 007 Precinct 024	precinct
+Maryland;Prince George's County;District 007 Precinct 099	precinct
+Maryland;Prince George's County;District 008 Precinct 001	precinct
+Maryland;Prince George's County;District 009 Precinct 001	precinct
+Maryland;Prince George's County;District 009 Precinct 002	precinct
+Maryland;Prince George's County;District 009 Precinct 003	precinct
+Maryland;Prince George's County;District 009 Precinct 004	precinct
+Maryland;Prince George's County;District 009 Precinct 005	precinct
+Maryland;Prince George's County;District 009 Precinct 006	precinct
+Maryland;Prince George's County;District 009 Precinct 007	precinct
+Maryland;Prince George's County;District 009 Precinct 008	precinct
+Maryland;Prince George's County;District 009 Precinct 009	precinct
+Maryland;Prince George's County;District 009 Precinct 010	precinct
+Maryland;Prince George's County;District 009 Precinct 011	precinct
+Maryland;Prince George's County;District 009 Precinct 012	precinct
+Maryland;Prince George's County;District 009 Precinct 013	precinct
+Maryland;Prince George's County;District 009 Precinct 014	precinct
+Maryland;Prince George's County;District 009 Precinct 015	precinct
+Maryland;Prince George's County;District 009 Precinct 099	precinct
+Maryland;Prince George's County;District 010 Precinct 001	precinct
+Maryland;Prince George's County;District 010 Precinct 002	precinct
+Maryland;Prince George's County;District 010 Precinct 003	precinct
+Maryland;Prince George's County;District 010 Precinct 004	precinct
+Maryland;Prince George's County;District 010 Precinct 005	precinct
+Maryland;Prince George's County;District 010 Precinct 006	precinct
+Maryland;Prince George's County;District 010 Precinct 007	precinct
+Maryland;Prince George's County;District 010 Precinct 008	precinct
+Maryland;Prince George's County;District 010 Precinct 009	precinct
+Maryland;Prince George's County;District 010 Precinct 010	precinct
+Maryland;Prince George's County;District 010 Precinct 011	precinct
+Maryland;Prince George's County;District 010 Precinct 012	precinct
+Maryland;Prince George's County;District 010 Precinct 013	precinct
+Maryland;Prince George's County;District 010 Precinct 014	precinct
+Maryland;Prince George's County;District 011 Precinct 001	precinct
+Maryland;Prince George's County;District 011 Precinct 002	precinct
+Maryland;Prince George's County;District 011 Precinct 003	precinct
+Maryland;Prince George's County;District 011 Precinct 004	precinct
+Maryland;Prince George's County;District 011 Precinct 005	precinct
+Maryland;Prince George's County;District 012 Precinct 001	precinct
+Maryland;Prince George's County;District 012 Precinct 002	precinct
+Maryland;Prince George's County;District 012 Precinct 003	precinct
+Maryland;Prince George's County;District 012 Precinct 004	precinct
+Maryland;Prince George's County;District 012 Precinct 005	precinct
+Maryland;Prince George's County;District 012 Precinct 006	precinct
+Maryland;Prince George's County;District 012 Precinct 007	precinct
+Maryland;Prince George's County;District 012 Precinct 008	precinct
+Maryland;Prince George's County;District 012 Precinct 009	precinct
+Maryland;Prince George's County;District 012 Precinct 010	precinct
+Maryland;Prince George's County;District 012 Precinct 011	precinct
+Maryland;Prince George's County;District 012 Precinct 012	precinct
+Maryland;Prince George's County;District 012 Precinct 013	precinct
+Maryland;Prince George's County;District 012 Precinct 014	precinct
+Maryland;Prince George's County;District 012 Precinct 015	precinct
+Maryland;Prince George's County;District 012 Precinct 016	precinct
+Maryland;Prince George's County;District 012 Precinct 017	precinct
+Maryland;Prince George's County;District 012 Precinct 018	precinct
+Maryland;Prince George's County;District 012 Precinct 019	precinct
+Maryland;Prince George's County;District 013 Precinct 001	precinct
+Maryland;Prince George's County;District 013 Precinct 002	precinct
+Maryland;Prince George's County;District 013 Precinct 003	precinct
+Maryland;Prince George's County;District 013 Precinct 004	precinct
+Maryland;Prince George's County;District 013 Precinct 005	precinct
+Maryland;Prince George's County;District 013 Precinct 006	precinct
+Maryland;Prince George's County;District 013 Precinct 007	precinct
+Maryland;Prince George's County;District 013 Precinct 008	precinct
+Maryland;Prince George's County;District 013 Precinct 009	precinct
+Maryland;Prince George's County;District 013 Precinct 010	precinct
+Maryland;Prince George's County;District 013 Precinct 011	precinct
+Maryland;Prince George's County;District 013 Precinct 012	precinct
+Maryland;Prince George's County;District 013 Precinct 013	precinct
+Maryland;Prince George's County;District 013 Precinct 014	precinct
+Maryland;Prince George's County;District 013 Precinct 015	precinct
+Maryland;Prince George's County;District 013 Precinct 016	precinct
+Maryland;Prince George's County;District 013 Precinct 017	precinct
+Maryland;Prince George's County;District 013 Precinct 018	precinct
+Maryland;Prince George's County;District 013 Precinct 019	precinct
+Maryland;Prince George's County;District 013 Precinct 020	precinct
+Maryland;Prince George's County;District 013 Precinct 021	precinct
+Maryland;Prince George's County;District 013 Precinct 022	precinct
+Maryland;Prince George's County;District 013 Precinct 023	precinct
+Maryland;Prince George's County;District 013 Precinct 024	precinct
+Maryland;Prince George's County;District 013 Precinct 025	precinct
+Maryland;Prince George's County;District 013 Precinct 099	precinct
+Maryland;Prince George's County;District 014 Precinct 001	precinct
+Maryland;Prince George's County;District 014 Precinct 002	precinct
+Maryland;Prince George's County;District 014 Precinct 003	precinct
+Maryland;Prince George's County;District 014 Precinct 004	precinct
+Maryland;Prince George's County;District 014 Precinct 005	precinct
+Maryland;Prince George's County;District 014 Precinct 006	precinct
+Maryland;Prince George's County;District 014 Precinct 007	precinct
+Maryland;Prince George's County;District 014 Precinct 008	precinct
+Maryland;Prince George's County;District 014 Precinct 009	precinct
+Maryland;Prince George's County;District 014 Precinct 010	precinct
+Maryland;Prince George's County;District 014 Precinct 011	precinct
+Maryland;Prince George's County;District 014 Precinct 012	precinct
+Maryland;Prince George's County;District 014 Precinct 013	precinct
+Maryland;Prince George's County;District 014 Precinct 014	precinct
+Maryland;Prince George's County;District 014 Precinct 015	precinct
+Maryland;Prince George's County;District 014 Precinct 016	precinct
+Maryland;Prince George's County;District 014 Precinct 017	precinct
+Maryland;Prince George's County;District 014 Precinct 099	precinct
+Maryland;Prince George's County;District 015 Precinct 001	precinct
+Maryland;Prince George's County;District 015 Precinct 002	precinct
+Maryland;Prince George's County;District 015 Precinct 003	precinct
+Maryland;Prince George's County;District 015 Precinct 004	precinct
+Maryland;Prince George's County;District 015 Precinct 005	precinct
+Maryland;Prince George's County;District 015 Precinct 006	precinct
+Maryland;Prince George's County;District 016 Precinct 001	precinct
+Maryland;Prince George's County;District 016 Precinct 002	precinct
+Maryland;Prince George's County;District 016 Precinct 003	precinct
+Maryland;Prince George's County;District 016 Precinct 004	precinct
+Maryland;Prince George's County;District 016 Precinct 005	precinct
+Maryland;Prince George's County;District 016 Precinct 098	precinct
+Maryland;Prince George's County;District 016 Precinct 099	precinct
+Maryland;Prince George's County;District 017 Precinct 001	precinct
+Maryland;Prince George's County;District 017 Precinct 002	precinct
+Maryland;Prince George's County;District 017 Precinct 003	precinct
+Maryland;Prince George's County;District 017 Precinct 004	precinct
+Maryland;Prince George's County;District 017 Precinct 005	precinct
+Maryland;Prince George's County;District 017 Precinct 006	precinct
+Maryland;Prince George's County;District 017 Precinct 007	precinct
+Maryland;Prince George's County;District 017 Precinct 008	precinct
+Maryland;Prince George's County;District 017 Precinct 009	precinct
+Maryland;Prince George's County;District 017 Precinct 010	precinct
+Maryland;Prince George's County;District 017 Precinct 011	precinct
+Maryland;Prince George's County;District 017 Precinct 012	precinct
+Maryland;Prince George's County;District 017 Precinct 013	precinct
+Maryland;Prince George's County;District 017 Precinct 014	precinct
+Maryland;Prince George's County;District 017 Precinct 015	precinct
+Maryland;Prince George's County;District 018 Precinct 001	precinct
+Maryland;Prince George's County;District 018 Precinct 002	precinct
+Maryland;Prince George's County;District 018 Precinct 003	precinct
+Maryland;Prince George's County;District 018 Precinct 004	precinct
+Maryland;Prince George's County;District 018 Precinct 005	precinct
+Maryland;Prince George's County;District 018 Precinct 006	precinct
+Maryland;Prince George's County;District 018 Precinct 007	precinct
+Maryland;Prince George's County;District 018 Precinct 008	precinct
+Maryland;Prince George's County;District 018 Precinct 009	precinct
+Maryland;Prince George's County;District 018 Precinct 010	precinct
+Maryland;Prince George's County;District 018 Precinct 011	precinct
+Maryland;Prince George's County;District 018 Precinct 012	precinct
+Maryland;Prince George's County;District 018 Precinct 013	precinct
+Maryland;Prince George's County;District 018 Precinct 014	precinct
+Maryland;Prince George's County;District 018 Precinct 015	precinct
+Maryland;Prince George's County;District 018 Precinct 016	precinct
+Maryland;Prince George's County;District 018 Precinct 099	precinct
+Maryland;Prince George's County;District 019 Precinct 001	precinct
+Maryland;Prince George's County;District 019 Precinct 002	precinct
+Maryland;Prince George's County;District 019 Precinct 003	precinct
+Maryland;Prince George's County;District 019 Precinct 004	precinct
+Maryland;Prince George's County;District 019 Precinct 005	precinct
+Maryland;Prince George's County;District 019 Precinct 098	precinct
+Maryland;Prince George's County;District 019 Precinct 099	precinct
+Maryland;Prince George's County;District 020 Precinct 001	precinct
+Maryland;Prince George's County;District 020 Precinct 002	precinct
+Maryland;Prince George's County;District 020 Precinct 003	precinct
+Maryland;Prince George's County;District 020 Precinct 004	precinct
+Maryland;Prince George's County;District 020 Precinct 005	precinct
+Maryland;Prince George's County;District 020 Precinct 006	precinct
+Maryland;Prince George's County;District 020 Precinct 007	precinct
+Maryland;Prince George's County;District 020 Precinct 008	precinct
+Maryland;Prince George's County;District 020 Precinct 009	precinct
+Maryland;Prince George's County;District 020 Precinct 010	precinct
+Maryland;Prince George's County;District 020 Precinct 011	precinct
+Maryland;Prince George's County;District 020 Precinct 012	precinct
+Maryland;Prince George's County;District 020 Precinct 013	precinct
+Maryland;Prince George's County;District 020 Precinct 014	precinct
+Maryland;Prince George's County;District 020 Precinct 015	precinct
+Maryland;Prince George's County;District 020 Precinct 016	precinct
+Maryland;Prince George's County;District 020 Precinct 017	precinct
+Maryland;Prince George's County;District 020 Precinct 018	precinct
+Maryland;Prince George's County;District 020 Precinct 019	precinct
+Maryland;Prince George's County;District 020 Precinct 020	precinct
+Maryland;Prince George's County;District 020 Precinct 021	precinct
+Maryland;Prince George's County;District 020 Precinct 097	precinct
+Maryland;Prince George's County;District 020 Precinct 098	precinct
+Maryland;Prince George's County;District 020 Precinct 099	precinct
+Maryland;Prince George's County;District 021 Precinct 001	precinct
+Maryland;Prince George's County;District 021 Precinct 002	precinct
+Maryland;Prince George's County;District 021 Precinct 003	precinct
+Maryland;Prince George's County;District 021 Precinct 004	precinct
+Maryland;Prince George's County;District 021 Precinct 005	precinct
+Maryland;Prince George's County;District 021 Precinct 006	precinct
+Maryland;Prince George's County;District 021 Precinct 007	precinct
+Maryland;Prince George's County;District 021 Precinct 008	precinct
+Maryland;Prince George's County;District 021 Precinct 009	precinct
+Maryland;Prince George's County;District 021 Precinct 010	precinct
+Maryland;Prince George's County;District 021 Precinct 011	precinct
+Maryland;Prince George's County;District 021 Precinct 012	precinct
+Maryland;Prince George's County;District 021 Precinct 013	precinct
+Maryland;Prince George's County;District 021 Precinct 014	precinct
+Maryland;Prince George's County;District 021 Precinct 015	precinct
+Maryland;Prince George's County;District 021 Precinct 016	precinct
+Maryland;Prince George's County;District 021 Precinct 017	precinct
+Maryland;Prince George's County;District 021 Precinct 018	precinct
+Maryland;Prince George's County;District 021 Precinct 019	precinct
+Maryland;Prince George's County;District 021 Precinct 091	precinct
+Maryland;Prince George's County;District 021 Precinct 092	precinct
+Maryland;Prince George's County;District 021 Precinct 093	precinct
+Maryland;Prince George's County;District 021 Precinct 094	precinct
+Maryland;Prince George's County;District 021 Precinct 095	precinct
+Maryland;Prince George's County;District 021 Precinct 096	precinct
+Maryland;Prince George's County;District 021 Precinct 097	precinct
+Maryland;Prince George's County;District 021 Precinct 098	precinct
+Maryland;Prince George's County;District 021 Precinct 099	precinct
+Maryland;Queen Anne's County;District 001 Precinct 001	precinct
+Maryland;Queen Anne's County;District 002 Precinct 001	precinct
+Maryland;Queen Anne's County;District 003 Precinct 002	precinct
+Maryland;Queen Anne's County;District 004 Precinct 001	precinct
+Maryland;Queen Anne's County;District 004 Precinct 002	precinct
+Maryland;Queen Anne's County;District 004 Precinct 003	precinct
+Maryland;Queen Anne's County;District 004 Precinct 006	precinct
+Maryland;Queen Anne's County;District 005 Precinct 001	precinct
+Maryland;Queen Anne's County;District 005 Precinct 002	precinct
+Maryland;Queen Anne's County;District 006 Precinct 001	precinct
+Maryland;Queen Anne's County;District 007 Precinct 001	precinct
+Maryland;St. Mary's County;District 001 Precinct 001	precinct
+Maryland;St. Mary's County;District 001 Precinct 002	precinct
+Maryland;St. Mary's County;District 002 Precinct 001	precinct
+Maryland;St. Mary's County;District 002 Precinct 002	precinct
+Maryland;St. Mary's County;District 002 Precinct 003	precinct
+Maryland;St. Mary's County;District 002 Precinct 004	precinct
+Maryland;St. Mary's County;District 003 Precinct 001	precinct
+Maryland;St. Mary's County;District 003 Precinct 002	precinct
+Maryland;St. Mary's County;District 003 Precinct 003	precinct
+Maryland;St. Mary's County;District 003 Precinct 004	precinct
+Maryland;St. Mary's County;District 003 Precinct 005	precinct
+Maryland;St. Mary's County;District 003 Precinct 006	precinct
+Maryland;St. Mary's County;District 004 Precinct 001	precinct
+Maryland;St. Mary's County;District 004 Precinct 002	precinct
+Maryland;St. Mary's County;District 004 Precinct 003	precinct
+Maryland;St. Mary's County;District 005 Precinct 001	precinct
+Maryland;St. Mary's County;District 005 Precinct 002	precinct
+Maryland;St. Mary's County;District 005 Precinct 003	precinct
+Maryland;St. Mary's County;District 006 Precinct 001	precinct
+Maryland;St. Mary's County;District 006 Precinct 002	precinct
+Maryland;St. Mary's County;District 006 Precinct 003	precinct
+Maryland;St. Mary's County;District 006 Precinct 004	precinct
+Maryland;St. Mary's County;District 007 Precinct 001	precinct
+Maryland;St. Mary's County;District 008 Precinct 001	precinct
+Maryland;St. Mary's County;District 008 Precinct 002	precinct
+Maryland;St. Mary's County;District 008 Precinct 003	precinct
+Maryland;St. Mary's County;District 008 Precinct 004	precinct
+Maryland;St. Mary's County;District 008 Precinct 005	precinct
+Maryland;St. Mary's County;District 008 Precinct 006	precinct
+Maryland;St. Mary's County;District 008 Precinct 007	precinct
+Maryland;St. Mary's County;District 008 Precinct 008	precinct
+Maryland;St. Mary's County;District 008 Precinct 009	precinct
+Maryland;St. Mary's County;District 008 Precinct 010	precinct
+Maryland;St. Mary's County;District 008 Precinct 011	precinct
+Maryland;St. Mary's County;District 008 Precinct 012	precinct
+Maryland;St. Mary's County;District 009 Precinct 001	precinct
+Maryland;Somerset County;District 001 Precinct 001	precinct
+Maryland;Somerset County;District 001 Precinct 002	precinct
+Maryland;Somerset County;District 001 Precinct 003	precinct
+Maryland;Somerset County;District 002 Precinct 001	precinct
+Maryland;Somerset County;District 003 Precinct 001	precinct
+Maryland;Somerset County;District 004 Precinct 001	precinct
+Maryland;Somerset County;District 005 Precinct 001	precinct
+Maryland;Somerset County;District 006 Precinct 001	precinct
+Maryland;Somerset County;District 007 Precinct 001	precinct
+Maryland;Somerset County;District 008 Precinct 001	precinct
+Maryland;Somerset County;District 008 Precinct 002	precinct
+Maryland;Somerset County;District 009 Precinct 001	precinct
+Maryland;Somerset County;District 010 Precinct 001	precinct
+Maryland;Somerset County;District 010 Precinct 002	precinct
+Maryland;Somerset County;District 011 Precinct 001	precinct
+Maryland;Somerset County;District 012 Precinct 001	precinct
+Maryland;Somerset County;District 013 Precinct 001	precinct
+Maryland;Somerset County;District 013 Precinct 002	precinct
+Maryland;Somerset County;District 013 Precinct 003	precinct
+Maryland;Somerset County;District 014 Precinct 001	precinct
+Maryland;Somerset County;District 015 Precinct 001	precinct
+Maryland;Somerset County;District 015 Precinct 002	precinct
+Maryland;Somerset County;District 015 Precinct 003	precinct
+Maryland;Talbot County;District 001 Precinct 001	precinct
+Maryland;Talbot County;District 001 Precinct 002	precinct
+Maryland;Talbot County;District 001 Precinct 003	precinct
+Maryland;Talbot County;District 001 Precinct 005	precinct
+Maryland;Talbot County;District 002 Precinct 001	precinct
+Maryland;Talbot County;District 002 Precinct 002	precinct
+Maryland;Talbot County;District 002 Precinct 003	precinct
+Maryland;Talbot County;District 003 Precinct 001	precinct
+Maryland;Talbot County;District 003 Precinct 003	precinct
+Maryland;Talbot County;District 004 Precinct 001	precinct
+Maryland;Talbot County;District 005 Precinct 001	precinct
+Maryland;Talbot County;District 005 Precinct 002	precinct
+Maryland;Washington County;District 001 Precinct 000	precinct
+Maryland;Washington County;District 002 Precinct 000	precinct
+Maryland;Washington County;District 003 Precinct 001	precinct
+Maryland;Washington County;District 003 Precinct 002	precinct
+Maryland;Washington County;District 003 Precinct 003	precinct
+Maryland;Washington County;District 003 Precinct 004	precinct
+Maryland;Washington County;District 003 Precinct 005	precinct
+Maryland;Washington County;District 004 Precinct 000	precinct
+Maryland;Washington County;District 005 Precinct 000	precinct
+Maryland;Washington County;District 006 Precinct 001	precinct
+Maryland;Washington County;District 006 Precinct 002	precinct
+Maryland;Washington County;District 007 Precinct 001	precinct
+Maryland;Washington County;District 007 Precinct 002	precinct
+Maryland;Washington County;District 008 Precinct 000	precinct
+Maryland;Washington County;District 009 Precinct 000	precinct
+Maryland;Washington County;District 010 Precinct 001	precinct
+Maryland;Washington County;District 010 Precinct 002	precinct
+Maryland;Washington County;District 010 Precinct 003	precinct
+Maryland;Washington County;District 010 Precinct 004	precinct
+Maryland;Washington County;District 010 Precinct 005	precinct
+Maryland;Washington County;District 011 Precinct 001	precinct
+Maryland;Washington County;District 011 Precinct 002	precinct
+Maryland;Washington County;District 012 Precinct 000	precinct
+Maryland;Washington County;District 013 Precinct 001	precinct
+Maryland;Washington County;District 013 Precinct 002	precinct
+Maryland;Washington County;District 014 Precinct 001	precinct
+Maryland;Washington County;District 014 Precinct 002	precinct
+Maryland;Washington County;District 015 Precinct 000	precinct
+Maryland;Washington County;District 016 Precinct 000	precinct
+Maryland;Washington County;District 017 Precinct 001	precinct
+Maryland;Washington County;District 018 Precinct 001	precinct
+Maryland;Washington County;District 018 Precinct 002	precinct
+Maryland;Washington County;District 018 Precinct 003	precinct
+Maryland;Washington County;District 018 Precinct 004	precinct
+Maryland;Washington County;District 019 Precinct 000	precinct
+Maryland;Washington County;District 020 Precinct 000	precinct
+Maryland;Washington County;District 021 Precinct 001	precinct
+Maryland;Washington County;District 021 Precinct 002	precinct
+Maryland;Washington County;District 021 Precinct 003	precinct
+Maryland;Washington County;District 022 Precinct 001	precinct
+Maryland;Washington County;District 022 Precinct 002	precinct
+Maryland;Washington County;District 023 Precinct 000	precinct
+Maryland;Washington County;District 024 Precinct 001	precinct
+Maryland;Washington County;District 025 Precinct 001	precinct
+Maryland;Washington County;District 025 Precinct 002	precinct
+Maryland;Washington County;District 025 Precinct 003	precinct
+Maryland;Washington County;District 025 Precinct 004	precinct
+Maryland;Washington County;District 026 Precinct 001	precinct
+Maryland;Washington County;District 026 Precinct 002	precinct
+Maryland;Washington County;District 026 Precinct 003	precinct
+Maryland;Washington County;District 026 Precinct 004	precinct
+Maryland;Washington County;District 027 Precinct 001	precinct
+Maryland;Washington County;District 027 Precinct 002	precinct
+Maryland;Wicomico County;District 001 Precinct 001	precinct
+Maryland;Wicomico County;District 001 Precinct 002	precinct
+Maryland;Wicomico County;District 001 Precinct 003	precinct
+Maryland;Wicomico County;District 002 Precinct 001	precinct
+Maryland;Wicomico County;District 004 Precinct 001	precinct
+Maryland;Wicomico County;District 004 Precinct 002	precinct
+Maryland;Wicomico County;District 004 Precinct 003	precinct
+Maryland;Wicomico County;District 005 Precinct 001	precinct
+Maryland;Wicomico County;District 005 Precinct 002	precinct
+Maryland;Wicomico County;District 005 Precinct 003	precinct
+Maryland;Wicomico County;District 005 Precinct 004	precinct
+Maryland;Wicomico County;District 005 Precinct 005	precinct
+Maryland;Wicomico County;District 005 Precinct 006	precinct
+Maryland;Wicomico County;District 005 Precinct 007	precinct
+Maryland;Wicomico County;District 005 Precinct 008	precinct
+Maryland;Wicomico County;District 005 Precinct 009	precinct
+Maryland;Wicomico County;District 006 Precinct 001	precinct
+Maryland;Wicomico County;District 007 Precinct 001	precinct
+Maryland;Wicomico County;District 008 Precinct 001	precinct
+Maryland;Wicomico County;District 008 Precinct 002	precinct
+Maryland;Wicomico County;District 008 Precinct 003	precinct
+Maryland;Wicomico County;District 008 Precinct 004	precinct
+Maryland;Wicomico County;District 008 Precinct 005	precinct
+Maryland;Wicomico County;District 009 Precinct 001	precinct
+Maryland;Wicomico County;District 009 Precinct 002	precinct
+Maryland;Wicomico County;District 009 Precinct 003	precinct
+Maryland;Wicomico County;District 009 Precinct 004	precinct
+Maryland;Wicomico County;District 009 Precinct 005	precinct
+Maryland;Wicomico County;District 009 Precinct 006	precinct
+Maryland;Wicomico County;District 009 Precinct 007	precinct
+Maryland;Wicomico County;District 009 Precinct 008	precinct
+Maryland;Wicomico County;District 010 Precinct 001	precinct
+Maryland;Wicomico County;District 010 Precinct 002	precinct
+Maryland;Wicomico County;District 010 Precinct 003	precinct
+Maryland;Wicomico County;District 011 Precinct 001	precinct
+Maryland;Wicomico County;District 011 Precinct 002	precinct
+Maryland;Wicomico County;District 011 Precinct 003	precinct
+Maryland;Wicomico County;District 011 Precinct 004	precinct
+Maryland;Wicomico County;District 013 Precinct 001	precinct
+Maryland;Wicomico County;District 013 Precinct 002	precinct
+Maryland;Wicomico County;District 013 Precinct 003	precinct
+Maryland;Wicomico County;District 013 Precinct 004	precinct
+Maryland;Wicomico County;District 014 Precinct 001	precinct
+Maryland;Wicomico County;District 014 Precinct 002	precinct
+Maryland;Wicomico County;District 015 Precinct 001	precinct
+Maryland;Wicomico County;District 015 Precinct 002	precinct
+Maryland;Wicomico County;District 015 Precinct 003	precinct
+Maryland;Wicomico County;District 016 Precinct 001	precinct
+Maryland;Wicomico County;District 016 Precinct 002	precinct
+Maryland;Wicomico County;District 016 Precinct 003	precinct
+Maryland;Wicomico County;District 016 Precinct 004	precinct
+Maryland;Wicomico County;District 016 Precinct 005	precinct
+Maryland;Wicomico County;District 016 Precinct 006	precinct
+Maryland;Wicomico County;District 017 Precinct 001	precinct
+Maryland;Worcester County;District 001 Precinct 001	precinct
+Maryland;Worcester County;District 001 Precinct 002	precinct
+Maryland;Worcester County;District 002 Precinct 001	precinct
+Maryland;Worcester County;District 002 Precinct 002	precinct
+Maryland;Worcester County;District 002 Precinct 003	precinct
+Maryland;Worcester County;District 002 Precinct 004	precinct
+Maryland;Worcester County;District 002 Precinct 005	precinct
+Maryland;Worcester County;District 003 Precinct 001	precinct
+Maryland;Worcester County;District 003 Precinct 002	precinct
+Maryland;Worcester County;District 003 Precinct 003	precinct
+Maryland;Worcester County;District 004 Precinct 001	precinct
+Maryland;Worcester County;District 004 Precinct 002	precinct
+Maryland;Worcester County;District 004 Precinct 003	precinct
+Maryland;Worcester County;District 004 Precinct 004	precinct
+Maryland;Worcester County;District 005 Precinct 001	precinct
+Maryland;Worcester County;District 005 Precinct 002	precinct
+Maryland;Worcester County;District 006 Precinct 001	precinct
+Maryland;Worcester County;District 006 Precinct 002	precinct
+Maryland;Worcester County;District 006 Precinct 003	precinct
+Maryland;Worcester County;District 007 Precinct 001	precinct

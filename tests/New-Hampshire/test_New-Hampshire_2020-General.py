@@ -18,7 +18,7 @@ election = "2020 General"
 jurisdiction = 'New Hampshire'
 abbr = 'NH'
 total_pres_votes = 803810  # total of all votes for US President
-cd = 3  # US House congressional district
+cd = 2  # US House congressional district
 total_cd_votes = -1  # total votes in that US House contest in the chosen cd
 shd = 1   # state house district
 total_shd_votes = -1  # total votes in that State House contest
@@ -78,8 +78,8 @@ def test_state_house_totals(dbname):
         )
         == total_shd_votes
     )
-
 """
+
 def test_standard_vote_types(dbname):
     assert e.check_count_types_standard(election, jurisdiction, dbname=dbname)
 

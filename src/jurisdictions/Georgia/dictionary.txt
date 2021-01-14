@@ -6690,6 +6690,8 @@ CandidateContest	US Senate GA	US Senate
 CandidateContest	US Senate GA	United States Senator, Isakson
 CandidateContest	US Senate GA	US Senate (Perdue)
 CandidateContest	US Senate GA (partial term)	US Senate (Loeffler) - Special
+CandidateContest	US Senate GA (runoff)	US Senate (Perdue) runoff
+CandidateContest	US Senate GA (partial term runoff)	US Senate (Loeffler) - Special runoff
 CandidateContest	GA Attorney General	Attorney General
 CandidateContest	GA Governor	Governor
 CandidateContest	GA Lieutenant Governor	Lieutenant Governor
