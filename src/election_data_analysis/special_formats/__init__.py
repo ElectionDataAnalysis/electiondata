@@ -45,7 +45,9 @@ def read_xml(
     fields = set(p["count_fields_by_name"]).union(p["munge_fields"]["in_field_values"])
     tags = {f.split(".")[0] for f in fields}
     tags.update(p["nesting_tags"])
-    attributes = {t: [x.split(".")[1] for x in fields if x.split(".")[0] == t] for t in tags}
+    attributes = {
+        t: [x.split(".")[1] for x in fields if x.split(".")[0] == t] for t in tags
+    }
 
     try:
         root = tree.getroot()
@@ -55,7 +57,9 @@ def read_xml(
         results_list = results_below(root, tags, attributes)
         raw_results = pd.DataFrame(results_list)
         if raw_results.empty:
-            err = ui.add_new_error(err, "file", Path(f_path).name, "No results read from file")
+            err = ui.add_new_error(
+                err, "file", Path(f_path).name, "No results read from file"
+            )
         if munger_name == "nist_xml.munger":
             raw_results = clean_nist_columns(raw_results, namespace)
             raw_results = replace_id_values(raw_results, f_path)
@@ -108,14 +112,19 @@ def results_below(node: et.Element, good_tags: set, good_pairs: dict) -> list:
         r_below = [r_below]
     else:
         for child in node:
-            r_below_child = [] 
+            r_below_child = []
             if child.tag in good_tags:
                 # get list of all (possibly incomplete) results records from below the child
-                r_below_child = r_below_child + results_below(child, good_tags, good_pairs)
+                r_below_child = r_below_child + results_below(
+                    child, good_tags, good_pairs
+                )
                 for result in r_below_child:
                     if node.tag in good_pairs.keys():
                         result.update(
-                            {f"{node.tag}.{k}": node.attrib.get(k, "") for k in good_pairs[node.tag]}
+                            {
+                                f"{node.tag}.{k}": node.attrib.get(k, "")
+                                for k in good_pairs[node.tag]
+                            }
                         )
                     # handle special cases for NIST here
                     if len(result.keys()) == 1:
@@ -127,10 +136,9 @@ def results_below(node: et.Element, good_tags: set, good_pairs: dict) -> list:
     return r_below
 
 
-def read_nested_json(f_path: str,
-                     p: Dict[str, Any],
-                     munger_name: str,
-                     err: Optional[Dict]) -> (pd.DataFrame, Optional[Dict]):
+def read_nested_json(
+    f_path: str, p: Dict[str, Any], munger_name: str, err: Optional[Dict]
+) -> (pd.DataFrame, Optional[Dict]):
     """
     Create dataframe from a nested json file, by traversing the json dictionary
     recursively, similar to the case of xml.
@@ -138,7 +146,7 @@ def read_nested_json(f_path: str,
 
     # read data from file
     try:
-        with open(f_path, 'r') as f:
+        with open(f_path, "r") as f:
             j = json.load(f)
     except FileNotFoundError:
         traceback.print_exc()
@@ -148,27 +156,31 @@ def read_nested_json(f_path: str,
     # Identify keys for counts and other raw data (attributes) we want
 
     # The last value is the final key
-    count_keys = {k.split('.')[-1] for k in p["count_fields_by_name"]}
-    attribute_keys = {k.split('.')[-1] for k in p["munge_fields"]["in_field_values"]}
+    count_keys = {k.split(".")[-1] for k in p["count_fields_by_name"]}
+    attribute_keys = {k.split(".")[-1] for k in p["munge_fields"]["in_field_values"]}
 
     # Any prior values are nested keys
     nested_keys = set()
     for k in set(p["count_fields_by_name"]) | set(p["munge_fields"]["in_field_values"]):
-        nested_keys |= set(k.split('.')[:-1])
+        nested_keys |= set(k.split(".")[:-1])
 
     try:
         current_values = {}
         current_nested_keys = []
-        results_list = json_results_below(j,
-                                          count_keys,
-                                          attribute_keys,
-                                          nested_keys,
-                                          current_values,
-                                          current_nested_keys)
+        results_list = json_results_below(
+            j,
+            count_keys,
+            attribute_keys,
+            nested_keys,
+            current_values,
+            current_nested_keys,
+        )
         raw_results = pd.DataFrame(results_list)
 
         # Only keep columns that we want, so the other ones don't cause trouble later.
-        cols_we_want = list(p["count_fields_by_name"]) + list(p["munge_fields"]["in_field_values"])
+        cols_we_want = list(p["count_fields_by_name"]) + list(
+            p["munge_fields"]["in_field_values"]
+        )
         raw_results = raw_results[cols_we_want]
 
         # Perform standard cleaning
@@ -188,12 +200,14 @@ def read_nested_json(f_path: str,
     return raw_results, err
 
 
-def json_results_below(j: dict or list,
-                       count_keys: set,
-                       attribute_keys: set,
-                       nested_keys: set,
-                       current_values: dict,
-                       current_nested_keys: list) -> list:
+def json_results_below(
+    j: dict or list,
+    count_keys: set,
+    attribute_keys: set,
+    nested_keys: set,
+    current_values: dict,
+    current_nested_keys: list,
+) -> list:
     """
     Traverse entire json, keeping info for attribute_key's, and returning
     rows when a count_key is reached.
@@ -203,12 +217,14 @@ def json_results_below(j: dict or list,
     if isinstance(j, list):
         results = []
         for v in j:
-            results += json_results_below(v,
-                                          count_keys,
-                                          attribute_keys,
-                                          nested_keys,
-                                          current_values,
-                                          current_nested_keys)
+            results += json_results_below(
+                v,
+                count_keys,
+                attribute_keys,
+                nested_keys,
+                current_values,
+                current_nested_keys,
+            )
         return results
 
     else:  # json is dict
@@ -216,7 +232,7 @@ def json_results_below(j: dict or list,
         # Update values at current level
         for k, v in j.items():
             if k in attribute_keys | count_keys:
-                current_values['.'.join(current_nested_keys + [k])] = v
+                current_values[".".join(current_nested_keys + [k])] = v
 
         # Recursively update values
         results = []
@@ -226,12 +242,14 @@ def json_results_below(j: dict or list,
             else:
                 child_nested_keys = current_nested_keys[:]
             if isinstance(v, dict) or isinstance(v, list):
-                results += json_results_below(v,
-                                              count_keys,
-                                              attribute_keys,
-                                              nested_keys,
-                                              current_values,
-                                              child_nested_keys)
+                results += json_results_below(
+                    v,
+                    count_keys,
+                    attribute_keys,
+                    nested_keys,
+                    current_values,
+                    child_nested_keys,
+                )
 
         # Return current_values if we've reached the counts,
         # since each count value can only occur in one row.
@@ -244,9 +262,9 @@ def json_results_below(j: dict or list,
 
 
 def nist_lookup(f_path: str) -> (pd.DataFrame, pd.DataFrame):
-    """ The NIST format stores data about each entity separately from where
-    they may be referenced. For example, a ReportingUnit ID and Name may be 
-    defined in one section, and then the ID will be referenced in the VoteCounts. 
+    """The NIST format stores data about each entity separately from where
+    they may be referenced. For example, a ReportingUnit ID and Name may be
+    defined in one section, and then the ID will be referenced in the VoteCounts.
     In order to match the ReportingUnit to particular VoteCounts, we parse the
     XML and build dataframes tha we can reference."""
 
@@ -270,9 +288,7 @@ def nist_lookup(f_path: str) -> (pd.DataFrame, pd.DataFrame):
         if child.tag == f"{{{namespace_blank}}}CandidateCollection":
             for grandchild in child.iter():
                 if grandchild.tag == f"{{{namespace_blank}}}Candidate":
-                    candidate = {
-                        "ObjectId": grandchild.attrib.get("ObjectId")
-                    }
+                    candidate = {"ObjectId": grandchild.attrib.get("ObjectId")}
                     for g in grandchild:
                         if g.tag == f"{{{namespace_blank}}}BallotName":
                             for h in g:
@@ -281,24 +297,28 @@ def nist_lookup(f_path: str) -> (pd.DataFrame, pd.DataFrame):
                             candidate["PartyId"] = g.text
                     candidates.append(candidate)
         # get reportingUnit info
-        if (child.tag == f"{{{namespace_blank}}}GpUnit"
-                and "ReportingUnit" == child.attrib.get(f"{{{namespace_xsi}}}type")):
-            reporting_units.append({
-                "ObjectId": child.attrib.get("ObjectId"),
-                "Name": child.attrib.get("Name")
-            })
+        if (
+            child.tag == f"{{{namespace_blank}}}GpUnit"
+            and "ReportingUnit" == child.attrib.get(f"{{{namespace_xsi}}}type")
+        ):
+            reporting_units.append(
+                {
+                    "ObjectId": child.attrib.get("ObjectId"),
+                    "Name": child.attrib.get("Name"),
+                }
+            )
         # get party info
         if child.tag == f"{{{namespace_blank}}}Party":
-            parties.append({
-                "ObjectId": child.attrib.get("ObjectId"),
-                "PartyName": child.attrib.get("Abbreviation") 
-            })
+            parties.append(
+                {
+                    "ObjectId": child.attrib.get("ObjectId"),
+                    "PartyName": child.attrib.get("Abbreviation"),
+                }
+            )
 
     # prep dataframes
     reporting_unit_df = pd.DataFrame(reporting_units)
-    reporting_unit_df = reporting_unit_df[
-        reporting_unit_df["Name"] != "Statewide"
-    ]
+    reporting_unit_df = reporting_unit_df[reporting_unit_df["Name"] != "Statewide"]
 
     candidate_df = pd.DataFrame(candidates)
     party_df = pd.DataFrame(parties)
@@ -310,13 +330,9 @@ def nist_lookup(f_path: str) -> (pd.DataFrame, pd.DataFrame):
 
 
 def nist_namespace(f_path, key) -> Optional[dict]:
-    """ get the namespaces in the XML and return error if the one we're expecting
-    is not found """
-    namespaces = dict([
-        node for _, node in et.iterparse(
-            f_path, events=["start-ns"]
-        )
-    ])
+    """get the namespaces in the XML and return error if the one we're expecting
+    is not found"""
+    namespaces = dict([node for _, node in et.iterparse(f_path, events=["start-ns"])])
     try:
         namespace = namespaces[key]
         return namespace
@@ -338,25 +354,31 @@ def replace_id_values(df, f_path):
 
     # Add reporting unit info
     df = df.merge(reporting_unit_df, left_on="GpUnitId.text", right_on="ObjectId")
-    df = df[[
-        "VoteCounts.Type",
-        "VoteCounts.Count",
-        "CandidateId.text",
-        "Contest.Name",
-        "Name"
-    ]].rename(columns={"Name": "GpUnitId.text"})
-    
+    df = df[
+        [
+            "VoteCounts.Type",
+            "VoteCounts.Count",
+            "CandidateId.text",
+            "Contest.Name",
+            "Name",
+        ]
+    ].rename(columns={"Name": "GpUnitId.text"})
+
     # add candidate, party info
     df = df.merge(candidate_df, left_on="CandidateId.text", right_on="ObjectId")
-    df = df[[
-        "VoteCounts.Type",
-        "VoteCounts.Count",
-        "BallotName",
-        "Contest.Name",
-        "PartyName",
-        "GpUnitId.text"
-    ]].rename(columns={
-        "BallotName": "CandidateId.text",
-        "PartyName": "PartyId.text",
-    })
+    df = df[
+        [
+            "VoteCounts.Type",
+            "VoteCounts.Count",
+            "BallotName",
+            "Contest.Name",
+            "PartyName",
+            "GpUnitId.text",
+        ]
+    ].rename(
+        columns={
+            "BallotName": "CandidateId.text",
+            "PartyName": "PartyId.text",
+        }
+    )
     return df

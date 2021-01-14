@@ -1,12 +1,15 @@
 import election_data_analysis as e
+
 election = "2016 General"
 jurisdiction = "Virginia"
 # VA16 tests
 def test_data_exists(dbname):
     assert e.data_exists("2016 General", "Virginia", dbname=dbname)
 
+
 def test_presidential(dbname):
-    assert (e.contest_total(
+    assert (
+        e.contest_total(
             "2016 General",
             "Virginia",
             "US President (VA)",
@@ -17,7 +20,8 @@ def test_presidential(dbname):
 
 
 def test_house_totals(dbname):
-    assert (e.contest_total(
+    assert (
+        e.contest_total(
             "2016 General",
             "Virginia",
             "US House VA District 2",
@@ -27,6 +31,8 @@ def test_house_totals(dbname):
     )
 
 
-
 def test_all_candidates_known(dbname):
-    assert e.get_contest_with_unknown_candidates(election, jurisdiction, dbname=dbname) == []
+    assert (
+        e.get_contest_with_unknown_candidates(election, jurisdiction, dbname=dbname)
+        == []
+    )

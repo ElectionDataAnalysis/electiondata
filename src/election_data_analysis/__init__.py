@@ -1,4 +1,9 @@
-from election_data_analysis import database as db, juris_and_munger as jm, user_interface as ui, munge as m
+from election_data_analysis import (
+    database as db,
+    juris_and_munger as jm,
+    user_interface as ui,
+    munge as m,
+)
 from election_data_analysis import user_interface as ui
 from election_data_analysis import munge as m
 from sqlalchemy.orm import sessionmaker
@@ -250,10 +255,7 @@ class DataLoader:
                             err = ui.consolidate_errors([err, new_err])
                     except Exception as exc:
                         err = ui.add_new_error(
-                            err,
-                            "jurisdiction",
-                            jp,
-                            f"Exception during loading: {exc}"
+                            err, "jurisdiction", jp, f"Exception during loading: {exc}"
                         )
                     if not ui.fatal_error(new_err):
                         good_jurisdictions.append(jp)
@@ -283,7 +285,10 @@ class DataLoader:
                     err = ui.consolidate_errors([err, new_err])
                 elif sdl is None:
                     new_err = ui.add_new_error(
-                        new_err, "ini", f, f"Unexpected failure to load data (no SingleDataLoader object created)",
+                        new_err,
+                        "ini",
+                        f,
+                        f"Unexpected failure to load data (no SingleDataLoader object created)",
                     )
 
                 # if fatal error, print warning
@@ -308,7 +313,9 @@ class DataLoader:
                         )
                     # if there was a fatal load error
                     elif ui.fatal_error(load_error):
-                        print(f"\tFatal loading errors. {f} and its results file not loaded (and not archived)")
+                        print(
+                            f"\tFatal loading errors. {f} and its results file not loaded (and not archived)"
+                        )
                         success = False
 
                     # if move_files is false and there is no fatal error
@@ -341,7 +348,9 @@ class DataLoader:
         ui.report(err, loc_dict)
         return err, success
 
-    def remove_data(self, election_id: int, juris_id: int, active_confirm: bool) -> Optional[str]:
+    def remove_data(
+        self, election_id: int, juris_id: int, active_confirm: bool
+    ) -> Optional[str]:
         """Remove from the db all data for the given <election_id> in the given <juris>"""
         # get connection & cursor
         connection = self.session.bind.raw_connection()
@@ -511,14 +520,15 @@ class SingleDataLoader:
     def collect_constants_from_ini(self) -> dict:
         """collect constant elements from .ini file"""
         constants = dict()
-        for k in ["Party",
-                  "ReportingUnit",
-                  "CountItemType",
-                  "CandidateContest",
-                  "BallotMeasureContest",
-                  "BallotMeasureSelection",
-                  "Candidate",
-                  ]:
+        for k in [
+            "Party",
+            "ReportingUnit",
+            "CountItemType",
+            "CandidateContest",
+            "BallotMeasureContest",
+            "BallotMeasureSelection",
+            "Candidate",
+        ]:
             # if element was given in .ini file
             if self.d[k] is not None:
                 constants[k] = self.d[k]
@@ -542,7 +552,11 @@ class SingleDataLoader:
                         return values, err
 
                     df, original_string_columns, err = m.to_standard_count_frame(
-                        f_path, munger_path, p, dict(), suffix="_SOURCE",
+                        f_path,
+                        munger_path,
+                        p,
+                        dict(),
+                        suffix="_SOURCE",
                     )
                     if ui.fatal_error(err):
                         return values, err
@@ -564,13 +578,13 @@ class SingleDataLoader:
                     err,
                     "system",
                     f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
-                    f"Unexpected exception while converting data to standard form or munging to raw: {exc}"
+                    f"Unexpected exception while converting data to standard form or munging to raw: {exc}",
                 )
                 return values, err
 
-
         # TODO complete
         return values, err
+
 
 def check_par_file_elements(
     ini_d: dict,
@@ -583,9 +597,12 @@ def check_par_file_elements(
     # for each munger,
     for mu in ini_d["munger_name"].split(","):
         # check any constant_over_file elements are defined in .ini file
-        munger_file = os.path.join(mungers_path,f"{mu}.munger")
+        munger_file = os.path.join(mungers_path, f"{mu}.munger")
         params, p_err = ui.get_parameters(
-            required_keys=list(), param_file=munger_file, optional_keys=["constant_over_file"], header="format",
+            required_keys=list(),
+            param_file=munger_file,
+            optional_keys=["constant_over_file"],
+            header="format",
         )
         if p_err:
             err = ui.consolidate_errors([err, p_err])
@@ -595,7 +612,12 @@ def check_par_file_elements(
                 if c not in ini_d.keys() or ini_d[c] is None:
                     bad_constants.append(c)
             if bad_constants:
-                err = ui.add_new_error(err, "ini", ini_file_name, f"Munger {mu} requires constants to be defined:\n{bad_constants}")
+                err = ui.add_new_error(
+                    err,
+                    "ini",
+                    ini_file_name,
+                    f"Munger {mu} requires constants to be defined:\n{bad_constants}",
+                )
 
     return err
 
@@ -643,8 +665,8 @@ class JurisdictionPrepper:
         """Checks if parameter file exists and is correct. If not, does
         not create JurisdictionPrepper object."""
         for param_file, required in [
-            ("jurisdiction_prep.ini",prep_pars),
-            ("run_time.ini", ["jurisdictions_dir","mungers_dir"]),
+            ("jurisdiction_prep.ini", prep_pars),
+            ("run_time.ini", ["jurisdictions_dir", "mungers_dir"]),
         ]:
             try:
                 d, parameter_err = ui.get_parameters(
@@ -895,7 +917,9 @@ class JurisdictionPrepper:
         parties = prep.get_element(self.d["jurisdiction_path"], "Party")
         if parties.empty:
             if err_str:
-                err_str += "\n Party.txt is missing or empty. No primary contests added."
+                err_str += (
+                    "\n Party.txt is missing or empty. No primary contests added."
+                )
             else:
                 err_str = "\n Party.txt is missing or empty. No primary contests added."
             return err_str
@@ -955,24 +979,24 @@ class JurisdictionPrepper:
         return err
 
     def add_sub_county_rus(
-            self,
-            par_file_name: str,
-            sub_ru_type: str ="precinct",
-            county_type="county",
+        self,
+        par_file_name: str,
+        sub_ru_type: str = "precinct",
+        county_type="county",
     ) -> Optional[dict]:
         err_list = list()
         dl = DataLoader()
         juris = jm.Jurisdiction(self.d["jurisdiction_path"])
         sdl, err = check_and_init_singledataloader(
-            dl.d["results_dir"],
-            par_file_name, dl.session, dl.d["mungers_dir"], juris)
+            dl.d["results_dir"], par_file_name, dl.session, dl.d["mungers_dir"], juris
+        )
 
         for mu in sdl.munger_list:
             # get parameters
             m_path = os.path.join(sdl.mungers_dir, f"{mu}.munger")
             mu_d, new_err = m.get_and_check_munger_params(m_path)
             # get ReportingUnit formula
-            ru_formula = ''
+            ru_formula = ""
             for header in m.req_munger_param_values["munge_strings"]:
                 formulas, formula_err = ui.get_parameters(
                     required_keys=[],
@@ -987,7 +1011,10 @@ class JurisdictionPrepper:
             # check that ReportingUnit formula is <county_type>;<sub_ru>
             if ";" not in ru_formula:
                 new_err = ui.add_new_error(
-                    new_err, "warn-munger", mu, "ReportingUnit formula has no ';'",
+                    new_err,
+                    "warn-munger",
+                    mu,
+                    "ReportingUnit formula has no ';'",
                 )
                 if new_err:
                     err_list.append(new_err)
@@ -995,15 +1022,21 @@ class JurisdictionPrepper:
                 # create raw -> internal dictionary of county_type names
                 jd_df = prep.get_element(self.d["jurisdiction_path"], "dictionary")
                 ru_df = prep.get_element(self.d["jurisdiction_path"], "ReportingUnit")
-                internal = jd_df[jd_df["cdf_element"] == "ReportingUnit"].merge(
-                    ru_df[ru_df["ReportingUnitType"] == county_type], left_on="cdf_internal_name", right_on="Name",
-                    how="inner"
-                )[["raw_identifier_value", "cdf_internal_name"]].set_index("raw_identifier_value").to_dict()[
-                    "cdf_internal_name"]
+                internal = (
+                    jd_df[jd_df["cdf_element"] == "ReportingUnit"]
+                    .merge(
+                        ru_df[ru_df["ReportingUnitType"] == county_type],
+                        left_on="cdf_internal_name",
+                        right_on="Name",
+                        how="inner",
+                    )[["raw_identifier_value", "cdf_internal_name"]]
+                    .set_index("raw_identifier_value")
+                    .to_dict()["cdf_internal_name"]
+                )
                 # get list of ReportingUnit raw values from results file
                 vals, new_err = sdl.list_values("ReportingUnit")
                 county = {v: v.split(";")[0] for v in vals}
-                remainder = {v: v[len(county[v]) + 1:] for v in vals}
+                remainder = {v: v[len(county[v]) + 1 :] for v in vals}
                 good_vals = [v for v in vals if county[v] in internal.keys()]
 
                 # write to ReportingUnit.txt
@@ -1012,13 +1045,17 @@ class JurisdictionPrepper:
                     "ReportingUnit",
                     pd.concat(
                         [
-                            ru_df, pd.DataFrame(
+                            ru_df,
+                            pd.DataFrame(
                                 [
-                                    [f"{internal[county[v]]};{remainder[v]}", sub_ru_type]
+                                    [
+                                        f"{internal[county[v]]};{remainder[v]}",
+                                        sub_ru_type,
+                                    ]
                                     for v in good_vals
                                 ],
                                 columns=["Name", "ReportingUnitType"],
-                            )
+                            ),
                         ]
                     ),
                 )
@@ -1031,13 +1068,22 @@ class JurisdictionPrepper:
                     "dictionary",
                     pd.concat(
                         [
-                            jd_df, pd.DataFrame(
-                                [["ReportingUnit",
-                                  f"{internal[county[v]]};{remainder[v]}",
-                                  v,
-                                  ] for v in good_vals],
-                                columns=["cdf_element", "cdf_internal_name", "raw_identifier_value"],
-                            )
+                            jd_df,
+                            pd.DataFrame(
+                                [
+                                    [
+                                        "ReportingUnit",
+                                        f"{internal[county[v]]};{remainder[v]}",
+                                        v,
+                                    ]
+                                    for v in good_vals
+                                ],
+                                columns=[
+                                    "cdf_element",
+                                    "cdf_internal_name",
+                                    "raw_identifier_value",
+                                ],
+                            ),
                         ]
                     ),
                 )
@@ -1050,8 +1096,8 @@ class JurisdictionPrepper:
         self.d = dict()
         # get parameters from jurisdiction_prep.ini and run_time.ini
         for param_file, required in [
-            ("jurisdiction_prep.ini",prep_pars),
-            ("run_time.ini", ["jurisdictions_dir","mungers_dir"]),
+            ("jurisdiction_prep.ini", prep_pars),
+            ("run_time.ini", ["jurisdictions_dir", "mungers_dir"]),
         ]:
             d, parameter_err = ui.get_parameters(
                 required_keys=required,
@@ -1060,7 +1106,9 @@ class JurisdictionPrepper:
             )
             self.d.update(d)
         # calculate full jurisdiction path from other info
-        self.d["jurisdiction_path"] = os.path.join(self.d["jurisdictions_dir"],self.d["name"].replace(" ","-"))
+        self.d["jurisdiction_path"] = os.path.join(
+            self.d["jurisdictions_dir"], self.d["name"].replace(" ", "-")
+        )
 
         self.state_house = int(self.d["count_of_state_house_districts"])
         self.state_senate = int(self.d["count_of_state_senate_districts"])
@@ -1080,7 +1128,9 @@ def make_par_files(
     """Utility to create parameter files for multiple files.
     Makes a parameter file for each (non-.ini,non .*) file in <dir>,
     once all other necessary parameters are specified."""
-    data_file_list = [f for f in os.listdir(directory) if (f[-4:] != ".ini") & (f[0] != ".")]
+    data_file_list = [
+        f for f in os.listdir(directory) if (f[-4:] != ".ini") & (f[0] != ".")
+    ]
     for f in data_file_list:
         par_text = (
             f"[election_data_analysis]\nresults_file={f}\njurisdiction_path={jurisdiction_path}\n"
@@ -1145,7 +1195,9 @@ class Analyzer:
         self.session = Session()
 
     # `verbose` param is not used but may be necessary. See github issue #524 for details
-    def display_options(self, input_str: str, verbose: bool = True, filters: list = None):
+    def display_options(
+        self, input_str: str, verbose: bool = True, filters: list = None
+    ):
         try:
             filters_mapped = ui.get_contest_type_mappings(filters)
             results = ui.get_filtered_input_options(
@@ -1274,7 +1326,7 @@ class Analyzer:
     ) -> Optional[str]:
         rollup_unit_id = db.name_to_id(self.session, "ReportingUnit", rollup_unit)
         sub_unit_id = db.name_to_id(self.session, "ReportingUnitType", sub_unit)
-        sub_rutype_othertext = ''
+        sub_rutype_othertext = ""
         if sub_unit_id is None:
             sub_rutype_othertext = sub_unit
         election_id = db.name_to_id(self.session, "Election", election)
@@ -1289,33 +1341,44 @@ class Analyzer:
         )
         return err
 
-
     def export_nist(self, election: str, jurisdiction: str):
         election_id = db.name_to_id(self.session, "Election", election)
         jurisdiction_id = db.name_to_id(self.session, "ReportingUnit", jurisdiction)
 
         election_report = dict()
 
-        election_report["Contest"] = a.nist_candidate_contest(self.session, election_id, jurisdiction_id)
-        election_report["GpUnit"] = a.nist_reporting_unit(self.session, election_id, jurisdiction_id)
-        election_report["Party"] = a.nist_party(self.session, election_id, jurisdiction_id) 
-        election_report["Election"] = a.nist_election(self.session, election_id, jurisdiction_id) 
-        election_report["Office"] = a.nist_office(self.session, election_id, jurisdiction_id) 
-        election_report["Candidate"] = a.nist_candidate(self.session, election_id, jurisdiction_id)
+        election_report["Contest"] = a.nist_candidate_contest(
+            self.session, election_id, jurisdiction_id
+        )
+        election_report["GpUnit"] = a.nist_reporting_unit(
+            self.session, election_id, jurisdiction_id
+        )
+        election_report["Party"] = a.nist_party(
+            self.session, election_id, jurisdiction_id
+        )
+        election_report["Election"] = a.nist_election(
+            self.session, election_id, jurisdiction_id
+        )
+        election_report["Office"] = a.nist_office(
+            self.session, election_id, jurisdiction_id
+        )
+        election_report["Candidate"] = a.nist_candidate(
+            self.session, election_id, jurisdiction_id
+        )
 
         return election_report
 
 
 def aggregate_results(
-        election,
-        jurisdiction,
-        dbname: Optional[str] = None,
-        vote_type: Optional[str] = None,
-        sub_unit: Optional[str] = None,
-        contest: Optional[str] = None,
-        contest_type: str = "Candidate",
-        sub_unit_type: str = "county",
-        exclude_redundant_total: bool = True,
+    election,
+    jurisdiction,
+    dbname: Optional[str] = None,
+    vote_type: Optional[str] = None,
+    sub_unit: Optional[str] = None,
+    contest: Optional[str] = None,
+    contest_type: str = "Candidate",
+    sub_unit_type: str = "county",
+    exclude_redundant_total: bool = True,
 ):
     """if a vote type is given, restricts to that vote type; otherwise returns all vote types;
     Similarly for sub_unit and contest"""
@@ -1349,7 +1412,7 @@ def aggregate_results(
 
     df, err_str = db.export_rollup_from_db(
         # cursor=cursor,
-        session = an.session,
+        session=an.session,
         top_ru=jurisdiction,
         election=election,
         sub_unit_type=sub_unit_type,
@@ -1383,7 +1446,9 @@ def data_exists(election, jurisdiction, p_path=None, dbname=None):
         return False
 
     # read all contests with records in the VoteCount table
-    df = db.read_vote_count(an.session, election_id, reporting_unit_id, ["ContestName"],["contest_name"])
+    df = db.read_vote_count(
+        an.session, election_id, reporting_unit_id, ["ContestName"], ["contest_name"]
+    )
     # if no contest found
     if df.empty:
         # no data exists.
@@ -1410,7 +1475,7 @@ def census_data_exists(election, jurisdiction, p_path=None, dbname=None):
     cursor = connection.cursor()
     df = db.read_external(cursor, int(election[0:4]), reporting_unit_id, ["Label"])
     cursor.close()
-    
+
     # if no contest found
     if df.empty:
         # no data exists.
@@ -1422,31 +1487,31 @@ def census_data_exists(election, jurisdiction, p_path=None, dbname=None):
 
 
 def check_totals_match_vote_types(
-        election, 
-        jurisdiction, 
-        sub_unit_type="county",
-        dbname=None,
+    election,
+    jurisdiction,
+    sub_unit_type="county",
+    dbname=None,
 ):
     """Interesting if there are both total and other vote types;
     otherwise trivially true"""
     an = Analyzer(dbname=dbname)
     active = db.active_vote_types(an.session, election, jurisdiction)
-    if len(active) > 1 and 'total' in active:
+    if len(active) > 1 and "total" in active:
         # pull type 'total' only
         df_candidate = aggregate_results(
-            election, 
-            jurisdiction, 
+            election,
+            jurisdiction,
             contest_type="Candidate",
-            vote_type='total',
+            vote_type="total",
             sub_unit_type=sub_unit_type,
             exclude_redundant_total=False,
             dbname=dbname,
         )
         df_ballot = aggregate_results(
-            election, 
-            jurisdiction, 
+            election,
+            jurisdiction,
             contest_type="BallotMeasure",
-            vote_type='total',
+            vote_type="total",
             sub_unit_type=sub_unit_type,
             exclude_redundant_total=False,
             dbname=dbname,
@@ -1477,14 +1542,14 @@ def check_totals_match_vote_types(
 
 
 def contest_total(
-        election,
-        jurisdiction,
-        contest,
-        dbname: Optional[str] = None,
-        vote_type: Optional[str] = None,
-        county: Optional[str] = None,
-        sub_unit_type: str = "county",
-        contest_type: Optional[str] = "Candidate"
+    election,
+    jurisdiction,
+    contest,
+    dbname: Optional[str] = None,
+    vote_type: Optional[str] = None,
+    county: Optional[str] = None,
+    sub_unit_type: str = "county",
+    contest_type: Optional[str] = "Candidate",
 ):
     df = aggregate_results(
         election=election,
@@ -1499,21 +1564,28 @@ def contest_total(
     return df["count"].sum()
 
 
-def count_type_total(election, jurisdiction, contest, count_item_type, sub_unit_type="county", dbname=None):
+def count_type_total(
+    election,
+    jurisdiction,
+    contest,
+    count_item_type,
+    sub_unit_type="county",
+    dbname=None,
+):
     df_candidate = aggregate_results(
-        election=election, 
-        jurisdiction=jurisdiction, 
+        election=election,
+        jurisdiction=jurisdiction,
         contest=contest,
-        contest_type="Candidate", 
-        vote_type=count_item_type, 
+        contest_type="Candidate",
+        vote_type=count_item_type,
         sub_unit_type=sub_unit_type,
         dbname=dbname,
     )
     df_ballot = aggregate_results(
-        election=election, 
-        jurisdiction=jurisdiction, 
+        election=election,
+        jurisdiction=jurisdiction,
         contest=contest,
-        contest_type="BallotMeasure", 
+        contest_type="BallotMeasure",
         vote_type=count_item_type,
         sub_unit_type=sub_unit_type,
         dbname=dbname,
@@ -1529,13 +1601,15 @@ def check_count_types_standard(election, jurisdiction, dbname=None):
     an = Analyzer(dbname=dbname)
     election_id = db.name_to_id(an.session, "Election", election)
     reporting_unit_id = db.name_to_id(an.session, "ReportingUnit", jurisdiction)
-    standard_ct_list = list(db.read_vote_count(
-        an.session,
-        election_id,
-        reporting_unit_id,
-        ["CountItemType"],
-        ["CountItemType"]    
-    )["CountItemType"].unique())
+    standard_ct_list = list(
+        db.read_vote_count(
+            an.session,
+            election_id,
+            reporting_unit_id,
+            ["CountItemType"],
+            ["CountItemType"],
+        )["CountItemType"].unique()
+    )
 
     # don't want type "other"
     if "other" in standard_ct_list:
@@ -1549,29 +1623,31 @@ def check_count_types_standard(election, jurisdiction, dbname=None):
     return True
 
 
-def get_contest_with_unknown_candidates(election, jurisdiction, dbname=None) -> List[str]:
+def get_contest_with_unknown_candidates(
+    election, jurisdiction, dbname=None
+) -> List[str]:
     an = Analyzer(dbname=dbname)
     if not an:
         return [f"Failure to connect to database"]
     election_id = db.name_to_id(an.session, "Election", election)
     if not election_id:
-        return[f"Election {election} not found"]
+        return [f"Election {election} not found"]
     jurisdiction_id = db.name_to_id(an.session, "ReportingUnit", jurisdiction)
     if not jurisdiction_id:
-        return[f"Jurisdiction {jurisdiction} not found"]
+        return [f"Jurisdiction {jurisdiction} not found"]
 
     contests = db.get_contest_with_unknown(an.session, election_id, jurisdiction_id)
     return contests
 
 
 def load_results_file(
-        session,
-        munger_path: str,
-        f_path: str,
-        juris: jm.Jurisdiction,
-        election_datafile_ids: dict,
-        constants: Dict[str, str],
-        results_directory_path,
+    session,
+    munger_path: str,
+    f_path: str,
+    juris: jm.Jurisdiction,
+    election_datafile_ids: dict,
+    constants: Dict[str, str],
+    results_directory_path,
 ) -> Optional[dict]:
 
     # TODO tech debt: redundant to pass results_directory_path and f_path
@@ -1586,7 +1662,11 @@ def load_results_file(
     #  (to avoid conflicts if e.g., source has col names 'Party')
     try:
         df, original_string_columns, err = m.to_standard_count_frame(
-            f_path, munger_path, p, constants, suffix="_SOURCE",
+            f_path,
+            munger_path,
+            p,
+            constants,
+            suffix="_SOURCE",
         )
         if ui.fatal_error(err):
             return err
@@ -1596,7 +1676,7 @@ def load_results_file(
             err,
             "system",
             f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
-            f"Exception while converting data to standard form: {exc}"
+            f"Exception while converting data to standard form: {exc}",
         )
         return err
 
@@ -1616,7 +1696,7 @@ def load_results_file(
             err,
             "system",
             f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
-            f"Exception while munging source to raw: {exc}"
+            f"Exception while munging source to raw: {exc}",
         )
         return err
 
@@ -1661,16 +1741,20 @@ def load_results_file(
             err,
             "system",
             f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
-            f"Exception while munging raw to ids: {exc}"
+            f"Exception while munging raw to ids: {exc}",
         )
         return err
 
     # # for each contest, if none or unknown candidate has total votes 0, remove rows with that contest & candidate
     nou_candidate_id = db.name_to_id(session, "Candidate", "none or unknown")
     nou_selection_ids = db.selection_ids_from_candidate_id(session, nou_candidate_id)
-    unknown = df[df.Selection_Id.isin(nou_selection_ids)].groupby(["Contest_Id","Selection_Id"]).sum()
+    unknown = (
+        df[df.Selection_Id.isin(nou_selection_ids)]
+        .groupby(["Contest_Id", "Selection_Id"])
+        .sum()
+    )
     for (contest_id, selection_id) in unknown.index:
-        mask = df[['Contest_Id', 'Selection_Id']] == (contest_id, selection_id)
+        mask = df[["Contest_Id", "Selection_Id"]] == (contest_id, selection_id)
         df = df[~mask.all(axis=1)]
 
     # add_datafile_Id and Election_Id columns
@@ -1684,7 +1768,7 @@ def load_results_file(
             err,
             "system",
             f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
-            f"Exception while filling vote count table: {exc}"
+            f"Exception while filling vote count table: {exc}",
         )
         return err
     return err

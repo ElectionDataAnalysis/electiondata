@@ -7,15 +7,16 @@ from election_data_analysis import census_data_exists
 from psycopg2 import sql
 import pytest
 
+
 @pytest.fixture
 def data(runtime):
-    pytest.ok =  {
+    pytest.ok = {
         "ga16g": data_exists("2016 General", "Georgia", p_path=runtime),
         "ga18g": data_exists("2018 General", "Georgia", p_path=runtime),
         "ga20p": data_exists("2020 Primary", "Georgia", p_path=runtime),
         "nc18g": data_exists("2018 General", "North Carolina", p_path=runtime),
         "ak16g": data_exists("2016 General", "Alaska", p_path=runtime),
-        "ga18census": census_data_exists("2018 General", "Georgia", p_path=runtime)
+        "ga18census": census_data_exists("2018 General", "Georgia", p_path=runtime),
     }
 
 
@@ -46,7 +47,7 @@ def test_jurisdiction_display_filtered(runtime):
 
 # ### Test bar chart flow ###
 def test_contest_type_display(runtime):
-    assert pytest.ok["ga18g"], "No Georgia 2018 General data" 
+    assert pytest.ok["ga18g"], "No Georgia 2018 General data"
     analyzer = Analyzer(runtime)
     assert (
         analyzer.display_options(
@@ -57,7 +58,7 @@ def test_contest_type_display(runtime):
 
 
 def test_contest_display(runtime):
-    assert pytest.ok["ga18g"], "No Georgia 2018 General data" 
+    assert pytest.ok["ga18g"], "No Georgia 2018 General data"
     analyzer = Analyzer(runtime)
     assert (
         analyzer.display_options(
@@ -70,7 +71,7 @@ def test_contest_display(runtime):
 
 
 def test_bar_congressional(runtime):
-    assert pytest.ok["ga18g"], "No Georgia 2018 General data" 
+    assert pytest.ok["ga18g"], "No Georgia 2018 General data"
     analyzer = Analyzer(runtime)
     assert (
         analyzer.bar(
@@ -81,7 +82,7 @@ def test_bar_congressional(runtime):
 
 
 def test_bar_all_state(runtime):
-    assert pytest.ok["nc18g"], "No North Carolina 2018 General data" 
+    assert pytest.ok["nc18g"], "No North Carolina 2018 General data"
     analyzer = Analyzer(runtime)
     assert (
         analyzer.bar("2018 General", "North Carolina", "State House", "All State House")
@@ -90,7 +91,7 @@ def test_bar_all_state(runtime):
 
 
 def test_bar_all_congressional(runtime):
-    assert pytest.ok["nc18g"], "No North Carolina 2018 General data" 
+    assert pytest.ok["nc18g"], "No North Carolina 2018 General data"
     analyzer = Analyzer(runtime)
     assert (
         analyzer.bar(
@@ -105,7 +106,7 @@ def test_bar_all_congressional(runtime):
 def test_election_display(runtime):
     assert (
         pytest.ok["ga16g"] or pytest.ok["ga18g"] or pytest.ok["ga20p"]
-    ), "No Georgia data" 
+    ), "No Georgia data"
     analyzer = Analyzer(runtime)
     assert analyzer.display_options(
         "election", verbose=True, filters=["Georgia", "county"]
@@ -113,18 +114,20 @@ def test_election_display(runtime):
 
 
 def test_category_display(runtime):
-    assert pytest.ok["nc18g"], "No North Carolina 2018 General data" 
+    assert pytest.ok["nc18g"], "No North Carolina 2018 General data"
     analyzer = Analyzer(runtime)
     assert (
         analyzer.display_options(
-            "category", verbose=True, filters=["North Carolina", "county", "2018 General"]
+            "category",
+            verbose=True,
+            filters=["North Carolina", "county", "2018 General"],
         )
         == results.nc_2018_category
     )
 
 
 def test_count_display(runtime):
-    assert pytest.ok["ga18g"], "No Georgia 2018 General data" 
+    assert pytest.ok["ga18g"], "No Georgia 2018 General data"
     analyzer = Analyzer(runtime)
     assert (
         analyzer.display_options(
@@ -137,7 +140,7 @@ def test_count_display(runtime):
 
 
 def test_scatter_candidates(runtime):
-    assert pytest.ok["ga18g"], "No Georgia 2018 General data" 
+    assert pytest.ok["ga18g"], "No Georgia 2018 General data"
     analyzer = Analyzer(runtime)
     assert (
         analyzer.scatter(
@@ -154,7 +157,7 @@ def test_scatter_candidates(runtime):
 
 
 def test_scatter_candidates_longname(runtime):
-    assert pytest.ok["ga18g"], "No Georgia 2018 General data" 
+    assert pytest.ok["ga18g"], "No Georgia 2018 General data"
     analyzer = Analyzer(runtime)
     assert (
         analyzer.scatter(
@@ -171,7 +174,7 @@ def test_scatter_candidates_longname(runtime):
 
 
 def test_scatter_candidates_votetype(runtime):
-    assert pytest.ok["ga18g"], "No Georgia 2018 General data" 
+    assert pytest.ok["ga18g"], "No Georgia 2018 General data"
     analyzer = Analyzer(runtime)
     assert (
         analyzer.scatter(
@@ -188,7 +191,7 @@ def test_scatter_candidates_votetype(runtime):
 
 
 def test_scatter_multi_election(runtime):
-    assert pytest.ok["ga16g"] and pytest.ok["ga18g"], "No Georgia 2018 General data" 
+    assert pytest.ok["ga16g"] and pytest.ok["ga18g"], "No Georgia 2018 General data"
     analyzer = Analyzer(runtime)
     assert (
         analyzer.scatter(
@@ -205,7 +208,7 @@ def test_scatter_multi_election(runtime):
 
 
 def test_scatter_party(runtime):
-    assert pytest.ok["ga18g"], "No Georgia 2018 General data" 
+    assert pytest.ok["ga18g"], "No Georgia 2018 General data"
     analyzer = Analyzer(runtime)
     assert (
         analyzer.scatter(
@@ -222,7 +225,7 @@ def test_scatter_party(runtime):
 
 
 def test_scatter_party_votetype(runtime):
-    assert pytest.ok["ga18g"], "No Georgia 2018 General data" 
+    assert pytest.ok["ga18g"], "No Georgia 2018 General data"
     analyzer = Analyzer(runtime)
     assert (
         analyzer.scatter(
@@ -240,7 +243,7 @@ def test_scatter_party_votetype(runtime):
 
 # check that rollup to county level works correctly
 def test_scatter_county_rollup(runtime):
-    assert pytest.ok["nc18g"], "No North Carolina 2018 General data" 
+    assert pytest.ok["nc18g"], "No North Carolina 2018 General data"
     analyzer = Analyzer(runtime)
     assert (
         analyzer.scatter(
@@ -258,7 +261,7 @@ def test_scatter_county_rollup(runtime):
 
 # check that search works correctly
 def test_candidate_search_display(runtime):
-    assert pytest.ok["ga18g"], "No Georgia 2018 General data" 
+    assert pytest.ok["ga18g"], "No Georgia 2018 General data"
     analyzer = Analyzer(runtime)
     assert (
         analyzer.display_options(
@@ -271,7 +274,7 @@ def test_candidate_search_display(runtime):
 
 
 def test_count_contest_display(runtime):
-    assert pytest.ok["ga18g"], "No Georgia 2018 General data" 
+    assert pytest.ok["ga18g"], "No Georgia 2018 General data"
     analyzer = Analyzer(runtime)
     assert (
         analyzer.display_options(
@@ -284,7 +287,7 @@ def test_count_contest_display(runtime):
 
 
 def test_contest_updatelabels_display(runtime):
-    assert pytest.ok["ga18g"], "No Georgia 2018 General data" 
+    assert pytest.ok["ga18g"], "No Georgia 2018 General data"
     analyzer = Analyzer(runtime)
     assert (
         analyzer.display_options(
@@ -297,7 +300,7 @@ def test_contest_updatelabels_display(runtime):
 
 
 def test_alaska_non_county_hierarchy(runtime):
-    assert pytest.ok["ak16g"], "No Alaska 2016 General data" 
+    assert pytest.ok["ak16g"], "No Alaska 2016 General data"
     analyzer = Analyzer(runtime)
     assert (
         analyzer.scatter(
@@ -307,22 +310,18 @@ def test_alaska_non_county_hierarchy(runtime):
             "US President (AK)",
             "2016 General",
             "Contest election-day",
-            "US President (AK)"
+            "US President (AK)",
         )
         == results.ak_2016_scatter
     )
 
 
 def test_census_count_display(runtime):
-    assert (
-        pytest.ok["ga16g"] and pytest.ok["ga18g"]
-    ), "No Georgia 2018 General data" 
+    assert pytest.ok["ga16g"] and pytest.ok["ga18g"], "No Georgia 2018 General data"
     analyzer = Analyzer(runtime)
     assert (
         analyzer.display_options(
-            "count",
-            verbose=True,
-            filters=["Georgia", "2018 General", "Census data"]
+            "count", verbose=True, filters=["Georgia", "2018 General", "Census data"]
         )
         == results.ga_2018_census_display_count
     )
@@ -331,13 +330,11 @@ def test_census_count_display(runtime):
 def test_census_category_display(runtime):
     assert (
         pytest.ok["ga18g"] and pytest.ok["ga18census"]
-    ), "No Georgia 2018 General or Census data" 
+    ), "No Georgia 2018 General or Census data"
     analyzer = Analyzer(runtime)
     assert (
         analyzer.display_options(
-            "category",
-            verbose=True,
-            filters=["Georgia", "county", "2018 General"]
+            "category", verbose=True, filters=["Georgia", "county", "2018 General"]
         )
         == results.ga_2018_census_display_category
     )
@@ -346,7 +343,7 @@ def test_census_category_display(runtime):
 def test_census_scatter(runtime):
     assert (
         pytest.ok["ga18g"] and pytest.ok["ga18census"]
-    ), "No Georgia 2018 General or Census data" 
+    ), "No Georgia 2018 General or Census data"
     analyzer = Analyzer(runtime)
     assert (
         analyzer.scatter(

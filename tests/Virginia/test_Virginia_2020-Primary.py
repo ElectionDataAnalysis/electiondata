@@ -1,12 +1,15 @@
 import election_data_analysis as e
+
 election = "2020 Primary"
 jurisdiction = "Virginia"
 # VA20 tests
 def test_data_exists(dbname):
     assert e.data_exists("2020 Primary", "Virginia", dbname=dbname)
 
+
 def test_presidential(dbname):
-    assert (e.contest_total(
+    assert (
+        e.contest_total(
             "2020 Primary",
             "Virginia",
             "US President (VA) (Democratic Party)",
@@ -17,7 +20,8 @@ def test_presidential(dbname):
 
 
 def test_statewide_totals(dbname):
-    assert (e.contest_total(
+    assert (
+        e.contest_total(
             "2020 Primary",
             "Virginia",
             "US Senator VA (Republican Party)",
@@ -28,7 +32,8 @@ def test_statewide_totals(dbname):
 
 
 def test_house_totals_dem(dbname):
-    assert (e.contest_total(
+    assert (
+        e.contest_total(
             "2020 Primary",
             "Virginia",
             "US House VA District 2 (Republican Primary)",
@@ -39,7 +44,8 @@ def test_house_totals_dem(dbname):
 
 
 def test_house_totals_dem(dbname):
-    assert (e.contest_total(
+    assert (
+        e.contest_total(
             "2020 Primary",
             "Virginia",
             "US House VA District 5 (Democratic Primary)",
@@ -49,7 +55,8 @@ def test_house_totals_dem(dbname):
     )
 
 
-
-
 def test_all_candidates_known(dbname):
-    assert e.get_contest_with_unknown_candidates(election, jurisdiction, dbname=dbname) == []
+    assert (
+        e.get_contest_with_unknown_candidates(election, jurisdiction, dbname=dbname)
+        == []
+    )

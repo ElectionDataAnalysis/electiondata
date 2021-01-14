@@ -216,10 +216,18 @@ def create_scatter(
     results["x-count_item_type"] = h_category
     results["y-count_item_type"] = v_category
     results["x-title"] = scatter_axis_title(
-        cursor, results["x"], results["x-election"], dfh.iloc[0]["Contest"], jurisdiction_id
+        cursor,
+        results["x"],
+        results["x-election"],
+        dfh.iloc[0]["Contest"],
+        jurisdiction_id,
     )
     results["y-title"] = scatter_axis_title(
-        cursor, results["y"], results["y-election"], dfv.iloc[0]["Contest"], jurisdiction_id
+        cursor,
+        results["y"],
+        results["y-election"],
+        dfv.iloc[0]["Contest"],
+        jurisdiction_id,
     )
     h_preliminary = db.is_preliminary(cursor, h_election_id, jurisdiction_id)
     v_preliminary = db.is_preliminary(cursor, v_election_id, jurisdiction_id)
@@ -288,8 +296,8 @@ def get_data_for_scatter(
             election_id,
             count_item_type,
             filter_str,
-            count_type,    
-        ) 
+            count_type,
+        )
 
 
 def get_census_data(
@@ -307,7 +315,7 @@ def get_census_data(
         int(election[0:4]),
         jurisdiction_id,
         ["County", "Category", "Label", "Value"],
-        restrict=filter_str
+        restrict=filter_str,
     )
     cursor.close()
 
@@ -318,21 +326,22 @@ def get_census_data(
         census_df["Candidate_Id"] = 0
         census_df["Contest"] = "Census data"
         census_df["CountItemType"] = "total"
-        census_df.rename(columns={
-            "County": "Name",
-            "Label": "Selection",
-            "Value": "Count"
-        }, inplace=True)
-        census_df = census_df[[
-            "Election_Id",
-            "Name",
-            "Selection",
-            "Contest_Id",
-            "Candidate_Id",
-            "Contest",
-            "CountItemType",
-            "Count",
-        ]]
+        census_df.rename(
+            columns={"County": "Name", "Label": "Selection", "Value": "Count"},
+            inplace=True,
+        )
+        census_df = census_df[
+            [
+                "Election_Id",
+                "Name",
+                "Selection",
+                "Contest_Id",
+                "Candidate_Id",
+                "Contest",
+                "CountItemType",
+                "Count",
+            ]
+        ]
         return census_df
     return pd.DataFrame()
 
@@ -344,7 +353,7 @@ def get_votecount_data(
     election_id,
     count_item_type,
     filter_str,
-    count_type,    
+    count_type,
 ):
     # Since this could be data across 2 elections, grab data one election at a time
     unsummed = db.get_candidate_votecounts(
@@ -541,9 +550,7 @@ def create_bar(
             acted = "widened"
         results["votes_at_stake"] = f"Outlier {acted} margin by ~ {votes_at_stake}"
         results["margin"] = human_readable_numbers(results["margin_raw"])
-        results["preliminary"] = db.is_preliminary(
-            cursor, election_id, top_ru_id
-        )
+        results["preliminary"] = db.is_preliminary(cursor, election_id, top_ru_id)
 
         # display ballot info
         if multiple_ballot_types:
@@ -563,7 +570,9 @@ def create_bar(
         ] = f"""{results["count_item_type"].replace("-", " ").title()} Ballots Reported"""
         download_date = db.data_file_download(cursor, election_id, top_ru_id)
         if db.is_preliminary(cursor, election_id, top_ru_id) and download_date:
-            results["title"] = f"""{results["title"]} as of {download_date} (preliminary)""" 
+            results[
+                "title"
+            ] = f"""{results["title"]} as of {download_date} (preliminary)"""
 
         result_list.append(results)
     connection.close()
@@ -712,9 +721,7 @@ def get_most_anomalous(data, n):
     and 1 with largest score. If 2 from votes at stake cannot be found
     (bc of threshold for score) then we fill in the top n from scores"""
     # filter out very small votes at stake margins
-    data = data[
-        (data["margin_ratio"] > 0.01) | (data["margin_ratio"] < -0.01) 
-    ]
+    data = data[(data["margin_ratio"] > 0.01) | (data["margin_ratio"] < -0.01)]
 
     # grab data by highest votes at stake margin (magnitude)
     margin_data = data[data["score"] > 2.3]
@@ -750,9 +757,9 @@ def get_most_anomalous(data, n):
     data.drop(columns=["Count_y"], inplace=True)
 
     data.sort_values(
-        by = ["margin_ratio", "Name", "Selection"],
-        ascending = [False, True, True],
-        inplace = True
+        by=["margin_ratio", "Name", "Selection"],
+        ascending=[False, True, True],
+        inplace=True,
     )
 
     # now we get the top 8 reporting unit IDs, in terms of anomaly score, of the winner and most anomalous
@@ -998,7 +1005,11 @@ def scatter_axis_title(cursor, category, election, contest, jurisdiction_id):
     if contest == "Census data":
         # get the actual year of data here
         census_year = db.read_external(
-            cursor, int(election[0:4]), jurisdiction_id, ["CensusYear"], restrict=category
+            cursor,
+            int(election[0:4]),
+            jurisdiction_id,
+            ["CensusYear"],
+            restrict=category,
         )["CensusYear"].iloc[0]
         return f"{category} - {census_year} American Community Survey"
     else:
@@ -1007,8 +1018,8 @@ def scatter_axis_title(cursor, category, election, contest, jurisdiction_id):
 
 
 def nist_candidate_contest(session, election_id, jurisdiction_id):
-    """ return all the candidate contest info, including info related to
-    the contest, the selection, and the actual vote counts themselves """
+    """return all the candidate contest info, including info related to
+    the contest, the selection, and the actual vote counts themselves"""
     vote_count_df = db.read_vote_count(
         session,
         election_id,
@@ -1052,7 +1063,9 @@ def nist_candidate_contest(session, election_id, jurisdiction_id):
                 tmp_selection_df["Id"] == selection_id
             ][["Id", "CandidateId"]].drop_duplicates()
             selection_result_df["Type"] = "CandidateSelection"
-            selection_result = json.loads(selection_result_df.to_json(orient="records"))[0]
+            selection_result = json.loads(
+                selection_result_df.to_json(orient="records")
+            )[0]
 
             # then the votecount info
             vote_count_by_selection_df = vote_count_df[
@@ -1118,7 +1131,7 @@ def nist_office(session, election_id, jurisdiction_id):
         ["Id", "Name"],
     )
     result = df.to_json(orient="records")
-    return json.loads(result) 
+    return json.loads(result)
 
 
 def nist_candidate(session, election_id, jurisdiction_id):

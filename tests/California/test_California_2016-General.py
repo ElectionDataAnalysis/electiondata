@@ -1,4 +1,5 @@
 import election_data_analysis as e
+
 election = "2016 General"
 jurisdiction = "California"
 
@@ -55,6 +56,8 @@ def test_ca_rep_16(dbname):
     )
 
 
-
 def test_all_candidates_known(dbname):
-    assert e.get_contest_with_unknown_candidates(election, jurisdiction, dbname=dbname) == []
+    assert (
+        e.get_contest_with_unknown_candidates(election, jurisdiction, dbname=dbname)
+        == []
+    )

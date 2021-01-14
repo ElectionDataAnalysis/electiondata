@@ -18,7 +18,7 @@ def recast_options(options: dict, types: dict) -> dict:
     where type is determined by <types>"""
     keys = {k for k in options.keys() if k in types.keys()}
     for k in keys:
-        if types[k] in ["int","integer"]:
+        if types[k] in ["int", "integer"]:
             try:
                 options[k] = int(options[k])
             except Exception:
@@ -55,7 +55,10 @@ class Jurisdiction:
             error[f"{contest_type}Contest.txt"] = "file not found"
             return error
         df = pd.read_csv(
-            element_fpath, sep="\t", encoding=eda.default_encoding, quoting=csv.QUOTE_MINIMAL
+            element_fpath,
+            sep="\t",
+            encoding=eda.default_encoding,
+            quoting=csv.QUOTE_MINIMAL,
         ).fillna("none or unknown")
 
         # add contest_type column
@@ -278,7 +281,9 @@ def ensure_juris_files(juris_path, ignore_empty=False) -> Optional[dict]:
 def clean_and_dedupe(f_path: str):
     """Dedupe the file, removing any leading or trailing whitespace and compressing any internal whitespace"""
     # TODO allow specification of unique constraints
-    df = pd.read_csv(f_path, sep="\t", encoding=eda.default_encoding, quoting=csv.QUOTE_MINIMAL)
+    df = pd.read_csv(
+        f_path, sep="\t", encoding=eda.default_encoding, quoting=csv.QUOTE_MINIMAL
+    )
 
     for c in df.columns:
         if not is_numeric_dtype(df.dtypes[c]):
@@ -297,7 +302,9 @@ def clean_and_dedupe(f_path: str):
 
 def drop_lines_with_any_nulls(f_path):
     # TODO tech debt: this can muck up encodings. needs to be fixed.
-    df = pd.read_csv(f_path, sep="\t", encoding=eda.default_encoding, quoting=csv.QUOTE_MINIMAL)
+    df = pd.read_csv(
+        f_path, sep="\t", encoding=eda.default_encoding, quoting=csv.QUOTE_MINIMAL
+    )
     df = df[df.notnull().all(axis=1)]
     df.to_csv(f_path, sep="\t", index=False, encoding=eda.default_encoding)
     return
@@ -314,7 +321,9 @@ def check_nulls(element, f_path, project_root):
         "not_null_fields.txt",
     )
     not_nulls = pd.read_csv(nn_path, sep="\t", encoding=eda.default_encoding)
-    df = pd.read_csv(f_path, sep="\t", encoding=eda.default_encoding, quoting=csv.QUOTE_MINIMAL)
+    df = pd.read_csv(
+        f_path, sep="\t", encoding=eda.default_encoding, quoting=csv.QUOTE_MINIMAL
+    )
 
     problem_columns = []
 
@@ -426,12 +435,10 @@ def juris_dependency_dictionary():
 
 
 def load_juris_dframe_into_cdf(
-        session, 
-        element, 
-        juris_path, 
-        error: Optional[dict]) -> Optional[dict]:
+    session, element, juris_path, error: Optional[dict]
+) -> Optional[dict]:
     """TODO"""
-    
+
     # define paths
     project_root = Path(__file__).parents[1].absolute()
     cdf_schema_def_dir = os.path.join(
@@ -442,9 +449,7 @@ def load_juris_dframe_into_cdf(
     enum_file = os.path.join(
         cdf_schema_def_dir, "elements", element, "enumerations.txt"
     )
-    fk_file = os.path.join(
-        cdf_schema_def_dir, "elements", element, "foreign_keys.txt"
-    )
+    fk_file = os.path.join(cdf_schema_def_dir, "elements", element, "foreign_keys.txt")
 
     # fail if <element>.txt does not exist
     if not os.path.exists(element_file):
@@ -455,7 +460,7 @@ def load_juris_dframe_into_cdf(
             f"File {element}.txt not found",
         )
         return error
-    
+
     # read info from <element>.txt, filling null fields with 'none or unknown'
     df = pd.read_csv(
         element_file, sep="\t", encoding="utf_8", quoting=csv.QUOTE_MINIMAL

@@ -15,11 +15,11 @@ def pytest_generate_tests(metafunc):
 
 @pytest.fixture(scope="session")
 def ok(runtime):
-   return {
+    return {
         "ga16g": data_exists("2016 General", "Georgia", p_path=runtime),
         "ga18g": data_exists("2018 General", "Georgia", p_path=runtime),
         "ga20p": data_exists("2020 Primary", "Georgia", p_path=runtime),
         "nc18g": data_exists("2018 General", "North Carolina", p_path=runtime),
         "ak16g": data_exists("2016 General", "Alaska", p_path=runtime),
-        "ga18census": census_data_exists("2018 General", "Georgia", p_path=runtime)
+        "ga18census": census_data_exists("2018 General", "Georgia", p_path=runtime),
     }
