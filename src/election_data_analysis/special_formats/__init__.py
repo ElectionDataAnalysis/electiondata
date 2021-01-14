@@ -1,4 +1,3 @@
-import io
 import json
 import pandas as pd
 import traceback
@@ -7,28 +6,7 @@ from copy import deepcopy
 from pathlib import Path
 from typing import Optional, Dict, List, Any
 from election_data_analysis import munge as m
-from election_data_analysis import juris_and_munger as jm
 from election_data_analysis import user_interface as ui
-import re
-
-
-def disambiguate(li: list) -> (list, dict):
-    """returns new list, with numbers added to any repeat entries
-    (e.g., ['foo','foo','bar'] yields ['foo','foo 1','bar'])
-    and a dictionary for the alternatives (e.g., alts = {'foo 1':'foo'})"""
-    c = dict()
-    alts = dict()
-    new_li = []
-    for x in li:
-        if x in c.keys():
-            new = f"{x} {c[x]}"
-            new_li.append(new)
-            alts[new] = x
-            c[x] += 1
-        else:
-            new_li.append(x)
-            c[x] = 1
-    return new_li, alts
 
 
 def strip_empties(li: list) -> list:
@@ -45,34 +23,6 @@ def strip_empties(li: list) -> list:
     return li
 
 
-def remove_by_index(main_list: list, idx_list: list):
-    """creates new list by removing from <new_list> indices indicated in <idx_list>.
-    Indices in <idx_list> can be negative or positive. Positive indices are
-    removed first."""
-    # TODO error checking for overlapping neg & pos indices
-    new_list = main_list.copy()
-    not_neg = [idx for idx in idx_list if idx >= 0]
-    not_neg.sort()
-    not_neg.reverse()
-    for idx in not_neg:
-        new_list.pop(idx)
-    neg = [idx for idx in idx_list if idx < 0]
-    neg.sort()
-    for idx in neg:
-        new_list.pop(idx)
-    return new_list
-
-
-def extract_items(line: str, w: int) -> list:
-    """assume line ends in \n.
-    drops any trailing empty strings from list"""
-    item_list = [
-        line[idx * w : (idx + 1) * w].strip() for idx in range(int((len(line) - 1) / w))
-    ]
-    item_list = strip_empties(item_list)
-    return item_list
-
-
 def read_xml(
     f_path: str,
     p: Dict[str, Any],
@@ -82,6 +32,7 @@ def read_xml(
     """Create dataframe from the xml file, with column names matching the fields in the raw_identifier formulas.
     Skip nodes whose tags are unrecognized"""
 
+    namespace = None  # for syntax checker
     # read data from file
     try:
         tree = et.parse(f_path)
@@ -141,12 +92,13 @@ def nist_tags(good_tags, good_pairs, namespace):
 
     return new_tags, new_pairs
 
+
 def results_below(node: et.Element, good_tags: set, good_pairs: dict) -> list:
     """appends all (possibly incomplete) results records that can be
     read from nodes below to the list self.results"""
     r_below = []
 
-    if node.getchildren() == list():
+    if list(node) == list():
         r_below = {}
         for k in good_pairs[node.tag]:
             if k == "text":
@@ -259,7 +211,7 @@ def json_results_below(j: dict or list,
                                           current_nested_keys)
         return results
 
-    else: # json is dict
+    else:  # json is dict
 
         # Update values at current level
         for k, v in j.items():
@@ -291,7 +243,7 @@ def json_results_below(j: dict or list,
         return results
 
 
-def nist_lookup(f_path: str) -> dict:
+def nist_lookup(f_path: str) -> (pd.DataFrame, pd.DataFrame):
     """ The NIST format stores data about each entity separately from where
     they may be referenced. For example, a ReportingUnit ID and Name may be 
     defined in one section, and then the ID will be referenced in the VoteCounts. 
@@ -329,7 +281,8 @@ def nist_lookup(f_path: str) -> dict:
                             candidate["PartyId"] = g.text
                     candidates.append(candidate)
         # get reportingUnit info
-        if child.tag == f"{{{namespace_blank}}}GpUnit" and "ReportingUnit" == child.attrib.get(f"{{{namespace_xsi}}}type"):
+        if (child.tag == f"{{{namespace_blank}}}GpUnit"
+                and "ReportingUnit" == child.attrib.get(f"{{{namespace_xsi}}}type")):
             reporting_units.append({
                 "ObjectId": child.attrib.get("ObjectId"),
                 "Name": child.attrib.get("Name")
@@ -356,7 +309,7 @@ def nist_lookup(f_path: str) -> dict:
     return candidate_df, reporting_unit_df
 
 
-def nist_namespace(f_path, key):
+def nist_namespace(f_path, key) -> Optional[dict]:
     """ get the namespaces in the XML and return error if the one we're expecting
     is not found """
     namespaces = dict([
@@ -367,7 +320,7 @@ def nist_namespace(f_path, key):
     try:
         namespace = namespaces[key]
         return namespace
-    except:
+    except Exception:
         return None
 
 

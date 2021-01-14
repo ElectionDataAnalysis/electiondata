@@ -1,11 +1,12 @@
 import plotly.graph_objects as go
 import os
+import pathlib
 
 
-def plot(type, data, fig_type, target_dir):
+def plot(plot_type, data, fig_type, target_dir):
     labels, x, y = parse_data(data)
     fig = go.Figure()
-    if type == "scatter":
+    if plot_type == "scatter":
         fig.add_trace(
             go.Scatter(
                 x=x,
@@ -20,7 +21,7 @@ def plot(type, data, fig_type, target_dir):
             yaxis_title=data["y"],
             font=dict(family="Courier New, monospace", size=18),
         )
-    elif type == "bar":
+    elif plot_type == "bar":
         total = [x + y for x, y in zip(x, y)]
         x_pct = [x / ttl for x, ttl in zip(x, total)]
         y_pct = [y / ttl for y, ttl in zip(y, total)]
@@ -33,7 +34,7 @@ def plot(type, data, fig_type, target_dir):
         )
         fig.update_layout(
             title=dict(
-                text=f"""{data['contest']}<br>{data['subdivision_type']}<br>{data['count_item_type']}""",
+                text=f"""{data["contest"]}<br>{data["subdivision_type"]}<br>{data["count_item_type"]}""",
                 x=0.5,
                 font=dict(family="Courier New, monospace", size=18),
             ),
@@ -44,11 +45,13 @@ def plot(type, data, fig_type, target_dir):
     x_clean = data["x"].replace(" ", "-").replace("/", "") 
     y_clean = data["y"].replace(" ", "-").replace("/", "") 
     file_name = (
-        f'{x_clean}_{y_clean}.{fig_type}'
+        f"{x_clean}_{y_clean}.{fig_type}"
     )
     file_path = os.path.join(image_dir, file_name)
 
     if not os.path.isdir(image_dir):
+        path = pathlib.Path(image_dir)
+        path.parent.mkdir(parents=True, exist_ok=True)
         os.mkdir(image_dir)
 
     if fig_type == "html":

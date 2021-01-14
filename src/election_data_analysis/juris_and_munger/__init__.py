@@ -7,10 +7,10 @@ from typing import Optional
 from election_data_analysis import munge as m
 from election_data_analysis import user_interface as ui
 import election_data_analysis as eda
-import re
 import numpy as np
 from pathlib import Path
 import csv
+import inspect
 
 
 def recast_options(options: dict, types: dict) -> dict:
@@ -21,12 +21,12 @@ def recast_options(options: dict, types: dict) -> dict:
         if types[k] in ["int","integer"]:
             try:
                 options[k] = int(options[k])
-            except:
+            except Exception:
                 options[k] = None
         if types[k] == "list-of-integers":
             try:
                 options[k] = [int(s) for s in options[k].split(",")]
-            except:
+            except Exception:
                 options[k] = list()
         if types[k] == "str":
             if options[k] == "":
@@ -35,12 +35,12 @@ def recast_options(options: dict, types: dict) -> dict:
         if types[k] == "list-of-strings":
             try:
                 options[k] = [s for s in options[k].split(",")]
-            except:
+            except Exception:
                 options[k] = list()
         if types[k] == "int":
             try:
                 options[k] = int(options[k])
-            except:
+            except Exception:
                 options[k] = None
     return options
 
@@ -70,12 +70,19 @@ class Jurisdiction:
             print(
                 f"WARNING: duplicates removed from dataframe, may indicate a problem.\n"
             )
-            if not f"{contest_type}Contest" in error:
+            if f"{contest_type}Contest" not in error:
                 error[f"{contest_type}Contest"] = {}
             error[f"{contest_type}Contest"]["found_duplicates"] = True
 
         # insert into in Contest table
         e = db.insert_to_cdf_db(engine, df[["Name", "contest_type"]], "Contest")
+        if e:
+            error = ui.add_new_error(
+                error,
+                "warn-system",
+                f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
+                f"On Contest table insertion: {e}",
+            )
 
         # append Contest_Id
         col_map = {"Name": "Name", "contest_type": "contest_type"}
@@ -137,7 +144,6 @@ class Jurisdiction:
     def __init__(self, path_to_juris_dir):
         self.short_name = Path(path_to_juris_dir).name
         self.path_to_juris_dir = path_to_juris_dir
-
 
 
 def ensure_jurisdiction_dir(juris_path, ignore_empty=False) -> dict:
@@ -204,7 +210,7 @@ def ensure_juris_files(juris_path, ignore_empty=False) -> Optional[dict]:
                 err = ui.add_new_error(
                     err,
                     "system",
-                    "juris_and_munger.ensure_juris_files",
+                    f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
                     "Template file {" + juris_file + "}.txt has no contents",
                 )
             temp = pd.DataFrame()
@@ -269,7 +275,7 @@ def ensure_juris_files(juris_path, ignore_empty=False) -> Optional[dict]:
 
 
 def clean_and_dedupe(f_path: str):
-    "Dedupe the file, removing any leading or trailing whitespace and compressing any internal whitespace"
+    """Dedupe the file, removing any leading or trailing whitespace and compressing any internal whitespace"""
     # TODO allow specification of unique constraints
     df = pd.read_csv(f_path, sep="\t", encoding=eda.default_encoding, quoting=csv.QUOTE_MINIMAL)
 
@@ -336,12 +342,13 @@ def check_dependencies(juris_dir, element) -> (list, dict):
         err = ui.add_new_error(
             err,
             "system",
-            "juris_and_munger.check_dependencies",
+            f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
             f"file doesn't exist: {f_path}",
         )
+        return list(), err
 
     # Find all dependent columns
-    dependent = [c for c in element_df if c in d.keys()]
+    dependent = [c for c in element_df.columns if c in d.keys()]
     changed_elements = set()
     for c in dependent:
         target = d[c]
@@ -496,8 +503,8 @@ def load_juris_dframe_into_cdf(
         error = ui.add_new_error(
             error,
             "system",
-            "juris_and_munger.load_juris_dframe_into_cdf",
-            f"Error loading {element} to database: {e}",
+            f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
+            f"Error loading {element} to database: {err_string}",
         )
     return error
 

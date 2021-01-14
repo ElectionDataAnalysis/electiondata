@@ -1,8 +1,0 @@
-name	raw_identifier_formula	source
-ReportingUnit	<formula, with raw column names or row numbers in angle brackets>	<row or column>
-Party	<formula, with raw column names or row numbers in angle brackets>	<row or column>
-CandidateContest	<formula, with raw column names or row numbers in angle brackets>	<row or column>
-Candidate	<formula, with raw column names or row numbers in angle brackets>	<row or column>
-BallotMeasureContest	<formula, with raw column names or row numbers in angle brackets>	<row or column>
-BallotMeasureSelection	<formula, with raw column names or row numbers in angle brackets>	<row or column>
-CountItemType	<formula, with raw column names or row numbers in angle brackets>	<row or column>

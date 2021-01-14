@@ -13,22 +13,6 @@ def primary(row: pd.Series, party: str, contest_field: str) -> str:
     return pr
 
 
-def primary_contests_no_dictionary(
-    contests: pd.DataFrame, parties: pd.DataFrame
-) -> pd.DataFrame:
-    """Returns a dataframe <p_contests> of all primary contests corresponding to lines in <contests>
-    and parties in <parties>,"""
-    c_df = {}
-
-    for i, p in parties.iterrows():
-        c_df[i] = contests.copy()
-        c_df[i]["Name"] = contests["Name"] + f' ({p["Name"]} Primary)'
-        c_df[i]["PrimaryParty"] = p["Name"]
-
-    p_contests = pd.concat([c_df[i] for i in parties.index])
-    return p_contests
-
-
 def get_element(juris_path: str, element: str) -> pd.DataFrame:
     """<juris> is path to jurisdiction directory. Info taken
     from <element>.txt file in that directory. If file doesn't exist,
