@@ -15,5 +15,5 @@ CandidateContest=<Office>
 CountItemType=<Ward>
 
 [in_count_headers]
-Party={<header_0>,^.*\(([a-zA-Z]{3})\)$}
-Candidate={<header_0>,^(.*)\([a-zA-Z]{3}\)$}
+Party={<header_0>,^.*\(([a-zA-Z]{3,})\)$}
+Candidate={<header_0>,^(.*)\([a-zA-Z]{3,}\)$}
