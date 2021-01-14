@@ -15,20 +15,20 @@ import election_data_analysis as e
 
 # # # constants - CHANGE THESE!! - use internal db names
 election = "2020 General"
-jurisdiction = 'Louisiana'
-abbr = 'LA'
+jurisdiction = "Louisiana"
+abbr = "LA"
 total_pres_votes = 2148062  # total of all votes for US President
 cd = 3  # US House congressional district
 total_cd_votes = -1  # total votes in that US House contest in the chosen cd
-shd = 1   # state house district
+shd = 1  # state house district
 total_shd_votes = -1  # total votes in that State House contest
 ssd = 15  # state senate district
 total_ssd_votes = -1  # total votes in that State Senate contest
-single_vote_type = 'early'  # pick any one with corresponding data in your file, but use internal db name
+single_vote_type = "early"  # pick any one with corresponding data in your file, but use internal db name
 pres_votes_vote_type = 979089  # total votes for US President of that vote type
-county_or_other = "parish"   # Change this only if results are subdivided by something other than counties
-                            #  e.g., 'parish' in LA, 'state-house' in Alaska, 'ward' in Philadelphia
-single_county = 'Louisiana;Assumption Parish'  # pick any one from your file, but use internal db name
+county_or_other = "parish"  # Change this only if results are subdivided by something other than counties
+#  e.g., 'parish' in LA, 'state-house' in Alaska, 'ward' in Philadelphia
+single_county = "Louisiana;Assumption Parish"  # pick any one from your file, but use internal db name
 pres_votes_county = 11235  # total votes for US President in that county
 
 
@@ -37,12 +37,13 @@ def test_data_exists(dbname):
 
 
 def test_presidential(dbname):
-    assert(e.contest_total(
-        election,
-        jurisdiction,
-        f"US President ({abbr})",
-        dbname=dbname,
-        sub_unit_type=county_or_other,
+    assert (
+        e.contest_total(
+            election,
+            jurisdiction,
+            f"US President ({abbr})",
+            dbname=dbname,
+            sub_unit_type=county_or_other,
         )
         == total_pres_votes
     )
@@ -90,30 +91,35 @@ def test_vote_type_counts_consistent(dbname):
 
 
 def test_all_candidates_known(dbname):
-    assert e.get_contest_with_unknown_candidates(election, jurisdiction, dbname=dbname) == []
+    assert (
+        e.get_contest_with_unknown_candidates(election, jurisdiction, dbname=dbname)
+        == []
+    )
 
 
 def test_count_type_subtotal(dbname):
-    assert (e.contest_total(
-        election,
-        jurisdiction,
-        f"US President ({abbr})",
-        dbname=dbname,
-        vote_type=single_vote_type,
-        sub_unit_type=county_or_other,
+    assert (
+        e.contest_total(
+            election,
+            jurisdiction,
+            f"US President ({abbr})",
+            dbname=dbname,
+            vote_type=single_vote_type,
+            sub_unit_type=county_or_other,
         )
         == pres_votes_vote_type
     )
 
 
 def test_county_subtotal(dbname):
-    assert (e.contest_total(
-        election,
-        jurisdiction,
-        f"US President ({abbr})",
-        dbname=dbname,
-        county=single_county,
-        sub_unit_type=county_or_other,
+    assert (
+        e.contest_total(
+            election,
+            jurisdiction,
+            f"US President ({abbr})",
+            dbname=dbname,
+            county=single_county,
+            sub_unit_type=county_or_other,
         )
         == pres_votes_county
-            )
+    )

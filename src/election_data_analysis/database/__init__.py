@@ -121,9 +121,9 @@ def remove_database(params: dict) -> Optional[dict]:
                 cur.execute(q, (params["dbname"],))
 
                 # drop database
-                q = sql.SQL(
-                    "DROP DATABASE IF EXISTS {dbname}"
-                ).format(dbname=sql.Identifier(params["dbname"]))
+                q = sql.SQL("DROP DATABASE IF EXISTS {dbname}").format(
+                    dbname=sql.Identifier(params["dbname"])
+                )
                 cur.execute(q)
     except Exception as e:
         db_err = ui.add_new_error(
@@ -754,7 +754,7 @@ def active_vote_types_from_ids(cursor, election_id=None, jurisdiction_id=None):
                 """
             str_vars = (election_id,)
 
-    elif jurisdiction_id:   # if jurisdiction_id but no election_id
+    elif jurisdiction_id:  # if jurisdiction_id but no election_id
         q = """SELECT distinct cit."Txt"
             FROM "VoteCount" vc LEFT JOIN "CountItemType" cit
             ON vc."CountItemType_Id" = cit."Id"
@@ -774,7 +774,7 @@ def active_vote_types_from_ids(cursor, election_id=None, jurisdiction_id=None):
                 """
         str_vars = tuple()
 
-    cursor.execute(q,str_vars)
+    cursor.execute(q, str_vars)
 
     aa = cursor.fetchall()
     active_list = [x for (x,) in aa]
@@ -784,11 +784,13 @@ def active_vote_types_from_ids(cursor, election_id=None, jurisdiction_id=None):
 def active_vote_types(session, election, jurisdiction):
     """Gets a list of the vote types for the given election and jurisdiction"""
 
-    election_id = name_to_id(session,"Election",election)
+    election_id = name_to_id(session, "Election", election)
     jurisdiction_id = name_to_id(session, "ReportingUnit", jurisdiction)
     connection = session.bind.raw_connection()
     cursor = connection.cursor()
-    active_list = active_vote_types_from_ids(cursor, election_id=election_id, jurisdiction_id=jurisdiction_id)
+    active_list = active_vote_types_from_ids(
+        cursor, election_id=election_id, jurisdiction_id=jurisdiction_id
+    )
     cursor.close()
     connection.close()
     return active_list
@@ -799,15 +801,23 @@ def remove_vote_counts(connection, cursor, id: int, active_confirm: bool = True)
     try:
         q = 'SELECT "Id", file_name, download_date, created_at, is_preliminary FROM _datafile WHERE _datafile."Id"=%s;'
         cursor.execute(q, [id])
-        (datafile_id, file_name, download_date, created_at, preliminary) = cursor.fetchall()[0]
-        record = "\n\t".join([
-            f"datafile_id: {datafile_id}",
-            f"file_name: {file_name}",
-            f"download_date: {download_date}",
-            f"datafile_id: {datafile_id}",
-            f"created_at: {created_at}",
-            f"preliminary: {preliminary}",
-        ])
+        (
+            datafile_id,
+            file_name,
+            download_date,
+            created_at,
+            preliminary,
+        ) = cursor.fetchall()[0]
+        record = "\n\t".join(
+            [
+                f"datafile_id: {datafile_id}",
+                f"file_name: {file_name}",
+                f"download_date: {download_date}",
+                f"datafile_id: {datafile_id}",
+                f"created_at: {created_at}",
+                f"preliminary: {preliminary}",
+            ]
+        )
     except KeyError as exc:
         return f"No datafile found with Id = {id}"
     if active_confirm:
@@ -822,7 +832,7 @@ def remove_vote_counts(connection, cursor, id: int, active_confirm: bool = True)
             q = 'DELETE FROM "VoteCount" where "_datafile_Id"=%s;Delete from _datafile where "Id"=%s;'
             cursor.execute(q, [id, id])
             connection.commit()
-            print(f'{file_name}: VoteCounts deleted from results file\n')
+            print(f"{file_name}: VoteCounts deleted from results file\n")
             err_str = None
         except Exception as exc:
             err_str = f"{file_name}: Error deleting data: {exc}"
@@ -854,7 +864,7 @@ def get_relevant_contests(session, filters):
         election_id,
         reporting_unit_id,
         ["ReportingUnitName", "ContestName", "unit_type"],
-        ["parent", "name", "type"]
+        ["parent", "name", "type"],
     )
     return result_df
 
@@ -899,9 +909,15 @@ def get_jurisdiction_hierarchy(session, jurisdiction_id):
     connection = session.bind.raw_connection()
     cursor = connection.cursor()
     try:
-        cursor.execute(q, [
-            jurisdiction_id, tuple(contest_types_model), jurisdiction_id, jurisdiction_id
-        ])
+        cursor.execute(
+            q,
+            [
+                jurisdiction_id,
+                tuple(contest_types_model),
+                jurisdiction_id,
+                jurisdiction_id,
+            ],
+        )
         result = cursor.fetchall()
         subdivision_type_id = result[0][0]
     except:
@@ -990,7 +1006,8 @@ def get_contest_with_unknown(session, election_id, top_ru_id) -> List[str]:
     connection = session.bind.raw_connection()
     cursor = connection.cursor()
 
-    q = sql.SQL("""select distinct c."Name"
+    q = sql.SQL(
+        """select distinct c."Name"
 from "VoteCount" vc
 left join "Contest" c on vc."Contest_Id" = c."Id"
 left join "CandidateSelection" cs on cs."Id" = vc."Selection_Id"
@@ -1001,10 +1018,9 @@ where
     can."BallotName" = 'none or unknown'
  and vc."Election_Id" = %s
 and cruj."ParentReportingUnit_Id" = %s
-;""")
-    cursor.execute(
-        q, (election_id, top_ru_id)
+;"""
     )
+    cursor.execute(q, (election_id, top_ru_id))
     result = cursor.fetchall()
     contests = [x[0] for x in result]
     return contests
@@ -1016,7 +1032,7 @@ def selection_ids_from_candidate_id(session, candidate_id):
 
     q = sql.SQL("""SELECT "Id" from "CandidateSelection" where "Candidate_Id" = %s""")
 
-    cursor.execute(q,(candidate_id,))
+    cursor.execute(q, (candidate_id,))
     selection_id_list = [x for (x,) in cursor.fetchall()]
 
     return selection_id_list
@@ -1032,7 +1048,7 @@ def export_rollup_from_db(
     by: str = "Id",
     exclude_redundant_total: bool = False,
     by_vote_type: bool = False,
-    contest: Optional[str] = None
+    contest: Optional[str] = None,
 ) -> (pd.DataFrame, Optional[str]):
     """Return a dataframe of rolled-up results and an error string.
     If by_vote_type, return separate rows for each vote type.
@@ -1043,7 +1059,9 @@ def export_rollup_from_db(
     # define the 'where' sql clause based on restrictions from parameters
     # and the string variables to be passed to query
     restrict = ""
-    group_and_order_by = """C."Name", EDRUT."Txt", Cand."BallotName", IntermediateRU."Name" """
+    group_and_order_by = (
+        """C."Name", EDRUT."Txt", Cand."BallotName", IntermediateRU."Name" """
+    )
     string_vars = [election, top_ru, sub_unit_type, tuple(datafile_list)]
 
     if by_vote_type:
@@ -1055,8 +1073,10 @@ def export_rollup_from_db(
     if exclude_redundant_total:
         election_id = name_to_id_cursor(cursor, "Election", election)
         jurisdiction_id = name_to_id_cursor(cursor, "ReportingUnit", top_ru)
-        active = active_vote_types_from_ids(cursor, election_id=election_id, jurisdiction_id=jurisdiction_id)
-        if len(active) > 1 and 'total' in active:
+        active = active_vote_types_from_ids(
+            cursor, election_id=election_id, jurisdiction_id=jurisdiction_id
+        )
+        if len(active) > 1 and "total" in active:
             restrict += """ AND CIT."Txt" != 'total' """
 
     if contest:
@@ -1237,7 +1257,8 @@ def list_to_id(session, element, names) -> int:
 
 
 def data_file_download(cursor, election_id: int, reporting_unit_id: int) -> int:
-    q = sql.SQL("""
+    q = sql.SQL(
+        """
         SELECT  MAX(download_date)::text as download_date
         FROM    _datafile d
         WHERE   d."Election_Id" = %s
@@ -1252,10 +1273,11 @@ def data_file_download(cursor, election_id: int, reporting_unit_id: int) -> int:
 
 
 def is_preliminary(cursor, election_id, jurisdiction_id):
-    """ get the preliminary flag from the _datafile table.
+    """get the preliminary flag from the _datafile table.
     Since this flag doesn't exist yet, parsing the election name for
     2020 because we expect all data for 2020 to be preliminary for awhile."""
-    q = sql.SQL("""
+    q = sql.SQL(
+        """
         SELECT  DISTINCT is_preliminary
         FROM    _datafile
         WHERE   "Election_Id" = %s
@@ -1275,12 +1297,15 @@ def is_preliminary(cursor, election_id, jurisdiction_id):
         return False
 
 
-def read_external(cursor, election_year: int, top_ru_id: int, fields: list, restrict=None):
+def read_external(
+    cursor, election_year: int, top_ru_id: int, fields: list, restrict=None
+):
     if restrict:
         census = f"""AND "Label" = '{restrict}'"""
     else:
         census = ""
-    q = sql.SQL("""
+    q = sql.SQL(
+        """
         SELECT  DISTINCT "Category", "InCategoryOrder", {fields}
         FROM    "External"
         WHERE   "ElectionYear" = %s
@@ -1295,7 +1320,9 @@ def read_external(cursor, election_year: int, top_ru_id: int, fields: list, rest
     try:
         cursor.execute(q, [election_year, top_ru_id])
         results = cursor.fetchall()
-        results_df = pd.DataFrame(results, columns=["Category", "InCategoryOrder"] + fields)
+        results_df = pd.DataFrame(
+            results, columns=["Category", "InCategoryOrder"] + fields
+        )
         # return unique columns (by name, not value)
         return results_df.loc[:, ~results_df.columns.duplicated()][fields]
     except Exception as exc:

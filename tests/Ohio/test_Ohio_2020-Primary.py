@@ -1,4 +1,5 @@
 import election_data_analysis as e
+
 election = "2020 Primary"
 jurisdiction = "Ohio"
 
@@ -59,7 +60,8 @@ def test_oh_rep_20_20(dbname):
 
 
 def test_oh_contest_by_vote_type_20(dbname):
-    assert (e.count_type_total(
+    assert (
+        e.count_type_total(
             "2020 Primary",
             "Ohio",
             "US House OH District 3 (Republican Party)",
@@ -70,6 +72,8 @@ def test_oh_contest_by_vote_type_20(dbname):
     )
 
 
-
 def test_all_candidates_known(dbname):
-    assert e.get_contest_with_unknown_candidates(election, jurisdiction, dbname=dbname) == []
+    assert (
+        e.get_contest_with_unknown_candidates(election, jurisdiction, dbname=dbname)
+        == []
+    )

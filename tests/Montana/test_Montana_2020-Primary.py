@@ -1,6 +1,8 @@
 import election_data_analysis as e
+
 election = "2020 Primary"
 jurisdiction = "Montana"
+
 
 def test_data_exists(dbname):
     assert e.data_exists("2020 Primary", "Montana", dbname=dbname)
@@ -54,6 +56,8 @@ def test_state_rep_totals(dbname):
     )
 
 
-
 def test_all_candidates_known(dbname):
-    assert e.get_contest_with_unknown_candidates(election, jurisdiction, dbname=dbname) == []
+    assert (
+        e.get_contest_with_unknown_candidates(election, jurisdiction, dbname=dbname)
+        == []
+    )

@@ -16,7 +16,10 @@ from sqlalchemy import (
     Index,
     Boolean,
 )
-from sqlalchemy import Date, TIMESTAMP  # these are used, even if syntax-checker can't tell
+from sqlalchemy import (
+    Date,
+    TIMESTAMP,
+)  # these are used, even if syntax-checker can't tell
 import os
 import pandas as pd
 from election_data_analysis import database as db
