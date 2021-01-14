@@ -1299,6 +1299,12 @@ def clean_candidate_names(df):
         .map(lambda words: "".join([word[0:3] for word in words if word != "of"])),
         df["contest_short"],
     )
+    # Handle GA 2020 runoff senate elections
+    df["contest_short"] = np.where(
+        df["parent"].str.contains("runoff"),
+        df["contest_short"] + "Runoff",
+        df["contest_short"]
+    )
     df["name"] = df[["name", "party", "contest_short"]].apply(
         lambda x: " - ".join(x.dropna().astype(str)), axis=1
     )

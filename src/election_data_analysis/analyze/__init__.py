@@ -137,10 +137,12 @@ def create_scatter(
     h_category,
     h_count,
     h_type,
+    h_runoff,
     v_election_id,
     v_category,
     v_count,
     v_type,
+    v_runoff,
 ):
     connection = session.bind.raw_connection()
     cursor = connection.cursor()
@@ -149,7 +151,6 @@ def create_scatter(
     h_count = ui.get_contest_type_mapping(h_count)
     v_count = ui.get_contest_type_mapping(v_count)
 
-    # Get name of db for error messages
     dfh = get_data_for_scatter(
         session,
         jurisdiction_id,
@@ -158,6 +159,7 @@ def create_scatter(
         h_category,
         h_count,
         h_type,
+        h_runoff,
     )
     dfv = get_data_for_scatter(
         session,
@@ -167,6 +169,7 @@ def create_scatter(
         v_category,
         v_count,
         v_type,
+        v_runoff,
     )
     if dfh.empty or dfv.empty:
         connection.close()
@@ -180,7 +183,9 @@ def create_scatter(
     # check if there is only one contest
     single_count_type = len(unsummed["CountItemType"].unique()) == 1
 
-    if single_selection and not single_count_type:
+    if (h_runoff or v_runoff) and single_selection:
+        pivot_col = "Contest"
+    elif single_selection and not single_count_type:
         pivot_col = "CountItemType"
     elif single_selection and single_count_type:
         pivot_col = "Election_Id"
@@ -196,7 +201,12 @@ def create_scatter(
         return None
 
     # package up results
-    if single_selection and not single_count_type:
+    if (h_runoff or v_runoff) and single_selection:
+        cols = list(pivot_df.columns)
+        results = package_results(pivot_df, jurisdiction, cols[-2], cols[-1])
+        results["x"] = cols[-2]
+        results["y"] = cols[-1]
+    elif single_selection and not single_count_type:
         results = package_results(pivot_df, jurisdiction, h_category, v_category)
         results["x"] = h_count
         results["y"] = v_count
@@ -280,6 +290,7 @@ def get_data_for_scatter(
     count_item_type,
     filter_str,
     count_type,
+    is_runoff,
 ):
     if count_type == "census":
         return get_census_data(
@@ -297,6 +308,7 @@ def get_data_for_scatter(
             count_item_type,
             filter_str,
             count_type,
+            is_runoff
         )
 
 
@@ -354,14 +366,23 @@ def get_votecount_data(
     count_item_type,
     filter_str,
     count_type,
+    is_runoff,
 ):
-    # Since this could be data across 2 elections, grab data one election at a time
     unsummed = db.get_candidate_votecounts(
         session, election_id, jurisdiction_id, subdivision_type_id
     )
-    keep_all = filter_str.startswith("All ")
 
-    #  limit to relevant data
+    # limit to relevant data - runoff
+    if is_runoff:
+        unsummed = unsummed[
+            unsummed["Contest"].str.contains("runoff", case=False)
+        ]
+    else:
+        unsummed = unsummed[
+            ~(unsummed["Contest"].str.contains("runoff", case=False))
+        ]
+
+    # limit to relevant data - count type
     if count_type == "candidates":
         filter_column = "Selection"
     elif count_type == "contests":
@@ -375,6 +396,9 @@ def get_votecount_data(
             + unsummed["contest_district_type"]
         )
         filter_column = "party_district_type"
+
+    # limit to relevant data - all data or not
+    keep_all = filter_str.startswith("All ")
     if not keep_all:
         unsummed = unsummed[unsummed[filter_column].isin([filter_str])]
     if "party_district_type" in unsummed.columns:

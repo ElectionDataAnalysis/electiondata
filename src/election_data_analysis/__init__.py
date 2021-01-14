@@ -1239,6 +1239,8 @@ class Analyzer:
         # *_type is either candidates or contests or parties
         h_type, h_count_item_type = self.split_category_input(h_category)
         v_type, v_count_item_type = self.split_category_input(v_category)
+        h_runoff = h_count.endswith("Runoff")
+        v_runoff = v_count.endswith("Runoff")
         h_count = h_count.split(" - ")[0].strip()
         v_count = v_count.split(" - ")[0].strip()
 
@@ -1250,10 +1252,12 @@ class Analyzer:
             h_count_item_type,
             h_count,
             h_type,
+            h_runoff,
             v_election_id,
             v_count_item_type,
             v_count,
             v_type,
+            v_runoff,
         )
         if fig_type and agg_results:
             viz.plot("scatter", agg_results, fig_type, self.rollup_directory)
