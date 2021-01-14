@@ -14,6 +14,7 @@ def data(runtime):
         "ga16g": data_exists("2016 General", "Georgia", p_path=runtime),
         "ga18g": data_exists("2018 General", "Georgia", p_path=runtime),
         "ga20p": data_exists("2020 Primary", "Georgia", p_path=runtime),
+        "ga20g": data_exists("2020 General", "Georgia", p_path=runtime),
         "nc18g": data_exists("2018 General", "North Carolina", p_path=runtime),
         "ak16g": data_exists("2016 General", "Alaska", p_path=runtime),
         "ga18census": census_data_exists("2018 General", "Georgia", p_path=runtime),
@@ -356,4 +357,34 @@ def test_census_scatter(runtime):
             "White",
         )
         == results.ga_2018_census_scatter
+    )
+
+
+def test_georgia_runoff_display(runtime):
+    assert pytest.ok["ga20g"], "No Georgia 2020 General data"
+    analyzer = Analyzer(runtime)
+    assert (
+        analyzer.display_options(
+            "count",
+            verbose=True,
+            filters=["Georgia", "county", "2020 General", "Candidate total"],
+        )
+        == results.ga_2020_candidates
+    )
+
+
+def test_georgia_runoff_scatter(runtime):
+    assert pytest.ok["ga20g"], "No Georgia 2020 General data"
+    analyzer = Analyzer(runtime)
+    assert (
+        analyzer.scatter(
+            "Georgia",
+            "2020 General",
+            "Candidate total",
+            "Raphael Warnock - D - USSenRunoff",
+            "2020 General",
+            "Candidate total",
+            "Raphael Warnock - D - USSen",
+        )
+        == results.ga_2020_warnock
     )
