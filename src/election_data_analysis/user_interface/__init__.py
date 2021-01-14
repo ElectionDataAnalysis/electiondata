@@ -315,9 +315,8 @@ contest_type_mappings = {
 
 
 def pick_juris_from_filesystem(
-        juris_path: str,
-        err: Optional[dict],
-        check_files: bool = False):
+    juris_path: str, err: Optional[dict], check_files: bool = False
+):
     """Returns a Jurisdiction object. <juris_path> is the path to the directory containing the
     defining files for the particular jurisdiction.
     """
@@ -339,7 +338,9 @@ def find_dupes(df):
     return dupes_df, deduped
 
 
-def tabular_kwargs(p: Dict[str, Any], kwargs: Dict[str, Any], aux=False) -> Dict[str, Any]:
+def tabular_kwargs(
+    p: Dict[str, Any], kwargs: Dict[str, Any], aux=False
+) -> Dict[str, Any]:
     # designate header rows (for both count columns or string-location info/columns)
     if p["all_rows"] == "data":
         kwargs["header"] = None
@@ -395,18 +396,20 @@ def list_desired_excel_sheets(f_path: str, p: dict) -> Optional[list]:
         xl = pd.ExcelFile(f_path)
         all_sheets = xl.sheet_names
         if p["sheets_to_skip_names"]:
-            sheets_to_read = [s for s in all_sheets if s not in p["sheets_to_skip_names"]]
+            sheets_to_read = [
+                s for s in all_sheets if s not in p["sheets_to_skip_names"]
+            ]
         else:
             sheets_to_read = all_sheets
     return sheets_to_read
 
 
 def read_single_datafile(
-        f_path: str,
-        p: Dict[str, Any],
-        munger_name: str,
-        err: Optional[Dict],
-        aux: bool = False,
+    f_path: str,
+    p: Dict[str, Any],
+    munger_name: str,
+    err: Optional[Dict],
+    aux: bool = False,
 ) -> (Dict[str, pd.DataFrame], dict):
     """Length of returned dictionary is the number of sheets read -- usually 1 except for multi-sheet Excel.
     Auxiliary files have different parameters (e.g., no count locations)"""
@@ -455,7 +458,7 @@ def read_single_datafile(
             df_dict = {"Sheet1": df}
 
         # rename any columns from header-less tables to column_0, column_1, etc.
-        if p["all_rows"] == 'data':
+        if p["all_rows"] == "data":
             for k in df_dict.keys():
                 df_dict[k].columns = [f"column_{j}" for j in range(df_dict[k].shape[1])]
 
@@ -503,7 +506,11 @@ def archive_from_param_file(param_file: str, current_dir: str, archive_dir: str)
     )
     # TODO error handling
     # if the ini file specifies an aux_data_directory
-    if "aux_data_dir" in params.keys() and params["aux_data_dir"] and params["aux_data_dir"] != "":
+    if (
+        "aux_data_dir" in params.keys()
+        and params["aux_data_dir"]
+        and params["aux_data_dir"] != ""
+    ):
         archive(params["aux_data_dir"], current_dir, archive_dir)
     archive(params["results_file"], current_dir, archive_dir)
     archive(param_file, current_dir, archive_dir)
@@ -532,11 +539,11 @@ def archive(relative_path: str, current_dir: str, archive_dir: str):
 
 
 def get_parameters(
-        required_keys: List[str],
-        param_file: str,
-        header: str,
-        err: Optional[Dict] = None,
-        optional_keys: Optional[List[str]] = None,
+    required_keys: List[str],
+    param_file: str,
+    header: str,
+    err: Optional[Dict] = None,
+    optional_keys: Optional[List[str]] = None,
 ) -> (Dict[str, str], Optional[Dict[str, dict]]):
     d = dict()
 
@@ -611,10 +618,10 @@ def consolidate_errors(list_of_err: Optional[list]) -> Optional[Dict[Any, dict]]
 
 
 def report(
-        err_warn: Optional[Dict[Any, dict]],
-        loc_dict: Optional[Dict[Any, str]] = None,
-        key_list: list = None,
-        file_prefix: str = "",
+    err_warn: Optional[Dict[Any, dict]],
+    loc_dict: Optional[Dict[Any, str]] = None,
+    key_list: list = None,
+    file_prefix: str = "",
 ) -> dict:
     """unpacks error dictionary <err> for reporting.
     Keys of <location_dict> are error_types;
@@ -659,7 +666,7 @@ def report(
                     # prepare output string (errors and warns if any)
                     nk_name = Path(nk).name
                     if (f"warn-{et}" in active_keys) and (
-                            nk in err_warn[f"warn-{et}"].keys()
+                        nk in err_warn[f"warn-{et}"].keys()
                     ):
                         warn_str = f"\n{et.title()} warnings ({nk_name}):\n{msg[(f'warn-{et}', nk)]}\n\n"
                         and_warns = " and warnings"
@@ -732,12 +739,7 @@ def fatal_to_warning(err: Optional[Dict[Any, dict]]) -> Optional[Dict[Any, dict]
     for k in err.keys():
         if k[:5] == "warn-":
             for j in err[k].keys():
-                non_fatal_err = add_new_error(
-                    non_fatal_err,
-                    k,
-                    j,
-                    err[k][j]
-                )
+                non_fatal_err = add_new_error(non_fatal_err, k, j, err[k][j])
         else:
             for j in err[k].keys():
                 non_fatal_err = add_new_error(
@@ -750,7 +752,7 @@ def fatal_to_warning(err: Optional[Dict[Any, dict]]) -> Optional[Dict[Any, dict]
 
 
 def add_new_error(
-        err: Optional[Dict[Any, dict]], err_type: str, key: str, msg: str
+    err: Optional[Dict[Any, dict]], err_type: str, key: str, msg: str
 ) -> dict:
     """err is a dictionary of dictionaries, one for each err_type.
     This function return err, augmented by the error specified in <err_type>,<key> and <msg>"""
@@ -803,7 +805,7 @@ def fatal_error(err, error_type_list=None, name_key_list=None) -> bool:
 
 
 def run_tests(
-        test_dir: str, dbname: str, election_jurisdiction_list: Optional[list] = None
+    test_dir: str, dbname: str, election_jurisdiction_list: Optional[list] = None
 ) -> (dict, int):
     """move to tests directory, run tests, move back
     db_params must have host, user, pass, db_name.
@@ -843,11 +845,11 @@ def run_tests(
 
 
 def confirm_essential_info(
-        directory: str,
-        header: str,
-        param_list: List[str],
-        known: Optional[dict] = None,
-        msg: str = "",
+    directory: str,
+    header: str,
+    param_list: List[str],
+    known: Optional[dict] = None,
+    msg: str = "",
 ):
     """Returns True if user confirms all values in key_list for all *.ini files in
     the given directory; False otherwise"""
@@ -916,16 +918,22 @@ def election_juris_list(dir_path: str) -> list:
 
 
 def reload_juris_election(
-        juris_name: str,
-        election_name: str,
-        test_dir: str,
-        from_cron: bool = None,
+    juris_name: str,
+    election_name: str,
+    test_dir: str,
+    from_cron: bool = None,
 ) -> bool:
     """Assumes run_time.ini in directory, and results to be loaded are in the results_dir named in run_time.ini"""
     # initialize dataloader
     dl = e.DataLoader()
     db_params = get_parameters(
-        ["host", "port", "dbname", "user", "password", ],
+        [
+            "host",
+            "port",
+            "dbname",
+            "user",
+            "password",
+        ],
         "run_time.ini",
         "postgresql",
     )[0]
@@ -994,9 +1002,9 @@ def reload_juris_election(
         )
         # if the *.ini file is for the given election and jurisdiction
         if (
-                (not err)
-                and params["election"] == election_name
-                and params["top_reporting_unit"] == juris_name
+            (not err)
+            and params["election"] == election_name
+            and params["top_reporting_unit"] == juris_name
         ):
             # move the *.ini file and its results file (and any aux_data_directory) to the unloaded directory
             archive_from_param_file(param_file, archive_directory, unloaded_directory)
@@ -1067,7 +1075,9 @@ def get_filtered_input_options(session, input_str, filters):
             }
             df = pd.DataFrame(data=data)
             df[["year", "election_type"]] = df["name"].str.split(" ", expand=True)
-            df.sort_values(["year", "election_type"], ascending=[False, True], inplace=True)
+            df.sort_values(
+                ["year", "election_type"], ascending=[False, True], inplace=True
+            )
             df.drop(columns=["year", "election_type"], inplace=True)
         else:
             df = db.display_elections(session)
@@ -1114,7 +1124,9 @@ def get_filtered_input_options(session, input_str, filters):
         connection = session.bind.raw_connection()
         cursor = connection.cursor()
         election = db.name_from_id(cursor, "Election", election_id)
-        census_df = db.read_external(cursor, int(election[0:4]), reporting_unit_id, ["Label"])
+        census_df = db.read_external(
+            cursor, int(election[0:4]), reporting_unit_id, ["Label"]
+        )
         cursor.close()
         if census_df.empty:
             census = []
@@ -1132,17 +1144,17 @@ def get_filtered_input_options(session, input_str, filters):
         count_types.sort()
         data = {
             "parent": [filters[0] for count_type in count_types]
-                      + [filters[0] for count_type in count_types]
-                      + [filters[0] for count_type in count_types]
-                      + [filters[0] for c in census],
+            + [filters[0] for count_type in count_types]
+            + [filters[0] for count_type in count_types]
+            + [filters[0] for c in census],
             "name": [f"Candidate {count_type}" for count_type in count_types]
-                    + [f"Contest {count_type}" for count_type in count_types]
-                    + [f"Party {count_type}" for count_type in count_types]
-                    + [c for c in census],
+            + [f"Contest {count_type}" for count_type in count_types]
+            + [f"Party {count_type}" for count_type in count_types]
+            + [c for c in census],
             "type": [None for count_type in count_types]
-                    + [None for count_type in count_types]
-                    + [None for count_type in count_types]
-                    + [None for c in census],
+            + [None for count_type in count_types]
+            + [None for count_type in count_types]
+            + [None for c in census],
         }
         df = pd.DataFrame(data=data)
     # check if it's looking for a count of contests
@@ -1159,7 +1171,7 @@ def get_filtered_input_options(session, input_str, filters):
         df = df.sort_values(["parent", "name"]).reset_index(drop=True)
     # check if it's looking for a count of candidates
     elif input_str == "count" and bool(
-            [f for f in filters if f.startswith("Candidate")]
+        [f for f in filters if f.startswith("Candidate")]
     ):
         election_id = db.list_to_id(session, "Election", filters)
         reporting_unit_id = db.list_to_id(session, "ReportingUnit", filters)
@@ -1180,7 +1192,10 @@ def get_filtered_input_options(session, input_str, filters):
         cursor = connection.cursor()
         election = db.name_from_id(cursor, "Election", election_id)
         df = db.read_external(
-            cursor, int(election[0:4]), reporting_unit_id, ["Source", "Label", "Category"]
+            cursor,
+            int(election[0:4]),
+            reporting_unit_id,
+            ["Source", "Label", "Category"],
         )
         cursor.close()
     # check if it's looking for a count by party
@@ -1242,8 +1257,8 @@ def clean_candidate_names(df):
     df["party"] = np.where(
         df["party"].str.contains("party", case=False),
         df["party"]
-            .map(lambda x: x[0:-1])
-            .map(lambda words: "".join([word[0] for word in words])),
+        .map(lambda x: x[0:-1])
+        .map(lambda words: "".join([word[0] for word in words])),
         "None",
     )
 

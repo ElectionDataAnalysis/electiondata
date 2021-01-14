@@ -1,4 +1,5 @@
 import election_data_analysis as e
+
 election = "2016 General"
 jurisdiction = "Florida"
 
@@ -6,8 +7,10 @@ jurisdiction = "Florida"
 def test_data_exists(dbname):
     assert e.data_exists("2016 General", "Florida", dbname=dbname)
 
+
 def test_fl_presidential(dbname):
-    assert (e.contest_total(
+    assert (
+        e.contest_total(
             "2016 General",
             "Florida",
             "US President (FL)",
@@ -18,7 +21,8 @@ def test_fl_presidential(dbname):
 
 
 def test_fl_statewide_totals(dbname):
-    assert (e.contest_total(
+    assert (
+        e.contest_total(
             "2016 General",
             "Florida",
             "US Senate FL",
@@ -29,7 +33,8 @@ def test_fl_statewide_totals(dbname):
 
 
 def test_fl_senate_totals(dbname):
-    assert (e.contest_total(
+    assert (
+        e.contest_total(
             "2016 General",
             "Florida",
             "FL Senate District 3",
@@ -40,7 +45,8 @@ def test_fl_senate_totals(dbname):
 
 
 def test_fl_house_totals(dbname):
-    assert (e.contest_total(
+    assert (
+        e.contest_total(
             "2016 General",
             "Florida",
             "US House FL District 10",
@@ -53,6 +59,8 @@ def test_fl_house_totals(dbname):
 # results not available by vote type
 
 
-
 def test_all_candidates_known(dbname):
-    assert e.get_contest_with_unknown_candidates(election, jurisdiction, dbname=dbname) == []
+    assert (
+        e.get_contest_with_unknown_candidates(election, jurisdiction, dbname=dbname)
+        == []
+    )

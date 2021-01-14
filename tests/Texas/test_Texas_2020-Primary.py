@@ -9,21 +9,21 @@ import election_data_analysis as e
 
 # # # constants - CHANGE THESE!! - use internal db names
 election = "2020 Primary"
-jurisdiction = 'Texas'
-abbr = 'TX'
+jurisdiction = "Texas"
+abbr = "TX"
 
 party1 = "Democratic Party"
 party2 = "Republican Party"
 pres_total_party1 = 2094428  # total of all votes for President
 cd = 3  # congressional district
 total_cd_votes_party2 = 53938  # total votes in the chosen cd
-shd = 101   # state house district
+shd = 101  # state house district
 total_shd_votes_party1 = 10924
 ssd = 13  # state senate district
 total_ssd_votes_party2 = 8247
-single_vote_type = 'total'  # pick any one from your file
+single_vote_type = "total"  # pick any one from your file
 pres_votes_vote_type_party2 = 2017167
-single_county = 'Texas;Montgomery County'  # pick any one from your file
+single_county = "Texas;Montgomery County"  # pick any one from your file
 pres_votes_county_party1 = 25612  # total votes for pres of that county
 
 
@@ -53,15 +53,16 @@ def test_presidential_vote_type(dbname):
 
 
 def test_county_subtotal(dbname):
-    assert (e.contest_total(
-        election,
-        jurisdiction,
-        f"US President ({abbr}) ({party1})",
-        dbname=dbname,
-        county=single_county,
+    assert (
+        e.contest_total(
+            election,
+            jurisdiction,
+            f"US President ({abbr}) ({party1})",
+            dbname=dbname,
+            county=single_county,
         )
         == pres_votes_county_party1
-            )
+    )
 
 
 def test_presidential(dbname):
@@ -112,7 +113,8 @@ def test_state_rep_totals(dbname):
     )
 
 
-
-
 def test_all_candidates_known(dbname):
-    assert e.get_contest_with_unknown_candidates(election, jurisdiction, dbname=dbname) == []
+    assert (
+        e.get_contest_with_unknown_candidates(election, jurisdiction, dbname=dbname)
+        == []
+    )

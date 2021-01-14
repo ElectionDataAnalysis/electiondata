@@ -1,13 +1,16 @@
 import election_data_analysis as e
+
 election = "2018 General"
 jurisdiction = "Wisconsin"
+
 
 def test_data_exists(dbname):
     assert e.data_exists("2018 General", "Wisconsin", dbname=dbname)
 
 
 def test_wi_statewide_totals(dbname):
-    assert (e.contest_total(
+    assert (
+        e.contest_total(
             "2018 General",
             "Wisconsin",
             "WI Governor",
@@ -21,7 +24,8 @@ def test_wi_statewide_totals(dbname):
 
 
 def test_wi_senate_totals(dbname):
-    assert (e.contest_total(
+    assert (
+        e.contest_total(
             "2018 General",
             "Wisconsin",
             "WI Senate District 21",
@@ -32,7 +36,8 @@ def test_wi_senate_totals(dbname):
 
 
 def test_wi_house_totals(dbname):
-    assert (e.contest_total(
+    assert (
+        e.contest_total(
             "2018 General",
             "Wisconsin",
             "WI House District 10",
@@ -43,7 +48,8 @@ def test_wi_house_totals(dbname):
 
 
 def test_us_house_totals(dbname):
-    assert (e.contest_total(
+    assert (
+        e.contest_total(
             "2018 General",
             "Wisconsin",
             "US House WI District 3",
@@ -56,6 +62,8 @@ def test_us_house_totals(dbname):
 # results not available by vote type
 
 
-
 def test_all_candidates_known(dbname):
-    assert e.get_contest_with_unknown_candidates(election, jurisdiction, dbname=dbname) == []
+    assert (
+        e.get_contest_with_unknown_candidates(election, jurisdiction, dbname=dbname)
+        == []
+    )

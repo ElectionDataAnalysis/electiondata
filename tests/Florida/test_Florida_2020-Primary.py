@@ -1,6 +1,8 @@
 import election_data_analysis as e
+
 election = "2020 Primary"
 jurisdiction = "Florida"
+
 
 def test_data_exists(dbname):
     assert e.data_exists("2020 Primary", "Florida", dbname=dbname)
@@ -57,6 +59,8 @@ def test_us_house_totals_20(dbname):
 # results not available by vote type
 
 
-
 def test_all_candidates_known(dbname):
-    assert e.get_contest_with_unknown_candidates(election, jurisdiction, dbname=dbname) == []
+    assert (
+        e.get_contest_with_unknown_candidates(election, jurisdiction, dbname=dbname)
+        == []
+    )
