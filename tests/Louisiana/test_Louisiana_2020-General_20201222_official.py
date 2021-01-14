@@ -20,10 +20,11 @@ abbr = 'LA'
 total_pres_votes = 2148062  # total of all votes for US President
 cd = 1  # US House congressional district
 total_cd_votes = 374369  # total votes in that US House contest in the chosen cd
-shd = 1   # state house district
-total_shd_votes = 27483  # total votes in that State House contest
-ssd = 2  # state senate district
-total_ssd_votes = 75377  # total votes in that State Senate contest
+#shd = 1   # state house district
+#total_shd_votes = -1  # total votes in that State House contest
+#ssd = 2  # state senate district
+#total_ssd_votes = -1  # total votes in that State Senate contest
+#No State senate and state house elections held in 2020.
 single_vote_type = 'early'  # pick any one with corresponding data in your file, but use internal db name  ****NA****
 pres_votes_vote_type = 979089  # total votes for US President of that vote type ****NA****
 county_or_other = "parish"   # Change this only if results are subdivided by something other than counties
@@ -59,7 +60,7 @@ def test_congressional_totals(dbname):
         == total_cd_votes
     )
 
-#No State senate and state house elections held in 2020. Need to confirm that.
+#No State senate and state house elections held in 2020.
 """def test_state_senate_totals(dbname):
     assert (e.contest_total(
         election,
