@@ -531,6 +531,8 @@ Candidate	Castle, Darrell L	Castle, Darrell L
 
 If your sheets or files have a variable number of count columns (e.g., if columns are labeled by candidates), err on the side of including extra columns in count_column_numbers. Columns without data will be ignored. Be careful, however, not to include in your count columns any columns containing strings needed for munging.
 
+If your excel file has merged cells across lines, it may not be clear which line holds the information. Save a sheet as tab-separated text to see which line holds which information from merged cells.
+
 ### NIST Exports
 This package also provides functionality to export the data according to the [NIST](https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.1500-100r2.pdf) common data format specifications. This is as simple as identifying an election and jurisdiciton of interest:
 ```

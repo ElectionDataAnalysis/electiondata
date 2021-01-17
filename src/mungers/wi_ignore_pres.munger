@@ -12,18 +12,17 @@ munge_strings=in_field_values,in_count_headers,constant_over_sheet,constant_over
 #### if count_locations is 'by_column_numbers':
 count_column_numbers=3,4,5,6,7,8,9,10,11
 #### if 'in_count_headers' is in munge_strings:
-count_header_row_numbers=0,1
+count_header_row_numbers=0,2,3
 #### if 'constant_over_file' is in munge_strings:
-constant_over_file=CandidateContest,CountItemType
+constant_over_file=CountItemType
 #### if file type is flat_text or excel and not all rows are data:
-string_field_name_row=0
-
+string_field_name_row=2
 
 ## Optional format parameters:
 #### for any file type:
 thousands_separator=,
 #### for a flat_text or excel file type:
-rows_to_skip=4
+rows_to_skip=2
 #### for excel file type:
 sheets_to_skip_names=Document map,Sheet2
 
@@ -32,15 +31,14 @@ sheets_to_skip_names=Document map,Sheet2
 ReportingUnit=<County>
 
 [in_count_headers]
-Party=<header_0>
-Candidate=<header_1>
+Party=<header_2>
+Candidate=<header_3>
 
 [constant_over_sheet]
-CandidateContest=<row_2>
+CandidateContest=<row_0>
 
 # Values to ignore (optional) #
 [ignore]
 ## E.g: Candidate=Total Votes Cast,Registered Voters ##
-Candidate=Total Votes Cast
-
-
+Candidate=<Total Votes Cast>
+##################################################################
