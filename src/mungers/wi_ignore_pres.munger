@@ -16,7 +16,7 @@ count_header_row_numbers=0,2,3
 #### if 'constant_over_file' is in munge_strings:
 constant_over_file=CountItemType
 #### if file type is flat_text or excel and not all rows are data:
-string_field_name_row=3
+string_field_name_row=2
 
 ## Optional format parameters:
 #### for any file type:
@@ -35,7 +35,7 @@ Party=<header_2>
 Candidate=<header_3>
 
 [constant_over_sheet]
-CandidateContest=<header_0>
+CandidateContest=<row_0>
 
 # Values to ignore (optional) #
 [ignore]
