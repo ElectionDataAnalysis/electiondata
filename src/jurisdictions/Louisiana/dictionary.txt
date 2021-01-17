@@ -4273,12 +4273,12 @@ CountItemType	total	total
 Party	Other Party	NOPTY
 Party	Other Party	IND
 CandidateContest	US Senate LA	U. S. Senator
-CandidateContest	Louisiana;US House LA District 1	U. S. Representative -- 1st Congressional District
-CandidateContest	Louisiana;US House LA District 2	U. S. Representative -- 2nd Congressional District
-CandidateContest	Louisiana;US House LA District 3	U. S. Representative -- 3rd Congressional District
-CandidateContest	Louisiana;US House LA District 4	U. S. Representative -- 4th Congressional District
-CandidateContest	Louisiana;US House LA District 5	U. S. Representative -- 5th Congressional District
-CandidateContest	Louisiana;US House LA District 6	U. S. Representative -- 6th Congressional District
+CandidateContest	US House LA District 1	U. S. Representative -- 1st Congressional District
+CandidateContest	US House LA District 2	U. S. Representative -- 2nd Congressional District
+CandidateContest	US House LA District 3	U. S. Representative -- 3rd Congressional District
+CandidateContest	US House LA District 4	U. S. Representative -- 4th Congressional District
+CandidateContest	US House LA District 5	U. S. Representative -- 5th Congressional District
+CandidateContest	US House LA District 6	U. S. Representative -- 6th Congressional District
 ReportingUnit	Louisiana;LA House District 1	Louisiana;LA House District 1
 ReportingUnit	Louisiana;LA House District 2	Louisiana;LA House District 2
 ReportingUnit	Louisiana;LA House District 3	Louisiana;LA House District 3
@@ -8311,3 +8311,15 @@ Candidate	Garret Graves	Garret Graves
 Candidate	Shannon Sloan	Shannon Sloan
 Candidate	Richard 'RPT' Torregano	Richard "RPT" Torregano
 Candidate	Dartanyon 'DAW' Williams	Dartanyon "DAW" Williams
+Candidate	Belden 'Noonie Man' Batiste	Belden 'Noonie Man' Batiste
+Candidate	'Rob' Anderson	'Rob' Anderson
+Candidate	'Mike' Johnson	'Mike' Johnson
+Candidate	Sandra 'Candy' Christophe	Sandra 'Candy' Christophe
+Candidate	'Scotty' Robinson	'Scotty' Robinson
+Candidate	'Matt' Hasty	'Matt' Hasty
+Candidate	Dartanyon 'DAW' Williams	Dartanyon 'DAW' Williams
+Candidate	M.V. 'Vinny' Mendoza	M.V. 'Vinny' Mendoza
+Candidate	Derrick 'Champ' Edwards	Derrick 'Champ' Edwards
+Candidate	'Xan' John	'Xan' John
+Candidate	'Bill' Cassidy	'Bill' Cassidy
+Candidate	Richard 'RPT' Torregano	Richard 'RPT' Torregano

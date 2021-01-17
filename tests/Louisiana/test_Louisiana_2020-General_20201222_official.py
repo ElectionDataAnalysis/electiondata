@@ -18,18 +18,19 @@ election = "2020 General"
 jurisdiction = "Louisiana"
 abbr = "LA"
 total_pres_votes = 2148062  # total of all votes for US President
-cd = 3  # US House congressional district
-total_cd_votes = -1  # total votes in that US House contest in the chosen cd
-shd = 1  # state house district
-total_shd_votes = -1  # total votes in that State House contest
-ssd = 15  # state senate district
-total_ssd_votes = -1  # total votes in that State Senate contest
-single_vote_type = "early"  # pick any one with corresponding data in your file, but use internal db name
-pres_votes_vote_type = 979089  # total votes for US President of that vote type
-county_or_other = "parish"  # Change this only if results are subdivided by something other than counties
-#  e.g., 'parish' in LA, 'state-house' in Alaska, 'ward' in Philadelphia
-single_county = "Louisiana;Assumption Parish"  # pick any one from your file, but use internal db name
-pres_votes_county = 11235  # total votes for US President in that county
+cd = 1  # US House congressional district
+total_cd_votes = 374369  # total votes in that US House contest in the chosen cd
+#shd = 1   # state house district
+#total_shd_votes = -1  # total votes in that State House contest
+#ssd = 2  # state senate district
+#total_ssd_votes = -1  # total votes in that State Senate contest
+#No State senate and state house elections held in 2020.
+single_vote_type = 'early'  # pick any one with corresponding data in your file, but use internal db name  ****NA****
+pres_votes_vote_type = 979089  # total votes for US President of that vote type ****NA****
+county_or_other = "parish"   # Change this only if results are subdivided by something other than counties
+                            #  e.g., 'parish' in LA, 'state-house' in Alaska, 'ward' in Philadelphia
+single_county = 'Louisiana;Allen Parish'  # pick any one from your file, but use internal db name
+pres_votes_county = 9810  # total votes for US President in that county
 
 
 def test_data_exists(dbname):
@@ -49,38 +50,41 @@ def test_presidential(dbname):
     )
 
 
-"""def test_congressional_totals(dbname):
+def test_congressional_totals(dbname):
     assert (e.contest_total(
         election,
         jurisdiction,
         f"US House {abbr} District {cd}",
         dbname=dbname,
+        sub_unit_type=county_or_other,
         )
         == total_cd_votes
     )
-"""
 
+#No State senate and state house elections held in 2020.
 """def test_state_senate_totals(dbname):
     assert (e.contest_total(
         election,
         jurisdiction,
         f"{abbr} Senate District {ssd}",
         dbname=dbname,
+        sub_unit_type=county_or_other,
         )
         == total_ssd_votes
-    )"""
+    )
 
 
-"""def test_state_house_totals(dbname):
+def test_state_house_totals(dbname):
     assert (e.contest_total(
         election,
         jurisdiction,
         f"{abbr} House District {shd}",
         dbname=dbname,
+        sub_unit_type=county_or_other,
         )
         == total_shd_votes
-    )"""
-
+    )
+"""
 
 def test_standard_vote_types(dbname):
     assert e.check_count_types_standard(election, jurisdiction, dbname=dbname)
