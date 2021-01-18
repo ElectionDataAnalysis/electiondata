@@ -1,7 +1,7 @@
 BallotName
-Joseph R. Biden & Kamala Harris
-Jo  Jorgensen & Jeremy "Spike" Cohen
-Donald J. Trump & Michael R. Pence
+Joseph R Biden
+Jo Jorgensen
+Donald J Trump
 Dan Ahlers
 Mike Rounds
 Randy "Uriah" Luallin
@@ -12,7 +12,7 @@ Gary Hanson
 Susan Wismer
 Michael H. Rohl
 Brock L. Greenfield
-Josh Halsey (Withdrawn 7/30/2020 12:00:00 AM)
+Josh Halsey
 Al Novstrup
 Daryl Root
 John Wiik
@@ -30,7 +30,7 @@ Tom Cool
 Jim Stalzer
 Jessica Meyers
 R Blake Curd
-Justyn Hauck (Withdrawn 8/4/2020 12:00:00 AM)
+Justyn Hauck
 Elizabeth "Liz" Larson
 Jack Kolbeck
 Timothy Reed
@@ -41,7 +41,7 @@ Jim Bolin
 Ailee Johns
 Gregory Baldwin
 Arthur Rusch
-Jay Williams (Withdrawn 7/22/2020 12:00:00 AM)
+Jay Williams
 Jordan Foos
 Jean Hunhoff
 Kyle Schoenfish
@@ -55,7 +55,7 @@ Bryan J. Breitling
 Mary Duvall
 Seth William Van't Hof
 Rick W Knobe
-Kris K. Langer (Withdrawn 8/4/2020 12:00:00 AM)
+Kris K. Langer
 Marsha Symens
 Troy Heinert
 Joel Koskan
@@ -96,7 +96,7 @@ Louise Snodgrass
 Bill Adamson
 Timothy Reed
 Larry Tidemann
-Joan Stamm (Withdrawn 7/31/2020 12:00:00 AM)
+Joan Stamm
 John P. Kessinger
 Val Parsley
 Marli Wiese
@@ -133,7 +133,7 @@ Caitlin F. Collier
 Al Leber
 Richard Vasgaard
 Sydney Davis
-Carol Williams (Withdrawn 7/22/2020 12:00:00 AM)
+Carol Williams
 Ryan Cwach
 Mike Stevens
 Kent Peterson
@@ -158,7 +158,7 @@ Tom Pischke
 Jon Hansen
 Ernest Weston Jr
 Peri Pourier
-Bill Hines (Withdrawn 7/28/2020 12:00:00 AM)
+Bill Hines
 Liz May
 Jade Addison
 Dean Wink

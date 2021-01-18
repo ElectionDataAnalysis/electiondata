@@ -110,8 +110,8 @@ South Dakota;Aurora County	county
 South Dakota;Beadle County	county
 South Dakota;Bennett County	county
 South Dakota;Bon Homme County	county
-South Dakota;Brookings (Vote Center) County	county
-South Dakota;Brown (Vote Center) County	county
+South Dakota;Brookings County	county
+South Dakota;Brown County	county
 South Dakota;Brule County	county
 South Dakota;Buffalo County	county
 South Dakota;Butte County	county
@@ -137,9 +137,9 @@ South Dakota;Hamlin County	county
 South Dakota;Hand County	county
 South Dakota;Hanson County	county
 South Dakota;Harding County	county
-South Dakota;Hughes (Vote Center) County	county
+South Dakota;Hughes County	county
 South Dakota;Hutchinson County	county
-South Dakota;Hyde (Vote Center) County	county
+South Dakota;Hyde County	county
 South Dakota;Jackson County	county
 South Dakota;Jerauld County	county
 South Dakota;Jones County	county
@@ -159,16 +159,16 @@ South Dakota;Moody County	county
 South Dakota;Oglala Lakota County	county
 South Dakota;Pennington County	county
 South Dakota;Perkins County	county
-South Dakota;Potter (Vote Center) County	county
+South Dakota;Potter County	county
 South Dakota;Roberts County	county
 South Dakota;Sanborn County	county
 South Dakota;Spink County	county
 South Dakota;Stanley County	county
-South Dakota;Sully (Vote Center) County	county
+South Dakota;Sully County	county
 South Dakota;Todd County	county
 South Dakota;Tripp County	county
 South Dakota;Turner County	county
 South Dakota;Union County	county
 South Dakota;Walworth County	county
-South Dakota;Yankton (Vote Center) County	county
+South Dakota;Yankton County	county
 South Dakota;Ziebach County	county

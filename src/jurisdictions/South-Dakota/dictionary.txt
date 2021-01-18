@@ -1,6 +1,6 @@
 cdf_element	cdf_internal_name	raw_identifier_value
 Candidate	Joseph R Biden	Joseph R. Biden & Kamala Harris
-Candidate	Jo  Jorgensen	Jo  Jorgensen & Jeremy "Spike" Cohen
+Candidate	Jo Jorgensen	Jo  Jorgensen & Jeremy "Spike" Cohen
 Candidate	Donald J Trump	Donald J. Trump & Michael R. Pence
 Candidate	Dan Ahlers	Dan Ahlers
 Candidate	Mike Rounds	Mike Rounds
@@ -341,8 +341,8 @@ ReportingUnit	South Dakota;Aurora County	Aurora
 ReportingUnit	South Dakota;Beadle County	Beadle
 ReportingUnit	South Dakota;Bennett County	Bennett
 ReportingUnit	South Dakota;Bon Homme County	Bon Homme
-ReportingUnit	South Dakota;Brookings (Vote Center) County	Brookings (Vote Center)
-ReportingUnit	South Dakota;Brown (Vote Center) County	Brown (Vote Center)
+ReportingUnit	South Dakota;Brookings County	Brookings (Vote Center)
+ReportingUnit	South Dakota;Brown County	Brown (Vote Center)
 ReportingUnit	South Dakota;Brule County	Brule
 ReportingUnit	South Dakota;Buffalo County	Buffalo
 ReportingUnit	South Dakota;Butte County	Butte
@@ -368,9 +368,9 @@ ReportingUnit	South Dakota;Hamlin County	Hamlin
 ReportingUnit	South Dakota;Hand County	Hand
 ReportingUnit	South Dakota;Hanson County	Hanson
 ReportingUnit	South Dakota;Harding County	Harding
-ReportingUnit	South Dakota;Hughes (Vote Center) County	Hughes (Vote Center)
+ReportingUnit	South Dakota;Hughes County	Hughes (Vote Center)
 ReportingUnit	South Dakota;Hutchinson County	Hutchinson
-ReportingUnit	South Dakota;Hyde (Vote Center) County	Hyde (Vote Center)
+ReportingUnit	South Dakota;Hyde County	Hyde (Vote Center)
 ReportingUnit	South Dakota;Jackson County	Jackson
 ReportingUnit	South Dakota;Jerauld County	Jerauld
 ReportingUnit	South Dakota;Jones County	Jones
@@ -390,17 +390,16 @@ ReportingUnit	South Dakota;Moody County	Moody
 ReportingUnit	South Dakota;Oglala Lakota County	Oglala Lakota
 ReportingUnit	South Dakota;Pennington County	Pennington
 ReportingUnit	South Dakota;Perkins County	Perkins
-ReportingUnit	South Dakota;Potter (Vote Center) County	Potter (Vote Center)
+ReportingUnit	South Dakota;Potter County	Potter (Vote Center)
 ReportingUnit	South Dakota;Roberts County	Roberts
 ReportingUnit	South Dakota;Sanborn County	Sanborn
 ReportingUnit	South Dakota;Spink County	Spink
 ReportingUnit	South Dakota;Stanley County	Stanley
-ReportingUnit	South Dakota;Sully (Vote Center) County	Sully (Vote Center)
+ReportingUnit	South Dakota;Sully County	Sully (Vote Center)
 ReportingUnit	South Dakota;Todd County	Todd
 ReportingUnit	South Dakota;Tripp County	Tripp
 ReportingUnit	South Dakota;Turner County	Turner
 ReportingUnit	South Dakota;Union County	Union
 ReportingUnit	South Dakota;Walworth County	Walworth
-ReportingUnit	South Dakota;Yankton (Vote Center) County	Yankton (Vote Center)
+ReportingUnit	South Dakota;Yankton County	Yankton (Vote Center)
 ReportingUnit	South Dakota;Ziebach County	Ziebach
-
