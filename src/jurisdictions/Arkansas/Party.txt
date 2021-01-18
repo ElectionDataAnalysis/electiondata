@@ -2,8 +2,11 @@ Name
 Democratic Party
 Republican Party
 Libertarian Party
-Rep
-NON
-Lib
-IND
-Dem
+Green Party
+Independent
+Soc
+Non
+NP
+Lif
+Cns
+Ame
