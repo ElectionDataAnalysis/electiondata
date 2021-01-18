@@ -11,15 +11,15 @@ import election_data_analysis as e
 election = "2020 General"
 jurisdiction = "Arkansas"
 abbr = "AR"
-total_pres_votes = 1211189  # total of all votes for President
+total_pres_votes = 1219069  # total of all votes for President
 cd = 4  # congressional district
-total_cd_votes = 273234  # total votes in the chosen cd
+total_cd_votes = 275035  # total votes in the chosen cd
 shd = 2  # state house district
-total_shd_votes = 11286
+total_shd_votes = 11309
 ssd = 1  # state senate district
 total_ssd_votes = 56633
 single_vote_type = "early"  # pick any one from your file
-pres_votes_vote_type = 817925
+pres_votes_vote_type = 819871
 single_county = "Arkansas;Baxter County"  # pick any one from your file
 pres_votes_county = 21007  # total votes for pres of that county
 
