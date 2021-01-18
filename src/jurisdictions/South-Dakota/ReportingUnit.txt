@@ -1,0 +1,174 @@
+Name	ReportingUnitType
+South Dakota;SD House District 1	state-house
+South Dakota;SD House District 2	state-house
+South Dakota;SD House District 3	state-house
+South Dakota;SD House District 4	state-house
+South Dakota;SD House District 5	state-house
+South Dakota;SD House District 6	state-house
+South Dakota;SD House District 7	state-house
+South Dakota;SD House District 8	state-house
+South Dakota;SD House District 9	state-house
+South Dakota;SD House District 10	state-house
+South Dakota;SD House District 11	state-house
+South Dakota;SD House District 12	state-house
+South Dakota;SD House District 13	state-house
+South Dakota;SD House District 14	state-house
+South Dakota;SD House District 15	state-house
+South Dakota;SD House District 16	state-house
+South Dakota;SD House District 17	state-house
+South Dakota;SD House District 18	state-house
+South Dakota;SD House District 19	state-house
+South Dakota;SD House District 20	state-house
+South Dakota;SD House District 21	state-house
+South Dakota;SD House District 22	state-house
+South Dakota;SD House District 23	state-house
+South Dakota;SD House District 24	state-house
+South Dakota;SD House District 25	state-house
+South Dakota;SD House District 26	state-house
+South Dakota;SD House District 27	state-house
+South Dakota;SD House District 28	state-house
+South Dakota;SD House District 29	state-house
+South Dakota;SD House District 30	state-house
+South Dakota;SD House District 31	state-house
+South Dakota;SD House District 32	state-house
+South Dakota;SD House District 33	state-house
+South Dakota;SD House District 34	state-house
+South Dakota;SD House District 35	state-house
+South Dakota;SD House District 36	state-house
+South Dakota;SD House District 37	state-house
+South Dakota;SD House District 38	state-house
+South Dakota;SD House District 39	state-house
+South Dakota;SD House District 40	state-house
+South Dakota;SD House District 41	state-house
+South Dakota;SD House District 42	state-house
+South Dakota;SD House District 43	state-house
+South Dakota;SD House District 44	state-house
+South Dakota;SD House District 45	state-house
+South Dakota;SD House District 46	state-house
+South Dakota;SD House District 47	state-house
+South Dakota;SD House District 48	state-house
+South Dakota;SD House District 49	state-house
+South Dakota;SD House District 50	state-house
+South Dakota;SD House District 51	state-house
+South Dakota;SD House District 52	state-house
+South Dakota;SD House District 53	state-house
+South Dakota;SD House District 54	state-house
+South Dakota;SD House District 55	state-house
+South Dakota;SD House District 56	state-house
+South Dakota;SD House District 57	state-house
+South Dakota;SD House District 58	state-house
+South Dakota;SD House District 59	state-house
+South Dakota;SD House District 60	state-house
+South Dakota;SD House District 61	state-house
+South Dakota;SD House District 62	state-house
+South Dakota;SD House District 63	state-house
+South Dakota;SD House District 64	state-house
+South Dakota;SD House District 65	state-house
+South Dakota;SD House District 66	state-house
+South Dakota;SD House District 67	state-house
+South Dakota;SD House District 68	state-house
+South Dakota;SD House District 69	state-house
+South Dakota;SD House District 70	state-house
+South Dakota;SD Senate District 1	state-senate
+South Dakota;SD Senate District 2	state-senate
+South Dakota;SD Senate District 3	state-senate
+South Dakota;SD Senate District 4	state-senate
+South Dakota;SD Senate District 5	state-senate
+South Dakota;SD Senate District 6	state-senate
+South Dakota;SD Senate District 7	state-senate
+South Dakota;SD Senate District 8	state-senate
+South Dakota;SD Senate District 9	state-senate
+South Dakota;SD Senate District 10	state-senate
+South Dakota;SD Senate District 11	state-senate
+South Dakota;SD Senate District 12	state-senate
+South Dakota;SD Senate District 13	state-senate
+South Dakota;SD Senate District 14	state-senate
+South Dakota;SD Senate District 15	state-senate
+South Dakota;SD Senate District 16	state-senate
+South Dakota;SD Senate District 17	state-senate
+South Dakota;SD Senate District 18	state-senate
+South Dakota;SD Senate District 19	state-senate
+South Dakota;SD Senate District 20	state-senate
+South Dakota;SD Senate District 21	state-senate
+South Dakota;SD Senate District 22	state-senate
+South Dakota;SD Senate District 23	state-senate
+South Dakota;SD Senate District 24	state-senate
+South Dakota;SD Senate District 25	state-senate
+South Dakota;SD Senate District 26	state-senate
+South Dakota;SD Senate District 27	state-senate
+South Dakota;SD Senate District 28	state-senate
+South Dakota;SD Senate District 29	state-senate
+South Dakota;SD Senate District 30	state-senate
+South Dakota;SD Senate District 31	state-senate
+South Dakota;SD Senate District 32	state-senate
+South Dakota;SD Senate District 33	state-senate
+South Dakota;SD Senate District 34	state-senate
+South Dakota;SD Senate District 35	state-senate
+South Dakota;US House SD District 1	congressional
+South Dakota	state
+South Dakota;Aurora County	county
+South Dakota;Beadle County	county
+South Dakota;Bennett County	county
+South Dakota;Bon Homme County	county
+South Dakota;Brookings (Vote Center) County	county
+South Dakota;Brown (Vote Center) County	county
+South Dakota;Brule County	county
+South Dakota;Buffalo County	county
+South Dakota;Butte County	county
+South Dakota;Campbell County	county
+South Dakota;Charles Mix County	county
+South Dakota;Clark County	county
+South Dakota;Clay County	county
+South Dakota;Codington County	county
+South Dakota;Corson County	county
+South Dakota;Custer County	county
+South Dakota;Davison County	county
+South Dakota;Day County	county
+South Dakota;Deuel County	county
+South Dakota;Dewey County	county
+South Dakota;Douglas County	county
+South Dakota;Edmunds County	county
+South Dakota;Fall River County	county
+South Dakota;Faulk County	county
+South Dakota;Grant County	county
+South Dakota;Gregory County	county
+South Dakota;Haakon County	county
+South Dakota;Hamlin County	county
+South Dakota;Hand County	county
+South Dakota;Hanson County	county
+South Dakota;Harding County	county
+South Dakota;Hughes (Vote Center) County	county
+South Dakota;Hutchinson County	county
+South Dakota;Hyde (Vote Center) County	county
+South Dakota;Jackson County	county
+South Dakota;Jerauld County	county
+South Dakota;Jones County	county
+South Dakota;Kingsbury County	county
+South Dakota;Lake County	county
+South Dakota;Lawrence County	county
+South Dakota;Lincoln County	county
+South Dakota;Lyman County	county
+South Dakota;Marshall County	county
+South Dakota;McCook County	county
+South Dakota;McPherson County	county
+South Dakota;Meade County	county
+South Dakota;Mellette County	county
+South Dakota;Miner County	county
+South Dakota;Minnehaha County	county
+South Dakota;Moody County	county
+South Dakota;Oglala Lakota County	county
+South Dakota;Pennington County	county
+South Dakota;Perkins County	county
+South Dakota;Potter (Vote Center) County	county
+South Dakota;Roberts County	county
+South Dakota;Sanborn County	county
+South Dakota;Spink County	county
+South Dakota;Stanley County	county
+South Dakota;Sully (Vote Center) County	county
+South Dakota;Todd County	county
+South Dakota;Tripp County	county
+South Dakota;Turner County	county
+South Dakota;Union County	county
+South Dakota;Walworth County	county
+South Dakota;Yankton (Vote Center) County	county
+South Dakota;Ziebach County	county
