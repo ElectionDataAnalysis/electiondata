@@ -8,9 +8,6 @@ BallotMeasureContest	PROPOSED STATEWIDE AMENDMENT NUMBER SIX (6)	PROPOSED STATEW
 BallotMeasureSelection	Yes	Yes
 BallotMeasureSelection	No	No
 CountItemType	total	total
-CountItemType	election-day	election-day
-CountItemType	absentee	ABSENTEE
-CountItemType	provisional	PROVISIONAL
 Candidate	Adia Winfrey	Adia Winfrey
 Candidate	Barry Moore	Barry Moore
 Candidate	Donald J. Trump	Donald J. Trump
