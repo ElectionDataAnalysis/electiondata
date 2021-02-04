@@ -2299,16 +2299,27 @@ CandidateContest	VA Senate District 38	Member Senate of Virginia District 038
 CandidateContest	VA Senate District 39	Member Senate of Virginia District 039
 CandidateContest	VA Senate District 40	Member Senate of Virginia District 040
 CandidateContest	US House VA District 1	Member House of Representatives District 01
+CandidateContest	US House VA District 1	Member House of Representatives (01)
 CandidateContest	US House VA District 2	Member House of Representatives District 02
+CandidateContest	US House VA District 2	Member House of Representatives (02)
 CandidateContest	US House VA District 3	Member House of Representatives District 03
+CandidateContest	US House VA District 3	Member House of Representatives (03)
 CandidateContest	US House VA District 4	Member House of Representatives District 04
+CandidateContest	US House VA District 4	Member House of Representatives (04)
 CandidateContest	US House VA District 5	Member House of Representatives District 05
+CandidateContest	US House VA District 5	Member House of Representatives (05)
 CandidateContest	US House VA District 6	Member House of Representatives District 06
+CandidateContest	US House VA District 6	Member House of Representatives (06)
 CandidateContest	US House VA District 7	Member House of Representatives District 07
+CandidateContest	US House VA District 7	Member House of Representatives (07)
 CandidateContest	US House VA District 8	Member House of Representatives District 08
+CandidateContest	US House VA District 8	Member House of Representatives (08)
 CandidateContest	US House VA District 9	Member House of Representatives District 09
+CandidateContest	US House VA District 9	Member House of Representatives (09)
 CandidateContest	US House VA District 10	Member House of Representatives District 10
+CandidateContest	US House VA District 10	Member House of Representatives (10)
 CandidateContest	US House VA District 11	Member House of Representatives District 11
+CandidateContest	US House VA District 11	Member House of Representatives (11)
 CandidateContest	US Senate VA	Member United States Senate
 CandidateContest	US Senate VA	Member United States Senate District 01
 CandidateContest	US Senate VA	Member United States Senate District 02
@@ -5234,3 +5245,24 @@ ReportingUnit	Virginia;Chesapeake City;015 - Greenbrier Middle School	CHESAPEAKE
 ReportingUnit	Virginia;Radford City;004 - New River Precinct	RADFORD CITY;004 - NEW RIVER PRECINCT
 CountItemType	total	TOTAL_VOTES
 CountItemType	total	Votes
+Candidate	Robert C. 'Bobby' Scott	Robert C. 'Bobby' Scott
+Candidate	John W. Collick Jr.	John W. Collick Jr.
+Candidate	Nick J. Freitas	Nick J. Freitas
+Candidate	Abigail A. Spanberger	Abigail A. Spanberger
+Candidate	Nicholas A. Betts	Nicholas A. Betts
+Candidate	Ben L. Cline	Ben L. Cline
+Candidate	Robert J. Wittman	Robert J. Wittman
+Candidate	Qasim Rashid	Qasim Rashid
+Candidate	Jeff A. Jordan	Jeff A. Jordan
+Candidate	Donald S. Beyer Jr.	Donald S. Beyer Jr.
+Candidate	H. Morgan Griffith	H. Morgan Griffith
+Candidate	Manga A. Anantatmula	Manga A. Anantatmula
+Candidate	Gerald E. 'Gerry' Connolly	Gerald E. 'Gerry' Connolly
+Candidate	Leon Benjamin Sr.	Leon Benjamin Sr.
+Candidate	Robert G. 'Bob' Good	Robert G. 'Bob' Good
+Candidate	B. Cameron Webb	B. Cameron Webb
+Candidate	Scott W. Taylor	Scott W. Taylor
+Candidate	Elaine G. Luria	Elaine G. Luria
+Candidate	David Bruce Foster	David Bruce Foster
+Candidate	Jennifer T. Wexton	Jennifer T. Wexton
+Candidate	Aliscia N. Andrews	Aliscia N. Andrews
