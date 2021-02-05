@@ -140,6 +140,7 @@ US President (WV)	West Virginia
 WV Governor	West Virginia
 US Senate WV	West Virginia
 WV Attorney General	West Virginia
-WV Lieutenant Governor	West Virginia
+WV Auditor	West Virginia
 WV Treasurer	West Virginia
+WV Commissioner of Agriculture	West Virginia
 WV Secretary of State	West Virginia

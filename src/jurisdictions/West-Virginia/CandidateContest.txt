@@ -140,6 +140,7 @@ US President (WV)	1	US President (WV)
 WV Governor	1	WV Governor	
 US Senate WV	1	US Senate WV	
 WV Attorney General	1	WV Attorney General	
-WV Lieutenant Governor	1	WV Lieutenant Governor	
-WV Treasurer	1	WV Treasurer	
+WV Auditor	1	WV Auditor
+WV Commissioner of Agriculture	1	WV Commissioner of Agriculture
+WV Treasurer	1	WV Treasurer
 WV Secretary of State	1	WV Secretary of State	

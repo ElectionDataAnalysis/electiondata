@@ -1,1 +1,599 @@
 cdf_element	cdf_internal_name	raw_identifier_value
+CandidateContest	WV House District 1	HOUSE OF DELEGATES, 1st District
+CandidateContest	WV House District 2	HOUSE OF DELEGATES, 2nd District
+CandidateContest	WV House District 3	HOUSE OF DELEGATES, 3rd District
+CandidateContest	WV House District 4	HOUSE OF DELEGATES, 4th District
+CandidateContest	WV House District 5	HOUSE OF DELEGATES, 5th District
+CandidateContest	WV House District 6	HOUSE OF DELEGATES, 6th District
+CandidateContest	WV House District 7	HOUSE OF DELEGATES, 7th District
+CandidateContest	WV House District 8	HOUSE OF DELEGATES, 8th District
+CandidateContest	WV House District 9	HOUSE OF DELEGATES, 9th District
+CandidateContest	WV House District 10	HOUSE OF DELEGATES, 10th District
+CandidateContest	WV House District 11	HOUSE OF DELEGATES, 11th District
+CandidateContest	WV House District 12	HOUSE OF DELEGATES, 12th District
+CandidateContest	WV House District 13	HOUSE OF DELEGATES, 13th District
+CandidateContest	WV House District 14	HOUSE OF DELEGATES, 14th District
+CandidateContest	WV House District 15	HOUSE OF DELEGATES, 15th District
+CandidateContest	WV House District 16	HOUSE OF DELEGATES, 16th District
+CandidateContest	WV House District 17	HOUSE OF DELEGATES, 17th District
+CandidateContest	WV House District 18	HOUSE OF DELEGATES, 18th District
+CandidateContest	WV House District 19	HOUSE OF DELEGATES, 19th District
+CandidateContest	WV House District 20	HOUSE OF DELEGATES, 20th District
+CandidateContest	WV House District 21	HOUSE OF DELEGATES, 21st District
+CandidateContest	WV House District 22	HOUSE OF DELEGATES, 22nd District
+CandidateContest	WV House District 23	HOUSE OF DELEGATES, 23rd District
+CandidateContest	WV House District 24	HOUSE OF DELEGATES, 24th District
+CandidateContest	WV House District 25	HOUSE OF DELEGATES, 25th District
+CandidateContest	WV House District 26	HOUSE OF DELEGATES, 26th District
+CandidateContest	WV House District 27	HOUSE OF DELEGATES, 27th District
+CandidateContest	WV House District 28	HOUSE OF DELEGATES, 28th District
+CandidateContest	WV House District 29	HOUSE OF DELEGATES, 29th District
+CandidateContest	WV House District 30	HOUSE OF DELEGATES, 30th District
+CandidateContest	WV House District 31	HOUSE OF DELEGATES, 31st District
+CandidateContest	WV House District 32	HOUSE OF DELEGATES, 32nd District
+CandidateContest	WV House District 33	HOUSE OF DELEGATES, 33rd District
+CandidateContest	WV House District 34	HOUSE OF DELEGATES, 34th District
+CandidateContest	WV House District 35	HOUSE OF DELEGATES, 35th District
+CandidateContest	WV House District 36	HOUSE OF DELEGATES, 36th District
+CandidateContest	WV House District 37	HOUSE OF DELEGATES, 37th District
+CandidateContest	WV House District 38	HOUSE OF DELEGATES, 38th District
+CandidateContest	WV House District 39	HOUSE OF DELEGATES, 39th District
+CandidateContest	WV House District 40	HOUSE OF DELEGATES, 40th District
+CandidateContest	WV House District 41	HOUSE OF DELEGATES, 41st District
+CandidateContest	WV House District 42	HOUSE OF DELEGATES, 42nd District
+CandidateContest	WV House District 43	HOUSE OF DELEGATES, 43rd District
+CandidateContest	WV House District 44	HOUSE OF DELEGATES, 44th District
+CandidateContest	WV House District 45	HOUSE OF DELEGATES, 45th District
+CandidateContest	WV House District 46	HOUSE OF DELEGATES, 46th District
+CandidateContest	WV House District 47	HOUSE OF DELEGATES, 47th District
+CandidateContest	WV House District 48	HOUSE OF DELEGATES, 48th District
+CandidateContest	WV House District 49	HOUSE OF DELEGATES, 49th District
+CandidateContest	WV House District 50	HOUSE OF DELEGATES, 50th District
+CandidateContest	WV House District 51	HOUSE OF DELEGATES, 51st District
+CandidateContest	WV House District 52	HOUSE OF DELEGATES, 52nd District
+CandidateContest	WV House District 53	HOUSE OF DELEGATES, 53rd District
+CandidateContest	WV House District 54	HOUSE OF DELEGATES, 54th District
+CandidateContest	WV House District 55	HOUSE OF DELEGATES, 55th District
+CandidateContest	WV House District 56	HOUSE OF DELEGATES, 56th District
+CandidateContest	WV House District 57	HOUSE OF DELEGATES, 57th District
+CandidateContest	WV House District 58	HOUSE OF DELEGATES, 58th District
+CandidateContest	WV House District 59	HOUSE OF DELEGATES, 59th District
+CandidateContest	WV House District 60	HOUSE OF DELEGATES, 60th District
+CandidateContest	WV House District 61	HOUSE OF DELEGATES, 61st District
+CandidateContest	WV House District 62	HOUSE OF DELEGATES, 62nd District
+CandidateContest	WV House District 63	HOUSE OF DELEGATES, 63rd District
+CandidateContest	WV House District 64	HOUSE OF DELEGATES, 64th District
+CandidateContest	WV House District 65	HOUSE OF DELEGATES, 65th District
+CandidateContest	WV House District 66	HOUSE OF DELEGATES, 66th District
+CandidateContest	WV House District 67	HOUSE OF DELEGATES, 67th District
+CandidateContest	WV House District 68	HOUSE OF DELEGATES, 68th District
+CandidateContest	WV House District 69	HOUSE OF DELEGATES, 69th District
+CandidateContest	WV House District 70	HOUSE OF DELEGATES, 70th District
+CandidateContest	WV House District 71	HOUSE OF DELEGATES, 71st District
+CandidateContest	WV House District 72	HOUSE OF DELEGATES, 72nd District
+CandidateContest	WV House District 73	HOUSE OF DELEGATES, 73rd District
+CandidateContest	WV House District 74	HOUSE OF DELEGATES, 74th District
+CandidateContest	WV House District 75	HOUSE OF DELEGATES, 75th District
+CandidateContest	WV House District 76	HOUSE OF DELEGATES, 76th District
+CandidateContest	WV House District 77	HOUSE OF DELEGATES, 77th District
+CandidateContest	WV House District 78	HOUSE OF DELEGATES, 78th District
+CandidateContest	WV House District 79	HOUSE OF DELEGATES, 79th District
+CandidateContest	WV House District 80	HOUSE OF DELEGATES, 80th District
+CandidateContest	WV House District 81	HOUSE OF DELEGATES, 81st District
+CandidateContest	WV House District 82	HOUSE OF DELEGATES, 82nd District
+CandidateContest	WV House District 83	HOUSE OF DELEGATES, 83rd District
+CandidateContest	WV House District 84	HOUSE OF DELEGATES, 84th District
+CandidateContest	WV House District 85	HOUSE OF DELEGATES, 85th District
+CandidateContest	WV House District 86	HOUSE OF DELEGATES, 86th District
+CandidateContest	WV House District 87	HOUSE OF DELEGATES, 87th District
+CandidateContest	WV House District 88	HOUSE OF DELEGATES, 88th District
+CandidateContest	WV House District 89	HOUSE OF DELEGATES, 89th District
+CandidateContest	WV House District 90	HOUSE OF DELEGATES, 90th District
+CandidateContest	WV House District 91	HOUSE OF DELEGATES, 91st District
+CandidateContest	WV House District 92	HOUSE OF DELEGATES, 92nd District
+CandidateContest	WV House District 93	HOUSE OF DELEGATES, 93rd District
+CandidateContest	WV House District 94	HOUSE OF DELEGATES, 94th District
+CandidateContest	WV House District 95	HOUSE OF DELEGATES, 95th District
+CandidateContest	WV House District 96	HOUSE OF DELEGATES, 96th District
+CandidateContest	WV House District 97	HOUSE OF DELEGATES, 97th District
+CandidateContest	WV House District 98	HOUSE OF DELEGATES, 98th District
+CandidateContest	WV House District 99	HOUSE OF DELEGATES, 99th District
+CandidateContest	WV House District 100	HOUSE OF DELEGATES, 100th District
+CandidateContest	WV Senate District 1	STATE SENATOR, 1st District
+CandidateContest	WV Senate District 2	STATE SENATOR, 2nd District
+CandidateContest	WV Senate District 3	STATE SENATOR, 3rd District
+CandidateContest	WV Senate District 4	STATE SENATOR, 4th District
+CandidateContest	WV Senate District 5	STATE SENATOR, 5th District
+CandidateContest	WV Senate District 6	STATE SENATOR, 6th District
+CandidateContest	WV Senate District 7	STATE SENATOR, 7th District
+CandidateContest	WV Senate District 8	STATE SENATOR, 8th District
+CandidateContest	WV Senate District 9	STATE SENATOR, 9th District
+CandidateContest	WV Senate District 10	STATE SENATOR, 10th District
+CandidateContest	WV Senate District 11	STATE SENATOR, 11th District
+CandidateContest	WV Senate District 12	STATE SENATOR, 12th District
+CandidateContest	WV Senate District 13	STATE SENATOR, 13th District
+CandidateContest	WV Senate District 14	STATE SENATOR, 14th District
+CandidateContest	WV Senate District 15	STATE SENATOR, 15th District
+CandidateContest	WV Senate District 16	STATE SENATOR, 16th District
+CandidateContest	WV Senate District 17	STATE SENATOR, 17th District
+CandidateContest	WV Senate District 18	STATE SENATOR, 18th District
+CandidateContest	WV Senate District 19	STATE SENATOR, 19th District
+CandidateContest	WV Senate District 20	STATE SENATOR, 20th District
+CandidateContest	WV Senate District 21	STATE SENATOR, 21st District
+CandidateContest	WV Senate District 22	STATE SENATOR, 22nd District
+CandidateContest	WV Senate District 23	STATE SENATOR, 23rd District
+CandidateContest	WV Senate District 24	STATE SENATOR, 24th District
+CandidateContest	WV Senate District 25	STATE SENATOR, 25th District
+CandidateContest	WV Senate District 26	STATE SENATOR, 26th District
+CandidateContest	WV Senate District 27	STATE SENATOR, 27th District
+CandidateContest	WV Senate District 28	STATE SENATOR, 28th District
+CandidateContest	WV Senate District 29	STATE SENATOR, 29th District
+CandidateContest	WV Senate District 30	STATE SENATOR, 30th District
+CandidateContest	WV Senate District 31	STATE SENATOR, 31st District
+CandidateContest	WV Senate District 32	STATE SENATOR, 32nd District
+CandidateContest	WV Senate District 33	STATE SENATOR, 33rd District
+CandidateContest	WV Senate District 34	STATE SENATOR, 34th District
+CandidateContest	US House WV District 1	U.S. HOUSE OF REPRESENTATIVES, 1st Congressional District
+CandidateContest	US House WV District 2	U.S. HOUSE OF REPRESENTATIVES, 2nd Congressional District
+CandidateContest	US House WV District 3	U.S. HOUSE OF REPRESENTATIVES, 3rd Congressional District
+CandidateContest	US President (WV)	PRESIDENT
+CandidateContest	WV Governor	GOVERNOR
+CandidateContest	US Senate WV	U.S. SENATOR
+CandidateContest	WV Attorney General	ATTORNEY GENERAL
+CandidateContest	WV Auditor	AUDITOR
+CandidateContest	WV Commissioner of Agriculture	COMMISSIONER OF AGRICULTURE
+CandidateContest	WV Treasurer	TREASURER
+CandidateContest	WV Secretary of State	SECRETARY OF STATE
+Election	2020 General	2020 General
+Election	2020 Primary	2020 Primary
+Election	2018 General	2018 General
+Election	2016 General	2016 General
+Party	Democratic Party	DEM
+Party	Republican Party	REP
+Party	MTN	MTN
+Party	Libertarian Party	LBN
+ReportingUnit	West Virginia;WV House District 1	West Virginia;WV House District 1
+ReportingUnit	West Virginia;WV House District 2	West Virginia;WV House District 2
+ReportingUnit	West Virginia;WV House District 3	West Virginia;WV House District 3
+ReportingUnit	West Virginia;WV House District 4	West Virginia;WV House District 4
+ReportingUnit	West Virginia;WV House District 5	West Virginia;WV House District 5
+ReportingUnit	West Virginia;WV House District 6	West Virginia;WV House District 6
+ReportingUnit	West Virginia;WV House District 7	West Virginia;WV House District 7
+ReportingUnit	West Virginia;WV House District 8	West Virginia;WV House District 8
+ReportingUnit	West Virginia;WV House District 9	West Virginia;WV House District 9
+ReportingUnit	West Virginia;WV House District 10	West Virginia;WV House District 10
+ReportingUnit	West Virginia;WV House District 11	West Virginia;WV House District 11
+ReportingUnit	West Virginia;WV House District 12	West Virginia;WV House District 12
+ReportingUnit	West Virginia;WV House District 13	West Virginia;WV House District 13
+ReportingUnit	West Virginia;WV House District 14	West Virginia;WV House District 14
+ReportingUnit	West Virginia;WV House District 15	West Virginia;WV House District 15
+ReportingUnit	West Virginia;WV House District 16	West Virginia;WV House District 16
+ReportingUnit	West Virginia;WV House District 17	West Virginia;WV House District 17
+ReportingUnit	West Virginia;WV House District 18	West Virginia;WV House District 18
+ReportingUnit	West Virginia;WV House District 19	West Virginia;WV House District 19
+ReportingUnit	West Virginia;WV House District 20	West Virginia;WV House District 20
+ReportingUnit	West Virginia;WV House District 21	West Virginia;WV House District 21
+ReportingUnit	West Virginia;WV House District 22	West Virginia;WV House District 22
+ReportingUnit	West Virginia;WV House District 23	West Virginia;WV House District 23
+ReportingUnit	West Virginia;WV House District 24	West Virginia;WV House District 24
+ReportingUnit	West Virginia;WV House District 25	West Virginia;WV House District 25
+ReportingUnit	West Virginia;WV House District 26	West Virginia;WV House District 26
+ReportingUnit	West Virginia;WV House District 27	West Virginia;WV House District 27
+ReportingUnit	West Virginia;WV House District 28	West Virginia;WV House District 28
+ReportingUnit	West Virginia;WV House District 29	West Virginia;WV House District 29
+ReportingUnit	West Virginia;WV House District 30	West Virginia;WV House District 30
+ReportingUnit	West Virginia;WV House District 31	West Virginia;WV House District 31
+ReportingUnit	West Virginia;WV House District 32	West Virginia;WV House District 32
+ReportingUnit	West Virginia;WV House District 33	West Virginia;WV House District 33
+ReportingUnit	West Virginia;WV House District 34	West Virginia;WV House District 34
+ReportingUnit	West Virginia;WV House District 35	West Virginia;WV House District 35
+ReportingUnit	West Virginia;WV House District 36	West Virginia;WV House District 36
+ReportingUnit	West Virginia;WV House District 37	West Virginia;WV House District 37
+ReportingUnit	West Virginia;WV House District 38	West Virginia;WV House District 38
+ReportingUnit	West Virginia;WV House District 39	West Virginia;WV House District 39
+ReportingUnit	West Virginia;WV House District 40	West Virginia;WV House District 40
+ReportingUnit	West Virginia;WV House District 41	West Virginia;WV House District 41
+ReportingUnit	West Virginia;WV House District 42	West Virginia;WV House District 42
+ReportingUnit	West Virginia;WV House District 43	West Virginia;WV House District 43
+ReportingUnit	West Virginia;WV House District 44	West Virginia;WV House District 44
+ReportingUnit	West Virginia;WV House District 45	West Virginia;WV House District 45
+ReportingUnit	West Virginia;WV House District 46	West Virginia;WV House District 46
+ReportingUnit	West Virginia;WV House District 47	West Virginia;WV House District 47
+ReportingUnit	West Virginia;WV House District 48	West Virginia;WV House District 48
+ReportingUnit	West Virginia;WV House District 49	West Virginia;WV House District 49
+ReportingUnit	West Virginia;WV House District 50	West Virginia;WV House District 50
+ReportingUnit	West Virginia;WV House District 51	West Virginia;WV House District 51
+ReportingUnit	West Virginia;WV House District 52	West Virginia;WV House District 52
+ReportingUnit	West Virginia;WV House District 53	West Virginia;WV House District 53
+ReportingUnit	West Virginia;WV House District 54	West Virginia;WV House District 54
+ReportingUnit	West Virginia;WV House District 55	West Virginia;WV House District 55
+ReportingUnit	West Virginia;WV House District 56	West Virginia;WV House District 56
+ReportingUnit	West Virginia;WV House District 57	West Virginia;WV House District 57
+ReportingUnit	West Virginia;WV House District 58	West Virginia;WV House District 58
+ReportingUnit	West Virginia;WV House District 59	West Virginia;WV House District 59
+ReportingUnit	West Virginia;WV House District 60	West Virginia;WV House District 60
+ReportingUnit	West Virginia;WV House District 61	West Virginia;WV House District 61
+ReportingUnit	West Virginia;WV House District 62	West Virginia;WV House District 62
+ReportingUnit	West Virginia;WV House District 63	West Virginia;WV House District 63
+ReportingUnit	West Virginia;WV House District 64	West Virginia;WV House District 64
+ReportingUnit	West Virginia;WV House District 65	West Virginia;WV House District 65
+ReportingUnit	West Virginia;WV House District 66	West Virginia;WV House District 66
+ReportingUnit	West Virginia;WV House District 67	West Virginia;WV House District 67
+ReportingUnit	West Virginia;WV House District 68	West Virginia;WV House District 68
+ReportingUnit	West Virginia;WV House District 69	West Virginia;WV House District 69
+ReportingUnit	West Virginia;WV House District 70	West Virginia;WV House District 70
+ReportingUnit	West Virginia;WV House District 71	West Virginia;WV House District 71
+ReportingUnit	West Virginia;WV House District 72	West Virginia;WV House District 72
+ReportingUnit	West Virginia;WV House District 73	West Virginia;WV House District 73
+ReportingUnit	West Virginia;WV House District 74	West Virginia;WV House District 74
+ReportingUnit	West Virginia;WV House District 75	West Virginia;WV House District 75
+ReportingUnit	West Virginia;WV House District 76	West Virginia;WV House District 76
+ReportingUnit	West Virginia;WV House District 77	West Virginia;WV House District 77
+ReportingUnit	West Virginia;WV House District 78	West Virginia;WV House District 78
+ReportingUnit	West Virginia;WV House District 79	West Virginia;WV House District 79
+ReportingUnit	West Virginia;WV House District 80	West Virginia;WV House District 80
+ReportingUnit	West Virginia;WV House District 81	West Virginia;WV House District 81
+ReportingUnit	West Virginia;WV House District 82	West Virginia;WV House District 82
+ReportingUnit	West Virginia;WV House District 83	West Virginia;WV House District 83
+ReportingUnit	West Virginia;WV House District 84	West Virginia;WV House District 84
+ReportingUnit	West Virginia;WV House District 85	West Virginia;WV House District 85
+ReportingUnit	West Virginia;WV House District 86	West Virginia;WV House District 86
+ReportingUnit	West Virginia;WV House District 87	West Virginia;WV House District 87
+ReportingUnit	West Virginia;WV House District 88	West Virginia;WV House District 88
+ReportingUnit	West Virginia;WV House District 89	West Virginia;WV House District 89
+ReportingUnit	West Virginia;WV House District 90	West Virginia;WV House District 90
+ReportingUnit	West Virginia;WV House District 91	West Virginia;WV House District 91
+ReportingUnit	West Virginia;WV House District 92	West Virginia;WV House District 92
+ReportingUnit	West Virginia;WV House District 93	West Virginia;WV House District 93
+ReportingUnit	West Virginia;WV House District 94	West Virginia;WV House District 94
+ReportingUnit	West Virginia;WV House District 95	West Virginia;WV House District 95
+ReportingUnit	West Virginia;WV House District 96	West Virginia;WV House District 96
+ReportingUnit	West Virginia;WV House District 97	West Virginia;WV House District 97
+ReportingUnit	West Virginia;WV House District 98	West Virginia;WV House District 98
+ReportingUnit	West Virginia;WV House District 99	West Virginia;WV House District 99
+ReportingUnit	West Virginia;WV House District 100	West Virginia;WV House District 100
+ReportingUnit	West Virginia;WV Senate District 1	West Virginia;WV Senate District 1
+ReportingUnit	West Virginia;WV Senate District 2	West Virginia;WV Senate District 2
+ReportingUnit	West Virginia;WV Senate District 3	West Virginia;WV Senate District 3
+ReportingUnit	West Virginia;WV Senate District 4	West Virginia;WV Senate District 4
+ReportingUnit	West Virginia;WV Senate District 5	West Virginia;WV Senate District 5
+ReportingUnit	West Virginia;WV Senate District 6	West Virginia;WV Senate District 6
+ReportingUnit	West Virginia;WV Senate District 7	West Virginia;WV Senate District 7
+ReportingUnit	West Virginia;WV Senate District 8	West Virginia;WV Senate District 8
+ReportingUnit	West Virginia;WV Senate District 9	West Virginia;WV Senate District 9
+ReportingUnit	West Virginia;WV Senate District 10	West Virginia;WV Senate District 10
+ReportingUnit	West Virginia;WV Senate District 11	West Virginia;WV Senate District 11
+ReportingUnit	West Virginia;WV Senate District 12	West Virginia;WV Senate District 12
+ReportingUnit	West Virginia;WV Senate District 13	West Virginia;WV Senate District 13
+ReportingUnit	West Virginia;WV Senate District 14	West Virginia;WV Senate District 14
+ReportingUnit	West Virginia;WV Senate District 15	West Virginia;WV Senate District 15
+ReportingUnit	West Virginia;WV Senate District 16	West Virginia;WV Senate District 16
+ReportingUnit	West Virginia;WV Senate District 17	West Virginia;WV Senate District 17
+ReportingUnit	West Virginia;WV Senate District 18	West Virginia;WV Senate District 18
+ReportingUnit	West Virginia;WV Senate District 19	West Virginia;WV Senate District 19
+ReportingUnit	West Virginia;WV Senate District 20	West Virginia;WV Senate District 20
+ReportingUnit	West Virginia;WV Senate District 21	West Virginia;WV Senate District 21
+ReportingUnit	West Virginia;WV Senate District 22	West Virginia;WV Senate District 22
+ReportingUnit	West Virginia;WV Senate District 23	West Virginia;WV Senate District 23
+ReportingUnit	West Virginia;WV Senate District 24	West Virginia;WV Senate District 24
+ReportingUnit	West Virginia;WV Senate District 25	West Virginia;WV Senate District 25
+ReportingUnit	West Virginia;WV Senate District 26	West Virginia;WV Senate District 26
+ReportingUnit	West Virginia;WV Senate District 27	West Virginia;WV Senate District 27
+ReportingUnit	West Virginia;WV Senate District 28	West Virginia;WV Senate District 28
+ReportingUnit	West Virginia;WV Senate District 29	West Virginia;WV Senate District 29
+ReportingUnit	West Virginia;WV Senate District 30	West Virginia;WV Senate District 30
+ReportingUnit	West Virginia;WV Senate District 31	West Virginia;WV Senate District 31
+ReportingUnit	West Virginia;WV Senate District 32	West Virginia;WV Senate District 32
+ReportingUnit	West Virginia;WV Senate District 33	West Virginia;WV Senate District 33
+ReportingUnit	West Virginia;WV Senate District 34	West Virginia;WV Senate District 34
+ReportingUnit	West Virginia;US House WV District 1	West Virginia;US House WV District 1
+ReportingUnit	West Virginia;US House WV District 2	West Virginia;US House WV District 2
+ReportingUnit	West Virginia;US House WV District 3	West Virginia;US House WV District 3
+ReportingUnit	West Virginia	West Virginia
+ReportingUnit	West Virginia;Barbour County	Barbour
+ReportingUnit	West Virginia;Berkeley County	Berkeley
+ReportingUnit	West Virginia;Boone County	Boone
+ReportingUnit	West Virginia;Braxton County	Braxton
+ReportingUnit	West Virginia;Brooke County	Brooke
+ReportingUnit	West Virginia;Cabell County	Cabell
+ReportingUnit	West Virginia;Calhoun County	Calhoun
+ReportingUnit	West Virginia;Clay County	Clay
+ReportingUnit	West Virginia;Doddridge County	Doddridge
+ReportingUnit	West Virginia;Fayette County	Fayette
+ReportingUnit	West Virginia;Gilmer County	Gilmer
+ReportingUnit	West Virginia;Grant County	Grant
+ReportingUnit	West Virginia;Greenbrier County	Greenbrier
+ReportingUnit	West Virginia;Hampshire County	Hampshire
+ReportingUnit	West Virginia;Hancock County	Hancock
+ReportingUnit	West Virginia;Hardy County	Hardy
+ReportingUnit	West Virginia;Harrison County	Harrison
+ReportingUnit	West Virginia;Jackson County	Jackson
+ReportingUnit	West Virginia;Jefferson County	Jefferson
+ReportingUnit	West Virginia;Kanawha County	Kanawha
+ReportingUnit	West Virginia;Lewis County	Lewis
+ReportingUnit	West Virginia;Lincoln County	Lincoln
+ReportingUnit	West Virginia;Logan County	Logan
+ReportingUnit	West Virginia;Marion County	Marion
+ReportingUnit	West Virginia;Marshall County	Marshall
+ReportingUnit	West Virginia;Mason County	Mason
+ReportingUnit	West Virginia;McDowell County	McDowell
+ReportingUnit	West Virginia;Mercer County	Mercer
+ReportingUnit	West Virginia;Mineral County	Mineral
+ReportingUnit	West Virginia;Mingo County	Mingo
+ReportingUnit	West Virginia;Monongalia County	Monongalia
+ReportingUnit	West Virginia;Monroe County	Monroe
+ReportingUnit	West Virginia;Morgan County	Morgan
+ReportingUnit	West Virginia;Nicholas County	Nicholas
+ReportingUnit	West Virginia;Ohio County	Ohio
+ReportingUnit	West Virginia;Pendleton County	Pendleton
+ReportingUnit	West Virginia;Pleasants County	Pleasants
+ReportingUnit	West Virginia;Pocahontas County	Pocahontas
+ReportingUnit	West Virginia;Preston County	Preston
+ReportingUnit	West Virginia;Putnam County	Putnam
+ReportingUnit	West Virginia;Raleigh County	Raleigh
+ReportingUnit	West Virginia;Randolph County	Randolph
+ReportingUnit	West Virginia;Ritchie County	Ritchie
+ReportingUnit	West Virginia;Roane County	Roane
+ReportingUnit	West Virginia;Summers County	Summers
+ReportingUnit	West Virginia;Taylor County	Taylor
+ReportingUnit	West Virginia;Tucker County	Tucker
+ReportingUnit	West Virginia;Tyler County	Tyler
+ReportingUnit	West Virginia;Upshur County	Upshur
+ReportingUnit	West Virginia;Wayne County	Wayne
+ReportingUnit	West Virginia;Webster County	Webster
+ReportingUnit	West Virginia;Wetzel County	Wetzel
+ReportingUnit	West Virginia;Wirt County	Wirt
+ReportingUnit	West Virginia;Wood County	Wood
+ReportingUnit	West Virginia;Wyoming County	Wyoming
+CountItemType	election-day	Election Day
+Candidate	ZACK MAYNARD	ZACK MAYNARD
+Candidate	ZACH LEMAIRE	ZACH LEMAIRE
+Candidate	XAVIER OGLESBY	XAVIER OGLESBY
+Candidate	WILLIAM R. LAIRD IV	WILLIAM R. LAIRD IV
+Candidate	WILLIAM 'TY' NESTOR	WILLIAM 'TY' NESTOR
+Candidate	WILL HYMAN	WILL HYMAN
+Candidate	WES R. PAYNE	WES R. PAYNE
+Candidate	WAYNE CLARK	WAYNE CLARK
+Candidate	VERNON CRISS	VERNON CRISS
+Candidate	TYLER TRUMP	TYLER TRUMP
+Candidate	TRISH PRITCHARD	TRISH PRITCHARD
+Candidate	TREVOR MORRIS	TREVOR MORRIS
+Candidate	TRENTON CARL BARNHART	TRENTON CARL BARNHART
+Candidate	TONY PAYNTER	TONY PAYNTER
+Candidate	TOM HARDEN	TOM HARDEN
+Candidate	TOM FAST	TOM FAST
+Candidate	TODD STAINBROOK	TODD STAINBROOK
+Candidate	TODD LONGANACRE	TODD LONGANACRE
+Candidate	TINA RUSSELL	TINA RUSSELL
+Candidate	TIM TOMBLIN	TIM TOMBLIN
+Candidate	THERESA 'TESS' JACKSON	THERESA 'TESS' JACKSON
+Candidate	TERRI FUNK SYPOLT	TERRI FUNK SYPOLT
+Candidate	SUSAN SHELTON PERRY	SUSAN SHELTON PERRY
+Candidate	STORME SHILEY FRAME	STORME SHILEY FRAME
+Candidate	STEVIE THAXTON	STEVIE THAXTON
+Candidate	STEVE WESTFALL	STEVE WESTFALL
+Candidate	SHELLEY MOORE CAPITO	SHELLEY MOORE CAPITO
+Candidate	SELINA VICKERS	SELINA VICKERS
+Candidate	SEAN HORNBUCKLE	SEAN HORNBUCKLE
+Candidate	SCOTT BREWER	SCOTT BREWER
+Candidate	SAMMI BROWN	SAMMI BROWN
+Candidate	SAM BROWN PETSONK	SAM BROWN PETSONK
+Candidate	RYNE NAHODIL	RYNE NAHODIL
+Candidate	RYAN DEEMS	RYAN DEEMS
+Candidate	RUTH ROWAN	RUTH ROWAN
+Candidate	RUSTY WILLIAMS	RUSTY WILLIAMS
+Candidate	RUPIE PHILLIPS	RUPIE PHILLIPS
+Candidate	ROY G COOPER	ROY G COOPER
+Candidate	RONALD J STRAIGHT	RONALD J STRAIGHT
+Candidate	ROGER HANSHAW	ROGER HANSHAW
+Candidate	ROGER CONLEY	ROGER CONLEY
+Candidate	RODNEY A. MILLER	RODNEY A. MILLER
+Candidate	RODNEY A PYLES	RODNEY A PYLES
+Candidate	ROBIN CUTLIP	ROBIN CUTLIP
+Candidate	ROBERT LEE KARNES	ROBERT LEE KARNES
+Candidate	ROBERT H 'BOB' PLYMALE	ROBERT H 'BOB' PLYMALE
+Candidate	ROBERT E. SMITH	ROBERT E. SMITH
+Candidate	ROBERT 'ROB' GARCIA	ROBERT 'ROB' GARCIA
+Candidate	ROBERT ' BOB' STULTZ	ROBERT ' BOB' STULTZ
+Candidate	RILEY MOORE	RILEY MOORE
+Candidate	RICHARD J IAQUINTA	RICHARD J IAQUINTA
+Candidate	RIC GRIFFITH	RIC GRIFFITH
+Candidate	REBECCA POLIS	REBECCA POLIS
+Candidate	RANDY E SMITH	RANDY E SMITH
+Candidate	RALPH RODIGHIERO	RALPH RODIGHIERO
+Candidate	PHYLLIS WHITE	PHYLLIS WHITE
+Candidate	PHILLIP W WILEY	PHILLIP W WILEY
+Candidate	PHIL MALLOW	PHIL MALLOW
+Candidate	PETE DOUGHERTY	PETE DOUGHERTY
+Candidate	PAULA JEAN SWEARENGIN	PAULA JEAN SWEARENGIN
+Candidate	PAUL ESPINOSA	PAUL ESPINOSA
+Candidate	PAUL DAVID ROSS	PAUL DAVID ROSS
+Candidate	PATRICK S MARTIN	PATRICK S MARTIN
+Candidate	PATRICK MORRISEY	PATRICK MORRISEY
+Candidate	PATRICIA RUCKER	PATRICIA RUCKER
+Candidate	PATRICIA 'PATCH' ADAMS	PATRICIA 'PATCH' ADAMS
+Candidate	NIKKI ARDMAN	NIKKI ARDMAN
+Candidate	NATHAN D. BROWN	NATHAN D. BROWN
+Candidate	NATALIE TENNANT	NATALIE TENNANT
+Candidate	NATALIE CLINE	NATALIE CLINE
+Candidate	N. RILEY KEATON	N. RILEY KEATON
+Candidate	MOORE CAPITO	MOORE CAPITO
+Candidate	MIKE PUSHKIN	MIKE PUSHKIN
+Candidate	MIKE MANYPENNY	MIKE MANYPENNY
+Candidate	MIKE CAPUTO	MIKE CAPUTO
+Candidate	MICK BATES	MICK BATES
+Candidate	MICHAEL LOCKARD	MICHAEL LOCKARD
+Candidate	MICHAEL ANGELUCCI	MICHAEL ANGELUCCI
+Candidate	MICHAEL A YOUNG	MICHAEL A YOUNG
+Candidate	MATTHEW W. DESKINS	MATTHEW W. DESKINS
+Candidate	MATTHEW ROHRBACH	MATTHEW ROHRBACH
+Candidate	MARY KINNIE	MARY KINNIE
+Candidate	MARY ANN ROEBUCK CLAYTOR	MARY ANN ROEBUCK CLAYTOR
+Candidate	MARTY GEARHEART	MARTY GEARHEART
+Candidate	MARK RENNIX	MARK RENNIX
+Candidate	MARK PAULEY	MARK PAULEY
+Candidate	MARK DEAN	MARK DEAN
+Candidate	MARK BATES	MARK BATES
+Candidate	MARK A. HURT	MARK A. HURT
+Candidate	MARGITTA MAZZOCCHI	MARGITTA MAZZOCCHI
+Candidate	MARGARET ANNE STAGGERS	MARGARET ANNE STAGGERS
+Candidate	MAC WARNER	MAC WARNER
+Candidate	LUKE WINTERS	LUKE WINTERS
+Candidate	LOYD BUTCHER	LOYD BUTCHER
+Candidate	LISA ZUKOFF	LISA ZUKOFF
+Candidate	LEATHA WILLIAMS	LEATHA WILLIAMS
+Candidate	LAURA KIMBLE	LAURA KIMBLE
+Candidate	LARRY PACK	LARRY PACK
+Candidate	LARRY L. ROWE	LARRY L. ROWE
+Candidate	LARRY COTTRELL	LARRY COTTRELL
+Candidate	KIM MONGAN-SALADINI	KIM MONGAN-SALADINI
+Candidate	KENT LEONHARDT	KENT LEONHARDT
+Candidate	KEN REED	KEN REED
+Candidate	KAYLA YOUNG	KAYLA YOUNG
+Candidate	KAYLA KESSINGER	KAYLA KESSINGER
+Candidate	KATHY FERGUSON	KATHY FERGUSON
+Candidate	KATHIE HESS CROUSE	KATHIE HESS CROUSE
+Candidate	JUSTIN S. WHITE	JUSTIN S. WHITE
+Candidate	JUNIOR 'JR' WOLFE	JUNIOR 'JR' WOLFE
+Candidate	JOSHUA KURT HIGGINBOTHAM	JOSHUA KURT HIGGINBOTHAM
+Candidate	JOSH MAXWELL	JOSH MAXWELL
+Candidate	JOSH HOLSTEIN	JOSH HOLSTEIN
+Candidate	JOSEPH R. BIDEN	JOSEPH R. BIDEN
+Candidate	JORDAN BRIDGES	JORDAN BRIDGES
+Candidate	JONATHAN ADAM PINSON	JONATHAN ADAM PINSON
+Candidate	JOHNNIE WAMSLEY II	JOHNNIE WAMSLEY II
+Candidate	JOHN WILLIAMS	JOHN WILLIAMS
+Candidate	JOHN R. KELLY	JOHN R. KELLY
+Candidate	JOHN PAUL HOTT II	JOHN PAUL HOTT II
+Candidate	JOHN MANDT	JOHN MANDT
+Candidate	JOHN HARDY	JOHN HARDY
+Candidate	JOHN DOYLE	JOHN DOYLE
+Candidate	JOHN D. PERDUE	JOHN D. PERDUE
+Candidate	JOHN 'JB' MCCUSKEY	JOHN 'JB' MCCUSKEY
+Candidate	JOEY GARCIA	JOEY GARCIA
+Candidate	JOE STATLER	JOE STATLER
+Candidate	JOE JEFFRIES	JOE JEFFRIES
+Candidate	JOE C. ELLINGTON	JOE C. ELLINGTON
+Candidate	JO JORGENSEN	JO JORGENSEN
+Candidate	JIM MARION	JIM MARION
+Candidate	JIM JUSTICE	JIM JUSTICE
+Candidate	JIM BARACH	JIM BARACH
+Candidate	JEFFREY PACK	JEFFREY PACK
+Candidate	JEFF ELDRIDGE	JEFF ELDRIDGE
+Candidate	JEFF CAMPBELL	JEFF CAMPBELL
+Candidate	JEANETTE M. ROWSEY	JEANETTE M. ROWSEY
+Candidate	JASON STEPHENS	JASON STEPHENS
+Candidate	JASON BARRETT	JASON BARRETT
+Candidate	JAROD SHOCKEY	JAROD SHOCKEY
+Candidate	JACK DAVID WOODRUM	JACK DAVID WOODRUM
+Candidate	J. STEVE HAMILTON	J. STEVE HAMILTON
+Candidate	HOWIE HAWKINS	HOWIE HAWKINS
+Candidate	HILARY TURNER	HILARY TURNER
+Candidate	HEATHER TULLY	HEATHER TULLY
+Candidate	GUY WARD	GUY WARD
+Candidate	GLENN D. JEFFRIES	GLENN D. JEFFRIES
+Candidate	GEORGE A MILLER	GEORGE A MILLER
+Candidate	GEOFF FOSTER	GEOFF FOSTER
+Candidate	GARY G. HOWELL	GARY G. HOWELL
+Candidate	EVAN WORRELL	EVAN WORRELL
+Candidate	EVAN HANSEN	EVAN HANSEN
+Candidate	ERIKA KOLENICH	ERIKA KOLENICH
+Candidate	ERIC NELSON	ERIC NELSON
+Candidate	ERIC L. HOUSEHOLDER	ERIC L. HOUSEHOLDER
+Candidate	ELLIOT SIMON	ELLIOT SIMON
+Candidate	ED LARRY	ED LARRY
+Candidate	ED EVANS	ED EVANS
+Candidate	DUANE BRAGG	DUANE BRAGG
+Candidate	DOUG SMITH	DOUG SMITH
+Candidate	DOUG SKAFF	DOUG SKAFF
+Candidate	DOUG FACEMIRE	DOUG FACEMIRE
+Candidate	DONALD KINNIE	DONALD KINNIE
+Candidate	DONALD J. TRUMP	DONALD J. TRUMP
+Candidate	DON FORSHT	DON FORSHT
+Candidate	DIANNA GRAVES	DIANNA GRAVES
+Candidate	DERRICK EVANS	DERRICK EVANS
+Candidate	DENISE CAMPBELL	DENISE CAMPBELL
+Candidate	DEBI CARROLL	DEBI CARROLL
+Candidate	DEAN JEFFRIES	DEAN JEFFRIES
+Candidate	DAVID THOMPSON	DAVID THOMPSON
+Candidate	DAVID RAY CALDWELL	DAVID RAY CALDWELL
+Candidate	DAVID MORAN	DAVID MORAN
+Candidate	DAVID L. KELLY	DAVID L. KELLY
+Candidate	DAVID C. CHILDERS	DAVID C. CHILDERS
+Candidate	DAVID BUGS STOVER	DAVID BUGS STOVER
+Candidate	DAVID B MCKINLEY	DAVID B MCKINLEY
+Candidate	DAVID 'WOODY' HOLMES	DAVID 'WOODY' HOLMES
+Candidate	DAVE PETHTEL	DAVE PETHTEL
+Candidate	DARTON MCINTIRE	DARTON MCINTIRE
+Candidate	DANNY HAMRICK	DANNY HAMRICK
+Candidate	DANIELLE WALKER	DANIELLE WALKER
+Candidate	DANIEL P. 'DANNY' LUTZ	DANIEL P. 'DANNY' LUTZ
+Candidate	DANIEL LINVILLE	DANIEL LINVILLE
+Candidate	DANIEL BENNETT	DANIEL BENNETT
+Candidate	DANA FERRELL	DANA FERRELL
+Candidate	DAKOTA NELSON	DAKOTA NELSON
+Candidate	D.R. BUCK JENNINGS	D.R. BUCK JENNINGS
+Candidate	D. 'SHANNON' KIMES	D. 'SHANNON' KIMES
+Candidate	CRAIG P. BLAIR	CRAIG P. BLAIR
+Candidate	CORY CHASE	CORY CHASE
+Candidate	CODY H THOMPSON	CODY H THOMPSON
+Candidate	CLAY RILEY	CLAY RILEY
+Candidate	CINDY WELCH	CINDY WELCH
+Candidate	CINDY LAVENDER-BOWE	CINDY LAVENDER-BOWE
+Candidate	CINDY FRICH	CINDY FRICH
+Candidate	CHRISTOPHER TONEY	CHRISTOPHER TONEY
+Candidate	CHRISTIAN E. TURAK	CHRISTIAN E. TURAK
+Candidate	CHRIS YEAGER	CHRIS YEAGER
+Candidate	CHRIS WALTERS	CHRIS WALTERS
+Candidate	CHRIS STANSBURY	CHRIS STANSBURY
+Candidate	CHRIS PRITT	CHRIS PRITT
+Candidate	CHRIS PHILLIPS	CHRIS PHILLIPS
+Candidate	CHARLIE REYNOLDS	CHARLIE REYNOLDS
+Candidate	CHARLES R. 'CHAD' SHAFFER	CHARLES R. 'CHAD' SHAFFER
+Candidate	CHARLES K. 'CHUCK' HORST	CHARLES K. 'CHUCK' HORST
+Candidate	CHANDLER SWOPE	CHANDLER SWOPE
+Candidate	CHAD LOVEJOY	CHAD LOVEJOY
+Candidate	CECIL SILVA	CECIL SILVA
+Candidate	CATHY KUNKEL	CATHY KUNKEL
+Candidate	CAROL MILLER	CAROL MILLER
+Candidate	CARL 'ROBBIE' MARTIN	CARL 'ROBBIE' MARTIN
+Candidate	CALEB HANNA	CALEB HANNA
+Candidate	BRYAN C. WARD	BRYAN C. WARD
+Candidate	BRUCE ASHWORTH	BRUCE ASHWORTH
+Candidate	BRETT DAVID ROGERS	BRETT DAVID ROGERS
+Candidate	BRENT BOGGS	BRENT BOGGS
+Candidate	BRANDON STEELE	BRANDON STEELE
+Candidate	BRAD NOLL	BRAD NOLL
+Candidate	BOB BEACH	BOB BEACH
+Candidate	BILL HARTMAN	BILL HARTMAN
+Candidate	BILL ANDERSON	BILL ANDERSON
+Candidate	BEN SALANGO	BEN SALANGO
+Candidate	BEN QUEEN	BEN QUEEN
+Candidate	BARRY L. BRUCE	BARRY L. BRUCE
+Candidate	BARBARA EVANS FLEISCHAUER	BARBARA EVANS FLEISCHAUER
+Candidate	AUSTIN HAYNES	AUSTIN HAYNES
+Candidate	ANNA LEWIS	ANNA LEWIS
+Candidate	ANDREW ROBINSON	ANDREW ROBINSON
+Candidate	ANDREW ALVAREZ	ANDREW ALVAREZ
+Candidate	AMY SUMMERS	AMY SUMMERS
+Candidate	AMY NICHOLE GRADY	AMY NICHOLE GRADY
+Candidate	AMANDA ESTEP-BURTON	AMANDA ESTEP-BURTON
+Candidate	ALEX X MOONEY	ALEX X MOONEY
+Candidate	ADAM BURKHAMMER	ADAM BURKHAMMER
+Candidate	TRAVIS SHULTZ	TRAVIS SHULTZ
+Candidate	SHAWN FLUHARTY	SHAWN FLUHARTY
+Candidate	RYAN W. WELD	RYAN W. WELD
+Candidate	RONNIE D JONES	RONNIE D JONES
+Candidate	ROBERT 'ROBIN' WILSON	ROBERT 'ROBIN' WILSON
+Candidate	RANDY SWARTZMILLER	RANDY SWARTZMILLER
+Candidate	PHILLIP W. DISERIO	PHILLIP W. DISERIO
+Candidate	PAT MCGEEHAN	PAT MCGEEHAN
+Candidate	MIKE MARONEY	MIKE MARONEY
+Candidate	MARK ZATEZALO	MARK ZATEZALO
+Candidate	JOSH GARY	JOSH GARY
+Candidate	JACK WOOD	JACK WOOD
+Candidate	GORDON K. GREER	GORDON K. GREER
+Candidate	ERIKKA STORCH	ERIKKA STORCH
+Candidate	DONNA J BOLEY	DONNA J BOLEY
+Candidate	DALTON HAAS	DALTON HAAS
+Candidate	BENJAMIN SCHNEIDER	BENJAMIN SCHNEIDER
