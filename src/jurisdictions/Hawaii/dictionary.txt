@@ -299,6 +299,7 @@ ReportingUnit	Hawaii;Maui County;Precinct 13-05	13-05
 ReportingUnit	Hawaii;Maui County;Precinct 13-06	13-06
 ReportingUnit	Hawaii;Maui County;Precinct 13-07	13-07
 ReportingUnit	Hawaii;Maui County;Precinct 13-08	13-08
+ReportingUnit	Hawaii;Maui County;Precinct 13-09	13-09
 ReportingUnit	Hawaii;Hawai'i County;Precinct 01-01	01-01
 ReportingUnit	Hawaii;Hawai'i County;Precinct 01-02	01-02
 ReportingUnit	Hawaii;Hawai'i County;Precinct 01-03	01-03
