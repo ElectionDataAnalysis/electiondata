@@ -10,6 +10,7 @@ DC Council District 8	1	DC Council District 8
 DC Council At Large	4	DC Council At Large
 US House DC District 1	1	US House DC District 1
 US Senate DC	1	US Senate DC
+US House Delegate DC	1	US House Delegate DC
 US President (DC)	1	US President (DC)
 DC Mayor	1	DC Mayor
 DC Attorney General	1	DC Attorney General
