@@ -48,8 +48,8 @@ nesting_tags=
 [in_field_values]
 ReportingUnit=<Precinct_Name>
 CandidateContest=<Contest_title>
-Party={<Candidate_name>,^\((\w)\) .*$}
-Candidate={<Candidate_name>,^\(\w\) (.*)$}
+Party={<Candidate_name>,^\((\w)+\) .*$}
+Candidate={<Candidate_name>,^\(\w+\) (.*)$}
 
 [in_count_headers]
 CountItemType=<header_0>

@@ -88,10 +88,15 @@ Election	2020 General	2020 General
 Election	2020 Primary	2020 Primary
 Election	2018 General	2018 General
 Election	2016 General	2016 General
-Party	Democratic Party	Democratic Party
-Party	Republican Party	Republican Party
-Party	Green Party	Green Party
-Party	Libertarian Party	Libertarian Party
+Party	Democratic Party	D
+Party	Republican Party	R
+Party	Green Party	G
+Party	Libertarian Party	L
+Party	Nonpartisan	N
+Party	Constitution Party	C
+Party	Aloha Aina Party	A
+Party	S	S
+Party	American Shopping Party	AS
 ReportingUnit	Hawaii	Hawaii
 ReportingUnit	Hawaii;Honolulu County;Precinct 17-01	17-01
 ReportingUnit	Hawaii;Honolulu County;Precinct 17-02	17-02
@@ -343,4 +348,113 @@ ReportingUnit	Hawaii;Hawai'i County;Precinct 07-02	07-02
 ReportingUnit	Hawaii;Hawai'i County;Precinct 07-03	07-03
 ReportingUnit	Hawaii;Hawai'i County;Precinct 07-04	07-04
 ReportingUnit	Hawaii;Hawai'i County;Precinct 07-05	07-05
+CountItemType	absentee	Absentee_votes
+CountItemType	early	Early_votes
+CountItemType	election-day	Election_Votes
+Candidate	YODER, Steve	YODER, Steve
+Candidate	YAMANE, Ryan I.	YAMANE, Ryan I.
+Candidate	WOODSON, Justin H.	WOODSON, Justin H.
+Candidate	WILDBERGER, Tina M.L.	WILDBERGER, Tina M.L.
+Candidate	WARD, Gene	WARD, Gene
+Candidate	VANDERPOOL, Robin	VANDERPOOL, Robin
+Candidate	TRUMP / PENCE	TRUMP / PENCE
+Candidate	TOKIOKA, James Kunane	TOKIOKA, James Kunane
+Candidate	TODD, Christopher L.T.	TODD, Christopher L.T.
+Candidate	TIPPENS, Michelle Rose	TIPPENS, Michelle Rose
+Candidate	TAM, Adrian	TAM, Adrian
+Candidate	TAKUMI, Roy M.	TAKUMI, Roy M.
+Candidate	TAKAYAMA, Gregg	TAKAYAMA, Gregg
+Candidate	SVRCINA, Emil	SVRCINA, Emil
+Candidate	SOUZA, Kanani	SOUZA, Kanani
+Candidate	SLOM, Sam M.	SLOM, Sam M.
+Candidate	SIMPLICIANO, Joseph K., Jr.	SIMPLICIANO, Joseph K., Jr.
+Candidate	SIMON, Keone F.	SIMON, Keone F.
+Candidate	SHIN, Lorraine Pualani	SHIN, Lorraine Pualani
+Candidate	SEXTON, Andy, Jr. (Umi)	SEXTON, Andy, Jr. (Umi)
+Candidate	SAYAMA, Jackson	SAYAMA, Jackson
+Candidate	SAN BUENAVENTURA, Joy	SAN BUENAVENTURA, Joy
+Candidate	READY, Boyd	READY, Boyd
+Candidate	QUINLAN, Sean	QUINLAN, Sean
+Candidate	QUILINGKING, Tess Abalos	QUILINGKING, Tess Abalos
+Candidate	PARRISH, Michael L. (Mike)	PARRISH, Michael L. (Mike)
+Candidate	ONISHI, Richard H.K.	ONISHI, Richard H.K.
+Candidate	OKIMOTO, Val	OKIMOTO, Val
+Candidate	OCHS, Nicholas R.	OCHS, Nicholas R.
+Candidate	NAKASHIMA, Mark M.	NAKASHIMA, Mark M.
+Candidate	NAKAMURA, Nadine K.	NAKAMURA, Nadine K.
+Candidate	MORIKAWA, Daynette (Dee)	MORIKAWA, Daynette (Dee)
+Candidate	MONAS, Steve	MONAS, Steve
+Candidate	MILLER, John E.	MILLER, John E.
+Candidate	MCMACKIN, Devin Shaw, Sr.	MCMACKIN, Devin Shaw, Sr.
+Candidate	MCKELVEY, Angus L.K.	MCKELVEY, Angus L.K.
+Candidate	MCDERMOTT, Bob	MCDERMOTT, Bob
+Candidate	MATAYOSHI, Scot	MATAYOSHI, Scot
+Candidate	MARTINEZ, Rose	MARTINEZ, Rose
+Candidate	MARTEN, Lisa	MARTEN, Lisa
+Candidate	MAGLINTI, Austin L.S.	MAGLINTI, Austin L.S.
+Candidate	LOPRESTI, Matthew S. (Matt)	LOPRESTI, Matthew S. (Matt)
+Candidate	LEE, Chris	LEE, Chris
+Candidate	LAST, Michael L. (Mike)	LAST, Michael L. (Mike)
+Candidate	LA CHICA, Trish	LA CHICA, Trish
+Candidate	KONG, Sam Satoru	KONG, Sam Satoru
+Candidate	KOGACHI, Keith	KOGACHI, Keith
+Candidate	KOBAYASHI, Bertrand (Bert)	KOBAYASHI, Bertrand (Bert)
+Candidate	KIM-MARSHALL, Kristina	KIM-MARSHALL, Kristina
+Candidate	KEITH-AGARAN, Gil S. Coloma	KEITH-AGARAN, Gil S. Coloma
+Candidate	KEEN, Rynette Ipo	KEEN, Rynette Ipo
+Candidate	KAPELA, Jeanne	KAPELA, Jeanne
+Candidate	KAPAKU, Theresa	KAPAKU, Theresa
+Candidate	KAMA-TOTH, Kukana K.K.	KAMA-TOTH, Kukana K.K.
+Candidate	KAJIWARA-GUSMAN, Christy	KAJIWARA-GUSMAN, Christy
+Candidate	KAHELE, Kaiali'i (Kai)	KAHELE, Kaiali'i (Kai)
+Candidate	KAHAU, Keline-Kameyo	KAHAU, Keline-Kameyo
+Candidate	KA-IPO, Ron G.	KA-IPO, Ron G.
+Candidate	JORGENSEN / COHEN	JORGENSEN / COHEN
+Candidate	ILAGAN, Greggor	ILAGAN, Greggor
+Candidate	HUGHES, Susan	HUGHES, Susan
+Candidate	HOOMANAWANUI, Jonathan	HOOMANAWANUI, Jonathan
+Candidate	HOOHULI, Shaena Dela Cruz	HOOHULI, Shaena Dela Cruz
+Candidate	HOOD, Carl E.	HOOD, Carl E.
+Candidate	HO, Erik K.	HO, Erik K.
+Candidate	HAWKINS / WALKER	HAWKINS / WALKER
+Candidate	HAUMEA, Desmon Antone	HAUMEA, Desmon Antone
+Candidate	HASHEM, Mark Jun	HASHEM, Mark Jun
+Candidate	GYLDSTRAND, Travis D.E.	GYLDSTRAND, Travis D.E.
+Candidate	GREENBERG, Howard E.	GREENBERG, Howard E.
+Candidate	GATES, Cedric Asuega	GATES, Cedric Asuega
+Candidate	GARCIA, Diamond	GARCIA, Diamond
+Candidate	GANADEN, Ernesto M. (Sonny)	GANADEN, Ernesto M. (Sonny)
+Candidate	GABBARD, Mike	GABBARD, Mike
+Candidate	FORD, Lori	FORD, Lori
+Candidate	FEVELLA, Kurt	FEVELLA, Kurt
+Candidate	ELI, Stacelynn Kehaulani	ELI, Stacelynn Kehaulani
+Candidate	DES, Ana Mo	DES, Ana Mo
+Candidate	DELA CRUZ, Donovan	DELA CRUZ, Donovan
+Candidate	DECOITE, Lynn P.	DECOITE, Lynn P.
+Candidate	DECKER, Citlalli Johanna	DECKER, Citlalli Johanna
+Candidate	DANNER, Kilomana	DANNER, Kilomana
+Candidate	CURTIS, Ron	CURTIS, Ron
+Candidate	CULLEN, Ty J.K.	CULLEN, Ty J.K.
+Candidate	CHRUPALYK, Kahala Jen	CHRUPALYK, Kahala Jen
+Candidate	CHEAPE MATSUMOTO, Lauren	CHEAPE MATSUMOTO, Lauren
+Candidate	CHAPMAN, Michael	CHAPMAN, Michael
+Candidate	CHANG, Stanley	CHANG, Stanley
+Candidate	CERMELJ, Hope (Alohalani)	CERMELJ, Hope (Alohalani)
+Candidate	CASE, Ed	CASE, Ed
+Candidate	CABANILLA ARAKAWA, Rida	CABANILLA ARAKAWA, Rida
+Candidate	BURRUS, Ron	BURRUS, Ron
+Candidate	BRANCO, Patrick Pihana	BRANCO, Patrick Pihana
+Candidate	BOYETTE, Jennifer (Jenny)	BOYETTE, Jennifer (Jenny)
+Candidate	BONOAN, Feena M.	BONOAN, Feena M.
+Candidate	BLANKENSHIP / MOHR	BLANKENSHIP / MOHR
+Candidate	BIDEN / HARRIS	BIDEN / HARRIS
+Candidate	BELATTI, Della Au	BELATTI, Della Au
+Candidate	BALINBIN, Kanamu	BALINBIN, Kanamu
+Candidate	ALLEN, Julia E.	ALLEN, Julia E.
+Candidate	ALDEGUER, Maysana Akahai	ALDEGUER, Maysana Akahai
+Candidate	ALCOS, David (Bradda)	ALCOS, David (Bradda)
+Candidate	AKANA, Joe	AKANA, Joe
+Candidate	PIERCE / BALLARD	PIERCE / BALLARD
+Candidate	GIUFFRE, John (Raghu)	GIUFFRE, John (Raghu)
+Candidate	CHEN, Wayne	CHEN, Wayne
 
