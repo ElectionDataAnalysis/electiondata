@@ -1622,7 +1622,7 @@ def get_aux_info(
         for field in fk_candidates:
 
             # if there is a lookup for this field, grab it
-            f_p, f_err = ui.get_parameters(
+            params, f_err = ui.get_parameters(
                 required_keys=[
                     "source_file",
                     "file_type",
@@ -1635,6 +1635,10 @@ def get_aux_info(
                 param_file=munger_path,
             )
             if not f_err:
+                # recast parameters as correct type (all were read as strings)
+                f_p = jm.recast_options(
+                    params, {**opt_munger_params, **req_munger_params}
+                )
                 # prepare dictionary to hold info for this lookup
                 aux[element][field] = dict()
                 # add the foreign key to the list
@@ -1681,7 +1685,8 @@ def incorporate_aux_info(
         lookup_df_dict, fk_err = ui.read_single_datafile(
             lt_path, aux[element][fk]["params"], munger_name, dict(), aux=True
         )
-        lookup_df = lookup_df_dict["Sheet1"]
+        lookup_sheet_name = list(lookup_df_dict.keys())[0]  # TODO tech debt better way to grab one key? what if more keys?
+        lookup_df = lookup_df_dict[lookup_sheet_name]
         # clean the lookup table
         lookup_df = clean_strings(lookup_df, lookup_df.columns)
         # define new column names to e.g. 'County_id LOOKUP County_name'
@@ -1709,7 +1714,10 @@ def incorporate_aux_info(
     return w_df, w_formula, err
 
 
-def get_fields_from_formula(formula: str) -> List[str]:
-    texts_and_fields, final_text = text_fragments_and_fields(formula)
-    fields = [x[1] for x in texts_and_fields]
+def get_fields_from_formula(formula: Optional[str]) -> List[str]:
+    if formula:
+        texts_and_fields, final_text = text_fragments_and_fields(formula)
+        fields = [x[1] for x in texts_and_fields]
+    else:
+        fields = list()
     return fields
