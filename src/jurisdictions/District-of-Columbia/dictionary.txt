@@ -1,1 +1,37 @@
 cdf_element	cdf_internal_name	raw_identifier_value
+CandidateContest	DC Council District 1	WARD ONE MEMBER OF THE COUNCIL
+CandidateContest	DC Council District 2	WARD TWO MEMBER OF THE COUNCIL
+CandidateContest	DC Council District 3	WARD THREE MEMBER OF THE COUNCIL
+CandidateContest	DC Council District 4	WARD FOUR MEMBER OF THE COUNCIL
+CandidateContest	DC Council District 5	WARD FIVE MEMBER OF THE COUNCIL
+CandidateContest	DC Council District 6	WARD SIX MEMBER OF THE COUNCIL
+CandidateContest	DC Council District 7	WARD SEVEN MEMBER OF THE COUNCIL
+CandidateContest	DC Council District 8	WARD EIGHT MEMBER OF THE COUNCIL
+CandidateContest	DC Council At Large	AT-LARGE MEMBER OF THE COUNCIL
+CandidateContest	US House DC District 1	UNITED STATES REPRESENTATIVE
+CandidateContest	US President (DC)	US President (DC)
+CandidateContest	DC Mayor	DC Mayor
+CandidateContest	US Senate DC	UNITED STATES SENATOR
+CandidateContest	DC Attorney General	DC Attorney General
+CandidateContest	DC Lieutenant Governor	DC Lieutenant Governor
+CandidateContest	DC Treasurer	DC Treasurer
+CandidateContest	DC Secretary of State	DC Secretary of State
+Election	2020 General	2020 General
+Election	2020 Primary	2020 Primary
+Election	2018 General	2018 General
+Election	2016 General	2016 General
+Party	Democratic Party	Democratic Party
+Party	Republican Party	Republican Party
+Party	Green Party	Green Party
+Party	Libertarian Party	Libertarian Party
+ReportingUnit	District of Columbia;DC House District 1	District of Columbia;DC House District 1
+ReportingUnit	District of Columbia;DC House District 2	District of Columbia;DC House District 2
+ReportingUnit	District of Columbia;DC House District 3	District of Columbia;DC House District 3
+ReportingUnit	District of Columbia;DC House District 4	District of Columbia;DC House District 4
+ReportingUnit	District of Columbia;DC House District 5	District of Columbia;DC House District 5
+ReportingUnit	District of Columbia;DC House District 6	District of Columbia;DC House District 6
+ReportingUnit	District of Columbia;DC House District 7	District of Columbia;DC House District 7
+ReportingUnit	District of Columbia;DC House District 8	District of Columbia;DC House District 8
+ReportingUnit	District of Columbia;US House DC District 1	District of Columbia;US House DC District 1
+ReportingUnit	District of Columbia	District of Columbia
+

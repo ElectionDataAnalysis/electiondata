@@ -1,11 +1,10 @@
 Name	ReportingUnitType
-District of Columbia;DC House District 1	state-house
-District of Columbia;DC House District 2	state-house
-District of Columbia;DC House District 3	state-house
-District of Columbia;DC House District 4	state-house
-District of Columbia;DC House District 5	state-house
-District of Columbia;DC House District 6	state-house
-District of Columbia;DC House District 7	state-house
-District of Columbia;DC House District 8	state-house
-District of Columbia;US House DC District 1	congressional
 District of Columbia	district
+District of Columbia;Ward 1	ward
+District of Columbia;Ward 2	ward
+District of Columbia;Ward 3	ward
+District of Columbia;Ward 4	ward
+District of Columbia;Ward 5	ward
+District of Columbia;Ward 6	ward
+District of Columbia;Ward 7	ward
+District of Columbia;Ward 8	ward

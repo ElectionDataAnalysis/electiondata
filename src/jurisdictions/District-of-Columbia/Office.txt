@@ -1,16 +1,17 @@
 Name	ElectionDistrict
-DC House District 1	District of Columbia;DC House District 1
-DC House District 2	District of Columbia;DC House District 2
-DC House District 3	District of Columbia;DC House District 3
-DC House District 4	District of Columbia;DC House District 4
-DC House District 5	District of Columbia;DC House District 5
-DC House District 6	District of Columbia;DC House District 6
-DC House District 7	District of Columbia;DC House District 7
-DC House District 8	District of Columbia;DC House District 8
-US House DC District 1	District of Columbia;US House DC District 1
+DC Council District 1	District of Columbia;Ward 1
+DC Council District 2	District of Columbia;Ward 2
+DC Council District 3	District of Columbia;Ward 3
+DC Council District 4	District of Columbia;Ward 4
+DC Council District 5	District of Columbia;Ward 5
+DC Council District 6	District of Columbia;Ward 6
+DC Council District 7	District of Columbia;Ward 7
+DC Council District 8	District of Columbia;Ward 8
+DC Council At Large	District of Columbia
+US House DC District 1	District of Columbia
 US President (DC)	District of Columbia
-DC Governor	District of Columbia
 US Senate DC	District of Columbia
+DC Mayor	District of Columbia
 DC Attorney General	District of Columbia
 DC Lieutenant Governor	District of Columbia
 DC Treasurer	District of Columbia
