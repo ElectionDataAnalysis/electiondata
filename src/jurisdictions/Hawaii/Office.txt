@@ -1,0 +1,86 @@
+Name	ElectionDistrict
+HI House District 1	Hawaii;HI House District 1
+HI House District 2	Hawaii;HI House District 2
+HI House District 3	Hawaii;HI House District 3
+HI House District 4	Hawaii;HI House District 4
+HI House District 5	Hawaii;HI House District 5
+HI House District 6	Hawaii;HI House District 6
+HI House District 7	Hawaii;HI House District 7
+HI House District 8	Hawaii;HI House District 8
+HI House District 9	Hawaii;HI House District 9
+HI House District 10	Hawaii;HI House District 10
+HI House District 11	Hawaii;HI House District 11
+HI House District 12	Hawaii;HI House District 12
+HI House District 13	Hawaii;HI House District 13
+HI House District 14	Hawaii;HI House District 14
+HI House District 15	Hawaii;HI House District 15
+HI House District 16	Hawaii;HI House District 16
+HI House District 17	Hawaii;HI House District 17
+HI House District 18	Hawaii;HI House District 18
+HI House District 19	Hawaii;HI House District 19
+HI House District 20	Hawaii;HI House District 20
+HI House District 21	Hawaii;HI House District 21
+HI House District 22	Hawaii;HI House District 22
+HI House District 23	Hawaii;HI House District 23
+HI House District 24	Hawaii;HI House District 24
+HI House District 25	Hawaii;HI House District 25
+HI House District 26	Hawaii;HI House District 26
+HI House District 27	Hawaii;HI House District 27
+HI House District 28	Hawaii;HI House District 28
+HI House District 29	Hawaii;HI House District 29
+HI House District 30	Hawaii;HI House District 30
+HI House District 31	Hawaii;HI House District 31
+HI House District 32	Hawaii;HI House District 32
+HI House District 33	Hawaii;HI House District 33
+HI House District 34	Hawaii;HI House District 34
+HI House District 35	Hawaii;HI House District 35
+HI House District 36	Hawaii;HI House District 36
+HI House District 37	Hawaii;HI House District 37
+HI House District 38	Hawaii;HI House District 38
+HI House District 39	Hawaii;HI House District 39
+HI House District 40	Hawaii;HI House District 40
+HI House District 41	Hawaii;HI House District 41
+HI House District 42	Hawaii;HI House District 42
+HI House District 43	Hawaii;HI House District 43
+HI House District 44	Hawaii;HI House District 44
+HI House District 45	Hawaii;HI House District 45
+HI House District 46	Hawaii;HI House District 46
+HI House District 47	Hawaii;HI House District 47
+HI House District 48	Hawaii;HI House District 48
+HI House District 49	Hawaii;HI House District 49
+HI House District 50	Hawaii;HI House District 50
+HI House District 51	Hawaii;HI House District 51
+HI Senate District 1	Hawaii;HI Senate District 1
+HI Senate District 2	Hawaii;HI Senate District 2
+HI Senate District 3	Hawaii;HI Senate District 3
+HI Senate District 4	Hawaii;HI Senate District 4
+HI Senate District 5	Hawaii;HI Senate District 5
+HI Senate District 6	Hawaii;HI Senate District 6
+HI Senate District 7	Hawaii;HI Senate District 7
+HI Senate District 8	Hawaii;HI Senate District 8
+HI Senate District 9	Hawaii;HI Senate District 9
+HI Senate District 10	Hawaii;HI Senate District 10
+HI Senate District 11	Hawaii;HI Senate District 11
+HI Senate District 12	Hawaii;HI Senate District 12
+HI Senate District 13	Hawaii;HI Senate District 13
+HI Senate District 14	Hawaii;HI Senate District 14
+HI Senate District 15	Hawaii;HI Senate District 15
+HI Senate District 16	Hawaii;HI Senate District 16
+HI Senate District 17	Hawaii;HI Senate District 17
+HI Senate District 18	Hawaii;HI Senate District 18
+HI Senate District 19	Hawaii;HI Senate District 19
+HI Senate District 20	Hawaii;HI Senate District 20
+HI Senate District 21	Hawaii;HI Senate District 21
+HI Senate District 22	Hawaii;HI Senate District 22
+HI Senate District 23	Hawaii;HI Senate District 23
+HI Senate District 24	Hawaii;HI Senate District 24
+HI Senate District 25	Hawaii;HI Senate District 25
+US House HI District 1	Hawaii;US House HI District 1
+US House HI District 2	Hawaii;US House HI District 2
+US President (HI)	Hawaii
+HI Governor	Hawaii
+US Senate HI	Hawaii
+HI Attorney General	Hawaii
+HI Lieutenant Governor	Hawaii
+HI Treasurer	Hawaii
+HI Secretary of State	Hawaii
