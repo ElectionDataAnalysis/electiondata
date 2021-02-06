@@ -1,0 +1,17 @@
+Name	NumberElected	Office	PrimaryParty
+DC House District 1	1	DC House District 1	
+DC House District 2	1	DC House District 2	
+DC House District 3	1	DC House District 3	
+DC House District 4	1	DC House District 4	
+DC House District 5	1	DC House District 5	
+DC House District 6	1	DC House District 6	
+DC House District 7	1	DC House District 7	
+DC House District 8	1	DC House District 8	
+US House DC District 1	1	US House DC District 1	
+US President (DC)	1	US President (DC)	
+DC Governor	1	DC Governor	
+US Senate DC	1	US Senate DC	
+DC Attorney General	1	DC Attorney General	
+DC Lieutenant Governor	1	DC Lieutenant Governor	
+DC Treasurer	1	DC Treasurer	
+DC Secretary of State	1	DC Secretary of State	
