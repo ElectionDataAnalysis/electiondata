@@ -1,0 +1,120 @@
+BallotName
+Write-Ins
+Richard Brubaker
+Merav Ben David
+Lynnette Grey Bull
+Liz Cheney
+Joseph R. Biden
+Jo Jorgensen
+Jeff Haggit
+Donald J. Trump
+Cynthia M. Lummis
+Brock Pierce
+Valaira Whiteman
+Trey Sherwood
+Tom Walters
+Timothy Hallinan
+Tim Chesnut
+Sue Wilson
+Steve Harshman
+Stan Blake
+Shelly Duncan
+Shawn Johnson
+Scott Heiner
+Sara Burlingame
+Sandy Newsome
+Roy Edwards
+Roxie Hensley
+Robert A. Wharff
+Rebecca Fields
+Rachel Rodriguez-Williams
+Pepper L Ottman
+Patrick 'Pat' Sweeney
+Ocean Andrew
+Mike Yin
+Mike Greear
+Mike A Gilmore
+Matthew Burkhart
+Marshall A. Burt
+Mark S. Kinner
+Mark Jennings
+Mark Baker
+Marcie Kindred
+Lynne Huskinson
+Lloyd Charles Larsen
+Lindsey Travis
+Levi J. Shinkle
+Lela Konecny
+Lee Filer
+Landon J. Brown
+Kevin Wilson
+Kevin C. O'Hearn
+Karlee Provenza
+Joseph S. Porambo
+John R. Winter
+John Eklund
+John Bear
+John B. Romero-Martinez
+Joe MacGuire
+Jim Rosco
+Jim Blackburn
+Jerry Paxton
+Jerry Obermueller
+Jeremy Haroldson
+Jared Olsen
+Jane Ifland
+Jamie Flitner
+Jacquelin Wells
+Hans Hunt
+Evan J. Simpson
+Eric Barlow
+Ember Oakley
+Donald Burkhart
+Danny Eyre
+Dan Zwonitzer
+Dan Laursen
+Cyrus Western
+Clinton D Wagon
+Clark Stith
+Clarence Styvar
+Cindy Johnson Bennett
+Chuck Gray
+Chip Neiman
+Chad M. Banks
+Cathy Connolly
+Bob Nicholas
+Bill Winney
+Bill Henderson
+Bill Fortner
+Bethany Baldes
+Barry Crago
+Art Washut
+Andy Schwartz
+Andi Clifford
+Amy Spieker
+Albert Sommers
+Aaron Clausen
+Wendy Degroot
+Undervotes.1
+Troy D. McKeown
+Tim Salazar
+Tim French
+Theresa Livingston
+Tara Nethercott
+Liisa Anselmi-Dalton
+John K. Kolb
+Jim Anderson
+James Byrd
+Jackie Grimes
+Fred Baldwin
+Ed Cooper
+Dave Kinskey
+Daniel Furphy
+Dan Dockstader
+Charles K. Scott
+Britney Wallesch
+Brian Boner
+Anthony Bouchard
+Affie Ellis
+
+
