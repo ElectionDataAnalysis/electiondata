@@ -194,14 +194,14 @@ US Senate VT	1	US Senate VT
 VT Attorney General	1	VT Attorney General	
 VT Auditor of Accounts	1	VT Auditor of Accounts	
 VT Lieutenant Governor	1	VT Lieutenant Governor	
-VT Treasurer	1	VT Treasurer	
+VT State Treasurer	1	VT State Treasurer	
 VT Secretary of State	1	VT Secretary of State	
 VT Senate District Franklin 5	1	VT Senate District Franklin 5	
 VT Senate District Windsor	1	VT Senate District Windsor	
 VT Senate District Rutland 4	1	VT Senate District Rutland 4	
 VT Senate District Washington-Chittenden	1	VT Senate District Washington-Chittenden	
 VT Senate District Washington 6	1	VT Senate District Washington 6	
-VT Senate District Franklin 2	1	VT Senate District Franklin 2
+VT Senate District Franklin 2	1	VT Senate District Franklin 2	
 VT Senate District Chittenden 8-3	1	VT Senate District Chittenden 8-3	
 VT Senate District Windsor-Orange 2	1	VT Senate District Windsor-Orange 2	
 VT Senate District Addison 1	1	VT Senate District Addison 1	
@@ -210,7 +210,7 @@ VT Senate District Chittenden 7-2	1	VT Senate District Chittenden 7-2
 VT Senate District Chittenden 8-1	1	VT Senate District Chittenden 8-1	
 VT Senate District Windham-Bennington-Windsor	1	VT Senate District Windham-Bennington-Windsor	
 VT Senate District Rutland 5-3	1	VT Senate District Rutland 5-3	
-VT Senate District Orange 1	1	VT Senate District Orange 1
+VT Senate District Orange 1	1	VT Senate District Orange 1	
 VT Senate District Chittenden-1	1	VT Senate District Chittenden-1	
 VT Senate District Windham 4	1	VT Senate District Windham 4	
 VT Senate District Chittenden 7-1	1	VT Senate District Chittenden 7-1	
@@ -291,7 +291,7 @@ VT Senate District Orleans-Lamoille	1	VT Senate District Orleans-Lamoille
 VT Senate District Bennington	1	VT Senate District Bennington	
 VT Senate District Bennington 2-1	1	VT Senate District Bennington 2-1	
 VT Senate District Orange	1	VT Senate District Orange	
-VT Senate District Washington 5	1	VT Senate District Washington 5
+VT Senate District Washington 5	1	VT Senate District Washington 5	
 VT Senate District Lamoille 1	1	VT Senate District Lamoille 1	
 VT Senate District Franklin 3-2	1	VT Senate District Franklin 3-2	
 VT Senate District Addison	1	VT Senate District Addison	
@@ -313,3 +313,107 @@ VT Senate District Washington 3	1	VT Senate District Washington 3
 VT Senate District Chittenden 6-6	1	VT Senate District Chittenden 6-6	
 VT Senate District Orleans-Caledonia	1	VT Senate District Orleans-Caledonia	
 VT Senate District Addison 5	1	VT Senate District Addison 5	
+VT House District Franklin 5	1	VT House District Franklin 5	
+VT House District Rutland 4	1	VT House District Rutland 4	
+VT House District Washington-Chittenden	1	VT House District Washington-Chittenden	
+VT House District Washington 6	1	VT House District Washington 6	
+VT House District Franklin 2	1	VT House District Franklin 2	
+VT House District Chittenden 8-3	1	VT House District Chittenden 8-3	
+VT House District Windsor-Orange 2	1	VT House District Windsor-Orange 2	
+VT House District Addison 1	1	VT House District Addison 1	
+VT House District Essex-Caledonia	1	VT House District Essex-Caledonia	
+VT House District Chittenden 7-2	1	VT House District Chittenden 7-2	
+VT House District Chittenden 8-1	1	VT House District Chittenden 8-1	
+VT House District Windham-Bennington-Windsor	1	VT House District Windham-Bennington-Windsor	
+VT House District Rutland 5-3	1	VT House District Rutland 5-3	
+VT House District Orange 1	1	VT House District Orange 1	
+VT House District Chittenden-1	1	VT House District Chittenden-1	
+VT House District Windham 4	1	VT House District Windham 4	
+VT House District Chittenden 7-1	1	VT House District Chittenden 7-1	
+VT House District Grand Isle-Chittenden	1	VT House District Grand Isle-Chittenden	
+VT House District Windham 6	1	VT House District Windham 6	
+VT House District Washington 4	1	VT House District Washington 4	
+VT House District Rutland-Windsor 2	1	VT House District Rutland-Windsor 2	
+VT House District Caledonia-1	1	VT House District Caledonia-1	
+VT House District Chittenden 5-2	1	VT House District Chittenden 5-2	
+VT House District Windham 2-2	1	VT House District Windham 2-2	
+VT House District Rutland-Windsor 1	1	VT House District Rutland-Windsor 1	
+VT House District Rutland 5-1	1	VT House District Rutland 5-1	
+VT House District Bennington-Rutland	1	VT House District Bennington-Rutland	
+VT House District Chittenden-3	1	VT House District Chittenden-3	
+VT House District Orange-Washington-Addison	1	VT House District Orange-Washington-Addison	
+VT House District Chittenden 6-4	1	VT House District Chittenden 6-4	
+VT House District Orange-Caledonia	1	VT House District Orange-Caledonia	
+VT House District Orange 2	1	VT House District Orange 2	
+VT House District Windsor 3-1	1	VT House District Windsor 3-1	
+VT House District Windham 2-3	1	VT House District Windham 2-3	
+VT House District Rutland-Bennington	1	VT House District Rutland-Bennington	
+VT House District Franklin 6	1	VT House District Franklin 6	
+VT House District Chittenden 10	1	VT House District Chittenden 10	
+VT House District Chittenden 6-1	1	VT House District Chittenden 6-1	
+VT House District Chittenden 6-3	1	VT House District Chittenden 6-3	
+VT House District Washington 1	1	VT House District Washington 1	
+VT House District Chittenden 6-5	1	VT House District Chittenden 6-5	
+VT House District Franklin 4	1	VT House District Franklin 4	
+VT House District Chittenden 9-1	1	VT House District Chittenden 9-1	
+VT House District Franklin 7	1	VT House District Franklin 7	
+VT House District Bennington 1	1	VT House District Bennington 1	
+VT House District Bennington 3	1	VT House District Bennington 3	
+VT House District Rutland 6	1	VT House District Rutland 6	
+VT House District Windham-Bennington	1	VT House District Windham-Bennington	
+VT House District Windsor 5	1	VT House District Windsor 5	
+VT House District Chittenden 7-4	1	VT House District Chittenden 7-4	
+VT House District Chittenden 4-2	1	VT House District Chittenden 4-2	
+VT House District Chittenden 6-2	1	VT House District Chittenden 6-2	
+VT House District Chittenden 6-7	1	VT House District Chittenden 6-7	
+VT House District Windham 3	1	VT House District Windham 3	
+VT House District Orleans 1	1	VT House District Orleans 1	
+VT House District Washington 7	1	VT House District Washington 7	
+VT House District Windsor 1	1	VT House District Windsor 1	
+VT House District Essex-Caledonia-Orleans	1	VT House District Essex-Caledonia-Orleans	
+VT House District Rutland 2	1	VT House District Rutland 2	
+VT House District Addison 3	1	VT House District Addison 3	
+VT House District Bennington 2-2	1	VT House District Bennington 2-2	
+VT House District Rutland 1	1	VT House District Rutland 1	
+VT House District Windsor-Rutland	1	VT House District Windsor-Rutland	
+VT House District Windsor 4-2	1	VT House District Windsor 4-2	
+VT House District Lamoille 2	1	VT House District Lamoille 2	
+VT House District Franklin 3-1	1	VT House District Franklin 3-1	
+VT House District Caledonia-2	1	VT House District Caledonia-2	
+VT House District Addison 4	1	VT House District Addison 4	
+VT House District Windham 2-1	1	VT House District Windham 2-1	
+VT House District Windsor 4-1	1	VT House District Windsor 4-1	
+VT House District Chittenden-2	1	VT House District Chittenden-2	
+VT House District Washington 2	1	VT House District Washington 2	
+VT House District Caledonia-Washington	1	VT House District Caledonia-Washington	
+VT House District Franklin 1	1	VT House District Franklin 1	
+VT House District Rutland 3	1	VT House District Rutland 3	
+VT House District Windham 5	1	VT House District Windham 5	
+VT House District Chittenden 9-2	1	VT House District Chittenden 9-2	
+VT House District Chittenden 7-3	1	VT House District Chittenden 7-3	
+VT House District Windham 1	1	VT House District Windham 1	
+VT House District Caledonia-3	1	VT House District Caledonia-3	
+VT House District Chittenden 8-2	1	VT House District Chittenden 8-2	
+VT House District Rutland 5-2	1	VT House District Rutland 5-2	
+VT House District Orleans-Lamoille	1	VT House District Orleans-Lamoille	
+VT House District Bennington 2-1	1	VT House District Bennington 2-1	
+VT House District Washington 5	1	VT House District Washington 5	
+VT House District Lamoille 1	1	VT House District Lamoille 1	
+VT House District Franklin 3-2	1	VT House District Franklin 3-2	
+VT House District Windsor 2	1	VT House District Windsor 2	
+VT House District Addison 2	1	VT House District Addison 2	
+VT House District Addison-Rutland	1	VT House District Addison-Rutland	
+VT House District Chittenden 4-1	1	VT House District Chittenden 4-1	
+VT House District Chittenden 5-1	1	VT House District Chittenden 5-1	
+VT House District Bennington 4	1	VT House District Bennington 4	
+VT House District Windsor-Orange 1	1	VT House District Windsor-Orange 1	
+VT House District Caledonia-4	1	VT House District Caledonia-4	
+VT House District Orleans 2	1	VT House District Orleans 2	
+VT House District Rutland 5-4	1	VT House District Rutland 5-4	
+VT House District Lamoille-Washington	1	VT House District Lamoille-Washington	
+VT House District Windsor 3-2	1	VT House District Windsor 3-2	
+VT House District Lamoille 3	1	VT House District Lamoille 3	
+VT House District Washington 3	1	VT House District Washington 3	
+VT House District Chittenden 6-6	1	VT House District Chittenden 6-6	
+VT House District Orleans-Caledonia	1	VT House District Orleans-Caledonia	
+VT House District Addison 5	1	VT House District Addison 5	

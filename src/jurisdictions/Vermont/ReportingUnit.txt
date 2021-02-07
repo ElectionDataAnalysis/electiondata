@@ -710,7 +710,6 @@ Vermont;Andover;WDR-3-1	precinct
 Vermont;Alburgh;GI-CHI	precinct
 Vermont;Albany;ORL-CAL	precinct
 Vermont;Addison;ADD-3	precinct
-
 Vermont;VT Senate District Franklin 5	state-house
 Vermont;VT Senate District Windsor	state-senate
 Vermont;VT Senate District Rutland 4	state-house
@@ -828,3 +827,107 @@ Vermont;VT Senate District Washington 3	state-house
 Vermont;VT Senate District Chittenden 6-6	state-house
 Vermont;VT Senate District Orleans-Caledonia	state-house
 Vermont;VT Senate District Addison 5	state-house
+Vermont;VT House District Franklin 5	state-house
+Vermont;VT House District Rutland 4	state-house
+Vermont;VT House District Washington-Chittenden	state-house
+Vermont;VT House District Washington 6	state-house
+Vermont;VT House District Franklin 2	state-house
+Vermont;VT House District Chittenden 8-3	state-house
+Vermont;VT House District Windsor-Orange 2	state-house
+Vermont;VT House District Addison 1	state-house
+Vermont;VT House District Essex-Caledonia	state-house
+Vermont;VT House District Chittenden 7-2	state-house
+Vermont;VT House District Chittenden 8-1	state-house
+Vermont;VT House District Windham-Bennington-Windsor	state-house
+Vermont;VT House District Rutland 5-3	state-house
+Vermont;VT House District Orange 1	state-house
+Vermont;VT House District Chittenden-1	state-house
+Vermont;VT House District Windham 4	state-house
+Vermont;VT House District Chittenden 7-1	state-house
+Vermont;VT House District Grand Isle-Chittenden	state-house
+Vermont;VT House District Windham 6	state-house
+Vermont;VT House District Washington 4	state-house
+Vermont;VT House District Rutland-Windsor 2	state-house
+Vermont;VT House District Caledonia-1	state-house
+Vermont;VT House District Chittenden 5-2	state-house
+Vermont;VT House District Windham 2-2	state-house
+Vermont;VT House District Rutland-Windsor 1	state-house
+Vermont;VT House District Rutland 5-1	state-house
+Vermont;VT House District Bennington-Rutland	state-house
+Vermont;VT House District Chittenden-3	state-house
+Vermont;VT House District Orange-Washington-Addison	state-house
+Vermont;VT House District Chittenden 6-4	state-house
+Vermont;VT House District Orange-Caledonia	state-house
+Vermont;VT House District Orange 2	state-house
+Vermont;VT House District Windsor 3-1	state-house
+Vermont;VT House District Windham 2-3	state-house
+Vermont;VT House District Rutland-Bennington	state-house
+Vermont;VT House District Franklin 6	state-house
+Vermont;VT House District Chittenden 10	state-house
+Vermont;VT House District Chittenden 6-1	state-house
+Vermont;VT House District Chittenden 6-3	state-house
+Vermont;VT House District Washington 1	state-house
+Vermont;VT House District Chittenden 6-5	state-house
+Vermont;VT House District Franklin 4	state-house
+Vermont;VT House District Chittenden 9-1	state-house
+Vermont;VT House District Franklin 7	state-house
+Vermont;VT House District Bennington 1	state-house
+Vermont;VT House District Bennington 3	state-house
+Vermont;VT House District Rutland 6	state-house
+Vermont;VT House District Windham-Bennington	state-house
+Vermont;VT House District Windsor 5	state-house
+Vermont;VT House District Chittenden 7-4	state-house
+Vermont;VT House District Chittenden 4-2	state-house
+Vermont;VT House District Chittenden 6-2	state-house
+Vermont;VT House District Chittenden 6-7	state-house
+Vermont;VT House District Windham 3	state-house
+Vermont;VT House District Orleans 1	state-house
+Vermont;VT House District Washington 7	state-house
+Vermont;VT House District Windsor 1	state-house
+Vermont;VT House District Essex-Caledonia-Orleans	state-house
+Vermont;VT House District Rutland 2	state-house
+Vermont;VT House District Addison 3	state-house
+Vermont;VT House District Bennington 2-2	state-house
+Vermont;VT House District Rutland 1	state-house
+Vermont;VT House District Windsor-Rutland	state-house
+Vermont;VT House District Windsor 4-2	state-house
+Vermont;VT House District Lamoille 2	state-house
+Vermont;VT House District Franklin 3-1	state-house
+Vermont;VT House District Caledonia-2	state-house
+Vermont;VT House District Addison 4	state-house
+Vermont;VT House District Windham 2-1	state-house
+Vermont;VT House District Windsor 4-1	state-house
+Vermont;VT House District Chittenden-2	state-house
+Vermont;VT House District Washington 2	state-house
+Vermont;VT House District Caledonia-Washington	state-house
+Vermont;VT House District Franklin 1	state-house
+Vermont;VT House District Rutland 3	state-house
+Vermont;VT House District Windham 5	state-house
+Vermont;VT House District Chittenden 9-2	state-house
+Vermont;VT House District Chittenden 7-3	state-house
+Vermont;VT House District Windham 1	state-house
+Vermont;VT House District Caledonia-3	state-house
+Vermont;VT House District Chittenden 8-2	state-house
+Vermont;VT House District Rutland 5-2	state-house
+Vermont;VT House District Orleans-Lamoille	state-house
+Vermont;VT House District Bennington 2-1	state-house
+Vermont;VT House District Washington 5	state-house
+Vermont;VT House District Lamoille 1	state-house
+Vermont;VT House District Franklin 3-2	state-house
+Vermont;VT House District Windsor 2	state-house
+Vermont;VT House District Addison 2	state-house
+Vermont;VT House District Addison-Rutland	state-house
+Vermont;VT House District Chittenden 4-1	state-house
+Vermont;VT House District Chittenden 5-1	state-house
+Vermont;VT House District Bennington 4	state-house
+Vermont;VT House District Windsor-Orange 1	state-house
+Vermont;VT House District Caledonia-4	state-house
+Vermont;VT House District Orleans 2	state-house
+Vermont;VT House District Rutland 5-4	state-house
+Vermont;VT House District Lamoille-Washington	state-house
+Vermont;VT House District Windsor 3-2	state-house
+Vermont;VT House District Lamoille 3	state-house
+Vermont;VT House District Washington 3	state-house
+Vermont;VT House District Chittenden 6-6	state-house
+Vermont;VT House District Orleans-Caledonia	state-house
+Vermont;VT House District Addison 5	state-house

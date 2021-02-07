@@ -194,7 +194,7 @@ US Senate VT	Vermont
 VT Attorney General	Vermont
 VT Auditor of Accounts	Vermont
 VT Lieutenant Governor	Vermont
-VT Treasurer	Vermont
+VT State Treasurer	Vermont
 VT Secretary of State	Vermont
 VT Senate District Franklin 5	Vermont;VT Senate District Franklin 5
 VT Senate District Windsor	Vermont;VT Senate District Windsor
@@ -313,3 +313,107 @@ VT Senate District Washington 3	Vermont;VT Senate District Washington 3
 VT Senate District Chittenden 6-6	Vermont;VT Senate District Chittenden 6-6
 VT Senate District Orleans-Caledonia	Vermont;VT Senate District Orleans-Caledonia
 VT Senate District Addison 5	Vermont;VT Senate District Addison 5
+VT House District Franklin 5	Vermont;VT House District Franklin 5
+VT House District Rutland 4	Vermont;VT House District Rutland 4
+VT House District Washington-Chittenden	Vermont;VT House District Washington-Chittenden
+VT House District Washington 6	Vermont;VT House District Washington 6
+VT House District Franklin 2	Vermont;VT House District Franklin 2
+VT House District Chittenden 8-3	Vermont;VT House District Chittenden 8-3
+VT House District Windsor-Orange 2	Vermont;VT House District Windsor-Orange 2
+VT House District Addison 1	Vermont;VT House District Addison 1
+VT House District Essex-Caledonia	Vermont;VT House District Essex-Caledonia
+VT House District Chittenden 7-2	Vermont;VT House District Chittenden 7-2
+VT House District Chittenden 8-1	Vermont;VT House District Chittenden 8-1
+VT House District Windham-Bennington-Windsor	Vermont;VT House District Windham-Bennington-Windsor
+VT House District Rutland 5-3	Vermont;VT House District Rutland 5-3
+VT House District Orange 1	Vermont;VT House District Orange 1
+VT House District Chittenden-1	Vermont;VT House District Chittenden-1
+VT House District Windham 4	Vermont;VT House District Windham 4
+VT House District Chittenden 7-1	Vermont;VT House District Chittenden 7-1
+VT House District Grand Isle-Chittenden	Vermont;VT House District Grand Isle-Chittenden
+VT House District Windham 6	Vermont;VT House District Windham 6
+VT House District Washington 4	Vermont;VT House District Washington 4
+VT House District Rutland-Windsor 2	Vermont;VT House District Rutland-Windsor 2
+VT House District Caledonia-1	Vermont;VT House District Caledonia-1
+VT House District Chittenden 5-2	Vermont;VT House District Chittenden 5-2
+VT House District Windham 2-2	Vermont;VT House District Windham 2-2
+VT House District Rutland-Windsor 1	Vermont;VT House District Rutland-Windsor 1
+VT House District Rutland 5-1	Vermont;VT House District Rutland 5-1
+VT House District Bennington-Rutland	Vermont;VT House District Bennington-Rutland
+VT House District Chittenden-3	Vermont;VT House District Chittenden-3
+VT House District Orange-Washington-Addison	Vermont;VT House District Orange-Washington-Addison
+VT House District Chittenden 6-4	Vermont;VT House District Chittenden 6-4
+VT House District Orange-Caledonia	Vermont;VT House District Orange-Caledonia
+VT House District Orange 2	Vermont;VT House District Orange 2
+VT House District Windsor 3-1	Vermont;VT House District Windsor 3-1
+VT House District Windham 2-3	Vermont;VT House District Windham 2-3
+VT House District Rutland-Bennington	Vermont;VT House District Rutland-Bennington
+VT House District Franklin 6	Vermont;VT House District Franklin 6
+VT House District Chittenden 10	Vermont;VT House District Chittenden 10
+VT House District Chittenden 6-1	Vermont;VT House District Chittenden 6-1
+VT House District Chittenden 6-3	Vermont;VT House District Chittenden 6-3
+VT House District Washington 1	Vermont;VT House District Washington 1
+VT House District Chittenden 6-5	Vermont;VT House District Chittenden 6-5
+VT House District Franklin 4	Vermont;VT House District Franklin 4
+VT House District Chittenden 9-1	Vermont;VT House District Chittenden 9-1
+VT House District Franklin 7	Vermont;VT House District Franklin 7
+VT House District Bennington 1	Vermont;VT House District Bennington 1
+VT House District Bennington 3	Vermont;VT House District Bennington 3
+VT House District Rutland 6	Vermont;VT House District Rutland 6
+VT House District Windham-Bennington	Vermont;VT House District Windham-Bennington
+VT House District Windsor 5	Vermont;VT House District Windsor 5
+VT House District Chittenden 7-4	Vermont;VT House District Chittenden 7-4
+VT House District Chittenden 4-2	Vermont;VT House District Chittenden 4-2
+VT House District Chittenden 6-2	Vermont;VT House District Chittenden 6-2
+VT House District Chittenden 6-7	Vermont;VT House District Chittenden 6-7
+VT House District Windham 3	Vermont;VT House District Windham 3
+VT House District Orleans 1	Vermont;VT House District Orleans 1
+VT House District Washington 7	Vermont;VT House District Washington 7
+VT House District Windsor 1	Vermont;VT House District Windsor 1
+VT House District Essex-Caledonia-Orleans	Vermont;VT House District Essex-Caledonia-Orleans
+VT House District Rutland 2	Vermont;VT House District Rutland 2
+VT House District Addison 3	Vermont;VT House District Addison 3
+VT House District Bennington 2-2	Vermont;VT House District Bennington 2-2
+VT House District Rutland 1	Vermont;VT House District Rutland 1
+VT House District Windsor-Rutland	Vermont;VT House District Windsor-Rutland
+VT House District Windsor 4-2	Vermont;VT House District Windsor 4-2
+VT House District Lamoille 2	Vermont;VT House District Lamoille 2
+VT House District Franklin 3-1	Vermont;VT House District Franklin 3-1
+VT House District Caledonia-2	Vermont;VT House District Caledonia-2
+VT House District Addison 4	Vermont;VT House District Addison 4
+VT House District Windham 2-1	Vermont;VT House District Windham 2-1
+VT House District Windsor 4-1	Vermont;VT House District Windsor 4-1
+VT House District Chittenden-2	Vermont;VT House District Chittenden-2
+VT House District Washington 2	Vermont;VT House District Washington 2
+VT House District Caledonia-Washington	Vermont;VT House District Caledonia-Washington
+VT House District Franklin 1	Vermont;VT House District Franklin 1
+VT House District Rutland 3	Vermont;VT House District Rutland 3
+VT House District Windham 5	Vermont;VT House District Windham 5
+VT House District Chittenden 9-2	Vermont;VT House District Chittenden 9-2
+VT House District Chittenden 7-3	Vermont;VT House District Chittenden 7-3
+VT House District Windham 1	Vermont;VT House District Windham 1
+VT House District Caledonia-3	Vermont;VT House District Caledonia-3
+VT House District Chittenden 8-2	Vermont;VT House District Chittenden 8-2
+VT House District Rutland 5-2	Vermont;VT House District Rutland 5-2
+VT House District Orleans-Lamoille	Vermont;VT House District Orleans-Lamoille
+VT House District Bennington 2-1	Vermont;VT House District Bennington 2-1
+VT House District Washington 5	Vermont;VT House District Washington 5
+VT House District Lamoille 1	Vermont;VT House District Lamoille 1
+VT House District Franklin 3-2	Vermont;VT House District Franklin 3-2
+VT House District Windsor 2	Vermont;VT House District Windsor 2
+VT House District Addison 2	Vermont;VT House District Addison 2
+VT House District Addison-Rutland	Vermont;VT House District Addison-Rutland
+VT House District Chittenden 4-1	Vermont;VT House District Chittenden 4-1
+VT House District Chittenden 5-1	Vermont;VT House District Chittenden 5-1
+VT House District Bennington 4	Vermont;VT House District Bennington 4
+VT House District Windsor-Orange 1	Vermont;VT House District Windsor-Orange 1
+VT House District Caledonia-4	Vermont;VT House District Caledonia-4
+VT House District Orleans 2	Vermont;VT House District Orleans 2
+VT House District Rutland 5-4	Vermont;VT House District Rutland 5-4
+VT House District Lamoille-Washington	Vermont;VT House District Lamoille-Washington
+VT House District Windsor 3-2	Vermont;VT House District Windsor 3-2
+VT House District Lamoille 3	Vermont;VT House District Lamoille 3
+VT House District Washington 3	Vermont;VT House District Washington 3
+VT House District Chittenden 6-6	Vermont;VT House District Chittenden 6-6
+VT House District Orleans-Caledonia	Vermont;VT House District Orleans-Caledonia
+VT House District Addison 5	Vermont;VT House District Addison 5
