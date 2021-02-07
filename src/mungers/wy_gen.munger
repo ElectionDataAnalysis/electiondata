@@ -51,7 +51,7 @@ ReportingUnit=<Unnamed: 0_level_0>
 
 [in_count_headers]
 Candidate={<header_1>,^([^\(]*(?:\n[^\(])*)(?:(?:\([\w]\.*\))|)[^\)]*}
-Party={<header_1>,^[^\(]*(?:\n[^\(])*(?:(?:\((\w+)\.*\))|)[^\)]*}
+Party={<header_1>,^[^\(]*(?:\n[^\(])*(?:\((\w+)\.*\))[^\)]*}
 CandidateContest=<header_0>
 
 #[constant_over_sheet]
