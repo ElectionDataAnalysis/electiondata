@@ -192,6 +192,124 @@ US President (VT)	Vermont
 VT Governor	Vermont
 US Senate VT	Vermont
 VT Attorney General	Vermont
+VT Auditor of Accounts	Vermont
 VT Lieutenant Governor	Vermont
 VT Treasurer	Vermont
 VT Secretary of State	Vermont
+VT Senate District Franklin 5	Vermont;VT Senate District Franklin 5
+VT Senate District Windsor	Vermont;VT Senate District Windsor
+VT Senate District Rutland 4	Vermont;VT Senate District Rutland 4
+VT Senate District Washington-Chittenden	Vermont;VT Senate District Washington-Chittenden
+VT Senate District Washington 6	Vermont;VT Senate District Washington 6
+VT Senate District Franklin 2	Vermont;VT Senate District Franklin 2
+VT Senate District Chittenden 8-3	Vermont;VT Senate District Chittenden 8-3
+VT Senate District Windsor-Orange 2	Vermont;VT Senate District Windsor-Orange 2
+VT Senate District Addison 1	Vermont;VT Senate District Addison 1
+VT Senate District Essex-Caledonia	Vermont;VT Senate District Essex-Caledonia
+VT Senate District Chittenden 7-2	Vermont;VT Senate District Chittenden 7-2
+VT Senate District Chittenden 8-1	Vermont;VT Senate District Chittenden 8-1
+VT Senate District Windham-Bennington-Windsor	Vermont;VT Senate District Windham-Bennington-Windsor
+VT Senate District Rutland 5-3	Vermont;VT Senate District Rutland 5-3
+VT Senate District Orange 1	Vermont;VT Senate District Orange 1
+VT Senate District Chittenden-1	Vermont;VT Senate District Chittenden-1
+VT Senate District Windham 4	Vermont;VT Senate District Windham 4
+VT Senate District Chittenden 7-1	Vermont;VT Senate District Chittenden 7-1
+VT Senate District Grand Isle-Chittenden	Vermont;VT Senate District Grand Isle-Chittenden
+VT Senate District Windham 6	Vermont;VT Senate District Windham 6
+VT Senate District Washington 4	Vermont;VT Senate District Washington 4
+VT Senate District Lamoille	Vermont;VT Senate District Lamoille
+VT Senate District Rutland-Windsor 2	Vermont;VT Senate District Rutland-Windsor 2
+VT Senate District Caledonia-1	Vermont;VT Senate District Caledonia-1
+VT Senate District Chittenden 5-2	Vermont;VT Senate District Chittenden 5-2
+VT Senate District Windham 2-2	Vermont;VT Senate District Windham 2-2
+VT Senate District Rutland-Windsor 1	Vermont;VT Senate District Rutland-Windsor 1
+VT Senate District Rutland 5-1	Vermont;VT Senate District Rutland 5-1
+VT Senate District Bennington-Rutland	Vermont;VT Senate District Bennington-Rutland
+VT Senate District Chittenden-3	Vermont;VT Senate District Chittenden-3
+VT Senate District Orange-Washington-Addison	Vermont;VT Senate District Orange-Washington-Addison
+VT Senate District Chittenden	Vermont;VT Senate District Chittenden
+VT Senate District Chittenden 6-4	Vermont;VT Senate District Chittenden 6-4
+VT Senate District Orange-Caledonia	Vermont;VT Senate District Orange-Caledonia
+VT Senate District Orange 2	Vermont;VT Senate District Orange 2
+VT Senate District Windsor 3-1	Vermont;VT Senate District Windsor 3-1
+VT Senate District Windham 2-3	Vermont;VT Senate District Windham 2-3
+VT Senate District Rutland-Bennington	Vermont;VT Senate District Rutland-Bennington
+VT Senate District Franklin 6	Vermont;VT Senate District Franklin 6
+VT Senate District Chittenden 10	Vermont;VT Senate District Chittenden 10
+VT Senate District Chittenden 6-1	Vermont;VT Senate District Chittenden 6-1
+VT Senate District Chittenden 6-3	Vermont;VT Senate District Chittenden 6-3
+VT Senate District Washington 1	Vermont;VT Senate District Washington 1
+VT Senate District Chittenden 6-5	Vermont;VT Senate District Chittenden 6-5
+VT Senate District Franklin 4	Vermont;VT Senate District Franklin 4
+VT Senate District Chittenden 9-1	Vermont;VT Senate District Chittenden 9-1
+VT Senate District Franklin 7	Vermont;VT Senate District Franklin 7
+VT Senate District Bennington 1	Vermont;VT Senate District Bennington 1
+VT Senate District Bennington 3	Vermont;VT Senate District Bennington 3
+VT Senate District Franklin	Vermont;VT Senate District Franklin
+VT Senate District Rutland 6	Vermont;VT Senate District Rutland 6
+VT Senate District Windham-Bennington	Vermont;VT Senate District Windham-Bennington
+VT Senate District Windsor 5	Vermont;VT Senate District Windsor 5
+VT Senate District Chittenden 7-4	Vermont;VT Senate District Chittenden 7-4
+VT Senate District Chittenden 4-2	Vermont;VT Senate District Chittenden 4-2
+VT Senate District Chittenden 6-2	Vermont;VT Senate District Chittenden 6-2
+VT Senate District Chittenden 6-7	Vermont;VT Senate District Chittenden 6-7
+VT Senate District Windham	Vermont;VT Senate District Windham
+VT Senate District Windham 3	Vermont;VT Senate District Windham 3
+VT Senate District Orleans 1	Vermont;VT Senate District Orleans 1
+VT Senate District Grand Isle	Vermont;VT Senate District Grand Isle
+VT Senate District Washington 7	Vermont;VT Senate District Washington 7
+VT Senate District Windsor 1	Vermont;VT Senate District Windsor 1
+VT Senate District Essex-Caledonia-Orleans	Vermont;VT Senate District Essex-Caledonia-Orleans
+VT Senate District Rutland 2	Vermont;VT Senate District Rutland 2
+VT Senate District Addison 3	Vermont;VT Senate District Addison 3
+VT Senate District Bennington 2-2	Vermont;VT Senate District Bennington 2-2
+VT Senate District Rutland 1	Vermont;VT Senate District Rutland 1
+VT Senate District Windsor-Rutland	Vermont;VT Senate District Windsor-Rutland
+VT Senate District Windsor 4-2	Vermont;VT Senate District Windsor 4-2
+VT Senate District Lamoille 2	Vermont;VT Senate District Lamoille 2
+VT Senate District Franklin 3-1	Vermont;VT Senate District Franklin 3-1
+VT Senate District Caledonia-2	Vermont;VT Senate District Caledonia-2
+VT Senate District Addison 4	Vermont;VT Senate District Addison 4
+VT Senate District Windham 2-1	Vermont;VT Senate District Windham 2-1
+VT Senate District Windsor 4-1	Vermont;VT Senate District Windsor 4-1
+VT Senate District Chittenden-2	Vermont;VT Senate District Chittenden-2
+VT Senate District Washington 2	Vermont;VT Senate District Washington 2
+VT Senate District Caledonia-Washington	Vermont;VT Senate District Caledonia-Washington
+VT Senate District Franklin 1	Vermont;VT Senate District Franklin 1
+VT Senate District Rutland 3	Vermont;VT Senate District Rutland 3
+VT Senate District Caledonia	Vermont;VT Senate District Caledonia
+VT Senate District Windham 5	Vermont;VT Senate District Windham 5
+VT Senate District Chittenden 9-2	Vermont;VT Senate District Chittenden 9-2
+VT Senate District Chittenden 7-3	Vermont;VT Senate District Chittenden 7-3
+VT Senate District Windham 1	Vermont;VT Senate District Windham 1
+VT Senate District Rutland	Vermont;VT Senate District Rutland
+VT Senate District Caledonia-3	Vermont;VT Senate District Caledonia-3
+VT Senate District Chittenden 8-2	Vermont;VT Senate District Chittenden 8-2
+VT Senate District Washington	Vermont;VT Senate District Washington
+VT Senate District Rutland 5-2	Vermont;VT Senate District Rutland 5-2
+VT Senate District Orleans-Lamoille	Vermont;VT Senate District Orleans-Lamoille
+VT Senate District Bennington	Vermont;VT Senate District Bennington
+VT Senate District Bennington 2-1	Vermont;VT Senate District Bennington 2-1
+VT Senate District Orange	Vermont;VT Senate District Orange
+VT Senate District Washington 5	Vermont;VT Senate District Washington 5
+VT Senate District Lamoille 1	Vermont;VT Senate District Lamoille 1
+VT Senate District Franklin 3-2	Vermont;VT Senate District Franklin 3-2
+VT Senate District Addison	Vermont;VT Senate District Addison
+VT Senate District Windsor 2	Vermont;VT Senate District Windsor 2
+VT Senate District Addison 2	Vermont;VT Senate District Addison 2
+VT Senate District Addison-Rutland	Vermont;VT Senate District Addison-Rutland
+VT Senate District Chittenden 4-1	Vermont;VT Senate District Chittenden 4-1
+VT Senate District Chittenden 5-1	Vermont;VT Senate District Chittenden 5-1
+VT Senate District Bennington 4	Vermont;VT Senate District Bennington 4
+VT Senate District Windsor-Orange 1	Vermont;VT Senate District Windsor-Orange 1
+VT Senate District Caledonia-4	Vermont;VT Senate District Caledonia-4
+VT Senate District Orleans 2	Vermont;VT Senate District Orleans 2
+VT Senate District Rutland 5-4	Vermont;VT Senate District Rutland 5-4
+VT Senate District Essex-Orleans	Vermont;VT Senate District Essex-Orleans
+VT Senate District Lamoille-Washington	Vermont;VT Senate District Lamoille-Washington
+VT Senate District Windsor 3-2	Vermont;VT Senate District Windsor 3-2
+VT Senate District Lamoille 3	Vermont;VT Senate District Lamoille 3
+VT Senate District Washington 3	Vermont;VT Senate District Washington 3
+VT Senate District Chittenden 6-6	Vermont;VT Senate District Chittenden 6-6
+VT Senate District Orleans-Caledonia	Vermont;VT Senate District Orleans-Caledonia
+VT Senate District Addison 5	Vermont;VT Senate District Addison 5
