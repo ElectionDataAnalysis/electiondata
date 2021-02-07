@@ -34,7 +34,7 @@ string_field_name_row=0
 ## Optional format parameters:
 #### for any file type:
 #thousands_separator=
-#encoding=
+encoding=windows-1252
 #### for a flat_text or excel file type:
 #all_rows=data
 #### for excel file type:
