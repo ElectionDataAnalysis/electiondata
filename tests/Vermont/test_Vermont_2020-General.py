@@ -14,22 +14,23 @@ import election_data_analysis as e
 #   Move this testing file to the correct jurisdiction folder in `election_data_analysis/tests`
 
 # # # constants - CHANGE THESE!! - use internal db names
+# NB: write-ins are not counted in totals given on website
 election = "2020 General"
-jurisdiction = "North Carolina"
-abbr = "NC"
-total_pres_votes = -1  # total of all votes for US President
-cd = 3  # US House congressional district
-total_cd_votes = -1  # total votes in that US House contest in the chosen cd
-shd = 1  # state house district
-total_shd_votes = -1  # total votes in that State House contest
-ssd = 15  # state senate district
-total_ssd_votes = -1  # total votes in that State Senate contest
-single_vote_type = "early"  # pick any one with corresponding data in your file, but use internal db name
-pres_votes_vote_type = -1  # total votes for US President of that vote type
-county_or_other = "county"  # Change this only if results are subdivided by something other than counties
+jurisdiction = "Vermont"
+abbr = "VT"
+total_pres_votes = 370968 - 278 - 3262 - 1942 	  # total of all votes for US President
+cd = 1  # US House congressional district
+total_cd_votes = 370968 - 383 - 15748  # total votes in that US House contest in the chosen cd
+shd = "BENNINGTON 2-2"  # state house district
+total_shd_votes = 7154 - 1511 - 2  # total votes in that State House contest
+ssd = "GRAND ISLE"  # state senate district
+total_ssd_votes = 13516 - 2018 -1  # total votes in that State Senate contest
+single_vote_type = "total"  # pick any one with corresponding data in your file, but use internal db name
+pres_votes_vote_type = total_pres_votes  # total votes for US President of that vote type
+county_or_other = "town"  # Change this only if results are subdivided by something other than counties
 #  e.g., 'parish' in LA, 'state-house' in Alaska, 'ward' in Philadelphia
-single_county = "North Carolina;Bertie County"  # pick any one from your file, but use internal db name
-pres_votes_county = -1  # total votes for US President in that county
+single_county = "Vermont;Isle La Motte"  # pick any one from your file, but use internal db name
+pres_votes_county =  356 - 7 - 4 # total votes for US President in that county
 
 
 def test_data_exists(dbname):
@@ -42,7 +43,7 @@ def test_presidential(dbname):
             election,
             jurisdiction,
             f"US President ({abbr})",
-            sub_unit_type=county_or_other,
+            sub_unit_type="state",
             dbname=dbname,
         )
         == total_pres_votes
@@ -102,7 +103,7 @@ def test_all_candidates_known(dbname):
         == []
     )
 
-
+"""
 def test_count_type_subtotal(dbname):
     assert (
         e.contest_total(
@@ -115,7 +116,7 @@ def test_count_type_subtotal(dbname):
         )
         == pres_votes_vote_type
     )
-
+"""
 
 def test_county_subtotal(dbname):
     assert (

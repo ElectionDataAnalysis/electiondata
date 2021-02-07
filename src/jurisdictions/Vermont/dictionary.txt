@@ -199,10 +199,23 @@ Election	2020 General	2020 General
 Election	2020 Primary	2020 Primary
 Election	2018 General	2018 General
 Election	2016 General	2016 General
-Party	Democratic Party	Democratic Party
-Party	Republican Party	Republican Party
-Party	Green Party	Green Party
-Party	Libertarian Party	Libertarian Party
+Party	Democratic Party	DEMOCRATIC
+Party	Republican Party	REPUBLICAN
+Party	Green Party	GREEN
+Party	Libertarian Party	LIBERTARIAN
+Party	Unaffiliated Party	UNAFFILIATED
+Party	Socialist Workers Party	SOCIALIST WORKERS
+Party	Prohibition Party	PROHIBITION
+Party	Liberty Union Party	LIBERTY UNION
+Party	Independent Party	INDEPENDENT
+Party	Grumpy Old Patriots Party	GRUMPY OLD PATRIOTS
+Party	Constitution Party	CONSTITUTION
+Party	Bull Moose Party	BULL MOOSE
+Party	Bread And Roses Party	BREAD AND ROSES
+Party	Boiling Frog Party	BOILING FROG
+Party	Approval Voting Party	APPROVAL VOTING
+Party	American Solidarity Party	AMERICAN SOLIDARITY
+Party	Alliance Party	ALLIANCE
 ReportingUnit	Vermont;VT House District 1	Vermont;VT House District 1
 ReportingUnit	Vermont;VT House District 2	Vermont;VT House District 2
 ReportingUnit	Vermont;VT House District 3	Vermont;VT House District 3
@@ -641,7 +654,7 @@ ReportingUnit	Vermont;Woodstock	WOODSTOCK
 ReportingUnit	Vermont;Worcester	WORCESTER
 Candidate	ZOILE APOLO HAMLIN(Write-In)	ZOILE APOLO HAMLIN(Write-In)
 Candidate	ZADA GILMORE(Write-In)	ZADA GILMORE(Write-In)
-Candidate	ZACHARY SCALF		ZACHARY SCALF and MATTHEW LYDA
+Candidate	ZACHARY SCALF	ZACHARY SCALF and MATTHEW LYDA
 Candidate	YZOBELLA PERCE-ENEIDI(Write-In)	YZOBELLA PERCE-ENEIDI(Write-In)
 Candidate	YVETTE ROY/MARIE BOUTIN(Write-In)	YVETTE ROY/MARIE BOUTIN(Write-In)
 Candidate	YORUM SANATS(Write-In)	YORUM SANATS(Write-In)
@@ -730,7 +743,7 @@ Candidate	SAM ELLIOT(Write-In)	SAM ELLIOT(Write-In)
 Candidate	ROSE FREIDMANT(Write-In)	ROSE FREIDMANT(Write-In)
 Candidate	ROSANNE CYR(Write-In)	ROSANNE CYR(Write-In)
 Candidate	ROSA LUXEMBOURG(Write-In)	ROSA LUXEMBOURG(Write-In)
-Candidate	ROQUE 'ROCKY' DE LA FUENTE		ROQUE 'ROCKY' DE LA FUENTE and DARCY G. RICHARDSON
+Candidate	ROQUE 'ROCKY' DE LA FUENTE	ROQUE 'ROCKY' DE LA FUENTE and DARCY G. RICHARDSON
 Candidate	RONALD REAGAN (Write-In)	RONALD REAGAN (Write-In)
 Candidate	RONALD DALY(Write-In)	RONALD DALY(Write-In)
 Candidate	RON PAUL(Write-In)	RON PAUL(Write-In)
@@ -750,7 +763,7 @@ Candidate	RICK SANTORUM (Write-In)	RICK SANTORUM (Write-In)
 Candidate	RICHARD VANDEN BERGH(Write-In)	RICHARD VANDEN BERGH(Write-In)
 Candidate	RICHARD SCHNEIDER(Write-In)	RICHARD SCHNEIDER(Write-In)
 Candidate	RICHARD PLASSE(Write-In)	RICHARD PLASSE(Write-In)
-Candidate	RICHARD DUNCAN		RICHARD DUNCAN and MITCH BUPP
+Candidate	RICHARD DUNCAN	RICHARD DUNCAN and MITCH BUPP
 Candidate	REGGIE NOBLE(Write-In)	REGGIE NOBLE(Write-In)
 Candidate	REAGAN BECK(Write-In)	REAGAN BECK(Write-In)
 Candidate	RANDY LEBAY(Write-In)	RANDY LEBAY(Write-In)
@@ -762,7 +775,7 @@ Candidate	PIERCE DUFRESNE(Write-In)	PIERCE DUFRESNE(Write-In)
 Candidate	PHILLIP J CITEK(Write-In)	PHILLIP J CITEK(Write-In)
 Candidate	PHILLIP J BARNEY(Write-In)	PHILLIP J BARNEY(Write-In)
 Candidate	PHIL SCOTT(Write-In)	PHIL SCOTT(Write-In)
-Candidate	PHIL COLLINS		PHIL COLLINS and BILLY JOE PARKER
+Candidate	PHIL COLLINS	PHIL COLLINS and BILLY JOE PARKER
 Candidate	PETER EDSON(Write-In)	PETER EDSON(Write-In)
 Candidate	PETE BUTTEGIEG(Write-In)	PETE BUTTEGIEG(Write-In)
 Candidate	PAULINE BROUSSEAU(Write-In)	PAULINE BROUSSEAU(Write-In)
@@ -845,7 +858,7 @@ Candidate	LEONARD KIPP(Write-In)	LEONARD KIPP(Write-In)
 Candidate	LEON C. GEOGHOSZ(Write-In)	LEON C. GEOGHOSZ(Write-In)
 Candidate	LARRY SHARP(Write-In)	LARRY SHARP(Write-In)
 Candidate	LABRON JAMES(Write-In)	LABRON JAMES(Write-In)
-Candidate	KYLE KENLEY KOPITKE		KYLE KENLEY KOPITKE and TAJA YVONNE IWANOW
+Candidate	KYLE KENLEY KOPITKE	KYLE KENLEY KOPITKE and TAJA YVONNE IWANOW
 Candidate	KURT ZSCHAU(Write-In)	KURT ZSCHAU(Write-In)
 Candidate	KULE KULINSKI(Write-In)	KULE KULINSKI(Write-In)
 Candidate	KSHAMA SAWANT(Write-In)	KSHAMA SAWANT(Write-In)
@@ -863,12 +876,12 @@ Candidate	KENNETH IRA KRIGSTEIN(Write-In)	KENNETH IRA KRIGSTEIN(Write-In)
 Candidate	KELSIE GABBARD(Write-In)	KELSIE GABBARD(Write-In)
 Candidate	KELLY ANN CONWAY(Write-In)	KELLY ANN CONWAY(Write-In)
 Candidate	KEITH STERN(Write-In)	KEITH STERN(Write-In)
-Candidate	KEITH MCCORMIC		KEITH MCCORMIC and SAM BLASIAK
+Candidate	KEITH MCCORMIC	KEITH MCCORMIC and SAM BLASIAK
 Candidate	KEITH GROCHOWIK(Write-In)	KEITH GROCHOWIK(Write-In)
 Candidate	KEANU REEVES(Write-In)	KEANU REEVES(Write-In)
 Candidate	KATHRYN ZELLNER(Write-In)	KATHRYN ZELLNER(Write-In)
 Candidate	KASIC/BUDTTIGIG(Write-In)	KASIC/BUDTTIGIG(Write-In)
-Candidate	KANYE WEST		KANYE WEST and MICHELLE TIDBALL
+Candidate	KANYE WEST	KANYE WEST and MICHELLE TIDBALL
 Candidate	KAMALA HARRIS(Write-In)	KAMALA HARRIS(Write-In)
 Candidate	JUSTIN MONTEITH(Write-In)	JUSTIN MONTEITH(Write-In)
 Candidate	JUSTIN LINDOR(Write-In)	JUSTIN LINDOR(Write-In)
@@ -877,7 +890,7 @@ Candidate	JULIE ANN BYTHROW(Write-In)	JULIE ANN BYTHROW(Write-In)
 Candidate	JULIAN ASSANGE(Write-In)	JULIAN ASSANGE(Write-In)
 Candidate	JUDY YOUNG(Write-In)	JUDY YOUNG(Write-In)
 Candidate	JUDD GREGG(Write-In)	JUDD GREGG(Write-In)
-Candidate	JOSEPH R. BIDEN		JOSEPH R. BIDEN and KAMALA D. HARRIS
+Candidate	JOSEPH R. BIDEN	JOSEPH R. BIDEN and KAMALA D. HARRIS
 Candidate	JOSEPH KISHORE(Write-In)	JOSEPH KISHORE(Write-In)
 Candidate	JONATHAN GENTINE(Write-In)	JONATHAN GENTINE(Write-In)
 Candidate	JONATHAN FISHMAN(Write-In)	JONATHAN FISHMAN(Write-In)
@@ -906,7 +919,7 @@ Candidate	JOE MONTANA(Write-In)	JOE MONTANA(Write-In)
 Candidate	JOE BIDEN(Write-In)	JOE BIDEN(Write-In)
 Candidate	JOCKO WILLINK(Write-In)	JOCKO WILLINK(Write-In)
 Candidate	JOCKO WILLAH(Write-In)	JOCKO WILLAH(Write-In)
-Candidate	JO JORGENSEN		JO JORGENSEN and JEREMY 'SPIKE' COHEN
+Candidate	JO JORGENSEN	JO JORGENSEN and JEREMY 'SPIKE' COHEN
 Candidate	JIMMY BUFFET(Write-In)	JIMMY BUFFET(Write-In)
 Candidate	JIM MATTIS(Write-In)	JIM MATTIS(Write-In)
 Candidate	JIM DOUGLAS(Write-In)	JIM DOUGLAS(Write-In)
@@ -916,7 +929,7 @@ Candidate	JESUS CALDERON(Write-In)	JESUS CALDERON(Write-In)
 Candidate	JESSIE VENTURA(Write-In)	JESSIE VENTURA(Write-In)
 Candidate	JESSI VENTURA(Write-In)	JESSI VENTURA(Write-In)
 Candidate	JESSE VENTURA(Write-In)	JESSE VENTURA(Write-In)
-Candidate	JEROME SEGAL		JEROME SEGAL and JOHN DE GRAAF
+Candidate	JEROME SEGAL	JEROME SEGAL and JOHN DE GRAAF
 Candidate	JENIFER LOPEZ(Write-In)	JENIFER LOPEZ(Write-In)
 Candidate	JEFFRY LACLAIR(Write-In)	JEFFRY LACLAIR(Write-In)
 Candidate	JEFFREY BEERWORTH(Write-In)	JEFFREY BEERWORTH(Write-In)
@@ -945,24 +958,24 @@ Candidate	JADE SIMMONS(Write-In)	JADE SIMMONS(Write-In)
 Candidate	JACKO WILLINK(Write-In)	JACKO WILLINK(Write-In)
 Candidate	J SPRAKE(Write-In)	J SPRAKE(Write-In)
 Candidate	HUNTER BIDEN(Write-In)	HUNTER BIDEN(Write-In)
-Candidate	HOWIE HAWKINS		HOWIE HAWKINS and ANGELA WALKER
+Candidate	HOWIE HAWKINS	HOWIE HAWKINS and ANGELA WALKER
 Candidate	HOWARD DEAN(Write-In)	HOWARD DEAN(Write-In)
 Candidate	HILARY CLINTON(Write-In)	HILARY CLINTON(Write-In)
-Candidate	H. BROOKE PAIGE		H. BROOKE PAIGE and THOMAS JAMES WITMAN
+Candidate	H. BROOKE PAIGE	H. BROOKE PAIGE and THOMAS JAMES WITMAN
 Candidate	GUY PAGE(Write-In)	GUY PAGE(Write-In)
 Candidate	GREGORY DOVILLARD AND JOSEPH GOLDBERG(Write-In)	GREGORY DOVILLARD AND JOSEPH GOLDBERG(Write-In)
 Candidate	GOVERNOR CUOMO(Write-In)	GOVERNOR CUOMO(Write-In)
 Candidate	GORGE CHAPAEY(Write-In)	GORGE CHAPAEY(Write-In)
 Candidate	GORDON HAYES(Write-In)	GORDON HAYES(Write-In)
 Candidate	GLORIA LARIVA(Write-In)	GLORIA LARIVA(Write-In)
-Candidate	GLORIA LARIVA		GLORIA LARIVA and SUNIL FREEMAN
+Candidate	GLORIA LARIVA	GLORIA LARIVA and SUNIL FREEMAN
 Candidate	GILBERT FITZHUGH(Write-In)	GILBERT FITZHUGH(Write-In)
 Candidate	GEORGE W. BUSH(Write-In)	GEORGE W. BUSH(Write-In)
 Candidate	GEORGE TRIEB(Write-In)	GEORGE TRIEB(Write-In)
 Candidate	GEORGE BUSH(Write-In)	GEORGE BUSH(Write-In)
 Candidate	GENNIFER SET(Write-In)	GENNIFER SET(Write-In)
 Candidate	GENERAL ROBERT SPAULDING(Write-In)	GENERAL ROBERT SPAULDING(Write-In)
-Candidate	GARY SWING		GARY SWING and DAVID OLSZTA
+Candidate	GARY SWING	GARY SWING and DAVID OLSZTA
 Candidate	FRED BRIGHAM(Write-In)	FRED BRIGHAM(Write-In)
 Candidate	FRANKLIN GRAHAM(Write-In)	FRANKLIN GRAHAM(Write-In)
 Candidate	FRANK OTT(Write-In)	FRANK OTT(Write-In)
@@ -989,12 +1002,12 @@ Candidate	DR. FAUCCI(Write-In)	DR. FAUCCI(Write-In)
 Candidate	DR. ANTHONY FAUCI(Write-In)	DR. ANTHONY FAUCI(Write-In)
 Candidate	DOUG GRANT(Write-In)	DOUG GRANT(Write-In)
 Candidate	DONALD TRUMP(Write-In)	DONALD TRUMP(Write-In)
-Candidate	DONALD J. TRUMP		DONALD J. TRUMP and MICHAEL R. PENCE
+Candidate	DONALD J. TRUMP	DONALD J. TRUMP and MICHAEL R. PENCE
 Candidate	DONALD HART(Write-In)	DONALD HART(Write-In)
 Candidate	DONALD DIXON(Write-In)	DONALD DIXON(Write-In)
 Candidate	DON STEVENS(Write-In)	DON STEVENS(Write-In)
 Candidate	DON CREWSHAW(Write-In)	DON CREWSHAW(Write-In)
-Candidate	DON BLANKENSHIP		DON BLANKENSHIP and BILL MOHR
+Candidate	DON BLANKENSHIP	DON BLANKENSHIP and BILL MOHR
 Candidate	DOMINIC FACTORY & SHANE ALTERI(Write-In)	DOMINIC FACTORY & SHANE ALTERI(Write-In)
 Candidate	DISMANTLE TWO PARTY SYSTEM(Write-In)	DISMANTLE TWO PARTY SYSTEM(Write-In)
 Candidate	DICK GREGORY(Write-In)	DICK GREGORY(Write-In)
@@ -1035,7 +1048,7 @@ Candidate	CJ JOHN ROBERTS(Write-In)	CJ JOHN ROBERTS(Write-In)
 Candidate	CIARAM NOBLE(Write-In)	CIARAM NOBLE(Write-In)
 Candidate	CHUCK NORRIS(Write-In)	CHUCK NORRIS(Write-In)
 Candidate	CHRISTOPHER SUNUNU(Write-In)	CHRISTOPHER SUNUNU(Write-In)
-Candidate	CHRISTOPHER LAFONTAINE		CHRISTOPHER LAFONTAINE and MICHAEL SPEED
+Candidate	CHRISTOPHER LAFONTAINE	CHRISTOPHER LAFONTAINE and MICHAEL SPEED
 Candidate	CHRISTOPHER BOLOGNA(Write-In)	CHRISTOPHER BOLOGNA(Write-In)
 Candidate	CHRISTINA NANOPOLOUS(Write-In)	CHRISTINA NANOPOLOUS(Write-In)
 Candidate	CHRISOTPHER M ANTRY(Write-In)	CHRISOTPHER M ANTRY(Write-In)
@@ -1060,18 +1073,18 @@ Candidate	Blank VotesBUTTIGIEG(Write-In)	Blank VotesBUTTIGIEG(Write-In)
 Candidate	BRYAN LIACCIA(Write-In)	BRYAN LIACCIA(Write-In)
 Candidate	BRYAN BRUSSA(Write-In)	BRYAN BRUSSA(Write-In)
 Candidate	BRUCE SMITH(Write-In)	BRUCE SMITH(Write-In)
-Candidate	BROCK PIERCE		BROCK PIERCE and KARLA BALLARD
+Candidate	BROCK PIERCE	BROCK PIERCE and KARLA BALLARD
 Candidate	BROCK ALLEN(Write-In)	BROCK ALLEN(Write-In)
 Candidate	BRITNEY HALLOCK(Write-In)	BRITNEY HALLOCK(Write-In)
 Candidate	BRIANNA TAYLOR(Write-In)	BRIANNA TAYLOR(Write-In)
 Candidate	BRIAN DUBE(Write-In)	BRIAN DUBE(Write-In)
-Candidate	BRIAN CARROLL		BRIAN CARROLL and AMAR PATEL
+Candidate	BRIAN CARROLL	BRIAN CARROLL and AMAR PATEL
 Candidate	BRET WEINSTEIN(Write-In)	BRET WEINSTEIN(Write-In)
 Candidate	BRENDA TAYLOR(Write-In)	BRENDA TAYLOR(Write-In)
 Candidate	BRADLEY COOPER(Write-In)	BRADLEY COOPER(Write-In)
 Candidate	BLANK(Write-In)	BLANK(Write-In)
 Candidate	BLAKE SHELTON(Write-In)	BLAKE SHELTON(Write-In)
-Candidate	BLAKE HUBER		BLAKE HUBER and FRANK ATWOOD
+Candidate	BLAKE HUBER	BLAKE HUBER and FRANK ATWOOD
 Candidate	BILL WELD(Write-In)	BILL WELD(Write-In)
 Candidate	BILL WELCH(Write-In)	BILL WELCH(Write-In)
 Candidate	BILL LEE(Write-In)	BILL LEE(Write-In)
@@ -1110,7 +1123,7 @@ Candidate	AMY COMEY BARRETT(Write-In)	AMY COMEY BARRETT(Write-In)
 Candidate	AMY CHESLEY(Write-In)	AMY CHESLEY(Write-In)
 Candidate	AMANDA L. MARCY(Write-In)	AMANDA L. MARCY(Write-In)
 Candidate	ALYSSA FILLION(Write-In)	ALYSSA FILLION(Write-In)
-Candidate	ALYSON KENNEDY		ALYSON KENNEDY and MALCOLM JARRETT
+Candidate	ALYSON KENNEDY	ALYSON KENNEDY and MALCOLM JARRETT
 Candidate	ALICIA COTE/DOUGLAS COTE(Write-In)	ALICIA COTE/DOUGLAS COTE(Write-In)
 Candidate	ALICE COOPER(Write-In)	ALICE COOPER(Write-In)
 Candidate	ALFRED E NEWMAN(Write-In)	ALFRED E NEWMAN(Write-In)
@@ -1305,3 +1318,97 @@ ReportingUnit	Vermont;Guilford;WDH-1	GUILFORD;WDH-1
 ReportingUnit	Vermont;Guildhall;ESX-CAL	GUILDHALL;ESX-CAL
 ReportingUnit	Vermont;Groton;ORA-CAL	GROTON;ORA-CAL
 ReportingUnit	Vermont;Greensboro;ORL-CAL	GREENSBORO;ORL-CAL
+ReportingUnit	Vermont;Granville;ORA-WAS-ADD	GRANVILLE;ORA-WAS-ADD
+ReportingUnit	Vermont;Grand Isle;GI-CHI	GRAND ISLE;GI-CHI
+ReportingUnit	Vermont;Granby;ESX-CAL	GRANBY;ESX-CAL
+ReportingUnit	Vermont;Grafton;WDH-3	GRAFTON;WDH-3
+ReportingUnit	Vermont;Goshen;ADD-2	GOSHEN;ADD-2
+ReportingUnit	Vermont;Glover;ORL-CAL	GLOVER;ORL-CAL
+ReportingUnit	Vermont;Georgia;FRA-1	GEORGIA;FRA-1
+ReportingUnit	Vermont;Franklin;FRA-5	FRANKLIN;FRA-5
+ReportingUnit	Vermont;Fletcher;FRA-6	FLETCHER;FRA-6
+ReportingUnit	Vermont;Ferrisburgh;ADD-3	FERRISBURGH;ADD-3
+ReportingUnit	Vermont;Fayston;WAS-7	FAYSTON;WAS-7
+ReportingUnit	Vermont;Fairlee;ORA-2	FAIRLEE;ORA-2
+ReportingUnit	Vermont;Fairfield;FRA-6	FAIRFIELD;FRA-6
+ReportingUnit	Vermont;Fairfax;FRA-2	FAIRFAX;FRA-2
+ReportingUnit	Vermont;Fair Haven;RUT-3	FAIR HAVEN;RUT-3
+ReportingUnit	Vermont;Essex;CHI-8-3	ESSEX;CHI-8-3
+ReportingUnit	Vermont;Essex;CHI-8-2	ESSEX;CHI-8-2
+ReportingUnit	Vermont;Essex;CHI-8-1	ESSEX;CHI-8-1
+ReportingUnit	Vermont;Enosburgh;FRA-7	ENOSBURGH;FRA-7
+ReportingUnit	Vermont;Elmore;LAM-WAS	ELMORE;LAM-WAS
+ReportingUnit	Vermont;Eden;ORL-LAM	EDEN;ORL-LAM
+ReportingUnit	Vermont;East Montpelier;WAS-5	EAST MONTPELIER;WAS-5
+ReportingUnit	Vermont;East Haven;ESX-CAL-ORL	EAST HAVEN;ESX-CAL-ORL
+ReportingUnit	Vermont;Duxbury;WAS-7	DUXBURY;WAS-7
+ReportingUnit	Vermont;Dummerston;WDH-4	DUMMERSTON;WDH-4
+ReportingUnit	Vermont;Dover;WDH-BEN	DOVER;WDH-BEN
+ReportingUnit	Vermont;Dorset;BEN-RUT	DORSET;BEN-RUT
+ReportingUnit	Vermont;Derby;ORL-1	DERBY;ORL-1
+ReportingUnit	Vermont;Danville;CAL-WAS	DANVILLE;CAL-WAS
+ReportingUnit	Vermont;Danby;BEN-RUT	DANBY;BEN-RUT
+ReportingUnit	Vermont;Craftsbury;ORL-CAL	CRAFTSBURY;ORL-CAL
+ReportingUnit	Vermont;Coventry;ORL-2	COVENTRY;ORL-2
+ReportingUnit	Vermont;Cornwall;ADD-2	CORNWALL;ADD-2
+ReportingUnit	Vermont;Corinth;ORA-1	CORINTH;ORA-1
+ReportingUnit	Vermont;Concord;ESX-CAL	CONCORD;ESX-CAL
+ReportingUnit	Vermont;Colchester;CHI-9-2	COLCHESTER;CHI-9-2
+ReportingUnit	Vermont;Colchester;CHI-9-1	COLCHESTER;CHI-9-1
+ReportingUnit	Vermont;Clarendon;RUT-2	CLARENDON;RUT-2
+ReportingUnit	Vermont;Chittenden;RUT-WDR-1	CHITTENDEN;RUT-WDR-1
+ReportingUnit	Vermont;Chester;WDR-3-1	CHESTER;WDR-3-1
+ReportingUnit	Vermont;Chelsea;ORA-1	CHELSEA;ORA-1
+ReportingUnit	Vermont;Charlotte;CHI-4-1	CHARLOTTE;CHI-4-1
+ReportingUnit	Vermont;Charleston;ORL-1	CHARLESTON;ORL-1
+ReportingUnit	Vermont;Cavendish;WDR-2	CAVENDISH;WDR-2
+ReportingUnit	Vermont;Castleton;RUT-3	CASTLETON;RUT-3
+ReportingUnit	Vermont;Canaan;ESX-CAL-ORL	CANAAN;ESX-CAL-ORL
+ReportingUnit	Vermont;Cambridge;LAM-3	CAMBRIDGE;LAM-3
+ReportingUnit	Vermont;Calais;WAS-6	CALAIS;WAS-6
+ReportingUnit	Vermont;Cabot;CAL-WAS	CABOT;CAL-WAS
+ReportingUnit	Vermont;Burlington;CHI-6-7	BURLINGTON;CHI-6-7
+ReportingUnit	Vermont;Burlington;CHI-6-6	BURLINGTON;CHI-6-6
+ReportingUnit	Vermont;Burlington;CHI-6-5	BURLINGTON;CHI-6-5
+ReportingUnit	Vermont;Burlington;CHI-6-4	BURLINGTON;CHI-6-4
+ReportingUnit	Vermont;Burlington;CHI-6-3	BURLINGTON;CHI-6-3
+ReportingUnit	Vermont;Burlington;CHI-6-2	BURLINGTON;CHI-6-2
+ReportingUnit	Vermont;Burlington;CHI-6-1	BURLINGTON;CHI-6-1
+ReportingUnit	Vermont;Burke;CAL-4	BURKE;CAL-4
+ReportingUnit	Vermont;Brunswick;ESX-CAL	BRUNSWICK;ESX-CAL
+ReportingUnit	Vermont;Brownington;ORL-1	BROWNINGTON;ORL-1
+ReportingUnit	Vermont;Brookline;WDH-3	BROOKLINE;WDH-3
+ReportingUnit	Vermont;Brookfield;ORA-WAS-ADD	BROOKFIELD;ORA-WAS-ADD
+ReportingUnit	Vermont;Bristol;ADD-4	BRISTOL;ADD-4
+ReportingUnit	Vermont;Brighton;ESX-CAL-ORL	BRIGHTON;ESX-CAL-ORL
+ReportingUnit	Vermont;Bridport;ADD-5	BRIDPORT;ADD-5
+ReportingUnit	Vermont;Bridgewater;RUT-WDR-1	BRIDGEWATER;RUT-WDR-1
+ReportingUnit	Vermont;Brattleboro;WDH-2-3	BRATTLEBORO;WDH-2-3
+ReportingUnit	Vermont;Brattleboro;WDH-2-2	BRATTLEBORO;WDH-2-2
+ReportingUnit	Vermont;Brattleboro;WDH-2-1	BRATTLEBORO;WDH-2-1
+ReportingUnit	Vermont;Brandon;RUT-6	BRANDON;RUT-6
+ReportingUnit	Vermont;Braintree;ORA-WAS-ADD	BRAINTREE;ORA-WAS-ADD
+ReportingUnit	Vermont;Bradford;ORA-2	BRADFORD;ORA-2
+ReportingUnit	Vermont;Bolton;WAS-CHI	BOLTON;WAS-CHI
+ReportingUnit	Vermont;Bloomfield;ESX-CAL-ORL	BLOOMFIELD;ESX-CAL-ORL
+ReportingUnit	Vermont;Bethel;WDR-RUT	BETHEL;WDR-RUT
+ReportingUnit	Vermont;Berlin;WAS-1	BERLIN;WAS-1
+ReportingUnit	Vermont;Berkshire;FRA-5	BERKSHIRE;FRA-5
+ReportingUnit	Vermont;Benson;ADD-RUT	BENSON;ADD-RUT
+ReportingUnit	Vermont;Bennington;BEN-2-2	BENNINGTON;BEN-2-2
+ReportingUnit	Vermont;Bennington;BEN-2-1	BENNINGTON;BEN-2-1
+ReportingUnit	Vermont;Belvidere;LAM-2	BELVIDERE;LAM-2
+ReportingUnit	Vermont;Barton;ORL-CAL	BARTON;ORL-CAL
+ReportingUnit	Vermont;Barre Town;WAS-2	BARRE TOWN;WAS-2
+ReportingUnit	Vermont;Barre City;WAS-3	BARRE CITY;WAS-3
+ReportingUnit	Vermont;Barnet;CAL-1	BARNET;CAL-1
+ReportingUnit	Vermont;Barnard;WDR-4-1	BARNARD;WDR-4-1
+ReportingUnit	Vermont;Baltimore;WDR-3-1	BALTIMORE;WDR-3-1
+ReportingUnit	Vermont;Bakersfield;FRA-6	BAKERSFIELD;FRA-6
+ReportingUnit	Vermont;Athens;WDH-3	ATHENS;WDH-3
+ReportingUnit	Vermont;Arlington;BEN-4	ARLINGTON;BEN-4
+ReportingUnit	Vermont;Andover;WDR-3-1	ANDOVER;WDR-3-1
+ReportingUnit	Vermont;Alburgh;GI-CHI	ALBURGH;GI-CHI
+ReportingUnit	Vermont;Albany;ORL-CAL	ALBANY;ORL-CAL
+ReportingUnit	Vermont;Addison;ADD-3	ADDISON;ADD-3
+Candidate	BUTTIGIEG(Write-In)	BUTTIGIEG(Write-In)

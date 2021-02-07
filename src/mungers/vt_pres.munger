@@ -63,7 +63,7 @@ Party=<header_0>
 ## must be looked up in another table.                          ##
 ## See mi_gen18.munger for example                              ##
 ##################################################################
-[header_1 lookup]
+[header_0 lookup]
 source_file=Vermont/2020-qualfied-candidate-listing.xlsx
 file_type=excel
 munge_strings=in_field_values
@@ -71,3 +71,4 @@ rows_to_skip=1
 string_field_name_row=0
 lookup_id=Name On Ballot
 Party_replacement=<Party>
+Candidate_replacement=<Name On Ballot>
