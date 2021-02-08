@@ -107,3 +107,48 @@ Idaho;ID Senate District 35	state-senate
 Idaho;US House ID District 1	congressional
 Idaho;US House ID District 2	congressional
 Idaho	state
+Idaho;Ada County	county
+Idaho;Adams County	county
+Idaho;Bannock County	county
+Idaho;Bear Lake County	county
+Idaho;Benewah County	county
+Idaho;Bingham County	county
+Idaho;Blaine County	county
+Idaho;Boise County	county
+Idaho;Bonner County	county
+Idaho;Bonneville County	county
+Idaho;Boundary County	county
+Idaho;Butte County	county
+Idaho;Camas County	county
+Idaho;Canyon County	county
+Idaho;Caribou County	county
+Idaho;Cassia County	county
+Idaho;Clark County	county
+Idaho;Clearwater County	county
+Idaho;Custer County	county
+Idaho;Elmore County	county
+Idaho;Franklin County	county
+Idaho;Fremont County	county
+Idaho;Gem County	county
+Idaho;Gooding County	county
+Idaho;Idaho County	county
+Idaho;Jefferson County	county
+Idaho;Jerome County	county
+Idaho;Kootenai County	county
+Idaho;Latah County	county
+Idaho;Lemhi County	county
+Idaho;Lewis County	county
+Idaho;Lincoln County	county
+Idaho;Madison County	county
+Idaho;Minidoka County	county
+Idaho;Nez Perce County	county
+Idaho;Oneida County	county
+Idaho;Owyhee County	county
+Idaho;Payette County	county
+Idaho;Power County	county
+Idaho;Shoshone County	county
+Idaho;Teton County	county
+Idaho;Twin Falls County	county
+Idaho;Valley County	county
+Idaho;Washington County	county
+Idaho; County	county

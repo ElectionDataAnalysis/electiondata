@@ -104,11 +104,11 @@ CandidateContest	ID Senate District 32	ID Senate District 32
 CandidateContest	ID Senate District 33	ID Senate District 33
 CandidateContest	ID Senate District 34	ID Senate District 34
 CandidateContest	ID Senate District 35	ID Senate District 35
-CandidateContest	US House ID District 1	US House ID District 1
-CandidateContest	US House ID District 2	US House ID District 2
-CandidateContest	US President (ID)	US President (ID)
+CandidateContest	US House ID District 1	UNITED STATES REPRESENTATIVE DISTRICT 1
+CandidateContest	US House ID District 2	UNITED STATES REPRESENTATIVE DISTRICT 2
+CandidateContest	US President (ID)	UNITED STATES PRESIDENT
 CandidateContest	ID Governor	ID Governor
-CandidateContest	US Senate ID	US Senate ID
+CandidateContest	US Senate ID	UNITED STATES SENATOR
 CandidateContest	ID Attorney General	ID Attorney General
 CandidateContest	ID Lieutenant Governor	ID Lieutenant Governor
 CandidateContest	ID Treasurer	ID Treasurer
@@ -117,116 +117,84 @@ Election	2020 General	2020 General
 Election	2020 Primary	2020 Primary
 Election	2018 General	2018 General
 Election	2016 General	2016 General
-Party	Democratic Party	Democratic Party
-Party	Republican Party	Republican Party
+Party	Democratic Party	DEM
+Party	Republican Party	REP
 Party	Green Party	Green Party
-Party	Libertarian Party	Libertarian Party
-ReportingUnit	Idaho;ID House District 1	Idaho;ID House District 1
-ReportingUnit	Idaho;ID House District 2	Idaho;ID House District 2
-ReportingUnit	Idaho;ID House District 3	Idaho;ID House District 3
-ReportingUnit	Idaho;ID House District 4	Idaho;ID House District 4
-ReportingUnit	Idaho;ID House District 5	Idaho;ID House District 5
-ReportingUnit	Idaho;ID House District 6	Idaho;ID House District 6
-ReportingUnit	Idaho;ID House District 7	Idaho;ID House District 7
-ReportingUnit	Idaho;ID House District 8	Idaho;ID House District 8
-ReportingUnit	Idaho;ID House District 9	Idaho;ID House District 9
-ReportingUnit	Idaho;ID House District 10	Idaho;ID House District 10
-ReportingUnit	Idaho;ID House District 11	Idaho;ID House District 11
-ReportingUnit	Idaho;ID House District 12	Idaho;ID House District 12
-ReportingUnit	Idaho;ID House District 13	Idaho;ID House District 13
-ReportingUnit	Idaho;ID House District 14	Idaho;ID House District 14
-ReportingUnit	Idaho;ID House District 15	Idaho;ID House District 15
-ReportingUnit	Idaho;ID House District 16	Idaho;ID House District 16
-ReportingUnit	Idaho;ID House District 17	Idaho;ID House District 17
-ReportingUnit	Idaho;ID House District 18	Idaho;ID House District 18
-ReportingUnit	Idaho;ID House District 19	Idaho;ID House District 19
-ReportingUnit	Idaho;ID House District 20	Idaho;ID House District 20
-ReportingUnit	Idaho;ID House District 21	Idaho;ID House District 21
-ReportingUnit	Idaho;ID House District 22	Idaho;ID House District 22
-ReportingUnit	Idaho;ID House District 23	Idaho;ID House District 23
-ReportingUnit	Idaho;ID House District 24	Idaho;ID House District 24
-ReportingUnit	Idaho;ID House District 25	Idaho;ID House District 25
-ReportingUnit	Idaho;ID House District 26	Idaho;ID House District 26
-ReportingUnit	Idaho;ID House District 27	Idaho;ID House District 27
-ReportingUnit	Idaho;ID House District 28	Idaho;ID House District 28
-ReportingUnit	Idaho;ID House District 29	Idaho;ID House District 29
-ReportingUnit	Idaho;ID House District 30	Idaho;ID House District 30
-ReportingUnit	Idaho;ID House District 31	Idaho;ID House District 31
-ReportingUnit	Idaho;ID House District 32	Idaho;ID House District 32
-ReportingUnit	Idaho;ID House District 33	Idaho;ID House District 33
-ReportingUnit	Idaho;ID House District 34	Idaho;ID House District 34
-ReportingUnit	Idaho;ID House District 35	Idaho;ID House District 35
-ReportingUnit	Idaho;ID House District 36	Idaho;ID House District 36
-ReportingUnit	Idaho;ID House District 37	Idaho;ID House District 37
-ReportingUnit	Idaho;ID House District 38	Idaho;ID House District 38
-ReportingUnit	Idaho;ID House District 39	Idaho;ID House District 39
-ReportingUnit	Idaho;ID House District 40	Idaho;ID House District 40
-ReportingUnit	Idaho;ID House District 41	Idaho;ID House District 41
-ReportingUnit	Idaho;ID House District 42	Idaho;ID House District 42
-ReportingUnit	Idaho;ID House District 43	Idaho;ID House District 43
-ReportingUnit	Idaho;ID House District 44	Idaho;ID House District 44
-ReportingUnit	Idaho;ID House District 45	Idaho;ID House District 45
-ReportingUnit	Idaho;ID House District 46	Idaho;ID House District 46
-ReportingUnit	Idaho;ID House District 47	Idaho;ID House District 47
-ReportingUnit	Idaho;ID House District 48	Idaho;ID House District 48
-ReportingUnit	Idaho;ID House District 49	Idaho;ID House District 49
-ReportingUnit	Idaho;ID House District 50	Idaho;ID House District 50
-ReportingUnit	Idaho;ID House District 51	Idaho;ID House District 51
-ReportingUnit	Idaho;ID House District 52	Idaho;ID House District 52
-ReportingUnit	Idaho;ID House District 53	Idaho;ID House District 53
-ReportingUnit	Idaho;ID House District 54	Idaho;ID House District 54
-ReportingUnit	Idaho;ID House District 55	Idaho;ID House District 55
-ReportingUnit	Idaho;ID House District 56	Idaho;ID House District 56
-ReportingUnit	Idaho;ID House District 57	Idaho;ID House District 57
-ReportingUnit	Idaho;ID House District 58	Idaho;ID House District 58
-ReportingUnit	Idaho;ID House District 59	Idaho;ID House District 59
-ReportingUnit	Idaho;ID House District 60	Idaho;ID House District 60
-ReportingUnit	Idaho;ID House District 61	Idaho;ID House District 61
-ReportingUnit	Idaho;ID House District 62	Idaho;ID House District 62
-ReportingUnit	Idaho;ID House District 63	Idaho;ID House District 63
-ReportingUnit	Idaho;ID House District 64	Idaho;ID House District 64
-ReportingUnit	Idaho;ID House District 65	Idaho;ID House District 65
-ReportingUnit	Idaho;ID House District 66	Idaho;ID House District 66
-ReportingUnit	Idaho;ID House District 67	Idaho;ID House District 67
-ReportingUnit	Idaho;ID House District 68	Idaho;ID House District 68
-ReportingUnit	Idaho;ID House District 69	Idaho;ID House District 69
-ReportingUnit	Idaho;ID House District 70	Idaho;ID House District 70
-ReportingUnit	Idaho;ID Senate District 1	Idaho;ID Senate District 1
-ReportingUnit	Idaho;ID Senate District 2	Idaho;ID Senate District 2
-ReportingUnit	Idaho;ID Senate District 3	Idaho;ID Senate District 3
-ReportingUnit	Idaho;ID Senate District 4	Idaho;ID Senate District 4
-ReportingUnit	Idaho;ID Senate District 5	Idaho;ID Senate District 5
-ReportingUnit	Idaho;ID Senate District 6	Idaho;ID Senate District 6
-ReportingUnit	Idaho;ID Senate District 7	Idaho;ID Senate District 7
-ReportingUnit	Idaho;ID Senate District 8	Idaho;ID Senate District 8
-ReportingUnit	Idaho;ID Senate District 9	Idaho;ID Senate District 9
-ReportingUnit	Idaho;ID Senate District 10	Idaho;ID Senate District 10
-ReportingUnit	Idaho;ID Senate District 11	Idaho;ID Senate District 11
-ReportingUnit	Idaho;ID Senate District 12	Idaho;ID Senate District 12
-ReportingUnit	Idaho;ID Senate District 13	Idaho;ID Senate District 13
-ReportingUnit	Idaho;ID Senate District 14	Idaho;ID Senate District 14
-ReportingUnit	Idaho;ID Senate District 15	Idaho;ID Senate District 15
-ReportingUnit	Idaho;ID Senate District 16	Idaho;ID Senate District 16
-ReportingUnit	Idaho;ID Senate District 17	Idaho;ID Senate District 17
-ReportingUnit	Idaho;ID Senate District 18	Idaho;ID Senate District 18
-ReportingUnit	Idaho;ID Senate District 19	Idaho;ID Senate District 19
-ReportingUnit	Idaho;ID Senate District 20	Idaho;ID Senate District 20
-ReportingUnit	Idaho;ID Senate District 21	Idaho;ID Senate District 21
-ReportingUnit	Idaho;ID Senate District 22	Idaho;ID Senate District 22
-ReportingUnit	Idaho;ID Senate District 23	Idaho;ID Senate District 23
-ReportingUnit	Idaho;ID Senate District 24	Idaho;ID Senate District 24
-ReportingUnit	Idaho;ID Senate District 25	Idaho;ID Senate District 25
-ReportingUnit	Idaho;ID Senate District 26	Idaho;ID Senate District 26
-ReportingUnit	Idaho;ID Senate District 27	Idaho;ID Senate District 27
-ReportingUnit	Idaho;ID Senate District 28	Idaho;ID Senate District 28
-ReportingUnit	Idaho;ID Senate District 29	Idaho;ID Senate District 29
-ReportingUnit	Idaho;ID Senate District 30	Idaho;ID Senate District 30
-ReportingUnit	Idaho;ID Senate District 31	Idaho;ID Senate District 31
-ReportingUnit	Idaho;ID Senate District 32	Idaho;ID Senate District 32
-ReportingUnit	Idaho;ID Senate District 33	Idaho;ID Senate District 33
-ReportingUnit	Idaho;ID Senate District 34	Idaho;ID Senate District 34
-ReportingUnit	Idaho;ID Senate District 35	Idaho;ID Senate District 35
-ReportingUnit	Idaho;US House ID District 1	Idaho;US House ID District 1
-ReportingUnit	Idaho;US House ID District 2	Idaho;US House ID District 2
+Party	Libertarian Party	LIB
+Party	CON	CON
+Party	IND	IND
+Party	W/I	W/I
 ReportingUnit	Idaho	Idaho
-
+ReportingUnit	Idaho;Ada County	Ada
+ReportingUnit	Idaho;Adams County	Adams
+ReportingUnit	Idaho;Bannock County	Bannock
+ReportingUnit	Idaho;Bear Lake County	Bear Lake
+ReportingUnit	Idaho;Benewah County	Benewah
+ReportingUnit	Idaho;Bingham County	Bingham
+ReportingUnit	Idaho;Blaine County	Blaine
+ReportingUnit	Idaho;Boise County	Boise
+ReportingUnit	Idaho;Bonner County	Bonner
+ReportingUnit	Idaho;Bonneville County	Bonneville
+ReportingUnit	Idaho;Boundary County	Boundary
+ReportingUnit	Idaho;Butte County	Butte
+ReportingUnit	Idaho;Camas County	Camas
+ReportingUnit	Idaho;Canyon County	Canyon
+ReportingUnit	Idaho;Caribou County	Caribou
+ReportingUnit	Idaho;Cassia County	Cassia
+ReportingUnit	Idaho;Clark County	Clark
+ReportingUnit	Idaho;Clearwater County	Clearwater
+ReportingUnit	Idaho;Custer County	Custer
+ReportingUnit	Idaho;Elmore County	Elmore
+ReportingUnit	Idaho;Franklin County	Franklin
+ReportingUnit	Idaho;Fremont County	Fremont
+ReportingUnit	Idaho;Gem County	Gem
+ReportingUnit	Idaho;Gooding County	Gooding
+ReportingUnit	Idaho;Idaho County	Idaho
+ReportingUnit	Idaho;Jefferson County	Jefferson
+ReportingUnit	Idaho;Jerome County	Jerome
+ReportingUnit	Idaho;Kootenai County	Kootenai
+ReportingUnit	Idaho;Latah County	Latah
+ReportingUnit	Idaho;Lemhi County	Lemhi
+ReportingUnit	Idaho;Lewis County	Lewis
+ReportingUnit	Idaho;Lincoln County	Lincoln
+ReportingUnit	Idaho;Madison County	Madison
+ReportingUnit	Idaho;Minidoka County	Minidoka
+ReportingUnit	Idaho;Nez Perce County	Nez Perce
+ReportingUnit	Idaho;Oneida County	Oneida
+ReportingUnit	Idaho;Owyhee County	Owyhee
+ReportingUnit	Idaho;Payette County	Payette
+ReportingUnit	Idaho;Power County	Power
+ReportingUnit	Idaho;Shoshone County	Shoshone
+ReportingUnit	Idaho;Teton County	Teton
+ReportingUnit	Idaho;Twin Falls County	Twin Falls
+ReportingUnit	Idaho;Valley County	Valley
+ReportingUnit	Idaho;Washington County	Washington
+CandidateContest	US Senate ID	Unnamed: 9_level_0 UNITED STATES SENATOR
+CandidateContest	US Senate ID	Unnamed: 8_level_0 UNITED STATES SENATOR
+CandidateContest	US President (ID)	Unnamed: 7_level_0 UNITED STATES PRESIDENT
+CandidateContest	US President (ID)	Unnamed: 6_level_0 UNITED STATES PRESIDENT
+CandidateContest	US President (ID)	Unnamed: 5_level_0 UNITED STATES PRESIDENT
+CandidateContest	US President (ID)	Unnamed: 4_level_0 UNITED STATES PRESIDENT
+CandidateContest	US President (ID)	Unnamed: 3_level_0 UNITED STATES PRESIDENT
+CandidateContest	US President (ID)	Unnamed: 2_level_0 UNITED STATES PRESIDENT
+CandidateContest	US President (ID)	Unnamed: 1_level_0 UNITED STATES PRESIDENT
+CandidateContest	US Senate ID	Unnamed: 11_level_0 UNITED STATES SENATOR
+CandidateContest	US Senate ID	Unnamed: 10_level_0 UNITED STATES SENATOR
+CandidateContest	US House ID District 2	Unnamed: 19_level_0 Unnamed: 19_level_1 Unnamed: 19_level_2
+Candidate	Russ Fulcher	Russ Fulcher
+Candidate	Rudy Soto	Rudy Soto
+Candidate	Rocky 'Rocky' De La Fuente	Rocky 'Rocky' De La Fuente
+Candidate	Ray J. Writz	Ray J. Writz
+Candidate	Pro-Life	Pro-Life
+Candidate	Paulette Jordan	Paulette Jordan
+Candidate	Natalie M Fleming	Natalie M Fleming
+Candidate	Mike Simpson	Mike Simpson
+Candidate	Kanye West	Kanye West
+Candidate	Joseph R. Biden	Joseph R. Biden
+Candidate	Joe Evans	Joe Evans
+Candidate	Jo Jorgensen	Jo Jorgensen
+Candidate	Jim Risch	Jim Risch
+Candidate	Idaho Sierra Law	Idaho Sierra Law
+Candidate	Donald J. Trump	Donald J. Trump
+Candidate	Don Blankenship	Don Blankenship
+Candidate	Brock Pierce	Brock Pierce
