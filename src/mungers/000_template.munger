@@ -31,17 +31,23 @@ count_field_name_row=
 #### (start numbering from first unskipped row):
 string_field_name_row=
 
-
+################################################
 ## Optional format parameters:
 #### for any file type:
 thousands_separator=
 encoding=
+
 #### for a flat_text or excel file type:
+###### if field names are not given in file
 all_rows=data
+###### if there are multiple blocks of data per page, each with its own headers
+multi_blocks=yes
+
 #### for excel file type:
 sheets_to_read_names=
 sheets_to_read_numbers=
 sheets_to_skip_names=
+
 #### for xml file type
 nesting_tags=
 
