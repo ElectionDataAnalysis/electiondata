@@ -3036,67 +3036,67 @@ ReportingUnit	Nevada;White Pine County;Precinct 7	White Pine;Precinct 7
 ReportingUnit	Nevada;White Pine County;Precinct 8	White Pine;Precinct 8
 ReportingUnit	Nevada;White Pine County;Precinct 9	White Pine;Precinct 9
 ReportingUnit	Nevada;White Pine County;Precinct 99	White Pine;Precinct 99
-Candidate	TITUS, DINA	TITUS, DINA
-Candidate	STRAWDER, JR., ROBERT VAN	STRAWDER, JR., ROBERT VAN
-Candidate	RUBINSON, BARRY	RUBINSON, BARRY
-Candidate	RODIMER, DAN 'BIG DAN'	RODIMER, DAN 'BIG DAN'
-Candidate	RODIMER, DAN 'BIG DAN'	RODIMER, DAN "BIG DAN"
-Candidate	MARCHANT, JIM	MARCHANT, JIM
-Candidate	LEE, SUZANNE	LEE, SUZANNE
-Candidate	ESTEBAN, JONATHAN ROYCE	ESTEBAN, JONATHAN ROYCE
-Candidate	BROWN, STEVE	BROWN, STEVE
-Candidate	BRIDGES II, EDWARD	BRIDGES II, EDWARD
-Candidate	BENTLEY, JOYCE	BENTLEY, JOYCE
-Candidate	ACKERMAN, PATRICIA	ACKERMAN, PATRICIA
-Candidate	ACKERMAN, PATRICIA	'ACKERMAN, PATRICIA'
-Candidate	COHEN, ED	COHEN, ED
-Candidate	COHEN, ED	'COHEN, ED'
-Candidate	HERNANDEZ, REYNALDO	HERNANDEZ, REYNALDO
-Candidate	HERNANDEZ, REYNALDO	'HERNANDEZ, REYNALDO'
-Candidate	KOBLE, CLINT	KOBLE, CLINT
-Candidate	KOBLE, CLINT	'KOBLE, CLINT'
-Candidate	LUETKEHANS, IAN	LUETKEHANS, IAN
-Candidate	LUETKEHANS, IAN	'LUETKEHANS, IAN'
-Candidate	SCHIFFMAN, STEVE 'PRAGMATIC'	SCHIFFMAN, STEVE 'PRAGMATIC'
-Candidate	SHEPHERD, RICK	SHEPHERD, RICK
-Candidate	SHEPHERD, RICK	'SHEPHERD, RICK'
-Candidate	AMODEI, MARK E.	AMODEI, MARK E.
-Candidate	AMODEI, MARK E.	'AMODEI, MARK E.'
-Candidate	BECK, JOEL	BECK, JOEL
-Candidate	BECK, JOEL	'BECK, JOEL'
-Candidate	HURLEY, JESSE DOUGLAS	HURLEY, JESSE DOUGLAS
-Candidate	HURLEY, JESSE DOUGLAS	'HURLEY, JESSE DOUGLAS'
-Candidate	TITUS, ROBIN L.	TITUS, ROBIN L.
-Candidate	TITUS, ROBIN L.	'TITUS, ROBIN L.'
-Candidate	ULRICH, JEFF	ULRICH, JEFF
-Candidate	ULRICH, JEFF	'ULRICH, JEFF'
-Candidate	HEATH, JUSTIN	HEATH, JUSTIN
-Candidate	HEATH, JUSTIN	'HEATH, JUSTIN'
-Candidate	SCHARMANN, HARRY 'BUS'	SCHARMANN, HARRY 'BUS'
-Candidate	BOONE, KEITH W.	BOONE, KEITH W.
-Candidate	BOONE, KEITH W.	'BOONE, KEITH W.'
-Candidate	KELLY, KELLI	KELLY, KELLI
-Candidate	KELLY, KELLI	'KELLY, KELLI'
-Candidate	CASEY, MICHAEL 'MICK'	CASEY, MICHAEL 'MICK'
-Candidate	KOENIG, GREGORY S.	KOENIG, GREGORY S.
-Candidate	KOENIG, GREGORY S.	'KOENIG, GREGORY S.'
-Candidate	CHRISTENSEN, TS	CHRISTENSEN, TS
-Candidate	CHRISTENSEN, TS	'CHRISTENSEN, TS'
-Candidate	PICKERING, KRISTINA	PICKERING, KRISTINA
-Candidate	PICKERING, KRISTINA	'PICKERING, KRISTINA'
-Candidate	RODRIGUEZ, ESTHER C.	RODRIGUEZ, ESTHER C.
-Candidate	RODRIGUEZ, ESTHER C.	'RODRIGUEZ, ESTHER C.'
-Candidate	NONE OF THESE CANDIDATES	NONE OF THESE CANDIDATES
-Candidate	FUMO, OZZIE	FUMO, OZZIE
-Candidate	FUMO, OZZIE	'FUMO, OZZIE'
-Candidate	HERNDON, DOUGLAS	HERNDON, DOUGLAS
-Candidate	HERNDON, DOUGLAS	'HERNDON, DOUGLAS'
-Candidate	NELSON, ERV	NELSON, ERV
-Candidate	NELSON, ERV	'NELSON, ERV'
-Candidate	COOMBS, KATIE	COOMBS, KATIE
-Candidate	COOMBS, KATIE	'COOMBS, KATIE'
-Candidate	JONTE, MARION	JONTE, MARION
-Candidate	JONTE, MARION	'JONTE, MARION'
+Candidate	Titus, Dina	Titus, Dina
+Candidate	Robert Van Strawder, Jr.	Strawder, Jr., Robert Van
+Candidate	Rubinson, Barry	Rubinson, Barry
+Candidate	Rodimer, Dan 'Big Dan'	Rodimer, Dan 'Big Dan'
+Candidate	Rodimer, Dan 'Big Dan'	"Rodimer, Dan ""Big Dan"""
+Candidate	Marchant, Jim	Marchant, Jim
+Candidate	Lee, Suzanne	Lee, Suzanne
+Candidate	Esteban, Jonathan Royce	Esteban, Jonathan Royce
+Candidate	Brown, Steve	Brown, Steve
+Candidate	Bridges Ii, Edward	Bridges Ii, Edward
+Candidate	Bentley, Joyce	Bentley, Joyce
+Candidate	Ackerman, Patricia	Ackerman, Patricia
+Candidate	Ackerman, Patricia	'Ackerman, Patricia'
+Candidate	Cohen, Ed	Cohen, Ed
+Candidate	Cohen, Ed	'Cohen, Ed'
+Candidate	Hernandez, Reynaldo	Hernandez, Reynaldo
+Candidate	Hernandez, Reynaldo	'Hernandez, Reynaldo'
+Candidate	Koble, Clint	Koble, Clint
+Candidate	Koble, Clint	'Koble, Clint'
+Candidate	Luetkehans, Ian	Luetkehans, Ian
+Candidate	Luetkehans, Ian	'Luetkehans, Ian'
+Candidate	Schiffman, Steve 'Pragmatic'	Schiffman, Steve 'Pragmatic'
+Candidate	Shepherd, Rick	Shepherd, Rick
+Candidate	Shepherd, Rick	'Shepherd, Rick'
+Candidate	Amodei, Mark E.	Amodei, Mark E.
+Candidate	Amodei, Mark E.	'Amodei, Mark E.'
+Candidate	Beck, Joel	Beck, Joel
+Candidate	Beck, Joel	'Beck, Joel'
+Candidate	Hurley, Jesse Douglas	Hurley, Jesse Douglas
+Candidate	Hurley, Jesse Douglas	'Hurley, Jesse Douglas'
+Candidate	Titus, Robin L.	Titus, Robin L.
+Candidate	Titus, Robin L.	'Titus, Robin L.'
+Candidate	Ulrich, Jeff	Ulrich, Jeff
+Candidate	Ulrich, Jeff	'Ulrich, Jeff'
+Candidate	Heath, Justin	Heath, Justin
+Candidate	Heath, Justin	'Heath, Justin'
+Candidate	Scharmann, Harry 'Bus'	Scharmann, Harry 'Bus'
+Candidate	Boone, Keith W.	Boone, Keith W.
+Candidate	Boone, Keith W.	'Boone, Keith W.'
+Candidate	Kelly, Kelli	Kelly, Kelli
+Candidate	Kelly, Kelli	'Kelly, Kelli'
+Candidate	Casey, Michael 'Mick'	Casey, Michael 'Mick'
+Candidate	Koenig, Gregory S.	Koenig, Gregory S.
+Candidate	Koenig, Gregory S.	'Koenig, Gregory S.'
+Candidate	Christensen, Ts	Christensen, Ts
+Candidate	Christensen, Ts	'Christensen, Ts'
+Candidate	Pickering, Kristina	Pickering, Kristina
+Candidate	Pickering, Kristina	'Pickering, Kristina'
+Candidate	Rodriguez, Esther C.	Rodriguez, Esther C.
+Candidate	Rodriguez, Esther C.	'Rodriguez, Esther C.'
+Candidate	None Of These Candidates	None Of These Candidates
+Candidate	Fumo, Ozzie	Fumo, Ozzie
+Candidate	Fumo, Ozzie	'Fumo, Ozzie'
+Candidate	Herndon, Douglas	Herndon, Douglas
+Candidate	Herndon, Douglas	'Herndon, Douglas'
+Candidate	Nelson, Erv	Nelson, Erv
+Candidate	Nelson, Erv	'Nelson, Erv'
+Candidate	Coombs, Katie	Coombs, Katie
+Candidate	Coombs, Katie	'Coombs, Katie'
+Candidate	Jonte, Marion	Jonte, Marion
+Candidate	Jonte, Marion	'Jonte, Marion'
 Candidate	McConnell, Regina 'Gina'	McConnell, Regina 'Gina'
 Candidate	Cutter, Nadin	Cutter, Nadin
 Candidate	Cutter, Nadin	'Cutter, Nadin'
@@ -3119,14 +3119,12 @@ Candidate	Elliott, Josh	'Elliott, Josh'
 Candidate	Rheinhart, Allen	Rheinhart, Allen
 Candidate	Rheinhart, Allen	'Rheinhart, Allen'
 Candidate	Butler, Dedree 'Dee'	Butler, Dedree 'Dee'
-Candidate	Bentley, Joyce	Bentley, Joyce
 Candidate	Bentley, Joyce	'Bentley, Joyce'
 Candidate	Hamilton, Eddie 'MrLasVegas'	Hamilton, Eddie 'MrLasVegas'
 Candidate	Casino, Angelo	Casino, Angelo
 Candidate	Casino, Angelo	'Casino, Angelo'
 Candidate	Larios-Elias, Citlaly	Larios-Elias, Citlaly
 Candidate	Larios-Elias, Citlaly	'Larios-Elias, Citlaly'
-Candidate	Titus, Dina	Titus, Dina
 Candidate	Titus, Dina	'Titus, Dina'
 Candidate	Dayani, Sara	Dayani, Sara
 Candidate	Dayani, Sara	'Dayani, Sara'
@@ -3275,7 +3273,6 @@ Candidate	Watson, Tiffany Ann	Watson, Tiffany Ann
 Candidate	Watson, Tiffany Ann	'Watson, Tiffany Ann'
 Candidate	Robinson, Mindy	Robinson, Mindy
 Candidate	Robinson, Mindy	'Robinson, Mindy'
-Candidate	Rodimer, Dan 'Big Dan'	Rodimer, Dan 'Big Dan'
 Candidate	Schwartz, Dan	Schwartz, Dan
 Candidate	Schwartz, Dan	'Schwartz, Dan'
 Candidate	Willert, Victor R.	Willert, Victor R.
@@ -3347,7 +3344,6 @@ Candidate	Colley, Chris	Colley, Chris
 Candidate	Colley, Chris	'Colley, Chris'
 Candidate	D'Ayr, Stephanie Gabrielle	D'Ayr, Stephanie Gabrielle
 Candidate	D'Ayr, Stephanie Gabrielle	'D'Ayr, Stephanie Gabrielle'
-Candidate	Marchant, Jim	Marchant, Jim
 Candidate	Marchant, Jim	'Marchant, Jim'
 Candidate	Navarro, Charles	Navarro, Charles
 Candidate	Navarro, Charles	'Navarro, Charles'
@@ -3542,401 +3538,401 @@ Candidate	Frost, Char	Frost, Char
 Candidate	Frost, Char	'Frost, Char'
 Candidate	Ortega, Lisa	Ortega, Lisa
 Candidate	Ortega, Lisa	'Ortega, Lisa'
-Candidate	NELSON, DAVE	NELSON, DAVE
-Candidate	NELSON, DAVE	'NELSON, DAVE'
-Candidate	TARKANIAN, DANNY	TARKANIAN, DANNY
-Candidate	TARKANIAN, DANNY	'TARKANIAN, DANNY'
-Candidate	GARDNER, MARK	GARDNER, MARK
-Candidate	GARDNER, MARK	'GARDNER, MARK'
-Candidate	WALSH, LARRY	WALSH, LARRY
-Candidate	WALSH, LARRY	'WALSH, LARRY'
-Candidate	NOWOSAD, WALTER 'WALT'	NOWOSAD, WALTER 'WALT'
-Candidate	TOLBERT, NATHAN	TOLBERT, NATHAN
-Candidate	TOLBERT, NATHAN	'TOLBERT, NATHAN'
-Candidate	KANGAS, CAREY	KANGAS, CAREY
-Candidate	KANGAS, CAREY	'KANGAS, CAREY'
-Candidate	GILKERSON, LINDA J.	GILKERSON, LINDA J.
-Candidate	GILKERSON, LINDA J.	'GILKERSON, LINDA J.'
-Candidate	DUNHAM, DALE L.	DUNHAM, DALE L.
-Candidate	DUNHAM, DALE L.	'DUNHAM, DALE L.'
-Candidate	GRAY, TERI A.	GRAY, TERI A.
-Candidate	GRAY, TERI A.	'GRAY, TERI A.'
-Candidate	RIVANO, ANTHONY P.	RIVANO, ANTHONY P.
-Candidate	RIVANO, ANTHONY P.	'RIVANO, ANTHONY P.'
-Candidate	SIEGMAN, RUSS	SIEGMAN, RUSS
-Candidate	SIEGMAN, RUSS	'SIEGMAN, RUSS'
-Candidate	STOLYAROV, GENNADY II	STOLYAROV, GENNADY II
-Candidate	STOLYAROV, GENNADY II	'STOLYAROV, GENNADY II'
-Candidate	AKOLA, DAVE	AKOLA, DAVE
-Candidate	AKOLA, DAVE	'AKOLA, DAVE'
-Candidate	BARBER, GEORGE H.	BARBER, GEORGE H.
-Candidate	BARBER, GEORGE H.	'BARBER, GEORGE H.'
-Candidate	CARRILLO, AMBER	CARRILLO, AMBER
-Candidate	CARRILLO, AMBER	'CARRILLO, AMBER'
-Candidate	CLARK, GERALD 'SPARKY' M.	CLARK, GERALD 'SPARKY' M.
-Candidate	FANTO, FRANK	FANTO, FRANK
-Candidate	FANTO, FRANK	'FANTO, FRANK'
-Candidate	FERRIS, SHARON	FERRIS, SHARON
-Candidate	FERRIS, SHARON	'FERRIS, SHARON'
-Candidate	MITCHELL, STEVE	MITCHELL, STEVE
-Candidate	MITCHELL, STEVE	'MITCHELL, STEVE'
-Candidate	TAYLOR, JERRY 'BRANDON'	TAYLOR, JERRY 'BRANDON'
-Candidate	EVERTSEN, GARY Ã¢ÂÂRADARÃ¢ÂÂ	EVERTSEN, GARY Ã¢ÂÂRADARÃ¢ÂÂ
-Candidate	EVERTSEN, GARY Ã¢ÂÂRADARÃ¢ÂÂ	'EVERTSEN, GARY Ã¢ÂÂRADARÃ¢ÂÂ'
-Candidate	STENINGER, REX	STENINGER, REX
-Candidate	STENINGER, REX	'STENINGER, REX'
-Candidate	FISH, KIETH	FISH, KIETH
-Candidate	FISH, KIETH	'FISH, KIETH'
-Candidate	COONEY, JIM	COONEY, JIM
-Candidate	COONEY, JIM	'COONEY, JIM'
-Candidate	D'AYR, GABRIELLE 'BRIE'	D'AYR, GABRIELLE 'BRIE'
-Candidate	HORSFORD, STEVEN A.	HORSFORD, STEVEN A.
-Candidate	HORSFORD, STEVEN A.	'HORSFORD, STEVEN A.'
-Candidate	BLUNDO, LEO	BLUNDO, LEO
-Candidate	BLUNDO, LEO	'BLUNDO, LEO'
-Candidate	BLAND, ELIZABETH	BLAND, ELIZABETH
-Candidate	BLAND, ELIZABETH	'BLAND, ELIZABETH'
-Candidate	HAFER, TRISHA	HAFER, TRISHA
-Candidate	HAFER, TRISHA	'HAFER, TRISHA'
-Candidate	JOHNSON, TRINIE	JOHNSON, TRINIE
-Candidate	JOHNSON, TRINIE	'JOHNSON, TRINIE'
-Candidate	MELENDREZ, J. PAUL	MELENDREZ, J. PAUL
-Candidate	MELENDREZ, J. PAUL	'MELENDREZ, J. PAUL'
-Candidate	KIRBY, WILLIAM C	KIRBY, WILLIAM C
-Candidate	KIRBY, WILLIAM C	'KIRBY, WILLIAM C'
-Candidate	AMODEI, MARK E	AMODEI, MARK E
-Candidate	AMODEI, MARK E	'AMODEI, MARK E'
-Candidate	BRISSENDEN, MARLENE	BRISSENDEN, MARLENE
-Candidate	BRISSENDEN, MARLENE	'BRISSENDEN, MARLENE'
-Candidate	GARRETT, BEN	GARRETT, BEN
-Candidate	GARRETT, BEN	'GARRETT, BEN'
-Candidate	HILL, JESSE J	HILL, JESSE J
-Candidate	HILL, JESSE J	'HILL, JESSE J'
-Candidate	BELL, DEBRA	BELL, DEBRA
-Candidate	BELL, DEBRA	'BELL, DEBRA'
-Candidate	BROOKS, PAIGE	BROOKS, PAIGE
-Candidate	BROOKS, PAIGE	'BROOKS, PAIGE'
-Candidate	HOSS, TOM	HOSS, TOM
-Candidate	HOSS, TOM	'HOSS, TOM'
-Candidate	ROBERTSON, LEANNE	ROBERTSON, LEANNE
-Candidate	ROBERTSON, LEANNE	'ROBERTSON, LEANNE'
-Candidate	SAUERS, SHELBY	SAUERS, SHELBY
-Candidate	SAUERS, SHELBY	'SAUERS, SHELBY'
-Candidate	CASALEZ, JOANN	CASALEZ, JOANN
-Candidate	CASALEZ, JOANN	'CASALEZ, JOANN'
-Candidate	TROUT, LEWIS 'LUIS'	TROUT, LEWIS 'LUIS'
-Candidate	UHLMANN, SABRINA	UHLMANN, SABRINA
-Candidate	UHLMANN, SABRINA	'UHLMANN, SABRINA'
-Candidate	OWEN, VIRGINIA 'JENNA'	OWEN, VIRGINIA 'JENNA'
-Candidate	SWENSEN, ABRAM D.	SWENSEN, ABRAM D.
-Candidate	SWENSEN, ABRAM D.	'SWENSEN, ABRAM D.'
-Candidate	HARDY, HOPE E.	HARDY, HOPE E.
-Candidate	HARDY, HOPE E.	'HARDY, HOPE E.'
-Candidate	WAITS, PATSY A.	WAITS, PATSY A.
-Candidate	WAITS, PATSY A.	'WAITS, PATSY A.'
-Candidate	ALLAN, JUDIE A.	ALLAN, JUDIE A.
-Candidate	ALLAN, JUDIE A.	'ALLAN, JUDIE A.'
-Candidate	FREEMAN, KATHLEEN 'KATHY'	FREEMAN, KATHLEEN 'KATHY'
-Candidate	SCHMIDT, AMBER	SCHMIDT, AMBER
-Candidate	SCHMIDT, AMBER	'SCHMIDT, AMBER'
-Candidate	THOMAS, WALLACE 'JR'	THOMAS, WALLACE 'JR'
-Candidate	VILLANUEVA, MANUEL JR.	VILLANUEVA, MANUEL JR.
-Candidate	VILLANUEVA, MANUEL JR.	'VILLANUEVA, MANUEL JR.'
-Candidate	VALDOVINOS, ELIZABETH	VALDOVINOS, ELIZABETH
-Candidate	VALDOVINOS, ELIZABETH	'VALDOVINOS, ELIZABETH'
-Candidate	MCMAHON, LINDA L.	MCMAHON, LINDA L.
-Candidate	MCMAHON, LINDA L.	'MCMAHON, LINDA L.'
-Candidate	SAM, MARLA J.	SAM, MARLA J.
-Candidate	SAM, MARLA J.	'SAM, MARLA J.'
-Candidate	FARR, LYLE	FARR, LYLE
-Candidate	FARR, LYLE	'FARR, LYLE'
-Candidate	MATHEUS, JAMES R.	MATHEUS, JAMES R.
-Candidate	MATHEUS, JAMES R.	'MATHEUS, JAMES R.'
-Candidate	MILLS, DOUG	MILLS, DOUG
-Candidate	MILLS, DOUG	'MILLS, DOUG'
-Candidate	DÃ¢ÂÂAYR, GABRIELLE Ã¢ÂÂBRIEÃ¢ÂÂ	DÃ¢ÂÂAYR, GABRIELLE Ã¢ÂÂBRIEÃ¢ÂÂ
-Candidate	DÃ¢ÂÂAYR, GABRIELLE Ã¢ÂÂBRIEÃ¢ÂÂ	'DÃ¢ÂÂAYR, GABRIELLE Ã¢ÂÂBRIEÃ¢ÂÂ'
-Candidate	HAFEN II, GREGORY T.	HAFEN II, GREGORY T.
-Candidate	HAFEN II, GREGORY T.	'HAFEN II, GREGORY T.'
-Candidate	KELLEY, PAT	KELLEY, PAT
-Candidate	KELLEY, PAT	'KELLEY, PAT'
-Candidate	ROWE, PEGGY A.	ROWE, PEGGY A.
-Candidate	ROWE, PEGGY A.	'ROWE, PEGGY A.'
-Candidate	GLADWILL, GARY G.	GLADWILL, GARY G.
-Candidate	GLADWILL, GARY G.	'GLADWILL, GARY G.'
-Candidate	GRAY, KEN	GRAY, KEN
-Candidate	GRAY, KEN	'GRAY, KEN'
-Candidate	JACOBSON, ROBERT	JACOBSON, ROBERT
-Candidate	JACOBSON, ROBERT	'JACOBSON, ROBERT'
-Candidate	THOMAS, DAVID	THOMAS, DAVID
-Candidate	THOMAS, DAVID	'THOMAS, DAVID'
-Candidate	HOCKADAY, DAVID	HOCKADAY, DAVID
-Candidate	HOCKADAY, DAVID	'HOCKADAY, DAVID'
-Candidate	ORTEGA, RICKY	ORTEGA, RICKY
-Candidate	ORTEGA, RICKY	'ORTEGA, RICKY'
-Candidate	THOMPSON, CLIFFORD	THOMPSON, CLIFFORD
-Candidate	THOMPSON, CLIFFORD	'THOMPSON, CLIFFORD'
-Candidate	PARSONS, SHERRY	PARSONS, SHERRY
-Candidate	PARSONS, SHERRY	'PARSONS, SHERRY'
-Candidate	COWEE, PHILIP	COWEE, PHILIP
-Candidate	COWEE, PHILIP	'COWEE, PHILIP'
-Candidate	VILLINES, HOLLY	VILLINES, HOLLY
-Candidate	VILLINES, HOLLY	'VILLINES, HOLLY'
-Candidate	CRABTREE, KIMBER L. A.	CRABTREE, KIMBER L. A.
-Candidate	CRABTREE, KIMBER L. A.	'CRABTREE, KIMBER L. A.'
-Candidate	CHRISTENSEN, JAMES	CHRISTENSEN, JAMES
-Candidate	CHRISTENSEN, JAMES	'CHRISTENSEN, JAMES'
-Candidate	GIOMI, DEBORAH A.	GIOMI, DEBORAH A.
-Candidate	GIOMI, DEBORAH A.	'GIOMI, DEBORAH A.'
-Candidate	HITCHCOCK, GERALD	HITCHCOCK, GERALD
-Candidate	HITCHCOCK, GERALD	'HITCHCOCK, GERALD'
-Candidate	WEIR-COOLEY, RONNIE	WEIR-COOLEY, RONNIE
-Candidate	WEIR-COOLEY, RONNIE	'WEIR-COOLEY, RONNIE'
-Candidate	PRICE, JUDY	PRICE, JUDY
-Candidate	PRICE, JUDY	'PRICE, JUDY'
-Candidate	BLOCK, RAY	BLOCK, RAY
-Candidate	BLOCK, RAY	'BLOCK, RAY'
-Candidate	HON, PAT	HON, PAT
-Candidate	HON, PAT	'HON, PAT'
-Candidate	MCCASSIE, DAN	MCCASSIE, DAN
-Candidate	MCCASSIE, DAN	'MCCASSIE, DAN'
-Candidate	MURPHY, PAUL	MURPHY, PAUL
-Candidate	MURPHY, PAUL	'MURPHY, PAUL'
-Candidate	RIESEN, WILLIAM	RIESEN, WILLIAM
-Candidate	RIESEN, WILLIAM	'RIESEN, WILLIAM'
-Candidate	RODRIGUEZ, JAY	RODRIGUEZ, JAY
-Candidate	RODRIGUEZ, JAY	'RODRIGUEZ, JAY'
-Candidate	DE ST. MAURICE, L. MICHELLE	DE ST. MAURICE, L. MICHELLE
-Candidate	DE ST. MAURICE, L. MICHELLE	'DE ST. MAURICE, L. MICHELLE'
-Candidate	WHEELER, HARRY J.	WHEELER, HARRY J.
-Candidate	WHEELER, HARRY J.	'WHEELER, HARRY J.'
-Candidate	PARSONS, DONALD	PARSONS, DONALD
-Candidate	PARSONS, DONALD	'PARSONS, DONALD'
-Candidate	SEVERA, SHELLIE T.	SEVERA, SHELLIE T.
-Candidate	SEVERA, SHELLIE T.	'SEVERA, SHELLIE T.'
-Candidate	ZOBERSKI, FELICITY	ZOBERSKI, FELICITY
-Candidate	ZOBERSKI, FELICITY	'ZOBERSKI, FELICITY'
-Candidate	MCKAY, FRANCES 'FRAN'	MCKAY, FRANCES 'FRAN'
-Candidate	WARD, CHRIS	WARD, CHRIS
-Candidate	WARD, CHRIS	'WARD, CHRIS'
-Candidate	RODRIGUEZ, AUGGIE	RODRIGUEZ, AUGGIE
-Candidate	RODRIGUEZ, AUGGIE	'RODRIGUEZ, AUGGIE'
-Candidate	FLYNN, SHERRY	FLYNN, SHERRY
-Candidate	FLYNN, SHERRY	'FLYNN, SHERRY'
-Candidate	PEREZ, BRIDGET	PEREZ, BRIDGET
-Candidate	PEREZ, BRIDGET	'PEREZ, BRIDGET'
-Candidate	BRUCATO, GEORGE J	BRUCATO, GEORGE J
-Candidate	BRUCATO, GEORGE J	'BRUCATO, GEORGE J'
-Candidate	RICHARDSON, VINCENT L	RICHARDSON, VINCENT L
-Candidate	RICHARDSON, VINCENT L	'RICHARDSON, VINCENT L'
-Candidate	DIEDE, JUANITA	DIEDE, JUANITA
-Candidate	DIEDE, JUANITA	'DIEDE, JUANITA'
-Candidate	VIANI, TYLER J	VIANI, TYLER J
-Candidate	VIANI, TYLER J	'VIANI, TYLER J'
-Candidate	CASTAGNOLA, KATHRYN	CASTAGNOLA, KATHRYN
-Candidate	CASTAGNOLA, KATHRYN	'CASTAGNOLA, KATHRYN'
-Candidate	DOLBY, TREVOR	DOLBY, TREVOR
-Candidate	DOLBY, TREVOR	'DOLBY, TREVOR'
-Candidate	DUTTON, LIANDRA	DUTTON, LIANDRA
-Candidate	DUTTON, LIANDRA	'DUTTON, LIANDRA'
-Candidate	GAMBLE, TIM	GAMBLE, TIM
-Candidate	GAMBLE, TIM	'GAMBLE, TIM'
-Candidate	GARDNER, RICHARD 'DICK'	GARDNER, RICHARD 'DICK'
-Candidate	JABBOUR, BRUCE J.	JABBOUR, BRUCE J.
-Candidate	JABBOUR, BRUCE J.	'JABBOUR, BRUCE J.'
-Candidate	STODDARD, TERESA	STODDARD, TERESA
-Candidate	STODDARD, TERESA	'STODDARD, TERESA'
-Candidate	CARBONE, FRANK	CARBONE, FRANK
-Candidate	CARBONE, FRANK	'CARBONE, FRANK'
-Candidate	KOENIG, JOHN	KOENIG, JOHN
-Candidate	KOENIG, JOHN	'KOENIG, JOHN'
-Candidate	BAKER, LOUIS 'LOUIE' JAMES	BAKER, LOUIS 'LOUIE' JAMES
-Candidate	COX, DONNA C.	COX, DONNA C.
-Candidate	COX, DONNA C.	'COX, DONNA C.'
-Candidate	O'DONNELL, DEANNA	O'DONNELL, DEANNA
-Candidate	O'DONNELL, DEANNA	'O'DONNELL, DEANNA'
-Candidate	WEHRLY, JOHN	WEHRLY, JOHN
-Candidate	WEHRLY, JOHN	'WEHRLY, JOHN'
-Candidate	COMPTON, AARON	COMPTON, AARON
-Candidate	COMPTON, AARON	'COMPTON, AARON'
-Candidate	HAMPTON, OREN E.	HAMPTON, OREN E.
-Candidate	HAMPTON, OREN E.	'HAMPTON, OREN E.'
-Candidate	HANSEN, MARK D.	HANSEN, MARK D.
-Candidate	HANSEN, MARK D.	'HANSEN, MARK D.'
-Candidate	PETERSON, LIESE S.	PETERSON, LIESE S.
-Candidate	PETERSON, LIESE S.	'PETERSON, LIESE S.'
-Candidate	HUDSON, SHAYLA	HUDSON, SHAYLA
-Candidate	HUDSON, SHAYLA	'HUDSON, SHAYLA'
-Candidate	SKELTON, DAVID	SKELTON, DAVID
-Candidate	SKELTON, DAVID	'SKELTON, DAVID'
-Candidate	MANCEBO, MICHAEL	MANCEBO, MICHAEL
-Candidate	MANCEBO, MICHAEL	'MANCEBO, MICHAEL'
-Candidate	SHIELDS, MELISSA V.	SHIELDS, MELISSA V.
-Candidate	SHIELDS, MELISSA V.	'SHIELDS, MELISSA V.'
-Candidate	MCBRIDE, MARSHALL	MCBRIDE, MARSHALL
-Candidate	MCBRIDE, MARSHALL	'MCBRIDE, MARSHALL'
-Candidate	MITCHELL, CLAY	MITCHELL, CLAY
-Candidate	MITCHELL, CLAY	'MITCHELL, CLAY'
-Candidate	NASHOLD, LEE	NASHOLD, LEE
-Candidate	NASHOLD, LEE	'NASHOLD, LEE'
-Candidate	HILTON, PHILLIP A.	HILTON, PHILLIP A.
-Candidate	HILTON, PHILLIP A.	'HILTON, PHILLIP A.'
-Candidate	SIMONS, ANNE	SIMONS, ANNE
-Candidate	SIMONS, ANNE	'SIMONS, ANNE'
-Candidate	HAMES, GARY	HAMES, GARY
-Candidate	HAMES, GARY	'HAMES, GARY'
-Candidate	CONLEY, CASEY	CONLEY, CASEY
-Candidate	CONLEY, CASEY	'CONLEY, CASEY'
-Candidate	THOMPSON, TOM	THOMPSON, TOM
-Candidate	THOMPSON, TOM	'THOMPSON, TOM'
-Candidate	SCHIFFMAN, STEVE Ã¢ÂÂPRAGMATICÃ¢ÂÂ	SCHIFFMAN, STEVE Ã¢ÂÂPRAGMATICÃ¢ÂÂ
-Candidate	SCHIFFMAN, STEVE Ã¢ÂÂPRAGMATICÃ¢ÂÂ	'SCHIFFMAN, STEVE Ã¢ÂÂPRAGMATICÃ¢ÂÂ'
-Candidate	DOLLINGER, PAIGE	DOLLINGER, PAIGE
-Candidate	DOLLINGER, PAIGE	'DOLLINGER, PAIGE'
-Candidate	SHANNON, GREG	SHANNON, GREG
-Candidate	SHANNON, GREG	'SHANNON, GREG'
-Candidate	WHITE, LANCE CLARK	WHITE, LANCE CLARK
-Candidate	WHITE, LANCE CLARK	'WHITE, LANCE CLARK'
-Candidate	RODRIGUEZ, ESTHER C	RODRIGUEZ, ESTHER C
-Candidate	RODRIGUEZ, ESTHER C	'RODRIGUEZ, ESTHER C'
-Candidate	BAKER, TOM	BAKER, TOM
-Candidate	BAKER, TOM	'BAKER, TOM'
-Candidate	CHESNEY, LARRY	CHESNEY, LARRY
-Candidate	CHESNEY, LARRY	'CHESNEY, LARRY'
-Candidate	CURRIVAN, JAMES	CURRIVAN, JAMES
-Candidate	CURRIVAN, JAMES	'CURRIVAN, JAMES'
-Candidate	GUGICH, DANIEL	GUGICH, DANIEL
-Candidate	GUGICH, DANIEL	'GUGICH, DANIEL'
-Candidate	HELTON, CHRISTOPHER	HELTON, CHRISTOPHER
-Candidate	HELTON, CHRISTOPHER	'HELTON, CHRISTOPHER'
-Candidate	OTTO, DONALD	OTTO, DONALD
-Candidate	OTTO, DONALD	'OTTO, DONALD'
-Candidate	PATTERSON, JOHN	PATTERSON, JOHN
-Candidate	PATTERSON, JOHN	'PATTERSON, JOHN'
-Candidate	BACLET, JEFF	BACLET, JEFF
-Candidate	BACLET, JEFF	'BACLET, JEFF'
-Candidate	EPPOLITO, JOHN	EPPOLITO, JOHN
-Candidate	EPPOLITO, JOHN	'EPPOLITO, JOHN'
-Candidate	NICOLET, DIANE	NICOLET, DIANE
-Candidate	NICOLET, DIANE	'NICOLET, DIANE'
-Candidate	WESNER, CRAIG	WESNER, CRAIG
-Candidate	WESNER, CRAIG	'WESNER, CRAIG'
-Candidate	WHITE, PAUL D	WHITE, PAUL D
-Candidate	WHITE, PAUL D	'WHITE, PAUL D'
-Candidate	CONNER, DALE M	CONNER, DALE M
-Candidate	CONNER, DALE M	'CONNER, DALE M'
-Candidate	KRASNER, LISA	KRASNER, LISA
-Candidate	KRASNER, LISA	'KRASNER, LISA'
-Candidate	CHURCH, JEFF	CHURCH, JEFF
-Candidate	CHURCH, JEFF	'CHURCH, JEFF'
-Candidate	GENASCI, LISA	GENASCI, LISA
-Candidate	GENASCI, LISA	'GENASCI, LISA'
-Candidate	HEINEMANN, JACK	HEINEMANN, JACK
-Candidate	HEINEMANN, JACK	'HEINEMANN, JACK'
-Candidate	HUERSTEL, TERESE	HUERSTEL, TERESE
-Candidate	HUERSTEL, TERESE	'HUERSTEL, TERESE'
-Candidate	KELLEY, SCOTT	KELLEY, SCOTT
-Candidate	KELLEY, SCOTT	'KELLEY, SCOTT'
-Candidate	ARRASCADA, JOSEPH	ARRASCADA, JOSEPH
-Candidate	ARRASCADA, JOSEPH	'ARRASCADA, JOSEPH'
-Candidate	DISS, ANDREW	DISS, ANDREW
-Candidate	DISS, ANDREW	'DISS, ANDREW'
-Candidate	LOMBARDI, VINCE	LOMBARDI, VINCE
-Candidate	LOMBARDI, VINCE	'LOMBARDI, VINCE'
-Candidate	MCKENDRICKS, JOHN	MCKENDRICKS, JOHN
-Candidate	MCKENDRICKS, JOHN	'MCKENDRICKS, JOHN'
-Candidate	MELCHER, KEVIN	MELCHER, KEVIN
-Candidate	MELCHER, KEVIN	'MELCHER, KEVIN'
-Candidate	BERK, STAN	BERK, STAN
-Candidate	BERK, STAN	'BERK, STAN'
-Candidate	MARQUEZ, MICHAEL 'BROCK'	MARQUEZ, MICHAEL 'BROCK'
-Candidate	THIGPEN, KURT	THIGPEN, KURT
-Candidate	THIGPEN, KURT	'THIGPEN, KURT'
-Candidate	LORTON, GEORGE 'EDDIE'	LORTON, GEORGE 'EDDIE'
-Candidate	MOSKOWITZ, JOE	MOSKOWITZ, JOE
-Candidate	MOSKOWITZ, JOE	'MOSKOWITZ, JOE'
-Candidate	REESE, DEVON THOMAS	REESE, DEVON THOMAS
-Candidate	REESE, DEVON THOMAS	'REESE, DEVON THOMAS'
-Candidate	WALKER, MICHAEL	WALKER, MICHAEL
-Candidate	WALKER, MICHAEL	'WALKER, MICHAEL'
-Candidate	BREKHUS, JENNY	BREKHUS, JENNY
-Candidate	BREKHUS, JENNY	'BREKHUS, JENNY'
-Candidate	DRAKULICH, JOHN 'JD'	DRAKULICH, JOHN 'JD'
-Candidate	GRIFFITH, BRITTON ANNE	GRIFFITH, BRITTON ANNE
-Candidate	GRIFFITH, BRITTON ANNE	'GRIFFITH, BRITTON ANNE'
-Candidate	LOYD, SENA	LOYD, SENA
-Candidate	LOYD, SENA	'LOYD, SENA'
-Candidate	MORGAN, DEREK RAY	MORGAN, DEREK RAY
-Candidate	MORGAN, DEREK RAY	'MORGAN, DEREK RAY'
-Candidate	SCAFFIDI, SHERRIE PAULIE	SCAFFIDI, SHERRIE PAULIE
-Candidate	SCAFFIDI, SHERRIE PAULIE	'SCAFFIDI, SHERRIE PAULIE'
-Candidate	O'NEILL, PHILIP 'PK'	O'NEILL, PHILIP 'PK'
-Candidate	WILLIAMS, DAY ROBERT	WILLIAMS, DAY ROBERT
-Candidate	WILLIAMS, DAY ROBERT	'WILLIAMS, DAY ROBERT'
-Candidate	ANDERSON, NATHA C	ANDERSON, NATHA C
-Candidate	ANDERSON, NATHA C	'ANDERSON, NATHA C'
-Candidate	MOSER, LEA 'ARCHULETA'	MOSER, LEA 'ARCHULETA'
-Candidate	DICKMAN, JILL	DICKMAN, JILL
-Candidate	DICKMAN, JILL	'DICKMAN, JILL'
-Candidate	ESPINOSA, DAVID	ESPINOSA, DAVID
-Candidate	ESPINOSA, DAVID	'ESPINOSA, DAVID'
-Candidate	LINARES, SANDRA	LINARES, SANDRA
-Candidate	LINARES, SANDRA	'LINARES, SANDRA'
-Candidate	FINK, DARLA	FINK, DARLA
-Candidate	FINK, DARLA	'FINK, DARLA'
-Candidate	GOTTSCHALK, KURT	GOTTSCHALK, KURT
-Candidate	GOTTSCHALK, KURT	'GOTTSCHALK, KURT'
-Candidate	JARDON, NEOMA	JARDON, NEOMA
-Candidate	JARDON, NEOMA	'JARDON, NEOMA'
-Candidate	WILHELM, LEE 'CHEF'	WILHELM, LEE 'CHEF'
-Candidate	ABBOTT, DONALD	ABBOTT, DONALD
-Candidate	ABBOTT, DONALD	'ABBOTT, DONALD'
-Candidate	GRIMES, KRISTINE	GRIMES, KRISTINE
-Candidate	GRIMES, KRISTINE	'GRIMES, KRISTINE'
-Candidate	KIRTLEY, DICK	KIRTLEY, DICK
-Candidate	KIRTLEY, DICK	'KIRTLEY, DICK'
-Candidate	STOLYAROV, WENDY	STOLYAROV, WENDY
-Candidate	STOLYAROV, WENDY	'STOLYAROV, WENDY'
-Candidate	ANDERSON, PAUL S	ANDERSON, PAUL S
-Candidate	ANDERSON, PAUL S	'ANDERSON, PAUL S'
-Candidate	DIAZ, ELVIRA	DIAZ, ELVIRA
-Candidate	DIAZ, ELVIRA	'DIAZ, ELVIRA'
-Candidate	NESS, DAN	NESS, DAN
-Candidate	NESS, DAN	'NESS, DAN'
-Candidate	SMITH, QUENTIN	SMITH, QUENTIN
-Candidate	SMITH, QUENTIN	'SMITH, QUENTIN'
-Candidate	TAVENER, ANDREA	TAVENER, ANDREA
-Candidate	TAVENER, ANDREA	'TAVENER, ANDREA'
-Candidate	ALLRED, JAMES	ALLRED, JAMES
-Candidate	ALLRED, JAMES	'ALLRED, JAMES'
-Candidate	BYBEE, SHANE A.	BYBEE, SHANE A.
-Candidate	BYBEE, SHANE A.	'BYBEE, SHANE A.'
-Candidate	DISHONG, JOHNATHAN	DISHONG, JOHNATHAN
-Candidate	DISHONG, JOHNATHAN	'DISHONG, JOHNATHAN'
-Candidate	CARSON, LAURIE L.	CARSON, LAURIE L.
-Candidate	CARSON, LAURIE L.	'CARSON, LAURIE L.'
-Candidate	SOUTHWORTH, DON	SOUTHWORTH, DON
-Candidate	SOUTHWORTH, DON	'SOUTHWORTH, DON'
-Candidate	BALCH, LACEY	BALCH, LACEY
-Candidate	BALCH, LACEY	'BALCH, LACEY'
-Candidate	HOWE, RICHARD	HOWE, RICHARD
-Candidate	HOWE, RICHARD	'HOWE, RICHARD'
-Candidate	BORGHOFF, TERRI	BORGHOFF, TERRI
-Candidate	BORGHOFF, TERRI	'BORGHOFF, TERRI'
-Candidate	MCVICARS, ANGIE	MCVICARS, ANGIE
-Candidate	MCVICARS, ANGIE	'MCVICARS, ANGIE'
-Candidate	NICHOLES, SHELLA	NICHOLES, SHELLA
-Candidate	NICHOLES, SHELLA	'NICHOLES, SHELLA'
-Candidate	CAMPEAU, CANDICE	CAMPEAU, CANDICE
-Candidate	CAMPEAU, CANDICE	'CAMPEAU, CANDICE'
-Candidate	MCKENZIE, CAROL	MCKENZIE, CAROL
-Candidate	MCKENZIE, CAROL	'MCKENZIE, CAROL'
-Candidate	OLSON, ART M.	OLSON, ART M.
-Candidate	OLSON, ART M.	'OLSON, ART M.'
-Candidate	BECKWITH, SID	BECKWITH, SID
-Candidate	BECKWITH, SID	'BECKWITH, SID'
-Candidate	WHITTAKER, TONY	WHITTAKER, TONY
-Candidate	WHITTAKER, TONY	'WHITTAKER, TONY'
+Candidate	Nelson, Dave	Nelson, Dave
+Candidate	Nelson, Dave	'Nelson, Dave'
+Candidate	Tarkanian, Danny	Tarkanian, Danny
+Candidate	Tarkanian, Danny	'Tarkanian, Danny'
+Candidate	Gardner, Mark	Gardner, Mark
+Candidate	Gardner, Mark	'Gardner, Mark'
+Candidate	Walsh, Larry	Walsh, Larry
+Candidate	Walsh, Larry	'Walsh, Larry'
+Candidate	Nowosad, Walter 'Walt'	Nowosad, Walter 'Walt'
+Candidate	Tolbert, Nathan	Tolbert, Nathan
+Candidate	Tolbert, Nathan	'Tolbert, Nathan'
+Candidate	Kangas, Carey	Kangas, Carey
+Candidate	Kangas, Carey	'Kangas, Carey'
+Candidate	Gilkerson, Linda J.	Gilkerson, Linda J.
+Candidate	Gilkerson, Linda J.	'Gilkerson, Linda J.'
+Candidate	Dunham, Dale L.	Dunham, Dale L.
+Candidate	Dunham, Dale L.	'Dunham, Dale L.'
+Candidate	Gray, Teri A.	Gray, Teri A.
+Candidate	Gray, Teri A.	'Gray, Teri A.'
+Candidate	Rivano, Anthony P.	Rivano, Anthony P.
+Candidate	Rivano, Anthony P.	'Rivano, Anthony P.'
+Candidate	Siegman, Russ	Siegman, Russ
+Candidate	Siegman, Russ	'Siegman, Russ'
+Candidate	Stolyarov, Gennady Ii	Stolyarov, Gennady Ii
+Candidate	Stolyarov, Gennady Ii	'Stolyarov, Gennady Ii'
+Candidate	Akola, Dave	Akola, Dave
+Candidate	Akola, Dave	'Akola, Dave'
+Candidate	Barber, George H.	Barber, George H.
+Candidate	Barber, George H.	'Barber, George H.'
+Candidate	Carrillo, Amber	Carrillo, Amber
+Candidate	Carrillo, Amber	'Carrillo, Amber'
+Candidate	Clark, Gerald 'Sparky' M.	Clark, Gerald 'Sparky' M.
+Candidate	Fanto, Frank	Fanto, Frank
+Candidate	Fanto, Frank	'Fanto, Frank'
+Candidate	Ferris, Sharon	Ferris, Sharon
+Candidate	Ferris, Sharon	'Ferris, Sharon'
+Candidate	Mitchell, Steve	Mitchell, Steve
+Candidate	Mitchell, Steve	'Mitchell, Steve'
+Candidate	Taylor, Jerry 'Brandon'	Taylor, Jerry 'Brandon'
+Candidate	Evertsen, Gary Ã¢ÂÂRadarã¢ÂÂ	Evertsen, Gary Ã¢ÂÂRadarã¢ÂÂ
+Candidate	Evertsen, Gary Ã¢ÂÂRadarã¢ÂÂ	'Evertsen, Gary Ã¢ÂÂRadarã¢ÂÂ'
+Candidate	Steninger, Rex	Steninger, Rex
+Candidate	Steninger, Rex	'Steninger, Rex'
+Candidate	Fish, Kieth	Fish, Kieth
+Candidate	Fish, Kieth	'Fish, Kieth'
+Candidate	Cooney, Jim	Cooney, Jim
+Candidate	Cooney, Jim	'Cooney, Jim'
+Candidate	D'Ayr, Gabrielle 'Brie'	D'Ayr, Gabrielle 'Brie'
+Candidate	Horsford, Steven A.	Horsford, Steven A.
+Candidate	Horsford, Steven A.	'Horsford, Steven A.'
+Candidate	Blundo, Leo	Blundo, Leo
+Candidate	Blundo, Leo	'Blundo, Leo'
+Candidate	Bland, Elizabeth	Bland, Elizabeth
+Candidate	Bland, Elizabeth	'Bland, Elizabeth'
+Candidate	Hafer, Trisha	Hafer, Trisha
+Candidate	Hafer, Trisha	'Hafer, Trisha'
+Candidate	Johnson, Trinie	Johnson, Trinie
+Candidate	Johnson, Trinie	'Johnson, Trinie'
+Candidate	Melendrez, J. Paul	Melendrez, J. Paul
+Candidate	Melendrez, J. Paul	'Melendrez, J. Paul'
+Candidate	Kirby, William C	Kirby, William C
+Candidate	Kirby, William C	'Kirby, William C'
+Candidate	Amodei, Mark E	Amodei, Mark E
+Candidate	Amodei, Mark E	'Amodei, Mark E'
+Candidate	Brissenden, Marlene	Brissenden, Marlene
+Candidate	Brissenden, Marlene	'Brissenden, Marlene'
+Candidate	Garrett, Ben	Garrett, Ben
+Candidate	Garrett, Ben	'Garrett, Ben'
+Candidate	Hill, Jesse J	Hill, Jesse J
+Candidate	Hill, Jesse J	'Hill, Jesse J'
+Candidate	Bell, Debra	Bell, Debra
+Candidate	Bell, Debra	'Bell, Debra'
+Candidate	Brooks, Paige	Brooks, Paige
+Candidate	Brooks, Paige	'Brooks, Paige'
+Candidate	Hoss, Tom	Hoss, Tom
+Candidate	Hoss, Tom	'Hoss, Tom'
+Candidate	Robertson, Leanne	Robertson, Leanne
+Candidate	Robertson, Leanne	'Robertson, Leanne'
+Candidate	Sauers, Shelby	Sauers, Shelby
+Candidate	Sauers, Shelby	'Sauers, Shelby'
+Candidate	Casalez, Joann	Casalez, Joann
+Candidate	Casalez, Joann	'Casalez, Joann'
+Candidate	Trout, Lewis 'Luis'	Trout, Lewis 'Luis'
+Candidate	Uhlmann, Sabrina	Uhlmann, Sabrina
+Candidate	Uhlmann, Sabrina	'Uhlmann, Sabrina'
+Candidate	Owen, Virginia 'Jenna'	Owen, Virginia 'Jenna'
+Candidate	Swensen, Abram D.	Swensen, Abram D.
+Candidate	Swensen, Abram D.	'Swensen, Abram D.'
+Candidate	Hardy, Hope E.	Hardy, Hope E.
+Candidate	Hardy, Hope E.	'Hardy, Hope E.'
+Candidate	Waits, Patsy A.	Waits, Patsy A.
+Candidate	Waits, Patsy A.	'Waits, Patsy A.'
+Candidate	Allan, Judie A.	Allan, Judie A.
+Candidate	Allan, Judie A.	'Allan, Judie A.'
+Candidate	Freeman, Kathleen 'Kathy'	Freeman, Kathleen 'Kathy'
+Candidate	Schmidt, Amber	Schmidt, Amber
+Candidate	Schmidt, Amber	'Schmidt, Amber'
+Candidate	Thomas, Wallace 'Jr'	Thomas, Wallace 'Jr'
+Candidate	Villanueva, Manuel Jr.	Villanueva, Manuel Jr.
+Candidate	Villanueva, Manuel Jr.	'Villanueva, Manuel Jr.'
+Candidate	Valdovinos, Elizabeth	Valdovinos, Elizabeth
+Candidate	Valdovinos, Elizabeth	'Valdovinos, Elizabeth'
+Candidate	Mcmahon, Linda L.	Mcmahon, Linda L.
+Candidate	Mcmahon, Linda L.	'Mcmahon, Linda L.'
+Candidate	Sam, Marla J.	Sam, Marla J.
+Candidate	Sam, Marla J.	'Sam, Marla J.'
+Candidate	Farr, Lyle	Farr, Lyle
+Candidate	Farr, Lyle	'Farr, Lyle'
+Candidate	Matheus, James R.	Matheus, James R.
+Candidate	Matheus, James R.	'Matheus, James R.'
+Candidate	Mills, Doug	Mills, Doug
+Candidate	Mills, Doug	'Mills, Doug'
+Candidate	Dã¢ÂÂAyr, Gabrielle Ã¢ÂÂBrieã¢ÂÂ	Dã¢ÂÂAyr, Gabrielle Ã¢ÂÂBrieã¢ÂÂ
+Candidate	Dã¢ÂÂAyr, Gabrielle Ã¢ÂÂBrieã¢ÂÂ	'Dã¢ÂÂAyr, Gabrielle Ã¢ÂÂBrieã¢ÂÂ'
+Candidate	Hafen Ii, Gregory T.	Hafen Ii, Gregory T.
+Candidate	Hafen Ii, Gregory T.	'Hafen Ii, Gregory T.'
+Candidate	Kelley, Pat	Kelley, Pat
+Candidate	Kelley, Pat	'Kelley, Pat'
+Candidate	Rowe, Peggy A.	Rowe, Peggy A.
+Candidate	Rowe, Peggy A.	'Rowe, Peggy A.'
+Candidate	Gladwill, Gary G.	Gladwill, Gary G.
+Candidate	Gladwill, Gary G.	'Gladwill, Gary G.'
+Candidate	Gray, Ken	Gray, Ken
+Candidate	Gray, Ken	'Gray, Ken'
+Candidate	Jacobson, Robert	Jacobson, Robert
+Candidate	Jacobson, Robert	'Jacobson, Robert'
+Candidate	Thomas, David	Thomas, David
+Candidate	Thomas, David	'Thomas, David'
+Candidate	Hockaday, David	Hockaday, David
+Candidate	Hockaday, David	'Hockaday, David'
+Candidate	Ortega, Ricky	Ortega, Ricky
+Candidate	Ortega, Ricky	'Ortega, Ricky'
+Candidate	Thompson, Clifford	Thompson, Clifford
+Candidate	Thompson, Clifford	'Thompson, Clifford'
+Candidate	Parsons, Sherry	Parsons, Sherry
+Candidate	Parsons, Sherry	'Parsons, Sherry'
+Candidate	Cowee, Philip	Cowee, Philip
+Candidate	Cowee, Philip	'Cowee, Philip'
+Candidate	Villines, Holly	Villines, Holly
+Candidate	Villines, Holly	'Villines, Holly'
+Candidate	Crabtree, Kimber L. A.	Crabtree, Kimber L. A.
+Candidate	Crabtree, Kimber L. A.	'Crabtree, Kimber L. A.'
+Candidate	Christensen, James	Christensen, James
+Candidate	Christensen, James	'Christensen, James'
+Candidate	Giomi, Deborah A.	Giomi, Deborah A.
+Candidate	Giomi, Deborah A.	'Giomi, Deborah A.'
+Candidate	Hitchcock, Gerald	Hitchcock, Gerald
+Candidate	Hitchcock, Gerald	'Hitchcock, Gerald'
+Candidate	Weir-Cooley, Ronnie	Weir-Cooley, Ronnie
+Candidate	Weir-Cooley, Ronnie	'Weir-Cooley, Ronnie'
+Candidate	Price, Judy	Price, Judy
+Candidate	Price, Judy	'Price, Judy'
+Candidate	Block, Ray	Block, Ray
+Candidate	Block, Ray	'Block, Ray'
+Candidate	Hon, Pat	Hon, Pat
+Candidate	Hon, Pat	'Hon, Pat'
+Candidate	Mccassie, Dan	Mccassie, Dan
+Candidate	Mccassie, Dan	'Mccassie, Dan'
+Candidate	Murphy, Paul	Murphy, Paul
+Candidate	Murphy, Paul	'Murphy, Paul'
+Candidate	Riesen, William	Riesen, William
+Candidate	Riesen, William	'Riesen, William'
+Candidate	Rodriguez, Jay	Rodriguez, Jay
+Candidate	Rodriguez, Jay	'Rodriguez, Jay'
+Candidate	De St. Maurice, L. Michelle	De St. Maurice, L. Michelle
+Candidate	De St. Maurice, L. Michelle	'De St. Maurice, L. Michelle'
+Candidate	Wheeler, Harry J.	Wheeler, Harry J.
+Candidate	Wheeler, Harry J.	'Wheeler, Harry J.'
+Candidate	Parsons, Donald	Parsons, Donald
+Candidate	Parsons, Donald	'Parsons, Donald'
+Candidate	Severa, Shellie T.	Severa, Shellie T.
+Candidate	Severa, Shellie T.	'Severa, Shellie T.'
+Candidate	Zoberski, Felicity	Zoberski, Felicity
+Candidate	Zoberski, Felicity	'Zoberski, Felicity'
+Candidate	Mckay, Frances 'Fran'	Mckay, Frances 'Fran'
+Candidate	Ward, Chris	Ward, Chris
+Candidate	Ward, Chris	'Ward, Chris'
+Candidate	Rodriguez, Auggie	Rodriguez, Auggie
+Candidate	Rodriguez, Auggie	'Rodriguez, Auggie'
+Candidate	Flynn, Sherry	Flynn, Sherry
+Candidate	Flynn, Sherry	'Flynn, Sherry'
+Candidate	Perez, Bridget	Perez, Bridget
+Candidate	Perez, Bridget	'Perez, Bridget'
+Candidate	Brucato, George J	Brucato, George J
+Candidate	Brucato, George J	'Brucato, George J'
+Candidate	Richardson, Vincent L	Richardson, Vincent L
+Candidate	Richardson, Vincent L	'Richardson, Vincent L'
+Candidate	Diede, Juanita	Diede, Juanita
+Candidate	Diede, Juanita	'Diede, Juanita'
+Candidate	Viani, Tyler J	Viani, Tyler J
+Candidate	Viani, Tyler J	'Viani, Tyler J'
+Candidate	Castagnola, Kathryn	Castagnola, Kathryn
+Candidate	Castagnola, Kathryn	'Castagnola, Kathryn'
+Candidate	Dolby, Trevor	Dolby, Trevor
+Candidate	Dolby, Trevor	'Dolby, Trevor'
+Candidate	Dutton, Liandra	Dutton, Liandra
+Candidate	Dutton, Liandra	'Dutton, Liandra'
+Candidate	Gamble, Tim	Gamble, Tim
+Candidate	Gamble, Tim	'Gamble, Tim'
+Candidate	Gardner, Richard 'Dick'	Gardner, Richard 'Dick'
+Candidate	Jabbour, Bruce J.	Jabbour, Bruce J.
+Candidate	Jabbour, Bruce J.	'Jabbour, Bruce J.'
+Candidate	Stoddard, Teresa	Stoddard, Teresa
+Candidate	Stoddard, Teresa	'Stoddard, Teresa'
+Candidate	Carbone, Frank	Carbone, Frank
+Candidate	Carbone, Frank	'Carbone, Frank'
+Candidate	Koenig, John	Koenig, John
+Candidate	Koenig, John	'Koenig, John'
+Candidate	Baker, Louis 'Louie' James	Baker, Louis 'Louie' James
+Candidate	Cox, Donna C.	Cox, Donna C.
+Candidate	Cox, Donna C.	'Cox, Donna C.'
+Candidate	O'Donnell, Deanna	O'Donnell, Deanna
+Candidate	O'Donnell, Deanna	'O'Donnell, Deanna'
+Candidate	Wehrly, John	Wehrly, John
+Candidate	Wehrly, John	'Wehrly, John'
+Candidate	Compton, Aaron	Compton, Aaron
+Candidate	Compton, Aaron	'Compton, Aaron'
+Candidate	Hampton, Oren E.	Hampton, Oren E.
+Candidate	Hampton, Oren E.	'Hampton, Oren E.'
+Candidate	Hansen, Mark D.	Hansen, Mark D.
+Candidate	Hansen, Mark D.	'Hansen, Mark D.'
+Candidate	Peterson, Liese S.	Peterson, Liese S.
+Candidate	Peterson, Liese S.	'Peterson, Liese S.'
+Candidate	Hudson, Shayla	Hudson, Shayla
+Candidate	Hudson, Shayla	'Hudson, Shayla'
+Candidate	Skelton, David	Skelton, David
+Candidate	Skelton, David	'Skelton, David'
+Candidate	Mancebo, Michael	Mancebo, Michael
+Candidate	Mancebo, Michael	'Mancebo, Michael'
+Candidate	Shields, Melissa V.	Shields, Melissa V.
+Candidate	Shields, Melissa V.	'Shields, Melissa V.'
+Candidate	Mcbride, Marshall	Mcbride, Marshall
+Candidate	Mcbride, Marshall	'Mcbride, Marshall'
+Candidate	Mitchell, Clay	Mitchell, Clay
+Candidate	Mitchell, Clay	'Mitchell, Clay'
+Candidate	Nashold, Lee	Nashold, Lee
+Candidate	Nashold, Lee	'Nashold, Lee'
+Candidate	Hilton, Phillip A.	Hilton, Phillip A.
+Candidate	Hilton, Phillip A.	'Hilton, Phillip A.'
+Candidate	Simons, Anne	Simons, Anne
+Candidate	Simons, Anne	'Simons, Anne'
+Candidate	Hames, Gary	Hames, Gary
+Candidate	Hames, Gary	'Hames, Gary'
+Candidate	Conley, Casey	Conley, Casey
+Candidate	Conley, Casey	'Conley, Casey'
+Candidate	Thompson, Tom	Thompson, Tom
+Candidate	Thompson, Tom	'Thompson, Tom'
+Candidate	Schiffman, Steve Ã¢ÂÂPragmaticã¢ÂÂ	Schiffman, Steve Ã¢ÂÂPragmaticã¢ÂÂ
+Candidate	Schiffman, Steve Ã¢ÂÂPragmaticã¢ÂÂ	'Schiffman, Steve Ã¢ÂÂPragmaticã¢ÂÂ'
+Candidate	Dollinger, Paige	Dollinger, Paige
+Candidate	Dollinger, Paige	'Dollinger, Paige'
+Candidate	Shannon, Greg	Shannon, Greg
+Candidate	Shannon, Greg	'Shannon, Greg'
+Candidate	White, Lance Clark	White, Lance Clark
+Candidate	White, Lance Clark	'White, Lance Clark'
+Candidate	Rodriguez, Esther C	Rodriguez, Esther C
+Candidate	Rodriguez, Esther C	'Rodriguez, Esther C'
+Candidate	Baker, Tom	Baker, Tom
+Candidate	Baker, Tom	'Baker, Tom'
+Candidate	Chesney, Larry	Chesney, Larry
+Candidate	Chesney, Larry	'Chesney, Larry'
+Candidate	Currivan, James	Currivan, James
+Candidate	Currivan, James	'Currivan, James'
+Candidate	Gugich, Daniel	Gugich, Daniel
+Candidate	Gugich, Daniel	'Gugich, Daniel'
+Candidate	Helton, Christopher	Helton, Christopher
+Candidate	Helton, Christopher	'Helton, Christopher'
+Candidate	Otto, Donald	Otto, Donald
+Candidate	Otto, Donald	'Otto, Donald'
+Candidate	Patterson, John	Patterson, John
+Candidate	Patterson, John	'Patterson, John'
+Candidate	Baclet, Jeff	Baclet, Jeff
+Candidate	Baclet, Jeff	'Baclet, Jeff'
+Candidate	Eppolito, John	Eppolito, John
+Candidate	Eppolito, John	'Eppolito, John'
+Candidate	Nicolet, Diane	Nicolet, Diane
+Candidate	Nicolet, Diane	'Nicolet, Diane'
+Candidate	Wesner, Craig	Wesner, Craig
+Candidate	Wesner, Craig	'Wesner, Craig'
+Candidate	White, Paul D	White, Paul D
+Candidate	White, Paul D	'White, Paul D'
+Candidate	Conner, Dale M	Conner, Dale M
+Candidate	Conner, Dale M	'Conner, Dale M'
+Candidate	Krasner, Lisa	Krasner, Lisa
+Candidate	Krasner, Lisa	'Krasner, Lisa'
+Candidate	Church, Jeff	Church, Jeff
+Candidate	Church, Jeff	'Church, Jeff'
+Candidate	Genasci, Lisa	Genasci, Lisa
+Candidate	Genasci, Lisa	'Genasci, Lisa'
+Candidate	Heinemann, Jack	Heinemann, Jack
+Candidate	Heinemann, Jack	'Heinemann, Jack'
+Candidate	Huerstel, Terese	Huerstel, Terese
+Candidate	Huerstel, Terese	'Huerstel, Terese'
+Candidate	Kelley, Scott	Kelley, Scott
+Candidate	Kelley, Scott	'Kelley, Scott'
+Candidate	Arrascada, Joseph	Arrascada, Joseph
+Candidate	Arrascada, Joseph	'Arrascada, Joseph'
+Candidate	Diss, Andrew	Diss, Andrew
+Candidate	Diss, Andrew	'Diss, Andrew'
+Candidate	Lombardi, Vince	Lombardi, Vince
+Candidate	Lombardi, Vince	'Lombardi, Vince'
+Candidate	Mckendricks, John	Mckendricks, John
+Candidate	Mckendricks, John	'Mckendricks, John'
+Candidate	Melcher, Kevin	Melcher, Kevin
+Candidate	Melcher, Kevin	'Melcher, Kevin'
+Candidate	Berk, Stan	Berk, Stan
+Candidate	Berk, Stan	'Berk, Stan'
+Candidate	Marquez, Michael 'Brock'	Marquez, Michael 'Brock'
+Candidate	Thigpen, Kurt	Thigpen, Kurt
+Candidate	Thigpen, Kurt	'Thigpen, Kurt'
+Candidate	Lorton, George 'Eddie'	Lorton, George 'Eddie'
+Candidate	Moskowitz, Joe	Moskowitz, Joe
+Candidate	Moskowitz, Joe	'Moskowitz, Joe'
+Candidate	Reese, Devon Thomas	Reese, Devon Thomas
+Candidate	Reese, Devon Thomas	'Reese, Devon Thomas'
+Candidate	Walker, Michael	Walker, Michael
+Candidate	Walker, Michael	'Walker, Michael'
+Candidate	Brekhus, Jenny	Brekhus, Jenny
+Candidate	Brekhus, Jenny	'Brekhus, Jenny'
+Candidate	Drakulich, John 'Jd'	Drakulich, John 'Jd'
+Candidate	Griffith, Britton Anne	Griffith, Britton Anne
+Candidate	Griffith, Britton Anne	'Griffith, Britton Anne'
+Candidate	Loyd, Sena	Loyd, Sena
+Candidate	Loyd, Sena	'Loyd, Sena'
+Candidate	Morgan, Derek Ray	Morgan, Derek Ray
+Candidate	Morgan, Derek Ray	'Morgan, Derek Ray'
+Candidate	Scaffidi, Sherrie Paulie	Scaffidi, Sherrie Paulie
+Candidate	Scaffidi, Sherrie Paulie	'Scaffidi, Sherrie Paulie'
+Candidate	O'Neill, Philip 'Pk'	O'Neill, Philip 'Pk'
+Candidate	Williams, Day Robert	Williams, Day Robert
+Candidate	Williams, Day Robert	'Williams, Day Robert'
+Candidate	Anderson, Natha C	Anderson, Natha C
+Candidate	Anderson, Natha C	'Anderson, Natha C'
+Candidate	Moser, Lea 'Archuleta'	Moser, Lea 'Archuleta'
+Candidate	Dickman, Jill	Dickman, Jill
+Candidate	Dickman, Jill	'Dickman, Jill'
+Candidate	Espinosa, David	Espinosa, David
+Candidate	Espinosa, David	'Espinosa, David'
+Candidate	Linares, Sandra	Linares, Sandra
+Candidate	Linares, Sandra	'Linares, Sandra'
+Candidate	Fink, Darla	Fink, Darla
+Candidate	Fink, Darla	'Fink, Darla'
+Candidate	Gottschalk, Kurt	Gottschalk, Kurt
+Candidate	Gottschalk, Kurt	'Gottschalk, Kurt'
+Candidate	Jardon, Neoma	Jardon, Neoma
+Candidate	Jardon, Neoma	'Jardon, Neoma'
+Candidate	Wilhelm, Lee 'Chef'	Wilhelm, Lee 'Chef'
+Candidate	Abbott, Donald	Abbott, Donald
+Candidate	Abbott, Donald	'Abbott, Donald'
+Candidate	Grimes, Kristine	Grimes, Kristine
+Candidate	Grimes, Kristine	'Grimes, Kristine'
+Candidate	Kirtley, Dick	Kirtley, Dick
+Candidate	Kirtley, Dick	'Kirtley, Dick'
+Candidate	Stolyarov, Wendy	Stolyarov, Wendy
+Candidate	Stolyarov, Wendy	'Stolyarov, Wendy'
+Candidate	Anderson, Paul S	Anderson, Paul S
+Candidate	Anderson, Paul S	'Anderson, Paul S'
+Candidate	Diaz, Elvira	Diaz, Elvira
+Candidate	Diaz, Elvira	'Diaz, Elvira'
+Candidate	Ness, Dan	Ness, Dan
+Candidate	Ness, Dan	'Ness, Dan'
+Candidate	Smith, Quentin	Smith, Quentin
+Candidate	Smith, Quentin	'Smith, Quentin'
+Candidate	Tavener, Andrea	Tavener, Andrea
+Candidate	Tavener, Andrea	'Tavener, Andrea'
+Candidate	Allred, James	Allred, James
+Candidate	Allred, James	'Allred, James'
+Candidate	Bybee, Shane A.	Bybee, Shane A.
+Candidate	Bybee, Shane A.	'Bybee, Shane A.'
+Candidate	Dishong, Johnathan	Dishong, Johnathan
+Candidate	Dishong, Johnathan	'Dishong, Johnathan'
+Candidate	Carson, Laurie L.	Carson, Laurie L.
+Candidate	Carson, Laurie L.	'Carson, Laurie L.'
+Candidate	Southworth, Don	Southworth, Don
+Candidate	Southworth, Don	'Southworth, Don'
+Candidate	Balch, Lacey	Balch, Lacey
+Candidate	Balch, Lacey	'Balch, Lacey'
+Candidate	Howe, Richard	Howe, Richard
+Candidate	Howe, Richard	'Howe, Richard'
+Candidate	Borghoff, Terri	Borghoff, Terri
+Candidate	Borghoff, Terri	'Borghoff, Terri'
+Candidate	Mcvicars, Angie	Mcvicars, Angie
+Candidate	Mcvicars, Angie	'Mcvicars, Angie'
+Candidate	Nicholes, Shella	Nicholes, Shella
+Candidate	Nicholes, Shella	'Nicholes, Shella'
+Candidate	Campeau, Candice	Campeau, Candice
+Candidate	Campeau, Candice	'Campeau, Candice'
+Candidate	Mckenzie, Carol	Mckenzie, Carol
+Candidate	Mckenzie, Carol	'Mckenzie, Carol'
+Candidate	Olson, Art M.	Olson, Art M.
+Candidate	Olson, Art M.	'Olson, Art M.'
+Candidate	Beckwith, Sid	Beckwith, Sid
+Candidate	Beckwith, Sid	'Beckwith, Sid'
+Candidate	Whittaker, Tony	Whittaker, Tony
+Candidate	Whittaker, Tony	'Whittaker, Tony'
 Candidate	Dawley, David A.	Dawley, David A.
 Candidate	Dawley, David A.	'Dawley, David A.'
 Candidate	Ford, Aaron	Ford, Aaron
@@ -3995,8 +3991,8 @@ Candidate	Roberson, Michael	Roberson, Michael
 Candidate	Roberson, Michael	'Roberson, Michael'
 Candidate	Ramirez, Lupe	Ramirez, Lupe
 Candidate	Ramirez, Lupe	'Ramirez, Lupe'
-Candidate	WILKE-MCCULLOCH, STACIE	WILKE-MCCULLOCH, STACIE
-Candidate	WILKE-MCCULLOCH, STACIE	'WILKE-MCCULLOCH, STACIE'
+Candidate	Wilke-Mcculloch, Stacie	Wilke-Mcculloch, Stacie
+Candidate	Wilke-Mcculloch, Stacie	'Wilke-Mcculloch, Stacie'
 Candidate	Varner, Richard	Varner, Richard
 Candidate	Varner, Richard	'Varner, Richard'
 Candidate	Carine, Donald	Carine, Donald
@@ -4027,12 +4023,12 @@ Candidate	Robertson, Gayle	Robertson, Gayle
 Candidate	Robertson, Gayle	'Robertson, Gayle'
 Candidate	Alm, Vance	Alm, Vance
 Candidate	Alm, Vance	'Alm, Vance'
-Candidate	FOGARTY, PATRICK	FOGARTY, PATRICK
-Candidate	FOGARTY, PATRICK	'FOGARTY, PATRICK'
-Candidate	SCHOFIELD JR., JACK L.	SCHOFIELD JR., JACK L.
-Candidate	SCHOFIELD JR., JACK L.	'SCHOFIELD JR., JACK L.'
-Candidate	ANGLE, SHARRON	ANGLE, SHARRON
-Candidate	ANGLE, SHARRON	'ANGLE, SHARRON'
+Candidate	Fogarty, Patrick	Fogarty, Patrick
+Candidate	Fogarty, Patrick	'Fogarty, Patrick'
+Candidate	Schofield Jr., Jack L.	Schofield Jr., Jack L.
+Candidate	Schofield Jr., Jack L.	'Schofield Jr., Jack L.'
+Candidate	Angle, Sharron	Angle, Sharron
+Candidate	Angle, Sharron	'Angle, Sharron'
 Candidate	Burleigh, Danny	Burleigh, Danny
 Candidate	Burleigh, Danny	'Burleigh, Danny'
 Candidate	Knight, David Drew	Knight, David Drew
@@ -4054,50 +4050,50 @@ Candidate	Heller, Dean	Heller, Dean
 Candidate	Heller, Dean	'Heller, Dean'
 Candidate	Del Carlo, Carol	Del Carlo, Carol
 Candidate	Del Carlo, Carol	'Del Carlo, Carol'
-Candidate	BUCKMASTER, FREDERICK D.	BUCKMASTER, FREDERICK D.
-Candidate	BUCKMASTER, FREDERICK D.	'BUCKMASTER, FREDERICK D.'
-Candidate	GETTO, AMBER N.	GETTO, AMBER N.
-Candidate	GETTO, AMBER N.	'GETTO, AMBER N.'
-Candidate	HENDRIX, CLAY	HENDRIX, CLAY
-Candidate	HENDRIX, CLAY	'HENDRIX, CLAY'
-Candidate	HYDE, MATT	HYDE, MATT
-Candidate	HYDE, MATT	'HYDE, MATT'
-Candidate	JULIAN, PATTY	JULIAN, PATTY
-Candidate	JULIAN, PATTY	'JULIAN, PATTY'
-Candidate	LINGENFELTER, JAY	LINGENFELTER, JAY
-Candidate	LINGENFELTER, JAY	'LINGENFELTER, JAY'
-Candidate	MARTELL, DANTE A.	MARTELL, DANTE A.
-Candidate	MARTELL, DANTE A.	'MARTELL, DANTE A.'
-Candidate	MCDONALD, TEDD	MCDONALD, TEDD
-Candidate	MCDONALD, TEDD	'MCDONALD, TEDD'
-Candidate	PARMENTER, BOBBY J.	PARMENTER, BOBBY J.
-Candidate	PARMENTER, BOBBY J.	'PARMENTER, BOBBY J.'
-Candidate	SCHANK, CARMEN	SCHANK, CARMEN
-Candidate	SCHANK, CARMEN	'SCHANK, CARMEN'
-Candidate	SMOTHERMAN, DEBY	SMOTHERMAN, DEBY
-Candidate	SMOTHERMAN, DEBY	'SMOTHERMAN, DEBY'
-Candidate	WIERSMA JR., RICHARD HARRY	WIERSMA JR., RICHARD HARRY
-Candidate	WIERSMA JR., RICHARD HARRY	'WIERSMA JR., RICHARD HARRY'
-Candidate	BARRENCHEA, CORINE 'RINNIE'	BARRENCHEA, CORINE 'RINNIE'
-Candidate	ROTHERY, LINDA	ROTHERY, LINDA
-Candidate	ROTHERY, LINDA	'ROTHERY, LINDA'
-Candidate	CHRISTIE, WALTER H. 'BUTCH'	CHRISTIE, WALTER H. 'BUTCH'
-Candidate	EAST, RAY	EAST, RAY
-Candidate	EAST, RAY	'EAST, RAY'
-Candidate	HICKOX, RICHARD C.	HICKOX, RICHARD C.
-Candidate	HICKOX, RICHARD C.	'HICKOX, RICHARD C.'
-Candidate	JONES, JARED	JONES, JARED
-Candidate	JONES, JARED	'JONES, JARED'
-Candidate	MOSER, JOHN	MOSER, JOHN
-Candidate	MOSER, JOHN	'MOSER, JOHN'
+Candidate	Buckmaster, Frederick D.	Buckmaster, Frederick D.
+Candidate	Buckmaster, Frederick D.	'Buckmaster, Frederick D.'
+Candidate	Getto, Amber N.	Getto, Amber N.
+Candidate	Getto, Amber N.	'Getto, Amber N.'
+Candidate	Hendrix, Clay	Hendrix, Clay
+Candidate	Hendrix, Clay	'Hendrix, Clay'
+Candidate	Hyde, Matt	Hyde, Matt
+Candidate	Hyde, Matt	'Hyde, Matt'
+Candidate	Julian, Patty	Julian, Patty
+Candidate	Julian, Patty	'Julian, Patty'
+Candidate	Lingenfelter, Jay	Lingenfelter, Jay
+Candidate	Lingenfelter, Jay	'Lingenfelter, Jay'
+Candidate	Martell, Dante A.	Martell, Dante A.
+Candidate	Martell, Dante A.	'Martell, Dante A.'
+Candidate	Mcdonald, Tedd	Mcdonald, Tedd
+Candidate	Mcdonald, Tedd	'Mcdonald, Tedd'
+Candidate	Parmenter, Bobby J.	Parmenter, Bobby J.
+Candidate	Parmenter, Bobby J.	'Parmenter, Bobby J.'
+Candidate	Schank, Carmen	Schank, Carmen
+Candidate	Schank, Carmen	'Schank, Carmen'
+Candidate	Smotherman, Deby	Smotherman, Deby
+Candidate	Smotherman, Deby	'Smotherman, Deby'
+Candidate	Wiersma Jr., Richard Harry	Wiersma Jr., Richard Harry
+Candidate	Wiersma Jr., Richard Harry	'Wiersma Jr., Richard Harry'
+Candidate	Barrenchea, Corine 'Rinnie'	Barrenchea, Corine 'Rinnie'
+Candidate	Rothery, Linda	Rothery, Linda
+Candidate	Rothery, Linda	'Rothery, Linda'
+Candidate	Christie, Walter H. 'Butch'	Christie, Walter H. 'Butch'
+Candidate	East, Ray	East, Ray
+Candidate	East, Ray	'East, Ray'
+Candidate	Hickox, Richard C.	Hickox, Richard C.
+Candidate	Hickox, Richard C.	'Hickox, Richard C.'
+Candidate	Jones, Jared	Jones, Jared
+Candidate	Jones, Jared	'Jones, Jared'
+Candidate	Moser, John	Moser, John
+Candidate	Moser, John	'Moser, John'
 Candidate	Bedwell, Tim	Bedwell, Tim
 Candidate	Bedwell, Tim	'Bedwell, Tim'
 Candidate	Caldwell, Matt	Caldwell, Matt
 Candidate	Caldwell, Matt	'Caldwell, Matt'
 Candidate	Heiny, Gregory S.	Heiny, Gregory S.
 Candidate	Heiny, Gregory S.	'Heiny, Gregory S.'
-Candidate	LOMBARDO, JOE	LOMBARDO, JOE
-Candidate	LOMBARDO, JOE	'LOMBARDO, JOE'
+Candidate	Lombardo, Joe	Lombardo, Joe
+Candidate	Lombardo, Joe	'Lombardo, Joe'
 Candidate	Martines, Gordon	Martines, Gordon
 Candidate	Martines, Gordon	'Martines, Gordon'
 Candidate	Johnson, Briana	Johnson, Briana
@@ -4108,8 +4104,8 @@ Candidate	Moore, John	Moore, John
 Candidate	Moore, John	'Moore, John'
 Candidate	Paretts, Jayson	Paretts, Jayson
 Candidate	Paretts, Jayson	'Paretts, Jayson'
-Candidate	FITZPATRICK, LAURA	FITZPATRICK, LAURA
-Candidate	FITZPATRICK, LAURA	'FITZPATRICK, LAURA'
+Candidate	Fitzpatrick, Laura	Fitzpatrick, Laura
+Candidate	Fitzpatrick, Laura	'Fitzpatrick, Laura'
 Candidate	O'SULLIVAN, KEN 'Sully'	O'SULLIVAN, KEN 'Sully'
 Candidate	Collins, Phil	Collins, Phil
 Candidate	Collins, Phil	'Collins, Phil'
@@ -4117,27 +4113,27 @@ Candidate	Quilang, Ron Q.	Quilang, Ron Q.
 Candidate	Quilang, Ron Q.	'Quilang, Ron Q.'
 Candidate	Langford, Robert L.	Langford, Robert L.
 Candidate	Langford, Robert L.	'Langford, Robert L.'
-Candidate	WOLFSON, STEVE	WOLFSON, STEVE
-Candidate	WOLFSON, STEVE	'WOLFSON, STEVE'
+Candidate	Wolfson, Steve	Wolfson, Steve
+Candidate	Wolfson, Steve	'Wolfson, Steve'
 Candidate	Ginn, Vincent 'Vinny'	Ginn, Vincent 'Vinny'
 Candidate	Graham, Elana Lee	Graham, Elana Lee
 Candidate	Graham, Elana Lee	'Graham, Elana Lee'
 Candidate	Leavitt, James Dean	Leavitt, James Dean
 Candidate	Leavitt, James Dean	'Leavitt, James Dean'
-Candidate	ANDRESS-TOBIASSON, MELANIE	ANDRESS-TOBIASSON, MELANIE
-Candidate	ANDRESS-TOBIASSON, MELANIE	'ANDRESS-TOBIASSON, MELANIE'
+Candidate	Andress-Tobiasson, Melanie	Andress-Tobiasson, Melanie
+Candidate	Andress-Tobiasson, Melanie	'Andress-Tobiasson, Melanie'
 Candidate	De La Garza, Melisa	De La Garza, Melisa
 Candidate	De La Garza, Melisa	'De La Garza, Melisa'
 Candidate	Friedberg, Craig B.	Friedberg, Craig B.
 Candidate	Friedberg, Craig B.	'Friedberg, Craig B.'
 Candidate	Rogan, Jeff	Rogan, Jeff
 Candidate	Rogan, Jeff	'Rogan, Jeff'
-Candidate	SCISCENTO, JOSEPH S.	SCISCENTO, JOSEPH S.
-Candidate	SCISCENTO, JOSEPH S.	'SCISCENTO, JOSEPH S.'
-Candidate	DUSTIN-CRUZ, CYNTHIA	DUSTIN-CRUZ, CYNTHIA
-Candidate	DUSTIN-CRUZ, CYNTHIA	'DUSTIN-CRUZ, CYNTHIA'
-Candidate	ZIMMERMAN, ANN E.	ZIMMERMAN, ANN E.
-Candidate	ZIMMERMAN, ANN E.	'ZIMMERMAN, ANN E.'
+Candidate	Sciscento, Joseph S.	Sciscento, Joseph S.
+Candidate	Sciscento, Joseph S.	'Sciscento, Joseph S.'
+Candidate	Dustin-Cruz, Cynthia	Dustin-Cruz, Cynthia
+Candidate	Dustin-Cruz, Cynthia	'Dustin-Cruz, Cynthia'
+Candidate	Zimmerman, Ann E.	Zimmerman, Ann E.
+Candidate	Zimmerman, Ann E.	'Zimmerman, Ann E.'
 Candidate	Fougere, Thomas L.	Fougere, Thomas L.
 Candidate	Fougere, Thomas L.	'Fougere, Thomas L.'
 Candidate	Manfredi, Aaron	Manfredi, Aaron
@@ -4162,8 +4158,8 @@ Candidate	Trumbull, Jacquelyn	Trumbull, Jacquelyn
 Candidate	Trumbull, Jacquelyn	'Trumbull, Jacquelyn'
 Candidate	Wilson, Johnny	Wilson, Johnny
 Candidate	Wilson, Johnny	'Wilson, Johnny'
-Candidate	D'SILVA, REUBEN	D'SILVA, REUBEN
-Candidate	D'SILVA, REUBEN	'D'SILVA, REUBEN'
+Candidate	D'Silva, Reuben	D'Silva, Reuben
+Candidate	D'Silva, Reuben	'D'Silva, Reuben'
 Candidate	Horne, Fred	Horne, Fred
 Candidate	Horne, Fred	'Horne, Fred'
 Candidate	Arrington, Cherlyn	Arrington, Cherlyn
@@ -4191,14 +4187,14 @@ Candidate	McKeon, David	McKeon, David
 Candidate	McKeon, David	'McKeon, David'
 Candidate	Teijeiro, Annette	Teijeiro, Annette
 Candidate	Teijeiro, Annette	'Teijeiro, Annette'
-Candidate	HILL, RICHARD	HILL, RICHARD
-Candidate	HILL, RICHARD	'HILL, RICHARD'
+Candidate	Hill, Richard	Hill, Richard
+Candidate	Hill, Richard	'Hill, Richard'
 Candidate	Leavitt, Glen	Leavitt, Glen
 Candidate	Leavitt, Glen	'Leavitt, Glen'
 Candidate	McCarthy, Matt	McCarthy, Matt
 Candidate	McCarthy, Matt	'McCarthy, Matt'
-Candidate	ATKINS, TIM	ATKINS, TIM
-Candidate	ATKINS, TIM	'ATKINS, TIM'
+Candidate	Atkins, Tim	Atkins, Tim
+Candidate	Atkins, Tim	'Atkins, Tim'
 Candidate	Cepeda, Irene	Cepeda, Irene
 Candidate	Cepeda, Irene	'Cepeda, Irene'
 Candidate	Martinez, Jr., Leobardo	Martinez, Jr., Leobardo
@@ -4241,8 +4237,8 @@ Candidate	Lee, Charles	Lee, Charles
 Candidate	Lee, Charles	'Lee, Charles'
 Candidate	Shupe, Larry	Shupe, Larry
 Candidate	Shupe, Larry	'Shupe, Larry'
-Candidate	BATEMAN, SAMUEL	BATEMAN, SAMUEL
-Candidate	BATEMAN, SAMUEL	'BATEMAN, SAMUEL'
+Candidate	Bateman, Samuel	Bateman, Samuel
+Candidate	Bateman, Samuel	'Bateman, Samuel'
 Candidate	Aguirre-Insua, Luis	Aguirre-Insua, Luis
 Candidate	Aguirre-Insua, Luis	'Aguirre-Insua, Luis'
 Candidate	Watson, Kristee	Watson, Kristee
@@ -4269,8 +4265,8 @@ Candidate	Henry, LaDon	Henry, LaDon
 Candidate	Henry, LaDon	'Henry, LaDon'
 Candidate	Lauckner, Kathleen	Lauckner, Kathleen
 Candidate	Lauckner, Kathleen	'Lauckner, Kathleen'
-Candidate	CANCELA, YVANNA	CANCELA, YVANNA
-Candidate	CANCELA, YVANNA	'CANCELA, YVANNA'
+Candidate	Cancela, Yvanna	Cancela, Yvanna
+Candidate	Cancela, Yvanna	'Cancela, Yvanna'
 Candidate	Henderson, Bryce	Henderson, Bryce
 Candidate	Henderson, Bryce	'Henderson, Bryce'
 Candidate	Bradley, Joseph J.	Bradley, Joseph J.
@@ -4279,8 +4275,8 @@ Candidate	Hof, Dennis	Hof, Dennis
 Candidate	Hof, Dennis	'Hof, Dennis'
 Candidate	Oscarson, James	Oscarson, James
 Candidate	Oscarson, James	'Oscarson, James'
-Candidate	ELIASON, ROBERT L.	ELIASON, ROBERT L.
-Candidate	ELIASON, ROBERT L.	'ELIASON, ROBERT L.'
+Candidate	Eliason, Robert L.	Eliason, Robert L.
+Candidate	Eliason, Robert L.	'Eliason, Robert L.'
 Candidate	James, Sr., Isaac C.	James, Sr., Isaac C.
 Candidate	James, Sr., Isaac C.	'James, Sr., Isaac C.'
 Candidate	Martin, Jon	Martin, Jon
@@ -4289,10 +4285,10 @@ Candidate	Roundy, Travis	Roundy, Travis
 Candidate	Roundy, Travis	'Roundy, Travis'
 Candidate	Vega, Jimmy	Vega, Jimmy
 Candidate	Vega, Jimmy	'Vega, Jimmy'
-Candidate	HOO, KALANI	HOO, KALANI
-Candidate	HOO, KALANI	'HOO, KALANI'
-Candidate	TYRRELL, NATALIE	TYRRELL, NATALIE
-Candidate	TYRRELL, NATALIE	'TYRRELL, NATALIE'
+Candidate	Hoo, Kalani	Hoo, Kalani
+Candidate	Hoo, Kalani	'Hoo, Kalani'
+Candidate	Tyrrell, Natalie	Tyrrell, Natalie
+Candidate	Tyrrell, Natalie	'Tyrrell, Natalie'
 Candidate	Anzalone, John	Anzalone, John
 Candidate	Anzalone, John	'Anzalone, John'
 Candidate	Spearman, Patricia 'Pat'	Spearman, Patricia 'Pat'
@@ -4324,8 +4320,8 @@ Candidate	Perkins, Laura E.	Perkins, Laura E.
 Candidate	Perkins, Laura E.	'Perkins, Laura E.'
 Candidate	Ramirez, Eddie	Ramirez, Eddie
 Candidate	Ramirez, Eddie	'Ramirez, Eddie'
-Candidate	MILLS, GREGORY S.	MILLS, GREGORY S.
-Candidate	MILLS, GREGORY S.	'MILLS, GREGORY S.'
+Candidate	Mills, Gregory S.	Mills, Gregory S.
+Candidate	Mills, Gregory S.	'Mills, Gregory S.'
 Candidate	Solomon, Drue R.	Solomon, Drue R.
 Candidate	Solomon, Drue R.	'Solomon, Drue R.'
 Candidate	Waite, Kyle	Waite, Kyle
@@ -4338,8 +4334,8 @@ Candidate	Martinez, Susan	Martinez, Susan
 Candidate	Martinez, Susan	'Martinez, Susan'
 Candidate	Moore, Cinthia	Moore, Cinthia
 Candidate	Moore, Cinthia	'Moore, Cinthia'
-Candidate	SEIP, II, WALTER L.	SEIP, II, WALTER L.
-Candidate	SEIP, II, WALTER L.	'SEIP, II, WALTER L.'
+Candidate	Seip, Ii, Walter L.	Seip, Ii, Walter L.
+Candidate	Seip, Ii, Walter L.	'Seip, Ii, Walter L.'
 Candidate	York, Gregory	York, Gregory
 Candidate	York, Gregory	'York, Gregory'
 Candidate	Craddock, Jay	Craddock, Jay
@@ -4373,12 +4369,12 @@ Candidate	Kruder, Chuck	Kruder, Chuck
 Candidate	Kruder, Chuck	'Kruder, Chuck'
 Candidate	Hughes, Shawn L.	Hughes, Shawn L.
 Candidate	Hughes, Shawn L.	'Hughes, Shawn L.'
-Candidate	THURSTON, DUANE L.	THURSTON, DUANE L.
-Candidate	THURSTON, DUANE L.	'THURSTON, DUANE L.'
-Candidate	TOONE, RYAN W.	TOONE, RYAN W.
-Candidate	TOONE, RYAN W.	'TOONE, RYAN W.'
-Candidate	KOLHOSS, RUTH	KOLHOSS, RUTH
-Candidate	KOLHOSS, RUTH	'KOLHOSS, RUTH'
+Candidate	Thurston, Duane L.	Thurston, Duane L.
+Candidate	Thurston, Duane L.	'Thurston, Duane L.'
+Candidate	Toone, Ryan W.	Toone, Ryan W.
+Candidate	Toone, Ryan W.	'Toone, Ryan W.'
+Candidate	Kolhoss, Ruth	Kolhoss, Ruth
+Candidate	Kolhoss, Ruth	'Kolhoss, Ruth'
 Candidate	Backus, Shea	Backus, Shea
 Candidate	Backus, Shea	'Backus, Shea'
 Candidate	Cornstuble, Rick	Cornstuble, Rick
@@ -4464,70 +4460,70 @@ Candidate	Chichester, Ross	Chichester, Ross
 Candidate	Chichester, Ross	'Chichester, Ross'
 Candidate	Glasson, Richard	Glasson, Richard
 Candidate	Glasson, Richard	'Glasson, Richard'
-Candidate	CRACRAFT-DICKENSON, TAMMIE	CRACRAFT-DICKENSON, TAMMIE
-Candidate	CRACRAFT-DICKENSON, TAMMIE	'CRACRAFT-DICKENSON, TAMMIE'
-Candidate	WINES, IRA T.	WINES, IRA T.
-Candidate	WINES, IRA T.	'WINES, IRA T.'
-Candidate	ELLISON, JOHN C.	ELLISON, JOHN C.
-Candidate	ELLISON, JOHN C.	'ELLISON, JOHN C.'
-Candidate	JOHNSON, CHRIS J.	JOHNSON, CHRIS J.
-Candidate	JOHNSON, CHRIS J.	'JOHNSON, CHRIS J.'
-Candidate	FEASEL, TERI	FEASEL, TERI
-Candidate	FEASEL, TERI	'FEASEL, TERI'
-Candidate	CALTON, KENNY	CALTON, KENNY
-Candidate	CALTON, KENNY	'CALTON, KENNY'
-Candidate	SWETT, NOAH J.	SWETT, NOAH J.
-Candidate	SWETT, NOAH J.	'SWETT, NOAH J.'
-Candidate	THORNAL, SHAUNIA	THORNAL, SHAUNIA
-Candidate	THORNAL, SHAUNIA	'THORNAL, SHAUNIA'
-Candidate	BOATMAN, BRIAN E.	BOATMAN, BRIAN E.
-Candidate	BOATMAN, BRIAN E.	'BOATMAN, BRIAN E.'
-Candidate	CHRISTENSEN, MICHAEL	CHRISTENSEN, MICHAEL
-Candidate	CHRISTENSEN, MICHAEL	'CHRISTENSEN, MICHAEL'
-Candidate	ORTEGA, MARIA G.	ORTEGA, MARIA G.
-Candidate	ORTEGA, MARIA G.	'ORTEGA, MARIA G.'
-Candidate	RAY, BRIAN	RAY, BRIAN
-Candidate	RAY, BRIAN	'RAY, BRIAN'
-Candidate	SANTILLANEZ, CAROLYN	SANTILLANEZ, CAROLYN
-Candidate	SANTILLANEZ, CAROLYN	'SANTILLANEZ, CAROLYN'
+Candidate	Cracraft-Dickenson, Tammie	Cracraft-Dickenson, Tammie
+Candidate	Cracraft-Dickenson, Tammie	'Cracraft-Dickenson, Tammie'
+Candidate	Wines, Ira T.	Wines, Ira T.
+Candidate	Wines, Ira T.	'Wines, Ira T.'
+Candidate	Ellison, John C.	Ellison, John C.
+Candidate	Ellison, John C.	'Ellison, John C.'
+Candidate	Johnson, Chris J.	Johnson, Chris J.
+Candidate	Johnson, Chris J.	'Johnson, Chris J.'
+Candidate	Feasel, Teri	Feasel, Teri
+Candidate	Feasel, Teri	'Feasel, Teri'
+Candidate	Calton, Kenny	Calton, Kenny
+Candidate	Calton, Kenny	'Calton, Kenny'
+Candidate	Swett, Noah J.	Swett, Noah J.
+Candidate	Swett, Noah J.	'Swett, Noah J.'
+Candidate	Thornal, Shaunia	Thornal, Shaunia
+Candidate	Thornal, Shaunia	'Thornal, Shaunia'
+Candidate	Boatman, Brian E.	Boatman, Brian E.
+Candidate	Boatman, Brian E.	'Boatman, Brian E.'
+Candidate	Christensen, Michael	Christensen, Michael
+Candidate	Christensen, Michael	'Christensen, Michael'
+Candidate	Ortega, Maria G.	Ortega, Maria G.
+Candidate	Ortega, Maria G.	'Ortega, Maria G.'
+Candidate	Ray, Brian	Ray, Brian
+Candidate	Ray, Brian	'Ray, Brian'
+Candidate	Santillanez, Carolyn	Santillanez, Carolyn
+Candidate	Santillanez, Carolyn	'Santillanez, Carolyn'
 Candidate	BATES, MICHELLE 'Micki'	BATES, MICHELLE 'Micki'
-Candidate	HIGGINS, PRESTON 'P.K.'	HIGGINS, PRESTON 'P.K.'
-Candidate	STEZAKER, MARK	STEZAKER, MARK
-Candidate	STEZAKER, MARK	'STEZAKER, MARK'
+Candidate	Higgins, Preston 'P.K.'	Higgins, Preston 'P.K.'
+Candidate	Stezaker, Mark	Stezaker, Mark
+Candidate	Stezaker, Mark	'Stezaker, Mark'
 Candidate	JOHNSON, DANIELLE 'Danie'	JOHNSON, DANIELLE 'Danie'
-Candidate	BROWNFIELD, CARL V.	BROWNFIELD, CARL V.
-Candidate	BROWNFIELD, CARL V.	'BROWNFIELD, CARL V.'
-Candidate	HARTMAN, MARCIA	HARTMAN, MARCIA
-Candidate	HARTMAN, MARCIA	'HARTMAN, MARCIA'
-Candidate	BOTELER, JD	BOTELER, JD
-Candidate	BOTELER, JD	'BOTELER, JD'
-Candidate	ELGAN, KEN	ELGAN, KEN
-Candidate	ELGAN, KEN	'ELGAN, KEN'
-Candidate	GIOVE, TONY	GIOVE, TONY
-Candidate	GIOVE, TONY	'GIOVE, TONY'
+Candidate	Brownfield, Carl V.	Brownfield, Carl V.
+Candidate	Brownfield, Carl V.	'Brownfield, Carl V.'
+Candidate	Hartman, Marcia	Hartman, Marcia
+Candidate	Hartman, Marcia	'Hartman, Marcia'
+Candidate	Boteler, Jd	Boteler, Jd
+Candidate	Boteler, Jd	'Boteler, Jd'
+Candidate	Elgan, Ken	Elgan, Ken
+Candidate	Elgan, Ken	'Elgan, Ken'
+Candidate	Giove, Tony	Giove, Tony
+Candidate	Giove, Tony	'Giove, Tony'
 Candidate	Fransway, Tom	Fransway, Tom
 Candidate	Fransway, Tom	'Fransway, Tom'
 Candidate	Hansen, Alexis M.	Hansen, Alexis M.
 Candidate	Hansen, Alexis M.	'Hansen, Alexis M.'
-Candidate	CLONINGER, JENNIFER	CLONINGER, JENNIFER
-Candidate	CLONINGER, JENNIFER	'CLONINGER, JENNIFER'
-Candidate	HOEHNE, LISA L.	HOEHNE, LISA L.
-Candidate	HOEHNE, LISA L.	'HOEHNE, LISA L.'
-Candidate	ANDERSON, ASHLEY E.	ANDERSON, ASHLEY E.
-Candidate	ANDERSON, ASHLEY E.	'ANDERSON, ASHLEY E.'
-Candidate	FITZWATER, MELISSA	FITZWATER, MELISSA
-Candidate	FITZWATER, MELISSA	'FITZWATER, MELISSA'
-Candidate	HICKS, ROBIN	HICKS, ROBIN
-Candidate	HICKS, ROBIN	'HICKS, ROBIN'
-Candidate	IZZOLO, JIM	IZZOLO, JIM
-Candidate	IZZOLO, JIM	'IZZOLO, JIM'
+Candidate	Cloninger, Jennifer	Cloninger, Jennifer
+Candidate	Cloninger, Jennifer	'Cloninger, Jennifer'
+Candidate	Hoehne, Lisa L.	Hoehne, Lisa L.
+Candidate	Hoehne, Lisa L.	'Hoehne, Lisa L.'
+Candidate	Anderson, Ashley E.	Anderson, Ashley E.
+Candidate	Anderson, Ashley E.	'Anderson, Ashley E.'
+Candidate	Fitzwater, Melissa	Fitzwater, Melissa
+Candidate	Fitzwater, Melissa	'Fitzwater, Melissa'
+Candidate	Hicks, Robin	Hicks, Robin
+Candidate	Hicks, Robin	'Hicks, Robin'
+Candidate	Izzolo, Jim	Izzolo, Jim
+Candidate	Izzolo, Jim	'Izzolo, Jim'
 Candidate	CANTRELL, Patrick Shane	CANTRELL, Patrick Shane
 Candidate	CANTRELL, Patrick Shane	'CANTRELL, Patrick Shane'
-Candidate	SANDERS, KENNETH 'KENNY'	SANDERS, KENNETH 'KENNY'
-Candidate	WATTS, JESSE	WATTS, JESSE
-Candidate	WATTS, JESSE	'WATTS, JESSE'
-Candidate	BROWN, ELDON R.	BROWN, ELDON R.
-Candidate	BROWN, ELDON R.	'BROWN, ELDON R.'
+Candidate	Sanders, Kenneth 'Kenny'	Sanders, Kenneth 'Kenny'
+Candidate	Watts, Jesse	Watts, Jesse
+Candidate	Watts, Jesse	'Watts, Jesse'
+Candidate	Brown, Eldon R.	Brown, Eldon R.
+Candidate	Brown, Eldon R.	'Brown, Eldon R.'
 Candidate	Miller, Michelle	Miller, Michelle
 Candidate	Miller, Michelle	'Miller, Michelle'
 Candidate	Deputy, Glenda J.	Deputy, Glenda J.
@@ -4623,10 +4619,10 @@ Candidate	Brunson, Douglas	Brunson, Douglas
 Candidate	Brunson, Douglas	'Brunson, Douglas'
 Candidate	Hunewill, Frank	Hunewill, Frank
 Candidate	Hunewill, Frank	'Hunewill, Frank'
-Candidate	KANTZ, GREG	KANTZ, GREG
-Candidate	KANTZ, GREG	'KANTZ, GREG'
-Candidate	MCNEIL, AL	MCNEIL, AL
-Candidate	MCNEIL, AL	'MCNEIL, AL'
+Candidate	Kantz, Greg	Kantz, Greg
+Candidate	Kantz, Greg	'Kantz, Greg'
+Candidate	Mcneil, Al	Mcneil, Al
+Candidate	Mcneil, Al	'Mcneil, Al'
 Candidate	Bickerton, Tim	Bickerton, Tim
 Candidate	Bickerton, Tim	'Bickerton, Tim'
 Candidate	Edgington, Roy	Edgington, Roy
@@ -4667,8 +4663,8 @@ Candidate	Owens, Barbara 'Barb'	Owens, Barbara 'Barb'
 Candidate	Owens, Russell C.	Owens, Russell C.
 Candidate	Owens, Russell C.	'Owens, Russell C.'
 Candidate	Utterback, James 'Gunny'	Utterback, James 'Gunny'
-Candidate	SCHAAF, GARY	SCHAAF, GARY
-Candidate	SCHAAF, GARY	'SCHAAF, GARY'
+Candidate	Schaaf, Gary	Schaaf, Gary
+Candidate	Schaaf, Gary	'Schaaf, Gary'
 Candidate	Fitzgerald, Tom	Fitzgerald, Tom
 Candidate	Fitzgerald, Tom	'Fitzgerald, Tom'
 Candidate	Schumann, Richard Lee	Schumann, Richard Lee
@@ -4697,101 +4693,101 @@ Candidate	George, Cherrie	George, Cherrie
 Candidate	George, Cherrie	'George, Cherrie'
 Candidate	Nixon, Cindy	Nixon, Cindy
 Candidate	Nixon, Cindy	'Nixon, Cindy'
-Candidate	ARABIA, CHRIS	ARABIA, CHRIS
-Candidate	ARABIA, CHRIS	'ARABIA, CHRIS'
-Candidate	BELLO, ANGELA A.	BELLO, ANGELA A.
-Candidate	BELLO, ANGELA A.	'BELLO, ANGELA A.'
-Candidate	STUMNE, GINGER L.	STUMNE, GINGER L.
-Candidate	STUMNE, GINGER L.	'STUMNE, GINGER L.'
-Candidate	BUTLER, GERALD C.	BUTLER, GERALD C.
-Candidate	BUTLER, GERALD C.	'BUTLER, GERALD C.'
-Candidate	CHAMPION, DAVE	CHAMPION, DAVE
-Candidate	CHAMPION, DAVE	'CHAMPION, DAVE'
-Candidate	DEMEO, TONY	DEMEO, TONY
-Candidate	DEMEO, TONY	'DEMEO, TONY'
-Candidate	HIEBERT, DAVID	HIEBERT, DAVID
-Candidate	HIEBERT, DAVID	'HIEBERT, DAVID'
-Candidate	KULKIN, ASA	KULKIN, ASA
-Candidate	KULKIN, ASA	'KULKIN, ASA'
-Candidate	MIELZYNSKI, RAY 'THE FLAGMAN'	MIELZYNSKI, RAY 'THE FLAGMAN'
-Candidate	MOFFETT, JOE	MOFFETT, JOE
-Candidate	MOFFETT, JOE	'MOFFETT, JOE'
-Candidate	PFAFF, TASHA	PFAFF, TASHA
-Candidate	PFAFF, TASHA	'PFAFF, TASHA'
-Candidate	REX, KENNETH	REX, KENNETH
-Candidate	REX, KENNETH	'REX, KENNETH'
-Candidate	WEHRLY, SHARON A.	WEHRLY, SHARON A.
-Candidate	WEHRLY, SHARON A.	'WEHRLY, SHARON A.'
-Candidate	BORASKY, A. BUTCH	BORASKY, A. BUTCH
-Candidate	BORASKY, A. BUTCH	'BORASKY, A. BUTCH'
-Candidate	PRUDHONT, JOHN	PRUDHONT, JOHN
-Candidate	PRUDHONT, JOHN	'PRUDHONT, JOHN'
-Candidate	WEBSTER, PAM	WEBSTER, PAM
-Candidate	WEBSTER, PAM	'WEBSTER, PAM'
-Candidate	ZLOTEK, MARY DAWN	ZLOTEK, MARY DAWN
-Candidate	ZLOTEK, MARY DAWN	'ZLOTEK, MARY DAWN'
-Candidate	SULLIVAN, GUS	SULLIVAN, GUS
-Candidate	SULLIVAN, GUS	'SULLIVAN, GUS'
-Candidate	MORONES, ROGER	MORONES, ROGER
-Candidate	MORONES, ROGER	'MORONES, ROGER'
-Candidate	KLAPPER, JENNIFER	KLAPPER, JENNIFER
-Candidate	KLAPPER, JENNIFER	'KLAPPER, JENNIFER'
-Candidate	GREBER, KARMIN	GREBER, KARMIN
-Candidate	GREBER, KARMIN	'GREBER, KARMIN'
-Candidate	CHAMLEE, LISA	CHAMLEE, LISA
-Candidate	CHAMLEE, LISA	'CHAMLEE, LISA'
-Candidate	HAMILTON, RICHARD F.	HAMILTON, RICHARD F.
-Candidate	HAMILTON, RICHARD F.	'HAMILTON, RICHARD F.'
-Candidate	JONES, RANDY	JONES, RANDY
-Candidate	JONES, RANDY	'JONES, RANDY'
-Candidate	MARTIN, ROBERT M.	MARTIN, ROBERT M.
-Candidate	MARTIN, ROBERT M.	'MARTIN, ROBERT M.'
-Candidate	PAWLIUK, WARREN	PAWLIUK, WARREN
-Candidate	PAWLIUK, WARREN	'PAWLIUK, WARREN'
-Candidate	BOSKOVICH, RON	BOSKOVICH, RON
-Candidate	BOSKOVICH, RON	'BOSKOVICH, RON'
-Candidate	TRENNER, TINA	TRENNER, TINA
-Candidate	TRENNER, TINA	'TRENNER, TINA'
-Candidate	TURNER, WALT	TURNER, WALT
-Candidate	TURNER, WALT	'TURNER, WALT'
-Candidate	GRANT, RAY T.	GRANT, RAY T.
-Candidate	GRANT, RAY T.	'GRANT, RAY T.'
-Candidate	NORVELL, JOHN A.	NORVELL, JOHN A.
-Candidate	NORVELL, JOHN A.	'NORVELL, JOHN A.'
-Candidate	OWENS, MARK	OWENS, MARK
-Candidate	OWENS, MARK	'OWENS, MARK'
-Candidate	RUST, DONALD E.	RUST, DONALD E.
-Candidate	RUST, DONALD E.	'RUST, DONALD E.'
-Candidate	LILLY, DWIGHT	LILLY, DWIGHT
-Candidate	LILLY, DWIGHT	'LILLY, DWIGHT'
-Candidate	MARCHETTI, LEO B.	MARCHETTI, LEO B.
-Candidate	MARCHETTI, LEO B.	'MARCHETTI, LEO B.'
-Candidate	SCHINHOFEN, DAN	SCHINHOFEN, DAN
-Candidate	SCHINHOFEN, DAN	'SCHINHOFEN, DAN'
-Candidate	STRICKLAND, DEBRA	STRICKLAND, DEBRA
-Candidate	STRICKLAND, DEBRA	'STRICKLAND, DEBRA'
-Candidate	SUTTON, TIM	SUTTON, TIM
-Candidate	SUTTON, TIM	'SUTTON, TIM'
-Candidate	STEPHENS, KAREN	STEPHENS, KAREN
-Candidate	STEPHENS, KAREN	'STEPHENS, KAREN'
-Candidate	BASSO-CERINI, LAUREEN E.	BASSO-CERINI, LAUREEN E.
-Candidate	BASSO-CERINI, LAUREEN E.	'BASSO-CERINI, LAUREEN E.'
-Candidate	HODGES, MACKENZIE	HODGES, MACKENZIE
-Candidate	HODGES, MACKENZIE	'HODGES, MACKENZIE'
-Candidate	SHANK, CAROL A.	SHANK, CAROL A.
-Candidate	SHANK, CAROL A.	'SHANK, CAROL A.'
-Candidate	EVANS, JAMES	EVANS, JAMES
-Candidate	EVANS, JAMES	'EVANS, JAMES'
-Candidate	FENNER, ANN-MARIE	FENNER, ANN-MARIE
-Candidate	FENNER, ANN-MARIE	'FENNER, ANN-MARIE'
-Candidate	HUDSON, MICHAEL	HUDSON, MICHAEL
-Candidate	HUDSON, MICHAEL	'HUDSON, MICHAEL'
-Candidate	PLUMMER, CINDY	PLUMMER, CINDY
-Candidate	PLUMMER, CINDY	'PLUMMER, CINDY'
-Candidate	RACKLEY, BARBARA	RACKLEY, BARBARA
-Candidate	RACKLEY, BARBARA	'RACKLEY, BARBARA'
-Candidate	ALLEN, JERRY	ALLEN, JERRY
-Candidate	ALLEN, JERRY	'ALLEN, JERRY'
+Candidate	Arabia, Chris	Arabia, Chris
+Candidate	Arabia, Chris	'Arabia, Chris'
+Candidate	Bello, Angela A.	Bello, Angela A.
+Candidate	Bello, Angela A.	'Bello, Angela A.'
+Candidate	Stumne, Ginger L.	Stumne, Ginger L.
+Candidate	Stumne, Ginger L.	'Stumne, Ginger L.'
+Candidate	Butler, Gerald C.	Butler, Gerald C.
+Candidate	Butler, Gerald C.	'Butler, Gerald C.'
+Candidate	Champion, Dave	Champion, Dave
+Candidate	Champion, Dave	'Champion, Dave'
+Candidate	Demeo, Tony	Demeo, Tony
+Candidate	Demeo, Tony	'Demeo, Tony'
+Candidate	Hiebert, David	Hiebert, David
+Candidate	Hiebert, David	'Hiebert, David'
+Candidate	Kulkin, Asa	Kulkin, Asa
+Candidate	Kulkin, Asa	'Kulkin, Asa'
+Candidate	Mielzynski, Ray 'The Flagman'	Mielzynski, Ray 'The Flagman'
+Candidate	Moffett, Joe	Moffett, Joe
+Candidate	Moffett, Joe	'Moffett, Joe'
+Candidate	Pfaff, Tasha	Pfaff, Tasha
+Candidate	Pfaff, Tasha	'Pfaff, Tasha'
+Candidate	Rex, Kenneth	Rex, Kenneth
+Candidate	Rex, Kenneth	'Rex, Kenneth'
+Candidate	Wehrly, Sharon A.	Wehrly, Sharon A.
+Candidate	Wehrly, Sharon A.	'Wehrly, Sharon A.'
+Candidate	Borasky, A. Butch	Borasky, A. Butch
+Candidate	Borasky, A. Butch	'Borasky, A. Butch'
+Candidate	Prudhont, John	Prudhont, John
+Candidate	Prudhont, John	'Prudhont, John'
+Candidate	Webster, Pam	Webster, Pam
+Candidate	Webster, Pam	'Webster, Pam'
+Candidate	Zlotek, Mary Dawn	Zlotek, Mary Dawn
+Candidate	Zlotek, Mary Dawn	'Zlotek, Mary Dawn'
+Candidate	Sullivan, Gus	Sullivan, Gus
+Candidate	Sullivan, Gus	'Sullivan, Gus'
+Candidate	Morones, Roger	Morones, Roger
+Candidate	Morones, Roger	'Morones, Roger'
+Candidate	Klapper, Jennifer	Klapper, Jennifer
+Candidate	Klapper, Jennifer	'Klapper, Jennifer'
+Candidate	Greber, Karmin	Greber, Karmin
+Candidate	Greber, Karmin	'Greber, Karmin'
+Candidate	Chamlee, Lisa	Chamlee, Lisa
+Candidate	Chamlee, Lisa	'Chamlee, Lisa'
+Candidate	Hamilton, Richard F.	Hamilton, Richard F.
+Candidate	Hamilton, Richard F.	'Hamilton, Richard F.'
+Candidate	Jones, Randy	Jones, Randy
+Candidate	Jones, Randy	'Jones, Randy'
+Candidate	Martin, Robert M.	Martin, Robert M.
+Candidate	Martin, Robert M.	'Martin, Robert M.'
+Candidate	Pawliuk, Warren	Pawliuk, Warren
+Candidate	Pawliuk, Warren	'Pawliuk, Warren'
+Candidate	Boskovich, Ron	Boskovich, Ron
+Candidate	Boskovich, Ron	'Boskovich, Ron'
+Candidate	Trenner, Tina	Trenner, Tina
+Candidate	Trenner, Tina	'Trenner, Tina'
+Candidate	Turner, Walt	Turner, Walt
+Candidate	Turner, Walt	'Turner, Walt'
+Candidate	Grant, Ray T.	Grant, Ray T.
+Candidate	Grant, Ray T.	'Grant, Ray T.'
+Candidate	Norvell, John A.	Norvell, John A.
+Candidate	Norvell, John A.	'Norvell, John A.'
+Candidate	Owens, Mark	Owens, Mark
+Candidate	Owens, Mark	'Owens, Mark'
+Candidate	Rust, Donald E.	Rust, Donald E.
+Candidate	Rust, Donald E.	'Rust, Donald E.'
+Candidate	Lilly, Dwight	Lilly, Dwight
+Candidate	Lilly, Dwight	'Lilly, Dwight'
+Candidate	Marchetti, Leo B.	Marchetti, Leo B.
+Candidate	Marchetti, Leo B.	'Marchetti, Leo B.'
+Candidate	Schinhofen, Dan	Schinhofen, Dan
+Candidate	Schinhofen, Dan	'Schinhofen, Dan'
+Candidate	Strickland, Debra	Strickland, Debra
+Candidate	Strickland, Debra	'Strickland, Debra'
+Candidate	Sutton, Tim	Sutton, Tim
+Candidate	Sutton, Tim	'Sutton, Tim'
+Candidate	Stephens, Karen	Stephens, Karen
+Candidate	Stephens, Karen	'Stephens, Karen'
+Candidate	Basso-Cerini, Laureen E.	Basso-Cerini, Laureen E.
+Candidate	Basso-Cerini, Laureen E.	'Basso-Cerini, Laureen E.'
+Candidate	Hodges, Mackenzie	Hodges, Mackenzie
+Candidate	Hodges, Mackenzie	'Hodges, Mackenzie'
+Candidate	Shank, Carol A.	Shank, Carol A.
+Candidate	Shank, Carol A.	'Shank, Carol A.'
+Candidate	Evans, James	Evans, James
+Candidate	Evans, James	'Evans, James'
+Candidate	Fenner, Ann-Marie	Fenner, Ann-Marie
+Candidate	Fenner, Ann-Marie	'Fenner, Ann-Marie'
+Candidate	Hudson, Michael	Hudson, Michael
+Candidate	Hudson, Michael	'Hudson, Michael'
+Candidate	Plummer, Cindy	Plummer, Cindy
+Candidate	Plummer, Cindy	'Plummer, Cindy'
+Candidate	Rackley, Barbara	Rackley, Barbara
+Candidate	Rackley, Barbara	'Rackley, Barbara'
+Candidate	Allen, Jerry	Allen, Jerry
+Candidate	Allen, Jerry	'Allen, Jerry'
 Candidate	Carmona, Jay	Carmona, Jay
 Candidate	Carmona, Jay	'Carmona, Jay'
 Candidate	McGuffey, Jack R.	McGuffey, Jack R.
@@ -4804,8 +4800,8 @@ Candidate	Herrington, Eileen F.	Herrington, Eileen F.
 Candidate	Herrington, Eileen F.	'Herrington, Eileen F.'
 Candidate	Miller, Dawn	Miller, Dawn
 Candidate	Miller, Dawn	'Miller, Dawn'
-Candidate	ANTINORO, GERALD	ANTINORO, GERALD
-Candidate	ANTINORO, GERALD	'ANTINORO, GERALD'
+Candidate	Antinoro, Gerald	Antinoro, Gerald
+Candidate	Antinoro, Gerald	'Antinoro, Gerald'
 Candidate	Clark, Bruce	Clark, Bruce
 Candidate	Clark, Bruce	'Clark, Bruce'
 Candidate	Cullen, Mike	Cullen, Mike
@@ -4962,57 +4958,57 @@ Candidate	Ulibarri, Devin	Ulibarri, Devin
 Candidate	Ulibarri, Devin	'Ulibarri, Devin'
 Candidate	Robertson, Nathan	Robertson, Nathan
 Candidate	Robertson, Nathan	'Robertson, Nathan'
-Candidate	CARVER, CHRIS	CARVER, CHRIS
-Candidate	CARVER, CHRIS	'CARVER, CHRIS'
-Candidate	CINANI, JERRY	CINANI, JERRY
-Candidate	CINANI, JERRY	'CINANI, JERRY'
-Candidate	CROWELL, ROBERT 'BOB'	CROWELL, ROBERT 'BOB'
-Candidate	MEYER, KURT L.	MEYER, KURT L.
-Candidate	MEYER, KURT L.	'MEYER, KURT L.'
-Candidate	CROSSMAN, LAUREL	CROSSMAN, LAUREL
-Candidate	CROSSMAN, LAUREL	'CROSSMAN, LAUREL'
-Candidate	CACIOPPO, JOE	CACIOPPO, JOE
-Candidate	CACIOPPO, JOE	'CACIOPPO, JOE'
-Candidate	ENGLAND, SAM	ENGLAND, SAM
-Candidate	ENGLAND, SAM	'ENGLAND, SAM'
-Candidate	FORBUSH, CHRIS	FORBUSH, CHRIS
-Candidate	FORBUSH, CHRIS	'FORBUSH, CHRIS'
-Candidate	KRAMER, AL	KRAMER, AL
-Candidate	KRAMER, AL	'KRAMER, AL'
-Candidate	ONEILL, PHILIP 'PK'	ONEILL, PHILIP 'PK'
-Candidate	EVANS, H.D. 'CHIP'	EVANS, H.D. 'CHIP'
-Candidate	CORTEZ MASTO, CATHERINE	CORTEZ MASTO, CATHERINE
-Candidate	CORTEZ MASTO, CATHERINE	'CORTEZ MASTO, CATHERINE'
-Candidate	MAHENDRA, BOBBY	MAHENDRA, BOBBY
-Candidate	MAHENDRA, BOBBY	'MAHENDRA, BOBBY'
-Candidate	O'BRIANT, LIDDO SUSAN	O'BRIANT, LIDDO SUSAN
-Candidate	O'BRIANT, LIDDO SUSAN	'O'BRIANT, LIDDO SUSAN'
-Candidate	DAVIS, D'NESE	DAVIS, D'NESE
-Candidate	DAVIS, D'NESE	'DAVIS, D'NESE'
-Candidate	HAMILTON, EDDIE	HAMILTON, EDDIE
-Candidate	HAMILTON, EDDIE	'HAMILTON, EDDIE'
-Candidate	HECK, JOE	HECK, JOE
-Candidate	HECK, JOE	'HECK, JOE'
-Candidate	HECK, THOMAS 'SAD TOM'	HECK, THOMAS 'SAD TOM'
-Candidate	LEEDS, ROBERT X.	LEEDS, ROBERT X.
-Candidate	LEEDS, ROBERT X.	'LEEDS, ROBERT X.'
+Candidate	Carver, Chris	Carver, Chris
+Candidate	Carver, Chris	'Carver, Chris'
+Candidate	Cinani, Jerry	Cinani, Jerry
+Candidate	Cinani, Jerry	'Cinani, Jerry'
+Candidate	Crowell, Robert 'Bob'	Crowell, Robert 'Bob'
+Candidate	Meyer, Kurt L.	Meyer, Kurt L.
+Candidate	Meyer, Kurt L.	'Meyer, Kurt L.'
+Candidate	Crossman, Laurel	Crossman, Laurel
+Candidate	Crossman, Laurel	'Crossman, Laurel'
+Candidate	Cacioppo, Joe	Cacioppo, Joe
+Candidate	Cacioppo, Joe	'Cacioppo, Joe'
+Candidate	England, Sam	England, Sam
+Candidate	England, Sam	'England, Sam'
+Candidate	Forbush, Chris	Forbush, Chris
+Candidate	Forbush, Chris	'Forbush, Chris'
+Candidate	Kramer, Al	Kramer, Al
+Candidate	Kramer, Al	'Kramer, Al'
+Candidate	Oneill, Philip 'Pk'	Oneill, Philip 'Pk'
+Candidate	Evans, H.D. 'Chip'	Evans, H.D. 'Chip'
+Candidate	Cortez Masto, Catherine	Cortez Masto, Catherine
+Candidate	Cortez Masto, Catherine	'Cortez Masto, Catherine'
+Candidate	Mahendra, Bobby	Mahendra, Bobby
+Candidate	Mahendra, Bobby	'Mahendra, Bobby'
+Candidate	O'Briant, Liddo Susan	O'Briant, Liddo Susan
+Candidate	O'Briant, Liddo Susan	'O'Briant, Liddo Susan'
+Candidate	Davis, D'Nese	Davis, D'Nese
+Candidate	Davis, D'Nese	'Davis, D'Nese'
+Candidate	Hamilton, Eddie	Hamilton, Eddie
+Candidate	Hamilton, Eddie	'Hamilton, Eddie'
+Candidate	Heck, Joe	Heck, Joe
+Candidate	Heck, Joe	'Heck, Joe'
+Candidate	Heck, Thomas 'Sad Tom'	Heck, Thomas 'Sad Tom'
+Candidate	Leeds, Robert X.	Leeds, Robert X.
+Candidate	Leeds, Robert X.	'Leeds, Robert X.'
 Candidate	Poliak, Carlo 'Mazunga'	Poliak, Carlo 'Mazunga'
-Candidate	PREBLE, JUSTON J.	PREBLE, JUSTON J.
-Candidate	PREBLE, JUSTON J.	'PREBLE, JUSTON J.'
-Candidate	TARBELL, BILL	TARBELL, BILL
-Candidate	TARBELL, BILL	'TARBELL, BILL'
-Candidate	PINDER, PHIL	PINDER, PHIL
-Candidate	PINDER, PHIL	'PINDER, PHIL'
-Candidate	STRASDIN, TRICIA	STRASDIN, TRICIA
-Candidate	STRASDIN, TRICIA	'STRASDIN, TRICIA'
-Candidate	WHITAKER, KATHRYN	WHITAKER, KATHRYN
-Candidate	WHITAKER, KATHRYN	'WHITAKER, KATHRYN'
-Candidate	ERQUIAGA, CARL	ERQUIAGA, CARL
-Candidate	ERQUIAGA, CARL	'ERQUIAGA, CARL'
-Candidate	SLENTZ, BILL	SLENTZ, BILL
-Candidate	SLENTZ, BILL	'SLENTZ, BILL'
-Candidate	CHIPP, SHELDON E.	CHIPP, SHELDON E.
-Candidate	CHIPP, SHELDON E.	'CHIPP, SHELDON E.'
+Candidate	Preble, Juston J.	Preble, Juston J.
+Candidate	Preble, Juston J.	'Preble, Juston J.'
+Candidate	Tarbell, Bill	Tarbell, Bill
+Candidate	Tarbell, Bill	'Tarbell, Bill'
+Candidate	Pinder, Phil	Pinder, Phil
+Candidate	Pinder, Phil	'Pinder, Phil'
+Candidate	Strasdin, Tricia	Strasdin, Tricia
+Candidate	Strasdin, Tricia	'Strasdin, Tricia'
+Candidate	Whitaker, Kathryn	Whitaker, Kathryn
+Candidate	Whitaker, Kathryn	'Whitaker, Kathryn'
+Candidate	Erquiaga, Carl	Erquiaga, Carl
+Candidate	Erquiaga, Carl	'Erquiaga, Carl'
+Candidate	Slentz, Bill	Slentz, Bill
+Candidate	Slentz, Bill	'Slentz, Bill'
+Candidate	Chipp, Sheldon E.	Chipp, Sheldon E.
+Candidate	Chipp, Sheldon E.	'Chipp, Sheldon E.'
 Candidate	Holper, Scott Michael	Holper, Scott Michael
 Candidate	Holper, Scott Michael	'Holper, Scott Michael'
 Candidate	Johnson, Eric	Johnson, Eric
@@ -5135,8 +5131,8 @@ Candidate	Lloyd, Minddie	Lloyd, Minddie
 Candidate	Lloyd, Minddie	'Lloyd, Minddie'
 Candidate	Orrock, Diana	Orrock, Diana
 Candidate	Orrock, Diana	'Orrock, Diana'
-Candidate	STANBERRY, RUSTY	STANBERRY, RUSTY
-Candidate	STANBERRY, RUSTY	'STANBERRY, RUSTY'
+Candidate	Stanberry, Rusty	Stanberry, Rusty
+Candidate	Stanberry, Rusty	'Stanberry, Rusty'
 Candidate	Kirkpatrick, Marilyn	Kirkpatrick, Marilyn
 Candidate	Kirkpatrick, Marilyn	'Kirkpatrick, Marilyn'
 Candidate	Ross, Steve	Ross, Steve
@@ -5155,22 +5151,22 @@ Candidate	Melton, Mark R.	Melton, Mark R.
 Candidate	Melton, Mark R.	'Melton, Mark R.'
 Candidate	Young, Linda E.	Young, Linda E.
 Candidate	Young, Linda E.	'Young, Linda E.'
-Candidate	ARBERRY JR., MORSE	ARBERRY JR., MORSE
-Candidate	ARBERRY JR., MORSE	'ARBERRY JR., MORSE'
-Candidate	CASUTT, BRANDON	CASUTT, BRANDON
-Candidate	CASUTT, BRANDON	'CASUTT, BRANDON'
-Candidate	FLORES, LUCY	FLORES, LUCY
-Candidate	FLORES, LUCY	'FLORES, LUCY'
-Candidate	KIHUEN, RUBEN	KIHUEN, RUBEN
-Candidate	KIHUEN, RUBEN	'KIHUEN, RUBEN'
-Candidate	ROLLE, DAN	ROLLE, DAN
-Candidate	ROLLE, DAN	'ROLLE, DAN'
-Candidate	SCHAEFER, MIKE	SCHAEFER, MIKE
-Candidate	SCHAEFER, MIKE	'SCHAEFER, MIKE'
-Candidate	SMITH, RODNEY	SMITH, RODNEY
-Candidate	SMITH, RODNEY	'SMITH, RODNEY'
-Candidate	VILLINES, WAYNE J.	VILLINES, WAYNE J.
-Candidate	VILLINES, WAYNE J.	'VILLINES, WAYNE J.'
+Candidate	Arberry Jr., Morse	Arberry Jr., Morse
+Candidate	Arberry Jr., Morse	'Arberry Jr., Morse'
+Candidate	Casutt, Brandon	Casutt, Brandon
+Candidate	Casutt, Brandon	'Casutt, Brandon'
+Candidate	Flores, Lucy	Flores, Lucy
+Candidate	Flores, Lucy	'Flores, Lucy'
+Candidate	Kihuen, Ruben	Kihuen, Ruben
+Candidate	Kihuen, Ruben	'Kihuen, Ruben'
+Candidate	Rolle, Dan	Rolle, Dan
+Candidate	Rolle, Dan	'Rolle, Dan'
+Candidate	Schaefer, Mike	Schaefer, Mike
+Candidate	Schaefer, Mike	'Schaefer, Mike'
+Candidate	Smith, Rodney	Smith, Rodney
+Candidate	Smith, Rodney	'Smith, Rodney'
+Candidate	Villines, Wayne J.	Villines, Wayne J.
+Candidate	Villines, Wayne J.	'Villines, Wayne J.'
 Candidate	Atkinson, Kelvin	Atkinson, Kelvin
 Candidate	Atkinson, Kelvin	'Atkinson, Kelvin'
 Candidate	Munford, Stephen Harvey	Munford, Stephen Harvey
@@ -5186,8 +5182,8 @@ Candidate	Hanson, Chuck	Hanson, Chuck
 Candidate	Hanson, Chuck	'Hanson, Chuck'
 Candidate	Metz, Judy	Metz, Judy
 Candidate	Metz, Judy	'Metz, Judy'
-Candidate	MCADOO, CATHY	MCADOO, CATHY
-Candidate	MCADOO, CATHY	'MCADOO, CATHY'
+Candidate	Mcadoo, Cathy	Mcadoo, Cathy
+Candidate	Mcadoo, Cathy	'Mcadoo, Cathy'
 Candidate	McGinnis, Ron	McGinnis, Ron
 Candidate	McGinnis, Ron	'McGinnis, Ron'
 Candidate	Riggins, Mark	Riggins, Mark
@@ -5283,227 +5279,227 @@ Candidate	Mosca, Erica	Mosca, Erica
 Candidate	Mosca, Erica	'Mosca, Erica'
 Candidate	DeCorte, Christine	DeCorte, Christine
 Candidate	DeCorte, Christine	'DeCorte, Christine'
-Candidate	LYNN, GREG	LYNN, GREG
-Candidate	LYNN, GREG	'LYNN, GREG'
-Candidate	GODECKE, FRANK	GODECKE, FRANK
-Candidate	GODECKE, FRANK	'GODECKE, FRANK'
-Candidate	CHESSELL, KAREN	CHESSELL, KAREN
-Candidate	CHESSELL, KAREN	'CHESSELL, KAREN'
-Candidate	BYER, B. KEITH	BYER, B. KEITH
-Candidate	BYER, B. KEITH	'BYER, B. KEITH'
-Candidate	KIGER, MICHAEL EUGENE	KIGER, MICHAEL EUGENE
-Candidate	KIGER, MICHAEL EUGENE	'KIGER, MICHAEL EUGENE'
-Candidate	SHEPACK, NICHOLAS	SHEPACK, NICHOLAS
-Candidate	SHEPACK, NICHOLAS	'SHEPACK, NICHOLAS'
-Candidate	FREITAS, NEAL	FREITAS, NEAL
-Candidate	FREITAS, NEAL	'FREITAS, NEAL'
-Candidate	ALLGEIER, BOB	ALLGEIER, BOB
-Candidate	ALLGEIER, BOB	'ALLGEIER, BOB'
-Candidate	BARATTI-SALLANI, PATTY	BARATTI-SALLANI, PATTY
-Candidate	BARATTI-SALLANI, PATTY	'BARATTI-SALLANI, PATTY'
-Candidate	BUNTING, TIM	BUNTING, TIM
-Candidate	BUNTING, TIM	'BUNTING, TIM'
-Candidate	SMALLWOOD, BARBARA S.	SMALLWOOD, BARBARA S.
-Candidate	SMALLWOOD, BARBARA S.	'SMALLWOOD, BARBARA S.'
-Candidate	WILCOX, CRAIG	WILCOX, CRAIG
-Candidate	WILCOX, CRAIG	'WILCOX, CRAIG'
-Candidate	DALLING, JEFF	DALLING, JEFF
-Candidate	DALLING, JEFF	'DALLING, JEFF'
-Candidate	KARR, JON	KARR, JON
-Candidate	KARR, JON	'KARR, JON'
-Candidate	SACRISON, RALPH	SACRISON, RALPH
-Candidate	SACRISON, RALPH	'SACRISON, RALPH'
-Candidate	GOICOECHEA, ELIAS 'CHOCH'	GOICOECHEA, ELIAS 'CHOCH'
-Candidate	LEHMANN, WILLIAM	LEHMANN, WILLIAM
-Candidate	LEHMANN, WILLIAM	'LEHMANN, WILLIAM'
-Candidate	LEIKER, WADE	LEIKER, WADE
-Candidate	LEIKER, WADE	'LEIKER, WADE'
-Candidate	LOREMAN, DAVID	LOREMAN, DAVID
-Candidate	LOREMAN, DAVID	'LOREMAN, DAVID'
-Candidate	MIERINS, ANDREW M.	MIERINS, ANDREW M.
-Candidate	MIERINS, ANDREW M.	'MIERINS, ANDREW M.'
-Candidate	PARKER, DENNIS W.	PARKER, DENNIS W.
-Candidate	PARKER, DENNIS W.	'PARKER, DENNIS W.'
-Candidate	DASTRUP, TERESA	DASTRUP, TERESA
-Candidate	DASTRUP, TERESA	'DASTRUP, TERESA'
-Candidate	KIRBY, WILLIAM C.	KIRBY, WILLIAM C.
-Candidate	KIRBY, WILLIAM C.	'KIRBY, WILLIAM C.'
-Candidate	POLMAN, KENNY	POLMAN, KENNY
-Candidate	POLMAN, KENNY	'POLMAN, KENNY'
-Candidate	WINSOR, DELON 'DE'	WINSOR, DELON 'DE'
-Candidate	PASTORINO, ERIC J.	PASTORINO, ERIC J.
-Candidate	PASTORINO, ERIC J.	'PASTORINO, ERIC J.'
-Candidate	BREITRICK, JAMES A.	BREITRICK, JAMES A.
-Candidate	BREITRICK, JAMES A.	'BREITRICK, JAMES A.'
-Candidate	LEPPALA, BILL	LEPPALA, BILL
-Candidate	LEPPALA, BILL	'LEPPALA, BILL'
-Candidate	BURNHAM, ROBERT E.	BURNHAM, ROBERT E.
-Candidate	BURNHAM, ROBERT E.	'BURNHAM, ROBERT E.'
-Candidate	HICKS, DAVID W.	HICKS, DAVID W.
-Candidate	HICKS, DAVID W.	'HICKS, DAVID W.'
-Candidate	IZZOLO, JAMES	IZZOLO, JAMES
-Candidate	IZZOLO, JAMES	'IZZOLO, JAMES'
-Candidate	ANDERSON, BRANDI	ANDERSON, BRANDI
-Candidate	ANDERSON, BRANDI	'ANDERSON, BRANDI'
-Candidate	CONLEY, LYNN	CONLEY, LYNN
-Candidate	CONLEY, LYNN	'CONLEY, LYNN'
-Candidate	MARTIN, JORI	MARTIN, JORI
-Candidate	MARTIN, JORI	'MARTIN, JORI'
-Candidate	FIORENZI, LEONARD	FIORENZI, LEONARD
-Candidate	FIORENZI, LEONARD	'FIORENZI, LEONARD'
-Candidate	CHATFIELD, KEVIN	CHATFIELD, KEVIN
-Candidate	CHATFIELD, KEVIN	'CHATFIELD, KEVIN'
-Candidate	BELL, MIKE	BELL, MIKE
-Candidate	BELL, MIKE	'BELL, MIKE'
-Candidate	DOLPHIN, DENISE K.	DOLPHIN, DENISE K.
-Candidate	DOLPHIN, DENISE K.	'DOLPHIN, DENISE K.'
-Candidate	HAMMARGREN, WILLIAM 'BILL'	HAMMARGREN, WILLIAM 'BILL'
-Candidate	JACOBSEN, BARBARA A.	JACOBSEN, BARBARA A.
-Candidate	JACOBSEN, BARBARA A.	'JACOBSEN, BARBARA A.'
-Candidate	LECUMBERRY-UHLMANN, SABRINA	LECUMBERRY-UHLMANN, SABRINA
-Candidate	LECUMBERRY-UHLMANN, SABRINA	'LECUMBERRY-UHLMANN, SABRINA'
-Candidate	BETTERIDGE, BOYD	BETTERIDGE, BOYD
-Candidate	BETTERIDGE, BOYD	'BETTERIDGE, BOYD'
-Candidate	BRAGINTON, BRUCE L.	BRAGINTON, BRUCE L.
-Candidate	BRAGINTON, BRUCE L.	'BRAGINTON, BRUCE L.'
-Candidate	BAKKER, GERRIT	BAKKER, GERRIT
-Candidate	BAKKER, GERRIT	'BAKKER, GERRIT'
-Candidate	HELMING, DEE	HELMING, DEE
-Candidate	HELMING, DEE	'HELMING, DEE'
-Candidate	WAITS, PATSY ANN	WAITS, PATSY ANN
-Candidate	WAITS, PATSY ANN	'WAITS, PATSY ANN'
-Candidate	ALLAN, JUDIE	ALLAN, JUDIE
-Candidate	ALLAN, JUDIE	'ALLAN, JUDIE'
-Candidate	CARR, RICK	CARR, RICK
-Candidate	CARR, RICK	'CARR, RICK'
-Candidate	MYERS, MARK	MYERS, MARK
-Candidate	MYERS, MARK	'MYERS, MARK'
-Candidate	NANNEY, AL	NANNEY, AL
-Candidate	NANNEY, AL	'NANNEY, AL'
-Candidate	DIAS, ELIZABETH	DIAS, ELIZABETH
-Candidate	DIAS, ELIZABETH	'DIAS, ELIZABETH'
-Candidate	OSTLER, KAYLA A.	OSTLER, KAYLA A.
-Candidate	OSTLER, KAYLA A.	'OSTLER, KAYLA A.'
-Candidate	STATON, DOUGLAS S., III	STATON, DOUGLAS S., III
-Candidate	STATON, DOUGLAS S., III	'STATON, DOUGLAS S., III'
-Candidate	WELLS, BONNIE	WELLS, BONNIE
-Candidate	WELLS, BONNIE	'WELLS, BONNIE'
-Candidate	KATSCHKE, ADAM PAUL	KATSCHKE, ADAM PAUL
-Candidate	KATSCHKE, ADAM PAUL	'KATSCHKE, ADAM PAUL'
-Candidate	LARSON, KEITH	LARSON, KEITH
-Candidate	LARSON, KEITH	'LARSON, KEITH'
-Candidate	KATSCHKE, NATHAN J.	KATSCHKE, NATHAN J.
-Candidate	KATSCHKE, NATHAN J.	'KATSCHKE, NATHAN J.'
-Candidate	WADSWORTH, SCOTT	WADSWORTH, SCOTT
-Candidate	WADSWORTH, SCOTT	'WADSWORTH, SCOTT'
-Candidate	CASSINELLI, JOHN S	CASSINELLI, JOHN S
-Candidate	CASSINELLI, JOHN S	'CASSINELLI, JOHN S'
-Candidate	HASTINGS, BOB	HASTINGS, BOB
-Candidate	HASTINGS, BOB	'HASTINGS, BOB'
-Candidate	FIERRO, RAY	FIERRO, RAY
-Candidate	FIERRO, RAY	'FIERRO, RAY'
-Candidate	SHIRLEY, CHARLES W	SHIRLEY, CHARLES W
-Candidate	SHIRLEY, CHARLES W	'SHIRLEY, CHARLES W'
-Candidate	STEVENS, JOHN M.	STEVENS, JOHN M.
-Candidate	STEVENS, JOHN M.	'STEVENS, JOHN M.'
-Candidate	BITLER, KENNETH	BITLER, KENNETH
-Candidate	BITLER, KENNETH	'BITLER, KENNETH'
-Candidate	LEWIS, ANGELA	LEWIS, ANGELA
-Candidate	LEWIS, ANGELA	'LEWIS, ANGELA'
-Candidate	MCCASSIE, DANIEL	MCCASSIE, DANIEL
-Candidate	MCCASSIE, DANIEL	'MCCASSIE, DANIEL'
-Candidate	ROBINSON, ARCHIE L	ROBINSON, ARCHIE L
-Candidate	ROBINSON, ARCHIE L	'ROBINSON, ARCHIE L'
-Candidate	RODRIGUEZ, JAMIE	RODRIGUEZ, JAMIE
-Candidate	RODRIGUEZ, JAMIE	'RODRIGUEZ, JAMIE'
-Candidate	SHATTUCK, WILLIAM	SHATTUCK, WILLIAM
-Candidate	SHATTUCK, WILLIAM	'SHATTUCK, WILLIAM'
-Candidate	DANKS, BOYD V	DANKS, BOYD V
-Candidate	DANKS, BOYD V	'DANKS, BOYD V'
-Candidate	SEIDL, SUSAN	SEIDL, SUSAN
-Candidate	SEIDL, SUSAN	'SEIDL, SUSAN'
-Candidate	STEHWIEN, JEREMY	STEHWIEN, JEREMY
-Candidate	STEHWIEN, JEREMY	'STEHWIEN, JEREMY'
-Candidate	DUNHAM, SUSAN	DUNHAM, SUSAN
-Candidate	DUNHAM, SUSAN	'DUNHAM, SUSAN'
-Candidate	FLYNN, SHERRY S.	FLYNN, SHERRY S.
-Candidate	FLYNN, SHERRY S.	'FLYNN, SHERRY S.'
-Candidate	MONIZ, AVIS	MONIZ, AVIS
-Candidate	MONIZ, AVIS	'MONIZ, AVIS'
-Candidate	SHIRLEY, SHARON ANN	SHIRLEY, SHARON ANN
-Candidate	SHIRLEY, SHARON ANN	'SHIRLEY, SHARON ANN'
-Candidate	COEN, PATRICIA	COEN, PATRICIA
-Candidate	COEN, PATRICIA	'COEN, PATRICIA'
-Candidate	DOW, MICHELLE	DOW, MICHELLE
-Candidate	DOW, MICHELLE	'DOW, MICHELLE'
-Candidate	QUALLS, HUGH L.	QUALLS, HUGH L.
-Candidate	QUALLS, HUGH L.	'QUALLS, HUGH L.'
-Candidate	SAMSON, SHERI	SAMSON, SHERI
-Candidate	SAMSON, SHERI	'SAMSON, SHERI'
-Candidate	HAGEN, SCHYLER C.	HAGEN, SCHYLER C.
-Candidate	HAGEN, SCHYLER C.	'HAGEN, SCHYLER C.'
-Candidate	LANCASTER, BARBARA	LANCASTER, BARBARA
-Candidate	LANCASTER, BARBARA	'LANCASTER, BARBARA'
-Candidate	VIANI, TYLER	VIANI, TYLER
-Candidate	VIANI, TYLER	'VIANI, TYLER'
-Candidate	COEN, MICHAEL L.	COEN, MICHAEL L.
-Candidate	COEN, MICHAEL L.	'COEN, MICHAEL L.'
-Candidate	JONES, EARL	JONES, EARL
-Candidate	JONES, EARL	'JONES, EARL'
-Candidate	MATTOX, SCOTT	MATTOX, SCOTT
-Candidate	MATTOX, SCOTT	'MATTOX, SCOTT'
-Candidate	WICHMAN, LORINDA	WICHMAN, LORINDA
-Candidate	WICHMAN, LORINDA	'WICHMAN, LORINDA'
-Candidate	STODDARD, TERESA J.	STODDARD, TERESA J.
-Candidate	STODDARD, TERESA J.	'STODDARD, TERESA J.'
-Candidate	EASON, KENNETH	EASON, KENNETH
-Candidate	EASON, KENNETH	'EASON, KENNETH'
-Candidate	CLIFFORD, CATHIE	CLIFFORD, CATHIE
-Candidate	CLIFFORD, CATHIE	'CLIFFORD, CATHIE'
-Candidate	LINK, RONI	LINK, RONI
-Candidate	LINK, RONI	'LINK, RONI'
-Candidate	LANCASTER SR., DAVID	LANCASTER SR., DAVID
-Candidate	LANCASTER SR., DAVID	'LANCASTER SR., DAVID'
-Candidate	LEDESMA, SAL	LEDESMA, SAL
-Candidate	LEDESMA, SAL	'LEDESMA, SAL'
-Candidate	RICHES, AMY	RICHES, AMY
-Candidate	RICHES, AMY	'RICHES, AMY'
+Candidate	Lynn, Greg	Lynn, Greg
+Candidate	Lynn, Greg	'Lynn, Greg'
+Candidate	Godecke, Frank	Godecke, Frank
+Candidate	Godecke, Frank	'Godecke, Frank'
+Candidate	Chessell, Karen	Chessell, Karen
+Candidate	Chessell, Karen	'Chessell, Karen'
+Candidate	Byer, B. Keith	Byer, B. Keith
+Candidate	Byer, B. Keith	'Byer, B. Keith'
+Candidate	Kiger, Michael Eugene	Kiger, Michael Eugene
+Candidate	Kiger, Michael Eugene	'Kiger, Michael Eugene'
+Candidate	Shepack, Nicholas	Shepack, Nicholas
+Candidate	Shepack, Nicholas	'Shepack, Nicholas'
+Candidate	Freitas, Neal	Freitas, Neal
+Candidate	Freitas, Neal	'Freitas, Neal'
+Candidate	Allgeier, Bob	Allgeier, Bob
+Candidate	Allgeier, Bob	'Allgeier, Bob'
+Candidate	Baratti-Sallani, Patty	Baratti-Sallani, Patty
+Candidate	Baratti-Sallani, Patty	'Baratti-Sallani, Patty'
+Candidate	Bunting, Tim	Bunting, Tim
+Candidate	Bunting, Tim	'Bunting, Tim'
+Candidate	Smallwood, Barbara S.	Smallwood, Barbara S.
+Candidate	Smallwood, Barbara S.	'Smallwood, Barbara S.'
+Candidate	Wilcox, Craig	Wilcox, Craig
+Candidate	Wilcox, Craig	'Wilcox, Craig'
+Candidate	Dalling, Jeff	Dalling, Jeff
+Candidate	Dalling, Jeff	'Dalling, Jeff'
+Candidate	Karr, Jon	Karr, Jon
+Candidate	Karr, Jon	'Karr, Jon'
+Candidate	Sacrison, Ralph	Sacrison, Ralph
+Candidate	Sacrison, Ralph	'Sacrison, Ralph'
+Candidate	Goicoechea, Elias 'Choch'	Goicoechea, Elias 'Choch'
+Candidate	Lehmann, William	Lehmann, William
+Candidate	Lehmann, William	'Lehmann, William'
+Candidate	Leiker, Wade	Leiker, Wade
+Candidate	Leiker, Wade	'Leiker, Wade'
+Candidate	Loreman, David	Loreman, David
+Candidate	Loreman, David	'Loreman, David'
+Candidate	Mierins, Andrew M.	Mierins, Andrew M.
+Candidate	Mierins, Andrew M.	'Mierins, Andrew M.'
+Candidate	Parker, Dennis W.	Parker, Dennis W.
+Candidate	Parker, Dennis W.	'Parker, Dennis W.'
+Candidate	Dastrup, Teresa	Dastrup, Teresa
+Candidate	Dastrup, Teresa	'Dastrup, Teresa'
+Candidate	Kirby, William C.	Kirby, William C.
+Candidate	Kirby, William C.	'Kirby, William C.'
+Candidate	Polman, Kenny	Polman, Kenny
+Candidate	Polman, Kenny	'Polman, Kenny'
+Candidate	Winsor, Delon 'De'	Winsor, Delon 'De'
+Candidate	Pastorino, Eric J.	Pastorino, Eric J.
+Candidate	Pastorino, Eric J.	'Pastorino, Eric J.'
+Candidate	Breitrick, James A.	Breitrick, James A.
+Candidate	Breitrick, James A.	'Breitrick, James A.'
+Candidate	Leppala, Bill	Leppala, Bill
+Candidate	Leppala, Bill	'Leppala, Bill'
+Candidate	Burnham, Robert E.	Burnham, Robert E.
+Candidate	Burnham, Robert E.	'Burnham, Robert E.'
+Candidate	Hicks, David W.	Hicks, David W.
+Candidate	Hicks, David W.	'Hicks, David W.'
+Candidate	Izzolo, James	Izzolo, James
+Candidate	Izzolo, James	'Izzolo, James'
+Candidate	Anderson, Brandi	Anderson, Brandi
+Candidate	Anderson, Brandi	'Anderson, Brandi'
+Candidate	Conley, Lynn	Conley, Lynn
+Candidate	Conley, Lynn	'Conley, Lynn'
+Candidate	Martin, Jori	Martin, Jori
+Candidate	Martin, Jori	'Martin, Jori'
+Candidate	Fiorenzi, Leonard	Fiorenzi, Leonard
+Candidate	Fiorenzi, Leonard	'Fiorenzi, Leonard'
+Candidate	Chatfield, Kevin	Chatfield, Kevin
+Candidate	Chatfield, Kevin	'Chatfield, Kevin'
+Candidate	Bell, Mike	Bell, Mike
+Candidate	Bell, Mike	'Bell, Mike'
+Candidate	Dolphin, Denise K.	Dolphin, Denise K.
+Candidate	Dolphin, Denise K.	'Dolphin, Denise K.'
+Candidate	Hammargren, William 'Bill'	Hammargren, William 'Bill'
+Candidate	Jacobsen, Barbara A.	Jacobsen, Barbara A.
+Candidate	Jacobsen, Barbara A.	'Jacobsen, Barbara A.'
+Candidate	Lecumberry-Uhlmann, Sabrina	Lecumberry-Uhlmann, Sabrina
+Candidate	Lecumberry-Uhlmann, Sabrina	'Lecumberry-Uhlmann, Sabrina'
+Candidate	Betteridge, Boyd	Betteridge, Boyd
+Candidate	Betteridge, Boyd	'Betteridge, Boyd'
+Candidate	Braginton, Bruce L.	Braginton, Bruce L.
+Candidate	Braginton, Bruce L.	'Braginton, Bruce L.'
+Candidate	Bakker, Gerrit	Bakker, Gerrit
+Candidate	Bakker, Gerrit	'Bakker, Gerrit'
+Candidate	Helming, Dee	Helming, Dee
+Candidate	Helming, Dee	'Helming, Dee'
+Candidate	Waits, Patsy Ann	Waits, Patsy Ann
+Candidate	Waits, Patsy Ann	'Waits, Patsy Ann'
+Candidate	Allan, Judie	Allan, Judie
+Candidate	Allan, Judie	'Allan, Judie'
+Candidate	Carr, Rick	Carr, Rick
+Candidate	Carr, Rick	'Carr, Rick'
+Candidate	Myers, Mark	Myers, Mark
+Candidate	Myers, Mark	'Myers, Mark'
+Candidate	Nanney, Al	Nanney, Al
+Candidate	Nanney, Al	'Nanney, Al'
+Candidate	Dias, Elizabeth	Dias, Elizabeth
+Candidate	Dias, Elizabeth	'Dias, Elizabeth'
+Candidate	Ostler, Kayla A.	Ostler, Kayla A.
+Candidate	Ostler, Kayla A.	'Ostler, Kayla A.'
+Candidate	Staton, Douglas S., Iii	Staton, Douglas S., Iii
+Candidate	Staton, Douglas S., Iii	'Staton, Douglas S., Iii'
+Candidate	Wells, Bonnie	Wells, Bonnie
+Candidate	Wells, Bonnie	'Wells, Bonnie'
+Candidate	Katschke, Adam Paul	Katschke, Adam Paul
+Candidate	Katschke, Adam Paul	'Katschke, Adam Paul'
+Candidate	Larson, Keith	Larson, Keith
+Candidate	Larson, Keith	'Larson, Keith'
+Candidate	Katschke, Nathan J.	Katschke, Nathan J.
+Candidate	Katschke, Nathan J.	'Katschke, Nathan J.'
+Candidate	Wadsworth, Scott	Wadsworth, Scott
+Candidate	Wadsworth, Scott	'Wadsworth, Scott'
+Candidate	Cassinelli, John S	Cassinelli, John S
+Candidate	Cassinelli, John S	'Cassinelli, John S'
+Candidate	Hastings, Bob	Hastings, Bob
+Candidate	Hastings, Bob	'Hastings, Bob'
+Candidate	Fierro, Ray	Fierro, Ray
+Candidate	Fierro, Ray	'Fierro, Ray'
+Candidate	Shirley, Charles W	Shirley, Charles W
+Candidate	Shirley, Charles W	'Shirley, Charles W'
+Candidate	Stevens, John M.	Stevens, John M.
+Candidate	Stevens, John M.	'Stevens, John M.'
+Candidate	Bitler, Kenneth	Bitler, Kenneth
+Candidate	Bitler, Kenneth	'Bitler, Kenneth'
+Candidate	Lewis, Angela	Lewis, Angela
+Candidate	Lewis, Angela	'Lewis, Angela'
+Candidate	Mccassie, Daniel	Mccassie, Daniel
+Candidate	Mccassie, Daniel	'Mccassie, Daniel'
+Candidate	Robinson, Archie L	Robinson, Archie L
+Candidate	Robinson, Archie L	'Robinson, Archie L'
+Candidate	Rodriguez, Jamie	Rodriguez, Jamie
+Candidate	Rodriguez, Jamie	'Rodriguez, Jamie'
+Candidate	Shattuck, William	Shattuck, William
+Candidate	Shattuck, William	'Shattuck, William'
+Candidate	Danks, Boyd V	Danks, Boyd V
+Candidate	Danks, Boyd V	'Danks, Boyd V'
+Candidate	Seidl, Susan	Seidl, Susan
+Candidate	Seidl, Susan	'Seidl, Susan'
+Candidate	Stehwien, Jeremy	Stehwien, Jeremy
+Candidate	Stehwien, Jeremy	'Stehwien, Jeremy'
+Candidate	Dunham, Susan	Dunham, Susan
+Candidate	Dunham, Susan	'Dunham, Susan'
+Candidate	Flynn, Sherry S.	Flynn, Sherry S.
+Candidate	Flynn, Sherry S.	'Flynn, Sherry S.'
+Candidate	Moniz, Avis	Moniz, Avis
+Candidate	Moniz, Avis	'Moniz, Avis'
+Candidate	Shirley, Sharon Ann	Shirley, Sharon Ann
+Candidate	Shirley, Sharon Ann	'Shirley, Sharon Ann'
+Candidate	Coen, Patricia	Coen, Patricia
+Candidate	Coen, Patricia	'Coen, Patricia'
+Candidate	Dow, Michelle	Dow, Michelle
+Candidate	Dow, Michelle	'Dow, Michelle'
+Candidate	Qualls, Hugh L.	Qualls, Hugh L.
+Candidate	Qualls, Hugh L.	'Qualls, Hugh L.'
+Candidate	Samson, Sheri	Samson, Sheri
+Candidate	Samson, Sheri	'Samson, Sheri'
+Candidate	Hagen, Schyler C.	Hagen, Schyler C.
+Candidate	Hagen, Schyler C.	'Hagen, Schyler C.'
+Candidate	Lancaster, Barbara	Lancaster, Barbara
+Candidate	Lancaster, Barbara	'Lancaster, Barbara'
+Candidate	Viani, Tyler	Viani, Tyler
+Candidate	Viani, Tyler	'Viani, Tyler'
+Candidate	Coen, Michael L.	Coen, Michael L.
+Candidate	Coen, Michael L.	'Coen, Michael L.'
+Candidate	Jones, Earl	Jones, Earl
+Candidate	Jones, Earl	'Jones, Earl'
+Candidate	Mattox, Scott	Mattox, Scott
+Candidate	Mattox, Scott	'Mattox, Scott'
+Candidate	Wichman, Lorinda	Wichman, Lorinda
+Candidate	Wichman, Lorinda	'Wichman, Lorinda'
+Candidate	Stoddard, Teresa J.	Stoddard, Teresa J.
+Candidate	Stoddard, Teresa J.	'Stoddard, Teresa J.'
+Candidate	Eason, Kenneth	Eason, Kenneth
+Candidate	Eason, Kenneth	'Eason, Kenneth'
+Candidate	Clifford, Cathie	Clifford, Cathie
+Candidate	Clifford, Cathie	'Clifford, Cathie'
+Candidate	Link, Roni	Link, Roni
+Candidate	Link, Roni	'Link, Roni'
+Candidate	Lancaster Sr., David	Lancaster Sr., David
+Candidate	Lancaster Sr., David	'Lancaster Sr., David'
+Candidate	Ledesma, Sal	Ledesma, Sal
+Candidate	Ledesma, Sal	'Ledesma, Sal'
+Candidate	Riches, Amy	Riches, Amy
+Candidate	Riches, Amy	'Riches, Amy'
 Candidate	SMALL, LAWRENCE 'Larry'	SMALL, LAWRENCE 'Larry'
-Candidate	DANN, GREG	DANN, GREG
-Candidate	DANN, GREG	'DANN, GREG'
-Candidate	DECANIO, LOUIE	DECANIO, LOUIE
-Candidate	DECANIO, LOUIE	'DECANIO, LOUIE'
-Candidate	DODD, ANTHENY 'AJ'	DODD, ANTHENY 'AJ'
-Candidate	HANSEN, MARK	HANSEN, MARK
-Candidate	HANSEN, MARK	'HANSEN, MARK'
-Candidate	MCDOUGAL, ROBERT	MCDOUGAL, ROBERT
-Candidate	MCDOUGAL, ROBERT	'MCDOUGAL, ROBERT'
-Candidate	WHYTE, LINDA	WHYTE, LINDA
-Candidate	WHYTE, LINDA	'WHYTE, LINDA'
-Candidate	IRWIN, PAT	IRWIN, PAT
-Candidate	IRWIN, PAT	'IRWIN, PAT'
-Candidate	RACKLEY, LARRY	RACKLEY, LARRY
-Candidate	RACKLEY, LARRY	'RACKLEY, LARRY'
-Candidate	ARNOLD, BRAD	ARNOLD, BRAD
-Candidate	ARNOLD, BRAD	'ARNOLD, BRAD'
-Candidate	BENDURE, TED P.	BENDURE, TED P.
-Candidate	BENDURE, TED P.	'BENDURE, TED P.'
-Candidate	CHAMBERS, CHAD	CHAMBERS, CHAD
-Candidate	CHAMBERS, CHAD	'CHAMBERS, CHAD'
-Candidate	LIST, JIM	LIST, JIM
-Candidate	LIST, JIM	'LIST, JIM'
-Candidate	LUSBY-ANGVICK, HEIDI E.	LUSBY-ANGVICK, HEIDI E.
-Candidate	LUSBY-ANGVICK, HEIDI E.	'LUSBY-ANGVICK, HEIDI E.'
-Candidate	MACHADO, KEVIN E.	MACHADO, KEVIN E.
-Candidate	MACHADO, KEVIN E.	'MACHADO, KEVIN E.'
-Candidate	PILON, MARK	PILON, MARK
-Candidate	PILON, MARK	'PILON, MARK'
-Candidate	BRINKERHOFF, WALTER A.	BRINKERHOFF, WALTER A.
-Candidate	BRINKERHOFF, WALTER A.	'BRINKERHOFF, WALTER A.'
+Candidate	Dann, Greg	Dann, Greg
+Candidate	Dann, Greg	'Dann, Greg'
+Candidate	Decanio, Louie	Decanio, Louie
+Candidate	Decanio, Louie	'Decanio, Louie'
+Candidate	Dodd, Antheny 'Aj'	Dodd, Antheny 'Aj'
+Candidate	Hansen, Mark	Hansen, Mark
+Candidate	Hansen, Mark	'Hansen, Mark'
+Candidate	Mcdougal, Robert	Mcdougal, Robert
+Candidate	Mcdougal, Robert	'Mcdougal, Robert'
+Candidate	Whyte, Linda	Whyte, Linda
+Candidate	Whyte, Linda	'Whyte, Linda'
+Candidate	Irwin, Pat	Irwin, Pat
+Candidate	Irwin, Pat	'Irwin, Pat'
+Candidate	Rackley, Larry	Rackley, Larry
+Candidate	Rackley, Larry	'Rackley, Larry'
+Candidate	Arnold, Brad	Arnold, Brad
+Candidate	Arnold, Brad	'Arnold, Brad'
+Candidate	Bendure, Ted P.	Bendure, Ted P.
+Candidate	Bendure, Ted P.	'Bendure, Ted P.'
+Candidate	Chambers, Chad	Chambers, Chad
+Candidate	Chambers, Chad	'Chambers, Chad'
+Candidate	List, Jim	List, Jim
+Candidate	List, Jim	'List, Jim'
+Candidate	Lusby-Angvick, Heidi E.	Lusby-Angvick, Heidi E.
+Candidate	Lusby-Angvick, Heidi E.	'Lusby-Angvick, Heidi E.'
+Candidate	Machado, Kevin E.	Machado, Kevin E.
+Candidate	Machado, Kevin E.	'Machado, Kevin E.'
+Candidate	Pilon, Mark	Pilon, Mark
+Candidate	Pilon, Mark	'Pilon, Mark'
+Candidate	Brinkerhoff, Walter A.	Brinkerhoff, Walter A.
+Candidate	Brinkerhoff, Walter A.	'Brinkerhoff, Walter A.'
 Candidate	CRIM Jr., JOE	CRIM Jr., JOE
 Candidate	CRIM Jr., JOE	'CRIM Jr., JOE'
-Candidate	GEDDES, JASON	GEDDES, JASON
-Candidate	GEDDES, JASON	'GEDDES, JASON'
+Candidate	Geddes, Jason	Geddes, Jason
+Candidate	Geddes, Jason	'Geddes, Jason'
 Candidate	Salcido, Victor	Salcido, Victor
 Candidate	Salcido, Victor	'Salcido, Victor'
 Candidate	Vangogh, Richard	Vangogh, Richard
@@ -5611,71 +5607,71 @@ Candidate	Thomason, Steven	Thomason, Steven
 Candidate	Thomason, Steven	'Thomason, Steven'
 Candidate	Wright, Frank L.	Wright, Frank L.
 Candidate	Wright, Frank L.	'Wright, Frank L.'
-Candidate	COSTER, MIKE	COSTER, MIKE
-Candidate	COSTER, MIKE	'COSTER, MIKE'
-Candidate	WEEKS, JEFF	WEEKS, JEFF
-Candidate	WEEKS, JEFF	'WEEKS, JEFF'
-Candidate	OLSON, ART	OLSON, ART
-Candidate	OLSON, ART	'OLSON, ART'
+Candidate	Coster, Mike	Coster, Mike
+Candidate	Coster, Mike	'Coster, Mike'
+Candidate	Weeks, Jeff	Weeks, Jeff
+Candidate	Weeks, Jeff	'Weeks, Jeff'
+Candidate	Olson, Art	Olson, Art
+Candidate	Olson, Art	'Olson, Art'
 Candidate	No	No
 Candidate	Yes	Yes
-Candidate	GIBBONS, MICHAEL	GIBBONS, MICHAEL
-Candidate	GIBBONS, MICHAEL	'GIBBONS, MICHAEL'
-Candidate	SILVER, ABBI	SILVER, ABBI
-Candidate	SILVER, ABBI	'SILVER, ABBI'
-Candidate	CASTLE, DARRELL	CASTLE, DARRELL
-Candidate	CASTLE, DARRELL	'CASTLE, DARRELL'
-Candidate	CLINTON, HILLARY	CLINTON, HILLARY
-Candidate	CLINTON, HILLARY	'CLINTON, HILLARY'
-Candidate	DE LA FUENTE, ROQUE 'ROCKY'	DE LA FUENTE, ROQUE 'ROCKY'
-Candidate	JOHNSON, GARY	JOHNSON, GARY
-Candidate	JOHNSON, GARY	'JOHNSON, GARY'
-Candidate	Donald J. Trump	TRUMP, DONALD J.
-Candidate	Donald J. Trump	'TRUMP, DONALD J.'
-Candidate	REYNOLDS, STEVEN	REYNOLDS, STEVEN
-Candidate	REYNOLDS, STEVEN	'REYNOLDS, STEVEN'
-Candidate	WALKER, MICHAEL B.	WALKER, MICHAEL B.
-Candidate	WALKER, MICHAEL B.	'WALKER, MICHAEL B.'
-Candidate	HART, SUSAN	HART, SUSAN
-Candidate	HART, SUSAN	'HART, SUSAN'
-Candidate	GREEDY, MICHAEL L.	GREEDY, MICHAEL L.
-Candidate	GREEDY, MICHAEL L.	'GREEDY, MICHAEL L.'
-Candidate	WAGNER, JOHN	WAGNER, JOHN
-Candidate	WAGNER, JOHN	'WAGNER, JOHN'
-Candidate	CARTER, DAVID W.	CARTER, DAVID W.
-Candidate	CARTER, DAVID W.	'CARTER, DAVID W.'
-Candidate	HICKEY, PAT	HICKEY, PAT
-Candidate	HICKEY, PAT	'HICKEY, PAT'
-Candidate	BONKOWSKI, BRAD	BONKOWSKI, BRAD
-Candidate	BONKOWSKI, BRAD	'BONKOWSKI, BRAD'
-Candidate	WHITE, MAURICE	WHITE, MAURICE
-Candidate	WHITE, MAURICE	'WHITE, MAURICE'
-Candidate	BARRETTE, JOHN	BARRETTE, JOHN
-Candidate	BARRETTE, JOHN	'BARRETTE, JOHN'
-Candidate	SHIRK, JIM	SHIRK, JIM
-Candidate	SHIRK, JIM	'SHIRK, JIM'
-Candidate	HARDESTY, JIM	HARDESTY, JIM
-Candidate	HARDESTY, JIM	'HARDESTY, JIM'
-Candidate	PARRAGUIRRE, RON D.	PARRAGUIRRE, RON D.
-Candidate	PARRAGUIRRE, RON D.	'PARRAGUIRRE, RON D.'
+Candidate	Gibbons, Michael	Gibbons, Michael
+Candidate	Gibbons, Michael	'Gibbons, Michael'
+Candidate	Silver, Abbi	Silver, Abbi
+Candidate	Silver, Abbi	'Silver, Abbi'
+Candidate	Castle, Darrell	Castle, Darrell
+Candidate	Castle, Darrell	'Castle, Darrell'
+Candidate	Clinton, Hillary	Clinton, Hillary
+Candidate	Clinton, Hillary	'Clinton, Hillary'
+Candidate	De La Fuente, Roque 'Rocky'	De La Fuente, Roque 'Rocky'
+Candidate	Johnson, Gary	Johnson, Gary
+Candidate	Johnson, Gary	'Johnson, Gary'
+Candidate	Donald J. Trump	Trump, Donald J.
+Candidate	Donald J. Trump	'Trump, Donald J.'
+Candidate	Reynolds, Steven	Reynolds, Steven
+Candidate	Reynolds, Steven	'Reynolds, Steven'
+Candidate	Walker, Michael B.	Walker, Michael B.
+Candidate	Walker, Michael B.	'Walker, Michael B.'
+Candidate	Hart, Susan	Hart, Susan
+Candidate	Hart, Susan	'Hart, Susan'
+Candidate	Greedy, Michael L.	Greedy, Michael L.
+Candidate	Greedy, Michael L.	'Greedy, Michael L.'
+Candidate	Wagner, John	Wagner, John
+Candidate	Wagner, John	'Wagner, John'
+Candidate	Carter, David W.	Carter, David W.
+Candidate	Carter, David W.	'Carter, David W.'
+Candidate	Hickey, Pat	Hickey, Pat
+Candidate	Hickey, Pat	'Hickey, Pat'
+Candidate	Bonkowski, Brad	Bonkowski, Brad
+Candidate	Bonkowski, Brad	'Bonkowski, Brad'
+Candidate	White, Maurice	White, Maurice
+Candidate	White, Maurice	'White, Maurice'
+Candidate	Barrette, John	Barrette, John
+Candidate	Barrette, John	'Barrette, John'
+Candidate	Shirk, Jim	Shirk, Jim
+Candidate	Shirk, Jim	'Shirk, Jim'
+Candidate	Hardesty, Jim	Hardesty, Jim
+Candidate	Hardesty, Jim	'Hardesty, Jim'
+Candidate	Parraguirre, Ron D.	Parraguirre, Ron D.
+Candidate	Parraguirre, Ron D.	'Parraguirre, Ron D.'
 Candidate	Everhart, John H.	Everhart, John H.
 Candidate	Everhart, John H.	'Everhart, John H.'
-Candidate	KNIGHT, DREW	KNIGHT, DREW
-Candidate	KNIGHT, DREW	'KNIGHT, DREW'
-Candidate	GUMINA, TONY	GUMINA, TONY
-Candidate	GUMINA, TONY	'GUMINA, TONY'
-Candidate	JONES, TOM	JONES, TOM
-Candidate	JONES, TOM	'JONES, TOM'
-Candidate	SAWYER, THOMAS 'TOM'	SAWYER, THOMAS 'TOM'
-Candidate	WILLIAMS, JARROD M.	WILLIAMS, JARROD M.
-Candidate	WILLIAMS, JARROD M.	'WILLIAMS, JARROD M.'
-Candidate	LAFRANCE, SARA	LAFRANCE, SARA
-Candidate	LAFRANCE, SARA	'LAFRANCE, SARA'
-Candidate	COCHRAN, WENDY 'ROOSTER'	COCHRAN, WENDY 'ROOSTER'
-Candidate	DINI, GEORGE R.	DINI, GEORGE R.
-Candidate	DINI, GEORGE R.	'DINI, GEORGE R.'
-Candidate	SMITH, JUSTIN	SMITH, JUSTIN
-Candidate	SMITH, JUSTIN	'SMITH, JUSTIN'
+Candidate	Knight, Drew	Knight, Drew
+Candidate	Knight, Drew	'Knight, Drew'
+Candidate	Gumina, Tony	Gumina, Tony
+Candidate	Gumina, Tony	'Gumina, Tony'
+Candidate	Jones, Tom	Jones, Tom
+Candidate	Jones, Tom	'Jones, Tom'
+Candidate	Sawyer, Thomas 'Tom'	Sawyer, Thomas 'Tom'
+Candidate	Williams, Jarrod M.	Williams, Jarrod M.
+Candidate	Williams, Jarrod M.	'Williams, Jarrod M.'
+Candidate	Lafrance, Sara	Lafrance, Sara
+Candidate	Lafrance, Sara	'Lafrance, Sara'
+Candidate	Cochran, Wendy 'Rooster'	Cochran, Wendy 'Rooster'
+Candidate	Dini, George R.	Dini, George R.
+Candidate	Dini, George R.	'Dini, George R.'
+Candidate	Smith, Justin	Smith, Justin
+Candidate	Smith, Justin	'Smith, Justin'
 Candidate	Thomas, Michael	Thomas, Michael
 Candidate	Thomas, Michael	'Thomas, Michael'
 Candidate	Bachman, Shana	Bachman, Shana
@@ -5747,13 +5743,12 @@ Candidate	Hansen, Janine	Hansen, Janine
 Candidate	Hansen, Janine	'Hansen, Janine'
 Candidate	Monroe-Moreno, Daniele	Monroe-Moreno, Daniele
 Candidate	Monroe-Moreno, Daniele	'Monroe-Moreno, Daniele'
-Candidate	MARCIANO, LEN	MARCIANO, LEN
-Candidate	MARCIANO, LEN	'MARCIANO, LEN'
+Candidate	Marciano, Len	Marciano, Len
+Candidate	Marciano, Len	'Marciano, Len'
 Candidate	Ter-Petrosyan, Arsen 'Arsen T'	Ter-Petrosyan, Arsen 'Arsen T'
-Candidate	Brown, Steve	Brown, Steve
 Candidate	Brown, Steve	'Brown, Steve'
-Candidate	LITTLE, MIKE	LITTLE, MIKE
-Candidate	LITTLE, MIKE	'LITTLE, MIKE'
+Candidate	Little, Mike	Little, Mike
+Candidate	Little, Mike	'Little, Mike'
 Candidate	Fawzy, Jennifer	Fawzy, Jennifer
 Candidate	Fawzy, Jennifer	'Fawzy, Jennifer'
 Candidate	Neal, Dina	Neal, Dina
@@ -5814,233 +5809,233 @@ Candidate	Linton, Carol	Linton, Carol
 Candidate	Linton, Carol	'Linton, Carol'
 Candidate	Schjang, Kimberly	Schjang, Kimberly
 Candidate	Schjang, Kimberly	'Schjang, Kimberly'
-Candidate	LEWIS, KATHY	LEWIS, KATHY
-Candidate	LEWIS, KATHY	'LEWIS, KATHY'
-Candidate	PENZEL, BARRY	PENZEL, BARRY
-Candidate	PENZEL, BARRY	'PENZEL, BARRY'
-Candidate	GREGORY, THOMAS W.	GREGORY, THOMAS W.
-Candidate	GREGORY, THOMAS W.	'GREGORY, THOMAS W.'
-Candidate	BORGZINNER, KIMBERLY	BORGZINNER, KIMBERLY
-Candidate	BORGZINNER, KIMBERLY	'BORGZINNER, KIMBERLY'
-Candidate	DRESSEL, FRANK	DRESSEL, FRANK
-Candidate	DRESSEL, FRANK	'DRESSEL, FRANK'
-Candidate	HARDIE, MIKE	HARDIE, MIKE
-Candidate	HARDIE, MIKE	'HARDIE, MIKE'
-Candidate	LEE, TRAVIS K.	LEE, TRAVIS K.
-Candidate	LEE, TRAVIS K.	'LEE, TRAVIS K.'
-Candidate	ROBBINS, DOUGLAS	ROBBINS, DOUGLAS
-Candidate	ROBBINS, DOUGLAS	'ROBBINS, DOUGLAS'
-Candidate	GILKERSON, LINDA	GILKERSON, LINDA
-Candidate	GILKERSON, LINDA	'GILKERSON, LINDA'
-Candidate	LIPPMANN, LARRY	LIPPMANN, LARRY
-Candidate	LIPPMANN, LARRY	'LIPPMANN, LARRY'
+Candidate	Lewis, Kathy	Lewis, Kathy
+Candidate	Lewis, Kathy	'Lewis, Kathy'
+Candidate	Penzel, Barry	Penzel, Barry
+Candidate	Penzel, Barry	'Penzel, Barry'
+Candidate	Gregory, Thomas W.	Gregory, Thomas W.
+Candidate	Gregory, Thomas W.	'Gregory, Thomas W.'
+Candidate	Borgzinner, Kimberly	Borgzinner, Kimberly
+Candidate	Borgzinner, Kimberly	'Borgzinner, Kimberly'
+Candidate	Dressel, Frank	Dressel, Frank
+Candidate	Dressel, Frank	'Dressel, Frank'
+Candidate	Hardie, Mike	Hardie, Mike
+Candidate	Hardie, Mike	'Hardie, Mike'
+Candidate	Lee, Travis K.	Lee, Travis K.
+Candidate	Lee, Travis K.	'Lee, Travis K.'
+Candidate	Robbins, Douglas	Robbins, Douglas
+Candidate	Robbins, Douglas	'Robbins, Douglas'
+Candidate	Gilkerson, Linda	Gilkerson, Linda
+Candidate	Gilkerson, Linda	'Gilkerson, Linda'
+Candidate	Lippmann, Larry	Lippmann, Larry
+Candidate	Lippmann, Larry	'Lippmann, Larry'
 Candidate	Wheeler, Jim	Wheeler, Jim
 Candidate	Wheeler, Jim	'Wheeler, Jim'
-Candidate	RADTKE, GLEN A.	RADTKE, GLEN A.
-Candidate	RADTKE, GLEN A.	'RADTKE, GLEN A.'
-Candidate	SHORTEN, CHRISTOPHER	SHORTEN, CHRISTOPHER
-Candidate	SHORTEN, CHRISTOPHER	'SHORTEN, CHRISTOPHER'
-Candidate	SOULIGNY, BILL	SOULIGNY, BILL
-Candidate	SOULIGNY, BILL	'SOULIGNY, BILL'
-Candidate	STEPHANS, JOHN	STEPHANS, JOHN
-Candidate	STEPHANS, JOHN	'STEPHANS, JOHN'
-Candidate	MILLER, RALPH L.	MILLER, RALPH L.
-Candidate	MILLER, RALPH L.	'MILLER, RALPH L.'
-Candidate	ROONEY, MICHAEL	ROONEY, MICHAEL
-Candidate	ROONEY, MICHAEL	'ROONEY, MICHAEL'
-Candidate	ZERG, JOANNE	ZERG, JOANNE
-Candidate	ZERG, JOANNE	'ZERG, JOANNE'
-Candidate	BREAUX, JOHN	BREAUX, JOHN
-Candidate	BREAUX, JOHN	'BREAUX, JOHN'
-Candidate	FELTON, GREG	FELTON, GREG
-Candidate	FELTON, GREG	'FELTON, GREG'
-Candidate	GRANT, ANN	GRANT, ANN
-Candidate	GRANT, ANN	'GRANT, ANN'
-Candidate	SCHUSSEL, LARRY F.	SCHUSSEL, LARRY F.
-Candidate	SCHUSSEL, LARRY F.	'SCHUSSEL, LARRY F.'
-Candidate	BARNARD, ANN	BARNARD, ANN
-Candidate	BARNARD, ANN	'BARNARD, ANN'
-Candidate	BORSOS, RONALD	BORSOS, RONALD
-Candidate	BORSOS, RONALD	'BORSOS, RONALD'
-Candidate	WESTERBECK, GREGG	WESTERBECK, GREGG
-Candidate	WESTERBECK, GREGG	'WESTERBECK, GREGG'
-Candidate	DAHL, DEMAR	DAHL, DEMAR
-Candidate	DAHL, DEMAR	'DAHL, DEMAR'
-Candidate	MARIN, PEDRO	MARIN, PEDRO
-Candidate	MARIN, PEDRO	'MARIN, PEDRO'
-Candidate	SCHMIDTLEIN, ROBERT	SCHMIDTLEIN, ROBERT
-Candidate	SCHMIDTLEIN, ROBERT	'SCHMIDTLEIN, ROBERT'
-Candidate	SIMONS, MANDY	SIMONS, MANDY
-Candidate	SIMONS, MANDY	'SIMONS, MANDY'
-Candidate	ZORNES, DAVID R.	ZORNES, DAVID R.
-Candidate	ZORNES, DAVID R.	'ZORNES, DAVID R.'
-Candidate	BRIAN, BETSY	BRIAN, BETSY
-Candidate	BRIAN, BETSY	'BRIAN, BETSY'
-Candidate	AYALA, MIKE	AYALA, MIKE
-Candidate	AYALA, MIKE	'AYALA, MIKE'
+Candidate	Radtke, Glen A.	Radtke, Glen A.
+Candidate	Radtke, Glen A.	'Radtke, Glen A.'
+Candidate	Shorten, Christopher	Shorten, Christopher
+Candidate	Shorten, Christopher	'Shorten, Christopher'
+Candidate	Souligny, Bill	Souligny, Bill
+Candidate	Souligny, Bill	'Souligny, Bill'
+Candidate	Stephans, John	Stephans, John
+Candidate	Stephans, John	'Stephans, John'
+Candidate	Miller, Ralph L.	Miller, Ralph L.
+Candidate	Miller, Ralph L.	'Miller, Ralph L.'
+Candidate	Rooney, Michael	Rooney, Michael
+Candidate	Rooney, Michael	'Rooney, Michael'
+Candidate	Zerg, Joanne	Zerg, Joanne
+Candidate	Zerg, Joanne	'Zerg, Joanne'
+Candidate	Breaux, John	Breaux, John
+Candidate	Breaux, John	'Breaux, John'
+Candidate	Felton, Greg	Felton, Greg
+Candidate	Felton, Greg	'Felton, Greg'
+Candidate	Grant, Ann	Grant, Ann
+Candidate	Grant, Ann	'Grant, Ann'
+Candidate	Schussel, Larry F.	Schussel, Larry F.
+Candidate	Schussel, Larry F.	'Schussel, Larry F.'
+Candidate	Barnard, Ann	Barnard, Ann
+Candidate	Barnard, Ann	'Barnard, Ann'
+Candidate	Borsos, Ronald	Borsos, Ronald
+Candidate	Borsos, Ronald	'Borsos, Ronald'
+Candidate	Westerbeck, Gregg	Westerbeck, Gregg
+Candidate	Westerbeck, Gregg	'Westerbeck, Gregg'
+Candidate	Dahl, Demar	Dahl, Demar
+Candidate	Dahl, Demar	'Dahl, Demar'
+Candidate	Marin, Pedro	Marin, Pedro
+Candidate	Marin, Pedro	'Marin, Pedro'
+Candidate	Schmidtlein, Robert	Schmidtlein, Robert
+Candidate	Schmidtlein, Robert	'Schmidtlein, Robert'
+Candidate	Simons, Mandy	Simons, Mandy
+Candidate	Simons, Mandy	'Simons, Mandy'
+Candidate	Zornes, David R.	Zornes, David R.
+Candidate	Zornes, David R.	'Zornes, David R.'
+Candidate	Brian, Betsy	Brian, Betsy
+Candidate	Brian, Betsy	'Brian, Betsy'
+Candidate	Ayala, Mike	Ayala, Mike
+Candidate	Ayala, Mike	'Ayala, Mike'
 Candidate	Ellison, John	Ellison, John
 Candidate	Ellison, John	'Ellison, John'
-Candidate	HOLBROOK, DANA	HOLBROOK, DANA
-Candidate	HOLBROOK, DANA	'HOLBROOK, DANA'
-Candidate	JOHNSTON, MARGARET A.	JOHNSTON, MARGARET A.
-Candidate	JOHNSTON, MARGARET A.	'JOHNSTON, MARGARET A.'
-Candidate	JONES, KARLA M.	JONES, KARLA M.
-Candidate	JONES, KARLA M.	'JONES, KARLA M.'
-Candidate	CARTER, EMILY	CARTER, EMILY
-Candidate	CARTER, EMILY	'CARTER, EMILY'
-Candidate	CORONA, DANIEL	CORONA, DANIEL
-Candidate	CORONA, DANIEL	'CORONA, DANIEL'
-Candidate	ANDERSON, GERALD 'JERRY'	ANDERSON, GERALD 'JERRY'
-Candidate	FLORES, NICOLAS 'NICK'	FLORES, NICOLAS 'NICK'
-Candidate	SNYDER, CASEY	SNYDER, CASEY
-Candidate	SNYDER, CASEY	'SNYDER, CASEY'
-Candidate	RICH, SYLVIA	RICH, SYLVIA
-Candidate	RICH, SYLVIA	'RICH, SYLVIA'
+Candidate	Holbrook, Dana	Holbrook, Dana
+Candidate	Holbrook, Dana	'Holbrook, Dana'
+Candidate	Johnston, Margaret A.	Johnston, Margaret A.
+Candidate	Johnston, Margaret A.	'Johnston, Margaret A.'
+Candidate	Jones, Karla M.	Jones, Karla M.
+Candidate	Jones, Karla M.	'Jones, Karla M.'
+Candidate	Carter, Emily	Carter, Emily
+Candidate	Carter, Emily	'Carter, Emily'
+Candidate	Corona, Daniel	Corona, Daniel
+Candidate	Corona, Daniel	'Corona, Daniel'
+Candidate	Anderson, Gerald 'Jerry'	Anderson, Gerald 'Jerry'
+Candidate	Flores, Nicolas 'Nick'	Flores, Nicolas 'Nick'
+Candidate	Snyder, Casey	Snyder, Casey
+Candidate	Snyder, Casey	'Snyder, Casey'
+Candidate	Rich, Sylvia	Rich, Sylvia
+Candidate	Rich, Sylvia	'Rich, Sylvia'
 Candidate	Hansen, Ira	Hansen, Ira
 Candidate	Hansen, Ira	'Hansen, Ira'
-Candidate	KEYES, RALPH M.	KEYES, RALPH M.
-Candidate	KEYES, RALPH M.	'KEYES, RALPH M.'
-Candidate	GOICOECHEA, J.J.	GOICOECHEA, J.J.
-Candidate	GOICOECHEA, J.J.	'GOICOECHEA, J.J.'
-Candidate	SHARKOZY, MIKE	SHARKOZY, MIKE
-Candidate	SHARKOZY, MIKE	'SHARKOZY, MIKE'
-Candidate	TIPTON, ROBERT 'KEN'	TIPTON, ROBERT 'KEN'
-Candidate	FORTMANN, ERNEST	FORTMANN, ERNEST
-Candidate	FORTMANN, ERNEST	'FORTMANN, ERNEST'
-Candidate	HOOD, JENNIFER	HOOD, JENNIFER
-Candidate	HOOD, JENNIFER	'HOOD, JENNIFER'
-Candidate	CASALEZ, JO ANN	CASALEZ, JO ANN
-Candidate	CASALEZ, JO ANN	'CASALEZ, JO ANN'
-Candidate	MURPHY, JOEL	MURPHY, JOEL
-Candidate	MURPHY, JOEL	'MURPHY, JOEL'
-Candidate	JACOBSEN, BARBARA	JACOBSEN, BARBARA
-Candidate	JACOBSEN, BARBARA	'JACOBSEN, BARBARA'
-Candidate	OLSON, BRENDA	OLSON, BRENDA
-Candidate	OLSON, BRENDA	'OLSON, BRENDA'
-Candidate	STRINGHAM, CARRIE D.	STRINGHAM, CARRIE D.
-Candidate	STRINGHAM, CARRIE D.	'STRINGHAM, CARRIE D.'
-Candidate	MENDIOLA, VINCENT L.	MENDIOLA, VINCENT L.
-Candidate	MENDIOLA, VINCENT L.	'MENDIOLA, VINCENT L.'
-Candidate	UPSHAW, RORY L.	UPSHAW, RORY L.
-Candidate	UPSHAW, RORY L.	'UPSHAW, RORY L.'
-Candidate	CARTER, CHRIS R.	CARTER, CHRIS R.
-Candidate	CARTER, CHRIS R.	'CARTER, CHRIS R.'
-Candidate	HARDY, ELLEN 'KATE'	HARDY, ELLEN 'KATE'
-Candidate	ALLAN, JUDITH ANN	ALLAN, JUDITH ANN
-Candidate	ALLAN, JUDITH ANN	'ALLAN, JUDITH ANN'
-Candidate	WINTLE, JAY	WINTLE, JAY
-Candidate	WINTLE, JAY	'WINTLE, JAY'
-Candidate	LANGER, MELVIN	LANGER, MELVIN
-Candidate	LANGER, MELVIN	'LANGER, MELVIN'
-Candidate	DUVALL, GLEN ORAL	DUVALL, GLEN ORAL
-Candidate	DUVALL, GLEN ORAL	'DUVALL, GLEN ORAL'
-Candidate	MORENO, MANUEL II	MORENO, MANUEL II
-Candidate	MORENO, MANUEL II	'MORENO, MANUEL II'
-Candidate	O'KANE, JENNIFER	O'KANE, JENNIFER
-Candidate	O'KANE, JENNIFER	'O'KANE, JENNIFER'
-Candidate	CASSORLA, EARL	CASSORLA, EARL
-Candidate	CASSORLA, EARL	'CASSORLA, EARL'
-Candidate	WALSH, CYNTHIA A.	WALSH, CYNTHIA A.
-Candidate	WALSH, CYNTHIA A.	'WALSH, CYNTHIA A.'
-Candidate	HELMING, DON KIP	HELMING, DON KIP
-Candidate	HELMING, DON KIP	'HELMING, DON KIP'
-Candidate	SMITH, STEPHEN L.	SMITH, STEPHEN L.
-Candidate	SMITH, STEPHEN L.	'SMITH, STEPHEN L.'
-Candidate	ELKINS, TAMERA LYNN	ELKINS, TAMERA LYNN
-Candidate	ELKINS, TAMERA LYNN	'ELKINS, TAMERA LYNN'
-Candidate	CARDOZA, CLAUDIO T.	CARDOZA, CLAUDIO T.
-Candidate	CARDOZA, CLAUDIO T.	'CARDOZA, CLAUDIO T.'
-Candidate	HAINES, DONALD RICHARD	HAINES, DONALD RICHARD
-Candidate	HAINES, DONALD RICHARD	'HAINES, DONALD RICHARD'
-Candidate	HIGBEE, VARLIN S.	HIGBEE, VARLIN S.
-Candidate	HIGBEE, VARLIN S.	'HIGBEE, VARLIN S.'
-Candidate	DIXON, KEN	DIXON, KEN
-Candidate	DIXON, KEN	'DIXON, KEN'
-Candidate	FOGLIANI, MIKE	FOGLIANI, MIKE
-Candidate	FOGLIANI, MIKE	'FOGLIANI, MIKE'
-Candidate	MATHEWS, LEE ROB	MATHEWS, LEE ROB
-Candidate	MATHEWS, LEE ROB	'MATHEWS, LEE ROB'
-Candidate	WRIGHT, EDWARD E.	WRIGHT, EDWARD E.
-Candidate	WRIGHT, EDWARD E.	'WRIGHT, EDWARD E.'
-Candidate	MORTENSEN, JOE	MORTENSEN, JOE
-Candidate	MORTENSEN, JOE	'MORTENSEN, JOE'
-Candidate	SANDERSON, JASON W.	SANDERSON, JASON W.
-Candidate	SANDERSON, JASON W.	'SANDERSON, JASON W.'
-Candidate	DINI, DAVID JOHN	DINI, DAVID JOHN
-Candidate	DINI, DAVID JOHN	'DINI, DAVID JOHN'
-Candidate	GIOMI HAWKEY, CHERYL	GIOMI HAWKEY, CHERYL
-Candidate	GIOMI HAWKEY, CHERYL	'GIOMI HAWKEY, CHERYL'
-Candidate	POPE, JEFF	POPE, JEFF
-Candidate	POPE, JEFF	'POPE, JEFF'
-Candidate	ADREON, RONNIE	ADREON, RONNIE
-Candidate	ADREON, RONNIE	'ADREON, RONNIE'
-Candidate	CLARKE, NANCY	CLARKE, NANCY
-Candidate	CLARKE, NANCY	'CLARKE, NANCY'
-Candidate	CLEGG, WILLIAM B.	CLEGG, WILLIAM B.
-Candidate	CLEGG, WILLIAM B.	'CLEGG, WILLIAM B.'
-Candidate	HOWELL, CHERYL A.	HOWELL, CHERYL A.
-Candidate	HOWELL, CHERYL A.	'HOWELL, CHERYL A.'
-Candidate	RIESEN, WILLIAM A.	RIESEN, WILLIAM A.
-Candidate	RIESEN, WILLIAM A.	'RIESEN, WILLIAM A.'
-Candidate	VANHORN, JANN	VANHORN, JANN
-Candidate	VANHORN, JANN	'VANHORN, JANN'
-Candidate	CARR, STEVE	CARR, STEVE
-Candidate	CARR, STEVE	'CARR, STEVE'
-Candidate	PICHA, STEVE	PICHA, STEVE
-Candidate	PICHA, STEVE	'PICHA, STEVE'
-Candidate	JOHNSON, RAY	JOHNSON, RAY
-Candidate	JOHNSON, RAY	'JOHNSON, RAY'
-Candidate	ZIERENBERG, RICK	ZIERENBERG, RICK
-Candidate	ZIERENBERG, RICK	'ZIERENBERG, RICK'
-Candidate	NEPPER, CHRISTOPHER	NEPPER, CHRISTOPHER
-Candidate	NEPPER, CHRISTOPHER	'NEPPER, CHRISTOPHER'
-Candidate	BRYANT, RICHARD D.	BRYANT, RICHARD D.
-Candidate	BRYANT, RICHARD D.	'BRYANT, RICHARD D.'
-Candidate	HEGG, CHRIS	HEGG, CHRIS
-Candidate	HEGG, CHRIS	'HEGG, CHRIS'
-Candidate	MACBETH, PAUL	MACBETH, PAUL
-Candidate	MACBETH, PAUL	'MACBETH, PAUL'
-Candidate	PRICE, GARTH D.	PRICE, GARTH D.
-Candidate	PRICE, GARTH D.	'PRICE, GARTH D.'
-Candidate	BOSTA, JOHN	BOSTA, JOHN
-Candidate	BOSTA, JOHN	'BOSTA, JOHN'
-Candidate	MENDYK, DEBBERA L.	MENDYK, DEBBERA L.
-Candidate	MENDYK, DEBBERA L.	'MENDYK, DEBBERA L.'
-Candidate	MINSHALL, PATRICIA J.	MINSHALL, PATRICIA J.
-Candidate	MINSHALL, PATRICIA J.	'MINSHALL, PATRICIA J.'
-Candidate	PITARRE, KEN	PITARRE, KEN
-Candidate	PITARRE, KEN	'PITARRE, KEN'
-Candidate	THOMAS, JIMMY	THOMAS, JIMMY
-Candidate	THOMAS, JIMMY	'THOMAS, JIMMY'
-Candidate	KULKIN, HARLEY ZANE	KULKIN, HARLEY ZANE
-Candidate	KULKIN, HARLEY ZANE	'KULKIN, HARLEY ZANE'
-Candidate	KAMINSKI, DON	KAMINSKI, DON
-Candidate	KAMINSKI, DON	'KAMINSKI, DON'
-Candidate	SAIN, MIKE	SAIN, MIKE
-Candidate	SAIN, MIKE	'SAIN, MIKE'
-Candidate	SELEY, TOM	SELEY, TOM
-Candidate	SELEY, TOM	'SELEY, TOM'
-Candidate	GENTRY, STARLIN	GENTRY, STARLIN
-Candidate	GENTRY, STARLIN	'GENTRY, STARLIN'
-Candidate	GILMAN, L. LANCE	GILMAN, L. LANCE
-Candidate	GILMAN, L. LANCE	'GILMAN, L. LANCE'
-Candidate	SNELL, SHARON	SNELL, SHARON
-Candidate	SNELL, SHARON	'SNELL, SHARON'
-Candidate	CONLEY, COLLEEN	CONLEY, COLLEEN
-Candidate	CONLEY, COLLEEN	'CONLEY, COLLEEN'
-Candidate	HUDDLESON, LARRY	HUDDLESON, LARRY
-Candidate	HUDDLESON, LARRY	'HUDDLESON, LARRY'
-Candidate	COYNE-THOMPSON, KAREN	COYNE-THOMPSON, KAREN
-Candidate	COYNE-THOMPSON, KAREN	'COYNE-THOMPSON, KAREN'
-Candidate	FIELD, MELISSA	FIELD, MELISSA
-Candidate	FIELD, MELISSA	'FIELD, MELISSA'
-Candidate	MAYS, CONSTANCE	MAYS, CONSTANCE
-Candidate	MAYS, CONSTANCE	'MAYS, CONSTANCE'
-Candidate	SULLIVAN, MARK	SULLIVAN, MARK
-Candidate	SULLIVAN, MARK	'SULLIVAN, MARK'
-Candidate	AUSTIN, ROSEMARIE 'ROSIE'	AUSTIN, ROSEMARIE 'ROSIE'
-Candidate	KITTRELL, JAMES	KITTRELL, JAMES
-Candidate	KITTRELL, JAMES	'KITTRELL, JAMES'
+Candidate	Keyes, Ralph M.	Keyes, Ralph M.
+Candidate	Keyes, Ralph M.	'Keyes, Ralph M.'
+Candidate	Goicoechea, J.J.	Goicoechea, J.J.
+Candidate	Goicoechea, J.J.	'Goicoechea, J.J.'
+Candidate	Sharkozy, Mike	Sharkozy, Mike
+Candidate	Sharkozy, Mike	'Sharkozy, Mike'
+Candidate	Tipton, Robert 'Ken'	Tipton, Robert 'Ken'
+Candidate	Fortmann, Ernest	Fortmann, Ernest
+Candidate	Fortmann, Ernest	'Fortmann, Ernest'
+Candidate	Hood, Jennifer	Hood, Jennifer
+Candidate	Hood, Jennifer	'Hood, Jennifer'
+Candidate	Casalez, Jo Ann	Casalez, Jo Ann
+Candidate	Casalez, Jo Ann	'Casalez, Jo Ann'
+Candidate	Murphy, Joel	Murphy, Joel
+Candidate	Murphy, Joel	'Murphy, Joel'
+Candidate	Jacobsen, Barbara	Jacobsen, Barbara
+Candidate	Jacobsen, Barbara	'Jacobsen, Barbara'
+Candidate	Olson, Brenda	Olson, Brenda
+Candidate	Olson, Brenda	'Olson, Brenda'
+Candidate	Stringham, Carrie D.	Stringham, Carrie D.
+Candidate	Stringham, Carrie D.	'Stringham, Carrie D.'
+Candidate	Mendiola, Vincent L.	Mendiola, Vincent L.
+Candidate	Mendiola, Vincent L.	'Mendiola, Vincent L.'
+Candidate	Upshaw, Rory L.	Upshaw, Rory L.
+Candidate	Upshaw, Rory L.	'Upshaw, Rory L.'
+Candidate	Carter, Chris R.	Carter, Chris R.
+Candidate	Carter, Chris R.	'Carter, Chris R.'
+Candidate	Hardy, Ellen 'Kate'	Hardy, Ellen 'Kate'
+Candidate	Allan, Judith Ann	Allan, Judith Ann
+Candidate	Allan, Judith Ann	'Allan, Judith Ann'
+Candidate	Wintle, Jay	Wintle, Jay
+Candidate	Wintle, Jay	'Wintle, Jay'
+Candidate	Langer, Melvin	Langer, Melvin
+Candidate	Langer, Melvin	'Langer, Melvin'
+Candidate	Duvall, Glen Oral	Duvall, Glen Oral
+Candidate	Duvall, Glen Oral	'Duvall, Glen Oral'
+Candidate	Moreno, Manuel Ii	Moreno, Manuel Ii
+Candidate	Moreno, Manuel Ii	'Moreno, Manuel Ii'
+Candidate	O'Kane, Jennifer	O'Kane, Jennifer
+Candidate	O'Kane, Jennifer	'O'Kane, Jennifer'
+Candidate	Cassorla, Earl	Cassorla, Earl
+Candidate	Cassorla, Earl	'Cassorla, Earl'
+Candidate	Walsh, Cynthia A.	Walsh, Cynthia A.
+Candidate	Walsh, Cynthia A.	'Walsh, Cynthia A.'
+Candidate	Helming, Don Kip	Helming, Don Kip
+Candidate	Helming, Don Kip	'Helming, Don Kip'
+Candidate	Smith, Stephen L.	Smith, Stephen L.
+Candidate	Smith, Stephen L.	'Smith, Stephen L.'
+Candidate	Elkins, Tamera Lynn	Elkins, Tamera Lynn
+Candidate	Elkins, Tamera Lynn	'Elkins, Tamera Lynn'
+Candidate	Cardoza, Claudio T.	Cardoza, Claudio T.
+Candidate	Cardoza, Claudio T.	'Cardoza, Claudio T.'
+Candidate	Haines, Donald Richard	Haines, Donald Richard
+Candidate	Haines, Donald Richard	'Haines, Donald Richard'
+Candidate	Higbee, Varlin S.	Higbee, Varlin S.
+Candidate	Higbee, Varlin S.	'Higbee, Varlin S.'
+Candidate	Dixon, Ken	Dixon, Ken
+Candidate	Dixon, Ken	'Dixon, Ken'
+Candidate	Fogliani, Mike	Fogliani, Mike
+Candidate	Fogliani, Mike	'Fogliani, Mike'
+Candidate	Mathews, Lee Rob	Mathews, Lee Rob
+Candidate	Mathews, Lee Rob	'Mathews, Lee Rob'
+Candidate	Wright, Edward E.	Wright, Edward E.
+Candidate	Wright, Edward E.	'Wright, Edward E.'
+Candidate	Mortensen, Joe	Mortensen, Joe
+Candidate	Mortensen, Joe	'Mortensen, Joe'
+Candidate	Sanderson, Jason W.	Sanderson, Jason W.
+Candidate	Sanderson, Jason W.	'Sanderson, Jason W.'
+Candidate	Dini, David John	Dini, David John
+Candidate	Dini, David John	'Dini, David John'
+Candidate	Giomi Hawkey, Cheryl	Giomi Hawkey, Cheryl
+Candidate	Giomi Hawkey, Cheryl	'Giomi Hawkey, Cheryl'
+Candidate	Pope, Jeff	Pope, Jeff
+Candidate	Pope, Jeff	'Pope, Jeff'
+Candidate	Adreon, Ronnie	Adreon, Ronnie
+Candidate	Adreon, Ronnie	'Adreon, Ronnie'
+Candidate	Clarke, Nancy	Clarke, Nancy
+Candidate	Clarke, Nancy	'Clarke, Nancy'
+Candidate	Clegg, William B.	Clegg, William B.
+Candidate	Clegg, William B.	'Clegg, William B.'
+Candidate	Howell, Cheryl A.	Howell, Cheryl A.
+Candidate	Howell, Cheryl A.	'Howell, Cheryl A.'
+Candidate	Riesen, William A.	Riesen, William A.
+Candidate	Riesen, William A.	'Riesen, William A.'
+Candidate	Vanhorn, Jann	Vanhorn, Jann
+Candidate	Vanhorn, Jann	'Vanhorn, Jann'
+Candidate	Carr, Steve	Carr, Steve
+Candidate	Carr, Steve	'Carr, Steve'
+Candidate	Picha, Steve	Picha, Steve
+Candidate	Picha, Steve	'Picha, Steve'
+Candidate	Johnson, Ray	Johnson, Ray
+Candidate	Johnson, Ray	'Johnson, Ray'
+Candidate	Zierenberg, Rick	Zierenberg, Rick
+Candidate	Zierenberg, Rick	'Zierenberg, Rick'
+Candidate	Nepper, Christopher	Nepper, Christopher
+Candidate	Nepper, Christopher	'Nepper, Christopher'
+Candidate	Bryant, Richard D.	Bryant, Richard D.
+Candidate	Bryant, Richard D.	'Bryant, Richard D.'
+Candidate	Hegg, Chris	Hegg, Chris
+Candidate	Hegg, Chris	'Hegg, Chris'
+Candidate	Macbeth, Paul	Macbeth, Paul
+Candidate	Macbeth, Paul	'Macbeth, Paul'
+Candidate	Price, Garth D.	Price, Garth D.
+Candidate	Price, Garth D.	'Price, Garth D.'
+Candidate	Bosta, John	Bosta, John
+Candidate	Bosta, John	'Bosta, John'
+Candidate	Mendyk, Debbera L.	Mendyk, Debbera L.
+Candidate	Mendyk, Debbera L.	'Mendyk, Debbera L.'
+Candidate	Minshall, Patricia J.	Minshall, Patricia J.
+Candidate	Minshall, Patricia J.	'Minshall, Patricia J.'
+Candidate	Pitarre, Ken	Pitarre, Ken
+Candidate	Pitarre, Ken	'Pitarre, Ken'
+Candidate	Thomas, Jimmy	Thomas, Jimmy
+Candidate	Thomas, Jimmy	'Thomas, Jimmy'
+Candidate	Kulkin, Harley Zane	Kulkin, Harley Zane
+Candidate	Kulkin, Harley Zane	'Kulkin, Harley Zane'
+Candidate	Kaminski, Don	Kaminski, Don
+Candidate	Kaminski, Don	'Kaminski, Don'
+Candidate	Sain, Mike	Sain, Mike
+Candidate	Sain, Mike	'Sain, Mike'
+Candidate	Seley, Tom	Seley, Tom
+Candidate	Seley, Tom	'Seley, Tom'
+Candidate	Gentry, Starlin	Gentry, Starlin
+Candidate	Gentry, Starlin	'Gentry, Starlin'
+Candidate	Gilman, L. Lance	Gilman, L. Lance
+Candidate	Gilman, L. Lance	'Gilman, L. Lance'
+Candidate	Snell, Sharon	Snell, Sharon
+Candidate	Snell, Sharon	'Snell, Sharon'
+Candidate	Conley, Colleen	Conley, Colleen
+Candidate	Conley, Colleen	'Conley, Colleen'
+Candidate	Huddleson, Larry	Huddleson, Larry
+Candidate	Huddleson, Larry	'Huddleson, Larry'
+Candidate	Coyne-Thompson, Karen	Coyne-Thompson, Karen
+Candidate	Coyne-Thompson, Karen	'Coyne-Thompson, Karen'
+Candidate	Field, Melissa	Field, Melissa
+Candidate	Field, Melissa	'Field, Melissa'
+Candidate	Mays, Constance	Mays, Constance
+Candidate	Mays, Constance	'Mays, Constance'
+Candidate	Sullivan, Mark	Sullivan, Mark
+Candidate	Sullivan, Mark	'Sullivan, Mark'
+Candidate	Austin, Rosemarie 'Rosie'	Austin, Rosemarie 'Rosie'
+Candidate	Kittrell, James	Kittrell, James
+Candidate	Kittrell, James	'Kittrell, James'
 Candidate	Berkbigler, Marsha	Berkbigler, Marsha
 Candidate	Berkbigler, Marsha	'Berkbigler, Marsha'
 Candidate	Hooper, Levi	Hooper, Levi
@@ -6103,8 +6098,8 @@ Candidate	Conley, Judy L.	'Conley, Judy L.'
 Candidate	Gambrell, Elisabeth 'Schatzi'	Gambrell, Elisabeth 'Schatzi'
 Candidate	Hall, Cameron	Hall, Cameron
 Candidate	Hall, Cameron	'Hall, Cameron'
-Candidate	MOTT, DANNY	MOTT, DANNY
-Candidate	MOTT, DANNY	'MOTT, DANNY'
+Candidate	Mott, Danny	Mott, Danny
+Candidate	Mott, Danny	'Mott, Danny'
 Candidate	Bremer, Denise A.	Bremer, Denise A.
 Candidate	Bremer, Denise A.	'Bremer, Denise A.'
 Candidate	Costalupes, Jim	Costalupes, Jim
@@ -6113,96 +6108,96 @@ Candidate	Herron, Susan A.	Herron, Susan A.
 Candidate	Herron, Susan A.	'Herron, Susan A.'
 Candidate	McKay, Greg	McKay, Greg
 Candidate	McKay, Greg	'McKay, Greg'
-Candidate	CHACHAS, GEORGE	CHACHAS, GEORGE
-Candidate	CHACHAS, GEORGE	'CHACHAS, GEORGE'
-Candidate	STORK, STEVEN M.	STORK, STEVEN M.
-Candidate	STORK, STEVEN M.	'STORK, STEVEN M.'
-Candidate	LEWIS, RUSTY	LEWIS, RUSTY
-Candidate	LEWIS, RUSTY	'LEWIS, RUSTY'
-Candidate	MCCLINTOCK, RALPH	MCCLINTOCK, RALPH
-Candidate	MCCLINTOCK, RALPH	'MCCLINTOCK, RALPH'
-Candidate	DERBIDGE, DALE L.	DERBIDGE, DALE L.
-Candidate	DERBIDGE, DALE L.	'DERBIDGE, DALE L.'
-Candidate	MARTIN, LESLIE	MARTIN, LESLIE
-Candidate	MARTIN, LESLIE	'MARTIN, LESLIE'
-Candidate	BREWSTER, TODD	BREWSTER, TODD
-Candidate	BREWSTER, TODD	'BREWSTER, TODD'
-Candidate	ROBISON, WADE	ROBISON, WADE
-Candidate	ROBISON, WADE	'ROBISON, WADE'
-Candidate	KERNER, MARY	KERNER, MARY
-Candidate	KERNER, MARY	'KERNER, MARY'
-Candidate	TRASK, JESSICA	TRASK, JESSICA
-Candidate	TRASK, JESSICA	'TRASK, JESSICA'
-Candidate	KOYLE, DENYS M.	KOYLE, DENYS M.
-Candidate	KOYLE, DENYS M.	'KOYLE, DENYS M.'
+Candidate	Chachas, George	Chachas, George
+Candidate	Chachas, George	'Chachas, George'
+Candidate	Stork, Steven M.	Stork, Steven M.
+Candidate	Stork, Steven M.	'Stork, Steven M.'
+Candidate	Lewis, Rusty	Lewis, Rusty
+Candidate	Lewis, Rusty	'Lewis, Rusty'
+Candidate	Mcclintock, Ralph	Mcclintock, Ralph
+Candidate	Mcclintock, Ralph	'Mcclintock, Ralph'
+Candidate	Derbidge, Dale L.	Derbidge, Dale L.
+Candidate	Derbidge, Dale L.	'Derbidge, Dale L.'
+Candidate	Martin, Leslie	Martin, Leslie
+Candidate	Martin, Leslie	'Martin, Leslie'
+Candidate	Brewster, Todd	Brewster, Todd
+Candidate	Brewster, Todd	'Brewster, Todd'
+Candidate	Robison, Wade	Robison, Wade
+Candidate	Robison, Wade	'Robison, Wade'
+Candidate	Kerner, Mary	Kerner, Mary
+Candidate	Kerner, Mary	'Kerner, Mary'
+Candidate	Trask, Jessica	Trask, Jessica
+Candidate	Trask, Jessica	'Trask, Jessica'
+Candidate	Koyle, Denys M.	Koyle, Denys M.
+Candidate	Koyle, Denys M.	'Koyle, Denys M.'
 Candidate	Hansen, Joel F.	Hansen, Joel F.
 Candidate	Hansen, Joel F.	'Hansen, Joel F.'
 Candidate	Giomi, Stacey	Giomi, Stacey
 Candidate	Giomi, Stacey	'Giomi, Stacey'
-Candidate	WOOD, JOHN	WOOD, JOHN
-Candidate	WOOD, JOHN	'WOOD, JOHN'
-Candidate	BEST, RUSSELL	BEST, RUSSELL
-Candidate	BEST, RUSSELL	'BEST, RUSSELL'
-Candidate	BUNDY, RYAN	BUNDY, RYAN
-Candidate	BUNDY, RYAN	'BUNDY, RYAN'
-Candidate	LORD, JARED	LORD, JARED
-Candidate	LORD, JARED	'LORD, JARED'
-Candidate	LUIS, KRISTIN	LUIS, KRISTIN
-Candidate	LUIS, KRISTIN	'LUIS, KRISTIN'
-Candidate	RUSSELL, RYAN	RUSSELL, RYAN
-Candidate	RUSSELL, RYAN	'RUSSELL, RYAN'
-Candidate	UEHLING, ED	UEHLING, ED
-Candidate	UEHLING, ED	'UEHLING, ED'
-Candidate	ARAUJO, NELSON	ARAUJO, NELSON
-Candidate	ARAUJO, NELSON	'ARAUJO, NELSON'
-Candidate	FURLONG, KENNY	FURLONG, KENNY
-Candidate	FURLONG, KENNY	'FURLONG, KENNY'
-Candidate	HOULE, LORNE R.	HOULE, LORNE R.
-Candidate	HOULE, LORNE R.	'HOULE, LORNE R.'
+Candidate	Wood, John	Wood, John
+Candidate	Wood, John	'Wood, John'
+Candidate	Best, Russell	Best, Russell
+Candidate	Best, Russell	'Best, Russell'
+Candidate	Bundy, Ryan	Bundy, Ryan
+Candidate	Bundy, Ryan	'Bundy, Ryan'
+Candidate	Lord, Jared	Lord, Jared
+Candidate	Lord, Jared	'Lord, Jared'
+Candidate	Luis, Kristin	Luis, Kristin
+Candidate	Luis, Kristin	'Luis, Kristin'
+Candidate	Russell, Ryan	Russell, Ryan
+Candidate	Russell, Ryan	'Russell, Ryan'
+Candidate	Uehling, Ed	Uehling, Ed
+Candidate	Uehling, Ed	'Uehling, Ed'
+Candidate	Araujo, Nelson	Araujo, Nelson
+Candidate	Araujo, Nelson	'Araujo, Nelson'
+Candidate	Furlong, Kenny	Furlong, Kenny
+Candidate	Furlong, Kenny	'Furlong, Kenny'
+Candidate	Houle, Lorne R.	Houle, Lorne R.
+Candidate	Houle, Lorne R.	'Houle, Lorne R.'
 Candidate	Zemke, Autumn	Zemke, Autumn
 Candidate	Zemke, Autumn	'Zemke, Autumn'
-Candidate	BYRNE, CATHERINE	BYRNE, CATHERINE
-Candidate	BYRNE, CATHERINE	'BYRNE, CATHERINE'
+Candidate	Byrne, Catherine	Byrne, Catherine
+Candidate	Byrne, Catherine	'Byrne, Catherine'
 Candidate	Knecht, Ron	Knecht, Ron
 Candidate	Knecht, Ron	'Knecht, Ron'
 Candidate	Davis-Hersey, Tina	Davis-Hersey, Tina
 Candidate	Davis-Hersey, Tina	'Davis-Hersey, Tina'
-Candidate	HOGE, BILL	HOGE, BILL
-Candidate	HOGE, BILL	'HOGE, BILL'
-Candidate	HARTER, MATHEW	HARTER, MATHEW
-Candidate	HARTER, MATHEW	'HARTER, MATHEW'
-Candidate	STIGLICH, LIDIA	STIGLICH, LIDIA
-Candidate	STIGLICH, LIDIA	'STIGLICH, LIDIA'
-Candidate	MICHAELS, BARRY	MICHAELS, BARRY
-Candidate	MICHAELS, BARRY	'MICHAELS, BARRY'
-Candidate	MONDHINK-FELTON, DENISE L.	MONDHINK-FELTON, DENISE L.
-Candidate	MONDHINK-FELTON, DENISE L.	'MONDHINK-FELTON, DENISE L.'
-Candidate	OLSEN, PETE	OLSEN, PETE
-Candidate	OLSEN, PETE	'OLSEN, PETE'
-Candidate	HESSEY, TASHA	HESSEY, TASHA
-Candidate	HESSEY, TASHA	'HESSEY, TASHA'
-Candidate	MALLORY, ART	MALLORY, ART
-Candidate	MALLORY, ART	'MALLORY, ART'
-Candidate	RICHARDS, MIKE	RICHARDS, MIKE
-Candidate	RICHARDS, MIKE	'RICHARDS, MIKE'
-Candidate	TROTTER, BENJAMIN D.	TROTTER, BENJAMIN D.
-Candidate	TROTTER, BENJAMIN D.	'TROTTER, BENJAMIN D.'
-Candidate	HUTCHINGS, THOMAS	HUTCHINGS, THOMAS
-Candidate	HUTCHINGS, THOMAS	'HUTCHINGS, THOMAS'
-Candidate	LATTIN, CHRISTY	LATTIN, CHRISTY
-Candidate	LATTIN, CHRISTY	'LATTIN, CHRISTY'
-Candidate	SMITH, GARY L.	SMITH, GARY L.
-Candidate	SMITH, GARY L.	'SMITH, GARY L.'
-Candidate	SPENCER, MICHAEL	SPENCER, MICHAEL
-Candidate	SPENCER, MICHAEL	'SPENCER, MICHAEL'
-Candidate	TUCKER, LARRY	TUCKER, LARRY
-Candidate	TUCKER, LARRY	'TUCKER, LARRY'
-Candidate	GETTO JR., ROBERT M.	GETTO JR., ROBERT M.
-Candidate	GETTO JR., ROBERT M.	'GETTO JR., ROBERT M.'
-Candidate	CANNON, CURTIS W.	CANNON, CURTIS W.
-Candidate	CANNON, CURTIS W.	'CANNON, CURTIS W.'
-Candidate	SETTELMEYER, JAMES ARNOLD	SETTELMEYER, JAMES ARNOLD
-Candidate	SETTELMEYER, JAMES ARNOLD	'SETTELMEYER, JAMES ARNOLD'
+Candidate	Hoge, Bill	Hoge, Bill
+Candidate	Hoge, Bill	'Hoge, Bill'
+Candidate	Harter, Mathew	Harter, Mathew
+Candidate	Harter, Mathew	'Harter, Mathew'
+Candidate	Stiglich, Lidia	Stiglich, Lidia
+Candidate	Stiglich, Lidia	'Stiglich, Lidia'
+Candidate	Michaels, Barry	Michaels, Barry
+Candidate	Michaels, Barry	'Michaels, Barry'
+Candidate	Mondhink-Felton, Denise L.	Mondhink-Felton, Denise L.
+Candidate	Mondhink-Felton, Denise L.	'Mondhink-Felton, Denise L.'
+Candidate	Olsen, Pete	Olsen, Pete
+Candidate	Olsen, Pete	'Olsen, Pete'
+Candidate	Hessey, Tasha	Hessey, Tasha
+Candidate	Hessey, Tasha	'Hessey, Tasha'
+Candidate	Mallory, Art	Mallory, Art
+Candidate	Mallory, Art	'Mallory, Art'
+Candidate	Richards, Mike	Richards, Mike
+Candidate	Richards, Mike	'Richards, Mike'
+Candidate	Trotter, Benjamin D.	Trotter, Benjamin D.
+Candidate	Trotter, Benjamin D.	'Trotter, Benjamin D.'
+Candidate	Hutchings, Thomas	Hutchings, Thomas
+Candidate	Hutchings, Thomas	'Hutchings, Thomas'
+Candidate	Lattin, Christy	Lattin, Christy
+Candidate	Lattin, Christy	'Lattin, Christy'
+Candidate	Smith, Gary L.	Smith, Gary L.
+Candidate	Smith, Gary L.	'Smith, Gary L.'
+Candidate	Spencer, Michael	Spencer, Michael
+Candidate	Spencer, Michael	'Spencer, Michael'
+Candidate	Tucker, Larry	Tucker, Larry
+Candidate	Tucker, Larry	'Tucker, Larry'
+Candidate	Getto Jr., Robert M.	Getto Jr., Robert M.
+Candidate	Getto Jr., Robert M.	'Getto Jr., Robert M.'
+Candidate	Cannon, Curtis W.	Cannon, Curtis W.
+Candidate	Cannon, Curtis W.	'Cannon, Curtis W.'
+Candidate	Settelmeyer, James Arnold	Settelmeyer, James Arnold
+Candidate	Settelmeyer, James Arnold	'Settelmeyer, James Arnold'
 Candidate	McClain, Gina	McClain, Gina
 Candidate	McClain, Gina	'McClain, Gina'
 Candidate	Goya, Lynn Maria	Goya, Lynn Maria
@@ -6215,8 +6210,8 @@ Candidate	Bailus, Mark B.	Bailus, Mark B.
 Candidate	Bailus, Mark B.	'Bailus, Mark B.'
 Candidate	Holthus, Mary Kay	Holthus, Mary Kay
 Candidate	Holthus, Mary Kay	'Holthus, Mary Kay'
-Candidate	JONES, DAVID M.	JONES, DAVID M.
-Candidate	JONES, DAVID M.	'JONES, DAVID M.'
+Candidate	Jones, David M.	Jones, David M.
+Candidate	Jones, David M.	'Jones, David M.'
 Candidate	DaCosta, Victoria Kay	DaCosta, Victoria Kay
 Candidate	DaCosta, Victoria Kay	'DaCosta, Victoria Kay'
 Candidate	Telles, Robert	Telles, Robert
@@ -6234,8 +6229,8 @@ Candidate	Vickers, Harry L.	'Vickers, Harry L.'
 Candidate	Cochran, Jack 'Fat Jack'	Cochran, Jack 'Fat Jack'
 Candidate	Preta, Ralph	Preta, Ralph
 Candidate	Preta, Ralph	'Preta, Ralph'
-Candidate	HARDY, JOE	HARDY, JOE
-Candidate	HARDY, JOE	'HARDY, JOE'
+Candidate	Hardy, Joe	Hardy, Joe
+Candidate	Hardy, Joe	'Hardy, Joe'
 Candidate	Ross, Jordan	Ross, Jordan
 Candidate	Ross, Jordan	'Ross, Jordan'
 Candidate	Hofstein, Daniel	Hofstein, Daniel
@@ -6251,8 +6246,8 @@ Candidate	Pitts, Joe	Pitts, Joe
 Candidate	Pitts, Joe	'Pitts, Joe'
 Candidate	Taylor, Kenny	Taylor, Kenny
 Candidate	Taylor, Kenny	'Taylor, Kenny'
-Candidate	HAMPE, STEVE	HAMPE, STEVE
-Candidate	HAMPE, STEVE	'HAMPE, STEVE'
+Candidate	Hampe, Steve	Hampe, Steve
+Candidate	Hampe, Steve	'Hampe, Steve'
 Candidate	Martin, Robert D.	Martin, Robert D.
 Candidate	Martin, Robert D.	'Martin, Robert D.'
 Candidate	Miller, Victor Lee	Miller, Victor Lee
@@ -6278,25 +6273,25 @@ Candidate	Gault, George H.	Gault, George H.
 Candidate	Gault, George H.	'Gault, George H.'
 Candidate	Burrows, John	Burrows, John
 Candidate	Burrows, John	'Burrows, John'
-Candidate	DAVIS, BEN K.	DAVIS, BEN K.
-Candidate	DAVIS, BEN K.	'DAVIS, BEN K.'
+Candidate	Davis, Ben K.	Davis, Ben K.
+Candidate	Davis, Ben K.	'Davis, Ben K.'
 Candidate	Walker, Jere A.	Walker, Jere A.
 Candidate	Walker, Jere A.	'Walker, Jere A.'
 Candidate	Jensen, Josh	Jensen, Josh
 Candidate	Jensen, Josh	'Jensen, Josh'
-Candidate	CAVAZOS, LINDA	CAVAZOS, LINDA
-Candidate	CAVAZOS, LINDA	'CAVAZOS, LINDA'
+Candidate	Cavazos, Linda	Cavazos, Linda
+Candidate	Cavazos, Linda	'Cavazos, Linda'
 Candidate	Scalia, Ryan	Scalia, Ryan
 Candidate	Scalia, Ryan	'Scalia, Ryan'
 Candidate	Laub, Erik L.	Laub, Erik L.
 Candidate	Laub, Erik L.	'Laub, Erik L.'
-Candidate	DODENBIER, DARRYLL B.	DODENBIER, DARRYLL B.
-Candidate	DODENBIER, DARRYLL B.	'DODENBIER, DARRYLL B.'
+Candidate	Dodenbier, Darryll B.	Dodenbier, Darryll B.
+Candidate	Dodenbier, Darryll B.	'Dodenbier, Darryll B.'
 Candidate	Haviland, Brian Douglas	Haviland, Brian Douglas
 Candidate	Haviland, Brian Douglas	'Haviland, Brian Douglas'
 Candidate	Border, Calvin 'Cal'	Border, Calvin 'Cal'
-Candidate	DENIS, MO	DENIS, MO
-Candidate	DENIS, MO	'DENIS, MO'
+Candidate	Denis, Mo	Denis, Mo
+Candidate	Denis, Mo	'Denis, Mo'
 Candidate	Sedlmeyer, Stephen G.	Sedlmeyer, Stephen G.
 Candidate	Sedlmeyer, Stephen G.	'Sedlmeyer, Stephen G.'
 Candidate	Torres, Selena	Torres, Selena
@@ -6315,8 +6310,8 @@ Candidate	Gilbert, Paul E.	Gilbert, Paul E.
 Candidate	Gilbert, Paul E.	'Gilbert, Paul E.'
 Candidate	Kandel, Kristi Lynn	Kandel, Kristi Lynn
 Candidate	Kandel, Kristi Lynn	'Kandel, Kristi Lynn'
-Candidate	ELLISON, KAREN	ELLISON, KAREN
-Candidate	ELLISON, KAREN	'ELLISON, KAREN'
+Candidate	Ellison, Karen	Ellison, Karen
+Candidate	Ellison, Karen	'Ellison, Karen'
 Candidate	Jackson, Mark B.	Jackson, Mark B.
 Candidate	Jackson, Mark B.	'Jackson, Mark B.'
 Candidate	Jones, Cassandra G.	Jones, Cassandra G.
@@ -6379,108 +6374,108 @@ Candidate	Norman, Dan	'Norman, Dan'
 Candidate	Parks, Sandra 'Sandy'	Parks, Sandra 'Sandy'
 Candidate	Vogt, Darya	Vogt, Darya
 Candidate	Vogt, Darya	'Vogt, Darya'
-Candidate	RUSSELL, KATRINKA S.	RUSSELL, KATRINKA S.
-Candidate	RUSSELL, KATRINKA S.	'RUSSELL, KATRINKA S.'
-Candidate	JAKEMAN, KRISTINE 'KRIS'	JAKEMAN, KRISTINE 'KRIS'
-Candidate	PAUL, CHERYL	PAUL, CHERYL
-Candidate	PAUL, CHERYL	'PAUL, CHERYL'
-Candidate	ANDREOZZI, DELMO	ANDREOZZI, DELMO
-Candidate	ANDREOZZI, DELMO	'ANDREOZZI, DELMO'
-Candidate	EKLUND, CLIFF	EKLUND, CLIFF
-Candidate	EKLUND, CLIFF	'EKLUND, CLIFF'
-Candidate	SMALES, D. MIKE	SMALES, D. MIKE
-Candidate	SMALES, D. MIKE	'SMALES, D. MIKE'
-Candidate	INGRAM, TYLER	INGRAM, TYLER
-Candidate	INGRAM, TYLER	'INGRAM, TYLER'
-Candidate	HANCE, BILL	HANCE, BILL
-Candidate	HANCE, BILL	'HANCE, BILL'
-Candidate	LIKER, TONY	LIKER, TONY
-Candidate	LIKER, TONY	'LIKER, TONY'
-Candidate	SECRIST, JEANNA	SECRIST, JEANNA
-Candidate	SECRIST, JEANNA	'SECRIST, JEANNA'
-Candidate	SMITH, RO	SMITH, RO
-Candidate	SMITH, RO	'SMITH, RO'
-Candidate	STONE, CHIP	STONE, CHIP
-Candidate	STONE, CHIP	'STONE, CHIP'
-Candidate	KEENER, REECE	KEENER, REECE
-Candidate	KEENER, REECE	'KEENER, REECE'
-Candidate	LOGSDEN, MARCEY	LOGSDEN, MARCEY
-Candidate	LOGSDEN, MARCEY	'LOGSDEN, MARCEY'
-Candidate	CHIESA, ANTOINETTE	CHIESA, ANTOINETTE
-Candidate	CHIESA, ANTOINETTE	'CHIESA, ANTOINETTE'
-Candidate	SIMONS, MASON EDWARD	SIMONS, MASON EDWARD
-Candidate	SIMONS, MASON EDWARD	'SIMONS, MASON EDWARD'
-Candidate	PHILLIPS, STACIE	PHILLIPS, STACIE
-Candidate	PHILLIPS, STACIE	'PHILLIPS, STACIE'
-Candidate	ZEISZLER, BRIAN	ZEISZLER, BRIAN
-Candidate	ZEISZLER, BRIAN	'ZEISZLER, BRIAN'
-Candidate	WINES, CANDACE	WINES, CANDACE
-Candidate	WINES, CANDACE	'WINES, CANDACE'
-Candidate	NARVAIZA, AITOR	NARVAIZA, AITOR
-Candidate	NARVAIZA, AITOR	'NARVAIZA, AITOR'
-Candidate	PITTS, JIM	PITTS, JIM
-Candidate	PITTS, JIM	'PITTS, JIM'
-Candidate	KINNEY, CAMERON	KINNEY, CAMERON
-Candidate	KINNEY, CAMERON	'KINNEY, CAMERON'
-Candidate	ESPARZA, SABRA	ESPARZA, SABRA
-Candidate	ESPARZA, SABRA	'ESPARZA, SABRA'
-Candidate	EVENSON, WAYNE A.	EVENSON, WAYNE A.
-Candidate	EVENSON, WAYNE A.	'EVENSON, WAYNE A.'
-Candidate	GRISWOLD, PATRICIA 'PAM'	GRISWOLD, PATRICIA 'PAM'
-Candidate	LITCHFIELD, LINCOLN	LITCHFIELD, LINCOLN
-Candidate	LITCHFIELD, LINCOLN	'LITCHFIELD, LINCOLN'
-Candidate	HOLBROOK, DANA DON	HOLBROOK, DANA DON
-Candidate	HOLBROOK, DANA DON	'HOLBROOK, DANA DON'
-Candidate	GOOLSBY, JONATHAN	GOOLSBY, JONATHAN
-Candidate	GOOLSBY, JONATHAN	'GOOLSBY, JONATHAN'
-Candidate	PACE, MICHAEL K.	PACE, MICHAEL K.
-Candidate	PACE, MICHAEL K.	'PACE, MICHAEL K.'
-Candidate	WOOLSEY, ROBERT	WOOLSEY, ROBERT
-Candidate	WOOLSEY, ROBERT	'WOOLSEY, ROBERT'
-Candidate	WALZ, LAYLA	WALZ, LAYLA
-Candidate	WALZ, LAYLA	'WALZ, LAYLA'
-Candidate	DURHAM, JEFF R.	DURHAM, JEFF R.
-Candidate	DURHAM, JEFF R.	'DURHAM, JEFF R.'
-Candidate	DURHAM, KATHY	DURHAM, KATHY
-Candidate	DURHAM, KATHY	'DURHAM, KATHY'
-Candidate	GUTIERREZ, ISMAEL 'IZZY' 	GUTIERREZ, ISMAEL 'IZZY' 
-Candidate	HANSON, JOHN B.	HANSON, JOHN B.
-Candidate	HANSON, JOHN B.	'HANSON, JOHN B.'
-Candidate	HOLM, JASIE	HOLM, JASIE
-Candidate	HOLM, JASIE	'HOLM, JASIE'
-Candidate	CARTER, JARED F.	CARTER, JARED F.
-Candidate	CARTER, JARED F.	'CARTER, JARED F.'
-Candidate	RODRIGUEZ, GERARDO	RODRIGUEZ, GERARDO
-Candidate	RODRIGUEZ, GERARDO	'RODRIGUEZ, GERARDO'
-Candidate	LEE, RUTH P.	LEE, RUTH P.
-Candidate	LEE, RUTH P.	'LEE, RUTH P.'
-Candidate	BOYER, VERA	BOYER, VERA
-Candidate	BOYER, VERA	'BOYER, VERA'
-Candidate	HUBER-BETH, PATRICIA 'PATTY'	HUBER-BETH, PATRICIA 'PATTY'
+Candidate	Russell, Katrinka S.	Russell, Katrinka S.
+Candidate	Russell, Katrinka S.	'Russell, Katrinka S.'
+Candidate	Jakeman, Kristine 'Kris'	Jakeman, Kristine 'Kris'
+Candidate	Paul, Cheryl	Paul, Cheryl
+Candidate	Paul, Cheryl	'Paul, Cheryl'
+Candidate	Andreozzi, Delmo	Andreozzi, Delmo
+Candidate	Andreozzi, Delmo	'Andreozzi, Delmo'
+Candidate	Eklund, Cliff	Eklund, Cliff
+Candidate	Eklund, Cliff	'Eklund, Cliff'
+Candidate	Smales, D. Mike	Smales, D. Mike
+Candidate	Smales, D. Mike	'Smales, D. Mike'
+Candidate	Ingram, Tyler	Ingram, Tyler
+Candidate	Ingram, Tyler	'Ingram, Tyler'
+Candidate	Hance, Bill	Hance, Bill
+Candidate	Hance, Bill	'Hance, Bill'
+Candidate	Liker, Tony	Liker, Tony
+Candidate	Liker, Tony	'Liker, Tony'
+Candidate	Secrist, Jeanna	Secrist, Jeanna
+Candidate	Secrist, Jeanna	'Secrist, Jeanna'
+Candidate	Smith, Ro	Smith, Ro
+Candidate	Smith, Ro	'Smith, Ro'
+Candidate	Stone, Chip	Stone, Chip
+Candidate	Stone, Chip	'Stone, Chip'
+Candidate	Keener, Reece	Keener, Reece
+Candidate	Keener, Reece	'Keener, Reece'
+Candidate	Logsden, Marcey	Logsden, Marcey
+Candidate	Logsden, Marcey	'Logsden, Marcey'
+Candidate	Chiesa, Antoinette	Chiesa, Antoinette
+Candidate	Chiesa, Antoinette	'Chiesa, Antoinette'
+Candidate	Simons, Mason Edward	Simons, Mason Edward
+Candidate	Simons, Mason Edward	'Simons, Mason Edward'
+Candidate	Phillips, Stacie	Phillips, Stacie
+Candidate	Phillips, Stacie	'Phillips, Stacie'
+Candidate	Zeiszler, Brian	Zeiszler, Brian
+Candidate	Zeiszler, Brian	'Zeiszler, Brian'
+Candidate	Wines, Candace	Wines, Candace
+Candidate	Wines, Candace	'Wines, Candace'
+Candidate	Narvaiza, Aitor	Narvaiza, Aitor
+Candidate	Narvaiza, Aitor	'Narvaiza, Aitor'
+Candidate	Pitts, Jim	Pitts, Jim
+Candidate	Pitts, Jim	'Pitts, Jim'
+Candidate	Kinney, Cameron	Kinney, Cameron
+Candidate	Kinney, Cameron	'Kinney, Cameron'
+Candidate	Esparza, Sabra	Esparza, Sabra
+Candidate	Esparza, Sabra	'Esparza, Sabra'
+Candidate	Evenson, Wayne A.	Evenson, Wayne A.
+Candidate	Evenson, Wayne A.	'Evenson, Wayne A.'
+Candidate	Griswold, Patricia 'Pam'	Griswold, Patricia 'Pam'
+Candidate	Litchfield, Lincoln	Litchfield, Lincoln
+Candidate	Litchfield, Lincoln	'Litchfield, Lincoln'
+Candidate	Holbrook, Dana Don	Holbrook, Dana Don
+Candidate	Holbrook, Dana Don	'Holbrook, Dana Don'
+Candidate	Goolsby, Jonathan	Goolsby, Jonathan
+Candidate	Goolsby, Jonathan	'Goolsby, Jonathan'
+Candidate	Pace, Michael K.	Pace, Michael K.
+Candidate	Pace, Michael K.	'Pace, Michael K.'
+Candidate	Woolsey, Robert	Woolsey, Robert
+Candidate	Woolsey, Robert	'Woolsey, Robert'
+Candidate	Walz, Layla	Walz, Layla
+Candidate	Walz, Layla	'Walz, Layla'
+Candidate	Durham, Jeff R.	Durham, Jeff R.
+Candidate	Durham, Jeff R.	'Durham, Jeff R.'
+Candidate	Durham, Kathy	Durham, Kathy
+Candidate	Durham, Kathy	'Durham, Kathy'
+Candidate	Gutierrez, Ismael 'Izzy'	Gutierrez, Ismael 'Izzy'
+Candidate	Hanson, John B.	Hanson, John B.
+Candidate	Hanson, John B.	'Hanson, John B.'
+Candidate	Holm, Jasie	Holm, Jasie
+Candidate	Holm, Jasie	'Holm, Jasie'
+Candidate	Carter, Jared F.	Carter, Jared F.
+Candidate	Carter, Jared F.	'Carter, Jared F.'
+Candidate	Rodriguez, Gerardo	Rodriguez, Gerardo
+Candidate	Rodriguez, Gerardo	'Rodriguez, Gerardo'
+Candidate	Lee, Ruth P.	Lee, Ruth P.
+Candidate	Lee, Ruth P.	'Lee, Ruth P.'
+Candidate	Boyer, Vera	Boyer, Vera
+Candidate	Boyer, Vera	'Boyer, Vera'
+Candidate	Huber-Beth, Patricia 'Patty'	Huber-Beth, Patricia 'Patty'
 Candidate	ELGAN, LaCinda 'CINDY'	ELGAN, LaCinda 'CINDY'
-Candidate	HIPP, TIMOTHY	HIPP, TIMOTHY
-Candidate	HIPP, TIMOTHY	'HIPP, TIMOTHY'
-Candidate	GLENNEN, ROBERT E. III	GLENNEN, ROBERT E. III
-Candidate	GLENNEN, ROBERT E. III	'GLENNEN, ROBERT E. III'
-Candidate	POVILAITIS, PAULA	POVILAITIS, PAULA
-Candidate	POVILAITIS, PAULA	'POVILAITIS, PAULA'
-Candidate	BOSZAK, WENDY	BOSZAK, WENDY
-Candidate	BOSZAK, WENDY	'BOSZAK, WENDY'
-Candidate	MEARS, MICHAEL A.	MEARS, MICHAEL A.
-Candidate	MEARS, MICHAEL A.	'MEARS, MICHAEL A.'
-Candidate	PEARCE, AMANDA JEAN	PEARCE, AMANDA JEAN
-Candidate	PEARCE, AMANDA JEAN	'PEARCE, AMANDA JEAN'
-Candidate	MCKAY, RICH	MCKAY, RICH
-Candidate	MCKAY, RICH	'MCKAY, RICH'
-Candidate	CONLEY, BEVERLY	CONLEY, BEVERLY
-Candidate	CONLEY, BEVERLY	'CONLEY, BEVERLY'
-Candidate	BEUTEL, THEODORE 'TED'	BEUTEL, THEODORE 'TED'
-Candidate	ROWLEY, DOROTHY	ROWLEY, DOROTHY
-Candidate	ROWLEY, DOROTHY	'ROWLEY, DOROTHY'
-Candidate	SHARKOZY, MELYNDA	SHARKOZY, MELYNDA
-Candidate	SHARKOZY, MELYNDA	'SHARKOZY, MELYNDA'
-Candidate	BAUMANN, DARLA R.	BAUMANN, DARLA R.
-Candidate	BAUMANN, DARLA R.	'BAUMANN, DARLA R.'
+Candidate	Hipp, Timothy	Hipp, Timothy
+Candidate	Hipp, Timothy	'Hipp, Timothy'
+Candidate	Glennen, Robert E. Iii	Glennen, Robert E. Iii
+Candidate	Glennen, Robert E. Iii	'Glennen, Robert E. Iii'
+Candidate	Povilaitis, Paula	Povilaitis, Paula
+Candidate	Povilaitis, Paula	'Povilaitis, Paula'
+Candidate	Boszak, Wendy	Boszak, Wendy
+Candidate	Boszak, Wendy	'Boszak, Wendy'
+Candidate	Mears, Michael A.	Mears, Michael A.
+Candidate	Mears, Michael A.	'Mears, Michael A.'
+Candidate	Pearce, Amanda Jean	Pearce, Amanda Jean
+Candidate	Pearce, Amanda Jean	'Pearce, Amanda Jean'
+Candidate	Mckay, Rich	Mckay, Rich
+Candidate	Mckay, Rich	'Mckay, Rich'
+Candidate	Conley, Beverly	Conley, Beverly
+Candidate	Conley, Beverly	'Conley, Beverly'
+Candidate	Beutel, Theodore 'Ted'	Beutel, Theodore 'Ted'
+Candidate	Rowley, Dorothy	Rowley, Dorothy
+Candidate	Rowley, Dorothy	'Rowley, Dorothy'
+Candidate	Sharkozy, Melynda	Sharkozy, Melynda
+Candidate	Sharkozy, Melynda	'Sharkozy, Melynda'
+Candidate	Baumann, Darla R.	Baumann, Darla R.
+Candidate	Baumann, Darla R.	'Baumann, Darla R.'
 Candidate	Horky, Gary	Horky, Gary
 Candidate	Horky, Gary	'Horky, Gary'
 Candidate	Mavity, Theresa	Mavity, Theresa
@@ -6491,7 +6486,7 @@ Candidate	Bryant, Fredrick	Bryant, Fredrick
 Candidate	Bryant, Fredrick	'Bryant, Fredrick'
 Candidate	Stone, Rich	Stone, Rich
 Candidate	Stone, Rich	'Stone, Rich'
-Candidate	JOHNSON, WILLIAM 'JEFF'	JOHNSON, WILLIAM 'JEFF'
+Candidate	Johnson, William 'Jeff'	Johnson, William 'Jeff'
 Candidate	Spero, Tami Rae	Spero, Tami Rae
 Candidate	Spero, Tami Rae	'Spero, Tami Rae'
 Candidate	Cerri, Ronald L.	Cerri, Ronald L.
@@ -6502,8 +6497,8 @@ Candidate	Engstrom, Deborah	Engstrom, Deborah
 Candidate	Engstrom, Deborah	'Engstrom, Deborah'
 Candidate	Lecumberry, Rhona	Lecumberry, Rhona
 Candidate	Lecumberry, Rhona	'Lecumberry, Rhona'
-Candidate	MACDONALD, MICHAEL	MACDONALD, MICHAEL
-Candidate	MACDONALD, MICHAEL	'MACDONALD, MICHAEL'
+Candidate	Macdonald, Michael	Macdonald, Michael
+Candidate	Macdonald, Michael	'Macdonald, Michael'
 Candidate	Hunt, Gene	Hunt, Gene
 Candidate	Hunt, Gene	'Hunt, Gene'
 Candidate	Douglas, Bill	Douglas, Bill
@@ -6514,12 +6509,12 @@ Candidate	Loveless, Jim	Loveless, Jim
 Candidate	Loveless, Jim	'Loveless, Jim'
 Candidate	Morgan, Matt	Morgan, Matt
 Candidate	Morgan, Matt	'Morgan, Matt'
-Candidate	DUVALL, LURA	DUVALL, LURA
-Candidate	DUVALL, LURA	'DUVALL, LURA'
+Candidate	Duvall, Lura	Duvall, Lura
+Candidate	Duvall, Lura	'Duvall, Lura'
 Candidate	Miller, Leann	Miller, Leann
 Candidate	Miller, Leann	'Miller, Leann'
-Candidate	SULLIVAN, SADIE	SULLIVAN, SADIE
-Candidate	SULLIVAN, SADIE	'SULLIVAN, SADIE'
+Candidate	Sullivan, Sadie	Sullivan, Sadie
+Candidate	Sullivan, Sadie	'Sullivan, Sadie'
 Candidate	Clark, Art III	Clark, Art III
 Candidate	Clark, Art III	'Clark, Art III'
 Candidate	Dimitroff, Harry L. Sr.	Dimitroff, Harry L. Sr.
@@ -6587,57 +6582,57 @@ Candidate	Oberhansli, Donna	Oberhansli, Donna
 Candidate	Oberhansli, Donna	'Oberhansli, Donna'
 Candidate	Rowe, Sean Alden	Rowe, Sean Alden
 Candidate	Rowe, Sean Alden	'Rowe, Sean Alden'
-Candidate	CICHOWLAZ, BETH	CICHOWLAZ, BETH
-Candidate	CICHOWLAZ, BETH	'CICHOWLAZ, BETH'
+Candidate	Cichowlaz, Beth	Cichowlaz, Beth
+Candidate	Cichowlaz, Beth	'Cichowlaz, Beth'
 Candidate	Adams, Randy	Adams, Randy
 Candidate	Adams, Randy	'Adams, Randy'
 Candidate	Perry, Earl William	Perry, Earl William
 Candidate	Perry, Earl William	'Perry, Earl William'
-Candidate	ALBERTI, ANDY	ALBERTI, ANDY
-Candidate	ALBERTI, ANDY	'ALBERTI, ANDY'
-Candidate	STRINGER, SHEREE	STRINGER, SHEREE
-Candidate	STRINGER, SHEREE	'STRINGER, SHEREE'
-Candidate	MERLINO, SANDRA 'SAM'	MERLINO, SANDRA 'SAM'
-Candidate	WINN, SHEILA	WINN, SHEILA
-Candidate	WINN, SHEILA	'WINN, SHEILA'
-Candidate	BEATTY, DEBORAH	BEATTY, DEBORAH
-Candidate	BEATTY, DEBORAH	'BEATTY, DEBORAH'
-Candidate	NOYES, MICHAEL S.	NOYES, MICHAEL S.
-Candidate	NOYES, MICHAEL S.	'NOYES, MICHAEL S.'
-Candidate	SCHAUS, LANCE ROY	SCHAUS, LANCE ROY
-Candidate	SCHAUS, LANCE ROY	'SCHAUS, LANCE ROY'
-Candidate	DEL VECCHIO, NICHOLAS ANTHONY	DEL VECCHIO, NICHOLAS ANTHONY
-Candidate	DEL VECCHIO, NICHOLAS ANTHONY	'DEL VECCHIO, NICHOLAS ANTHONY'
-Candidate	CARLYLE, HORACE H.	CARLYLE, HORACE H.
-Candidate	CARLYLE, HORACE H.	'CARLYLE, HORACE H.'
-Candidate	KOSCIK, TIMAREE	KOSCIK, TIMAREE
-Candidate	KOSCIK, TIMAREE	'KOSCIK, TIMAREE'
-Candidate	ZIMMERMAN, JUSTIN B.	ZIMMERMAN, JUSTIN B.
-Candidate	ZIMMERMAN, JUSTIN B.	'ZIMMERMAN, JUSTIN B.'
-Candidate	HASTINGS, SEAN C.	HASTINGS, SEAN C.
-Candidate	HASTINGS, SEAN C.	'HASTINGS, SEAN C.'
-Candidate	YAZZIE, TAWNA	YAZZIE, TAWNA
-Candidate	YAZZIE, TAWNA	'YAZZIE, TAWNA'
-Candidate	GOLDSTEIN, RICHARD	GOLDSTEIN, RICHARD
-Candidate	GOLDSTEIN, RICHARD	'GOLDSTEIN, RICHARD'
-Candidate	DONALDSON, LACEY	DONALDSON, LACEY
-Candidate	DONALDSON, LACEY	'DONALDSON, LACEY'
-Candidate	BERGE, KRISTY	BERGE, KRISTY
-Candidate	BERGE, KRISTY	'BERGE, KRISTY'
-Candidate	CHILDS, RENE M.	CHILDS, RENE M.
-Candidate	CHILDS, RENE M.	'CHILDS, RENE M.'
-Candidate	SHIELDS, R. BRYCE	SHIELDS, R. BRYCE
-Candidate	SHIELDS, R. BRYCE	'SHIELDS, R. BRYCE'
-Candidate	KEARNS, JEFFREY	KEARNS, JEFFREY
-Candidate	KEARNS, JEFFREY	'KEARNS, JEFFREY'
-Candidate	SEDDON, JANA	SEDDON, JANA
-Candidate	SEDDON, JANA	'SEDDON, JANA'
-Candidate	STEPHENS, VANESSA	STEPHENS, VANESSA
-Candidate	STEPHENS, VANESSA	'STEPHENS, VANESSA'
+Candidate	Alberti, Andy	Alberti, Andy
+Candidate	Alberti, Andy	'Alberti, Andy'
+Candidate	Stringer, Sheree	Stringer, Sheree
+Candidate	Stringer, Sheree	'Stringer, Sheree'
+Candidate	Merlino, Sandra 'Sam'	Merlino, Sandra 'Sam'
+Candidate	Winn, Sheila	Winn, Sheila
+Candidate	Winn, Sheila	'Winn, Sheila'
+Candidate	Beatty, Deborah	Beatty, Deborah
+Candidate	Beatty, Deborah	'Beatty, Deborah'
+Candidate	Noyes, Michael S.	Noyes, Michael S.
+Candidate	Noyes, Michael S.	'Noyes, Michael S.'
+Candidate	Schaus, Lance Roy	Schaus, Lance Roy
+Candidate	Schaus, Lance Roy	'Schaus, Lance Roy'
+Candidate	Del Vecchio, Nicholas Anthony	Del Vecchio, Nicholas Anthony
+Candidate	Del Vecchio, Nicholas Anthony	'Del Vecchio, Nicholas Anthony'
+Candidate	Carlyle, Horace H.	Carlyle, Horace H.
+Candidate	Carlyle, Horace H.	'Carlyle, Horace H.'
+Candidate	Koscik, Timaree	Koscik, Timaree
+Candidate	Koscik, Timaree	'Koscik, Timaree'
+Candidate	Zimmerman, Justin B.	Zimmerman, Justin B.
+Candidate	Zimmerman, Justin B.	'Zimmerman, Justin B.'
+Candidate	Hastings, Sean C.	Hastings, Sean C.
+Candidate	Hastings, Sean C.	'Hastings, Sean C.'
+Candidate	Yazzie, Tawna	Yazzie, Tawna
+Candidate	Yazzie, Tawna	'Yazzie, Tawna'
+Candidate	Goldstein, Richard	Goldstein, Richard
+Candidate	Goldstein, Richard	'Goldstein, Richard'
+Candidate	Donaldson, Lacey	Donaldson, Lacey
+Candidate	Donaldson, Lacey	'Donaldson, Lacey'
+Candidate	Berge, Kristy	Berge, Kristy
+Candidate	Berge, Kristy	'Berge, Kristy'
+Candidate	Childs, Rene M.	Childs, Rene M.
+Candidate	Childs, Rene M.	'Childs, Rene M.'
+Candidate	Shields, R. Bryce	Shields, R. Bryce
+Candidate	Shields, R. Bryce	'Shields, R. Bryce'
+Candidate	Kearns, Jeffrey	Kearns, Jeffrey
+Candidate	Kearns, Jeffrey	'Kearns, Jeffrey'
+Candidate	Seddon, Jana	Seddon, Jana
+Candidate	Seddon, Jana	'Seddon, Jana'
+Candidate	Stephens, Vanessa	Stephens, Vanessa
+Candidate	Stephens, Vanessa	'Stephens, Vanessa'
 Candidate	Barde, Nicole	Barde, Nicole
 Candidate	Barde, Nicole	'Barde, Nicole'
-Candidate	CHAPMAN, JEN	CHAPMAN, JEN
-Candidate	CHAPMAN, JEN	'CHAPMAN, JEN'
+Candidate	Chapman, Jen	Chapman, Jen
+Candidate	Chapman, Jen	'Chapman, Jen'
 Candidate	Nevin, Jeffrey M.	Nevin, Jeffrey M.
 Candidate	Nevin, Jeffrey M.	'Nevin, Jeffrey M.'
 Candidate	Toll, Sam	Toll, Sam
@@ -6667,14 +6662,14 @@ Candidate	Walker, Egan	Walker, Egan
 Candidate	Walker, Egan	'Walker, Egan'
 Candidate	Breslow, Barry	Breslow, Barry
 Candidate	Breslow, Barry	'Breslow, Barry'
-Candidate	CAVALLO, DON	CAVALLO, DON
-Candidate	CAVALLO, DON	'CAVALLO, DON'
+Candidate	Cavallo, Don	Cavallo, Don
+Candidate	Cavallo, Don	'Cavallo, Don'
 Candidate	Prothro, Verita Black	Prothro, Verita Black
 Candidate	Prothro, Verita Black	'Prothro, Verita Black'
 Candidate	Hall, Karl S.	Hall, Karl S.
 Candidate	Hall, Karl S.	'Hall, Karl S.'
-Candidate	KADLIC, JOHN J.	KADLIC, JOHN J.
-Candidate	KADLIC, JOHN J.	'KADLIC, JOHN J.'
+Candidate	Kadlic, John J.	Kadlic, John J.
+Candidate	Kadlic, John J.	'Kadlic, John J.'
 Candidate	Young, Charlene Y.	Young, Charlene Y.
 Candidate	Young, Charlene Y.	'Young, Charlene Y.'
 Candidate	Shorts, Gregory J.	Shorts, Gregory J.
@@ -6691,8 +6686,8 @@ Candidate	Horton, Hud	Horton, Hud
 Candidate	Horton, Hud	'Horton, Hud'
 Candidate	Unsworth, Robert	Unsworth, Robert
 Candidate	Unsworth, Robert	'Unsworth, Robert'
-Candidate	ZUNINO, NANCY E.	ZUNINO, NANCY E.
-Candidate	ZUNINO, NANCY E.	'ZUNINO, NANCY E.'
+Candidate	Zunino, Nancy E.	Zunino, Nancy E.
+Candidate	Zunino, Nancy E.	'Zunino, Nancy E.'
 Candidate	Wolgast, Stephen	Wolgast, Stephen
 Candidate	Wolgast, Stephen	'Wolgast, Stephen'
 Candidate	Joseph, June	Joseph, June
@@ -6717,10 +6712,10 @@ Candidate	Rhodes, Zachary	Rhodes, Zachary
 Candidate	Rhodes, Zachary	'Rhodes, Zachary'
 Candidate	Keller, Hans R.	Keller, Hans R.
 Candidate	Keller, Hans R.	'Keller, Hans R.'
-Candidate	SINDELAR, MARTHA RIVERA	SINDELAR, MARTHA RIVERA
-Candidate	SINDELAR, MARTHA RIVERA	'SINDELAR, MARTHA RIVERA'
-Candidate	BAKARIC, CATHERINE	BAKARIC, CATHERINE
-Candidate	BAKARIC, CATHERINE	'BAKARIC, CATHERINE'
+Candidate	Sindelar, Martha Rivera	Sindelar, Martha Rivera
+Candidate	Sindelar, Martha Rivera	'Sindelar, Martha Rivera'
+Candidate	Bakaric, Catherine	Bakaric, Catherine
+Candidate	Bakaric, Catherine	'Bakaric, Catherine'
 Candidate	Wheable, Michael A.	Wheable, Michael A.
 Candidate	Wheable, Michael A.	'Wheable, Michael A.'
 Candidate	Adams, Amy	Adams, Amy
@@ -6733,65 +6728,16 @@ Candidate	Sawyer, Ray	Sawyer, Ray
 Candidate	Sawyer, Ray	'Sawyer, Ray'
 Candidate	Skye, Ericson	Skye, Ericson
 Candidate	Skye, Ericson	'Skye, Ericson'
-Candidate	ACKERMAN, PATRICIA	Ackerman, Patricia
-Candidate	ACKERMAN, PATRICIA	'Ackerman, Patricia'
-Candidate	AMODEI, MARK E.	Amodei, Mark E.
-Candidate	AMODEI, MARK E.	'Amodei, Mark E.'
-Candidate	None Of These Candidates	NONE OF THESE CANDIDATES
-Candidate	FUMO, OZZIE	FUMO, Ozzie
-Candidate	FUMO, OZZIE	'FUMO, Ozzie'
+Candidate	Fumo, Ozzie	FUMO, Ozzie
+Candidate	Fumo, Ozzie	'FUMO, Ozzie'
 Candidate	Titus, Dina	TITUS, Dina
 Candidate	Titus, Dina	'TITUS, Dina'
 Candidate	Carlton, Maggie	CARLTON, Maggie
 Candidate	Carlton, Maggie	'CARLTON, Maggie'
-Candidate	HORSFORD, STEVEN A.	Horsford, Steven A.
-Candidate	HORSFORD, STEVEN A.	'Horsford, Steven A.'
-Candidate	KRASNER, LISA	Krasner, Lisa
-Candidate	KRASNER, LISA	'Krasner, Lisa'
-Candidate	Ford, Aaron	FORD, AARON
-Candidate	Ford, Aaron	'FORD, AARON'
-Candidate	Duncan, Wes	DUNCAN, WES
-Candidate	Duncan, Wes	'DUNCAN, WES'
-Candidate	Sisolak, Steve	SISOLAK, STEVE
-Candidate	Sisolak, Steve	'SISOLAK, STEVE'
-Candidate	Laxalt, Adam Paul	LAXALT, ADAM PAUL
-Candidate	Laxalt, Adam Paul	'LAXALT, ADAM PAUL'
-Candidate	Marshall, Kate	MARSHALL, KATE
-Candidate	Marshall, Kate	'MARSHALL, KATE'
-Candidate	Roberson, Michael	ROBERSON, MICHAEL
-Candidate	Roberson, Michael	'ROBERSON, MICHAEL'
-Candidate	Beers, Bob	BEERS, BOB
-Candidate	Beers, Bob	'BEERS, BOB'
-Candidate	Rosen, Jacky	ROSEN, JACKY
-Candidate	Rosen, Jacky	'ROSEN, JACKY'
 Candidate	COHEN, LESLEY elizabeth	Cohen, Lesley Elizabeth
 Candidate	COHEN, LESLEY elizabeth	'Cohen, Lesley Elizabeth'
-Candidate	CANCELA, YVANNA	Cancela, Yvanna
-Candidate	CANCELA, YVANNA	'Cancela, Yvanna'
-Candidate	ELLISON, JOHN C.	Ellison, John C.
-Candidate	ELLISON, JOHN C.	'Ellison, John C.'
-Candidate	Hansen, Alexis M.	HANSEN, ALEXIS M.
-Candidate	Hansen, Alexis M.	'HANSEN, ALEXIS M.'
-Candidate	SMITH, RODNEY	Smith, Rodney
-Candidate	SMITH, RODNEY	'Smith, Rodney'
-Candidate	Conine, Zach	CONINE, ZACH
-Candidate	Conine, Zach	'CONINE, ZACH'
-Candidate	GUMINA, TONY	Gumina, Tony
-Candidate	GUMINA, TONY	'Gumina, Tony'
-Candidate	Bakari, Kamau A.	BAKARI, KAMAU A.
-Candidate	Bakari, Kamau A.	'BAKARI, KAMAU A.'
-Candidate	Hagan, Tim	HAGAN, TIM
-Candidate	Hagan, Tim	'HAGAN, TIM'
-Candidate	Hansen, Janine	HANSEN, JANINE
-Candidate	Hansen, Janine	'HANSEN, JANINE'
 Candidate	Thompson, Tyrone	THOMPSON, Tyrone
 Candidate	Thompson, Tyrone	'THOMPSON, Tyrone'
-Candidate	Hansen, Ira	HANSEN, IRA
-Candidate	Hansen, Ira	'HANSEN, IRA'
-Candidate	WAGNER, JOHN	Wagner, John
-Candidate	WAGNER, JOHN	'Wagner, John'
-Candidate	Tarkanian, Danny	Tarkanian, Danny
-Candidate	Tarkanian, Danny	'Tarkanian, Danny'
 Party	Unknown	Unknown
 Party	Democratic Party	DEM
 Party	Republican Party	REP
@@ -6802,6 +6748,11 @@ CountItemType	total	Votes
 BallotMeasureSelection	Yes	Yes
 BallotMeasureSelection	No	No
 BallotMeasureContestState Question No. 1	State Question No. 1	State Question No. 1
-Candidate	Jo Jorgensen	JORGENSEN, JO
-Candidate	Don Blankenship	BLANKENSHIP, DON
-Candidate	Joseph R. Biden	BIDEN, JOSEPH R.
+Candidate	Jo Jorgensen	Jorgensen, Jo
+Candidate	Don Blankenship	Blankenship, Don
+Candidate	Joseph R. Biden	Biden, Joseph R.
+Candidate	Barry Rubinson	Rubinson, Barry
+Candidate	Suzanne Lee	Lee, Suzanne
+Candidate	Jonathan Royce Esteban	Esteban, Jonathan Royce
+Candidate	Edward Bridges II	Bridges II, Edward
+Candidate	Edward Bridges II	Bridges Ii, Edward
