@@ -181,6 +181,7 @@ CandidateContest	US President (ID)	Unnamed: 1_level_0 UNITED STATES PRESIDENT
 CandidateContest	US Senate ID	Unnamed: 11_level_0 UNITED STATES SENATOR
 CandidateContest	US Senate ID	Unnamed: 10_level_0 UNITED STATES SENATOR
 CandidateContest	US House ID District 2	Unnamed: 19_level_0 Unnamed: 19_level_1 Unnamed: 19_level_2
+Candidate	C. Aaron Swisher	C. Aaron Swisher
 Candidate	Russ Fulcher	Russ Fulcher
 Candidate	Rudy Soto	Rudy Soto
 Candidate	Rocky 'Rocky' De La Fuente	Rocky 'Rocky' De La Fuente

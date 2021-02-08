@@ -29,7 +29,7 @@ pres_votes_vote_type = -1  # total votes for US President of that vote type
 county_or_other = "county"  # Change this only if results are subdivided by something other than counties
 #  e.g., 'parish' in LA, 'state-house' in Alaska, 'ward' in Philadelphia
 single_county = "Idaho;Ada County"  # pick any one from your file, but use internal db name
-pres_votes_county = 120539  + 438  + 356  + 5,310  + 875  + 130699  + 1172  #+ 311  # total votes for US President in that county
+pres_votes_county = 120539  + 438  + 356  + 5310  + 875  + 130699  + 1172  #+ 311  # total votes for US President in that county
 
 
 def test_data_exists(dbname):
