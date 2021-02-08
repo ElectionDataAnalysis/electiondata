@@ -14,8 +14,8 @@ count_header_row_numbers=0
 ReportingUnit=<County>
 
 [in_count_headers]
-Party={<header_0>,^.*\n(.*)$}
-Candidate={<header_0>,^(.*)\n.*$}
+Party={<header_0>,^[^a-z]*([A-Z].*)$}
+Candidate={<header_0>,^([^a-z]*)[A-Z].*$}
 
 [constant_over_sheet]
 CandidateContest=<sheet_name>

@@ -325,6 +325,7 @@ ReportingUnit	New York;New York County	New York County
 ReportingUnit	New York;Queens County	Queens County
 ReportingUnit	New York;Richmond County	Richmond County
 Candidate	Donald J. Trump	Donald J. Trump
+Candidate	Donald J. Trump	Donald J. Trump Michael R. Pence
 Candidate	Shawn Howard	Shawn Howard
 Candidate	Roque 'Rocky' De La Fuente	Roque âRockyâ De La Fuente
 Candidate	Roque 'Rocky' De La Fuente	Roque “Rocky” De La Fuente
@@ -340,6 +341,7 @@ Candidate	Joseph Kishore	Joseph Kishore
 Candidate	John Manimas	John Manimas
 Candidate	Joe McHugh	Joe McHugh
 Candidate	Jo Jorgensen	Jo Jorgensen
+Candidate	Jo Jorgensen	Jo Jorgensen Jeremy Cohen
 Candidate	Jade Simmons	Jade Simmons
 Candidate	Howie Hawkins Angela Nicole Walker	Howie Hawkins Angela Nicole Walker
 Candidate	Gloria La Riva	Gloria La Riva
@@ -347,6 +349,7 @@ Candidate	Don Blankenship	Don Blankenship
 Candidate	David A. Martin	David A. Martin
 Candidate	Dario Hunter	Dario Hunter
 Candidate	Brock Pierce	Brock Pierce
+Candidate	Brock Pierce	Brock Pierce Karla Ballard
 Candidate	Brian Carroll	Brian Carroll
 Candidate	Barbara Bellar	Barbara Bellar
 Candidate	Yvette D. Clarke	Yvette D. Clarke

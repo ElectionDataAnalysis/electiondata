@@ -179,14 +179,14 @@ def add_regex_column(
     try:
         p = re.compile(pattern_str)
         # replace via regex if possible; otherwise msg
-        # # put informative error message in new_col
+        # # put informative error message in new_col (to be overwritten if no error)
         old = working[old_col].copy()
         working[new_col] = working[old_col].str.cat(
             old, f"Does not match regex {pattern_str}: "
         )
         # # where regex succeeds, replace error message with good value
         mask = working[old_col].str.match(p)
-        working.loc[mask, new_col] = working[mask][old_col].str.replace(p, "\\1")
+        working.loc[mask, new_col] = working[mask][old_col].str.extract(pattern_str, expand=False)
 
     except re.error as e:
         err = ui.add_new_error(
@@ -302,9 +302,11 @@ def add_column_from_formula(
 def compress_whitespace(s: str) -> str:
     """Return a string where every instance of consecutive whitespaces internal to <s> has been replace
     by the first of those consecutive whitespace characters,
-    and leading and trailing whitespace is eliminated"""
+    leading and trailing whitespace is eliminated
+    and any carriage returns are changed to spaces"""
     new_s = re.sub(r"(\s)\s+", "\\1", s)
     new_s = new_s.strip()
+    new_s = new_s.replace("\n"," ")
     return new_s
 
 
@@ -348,12 +350,15 @@ def replace_raw_with_internal_ids(
             raw_ids_for_element.notnull().all(axis=1)
         ]
 
-        # Regularize candidate names (to match what's done during upload of candidates to Candidate
+        # Regularize candidate names from dictionary (to match what's done during upload of candidates to Candidate
         #  table in db)
         raw_ids_for_element["cdf_internal_name"] = regularize_candidate_names(
             raw_ids_for_element["cdf_internal_name"]
         )
         raw_ids_for_element.drop_duplicates(inplace=True)
+
+        # Regularize candidate names from results file
+        working.Candidate_raw = regularize_candidate_names(working.Candidate_raw)
 
     working = working.merge(
         raw_ids_for_element,
@@ -550,6 +555,9 @@ def regularize_candidate_names(
     candidate_column: pd.Series,
 ) -> pd.Series:
     ws = candidate_column.copy()
+
+    # compress whitespace
+    ws = ws.apply(compress_whitespace)
 
     mask = ws.str.isupper()
     # if original is all caps

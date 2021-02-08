@@ -357,7 +357,6 @@ Candidate	WOODSON, Justin H.	WOODSON, Justin H.
 Candidate	WILDBERGER, Tina M.L.	WILDBERGER, Tina M.L.
 Candidate	WARD, Gene	WARD, Gene
 Candidate	VANDERPOOL, Robin	VANDERPOOL, Robin
-Candidate	TRUMP / PENCE	TRUMP / PENCE
 Candidate	TOKIOKA, James Kunane	TOKIOKA, James Kunane
 Candidate	TODD, Christopher L.T.	TODD, Christopher L.T.
 Candidate	TIPPENS, Michelle Rose	TIPPENS, Michelle Rose
@@ -409,14 +408,12 @@ Candidate	KAJIWARA-GUSMAN, Christy	KAJIWARA-GUSMAN, Christy
 Candidate	KAHELE, Kaiali'i (Kai)	KAHELE, Kaiali'i (Kai)
 Candidate	KAHAU, Keline-Kameyo	KAHAU, Keline-Kameyo
 Candidate	KA-IPO, Ron G.	KA-IPO, Ron G.
-Candidate	JORGENSEN / COHEN	JORGENSEN / COHEN
 Candidate	ILAGAN, Greggor	ILAGAN, Greggor
 Candidate	HUGHES, Susan	HUGHES, Susan
 Candidate	HOOMANAWANUI, Jonathan	HOOMANAWANUI, Jonathan
 Candidate	HOOHULI, Shaena Dela Cruz	HOOHULI, Shaena Dela Cruz
 Candidate	HOOD, Carl E.	HOOD, Carl E.
 Candidate	HO, Erik K.	HO, Erik K.
-Candidate	HAWKINS / WALKER	HAWKINS / WALKER
 Candidate	HAUMEA, Desmon Antone	HAUMEA, Desmon Antone
 Candidate	HASHEM, Mark Jun	HASHEM, Mark Jun
 Candidate	GYLDSTRAND, Travis D.E.	GYLDSTRAND, Travis D.E.
@@ -446,15 +443,23 @@ Candidate	BURRUS, Ron	BURRUS, Ron
 Candidate	BRANCO, Patrick Pihana	BRANCO, Patrick Pihana
 Candidate	BOYETTE, Jennifer (Jenny)	BOYETTE, Jennifer (Jenny)
 Candidate	BONOAN, Feena M.	BONOAN, Feena M.
-Candidate	BLANKENSHIP / MOHR	BLANKENSHIP / MOHR
-Candidate	BIDEN / HARRIS	BIDEN / HARRIS
 Candidate	BELATTI, Della Au	BELATTI, Della Au
 Candidate	BALINBIN, Kanamu	BALINBIN, Kanamu
 Candidate	ALLEN, Julia E.	ALLEN, Julia E.
 Candidate	ALDEGUER, Maysana Akahai	ALDEGUER, Maysana Akahai
 Candidate	ALCOS, David (Bradda)	ALCOS, David (Bradda)
 Candidate	AKANA, Joe	AKANA, Joe
-Candidate	PIERCE / BALLARD	PIERCE / BALLARD
 Candidate	GIUFFRE, John (Raghu)	GIUFFRE, John (Raghu)
 Candidate	CHEN, Wayne	CHEN, Wayne
-
+Candidate	Donald J. Trump	Trump / Pence
+Candidate	Donald J. Trump	TRUMP / PENCE
+Candidate	Brock Pierce	Pierce / Ballard
+Candidate	Brock Pierce	PIERCE / BALLARD
+Candidate	Jo Jorgensen	Jorgensen / Cohen
+Candidate	Jo Jorgensen	JORGENSEN / COHEN
+Candidate	Howie Hawkins	Hawkins / Walker
+Candidate	Howie Hawkins	HAWKINS / WALKER
+Candidate	Don Blankenship	Blankenship / Mohr
+Candidate	Don Blankenship	BLANKENSHIP / MOHR
+Candidate	Joseph R. Biden	Biden / Harris
+Candidate	Joseph R. Biden	BIDEN / HARRIS

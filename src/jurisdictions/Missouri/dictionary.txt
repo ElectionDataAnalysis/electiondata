@@ -431,6 +431,7 @@ Party	Write-in	WI
 Party	Democratic Party	DEM
 Party	Republican Party	REP
 Party	Constitution Party	CST
+Candidate	Write-Ins	Write-Ins
 Candidate	Nicole Galloway	Nicole Galloway
 Candidate	Megan Rezabek	Megan Rezabek
 Candidate	Paul Lehmann	Paul Lehmann

@@ -650,8 +650,8 @@ def report(
         for et in active_keys:
             tuples = tuples.union({(et, nk) for nk in err_warn[et].keys()})
 
-        # map each tuple to its message
-        msg = {(et, nk): "\n".join(err_warn[et][nk]) for et, nk in tuples}
+        # map each tuple to its message (sorting the warnings)
+        msg = {(et, nk): "\n".join(sorted(err_warn[et][nk])) for et, nk in tuples}
 
         # write errors/warns to error files
         while ets_to_process:
