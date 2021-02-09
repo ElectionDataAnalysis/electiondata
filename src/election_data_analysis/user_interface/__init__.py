@@ -11,6 +11,7 @@ from typing import Optional, Dict, Any, List
 import datetime
 import csv
 import numpy as np
+import inspect
 
 # constants
 recognized_encodings = {
@@ -411,8 +412,10 @@ def read_single_datafile(
     err: Optional[Dict],
     aux: bool = False,
 ) -> (Dict[str, pd.DataFrame], dict):
-    """Length of returned dictionary is the number of sheets read -- usually 1 except for multi-sheet Excel.
-    Auxiliary files have different parameters (e.g., no count locations)"""
+    """Length of returned dictionary is the number of sheets read
+    -- usually 1 except for multi-sheet Excel or multi-block.
+    Auxiliary files have different parameters (e.g., no count locations)
+    <p> contains the munger parameters"""
     kwargs = dict()  # for syntax checker
     df_dict = dict()  # for syntax checker
 
@@ -763,7 +766,7 @@ def add_new_error(
         err = add_new_error(
             err,
             "system",
-            "user_interface.add_new_error",
+            f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
             f"Unrecognized key ({err_type}) for message {msg}",
         )
         return err

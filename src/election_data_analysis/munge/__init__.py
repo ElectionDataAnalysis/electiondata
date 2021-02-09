@@ -10,6 +10,7 @@ from typing import Optional, List, Dict, Any
 import re
 import os
 from sqlalchemy.orm.session import Session
+import csv
 
 # constants
 req_munger_params: Dict[str, str] = {
@@ -1721,3 +1722,65 @@ def get_fields_from_formula(formula: str) -> List[str]:
     texts_and_fields, final_text = text_fragments_and_fields(formula)
     fields = [x[1] for x in texts_and_fields]
     return fields
+
+
+def extract_blocks(
+        f_path: str,
+        file_type: str,
+        sheet_name: Optional[str] = None,
+        delimiter: str = "\t",
+) -> (Dict[str,pd.DataFrame], Optional[dict]):
+    """Given a flat_text or excel file (and sheet name), create new files,
+    one for each block of data in the file"""
+    #set up
+    file_name = Path(f_path).name
+    err = None
+    kwargs = dict()
+
+    # set key word arguments necessary for all cases
+    kwargs["header"] = None  # TODO what column names do we get?
+    kwargs["dtype"] = str
+    kwargs["quoting"] = csv.QUOTE_MINIMAL
+
+    # TODO read file contents into a dataframe
+    if file_type == "excel":
+        if sheet_name:
+            kwargs["sheet_name"] = sheet_name
+        try:
+           df = pd.read_excel(f_path, **kwargs)
+        except Exception as exc:
+            ui.add_new_error(
+                err,
+                "file",
+                file_name,
+                f"Exception while extracting blocks: {exc}"
+            )
+            return err
+
+    elif file_type == "flat_text":
+        kwargs["sep"] = delimiter
+        try:
+            df = pd.read_csv(f_path, **kwargs)
+        except Exception as exc:
+            ui.add_new_error(
+                err,
+                "file",
+                file_name,
+                f"Exception while extracting blocks: {exc}"
+            )
+        return err
+    else:
+        ui.add_new_error(
+            err,
+            "file",
+            f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
+            f"Unrecognized file type {file_type}"
+        )
+
+    # TODO identify lines that have no integer cells
+    ## clean_count_cols may be useful
+
+    # TODO loop through blocks (blocks defined by no-integer lines on top)
+    ## TODO export block data lines to file
+
+    return err
