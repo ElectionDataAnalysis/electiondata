@@ -1733,7 +1733,7 @@ def extract_blocks(
 ) -> (Dict[str,pd.DataFrame], Optional[dict]):
     """Given a flat_text or excel sheet (default is first sheet),
     create new files, one for each block of data lines"""
-    #set up
+    # set up
     file_name = Path(f_path).name
     file_dir = Path(f_path).parent
     err = None

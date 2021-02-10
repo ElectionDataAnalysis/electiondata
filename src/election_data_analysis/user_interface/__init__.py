@@ -416,8 +416,19 @@ def read_single_datafile(
     -- usually 1 except for multi-sheet Excel or multi-block.
     Auxiliary files have different parameters (e.g., no count locations)
     <p> contains the munger parameters"""
+
     kwargs = dict()  # for syntax checker
     df_dict = dict()  # for syntax checker
+
+    # TODO if multi_blocks=yes:
+    ## ## split file into one-block-per-file files
+    ## ## create revised parameter dictionary p_block
+    ## ## ##   remove multi_block=yes, remove thouands_separator
+    ## ## ##   set delimiter="\t", file_type=flat_text
+    ## ## call read_single_datafile on each of these files, storing result in df_dict
+    ## ## erase the one-block-per-file files
+
+    ## TODO how to handle multi-sheet excel with multi-blocks?
 
     # prepare keyword arguments for pandas read_* function
     if p["file_type"] in ["excel"]:
