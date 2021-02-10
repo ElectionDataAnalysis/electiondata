@@ -36,6 +36,7 @@ opt_munger_params: Dict[str, str] = {
     "string_field_column_numbers": "list-of-integers",
     "string_field_name_row": "int",
     "all_rows": "string",
+    "multi_blocks": "string",
     "constant_over_file": "list-of-strings",
     "nesting_tags": "list-of-strings",
 }
