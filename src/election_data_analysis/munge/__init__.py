@@ -36,7 +36,7 @@ opt_munger_params: Dict[str, str] = {
     "string_field_column_numbers": "list-of-integers",
     "string_field_name_row": "int",
     "all_rows": "string",
-    "multi_blocks": "string",
+    "multi_block": "string",
     "constant_over_file": "list-of-strings",
     "nesting_tags": "list-of-strings",
 }
@@ -1397,7 +1397,7 @@ def to_standard_count_frame(
             )
             return pd.DataFrame(), original_string_columns, err
     # create list of files to read
-    if p["multi_blocks"] == "yes":
+    if p["multi_block"] == "yes":
         ## ## split file into one-block-per-file files
         file_list, err = extract_blocks(
             file_path,
