@@ -1727,18 +1727,21 @@ def get_fields_from_formula(formula: str) -> List[str]:
 
 def extract_blocks(
         f_path: str,
-        f_type: str,
-        sheet_name: Optional[str] = None,
-        delimiter: str = "\t",
-        thousands: Optional[str] = None
-) -> (Dict[str,pd.DataFrame], Optional[dict]):
-    """Given a flat_text or excel sheet (default is first sheet),
-    create new files, one for each block of data lines"""
+        p: Dict[str, Any],
+        output_delimiter: str = "\t",
+) -> (List[str], Optional[dict]):
+    """Given a flat_text (or excel file and list of sheets),
+    create new tab-separated (or excel) files, one for each block of data lines
+    (in the specified excel sheets, with the new files having a sheet name from the old).
+    Returns a list of the new file paths"""
     # set up
     file_name = Path(f_path).name
+    file_stem = Path(f_path).stem
     file_dir = Path(f_path).parent
     err = None
     kwargs = dict()
+    df_dict = dict()
+    new_file_list = list()
 
     # set key word arguments necessary for all cases
     kwargs["header"] = None
@@ -1746,11 +1749,11 @@ def extract_blocks(
     kwargs["quoting"] = csv.QUOTE_MINIMAL
 
     # read file contents into a dataframe
-    if f_type == "excel":
-        if sheet_name:
-            kwargs["sheet_name"] = sheet_name
+    if p["file_type"] == "excel":
         try:
-           df = pd.read_excel(f_path, **kwargs)
+            df_dict, err = ui.excel_to_dict(
+                f_path, kwargs, ui.list_desired_excel_sheets(f_path, p)
+            )
         except Exception as exc:
             ui.add_new_error(
                 err,
@@ -1760,10 +1763,10 @@ def extract_blocks(
             )
             return err
 
-    elif f_type == "flat_text":
-        kwargs["sep"] = delimiter
+    elif p["file_type"] == "flat_text":
+        kwargs["sep"] = output_delimiter
         try:
-            df = pd.read_csv(f_path, **kwargs)
+            df_dict["Sheet1"] = pd.read_csv(f_path, **kwargs)
         except Exception as exc:
             ui.add_new_error(
                 err,
@@ -1777,36 +1780,43 @@ def extract_blocks(
             err,
             "file",
             f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
-            f"Unrecognized file type {f_type}"
+            f"Unrecognized file type {p['file_type']}"
         )
 
-    # get rid of thousands separator
-    if thousands:
-        df = df.replace(thousands, "", regex=True)
+    for sheet in df_dict.keys():
+        # get rid of thousands separator
+        if p["thousands_separator"]:
+                working = df_dict[sheet].replace(p["thousands_separator"], "", regex=True)
 
-    # identify count rows (have at least one integer) and text rows (all others)
-    mask = df.T.apply(lambda row: row.str.isdigit().any())
-    count_rows = list(mask[mask].index)
-    text_rows = list(mask[~mask].index)
+        # identify count rows (have at least one integer) and text rows (all others)
+        mask = working.T.apply(lambda row: row.str.isdigit().any())
+        count_rows = list(mask[mask].index)
+        text_rows = list(mask[~mask].index)
 
-    # drop all below the last count row
-    df = df[:max(count_rows) + 1]
-    text_rows = [x for x in text_rows if x in df.index]
+        # drop all below the last count row
+        working = working[:max(count_rows) + 1]
+        text_rows = [x for x in text_rows if x in working.index]
 
-    # loop through blocks (blocks defined by no-integer lines on top)
-    while count_rows:
-        # use only count_rows still in df
-        # create block from bottom of dframe
-        top = max([x for x in text_rows if (x==0 or x-1 in count_rows)])
-        block = df[top:]
+        # loop through blocks (blocks defined by no-integer lines on top)
+        while count_rows:
+            # use only count_rows still in df
+            # create block from bottom of dframe
+            top = max([x for x in text_rows if (x==0 or x-1 in count_rows)])
+            block = working[top:]
 
-        ## export block data lines to tab-separated text file
-        block_path = os.path.join(file_dir,f"{file_name}_block_{top}-{max(df.index)}.txt")
-        block.to_csv(block_path,sep="\t", index=False, header=False)
+            ## export block data lines to tab-separated or excel file
+            if p["file_type"] == "flat_text":
+                block_path = os.path.join(file_dir,f"{file_stem}_block_{top}-{max(working.index)}.txt")
+                block.to_csv(block_path,sep=p["flat_text_delimiter"], index=False, header=False)
+            elif p["file_type"] == "excel":
+                block_path = os.path.join(file_dir,f"{file_stem}_sheet_{sheet}_block_{top}-{max(working.index)}.xlsx")
+                block.to_excel(block_path, index=False, header=False, sheet_name=sheet)
+            # add to list of new file paths
+            new_file_list.append(block_path)
 
-        # set up for next block
-        df = df[:top]
-        count_rows = [x for x in count_rows if x in df.index]
-        text_rows = [x for x in text_rows if x in df.index]
-    return err
+            # set up for next block
+            working = working[:top]
+            count_rows = [x for x in count_rows if x in working.index]
+            text_rows = [x for x in text_rows if x in working.index]
+    return new_file_list, err
 

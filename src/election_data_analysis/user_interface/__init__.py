@@ -422,29 +422,17 @@ def read_single_datafile(
     df_dict = dict()  # for syntax checker
 
     if p["multi_blocks"] == "yes":
-        ## ## TODO split file into one-block-per-file files
-        if p["file_type"] == "excel":
-            sheet_list = list_desired_excel_sheets(f_path, p)
-            for sheet in sheet_list:
-                pass  # TODO need to preserve sheet names
-        elif p["file_type"] == "flat_text":
-            m.extract_blocks(
-                f_path,
-                p["file_type"],
-                delimiter=p["flat_text_delimiter"],
-                thousands=p["thousands_separator"]
-            )
-        else:
-            err = add_new_error(
-                err,
-                "munger",
-                munger_name,
-                "multi_blocks=yes, but file type is neither 'excel' nor 'flat_text'",
-            )
+        ## ## split file into one-block-per-file files
+        new_file_list, err = m.extract_blocks(
+            f_path,
+            p,
+        )
 
-        # TODO create revised parameter dictionary p_block
-        ## ## ##   remove multi_block=yes, remove thouands_separator
-        ## ## ##   set delimiter="\t", file_type=flat_text
+        # create revised parameter dictionary p_block without multi_block=yes, without thouands_separator
+        p_block = p.copy()
+        p_block["thousands_separator"] = None
+        p_block["multi_block"] = None
+
         ## ## call read_single_datafile on each of these files, storing result in df_dict
         ## ## erase the one-block-per-file files
 
@@ -470,22 +458,7 @@ def read_single_datafile(
                 if not fatal_error(err):
                     df_dict = {"Sheet1": df}
             elif p["file_type"] == "excel":
-                kwargs["index_col"] = None  # TODO: tech debt can we omit index_col for all?
-                #  need to omit index_col here since multi-index headers are possible
-                # to avoid getting fatal error when a sheet doesn't read in correctly
-                for sheet in list_desired_excel_sheets(f_path, p):
-                    kwargs["sheet_name"] = sheet
-                    try:
-                        df_dict[sheet] = pd.read_excel(f_path, **kwargs)
-                    except Exception as exc:
-                        df_dict[sheet] = pd.DataFrame()
-                        err = add_new_error(
-                            err,
-                            "warn-file",
-                            Path(f_path).name,
-                            f"Sheet {sheet} not read due to exception:\n\t{exc}",
-                        )
-
+                df_dict, err = excel_to_dict(f_path, kwargs, list_desired_excel_sheets(f_path, p))
             elif p["file_type"] == "flat_text":
                 df = pd.read_csv(f_path, **kwargs)
                 df_dict = {"Sheet1": df}
@@ -516,6 +489,27 @@ def read_single_datafile(
         # drop any empty dataframes
         df_dict = {k: v for k, v in df_dict.items() if not v.empty}
     return df_dict, err
+
+
+def excel_to_dict(f_path: str, kwargs: Dict[str,Any], sheet_list: Optional[List[str]]) -> (Dict[str,pd.DataFrame], dict):
+    kwargs["index_col"] = None
+    #  need to omit index_col here since multi-index headers are possible
+    # to avoid getting fatal error when a sheet doesn't read in correctly
+    df_dict = dict()
+    error: Optional[dict] = None
+    for sheet in sheet_list:
+        try:
+            df_dict[sheet] = pd.read_excel(f_path, **kwargs)
+        except Exception as exc:
+            df_dict[sheet] = pd.DataFrame()
+            error = add_new_error(
+                error,
+                "warn-file",
+                Path(f_path).name,
+                f"Sheet {sheet} not read due to exception:\n\t{exc}",
+            )
+
+    return df_dict, error
 
 
 def add_err_df(err, err_df, munger_name, f_path):
