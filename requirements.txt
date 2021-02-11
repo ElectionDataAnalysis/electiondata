@@ -10,3 +10,4 @@ xlrd>=1.0.0
 path
 psutil
 requests
+openpyxl
