@@ -1341,10 +1341,10 @@ def get_and_check_munger_params(munger_path: str) -> (dict, Optional[dict]):
 def get_string_fields(
     sources: list,
     munger_path: str,
-) -> (Dict[str, List[str]], Optional[dict]):
+) -> (List[str], Optional[dict]):
     err = None
     pattern = re.compile(r"<([^>,]+)(?:,([^>,]+))*>")
-    munge_field_lists = dict()
+    munge_field_list = list()
     for source in sources:
         munge_field_set = set()
         formulas, new_err = ui.get_parameters(
@@ -1364,9 +1364,10 @@ def get_string_fields(
         flat = {x for y in munge_field_set for x in y}
         if "" in flat:
             flat.remove("")
-        munge_field_lists[source] = list(flat)
-
-    return munge_field_lists, err
+        munge_field_list += list(flat)
+    # remove dupes
+    munge_field_list = list(set(munge_field_list))
+    return munge_field_list, err
 
 
 def to_standard_count_frame(
@@ -1437,7 +1438,7 @@ def to_standard_count_frame(
 
         # get lists of string fields expected in raw file
         try:
-            munge_field_lists, new_err = get_string_fields(
+            munge_field_list, new_err = get_string_fields(
                 [x for x in p["munge_strings"] if x != "constant_over_file"],
                 munger_path,
             )
@@ -1448,7 +1449,6 @@ def to_standard_count_frame(
                 f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
                 f"Exception while getting string fields: {exc}",
             )
-            munge_field_lists = dict()
         if new_err:
             err = ui.consolidate_errors([err, new_err])
             if ui.fatal_error(new_err):
@@ -1477,14 +1477,13 @@ def to_standard_count_frame(
             # add columns for any constant-over-sheet elements
             if "constant_over_sheet" in p["munge_strings"]:
                 # see if <sheet_name> is needed
-                if "sheet_name" in munge_field_lists["constant_over_sheet"]:
+                if "sheet_name" in munge_field_list:
                     standard[k] = add_constant_column(standard[k], "sheet_name", k)
                 # find max row needed
                 try:
                     rows_needed = [
-                        int(var[4:])
-                        for var in munge_field_lists["constant_over_sheet"]
-                        if var != "sheet_name"
+                        int(field.split("_")[-1])
+                        for field in munge_field_list if field[:4] == "row_"
                     ]
                     if rows_needed:
                         max_row = max(rows_needed)
@@ -1513,7 +1512,7 @@ def to_standard_count_frame(
                     continue
 
                 except KeyError() as ke:
-                    variables = ",".join(munge_field_lists["constant_over_sheet"])
+                    variables = ",".join([x for x in munge_field_list if x == "sheet_name" or x[:4] == "row_"])
                     error_by_sheet[k] = ui.add_new_error(
                         error_by_sheet[k],
                         "file",
@@ -1531,9 +1530,7 @@ def to_standard_count_frame(
 
             # keep only necessary columns
             try:
-                necessary = [
-                    item for sublist in munge_field_lists.values() for item in sublist
-                ] + ["Count"]
+                necessary = munge_field_list + ["Count"]
                 standard[k] = standard[k][necessary]
             except KeyError as ke:
                 error_by_sheet[k] = ui.add_new_error(
@@ -1766,9 +1763,8 @@ def extract_blocks(
     # set key word arguments necessary for all cases
     kwargs["header"] = None
     kwargs["dtype"] = str
-    kwargs["quoting"] = csv.QUOTE_MINIMAL
 
-    # read file contents into a dataframe
+    # read file contents into a dictionary of dataframes
     if p["file_type"] == "excel":
         try:
             df_dict, err = ui.excel_to_dict(
@@ -1785,6 +1781,7 @@ def extract_blocks(
 
     elif p["file_type"] == "flat_text":
         kwargs["sep"] = output_delimiter
+        kwargs["quoting"] = csv.QUOTE_MINIMAL
         try:
             df_dict["Sheet1"] = pd.read_csv(f_path, **kwargs)
         except Exception as exc:
@@ -1804,39 +1801,40 @@ def extract_blocks(
         )
 
     for sheet in df_dict.keys():
-        # get rid of thousands separator
-        if p["thousands_separator"]:
-                working = df_dict[sheet].replace(p["thousands_separator"], "", regex=True)
+        if not df_dict[sheet].empty:
+            # get rid of thousands separator
+            if p["thousands_separator"]:
+                    working = df_dict[sheet].replace(p["thousands_separator"], "", regex=True)
 
-        # identify count rows (have at least one integer) and text rows (all others)
-        mask = working.T.apply(lambda row: row.str.isdigit().any())
-        count_rows = list(mask[mask].index)
-        text_rows = list(mask[~mask].index)
+            # identify count rows (have at least one integer) and text rows (all others)
+            mask = working.T.apply(lambda row: row.str.isdigit().any())
+            count_rows = list(mask[mask].index)
+            text_rows = list(mask[~mask].index)
 
-        # drop all below the last count row
-        working = working[:max(count_rows) + 1]
-        text_rows = [x for x in text_rows if x in working.index]
-
-        # loop through blocks (blocks defined by no-integer lines on top)
-        while count_rows:
-            # use only count_rows still in df
-            # create block from bottom of dframe
-            top = max([x for x in text_rows if (x==0 or x-1 in count_rows)])
-            block = working[top:]
-
-            ## export block data lines to tab-separated or excel file
-            if p["file_type"] == "flat_text":
-                block_path = os.path.join(file_dir,f"{file_stem}_block_{top}-{max(working.index)}.txt")
-                block.to_csv(block_path,sep=p["flat_text_delimiter"], index=False, header=False)
-            elif p["file_type"] == "excel":
-                block_path = os.path.join(file_dir,f"{file_stem}_sheet_{sheet}_block_{top}-{max(working.index)}.xlsx")
-                block.to_excel(block_path, index=False, header=False, sheet_name=sheet)
-            # add to list of new file paths
-            new_file_list.append(block_path)
-
-            # set up for next block
-            working = working[:top]
-            count_rows = [x for x in count_rows if x in working.index]
+            # drop all below the last count row
+            working = working[:max(count_rows) + 1]
             text_rows = [x for x in text_rows if x in working.index]
+
+            # loop through blocks (blocks defined by no-integer lines on top)
+            while count_rows:
+                # use only count_rows still in df
+                # create block from bottom of dframe
+                top = max([x for x in text_rows if (x==0 or x-1 in count_rows)])
+                block = working[top:]
+
+                ## export block data lines to tab-separated or excel file
+                if p["file_type"] == "flat_text":
+                    block_path = os.path.join(file_dir,f"{file_stem}_block_{top}-{max(working.index)}.txt")
+                    block.to_csv(block_path,sep=p["flat_text_delimiter"], index=False, header=False)
+                elif p["file_type"] == "excel":
+                    block_path = os.path.join(file_dir,f"{file_stem}_sheet_{sheet}_block_{top}-{max(working.index)}.xlsx")
+                    block.to_excel(block_path, index=False, header=False, sheet_name=sheet)
+                # add to list of new file paths
+                new_file_list.append(block_path)
+
+                # set up for next block
+                working = working[:top]
+                count_rows = [x for x in count_rows if x in working.index]
+                text_rows = [x for x in text_rows if x in working.index]
     return new_file_list, err
 
