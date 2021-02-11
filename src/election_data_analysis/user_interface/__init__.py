@@ -471,7 +471,9 @@ def read_single_datafile(
     return df_dict, err
 
 
-def excel_to_dict(f_path: str, kwargs: Dict[str,Any], sheet_list: Optional[List[str]]) -> (Dict[str,pd.DataFrame], dict):
+def excel_to_dict(
+        f_path: str, kwargs: Dict[str,Any], sheet_list: Optional[List[str]]
+) -> (Dict[str,pd.DataFrame], dict):
     kwargs["index_col"] = None
     #  need to omit index_col here since multi-index headers are possible
     # to avoid getting fatal error when a sheet doesn't read in correctly
@@ -479,7 +481,14 @@ def excel_to_dict(f_path: str, kwargs: Dict[str,Any], sheet_list: Optional[List[
     error: Optional[dict] = None
     for sheet in sheet_list:
         try:
-            df_dict[sheet] = pd.read_excel(f_path, **kwargs)
+            df_dict[sheet] = pd.read_excel(f_path, **kwargs, sheet_name=sheet)
+            # ignore any empty sheet
+            if df_dict[sheet].empty:
+                df_dict.pop(sheet)
+                file_name = Path(f_path).name
+                error = add_new_error(
+                    error, "file", file_name, f"No data read from sheet {sheet}"
+                )
         except Exception as exc:
             df_dict[sheet] = pd.DataFrame()
             error = add_new_error(
@@ -488,7 +497,6 @@ def excel_to_dict(f_path: str, kwargs: Dict[str,Any], sheet_list: Optional[List[
                 Path(f_path).name,
                 f"Sheet {sheet} not read due to exception:\n\t{exc}",
             )
-
     return df_dict, error
 
 
