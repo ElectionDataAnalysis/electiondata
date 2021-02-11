@@ -1,0 +1,276 @@
+Name	ReportingUnitType
+Kansas;KS House District 1	state-house
+Kansas;KS House District 2	state-house
+Kansas;KS House District 3	state-house
+Kansas;KS House District 4	state-house
+Kansas;KS House District 5	state-house
+Kansas;KS House District 6	state-house
+Kansas;KS House District 7	state-house
+Kansas;KS House District 8	state-house
+Kansas;KS House District 9	state-house
+Kansas;KS House District 10	state-house
+Kansas;KS House District 11	state-house
+Kansas;KS House District 12	state-house
+Kansas;KS House District 13	state-house
+Kansas;KS House District 14	state-house
+Kansas;KS House District 15	state-house
+Kansas;KS House District 16	state-house
+Kansas;KS House District 17	state-house
+Kansas;KS House District 18	state-house
+Kansas;KS House District 19	state-house
+Kansas;KS House District 20	state-house
+Kansas;KS House District 21	state-house
+Kansas;KS House District 22	state-house
+Kansas;KS House District 23	state-house
+Kansas;KS House District 24	state-house
+Kansas;KS House District 25	state-house
+Kansas;KS House District 26	state-house
+Kansas;KS House District 27	state-house
+Kansas;KS House District 28	state-house
+Kansas;KS House District 29	state-house
+Kansas;KS House District 30	state-house
+Kansas;KS House District 31	state-house
+Kansas;KS House District 32	state-house
+Kansas;KS House District 33	state-house
+Kansas;KS House District 34	state-house
+Kansas;KS House District 35	state-house
+Kansas;KS House District 36	state-house
+Kansas;KS House District 37	state-house
+Kansas;KS House District 38	state-house
+Kansas;KS House District 39	state-house
+Kansas;KS House District 40	state-house
+Kansas;KS House District 41	state-house
+Kansas;KS House District 42	state-house
+Kansas;KS House District 43	state-house
+Kansas;KS House District 44	state-house
+Kansas;KS House District 45	state-house
+Kansas;KS House District 46	state-house
+Kansas;KS House District 47	state-house
+Kansas;KS House District 48	state-house
+Kansas;KS House District 49	state-house
+Kansas;KS House District 50	state-house
+Kansas;KS House District 51	state-house
+Kansas;KS House District 52	state-house
+Kansas;KS House District 53	state-house
+Kansas;KS House District 54	state-house
+Kansas;KS House District 55	state-house
+Kansas;KS House District 56	state-house
+Kansas;KS House District 57	state-house
+Kansas;KS House District 58	state-house
+Kansas;KS House District 59	state-house
+Kansas;KS House District 60	state-house
+Kansas;KS House District 61	state-house
+Kansas;KS House District 62	state-house
+Kansas;KS House District 63	state-house
+Kansas;KS House District 64	state-house
+Kansas;KS House District 65	state-house
+Kansas;KS House District 66	state-house
+Kansas;KS House District 67	state-house
+Kansas;KS House District 68	state-house
+Kansas;KS House District 69	state-house
+Kansas;KS House District 70	state-house
+Kansas;KS House District 71	state-house
+Kansas;KS House District 72	state-house
+Kansas;KS House District 73	state-house
+Kansas;KS House District 74	state-house
+Kansas;KS House District 75	state-house
+Kansas;KS House District 76	state-house
+Kansas;KS House District 77	state-house
+Kansas;KS House District 78	state-house
+Kansas;KS House District 79	state-house
+Kansas;KS House District 80	state-house
+Kansas;KS House District 81	state-house
+Kansas;KS House District 82	state-house
+Kansas;KS House District 83	state-house
+Kansas;KS House District 84	state-house
+Kansas;KS House District 85	state-house
+Kansas;KS House District 86	state-house
+Kansas;KS House District 87	state-house
+Kansas;KS House District 88	state-house
+Kansas;KS House District 89	state-house
+Kansas;KS House District 90	state-house
+Kansas;KS House District 91	state-house
+Kansas;KS House District 92	state-house
+Kansas;KS House District 93	state-house
+Kansas;KS House District 94	state-house
+Kansas;KS House District 95	state-house
+Kansas;KS House District 96	state-house
+Kansas;KS House District 97	state-house
+Kansas;KS House District 98	state-house
+Kansas;KS House District 99	state-house
+Kansas;KS House District 100	state-house
+Kansas;KS House District 101	state-house
+Kansas;KS House District 102	state-house
+Kansas;KS House District 103	state-house
+Kansas;KS House District 104	state-house
+Kansas;KS House District 105	state-house
+Kansas;KS House District 106	state-house
+Kansas;KS House District 107	state-house
+Kansas;KS House District 108	state-house
+Kansas;KS House District 109	state-house
+Kansas;KS House District 110	state-house
+Kansas;KS House District 111	state-house
+Kansas;KS House District 112	state-house
+Kansas;KS House District 113	state-house
+Kansas;KS House District 114	state-house
+Kansas;KS House District 115	state-house
+Kansas;KS House District 116	state-house
+Kansas;KS House District 117	state-house
+Kansas;KS House District 118	state-house
+Kansas;KS House District 119	state-house
+Kansas;KS House District 120	state-house
+Kansas;KS House District 121	state-house
+Kansas;KS House District 122	state-house
+Kansas;KS House District 123	state-house
+Kansas;KS House District 124	state-house
+Kansas;KS House District 125	state-house
+Kansas;KS Senate District 1	state-senate
+Kansas;KS Senate District 2	state-senate
+Kansas;KS Senate District 3	state-senate
+Kansas;KS Senate District 4	state-senate
+Kansas;KS Senate District 5	state-senate
+Kansas;KS Senate District 6	state-senate
+Kansas;KS Senate District 7	state-senate
+Kansas;KS Senate District 8	state-senate
+Kansas;KS Senate District 9	state-senate
+Kansas;KS Senate District 10	state-senate
+Kansas;KS Senate District 11	state-senate
+Kansas;KS Senate District 12	state-senate
+Kansas;KS Senate District 13	state-senate
+Kansas;KS Senate District 14	state-senate
+Kansas;KS Senate District 15	state-senate
+Kansas;KS Senate District 16	state-senate
+Kansas;KS Senate District 17	state-senate
+Kansas;KS Senate District 18	state-senate
+Kansas;KS Senate District 19	state-senate
+Kansas;KS Senate District 20	state-senate
+Kansas;KS Senate District 21	state-senate
+Kansas;KS Senate District 22	state-senate
+Kansas;KS Senate District 23	state-senate
+Kansas;KS Senate District 24	state-senate
+Kansas;KS Senate District 25	state-senate
+Kansas;KS Senate District 26	state-senate
+Kansas;KS Senate District 27	state-senate
+Kansas;KS Senate District 28	state-senate
+Kansas;KS Senate District 29	state-senate
+Kansas;KS Senate District 30	state-senate
+Kansas;KS Senate District 31	state-senate
+Kansas;KS Senate District 32	state-senate
+Kansas;KS Senate District 33	state-senate
+Kansas;KS Senate District 34	state-senate
+Kansas;KS Senate District 35	state-senate
+Kansas;KS Senate District 36	state-senate
+Kansas;KS Senate District 37	state-senate
+Kansas;KS Senate District 38	state-senate
+Kansas;KS Senate District 39	state-senate
+Kansas;KS Senate District 40	state-senate
+Kansas;US House KS District 1	congressional
+Kansas;US House KS District 2	congressional
+Kansas;US House KS District 3	congressional
+Kansas;US House KS District 4	congressional
+Kansas	state
+Kansas;Allen County	county
+Kansas;Anderson County	county
+Kansas;Atchison County	county
+Kansas;Barber County	county
+Kansas;Barton County	county
+Kansas;Bourbon County	county
+Kansas;Brown County	county
+Kansas;Butler County	county
+Kansas;Chase County	county
+Kansas;Chautauqua County	county
+Kansas;Cherokee County	county
+Kansas;Cheyenne County	county
+Kansas;Clark County	county
+Kansas;Clay County	county
+Kansas;Cloud County	county
+Kansas;Coffey County	county
+Kansas;Comanche County	county
+Kansas;Cowley County	county
+Kansas;Crawford County	county
+Kansas;Decatur County	county
+Kansas;Dickinson County	county
+Kansas;Doniphan County	county
+Kansas;Douglas County	county
+Kansas;Edwards County	county
+Kansas;Elk County	county
+Kansas;Ellis County	county
+Kansas;Ellsworth County	county
+Kansas;Finney County	county
+Kansas;Ford County	county
+Kansas;Franklin County	county
+Kansas;Geary County	county
+Kansas;Gove County	county
+Kansas;Graham County	county
+Kansas;Grant County	county
+Kansas;Gray County	county
+Kansas;Greeley County	county
+Kansas;Greenwood County	county
+Kansas;Hamilton County	county
+Kansas;Harper County	county
+Kansas;Harvey County	county
+Kansas;Haskell County	county
+Kansas;Hodgeman County	county
+Kansas;Jackson County	county
+Kansas;Jefferson County	county
+Kansas;Jewell County	county
+Kansas;Johnson County	county
+Kansas;Kearny County	county
+Kansas;Kingman County	county
+Kansas;Kiowa County	county
+Kansas;Labette County	county
+Kansas;Lane County	county
+Kansas;Leavenworth County	county
+Kansas;Lincoln County	county
+Kansas;Linn County	county
+Kansas;Logan County	county
+Kansas;Lyon County	county
+Kansas;Marion County	county
+Kansas;Marshall County	county
+Kansas;McPherson County	county
+Kansas;Meade County	county
+Kansas;Miami County	county
+Kansas;Mitchell County	county
+Kansas;Montgomery County	county
+Kansas;Morris County	county
+Kansas;Morton County	county
+Kansas;Nemaha County	county
+Kansas;Neosho County	county
+Kansas;Ness County	county
+Kansas;Norton County	county
+Kansas;Osage County	county
+Kansas;Osborne County	county
+Kansas;Ottawa County	county
+Kansas;Pawnee County	county
+Kansas;Phillips County	county
+Kansas;Pottawatomie County	county
+Kansas;Pratt County	county
+Kansas;Rawlins County	county
+Kansas;Reno County	county
+Kansas;Republic County	county
+Kansas;Rice County	county
+Kansas;Riley County	county
+Kansas;Rooks County	county
+Kansas;Rush County	county
+Kansas;Russell County	county
+Kansas;Saline County	county
+Kansas;Scott County	county
+Kansas;Sedgwick County	county
+Kansas;Seward County	county
+Kansas;Shawnee County	county
+Kansas;Sheridan County	county
+Kansas;Sherman County	county
+Kansas;Smith County	county
+Kansas;Stafford County	county
+Kansas;Stanton County	county
+Kansas;Stevens County	county
+Kansas;Sumner County	county
+Kansas;Thomas County	county
+Kansas;Trego County	county
+Kansas;Wabaunsee County	county
+Kansas;Wallace County	county
+Kansas;Washington County	county
+Kansas;Wichita County	county
+Kansas;Wilson County	county
+Kansas;Woodson County	county
+Kansas;Wyandotte County	county

@@ -1,0 +1,293 @@
+cdf_element	cdf_internal_name	raw_identifier_value
+CandidateContest	KS House District 1	KS House District 1
+CandidateContest	KS House District 2	KS House District 2
+CandidateContest	KS House District 3	KS House District 3
+CandidateContest	KS House District 4	KS House District 4
+CandidateContest	KS House District 5	KS House District 5
+CandidateContest	KS House District 6	KS House District 6
+CandidateContest	KS House District 7	KS House District 7
+CandidateContest	KS House District 8	KS House District 8
+CandidateContest	KS House District 9	KS House District 9
+CandidateContest	KS House District 10	KS House District 10
+CandidateContest	KS House District 11	KS House District 11
+CandidateContest	KS House District 12	KS House District 12
+CandidateContest	KS House District 13	KS House District 13
+CandidateContest	KS House District 14	KS House District 14
+CandidateContest	KS House District 15	KS House District 15
+CandidateContest	KS House District 16	KS House District 16
+CandidateContest	KS House District 17	KS House District 17
+CandidateContest	KS House District 18	KS House District 18
+CandidateContest	KS House District 19	KS House District 19
+CandidateContest	KS House District 20	KS House District 20
+CandidateContest	KS House District 21	KS House District 21
+CandidateContest	KS House District 22	KS House District 22
+CandidateContest	KS House District 23	KS House District 23
+CandidateContest	KS House District 24	KS House District 24
+CandidateContest	KS House District 25	KS House District 25
+CandidateContest	KS House District 26	KS House District 26
+CandidateContest	KS House District 27	KS House District 27
+CandidateContest	KS House District 28	KS House District 28
+CandidateContest	KS House District 29	KS House District 29
+CandidateContest	KS House District 30	KS House District 30
+CandidateContest	KS House District 31	KS House District 31
+CandidateContest	KS House District 32	KS House District 32
+CandidateContest	KS House District 33	KS House District 33
+CandidateContest	KS House District 34	KS House District 34
+CandidateContest	KS House District 35	KS House District 35
+CandidateContest	KS House District 36	KS House District 36
+CandidateContest	KS House District 37	KS House District 37
+CandidateContest	KS House District 38	KS House District 38
+CandidateContest	KS House District 39	KS House District 39
+CandidateContest	KS House District 40	KS House District 40
+CandidateContest	KS House District 41	KS House District 41
+CandidateContest	KS House District 42	KS House District 42
+CandidateContest	KS House District 43	KS House District 43
+CandidateContest	KS House District 44	KS House District 44
+CandidateContest	KS House District 45	KS House District 45
+CandidateContest	KS House District 46	KS House District 46
+CandidateContest	KS House District 47	KS House District 47
+CandidateContest	KS House District 48	KS House District 48
+CandidateContest	KS House District 49	KS House District 49
+CandidateContest	KS House District 50	KS House District 50
+CandidateContest	KS House District 51	KS House District 51
+CandidateContest	KS House District 52	KS House District 52
+CandidateContest	KS House District 53	KS House District 53
+CandidateContest	KS House District 54	KS House District 54
+CandidateContest	KS House District 55	KS House District 55
+CandidateContest	KS House District 56	KS House District 56
+CandidateContest	KS House District 57	KS House District 57
+CandidateContest	KS House District 58	KS House District 58
+CandidateContest	KS House District 59	KS House District 59
+CandidateContest	KS House District 60	KS House District 60
+CandidateContest	KS House District 61	KS House District 61
+CandidateContest	KS House District 62	KS House District 62
+CandidateContest	KS House District 63	KS House District 63
+CandidateContest	KS House District 64	KS House District 64
+CandidateContest	KS House District 65	KS House District 65
+CandidateContest	KS House District 66	KS House District 66
+CandidateContest	KS House District 67	KS House District 67
+CandidateContest	KS House District 68	KS House District 68
+CandidateContest	KS House District 69	KS House District 69
+CandidateContest	KS House District 70	KS House District 70
+CandidateContest	KS House District 71	KS House District 71
+CandidateContest	KS House District 72	KS House District 72
+CandidateContest	KS House District 73	KS House District 73
+CandidateContest	KS House District 74	KS House District 74
+CandidateContest	KS House District 75	KS House District 75
+CandidateContest	KS House District 76	KS House District 76
+CandidateContest	KS House District 77	KS House District 77
+CandidateContest	KS House District 78	KS House District 78
+CandidateContest	KS House District 79	KS House District 79
+CandidateContest	KS House District 80	KS House District 80
+CandidateContest	KS House District 81	KS House District 81
+CandidateContest	KS House District 82	KS House District 82
+CandidateContest	KS House District 83	KS House District 83
+CandidateContest	KS House District 84	KS House District 84
+CandidateContest	KS House District 85	KS House District 85
+CandidateContest	KS House District 86	KS House District 86
+CandidateContest	KS House District 87	KS House District 87
+CandidateContest	KS House District 88	KS House District 88
+CandidateContest	KS House District 89	KS House District 89
+CandidateContest	KS House District 90	KS House District 90
+CandidateContest	KS House District 91	KS House District 91
+CandidateContest	KS House District 92	KS House District 92
+CandidateContest	KS House District 93	KS House District 93
+CandidateContest	KS House District 94	KS House District 94
+CandidateContest	KS House District 95	KS House District 95
+CandidateContest	KS House District 96	KS House District 96
+CandidateContest	KS House District 97	KS House District 97
+CandidateContest	KS House District 98	KS House District 98
+CandidateContest	KS House District 99	KS House District 99
+CandidateContest	KS House District 100	KS House District 100
+CandidateContest	KS House District 101	KS House District 101
+CandidateContest	KS House District 102	KS House District 102
+CandidateContest	KS House District 103	KS House District 103
+CandidateContest	KS House District 104	KS House District 104
+CandidateContest	KS House District 105	KS House District 105
+CandidateContest	KS House District 106	KS House District 106
+CandidateContest	KS House District 107	KS House District 107
+CandidateContest	KS House District 108	KS House District 108
+CandidateContest	KS House District 109	KS House District 109
+CandidateContest	KS House District 110	KS House District 110
+CandidateContest	KS House District 111	KS House District 111
+CandidateContest	KS House District 112	KS House District 112
+CandidateContest	KS House District 113	KS House District 113
+CandidateContest	KS House District 114	KS House District 114
+CandidateContest	KS House District 115	KS House District 115
+CandidateContest	KS House District 116	KS House District 116
+CandidateContest	KS House District 117	KS House District 117
+CandidateContest	KS House District 118	KS House District 118
+CandidateContest	KS House District 119	KS House District 119
+CandidateContest	KS House District 120	KS House District 120
+CandidateContest	KS House District 121	KS House District 121
+CandidateContest	KS House District 122	KS House District 122
+CandidateContest	KS House District 123	KS House District 123
+CandidateContest	KS House District 124	KS House District 124
+CandidateContest	KS House District 125	KS House District 125
+CandidateContest	KS Senate District 1	KS Senate District 1
+CandidateContest	KS Senate District 2	KS Senate District 2
+CandidateContest	KS Senate District 3	KS Senate District 3
+CandidateContest	KS Senate District 4	KS Senate District 4
+CandidateContest	KS Senate District 5	KS Senate District 5
+CandidateContest	KS Senate District 6	KS Senate District 6
+CandidateContest	KS Senate District 7	KS Senate District 7
+CandidateContest	KS Senate District 8	KS Senate District 8
+CandidateContest	KS Senate District 9	KS Senate District 9
+CandidateContest	KS Senate District 10	KS Senate District 10
+CandidateContest	KS Senate District 11	KS Senate District 11
+CandidateContest	KS Senate District 12	KS Senate District 12
+CandidateContest	KS Senate District 13	KS Senate District 13
+CandidateContest	KS Senate District 14	KS Senate District 14
+CandidateContest	KS Senate District 15	KS Senate District 15
+CandidateContest	KS Senate District 16	KS Senate District 16
+CandidateContest	KS Senate District 17	KS Senate District 17
+CandidateContest	KS Senate District 18	KS Senate District 18
+CandidateContest	KS Senate District 19	KS Senate District 19
+CandidateContest	KS Senate District 20	KS Senate District 20
+CandidateContest	KS Senate District 21	KS Senate District 21
+CandidateContest	KS Senate District 22	KS Senate District 22
+CandidateContest	KS Senate District 23	KS Senate District 23
+CandidateContest	KS Senate District 24	KS Senate District 24
+CandidateContest	KS Senate District 25	KS Senate District 25
+CandidateContest	KS Senate District 26	KS Senate District 26
+CandidateContest	KS Senate District 27	KS Senate District 27
+CandidateContest	KS Senate District 28	KS Senate District 28
+CandidateContest	KS Senate District 29	KS Senate District 29
+CandidateContest	KS Senate District 30	KS Senate District 30
+CandidateContest	KS Senate District 31	KS Senate District 31
+CandidateContest	KS Senate District 32	KS Senate District 32
+CandidateContest	KS Senate District 33	KS Senate District 33
+CandidateContest	KS Senate District 34	KS Senate District 34
+CandidateContest	KS Senate District 35	KS Senate District 35
+CandidateContest	KS Senate District 36	KS Senate District 36
+CandidateContest	KS Senate District 37	KS Senate District 37
+CandidateContest	KS Senate District 38	KS Senate District 38
+CandidateContest	KS Senate District 39	KS Senate District 39
+CandidateContest	KS Senate District 40	KS Senate District 40
+CandidateContest	US House KS District 1	US House KS District 1
+CandidateContest	US House KS District 2	US House KS District 2
+CandidateContest	US House KS District 3	US House KS District 3
+CandidateContest	US House KS District 4	US House KS District 4
+CandidateContest	US President (KS)	US President (KS)
+CandidateContest	KS Governor	KS Governor
+CandidateContest	US Senate KS	US Senate KS
+CandidateContest	KS Attorney General	KS Attorney General
+CandidateContest	KS Lieutenant Governor	KS Lieutenant Governor
+CandidateContest	KS Treasurer	KS Treasurer
+CandidateContest	KS Secretary of State	KS Secretary of State
+Election	2020 General	2020 General
+Election	2020 Primary	2020 Primary
+Election	2018 General	2018 General
+Election	2016 General	2016 General
+Party	Democratic Party	Democratic Party
+Party	Republican Party	Republican Party
+Party	Green Party	Green Party
+Party	Libertarian Party	Libertarian Party
+ReportingUnit	Kansas	Kansas
+ReportingUnit	Kansas;Allen County	Allen
+ReportingUnit	Kansas;Anderson County	Anderson
+ReportingUnit	Kansas;Atchison County	Atchison
+ReportingUnit	Kansas;Barber County	Barber
+ReportingUnit	Kansas;Barton County	Barton
+ReportingUnit	Kansas;Bourbon County	Bourbon
+ReportingUnit	Kansas;Brown County	Brown
+ReportingUnit	Kansas;Butler County	Butler
+ReportingUnit	Kansas;Chase County	Chase
+ReportingUnit	Kansas;Chautauqua County	Chautauqua
+ReportingUnit	Kansas;Cherokee County	Cherokee
+ReportingUnit	Kansas;Cheyenne County	Cheyenne
+ReportingUnit	Kansas;Clark County	Clark
+ReportingUnit	Kansas;Clay County	Clay
+ReportingUnit	Kansas;Cloud County	Cloud
+ReportingUnit	Kansas;Coffey County	Coffey
+ReportingUnit	Kansas;Comanche County	Comanche
+ReportingUnit	Kansas;Cowley County	Cowley
+ReportingUnit	Kansas;Crawford County	Crawford
+ReportingUnit	Kansas;Decatur County	Decatur
+ReportingUnit	Kansas;Dickinson County	Dickinson
+ReportingUnit	Kansas;Doniphan County	Doniphan
+ReportingUnit	Kansas;Douglas County	Douglas
+ReportingUnit	Kansas;Edwards County	Edwards
+ReportingUnit	Kansas;Elk County	Elk
+ReportingUnit	Kansas;Ellis County	Ellis
+ReportingUnit	Kansas;Ellsworth County	Ellsworth
+ReportingUnit	Kansas;Finney County	Finney
+ReportingUnit	Kansas;Ford County	Ford
+ReportingUnit	Kansas;Franklin County	Franklin
+ReportingUnit	Kansas;Geary County	Geary
+ReportingUnit	Kansas;Gove County	Gove
+ReportingUnit	Kansas;Graham County	Graham
+ReportingUnit	Kansas;Grant County	Grant
+ReportingUnit	Kansas;Gray County	Gray
+ReportingUnit	Kansas;Greeley County	Greeley
+ReportingUnit	Kansas;Greenwood County	Greenwood
+ReportingUnit	Kansas;Hamilton County	Hamilton
+ReportingUnit	Kansas;Harper County	Harper
+ReportingUnit	Kansas;Harvey County	Harvey
+ReportingUnit	Kansas;Haskell County	Haskell
+ReportingUnit	Kansas;Hodgeman County	Hodgeman
+ReportingUnit	Kansas;Jackson County	Jackson
+ReportingUnit	Kansas;Jefferson County	Jefferson
+ReportingUnit	Kansas;Jewell County	Jewell
+ReportingUnit	Kansas;Johnson County	Johnson
+ReportingUnit	Kansas;Kearny County	Kearny
+ReportingUnit	Kansas;Kingman County	Kingman
+ReportingUnit	Kansas;Kiowa County	Kiowa
+ReportingUnit	Kansas;Labette County	Labette
+ReportingUnit	Kansas;Lane County	Lane
+ReportingUnit	Kansas;Leavenworth County	Leavenworth
+ReportingUnit	Kansas;Lincoln County	Lincoln
+ReportingUnit	Kansas;Linn County	Linn
+ReportingUnit	Kansas;Logan County	Logan
+ReportingUnit	Kansas;Lyon County	Lyon
+ReportingUnit	Kansas;Marion County	Marion
+ReportingUnit	Kansas;Marshall County	Marshall
+ReportingUnit	Kansas;McPherson County	McPherson
+ReportingUnit	Kansas;Meade County	Meade
+ReportingUnit	Kansas;Miami County	Miami
+ReportingUnit	Kansas;Mitchell County	Mitchell
+ReportingUnit	Kansas;Montgomery County	Montgomery
+ReportingUnit	Kansas;Morris County	Morris
+ReportingUnit	Kansas;Morton County	Morton
+ReportingUnit	Kansas;Nemaha County	Nemaha
+ReportingUnit	Kansas;Neosho County	Neosho
+ReportingUnit	Kansas;Ness County	Ness
+ReportingUnit	Kansas;Norton County	Norton
+ReportingUnit	Kansas;Osage County	Osage
+ReportingUnit	Kansas;Osborne County	Osborne
+ReportingUnit	Kansas;Ottawa County	Ottawa
+ReportingUnit	Kansas;Pawnee County	Pawnee
+ReportingUnit	Kansas;Phillips County	Phillips
+ReportingUnit	Kansas;Pottawatomie County	Pottawatomie
+ReportingUnit	Kansas;Pratt County	Pratt
+ReportingUnit	Kansas;Rawlins County	Rawlins
+ReportingUnit	Kansas;Reno County	Reno
+ReportingUnit	Kansas;Republic County	Republic
+ReportingUnit	Kansas;Rice County	Rice
+ReportingUnit	Kansas;Riley County	Riley
+ReportingUnit	Kansas;Rooks County	Rooks
+ReportingUnit	Kansas;Rush County	Rush
+ReportingUnit	Kansas;Russell County	Russell
+ReportingUnit	Kansas;Saline County	Saline
+ReportingUnit	Kansas;Scott County	Scott
+ReportingUnit	Kansas;Sedgwick County	Sedgwick
+ReportingUnit	Kansas;Seward County	Seward
+ReportingUnit	Kansas;Shawnee County	Shawnee
+ReportingUnit	Kansas;Sheridan County	Sheridan
+ReportingUnit	Kansas;Sherman County	Sherman
+ReportingUnit	Kansas;Smith County	Smith
+ReportingUnit	Kansas;Stafford County	Stafford
+ReportingUnit	Kansas;Stanton County	Stanton
+ReportingUnit	Kansas;Stevens County	Stevens
+ReportingUnit	Kansas;Sumner County	Sumner
+ReportingUnit	Kansas;Thomas County	Thomas
+ReportingUnit	Kansas;Trego County	Trego
+ReportingUnit	Kansas;Wabaunsee County	Wabaunsee
+ReportingUnit	Kansas;Wallace County	Wallace
+ReportingUnit	Kansas;Washington County	Washington
+ReportingUnit	Kansas;Wichita County	Wichita
+ReportingUnit	Kansas;Wilson County	Wilson
+ReportingUnit	Kansas;Woodson County	Woodson
+ReportingUnit	Kansas;Wyandotte County	Wyandotte
+
+
