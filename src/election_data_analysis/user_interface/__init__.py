@@ -1,7 +1,6 @@
 from configparser import ConfigParser, MissingSectionHeaderError
 from election_data_analysis import special_formats as sf
 from election_data_analysis import database as db
-from election_data_analysis import munge as m
 import election_data_analysis as e
 import pandas as pd
 from pandas.errors import ParserError
@@ -413,81 +412,62 @@ def read_single_datafile(
     err: Optional[Dict],
     aux: bool = False,
 ) -> (Dict[str, pd.DataFrame], dict):
-    """Length of returned dictionary is the number of sheets read
-    -- usually 1 except for multi-sheet Excel or multi-block.
-    Auxiliary files have different parameters (e.g., no count locations)
-    <p> contains the munger parameters"""
-
+    """Length of returned dictionary is the number of sheets read -- usually 1 except for multi-sheet Excel.
+    Auxiliary files have different parameters (e.g., no count locations)"""
     kwargs = dict()  # for syntax checker
     df_dict = dict()  # for syntax checker
 
-    if p["multi_blocks"] == "yes":
-        ## ## split file into one-block-per-file files
-        new_file_list, err = m.extract_blocks(
-            f_path,
-            p,
-        )
+    # prepare keyword arguments for pandas read_* function
+    if p["file_type"] in ["excel"]:
+        kwargs = basic_kwargs(p, dict())
+        kwargs = tabular_kwargs(p, kwargs, aux=aux)
+    elif p["file_type"] in ["flat_text"]:
+        kwargs = basic_kwargs(p, dict())
+        kwargs = tabular_kwargs(p, kwargs, aux=aux)
+        kwargs["quoting"] = csv.QUOTE_MINIMAL
+        kwargs["sep"] = p["flat_text_delimiter"].replace("tab", "\t")
 
-        # create revised parameter dictionary p_block without multi_block=yes, without thouands_separator
-        p_block = p.copy()
-        p_block["thousands_separator"] = None
-        p_block["multi_block"] = None
-
-        ## ## call read_single_datafile on each of these files, storing result in df_dict
-        ## ## erase the one-block-per-file files
-
-    else:
-        # prepare keyword arguments for pandas read_* function
-        if p["file_type"] in ["excel"]:
-            kwargs = basic_kwargs(p, dict())
-            kwargs = tabular_kwargs(p, kwargs, aux=aux)
-        elif p["file_type"] in ["flat_text"]:
-            kwargs = basic_kwargs(p, dict())
-            kwargs = tabular_kwargs(p, kwargs, aux=aux)
-            kwargs["quoting"] = csv.QUOTE_MINIMAL
-            kwargs["sep"] = p["flat_text_delimiter"].replace("tab", "\t")
-
-        # read file
-        try:
-            if p["file_type"] in ["xml"]:
-                df, err = sf.read_xml(f_path, p, munger_name, err)
-                if not fatal_error(err):
-                    df_dict = {"Sheet1": df}
-            elif p["file_type"] in ["json-nested"]:
-                df, err = sf.read_nested_json(f_path, p, munger_name, err)
-                if not fatal_error(err):
-                    df_dict = {"Sheet1": df}
-            elif p["file_type"] == "excel":
-                df_dict, err = excel_to_dict(f_path, kwargs, list_desired_excel_sheets(f_path, p))
-            elif p["file_type"] == "flat_text":
-                df = pd.read_csv(f_path, **kwargs)
+    # read file
+    try:
+        if p["file_type"] in ["xml"]:
+            df, err = sf.read_xml(f_path, p, munger_name, err)
+            if not fatal_error(err):
                 df_dict = {"Sheet1": df}
+        elif p["file_type"] in ["json-nested"]:
+            df, err = sf.read_nested_json(f_path, p, munger_name, err)
+            if not fatal_error(err):
+                df_dict = {"Sheet1": df}
+        elif p["file_type"] == "excel":
+            df_dict, err = excel_to_dict(f_path, kwargs, list_desired_excel_sheets(f_path, p))
+        elif p["file_type"] == "flat_text":
+            df = pd.read_csv(f_path, **kwargs)
+            df_dict = {"Sheet1": df}
 
-            # rename any columns from header-less tables to column_0, column_1, etc.
-            if p["all_rows"] == "data":
-                for k in df_dict.keys():
-                    df_dict[k].columns = [f"column_{j}" for j in range(df_dict[k].shape[1])]
+        # rename any columns from header-less tables to column_0, column_1, etc.
+        if p["all_rows"] == "data":
+            for k in df_dict.keys():
+                df_dict[k].columns = [f"column_{j}" for j in range(df_dict[k].shape[1])]
 
-        except FileNotFoundError:
-            err_str = f"File not found: {f_path}"
-            err = add_new_error(err, "file", Path(f_path).name, err_str)
-        except UnicodeDecodeError as ude:
-            err_str = f"Encoding error. Datafile not read completely.\n\t{ude}"
-            err = add_new_error(err, "file", Path(f_path).name, err_str)
-        except ParserError as pe:
-            # DFs have trouble comparing against None. So we return an empty DF and
-            # check for emptiness below as an indication of an error.
-            err_str = f"Error parsing results file.\n{pe}"
-            err = add_new_error(
-                err,
-                "file",
-                Path(f_path).name,
-                err_str,
-            )
-            err = add_new_error(err, "file", f_path, err_str)
+    except FileNotFoundError:
+        err_str = f"File not found: {f_path}"
+        err = add_new_error(err, "file", Path(f_path).name, err_str)
+    except UnicodeDecodeError as ude:
+        err_str = f"Encoding error. Datafile not read completely.\n\t{ude}"
+        err = add_new_error(err, "file", Path(f_path).name, err_str)
+    except ParserError as pe:
+        # DFs have trouble comparing against None. So we return an empty DF and
+        # check for emptiness below as an indication of an error.
+        err_str = f"Error parsing results file.\n{pe}"
+        err = add_new_error(
+            err,
+            "file",
+            Path(f_path).name,
+            err_str,
+        )
+        err = add_new_error(err, "file", f_path, err_str)
 
-        # drop any empty dataframes
-        df_dict = {k: v for k, v in df_dict.items() if not v.empty}
+    # drop any empty dataframes
+    df_dict = {k: v for k, v in df_dict.items() if not v.empty}
     return df_dict, err
 
 

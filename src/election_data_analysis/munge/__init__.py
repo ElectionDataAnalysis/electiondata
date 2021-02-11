@@ -1370,7 +1370,7 @@ def get_string_fields(
 
 
 def to_standard_count_frame(
-    f_path: str,
+    file_path: str,
     munger_path: str,
     p: dict,
     constants: dict,
@@ -1382,6 +1382,7 @@ def to_standard_count_frame(
     munger_name = Path(munger_path).name
     err = None
     original_string_columns = None
+    standard_df = pd.DataFrame()
 
     # check that all necessary constants were passed
     if p["constant_over_file"] is not None:
@@ -1391,179 +1392,198 @@ def to_standard_count_frame(
             err = ui.add_new_error(
                 err,
                 "file",
-                f_path,
+                file_path,
                 f"Required constants not given in .ini file:\n\t{bad_str}",
             )
             return pd.DataFrame(), original_string_columns, err
-
-    # read count dataframe(s) from file
-    try:
-        raw_dict, err = ui.read_single_datafile(f_path, p, munger_name, err)
-        if len(raw_dict) == 0:  # no dfs at all returned
-            err = ui.add_new_error(
-                err, "munger", munger_name, f"No data found in file {Path(f_path).name}"
-            )
-
-        if ui.fatal_error(err):
-            return pd.DataFrame(), original_string_columns, err
-    except Exception as exc:
-        err = ui.add_new_error(
-            err,
-            "system",
-            f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
-            f"Unexpected exception while reading data from file:\n\t{exc}",
+    # create list of files to read
+    if p["multi_blocks"] == "yes":
+        ## ## split file into one-block-per-file files
+        file_list, err = extract_blocks(
+            file_path,
+            p,
         )
-        return pd.DataFrame(), original_string_columns, err
 
-    # get lists of string fields expected in raw file
-    try:
-        munge_field_lists, new_err = get_string_fields(
-            [x for x in p["munge_strings"] if x != "constant_over_file"],
-            munger_path,
-        )
-    except Exception as exc:
-        new_err = ui.add_new_error(
-            None,
-            "system",
-            f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
-            f"Exception while getting string fields: {exc}",
-        )
-        munge_field_lists = dict()
-    if new_err:
-        err = ui.consolidate_errors([err, new_err])
-        if ui.fatal_error(new_err):
-            return pd.DataFrame(), original_string_columns, err
-
-    # for each df:
-    standard = dict()
-
-    # loop over sheets
-    error_by_sheet = dict()
-    keys_in_order = list(raw_dict.keys())
-    keys_in_order.sort()
-    for k in keys_in_order:
-        raw = raw_dict[k]
-        # transform to df with single count column 'Count' and all raw munge info in other columns
-        try:
-            standard[k], error_by_sheet[k] = melt_to_one_count_column(
-                raw, p, munger_name
-            )
-        except Exception as exc:
-            error_by_sheet[k] = ui.add_new_error(
-                None, "file", f_path, f"Unable to pivot dataframe {k}:\n {exc}"
-            )
-            continue  # goes to next k in loop
-
-        # add columns for any constant-over-sheet elements
-        if "constant_over_sheet" in p["munge_strings"]:
-            # see if <sheet_name> is needed
-            if "sheet_name" in munge_field_lists["constant_over_sheet"]:
-                standard[k] = add_constant_column(standard[k], "sheet_name", k)
-            # find max row needed
-            try:
-                rows_needed = [
-                    int(var[4:])
-                    for var in munge_field_lists["constant_over_sheet"]
-                    if var != "sheet_name"
-                ]
-                if rows_needed:
-                    max_row = max(rows_needed)
-                    data = pd.read_excel(
-                        f_path,
-                        sheet_name=k,
-                        header=None,
-                        skiprows=p["rows_to_skip"],
-                        nrows=max_row + 1,
-                    )
-                    for row in rows_needed:
-                        # get index of first valid entry in row (or "" if none)
-                        first_valid_idx = data.loc[row].fillna("").first_valid_index()
-                        standard[k] = add_constant_column(
-                            standard[k],
-                            f"row_{row}",
-                            data.loc[row, first_valid_idx],
-                        )
-            except ValueError as ve:
-                error_by_sheet[k] = ui.add_new_error(
-                    error_by_sheet[k],
-                    "munger",
-                    munger_name,
-                    f"In sheet {k}: Ill-formed reference to row of file in munger formulas in {ve}",
-                )
-                continue
-
-            except KeyError() as ke:
-                variables = ",".join(munge_field_lists["constant_over_sheet"])
-                error_by_sheet[k] = ui.add_new_error(
-                    error_by_sheet[k],
-                    "file",
-                    Path(f_path).name,
-                    f"KeyError ({ke}) in sheet {k}: No data found for one of these: \n\t{variables}",
-                )
-                continue
-            except Exception as exc:
-                error_by_sheet[k] = ui.add_new_error(
-                    error_by_sheet[k],
-                    "file",
-                    Path(f_path).name,
-                    f"In sheet {k}: Unexpected exception: {exc}",
-                )
-
-        # keep only necessary columns
-        try:
-            necessary = [
-                item for sublist in munge_field_lists.values() for item in sublist
-            ] + ["Count"]
-            standard[k] = standard[k][necessary]
-        except KeyError as ke:
-            error_by_sheet[k] = ui.add_new_error(
-                error_by_sheet[k],
-                "munger",
-                munger_name,
-                f"In sheet {k}: Field in munge formulas not found in file column headers read from file: {ke}",
-            )
-            continue
-
-        # clean Count column
-        standard[k], bad_rows = clean_count_cols(
-            standard[k], ["Count"], p["thousands_separator"]
-        )
-        if not bad_rows.empty:
-            error_by_sheet[k] = ui.add_err_df(
-                error_by_sheet[k], bad_rows, munger_name, f_path
-            )
-
-    # if even one sheet lacks a fatal error, consider all errors non-fatal
-    non_fatal = [k for k in raw_dict.keys() if not ui.fatal_error(error_by_sheet[k])]
-    fatal = [k for k in raw_dict.keys() if ui.fatal_error(error_by_sheet[k])]
-    if non_fatal:
-        for k in fatal:
-            error_by_sheet[k] = ui.fatal_err_to_non(error_by_sheet[k])
-        df = pd.concat([standard[k] for k in non_fatal])
-        # clean non-count columns
-        non_count = [c for c in df.columns if c != "Count"]
-        df = clean_strings(df, non_count)
-
+        # revise parameter dictionary, removing multi_block=yes, thousands_separator, rows_to_skip
+        ## and sheet specifications
+        p["thousands_separator"] = p["multi_block"] = None
+        p["sheets_to_read_names"] = p["sheets_to_read_numbers"] = p["sheets_to_skip_names"] = p["multi_block"] = None
+        p["rows_to_skip"] = None
+        ## ## call read_single_datafile on each of these files, storing result in df_dict
+        ## ## erase the one-block-per-file files
     else:
-        df = pd.DataFrame()
-    err = ui.consolidate_errors([error_by_sheet[k] for k in raw_dict.keys()])
+        file_list = [file_path]
 
-    # if even one sheet was not fatally flawed
-    if suffix and non_fatal:
-        # append suffix to all non-Count column names (to avoid conflicts if e.g., source has col names 'Party'
+    # process each file, appending its data to standard_df
+    for f_path in file_list:
+        # read count dataframe(s) from file
         try:
-            original_string_columns = [c for c in df.columns if c != "Count"]
-            df.columns = [c if c == "Count" else f"{c}{suffix}" for c in df.columns]
+            raw_dict, err = ui.read_single_datafile(f_path, p, munger_name, err)
+            if len(raw_dict) == 0:  # no dfs at all returned
+                err = ui.add_new_error(
+                    err, "munger", munger_name, f"No data found in file {Path(f_path).name}"
+                )
+
+            if ui.fatal_error(err):
+                return pd.DataFrame(), original_string_columns, err
         except Exception as exc:
             err = ui.add_new_error(
                 err,
                 "system",
                 f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
-                f"Exception while appending suffix {suffix}: {exc}",
+                f"Unexpected exception while reading data from file:\n\t{exc}",
             )
-            return df, original_string_columns, err
+            return pd.DataFrame(), original_string_columns, err
 
-    return df, original_string_columns, err
+        # get lists of string fields expected in raw file
+        try:
+            munge_field_lists, new_err = get_string_fields(
+                [x for x in p["munge_strings"] if x != "constant_over_file"],
+                munger_path,
+            )
+        except Exception as exc:
+            new_err = ui.add_new_error(
+                None,
+                "system",
+                f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
+                f"Exception while getting string fields: {exc}",
+            )
+            munge_field_lists = dict()
+        if new_err:
+            err = ui.consolidate_errors([err, new_err])
+            if ui.fatal_error(new_err):
+                return pd.DataFrame(), original_string_columns, err
+
+        # for each df:
+        standard = dict()
+
+        # loop over sheets
+        error_by_sheet = dict()
+        keys_in_order = list(raw_dict.keys())
+        keys_in_order.sort()
+        for k in keys_in_order:
+            raw = raw_dict[k]
+            # transform to df with single count column 'Count' and all raw munge info in other columns
+            try:
+                standard[k], error_by_sheet[k] = melt_to_one_count_column(
+                    raw, p, munger_name
+                )
+            except Exception as exc:
+                error_by_sheet[k] = ui.add_new_error(
+                    None, "file", f_path, f"Unable to pivot dataframe {k}:\n {exc}"
+                )
+                continue  # goes to next k in loop
+
+            # add columns for any constant-over-sheet elements
+            if "constant_over_sheet" in p["munge_strings"]:
+                # see if <sheet_name> is needed
+                if "sheet_name" in munge_field_lists["constant_over_sheet"]:
+                    standard[k] = add_constant_column(standard[k], "sheet_name", k)
+                # find max row needed
+                try:
+                    rows_needed = [
+                        int(var[4:])
+                        for var in munge_field_lists["constant_over_sheet"]
+                        if var != "sheet_name"
+                    ]
+                    if rows_needed:
+                        max_row = max(rows_needed)
+                        data = pd.read_excel(
+                            f_path,
+                            sheet_name=k,
+                            header=None,
+                            skiprows=p["rows_to_skip"],
+                            nrows=max_row + 1,
+                        )
+                        for row in rows_needed:
+                            # get index of first valid entry in row (or "" if none)
+                            first_valid_idx = data.loc[row].fillna("").first_valid_index()
+                            standard[k] = add_constant_column(
+                                standard[k],
+                                f"row_{row}",
+                                data.loc[row, first_valid_idx],
+                            )
+                except ValueError as ve:
+                    error_by_sheet[k] = ui.add_new_error(
+                        error_by_sheet[k],
+                        "munger",
+                        munger_name,
+                        f"In sheet {k}: Ill-formed reference to row of file in munger formulas in {ve}",
+                    )
+                    continue
+
+                except KeyError() as ke:
+                    variables = ",".join(munge_field_lists["constant_over_sheet"])
+                    error_by_sheet[k] = ui.add_new_error(
+                        error_by_sheet[k],
+                        "file",
+                        Path(f_path).name,
+                        f"KeyError ({ke}) in sheet {k}: No data found for one of these: \n\t{variables}",
+                    )
+                    continue
+                except Exception as exc:
+                    error_by_sheet[k] = ui.add_new_error(
+                        error_by_sheet[k],
+                        "file",
+                        Path(f_path).name,
+                        f"In sheet {k}: Unexpected exception: {exc}",
+                    )
+
+            # keep only necessary columns
+            try:
+                necessary = [
+                    item for sublist in munge_field_lists.values() for item in sublist
+                ] + ["Count"]
+                standard[k] = standard[k][necessary]
+            except KeyError as ke:
+                error_by_sheet[k] = ui.add_new_error(
+                    error_by_sheet[k],
+                    "munger",
+                    munger_name,
+                    f"In sheet {k}: Field in munge formulas not found in file column headers read from file: {ke}",
+                )
+                continue
+
+            # clean Count column
+            standard[k], bad_rows = clean_count_cols(
+                standard[k], ["Count"], p["thousands_separator"]
+            )
+            if not bad_rows.empty:
+                error_by_sheet[k] = ui.add_err_df(
+                    error_by_sheet[k], bad_rows, munger_name, f_path
+                )
+
+        # if even one sheet lacks a fatal error, consider all errors non-fatal
+        non_fatal = [k for k in raw_dict.keys() if not ui.fatal_error(error_by_sheet[k])]
+        fatal = [k for k in raw_dict.keys() if ui.fatal_error(error_by_sheet[k])]
+        if non_fatal:
+            for k in fatal:
+                error_by_sheet[k] = ui.fatal_err_to_non(error_by_sheet[k])
+            df = pd.concat([standard[k] for k in non_fatal])
+            # clean non-count columns
+            non_count = [c for c in df.columns if c != "Count"]
+            df = clean_strings(df, non_count)
+
+        else:
+            df = pd.DataFrame()
+        err = ui.consolidate_errors([error_by_sheet[k] for k in raw_dict.keys()])
+
+        # if even one sheet was not fatally flawed
+        if suffix and non_fatal:
+            # append suffix to all non-Count column names (to avoid conflicts if e.g., source has col names 'Party'
+            try:
+                original_string_columns = [c for c in df.columns if c != "Count"]
+                df.columns = [c if c == "Count" else f"{c}{suffix}" for c in df.columns]
+            except Exception as exc:
+                err = ui.add_new_error(
+                    err,
+                    "system",
+                    f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
+                    f"Exception while appending suffix {suffix}: {exc}",
+                )
+                return df, original_string_columns, err
+        standard_df = pd.concat(standard_df, df)
+    return standard_df, original_string_columns, err
 
 
 def fill_vote_count(
