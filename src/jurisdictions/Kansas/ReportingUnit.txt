@@ -3869,8 +3869,6 @@ Kansas;Allen County;East Elm	precinct
 Kansas;Allen County;Deer Creek Township	precinct
 Kansas;Allen County;Cottage Grove Township	precinct
 Kansas;Allen County;Carlyle Township	precinct
-Kansas;Wyandotte County;BS 2-1	precinct
-Kansas;Wyandotte County;BS 1-1	precinct
 Kansas;Sedgwick County;WA12	precinct
 Kansas;Sedgwick County;WA03	precinct
 Kansas;Sedgwick County;WA02	precinct
@@ -3885,7 +3883,6 @@ Kansas;Sedgwick County;VC11	precinct
 Kansas;Sedgwick County;VA	precinct
 Kansas;Sedgwick County;UN02	precinct
 Kansas;Sedgwick County;UN01	precinct
-Kansas;Sedgwick County;Totals	precinct
 Kansas;Sedgwick County;SH	precinct
 Kansas;Sedgwick County;SA02	precinct
 Kansas;Sedgwick County;SA01	precinct
