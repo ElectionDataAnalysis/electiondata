@@ -842,11 +842,11 @@ def run_tests(
     else:
         for (election, juris) in election_jurisdiction_list:
             if election is None and juris is not None:
-                keyword = f"{juris.replace(' ', '-')}"
+                keyword = f"_{juris.replace(' ', '-')}"
             elif juris is None and election is not None:
                 keyword = f"{election.replace(' ', '-')}"
             elif juris is not None and election is not None:
-                keyword = f"{juris.replace(' ', '-')}_{election.replace(' ', '-')}"
+                keyword = f"_{juris.replace(' ', '-')}_{election.replace(' ', '-')}"
             else:
                 keyword = "_"
             r = os.system(f"pytest --dbname {dbname} -k {keyword}")

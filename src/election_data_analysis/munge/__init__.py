@@ -1407,9 +1407,10 @@ def to_standard_count_frame(
 
         # revise parameter dictionary, removing multi_block=yes, thousands_separator, rows_to_skip
         ## and sheet specifications
-        p["thousands_separator"] = p["multi_block"] = None
+        p["thousands_separator"] = None
         p["sheets_to_read_names"] = p["sheets_to_read_numbers"] = p["sheets_to_skip_names"] = p["multi_block"] = None
         p["rows_to_skip"] = None
+        p["multi_block"] = "handled"
         ## ## call read_single_datafile on each of these files, storing result in df_dict
         ## ## erase the one-block-per-file files
     else:
@@ -1579,7 +1580,12 @@ def to_standard_count_frame(
                     f"Exception while appending suffix {suffix}: {exc}",
                 )
                 return df, original_string_columns, err
-        standard_df = pd.concat(standard_df, df)
+        standard_df = pd.concat([standard_df, df])
+
+    # erase any block files
+    if p["multi_block"] == "handled":
+        for f_path in file_list:
+            os.remove(f_path)
     return standard_df, original_string_columns, err
 
 
