@@ -38,7 +38,7 @@ string_field_name_row=0
 #### for a flat_text or excel file type:
 #all_rows=data
 #### for excel file type:
-sheets_to_read_names=Johnson,Shawnee
+sheets_to_read_names=Johnson,JOHNSON
 sheets_to_read_numbers=
 sheets_to_skip_names=
 #### for xml file type
@@ -49,7 +49,7 @@ nesting_tags=
 ReportingUnit=<sheet_name>;<PRECINCT NAME>
 Candidate=<header_2>
 CandidateContest=<header_0>
-Party=<header_1>
+Party=<header_2>
 
 
 [in_count_headers]

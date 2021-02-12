@@ -1,1 +1,5 @@
 BallotName
+Write-in
+Donald J. Trump
+Jo Jorgensen
+Joseph R. Biden
