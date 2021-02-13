@@ -791,11 +791,13 @@ def add_new_error(
 
 def fatal_err_to_non(err: Optional[Dict[Any, dict]]) -> Optional[Dict[Any, dict]]:
     """Returns the same dictionary, but with all fatal errors downgraded to nonfatal errors"""
-    non_fatal_err = err.copy()
-    for k in err.keys():
-        if k[:5] != "warn-":
-            non_fatal_err[f"warn-{k}"] = non_fatal_err.pop(k)
-
+    if err:
+        non_fatal_err = err.copy()
+        for k in err.keys():
+            if k[:5] != "warn-":
+                non_fatal_err[f"warn-{k}"] = non_fatal_err.pop(k)
+    else:
+        non_fatal_err = None
     return non_fatal_err
 
 
