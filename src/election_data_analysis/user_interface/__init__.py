@@ -767,10 +767,10 @@ def fatal_to_warning(err: Optional[Dict[Any, dict]]) -> Optional[Dict[Any, dict]
 
 
 def add_new_error(
-    err: Optional[Dict[Any, dict]], err_type: str, key: str, msg: str
-) -> dict:
+    err: Optional[Dict[str, dict]], err_type: str, key: str, msg: str
+) -> Optional[Dict[str, dict]]:
     """err is a dictionary of dictionaries, one for each err_type.
-    This function return err, augmented by the error specified in <err_type>,<key> and <msg>"""
+    This function returns err, augmented by the error specified in <err_type>,<key> and <msg>"""
     if err is None or err == dict():
         err = {k: {} for k in warning_keys.union(error_keys)}
         # TODO document. Problems with results file are reported with "ini" key

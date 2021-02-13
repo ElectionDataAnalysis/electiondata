@@ -1380,7 +1380,7 @@ def to_standard_count_frame(
     """Read data from file at <f_path>; return a standard dataframe with one clean count column
     and all other columns typed as 'string'.
      If <suffix> is given, append <suffix> to all non-count columns"""
-    munger_name = Path(munger_path).name
+    munger_name = Path(munger_path).stem
     err = None
     original_string_columns = None
     standard_df = pd.DataFrame()
@@ -1417,25 +1417,28 @@ def to_standard_count_frame(
         file_list = [file_path]
 
     # process each file, appending its data to standard_df
+    non_fatal_files: List[str] = list()
+    err_by_file = dict()
     for f_path in file_list:
+        err_by_file[f_path] = None
+        err_by_sheet = dict()  # keys are sheets, vals are err dictionaries
         # read count dataframe(s) from file
         try:
-            raw_dict, err = ui.read_single_datafile(f_path, p, munger_name, err)
+            raw_dict, err_by_file[f_path] = ui.read_single_datafile(f_path, p, munger_name, err)
             if len(raw_dict) == 0:  # no dfs at all returned
-                err = ui.add_new_error(
-                    err, "munger", munger_name, f"No data found in file {Path(f_path).name}"
+                err_by_file[f_path] = ui.add_new_error(
+                    err_by_file[f_path], "munger", munger_name, f"No data found in file {Path(f_path).name}"
                 )
+                continue
 
-            if ui.fatal_error(err):
-                return pd.DataFrame(), original_string_columns, err
         except Exception as exc:
-            err = ui.add_new_error(
-                err,
+            err_by_file[f_path] = ui.add_new_error(
+                err_by_file[f_path],
                 "system",
                 f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
                 f"Unexpected exception while reading data from file:\n\t{exc}",
             )
-            return pd.DataFrame(), original_string_columns, err
+            continue
 
         # get lists of string fields expected in raw file
         try:
@@ -1451,26 +1454,23 @@ def to_standard_count_frame(
                 f"Exception while getting string fields: {exc}",
             )
         if new_err:
-            err = ui.consolidate_errors([err, new_err])
-            if ui.fatal_error(new_err):
-                return pd.DataFrame(), original_string_columns, err
+            err_by_file[f_path] = ui.consolidate_errors([err_by_file[f_path], new_err])
 
-        # for each df:
-        standard = dict()
+        standard: Dict[str, pd.DataFrame] = dict()
 
         # loop over sheets
-        error_by_sheet = dict()
-        keys_in_order = list(raw_dict.keys())
-        keys_in_order.sort()
-        for k in keys_in_order:
+        sheets_in_order = list(raw_dict.keys())
+        sheets_in_order.sort()
+        for k in sheets_in_order:
+            sheet_errors: Dict[str, str] = dict()
             raw = raw_dict[k]
             # transform to df with single count column 'Count' and all raw munge info in other columns
             try:
-                standard[k], error_by_sheet[k] = melt_to_one_count_column(
+                standard[k], err_by_sheet[k] = melt_to_one_count_column(
                     raw, p, munger_name
                 )
             except Exception as exc:
-                error_by_sheet[k] = ui.add_new_error(
+                err_by_sheet[k] = ui.add_new_error(
                     None, "file", f_path, f"Unable to pivot dataframe {k}:\n {exc}"
                 )
                 continue  # goes to next k in loop
@@ -1504,8 +1504,8 @@ def to_standard_count_frame(
                                 data.loc[row, first_valid_idx],
                             )
                 except ValueError as ve:
-                    error_by_sheet[k] = ui.add_new_error(
-                        error_by_sheet[k],
+                    err_by_sheet[k] = ui.add_new_error(
+                        err_by_sheet[k],
                         "munger",
                         munger_name,
                         f"In sheet {k}: Ill-formed reference to row of file in munger formulas in {ve}",
@@ -1514,16 +1514,16 @@ def to_standard_count_frame(
 
                 except KeyError() as ke:
                     variables = ",".join([x for x in munge_field_list if x == "sheet_name" or x[:4] == "row_"])
-                    error_by_sheet[k] = ui.add_new_error(
-                        error_by_sheet[k],
+                    err_by_sheet[k] = ui.add_new_error(
+                        err_by_sheet[k],
                         "file",
                         Path(f_path).name,
                         f"KeyError ({ke}) in sheet {k}: No data found for one of these: \n\t{variables}",
                     )
                     continue
                 except Exception as exc:
-                    error_by_sheet[k] = ui.add_new_error(
-                        error_by_sheet[k],
+                    err_by_sheet[k] = ui.add_new_error(
+                        err_by_sheet[k],
                         "file",
                         Path(f_path).name,
                         f"In sheet {k}: Unexpected exception: {exc}",
@@ -1534,8 +1534,8 @@ def to_standard_count_frame(
                 necessary = munge_field_list + ["Count"]
                 standard[k] = standard[k][necessary]
             except KeyError as ke:
-                error_by_sheet[k] = ui.add_new_error(
-                    error_by_sheet[k],
+                err_by_sheet[k] = ui.add_new_error(
+                    err_by_sheet[k],
                     "munger",
                     munger_name,
                     f"In sheet {k}: Field in munge formulas not found in file column headers read from file: {ke}",
@@ -1547,31 +1547,47 @@ def to_standard_count_frame(
                 standard[k], ["Count"], p["thousands_separator"]
             )
             if not bad_rows.empty:
-                error_by_sheet[k] = ui.add_err_df(
-                    error_by_sheet[k], bad_rows, munger_name, f_path
+                err_by_sheet[k] = ui.add_err_df(
+                    err_by_sheet[k], bad_rows, munger_name, f_path
                 )
 
-        # if even one sheet lacks a fatal error, consider all errors non-fatal
-        non_fatal = [k for k in raw_dict.keys() if not ui.fatal_error(error_by_sheet[k])]
-        fatal = [k for k in raw_dict.keys() if ui.fatal_error(error_by_sheet[k])]
-        if non_fatal:
-            for k in fatal:
-                error_by_sheet[k] = ui.fatal_err_to_non(error_by_sheet[k])
-            df = pd.concat([standard[k] for k in non_fatal])
+        # for each file, if even one sheet lacks a fatal error, consider that file's sheets "non-fatal"
+        non_fatal_sheets = [k for k in raw_dict.keys() if not ui.fatal_error(err_by_sheet[k])]
+        fatal_sheets = [k for k in raw_dict.keys() if ui.fatal_error(err_by_sheet[k])]
+        if non_fatal_sheets:
+            for k in fatal_sheets:
+                err_by_sheet[k] = ui.fatal_err_to_non(err_by_sheet[k])
+            df = pd.concat([standard[k] for k in non_fatal_sheets])
             # clean non-count columns
             non_count = [c for c in df.columns if c != "Count"]
             df = clean_strings(df, non_count)
 
         else:
             df = pd.DataFrame()
-        err = ui.consolidate_errors([error_by_sheet[k] for k in raw_dict.keys()])
 
-        # if even one sheet was not fatally flawed
-        if suffix and non_fatal:
-            # append suffix to all non-Count column names (to avoid conflicts if e.g., source has col names 'Party'
+        # consolidate errors from all sheets
+        sheet_errs = ui.consolidate_errors([err_by_sheet[k] for k in raw_dict.keys()])
+        err_by_file[f_path] = ui.consolidate_errors([err_by_file[f_path], sheet_errs])
+
+        # if no fatal errors for file
+        if not ui.fatal_error(err_by_file[f_path]):
+            non_fatal_files.append(f_path)
+            standard_df = pd.concat([standard_df, df])
+
+    # if even one file was not fatally flawed
+    if non_fatal_files:
+        # make all file errors non-fatal
+        for f in file_list:
+            err_by_file[f] = ui.fatal_err_to_non(err_by_file[f])
+
+        # consolidate errors from all files
+        err = ui.consolidate_errors([err_by_file[f] for f in file_list])
+
+        # append suffix to all non-Count column names (to avoid conflicts if e.g., source has col names 'Party')
+        if suffix:
             try:
                 original_string_columns = [c for c in df.columns if c != "Count"]
-                df.columns = [c if c == "Count" else f"{c}{suffix}" for c in df.columns]
+                standard_df.columns = [c if c == "Count" else f"{c}{suffix}" for c in standard_df.columns]
             except Exception as exc:
                 err = ui.add_new_error(
                     err,
@@ -1580,12 +1596,15 @@ def to_standard_count_frame(
                     f"Exception while appending suffix {suffix}: {exc}",
                 )
                 return df, original_string_columns, err
-        standard_df = pd.concat([standard_df, df])
+    else:
+        # consolidate errors from all files
+        err = ui.consolidate_errors([err_by_file[f] for f in file_list])
 
     # erase any block files
     if p["multi_block"] == "handled":
         for f_path in file_list:
             os.remove(f_path)
+
     return standard_df, original_string_columns, err
 
 
