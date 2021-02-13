@@ -2082,3 +2082,87 @@ Candidate	Chris Henry	Chris Henry
 Candidate	Carina M Miller	Carina M Miller
 Candidate	Beth E Spell	Beth E Spell
 Candidate	Alex Spenser	Alex Spenser
+Candidate	Jerry M Samaniego	Jerry M Samaniego
+Candidate	Dick Anderson	Dick Anderson
+Candidate	Cedric Hayden	Cedric Hayden
+Candidate	Janelle S Bynum	Janelle S Bynum
+Candidate	Charles F Lee	Charles F Lee
+Candidate	Jacqueline M Leung	Jacqueline M Leung
+Candidate	Harmony K Mulkey	Harmony K Mulkey
+Candidate	James A Ball	James A Ball
+Candidate	Chris Gorsek	Chris Gorsek
+Candidate	Joanna Harbour	Joanna Harbour
+Candidate	Jason Kropf	Jason Kropf
+Candidate	Donald B Crawford	Donald B Crawford
+Candidate	Dennis Linthicum	Dennis Linthicum
+Candidate	Earl Blumenauer	Earl Blumenauer
+Candidate	David J Smith	David J Smith
+Candidate	Cal Mukumoto	Cal Mukumoto
+Candidate	Alex C Diblasi	Alex C Diblasi
+Candidate	Greg Smith	Greg Smith
+Candidate	Jeff Reardon	Jeff Reardon
+Candidate	Alex Polikoff	Alex Polikoff
+Candidate	Anna Kasachev	Anna Kasachev
+Candidate	Jeff Helfrich	Jeff Helfrich
+Candidate	Jami Cate	Jami Cate
+Candidate	Daniel Hoffay	Daniel Hoffay
+Candidate	Jane J Hays	Jane J Hays
+Candidate	Jerry Allen	Jerry Allen
+Candidate	Jack L Esp	Jack L Esp
+Candidate	Bill Hansell	Bill Hansell
+Candidate	Amy Ryan Courser	Amy Ryan Courser
+Candidate	David Gomberg	David Gomberg
+Candidate	Debbie Boothe-Schmidt	Debbie Boothe-Schmidt
+Candidate	Fred Frank Girod	Fred Frank Girod
+Candidate	John Lively	John Lively
+Candidate	Daniel R Martin	Daniel R Martin
+Candidate	Boomer Wright	Boomer Wright
+Candidate	Anna Williams	Anna Williams
+Candidate	Diego Hernandez	Diego Hernandez
+Candidate	Bill Post	Bill Post
+Candidate	Calla Felicity	Calla Felicity
+Candidate	Ashton Simpson	Ashton Simpson
+Candidate	Dick Courter	Dick Courter
+Candidate	Dallas Heard	Dallas Heard
+Candidate	Eileen Kiely	Eileen Kiely
+Candidate	Bobby Levy	Bobby Levy
+Candidate	Cheri Helt	Cheri Helt
+Candidate	Barbara Smith Warner	Barbara Smith Warner
+Candidate	Andrea Salinas	Andrea Salinas
+Candidate	Faith N Leith	Faith N Leith
+Candidate	Amelia Salvador	Amelia Salvador
+Candidate	Brad Witt	Brad Witt
+Candidate	Art Robinson	Art Robinson
+Candidate	Christine Drazan	Christine Drazan
+Candidate	Bob Niemeyer	Bob Niemeyer
+Candidate	Jamie Morrison	Jamie Morrison
+Candidate	Hugh Palcic	Hugh Palcic
+Candidate	Gary Leif	Gary Leif
+Candidate	Edward Marihart	Edward Marihart
+Candidate	Daniel G Bonham	Daniel G Bonham
+Candidate	Christopher C Christensen	Christopher C Christensen
+Candidate	Dacia Grayber	Dacia Grayber
+Candidate	Jerry Morgan	Jerry Morgan
+Candidate	Brian J Boquist	Brian J Boquist
+Candidate	Partys not found in dictionary.txt	Partys not found in dictionary.txt
+Candidate	Alek Skarlatos	Alek Skarlatos
+Candidate	Alberto Enriquez	Alberto Enriquez
+Candidate	Dan Rayfield	Dan Rayfield
+Candidate	Courtney Neron	Courtney Neron
+Candidate	Duane A Stark	Duane A Stark
+Candidate	Brian Clem	Brian Clem
+Candidate	Barbara Fontaine	Barbara Fontaine
+Candidate	Ginny Burdick	Ginny Burdick
+Candidate	Jim Hinsvark	Jim Hinsvark
+Candidate	Bernadette Hansen	Bernadette Hansen
+Candidate	Janeen Sollman	Janeen Sollman
+Candidate	Alex Levi Usselman	Alex Levi Usselman
+Candidate	Jason Hughes	Jason Hughes
+Candidate	David Brock Smith	David Brock Smith
+Candidate	Greg Johnson	Greg Johnson
+Candidate	Arlene C Burns	Arlene C Burns
+Candidate	Emerson Levy	Emerson Levy
+Candidate	Brian G Stout	Brian G Stout
+Candidate	Jack Zika	Jack Zika
+Candidate	Dale Fishback	Dale Fishback
+Candidate	E Werner Reschke	E Werner Reschke
