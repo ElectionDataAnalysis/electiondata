@@ -42,7 +42,7 @@ def read_xml(
 
     # identify tags with counts or other raw data (the info we want)
     # and list data to be pulled from each tag
-    fields = set(p["count_fields_by_name"]).union(p["munge_fields"]["in_field_values"])
+    fields = set(p["count_fields_by_name"]).union(p["munge_fields"])
     tags = {f.split(".")[0] for f in fields}
     tags.update(p["nesting_tags"])
     attributes = {
@@ -157,11 +157,11 @@ def read_nested_json(
 
     # The last value is the final key
     count_keys = {k.split(".")[-1] for k in p["count_fields_by_name"]}
-    attribute_keys = {k.split(".")[-1] for k in p["munge_fields"]["in_field_values"]}
+    attribute_keys = {k.split(".")[-1] for k in p["munge_fields"]}
 
     # Any prior values are nested keys
     nested_keys = set()
-    for k in set(p["count_fields_by_name"]) | set(p["munge_fields"]["in_field_values"]):
+    for k in set(p["count_fields_by_name"]) | set(p["munge_fields"]):
         nested_keys |= set(k.split(".")[:-1])
 
     try:
@@ -179,7 +179,7 @@ def read_nested_json(
 
         # Only keep columns that we want, so the other ones don't cause trouble later.
         cols_we_want = list(p["count_fields_by_name"]) + list(
-            p["munge_fields"]["in_field_values"]
+            p["munge_fields"]
         )
         raw_results = raw_results[cols_we_want]
 

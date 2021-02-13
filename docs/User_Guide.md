@@ -75,6 +75,7 @@ and similarly, if necessary, for any Contest or Selection. If there is more than
    Available for flat_text and excel file types:
    * (optional) `rows_to_skip` An integer giving the number of rows to skip at the top to get to the table of counts. This parameter will affect all integers designating rows -- e.g., '<header_0>' is the first row not skipped. This affects the numbering of rows for munge strings that are constant over the sheet as well. If `rows_to_skip = 2`, then '<row_0>' will denote the third row of the actual Excel sheet -- the highest unskipped row. The system recognizes the leftmost non-blank cell as the content to be read.
    * (optional) `all_rows` If the file has no column headers but only data rows with counts, set this parameter to 'data'
+   * (optional) `multi_blocks` if there are multiple blocks of data per page, each with its own headers, set this parameter to 'yes'. For multi-block sheets, munge parameters refer to the blocks (and must be the same for all blocks).
  
  
 Put each formula for parsing information from the results file into the corresponding munge formula section (`[in_field_values]`, `[in_count_headers]` or `[constant_over_sheet]`. Constant items can be give either:
@@ -147,7 +148,8 @@ ReportingUnit_replacement=<column_4>
 
 ```
 
-
+### multi_block example
+[to do]
  
  You may find it helpful to follow the example of the mungers in the repository.
 
@@ -533,6 +535,8 @@ If your sheets or files have a variable number of count columns (e.g., if column
 If your excel file has merged cells across lines, it may not be clear which line holds the information. Save a sheet as tab-separated text to see which line holds which information from merged cells.
 
 If not all rows are data, and some string fields to be munged have blank headers (e.g., often the counties are in the first column without a cell above reading "County"), use pandas default for unnamed column headers. E.g., in multi-headers, 'Unnamed: 0_level_1' corresponds to the first cell in the second line (Cell A2 in Excel).  In single-row headers, 'Unnamed: 0' is the first cell in the header row. See for example `wy_gen.munger`.
+
+If there are hidden columns in an Excel file, you may need to omit the hidden columns from various counts.
 
 ### NIST Exports
 This package also provides functionality to export the data according to the [NIST](https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.1500-100r2.pdf) common data format specifications. This is as simple as identifying an election and jurisdiciton of interest:

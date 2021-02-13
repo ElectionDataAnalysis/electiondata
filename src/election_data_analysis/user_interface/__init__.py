@@ -11,6 +11,7 @@ from typing import Optional, Dict, Any, List
 import datetime
 import csv
 import numpy as np
+import inspect
 
 # constants
 recognized_encodings = {
@@ -437,22 +438,7 @@ def read_single_datafile(
             if not fatal_error(err):
                 df_dict = {"Sheet1": df}
         elif p["file_type"] == "excel":
-            kwargs["index_col"] = None  # TODO: tech debt can we omit index_col for all?
-            #  need to omit index_col here since multi-index headers are possible
-            # to avoid getting fatal error when a sheet doesn't read in correctly
-            for sheet in list_desired_excel_sheets(f_path, p):
-                kwargs["sheet_name"] = sheet
-                try:
-                    df_dict[sheet] = pd.read_excel(f_path, **kwargs)
-                except Exception as exc:
-                    df_dict[sheet] = pd.DataFrame()
-                    err = add_new_error(
-                        err,
-                        "warn-file",
-                        Path(f_path).name,
-                        f"Sheet {sheet} not read due to exception:\n\t{exc}",
-                    )
-
+            df_dict, err = excel_to_dict(f_path, kwargs, list_desired_excel_sheets(f_path, p))
         elif p["file_type"] == "flat_text":
             df = pd.read_csv(f_path, **kwargs)
             df_dict = {"Sheet1": df}
@@ -483,6 +469,35 @@ def read_single_datafile(
     # drop any empty dataframes
     df_dict = {k: v for k, v in df_dict.items() if not v.empty}
     return df_dict, err
+
+
+def excel_to_dict(
+        f_path: str, kwargs: Dict[str,Any], sheet_list: Optional[List[str]]
+) -> (Dict[str,pd.DataFrame], dict):
+    kwargs["index_col"] = None
+    #  need to omit index_col here since multi-index headers are possible
+    # to avoid getting fatal error when a sheet doesn't read in correctly
+    df_dict = dict()
+    error: Optional[dict] = None
+    for sheet in sheet_list:
+        try:
+            df_dict[sheet] = pd.read_excel(f_path, **kwargs, sheet_name=sheet)
+            # ignore any empty sheet
+            if df_dict[sheet].empty:
+                df_dict.pop(sheet)
+                file_name = Path(f_path).name
+                error = add_new_error(
+                    error, "file", file_name, f"No data read from sheet {sheet}"
+                )
+        except Exception as exc:
+            df_dict[sheet] = pd.DataFrame()
+            error = add_new_error(
+                error,
+                "warn-file",
+                Path(f_path).name,
+                f"Sheet {sheet} not read due to exception:\n\t{exc}",
+            )
+    return df_dict, error
 
 
 def add_err_df(err, err_df, munger_name, f_path):
@@ -752,10 +767,10 @@ def fatal_to_warning(err: Optional[Dict[Any, dict]]) -> Optional[Dict[Any, dict]
 
 
 def add_new_error(
-    err: Optional[Dict[Any, dict]], err_type: str, key: str, msg: str
-) -> dict:
+    err: Optional[Dict[str, dict]], err_type: str, key: str, msg: str
+) -> Optional[Dict[str, dict]]:
     """err is a dictionary of dictionaries, one for each err_type.
-    This function return err, augmented by the error specified in <err_type>,<key> and <msg>"""
+    This function returns err, augmented by the error specified in <err_type>,<key> and <msg>"""
     if err is None or err == dict():
         err = {k: {} for k in warning_keys.union(error_keys)}
         # TODO document. Problems with results file are reported with "ini" key
@@ -763,7 +778,7 @@ def add_new_error(
         err = add_new_error(
             err,
             "system",
-            "user_interface.add_new_error",
+            f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
             f"Unrecognized key ({err_type}) for message {msg}",
         )
         return err
@@ -776,11 +791,13 @@ def add_new_error(
 
 def fatal_err_to_non(err: Optional[Dict[Any, dict]]) -> Optional[Dict[Any, dict]]:
     """Returns the same dictionary, but with all fatal errors downgraded to nonfatal errors"""
-    non_fatal_err = err.copy()
-    for k in err.keys():
-        if k[:5] != "warn-":
-            non_fatal_err[f"warn-{k}"] = non_fatal_err.pop(k)
-
+    if err:
+        non_fatal_err = err.copy()
+        for k in err.keys():
+            if k[:5] != "warn-":
+                non_fatal_err[f"warn-{k}"] = non_fatal_err.pop(k)
+    else:
+        non_fatal_err = None
     return non_fatal_err
 
 
@@ -827,11 +844,11 @@ def run_tests(
     else:
         for (election, juris) in election_jurisdiction_list:
             if election is None and juris is not None:
-                keyword = f"{juris.replace(' ', '-')}"
+                keyword = f"_{juris.replace(' ', '-')}"
             elif juris is None and election is not None:
                 keyword = f"{election.replace(' ', '-')}"
             elif juris is not None and election is not None:
-                keyword = f"{juris.replace(' ', '-')}_{election.replace(' ', '-')}"
+                keyword = f"_{juris.replace(' ', '-')}_{election.replace(' ', '-')}"
             else:
                 keyword = "_"
             r = os.system(f"pytest --dbname {dbname} -k {keyword}")
