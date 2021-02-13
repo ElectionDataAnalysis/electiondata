@@ -536,6 +536,8 @@ If your excel file has merged cells across lines, it may not be clear which line
 
 If not all rows are data, and some string fields to be munged have blank headers (e.g., often the counties are in the first column without a cell above reading "County"), use pandas default for unnamed column headers. E.g., in multi-headers, 'Unnamed: 0_level_1' corresponds to the first cell in the second line (Cell A2 in Excel).  In single-row headers, 'Unnamed: 0' is the first cell in the header row. See for example `wy_gen.munger`.
 
+If there are hidden columns in an Excel file, you may need to omit the hidden columns from various counts.
+
 ### NIST Exports
 This package also provides functionality to export the data according to the [NIST](https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.1500-100r2.pdf) common data format specifications. This is as simple as identifying an election and jurisdiciton of interest:
 ```
