@@ -74,3 +74,1778 @@ Alabama;Walker County	county
 Alabama;Washington County	county
 Alabama;Wilcox County	county
 Alabama;Winston County	county
+Alabama;Winston County;WALDROP FREEWILL BAPT_	precinct
+Alabama;Winston County;UPSHAW FIRE DEPT_	precinct
+Alabama;Winston County;PEBBLE FIRE HOUSE	precinct
+Alabama;Winston County;OLD UNION CHURCH	precinct
+Alabama;Winston County;NESMITH COMM_ CTR_	precinct
+Alabama;Winston County;NEIGHBORHOOD FCLTY	precinct
+Alabama;Winston County;NATURAL BRIDGE CITY HALL	precinct
+Alabama;Winston County;MORELAND FIRE DEPT_	precinct
+Alabama;Winston County;LYNN CITY HALL	precinct
+Alabama;Winston County;HOUSTON FIRE DEPT_	precinct
+Alabama;Winston County;HELICON FIRE DEPT_	precinct
+Alabama;Winston County;HALEYVILLE SR_ CTR_	precinct
+Alabama;Winston County;DOUBLE SPRINGS MUN_ BLDG	precinct
+Alabama;Winston County;DELMAR FIRE DEPT_	precinct
+Alabama;Winston County;BLACK POND FIRE DEPT_	precinct
+Alabama;Winston County;ASHRIDGE FIRE DEPT_	precinct
+Alabama;Winston County;ARLEY FIRE DEPT_	precinct
+Alabama;Winston County;ADDISON COMM_ CTR_	precinct
+Alabama;Wilcox County;YELLOW BLUFF DIST 5/3	precinct
+Alabama;Wilcox County;SUNNY S_ BAPT -DIST 6_3,4	precinct
+Alabama;Wilcox County;ST WISDOM BAPT -DIST 5/4	precinct
+Alabama;Wilcox County;ST PAUL AME CH-DIST 2/3	precinct
+Alabama;Wilcox County;ST PAUL AME CH-DIST 1/7	precinct
+Alabama;Wilcox County;PINE HILL CITY -DIST 6/2	precinct
+Alabama;Wilcox County;PINE APPLE FIRE-DIST 2/9	precinct
+Alabama;Wilcox County;PINE APPLE FIRE-DIST 1/3	precinct
+Alabama;Wilcox County;PINE APPLE COMM-DIST 2/6	precinct
+Alabama;Wilcox County;PINE APPLE COMM-DIST 2/1	precinct
+Alabama;Wilcox County;PINE APPLE COMM-DIST 1/9	precinct
+Alabama;Wilcox County;NATL GUARD -DIST 3/3	precinct
+Alabama;Wilcox County;NATL GUARD -DIST 2/8	precinct
+Alabama;Wilcox County;NATL GUARD -DIST 2/7	precinct
+Alabama;Wilcox County;NATL GUARD -DIST 1/5	precinct
+Alabama;Wilcox County;NATL GUARD -DIST 1/1	precinct
+Alabama;Wilcox County;McCANTS PLACE -DIST 3/4	precinct
+Alabama;Wilcox County;MILLER FERRY CH-DIST 4/4	precinct
+Alabama;Wilcox County;LOWER PEACHTREE-DIST 6/5	precinct
+Alabama;Wilcox County;LOWER PEACHTREE-DIST 5/5	precinct
+Alabama;Wilcox County;LAST CHANCE CH-DIST 2/4	precinct
+Alabama;Wilcox County;LAST CHANCE CH-DIST 1/6	precinct
+Alabama;Wilcox County;HOLY CROSS-DIST 5/6	precinct
+Alabama;Wilcox County;HOLY CROSS-DIST 3/1,6	precinct
+Alabama;Wilcox County;FURMAN TATES CH-DIST 2/2	precinct
+Alabama;Wilcox County;FURMAN TATES CH-DIST 1/4	precinct
+Alabama;Wilcox County;FS ERVIN ELEM_ -DIST5/2	precinct
+Alabama;Wilcox County;FAITH FELLOWSHIP-DIST 4/2	precinct
+Alabama;Wilcox County;ELIJAH SHAW COMM-DIST 4/3	precinct
+Alabama;Wilcox County;COY PUBLIC SCH -DIST 3/2	precinct
+Alabama;Wilcox County;CLIFTON BLDG-DIST 4/5	precinct
+Alabama;Wilcox County;BOYKIN NUTRITION-DIST 4/1	precinct
+Alabama;Wilcox County;ARLINGTON COMM -DIST 6/1	precinct
+Alabama;Wilcox County;ANNIEMANIE BLDG-DIST 5/1	precinct
+Alabama;Washington County;YARBO FIRE HOUSE	precinct
+Alabama;Washington County;WAGARVILLE FIRE HOUSE	precinct
+Alabama;Washington County;TIBBIE FIRE HOUSE	precinct
+Alabama;Washington County;ST_ STEPHENS FIRE HOUSE	precinct
+Alabama;Washington County;RED CREEK FIRE HOUSE	precinct
+Alabama;Washington County;McINTOSH COMM_	precinct
+Alabama;Washington County;MOWA CHOCTAW COMM_ CTR_	precinct
+Alabama;Washington County;MILLRY FIRE HOUSE	precinct
+Alabama;Washington County;MALCOM CTR_	precinct
+Alabama;Washington County;LEROY FIRE HOUSE	precinct
+Alabama;Washington County;LATON HILL FIRE HOUSE	precinct
+Alabama;Washington County;HOBSON FIRE HOUSE	precinct
+Alabama;Washington County;FRUITDALE FIRE HOUSE	precinct
+Alabama;Washington County;FRANKVILLE FIRE HOUSE	precinct
+Alabama;Washington County;FAIRFORD FIRE HOUSE	precinct
+Alabama;Washington County;DEER PARK FIRE HOUSE	precinct
+Alabama;Washington County;COPELAND ASSEMBLY OF GOD	precinct
+Alabama;Washington County;CHATOM COURTHOUSE	precinct
+Alabama;Washington County;CHARITY CHAPEL FIRE HOUSE	precinct
+Alabama;Walker County;WESTSIDE BAPTIST	precinct
+Alabama;Walker County;UNION HALL GOODSPRINGS	precinct
+Alabama;Walker County;UNION CHAPEL COMM CTR	precinct
+Alabama;Walker County;TWILLEY TOWN CH	precinct
+Alabama;Walker County;TUTWILER FIRE DEPT	precinct
+Alabama;Walker County;TOWNLEY VFD #2	precinct
+Alabama;Walker County;TOWNLEY COMM CTR	precinct
+Alabama;Walker County;THACH SCHOOL	precinct
+Alabama;Walker County;SIPSEY COMM CTR	precinct
+Alabama;Walker County;SARAGOSSA COMM CTR	precinct
+Alabama;Walker County;RICES CHAPEL CH	precinct
+Alabama;Walker County;PROSPECT METHODIST CH	precinct
+Alabama;Walker County;PLEASANTFIELD COMM	precinct
+Alabama;Walker County;PINEYWOODS FIRE DEPT	precinct
+Alabama;Walker County;PARRISH HIGH SCHOOL GYM	precinct
+Alabama;Walker County;OLD HERMAN CH	precinct
+Alabama;Walker County;OAKMAN COMM CTR	precinct
+Alabama;Walker County;NEW HOPE MISSIONARY	precinct
+Alabama;Walker County;NEW BETHANY CH OF GOD	precinct
+Alabama;Walker County;NAUVOO CITY HALL	precinct
+Alabama;Walker County;MEMORIAL PARK NATATORIUM	precinct
+Alabama;Walker County;MEADOWSMITH LIBRARY	precinct
+Alabama;Walker County;MCCOLLUM NAT'L GUARD	precinct
+Alabama;Walker County;MCCOLLUM MIDWAY FIRE/RESC	precinct
+Alabama;Walker County;MANCHESTER COMM BLDG	precinct
+Alabama;Walker County;LIBERTY HILL CH	precinct
+Alabama;Walker County;KANSAS CITY HALL	precinct
+Alabama;Walker County;JASPER MALL	precinct
+Alabama;Walker County;JASPER ABUNDANT LIFE CH	precinct
+Alabama;Walker County;FARMSTEAD BAPTIST	precinct
+Alabama;Walker County;EMPIRE UNION BLDG	precinct
+Alabama;Walker County;ELDRIDGE CITY HALL	precinct
+Alabama;Walker County;DORA CIVIC CTR	precinct
+Alabama;Walker County;DILWORTH COMM CTR	precinct
+Alabama;Walker County;CURRY COMM CTR_	precinct
+Alabama;Walker County;CROSSROADS CH OF CHRIST	precinct
+Alabama;Walker County;CORONA BAPTIST CH	precinct
+Alabama;Walker County;CORDOVA VFW BLDG	precinct
+Alabama;Walker County;COPELAND FERRY CH OF GOD	precinct
+Alabama;Walker County;CARBON HILL COMM CTR	precinct
+Alabama;Walker County;CARBON HILL ABUNDANT LIFE	precinct
+Alabama;Walker County;BOLDO FIRE STATION	precinct
+Alabama;Walker County;BEVILL ST COMM COLLEGE	precinct
+Alabama;Walker County;BETHEL ASSEMBLY OF GOD	precinct
+Alabama;Walker County;ARGO FIRE DEPT	precinct
+Alabama;Tuscaloosa County;YELLOW CRK BAPT CH	precinct
+Alabama;Tuscaloosa County;WINDHAM SPRINGS BAPT CH	precinct
+Alabama;Tuscaloosa County;WHITSON PLACE CH	precinct
+Alabama;Tuscaloosa County;WESLEY CHAPEL METHODIST CH	precinct
+Alabama;Tuscaloosa County;VANCE TOWN HALL	precinct
+Alabama;Tuscaloosa County;UNIVERSITY MALL	precinct
+Alabama;Tuscaloosa County;UNITY BAPT CH	precinct
+Alabama;Tuscaloosa County;U OF A STUDENT REC CTR	precinct
+Alabama;Tuscaloosa County;TANNEHILL VALLEY BAPT	precinct
+Alabama;Tuscaloosa County;STILLMAN COLLEGE	precinct
+Alabama;Tuscaloosa County;STATION #2 CARROLLS CRK	precinct
+Alabama;Tuscaloosa County;SOMA CH	precinct
+Alabama;Tuscaloosa County;SHERIFF FIRING RANGE	precinct
+Alabama;Tuscaloosa County;ROMULUS FIRE DEPT_	precinct
+Alabama;Tuscaloosa County;PETERSON COMM CH	precinct
+Alabama;Tuscaloosa County;NORTHSIDE LIONS CLUB	precinct
+Alabama;Tuscaloosa County;NORTHPORT COMM CTR	precinct
+Alabama;Tuscaloosa County;NORTHPORT CITY HALL	precinct
+Alabama;Tuscaloosa County;NEW ZION MISSIONARY CH	precinct
+Alabama;Tuscaloosa County;NEW LIFE BAPT CH	precinct
+Alabama;Tuscaloosa County;MT OLIVE BAPT CH	precinct
+Alabama;Tuscaloosa County;MONTGOMERY FIRE DEPT	precinct
+Alabama;Tuscaloosa County;MCDONALD HUGHES COMM	precinct
+Alabama;Tuscaloosa County;MCABEE CTR	precinct
+Alabama;Tuscaloosa County;MAYFIELD FIRE DEPT	precinct
+Alabama;Tuscaloosa County;MARY PHELPS CTR	precinct
+Alabama;Tuscaloosa County;LAKEVIEW BAPT CH	precinct
+Alabama;Tuscaloosa County;KELLERMAN ANTIOCH BAPT	precinct
+Alabama;Tuscaloosa County;HAGLER COMM CTR	precinct
+Alabama;Tuscaloosa County;G_G_ HARDIN COMM CTR	precinct
+Alabama;Tuscaloosa County;GRACE PRES_ CHURCH	precinct
+Alabama;Tuscaloosa County;FOSTERS FIRE DEPT	precinct
+Alabama;Tuscaloosa County;FOREST LAKE METHODIST	precinct
+Alabama;Tuscaloosa County;FLATWOODS BAPT CH	precinct
+Alabama;Tuscaloosa County;FAUCETT VESTAVIA HILLS ELEM	precinct
+Alabama;Tuscaloosa County;ELROD VFD STATION	precinct
+Alabama;Tuscaloosa County;ECHOLA FIRE DEPT	precinct
+Alabama;Tuscaloosa County;DUNCANVILLE MIDDLE SCH	precinct
+Alabama;Tuscaloosa County;COUNTY RD CAMP #3	precinct
+Alabama;Tuscaloosa County;COUNTY CTHS ANNEX	precinct
+Alabama;Tuscaloosa County;COTTONDALE METHODIST CH	precinct
+Alabama;Tuscaloosa County;CORNERSTONE BAPT CH	precinct
+Alabama;Tuscaloosa County;COMM CH COTTONDALE	precinct
+Alabama;Tuscaloosa County;COKER FIRE DEPT	precinct
+Alabama;Tuscaloosa County;COALING TOWN HALL	precinct
+Alabama;Tuscaloosa County;CHAPEL HILL BAPT	precinct
+Alabama;Tuscaloosa County;CH OF THE HIGHLANDS	precinct
+Alabama;Tuscaloosa County;CARROLLS CRK BAPT CH	precinct
+Alabama;Tuscaloosa County;BUHL VFD STATION	precinct
+Alabama;Tuscaloosa County;BOBBY MILLER ACTIVITY	precinct
+Alabama;Tuscaloosa County;BIG SANDY BAPT	precinct
+Alabama;Tuscaloosa County;BELK ACTIVITY CTR	precinct
+Alabama;Tuscaloosa County;ALBERTA BAPT CH	precinct
+Alabama;Tuscaloosa County;ABERNANT BAPT CH	precinct
+Alabama;Tallapoosa County;WALL STREET COMM CTR	precinct
+Alabama;Tallapoosa County;UNION COMM BUILDING	precinct
+Alabama;Tallapoosa County;TALLASSEE CITY HALL	precinct
+Alabama;Tallapoosa County;SARDIS COMM BUILDING	precinct
+Alabama;Tallapoosa County;ROCKY CREEK BAPTIST CH	precinct
+Alabama;Tallapoosa County;REELTOWN FIRE DEPT_	precinct
+Alabama;Tallapoosa County;PENTECOST U_M_C_	precinct
+Alabama;Tallapoosa County;OURTOWN V_F_D_	precinct
+Alabama;Tallapoosa County;NEW SITE TOWN HALL	precinct
+Alabama;Tallapoosa County;NEW PACES PT_ V_F_D_	precinct
+Alabama;Tallapoosa County;MT_ LOVELY BAPT CH	precinct
+Alabama;Tallapoosa County;MONCRIEF	precinct
+Alabama;Tallapoosa County;MARY'S CROSS ROADS V_ H_	precinct
+Alabama;Tallapoosa County;MANOY V_ H_	precinct
+Alabama;Tallapoosa County;JACKSONS GAP V_F_D_	precinct
+Alabama;Tallapoosa County;HILLABEE BAPTIST CH	precinct
+Alabama;Tallapoosa County;HACKNEYVILLE COMM CTR	precinct
+Alabama;Tallapoosa County;FELLOWSHIP BAPT CH	precinct
+Alabama;Tallapoosa County;EAGLE CREEK V_ H_	precinct
+Alabama;Tallapoosa County;DUNCAN MEMORIAL COMM CTR	precinct
+Alabama;Tallapoosa County;DAVISTON COMM CTR	precinct
+Alabama;Tallapoosa County;DADEVILLE REC CTR	precinct
+Alabama;Tallapoosa County;COOPER COMM CTR	precinct
+Alabama;Tallapoosa County;ALEX CITY NATIONAL GUARD	precinct
+Alabama;Tallapoosa County;ALEX CITY FIRE LAKE HILL	precinct
+Alabama;Tallapoosa County;A/C HOU AUTH Y&A SERVICE	precinct
+Alabama;Talladega County;WINTERBORO OLD HIGH SCH GYM	precinct
+Alabama;Talladega County;WALDO CITY HALL	precinct
+Alabama;Talladega County;TALLADEGA CENTRAL HS GYM	precinct
+Alabama;Talladega County;SYCAMORE NUTRITION CTR	precinct
+Alabama;Talladega County;STEMLEY VFD	precinct
+Alabama;Talladega County;ST ANDREWS METHODIST	precinct
+Alabama;Talladega County;SPRING ST COMM CTR	precinct
+Alabama;Talladega County;RENFROE VFD	precinct
+Alabama;Talladega County;OAK GROVE CITY HALL	precinct
+Alabama;Talladega County;MUNFORD OLD HS GYM	precinct
+Alabama;Talladega County;MABRA CTR	precinct
+Alabama;Talladega County;LINCOLN OLD HS GYM	precinct
+Alabama;Talladega County;LIMBAUGH COMM CTR	precinct
+Alabama;Talladega County;LAY LAKE VFD	precinct
+Alabama;Talladega County;KINGSTON BAPT CH	precinct
+Alabama;Talladega County;J CRAIG SMITH COMM CTR	precinct
+Alabama;Talladega County;IRONATON VFD	precinct
+Alabama;Talladega County;FAYETTEVILLE UNITED METHODIST	precinct
+Alabama;Talladega County;EASTABOGA BAPTIST CH	precinct
+Alabama;Talladega County;COUNTY LINE VFD	precinct
+Alabama;Talladega County;BRECON REC CTR	precinct
+Alabama;Talladega County;BON AIR BAPTIST CH	precinct
+Alabama;Talladega County;BETHEL BAPT CH	precinct
+Alabama;Talladega County;BERNEYS STATION VFD	precinct
+Alabama;Talladega County;BEMISTON REC CTR	precinct
+Alabama;Talladega County;ANTIOCH BAPT CH	precinct
+Alabama;Sumter County;YORK SUMTER RESCUE	precinct
+Alabama;Sumter County;WHITFIELD TRAILER	precinct
+Alabama;Sumter County;WARD COMMUNITY CTR	precinct
+Alabama;Sumter County;PANOLA TRAILER	precinct
+Alabama;Sumter County;LIVINGSTON CIVIC CTR	precinct
+Alabama;Sumter County;GEIGER TOWN HALL	precinct
+Alabama;Sumter County;GAINESVILLE COMMUNITY CTR	precinct
+Alabama;Sumter County;EPES COMMUNITY CTR	precinct
+Alabama;Sumter County;EMELLE SUMTER TOWN HALL	precinct
+Alabama;Sumter County;CUBA COMMUNITY CTR	precinct
+Alabama;Sumter County;COATOPA BEL FIRE DEPT	precinct
+Alabama;Sumter County;BOYD TRAILER	precinct
+Alabama;Sumter County;BELLAMY COMMUNITY CTR	precinct
+Alabama;StClair County;WOLF CREEK VFD	precinct
+Alabama;StClair County;WHITES CHAPEL TOWN HALL	precinct
+Alabama;StClair County;WATTSVILLE VFD	precinct
+Alabama;StClair County;STEELE COMM_ CTR_	precinct
+Alabama;StClair County;SPRINGVILLE 1ST UNITED	precinct
+Alabama;StClair County;SLATE UNION CH	precinct
+Alabama;StClair County;SHOAL CREEK COMM_ CTR_	precinct
+Alabama;StClair County;RIVERSIDE TOWN HALL	precinct
+Alabama;StClair County;RAGLAND TOWN HALL	precinct
+Alabama;StClair County;PRESCOTT BAPTIST CH	precinct
+Alabama;StClair County;POPLAR SPRGS CH	precinct
+Alabama;StClair County;PINEDALE VFD	precinct
+Alabama;StClair County;PELL CITY COMM_ CTR_	precinct
+Alabama;StClair County;ODENVILLE CIVIC CTR_	precinct
+Alabama;StClair County;NORTH VALLEY CH	precinct
+Alabama;StClair County;NEW LONDON VFD	precinct
+Alabama;StClair County;NEW HOPE BAPTIST CH	precinct
+Alabama;StClair County;MOODY CIVIC CTR_	precinct
+Alabama;StClair County;GUM SPRGS CH	precinct
+Alabama;StClair County;GALLANT VFD	precinct
+Alabama;StClair County;FRIENDSHIP BAPTIST CH	precinct
+Alabama;StClair County;FAIRVIEW CH	precinct
+Alabama;StClair County;CROPWELL BAPTIST CH	precinct
+Alabama;StClair County;COOK SPRGS VFD	precinct
+Alabama;StClair County;CHANDLER MT_ COMM_ CTR_	precinct
+Alabama;StClair County;CELEBRATIONS	precinct
+Alabama;StClair County;CEDAR GROVE BAPTIST CH	precinct
+Alabama;StClair County;BRANCHVILLE CUMBERLAND	precinct
+Alabama;StClair County;ASHVILLE CITY HALL	precinct
+Alabama;StClair County;ARGO TOWN HALL	precinct
+Alabama;Shelby County;WILSONVILLE UN METHODIST	precinct
+Alabama;Shelby County;VINCENT REVIVAL CTR_	precinct
+Alabama;Shelby County;VANDIVER SR_ CTR_	precinct
+Alabama;Shelby County;VALLEYDALE BAPTIST	precinct
+Alabama;Shelby County;TURNER HOLLIS LEGION	precinct
+Alabama;Shelby County;STEWART STUDENT RETREAT	precinct
+Alabama;Shelby County;SOUTHCREST BAPTIST CH	precinct
+Alabama;Shelby County;SHOAL CREEK TOWN HALL	precinct
+Alabama;Shelby County;SHELBY IRON WORKS	precinct
+Alabama;Shelby County;ROY DOWNS MEMORIAL	precinct
+Alabama;Shelby County;RIVERCHASE CHURCH CHRIST	precinct
+Alabama;Shelby County;RIVERCHASE BAPTIST	precinct
+Alabama;Shelby County;RESTORE-1ST UN METHODIST	precinct
+Alabama;Shelby County;PELHAM PARK & REC_ CTR_	precinct
+Alabama;Shelby County;PELHAM CIVIC COMPLEX	precinct
+Alabama;Shelby County;PEA RIDGE COMM_ CTR_	precinct
+Alabama;Shelby County;NORTH SHELBY BAPTIST	precinct
+Alabama;Shelby County;NEW LIFE ASSEMBLY GOD	precinct
+Alabama;Shelby County;NEW HOPE CUMBERLAND	precinct
+Alabama;Shelby County;MONTEVALLO PARK & REC_	precinct
+Alabama;Shelby County;MEADOWBROOK BAPTIST	precinct
+Alabama;Shelby County;HOOVER FIRE STA_ #8	precinct
+Alabama;Shelby County;HELENA COMM_ CTR_	precinct
+Alabama;Shelby County;HARPERSVILLE COMM_ CTR_	precinct
+Alabama;Shelby County;GREYSTONE FARMS CLUB	precinct
+Alabama;Shelby County;FOURMILE FIRE/RESCUE	precinct
+Alabama;Shelby County;FAITH PRESBY_ CH	precinct
+Alabama;Shelby County;EVANGEL PRESBY_ CH	precinct
+Alabama;Shelby County;DUNNAVANT COMM_ CTR_	precinct
+Alabama;Shelby County;CONCORD BAPTIST CH	precinct
+Alabama;Shelby County;COLUMBIANA REC_ BLDG_	precinct
+Alabama;Shelby County;CHURCH OF JESUS CHRIST	precinct
+Alabama;Shelby County;CHURCH AT BROOKHILLS	precinct
+Alabama;Shelby County;CHRIST UN METHODIST	precinct
+Alabama;Shelby County;CHELSEA COMM_ CTR_	precinct
+Alabama;Shelby County;CHELSEA CHURCH OF GOD	precinct
+Alabama;Shelby County;CAMP BRANCH CIVIC CTR_	precinct
+Alabama;Shelby County;BLACKWATCH SPORTS	precinct
+Alabama;Shelby County;BAY SPRINGS BAPTIST	precinct
+Alabama;Shelby County;ASBURY UN METHODIST	precinct
+Alabama;Shelby County;ALABASTER LIBERTY BAPTIST	precinct
+Alabama;Shelby County;1ST PRESBY_ CH	precinct
+Alabama;Shelby County;1ST CHRISTIAN CH	precinct
+Alabama;Russell County;SPENCER REC CTR	precinct
+Alabama;Russell County;RUSSELL COUNTY C_H_	precinct
+Alabama;Russell County;ROY MARTIN CTR	precinct
+Alabama;Russell County;PITTSVIEW FIRE	precinct
+Alabama;Russell County;OLD SEALE C_H_	precinct
+Alabama;Russell County;LADONIA VFD	precinct
+Alabama;Russell County;HATCHECHUBBEE FIRE	precinct
+Alabama;Russell County;GOLDEN ACRES BAPT	precinct
+Alabama;Russell County;FT_ MITCHELL COMM CTR	precinct
+Alabama;Russell County;FIRE DEPT HURTSBORO	precinct
+Alabama;Russell County;DIXIE VFD	precinct
+Alabama;Russell County;CVC	precinct
+Alabama;Russell County;CRAWFORD VFD	precinct
+Alabama;Russell County;COTTONTON FIRE STATION	precinct
+Alabama;Russell County;CLAUDE PARKMAN BLDG	precinct
+Alabama;Russell County;CENTRAL ACTIVITES BLDG	precinct
+Alabama;Russell County;AUSTIN SUMBRY PARK	precinct
+Alabama;Randolph County;WOODLAND FIRE DEPT	precinct
+Alabama;Randolph County;WILSON STORE	precinct
+Alabama;Randolph County;WESLEY CHAPEL	precinct
+Alabama;Randolph County;WEHADKEE	precinct
+Alabama;Randolph County;WEDOWEE CITY HALL 2	precinct
+Alabama;Randolph County;WEDOWEE CITY HALL 1	precinct
+Alabama;Randolph County;WADLEY	precinct
+Alabama;Randolph County;TIN SHOP	precinct
+Alabama;Randolph County;SWAGG	precinct
+Alabama;Randolph County;ROCK MILLS	precinct
+Alabama;Randolph County;PINE HILL	precinct
+Alabama;Randolph County;OPHELIA	precinct
+Alabama;Randolph County;OMAHA	precinct
+Alabama;Randolph County;NEW HOPE	precinct
+Alabama;Randolph County;NATIONAL GUARD ARMORY 3	precinct
+Alabama;Randolph County;NATIONAL GUARD ARMORY 2	precinct
+Alabama;Randolph County;NATIONAL GUARD ARMORY 1	precinct
+Alabama;Randolph County;MORRISON XR FD	precinct
+Alabama;Randolph County;MOORES STORE	precinct
+Alabama;Randolph County;MIDWAY	precinct
+Alabama;Randolph County;LEVEL ROAD	precinct
+Alabama;Randolph County;GRAHAM	precinct
+Alabama;Randolph County;CORINTH	precinct
+Alabama;Randolph County;CAVERS GROVE	precinct
+Alabama;Randolph County;BETHEL	precinct
+Alabama;Randolph County;BACON LEVEL	precinct
+Alabama;Pike County;TROY REC	precinct
+Alabama;Pike County;TROY PUBLIC LIBRARY	precinct
+Alabama;Pike County;TENNILLE METHODIST CH	precinct
+Alabama;Pike County;TARENTUM COMM CLUB	precinct
+Alabama;Pike County;SWEET PILGRIM CH	precinct
+Alabama;Pike County;SPRINGHILL VFD	precinct
+Alabama;Pike County;SPRINGHILL HOUSING	precinct
+Alabama;Pike County;SACO VOTING CTR #2	precinct
+Alabama;Pike County;SACO VFD	precinct
+Alabama;Pike County;RURAL HOME CO BLDG	precinct
+Alabama;Pike County;PIKE CO COURTHOUSE	precinct
+Alabama;Pike County;OAK BOWERY CH OF CHRIST	precinct
+Alabama;Pike County;MEEKSVILLE VFD	precinct
+Alabama;Pike County;LITTLE OAK SCOTT FARMS BLDG	precinct
+Alabama;Pike County;JOSIE CO BLDG	precinct
+Alabama;Pike County;HENDERSON VOTING CTR #2	precinct
+Alabama;Pike County;HENDERSON VOTING CTR #1	precinct
+Alabama;Pike County;HAMILTON CROSS ROADS	precinct
+Alabama;Pike County;GOSHEN TOWN HALL	precinct
+Alabama;Pike County;GOLDEN SATELLITE BLDG	precinct
+Alabama;Pike County;GALLOWAY RD COMM CTR	precinct
+Alabama;Pike County;FIRST BAPT CH	precinct
+Alabama;Pike County;ENON CO BLDG	precinct
+Alabama;Pike County;EBENEZER VOTING CTR #2	precinct
+Alabama;Pike County;EBENEZER VOTING CTR	precinct
+Alabama;Pike County;DUNN'S VOTING CTR #2	precinct
+Alabama;Pike County;DUNN'S VOTING CTR #1	precinct
+Alabama;Pike County;COLLEGEDALE CH OF CHRIST	precinct
+Alabama;Pike County;CHINA GROVE	precinct
+Alabama;Pike County;BRUNDIDGE STATION	precinct
+Alabama;Pike County;BANKS VOTING CTR #2	precinct
+Alabama;Pike County;BANKS VOTING CTR #1	precinct
+Alabama;Pike County;ANTIOCH CH OF CHRIST	precinct
+Alabama;Pickens County;SPRING HILL	precinct
+Alabama;Pickens County;SAPPS	precinct
+Alabama;Pickens County;REFORM	precinct
+Alabama;Pickens County;PINE GROVE	precinct
+Alabama;Pickens County;PICKENSVILLE	precinct
+Alabama;Pickens County;PALMETTO	precinct
+Alabama;Pickens County;MCSHAN	precinct
+Alabama;Pickens County;MACEDONIA	precinct
+Alabama;Pickens County;LIBERTY	precinct
+Alabama;Pickens County;KIRK	precinct
+Alabama;Pickens County;GORDO	precinct
+Alabama;Pickens County;FORREST	precinct
+Alabama;Pickens County;FAIRVIEW / ZION	precinct
+Alabama;Pickens County;ETHELSVILLE	precinct
+Alabama;Pickens County;COCHRANE / DANCY	precinct
+Alabama;Pickens County;CARROLLTON / SPEEDS MILL	precinct
+Alabama;Pickens County;BETHLEHEM	precinct
+Alabama;Pickens County;BENEVOLA	precinct
+Alabama;Pickens County;ALICEVILLE	precinct
+Alabama;Perry County;WEST PERRY	precinct
+Alabama;Perry County;UNIONTOWN CITY HALL	precinct
+Alabama;Perry County;SEVERE	precinct
+Alabama;Perry County;RADFORDVILLE	precinct
+Alabama;Perry County;OFS FIRE STATION	precinct
+Alabama;Perry County;NORTH PERRY	precinct
+Alabama;Perry County;HINTON HALL	precinct
+Alabama;Perry County;HEIBERGER	precinct
+Alabama;Perry County;HAMBURG VFD	precinct
+Alabama;Perry County;EAST PERRY	precinct
+Alabama;Perry County;COMMUNITY LIFE BLDG	precinct
+Alabama;Perry County;ARMORY	precinct
+Alabama;Morgan County;WESTMEADE BAPT CH	precinct
+Alabama;Morgan County;W MORGAN E LAWRENCE W&S	precinct
+Alabama;Morgan County;UNION HILL SR CTR	precinct
+Alabama;Morgan County;T_C_ ALMON REC CTR	precinct
+Alabama;Morgan County;TURNER SURLES COMM CTR	precinct
+Alabama;Morgan County;TRINITY MUN BLDG	precinct
+Alabama;Morgan County;TRI-COUNTY VFD	precinct
+Alabama;Morgan County;S_A_V_E_S_ FIRE DEPT #1	precinct
+Alabama;Morgan County;PRICEVILLE MUN BLDG	precinct
+Alabama;Morgan County;ODEN RIDGE FIRE DEPT	precinct
+Alabama;Morgan County;NEW CTR BAPT CH	precinct
+Alabama;Morgan County;NEEL UNITED METHODIST CH	precinct
+Alabama;Morgan County;MASSEY FIRE STATION #1	precinct
+Alabama;Morgan County;MACEDONIA C P CH	precinct
+Alabama;Morgan County;LEBANON BAPT CH	precinct
+Alabama;Morgan County;LACEY'S SPRING SR CTR	precinct
+Alabama;Morgan County;JOHN J SPARKMAN CIVIC	precinct
+Alabama;Morgan County;GUM POND FIRE STATION	precinct
+Alabama;Morgan County;FORT DECATUR REC	precinct
+Alabama;Morgan County;FLORETTE VFD	precinct
+Alabama;Morgan County;FIRST BIBLE CH	precinct
+Alabama;Morgan County;FALKVILLE MUN BLDG	precinct
+Alabama;Morgan County;EVA TOWN HALL	precinct
+Alabama;Morgan County;EPIC CH	precinct
+Alabama;Morgan County;DECATUR UTILITIES	precinct
+Alabama;Morgan County;DECATUR FIRE RESCUE #8	precinct
+Alabama;Morgan County;DECATUR FIRE (OLD FLINT)	precinct
+Alabama;Morgan County;DECATUR CH OF CHRIST	precinct
+Alabama;Morgan County;DECATUR BAPT CH	precinct
+Alabama;Morgan County;DANVILLE VFD	precinct
+Alabama;Morgan County;CTR SPRINGS METHODIST CH	precinct
+Alabama;Morgan County;COUNTY DISTRICT 3 VOTING	precinct
+Alabama;Morgan County;COUNTY COURTHOUSE	precinct
+Alabama;Morgan County;COTACO FIRE STATION	precinct
+Alabama;Morgan County;CARRIE MATTHEWS REC CTR	precinct
+Alabama;Morgan County;AQUADOME REC CTR	precinct
+Alabama;Morgan County;AMER LEGION BLDG POST 15	precinct
+Alabama;Morgan County;1ST BAPT CH HARTSELLE	precinct
+Alabama;Morgan County;1ST BAPT AUSTINVILLE	precinct
+
+Alabama;Montgomery County;512 ST JAMES METHODIST	precinct
+Alabama;Montgomery County;511 ARROWHEAD CC	precinct
+Alabama;Montgomery County;510 G_ WASHINGTON SC	precinct
+Alabama;Montgomery County;509 WOODLAND UN METHODIST	precinct
+Alabama;Montgomery County;508 PINE LEVEL SO MO VFD	precinct
+Alabama;Montgomery County;507 DUBLIN SO MO VFD	precinct
+Alabama;Montgomery County;506 DAVIS CROSSROADS	precinct
+Alabama;Montgomery County;505 COVENANT MINISTRIES INTERN	precinct
+Alabama;Montgomery County;504 RAMER PUBLIC LIBRARY	precinct
+Alabama;Montgomery County;503 LAPINE BAPT CH	precinct
+Alabama;Montgomery County;502 SNOWDOUN WOMEN'S CLUB	precinct
+Alabama;Montgomery County;501 1ST CHRISTIAN CH	precinct
+Alabama;Montgomery County;413 PASSION CH MONTGOMERY	precinct
+Alabama;Montgomery County;412 UNION CHAPEL AME	precinct
+Alabama;Montgomery County;411 UNION ACADEMY BAPT	precinct
+Alabama;Montgomery County;410 SHERIDAN HEIGHTS CTR	precinct
+Alabama;Montgomery County;409 CHISHOLM CC	precinct
+Alabama;Montgomery County;408 HIGHLAND GARDEN COMM CTR	precinct
+Alabama;Montgomery County;407 KING HILL COMM CTR	precinct
+Alabama;Montgomery County;406 NEWTOWN COMM CTR	precinct
+Alabama;Montgomery County;405 HOUSTON HILLS CC	precinct
+Alabama;Montgomery County;404 ASU ACADOME	precinct
+Alabama;Montgomery County;403 CLEVELAND AVE YMCA	precinct
+Alabama;Montgomery County;402 MCINTYRE CC	precinct
+Alabama;Montgomery County;401 ST_ JAMES BAPT CH	precinct
+Alabama;Montgomery County;306 EASTDALE BAPT CH	precinct
+Alabama;Montgomery County;305 FRAZER METHOIST	precinct
+Alabama;Montgomery County;304 LAGOON PARK FIRE	precinct
+Alabama;Montgomery County;303 EASTMONT BAPT CH	precinct
+Alabama;Montgomery County;302 EASTERN HILLS BAPT	precinct
+Alabama;Montgomery County;301 DALRAIDA CH CHRIST	precinct
+Alabama;Montgomery County;211 RUFUS LEWIS LIBRARY	precinct
+Alabama;Montgomery County;210 PINTLALA FIRE	precinct
+Alabama;Montgomery County;209 1ST SOUTHERN BAPT	precinct
+Alabama;Montgomery County;208 CATOMA SCH	precinct
+Alabama;Montgomery County;207 HUNTER STATION CC	precinct
+Alabama;Montgomery County;206 MACEDONIA MIRACLE	precinct
+Alabama;Montgomery County;205 SOUTHLAWN BAPT	precinct
+Alabama;Montgomery County;204 AFED CONFERENCE	precinct
+Alabama;Montgomery County;203 HAYNEVILLE RD COMM CTR	precinct
+Alabama;Montgomery County;202 BEULAH BAPT CH	precinct
+Alabama;Montgomery County;201 ST PAUL AME CH	precinct
+Alabama;Montgomery County;107 TRENHOLM COMM COLLEGE	precinct
+Alabama;Montgomery County;106 CITY OF REFUGE CH	precinct
+Alabama;Montgomery County;105 ALDERSGATE METHODIST	precinct
+Alabama;Montgomery County;104 WHITFIELD METHODIST	precinct
+Alabama;Montgomery County;103 MUSEUM OF FINE ARTS	precinct
+Alabama;Montgomery County;102 VAUGHN PARK CH	precinct
+Alabama;Montgomery County;101 LEO DRUM THEATER	precinct
+Alabama;Monroe County;WAINWRIGHT FINCHBURG	precinct
+Alabama;Monroe County;URIAH FIRE DEPT	precinct
+Alabama;Monroe County;ST JOHN AME CH	precinct
+Alabama;Monroe County;SHILOH MISSIONARY	precinct
+Alabama;Monroe County;PHIL BC TUNNEL SPRGS	precinct
+Alabama;Monroe County;PETERMAN WATER DEPT	precinct
+Alabama;Monroe County;PERDUE HILL MAS_ LODGE	precinct
+Alabama;Monroe County;OLD TEXAS CC SIMPKINS	precinct
+Alabama;Monroe County;OAK GROVE	precinct
+Alabama;Monroe County;NEW FRANKLIN FIRE DEPT	precinct
+Alabama;Monroe County;MONROEVILLE HOUSING	precinct
+Alabama;Monroe County;MONROEVILLE FIRE ST	precinct
+Alabama;Monroe County;MONROEVILLE COMM CTR	precinct
+Alabama;Monroe County;MINEOLA METHODIST CH	precinct
+Alabama;Monroe County;MEXIA FIRE STATION	precinct
+Alabama;Monroe County;MEGARGEL ASSEM OF GOD	precinct
+Alabama;Monroe County;LIMESTONE FAULK	precinct
+Alabama;Monroe County;L PEACHTREE PACK BEND	precinct
+Alabama;Monroe County;GOODWAY FIRE DEPT	precinct
+Alabama;Monroe County;FRISCO BAPT CH	precinct
+Alabama;Monroe County;EXCEL ASSEM OF GOD	precinct
+Alabama;Monroe County;COLEMAN ASSEM OF GOD	precinct
+Alabama;Monroe County;CHURCH OF CHRIST	precinct
+Alabama;Monroe County;CHRYSLER ELISKA	precinct
+Alabama;Monroe County;BUENA VISTA VRENDEN	precinct
+Alabama;Monroe County;BETHEL BAPT CH	precinct
+Alabama;Monroe County;BETHANY BAPT CH	precinct
+Alabama;Monroe County;BEATRICE TOWN HALL	precinct
+Alabama;Monroe County;ANTIOCH BAPT CH	precinct
+Alabama;Mobile County;WHISTLER UN METHODIST CH	precinct
+Alabama;Mobile County;VOLUNTEERS OF AMERICA	precinct
+Alabama;Mobile County;VIGOR HIGH SCH	precinct
+Alabama;Mobile County;VIA_ SENIOR CTR	precinct
+Alabama;Mobile County;UNIVERSITY CH OF CHRIST	precinct
+Alabama;Mobile County;UNION BAPTIST CH	precinct
+Alabama;Mobile County;TURNERVILLE BAPTIST CH	precinct
+Alabama;Mobile County;TREE OF LIFE CHRISTIAN	precinct
+Alabama;Mobile County;TILLMANS CORNER COMM	precinct
+Alabama;Mobile County;THREE CIRCLE CH	precinct
+Alabama;Mobile County;THOMAS SULLIVAN COMM	precinct
+Alabama;Mobile County;THE RIVER	precinct
+Alabama;Mobile County;TANNER WILLIAMS ELEM	precinct
+Alabama;Mobile County;SURGE CH	precinct
+Alabama;Mobile County;SUNLIGHT AUDITORIUM	precinct
+Alabama;Mobile County;ST_ PAUL'S EPISCOPAL CH	precinct
+Alabama;Mobile County;ST_ MICHAELS CATHOLIC	precinct
+Alabama;Mobile County;ST PHILLIP NERI CATHOLIC	precinct
+Alabama;Mobile County;ST ELMO ELEM	precinct
+Alabama;Mobile County;SHELTON BEACH RD BAPTIST	precinct
+Alabama;Mobile County;SEMMES COMM CTR	precinct
+Alabama;Mobile County;SEMMES 1ST BAPTIST CH	precinct
+Alabama;Mobile County;SARALAND CIVIC CTR	precinct
+Alabama;Mobile County;ROBERT L_ HOPE COMM CTR	precinct
+Alabama;Mobile County;ROBBINS ELEM	precinct
+Alabama;Mobile County;REVELATION BAPTIST CH	precinct
+Alabama;Mobile County;REGENCY CH OF CHRIST	precinct
+Alabama;Mobile County;PHILLIPS PREPARATORY	precinct
+Alabama;Mobile County;PALMER PILLIANS MIDDLE	precinct
+Alabama;Mobile County;OUR LADY OF LOURDES CATHOLIC C	precinct
+Alabama;Mobile County;McDAVID JONES ELEM_	precinct
+Alabama;Mobile County;MOFFETT ROAD AOG	precinct
+Alabama;Mobile County;MOBILE MUSEUM OF ART	precinct
+Alabama;Mobile County;MOBILE COMM_ ACTION	precinct
+Alabama;Mobile County;MOBILE CHRISTIAN CH	precinct
+Alabama;Mobile County;MICHAEL A_ FIGURES COMM	precinct
+Alabama;Mobile County;MEMORIAL BAPTIST CH	precinct
+Alabama;Mobile County;MEADOWLAKE ELEM	precinct
+Alabama;Mobile County;MAGNOLIA SPRINGS CH	precinct
+Alabama;Mobile County;LEINKAUF ELEM	precinct
+Alabama;Mobile County;J_E_ TURNER ELEM	precinct
+Alabama;Mobile County;J_C_ DAVIS AUDITORIUM	precinct
+Alabama;Mobile County;JOSEPH DOTCH COMM CTR	precinct
+Alabama;Mobile County;JAMES SEALS JR_ PARK & REC	precinct
+Alabama;Mobile County;HOPE CHAPEL A_M_E_Z_	precinct
+Alabama;Mobile County;HOLY NAME OF JESUS CH	precinct
+Alabama;Mobile County;HOLLOWAY ELEM	precinct
+Alabama;Mobile County;HOLLINGERS ISLAND ELEM	precinct
+Alabama;Mobile County;HANK AARON STADIUM	precinct
+Alabama;Mobile County;GRAND BAY MIDDLE SCH	precinct
+Alabama;Mobile County;GRACEPOINT CH OF GOD	precinct
+Alabama;Mobile County;GRACE UN METHODIST	precinct
+Alabama;Mobile County;FRIENDSHIP MISSIONARY	precinct
+Alabama;Mobile County;FRIENDSHIP BAPTIST CH	precinct
+Alabama;Mobile County;FOREST HILL ELEM	precinct
+Alabama;Mobile County;E_R_ DICKSON ELEM	precinct
+Alabama;Mobile County;EICHOLD MERTZ	precinct
+Alabama;Mobile County;DODGE ELEM	precinct
+Alabama;Mobile County;DESTINATION CH	precinct
+Alabama;Mobile County;DAVIDSON HIGH SCH	precinct
+Alabama;Mobile County;DAUPHIN ISLAND SEA LAB	precinct
+Alabama;Mobile County;CYPRESS SHORES BAPTIST	precinct
+Alabama;Mobile County;CREOLA ASSEMBLY OF GOD	precinct
+Alabama;Mobile County;CREEKWOOD CH OF CHRIST	precinct
+Alabama;Mobile County;CRAIGHEAD ELEM SCH	precinct
+Alabama;Mobile County;COTTAGE HILL BAPTIST CH	precinct
+Alabama;Mobile County;COLLINS RHODES ELEM	precinct
+Alabama;Mobile County;COLLIER ELEM	precinct
+Alabama;Mobile County;CLEARWATER CHRISTIAN CH	precinct
+Alabama;Mobile County;BURROUGHS ELEM SCH	precinct
+Alabama;Mobile County;BURNS MIDDLE	precinct
+Alabama;Mobile County;BOYS & GIRLS CLUB	precinct
+Alabama;Mobile County;BLOUNT HIGH SCH	precinct
+Alabama;Mobile County;BISHOP ST COMM COLLEGE	precinct
+Alabama;Mobile County;BETHEL BAPTIST	precinct
+Alabama;Mobile County;BELSAW MT_ VERNON SCH	precinct
+Alabama;Mobile County;BEL AIR MALL	precinct
+Alabama;Mobile County;BAYOU LA BATRE COMM CTR	precinct
+Alabama;Mobile County;BAKER HIGH	precinct
+Alabama;Mobile County;AZALEA CITY CH OF CHRIST	precinct
+Alabama;Mobile County;APOSTOLIC CH OF GOD	precinct
+Alabama;Mobile County;ABBA SHRINE TEMPLE	precinct
+Alabama;Mobile County;1ST EVANGELICAL METHODIST	precinct
+Alabama;Mobile County;1ST BAPTIST WILMER GYM	precinct
+Alabama;Mobile County;1ST BAPTIST CH SATSUMA	precinct
+Alabama;Marshall County;WAKEFIELD VFD	precinct
+Alabama;Marshall County;UNION GROVE COMM_ CTR	precinct
+Alabama;Marshall County;SWEARENGIN COMM_ CTR	precinct
+Alabama;Marshall County;SANCTUARY ON THE MTN	precinct
+Alabama;Marshall County;PROSPECT CEMETERY	precinct
+Alabama;Marshall County;PLEASANT GROVE VFD	precinct
+Alabama;Marshall County;PINE GROVE COMM_ CTR	precinct
+Alabama;Marshall County;NEW BRASHIERS CHAPEL	precinct
+Alabama;Marshall County;MT_ HEBRON FIRE DEPT_	precinct
+Alabama;Marshall County;MT_ CALVARY BAPTIST	precinct
+Alabama;Marshall County;MIDWAY COMM_ CTR	precinct
+Alabama;Marshall County;LIBERTY HILL	precinct
+Alabama;Marshall County;LATTIWOOD COMM_ CTR	precinct
+Alabama;Marshall County;HONEYCOMB BAPTIST	precinct
+Alabama;Marshall County;HENRYVILLE METHODIST	precinct
+Alabama;Marshall County;HEBRON COMM_ CTR	precinct
+Alabama;Marshall County;GUNTERSVILLE REC_ CTR	precinct
+Alabama;Marshall County;GRANT CITY HALL	precinct
+Alabama;Marshall County;GEORGIA MTN REC_ CTR	precinct
+Alabama;Marshall County;DOUGLAS CITY HALL	precinct
+Alabama;Marshall County;DISTRICT 4 CO_ SHOP	precinct
+Alabama;Marshall County;CRANFORD VFD	precinct
+Alabama;Marshall County;BUCKSNORT COMM_ CTR	precinct
+Alabama;Marshall County;BOAZ REC_ CTR	precinct
+Alabama;Marshall County;ASBURY FIRE	precinct
+Alabama;Marshall County;ARAB SENIOR CTR	precinct
+Alabama;Marshall County;ALDER SPGS_ COMM_ CTR	precinct
+Alabama;Marshall County;1ST BAPTIST CHURCH	precinct
+Alabama;Marion County;WINFIELD COMM CTR	precinct
+Alabama;Marion County;WIGINTON COMM BLDG	precinct
+Alabama;Marion County;SHOTTSVILLE FIRE	precinct
+Alabama;Marion County;SHILOH COMM BLDG	precinct
+Alabama;Marion County;RYE BYRD VFD	precinct
+Alabama;Marion County;PIKEVILLE TRAILER	precinct
+Alabama;Marion County;PEARCES MILL PEA RIDGE	precinct
+Alabama;Marion County;KIMBROUGH CRAFT COMM SOUTH	precinct
+Alabama;Marion County;KIMBROUGH CRAFT COMM NORTH	precinct
+Alabama;Marion County;KEMP PLEASANT SITE CH	precinct
+Alabama;Marion County;HOWELL SULLINS CH	precinct
+Alabama;Marion County;HAMILTON REC CTR	precinct
+Alabama;Marion County;HACKLEBURG SR CTR	precinct
+Alabama;Marion County;GUIN CITY HALL	precinct
+Alabama;Marion County;CLARK BLDG OFF 129	precinct
+Alabama;Marion County;BRILLIANT COMM CTR	precinct
+Alabama;Marion County;BEXAR BEHIND OLD POST	precinct
+Alabama;Marion County;BEAR CREEK CITY HALL	precinct
+Alabama;Marion County;BARNSVILLE TRAILER	precinct
+Alabama;Marion County;BACCUS UNION HALL	precinct
+Alabama;Marengo County;THOMASTON	precinct
+Alabama;Marengo County;SWEET WATER TOWN OFFICE	precinct
+Alabama;Marengo County;SURGINER COMM_ CTR_	precinct
+Alabama;Marengo County;RANGELINE BAPTISIT CH	precinct
+Alabama;Marengo County;PUTNAM VTG BOOTH	precinct
+Alabama;Marengo County;PROVIDENCE TOWN HALL	precinct
+Alabama;Marengo County;NICHOLSVILLE BAPTIST	precinct
+Alabama;Marengo County;NANAFALIA	precinct
+Alabama;Marengo County;MYRTLEWOOD COMM_	precinct
+Alabama;Marengo County;MAGNOLIA COMM_ CTR_	precinct
+Alabama;Marengo County;LINDEN HWY 43	precinct
+Alabama;Marengo County;LINDEN ARMORY	precinct
+Alabama;Marengo County;JEFFERSON VFD	precinct
+Alabama;Marengo County;FLATWOODS COMM_ CTR_	precinct
+Alabama;Marengo County;FAUNSDALE TOWN OFFICE	precinct
+Alabama;Marengo County;DIXONS MILLS VFD	precinct
+Alabama;Marengo County;DEMOPOLIS NAT'L GUARD	precinct
+Alabama;Marengo County;DEMOPOLIS CIVIC CTR_	precinct
+Alabama;Marengo County;AFLAME CH	precinct
+Alabama;Madison County;WILLOWBROOK BAPT CH	precinct
+Alabama;Madison County;WESTSIDE COMM_ CTR_	precinct
+Alabama;Madison County;WEST HUNTSVILLE BAPT	precinct
+Alabama;Madison County;WEATHERLY HGTS BAPT	precinct
+Alabama;Madison County;W HUNTSVILLE CH CHRIST	precinct
+Alabama;Madison County;TRINITY UNITED METHODIST	precinct
+Alabama;Madison County;TRINITY PRESBYTERIAN CH	precinct
+Alabama;Madison County;TRIANA CITY HALL	precinct
+Alabama;Madison County;TONEY UMC	precinct
+Alabama;Madison County;THE WHITESBURG CTR_	precinct
+Alabama;Madison County;THE DWELLING PLACE	precinct
+Alabama;Madison County;ST_ MATTHEW PB CHURCH	precinct
+Alabama;Madison County;ST_ LUKE CHRISTIAN CH	precinct
+Alabama;Madison County;ST_ JOHNS CATHOLIC CH	precinct
+Alabama;Madison County;SOUTHWOOD PRESBYTERIAN	precinct
+Alabama;Madison County;SHERWOOD BAPT CH	precinct
+Alabama;Madison County;RIVERTREE CH	precinct
+Alabama;Madison County;RESTORATION CH	precinct
+Alabama;Madison County;PLEASANT SPRGS BAPT	precinct
+Alabama;Madison County;PLAINVIEW CH CHRIST	precinct
+Alabama;Madison County;PINEVIEW BAPT CH	precinct
+Alabama;Madison County;OWENS CROSS ROADS	precinct
+Alabama;Madison County;OPTIMIST PARK REC CTR_	precinct
+Alabama;Madison County;OAKWOOD UNIVERSITY CH	precinct
+Alabama;Madison County;NEW SHILOH CH MINISTRIES	precinct
+Alabama;Madison County;NEW MARKET VOL FIRE #2	precinct
+Alabama;Madison County;NEW MARKET FIRE STA_	precinct
+Alabama;Madison County;NEW HOPE CITY HALL	precinct
+Alabama;Madison County;NE HUNTSVILLE TRAINING	precinct
+Alabama;Madison County;MT_ ZION BAPT CH	precinct
+Alabama;Madison County;MONTE SANO UN METHODIST	precinct
+Alabama;Madison County;MONROVIA COMM_ CTR_	precinct
+Alabama;Madison County;MONROVIA CH CHRIST	precinct
+Alabama;Madison County;MERDIANVILLE CH CHRIST	precinct
+Alabama;Madison County;MAYSVILLE CH CHRIST	precinct
+Alabama;Madison County;MARY KELLY JOHNSTON GYM	precinct
+Alabama;Madison County;MADISON PUBLIC LIBRARY	precinct
+Alabama;Madison County;MADISON MISSION 7TH DAY	precinct
+Alabama;Madison County;MADISON CO NATURE TRAIL	precinct
+Alabama;Madison County;MADISON CITY HALL	precinct
+Alabama;Madison County;MADISON BAPT CH	precinct
+Alabama;Madison County;LOCUST GROVE BAPT CH	precinct
+Alabama;Madison County;LITTLE INDIAN CREEK	precinct
+Alabama;Madison County;LEWIS CHAPEL C_ P_ CH	precinct
+Alabama;Madison County;LAKEWOOD COMM_ CTR_	precinct
+Alabama;Madison County;JACKSON WAY BAPT CH	precinct
+Alabama;Madison County;INTERGRAPH	precinct
+Alabama;Madison County;HILLWOOD BAPT CH	precinct
+Alabama;Madison County;HARVEST BAPT CH	precinct
+Alabama;Madison County;HAROLD HARBIN GYM	precinct
+Alabama;Madison County;HAMPTON COVE CH CHRIST	precinct
+Alabama;Madison County;GURLEY SR_ CTR_	precinct
+Alabama;Madison County;FIRST MISSIONARY BAPT	precinct
+Alabama;Madison County;FIRST CH OF GOD	precinct
+Alabama;Madison County;FIRST BAPT MERDIANVILLE	precinct
+Alabama;Madison County;FIRST BAPT CH	precinct
+Alabama;Madison County;FAITH LUTHERAN CH	precinct
+Alabama;Madison County;DR_ RICHARD SHOWERS CTR_	precinct
+Alabama;Madison County;CO_ COMMISSION DIST_ 1	precinct
+Alabama;Madison County;COVENANT PRESBYTERIAN CH	precinct
+Alabama;Madison County;COVE UNITED METHODIST CH	precinct
+Alabama;Madison County;COVE CH AT CHASE	precinct
+Alabama;Madison County;COMM_ FELLOWSHIP	precinct
+Alabama;Madison County;CLEMENTS BAPT CH	precinct
+Alabama;Madison County;CHARLES STONE AG CTR_	precinct
+Alabama;Madison County;CALVARY FRIENDSHIP CTR_	precinct
+Alabama;Madison County;BROWNSBORO BAPT CH	precinct
+Alabama;Madison County;BOBO VFD	precinct
+Alabama;Madison County;BOB HARRISON SR_ CTR_	precinct
+Alabama;Madison County;ALL NATIONS	precinct
+Alabama;Madison County;ALDERSGATE UMC	precinct
+
+Alabama;Madison County;A & M UNIVERSITY NEW GYM	precinct
+Alabama;Macon County;WARRIOR DIST 2 REC CTR	precinct
+Alabama;Macon County;VOLUNTEER FIRE STATION	precinct
+Alabama;Macon County;TUSKEGEE MUNICIPAL CMPLX	precinct
+Alabama;Macon County;SOJOURNER COMM CTR	precinct
+Alabama;Macon County;PRAIRIE FARM REC CTR	precinct
+Alabama;Macon County;NOTASULGA TOWN HALL	precinct
+Alabama;Macon County;NATIONAL GUARD ARMORY	precinct
+Alabama;Macon County;MARGARET MURRAY	precinct
+Alabama;Macon County;FRANKLIN TOWN HALL	precinct
+Alabama;Macon County;DIST 4 REC CTR	precinct
+Alabama;Macon County;DIST 4 COMM CTR	precinct
+Alabama;Macon County;COTTON VALLEY REC CTR	precinct
+Alabama;Macon County;CHISHOLM COMM CTR	precinct
+Alabama;Macon County;BROWNVILLE VFD	precinct
+Alabama;Lowndes County;WHITE HALL TOWN HALL	precinct
+Alabama;Lowndes County;SANDY RIDGE COMMUNITY	precinct
+Alabama;Lowndes County;NEW SALEM CHURCH	precinct
+Alabama;Lowndes County;MOSSES TOWN HALL	precinct
+Alabama;Lowndes County;LOWNDESBORO CME CHURCH	precinct
+Alabama;Lowndes County;LOWNDES CITY DEV OFC	precinct
+Alabama;Lowndes County;LILY BAPTIST CHURCH	precinct
+Alabama;Lowndes County;HAYNEVILLE C_H_ ANNEX	precinct
+Alabama;Lowndes County;FT_ DEPOSIT ARMORY	precinct
+Alabama;Lowndes County;CALHOUN VOL FIRE	precinct
+Alabama;Lowndes County;BURKEVILLE VFD	precinct
+Alabama;Lowndes County;BETHEL CHURCH	precinct
+Alabama;Limestone County;WOOLEY SPRINGS BAPTIST	precinct
+Alabama;Limestone County;WESTSIDE COMM_ CTR_	precinct
+Alabama;Limestone County;WEST LIMESTONE FIRE DEPT_	precinct
+Alabama;Limestone County;ROUND ISLAND BAPTIST CH	precinct
+Alabama;Limestone County;RIDDLES HALL	precinct
+Alabama;Limestone County;PLEASANT GROVE FIRE DEPT_	precinct
+Alabama;Limestone County;PINCHAM-LINCOLN CTR_	precinct
+Alabama;Limestone County;MAYS MEMORIAL BAPTIST	precinct
+Alabama;Limestone County;LINDSAY LANE BAPTIST CH	precinct
+Alabama;Limestone County;LESTER TOWN HALL	precinct
+Alabama;Limestone County;LAMB OF GOD LUTHERAN CH	precinct
+Alabama;Limestone County;ISOM'S CHAPEL UMC	precinct
+Alabama;Limestone County;GOODSPRINGS SR_ CTR_	precinct
+Alabama;Limestone County;FRIENDSHIP UMC	precinct
+Alabama;Limestone County;FIRST BAPTIST CH TANNER	precinct
+Alabama;Limestone County;ELKTON ROAD BAPTIST CH	precinct
+Alabama;Limestone County;ELKMONT FIRE DEPARTMENT	precinct
+Alabama;Limestone County;COPELAND PRESBYTERIAN CH	precinct
+Alabama;Limestone County;CLEMENTS BAPTIST CH	precinct
+Alabama;Limestone County;CAPSHAW BAPTIST CH	precinct
+Alabama;Limestone County;BETHEL CH OF CHRIST	precinct
+Alabama;Limestone County;BELMOR BAPTIST CH	precinct
+Alabama;Limestone County;ATHENS SR_ CITIZEN CTR_	precinct
+Alabama;Limestone County;ATHENS REC_ CTR_	precinct
+Alabama;Limestone County;ARDMORE SENIOR CENTER	precinct
+Alabama;Lee County;UPTOWN WAVERLY	precinct
+Alabama;Lee County;SMITH STATION SR CTR	precinct
+Alabama;Lee County;SMITH STATION AUDITORIUM	precinct
+Alabama;Lee County;PINE GROVE CH	precinct
+Alabama;Lee County;OPELIKA SPORTSPLEX	precinct
+Alabama;Lee County;OPELIKA REC CTR	precinct
+Alabama;Lee County;OPELIKA LEARNING CTR	precinct
+Alabama;Lee County;MT ZION FAMILY ENRICHMENT CENT	precinct
+Alabama;Lee County;LEE COUNTY LEARNING (LC2)	precinct
+Alabama;Lee County;GLENWOOD SCH	precinct
+Alabama;Lee County;FRANK BROWN REC CTR	precinct
+Alabama;Lee County;FARMVILLE VFD	precinct
+Alabama;Lee County;EAMC HEALTH RESOURCE	precinct
+Alabama;Lee County;DOWNTOWN MARVYN	precinct
+Alabama;Lee County;DEAN RD REC CTR	precinct
+Alabama;Lee County;CRAWFORD VFD	precinct
+Alabama;Lee County;COVINGTON PARK COMM CTR	precinct
+Alabama;Lee County;CLARION INN S COLLEGE	precinct
+Alabama;Lee County;BOYKIN COMM CTR	precinct
+Alabama;Lee County;BEULAH HIGH	precinct
+Alabama;Lee County;BEULAH FIRE #3	precinct
+Alabama;Lee County;BEAUREGARD SCH GYM	precinct
+Alabama;Lawrence County;WOLF SPRING BAPT_ 10-1	precinct
+Alabama;Lawrence County;TOWN CREEK COM_ CTR_ 5-1	precinct
+Alabama;Lawrence County;SPEAKE FIRE DEPT_ 28-1	precinct
+Alabama;Lawrence County;RED BANK FIRE DEPT_ 3-1	precinct
+Alabama;Lawrence County;PLEASANT GRV 14 20 23 27	precinct
+Alabama;Lawrence County;PINEY CROVE CH 32-1	precinct
+Alabama;Lawrence County;PINE GROVE CH 36-1	precinct
+Alabama;Lawrence County;PILGRAM MISS_ BAPT_ 18-1	precinct
+Alabama;Lawrence County;N_ COUTLAND SR_ CTR_ 2-1	precinct
+Alabama;Lawrence County;NEW ZION BAPT_ 11-1	precinct
+Alabama;Lawrence County;MT MORIAH METH_15-1 21-1	precinct
+Alabama;Lawrence County;MT HOPE BAPT_ FELLOW 9-1	precinct
+Alabama;Lawrence County;MOULTON CITY HALL 24-1	precinct
+Alabama;Lawrence County;MCCARLEY CTR_ 6-1	precinct
+Alabama;Lawrence County;LOOSIER CH OF CHRIST16-1	precinct
+Alabama;Lawrence County;LINDSEY HALL CH 31-1	precinct
+Alabama;Lawrence County;LAWRENCE HEALTH DEPT19-1	precinct
+Alabama;Lawrence County;LANDERSVILLE METH_ 12-1	precinct
+Alabama;Lawrence County;KITCHENS MILL 29-1 35-1	precinct
+Alabama;Lawrence County;HILLSBORO CITY HALL 1-1	precinct
+Alabama;Lawrence County;HILLBORO FIRE DEPT_ 4-1	precinct
+Alabama;Lawrence County;HATTON CH OF CHRIST 13-1	precinct
+Alabama;Lawrence County;FREEMAN TAB 26-1	precinct
+Alabama;Lawrence County;FAIRFIELD CH 22-1 30-1	precinct
+Alabama;Lawrence County;DONALD BAPT_ CH 7-1 8-1	precinct
+Alabama;Lawrence County;CHALYBEATE FIRE DEPT17-1	precinct
+Alabama;Lawrence County;CADDO SR_ CTR_ 34-1	precinct
+Alabama;Lawrence County;CADDO FIRE DEPT_ 33-1	precinct
+Alabama;Lawrence County;BOARD OF ED 25-1	precinct
+Alabama;Lauderdale County;WATERLOO SENIOR CTR_	precinct
+Alabama;Lauderdale County;UNDERWOOD COMM_ CTR_	precinct
+Alabama;Lauderdale County;ST_ JAMES UMC	precinct
+Alabama;Lauderdale County;ST_ FLORIAN SENIOR CTR_	precinct
+Alabama;Lauderdale County;STEWARTVILLE CH CHRIST	precinct
+Alabama;Lauderdale County;SHERROD AVE CH OF CHRIST	precinct
+Alabama;Lauderdale County;SALEM CHURCH OF CHRIST	precinct
+Alabama;Lauderdale County;ROGERSVILLE FIRST BAPTIST	precinct
+Alabama;Lauderdale County;LEXINGTON SENIOR CTR_	precinct
+Alabama;Lauderdale County;LAUDERDALE CO_ BOARD	precinct
+Alabama;Lauderdale County;KILLEN CH OF CHRIST	precinct
+Alabama;Lauderdale County;HIGHLAND BAPT_ CH	precinct
+Alabama;Lauderdale County;HIBBETT SCHOOL	precinct
+Alabama;Lauderdale County;HANDY RECREATION CTR_	precinct
+Alabama;Lauderdale County;GRADY RICHARDS CTR_	precinct
+Alabama;Lauderdale County;GALILEE MISSIONARY BAPT_	precinct
+Alabama;Lauderdale County;FLORENCE- HIGH SCHOOL	precinct
+Alabama;Lauderdale County;FLORENCE- 1ST BAPT_	precinct
+Alabama;Lauderdale County;FLORENCE BLVD CH OF CHRIST	precinct
+Alabama;Lauderdale County;FAIRGROUNDS RD SENIOR	precinct
+Alabama;Lauderdale County;ELGIN SENIOR CTR_	precinct
+Alabama;Lauderdale County;E CAMPUS WOODMONT BAPT_	precinct
+Alabama;Lauderdale County;CTR_ STAR 1ST BAPT_	precinct
+Alabama;Lauderdale County;CLOVERDALE COMM_ CTR_	precinct
+Alabama;Lauderdale County;CHRIST CHAPEL CH	precinct
+Alabama;Lauderdale County;CENTRAL COMM_ CTR_	precinct
+Alabama;Lauderdale County;CENTRAL BAPT_ CH	precinct
+Alabama;Lauderdale County;BROADWAY RECREATION CTR_	precinct
+Alabama;Lauderdale County;ATLAS CH OF CHRIST	precinct
+Alabama;Lauderdale County;ANDERSON GYM	precinct
+Alabama;Lauderdale County;1ST PRESBYTERIAN CH	precinct
+Alabama;Lamar County;VERNON ARMORY WEST	precinct
+Alabama;Lamar County;VERNON ARMORY EAST	precinct
+Alabama;Lamar County;VAILS	precinct
+Alabama;Lamar County;TRULL	precinct
+Alabama;Lamar County;SULLIGENT CITY HALL SOUTH	precinct
+Alabama;Lamar County;SULLIGENT CITY HALL NORTH	precinct
+Alabama;Lamar County;STRICKLAND KINGVILLE	precinct
+Alabama;Lamar County;STAR COMM CTR	precinct
+Alabama;Lamar County;PINE SPRINGS	precinct
+Alabama;Lamar County;MT_ PLEASANT CURRY	precinct
+Alabama;Lamar County;MOLLOY BETTS	precinct
+Alabama;Lamar County;MILLPORT LIBRARY	precinct
+Alabama;Lamar County;KENNEDY COMM CTR	precinct
+Alabama;Lamar County;HIGHTOGY RIDGE	precinct
+Alabama;Lamar County;HENSON SPRINGS FIRE STATION	precinct
+Alabama;Lamar County;GUIN MT_ OLIVE	precinct
+Alabama;Lamar County;FERNBANK COMM CTR	precinct
+Alabama;Lamar County;FAIRVIEW SIZEMORE	precinct
+Alabama;Lamar County;DETROIT CITY HALL	precinct
+Alabama;Lamar County;CROSSVILLE LAWRENCE	precinct
+Alabama;Lamar County;CREWS METHODIST CHURCH	precinct
+Alabama;Lamar County;BLOOMING GROVE	precinct
+Alabama;Lamar County;BEDFORD MILITARY	precinct
+Alabama;Lamar County;BEAVERTON CITY HALL SOUTH	precinct
+Alabama;Lamar County;BEAVERTON CITY HALL NORTH	precinct
+Alabama;Houston County;WIREGRASS PARK	precinct
+Alabama;Houston County;WICKSBURG VFD	precinct
+Alabama;Houston County;WESTGATE PARK	precinct
+Alabama;Houston County;WEBB CITY HALL	precinct
+Alabama;Houston County;WATERMARK EAST	precinct
+Alabama;Houston County;WALTON PARK	precinct
+Alabama;Houston County;VAUGHN BLUMBERG CTR	precinct
+Alabama;Houston County;TAYLOR SENIOR CENTER	precinct
+Alabama;Houston County;ST_ JOHN'S PARK	precinct
+Alabama;Houston County;SELMA BAPT CH	precinct
+Alabama;Houston County;ROSSIE PURCELL LIBRARY	precinct
+Alabama;Houston County;REHOBETH MUNICIPAL CMPLX	precinct
+Alabama;Houston County;MT_ GILEAD BAPT CH	precinct
+Alabama;Houston County;MEMPHIS BAPT CH	precinct
+Alabama;Houston County;MADRID BAPT CH	precinct
+Alabama;Houston County;LIBERTY BAPTIST CHURCH	precinct
+Alabama;Houston County;KINSEY SR CTR	precinct
+Alabama;Houston County;GORDON CITY HALL	precinct
+Alabama;Houston County;FARM CTR	precinct
+Alabama;Houston County;ENTERPRISE CH	precinct
+Alabama;Houston County;DOUG TEW COMM CTR	precinct
+Alabama;Houston County;DOTHAN CIVIC CTR	precinct
+Alabama;Houston County;DOTHAN 1ST ASSEMBLY CLC	precinct
+Alabama;Houston County;COWARTS BAPTIST CHURCH FLC	precinct
+Alabama;Houston County;COTTONWOOD CITY HALL	precinct
+Alabama;Houston County;BAY SPRINGS VFD	precinct
+Alabama;Houston County;ANDREW BELLE COMM CTR	precinct
+Alabama;Henry County;UNION VTG HOUSE	precinct
+Alabama;Henry County;SHORTERVILLE HOUSE	precinct
+Alabama;Henry County;OLD ZION	precinct
+Alabama;Henry County;NEWVILLE VTG HOUSE	precinct
+Alabama;Henry County;LAWRENCEVILLE HS	precinct
+Alabama;Henry County;JUDSON COMM_	precinct
+Alabama;Henry County;HEADLAND VTG CTR_ 1	precinct
+Alabama;Henry County;HALEBURG CITY HALL	precinct
+Alabama;Henry County;GREATER SHILOH BAPT_	precinct
+Alabama;Henry County;EDWIN VTG CTR_	precinct
+Alabama;Henry County;DOUGLAS CROSSROADS	precinct
+Alabama;Henry County;CAPPS POST OFFICE	precinct
+Alabama;Henry County;BALKUM BAPT_ CHURCH	precinct
+Alabama;Henry County;ABBEVILLE VTG CTR_	precinct
+Alabama;Hale County;VALLEY	precinct
+Alabama;Hale County;STEWART	precinct
+Alabama;Hale County;SAWYERVILLE HEAD STATION	precinct
+Alabama;Hale County;PHIPPS WORK CTR	precinct
+Alabama;Hale County;NEWBERN CITY HALL	precinct
+Alabama;Hale County;MT_ HOREB BAPT_	precinct
+Alabama;Hale County;MT_ HERMAN	precinct
+Alabama;Hale County;MOUNDVILLE COMMUNITY CENTER	precinct
+Alabama;Hale County;LOCK 5 VFD	precinct
+Alabama;Hale County;HAVANA	precinct
+Alabama;Hale County;GREENSBORO ARMORY	precinct
+Alabama;Hale County;GALLION VFD	precinct
+Alabama;Hale County;BUCKSNORT	precinct
+Alabama;Hale County;AKRON CITY HALL	precinct
+Alabama;Greene County;UNION FIRE DEPT_	precinct
+Alabama;Greene County;TISHABEE COMM_ CTR_	precinct
+Alabama;Greene County;SOUTH FORK RESTAURANT	precinct
+Alabama;Greene County;NATIONAL GUARD ARMORY	precinct
+Alabama;Greene County;MT_ HEBRON PRE-SCHOOL	precinct
+Alabama;Greene County;MANTUA FIRE DEPT_	precinct
+Alabama;Greene County;KNOXVILLE FIRE DEPT_	precinct
+Alabama;Greene County;JENA FIRE DEPT_	precinct
+Alabama;Greene County;GREENE COUNTY COURTHOUSE	precinct
+Alabama;Greene County;FORKLAND CITY HALL	precinct
+Alabama;Greene County;EUTAW ACTIVITY CTR_	precinct
+Alabama;Greene County;CLINTON COMM_ CTR_	precinct
+Alabama;Greene County;BROWN MORROW BRANCH	precinct
+Alabama;Greene County;BOLIGEE FIRE DEPT_	precinct
+Alabama;Geneva County;TATE SCHOOL	precinct
+Alabama;Geneva County;SLOCOMB NATIONAL GUARD	precinct
+Alabama;Geneva County;SAMSON SR_ CITIZENS CTR_	precinct
+Alabama;Geneva County;REVELS STORE	precinct
+Alabama;Geneva County;PINEY GROVE	precinct
+Alabama;Geneva County;MALVERN COMM_ CTR_	precinct
+Alabama;Geneva County;LYTLE	precinct
+Alabama;Geneva County;LOWERY VTG HOUSE	precinct
+Alabama;Geneva County;HUGHES VTG HOUSE	precinct
+Alabama;Geneva County;HUGHES COMM_ CTR_	precinct
+Alabama;Geneva County;HACODA COMM_ CTR_	precinct
+Alabama;Geneva County;GILMORE VTG HOUSE	precinct
+Alabama;Geneva County;GENEVA COUNTY FARM CTR_	precinct
+Alabama;Geneva County;FLAT CREEK COMM_ CTR_	precinct
+Alabama;Geneva County;FIRST BAPTIST CH GENEVA	precinct
+Alabama;Geneva County;FADETTE	precinct
+Alabama;Geneva County;EL BETHAL BAPTIST CH	precinct
+Alabama;Geneva County;DEVCO COMM_ CTR_	precinct
+Alabama;Geneva County;COFFEE SPRINGS	precinct
+Alabama;Geneva County;BLACK COMM_ CTR_	precinct
+Alabama;Geneva County;BELLWOOD COMM_ CTR_	precinct
+Alabama;Franklin County;WACO BAPTIST CHURCH	precinct
+Alabama;Franklin County;VINA FIRE STATION	precinct
+Alabama;Franklin County;UNION COMM_ CTR_	precinct
+Alabama;Franklin County;THARPTOWN BAPT_ CHURCH	precinct
+Alabama;Franklin County;SPRUCE PINE COMM_ CTR_	precinct
+Alabama;Franklin County;SAINTS CROSSROADS	precinct
+Alabama;Franklin County;RUSSELLVILLE HIGH	precinct
+Alabama;Franklin County;RUSSELLVILLE ELECTRIC	precinct
+Alabama;Franklin County;ROCKWOOD	precinct
+Alabama;Franklin County;RED BAY SR_ CTR_	precinct
+Alabama;Franklin County;PLEASANT SITE VFD	precinct
+Alabama;Franklin County;PHIL CAMPBELL SR_ CTR_	precinct
+Alabama;Franklin County;NEWBURG	precinct
+Alabama;Franklin County;MT_ STAR HILLS SCHOOL	precinct
+Alabama;Franklin County;LAWLERS FIRE DEPT_	precinct
+Alabama;Franklin County;JONESBORO COMM_ CTR_	precinct
+Alabama;Franklin County;HODGES COMM_ CTR_	precinct
+Alabama;Franklin County;HALLTOWN COMM_ CTR_	precinct
+Alabama;Franklin County;FRANKFORT COMM_ CTR_	precinct
+Alabama;Franklin County;COURTHOUSE ANNEX	precinct
+Alabama;Franklin County;COLLEGE AVE_ SCHOOL	precinct
+Alabama;Franklin County;CHURNTOWN	precinct
+Alabama;Franklin County;CHUCKIE MULLINS CTR_	precinct
+Alabama;Franklin County;BELGREEN FIRE DEPT_	precinct
+Alabama;Fayette County;WEBSTER-WAYSIDE	precinct
+Alabama;Fayette County;THOMPSON-KIRKLAND	precinct
+Alabama;Fayette County;SUGAR CREEK EXP_ STATION	precinct
+Alabama;Fayette County;STOUGH TRINITY CH	precinct
+Alabama;Fayette County;STONEWALL-CANNAN CTR_	precinct
+Alabama;Fayette County;RUSSELL VT_ CTR_ BOBO	precinct
+Alabama;Fayette County;RIDGE-CONCORD BAPT CH	precinct
+Alabama;Fayette County;LEE-PALESTINE CH	precinct
+Alabama;Fayette County;LEE-BELK COMM_ CTR_	precinct
+Alabama;Fayette County;HICO-NEWTONVILLE	precinct
+Alabama;Fayette County;GILPEN-LAWRENCE MILL	precinct
+Alabama;Fayette County;GEORGES CREEK-PEA RIDGE	precinct
+Alabama;Fayette County;FORDS-REHOBETH BAPT	precinct
+Alabama;Fayette County;FAYETTE YOUTH CTR_	precinct
+Alabama;Fayette County;FAYETTE CIVIC CTR_	precinct
+Alabama;Fayette County;ELM GROVE CH	precinct
+Alabama;Fayette County;COVIN VT_ CTR_	precinct
+Alabama;Fayette County;COLLINS-MT_VERNON	precinct
+Alabama;Fayette County;COLE-PAUL HUBBERT	precinct
+Alabama;Fayette County;COLE-KILLINGSWORTH BAPT_	precinct
+Alabama;Fayette County;CLEAR CREEK-CEDAR GROVE	precinct
+Alabama;Fayette County;BYLOR-BANKSTON VFD	precinct
+Alabama;Fayette County;BROWNS-WHITE'S CHAPEL CH	precinct
+Alabama;Fayette County;BROWNS-GLEN ALLEN CTR_	precinct
+Alabama;Fayette County;BOLEY SPRINGS CH	precinct
+Alabama;Fayette County;BERRY CIVIC CTR	precinct
+Alabama;Etowah County;WHORTON BEND	precinct
+Alabama;Etowah County;WALNUT PARK REC_	precinct
+Alabama;Etowah County;WALNUT GROVE VFD	precinct
+Alabama;Etowah County;WALLACE HALL GSCC	precinct
+Alabama;Etowah County;TILLISON BEND WATER	precinct
+Alabama;Etowah County;SOUTHSIDE COMM_ CTR_	precinct
+Alabama;Etowah County;SARDIS COMM_ CTR_	precinct
+Alabama;Etowah County;REECE CITY TOWN HALL	precinct
+Alabama;Etowah County;RAINBOW CITY FIRE	precinct
+Alabama;Etowah County;RAINBOW CITY COMM_	precinct
+Alabama;Etowah County;OLD GADSDEN HIGH	precinct
+Alabama;Etowah County;NORTH GADSDEN REC_	precinct
+Alabama;Etowah County;NOCCALULA KIWANIS	precinct
+Alabama;Etowah County;NEW UNION COMM_ CTR_	precinct
+Alabama;Etowah County;NE ETOWAH COMM_ CTR_	precinct
+Alabama;Etowah County;MOUNTAINBORO VFD	precinct
+Alabama;Etowah County;MEADOWBROOK BAPT_	precinct
+Alabama;Etowah County;LOOKOUT MT_ COMM_	precinct
+Alabama;Etowah County;IVALEE VFD	precinct
+Alabama;Etowah County;HOKES BLUFF COMM_	precinct
+Alabama;Etowah County;GEORGE WALLACE SR_ CTR_	precinct
+Alabama;Etowah County;GALLANT COMM_ CTR_	precinct
+Alabama;Etowah County;ELLIOTT COMM_ CTR_	precinct
+Alabama;Etowah County;EGYPT COMM_ CTR_	precinct
+Alabama;Etowah County;EAST GADSDEN REC_	precinct
+Alabama;Etowah County;DOWNTOWN CIVIC CTR_	precinct
+Alabama;Etowah County;CAVE SPRINGS COMM_	precinct
+Alabama;Etowah County;CARVER COMM_ CTR_	precinct
+Alabama;Etowah County;ATTALLA REC_ CTR_	precinct
+Alabama;Etowah County;ALTOONA FIRE	precinct
+Alabama;Etowah County;1ST UNITED METHODIST	precinct
+Alabama;Escambia County;WALLACE METHODIST	precinct
+Alabama;Escambia County;ROCK HILL RIDGE VFD	precinct
+Alabama;Escambia County;RIVERVIEW TOWN HALL	precinct
+Alabama;Escambia County;POLLARD TOWN HALL	precinct
+Alabama;Escambia County;PINEVIEW V_H_	precinct
+Alabama;Escambia County;OLD SCHOOL HOUSE	precinct
+Alabama;Escambia County;NOKOMIS V_H_	precinct
+Alabama;Escambia County;NEW ORDER BAPT_	precinct
+Alabama;Escambia County;MCCULLOUGH VFD	precinct
+Alabama;Escambia County;LITTLE ROCK STORE	precinct
+Alabama;Escambia County;LITTLE ESCAMBIA V_H_	precinct
+Alabama;Escambia County;HUXFORD MASONIC	precinct
+Alabama;Escambia County;FLOMATON TOWN HALL	precinct
+Alabama;Escambia County;FLOMATON COMM_	precinct
+Alabama;Escambia County;FIRST UN METHODIST	precinct
+Alabama;Escambia County;EAST BREWTON SAILS	precinct
+Alabama;Escambia County;DIXIE VFD	precinct
+Alabama;Escambia County;DAMASCUS BOYKIN	precinct
+Alabama;Escambia County;CO HWY DEPT	precinct
+Alabama;Escambia County;CATAWBA SPRINGS	precinct
+Alabama;Escambia County;CANOE CIVIC CLUB	precinct
+Alabama;Escambia County;BREWTON CIVIC CTR_	precinct
+Alabama;Escambia County;BRADLEY VFD	precinct
+Alabama;Escambia County;BETHEL ROBERTS	precinct
+Alabama;Escambia County;BARNETTS CROSSROADS	precinct
+Alabama;Escambia County;ATMORE PUBLIC LIBRARY	precinct
+Alabama;Escambia County;ATMORE CITY HALL	precinct
+Alabama;Escambia County;APPLETON VFD	precinct
+Alabama;Escambia County;ALCO JD MUSEUM	precinct
+Alabama;Elmore County;WETUMPKA CIVIC CTR_	precinct
+Alabama;Elmore County;WEOKA COMM_	precinct
+Alabama;Elmore County;WALLSBORO COMM_	precinct
+Alabama;Elmore County;VICTORY BAPT_	precinct
+Alabama;Elmore County;TRICITY BAPT_	precinct
+Alabama;Elmore County;TITUS COMM_	precinct
+Alabama;Elmore County;TALLAWEKA BAPT_	precinct
+Alabama;Elmore County;SEMAN COMM_	precinct
+Alabama;Elmore County;SANTUCK COMM	precinct
+Alabama;Elmore County;RUSHENVILLE BAPT_	precinct
+Alabama;Elmore County;ROCK SPRGS_ VOTING	precinct
+Alabama;Elmore County;REDHILL COMM_	precinct
+Alabama;Elmore County;NEW HOPE BAPT_	precinct
+Alabama;Elmore County;NEW HOME BAPT_ WETUMPKA	precinct
+Alabama;Elmore County;NEW HOME BAPT_ TITUS	precinct
+Alabama;Elmore County;NAZARENE	precinct
+Alabama;Elmore County;MULDER METHODIST	precinct
+Alabama;Elmore County;MLK CTR_	precinct
+Alabama;Elmore County;MILLBROOK CIVIC CTR_	precinct
+Alabama;Elmore County;KOWALIGA FIRE	precinct
+Alabama;Elmore County;GOD'S CONGREGATION	precinct
+Alabama;Elmore County;FRIENDSHIP FIRE	precinct
+Alabama;Elmore County;ECLECTIC METHODIST	precinct
+Alabama;Elmore County;DEATSVILLE VFD	precinct
+Alabama;Elmore County;CRENSHAW PARK	precinct
+Alabama;Elmore County;COOSADA TOWN HALL	precinct
+Alabama;Elmore County;CAINS CHAPEL FIRE	precinct
+Alabama;Elmore County;BLUE RIDGE BAPT	precinct
+Alabama;Elmore County;ASBURY KENT COMM_	precinct
+Alabama;DeKalb County;WILLS VALLEY REC CTR	precinct
+Alabama;DeKalb County;WHITON-OLD SCH BLDG	precinct
+Alabama;DeKalb County;VFW HALL LOBBY	precinct
+Alabama;DeKalb County;VALLEY HEAD TOWN HALL	precinct
+Alabama;DeKalb County;TENBORECK COMM CTR	precinct
+Alabama;DeKalb County;SYLVANIA TOWN HALL	precinct
+Alabama;DeKalb County;SULPHER SPRINGS COMM CTR	precinct
+Alabama;DeKalb County;SKIRUM COMM CTR	precinct
+Alabama;DeKalb County;SHILOH TOWN HALL	precinct
+Alabama;DeKalb County;SHADY GROVE BAPT CH	precinct
+Alabama;DeKalb County;SAND MTN RSCH CTR	precinct
+Alabama;DeKalb County;RODENTOWN COMM CTR	precinct
+Alabama;DeKalb County;POWELL PARK PAVILION	precinct
+Alabama;DeKalb County;PORTERSVILLE BAPT CH	precinct
+Alabama;DeKalb County;PLEASANT HILL COMM CTR	precinct
+Alabama;DeKalb County;PINE RIDGE COMM D-4	precinct
+Alabama;DeKalb County;PINE RIDGE COMM D-3	precinct
+Alabama;DeKalb County;PAYNE GAP CH	precinct
+Alabama;DeKalb County;PAINTER-LIBERTY BAPT CH	precinct
+Alabama;DeKalb County;MENTONE VISITOR CTR	precinct
+Alabama;DeKalb County;MCKESTES COMM CTR	precinct
+Alabama;DeKalb County;MACEDONIA BAPT CH #2	precinct
+Alabama;DeKalb County;LEBANON CHAPEL	precinct
+Alabama;DeKalb County;KILPATRICK COMM CTR	precinct
+Alabama;DeKalb County;IDER SENIOR CTR	precinct
+Alabama;DeKalb County;HIGH POINT CH OF GOD	precinct
+Alabama;DeKalb County;HENAGAR COMM CTR	precinct
+Alabama;DeKalb County;HAMMONDVILLE FIRE	precinct
+Alabama;DeKalb County;GROVE OAK CLUB HOUSE	precinct
+Alabama;DeKalb County;GERALDINE 1ST BAPT CH	precinct
+Alabama;DeKalb County;FYFFE SENIOR CTR	precinct
+Alabama;DeKalb County;FORT PAYNE SENIOR CTR	precinct
+Alabama;DeKalb County;FISCHER COMM CTR D-3	precinct
+Alabama;DeKalb County;FISCHER COMM CTR D-1	precinct
+Alabama;DeKalb County;FIRE #3 E HIGHLAND D-3	precinct
+Alabama;DeKalb County;FIRE #3 E HIGHLAND D-1	precinct
+Alabama;DeKalb County;DOGTOWN MASONIC LODGE	precinct
+Alabama;DeKalb County;DEKALB CO SCH COLISEUM	precinct
+Alabama;DeKalb County;COPELAND BRIDGE LIBERTY	precinct
+Alabama;DeKalb County;COLLINSVILLE NATL GUARD	precinct
+Alabama;DeKalb County;CARTERSVILLE FIRE HALL	precinct
+Alabama;DeKalb County;BLAKE COMM CTR	precinct
+Alabama;DeKalb County;ARONEY FIRE	precinct
+Alabama;DeKalb County;ADAMSBURG FIRE	precinct
+Alabama;Dallas County;YMCA	precinct
+Alabama;Dallas County;WOODROW AVE_ FIRE STA_	precinct
+Alabama;Dallas County;VALLEY GRANDE COMM_ CTR_	precinct
+Alabama;Dallas County;UNION NEW NATL GRD ARMRY	precinct
+Alabama;Dallas County;TYLER COMM_ CTR_	precinct
+Alabama;Dallas County;TIPTON SCHOOL	precinct
+Alabama;Dallas County;SUMMERFIELD VFD	precinct
+Alabama;Dallas County;SHILOH SCHOOL BLDG_	precinct
+Alabama;Dallas County;SELMONT WATER WORKS 00502_001	precinct
+Alabama;Dallas County;SELMA MALL	precinct
+Alabama;Dallas County;SAFFORD COMM_ CTR_	precinct
+Alabama;Dallas County;RANGEDALE CTR_	precinct
+Alabama;Dallas County;QUEEN OF PEACE SCHOOL	precinct
+Alabama;Dallas County;PLANTERSVILLE VFD 00101_001	precinct
+Alabama;Dallas County;ORRVILLE COMM_ CTR_	precinct
+Alabama;Dallas County;NEW ST JOHNS BAPTIST CH_	precinct
+Alabama;Dallas County;MT_ ZION CH_	precinct
+Alabama;Dallas County;MEMORIAL STADIUM	precinct
+Alabama;Dallas County;MARION JCT BLACKBELT	precinct
+Alabama;Dallas County;GWC HOMES CTR_	precinct
+Alabama;Dallas County;GOOD HOPE CH_ 00701_001	precinct
+Alabama;Dallas County;EASTEND FIRE STA_	precinct
+Alabama;Dallas County;DALLAS COUNTY COURTHOUSE	precinct
+Alabama;Dallas County;CHRISTIAN OUTREACH	precinct
+Alabama;Dallas County;CARLOWVILLE MINTER 01501_001	precinct
+Alabama;Dallas County;BROAD STREET FIRE STA_	precinct
+Alabama;Dallas County;BELOIT COMM_ CTR_	precinct
+Alabama;Dallas County;BARRETT RD UMC	precinct
+Alabama;Dallas County;BARRETT RD METHODIST CH_	precinct
+Alabama;Dale County;SYLVAN GROVE	precinct
+Alabama;Dale County;SKIPPERVILLE METHODIST	precinct
+Alabama;Dale County;ROCKY HEAD - FT_ RUCKER	precinct
+Alabama;Dale County;ROCKY HD COMM_ HOUSE	precinct
+Alabama;Dale County;PINCKARD TOWN HALL	precinct
+Alabama;Dale County;OZARK CIVIC CTR_	precinct
+Alabama;Dale County;NEWTON TOWN HALL	precinct
+Alabama;Dale County;MIDLAND VOTING HALL	precinct
+Alabama;Dale County;MARLEY MILL FORESTRY	precinct
+Alabama;Dale County;LEVEL PLAINS COMM_ CTR_	precinct
+Alabama;Dale County;GRIMES COMM_ CTR_	precinct
+Alabama;Dale County;EWELL FIRE	precinct
+Alabama;Dale County;ECHO FIRE	precinct
+Alabama;Dale County;DALEVILLE CULTURE & CONV	precinct
+Alabama;Dale County;CLOPTON COMM_	precinct
+Alabama;Dale County;CLAYHATCHEE COMM_	precinct
+Alabama;Dale County;BERTHA NEW HOPE	precinct
+Alabama;Dale County;ARITON CITY HALL	precinct
+Alabama;Dale County;ARGUTA COMM_ CTR_	precinct
+Alabama;Cullman County;WEST POINT COMM CTR	precinct
+Alabama;Cullman County;WELTI MT_ ZION CH	precinct
+Alabama;Cullman County;WALTER COMM CTR	precinct
+Alabama;Cullman County;VINEMONT COMM CTR	precinct
+Alabama;Cullman County;VALLEY GROVE COMM CTR	precinct
+Alabama;Cullman County;TRIMBLE FIRE DEPT_	precinct
+Alabama;Cullman County;STOUTS MOUNTAIN CH	precinct
+Alabama;Cullman County;SIMCOE COMM CTR	precinct
+Alabama;Cullman County;PROVIDENCE FIRE DEPT_	precinct
+Alabama;Cullman County;NEW CANAAN SR_ CTR	precinct
+Alabama;Cullman County;MOODY TOWN UNION HILL CH	precinct
+Alabama;Cullman County;LOGAN FIRE DEPT_	precinct
+Alabama;Cullman County;KELLEY COMM CTR	precinct
+Alabama;Cullman County;JOPPA FIRE DEPT_	precinct
+Alabama;Cullman County;JONES CHAPEL FIRE DEPT_	precinct
+Alabama;Cullman County;JOHNSON CROSSING VFD	precinct
+Alabama;Cullman County;HOLLY POND FIRE DEPT_	precinct
+Alabama;Cullman County;HANCEVILLE CIVIC CTR	precinct
+Alabama;Cullman County;HANCEVILLE CITY HALL	precinct
+Alabama;Cullman County;GRANDVIEW COMM CTR	precinct
+Alabama;Cullman County;GOOD HOPE CITY HALL	precinct
+Alabama;Cullman County;GOLD RIDGE COMM CTR	precinct
+Alabama;Cullman County;GARDEN CITY TOWN HALL	precinct
+Alabama;Cullman County;FRIENDSHIP METHODIST	precinct
+Alabama;Cullman County;FAIRVIEW TOWN HALL_ L-Z	precinct
+Alabama;Cullman County;FAIRVIEW FIRE DEPT_ A-K	precinct
+Alabama;Cullman County;EAST POINT COMM CTR	precinct
+Alabama;Cullman County;DONALD E_ GREEN SR STR	precinct
+Alabama;Cullman County;DODGE CITY COMMUNITY CTR_	precinct
+Alabama;Cullman County;CULLMAN OFFICE BLDG_	precinct
+Alabama;Cullman County;CULLMAN CO_ HEALTH DEPT_	precinct
+Alabama;Cullman County;CULLMAN CITY HALL	precinct
+Alabama;Cullman County;CRANE HILL FIRE DEPT_	precinct
+Alabama;Cullman County;COURTHOUSE CONF_ ROOM	precinct
+Alabama;Cullman County;COLONY ED_ COMPLEX	precinct
+Alabama;Cullman County;COLD SPRGS COMM CTR	precinct
+Alabama;Cullman County;CENTER HILL COMM CTR	precinct
+Alabama;Cullman County;BRUSHY POND COMM CTR	precinct
+Alabama;Cullman County;BROOKLYN COMM CTR	precinct
+Alabama;Cullman County;BREMEN FIRE DEPT_	precinct
+Alabama;Cullman County;BOLTE WHITE GROVE CH	precinct
+Alabama;Cullman County;BETHSADIA FIRE DEPT_	precinct
+Alabama;Cullman County;BETHEL COMM CTR	precinct
+Alabama;Cullman County;BERLIN COMM CTR	precinct
+Alabama;Cullman County;BEAT 8 COMM CTR	precinct
+Alabama;Cullman County;BATTLEGROUND FIRE DEPT_	precinct
+Alabama;Cullman County;BALDWIN FAMILY LIFE CTR	precinct
+Alabama;Cullman County;BAILEYTON SR_ CTR	precinct
+Alabama;Cullman County;ARKADELPHIA FIRE DEPT_	precinct
+Alabama;Crenshaw County;WEEDS STORE BRANTLEY	precinct
+Alabama;Crenshaw County;VIDETTE COMM_ CTR	precinct
+Alabama;Crenshaw County;VFD HONORVILLE	precinct
+Alabama;Crenshaw County;RUTLEDGE COMM_	precinct
+Alabama;Crenshaw County;PLEASANT HOME SCH	precinct
+Alabama;Crenshaw County;PETREY COMM_ CTR	precinct
+Alabama;Crenshaw County;PATSBURG DEPOT	precinct
+Alabama;Crenshaw County;PANOLA COMM_ CTR	precinct
+Alabama;Crenshaw County;LILLER'S STORE	precinct
+Alabama;Crenshaw County;HIGHLAND HOME FD	precinct
+Alabama;Crenshaw County;HARBIN FARM CTR	precinct
+Alabama;Crenshaw County;GLENWOOD CITY HALL	precinct
+Alabama;Crenshaw County;DOZIER CITY HALL	precinct
+Alabama;Crenshaw County;DANIELVILLE SCHOOL	precinct
+Alabama;Crenshaw County;COUNTY COURTHOUSE	precinct
+Alabama;Crenshaw County;CHAPEL HILL COMM_	precinct
+Alabama;Crenshaw County;BUSH'S GROCERY	precinct
+Alabama;Crenshaw County;BRANTLEY COMM_	precinct
+Alabama;Covington County;WING FIRE DEPT_	precinct
+Alabama;Covington County;UNION GROVE FIRE	precinct
+Alabama;Covington County;STRAUGHN (AG BLDG_)	precinct
+Alabama;Covington County;SANFORD CITY HALL	precinct
+Alabama;Covington County;ROSE HILL COMM_ CTR_	precinct
+Alabama;Covington County;RIVER FALLS CITY HALL	precinct
+Alabama;Covington County;RED OAK	precinct
+Alabama;Covington County;RED LEVEL FIRE DEPT_	precinct
+Alabama;Covington County;PLEASANT HOME/CATOE'S	precinct
+Alabama;Covington County;OPP SR_ ACTIVITY CTR_	precinct
+Alabama;Covington County;MARVIN ODOMS PLACE	precinct
+Alabama;Covington County;LOCKHART CITY HALL	precinct
+Alabama;Covington County;LOANGO FIRE DEPT_	precinct
+Alabama;Covington County;LIBERTYVILLE CITY HALL	precinct
+Alabama;Covington County;HOPEWELL	precinct
+Alabama;Covington County;HEATH CITY HALL	precinct
+Alabama;Covington County;HARMONY	precinct
+Alabama;Covington County;GANTT CITY HALL	precinct
+Alabama;Covington County;FLORALA OLD NATL GUARD	precinct
+Alabama;Covington County;CAROLINA CITY HALL	precinct
+Alabama;Covington County;BUCK CREEK FIRE	precinct
+Alabama;Covington County;BLUE SPRGS HORN HILL	precinct
+Alabama;Covington County;BEULAH VTG HOUSE	precinct
+Alabama;Covington County;BABBIE FIRE	precinct
+Alabama;Covington County;ANDALUSIA KIWANIS FAIR	precinct
+Alabama;Coosa County;WEST COOSA SR_ CTR	precinct
+Alabama;Coosa County;WEOGUFKA VOTING HOUSE	precinct
+Alabama;Coosa County;ROCKFORD, THE EVENT CTR	precinct
+Alabama;Coosa County;RICHVILLE FD	precinct
+Alabama;Coosa County;RAY FD	precinct
+Alabama;Coosa County;MT_ OLIVE COMM CTR	precinct
+Alabama;Coosa County;MARBLE VALLEY FD	precinct
+Alabama;Coosa County;KELLYTON CIVIC	precinct
+Alabama;Coosa County;HANOVER	precinct
+Alabama;Coosa County;GOODWATER COMM CTR	precinct
+Alabama;Coosa County;EQUALITY METHODIST	precinct
+Alabama;Coosa County;COMMUNITY LIFE	precinct
+Alabama;Conecuh County;SKINNERTON FIRE	precinct
+Alabama;Conecuh County;SANDCUT FIRE	precinct
+Alabama;Conecuh County;ROBINSONS MILL	precinct
+Alabama;Conecuh County;REPTON TOWN HALL	precinct
+Alabama;Conecuh County;RANGE FIRE	precinct
+Alabama;Conecuh County;PAUL FIRE	precinct
+Alabama;Conecuh County;OLD FIELD CH	precinct
+Alabama;Conecuh County;OLD CASTLEBERRY	precinct
+Alabama;Conecuh County;NAZARENE BAPT_ CH	precinct
+Alabama;Conecuh County;LYEFFION FIRE	precinct
+Alabama;Conecuh County;LITTLE ZION CH	precinct
+Alabama;Conecuh County;LENOX COMM_	precinct
+Alabama;Conecuh County;JOHNSONVILLE FIRE	precinct
+Alabama;Conecuh County;HERBERT FIRE	precinct
+Alabama;Conecuh County;HEALTH DEPT_	precinct
+Alabama;Conecuh County;FLAT ROCK FIRE	precinct
+Alabama;Conecuh County;DAVID BURT BLDG	precinct
+Alabama;Conecuh County;CHINA REC_ & ED	precinct
+Alabama;Conecuh County;CASTLEBERRY FIRE	precinct
+Alabama;Conecuh County;CARVER REC_	precinct
+Alabama;Conecuh County;BROWNVILLE FIRE	precinct
+Alabama;Conecuh County;BROOKLYN MASONIC	precinct
+Alabama;Conecuh County;BERMUDA COMM_	precinct
+Alabama;Conecuh County;BELLEVILLE FIRE	precinct
+Alabama;Conecuh County;ANTIOCH VOTING	precinct
+Alabama;Conecuh County;ANNEX VOTING	precinct
+Alabama;Conecuh County;2ND MOUNT ZION	precinct
+Alabama;Colbert County;WOODWARD AVE_ BAPT_	precinct
+Alabama;Colbert County;WESTSIDE BAPT_	precinct
+Alabama;Colbert County;TUSCUMBIA MULTI-PURPOSE	precinct
+Alabama;Colbert County;TUSCUMBIA CALVARY BAPT_	precinct
+Alabama;Colbert County;TREE HOUSE SCH	precinct
+Alabama;Colbert County;SRYGLEY CHURCH	precinct
+Alabama;Colbert County;SPRING VALLEY CH	precinct
+Alabama;Colbert County;SHEFFIELD RECREATION	precinct
+Alabama;Colbert County;SHEFFIELD MICHAEL	precinct
+Alabama;Colbert County;SHEFFIELD FIRE 2ND STN	precinct
+Alabama;Colbert County;SHEFFIELD BD OF ED	precinct
+Alabama;Colbert County;PRIDE MISSIONARY	precinct
+Alabama;Colbert County;PLUMBER STEAMFITTER	precinct
+Alabama;Colbert County;PARK VIEW BAPT_ CH	precinct
+Alabama;Colbert County;NEW BETHEL FIRE	precinct
+Alabama;Colbert County;MUSCLE SHOALS HALL	precinct
+Alabama;Colbert County;MARGERUM COMMUNITY	precinct
+Alabama;Colbert County;LITTLEVILLE CITY HALL	precinct
+Alabama;Colbert County;LEIGHTON CIVIC CTR	precinct
+Alabama;Colbert County;LEIGHTON CITY HALL	precinct
+Alabama;Colbert County;LA GRANGE FIRE	precinct
+Alabama;Colbert County;HOPE HAVEN SCHOOL	precinct
+Alabama;Colbert County;HATTON BAPT_ CH	precinct
+Alabama;Colbert County;GRACE LIFE CH	precinct
+Alabama;Colbert County;GATMAN PARK & REC	precinct
+Alabama;Colbert County;FIRST SOUTHERN BAPT_	precinct
+Alabama;Colbert County;EAST COLBERT SEN_ CTR_	precinct
+Alabama;Colbert County;COUNTY HWY_ DEPT_	precinct
+Alabama;Colbert County;COLBERT HEIGHTS BAPT_	precinct
+Alabama;Colbert County;COARMM	precinct
+Alabama;Colbert County;CHEROKEE LIONS DEN	precinct
+Alabama;Colbert County;CAVE SPRINGS BAPT_	precinct
+Alabama;Colbert County;BARTON FIRST BAPT_	precinct
+Alabama;Colbert County;ALLSBORO CUMBERLAND	precinct
+Alabama;Coffee County;ZION CHRISTIAN COMM_	precinct
+Alabama;Coffee County;ZION CHAPEL SR_ CTR_	precinct
+Alabama;Coffee County;YMCA	precinct
+Alabama;Coffee County;WISE MILL CH	precinct
+Alabama;Coffee County;VICTORIA BAPT_ CH	precinct
+Alabama;Coffee County;PLEASANT RIDGE VTG	precinct
+Alabama;Coffee County;PINE LEVEL SR_ CTR_	precinct
+Alabama;Coffee County;NEWBIA VTG HOUSE	precinct
+Alabama;Coffee County;NEW BROCKTON SR_ CTR_	precinct
+Alabama;Coffee County;MT PLEASANT SR_ CTR_	precinct
+Alabama;Coffee County;LEE COMM_ VTG HOUSE	precinct
+Alabama;Coffee County;KINSTON CITY HALL	precinct
+Alabama;Coffee County;JOHNS CHAPEL AME	precinct
+Alabama;Coffee County;INO SR_ CTR_	precinct
+Alabama;Coffee County;HOLLEY'S STORE	precinct
+Alabama;Coffee County;HERITAGE UMC	precinct
+Alabama;Coffee County;GOODMAN VTG HOUSE	precinct
+Alabama;Coffee County;FRISCO VTG HOUSE	precinct
+Alabama;Coffee County;FARM CTR_ COMM_ ROOM	precinct
+Alabama;Coffee County;EPRISE STATE COMM_ COLL_	precinct
+Alabama;Coffee County;ENTERPRISE REC_ CTR_	precinct
+Alabama;Coffee County;ELBA NATIONAL GUARD	precinct
+Alabama;Coffee County;ELBA CH OF CHRIST	precinct
+Alabama;Coffee County;EANON VTG HOUSE	precinct
+Alabama;Coffee County;DAMASCUS SR_ CTR_	precinct
+Alabama;Coffee County;COOL SPGS	precinct
+Alabama;Coffee County;CHESTNUT GROVE VTG	precinct
+Alabama;Coffee County;BLUFF SPGS VTG HOUSE	precinct
+Alabama;Coffee County;BASIN VTG HOUSE	precinct
+Alabama;Cleburne County;TURKEY HEAVEN VFD	precinct
+Alabama;Cleburne County;RANBURNE VFD	precinct
+Alabama;Cleburne County;PLAINVIEW VFD	precinct
+Alabama;Cleburne County;OAK LEVEL PINEYWDS	precinct
+Alabama;Cleburne County;MUSCADINE VFD	precinct
+Alabama;Cleburne County;MICAVILLE VFD	precinct
+Alabama;Cleburne County;HOPEWELL SCHOOL	precinct
+Alabama;Cleburne County;HEFLIN RECREATIONAL CTR	precinct
+Alabama;Cleburne County;GREENS CHAPEL UMC	precinct
+Alabama;Cleburne County;FRUITHURST CITY HALL	precinct
+Alabama;Cleburne County;EDWARDSVILLE COMM_	precinct
+Alabama;Cleburne County;CHULAFINNEE MASONIC	precinct
+Alabama;Cleburne County;BORDEN SPRINGS VFD	precinct
+Alabama;Cleburne County;ABEL VOTING HOUSE	precinct
+Alabama;Clay County;TRI-COMM_ FIRE	precinct
+Alabama;Clay County;SHINBONE VFD	precinct
+Alabama;Clay County;MELLOW VALLEY HIGH	precinct
+Alabama;Clay County;IDAHO FIRE DEPT	precinct
+Alabama;Clay County;HOLLINS COMM CTR	precinct
+Alabama;Clay County;HIPINE FIRE DEPT	precinct
+Alabama;Clay County;HIGHLAND COPPERMINE	precinct
+Alabama;Clay County;FARMERS MARKET	precinct
+Alabama;Clay County;DELTA COMM CTR	precinct
+Alabama;Clay County;CRAGFORD FIRE	precinct
+Alabama;Clay County;COUNTY ANNEX	precinct
+Alabama;Clay County;COLETA VALLEY FIRE	precinct
+Alabama;Clay County;BLUFF SPRINGS FIRE	precinct
+Alabama;Clay County;BIBB GRAVES SCH/COMM	precinct
+Alabama;Clay County;BARFIELD VFD	precinct
+Alabama;Clarke County;WINN FIRE 91_1	precinct
+Alabama;Clarke County;WHATLEY BAPT 121_3	precinct
+Alabama;Clarke County;WALNUT GROVE CH	precinct
+Alabama;Clarke County;WALKER SPRINGS	precinct
+Alabama;Clarke County;T'VILL CITY HALL/CIVIC	precinct
+Alabama;Clarke County;T'VILL BASHI FIRE	precinct
+Alabama;Clarke County;SPRING FIELD METH_ 213_2	precinct
+Alabama;Clarke County;SALITPA FIRE 81_1	precinct
+Alabama;Clarke County;ROCKVILLE 21_1	precinct
+Alabama;Clarke County;OPINE TALLAHATTA 161_1	precinct
+Alabama;Clarke County;NETTLESBORO FIRE 112_1	precinct
+Alabama;Clarke County;MORNING STAR CH	precinct
+Alabama;Clarke County;JACKSON SKIPPER FIRE	precinct
+Alabama;Clarke County;JACKSON NAT'L GUARD	precinct
+Alabama;Clarke County;JACKSON DOWNTOWN FIRE	precinct
+Alabama;Clarke County;JACKSON CITY HALL	precinct
+Alabama;Clarke County;HELWESTERN FIRE	precinct
+Alabama;Clarke County;GROVE HILL OLD ENG_	precinct
+Alabama;Clarke County;GROVE HILL NAT'L GUARD	precinct
+Alabama;Clarke County;GROVE HILL CITY HALL	precinct
+Alabama;Clarke County;GOSPORT FIRE 61_1	precinct
+Alabama;Clarke County;GAINESTOWN-GOODHOPE 11_1	precinct
+Alabama;Clarke County;FULTON FIRE	precinct
+Alabama;Clarke County;COFFEVILLE HIGH	precinct
+Alabama;Clarke County;CHOCTAW BLUFF FIRE 12_1	precinct
+Alabama;Clarke County;CHILTON BAPT 151_2	precinct
+Alabama;Clarke County;BASHI METH_ CH 201_2	precinct
+Alabama;Clarke County;ANTIOCH FIRE 102_1	precinct
+Alabama;Clarke County;ADULT ED_ BLDG_	precinct
+Alabama;Choctaw County;YANTLEY	precinct
+Alabama;Choctaw County;WOMACK HILL	precinct
+Alabama;Choctaw County;TOXEY	precinct
+Alabama;Choctaw County;TOOMEY	precinct
+Alabama;Choctaw County;SOUWILPA	precinct
+Alabama;Choctaw County;SILAS	precinct
+Alabama;Choctaw County;ROCK SPRINGS	precinct
+Alabama;Choctaw County;RIDERWOOD	precinct
+Alabama;Choctaw County;PUSHMATAHA	precinct
+Alabama;Choctaw County;PLEASANT VALLEY	precinct
+Alabama;Choctaw County;PENNINGTON	precinct
+Alabama;Choctaw County;PELHAM	precinct
+Alabama;Choctaw County;MT_ STERLING	precinct
+Alabama;Choctaw County;MELVIN	precinct
+Alabama;Choctaw County;LUSK	precinct
+Alabama;Choctaw County;LISMAN	precinct
+Alabama;Choctaw County;LAVACA	precinct
+Alabama;Choctaw County;ISNEY	precinct
+Alabama;Choctaw County;INTERSECTION	precinct
+Alabama;Choctaw County;HURRICANE	precinct
+Alabama;Choctaw County;HALSELL	precinct
+Alabama;Choctaw County;GILBERTOWN	precinct
+Alabama;Choctaw County;CULLOMBURG	precinct
+Alabama;Choctaw County;CROSSROADS	precinct
+Alabama;Choctaw County;CROMWELL	precinct
+Alabama;Choctaw County;CHAPPELL HILL	precinct
+Alabama;Choctaw County;BUTLER	precinct
+Alabama;Choctaw County;BRANCH	precinct
+Alabama;Choctaw County;BOGUELOOSA	precinct
+Alabama;Choctaw County;BLADON SPRINGS	precinct
+Alabama;Choctaw County;BARRYTOWN	precinct
+Alabama;Choctaw County;ARARAT	precinct
+Alabama;Chilton County;VERBENA FS	precinct
+Alabama;Chilton County;UNION GROVE BAPTIST CH	precinct
+Alabama;Chilton County;THORSBY TOWN HALL	precinct
+Alabama;Chilton County;SR_ COMM_ CTR_	precinct
+Alabama;Chilton County;PROVIDENCE E CHILTON FS	precinct
+Alabama;Chilton County;PROVIDENCE BAPTIST CH	precinct
+Alabama;Chilton County;MARS HILL/W CHILTON FS	precinct
+Alabama;Chilton County;MAPLESVILLE LIBRARY	precinct
+Alabama;Chilton County;LIBRARY CLANTON	precinct
+Alabama;Chilton County;JEMISON CITY HALL	precinct
+Alabama;Chilton County;ISABELLA FS	precinct
+Alabama;Chilton County;HILLCREST BAPTIST CH	precinct
+Alabama;Chilton County;FAIRVIEW FS	precinct
+Alabama;Chilton County;ENTERPRISE FS	precinct
+Alabama;Chilton County;COURTHOUSE CLANTON	precinct
+Alabama;Chilton County;COLLINS CHAPEL BAPTIST	precinct
+Alabama;Chilton County;CLANTON REC_	precinct
+Alabama;Chilton County;CANE CREEK GAP OF MT FS	precinct
+Alabama;Cherokee County;UNITY MISSIONARY BAPT_	precinct
+Alabama;Cherokee County;TUCKERS CHAPEL FIRE DEPT_	precinct
+Alabama;Cherokee County;THE VALLEY CHURCH	precinct
+Alabama;Cherokee County;THE ROC	precinct
+Alabama;Cherokee County;SPRING GARDEN FIRE STATION	precinct
+Alabama;Cherokee County;SHADY GROVE CHURCH	precinct
+Alabama;Cherokee County;SAND ROCK TOWN HALL	precinct
+Alabama;Cherokee County;ROCK RUN CHURCH	precinct
+Alabama;Cherokee County;NOAH BAPTIST CHURCH	precinct
+Alabama;Cherokee County;NEW HOPE METHODIST	precinct
+Alabama;Cherokee County;McCORDS CROSSROADS	precinct
+Alabama;Cherokee County;MT_ WEISNER VFD #2	precinct
+Alabama;Cherokee County;MT_ WEISNER FIRE HALL	precinct
+Alabama;Cherokee County;MT_ CALVARY BAPT_ CHURCH	precinct
+Alabama;Cherokee County;MACEDONIA BAPT_ FELLOWSHIP	precinct
+Alabama;Cherokee County;LEESBURG FEMA BLDG_	precinct
+Alabama;Cherokee County;GOSHEN METHODIST	precinct
+Alabama;Cherokee County;GAYLESVILLE CITY HALL	precinct
+Alabama;Cherokee County;DANIELS CHAPEL FELLOW	precinct
+Alabama;Cherokee County;CONGREGATIONAL METHODIST	precinct
+Alabama;Cherokee County;CEDAR BLUFF 1ST BAPT_	precinct
+Alabama;Cherokee County;BROOMTOWN FIRE DEPT_	precinct
+Alabama;Cherokee County;BEREA CHURCH OF CHRIST	precinct
+Alabama;Chambers County;WEST CHAMBERS	precinct
+Alabama;Chambers County;WAVERLY	precinct
+Alabama;Chambers County;VALLEY SPORTSPLEX	precinct
+Alabama;Chambers County;UNION HILL	precinct
+Alabama;Chambers County;STANDING ROCK	precinct
+Alabama;Chambers County;SPARKLING SPRINGS	precinct
+Alabama;Chambers County;RIDGE GROVE	precinct
+Alabama;Chambers County;MT_ OLIVE	precinct
+Alabama;Chambers County;LANETT	precinct
+Alabama;Chambers County;LAKEVIEW	precinct
+Alabama;Chambers County;LAFAYETTE	precinct
+Alabama;Chambers County;HUGULEY	precinct
+Alabama;Chambers County;FREDONIA	precinct
+Alabama;Chambers County;FIVE POINTS	precinct
+Alabama;Chambers County;CUSSETA	precinct
+Alabama;Chambers County;BUFFALO	precinct
+Alabama;Calhoun County;WIGGINS COMM_ CTR	precinct
+Alabama;Calhoun County;WHITE PLAINS VFD	precinct
+Alabama;Calhoun County;WHITE PLAINS 1ST BAPT_	precinct
+Alabama;Calhoun County;WEST PARK HEIGHTS BAPT_	precinct
+Alabama;Calhoun County;TRINITY MISSIONARY BAPT_	precinct
+Alabama;Calhoun County;THE DONOHO SCHOOL	precinct
+Alabama;Calhoun County;S_ HIGHLAND COMM CTR	precinct
+Alabama;Calhoun County;SAKS HIGH SCHOOL	precinct
+Alabama;Calhoun County;PIEDMONT REC_ BLDG_	precinct
+Alabama;Calhoun County;PIEDMONT FIRE STATION	precinct
+Alabama;Calhoun County;OXFORD PUBLIC LIBRARY	precinct
+Alabama;Calhoun County;OXFORD LAKE PK CIVIC CTR	precinct
+Alabama;Calhoun County;OXFORD CHEAHA CLUBHOUSE	precinct
+Alabama;Calhoun County;OHATCHEE 1ST BAPT_	precinct
+Alabama;Calhoun County;OAK GROVE BAPT_	precinct
+Alabama;Calhoun County;MT_ VIEW BAPT_	precinct
+Alabama;Calhoun County;MENTAL HEALTH CTR	precinct
+Alabama;Calhoun County;LEATHERWOOD RD CIV_	precinct
+Alabama;Calhoun County;JACKSONVILLE WESTSIDE CH	precinct
+Alabama;Calhoun County;JACKSONVILLE SAFETY COMP	precinct
+Alabama;Calhoun County;JACKSONVILLE 1ST BAPT_	precinct
+Alabama;Calhoun County;HOPE COMM CH	precinct
+Alabama;Calhoun County;HOBSON CITY- CITY HALL	precinct
+Alabama;Calhoun County;GOD'S COVENANT MINISTRY	precinct
+Alabama;Calhoun County;GLENWOOD MEADOWS MTG_ RM	precinct
+Alabama;Calhoun County;FRIENDSHIP COMM_ CTR	precinct
+Alabama;Calhoun County;FRIENDSHIP BAPT_	precinct
+Alabama;Calhoun County;EULATON UN_ METHODIST	precinct
+Alabama;Calhoun County;DEARMANVILLE UMC	precinct
+Alabama;Calhoun County;CHOCCOLOCCO COMM_ CTR	precinct
+Alabama;Calhoun County;CALHOUN CO_ HWY DEPT_	precinct
+Alabama;Calhoun County;BYNUM COMM CTR	precinct
+Alabama;Calhoun County;BOILING SPRINGS BAPT_	precinct
+Alabama;Calhoun County;BETTA VIEW CH OF CHRIST	precinct
+Alabama;Calhoun County;A_P_ HOLLINGSWORTH COMM_	precinct
+Alabama;Calhoun County;ASBERRY BAPT_	precinct
+Alabama;Calhoun County;ANNISTON THANKFUL BAPT_	precinct
+Alabama;Calhoun County;ANNISTON MEETING CTR	precinct
+Alabama;Calhoun County;ANNISTON GOLDEN SPRINGS	precinct
+Alabama;Calhoun County;ANNISTON CARVER CTR	precinct
+Alabama;Calhoun County;ANNISTON 1ST PRSBY_	precinct
+Alabama;Calhoun County;ANGEL FIRE STATION	precinct
+Alabama;Calhoun County;ALEXANDRIA CIVITAN CLUB	precinct
+Alabama;Calhoun County;1ST UN_ METHODIST-WEAVER	precinct
+Alabama;Butler County;STEINER'S STORE	precinct
+Alabama;Butler County;SR_ MULTI-PURPOSE CTR_	precinct
+Alabama;Butler County;SEARCY VFD	precinct
+Alabama;Butler County;ROCKY CREEK VTG HOUSE	precinct
+Alabama;Butler County;PROVIDENCE VTG HOUSE	precinct
+Alabama;Butler County;MONTEREY OLD SCH	precinct
+Alabama;Butler County;MIDWAY VTG HOUSE	precinct
+Alabama;Butler County;MCLAINS VTG HOUSE	precinct
+Alabama;Butler County;MCKENZIE TOWN HALL	precinct
+Alabama;Butler County;MANNINGHAM VTG HOUSE	precinct
+Alabama;Butler County;INDUSTRY	precinct
+Alabama;Butler County;HEALTH DEPT_	precinct
+Alabama;Butler County;HARRISON'S VTG HOUSE	precinct
+Alabama;Butler County;GREENVILLE POLICE DEPT_	precinct
+Alabama;Butler County;GARLAND VTG HOUSE	precinct
+Alabama;Butler County;FRIENDSHIP OLD SCH	precinct
+Alabama;Butler County;FOREST HOME VTG HOUSE	precinct
+Alabama;Butler County;DUNBAR COMM_ CTR_	precinct
+Alabama;Butler County;CHAPMAN POST OFFICE	precinct
+Alabama;Butler County;CENTRAL VFD	precinct
+Alabama;Butler County;CENTER HILL VTG HOUSE	precinct
+Alabama;Butler County;BOLLING VTG HOUSE	precinct
+Alabama;Bullock County;THREE NOTCH HWY 82E	precinct
+Alabama;Bullock County;THOMPSON	precinct
+Alabama;Bullock County;SARDIS	precinct
+Alabama;Bullock County;RICHARD B STONE COMPLEX	precinct
+Alabama;Bullock County;POST OAK	precinct
+Alabama;Bullock County;PEROTE	precinct
+Alabama;Bullock County;PEACHBURG	precinct
+Alabama;Bullock County;MIDWAY	precinct
+Alabama;Bullock County;INVERNESS	precinct
+Alabama;Bullock County;INDIAN CREEK 00050_001	precinct
+Alabama;Bullock County;GUERRYTON	precinct
+Alabama;Bullock County;FITZPATRICK	precinct
+Alabama;Bullock County;CORNERSTONE	precinct
+Alabama;Bullock County;CORINTH	precinct
+Alabama;Bullock County;ABERFOIL	precinct
+Alabama;Blount County;SUSAN MOORE	precinct
+Alabama;Blount County;SUMMIT	precinct
+Alabama;Blount County;SUGAR CREEK BANGOR	precinct
+Alabama;Blount County;ST_ MOUNTAIN	precinct
+Alabama;Blount County;SNEAD COMM_ CTR_	precinct
+Alabama;Blount County;SMOKE RISE	precinct
+Alabama;Blount County;ROYAL	precinct
+Alabama;Blount County;ROSA	precinct
+Alabama;Blount County;ROCK SPRINGS	precinct
+Alabama;Blount County;REMLAP	precinct
+Alabama;Blount County;PINE MOUNTAIN	precinct
+Alabama;Blount County;ONEONTA	precinct
+Alabama;Blount County;NECTAR	precinct
+Alabama;Blount County;MURPHREE VALLEY	precinct
+Alabama;Blount County;MT_ HIGH	precinct
+Alabama;Blount County;LOCUST FORK	precinct
+Alabama;Blount County;HOLLY SPRINGS	precinct
+Alabama;Blount County;HAYDEN	precinct
+Alabama;Blount County;DALLAS-SELFVILLE	precinct
+Alabama;Blount County;CLEVELAND	precinct
+Alabama;Blount County;BROOKSVILLE	precinct
+Alabama;Blount County;BLOUNTSVILLE	precinct
+Alabama;Blount County;BLOUNT SPRINGS	precinct
+Alabama;Blount County;ALLGOOD TOWN HALL	precinct
+Alabama;Bibb County;SIX MILE COMM CTR	precinct
+Alabama;Bibb County;NATIONAL GUARD	precinct
+Alabama;Bibb County;LAWLEY COMM CTR	precinct
+Alabama;Bibb County;GREENPOND FIRE	precinct
+Alabama;Bibb County;EOLINE FIRE	precinct
+Alabama;Bibb County;CENTREVILLE ROCK BLDG	precinct
+Alabama;Bibb County;BRENT CITY HALL	precinct
+Alabama;Bibb County;ALTERNATIVE SCHOOL	precinct
+Alabama;Barbour County;TEXASVILLE COMM_ CTR_	precinct
+Alabama;Barbour County;SPRINGHILL VFD	precinct
+Alabama;Barbour County;SANFORD AVE_ GYM	precinct
+Alabama;Barbour County;MT_ ANDREWS COMM_ CTR_	precinct
+Alabama;Barbour County;MCCOO SCHOOL	precinct
+Alabama;Barbour County;LOUISVILLE CITY HALL	precinct
+Alabama;Barbour County;GREEN'S CROSSROADS	precinct
+Alabama;Barbour County;FELLOWSHIP BAPTIST	precinct
+Alabama;Barbour County;EUFAULA WATER BOARD	precinct
+Alabama;Barbour County;EUFAULA COMM_ CTR_	precinct
+Alabama;Barbour County;ELAMVILLE VFD	precinct
+Alabama;Barbour County;CLIO CITY HALL	precinct
+Alabama;Barbour County;CLAYTON COURTHOUSE	precinct
+Alabama;Barbour County;BLUE SPRINGS CITY HALL	precinct
+Alabama;Barbour County;BEVILL CTR_	precinct
+Alabama;Barbour County;BAKERHILL TOWN HALL	precinct
+Alabama;Baldwin County;WHITEHOUSE FORK	precinct
+Alabama;Baldwin County;TENSAW VFD	precinct
+Alabama;Baldwin County;SUMMERDALE COMM_ CTR	precinct
+Alabama;Baldwin County;STOCKTON CIVIC BLDG	precinct
+Alabama;Baldwin County;STAPLETON VFD	precinct
+Alabama;Baldwin County;SPANISH FORT COMM_ CTR	precinct
+Alabama;Baldwin County;SPANISH FORT CH CHRIST	precinct
+Alabama;Baldwin County;SILVERHILL COMM_ CTR	precinct
+Alabama;Baldwin County;SEMINOLE VFD	precinct
+Alabama;Baldwin County;ROSINTON METHODIST	precinct
+Alabama;Baldwin County;ROBERTSDALE PZK HALL	precinct
+Alabama;Baldwin County;RABUN VFD	precinct
+Alabama;Baldwin County;PT_CLEAR ST FRANCIS	precinct
+Alabama;Baldwin County;PINEGROVE VFD #1	precinct
+Alabama;Baldwin County;PERDIDO VFD	precinct
+Alabama;Baldwin County;PERDIDO BEACH VFD	precinct
+Alabama;Baldwin County;ORANGE BEACH COMM_ CTR	precinct
+Alabama;Baldwin County;OLD VAUGHN SCH	precinct
+Alabama;Baldwin County;NEW LIFE ASSEMBLY	precinct
+Alabama;Baldwin County;MIFLIN GRAHAM CREEK	precinct
+Alabama;Baldwin County;MEYER'S CIVIC CTR	precinct
+Alabama;Baldwin County;MARLOW VFD	precinct
+Alabama;Baldwin County;MAG SPGS WESLEYAN CH	precinct
+Alabama;Baldwin County;LOXLEY CIVIC CTR	precinct
+Alabama;Baldwin County;LOTTIE VFD	precinct
+Alabama;Baldwin County;LITTLE RIVER VFD	precinct
+Alabama;Baldwin County;LILLIAN COMM_ CTR	precinct
+Alabama;Baldwin County;JOSEPHINE VFD	precinct
+Alabama;Baldwin County;GULF SHORES CULTURAL	precinct
+Alabama;Baldwin County;GATESWOOD VFD	precinct
+Alabama;Baldwin County;FT MORGAN VFD #1	precinct
+Alabama;Baldwin County;FOLEY UNITED METHODIST	precinct
+Alabama;Baldwin County;FOLEY CIVIC CTR	precinct
+Alabama;Baldwin County;FAIRHOPE MARS HILL CH	precinct
+Alabama;Baldwin County;FAIRHOPE CIVIC CTR	precinct
+Alabama;Baldwin County;FAIRHOPE AVE BAPTIST	precinct
+Alabama;Baldwin County;FAIRHOPE 3 CIRCLE CH	precinct
+Alabama;Baldwin County;ELSANOR BETHAL CH	precinct
+Alabama;Baldwin County;ELLISVILLE COMM_ CTR_	precinct
+Alabama;Baldwin County;ELBERTA CIVIC CTR	precinct
+Alabama;Baldwin County;DOUGLASVILLE BOYKIN	precinct
+Alabama;Baldwin County;DAPHNE HIGH	precinct
+Alabama;Baldwin County;DAPHNE CIVIC CTR	precinct
+Alabama;Baldwin County;CROSSROADS DURANT	precinct
+Alabama;Baldwin County;CLR SPG FELLOWSHIP	precinct
+Alabama;Baldwin County;BROMLEY VFD	precinct
+Alabama;Baldwin County;BON SECOUR MORG CHAPEL	precinct
+Alabama;Baldwin County;BELFOREST COMM_ CTR	precinct
+Alabama;Baldwin County;BAY MINETTE CIVIC CTR	precinct
+Alabama;Baldwin County;BARNWELL VFD	precinct
+Alabama;Autauga County;90 BOOTH VFD	precinct
+Alabama;Autauga County;80 INDEPENDENCE VFD	precinct
+Alabama;Autauga County;70 BOONE'S CHAPEL	precinct
+Alabama;Autauga County;60 MARBURY MIDDLE	precinct
+Alabama;Autauga County;50 WHITE CITY VFD	precinct
+Alabama;Autauga County;40 E_ MEMORIAL CHRISTIAN	precinct
+Alabama;Autauga County;30 BILLINGSLEY COMM_ CTR_	precinct
+Alabama;Autauga County;230 COUNTY LINE BAPTIST	precinct
+Alabama;Autauga County;220 UPPER KINGSTON	precinct
+Alabama;Autauga County;20 HERITAGE BAPTIST	precinct
+Alabama;Autauga County;180 OLD KINGSTON VFD	precinct
+Alabama;Autauga County;170 CAMELLIA BAPTIST CHURCH	precinct
+Alabama;Autauga County;160 DOSTER COMM_ CTR_	precinct
+Alabama;Autauga County;150 PRATTMONT BAPTIST	precinct
+Alabama;Autauga County;140 AUTAUGAVILLE VFD	precinct
+Alabama;Autauga County;110 CENTRAL AL ELECTRIC	precinct
+Alabama;Autauga County;100 TRINITY METHODIST	precinct
+Alabama;Autauga County;10 JONES COMM_ CTR_	precinct
