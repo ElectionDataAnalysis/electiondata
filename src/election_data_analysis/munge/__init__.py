@@ -872,6 +872,7 @@ def raw_to_id_simple(
     juris: jm.Jurisdiction,
     element_list: list,
     session,
+    munger_name,
 ) -> (pd.DataFrame, Optional[dict]):
     """ Append ids to <df> for any row- or column- sourced elements given in <element_list>"""
 
@@ -961,16 +962,18 @@ def raw_to_id_simple(
         except KeyError as exc:
             err = ui.add_new_error(
                 err,
-                "system",
-                f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
-                f"KeyError ({exc}) while adding internal ids for {t}.",
+                "munger",
+                munger_name,
+                f"KeyError ({exc}) while adding internal ids for {t}. "
+                f"Check that munge_strings parameter has everything it needs",
             )
         except AttributeError as exc:
             err = ui.add_new_error(
                 err,
-                "system",
-                f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
-                f"AttributeError ({exc}) while adding internal ids for {t}.",
+                "munger",
+                munger_name,
+                f"AttributeError ({exc}) while adding internal ids for {t}."
+                f"Check that munge_strings parameter has everything it needs",
             )
         except Exception as exc:
             err = ui.add_new_error(
@@ -1108,7 +1111,7 @@ def munge_raw_to_ids(
         and (t[-9:] != "Selection")
         and (t not in constants.keys())
     ]
-    working, new_err = raw_to_id_simple(working, juris, other_elements, session)
+    working, new_err = raw_to_id_simple(working, juris, other_elements, session, munger_name=munger_name)
     if new_err:
         err = ui.consolidate_errors([err, new_err])
         if ui.fatal_error(new_err):
@@ -1462,7 +1465,6 @@ def to_standard_count_frame(
         sheets_in_order = list(raw_dict.keys())
         sheets_in_order.sort()
         for k in sheets_in_order:
-            sheet_errors: Dict[str, str] = dict()
             raw = raw_dict[k]
             # transform to df with single count column 'Count' and all raw munge info in other columns
             try:
