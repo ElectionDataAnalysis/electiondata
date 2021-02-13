@@ -92,7 +92,7 @@ def test_all_candidates_known(dbname):
     assert e.get_contest_with_unknown_candidates(election, jurisdiction, dbname=dbname) == []
 
 
-def test_count_type_subtotal(dbname):
+"""def test_count_type_subtotal(dbname):
     assert (e.contest_total(
         election,
         jurisdiction,
@@ -102,7 +102,7 @@ def test_count_type_subtotal(dbname):
         )
         == pres_votes_vote_type
     )
-
+"""
 
 def test_county_subtotal(dbname):
     assert (e.contest_total(
