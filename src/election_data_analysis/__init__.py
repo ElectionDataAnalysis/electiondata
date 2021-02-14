@@ -695,6 +695,8 @@ class JurisdictionPrepper:
         <other_districts> is a dictionary of other district names, types & counts, e.g.,
         {'Circuit Court':{'ReportingUnitType':'judicial','count':5}}
         """
+
+        ## create and fill jurisdiction directory
         # TODO Feature: allow other districts to be set in paramfile
         print(f"\nStarting {inspect.currentframe().f_code.co_name}")
         error = jm.ensure_jurisdiction_dir(self.d["jurisdiction_path"])
@@ -1099,6 +1101,73 @@ class JurisdictionPrepper:
         err = ui.consolidate_errors(err_list)
         return err
 
+    def make_test_file(self, election: str):
+        juris_true_name = self.d['name']
+        juris_abbr = self.d["abbreviated_name"]
+        tests_dir = os.path.join(Path(self.d["mungers_dir"]).parents[1], "tests")
+        juris_test_dir = os.path.join(tests_dir, self.d["system_name"])
+        sample_test_dir = os.path.join(tests_dir, "20xx_test_templates")
+        election_str = election.replace(" ", "-")
+        test_file_name = f"test_{self.d['system_name']}_{election_str}.py"
+        new_test_file = os.path.join(juris_test_dir, test_file_name)
+        if not os.path.isdir(juris_test_dir):
+            os.mkdir(juris_test_dir)
+
+        if not os.path.isfile(new_test_file):
+            test_replace = {
+                f'jurisdiction = "North Carolina"\nabbr = "NC"': f'jurisdiction = "{juris_true_name}"\nabbr = "{juris_abbr}"',
+                f'single_county = "North Carolina;Bertie County"': f'single_county = "{juris_true_name}; "',
+            }
+            create_from_template(
+                os.path.join(sample_test_dir, "donttest_template_2020-General.py"),
+                new_test_file,
+                test_replace,
+            )
+            return
+
+    def make_ini_file(
+            self,
+            ini_name: str,
+            munger_name: str,
+            is_preliminary: bool = False,
+    ):
+        juris_true_name = self.d['name']
+        juris_system_name = self.d["system_name"]
+
+        # make ini file
+        inis_dir = os.path.join(Path(self.d["mungers_dir"]).parent, "ini_files_for_results")
+        juris_ini_dir = os.path.join(inis_dir, juris_system_name)
+        new_ini_file = os.path.join(juris_ini_dir, ini_name)
+        if not os.path.isdir(juris_ini_dir):
+            os.mkdir(juris_ini_dir)
+        if not os.path.isfile(new_ini_file):
+            ini_replace = {
+                "results_file=": f"results_file={juris_system_name}/",
+                "jurisdiction_directory=": f"jurisdiction_directory={juris_system_name}",
+                f"munger_name=": f"munger_name={munger_name}",
+                "top_reporting_unit=": f"top_reporting_unit={juris_true_name}",
+                "results_short_name=": f"results_short_name={Path(ini_name).stem}"
+            }
+            if is_preliminary:
+                ini_replace.update({"is_preliminary=False": "is_preliminary=True"})
+            create_from_template(
+                os.path.join(inis_dir, "template.ini"),
+                new_ini_file,
+                ini_replace,
+            )
+        return
+
+    def make_munger_file(self, munger_name: str):
+        new_munger_file = os.path.join(self.d["mungers_dir"], f"{munger_name}.munger")
+        if not os.path.isfile(new_munger_file):
+            munger_replace = dict()
+            create_from_template(
+                os.path.join(self.d["mungers_dir"], "000_template.munger"),
+                new_munger_file,
+                munger_replace
+            )
+        return
+
     def __init__(self):
         self.d = dict()
         # get parameters from jurisdiction_prep.ini and run_time.ini
@@ -1112,6 +1181,11 @@ class JurisdictionPrepper:
                 header="election_data_analysis",
             )
             self.d.update(d)
+
+        # add attributes derived from other parameters
+        derived = {"system_name": self.d["name"].replace(" ", "-")}
+        self.d.update(derived)
+
         # calculate full jurisdiction path from other info
         self.d["jurisdiction_path"] = os.path.join(
             self.d["jurisdictions_dir"], self.d["name"].replace(" ", "-")
@@ -1783,3 +1857,15 @@ def load_results_file(
         )
         return err
     return err
+
+
+def create_from_template(template_file, target_file, replace_dict):
+    with open(template_file, "r") as f:
+        contents = f.read()
+    for k in replace_dict.keys():
+        contents = contents.replace(k, replace_dict[k])
+    with open(target_file, "w") as f:
+        f.write(contents)
+
+
+
