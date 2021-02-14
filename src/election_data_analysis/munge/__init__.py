@@ -1831,7 +1831,9 @@ def extract_blocks(
         if not df_dict[sheet].empty:
             # get rid of thousands separator
             if p["thousands_separator"]:
-                    working = df_dict[sheet].replace(p["thousands_separator"], "", regex=True)
+                working = df_dict[sheet].replace(p["thousands_separator"], "", regex=True)
+            else:
+                working = df_dict[sheet]
 
             # identify count rows (have at least one integer) and text rows (all others)
             mask = working.T.apply(lambda row: row.str.isdigit().any())
