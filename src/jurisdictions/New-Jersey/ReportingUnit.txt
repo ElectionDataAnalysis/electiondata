@@ -1,0 +1,134 @@
+Name	ReportingUnitType
+New Jersey;NJ House District 1	state-house
+New Jersey;NJ House District 2	state-house
+New Jersey;NJ House District 3	state-house
+New Jersey;NJ House District 4	state-house
+New Jersey;NJ House District 5	state-house
+New Jersey;NJ House District 6	state-house
+New Jersey;NJ House District 7	state-house
+New Jersey;NJ House District 8	state-house
+New Jersey;NJ House District 9	state-house
+New Jersey;NJ House District 10	state-house
+New Jersey;NJ House District 11	state-house
+New Jersey;NJ House District 12	state-house
+New Jersey;NJ House District 13	state-house
+New Jersey;NJ House District 14	state-house
+New Jersey;NJ House District 15	state-house
+New Jersey;NJ House District 16	state-house
+New Jersey;NJ House District 17	state-house
+New Jersey;NJ House District 18	state-house
+New Jersey;NJ House District 19	state-house
+New Jersey;NJ House District 20	state-house
+New Jersey;NJ House District 21	state-house
+New Jersey;NJ House District 22	state-house
+New Jersey;NJ House District 23	state-house
+New Jersey;NJ House District 24	state-house
+New Jersey;NJ House District 25	state-house
+New Jersey;NJ House District 26	state-house
+New Jersey;NJ House District 27	state-house
+New Jersey;NJ House District 28	state-house
+New Jersey;NJ House District 29	state-house
+New Jersey;NJ House District 30	state-house
+New Jersey;NJ House District 31	state-house
+New Jersey;NJ House District 32	state-house
+New Jersey;NJ House District 33	state-house
+New Jersey;NJ House District 34	state-house
+New Jersey;NJ House District 35	state-house
+New Jersey;NJ House District 36	state-house
+New Jersey;NJ House District 37	state-house
+New Jersey;NJ House District 38	state-house
+New Jersey;NJ House District 39	state-house
+New Jersey;NJ House District 40	state-house
+New Jersey;NJ House District 41	state-house
+New Jersey;NJ House District 42	state-house
+New Jersey;NJ House District 43	state-house
+New Jersey;NJ House District 44	state-house
+New Jersey;NJ House District 45	state-house
+New Jersey;NJ House District 46	state-house
+New Jersey;NJ House District 47	state-house
+New Jersey;NJ House District 48	state-house
+New Jersey;NJ House District 49	state-house
+New Jersey;NJ House District 50	state-house
+New Jersey;NJ House District 51	state-house
+New Jersey;NJ House District 52	state-house
+New Jersey;NJ House District 53	state-house
+New Jersey;NJ House District 54	state-house
+New Jersey;NJ House District 55	state-house
+New Jersey;NJ House District 56	state-house
+New Jersey;NJ House District 57	state-house
+New Jersey;NJ House District 58	state-house
+New Jersey;NJ House District 59	state-house
+New Jersey;NJ House District 60	state-house
+New Jersey;NJ House District 61	state-house
+New Jersey;NJ House District 62	state-house
+New Jersey;NJ House District 63	state-house
+New Jersey;NJ House District 64	state-house
+New Jersey;NJ House District 65	state-house
+New Jersey;NJ House District 66	state-house
+New Jersey;NJ House District 67	state-house
+New Jersey;NJ House District 68	state-house
+New Jersey;NJ House District 69	state-house
+New Jersey;NJ House District 70	state-house
+New Jersey;NJ House District 71	state-house
+New Jersey;NJ House District 72	state-house
+New Jersey;NJ House District 73	state-house
+New Jersey;NJ House District 74	state-house
+New Jersey;NJ House District 75	state-house
+New Jersey;NJ House District 76	state-house
+New Jersey;NJ House District 77	state-house
+New Jersey;NJ House District 78	state-house
+New Jersey;NJ House District 79	state-house
+New Jersey;NJ House District 80	state-house
+New Jersey;NJ Senate District 1	state-senate
+New Jersey;NJ Senate District 2	state-senate
+New Jersey;NJ Senate District 3	state-senate
+New Jersey;NJ Senate District 4	state-senate
+New Jersey;NJ Senate District 5	state-senate
+New Jersey;NJ Senate District 6	state-senate
+New Jersey;NJ Senate District 7	state-senate
+New Jersey;NJ Senate District 8	state-senate
+New Jersey;NJ Senate District 9	state-senate
+New Jersey;NJ Senate District 10	state-senate
+New Jersey;NJ Senate District 11	state-senate
+New Jersey;NJ Senate District 12	state-senate
+New Jersey;NJ Senate District 13	state-senate
+New Jersey;NJ Senate District 14	state-senate
+New Jersey;NJ Senate District 15	state-senate
+New Jersey;NJ Senate District 16	state-senate
+New Jersey;NJ Senate District 17	state-senate
+New Jersey;NJ Senate District 18	state-senate
+New Jersey;NJ Senate District 19	state-senate
+New Jersey;NJ Senate District 20	state-senate
+New Jersey;NJ Senate District 21	state-senate
+New Jersey;NJ Senate District 22	state-senate
+New Jersey;NJ Senate District 23	state-senate
+New Jersey;NJ Senate District 24	state-senate
+New Jersey;NJ Senate District 25	state-senate
+New Jersey;NJ Senate District 26	state-senate
+New Jersey;NJ Senate District 27	state-senate
+New Jersey;NJ Senate District 28	state-senate
+New Jersey;NJ Senate District 29	state-senate
+New Jersey;NJ Senate District 30	state-senate
+New Jersey;NJ Senate District 31	state-senate
+New Jersey;NJ Senate District 32	state-senate
+New Jersey;NJ Senate District 33	state-senate
+New Jersey;NJ Senate District 34	state-senate
+New Jersey;NJ Senate District 35	state-senate
+New Jersey;NJ Senate District 36	state-senate
+New Jersey;NJ Senate District 37	state-senate
+New Jersey;NJ Senate District 38	state-senate
+New Jersey;NJ Senate District 39	state-senate
+New Jersey;NJ Senate District 40	state-senate
+New Jersey;US House NJ District 1	congressional
+New Jersey;US House NJ District 2	congressional
+New Jersey;US House NJ District 3	congressional
+New Jersey;US House NJ District 4	congressional
+New Jersey;US House NJ District 5	congressional
+New Jersey;US House NJ District 6	congressional
+New Jersey;US House NJ District 7	congressional
+New Jersey;US House NJ District 8	congressional
+New Jersey;US House NJ District 9	congressional
+New Jersey;US House NJ District 10	congressional
+New Jersey;US House NJ District 11	congressional
+New Jersey;US House NJ District 12	congressional
+New Jersey	state
