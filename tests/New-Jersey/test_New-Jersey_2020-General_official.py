@@ -24,10 +24,11 @@ shd = 1  # state house district
 total_shd_votes = 122915  # total votes in that State House contest
 ssd = 25  # state senate district
 total_ssd_votes = 124334  # total votes in that State Senate contest
-single_vote_type = (
+"""single_vote_type = (
     0  # pick any one with corresponding data in your file, but use internal db name
 )
 pres_votes_vote_type = 0  # total votes for US President of that vote type
+"""
 county_or_other = "county"  # Change this only if results are subdivided by something other than counties
 #  e.g., 'parish' in LA, 'state-house' in Alaska, 'ward' in Philadelphia
 single_county = "New Jersey;Atlantic County"  # pick any one from your file, but use internal db name
@@ -44,6 +45,7 @@ def test_presidential(dbname):
             election,
             jurisdiction,
             f"US President ({abbr})",
+            sub_unit_type="state",
             dbname=dbname,
         )
         == total_pres_votes
@@ -56,18 +58,21 @@ def test_congressional_totals(dbname):
             election,
             jurisdiction,
             f"US House {abbr} District {cd}",
+            sub_unit_type="state",
             dbname=dbname,
         )
         == total_cd_votes
     )
 
-
+# regular legislative elections for NJ are in odd years
+"""
 def test_state_senate_totals(dbname):
     assert (
         e.contest_total(
             election,
             jurisdiction,
             f"{abbr} Senate District {ssd}",
+            sub_unit_type="state",
             dbname=dbname,
         )
         == total_ssd_votes
@@ -80,11 +85,12 @@ def test_state_house_totals(dbname):
             election,
             jurisdiction,
             f"{abbr} House District {shd}",
+            sub_unit_type="state",
             dbname=dbname,
         )
         == total_shd_votes
     )
-
+"""
 
 def test_standard_vote_types(dbname):
     assert e.check_count_types_standard(election, jurisdiction, dbname=dbname)
@@ -100,7 +106,7 @@ def test_all_candidates_known(dbname):
         == []
     )
 
-
+"""
 def test_count_type_subtotal(dbname):
     assert (
         e.contest_total(
@@ -108,11 +114,12 @@ def test_count_type_subtotal(dbname):
             jurisdiction,
             f"US President ({abbr})",
             dbname=dbname,
+            sub_unit_type="state",
             vote_type=single_vote_type,
         )
         == pres_votes_vote_type
     )
-
+"""
 
 def test_county_subtotal(dbname):
     assert (

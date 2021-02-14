@@ -132,24 +132,24 @@ New Jersey;US House NJ District 10	congressional
 New Jersey;US House NJ District 11	congressional
 New Jersey;US House NJ District 12	congressional
 New Jersey	state
-Atlantic County	county
-Bergen County	county
-Burlington County	county
-Camden County	county
-Cape May County	county
-Cumberland County	county
-Essex County	county
-Gloucester County	county
-Hudson County	county
-Hunterdon County	county
-Mercer County	county
-Middlesex County	county
-Monmouth County	county
-Morris County	county
-Ocean County	county
-Passaic County	county
-Salem County	county
-Somerset County	county
-Sussex County	county
-Union County	county
-Warren County	county
+New Jersey;Atlantic County	county
+New Jersey;Bergen County	county
+New Jersey;Burlington County	county
+New Jersey;Camden County	county
+New Jersey;Cape May County	county
+New Jersey;Cumberland County	county
+New Jersey;Essex County	county
+New Jersey;Gloucester County	county
+New Jersey;Hudson County	county
+New Jersey;Hunterdon County	county
+New Jersey;Mercer County	county
+New Jersey;Middlesex County	county
+New Jersey;Monmouth County	county
+New Jersey;Morris County	county
+New Jersey;Ocean County	county
+New Jersey;Passaic County	county
+New Jersey;Salem County	county
+New Jersey;Somerset County	county
+New Jersey;Sussex County	county
+New Jersey;Union County	county
+New Jersey;Warren County	county

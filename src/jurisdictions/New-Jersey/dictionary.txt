@@ -142,9 +142,11 @@ Election	2020 General	2020 General
 Election	2020 Primary	2020 Primary
 Election	2018 General	2018 General
 Election	2016 General	2016 General
-Party	Democratic Party	Democratic Party
-Party	Republican Party	Republican Party
+Party	Democratic Party	Democratic
+Party	Republican Party	Republican
 Party	Green Party	Green Party
+Party	Green Party	GREEN PARTY
+Party	Libertarian Party	LIBERTARIAN PARTY
 Party	Libertarian Party	Libertarian Party
 ReportingUnit	New Jersey;NJ House District 1	New Jersey;NJ House District 1
 ReportingUnit	New Jersey;NJ House District 2	New Jersey;NJ House District 2
@@ -279,27 +281,27 @@ ReportingUnit	New Jersey;US House NJ District 10	New Jersey;US House NJ District
 ReportingUnit	New Jersey;US House NJ District 11	New Jersey;US House NJ District 11
 ReportingUnit	New Jersey;US House NJ District 12	New Jersey;US House NJ District 12
 ReportingUnit	New Jersey	New Jersey
-ReportingUnit	Atlantic County	ATLANTIC
-ReportingUnit	Bergen County	BERGEN
-ReportingUnit	Burlington County	BURLINGTON
-ReportingUnit	Camden County	CAMDEN
-ReportingUnit	Cape May County	CAPE MAY
-ReportingUnit	Cumberland County	CUMBERLAND
-ReportingUnit	Essex County	ESSEX
-ReportingUnit	Gloucester County	GLOUCESTER
-ReportingUnit	Hudson County	HUDSON
-ReportingUnit	Hunterdon County	HUNTERDON
-ReportingUnit	Mercer County	MERCER
-ReportingUnit	Middlesex County	MIDDLESEX
-ReportingUnit	Monmouth County	MONMOUTH
-ReportingUnit	Morris County	MORRIS
-ReportingUnit	Ocean County	OCEAN
-ReportingUnit	Passaic County	PASSAIC
-ReportingUnit	Salem County	SALEM
-ReportingUnit	Somerset County	SOMERSET
-ReportingUnit	Sussex County	SUSSEX
-ReportingUnit	Union County	UNION
-ReportingUnit	Warren County	WARREN
+ReportingUnit	New Jersey;Atlantic County	ATLANTIC
+ReportingUnit	New Jersey;Bergen County	BERGEN
+ReportingUnit	New Jersey;Burlington County	BURLINGTON
+ReportingUnit	New Jersey;Camden County	CAMDEN
+ReportingUnit	New Jersey;Cape May County	CAPE MAY
+ReportingUnit	New Jersey;Cumberland County	CUMBERLAND
+ReportingUnit	New Jersey;Essex County	ESSEX
+ReportingUnit	New Jersey;Gloucester County	GLOUCESTER
+ReportingUnit	New Jersey;Hudson County	HUDSON
+ReportingUnit	New Jersey;Hunterdon County	HUNTERDON
+ReportingUnit	New Jersey;Mercer County	MERCER
+ReportingUnit	New Jersey;Middlesex County	MIDDLESEX
+ReportingUnit	New Jersey;Monmouth County	MONMOUTH
+ReportingUnit	New Jersey;Morris County	MORRIS
+ReportingUnit	New Jersey;Ocean County	OCEAN
+ReportingUnit	New Jersey;Passaic County	PASSAIC
+ReportingUnit	New Jersey;Salem County	SALEM
+ReportingUnit	New Jersey;Somerset County	SOMERSET
+ReportingUnit	New Jersey;Sussex County	SUSSEX
+ReportingUnit	New Jersey;Union County	UNION
+ReportingUnit	New Jersey;Warren County	WARREN
 Candidate	Veronica Fernandez	Veronica Fernandez
 Candidate	Thomas H. Kean Jr	Thomas H. Kean Jr
 Candidate	TOM MALINOWSKI (w)	TOM MALINOWSKI (w) *
@@ -352,3 +354,21 @@ Candidate	Amy Kennedy	Amy Kennedy
 Candidate	Akil Khalfani	Akil Khalfani
 Candidate	ANDY KIM (w)	ANDY KIM (w) *
 Candidate	ALBIO SIRES (w)	ALBIO SIRES (w) *
+Party	Veteran For Change	VETERAN FOR CHANGE
+Party	Unity Party America	UNITY PARTY AMERICA
+Party	Truth Vision Hope	TRUTH VISION HOPE
+Party	Socialism And Liberation	SOCIALISM AND LIBERATION
+Party	Of, By, For!	OF, BY, FOR!
+Party	No Slogan Filed	NO SLOGAN FILED
+Party	No Slogan	NO SLOGAN
+Party	Make Change Happen	MAKE CHANGE HAPPEN
+Party	Larouche Was Right	LAROUCHE WAS RIGHT
+Party	Justice Mercy Humility	JUSTICE MERCY HUMILITY
+Party	Independent Constitutional Candidate	INDEPENDENT CONSTITUTIONAL CANDIDATE
+Party	For The People	FOR THE PEOPLE
+Party	Constitution Party	CONSTITUTION PARTY
+Party	Common Sense Party	COMMON SENSE PARTY
+Party	Building Your Legacy	BUILDING YOUR LEGACY
+Party	American Values	AMERICAN VALUES
+Party	Alliance Party	ALLIANCE PARTY
+CountItemType	total	total
