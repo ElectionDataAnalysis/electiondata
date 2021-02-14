@@ -873,7 +873,8 @@ ReportingUnit	Alabama;Madison County;BOBO VFD	Madison;BOBO VFD
 ReportingUnit	Alabama;Madison County;BOB HARRISON SR_ CTR_	Madison;BOB HARRISON SR_ CTR_
 ReportingUnit	Alabama;Madison County;ALL NATIONS	Madison;ALL NATIONS
 ReportingUnit	Alabama;Madison County;ALDERSGATE UMC	Madison;ALDERSGATE UMC
-Madison;ABSENTEE 1
+ReportingUnit	Alabama;Madison County;ABSENTEE 1	Madison;ABSENTEE 1
+ReportingUnit	Alabama;Madison County;ABSENTEE 2	Madison;ABSENTEE 2
 ReportingUnit	Alabama;Madison County;A & M UNIVERSITY NEW GYM	Madison;A & M UNIVERSITY NEW GYM
 ReportingUnit	Alabama;Macon County;WARRIOR DIST 2 REC CTR	Macon;WARRIOR DIST 2 REC CTR
 ReportingUnit	Alabama;Macon County;VOLUNTEER FIRE STATION	Macon;VOLUNTEER FIRE STATION
@@ -1897,3 +1898,207 @@ Candidate	Joseph R. Biden	Joseph R. Biden Kamala D. Harri
 Candidate	Jo Jorgensen	Jo Jorgensen Jeremy 'Spike' Cohen
 Candidate	Jo Jorgensen	Jo Jorgensen Jeremy 'Spike' Coh
 Candidate	Donald J. Trump	Donald J. Trump Michael R. Penc
+ReportingUnit	Alabama;Jefferson County;PREC 5290 - AFTON LEE COMMUNIT	Jefferson;PREC 5290 - AFTON LEE COMMUNIT
+ReportingUnit	Alabama;Jefferson County;PREC 5280 - BIRMINGHAM BOTANIC	Jefferson;PREC 5280 - BIRMINGHAM BOTANIC
+ReportingUnit	Alabama;Jefferson County;PREC 5260 - CANTERBURY UNITED	Jefferson;PREC 5260 - CANTERBURY UNITED
+ReportingUnit	Alabama;Jefferson County;PREC 5250 - CHURCH OF THE HIGH	Jefferson;PREC 5250 - CHURCH OF THE HIGH
+ReportingUnit	Alabama;Jefferson County;PREC 5240 - SHADES CAHABA ELEM	Jefferson;PREC 5240 - SHADES CAHABA ELEM
+ReportingUnit	Alabama;Jefferson County;PREC 5230 - HOOVER PUBLIC LIBR	Jefferson;PREC 5230 - HOOVER PUBLIC LIBR
+ReportingUnit	Alabama;Jefferson County;PREC 5220 - TOWN VILLAGE VESTA	Jefferson;PREC 5220 - TOWN VILLAGE VESTA
+ReportingUnit	Alabama;Jefferson County;PREC 5210 - HOMEWOOD EXCEPTION	Jefferson;PREC 5210 - HOMEWOOD EXCEPTION
+ReportingUnit	Alabama;Jefferson County;PREC 5200 - MOUNTAINTOP COMMUN	Jefferson;PREC 5200 - MOUNTAINTOP COMMUN
+ReportingUnit	Alabama;Jefferson County;PREC 5190 - CHEROKEE BEND ELEM	Jefferson;PREC 5190 - CHEROKEE BEND ELEM
+ReportingUnit	Alabama;Jefferson County;PREC 5180 - SAINT LUKE'S EPISC	Jefferson;PREC 5180 - SAINT LUKE'S EPISC
+ReportingUnit	Alabama;Jefferson County;PREC 5170 - EDGEWOOD ELEMENTAR	Jefferson;PREC 5170 - EDGEWOOD ELEMENTAR
+ReportingUnit	Alabama;Jefferson County;PREC 5160 - SAINT THOMAS EPISC	Jefferson;PREC 5160 - SAINT THOMAS EPISC
+ReportingUnit	Alabama;Jefferson County;PREC 5150 - MCELWAIN BAPTIST C	Jefferson;PREC 5150 - MCELWAIN BAPTIST C
+ReportingUnit	Alabama;Jefferson County;PREC 5140 - LIBERTY PARK BAPTI	Jefferson;PREC 5140 - LIBERTY PARK BAPTI
+ReportingUnit	Alabama;Jefferson County;PREC 5130 - MOUNTAIN BROOK COM	Jefferson;PREC 5130 - MOUNTAIN BROOK COM
+ReportingUnit	Alabama;Jefferson County;PREC 5120 - HORIZON CHURCH	Jefferson;PREC 5120 - HORIZON CHURCH
+ReportingUnit	Alabama;Jefferson County;PREC 5110 - MOUNTAIN BROOK CIT	Jefferson;PREC 5110 - MOUNTAIN BROOK CIT
+ReportingUnit	Alabama;Jefferson County;PREC 5100 - BLUFF PARK UNITED	Jefferson;PREC 5100 - BLUFF PARK UNITED
+ReportingUnit	Alabama;Jefferson County;PREC 5090 - LEEDS FIRST UNITED	Jefferson;PREC 5090 - LEEDS FIRST UNITED
+ReportingUnit	Alabama;Jefferson County;PREC 5080 - BROOKWOOD BAPTIST	Jefferson;PREC 5080 - BROOKWOOD BAPTIST
+ReportingUnit	Alabama;Jefferson County;PREC 5070 - CAHABA HEIGHTS BAP	Jefferson;PREC 5070 - CAHABA HEIGHTS BAP
+ReportingUnit	Alabama;Jefferson County;PREC 5060 - SAINT PETER THE AP	Jefferson;PREC 5060 - SAINT PETER THE AP
+ReportingUnit	Alabama;Jefferson County;PREC 5050 - HOMEWOOD PUBLIC LI	Jefferson;PREC 5050 - HOMEWOOD PUBLIC LI
+ReportingUnit	Alabama;Jefferson County;PREC 5040 - METROPOLITAN CHURC	Jefferson;PREC 5040 - METROPOLITAN CHURC
+ReportingUnit	Alabama;Jefferson County;PREC 5035 - FULLNESS CHRISTIAN	Jefferson;PREC 5035 - FULLNESS CHRISTIAN
+ReportingUnit	Alabama;Jefferson County;PREC 5030 - SHADES MTN COMMUNI	Jefferson;PREC 5030 - SHADES MTN COMMUNI
+ReportingUnit	Alabama;Jefferson County;PREC 5020 - VESTAVIA HILLS UNI	Jefferson;PREC 5020 - VESTAVIA HILLS UNI
+ReportingUnit	Alabama;Jefferson County;PREC 5010 - HOOVER PARK & RECR	Jefferson;PREC 5010 - HOOVER PARK & RECR
+ReportingUnit	Alabama;Jefferson County;PREC 4250 - TRAFFORD CITY HALL	Jefferson;PREC 4250 - TRAFFORD CITY HALL
+ReportingUnit	Alabama;Jefferson County;PREC 4240 - IRONDALE CITY HALL	Jefferson;PREC 4240 - IRONDALE CITY HALL
+ReportingUnit	Alabama;Jefferson County;PREC 4230 - GUIDING LIGHT CHUR	Jefferson;PREC 4230 - GUIDING LIGHT CHUR
+ReportingUnit	Alabama;Jefferson County;PREC 4220 - IRONDALE SENIOR CI	Jefferson;PREC 4220 - IRONDALE SENIOR CI
+ReportingUnit	Alabama;Jefferson County;PREC 4210 - MORRIS SENIOR CITI	Jefferson;PREC 4210 - MORRIS SENIOR CITI
+ReportingUnit	Alabama;Jefferson County;PREC 4200 - FULTONDALE SENIOR	Jefferson;PREC 4200 - FULTONDALE SENIOR
+ReportingUnit	Alabama;Jefferson County;PREC 4190 - THE CHURCH AT GRAN	Jefferson;PREC 4190 - THE CHURCH AT GRAN
+ReportingUnit	Alabama;Jefferson County;PREC 4180 - BRADFORD SANCTUARY	Jefferson;PREC 4180 - BRADFORD SANCTUARY
+ReportingUnit	Alabama;Jefferson County;PREC 4170 - KIMBERLY UNITED ME	Jefferson;PREC 4170 - KIMBERLY UNITED ME
+ReportingUnit	Alabama;Jefferson County;PREC 4160 - CENTER POINT SENIO	Jefferson;PREC 4160 - CENTER POINT SENIO
+ReportingUnit	Alabama;Jefferson County;PREC 4150 - PALMERDALE UNITED	Jefferson;PREC 4150 - PALMERDALE UNITED
+ReportingUnit	Alabama;Jefferson County;PREC 4140 - LEEDS CIVIC CENTER	Jefferson;PREC 4140 - LEEDS CIVIC CENTER
+ReportingUnit	Alabama;Jefferson County;PREC 4130 - WARRIOR CITY HALL	Jefferson;PREC 4130 - WARRIOR CITY HALL
+ReportingUnit	Alabama;Jefferson County;PREC 4120 - LIFE CHURCH	Jefferson;PREC 4120 - LIFE CHURCH
+ReportingUnit	Alabama;Jefferson County;PREC 4110 - ROCK SCHOOL CENTER	Jefferson;PREC 4110 - ROCK SCHOOL CENTER
+ReportingUnit	Alabama;Jefferson County;PREC 4100 - MOUNTAIN VIEW BAPT	Jefferson;PREC 4100 - MOUNTAIN VIEW BAPT
+ReportingUnit	Alabama;Jefferson County;PREC 4090 - FULTONDALE FIRST B	Jefferson;PREC 4090 - FULTONDALE FIRST B
+ReportingUnit	Alabama;Jefferson County;PREC 4080 - NORTH PARK BAPTIST	Jefferson;PREC 4080 - NORTH PARK BAPTIST
+ReportingUnit	Alabama;Jefferson County;PREC 4070 - TARRANT CITY HALL	Jefferson;PREC 4070 - TARRANT CITY HALL
+ReportingUnit	Alabama;Jefferson County;PREC 4060 - CENTER POINT COMMU	Jefferson;PREC 4060 - CENTER POINT COMMU
+ReportingUnit	Alabama;Jefferson County;PREC 4050 - CLAY COMMUNITY CEN	Jefferson;PREC 4050 - CLAY COMMUNITY CEN
+ReportingUnit	Alabama;Jefferson County;PREC 4040 - TRUSSVILLE CITY HA	Jefferson;PREC 4040 - TRUSSVILLE CITY HA
+ReportingUnit	Alabama;Jefferson County;PREC 4030 - CENTER POINT FIRST	Jefferson;PREC 4030 - CENTER POINT FIRST
+ReportingUnit	Alabama;Jefferson County;PREC 4020 - TRUSSVILLE FIRST B	Jefferson;PREC 4020 - TRUSSVILLE FIRST B
+ReportingUnit	Alabama;Jefferson County;PREC 4015 - GARDENDALE MT_ VER	Jefferson;PREC 4015 - GARDENDALE MT_ VER
+ReportingUnit	Alabama;Jefferson County;PREC 4010 - GARDENDALE CIVIC C	Jefferson;PREC 4010 - GARDENDALE CIVIC C
+ReportingUnit	Alabama;Jefferson County;PREC 3330 - FIRST BAPT CHURCH	Jefferson;PREC 3330 - FIRST BAPT CHURCH
+ReportingUnit	Alabama;Jefferson County;PREC 3320 - MAYTOWN BAPTIST CH	Jefferson;PREC 3320 - MAYTOWN BAPTIST CH
+ReportingUnit	Alabama;Jefferson County;PREC 3310 - PARKWOOD CHURCH OF	Jefferson;PREC 3310 - PARKWOOD CHURCH OF
+ReportingUnit	Alabama;Jefferson County;PREC 3300 - JOHNS COMMUNITY CE	Jefferson;PREC 3300 - JOHNS COMMUNITY CE
+ReportingUnit	Alabama;Jefferson County;PREC 3290 - MULGA TOWN HALL	Jefferson;PREC 3290 - MULGA TOWN HALL
+ReportingUnit	Alabama;Jefferson County;PREC 3280 - BROOKSIDE COMMUNIT	Jefferson;PREC 3280 - BROOKSIDE COMMUNIT
+ReportingUnit	Alabama;Jefferson County;PREC 3270 - MUSCODA COMMUNITY	Jefferson;PREC 3270 - MUSCODA COMMUNITY
+ReportingUnit	Alabama;Jefferson County;PREC 3260 - WEST JEFFERSON REC	Jefferson;PREC 3260 - WEST JEFFERSON REC
+ReportingUnit	Alabama;Jefferson County;PREC 3250 - BESSEMER FIRE STAT	Jefferson;PREC 3250 - BESSEMER FIRE STAT
+ReportingUnit	Alabama;Jefferson County;PREC 3240 - SYLVAN SPRINGS FIR	Jefferson;PREC 3240 - SYLVAN SPRINGS FIR
+ReportingUnit	Alabama;Jefferson County;PREC 3230 - GRANT STREET BAPTI	Jefferson;PREC 3230 - GRANT STREET BAPTI
+ReportingUnit	Alabama;Jefferson County;PREC 3220 - OAK GROVE FIRST BA	Jefferson;PREC 3220 - OAK GROVE FIRST BA
+ReportingUnit	Alabama;Jefferson County;PREC 3210 - MINOR FIRE STATION	Jefferson;PREC 3210 - MINOR FIRE STATION
+ReportingUnit	Alabama;Jefferson County;PREC 3200 - MAURICE L_ WEST CO	Jefferson;PREC 3200 - MAURICE L_ WEST CO
+ReportingUnit	Alabama;Jefferson County;PREC 3190 - DOLOMITE W FIELD C	Jefferson;PREC 3190 - DOLOMITE W FIELD C
+ReportingUnit	Alabama;Jefferson County;PREC 3180 - CORNER SCHOOL	Jefferson;PREC 3180 - CORNER SCHOOL
+ReportingUnit	Alabama;Jefferson County;PREC 3170 - ALLIANCE COMMUNITY	Jefferson;PREC 3170 - ALLIANCE COMMUNITY
+ReportingUnit	Alabama;Jefferson County;PREC 3160 - ROSS BRIDGE WELCOM	Jefferson;PREC 3160 - ROSS BRIDGE WELCOM
+ReportingUnit	Alabama;Jefferson County;PREC 3150 - UNION HILL BAPTIST	Jefferson;PREC 3150 - UNION HILL BAPTIST
+ReportingUnit	Alabama;Jefferson County;PREC 3140 - VALLEY CREEK BAPTI	Jefferson;PREC 3140 - VALLEY CREEK BAPTI
+ReportingUnit	Alabama;Jefferson County;PREC 3130 - SHADES CREST BAPTI	Jefferson;PREC 3130 - SHADES CREST BAPTI
+ReportingUnit	Alabama;Jefferson County;PREC 3120 - ADAMSVILLE BAPTIST	Jefferson;PREC 3120 - ADAMSVILLE BAPTIST
+ReportingUnit	Alabama;Jefferson County;PREC 3110 - OAKMONT PRESBYTERI	Jefferson;PREC 3110 - OAKMONT PRESBYTERI
+ReportingUnit	Alabama;Jefferson County;PREC 3100 - BAGLEY JUNIOR HIGH	Jefferson;PREC 3100 - BAGLEY JUNIOR HIGH
+ReportingUnit	Alabama;Jefferson County;PREC 3090 - BROOKLANE COMMUNIT	Jefferson;PREC 3090 - BROOKLANE COMMUNIT
+ReportingUnit	Alabama;Jefferson County;PREC 3080 - MORGAN UNITED METH	Jefferson;PREC 3080 - MORGAN UNITED METH
+ReportingUnit	Alabama;Jefferson County;PREC 3070 - MT_ OLIVE COMMUNIT	Jefferson;PREC 3070 - MT_ OLIVE COMMUNIT
+ReportingUnit	Alabama;Jefferson County;PREC 3060 - BESSEMER CIVIC CEN	Jefferson;PREC 3060 - BESSEMER CIVIC CEN
+ReportingUnit	Alabama;Jefferson County;PREC 3050 - PLEASANT RIDGE BAP	Jefferson;PREC 3050 - PLEASANT RIDGE BAP
+ReportingUnit	Alabama;Jefferson County;PREC 3040 - PRINCE OF PEACE CA	Jefferson;PREC 3040 - PRINCE OF PEACE CA
+ReportingUnit	Alabama;Jefferson County;PREC 3035 - BETHEL BAPTIST CHU	Jefferson;PREC 3035 - BETHEL BAPTIST CHU
+ReportingUnit	Alabama;Jefferson County;PREC 3030 - PLEASANT GROVE FIR	Jefferson;PREC 3030 - PLEASANT GROVE FIR
+ReportingUnit	Alabama;Jefferson County;PREC 3025 - BAPTIST CHURCH OF	Jefferson;PREC 3025 - BAPTIST CHURCH OF
+ReportingUnit	Alabama;Jefferson County;PREC 3020 - PLEASANT HILL UNIT	Jefferson;PREC 3020 - PLEASANT HILL UNIT
+ReportingUnit	Alabama;Jefferson County;PREC 3015 - HOOVER MET SPORTS	Jefferson;PREC 3015 - HOOVER MET SPORTS
+ReportingUnit	Alabama;Jefferson County;PREC 3010 - HOOVER MET BASEBAL	Jefferson;PREC 3010 - HOOVER MET BASEBAL
+ReportingUnit	Alabama;Jefferson County;PREC 2440 - SOUTHTOWN HOUSING	Jefferson;PREC 2440 - SOUTHTOWN HOUSING
+ReportingUnit	Alabama;Jefferson County;PREC 2430 - SOUTHSIDE BRANCH P	Jefferson;PREC 2430 - SOUTHSIDE BRANCH P
+ReportingUnit	Alabama;Jefferson County;PREC 2420 - BELL WALLACE BUILD	Jefferson;PREC 2420 - BELL WALLACE BUILD
+ReportingUnit	Alabama;Jefferson County;PREC 2410 - BRYANT CHAPEL AME	Jefferson;PREC 2410 - BRYANT CHAPEL AME
+ReportingUnit	Alabama;Jefferson County;PREC 2400 - WENONAH HIGH SCHOO	Jefferson;PREC 2400 - WENONAH HIGH SCHOO
+ReportingUnit	Alabama;Jefferson County;PREC 2390 - ROOSEVELT CITY COM	Jefferson;PREC 2390 - ROOSEVELT CITY COM
+ReportingUnit	Alabama;Jefferson County;PREC 2380 - FIVE POINTS WEST P	Jefferson;PREC 2380 - FIVE POINTS WEST P
+ReportingUnit	Alabama;Jefferson County;PREC 2370 - NEW BETHEL BAPTIST	Jefferson;PREC 2370 - NEW BETHEL BAPTIST
+ReportingUnit	Alabama;Jefferson County;PREC 2360 - BESSEMER RECREATIO	Jefferson;PREC 2360 - BESSEMER RECREATIO
+ReportingUnit	Alabama;Jefferson County;PREC 2350/5270 - OXMOOR VALLEY	Jefferson;PREC 2350/5270 - OXMOOR VALLEY
+ReportingUnit	Alabama;Jefferson County;PREC 2340 - THOMPSON MANOR COM	Jefferson;PREC 2340 - THOMPSON MANOR COM
+ReportingUnit	Alabama;Jefferson County;PREC 2330 - HENRY CRUMPTON REC	Jefferson;PREC 2330 - HENRY CRUMPTON REC
+ReportingUnit	Alabama;Jefferson County;PREC 2320 - GEORGE WARD TENNIS	Jefferson;PREC 2320 - GEORGE WARD TENNIS
+ReportingUnit	Alabama;Jefferson County;PREC 2310 - MT_ ZION COMMUNITY	Jefferson;PREC 2310 - MT_ ZION COMMUNITY
+ReportingUnit	Alabama;Jefferson County;PREC 2300 - BUSH HILLS ACADEMY	Jefferson;PREC 2300 - BUSH HILLS ACADEMY
+ReportingUnit	Alabama;Jefferson County;PREC 2290 - EAST ENSLEY PUBLIC	Jefferson;PREC 2290 - EAST ENSLEY PUBLIC
+ReportingUnit	Alabama;Jefferson County;PREC 2280 - WEST END ACADEMY	Jefferson;PREC 2280 - WEST END ACADEMY
+ReportingUnit	Alabama;Jefferson County;PREC 2270 - MOUNT ZION MISSION	Jefferson;PREC 2270 - MOUNT ZION MISSION
+ReportingUnit	Alabama;Jefferson County;PREC 2260 - WILKERSON MIDDLE S	Jefferson;PREC 2260 - WILKERSON MIDDLE S
+ReportingUnit	Alabama;Jefferson County;PREC 2250 - MORE THAN CONQUERO	Jefferson;PREC 2250 - MORE THAN CONQUERO
+ReportingUnit	Alabama;Jefferson County;PREC 2240 - FIRE DEPARTMENT AD	Jefferson;PREC 2240 - FIRE DEPARTMENT AD
+ReportingUnit	Alabama;Jefferson County;PREC 2230 - AVONDALE ELEMENTAR	Jefferson;PREC 2230 - AVONDALE ELEMENTAR
+ReportingUnit	Alabama;Jefferson County;PREC 2220 - GLEN IRIS ELEMENTA	Jefferson;PREC 2220 - GLEN IRIS ELEMENTA
+ReportingUnit	Alabama;Jefferson County;PREC 2210 - JONESBORO ELEMENTA	Jefferson;PREC 2210 - JONESBORO ELEMENTA
+ReportingUnit	Alabama;Jefferson County;PREC 2200 - CENTRAL PARK ELEME	Jefferson;PREC 2200 - CENTRAL PARK ELEME
+ReportingUnit	Alabama;Jefferson County;PREC 2190 - WIGGINS LIBRARY &	Jefferson;PREC 2190 - WIGGINS LIBRARY &
+ReportingUnit	Alabama;Jefferson County;PREC 2180 - AVONDALE PUBLIC LI	Jefferson;PREC 2180 - AVONDALE PUBLIC LI
+ReportingUnit	Alabama;Jefferson County;PREC 2170 - HEMPHILL SCHOOL RE	Jefferson;PREC 2170 - HEMPHILL SCHOOL RE
+ReportingUnit	Alabama;Jefferson County;PREC 2160 - JEFFERSON COUNTY C	Jefferson;PREC 2160 - JEFFERSON COUNTY C
+ReportingUnit	Alabama;Jefferson County;PREC 2150 - BRIGHTON SENIOR CI	Jefferson;PREC 2150 - BRIGHTON SENIOR CI
+ReportingUnit	Alabama;Jefferson County;PREC 2140 - NEW BEGINNING CHUR	Jefferson;PREC 2140 - NEW BEGINNING CHUR
+ReportingUnit	Alabama;Jefferson County;PREC 2130 - MINOR ELEMENTARY S	Jefferson;PREC 2130 - MINOR ELEMENTARY S
+ReportingUnit	Alabama;Jefferson County;PREC 2120 - DUNBAR-ABRAMS COMM	Jefferson;PREC 2120 - DUNBAR-ABRAMS COMM
+ReportingUnit	Alabama;Jefferson County;PREC 2110 - SOUTHSIDE HOMES CO	Jefferson;PREC 2110 - SOUTHSIDE HOMES CO
+ReportingUnit	Alabama;Jefferson County;PREC 2100 - MEMORIAL RECREATIO	Jefferson;PREC 2100 - MEMORIAL RECREATIO
+ReportingUnit	Alabama;Jefferson County;PREC 2090 - SIXTH AVENUE BAPTI	Jefferson;PREC 2090 - SIXTH AVENUE BAPTI
+ReportingUnit	Alabama;Jefferson County;PREC 2080 - RAMSAY ALTERNATIVE	Jefferson;PREC 2080 - RAMSAY ALTERNATIVE
+ReportingUnit	Alabama;Jefferson County;PREC 2070 - CENTRAL PARK RECRE	Jefferson;PREC 2070 - CENTRAL PARK RECRE
+ReportingUnit	Alabama;Jefferson County;PREC 2060 - CHARLES A BROWN EL	Jefferson;PREC 2060 - CHARLES A BROWN EL
+ReportingUnit	Alabama;Jefferson County;PREC 2050 - HARRISON PARK RECR	Jefferson;PREC 2050 - HARRISON PARK RECR
+ReportingUnit	Alabama;Jefferson County;PREC 2040 - ENSLEY PARK RECREA	Jefferson;PREC 2040 - ENSLEY PARK RECREA
+ReportingUnit	Alabama;Jefferson County;PREC 2030 - HIGHLAND PARK GOLF	Jefferson;PREC 2030 - HIGHLAND PARK GOLF
+ReportingUnit	Alabama;Jefferson County;PREC 2020 - HOMEWOOD SENIOR CE	Jefferson;PREC 2020 - HOMEWOOD SENIOR CE
+ReportingUnit	Alabama;Jefferson County;PREC 2010 - LEGION FIELD LOBBY	Jefferson;PREC 2010 - LEGION FIELD LOBBY
+ReportingUnit	Alabama;Jefferson County;PREC 1380 - ST_ MARY'S CATHOLI	Jefferson;PREC 1380 - ST_ MARY'S CATHOLI
+ReportingUnit	Alabama;Jefferson County;PREC 1370 - MCALPINE RECREATIO	Jefferson;PREC 1370 - MCALPINE RECREATIO
+ReportingUnit	Alabama;Jefferson County;PREC 1360 - NORTH AVONDALE PUB	Jefferson;PREC 1360 - NORTH AVONDALE PUB
+ReportingUnit	Alabama;Jefferson County;PREC 1350 - C_ J_ DONALD ELEME	Jefferson;PREC 1350 - C_ J_ DONALD ELEME
+ReportingUnit	Alabama;Jefferson County;PREC 1340 - MOUNT HEBRON BAPTI	Jefferson;PREC 1340 - MOUNT HEBRON BAPTI
+ReportingUnit	Alabama;Jefferson County;PREC 1330 - MORTON SIMPSON COM	Jefferson;PREC 1330 - MORTON SIMPSON COM
+ReportingUnit	Alabama;Jefferson County;PREC 1320 - SANDUSKY COMMUNITY	Jefferson;PREC 1320 - SANDUSKY COMMUNITY
+ReportingUnit	Alabama;Jefferson County;PREC 1310 - BROWNSVILLE COMMUN	Jefferson;PREC 1310 - BROWNSVILLE COMMUN
+ReportingUnit	Alabama;Jefferson County;PREC 1300 - NORTH BIRMINGHAM P	Jefferson;PREC 1300 - NORTH BIRMINGHAM P
+ReportingUnit	Alabama;Jefferson County;PREC 1290 - NORTH BIRMINGHAM R	Jefferson;PREC 1290 - NORTH BIRMINGHAM R
+ReportingUnit	Alabama;Jefferson County;PREC 1280 - OLIVER ELEMENTARY	Jefferson;PREC 1280 - OLIVER ELEMENTARY
+ReportingUnit	Alabama;Jefferson County;PREC 1270 - HOOPER CITY RECREA	Jefferson;PREC 1270 - HOOPER CITY RECREA
+ReportingUnit	Alabama;Jefferson County;PREC 1250 - FORESTDALE FIRE ST	Jefferson;PREC 1250 - FORESTDALE FIRE ST
+ReportingUnit	Alabama;Jefferson County;PREC 1240 - MT_ PILGRIM BAPTIS	Jefferson;PREC 1240 - MT_ PILGRIM BAPTIS
+ReportingUnit	Alabama;Jefferson County;PREC 1230 - NEW RISING STAR MI	Jefferson;PREC 1230 - NEW RISING STAR MI
+ReportingUnit	Alabama;Jefferson County;PREC 1220 - WILLOW WOOD RECREA	Jefferson;PREC 1220 - WILLOW WOOD RECREA
+ReportingUnit	Alabama;Jefferson County;PREC 1210 - GLEN OAKS ELEMENTA	Jefferson;PREC 1210 - GLEN OAKS ELEMENTA
+ReportingUnit	Alabama;Jefferson County;PREC 1200 - NORWOOD COMMUNITY	Jefferson;PREC 1200 - NORWOOD COMMUNITY
+ReportingUnit	Alabama;Jefferson County;PREC 1190 - INGLENOOK ELEMENTA	Jefferson;PREC 1190 - INGLENOOK ELEMENTA
+ReportingUnit	Alabama;Jefferson County;PREC 1180 - BARRETT ELEMENTARY	Jefferson;PREC 1180 - BARRETT ELEMENTARY
+ReportingUnit	Alabama;Jefferson County;PREC 1170 - HUDSON MIDDLE SCHO	Jefferson;PREC 1170 - HUDSON MIDDLE SCHO
+ReportingUnit	Alabama;Jefferson County;PREC 1160 - FAITH CHAPEL CHRIS	Jefferson;PREC 1160 - FAITH CHAPEL CHRIS
+ReportingUnit	Alabama;Jefferson County;PREC 1150 - ADAMSVILLE CHURCH	Jefferson;PREC 1150 - ADAMSVILLE CHURCH
+ReportingUnit	Alabama;Jefferson County;PREC 1140 - WOODLAWN PUBLIC LI	Jefferson;PREC 1140 - WOODLAWN PUBLIC LI
+ReportingUnit	Alabama;Jefferson County;PREC 1130 - MARTHA GASKINS ELE	Jefferson;PREC 1130 - MARTHA GASKINS ELE
+ReportingUnit	Alabama;Jefferson County;PREC 1120 - ROBINSON ELEMENTAR	Jefferson;PREC 1120 - ROBINSON ELEMENTAR
+ReportingUnit	Alabama;Jefferson County;PREC 1110 - DON HAWKINS PARK &	Jefferson;PREC 1110 - DON HAWKINS PARK &
+ReportingUnit	Alabama;Jefferson County;PREC 1100 - SOUTH HAMPTON ELEM	Jefferson;PREC 1100 - SOUTH HAMPTON ELEM
+ReportingUnit	Alabama;Jefferson County;PREC 1090 - FORESTDALE SQUARE	Jefferson;PREC 1090 - FORESTDALE SQUARE
+ReportingUnit	Alabama;Jefferson County;PREC 1080 - GEORGE FRENCH STUD	Jefferson;PREC 1080 - GEORGE FRENCH STUD
+ReportingUnit	Alabama;Jefferson County;PREC 1070 - CRESTWAY BAPTIST C	Jefferson;PREC 1070 - CRESTWAY BAPTIST C
+ReportingUnit	Alabama;Jefferson County;PREC 1060 - SUN VALLEY ELEMENT	Jefferson;PREC 1060 - SUN VALLEY ELEMENT
+ReportingUnit	Alabama;Jefferson County;PREC 1050 - MIDFIELD COMMUNITY	Jefferson;PREC 1050 - MIDFIELD COMMUNITY
+ReportingUnit	Alabama;Jefferson County;PREC 1040 - BETHEL BAPTIST CHU	Jefferson;PREC 1040 - BETHEL BAPTIST CHU
+ReportingUnit	Alabama;Jefferson County;PREC 1030 - L_M_ SMITH MIDDLE	Jefferson;PREC 1030 - L_M_ SMITH MIDDLE
+ReportingUnit	Alabama;Jefferson County;PREC 1020 - TOM BRADFORD PARK	Jefferson;PREC 1020 - TOM BRADFORD PARK
+ReportingUnit	Alabama;Jefferson County;PREC 1010 - OUR LADY OF LOURDE	Jefferson;PREC 1010 - OUR LADY OF LOURDE
+ReportingUnit	Alabama;Jefferson County;BIRMINGHAM ABSENTEE	Jefferson;BIRMINGHAM ABSENTEE
+ReportingUnit	Alabama;Jefferson County;BESSEMER ABSENTEE	Jefferson;BESSEMER ABSENTEE
+ReportingUnit	Alabama;Jackson County;WOODVILLE BOB JONES COMM	Jackson;WOODVILLE BOB JONES COMM
+ReportingUnit	Alabama;Jackson County;TUPELO/PIKEVILLE STORE	Jackson;TUPELO/PIKEVILLE STORE
+ReportingUnit	Alabama;Jackson County;TRENTON FIRE HALL	Jackson;TRENTON FIRE HALL
+ReportingUnit	Alabama;Jackson County;STEVENSON CITY PARK	Jackson;STEVENSON CITY PARK
+ReportingUnit	Alabama;Jackson County;SKYLINE CITY HALL	Jackson;SKYLINE CITY HALL
+ReportingUnit	Alabama;Jackson County;SECTION NEW CITY HALL	Jackson;SECTION NEW CITY HALL
+ReportingUnit	Alabama;Jackson County;SCOTTSBORO REC COMM BLDG	Jackson;SCOTTSBORO REC COMM BLDG
+ReportingUnit	Alabama;Jackson County;ROSALIE COMM CTR_	Jackson;ROSALIE COMM CTR_
+ReportingUnit	Alabama;Jackson County;PRINCETON FIRE HALL	Jackson;PRINCETON FIRE HALL
+ReportingUnit	Alabama;Jackson County;PLEASANT GROVES COMM CTR_	Jackson;PLEASANT GROVES COMM CTR_
+ReportingUnit	Alabama;Jackson County;PISGAH CITY HALL	Jackson;PISGAH CITY HALL
+ReportingUnit	Alabama;Jackson County;PAINT ROCK SR_ CITIZEN	Jackson;PAINT ROCK SR_ CITIZEN
+ReportingUnit	Alabama;Jackson County;NEWHOPE METHODIST	Jackson;NEWHOPE METHODIST
+ReportingUnit	Alabama;Jackson County;MACEDONIA SCHOOL	Jackson;MACEDONIA SCHOOL
+ReportingUnit	Alabama;Jackson County;LONG ISLAND COMM CTR_	Jackson;LONG ISLAND COMM CTR_
+ReportingUnit	Alabama;Jackson County;LIMROCK FIRE HALL	Jackson;LIMROCK FIRE HALL
+ReportingUnit	Alabama;Jackson County;LETCHER CHURCH OF GOD	Jackson;LETCHER CHURCH OF GOD
+ReportingUnit	Alabama;Jackson County;LARKINSVILLE STOCK BARN	Jackson;LARKINSVILLE STOCK BARN
+ReportingUnit	Alabama;Jackson County;LANGSTON CITY HALL	Jackson;LANGSTON CITY HALL
+ReportingUnit	Alabama;Jackson County;HYTOP TOWN HALL	Jackson;HYTOP TOWN HALL
+ReportingUnit	Alabama;Jackson County;HOLLYWOOD CITY HALL	Jackson;HOLLYWOOD CITY HALL
+ReportingUnit	Alabama;Jackson County;HIGDON N SAND MTN SCHOOL	Jackson;HIGDON N SAND MTN SCHOOL
+ReportingUnit	Alabama;Jackson County;FLAT ROCK RURITAN BLDG	Jackson;FLAT ROCK RURITAN BLDG
+ReportingUnit	Alabama;Jackson County;FACKLER FIRE HALL	Jackson;FACKLER FIRE HALL
+ReportingUnit	Alabama;Jackson County;ESTILL FORK PRINCES STORE	Jackson;ESTILL FORK PRINCES STORE
+ReportingUnit	Alabama;Jackson County;DUTTON CITY HALL	Jackson;DUTTON CITY HALL
+ReportingUnit	Alabama;Jackson County;DEAN'S CHAPEL COMM	Jackson;DEAN'S CHAPEL COMM
+ReportingUnit	Alabama;Jackson County;CROW FIRE HALL	Jackson;CROW FIRE HALL
+ReportingUnit	Alabama;Jackson County;BRYANT COMM BLDG	Jackson;BRYANT COMM BLDG
+ReportingUnit	Alabama;Jackson County;BRIDGEPORT COMM CTR_	Jackson;BRIDGEPORT COMM CTR_

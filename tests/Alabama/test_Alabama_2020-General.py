@@ -17,12 +17,12 @@ import election_data_analysis as e
 election = "2020 General"
 jurisdiction = "Alabama"
 abbr = "AL"
-total_pres_votes = 2284601  # total of all votes for US President
+total_pres_votes = 2323282  # total of all votes for US President per official Final Canvass-Merged
 # website https://www2.alabamavotes.gov/electionNight/statewideResultsByContest.aspx?ecode=1001090
 ## 2297295
 ### same total given in sosEnrExport.xlsx
 cd = 1  # US House congressional district
-total_cd_votes = 314491  # total votes in that US House contest in the chosen cd
+total_cd_votes = 329075  # total votes in that US House contest in the chosen cd
 # website https://www2.alabamavotes.gov/electionNight/statewideResultsByContest.aspx?ecode=1001090
 ## 314501
 shd = 1  # state house district
@@ -34,9 +34,10 @@ pres_votes_vote_type =  0 # total votes for US President of that vote type
 county_or_other = "county"  # Change this only if results are subdivided by something other than counties
 #  e.g., 'parish' in LA, 'state-house' in Alaska, 'ward' in Philadelphia
 single_county = "Alabama;Mobile County"  # pick any one from your file, but use internal db name
-pres_votes_county = 183813  # total votes for US President in that county
+pres_votes_county = 183164  # total votes for US President in that county
 # website https://www2.alabamavotes.gov/electionNight/statewideResultsByContest.aspx?ecode=1001090
-## 181783 (same as sosEnrExport.xlsx)
+## has 181783 (same as sosEnrExport.xlsx)
+# but official final canvass has 79474 + 101243 + 1938 + 509 = 183164
 
 def test_data_exists(dbname):
     assert e.data_exists(election, jurisdiction, dbname=dbname)
@@ -48,7 +49,7 @@ def test_presidential(dbname):
             election,
             jurisdiction,
             f"US President ({abbr})",
-            sub_unit_type=county_or_other,
+            sub_unit_type="state",
             dbname=dbname,
         )
         == total_pres_votes
@@ -61,7 +62,7 @@ def test_congressional_totals(dbname):
             election,
             jurisdiction,
             f"US House {abbr} District {cd}",
-            sub_unit_type=county_or_other,
+            sub_unit_type="state",
             dbname=dbname,
         )
         == total_cd_votes

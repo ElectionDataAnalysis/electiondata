@@ -9,7 +9,7 @@ count_locations=by_column_numbers
 munge_strings=in_field_values,in_count_headers,constant_over_sheet
 
 # Optional parameter for excel or flat_text
-rows_to_skip=
+rows_to_skip=in_count_headers,constant_over_sheet
 
 ################################################
 ## Sometimes required format parameters:
@@ -45,7 +45,7 @@ encoding=
 
 #### for excel file type:
 sheets_to_read_names=
-sheets_to_read_numbers=Wilcox,Winston
+sheets_to_read_numbers=
 sheets_to_skip_names=
 
 #### for xml file type
@@ -53,22 +53,22 @@ nesting_tags=
 
 # Munge formula sections (required if in munge_strings list) #
 [in_field_values]
+Candidate=<Candidate>
 CandidateContest=<Contest Title>
 Party=<Party>
-Candidate=<Candidate>
-CountItemType=election-day
+
 
 [in_count_headers]
-### avoid ReportingUnits that have ABSENTEE or PROVISIONAL at the start of their names
-ReportingUnit=<sheet_name>;{<header_0>,^(?!ABSENTEE|PROVISIONAL)(.*)$}
+CountItemType={<header_0>,^(ABSENTEE|PROVISIONAL) .+$}
+ReportingUnit=<sheet_name>;<header_0>
 
 [constant_over_sheet]
+
 
 # Values to ignore (optional) #
 [ignore]
 ## E.g: Candidate=Total Votes Cast,Registered Voters ##
 Candidate=Under Votes,Over Votes
-
 
 # Lookup formula sections #
 ## Required when foreign keys are used in munge formulas and    ##

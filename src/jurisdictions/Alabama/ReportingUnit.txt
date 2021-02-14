@@ -1849,3 +1849,209 @@ Alabama;Autauga County;140 AUTAUGAVILLE VFD	precinct
 Alabama;Autauga County;110 CENTRAL AL ELECTRIC	precinct
 Alabama;Autauga County;100 TRINITY METHODIST	precinct
 Alabama;Autauga County;10 JONES COMM_ CTR_	precinct
+Alabama;Jefferson County;PREC 5290 - AFTON LEE COMMUNIT	precinct
+Alabama;Jefferson County;PREC 5280 - BIRMINGHAM BOTANIC	precinct
+Alabama;Jefferson County;PREC 5260 - CANTERBURY UNITED	precinct
+Alabama;Jefferson County;PREC 5250 - CHURCH OF THE HIGH	precinct
+Alabama;Jefferson County;PREC 5240 - SHADES CAHABA ELEM	precinct
+Alabama;Jefferson County;PREC 5230 - HOOVER PUBLIC LIBR	precinct
+Alabama;Jefferson County;PREC 5220 - TOWN VILLAGE VESTA	precinct
+Alabama;Jefferson County;PREC 5210 - HOMEWOOD EXCEPTION	precinct
+Alabama;Jefferson County;PREC 5200 - MOUNTAINTOP COMMUN	precinct
+Alabama;Jefferson County;PREC 5190 - CHEROKEE BEND ELEM	precinct
+Alabama;Jefferson County;PREC 5180 - SAINT LUKE'S EPISC	precinct
+Alabama;Jefferson County;PREC 5170 - EDGEWOOD ELEMENTAR	precinct
+Alabama;Jefferson County;PREC 5160 - SAINT THOMAS EPISC	precinct
+Alabama;Jefferson County;PREC 5150 - MCELWAIN BAPTIST C	precinct
+Alabama;Jefferson County;PREC 5140 - LIBERTY PARK BAPTI	precinct
+Alabama;Jefferson County;PREC 5130 - MOUNTAIN BROOK COM	precinct
+Alabama;Jefferson County;PREC 5120 - HORIZON CHURCH	precinct
+Alabama;Jefferson County;PREC 5110 - MOUNTAIN BROOK CIT	precinct
+Alabama;Jefferson County;PREC 5100 - BLUFF PARK UNITED	precinct
+Alabama;Jefferson County;PREC 5090 - LEEDS FIRST UNITED	precinct
+Alabama;Jefferson County;PREC 5080 - BROOKWOOD BAPTIST	precinct
+Alabama;Jefferson County;PREC 5070 - CAHABA HEIGHTS BAP	precinct
+Alabama;Jefferson County;PREC 5060 - SAINT PETER THE AP	precinct
+Alabama;Jefferson County;PREC 5050 - HOMEWOOD PUBLIC LI	precinct
+Alabama;Jefferson County;PREC 5040 - METROPOLITAN CHURC	precinct
+Alabama;Jefferson County;PREC 5035 - FULLNESS CHRISTIAN	precinct
+Alabama;Jefferson County;PREC 5030 - SHADES MTN COMMUNI	precinct
+Alabama;Jefferson County;PREC 5020 - VESTAVIA HILLS UNI	precinct
+Alabama;Jefferson County;PREC 5010 - HOOVER PARK & RECR	precinct
+Alabama;Jefferson County;PREC 4250 - TRAFFORD CITY HALL	precinct
+Alabama;Jefferson County;PREC 4240 - IRONDALE CITY HALL	precinct
+Alabama;Jefferson County;PREC 4230 - GUIDING LIGHT CHUR	precinct
+Alabama;Jefferson County;PREC 4220 - IRONDALE SENIOR CI	precinct
+Alabama;Jefferson County;PREC 4210 - MORRIS SENIOR CITI	precinct
+Alabama;Jefferson County;PREC 4200 - FULTONDALE SENIOR	precinct
+Alabama;Jefferson County;PREC 4190 - THE CHURCH AT GRAN	precinct
+Alabama;Jefferson County;PREC 4180 - BRADFORD SANCTUARY	precinct
+Alabama;Jefferson County;PREC 4170 - KIMBERLY UNITED ME	precinct
+Alabama;Jefferson County;PREC 4160 - CENTER POINT SENIO	precinct
+Alabama;Jefferson County;PREC 4150 - PALMERDALE UNITED	precinct
+Alabama;Jefferson County;PREC 4140 - LEEDS CIVIC CENTER	precinct
+Alabama;Jefferson County;PREC 4130 - WARRIOR CITY HALL	precinct
+Alabama;Jefferson County;PREC 4120 - LIFE CHURCH	precinct
+Alabama;Jefferson County;PREC 4110 - ROCK SCHOOL CENTER	precinct
+Alabama;Jefferson County;PREC 4100 - MOUNTAIN VIEW BAPT	precinct
+Alabama;Jefferson County;PREC 4090 - FULTONDALE FIRST B	precinct
+Alabama;Jefferson County;PREC 4080 - NORTH PARK BAPTIST	precinct
+Alabama;Jefferson County;PREC 4070 - TARRANT CITY HALL	precinct
+Alabama;Jefferson County;PREC 4060 - CENTER POINT COMMU	precinct
+Alabama;Jefferson County;PREC 4050 - CLAY COMMUNITY CEN	precinct
+Alabama;Jefferson County;PREC 4040 - TRUSSVILLE CITY HA	precinct
+Alabama;Jefferson County;PREC 4030 - CENTER POINT FIRST	precinct
+Alabama;Jefferson County;PREC 4020 - TRUSSVILLE FIRST B	precinct
+Alabama;Jefferson County;PREC 4015 - GARDENDALE MT_ VER	precinct
+Alabama;Jefferson County;PREC 4010 - GARDENDALE CIVIC C	precinct
+Alabama;Jefferson County;PREC 3330 - FIRST BAPT CHURCH	precinct
+Alabama;Jefferson County;PREC 3320 - MAYTOWN BAPTIST CH	precinct
+Alabama;Jefferson County;PREC 3310 - PARKWOOD CHURCH OF	precinct
+Alabama;Jefferson County;PREC 3300 - JOHNS COMMUNITY CE	precinct
+Alabama;Jefferson County;PREC 3290 - MULGA TOWN HALL	precinct
+Alabama;Jefferson County;PREC 3280 - BROOKSIDE COMMUNIT	precinct
+Alabama;Jefferson County;PREC 3270 - MUSCODA COMMUNITY	precinct
+Alabama;Jefferson County;PREC 3260 - WEST JEFFERSON REC	precinct
+Alabama;Jefferson County;PREC 3250 - BESSEMER FIRE STAT	precinct
+Alabama;Jefferson County;PREC 3240 - SYLVAN SPRINGS FIR	precinct
+Alabama;Jefferson County;PREC 3230 - GRANT STREET BAPTI	precinct
+Alabama;Jefferson County;PREC 3220 - OAK GROVE FIRST BA	precinct
+Alabama;Jefferson County;PREC 3210 - MINOR FIRE STATION	precinct
+Alabama;Jefferson County;PREC 3200 - MAURICE L_ WEST CO	precinct
+Alabama;Jefferson County;PREC 3190 - DOLOMITE W FIELD C	precinct
+Alabama;Jefferson County;PREC 3180 - CORNER SCHOOL	precinct
+Alabama;Jefferson County;PREC 3170 - ALLIANCE COMMUNITY	precinct
+Alabama;Jefferson County;PREC 3160 - ROSS BRIDGE WELCOM	precinct
+Alabama;Jefferson County;PREC 3150 - UNION HILL BAPTIST	precinct
+Alabama;Jefferson County;PREC 3140 - VALLEY CREEK BAPTI	precinct
+Alabama;Jefferson County;PREC 3130 - SHADES CREST BAPTI	precinct
+Alabama;Jefferson County;PREC 3120 - ADAMSVILLE BAPTIST	precinct
+Alabama;Jefferson County;PREC 3110 - OAKMONT PRESBYTERI	precinct
+Alabama;Jefferson County;PREC 3100 - BAGLEY JUNIOR HIGH	precinct
+Alabama;Jefferson County;PREC 3090 - BROOKLANE COMMUNIT	precinct
+Alabama;Jefferson County;PREC 3080 - MORGAN UNITED METH	precinct
+Alabama;Jefferson County;PREC 3070 - MT_ OLIVE COMMUNIT	precinct
+Alabama;Jefferson County;PREC 3060 - BESSEMER CIVIC CEN	precinct
+Alabama;Jefferson County;PREC 3050 - PLEASANT RIDGE BAP	precinct
+Alabama;Jefferson County;PREC 3040 - PRINCE OF PEACE CA	precinct
+Alabama;Jefferson County;PREC 3035 - BETHEL BAPTIST CHU	precinct
+Alabama;Jefferson County;PREC 3030 - PLEASANT GROVE FIR	precinct
+Alabama;Jefferson County;PREC 3025 - BAPTIST CHURCH OF	precinct
+Alabama;Jefferson County;PREC 3020 - PLEASANT HILL UNIT	precinct
+Alabama;Jefferson County;PREC 3015 - HOOVER MET SPORTS	precinct
+Alabama;Jefferson County;PREC 3010 - HOOVER MET BASEBAL	precinct
+Alabama;Jefferson County;PREC 2440 - SOUTHTOWN HOUSING	precinct
+Alabama;Jefferson County;PREC 2430 - SOUTHSIDE BRANCH P	precinct
+Alabama;Jefferson County;PREC 2420 - BELL WALLACE BUILD	precinct
+Alabama;Jefferson County;PREC 2410 - BRYANT CHAPEL AME	precinct
+Alabama;Jefferson County;PREC 2400 - WENONAH HIGH SCHOO	precinct
+Alabama;Jefferson County;PREC 2390 - ROOSEVELT CITY COM	precinct
+Alabama;Jefferson County;PREC 2380 - FIVE POINTS WEST P	precinct
+Alabama;Jefferson County;PREC 2370 - NEW BETHEL BAPTIST	precinct
+Alabama;Jefferson County;PREC 2360 - BESSEMER RECREATIO	precinct
+Alabama;Jefferson County;PREC 2350/5270 - OXMOOR VALLEY	precinct
+Alabama;Jefferson County;PREC 2340 - THOMPSON MANOR COM	precinct
+Alabama;Jefferson County;PREC 2330 - HENRY CRUMPTON REC	precinct
+Alabama;Jefferson County;PREC 2320 - GEORGE WARD TENNIS	precinct
+Alabama;Jefferson County;PREC 2310 - MT_ ZION COMMUNITY	precinct
+Alabama;Jefferson County;PREC 2300 - BUSH HILLS ACADEMY	precinct
+Alabama;Jefferson County;PREC 2290 - EAST ENSLEY PUBLIC	precinct
+Alabama;Jefferson County;PREC 2280 - WEST END ACADEMY	precinct
+Alabama;Jefferson County;PREC 2270 - MOUNT ZION MISSION	precinct
+Alabama;Jefferson County;PREC 2260 - WILKERSON MIDDLE S	precinct
+Alabama;Jefferson County;PREC 2250 - MORE THAN CONQUERO	precinct
+Alabama;Jefferson County;PREC 2240 - FIRE DEPARTMENT AD	precinct
+Alabama;Jefferson County;PREC 2230 - AVONDALE ELEMENTAR	precinct
+Alabama;Jefferson County;PREC 2220 - GLEN IRIS ELEMENTA	precinct
+Alabama;Jefferson County;PREC 2210 - JONESBORO ELEMENTA	precinct
+Alabama;Jefferson County;PREC 2200 - CENTRAL PARK ELEME	precinct
+Alabama;Jefferson County;PREC 2190 - WIGGINS LIBRARY &	precinct
+Alabama;Jefferson County;PREC 2180 - AVONDALE PUBLIC LI	precinct
+Alabama;Jefferson County;PREC 2170 - HEMPHILL SCHOOL RE	precinct
+Alabama;Jefferson County;PREC 2160 - JEFFERSON COUNTY C	precinct
+Alabama;Jefferson County;PREC 2150 - BRIGHTON SENIOR CI	precinct
+Alabama;Jefferson County;PREC 2140 - NEW BEGINNING CHUR	precinct
+Alabama;Jefferson County;PREC 2130 - MINOR ELEMENTARY S	precinct
+Alabama;Jefferson County;PREC 2120 - DUNBAR-ABRAMS COMM	precinct
+Alabama;Jefferson County;PREC 2110 - SOUTHSIDE HOMES CO	precinct
+Alabama;Jefferson County;PREC 2100 - MEMORIAL RECREATIO	precinct
+Alabama;Jefferson County;PREC 2090 - SIXTH AVENUE BAPTI	precinct
+Alabama;Jefferson County;PREC 2080 - RAMSAY ALTERNATIVE	precinct
+Alabama;Jefferson County;PREC 2070 - CENTRAL PARK RECRE	precinct
+Alabama;Jefferson County;PREC 2060 - CHARLES A BROWN EL	precinct
+Alabama;Jefferson County;PREC 2050 - HARRISON PARK RECR	precinct
+Alabama;Jefferson County;PREC 2040 - ENSLEY PARK RECREA	precinct
+Alabama;Jefferson County;PREC 2030 - HIGHLAND PARK GOLF	precinct
+Alabama;Jefferson County;PREC 2020 - HOMEWOOD SENIOR CE	precinct
+Alabama;Jefferson County;PREC 2010 - LEGION FIELD LOBBY	precinct
+Alabama;Jefferson County;PREC 1380 - ST_ MARY'S CATHOLI	precinct
+Alabama;Jefferson County;PREC 1370 - MCALPINE RECREATIO	precinct
+Alabama;Jefferson County;PREC 1360 - NORTH AVONDALE PUB	precinct
+Alabama;Jefferson County;PREC 1350 - C_ J_ DONALD ELEME	precinct
+Alabama;Jefferson County;PREC 1340 - MOUNT HEBRON BAPTI	precinct
+Alabama;Jefferson County;PREC 1330 - MORTON SIMPSON COM	precinct
+Alabama;Jefferson County;PREC 1320 - SANDUSKY COMMUNITY	precinct
+Alabama;Jefferson County;PREC 1310 - BROWNSVILLE COMMUN	precinct
+Alabama;Jefferson County;PREC 1300 - NORTH BIRMINGHAM P	precinct
+Alabama;Jefferson County;PREC 1290 - NORTH BIRMINGHAM R	precinct
+Alabama;Jefferson County;PREC 1280 - OLIVER ELEMENTARY	precinct
+Alabama;Jefferson County;PREC 1270 - HOOPER CITY RECREA	precinct
+Alabama;Jefferson County;PREC 1250 - FORESTDALE FIRE ST	precinct
+Alabama;Jefferson County;PREC 1240 - MT_ PILGRIM BAPTIS	precinct
+Alabama;Jefferson County;PREC 1230 - NEW RISING STAR MI	precinct
+Alabama;Jefferson County;PREC 1220 - WILLOW WOOD RECREA	precinct
+Alabama;Jefferson County;PREC 1210 - GLEN OAKS ELEMENTA	precinct
+Alabama;Jefferson County;PREC 1200 - NORWOOD COMMUNITY	precinct
+Alabama;Jefferson County;PREC 1190 - INGLENOOK ELEMENTA	precinct
+Alabama;Jefferson County;PREC 1180 - BARRETT ELEMENTARY	precinct
+Alabama;Jefferson County;PREC 1170 - HUDSON MIDDLE SCHO	precinct
+Alabama;Jefferson County;PREC 1160 - FAITH CHAPEL CHRIS	precinct
+Alabama;Jefferson County;PREC 1150 - ADAMSVILLE CHURCH	precinct
+Alabama;Jefferson County;PREC 1140 - WOODLAWN PUBLIC LI	precinct
+Alabama;Jefferson County;PREC 1130 - MARTHA GASKINS ELE	precinct
+Alabama;Jefferson County;PREC 1120 - ROBINSON ELEMENTAR	precinct
+Alabama;Jefferson County;PREC 1110 - DON HAWKINS PARK &	precinct
+Alabama;Jefferson County;PREC 1100 - SOUTH HAMPTON ELEM	precinct
+Alabama;Jefferson County;PREC 1090 - FORESTDALE SQUARE	precinct
+Alabama;Jefferson County;PREC 1080 - GEORGE FRENCH STUD	precinct
+Alabama;Jefferson County;PREC 1070 - CRESTWAY BAPTIST C	precinct
+Alabama;Jefferson County;PREC 1060 - SUN VALLEY ELEMENT	precinct
+Alabama;Jefferson County;PREC 1050 - MIDFIELD COMMUNITY	precinct
+Alabama;Jefferson County;PREC 1040 - BETHEL BAPTIST CHU	precinct
+Alabama;Jefferson County;PREC 1030 - L_M_ SMITH MIDDLE	precinct
+Alabama;Jefferson County;PREC 1020 - TOM BRADFORD PARK	precinct
+Alabama;Jefferson County;PREC 1010 - OUR LADY OF LOURDE	precinct
+Alabama;Jefferson County;BIRMINGHAM ABSENTEE	precinct
+Alabama;Jefferson County;BESSEMER ABSENTEE	precinct
+Alabama;Jackson County;WOODVILLE BOB JONES COMM	precinct
+Alabama;Jackson County;TUPELO/PIKEVILLE STORE	precinct
+Alabama;Jackson County;TRENTON FIRE HALL	precinct
+Alabama;Jackson County;STEVENSON CITY PARK	precinct
+Alabama;Jackson County;SKYLINE CITY HALL	precinct
+Alabama;Jackson County;SECTION NEW CITY HALL	precinct
+Alabama;Jackson County;SCOTTSBORO REC COMM BLDG	precinct
+Alabama;Jackson County;ROSALIE COMM CTR_	precinct
+Alabama;Jackson County;PRINCETON FIRE HALL	precinct
+Alabama;Jackson County;PLEASANT GROVES COMM CTR_	precinct
+Alabama;Jackson County;PISGAH CITY HALL	precinct
+Alabama;Jackson County;PAINT ROCK SR_ CITIZEN	precinct
+Alabama;Jackson County;NEWHOPE METHODIST	precinct
+Alabama;Jackson County;MACEDONIA SCHOOL	precinct
+Alabama;Jackson County;LONG ISLAND COMM CTR_	precinct
+Alabama;Jackson County;LIMROCK FIRE HALL	precinct
+Alabama;Jackson County;LETCHER CHURCH OF GOD	precinct
+Alabama;Jackson County;LARKINSVILLE STOCK BARN	precinct
+Alabama;Jackson County;LANGSTON CITY HALL	precinct
+Alabama;Jackson County;HYTOP TOWN HALL	precinct
+Alabama;Jackson County;HOLLYWOOD CITY HALL	precinct
+Alabama;Jackson County;HIGDON N SAND MTN SCHOOL	precinct
+Alabama;Jackson County;FLAT ROCK RURITAN BLDG	precinct
+Alabama;Jackson County;FACKLER FIRE HALL	precinct
+Alabama;Jackson County;ESTILL FORK PRINCES STORE	precinct
+Alabama;Jackson County;DUTTON CITY HALL	precinct
+Alabama;Jackson County;DEAN'S CHAPEL COMM	precinct
+Alabama;Jackson County;CROW FIRE HALL	precinct
+Alabama;Jackson County;BRYANT COMM BLDG	precinct
+Alabama;Jackson County;BRIDGEPORT COMM CTR_	precinct
+Alabama;Madison County;ABSENTEE 2	subcounty-absentee
+Alabama;Madison County;ABSENTEE 1	sub-county-absentee

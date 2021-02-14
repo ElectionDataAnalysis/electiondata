@@ -59,7 +59,7 @@ Party=<Party>
 
 
 [in_count_headers]
-CountItemType={<header_0>,^(?=ABSENTEE|PROVISIONAL)(\w+).*$}
+CountItemType={<header_0>,^(ABSENTEE|PROVISIONAL)$}
 
 [constant_over_sheet]
 ReportingUnit=<sheet_name>
