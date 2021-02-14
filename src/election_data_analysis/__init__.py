@@ -1108,7 +1108,7 @@ class JurisdictionPrepper:
         juris_test_dir = os.path.join(tests_dir, self.d["system_name"])
         sample_test_dir = os.path.join(tests_dir, "20xx_test_templates")
         election_str = election.replace(" ", "-")
-        test_file_name = f"test_{self.d['system_name']}_{election_str}"
+        test_file_name = f"test_{self.d['system_name']}_{election_str}.py"
         new_test_file = os.path.join(juris_test_dir, test_file_name)
         if not os.path.isdir(juris_test_dir):
             os.mkdir(juris_test_dir)
