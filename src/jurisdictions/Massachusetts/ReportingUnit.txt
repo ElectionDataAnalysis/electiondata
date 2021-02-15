@@ -209,355 +209,368 @@ Massachusetts;US House MA District 7	congressional
 Massachusetts;US House MA District 8	congressional
 Massachusetts;US House MA District 9	congressional
 Massachusetts	state
-Massachusetts;Abington	city-or-town
-Massachusetts;Acton	city-or-town
-Massachusetts;Acushnet	city-or-town
-Massachusetts;Adams	city-or-town
-Massachusetts;Agawam	city-or-town
-Massachusetts;Alford	city-or-town
-Massachusetts;Amesbury	city-or-town
-Massachusetts;Amherst	city-or-town
-Massachusetts;Andover	city-or-town
-Massachusetts;Aquinnah	city-or-town
-Massachusetts;Arlington	city-or-town
-Massachusetts;Ashburnham	city-or-town
-Massachusetts;Ashby	city-or-town
-Massachusetts;Ashfield	city-or-town
-Massachusetts;Ashland	city-or-town
-Massachusetts;Athol	city-or-town
-Massachusetts;Attleboro	city-or-town
-Massachusetts;Auburn	city-or-town
-Massachusetts;Avon	city-or-town
-Massachusetts;Ayer	city-or-town
-Massachusetts;Barnstable	city-or-town
-Massachusetts;Barre	city-or-town
-Massachusetts;Becket	city-or-town
-Massachusetts;Bedford	city-or-town
-Massachusetts;Belchertown	city-or-town
-Massachusetts;Bellingham	city-or-town
-Massachusetts;Belmont	city-or-town
-Massachusetts;Berkley	city-or-town
-Massachusetts;Berlin	city-or-town
-Massachusetts;Bernardston	city-or-town
-Massachusetts;Beverly	city-or-town
-Massachusetts;Billerica	city-or-town
-Massachusetts;Blackstone	city-or-town
-Massachusetts;Blandford	city-or-town
-Massachusetts;Bolton	city-or-town
-Massachusetts;Boston	city-or-town
-Massachusetts;Bourne	city-or-town
-Massachusetts;Boxborough	city-or-town
-Massachusetts;Boxford	city-or-town
-Massachusetts;Boylston	city-or-town
-Massachusetts;Braintree	city-or-town
-Massachusetts;Brewster	city-or-town
-Massachusetts;Bridgewater	city-or-town
-Massachusetts;Brimfield	city-or-town
-Massachusetts;Brockton	city-or-town
-Massachusetts;Brookfield	city-or-town
-Massachusetts;Brookline	city-or-town
-Massachusetts;Buckland	city-or-town
-Massachusetts;Burlington	city-or-town
-Massachusetts;Cambridge	city-or-town
-Massachusetts;Canton	city-or-town
-Massachusetts;Carlisle	city-or-town
-Massachusetts;Carver	city-or-town
-Massachusetts;Charlemont	city-or-town
-Massachusetts;Charlton	city-or-town
-Massachusetts;Chatham	city-or-town
-Massachusetts;Chelmsford	city-or-town
-Massachusetts;Chelsea	city-or-town
-Massachusetts;Cheshire	city-or-town
-Massachusetts;Chester	city-or-town
-Massachusetts;Chesterfield	city-or-town
-Massachusetts;Chicopee	city-or-town
-Massachusetts;Chilmark	city-or-town
-Massachusetts;Clarksburg	city-or-town
-Massachusetts;Clinton	city-or-town
-Massachusetts;Cohasset	city-or-town
-Massachusetts;Colrain	city-or-town
-Massachusetts;Concord	city-or-town
-Massachusetts;Conway	city-or-town
-Massachusetts;Cummington	city-or-town
-Massachusetts;Dalton	city-or-town
-Massachusetts;Danvers	city-or-town
-Massachusetts;Dartmouth	city-or-town
-Massachusetts;Dedham	city-or-town
-Massachusetts;Deerfield	city-or-town
-Massachusetts;Dennis	city-or-town
-Massachusetts;Dighton	city-or-town
-Massachusetts;Douglas	city-or-town
-Massachusetts;Dover	city-or-town
-Massachusetts;Dracut	city-or-town
-Massachusetts;Dudley	city-or-town
-Massachusetts;Dunstable	city-or-town
-Massachusetts;Duxbury	city-or-town
-Massachusetts;E. Bridgewater	city-or-town
-Massachusetts;E. Brookfield	city-or-town
-Massachusetts;E. Longmeadow	city-or-town
-Massachusetts;Eastham	city-or-town
-Massachusetts;Easthampton	city-or-town
-Massachusetts;Easton	city-or-town
-Massachusetts;Edgartown	city-or-town
-Massachusetts;Egremont	city-or-town
-Massachusetts;Erving	city-or-town
-Massachusetts;Essex	city-or-town
-Massachusetts;Everett	city-or-town
-Massachusetts;Fairhaven	city-or-town
-Massachusetts;Fall River	city-or-town
-Massachusetts;Falmouth	city-or-town
-Massachusetts;Fitchburg	city-or-town
-Massachusetts;Florida	city-or-town
-Massachusetts;Foxborough	city-or-town
-Massachusetts;Framingham	city-or-town
-Massachusetts;Franklin	city-or-town
-Massachusetts;Freetown	city-or-town
-Massachusetts;Gardner	city-or-town
-Massachusetts;Georgetown	city-or-town
-Massachusetts;Gill	city-or-town
-Massachusetts;Gloucester	city-or-town
-Massachusetts;Goshen	city-or-town
-Massachusetts;Gosnold	city-or-town
-Massachusetts;Grafton	city-or-town
-Massachusetts;Granby	city-or-town
-Massachusetts;Granville	city-or-town
-Massachusetts;Great Barrington	city-or-town
-Massachusetts;Greenfield	city-or-town
-Massachusetts;Groton	city-or-town
-Massachusetts;Groveland	city-or-town
-Massachusetts;Hadley	city-or-town
-Massachusetts;Halifax	city-or-town
-Massachusetts;Hamilton	city-or-town
-Massachusetts;Hampden	city-or-town
-Massachusetts;Hancock	city-or-town
-Massachusetts;Hanover	city-or-town
-Massachusetts;Hanson	city-or-town
-Massachusetts;Hardwick	city-or-town
-Massachusetts;Harvard	city-or-town
-Massachusetts;Harwich	city-or-town
-Massachusetts;Hatfield	city-or-town
-Massachusetts;Haverhill	city-or-town
-Massachusetts;Hawley	city-or-town
-Massachusetts;Heath	city-or-town
-Massachusetts;Hingham	city-or-town
-Massachusetts;Hinsdale	city-or-town
-Massachusetts;Holbrook	city-or-town
-Massachusetts;Holden	city-or-town
-Massachusetts;Holland	city-or-town
-Massachusetts;Holliston	city-or-town
-Massachusetts;Holyoke	city-or-town
-Massachusetts;Hopedale	city-or-town
-Massachusetts;Hopkinton	city-or-town
-Massachusetts;Hubbardston	city-or-town
-Massachusetts;Hudson	city-or-town
-Massachusetts;Hull	city-or-town
-Massachusetts;Huntington	city-or-town
-Massachusetts;Ipswich	city-or-town
-Massachusetts;Kingston	city-or-town
-Massachusetts;Lakeville	city-or-town
-Massachusetts;Lancaster	city-or-town
-Massachusetts;Lanesborough	city-or-town
-Massachusetts;Lawrence	city-or-town
-Massachusetts;Lee	city-or-town
-Massachusetts;Leicester	city-or-town
-Massachusetts;Lenox	city-or-town
-Massachusetts;Leominster	city-or-town
-Massachusetts;Leverett	city-or-town
-Massachusetts;Lexington	city-or-town
-Massachusetts;Leyden	city-or-town
-Massachusetts;Lincoln	city-or-town
-Massachusetts;Littleton	city-or-town
-Massachusetts;Longmeadow	city-or-town
-Massachusetts;Lowell	city-or-town
-Massachusetts;Ludlow	city-or-town
-Massachusetts;Lunenburg	city-or-town
-Massachusetts;Lynn	city-or-town
-Massachusetts;Lynnfield	city-or-town
-Massachusetts;Malden	city-or-town
-Massachusetts;Manchester-by-the-Sea	city-or-town
-Massachusetts;Mansfield	city-or-town
-Massachusetts;Marblehead	city-or-town
-Massachusetts;Marion	city-or-town
-Massachusetts;Marlborough	city-or-town
-Massachusetts;Marshfield	city-or-town
-Massachusetts;Mashpee	city-or-town
-Massachusetts;Mattapoisett	city-or-town
-Massachusetts;Maynard	city-or-town
-Massachusetts;Medfield	city-or-town
-Massachusetts;Medford	city-or-town
-Massachusetts;Medway	city-or-town
-Massachusetts;Melrose	city-or-town
-Massachusetts;Mendon	city-or-town
-Massachusetts;Merrimac	city-or-town
-Massachusetts;Methuen	city-or-town
-Massachusetts;Middleborough	city-or-town
-Massachusetts;Middlefield	city-or-town
-Massachusetts;Middleton	city-or-town
-Massachusetts;Milford	city-or-town
-Massachusetts;Millbury	city-or-town
-Massachusetts;Millis	city-or-town
-Massachusetts;Millville	city-or-town
-Massachusetts;Milton	city-or-town
-Massachusetts;Monroe	city-or-town
-Massachusetts;Monson	city-or-town
-Massachusetts;Montague	city-or-town
-Massachusetts;Monterey	city-or-town
-Massachusetts;Montgomery	city-or-town
-Massachusetts;Mount Washington	city-or-town
-Massachusetts;N. Adams	city-or-town
-Massachusetts;N. Andover	city-or-town
-Massachusetts;N. Attleborough	city-or-town
-Massachusetts;N. Brookfield	city-or-town
-Massachusetts;N. Reading	city-or-town
-Massachusetts;Nahant	city-or-town
-Massachusetts;Nantucket	city-or-town
-Massachusetts;Natick	city-or-town
-Massachusetts;Needham	city-or-town
-Massachusetts;New Ashford	city-or-town
-Massachusetts;New Bedford	city-or-town
-Massachusetts;New Braintree	city-or-town
-Massachusetts;New Marlborough	city-or-town
-Massachusetts;New Salem	city-or-town
-Massachusetts;Newbury	city-or-town
-Massachusetts;Newburyport	city-or-town
-Massachusetts;Newton	city-or-town
-Massachusetts;Norfolk	city-or-town
-Massachusetts;Northampton	city-or-town
-Massachusetts;Northborough	city-or-town
-Massachusetts;Northbridge	city-or-town
-Massachusetts;Northfield	city-or-town
-Massachusetts;Norton	city-or-town
-Massachusetts;Norwell	city-or-town
-Massachusetts;Norwood	city-or-town
-Massachusetts;Oak Bluffs	city-or-town
-Massachusetts;Oakham	city-or-town
-Massachusetts;Orange	city-or-town
-Massachusetts;Orleans	city-or-town
-Massachusetts;Otis	city-or-town
-Massachusetts;Oxford	city-or-town
-Massachusetts;Palmer	city-or-town
-Massachusetts;Paxton	city-or-town
-Massachusetts;Peabody	city-or-town
-Massachusetts;Pelham	city-or-town
-Massachusetts;Pembroke	city-or-town
-Massachusetts;Pepperell	city-or-town
-Massachusetts;Peru	city-or-town
-Massachusetts;Petersham	city-or-town
-Massachusetts;Phillipston	city-or-town
-Massachusetts;Pittsfield	city-or-town
-Massachusetts;Plainfield	city-or-town
-Massachusetts;Plainville	city-or-town
-Massachusetts;Plymouth	city-or-town
-Massachusetts;Plympton	city-or-town
-Massachusetts;Princeton	city-or-town
-Massachusetts;Provincetown	city-or-town
-Massachusetts;Quincy	city-or-town
-Massachusetts;Randolph	city-or-town
-Massachusetts;Raynham	city-or-town
-Massachusetts;Reading	city-or-town
-Massachusetts;Rehoboth	city-or-town
-Massachusetts;Revere	city-or-town
-Massachusetts;Richmond	city-or-town
-Massachusetts;Rochester	city-or-town
-Massachusetts;Rockland	city-or-town
-Massachusetts;Rockport	city-or-town
-Massachusetts;Rowe	city-or-town
-Massachusetts;Rowley	city-or-town
-Massachusetts;Royalston	city-or-town
-Massachusetts;Russell	city-or-town
-Massachusetts;Rutland	city-or-town
-Massachusetts;S. Hadley	city-or-town
-Massachusetts;Salem	city-or-town
-Massachusetts;Salisbury	city-or-town
-Massachusetts;Sandisfield	city-or-town
-Massachusetts;Sandwich	city-or-town
-Massachusetts;Saugus	city-or-town
-Massachusetts;Savoy	city-or-town
-Massachusetts;Scituate	city-or-town
-Massachusetts;Seekonk	city-or-town
-Massachusetts;Sharon	city-or-town
-Massachusetts;Sheffield	city-or-town
-Massachusetts;Shelburne	city-or-town
-Massachusetts;Sherborn	city-or-town
-Massachusetts;Shirley	city-or-town
-Massachusetts;Shrewsbury	city-or-town
-Massachusetts;Shutesbury	city-or-town
-Massachusetts;Somerset	city-or-town
-Massachusetts;Somerville	city-or-town
-Massachusetts;Southampton	city-or-town
-Massachusetts;Southborough	city-or-town
-Massachusetts;Southbridge	city-or-town
-Massachusetts;Southwick	city-or-town
-Massachusetts;Spencer	city-or-town
-Massachusetts;Springfield	city-or-town
-Massachusetts;Sterling	city-or-town
-Massachusetts;Stockbridge	city-or-town
-Massachusetts;Stoneham	city-or-town
-Massachusetts;Stoughton	city-or-town
-Massachusetts;Stow	city-or-town
-Massachusetts;Sturbridge	city-or-town
-Massachusetts;Sudbury	city-or-town
-Massachusetts;Sunderland	city-or-town
-Massachusetts;Sutton	city-or-town
-Massachusetts;Swampscott	city-or-town
-Massachusetts;Swansea	city-or-town
-Massachusetts;Taunton	city-or-town
-Massachusetts;Templeton	city-or-town
-Massachusetts;Tewksbury	city-or-town
-Massachusetts;Tisbury	city-or-town
-Massachusetts;Tolland	city-or-town
-Massachusetts;Topsfield	city-or-town
-Massachusetts;TOTALS	city-or-town
-Massachusetts;Townsend	city-or-town
-Massachusetts;Truro	city-or-town
-Massachusetts;Tyngsborough	city-or-town
-Massachusetts;Tyringham	city-or-town
-Massachusetts;Upton	city-or-town
-Massachusetts;Uxbridge	city-or-town
-Massachusetts;W. Boylston	city-or-town
-Massachusetts;W. Bridgewater	city-or-town
-Massachusetts;W. Brookfield	city-or-town
-Massachusetts;W. Newbury	city-or-town
-Massachusetts;W. Springfield	city-or-town
-Massachusetts;W. Stockbridge	city-or-town
-Massachusetts;W. Tisbury	city-or-town
-Massachusetts;Wakefield	city-or-town
-Massachusetts;Wales	city-or-town
-Massachusetts;Walpole	city-or-town
-Massachusetts;Waltham	city-or-town
-Massachusetts;Ware	city-or-town
-Massachusetts;Wareham	city-or-town
-Massachusetts;Warren	city-or-town
-Massachusetts;Warwick	city-or-town
-Massachusetts;Washington	city-or-town
-Massachusetts;Watertown	city-or-town
-Massachusetts;Wayland	city-or-town
-Massachusetts;Webster	city-or-town
-Massachusetts;Wellesley	city-or-town
-Massachusetts;Wellfleet	city-or-town
-Massachusetts;Wendell	city-or-town
-Massachusetts;Wenham	city-or-town
-Massachusetts;Westborough	city-or-town
-Massachusetts;Westfield	city-or-town
-Massachusetts;Westford	city-or-town
-Massachusetts;Westhampton	city-or-town
-Massachusetts;Westminster	city-or-town
-Massachusetts;Weston	city-or-town
-Massachusetts;Westport	city-or-town
-Massachusetts;Westwood	city-or-town
-Massachusetts;Weymouth	city-or-town
-Massachusetts;Whately	city-or-town
-Massachusetts;Whitman	city-or-town
-Massachusetts;Wilbraham	city-or-town
-Massachusetts;Williamsburg	city-or-town
-Massachusetts;Williamstown	city-or-town
-Massachusetts;Wilmington	city-or-town
-Massachusetts;Winchendon	city-or-town
-Massachusetts;Winchester	city-or-town
-Massachusetts;Windsor	city-or-town
-Massachusetts;Winthrop	city-or-town
-Massachusetts;Woburn	city-or-town
-Massachusetts;Worcester	city-or-town
-Massachusetts;Worthington	city-or-town
-Massachusetts;Wrentham	city-or-town
-Massachusetts;Yarmouth	city-or-town
+Massachusetts;Barnstable County	county
+Massachusetts;Berkshire County	county
+Massachusetts;Bristol County	county
+Massachusetts;Dukes County	county
+Massachusetts;Essex County	county
+Massachusetts;Franklin County	county
+Massachusetts;Hampden County	county
+Massachusetts;Hampshire County	county
+Massachusetts;Middlesex County	county
+Massachusetts;Nantucket County	county
+Massachusetts;Norfolk County	county
+Massachusetts;Plymouth County	county
+Massachusetts;Suffolk County	county
+Massachusetts;Worcester County	county
+Massachusetts;Plymouth County;Abington	city-or-town
+Massachusetts;Middlesex County;Acton	city-or-town
+Massachusetts;Bristol County;Acushnet	city-or-town
+Massachusetts;Berkshire County;Adams	city-or-town
+Massachusetts;Hampden County;Agawam	city-or-town
+Massachusetts;Berkshire County;Alford	city-or-town
+Massachusetts;Essex County;Amesbury	city-or-town
+Massachusetts;Hampshire County;Amherst	city-or-town
+Massachusetts;Essex County;Andover	city-or-town
+Massachusetts;Dukes County;Aquinnah	city-or-town
+Massachusetts;Middlesex County;Arlington	city-or-town
+Massachusetts;Worcester County;Ashburnham	city-or-town
+Massachusetts;Middlesex County;Ashby	city-or-town
+Massachusetts;Franklin County;Ashfield	city-or-town
+Massachusetts;Middlesex County;Ashland	city-or-town
+Massachusetts;Worcester County;Athol	city-or-town
+Massachusetts;Bristol County;Attleboro	city-or-town
+Massachusetts;Worcester County;Auburn	city-or-town
+Massachusetts;Norfolk County;Avon	city-or-town
+Massachusetts;Middlesex County;Ayer	city-or-town
+Massachusetts;Barnstable County;Barnstable	city-or-town
+Massachusetts;Worcester County;Barre	city-or-town
+Massachusetts;Berkshire County;Becket	city-or-town
+Massachusetts;Middlesex County;Bedford	city-or-town
+Massachusetts;Hampshire County;Belchertown	city-or-town
+Massachusetts;Norfolk County;Bellingham	city-or-town
+Massachusetts;Middlesex County;Belmont	city-or-town
+Massachusetts;Bristol County;Berkley	city-or-town
+Massachusetts;Worcester County;Berlin	city-or-town
+Massachusetts;Franklin County;Bernardston	city-or-town
+Massachusetts;Essex County;Beverly	city-or-town
+Massachusetts;Middlesex County;Billerica	city-or-town
+Massachusetts;Worcester County;Blackstone	city-or-town
+Massachusetts;Hampden County;Blandford	city-or-town
+Massachusetts;Worcester County;Bolton	city-or-town
+Massachusetts;Suffolk County;Boston	city-or-town
+Massachusetts;Barnstable County;Bourne	city-or-town
+Massachusetts;Middlesex County;Boxborough	city-or-town
+Massachusetts;Essex County;Boxford	city-or-town
+Massachusetts;Worcester County;Boylston	city-or-town
+Massachusetts;Norfolk County;Braintree	city-or-town
+Massachusetts;Barnstable County;Brewster	city-or-town
+Massachusetts;Plymouth County;Bridgewater	city-or-town
+Massachusetts;Hampden County;Brimfield	city-or-town
+Massachusetts;Plymouth County;Brockton	city-or-town
+Massachusetts;Worcester County;Brookfield	city-or-town
+Massachusetts;Norfolk County;Brookline	city-or-town
+Massachusetts;Franklin County;Buckland	city-or-town
+Massachusetts;Middlesex County;Burlington	city-or-town
+Massachusetts;Middlesex County;Cambridge	city-or-town
+Massachusetts;Norfolk County;Canton	city-or-town
+Massachusetts;Middlesex County;Carlisle	city-or-town
+Massachusetts;Plymouth County;Carver	city-or-town
+Massachusetts;Franklin County;Charlemont	city-or-town
+Massachusetts;Worcester County;Charlton	city-or-town
+Massachusetts;Barnstable County;Chatham	city-or-town
+Massachusetts;Middlesex County;Chelmsford	city-or-town
+Massachusetts;Suffolk County;Chelsea	city-or-town
+Massachusetts;Berkshire County;Cheshire	city-or-town
+Massachusetts;Hampden County;Chester	city-or-town
+Massachusetts;Hampshire County;Chesterfield	city-or-town
+Massachusetts;Hampden County;Chicopee	city-or-town
+Massachusetts;Dukes County;Chilmark	city-or-town
+Massachusetts;Berkshire County;Clarksburg	city-or-town
+Massachusetts;Worcester County;Clinton	city-or-town
+Massachusetts;Norfolk County;Cohasset	city-or-town
+Massachusetts;Franklin County;Colrain	city-or-town
+Massachusetts;Middlesex County;Concord	city-or-town
+Massachusetts;Franklin County;Conway	city-or-town
+Massachusetts;Hampshire County;Cummington	city-or-town
+Massachusetts;Berkshire County;Dalton	city-or-town
+Massachusetts;Essex County;Danvers	city-or-town
+Massachusetts;Bristol County;Dartmouth	city-or-town
+Massachusetts;Norfolk County;Dedham	city-or-town
+Massachusetts;Franklin County;Deerfield	city-or-town
+Massachusetts;Barnstable County;Dennis	city-or-town
+Massachusetts;Bristol County;Dighton	city-or-town
+Massachusetts;Worcester County;Douglas	city-or-town
+Massachusetts;Norfolk County;Dover	city-or-town
+Massachusetts;Middlesex County;Dracut	city-or-town
+Massachusetts;Worcester County;Dudley	city-or-town
+Massachusetts;Middlesex County;Dunstable	city-or-town
+Massachusetts;Plymouth County;Duxbury	city-or-town
+Massachusetts;Plymouth County;East Bridgewater	city-or-town
+Massachusetts;Worcester County;East Brookfield	city-or-town
+Massachusetts;Hampden County;East Longmeadow	city-or-town
+Massachusetts;Barnstable County;Eastham	city-or-town
+Massachusetts;Hampshire County;Easthampton	city-or-town
+Massachusetts;Bristol County;Easton	city-or-town
+Massachusetts;Dukes County;Edgartown	city-or-town
+Massachusetts;Berkshire County;Egremont	city-or-town
+Massachusetts;Franklin County;Erving	city-or-town
+Massachusetts;Essex County;Essex	city-or-town
+Massachusetts;Middlesex County;Everett	city-or-town
+Massachusetts;Bristol County;Fairhaven	city-or-town
+Massachusetts;Bristol County;Fall River	city-or-town
+Massachusetts;Barnstable County;Falmouth	city-or-town
+Massachusetts;Worcester County;Fitchburg	city-or-town
+Massachusetts;Berkshire County;Florida	city-or-town
+Massachusetts;Norfolk County;Foxborough	city-or-town
+Massachusetts;Middlesex County;Framingham	city-or-town
+Massachusetts;Norfolk County;Franklin	city-or-town
+Massachusetts;Bristol County;Freetown	city-or-town
+Massachusetts;Worcester County;Gardner	city-or-town
+Massachusetts;Essex County;Georgetown	city-or-town
+Massachusetts;Franklin County;Gill	city-or-town
+Massachusetts;Essex County;Gloucester	city-or-town
+Massachusetts;Hampshire County;Goshen	city-or-town
+Massachusetts;Dukes County;Gosnold	city-or-town
+Massachusetts;Worcester County;Grafton	city-or-town
+Massachusetts;Hampshire County;Granby	city-or-town
+Massachusetts;Hampden County;Granville	city-or-town
+Massachusetts;Berkshire County;Great Barrington	city-or-town
+Massachusetts;Franklin County;Greenfield	city-or-town
+Massachusetts;Middlesex County;Groton	city-or-town
+Massachusetts;Essex County;Groveland	city-or-town
+Massachusetts;Hampshire County;Hadley	city-or-town
+Massachusetts;Plymouth County;Halifax	city-or-town
+Massachusetts;Essex County;Hamilton	city-or-town
+Massachusetts;Hampden County;Hampden	city-or-town
+Massachusetts;Berkshire County;Hancock	city-or-town
+Massachusetts;Plymouth County;Hanover	city-or-town
+Massachusetts;Plymouth County;Hanson	city-or-town
+Massachusetts;Worcester County;Hardwick	city-or-town
+Massachusetts;Worcester County;Harvard	city-or-town
+Massachusetts;Barnstable County;Harwich	city-or-town
+Massachusetts;Hampshire County;Hatfield	city-or-town
+Massachusetts;Essex County;Haverhill	city-or-town
+Massachusetts;Franklin County;Hawley	city-or-town
+Massachusetts;Franklin County;Heath	city-or-town
+Massachusetts;Plymouth County;Hingham	city-or-town
+Massachusetts;Berkshire County;Hinsdale	city-or-town
+Massachusetts;Norfolk County;Holbrook	city-or-town
+Massachusetts;Worcester County;Holden	city-or-town
+Massachusetts;Hampden County;Holland	city-or-town
+Massachusetts;Middlesex County;Holliston	city-or-town
+Massachusetts;Hampden County;Holyoke	city-or-town
+Massachusetts;Worcester County;Hopedale	city-or-town
+Massachusetts;Middlesex County;Hopkinton	city-or-town
+Massachusetts;Worcester County;Hubbardston	city-or-town
+Massachusetts;Middlesex County;Hudson	city-or-town
+Massachusetts;Plymouth County;Hull	city-or-town
+Massachusetts;Hampshire County;Huntington	city-or-town
+Massachusetts;Essex County;Ipswich	city-or-town
+Massachusetts;Plymouth County;Kingston	city-or-town
+Massachusetts;Plymouth County;Lakeville	city-or-town
+Massachusetts;Worcester County;Lancaster	city-or-town
+Massachusetts;Berkshire County;Lanesborough	city-or-town
+Massachusetts;Essex County;Lawrence	city-or-town
+Massachusetts;Berkshire County;Lee	city-or-town
+Massachusetts;Worcester County;Leicester	city-or-town
+Massachusetts;Berkshire County;Lenox	city-or-town
+Massachusetts;Worcester County;Leominster	city-or-town
+Massachusetts;Franklin County;Leverett	city-or-town
+Massachusetts;Middlesex County;Lexington	city-or-town
+Massachusetts;Franklin County;Leyden	city-or-town
+Massachusetts;Middlesex County;Lincoln	city-or-town
+Massachusetts;Middlesex County;Littleton	city-or-town
+Massachusetts;Hampden County;Longmeadow	city-or-town
+Massachusetts;Middlesex County;Lowell	city-or-town
+Massachusetts;Hampden County;Ludlow	city-or-town
+Massachusetts;Worcester County;Lunenburg	city-or-town
+Massachusetts;Essex County;Lynn	city-or-town
+Massachusetts;Essex County;Lynnfield	city-or-town
+Massachusetts;Middlesex County;Malden	city-or-town
+Massachusetts;Essex County;Manchester-by-the-Sea	city-or-town
+Massachusetts;Bristol County;Mansfield	city-or-town
+Massachusetts;Essex County;Marblehead	city-or-town
+Massachusetts;Plymouth County;Marion	city-or-town
+Massachusetts;Middlesex County;Marlborough	city-or-town
+Massachusetts;Plymouth County;Marshfield	city-or-town
+Massachusetts;Barnstable County;Mashpee	city-or-town
+Massachusetts;Plymouth County;Mattapoisett	city-or-town
+Massachusetts;Middlesex County;Maynard	city-or-town
+Massachusetts;Norfolk County;Medfield	city-or-town
+Massachusetts;Middlesex County;Medford	city-or-town
+Massachusetts;Norfolk County;Medway	city-or-town
+Massachusetts;Middlesex County;Melrose	city-or-town
+Massachusetts;Worcester County;Mendon	city-or-town
+Massachusetts;Essex County;Merrimac	city-or-town
+Massachusetts;Essex County;Methuen	city-or-town
+Massachusetts;Plymouth County;Middleborough	city-or-town
+Massachusetts;Hampshire County;Middlefield	city-or-town
+Massachusetts;Essex County;Middleton	city-or-town
+Massachusetts;Worcester County;Milford	city-or-town
+Massachusetts;Worcester County;Millbury	city-or-town
+Massachusetts;Norfolk County;Millis	city-or-town
+Massachusetts;Worcester County;Millville	city-or-town
+Massachusetts;Norfolk County;Milton	city-or-town
+Massachusetts;Franklin County;Monroe	city-or-town
+Massachusetts;Hampden County;Monson	city-or-town
+Massachusetts;Franklin County;Montague	city-or-town
+Massachusetts;Berkshire County;Monterey	city-or-town
+Massachusetts;Hampden County;Montgomery	city-or-town
+Massachusetts;Berkshire County;Mount Washington	city-or-town
+Massachusetts;Essex County;Nahant	city-or-town
+Massachusetts;Nantucket County;Nantucket	city-or-town
+Massachusetts;Middlesex County;Natick	city-or-town
+Massachusetts;Norfolk County;Needham	city-or-town
+Massachusetts;Berkshire County;New Ashford	city-or-town
+Massachusetts;Bristol County;New Bedford	city-or-town
+Massachusetts;Worcester County;New Braintree	city-or-town
+Massachusetts;Berkshire County;New Marlborough	city-or-town
+Massachusetts;Franklin County;New Salem	city-or-town
+Massachusetts;Essex County;Newbury	city-or-town
+Massachusetts;Essex County;Newburyport	city-or-town
+Massachusetts;Middlesex County;Newton	city-or-town
+Massachusetts;Norfolk County;Norfolk	city-or-town
+Massachusetts;Berkshire County;North Adams	city-or-town
+Massachusetts;Essex County;North Andover	city-or-town
+Massachusetts;Bristol County;North Attleborough	city-or-town
+Massachusetts;Worcester County;North Brookfield	city-or-town
+Massachusetts;Middlesex County;North Reading	city-or-town
+Massachusetts;Hampshire County;Northampton	city-or-town
+Massachusetts;Worcester County;Northborough	city-or-town
+Massachusetts;Worcester County;Northbridge	city-or-town
+Massachusetts;Franklin County;Northfield	city-or-town
+Massachusetts;Bristol County;Norton	city-or-town
+Massachusetts;Plymouth County;Norwell	city-or-town
+Massachusetts;Norfolk County;Norwood	city-or-town
+Massachusetts;Dukes County;Oak Bluffs	city-or-town
+Massachusetts;Worcester County;Oakham	city-or-town
+Massachusetts;Franklin County;Orange	city-or-town
+Massachusetts;Barnstable County;Orleans	city-or-town
+Massachusetts;Berkshire County;Otis	city-or-town
+Massachusetts;Worcester County;Oxford	city-or-town
+Massachusetts;Hampden County;Palmer	city-or-town
+Massachusetts;Worcester County;Paxton	city-or-town
+Massachusetts;Essex County;Peabody	city-or-town
+Massachusetts;Hampshire County;Pelham	city-or-town
+Massachusetts;Plymouth County;Pembroke	city-or-town
+Massachusetts;Middlesex County;Pepperell	city-or-town
+Massachusetts;Berkshire County;Peru	city-or-town
+Massachusetts;Worcester County;Petersham	city-or-town
+Massachusetts;Worcester County;Phillipston	city-or-town
+Massachusetts;Berkshire County;Pittsfield	city-or-town
+Massachusetts;Hampshire County;Plainfield	city-or-town
+Massachusetts;Norfolk County;Plainville	city-or-town
+Massachusetts;Plymouth County;Plymouth	city-or-town
+Massachusetts;Plymouth County;Plympton	city-or-town
+Massachusetts;Worcester County;Princeton	city-or-town
+Massachusetts;Barnstable County;Provincetown	city-or-town
+Massachusetts;Norfolk County;Quincy	city-or-town
+Massachusetts;Norfolk County;Randolph	city-or-town
+Massachusetts;Bristol County;Raynham	city-or-town
+Massachusetts;Middlesex County;Reading	city-or-town
+Massachusetts;Bristol County;Rehoboth	city-or-town
+Massachusetts;Suffolk County;Revere	city-or-town
+Massachusetts;Berkshire County;Richmond	city-or-town
+Massachusetts;Plymouth County;Rochester	city-or-town
+Massachusetts;Plymouth County;Rockland	city-or-town
+Massachusetts;Essex County;Rockport	city-or-town
+Massachusetts;Franklin County;Rowe	city-or-town
+Massachusetts;Essex County;Rowley	city-or-town
+Massachusetts;Worcester County;Royalston	city-or-town
+Massachusetts;Hampden County;Russell	city-or-town
+Massachusetts;Worcester County;Rutland	city-or-town
+Massachusetts;Essex County;Salem	city-or-town
+Massachusetts;Essex County;Salisbury	city-or-town
+Massachusetts;Berkshire County;Sandisfield	city-or-town
+Massachusetts;Barnstable County;Sandwich	city-or-town
+Massachusetts;Essex County;Saugus	city-or-town
+Massachusetts;Berkshire County;Savoy	city-or-town
+Massachusetts;Plymouth County;Scituate	city-or-town
+Massachusetts;Bristol County;Seekonk	city-or-town
+Massachusetts;Norfolk County;Sharon	city-or-town
+Massachusetts;Berkshire County;Sheffield	city-or-town
+Massachusetts;Franklin County;Shelburne	city-or-town
+Massachusetts;Middlesex County;Sherborn	city-or-town
+Massachusetts;Middlesex County;Shirley	city-or-town
+Massachusetts;Worcester County;Shrewsbury	city-or-town
+Massachusetts;Franklin County;Shutesbury	city-or-town
+Massachusetts;Bristol County;Somerset	city-or-town
+Massachusetts;Middlesex County;Somerville	city-or-town
+Massachusetts;Hampshire County;South Hadley	city-or-town
+Massachusetts;Hampshire County;Southampton	city-or-town
+Massachusetts;Worcester County;Southborough	city-or-town
+Massachusetts;Worcester County;Southbridge	city-or-town
+Massachusetts;Hampden County;Southwick	city-or-town
+Massachusetts;Worcester County;Spencer	city-or-town
+Massachusetts;Hampden County;Springfield	city-or-town
+Massachusetts;Worcester County;Sterling	city-or-town
+Massachusetts;Berkshire County;Stockbridge	city-or-town
+Massachusetts;Middlesex County;Stoneham	city-or-town
+Massachusetts;Norfolk County;Stoughton	city-or-town
+Massachusetts;Middlesex County;Stow	city-or-town
+Massachusetts;Worcester County;Sturbridge	city-or-town
+Massachusetts;Middlesex County;Sudbury	city-or-town
+Massachusetts;Franklin County;Sunderland	city-or-town
+Massachusetts;Worcester County;Sutton	city-or-town
+Massachusetts;Essex County;Swampscott	city-or-town
+Massachusetts;Bristol County;Swansea	city-or-town
+Massachusetts;Bristol County;Taunton	city-or-town
+Massachusetts;Worcester County;Templeton	city-or-town
+Massachusetts;Middlesex County;Tewksbury	city-or-town
+Massachusetts;Dukes County;Tisbury	city-or-town
+Massachusetts;Hampden County;Tolland	city-or-town
+Massachusetts;Essex County;Topsfield	city-or-town
+Massachusetts;Middlesex County;Townsend	city-or-town
+Massachusetts;Barnstable County;Truro	city-or-town
+Massachusetts;Middlesex County;Tyngsborough	city-or-town
+Massachusetts;Berkshire County;Tyringham	city-or-town
+Massachusetts;Worcester County;Upton	city-or-town
+Massachusetts;Worcester County;Uxbridge	city-or-town
+Massachusetts;Middlesex County;Wakefield	city-or-town
+Massachusetts;Hampden County;Wales	city-or-town
+Massachusetts;Norfolk County;Walpole	city-or-town
+Massachusetts;Middlesex County;Waltham	city-or-town
+Massachusetts;Hampshire County;Ware	city-or-town
+Massachusetts;Plymouth County;Wareham	city-or-town
+Massachusetts;Worcester County;Warren	city-or-town
+Massachusetts;Franklin County;Warwick	city-or-town
+Massachusetts;Berkshire County;Washington	city-or-town
+Massachusetts;Middlesex County;Watertown	city-or-town
+Massachusetts;Middlesex County;Wayland	city-or-town
+Massachusetts;Worcester County;Webster	city-or-town
+Massachusetts;Norfolk County;Wellesley	city-or-town
+Massachusetts;Barnstable County;Wellfleet	city-or-town
+Massachusetts;Franklin County;Wendell	city-or-town
+Massachusetts;Essex County;Wenham	city-or-town
+Massachusetts;Worcester County;West Boylston	city-or-town
+Massachusetts;Plymouth County;West Bridgewater	city-or-town
+Massachusetts;Worcester County;West Brookfield	city-or-town
+Massachusetts;Essex County;West Newbury	city-or-town
+Massachusetts;Hampden County;West Springfield	city-or-town
+Massachusetts;Berkshire County;West Stockbridge	city-or-town
+Massachusetts;Dukes County;West Tisbury	city-or-town
+Massachusetts;Worcester County;Westborough	city-or-town
+Massachusetts;Hampden County;Westfield	city-or-town
+Massachusetts;Middlesex County;Westford	city-or-town
+Massachusetts;Hampshire County;Westhampton	city-or-town
+Massachusetts;Worcester County;Westminster	city-or-town
+Massachusetts;Middlesex County;Weston	city-or-town
+Massachusetts;Bristol County;Westport	city-or-town
+Massachusetts;Norfolk County;Westwood	city-or-town
+Massachusetts;Norfolk County;Weymouth	city-or-town
+Massachusetts;Franklin County;Whately	city-or-town
+Massachusetts;Plymouth County;Whitman	city-or-town
+Massachusetts;Hampden County;Wilbraham	city-or-town
+Massachusetts;Hampshire County;Williamsburg	city-or-town
+Massachusetts;Berkshire County;Williamstown	city-or-town
+Massachusetts;Middlesex County;Wilmington	city-or-town
+Massachusetts;Worcester County;Winchendon	city-or-town
+Massachusetts;Middlesex County;Winchester	city-or-town
+Massachusetts;Berkshire County;Windsor	city-or-town
+Massachusetts;Suffolk County;Winthrop	city-or-town
+Massachusetts;Middlesex County;Woburn	city-or-town
+Massachusetts;Worcester County;Worcester	city-or-town
+Massachusetts;Hampshire County;Worthington	city-or-town
+Massachusetts;Norfolk County;Wrentham	city-or-town
+Massachusetts;Barnstable County;Yarmouth	city-or-town

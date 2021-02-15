@@ -222,8 +222,9 @@ Election	2016 General	2016 General
 Party	Democratic Party	Democratic
 Party	Republican Party	Republican
 Party	Green Party	Green
-Party	Green Rainbow Party	Green-Rainbow
+Party	Green-Rainbow Party	Green-Rainbow
 Party	Libertarian Party	Libertarian
+Party	Unenrolled	Unenrolled
 ReportingUnit	Massachusetts;MA House District 1	Massachusetts;MA House District 1
 ReportingUnit	Massachusetts;MA House District 2	Massachusetts;MA House District 2
 ReportingUnit	Massachusetts;MA House District 3	Massachusetts;MA House District 3
@@ -440,355 +441,379 @@ Candidate	Jo Jorgensen	Jo Jorgensen
 Candidate	Howard Hawkins	Howard Hawkins
 Candidate	Donald J. Trump	Donald J. Trump
 Candidate	All Others	All Others
-ReportingUnit	Massachusetts;Yarmouth	Yarmouth
-ReportingUnit	Massachusetts;Wrentham	Wrentham
-ReportingUnit	Massachusetts;Worthington	Worthington
-ReportingUnit	Massachusetts;Worcester	Worcester
-ReportingUnit	Massachusetts;Woburn	Woburn
-ReportingUnit	Massachusetts;Winthrop	Winthrop
-ReportingUnit	Massachusetts;Windsor	Windsor
-ReportingUnit	Massachusetts;Winchester	Winchester
-ReportingUnit	Massachusetts;Winchendon	Winchendon
-ReportingUnit	Massachusetts;Wilmington	Wilmington
-ReportingUnit	Massachusetts;Williamstown	Williamstown
-ReportingUnit	Massachusetts;Williamsburg	Williamsburg
-ReportingUnit	Massachusetts;Wilbraham	Wilbraham
-ReportingUnit	Massachusetts;Whitman	Whitman
-ReportingUnit	Massachusetts;Whately	Whately
-ReportingUnit	Massachusetts;Weymouth	Weymouth
-ReportingUnit	Massachusetts;Westwood	Westwood
-ReportingUnit	Massachusetts;Westport	Westport
-ReportingUnit	Massachusetts;Weston	Weston
-ReportingUnit	Massachusetts;Westminster	Westminster
-ReportingUnit	Massachusetts;Westhampton	Westhampton
-ReportingUnit	Massachusetts;Westford	Westford
-ReportingUnit	Massachusetts;Westfield	Westfield
-ReportingUnit	Massachusetts;Westborough	Westborough
-ReportingUnit	Massachusetts;Wenham	Wenham
-ReportingUnit	Massachusetts;Wendell	Wendell
-ReportingUnit	Massachusetts;Wellfleet	Wellfleet
-ReportingUnit	Massachusetts;Wellesley	Wellesley
-ReportingUnit	Massachusetts;Webster	Webster
-ReportingUnit	Massachusetts;Wayland	Wayland
-ReportingUnit	Massachusetts;Watertown	Watertown
-ReportingUnit	Massachusetts;Washington	Washington
-ReportingUnit	Massachusetts;Warwick	Warwick
-ReportingUnit	Massachusetts;Warren	Warren
-ReportingUnit	Massachusetts;Wareham	Wareham
-ReportingUnit	Massachusetts;Ware	Ware
-ReportingUnit	Massachusetts;Waltham	Waltham
-ReportingUnit	Massachusetts;Walpole	Walpole
-ReportingUnit	Massachusetts;Wales	Wales
-ReportingUnit	Massachusetts;Wakefield	Wakefield
-ReportingUnit	Massachusetts;W. Tisbury	W. Tisbury
-ReportingUnit	Massachusetts;W. Stockbridge	W. Stockbridge
-ReportingUnit	Massachusetts;W. Springfield	W. Springfield
-ReportingUnit	Massachusetts;W. Newbury	W. Newbury
-ReportingUnit	Massachusetts;W. Brookfield	W. Brookfield
-ReportingUnit	Massachusetts;W. Bridgewater	W. Bridgewater
-ReportingUnit	Massachusetts;W. Boylston	W. Boylston
-ReportingUnit	Massachusetts;Uxbridge	Uxbridge
-ReportingUnit	Massachusetts;Upton	Upton
-ReportingUnit	Massachusetts;Tyringham	Tyringham
-ReportingUnit	Massachusetts;Tyngsborough	Tyngsborough
-ReportingUnit	Massachusetts;Truro	Truro
-ReportingUnit	Massachusetts;Townsend	Townsend
-ReportingUnit	Massachusetts;Topsfield	Topsfield
-ReportingUnit	Massachusetts;Tolland	Tolland
-ReportingUnit	Massachusetts;Tisbury	Tisbury
-ReportingUnit	Massachusetts;Tewksbury	Tewksbury
-ReportingUnit	Massachusetts;Templeton	Templeton
-ReportingUnit	Massachusetts;Taunton	Taunton
-ReportingUnit	Massachusetts;TOTALS	TOTALS
-ReportingUnit	Massachusetts;Swansea	Swansea
-ReportingUnit	Massachusetts;Swampscott	Swampscott
-ReportingUnit	Massachusetts;Sutton	Sutton
-ReportingUnit	Massachusetts;Sunderland	Sunderland
-ReportingUnit	Massachusetts;Sudbury	Sudbury
-ReportingUnit	Massachusetts;Sturbridge	Sturbridge
-ReportingUnit	Massachusetts;Stow	Stow
-ReportingUnit	Massachusetts;Stoughton	Stoughton
-ReportingUnit	Massachusetts;Stoneham	Stoneham
-ReportingUnit	Massachusetts;Stockbridge	Stockbridge
-ReportingUnit	Massachusetts;Sterling	Sterling
-ReportingUnit	Massachusetts;Springfield	Springfield
-ReportingUnit	Massachusetts;Spencer	Spencer
-ReportingUnit	Massachusetts;Southwick	Southwick
-ReportingUnit	Massachusetts;Southbridge	Southbridge
-ReportingUnit	Massachusetts;Southborough	Southborough
-ReportingUnit	Massachusetts;Southampton	Southampton
-ReportingUnit	Massachusetts;Somerville	Somerville
-ReportingUnit	Massachusetts;Somerset	Somerset
-ReportingUnit	Massachusetts;Shutesbury	Shutesbury
-ReportingUnit	Massachusetts;Shrewsbury	Shrewsbury
-ReportingUnit	Massachusetts;Shirley	Shirley
-ReportingUnit	Massachusetts;Sherborn	Sherborn
-ReportingUnit	Massachusetts;Shelburne	Shelburne
-ReportingUnit	Massachusetts;Sheffield	Sheffield
-ReportingUnit	Massachusetts;Sharon	Sharon
-ReportingUnit	Massachusetts;Seekonk	Seekonk
-ReportingUnit	Massachusetts;Scituate	Scituate
-ReportingUnit	Massachusetts;Savoy	Savoy
-ReportingUnit	Massachusetts;Saugus	Saugus
-ReportingUnit	Massachusetts;Sandwich	Sandwich
-ReportingUnit	Massachusetts;Sandisfield	Sandisfield
-ReportingUnit	Massachusetts;Salisbury	Salisbury
-ReportingUnit	Massachusetts;Salem	Salem
-ReportingUnit	Massachusetts;S. Hadley	S. Hadley
-ReportingUnit	Massachusetts;Rutland	Rutland
-ReportingUnit	Massachusetts;Russell	Russell
-ReportingUnit	Massachusetts;Royalston	Royalston
-ReportingUnit	Massachusetts;Rowley	Rowley
-ReportingUnit	Massachusetts;Rowe	Rowe
-ReportingUnit	Massachusetts;Rockport	Rockport
-ReportingUnit	Massachusetts;Rockland	Rockland
-ReportingUnit	Massachusetts;Rochester	Rochester
-ReportingUnit	Massachusetts;Richmond	Richmond
-ReportingUnit	Massachusetts;Revere	Revere
-ReportingUnit	Massachusetts;Rehoboth	Rehoboth
-ReportingUnit	Massachusetts;Reading	Reading
-ReportingUnit	Massachusetts;Raynham	Raynham
-ReportingUnit	Massachusetts;Randolph	Randolph
-ReportingUnit	Massachusetts;Quincy	Quincy
-ReportingUnit	Massachusetts;Provincetown	Provincetown
-ReportingUnit	Massachusetts;Princeton	Princeton
-ReportingUnit	Massachusetts;Plympton	Plympton
-ReportingUnit	Massachusetts;Plymouth	Plymouth
-ReportingUnit	Massachusetts;Plainville	Plainville
-ReportingUnit	Massachusetts;Plainfield	Plainfield
-ReportingUnit	Massachusetts;Pittsfield	Pittsfield
-ReportingUnit	Massachusetts;Phillipston	Phillipston
-ReportingUnit	Massachusetts;Petersham	Petersham
-ReportingUnit	Massachusetts;Peru	Peru
-ReportingUnit	Massachusetts;Pepperell	Pepperell
-ReportingUnit	Massachusetts;Pembroke	Pembroke
-ReportingUnit	Massachusetts;Pelham	Pelham
-ReportingUnit	Massachusetts;Peabody	Peabody
-ReportingUnit	Massachusetts;Paxton	Paxton
-ReportingUnit	Massachusetts;Palmer	Palmer
-ReportingUnit	Massachusetts;Oxford	Oxford
-ReportingUnit	Massachusetts;Otis	Otis
-ReportingUnit	Massachusetts;Orleans	Orleans
-ReportingUnit	Massachusetts;Orange	Orange
-ReportingUnit	Massachusetts;Oakham	Oakham
-ReportingUnit	Massachusetts;Oak Bluffs	Oak Bluffs
-ReportingUnit	Massachusetts;Norwood	Norwood
-ReportingUnit	Massachusetts;Norwell	Norwell
-ReportingUnit	Massachusetts;Norton	Norton
-ReportingUnit	Massachusetts;Northfield	Northfield
-ReportingUnit	Massachusetts;Northbridge	Northbridge
-ReportingUnit	Massachusetts;Northborough	Northborough
-ReportingUnit	Massachusetts;Northampton	Northampton
-ReportingUnit	Massachusetts;Norfolk	Norfolk
-ReportingUnit	Massachusetts;Newton	Newton
-ReportingUnit	Massachusetts;Newburyport	Newburyport
-ReportingUnit	Massachusetts;Newbury	Newbury
-ReportingUnit	Massachusetts;New Salem	New Salem
-ReportingUnit	Massachusetts;New Marlborough	New Marlborough
-ReportingUnit	Massachusetts;New Braintree	New Braintree
-ReportingUnit	Massachusetts;New Bedford	New Bedford
-ReportingUnit	Massachusetts;New Ashford	New Ashford
-ReportingUnit	Massachusetts;Needham	Needham
-ReportingUnit	Massachusetts;Natick	Natick
-ReportingUnit	Massachusetts;Nantucket	Nantucket
-ReportingUnit	Massachusetts;Nahant	Nahant
-ReportingUnit	Massachusetts;N. Reading	N. Reading
-ReportingUnit	Massachusetts;N. Brookfield	N. Brookfield
-ReportingUnit	Massachusetts;N. Attleborough	N. Attleborough
-ReportingUnit	Massachusetts;N. Andover	N. Andover
-ReportingUnit	Massachusetts;N. Adams	N. Adams
-ReportingUnit	Massachusetts;Mount Washington	Mount Washington
-ReportingUnit	Massachusetts;Montgomery	Montgomery
-ReportingUnit	Massachusetts;Monterey	Monterey
-ReportingUnit	Massachusetts;Montague	Montague
-ReportingUnit	Massachusetts;Monson	Monson
-ReportingUnit	Massachusetts;Monroe	Monroe
-ReportingUnit	Massachusetts;Milton	Milton
-ReportingUnit	Massachusetts;Millville	Millville
-ReportingUnit	Massachusetts;Millis	Millis
-ReportingUnit	Massachusetts;Millbury	Millbury
-ReportingUnit	Massachusetts;Milford	Milford
-ReportingUnit	Massachusetts;Middleton	Middleton
-ReportingUnit	Massachusetts;Middlefield	Middlefield
-ReportingUnit	Massachusetts;Middleborough	Middleborough
-ReportingUnit	Massachusetts;Methuen	Methuen
-ReportingUnit	Massachusetts;Merrimac	Merrimac
-ReportingUnit	Massachusetts;Mendon	Mendon
-ReportingUnit	Massachusetts;Melrose	Melrose
-ReportingUnit	Massachusetts;Medway	Medway
-ReportingUnit	Massachusetts;Medford	Medford
-ReportingUnit	Massachusetts;Medfield	Medfield
-ReportingUnit	Massachusetts;Maynard	Maynard
-ReportingUnit	Massachusetts;Mattapoisett	Mattapoisett
-ReportingUnit	Massachusetts;Mashpee	Mashpee
-ReportingUnit	Massachusetts;Marshfield	Marshfield
-ReportingUnit	Massachusetts;Marlborough	Marlborough
-ReportingUnit	Massachusetts;Marion	Marion
-ReportingUnit	Massachusetts;Marblehead	Marblehead
-ReportingUnit	Massachusetts;Mansfield	Mansfield
-ReportingUnit	Massachusetts;Manchester-by-the-Sea	Manchester-by-the-Sea
-ReportingUnit	Massachusetts;Malden	Malden
-ReportingUnit	Massachusetts;Lynnfield	Lynnfield
-ReportingUnit	Massachusetts;Lynn	Lynn
-ReportingUnit	Massachusetts;Lunenburg	Lunenburg
-ReportingUnit	Massachusetts;Ludlow	Ludlow
-ReportingUnit	Massachusetts;Lowell	Lowell
-ReportingUnit	Massachusetts;Longmeadow	Longmeadow
-ReportingUnit	Massachusetts;Littleton	Littleton
-ReportingUnit	Massachusetts;Lincoln	Lincoln
-ReportingUnit	Massachusetts;Leyden	Leyden
-ReportingUnit	Massachusetts;Lexington	Lexington
-ReportingUnit	Massachusetts;Leverett	Leverett
-ReportingUnit	Massachusetts;Leominster	Leominster
-ReportingUnit	Massachusetts;Lenox	Lenox
-ReportingUnit	Massachusetts;Leicester	Leicester
-ReportingUnit	Massachusetts;Lee	Lee
-ReportingUnit	Massachusetts;Lawrence	Lawrence
-ReportingUnit	Massachusetts;Lanesborough	Lanesborough
-ReportingUnit	Massachusetts;Lancaster	Lancaster
-ReportingUnit	Massachusetts;Lakeville	Lakeville
-ReportingUnit	Massachusetts;Kingston	Kingston
-ReportingUnit	Massachusetts;Ipswich	Ipswich
-ReportingUnit	Massachusetts;Huntington	Huntington
-ReportingUnit	Massachusetts;Hull	Hull
-ReportingUnit	Massachusetts;Hudson	Hudson
-ReportingUnit	Massachusetts;Hubbardston	Hubbardston
-ReportingUnit	Massachusetts;Hopkinton	Hopkinton
-ReportingUnit	Massachusetts;Hopedale	Hopedale
-ReportingUnit	Massachusetts;Holyoke	Holyoke
-ReportingUnit	Massachusetts;Holliston	Holliston
-ReportingUnit	Massachusetts;Holland	Holland
-ReportingUnit	Massachusetts;Holden	Holden
-ReportingUnit	Massachusetts;Holbrook	Holbrook
-ReportingUnit	Massachusetts;Hinsdale	Hinsdale
-ReportingUnit	Massachusetts;Hingham	Hingham
-ReportingUnit	Massachusetts;Heath	Heath
-ReportingUnit	Massachusetts;Hawley	Hawley
-ReportingUnit	Massachusetts;Haverhill	Haverhill
-ReportingUnit	Massachusetts;Hatfield	Hatfield
-ReportingUnit	Massachusetts;Harwich	Harwich
-ReportingUnit	Massachusetts;Harvard	Harvard
-ReportingUnit	Massachusetts;Hardwick	Hardwick
-ReportingUnit	Massachusetts;Hanson	Hanson
-ReportingUnit	Massachusetts;Hanover	Hanover
-ReportingUnit	Massachusetts;Hancock	Hancock
-ReportingUnit	Massachusetts;Hampden	Hampden
-ReportingUnit	Massachusetts;Hamilton	Hamilton
-ReportingUnit	Massachusetts;Halifax	Halifax
-ReportingUnit	Massachusetts;Hadley	Hadley
-ReportingUnit	Massachusetts;Groveland	Groveland
-ReportingUnit	Massachusetts;Groton	Groton
-ReportingUnit	Massachusetts;Greenfield	Greenfield
-ReportingUnit	Massachusetts;Great Barrington	Great Barrington
-ReportingUnit	Massachusetts;Granville	Granville
-ReportingUnit	Massachusetts;Granby	Granby
-ReportingUnit	Massachusetts;Grafton	Grafton
-ReportingUnit	Massachusetts;Gosnold	Gosnold
-ReportingUnit	Massachusetts;Goshen	Goshen
-ReportingUnit	Massachusetts;Gloucester	Gloucester
-ReportingUnit	Massachusetts;Gill	Gill
-ReportingUnit	Massachusetts;Georgetown	Georgetown
-ReportingUnit	Massachusetts;Gardner	Gardner
-ReportingUnit	Massachusetts;Freetown	Freetown
-ReportingUnit	Massachusetts;Franklin	Franklin
-ReportingUnit	Massachusetts;Framingham	Framingham
-ReportingUnit	Massachusetts;Foxborough	Foxborough
-ReportingUnit	Massachusetts;Florida	Florida
-ReportingUnit	Massachusetts;Fitchburg	Fitchburg
-ReportingUnit	Massachusetts;Falmouth	Falmouth
-ReportingUnit	Massachusetts;Fall River	Fall River
-ReportingUnit	Massachusetts;Fairhaven	Fairhaven
-ReportingUnit	Massachusetts;Everett	Everett
-ReportingUnit	Massachusetts;Essex	Essex
-ReportingUnit	Massachusetts;Erving	Erving
-ReportingUnit	Massachusetts;Egremont	Egremont
-ReportingUnit	Massachusetts;Edgartown	Edgartown
-ReportingUnit	Massachusetts;Easton	Easton
-ReportingUnit	Massachusetts;Easthampton	Easthampton
-ReportingUnit	Massachusetts;Eastham	Eastham
-ReportingUnit	Massachusetts;E. Longmeadow	E. Longmeadow
-ReportingUnit	Massachusetts;E. Brookfield	E. Brookfield
-ReportingUnit	Massachusetts;E. Bridgewater	E. Bridgewater
-ReportingUnit	Massachusetts;Duxbury	Duxbury
-ReportingUnit	Massachusetts;Dunstable	Dunstable
-ReportingUnit	Massachusetts;Dudley	Dudley
-ReportingUnit	Massachusetts;Dracut	Dracut
-ReportingUnit	Massachusetts;Dover	Dover
-ReportingUnit	Massachusetts;Douglas	Douglas
-ReportingUnit	Massachusetts;Dighton	Dighton
-ReportingUnit	Massachusetts;Dennis	Dennis
-ReportingUnit	Massachusetts;Deerfield	Deerfield
-ReportingUnit	Massachusetts;Dedham	Dedham
-ReportingUnit	Massachusetts;Dartmouth	Dartmouth
-ReportingUnit	Massachusetts;Danvers	Danvers
-ReportingUnit	Massachusetts;Dalton	Dalton
-ReportingUnit	Massachusetts;Cummington	Cummington
-ReportingUnit	Massachusetts;Conway	Conway
-ReportingUnit	Massachusetts;Concord	Concord
-ReportingUnit	Massachusetts;Colrain	Colrain
-ReportingUnit	Massachusetts;Cohasset	Cohasset
-ReportingUnit	Massachusetts;Clinton	Clinton
-ReportingUnit	Massachusetts;Clarksburg	Clarksburg
-ReportingUnit	Massachusetts;Chilmark	Chilmark
-ReportingUnit	Massachusetts;Chicopee	Chicopee
-ReportingUnit	Massachusetts;Chesterfield	Chesterfield
-ReportingUnit	Massachusetts;Chester	Chester
-ReportingUnit	Massachusetts;Cheshire	Cheshire
-ReportingUnit	Massachusetts;Chelsea	Chelsea
-ReportingUnit	Massachusetts;Chelmsford	Chelmsford
-ReportingUnit	Massachusetts;Chatham	Chatham
-ReportingUnit	Massachusetts;Charlton	Charlton
-ReportingUnit	Massachusetts;Charlemont	Charlemont
-ReportingUnit	Massachusetts;Carver	Carver
-ReportingUnit	Massachusetts;Carlisle	Carlisle
-ReportingUnit	Massachusetts;Canton	Canton
-ReportingUnit	Massachusetts;Cambridge	Cambridge
-ReportingUnit	Massachusetts;Burlington	Burlington
-ReportingUnit	Massachusetts;Buckland	Buckland
-ReportingUnit	Massachusetts;Brookline	Brookline
-ReportingUnit	Massachusetts;Brookfield	Brookfield
-ReportingUnit	Massachusetts;Brockton	Brockton
-ReportingUnit	Massachusetts;Brimfield	Brimfield
-ReportingUnit	Massachusetts;Bridgewater	Bridgewater
-ReportingUnit	Massachusetts;Brewster	Brewster
-ReportingUnit	Massachusetts;Braintree	Braintree
-ReportingUnit	Massachusetts;Boylston	Boylston
-ReportingUnit	Massachusetts;Boxford	Boxford
-ReportingUnit	Massachusetts;Boxborough	Boxborough
-ReportingUnit	Massachusetts;Bourne	Bourne
-ReportingUnit	Massachusetts;Boston	Boston
-ReportingUnit	Massachusetts;Bolton	Bolton
-ReportingUnit	Massachusetts;Blandford	Blandford
-ReportingUnit	Massachusetts;Blackstone	Blackstone
-ReportingUnit	Massachusetts;Billerica	Billerica
-ReportingUnit	Massachusetts;Beverly	Beverly
-ReportingUnit	Massachusetts;Bernardston	Bernardston
-ReportingUnit	Massachusetts;Berlin	Berlin
-ReportingUnit	Massachusetts;Berkley	Berkley
-ReportingUnit	Massachusetts;Belmont	Belmont
-ReportingUnit	Massachusetts;Bellingham	Bellingham
-ReportingUnit	Massachusetts;Belchertown	Belchertown
-ReportingUnit	Massachusetts;Bedford	Bedford
-ReportingUnit	Massachusetts;Becket	Becket
-ReportingUnit	Massachusetts;Barre	Barre
-ReportingUnit	Massachusetts;Barnstable	Barnstable
-ReportingUnit	Massachusetts;Ayer	Ayer
-ReportingUnit	Massachusetts;Avon	Avon
-ReportingUnit	Massachusetts;Auburn	Auburn
-ReportingUnit	Massachusetts;Attleboro	Attleboro
-ReportingUnit	Massachusetts;Athol	Athol
-ReportingUnit	Massachusetts;Ashland	Ashland
-ReportingUnit	Massachusetts;Ashfield	Ashfield
-ReportingUnit	Massachusetts;Ashby	Ashby
-ReportingUnit	Massachusetts;Ashburnham	Ashburnham
-ReportingUnit	Massachusetts;Arlington	Arlington
-ReportingUnit	Massachusetts;Aquinnah	Aquinnah
-ReportingUnit	Massachusetts;Andover	Andover
-ReportingUnit	Massachusetts;Amherst	Amherst
-ReportingUnit	Massachusetts;Amesbury	Amesbury
-ReportingUnit	Massachusetts;Alford	Alford
-ReportingUnit	Massachusetts;Agawam	Agawam
-ReportingUnit	Massachusetts;Adams	Adams
-ReportingUnit	Massachusetts;Acushnet	Acushnet
-ReportingUnit	Massachusetts;Acton	Acton
-ReportingUnit	Massachusetts;Abington	Abington
+ReportingUnit	Massachusetts;Plymouth County;Abington	Abington
+ReportingUnit	Massachusetts;Middlesex County;Acton	Acton
+ReportingUnit	Massachusetts;Bristol County;Acushnet	Acushnet
+ReportingUnit	Massachusetts;Berkshire County;Adams	Adams
+ReportingUnit	Massachusetts;Hampden County;Agawam	Agawam
+ReportingUnit	Massachusetts;Berkshire County;Alford	Alford
+ReportingUnit	Massachusetts;Essex County;Amesbury	Amesbury
+ReportingUnit	Massachusetts;Hampshire County;Amherst	Amherst
+ReportingUnit	Massachusetts;Essex County;Andover	Andover
+ReportingUnit	Massachusetts;Dukes County;Aquinnah	Aquinnah
+ReportingUnit	Massachusetts;Middlesex County;Arlington	Arlington
+ReportingUnit	Massachusetts;Worcester County;Ashburnham	Ashburnham
+ReportingUnit	Massachusetts;Middlesex County;Ashby	Ashby
+ReportingUnit	Massachusetts;Franklin County;Ashfield	Ashfield
+ReportingUnit	Massachusetts;Middlesex County;Ashland	Ashland
+ReportingUnit	Massachusetts;Worcester County;Athol	Athol
+ReportingUnit	Massachusetts;Bristol County;Attleboro	Attleboro
+ReportingUnit	Massachusetts;Worcester County;Auburn	Auburn
+ReportingUnit	Massachusetts;Norfolk County;Avon	Avon
+ReportingUnit	Massachusetts;Middlesex County;Ayer	Ayer
+ReportingUnit	Massachusetts;Barnstable County;Barnstable	Barnstable
+ReportingUnit	Massachusetts;Worcester County;Barre	Barre
+ReportingUnit	Massachusetts;Berkshire County;Becket	Becket
+ReportingUnit	Massachusetts;Middlesex County;Bedford	Bedford
+ReportingUnit	Massachusetts;Hampshire County;Belchertown	Belchertown
+ReportingUnit	Massachusetts;Norfolk County;Bellingham	Bellingham
+ReportingUnit	Massachusetts;Middlesex County;Belmont	Belmont
+ReportingUnit	Massachusetts;Bristol County;Berkley	Berkley
+ReportingUnit	Massachusetts;Worcester County;Berlin	Berlin
+ReportingUnit	Massachusetts;Franklin County;Bernardston	Bernardston
+ReportingUnit	Massachusetts;Essex County;Beverly	Beverly
+ReportingUnit	Massachusetts;Middlesex County;Billerica	Billerica
+ReportingUnit	Massachusetts;Worcester County;Blackstone	Blackstone
+ReportingUnit	Massachusetts;Hampden County;Blandford	Blandford
+ReportingUnit	Massachusetts;Worcester County;Bolton	Bolton
+ReportingUnit	Massachusetts;Suffolk County;Boston	Boston
+ReportingUnit	Massachusetts;Barnstable County;Bourne	Bourne
+ReportingUnit	Massachusetts;Middlesex County;Boxborough	Boxborough
+ReportingUnit	Massachusetts;Essex County;Boxford	Boxford
+ReportingUnit	Massachusetts;Worcester County;Boylston	Boylston
+ReportingUnit	Massachusetts;Norfolk County;Braintree	Braintree
+ReportingUnit	Massachusetts;Barnstable County;Brewster	Brewster
+ReportingUnit	Massachusetts;Plymouth County;Bridgewater	Bridgewater
+ReportingUnit	Massachusetts;Hampden County;Brimfield	Brimfield
+ReportingUnit	Massachusetts;Plymouth County;Brockton	Brockton
+ReportingUnit	Massachusetts;Worcester County;Brookfield	Brookfield
+ReportingUnit	Massachusetts;Norfolk County;Brookline	Brookline
+ReportingUnit	Massachusetts;Franklin County;Buckland	Buckland
+ReportingUnit	Massachusetts;Middlesex County;Burlington	Burlington
+ReportingUnit	Massachusetts;Middlesex County;Cambridge	Cambridge
+ReportingUnit	Massachusetts;Norfolk County;Canton	Canton
+ReportingUnit	Massachusetts;Middlesex County;Carlisle	Carlisle
+ReportingUnit	Massachusetts;Plymouth County;Carver	Carver
+ReportingUnit	Massachusetts;Franklin County;Charlemont	Charlemont
+ReportingUnit	Massachusetts;Worcester County;Charlton	Charlton
+ReportingUnit	Massachusetts;Barnstable County;Chatham	Chatham
+ReportingUnit	Massachusetts;Middlesex County;Chelmsford	Chelmsford
+ReportingUnit	Massachusetts;Suffolk County;Chelsea	Chelsea
+ReportingUnit	Massachusetts;Berkshire County;Cheshire	Cheshire
+ReportingUnit	Massachusetts;Hampden County;Chester	Chester
+ReportingUnit	Massachusetts;Hampshire County;Chesterfield	Chesterfield
+ReportingUnit	Massachusetts;Hampden County;Chicopee	Chicopee
+ReportingUnit	Massachusetts;Dukes County;Chilmark	Chilmark
+ReportingUnit	Massachusetts;Berkshire County;Clarksburg	Clarksburg
+ReportingUnit	Massachusetts;Worcester County;Clinton	Clinton
+ReportingUnit	Massachusetts;Norfolk County;Cohasset	Cohasset
+ReportingUnit	Massachusetts;Franklin County;Colrain	Colrain
+ReportingUnit	Massachusetts;Middlesex County;Concord	Concord
+ReportingUnit	Massachusetts;Franklin County;Conway	Conway
+ReportingUnit	Massachusetts;Hampshire County;Cummington	Cummington
+ReportingUnit	Massachusetts;Berkshire County;Dalton	Dalton
+ReportingUnit	Massachusetts;Essex County;Danvers	Danvers
+ReportingUnit	Massachusetts;Bristol County;Dartmouth	Dartmouth
+ReportingUnit	Massachusetts;Norfolk County;Dedham	Dedham
+ReportingUnit	Massachusetts;Franklin County;Deerfield	Deerfield
+ReportingUnit	Massachusetts;Barnstable County;Dennis	Dennis
+ReportingUnit	Massachusetts;Bristol County;Dighton	Dighton
+ReportingUnit	Massachusetts;Worcester County;Douglas	Douglas
+ReportingUnit	Massachusetts;Norfolk County;Dover	Dover
+ReportingUnit	Massachusetts;Middlesex County;Dracut	Dracut
+ReportingUnit	Massachusetts;Worcester County;Dudley	Dudley
+ReportingUnit	Massachusetts;Middlesex County;Dunstable	Dunstable
+ReportingUnit	Massachusetts;Plymouth County;Duxbury	Duxbury
+ReportingUnit	Massachusetts;Plymouth County;East Bridgewater	E. Bridgewater
+ReportingUnit	Massachusetts;Worcester County;East Brookfield	E. Brookfield
+ReportingUnit	Massachusetts;Hampden County;East Longmeadow	E. Longmeadow
+ReportingUnit	Massachusetts;Barnstable County;Eastham	Eastham
+ReportingUnit	Massachusetts;Hampshire County;Easthampton	Easthampton
+ReportingUnit	Massachusetts;Bristol County;Easton	Easton
+ReportingUnit	Massachusetts;Dukes County;Edgartown	Edgartown
+ReportingUnit	Massachusetts;Berkshire County;Egremont	Egremont
+ReportingUnit	Massachusetts;Franklin County;Erving	Erving
+ReportingUnit	Massachusetts;Essex County;Essex	Essex
+ReportingUnit	Massachusetts;Middlesex County;Everett	Everett
+ReportingUnit	Massachusetts;Bristol County;Fairhaven	Fairhaven
+ReportingUnit	Massachusetts;Bristol County;Fall River	Fall River
+ReportingUnit	Massachusetts;Barnstable County;Falmouth	Falmouth
+ReportingUnit	Massachusetts;Worcester County;Fitchburg	Fitchburg
+ReportingUnit	Massachusetts;Berkshire County;Florida	Florida
+ReportingUnit	Massachusetts;Norfolk County;Foxborough	Foxborough
+ReportingUnit	Massachusetts;Middlesex County;Framingham	Framingham
+ReportingUnit	Massachusetts;Norfolk County;Franklin	Franklin
+ReportingUnit	Massachusetts;Bristol County;Freetown	Freetown
+ReportingUnit	Massachusetts;Worcester County;Gardner	Gardner
+ReportingUnit	Massachusetts;Essex County;Georgetown	Georgetown
+ReportingUnit	Massachusetts;Franklin County;Gill	Gill
+ReportingUnit	Massachusetts;Essex County;Gloucester	Gloucester
+ReportingUnit	Massachusetts;Hampshire County;Goshen	Goshen
+ReportingUnit	Massachusetts;Dukes County;Gosnold	Gosnold
+ReportingUnit	Massachusetts;Worcester County;Grafton	Grafton
+ReportingUnit	Massachusetts;Hampshire County;Granby	Granby
+ReportingUnit	Massachusetts;Hampden County;Granville	Granville
+ReportingUnit	Massachusetts;Berkshire County;Great Barrington	Great Barrington
+ReportingUnit	Massachusetts;Franklin County;Greenfield	Greenfield
+ReportingUnit	Massachusetts;Middlesex County;Groton	Groton
+ReportingUnit	Massachusetts;Essex County;Groveland	Groveland
+ReportingUnit	Massachusetts;Hampshire County;Hadley	Hadley
+ReportingUnit	Massachusetts;Plymouth County;Halifax	Halifax
+ReportingUnit	Massachusetts;Essex County;Hamilton	Hamilton
+ReportingUnit	Massachusetts;Hampden County;Hampden	Hampden
+ReportingUnit	Massachusetts;Berkshire County;Hancock	Hancock
+ReportingUnit	Massachusetts;Plymouth County;Hanover	Hanover
+ReportingUnit	Massachusetts;Plymouth County;Hanson	Hanson
+ReportingUnit	Massachusetts;Worcester County;Hardwick	Hardwick
+ReportingUnit	Massachusetts;Worcester County;Harvard	Harvard
+ReportingUnit	Massachusetts;Barnstable County;Harwich	Harwich
+ReportingUnit	Massachusetts;Hampshire County;Hatfield	Hatfield
+ReportingUnit	Massachusetts;Essex County;Haverhill	Haverhill
+ReportingUnit	Massachusetts;Franklin County;Hawley	Hawley
+ReportingUnit	Massachusetts;Franklin County;Heath	Heath
+ReportingUnit	Massachusetts;Plymouth County;Hingham	Hingham
+ReportingUnit	Massachusetts;Berkshire County;Hinsdale	Hinsdale
+ReportingUnit	Massachusetts;Norfolk County;Holbrook	Holbrook
+ReportingUnit	Massachusetts;Worcester County;Holden	Holden
+ReportingUnit	Massachusetts;Hampden County;Holland	Holland
+ReportingUnit	Massachusetts;Middlesex County;Holliston	Holliston
+ReportingUnit	Massachusetts;Hampden County;Holyoke	Holyoke
+ReportingUnit	Massachusetts;Worcester County;Hopedale	Hopedale
+ReportingUnit	Massachusetts;Middlesex County;Hopkinton	Hopkinton
+ReportingUnit	Massachusetts;Worcester County;Hubbardston	Hubbardston
+ReportingUnit	Massachusetts;Middlesex County;Hudson	Hudson
+ReportingUnit	Massachusetts;Plymouth County;Hull	Hull
+ReportingUnit	Massachusetts;Hampshire County;Huntington	Huntington
+ReportingUnit	Massachusetts;Essex County;Ipswich	Ipswich
+ReportingUnit	Massachusetts;Plymouth County;Kingston	Kingston
+ReportingUnit	Massachusetts;Plymouth County;Lakeville	Lakeville
+ReportingUnit	Massachusetts;Worcester County;Lancaster	Lancaster
+ReportingUnit	Massachusetts;Berkshire County;Lanesborough	Lanesborough
+ReportingUnit	Massachusetts;Essex County;Lawrence	Lawrence
+ReportingUnit	Massachusetts;Berkshire County;Lee	Lee
+ReportingUnit	Massachusetts;Worcester County;Leicester	Leicester
+ReportingUnit	Massachusetts;Berkshire County;Lenox	Lenox
+ReportingUnit	Massachusetts;Worcester County;Leominster	Leominster
+ReportingUnit	Massachusetts;Franklin County;Leverett	Leverett
+ReportingUnit	Massachusetts;Middlesex County;Lexington	Lexington
+ReportingUnit	Massachusetts;Franklin County;Leyden	Leyden
+ReportingUnit	Massachusetts;Middlesex County;Lincoln	Lincoln
+ReportingUnit	Massachusetts;Middlesex County;Littleton	Littleton
+ReportingUnit	Massachusetts;Hampden County;Longmeadow	Longmeadow
+ReportingUnit	Massachusetts;Middlesex County;Lowell	Lowell
+ReportingUnit	Massachusetts;Hampden County;Ludlow	Ludlow
+ReportingUnit	Massachusetts;Worcester County;Lunenburg	Lunenburg
+ReportingUnit	Massachusetts;Essex County;Lynn	Lynn
+ReportingUnit	Massachusetts;Essex County;Lynnfield	Lynnfield
+ReportingUnit	Massachusetts;Middlesex County;Malden	Malden
+ReportingUnit	Massachusetts;Essex County;Manchester-by-the-Sea	Manchester-by-the-Sea
+ReportingUnit	Massachusetts;Bristol County;Mansfield	Mansfield
+ReportingUnit	Massachusetts;Essex County;Marblehead	Marblehead
+ReportingUnit	Massachusetts;Plymouth County;Marion	Marion
+ReportingUnit	Massachusetts;Middlesex County;Marlborough	Marlborough
+ReportingUnit	Massachusetts;Plymouth County;Marshfield	Marshfield
+ReportingUnit	Massachusetts;Barnstable County;Mashpee	Mashpee
+ReportingUnit	Massachusetts;Plymouth County;Mattapoisett	Mattapoisett
+ReportingUnit	Massachusetts;Middlesex County;Maynard	Maynard
+ReportingUnit	Massachusetts;Norfolk County;Medfield	Medfield
+ReportingUnit	Massachusetts;Middlesex County;Medford	Medford
+ReportingUnit	Massachusetts;Norfolk County;Medway	Medway
+ReportingUnit	Massachusetts;Middlesex County;Melrose	Melrose
+ReportingUnit	Massachusetts;Worcester County;Mendon	Mendon
+ReportingUnit	Massachusetts;Essex County;Merrimac	Merrimac
+ReportingUnit	Massachusetts;Essex County;Methuen	Methuen
+ReportingUnit	Massachusetts;Plymouth County;Middleborough	Middleborough
+ReportingUnit	Massachusetts;Hampshire County;Middlefield	Middlefield
+ReportingUnit	Massachusetts;Essex County;Middleton	Middleton
+ReportingUnit	Massachusetts;Worcester County;Milford	Milford
+ReportingUnit	Massachusetts;Worcester County;Millbury	Millbury
+ReportingUnit	Massachusetts;Norfolk County;Millis	Millis
+ReportingUnit	Massachusetts;Worcester County;Millville	Millville
+ReportingUnit	Massachusetts;Norfolk County;Milton	Milton
+ReportingUnit	Massachusetts;Franklin County;Monroe	Monroe
+ReportingUnit	Massachusetts;Hampden County;Monson	Monson
+ReportingUnit	Massachusetts;Franklin County;Montague	Montague
+ReportingUnit	Massachusetts;Berkshire County;Monterey	Monterey
+ReportingUnit	Massachusetts;Hampden County;Montgomery	Montgomery
+ReportingUnit	Massachusetts;Berkshire County;Mount Washington	Mount Washington
+ReportingUnit	Massachusetts;Essex County;Nahant	Nahant
+ReportingUnit	Massachusetts;Nantucket County;Nantucket	Nantucket
+ReportingUnit	Massachusetts;Middlesex County;Natick	Natick
+ReportingUnit	Massachusetts;Norfolk County;Needham	Needham
+ReportingUnit	Massachusetts;Berkshire County;New Ashford	New Ashford
+ReportingUnit	Massachusetts;Bristol County;New Bedford	New Bedford
+ReportingUnit	Massachusetts;Worcester County;New Braintree	New Braintree
+ReportingUnit	Massachusetts;Berkshire County;New Marlborough	New Marlborough
+ReportingUnit	Massachusetts;Franklin County;New Salem	New Salem
+ReportingUnit	Massachusetts;Essex County;Newbury	Newbury
+ReportingUnit	Massachusetts;Essex County;Newburyport	Newburyport
+ReportingUnit	Massachusetts;Middlesex County;Newton	Newton
+ReportingUnit	Massachusetts;Norfolk County;Norfolk	Norfolk
+ReportingUnit	Massachusetts;Berkshire County;North Adams	N. Adams
+ReportingUnit	Massachusetts;Essex County;North Andover	N. Andover
+ReportingUnit	Massachusetts;Bristol County;North Attleborough	N. Attleborough
+ReportingUnit	Massachusetts;Worcester County;North Brookfield	N. Brookfield
+ReportingUnit	Massachusetts;Middlesex County;North Reading	N. Reading
+ReportingUnit	Massachusetts;Hampshire County;Northampton	Northampton
+ReportingUnit	Massachusetts;Worcester County;Northborough	Northborough
+ReportingUnit	Massachusetts;Worcester County;Northbridge	Northbridge
+ReportingUnit	Massachusetts;Franklin County;Northfield	Northfield
+ReportingUnit	Massachusetts;Bristol County;Norton	Norton
+ReportingUnit	Massachusetts;Plymouth County;Norwell	Norwell
+ReportingUnit	Massachusetts;Norfolk County;Norwood	Norwood
+ReportingUnit	Massachusetts;Dukes County;Oak Bluffs	Oak Bluffs
+ReportingUnit	Massachusetts;Worcester County;Oakham	Oakham
+ReportingUnit	Massachusetts;Franklin County;Orange	Orange
+ReportingUnit	Massachusetts;Barnstable County;Orleans	Orleans
+ReportingUnit	Massachusetts;Berkshire County;Otis	Otis
+ReportingUnit	Massachusetts;Worcester County;Oxford	Oxford
+ReportingUnit	Massachusetts;Hampden County;Palmer	Palmer
+ReportingUnit	Massachusetts;Worcester County;Paxton	Paxton
+ReportingUnit	Massachusetts;Essex County;Peabody	Peabody
+ReportingUnit	Massachusetts;Hampshire County;Pelham	Pelham
+ReportingUnit	Massachusetts;Plymouth County;Pembroke	Pembroke
+ReportingUnit	Massachusetts;Middlesex County;Pepperell	Pepperell
+ReportingUnit	Massachusetts;Berkshire County;Peru	Peru
+ReportingUnit	Massachusetts;Worcester County;Petersham	Petersham
+ReportingUnit	Massachusetts;Worcester County;Phillipston	Phillipston
+ReportingUnit	Massachusetts;Berkshire County;Pittsfield	Pittsfield
+ReportingUnit	Massachusetts;Hampshire County;Plainfield	Plainfield
+ReportingUnit	Massachusetts;Norfolk County;Plainville	Plainville
+ReportingUnit	Massachusetts;Plymouth County;Plymouth	Plymouth
+ReportingUnit	Massachusetts;Plymouth County;Plympton	Plympton
+ReportingUnit	Massachusetts;Worcester County;Princeton	Princeton
+ReportingUnit	Massachusetts;Barnstable County;Provincetown	Provincetown
+ReportingUnit	Massachusetts;Norfolk County;Quincy	Quincy
+ReportingUnit	Massachusetts;Norfolk County;Randolph	Randolph
+ReportingUnit	Massachusetts;Bristol County;Raynham	Raynham
+ReportingUnit	Massachusetts;Middlesex County;Reading	Reading
+ReportingUnit	Massachusetts;Bristol County;Rehoboth	Rehoboth
+ReportingUnit	Massachusetts;Suffolk County;Revere	Revere
+ReportingUnit	Massachusetts;Berkshire County;Richmond	Richmond
+ReportingUnit	Massachusetts;Plymouth County;Rochester	Rochester
+ReportingUnit	Massachusetts;Plymouth County;Rockland	Rockland
+ReportingUnit	Massachusetts;Essex County;Rockport	Rockport
+ReportingUnit	Massachusetts;Franklin County;Rowe	Rowe
+ReportingUnit	Massachusetts;Essex County;Rowley	Rowley
+ReportingUnit	Massachusetts;Worcester County;Royalston	Royalston
+ReportingUnit	Massachusetts;Hampden County;Russell	Russell
+ReportingUnit	Massachusetts;Worcester County;Rutland	Rutland
+ReportingUnit	Massachusetts;Essex County;Salem	Salem
+ReportingUnit	Massachusetts;Essex County;Salisbury	Salisbury
+ReportingUnit	Massachusetts;Berkshire County;Sandisfield	Sandisfield
+ReportingUnit	Massachusetts;Barnstable County;Sandwich	Sandwich
+ReportingUnit	Massachusetts;Essex County;Saugus	Saugus
+ReportingUnit	Massachusetts;Berkshire County;Savoy	Savoy
+ReportingUnit	Massachusetts;Plymouth County;Scituate	Scituate
+ReportingUnit	Massachusetts;Bristol County;Seekonk	Seekonk
+ReportingUnit	Massachusetts;Norfolk County;Sharon	Sharon
+ReportingUnit	Massachusetts;Berkshire County;Sheffield	Sheffield
+ReportingUnit	Massachusetts;Franklin County;Shelburne	Shelburne
+ReportingUnit	Massachusetts;Middlesex County;Sherborn	Sherborn
+ReportingUnit	Massachusetts;Middlesex County;Shirley	Shirley
+ReportingUnit	Massachusetts;Worcester County;Shrewsbury	Shrewsbury
+ReportingUnit	Massachusetts;Franklin County;Shutesbury	Shutesbury
+ReportingUnit	Massachusetts;Bristol County;Somerset	Somerset
+ReportingUnit	Massachusetts;Middlesex County;Somerville	Somerville
+ReportingUnit	Massachusetts;Hampshire County;South Hadley	S. Hadley
+ReportingUnit	Massachusetts;Hampshire County;Southampton	Southampton
+ReportingUnit	Massachusetts;Worcester County;Southborough	Southborough
+ReportingUnit	Massachusetts;Worcester County;Southbridge	Southbridge
+ReportingUnit	Massachusetts;Hampden County;Southwick	Southwick
+ReportingUnit	Massachusetts;Worcester County;Spencer	Spencer
+ReportingUnit	Massachusetts;Hampden County;Springfield	Springfield
+ReportingUnit	Massachusetts;Worcester County;Sterling	Sterling
+ReportingUnit	Massachusetts;Berkshire County;Stockbridge	Stockbridge
+ReportingUnit	Massachusetts;Middlesex County;Stoneham	Stoneham
+ReportingUnit	Massachusetts;Norfolk County;Stoughton	Stoughton
+ReportingUnit	Massachusetts;Middlesex County;Stow	Stow
+ReportingUnit	Massachusetts;Worcester County;Sturbridge	Sturbridge
+ReportingUnit	Massachusetts;Middlesex County;Sudbury	Sudbury
+ReportingUnit	Massachusetts;Franklin County;Sunderland	Sunderland
+ReportingUnit	Massachusetts;Worcester County;Sutton	Sutton
+ReportingUnit	Massachusetts;Essex County;Swampscott	Swampscott
+ReportingUnit	Massachusetts;Bristol County;Swansea	Swansea
+ReportingUnit	Massachusetts;Bristol County;Taunton	Taunton
+ReportingUnit	Massachusetts;Worcester County;Templeton	Templeton
+ReportingUnit	Massachusetts;Middlesex County;Tewksbury	Tewksbury
+ReportingUnit	Massachusetts;Dukes County;Tisbury	Tisbury
+ReportingUnit	Massachusetts;Hampden County;Tolland	Tolland
+ReportingUnit	Massachusetts;Essex County;Topsfield	Topsfield
+ReportingUnit	Massachusetts;Middlesex County;Townsend	Townsend
+ReportingUnit	Massachusetts;Barnstable County;Truro	Truro
+ReportingUnit	Massachusetts;Middlesex County;Tyngsborough	Tyngsborough
+ReportingUnit	Massachusetts;Berkshire County;Tyringham	Tyringham
+ReportingUnit	Massachusetts;Worcester County;Upton	Upton
+ReportingUnit	Massachusetts;Worcester County;Uxbridge	Uxbridge
+ReportingUnit	Massachusetts;Middlesex County;Wakefield	Wakefield
+ReportingUnit	Massachusetts;Hampden County;Wales	Wales
+ReportingUnit	Massachusetts;Norfolk County;Walpole	Walpole
+ReportingUnit	Massachusetts;Middlesex County;Waltham	Waltham
+ReportingUnit	Massachusetts;Hampshire County;Ware	Ware
+ReportingUnit	Massachusetts;Plymouth County;Wareham	Wareham
+ReportingUnit	Massachusetts;Worcester County;Warren	Warren
+ReportingUnit	Massachusetts;Franklin County;Warwick	Warwick
+ReportingUnit	Massachusetts;Berkshire County;Washington	Washington
+ReportingUnit	Massachusetts;Middlesex County;Watertown	Watertown
+ReportingUnit	Massachusetts;Middlesex County;Wayland	Wayland
+ReportingUnit	Massachusetts;Worcester County;Webster	Webster
+ReportingUnit	Massachusetts;Norfolk County;Wellesley	Wellesley
+ReportingUnit	Massachusetts;Barnstable County;Wellfleet	Wellfleet
+ReportingUnit	Massachusetts;Franklin County;Wendell	Wendell
+ReportingUnit	Massachusetts;Essex County;Wenham	Wenham
+ReportingUnit	Massachusetts;Worcester County;West Boylston	W. Boylston
+ReportingUnit	Massachusetts;Plymouth County;West Bridgewater	W. Bridgewater
+ReportingUnit	Massachusetts;Worcester County;West Brookfield	W. Brookfield
+ReportingUnit	Massachusetts;Essex County;West Newbury	W. Newbury
+ReportingUnit	Massachusetts;Hampden County;West Springfield	W. Springfield
+ReportingUnit	Massachusetts;Berkshire County;West Stockbridge	W. Stockbridge
+ReportingUnit	Massachusetts;Dukes County;West Tisbury	W. Tisbury
+ReportingUnit	Massachusetts;Worcester County;Westborough	Westborough
+ReportingUnit	Massachusetts;Hampden County;Westfield	Westfield
+ReportingUnit	Massachusetts;Middlesex County;Westford	Westford
+ReportingUnit	Massachusetts;Hampshire County;Westhampton	Westhampton
+ReportingUnit	Massachusetts;Worcester County;Westminster	Westminster
+ReportingUnit	Massachusetts;Middlesex County;Weston	Weston
+ReportingUnit	Massachusetts;Bristol County;Westport	Westport
+ReportingUnit	Massachusetts;Norfolk County;Westwood	Westwood
+ReportingUnit	Massachusetts;Norfolk County;Weymouth	Weymouth
+ReportingUnit	Massachusetts;Franklin County;Whately	Whately
+ReportingUnit	Massachusetts;Plymouth County;Whitman	Whitman
+ReportingUnit	Massachusetts;Hampden County;Wilbraham	Wilbraham
+ReportingUnit	Massachusetts;Hampshire County;Williamsburg	Williamsburg
+ReportingUnit	Massachusetts;Berkshire County;Williamstown	Williamstown
+ReportingUnit	Massachusetts;Middlesex County;Wilmington	Wilmington
+ReportingUnit	Massachusetts;Worcester County;Winchendon	Winchendon
+ReportingUnit	Massachusetts;Middlesex County;Winchester	Winchester
+ReportingUnit	Massachusetts;Berkshire County;Windsor	Windsor
+ReportingUnit	Massachusetts;Suffolk County;Winthrop	Winthrop
+ReportingUnit	Massachusetts;Middlesex County;Woburn	Woburn
+ReportingUnit	Massachusetts;Worcester County;Worcester	Worcester
+ReportingUnit	Massachusetts;Hampshire County;Worthington	Worthington
+ReportingUnit	Massachusetts;Norfolk County;Wrentham	Wrentham
+ReportingUnit	Massachusetts;Barnstable County;Yarmouth	Yarmouth
+Candidate	Richard E. Neal	Richard E. Neal
+Candidate	Alex B. Morse	Alex B. Morse
+Candidate	Katherine M. Clark	Katherine M. Clark
+Candidate	Caroline Colarusso	Caroline Colarusso
+Candidate	Julie A. Hall	Julie A. Hall
+Candidate	Jake Auchincloss	Jake Auchincloss
+Candidate	Seth W. Moulton	Seth W. Moulton
+Candidate	John Paul Moran	John Paul Moran
+Candidate	Roy A. Owens, Sr	Roy A. Owens, Sr
+Candidate	Rayla Danella Campbell	Rayla Danella Campbell
+Candidate	Rachel Nicole Miselman	Rachel Nicole Miselman
+Candidate	Claudette N. Joseph	Claudette N. Joseph
+Candidate	Ayanna S. Pressley	Ayanna S. Pressley
+Candidate	Michael Manley	Michael Manley
+Candidate	Helen Brady	Helen Brady
+Candidate	Bill Keating	Bill Keating
+Candidate	Shiva Ayyadurai	Shiva Ayyadurai
+Candidate	Kevin J. O'Connor	Kevin J. O'Connor
+Candidate	Edward J. Markey	Edward J. Markey
+Candidate	tephen F. Lynch	tephen F. Lynch
+Candidate	Jonathan D. Lott	Jonathan D. Lott
+Candidate	Tracy Lyn Lovvorn	Tracy Lyn Lovvorn
+Candidate	James P. McGovern	James P. McGovern
+Candidate	Lori Loureiro Trahan	Lori Loureiro Trahan
+Candidate	Stephen F. Lynch	Stephen F. Lynch

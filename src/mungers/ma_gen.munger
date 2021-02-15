@@ -34,7 +34,7 @@ string_field_name_row=0
 ################################################
 ## Optional format parameters:
 #### for any file type:
-thousands_separator=
+thousands_separator=,
 encoding=ASCII
 
 #### for a flat_text or excel file type:
@@ -65,7 +65,8 @@ Party=<header_1>
 # Values to ignore (optional) #
 [ignore]
 ## E.g: Candidate=Total Votes Cast,Registered Voters ##
-Candidate=Blanks,No Preference
+Candidate=Blanks,No Preference,Total Votes Cast
+ReportingUnit=TOTALS
 
 # Lookup formula sections #
 ## Required when foreign keys are used in munge formulas and    ##
