@@ -219,10 +219,11 @@ Election	2020 General	2020 General
 Election	2020 Primary	2020 Primary
 Election	2018 General	2018 General
 Election	2016 General	2016 General
-Party	Democratic Party	Democratic Party
-Party	Republican Party	Republican Party
-Party	Green Party	Green Party
-Party	Libertarian Party	Libertarian Party
+Party	Democratic Party	Democratic
+Party	Republican Party	Republican
+Party	Green Party	Green
+Party	Green Rainbow Party	Green-Rainbow
+Party	Libertarian Party	Libertarian
 ReportingUnit	Massachusetts;MA House District 1	Massachusetts;MA House District 1
 ReportingUnit	Massachusetts;MA House District 2	Massachusetts;MA House District 2
 ReportingUnit	Massachusetts;MA House District 3	Massachusetts;MA House District 3
@@ -438,6 +439,7 @@ Candidate	Joseph R. Biden	Joseph R. Biden, Jr.
 Candidate	Jo Jorgensen	Jo Jorgensen
 Candidate	Howard Hawkins	Howard Hawkins
 Candidate	Donald J. Trump	Donald J. Trump
+Candidate	All Others	All Others
 ReportingUnit	Massachusetts;Yarmouth	Yarmouth
 ReportingUnit	Massachusetts;Wrentham	Wrentham
 ReportingUnit	Massachusetts;Worthington	Worthington
