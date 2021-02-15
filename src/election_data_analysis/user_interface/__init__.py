@@ -443,11 +443,11 @@ def read_single_datafile(
             try:
                 df = pd.read_csv(f_path, **kwargs)
             except ValueError as ve:
-                print(f"ValueError (while reading flat text file): {ve}\n Will try to repair")
+                print(f"ValueError (while reading flat text file): {ve}\n Will pad records and try again")
                 new_file_path, new_err = pad_flat_text(f_path, kwargs)
-                # TODO error handline
-                kwargs["index_col"] = None
-                df = pd.read_csv(new_file_path, **kwargs)
+                kwargs_pad = kwargs
+                kwargs_pad["index_col"] = None
+                df = pd.read_csv(new_file_path, **kwargs_pad)
             df_dict = {"Sheet1": df}
 
         # rename any columns from header-less tables to column_0, column_1, etc.
@@ -482,8 +482,9 @@ def pad_flat_text(f_path, kwargs) -> (Optional[str], Optional[dict]):
     new_err = None
     try:
         df = pd.read_csv(f_path, sep=kwargs["sep"], dtype=str).fillna("")
-        new_f_path = os.path.join(Path(f_path).parent, f"{Path(f_path).name}_temp")
+        new_f_path = os.path.join(Path(f_path).parent, f"{Path(f_path).name}_padded")
         df.to_csv(new_f_path, sep=kwargs["sep"], index=False)
+        print(f"Padded file version created: {Path(new_f_path).name}")
     except Exception as exc:
         new_err = add_new_error(new_err, "file", Path(f_path).name, "Not able to create padded file from original")
         new_f_path = None
