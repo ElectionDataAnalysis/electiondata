@@ -440,7 +440,14 @@ def read_single_datafile(
         elif p["file_type"] == "excel":
             df_dict, err = excel_to_dict(f_path, kwargs, list_desired_excel_sheets(f_path, p))
         elif p["file_type"] == "flat_text":
-            df = pd.read_csv(f_path, **kwargs)
+            try:
+                df = pd.read_csv(f_path, **kwargs)
+            except ValueError as ve:
+                print(f"ValueError (while reading flat text file): {ve}\n Will try to repair")
+                new_file_path, new_err = pad_flat_text(f_path, kwargs)
+                # TODO error handline
+                kwargs["index_col"] = None
+                df = pd.read_csv(new_file_path, **kwargs)
             df_dict = {"Sheet1": df}
 
         # rename any columns from header-less tables to column_0, column_1, etc.
@@ -469,6 +476,18 @@ def read_single_datafile(
     # drop any empty dataframes
     df_dict = {k: v for k, v in df_dict.items() if not v.empty}
     return df_dict, err
+
+
+def pad_flat_text(f_path, kwargs) -> (Optional[str], Optional[dict]):
+    new_err = None
+    try:
+        df = pd.read_csv(f_path, sep=kwargs["sep"], dtype=str).fillna("")
+        new_f_path = os.path.join(Path(f_path).parent, f"{Path(f_path).name}_temp")
+        df.to_csv(new_f_path, sep=kwargs["sep"], index=False)
+    except Exception as exc:
+        new_err = add_new_error(new_err, "file", Path(f_path).name, "Not able to create padded file from original")
+        new_f_path = None
+    return new_f_path, new_err
 
 
 def excel_to_dict(
