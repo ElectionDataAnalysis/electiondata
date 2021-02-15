@@ -1,0 +1,792 @@
+cdf_element	cdf_internal_name	raw_identifier_value
+CandidateContest	MA House District 1	MA House District 1
+CandidateContest	MA House District 2	MA House District 2
+CandidateContest	MA House District 3	MA House District 3
+CandidateContest	MA House District 4	MA House District 4
+CandidateContest	MA House District 5	MA House District 5
+CandidateContest	MA House District 6	MA House District 6
+CandidateContest	MA House District 7	MA House District 7
+CandidateContest	MA House District 8	MA House District 8
+CandidateContest	MA House District 9	MA House District 9
+CandidateContest	MA House District 10	MA House District 10
+CandidateContest	MA House District 11	MA House District 11
+CandidateContest	MA House District 12	MA House District 12
+CandidateContest	MA House District 13	MA House District 13
+CandidateContest	MA House District 14	MA House District 14
+CandidateContest	MA House District 15	MA House District 15
+CandidateContest	MA House District 16	MA House District 16
+CandidateContest	MA House District 17	MA House District 17
+CandidateContest	MA House District 18	MA House District 18
+CandidateContest	MA House District 19	MA House District 19
+CandidateContest	MA House District 20	MA House District 20
+CandidateContest	MA House District 21	MA House District 21
+CandidateContest	MA House District 22	MA House District 22
+CandidateContest	MA House District 23	MA House District 23
+CandidateContest	MA House District 24	MA House District 24
+CandidateContest	MA House District 25	MA House District 25
+CandidateContest	MA House District 26	MA House District 26
+CandidateContest	MA House District 27	MA House District 27
+CandidateContest	MA House District 28	MA House District 28
+CandidateContest	MA House District 29	MA House District 29
+CandidateContest	MA House District 30	MA House District 30
+CandidateContest	MA House District 31	MA House District 31
+CandidateContest	MA House District 32	MA House District 32
+CandidateContest	MA House District 33	MA House District 33
+CandidateContest	MA House District 34	MA House District 34
+CandidateContest	MA House District 35	MA House District 35
+CandidateContest	MA House District 36	MA House District 36
+CandidateContest	MA House District 37	MA House District 37
+CandidateContest	MA House District 38	MA House District 38
+CandidateContest	MA House District 39	MA House District 39
+CandidateContest	MA House District 40	MA House District 40
+CandidateContest	MA House District 41	MA House District 41
+CandidateContest	MA House District 42	MA House District 42
+CandidateContest	MA House District 43	MA House District 43
+CandidateContest	MA House District 44	MA House District 44
+CandidateContest	MA House District 45	MA House District 45
+CandidateContest	MA House District 46	MA House District 46
+CandidateContest	MA House District 47	MA House District 47
+CandidateContest	MA House District 48	MA House District 48
+CandidateContest	MA House District 49	MA House District 49
+CandidateContest	MA House District 50	MA House District 50
+CandidateContest	MA House District 51	MA House District 51
+CandidateContest	MA House District 52	MA House District 52
+CandidateContest	MA House District 53	MA House District 53
+CandidateContest	MA House District 54	MA House District 54
+CandidateContest	MA House District 55	MA House District 55
+CandidateContest	MA House District 56	MA House District 56
+CandidateContest	MA House District 57	MA House District 57
+CandidateContest	MA House District 58	MA House District 58
+CandidateContest	MA House District 59	MA House District 59
+CandidateContest	MA House District 60	MA House District 60
+CandidateContest	MA House District 61	MA House District 61
+CandidateContest	MA House District 62	MA House District 62
+CandidateContest	MA House District 63	MA House District 63
+CandidateContest	MA House District 64	MA House District 64
+CandidateContest	MA House District 65	MA House District 65
+CandidateContest	MA House District 66	MA House District 66
+CandidateContest	MA House District 67	MA House District 67
+CandidateContest	MA House District 68	MA House District 68
+CandidateContest	MA House District 69	MA House District 69
+CandidateContest	MA House District 70	MA House District 70
+CandidateContest	MA House District 71	MA House District 71
+CandidateContest	MA House District 72	MA House District 72
+CandidateContest	MA House District 73	MA House District 73
+CandidateContest	MA House District 74	MA House District 74
+CandidateContest	MA House District 75	MA House District 75
+CandidateContest	MA House District 76	MA House District 76
+CandidateContest	MA House District 77	MA House District 77
+CandidateContest	MA House District 78	MA House District 78
+CandidateContest	MA House District 79	MA House District 79
+CandidateContest	MA House District 80	MA House District 80
+CandidateContest	MA House District 81	MA House District 81
+CandidateContest	MA House District 82	MA House District 82
+CandidateContest	MA House District 83	MA House District 83
+CandidateContest	MA House District 84	MA House District 84
+CandidateContest	MA House District 85	MA House District 85
+CandidateContest	MA House District 86	MA House District 86
+CandidateContest	MA House District 87	MA House District 87
+CandidateContest	MA House District 88	MA House District 88
+CandidateContest	MA House District 89	MA House District 89
+CandidateContest	MA House District 90	MA House District 90
+CandidateContest	MA House District 91	MA House District 91
+CandidateContest	MA House District 92	MA House District 92
+CandidateContest	MA House District 93	MA House District 93
+CandidateContest	MA House District 94	MA House District 94
+CandidateContest	MA House District 95	MA House District 95
+CandidateContest	MA House District 96	MA House District 96
+CandidateContest	MA House District 97	MA House District 97
+CandidateContest	MA House District 98	MA House District 98
+CandidateContest	MA House District 99	MA House District 99
+CandidateContest	MA House District 100	MA House District 100
+CandidateContest	MA House District 101	MA House District 101
+CandidateContest	MA House District 102	MA House District 102
+CandidateContest	MA House District 103	MA House District 103
+CandidateContest	MA House District 104	MA House District 104
+CandidateContest	MA House District 105	MA House District 105
+CandidateContest	MA House District 106	MA House District 106
+CandidateContest	MA House District 107	MA House District 107
+CandidateContest	MA House District 108	MA House District 108
+CandidateContest	MA House District 109	MA House District 109
+CandidateContest	MA House District 110	MA House District 110
+CandidateContest	MA House District 111	MA House District 111
+CandidateContest	MA House District 112	MA House District 112
+CandidateContest	MA House District 113	MA House District 113
+CandidateContest	MA House District 114	MA House District 114
+CandidateContest	MA House District 115	MA House District 115
+CandidateContest	MA House District 116	MA House District 116
+CandidateContest	MA House District 117	MA House District 117
+CandidateContest	MA House District 118	MA House District 118
+CandidateContest	MA House District 119	MA House District 119
+CandidateContest	MA House District 120	MA House District 120
+CandidateContest	MA House District 121	MA House District 121
+CandidateContest	MA House District 122	MA House District 122
+CandidateContest	MA House District 123	MA House District 123
+CandidateContest	MA House District 124	MA House District 124
+CandidateContest	MA House District 125	MA House District 125
+CandidateContest	MA House District 126	MA House District 126
+CandidateContest	MA House District 127	MA House District 127
+CandidateContest	MA House District 128	MA House District 128
+CandidateContest	MA House District 129	MA House District 129
+CandidateContest	MA House District 130	MA House District 130
+CandidateContest	MA House District 131	MA House District 131
+CandidateContest	MA House District 132	MA House District 132
+CandidateContest	MA House District 133	MA House District 133
+CandidateContest	MA House District 134	MA House District 134
+CandidateContest	MA House District 135	MA House District 135
+CandidateContest	MA House District 136	MA House District 136
+CandidateContest	MA House District 137	MA House District 137
+CandidateContest	MA House District 138	MA House District 138
+CandidateContest	MA House District 139	MA House District 139
+CandidateContest	MA House District 140	MA House District 140
+CandidateContest	MA House District 141	MA House District 141
+CandidateContest	MA House District 142	MA House District 142
+CandidateContest	MA House District 143	MA House District 143
+CandidateContest	MA House District 144	MA House District 144
+CandidateContest	MA House District 145	MA House District 145
+CandidateContest	MA House District 146	MA House District 146
+CandidateContest	MA House District 147	MA House District 147
+CandidateContest	MA House District 148	MA House District 148
+CandidateContest	MA House District 149	MA House District 149
+CandidateContest	MA House District 150	MA House District 150
+CandidateContest	MA House District 151	MA House District 151
+CandidateContest	MA House District 152	MA House District 152
+CandidateContest	MA House District 153	MA House District 153
+CandidateContest	MA House District 154	MA House District 154
+CandidateContest	MA House District 155	MA House District 155
+CandidateContest	MA House District 156	MA House District 156
+CandidateContest	MA House District 157	MA House District 157
+CandidateContest	MA House District 158	MA House District 158
+CandidateContest	MA House District 159	MA House District 159
+CandidateContest	MA House District 160	MA House District 160
+CandidateContest	MA Senate District 1	MA Senate District 1
+CandidateContest	MA Senate District 2	MA Senate District 2
+CandidateContest	MA Senate District 3	MA Senate District 3
+CandidateContest	MA Senate District 4	MA Senate District 4
+CandidateContest	MA Senate District 5	MA Senate District 5
+CandidateContest	MA Senate District 6	MA Senate District 6
+CandidateContest	MA Senate District 7	MA Senate District 7
+CandidateContest	MA Senate District 8	MA Senate District 8
+CandidateContest	MA Senate District 9	MA Senate District 9
+CandidateContest	MA Senate District 10	MA Senate District 10
+CandidateContest	MA Senate District 11	MA Senate District 11
+CandidateContest	MA Senate District 12	MA Senate District 12
+CandidateContest	MA Senate District 13	MA Senate District 13
+CandidateContest	MA Senate District 14	MA Senate District 14
+CandidateContest	MA Senate District 15	MA Senate District 15
+CandidateContest	MA Senate District 16	MA Senate District 16
+CandidateContest	MA Senate District 17	MA Senate District 17
+CandidateContest	MA Senate District 18	MA Senate District 18
+CandidateContest	MA Senate District 19	MA Senate District 19
+CandidateContest	MA Senate District 20	MA Senate District 20
+CandidateContest	MA Senate District 21	MA Senate District 21
+CandidateContest	MA Senate District 22	MA Senate District 22
+CandidateContest	MA Senate District 23	MA Senate District 23
+CandidateContest	MA Senate District 24	MA Senate District 24
+CandidateContest	MA Senate District 25	MA Senate District 25
+CandidateContest	MA Senate District 26	MA Senate District 26
+CandidateContest	MA Senate District 27	MA Senate District 27
+CandidateContest	MA Senate District 28	MA Senate District 28
+CandidateContest	MA Senate District 29	MA Senate District 29
+CandidateContest	MA Senate District 30	MA Senate District 30
+CandidateContest	MA Senate District 31	MA Senate District 31
+CandidateContest	MA Senate District 32	MA Senate District 32
+CandidateContest	MA Senate District 33	MA Senate District 33
+CandidateContest	MA Senate District 34	MA Senate District 34
+CandidateContest	MA Senate District 35	MA Senate District 35
+CandidateContest	MA Senate District 36	MA Senate District 36
+CandidateContest	MA Senate District 37	MA Senate District 37
+CandidateContest	MA Senate District 38	MA Senate District 38
+CandidateContest	MA Senate District 39	MA Senate District 39
+CandidateContest	MA Senate District 40	MA Senate District 40
+CandidateContest	US House MA District 1	US House MA District 1
+CandidateContest	US House MA District 2	US House MA District 2
+CandidateContest	US House MA District 3	US House MA District 3
+CandidateContest	US House MA District 4	US House MA District 4
+CandidateContest	US House MA District 5	US House MA District 5
+CandidateContest	US House MA District 6	US House MA District 6
+CandidateContest	US House MA District 7	US House MA District 7
+CandidateContest	US House MA District 8	US House MA District 8
+CandidateContest	US House MA District 9	US House MA District 9
+CandidateContest	US President (MA)	US President (MA)
+CandidateContest	MA Governor	MA Governor
+CandidateContest	US Senate MA	US Senate MA
+CandidateContest	MA Attorney General	MA Attorney General
+CandidateContest	MA Lieutenant Governor	MA Lieutenant Governor
+CandidateContest	MA Treasurer	MA Treasurer
+CandidateContest	MA Secretary of State	MA Secretary of State
+Election	2020 General	2020 General
+Election	2020 Primary	2020 Primary
+Election	2018 General	2018 General
+Election	2016 General	2016 General
+Party	Democratic Party	Democratic Party
+Party	Republican Party	Republican Party
+Party	Green Party	Green Party
+Party	Libertarian Party	Libertarian Party
+ReportingUnit	Massachusetts;MA House District 1	Massachusetts;MA House District 1
+ReportingUnit	Massachusetts;MA House District 2	Massachusetts;MA House District 2
+ReportingUnit	Massachusetts;MA House District 3	Massachusetts;MA House District 3
+ReportingUnit	Massachusetts;MA House District 4	Massachusetts;MA House District 4
+ReportingUnit	Massachusetts;MA House District 5	Massachusetts;MA House District 5
+ReportingUnit	Massachusetts;MA House District 6	Massachusetts;MA House District 6
+ReportingUnit	Massachusetts;MA House District 7	Massachusetts;MA House District 7
+ReportingUnit	Massachusetts;MA House District 8	Massachusetts;MA House District 8
+ReportingUnit	Massachusetts;MA House District 9	Massachusetts;MA House District 9
+ReportingUnit	Massachusetts;MA House District 10	Massachusetts;MA House District 10
+ReportingUnit	Massachusetts;MA House District 11	Massachusetts;MA House District 11
+ReportingUnit	Massachusetts;MA House District 12	Massachusetts;MA House District 12
+ReportingUnit	Massachusetts;MA House District 13	Massachusetts;MA House District 13
+ReportingUnit	Massachusetts;MA House District 14	Massachusetts;MA House District 14
+ReportingUnit	Massachusetts;MA House District 15	Massachusetts;MA House District 15
+ReportingUnit	Massachusetts;MA House District 16	Massachusetts;MA House District 16
+ReportingUnit	Massachusetts;MA House District 17	Massachusetts;MA House District 17
+ReportingUnit	Massachusetts;MA House District 18	Massachusetts;MA House District 18
+ReportingUnit	Massachusetts;MA House District 19	Massachusetts;MA House District 19
+ReportingUnit	Massachusetts;MA House District 20	Massachusetts;MA House District 20
+ReportingUnit	Massachusetts;MA House District 21	Massachusetts;MA House District 21
+ReportingUnit	Massachusetts;MA House District 22	Massachusetts;MA House District 22
+ReportingUnit	Massachusetts;MA House District 23	Massachusetts;MA House District 23
+ReportingUnit	Massachusetts;MA House District 24	Massachusetts;MA House District 24
+ReportingUnit	Massachusetts;MA House District 25	Massachusetts;MA House District 25
+ReportingUnit	Massachusetts;MA House District 26	Massachusetts;MA House District 26
+ReportingUnit	Massachusetts;MA House District 27	Massachusetts;MA House District 27
+ReportingUnit	Massachusetts;MA House District 28	Massachusetts;MA House District 28
+ReportingUnit	Massachusetts;MA House District 29	Massachusetts;MA House District 29
+ReportingUnit	Massachusetts;MA House District 30	Massachusetts;MA House District 30
+ReportingUnit	Massachusetts;MA House District 31	Massachusetts;MA House District 31
+ReportingUnit	Massachusetts;MA House District 32	Massachusetts;MA House District 32
+ReportingUnit	Massachusetts;MA House District 33	Massachusetts;MA House District 33
+ReportingUnit	Massachusetts;MA House District 34	Massachusetts;MA House District 34
+ReportingUnit	Massachusetts;MA House District 35	Massachusetts;MA House District 35
+ReportingUnit	Massachusetts;MA House District 36	Massachusetts;MA House District 36
+ReportingUnit	Massachusetts;MA House District 37	Massachusetts;MA House District 37
+ReportingUnit	Massachusetts;MA House District 38	Massachusetts;MA House District 38
+ReportingUnit	Massachusetts;MA House District 39	Massachusetts;MA House District 39
+ReportingUnit	Massachusetts;MA House District 40	Massachusetts;MA House District 40
+ReportingUnit	Massachusetts;MA House District 41	Massachusetts;MA House District 41
+ReportingUnit	Massachusetts;MA House District 42	Massachusetts;MA House District 42
+ReportingUnit	Massachusetts;MA House District 43	Massachusetts;MA House District 43
+ReportingUnit	Massachusetts;MA House District 44	Massachusetts;MA House District 44
+ReportingUnit	Massachusetts;MA House District 45	Massachusetts;MA House District 45
+ReportingUnit	Massachusetts;MA House District 46	Massachusetts;MA House District 46
+ReportingUnit	Massachusetts;MA House District 47	Massachusetts;MA House District 47
+ReportingUnit	Massachusetts;MA House District 48	Massachusetts;MA House District 48
+ReportingUnit	Massachusetts;MA House District 49	Massachusetts;MA House District 49
+ReportingUnit	Massachusetts;MA House District 50	Massachusetts;MA House District 50
+ReportingUnit	Massachusetts;MA House District 51	Massachusetts;MA House District 51
+ReportingUnit	Massachusetts;MA House District 52	Massachusetts;MA House District 52
+ReportingUnit	Massachusetts;MA House District 53	Massachusetts;MA House District 53
+ReportingUnit	Massachusetts;MA House District 54	Massachusetts;MA House District 54
+ReportingUnit	Massachusetts;MA House District 55	Massachusetts;MA House District 55
+ReportingUnit	Massachusetts;MA House District 56	Massachusetts;MA House District 56
+ReportingUnit	Massachusetts;MA House District 57	Massachusetts;MA House District 57
+ReportingUnit	Massachusetts;MA House District 58	Massachusetts;MA House District 58
+ReportingUnit	Massachusetts;MA House District 59	Massachusetts;MA House District 59
+ReportingUnit	Massachusetts;MA House District 60	Massachusetts;MA House District 60
+ReportingUnit	Massachusetts;MA House District 61	Massachusetts;MA House District 61
+ReportingUnit	Massachusetts;MA House District 62	Massachusetts;MA House District 62
+ReportingUnit	Massachusetts;MA House District 63	Massachusetts;MA House District 63
+ReportingUnit	Massachusetts;MA House District 64	Massachusetts;MA House District 64
+ReportingUnit	Massachusetts;MA House District 65	Massachusetts;MA House District 65
+ReportingUnit	Massachusetts;MA House District 66	Massachusetts;MA House District 66
+ReportingUnit	Massachusetts;MA House District 67	Massachusetts;MA House District 67
+ReportingUnit	Massachusetts;MA House District 68	Massachusetts;MA House District 68
+ReportingUnit	Massachusetts;MA House District 69	Massachusetts;MA House District 69
+ReportingUnit	Massachusetts;MA House District 70	Massachusetts;MA House District 70
+ReportingUnit	Massachusetts;MA House District 71	Massachusetts;MA House District 71
+ReportingUnit	Massachusetts;MA House District 72	Massachusetts;MA House District 72
+ReportingUnit	Massachusetts;MA House District 73	Massachusetts;MA House District 73
+ReportingUnit	Massachusetts;MA House District 74	Massachusetts;MA House District 74
+ReportingUnit	Massachusetts;MA House District 75	Massachusetts;MA House District 75
+ReportingUnit	Massachusetts;MA House District 76	Massachusetts;MA House District 76
+ReportingUnit	Massachusetts;MA House District 77	Massachusetts;MA House District 77
+ReportingUnit	Massachusetts;MA House District 78	Massachusetts;MA House District 78
+ReportingUnit	Massachusetts;MA House District 79	Massachusetts;MA House District 79
+ReportingUnit	Massachusetts;MA House District 80	Massachusetts;MA House District 80
+ReportingUnit	Massachusetts;MA House District 81	Massachusetts;MA House District 81
+ReportingUnit	Massachusetts;MA House District 82	Massachusetts;MA House District 82
+ReportingUnit	Massachusetts;MA House District 83	Massachusetts;MA House District 83
+ReportingUnit	Massachusetts;MA House District 84	Massachusetts;MA House District 84
+ReportingUnit	Massachusetts;MA House District 85	Massachusetts;MA House District 85
+ReportingUnit	Massachusetts;MA House District 86	Massachusetts;MA House District 86
+ReportingUnit	Massachusetts;MA House District 87	Massachusetts;MA House District 87
+ReportingUnit	Massachusetts;MA House District 88	Massachusetts;MA House District 88
+ReportingUnit	Massachusetts;MA House District 89	Massachusetts;MA House District 89
+ReportingUnit	Massachusetts;MA House District 90	Massachusetts;MA House District 90
+ReportingUnit	Massachusetts;MA House District 91	Massachusetts;MA House District 91
+ReportingUnit	Massachusetts;MA House District 92	Massachusetts;MA House District 92
+ReportingUnit	Massachusetts;MA House District 93	Massachusetts;MA House District 93
+ReportingUnit	Massachusetts;MA House District 94	Massachusetts;MA House District 94
+ReportingUnit	Massachusetts;MA House District 95	Massachusetts;MA House District 95
+ReportingUnit	Massachusetts;MA House District 96	Massachusetts;MA House District 96
+ReportingUnit	Massachusetts;MA House District 97	Massachusetts;MA House District 97
+ReportingUnit	Massachusetts;MA House District 98	Massachusetts;MA House District 98
+ReportingUnit	Massachusetts;MA House District 99	Massachusetts;MA House District 99
+ReportingUnit	Massachusetts;MA House District 100	Massachusetts;MA House District 100
+ReportingUnit	Massachusetts;MA House District 101	Massachusetts;MA House District 101
+ReportingUnit	Massachusetts;MA House District 102	Massachusetts;MA House District 102
+ReportingUnit	Massachusetts;MA House District 103	Massachusetts;MA House District 103
+ReportingUnit	Massachusetts;MA House District 104	Massachusetts;MA House District 104
+ReportingUnit	Massachusetts;MA House District 105	Massachusetts;MA House District 105
+ReportingUnit	Massachusetts;MA House District 106	Massachusetts;MA House District 106
+ReportingUnit	Massachusetts;MA House District 107	Massachusetts;MA House District 107
+ReportingUnit	Massachusetts;MA House District 108	Massachusetts;MA House District 108
+ReportingUnit	Massachusetts;MA House District 109	Massachusetts;MA House District 109
+ReportingUnit	Massachusetts;MA House District 110	Massachusetts;MA House District 110
+ReportingUnit	Massachusetts;MA House District 111	Massachusetts;MA House District 111
+ReportingUnit	Massachusetts;MA House District 112	Massachusetts;MA House District 112
+ReportingUnit	Massachusetts;MA House District 113	Massachusetts;MA House District 113
+ReportingUnit	Massachusetts;MA House District 114	Massachusetts;MA House District 114
+ReportingUnit	Massachusetts;MA House District 115	Massachusetts;MA House District 115
+ReportingUnit	Massachusetts;MA House District 116	Massachusetts;MA House District 116
+ReportingUnit	Massachusetts;MA House District 117	Massachusetts;MA House District 117
+ReportingUnit	Massachusetts;MA House District 118	Massachusetts;MA House District 118
+ReportingUnit	Massachusetts;MA House District 119	Massachusetts;MA House District 119
+ReportingUnit	Massachusetts;MA House District 120	Massachusetts;MA House District 120
+ReportingUnit	Massachusetts;MA House District 121	Massachusetts;MA House District 121
+ReportingUnit	Massachusetts;MA House District 122	Massachusetts;MA House District 122
+ReportingUnit	Massachusetts;MA House District 123	Massachusetts;MA House District 123
+ReportingUnit	Massachusetts;MA House District 124	Massachusetts;MA House District 124
+ReportingUnit	Massachusetts;MA House District 125	Massachusetts;MA House District 125
+ReportingUnit	Massachusetts;MA House District 126	Massachusetts;MA House District 126
+ReportingUnit	Massachusetts;MA House District 127	Massachusetts;MA House District 127
+ReportingUnit	Massachusetts;MA House District 128	Massachusetts;MA House District 128
+ReportingUnit	Massachusetts;MA House District 129	Massachusetts;MA House District 129
+ReportingUnit	Massachusetts;MA House District 130	Massachusetts;MA House District 130
+ReportingUnit	Massachusetts;MA House District 131	Massachusetts;MA House District 131
+ReportingUnit	Massachusetts;MA House District 132	Massachusetts;MA House District 132
+ReportingUnit	Massachusetts;MA House District 133	Massachusetts;MA House District 133
+ReportingUnit	Massachusetts;MA House District 134	Massachusetts;MA House District 134
+ReportingUnit	Massachusetts;MA House District 135	Massachusetts;MA House District 135
+ReportingUnit	Massachusetts;MA House District 136	Massachusetts;MA House District 136
+ReportingUnit	Massachusetts;MA House District 137	Massachusetts;MA House District 137
+ReportingUnit	Massachusetts;MA House District 138	Massachusetts;MA House District 138
+ReportingUnit	Massachusetts;MA House District 139	Massachusetts;MA House District 139
+ReportingUnit	Massachusetts;MA House District 140	Massachusetts;MA House District 140
+ReportingUnit	Massachusetts;MA House District 141	Massachusetts;MA House District 141
+ReportingUnit	Massachusetts;MA House District 142	Massachusetts;MA House District 142
+ReportingUnit	Massachusetts;MA House District 143	Massachusetts;MA House District 143
+ReportingUnit	Massachusetts;MA House District 144	Massachusetts;MA House District 144
+ReportingUnit	Massachusetts;MA House District 145	Massachusetts;MA House District 145
+ReportingUnit	Massachusetts;MA House District 146	Massachusetts;MA House District 146
+ReportingUnit	Massachusetts;MA House District 147	Massachusetts;MA House District 147
+ReportingUnit	Massachusetts;MA House District 148	Massachusetts;MA House District 148
+ReportingUnit	Massachusetts;MA House District 149	Massachusetts;MA House District 149
+ReportingUnit	Massachusetts;MA House District 150	Massachusetts;MA House District 150
+ReportingUnit	Massachusetts;MA House District 151	Massachusetts;MA House District 151
+ReportingUnit	Massachusetts;MA House District 152	Massachusetts;MA House District 152
+ReportingUnit	Massachusetts;MA House District 153	Massachusetts;MA House District 153
+ReportingUnit	Massachusetts;MA House District 154	Massachusetts;MA House District 154
+ReportingUnit	Massachusetts;MA House District 155	Massachusetts;MA House District 155
+ReportingUnit	Massachusetts;MA House District 156	Massachusetts;MA House District 156
+ReportingUnit	Massachusetts;MA House District 157	Massachusetts;MA House District 157
+ReportingUnit	Massachusetts;MA House District 158	Massachusetts;MA House District 158
+ReportingUnit	Massachusetts;MA House District 159	Massachusetts;MA House District 159
+ReportingUnit	Massachusetts;MA House District 160	Massachusetts;MA House District 160
+ReportingUnit	Massachusetts;MA Senate District 1	Massachusetts;MA Senate District 1
+ReportingUnit	Massachusetts;MA Senate District 2	Massachusetts;MA Senate District 2
+ReportingUnit	Massachusetts;MA Senate District 3	Massachusetts;MA Senate District 3
+ReportingUnit	Massachusetts;MA Senate District 4	Massachusetts;MA Senate District 4
+ReportingUnit	Massachusetts;MA Senate District 5	Massachusetts;MA Senate District 5
+ReportingUnit	Massachusetts;MA Senate District 6	Massachusetts;MA Senate District 6
+ReportingUnit	Massachusetts;MA Senate District 7	Massachusetts;MA Senate District 7
+ReportingUnit	Massachusetts;MA Senate District 8	Massachusetts;MA Senate District 8
+ReportingUnit	Massachusetts;MA Senate District 9	Massachusetts;MA Senate District 9
+ReportingUnit	Massachusetts;MA Senate District 10	Massachusetts;MA Senate District 10
+ReportingUnit	Massachusetts;MA Senate District 11	Massachusetts;MA Senate District 11
+ReportingUnit	Massachusetts;MA Senate District 12	Massachusetts;MA Senate District 12
+ReportingUnit	Massachusetts;MA Senate District 13	Massachusetts;MA Senate District 13
+ReportingUnit	Massachusetts;MA Senate District 14	Massachusetts;MA Senate District 14
+ReportingUnit	Massachusetts;MA Senate District 15	Massachusetts;MA Senate District 15
+ReportingUnit	Massachusetts;MA Senate District 16	Massachusetts;MA Senate District 16
+ReportingUnit	Massachusetts;MA Senate District 17	Massachusetts;MA Senate District 17
+ReportingUnit	Massachusetts;MA Senate District 18	Massachusetts;MA Senate District 18
+ReportingUnit	Massachusetts;MA Senate District 19	Massachusetts;MA Senate District 19
+ReportingUnit	Massachusetts;MA Senate District 20	Massachusetts;MA Senate District 20
+ReportingUnit	Massachusetts;MA Senate District 21	Massachusetts;MA Senate District 21
+ReportingUnit	Massachusetts;MA Senate District 22	Massachusetts;MA Senate District 22
+ReportingUnit	Massachusetts;MA Senate District 23	Massachusetts;MA Senate District 23
+ReportingUnit	Massachusetts;MA Senate District 24	Massachusetts;MA Senate District 24
+ReportingUnit	Massachusetts;MA Senate District 25	Massachusetts;MA Senate District 25
+ReportingUnit	Massachusetts;MA Senate District 26	Massachusetts;MA Senate District 26
+ReportingUnit	Massachusetts;MA Senate District 27	Massachusetts;MA Senate District 27
+ReportingUnit	Massachusetts;MA Senate District 28	Massachusetts;MA Senate District 28
+ReportingUnit	Massachusetts;MA Senate District 29	Massachusetts;MA Senate District 29
+ReportingUnit	Massachusetts;MA Senate District 30	Massachusetts;MA Senate District 30
+ReportingUnit	Massachusetts;MA Senate District 31	Massachusetts;MA Senate District 31
+ReportingUnit	Massachusetts;MA Senate District 32	Massachusetts;MA Senate District 32
+ReportingUnit	Massachusetts;MA Senate District 33	Massachusetts;MA Senate District 33
+ReportingUnit	Massachusetts;MA Senate District 34	Massachusetts;MA Senate District 34
+ReportingUnit	Massachusetts;MA Senate District 35	Massachusetts;MA Senate District 35
+ReportingUnit	Massachusetts;MA Senate District 36	Massachusetts;MA Senate District 36
+ReportingUnit	Massachusetts;MA Senate District 37	Massachusetts;MA Senate District 37
+ReportingUnit	Massachusetts;MA Senate District 38	Massachusetts;MA Senate District 38
+ReportingUnit	Massachusetts;MA Senate District 39	Massachusetts;MA Senate District 39
+ReportingUnit	Massachusetts;MA Senate District 40	Massachusetts;MA Senate District 40
+ReportingUnit	Massachusetts;US House MA District 1	Massachusetts;US House MA District 1
+ReportingUnit	Massachusetts;US House MA District 2	Massachusetts;US House MA District 2
+ReportingUnit	Massachusetts;US House MA District 3	Massachusetts;US House MA District 3
+ReportingUnit	Massachusetts;US House MA District 4	Massachusetts;US House MA District 4
+ReportingUnit	Massachusetts;US House MA District 5	Massachusetts;US House MA District 5
+ReportingUnit	Massachusetts;US House MA District 6	Massachusetts;US House MA District 6
+ReportingUnit	Massachusetts;US House MA District 7	Massachusetts;US House MA District 7
+ReportingUnit	Massachusetts;US House MA District 8	Massachusetts;US House MA District 8
+ReportingUnit	Massachusetts;US House MA District 9	Massachusetts;US House MA District 9
+ReportingUnit	Massachusetts	Massachusetts
+
+Candidate	Joseph R. Biden	Joseph R. Biden, Jr.
+Candidate	Jo Jorgensen	Jo Jorgensen
+Candidate	Howard Hawkins	Howard Hawkins
+Candidate	Donald J. Trump	Donald J. Trump
+ReportingUnit	Massachusetts;Yarmouth	Yarmouth
+ReportingUnit	Massachusetts;Wrentham	Wrentham
+ReportingUnit	Massachusetts;Worthington	Worthington
+ReportingUnit	Massachusetts;Worcester	Worcester
+ReportingUnit	Massachusetts;Woburn	Woburn
+ReportingUnit	Massachusetts;Winthrop	Winthrop
+ReportingUnit	Massachusetts;Windsor	Windsor
+ReportingUnit	Massachusetts;Winchester	Winchester
+ReportingUnit	Massachusetts;Winchendon	Winchendon
+ReportingUnit	Massachusetts;Wilmington	Wilmington
+ReportingUnit	Massachusetts;Williamstown	Williamstown
+ReportingUnit	Massachusetts;Williamsburg	Williamsburg
+ReportingUnit	Massachusetts;Wilbraham	Wilbraham
+ReportingUnit	Massachusetts;Whitman	Whitman
+ReportingUnit	Massachusetts;Whately	Whately
+ReportingUnit	Massachusetts;Weymouth	Weymouth
+ReportingUnit	Massachusetts;Westwood	Westwood
+ReportingUnit	Massachusetts;Westport	Westport
+ReportingUnit	Massachusetts;Weston	Weston
+ReportingUnit	Massachusetts;Westminster	Westminster
+ReportingUnit	Massachusetts;Westhampton	Westhampton
+ReportingUnit	Massachusetts;Westford	Westford
+ReportingUnit	Massachusetts;Westfield	Westfield
+ReportingUnit	Massachusetts;Westborough	Westborough
+ReportingUnit	Massachusetts;Wenham	Wenham
+ReportingUnit	Massachusetts;Wendell	Wendell
+ReportingUnit	Massachusetts;Wellfleet	Wellfleet
+ReportingUnit	Massachusetts;Wellesley	Wellesley
+ReportingUnit	Massachusetts;Webster	Webster
+ReportingUnit	Massachusetts;Wayland	Wayland
+ReportingUnit	Massachusetts;Watertown	Watertown
+ReportingUnit	Massachusetts;Washington	Washington
+ReportingUnit	Massachusetts;Warwick	Warwick
+ReportingUnit	Massachusetts;Warren	Warren
+ReportingUnit	Massachusetts;Wareham	Wareham
+ReportingUnit	Massachusetts;Ware	Ware
+ReportingUnit	Massachusetts;Waltham	Waltham
+ReportingUnit	Massachusetts;Walpole	Walpole
+ReportingUnit	Massachusetts;Wales	Wales
+ReportingUnit	Massachusetts;Wakefield	Wakefield
+ReportingUnit	Massachusetts;W. Tisbury	W. Tisbury
+ReportingUnit	Massachusetts;W. Stockbridge	W. Stockbridge
+ReportingUnit	Massachusetts;W. Springfield	W. Springfield
+ReportingUnit	Massachusetts;W. Newbury	W. Newbury
+ReportingUnit	Massachusetts;W. Brookfield	W. Brookfield
+ReportingUnit	Massachusetts;W. Bridgewater	W. Bridgewater
+ReportingUnit	Massachusetts;W. Boylston	W. Boylston
+ReportingUnit	Massachusetts;Uxbridge	Uxbridge
+ReportingUnit	Massachusetts;Upton	Upton
+ReportingUnit	Massachusetts;Tyringham	Tyringham
+ReportingUnit	Massachusetts;Tyngsborough	Tyngsborough
+ReportingUnit	Massachusetts;Truro	Truro
+ReportingUnit	Massachusetts;Townsend	Townsend
+ReportingUnit	Massachusetts;Topsfield	Topsfield
+ReportingUnit	Massachusetts;Tolland	Tolland
+ReportingUnit	Massachusetts;Tisbury	Tisbury
+ReportingUnit	Massachusetts;Tewksbury	Tewksbury
+ReportingUnit	Massachusetts;Templeton	Templeton
+ReportingUnit	Massachusetts;Taunton	Taunton
+ReportingUnit	Massachusetts;TOTALS	TOTALS
+ReportingUnit	Massachusetts;Swansea	Swansea
+ReportingUnit	Massachusetts;Swampscott	Swampscott
+ReportingUnit	Massachusetts;Sutton	Sutton
+ReportingUnit	Massachusetts;Sunderland	Sunderland
+ReportingUnit	Massachusetts;Sudbury	Sudbury
+ReportingUnit	Massachusetts;Sturbridge	Sturbridge
+ReportingUnit	Massachusetts;Stow	Stow
+ReportingUnit	Massachusetts;Stoughton	Stoughton
+ReportingUnit	Massachusetts;Stoneham	Stoneham
+ReportingUnit	Massachusetts;Stockbridge	Stockbridge
+ReportingUnit	Massachusetts;Sterling	Sterling
+ReportingUnit	Massachusetts;Springfield	Springfield
+ReportingUnit	Massachusetts;Spencer	Spencer
+ReportingUnit	Massachusetts;Southwick	Southwick
+ReportingUnit	Massachusetts;Southbridge	Southbridge
+ReportingUnit	Massachusetts;Southborough	Southborough
+ReportingUnit	Massachusetts;Southampton	Southampton
+ReportingUnit	Massachusetts;Somerville	Somerville
+ReportingUnit	Massachusetts;Somerset	Somerset
+ReportingUnit	Massachusetts;Shutesbury	Shutesbury
+ReportingUnit	Massachusetts;Shrewsbury	Shrewsbury
+ReportingUnit	Massachusetts;Shirley	Shirley
+ReportingUnit	Massachusetts;Sherborn	Sherborn
+ReportingUnit	Massachusetts;Shelburne	Shelburne
+ReportingUnit	Massachusetts;Sheffield	Sheffield
+ReportingUnit	Massachusetts;Sharon	Sharon
+ReportingUnit	Massachusetts;Seekonk	Seekonk
+ReportingUnit	Massachusetts;Scituate	Scituate
+ReportingUnit	Massachusetts;Savoy	Savoy
+ReportingUnit	Massachusetts;Saugus	Saugus
+ReportingUnit	Massachusetts;Sandwich	Sandwich
+ReportingUnit	Massachusetts;Sandisfield	Sandisfield
+ReportingUnit	Massachusetts;Salisbury	Salisbury
+ReportingUnit	Massachusetts;Salem	Salem
+ReportingUnit	Massachusetts;S. Hadley	S. Hadley
+ReportingUnit	Massachusetts;Rutland	Rutland
+ReportingUnit	Massachusetts;Russell	Russell
+ReportingUnit	Massachusetts;Royalston	Royalston
+ReportingUnit	Massachusetts;Rowley	Rowley
+ReportingUnit	Massachusetts;Rowe	Rowe
+ReportingUnit	Massachusetts;Rockport	Rockport
+ReportingUnit	Massachusetts;Rockland	Rockland
+ReportingUnit	Massachusetts;Rochester	Rochester
+ReportingUnit	Massachusetts;Richmond	Richmond
+ReportingUnit	Massachusetts;Revere	Revere
+ReportingUnit	Massachusetts;Rehoboth	Rehoboth
+ReportingUnit	Massachusetts;Reading	Reading
+ReportingUnit	Massachusetts;Raynham	Raynham
+ReportingUnit	Massachusetts;Randolph	Randolph
+ReportingUnit	Massachusetts;Quincy	Quincy
+ReportingUnit	Massachusetts;Provincetown	Provincetown
+ReportingUnit	Massachusetts;Princeton	Princeton
+ReportingUnit	Massachusetts;Plympton	Plympton
+ReportingUnit	Massachusetts;Plymouth	Plymouth
+ReportingUnit	Massachusetts;Plainville	Plainville
+ReportingUnit	Massachusetts;Plainfield	Plainfield
+ReportingUnit	Massachusetts;Pittsfield	Pittsfield
+ReportingUnit	Massachusetts;Phillipston	Phillipston
+ReportingUnit	Massachusetts;Petersham	Petersham
+ReportingUnit	Massachusetts;Peru	Peru
+ReportingUnit	Massachusetts;Pepperell	Pepperell
+ReportingUnit	Massachusetts;Pembroke	Pembroke
+ReportingUnit	Massachusetts;Pelham	Pelham
+ReportingUnit	Massachusetts;Peabody	Peabody
+ReportingUnit	Massachusetts;Paxton	Paxton
+ReportingUnit	Massachusetts;Palmer	Palmer
+ReportingUnit	Massachusetts;Oxford	Oxford
+ReportingUnit	Massachusetts;Otis	Otis
+ReportingUnit	Massachusetts;Orleans	Orleans
+ReportingUnit	Massachusetts;Orange	Orange
+ReportingUnit	Massachusetts;Oakham	Oakham
+ReportingUnit	Massachusetts;Oak Bluffs	Oak Bluffs
+ReportingUnit	Massachusetts;Norwood	Norwood
+ReportingUnit	Massachusetts;Norwell	Norwell
+ReportingUnit	Massachusetts;Norton	Norton
+ReportingUnit	Massachusetts;Northfield	Northfield
+ReportingUnit	Massachusetts;Northbridge	Northbridge
+ReportingUnit	Massachusetts;Northborough	Northborough
+ReportingUnit	Massachusetts;Northampton	Northampton
+ReportingUnit	Massachusetts;Norfolk	Norfolk
+ReportingUnit	Massachusetts;Newton	Newton
+ReportingUnit	Massachusetts;Newburyport	Newburyport
+ReportingUnit	Massachusetts;Newbury	Newbury
+ReportingUnit	Massachusetts;New Salem	New Salem
+ReportingUnit	Massachusetts;New Marlborough	New Marlborough
+ReportingUnit	Massachusetts;New Braintree	New Braintree
+ReportingUnit	Massachusetts;New Bedford	New Bedford
+ReportingUnit	Massachusetts;New Ashford	New Ashford
+ReportingUnit	Massachusetts;Needham	Needham
+ReportingUnit	Massachusetts;Natick	Natick
+ReportingUnit	Massachusetts;Nantucket	Nantucket
+ReportingUnit	Massachusetts;Nahant	Nahant
+ReportingUnit	Massachusetts;N. Reading	N. Reading
+ReportingUnit	Massachusetts;N. Brookfield	N. Brookfield
+ReportingUnit	Massachusetts;N. Attleborough	N. Attleborough
+ReportingUnit	Massachusetts;N. Andover	N. Andover
+ReportingUnit	Massachusetts;N. Adams	N. Adams
+ReportingUnit	Massachusetts;Mount Washington	Mount Washington
+ReportingUnit	Massachusetts;Montgomery	Montgomery
+ReportingUnit	Massachusetts;Monterey	Monterey
+ReportingUnit	Massachusetts;Montague	Montague
+ReportingUnit	Massachusetts;Monson	Monson
+ReportingUnit	Massachusetts;Monroe	Monroe
+ReportingUnit	Massachusetts;Milton	Milton
+ReportingUnit	Massachusetts;Millville	Millville
+ReportingUnit	Massachusetts;Millis	Millis
+ReportingUnit	Massachusetts;Millbury	Millbury
+ReportingUnit	Massachusetts;Milford	Milford
+ReportingUnit	Massachusetts;Middleton	Middleton
+ReportingUnit	Massachusetts;Middlefield	Middlefield
+ReportingUnit	Massachusetts;Middleborough	Middleborough
+ReportingUnit	Massachusetts;Methuen	Methuen
+ReportingUnit	Massachusetts;Merrimac	Merrimac
+ReportingUnit	Massachusetts;Mendon	Mendon
+ReportingUnit	Massachusetts;Melrose	Melrose
+ReportingUnit	Massachusetts;Medway	Medway
+ReportingUnit	Massachusetts;Medford	Medford
+ReportingUnit	Massachusetts;Medfield	Medfield
+ReportingUnit	Massachusetts;Maynard	Maynard
+ReportingUnit	Massachusetts;Mattapoisett	Mattapoisett
+ReportingUnit	Massachusetts;Mashpee	Mashpee
+ReportingUnit	Massachusetts;Marshfield	Marshfield
+ReportingUnit	Massachusetts;Marlborough	Marlborough
+ReportingUnit	Massachusetts;Marion	Marion
+ReportingUnit	Massachusetts;Marblehead	Marblehead
+ReportingUnit	Massachusetts;Mansfield	Mansfield
+ReportingUnit	Massachusetts;Manchester-by-the-Sea	Manchester-by-the-Sea
+ReportingUnit	Massachusetts;Malden	Malden
+ReportingUnit	Massachusetts;Lynnfield	Lynnfield
+ReportingUnit	Massachusetts;Lynn	Lynn
+ReportingUnit	Massachusetts;Lunenburg	Lunenburg
+ReportingUnit	Massachusetts;Ludlow	Ludlow
+ReportingUnit	Massachusetts;Lowell	Lowell
+ReportingUnit	Massachusetts;Longmeadow	Longmeadow
+ReportingUnit	Massachusetts;Littleton	Littleton
+ReportingUnit	Massachusetts;Lincoln	Lincoln
+ReportingUnit	Massachusetts;Leyden	Leyden
+ReportingUnit	Massachusetts;Lexington	Lexington
+ReportingUnit	Massachusetts;Leverett	Leverett
+ReportingUnit	Massachusetts;Leominster	Leominster
+ReportingUnit	Massachusetts;Lenox	Lenox
+ReportingUnit	Massachusetts;Leicester	Leicester
+ReportingUnit	Massachusetts;Lee	Lee
+ReportingUnit	Massachusetts;Lawrence	Lawrence
+ReportingUnit	Massachusetts;Lanesborough	Lanesborough
+ReportingUnit	Massachusetts;Lancaster	Lancaster
+ReportingUnit	Massachusetts;Lakeville	Lakeville
+ReportingUnit	Massachusetts;Kingston	Kingston
+ReportingUnit	Massachusetts;Ipswich	Ipswich
+ReportingUnit	Massachusetts;Huntington	Huntington
+ReportingUnit	Massachusetts;Hull	Hull
+ReportingUnit	Massachusetts;Hudson	Hudson
+ReportingUnit	Massachusetts;Hubbardston	Hubbardston
+ReportingUnit	Massachusetts;Hopkinton	Hopkinton
+ReportingUnit	Massachusetts;Hopedale	Hopedale
+ReportingUnit	Massachusetts;Holyoke	Holyoke
+ReportingUnit	Massachusetts;Holliston	Holliston
+ReportingUnit	Massachusetts;Holland	Holland
+ReportingUnit	Massachusetts;Holden	Holden
+ReportingUnit	Massachusetts;Holbrook	Holbrook
+ReportingUnit	Massachusetts;Hinsdale	Hinsdale
+ReportingUnit	Massachusetts;Hingham	Hingham
+ReportingUnit	Massachusetts;Heath	Heath
+ReportingUnit	Massachusetts;Hawley	Hawley
+ReportingUnit	Massachusetts;Haverhill	Haverhill
+ReportingUnit	Massachusetts;Hatfield	Hatfield
+ReportingUnit	Massachusetts;Harwich	Harwich
+ReportingUnit	Massachusetts;Harvard	Harvard
+ReportingUnit	Massachusetts;Hardwick	Hardwick
+ReportingUnit	Massachusetts;Hanson	Hanson
+ReportingUnit	Massachusetts;Hanover	Hanover
+ReportingUnit	Massachusetts;Hancock	Hancock
+ReportingUnit	Massachusetts;Hampden	Hampden
+ReportingUnit	Massachusetts;Hamilton	Hamilton
+ReportingUnit	Massachusetts;Halifax	Halifax
+ReportingUnit	Massachusetts;Hadley	Hadley
+ReportingUnit	Massachusetts;Groveland	Groveland
+ReportingUnit	Massachusetts;Groton	Groton
+ReportingUnit	Massachusetts;Greenfield	Greenfield
+ReportingUnit	Massachusetts;Great Barrington	Great Barrington
+ReportingUnit	Massachusetts;Granville	Granville
+ReportingUnit	Massachusetts;Granby	Granby
+ReportingUnit	Massachusetts;Grafton	Grafton
+ReportingUnit	Massachusetts;Gosnold	Gosnold
+ReportingUnit	Massachusetts;Goshen	Goshen
+ReportingUnit	Massachusetts;Gloucester	Gloucester
+ReportingUnit	Massachusetts;Gill	Gill
+ReportingUnit	Massachusetts;Georgetown	Georgetown
+ReportingUnit	Massachusetts;Gardner	Gardner
+ReportingUnit	Massachusetts;Freetown	Freetown
+ReportingUnit	Massachusetts;Franklin	Franklin
+ReportingUnit	Massachusetts;Framingham	Framingham
+ReportingUnit	Massachusetts;Foxborough	Foxborough
+ReportingUnit	Massachusetts;Florida	Florida
+ReportingUnit	Massachusetts;Fitchburg	Fitchburg
+ReportingUnit	Massachusetts;Falmouth	Falmouth
+ReportingUnit	Massachusetts;Fall River	Fall River
+ReportingUnit	Massachusetts;Fairhaven	Fairhaven
+ReportingUnit	Massachusetts;Everett	Everett
+ReportingUnit	Massachusetts;Essex	Essex
+ReportingUnit	Massachusetts;Erving	Erving
+ReportingUnit	Massachusetts;Egremont	Egremont
+ReportingUnit	Massachusetts;Edgartown	Edgartown
+ReportingUnit	Massachusetts;Easton	Easton
+ReportingUnit	Massachusetts;Easthampton	Easthampton
+ReportingUnit	Massachusetts;Eastham	Eastham
+ReportingUnit	Massachusetts;E. Longmeadow	E. Longmeadow
+ReportingUnit	Massachusetts;E. Brookfield	E. Brookfield
+ReportingUnit	Massachusetts;E. Bridgewater	E. Bridgewater
+ReportingUnit	Massachusetts;Duxbury	Duxbury
+ReportingUnit	Massachusetts;Dunstable	Dunstable
+ReportingUnit	Massachusetts;Dudley	Dudley
+ReportingUnit	Massachusetts;Dracut	Dracut
+ReportingUnit	Massachusetts;Dover	Dover
+ReportingUnit	Massachusetts;Douglas	Douglas
+ReportingUnit	Massachusetts;Dighton	Dighton
+ReportingUnit	Massachusetts;Dennis	Dennis
+ReportingUnit	Massachusetts;Deerfield	Deerfield
+ReportingUnit	Massachusetts;Dedham	Dedham
+ReportingUnit	Massachusetts;Dartmouth	Dartmouth
+ReportingUnit	Massachusetts;Danvers	Danvers
+ReportingUnit	Massachusetts;Dalton	Dalton
+ReportingUnit	Massachusetts;Cummington	Cummington
+ReportingUnit	Massachusetts;Conway	Conway
+ReportingUnit	Massachusetts;Concord	Concord
+ReportingUnit	Massachusetts;Colrain	Colrain
+ReportingUnit	Massachusetts;Cohasset	Cohasset
+ReportingUnit	Massachusetts;Clinton	Clinton
+ReportingUnit	Massachusetts;Clarksburg	Clarksburg
+ReportingUnit	Massachusetts;Chilmark	Chilmark
+ReportingUnit	Massachusetts;Chicopee	Chicopee
+ReportingUnit	Massachusetts;Chesterfield	Chesterfield
+ReportingUnit	Massachusetts;Chester	Chester
+ReportingUnit	Massachusetts;Cheshire	Cheshire
+ReportingUnit	Massachusetts;Chelsea	Chelsea
+ReportingUnit	Massachusetts;Chelmsford	Chelmsford
+ReportingUnit	Massachusetts;Chatham	Chatham
+ReportingUnit	Massachusetts;Charlton	Charlton
+ReportingUnit	Massachusetts;Charlemont	Charlemont
+ReportingUnit	Massachusetts;Carver	Carver
+ReportingUnit	Massachusetts;Carlisle	Carlisle
+ReportingUnit	Massachusetts;Canton	Canton
+ReportingUnit	Massachusetts;Cambridge	Cambridge
+ReportingUnit	Massachusetts;Burlington	Burlington
+ReportingUnit	Massachusetts;Buckland	Buckland
+ReportingUnit	Massachusetts;Brookline	Brookline
+ReportingUnit	Massachusetts;Brookfield	Brookfield
+ReportingUnit	Massachusetts;Brockton	Brockton
+ReportingUnit	Massachusetts;Brimfield	Brimfield
+ReportingUnit	Massachusetts;Bridgewater	Bridgewater
+ReportingUnit	Massachusetts;Brewster	Brewster
+ReportingUnit	Massachusetts;Braintree	Braintree
+ReportingUnit	Massachusetts;Boylston	Boylston
+ReportingUnit	Massachusetts;Boxford	Boxford
+ReportingUnit	Massachusetts;Boxborough	Boxborough
+ReportingUnit	Massachusetts;Bourne	Bourne
+ReportingUnit	Massachusetts;Boston	Boston
+ReportingUnit	Massachusetts;Bolton	Bolton
+ReportingUnit	Massachusetts;Blandford	Blandford
+ReportingUnit	Massachusetts;Blackstone	Blackstone
+ReportingUnit	Massachusetts;Billerica	Billerica
+ReportingUnit	Massachusetts;Beverly	Beverly
+ReportingUnit	Massachusetts;Bernardston	Bernardston
+ReportingUnit	Massachusetts;Berlin	Berlin
+ReportingUnit	Massachusetts;Berkley	Berkley
+ReportingUnit	Massachusetts;Belmont	Belmont
+ReportingUnit	Massachusetts;Bellingham	Bellingham
+ReportingUnit	Massachusetts;Belchertown	Belchertown
+ReportingUnit	Massachusetts;Bedford	Bedford
+ReportingUnit	Massachusetts;Becket	Becket
+ReportingUnit	Massachusetts;Barre	Barre
+ReportingUnit	Massachusetts;Barnstable	Barnstable
+ReportingUnit	Massachusetts;Ayer	Ayer
+ReportingUnit	Massachusetts;Avon	Avon
+ReportingUnit	Massachusetts;Auburn	Auburn
+ReportingUnit	Massachusetts;Attleboro	Attleboro
+ReportingUnit	Massachusetts;Athol	Athol
+ReportingUnit	Massachusetts;Ashland	Ashland
+ReportingUnit	Massachusetts;Ashfield	Ashfield
+ReportingUnit	Massachusetts;Ashby	Ashby
+ReportingUnit	Massachusetts;Ashburnham	Ashburnham
+ReportingUnit	Massachusetts;Arlington	Arlington
+ReportingUnit	Massachusetts;Aquinnah	Aquinnah
+ReportingUnit	Massachusetts;Andover	Andover
+ReportingUnit	Massachusetts;Amherst	Amherst
+ReportingUnit	Massachusetts;Amesbury	Amesbury
+ReportingUnit	Massachusetts;Alford	Alford
+ReportingUnit	Massachusetts;Agawam	Agawam
+ReportingUnit	Massachusetts;Adams	Adams
+ReportingUnit	Massachusetts;Acushnet	Acushnet
+ReportingUnit	Massachusetts;Acton	Acton
+ReportingUnit	Massachusetts;Abington	Abington
