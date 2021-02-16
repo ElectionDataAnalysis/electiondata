@@ -2102,3 +2102,1988 @@ ReportingUnit	Alabama;Jackson County;DEAN'S CHAPEL COMM	Jackson;DEAN'S CHAPEL CO
 ReportingUnit	Alabama;Jackson County;CROW FIRE HALL	Jackson;CROW FIRE HALL
 ReportingUnit	Alabama;Jackson County;BRYANT COMM BLDG	Jackson;BRYANT COMM BLDG
 ReportingUnit	Alabama;Jackson County;BRIDGEPORT COMM CTR_	Jackson;BRIDGEPORT COMM CTR_
+ReportingUnit	Alabama;Winston County;WALDROP FREEWILL BAPT_	Winston;WALDROP FREEWILL BAPT_
+ReportingUnit	Alabama;Winston County;UPSHAW FIRE DEPT_	Winston;UPSHAW FIRE DEPT_
+ReportingUnit	Alabama;Winston County;PEBBLE FIRE HOUSE	Winston;PEBBLE FIRE HOUSE
+ReportingUnit	Alabama;Winston County;OLD UNION CHURCH	Winston;OLD UNION CHURCH
+ReportingUnit	Alabama;Winston County;NESMITH COMM_ CTR_	Winston;NESMITH COMM_ CTR_
+ReportingUnit	Alabama;Winston County;NEIGHBORHOOD FCLTY	Winston;NEIGHBORHOOD FCLTY
+ReportingUnit	Alabama;Winston County;NATURAL BRIDGE CITY HALL	Winston;NATURAL BRIDGE CITY HALL
+ReportingUnit	Alabama;Winston County;MORELAND FIRE DEPT_	Winston;MORELAND FIRE DEPT_
+ReportingUnit	Alabama;Winston County;LYNN CITY HALL	Winston;LYNN CITY HALL
+ReportingUnit	Alabama;Winston County;HOUSTON FIRE DEPT_	Winston;HOUSTON FIRE DEPT_
+ReportingUnit	Alabama;Winston County;HELICON FIRE DEPT_	Winston;HELICON FIRE DEPT_
+ReportingUnit	Alabama;Winston County;HALEYVILLE SR_ CTR_	Winston;HALEYVILLE SR_ CTR_
+ReportingUnit	Alabama;Winston County;DOUBLE SPRINGS MUN_ BLDG	Winston;DOUBLE SPRINGS MUN_ BLDG
+ReportingUnit	Alabama;Winston County;DELMAR FIRE DEPT_	Winston;DELMAR FIRE DEPT_
+ReportingUnit	Alabama;Winston County;BLACK POND FIRE DEPT_	Winston;BLACK POND FIRE DEPT_
+ReportingUnit	Alabama;Winston County;ASHRIDGE FIRE DEPT_	Winston;ASHRIDGE FIRE DEPT_
+ReportingUnit	Alabama;Winston County;ARLEY FIRE DEPT_	Winston;ARLEY FIRE DEPT_
+ReportingUnit	Alabama;Winston County;ADDISON COMM_ CTR_	Winston;ADDISON COMM_ CTR_
+ReportingUnit	Alabama;Wilcox County;YELLOW BLUFF DIST 5/3	Wilcox;YELLOW BLUFF DIST 5/3
+ReportingUnit	Alabama;Wilcox County;SUNNY S_ BAPT -DIST 6_3,4	Wilcox;SUNNY S_ BAPT -DIST 6_3,4
+ReportingUnit	Alabama;Wilcox County;ST WISDOM BAPT -DIST 5/4	Wilcox;ST WISDOM BAPT -DIST 5/4
+ReportingUnit	Alabama;Wilcox County;ST PAUL AME CH-DIST 2/3	Wilcox;ST PAUL AME CH-DIST 2/3
+ReportingUnit	Alabama;Wilcox County;ST PAUL AME CH-DIST 1/7	Wilcox;ST PAUL AME CH-DIST 1/7
+ReportingUnit	Alabama;Wilcox County;PINE HILL CITY -DIST 6/2	Wilcox;PINE HILL CITY -DIST 6/2
+ReportingUnit	Alabama;Wilcox County;PINE APPLE FIRE-DIST 2/9	Wilcox;PINE APPLE FIRE-DIST 2/9
+ReportingUnit	Alabama;Wilcox County;PINE APPLE FIRE-DIST 1/3	Wilcox;PINE APPLE FIRE-DIST 1/3
+ReportingUnit	Alabama;Wilcox County;PINE APPLE COMM-DIST 2/6	Wilcox;PINE APPLE COMM-DIST 2/6
+ReportingUnit	Alabama;Wilcox County;PINE APPLE COMM-DIST 2/1	Wilcox;PINE APPLE COMM-DIST 2/1
+ReportingUnit	Alabama;Wilcox County;PINE APPLE COMM-DIST 1/9	Wilcox;PINE APPLE COMM-DIST 1/9
+ReportingUnit	Alabama;Wilcox County;NATL GUARD -DIST 3/3	Wilcox;NATL GUARD -DIST 3/3
+ReportingUnit	Alabama;Wilcox County;NATL GUARD -DIST 2/8	Wilcox;NATL GUARD -DIST 2/8
+ReportingUnit	Alabama;Wilcox County;NATL GUARD -DIST 2/7	Wilcox;NATL GUARD -DIST 2/7
+ReportingUnit	Alabama;Wilcox County;NATL GUARD -DIST 1/5	Wilcox;NATL GUARD -DIST 1/5
+ReportingUnit	Alabama;Wilcox County;NATL GUARD -DIST 1/1	Wilcox;NATL GUARD -DIST 1/1
+ReportingUnit	Alabama;Wilcox County;McCANTS PLACE -DIST 3/4	Wilcox;McCANTS PLACE -DIST 3/4
+ReportingUnit	Alabama;Wilcox County;MILLER FERRY CH-DIST 4/4	Wilcox;MILLER FERRY CH-DIST 4/4
+ReportingUnit	Alabama;Wilcox County;LOWER PEACHTREE-DIST 6/5	Wilcox;LOWER PEACHTREE-DIST 6/5
+ReportingUnit	Alabama;Wilcox County;LOWER PEACHTREE-DIST 5/5	Wilcox;LOWER PEACHTREE-DIST 5/5
+ReportingUnit	Alabama;Wilcox County;LAST CHANCE CH-DIST 2/4	Wilcox;LAST CHANCE CH-DIST 2/4
+ReportingUnit	Alabama;Wilcox County;LAST CHANCE CH-DIST 1/6	Wilcox;LAST CHANCE CH-DIST 1/6
+ReportingUnit	Alabama;Wilcox County;HOLY CROSS-DIST 5/6	Wilcox;HOLY CROSS-DIST 5/6
+ReportingUnit	Alabama;Wilcox County;HOLY CROSS-DIST 3/1,6	Wilcox;HOLY CROSS-DIST 3/1,6
+ReportingUnit	Alabama;Wilcox County;FURMAN TATES CH-DIST 2/2	Wilcox;FURMAN TATES CH-DIST 2/2
+ReportingUnit	Alabama;Wilcox County;FURMAN TATES CH-DIST 1/4	Wilcox;FURMAN TATES CH-DIST 1/4
+ReportingUnit	Alabama;Wilcox County;FS ERVIN ELEM_ -DIST5/2	Wilcox;FS ERVIN ELEM_ -DIST5/2
+ReportingUnit	Alabama;Wilcox County;FAITH FELLOWSHIP-DIST 4/2	Wilcox;FAITH FELLOWSHIP-DIST 4/2
+ReportingUnit	Alabama;Wilcox County;ELIJAH SHAW COMM-DIST 4/3	Wilcox;ELIJAH SHAW COMM-DIST 4/3
+ReportingUnit	Alabama;Wilcox County;COY PUBLIC SCH -DIST 3/2	Wilcox;COY PUBLIC SCH -DIST 3/2
+ReportingUnit	Alabama;Wilcox County;CLIFTON BLDG-DIST 4/5	Wilcox;CLIFTON BLDG-DIST 4/5
+ReportingUnit	Alabama;Wilcox County;BOYKIN NUTRITION-DIST 4/1	Wilcox;BOYKIN NUTRITION-DIST 4/1
+ReportingUnit	Alabama;Wilcox County;ARLINGTON COMM -DIST 6/1	Wilcox;ARLINGTON COMM -DIST 6/1
+ReportingUnit	Alabama;Wilcox County;ANNIEMANIE BLDG-DIST 5/1	Wilcox;ANNIEMANIE BLDG-DIST 5/1
+ReportingUnit	Alabama;Washington County;YARBO FIRE HOUSE	Washington;YARBO FIRE HOUSE
+ReportingUnit	Alabama;Washington County;WAGARVILLE FIRE HOUSE	Washington;WAGARVILLE FIRE HOUSE
+ReportingUnit	Alabama;Washington County;TIBBIE FIRE HOUSE	Washington;TIBBIE FIRE HOUSE
+ReportingUnit	Alabama;Washington County;ST_ STEPHENS FIRE HOUSE	Washington;ST_ STEPHENS FIRE HOUSE
+ReportingUnit	Alabama;Washington County;RED CREEK FIRE HOUSE	Washington;RED CREEK FIRE HOUSE
+ReportingUnit	Alabama;Washington County;McINTOSH COMM_	Washington;McINTOSH COMM_
+ReportingUnit	Alabama;Washington County;MOWA CHOCTAW COMM_ CTR_	Washington;MOWA CHOCTAW COMM_ CTR_
+ReportingUnit	Alabama;Washington County;MILLRY FIRE HOUSE	Washington;MILLRY FIRE HOUSE
+ReportingUnit	Alabama;Washington County;MALCOM CTR_	Washington;MALCOM CTR_
+ReportingUnit	Alabama;Washington County;LEROY FIRE HOUSE	Washington;LEROY FIRE HOUSE
+ReportingUnit	Alabama;Washington County;LATON HILL FIRE HOUSE	Washington;LATON HILL FIRE HOUSE
+ReportingUnit	Alabama;Washington County;HOBSON FIRE HOUSE	Washington;HOBSON FIRE HOUSE
+ReportingUnit	Alabama;Washington County;FRUITDALE FIRE HOUSE	Washington;FRUITDALE FIRE HOUSE
+ReportingUnit	Alabama;Washington County;FRANKVILLE FIRE HOUSE	Washington;FRANKVILLE FIRE HOUSE
+ReportingUnit	Alabama;Washington County;FAIRFORD FIRE HOUSE	Washington;FAIRFORD FIRE HOUSE
+ReportingUnit	Alabama;Washington County;DEER PARK FIRE HOUSE	Washington;DEER PARK FIRE HOUSE
+ReportingUnit	Alabama;Washington County;COPELAND ASSEMBLY OF GOD	Washington;COPELAND ASSEMBLY OF GOD
+ReportingUnit	Alabama;Washington County;CHATOM COURTHOUSE	Washington;CHATOM COURTHOUSE
+ReportingUnit	Alabama;Washington County;CHARITY CHAPEL FIRE HOUSE	Washington;CHARITY CHAPEL FIRE HOUSE
+ReportingUnit	Alabama;Walker County;WESTSIDE BAPTIST	Walker;WESTSIDE BAPTIST
+ReportingUnit	Alabama;Walker County;UNION HALL GOODSPRINGS	Walker;UNION HALL GOODSPRINGS
+ReportingUnit	Alabama;Walker County;UNION CHAPEL COMM CTR	Walker;UNION CHAPEL COMM CTR
+ReportingUnit	Alabama;Walker County;TWILLEY TOWN CH	Walker;TWILLEY TOWN CH
+ReportingUnit	Alabama;Walker County;TUTWILER FIRE DEPT	Walker;TUTWILER FIRE DEPT
+ReportingUnit	Alabama;Walker County;TOWNLEY VFD #2	Walker;TOWNLEY VFD #2
+ReportingUnit	Alabama;Walker County;TOWNLEY COMM CTR	Walker;TOWNLEY COMM CTR
+ReportingUnit	Alabama;Walker County;THACH SCHOOL	Walker;THACH SCHOOL
+ReportingUnit	Alabama;Walker County;SIPSEY COMM CTR	Walker;SIPSEY COMM CTR
+ReportingUnit	Alabama;Walker County;SARAGOSSA COMM CTR	Walker;SARAGOSSA COMM CTR
+ReportingUnit	Alabama;Walker County;RICES CHAPEL CH	Walker;RICES CHAPEL CH
+ReportingUnit	Alabama;Walker County;PROSPECT METHODIST CH	Walker;PROSPECT METHODIST CH
+ReportingUnit	Alabama;Walker County;PLEASANTFIELD COMM	Walker;PLEASANTFIELD COMM
+ReportingUnit	Alabama;Walker County;PINEYWOODS FIRE DEPT	Walker;PINEYWOODS FIRE DEPT
+ReportingUnit	Alabama;Walker County;PARRISH HIGH SCHOOL GYM	Walker;PARRISH HIGH SCHOOL GYM
+ReportingUnit	Alabama;Walker County;OLD HERMAN CH	Walker;OLD HERMAN CH
+ReportingUnit	Alabama;Walker County;OAKMAN COMM CTR	Walker;OAKMAN COMM CTR
+ReportingUnit	Alabama;Walker County;NEW HOPE MISSIONARY	Walker;NEW HOPE MISSIONARY
+ReportingUnit	Alabama;Walker County;NEW BETHANY CH OF GOD	Walker;NEW BETHANY CH OF GOD
+ReportingUnit	Alabama;Walker County;NAUVOO CITY HALL	Walker;NAUVOO CITY HALL
+ReportingUnit	Alabama;Walker County;MEMORIAL PARK NATATORIUM	Walker;MEMORIAL PARK NATATORIUM
+ReportingUnit	Alabama;Walker County;MEADOWSMITH LIBRARY	Walker;MEADOWSMITH LIBRARY
+ReportingUnit	Alabama;Walker County;MCCOLLUM NAT'L GUARD	Walker;MCCOLLUM NAT'L GUARD
+ReportingUnit	Alabama;Walker County;MCCOLLUM MIDWAY FIRE/RESC	Walker;MCCOLLUM MIDWAY FIRE/RESC
+ReportingUnit	Alabama;Walker County;MANCHESTER COMM BLDG	Walker;MANCHESTER COMM BLDG
+ReportingUnit	Alabama;Walker County;LIBERTY HILL CH	Walker;LIBERTY HILL CH
+ReportingUnit	Alabama;Walker County;KANSAS CITY HALL	Walker;KANSAS CITY HALL
+ReportingUnit	Alabama;Walker County;JASPER MALL	Walker;JASPER MALL
+ReportingUnit	Alabama;Walker County;JASPER ABUNDANT LIFE CH	Walker;JASPER ABUNDANT LIFE CH
+ReportingUnit	Alabama;Walker County;FARMSTEAD BAPTIST	Walker;FARMSTEAD BAPTIST
+ReportingUnit	Alabama;Walker County;EMPIRE UNION BLDG	Walker;EMPIRE UNION BLDG
+ReportingUnit	Alabama;Walker County;ELDRIDGE CITY HALL	Walker;ELDRIDGE CITY HALL
+ReportingUnit	Alabama;Walker County;DORA CIVIC CTR	Walker;DORA CIVIC CTR
+ReportingUnit	Alabama;Walker County;DILWORTH COMM CTR	Walker;DILWORTH COMM CTR
+ReportingUnit	Alabama;Walker County;CURRY COMM CTR_	Walker;CURRY COMM CTR_
+ReportingUnit	Alabama;Walker County;CROSSROADS CH OF CHRIST	Walker;CROSSROADS CH OF CHRIST
+ReportingUnit	Alabama;Walker County;CORONA BAPTIST CH	Walker;CORONA BAPTIST CH
+ReportingUnit	Alabama;Walker County;CORDOVA VFW BLDG	Walker;CORDOVA VFW BLDG
+ReportingUnit	Alabama;Walker County;COPELAND FERRY CH OF GOD	Walker;COPELAND FERRY CH OF GOD
+ReportingUnit	Alabama;Walker County;CARBON HILL COMM CTR	Walker;CARBON HILL COMM CTR
+ReportingUnit	Alabama;Walker County;CARBON HILL ABUNDANT LIFE	Walker;CARBON HILL ABUNDANT LIFE
+ReportingUnit	Alabama;Walker County;BOLDO FIRE STATION	Walker;BOLDO FIRE STATION
+ReportingUnit	Alabama;Walker County;BEVILL ST COMM COLLEGE	Walker;BEVILL ST COMM COLLEGE
+ReportingUnit	Alabama;Walker County;BETHEL ASSEMBLY OF GOD	Walker;BETHEL ASSEMBLY OF GOD
+ReportingUnit	Alabama;Walker County;ARGO FIRE DEPT	Walker;ARGO FIRE DEPT
+ReportingUnit	Alabama;Tuscaloosa County;YELLOW CRK BAPT CH	Tuscaloosa;YELLOW CRK BAPT CH
+ReportingUnit	Alabama;Tuscaloosa County;WINDHAM SPRINGS BAPT CH	Tuscaloosa;WINDHAM SPRINGS BAPT CH
+ReportingUnit	Alabama;Tuscaloosa County;WHITSON PLACE CH	Tuscaloosa;WHITSON PLACE CH
+ReportingUnit	Alabama;Tuscaloosa County;WESLEY CHAPEL METHODIST CH	Tuscaloosa;WESLEY CHAPEL METHODIST CH
+ReportingUnit	Alabama;Tuscaloosa County;VANCE TOWN HALL	Tuscaloosa;VANCE TOWN HALL
+ReportingUnit	Alabama;Tuscaloosa County;UNIVERSITY MALL	Tuscaloosa;UNIVERSITY MALL
+ReportingUnit	Alabama;Tuscaloosa County;UNITY BAPT CH	Tuscaloosa;UNITY BAPT CH
+ReportingUnit	Alabama;Tuscaloosa County;U OF A STUDENT REC CTR	Tuscaloosa;U OF A STUDENT REC CTR
+ReportingUnit	Alabama;Tuscaloosa County;TANNEHILL VALLEY BAPT	Tuscaloosa;TANNEHILL VALLEY BAPT
+ReportingUnit	Alabama;Tuscaloosa County;STILLMAN COLLEGE	Tuscaloosa;STILLMAN COLLEGE
+ReportingUnit	Alabama;Tuscaloosa County;STATION #2 CARROLLS CRK	Tuscaloosa;STATION #2 CARROLLS CRK
+ReportingUnit	Alabama;Tuscaloosa County;SOMA CH	Tuscaloosa;SOMA CH
+ReportingUnit	Alabama;Tuscaloosa County;SHERIFF FIRING RANGE	Tuscaloosa;SHERIFF FIRING RANGE
+ReportingUnit	Alabama;Tuscaloosa County;ROMULUS FIRE DEPT_	Tuscaloosa;ROMULUS FIRE DEPT_
+ReportingUnit	Alabama;Tuscaloosa County;PETERSON COMM CH	Tuscaloosa;PETERSON COMM CH
+ReportingUnit	Alabama;Tuscaloosa County;NORTHSIDE LIONS CLUB	Tuscaloosa;NORTHSIDE LIONS CLUB
+ReportingUnit	Alabama;Tuscaloosa County;NORTHPORT COMM CTR	Tuscaloosa;NORTHPORT COMM CTR
+ReportingUnit	Alabama;Tuscaloosa County;NORTHPORT CITY HALL	Tuscaloosa;NORTHPORT CITY HALL
+ReportingUnit	Alabama;Tuscaloosa County;NEW ZION MISSIONARY CH	Tuscaloosa;NEW ZION MISSIONARY CH
+ReportingUnit	Alabama;Tuscaloosa County;NEW LIFE BAPT CH	Tuscaloosa;NEW LIFE BAPT CH
+ReportingUnit	Alabama;Tuscaloosa County;MT OLIVE BAPT CH	Tuscaloosa;MT OLIVE BAPT CH
+ReportingUnit	Alabama;Tuscaloosa County;MONTGOMERY FIRE DEPT	Tuscaloosa;MONTGOMERY FIRE DEPT
+ReportingUnit	Alabama;Tuscaloosa County;MCDONALD HUGHES COMM	Tuscaloosa;MCDONALD HUGHES COMM
+ReportingUnit	Alabama;Tuscaloosa County;MCABEE CTR	Tuscaloosa;MCABEE CTR
+ReportingUnit	Alabama;Tuscaloosa County;MAYFIELD FIRE DEPT	Tuscaloosa;MAYFIELD FIRE DEPT
+ReportingUnit	Alabama;Tuscaloosa County;MARY PHELPS CTR	Tuscaloosa;MARY PHELPS CTR
+ReportingUnit	Alabama;Tuscaloosa County;LAKEVIEW BAPT CH	Tuscaloosa;LAKEVIEW BAPT CH
+ReportingUnit	Alabama;Tuscaloosa County;KELLERMAN ANTIOCH BAPT	Tuscaloosa;KELLERMAN ANTIOCH BAPT
+ReportingUnit	Alabama;Tuscaloosa County;HAGLER COMM CTR	Tuscaloosa;HAGLER COMM CTR
+ReportingUnit	Alabama;Tuscaloosa County;G_G_ HARDIN COMM CTR	Tuscaloosa;G_G_ HARDIN COMM CTR
+ReportingUnit	Alabama;Tuscaloosa County;GRACE PRES_ CHURCH	Tuscaloosa;GRACE PRES_ CHURCH
+ReportingUnit	Alabama;Tuscaloosa County;FOSTERS FIRE DEPT	Tuscaloosa;FOSTERS FIRE DEPT
+ReportingUnit	Alabama;Tuscaloosa County;FOREST LAKE METHODIST	Tuscaloosa;FOREST LAKE METHODIST
+ReportingUnit	Alabama;Tuscaloosa County;FLATWOODS BAPT CH	Tuscaloosa;FLATWOODS BAPT CH
+ReportingUnit	Alabama;Tuscaloosa County;FAUCETT VESTAVIA HILLS ELEM	Tuscaloosa;FAUCETT VESTAVIA HILLS ELEM
+ReportingUnit	Alabama;Tuscaloosa County;ELROD VFD STATION	Tuscaloosa;ELROD VFD STATION
+ReportingUnit	Alabama;Tuscaloosa County;ECHOLA FIRE DEPT	Tuscaloosa;ECHOLA FIRE DEPT
+ReportingUnit	Alabama;Tuscaloosa County;DUNCANVILLE MIDDLE SCH	Tuscaloosa;DUNCANVILLE MIDDLE SCH
+ReportingUnit	Alabama;Tuscaloosa County;COUNTY RD CAMP #3	Tuscaloosa;COUNTY RD CAMP #3
+ReportingUnit	Alabama;Tuscaloosa County;COUNTY CTHS ANNEX	Tuscaloosa;COUNTY CTHS ANNEX
+ReportingUnit	Alabama;Tuscaloosa County;COTTONDALE METHODIST CH	Tuscaloosa;COTTONDALE METHODIST CH
+ReportingUnit	Alabama;Tuscaloosa County;CORNERSTONE BAPT CH	Tuscaloosa;CORNERSTONE BAPT CH
+ReportingUnit	Alabama;Tuscaloosa County;COMM CH COTTONDALE	Tuscaloosa;COMM CH COTTONDALE
+ReportingUnit	Alabama;Tuscaloosa County;COKER FIRE DEPT	Tuscaloosa;COKER FIRE DEPT
+ReportingUnit	Alabama;Tuscaloosa County;COALING TOWN HALL	Tuscaloosa;COALING TOWN HALL
+ReportingUnit	Alabama;Tuscaloosa County;CHAPEL HILL BAPT	Tuscaloosa;CHAPEL HILL BAPT
+ReportingUnit	Alabama;Tuscaloosa County;CH OF THE HIGHLANDS	Tuscaloosa;CH OF THE HIGHLANDS
+ReportingUnit	Alabama;Tuscaloosa County;CARROLLS CRK BAPT CH	Tuscaloosa;CARROLLS CRK BAPT CH
+ReportingUnit	Alabama;Tuscaloosa County;BUHL VFD STATION	Tuscaloosa;BUHL VFD STATION
+ReportingUnit	Alabama;Tuscaloosa County;BOBBY MILLER ACTIVITY	Tuscaloosa;BOBBY MILLER ACTIVITY
+ReportingUnit	Alabama;Tuscaloosa County;BIG SANDY BAPT	Tuscaloosa;BIG SANDY BAPT
+ReportingUnit	Alabama;Tuscaloosa County;BELK ACTIVITY CTR	Tuscaloosa;BELK ACTIVITY CTR
+ReportingUnit	Alabama;Tuscaloosa County;ALBERTA BAPT CH	Tuscaloosa;ALBERTA BAPT CH
+ReportingUnit	Alabama;Tuscaloosa County;ABERNANT BAPT CH	Tuscaloosa;ABERNANT BAPT CH
+ReportingUnit	Alabama;Tallapoosa County;WALL STREET COMM CTR	Tallapoosa;WALL STREET COMM CTR
+ReportingUnit	Alabama;Tallapoosa County;UNION COMM BUILDING	Tallapoosa;UNION COMM BUILDING
+ReportingUnit	Alabama;Tallapoosa County;TALLASSEE CITY HALL	Tallapoosa;TALLASSEE CITY HALL
+ReportingUnit	Alabama;Tallapoosa County;SARDIS COMM BUILDING	Tallapoosa;SARDIS COMM BUILDING
+ReportingUnit	Alabama;Tallapoosa County;ROCKY CREEK BAPTIST CH	Tallapoosa;ROCKY CREEK BAPTIST CH
+ReportingUnit	Alabama;Tallapoosa County;REELTOWN FIRE DEPT_	Tallapoosa;REELTOWN FIRE DEPT_
+ReportingUnit	Alabama;Tallapoosa County;PENTECOST U_M_C_	Tallapoosa;PENTECOST U_M_C_
+ReportingUnit	Alabama;Tallapoosa County;OURTOWN V_F_D_	Tallapoosa;OURTOWN V_F_D_
+ReportingUnit	Alabama;Tallapoosa County;NEW SITE TOWN HALL	Tallapoosa;NEW SITE TOWN HALL
+ReportingUnit	Alabama;Tallapoosa County;NEW PACES PT_ V_F_D_	Tallapoosa;NEW PACES PT_ V_F_D_
+ReportingUnit	Alabama;Tallapoosa County;MT_ LOVELY BAPT CH	Tallapoosa;MT_ LOVELY BAPT CH
+ReportingUnit	Alabama;Tallapoosa County;MONCRIEF	Tallapoosa;MONCRIEF
+ReportingUnit	Alabama;Tallapoosa County;MARY'S CROSS ROADS V_ H_	Tallapoosa;MARY'S CROSS ROADS V_ H_
+ReportingUnit	Alabama;Tallapoosa County;MANOY V_ H_	Tallapoosa;MANOY V_ H_
+ReportingUnit	Alabama;Tallapoosa County;JACKSONS GAP V_F_D_	Tallapoosa;JACKSONS GAP V_F_D_
+ReportingUnit	Alabama;Tallapoosa County;HILLABEE BAPTIST CH	Tallapoosa;HILLABEE BAPTIST CH
+ReportingUnit	Alabama;Tallapoosa County;HACKNEYVILLE COMM CTR	Tallapoosa;HACKNEYVILLE COMM CTR
+ReportingUnit	Alabama;Tallapoosa County;FELLOWSHIP BAPT CH	Tallapoosa;FELLOWSHIP BAPT CH
+ReportingUnit	Alabama;Tallapoosa County;EAGLE CREEK V_ H_	Tallapoosa;EAGLE CREEK V_ H_
+ReportingUnit	Alabama;Tallapoosa County;DUNCAN MEMORIAL COMM CTR	Tallapoosa;DUNCAN MEMORIAL COMM CTR
+ReportingUnit	Alabama;Tallapoosa County;DAVISTON COMM CTR	Tallapoosa;DAVISTON COMM CTR
+ReportingUnit	Alabama;Tallapoosa County;DADEVILLE REC CTR	Tallapoosa;DADEVILLE REC CTR
+ReportingUnit	Alabama;Tallapoosa County;COOPER COMM CTR	Tallapoosa;COOPER COMM CTR
+ReportingUnit	Alabama;Tallapoosa County;ALEX CITY NATIONAL GUARD	Tallapoosa;ALEX CITY NATIONAL GUARD
+ReportingUnit	Alabama;Tallapoosa County;ALEX CITY FIRE LAKE HILL	Tallapoosa;ALEX CITY FIRE LAKE HILL
+ReportingUnit	Alabama;Tallapoosa County;A/C HOU AUTH Y&A SERVICE	Tallapoosa;A/C HOU AUTH Y&A SERVICE
+ReportingUnit	Alabama;Talladega County;WINTERBORO OLD HIGH SCH GYM	Talladega;WINTERBORO OLD HIGH SCH GYM
+ReportingUnit	Alabama;Talladega County;WALDO CITY HALL	Talladega;WALDO CITY HALL
+ReportingUnit	Alabama;Talladega County;TALLADEGA CENTRAL HS GYM	Talladega;TALLADEGA CENTRAL HS GYM
+ReportingUnit	Alabama;Talladega County;SYCAMORE NUTRITION CTR	Talladega;SYCAMORE NUTRITION CTR
+ReportingUnit	Alabama;Talladega County;STEMLEY VFD	Talladega;STEMLEY VFD
+ReportingUnit	Alabama;Talladega County;ST ANDREWS METHODIST	Talladega;ST ANDREWS METHODIST
+ReportingUnit	Alabama;Talladega County;SPRING ST COMM CTR	Talladega;SPRING ST COMM CTR
+ReportingUnit	Alabama;Talladega County;RENFROE VFD	Talladega;RENFROE VFD
+ReportingUnit	Alabama;Talladega County;OAK GROVE CITY HALL	Talladega;OAK GROVE CITY HALL
+ReportingUnit	Alabama;Talladega County;MUNFORD OLD HS GYM	Talladega;MUNFORD OLD HS GYM
+ReportingUnit	Alabama;Talladega County;MABRA CTR	Talladega;MABRA CTR
+ReportingUnit	Alabama;Talladega County;LINCOLN OLD HS GYM	Talladega;LINCOLN OLD HS GYM
+ReportingUnit	Alabama;Talladega County;LIMBAUGH COMM CTR	Talladega;LIMBAUGH COMM CTR
+ReportingUnit	Alabama;Talladega County;LAY LAKE VFD	Talladega;LAY LAKE VFD
+ReportingUnit	Alabama;Talladega County;KINGSTON BAPT CH	Talladega;KINGSTON BAPT CH
+ReportingUnit	Alabama;Talladega County;J CRAIG SMITH COMM CTR	Talladega;J CRAIG SMITH COMM CTR
+ReportingUnit	Alabama;Talladega County;IRONATON VFD	Talladega;IRONATON VFD
+ReportingUnit	Alabama;Talladega County;FAYETTEVILLE UNITED METHODIST	Talladega;FAYETTEVILLE UNITED METHODIST
+ReportingUnit	Alabama;Talladega County;EASTABOGA BAPTIST CH	Talladega;EASTABOGA BAPTIST CH
+ReportingUnit	Alabama;Talladega County;COUNTY LINE VFD	Talladega;COUNTY LINE VFD
+ReportingUnit	Alabama;Talladega County;BRECON REC CTR	Talladega;BRECON REC CTR
+ReportingUnit	Alabama;Talladega County;BON AIR BAPTIST CH	Talladega;BON AIR BAPTIST CH
+ReportingUnit	Alabama;Talladega County;BETHEL BAPT CH	Talladega;BETHEL BAPT CH
+ReportingUnit	Alabama;Talladega County;BERNEYS STATION VFD	Talladega;BERNEYS STATION VFD
+ReportingUnit	Alabama;Talladega County;BEMISTON REC CTR	Talladega;BEMISTON REC CTR
+ReportingUnit	Alabama;Talladega County;ANTIOCH BAPT CH	Talladega;ANTIOCH BAPT CH
+ReportingUnit	Alabama;Sumter County;YORK SUMTER RESCUE	Sumter;YORK SUMTER RESCUE
+ReportingUnit	Alabama;Sumter County;WHITFIELD TRAILER	Sumter;WHITFIELD TRAILER
+ReportingUnit	Alabama;Sumter County;WARD COMMUNITY CTR	Sumter;WARD COMMUNITY CTR
+ReportingUnit	Alabama;Sumter County;PANOLA TRAILER	Sumter;PANOLA TRAILER
+ReportingUnit	Alabama;Sumter County;LIVINGSTON CIVIC CTR	Sumter;LIVINGSTON CIVIC CTR
+ReportingUnit	Alabama;Sumter County;GEIGER TOWN HALL	Sumter;GEIGER TOWN HALL
+ReportingUnit	Alabama;Sumter County;GAINESVILLE COMMUNITY CTR	Sumter;GAINESVILLE COMMUNITY CTR
+ReportingUnit	Alabama;Sumter County;EPES COMMUNITY CTR	Sumter;EPES COMMUNITY CTR
+ReportingUnit	Alabama;Sumter County;EMELLE SUMTER TOWN HALL	Sumter;EMELLE SUMTER TOWN HALL
+ReportingUnit	Alabama;Sumter County;CUBA COMMUNITY CTR	Sumter;CUBA COMMUNITY CTR
+ReportingUnit	Alabama;Sumter County;COATOPA BEL FIRE DEPT	Sumter;COATOPA BEL FIRE DEPT
+ReportingUnit	Alabama;Sumter County;BOYD TRAILER	Sumter;BOYD TRAILER
+ReportingUnit	Alabama;Sumter County;BELLAMY COMMUNITY CTR	Sumter;BELLAMY COMMUNITY CTR
+ReportingUnit	Alabama;StClair County;WOLF CREEK VFD	StClair;WOLF CREEK VFD
+ReportingUnit	Alabama;StClair County;WHITES CHAPEL TOWN HALL	StClair;WHITES CHAPEL TOWN HALL
+ReportingUnit	Alabama;StClair County;WATTSVILLE VFD	StClair;WATTSVILLE VFD
+ReportingUnit	Alabama;StClair County;STEELE COMM_ CTR_	StClair;STEELE COMM_ CTR_
+ReportingUnit	Alabama;StClair County;SPRINGVILLE 1ST UNITED	StClair;SPRINGVILLE 1ST UNITED
+ReportingUnit	Alabama;StClair County;SLATE UNION CH	StClair;SLATE UNION CH
+ReportingUnit	Alabama;StClair County;SHOAL CREEK COMM_ CTR_	StClair;SHOAL CREEK COMM_ CTR_
+ReportingUnit	Alabama;StClair County;RIVERSIDE TOWN HALL	StClair;RIVERSIDE TOWN HALL
+ReportingUnit	Alabama;StClair County;RAGLAND TOWN HALL	StClair;RAGLAND TOWN HALL
+ReportingUnit	Alabama;StClair County;PRESCOTT BAPTIST CH	StClair;PRESCOTT BAPTIST CH
+ReportingUnit	Alabama;StClair County;POPLAR SPRGS CH	StClair;POPLAR SPRGS CH
+ReportingUnit	Alabama;StClair County;PINEDALE VFD	StClair;PINEDALE VFD
+ReportingUnit	Alabama;StClair County;PELL CITY COMM_ CTR_	StClair;PELL CITY COMM_ CTR_
+ReportingUnit	Alabama;StClair County;ODENVILLE CIVIC CTR_	StClair;ODENVILLE CIVIC CTR_
+ReportingUnit	Alabama;StClair County;NORTH VALLEY CH	StClair;NORTH VALLEY CH
+ReportingUnit	Alabama;StClair County;NEW LONDON VFD	StClair;NEW LONDON VFD
+ReportingUnit	Alabama;StClair County;NEW HOPE BAPTIST CH	StClair;NEW HOPE BAPTIST CH
+ReportingUnit	Alabama;StClair County;MOODY CIVIC CTR_	StClair;MOODY CIVIC CTR_
+ReportingUnit	Alabama;StClair County;GUM SPRGS CH	StClair;GUM SPRGS CH
+ReportingUnit	Alabama;StClair County;GALLANT VFD	StClair;GALLANT VFD
+ReportingUnit	Alabama;StClair County;FRIENDSHIP BAPTIST CH	StClair;FRIENDSHIP BAPTIST CH
+ReportingUnit	Alabama;StClair County;FAIRVIEW CH	StClair;FAIRVIEW CH
+ReportingUnit	Alabama;StClair County;CROPWELL BAPTIST CH	StClair;CROPWELL BAPTIST CH
+ReportingUnit	Alabama;StClair County;COOK SPRGS VFD	StClair;COOK SPRGS VFD
+ReportingUnit	Alabama;StClair County;CHANDLER MT_ COMM_ CTR_	StClair;CHANDLER MT_ COMM_ CTR_
+ReportingUnit	Alabama;StClair County;CELEBRATIONS	StClair;CELEBRATIONS
+ReportingUnit	Alabama;StClair County;CEDAR GROVE BAPTIST CH	StClair;CEDAR GROVE BAPTIST CH
+ReportingUnit	Alabama;StClair County;BRANCHVILLE CUMBERLAND	StClair;BRANCHVILLE CUMBERLAND
+ReportingUnit	Alabama;StClair County;ASHVILLE CITY HALL	StClair;ASHVILLE CITY HALL
+ReportingUnit	Alabama;StClair County;ARGO TOWN HALL	StClair;ARGO TOWN HALL
+ReportingUnit	Alabama;Shelby County;WILSONVILLE UN METHODIST	Shelby;WILSONVILLE UN METHODIST
+ReportingUnit	Alabama;Shelby County;VINCENT REVIVAL CTR_	Shelby;VINCENT REVIVAL CTR_
+ReportingUnit	Alabama;Shelby County;VANDIVER SR_ CTR_	Shelby;VANDIVER SR_ CTR_
+ReportingUnit	Alabama;Shelby County;VALLEYDALE BAPTIST	Shelby;VALLEYDALE BAPTIST
+ReportingUnit	Alabama;Shelby County;TURNER HOLLIS LEGION	Shelby;TURNER HOLLIS LEGION
+ReportingUnit	Alabama;Shelby County;STEWART STUDENT RETREAT	Shelby;STEWART STUDENT RETREAT
+ReportingUnit	Alabama;Shelby County;SOUTHCREST BAPTIST CH	Shelby;SOUTHCREST BAPTIST CH
+ReportingUnit	Alabama;Shelby County;SHOAL CREEK TOWN HALL	Shelby;SHOAL CREEK TOWN HALL
+ReportingUnit	Alabama;Shelby County;SHELBY IRON WORKS	Shelby;SHELBY IRON WORKS
+ReportingUnit	Alabama;Shelby County;ROY DOWNS MEMORIAL	Shelby;ROY DOWNS MEMORIAL
+ReportingUnit	Alabama;Shelby County;RIVERCHASE CHURCH CHRIST	Shelby;RIVERCHASE CHURCH CHRIST
+ReportingUnit	Alabama;Shelby County;RIVERCHASE BAPTIST	Shelby;RIVERCHASE BAPTIST
+ReportingUnit	Alabama;Shelby County;RESTORE-1ST UN METHODIST	Shelby;RESTORE-1ST UN METHODIST
+ReportingUnit	Alabama;Shelby County;PELHAM PARK & REC_ CTR_	Shelby;PELHAM PARK & REC_ CTR_
+ReportingUnit	Alabama;Shelby County;PELHAM CIVIC COMPLEX	Shelby;PELHAM CIVIC COMPLEX
+ReportingUnit	Alabama;Shelby County;PEA RIDGE COMM_ CTR_	Shelby;PEA RIDGE COMM_ CTR_
+ReportingUnit	Alabama;Shelby County;NORTH SHELBY BAPTIST	Shelby;NORTH SHELBY BAPTIST
+ReportingUnit	Alabama;Shelby County;NEW LIFE ASSEMBLY GOD	Shelby;NEW LIFE ASSEMBLY GOD
+ReportingUnit	Alabama;Shelby County;NEW HOPE CUMBERLAND	Shelby;NEW HOPE CUMBERLAND
+ReportingUnit	Alabama;Shelby County;MONTEVALLO PARK & REC_	Shelby;MONTEVALLO PARK & REC_
+ReportingUnit	Alabama;Shelby County;MEADOWBROOK BAPTIST	Shelby;MEADOWBROOK BAPTIST
+ReportingUnit	Alabama;Shelby County;HOOVER FIRE STA_ #8	Shelby;HOOVER FIRE STA_ #8
+ReportingUnit	Alabama;Shelby County;HELENA COMM_ CTR_	Shelby;HELENA COMM_ CTR_
+ReportingUnit	Alabama;Shelby County;HARPERSVILLE COMM_ CTR_	Shelby;HARPERSVILLE COMM_ CTR_
+ReportingUnit	Alabama;Shelby County;GREYSTONE FARMS CLUB	Shelby;GREYSTONE FARMS CLUB
+ReportingUnit	Alabama;Shelby County;FOURMILE FIRE/RESCUE	Shelby;FOURMILE FIRE/RESCUE
+ReportingUnit	Alabama;Shelby County;FAITH PRESBY_ CH	Shelby;FAITH PRESBY_ CH
+ReportingUnit	Alabama;Shelby County;EVANGEL PRESBY_ CH	Shelby;EVANGEL PRESBY_ CH
+ReportingUnit	Alabama;Shelby County;DUNNAVANT COMM_ CTR_	Shelby;DUNNAVANT COMM_ CTR_
+ReportingUnit	Alabama;Shelby County;CONCORD BAPTIST CH	Shelby;CONCORD BAPTIST CH
+ReportingUnit	Alabama;Shelby County;COLUMBIANA REC_ BLDG_	Shelby;COLUMBIANA REC_ BLDG_
+ReportingUnit	Alabama;Shelby County;CHURCH OF JESUS CHRIST	Shelby;CHURCH OF JESUS CHRIST
+ReportingUnit	Alabama;Shelby County;CHURCH AT BROOKHILLS	Shelby;CHURCH AT BROOKHILLS
+ReportingUnit	Alabama;Shelby County;CHRIST UN METHODIST	Shelby;CHRIST UN METHODIST
+ReportingUnit	Alabama;Shelby County;CHELSEA COMM_ CTR_	Shelby;CHELSEA COMM_ CTR_
+ReportingUnit	Alabama;Shelby County;CHELSEA CHURCH OF GOD	Shelby;CHELSEA CHURCH OF GOD
+ReportingUnit	Alabama;Shelby County;CAMP BRANCH CIVIC CTR_	Shelby;CAMP BRANCH CIVIC CTR_
+ReportingUnit	Alabama;Shelby County;BLACKWATCH SPORTS	Shelby;BLACKWATCH SPORTS
+ReportingUnit	Alabama;Shelby County;BAY SPRINGS BAPTIST	Shelby;BAY SPRINGS BAPTIST
+ReportingUnit	Alabama;Shelby County;ASBURY UN METHODIST	Shelby;ASBURY UN METHODIST
+ReportingUnit	Alabama;Shelby County;ALABASTER LIBERTY BAPTIST	Shelby;ALABASTER LIBERTY BAPTIST
+ReportingUnit	Alabama;Shelby County;1ST PRESBY_ CH	Shelby;1ST PRESBY_ CH
+ReportingUnit	Alabama;Shelby County;1ST CHRISTIAN CH	Shelby;1ST CHRISTIAN CH
+ReportingUnit	Alabama;Russell County;SPENCER REC CTR	Russell;SPENCER REC CTR
+ReportingUnit	Alabama;Russell County;RUSSELL COUNTY C_H_	Russell;RUSSELL COUNTY C_H_
+ReportingUnit	Alabama;Russell County;ROY MARTIN CTR	Russell;ROY MARTIN CTR
+ReportingUnit	Alabama;Russell County;PITTSVIEW FIRE	Russell;PITTSVIEW FIRE
+ReportingUnit	Alabama;Russell County;OLD SEALE C_H_	Russell;OLD SEALE C_H_
+ReportingUnit	Alabama;Russell County;LADONIA VFD	Russell;LADONIA VFD
+ReportingUnit	Alabama;Russell County;HATCHECHUBBEE FIRE	Russell;HATCHECHUBBEE FIRE
+ReportingUnit	Alabama;Russell County;GOLDEN ACRES BAPT	Russell;GOLDEN ACRES BAPT
+ReportingUnit	Alabama;Russell County;FT_ MITCHELL COMM CTR	Russell;FT_ MITCHELL COMM CTR
+ReportingUnit	Alabama;Russell County;FIRE DEPT HURTSBORO	Russell;FIRE DEPT HURTSBORO
+ReportingUnit	Alabama;Russell County;DIXIE VFD	Russell;DIXIE VFD
+ReportingUnit	Alabama;Russell County;CVC	Russell;CVC
+ReportingUnit	Alabama;Russell County;CRAWFORD VFD	Russell;CRAWFORD VFD
+ReportingUnit	Alabama;Russell County;COTTONTON FIRE STATION	Russell;COTTONTON FIRE STATION
+ReportingUnit	Alabama;Russell County;CLAUDE PARKMAN BLDG	Russell;CLAUDE PARKMAN BLDG
+ReportingUnit	Alabama;Russell County;CENTRAL ACTIVITES BLDG	Russell;CENTRAL ACTIVITES BLDG
+ReportingUnit	Alabama;Russell County;AUSTIN SUMBRY PARK	Russell;AUSTIN SUMBRY PARK
+ReportingUnit	Alabama;Randolph County;WOODLAND FIRE DEPT	Randolph;WOODLAND FIRE DEPT
+ReportingUnit	Alabama;Randolph County;WILSON STORE	Randolph;WILSON STORE
+ReportingUnit	Alabama;Randolph County;WESLEY CHAPEL	Randolph;WESLEY CHAPEL
+ReportingUnit	Alabama;Randolph County;WEHADKEE	Randolph;WEHADKEE
+ReportingUnit	Alabama;Randolph County;WEDOWEE CITY HALL 2	Randolph;WEDOWEE CITY HALL 2
+ReportingUnit	Alabama;Randolph County;WEDOWEE CITY HALL 1	Randolph;WEDOWEE CITY HALL 1
+ReportingUnit	Alabama;Randolph County;WADLEY	Randolph;WADLEY
+ReportingUnit	Alabama;Randolph County;TIN SHOP	Randolph;TIN SHOP
+ReportingUnit	Alabama;Randolph County;SWAGG	Randolph;SWAGG
+ReportingUnit	Alabama;Randolph County;ROCK MILLS	Randolph;ROCK MILLS
+ReportingUnit	Alabama;Randolph County;PINE HILL	Randolph;PINE HILL
+ReportingUnit	Alabama;Randolph County;OPHELIA	Randolph;OPHELIA
+ReportingUnit	Alabama;Randolph County;OMAHA	Randolph;OMAHA
+ReportingUnit	Alabama;Randolph County;NEW HOPE	Randolph;NEW HOPE
+ReportingUnit	Alabama;Randolph County;NATIONAL GUARD ARMORY 3	Randolph;NATIONAL GUARD ARMORY 3
+ReportingUnit	Alabama;Randolph County;NATIONAL GUARD ARMORY 2	Randolph;NATIONAL GUARD ARMORY 2
+ReportingUnit	Alabama;Randolph County;NATIONAL GUARD ARMORY 1	Randolph;NATIONAL GUARD ARMORY 1
+ReportingUnit	Alabama;Randolph County;MORRISON XR FD	Randolph;MORRISON XR FD
+ReportingUnit	Alabama;Randolph County;MOORES STORE	Randolph;MOORES STORE
+ReportingUnit	Alabama;Randolph County;MIDWAY	Randolph;MIDWAY
+ReportingUnit	Alabama;Randolph County;LEVEL ROAD	Randolph;LEVEL ROAD
+ReportingUnit	Alabama;Randolph County;GRAHAM	Randolph;GRAHAM
+ReportingUnit	Alabama;Randolph County;CORINTH	Randolph;CORINTH
+ReportingUnit	Alabama;Randolph County;CAVERS GROVE	Randolph;CAVERS GROVE
+ReportingUnit	Alabama;Randolph County;BETHEL	Randolph;BETHEL
+ReportingUnit	Alabama;Randolph County;BACON LEVEL	Randolph;BACON LEVEL
+ReportingUnit	Alabama;Pike County;TROY REC	Pike;TROY REC
+ReportingUnit	Alabama;Pike County;TROY PUBLIC LIBRARY	Pike;TROY PUBLIC LIBRARY
+ReportingUnit	Alabama;Pike County;TENNILLE METHODIST CH	Pike;TENNILLE METHODIST CH
+ReportingUnit	Alabama;Pike County;TARENTUM COMM CLUB	Pike;TARENTUM COMM CLUB
+ReportingUnit	Alabama;Pike County;SWEET PILGRIM CH	Pike;SWEET PILGRIM CH
+ReportingUnit	Alabama;Pike County;SPRINGHILL VFD	Pike;SPRINGHILL VFD
+ReportingUnit	Alabama;Pike County;SPRINGHILL HOUSING	Pike;SPRINGHILL HOUSING
+ReportingUnit	Alabama;Pike County;SACO VOTING CTR #2	Pike;SACO VOTING CTR #2
+ReportingUnit	Alabama;Pike County;SACO VFD	Pike;SACO VFD
+ReportingUnit	Alabama;Pike County;RURAL HOME CO BLDG	Pike;RURAL HOME CO BLDG
+ReportingUnit	Alabama;Pike County;PIKE CO COURTHOUSE	Pike;PIKE CO COURTHOUSE
+ReportingUnit	Alabama;Pike County;OAK BOWERY CH OF CHRIST	Pike;OAK BOWERY CH OF CHRIST
+ReportingUnit	Alabama;Pike County;MEEKSVILLE VFD	Pike;MEEKSVILLE VFD
+ReportingUnit	Alabama;Pike County;LITTLE OAK SCOTT FARMS BLDG	Pike;LITTLE OAK SCOTT FARMS BLDG
+ReportingUnit	Alabama;Pike County;JOSIE CO BLDG	Pike;JOSIE CO BLDG
+ReportingUnit	Alabama;Pike County;HENDERSON VOTING CTR #2	Pike;HENDERSON VOTING CTR #2
+ReportingUnit	Alabama;Pike County;HENDERSON VOTING CTR #1	Pike;HENDERSON VOTING CTR #1
+ReportingUnit	Alabama;Pike County;HAMILTON CROSS ROADS	Pike;HAMILTON CROSS ROADS
+ReportingUnit	Alabama;Pike County;GOSHEN TOWN HALL	Pike;GOSHEN TOWN HALL
+ReportingUnit	Alabama;Pike County;GOLDEN SATELLITE BLDG	Pike;GOLDEN SATELLITE BLDG
+ReportingUnit	Alabama;Pike County;GALLOWAY RD COMM CTR	Pike;GALLOWAY RD COMM CTR
+ReportingUnit	Alabama;Pike County;FIRST BAPT CH	Pike;FIRST BAPT CH
+ReportingUnit	Alabama;Pike County;ENON CO BLDG	Pike;ENON CO BLDG
+ReportingUnit	Alabama;Pike County;EBENEZER VOTING CTR #2	Pike;EBENEZER VOTING CTR #2
+ReportingUnit	Alabama;Pike County;EBENEZER VOTING CTR	Pike;EBENEZER VOTING CTR
+ReportingUnit	Alabama;Pike County;DUNN'S VOTING CTR #2	Pike;DUNN'S VOTING CTR #2
+ReportingUnit	Alabama;Pike County;DUNN'S VOTING CTR #1	Pike;DUNN'S VOTING CTR #1
+ReportingUnit	Alabama;Pike County;COLLEGEDALE CH OF CHRIST	Pike;COLLEGEDALE CH OF CHRIST
+ReportingUnit	Alabama;Pike County;CHINA GROVE	Pike;CHINA GROVE
+ReportingUnit	Alabama;Pike County;BRUNDIDGE STATION	Pike;BRUNDIDGE STATION
+ReportingUnit	Alabama;Pike County;BANKS VOTING CTR #2	Pike;BANKS VOTING CTR #2
+ReportingUnit	Alabama;Pike County;BANKS VOTING CTR #1	Pike;BANKS VOTING CTR #1
+ReportingUnit	Alabama;Pike County;ANTIOCH CH OF CHRIST	Pike;ANTIOCH CH OF CHRIST
+ReportingUnit	Alabama;Pickens County;SPRING HILL	Pickens;SPRING HILL
+ReportingUnit	Alabama;Pickens County;SAPPS	Pickens;SAPPS
+ReportingUnit	Alabama;Pickens County;REFORM	Pickens;REFORM
+ReportingUnit	Alabama;Pickens County;PINE GROVE	Pickens;PINE GROVE
+ReportingUnit	Alabama;Pickens County;PICKENSVILLE	Pickens;PICKENSVILLE
+ReportingUnit	Alabama;Pickens County;PALMETTO	Pickens;PALMETTO
+ReportingUnit	Alabama;Pickens County;MCSHAN	Pickens;MCSHAN
+ReportingUnit	Alabama;Pickens County;MACEDONIA	Pickens;MACEDONIA
+ReportingUnit	Alabama;Pickens County;LIBERTY	Pickens;LIBERTY
+ReportingUnit	Alabama;Pickens County;KIRK	Pickens;KIRK
+ReportingUnit	Alabama;Pickens County;GORDO	Pickens;GORDO
+ReportingUnit	Alabama;Pickens County;FORREST	Pickens;FORREST
+ReportingUnit	Alabama;Pickens County;FAIRVIEW / ZION	Pickens;FAIRVIEW / ZION
+ReportingUnit	Alabama;Pickens County;ETHELSVILLE	Pickens;ETHELSVILLE
+ReportingUnit	Alabama;Pickens County;COCHRANE / DANCY	Pickens;COCHRANE / DANCY
+ReportingUnit	Alabama;Pickens County;CARROLLTON / SPEEDS MILL	Pickens;CARROLLTON / SPEEDS MILL
+ReportingUnit	Alabama;Pickens County;BETHLEHEM	Pickens;BETHLEHEM
+ReportingUnit	Alabama;Pickens County;BENEVOLA	Pickens;BENEVOLA
+ReportingUnit	Alabama;Pickens County;ALICEVILLE	Pickens;ALICEVILLE
+ReportingUnit	Alabama;Perry County;WEST PERRY	Perry;WEST PERRY
+ReportingUnit	Alabama;Perry County;UNIONTOWN CITY HALL	Perry;UNIONTOWN CITY HALL
+ReportingUnit	Alabama;Perry County;SEVERE	Perry;SEVERE
+ReportingUnit	Alabama;Perry County;RADFORDVILLE	Perry;RADFORDVILLE
+ReportingUnit	Alabama;Perry County;OFS FIRE STATION	Perry;OFS FIRE STATION
+ReportingUnit	Alabama;Perry County;NORTH PERRY	Perry;NORTH PERRY
+ReportingUnit	Alabama;Perry County;HINTON HALL	Perry;HINTON HALL
+ReportingUnit	Alabama;Perry County;HEIBERGER	Perry;HEIBERGER
+ReportingUnit	Alabama;Perry County;HAMBURG VFD	Perry;HAMBURG VFD
+ReportingUnit	Alabama;Perry County;EAST PERRY	Perry;EAST PERRY
+ReportingUnit	Alabama;Perry County;COMMUNITY LIFE BLDG	Perry;COMMUNITY LIFE BLDG
+ReportingUnit	Alabama;Perry County;ARMORY	Perry;ARMORY
+ReportingUnit	Alabama;Morgan County;WESTMEADE BAPT CH	Morgan;WESTMEADE BAPT CH
+ReportingUnit	Alabama;Morgan County;W MORGAN E LAWRENCE W&S	Morgan;W MORGAN E LAWRENCE W&S
+ReportingUnit	Alabama;Morgan County;UNION HILL SR CTR	Morgan;UNION HILL SR CTR
+ReportingUnit	Alabama;Morgan County;T_C_ ALMON REC CTR	Morgan;T_C_ ALMON REC CTR
+ReportingUnit	Alabama;Morgan County;TURNER SURLES COMM CTR	Morgan;TURNER SURLES COMM CTR
+ReportingUnit	Alabama;Morgan County;TRINITY MUN BLDG	Morgan;TRINITY MUN BLDG
+ReportingUnit	Alabama;Morgan County;TRI-COUNTY VFD	Morgan;TRI-COUNTY VFD
+ReportingUnit	Alabama;Morgan County;S_A_V_E_S_ FIRE DEPT #1	Morgan;S_A_V_E_S_ FIRE DEPT #1
+ReportingUnit	Alabama;Morgan County;PRICEVILLE MUN BLDG	Morgan;PRICEVILLE MUN BLDG
+ReportingUnit	Alabama;Morgan County;ODEN RIDGE FIRE DEPT	Morgan;ODEN RIDGE FIRE DEPT
+ReportingUnit	Alabama;Morgan County;NEW CTR BAPT CH	Morgan;NEW CTR BAPT CH
+ReportingUnit	Alabama;Morgan County;NEEL UNITED METHODIST CH	Morgan;NEEL UNITED METHODIST CH
+ReportingUnit	Alabama;Morgan County;MASSEY FIRE STATION #1	Morgan;MASSEY FIRE STATION #1
+ReportingUnit	Alabama;Morgan County;MACEDONIA C P CH	Morgan;MACEDONIA C P CH
+ReportingUnit	Alabama;Morgan County;LEBANON BAPT CH	Morgan;LEBANON BAPT CH
+ReportingUnit	Alabama;Morgan County;LACEY'S SPRING SR CTR	Morgan;LACEY'S SPRING SR CTR
+ReportingUnit	Alabama;Morgan County;JOHN J SPARKMAN CIVIC	Morgan;JOHN J SPARKMAN CIVIC
+ReportingUnit	Alabama;Morgan County;GUM POND FIRE STATION	Morgan;GUM POND FIRE STATION
+ReportingUnit	Alabama;Morgan County;FORT DECATUR REC	Morgan;FORT DECATUR REC
+ReportingUnit	Alabama;Morgan County;FLORETTE VFD	Morgan;FLORETTE VFD
+ReportingUnit	Alabama;Morgan County;FIRST BIBLE CH	Morgan;FIRST BIBLE CH
+ReportingUnit	Alabama;Morgan County;FALKVILLE MUN BLDG	Morgan;FALKVILLE MUN BLDG
+ReportingUnit	Alabama;Morgan County;EVA TOWN HALL	Morgan;EVA TOWN HALL
+ReportingUnit	Alabama;Morgan County;EPIC CH	Morgan;EPIC CH
+ReportingUnit	Alabama;Morgan County;DECATUR UTILITIES	Morgan;DECATUR UTILITIES
+ReportingUnit	Alabama;Morgan County;DECATUR FIRE RESCUE #8	Morgan;DECATUR FIRE RESCUE #8
+ReportingUnit	Alabama;Morgan County;DECATUR FIRE (OLD FLINT)	Morgan;DECATUR FIRE (OLD FLINT)
+ReportingUnit	Alabama;Morgan County;DECATUR CH OF CHRIST	Morgan;DECATUR CH OF CHRIST
+ReportingUnit	Alabama;Morgan County;DECATUR BAPT CH	Morgan;DECATUR BAPT CH
+ReportingUnit	Alabama;Morgan County;DANVILLE VFD	Morgan;DANVILLE VFD
+ReportingUnit	Alabama;Morgan County;CTR SPRINGS METHODIST CH	Morgan;CTR SPRINGS METHODIST CH
+ReportingUnit	Alabama;Morgan County;COUNTY DISTRICT 3 VOTING	Morgan;COUNTY DISTRICT 3 VOTING
+ReportingUnit	Alabama;Morgan County;COUNTY COURTHOUSE	Morgan;COUNTY COURTHOUSE
+ReportingUnit	Alabama;Morgan County;COTACO FIRE STATION	Morgan;COTACO FIRE STATION
+ReportingUnit	Alabama;Morgan County;CARRIE MATTHEWS REC CTR	Morgan;CARRIE MATTHEWS REC CTR
+ReportingUnit	Alabama;Morgan County;AQUADOME REC CTR	Morgan;AQUADOME REC CTR
+ReportingUnit	Alabama;Morgan County;AMER LEGION BLDG POST 15	Morgan;AMER LEGION BLDG POST 15
+ReportingUnit	Alabama;Morgan County;1ST BAPT CH HARTSELLE	Morgan;1ST BAPT CH HARTSELLE
+ReportingUnit	Alabama;Morgan County;1ST BAPT AUSTINVILLE	Morgan;1ST BAPT AUSTINVILLE
+Montgomery;ABSENTEE
+ReportingUnit	Alabama;Montgomery County;512 ST JAMES METHODIST	Montgomery;512 ST JAMES METHODIST
+ReportingUnit	Alabama;Montgomery County;511 ARROWHEAD CC	Montgomery;511 ARROWHEAD CC
+ReportingUnit	Alabama;Montgomery County;510 G_ WASHINGTON SC	Montgomery;510 G_ WASHINGTON SC
+ReportingUnit	Alabama;Montgomery County;509 WOODLAND UN METHODIST	Montgomery;509 WOODLAND UN METHODIST
+ReportingUnit	Alabama;Montgomery County;508 PINE LEVEL SO MO VFD	Montgomery;508 PINE LEVEL SO MO VFD
+ReportingUnit	Alabama;Montgomery County;507 DUBLIN SO MO VFD	Montgomery;507 DUBLIN SO MO VFD
+ReportingUnit	Alabama;Montgomery County;506 DAVIS CROSSROADS	Montgomery;506 DAVIS CROSSROADS
+ReportingUnit	Alabama;Montgomery County;505 COVENANT MINISTRIES INTERN	Montgomery;505 COVENANT MINISTRIES INTERN
+ReportingUnit	Alabama;Montgomery County;504 RAMER PUBLIC LIBRARY	Montgomery;504 RAMER PUBLIC LIBRARY
+ReportingUnit	Alabama;Montgomery County;503 LAPINE BAPT CH	Montgomery;503 LAPINE BAPT CH
+ReportingUnit	Alabama;Montgomery County;502 SNOWDOUN WOMEN'S CLUB	Montgomery;502 SNOWDOUN WOMEN'S CLUB
+ReportingUnit	Alabama;Montgomery County;501 1ST CHRISTIAN CH	Montgomery;501 1ST CHRISTIAN CH
+ReportingUnit	Alabama;Montgomery County;413 PASSION CH MONTGOMERY	Montgomery;413 PASSION CH MONTGOMERY
+ReportingUnit	Alabama;Montgomery County;412 UNION CHAPEL AME	Montgomery;412 UNION CHAPEL AME
+ReportingUnit	Alabama;Montgomery County;411 UNION ACADEMY BAPT	Montgomery;411 UNION ACADEMY BAPT
+ReportingUnit	Alabama;Montgomery County;410 SHERIDAN HEIGHTS CTR	Montgomery;410 SHERIDAN HEIGHTS CTR
+ReportingUnit	Alabama;Montgomery County;409 CHISHOLM CC	Montgomery;409 CHISHOLM CC
+ReportingUnit	Alabama;Montgomery County;408 HIGHLAND GARDEN COMM CTR	Montgomery;408 HIGHLAND GARDEN COMM CTR
+ReportingUnit	Alabama;Montgomery County;407 KING HILL COMM CTR	Montgomery;407 KING HILL COMM CTR
+ReportingUnit	Alabama;Montgomery County;406 NEWTOWN COMM CTR	Montgomery;406 NEWTOWN COMM CTR
+ReportingUnit	Alabama;Montgomery County;405 HOUSTON HILLS CC	Montgomery;405 HOUSTON HILLS CC
+ReportingUnit	Alabama;Montgomery County;404 ASU ACADOME	Montgomery;404 ASU ACADOME
+ReportingUnit	Alabama;Montgomery County;403 CLEVELAND AVE YMCA	Montgomery;403 CLEVELAND AVE YMCA
+ReportingUnit	Alabama;Montgomery County;402 MCINTYRE CC	Montgomery;402 MCINTYRE CC
+ReportingUnit	Alabama;Montgomery County;401 ST_ JAMES BAPT CH	Montgomery;401 ST_ JAMES BAPT CH
+ReportingUnit	Alabama;Montgomery County;306 EASTDALE BAPT CH	Montgomery;306 EASTDALE BAPT CH
+ReportingUnit	Alabama;Montgomery County;305 FRAZER METHOIST	Montgomery;305 FRAZER METHOIST
+ReportingUnit	Alabama;Montgomery County;304 LAGOON PARK FIRE	Montgomery;304 LAGOON PARK FIRE
+ReportingUnit	Alabama;Montgomery County;303 EASTMONT BAPT CH	Montgomery;303 EASTMONT BAPT CH
+ReportingUnit	Alabama;Montgomery County;302 EASTERN HILLS BAPT	Montgomery;302 EASTERN HILLS BAPT
+ReportingUnit	Alabama;Montgomery County;301 DALRAIDA CH CHRIST	Montgomery;301 DALRAIDA CH CHRIST
+ReportingUnit	Alabama;Montgomery County;211 RUFUS LEWIS LIBRARY	Montgomery;211 RUFUS LEWIS LIBRARY
+ReportingUnit	Alabama;Montgomery County;210 PINTLALA FIRE	Montgomery;210 PINTLALA FIRE
+ReportingUnit	Alabama;Montgomery County;209 1ST SOUTHERN BAPT	Montgomery;209 1ST SOUTHERN BAPT
+ReportingUnit	Alabama;Montgomery County;208 CATOMA SCH	Montgomery;208 CATOMA SCH
+ReportingUnit	Alabama;Montgomery County;207 HUNTER STATION CC	Montgomery;207 HUNTER STATION CC
+ReportingUnit	Alabama;Montgomery County;206 MACEDONIA MIRACLE	Montgomery;206 MACEDONIA MIRACLE
+ReportingUnit	Alabama;Montgomery County;205 SOUTHLAWN BAPT	Montgomery;205 SOUTHLAWN BAPT
+ReportingUnit	Alabama;Montgomery County;204 AFED CONFERENCE	Montgomery;204 AFED CONFERENCE
+ReportingUnit	Alabama;Montgomery County;203 HAYNEVILLE RD COMM CTR	Montgomery;203 HAYNEVILLE RD COMM CTR
+ReportingUnit	Alabama;Montgomery County;202 BEULAH BAPT CH	Montgomery;202 BEULAH BAPT CH
+ReportingUnit	Alabama;Montgomery County;201 ST PAUL AME CH	Montgomery;201 ST PAUL AME CH
+ReportingUnit	Alabama;Montgomery County;107 TRENHOLM COMM COLLEGE	Montgomery;107 TRENHOLM COMM COLLEGE
+ReportingUnit	Alabama;Montgomery County;106 CITY OF REFUGE CH	Montgomery;106 CITY OF REFUGE CH
+ReportingUnit	Alabama;Montgomery County;105 ALDERSGATE METHODIST	Montgomery;105 ALDERSGATE METHODIST
+ReportingUnit	Alabama;Montgomery County;104 WHITFIELD METHODIST	Montgomery;104 WHITFIELD METHODIST
+ReportingUnit	Alabama;Montgomery County;103 MUSEUM OF FINE ARTS	Montgomery;103 MUSEUM OF FINE ARTS
+ReportingUnit	Alabama;Montgomery County;102 VAUGHN PARK CH	Montgomery;102 VAUGHN PARK CH
+ReportingUnit	Alabama;Montgomery County;101 LEO DRUM THEATER	Montgomery;101 LEO DRUM THEATER
+ReportingUnit	Alabama;Monroe County;WAINWRIGHT FINCHBURG	Monroe;WAINWRIGHT FINCHBURG
+ReportingUnit	Alabama;Monroe County;URIAH FIRE DEPT	Monroe;URIAH FIRE DEPT
+ReportingUnit	Alabama;Monroe County;ST JOHN AME CH	Monroe;ST JOHN AME CH
+ReportingUnit	Alabama;Monroe County;SHILOH MISSIONARY	Monroe;SHILOH MISSIONARY
+ReportingUnit	Alabama;Monroe County;PHIL BC TUNNEL SPRGS	Monroe;PHIL BC TUNNEL SPRGS
+ReportingUnit	Alabama;Monroe County;PETERMAN WATER DEPT	Monroe;PETERMAN WATER DEPT
+ReportingUnit	Alabama;Monroe County;PERDUE HILL MAS_ LODGE	Monroe;PERDUE HILL MAS_ LODGE
+ReportingUnit	Alabama;Monroe County;OLD TEXAS CC SIMPKINS	Monroe;OLD TEXAS CC SIMPKINS
+ReportingUnit	Alabama;Monroe County;OAK GROVE	Monroe;OAK GROVE
+ReportingUnit	Alabama;Monroe County;NEW FRANKLIN FIRE DEPT	Monroe;NEW FRANKLIN FIRE DEPT
+ReportingUnit	Alabama;Monroe County;MONROEVILLE HOUSING	Monroe;MONROEVILLE HOUSING
+ReportingUnit	Alabama;Monroe County;MONROEVILLE FIRE ST	Monroe;MONROEVILLE FIRE ST
+ReportingUnit	Alabama;Monroe County;MONROEVILLE COMM CTR	Monroe;MONROEVILLE COMM CTR
+ReportingUnit	Alabama;Monroe County;MINEOLA METHODIST CH	Monroe;MINEOLA METHODIST CH
+ReportingUnit	Alabama;Monroe County;MEXIA FIRE STATION	Monroe;MEXIA FIRE STATION
+ReportingUnit	Alabama;Monroe County;MEGARGEL ASSEM OF GOD	Monroe;MEGARGEL ASSEM OF GOD
+ReportingUnit	Alabama;Monroe County;LIMESTONE FAULK	Monroe;LIMESTONE FAULK
+ReportingUnit	Alabama;Monroe County;L PEACHTREE PACK BEND	Monroe;L PEACHTREE PACK BEND
+ReportingUnit	Alabama;Monroe County;GOODWAY FIRE DEPT	Monroe;GOODWAY FIRE DEPT
+ReportingUnit	Alabama;Monroe County;FRISCO BAPT CH	Monroe;FRISCO BAPT CH
+ReportingUnit	Alabama;Monroe County;EXCEL ASSEM OF GOD	Monroe;EXCEL ASSEM OF GOD
+ReportingUnit	Alabama;Monroe County;COLEMAN ASSEM OF GOD	Monroe;COLEMAN ASSEM OF GOD
+ReportingUnit	Alabama;Monroe County;CHURCH OF CHRIST	Monroe;CHURCH OF CHRIST
+ReportingUnit	Alabama;Monroe County;CHRYSLER ELISKA	Monroe;CHRYSLER ELISKA
+ReportingUnit	Alabama;Monroe County;BUENA VISTA VRENDEN	Monroe;BUENA VISTA VRENDEN
+ReportingUnit	Alabama;Monroe County;BETHEL BAPT CH	Monroe;BETHEL BAPT CH
+ReportingUnit	Alabama;Monroe County;BETHANY BAPT CH	Monroe;BETHANY BAPT CH
+ReportingUnit	Alabama;Monroe County;BEATRICE TOWN HALL	Monroe;BEATRICE TOWN HALL
+ReportingUnit	Alabama;Monroe County;ANTIOCH BAPT CH	Monroe;ANTIOCH BAPT CH
+ReportingUnit	Alabama;Mobile County;WHISTLER UN METHODIST CH	Mobile;WHISTLER UN METHODIST CH
+ReportingUnit	Alabama;Mobile County;VOLUNTEERS OF AMERICA	Mobile;VOLUNTEERS OF AMERICA
+ReportingUnit	Alabama;Mobile County;VIGOR HIGH SCH	Mobile;VIGOR HIGH SCH
+ReportingUnit	Alabama;Mobile County;VIA_ SENIOR CTR	Mobile;VIA_ SENIOR CTR
+ReportingUnit	Alabama;Mobile County;UNIVERSITY CH OF CHRIST	Mobile;UNIVERSITY CH OF CHRIST
+ReportingUnit	Alabama;Mobile County;UNION BAPTIST CH	Mobile;UNION BAPTIST CH
+ReportingUnit	Alabama;Mobile County;TURNERVILLE BAPTIST CH	Mobile;TURNERVILLE BAPTIST CH
+ReportingUnit	Alabama;Mobile County;TREE OF LIFE CHRISTIAN	Mobile;TREE OF LIFE CHRISTIAN
+ReportingUnit	Alabama;Mobile County;TILLMANS CORNER COMM	Mobile;TILLMANS CORNER COMM
+ReportingUnit	Alabama;Mobile County;THREE CIRCLE CH	Mobile;THREE CIRCLE CH
+ReportingUnit	Alabama;Mobile County;THOMAS SULLIVAN COMM	Mobile;THOMAS SULLIVAN COMM
+ReportingUnit	Alabama;Mobile County;THE RIVER	Mobile;THE RIVER
+ReportingUnit	Alabama;Mobile County;TANNER WILLIAMS ELEM	Mobile;TANNER WILLIAMS ELEM
+ReportingUnit	Alabama;Mobile County;SURGE CH	Mobile;SURGE CH
+ReportingUnit	Alabama;Mobile County;SUNLIGHT AUDITORIUM	Mobile;SUNLIGHT AUDITORIUM
+ReportingUnit	Alabama;Mobile County;ST_ PAUL'S EPISCOPAL CH	Mobile;ST_ PAUL'S EPISCOPAL CH
+ReportingUnit	Alabama;Mobile County;ST_ MICHAELS CATHOLIC	Mobile;ST_ MICHAELS CATHOLIC
+ReportingUnit	Alabama;Mobile County;ST PHILLIP NERI CATHOLIC	Mobile;ST PHILLIP NERI CATHOLIC
+ReportingUnit	Alabama;Mobile County;ST ELMO ELEM	Mobile;ST ELMO ELEM
+ReportingUnit	Alabama;Mobile County;SHELTON BEACH RD BAPTIST	Mobile;SHELTON BEACH RD BAPTIST
+ReportingUnit	Alabama;Mobile County;SEMMES COMM CTR	Mobile;SEMMES COMM CTR
+ReportingUnit	Alabama;Mobile County;SEMMES 1ST BAPTIST CH	Mobile;SEMMES 1ST BAPTIST CH
+ReportingUnit	Alabama;Mobile County;SARALAND CIVIC CTR	Mobile;SARALAND CIVIC CTR
+ReportingUnit	Alabama;Mobile County;ROBERT L_ HOPE COMM CTR	Mobile;ROBERT L_ HOPE COMM CTR
+ReportingUnit	Alabama;Mobile County;ROBBINS ELEM	Mobile;ROBBINS ELEM
+ReportingUnit	Alabama;Mobile County;REVELATION BAPTIST CH	Mobile;REVELATION BAPTIST CH
+ReportingUnit	Alabama;Mobile County;REGENCY CH OF CHRIST	Mobile;REGENCY CH OF CHRIST
+ReportingUnit	Alabama;Mobile County;PHILLIPS PREPARATORY	Mobile;PHILLIPS PREPARATORY
+ReportingUnit	Alabama;Mobile County;PALMER PILLIANS MIDDLE	Mobile;PALMER PILLIANS MIDDLE
+ReportingUnit	Alabama;Mobile County;OUR LADY OF LOURDES CATHOLIC C	Mobile;OUR LADY OF LOURDES CATHOLIC C
+ReportingUnit	Alabama;Mobile County;McDAVID JONES ELEM_	Mobile;McDAVID JONES ELEM_
+ReportingUnit	Alabama;Mobile County;MOFFETT ROAD AOG	Mobile;MOFFETT ROAD AOG
+ReportingUnit	Alabama;Mobile County;MOBILE MUSEUM OF ART	Mobile;MOBILE MUSEUM OF ART
+ReportingUnit	Alabama;Mobile County;MOBILE COMM_ ACTION	Mobile;MOBILE COMM_ ACTION
+ReportingUnit	Alabama;Mobile County;MOBILE CHRISTIAN CH	Mobile;MOBILE CHRISTIAN CH
+ReportingUnit	Alabama;Mobile County;MICHAEL A_ FIGURES COMM	Mobile;MICHAEL A_ FIGURES COMM
+ReportingUnit	Alabama;Mobile County;MEMORIAL BAPTIST CH	Mobile;MEMORIAL BAPTIST CH
+ReportingUnit	Alabama;Mobile County;MEADOWLAKE ELEM	Mobile;MEADOWLAKE ELEM
+ReportingUnit	Alabama;Mobile County;MAGNOLIA SPRINGS CH	Mobile;MAGNOLIA SPRINGS CH
+ReportingUnit	Alabama;Mobile County;LEINKAUF ELEM	Mobile;LEINKAUF ELEM
+ReportingUnit	Alabama;Mobile County;J_E_ TURNER ELEM	Mobile;J_E_ TURNER ELEM
+ReportingUnit	Alabama;Mobile County;J_C_ DAVIS AUDITORIUM	Mobile;J_C_ DAVIS AUDITORIUM
+ReportingUnit	Alabama;Mobile County;JOSEPH DOTCH COMM CTR	Mobile;JOSEPH DOTCH COMM CTR
+ReportingUnit	Alabama;Mobile County;JAMES SEALS JR_ PARK & REC	Mobile;JAMES SEALS JR_ PARK & REC
+ReportingUnit	Alabama;Mobile County;HOPE CHAPEL A_M_E_Z_	Mobile;HOPE CHAPEL A_M_E_Z_
+ReportingUnit	Alabama;Mobile County;HOLY NAME OF JESUS CH	Mobile;HOLY NAME OF JESUS CH
+ReportingUnit	Alabama;Mobile County;HOLLOWAY ELEM	Mobile;HOLLOWAY ELEM
+ReportingUnit	Alabama;Mobile County;HOLLINGERS ISLAND ELEM	Mobile;HOLLINGERS ISLAND ELEM
+ReportingUnit	Alabama;Mobile County;HANK AARON STADIUM	Mobile;HANK AARON STADIUM
+ReportingUnit	Alabama;Mobile County;GRAND BAY MIDDLE SCH	Mobile;GRAND BAY MIDDLE SCH
+ReportingUnit	Alabama;Mobile County;GRACEPOINT CH OF GOD	Mobile;GRACEPOINT CH OF GOD
+ReportingUnit	Alabama;Mobile County;GRACE UN METHODIST	Mobile;GRACE UN METHODIST
+ReportingUnit	Alabama;Mobile County;FRIENDSHIP MISSIONARY	Mobile;FRIENDSHIP MISSIONARY
+ReportingUnit	Alabama;Mobile County;FRIENDSHIP BAPTIST CH	Mobile;FRIENDSHIP BAPTIST CH
+ReportingUnit	Alabama;Mobile County;FOREST HILL ELEM	Mobile;FOREST HILL ELEM
+ReportingUnit	Alabama;Mobile County;E_R_ DICKSON ELEM	Mobile;E_R_ DICKSON ELEM
+ReportingUnit	Alabama;Mobile County;EICHOLD MERTZ	Mobile;EICHOLD MERTZ
+ReportingUnit	Alabama;Mobile County;DODGE ELEM	Mobile;DODGE ELEM
+ReportingUnit	Alabama;Mobile County;DESTINATION CH	Mobile;DESTINATION CH
+ReportingUnit	Alabama;Mobile County;DAVIDSON HIGH SCH	Mobile;DAVIDSON HIGH SCH
+ReportingUnit	Alabama;Mobile County;DAUPHIN ISLAND SEA LAB	Mobile;DAUPHIN ISLAND SEA LAB
+ReportingUnit	Alabama;Mobile County;CYPRESS SHORES BAPTIST	Mobile;CYPRESS SHORES BAPTIST
+ReportingUnit	Alabama;Mobile County;CREOLA ASSEMBLY OF GOD	Mobile;CREOLA ASSEMBLY OF GOD
+ReportingUnit	Alabama;Mobile County;CREEKWOOD CH OF CHRIST	Mobile;CREEKWOOD CH OF CHRIST
+ReportingUnit	Alabama;Mobile County;CRAIGHEAD ELEM SCH	Mobile;CRAIGHEAD ELEM SCH
+ReportingUnit	Alabama;Mobile County;COTTAGE HILL BAPTIST CH	Mobile;COTTAGE HILL BAPTIST CH
+ReportingUnit	Alabama;Mobile County;COLLINS RHODES ELEM	Mobile;COLLINS RHODES ELEM
+ReportingUnit	Alabama;Mobile County;COLLIER ELEM	Mobile;COLLIER ELEM
+ReportingUnit	Alabama;Mobile County;CLEARWATER CHRISTIAN CH	Mobile;CLEARWATER CHRISTIAN CH
+ReportingUnit	Alabama;Mobile County;BURROUGHS ELEM SCH	Mobile;BURROUGHS ELEM SCH
+ReportingUnit	Alabama;Mobile County;BURNS MIDDLE	Mobile;BURNS MIDDLE
+ReportingUnit	Alabama;Mobile County;BOYS & GIRLS CLUB	Mobile;BOYS & GIRLS CLUB
+ReportingUnit	Alabama;Mobile County;BLOUNT HIGH SCH	Mobile;BLOUNT HIGH SCH
+ReportingUnit	Alabama;Mobile County;BISHOP ST COMM COLLEGE	Mobile;BISHOP ST COMM COLLEGE
+ReportingUnit	Alabama;Mobile County;BETHEL BAPTIST	Mobile;BETHEL BAPTIST
+ReportingUnit	Alabama;Mobile County;BELSAW MT_ VERNON SCH	Mobile;BELSAW MT_ VERNON SCH
+ReportingUnit	Alabama;Mobile County;BEL AIR MALL	Mobile;BEL AIR MALL
+ReportingUnit	Alabama;Mobile County;BAYOU LA BATRE COMM CTR	Mobile;BAYOU LA BATRE COMM CTR
+ReportingUnit	Alabama;Mobile County;BAKER HIGH	Mobile;BAKER HIGH
+ReportingUnit	Alabama;Mobile County;AZALEA CITY CH OF CHRIST	Mobile;AZALEA CITY CH OF CHRIST
+ReportingUnit	Alabama;Mobile County;APOSTOLIC CH OF GOD	Mobile;APOSTOLIC CH OF GOD
+ReportingUnit	Alabama;Mobile County;ABBA SHRINE TEMPLE	Mobile;ABBA SHRINE TEMPLE
+ReportingUnit	Alabama;Mobile County;1ST EVANGELICAL METHODIST	Mobile;1ST EVANGELICAL METHODIST
+ReportingUnit	Alabama;Mobile County;1ST BAPTIST WILMER GYM	Mobile;1ST BAPTIST WILMER GYM
+ReportingUnit	Alabama;Mobile County;1ST BAPTIST CH SATSUMA	Mobile;1ST BAPTIST CH SATSUMA
+ReportingUnit	Alabama;Marshall County;WAKEFIELD VFD	Marshall;WAKEFIELD VFD
+ReportingUnit	Alabama;Marshall County;UNION GROVE COMM_ CTR	Marshall;UNION GROVE COMM_ CTR
+ReportingUnit	Alabama;Marshall County;SWEARENGIN COMM_ CTR	Marshall;SWEARENGIN COMM_ CTR
+ReportingUnit	Alabama;Marshall County;SANCTUARY ON THE MTN	Marshall;SANCTUARY ON THE MTN
+ReportingUnit	Alabama;Marshall County;PROSPECT CEMETERY	Marshall;PROSPECT CEMETERY
+ReportingUnit	Alabama;Marshall County;PLEASANT GROVE VFD	Marshall;PLEASANT GROVE VFD
+ReportingUnit	Alabama;Marshall County;PINE GROVE COMM_ CTR	Marshall;PINE GROVE COMM_ CTR
+ReportingUnit	Alabama;Marshall County;NEW BRASHIERS CHAPEL	Marshall;NEW BRASHIERS CHAPEL
+ReportingUnit	Alabama;Marshall County;MT_ HEBRON FIRE DEPT_	Marshall;MT_ HEBRON FIRE DEPT_
+ReportingUnit	Alabama;Marshall County;MT_ CALVARY BAPTIST	Marshall;MT_ CALVARY BAPTIST
+ReportingUnit	Alabama;Marshall County;MIDWAY COMM_ CTR	Marshall;MIDWAY COMM_ CTR
+ReportingUnit	Alabama;Marshall County;LIBERTY HILL	Marshall;LIBERTY HILL
+ReportingUnit	Alabama;Marshall County;LATTIWOOD COMM_ CTR	Marshall;LATTIWOOD COMM_ CTR
+ReportingUnit	Alabama;Marshall County;HONEYCOMB BAPTIST	Marshall;HONEYCOMB BAPTIST
+ReportingUnit	Alabama;Marshall County;HENRYVILLE METHODIST	Marshall;HENRYVILLE METHODIST
+ReportingUnit	Alabama;Marshall County;HEBRON COMM_ CTR	Marshall;HEBRON COMM_ CTR
+ReportingUnit	Alabama;Marshall County;GUNTERSVILLE REC_ CTR	Marshall;GUNTERSVILLE REC_ CTR
+ReportingUnit	Alabama;Marshall County;GRANT CITY HALL	Marshall;GRANT CITY HALL
+ReportingUnit	Alabama;Marshall County;GEORGIA MTN REC_ CTR	Marshall;GEORGIA MTN REC_ CTR
+ReportingUnit	Alabama;Marshall County;DOUGLAS CITY HALL	Marshall;DOUGLAS CITY HALL
+ReportingUnit	Alabama;Marshall County;DISTRICT 4 CO_ SHOP	Marshall;DISTRICT 4 CO_ SHOP
+ReportingUnit	Alabama;Marshall County;CRANFORD VFD	Marshall;CRANFORD VFD
+ReportingUnit	Alabama;Marshall County;BUCKSNORT COMM_ CTR	Marshall;BUCKSNORT COMM_ CTR
+ReportingUnit	Alabama;Marshall County;BOAZ REC_ CTR	Marshall;BOAZ REC_ CTR
+ReportingUnit	Alabama;Marshall County;ASBURY FIRE	Marshall;ASBURY FIRE
+ReportingUnit	Alabama;Marshall County;ARAB SENIOR CTR	Marshall;ARAB SENIOR CTR
+ReportingUnit	Alabama;Marshall County;ALDER SPGS_ COMM_ CTR	Marshall;ALDER SPGS_ COMM_ CTR
+ReportingUnit	Alabama;Marshall County;1ST BAPTIST CHURCH	Marshall;1ST BAPTIST CHURCH
+ReportingUnit	Alabama;Marion County;WINFIELD COMM CTR	Marion;WINFIELD COMM CTR
+ReportingUnit	Alabama;Marion County;WIGINTON COMM BLDG	Marion;WIGINTON COMM BLDG
+ReportingUnit	Alabama;Marion County;SHOTTSVILLE FIRE	Marion;SHOTTSVILLE FIRE
+ReportingUnit	Alabama;Marion County;SHILOH COMM BLDG	Marion;SHILOH COMM BLDG
+ReportingUnit	Alabama;Marion County;RYE BYRD VFD	Marion;RYE BYRD VFD
+ReportingUnit	Alabama;Marion County;PIKEVILLE TRAILER	Marion;PIKEVILLE TRAILER
+ReportingUnit	Alabama;Marion County;PEARCES MILL PEA RIDGE	Marion;PEARCES MILL PEA RIDGE
+ReportingUnit	Alabama;Marion County;KIMBROUGH CRAFT COMM SOUTH	Marion;KIMBROUGH CRAFT COMM SOUTH
+ReportingUnit	Alabama;Marion County;KIMBROUGH CRAFT COMM NORTH	Marion;KIMBROUGH CRAFT COMM NORTH
+ReportingUnit	Alabama;Marion County;KEMP PLEASANT SITE CH	Marion;KEMP PLEASANT SITE CH
+ReportingUnit	Alabama;Marion County;HOWELL SULLINS CH	Marion;HOWELL SULLINS CH
+ReportingUnit	Alabama;Marion County;HAMILTON REC CTR	Marion;HAMILTON REC CTR
+ReportingUnit	Alabama;Marion County;HACKLEBURG SR CTR	Marion;HACKLEBURG SR CTR
+ReportingUnit	Alabama;Marion County;GUIN CITY HALL	Marion;GUIN CITY HALL
+ReportingUnit	Alabama;Marion County;CLARK BLDG OFF 129	Marion;CLARK BLDG OFF 129
+ReportingUnit	Alabama;Marion County;BRILLIANT COMM CTR	Marion;BRILLIANT COMM CTR
+ReportingUnit	Alabama;Marion County;BEXAR BEHIND OLD POST	Marion;BEXAR BEHIND OLD POST
+ReportingUnit	Alabama;Marion County;BEAR CREEK CITY HALL	Marion;BEAR CREEK CITY HALL
+ReportingUnit	Alabama;Marion County;BARNSVILLE TRAILER	Marion;BARNSVILLE TRAILER
+ReportingUnit	Alabama;Marion County;BACCUS UNION HALL	Marion;BACCUS UNION HALL
+ReportingUnit	Alabama;Marengo County;THOMASTON	Marengo;THOMASTON
+ReportingUnit	Alabama;Marengo County;SWEET WATER TOWN OFFICE	Marengo;SWEET WATER TOWN OFFICE
+ReportingUnit	Alabama;Marengo County;SURGINER COMM_ CTR_	Marengo;SURGINER COMM_ CTR_
+ReportingUnit	Alabama;Marengo County;RANGELINE BAPTISIT CH	Marengo;RANGELINE BAPTISIT CH
+ReportingUnit	Alabama;Marengo County;PUTNAM VTG BOOTH	Marengo;PUTNAM VTG BOOTH
+ReportingUnit	Alabama;Marengo County;PROVIDENCE TOWN HALL	Marengo;PROVIDENCE TOWN HALL
+ReportingUnit	Alabama;Marengo County;NICHOLSVILLE BAPTIST	Marengo;NICHOLSVILLE BAPTIST
+ReportingUnit	Alabama;Marengo County;NANAFALIA	Marengo;NANAFALIA
+ReportingUnit	Alabama;Marengo County;MYRTLEWOOD COMM_	Marengo;MYRTLEWOOD COMM_
+ReportingUnit	Alabama;Marengo County;MAGNOLIA COMM_ CTR_	Marengo;MAGNOLIA COMM_ CTR_
+ReportingUnit	Alabama;Marengo County;LINDEN HWY 43	Marengo;LINDEN HWY 43
+ReportingUnit	Alabama;Marengo County;LINDEN ARMORY	Marengo;LINDEN ARMORY
+ReportingUnit	Alabama;Marengo County;JEFFERSON VFD	Marengo;JEFFERSON VFD
+ReportingUnit	Alabama;Marengo County;FLATWOODS COMM_ CTR_	Marengo;FLATWOODS COMM_ CTR_
+ReportingUnit	Alabama;Marengo County;FAUNSDALE TOWN OFFICE	Marengo;FAUNSDALE TOWN OFFICE
+ReportingUnit	Alabama;Marengo County;DIXONS MILLS VFD	Marengo;DIXONS MILLS VFD
+ReportingUnit	Alabama;Marengo County;DEMOPOLIS NAT'L GUARD	Marengo;DEMOPOLIS NAT'L GUARD
+ReportingUnit	Alabama;Marengo County;DEMOPOLIS CIVIC CTR_	Marengo;DEMOPOLIS CIVIC CTR_
+ReportingUnit	Alabama;Marengo County;AFLAME CH	Marengo;AFLAME CH
+ReportingUnit	Alabama;Madison County;WILLOWBROOK BAPT CH	Madison;WILLOWBROOK BAPT CH
+ReportingUnit	Alabama;Madison County;WESTSIDE COMM_ CTR_	Madison;WESTSIDE COMM_ CTR_
+ReportingUnit	Alabama;Madison County;WEST HUNTSVILLE BAPT	Madison;WEST HUNTSVILLE BAPT
+ReportingUnit	Alabama;Madison County;WEATHERLY HGTS BAPT	Madison;WEATHERLY HGTS BAPT
+ReportingUnit	Alabama;Madison County;W HUNTSVILLE CH CHRIST	Madison;W HUNTSVILLE CH CHRIST
+ReportingUnit	Alabama;Madison County;TRINITY UNITED METHODIST	Madison;TRINITY UNITED METHODIST
+ReportingUnit	Alabama;Madison County;TRINITY PRESBYTERIAN CH	Madison;TRINITY PRESBYTERIAN CH
+ReportingUnit	Alabama;Madison County;TRIANA CITY HALL	Madison;TRIANA CITY HALL
+ReportingUnit	Alabama;Madison County;TONEY UMC	Madison;TONEY UMC
+ReportingUnit	Alabama;Madison County;THE WHITESBURG CTR_	Madison;THE WHITESBURG CTR_
+ReportingUnit	Alabama;Madison County;THE DWELLING PLACE	Madison;THE DWELLING PLACE
+ReportingUnit	Alabama;Madison County;ST_ MATTHEW PB CHURCH	Madison;ST_ MATTHEW PB CHURCH
+ReportingUnit	Alabama;Madison County;ST_ LUKE CHRISTIAN CH	Madison;ST_ LUKE CHRISTIAN CH
+ReportingUnit	Alabama;Madison County;ST_ JOHNS CATHOLIC CH	Madison;ST_ JOHNS CATHOLIC CH
+ReportingUnit	Alabama;Madison County;SOUTHWOOD PRESBYTERIAN	Madison;SOUTHWOOD PRESBYTERIAN
+ReportingUnit	Alabama;Madison County;SHERWOOD BAPT CH	Madison;SHERWOOD BAPT CH
+ReportingUnit	Alabama;Madison County;RIVERTREE CH	Madison;RIVERTREE CH
+ReportingUnit	Alabama;Madison County;RESTORATION CH	Madison;RESTORATION CH
+ReportingUnit	Alabama;Madison County;PLEASANT SPRGS BAPT	Madison;PLEASANT SPRGS BAPT
+ReportingUnit	Alabama;Madison County;PLAINVIEW CH CHRIST	Madison;PLAINVIEW CH CHRIST
+ReportingUnit	Alabama;Madison County;PINEVIEW BAPT CH	Madison;PINEVIEW BAPT CH
+ReportingUnit	Alabama;Madison County;OWENS CROSS ROADS	Madison;OWENS CROSS ROADS
+ReportingUnit	Alabama;Madison County;OPTIMIST PARK REC CTR_	Madison;OPTIMIST PARK REC CTR_
+ReportingUnit	Alabama;Madison County;OAKWOOD UNIVERSITY CH	Madison;OAKWOOD UNIVERSITY CH
+ReportingUnit	Alabama;Madison County;NEW SHILOH CH MINISTRIES	Madison;NEW SHILOH CH MINISTRIES
+ReportingUnit	Alabama;Madison County;NEW MARKET VOL FIRE #2	Madison;NEW MARKET VOL FIRE #2
+ReportingUnit	Alabama;Madison County;NEW MARKET FIRE STA_	Madison;NEW MARKET FIRE STA_
+ReportingUnit	Alabama;Madison County;NEW HOPE CITY HALL	Madison;NEW HOPE CITY HALL
+ReportingUnit	Alabama;Madison County;NE HUNTSVILLE TRAINING	Madison;NE HUNTSVILLE TRAINING
+ReportingUnit	Alabama;Madison County;MT_ ZION BAPT CH	Madison;MT_ ZION BAPT CH
+ReportingUnit	Alabama;Madison County;MONTE SANO UN METHODIST	Madison;MONTE SANO UN METHODIST
+ReportingUnit	Alabama;Madison County;MONROVIA COMM_ CTR_	Madison;MONROVIA COMM_ CTR_
+ReportingUnit	Alabama;Madison County;MONROVIA CH CHRIST	Madison;MONROVIA CH CHRIST
+ReportingUnit	Alabama;Madison County;MERDIANVILLE CH CHRIST	Madison;MERDIANVILLE CH CHRIST
+ReportingUnit	Alabama;Madison County;MAYSVILLE CH CHRIST	Madison;MAYSVILLE CH CHRIST
+ReportingUnit	Alabama;Madison County;MARY KELLY JOHNSTON GYM	Madison;MARY KELLY JOHNSTON GYM
+ReportingUnit	Alabama;Madison County;MADISON PUBLIC LIBRARY	Madison;MADISON PUBLIC LIBRARY
+ReportingUnit	Alabama;Madison County;MADISON MISSION 7TH DAY	Madison;MADISON MISSION 7TH DAY
+ReportingUnit	Alabama;Madison County;MADISON CO NATURE TRAIL	Madison;MADISON CO NATURE TRAIL
+ReportingUnit	Alabama;Madison County;MADISON CITY HALL	Madison;MADISON CITY HALL
+ReportingUnit	Alabama;Madison County;MADISON BAPT CH	Madison;MADISON BAPT CH
+ReportingUnit	Alabama;Madison County;LOCUST GROVE BAPT CH	Madison;LOCUST GROVE BAPT CH
+ReportingUnit	Alabama;Madison County;LITTLE INDIAN CREEK	Madison;LITTLE INDIAN CREEK
+ReportingUnit	Alabama;Madison County;LEWIS CHAPEL C_ P_ CH	Madison;LEWIS CHAPEL C_ P_ CH
+ReportingUnit	Alabama;Madison County;LAKEWOOD COMM_ CTR_	Madison;LAKEWOOD COMM_ CTR_
+ReportingUnit	Alabama;Madison County;JACKSON WAY BAPT CH	Madison;JACKSON WAY BAPT CH
+ReportingUnit	Alabama;Madison County;INTERGRAPH	Madison;INTERGRAPH
+ReportingUnit	Alabama;Madison County;HILLWOOD BAPT CH	Madison;HILLWOOD BAPT CH
+ReportingUnit	Alabama;Madison County;HARVEST BAPT CH	Madison;HARVEST BAPT CH
+ReportingUnit	Alabama;Madison County;HAROLD HARBIN GYM	Madison;HAROLD HARBIN GYM
+ReportingUnit	Alabama;Madison County;HAMPTON COVE CH CHRIST	Madison;HAMPTON COVE CH CHRIST
+ReportingUnit	Alabama;Madison County;GURLEY SR_ CTR_	Madison;GURLEY SR_ CTR_
+ReportingUnit	Alabama;Madison County;FIRST MISSIONARY BAPT	Madison;FIRST MISSIONARY BAPT
+ReportingUnit	Alabama;Madison County;FIRST CH OF GOD	Madison;FIRST CH OF GOD
+ReportingUnit	Alabama;Madison County;FIRST BAPT MERDIANVILLE	Madison;FIRST BAPT MERDIANVILLE
+ReportingUnit	Alabama;Madison County;FIRST BAPT CH	Madison;FIRST BAPT CH
+ReportingUnit	Alabama;Madison County;FAITH LUTHERAN CH	Madison;FAITH LUTHERAN CH
+ReportingUnit	Alabama;Madison County;DR_ RICHARD SHOWERS CTR_	Madison;DR_ RICHARD SHOWERS CTR_
+ReportingUnit	Alabama;Madison County;CO_ COMMISSION DIST_ 1	Madison;CO_ COMMISSION DIST_ 1
+ReportingUnit	Alabama;Madison County;COVENANT PRESBYTERIAN CH	Madison;COVENANT PRESBYTERIAN CH
+ReportingUnit	Alabama;Madison County;COVE UNITED METHODIST CH	Madison;COVE UNITED METHODIST CH
+ReportingUnit	Alabama;Madison County;COVE CH AT CHASE	Madison;COVE CH AT CHASE
+ReportingUnit	Alabama;Madison County;COMM_ FELLOWSHIP	Madison;COMM_ FELLOWSHIP
+ReportingUnit	Alabama;Madison County;CLEMENTS BAPT CH	Madison;CLEMENTS BAPT CH
+ReportingUnit	Alabama;Madison County;CHARLES STONE AG CTR_	Madison;CHARLES STONE AG CTR_
+ReportingUnit	Alabama;Madison County;CALVARY FRIENDSHIP CTR_	Madison;CALVARY FRIENDSHIP CTR_
+ReportingUnit	Alabama;Madison County;BROWNSBORO BAPT CH	Madison;BROWNSBORO BAPT CH
+ReportingUnit	Alabama;Madison County;BOBO VFD	Madison;BOBO VFD
+ReportingUnit	Alabama;Madison County;BOB HARRISON SR_ CTR_	Madison;BOB HARRISON SR_ CTR_
+ReportingUnit	Alabama;Madison County;ALL NATIONS	Madison;ALL NATIONS
+ReportingUnit	Alabama;Madison County;ALDERSGATE UMC	Madison;ALDERSGATE UMC
+ReportingUnit	Alabama;Madison County;ABSENTEE 1	Madison;ABSENTEE 1
+ReportingUnit	Alabama;Madison County;ABSENTEE 2	Madison;ABSENTEE 2
+ReportingUnit	Alabama;Madison County;A & M UNIVERSITY NEW GYM	Madison;A & M UNIVERSITY NEW GYM
+ReportingUnit	Alabama;Macon County;WARRIOR DIST 2 REC CTR	Macon;WARRIOR DIST 2 REC CTR
+ReportingUnit	Alabama;Macon County;VOLUNTEER FIRE STATION	Macon;VOLUNTEER FIRE STATION
+ReportingUnit	Alabama;Macon County;TUSKEGEE MUNICIPAL CMPLX	Macon;TUSKEGEE MUNICIPAL CMPLX
+ReportingUnit	Alabama;Macon County;SOJOURNER COMM CTR	Macon;SOJOURNER COMM CTR
+ReportingUnit	Alabama;Macon County;PRAIRIE FARM REC CTR	Macon;PRAIRIE FARM REC CTR
+ReportingUnit	Alabama;Macon County;NOTASULGA TOWN HALL	Macon;NOTASULGA TOWN HALL
+ReportingUnit	Alabama;Macon County;NATIONAL GUARD ARMORY	Macon;NATIONAL GUARD ARMORY
+ReportingUnit	Alabama;Macon County;MARGARET MURRAY	Macon;MARGARET MURRAY
+ReportingUnit	Alabama;Macon County;FRANKLIN TOWN HALL	Macon;FRANKLIN TOWN HALL
+ReportingUnit	Alabama;Macon County;DIST 4 REC CTR	Macon;DIST 4 REC CTR
+ReportingUnit	Alabama;Macon County;DIST 4 COMM CTR	Macon;DIST 4 COMM CTR
+ReportingUnit	Alabama;Macon County;COTTON VALLEY REC CTR	Macon;COTTON VALLEY REC CTR
+ReportingUnit	Alabama;Macon County;CHISHOLM COMM CTR	Macon;CHISHOLM COMM CTR
+ReportingUnit	Alabama;Macon County;BROWNVILLE VFD	Macon;BROWNVILLE VFD
+ReportingUnit	Alabama;Lowndes County;WHITE HALL TOWN HALL	Lowndes;WHITE HALL TOWN HALL
+ReportingUnit	Alabama;Lowndes County;SANDY RIDGE COMMUNITY	Lowndes;SANDY RIDGE COMMUNITY
+ReportingUnit	Alabama;Lowndes County;NEW SALEM CHURCH	Lowndes;NEW SALEM CHURCH
+ReportingUnit	Alabama;Lowndes County;MOSSES TOWN HALL	Lowndes;MOSSES TOWN HALL
+ReportingUnit	Alabama;Lowndes County;LOWNDESBORO CME CHURCH	Lowndes;LOWNDESBORO CME CHURCH
+ReportingUnit	Alabama;Lowndes County;LOWNDES CITY DEV OFC	Lowndes;LOWNDES CITY DEV OFC
+ReportingUnit	Alabama;Lowndes County;LILY BAPTIST CHURCH	Lowndes;LILY BAPTIST CHURCH
+ReportingUnit	Alabama;Lowndes County;HAYNEVILLE C_H_ ANNEX	Lowndes;HAYNEVILLE C_H_ ANNEX
+ReportingUnit	Alabama;Lowndes County;FT_ DEPOSIT ARMORY	Lowndes;FT_ DEPOSIT ARMORY
+ReportingUnit	Alabama;Lowndes County;CALHOUN VOL FIRE	Lowndes;CALHOUN VOL FIRE
+ReportingUnit	Alabama;Lowndes County;BURKEVILLE VFD	Lowndes;BURKEVILLE VFD
+ReportingUnit	Alabama;Lowndes County;BETHEL CHURCH	Lowndes;BETHEL CHURCH
+ReportingUnit	Alabama;Limestone County;WOOLEY SPRINGS BAPTIST	Limestone;WOOLEY SPRINGS BAPTIST
+ReportingUnit	Alabama;Limestone County;WESTSIDE COMM_ CTR_	Limestone;WESTSIDE COMM_ CTR_
+ReportingUnit	Alabama;Limestone County;WEST LIMESTONE FIRE DEPT_	Limestone;WEST LIMESTONE FIRE DEPT_
+ReportingUnit	Alabama;Limestone County;ROUND ISLAND BAPTIST CH	Limestone;ROUND ISLAND BAPTIST CH
+ReportingUnit	Alabama;Limestone County;RIDDLES HALL	Limestone;RIDDLES HALL
+ReportingUnit	Alabama;Limestone County;PLEASANT GROVE FIRE DEPT_	Limestone;PLEASANT GROVE FIRE DEPT_
+ReportingUnit	Alabama;Limestone County;PINCHAM-LINCOLN CTR_	Limestone;PINCHAM-LINCOLN CTR_
+ReportingUnit	Alabama;Limestone County;MAYS MEMORIAL BAPTIST	Limestone;MAYS MEMORIAL BAPTIST
+ReportingUnit	Alabama;Limestone County;LINDSAY LANE BAPTIST CH	Limestone;LINDSAY LANE BAPTIST CH
+ReportingUnit	Alabama;Limestone County;LESTER TOWN HALL	Limestone;LESTER TOWN HALL
+ReportingUnit	Alabama;Limestone County;LAMB OF GOD LUTHERAN CH	Limestone;LAMB OF GOD LUTHERAN CH
+ReportingUnit	Alabama;Limestone County;ISOM'S CHAPEL UMC	Limestone;ISOM'S CHAPEL UMC
+ReportingUnit	Alabama;Limestone County;GOODSPRINGS SR_ CTR_	Limestone;GOODSPRINGS SR_ CTR_
+ReportingUnit	Alabama;Limestone County;FRIENDSHIP UMC	Limestone;FRIENDSHIP UMC
+ReportingUnit	Alabama;Limestone County;FIRST BAPTIST CH TANNER	Limestone;FIRST BAPTIST CH TANNER
+ReportingUnit	Alabama;Limestone County;ELKTON ROAD BAPTIST CH	Limestone;ELKTON ROAD BAPTIST CH
+ReportingUnit	Alabama;Limestone County;ELKMONT FIRE DEPARTMENT	Limestone;ELKMONT FIRE DEPARTMENT
+ReportingUnit	Alabama;Limestone County;COPELAND PRESBYTERIAN CH	Limestone;COPELAND PRESBYTERIAN CH
+ReportingUnit	Alabama;Limestone County;CLEMENTS BAPTIST CH	Limestone;CLEMENTS BAPTIST CH
+ReportingUnit	Alabama;Limestone County;CAPSHAW BAPTIST CH	Limestone;CAPSHAW BAPTIST CH
+ReportingUnit	Alabama;Limestone County;BETHEL CH OF CHRIST	Limestone;BETHEL CH OF CHRIST
+ReportingUnit	Alabama;Limestone County;BELMOR BAPTIST CH	Limestone;BELMOR BAPTIST CH
+ReportingUnit	Alabama;Limestone County;ATHENS SR_ CITIZEN CTR_	Limestone;ATHENS SR_ CITIZEN CTR_
+ReportingUnit	Alabama;Limestone County;ATHENS REC_ CTR_	Limestone;ATHENS REC_ CTR_
+ReportingUnit	Alabama;Limestone County;ARDMORE SENIOR CENTER	Limestone;ARDMORE SENIOR CENTER
+ReportingUnit	Alabama;Lee County;UPTOWN WAVERLY	Lee;UPTOWN WAVERLY
+ReportingUnit	Alabama;Lee County;SMITH STATION SR CTR	Lee;SMITH STATION SR CTR
+ReportingUnit	Alabama;Lee County;SMITH STATION AUDITORIUM	Lee;SMITH STATION AUDITORIUM
+ReportingUnit	Alabama;Lee County;PINE GROVE CH	Lee;PINE GROVE CH
+ReportingUnit	Alabama;Lee County;OPELIKA SPORTSPLEX	Lee;OPELIKA SPORTSPLEX
+ReportingUnit	Alabama;Lee County;OPELIKA REC CTR	Lee;OPELIKA REC CTR
+ReportingUnit	Alabama;Lee County;OPELIKA LEARNING CTR	Lee;OPELIKA LEARNING CTR
+ReportingUnit	Alabama;Lee County;MT ZION FAMILY ENRICHMENT CENT	Lee;MT ZION FAMILY ENRICHMENT CENT
+ReportingUnit	Alabama;Lee County;LEE COUNTY LEARNING (LC2)	Lee;LEE COUNTY LEARNING (LC2)
+ReportingUnit	Alabama;Lee County;GLENWOOD SCH	Lee;GLENWOOD SCH
+ReportingUnit	Alabama;Lee County;FRANK BROWN REC CTR	Lee;FRANK BROWN REC CTR
+ReportingUnit	Alabama;Lee County;FARMVILLE VFD	Lee;FARMVILLE VFD
+ReportingUnit	Alabama;Lee County;EAMC HEALTH RESOURCE	Lee;EAMC HEALTH RESOURCE
+ReportingUnit	Alabama;Lee County;DOWNTOWN MARVYN	Lee;DOWNTOWN MARVYN
+ReportingUnit	Alabama;Lee County;DEAN RD REC CTR	Lee;DEAN RD REC CTR
+ReportingUnit	Alabama;Lee County;CRAWFORD VFD	Lee;CRAWFORD VFD
+ReportingUnit	Alabama;Lee County;COVINGTON PARK COMM CTR	Lee;COVINGTON PARK COMM CTR
+ReportingUnit	Alabama;Lee County;CLARION INN S COLLEGE	Lee;CLARION INN S COLLEGE
+ReportingUnit	Alabama;Lee County;BOYKIN COMM CTR	Lee;BOYKIN COMM CTR
+ReportingUnit	Alabama;Lee County;BEULAH HIGH	Lee;BEULAH HIGH
+ReportingUnit	Alabama;Lee County;BEULAH FIRE #3	Lee;BEULAH FIRE #3
+ReportingUnit	Alabama;Lee County;BEAUREGARD SCH GYM	Lee;BEAUREGARD SCH GYM
+ReportingUnit	Alabama;Lawrence County;WOLF SPRING BAPT_ 10-1	Lawrence;WOLF SPRING BAPT_ 10-1
+ReportingUnit	Alabama;Lawrence County;TOWN CREEK COM_ CTR_ 5-1	Lawrence;TOWN CREEK COM_ CTR_ 5-1
+ReportingUnit	Alabama;Lawrence County;SPEAKE FIRE DEPT_ 28-1	Lawrence;SPEAKE FIRE DEPT_ 28-1
+ReportingUnit	Alabama;Lawrence County;RED BANK FIRE DEPT_ 3-1	Lawrence;RED BANK FIRE DEPT_ 3-1
+ReportingUnit	Alabama;Lawrence County;PLEASANT GRV 14 20 23 27	Lawrence;PLEASANT GRV 14 20 23 27
+ReportingUnit	Alabama;Lawrence County;PINEY CROVE CH 32-1	Lawrence;PINEY CROVE CH 32-1
+ReportingUnit	Alabama;Lawrence County;PINE GROVE CH 36-1	Lawrence;PINE GROVE CH 36-1
+ReportingUnit	Alabama;Lawrence County;PILGRAM MISS_ BAPT_ 18-1	Lawrence;PILGRAM MISS_ BAPT_ 18-1
+ReportingUnit	Alabama;Lawrence County;N_ COUTLAND SR_ CTR_ 2-1	Lawrence;N_ COUTLAND SR_ CTR_ 2-1
+ReportingUnit	Alabama;Lawrence County;NEW ZION BAPT_ 11-1	Lawrence;NEW ZION BAPT_ 11-1
+ReportingUnit	Alabama;Lawrence County;MT MORIAH METH_15-1 21-1	Lawrence;MT MORIAH METH_15-1 21-1
+ReportingUnit	Alabama;Lawrence County;MT HOPE BAPT_ FELLOW 9-1	Lawrence;MT HOPE BAPT_ FELLOW 9-1
+ReportingUnit	Alabama;Lawrence County;MOULTON CITY HALL 24-1	Lawrence;MOULTON CITY HALL 24-1
+ReportingUnit	Alabama;Lawrence County;MCCARLEY CTR_ 6-1	Lawrence;MCCARLEY CTR_ 6-1
+ReportingUnit	Alabama;Lawrence County;LOOSIER CH OF CHRIST16-1	Lawrence;LOOSIER CH OF CHRIST16-1
+ReportingUnit	Alabama;Lawrence County;LINDSEY HALL CH 31-1	Lawrence;LINDSEY HALL CH 31-1
+ReportingUnit	Alabama;Lawrence County;LAWRENCE HEALTH DEPT19-1	Lawrence;LAWRENCE HEALTH DEPT19-1
+ReportingUnit	Alabama;Lawrence County;LANDERSVILLE METH_ 12-1	Lawrence;LANDERSVILLE METH_ 12-1
+ReportingUnit	Alabama;Lawrence County;KITCHENS MILL 29-1 35-1	Lawrence;KITCHENS MILL 29-1 35-1
+ReportingUnit	Alabama;Lawrence County;HILLSBORO CITY HALL 1-1	Lawrence;HILLSBORO CITY HALL 1-1
+ReportingUnit	Alabama;Lawrence County;HILLBORO FIRE DEPT_ 4-1	Lawrence;HILLBORO FIRE DEPT_ 4-1
+ReportingUnit	Alabama;Lawrence County;HATTON CH OF CHRIST 13-1	Lawrence;HATTON CH OF CHRIST 13-1
+ReportingUnit	Alabama;Lawrence County;FREEMAN TAB 26-1	Lawrence;FREEMAN TAB 26-1
+ReportingUnit	Alabama;Lawrence County;FAIRFIELD CH 22-1 30-1	Lawrence;FAIRFIELD CH 22-1 30-1
+ReportingUnit	Alabama;Lawrence County;DONALD BAPT_ CH 7-1 8-1	Lawrence;DONALD BAPT_ CH 7-1 8-1
+ReportingUnit	Alabama;Lawrence County;CHALYBEATE FIRE DEPT17-1	Lawrence;CHALYBEATE FIRE DEPT17-1
+ReportingUnit	Alabama;Lawrence County;CADDO SR_ CTR_ 34-1	Lawrence;CADDO SR_ CTR_ 34-1
+ReportingUnit	Alabama;Lawrence County;CADDO FIRE DEPT_ 33-1	Lawrence;CADDO FIRE DEPT_ 33-1
+ReportingUnit	Alabama;Lawrence County;BOARD OF ED 25-1	Lawrence;BOARD OF ED 25-1
+ReportingUnit	Alabama;Lauderdale County;WATERLOO SENIOR CTR_	Lauderdale;WATERLOO SENIOR CTR_
+ReportingUnit	Alabama;Lauderdale County;UNDERWOOD COMM_ CTR_	Lauderdale;UNDERWOOD COMM_ CTR_
+ReportingUnit	Alabama;Lauderdale County;ST_ JAMES UMC	Lauderdale;ST_ JAMES UMC
+ReportingUnit	Alabama;Lauderdale County;ST_ FLORIAN SENIOR CTR_	Lauderdale;ST_ FLORIAN SENIOR CTR_
+ReportingUnit	Alabama;Lauderdale County;STEWARTVILLE CH CHRIST	Lauderdale;STEWARTVILLE CH CHRIST
+ReportingUnit	Alabama;Lauderdale County;SHERROD AVE CH OF CHRIST	Lauderdale;SHERROD AVE CH OF CHRIST
+ReportingUnit	Alabama;Lauderdale County;SALEM CHURCH OF CHRIST	Lauderdale;SALEM CHURCH OF CHRIST
+ReportingUnit	Alabama;Lauderdale County;ROGERSVILLE FIRST BAPTIST	Lauderdale;ROGERSVILLE FIRST BAPTIST
+ReportingUnit	Alabama;Lauderdale County;LEXINGTON SENIOR CTR_	Lauderdale;LEXINGTON SENIOR CTR_
+ReportingUnit	Alabama;Lauderdale County;LAUDERDALE CO_ BOARD	Lauderdale;LAUDERDALE CO_ BOARD
+ReportingUnit	Alabama;Lauderdale County;KILLEN CH OF CHRIST	Lauderdale;KILLEN CH OF CHRIST
+ReportingUnit	Alabama;Lauderdale County;HIGHLAND BAPT_ CH	Lauderdale;HIGHLAND BAPT_ CH
+ReportingUnit	Alabama;Lauderdale County;HIBBETT SCHOOL	Lauderdale;HIBBETT SCHOOL
+ReportingUnit	Alabama;Lauderdale County;HANDY RECREATION CTR_	Lauderdale;HANDY RECREATION CTR_
+ReportingUnit	Alabama;Lauderdale County;GRADY RICHARDS CTR_	Lauderdale;GRADY RICHARDS CTR_
+ReportingUnit	Alabama;Lauderdale County;GALILEE MISSIONARY BAPT_	Lauderdale;GALILEE MISSIONARY BAPT_
+ReportingUnit	Alabama;Lauderdale County;FLORENCE- HIGH SCHOOL	Lauderdale;FLORENCE- HIGH SCHOOL
+ReportingUnit	Alabama;Lauderdale County;FLORENCE- 1ST BAPT_	Lauderdale;FLORENCE- 1ST BAPT_
+ReportingUnit	Alabama;Lauderdale County;FLORENCE BLVD CH OF CHRIST	Lauderdale;FLORENCE BLVD CH OF CHRIST
+ReportingUnit	Alabama;Lauderdale County;FAIRGROUNDS RD SENIOR	Lauderdale;FAIRGROUNDS RD SENIOR
+ReportingUnit	Alabama;Lauderdale County;ELGIN SENIOR CTR_	Lauderdale;ELGIN SENIOR CTR_
+ReportingUnit	Alabama;Lauderdale County;E CAMPUS WOODMONT BAPT_	Lauderdale;E CAMPUS WOODMONT BAPT_
+ReportingUnit	Alabama;Lauderdale County;CTR_ STAR 1ST BAPT_	Lauderdale;CTR_ STAR 1ST BAPT_
+ReportingUnit	Alabama;Lauderdale County;CLOVERDALE COMM_ CTR_	Lauderdale;CLOVERDALE COMM_ CTR_
+ReportingUnit	Alabama;Lauderdale County;CHRIST CHAPEL CH	Lauderdale;CHRIST CHAPEL CH
+ReportingUnit	Alabama;Lauderdale County;CENTRAL COMM_ CTR_	Lauderdale;CENTRAL COMM_ CTR_
+ReportingUnit	Alabama;Lauderdale County;CENTRAL BAPT_ CH	Lauderdale;CENTRAL BAPT_ CH
+ReportingUnit	Alabama;Lauderdale County;BROADWAY RECREATION CTR_	Lauderdale;BROADWAY RECREATION CTR_
+ReportingUnit	Alabama;Lauderdale County;ATLAS CH OF CHRIST	Lauderdale;ATLAS CH OF CHRIST
+ReportingUnit	Alabama;Lauderdale County;ANDERSON GYM	Lauderdale;ANDERSON GYM
+ReportingUnit	Alabama;Lauderdale County;1ST PRESBYTERIAN CH	Lauderdale;1ST PRESBYTERIAN CH
+ReportingUnit	Alabama;Lamar County;VERNON ARMORY WEST	Lamar;VERNON ARMORY WEST
+ReportingUnit	Alabama;Lamar County;VERNON ARMORY EAST	Lamar;VERNON ARMORY EAST
+ReportingUnit	Alabama;Lamar County;VAILS	Lamar;VAILS
+ReportingUnit	Alabama;Lamar County;TRULL	Lamar;TRULL
+ReportingUnit	Alabama;Lamar County;SULLIGENT CITY HALL SOUTH	Lamar;SULLIGENT CITY HALL SOUTH
+ReportingUnit	Alabama;Lamar County;SULLIGENT CITY HALL NORTH	Lamar;SULLIGENT CITY HALL NORTH
+ReportingUnit	Alabama;Lamar County;STRICKLAND KINGVILLE	Lamar;STRICKLAND KINGVILLE
+ReportingUnit	Alabama;Lamar County;STAR COMM CTR	Lamar;STAR COMM CTR
+ReportingUnit	Alabama;Lamar County;PINE SPRINGS	Lamar;PINE SPRINGS
+ReportingUnit	Alabama;Lamar County;MT_ PLEASANT CURRY	Lamar;MT_ PLEASANT CURRY
+ReportingUnit	Alabama;Lamar County;MOLLOY BETTS	Lamar;MOLLOY BETTS
+ReportingUnit	Alabama;Lamar County;MILLPORT LIBRARY	Lamar;MILLPORT LIBRARY
+ReportingUnit	Alabama;Lamar County;KENNEDY COMM CTR	Lamar;KENNEDY COMM CTR
+ReportingUnit	Alabama;Lamar County;HIGHTOGY RIDGE	Lamar;HIGHTOGY RIDGE
+ReportingUnit	Alabama;Lamar County;HENSON SPRINGS FIRE STATION	Lamar;HENSON SPRINGS FIRE STATION
+ReportingUnit	Alabama;Lamar County;GUIN MT_ OLIVE	Lamar;GUIN MT_ OLIVE
+ReportingUnit	Alabama;Lamar County;FERNBANK COMM CTR	Lamar;FERNBANK COMM CTR
+ReportingUnit	Alabama;Lamar County;FAIRVIEW SIZEMORE	Lamar;FAIRVIEW SIZEMORE
+ReportingUnit	Alabama;Lamar County;DETROIT CITY HALL	Lamar;DETROIT CITY HALL
+ReportingUnit	Alabama;Lamar County;CROSSVILLE LAWRENCE	Lamar;CROSSVILLE LAWRENCE
+ReportingUnit	Alabama;Lamar County;CREWS METHODIST CHURCH	Lamar;CREWS METHODIST CHURCH
+ReportingUnit	Alabama;Lamar County;BLOOMING GROVE	Lamar;BLOOMING GROVE
+ReportingUnit	Alabama;Lamar County;BEDFORD MILITARY	Lamar;BEDFORD MILITARY
+ReportingUnit	Alabama;Lamar County;BEAVERTON CITY HALL SOUTH	Lamar;BEAVERTON CITY HALL SOUTH
+ReportingUnit	Alabama;Lamar County;BEAVERTON CITY HALL NORTH	Lamar;BEAVERTON CITY HALL NORTH
+ReportingUnit	Alabama;Houston County;WIREGRASS PARK	Houston;WIREGRASS PARK
+ReportingUnit	Alabama;Houston County;WICKSBURG VFD	Houston;WICKSBURG VFD
+ReportingUnit	Alabama;Houston County;WESTGATE PARK	Houston;WESTGATE PARK
+ReportingUnit	Alabama;Houston County;WEBB CITY HALL	Houston;WEBB CITY HALL
+ReportingUnit	Alabama;Houston County;WATERMARK EAST	Houston;WATERMARK EAST
+ReportingUnit	Alabama;Houston County;WALTON PARK	Houston;WALTON PARK
+ReportingUnit	Alabama;Houston County;VAUGHN BLUMBERG CTR	Houston;VAUGHN BLUMBERG CTR
+ReportingUnit	Alabama;Houston County;TAYLOR SENIOR CENTER	Houston;TAYLOR SENIOR CENTER
+ReportingUnit	Alabama;Houston County;ST_ JOHN'S PARK	Houston;ST_ JOHN'S PARK
+ReportingUnit	Alabama;Houston County;SELMA BAPT CH	Houston;SELMA BAPT CH
+ReportingUnit	Alabama;Houston County;ROSSIE PURCELL LIBRARY	Houston;ROSSIE PURCELL LIBRARY
+ReportingUnit	Alabama;Houston County;REHOBETH MUNICIPAL CMPLX	Houston;REHOBETH MUNICIPAL CMPLX
+ReportingUnit	Alabama;Houston County;MT_ GILEAD BAPT CH	Houston;MT_ GILEAD BAPT CH
+ReportingUnit	Alabama;Houston County;MEMPHIS BAPT CH	Houston;MEMPHIS BAPT CH
+ReportingUnit	Alabama;Houston County;MADRID BAPT CH	Houston;MADRID BAPT CH
+ReportingUnit	Alabama;Houston County;LIBERTY BAPTIST CHURCH	Houston;LIBERTY BAPTIST CHURCH
+ReportingUnit	Alabama;Houston County;KINSEY SR CTR	Houston;KINSEY SR CTR
+ReportingUnit	Alabama;Houston County;GORDON CITY HALL	Houston;GORDON CITY HALL
+ReportingUnit	Alabama;Houston County;FARM CTR	Houston;FARM CTR
+ReportingUnit	Alabama;Houston County;ENTERPRISE CH	Houston;ENTERPRISE CH
+ReportingUnit	Alabama;Houston County;DOUG TEW COMM CTR	Houston;DOUG TEW COMM CTR
+ReportingUnit	Alabama;Houston County;DOTHAN CIVIC CTR	Houston;DOTHAN CIVIC CTR
+ReportingUnit	Alabama;Houston County;DOTHAN 1ST ASSEMBLY CLC	Houston;DOTHAN 1ST ASSEMBLY CLC
+ReportingUnit	Alabama;Houston County;COWARTS BAPTIST CHURCH FLC	Houston;COWARTS BAPTIST CHURCH FLC
+ReportingUnit	Alabama;Houston County;COTTONWOOD CITY HALL	Houston;COTTONWOOD CITY HALL
+ReportingUnit	Alabama;Houston County;BAY SPRINGS VFD	Houston;BAY SPRINGS VFD
+ReportingUnit	Alabama;Houston County;ANDREW BELLE COMM CTR	Houston;ANDREW BELLE COMM CTR
+ReportingUnit	Alabama;Henry County;UNION VTG HOUSE	Henry;UNION VTG HOUSE
+ReportingUnit	Alabama;Henry County;SHORTERVILLE HOUSE	Henry;SHORTERVILLE HOUSE
+ReportingUnit	Alabama;Henry County;OLD ZION	Henry;OLD ZION
+ReportingUnit	Alabama;Henry County;NEWVILLE VTG HOUSE	Henry;NEWVILLE VTG HOUSE
+ReportingUnit	Alabama;Henry County;LAWRENCEVILLE HS	Henry;LAWRENCEVILLE HS
+ReportingUnit	Alabama;Henry County;JUDSON COMM_	Henry;JUDSON COMM_
+ReportingUnit	Alabama;Henry County;HEADLAND VTG CTR_ 1	Henry;HEADLAND VTG CTR_ 1
+ReportingUnit	Alabama;Henry County;HALEBURG CITY HALL	Henry;HALEBURG CITY HALL
+ReportingUnit	Alabama;Henry County;GREATER SHILOH BAPT_	Henry;GREATER SHILOH BAPT_
+ReportingUnit	Alabama;Henry County;EDWIN VTG CTR_	Henry;EDWIN VTG CTR_
+ReportingUnit	Alabama;Henry County;DOUGLAS CROSSROADS	Henry;DOUGLAS CROSSROADS
+ReportingUnit	Alabama;Henry County;CAPPS POST OFFICE	Henry;CAPPS POST OFFICE
+ReportingUnit	Alabama;Henry County;BALKUM BAPT_ CHURCH	Henry;BALKUM BAPT_ CHURCH
+ReportingUnit	Alabama;Henry County;ABBEVILLE VTG CTR_	Henry;ABBEVILLE VTG CTR_
+ReportingUnit	Alabama;Hale County;VALLEY	Hale;VALLEY
+ReportingUnit	Alabama;Hale County;STEWART	Hale;STEWART
+ReportingUnit	Alabama;Hale County;SAWYERVILLE HEAD STATION	Hale;SAWYERVILLE HEAD STATION
+ReportingUnit	Alabama;Hale County;PHIPPS WORK CTR	Hale;PHIPPS WORK CTR
+ReportingUnit	Alabama;Hale County;NEWBERN CITY HALL	Hale;NEWBERN CITY HALL
+ReportingUnit	Alabama;Hale County;MT_ HOREB BAPT_	Hale;MT_ HOREB BAPT_
+ReportingUnit	Alabama;Hale County;MT_ HERMAN	Hale;MT_ HERMAN
+ReportingUnit	Alabama;Hale County;MOUNDVILLE COMMUNITY CENTER	Hale;MOUNDVILLE COMMUNITY CENTER
+ReportingUnit	Alabama;Hale County;LOCK 5 VFD	Hale;LOCK 5 VFD
+ReportingUnit	Alabama;Hale County;HAVANA	Hale;HAVANA
+ReportingUnit	Alabama;Hale County;GREENSBORO ARMORY	Hale;GREENSBORO ARMORY
+ReportingUnit	Alabama;Hale County;GALLION VFD	Hale;GALLION VFD
+ReportingUnit	Alabama;Hale County;BUCKSNORT	Hale;BUCKSNORT
+ReportingUnit	Alabama;Hale County;AKRON CITY HALL	Hale;AKRON CITY HALL
+ReportingUnit	Alabama;Greene County;UNION FIRE DEPT_	Greene;UNION FIRE DEPT_
+ReportingUnit	Alabama;Greene County;TISHABEE COMM_ CTR_	Greene;TISHABEE COMM_ CTR_
+ReportingUnit	Alabama;Greene County;SOUTH FORK RESTAURANT	Greene;SOUTH FORK RESTAURANT
+ReportingUnit	Alabama;Greene County;NATIONAL GUARD ARMORY	Greene;NATIONAL GUARD ARMORY
+ReportingUnit	Alabama;Greene County;MT_ HEBRON PRE-SCHOOL	Greene;MT_ HEBRON PRE-SCHOOL
+ReportingUnit	Alabama;Greene County;MANTUA FIRE DEPT_	Greene;MANTUA FIRE DEPT_
+ReportingUnit	Alabama;Greene County;KNOXVILLE FIRE DEPT_	Greene;KNOXVILLE FIRE DEPT_
+ReportingUnit	Alabama;Greene County;JENA FIRE DEPT_	Greene;JENA FIRE DEPT_
+ReportingUnit	Alabama;Greene County;GREENE COUNTY COURTHOUSE	Greene;GREENE COUNTY COURTHOUSE
+ReportingUnit	Alabama;Greene County;FORKLAND CITY HALL	Greene;FORKLAND CITY HALL
+ReportingUnit	Alabama;Greene County;EUTAW ACTIVITY CTR_	Greene;EUTAW ACTIVITY CTR_
+ReportingUnit	Alabama;Greene County;CLINTON COMM_ CTR_	Greene;CLINTON COMM_ CTR_
+ReportingUnit	Alabama;Greene County;BROWN MORROW BRANCH	Greene;BROWN MORROW BRANCH
+ReportingUnit	Alabama;Greene County;BOLIGEE FIRE DEPT_	Greene;BOLIGEE FIRE DEPT_
+ReportingUnit	Alabama;Geneva County;TATE SCHOOL	Geneva;TATE SCHOOL
+ReportingUnit	Alabama;Geneva County;SLOCOMB NATIONAL GUARD	Geneva;SLOCOMB NATIONAL GUARD
+ReportingUnit	Alabama;Geneva County;SAMSON SR_ CITIZENS CTR_	Geneva;SAMSON SR_ CITIZENS CTR_
+ReportingUnit	Alabama;Geneva County;REVELS STORE	Geneva;REVELS STORE
+ReportingUnit	Alabama;Geneva County;PINEY GROVE	Geneva;PINEY GROVE
+ReportingUnit	Alabama;Geneva County;MALVERN COMM_ CTR_	Geneva;MALVERN COMM_ CTR_
+ReportingUnit	Alabama;Geneva County;LYTLE	Geneva;LYTLE
+ReportingUnit	Alabama;Geneva County;LOWERY VTG HOUSE	Geneva;LOWERY VTG HOUSE
+ReportingUnit	Alabama;Geneva County;HUGHES VTG HOUSE	Geneva;HUGHES VTG HOUSE
+ReportingUnit	Alabama;Geneva County;HUGHES COMM_ CTR_	Geneva;HUGHES COMM_ CTR_
+ReportingUnit	Alabama;Geneva County;HACODA COMM_ CTR_	Geneva;HACODA COMM_ CTR_
+ReportingUnit	Alabama;Geneva County;GILMORE VTG HOUSE	Geneva;GILMORE VTG HOUSE
+ReportingUnit	Alabama;Geneva County;GENEVA COUNTY FARM CTR_	Geneva;GENEVA COUNTY FARM CTR_
+ReportingUnit	Alabama;Geneva County;FLAT CREEK COMM_ CTR_	Geneva;FLAT CREEK COMM_ CTR_
+ReportingUnit	Alabama;Geneva County;FIRST BAPTIST CH GENEVA	Geneva;FIRST BAPTIST CH GENEVA
+ReportingUnit	Alabama;Geneva County;FADETTE	Geneva;FADETTE
+ReportingUnit	Alabama;Geneva County;EL BETHAL BAPTIST CH	Geneva;EL BETHAL BAPTIST CH
+ReportingUnit	Alabama;Geneva County;DEVCO COMM_ CTR_	Geneva;DEVCO COMM_ CTR_
+ReportingUnit	Alabama;Geneva County;COFFEE SPRINGS	Geneva;COFFEE SPRINGS
+ReportingUnit	Alabama;Geneva County;BLACK COMM_ CTR_	Geneva;BLACK COMM_ CTR_
+ReportingUnit	Alabama;Geneva County;BELLWOOD COMM_ CTR_	Geneva;BELLWOOD COMM_ CTR_
+ReportingUnit	Alabama;Franklin County;WACO BAPTIST CHURCH	Franklin;WACO BAPTIST CHURCH
+ReportingUnit	Alabama;Franklin County;VINA FIRE STATION	Franklin;VINA FIRE STATION
+ReportingUnit	Alabama;Franklin County;UNION COMM_ CTR_	Franklin;UNION COMM_ CTR_
+ReportingUnit	Alabama;Franklin County;THARPTOWN BAPT_ CHURCH	Franklin;THARPTOWN BAPT_ CHURCH
+ReportingUnit	Alabama;Franklin County;SPRUCE PINE COMM_ CTR_	Franklin;SPRUCE PINE COMM_ CTR_
+ReportingUnit	Alabama;Franklin County;SAINTS CROSSROADS	Franklin;SAINTS CROSSROADS
+ReportingUnit	Alabama;Franklin County;RUSSELLVILLE HIGH	Franklin;RUSSELLVILLE HIGH
+ReportingUnit	Alabama;Franklin County;RUSSELLVILLE ELECTRIC	Franklin;RUSSELLVILLE ELECTRIC
+ReportingUnit	Alabama;Franklin County;ROCKWOOD	Franklin;ROCKWOOD
+ReportingUnit	Alabama;Franklin County;RED BAY SR_ CTR_	Franklin;RED BAY SR_ CTR_
+ReportingUnit	Alabama;Franklin County;PLEASANT SITE VFD	Franklin;PLEASANT SITE VFD
+ReportingUnit	Alabama;Franklin County;PHIL CAMPBELL SR_ CTR_	Franklin;PHIL CAMPBELL SR_ CTR_
+ReportingUnit	Alabama;Franklin County;NEWBURG	Franklin;NEWBURG
+ReportingUnit	Alabama;Franklin County;MT_ STAR HILLS SCHOOL	Franklin;MT_ STAR HILLS SCHOOL
+ReportingUnit	Alabama;Franklin County;LAWLERS FIRE DEPT_	Franklin;LAWLERS FIRE DEPT_
+ReportingUnit	Alabama;Franklin County;JONESBORO COMM_ CTR_	Franklin;JONESBORO COMM_ CTR_
+ReportingUnit	Alabama;Franklin County;HODGES COMM_ CTR_	Franklin;HODGES COMM_ CTR_
+ReportingUnit	Alabama;Franklin County;HALLTOWN COMM_ CTR_	Franklin;HALLTOWN COMM_ CTR_
+ReportingUnit	Alabama;Franklin County;FRANKFORT COMM_ CTR_	Franklin;FRANKFORT COMM_ CTR_
+ReportingUnit	Alabama;Franklin County;COURTHOUSE ANNEX	Franklin;COURTHOUSE ANNEX
+ReportingUnit	Alabama;Franklin County;COLLEGE AVE_ SCHOOL	Franklin;COLLEGE AVE_ SCHOOL
+ReportingUnit	Alabama;Franklin County;CHURNTOWN	Franklin;CHURNTOWN
+ReportingUnit	Alabama;Franklin County;CHUCKIE MULLINS CTR_	Franklin;CHUCKIE MULLINS CTR_
+ReportingUnit	Alabama;Franklin County;BELGREEN FIRE DEPT_	Franklin;BELGREEN FIRE DEPT_
+ReportingUnit	Alabama;Fayette County;WEBSTER-WAYSIDE	Fayette;WEBSTER-WAYSIDE
+ReportingUnit	Alabama;Fayette County;THOMPSON-KIRKLAND	Fayette;THOMPSON-KIRKLAND
+ReportingUnit	Alabama;Fayette County;SUGAR CREEK EXP_ STATION	Fayette;SUGAR CREEK EXP_ STATION
+ReportingUnit	Alabama;Fayette County;STOUGH TRINITY CH	Fayette;STOUGH TRINITY CH
+ReportingUnit	Alabama;Fayette County;STONEWALL-CANNAN CTR_	Fayette;STONEWALL-CANNAN CTR_
+ReportingUnit	Alabama;Fayette County;RUSSELL VT_ CTR_ BOBO	Fayette;RUSSELL VT_ CTR_ BOBO
+ReportingUnit	Alabama;Fayette County;RIDGE-CONCORD BAPT CH	Fayette;RIDGE-CONCORD BAPT CH
+ReportingUnit	Alabama;Fayette County;LEE-PALESTINE CH	Fayette;LEE-PALESTINE CH
+ReportingUnit	Alabama;Fayette County;LEE-BELK COMM_ CTR_	Fayette;LEE-BELK COMM_ CTR_
+ReportingUnit	Alabama;Fayette County;HICO-NEWTONVILLE	Fayette;HICO-NEWTONVILLE
+ReportingUnit	Alabama;Fayette County;GILPEN-LAWRENCE MILL	Fayette;GILPEN-LAWRENCE MILL
+ReportingUnit	Alabama;Fayette County;GEORGES CREEK-PEA RIDGE	Fayette;GEORGES CREEK-PEA RIDGE
+ReportingUnit	Alabama;Fayette County;FORDS-REHOBETH BAPT	Fayette;FORDS-REHOBETH BAPT
+ReportingUnit	Alabama;Fayette County;FAYETTE YOUTH CTR_	Fayette;FAYETTE YOUTH CTR_
+ReportingUnit	Alabama;Fayette County;FAYETTE CIVIC CTR_	Fayette;FAYETTE CIVIC CTR_
+ReportingUnit	Alabama;Fayette County;ELM GROVE CH	Fayette;ELM GROVE CH
+ReportingUnit	Alabama;Fayette County;COVIN VT_ CTR_	Fayette;COVIN VT_ CTR_
+ReportingUnit	Alabama;Fayette County;COLLINS-MT_VERNON	Fayette;COLLINS-MT_VERNON
+ReportingUnit	Alabama;Fayette County;COLE-PAUL HUBBERT	Fayette;COLE-PAUL HUBBERT
+ReportingUnit	Alabama;Fayette County;COLE-KILLINGSWORTH BAPT_	Fayette;COLE-KILLINGSWORTH BAPT_
+ReportingUnit	Alabama;Fayette County;CLEAR CREEK-CEDAR GROVE	Fayette;CLEAR CREEK-CEDAR GROVE
+ReportingUnit	Alabama;Fayette County;BYLOR-BANKSTON VFD	Fayette;BYLOR-BANKSTON VFD
+ReportingUnit	Alabama;Fayette County;BROWNS-WHITE'S CHAPEL CH	Fayette;BROWNS-WHITE'S CHAPEL CH
+ReportingUnit	Alabama;Fayette County;BROWNS-GLEN ALLEN CTR_	Fayette;BROWNS-GLEN ALLEN CTR_
+ReportingUnit	Alabama;Fayette County;BOLEY SPRINGS CH	Fayette;BOLEY SPRINGS CH
+ReportingUnit	Alabama;Fayette County;BERRY CIVIC CTR	Fayette;BERRY CIVIC CTR
+ReportingUnit	Alabama;Etowah County;WHORTON BEND	Etowah;WHORTON BEND
+ReportingUnit	Alabama;Etowah County;WALNUT PARK REC_	Etowah;WALNUT PARK REC_
+ReportingUnit	Alabama;Etowah County;WALNUT GROVE VFD	Etowah;WALNUT GROVE VFD
+ReportingUnit	Alabama;Etowah County;WALLACE HALL GSCC	Etowah;WALLACE HALL GSCC
+ReportingUnit	Alabama;Etowah County;TILLISON BEND WATER	Etowah;TILLISON BEND WATER
+ReportingUnit	Alabama;Etowah County;SOUTHSIDE COMM_ CTR_	Etowah;SOUTHSIDE COMM_ CTR_
+ReportingUnit	Alabama;Etowah County;SARDIS COMM_ CTR_	Etowah;SARDIS COMM_ CTR_
+ReportingUnit	Alabama;Etowah County;REECE CITY TOWN HALL	Etowah;REECE CITY TOWN HALL
+ReportingUnit	Alabama;Etowah County;RAINBOW CITY FIRE	Etowah;RAINBOW CITY FIRE
+ReportingUnit	Alabama;Etowah County;RAINBOW CITY COMM_	Etowah;RAINBOW CITY COMM_
+ReportingUnit	Alabama;Etowah County;OLD GADSDEN HIGH	Etowah;OLD GADSDEN HIGH
+ReportingUnit	Alabama;Etowah County;NORTH GADSDEN REC_	Etowah;NORTH GADSDEN REC_
+ReportingUnit	Alabama;Etowah County;NOCCALULA KIWANIS	Etowah;NOCCALULA KIWANIS
+ReportingUnit	Alabama;Etowah County;NEW UNION COMM_ CTR_	Etowah;NEW UNION COMM_ CTR_
+ReportingUnit	Alabama;Etowah County;NE ETOWAH COMM_ CTR_	Etowah;NE ETOWAH COMM_ CTR_
+ReportingUnit	Alabama;Etowah County;MOUNTAINBORO VFD	Etowah;MOUNTAINBORO VFD
+ReportingUnit	Alabama;Etowah County;MEADOWBROOK BAPT_	Etowah;MEADOWBROOK BAPT_
+ReportingUnit	Alabama;Etowah County;LOOKOUT MT_ COMM_	Etowah;LOOKOUT MT_ COMM_
+ReportingUnit	Alabama;Etowah County;IVALEE VFD	Etowah;IVALEE VFD
+ReportingUnit	Alabama;Etowah County;HOKES BLUFF COMM_	Etowah;HOKES BLUFF COMM_
+ReportingUnit	Alabama;Etowah County;GEORGE WALLACE SR_ CTR_	Etowah;GEORGE WALLACE SR_ CTR_
+ReportingUnit	Alabama;Etowah County;GALLANT COMM_ CTR_	Etowah;GALLANT COMM_ CTR_
+ReportingUnit	Alabama;Etowah County;ELLIOTT COMM_ CTR_	Etowah;ELLIOTT COMM_ CTR_
+ReportingUnit	Alabama;Etowah County;EGYPT COMM_ CTR_	Etowah;EGYPT COMM_ CTR_
+ReportingUnit	Alabama;Etowah County;EAST GADSDEN REC_	Etowah;EAST GADSDEN REC_
+ReportingUnit	Alabama;Etowah County;DOWNTOWN CIVIC CTR_	Etowah;DOWNTOWN CIVIC CTR_
+ReportingUnit	Alabama;Etowah County;CAVE SPRINGS COMM_	Etowah;CAVE SPRINGS COMM_
+ReportingUnit	Alabama;Etowah County;CARVER COMM_ CTR_	Etowah;CARVER COMM_ CTR_
+ReportingUnit	Alabama;Etowah County;ATTALLA REC_ CTR_	Etowah;ATTALLA REC_ CTR_
+ReportingUnit	Alabama;Etowah County;ALTOONA FIRE	Etowah;ALTOONA FIRE
+ReportingUnit	Alabama;Etowah County;1ST UNITED METHODIST	Etowah;1ST UNITED METHODIST
+ReportingUnit	Alabama;Escambia County;WALLACE METHODIST	Escambia;WALLACE METHODIST
+ReportingUnit	Alabama;Escambia County;ROCK HILL RIDGE VFD	Escambia;ROCK HILL RIDGE VFD
+ReportingUnit	Alabama;Escambia County;RIVERVIEW TOWN HALL	Escambia;RIVERVIEW TOWN HALL
+ReportingUnit	Alabama;Escambia County;POLLARD TOWN HALL	Escambia;POLLARD TOWN HALL
+ReportingUnit	Alabama;Escambia County;PINEVIEW V_H_	Escambia;PINEVIEW V_H_
+ReportingUnit	Alabama;Escambia County;OLD SCHOOL HOUSE	Escambia;OLD SCHOOL HOUSE
+ReportingUnit	Alabama;Escambia County;NOKOMIS V_H_	Escambia;NOKOMIS V_H_
+ReportingUnit	Alabama;Escambia County;NEW ORDER BAPT_	Escambia;NEW ORDER BAPT_
+ReportingUnit	Alabama;Escambia County;MCCULLOUGH VFD	Escambia;MCCULLOUGH VFD
+ReportingUnit	Alabama;Escambia County;LITTLE ROCK STORE	Escambia;LITTLE ROCK STORE
+ReportingUnit	Alabama;Escambia County;LITTLE ESCAMBIA V_H_	Escambia;LITTLE ESCAMBIA V_H_
+ReportingUnit	Alabama;Escambia County;HUXFORD MASONIC	Escambia;HUXFORD MASONIC
+ReportingUnit	Alabama;Escambia County;FLOMATON TOWN HALL	Escambia;FLOMATON TOWN HALL
+ReportingUnit	Alabama;Escambia County;FLOMATON COMM_	Escambia;FLOMATON COMM_
+ReportingUnit	Alabama;Escambia County;FIRST UN METHODIST	Escambia;FIRST UN METHODIST
+ReportingUnit	Alabama;Escambia County;EAST BREWTON SAILS	Escambia;EAST BREWTON SAILS
+ReportingUnit	Alabama;Escambia County;DIXIE VFD	Escambia;DIXIE VFD
+ReportingUnit	Alabama;Escambia County;DAMASCUS BOYKIN	Escambia;DAMASCUS BOYKIN
+ReportingUnit	Alabama;Escambia County;CO HWY DEPT	Escambia;CO HWY DEPT
+ReportingUnit	Alabama;Escambia County;CATAWBA SPRINGS	Escambia;CATAWBA SPRINGS
+ReportingUnit	Alabama;Escambia County;CANOE CIVIC CLUB	Escambia;CANOE CIVIC CLUB
+ReportingUnit	Alabama;Escambia County;BREWTON CIVIC CTR_	Escambia;BREWTON CIVIC CTR_
+ReportingUnit	Alabama;Escambia County;BRADLEY VFD	Escambia;BRADLEY VFD
+ReportingUnit	Alabama;Escambia County;BETHEL ROBERTS	Escambia;BETHEL ROBERTS
+ReportingUnit	Alabama;Escambia County;BARNETTS CROSSROADS	Escambia;BARNETTS CROSSROADS
+ReportingUnit	Alabama;Escambia County;ATMORE PUBLIC LIBRARY	Escambia;ATMORE PUBLIC LIBRARY
+ReportingUnit	Alabama;Escambia County;ATMORE CITY HALL	Escambia;ATMORE CITY HALL
+ReportingUnit	Alabama;Escambia County;APPLETON VFD	Escambia;APPLETON VFD
+ReportingUnit	Alabama;Escambia County;ALCO JD MUSEUM	Escambia;ALCO JD MUSEUM
+ReportingUnit	Alabama;Elmore County;WETUMPKA CIVIC CTR_	Elmore;WETUMPKA CIVIC CTR_
+ReportingUnit	Alabama;Elmore County;WEOKA COMM_	Elmore;WEOKA COMM_
+ReportingUnit	Alabama;Elmore County;WALLSBORO COMM_	Elmore;WALLSBORO COMM_
+ReportingUnit	Alabama;Elmore County;VICTORY BAPT_	Elmore;VICTORY BAPT_
+ReportingUnit	Alabama;Elmore County;TRICITY BAPT_	Elmore;TRICITY BAPT_
+ReportingUnit	Alabama;Elmore County;TITUS COMM_	Elmore;TITUS COMM_
+ReportingUnit	Alabama;Elmore County;TALLAWEKA BAPT_	Elmore;TALLAWEKA BAPT_
+ReportingUnit	Alabama;Elmore County;SEMAN COMM_	Elmore;SEMAN COMM_
+ReportingUnit	Alabama;Elmore County;SANTUCK COMM	Elmore;SANTUCK COMM
+ReportingUnit	Alabama;Elmore County;RUSHENVILLE BAPT_	Elmore;RUSHENVILLE BAPT_
+ReportingUnit	Alabama;Elmore County;ROCK SPRGS_ VOTING	Elmore;ROCK SPRGS_ VOTING
+ReportingUnit	Alabama;Elmore County;REDHILL COMM_	Elmore;REDHILL COMM_
+ReportingUnit	Alabama;Elmore County;NEW HOPE BAPT_	Elmore;NEW HOPE BAPT_
+ReportingUnit	Alabama;Elmore County;NEW HOME BAPT_ WETUMPKA	Elmore;NEW HOME BAPT_ WETUMPKA
+ReportingUnit	Alabama;Elmore County;NEW HOME BAPT_ TITUS	Elmore;NEW HOME BAPT_ TITUS
+ReportingUnit	Alabama;Elmore County;NAZARENE	Elmore;NAZARENE
+ReportingUnit	Alabama;Elmore County;MULDER METHODIST	Elmore;MULDER METHODIST
+ReportingUnit	Alabama;Elmore County;MLK CTR_	Elmore;MLK CTR_
+ReportingUnit	Alabama;Elmore County;MILLBROOK CIVIC CTR_	Elmore;MILLBROOK CIVIC CTR_
+ReportingUnit	Alabama;Elmore County;KOWALIGA FIRE	Elmore;KOWALIGA FIRE
+ReportingUnit	Alabama;Elmore County;GOD'S CONGREGATION	Elmore;GOD'S CONGREGATION
+ReportingUnit	Alabama;Elmore County;FRIENDSHIP FIRE	Elmore;FRIENDSHIP FIRE
+ReportingUnit	Alabama;Elmore County;ECLECTIC METHODIST	Elmore;ECLECTIC METHODIST
+ReportingUnit	Alabama;Elmore County;DEATSVILLE VFD	Elmore;DEATSVILLE VFD
+ReportingUnit	Alabama;Elmore County;CRENSHAW PARK	Elmore;CRENSHAW PARK
+ReportingUnit	Alabama;Elmore County;COOSADA TOWN HALL	Elmore;COOSADA TOWN HALL
+ReportingUnit	Alabama;Elmore County;CAINS CHAPEL FIRE	Elmore;CAINS CHAPEL FIRE
+ReportingUnit	Alabama;Elmore County;BLUE RIDGE BAPT	Elmore;BLUE RIDGE BAPT
+ReportingUnit	Alabama;Elmore County;ASBURY KENT COMM_	Elmore;ASBURY KENT COMM_
+ReportingUnit	Alabama;DeKalb County;WILLS VALLEY REC CTR	DeKalb;WILLS VALLEY REC CTR
+ReportingUnit	Alabama;DeKalb County;WHITON-OLD SCH BLDG	DeKalb;WHITON-OLD SCH BLDG
+ReportingUnit	Alabama;DeKalb County;VFW HALL LOBBY	DeKalb;VFW HALL LOBBY
+ReportingUnit	Alabama;DeKalb County;VALLEY HEAD TOWN HALL	DeKalb;VALLEY HEAD TOWN HALL
+ReportingUnit	Alabama;DeKalb County;TENBORECK COMM CTR	DeKalb;TENBORECK COMM CTR
+ReportingUnit	Alabama;DeKalb County;SYLVANIA TOWN HALL	DeKalb;SYLVANIA TOWN HALL
+ReportingUnit	Alabama;DeKalb County;SULPHER SPRINGS COMM CTR	DeKalb;SULPHER SPRINGS COMM CTR
+ReportingUnit	Alabama;DeKalb County;SKIRUM COMM CTR	DeKalb;SKIRUM COMM CTR
+ReportingUnit	Alabama;DeKalb County;SHILOH TOWN HALL	DeKalb;SHILOH TOWN HALL
+ReportingUnit	Alabama;DeKalb County;SHADY GROVE BAPT CH	DeKalb;SHADY GROVE BAPT CH
+ReportingUnit	Alabama;DeKalb County;SAND MTN RSCH CTR	DeKalb;SAND MTN RSCH CTR
+ReportingUnit	Alabama;DeKalb County;RODENTOWN COMM CTR	DeKalb;RODENTOWN COMM CTR
+ReportingUnit	Alabama;DeKalb County;POWELL PARK PAVILION	DeKalb;POWELL PARK PAVILION
+ReportingUnit	Alabama;DeKalb County;PORTERSVILLE BAPT CH	DeKalb;PORTERSVILLE BAPT CH
+ReportingUnit	Alabama;DeKalb County;PLEASANT HILL COMM CTR	DeKalb;PLEASANT HILL COMM CTR
+ReportingUnit	Alabama;DeKalb County;PINE RIDGE COMM D-4	DeKalb;PINE RIDGE COMM D-4
+ReportingUnit	Alabama;DeKalb County;PINE RIDGE COMM D-3	DeKalb;PINE RIDGE COMM D-3
+ReportingUnit	Alabama;DeKalb County;PAYNE GAP CH	DeKalb;PAYNE GAP CH
+ReportingUnit	Alabama;DeKalb County;PAINTER-LIBERTY BAPT CH	DeKalb;PAINTER-LIBERTY BAPT CH
+ReportingUnit	Alabama;DeKalb County;MENTONE VISITOR CTR	DeKalb;MENTONE VISITOR CTR
+ReportingUnit	Alabama;DeKalb County;MCKESTES COMM CTR	DeKalb;MCKESTES COMM CTR
+ReportingUnit	Alabama;DeKalb County;MACEDONIA BAPT CH #2	DeKalb;MACEDONIA BAPT CH #2
+ReportingUnit	Alabama;DeKalb County;LEBANON CHAPEL	DeKalb;LEBANON CHAPEL
+ReportingUnit	Alabama;DeKalb County;KILPATRICK COMM CTR	DeKalb;KILPATRICK COMM CTR
+ReportingUnit	Alabama;DeKalb County;IDER SENIOR CTR	DeKalb;IDER SENIOR CTR
+ReportingUnit	Alabama;DeKalb County;HIGH POINT CH OF GOD	DeKalb;HIGH POINT CH OF GOD
+ReportingUnit	Alabama;DeKalb County;HENAGAR COMM CTR	DeKalb;HENAGAR COMM CTR
+ReportingUnit	Alabama;DeKalb County;HAMMONDVILLE FIRE	DeKalb;HAMMONDVILLE FIRE
+ReportingUnit	Alabama;DeKalb County;GROVE OAK CLUB HOUSE	DeKalb;GROVE OAK CLUB HOUSE
+ReportingUnit	Alabama;DeKalb County;GERALDINE 1ST BAPT CH	DeKalb;GERALDINE 1ST BAPT CH
+ReportingUnit	Alabama;DeKalb County;FYFFE SENIOR CTR	DeKalb;FYFFE SENIOR CTR
+ReportingUnit	Alabama;DeKalb County;FORT PAYNE SENIOR CTR	DeKalb;FORT PAYNE SENIOR CTR
+ReportingUnit	Alabama;DeKalb County;FISCHER COMM CTR D-3	DeKalb;FISCHER COMM CTR D-3
+ReportingUnit	Alabama;DeKalb County;FISCHER COMM CTR D-1	DeKalb;FISCHER COMM CTR D-1
+ReportingUnit	Alabama;DeKalb County;FIRE #3 E HIGHLAND D-3	DeKalb;FIRE #3 E HIGHLAND D-3
+ReportingUnit	Alabama;DeKalb County;FIRE #3 E HIGHLAND D-1	DeKalb;FIRE #3 E HIGHLAND D-1
+ReportingUnit	Alabama;DeKalb County;DOGTOWN MASONIC LODGE	DeKalb;DOGTOWN MASONIC LODGE
+ReportingUnit	Alabama;DeKalb County;DEKALB CO SCH COLISEUM	DeKalb;DEKALB CO SCH COLISEUM
+ReportingUnit	Alabama;DeKalb County;COPELAND BRIDGE LIBERTY	DeKalb;COPELAND BRIDGE LIBERTY
+ReportingUnit	Alabama;DeKalb County;COLLINSVILLE NATL GUARD	DeKalb;COLLINSVILLE NATL GUARD
+ReportingUnit	Alabama;DeKalb County;CARTERSVILLE FIRE HALL	DeKalb;CARTERSVILLE FIRE HALL
+ReportingUnit	Alabama;DeKalb County;BLAKE COMM CTR	DeKalb;BLAKE COMM CTR
+ReportingUnit	Alabama;DeKalb County;ARONEY FIRE	DeKalb;ARONEY FIRE
+ReportingUnit	Alabama;DeKalb County;ADAMSBURG FIRE	DeKalb;ADAMSBURG FIRE
+ReportingUnit	Alabama;Dallas County;YMCA	Dallas;YMCA
+ReportingUnit	Alabama;Dallas County;WOODROW AVE_ FIRE STA_	Dallas;WOODROW AVE_ FIRE STA_
+ReportingUnit	Alabama;Dallas County;VALLEY GRANDE COMM_ CTR_	Dallas;VALLEY GRANDE COMM_ CTR_
+ReportingUnit	Alabama;Dallas County;UNION NEW NATL GRD ARMRY	Dallas;UNION NEW NATL GRD ARMRY
+ReportingUnit	Alabama;Dallas County;TYLER COMM_ CTR_	Dallas;TYLER COMM_ CTR_
+ReportingUnit	Alabama;Dallas County;TIPTON SCHOOL	Dallas;TIPTON SCHOOL
+ReportingUnit	Alabama;Dallas County;SUMMERFIELD VFD	Dallas;SUMMERFIELD VFD
+ReportingUnit	Alabama;Dallas County;SHILOH SCHOOL BLDG_	Dallas;SHILOH SCHOOL BLDG_
+ReportingUnit	Alabama;Dallas County;SELMONT WATER WORKS 00502_001	Dallas;SELMONT WATER WORKS 00502_001
+ReportingUnit	Alabama;Dallas County;SELMA MALL	Dallas;SELMA MALL
+ReportingUnit	Alabama;Dallas County;SAFFORD COMM_ CTR_	Dallas;SAFFORD COMM_ CTR_
+ReportingUnit	Alabama;Dallas County;RANGEDALE CTR_	Dallas;RANGEDALE CTR_
+ReportingUnit	Alabama;Dallas County;QUEEN OF PEACE SCHOOL	Dallas;QUEEN OF PEACE SCHOOL
+ReportingUnit	Alabama;Dallas County;PLANTERSVILLE VFD 00101_001	Dallas;PLANTERSVILLE VFD 00101_001
+ReportingUnit	Alabama;Dallas County;ORRVILLE COMM_ CTR_	Dallas;ORRVILLE COMM_ CTR_
+ReportingUnit	Alabama;Dallas County;NEW ST JOHNS BAPTIST CH_	Dallas;NEW ST JOHNS BAPTIST CH_
+ReportingUnit	Alabama;Dallas County;MT_ ZION CH_	Dallas;MT_ ZION CH_
+ReportingUnit	Alabama;Dallas County;MEMORIAL STADIUM	Dallas;MEMORIAL STADIUM
+ReportingUnit	Alabama;Dallas County;MARION JCT BLACKBELT	Dallas;MARION JCT BLACKBELT
+ReportingUnit	Alabama;Dallas County;GWC HOMES CTR_	Dallas;GWC HOMES CTR_
+ReportingUnit	Alabama;Dallas County;GOOD HOPE CH_ 00701_001	Dallas;GOOD HOPE CH_ 00701_001
+ReportingUnit	Alabama;Dallas County;EASTEND FIRE STA_	Dallas;EASTEND FIRE STA_
+ReportingUnit	Alabama;Dallas County;DALLAS COUNTY COURTHOUSE	Dallas;DALLAS COUNTY COURTHOUSE
+ReportingUnit	Alabama;Dallas County;CHRISTIAN OUTREACH	Dallas;CHRISTIAN OUTREACH
+ReportingUnit	Alabama;Dallas County;CARLOWVILLE MINTER 01501_001	Dallas;CARLOWVILLE MINTER 01501_001
+ReportingUnit	Alabama;Dallas County;BROAD STREET FIRE STA_	Dallas;BROAD STREET FIRE STA_
+ReportingUnit	Alabama;Dallas County;BELOIT COMM_ CTR_	Dallas;BELOIT COMM_ CTR_
+ReportingUnit	Alabama;Dallas County;BARRETT RD UMC	Dallas;BARRETT RD UMC
+ReportingUnit	Alabama;Dallas County;BARRETT RD METHODIST CH_	Dallas;BARRETT RD METHODIST CH_
+ReportingUnit	Alabama;Dale County;SYLVAN GROVE	Dale;SYLVAN GROVE
+ReportingUnit	Alabama;Dale County;SKIPPERVILLE METHODIST	Dale;SKIPPERVILLE METHODIST
+ReportingUnit	Alabama;Dale County;ROCKY HEAD - FT_ RUCKER	Dale;ROCKY HEAD - FT_ RUCKER
+ReportingUnit	Alabama;Dale County;ROCKY HD COMM_ HOUSE	Dale;ROCKY HD COMM_ HOUSE
+ReportingUnit	Alabama;Dale County;PINCKARD TOWN HALL	Dale;PINCKARD TOWN HALL
+ReportingUnit	Alabama;Dale County;OZARK CIVIC CTR_	Dale;OZARK CIVIC CTR_
+ReportingUnit	Alabama;Dale County;NEWTON TOWN HALL	Dale;NEWTON TOWN HALL
+ReportingUnit	Alabama;Dale County;MIDLAND VOTING HALL	Dale;MIDLAND VOTING HALL
+ReportingUnit	Alabama;Dale County;MARLEY MILL FORESTRY	Dale;MARLEY MILL FORESTRY
+ReportingUnit	Alabama;Dale County;LEVEL PLAINS COMM_ CTR_	Dale;LEVEL PLAINS COMM_ CTR_
+ReportingUnit	Alabama;Dale County;GRIMES COMM_ CTR_	Dale;GRIMES COMM_ CTR_
+ReportingUnit	Alabama;Dale County;EWELL FIRE	Dale;EWELL FIRE
+ReportingUnit	Alabama;Dale County;ECHO FIRE	Dale;ECHO FIRE
+ReportingUnit	Alabama;Dale County;DALEVILLE CULTURE & CONV	Dale;DALEVILLE CULTURE & CONV
+ReportingUnit	Alabama;Dale County;CLOPTON COMM_	Dale;CLOPTON COMM_
+ReportingUnit	Alabama;Dale County;CLAYHATCHEE COMM_	Dale;CLAYHATCHEE COMM_
+ReportingUnit	Alabama;Dale County;BERTHA NEW HOPE	Dale;BERTHA NEW HOPE
+ReportingUnit	Alabama;Dale County;ARITON CITY HALL	Dale;ARITON CITY HALL
+ReportingUnit	Alabama;Dale County;ARGUTA COMM_ CTR_	Dale;ARGUTA COMM_ CTR_
+ReportingUnit	Alabama;Cullman County;WEST POINT COMM CTR	Cullman;WEST POINT COMM CTR
+ReportingUnit	Alabama;Cullman County;WELTI MT_ ZION CH	Cullman;WELTI MT_ ZION CH
+ReportingUnit	Alabama;Cullman County;WALTER COMM CTR	Cullman;WALTER COMM CTR
+ReportingUnit	Alabama;Cullman County;VINEMONT COMM CTR	Cullman;VINEMONT COMM CTR
+ReportingUnit	Alabama;Cullman County;VALLEY GROVE COMM CTR	Cullman;VALLEY GROVE COMM CTR
+ReportingUnit	Alabama;Cullman County;TRIMBLE FIRE DEPT_	Cullman;TRIMBLE FIRE DEPT_
+ReportingUnit	Alabama;Cullman County;STOUTS MOUNTAIN CH	Cullman;STOUTS MOUNTAIN CH
+ReportingUnit	Alabama;Cullman County;SIMCOE COMM CTR	Cullman;SIMCOE COMM CTR
+ReportingUnit	Alabama;Cullman County;PROVIDENCE FIRE DEPT_	Cullman;PROVIDENCE FIRE DEPT_
+ReportingUnit	Alabama;Cullman County;NEW CANAAN SR_ CTR	Cullman;NEW CANAAN SR_ CTR
+ReportingUnit	Alabama;Cullman County;MOODY TOWN UNION HILL CH	Cullman;MOODY TOWN UNION HILL CH
+ReportingUnit	Alabama;Cullman County;LOGAN FIRE DEPT_	Cullman;LOGAN FIRE DEPT_
+ReportingUnit	Alabama;Cullman County;KELLEY COMM CTR	Cullman;KELLEY COMM CTR
+ReportingUnit	Alabama;Cullman County;JOPPA FIRE DEPT_	Cullman;JOPPA FIRE DEPT_
+ReportingUnit	Alabama;Cullman County;JONES CHAPEL FIRE DEPT_	Cullman;JONES CHAPEL FIRE DEPT_
+ReportingUnit	Alabama;Cullman County;JOHNSON CROSSING VFD	Cullman;JOHNSON CROSSING VFD
+ReportingUnit	Alabama;Cullman County;HOLLY POND FIRE DEPT_	Cullman;HOLLY POND FIRE DEPT_
+ReportingUnit	Alabama;Cullman County;HANCEVILLE CIVIC CTR	Cullman;HANCEVILLE CIVIC CTR
+ReportingUnit	Alabama;Cullman County;HANCEVILLE CITY HALL	Cullman;HANCEVILLE CITY HALL
+ReportingUnit	Alabama;Cullman County;GRANDVIEW COMM CTR	Cullman;GRANDVIEW COMM CTR
+ReportingUnit	Alabama;Cullman County;GOOD HOPE CITY HALL	Cullman;GOOD HOPE CITY HALL
+ReportingUnit	Alabama;Cullman County;GOLD RIDGE COMM CTR	Cullman;GOLD RIDGE COMM CTR
+ReportingUnit	Alabama;Cullman County;GARDEN CITY TOWN HALL	Cullman;GARDEN CITY TOWN HALL
+ReportingUnit	Alabama;Cullman County;FRIENDSHIP METHODIST	Cullman;FRIENDSHIP METHODIST
+ReportingUnit	Alabama;Cullman County;FAIRVIEW TOWN HALL_ L-Z	Cullman;FAIRVIEW TOWN HALL_ L-Z
+ReportingUnit	Alabama;Cullman County;FAIRVIEW FIRE DEPT_ A-K	Cullman;FAIRVIEW FIRE DEPT_ A-K
+ReportingUnit	Alabama;Cullman County;EAST POINT COMM CTR	Cullman;EAST POINT COMM CTR
+ReportingUnit	Alabama;Cullman County;DONALD E_ GREEN SR STR	Cullman;DONALD E_ GREEN SR STR
+ReportingUnit	Alabama;Cullman County;DODGE CITY COMMUNITY CTR_	Cullman;DODGE CITY COMMUNITY CTR_
+ReportingUnit	Alabama;Cullman County;CULLMAN OFFICE BLDG_	Cullman;CULLMAN OFFICE BLDG_
+ReportingUnit	Alabama;Cullman County;CULLMAN CO_ HEALTH DEPT_	Cullman;CULLMAN CO_ HEALTH DEPT_
+ReportingUnit	Alabama;Cullman County;CULLMAN CITY HALL	Cullman;CULLMAN CITY HALL
+ReportingUnit	Alabama;Cullman County;CRANE HILL FIRE DEPT_	Cullman;CRANE HILL FIRE DEPT_
+ReportingUnit	Alabama;Cullman County;COURTHOUSE CONF_ ROOM	Cullman;COURTHOUSE CONF_ ROOM
+ReportingUnit	Alabama;Cullman County;COLONY ED_ COMPLEX	Cullman;COLONY ED_ COMPLEX
+ReportingUnit	Alabama;Cullman County;COLD SPRGS COMM CTR	Cullman;COLD SPRGS COMM CTR
+ReportingUnit	Alabama;Cullman County;CENTER HILL COMM CTR	Cullman;CENTER HILL COMM CTR
+ReportingUnit	Alabama;Cullman County;BRUSHY POND COMM CTR	Cullman;BRUSHY POND COMM CTR
+ReportingUnit	Alabama;Cullman County;BROOKLYN COMM CTR	Cullman;BROOKLYN COMM CTR
+ReportingUnit	Alabama;Cullman County;BREMEN FIRE DEPT_	Cullman;BREMEN FIRE DEPT_
+ReportingUnit	Alabama;Cullman County;BOLTE WHITE GROVE CH	Cullman;BOLTE WHITE GROVE CH
+ReportingUnit	Alabama;Cullman County;BETHSADIA FIRE DEPT_	Cullman;BETHSADIA FIRE DEPT_
+ReportingUnit	Alabama;Cullman County;BETHEL COMM CTR	Cullman;BETHEL COMM CTR
+ReportingUnit	Alabama;Cullman County;BERLIN COMM CTR	Cullman;BERLIN COMM CTR
+ReportingUnit	Alabama;Cullman County;BEAT 8 COMM CTR	Cullman;BEAT 8 COMM CTR
+ReportingUnit	Alabama;Cullman County;BATTLEGROUND FIRE DEPT_	Cullman;BATTLEGROUND FIRE DEPT_
+ReportingUnit	Alabama;Cullman County;BALDWIN FAMILY LIFE CTR	Cullman;BALDWIN FAMILY LIFE CTR
+ReportingUnit	Alabama;Cullman County;BAILEYTON SR_ CTR	Cullman;BAILEYTON SR_ CTR
+ReportingUnit	Alabama;Cullman County;ARKADELPHIA FIRE DEPT_	Cullman;ARKADELPHIA FIRE DEPT_
+ReportingUnit	Alabama;Crenshaw County;WEEDS STORE BRANTLEY	Crenshaw;WEEDS STORE BRANTLEY
+ReportingUnit	Alabama;Crenshaw County;VIDETTE COMM_ CTR	Crenshaw;VIDETTE COMM_ CTR
+ReportingUnit	Alabama;Crenshaw County;VFD HONORVILLE	Crenshaw;VFD HONORVILLE
+ReportingUnit	Alabama;Crenshaw County;RUTLEDGE COMM_	Crenshaw;RUTLEDGE COMM_
+ReportingUnit	Alabama;Crenshaw County;PLEASANT HOME SCH	Crenshaw;PLEASANT HOME SCH
+ReportingUnit	Alabama;Crenshaw County;PETREY COMM_ CTR	Crenshaw;PETREY COMM_ CTR
+ReportingUnit	Alabama;Crenshaw County;PATSBURG DEPOT	Crenshaw;PATSBURG DEPOT
+ReportingUnit	Alabama;Crenshaw County;PANOLA COMM_ CTR	Crenshaw;PANOLA COMM_ CTR
+ReportingUnit	Alabama;Crenshaw County;LILLER'S STORE	Crenshaw;LILLER'S STORE
+ReportingUnit	Alabama;Crenshaw County;HIGHLAND HOME FD	Crenshaw;HIGHLAND HOME FD
+ReportingUnit	Alabama;Crenshaw County;HARBIN FARM CTR	Crenshaw;HARBIN FARM CTR
+ReportingUnit	Alabama;Crenshaw County;GLENWOOD CITY HALL	Crenshaw;GLENWOOD CITY HALL
+ReportingUnit	Alabama;Crenshaw County;DOZIER CITY HALL	Crenshaw;DOZIER CITY HALL
+ReportingUnit	Alabama;Crenshaw County;DANIELVILLE SCHOOL	Crenshaw;DANIELVILLE SCHOOL
+ReportingUnit	Alabama;Crenshaw County;COUNTY COURTHOUSE	Crenshaw;COUNTY COURTHOUSE
+ReportingUnit	Alabama;Crenshaw County;CHAPEL HILL COMM_	Crenshaw;CHAPEL HILL COMM_
+ReportingUnit	Alabama;Crenshaw County;BUSH'S GROCERY	Crenshaw;BUSH'S GROCERY
+ReportingUnit	Alabama;Crenshaw County;BRANTLEY COMM_	Crenshaw;BRANTLEY COMM_
+ReportingUnit	Alabama;Covington County;WING FIRE DEPT_	Covington;WING FIRE DEPT_
+ReportingUnit	Alabama;Covington County;UNION GROVE FIRE	Covington;UNION GROVE FIRE
+ReportingUnit	Alabama;Covington County;STRAUGHN (AG BLDG_)	Covington;STRAUGHN (AG BLDG_)
+ReportingUnit	Alabama;Covington County;SANFORD CITY HALL	Covington;SANFORD CITY HALL
+ReportingUnit	Alabama;Covington County;ROSE HILL COMM_ CTR_	Covington;ROSE HILL COMM_ CTR_
+ReportingUnit	Alabama;Covington County;RIVER FALLS CITY HALL	Covington;RIVER FALLS CITY HALL
+ReportingUnit	Alabama;Covington County;RED OAK	Covington;RED OAK
+ReportingUnit	Alabama;Covington County;RED LEVEL FIRE DEPT_	Covington;RED LEVEL FIRE DEPT_
+ReportingUnit	Alabama;Covington County;PLEASANT HOME/CATOE'S	Covington;PLEASANT HOME/CATOE'S
+ReportingUnit	Alabama;Covington County;OPP SR_ ACTIVITY CTR_	Covington;OPP SR_ ACTIVITY CTR_
+ReportingUnit	Alabama;Covington County;MARVIN ODOMS PLACE	Covington;MARVIN ODOMS PLACE
+ReportingUnit	Alabama;Covington County;LOCKHART CITY HALL	Covington;LOCKHART CITY HALL
+ReportingUnit	Alabama;Covington County;LOANGO FIRE DEPT_	Covington;LOANGO FIRE DEPT_
+ReportingUnit	Alabama;Covington County;LIBERTYVILLE CITY HALL	Covington;LIBERTYVILLE CITY HALL
+ReportingUnit	Alabama;Covington County;HOPEWELL	Covington;HOPEWELL
+ReportingUnit	Alabama;Covington County;HEATH CITY HALL	Covington;HEATH CITY HALL
+ReportingUnit	Alabama;Covington County;HARMONY	Covington;HARMONY
+ReportingUnit	Alabama;Covington County;GANTT CITY HALL	Covington;GANTT CITY HALL
+ReportingUnit	Alabama;Covington County;FLORALA OLD NATL GUARD	Covington;FLORALA OLD NATL GUARD
+ReportingUnit	Alabama;Covington County;CAROLINA CITY HALL	Covington;CAROLINA CITY HALL
+ReportingUnit	Alabama;Covington County;BUCK CREEK FIRE	Covington;BUCK CREEK FIRE
+ReportingUnit	Alabama;Covington County;BLUE SPRGS HORN HILL	Covington;BLUE SPRGS HORN HILL
+ReportingUnit	Alabama;Covington County;BEULAH VTG HOUSE	Covington;BEULAH VTG HOUSE
+ReportingUnit	Alabama;Covington County;BABBIE FIRE	Covington;BABBIE FIRE
+ReportingUnit	Alabama;Covington County;ANDALUSIA KIWANIS FAIR	Covington;ANDALUSIA KIWANIS FAIR
+ReportingUnit	Alabama;Coosa County;WEST COOSA SR_ CTR	Coosa;WEST COOSA SR_ CTR
+ReportingUnit	Alabama;Coosa County;WEOGUFKA VOTING HOUSE	Coosa;WEOGUFKA VOTING HOUSE
+ReportingUnit	Alabama;Coosa County;ROCKFORD, THE EVENT CTR	Coosa;ROCKFORD, THE EVENT CTR
+ReportingUnit	Alabama;Coosa County;RICHVILLE FD	Coosa;RICHVILLE FD
+ReportingUnit	Alabama;Coosa County;RAY FD	Coosa;RAY FD
+ReportingUnit	Alabama;Coosa County;MT_ OLIVE COMM CTR	Coosa;MT_ OLIVE COMM CTR
+ReportingUnit	Alabama;Coosa County;MARBLE VALLEY FD	Coosa;MARBLE VALLEY FD
+ReportingUnit	Alabama;Coosa County;KELLYTON CIVIC	Coosa;KELLYTON CIVIC
+ReportingUnit	Alabama;Coosa County;HANOVER	Coosa;HANOVER
+ReportingUnit	Alabama;Coosa County;GOODWATER COMM CTR	Coosa;GOODWATER COMM CTR
+ReportingUnit	Alabama;Coosa County;EQUALITY METHODIST	Coosa;EQUALITY METHODIST
+ReportingUnit	Alabama;Coosa County;COMMUNITY LIFE	Coosa;COMMUNITY LIFE
+ReportingUnit	Alabama;Conecuh County;SKINNERTON FIRE	Conecuh;SKINNERTON FIRE
+ReportingUnit	Alabama;Conecuh County;SANDCUT FIRE	Conecuh;SANDCUT FIRE
+ReportingUnit	Alabama;Conecuh County;ROBINSONS MILL	Conecuh;ROBINSONS MILL
+ReportingUnit	Alabama;Conecuh County;REPTON TOWN HALL	Conecuh;REPTON TOWN HALL
+ReportingUnit	Alabama;Conecuh County;RANGE FIRE	Conecuh;RANGE FIRE
+ReportingUnit	Alabama;Conecuh County;PAUL FIRE	Conecuh;PAUL FIRE
+ReportingUnit	Alabama;Conecuh County;OLD FIELD CH	Conecuh;OLD FIELD CH
+ReportingUnit	Alabama;Conecuh County;OLD CASTLEBERRY	Conecuh;OLD CASTLEBERRY
+ReportingUnit	Alabama;Conecuh County;NAZARENE BAPT_ CH	Conecuh;NAZARENE BAPT_ CH
+ReportingUnit	Alabama;Conecuh County;LYEFFION FIRE	Conecuh;LYEFFION FIRE
+ReportingUnit	Alabama;Conecuh County;LITTLE ZION CH	Conecuh;LITTLE ZION CH
+ReportingUnit	Alabama;Conecuh County;LENOX COMM_	Conecuh;LENOX COMM_
+ReportingUnit	Alabama;Conecuh County;JOHNSONVILLE FIRE	Conecuh;JOHNSONVILLE FIRE
+ReportingUnit	Alabama;Conecuh County;HERBERT FIRE	Conecuh;HERBERT FIRE
+ReportingUnit	Alabama;Conecuh County;HEALTH DEPT_	Conecuh;HEALTH DEPT_
+ReportingUnit	Alabama;Conecuh County;FLAT ROCK FIRE	Conecuh;FLAT ROCK FIRE
+ReportingUnit	Alabama;Conecuh County;DAVID BURT BLDG	Conecuh;DAVID BURT BLDG
+ReportingUnit	Alabama;Conecuh County;CHINA REC_ & ED	Conecuh;CHINA REC_ & ED
+ReportingUnit	Alabama;Conecuh County;CASTLEBERRY FIRE	Conecuh;CASTLEBERRY FIRE
+ReportingUnit	Alabama;Conecuh County;CARVER REC_	Conecuh;CARVER REC_
+ReportingUnit	Alabama;Conecuh County;BROWNVILLE FIRE	Conecuh;BROWNVILLE FIRE
+ReportingUnit	Alabama;Conecuh County;BROOKLYN MASONIC	Conecuh;BROOKLYN MASONIC
+ReportingUnit	Alabama;Conecuh County;BERMUDA COMM_	Conecuh;BERMUDA COMM_
+ReportingUnit	Alabama;Conecuh County;BELLEVILLE FIRE	Conecuh;BELLEVILLE FIRE
+ReportingUnit	Alabama;Conecuh County;ANTIOCH VOTING	Conecuh;ANTIOCH VOTING
+ReportingUnit	Alabama;Conecuh County;ANNEX VOTING	Conecuh;ANNEX VOTING
+ReportingUnit	Alabama;Conecuh County;2ND MOUNT ZION	Conecuh;2ND MOUNT ZION
+ReportingUnit	Alabama;Colbert County;WOODWARD AVE_ BAPT_	Colbert;WOODWARD AVE_ BAPT_
+ReportingUnit	Alabama;Colbert County;WESTSIDE BAPT_	Colbert;WESTSIDE BAPT_
+ReportingUnit	Alabama;Colbert County;TUSCUMBIA MULTI-PURPOSE	Colbert;TUSCUMBIA MULTI-PURPOSE
+ReportingUnit	Alabama;Colbert County;TUSCUMBIA CALVARY BAPT_	Colbert;TUSCUMBIA CALVARY BAPT_
+ReportingUnit	Alabama;Colbert County;TREE HOUSE SCH	Colbert;TREE HOUSE SCH
+ReportingUnit	Alabama;Colbert County;SRYGLEY CHURCH	Colbert;SRYGLEY CHURCH
+ReportingUnit	Alabama;Colbert County;SPRING VALLEY CH	Colbert;SPRING VALLEY CH
+ReportingUnit	Alabama;Colbert County;SHEFFIELD RECREATION	Colbert;SHEFFIELD RECREATION
+ReportingUnit	Alabama;Colbert County;SHEFFIELD MICHAEL	Colbert;SHEFFIELD MICHAEL
+ReportingUnit	Alabama;Colbert County;SHEFFIELD FIRE 2ND STN	Colbert;SHEFFIELD FIRE 2ND STN
+ReportingUnit	Alabama;Colbert County;SHEFFIELD BD OF ED	Colbert;SHEFFIELD BD OF ED
+ReportingUnit	Alabama;Colbert County;PRIDE MISSIONARY	Colbert;PRIDE MISSIONARY
+ReportingUnit	Alabama;Colbert County;PLUMBER STEAMFITTER	Colbert;PLUMBER STEAMFITTER
+ReportingUnit	Alabama;Colbert County;PARK VIEW BAPT_ CH	Colbert;PARK VIEW BAPT_ CH
+ReportingUnit	Alabama;Colbert County;NEW BETHEL FIRE	Colbert;NEW BETHEL FIRE
+ReportingUnit	Alabama;Colbert County;MUSCLE SHOALS HALL	Colbert;MUSCLE SHOALS HALL
+ReportingUnit	Alabama;Colbert County;MARGERUM COMMUNITY	Colbert;MARGERUM COMMUNITY
+ReportingUnit	Alabama;Colbert County;LITTLEVILLE CITY HALL	Colbert;LITTLEVILLE CITY HALL
+ReportingUnit	Alabama;Colbert County;LEIGHTON CIVIC CTR	Colbert;LEIGHTON CIVIC CTR
+ReportingUnit	Alabama;Colbert County;LEIGHTON CITY HALL	Colbert;LEIGHTON CITY HALL
+ReportingUnit	Alabama;Colbert County;LA GRANGE FIRE	Colbert;LA GRANGE FIRE
+ReportingUnit	Alabama;Colbert County;HOPE HAVEN SCHOOL	Colbert;HOPE HAVEN SCHOOL
+ReportingUnit	Alabama;Colbert County;HATTON BAPT_ CH	Colbert;HATTON BAPT_ CH
+ReportingUnit	Alabama;Colbert County;GRACE LIFE CH	Colbert;GRACE LIFE CH
+ReportingUnit	Alabama;Colbert County;GATMAN PARK & REC	Colbert;GATMAN PARK & REC
+ReportingUnit	Alabama;Colbert County;FIRST SOUTHERN BAPT_	Colbert;FIRST SOUTHERN BAPT_
+ReportingUnit	Alabama;Colbert County;EAST COLBERT SEN_ CTR_	Colbert;EAST COLBERT SEN_ CTR_
+ReportingUnit	Alabama;Colbert County;COUNTY HWY_ DEPT_	Colbert;COUNTY HWY_ DEPT_
+ReportingUnit	Alabama;Colbert County;COLBERT HEIGHTS BAPT_	Colbert;COLBERT HEIGHTS BAPT_
+ReportingUnit	Alabama;Colbert County;COARMM	Colbert;COARMM
+ReportingUnit	Alabama;Colbert County;CHEROKEE LIONS DEN	Colbert;CHEROKEE LIONS DEN
+ReportingUnit	Alabama;Colbert County;CAVE SPRINGS BAPT_	Colbert;CAVE SPRINGS BAPT_
+ReportingUnit	Alabama;Colbert County;BARTON FIRST BAPT_	Colbert;BARTON FIRST BAPT_
+ReportingUnit	Alabama;Colbert County;ALLSBORO CUMBERLAND	Colbert;ALLSBORO CUMBERLAND
+ReportingUnit	Alabama;Coffee County;ZION CHRISTIAN COMM_	Coffee;ZION CHRISTIAN COMM_
+ReportingUnit	Alabama;Coffee County;ZION CHAPEL SR_ CTR_	Coffee;ZION CHAPEL SR_ CTR_
+ReportingUnit	Alabama;Coffee County;YMCA	Coffee;YMCA
+ReportingUnit	Alabama;Coffee County;WISE MILL CH	Coffee;WISE MILL CH
+ReportingUnit	Alabama;Coffee County;VICTORIA BAPT_ CH	Coffee;VICTORIA BAPT_ CH
+ReportingUnit	Alabama;Coffee County;PLEASANT RIDGE VTG	Coffee;PLEASANT RIDGE VTG
+ReportingUnit	Alabama;Coffee County;PINE LEVEL SR_ CTR_	Coffee;PINE LEVEL SR_ CTR_
+ReportingUnit	Alabama;Coffee County;NEWBIA VTG HOUSE	Coffee;NEWBIA VTG HOUSE
+ReportingUnit	Alabama;Coffee County;NEW BROCKTON SR_ CTR_	Coffee;NEW BROCKTON SR_ CTR_
+ReportingUnit	Alabama;Coffee County;MT PLEASANT SR_ CTR_	Coffee;MT PLEASANT SR_ CTR_
+ReportingUnit	Alabama;Coffee County;LEE COMM_ VTG HOUSE	Coffee;LEE COMM_ VTG HOUSE
+ReportingUnit	Alabama;Coffee County;KINSTON CITY HALL	Coffee;KINSTON CITY HALL
+ReportingUnit	Alabama;Coffee County;JOHNS CHAPEL AME	Coffee;JOHNS CHAPEL AME
+ReportingUnit	Alabama;Coffee County;INO SR_ CTR_	Coffee;INO SR_ CTR_
+ReportingUnit	Alabama;Coffee County;HOLLEY'S STORE	Coffee;HOLLEY'S STORE
+ReportingUnit	Alabama;Coffee County;HERITAGE UMC	Coffee;HERITAGE UMC
+ReportingUnit	Alabama;Coffee County;GOODMAN VTG HOUSE	Coffee;GOODMAN VTG HOUSE
+ReportingUnit	Alabama;Coffee County;FRISCO VTG HOUSE	Coffee;FRISCO VTG HOUSE
+ReportingUnit	Alabama;Coffee County;FARM CTR_ COMM_ ROOM	Coffee;FARM CTR_ COMM_ ROOM
+ReportingUnit	Alabama;Coffee County;EPRISE STATE COMM_ COLL_	Coffee;EPRISE STATE COMM_ COLL_
+ReportingUnit	Alabama;Coffee County;ENTERPRISE REC_ CTR_	Coffee;ENTERPRISE REC_ CTR_
+ReportingUnit	Alabama;Coffee County;ELBA NATIONAL GUARD	Coffee;ELBA NATIONAL GUARD
+ReportingUnit	Alabama;Coffee County;ELBA CH OF CHRIST	Coffee;ELBA CH OF CHRIST
+ReportingUnit	Alabama;Coffee County;EANON VTG HOUSE	Coffee;EANON VTG HOUSE
+ReportingUnit	Alabama;Coffee County;DAMASCUS SR_ CTR_	Coffee;DAMASCUS SR_ CTR_
+ReportingUnit	Alabama;Coffee County;COOL SPGS	Coffee;COOL SPGS
+ReportingUnit	Alabama;Coffee County;CHESTNUT GROVE VTG	Coffee;CHESTNUT GROVE VTG
+ReportingUnit	Alabama;Coffee County;BLUFF SPGS VTG HOUSE	Coffee;BLUFF SPGS VTG HOUSE
+ReportingUnit	Alabama;Coffee County;BASIN VTG HOUSE	Coffee;BASIN VTG HOUSE
+ReportingUnit	Alabama;Cleburne County;TURKEY HEAVEN VFD	Cleburne;TURKEY HEAVEN VFD
+ReportingUnit	Alabama;Cleburne County;RANBURNE VFD	Cleburne;RANBURNE VFD
+ReportingUnit	Alabama;Cleburne County;PLAINVIEW VFD	Cleburne;PLAINVIEW VFD
+ReportingUnit	Alabama;Cleburne County;OAK LEVEL PINEYWDS	Cleburne;OAK LEVEL PINEYWDS
+ReportingUnit	Alabama;Cleburne County;MUSCADINE VFD	Cleburne;MUSCADINE VFD
+ReportingUnit	Alabama;Cleburne County;MICAVILLE VFD	Cleburne;MICAVILLE VFD
+ReportingUnit	Alabama;Cleburne County;HOPEWELL SCHOOL	Cleburne;HOPEWELL SCHOOL
+ReportingUnit	Alabama;Cleburne County;HEFLIN RECREATIONAL CTR	Cleburne;HEFLIN RECREATIONAL CTR
+ReportingUnit	Alabama;Cleburne County;GREENS CHAPEL UMC	Cleburne;GREENS CHAPEL UMC
+ReportingUnit	Alabama;Cleburne County;FRUITHURST CITY HALL	Cleburne;FRUITHURST CITY HALL
+ReportingUnit	Alabama;Cleburne County;EDWARDSVILLE COMM_	Cleburne;EDWARDSVILLE COMM_
+ReportingUnit	Alabama;Cleburne County;CHULAFINNEE MASONIC	Cleburne;CHULAFINNEE MASONIC
+ReportingUnit	Alabama;Cleburne County;BORDEN SPRINGS VFD	Cleburne;BORDEN SPRINGS VFD
+ReportingUnit	Alabama;Cleburne County;ABEL VOTING HOUSE	Cleburne;ABEL VOTING HOUSE
+ReportingUnit	Alabama;Clay County;TRI-COMM_ FIRE	Clay;TRI-COMM_ FIRE
+ReportingUnit	Alabama;Clay County;SHINBONE VFD	Clay;SHINBONE VFD
+ReportingUnit	Alabama;Clay County;MELLOW VALLEY HIGH	Clay;MELLOW VALLEY HIGH
+ReportingUnit	Alabama;Clay County;IDAHO FIRE DEPT	Clay;IDAHO FIRE DEPT
+ReportingUnit	Alabama;Clay County;HOLLINS COMM CTR	Clay;HOLLINS COMM CTR
+ReportingUnit	Alabama;Clay County;HIPINE FIRE DEPT	Clay;HIPINE FIRE DEPT
+ReportingUnit	Alabama;Clay County;HIGHLAND COPPERMINE	Clay;HIGHLAND COPPERMINE
+ReportingUnit	Alabama;Clay County;FARMERS MARKET	Clay;FARMERS MARKET
+ReportingUnit	Alabama;Clay County;DELTA COMM CTR	Clay;DELTA COMM CTR
+ReportingUnit	Alabama;Clay County;CRAGFORD FIRE	Clay;CRAGFORD FIRE
+ReportingUnit	Alabama;Clay County;COUNTY ANNEX	Clay;COUNTY ANNEX
+ReportingUnit	Alabama;Clay County;COLETA VALLEY FIRE	Clay;COLETA VALLEY FIRE
+ReportingUnit	Alabama;Clay County;BLUFF SPRINGS FIRE	Clay;BLUFF SPRINGS FIRE
+ReportingUnit	Alabama;Clay County;BIBB GRAVES SCH/COMM	Clay;BIBB GRAVES SCH/COMM
+ReportingUnit	Alabama;Clay County;BARFIELD VFD	Clay;BARFIELD VFD
+ReportingUnit	Alabama;Clarke County;WINN FIRE 91_1	Clarke;WINN FIRE 91_1
+ReportingUnit	Alabama;Clarke County;WHATLEY BAPT 121_3	Clarke;WHATLEY BAPT 121_3
+ReportingUnit	Alabama;Clarke County;WALNUT GROVE CH	Clarke;WALNUT GROVE CH
+ReportingUnit	Alabama;Clarke County;WALKER SPRINGS	Clarke;WALKER SPRINGS
+ReportingUnit	Alabama;Clarke County;T'VILL CITY HALL/CIVIC	Clarke;T'VILL CITY HALL/CIVIC
+ReportingUnit	Alabama;Clarke County;T'VILL BASHI FIRE	Clarke;T'VILL BASHI FIRE
+ReportingUnit	Alabama;Clarke County;SPRING FIELD METH_ 213_2	Clarke;SPRING FIELD METH_ 213_2
+ReportingUnit	Alabama;Clarke County;SALITPA FIRE 81_1	Clarke;SALITPA FIRE 81_1
+ReportingUnit	Alabama;Clarke County;ROCKVILLE 21_1	Clarke;ROCKVILLE 21_1
+ReportingUnit	Alabama;Clarke County;OPINE TALLAHATTA 161_1	Clarke;OPINE TALLAHATTA 161_1
+ReportingUnit	Alabama;Clarke County;NETTLESBORO FIRE 112_1	Clarke;NETTLESBORO FIRE 112_1
+ReportingUnit	Alabama;Clarke County;MORNING STAR CH	Clarke;MORNING STAR CH
+ReportingUnit	Alabama;Clarke County;JACKSON SKIPPER FIRE	Clarke;JACKSON SKIPPER FIRE
+ReportingUnit	Alabama;Clarke County;JACKSON NAT'L GUARD	Clarke;JACKSON NAT'L GUARD
+ReportingUnit	Alabama;Clarke County;JACKSON DOWNTOWN FIRE	Clarke;JACKSON DOWNTOWN FIRE
+ReportingUnit	Alabama;Clarke County;JACKSON CITY HALL	Clarke;JACKSON CITY HALL
+ReportingUnit	Alabama;Clarke County;HELWESTERN FIRE	Clarke;HELWESTERN FIRE
+ReportingUnit	Alabama;Clarke County;GROVE HILL OLD ENG_	Clarke;GROVE HILL OLD ENG_
+ReportingUnit	Alabama;Clarke County;GROVE HILL NAT'L GUARD	Clarke;GROVE HILL NAT'L GUARD
+ReportingUnit	Alabama;Clarke County;GROVE HILL CITY HALL	Clarke;GROVE HILL CITY HALL
+ReportingUnit	Alabama;Clarke County;GOSPORT FIRE 61_1	Clarke;GOSPORT FIRE 61_1
+ReportingUnit	Alabama;Clarke County;GAINESTOWN-GOODHOPE 11_1	Clarke;GAINESTOWN-GOODHOPE 11_1
+ReportingUnit	Alabama;Clarke County;FULTON FIRE	Clarke;FULTON FIRE
+ReportingUnit	Alabama;Clarke County;COFFEVILLE HIGH	Clarke;COFFEVILLE HIGH
+ReportingUnit	Alabama;Clarke County;CHOCTAW BLUFF FIRE 12_1	Clarke;CHOCTAW BLUFF FIRE 12_1
+ReportingUnit	Alabama;Clarke County;CHILTON BAPT 151_2	Clarke;CHILTON BAPT 151_2
+ReportingUnit	Alabama;Clarke County;BASHI METH_ CH 201_2	Clarke;BASHI METH_ CH 201_2
+ReportingUnit	Alabama;Clarke County;ANTIOCH FIRE 102_1	Clarke;ANTIOCH FIRE 102_1
+ReportingUnit	Alabama;Clarke County;ADULT ED_ BLDG_	Clarke;ADULT ED_ BLDG_
+ReportingUnit	Alabama;Choctaw County;YANTLEY	Choctaw;YANTLEY
+ReportingUnit	Alabama;Choctaw County;WOMACK HILL	Choctaw;WOMACK HILL
+ReportingUnit	Alabama;Choctaw County;TOXEY	Choctaw;TOXEY
+ReportingUnit	Alabama;Choctaw County;TOOMEY	Choctaw;TOOMEY
+ReportingUnit	Alabama;Choctaw County;SOUWILPA	Choctaw;SOUWILPA
+ReportingUnit	Alabama;Choctaw County;SILAS	Choctaw;SILAS
+ReportingUnit	Alabama;Choctaw County;ROCK SPRINGS	Choctaw;ROCK SPRINGS
+ReportingUnit	Alabama;Choctaw County;RIDERWOOD	Choctaw;RIDERWOOD
+ReportingUnit	Alabama;Choctaw County;PUSHMATAHA	Choctaw;PUSHMATAHA
+ReportingUnit	Alabama;Choctaw County;PLEASANT VALLEY	Choctaw;PLEASANT VALLEY
+ReportingUnit	Alabama;Choctaw County;PENNINGTON	Choctaw;PENNINGTON
+ReportingUnit	Alabama;Choctaw County;PELHAM	Choctaw;PELHAM
+ReportingUnit	Alabama;Choctaw County;MT_ STERLING	Choctaw;MT_ STERLING
+ReportingUnit	Alabama;Choctaw County;MELVIN	Choctaw;MELVIN
+ReportingUnit	Alabama;Choctaw County;LUSK	Choctaw;LUSK
+ReportingUnit	Alabama;Choctaw County;LISMAN	Choctaw;LISMAN
+ReportingUnit	Alabama;Choctaw County;LAVACA	Choctaw;LAVACA
+ReportingUnit	Alabama;Choctaw County;ISNEY	Choctaw;ISNEY
+ReportingUnit	Alabama;Choctaw County;INTERSECTION	Choctaw;INTERSECTION
+ReportingUnit	Alabama;Choctaw County;HURRICANE	Choctaw;HURRICANE
+ReportingUnit	Alabama;Choctaw County;HALSELL	Choctaw;HALSELL
+ReportingUnit	Alabama;Choctaw County;GILBERTOWN	Choctaw;GILBERTOWN
+ReportingUnit	Alabama;Choctaw County;CULLOMBURG	Choctaw;CULLOMBURG
+ReportingUnit	Alabama;Choctaw County;CROSSROADS	Choctaw;CROSSROADS
+ReportingUnit	Alabama;Choctaw County;CROMWELL	Choctaw;CROMWELL
+ReportingUnit	Alabama;Choctaw County;CHAPPELL HILL	Choctaw;CHAPPELL HILL
+ReportingUnit	Alabama;Choctaw County;BUTLER	Choctaw;BUTLER
+ReportingUnit	Alabama;Choctaw County;BRANCH	Choctaw;BRANCH
+ReportingUnit	Alabama;Choctaw County;BOGUELOOSA	Choctaw;BOGUELOOSA
+ReportingUnit	Alabama;Choctaw County;BLADON SPRINGS	Choctaw;BLADON SPRINGS
+ReportingUnit	Alabama;Choctaw County;BARRYTOWN	Choctaw;BARRYTOWN
+ReportingUnit	Alabama;Choctaw County;ARARAT	Choctaw;ARARAT
+ReportingUnit	Alabama;Chilton County;VERBENA FS	Chilton;VERBENA FS
+ReportingUnit	Alabama;Chilton County;UNION GROVE BAPTIST CH	Chilton;UNION GROVE BAPTIST CH
+ReportingUnit	Alabama;Chilton County;THORSBY TOWN HALL	Chilton;THORSBY TOWN HALL
+ReportingUnit	Alabama;Chilton County;SR_ COMM_ CTR_	Chilton;SR_ COMM_ CTR_
+ReportingUnit	Alabama;Chilton County;PROVIDENCE E CHILTON FS	Chilton;PROVIDENCE E CHILTON FS
+ReportingUnit	Alabama;Chilton County;PROVIDENCE BAPTIST CH	Chilton;PROVIDENCE BAPTIST CH
+ReportingUnit	Alabama;Chilton County;MARS HILL/W CHILTON FS	Chilton;MARS HILL/W CHILTON FS
+ReportingUnit	Alabama;Chilton County;MAPLESVILLE LIBRARY	Chilton;MAPLESVILLE LIBRARY
+ReportingUnit	Alabama;Chilton County;LIBRARY CLANTON	Chilton;LIBRARY CLANTON
+ReportingUnit	Alabama;Chilton County;JEMISON CITY HALL	Chilton;JEMISON CITY HALL
+ReportingUnit	Alabama;Chilton County;ISABELLA FS	Chilton;ISABELLA FS
+ReportingUnit	Alabama;Chilton County;HILLCREST BAPTIST CH	Chilton;HILLCREST BAPTIST CH
+ReportingUnit	Alabama;Chilton County;FAIRVIEW FS	Chilton;FAIRVIEW FS
+ReportingUnit	Alabama;Chilton County;ENTERPRISE FS	Chilton;ENTERPRISE FS
+ReportingUnit	Alabama;Chilton County;COURTHOUSE CLANTON	Chilton;COURTHOUSE CLANTON
+ReportingUnit	Alabama;Chilton County;COLLINS CHAPEL BAPTIST	Chilton;COLLINS CHAPEL BAPTIST
+ReportingUnit	Alabama;Chilton County;CLANTON REC_	Chilton;CLANTON REC_
+ReportingUnit	Alabama;Chilton County;CANE CREEK GAP OF MT FS	Chilton;CANE CREEK GAP OF MT FS
+ReportingUnit	Alabama;Cherokee County;UNITY MISSIONARY BAPT_	Cherokee;UNITY MISSIONARY BAPT_
+ReportingUnit	Alabama;Cherokee County;TUCKERS CHAPEL FIRE DEPT_	Cherokee;TUCKERS CHAPEL FIRE DEPT_
+ReportingUnit	Alabama;Cherokee County;THE VALLEY CHURCH	Cherokee;THE VALLEY CHURCH
+ReportingUnit	Alabama;Cherokee County;THE ROC	Cherokee;THE ROC
+ReportingUnit	Alabama;Cherokee County;SPRING GARDEN FIRE STATION	Cherokee;SPRING GARDEN FIRE STATION
+ReportingUnit	Alabama;Cherokee County;SHADY GROVE CHURCH	Cherokee;SHADY GROVE CHURCH
+ReportingUnit	Alabama;Cherokee County;SAND ROCK TOWN HALL	Cherokee;SAND ROCK TOWN HALL
+ReportingUnit	Alabama;Cherokee County;ROCK RUN CHURCH	Cherokee;ROCK RUN CHURCH
+ReportingUnit	Alabama;Cherokee County;NOAH BAPTIST CHURCH	Cherokee;NOAH BAPTIST CHURCH
+ReportingUnit	Alabama;Cherokee County;NEW HOPE METHODIST	Cherokee;NEW HOPE METHODIST
+ReportingUnit	Alabama;Cherokee County;McCORDS CROSSROADS	Cherokee;McCORDS CROSSROADS
+ReportingUnit	Alabama;Cherokee County;MT_ WEISNER VFD #2	Cherokee;MT_ WEISNER VFD #2
+ReportingUnit	Alabama;Cherokee County;MT_ WEISNER FIRE HALL	Cherokee;MT_ WEISNER FIRE HALL
+ReportingUnit	Alabama;Cherokee County;MT_ CALVARY BAPT_ CHURCH	Cherokee;MT_ CALVARY BAPT_ CHURCH
+ReportingUnit	Alabama;Cherokee County;MACEDONIA BAPT_ FELLOWSHIP	Cherokee;MACEDONIA BAPT_ FELLOWSHIP
+ReportingUnit	Alabama;Cherokee County;LEESBURG FEMA BLDG_	Cherokee;LEESBURG FEMA BLDG_
+ReportingUnit	Alabama;Cherokee County;GOSHEN METHODIST	Cherokee;GOSHEN METHODIST
+ReportingUnit	Alabama;Cherokee County;GAYLESVILLE CITY HALL	Cherokee;GAYLESVILLE CITY HALL
+ReportingUnit	Alabama;Cherokee County;DANIELS CHAPEL FELLOW	Cherokee;DANIELS CHAPEL FELLOW
+ReportingUnit	Alabama;Cherokee County;CONGREGATIONAL METHODIST	Cherokee;CONGREGATIONAL METHODIST
+ReportingUnit	Alabama;Cherokee County;CEDAR BLUFF 1ST BAPT_	Cherokee;CEDAR BLUFF 1ST BAPT_
+ReportingUnit	Alabama;Cherokee County;BROOMTOWN FIRE DEPT_	Cherokee;BROOMTOWN FIRE DEPT_
+ReportingUnit	Alabama;Cherokee County;BEREA CHURCH OF CHRIST	Cherokee;BEREA CHURCH OF CHRIST
+ReportingUnit	Alabama;Chambers County;WEST CHAMBERS	Chambers;WEST CHAMBERS
+ReportingUnit	Alabama;Chambers County;WAVERLY	Chambers;WAVERLY
+ReportingUnit	Alabama;Chambers County;VALLEY SPORTSPLEX	Chambers;VALLEY SPORTSPLEX
+ReportingUnit	Alabama;Chambers County;UNION HILL	Chambers;UNION HILL
+ReportingUnit	Alabama;Chambers County;STANDING ROCK	Chambers;STANDING ROCK
+ReportingUnit	Alabama;Chambers County;SPARKLING SPRINGS	Chambers;SPARKLING SPRINGS
+ReportingUnit	Alabama;Chambers County;RIDGE GROVE	Chambers;RIDGE GROVE
+ReportingUnit	Alabama;Chambers County;MT_ OLIVE	Chambers;MT_ OLIVE
+ReportingUnit	Alabama;Chambers County;LANETT	Chambers;LANETT
+ReportingUnit	Alabama;Chambers County;LAKEVIEW	Chambers;LAKEVIEW
+ReportingUnit	Alabama;Chambers County;LAFAYETTE	Chambers;LAFAYETTE
+ReportingUnit	Alabama;Chambers County;HUGULEY	Chambers;HUGULEY
+ReportingUnit	Alabama;Chambers County;FREDONIA	Chambers;FREDONIA
+ReportingUnit	Alabama;Chambers County;FIVE POINTS	Chambers;FIVE POINTS
+ReportingUnit	Alabama;Chambers County;CUSSETA	Chambers;CUSSETA
+ReportingUnit	Alabama;Chambers County;BUFFALO	Chambers;BUFFALO
+ReportingUnit	Alabama;Calhoun County;WIGGINS COMM_ CTR	Calhoun;WIGGINS COMM_ CTR
+ReportingUnit	Alabama;Calhoun County;WHITE PLAINS VFD	Calhoun;WHITE PLAINS VFD
+ReportingUnit	Alabama;Calhoun County;WHITE PLAINS 1ST BAPT_	Calhoun;WHITE PLAINS 1ST BAPT_
+ReportingUnit	Alabama;Calhoun County;WEST PARK HEIGHTS BAPT_	Calhoun;WEST PARK HEIGHTS BAPT_
+ReportingUnit	Alabama;Calhoun County;TRINITY MISSIONARY BAPT_	Calhoun;TRINITY MISSIONARY BAPT_
+ReportingUnit	Alabama;Calhoun County;THE DONOHO SCHOOL	Calhoun;THE DONOHO SCHOOL
+ReportingUnit	Alabama;Calhoun County;S_ HIGHLAND COMM CTR	Calhoun;S_ HIGHLAND COMM CTR
+ReportingUnit	Alabama;Calhoun County;SAKS HIGH SCHOOL	Calhoun;SAKS HIGH SCHOOL
+ReportingUnit	Alabama;Calhoun County;PIEDMONT REC_ BLDG_	Calhoun;PIEDMONT REC_ BLDG_
+ReportingUnit	Alabama;Calhoun County;PIEDMONT FIRE STATION	Calhoun;PIEDMONT FIRE STATION
+ReportingUnit	Alabama;Calhoun County;OXFORD PUBLIC LIBRARY	Calhoun;OXFORD PUBLIC LIBRARY
+ReportingUnit	Alabama;Calhoun County;OXFORD LAKE PK CIVIC CTR	Calhoun;OXFORD LAKE PK CIVIC CTR
+ReportingUnit	Alabama;Calhoun County;OXFORD CHEAHA CLUBHOUSE	Calhoun;OXFORD CHEAHA CLUBHOUSE
+ReportingUnit	Alabama;Calhoun County;OHATCHEE 1ST BAPT_	Calhoun;OHATCHEE 1ST BAPT_
+ReportingUnit	Alabama;Calhoun County;OAK GROVE BAPT_	Calhoun;OAK GROVE BAPT_
+ReportingUnit	Alabama;Calhoun County;MT_ VIEW BAPT_	Calhoun;MT_ VIEW BAPT_
+ReportingUnit	Alabama;Calhoun County;MENTAL HEALTH CTR	Calhoun;MENTAL HEALTH CTR
+ReportingUnit	Alabama;Calhoun County;LEATHERWOOD RD CIV_	Calhoun;LEATHERWOOD RD CIV_
+ReportingUnit	Alabama;Calhoun County;JACKSONVILLE WESTSIDE CH	Calhoun;JACKSONVILLE WESTSIDE CH
+ReportingUnit	Alabama;Calhoun County;JACKSONVILLE SAFETY COMP	Calhoun;JACKSONVILLE SAFETY COMP
+ReportingUnit	Alabama;Calhoun County;JACKSONVILLE 1ST BAPT_	Calhoun;JACKSONVILLE 1ST BAPT_
+ReportingUnit	Alabama;Calhoun County;HOPE COMM CH	Calhoun;HOPE COMM CH
+ReportingUnit	Alabama;Calhoun County;HOBSON CITY- CITY HALL	Calhoun;HOBSON CITY- CITY HALL
+ReportingUnit	Alabama;Calhoun County;GOD'S COVENANT MINISTRY	Calhoun;GOD'S COVENANT MINISTRY
+ReportingUnit	Alabama;Calhoun County;GLENWOOD MEADOWS MTG_ RM	Calhoun;GLENWOOD MEADOWS MTG_ RM
+ReportingUnit	Alabama;Calhoun County;FRIENDSHIP COMM_ CTR	Calhoun;FRIENDSHIP COMM_ CTR
+ReportingUnit	Alabama;Calhoun County;FRIENDSHIP BAPT_	Calhoun;FRIENDSHIP BAPT_
+ReportingUnit	Alabama;Calhoun County;EULATON UN_ METHODIST	Calhoun;EULATON UN_ METHODIST
+ReportingUnit	Alabama;Calhoun County;DEARMANVILLE UMC	Calhoun;DEARMANVILLE UMC
+ReportingUnit	Alabama;Calhoun County;CHOCCOLOCCO COMM_ CTR	Calhoun;CHOCCOLOCCO COMM_ CTR
+ReportingUnit	Alabama;Calhoun County;CALHOUN CO_ HWY DEPT_	Calhoun;CALHOUN CO_ HWY DEPT_
+ReportingUnit	Alabama;Calhoun County;BYNUM COMM CTR	Calhoun;BYNUM COMM CTR
+ReportingUnit	Alabama;Calhoun County;BOILING SPRINGS BAPT_	Calhoun;BOILING SPRINGS BAPT_
+ReportingUnit	Alabama;Calhoun County;BETTA VIEW CH OF CHRIST	Calhoun;BETTA VIEW CH OF CHRIST
+ReportingUnit	Alabama;Calhoun County;A_P_ HOLLINGSWORTH COMM_	Calhoun;A_P_ HOLLINGSWORTH COMM_
+ReportingUnit	Alabama;Calhoun County;ASBERRY BAPT_	Calhoun;ASBERRY BAPT_
+ReportingUnit	Alabama;Calhoun County;ANNISTON THANKFUL BAPT_	Calhoun;ANNISTON THANKFUL BAPT_
+ReportingUnit	Alabama;Calhoun County;ANNISTON MEETING CTR	Calhoun;ANNISTON MEETING CTR
+ReportingUnit	Alabama;Calhoun County;ANNISTON GOLDEN SPRINGS	Calhoun;ANNISTON GOLDEN SPRINGS
+ReportingUnit	Alabama;Calhoun County;ANNISTON CARVER CTR	Calhoun;ANNISTON CARVER CTR
+ReportingUnit	Alabama;Calhoun County;ANNISTON 1ST PRSBY_	Calhoun;ANNISTON 1ST PRSBY_
+ReportingUnit	Alabama;Calhoun County;ANGEL FIRE STATION	Calhoun;ANGEL FIRE STATION
+ReportingUnit	Alabama;Calhoun County;ALEXANDRIA CIVITAN CLUB	Calhoun;ALEXANDRIA CIVITAN CLUB
+ReportingUnit	Alabama;Calhoun County;1ST UN_ METHODIST-WEAVER	Calhoun;1ST UN_ METHODIST-WEAVER
+ReportingUnit	Alabama;Butler County;STEINER'S STORE	Butler;STEINER'S STORE
+ReportingUnit	Alabama;Butler County;SR_ MULTI-PURPOSE CTR_	Butler;SR_ MULTI-PURPOSE CTR_
+ReportingUnit	Alabama;Butler County;SEARCY VFD	Butler;SEARCY VFD
+ReportingUnit	Alabama;Butler County;ROCKY CREEK VTG HOUSE	Butler;ROCKY CREEK VTG HOUSE
+ReportingUnit	Alabama;Butler County;PROVIDENCE VTG HOUSE	Butler;PROVIDENCE VTG HOUSE
+ReportingUnit	Alabama;Butler County;MONTEREY OLD SCH	Butler;MONTEREY OLD SCH
+ReportingUnit	Alabama;Butler County;MIDWAY VTG HOUSE	Butler;MIDWAY VTG HOUSE
+ReportingUnit	Alabama;Butler County;MCLAINS VTG HOUSE	Butler;MCLAINS VTG HOUSE
+ReportingUnit	Alabama;Butler County;MCKENZIE TOWN HALL	Butler;MCKENZIE TOWN HALL
+ReportingUnit	Alabama;Butler County;MANNINGHAM VTG HOUSE	Butler;MANNINGHAM VTG HOUSE
+ReportingUnit	Alabama;Butler County;INDUSTRY	Butler;INDUSTRY
+ReportingUnit	Alabama;Butler County;HEALTH DEPT_	Butler;HEALTH DEPT_
+ReportingUnit	Alabama;Butler County;HARRISON'S VTG HOUSE	Butler;HARRISON'S VTG HOUSE
+ReportingUnit	Alabama;Butler County;GREENVILLE POLICE DEPT_	Butler;GREENVILLE POLICE DEPT_
+ReportingUnit	Alabama;Butler County;GARLAND VTG HOUSE	Butler;GARLAND VTG HOUSE
+ReportingUnit	Alabama;Butler County;FRIENDSHIP OLD SCH	Butler;FRIENDSHIP OLD SCH
+ReportingUnit	Alabama;Butler County;FOREST HOME VTG HOUSE	Butler;FOREST HOME VTG HOUSE
+ReportingUnit	Alabama;Butler County;DUNBAR COMM_ CTR_	Butler;DUNBAR COMM_ CTR_
+ReportingUnit	Alabama;Butler County;CHAPMAN POST OFFICE	Butler;CHAPMAN POST OFFICE
+ReportingUnit	Alabama;Butler County;CENTRAL VFD	Butler;CENTRAL VFD
+ReportingUnit	Alabama;Butler County;CENTER HILL VTG HOUSE	Butler;CENTER HILL VTG HOUSE
+ReportingUnit	Alabama;Butler County;BOLLING VTG HOUSE	Butler;BOLLING VTG HOUSE
+ReportingUnit	Alabama;Bullock County;THREE NOTCH HWY 82E	Bullock;THREE NOTCH HWY 82E
+ReportingUnit	Alabama;Bullock County;THOMPSON	Bullock;THOMPSON
+ReportingUnit	Alabama;Bullock County;SARDIS	Bullock;SARDIS
+ReportingUnit	Alabama;Bullock County;RICHARD B STONE COMPLEX	Bullock;RICHARD B STONE COMPLEX
+ReportingUnit	Alabama;Bullock County;POST OAK	Bullock;POST OAK
+ReportingUnit	Alabama;Bullock County;PEROTE	Bullock;PEROTE
+ReportingUnit	Alabama;Bullock County;PEACHBURG	Bullock;PEACHBURG
+ReportingUnit	Alabama;Bullock County;MIDWAY	Bullock;MIDWAY
+ReportingUnit	Alabama;Bullock County;INVERNESS	Bullock;INVERNESS
+ReportingUnit	Alabama;Bullock County;INDIAN CREEK 00050_001	Bullock;INDIAN CREEK 00050_001
+ReportingUnit	Alabama;Bullock County;GUERRYTON	Bullock;GUERRYTON
+ReportingUnit	Alabama;Bullock County;FITZPATRICK	Bullock;FITZPATRICK
+ReportingUnit	Alabama;Bullock County;CORNERSTONE	Bullock;CORNERSTONE
+ReportingUnit	Alabama;Bullock County;CORINTH	Bullock;CORINTH
+ReportingUnit	Alabama;Bullock County;ABERFOIL	Bullock;ABERFOIL
+ReportingUnit	Alabama;Blount County;SUSAN MOORE	Blount;SUSAN MOORE
+ReportingUnit	Alabama;Blount County;SUMMIT	Blount;SUMMIT
+ReportingUnit	Alabama;Blount County;SUGAR CREEK BANGOR	Blount;SUGAR CREEK BANGOR
+ReportingUnit	Alabama;Blount County;ST_ MOUNTAIN	Blount;ST_ MOUNTAIN
+ReportingUnit	Alabama;Blount County;SNEAD COMM_ CTR_	Blount;SNEAD COMM_ CTR_
+ReportingUnit	Alabama;Blount County;SMOKE RISE	Blount;SMOKE RISE
+ReportingUnit	Alabama;Blount County;ROYAL	Blount;ROYAL
+ReportingUnit	Alabama;Blount County;ROSA	Blount;ROSA
+ReportingUnit	Alabama;Blount County;ROCK SPRINGS	Blount;ROCK SPRINGS
+ReportingUnit	Alabama;Blount County;REMLAP	Blount;REMLAP
+ReportingUnit	Alabama;Blount County;PINE MOUNTAIN	Blount;PINE MOUNTAIN
+ReportingUnit	Alabama;Blount County;ONEONTA	Blount;ONEONTA
+ReportingUnit	Alabama;Blount County;NECTAR	Blount;NECTAR
+ReportingUnit	Alabama;Blount County;MURPHREE VALLEY	Blount;MURPHREE VALLEY
+ReportingUnit	Alabama;Blount County;MT_ HIGH	Blount;MT_ HIGH
+ReportingUnit	Alabama;Blount County;LOCUST FORK	Blount;LOCUST FORK
+ReportingUnit	Alabama;Blount County;HOLLY SPRINGS	Blount;HOLLY SPRINGS
+ReportingUnit	Alabama;Blount County;HAYDEN	Blount;HAYDEN
+ReportingUnit	Alabama;Blount County;DALLAS-SELFVILLE	Blount;DALLAS-SELFVILLE
+ReportingUnit	Alabama;Blount County;CLEVELAND	Blount;CLEVELAND
+ReportingUnit	Alabama;Blount County;BROOKSVILLE	Blount;BROOKSVILLE
+ReportingUnit	Alabama;Blount County;BLOUNTSVILLE	Blount;BLOUNTSVILLE
+ReportingUnit	Alabama;Blount County;BLOUNT SPRINGS	Blount;BLOUNT SPRINGS
+ReportingUnit	Alabama;Blount County;ALLGOOD TOWN HALL	Blount;ALLGOOD TOWN HALL
+ReportingUnit	Alabama;Bibb County;SIX MILE COMM CTR	Bibb;SIX MILE COMM CTR
+ReportingUnit	Alabama;Bibb County;NATIONAL GUARD	Bibb;NATIONAL GUARD
+ReportingUnit	Alabama;Bibb County;LAWLEY COMM CTR	Bibb;LAWLEY COMM CTR
+ReportingUnit	Alabama;Bibb County;GREENPOND FIRE	Bibb;GREENPOND FIRE
+ReportingUnit	Alabama;Bibb County;EOLINE FIRE	Bibb;EOLINE FIRE
+ReportingUnit	Alabama;Bibb County;CENTREVILLE ROCK BLDG	Bibb;CENTREVILLE ROCK BLDG
+ReportingUnit	Alabama;Bibb County;BRENT CITY HALL	Bibb;BRENT CITY HALL
+ReportingUnit	Alabama;Bibb County;ALTERNATIVE SCHOOL	Bibb;ALTERNATIVE SCHOOL
+ReportingUnit	Alabama;Barbour County;TEXASVILLE COMM_ CTR_	Barbour;TEXASVILLE COMM_ CTR_
+ReportingUnit	Alabama;Barbour County;SPRINGHILL VFD	Barbour;SPRINGHILL VFD
+ReportingUnit	Alabama;Barbour County;SANFORD AVE_ GYM	Barbour;SANFORD AVE_ GYM
+ReportingUnit	Alabama;Barbour County;MT_ ANDREWS COMM_ CTR_	Barbour;MT_ ANDREWS COMM_ CTR_
+ReportingUnit	Alabama;Barbour County;MCCOO SCHOOL	Barbour;MCCOO SCHOOL
+ReportingUnit	Alabama;Barbour County;LOUISVILLE CITY HALL	Barbour;LOUISVILLE CITY HALL
+ReportingUnit	Alabama;Barbour County;GREEN'S CROSSROADS	Barbour;GREEN'S CROSSROADS
+ReportingUnit	Alabama;Barbour County;FELLOWSHIP BAPTIST	Barbour;FELLOWSHIP BAPTIST
+ReportingUnit	Alabama;Barbour County;EUFAULA WATER BOARD	Barbour;EUFAULA WATER BOARD
+ReportingUnit	Alabama;Barbour County;EUFAULA COMM_ CTR_	Barbour;EUFAULA COMM_ CTR_
+ReportingUnit	Alabama;Barbour County;ELAMVILLE VFD	Barbour;ELAMVILLE VFD
+ReportingUnit	Alabama;Barbour County;CLIO CITY HALL	Barbour;CLIO CITY HALL
+ReportingUnit	Alabama;Barbour County;CLAYTON COURTHOUSE	Barbour;CLAYTON COURTHOUSE
+ReportingUnit	Alabama;Barbour County;BLUE SPRINGS CITY HALL	Barbour;BLUE SPRINGS CITY HALL
+ReportingUnit	Alabama;Barbour County;BEVILL CTR_	Barbour;BEVILL CTR_
+ReportingUnit	Alabama;Barbour County;BAKERHILL TOWN HALL	Barbour;BAKERHILL TOWN HALL
+ReportingUnit	Alabama;Baldwin County;WHITEHOUSE FORK	Baldwin;WHITEHOUSE FORK
+ReportingUnit	Alabama;Baldwin County;TENSAW VFD	Baldwin;TENSAW VFD
+ReportingUnit	Alabama;Baldwin County;SUMMERDALE COMM_ CTR	Baldwin;SUMMERDALE COMM_ CTR
+ReportingUnit	Alabama;Baldwin County;STOCKTON CIVIC BLDG	Baldwin;STOCKTON CIVIC BLDG
+ReportingUnit	Alabama;Baldwin County;STAPLETON VFD	Baldwin;STAPLETON VFD
+ReportingUnit	Alabama;Baldwin County;SPANISH FORT COMM_ CTR	Baldwin;SPANISH FORT COMM_ CTR
+ReportingUnit	Alabama;Baldwin County;SPANISH FORT CH CHRIST	Baldwin;SPANISH FORT CH CHRIST
+ReportingUnit	Alabama;Baldwin County;SILVERHILL COMM_ CTR	Baldwin;SILVERHILL COMM_ CTR
+ReportingUnit	Alabama;Baldwin County;SEMINOLE VFD	Baldwin;SEMINOLE VFD
+ReportingUnit	Alabama;Baldwin County;ROSINTON METHODIST	Baldwin;ROSINTON METHODIST
+ReportingUnit	Alabama;Baldwin County;ROBERTSDALE PZK HALL	Baldwin;ROBERTSDALE PZK HALL
+ReportingUnit	Alabama;Baldwin County;RABUN VFD	Baldwin;RABUN VFD
+ReportingUnit	Alabama;Baldwin County;PT_CLEAR ST FRANCIS	Baldwin;PT_CLEAR ST FRANCIS
+ReportingUnit	Alabama;Baldwin County;PINEGROVE VFD #1	Baldwin;PINEGROVE VFD #1
+ReportingUnit	Alabama;Baldwin County;PERDIDO VFD	Baldwin;PERDIDO VFD
+ReportingUnit	Alabama;Baldwin County;PERDIDO BEACH VFD	Baldwin;PERDIDO BEACH VFD
+ReportingUnit	Alabama;Baldwin County;ORANGE BEACH COMM_ CTR	Baldwin;ORANGE BEACH COMM_ CTR
+ReportingUnit	Alabama;Baldwin County;OLD VAUGHN SCH	Baldwin;OLD VAUGHN SCH
+ReportingUnit	Alabama;Baldwin County;NEW LIFE ASSEMBLY	Baldwin;NEW LIFE ASSEMBLY
+ReportingUnit	Alabama;Baldwin County;MIFLIN GRAHAM CREEK	Baldwin;MIFLIN GRAHAM CREEK
+ReportingUnit	Alabama;Baldwin County;MEYER'S CIVIC CTR	Baldwin;MEYER'S CIVIC CTR
+ReportingUnit	Alabama;Baldwin County;MARLOW VFD	Baldwin;MARLOW VFD
+ReportingUnit	Alabama;Baldwin County;MAG SPGS WESLEYAN CH	Baldwin;MAG SPGS WESLEYAN CH
+ReportingUnit	Alabama;Baldwin County;LOXLEY CIVIC CTR	Baldwin;LOXLEY CIVIC CTR
+ReportingUnit	Alabama;Baldwin County;LOTTIE VFD	Baldwin;LOTTIE VFD
+ReportingUnit	Alabama;Baldwin County;LITTLE RIVER VFD	Baldwin;LITTLE RIVER VFD
+ReportingUnit	Alabama;Baldwin County;LILLIAN COMM_ CTR	Baldwin;LILLIAN COMM_ CTR
+ReportingUnit	Alabama;Baldwin County;JOSEPHINE VFD	Baldwin;JOSEPHINE VFD
+ReportingUnit	Alabama;Baldwin County;GULF SHORES CULTURAL	Baldwin;GULF SHORES CULTURAL
+ReportingUnit	Alabama;Baldwin County;GATESWOOD VFD	Baldwin;GATESWOOD VFD
+ReportingUnit	Alabama;Baldwin County;FT MORGAN VFD #1	Baldwin;FT MORGAN VFD #1
+ReportingUnit	Alabama;Baldwin County;FOLEY UNITED METHODIST	Baldwin;FOLEY UNITED METHODIST
+ReportingUnit	Alabama;Baldwin County;FOLEY CIVIC CTR	Baldwin;FOLEY CIVIC CTR
+ReportingUnit	Alabama;Baldwin County;FAIRHOPE MARS HILL CH	Baldwin;FAIRHOPE MARS HILL CH
+ReportingUnit	Alabama;Baldwin County;FAIRHOPE CIVIC CTR	Baldwin;FAIRHOPE CIVIC CTR
+ReportingUnit	Alabama;Baldwin County;FAIRHOPE AVE BAPTIST	Baldwin;FAIRHOPE AVE BAPTIST
+ReportingUnit	Alabama;Baldwin County;FAIRHOPE 3 CIRCLE CH	Baldwin;FAIRHOPE 3 CIRCLE CH
+ReportingUnit	Alabama;Baldwin County;ELSANOR BETHAL CH	Baldwin;ELSANOR BETHAL CH
+ReportingUnit	Alabama;Baldwin County;ELLISVILLE COMM_ CTR_	Baldwin;ELLISVILLE COMM_ CTR_
+ReportingUnit	Alabama;Baldwin County;ELBERTA CIVIC CTR	Baldwin;ELBERTA CIVIC CTR
+ReportingUnit	Alabama;Baldwin County;DOUGLASVILLE BOYKIN	Baldwin;DOUGLASVILLE BOYKIN
+ReportingUnit	Alabama;Baldwin County;DAPHNE HIGH	Baldwin;DAPHNE HIGH
+ReportingUnit	Alabama;Baldwin County;DAPHNE CIVIC CTR	Baldwin;DAPHNE CIVIC CTR
+ReportingUnit	Alabama;Baldwin County;CROSSROADS DURANT	Baldwin;CROSSROADS DURANT
+ReportingUnit	Alabama;Baldwin County;CLR SPG FELLOWSHIP	Baldwin;CLR SPG FELLOWSHIP
+ReportingUnit	Alabama;Baldwin County;BROMLEY VFD	Baldwin;BROMLEY VFD
+ReportingUnit	Alabama;Baldwin County;BON SECOUR MORG CHAPEL	Baldwin;BON SECOUR MORG CHAPEL
+ReportingUnit	Alabama;Baldwin County;BELFOREST COMM_ CTR	Baldwin;BELFOREST COMM_ CTR
+ReportingUnit	Alabama;Baldwin County;BAY MINETTE CIVIC CTR	Baldwin;BAY MINETTE CIVIC CTR
+ReportingUnit	Alabama;Baldwin County;BARNWELL VFD	Baldwin;BARNWELL VFD
+Autauga;PROVISIONAL
+ReportingUnit	Alabama;Autauga County;90 BOOTH VFD	Autauga;90 BOOTH VFD
+ReportingUnit	Alabama;Autauga County;80 INDEPENDENCE VFD	Autauga;80 INDEPENDENCE VFD
+ReportingUnit	Alabama;Autauga County;70 BOONE'S CHAPEL	Autauga;70 BOONE'S CHAPEL
+ReportingUnit	Alabama;Autauga County;60 MARBURY MIDDLE	Autauga;60 MARBURY MIDDLE
+ReportingUnit	Alabama;Autauga County;50 WHITE CITY VFD	Autauga;50 WHITE CITY VFD
+ReportingUnit	Alabama;Autauga County;40 E_ MEMORIAL CHRISTIAN	Autauga;40 E_ MEMORIAL CHRISTIAN
+ReportingUnit	Alabama;Autauga County;30 BILLINGSLEY COMM_ CTR_	Autauga;30 BILLINGSLEY COMM_ CTR_
+ReportingUnit	Alabama;Autauga County;230 COUNTY LINE BAPTIST	Autauga;230 COUNTY LINE BAPTIST
+ReportingUnit	Alabama;Autauga County;220 UPPER KINGSTON	Autauga;220 UPPER KINGSTON
+ReportingUnit	Alabama;Autauga County;20 HERITAGE BAPTIST	Autauga;20 HERITAGE BAPTIST
+ReportingUnit	Alabama;Autauga County;180 OLD KINGSTON VFD	Autauga;180 OLD KINGSTON VFD
+ReportingUnit	Alabama;Autauga County;170 CAMELLIA BAPTIST CHURCH	Autauga;170 CAMELLIA BAPTIST CHURCH
+ReportingUnit	Alabama;Autauga County;160 DOSTER COMM_ CTR_	Autauga;160 DOSTER COMM_ CTR_
+ReportingUnit	Alabama;Autauga County;150 PRATTMONT BAPTIST	Autauga;150 PRATTMONT BAPTIST
+ReportingUnit	Alabama;Autauga County;140 AUTAUGAVILLE VFD	Autauga;140 AUTAUGAVILLE VFD
+ReportingUnit	Alabama;Autauga County;110 CENTRAL AL ELECTRIC	Autauga;110 CENTRAL AL ELECTRIC
+ReportingUnit	Alabama;Autauga County;100 TRINITY METHODIST	Autauga;100 TRINITY METHODIST
+ReportingUnit	Alabama;Autauga County;10 JONES COMM_ CTR_	Autauga;10 JONES COMM_ CTR_
+Candidate	Joseph R. Biden	Joseph R. Biden Kamala D. Harri
+Candidate	Jo Jorgensen	Jo Jorgensen Jeremy 'Spike' Cohen
+Candidate	Jo Jorgensen	Jo Jorgensen Jeremy 'Spike' Coh
+Candidate	Donald J. Trump	Donald J. Trump Michael R. Penc
+ReportingUnit	Alabama;Jefferson County;PREC 5290 - AFTON LEE COMMUNIT	Jefferson;PREC 5290 - AFTON LEE COMMUNIT
+ReportingUnit	Alabama;Jefferson County;PREC 5280 - BIRMINGHAM BOTANIC	Jefferson;PREC 5280 - BIRMINGHAM BOTANIC
+ReportingUnit	Alabama;Jefferson County;PREC 5260 - CANTERBURY UNITED	Jefferson;PREC 5260 - CANTERBURY UNITED
+ReportingUnit	Alabama;Jefferson County;PREC 5250 - CHURCH OF THE HIGH	Jefferson;PREC 5250 - CHURCH OF THE HIGH
+ReportingUnit	Alabama;Jefferson County;PREC 5240 - SHADES CAHABA ELEM	Jefferson;PREC 5240 - SHADES CAHABA ELEM
+ReportingUnit	Alabama;Jefferson County;PREC 5230 - HOOVER PUBLIC LIBR	Jefferson;PREC 5230 - HOOVER PUBLIC LIBR
+ReportingUnit	Alabama;Jefferson County;PREC 5220 - TOWN VILLAGE VESTA	Jefferson;PREC 5220 - TOWN VILLAGE VESTA
+ReportingUnit	Alabama;Jefferson County;PREC 5210 - HOMEWOOD EXCEPTION	Jefferson;PREC 5210 - HOMEWOOD EXCEPTION
+ReportingUnit	Alabama;Jefferson County;PREC 5200 - MOUNTAINTOP COMMUN	Jefferson;PREC 5200 - MOUNTAINTOP COMMUN
+ReportingUnit	Alabama;Jefferson County;PREC 5190 - CHEROKEE BEND ELEM	Jefferson;PREC 5190 - CHEROKEE BEND ELEM
+ReportingUnit	Alabama;Jefferson County;PREC 5180 - SAINT LUKE'S EPISC	Jefferson;PREC 5180 - SAINT LUKE'S EPISC
+ReportingUnit	Alabama;Jefferson County;PREC 5170 - EDGEWOOD ELEMENTAR	Jefferson;PREC 5170 - EDGEWOOD ELEMENTAR
+ReportingUnit	Alabama;Jefferson County;PREC 5160 - SAINT THOMAS EPISC	Jefferson;PREC 5160 - SAINT THOMAS EPISC
+ReportingUnit	Alabama;Jefferson County;PREC 5150 - MCELWAIN BAPTIST C	Jefferson;PREC 5150 - MCELWAIN BAPTIST C
+ReportingUnit	Alabama;Jefferson County;PREC 5140 - LIBERTY PARK BAPTI	Jefferson;PREC 5140 - LIBERTY PARK BAPTI
+ReportingUnit	Alabama;Jefferson County;PREC 5130 - MOUNTAIN BROOK COM	Jefferson;PREC 5130 - MOUNTAIN BROOK COM
+ReportingUnit	Alabama;Jefferson County;PREC 5120 - HORIZON CHURCH	Jefferson;PREC 5120 - HORIZON CHURCH
+ReportingUnit	Alabama;Jefferson County;PREC 5110 - MOUNTAIN BROOK CIT	Jefferson;PREC 5110 - MOUNTAIN BROOK CIT
+ReportingUnit	Alabama;Jefferson County;PREC 5100 - BLUFF PARK UNITED	Jefferson;PREC 5100 - BLUFF PARK UNITED
+ReportingUnit	Alabama;Jefferson County;PREC 5090 - LEEDS FIRST UNITED	Jefferson;PREC 5090 - LEEDS FIRST UNITED
+ReportingUnit	Alabama;Jefferson County;PREC 5080 - BROOKWOOD BAPTIST	Jefferson;PREC 5080 - BROOKWOOD BAPTIST
+ReportingUnit	Alabama;Jefferson County;PREC 5070 - CAHABA HEIGHTS BAP	Jefferson;PREC 5070 - CAHABA HEIGHTS BAP
+ReportingUnit	Alabama;Jefferson County;PREC 5060 - SAINT PETER THE AP	Jefferson;PREC 5060 - SAINT PETER THE AP
+ReportingUnit	Alabama;Jefferson County;PREC 5050 - HOMEWOOD PUBLIC LI	Jefferson;PREC 5050 - HOMEWOOD PUBLIC LI
+ReportingUnit	Alabama;Jefferson County;PREC 5040 - METROPOLITAN CHURC	Jefferson;PREC 5040 - METROPOLITAN CHURC
+ReportingUnit	Alabama;Jefferson County;PREC 5035 - FULLNESS CHRISTIAN	Jefferson;PREC 5035 - FULLNESS CHRISTIAN
+ReportingUnit	Alabama;Jefferson County;PREC 5030 - SHADES MTN COMMUNI	Jefferson;PREC 5030 - SHADES MTN COMMUNI
+ReportingUnit	Alabama;Jefferson County;PREC 5020 - VESTAVIA HILLS UNI	Jefferson;PREC 5020 - VESTAVIA HILLS UNI
+ReportingUnit	Alabama;Jefferson County;PREC 5010 - HOOVER PARK & RECR	Jefferson;PREC 5010 - HOOVER PARK & RECR
+ReportingUnit	Alabama;Jefferson County;PREC 4250 - TRAFFORD CITY HALL	Jefferson;PREC 4250 - TRAFFORD CITY HALL
+ReportingUnit	Alabama;Jefferson County;PREC 4240 - IRONDALE CITY HALL	Jefferson;PREC 4240 - IRONDALE CITY HALL
+ReportingUnit	Alabama;Jefferson County;PREC 4230 - GUIDING LIGHT CHUR	Jefferson;PREC 4230 - GUIDING LIGHT CHUR
+ReportingUnit	Alabama;Jefferson County;PREC 4220 - IRONDALE SENIOR CI	Jefferson;PREC 4220 - IRONDALE SENIOR CI
+ReportingUnit	Alabama;Jefferson County;PREC 4210 - MORRIS SENIOR CITI	Jefferson;PREC 4210 - MORRIS SENIOR CITI
+ReportingUnit	Alabama;Jefferson County;PREC 4200 - FULTONDALE SENIOR	Jefferson;PREC 4200 - FULTONDALE SENIOR
+ReportingUnit	Alabama;Jefferson County;PREC 4190 - THE CHURCH AT GRAN	Jefferson;PREC 4190 - THE CHURCH AT GRAN
+ReportingUnit	Alabama;Jefferson County;PREC 4180 - BRADFORD SANCTUARY	Jefferson;PREC 4180 - BRADFORD SANCTUARY
+ReportingUnit	Alabama;Jefferson County;PREC 4170 - KIMBERLY UNITED ME	Jefferson;PREC 4170 - KIMBERLY UNITED ME
+ReportingUnit	Alabama;Jefferson County;PREC 4160 - CENTER POINT SENIO	Jefferson;PREC 4160 - CENTER POINT SENIO
+ReportingUnit	Alabama;Jefferson County;PREC 4150 - PALMERDALE UNITED	Jefferson;PREC 4150 - PALMERDALE UNITED
+ReportingUnit	Alabama;Jefferson County;PREC 4140 - LEEDS CIVIC CENTER	Jefferson;PREC 4140 - LEEDS CIVIC CENTER
+ReportingUnit	Alabama;Jefferson County;PREC 4130 - WARRIOR CITY HALL	Jefferson;PREC 4130 - WARRIOR CITY HALL
+ReportingUnit	Alabama;Jefferson County;PREC 4120 - LIFE CHURCH	Jefferson;PREC 4120 - LIFE CHURCH
+ReportingUnit	Alabama;Jefferson County;PREC 4110 - ROCK SCHOOL CENTER	Jefferson;PREC 4110 - ROCK SCHOOL CENTER
+ReportingUnit	Alabama;Jefferson County;PREC 4100 - MOUNTAIN VIEW BAPT	Jefferson;PREC 4100 - MOUNTAIN VIEW BAPT
+ReportingUnit	Alabama;Jefferson County;PREC 4090 - FULTONDALE FIRST B	Jefferson;PREC 4090 - FULTONDALE FIRST B
+ReportingUnit	Alabama;Jefferson County;PREC 4080 - NORTH PARK BAPTIST	Jefferson;PREC 4080 - NORTH PARK BAPTIST
+ReportingUnit	Alabama;Jefferson County;PREC 4070 - TARRANT CITY HALL	Jefferson;PREC 4070 - TARRANT CITY HALL
+ReportingUnit	Alabama;Jefferson County;PREC 4060 - CENTER POINT COMMU	Jefferson;PREC 4060 - CENTER POINT COMMU
+ReportingUnit	Alabama;Jefferson County;PREC 4050 - CLAY COMMUNITY CEN	Jefferson;PREC 4050 - CLAY COMMUNITY CEN
+ReportingUnit	Alabama;Jefferson County;PREC 4040 - TRUSSVILLE CITY HA	Jefferson;PREC 4040 - TRUSSVILLE CITY HA
+ReportingUnit	Alabama;Jefferson County;PREC 4030 - CENTER POINT FIRST	Jefferson;PREC 4030 - CENTER POINT FIRST
+ReportingUnit	Alabama;Jefferson County;PREC 4020 - TRUSSVILLE FIRST B	Jefferson;PREC 4020 - TRUSSVILLE FIRST B
+ReportingUnit	Alabama;Jefferson County;PREC 4015 - GARDENDALE MT_ VER	Jefferson;PREC 4015 - GARDENDALE MT_ VER
+ReportingUnit	Alabama;Jefferson County;PREC 4010 - GARDENDALE CIVIC C	Jefferson;PREC 4010 - GARDENDALE CIVIC C
+ReportingUnit	Alabama;Jefferson County;PREC 3330 - FIRST BAPT CHURCH	Jefferson;PREC 3330 - FIRST BAPT CHURCH
+ReportingUnit	Alabama;Jefferson County;PREC 3320 - MAYTOWN BAPTIST CH	Jefferson;PREC 3320 - MAYTOWN BAPTIST CH
+ReportingUnit	Alabama;Jefferson County;PREC 3310 - PARKWOOD CHURCH OF	Jefferson;PREC 3310 - PARKWOOD CHURCH OF
+ReportingUnit	Alabama;Jefferson County;PREC 3300 - JOHNS COMMUNITY CE	Jefferson;PREC 3300 - JOHNS COMMUNITY CE
+ReportingUnit	Alabama;Jefferson County;PREC 3290 - MULGA TOWN HALL	Jefferson;PREC 3290 - MULGA TOWN HALL
+ReportingUnit	Alabama;Jefferson County;PREC 3280 - BROOKSIDE COMMUNIT	Jefferson;PREC 3280 - BROOKSIDE COMMUNIT
+ReportingUnit	Alabama;Jefferson County;PREC 3270 - MUSCODA COMMUNITY	Jefferson;PREC 3270 - MUSCODA COMMUNITY
+ReportingUnit	Alabama;Jefferson County;PREC 3260 - WEST JEFFERSON REC	Jefferson;PREC 3260 - WEST JEFFERSON REC
+ReportingUnit	Alabama;Jefferson County;PREC 3250 - BESSEMER FIRE STAT	Jefferson;PREC 3250 - BESSEMER FIRE STAT
+ReportingUnit	Alabama;Jefferson County;PREC 3240 - SYLVAN SPRINGS FIR	Jefferson;PREC 3240 - SYLVAN SPRINGS FIR
+ReportingUnit	Alabama;Jefferson County;PREC 3230 - GRANT STREET BAPTI	Jefferson;PREC 3230 - GRANT STREET BAPTI
+ReportingUnit	Alabama;Jefferson County;PREC 3220 - OAK GROVE FIRST BA	Jefferson;PREC 3220 - OAK GROVE FIRST BA
+ReportingUnit	Alabama;Jefferson County;PREC 3210 - MINOR FIRE STATION	Jefferson;PREC 3210 - MINOR FIRE STATION
+ReportingUnit	Alabama;Jefferson County;PREC 3200 - MAURICE L_ WEST CO	Jefferson;PREC 3200 - MAURICE L_ WEST CO
+ReportingUnit	Alabama;Jefferson County;PREC 3190 - DOLOMITE W FIELD C	Jefferson;PREC 3190 - DOLOMITE W FIELD C
+ReportingUnit	Alabama;Jefferson County;PREC 3180 - CORNER SCHOOL	Jefferson;PREC 3180 - CORNER SCHOOL
+ReportingUnit	Alabama;Jefferson County;PREC 3170 - ALLIANCE COMMUNITY	Jefferson;PREC 3170 - ALLIANCE COMMUNITY
+ReportingUnit	Alabama;Jefferson County;PREC 3160 - ROSS BRIDGE WELCOM	Jefferson;PREC 3160 - ROSS BRIDGE WELCOM
+ReportingUnit	Alabama;Jefferson County;PREC 3150 - UNION HILL BAPTIST	Jefferson;PREC 3150 - UNION HILL BAPTIST
+ReportingUnit	Alabama;Jefferson County;PREC 3140 - VALLEY CREEK BAPTI	Jefferson;PREC 3140 - VALLEY CREEK BAPTI
+ReportingUnit	Alabama;Jefferson County;PREC 3130 - SHADES CREST BAPTI	Jefferson;PREC 3130 - SHADES CREST BAPTI
+ReportingUnit	Alabama;Jefferson County;PREC 3120 - ADAMSVILLE BAPTIST	Jefferson;PREC 3120 - ADAMSVILLE BAPTIST
+ReportingUnit	Alabama;Jefferson County;PREC 3110 - OAKMONT PRESBYTERI	Jefferson;PREC 3110 - OAKMONT PRESBYTERI
+ReportingUnit	Alabama;Jefferson County;PREC 3100 - BAGLEY JUNIOR HIGH	Jefferson;PREC 3100 - BAGLEY JUNIOR HIGH
+ReportingUnit	Alabama;Jefferson County;PREC 3090 - BROOKLANE COMMUNIT	Jefferson;PREC 3090 - BROOKLANE COMMUNIT
+ReportingUnit	Alabama;Jefferson County;PREC 3080 - MORGAN UNITED METH	Jefferson;PREC 3080 - MORGAN UNITED METH
+ReportingUnit	Alabama;Jefferson County;PREC 3070 - MT_ OLIVE COMMUNIT	Jefferson;PREC 3070 - MT_ OLIVE COMMUNIT
+ReportingUnit	Alabama;Jefferson County;PREC 3060 - BESSEMER CIVIC CEN	Jefferson;PREC 3060 - BESSEMER CIVIC CEN
+ReportingUnit	Alabama;Jefferson County;PREC 3050 - PLEASANT RIDGE BAP	Jefferson;PREC 3050 - PLEASANT RIDGE BAP
+ReportingUnit	Alabama;Jefferson County;PREC 3040 - PRINCE OF PEACE CA	Jefferson;PREC 3040 - PRINCE OF PEACE CA
+ReportingUnit	Alabama;Jefferson County;PREC 3035 - BETHEL BAPTIST CHU	Jefferson;PREC 3035 - BETHEL BAPTIST CHU
+ReportingUnit	Alabama;Jefferson County;PREC 3030 - PLEASANT GROVE FIR	Jefferson;PREC 3030 - PLEASANT GROVE FIR
+ReportingUnit	Alabama;Jefferson County;PREC 3025 - BAPTIST CHURCH OF	Jefferson;PREC 3025 - BAPTIST CHURCH OF
+ReportingUnit	Alabama;Jefferson County;PREC 3020 - PLEASANT HILL UNIT	Jefferson;PREC 3020 - PLEASANT HILL UNIT
+ReportingUnit	Alabama;Jefferson County;PREC 3015 - HOOVER MET SPORTS	Jefferson;PREC 3015 - HOOVER MET SPORTS
+ReportingUnit	Alabama;Jefferson County;PREC 3010 - HOOVER MET BASEBAL	Jefferson;PREC 3010 - HOOVER MET BASEBAL
+ReportingUnit	Alabama;Jefferson County;PREC 2440 - SOUTHTOWN HOUSING	Jefferson;PREC 2440 - SOUTHTOWN HOUSING
+ReportingUnit	Alabama;Jefferson County;PREC 2430 - SOUTHSIDE BRANCH P	Jefferson;PREC 2430 - SOUTHSIDE BRANCH P
+ReportingUnit	Alabama;Jefferson County;PREC 2420 - BELL WALLACE BUILD	Jefferson;PREC 2420 - BELL WALLACE BUILD
+ReportingUnit	Alabama;Jefferson County;PREC 2410 - BRYANT CHAPEL AME	Jefferson;PREC 2410 - BRYANT CHAPEL AME
+ReportingUnit	Alabama;Jefferson County;PREC 2400 - WENONAH HIGH SCHOO	Jefferson;PREC 2400 - WENONAH HIGH SCHOO
+ReportingUnit	Alabama;Jefferson County;PREC 2390 - ROOSEVELT CITY COM	Jefferson;PREC 2390 - ROOSEVELT CITY COM
+ReportingUnit	Alabama;Jefferson County;PREC 2380 - FIVE POINTS WEST P	Jefferson;PREC 2380 - FIVE POINTS WEST P
+ReportingUnit	Alabama;Jefferson County;PREC 2370 - NEW BETHEL BAPTIST	Jefferson;PREC 2370 - NEW BETHEL BAPTIST
+ReportingUnit	Alabama;Jefferson County;PREC 2360 - BESSEMER RECREATIO	Jefferson;PREC 2360 - BESSEMER RECREATIO
+ReportingUnit	Alabama;Jefferson County;PREC 2350/5270 - OXMOOR VALLEY	Jefferson;PREC 2350/5270 - OXMOOR VALLEY
+ReportingUnit	Alabama;Jefferson County;PREC 2340 - THOMPSON MANOR COM	Jefferson;PREC 2340 - THOMPSON MANOR COM
+ReportingUnit	Alabama;Jefferson County;PREC 2330 - HENRY CRUMPTON REC	Jefferson;PREC 2330 - HENRY CRUMPTON REC
+ReportingUnit	Alabama;Jefferson County;PREC 2320 - GEORGE WARD TENNIS	Jefferson;PREC 2320 - GEORGE WARD TENNIS
+ReportingUnit	Alabama;Jefferson County;PREC 2310 - MT_ ZION COMMUNITY	Jefferson;PREC 2310 - MT_ ZION COMMUNITY
+ReportingUnit	Alabama;Jefferson County;PREC 2300 - BUSH HILLS ACADEMY	Jefferson;PREC 2300 - BUSH HILLS ACADEMY
+ReportingUnit	Alabama;Jefferson County;PREC 2290 - EAST ENSLEY PUBLIC	Jefferson;PREC 2290 - EAST ENSLEY PUBLIC
+ReportingUnit	Alabama;Jefferson County;PREC 2280 - WEST END ACADEMY	Jefferson;PREC 2280 - WEST END ACADEMY
+ReportingUnit	Alabama;Jefferson County;PREC 2270 - MOUNT ZION MISSION	Jefferson;PREC 2270 - MOUNT ZION MISSION
+ReportingUnit	Alabama;Jefferson County;PREC 2260 - WILKERSON MIDDLE S	Jefferson;PREC 2260 - WILKERSON MIDDLE S
+ReportingUnit	Alabama;Jefferson County;PREC 2250 - MORE THAN CONQUERO	Jefferson;PREC 2250 - MORE THAN CONQUERO
+ReportingUnit	Alabama;Jefferson County;PREC 2240 - FIRE DEPARTMENT AD	Jefferson;PREC 2240 - FIRE DEPARTMENT AD
+ReportingUnit	Alabama;Jefferson County;PREC 2230 - AVONDALE ELEMENTAR	Jefferson;PREC 2230 - AVONDALE ELEMENTAR
+ReportingUnit	Alabama;Jefferson County;PREC 2220 - GLEN IRIS ELEMENTA	Jefferson;PREC 2220 - GLEN IRIS ELEMENTA
+ReportingUnit	Alabama;Jefferson County;PREC 2210 - JONESBORO ELEMENTA	Jefferson;PREC 2210 - JONESBORO ELEMENTA
+ReportingUnit	Alabama;Jefferson County;PREC 2200 - CENTRAL PARK ELEME	Jefferson;PREC 2200 - CENTRAL PARK ELEME
+ReportingUnit	Alabama;Jefferson County;PREC 2190 - WIGGINS LIBRARY &	Jefferson;PREC 2190 - WIGGINS LIBRARY &
+ReportingUnit	Alabama;Jefferson County;PREC 2180 - AVONDALE PUBLIC LI	Jefferson;PREC 2180 - AVONDALE PUBLIC LI
+ReportingUnit	Alabama;Jefferson County;PREC 2170 - HEMPHILL SCHOOL RE	Jefferson;PREC 2170 - HEMPHILL SCHOOL RE
+ReportingUnit	Alabama;Jefferson County;PREC 2160 - JEFFERSON COUNTY C	Jefferson;PREC 2160 - JEFFERSON COUNTY C
+ReportingUnit	Alabama;Jefferson County;PREC 2150 - BRIGHTON SENIOR CI	Jefferson;PREC 2150 - BRIGHTON SENIOR CI
+ReportingUnit	Alabama;Jefferson County;PREC 2140 - NEW BEGINNING CHUR	Jefferson;PREC 2140 - NEW BEGINNING CHUR
+ReportingUnit	Alabama;Jefferson County;PREC 2130 - MINOR ELEMENTARY S	Jefferson;PREC 2130 - MINOR ELEMENTARY S
+ReportingUnit	Alabama;Jefferson County;PREC 2120 - DUNBAR-ABRAMS COMM	Jefferson;PREC 2120 - DUNBAR-ABRAMS COMM
+ReportingUnit	Alabama;Jefferson County;PREC 2110 - SOUTHSIDE HOMES CO	Jefferson;PREC 2110 - SOUTHSIDE HOMES CO
+ReportingUnit	Alabama;Jefferson County;PREC 2100 - MEMORIAL RECREATIO	Jefferson;PREC 2100 - MEMORIAL RECREATIO
+ReportingUnit	Alabama;Jefferson County;PREC 2090 - SIXTH AVENUE BAPTI	Jefferson;PREC 2090 - SIXTH AVENUE BAPTI
+ReportingUnit	Alabama;Jefferson County;PREC 2080 - RAMSAY ALTERNATIVE	Jefferson;PREC 2080 - RAMSAY ALTERNATIVE
+ReportingUnit	Alabama;Jefferson County;PREC 2070 - CENTRAL PARK RECRE	Jefferson;PREC 2070 - CENTRAL PARK RECRE
+ReportingUnit	Alabama;Jefferson County;PREC 2060 - CHARLES A BROWN EL	Jefferson;PREC 2060 - CHARLES A BROWN EL
+ReportingUnit	Alabama;Jefferson County;PREC 2050 - HARRISON PARK RECR	Jefferson;PREC 2050 - HARRISON PARK RECR
+ReportingUnit	Alabama;Jefferson County;PREC 2040 - ENSLEY PARK RECREA	Jefferson;PREC 2040 - ENSLEY PARK RECREA
+ReportingUnit	Alabama;Jefferson County;PREC 2030 - HIGHLAND PARK GOLF	Jefferson;PREC 2030 - HIGHLAND PARK GOLF
+ReportingUnit	Alabama;Jefferson County;PREC 2020 - HOMEWOOD SENIOR CE	Jefferson;PREC 2020 - HOMEWOOD SENIOR CE
+ReportingUnit	Alabama;Jefferson County;PREC 2010 - LEGION FIELD LOBBY	Jefferson;PREC 2010 - LEGION FIELD LOBBY
+ReportingUnit	Alabama;Jefferson County;PREC 1380 - ST_ MARY'S CATHOLI	Jefferson;PREC 1380 - ST_ MARY'S CATHOLI
+ReportingUnit	Alabama;Jefferson County;PREC 1370 - MCALPINE RECREATIO	Jefferson;PREC 1370 - MCALPINE RECREATIO
+ReportingUnit	Alabama;Jefferson County;PREC 1360 - NORTH AVONDALE PUB	Jefferson;PREC 1360 - NORTH AVONDALE PUB
+ReportingUnit	Alabama;Jefferson County;PREC 1350 - C_ J_ DONALD ELEME	Jefferson;PREC 1350 - C_ J_ DONALD ELEME
+ReportingUnit	Alabama;Jefferson County;PREC 1340 - MOUNT HEBRON BAPTI	Jefferson;PREC 1340 - MOUNT HEBRON BAPTI
+ReportingUnit	Alabama;Jefferson County;PREC 1330 - MORTON SIMPSON COM	Jefferson;PREC 1330 - MORTON SIMPSON COM
+ReportingUnit	Alabama;Jefferson County;PREC 1320 - SANDUSKY COMMUNITY	Jefferson;PREC 1320 - SANDUSKY COMMUNITY
+ReportingUnit	Alabama;Jefferson County;PREC 1310 - BROWNSVILLE COMMUN	Jefferson;PREC 1310 - BROWNSVILLE COMMUN
+ReportingUnit	Alabama;Jefferson County;PREC 1300 - NORTH BIRMINGHAM P	Jefferson;PREC 1300 - NORTH BIRMINGHAM P
+ReportingUnit	Alabama;Jefferson County;PREC 1290 - NORTH BIRMINGHAM R	Jefferson;PREC 1290 - NORTH BIRMINGHAM R
+ReportingUnit	Alabama;Jefferson County;PREC 1280 - OLIVER ELEMENTARY	Jefferson;PREC 1280 - OLIVER ELEMENTARY
+ReportingUnit	Alabama;Jefferson County;PREC 1270 - HOOPER CITY RECREA	Jefferson;PREC 1270 - HOOPER CITY RECREA
+ReportingUnit	Alabama;Jefferson County;PREC 1250 - FORESTDALE FIRE ST	Jefferson;PREC 1250 - FORESTDALE FIRE ST
+ReportingUnit	Alabama;Jefferson County;PREC 1240 - MT_ PILGRIM BAPTIS	Jefferson;PREC 1240 - MT_ PILGRIM BAPTIS
+ReportingUnit	Alabama;Jefferson County;PREC 1230 - NEW RISING STAR MI	Jefferson;PREC 1230 - NEW RISING STAR MI
+ReportingUnit	Alabama;Jefferson County;PREC 1220 - WILLOW WOOD RECREA	Jefferson;PREC 1220 - WILLOW WOOD RECREA
+ReportingUnit	Alabama;Jefferson County;PREC 1210 - GLEN OAKS ELEMENTA	Jefferson;PREC 1210 - GLEN OAKS ELEMENTA
+ReportingUnit	Alabama;Jefferson County;PREC 1200 - NORWOOD COMMUNITY	Jefferson;PREC 1200 - NORWOOD COMMUNITY
+ReportingUnit	Alabama;Jefferson County;PREC 1190 - INGLENOOK ELEMENTA	Jefferson;PREC 1190 - INGLENOOK ELEMENTA
+ReportingUnit	Alabama;Jefferson County;PREC 1180 - BARRETT ELEMENTARY	Jefferson;PREC 1180 - BARRETT ELEMENTARY
+ReportingUnit	Alabama;Jefferson County;PREC 1170 - HUDSON MIDDLE SCHO	Jefferson;PREC 1170 - HUDSON MIDDLE SCHO
+ReportingUnit	Alabama;Jefferson County;PREC 1160 - FAITH CHAPEL CHRIS	Jefferson;PREC 1160 - FAITH CHAPEL CHRIS
+ReportingUnit	Alabama;Jefferson County;PREC 1150 - ADAMSVILLE CHURCH	Jefferson;PREC 1150 - ADAMSVILLE CHURCH
+ReportingUnit	Alabama;Jefferson County;PREC 1140 - WOODLAWN PUBLIC LI	Jefferson;PREC 1140 - WOODLAWN PUBLIC LI
+ReportingUnit	Alabama;Jefferson County;PREC 1130 - MARTHA GASKINS ELE	Jefferson;PREC 1130 - MARTHA GASKINS ELE
+ReportingUnit	Alabama;Jefferson County;PREC 1120 - ROBINSON ELEMENTAR	Jefferson;PREC 1120 - ROBINSON ELEMENTAR
+ReportingUnit	Alabama;Jefferson County;PREC 1110 - DON HAWKINS PARK &	Jefferson;PREC 1110 - DON HAWKINS PARK &
+ReportingUnit	Alabama;Jefferson County;PREC 1100 - SOUTH HAMPTON ELEM	Jefferson;PREC 1100 - SOUTH HAMPTON ELEM
+ReportingUnit	Alabama;Jefferson County;PREC 1090 - FORESTDALE SQUARE	Jefferson;PREC 1090 - FORESTDALE SQUARE
+ReportingUnit	Alabama;Jefferson County;PREC 1080 - GEORGE FRENCH STUD	Jefferson;PREC 1080 - GEORGE FRENCH STUD
+ReportingUnit	Alabama;Jefferson County;PREC 1070 - CRESTWAY BAPTIST C	Jefferson;PREC 1070 - CRESTWAY BAPTIST C
+ReportingUnit	Alabama;Jefferson County;PREC 1060 - SUN VALLEY ELEMENT	Jefferson;PREC 1060 - SUN VALLEY ELEMENT
+ReportingUnit	Alabama;Jefferson County;PREC 1050 - MIDFIELD COMMUNITY	Jefferson;PREC 1050 - MIDFIELD COMMUNITY
+ReportingUnit	Alabama;Jefferson County;PREC 1040 - BETHEL BAPTIST CHU	Jefferson;PREC 1040 - BETHEL BAPTIST CHU
+ReportingUnit	Alabama;Jefferson County;PREC 1030 - L_M_ SMITH MIDDLE	Jefferson;PREC 1030 - L_M_ SMITH MIDDLE
+ReportingUnit	Alabama;Jefferson County;PREC 1020 - TOM BRADFORD PARK	Jefferson;PREC 1020 - TOM BRADFORD PARK
+ReportingUnit	Alabama;Jefferson County;PREC 1010 - OUR LADY OF LOURDE	Jefferson;PREC 1010 - OUR LADY OF LOURDE
+ReportingUnit	Alabama;Jefferson County;BIRMINGHAM ABSENTEE	Jefferson;BIRMINGHAM ABSENTEE
+ReportingUnit	Alabama;Jefferson County;BESSEMER ABSENTEE	Jefferson;BESSEMER ABSENTEE
+ReportingUnit	Alabama;Jackson County;WOODVILLE BOB JONES COMM	Jackson;WOODVILLE BOB JONES COMM
+ReportingUnit	Alabama;Jackson County;TUPELO/PIKEVILLE STORE	Jackson;TUPELO/PIKEVILLE STORE
+ReportingUnit	Alabama;Jackson County;TRENTON FIRE HALL	Jackson;TRENTON FIRE HALL
+ReportingUnit	Alabama;Jackson County;STEVENSON CITY PARK	Jackson;STEVENSON CITY PARK
+ReportingUnit	Alabama;Jackson County;SKYLINE CITY HALL	Jackson;SKYLINE CITY HALL
+ReportingUnit	Alabama;Jackson County;SECTION NEW CITY HALL	Jackson;SECTION NEW CITY HALL
+ReportingUnit	Alabama;Jackson County;SCOTTSBORO REC COMM BLDG	Jackson;SCOTTSBORO REC COMM BLDG
+ReportingUnit	Alabama;Jackson County;ROSALIE COMM CTR_	Jackson;ROSALIE COMM CTR_
+ReportingUnit	Alabama;Jackson County;PRINCETON FIRE HALL	Jackson;PRINCETON FIRE HALL
+ReportingUnit	Alabama;Jackson County;PLEASANT GROVES COMM CTR_	Jackson;PLEASANT GROVES COMM CTR_
+ReportingUnit	Alabama;Jackson County;PISGAH CITY HALL	Jackson;PISGAH CITY HALL
+ReportingUnit	Alabama;Jackson County;PAINT ROCK SR_ CITIZEN	Jackson;PAINT ROCK SR_ CITIZEN
+ReportingUnit	Alabama;Jackson County;NEWHOPE METHODIST	Jackson;NEWHOPE METHODIST
+ReportingUnit	Alabama;Jackson County;MACEDONIA SCHOOL	Jackson;MACEDONIA SCHOOL
+ReportingUnit	Alabama;Jackson County;LONG ISLAND COMM CTR_	Jackson;LONG ISLAND COMM CTR_
+ReportingUnit	Alabama;Jackson County;LIMROCK FIRE HALL	Jackson;LIMROCK FIRE HALL
+ReportingUnit	Alabama;Jackson County;LETCHER CHURCH OF GOD	Jackson;LETCHER CHURCH OF GOD
+ReportingUnit	Alabama;Jackson County;LARKINSVILLE STOCK BARN	Jackson;LARKINSVILLE STOCK BARN
+ReportingUnit	Alabama;Jackson County;LANGSTON CITY HALL	Jackson;LANGSTON CITY HALL
+ReportingUnit	Alabama;Jackson County;HYTOP TOWN HALL	Jackson;HYTOP TOWN HALL
+ReportingUnit	Alabama;Jackson County;HOLLYWOOD CITY HALL	Jackson;HOLLYWOOD CITY HALL
+ReportingUnit	Alabama;Jackson County;HIGDON N SAND MTN SCHOOL	Jackson;HIGDON N SAND MTN SCHOOL
+ReportingUnit	Alabama;Jackson County;FLAT ROCK RURITAN BLDG	Jackson;FLAT ROCK RURITAN BLDG
+ReportingUnit	Alabama;Jackson County;FACKLER FIRE HALL	Jackson;FACKLER FIRE HALL
+ReportingUnit	Alabama;Jackson County;ESTILL FORK PRINCES STORE	Jackson;ESTILL FORK PRINCES STORE
+ReportingUnit	Alabama;Jackson County;DUTTON CITY HALL	Jackson;DUTTON CITY HALL
+ReportingUnit	Alabama;Jackson County;DEAN'S CHAPEL COMM	Jackson;DEAN'S CHAPEL COMM
+ReportingUnit	Alabama;Jackson County;CROW FIRE HALL	Jackson;CROW FIRE HALL
+ReportingUnit	Alabama;Jackson County;BRYANT COMM BLDG	Jackson;BRYANT COMM BLDG
+ReportingUnit	Alabama;Jackson County;BRIDGEPORT COMM CTR_	Jackson;BRIDGEPORT COMM CTR_

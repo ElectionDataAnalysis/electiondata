@@ -54,6 +54,7 @@ Party=<header_0>
 
 #[constant_over_sheet]
 
+
 # Values to ignore (optional) #
 #[ignore]
 ## E.g: Candidate=Total Votes Cast,Registered Voters ##
@@ -69,6 +70,7 @@ file_type=excel
 munge_strings=in_field_values
 rows_to_skip=1
 string_field_name_row=0
+sheets_to_read_names=Candidate_Listing
 lookup_id=Name On Ballot
 Party_replacement=<Party>
 Candidate_replacement=<Name On Ballot>
