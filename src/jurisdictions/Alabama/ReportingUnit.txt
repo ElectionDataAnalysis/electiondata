@@ -528,7 +528,6 @@ Alabama;Morgan County;AQUADOME REC CTR	precinct
 Alabama;Morgan County;AMER LEGION BLDG POST 15	precinct
 Alabama;Morgan County;1ST BAPT CH HARTSELLE	precinct
 Alabama;Morgan County;1ST BAPT AUSTINVILLE	precinct
-
 Alabama;Montgomery County;512 ST JAMES METHODIST	precinct
 Alabama;Montgomery County;511 ARROWHEAD CC	precinct
 Alabama;Montgomery County;510 G_ WASHINGTON SC	precinct
@@ -830,7 +829,6 @@ Alabama;Madison County;BOBO VFD	precinct
 Alabama;Madison County;BOB HARRISON SR_ CTR_	precinct
 Alabama;Madison County;ALL NATIONS	precinct
 Alabama;Madison County;ALDERSGATE UMC	precinct
-
 Alabama;Madison County;A & M UNIVERSITY NEW GYM	precinct
 Alabama;Macon County;WARRIOR DIST 2 REC CTR	precinct
 Alabama;Macon County;VOLUNTEER FIRE STATION	precinct

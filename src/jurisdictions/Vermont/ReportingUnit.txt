@@ -1,0 +1,933 @@
+Name	ReportingUnitType
+Vermont;VT House District 1	state-house
+Vermont;VT House District 2	state-house
+Vermont;VT House District 3	state-house
+Vermont;VT House District 4	state-house
+Vermont;VT House District 5	state-house
+Vermont;VT House District 6	state-house
+Vermont;VT House District 7	state-house
+Vermont;VT House District 8	state-house
+Vermont;VT House District 9	state-house
+Vermont;VT House District 10	state-house
+Vermont;VT House District 11	state-house
+Vermont;VT House District 12	state-house
+Vermont;VT House District 13	state-house
+Vermont;VT House District 14	state-house
+Vermont;VT House District 15	state-house
+Vermont;VT House District 16	state-house
+Vermont;VT House District 17	state-house
+Vermont;VT House District 18	state-house
+Vermont;VT House District 19	state-house
+Vermont;VT House District 20	state-house
+Vermont;VT House District 21	state-house
+Vermont;VT House District 22	state-house
+Vermont;VT House District 23	state-house
+Vermont;VT House District 24	state-house
+Vermont;VT House District 25	state-house
+Vermont;VT House District 26	state-house
+Vermont;VT House District 27	state-house
+Vermont;VT House District 28	state-house
+Vermont;VT House District 29	state-house
+Vermont;VT House District 30	state-house
+Vermont;VT House District 31	state-house
+Vermont;VT House District 32	state-house
+Vermont;VT House District 33	state-house
+Vermont;VT House District 34	state-house
+Vermont;VT House District 35	state-house
+Vermont;VT House District 36	state-house
+Vermont;VT House District 37	state-house
+Vermont;VT House District 38	state-house
+Vermont;VT House District 39	state-house
+Vermont;VT House District 40	state-house
+Vermont;VT House District 41	state-house
+Vermont;VT House District 42	state-house
+Vermont;VT House District 43	state-house
+Vermont;VT House District 44	state-house
+Vermont;VT House District 45	state-house
+Vermont;VT House District 46	state-house
+Vermont;VT House District 47	state-house
+Vermont;VT House District 48	state-house
+Vermont;VT House District 49	state-house
+Vermont;VT House District 50	state-house
+Vermont;VT House District 51	state-house
+Vermont;VT House District 52	state-house
+Vermont;VT House District 53	state-house
+Vermont;VT House District 54	state-house
+Vermont;VT House District 55	state-house
+Vermont;VT House District 56	state-house
+Vermont;VT House District 57	state-house
+Vermont;VT House District 58	state-house
+Vermont;VT House District 59	state-house
+Vermont;VT House District 60	state-house
+Vermont;VT House District 61	state-house
+Vermont;VT House District 62	state-house
+Vermont;VT House District 63	state-house
+Vermont;VT House District 64	state-house
+Vermont;VT House District 65	state-house
+Vermont;VT House District 66	state-house
+Vermont;VT House District 67	state-house
+Vermont;VT House District 68	state-house
+Vermont;VT House District 69	state-house
+Vermont;VT House District 70	state-house
+Vermont;VT House District 71	state-house
+Vermont;VT House District 72	state-house
+Vermont;VT House District 73	state-house
+Vermont;VT House District 74	state-house
+Vermont;VT House District 75	state-house
+Vermont;VT House District 76	state-house
+Vermont;VT House District 77	state-house
+Vermont;VT House District 78	state-house
+Vermont;VT House District 79	state-house
+Vermont;VT House District 80	state-house
+Vermont;VT House District 81	state-house
+Vermont;VT House District 82	state-house
+Vermont;VT House District 83	state-house
+Vermont;VT House District 84	state-house
+Vermont;VT House District 85	state-house
+Vermont;VT House District 86	state-house
+Vermont;VT House District 87	state-house
+Vermont;VT House District 88	state-house
+Vermont;VT House District 89	state-house
+Vermont;VT House District 90	state-house
+Vermont;VT House District 91	state-house
+Vermont;VT House District 92	state-house
+Vermont;VT House District 93	state-house
+Vermont;VT House District 94	state-house
+Vermont;VT House District 95	state-house
+Vermont;VT House District 96	state-house
+Vermont;VT House District 97	state-house
+Vermont;VT House District 98	state-house
+Vermont;VT House District 99	state-house
+Vermont;VT House District 100	state-house
+Vermont;VT House District 101	state-house
+Vermont;VT House District 102	state-house
+Vermont;VT House District 103	state-house
+Vermont;VT House District 104	state-house
+Vermont;VT House District 105	state-house
+Vermont;VT House District 106	state-house
+Vermont;VT House District 107	state-house
+Vermont;VT House District 108	state-house
+Vermont;VT House District 109	state-house
+Vermont;VT House District 110	state-house
+Vermont;VT House District 111	state-house
+Vermont;VT House District 112	state-house
+Vermont;VT House District 113	state-house
+Vermont;VT House District 114	state-house
+Vermont;VT House District 115	state-house
+Vermont;VT House District 116	state-house
+Vermont;VT House District 117	state-house
+Vermont;VT House District 118	state-house
+Vermont;VT House District 119	state-house
+Vermont;VT House District 120	state-house
+Vermont;VT House District 121	state-house
+Vermont;VT House District 122	state-house
+Vermont;VT House District 123	state-house
+Vermont;VT House District 124	state-house
+Vermont;VT House District 125	state-house
+Vermont;VT House District 126	state-house
+Vermont;VT House District 127	state-house
+Vermont;VT House District 128	state-house
+Vermont;VT House District 129	state-house
+Vermont;VT House District 130	state-house
+Vermont;VT House District 131	state-house
+Vermont;VT House District 132	state-house
+Vermont;VT House District 133	state-house
+Vermont;VT House District 134	state-house
+Vermont;VT House District 135	state-house
+Vermont;VT House District 136	state-house
+Vermont;VT House District 137	state-house
+Vermont;VT House District 138	state-house
+Vermont;VT House District 139	state-house
+Vermont;VT House District 140	state-house
+Vermont;VT House District 141	state-house
+Vermont;VT House District 142	state-house
+Vermont;VT House District 143	state-house
+Vermont;VT House District 144	state-house
+Vermont;VT House District 145	state-house
+Vermont;VT House District 146	state-house
+Vermont;VT House District 147	state-house
+Vermont;VT House District 148	state-house
+Vermont;VT House District 149	state-house
+Vermont;VT House District 150	state-house
+Vermont;VT House District 151	state-house
+Vermont;VT House District 152	state-house
+Vermont;VT House District 153	state-house
+Vermont;VT House District 154	state-house
+Vermont;VT House District 155	state-house
+Vermont;VT House District 156	state-house
+Vermont;VT House District 157	state-house
+Vermont;VT House District 158	state-house
+Vermont;VT Senate District 1	state-senate
+Vermont;VT Senate District 2	state-senate
+Vermont;VT Senate District 3	state-senate
+Vermont;VT Senate District 4	state-senate
+Vermont;VT Senate District 5	state-senate
+Vermont;VT Senate District 6	state-senate
+Vermont;VT Senate District 7	state-senate
+Vermont;VT Senate District 8	state-senate
+Vermont;VT Senate District 9	state-senate
+Vermont;VT Senate District 10	state-senate
+Vermont;VT Senate District 11	state-senate
+Vermont;VT Senate District 12	state-senate
+Vermont;VT Senate District 13	state-senate
+Vermont;VT Senate District 14	state-senate
+Vermont;VT Senate District 15	state-senate
+Vermont;VT Senate District 16	state-senate
+Vermont;VT Senate District 17	state-senate
+Vermont;VT Senate District 18	state-senate
+Vermont;VT Senate District 19	state-senate
+Vermont;VT Senate District 20	state-senate
+Vermont;VT Senate District 21	state-senate
+Vermont;VT Senate District 22	state-senate
+Vermont;VT Senate District 23	state-senate
+Vermont;VT Senate District 24	state-senate
+Vermont;VT Senate District 25	state-senate
+Vermont;VT Senate District 26	state-senate
+Vermont;VT Senate District 27	state-senate
+Vermont;VT Senate District 28	state-senate
+Vermont;VT Senate District 29	state-senate
+Vermont;VT Senate District 30	state-senate
+Vermont;US House VT District 1	congressional
+Vermont	state
+Vermont;Addison	town
+Vermont;Albany	town
+Vermont;Alburgh	town
+Vermont;Andover	town
+Vermont;Arlington	town
+Vermont;Athens	town
+Vermont;Bakersfield	town
+Vermont;Baltimore	town
+Vermont;Barnard	town
+Vermont;Barnet	town
+Vermont;Barre City	town
+Vermont;Barre Town	town
+Vermont;Barton	town
+Vermont;Belvidere	town
+Vermont;Bennington	town
+Vermont;Benson	town
+Vermont;Berkshire	town
+Vermont;Berlin	town
+Vermont;Bethel	town
+Vermont;Bloomfield	town
+Vermont;Bolton	town
+Vermont;Bradford	town
+Vermont;Braintree	town
+Vermont;Brandon	town
+Vermont;Brattleboro	town
+Vermont;Bridgewater	town
+Vermont;Bridport	town
+Vermont;Brighton	town
+Vermont;Bristol	town
+Vermont;Brookfield	town
+Vermont;Brookline	town
+Vermont;Brownington	town
+Vermont;Brunswick	town
+Vermont;Burke	town
+Vermont;Burlington	town
+Vermont;Cabot	town
+Vermont;Calais	town
+Vermont;Cambridge	town
+Vermont;Canaan	town
+Vermont;Castleton	town
+Vermont;Cavendish	town
+Vermont;Charleston	town
+Vermont;Charlotte	town
+Vermont;Chelsea	town
+Vermont;Chester	town
+Vermont;Chittenden	town
+Vermont;Clarendon	town
+Vermont;Colchester	town
+Vermont;Concord	town
+Vermont;Corinth	town
+Vermont;Cornwall	town
+Vermont;Coventry	town
+Vermont;Craftsbury	town
+Vermont;Danby	town
+Vermont;Danville	town
+Vermont;Derby	town
+Vermont;Dorset	town
+Vermont;Dover	town
+Vermont;Dummerston	town
+Vermont;Duxbury	town
+Vermont;East Haven	town
+Vermont;East Montpelier	town
+Vermont;Eden	town
+Vermont;Elmore	town
+Vermont;Enosburgh	town
+Vermont;Essex	town
+Vermont;Fair Haven	town
+Vermont;Fairfax	town
+Vermont;Fairfield	town
+Vermont;Fairlee	town
+Vermont;Fayston	town
+Vermont;Ferrisburgh	town
+Vermont;Fletcher	town
+Vermont;Franklin	town
+Vermont;Georgia	town
+Vermont;Glover	town
+Vermont;Goshen	town
+Vermont;Grafton	town
+Vermont;Granby	town
+Vermont;Grand Isle	town
+Vermont;Granville	town
+Vermont;Greensboro	town
+Vermont;Groton	town
+Vermont;Guildhall	town
+Vermont;Guilford	town
+Vermont;Halifax	town
+Vermont;Hancock	town
+Vermont;Hardwick	town
+Vermont;Hartford	town
+Vermont;Hartland	town
+Vermont;Highgate	town
+Vermont;Hinesburg	town
+Vermont;Holland	town
+Vermont;Hubbardton	town
+Vermont;Huntington	town
+Vermont;Hyde Park	town
+Vermont;Ira	town
+Vermont;Irasburg	town
+Vermont;Isle La Motte	town
+Vermont;Jamaica	town
+Vermont;Jay	town
+Vermont;Jericho	town
+Vermont;Johnson	town
+Vermont;Killington	town
+Vermont;Kirby	town
+Vermont;Landgrove	town
+Vermont;Leicester	town
+Vermont;Lemington	town
+Vermont;Lincoln	town
+Vermont;Londonderry	town
+Vermont;Lowell	town
+Vermont;Ludlow	town
+Vermont;Lunenburg	town
+Vermont;Lyndon	town
+Vermont;Maidstone	town
+Vermont;Manchester	town
+Vermont;Marlboro	town
+Vermont;Marshfield	town
+Vermont;Mendon	town
+Vermont;Middlebury	town
+Vermont;Middlesex	town
+Vermont;Middletown Springs	town
+Vermont;Milton	town
+Vermont;Monkton	town
+Vermont;Montgomery	town
+Vermont;Montpelier	town
+Vermont;Moretown	town
+Vermont;Morgan	town
+Vermont;Morristown	town
+Vermont;Mount Holly	town
+Vermont;Mount Tabor	town
+Vermont;New Haven	town
+Vermont;Newark	town
+Vermont;Newbury	town
+Vermont;Newfane	town
+Vermont;Newport City	town
+Vermont;Newport Town	town
+Vermont;North Hero	town
+Vermont;Northfield	town
+Vermont;Norton	town
+Vermont;Norwich	town
+Vermont;Orange	town
+Vermont;Orwell	town
+Vermont;Panton	town
+Vermont;Pawlet	town
+Vermont;Peacham	town
+Vermont;Peru	town
+Vermont;Pittsfield	town
+Vermont;Pittsford	town
+Vermont;Plainfield	town
+Vermont;Plymouth	town
+Vermont;Pomfret	town
+Vermont;Poultney	town
+Vermont;Pownal	town
+Vermont;Proctor	town
+Vermont;Putney	town
+Vermont;Randolph	town
+Vermont;Reading	town
+Vermont;Readsboro	town
+Vermont;Richford	town
+Vermont;Richmond	town
+Vermont;Ripton	town
+Vermont;Rochester	town
+Vermont;Rockingham	town
+Vermont;Roxbury	town
+Vermont;Royalton	town
+Vermont;Rupert	town
+Vermont;Rutland City	town
+Vermont;Rutland Town	town
+Vermont;Ryegate	town
+Vermont;Saint Albans City	town
+Vermont;Saint Albans Town	town
+Vermont;Saint George	town
+Vermont;Saint Johnsbury	town
+Vermont;Salisbury	town
+Vermont;Sandgate	town
+Vermont;Searsburg	town
+Vermont;Shaftsbury	town
+Vermont;Sharon	town
+Vermont;Sheffield	town
+Vermont;Shelburne	town
+Vermont;Sheldon	town
+Vermont;Shoreham	town
+Vermont;Shrewsbury	town
+Vermont;South Burlington	town
+Vermont;South Hero	town
+Vermont;Springfield	town
+Vermont;Stamford	town
+Vermont;Stannard	town
+Vermont;Starksboro	town
+Vermont;Stockbridge	town
+Vermont;Stowe	town
+Vermont;Strafford	town
+Vermont;Stratton	town
+Vermont;Sudbury	town
+Vermont;Sunderland	town
+Vermont;Sutton	town
+Vermont;Swanton	town
+Vermont;Thetford	town
+Vermont;Tinmouth	town
+Vermont;Topsham	town
+Vermont;Townshend	town
+Vermont;Troy	town
+Vermont;Tunbridge	town
+Vermont;Underhill	town
+Vermont;Vergennes	town
+Vermont;Vernon	town
+Vermont;Vershire	town
+Vermont;Victory	town
+Vermont;Waitsfield	town
+Vermont;Walden	town
+Vermont;Wallingford	town
+Vermont;Waltham	town
+Vermont;Wardsboro	town
+Vermont;Warren	town
+Vermont;Washington	town
+Vermont;Waterbury	town
+Vermont;Waterford	town
+Vermont;Waterville	town
+Vermont;Weathersfield	town
+Vermont;Wells	town
+Vermont;West Fairlee	town
+Vermont;West Haven	town
+Vermont;West Rutland	town
+Vermont;West Windsor	town
+Vermont;Westfield	town
+Vermont;Westford	town
+Vermont;Westminster	town
+Vermont;Westmore	town
+Vermont;Weston	town
+Vermont;Weybridge	town
+Vermont;Wheelock	town
+Vermont;Whiting	town
+Vermont;Whitingham	town
+Vermont;Williamstown	town
+Vermont;Williston	town
+Vermont;Wilmington	town
+Vermont;Windham	town
+Vermont;Windsor	town
+Vermont;Winhall	town
+Vermont;Winooski	town
+Vermont;Wolcott	town
+Vermont;Woodbury	town
+Vermont;Woodford	town
+Vermont;Woodstock	town
+Vermont;Worcester	town
+Vermont;Worcester;LAM-WAS	precinct
+Vermont;Woodstock;WDR-5	precinct
+Vermont;Woodford;BEN-1	precinct
+Vermont;Woodbury;LAM-WAS	precinct
+Vermont;Wolcott;LAM-2	precinct
+Vermont;Winooski;CHI-6-7	precinct
+Vermont;Winhall;WDH-BEN-WDR	precinct
+Vermont;Windsor;WDR-1	precinct
+Vermont;Windham;WDH-3	precinct
+Vermont;Wilmington;WDH-6	precinct
+Vermont;Williston;CHI-2	precinct
+Vermont;Williamstown;ORA-1	precinct
+Vermont;Whitingham;WDH-BEN	precinct
+Vermont;Whitingham;WDH-6	precinct
+Vermont;Whiting;ADD-RUT	precinct
+Vermont;Wheelock;ORL-CAL	precinct
+Vermont;Weybridge;ADD-5	precinct
+Vermont;Weston;WDH-BEN-WDR	precinct
+Vermont;Westmore;ESX-CAL-ORL	precinct
+Vermont;Westminster;WDH-4	precinct
+Vermont;Westminster;WDH-3	precinct
+Vermont;Westford;CHI-8-3	precinct
+Vermont;Westfield;ORL-LAM	precinct
+Vermont;West Windsor;WDR-1	precinct
+Vermont;West Rutland;RUT-2	precinct
+Vermont;West Haven;RUT-3	precinct
+Vermont;West Fairlee;ORA-2	precinct
+Vermont;Wells;RUT-BEN	precinct
+Vermont;Weathersfield;WDR-2	precinct
+Vermont;Waterville;LAM-3	precinct
+Vermont;Waterford;CAL-1	precinct
+Vermont;Waterbury;WAS-CHI	precinct
+Vermont;Washington;ORA-1	precinct
+Vermont;Warren;WAS-7	precinct
+Vermont;Wardsboro;WDH-BEN	precinct
+Vermont;Waltham;ADD-3	precinct
+Vermont;Wallingford;RUT-2	precinct
+Vermont;Walden;CAL-2	precinct
+Vermont;Waitsfield;WAS-7	precinct
+Vermont;Victory;ESX-CAL	precinct
+Vermont;Vershire;ORA-1	precinct
+Vermont;Vernon;WDH-1	precinct
+Vermont;Vergennes;ADD-3	precinct
+Vermont;Underhill;CHI-3	precinct
+Vermont;Tunbridge;WDR-ORA-1	precinct
+Vermont;Troy;ORL-LAM	precinct
+Vermont;Troy;ORL-2	precinct
+Vermont;Townshend;WDH-5	precinct
+Vermont;Topsham;ORA-CAL	precinct
+Vermont;Tinmouth;RUT-BEN	precinct
+Vermont;Tinmouth;RUT-2	precinct
+Vermont;Thetford;WDR-ORA-2	precinct
+Vermont;Swanton;FRA-4	precinct
+Vermont;Sutton;CAL-4	precinct
+Vermont;Sunderland;BEN-4	precinct
+Vermont;Sunderland;BEN-3	precinct
+Vermont;Sudbury;RUT-6	precinct
+Vermont;Stratton;WDH-BEN-WDR	precinct
+Vermont;Strafford;WDR-ORA-2	precinct
+Vermont;Stowe;LAM-1	precinct
+Vermont;Stockbridge;WDR-RUT	precinct
+Vermont;Starksboro;ADD-4	precinct
+Vermont;Stannard;CAL-2	precinct
+Vermont;Stamford;WDH-BEN	precinct
+Vermont;Springfield;WDR-3-2	precinct
+Vermont;Springfield;WDR-3-1	precinct
+Vermont;South Hero;GI-CHI	precinct
+Vermont;South Burlington;CHI-7-4	precinct
+Vermont;South Burlington;CHI-7-3	precinct
+Vermont;South Burlington;CHI-7-2	precinct
+Vermont;South Burlington;CHI-7-1	precinct
+Vermont;Shrewsbury;RUT-WDR-2	precinct
+Vermont;Shoreham;ADD-RUT	precinct
+Vermont;Sheldon;FRA-4	precinct
+Vermont;Shelburne;CHI-5-2	precinct
+Vermont;Shelburne;CHI-5-1	precinct
+Vermont;Sheffield;ORL-CAL	precinct
+Vermont;Sharon;WDR-ORA-2	precinct
+Vermont;Shaftsbury;BEN-3	precinct
+Vermont;Searsburg;WDH-BEN	precinct
+Vermont;Sandgate;BEN-4	precinct
+Vermont;Salisbury;ADD-2	precinct
+Vermont;Saint Johnsbury;CAL-3	precinct
+Vermont;Saint George;CHI-5-2	precinct
+Vermont;Saint Albans Town;FRA-3-2	precinct
+Vermont;Saint Albans Town;FRA-3-1	precinct
+Vermont;Saint Albans City;FRA-3-1	precinct
+Vermont;Ryegate;CAL-1	precinct
+Vermont;Rutland Town;RUT-4	precinct
+Vermont;Rutland City;RUT-5-4	precinct
+Vermont;Rutland City;RUT-5-3	precinct
+Vermont;Rutland City;RUT-5-2	precinct
+Vermont;Rutland City;RUT-5-1	precinct
+Vermont;Rupert;RUT-BEN	precinct
+Vermont;Royalton;WDR-ORA-1	precinct
+Vermont;Roxbury;ORA-WAS-ADD	precinct
+Vermont;Rockingham;WDH-3	precinct
+Vermont;Rochester;WDR-RUT	precinct
+Vermont;Ripton;ADD-2	precinct
+Vermont;Richmond;CHI-1	precinct
+Vermont;Richford;FRA-5	precinct
+Vermont;Readsboro;WDH-BEN	precinct
+Vermont;Reading;WDR-5	precinct
+Vermont;Randolph;ORA-WAS-ADD	precinct
+Vermont;Putney;WDH-4	precinct
+Vermont;Proctor;RUT-2	precinct
+Vermont;Pownal;BEN-1	precinct
+Vermont;Poultney;RUT-1	precinct
+Vermont;Pomfret;WDR-4-1	precinct
+Vermont;Plymouth;WDR-5	precinct
+Vermont;Plainfield;WAS-6	precinct
+Vermont;Pittsford;RUT-6	precinct
+Vermont;Pittsfield;WDR-RUT	precinct
+Vermont;Peru;BEN-RUT	precinct
+Vermont;Peacham;CAL-WAS	precinct
+Vermont;Pawlet;RUT-BEN	precinct
+Vermont;Panton;ADD-3	precinct
+Vermont;Orwell;ADD-RUT	precinct
+Vermont;Orange;ORA-1	precinct
+Vermont;Norwich;WDR-ORA-2	precinct
+Vermont;Norton;ESX-CAL-ORL	precinct
+Vermont;Northfield;WAS-1	precinct
+Vermont;North Hero;GI-CHI	precinct
+Vermont;Newport Town;ORL-2	precinct
+Vermont;Newport City;ORL-2	precinct
+Vermont;Newfane;WDH-5	precinct
+Vermont;Newbury;ORA-CAL	precinct
+Vermont;Newark;ESX-CAL-ORL	precinct
+Vermont;New Haven;ADD-5	precinct
+Vermont;Mount Tabor;BEN-RUT	precinct
+Vermont;Mount Holly;RUT-WDR-2	precinct
+Vermont;Morristown;LAM-WAS	precinct
+Vermont;Morgan;ORL-1	precinct
+Vermont;Moretown;WAS-7	precinct
+Vermont;Montpelier;WAS-4	precinct
+Vermont;Montgomery;FRA-7	precinct
+Vermont;Monkton;ADD-4	precinct
+Vermont;Milton;GI-CHI	precinct
+Vermont;Milton;CHI-10	precinct
+Vermont;Middletown Springs;RUT-BEN	precinct
+Vermont;Middlesex;WAS-5	precinct
+Vermont;Middlebury;ADD-1	precinct
+Vermont;Mendon;RUT-WDR-1	precinct
+Vermont;Marshfield;WAS-6	precinct
+Vermont;Marlboro;WDH-5	precinct
+Vermont;Manchester;BEN-4	precinct
+Vermont;Maidstone;ESX-CAL	precinct
+Vermont;Lyndon;CAL-4	precinct
+Vermont;Lunenburg;ESX-CAL	precinct
+Vermont;Ludlow;RUT-WDR-2	precinct
+Vermont;Lowell;ORL-LAM	precinct
+Vermont;Londonderry;WDH-BEN-WDR	precinct
+Vermont;Lincoln;ADD-4	precinct
+Vermont;Lemington;ESX-CAL-ORL	precinct
+Vermont;Leicester;ADD-2	precinct
+Vermont;Landgrove;BEN-RUT	precinct
+Vermont;Kirby;ESX-CAL	precinct
+Vermont;Killington;RUT-WDR-1	precinct
+Vermont;Johnson;LAM-2	precinct
+Vermont;Jericho;CHI-3	precinct
+Vermont;Jay;ORL-LAM	precinct
+Vermont;Jamaica;WDH-BEN-WDR	precinct
+Vermont;Isle La Motte;GI-CHI	precinct
+Vermont;Irasburg;ORL-2	precinct
+Vermont;Ira;RUT-1	precinct
+Vermont;Hyde Park;LAM-2	precinct
+Vermont;Huntington;WAS-CHI	precinct
+Vermont;Hubbardton;RUT-3	precinct
+Vermont;Holland;ORL-1	precinct
+Vermont;Hinesburg;CHI-4-2	precinct
+Vermont;Hinesburg;CHI-4-1	precinct
+Vermont;Highgate;FRA-5	precinct
+Vermont;Hartland;WDR-1	precinct
+Vermont;Hartford;WDR-4-2	precinct
+Vermont;Hartford;WDR-4-1	precinct
+Vermont;Hardwick;CAL-2	precinct
+Vermont;Hancock;ADD-2	precinct
+Vermont;Halifax;WDH-6	precinct
+Vermont;Guilford;WDH-1	precinct
+Vermont;Guildhall;ESX-CAL	precinct
+Vermont;Groton;ORA-CAL	precinct
+Vermont;Greensboro;ORL-CAL	precinct
+Vermont;Granville;ORA-WAS-ADD	precinct
+Vermont;Grand Isle;GI-CHI	precinct
+Vermont;Granby;ESX-CAL	precinct
+Vermont;Grafton;WDH-3	precinct
+Vermont;Goshen;ADD-2	precinct
+Vermont;Glover;ORL-CAL	precinct
+Vermont;Georgia;FRA-1	precinct
+Vermont;Franklin;FRA-5	precinct
+Vermont;Fletcher;FRA-6	precinct
+Vermont;Ferrisburgh;ADD-3	precinct
+Vermont;Fayston;WAS-7	precinct
+Vermont;Fairlee;ORA-2	precinct
+Vermont;Fairfield;FRA-6	precinct
+Vermont;Fairfax;FRA-2	precinct
+Vermont;Fair Haven;RUT-3	precinct
+Vermont;Essex;CHI-8-3	precinct
+Vermont;Essex;CHI-8-2	precinct
+Vermont;Essex;CHI-8-1	precinct
+Vermont;Enosburgh;FRA-7	precinct
+Vermont;Elmore;LAM-WAS	precinct
+Vermont;Eden;ORL-LAM	precinct
+Vermont;East Montpelier;WAS-5	precinct
+Vermont;East Haven;ESX-CAL-ORL	precinct
+Vermont;Duxbury;WAS-7	precinct
+Vermont;Dummerston;WDH-4	precinct
+Vermont;Dover;WDH-BEN	precinct
+Vermont;Dorset;BEN-RUT	precinct
+Vermont;Derby;ORL-1	precinct
+Vermont;Danville;CAL-WAS	precinct
+Vermont;Danby;BEN-RUT	precinct
+Vermont;Craftsbury;ORL-CAL	precinct
+Vermont;Coventry;ORL-2	precinct
+Vermont;Cornwall;ADD-2	precinct
+Vermont;Corinth;ORA-1	precinct
+Vermont;Concord;ESX-CAL	precinct
+Vermont;Colchester;CHI-9-2	precinct
+Vermont;Colchester;CHI-9-1	precinct
+Vermont;Clarendon;RUT-2	precinct
+Vermont;Chittenden;RUT-WDR-1	precinct
+Vermont;Chester;WDR-3-1	precinct
+Vermont;Chelsea;ORA-1	precinct
+Vermont;Charlotte;CHI-4-1	precinct
+Vermont;Charleston;ORL-1	precinct
+Vermont;Cavendish;WDR-2	precinct
+Vermont;Castleton;RUT-3	precinct
+Vermont;Canaan;ESX-CAL-ORL	precinct
+Vermont;Cambridge;LAM-3	precinct
+Vermont;Calais;WAS-6	precinct
+Vermont;Cabot;CAL-WAS	precinct
+Vermont;Burlington;CHI-6-7	precinct
+Vermont;Burlington;CHI-6-6	precinct
+Vermont;Burlington;CHI-6-5	precinct
+Vermont;Burlington;CHI-6-4	precinct
+Vermont;Burlington;CHI-6-3	precinct
+Vermont;Burlington;CHI-6-2	precinct
+Vermont;Burlington;CHI-6-1	precinct
+Vermont;Burke;CAL-4	precinct
+Vermont;Brunswick;ESX-CAL	precinct
+Vermont;Brownington;ORL-1	precinct
+Vermont;Brookline;WDH-3	precinct
+Vermont;Brookfield;ORA-WAS-ADD	precinct
+Vermont;Bristol;ADD-4	precinct
+Vermont;Brighton;ESX-CAL-ORL	precinct
+Vermont;Bridport;ADD-5	precinct
+Vermont;Bridgewater;RUT-WDR-1	precinct
+Vermont;Brattleboro;WDH-2-3	precinct
+Vermont;Brattleboro;WDH-2-2	precinct
+Vermont;Brattleboro;WDH-2-1	precinct
+Vermont;Brandon;RUT-6	precinct
+Vermont;Braintree;ORA-WAS-ADD	precinct
+Vermont;Bradford;ORA-2	precinct
+Vermont;Bolton;WAS-CHI	precinct
+Vermont;Bloomfield;ESX-CAL-ORL	precinct
+Vermont;Bethel;WDR-RUT	precinct
+Vermont;Berlin;WAS-1	precinct
+Vermont;Berkshire;FRA-5	precinct
+Vermont;Benson;ADD-RUT	precinct
+Vermont;Bennington;BEN-2-2	precinct
+Vermont;Bennington;BEN-2-1	precinct
+Vermont;Belvidere;LAM-2	precinct
+Vermont;Barton;ORL-CAL	precinct
+Vermont;Barre Town;WAS-2	precinct
+Vermont;Barre City;WAS-3	precinct
+Vermont;Barnet;CAL-1	precinct
+Vermont;Barnard;WDR-4-1	precinct
+Vermont;Baltimore;WDR-3-1	precinct
+Vermont;Bakersfield;FRA-6	precinct
+Vermont;Athens;WDH-3	precinct
+Vermont;Arlington;BEN-4	precinct
+Vermont;Andover;WDR-3-1	precinct
+Vermont;Alburgh;GI-CHI	precinct
+Vermont;Albany;ORL-CAL	precinct
+Vermont;Addison;ADD-3	precinct
+Vermont;VT Senate District Franklin 5	state-house
+Vermont;VT Senate District Windsor	state-senate
+Vermont;VT Senate District Rutland 4	state-house
+Vermont;VT Senate District Washington-Chittenden	state-house
+Vermont;VT Senate District Washington 6	state-house
+Vermont;VT Senate District Franklin 2	state-house
+Vermont;VT Senate District Chittenden 8-3	state-house
+Vermont;VT Senate District Windsor-Orange 2	state-house
+Vermont;VT Senate District Addison 1	state-house
+Vermont;VT Senate District Essex-Caledonia	state-house
+Vermont;VT Senate District Chittenden 7-2	state-house
+Vermont;VT Senate District Chittenden 8-1	state-house
+Vermont;VT Senate District Windham-Bennington-Windsor	state-house
+Vermont;VT Senate District Rutland 5-3	state-house
+Vermont;VT Senate District Orange 1	state-house
+Vermont;VT Senate District Chittenden-1	state-house
+Vermont;VT Senate District Windham 4	state-house
+Vermont;VT Senate District Chittenden 7-1	state-house
+Vermont;VT Senate District Grand Isle-Chittenden	state-house
+Vermont;VT Senate District Windham 6	state-house
+Vermont;VT Senate District Washington 4	state-house
+Vermont;VT Senate District Lamoille	state-senate
+Vermont;VT Senate District Rutland-Windsor 2	state-house
+Vermont;VT Senate District Caledonia-1	state-house
+Vermont;VT Senate District Chittenden 5-2	state-house
+Vermont;VT Senate District Windham 2-2	state-house
+Vermont;VT Senate District Rutland-Windsor 1	state-house
+Vermont;VT Senate District Rutland 5-1	state-house
+Vermont;VT Senate District Bennington-Rutland	state-house
+Vermont;VT Senate District Chittenden-3	state-house
+Vermont;VT Senate District Orange-Washington-Addison	state-house
+Vermont;VT Senate District Chittenden	state-senate
+Vermont;VT Senate District Chittenden 6-4	state-house
+Vermont;VT Senate District Orange-Caledonia	state-house
+Vermont;VT Senate District Orange 2	state-house
+Vermont;VT Senate District Windsor 3-1	state-house
+Vermont;VT Senate District Windham 2-3	state-house
+Vermont;VT Senate District Rutland-Bennington	state-house
+Vermont;VT Senate District Franklin 6	state-house
+Vermont;VT Senate District Chittenden 10	state-house
+Vermont;VT Senate District Chittenden 6-1	state-house
+Vermont;VT Senate District Chittenden 6-3	state-house
+Vermont;VT Senate District Washington 1	state-house
+Vermont;VT Senate District Chittenden 6-5	state-house
+Vermont;VT Senate District Franklin 4	state-house
+Vermont;VT Senate District Chittenden 9-1	state-house
+Vermont;VT Senate District Franklin 7	state-house
+Vermont;VT Senate District Bennington 1	state-house
+Vermont;VT Senate District Bennington 3	state-house
+Vermont;VT Senate District Franklin	state-senate
+Vermont;VT Senate District Rutland 6	state-house
+Vermont;VT Senate District Windham-Bennington	state-house
+Vermont;VT Senate District Windsor 5	state-house
+Vermont;VT Senate District Chittenden 7-4	state-house
+Vermont;VT Senate District Chittenden 4-2	state-house
+Vermont;VT Senate District Chittenden 6-2	state-house
+Vermont;VT Senate District Chittenden 6-7	state-house
+Vermont;VT Senate District Windham	state-senate
+Vermont;VT Senate District Windham 3	state-house
+Vermont;VT Senate District Orleans 1	state-house
+Vermont;VT Senate District Grand Isle	state-senate
+Vermont;VT Senate District Washington 7	state-house
+Vermont;VT Senate District Windsor 1	state-house
+Vermont;VT Senate District Essex-Caledonia-Orleans	state-house
+Vermont;VT Senate District Rutland 2	state-house
+Vermont;VT Senate District Addison 3	state-house
+Vermont;VT Senate District Bennington 2-2	state-house
+Vermont;VT Senate District Rutland 1	state-house
+Vermont;VT Senate District Windsor-Rutland	state-house
+Vermont;VT Senate District Windsor 4-2	state-house
+Vermont;VT Senate District Lamoille 2	state-house
+Vermont;VT Senate District Franklin 3-1	state-house
+Vermont;VT Senate District Caledonia-2	state-house
+Vermont;VT Senate District Addison 4	state-house
+Vermont;VT Senate District Windham 2-1	state-house
+Vermont;VT Senate District Windsor 4-1	state-house
+Vermont;VT Senate District Chittenden-2	state-house
+Vermont;VT Senate District Washington 2	state-house
+Vermont;VT Senate District Caledonia-Washington	state-house
+Vermont;VT Senate District Franklin 1	state-house
+Vermont;VT Senate District Rutland 3	state-house
+Vermont;VT Senate District Caledonia	state-senate
+Vermont;VT Senate District Windham 5	state-house
+Vermont;VT Senate District Chittenden 9-2	state-house
+Vermont;VT Senate District Chittenden 7-3	state-house
+Vermont;VT Senate District Windham 1	state-house
+Vermont;VT Senate District Rutland	state-senate
+Vermont;VT Senate District Caledonia-3	state-house
+Vermont;VT Senate District Chittenden 8-2	state-house
+Vermont;VT Senate District Washington	state-senate
+Vermont;VT Senate District Rutland 5-2	state-house
+Vermont;VT Senate District Orleans-Lamoille	state-house
+Vermont;VT Senate District Bennington	state-senate
+Vermont;VT Senate District Bennington 2-1	state-house
+Vermont;VT Senate District Orange	state-senate
+Vermont;VT Senate District Washington 5	state-house
+Vermont;VT Senate District Lamoille 1	state-house
+Vermont;VT Senate District Franklin 3-2	state-house
+Vermont;VT Senate District Addison	state-senate
+Vermont;VT Senate District Windsor 2	state-house
+Vermont;VT Senate District Addison 2	state-house
+Vermont;VT Senate District Addison-Rutland	state-house
+Vermont;VT Senate District Chittenden 4-1	state-house
+Vermont;VT Senate District Chittenden 5-1	state-house
+Vermont;VT Senate District Bennington 4	state-house
+Vermont;VT Senate District Windsor-Orange 1	state-house
+Vermont;VT Senate District Caledonia-4	state-house
+Vermont;VT Senate District Orleans 2	state-house
+Vermont;VT Senate District Rutland 5-4	state-house
+Vermont;VT Senate District Essex-Orleans	state-senate
+Vermont;VT Senate District Lamoille-Washington	state-house
+Vermont;VT Senate District Windsor 3-2	state-house
+Vermont;VT Senate District Lamoille 3	state-house
+Vermont;VT Senate District Washington 3	state-house
+Vermont;VT Senate District Chittenden 6-6	state-house
+Vermont;VT Senate District Orleans-Caledonia	state-house
+Vermont;VT Senate District Addison 5	state-house
+Vermont;VT House District Franklin 5	state-house
+Vermont;VT House District Rutland 4	state-house
+Vermont;VT House District Washington-Chittenden	state-house
+Vermont;VT House District Washington 6	state-house
+Vermont;VT House District Franklin 2	state-house
+Vermont;VT House District Chittenden 8-3	state-house
+Vermont;VT House District Windsor-Orange 2	state-house
+Vermont;VT House District Addison 1	state-house
+Vermont;VT House District Essex-Caledonia	state-house
+Vermont;VT House District Chittenden 7-2	state-house
+Vermont;VT House District Chittenden 8-1	state-house
+Vermont;VT House District Windham-Bennington-Windsor	state-house
+Vermont;VT House District Rutland 5-3	state-house
+Vermont;VT House District Orange 1	state-house
+Vermont;VT House District Chittenden-1	state-house
+Vermont;VT House District Windham 4	state-house
+Vermont;VT House District Chittenden 7-1	state-house
+Vermont;VT House District Grand Isle-Chittenden	state-house
+Vermont;VT House District Windham 6	state-house
+Vermont;VT House District Washington 4	state-house
+Vermont;VT House District Rutland-Windsor 2	state-house
+Vermont;VT House District Caledonia-1	state-house
+Vermont;VT House District Chittenden 5-2	state-house
+Vermont;VT House District Windham 2-2	state-house
+Vermont;VT House District Rutland-Windsor 1	state-house
+Vermont;VT House District Rutland 5-1	state-house
+Vermont;VT House District Bennington-Rutland	state-house
+Vermont;VT House District Chittenden-3	state-house
+Vermont;VT House District Orange-Washington-Addison	state-house
+Vermont;VT House District Chittenden 6-4	state-house
+Vermont;VT House District Orange-Caledonia	state-house
+Vermont;VT House District Orange 2	state-house
+Vermont;VT House District Windsor 3-1	state-house
+Vermont;VT House District Windham 2-3	state-house
+Vermont;VT House District Rutland-Bennington	state-house
+Vermont;VT House District Franklin 6	state-house
+Vermont;VT House District Chittenden 10	state-house
+Vermont;VT House District Chittenden 6-1	state-house
+Vermont;VT House District Chittenden 6-3	state-house
+Vermont;VT House District Washington 1	state-house
+Vermont;VT House District Chittenden 6-5	state-house
+Vermont;VT House District Franklin 4	state-house
+Vermont;VT House District Chittenden 9-1	state-house
+Vermont;VT House District Franklin 7	state-house
+Vermont;VT House District Bennington 1	state-house
+Vermont;VT House District Bennington 3	state-house
+Vermont;VT House District Rutland 6	state-house
+Vermont;VT House District Windham-Bennington	state-house
+Vermont;VT House District Windsor 5	state-house
+Vermont;VT House District Chittenden 7-4	state-house
+Vermont;VT House District Chittenden 4-2	state-house
+Vermont;VT House District Chittenden 6-2	state-house
+Vermont;VT House District Chittenden 6-7	state-house
+Vermont;VT House District Windham 3	state-house
+Vermont;VT House District Orleans 1	state-house
+Vermont;VT House District Washington 7	state-house
+Vermont;VT House District Windsor 1	state-house
+Vermont;VT House District Essex-Caledonia-Orleans	state-house
+Vermont;VT House District Rutland 2	state-house
+Vermont;VT House District Addison 3	state-house
+Vermont;VT House District Bennington 2-2	state-house
+Vermont;VT House District Rutland 1	state-house
+Vermont;VT House District Windsor-Rutland	state-house
+Vermont;VT House District Windsor 4-2	state-house
+Vermont;VT House District Lamoille 2	state-house
+Vermont;VT House District Franklin 3-1	state-house
+Vermont;VT House District Caledonia-2	state-house
+Vermont;VT House District Addison 4	state-house
+Vermont;VT House District Windham 2-1	state-house
+Vermont;VT House District Windsor 4-1	state-house
+Vermont;VT House District Chittenden-2	state-house
+Vermont;VT House District Washington 2	state-house
+Vermont;VT House District Caledonia-Washington	state-house
+Vermont;VT House District Franklin 1	state-house
+Vermont;VT House District Rutland 3	state-house
+Vermont;VT House District Windham 5	state-house
+Vermont;VT House District Chittenden 9-2	state-house
+Vermont;VT House District Chittenden 7-3	state-house
+Vermont;VT House District Windham 1	state-house
+Vermont;VT House District Caledonia-3	state-house
+Vermont;VT House District Chittenden 8-2	state-house
+Vermont;VT House District Rutland 5-2	state-house
+Vermont;VT House District Orleans-Lamoille	state-house
+Vermont;VT House District Bennington 2-1	state-house
+Vermont;VT House District Washington 5	state-house
+Vermont;VT House District Lamoille 1	state-house
+Vermont;VT House District Franklin 3-2	state-house
+Vermont;VT House District Windsor 2	state-house
+Vermont;VT House District Addison 2	state-house
+Vermont;VT House District Addison-Rutland	state-house
+Vermont;VT House District Chittenden 4-1	state-house
+Vermont;VT House District Chittenden 5-1	state-house
+Vermont;VT House District Bennington 4	state-house
+Vermont;VT House District Windsor-Orange 1	state-house
+Vermont;VT House District Caledonia-4	state-house
+Vermont;VT House District Orleans 2	state-house
+Vermont;VT House District Rutland 5-4	state-house
+Vermont;VT House District Lamoille-Washington	state-house
+Vermont;VT House District Windsor 3-2	state-house
+Vermont;VT House District Lamoille 3	state-house
+Vermont;VT House District Washington 3	state-house
+Vermont;VT House District Chittenden 6-6	state-house
+Vermont;VT House District Orleans-Caledonia	state-house
+Vermont;VT House District Addison 5	state-house
