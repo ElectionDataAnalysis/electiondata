@@ -1,0 +1,99 @@
+Name	ElectionDistrict
+WY House District 1	Wyoming;WY House District 1
+WY House District 2	Wyoming;WY House District 2
+WY House District 3	Wyoming;WY House District 3
+WY House District 4	Wyoming;WY House District 4
+WY House District 5	Wyoming;WY House District 5
+WY House District 6	Wyoming;WY House District 6
+WY House District 7	Wyoming;WY House District 7
+WY House District 8	Wyoming;WY House District 8
+WY House District 9	Wyoming;WY House District 9
+WY House District 10	Wyoming;WY House District 10
+WY House District 11	Wyoming;WY House District 11
+WY House District 12	Wyoming;WY House District 12
+WY House District 13	Wyoming;WY House District 13
+WY House District 14	Wyoming;WY House District 14
+WY House District 15	Wyoming;WY House District 15
+WY House District 16	Wyoming;WY House District 16
+WY House District 17	Wyoming;WY House District 17
+WY House District 18	Wyoming;WY House District 18
+WY House District 19	Wyoming;WY House District 19
+WY House District 20	Wyoming;WY House District 20
+WY House District 21	Wyoming;WY House District 21
+WY House District 22	Wyoming;WY House District 22
+WY House District 23	Wyoming;WY House District 23
+WY House District 24	Wyoming;WY House District 24
+WY House District 25	Wyoming;WY House District 25
+WY House District 26	Wyoming;WY House District 26
+WY House District 27	Wyoming;WY House District 27
+WY House District 28	Wyoming;WY House District 28
+WY House District 29	Wyoming;WY House District 29
+WY House District 30	Wyoming;WY House District 30
+WY House District 31	Wyoming;WY House District 31
+WY House District 32	Wyoming;WY House District 32
+WY House District 33	Wyoming;WY House District 33
+WY House District 34	Wyoming;WY House District 34
+WY House District 35	Wyoming;WY House District 35
+WY House District 36	Wyoming;WY House District 36
+WY House District 37	Wyoming;WY House District 37
+WY House District 38	Wyoming;WY House District 38
+WY House District 39	Wyoming;WY House District 39
+WY House District 40	Wyoming;WY House District 40
+WY House District 41	Wyoming;WY House District 41
+WY House District 42	Wyoming;WY House District 42
+WY House District 43	Wyoming;WY House District 43
+WY House District 44	Wyoming;WY House District 44
+WY House District 45	Wyoming;WY House District 45
+WY House District 46	Wyoming;WY House District 46
+WY House District 47	Wyoming;WY House District 47
+WY House District 48	Wyoming;WY House District 48
+WY House District 49	Wyoming;WY House District 49
+WY House District 50	Wyoming;WY House District 50
+WY House District 51	Wyoming;WY House District 51
+WY House District 52	Wyoming;WY House District 52
+WY House District 53	Wyoming;WY House District 53
+WY House District 54	Wyoming;WY House District 54
+WY House District 55	Wyoming;WY House District 55
+WY House District 56	Wyoming;WY House District 56
+WY House District 57	Wyoming;WY House District 57
+WY House District 58	Wyoming;WY House District 58
+WY House District 59	Wyoming;WY House District 59
+WY House District 60	Wyoming;WY House District 60
+WY Senate District 1	Wyoming;WY Senate District 1
+WY Senate District 2	Wyoming;WY Senate District 2
+WY Senate District 3	Wyoming;WY Senate District 3
+WY Senate District 4	Wyoming;WY Senate District 4
+WY Senate District 5	Wyoming;WY Senate District 5
+WY Senate District 6	Wyoming;WY Senate District 6
+WY Senate District 7	Wyoming;WY Senate District 7
+WY Senate District 8	Wyoming;WY Senate District 8
+WY Senate District 9	Wyoming;WY Senate District 9
+WY Senate District 10	Wyoming;WY Senate District 10
+WY Senate District 11	Wyoming;WY Senate District 11
+WY Senate District 12	Wyoming;WY Senate District 12
+WY Senate District 13	Wyoming;WY Senate District 13
+WY Senate District 14	Wyoming;WY Senate District 14
+WY Senate District 15	Wyoming;WY Senate District 15
+WY Senate District 16	Wyoming;WY Senate District 16
+WY Senate District 17	Wyoming;WY Senate District 17
+WY Senate District 18	Wyoming;WY Senate District 18
+WY Senate District 19	Wyoming;WY Senate District 19
+WY Senate District 20	Wyoming;WY Senate District 20
+WY Senate District 21	Wyoming;WY Senate District 21
+WY Senate District 22	Wyoming;WY Senate District 22
+WY Senate District 23	Wyoming;WY Senate District 23
+WY Senate District 24	Wyoming;WY Senate District 24
+WY Senate District 25	Wyoming;WY Senate District 25
+WY Senate District 26	Wyoming;WY Senate District 26
+WY Senate District 27	Wyoming;WY Senate District 27
+WY Senate District 28	Wyoming;WY Senate District 28
+WY Senate District 29	Wyoming;WY Senate District 29
+WY Senate District 30	Wyoming;WY Senate District 30
+US House WY District 1	Wyoming
+US President (WY)	Wyoming
+WY Governor	Wyoming
+US Senate WY	Wyoming
+WY Attorney General	Wyoming
+WY Lieutenant Governor	Wyoming
+WY Treasurer	Wyoming
+WY Secretary of State	Wyoming

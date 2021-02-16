@@ -1,0 +1,374 @@
+cdf_element	cdf_internal_name	raw_identifier_value
+CandidateContest	NJ House District 1	NJ House District 1
+CandidateContest	NJ House District 2	NJ House District 2
+CandidateContest	NJ House District 3	NJ House District 3
+CandidateContest	NJ House District 4	NJ House District 4
+CandidateContest	NJ House District 5	NJ House District 5
+CandidateContest	NJ House District 6	NJ House District 6
+CandidateContest	NJ House District 7	NJ House District 7
+CandidateContest	NJ House District 8	NJ House District 8
+CandidateContest	NJ House District 9	NJ House District 9
+CandidateContest	NJ House District 10	NJ House District 10
+CandidateContest	NJ House District 11	NJ House District 11
+CandidateContest	NJ House District 12	NJ House District 12
+CandidateContest	NJ House District 13	NJ House District 13
+CandidateContest	NJ House District 14	NJ House District 14
+CandidateContest	NJ House District 15	NJ House District 15
+CandidateContest	NJ House District 16	NJ House District 16
+CandidateContest	NJ House District 17	NJ House District 17
+CandidateContest	NJ House District 18	NJ House District 18
+CandidateContest	NJ House District 19	NJ House District 19
+CandidateContest	NJ House District 20	NJ House District 20
+CandidateContest	NJ House District 21	NJ House District 21
+CandidateContest	NJ House District 22	NJ House District 22
+CandidateContest	NJ House District 23	NJ House District 23
+CandidateContest	NJ House District 24	NJ House District 24
+CandidateContest	NJ House District 25	NJ House District 25
+CandidateContest	NJ House District 26	NJ House District 26
+CandidateContest	NJ House District 27	NJ House District 27
+CandidateContest	NJ House District 28	NJ House District 28
+CandidateContest	NJ House District 29	NJ House District 29
+CandidateContest	NJ House District 30	NJ House District 30
+CandidateContest	NJ House District 31	NJ House District 31
+CandidateContest	NJ House District 32	NJ House District 32
+CandidateContest	NJ House District 33	NJ House District 33
+CandidateContest	NJ House District 34	NJ House District 34
+CandidateContest	NJ House District 35	NJ House District 35
+CandidateContest	NJ House District 36	NJ House District 36
+CandidateContest	NJ House District 37	NJ House District 37
+CandidateContest	NJ House District 38	NJ House District 38
+CandidateContest	NJ House District 39	NJ House District 39
+CandidateContest	NJ House District 40	NJ House District 40
+CandidateContest	NJ House District 41	NJ House District 41
+CandidateContest	NJ House District 42	NJ House District 42
+CandidateContest	NJ House District 43	NJ House District 43
+CandidateContest	NJ House District 44	NJ House District 44
+CandidateContest	NJ House District 45	NJ House District 45
+CandidateContest	NJ House District 46	NJ House District 46
+CandidateContest	NJ House District 47	NJ House District 47
+CandidateContest	NJ House District 48	NJ House District 48
+CandidateContest	NJ House District 49	NJ House District 49
+CandidateContest	NJ House District 50	NJ House District 50
+CandidateContest	NJ House District 51	NJ House District 51
+CandidateContest	NJ House District 52	NJ House District 52
+CandidateContest	NJ House District 53	NJ House District 53
+CandidateContest	NJ House District 54	NJ House District 54
+CandidateContest	NJ House District 55	NJ House District 55
+CandidateContest	NJ House District 56	NJ House District 56
+CandidateContest	NJ House District 57	NJ House District 57
+CandidateContest	NJ House District 58	NJ House District 58
+CandidateContest	NJ House District 59	NJ House District 59
+CandidateContest	NJ House District 60	NJ House District 60
+CandidateContest	NJ House District 61	NJ House District 61
+CandidateContest	NJ House District 62	NJ House District 62
+CandidateContest	NJ House District 63	NJ House District 63
+CandidateContest	NJ House District 64	NJ House District 64
+CandidateContest	NJ House District 65	NJ House District 65
+CandidateContest	NJ House District 66	NJ House District 66
+CandidateContest	NJ House District 67	NJ House District 67
+CandidateContest	NJ House District 68	NJ House District 68
+CandidateContest	NJ House District 69	NJ House District 69
+CandidateContest	NJ House District 70	NJ House District 70
+CandidateContest	NJ House District 71	NJ House District 71
+CandidateContest	NJ House District 72	NJ House District 72
+CandidateContest	NJ House District 73	NJ House District 73
+CandidateContest	NJ House District 74	NJ House District 74
+CandidateContest	NJ House District 75	NJ House District 75
+CandidateContest	NJ House District 76	NJ House District 76
+CandidateContest	NJ House District 77	NJ House District 77
+CandidateContest	NJ House District 78	NJ House District 78
+CandidateContest	NJ House District 79	NJ House District 79
+CandidateContest	NJ House District 80	NJ House District 80
+CandidateContest	NJ Senate District 1	NJ Senate District 1
+CandidateContest	NJ Senate District 2	NJ Senate District 2
+CandidateContest	NJ Senate District 3	NJ Senate District 3
+CandidateContest	NJ Senate District 4	NJ Senate District 4
+CandidateContest	NJ Senate District 5	NJ Senate District 5
+CandidateContest	NJ Senate District 6	NJ Senate District 6
+CandidateContest	NJ Senate District 7	NJ Senate District 7
+CandidateContest	NJ Senate District 8	NJ Senate District 8
+CandidateContest	NJ Senate District 9	NJ Senate District 9
+CandidateContest	NJ Senate District 10	NJ Senate District 10
+CandidateContest	NJ Senate District 11	NJ Senate District 11
+CandidateContest	NJ Senate District 12	NJ Senate District 12
+CandidateContest	NJ Senate District 13	NJ Senate District 13
+CandidateContest	NJ Senate District 14	NJ Senate District 14
+CandidateContest	NJ Senate District 15	NJ Senate District 15
+CandidateContest	NJ Senate District 16	NJ Senate District 16
+CandidateContest	NJ Senate District 17	NJ Senate District 17
+CandidateContest	NJ Senate District 18	NJ Senate District 18
+CandidateContest	NJ Senate District 19	NJ Senate District 19
+CandidateContest	NJ Senate District 20	NJ Senate District 20
+CandidateContest	NJ Senate District 21	NJ Senate District 21
+CandidateContest	NJ Senate District 22	NJ Senate District 22
+CandidateContest	NJ Senate District 23	NJ Senate District 23
+CandidateContest	NJ Senate District 24	NJ Senate District 24
+CandidateContest	NJ Senate District 25	NJ Senate District 25
+CandidateContest	NJ Senate District 26	NJ Senate District 26
+CandidateContest	NJ Senate District 27	NJ Senate District 27
+CandidateContest	NJ Senate District 28	NJ Senate District 28
+CandidateContest	NJ Senate District 29	NJ Senate District 29
+CandidateContest	NJ Senate District 30	NJ Senate District 30
+CandidateContest	NJ Senate District 31	NJ Senate District 31
+CandidateContest	NJ Senate District 32	NJ Senate District 32
+CandidateContest	NJ Senate District 33	NJ Senate District 33
+CandidateContest	NJ Senate District 34	NJ Senate District 34
+CandidateContest	NJ Senate District 35	NJ Senate District 35
+CandidateContest	NJ Senate District 36	NJ Senate District 36
+CandidateContest	NJ Senate District 37	NJ Senate District 37
+CandidateContest	NJ Senate District 38	NJ Senate District 38
+CandidateContest	NJ Senate District 39	NJ Senate District 39
+CandidateContest	NJ Senate District 40	NJ Senate District 40
+CandidateContest	US House NJ District 1	First Congressional District
+CandidateContest	US House NJ District 2	Second Congressional District
+CandidateContest	US House NJ District 3	Third Congressional District
+CandidateContest	US House NJ District 4	Fourth Congressional District
+CandidateContest	US House NJ District 5	Fifth Congressional District
+CandidateContest	US House NJ District 6	Sixth Congressional District
+CandidateContest	US House NJ District 7	Seventh Congressional District
+CandidateContest	US House NJ District 8	Eighth Congressional District
+CandidateContest	US House NJ District 9	Ninth Congressional District
+CandidateContest	US House NJ District 10	Tenth Congressional District
+CandidateContest	US House NJ District 11	Eleventh Congressional District
+CandidateContest	US House NJ District 12	Twelfth Congressional District
+CandidateContest	US President (NJ)	President
+CandidateContest	NJ Governor	NJ Governor
+CandidateContest	US Senate NJ	US Senate
+CandidateContest	NJ Attorney General	NJ Attorney General
+CandidateContest	NJ Lieutenant Governor	NJ Lieutenant Governor
+CandidateContest	NJ Treasurer	NJ Treasurer
+CandidateContest	NJ Secretary of State	NJ Secretary of State
+Election	2020 General	2020 General
+Election	2020 Primary	2020 Primary
+Election	2018 General	2018 General
+Election	2016 General	2016 General
+Party	Democratic Party	Democratic
+Party	Republican Party	Republican
+Party	Green Party	Green Party
+Party	Green Party	GREEN PARTY
+Party	Libertarian Party	LIBERTARIAN PARTY
+Party	Libertarian Party	Libertarian Party
+ReportingUnit	New Jersey;NJ House District 1	New Jersey;NJ House District 1
+ReportingUnit	New Jersey;NJ House District 2	New Jersey;NJ House District 2
+ReportingUnit	New Jersey;NJ House District 3	New Jersey;NJ House District 3
+ReportingUnit	New Jersey;NJ House District 4	New Jersey;NJ House District 4
+ReportingUnit	New Jersey;NJ House District 5	New Jersey;NJ House District 5
+ReportingUnit	New Jersey;NJ House District 6	New Jersey;NJ House District 6
+ReportingUnit	New Jersey;NJ House District 7	New Jersey;NJ House District 7
+ReportingUnit	New Jersey;NJ House District 8	New Jersey;NJ House District 8
+ReportingUnit	New Jersey;NJ House District 9	New Jersey;NJ House District 9
+ReportingUnit	New Jersey;NJ House District 10	New Jersey;NJ House District 10
+ReportingUnit	New Jersey;NJ House District 11	New Jersey;NJ House District 11
+ReportingUnit	New Jersey;NJ House District 12	New Jersey;NJ House District 12
+ReportingUnit	New Jersey;NJ House District 13	New Jersey;NJ House District 13
+ReportingUnit	New Jersey;NJ House District 14	New Jersey;NJ House District 14
+ReportingUnit	New Jersey;NJ House District 15	New Jersey;NJ House District 15
+ReportingUnit	New Jersey;NJ House District 16	New Jersey;NJ House District 16
+ReportingUnit	New Jersey;NJ House District 17	New Jersey;NJ House District 17
+ReportingUnit	New Jersey;NJ House District 18	New Jersey;NJ House District 18
+ReportingUnit	New Jersey;NJ House District 19	New Jersey;NJ House District 19
+ReportingUnit	New Jersey;NJ House District 20	New Jersey;NJ House District 20
+ReportingUnit	New Jersey;NJ House District 21	New Jersey;NJ House District 21
+ReportingUnit	New Jersey;NJ House District 22	New Jersey;NJ House District 22
+ReportingUnit	New Jersey;NJ House District 23	New Jersey;NJ House District 23
+ReportingUnit	New Jersey;NJ House District 24	New Jersey;NJ House District 24
+ReportingUnit	New Jersey;NJ House District 25	New Jersey;NJ House District 25
+ReportingUnit	New Jersey;NJ House District 26	New Jersey;NJ House District 26
+ReportingUnit	New Jersey;NJ House District 27	New Jersey;NJ House District 27
+ReportingUnit	New Jersey;NJ House District 28	New Jersey;NJ House District 28
+ReportingUnit	New Jersey;NJ House District 29	New Jersey;NJ House District 29
+ReportingUnit	New Jersey;NJ House District 30	New Jersey;NJ House District 30
+ReportingUnit	New Jersey;NJ House District 31	New Jersey;NJ House District 31
+ReportingUnit	New Jersey;NJ House District 32	New Jersey;NJ House District 32
+ReportingUnit	New Jersey;NJ House District 33	New Jersey;NJ House District 33
+ReportingUnit	New Jersey;NJ House District 34	New Jersey;NJ House District 34
+ReportingUnit	New Jersey;NJ House District 35	New Jersey;NJ House District 35
+ReportingUnit	New Jersey;NJ House District 36	New Jersey;NJ House District 36
+ReportingUnit	New Jersey;NJ House District 37	New Jersey;NJ House District 37
+ReportingUnit	New Jersey;NJ House District 38	New Jersey;NJ House District 38
+ReportingUnit	New Jersey;NJ House District 39	New Jersey;NJ House District 39
+ReportingUnit	New Jersey;NJ House District 40	New Jersey;NJ House District 40
+ReportingUnit	New Jersey;NJ House District 41	New Jersey;NJ House District 41
+ReportingUnit	New Jersey;NJ House District 42	New Jersey;NJ House District 42
+ReportingUnit	New Jersey;NJ House District 43	New Jersey;NJ House District 43
+ReportingUnit	New Jersey;NJ House District 44	New Jersey;NJ House District 44
+ReportingUnit	New Jersey;NJ House District 45	New Jersey;NJ House District 45
+ReportingUnit	New Jersey;NJ House District 46	New Jersey;NJ House District 46
+ReportingUnit	New Jersey;NJ House District 47	New Jersey;NJ House District 47
+ReportingUnit	New Jersey;NJ House District 48	New Jersey;NJ House District 48
+ReportingUnit	New Jersey;NJ House District 49	New Jersey;NJ House District 49
+ReportingUnit	New Jersey;NJ House District 50	New Jersey;NJ House District 50
+ReportingUnit	New Jersey;NJ House District 51	New Jersey;NJ House District 51
+ReportingUnit	New Jersey;NJ House District 52	New Jersey;NJ House District 52
+ReportingUnit	New Jersey;NJ House District 53	New Jersey;NJ House District 53
+ReportingUnit	New Jersey;NJ House District 54	New Jersey;NJ House District 54
+ReportingUnit	New Jersey;NJ House District 55	New Jersey;NJ House District 55
+ReportingUnit	New Jersey;NJ House District 56	New Jersey;NJ House District 56
+ReportingUnit	New Jersey;NJ House District 57	New Jersey;NJ House District 57
+ReportingUnit	New Jersey;NJ House District 58	New Jersey;NJ House District 58
+ReportingUnit	New Jersey;NJ House District 59	New Jersey;NJ House District 59
+ReportingUnit	New Jersey;NJ House District 60	New Jersey;NJ House District 60
+ReportingUnit	New Jersey;NJ House District 61	New Jersey;NJ House District 61
+ReportingUnit	New Jersey;NJ House District 62	New Jersey;NJ House District 62
+ReportingUnit	New Jersey;NJ House District 63	New Jersey;NJ House District 63
+ReportingUnit	New Jersey;NJ House District 64	New Jersey;NJ House District 64
+ReportingUnit	New Jersey;NJ House District 65	New Jersey;NJ House District 65
+ReportingUnit	New Jersey;NJ House District 66	New Jersey;NJ House District 66
+ReportingUnit	New Jersey;NJ House District 67	New Jersey;NJ House District 67
+ReportingUnit	New Jersey;NJ House District 68	New Jersey;NJ House District 68
+ReportingUnit	New Jersey;NJ House District 69	New Jersey;NJ House District 69
+ReportingUnit	New Jersey;NJ House District 70	New Jersey;NJ House District 70
+ReportingUnit	New Jersey;NJ House District 71	New Jersey;NJ House District 71
+ReportingUnit	New Jersey;NJ House District 72	New Jersey;NJ House District 72
+ReportingUnit	New Jersey;NJ House District 73	New Jersey;NJ House District 73
+ReportingUnit	New Jersey;NJ House District 74	New Jersey;NJ House District 74
+ReportingUnit	New Jersey;NJ House District 75	New Jersey;NJ House District 75
+ReportingUnit	New Jersey;NJ House District 76	New Jersey;NJ House District 76
+ReportingUnit	New Jersey;NJ House District 77	New Jersey;NJ House District 77
+ReportingUnit	New Jersey;NJ House District 78	New Jersey;NJ House District 78
+ReportingUnit	New Jersey;NJ House District 79	New Jersey;NJ House District 79
+ReportingUnit	New Jersey;NJ House District 80	New Jersey;NJ House District 80
+ReportingUnit	New Jersey;NJ Senate District 1	New Jersey;NJ Senate District 1
+ReportingUnit	New Jersey;NJ Senate District 2	New Jersey;NJ Senate District 2
+ReportingUnit	New Jersey;NJ Senate District 3	New Jersey;NJ Senate District 3
+ReportingUnit	New Jersey;NJ Senate District 4	New Jersey;NJ Senate District 4
+ReportingUnit	New Jersey;NJ Senate District 5	New Jersey;NJ Senate District 5
+ReportingUnit	New Jersey;NJ Senate District 6	New Jersey;NJ Senate District 6
+ReportingUnit	New Jersey;NJ Senate District 7	New Jersey;NJ Senate District 7
+ReportingUnit	New Jersey;NJ Senate District 8	New Jersey;NJ Senate District 8
+ReportingUnit	New Jersey;NJ Senate District 9	New Jersey;NJ Senate District 9
+ReportingUnit	New Jersey;NJ Senate District 10	New Jersey;NJ Senate District 10
+ReportingUnit	New Jersey;NJ Senate District 11	New Jersey;NJ Senate District 11
+ReportingUnit	New Jersey;NJ Senate District 12	New Jersey;NJ Senate District 12
+ReportingUnit	New Jersey;NJ Senate District 13	New Jersey;NJ Senate District 13
+ReportingUnit	New Jersey;NJ Senate District 14	New Jersey;NJ Senate District 14
+ReportingUnit	New Jersey;NJ Senate District 15	New Jersey;NJ Senate District 15
+ReportingUnit	New Jersey;NJ Senate District 16	New Jersey;NJ Senate District 16
+ReportingUnit	New Jersey;NJ Senate District 17	New Jersey;NJ Senate District 17
+ReportingUnit	New Jersey;NJ Senate District 18	New Jersey;NJ Senate District 18
+ReportingUnit	New Jersey;NJ Senate District 19	New Jersey;NJ Senate District 19
+ReportingUnit	New Jersey;NJ Senate District 20	New Jersey;NJ Senate District 20
+ReportingUnit	New Jersey;NJ Senate District 21	New Jersey;NJ Senate District 21
+ReportingUnit	New Jersey;NJ Senate District 22	New Jersey;NJ Senate District 22
+ReportingUnit	New Jersey;NJ Senate District 23	New Jersey;NJ Senate District 23
+ReportingUnit	New Jersey;NJ Senate District 24	New Jersey;NJ Senate District 24
+ReportingUnit	New Jersey;NJ Senate District 25	New Jersey;NJ Senate District 25
+ReportingUnit	New Jersey;NJ Senate District 26	New Jersey;NJ Senate District 26
+ReportingUnit	New Jersey;NJ Senate District 27	New Jersey;NJ Senate District 27
+ReportingUnit	New Jersey;NJ Senate District 28	New Jersey;NJ Senate District 28
+ReportingUnit	New Jersey;NJ Senate District 29	New Jersey;NJ Senate District 29
+ReportingUnit	New Jersey;NJ Senate District 30	New Jersey;NJ Senate District 30
+ReportingUnit	New Jersey;NJ Senate District 31	New Jersey;NJ Senate District 31
+ReportingUnit	New Jersey;NJ Senate District 32	New Jersey;NJ Senate District 32
+ReportingUnit	New Jersey;NJ Senate District 33	New Jersey;NJ Senate District 33
+ReportingUnit	New Jersey;NJ Senate District 34	New Jersey;NJ Senate District 34
+ReportingUnit	New Jersey;NJ Senate District 35	New Jersey;NJ Senate District 35
+ReportingUnit	New Jersey;NJ Senate District 36	New Jersey;NJ Senate District 36
+ReportingUnit	New Jersey;NJ Senate District 37	New Jersey;NJ Senate District 37
+ReportingUnit	New Jersey;NJ Senate District 38	New Jersey;NJ Senate District 38
+ReportingUnit	New Jersey;NJ Senate District 39	New Jersey;NJ Senate District 39
+ReportingUnit	New Jersey;NJ Senate District 40	New Jersey;NJ Senate District 40
+ReportingUnit	New Jersey;US House NJ District 1	New Jersey;US House NJ District 1
+ReportingUnit	New Jersey;US House NJ District 2	New Jersey;US House NJ District 2
+ReportingUnit	New Jersey;US House NJ District 3	New Jersey;US House NJ District 3
+ReportingUnit	New Jersey;US House NJ District 4	New Jersey;US House NJ District 4
+ReportingUnit	New Jersey;US House NJ District 5	New Jersey;US House NJ District 5
+ReportingUnit	New Jersey;US House NJ District 6	New Jersey;US House NJ District 6
+ReportingUnit	New Jersey;US House NJ District 7	New Jersey;US House NJ District 7
+ReportingUnit	New Jersey;US House NJ District 8	New Jersey;US House NJ District 8
+ReportingUnit	New Jersey;US House NJ District 9	New Jersey;US House NJ District 9
+ReportingUnit	New Jersey;US House NJ District 10	New Jersey;US House NJ District 10
+ReportingUnit	New Jersey;US House NJ District 11	New Jersey;US House NJ District 11
+ReportingUnit	New Jersey;US House NJ District 12	New Jersey;US House NJ District 12
+ReportingUnit	New Jersey	New Jersey
+ReportingUnit	New Jersey;Atlantic County	ATLANTIC
+ReportingUnit	New Jersey;Bergen County	BERGEN
+ReportingUnit	New Jersey;Burlington County	BURLINGTON
+ReportingUnit	New Jersey;Camden County	CAMDEN
+ReportingUnit	New Jersey;Cape May County	CAPE MAY
+ReportingUnit	New Jersey;Cumberland County	CUMBERLAND
+ReportingUnit	New Jersey;Essex County	ESSEX
+ReportingUnit	New Jersey;Gloucester County	GLOUCESTER
+ReportingUnit	New Jersey;Hudson County	HUDSON
+ReportingUnit	New Jersey;Hunterdon County	HUNTERDON
+ReportingUnit	New Jersey;Mercer County	MERCER
+ReportingUnit	New Jersey;Middlesex County	MIDDLESEX
+ReportingUnit	New Jersey;Monmouth County	MONMOUTH
+ReportingUnit	New Jersey;Morris County	MORRIS
+ReportingUnit	New Jersey;Ocean County	OCEAN
+ReportingUnit	New Jersey;Passaic County	PASSAIC
+ReportingUnit	New Jersey;Salem County	SALEM
+ReportingUnit	New Jersey;Somerset County	SOMERSET
+ReportingUnit	New Jersey;Sussex County	SUSSEX
+ReportingUnit	New Jersey;Union County	UNION
+ReportingUnit	New Jersey;Warren County	WARREN
+Candidate	Veronica Fernandez	Veronica Fernandez
+Candidate	Thomas H. Kean Jr	Thomas H. Kean Jr
+Candidate	TOM MALINOWSKI (w)	TOM MALINOWSKI (w) *
+Candidate	Stephanie Schmid	Stephanie Schmid
+Candidate	Rosemary Becchi	Rosemary Becchi
+Candidate	Roque 'Rocky' De La Fuente	Roque 'Rocky' De La Fuente ( Vice President Darcy G. Richardson)
+Candidate	Robert Shapiro	Robert Shapiro
+Candidate	Rikin 'Rik' Mehta	Rikin 'Rik' Mehta
+Candidate	Michael J. Rufo	Michael J. Rufo
+Candidate	Martin Weber	Martin Weber
+Candidate	Mark Razzoli	Mark Razzoli
+Candidate	Madelyn R. Hoffman	Madelyn R. Hoffman
+Candidate	MIKIE SHERRILL (w)	MIKIE SHERRILL (w) *
+Candidate	Louis A. Vellucci	Louis A. Vellucci
+Candidate	Khaliah Fitchette	Khaliah Fitchette
+Candidate	Kenneth J. Cody	Kenneth J. Cody
+Candidate	John Mirrione	John Mirrione
+Candidate	Jo Jorgensen	Jo Jorgensen ( Vice President Spike Cohen)
+Candidate	Jesse Ehrnstrom	Jesse Ehrnstrom
+Candidate	Jennifer Zinone	Jennifer Zinone
+Candidate	Jenna Harvey	Jenna Harvey
+Candidate	Jason Todd Mushnick	Jason Todd Mushnick
+Candidate	JOSH GOTTHEIMER (w)	JOSH GOTTHEIMER (w) *
+Candidate	Joseph R. Biden	JOSEPH R. BIDEN (w) (VICE PRESIDENT KAMALA HARRIS)
+Candidate	JEFF VAN DREW (w)	JEFF VAN DREW (w) *
+Candidate	Howie Hawkins	Howie Hawkins ( Vice President Angela Walker)
+Candidate	Hank Schroeder	Hank Schroeder
+Candidate	Gloria Estela La Riva	Gloria Estela La Riva ( Vice President Sunil Freeman)
+Candidate	Frank T. Pallotta	Frank T. Pallotta
+Candidate	FRANK PALLONE JR. (w)	FRANK PALLONE JR. (w) *
+Candidate	Edward 'Nj Weedman' Forchion	Edward 'Nj Weedman' Forchion
+Candidate	Donald J. Trump	Donald J. Trump * ( Vice President Michael R. Pence)
+Candidate	Don Blankenship	Don Blankenship ( Vice President William Mohr)
+Candidate	David Richt	David Richt
+Candidate	Daniel Burke	Daniel Burke
+Candidate	Dan Delaney	Dan Delaney
+Candidate	DONALD W. NORCROSS (w)	DONALD W. NORCROSS (w) *
+Candidate	DONALD M. PAYNE JR. (w)	DONALD M. PAYNE JR. (w) *
+Candidate	Claire H. Gustafson	Claire H. Gustafson
+Candidate	Christian Onuoha	Christian Onuoha
+Candidate	Chris Auriemma	Chris Auriemma
+Candidate	CORY BOOKER (w)	CORY BOOKER (w) *
+Candidate	CHRISTOPHER H. SMITH (w)	CHRISTOPHER H. SMITH (w) *
+Candidate	Billy Prempeh	Billy Prempeh
+Candidate	Bill Hammons	Bill Hammons ( Vice President Eric Bodenstab)
+Candidate	BONNIE WATSON COLEMAN	BONNIE WATSON COLEMAN (w)
+Candidate	BILL PASCRELL JR. (w)	BILL PASCRELL JR. (w) *
+Candidate	Andrew Pachuta	Andrew Pachuta
+Candidate	Amy Kennedy	Amy Kennedy
+Candidate	Akil Khalfani	Akil Khalfani
+Candidate	ANDY KIM (w)	ANDY KIM (w) *
+Candidate	ALBIO SIRES (w)	ALBIO SIRES (w) *
+Party	Veteran For Change	VETERAN FOR CHANGE
+Party	Unity Party America	UNITY PARTY AMERICA
+Party	Truth Vision Hope	TRUTH VISION HOPE
+Party	Socialism And Liberation	SOCIALISM AND LIBERATION
+Party	Of, By, For!	OF, BY, FOR!
+Party	No Slogan Filed	NO SLOGAN FILED
+Party	No Slogan	NO SLOGAN
+Party	Make Change Happen	MAKE CHANGE HAPPEN
+Party	Larouche Was Right	LAROUCHE WAS RIGHT
+Party	Justice Mercy Humility	JUSTICE MERCY HUMILITY
+Party	Independent Constitutional Candidate	INDEPENDENT CONSTITUTIONAL CANDIDATE
+Party	For The People	FOR THE PEOPLE
+Party	Constitution Party	CONSTITUTION PARTY
+Party	Common Sense Party	COMMON SENSE PARTY
+Party	Building Your Legacy	BUILDING YOUR LEGACY
+Party	American Values	AMERICAN VALUES
+Party	Alliance Party	ALLIANCE PARTY
+CountItemType	total	total

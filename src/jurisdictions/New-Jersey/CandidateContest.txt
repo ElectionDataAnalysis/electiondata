@@ -1,0 +1,140 @@
+Name	NumberElected	Office	PrimaryParty
+NJ House District 1	1	NJ House District 1	
+NJ House District 2	1	NJ House District 2	
+NJ House District 3	1	NJ House District 3	
+NJ House District 4	1	NJ House District 4	
+NJ House District 5	1	NJ House District 5	
+NJ House District 6	1	NJ House District 6	
+NJ House District 7	1	NJ House District 7	
+NJ House District 8	1	NJ House District 8	
+NJ House District 9	1	NJ House District 9	
+NJ House District 10	1	NJ House District 10	
+NJ House District 11	1	NJ House District 11	
+NJ House District 12	1	NJ House District 12	
+NJ House District 13	1	NJ House District 13	
+NJ House District 14	1	NJ House District 14	
+NJ House District 15	1	NJ House District 15	
+NJ House District 16	1	NJ House District 16	
+NJ House District 17	1	NJ House District 17	
+NJ House District 18	1	NJ House District 18	
+NJ House District 19	1	NJ House District 19	
+NJ House District 20	1	NJ House District 20	
+NJ House District 21	1	NJ House District 21	
+NJ House District 22	1	NJ House District 22	
+NJ House District 23	1	NJ House District 23	
+NJ House District 24	1	NJ House District 24	
+NJ House District 25	1	NJ House District 25	
+NJ House District 26	1	NJ House District 26	
+NJ House District 27	1	NJ House District 27	
+NJ House District 28	1	NJ House District 28	
+NJ House District 29	1	NJ House District 29	
+NJ House District 30	1	NJ House District 30	
+NJ House District 31	1	NJ House District 31	
+NJ House District 32	1	NJ House District 32	
+NJ House District 33	1	NJ House District 33	
+NJ House District 34	1	NJ House District 34	
+NJ House District 35	1	NJ House District 35	
+NJ House District 36	1	NJ House District 36	
+NJ House District 37	1	NJ House District 37	
+NJ House District 38	1	NJ House District 38	
+NJ House District 39	1	NJ House District 39	
+NJ House District 40	1	NJ House District 40	
+NJ House District 41	1	NJ House District 41	
+NJ House District 42	1	NJ House District 42	
+NJ House District 43	1	NJ House District 43	
+NJ House District 44	1	NJ House District 44	
+NJ House District 45	1	NJ House District 45	
+NJ House District 46	1	NJ House District 46	
+NJ House District 47	1	NJ House District 47	
+NJ House District 48	1	NJ House District 48	
+NJ House District 49	1	NJ House District 49	
+NJ House District 50	1	NJ House District 50	
+NJ House District 51	1	NJ House District 51	
+NJ House District 52	1	NJ House District 52	
+NJ House District 53	1	NJ House District 53	
+NJ House District 54	1	NJ House District 54	
+NJ House District 55	1	NJ House District 55	
+NJ House District 56	1	NJ House District 56	
+NJ House District 57	1	NJ House District 57	
+NJ House District 58	1	NJ House District 58	
+NJ House District 59	1	NJ House District 59	
+NJ House District 60	1	NJ House District 60	
+NJ House District 61	1	NJ House District 61	
+NJ House District 62	1	NJ House District 62	
+NJ House District 63	1	NJ House District 63	
+NJ House District 64	1	NJ House District 64	
+NJ House District 65	1	NJ House District 65	
+NJ House District 66	1	NJ House District 66	
+NJ House District 67	1	NJ House District 67	
+NJ House District 68	1	NJ House District 68	
+NJ House District 69	1	NJ House District 69	
+NJ House District 70	1	NJ House District 70	
+NJ House District 71	1	NJ House District 71	
+NJ House District 72	1	NJ House District 72	
+NJ House District 73	1	NJ House District 73	
+NJ House District 74	1	NJ House District 74	
+NJ House District 75	1	NJ House District 75	
+NJ House District 76	1	NJ House District 76	
+NJ House District 77	1	NJ House District 77	
+NJ House District 78	1	NJ House District 78	
+NJ House District 79	1	NJ House District 79	
+NJ House District 80	1	NJ House District 80	
+NJ Senate District 1	1	NJ Senate District 1	
+NJ Senate District 2	1	NJ Senate District 2	
+NJ Senate District 3	1	NJ Senate District 3	
+NJ Senate District 4	1	NJ Senate District 4	
+NJ Senate District 5	1	NJ Senate District 5	
+NJ Senate District 6	1	NJ Senate District 6	
+NJ Senate District 7	1	NJ Senate District 7	
+NJ Senate District 8	1	NJ Senate District 8	
+NJ Senate District 9	1	NJ Senate District 9	
+NJ Senate District 10	1	NJ Senate District 10	
+NJ Senate District 11	1	NJ Senate District 11	
+NJ Senate District 12	1	NJ Senate District 12	
+NJ Senate District 13	1	NJ Senate District 13	
+NJ Senate District 14	1	NJ Senate District 14	
+NJ Senate District 15	1	NJ Senate District 15	
+NJ Senate District 16	1	NJ Senate District 16	
+NJ Senate District 17	1	NJ Senate District 17	
+NJ Senate District 18	1	NJ Senate District 18	
+NJ Senate District 19	1	NJ Senate District 19	
+NJ Senate District 20	1	NJ Senate District 20	
+NJ Senate District 21	1	NJ Senate District 21	
+NJ Senate District 22	1	NJ Senate District 22	
+NJ Senate District 23	1	NJ Senate District 23	
+NJ Senate District 24	1	NJ Senate District 24	
+NJ Senate District 25	1	NJ Senate District 25	
+NJ Senate District 26	1	NJ Senate District 26	
+NJ Senate District 27	1	NJ Senate District 27	
+NJ Senate District 28	1	NJ Senate District 28	
+NJ Senate District 29	1	NJ Senate District 29	
+NJ Senate District 30	1	NJ Senate District 30	
+NJ Senate District 31	1	NJ Senate District 31	
+NJ Senate District 32	1	NJ Senate District 32	
+NJ Senate District 33	1	NJ Senate District 33	
+NJ Senate District 34	1	NJ Senate District 34	
+NJ Senate District 35	1	NJ Senate District 35	
+NJ Senate District 36	1	NJ Senate District 36	
+NJ Senate District 37	1	NJ Senate District 37	
+NJ Senate District 38	1	NJ Senate District 38	
+NJ Senate District 39	1	NJ Senate District 39	
+NJ Senate District 40	1	NJ Senate District 40	
+US House NJ District 1	1	US House NJ District 1	
+US House NJ District 2	1	US House NJ District 2	
+US House NJ District 3	1	US House NJ District 3	
+US House NJ District 4	1	US House NJ District 4	
+US House NJ District 5	1	US House NJ District 5	
+US House NJ District 6	1	US House NJ District 6	
+US House NJ District 7	1	US House NJ District 7	
+US House NJ District 8	1	US House NJ District 8	
+US House NJ District 9	1	US House NJ District 9	
+US House NJ District 10	1	US House NJ District 10	
+US House NJ District 11	1	US House NJ District 11	
+US House NJ District 12	1	US House NJ District 12	
+US President (NJ)	1	US President (NJ)	
+NJ Governor	1	NJ Governor	
+US Senate NJ	1	US Senate NJ	
+NJ Attorney General	1	NJ Attorney General	
+NJ Lieutenant Governor	1	NJ Lieutenant Governor	
+NJ Treasurer	1	NJ Treasurer	
+NJ Secretary of State	1	NJ Secretary of State	

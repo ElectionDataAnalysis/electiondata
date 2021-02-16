@@ -1,0 +1,75 @@
+# Format parameters section (required) #
+[format]
+## Required format parameters:
+#### File type must be one of: excel,json-nested,xml,flat_text
+file_type=excel
+#### Counts are found in one way of: by_field_names,by_column_numbers
+count_locations=by_column_numbers
+#### Munge string locations must be sublist of: in_field_values,in_count_headers,constant_over_sheet,constant_over_file ##
+munge_strings=in_field_values,in_count_headers,constant_over_sheet,constant_over_file
+
+# Optional parameter for excel or flat_text
+rows_to_skip=
+
+################################################
+## Sometimes required format parameters:
+#### for flat_text file type:
+flat_text_delimiter=
+#### if count_locations is 'by_field_names':
+count_fields_by_name=
+#### if count_locations is 'by_column_numbers':
+count_column_numbers=1,2,3,4,5,6,7,8,9,10
+#### if 'in_count_headers' is in munge_strings
+#### (start numbering from first unskipped row):
+count_header_row_numbers=0,1,2
+#### if 'constant_over_file' is in munge_strings (NB: give value for each in .ini file):
+constant_over_file=CountItemType
+#### if file type is flat_text or excel and count_locations is 'by_field_names'
+#### (start numbering from first unskipped row):
+count_field_name_row=
+#### if file type is flat_text or excel and not all rows are data:
+#### (start numbering from first unskipped row):
+string_field_name_row=0
+
+################################################
+## Optional format parameters:
+#### for any file type:
+thousands_separator=,
+encoding=
+
+#### for a flat_text or excel file type:
+###### if field names are not given in file
+#all_rows=data
+###### if there are multiple blocks of data per page, each with its own headers
+#multi_block=yes
+
+#### for excel file type:
+sheets_to_read_names=Shawnee,SHAWNEE
+sheets_to_read_numbers=
+sheets_to_skip_names=
+
+#### for xml file type
+nesting_tags=
+
+# Munge formula sections (required if in munge_strings list) #
+[in_field_values]
+ReportingUnit=<sheet_name>;<PRECINCT NAME>
+Candidate={<header_2>,^(?:\w\w\w |)(.*)$}
+CandidateContest=<header_0>
+Party={<header_2>,^(\w\w\w) .*$}
+
+[in_count_headers]
+
+[constant_over_sheet]
+
+# Values to ignore (optional) #
+[ignore]
+## E.g: Candidate=Total Votes Cast,Registered Voters ##
+Candidate=Write-in Totals
+
+# Lookup formula sections #
+## Required when foreign keys are used in munge formulas and    ##
+## must be looked up in another table.                          ##
+## See mi_gen18.munger for example                              ##
+##################################################################
+

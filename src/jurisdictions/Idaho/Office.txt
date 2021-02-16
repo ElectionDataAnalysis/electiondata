@@ -1,0 +1,115 @@
+Name	ElectionDistrict
+ID House District 1	Idaho;ID House District 1
+ID House District 2	Idaho;ID House District 2
+ID House District 3	Idaho;ID House District 3
+ID House District 4	Idaho;ID House District 4
+ID House District 5	Idaho;ID House District 5
+ID House District 6	Idaho;ID House District 6
+ID House District 7	Idaho;ID House District 7
+ID House District 8	Idaho;ID House District 8
+ID House District 9	Idaho;ID House District 9
+ID House District 10	Idaho;ID House District 10
+ID House District 11	Idaho;ID House District 11
+ID House District 12	Idaho;ID House District 12
+ID House District 13	Idaho;ID House District 13
+ID House District 14	Idaho;ID House District 14
+ID House District 15	Idaho;ID House District 15
+ID House District 16	Idaho;ID House District 16
+ID House District 17	Idaho;ID House District 17
+ID House District 18	Idaho;ID House District 18
+ID House District 19	Idaho;ID House District 19
+ID House District 20	Idaho;ID House District 20
+ID House District 21	Idaho;ID House District 21
+ID House District 22	Idaho;ID House District 22
+ID House District 23	Idaho;ID House District 23
+ID House District 24	Idaho;ID House District 24
+ID House District 25	Idaho;ID House District 25
+ID House District 26	Idaho;ID House District 26
+ID House District 27	Idaho;ID House District 27
+ID House District 28	Idaho;ID House District 28
+ID House District 29	Idaho;ID House District 29
+ID House District 30	Idaho;ID House District 30
+ID House District 31	Idaho;ID House District 31
+ID House District 32	Idaho;ID House District 32
+ID House District 33	Idaho;ID House District 33
+ID House District 34	Idaho;ID House District 34
+ID House District 35	Idaho;ID House District 35
+ID House District 36	Idaho;ID House District 36
+ID House District 37	Idaho;ID House District 37
+ID House District 38	Idaho;ID House District 38
+ID House District 39	Idaho;ID House District 39
+ID House District 40	Idaho;ID House District 40
+ID House District 41	Idaho;ID House District 41
+ID House District 42	Idaho;ID House District 42
+ID House District 43	Idaho;ID House District 43
+ID House District 44	Idaho;ID House District 44
+ID House District 45	Idaho;ID House District 45
+ID House District 46	Idaho;ID House District 46
+ID House District 47	Idaho;ID House District 47
+ID House District 48	Idaho;ID House District 48
+ID House District 49	Idaho;ID House District 49
+ID House District 50	Idaho;ID House District 50
+ID House District 51	Idaho;ID House District 51
+ID House District 52	Idaho;ID House District 52
+ID House District 53	Idaho;ID House District 53
+ID House District 54	Idaho;ID House District 54
+ID House District 55	Idaho;ID House District 55
+ID House District 56	Idaho;ID House District 56
+ID House District 57	Idaho;ID House District 57
+ID House District 58	Idaho;ID House District 58
+ID House District 59	Idaho;ID House District 59
+ID House District 60	Idaho;ID House District 60
+ID House District 61	Idaho;ID House District 61
+ID House District 62	Idaho;ID House District 62
+ID House District 63	Idaho;ID House District 63
+ID House District 64	Idaho;ID House District 64
+ID House District 65	Idaho;ID House District 65
+ID House District 66	Idaho;ID House District 66
+ID House District 67	Idaho;ID House District 67
+ID House District 68	Idaho;ID House District 68
+ID House District 69	Idaho;ID House District 69
+ID House District 70	Idaho;ID House District 70
+ID Senate District 1	Idaho;ID Senate District 1
+ID Senate District 2	Idaho;ID Senate District 2
+ID Senate District 3	Idaho;ID Senate District 3
+ID Senate District 4	Idaho;ID Senate District 4
+ID Senate District 5	Idaho;ID Senate District 5
+ID Senate District 6	Idaho;ID Senate District 6
+ID Senate District 7	Idaho;ID Senate District 7
+ID Senate District 8	Idaho;ID Senate District 8
+ID Senate District 9	Idaho;ID Senate District 9
+ID Senate District 10	Idaho;ID Senate District 10
+ID Senate District 11	Idaho;ID Senate District 11
+ID Senate District 12	Idaho;ID Senate District 12
+ID Senate District 13	Idaho;ID Senate District 13
+ID Senate District 14	Idaho;ID Senate District 14
+ID Senate District 15	Idaho;ID Senate District 15
+ID Senate District 16	Idaho;ID Senate District 16
+ID Senate District 17	Idaho;ID Senate District 17
+ID Senate District 18	Idaho;ID Senate District 18
+ID Senate District 19	Idaho;ID Senate District 19
+ID Senate District 20	Idaho;ID Senate District 20
+ID Senate District 21	Idaho;ID Senate District 21
+ID Senate District 22	Idaho;ID Senate District 22
+ID Senate District 23	Idaho;ID Senate District 23
+ID Senate District 24	Idaho;ID Senate District 24
+ID Senate District 25	Idaho;ID Senate District 25
+ID Senate District 26	Idaho;ID Senate District 26
+ID Senate District 27	Idaho;ID Senate District 27
+ID Senate District 28	Idaho;ID Senate District 28
+ID Senate District 29	Idaho;ID Senate District 29
+ID Senate District 30	Idaho;ID Senate District 30
+ID Senate District 31	Idaho;ID Senate District 31
+ID Senate District 32	Idaho;ID Senate District 32
+ID Senate District 33	Idaho;ID Senate District 33
+ID Senate District 34	Idaho;ID Senate District 34
+ID Senate District 35	Idaho;ID Senate District 35
+US House ID District 1	Idaho;US House ID District 1
+US House ID District 2	Idaho;US House ID District 2
+US President (ID)	Idaho
+ID Governor	Idaho
+US Senate ID	Idaho
+ID Attorney General	Idaho
+ID Lieutenant Governor	Idaho
+ID Treasurer	Idaho
+ID Secretary of State	Idaho

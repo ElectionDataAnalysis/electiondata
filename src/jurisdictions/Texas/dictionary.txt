@@ -7080,10 +7080,10 @@ Candidate	TONY QUINONES	TONY QUINONES
 Candidate	TONI ROSE (I)	TONI ROSE (I)
 Candidate	TOMMY WAKELY	TOMMY WAKELY
 Candidate	TOM OLIVERSON (I)	TOM OLIVERSON (I)
-Candidate	TOM HOEFLING/ANDY PRIOR	TOM HOEFLING/ANDY PRIOR
+Candidate	TOM HOEFLING	TOM HOEFLING/ANDY PRIOR
 Candidate	TOM CRADDICK (I)	TOM CRADDICK (I)
 Candidate	TODD HUNTER (I)	TODD HUNTER (I)
-Candidate	TODD CELLA/TIM CELLA	TODD CELLA/TIM CELLA
+Candidate	TODD CELLA	TODD CELLA/TIM CELLA
 Candidate	TITUS BENTON	TITUS BENTON
 Candidate	TIMOTHY DUFFIELD	TIMOTHY DUFFIELD
 Candidate	TERRY MEZA (I)	TERRY MEZA (I)
@@ -7115,7 +7115,7 @@ Candidate	RON WRIGHT (I)	RON WRIGHT (I)
 Candidate	RON REYNOLDS (I)	RON REYNOLDS (I)
 Candidate	ROGER WILLIAMS (I)	ROGER WILLIAMS (I)
 Candidate	ROD WINGO	ROD WINGO
-Candidate	ROBERT MORROW/ANNE BECKETT	ROBERT MORROW/ANNE BECKETT
+Candidate	ROBERT MORROW	ROBERT MORROW/ANNE BECKETT
 Candidate	RICHARD PENA RAYMOND (I)	RICHARD PENA RAYMOND (I)
 Candidate	RICHARD AARON HOWELL	RICHARD AARON HOWELL
 Candidate	RICARDO TURULLOLS-BONILLA	RICARDO TURULLOLS-BONILLA
@@ -7128,7 +7128,7 @@ Candidate	RAMON ROMERO (I)	RAMON ROMERO (I)
 Candidate	RAFAEL M. ANCHIA (I)	RAFAEL M. ANCHIA (I)
 Candidate	R. GRIZZLE TROJACEK	R. GRIZZLE TROJACEK
 Candidate	R. EDWIN ADAMS	R. EDWIN ADAMS
-Candidate	PRESIDENT R. BODDIE/ERIC C. STONEHAM	PRESIDENT R. BODDIE/ERIC C. STONEHAM
+Candidate	PRESIDENT R. BODDIE	PRESIDENT R. BODDIE/ERIC C. STONEHAM
 Candidate	PHILIP CORTEZ (I)	PHILIP CORTEZ (I)
 Candidate	PHIL STEPHENSON (I)	PHIL STEPHENSON (I)
 Candidate	PHIL KURTZ	PHIL KURTZ
@@ -7181,7 +7181,7 @@ Candidate	KENNETH M. MOORE	KENNETH M. MOORE
 Candidate	KEN KING (I)	KEN KING (I)
 Candidate	KEITH BELL (I)	KEITH BELL (I)
 Candidate	KAY GRANGER (I)	KAY GRANGER (I)
-Candidate	KASEY WELLS/RACHEL WELLS	KASEY WELLS/RACHEL WELLS
+Candidate	KASEY WELLS	KASEY WELLS/RACHEL WELLS
 Candidate	K. NICOLE SPRABARY	K. NICOLE SPRABARY
 Candidate	JUSTIN HOLLAND (I)	JUSTIN HOLLAND (I)
 Candidate	JULIÃÂN VILLARREAL	JULIÃÂN VILLARREAL
@@ -7190,7 +7190,7 @@ Candidate	JULIAN MARDOCK	JULIAN MARDOCK
 Candidate	JUDITH ZAFFIRINI (I)	JUDITH ZAFFIRINI (I)
 Candidate	JUAN &QUOT;CHUY&QUOT; HINOJOSA (I)	JUAN &QUOT;CHUY&QUOT; HINOJOSA (I)
 Candidate	JoseÌ MeneÌndez (I)	JOSEÃÂ MENEÃÂNDEZ (I)
-Candidate	JOSEPH R. BIDEN/KAMALA D. HARRIS	JOSEPH R. BIDEN/KAMALA D. HARRIS
+Candidate	JOSEPH R. BIDEN	JOSEPH R. BIDEN/KAMALA D. HARRIS
 Candidate	JOSEPH LEBLANC JR	JOSEPH LEBLANC JR
 Candidate	JOSE R. SOSA	JOSE R. SOSA
 Candidate	JONATHAN SCOTT	JONATHAN SCOTT
@@ -7216,7 +7216,7 @@ Candidate	JIM MURPHY (I)	JIM MURPHY (I)
 Candidate	JESSICA PALLETT	JESSICA PALLETT
 Candidate	JESSICA GONZALEZ (I)	JESSICA GONZALEZ (I)
 Candidate	JESSE HERRERA	JESSE HERRERA
-Candidate	JESSE CUELLAR/JIMMY MONREAL	JESSE CUELLAR/JIMMY MONREAL
+Candidate	JESSE CUELLAR	JESSE CUELLAR/JIMMY MONREAL
 Candidate	JEFFREY BLUNT	JEFFREY BLUNT
 Candidate	JEFF LEACH (I)	JEFF LEACH (I)
 Candidate	JAY DEAN (I)	JAY DEAN (I)
@@ -7237,12 +7237,12 @@ Candidate	J. K. STEPHENSON	J. K. STEPHENSON
 Candidate	INA MINJAREZ (I)	INA MINJAREZ (I)
 Candidate	HUGH D. SHINE (I)	HUGH D. SHINE (I)
 Candidate	HUBERT VO (I)	HUBERT VO (I)
-Candidate	HOWIE HAWKINS/ANGELA WALKER	HOWIE HAWKINS/ANGELA WALKER
+Candidate	HOWIE HAWKINS	HOWIE HAWKINS/ANGELA WALKER
 Candidate	HENRY CUELLAR (I)	HENRY CUELLAR (I)
 Candidate	HAROLD V. DUTTON JR (I)	HAROLD V. DUTTON JR (I)
 Candidate	HAL J. RIDLEY JR	HAL J. RIDLEY JR
 Candidate	GREG BONNEN (I)	GREG BONNEN (I)
-Candidate	GLORIA LA RIVA/LEONARD PELTIER	GLORIA LA RIVA/LEONARD PELTIER
+Candidate	GLORIA LA RIVA	GLORIA LA RIVA/LEONARD PELTIER
 Candidate	GIOVANNI CAPRIGLIONE (I)	GIOVANNI CAPRIGLIONE (I)
 Candidate	GINA HINOJOSA (I)	GINA HINOJOSA (I)
 Candidate	GINA CALANNI (I)	GINA CALANNI (I)
@@ -7272,7 +7272,7 @@ Candidate	DUSTIN BURROWS (I)	DUSTIN BURROWS (I)
 Candidate	DREW SPRINGER (I)	DREW SPRINGER (I)
 Candidate	DREW DARBY (I)	DREW DARBY (I)
 Candidate	DONNA HOWARD (I)	DONNA HOWARD (I)
-Candidate	DONALD J. TRUMP/MICHAEL R. PENCE (I)	DONALD J. TRUMP/MICHAEL R. PENCE (I)
+Candidate	DONALD J. TRUMP	DONALD J. TRUMP/MICHAEL R. PENCE (I)
 Candidate	DIEGO BERNAL (I)	DIEGO BERNAL (I)
 Candidate	DICK ILLYES	DICK ILLYES
 Candidate	DEWAYNE BURNS (I)	DEWAYNE BURNS (I)
@@ -7312,7 +7312,7 @@ Candidate	BROOKS LANDGRAF (I)	BROOKS LANDGRAF (I)
 Candidate	BRODY MULLIGAN	BRODY MULLIGAN
 Candidate	BRISCOE CAIN (I)	BRISCOE CAIN (I)
 Candidate	BRIAN ELLIOTT	BRIAN ELLIOTT
-Candidate	BRIAN CARROLL/AMAR PATEL	BRIAN CARROLL/AMAR PATEL
+Candidate	BRIAN CARROLL	BRIAN CARROLL/AMAR PATEL
 Candidate	BRIAN BIRDWELL (I)	BRIAN BIRDWELL (I)
 Candidate	BRIAN BABIN (I)	BRIAN BABIN (I)
 Candidate	BRET BOLTON	BRET BOLTON
@@ -7339,7 +7339,7 @@ Candidate	ANA HERNANDEZ (I)	ANA HERNANDEZ (I)
 Candidate	ALMA A. ALLEN (I)	ALMA A. ALLEN (I)
 Candidate	ALEX DOMINGUEZ (I)	ALEX DOMINGUEZ (I)
 Candidate	AL GREEN (I)	AL GREEN (I)
-Candidate	ABRAM LOEB/JENNIFER JAIRALA	ABRAM LOEB/JENNIFER JAIRALA
+Candidate	ABRAM LOEB	ABRAM LOEB/JENNIFER JAIRALA
 Candidate	ABEL HERRERO (I)	ABEL HERRERO (I)
 Candidate	Julián Villarreal	JULIÃN VILLARREAL
 Candidate	Julián Villarreal	JULIÃÂN VILLARREAL
@@ -7382,3 +7382,398 @@ Candidate	Evelina 'Lina' Ortega	Evelina 'Lina' Ortega
 Candidate	D.F. 'Rick' Miller	D.F. 'Rick' Miller
 Candidate	Charles 'Doc' Anderson	Charles 'Doc' Anderson
 Candidate	Armando 'Mando' Martínez	Armando 'Mando' Martínez
+Candidate	Yvonne Davis (I)	Yvonne Davis (I)
+Candidate	Will Metcalf (I)	Will Metcalf (I)
+Candidate	Will Douglas	Will Douglas
+Candidate	Wesley Hunt	Wesley Hunt
+Candidate	Wendy R. Davis	Wendy R. Davis
+Candidate	Wendell Champion	Wendell Champion
+Candidate	Wacey Alpha Cody	Wacey Alpha Cody
+Candidate	Vikki Goodwin (I)	Vikki Goodwin (I)
+Candidate	Victoria Neave (I)	Victoria Neave (I)
+Candidate	Vicente Gonzalez (I)	Vicente Gonzalez (I)
+Candidate	Veronica Escobar (I)	Veronica Escobar (I)
+Candidate	Vanessa Tijerina	Vanessa Tijerina
+Candidate	Van Taylor (I)	Van Taylor (I)
+Candidate	Valoree Swanson (I)	Valoree Swanson (I)
+Candidate	Troy Nehls	Troy Nehls
+Candidate	Trey Martinez Fischer (I)	Trey Martinez Fischer (I)
+Candidate	Trey Holcomb	Trey Holcomb
+Candidate	Trent Ashby (I)	Trent Ashby (I)
+Candidate	Tre Pennie	Tre Pennie
+Candidate	Travis Clardy (I)	Travis Clardy (I)
+Candidate	Travis Boldt	Travis Boldt
+Candidate	Tracy King (I)	Tracy King (I)
+Candidate	Tracy Jones	Tracy Jones
+Candidate	Tony Valdivia	Tony Valdivia
+Candidate	Tony Tinderholt (I)	Tony Tinderholt (I)
+Candidate	Tony Salas	Tony Salas
+Candidate	Tony Quinones	Tony Quinones
+Candidate	Tony Gonzales	Tony Gonzales
+Candidate	Toni Rose (I)	Toni Rose (I)
+Candidate	Tommy Wakely	Tommy Wakely
+Candidate	Tom Virippan	Tom Virippan
+Candidate	Tom Oliverson (I)	Tom Oliverson (I)
+Candidate	Tom Hoefling	Tom Hoefling/Andy Prior
+Candidate	Tom Craddick (I)	Tom Craddick (I)
+Candidate	Todd Hunter (I)	Todd Hunter (I)
+Candidate	Todd Cella	Todd Cella/Tim Cella
+Candidate	Titus Benton	Titus Benton
+Candidate	Timothy Duffield	Timothy Duffield
+Candidate	Terry Meza (I)	Terry Meza (I)
+Candidate	Terry M. Wilson (I)	Terry M. Wilson (I)
+Candidate	Terry Canales (I)	Terry Canales (I)
+Candidate	Ted Brown	Ted Brown
+Candidate	Tan Parker (I)	Tan Parker (I)
+Candidate	Sylvia Garcia (I)	Sylvia Garcia (I)
+Candidate	Susan Criss	Susan Criss
+Candidate	Sugar Ray Ash	Sugar Ray Ash
+Candidate	Steve Toth (I)	Steve Toth (I)
+Candidate	Steve Kuzmich	Steve Kuzmich
+Candidate	Steve Allison (I)	Steve Allison (I)
+Candidate	Stephen Daniel	Stephen Daniel
+Candidate	Stephanie Klick (I)	Stephanie Klick (I)
+Candidate	Stan Lambert (I)	Stan Lambert (I)
+Candidate	Sima Ladjevardian	Sima Ladjevardian
+Candidate	Sheryl Cole (I)	Sheryl Cole (I)
+Candidate	Shelby Slawson	Shelby Slawson
+Candidate	Sheila Jackson Lee (I)	Sheila Jackson Lee (I)
+Candidate	Shawn Nicole Thierry (I)	Shawn Nicole Thierry (I)
+Candidate	Shawn Kelly	Shawn Kelly
+Candidate	Shawn Huckabay	Shawn Huckabay
+Candidate	Shane D. Newsom	Shane D. Newsom
+Candidate	Shadi Zitoon	Shadi Zitoon
+Candidate	Sergio Munoz Jr (I)	Sergio Munoz Jr (I)
+Candidate	Senfronia Thompson (I)	Senfronia Thompson (I)
+Candidate	Scott Sanford (I)	Scott Sanford (I)
+Candidate	Sarah Davis (I)	Sarah Davis (I)
+Candidate	Sandra Whitten	Sandra Whitten
+Candidate	Sandra G Moore	Sandra G Moore
+Candidate	Samuel Smith	Samuel Smith
+Candidate	Samuel Hatton	Samuel Hatton
+Candidate	Ryan Guillen (I)	Ryan Guillen (I)
+Candidate	Russell Foster	Russell Foster
+Candidate	Ruben Falcon	Ruben Falcon
+Candidate	Ronny Jackson	Ronny Jackson
+Candidate	Ron Wright (I)	Ron Wright (I)
+Candidate	Ron Reynolds (I)	Ron Reynolds (I)
+Candidate	Roger Williams (I)	Roger Williams (I)
+Candidate	Robert Vick	Robert Vick
+Candidate	Robert Reynolds	Robert Reynolds
+Candidate	Robert Morrow	Robert Morrow/Anne Beckett
+Candidate	Robert Litoff	Robert Litoff
+Candidate	Robert Bohmfalk	Robert Bohmfalk
+Candidate	Richard Pena Raymond (I)	Richard Pena Raymond (I)
+Candidate	Richard Aaron Howell	Richard Aaron Howell
+Candidate	Ricardo Turullols-Bonilla	Ricardo Turullols-Bonilla
+Candidate	Ricardo 'Rick' De La Fuente	Ricardo 'Rick' De La Fuente
+Candidate	Rhetta Andrews Bowers (I)	Rhetta Andrews Bowers (I)
+Candidate	Rene Welton	Rene Welton
+Candidate	Reggie Smith (I)	Reggie Smith (I)
+Candidate	Ray Lopez (I)	Ray Lopez (I)
+Candidate	Rashad Lewis	Rashad Lewis
+Candidate	Randy Weber (I)	Randy Weber (I)
+Candidate	Ramon Romero (I)	Ramon Romero (I)
+Candidate	Rafael M. Anchia (I)	Rafael M. Anchia (I)
+Candidate	R. Grizzle Trojacek	R. Grizzle Trojacek
+Candidate	R. Edwin Adams	R. Edwin Adams
+Candidate	President R. Boddie	President R. Boddie/Eric C. Stoneham
+Candidate	Philip Cortez (I)	Philip Cortez (I)
+Candidate	Phil Stephenson (I)	Phil Stephenson (I)
+Candidate	Phil King (I)	Phil King (I)
+Candidate	Peter P. &Quot;Pete&Quot; Flores (I)	Peter P. &Quot;Pete&Quot; Flores (I)
+Candidate	Penny Morales Shaw	Penny Morales Shaw
+Candidate	Patsy Ledbetter	Patsy Ledbetter
+Candidate	Patrick Henry	Patrick Henry
+Candidate	Oscar Longoria (I)	Oscar Longoria (I)
+Candidate	Nicole Collier (I)	Nicole Collier (I)
+Candidate	Nelson Range	Nelson Range
+Candidate	Neko Antoniou	Neko Antoniou
+Candidate	Morgan Meyer (I)	Morgan Meyer (I)
+Candidate	Monica De La Cruz-Hernandez	Monica De La Cruz-Hernandez
+Candidate	Milinda Morris	Milinda Morris
+Candidate	Mike Guevara	Mike Guevara
+Candidate	Michelle Beckley (I)	Michelle Beckley (I)
+Candidate	Michael Robert Walsh	Michael Robert Walsh
+Candidate	Michael Mccaul (I)	Michael Mccaul (I)
+Candidate	Michael L. Miller	Michael L. Miller
+Candidate	Michael Cloud (I)	Michael Cloud (I)
+Candidate	Michael Clark	Michael Clark
+Candidate	Michael C. Burgess (I)	Michael C. Burgess (I)
+Candidate	Michael Antalan	Michael Antalan
+Candidate	Melanie A. Black	Melanie A. Black
+Candidate	Mayes Middleton (I)	Mayes Middleton (I)
+Candidate	Mauro Garza	Mauro Garza
+Candidate	Matt Shaheen (I)	Matt Shaheen (I)
+Candidate	Matt Schaefer (I)	Matt Schaefer (I)
+Candidate	Matt Krause (I)	Matt Krause (I)
+Candidate	Mary E. Williams	Mary E. Williams
+Candidate	Mary E. Gonzalez (I)	Mary E. Gonzalez (I)
+Candidate	Mary Ann Perez (I)	Mary Ann Perez (I)
+Candidate	Mary 'Mj' Hegar	Mary 'Mj' Hegar
+Candidate	Martin Shupp	Martin Shupp
+Candidate	Martha Elena Fierro	Martha Elena Fierro
+Candidate	Mark Bauer	Mark Bauer
+Candidate	Marian Knowlton	Marian Knowlton
+Candidate	Marc Veasey (I)	Marc Veasey (I)
+Candidate	Madeline Eden	Madeline Eden
+Candidate	Lynn Stucky (I)	Lynn Stucky (I)
+Candidate	Lyle Larson (I)	Lyle Larson (I)
+Candidate	Lydia Bean	Lydia Bean
+Candidate	Lulu Seikaly	Lulu Seikaly
+Candidate	Luisa Del Rosal	Luisa Del Rosal
+Candidate	Luis La Rotta	Luis La Rotta
+Candidate	Lucio Valdez	Lucio Valdez
+Candidate	Louie Gohmert (I)	Louie Gohmert (I)
+Candidate	Lou Antonelli	Lou Antonelli
+Candidate	Lorenzo Sanchez	Lorenzo Sanchez
+Candidate	Lorena Perez Mcgill	Lorena Perez Mcgill
+Candidate	Lois W. Kolkhorst (I)	Lois W. Kolkhorst (I)
+Candidate	Lloyd Doggett (I)	Lloyd Doggett (I)
+Candidate	Lizzie Fletcher (I)	Lizzie Fletcher (I)
+Candidate	Lisa Welch	Lisa Welch
+Candidate	Lily Truong	Lily Truong
+Candidate	Likeithia 'Keke' Williams	Likeithia 'Keke' Williams
+Candidate	Leslie Peeler	Leslie Peeler
+Candidate	Leo Pacheco (I)	Leo Pacheco (I)
+Candidate	Lawyanda Prince	Lawyanda Prince
+Candidate	Larry Taylor (I)	Larry Taylor (I)
+Candidate	Larry Delarose	Larry Delarose
+Candidate	Lance Gooden (I)	Lance Gooden (I)
+Candidate	Lacey Hull	Lacey Hull
+Candidate	L. 'Sarah' Demerchant	L. 'Sarah' Demerchant
+Candidate	Kyle Kacal (I)	Kyle Kacal (I)
+Candidate	Kyle Biedermann (I)	Kyle Biedermann (I)
+Candidate	Kronda Thimesch	Kronda Thimesch
+Candidate	Kevin Brady (I)	Kevin Brady (I)
+Candidate	Kevin A. Hale	Kevin A. Hale
+Candidate	Kerry Douglas Mckennon	Kerry Douglas Mckennon
+Candidate	Kenneth M. Moore	Kenneth M. Moore
+Candidate	Ken King (I)	Ken King (I)
+Candidate	Keith Bell (I)	Keith Bell (I)
+Candidate	Kayla Alix	Kayla Alix
+Candidate	Kay Granger (I)	Kay Granger (I)
+Candidate	Kasey Wells	Kasey Wells/Rachel Wells
+Candidate	Karyn Brownlee	Karyn Brownlee
+Candidate	K. Nicole Sprabary	K. Nicole Sprabary
+Candidate	Justin Ray	Justin Ray
+Candidate	Justin Holland (I)	Justin Holland (I)
+Candidate	Justin Berry	Justin Berry
+Candidate	Julián Villarreal	Julián Villarreal
+Candidate	Julie Johnson (I)	Julie Johnson (I)
+Candidate	Julie Gobble	Julie Gobble
+Candidate	Julian Mardock	Julian Mardock
+Candidate	Judy Cutright	Judy Cutright
+Candidate	Judith Zaffirini (I)	Judith Zaffirini (I)
+Candidate	Juan &Quot;Chuy&Quot; Hinojosa (I)	Juan &Quot;Chuy&Quot; Hinojosa (I)
+Candidate	José MenéNdez (I)	José MenéNdez (I)
+Candidate	Joseph R. Biden	Joseph R. Biden/Kamala D. Harris
+Candidate	Joseph Leblanc Jr	Joseph Leblanc Jr
+Candidate	Jose R. Sosa	Jose R. Sosa
+Candidate	Jonathan Scott	Jonathan Scott
+Candidate	Jon Mark Hogg	Jon Mark Hogg
+Candidate	Jon E. Rosenthal (I)	Jon E. Rosenthal (I)
+Candidate	Johnny Teague	Johnny Teague
+Candidate	John Turner (I)	John Turner (I)
+Candidate	John Smithee (I)	John Smithee (I)
+Candidate	John Raney (I)	John Raney (I)
+Candidate	John P. Cyrier (I)	John P. Cyrier (I)
+Candidate	John Kuempel (I)	John Kuempel (I)
+Candidate	John H. Bucy Iii (I)	John H. Bucy Iii (I)
+Candidate	John Gibson	John Gibson
+Candidate	John Frullo (I)	John Frullo (I)
+Candidate	John Cornyn (I)	John Cornyn (I)
+Candidate	John Carter (I)	John Carter (I)
+Candidate	John (Doc) Robert Guerra	John (Doc) Robert Guerra
+Candidate	Joey Cardenas Iii	Joey Cardenas Iii
+Candidate	Joe P. Herrera	Joe P. Herrera
+Candidate	Joe Moody (I)	Joe Moody (I)
+Candidate	Joe Deshotel (I)	Joe Deshotel (I)
+Candidate	Joe Burnes	Joe Burnes
+Candidate	Jodey C. Arrington (I)	Jodey C. Arrington (I)
+Candidate	Joaquin Castro (I)	Joaquin Castro (I)
+Candidate	Jo-Anne Valdivia	Jo-Anne Valdivia
+Candidate	Jo Jorgensen	Jo Jorgensen/Jeremy 'Spike' Cohen
+Candidate	Jj Campbell	Jj Campbell
+Candidate	Jim Murphy (I)	Jim Murphy (I)
+Candidate	Jessica Tiedt	Jessica Tiedt
+Candidate	Jessica Gonzalez (I)	Jessica Gonzalez (I)
+Candidate	Jesse Herrera	Jesse Herrera
+Candidate	Jesse Cuellar	Jesse Cuellar/Jimmy Monreal
+Candidate	Jerry Fortenberry Ii	Jerry Fortenberry Ii
+Candidate	Jenny Garcia Sharon	Jenny Garcia Sharon
+Candidate	Jennifer Skidonenko	Jennifer Skidonenko
+Candidate	Jeff Whitfield	Jeff Whitfield
+Candidate	Jeff Leach (I)	Jeff Leach (I)
+Candidate	Jeff Cason	Jeff Cason
+Candidate	Jeff Antonelli	Jeff Antonelli
+Candidate	Jay Stittleburg	Jay Stittleburg
+Candidate	Jay Dean (I)	Jay Dean (I)
+Candidate	Jason Sigmon	Jason Sigmon
+Candidate	Jason Rowe	Jason Rowe
+Candidate	Jason Mata Sr	Jason Mata Sr
+Candidate	Jasmine Felicia Crockett	Jasmine Felicia Crockett
+Candidate	Jarvis D. Johnson (I)	Jarvis D. Johnson (I)
+Candidate	Jared Wissel	Jared Wissel
+Candidate	Jared Patterson (I)	Jared Patterson (I)
+Candidate	Janet Dudding	Janet Dudding
+Candidate	Jane Nelson (I)	Jane Nelson (I)
+Candidate	James White (I)	James White (I)
+Candidate	James Talarico (I)	James Talarico (I)
+Candidate	James Hernandez	James Hernandez
+Candidate	James Harren	James Harren
+Candidate	James B. Frank (I)	James B. Frank (I)
+Candidate	Jake Ellzey	Jake Ellzey
+Candidate	Jaimy Z. Blanco	Jaimy Z. Blanco
+Candidate	Jacorion Randle	Jacorion Randle
+Candidate	Jacey Jetton	Jacey Jetton
+Candidate	J.M. Lozano (I)	J.M. Lozano (I)
+Candidate	J. K. Stephenson	J. K. Stephenson
+Candidate	Irene Armendariz-Jackson	Irene Armendariz-Jackson
+Candidate	Ina Minjarez (I)	Ina Minjarez (I)
+Candidate	Hugh D. Shine (I)	Hugh D. Shine (I)
+Candidate	Hubert Vo (I)	Hubert Vo (I)
+Candidate	Howie Hawkins	Howie Hawkins/Angela Walker
+Candidate	Henry Cuellar (I)	Henry Cuellar (I)
+Candidate	Harold V. Dutton Jr (I)	Harold V. Dutton Jr (I)
+Candidate	Hank Gilbert	Hank Gilbert
+Candidate	Hal J. Ridley Jr	Hal J. Ridley Jr
+Candidate	Gus Trujillo	Gus Trujillo
+Candidate	Greg Bonnen (I)	Greg Bonnen (I)
+Candidate	Gloria La Riva	Gloria La Riva/Leonard Peltier
+Candidate	Glenn Rogers	Glenn Rogers
+Candidate	Giovanni Capriglione (I)	Giovanni Capriglione (I)
+Candidate	Gina Hinojosa (I)	Gina Hinojosa (I)
+Candidate	Gina Calanni (I)	Gina Calanni (I)
+Candidate	Gerson Hernandez	Gerson Hernandez
+Candidate	George B. Garza	George B. Garza
+Candidate	Genevieve Collins	Genevieve Collins
+Candidate	Gene Wu (I)	Gene Wu (I)
+Candidate	Geanie W. Morrison (I)	Geanie W. Morrison (I)
+Candidate	Gary Vandeaver (I)	Gary Vandeaver (I)
+Candidate	Gary Gates (I)	Gary Gates (I)
+Candidate	Gary D. Thomas	Gary D. Thomas
+Candidate	Garnet F. Coleman (I)	Garnet F. Coleman (I)
+Candidate	Frank Pomeroy	Frank Pomeroy
+Candidate	Four Price (I)	Four Price (I)
+Candidate	Filemon B. Vela (I)	Filemon B. Vela (I)
+Candidate	Fabian Cordova Vasquez	Fabian Cordova Vasquez
+Candidate	Evelina (Lina) Ortega (I)	Evelina (Lina) Ortega (I)
+Candidate	Ernest Bailes (I)	Ernest Bailes (I)
+Candidate	Erin Zwiener (I)	Erin Zwiener (I)
+Candidate	Eric Williams	Eric Williams
+Candidate	Eric Jason Velasquez	Eric Jason Velasquez
+Candidate	Elva Camacho	Elva Camacho
+Candidate	Elliott Robert Scheirman	Elliott Robert Scheirman
+Candidate	Elizabeth Hernandez	Elizabeth Hernandez
+Candidate	Elizabeth Beck	Elizabeth Beck
+Candidate	Elizabeth 'Liz' Campos	Elizabeth 'Liz' Campos
+Candidate	Elizabeth 'Eliz' Markowitz	Elizabeth 'Eliz' Markowitz
+Candidate	Eddie Rodriguez (I)	Eddie Rodriguez (I)
+Candidate	Eddie Morales	Eddie Morales
+Candidate	Eddie Lucio Jr (I)	Eddie Lucio Jr (I)
+Candidate	Eddie Lucio Iii (I)	Eddie Lucio Iii (I)
+Candidate	Eddie Bernice Johnson (I)	Eddie Bernice Johnson (I)
+Candidate	Ed Thompson (I)	Ed Thompson (I)
+Candidate	Ed Kless	Ed Kless
+Candidate	E. Sam Harless (I)	E. Sam Harless (I)
+Candidate	Dustin Burrows (I)	Dustin Burrows (I)
+Candidate	Drew Springer (I)	Drew Springer (I)
+Candidate	Drew Darby (I)	Drew Darby (I)
+Candidate	Dr. Eugene Allen	Dr. Eugene Allen
+Candidate	Donna Imam	Donna Imam
+Candidate	Donna Howard (I)	Donna Howard (I)
+Candidate	Donald J. Trump	Donald J. Trump/Michael R. Pence (I)
+Candidate	Diego Bernal (I)	Diego Bernal (I)
+Candidate	Dewayne Burns (I)	Dewayne Burns (I)
+Candidate	Dennis Paul (I)	Dennis Paul (I)
+Candidate	Debra Edmondson	Debra Edmondson
+Candidate	Dawn Buckingham (I)	Dawn Buckingham (I)
+Candidate	David Cook	David Cook
+Candidate	David B. Collins	David B. Collins
+Candidate	Darren Hamilton	Darren Hamilton
+Candidate	Dan Huberty (I)	Dan Huberty (I)
+Candidate	Dan Crenshaw (I)	Dan Crenshaw (I)
+Candidate	Dade Phelan (I)	Dade Phelan (I)
+Candidate	César J Blanco	César J Blanco
+Candidate	Craig Goldman (I)	Craig Goldman (I)
+Candidate	Colin Allred (I)	Colin Allred (I)
+Candidate	Cole Hefner (I)	Cole Hefner (I)
+Candidate	Cody Thane Vasut	Cody Thane Vasut
+Candidate	Cody Harris (I)	Cody Harris (I)
+Candidate	Clayton Tucker	Clayton Tucker
+Candidate	Claudia Ordaz Perez	Claudia Ordaz Perez
+Candidate	Cindy Rocha	Cindy Rocha
+Candidate	Christy Mowrey Peterson	Christy Mowrey Peterson
+Candidate	Christopher Cox	Christopher Cox
+Candidate	Christina Morales (I)	Christina Morales (I)
+Candidate	Chris Turner (I)	Chris Turner (I)
+Candidate	Chris Paddie (I)	Chris Paddie (I)
+Candidate	Chris B. Royal	Chris B. Royal
+Candidate	Chip Roy (I)	Chip Roy (I)
+Candidate	Charlie Geren (I)	Charlie Geren (I)
+Candidate	Charles Perry (I)	Charles Perry (I)
+Candidate	Charles Allan Meyer	Charles Allan Meyer
+Candidate	Charles &Quot;Doc&Quot; Anderson (I)	Charles &Quot;Doc&Quot; Anderson (I)
+Candidate	Chad Abbey	Chad Abbey
+Candidate	Celina Montoya	Celina Montoya
+Candidate	Celia Israel (I)	Celia Israel (I)
+Candidate	Cecil Bell Jr (I)	Cecil Bell Jr (I)
+Candidate	Carrie Isaac	Carrie Isaac
+Candidate	Carolyn Salter	Carolyn Salter
+Candidate	Carol H. Iannuzzi	Carol H. Iannuzzi
+Candidate	Carol Alvarado (I)	Carol Alvarado (I)
+Candidate	Carlos Quintanilla	Carlos Quintanilla
+Candidate	Carl O. Sherman Sr (I)	Carl O. Sherman Sr (I)
+Candidate	Candy Noble (I)	Candy Noble (I)
+Candidate	Candace Valenzuela	Candace Valenzuela
+Candidate	Cameron Brock	Cameron Brock
+Candidate	Bryan Slaton	Bryan Slaton
+Candidate	Bryan J Henry	Bryan J Henry
+Candidate	Bryan Hughes (I)	Bryan Hughes (I)
+Candidate	Brooks Landgraf (I)	Brooks Landgraf (I)
+Candidate	Brody Mulligan	Brody Mulligan
+Candidate	Briscoe Cain (I)	Briscoe Cain (I)
+Candidate	Brian J. Rogers	Brian J. Rogers
+Candidate	Brian Elliott	Brian Elliott
+Candidate	Brian Carroll	Brian Carroll/Amar Patel
+Candidate	Brian Birdwell (I)	Brian Birdwell (I)
+Candidate	Brian Babin (I)	Brian Babin (I)
+Candidate	Bret Bolton	Bret Bolton
+Candidate	Brandy K. Chambers	Brandy K. Chambers
+Candidate	Brandon Creighton (I)	Brandon Creighton (I)
+Candidate	Brad Buckley (I)	Brad Buckley (I)
+Candidate	Borris L Miles (I)	Borris L Miles (I)
+Candidate	Bobby Guerra (I)	Bobby Guerra (I)
+Candidate	Bill Strieber	Bill Strieber
+Candidate	Beto Villela	Beto Villela
+Candidate	Bethany Hatch	Bethany Hatch
+Candidate	Beth Van Duyne	Beth Van Duyne
+Candidate	Ben Leman (I)	Ben Leman (I)
+Candidate	Bekah Congdon	Bekah Congdon
+Candidate	Barbara Gervin-Hawkins (I)	Barbara Gervin-Hawkins (I)
+Candidate	August Pfluger	August Pfluger
+Candidate	Audrey Spanko	Audrey Spanko
+Candidate	Arthur M. Thomas Iv	Arthur M. Thomas Iv
+Candidate	Arthur Dibianca	Arthur Dibianca
+Candidate	Art Fierro (I)	Art Fierro (I)
+Candidate	Armando Lucio Walle (I)	Armando Lucio Walle (I)
+Candidate	Armando 'Mando&Quot; Martinez (I)	Armando 'Mando&Quot; Martinez (I)
+Candidate	Antonio Padron	Antonio Padron
+Candidate	Ann Johnson	Ann Johnson
+Candidate	Angie Chen Button (I)	Angie Chen Button (I)
+Candidate	Angie Bado	Angie Bado
+Candidate	Angela Brewer	Angela Brewer
+Candidate	Andy Rose	Andy Rose
+Candidate	Andrew S. Murr (I)	Andrew S. Murr (I)
+Candidate	Ana-Maria Ramos (I)	Ana-Maria Ramos (I)
+Candidate	Ana Hernandez (I)	Ana Hernandez (I)
+Candidate	Alma A. Allen (I)	Alma A. Allen (I)
+Candidate	Alisa Simmons	Alisa Simmons
+Candidate	Alex Dominguez (I)	Alex Dominguez (I)
+Candidate	Al Green (I)	Al Green (I)
+Candidate	Akilah Bacy	Akilah Bacy
+Candidate	Addison Perry-Franks	Addison Perry-Franks
+Candidate	Adam Salyer	Adam Salyer
+Candidate	Abram Loeb	Abram Loeb/Jennifer Jairala
+Candidate	Abel Herrero (I)	Abel Herrero (I)

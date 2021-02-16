@@ -1,0 +1,1101 @@
+cdf_element	cdf_internal_name	raw_identifier_value
+CandidateContest	WV House District 1	HOUSE OF DELEGATES, 1st District
+CandidateContest	WV House District 2	HOUSE OF DELEGATES, 2nd District
+CandidateContest	WV House District 3	HOUSE OF DELEGATES, 3rd District
+CandidateContest	WV House District 4	HOUSE OF DELEGATES, 4th District
+CandidateContest	WV House District 5	HOUSE OF DELEGATES, 5th District
+CandidateContest	WV House District 6	HOUSE OF DELEGATES, 6th District
+CandidateContest	WV House District 7	HOUSE OF DELEGATES, 7th District
+CandidateContest	WV House District 8	HOUSE OF DELEGATES, 8th District
+CandidateContest	WV House District 9	HOUSE OF DELEGATES, 9th District
+CandidateContest	WV House District 10	HOUSE OF DELEGATES, 10th District
+CandidateContest	WV House District 11	HOUSE OF DELEGATES, 11th District
+CandidateContest	WV House District 12	HOUSE OF DELEGATES, 12th District
+CandidateContest	WV House District 13	HOUSE OF DELEGATES, 13th District
+CandidateContest	WV House District 14	HOUSE OF DELEGATES, 14th District
+CandidateContest	WV House District 15	HOUSE OF DELEGATES, 15th District
+CandidateContest	WV House District 16	HOUSE OF DELEGATES, 16th District
+CandidateContest	WV House District 17	HOUSE OF DELEGATES, 17th District
+CandidateContest	WV House District 18	HOUSE OF DELEGATES, 18th District
+CandidateContest	WV House District 19	HOUSE OF DELEGATES, 19th District
+CandidateContest	WV House District 20	HOUSE OF DELEGATES, 20th District
+CandidateContest	WV House District 21	HOUSE OF DELEGATES, 21st District
+CandidateContest	WV House District 22	HOUSE OF DELEGATES, 22nd District
+CandidateContest	WV House District 23	HOUSE OF DELEGATES, 23rd District
+CandidateContest	WV House District 24	HOUSE OF DELEGATES, 24th District
+CandidateContest	WV House District 25	HOUSE OF DELEGATES, 25th District
+CandidateContest	WV House District 26	HOUSE OF DELEGATES, 26th District
+CandidateContest	WV House District 27	HOUSE OF DELEGATES, 27th District
+CandidateContest	WV House District 28	HOUSE OF DELEGATES, 28th District
+CandidateContest	WV House District 29	HOUSE OF DELEGATES, 29th District
+CandidateContest	WV House District 30	HOUSE OF DELEGATES, 30th District
+CandidateContest	WV House District 31	HOUSE OF DELEGATES, 31st District
+CandidateContest	WV House District 32	HOUSE OF DELEGATES, 32nd District
+CandidateContest	WV House District 33	HOUSE OF DELEGATES, 33rd District
+CandidateContest	WV House District 34	HOUSE OF DELEGATES, 34th District
+CandidateContest	WV House District 35	HOUSE OF DELEGATES, 35th District
+CandidateContest	WV House District 36	HOUSE OF DELEGATES, 36th District
+CandidateContest	WV House District 37	HOUSE OF DELEGATES, 37th District
+CandidateContest	WV House District 38	HOUSE OF DELEGATES, 38th District
+CandidateContest	WV House District 39	HOUSE OF DELEGATES, 39th District
+CandidateContest	WV House District 40	HOUSE OF DELEGATES, 40th District
+CandidateContest	WV House District 41	HOUSE OF DELEGATES, 41st District
+CandidateContest	WV House District 42	HOUSE OF DELEGATES, 42nd District
+CandidateContest	WV House District 43	HOUSE OF DELEGATES, 43rd District
+CandidateContest	WV House District 44	HOUSE OF DELEGATES, 44th District
+CandidateContest	WV House District 45	HOUSE OF DELEGATES, 45th District
+CandidateContest	WV House District 46	HOUSE OF DELEGATES, 46th District
+CandidateContest	WV House District 47	HOUSE OF DELEGATES, 47th District
+CandidateContest	WV House District 48	HOUSE OF DELEGATES, 48th District
+CandidateContest	WV House District 49	HOUSE OF DELEGATES, 49th District
+CandidateContest	WV House District 50	HOUSE OF DELEGATES, 50th District
+CandidateContest	WV House District 51	HOUSE OF DELEGATES, 51st District
+CandidateContest	WV House District 52	HOUSE OF DELEGATES, 52nd District
+CandidateContest	WV House District 53	HOUSE OF DELEGATES, 53rd District
+CandidateContest	WV House District 54	HOUSE OF DELEGATES, 54th District
+CandidateContest	WV House District 55	HOUSE OF DELEGATES, 55th District
+CandidateContest	WV House District 56	HOUSE OF DELEGATES, 56th District
+CandidateContest	WV House District 57	HOUSE OF DELEGATES, 57th District
+CandidateContest	WV House District 58	HOUSE OF DELEGATES, 58th District
+CandidateContest	WV House District 59	HOUSE OF DELEGATES, 59th District
+CandidateContest	WV House District 60	HOUSE OF DELEGATES, 60th District
+CandidateContest	WV House District 61	HOUSE OF DELEGATES, 61st District
+CandidateContest	WV House District 62	HOUSE OF DELEGATES, 62nd District
+CandidateContest	WV House District 63	HOUSE OF DELEGATES, 63rd District
+CandidateContest	WV House District 64	HOUSE OF DELEGATES, 64th District
+CandidateContest	WV House District 65	HOUSE OF DELEGATES, 65th District
+CandidateContest	WV House District 66	HOUSE OF DELEGATES, 66th District
+CandidateContest	WV House District 67	HOUSE OF DELEGATES, 67th District
+CandidateContest	WV House District 68	HOUSE OF DELEGATES, 68th District
+CandidateContest	WV House District 69	HOUSE OF DELEGATES, 69th District
+CandidateContest	WV House District 70	HOUSE OF DELEGATES, 70th District
+CandidateContest	WV House District 71	HOUSE OF DELEGATES, 71st District
+CandidateContest	WV House District 72	HOUSE OF DELEGATES, 72nd District
+CandidateContest	WV House District 73	HOUSE OF DELEGATES, 73rd District
+CandidateContest	WV House District 74	HOUSE OF DELEGATES, 74th District
+CandidateContest	WV House District 75	HOUSE OF DELEGATES, 75th District
+CandidateContest	WV House District 76	HOUSE OF DELEGATES, 76th District
+CandidateContest	WV House District 77	HOUSE OF DELEGATES, 77th District
+CandidateContest	WV House District 78	HOUSE OF DELEGATES, 78th District
+CandidateContest	WV House District 79	HOUSE OF DELEGATES, 79th District
+CandidateContest	WV House District 80	HOUSE OF DELEGATES, 80th District
+CandidateContest	WV House District 81	HOUSE OF DELEGATES, 81st District
+CandidateContest	WV House District 82	HOUSE OF DELEGATES, 82nd District
+CandidateContest	WV House District 83	HOUSE OF DELEGATES, 83rd District
+CandidateContest	WV House District 84	HOUSE OF DELEGATES, 84th District
+CandidateContest	WV House District 85	HOUSE OF DELEGATES, 85th District
+CandidateContest	WV House District 86	HOUSE OF DELEGATES, 86th District
+CandidateContest	WV House District 87	HOUSE OF DELEGATES, 87th District
+CandidateContest	WV House District 88	HOUSE OF DELEGATES, 88th District
+CandidateContest	WV House District 89	HOUSE OF DELEGATES, 89th District
+CandidateContest	WV House District 90	HOUSE OF DELEGATES, 90th District
+CandidateContest	WV House District 91	HOUSE OF DELEGATES, 91st District
+CandidateContest	WV House District 92	HOUSE OF DELEGATES, 92nd District
+CandidateContest	WV House District 93	HOUSE OF DELEGATES, 93rd District
+CandidateContest	WV House District 94	HOUSE OF DELEGATES, 94th District
+CandidateContest	WV House District 95	HOUSE OF DELEGATES, 95th District
+CandidateContest	WV House District 96	HOUSE OF DELEGATES, 96th District
+CandidateContest	WV House District 97	HOUSE OF DELEGATES, 97th District
+CandidateContest	WV House District 98	HOUSE OF DELEGATES, 98th District
+CandidateContest	WV House District 99	HOUSE OF DELEGATES, 99th District
+CandidateContest	WV House District 100	HOUSE OF DELEGATES, 100th District
+CandidateContest	WV Senate District 1	STATE SENATOR, 1st District
+CandidateContest	WV Senate District 2	STATE SENATOR, 2nd District
+CandidateContest	WV Senate District 3	STATE SENATOR, 3rd District
+CandidateContest	WV Senate District 4	STATE SENATOR, 4th District
+CandidateContest	WV Senate District 5	STATE SENATOR, 5th District
+CandidateContest	WV Senate District 6	STATE SENATOR, 6th District
+CandidateContest	WV Senate District 7	STATE SENATOR, 7th District
+CandidateContest	WV Senate District 8	STATE SENATOR, 8th District
+CandidateContest	WV Senate District 9	STATE SENATOR, 9th District
+CandidateContest	WV Senate District 10	STATE SENATOR, 10th District
+CandidateContest	WV Senate District 11	STATE SENATOR, 11th District
+CandidateContest	WV Senate District 12	STATE SENATOR, 12th District
+CandidateContest	WV Senate District 13	STATE SENATOR, 13th District
+CandidateContest	WV Senate District 14	STATE SENATOR, 14th District
+CandidateContest	WV Senate District 15	STATE SENATOR, 15th District
+CandidateContest	WV Senate District 16	STATE SENATOR, 16th District
+CandidateContest	WV Senate District 17	STATE SENATOR, 17th District
+CandidateContest	WV Senate District 18	STATE SENATOR, 18th District
+CandidateContest	WV Senate District 19	STATE SENATOR, 19th District
+CandidateContest	WV Senate District 20	STATE SENATOR, 20th District
+CandidateContest	WV Senate District 21	STATE SENATOR, 21st District
+CandidateContest	WV Senate District 22	STATE SENATOR, 22nd District
+CandidateContest	WV Senate District 23	STATE SENATOR, 23rd District
+CandidateContest	WV Senate District 24	STATE SENATOR, 24th District
+CandidateContest	WV Senate District 25	STATE SENATOR, 25th District
+CandidateContest	WV Senate District 26	STATE SENATOR, 26th District
+CandidateContest	WV Senate District 27	STATE SENATOR, 27th District
+CandidateContest	WV Senate District 28	STATE SENATOR, 28th District
+CandidateContest	WV Senate District 29	STATE SENATOR, 29th District
+CandidateContest	WV Senate District 30	STATE SENATOR, 30th District
+CandidateContest	WV Senate District 31	STATE SENATOR, 31st District
+CandidateContest	WV Senate District 32	STATE SENATOR, 32nd District
+CandidateContest	WV Senate District 33	STATE SENATOR, 33rd District
+CandidateContest	WV Senate District 34	STATE SENATOR, 34th District
+CandidateContest	US House WV District 1	U.S. HOUSE OF REPRESENTATIVES, 1st Congressional District
+CandidateContest	US House WV District 2	U.S. HOUSE OF REPRESENTATIVES, 2nd Congressional District
+CandidateContest	US House WV District 3	U.S. HOUSE OF REPRESENTATIVES, 3rd Congressional District
+CandidateContest	US President (WV)	PRESIDENT
+CandidateContest	WV Governor	GOVERNOR
+CandidateContest	US Senate WV	U.S. SENATOR
+CandidateContest	WV Attorney General	ATTORNEY GENERAL
+CandidateContest	WV Auditor	AUDITOR
+CandidateContest	WV Commissioner of Agriculture	COMMISSIONER OF AGRICULTURE
+CandidateContest	WV Treasurer	TREASURER
+CandidateContest	WV Secretary of State	SECRETARY OF STATE
+Election	2020 General	2020 General
+Election	2020 Primary	2020 Primary
+Election	2018 General	2018 General
+Election	2016 General	2016 General
+Party	Democratic Party	DEM
+Party	Republican Party	REP
+Party	MTN	MTN
+Party	Libertarian Party	LBN
+ReportingUnit	West Virginia;WV House District 1	West Virginia;WV House District 1
+ReportingUnit	West Virginia;WV House District 2	West Virginia;WV House District 2
+ReportingUnit	West Virginia;WV House District 3	West Virginia;WV House District 3
+ReportingUnit	West Virginia;WV House District 4	West Virginia;WV House District 4
+ReportingUnit	West Virginia;WV House District 5	West Virginia;WV House District 5
+ReportingUnit	West Virginia;WV House District 6	West Virginia;WV House District 6
+ReportingUnit	West Virginia;WV House District 7	West Virginia;WV House District 7
+ReportingUnit	West Virginia;WV House District 8	West Virginia;WV House District 8
+ReportingUnit	West Virginia;WV House District 9	West Virginia;WV House District 9
+ReportingUnit	West Virginia;WV House District 10	West Virginia;WV House District 10
+ReportingUnit	West Virginia;WV House District 11	West Virginia;WV House District 11
+ReportingUnit	West Virginia;WV House District 12	West Virginia;WV House District 12
+ReportingUnit	West Virginia;WV House District 13	West Virginia;WV House District 13
+ReportingUnit	West Virginia;WV House District 14	West Virginia;WV House District 14
+ReportingUnit	West Virginia;WV House District 15	West Virginia;WV House District 15
+ReportingUnit	West Virginia;WV House District 16	West Virginia;WV House District 16
+ReportingUnit	West Virginia;WV House District 17	West Virginia;WV House District 17
+ReportingUnit	West Virginia;WV House District 18	West Virginia;WV House District 18
+ReportingUnit	West Virginia;WV House District 19	West Virginia;WV House District 19
+ReportingUnit	West Virginia;WV House District 20	West Virginia;WV House District 20
+ReportingUnit	West Virginia;WV House District 21	West Virginia;WV House District 21
+ReportingUnit	West Virginia;WV House District 22	West Virginia;WV House District 22
+ReportingUnit	West Virginia;WV House District 23	West Virginia;WV House District 23
+ReportingUnit	West Virginia;WV House District 24	West Virginia;WV House District 24
+ReportingUnit	West Virginia;WV House District 25	West Virginia;WV House District 25
+ReportingUnit	West Virginia;WV House District 26	West Virginia;WV House District 26
+ReportingUnit	West Virginia;WV House District 27	West Virginia;WV House District 27
+ReportingUnit	West Virginia;WV House District 28	West Virginia;WV House District 28
+ReportingUnit	West Virginia;WV House District 29	West Virginia;WV House District 29
+ReportingUnit	West Virginia;WV House District 30	West Virginia;WV House District 30
+ReportingUnit	West Virginia;WV House District 31	West Virginia;WV House District 31
+ReportingUnit	West Virginia;WV House District 32	West Virginia;WV House District 32
+ReportingUnit	West Virginia;WV House District 33	West Virginia;WV House District 33
+ReportingUnit	West Virginia;WV House District 34	West Virginia;WV House District 34
+ReportingUnit	West Virginia;WV House District 35	West Virginia;WV House District 35
+ReportingUnit	West Virginia;WV House District 36	West Virginia;WV House District 36
+ReportingUnit	West Virginia;WV House District 37	West Virginia;WV House District 37
+ReportingUnit	West Virginia;WV House District 38	West Virginia;WV House District 38
+ReportingUnit	West Virginia;WV House District 39	West Virginia;WV House District 39
+ReportingUnit	West Virginia;WV House District 40	West Virginia;WV House District 40
+ReportingUnit	West Virginia;WV House District 41	West Virginia;WV House District 41
+ReportingUnit	West Virginia;WV House District 42	West Virginia;WV House District 42
+ReportingUnit	West Virginia;WV House District 43	West Virginia;WV House District 43
+ReportingUnit	West Virginia;WV House District 44	West Virginia;WV House District 44
+ReportingUnit	West Virginia;WV House District 45	West Virginia;WV House District 45
+ReportingUnit	West Virginia;WV House District 46	West Virginia;WV House District 46
+ReportingUnit	West Virginia;WV House District 47	West Virginia;WV House District 47
+ReportingUnit	West Virginia;WV House District 48	West Virginia;WV House District 48
+ReportingUnit	West Virginia;WV House District 49	West Virginia;WV House District 49
+ReportingUnit	West Virginia;WV House District 50	West Virginia;WV House District 50
+ReportingUnit	West Virginia;WV House District 51	West Virginia;WV House District 51
+ReportingUnit	West Virginia;WV House District 52	West Virginia;WV House District 52
+ReportingUnit	West Virginia;WV House District 53	West Virginia;WV House District 53
+ReportingUnit	West Virginia;WV House District 54	West Virginia;WV House District 54
+ReportingUnit	West Virginia;WV House District 55	West Virginia;WV House District 55
+ReportingUnit	West Virginia;WV House District 56	West Virginia;WV House District 56
+ReportingUnit	West Virginia;WV House District 57	West Virginia;WV House District 57
+ReportingUnit	West Virginia;WV House District 58	West Virginia;WV House District 58
+ReportingUnit	West Virginia;WV House District 59	West Virginia;WV House District 59
+ReportingUnit	West Virginia;WV House District 60	West Virginia;WV House District 60
+ReportingUnit	West Virginia;WV House District 61	West Virginia;WV House District 61
+ReportingUnit	West Virginia;WV House District 62	West Virginia;WV House District 62
+ReportingUnit	West Virginia;WV House District 63	West Virginia;WV House District 63
+ReportingUnit	West Virginia;WV House District 64	West Virginia;WV House District 64
+ReportingUnit	West Virginia;WV House District 65	West Virginia;WV House District 65
+ReportingUnit	West Virginia;WV House District 66	West Virginia;WV House District 66
+ReportingUnit	West Virginia;WV House District 67	West Virginia;WV House District 67
+ReportingUnit	West Virginia;WV House District 68	West Virginia;WV House District 68
+ReportingUnit	West Virginia;WV House District 69	West Virginia;WV House District 69
+ReportingUnit	West Virginia;WV House District 70	West Virginia;WV House District 70
+ReportingUnit	West Virginia;WV House District 71	West Virginia;WV House District 71
+ReportingUnit	West Virginia;WV House District 72	West Virginia;WV House District 72
+ReportingUnit	West Virginia;WV House District 73	West Virginia;WV House District 73
+ReportingUnit	West Virginia;WV House District 74	West Virginia;WV House District 74
+ReportingUnit	West Virginia;WV House District 75	West Virginia;WV House District 75
+ReportingUnit	West Virginia;WV House District 76	West Virginia;WV House District 76
+ReportingUnit	West Virginia;WV House District 77	West Virginia;WV House District 77
+ReportingUnit	West Virginia;WV House District 78	West Virginia;WV House District 78
+ReportingUnit	West Virginia;WV House District 79	West Virginia;WV House District 79
+ReportingUnit	West Virginia;WV House District 80	West Virginia;WV House District 80
+ReportingUnit	West Virginia;WV House District 81	West Virginia;WV House District 81
+ReportingUnit	West Virginia;WV House District 82	West Virginia;WV House District 82
+ReportingUnit	West Virginia;WV House District 83	West Virginia;WV House District 83
+ReportingUnit	West Virginia;WV House District 84	West Virginia;WV House District 84
+ReportingUnit	West Virginia;WV House District 85	West Virginia;WV House District 85
+ReportingUnit	West Virginia;WV House District 86	West Virginia;WV House District 86
+ReportingUnit	West Virginia;WV House District 87	West Virginia;WV House District 87
+ReportingUnit	West Virginia;WV House District 88	West Virginia;WV House District 88
+ReportingUnit	West Virginia;WV House District 89	West Virginia;WV House District 89
+ReportingUnit	West Virginia;WV House District 90	West Virginia;WV House District 90
+ReportingUnit	West Virginia;WV House District 91	West Virginia;WV House District 91
+ReportingUnit	West Virginia;WV House District 92	West Virginia;WV House District 92
+ReportingUnit	West Virginia;WV House District 93	West Virginia;WV House District 93
+ReportingUnit	West Virginia;WV House District 94	West Virginia;WV House District 94
+ReportingUnit	West Virginia;WV House District 95	West Virginia;WV House District 95
+ReportingUnit	West Virginia;WV House District 96	West Virginia;WV House District 96
+ReportingUnit	West Virginia;WV House District 97	West Virginia;WV House District 97
+ReportingUnit	West Virginia;WV House District 98	West Virginia;WV House District 98
+ReportingUnit	West Virginia;WV House District 99	West Virginia;WV House District 99
+ReportingUnit	West Virginia;WV House District 100	West Virginia;WV House District 100
+ReportingUnit	West Virginia;WV Senate District 1	West Virginia;WV Senate District 1
+ReportingUnit	West Virginia;WV Senate District 2	West Virginia;WV Senate District 2
+ReportingUnit	West Virginia;WV Senate District 3	West Virginia;WV Senate District 3
+ReportingUnit	West Virginia;WV Senate District 4	West Virginia;WV Senate District 4
+ReportingUnit	West Virginia;WV Senate District 5	West Virginia;WV Senate District 5
+ReportingUnit	West Virginia;WV Senate District 6	West Virginia;WV Senate District 6
+ReportingUnit	West Virginia;WV Senate District 7	West Virginia;WV Senate District 7
+ReportingUnit	West Virginia;WV Senate District 8	West Virginia;WV Senate District 8
+ReportingUnit	West Virginia;WV Senate District 9	West Virginia;WV Senate District 9
+ReportingUnit	West Virginia;WV Senate District 10	West Virginia;WV Senate District 10
+ReportingUnit	West Virginia;WV Senate District 11	West Virginia;WV Senate District 11
+ReportingUnit	West Virginia;WV Senate District 12	West Virginia;WV Senate District 12
+ReportingUnit	West Virginia;WV Senate District 13	West Virginia;WV Senate District 13
+ReportingUnit	West Virginia;WV Senate District 14	West Virginia;WV Senate District 14
+ReportingUnit	West Virginia;WV Senate District 15	West Virginia;WV Senate District 15
+ReportingUnit	West Virginia;WV Senate District 16	West Virginia;WV Senate District 16
+ReportingUnit	West Virginia;WV Senate District 17	West Virginia;WV Senate District 17
+ReportingUnit	West Virginia;WV Senate District 18	West Virginia;WV Senate District 18
+ReportingUnit	West Virginia;WV Senate District 19	West Virginia;WV Senate District 19
+ReportingUnit	West Virginia;WV Senate District 20	West Virginia;WV Senate District 20
+ReportingUnit	West Virginia;WV Senate District 21	West Virginia;WV Senate District 21
+ReportingUnit	West Virginia;WV Senate District 22	West Virginia;WV Senate District 22
+ReportingUnit	West Virginia;WV Senate District 23	West Virginia;WV Senate District 23
+ReportingUnit	West Virginia;WV Senate District 24	West Virginia;WV Senate District 24
+ReportingUnit	West Virginia;WV Senate District 25	West Virginia;WV Senate District 25
+ReportingUnit	West Virginia;WV Senate District 26	West Virginia;WV Senate District 26
+ReportingUnit	West Virginia;WV Senate District 27	West Virginia;WV Senate District 27
+ReportingUnit	West Virginia;WV Senate District 28	West Virginia;WV Senate District 28
+ReportingUnit	West Virginia;WV Senate District 29	West Virginia;WV Senate District 29
+ReportingUnit	West Virginia;WV Senate District 30	West Virginia;WV Senate District 30
+ReportingUnit	West Virginia;WV Senate District 31	West Virginia;WV Senate District 31
+ReportingUnit	West Virginia;WV Senate District 32	West Virginia;WV Senate District 32
+ReportingUnit	West Virginia;WV Senate District 33	West Virginia;WV Senate District 33
+ReportingUnit	West Virginia;WV Senate District 34	West Virginia;WV Senate District 34
+ReportingUnit	West Virginia;US House WV District 1	West Virginia;US House WV District 1
+ReportingUnit	West Virginia;US House WV District 2	West Virginia;US House WV District 2
+ReportingUnit	West Virginia;US House WV District 3	West Virginia;US House WV District 3
+ReportingUnit	West Virginia	West Virginia
+ReportingUnit	West Virginia;Barbour County	Barbour
+ReportingUnit	West Virginia;Berkeley County	Berkeley
+ReportingUnit	West Virginia;Boone County	Boone
+ReportingUnit	West Virginia;Braxton County	Braxton
+ReportingUnit	West Virginia;Brooke County	Brooke
+ReportingUnit	West Virginia;Cabell County	Cabell
+ReportingUnit	West Virginia;Calhoun County	Calhoun
+ReportingUnit	West Virginia;Clay County	Clay
+ReportingUnit	West Virginia;Doddridge County	Doddridge
+ReportingUnit	West Virginia;Fayette County	Fayette
+ReportingUnit	West Virginia;Gilmer County	Gilmer
+ReportingUnit	West Virginia;Grant County	Grant
+ReportingUnit	West Virginia;Greenbrier County	Greenbrier
+ReportingUnit	West Virginia;Hampshire County	Hampshire
+ReportingUnit	West Virginia;Hancock County	Hancock
+ReportingUnit	West Virginia;Hardy County	Hardy
+ReportingUnit	West Virginia;Harrison County	Harrison
+ReportingUnit	West Virginia;Jackson County	Jackson
+ReportingUnit	West Virginia;Jefferson County	Jefferson
+ReportingUnit	West Virginia;Kanawha County	Kanawha
+ReportingUnit	West Virginia;Lewis County	Lewis
+ReportingUnit	West Virginia;Lincoln County	Lincoln
+ReportingUnit	West Virginia;Logan County	Logan
+ReportingUnit	West Virginia;Marion County	Marion
+ReportingUnit	West Virginia;Marshall County	Marshall
+ReportingUnit	West Virginia;Mason County	Mason
+ReportingUnit	West Virginia;McDowell County	McDowell
+ReportingUnit	West Virginia;Mercer County	Mercer
+ReportingUnit	West Virginia;Mineral County	Mineral
+ReportingUnit	West Virginia;Mingo County	Mingo
+ReportingUnit	West Virginia;Monongalia County	Monongalia
+ReportingUnit	West Virginia;Monroe County	Monroe
+ReportingUnit	West Virginia;Morgan County	Morgan
+ReportingUnit	West Virginia;Nicholas County	Nicholas
+ReportingUnit	West Virginia;Ohio County	Ohio
+ReportingUnit	West Virginia;Pendleton County	Pendleton
+ReportingUnit	West Virginia;Pleasants County	Pleasants
+ReportingUnit	West Virginia;Pocahontas County	Pocahontas
+ReportingUnit	West Virginia;Preston County	Preston
+ReportingUnit	West Virginia;Putnam County	Putnam
+ReportingUnit	West Virginia;Raleigh County	Raleigh
+ReportingUnit	West Virginia;Randolph County	Randolph
+ReportingUnit	West Virginia;Ritchie County	Ritchie
+ReportingUnit	West Virginia;Roane County	Roane
+ReportingUnit	West Virginia;Summers County	Summers
+ReportingUnit	West Virginia;Taylor County	Taylor
+ReportingUnit	West Virginia;Tucker County	Tucker
+ReportingUnit	West Virginia;Tyler County	Tyler
+ReportingUnit	West Virginia;Upshur County	Upshur
+ReportingUnit	West Virginia;Wayne County	Wayne
+ReportingUnit	West Virginia;Webster County	Webster
+ReportingUnit	West Virginia;Wetzel County	Wetzel
+ReportingUnit	West Virginia;Wirt County	Wirt
+ReportingUnit	West Virginia;Wood County	Wood
+ReportingUnit	West Virginia;Wyoming County	Wyoming
+CountItemType	election-day	Election Day
+Candidate	ZACK MAYNARD	ZACK MAYNARD
+Candidate	ZACH LEMAIRE	ZACH LEMAIRE
+Candidate	XAVIER OGLESBY	XAVIER OGLESBY
+Candidate	WILLIAM R. LAIRD IV	WILLIAM R. LAIRD IV
+Candidate	WILLIAM 'TY' NESTOR	WILLIAM 'TY' NESTOR
+Candidate	WILL HYMAN	WILL HYMAN
+Candidate	WES R. PAYNE	WES R. PAYNE
+Candidate	WAYNE CLARK	WAYNE CLARK
+Candidate	VERNON CRISS	VERNON CRISS
+Candidate	TYLER TRUMP	TYLER TRUMP
+Candidate	TRISH PRITCHARD	TRISH PRITCHARD
+Candidate	TREVOR MORRIS	TREVOR MORRIS
+Candidate	TRENTON CARL BARNHART	TRENTON CARL BARNHART
+Candidate	TONY PAYNTER	TONY PAYNTER
+Candidate	TOM HARDEN	TOM HARDEN
+Candidate	TOM FAST	TOM FAST
+Candidate	TODD STAINBROOK	TODD STAINBROOK
+Candidate	TODD LONGANACRE	TODD LONGANACRE
+Candidate	TINA RUSSELL	TINA RUSSELL
+Candidate	TIM TOMBLIN	TIM TOMBLIN
+Candidate	THERESA 'TESS' JACKSON	THERESA 'TESS' JACKSON
+Candidate	TERRI FUNK SYPOLT	TERRI FUNK SYPOLT
+Candidate	SUSAN SHELTON PERRY	SUSAN SHELTON PERRY
+Candidate	STORME SHILEY FRAME	STORME SHILEY FRAME
+Candidate	STEVIE THAXTON	STEVIE THAXTON
+Candidate	STEVE WESTFALL	STEVE WESTFALL
+Candidate	SHELLEY MOORE CAPITO	SHELLEY MOORE CAPITO
+Candidate	SELINA VICKERS	SELINA VICKERS
+Candidate	SEAN HORNBUCKLE	SEAN HORNBUCKLE
+Candidate	SCOTT BREWER	SCOTT BREWER
+Candidate	SAMMI BROWN	SAMMI BROWN
+Candidate	SAM BROWN PETSONK	SAM BROWN PETSONK
+Candidate	RYNE NAHODIL	RYNE NAHODIL
+Candidate	RYAN DEEMS	RYAN DEEMS
+Candidate	RUTH ROWAN	RUTH ROWAN
+Candidate	RUSTY WILLIAMS	RUSTY WILLIAMS
+Candidate	RUPIE PHILLIPS	RUPIE PHILLIPS
+Candidate	ROY G COOPER	ROY G COOPER
+Candidate	RONALD J STRAIGHT	RONALD J STRAIGHT
+Candidate	ROGER HANSHAW	ROGER HANSHAW
+Candidate	ROGER CONLEY	ROGER CONLEY
+Candidate	RODNEY A. MILLER	RODNEY A. MILLER
+Candidate	RODNEY A PYLES	RODNEY A PYLES
+Candidate	ROBIN CUTLIP	ROBIN CUTLIP
+Candidate	ROBERT LEE KARNES	ROBERT LEE KARNES
+Candidate	ROBERT H 'BOB' PLYMALE	ROBERT H 'BOB' PLYMALE
+Candidate	ROBERT E. SMITH	ROBERT E. SMITH
+Candidate	ROBERT 'ROB' GARCIA	ROBERT 'ROB' GARCIA
+Candidate	ROBERT ' BOB' STULTZ	ROBERT ' BOB' STULTZ
+Candidate	RILEY MOORE	RILEY MOORE
+Candidate	RICHARD J IAQUINTA	RICHARD J IAQUINTA
+Candidate	RIC GRIFFITH	RIC GRIFFITH
+Candidate	REBECCA POLIS	REBECCA POLIS
+Candidate	RANDY E SMITH	RANDY E SMITH
+Candidate	RALPH RODIGHIERO	RALPH RODIGHIERO
+Candidate	PHYLLIS WHITE	PHYLLIS WHITE
+Candidate	PHILLIP W WILEY	PHILLIP W WILEY
+Candidate	PHIL MALLOW	PHIL MALLOW
+Candidate	PETE DOUGHERTY	PETE DOUGHERTY
+Candidate	PAULA JEAN SWEARENGIN	PAULA JEAN SWEARENGIN
+Candidate	PAUL ESPINOSA	PAUL ESPINOSA
+Candidate	PAUL DAVID ROSS	PAUL DAVID ROSS
+Candidate	PATRICK S MARTIN	PATRICK S MARTIN
+Candidate	PATRICK MORRISEY	PATRICK MORRISEY
+Candidate	PATRICIA RUCKER	PATRICIA RUCKER
+Candidate	PATRICIA 'PATCH' ADAMS	PATRICIA 'PATCH' ADAMS
+Candidate	NIKKI ARDMAN	NIKKI ARDMAN
+Candidate	NATHAN D. BROWN	NATHAN D. BROWN
+Candidate	NATALIE TENNANT	NATALIE TENNANT
+Candidate	NATALIE CLINE	NATALIE CLINE
+Candidate	N. RILEY KEATON	N. RILEY KEATON
+Candidate	MOORE CAPITO	MOORE CAPITO
+Candidate	MIKE PUSHKIN	MIKE PUSHKIN
+Candidate	MIKE MANYPENNY	MIKE MANYPENNY
+Candidate	MIKE CAPUTO	MIKE CAPUTO
+Candidate	MICK BATES	MICK BATES
+Candidate	MICHAEL LOCKARD	MICHAEL LOCKARD
+Candidate	MICHAEL ANGELUCCI	MICHAEL ANGELUCCI
+Candidate	MICHAEL A YOUNG	MICHAEL A YOUNG
+Candidate	MATTHEW W. DESKINS	MATTHEW W. DESKINS
+Candidate	MATTHEW ROHRBACH	MATTHEW ROHRBACH
+Candidate	MARY KINNIE	MARY KINNIE
+Candidate	MARY ANN ROEBUCK CLAYTOR	MARY ANN ROEBUCK CLAYTOR
+Candidate	MARTY GEARHEART	MARTY GEARHEART
+Candidate	MARK RENNIX	MARK RENNIX
+Candidate	MARK PAULEY	MARK PAULEY
+Candidate	MARK DEAN	MARK DEAN
+Candidate	MARK BATES	MARK BATES
+Candidate	MARK A. HURT	MARK A. HURT
+Candidate	MARGITTA MAZZOCCHI	MARGITTA MAZZOCCHI
+Candidate	MARGARET ANNE STAGGERS	MARGARET ANNE STAGGERS
+Candidate	MAC WARNER	MAC WARNER
+Candidate	LUKE WINTERS	LUKE WINTERS
+Candidate	LOYD BUTCHER	LOYD BUTCHER
+Candidate	LISA ZUKOFF	LISA ZUKOFF
+Candidate	LEATHA WILLIAMS	LEATHA WILLIAMS
+Candidate	LAURA KIMBLE	LAURA KIMBLE
+Candidate	LARRY PACK	LARRY PACK
+Candidate	LARRY L. ROWE	LARRY L. ROWE
+Candidate	LARRY COTTRELL	LARRY COTTRELL
+Candidate	KIM MONGAN-SALADINI	KIM MONGAN-SALADINI
+Candidate	KENT LEONHARDT	KENT LEONHARDT
+Candidate	KEN REED	KEN REED
+Candidate	KAYLA YOUNG	KAYLA YOUNG
+Candidate	KAYLA KESSINGER	KAYLA KESSINGER
+Candidate	KATHY FERGUSON	KATHY FERGUSON
+Candidate	KATHIE HESS CROUSE	KATHIE HESS CROUSE
+Candidate	JUSTIN S. WHITE	JUSTIN S. WHITE
+Candidate	JUNIOR 'JR' WOLFE	JUNIOR 'JR' WOLFE
+Candidate	JOSHUA KURT HIGGINBOTHAM	JOSHUA KURT HIGGINBOTHAM
+Candidate	JOSH MAXWELL	JOSH MAXWELL
+Candidate	JOSH HOLSTEIN	JOSH HOLSTEIN
+Candidate	JOSEPH R. BIDEN	JOSEPH R. BIDEN
+Candidate	JORDAN BRIDGES	JORDAN BRIDGES
+Candidate	JONATHAN ADAM PINSON	JONATHAN ADAM PINSON
+Candidate	JOHNNIE WAMSLEY II	JOHNNIE WAMSLEY II
+Candidate	JOHN WILLIAMS	JOHN WILLIAMS
+Candidate	JOHN R. KELLY	JOHN R. KELLY
+Candidate	JOHN PAUL HOTT II	JOHN PAUL HOTT II
+Candidate	JOHN MANDT	JOHN MANDT
+Candidate	JOHN HARDY	JOHN HARDY
+Candidate	JOHN DOYLE	JOHN DOYLE
+Candidate	JOHN D. PERDUE	JOHN D. PERDUE
+Candidate	JOHN 'JB' MCCUSKEY	JOHN 'JB' MCCUSKEY
+Candidate	JOEY GARCIA	JOEY GARCIA
+Candidate	JOE STATLER	JOE STATLER
+Candidate	JOE JEFFRIES	JOE JEFFRIES
+Candidate	JOE C. ELLINGTON	JOE C. ELLINGTON
+Candidate	JO JORGENSEN	JO JORGENSEN
+Candidate	JIM MARION	JIM MARION
+Candidate	JIM JUSTICE	JIM JUSTICE
+Candidate	JIM BARACH	JIM BARACH
+Candidate	JEFFREY PACK	JEFFREY PACK
+Candidate	JEFF ELDRIDGE	JEFF ELDRIDGE
+Candidate	JEFF CAMPBELL	JEFF CAMPBELL
+Candidate	JEANETTE M. ROWSEY	JEANETTE M. ROWSEY
+Candidate	JASON STEPHENS	JASON STEPHENS
+Candidate	JASON BARRETT	JASON BARRETT
+Candidate	JAROD SHOCKEY	JAROD SHOCKEY
+Candidate	JACK DAVID WOODRUM	JACK DAVID WOODRUM
+Candidate	J. STEVE HAMILTON	J. STEVE HAMILTON
+Candidate	HOWIE HAWKINS	HOWIE HAWKINS
+Candidate	HILARY TURNER	HILARY TURNER
+Candidate	HEATHER TULLY	HEATHER TULLY
+Candidate	GUY WARD	GUY WARD
+Candidate	GLENN D. JEFFRIES	GLENN D. JEFFRIES
+Candidate	GEORGE A MILLER	GEORGE A MILLER
+Candidate	GEOFF FOSTER	GEOFF FOSTER
+Candidate	GARY G. HOWELL	GARY G. HOWELL
+Candidate	EVAN WORRELL	EVAN WORRELL
+Candidate	EVAN HANSEN	EVAN HANSEN
+Candidate	ERIKA KOLENICH	ERIKA KOLENICH
+Candidate	ERIC NELSON	ERIC NELSON
+Candidate	ERIC L. HOUSEHOLDER	ERIC L. HOUSEHOLDER
+Candidate	ELLIOT SIMON	ELLIOT SIMON
+Candidate	ED LARRY	ED LARRY
+Candidate	ED EVANS	ED EVANS
+Candidate	DUANE BRAGG	DUANE BRAGG
+Candidate	DOUG SMITH	DOUG SMITH
+Candidate	DOUG SKAFF	DOUG SKAFF
+Candidate	DOUG FACEMIRE	DOUG FACEMIRE
+Candidate	DONALD KINNIE	DONALD KINNIE
+Candidate	DONALD J. TRUMP	DONALD J. TRUMP
+Candidate	DON FORSHT	DON FORSHT
+Candidate	DIANNA GRAVES	DIANNA GRAVES
+Candidate	DERRICK EVANS	DERRICK EVANS
+Candidate	DENISE CAMPBELL	DENISE CAMPBELL
+Candidate	DEBI CARROLL	DEBI CARROLL
+Candidate	DEAN JEFFRIES	DEAN JEFFRIES
+Candidate	DAVID THOMPSON	DAVID THOMPSON
+Candidate	DAVID RAY CALDWELL	DAVID RAY CALDWELL
+Candidate	DAVID MORAN	DAVID MORAN
+Candidate	DAVID L. KELLY	DAVID L. KELLY
+Candidate	DAVID C. CHILDERS	DAVID C. CHILDERS
+Candidate	DAVID BUGS STOVER	DAVID BUGS STOVER
+Candidate	DAVID B MCKINLEY	DAVID B MCKINLEY
+Candidate	DAVID 'WOODY' HOLMES	DAVID 'WOODY' HOLMES
+Candidate	DAVE PETHTEL	DAVE PETHTEL
+Candidate	DARTON MCINTIRE	DARTON MCINTIRE
+Candidate	DANNY HAMRICK	DANNY HAMRICK
+Candidate	DANIELLE WALKER	DANIELLE WALKER
+Candidate	DANIEL P. 'DANNY' LUTZ	DANIEL P. 'DANNY' LUTZ
+Candidate	DANIEL LINVILLE	DANIEL LINVILLE
+Candidate	DANIEL BENNETT	DANIEL BENNETT
+Candidate	DANA FERRELL	DANA FERRELL
+Candidate	DAKOTA NELSON	DAKOTA NELSON
+Candidate	D.R. BUCK JENNINGS	D.R. BUCK JENNINGS
+Candidate	D. 'SHANNON' KIMES	D. 'SHANNON' KIMES
+Candidate	CRAIG P. BLAIR	CRAIG P. BLAIR
+Candidate	CORY CHASE	CORY CHASE
+Candidate	CODY H THOMPSON	CODY H THOMPSON
+Candidate	CLAY RILEY	CLAY RILEY
+Candidate	CINDY WELCH	CINDY WELCH
+Candidate	CINDY LAVENDER-BOWE	CINDY LAVENDER-BOWE
+Candidate	CINDY FRICH	CINDY FRICH
+Candidate	CHRISTOPHER TONEY	CHRISTOPHER TONEY
+Candidate	CHRISTIAN E. TURAK	CHRISTIAN E. TURAK
+Candidate	CHRIS YEAGER	CHRIS YEAGER
+Candidate	CHRIS WALTERS	CHRIS WALTERS
+Candidate	CHRIS STANSBURY	CHRIS STANSBURY
+Candidate	CHRIS PRITT	CHRIS PRITT
+Candidate	CHRIS PHILLIPS	CHRIS PHILLIPS
+Candidate	CHARLIE REYNOLDS	CHARLIE REYNOLDS
+Candidate	CHARLES R. 'CHAD' SHAFFER	CHARLES R. 'CHAD' SHAFFER
+Candidate	CHARLES K. 'CHUCK' HORST	CHARLES K. 'CHUCK' HORST
+Candidate	CHANDLER SWOPE	CHANDLER SWOPE
+Candidate	CHAD LOVEJOY	CHAD LOVEJOY
+Candidate	CECIL SILVA	CECIL SILVA
+Candidate	CATHY KUNKEL	CATHY KUNKEL
+Candidate	CAROL MILLER	CAROL MILLER
+Candidate	CARL 'ROBBIE' MARTIN	CARL 'ROBBIE' MARTIN
+Candidate	CALEB HANNA	CALEB HANNA
+Candidate	BRYAN C. WARD	BRYAN C. WARD
+Candidate	BRUCE ASHWORTH	BRUCE ASHWORTH
+Candidate	BRETT DAVID ROGERS	BRETT DAVID ROGERS
+Candidate	BRENT BOGGS	BRENT BOGGS
+Candidate	BRANDON STEELE	BRANDON STEELE
+Candidate	BRAD NOLL	BRAD NOLL
+Candidate	BOB BEACH	BOB BEACH
+Candidate	BILL HARTMAN	BILL HARTMAN
+Candidate	BILL ANDERSON	BILL ANDERSON
+Candidate	BEN SALANGO	BEN SALANGO
+Candidate	BEN QUEEN	BEN QUEEN
+Candidate	BARRY L. BRUCE	BARRY L. BRUCE
+Candidate	BARBARA EVANS FLEISCHAUER	BARBARA EVANS FLEISCHAUER
+Candidate	AUSTIN HAYNES	AUSTIN HAYNES
+Candidate	ANNA LEWIS	ANNA LEWIS
+Candidate	ANDREW ROBINSON	ANDREW ROBINSON
+Candidate	ANDREW ALVAREZ	ANDREW ALVAREZ
+Candidate	AMY SUMMERS	AMY SUMMERS
+Candidate	AMY NICHOLE GRADY	AMY NICHOLE GRADY
+Candidate	AMANDA ESTEP-BURTON	AMANDA ESTEP-BURTON
+Candidate	ALEX X MOONEY	ALEX X MOONEY
+Candidate	ADAM BURKHAMMER	ADAM BURKHAMMER
+Candidate	TRAVIS SHULTZ	TRAVIS SHULTZ
+Candidate	SHAWN FLUHARTY	SHAWN FLUHARTY
+Candidate	RYAN W. WELD	RYAN W. WELD
+Candidate	RONNIE D JONES	RONNIE D JONES
+Candidate	ROBERT 'ROBIN' WILSON	ROBERT 'ROBIN' WILSON
+Candidate	RANDY SWARTZMILLER	RANDY SWARTZMILLER
+Candidate	PHILLIP W. DISERIO	PHILLIP W. DISERIO
+Candidate	PAT MCGEEHAN	PAT MCGEEHAN
+Candidate	MIKE MARONEY	MIKE MARONEY
+Candidate	MARK ZATEZALO	MARK ZATEZALO
+Candidate	JOSH GARY	JOSH GARY
+Candidate	JACK WOOD	JACK WOOD
+Candidate	GORDON K. GREER	GORDON K. GREER
+Candidate	ERIKKA STORCH	ERIKKA STORCH
+Candidate	DONNA J BOLEY	DONNA J BOLEY
+Candidate	DALTON HAAS	DALTON HAAS
+Candidate	BENJAMIN SCHNEIDER	BENJAMIN SCHNEIDER
+Candidate	Zack Maynard	Zack Maynard
+Candidate	Zack Maynard	ZACK MAYNARD
+Candidate	Zach Lemaire	Zach Lemaire
+Candidate	Zach Lemaire	ZACH LEMAIRE
+Candidate	Xavier Oglesby	Xavier Oglesby
+Candidate	Xavier Oglesby	XAVIER OGLESBY
+Candidate	William R. Laird Iv	William R. Laird Iv
+Candidate	William R. Laird Iv	WILLIAM R. LAIRD IV
+Candidate	William 'Ty' Nestor	William 'Ty' Nestor
+Candidate	William 'Ty' Nestor	WILLIAM 'TY' NESTOR
+Candidate	Will Hyman	Will Hyman
+Candidate	Will Hyman	WILL HYMAN
+Candidate	Wes R. Payne	Wes R. Payne
+Candidate	Wes R. Payne	WES R. PAYNE
+Candidate	Wayne Clark	Wayne Clark
+Candidate	Wayne Clark	WAYNE CLARK
+Candidate	Vernon Criss	Vernon Criss
+Candidate	Vernon Criss	VERNON CRISS
+Candidate	Tyler Trump	Tyler Trump
+Candidate	Tyler Trump	TYLER TRUMP
+Candidate	Trish Pritchard	Trish Pritchard
+Candidate	Trish Pritchard	TRISH PRITCHARD
+Candidate	Trevor Morris	Trevor Morris
+Candidate	Trevor Morris	TREVOR MORRIS
+Candidate	Trenton Carl Barnhart	Trenton Carl Barnhart
+Candidate	Trenton Carl Barnhart	TRENTON CARL BARNHART
+Candidate	Travis Shultz	Travis Shultz
+Candidate	Travis Shultz	TRAVIS SHULTZ
+Candidate	Tony Paynter	Tony Paynter
+Candidate	Tony Paynter	TONY PAYNTER
+Candidate	Tom Harden	Tom Harden
+Candidate	Tom Harden	TOM HARDEN
+Candidate	Tom Fast	Tom Fast
+Candidate	Tom Fast	TOM FAST
+Candidate	Todd Stainbrook	Todd Stainbrook
+Candidate	Todd Stainbrook	TODD STAINBROOK
+Candidate	Todd Longanacre	Todd Longanacre
+Candidate	Todd Longanacre	TODD LONGANACRE
+Candidate	Tina Russell	Tina Russell
+Candidate	Tina Russell	TINA RUSSELL
+Candidate	Tim Tomblin	Tim Tomblin
+Candidate	Tim Tomblin	TIM TOMBLIN
+Candidate	Theresa 'Tess' Jackson	Theresa 'Tess' Jackson
+Candidate	Theresa 'Tess' Jackson	THERESA 'TESS' JACKSON
+Candidate	Terri Funk Sypolt	Terri Funk Sypolt
+Candidate	Terri Funk Sypolt	TERRI FUNK SYPOLT
+Candidate	Susan Shelton Perry	Susan Shelton Perry
+Candidate	Susan Shelton Perry	SUSAN SHELTON PERRY
+Candidate	Storme Shiley Frame	Storme Shiley Frame
+Candidate	Storme Shiley Frame	STORME SHILEY FRAME
+Candidate	Stevie Thaxton	Stevie Thaxton
+Candidate	Stevie Thaxton	STEVIE THAXTON
+Candidate	Steve Westfall	Steve Westfall
+Candidate	Steve Westfall	STEVE WESTFALL
+Candidate	Shelley Moore Capito	Shelley Moore Capito
+Candidate	Shelley Moore Capito	SHELLEY MOORE CAPITO
+Candidate	Shawn Fluharty	Shawn Fluharty
+Candidate	Shawn Fluharty	SHAWN FLUHARTY
+Candidate	Selina Vickers	Selina Vickers
+Candidate	Selina Vickers	SELINA VICKERS
+Candidate	Sean Hornbuckle	Sean Hornbuckle
+Candidate	Sean Hornbuckle	SEAN HORNBUCKLE
+Candidate	Scott Brewer	Scott Brewer
+Candidate	Scott Brewer	SCOTT BREWER
+Candidate	Sammi Brown	Sammi Brown
+Candidate	Sammi Brown	SAMMI BROWN
+Candidate	Sam Brown Petsonk	Sam Brown Petsonk
+Candidate	Sam Brown Petsonk	SAM BROWN PETSONK
+Candidate	Ryne Nahodil	Ryne Nahodil
+Candidate	Ryne Nahodil	RYNE NAHODIL
+Candidate	Ryan W. Weld	Ryan W. Weld
+Candidate	Ryan W. Weld	RYAN W. WELD
+Candidate	Ryan Deems	Ryan Deems
+Candidate	Ryan Deems	RYAN DEEMS
+Candidate	Ruth Rowan	Ruth Rowan
+Candidate	Ruth Rowan	RUTH ROWAN
+Candidate	Rusty Williams	Rusty Williams
+Candidate	Rusty Williams	RUSTY WILLIAMS
+Candidate	Rupie Phillips	Rupie Phillips
+Candidate	Rupie Phillips	RUPIE PHILLIPS
+Candidate	Roy G Cooper	Roy G Cooper
+Candidate	Roy G Cooper	ROY G COOPER
+Candidate	Ronnie D Jones	Ronnie D Jones
+Candidate	Ronnie D Jones	RONNIE D JONES
+Candidate	Ronald J Straight	Ronald J Straight
+Candidate	Ronald J Straight	RONALD J STRAIGHT
+Candidate	Roger Hanshaw	Roger Hanshaw
+Candidate	Roger Hanshaw	ROGER HANSHAW
+Candidate	Roger Conley	Roger Conley
+Candidate	Roger Conley	ROGER CONLEY
+Candidate	Rodney A. Miller	Rodney A. Miller
+Candidate	Rodney A. Miller	RODNEY A. MILLER
+Candidate	Rodney A Pyles	Rodney A Pyles
+Candidate	Rodney A Pyles	RODNEY A PYLES
+Candidate	Robin Cutlip	Robin Cutlip
+Candidate	Robin Cutlip	ROBIN CUTLIP
+Candidate	Robert Lee Karnes	Robert Lee Karnes
+Candidate	Robert Lee Karnes	ROBERT LEE KARNES
+Candidate	Robert H 'Bob' Plymale	Robert H 'Bob' Plymale
+Candidate	Robert H 'Bob' Plymale	ROBERT H 'BOB' PLYMALE
+Candidate	Robert E. Smith	Robert E. Smith
+Candidate	Robert E. Smith	ROBERT E. SMITH
+Candidate	Robert 'Robin' Wilson	Robert 'Robin' Wilson
+Candidate	Robert 'Robin' Wilson	ROBERT 'ROBIN' WILSON
+Candidate	Robert 'Rob' Garcia	Robert 'Rob' Garcia
+Candidate	Robert 'Rob' Garcia	ROBERT 'ROB' GARCIA
+Candidate	Robert ' Bob' Stultz	Robert ' Bob' Stultz
+Candidate	Robert ' Bob' Stultz	ROBERT ' BOB' STULTZ
+Candidate	Riley Moore	Riley Moore
+Candidate	Riley Moore	RILEY MOORE
+Candidate	Richard J Iaquinta	Richard J Iaquinta
+Candidate	Richard J Iaquinta	RICHARD J IAQUINTA
+Candidate	Ric Griffith	Ric Griffith
+Candidate	Ric Griffith	RIC GRIFFITH
+Candidate	Rebecca Polis	Rebecca Polis
+Candidate	Rebecca Polis	REBECCA POLIS
+Candidate	Randy Swartzmiller	Randy Swartzmiller
+Candidate	Randy Swartzmiller	RANDY SWARTZMILLER
+Candidate	Randy E Smith	Randy E Smith
+Candidate	Randy E Smith	RANDY E SMITH
+Candidate	Ralph Rodighiero	Ralph Rodighiero
+Candidate	Ralph Rodighiero	RALPH RODIGHIERO
+Candidate	Phyllis White	Phyllis White
+Candidate	Phyllis White	PHYLLIS WHITE
+Candidate	Phillip W. Diserio	Phillip W. Diserio
+Candidate	Phillip W. Diserio	PHILLIP W. DISERIO
+Candidate	Phillip W Wiley	Phillip W Wiley
+Candidate	Phillip W Wiley	PHILLIP W WILEY
+Candidate	Phil Mallow	Phil Mallow
+Candidate	Phil Mallow	PHIL MALLOW
+Candidate	Pete Dougherty	Pete Dougherty
+Candidate	Pete Dougherty	PETE DOUGHERTY
+Candidate	Paula Jean Swearengin	Paula Jean Swearengin
+Candidate	Paula Jean Swearengin	PAULA JEAN SWEARENGIN
+Candidate	Paul Espinosa	Paul Espinosa
+Candidate	Paul Espinosa	PAUL ESPINOSA
+Candidate	Paul David Ross	Paul David Ross
+Candidate	Paul David Ross	PAUL DAVID ROSS
+Candidate	Patrick S Martin	Patrick S Martin
+Candidate	Patrick S Martin	PATRICK S MARTIN
+Candidate	Patrick Morrisey	Patrick Morrisey
+Candidate	Patrick Morrisey	PATRICK MORRISEY
+Candidate	Patricia Rucker	Patricia Rucker
+Candidate	Patricia Rucker	PATRICIA RUCKER
+Candidate	Patricia 'Patch' Adams	Patricia 'Patch' Adams
+Candidate	Patricia 'Patch' Adams	PATRICIA 'PATCH' ADAMS
+Candidate	Pat Mcgeehan	Pat Mcgeehan
+Candidate	Pat Mcgeehan	PAT MCGEEHAN
+Candidate	Nikki Ardman	Nikki Ardman
+Candidate	Nikki Ardman	NIKKI ARDMAN
+Candidate	Nathan D. Brown	Nathan D. Brown
+Candidate	Nathan D. Brown	NATHAN D. BROWN
+Candidate	Natalie Tennant	Natalie Tennant
+Candidate	Natalie Tennant	NATALIE TENNANT
+Candidate	Natalie Cline	Natalie Cline
+Candidate	Natalie Cline	NATALIE CLINE
+Candidate	N. Riley Keaton	N. Riley Keaton
+Candidate	N. Riley Keaton	N. RILEY KEATON
+Candidate	Moore Capito	Moore Capito
+Candidate	Moore Capito	MOORE CAPITO
+Candidate	Mike Pushkin	Mike Pushkin
+Candidate	Mike Pushkin	MIKE PUSHKIN
+Candidate	Mike Maroney	Mike Maroney
+Candidate	Mike Maroney	MIKE MARONEY
+Candidate	Mike Manypenny	Mike Manypenny
+Candidate	Mike Manypenny	MIKE MANYPENNY
+Candidate	Mike Caputo	Mike Caputo
+Candidate	Mike Caputo	MIKE CAPUTO
+Candidate	Mick Bates	Mick Bates
+Candidate	Mick Bates	MICK BATES
+Candidate	Michael Lockard	Michael Lockard
+Candidate	Michael Lockard	MICHAEL LOCKARD
+Candidate	Michael Angelucci	Michael Angelucci
+Candidate	Michael Angelucci	MICHAEL ANGELUCCI
+Candidate	Michael A Young	Michael A Young
+Candidate	Michael A Young	MICHAEL A YOUNG
+Candidate	Matthew W. Deskins	Matthew W. Deskins
+Candidate	Matthew W. Deskins	MATTHEW W. DESKINS
+Candidate	Matthew Rohrbach	Matthew Rohrbach
+Candidate	Matthew Rohrbach	MATTHEW ROHRBACH
+Candidate	Mary Kinnie	Mary Kinnie
+Candidate	Mary Kinnie	MARY KINNIE
+Candidate	Mary Ann Roebuck Claytor	Mary Ann Roebuck Claytor
+Candidate	Mary Ann Roebuck Claytor	MARY ANN ROEBUCK CLAYTOR
+Candidate	Marty Gearheart	Marty Gearheart
+Candidate	Marty Gearheart	MARTY GEARHEART
+Candidate	Mark Zatezalo	Mark Zatezalo
+Candidate	Mark Zatezalo	MARK ZATEZALO
+Candidate	Mark Rennix	Mark Rennix
+Candidate	Mark Rennix	MARK RENNIX
+Candidate	Mark Pauley	Mark Pauley
+Candidate	Mark Pauley	MARK PAULEY
+Candidate	Mark Dean	Mark Dean
+Candidate	Mark Dean	MARK DEAN
+Candidate	Mark Bates	Mark Bates
+Candidate	Mark Bates	MARK BATES
+Candidate	Mark A. Hurt	Mark A. Hurt
+Candidate	Mark A. Hurt	MARK A. HURT
+Candidate	Margitta Mazzocchi	Margitta Mazzocchi
+Candidate	Margitta Mazzocchi	MARGITTA MAZZOCCHI
+Candidate	Margaret Anne Staggers	Margaret Anne Staggers
+Candidate	Margaret Anne Staggers	MARGARET ANNE STAGGERS
+Candidate	Mac Warner	Mac Warner
+Candidate	Mac Warner	MAC WARNER
+Candidate	Luke Winters	Luke Winters
+Candidate	Luke Winters	LUKE WINTERS
+Candidate	Loyd Butcher	Loyd Butcher
+Candidate	Loyd Butcher	LOYD BUTCHER
+Candidate	Lisa Zukoff	Lisa Zukoff
+Candidate	Lisa Zukoff	LISA ZUKOFF
+Candidate	Leatha Williams	Leatha Williams
+Candidate	Leatha Williams	LEATHA WILLIAMS
+Candidate	Laura Kimble	Laura Kimble
+Candidate	Laura Kimble	LAURA KIMBLE
+Candidate	Larry Pack	Larry Pack
+Candidate	Larry Pack	LARRY PACK
+Candidate	Larry L. Rowe	Larry L. Rowe
+Candidate	Larry L. Rowe	LARRY L. ROWE
+Candidate	Larry Cottrell	Larry Cottrell
+Candidate	Larry Cottrell	LARRY COTTRELL
+Candidate	Kim Mongan-Saladini	Kim Mongan-Saladini
+Candidate	Kim Mongan-Saladini	KIM MONGAN-SALADINI
+Candidate	Kent Leonhardt	Kent Leonhardt
+Candidate	Kent Leonhardt	KENT LEONHARDT
+Candidate	Ken Reed	Ken Reed
+Candidate	Ken Reed	KEN REED
+Candidate	Kayla Young	Kayla Young
+Candidate	Kayla Young	KAYLA YOUNG
+Candidate	Kayla Kessinger	Kayla Kessinger
+Candidate	Kayla Kessinger	KAYLA KESSINGER
+Candidate	Kathy Ferguson	Kathy Ferguson
+Candidate	Kathy Ferguson	KATHY FERGUSON
+Candidate	Kathie Hess Crouse	Kathie Hess Crouse
+Candidate	Kathie Hess Crouse	KATHIE HESS CROUSE
+Candidate	Justin S. White	Justin S. White
+Candidate	Justin S. White	JUSTIN S. WHITE
+Candidate	Junior 'Jr' Wolfe	Junior 'Jr' Wolfe
+Candidate	Junior 'Jr' Wolfe	JUNIOR 'JR' WOLFE
+Candidate	Joshua Kurt Higginbotham	Joshua Kurt Higginbotham
+Candidate	Joshua Kurt Higginbotham	JOSHUA KURT HIGGINBOTHAM
+Candidate	Josh Maxwell	Josh Maxwell
+Candidate	Josh Maxwell	JOSH MAXWELL
+Candidate	Josh Holstein	Josh Holstein
+Candidate	Josh Holstein	JOSH HOLSTEIN
+Candidate	Josh Gary	Josh Gary
+Candidate	Josh Gary	JOSH GARY
+Candidate	Joseph R. Biden	Joseph R. Biden
+Candidate	Joseph R. Biden	JOSEPH R. BIDEN
+Candidate	Jordan Bridges	Jordan Bridges
+Candidate	Jordan Bridges	JORDAN BRIDGES
+Candidate	Jonathan Adam Pinson	Jonathan Adam Pinson
+Candidate	Jonathan Adam Pinson	JONATHAN ADAM PINSON
+Candidate	Johnnie Wamsley Ii	Johnnie Wamsley Ii
+Candidate	Johnnie Wamsley Ii	JOHNNIE WAMSLEY II
+Candidate	John Williams	John Williams
+Candidate	John Williams	JOHN WILLIAMS
+Candidate	John R. Kelly	John R. Kelly
+Candidate	John R. Kelly	JOHN R. KELLY
+Candidate	John Paul Hott Ii	John Paul Hott Ii
+Candidate	John Paul Hott Ii	JOHN PAUL HOTT II
+Candidate	John Mandt	John Mandt
+Candidate	John Mandt	JOHN MANDT
+Candidate	John Hardy	John Hardy
+Candidate	John Hardy	JOHN HARDY
+Candidate	John Doyle	John Doyle
+Candidate	John Doyle	JOHN DOYLE
+Candidate	John D. Perdue	John D. Perdue
+Candidate	John D. Perdue	JOHN D. PERDUE
+Candidate	John 'Jb' Mccuskey	John 'Jb' Mccuskey
+Candidate	John 'Jb' Mccuskey	JOHN 'JB' MCCUSKEY
+Candidate	Joey Garcia	Joey Garcia
+Candidate	Joey Garcia	JOEY GARCIA
+Candidate	Joe Statler	Joe Statler
+Candidate	Joe Statler	JOE STATLER
+Candidate	Joe Jeffries	Joe Jeffries
+Candidate	Joe Jeffries	JOE JEFFRIES
+Candidate	Joe C. Ellington	Joe C. Ellington
+Candidate	Joe C. Ellington	JOE C. ELLINGTON
+Candidate	Jo Jorgensen	Jo Jorgensen
+Candidate	Jo Jorgensen	JO JORGENSEN
+Candidate	Jim Marion	Jim Marion
+Candidate	Jim Marion	JIM MARION
+Candidate	Jim Justice	Jim Justice
+Candidate	Jim Justice	JIM JUSTICE
+Candidate	Jim Barach	Jim Barach
+Candidate	Jim Barach	JIM BARACH
+Candidate	Jeffrey Pack	Jeffrey Pack
+Candidate	Jeffrey Pack	JEFFREY PACK
+Candidate	Jeff Eldridge	Jeff Eldridge
+Candidate	Jeff Eldridge	JEFF ELDRIDGE
+Candidate	Jeff Campbell	Jeff Campbell
+Candidate	Jeff Campbell	JEFF CAMPBELL
+Candidate	Jeanette M. Rowsey	Jeanette M. Rowsey
+Candidate	Jeanette M. Rowsey	JEANETTE M. ROWSEY
+Candidate	Jason Stephens	Jason Stephens
+Candidate	Jason Stephens	JASON STEPHENS
+Candidate	Jason Barrett	Jason Barrett
+Candidate	Jason Barrett	JASON BARRETT
+Candidate	Jarod Shockey	Jarod Shockey
+Candidate	Jarod Shockey	JAROD SHOCKEY
+Candidate	Jack Wood	Jack Wood
+Candidate	Jack Wood	JACK WOOD
+Candidate	Jack David Woodrum	Jack David Woodrum
+Candidate	Jack David Woodrum	JACK DAVID WOODRUM
+Candidate	J. Steve Hamilton	J. Steve Hamilton
+Candidate	J. Steve Hamilton	J. STEVE HAMILTON
+Candidate	Howie Hawkins	Howie Hawkins
+Candidate	Howie Hawkins	HOWIE HAWKINS
+Candidate	Hilary Turner	Hilary Turner
+Candidate	Hilary Turner	HILARY TURNER
+Candidate	Heather Tully	Heather Tully
+Candidate	Heather Tully	HEATHER TULLY
+Candidate	Guy Ward	Guy Ward
+Candidate	Guy Ward	GUY WARD
+Candidate	Gordon K. Greer	Gordon K. Greer
+Candidate	Gordon K. Greer	GORDON K. GREER
+Candidate	Glenn D. Jeffries	Glenn D. Jeffries
+Candidate	Glenn D. Jeffries	GLENN D. JEFFRIES
+Candidate	George A Miller	George A Miller
+Candidate	George A Miller	GEORGE A MILLER
+Candidate	Geoff Foster	Geoff Foster
+Candidate	Geoff Foster	GEOFF FOSTER
+Candidate	Gary G. Howell	Gary G. Howell
+Candidate	Gary G. Howell	GARY G. HOWELL
+Candidate	Evan Worrell	Evan Worrell
+Candidate	Evan Worrell	EVAN WORRELL
+Candidate	Evan Hansen	Evan Hansen
+Candidate	Evan Hansen	EVAN HANSEN
+Candidate	Erikka Storch	Erikka Storch
+Candidate	Erikka Storch	ERIKKA STORCH
+Candidate	Erika Kolenich	Erika Kolenich
+Candidate	Erika Kolenich	ERIKA KOLENICH
+Candidate	Eric Nelson	Eric Nelson
+Candidate	Eric Nelson	ERIC NELSON
+Candidate	Eric L. Householder	Eric L. Householder
+Candidate	Eric L. Householder	ERIC L. HOUSEHOLDER
+Candidate	Elliot Simon	Elliot Simon
+Candidate	Elliot Simon	ELLIOT SIMON
+Candidate	Ed Larry	Ed Larry
+Candidate	Ed Larry	ED LARRY
+Candidate	Ed Evans	Ed Evans
+Candidate	Ed Evans	ED EVANS
+Candidate	Duane Bragg	Duane Bragg
+Candidate	Duane Bragg	DUANE BRAGG
+Candidate	Doug Smith	Doug Smith
+Candidate	Doug Smith	DOUG SMITH
+Candidate	Doug Skaff	Doug Skaff
+Candidate	Doug Skaff	DOUG SKAFF
+Candidate	Doug Facemire	Doug Facemire
+Candidate	Doug Facemire	DOUG FACEMIRE
+Candidate	Donna J Boley	Donna J Boley
+Candidate	Donna J Boley	DONNA J BOLEY
+Candidate	Donald Kinnie	Donald Kinnie
+Candidate	Donald Kinnie	DONALD KINNIE
+Candidate	Donald J. Trump	Donald J. Trump
+Candidate	Donald J. Trump	DONALD J. TRUMP
+Candidate	Don Forsht	Don Forsht
+Candidate	Don Forsht	DON FORSHT
+Candidate	Dianna Graves	Dianna Graves
+Candidate	Dianna Graves	DIANNA GRAVES
+Candidate	Derrick Evans	Derrick Evans
+Candidate	Derrick Evans	DERRICK EVANS
+Candidate	Denise Campbell	Denise Campbell
+Candidate	Denise Campbell	DENISE CAMPBELL
+Candidate	Debi Carroll	Debi Carroll
+Candidate	Debi Carroll	DEBI CARROLL
+Candidate	Dean Jeffries	Dean Jeffries
+Candidate	Dean Jeffries	DEAN JEFFRIES
+Candidate	David Thompson	David Thompson
+Candidate	David Thompson	DAVID THOMPSON
+Candidate	David Ray Caldwell	David Ray Caldwell
+Candidate	David Ray Caldwell	DAVID RAY CALDWELL
+Candidate	David Moran	David Moran
+Candidate	David Moran	DAVID MORAN
+Candidate	David L. Kelly	David L. Kelly
+Candidate	David L. Kelly	DAVID L. KELLY
+Candidate	David C. Childers	David C. Childers
+Candidate	David C. Childers	DAVID C. CHILDERS
+Candidate	David Bugs Stover	David Bugs Stover
+Candidate	David Bugs Stover	DAVID BUGS STOVER
+Candidate	David B Mckinley	David B Mckinley
+Candidate	David B Mckinley	DAVID B MCKINLEY
+Candidate	David 'Woody' Holmes	David 'Woody' Holmes
+Candidate	David 'Woody' Holmes	DAVID 'WOODY' HOLMES
+Candidate	Dave Pethtel	Dave Pethtel
+Candidate	Dave Pethtel	DAVE PETHTEL
+Candidate	Darton Mcintire	Darton Mcintire
+Candidate	Darton Mcintire	DARTON MCINTIRE
+Candidate	Danny Hamrick	Danny Hamrick
+Candidate	Danny Hamrick	DANNY HAMRICK
+Candidate	Danielle Walker	Danielle Walker
+Candidate	Danielle Walker	DANIELLE WALKER
+Candidate	Daniel P. 'Danny' Lutz	Daniel P. 'Danny' Lutz
+Candidate	Daniel P. 'Danny' Lutz	DANIEL P. 'DANNY' LUTZ
+Candidate	Daniel Linville	Daniel Linville
+Candidate	Daniel Linville	DANIEL LINVILLE
+Candidate	Daniel Bennett	Daniel Bennett
+Candidate	Daniel Bennett	DANIEL BENNETT
+Candidate	Dana Ferrell	Dana Ferrell
+Candidate	Dana Ferrell	DANA FERRELL
+Candidate	Dalton Haas	Dalton Haas
+Candidate	Dalton Haas	DALTON HAAS
+Candidate	Dakota Nelson	Dakota Nelson
+Candidate	Dakota Nelson	DAKOTA NELSON
+Candidate	D.R. Buck Jennings	D.R. Buck Jennings
+Candidate	D.R. Buck Jennings	D.R. BUCK JENNINGS
+Candidate	D. 'Shannon' Kimes	D. 'Shannon' Kimes
+Candidate	D. 'Shannon' Kimes	D. 'SHANNON' KIMES
+Candidate	Craig P. Blair	Craig P. Blair
+Candidate	Craig P. Blair	CRAIG P. BLAIR
+Candidate	Cory Chase	Cory Chase
+Candidate	Cory Chase	CORY CHASE
+Candidate	Cody H Thompson	Cody H Thompson
+Candidate	Cody H Thompson	CODY H THOMPSON
+Candidate	Clay Riley	Clay Riley
+Candidate	Clay Riley	CLAY RILEY
+Candidate	Cindy Welch	Cindy Welch
+Candidate	Cindy Welch	CINDY WELCH
+Candidate	Cindy Lavender-Bowe	Cindy Lavender-Bowe
+Candidate	Cindy Lavender-Bowe	CINDY LAVENDER-BOWE
+Candidate	Cindy Frich	Cindy Frich
+Candidate	Cindy Frich	CINDY FRICH
+Candidate	Christopher Toney	Christopher Toney
+Candidate	Christopher Toney	CHRISTOPHER TONEY
+Candidate	Christian E. Turak	Christian E. Turak
+Candidate	Christian E. Turak	CHRISTIAN E. TURAK
+Candidate	Chris Yeager	Chris Yeager
+Candidate	Chris Yeager	CHRIS YEAGER
+Candidate	Chris Walters	Chris Walters
+Candidate	Chris Walters	CHRIS WALTERS
+Candidate	Chris Stansbury	Chris Stansbury
+Candidate	Chris Stansbury	CHRIS STANSBURY
+Candidate	Chris Pritt	Chris Pritt
+Candidate	Chris Pritt	CHRIS PRITT
+Candidate	Chris Phillips	Chris Phillips
+Candidate	Chris Phillips	CHRIS PHILLIPS
+Candidate	Charlie Reynolds	Charlie Reynolds
+Candidate	Charlie Reynolds	CHARLIE REYNOLDS
+Candidate	Charles R. 'Chad' Shaffer	Charles R. 'Chad' Shaffer
+Candidate	Charles R. 'Chad' Shaffer	CHARLES R. 'CHAD' SHAFFER
+Candidate	Charles K. 'Chuck' Horst	Charles K. 'Chuck' Horst
+Candidate	Charles K. 'Chuck' Horst	CHARLES K. 'CHUCK' HORST
+Candidate	Chandler Swope	Chandler Swope
+Candidate	Chandler Swope	CHANDLER SWOPE
+Candidate	Chad Lovejoy	Chad Lovejoy
+Candidate	Chad Lovejoy	CHAD LOVEJOY
+Candidate	Cecil Silva	Cecil Silva
+Candidate	Cecil Silva	CECIL SILVA
+Candidate	Cathy Kunkel	Cathy Kunkel
+Candidate	Cathy Kunkel	CATHY KUNKEL
+Candidate	Carol Miller	Carol Miller
+Candidate	Carol Miller	CAROL MILLER
+Candidate	Carl 'Robbie' Martin	Carl 'Robbie' Martin
+Candidate	Carl 'Robbie' Martin	CARL 'ROBBIE' MARTIN
+Candidate	Caleb Hanna	Caleb Hanna
+Candidate	Caleb Hanna	CALEB HANNA
+Candidate	Bryan C. Ward	Bryan C. Ward
+Candidate	Bryan C. Ward	BRYAN C. WARD
+Candidate	Bruce Ashworth	Bruce Ashworth
+Candidate	Bruce Ashworth	BRUCE ASHWORTH
+Candidate	Brett David Rogers	Brett David Rogers
+Candidate	Brett David Rogers	BRETT DAVID ROGERS
+Candidate	Brent Boggs	Brent Boggs
+Candidate	Brent Boggs	BRENT BOGGS
+Candidate	Brandon Steele	Brandon Steele
+Candidate	Brandon Steele	BRANDON STEELE
+Candidate	Brad Noll	Brad Noll
+Candidate	Brad Noll	BRAD NOLL
+Candidate	Bob Beach	Bob Beach
+Candidate	Bob Beach	BOB BEACH
+Candidate	Bill Hartman	Bill Hartman
+Candidate	Bill Hartman	BILL HARTMAN
+Candidate	Bill Anderson	Bill Anderson
+Candidate	Bill Anderson	BILL ANDERSON
+Candidate	Benjamin Schneider	Benjamin Schneider
+Candidate	Benjamin Schneider	BENJAMIN SCHNEIDER
+Candidate	Ben Salango	Ben Salango
+Candidate	Ben Salango	BEN SALANGO
+Candidate	Ben Queen	Ben Queen
+Candidate	Ben Queen	BEN QUEEN
+Candidate	Barry L. Bruce	Barry L. Bruce
+Candidate	Barry L. Bruce	BARRY L. BRUCE
+Candidate	Barbara Evans Fleischauer	Barbara Evans Fleischauer
+Candidate	Barbara Evans Fleischauer	BARBARA EVANS FLEISCHAUER
+Candidate	Austin Haynes	Austin Haynes
+Candidate	Austin Haynes	AUSTIN HAYNES
+Candidate	Anna Lewis	Anna Lewis
+Candidate	Anna Lewis	ANNA LEWIS
+Candidate	Andrew Robinson	Andrew Robinson
+Candidate	Andrew Robinson	ANDREW ROBINSON
+Candidate	Andrew Alvarez	Andrew Alvarez
+Candidate	Andrew Alvarez	ANDREW ALVAREZ
+Candidate	Amy Summers	Amy Summers
+Candidate	Amy Summers	AMY SUMMERS
+Candidate	Amy Nichole Grady	Amy Nichole Grady
+Candidate	Amy Nichole Grady	AMY NICHOLE GRADY
+Candidate	Amanda Estep-Burton	Amanda Estep-Burton
+Candidate	Amanda Estep-Burton	AMANDA ESTEP-BURTON
+Candidate	Alex X Mooney	Alex X Mooney
+Candidate	Alex X Mooney	ALEX X MOONEY
+Candidate	Adam Burkhammer	Adam Burkhammer
+Candidate	Adam Burkhammer	ADAM BURKHAMMER

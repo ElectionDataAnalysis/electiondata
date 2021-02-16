@@ -1,0 +1,465 @@
+cdf_element	cdf_internal_name	raw_identifier_value
+CandidateContest	HI House District 1	State Representative, Dist 1
+CandidateContest	HI House District 2	State Representative, Dist 2
+CandidateContest	HI House District 3	State Representative, Dist 3
+CandidateContest	HI House District 4	State Representative, Dist 4
+CandidateContest	HI House District 5	State Representative, Dist 5
+CandidateContest	HI House District 6	State Representative, Dist 6
+CandidateContest	HI House District 7	State Representative, Dist 7
+CandidateContest	HI House District 8	State Representative, Dist 8
+CandidateContest	HI House District 9	State Representative, Dist 9
+CandidateContest	HI House District 10	State Representative, Dist 10
+CandidateContest	HI House District 11	State Representative, Dist 11
+CandidateContest	HI House District 12	State Representative, Dist 12
+CandidateContest	HI House District 13	State Representative, Dist 13
+CandidateContest	HI House District 14	State Representative, Dist 14
+CandidateContest	HI House District 15	State Representative, Dist 15
+CandidateContest	HI House District 16	State Representative, Dist 16
+CandidateContest	HI House District 17	State Representative, Dist 17
+CandidateContest	HI House District 18	State Representative, Dist 18
+CandidateContest	HI House District 19	State Representative, Dist 19
+CandidateContest	HI House District 20	State Representative, Dist 20
+CandidateContest	HI House District 21	State Representative, Dist 21
+CandidateContest	HI House District 22	State Representative, Dist 22
+CandidateContest	HI House District 23	State Representative, Dist 23
+CandidateContest	HI House District 24	State Representative, Dist 24
+CandidateContest	HI House District 25	State Representative, Dist 25
+CandidateContest	HI House District 26	State Representative, Dist 26
+CandidateContest	HI House District 27	State Representative, Dist 27
+CandidateContest	HI House District 28	State Representative, Dist 28
+CandidateContest	HI House District 29	State Representative, Dist 29
+CandidateContest	HI House District 30	State Representative, Dist 30
+CandidateContest	HI House District 31	State Representative, Dist 31
+CandidateContest	HI House District 32	State Representative, Dist 32
+CandidateContest	HI House District 33	State Representative, Dist 33
+CandidateContest	HI House District 34	State Representative, Dist 34
+CandidateContest	HI House District 35	State Representative, Dist 35
+CandidateContest	HI House District 36	State Representative, Dist 36
+CandidateContest	HI House District 37	State Representative, Dist 37
+CandidateContest	HI House District 38	State Representative, Dist 38
+CandidateContest	HI House District 39	State Representative, Dist 39
+CandidateContest	HI House District 40	State Representative, Dist 40
+CandidateContest	HI House District 41	State Representative, Dist 41
+CandidateContest	HI House District 42	State Representative, Dist 42
+CandidateContest	HI House District 43	State Representative, Dist 43
+CandidateContest	HI House District 44	State Representative, Dist 44
+CandidateContest	HI House District 45	State Representative, Dist 45
+CandidateContest	HI House District 46	State Representative, Dist 46
+CandidateContest	HI House District 47	State Representative, Dist 47
+CandidateContest	HI House District 48	State Representative, Dist 48
+CandidateContest	HI House District 49	State Representative, Dist 49
+CandidateContest	HI House District 50	State Representative, Dist 50
+CandidateContest	HI House District 51	State Representative, Dist 51
+CandidateContest	HI Senate District 1	State Senator, Dist 1
+CandidateContest	HI Senate District 2	State Senator, Dist 2
+CandidateContest	HI Senate District 3	State Senator, Dist 3
+CandidateContest	HI Senate District 4	State Senator, Dist 4
+CandidateContest	HI Senate District 5	State Senator, Dist 5
+CandidateContest	HI Senate District 6	State Senator, Dist 6
+CandidateContest	HI Senate District 7	State Senator, Dist 7
+CandidateContest	HI Senate District 8	State Senator, Dist 8
+CandidateContest	HI Senate District 9	State Senator, Dist 9
+CandidateContest	HI Senate District 10	State Senator, Dist 10
+CandidateContest	HI Senate District 11	State Senator, Dist 11
+CandidateContest	HI Senate District 12	State Senator, Dist 12
+CandidateContest	HI Senate District 13	State Senator, Dist 13
+CandidateContest	HI Senate District 14	State Senator, Dist 14
+CandidateContest	HI Senate District 15	State Senator, Dist 15
+CandidateContest	HI Senate District 16	State Senator, Dist 16
+CandidateContest	HI Senate District 17	State Senator, Dist 17
+CandidateContest	HI Senate District 18	State Senator, Dist 18
+CandidateContest	HI Senate District 19	State Senator, Dist 19
+CandidateContest	HI Senate District 20	State Senator, Dist 20
+CandidateContest	HI Senate District 21	State Senator, Dist 21
+CandidateContest	HI Senate District 22	State Senator, Dist 22
+CandidateContest	HI Senate District 23	State Senator, Dist 23
+CandidateContest	HI Senate District 24	State Senator, Dist 24
+CandidateContest	HI Senate District 25	State Senator, Dist 25
+CandidateContest	US House HI District 1	U.S. Representative, Dist I
+CandidateContest	US House HI District 2	U.S. Representative, Dist II
+CandidateContest	US President (HI)	President and Vice President
+CandidateContest	HI Governor	HI Governor
+CandidateContest	US Senate HI	US Senate HI
+CandidateContest	HI Attorney General	HI Attorney General
+CandidateContest	HI Lieutenant Governor	HI Lieutenant Governor
+CandidateContest	HI Treasurer	HI Treasurer
+CandidateContest	HI Secretary of State	HI Secretary of State
+Election	2020 General	2020 General
+Election	2020 Primary	2020 Primary
+Election	2018 General	2018 General
+Election	2016 General	2016 General
+Party	Democratic Party	D
+Party	Republican Party	R
+Party	Green Party	G
+Party	Libertarian Party	L
+Party	Nonpartisan	N
+Party	Constitution Party	C
+Party	Aloha Aina Party	A
+Party	S	S
+Party	American Shopping Party	AS
+ReportingUnit	Hawaii	Hawaii
+ReportingUnit	Hawaii;Honolulu County;Precinct 17-01	17-01
+ReportingUnit	Hawaii;Honolulu County;Precinct 17-02	17-02
+ReportingUnit	Hawaii;Honolulu County;Precinct 17-03	17-03
+ReportingUnit	Hawaii;Honolulu County;Precinct 17-04	17-04
+ReportingUnit	Hawaii;Honolulu County;Precinct 18-01	18-01
+ReportingUnit	Hawaii;Honolulu County;Precinct 18-02	18-02
+ReportingUnit	Hawaii;Honolulu County;Precinct 18-03	18-03
+ReportingUnit	Hawaii;Honolulu County;Precinct 18-04	18-04
+ReportingUnit	Hawaii;Honolulu County;Precinct 19-01	19-01
+ReportingUnit	Hawaii;Honolulu County;Precinct 19-02	19-02
+ReportingUnit	Hawaii;Honolulu County;Precinct 19-03	19-03
+ReportingUnit	Hawaii;Honolulu County;Precinct 19-04	19-04
+ReportingUnit	Hawaii;Honolulu County;Precinct 19-05	19-05
+ReportingUnit	Hawaii;Honolulu County;Precinct 20-01	20-01
+ReportingUnit	Hawaii;Honolulu County;Precinct 20-02	20-02
+ReportingUnit	Hawaii;Honolulu County;Precinct 20-03	20-03
+ReportingUnit	Hawaii;Honolulu County;Precinct 20-04	20-04
+ReportingUnit	Hawaii;Honolulu County;Precinct 21-01	21-01
+ReportingUnit	Hawaii;Honolulu County;Precinct 21-02	21-02
+ReportingUnit	Hawaii;Honolulu County;Precinct 21-03	21-03
+ReportingUnit	Hawaii;Honolulu County;Precinct 21-04	21-04
+ReportingUnit	Hawaii;Honolulu County;Precinct 22-01	22-01
+ReportingUnit	Hawaii;Honolulu County;Precinct 22-02	22-02
+ReportingUnit	Hawaii;Honolulu County;Precinct 22-03	22-03
+ReportingUnit	Hawaii;Honolulu County;Precinct 23-01	23-01
+ReportingUnit	Hawaii;Honolulu County;Precinct 23-02	23-02
+ReportingUnit	Hawaii;Honolulu County;Precinct 23-03	23-03
+ReportingUnit	Hawaii;Honolulu County;Precinct 23-04	23-04
+ReportingUnit	Hawaii;Honolulu County;Precinct 23-05	23-05
+ReportingUnit	Hawaii;Honolulu County;Precinct 24-01	24-01
+ReportingUnit	Hawaii;Honolulu County;Precinct 24-02	24-02
+ReportingUnit	Hawaii;Honolulu County;Precinct 24-03	24-03
+ReportingUnit	Hawaii;Honolulu County;Precinct 24-04	24-04
+ReportingUnit	Hawaii;Honolulu County;Precinct 25-01	25-01
+ReportingUnit	Hawaii;Honolulu County;Precinct 25-02	25-02
+ReportingUnit	Hawaii;Honolulu County;Precinct 25-03	25-03
+ReportingUnit	Hawaii;Honolulu County;Precinct 25-04	25-04
+ReportingUnit	Hawaii;Honolulu County;Precinct 25-05	25-05
+ReportingUnit	Hawaii;Honolulu County;Precinct 26-01	26-01
+ReportingUnit	Hawaii;Honolulu County;Precinct 26-02	26-02
+ReportingUnit	Hawaii;Honolulu County;Precinct 26-03	26-03
+ReportingUnit	Hawaii;Honolulu County;Precinct 26-04	26-04
+ReportingUnit	Hawaii;Honolulu County;Precinct 26-05	26-05
+ReportingUnit	Hawaii;Honolulu County;Precinct 26-06	26-06
+ReportingUnit	Hawaii;Honolulu County;Precinct 26-07	26-07
+ReportingUnit	Hawaii;Honolulu County;Precinct 27-01	27-01
+ReportingUnit	Hawaii;Honolulu County;Precinct 27-02	27-02
+ReportingUnit	Hawaii;Honolulu County;Precinct 27-03	27-03
+ReportingUnit	Hawaii;Honolulu County;Precinct 27-04	27-04
+ReportingUnit	Hawaii;Honolulu County;Precinct 27-05	27-05
+ReportingUnit	Hawaii;Honolulu County;Precinct 28-01	28-01
+ReportingUnit	Hawaii;Honolulu County;Precinct 28-02	28-02
+ReportingUnit	Hawaii;Honolulu County;Precinct 28-03	28-03
+ReportingUnit	Hawaii;Honolulu County;Precinct 28-04	28-04
+ReportingUnit	Hawaii;Honolulu County;Precinct 29-01	29-01
+ReportingUnit	Hawaii;Honolulu County;Precinct 29-02	29-02
+ReportingUnit	Hawaii;Honolulu County;Precinct 29-03	29-03
+ReportingUnit	Hawaii;Honolulu County;Precinct 29-04	29-04
+ReportingUnit	Hawaii;Honolulu County;Precinct 30-01	30-01
+ReportingUnit	Hawaii;Honolulu County;Precinct 30-02	30-02
+ReportingUnit	Hawaii;Honolulu County;Precinct 30-03	30-03
+ReportingUnit	Hawaii;Honolulu County;Precinct 30-04	30-04
+ReportingUnit	Hawaii;Honolulu County;Precinct 31-01	31-01
+ReportingUnit	Hawaii;Honolulu County;Precinct 31-02	31-02
+ReportingUnit	Hawaii;Honolulu County;Precinct 31-03	31-03
+ReportingUnit	Hawaii;Honolulu County;Precinct 31-04	31-04
+ReportingUnit	Hawaii;Honolulu County;Precinct 31-05	31-05
+ReportingUnit	Hawaii;Honolulu County;Precinct 32-01	32-01
+ReportingUnit	Hawaii;Honolulu County;Precinct 32-02	32-02
+ReportingUnit	Hawaii;Honolulu County;Precinct 32-03	32-03
+ReportingUnit	Hawaii;Honolulu County;Precinct 33-01	33-01
+ReportingUnit	Hawaii;Honolulu County;Precinct 33-02	33-02
+ReportingUnit	Hawaii;Honolulu County;Precinct 33-03	33-03
+ReportingUnit	Hawaii;Honolulu County;Precinct 33-04	33-04
+ReportingUnit	Hawaii;Honolulu County;Precinct 33-05	33-05
+ReportingUnit	Hawaii;Honolulu County;Precinct 33-06	33-06
+ReportingUnit	Hawaii;Honolulu County;Precinct 34-01	34-01
+ReportingUnit	Hawaii;Honolulu County;Precinct 34-02	34-02
+ReportingUnit	Hawaii;Honolulu County;Precinct 34-03	34-03
+ReportingUnit	Hawaii;Honolulu County;Precinct 35-01	35-01
+ReportingUnit	Hawaii;Honolulu County;Precinct 35-02	35-02
+ReportingUnit	Hawaii;Honolulu County;Precinct 35-03	35-03
+ReportingUnit	Hawaii;Honolulu County;Precinct 35-04	35-04
+ReportingUnit	Hawaii;Honolulu County;Precinct 35-05	35-05
+ReportingUnit	Hawaii;Honolulu County;Precinct 35-06	35-06
+ReportingUnit	Hawaii;Honolulu County;Precinct 36-01	36-01
+ReportingUnit	Hawaii;Honolulu County;Precinct 36-02	36-02
+ReportingUnit	Hawaii;Honolulu County;Precinct 36-03	36-03
+ReportingUnit	Hawaii;Honolulu County;Precinct 37-01	37-01
+ReportingUnit	Hawaii;Honolulu County;Precinct 37-02	37-02
+ReportingUnit	Hawaii;Honolulu County;Precinct 37-03	37-03
+ReportingUnit	Hawaii;Honolulu County;Precinct 37-04	37-04
+ReportingUnit	Hawaii;Honolulu County;Precinct 38-01	38-01
+ReportingUnit	Hawaii;Honolulu County;Precinct 38-02	38-02
+ReportingUnit	Hawaii;Honolulu County;Precinct 38-03	38-03
+ReportingUnit	Hawaii;Honolulu County;Precinct 38-04	38-04
+ReportingUnit	Hawaii;Honolulu County;Precinct 39-01	39-01
+ReportingUnit	Hawaii;Honolulu County;Precinct 39-02	39-02
+ReportingUnit	Hawaii;Honolulu County;Precinct 39-03	39-03
+ReportingUnit	Hawaii;Honolulu County;Precinct 39-04	39-04
+ReportingUnit	Hawaii;Honolulu County;Precinct 39-05	39-05
+ReportingUnit	Hawaii;Honolulu County;Precinct 40-01	40-01
+ReportingUnit	Hawaii;Honolulu County;Precinct 40-02	40-02
+ReportingUnit	Hawaii;Honolulu County;Precinct 40-03	40-03
+ReportingUnit	Hawaii;Honolulu County;Precinct 40-04	40-04
+ReportingUnit	Hawaii;Honolulu County;Precinct 41-01	41-01
+ReportingUnit	Hawaii;Honolulu County;Precinct 41-02	41-02
+ReportingUnit	Hawaii;Honolulu County;Precinct 41-03	41-03
+ReportingUnit	Hawaii;Honolulu County;Precinct 41-04	41-04
+ReportingUnit	Hawaii;Honolulu County;Precinct 41-05	41-05
+ReportingUnit	Hawaii;Honolulu County;Precinct 42-01	42-01
+ReportingUnit	Hawaii;Honolulu County;Precinct 42-02	42-02
+ReportingUnit	Hawaii;Honolulu County;Precinct 42-03	42-03
+ReportingUnit	Hawaii;Honolulu County;Precinct 42-04	42-04
+ReportingUnit	Hawaii;Honolulu County;Precinct 43-01	43-01
+ReportingUnit	Hawaii;Honolulu County;Precinct 43-02	43-02
+ReportingUnit	Hawaii;Honolulu County;Precinct 43-03	43-03
+ReportingUnit	Hawaii;Honolulu County;Precinct 43-04	43-04
+ReportingUnit	Hawaii;Honolulu County;Precinct 43-05	43-05
+ReportingUnit	Hawaii;Honolulu County;Precinct 44-01	44-01
+ReportingUnit	Hawaii;Honolulu County;Precinct 44-02	44-02
+ReportingUnit	Hawaii;Honolulu County;Precinct 45-01	45-01
+ReportingUnit	Hawaii;Honolulu County;Precinct 45-02	45-02
+ReportingUnit	Hawaii;Honolulu County;Precinct 45-03	45-03
+ReportingUnit	Hawaii;Honolulu County;Precinct 45-04	45-04
+ReportingUnit	Hawaii;Honolulu County;Precinct 45-05	45-05
+ReportingUnit	Hawaii;Honolulu County;Precinct 46-01	46-01
+ReportingUnit	Hawaii;Honolulu County;Precinct 46-02	46-02
+ReportingUnit	Hawaii;Honolulu County;Precinct 46-03	46-03
+ReportingUnit	Hawaii;Honolulu County;Precinct 46-04	46-04
+ReportingUnit	Hawaii;Honolulu County;Precinct 47-01	47-01
+ReportingUnit	Hawaii;Honolulu County;Precinct 47-02	47-02
+ReportingUnit	Hawaii;Honolulu County;Precinct 47-03	47-03
+ReportingUnit	Hawaii;Honolulu County;Precinct 47-04	47-04
+ReportingUnit	Hawaii;Honolulu County;Precinct 48-01	48-01
+ReportingUnit	Hawaii;Honolulu County;Precinct 48-02	48-02
+ReportingUnit	Hawaii;Honolulu County;Precinct 48-03	48-03
+ReportingUnit	Hawaii;Honolulu County;Precinct 48-04	48-04
+ReportingUnit	Hawaii;Honolulu County;Precinct 48-05	48-05
+ReportingUnit	Hawaii;Honolulu County;Precinct 48-06	48-06
+ReportingUnit	Hawaii;Honolulu County;Precinct 49-01	49-01
+ReportingUnit	Hawaii;Honolulu County;Precinct 49-02	49-02
+ReportingUnit	Hawaii;Honolulu County;Precinct 49-03	49-03
+ReportingUnit	Hawaii;Honolulu County;Precinct 49-04	49-04
+ReportingUnit	Hawaii;Honolulu County;Precinct 49-05	49-05
+ReportingUnit	Hawaii;Honolulu County;Precinct 49-06	49-06
+ReportingUnit	Hawaii;Honolulu County;Precinct 50-01	50-01
+ReportingUnit	Hawaii;Honolulu County;Precinct 50-02	50-02
+ReportingUnit	Hawaii;Honolulu County;Precinct 50-03	50-03
+ReportingUnit	Hawaii;Honolulu County;Precinct 50-04	50-04
+ReportingUnit	Hawaii;Honolulu County;Precinct 51-01	51-01
+ReportingUnit	Hawaii;Honolulu County;Precinct 51-02	51-02
+ReportingUnit	Hawaii;Honolulu County;Precinct 51-03	51-03
+ReportingUnit	Hawaii;Honolulu County;Precinct 51-04	51-04
+ReportingUnit	Hawaii;Honolulu County;Precinct 51-05	51-05
+ReportingUnit	Hawaii;Honolulu County;Precinct 51-06	51-06
+ReportingUnit	Hawaii;Kaua'i County;Precinct 14-01	14-01
+ReportingUnit	Hawaii;Kaua'i County;Precinct 14-02	14-02
+ReportingUnit	Hawaii;Kaua'i County;Precinct 14-03	14-03
+ReportingUnit	Hawaii;Kaua'i County;Precinct 14-04	14-04
+ReportingUnit	Hawaii;Kaua'i County;Precinct 14-05	14-05
+ReportingUnit	Hawaii;Kaua'i County;Precinct 15-01	15-01
+ReportingUnit	Hawaii;Kaua'i County;Precinct 15-02	15-02
+ReportingUnit	Hawaii;Kaua'i County;Precinct 15-03	15-03
+ReportingUnit	Hawaii;Kaua'i County;Precinct 15-04	15-04
+ReportingUnit	Hawaii;Kaua'i County;Precinct 15-05	15-05
+ReportingUnit	Hawaii;Kaua'i County;Precinct 16-01	16-01
+ReportingUnit	Hawaii;Kaua'i County;Precinct 16-02	16-02
+ReportingUnit	Hawaii;Kaua'i County;Precinct 16-03	16-03
+ReportingUnit	Hawaii;Kaua'i County;Precinct 16-04	16-04
+ReportingUnit	Hawaii;Kaua'i County;Precinct 16-05	16-05
+ReportingUnit	Hawaii;Kaua'i County;Precinct 16-06	16-06
+ReportingUnit	Hawaii;Maui County;Precinct 08-01	08-01
+ReportingUnit	Hawaii;Maui County;Precinct 08-02	08-02
+ReportingUnit	Hawaii;Maui County;Precinct 08-03	08-03
+ReportingUnit	Hawaii;Maui County;Precinct 08-04	08-04
+ReportingUnit	Hawaii;Maui County;Precinct 08-05	08-05
+ReportingUnit	Hawaii;Maui County;Precinct 08-06	08-06
+ReportingUnit	Hawaii;Maui County;Precinct 08-07	08-07
+ReportingUnit	Hawaii;Maui County;Precinct 09-01	09-01
+ReportingUnit	Hawaii;Maui County;Precinct 09-02	09-02
+ReportingUnit	Hawaii;Maui County;Precinct 09-03	09-03
+ReportingUnit	Hawaii;Maui County;Precinct 09-04	09-04
+ReportingUnit	Hawaii;Maui County;Precinct 10-01	10-01
+ReportingUnit	Hawaii;Maui County;Precinct 10-02	10-02
+ReportingUnit	Hawaii;Maui County;Precinct 10-03	10-03
+ReportingUnit	Hawaii;Maui County;Precinct 10-04	10-04
+ReportingUnit	Hawaii;Maui County;Precinct 10-05	10-05
+ReportingUnit	Hawaii;Maui County;Precinct 11-01	11-01
+ReportingUnit	Hawaii;Maui County;Precinct 11-02	11-02
+ReportingUnit	Hawaii;Maui County;Precinct 11-03	11-03
+ReportingUnit	Hawaii;Maui County;Precinct 11-04	11-04
+ReportingUnit	Hawaii;Maui County;Precinct 12-01	12-01
+ReportingUnit	Hawaii;Maui County;Precinct 12-02	12-02
+ReportingUnit	Hawaii;Maui County;Precinct 12-03	12-03
+ReportingUnit	Hawaii;Maui County;Precinct 12-04	12-04
+ReportingUnit	Hawaii;Maui County;Precinct 12-05	12-05
+ReportingUnit	Hawaii;Maui County;Precinct 12-06	12-06
+ReportingUnit	Hawaii;Maui County;Precinct 13-01	13-01
+ReportingUnit	Hawaii;Maui County;Precinct 13-02	13-02
+ReportingUnit	Hawaii;Maui County;Precinct 13-03	13-03
+ReportingUnit	Hawaii;Maui County;Precinct 13-04	13-04
+ReportingUnit	Hawaii;Maui County;Precinct 13-05	13-05
+ReportingUnit	Hawaii;Maui County;Precinct 13-06	13-06
+ReportingUnit	Hawaii;Maui County;Precinct 13-07	13-07
+ReportingUnit	Hawaii;Maui County;Precinct 13-08	13-08
+ReportingUnit	Hawaii;Maui County;Precinct 13-09	13-09
+ReportingUnit	Hawaii;Hawai'i County;Precinct 01-01	01-01
+ReportingUnit	Hawaii;Hawai'i County;Precinct 01-02	01-02
+ReportingUnit	Hawaii;Hawai'i County;Precinct 01-03	01-03
+ReportingUnit	Hawaii;Hawai'i County;Precinct 01-04	01-04
+ReportingUnit	Hawaii;Hawai'i County;Precinct 01-05	01-05
+ReportingUnit	Hawaii;Hawai'i County;Precinct 01-06	01-06
+ReportingUnit	Hawaii;Hawai'i County;Precinct 01-07	01-07
+ReportingUnit	Hawaii;Hawai'i County;Precinct 01-08	01-08
+ReportingUnit	Hawaii;Hawai'i County;Precinct 01-09	01-09
+ReportingUnit	Hawaii;Hawai'i County;Precinct 02-01	02-01
+ReportingUnit	Hawaii;Hawai'i County;Precinct 02-02	02-02
+ReportingUnit	Hawaii;Hawai'i County;Precinct 02-03	02-03
+ReportingUnit	Hawaii;Hawai'i County;Precinct 02-04	02-04
+ReportingUnit	Hawaii;Hawai'i County;Precinct 02-05	02-05
+ReportingUnit	Hawaii;Hawai'i County;Precinct 03-01	03-01
+ReportingUnit	Hawaii;Hawai'i County;Precinct 03-02	03-02
+ReportingUnit	Hawaii;Hawai'i County;Precinct 03-03	03-03
+ReportingUnit	Hawaii;Hawai'i County;Precinct 03-04	03-04
+ReportingUnit	Hawaii;Hawai'i County;Precinct 03-05	03-05
+ReportingUnit	Hawaii;Hawai'i County;Precinct 03-06	03-06
+ReportingUnit	Hawaii;Hawai'i County;Precinct 03-07	03-07
+ReportingUnit	Hawaii;Hawai'i County;Precinct 04-01	04-01
+ReportingUnit	Hawaii;Hawai'i County;Precinct 04-02	04-02
+ReportingUnit	Hawaii;Hawai'i County;Precinct 04-03	04-03
+ReportingUnit	Hawaii;Hawai'i County;Precinct 04-04	04-04
+ReportingUnit	Hawaii;Hawai'i County;Precinct 05-01	05-01
+ReportingUnit	Hawaii;Hawai'i County;Precinct 05-02	05-02
+ReportingUnit	Hawaii;Hawai'i County;Precinct 05-03	05-03
+ReportingUnit	Hawaii;Hawai'i County;Precinct 05-04	05-04
+ReportingUnit	Hawaii;Hawai'i County;Precinct 05-05	05-05
+ReportingUnit	Hawaii;Hawai'i County;Precinct 05-06	05-06
+ReportingUnit	Hawaii;Hawai'i County;Precinct 05-07	05-07
+ReportingUnit	Hawaii;Hawai'i County;Precinct 05-08	05-08
+ReportingUnit	Hawaii;Hawai'i County;Precinct 06-01	06-01
+ReportingUnit	Hawaii;Hawai'i County;Precinct 06-02	06-02
+ReportingUnit	Hawaii;Hawai'i County;Precinct 06-03	06-03
+ReportingUnit	Hawaii;Hawai'i County;Precinct 06-04	06-04
+ReportingUnit	Hawaii;Hawai'i County;Precinct 06-05	06-05
+ReportingUnit	Hawaii;Hawai'i County;Precinct 07-01	07-01
+ReportingUnit	Hawaii;Hawai'i County;Precinct 07-02	07-02
+ReportingUnit	Hawaii;Hawai'i County;Precinct 07-03	07-03
+ReportingUnit	Hawaii;Hawai'i County;Precinct 07-04	07-04
+ReportingUnit	Hawaii;Hawai'i County;Precinct 07-05	07-05
+CountItemType	absentee	Absentee_votes
+CountItemType	early	Early_votes
+CountItemType	election-day	Election_Votes
+Candidate	YODER, Steve	YODER, Steve
+Candidate	YAMANE, Ryan I.	YAMANE, Ryan I.
+Candidate	WOODSON, Justin H.	WOODSON, Justin H.
+Candidate	WILDBERGER, Tina M.L.	WILDBERGER, Tina M.L.
+Candidate	WARD, Gene	WARD, Gene
+Candidate	VANDERPOOL, Robin	VANDERPOOL, Robin
+Candidate	TOKIOKA, James Kunane	TOKIOKA, James Kunane
+Candidate	TODD, Christopher L.T.	TODD, Christopher L.T.
+Candidate	TIPPENS, Michelle Rose	TIPPENS, Michelle Rose
+Candidate	TAM, Adrian	TAM, Adrian
+Candidate	TAKUMI, Roy M.	TAKUMI, Roy M.
+Candidate	TAKAYAMA, Gregg	TAKAYAMA, Gregg
+Candidate	SVRCINA, Emil	SVRCINA, Emil
+Candidate	SOUZA, Kanani	SOUZA, Kanani
+Candidate	SLOM, Sam M.	SLOM, Sam M.
+Candidate	SIMPLICIANO, Joseph K., Jr.	SIMPLICIANO, Joseph K., Jr.
+Candidate	SIMON, Keone F.	SIMON, Keone F.
+Candidate	SHIN, Lorraine Pualani	SHIN, Lorraine Pualani
+Candidate	SEXTON, Andy, Jr. (Umi)	SEXTON, Andy, Jr. (Umi)
+Candidate	SAYAMA, Jackson	SAYAMA, Jackson
+Candidate	SAN BUENAVENTURA, Joy	SAN BUENAVENTURA, Joy
+Candidate	READY, Boyd	READY, Boyd
+Candidate	QUINLAN, Sean	QUINLAN, Sean
+Candidate	QUILINGKING, Tess Abalos	QUILINGKING, Tess Abalos
+Candidate	PARRISH, Michael L. (Mike)	PARRISH, Michael L. (Mike)
+Candidate	ONISHI, Richard H.K.	ONISHI, Richard H.K.
+Candidate	OKIMOTO, Val	OKIMOTO, Val
+Candidate	OCHS, Nicholas R.	OCHS, Nicholas R.
+Candidate	NAKASHIMA, Mark M.	NAKASHIMA, Mark M.
+Candidate	NAKAMURA, Nadine K.	NAKAMURA, Nadine K.
+Candidate	MORIKAWA, Daynette (Dee)	MORIKAWA, Daynette (Dee)
+Candidate	MONAS, Steve	MONAS, Steve
+Candidate	MILLER, John E.	MILLER, John E.
+Candidate	MCMACKIN, Devin Shaw, Sr.	MCMACKIN, Devin Shaw, Sr.
+Candidate	MCKELVEY, Angus L.K.	MCKELVEY, Angus L.K.
+Candidate	MCDERMOTT, Bob	MCDERMOTT, Bob
+Candidate	MATAYOSHI, Scot	MATAYOSHI, Scot
+Candidate	MARTINEZ, Rose	MARTINEZ, Rose
+Candidate	MARTEN, Lisa	MARTEN, Lisa
+Candidate	MAGLINTI, Austin L.S.	MAGLINTI, Austin L.S.
+Candidate	LOPRESTI, Matthew S. (Matt)	LOPRESTI, Matthew S. (Matt)
+Candidate	LEE, Chris	LEE, Chris
+Candidate	LAST, Michael L. (Mike)	LAST, Michael L. (Mike)
+Candidate	LA CHICA, Trish	LA CHICA, Trish
+Candidate	KONG, Sam Satoru	KONG, Sam Satoru
+Candidate	KOGACHI, Keith	KOGACHI, Keith
+Candidate	KOBAYASHI, Bertrand (Bert)	KOBAYASHI, Bertrand (Bert)
+Candidate	KIM-MARSHALL, Kristina	KIM-MARSHALL, Kristina
+Candidate	KEITH-AGARAN, Gil S. Coloma	KEITH-AGARAN, Gil S. Coloma
+Candidate	KEEN, Rynette Ipo	KEEN, Rynette Ipo
+Candidate	KAPELA, Jeanne	KAPELA, Jeanne
+Candidate	KAPAKU, Theresa	KAPAKU, Theresa
+Candidate	KAMA-TOTH, Kukana K.K.	KAMA-TOTH, Kukana K.K.
+Candidate	KAJIWARA-GUSMAN, Christy	KAJIWARA-GUSMAN, Christy
+Candidate	KAHELE, Kaiali'i (Kai)	KAHELE, Kaiali'i (Kai)
+Candidate	KAHAU, Keline-Kameyo	KAHAU, Keline-Kameyo
+Candidate	KA-IPO, Ron G.	KA-IPO, Ron G.
+Candidate	ILAGAN, Greggor	ILAGAN, Greggor
+Candidate	HUGHES, Susan	HUGHES, Susan
+Candidate	HOOMANAWANUI, Jonathan	HOOMANAWANUI, Jonathan
+Candidate	HOOHULI, Shaena Dela Cruz	HOOHULI, Shaena Dela Cruz
+Candidate	HOOD, Carl E.	HOOD, Carl E.
+Candidate	HO, Erik K.	HO, Erik K.
+Candidate	HAUMEA, Desmon Antone	HAUMEA, Desmon Antone
+Candidate	HASHEM, Mark Jun	HASHEM, Mark Jun
+Candidate	GYLDSTRAND, Travis D.E.	GYLDSTRAND, Travis D.E.
+Candidate	GREENBERG, Howard E.	GREENBERG, Howard E.
+Candidate	GATES, Cedric Asuega	GATES, Cedric Asuega
+Candidate	GARCIA, Diamond	GARCIA, Diamond
+Candidate	GANADEN, Ernesto M. (Sonny)	GANADEN, Ernesto M. (Sonny)
+Candidate	GABBARD, Mike	GABBARD, Mike
+Candidate	FORD, Lori	FORD, Lori
+Candidate	FEVELLA, Kurt	FEVELLA, Kurt
+Candidate	ELI, Stacelynn Kehaulani	ELI, Stacelynn Kehaulani
+Candidate	DES, Ana Mo	DES, Ana Mo
+Candidate	DELA CRUZ, Donovan	DELA CRUZ, Donovan
+Candidate	DECOITE, Lynn P.	DECOITE, Lynn P.
+Candidate	DECKER, Citlalli Johanna	DECKER, Citlalli Johanna
+Candidate	DANNER, Kilomana	DANNER, Kilomana
+Candidate	CURTIS, Ron	CURTIS, Ron
+Candidate	CULLEN, Ty J.K.	CULLEN, Ty J.K.
+Candidate	CHRUPALYK, Kahala Jen	CHRUPALYK, Kahala Jen
+Candidate	CHEAPE MATSUMOTO, Lauren	CHEAPE MATSUMOTO, Lauren
+Candidate	CHAPMAN, Michael	CHAPMAN, Michael
+Candidate	CHANG, Stanley	CHANG, Stanley
+Candidate	CERMELJ, Hope (Alohalani)	CERMELJ, Hope (Alohalani)
+Candidate	CASE, Ed	CASE, Ed
+Candidate	CABANILLA ARAKAWA, Rida	CABANILLA ARAKAWA, Rida
+Candidate	BURRUS, Ron	BURRUS, Ron
+Candidate	BRANCO, Patrick Pihana	BRANCO, Patrick Pihana
+Candidate	BOYETTE, Jennifer (Jenny)	BOYETTE, Jennifer (Jenny)
+Candidate	BONOAN, Feena M.	BONOAN, Feena M.
+Candidate	BELATTI, Della Au	BELATTI, Della Au
+Candidate	BALINBIN, Kanamu	BALINBIN, Kanamu
+Candidate	ALLEN, Julia E.	ALLEN, Julia E.
+Candidate	ALDEGUER, Maysana Akahai	ALDEGUER, Maysana Akahai
+Candidate	ALCOS, David (Bradda)	ALCOS, David (Bradda)
+Candidate	AKANA, Joe	AKANA, Joe
+Candidate	GIUFFRE, John (Raghu)	GIUFFRE, John (Raghu)
+Candidate	CHEN, Wayne	CHEN, Wayne
+Candidate	Donald J. Trump	Trump / Pence
+Candidate	Donald J. Trump	TRUMP / PENCE
+Candidate	Brock Pierce	Pierce / Ballard
+Candidate	Brock Pierce	PIERCE / BALLARD
+Candidate	Jo Jorgensen	Jorgensen / Cohen
+Candidate	Jo Jorgensen	JORGENSEN / COHEN
+Candidate	Howie Hawkins	Hawkins / Walker
+Candidate	Howie Hawkins	HAWKINS / WALKER
+Candidate	Don Blankenship	Blankenship / Mohr
+Candidate	Don Blankenship	BLANKENSHIP / MOHR
+Candidate	Joseph R. Biden	Biden / Harris
+Candidate	Joseph R. Biden	BIDEN / HARRIS

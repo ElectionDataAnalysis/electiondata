@@ -33,9 +33,13 @@ def recast_options(options: dict, types: dict) -> dict:
                 # null string is read as None
                 options[k] = None
         if types[k] == "list-of-strings":
-            try:
-                options[k] = [s for s in options[k].split(",")]
-            except Exception:
+            if options[k] != "":
+                try:
+                    options[k] = [s for s in options[k].split(",")]
+                except Exception:
+                    options[k] = list()
+            # if the string is empty, assign an empty list
+            else:
                 options[k] = list()
         if types[k] == "int":
             try:

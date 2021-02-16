@@ -1,0 +1,580 @@
+Name	ReportingUnitType
+Rhode Island;RI House District 1	state-house
+Rhode Island;RI House District 2	state-house
+Rhode Island;RI House District 3	state-house
+Rhode Island;RI House District 4	state-house
+Rhode Island;RI House District 5	state-house
+Rhode Island;RI House District 6	state-house
+Rhode Island;RI House District 7	state-house
+Rhode Island;RI House District 8	state-house
+Rhode Island;RI House District 9	state-house
+Rhode Island;RI House District 10	state-house
+Rhode Island;RI House District 11	state-house
+Rhode Island;RI House District 12	state-house
+Rhode Island;RI House District 13	state-house
+Rhode Island;RI House District 14	state-house
+Rhode Island;RI House District 15	state-house
+Rhode Island;RI House District 16	state-house
+Rhode Island;RI House District 17	state-house
+Rhode Island;RI House District 18	state-house
+Rhode Island;RI House District 19	state-house
+Rhode Island;RI House District 20	state-house
+Rhode Island;RI House District 21	state-house
+Rhode Island;RI House District 22	state-house
+Rhode Island;RI House District 23	state-house
+Rhode Island;RI House District 24	state-house
+Rhode Island;RI House District 25	state-house
+Rhode Island;RI House District 26	state-house
+Rhode Island;RI House District 27	state-house
+Rhode Island;RI House District 28	state-house
+Rhode Island;RI House District 29	state-house
+Rhode Island;RI House District 30	state-house
+Rhode Island;RI House District 31	state-house
+Rhode Island;RI House District 32	state-house
+Rhode Island;RI House District 33	state-house
+Rhode Island;RI House District 34	state-house
+Rhode Island;RI House District 35	state-house
+Rhode Island;RI House District 36	state-house
+Rhode Island;RI House District 37	state-house
+Rhode Island;RI House District 38	state-house
+Rhode Island;RI House District 39	state-house
+Rhode Island;RI House District 40	state-house
+Rhode Island;RI House District 41	state-house
+Rhode Island;RI House District 42	state-house
+Rhode Island;RI House District 43	state-house
+Rhode Island;RI House District 44	state-house
+Rhode Island;RI House District 45	state-house
+Rhode Island;RI House District 46	state-house
+Rhode Island;RI House District 47	state-house
+Rhode Island;RI House District 48	state-house
+Rhode Island;RI House District 49	state-house
+Rhode Island;RI House District 50	state-house
+Rhode Island;RI House District 51	state-house
+Rhode Island;RI House District 52	state-house
+Rhode Island;RI House District 53	state-house
+Rhode Island;RI House District 54	state-house
+Rhode Island;RI House District 55	state-house
+Rhode Island;RI House District 56	state-house
+Rhode Island;RI House District 57	state-house
+Rhode Island;RI House District 58	state-house
+Rhode Island;RI House District 59	state-house
+Rhode Island;RI House District 60	state-house
+Rhode Island;RI House District 61	state-house
+Rhode Island;RI House District 62	state-house
+Rhode Island;RI House District 63	state-house
+Rhode Island;RI House District 64	state-house
+Rhode Island;RI House District 65	state-house
+Rhode Island;RI House District 66	state-house
+Rhode Island;RI House District 67	state-house
+Rhode Island;RI House District 68	state-house
+Rhode Island;RI House District 69	state-house
+Rhode Island;RI House District 70	state-house
+Rhode Island;RI House District 71	state-house
+Rhode Island;RI House District 72	state-house
+Rhode Island;RI House District 73	state-house
+Rhode Island;RI House District 74	state-house
+Rhode Island;RI House District 75	state-house
+Rhode Island;RI Senate District 1	state-senate
+Rhode Island;RI Senate District 2	state-senate
+Rhode Island;RI Senate District 3	state-senate
+Rhode Island;RI Senate District 4	state-senate
+Rhode Island;RI Senate District 5	state-senate
+Rhode Island;RI Senate District 6	state-senate
+Rhode Island;RI Senate District 7	state-senate
+Rhode Island;RI Senate District 8	state-senate
+Rhode Island;RI Senate District 9	state-senate
+Rhode Island;RI Senate District 10	state-senate
+Rhode Island;RI Senate District 11	state-senate
+Rhode Island;RI Senate District 12	state-senate
+Rhode Island;RI Senate District 13	state-senate
+Rhode Island;RI Senate District 14	state-senate
+Rhode Island;RI Senate District 15	state-senate
+Rhode Island;RI Senate District 16	state-senate
+Rhode Island;RI Senate District 17	state-senate
+Rhode Island;RI Senate District 18	state-senate
+Rhode Island;RI Senate District 19	state-senate
+Rhode Island;RI Senate District 20	state-senate
+Rhode Island;RI Senate District 21	state-senate
+Rhode Island;RI Senate District 22	state-senate
+Rhode Island;RI Senate District 23	state-senate
+Rhode Island;RI Senate District 24	state-senate
+Rhode Island;RI Senate District 25	state-senate
+Rhode Island;RI Senate District 26	state-senate
+Rhode Island;RI Senate District 27	state-senate
+Rhode Island;RI Senate District 28	state-senate
+Rhode Island;RI Senate District 29	state-senate
+Rhode Island;RI Senate District 30	state-senate
+Rhode Island;RI Senate District 31	state-senate
+Rhode Island;RI Senate District 32	state-senate
+Rhode Island;RI Senate District 33	state-senate
+Rhode Island;RI Senate District 34	state-senate
+Rhode Island;RI Senate District 35	state-senate
+Rhode Island;RI Senate District 36	state-senate
+Rhode Island;RI Senate District 37	state-senate
+Rhode Island;RI Senate District 38	state-senate
+Rhode Island;US House RI District 1	congressional
+Rhode Island;US House RI District 2	congressional
+Rhode Island	state
+Rhode Island;Barrington	city-or-town
+Rhode Island;Bristol	city-or-town
+Rhode Island;Burrillville	city-or-town
+Rhode Island;Central Falls	city-or-town
+Rhode Island;Charlestown	city-or-town
+Rhode Island;Coventry	city-or-town
+Rhode Island;Cranston	city-or-town
+Rhode Island;Cumberland	city-or-town
+Rhode Island;East Greenwich	city-or-town
+Rhode Island;East Providence	city-or-town
+Rhode Island;Exeter	city-or-town
+Rhode Island;Federal Precin	city-or-town
+Rhode Island;Federal Precinc	city-or-town
+Rhode Island;Foster	city-or-town
+Rhode Island;Glocester	city-or-town
+Rhode Island;Hopkinton	city-or-town
+Rhode Island;Jamestown	city-or-town
+Rhode Island;Johnston	city-or-town
+Rhode Island;Lincoln	city-or-town
+Rhode Island;Little Compton	city-or-town
+Rhode Island;Middletown	city-or-town
+Rhode Island;Narragansett	city-or-town
+Rhode Island;New Shoreham	city-or-town
+Rhode Island;Newport	city-or-town
+Rhode Island;North Kingstown	city-or-town
+Rhode Island;North Providence	city-or-town
+Rhode Island;North Smithfield	city-or-town
+Rhode Island;Pawtucket	city-or-town
+Rhode Island;Portsmouth	city-or-town
+Rhode Island;Providence	city-or-town
+Rhode Island;Providence Limi	city-or-town
+Rhode Island;Richmond	city-or-town
+Rhode Island;Scituate	city-or-town
+Rhode Island;Smithfield	city-or-town
+Rhode Island;South Kingstown	city-or-town
+Rhode Island;Tiverton	city-or-town
+Rhode Island;Warren	city-or-town
+Rhode Island;Warwick	city-or-town
+Rhode Island;West Greenwich	city-or-town
+Rhode Island;West Warwick	city-or-town
+Rhode Island;Westerly	city-or-town
+Rhode Island;Woonsocket	city-or-town
+Rhode Island;Barrington;Precinct 0101	precinct
+Rhode Island;Barrington;Precinct 0102	precinct
+Rhode Island;Barrington;Precinct 0103	precinct
+Rhode Island;Barrington;Precinct 0104	precinct
+Rhode Island;Barrington;Precinct 0105	precinct
+Rhode Island;Bristol;Precinct 0201	precinct
+Rhode Island;Bristol;Precinct 0202	precinct
+Rhode Island;Bristol;Precinct 0203	precinct
+Rhode Island;Bristol;Precinct 0204	precinct
+Rhode Island;Bristol;Precinct 0205	precinct
+Rhode Island;Bristol;Precinct 0206	precinct
+Rhode Island;Bristol;Precinct 0207	precinct
+Rhode Island;Bristol;Precinct 0208	precinct
+Rhode Island;Bristol;Precinct 0209	precinct
+Rhode Island;Burrillville;Precinct 0301	precinct
+Rhode Island;Burrillville;Precinct 0302	precinct
+Rhode Island;Burrillville;Precinct 0303	precinct
+Rhode Island;Burrillville;Precinct 0304	precinct
+Rhode Island;Burrillville;Precinct 0305	precinct
+Rhode Island;Burrillville;Precinct 0306	precinct
+Rhode Island;Central Falls;Precinct 0401	precinct
+Rhode Island;Central Falls;Precinct 0402	precinct
+Rhode Island;Central Falls;Precinct 0403	precinct
+Rhode Island;Central Falls;Precinct 0404	precinct
+Rhode Island;Central Falls;Precinct 0405	precinct
+Rhode Island;Central Falls;Precinct 0406	precinct
+Rhode Island;Central Falls;Precinct 0407	precinct
+Rhode Island;Central Falls;Precinct 0408	precinct
+Rhode Island;Charlestown;Precinct 0501	precinct
+Rhode Island;Charlestown;Precinct 0502	precinct
+Rhode Island;Charlestown;Precinct 0503	precinct
+Rhode Island;Charlestown;Precinct 0504	precinct
+Rhode Island;Coventry;Precinct 0601	precinct
+Rhode Island;Coventry;Precinct 0602	precinct
+Rhode Island;Coventry;Precinct 0603	precinct
+Rhode Island;Coventry;Precinct 0604	precinct
+Rhode Island;Coventry;Precinct 0605	precinct
+Rhode Island;Coventry;Precinct 0606	precinct
+Rhode Island;Coventry;Precinct 0607	precinct
+Rhode Island;Coventry;Precinct 0608	precinct
+Rhode Island;Coventry;Precinct 0609	precinct
+Rhode Island;Coventry;Precinct 0610	precinct
+Rhode Island;Coventry;Precinct 0611	precinct
+Rhode Island;Coventry;Precinct 0612	precinct
+Rhode Island;Coventry;Precinct 0613	precinct
+Rhode Island;Coventry;Precinct 0614	precinct
+Rhode Island;Coventry;Precinct 0615	precinct
+Rhode Island;Coventry;Precinct 0616	precinct
+Rhode Island;Coventry;Precinct 0617	precinct
+Rhode Island;Coventry;Precinct 0618	precinct
+Rhode Island;Cranston;Precinct 0701	precinct
+Rhode Island;Cranston;Precinct 0702	precinct
+Rhode Island;Cranston;Precinct 0703	precinct
+Rhode Island;Cranston;Precinct 0704	precinct
+Rhode Island;Cranston;Precinct 0705	precinct
+Rhode Island;Cranston;Precinct 0706	precinct
+Rhode Island;Cranston;Precinct 0707	precinct
+Rhode Island;Cranston;Precinct 0708	precinct
+Rhode Island;Cranston;Precinct 0709	precinct
+Rhode Island;Cranston;Precinct 0710	precinct
+Rhode Island;Cranston;Precinct 0711	precinct
+Rhode Island;Cranston;Precinct 0712	precinct
+Rhode Island;Cranston;Precinct 0713	precinct
+Rhode Island;Cranston;Precinct 0714	precinct
+Rhode Island;Cranston;Precinct 0715	precinct
+Rhode Island;Cranston;Precinct 0716	precinct
+Rhode Island;Cranston;Precinct 0717	precinct
+Rhode Island;Cranston;Precinct 0718	precinct
+Rhode Island;Cranston;Precinct 0719	precinct
+Rhode Island;Cranston;Precinct 0720	precinct
+Rhode Island;Cranston;Precinct 0721	precinct
+Rhode Island;Cranston;Precinct 0722	precinct
+Rhode Island;Cranston;Precinct 0723	precinct
+Rhode Island;Cranston;Precinct 0724	precinct
+Rhode Island;Cranston;Precinct 0725	precinct
+Rhode Island;Cranston;Precinct 0726	precinct
+Rhode Island;Cranston;Precinct 0727	precinct
+Rhode Island;Cranston;Precinct 0728	precinct
+Rhode Island;Cranston;Precinct 0730	precinct
+Rhode Island;Cranston;Precinct 0731	precinct
+Rhode Island;Cumberland;Precinct 0801	precinct
+Rhode Island;Cumberland;Precinct 0802	precinct
+Rhode Island;Cumberland;Precinct 0803	precinct
+Rhode Island;Cumberland;Precinct 0804	precinct
+Rhode Island;Cumberland;Precinct 0805	precinct
+Rhode Island;Cumberland;Precinct 0806	precinct
+Rhode Island;Cumberland;Precinct 0807	precinct
+Rhode Island;Cumberland;Precinct 0808	precinct
+Rhode Island;Cumberland;Precinct 0809	precinct
+Rhode Island;Cumberland;Precinct 0810	precinct
+Rhode Island;Cumberland;Precinct 0811	precinct
+Rhode Island;Cumberland;Precinct 0812	precinct
+Rhode Island;Cumberland;Precinct 0813	precinct
+Rhode Island;East Greenwich;Precinct 0901	precinct
+Rhode Island;East Greenwich;Precinct 0902	precinct
+Rhode Island;East Greenwich;Precinct 0903	precinct
+Rhode Island;East Greenwich;Precinct 0904	precinct
+Rhode Island;East Greenwich;Precinct 0905	precinct
+Rhode Island;East Providence;Precinct 1001	precinct
+Rhode Island;East Providence;Precinct 1002	precinct
+Rhode Island;East Providence;Precinct 1003	precinct
+Rhode Island;East Providence;Precinct 1004	precinct
+Rhode Island;East Providence;Precinct 1005	precinct
+Rhode Island;East Providence;Precinct 1006	precinct
+Rhode Island;East Providence;Precinct 1007	precinct
+Rhode Island;East Providence;Precinct 1008	precinct
+Rhode Island;East Providence;Precinct 1009	precinct
+Rhode Island;East Providence;Precinct 1010	precinct
+Rhode Island;East Providence;Precinct 1011	precinct
+Rhode Island;East Providence;Precinct 1012	precinct
+Rhode Island;East Providence;Precinct 1013	precinct
+Rhode Island;East Providence;Precinct 1014	precinct
+Rhode Island;East Providence;Precinct 1015	precinct
+Rhode Island;East Providence;Precinct 1016	precinct
+Rhode Island;East Providence;Precinct 1017	precinct
+Rhode Island;East Providence;Precinct 1018	precinct
+Rhode Island;Exeter;Precinct 1101	precinct
+Rhode Island;Exeter;Precinct 1102	precinct
+Rhode Island;Exeter;Precinct 1103	precinct
+Rhode Island;Foster;Precinct 1201	precinct
+Rhode Island;Foster;Precinct 1202	precinct
+Rhode Island;Glocester;Precinct 1301	precinct
+Rhode Island;Glocester;Precinct 1302	precinct
+Rhode Island;Glocester;Precinct 1303	precinct
+Rhode Island;Glocester;Precinct 1304	precinct
+Rhode Island;Hopkinton;Precinct 1401	precinct
+Rhode Island;Hopkinton;Precinct 1402	precinct
+Rhode Island;Hopkinton;Precinct 1403	precinct
+Rhode Island;Jamestown;Precinct 1501	precinct
+Rhode Island;Jamestown;Precinct 1502	precinct
+Rhode Island;Johnston;Precinct 1601	precinct
+Rhode Island;Johnston;Precinct 1602	precinct
+Rhode Island;Johnston;Precinct 1603	precinct
+Rhode Island;Johnston;Precinct 1604	precinct
+Rhode Island;Johnston;Precinct 1605	precinct
+Rhode Island;Johnston;Precinct 1606	precinct
+Rhode Island;Johnston;Precinct 1607	precinct
+Rhode Island;Johnston;Precinct 1608	precinct
+Rhode Island;Johnston;Precinct 1609	precinct
+Rhode Island;Johnston;Precinct 1610	precinct
+Rhode Island;Johnston;Precinct 1611	precinct
+Rhode Island;Johnston;Precinct 1612	precinct
+Rhode Island;Johnston;Precinct 1613	precinct
+Rhode Island;Lincoln;Precinct 1701	precinct
+Rhode Island;Lincoln;Precinct 1702	precinct
+Rhode Island;Lincoln;Precinct 1703	precinct
+Rhode Island;Lincoln;Precinct 1704	precinct
+Rhode Island;Lincoln;Precinct 1705	precinct
+Rhode Island;Lincoln;Precinct 1706	precinct
+Rhode Island;Lincoln;Precinct 1707	precinct
+Rhode Island;Lincoln;Precinct 1708	precinct
+Rhode Island;Lincoln;Precinct 1709	precinct
+Rhode Island;Lincoln;Precinct 1710	precinct
+Rhode Island;Lincoln;Precinct 1711	precinct
+Rhode Island;Little Compton;Precinct 1801	precinct
+Rhode Island;Middletown;Precinct 1901	precinct
+Rhode Island;Middletown;Precinct 1902	precinct
+Rhode Island;Middletown;Precinct 1903	precinct
+Rhode Island;Middletown;Precinct 1904	precinct
+Rhode Island;Middletown;Precinct 1905	precinct
+Rhode Island;Narragansett;Precinct 2001	precinct
+Rhode Island;Narragansett;Precinct 2002	precinct
+Rhode Island;Narragansett;Precinct 2003	precinct
+Rhode Island;Narragansett;Precinct 2004	precinct
+Rhode Island;Narragansett;Precinct 2005	precinct
+Rhode Island;New Shoreham;Precinct 2201	precinct
+Rhode Island;Newport;Precinct 2101	precinct
+Rhode Island;Newport;Precinct 2102	precinct
+Rhode Island;Newport;Precinct 2103	precinct
+Rhode Island;Newport;Precinct 2104	precinct
+Rhode Island;Newport;Precinct 2105	precinct
+Rhode Island;Newport;Precinct 2106	precinct
+Rhode Island;Newport;Precinct 2107	precinct
+Rhode Island;Newport;Precinct 2108	precinct
+Rhode Island;Newport;Precinct 2109	precinct
+Rhode Island;North Kingstown;Precinct 2301	precinct
+Rhode Island;North Kingstown;Precinct 2302	precinct
+Rhode Island;North Kingstown;Precinct 2303	precinct
+Rhode Island;North Kingstown;Precinct 2304	precinct
+Rhode Island;North Kingstown;Precinct 2305	precinct
+Rhode Island;North Kingstown;Precinct 2306	precinct
+Rhode Island;North Kingstown;Precinct 2307	precinct
+Rhode Island;North Kingstown;Precinct 2308	precinct
+Rhode Island;North Kingstown;Precinct 2309	precinct
+Rhode Island;North Providence;Precinct 2401	precinct
+Rhode Island;North Providence;Precinct 2402	precinct
+Rhode Island;North Providence;Precinct 2403	precinct
+Rhode Island;North Providence;Precinct 2404	precinct
+Rhode Island;North Providence;Precinct 2405	precinct
+Rhode Island;North Providence;Precinct 2406	precinct
+Rhode Island;North Providence;Precinct 2407	precinct
+Rhode Island;North Providence;Precinct 2408	precinct
+Rhode Island;North Providence;Precinct 2409	precinct
+Rhode Island;North Providence;Precinct 2410	precinct
+Rhode Island;North Providence;Precinct 2411	precinct
+Rhode Island;North Providence;Precinct 2412	precinct
+Rhode Island;North Providence;Precinct 2413	precinct
+Rhode Island;North Providence;Precinct 2414	precinct
+Rhode Island;North Providence;Precinct 2415	precinct
+Rhode Island;North Providence;Precinct 2416	precinct
+Rhode Island;North Smithfield;Precinct 2501	precinct
+Rhode Island;North Smithfield;Precinct 2502	precinct
+Rhode Island;North Smithfield;Precinct 2503	precinct
+Rhode Island;North Smithfield;Precinct 2504	precinct
+Rhode Island;North Smithfield;Precinct 2505	precinct
+Rhode Island;Pawtucket;Precinct 2601	precinct
+Rhode Island;Pawtucket;Precinct 2602	precinct
+Rhode Island;Pawtucket;Precinct 2603	precinct
+Rhode Island;Pawtucket;Precinct 2604	precinct
+Rhode Island;Pawtucket;Precinct 2605	precinct
+Rhode Island;Pawtucket;Precinct 2606	precinct
+Rhode Island;Pawtucket;Precinct 2607	precinct
+Rhode Island;Pawtucket;Precinct 2608	precinct
+Rhode Island;Pawtucket;Precinct 2609	precinct
+Rhode Island;Pawtucket;Precinct 2610	precinct
+Rhode Island;Pawtucket;Precinct 2611	precinct
+Rhode Island;Pawtucket;Precinct 2612	precinct
+Rhode Island;Pawtucket;Precinct 2613	precinct
+Rhode Island;Pawtucket;Precinct 2614	precinct
+Rhode Island;Pawtucket;Precinct 2615	precinct
+Rhode Island;Pawtucket;Precinct 2616	precinct
+Rhode Island;Pawtucket;Precinct 2617	precinct
+Rhode Island;Pawtucket;Precinct 2618	precinct
+Rhode Island;Pawtucket;Precinct 2619	precinct
+Rhode Island;Pawtucket;Precinct 2620	precinct
+Rhode Island;Pawtucket;Precinct 2621	precinct
+Rhode Island;Pawtucket;Precinct 2622	precinct
+Rhode Island;Pawtucket;Precinct 2623	precinct
+Rhode Island;Pawtucket;Precinct 2624	precinct
+Rhode Island;Pawtucket;Precinct 2625	precinct
+Rhode Island;Pawtucket;Precinct 2626	precinct
+Rhode Island;Pawtucket;Precinct 2627	precinct
+Rhode Island;Pawtucket;Precinct 2628	precinct
+Rhode Island;Pawtucket;Precinct 2629	precinct
+Rhode Island;Pawtucket;Precinct 2630	precinct
+Rhode Island;Pawtucket;Precinct 2631	precinct
+Rhode Island;Portsmouth;Precinct 2701	precinct
+Rhode Island;Portsmouth;Precinct 2702	precinct
+Rhode Island;Portsmouth;Precinct 2703	precinct
+Rhode Island;Portsmouth;Precinct 2704	precinct
+Rhode Island;Portsmouth;Precinct 2705	precinct
+Rhode Island;Portsmouth;Precinct 2706	precinct
+Rhode Island;Portsmouth;Precinct 2707	precinct
+Rhode Island;Portsmouth;Precinct 2708	precinct
+Rhode Island;Providence;Precinct 2801	precinct
+Rhode Island;Providence;Precinct 2802	precinct
+Rhode Island;Providence;Precinct 2803	precinct
+Rhode Island;Providence;Precinct 2804	precinct
+Rhode Island;Providence;Precinct 2805	precinct
+Rhode Island;Providence;Precinct 2806	precinct
+Rhode Island;Providence;Precinct 2807	precinct
+Rhode Island;Providence;Precinct 2808	precinct
+Rhode Island;Providence;Precinct 2809	precinct
+Rhode Island;Providence;Precinct 2810	precinct
+Rhode Island;Providence;Precinct 2811	precinct
+Rhode Island;Providence;Precinct 2812	precinct
+Rhode Island;Providence;Precinct 2813	precinct
+Rhode Island;Providence;Precinct 2814	precinct
+Rhode Island;Providence;Precinct 2815	precinct
+Rhode Island;Providence;Precinct 2816	precinct
+Rhode Island;Providence;Precinct 2817	precinct
+Rhode Island;Providence;Precinct 2818	precinct
+Rhode Island;Providence;Precinct 2819	precinct
+Rhode Island;Providence;Precinct 2820	precinct
+Rhode Island;Providence;Precinct 2821	precinct
+Rhode Island;Providence;Precinct 2822	precinct
+Rhode Island;Providence;Precinct 2823	precinct
+Rhode Island;Providence;Precinct 2824	precinct
+Rhode Island;Providence;Precinct 2825	precinct
+Rhode Island;Providence;Precinct 2826	precinct
+Rhode Island;Providence;Precinct 2827	precinct
+Rhode Island;Providence;Precinct 2828	precinct
+Rhode Island;Providence;Precinct 2829	precinct
+Rhode Island;Providence;Precinct 2830	precinct
+Rhode Island;Providence;Precinct 2831	precinct
+Rhode Island;Providence;Precinct 2832	precinct
+Rhode Island;Providence;Precinct 2833	precinct
+Rhode Island;Providence;Precinct 2834	precinct
+Rhode Island;Providence;Precinct 2835	precinct
+Rhode Island;Providence;Precinct 2836	precinct
+Rhode Island;Providence;Precinct 2837	precinct
+Rhode Island;Providence;Precinct 2838	precinct
+Rhode Island;Providence;Precinct 2839	precinct
+Rhode Island;Providence;Precinct 2840	precinct
+Rhode Island;Providence;Precinct 2841	precinct
+Rhode Island;Providence;Precinct 2842	precinct
+Rhode Island;Providence;Precinct 2843	precinct
+Rhode Island;Providence;Precinct 2844	precinct
+Rhode Island;Providence;Precinct 2845	precinct
+Rhode Island;Providence;Precinct 2846	precinct
+Rhode Island;Providence;Precinct 2847	precinct
+Rhode Island;Providence;Precinct 2848	precinct
+Rhode Island;Providence;Precinct 2849	precinct
+Rhode Island;Providence;Precinct 2850	precinct
+Rhode Island;Providence;Precinct 2851	precinct
+Rhode Island;Providence;Precinct 2852	precinct
+Rhode Island;Providence;Precinct 2853	precinct
+Rhode Island;Providence;Precinct 2854	precinct
+Rhode Island;Providence;Precinct 2855	precinct
+Rhode Island;Providence;Precinct 2856	precinct
+Rhode Island;Providence;Precinct 2857	precinct
+Rhode Island;Providence;Precinct 2858	precinct
+Rhode Island;Providence;Precinct 2859	precinct
+Rhode Island;Providence;Precinct 2860	precinct
+Rhode Island;Providence;Precinct 2861	precinct
+Rhode Island;Providence;Precinct 2862	precinct
+Rhode Island;Providence;Precinct 2863	precinct
+Rhode Island;Providence;Precinct 2864	precinct
+Rhode Island;Providence;Precinct 2865	precinct
+Rhode Island;Providence;Precinct 2866	precinct
+Rhode Island;Providence;Precinct 2867	precinct
+Rhode Island;Providence;Precinct 2868	precinct
+Rhode Island;Providence;Precinct 2869	precinct
+Rhode Island;Providence;Precinct 2870	precinct
+Rhode Island;Providence;Precinct 2871	precinct
+Rhode Island;Providence;Precinct 2872	precinct
+Rhode Island;Providence;Precinct 2873	precinct
+Rhode Island;Providence;Precinct 2874	precinct
+Rhode Island;Providence;Precinct 2875	precinct
+Rhode Island;Providence;Precinct 2876	precinct
+Rhode Island;Providence;Precinct 2877	precinct
+Rhode Island;Providence;Precinct 2878	precinct
+Rhode Island;Providence;Precinct 2879	precinct
+Rhode Island;Providence;Precinct 2880	precinct
+Rhode Island;Richmond;Precinct 2901	precinct
+Rhode Island;Richmond;Precinct 2902	precinct
+Rhode Island;Scituate;Precinct 3001	precinct
+Rhode Island;Scituate;Precinct 3002	precinct
+Rhode Island;Scituate;Precinct 3003	precinct
+Rhode Island;Smithfield;Precinct 3101	precinct
+Rhode Island;Smithfield;Precinct 3102	precinct
+Rhode Island;Smithfield;Precinct 3103	precinct
+Rhode Island;Smithfield;Precinct 3104	precinct
+Rhode Island;Smithfield;Precinct 3105	precinct
+Rhode Island;Smithfield;Precinct 3106	precinct
+Rhode Island;South Kingstown;Precinct 3201	precinct
+Rhode Island;South Kingstown;Precinct 3202	precinct
+Rhode Island;South Kingstown;Precinct 3203	precinct
+Rhode Island;South Kingstown;Precinct 3204	precinct
+Rhode Island;South Kingstown;Precinct 3205	precinct
+Rhode Island;South Kingstown;Precinct 3206	precinct
+Rhode Island;South Kingstown;Precinct 3207	precinct
+Rhode Island;South Kingstown;Precinct 3208	precinct
+Rhode Island;South Kingstown;Precinct 3209	precinct
+Rhode Island;South Kingstown;Precinct 3210	precinct
+Rhode Island;Tiverton;Precinct 3301	precinct
+Rhode Island;Tiverton;Precinct 3302	precinct
+Rhode Island;Tiverton;Precinct 3303	precinct
+Rhode Island;Tiverton;Precinct 3304	precinct
+Rhode Island;Tiverton;Precinct 3305	precinct
+Rhode Island;Tiverton;Precinct 3306	precinct
+Rhode Island;Tiverton;Precinct 3307	precinct
+Rhode Island;Warren;Precinct 3401	precinct
+Rhode Island;Warren;Precinct 3402	precinct
+Rhode Island;Warren;Precinct 3403	precinct
+Rhode Island;Warwick;Precinct 3501	precinct
+Rhode Island;Warwick;Precinct 3502	precinct
+Rhode Island;Warwick;Precinct 3503	precinct
+Rhode Island;Warwick;Precinct 3504	precinct
+Rhode Island;Warwick;Precinct 3505	precinct
+Rhode Island;Warwick;Precinct 3506	precinct
+Rhode Island;Warwick;Precinct 3507	precinct
+Rhode Island;Warwick;Precinct 3508	precinct
+Rhode Island;Warwick;Precinct 3509	precinct
+Rhode Island;Warwick;Precinct 3510	precinct
+Rhode Island;Warwick;Precinct 3511	precinct
+Rhode Island;Warwick;Precinct 3512	precinct
+Rhode Island;Warwick;Precinct 3513	precinct
+Rhode Island;Warwick;Precinct 3514	precinct
+Rhode Island;Warwick;Precinct 3515	precinct
+Rhode Island;Warwick;Precinct 3516	precinct
+Rhode Island;Warwick;Precinct 3517	precinct
+Rhode Island;Warwick;Precinct 3518	precinct
+Rhode Island;Warwick;Precinct 3519	precinct
+Rhode Island;Warwick;Precinct 3520	precinct
+Rhode Island;Warwick;Precinct 3521	precinct
+Rhode Island;Warwick;Precinct 3522	precinct
+Rhode Island;Warwick;Precinct 3523	precinct
+Rhode Island;Warwick;Precinct 3524	precinct
+Rhode Island;Warwick;Precinct 3525	precinct
+Rhode Island;Warwick;Precinct 3526	precinct
+Rhode Island;Warwick;Precinct 3527	precinct
+Rhode Island;Warwick;Precinct 3528	precinct
+Rhode Island;Warwick;Precinct 3529	precinct
+Rhode Island;Warwick;Precinct 3530	precinct
+Rhode Island;Warwick;Precinct 3531	precinct
+Rhode Island;Warwick;Precinct 3532	precinct
+Rhode Island;Warwick;Precinct 3533	precinct
+Rhode Island;West Greenwich;Precinct 3701	precinct
+Rhode Island;West Greenwich;Precinct 3702	precinct
+Rhode Island;West Greenwich;Precinct 3703	precinct
+Rhode Island;West Greenwich;Precinct 3704	precinct
+Rhode Island;West Warwick;Precinct 3801	precinct
+Rhode Island;West Warwick;Precinct 3802	precinct
+Rhode Island;West Warwick;Precinct 3803	precinct
+Rhode Island;West Warwick;Precinct 3804	precinct
+Rhode Island;West Warwick;Precinct 3805	precinct
+Rhode Island;West Warwick;Precinct 3806	precinct
+Rhode Island;West Warwick;Precinct 3807	precinct
+Rhode Island;West Warwick;Precinct 3808	precinct
+Rhode Island;West Warwick;Precinct 3809	precinct
+Rhode Island;West Warwick;Precinct 3810	precinct
+Rhode Island;Westerly;Precinct 3601	precinct
+Rhode Island;Westerly;Precinct 3602	precinct
+Rhode Island;Westerly;Precinct 3603	precinct
+Rhode Island;Westerly;Precinct 3604	precinct
+Rhode Island;Westerly;Precinct 3605	precinct
+Rhode Island;Westerly;Precinct 3606	precinct
+Rhode Island;Westerly;Precinct 3607	precinct
+Rhode Island;Woonsocket;Precinct 3901	precinct
+Rhode Island;Woonsocket;Precinct 3902	precinct
+Rhode Island;Woonsocket;Precinct 3903	precinct
+Rhode Island;Woonsocket;Precinct 3904	precinct
+Rhode Island;Woonsocket;Precinct 3905	precinct
+Rhode Island;Woonsocket;Precinct 3906	precinct
+Rhode Island;Woonsocket;Precinct 3907	precinct
+Rhode Island;Woonsocket;Precinct 3908	precinct
+Rhode Island;Woonsocket;Precinct 3909	precinct
+Rhode Island;Woonsocket;Precinct 3910	precinct
+Rhode Island;Woonsocket;Precinct 3911	precinct
+Rhode Island;Woonsocket;Precinct 3912	precinct

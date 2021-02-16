@@ -1,72 +1,72 @@
 BallotName
-WES DUNCAN
-AARON FORD
+Wes Duncan
+Aaron Ford
 Joel F. Hansen
 Stacey Giomi
-JOHN WOOD
-RUSSELL BEST
-RYAN BUNDY
-ADAM PAUL LAXALT
-JARED LORD
-STEVE SISOLAK
-KRISTIN LUIS
-RYAN RUSSELL
-JANINE HANSEN
-KATE MARSHALL
-MICHAEL ROBERSON
-ED UEHLING
-NELSON ARAUJO
+John Wood
+Russell Best
+Ryan Bundy
+Adam Paul Laxalt
+Jared Lord
+Steve Sisolak
+Kristin Luis
+Ryan Russell
+Janine Hansen
+Kate Marshall
+Michael Roberson
+Ed Uehling
+Nelson Araujo
 Barbara K. Cegavske
-KENNY FURLONG
-LORNE R. HOULE
-AL KRAMER
+Kenny Furlong
+Lorne R. Houle
+Al Kramer
 Autumn Zemke
-CATHERINE BYRNE
+Catherine Byrne
 Ron Knecht
 Tina Davis-Hersey
 Ben Kieckhefer
 John Wagner
-BOB BEERS
-ZACH CONINE
-BILL HOGE
-ELISSA CADISH
-JERRY TAO
-ABBI SILVER
-MATHEW HARTER
-LIDIA STIGLICH
+Bob Beers
+Zach Conine
+Bill Hoge
+Elissa Cadish
+Jerry Tao
+Abbi Silver
+Mathew Harter
+Lidia Stiglich
 Mark E. Amodei
-CLINT KOBLE
-KAMAU A. BAKARI
-TIM HAGAN
+Clint Koble
+Kamau A. Bakari
+Tim Hagan
 Dean Heller
-BARRY MICHAELS
-JACKY ROSEN
-FREDERICK D. BUCKMASTER
-AMBER N. GETTO
+Barry Michaels
+Jacky Rosen
+Frederick D. Buckmaster
+Amber N. Getto
 Clay HENDRIX
-MATT HYDE
-PATTY JULIAN
-TEDD MCDONALD
-CARMEN SCHANK
-DEBY SMOTHERMAN
-DENISE L. MONDHINK-FELTON
-LINDA ROTHERY
-PETE OLSEN
-TASHA HESSEY
-ART MALLORY
-MIKE RICHARDS
-BENJAMIN D. TROTTER
-THOMAS HUTCHINGS
-CHRISTY LATTIN
-GARY L. SMITH
-MICHAEL SPENCER
-LARRY TUCKER
-ROBERT M. GETTO JR.
-RAY EAST
-RICHARD C. HICKOX
-ROBIN L. TITUS
-CURTIS W. CANNON
-JAMES ARNOLD SETTELMEYER
+Matt Hyde
+Patty Julian
+Tedd Mcdonald
+Carmen Schank
+Deby Smotherman
+Denise L. Mondhink-Felton
+Linda Rothery
+Pete Olsen
+Tasha Hessey
+Art Mallory
+Mike Richards
+Benjamin D. Trotter
+Thomas Hutchings
+Christy Lattin
+Gary L. Smith
+Michael Spencer
+Larry Tucker
+Robert M. Getto Jr.
+Ray East
+Richard C. Hickox
+Robin L. Titus
+Curtis W. Cannon
+James Arnold Settelmeyer
 Briana Johnson
 Gina McClain
 Lynn Maria Goya
@@ -75,11 +75,11 @@ Debbie Conway
 Jill MacFarlane
 Phil Collins
 Laura Fitzpatrick
-STEVE WOLFSON
+Steve Wolfson
 Tierra Jones
 Mark B. Bailus
 Mary Kay Holthus
-DAVID M. JONES
+David M. Jones
 Elana Lee Graham
 James Dean Leavitt
 Victoria Kay DaCosta
@@ -105,11 +105,11 @@ Harry L. Vickers
 Jack 'Fat Jack' Cochran
 Glen Leavitt
 Ralph Preta
-JOE HARDY
+Joe Hardy
 Craig Jordahl
 Jordan Ross
 Irene Cepeda
-KEVIN L. CHILD
+Kevin L. Child
 Michelle Gorelow
 Daniel Hofstein
 David Schoen
@@ -137,12 +137,12 @@ Steve Yeager
 Alexander Assefa
 Heidi Swank
 Yvanna Cancela
-STEVE HAMPE
+Steve Hampe
 Robert D. Martin
 Victor Lee Miller
 Dennis Hof
 Lesia Romanov
-ROBERT L. ELIASON
+Robert L. Eliason
 Jimmy Vega
 Daniele Monroe-Moreno
 Cresent Hardy
@@ -178,19 +178,19 @@ Ann 'Annie' Black
 Karen Fielding
 Duane L. Thurston
 John Burrows
-BEN K. DAVIS
+Ben K. Davis
 Jere A. Walker
 Josh Jensen
-LINDA CAVAZOS
+Linda Cavazos
 Ryan Scalia
 Shea Backus
 Jim Marchant
 Erik L. Laub
-DARRYLL B. DODENBIER
+Darryll B. Dodenbier
 Brian Douglas Haviland
 Edgar Flores
 Calvin 'Cal' Border
-MO DENIS
+Mo Denis
 Shannon Bilbray-Axelrod
 Janice E. Wesen
 John Hambrick
@@ -226,7 +226,7 @@ Kathy Lewis
 John Engels
 Kristi Lynn Kandel
 Wesley A. Rice
-KAREN ELLISON
+Karen Ellison
 Mark B. Jackson
 Cassandra G. Jones
 Erik Levin
@@ -265,101 +265,101 @@ William 'Bill' Kirschner
 Dan Norman
 Sandra 'Sandy' Parks
 Darya Vogt
-KATRINKA S. RUSSELL
-KRISTINE 'KRIS' JAKEMAN
-CHERYL PAUL
-DELMO ANDREOZZI
-CLIFF EKLUND
-D. MIKE SMALES
-TYLER INGRAM
-BILL HANCE
-TONY LIKER
-JEANNA SECRIST
-RO SMITH
-CHIP STONE
-REECE KEENER
-MARCEY LOGSDEN
-ANTOINETTE CHIESA
-MASON EDWARD SIMONS
-STACIE PHILLIPS
-BRIAN ZEISZLER
-EMILY CARTER
-CANDACE WINES
-AITOR NARVAIZA
-JIM PITTS
+Katrinka S. Russell
+Kristine 'Kris' Jakeman
+Cheryl Paul
+Delmo Andreozzi
+Cliff Eklund
+D. Mike Smales
+Tyler Ingram
+Bill Hance
+Tony Liker
+Jeanna Secrist
+Ro Smith
+Chip Stone
+Reece Keener
+Marcey Logsden
+Antoinette Chiesa
+Mason Edward Simons
+Stacie Phillips
+Brian Zeiszler
+Emily Carter
+Candace Wines
+Aitor Narvaiza
+Jim Pitts
 John C. Ellison
-CAMERON KINNEY
-SABRA ESPARZA
-WAYNE A. EVENSON
-PATRICIA 'PAM' GRISWOLD
-LINCOLN LITCHFIELD
-DANA DON HOLBROOK
-JONATHAN GOOLSBY
-MICHAEL K. PACE
-ROBERT WOOLSEY
-LAYLA WALZ
-JEFF R. DURHAM
-KATHY DURHAM
-ISMAEL 'IZZY' GUTIERREZ
-JOHN B. HANSON
-JASIE HOLM
-MICHAEL CHRISTENSEN
-MARIA G. ORTEGA
-BRIAN RAY
-JARED F. CARTER
-GERARDO RODRIGUEZ
-RUTH P. LEE
-VERA BOYER
-PATRICIA 'PATTY' HUBER-BETH
+Cameron Kinney
+Sabra Esparza
+Wayne A. Evenson
+Patricia 'Pam' Griswold
+Lincoln Litchfield
+Dana Don Holbrook
+Jonathan Goolsby
+Michael K. Pace
+Robert Woolsey
+Layla Walz
+Jeff R. Durham
+Kathy Durham
+Ismael 'Izzy' Gutierrez
+John B. Hanson
+Jasie Holm
+Michael Christensen
+Maria G. Ortega
+Brian Ray
+Jared F. Carter
+Gerardo Rodriguez
+Ruth P. Lee
+Vera Boyer
+Patricia 'Patty' Huber-Beth
 LaCinda 'CINDY' ELGAN
-TIMOTHY HIPP
-MARK STEZAKER
-ROBERT E. III GLENNEN
-ALEXIS M. HANSEN
-PAULA POVILAITIS
-WENDY BOSZAK
-IRA HANSEN
-MICHAEL A. MEARS
-LISA L. HOEHNE
-AMANDA JEAN PEARCE
-RICH MCKAY
-BEVERLY CONLEY
-THEODORE 'TED' BEUTEL
-DOROTHY ROWLEY
-MELYNDA SHARKOZY
-MELISSA FITZWATER
-ROBIN HICKS
-JIM IZZOLO
-BRANDI ANDERSON
-DARLA R. BAUMANN
+Timothy Hipp
+Mark Stezaker
+Robert E. Iii Glennen
+Alexis M. Hansen
+Paula Povilaitis
+Wendy Boszak
+Ira Hansen
+Michael A. Mears
+Lisa L. Hoehne
+Amanda Jean Pearce
+Rich Mckay
+Beverly Conley
+Theodore 'Ted' Beutel
+Dorothy Rowley
+Melynda Sharkozy
+Melissa Fitzwater
+Robin Hicks
+Jim Izzolo
+Brandi Anderson
+Darla R. Baumann
 Gary Horky
 Theresa Mavity
 Jim Billingsley
 Fredrick Bryant
 Paige Brooks
 Rich Stone
-WILLIAM 'JEFF' JOHNSON
+William 'Jeff' Johnson
 Tami Rae Spero
 Ronald L. Cerri
 Jim French
 Deborah Engstrom
 Rhona Lecumberry
-MICHAEL MACDONALD
+Michael Macdonald
 Gene Hunt
 Joel Murphy
 Bill Douglas
 Christopher R. Entwistle
 Jim Loveless
 Matt Morgan
-LURA DUVALL
+Lura Duvall
 Leann Miller
-SADIE SULLIVAN
+Sadie Sullivan
 Bryan Sparks
 Art III Clark
 Harry L. Sr. Dimitroff
 Kathleen V. Ancho
 Manuel II Moreno
-LESLEY L. BUNCH
+Lesley L. Bunch
 Tina Marie Bisiaux
 Jusdivia Johnson
 Theodore C. Herrera
@@ -394,7 +394,7 @@ Cary 'Rick' Smith
 Cassandra Aveiro
 Barbara Jean Jones
 Frank Hunewill
-AL MCNEIL
+Al Mcneil
 Charles 'Chuck' Kennedy
 Kathy McIntosh
 Avis Moniz
@@ -418,50 +418,50 @@ Mike James
 Paula Joe Reed
 Keith E. Neville
 David Ziegler
-BETH CICHOWLAZ
+Beth Cichowlaz
 Randy Adams
 Earl William Perry
-ANDY ALBERTI
-SHEREE STRINGER
-SANDRA 'SAM' MERLINO
-SHEILA WINN
-DEBORAH BEATTY
-MICHAEL S. NOYES
-LANCE ROY SCHAUS
-PAM WEBSTER
-CHRIS ARABIA
-NICHOLAS ANTHONY DEL VECCHIO
-GINGER L. STUMNE
+Andy Alberti
+Sheree Stringer
+Sandra 'Sam' Merlino
+Sheila Winn
+Deborah Beatty
+Michael S. Noyes
+Lance Roy Schaus
+Pam Webster
+Chris Arabia
+Nicholas Anthony Del Vecchio
+Ginger L. Stumne
 Tony DeMeo
-SHARON A. WEHRLY
-HORACE H. CARLYLE
-DON KAMINSKI
-TIMAREE KOSCIK
-JUSTIN B. ZIMMERMAN
-FRANK CARBONE
-LISA CHAMLEE
-SEAN C. HASTINGS
-TAWNA YAZZIE
-LEO BLUNDO
-RICHARD GOLDSTEIN
-MARK OWENS
-DONALD E. RUST
-DEBRA STRICKLAND
-LAUREEN E. BASSO-CERINI
-LACEY DONALDSON
-KRISTY BERGE
-CAROL A. SHANK
-RENE M. CHILDS
-R. BRYCE SHIELDS
-JEFFREY KEARNS
-CINDY PLUMMER
-BARBARA RACKLEY
-JANA SEDDON
-VANESSA STEPHENS
+Sharon A. Wehrly
+Horace H. Carlyle
+Don Kaminski
+Timaree Koscik
+Justin B. Zimmerman
+Frank Carbone
+Lisa Chamlee
+Sean C. Hastings
+Tawna Yazzie
+Leo Blundo
+Richard Goldstein
+Mark Owens
+Donald E. Rust
+Debra Strickland
+Laureen E. Basso-Cerini
+Lacey Donaldson
+Kristy Berge
+Carol A. Shank
+Rene M. Childs
+R. Bryce Shields
+Jeffrey Kearns
+Cindy Plummer
+Barbara Rackley
+Jana Seddon
+Vanessa Stephens
 Nicole Barde
 Jay Carmona
-JEN CHAPMAN
-ANNE LANGER
+Jen Chapman
+Anne Langer
 Jeffrey M. Nevin
 Sam Toll
 Eddie Lorton
@@ -480,10 +480,10 @@ Aaron Bushur
 Dixie Grossman
 Egan Walker
 Barry Breslow
-DON CAVALLO
+Don Cavallo
 Verita Black Prothro
 Karl S. Hall
-JOHN J. KADLIC
+John J. Kadlic
 Darin Balaam
 Heidi Howe
 Sarah Peters
@@ -502,7 +502,7 @@ Richard Bein
 Bruce Comer
 Hud Horton
 Robert Unsworth
-NANCY E. ZUNINO
+Nancy E. Zunino
 Naomi Duerr
 Joe Lawrence
 Bob Lucey
@@ -537,8 +537,8 @@ Nichole Baldwin
 Ian Bullis
 George Chachas
 Travis Godon
-MARTHA RIVERA SINDELAR
-CATHERINE BAKARIC
+Martha Rivera Sindelar
+Catherine Bakaric
 Michael A. Wheable
 Stephen J. Bishop
 Matt Hibbs
@@ -548,23 +548,23 @@ Scott Henriod
 Ray Sawyer
 Sid Beckwith
 Ericson Skye
-Bakari, Kamau A.
-Ackerman, Patricia
-Amodei, Mark E.
-Hansen, Janine
-Horsford, Steven A.
-TITUS, DINA
-STRAWDER, JR., ROBERT VAN
-RUBINSON, BARRY
-RODIMER, DAN 'BIG DAN'
-MARCHANT, JIM
-LEE, SUZANNE
-ESTEBAN, JONATHAN ROYCE
-BROWN, STEVE
-BRIDGES II, EDWARD
-BENTLEY, JOYCE
+"Bakari, Kamau A."
+"Ackerman, Patricia"
+"Amodei, Mark E."
+"Hansen, Janine"
+"Horsford, Steven A."
+"Titus, Dina"
+"Rodimer, Dan 'Big Dan'"
+"Marchant, Jim"
+Suzanne Lee
+"Brown, Steve"
+Edward Bridges II
+"Bentley, Joyce"
 Jo Jorgensen
 Don Blankenship
 Joseph R. Biden
 None Of These Candidates
 Donald J. Trump
+Jonathan Royce Esteban
+Barry Rubinson
+Robert Van Strawder, Jr.

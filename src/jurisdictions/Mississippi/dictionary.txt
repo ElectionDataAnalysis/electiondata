@@ -1,0 +1,477 @@
+cdf_element	cdf_internal_name	raw_identifier_value
+CandidateContest	MS House District 1	MS House District 1
+CandidateContest	MS House District 2	MS House District 2
+CandidateContest	MS House District 3	MS House District 3
+CandidateContest	MS House District 4	MS House District 4
+CandidateContest	MS House District 5	MS House District 5
+CandidateContest	MS House District 6	MS House District 6
+CandidateContest	MS House District 7	MS House District 7
+CandidateContest	MS House District 8	MS House District 8
+CandidateContest	MS House District 9	MS House District 9
+CandidateContest	MS House District 10	MS House District 10
+CandidateContest	MS House District 11	MS House District 11
+CandidateContest	MS House District 12	MS House District 12
+CandidateContest	MS House District 13	MS House District 13
+CandidateContest	MS House District 14	MS House District 14
+CandidateContest	MS House District 15	MS House District 15
+CandidateContest	MS House District 16	MS House District 16
+CandidateContest	MS House District 17	MS House District 17
+CandidateContest	MS House District 18	MS House District 18
+CandidateContest	MS House District 19	MS House District 19
+CandidateContest	MS House District 20	MS House District 20
+CandidateContest	MS House District 21	MS House District 21
+CandidateContest	MS House District 22	MS House District 22
+CandidateContest	MS House District 23	MS House District 23
+CandidateContest	MS House District 24	MS House District 24
+CandidateContest	MS House District 25	MS House District 25
+CandidateContest	MS House District 26	MS House District 26
+CandidateContest	MS House District 27	MS House District 27
+CandidateContest	MS House District 28	MS House District 28
+CandidateContest	MS House District 29	MS House District 29
+CandidateContest	MS House District 30	MS House District 30
+CandidateContest	MS House District 31	MS House District 31
+CandidateContest	MS House District 32	MS House District 32
+CandidateContest	MS House District 33	MS House District 33
+CandidateContest	MS House District 34	MS House District 34
+CandidateContest	MS House District 35	MS House District 35
+CandidateContest	MS House District 36	MS House District 36
+CandidateContest	MS House District 37	MS House District 37
+CandidateContest	MS House District 38	MS House District 38
+CandidateContest	MS House District 39	MS House District 39
+CandidateContest	MS House District 40	MS House District 40
+CandidateContest	MS House District 41	MS House District 41
+CandidateContest	MS House District 42	MS House District 42
+CandidateContest	MS House District 43	MS House District 43
+CandidateContest	MS House District 44	MS House District 44
+CandidateContest	MS House District 45	MS House District 45
+CandidateContest	MS House District 46	MS House District 46
+CandidateContest	MS House District 47	MS House District 47
+CandidateContest	MS House District 48	MS House District 48
+CandidateContest	MS House District 49	MS House District 49
+CandidateContest	MS House District 50	MS House District 50
+CandidateContest	MS House District 51	MS House District 51
+CandidateContest	MS House District 52	MS House District 52
+CandidateContest	MS House District 53	MS House District 53
+CandidateContest	MS House District 54	MS House District 54
+CandidateContest	MS House District 55	MS House District 55
+CandidateContest	MS House District 56	MS House District 56
+CandidateContest	MS House District 57	MS House District 57
+CandidateContest	MS House District 58	MS House District 58
+CandidateContest	MS House District 59	MS House District 59
+CandidateContest	MS House District 60	MS House District 60
+CandidateContest	MS House District 61	MS House District 61
+CandidateContest	MS House District 62	MS House District 62
+CandidateContest	MS House District 63	MS House District 63
+CandidateContest	MS House District 64	MS House District 64
+CandidateContest	MS House District 65	MS House District 65
+CandidateContest	MS House District 66	MS House District 66
+CandidateContest	MS House District 67	MS House District 67
+CandidateContest	MS House District 68	MS House District 68
+CandidateContest	MS House District 69	MS House District 69
+CandidateContest	MS House District 70	MS House District 70
+CandidateContest	MS House District 71	MS House District 71
+CandidateContest	MS House District 72	MS House District 72
+CandidateContest	MS House District 73	MS House District 73
+CandidateContest	MS House District 74	MS House District 74
+CandidateContest	MS House District 75	MS House District 75
+CandidateContest	MS House District 76	MS House District 76
+CandidateContest	MS House District 77	MS House District 77
+CandidateContest	MS House District 78	MS House District 78
+CandidateContest	MS House District 79	MS House District 79
+CandidateContest	MS House District 80	MS House District 80
+CandidateContest	MS House District 81	MS House District 81
+CandidateContest	MS House District 82	MS House District 82
+CandidateContest	MS House District 83	MS House District 83
+CandidateContest	MS House District 84	MS House District 84
+CandidateContest	MS House District 85	MS House District 85
+CandidateContest	MS House District 86	MS House District 86
+CandidateContest	MS House District 87	MS House District 87
+CandidateContest	MS House District 88	MS House District 88
+CandidateContest	MS House District 89	MS House District 89
+CandidateContest	MS House District 90	MS House District 90
+CandidateContest	MS House District 91	MS House District 91
+CandidateContest	MS House District 92	MS House District 92
+CandidateContest	MS House District 93	MS House District 93
+CandidateContest	MS House District 94	MS House District 94
+CandidateContest	MS House District 95	MS House District 95
+CandidateContest	MS House District 96	MS House District 96
+CandidateContest	MS House District 97	MS House District 97
+CandidateContest	MS House District 98	MS House District 98
+CandidateContest	MS House District 99	MS House District 99
+CandidateContest	MS House District 100	MS House District 100
+CandidateContest	MS House District 101	MS House District 101
+CandidateContest	MS House District 102	MS House District 102
+CandidateContest	MS House District 103	MS House District 103
+CandidateContest	MS House District 104	MS House District 104
+CandidateContest	MS House District 105	MS House District 105
+CandidateContest	MS House District 106	MS House District 106
+CandidateContest	MS House District 107	MS House District 107
+CandidateContest	MS House District 108	MS House District 108
+CandidateContest	MS House District 109	MS House District 109
+CandidateContest	MS House District 110	MS House District 110
+CandidateContest	MS House District 111	MS House District 111
+CandidateContest	MS House District 112	MS House District 112
+CandidateContest	MS House District 113	MS House District 113
+CandidateContest	MS House District 114	MS House District 114
+CandidateContest	MS House District 115	MS House District 115
+CandidateContest	MS House District 116	MS House District 116
+CandidateContest	MS House District 117	MS House District 117
+CandidateContest	MS House District 118	MS House District 118
+CandidateContest	MS House District 119	MS House District 119
+CandidateContest	MS House District 120	MS House District 120
+CandidateContest	MS House District 121	MS House District 121
+CandidateContest	MS House District 122	MS House District 122
+CandidateContest	MS Senate District 1	MS Senate District 1
+CandidateContest	MS Senate District 2	MS Senate District 2
+CandidateContest	MS Senate District 3	MS Senate District 3
+CandidateContest	MS Senate District 4	MS Senate District 4
+CandidateContest	MS Senate District 5	MS Senate District 5
+CandidateContest	MS Senate District 6	MS Senate District 6
+CandidateContest	MS Senate District 7	MS Senate District 7
+CandidateContest	MS Senate District 8	MS Senate District 8
+CandidateContest	MS Senate District 9	MS Senate District 9
+CandidateContest	MS Senate District 10	MS Senate District 10
+CandidateContest	MS Senate District 11	MS Senate District 11
+CandidateContest	MS Senate District 12	MS Senate District 12
+CandidateContest	MS Senate District 13	MS Senate District 13
+CandidateContest	MS Senate District 14	MS Senate District 14
+CandidateContest	MS Senate District 15	MS Senate District 15
+CandidateContest	MS Senate District 16	MS Senate District 16
+CandidateContest	MS Senate District 17	MS Senate District 17
+CandidateContest	MS Senate District 18	MS Senate District 18
+CandidateContest	MS Senate District 19	MS Senate District 19
+CandidateContest	MS Senate District 20	MS Senate District 20
+CandidateContest	MS Senate District 21	MS Senate District 21
+CandidateContest	MS Senate District 22	MS Senate District 22
+CandidateContest	MS Senate District 23	MS Senate District 23
+CandidateContest	MS Senate District 24	MS Senate District 24
+CandidateContest	MS Senate District 25	MS Senate District 25
+CandidateContest	MS Senate District 26	MS Senate District 26
+CandidateContest	MS Senate District 27	MS Senate District 27
+CandidateContest	MS Senate District 28	MS Senate District 28
+CandidateContest	MS Senate District 29	MS Senate District 29
+CandidateContest	MS Senate District 30	MS Senate District 30
+CandidateContest	MS Senate District 31	MS Senate District 31
+CandidateContest	MS Senate District 32	MS Senate District 32
+CandidateContest	MS Senate District 33	MS Senate District 33
+CandidateContest	MS Senate District 34	MS Senate District 34
+CandidateContest	MS Senate District 35	MS Senate District 35
+CandidateContest	MS Senate District 36	MS Senate District 36
+CandidateContest	MS Senate District 37	MS Senate District 37
+CandidateContest	MS Senate District 38	MS Senate District 38
+CandidateContest	MS Senate District 39	MS Senate District 39
+CandidateContest	MS Senate District 40	MS Senate District 40
+CandidateContest	MS Senate District 41	MS Senate District 41
+CandidateContest	MS Senate District 42	MS Senate District 42
+CandidateContest	MS Senate District 43	MS Senate District 43
+CandidateContest	MS Senate District 44	MS Senate District 44
+CandidateContest	MS Senate District 45	MS Senate District 45
+CandidateContest	MS Senate District 46	MS Senate District 46
+CandidateContest	MS Senate District 47	MS Senate District 47
+CandidateContest	MS Senate District 48	MS Senate District 48
+CandidateContest	MS Senate District 49	MS Senate District 49
+CandidateContest	MS Senate District 50	MS Senate District 50
+CandidateContest	MS Senate District 51	MS Senate District 51
+CandidateContest	MS Senate District 52	MS Senate District 52
+CandidateContest	US House MS District 1	US House Of Rep 01-1st Congressional District
+CandidateContest	US House MS District 2	US House Of Rep 02-2nd Congressional District
+CandidateContest	US House MS District 3	US House Of Rep 03-3rd Congressional District
+CandidateContest	US House MS District 4	US House Of Rep 04-4th Congressional District
+CandidateContest	US President (MS)	United States-President
+CandidateContest	MS Governor	MS Governor
+CandidateContest	US Senate MS	United States-Senate
+CandidateContest	MS Attorney General	MS Attorney General
+CandidateContest	MS Lieutenant Governor	MS Lieutenant Governor
+CandidateContest	MS Treasurer	MS Treasurer
+CandidateContest	MS Secretary of State	MS Secretary of State
+Election	2020 General	2020 General
+Election	2020 Primary	2020 Primary
+Election	2018 General	2018 General
+Election	2016 General	2016 General
+Party	Democratic Party	Democrat
+Party	Republican Party	Republican
+Party	Green Party	Green
+Party	Libertarian Party	Libertarian
+Party	Independent Party	Independent
+Party	American Solidarity Party	American Solidarity
+Party	American Constitution Party	American Constitution
+ReportingUnit	Mississippi;MS House District 1	Mississippi;MS House District 1
+ReportingUnit	Mississippi;MS House District 2	Mississippi;MS House District 2
+ReportingUnit	Mississippi;MS House District 3	Mississippi;MS House District 3
+ReportingUnit	Mississippi;MS House District 4	Mississippi;MS House District 4
+ReportingUnit	Mississippi;MS House District 5	Mississippi;MS House District 5
+ReportingUnit	Mississippi;MS House District 6	Mississippi;MS House District 6
+ReportingUnit	Mississippi;MS House District 7	Mississippi;MS House District 7
+ReportingUnit	Mississippi;MS House District 8	Mississippi;MS House District 8
+ReportingUnit	Mississippi;MS House District 9	Mississippi;MS House District 9
+ReportingUnit	Mississippi;MS House District 10	Mississippi;MS House District 10
+ReportingUnit	Mississippi;MS House District 11	Mississippi;MS House District 11
+ReportingUnit	Mississippi;MS House District 12	Mississippi;MS House District 12
+ReportingUnit	Mississippi;MS House District 13	Mississippi;MS House District 13
+ReportingUnit	Mississippi;MS House District 14	Mississippi;MS House District 14
+ReportingUnit	Mississippi;MS House District 15	Mississippi;MS House District 15
+ReportingUnit	Mississippi;MS House District 16	Mississippi;MS House District 16
+ReportingUnit	Mississippi;MS House District 17	Mississippi;MS House District 17
+ReportingUnit	Mississippi;MS House District 18	Mississippi;MS House District 18
+ReportingUnit	Mississippi;MS House District 19	Mississippi;MS House District 19
+ReportingUnit	Mississippi;MS House District 20	Mississippi;MS House District 20
+ReportingUnit	Mississippi;MS House District 21	Mississippi;MS House District 21
+ReportingUnit	Mississippi;MS House District 22	Mississippi;MS House District 22
+ReportingUnit	Mississippi;MS House District 23	Mississippi;MS House District 23
+ReportingUnit	Mississippi;MS House District 24	Mississippi;MS House District 24
+ReportingUnit	Mississippi;MS House District 25	Mississippi;MS House District 25
+ReportingUnit	Mississippi;MS House District 26	Mississippi;MS House District 26
+ReportingUnit	Mississippi;MS House District 27	Mississippi;MS House District 27
+ReportingUnit	Mississippi;MS House District 28	Mississippi;MS House District 28
+ReportingUnit	Mississippi;MS House District 29	Mississippi;MS House District 29
+ReportingUnit	Mississippi;MS House District 30	Mississippi;MS House District 30
+ReportingUnit	Mississippi;MS House District 31	Mississippi;MS House District 31
+ReportingUnit	Mississippi;MS House District 32	Mississippi;MS House District 32
+ReportingUnit	Mississippi;MS House District 33	Mississippi;MS House District 33
+ReportingUnit	Mississippi;MS House District 34	Mississippi;MS House District 34
+ReportingUnit	Mississippi;MS House District 35	Mississippi;MS House District 35
+ReportingUnit	Mississippi;MS House District 36	Mississippi;MS House District 36
+ReportingUnit	Mississippi;MS House District 37	Mississippi;MS House District 37
+ReportingUnit	Mississippi;MS House District 38	Mississippi;MS House District 38
+ReportingUnit	Mississippi;MS House District 39	Mississippi;MS House District 39
+ReportingUnit	Mississippi;MS House District 40	Mississippi;MS House District 40
+ReportingUnit	Mississippi;MS House District 41	Mississippi;MS House District 41
+ReportingUnit	Mississippi;MS House District 42	Mississippi;MS House District 42
+ReportingUnit	Mississippi;MS House District 43	Mississippi;MS House District 43
+ReportingUnit	Mississippi;MS House District 44	Mississippi;MS House District 44
+ReportingUnit	Mississippi;MS House District 45	Mississippi;MS House District 45
+ReportingUnit	Mississippi;MS House District 46	Mississippi;MS House District 46
+ReportingUnit	Mississippi;MS House District 47	Mississippi;MS House District 47
+ReportingUnit	Mississippi;MS House District 48	Mississippi;MS House District 48
+ReportingUnit	Mississippi;MS House District 49	Mississippi;MS House District 49
+ReportingUnit	Mississippi;MS House District 50	Mississippi;MS House District 50
+ReportingUnit	Mississippi;MS House District 51	Mississippi;MS House District 51
+ReportingUnit	Mississippi;MS House District 52	Mississippi;MS House District 52
+ReportingUnit	Mississippi;MS House District 53	Mississippi;MS House District 53
+ReportingUnit	Mississippi;MS House District 54	Mississippi;MS House District 54
+ReportingUnit	Mississippi;MS House District 55	Mississippi;MS House District 55
+ReportingUnit	Mississippi;MS House District 56	Mississippi;MS House District 56
+ReportingUnit	Mississippi;MS House District 57	Mississippi;MS House District 57
+ReportingUnit	Mississippi;MS House District 58	Mississippi;MS House District 58
+ReportingUnit	Mississippi;MS House District 59	Mississippi;MS House District 59
+ReportingUnit	Mississippi;MS House District 60	Mississippi;MS House District 60
+ReportingUnit	Mississippi;MS House District 61	Mississippi;MS House District 61
+ReportingUnit	Mississippi;MS House District 62	Mississippi;MS House District 62
+ReportingUnit	Mississippi;MS House District 63	Mississippi;MS House District 63
+ReportingUnit	Mississippi;MS House District 64	Mississippi;MS House District 64
+ReportingUnit	Mississippi;MS House District 65	Mississippi;MS House District 65
+ReportingUnit	Mississippi;MS House District 66	Mississippi;MS House District 66
+ReportingUnit	Mississippi;MS House District 67	Mississippi;MS House District 67
+ReportingUnit	Mississippi;MS House District 68	Mississippi;MS House District 68
+ReportingUnit	Mississippi;MS House District 69	Mississippi;MS House District 69
+ReportingUnit	Mississippi;MS House District 70	Mississippi;MS House District 70
+ReportingUnit	Mississippi;MS House District 71	Mississippi;MS House District 71
+ReportingUnit	Mississippi;MS House District 72	Mississippi;MS House District 72
+ReportingUnit	Mississippi;MS House District 73	Mississippi;MS House District 73
+ReportingUnit	Mississippi;MS House District 74	Mississippi;MS House District 74
+ReportingUnit	Mississippi;MS House District 75	Mississippi;MS House District 75
+ReportingUnit	Mississippi;MS House District 76	Mississippi;MS House District 76
+ReportingUnit	Mississippi;MS House District 77	Mississippi;MS House District 77
+ReportingUnit	Mississippi;MS House District 78	Mississippi;MS House District 78
+ReportingUnit	Mississippi;MS House District 79	Mississippi;MS House District 79
+ReportingUnit	Mississippi;MS House District 80	Mississippi;MS House District 80
+ReportingUnit	Mississippi;MS House District 81	Mississippi;MS House District 81
+ReportingUnit	Mississippi;MS House District 82	Mississippi;MS House District 82
+ReportingUnit	Mississippi;MS House District 83	Mississippi;MS House District 83
+ReportingUnit	Mississippi;MS House District 84	Mississippi;MS House District 84
+ReportingUnit	Mississippi;MS House District 85	Mississippi;MS House District 85
+ReportingUnit	Mississippi;MS House District 86	Mississippi;MS House District 86
+ReportingUnit	Mississippi;MS House District 87	Mississippi;MS House District 87
+ReportingUnit	Mississippi;MS House District 88	Mississippi;MS House District 88
+ReportingUnit	Mississippi;MS House District 89	Mississippi;MS House District 89
+ReportingUnit	Mississippi;MS House District 90	Mississippi;MS House District 90
+ReportingUnit	Mississippi;MS House District 91	Mississippi;MS House District 91
+ReportingUnit	Mississippi;MS House District 92	Mississippi;MS House District 92
+ReportingUnit	Mississippi;MS House District 93	Mississippi;MS House District 93
+ReportingUnit	Mississippi;MS House District 94	Mississippi;MS House District 94
+ReportingUnit	Mississippi;MS House District 95	Mississippi;MS House District 95
+ReportingUnit	Mississippi;MS House District 96	Mississippi;MS House District 96
+ReportingUnit	Mississippi;MS House District 97	Mississippi;MS House District 97
+ReportingUnit	Mississippi;MS House District 98	Mississippi;MS House District 98
+ReportingUnit	Mississippi;MS House District 99	Mississippi;MS House District 99
+ReportingUnit	Mississippi;MS House District 100	Mississippi;MS House District 100
+ReportingUnit	Mississippi;MS House District 101	Mississippi;MS House District 101
+ReportingUnit	Mississippi;MS House District 102	Mississippi;MS House District 102
+ReportingUnit	Mississippi;MS House District 103	Mississippi;MS House District 103
+ReportingUnit	Mississippi;MS House District 104	Mississippi;MS House District 104
+ReportingUnit	Mississippi;MS House District 105	Mississippi;MS House District 105
+ReportingUnit	Mississippi;MS House District 106	Mississippi;MS House District 106
+ReportingUnit	Mississippi;MS House District 107	Mississippi;MS House District 107
+ReportingUnit	Mississippi;MS House District 108	Mississippi;MS House District 108
+ReportingUnit	Mississippi;MS House District 109	Mississippi;MS House District 109
+ReportingUnit	Mississippi;MS House District 110	Mississippi;MS House District 110
+ReportingUnit	Mississippi;MS House District 111	Mississippi;MS House District 111
+ReportingUnit	Mississippi;MS House District 112	Mississippi;MS House District 112
+ReportingUnit	Mississippi;MS House District 113	Mississippi;MS House District 113
+ReportingUnit	Mississippi;MS House District 114	Mississippi;MS House District 114
+ReportingUnit	Mississippi;MS House District 115	Mississippi;MS House District 115
+ReportingUnit	Mississippi;MS House District 116	Mississippi;MS House District 116
+ReportingUnit	Mississippi;MS House District 117	Mississippi;MS House District 117
+ReportingUnit	Mississippi;MS House District 118	Mississippi;MS House District 118
+ReportingUnit	Mississippi;MS House District 119	Mississippi;MS House District 119
+ReportingUnit	Mississippi;MS House District 120	Mississippi;MS House District 120
+ReportingUnit	Mississippi;MS House District 121	Mississippi;MS House District 121
+ReportingUnit	Mississippi;MS House District 122	Mississippi;MS House District 122
+ReportingUnit	Mississippi;MS Senate District 1	Mississippi;MS Senate District 1
+ReportingUnit	Mississippi;MS Senate District 2	Mississippi;MS Senate District 2
+ReportingUnit	Mississippi;MS Senate District 3	Mississippi;MS Senate District 3
+ReportingUnit	Mississippi;MS Senate District 4	Mississippi;MS Senate District 4
+ReportingUnit	Mississippi;MS Senate District 5	Mississippi;MS Senate District 5
+ReportingUnit	Mississippi;MS Senate District 6	Mississippi;MS Senate District 6
+ReportingUnit	Mississippi;MS Senate District 7	Mississippi;MS Senate District 7
+ReportingUnit	Mississippi;MS Senate District 8	Mississippi;MS Senate District 8
+ReportingUnit	Mississippi;MS Senate District 9	Mississippi;MS Senate District 9
+ReportingUnit	Mississippi;MS Senate District 10	Mississippi;MS Senate District 10
+ReportingUnit	Mississippi;MS Senate District 11	Mississippi;MS Senate District 11
+ReportingUnit	Mississippi;MS Senate District 12	Mississippi;MS Senate District 12
+ReportingUnit	Mississippi;MS Senate District 13	Mississippi;MS Senate District 13
+ReportingUnit	Mississippi;MS Senate District 14	Mississippi;MS Senate District 14
+ReportingUnit	Mississippi;MS Senate District 15	Mississippi;MS Senate District 15
+ReportingUnit	Mississippi;MS Senate District 16	Mississippi;MS Senate District 16
+ReportingUnit	Mississippi;MS Senate District 17	Mississippi;MS Senate District 17
+ReportingUnit	Mississippi;MS Senate District 18	Mississippi;MS Senate District 18
+ReportingUnit	Mississippi;MS Senate District 19	Mississippi;MS Senate District 19
+ReportingUnit	Mississippi;MS Senate District 20	Mississippi;MS Senate District 20
+ReportingUnit	Mississippi;MS Senate District 21	Mississippi;MS Senate District 21
+ReportingUnit	Mississippi;MS Senate District 22	Mississippi;MS Senate District 22
+ReportingUnit	Mississippi;MS Senate District 23	Mississippi;MS Senate District 23
+ReportingUnit	Mississippi;MS Senate District 24	Mississippi;MS Senate District 24
+ReportingUnit	Mississippi;MS Senate District 25	Mississippi;MS Senate District 25
+ReportingUnit	Mississippi;MS Senate District 26	Mississippi;MS Senate District 26
+ReportingUnit	Mississippi;MS Senate District 27	Mississippi;MS Senate District 27
+ReportingUnit	Mississippi;MS Senate District 28	Mississippi;MS Senate District 28
+ReportingUnit	Mississippi;MS Senate District 29	Mississippi;MS Senate District 29
+ReportingUnit	Mississippi;MS Senate District 30	Mississippi;MS Senate District 30
+ReportingUnit	Mississippi;MS Senate District 31	Mississippi;MS Senate District 31
+ReportingUnit	Mississippi;MS Senate District 32	Mississippi;MS Senate District 32
+ReportingUnit	Mississippi;MS Senate District 33	Mississippi;MS Senate District 33
+ReportingUnit	Mississippi;MS Senate District 34	Mississippi;MS Senate District 34
+ReportingUnit	Mississippi;MS Senate District 35	Mississippi;MS Senate District 35
+ReportingUnit	Mississippi;MS Senate District 36	Mississippi;MS Senate District 36
+ReportingUnit	Mississippi;MS Senate District 37	Mississippi;MS Senate District 37
+ReportingUnit	Mississippi;MS Senate District 38	Mississippi;MS Senate District 38
+ReportingUnit	Mississippi;MS Senate District 39	Mississippi;MS Senate District 39
+ReportingUnit	Mississippi;MS Senate District 40	Mississippi;MS Senate District 40
+ReportingUnit	Mississippi;MS Senate District 41	Mississippi;MS Senate District 41
+ReportingUnit	Mississippi;MS Senate District 42	Mississippi;MS Senate District 42
+ReportingUnit	Mississippi;MS Senate District 43	Mississippi;MS Senate District 43
+ReportingUnit	Mississippi;MS Senate District 44	Mississippi;MS Senate District 44
+ReportingUnit	Mississippi;MS Senate District 45	Mississippi;MS Senate District 45
+ReportingUnit	Mississippi;MS Senate District 46	Mississippi;MS Senate District 46
+ReportingUnit	Mississippi;MS Senate District 47	Mississippi;MS Senate District 47
+ReportingUnit	Mississippi;MS Senate District 48	Mississippi;MS Senate District 48
+ReportingUnit	Mississippi;MS Senate District 49	Mississippi;MS Senate District 49
+ReportingUnit	Mississippi;MS Senate District 50	Mississippi;MS Senate District 50
+ReportingUnit	Mississippi;MS Senate District 51	Mississippi;MS Senate District 51
+ReportingUnit	Mississippi;MS Senate District 52	Mississippi;MS Senate District 52
+ReportingUnit	Mississippi;US House MS District 1	Mississippi;US House MS District 1
+ReportingUnit	Mississippi;US House MS District 2	Mississippi;US House MS District 2
+ReportingUnit	Mississippi;US House MS District 3	Mississippi;US House MS District 3
+ReportingUnit	Mississippi;US House MS District 4	Mississippi;US House MS District 4
+ReportingUnit	Mississippi	Mississippi
+ReportingUnit	Mississippi;Adams County	Adams
+ReportingUnit	Mississippi;Alcorn County	Alcorn
+ReportingUnit	Mississippi;Amite County	Amite
+ReportingUnit	Mississippi;Attala County	Attala
+ReportingUnit	Mississippi;Benton County	Benton
+ReportingUnit	Mississippi;Bolivar County	Bolivar
+ReportingUnit	Mississippi;Calhoun County	Calhoun
+ReportingUnit	Mississippi;Carroll County	Carroll
+ReportingUnit	Mississippi;Chickasaw County	Chickasaw
+ReportingUnit	Mississippi;Choctaw County	Choctaw
+ReportingUnit	Mississippi;Claiborne County	Claiborne
+ReportingUnit	Mississippi;Clarke County	Clarke
+ReportingUnit	Mississippi;Clay County	Clay
+ReportingUnit	Mississippi;Coahoma County	Coahoma
+ReportingUnit	Mississippi;Copiah County	Copiah
+ReportingUnit	Mississippi;Covington County	Covington
+ReportingUnit	Mississippi;DeSoto County	DeSoto
+ReportingUnit	Mississippi;Forrest County	Forrest
+ReportingUnit	Mississippi;Franklin County	Franklin
+ReportingUnit	Mississippi;George County	George
+ReportingUnit	Mississippi;Greene County	Greene
+ReportingUnit	Mississippi;Grenada County	Grenada
+ReportingUnit	Mississippi;Hancock County	Hancock
+ReportingUnit	Mississippi;Harrison County	Harrison
+ReportingUnit	Mississippi;Hinds County	Hinds
+ReportingUnit	Mississippi;Holmes County	Holmes
+ReportingUnit	Mississippi;Humphreys County	Humphreys
+ReportingUnit	Mississippi;Issaquena County	Issaquena
+ReportingUnit	Mississippi;Itawamba County	Itawamba
+ReportingUnit	Mississippi;Jackson County	Jackson
+ReportingUnit	Mississippi;Jasper County	Jasper
+ReportingUnit	Mississippi;Jeff Davis County	Jeff Davis
+ReportingUnit	Mississippi;Jefferson County	Jefferson
+ReportingUnit	Mississippi;Jones County	Jones
+ReportingUnit	Mississippi;Kemper County	Kemper
+ReportingUnit	Mississippi;Lafayette County	Lafayette
+ReportingUnit	Mississippi;Lamar County	Lamar
+ReportingUnit	Mississippi;Lauderdale County	Lauderdale
+ReportingUnit	Mississippi;Lawrence County	Lawrence
+ReportingUnit	Mississippi;Leake County	Leake
+ReportingUnit	Mississippi;Lee County	Lee
+ReportingUnit	Mississippi;Leflore County	Leflore
+ReportingUnit	Mississippi;Lincoln County	Lincoln
+ReportingUnit	Mississippi;Lowndes County	Lowndes
+ReportingUnit	Mississippi;Madison County	Madison
+ReportingUnit	Mississippi;Marion County	Marion
+ReportingUnit	Mississippi;Marshall County	Marshall
+ReportingUnit	Mississippi;Monroe County	Monroe
+ReportingUnit	Mississippi;Montgomery County	Montgomery
+ReportingUnit	Mississippi;Neshoba County	Neshoba
+ReportingUnit	Mississippi;Newton County	Newton
+ReportingUnit	Mississippi;Noxubee County	Noxubee
+ReportingUnit	Mississippi;Oktibbeha County	Oktibbeha
+ReportingUnit	Mississippi;Panola County	Panola
+ReportingUnit	Mississippi;Pearl River County	Pearl River
+ReportingUnit	Mississippi;Perry County	Perry
+ReportingUnit	Mississippi;Pike County	Pike
+ReportingUnit	Mississippi;Pontotoc County	Pontotoc
+ReportingUnit	Mississippi;Prentiss County	Prentiss
+ReportingUnit	Mississippi;Quitman County	Quitman
+ReportingUnit	Mississippi;Rankin County	Rankin
+ReportingUnit	Mississippi;Scott County	Scott
+ReportingUnit	Mississippi;Sharkey County	Sharkey
+ReportingUnit	Mississippi;Simpson County	Simpson
+ReportingUnit	Mississippi;Smith County	Smith
+ReportingUnit	Mississippi;Stone County	Stone
+ReportingUnit	Mississippi;Sunflower County	Sunflower
+ReportingUnit	Mississippi;Tallahatchie County	Tallahatchie
+ReportingUnit	Mississippi;Tate County	Tate
+ReportingUnit	Mississippi;Tippah County	Tippah
+ReportingUnit	Mississippi;Tishomingo County	Tishomingo
+ReportingUnit	Mississippi;Tunica County	Tunica
+ReportingUnit	Mississippi;Union County	Union
+ReportingUnit	Mississippi;Walthall County	Walthall
+ReportingUnit	Mississippi;Warren County	Warren
+ReportingUnit	Mississippi;Washington County	Washington
+ReportingUnit	Mississippi;Wayne County	Wayne
+ReportingUnit	Mississippi;Webster County	Webster
+ReportingUnit	Mississippi;Wilkinson County	Wilkinson
+ReportingUnit	Mississippi;Winston County	Winston
+ReportingUnit	Mississippi;Yalobusha County	Yalobusha
+ReportingUnit	Mississippi;Yazoo County	Yazoo
+Candidate	Trent Kelly	Trent Kelly
+Candidate	Steven M. Palazzo	Steven M. Palazzo
+Candidate	Phil Collins	Presidential Electors for Phil Collins for President and Bill Parker for Vice President
+Candidate	Kanye West	Presidential Electors for Kanye West for President and Michelle Tidball for Vice President
+Candidate	Joseph R. Biden Jr.	Presidential Electors for Joseph R. Biden Jr. for President and Kamala D. Harris for Vice President
+Candidate	Jo Jorgensen	Presidential Electors for Jo Jorgensen for President and Jeremy 'Spike' Cohen for Vice President
+Candidate	Howie Hawkins	Presidential Electors for Howie Hawkins for President and Angela Nicole Walker for Vice President
+Candidate	Donald J. Trump	Presidential Electors for Donald J. Trump for President and Michael R. Pence for Vice President
+Candidate	Don Blankenship	Presidential Electors for Don Blankenship for President and William Mohr for Vice President
+Candidate	Brock Pierce	Presidential Electors for Brock Pierce for President and Karla Ballard for Vice President
+Candidate	Brian Carroll	Presidential Electors for Brian Carroll for President and Amar Patel for Vice President
+Candidate	Mike Espy	Mike Espy
+Candidate	Michael Guest	Michael Guest
+Candidate	Jimmy L. Edwards	Jimmy L. Edwards
+Candidate	Dorothy Dot Benford	Dorothy Dot Benford
+Candidate	Cindy Hyde-Smith	Cindy Hyde-Smith
+Candidate	Brian Flowers	Brian Flowers
+Candidate	Bennie G. Thompson	Bennie G. Thompson
+Candidate	Antonia Eliason	Antonia Eliason

@@ -1,0 +1,86 @@
+Name	NumberElected	Office	PrimaryParty
+HI House District 1	1	HI House District 1	
+HI House District 2	1	HI House District 2	
+HI House District 3	1	HI House District 3	
+HI House District 4	1	HI House District 4	
+HI House District 5	1	HI House District 5	
+HI House District 6	1	HI House District 6	
+HI House District 7	1	HI House District 7	
+HI House District 8	1	HI House District 8	
+HI House District 9	1	HI House District 9	
+HI House District 10	1	HI House District 10	
+HI House District 11	1	HI House District 11	
+HI House District 12	1	HI House District 12	
+HI House District 13	1	HI House District 13	
+HI House District 14	1	HI House District 14	
+HI House District 15	1	HI House District 15	
+HI House District 16	1	HI House District 16	
+HI House District 17	1	HI House District 17	
+HI House District 18	1	HI House District 18	
+HI House District 19	1	HI House District 19	
+HI House District 20	1	HI House District 20	
+HI House District 21	1	HI House District 21	
+HI House District 22	1	HI House District 22	
+HI House District 23	1	HI House District 23	
+HI House District 24	1	HI House District 24	
+HI House District 25	1	HI House District 25	
+HI House District 26	1	HI House District 26	
+HI House District 27	1	HI House District 27	
+HI House District 28	1	HI House District 28	
+HI House District 29	1	HI House District 29	
+HI House District 30	1	HI House District 30	
+HI House District 31	1	HI House District 31	
+HI House District 32	1	HI House District 32	
+HI House District 33	1	HI House District 33	
+HI House District 34	1	HI House District 34	
+HI House District 35	1	HI House District 35	
+HI House District 36	1	HI House District 36	
+HI House District 37	1	HI House District 37	
+HI House District 38	1	HI House District 38	
+HI House District 39	1	HI House District 39	
+HI House District 40	1	HI House District 40	
+HI House District 41	1	HI House District 41	
+HI House District 42	1	HI House District 42	
+HI House District 43	1	HI House District 43	
+HI House District 44	1	HI House District 44	
+HI House District 45	1	HI House District 45	
+HI House District 46	1	HI House District 46	
+HI House District 47	1	HI House District 47	
+HI House District 48	1	HI House District 48	
+HI House District 49	1	HI House District 49	
+HI House District 50	1	HI House District 50	
+HI House District 51	1	HI House District 51	
+HI Senate District 1	1	HI Senate District 1	
+HI Senate District 2	1	HI Senate District 2	
+HI Senate District 3	1	HI Senate District 3	
+HI Senate District 4	1	HI Senate District 4	
+HI Senate District 5	1	HI Senate District 5	
+HI Senate District 6	1	HI Senate District 6	
+HI Senate District 7	1	HI Senate District 7	
+HI Senate District 8	1	HI Senate District 8	
+HI Senate District 9	1	HI Senate District 9	
+HI Senate District 10	1	HI Senate District 10	
+HI Senate District 11	1	HI Senate District 11	
+HI Senate District 12	1	HI Senate District 12	
+HI Senate District 13	1	HI Senate District 13	
+HI Senate District 14	1	HI Senate District 14	
+HI Senate District 15	1	HI Senate District 15	
+HI Senate District 16	1	HI Senate District 16	
+HI Senate District 17	1	HI Senate District 17	
+HI Senate District 18	1	HI Senate District 18	
+HI Senate District 19	1	HI Senate District 19	
+HI Senate District 20	1	HI Senate District 20	
+HI Senate District 21	1	HI Senate District 21	
+HI Senate District 22	1	HI Senate District 22	
+HI Senate District 23	1	HI Senate District 23	
+HI Senate District 24	1	HI Senate District 24	
+HI Senate District 25	1	HI Senate District 25	
+US House HI District 1	1	US House HI District 1	
+US House HI District 2	1	US House HI District 2	
+US President (HI)	1	US President (HI)	
+HI Governor	1	HI Governor	
+US Senate HI	1	US Senate HI	
+HI Attorney General	1	HI Attorney General	
+HI Lieutenant Governor	1	HI Lieutenant Governor	
+HI Treasurer	1	HI Treasurer	
+HI Secretary of State	1	HI Secretary of State	
