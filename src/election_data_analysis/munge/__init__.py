@@ -1180,7 +1180,7 @@ def munge_source_to_raw(
                 formula = formulas[element]
                 # if formula refers to any fields that need to be looked up, make appropriate replacements
                 if element in aux_info.keys():
-                    working, formula, err = incorporate_aux_info(
+                    working, formula, new_err = incorporate_aux_info(
                         working,
                         element,
                         formula,
@@ -1190,6 +1190,10 @@ def munge_source_to_raw(
                         munger_name,
                         suffix,
                     )
+                    if new_err:
+                        err = ui.consolidate_errors([err, new_err])
+                        if ui.fatal_error(new_err):
+                            return working, err
 
                 # append suffix to any fields from the original table
                 for c in orig_string_cols:
@@ -1209,12 +1213,13 @@ def munge_source_to_raw(
                 if element in munger.alt.keys():
                     working.replace({f"{element}_raw": munger.alt[element]}, inplace=True)
                 """
+
             except Exception as exc:
                 err = ui.add_new_error(
                     err,
                     "munger",
                     munger_name,
-                    f"Error interpreting formula for {element} in cdf_element.txt. {exc}",
+                    f"Error interpreting formula for {element}. {exc}",
                 )
                 return working, err
 
@@ -1676,7 +1681,7 @@ def get_aux_info(
         for field in fk_candidates:
 
             # if there is a lookup for this field, grab it
-            params, f_err = ui.get_parameters(
+            f_p, f_err = ui.get_parameters(
                 required_keys=[
                     "source_file",
                     "file_type",
@@ -1688,11 +1693,10 @@ def get_aux_info(
                 header=f"{field} lookup",
                 param_file=munger_path,
             )
+            # convert parameters to appropriate types
+            f_p = jm.recast_options(f_p, {**opt_munger_params, **req_munger_params})
+
             if not f_err:
-                # recast parameters as correct type (all were read as strings)
-                f_p = jm.recast_options(
-                    params, {**opt_munger_params, **req_munger_params}
-                )
                 # prepare dictionary to hold info for this lookup
                 aux[element][field] = dict()
                 # add the foreign key to the list
@@ -1739,8 +1743,30 @@ def incorporate_aux_info(
         lookup_df_dict, fk_err = ui.read_single_datafile(
             lt_path, aux[element][fk]["params"], munger_name, dict(), aux=True
         )
-        lookup_sheet_name = list(lookup_df_dict.keys())[0]  # TODO tech debt better way to grab one key? what if more keys?
-        lookup_df = lookup_df_dict[lookup_sheet_name]
+        if len(lookup_df_dict) > 1:
+            fk_err = ui.add_new_error(
+                fk_err,
+                "munger",
+                munger_name,
+                f"Specify lookup sheet with sheets_to_read_names parameter in lookup section of munger. Sheets in lookup file {Path(lt_path).name} are:\n{list(lookup_df_dict.keys())}"
+            )
+        elif len(lookup_df_dict) == 0:
+            fk_err = ui.add_new_error(
+                fk_err,
+                "munger",
+                munger_name,
+                f"Nothing read from  lookup file {Path(lt_path).name}"
+            )
+
+        if fk_err:
+            err = ui.consolidate_errors([err, fk_err])
+            if ui.fatal_error(fk_err):
+                return pd.DataFrame(), "", err
+
+        # only one key (per error-handling above), so this is the one we want
+        sheet_name = list(lookup_df_dict.keys())[0]
+
+        lookup_df = lookup_df_dict[sheet_name]
         # clean the lookup table
         lookup_df = clean_strings(lookup_df, lookup_df.columns)
         # define new column names to e.g. 'County_id LOOKUP County_name'
@@ -1768,13 +1794,110 @@ def incorporate_aux_info(
     return w_df, w_formula, err
 
 
-def get_fields_from_formula(formula: Optional[str]) -> List[str]:
-    if formula:
-        texts_and_fields, final_text = text_fragments_and_fields(formula)
-        fields = [x[1] for x in texts_and_fields]
-    else:
-        fields = list()
+def get_fields_from_formula(formula: str) -> List[str]:
+    texts_and_fields, final_text = text_fragments_and_fields(formula)
+    fields = [x[1] for x in texts_and_fields]
     return fields
+
+
+def extract_blocks(
+        f_path: str,
+        p: Dict[str, Any],
+        output_delimiter: str = "\t",
+) -> (List[str], Optional[dict]):
+    """Given a flat_text (or excel file and list of sheets),
+    create new tab-separated (or excel) files, one for each block of data lines
+    (in the specified excel sheets, with the new files having a sheet name from the old).
+    Returns a list of the new file paths"""
+    # set up
+    file_name = Path(f_path).name
+    file_stem = Path(f_path).stem
+    file_dir = Path(f_path).parent
+    err = None
+    kwargs = dict()
+    df_dict = dict()
+    new_file_list = list()
+
+    # set key word arguments necessary for all cases
+    kwargs["header"] = None
+    kwargs["dtype"] = str
+
+    # read file contents into a dictionary of dataframes
+    if p["file_type"] == "excel":
+        try:
+            df_dict, err = ui.excel_to_dict(
+                f_path, kwargs, ui.list_desired_excel_sheets(f_path, p)
+            )
+        except Exception as exc:
+            ui.add_new_error(
+                err,
+                "file",
+                file_name,
+                f"Exception while extracting blocks: {exc}"
+            )
+            return err
+
+    elif p["file_type"] == "flat_text":
+        kwargs["sep"] = output_delimiter
+        kwargs["quoting"] = csv.QUOTE_MINIMAL
+        try:
+            df_dict["Sheet1"] = pd.read_csv(f_path, **kwargs)
+        except Exception as exc:
+            ui.add_new_error(
+                err,
+                "file",
+                file_name,
+                f"Exception while extracting blocks: {exc}"
+            )
+            return err
+    else:
+        ui.add_new_error(
+            err,
+            "file",
+            f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
+            f"Unrecognized file type {p['file_type']}"
+        )
+
+    for sheet in df_dict.keys():
+        if not df_dict[sheet].empty:
+            # get rid of thousands separator
+            if p["thousands_separator"]:
+                working = df_dict[sheet].replace(p["thousands_separator"], "", regex=True)
+            else:
+                working = df_dict[sheet]
+
+            # identify count rows (have at least one integer) and text rows (all others)
+            mask = working.T.apply(lambda row: row.str.isdigit().any())
+            count_rows = list(mask[mask].index)
+            text_rows = list(mask[~mask].index)
+
+            # drop all below the last count row
+            working = working[:max(count_rows) + 1]
+            text_rows = [x for x in text_rows if x in working.index]
+
+            # loop through blocks (blocks defined by no-integer lines on top)
+            while count_rows:
+                # use only count_rows still in df
+                # create block from bottom of dframe
+                top = max([x for x in text_rows if (x==0 or x-1 in count_rows)])
+                block = working[top:]
+
+                ## export block data lines to tab-separated or excel file
+                if p["file_type"] == "flat_text":
+                    block_path = os.path.join(file_dir,f"{file_stem}_block_{top}-{max(working.index)}.txt")
+                    block.to_csv(block_path,sep=p["flat_text_delimiter"], index=False, header=False)
+                elif p["file_type"] == "excel":
+                    block_path = os.path.join(file_dir,f"{file_stem}_sheet_{sheet}_block_{top}-{max(working.index)}.xlsx")
+                    block.to_excel(block_path, index=False, header=False, sheet_name=sheet)
+                # add to list of new file paths
+                new_file_list.append(block_path)
+
+                # set up for next block
+                working = working[:top]
+                count_rows = [x for x in count_rows if x in working.index]
+                text_rows = [x for x in text_rows if x in working.index]
+    return new_file_list, err
+
 
 
 def extract_blocks(
