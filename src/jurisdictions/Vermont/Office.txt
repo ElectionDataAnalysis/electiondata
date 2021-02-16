@@ -1,0 +1,419 @@
+Name	ElectionDistrict
+VT House District 1	Vermont;VT House District 1
+VT House District 2	Vermont;VT House District 2
+VT House District 3	Vermont;VT House District 3
+VT House District 4	Vermont;VT House District 4
+VT House District 5	Vermont;VT House District 5
+VT House District 6	Vermont;VT House District 6
+VT House District 7	Vermont;VT House District 7
+VT House District 8	Vermont;VT House District 8
+VT House District 9	Vermont;VT House District 9
+VT House District 10	Vermont;VT House District 10
+VT House District 11	Vermont;VT House District 11
+VT House District 12	Vermont;VT House District 12
+VT House District 13	Vermont;VT House District 13
+VT House District 14	Vermont;VT House District 14
+VT House District 15	Vermont;VT House District 15
+VT House District 16	Vermont;VT House District 16
+VT House District 17	Vermont;VT House District 17
+VT House District 18	Vermont;VT House District 18
+VT House District 19	Vermont;VT House District 19
+VT House District 20	Vermont;VT House District 20
+VT House District 21	Vermont;VT House District 21
+VT House District 22	Vermont;VT House District 22
+VT House District 23	Vermont;VT House District 23
+VT House District 24	Vermont;VT House District 24
+VT House District 25	Vermont;VT House District 25
+VT House District 26	Vermont;VT House District 26
+VT House District 27	Vermont;VT House District 27
+VT House District 28	Vermont;VT House District 28
+VT House District 29	Vermont;VT House District 29
+VT House District 30	Vermont;VT House District 30
+VT House District 31	Vermont;VT House District 31
+VT House District 32	Vermont;VT House District 32
+VT House District 33	Vermont;VT House District 33
+VT House District 34	Vermont;VT House District 34
+VT House District 35	Vermont;VT House District 35
+VT House District 36	Vermont;VT House District 36
+VT House District 37	Vermont;VT House District 37
+VT House District 38	Vermont;VT House District 38
+VT House District 39	Vermont;VT House District 39
+VT House District 40	Vermont;VT House District 40
+VT House District 41	Vermont;VT House District 41
+VT House District 42	Vermont;VT House District 42
+VT House District 43	Vermont;VT House District 43
+VT House District 44	Vermont;VT House District 44
+VT House District 45	Vermont;VT House District 45
+VT House District 46	Vermont;VT House District 46
+VT House District 47	Vermont;VT House District 47
+VT House District 48	Vermont;VT House District 48
+VT House District 49	Vermont;VT House District 49
+VT House District 50	Vermont;VT House District 50
+VT House District 51	Vermont;VT House District 51
+VT House District 52	Vermont;VT House District 52
+VT House District 53	Vermont;VT House District 53
+VT House District 54	Vermont;VT House District 54
+VT House District 55	Vermont;VT House District 55
+VT House District 56	Vermont;VT House District 56
+VT House District 57	Vermont;VT House District 57
+VT House District 58	Vermont;VT House District 58
+VT House District 59	Vermont;VT House District 59
+VT House District 60	Vermont;VT House District 60
+VT House District 61	Vermont;VT House District 61
+VT House District 62	Vermont;VT House District 62
+VT House District 63	Vermont;VT House District 63
+VT House District 64	Vermont;VT House District 64
+VT House District 65	Vermont;VT House District 65
+VT House District 66	Vermont;VT House District 66
+VT House District 67	Vermont;VT House District 67
+VT House District 68	Vermont;VT House District 68
+VT House District 69	Vermont;VT House District 69
+VT House District 70	Vermont;VT House District 70
+VT House District 71	Vermont;VT House District 71
+VT House District 72	Vermont;VT House District 72
+VT House District 73	Vermont;VT House District 73
+VT House District 74	Vermont;VT House District 74
+VT House District 75	Vermont;VT House District 75
+VT House District 76	Vermont;VT House District 76
+VT House District 77	Vermont;VT House District 77
+VT House District 78	Vermont;VT House District 78
+VT House District 79	Vermont;VT House District 79
+VT House District 80	Vermont;VT House District 80
+VT House District 81	Vermont;VT House District 81
+VT House District 82	Vermont;VT House District 82
+VT House District 83	Vermont;VT House District 83
+VT House District 84	Vermont;VT House District 84
+VT House District 85	Vermont;VT House District 85
+VT House District 86	Vermont;VT House District 86
+VT House District 87	Vermont;VT House District 87
+VT House District 88	Vermont;VT House District 88
+VT House District 89	Vermont;VT House District 89
+VT House District 90	Vermont;VT House District 90
+VT House District 91	Vermont;VT House District 91
+VT House District 92	Vermont;VT House District 92
+VT House District 93	Vermont;VT House District 93
+VT House District 94	Vermont;VT House District 94
+VT House District 95	Vermont;VT House District 95
+VT House District 96	Vermont;VT House District 96
+VT House District 97	Vermont;VT House District 97
+VT House District 98	Vermont;VT House District 98
+VT House District 99	Vermont;VT House District 99
+VT House District 100	Vermont;VT House District 100
+VT House District 101	Vermont;VT House District 101
+VT House District 102	Vermont;VT House District 102
+VT House District 103	Vermont;VT House District 103
+VT House District 104	Vermont;VT House District 104
+VT House District 105	Vermont;VT House District 105
+VT House District 106	Vermont;VT House District 106
+VT House District 107	Vermont;VT House District 107
+VT House District 108	Vermont;VT House District 108
+VT House District 109	Vermont;VT House District 109
+VT House District 110	Vermont;VT House District 110
+VT House District 111	Vermont;VT House District 111
+VT House District 112	Vermont;VT House District 112
+VT House District 113	Vermont;VT House District 113
+VT House District 114	Vermont;VT House District 114
+VT House District 115	Vermont;VT House District 115
+VT House District 116	Vermont;VT House District 116
+VT House District 117	Vermont;VT House District 117
+VT House District 118	Vermont;VT House District 118
+VT House District 119	Vermont;VT House District 119
+VT House District 120	Vermont;VT House District 120
+VT House District 121	Vermont;VT House District 121
+VT House District 122	Vermont;VT House District 122
+VT House District 123	Vermont;VT House District 123
+VT House District 124	Vermont;VT House District 124
+VT House District 125	Vermont;VT House District 125
+VT House District 126	Vermont;VT House District 126
+VT House District 127	Vermont;VT House District 127
+VT House District 128	Vermont;VT House District 128
+VT House District 129	Vermont;VT House District 129
+VT House District 130	Vermont;VT House District 130
+VT House District 131	Vermont;VT House District 131
+VT House District 132	Vermont;VT House District 132
+VT House District 133	Vermont;VT House District 133
+VT House District 134	Vermont;VT House District 134
+VT House District 135	Vermont;VT House District 135
+VT House District 136	Vermont;VT House District 136
+VT House District 137	Vermont;VT House District 137
+VT House District 138	Vermont;VT House District 138
+VT House District 139	Vermont;VT House District 139
+VT House District 140	Vermont;VT House District 140
+VT House District 141	Vermont;VT House District 141
+VT House District 142	Vermont;VT House District 142
+VT House District 143	Vermont;VT House District 143
+VT House District 144	Vermont;VT House District 144
+VT House District 145	Vermont;VT House District 145
+VT House District 146	Vermont;VT House District 146
+VT House District 147	Vermont;VT House District 147
+VT House District 148	Vermont;VT House District 148
+VT House District 149	Vermont;VT House District 149
+VT House District 150	Vermont;VT House District 150
+VT House District 151	Vermont;VT House District 151
+VT House District 152	Vermont;VT House District 152
+VT House District 153	Vermont;VT House District 153
+VT House District 154	Vermont;VT House District 154
+VT House District 155	Vermont;VT House District 155
+VT House District 156	Vermont;VT House District 156
+VT House District 157	Vermont;VT House District 157
+VT House District 158	Vermont;VT House District 158
+VT Senate District 1	Vermont;VT Senate District 1
+VT Senate District 2	Vermont;VT Senate District 2
+VT Senate District 3	Vermont;VT Senate District 3
+VT Senate District 4	Vermont;VT Senate District 4
+VT Senate District 5	Vermont;VT Senate District 5
+VT Senate District 6	Vermont;VT Senate District 6
+VT Senate District 7	Vermont;VT Senate District 7
+VT Senate District 8	Vermont;VT Senate District 8
+VT Senate District 9	Vermont;VT Senate District 9
+VT Senate District 10	Vermont;VT Senate District 10
+VT Senate District 11	Vermont;VT Senate District 11
+VT Senate District 12	Vermont;VT Senate District 12
+VT Senate District 13	Vermont;VT Senate District 13
+VT Senate District 14	Vermont;VT Senate District 14
+VT Senate District 15	Vermont;VT Senate District 15
+VT Senate District 16	Vermont;VT Senate District 16
+VT Senate District 17	Vermont;VT Senate District 17
+VT Senate District 18	Vermont;VT Senate District 18
+VT Senate District 19	Vermont;VT Senate District 19
+VT Senate District 20	Vermont;VT Senate District 20
+VT Senate District 21	Vermont;VT Senate District 21
+VT Senate District 22	Vermont;VT Senate District 22
+VT Senate District 23	Vermont;VT Senate District 23
+VT Senate District 24	Vermont;VT Senate District 24
+VT Senate District 25	Vermont;VT Senate District 25
+VT Senate District 26	Vermont;VT Senate District 26
+VT Senate District 27	Vermont;VT Senate District 27
+VT Senate District 28	Vermont;VT Senate District 28
+VT Senate District 29	Vermont;VT Senate District 29
+VT Senate District 30	Vermont;VT Senate District 30
+US House VT District 1	Vermont;US House VT District 1
+US President (VT)	Vermont
+VT Governor	Vermont
+US Senate VT	Vermont
+VT Attorney General	Vermont
+VT Auditor of Accounts	Vermont
+VT Lieutenant Governor	Vermont
+VT State Treasurer	Vermont
+VT Secretary of State	Vermont
+VT Senate District Franklin 5	Vermont;VT Senate District Franklin 5
+VT Senate District Windsor	Vermont;VT Senate District Windsor
+VT Senate District Rutland 4	Vermont;VT Senate District Rutland 4
+VT Senate District Washington-Chittenden	Vermont;VT Senate District Washington-Chittenden
+VT Senate District Washington 6	Vermont;VT Senate District Washington 6
+VT Senate District Franklin 2	Vermont;VT Senate District Franklin 2
+VT Senate District Chittenden 8-3	Vermont;VT Senate District Chittenden 8-3
+VT Senate District Windsor-Orange 2	Vermont;VT Senate District Windsor-Orange 2
+VT Senate District Addison 1	Vermont;VT Senate District Addison 1
+VT Senate District Essex-Caledonia	Vermont;VT Senate District Essex-Caledonia
+VT Senate District Chittenden 7-2	Vermont;VT Senate District Chittenden 7-2
+VT Senate District Chittenden 8-1	Vermont;VT Senate District Chittenden 8-1
+VT Senate District Windham-Bennington-Windsor	Vermont;VT Senate District Windham-Bennington-Windsor
+VT Senate District Rutland 5-3	Vermont;VT Senate District Rutland 5-3
+VT Senate District Orange 1	Vermont;VT Senate District Orange 1
+VT Senate District Chittenden-1	Vermont;VT Senate District Chittenden-1
+VT Senate District Windham 4	Vermont;VT Senate District Windham 4
+VT Senate District Chittenden 7-1	Vermont;VT Senate District Chittenden 7-1
+VT Senate District Grand Isle-Chittenden	Vermont;VT Senate District Grand Isle-Chittenden
+VT Senate District Windham 6	Vermont;VT Senate District Windham 6
+VT Senate District Washington 4	Vermont;VT Senate District Washington 4
+VT Senate District Lamoille	Vermont;VT Senate District Lamoille
+VT Senate District Rutland-Windsor 2	Vermont;VT Senate District Rutland-Windsor 2
+VT Senate District Caledonia-1	Vermont;VT Senate District Caledonia-1
+VT Senate District Chittenden 5-2	Vermont;VT Senate District Chittenden 5-2
+VT Senate District Windham 2-2	Vermont;VT Senate District Windham 2-2
+VT Senate District Rutland-Windsor 1	Vermont;VT Senate District Rutland-Windsor 1
+VT Senate District Rutland 5-1	Vermont;VT Senate District Rutland 5-1
+VT Senate District Bennington-Rutland	Vermont;VT Senate District Bennington-Rutland
+VT Senate District Chittenden-3	Vermont;VT Senate District Chittenden-3
+VT Senate District Orange-Washington-Addison	Vermont;VT Senate District Orange-Washington-Addison
+VT Senate District Chittenden	Vermont;VT Senate District Chittenden
+VT Senate District Chittenden 6-4	Vermont;VT Senate District Chittenden 6-4
+VT Senate District Orange-Caledonia	Vermont;VT Senate District Orange-Caledonia
+VT Senate District Orange 2	Vermont;VT Senate District Orange 2
+VT Senate District Windsor 3-1	Vermont;VT Senate District Windsor 3-1
+VT Senate District Windham 2-3	Vermont;VT Senate District Windham 2-3
+VT Senate District Rutland-Bennington	Vermont;VT Senate District Rutland-Bennington
+VT Senate District Franklin 6	Vermont;VT Senate District Franklin 6
+VT Senate District Chittenden 10	Vermont;VT Senate District Chittenden 10
+VT Senate District Chittenden 6-1	Vermont;VT Senate District Chittenden 6-1
+VT Senate District Chittenden 6-3	Vermont;VT Senate District Chittenden 6-3
+VT Senate District Washington 1	Vermont;VT Senate District Washington 1
+VT Senate District Chittenden 6-5	Vermont;VT Senate District Chittenden 6-5
+VT Senate District Franklin 4	Vermont;VT Senate District Franklin 4
+VT Senate District Chittenden 9-1	Vermont;VT Senate District Chittenden 9-1
+VT Senate District Franklin 7	Vermont;VT Senate District Franklin 7
+VT Senate District Bennington 1	Vermont;VT Senate District Bennington 1
+VT Senate District Bennington 3	Vermont;VT Senate District Bennington 3
+VT Senate District Franklin	Vermont;VT Senate District Franklin
+VT Senate District Rutland 6	Vermont;VT Senate District Rutland 6
+VT Senate District Windham-Bennington	Vermont;VT Senate District Windham-Bennington
+VT Senate District Windsor 5	Vermont;VT Senate District Windsor 5
+VT Senate District Chittenden 7-4	Vermont;VT Senate District Chittenden 7-4
+VT Senate District Chittenden 4-2	Vermont;VT Senate District Chittenden 4-2
+VT Senate District Chittenden 6-2	Vermont;VT Senate District Chittenden 6-2
+VT Senate District Chittenden 6-7	Vermont;VT Senate District Chittenden 6-7
+VT Senate District Windham	Vermont;VT Senate District Windham
+VT Senate District Windham 3	Vermont;VT Senate District Windham 3
+VT Senate District Orleans 1	Vermont;VT Senate District Orleans 1
+VT Senate District Grand Isle	Vermont;VT Senate District Grand Isle
+VT Senate District Washington 7	Vermont;VT Senate District Washington 7
+VT Senate District Windsor 1	Vermont;VT Senate District Windsor 1
+VT Senate District Essex-Caledonia-Orleans	Vermont;VT Senate District Essex-Caledonia-Orleans
+VT Senate District Rutland 2	Vermont;VT Senate District Rutland 2
+VT Senate District Addison 3	Vermont;VT Senate District Addison 3
+VT Senate District Bennington 2-2	Vermont;VT Senate District Bennington 2-2
+VT Senate District Rutland 1	Vermont;VT Senate District Rutland 1
+VT Senate District Windsor-Rutland	Vermont;VT Senate District Windsor-Rutland
+VT Senate District Windsor 4-2	Vermont;VT Senate District Windsor 4-2
+VT Senate District Lamoille 2	Vermont;VT Senate District Lamoille 2
+VT Senate District Franklin 3-1	Vermont;VT Senate District Franklin 3-1
+VT Senate District Caledonia-2	Vermont;VT Senate District Caledonia-2
+VT Senate District Addison 4	Vermont;VT Senate District Addison 4
+VT Senate District Windham 2-1	Vermont;VT Senate District Windham 2-1
+VT Senate District Windsor 4-1	Vermont;VT Senate District Windsor 4-1
+VT Senate District Chittenden-2	Vermont;VT Senate District Chittenden-2
+VT Senate District Washington 2	Vermont;VT Senate District Washington 2
+VT Senate District Caledonia-Washington	Vermont;VT Senate District Caledonia-Washington
+VT Senate District Franklin 1	Vermont;VT Senate District Franklin 1
+VT Senate District Rutland 3	Vermont;VT Senate District Rutland 3
+VT Senate District Caledonia	Vermont;VT Senate District Caledonia
+VT Senate District Windham 5	Vermont;VT Senate District Windham 5
+VT Senate District Chittenden 9-2	Vermont;VT Senate District Chittenden 9-2
+VT Senate District Chittenden 7-3	Vermont;VT Senate District Chittenden 7-3
+VT Senate District Windham 1	Vermont;VT Senate District Windham 1
+VT Senate District Rutland	Vermont;VT Senate District Rutland
+VT Senate District Caledonia-3	Vermont;VT Senate District Caledonia-3
+VT Senate District Chittenden 8-2	Vermont;VT Senate District Chittenden 8-2
+VT Senate District Washington	Vermont;VT Senate District Washington
+VT Senate District Rutland 5-2	Vermont;VT Senate District Rutland 5-2
+VT Senate District Orleans-Lamoille	Vermont;VT Senate District Orleans-Lamoille
+VT Senate District Bennington	Vermont;VT Senate District Bennington
+VT Senate District Bennington 2-1	Vermont;VT Senate District Bennington 2-1
+VT Senate District Orange	Vermont;VT Senate District Orange
+VT Senate District Washington 5	Vermont;VT Senate District Washington 5
+VT Senate District Lamoille 1	Vermont;VT Senate District Lamoille 1
+VT Senate District Franklin 3-2	Vermont;VT Senate District Franklin 3-2
+VT Senate District Addison	Vermont;VT Senate District Addison
+VT Senate District Windsor 2	Vermont;VT Senate District Windsor 2
+VT Senate District Addison 2	Vermont;VT Senate District Addison 2
+VT Senate District Addison-Rutland	Vermont;VT Senate District Addison-Rutland
+VT Senate District Chittenden 4-1	Vermont;VT Senate District Chittenden 4-1
+VT Senate District Chittenden 5-1	Vermont;VT Senate District Chittenden 5-1
+VT Senate District Bennington 4	Vermont;VT Senate District Bennington 4
+VT Senate District Windsor-Orange 1	Vermont;VT Senate District Windsor-Orange 1
+VT Senate District Caledonia-4	Vermont;VT Senate District Caledonia-4
+VT Senate District Orleans 2	Vermont;VT Senate District Orleans 2
+VT Senate District Rutland 5-4	Vermont;VT Senate District Rutland 5-4
+VT Senate District Essex-Orleans	Vermont;VT Senate District Essex-Orleans
+VT Senate District Lamoille-Washington	Vermont;VT Senate District Lamoille-Washington
+VT Senate District Windsor 3-2	Vermont;VT Senate District Windsor 3-2
+VT Senate District Lamoille 3	Vermont;VT Senate District Lamoille 3
+VT Senate District Washington 3	Vermont;VT Senate District Washington 3
+VT Senate District Chittenden 6-6	Vermont;VT Senate District Chittenden 6-6
+VT Senate District Orleans-Caledonia	Vermont;VT Senate District Orleans-Caledonia
+VT Senate District Addison 5	Vermont;VT Senate District Addison 5
+VT House District Franklin 5	Vermont;VT House District Franklin 5
+VT House District Rutland 4	Vermont;VT House District Rutland 4
+VT House District Washington-Chittenden	Vermont;VT House District Washington-Chittenden
+VT House District Washington 6	Vermont;VT House District Washington 6
+VT House District Franklin 2	Vermont;VT House District Franklin 2
+VT House District Chittenden 8-3	Vermont;VT House District Chittenden 8-3
+VT House District Windsor-Orange 2	Vermont;VT House District Windsor-Orange 2
+VT House District Addison 1	Vermont;VT House District Addison 1
+VT House District Essex-Caledonia	Vermont;VT House District Essex-Caledonia
+VT House District Chittenden 7-2	Vermont;VT House District Chittenden 7-2
+VT House District Chittenden 8-1	Vermont;VT House District Chittenden 8-1
+VT House District Windham-Bennington-Windsor	Vermont;VT House District Windham-Bennington-Windsor
+VT House District Rutland 5-3	Vermont;VT House District Rutland 5-3
+VT House District Orange 1	Vermont;VT House District Orange 1
+VT House District Chittenden-1	Vermont;VT House District Chittenden-1
+VT House District Windham 4	Vermont;VT House District Windham 4
+VT House District Chittenden 7-1	Vermont;VT House District Chittenden 7-1
+VT House District Grand Isle-Chittenden	Vermont;VT House District Grand Isle-Chittenden
+VT House District Windham 6	Vermont;VT House District Windham 6
+VT House District Washington 4	Vermont;VT House District Washington 4
+VT House District Rutland-Windsor 2	Vermont;VT House District Rutland-Windsor 2
+VT House District Caledonia-1	Vermont;VT House District Caledonia-1
+VT House District Chittenden 5-2	Vermont;VT House District Chittenden 5-2
+VT House District Windham 2-2	Vermont;VT House District Windham 2-2
+VT House District Rutland-Windsor 1	Vermont;VT House District Rutland-Windsor 1
+VT House District Rutland 5-1	Vermont;VT House District Rutland 5-1
+VT House District Bennington-Rutland	Vermont;VT House District Bennington-Rutland
+VT House District Chittenden-3	Vermont;VT House District Chittenden-3
+VT House District Orange-Washington-Addison	Vermont;VT House District Orange-Washington-Addison
+VT House District Chittenden 6-4	Vermont;VT House District Chittenden 6-4
+VT House District Orange-Caledonia	Vermont;VT House District Orange-Caledonia
+VT House District Orange 2	Vermont;VT House District Orange 2
+VT House District Windsor 3-1	Vermont;VT House District Windsor 3-1
+VT House District Windham 2-3	Vermont;VT House District Windham 2-3
+VT House District Rutland-Bennington	Vermont;VT House District Rutland-Bennington
+VT House District Franklin 6	Vermont;VT House District Franklin 6
+VT House District Chittenden 10	Vermont;VT House District Chittenden 10
+VT House District Chittenden 6-1	Vermont;VT House District Chittenden 6-1
+VT House District Chittenden 6-3	Vermont;VT House District Chittenden 6-3
+VT House District Washington 1	Vermont;VT House District Washington 1
+VT House District Chittenden 6-5	Vermont;VT House District Chittenden 6-5
+VT House District Franklin 4	Vermont;VT House District Franklin 4
+VT House District Chittenden 9-1	Vermont;VT House District Chittenden 9-1
+VT House District Franklin 7	Vermont;VT House District Franklin 7
+VT House District Bennington 1	Vermont;VT House District Bennington 1
+VT House District Bennington 3	Vermont;VT House District Bennington 3
+VT House District Rutland 6	Vermont;VT House District Rutland 6
+VT House District Windham-Bennington	Vermont;VT House District Windham-Bennington
+VT House District Windsor 5	Vermont;VT House District Windsor 5
+VT House District Chittenden 7-4	Vermont;VT House District Chittenden 7-4
+VT House District Chittenden 4-2	Vermont;VT House District Chittenden 4-2
+VT House District Chittenden 6-2	Vermont;VT House District Chittenden 6-2
+VT House District Chittenden 6-7	Vermont;VT House District Chittenden 6-7
+VT House District Windham 3	Vermont;VT House District Windham 3
+VT House District Orleans 1	Vermont;VT House District Orleans 1
+VT House District Washington 7	Vermont;VT House District Washington 7
+VT House District Windsor 1	Vermont;VT House District Windsor 1
+VT House District Essex-Caledonia-Orleans	Vermont;VT House District Essex-Caledonia-Orleans
+VT House District Rutland 2	Vermont;VT House District Rutland 2
+VT House District Addison 3	Vermont;VT House District Addison 3
+VT House District Bennington 2-2	Vermont;VT House District Bennington 2-2
+VT House District Rutland 1	Vermont;VT House District Rutland 1
+VT House District Windsor-Rutland	Vermont;VT House District Windsor-Rutland
+VT House District Windsor 4-2	Vermont;VT House District Windsor 4-2
+VT House District Lamoille 2	Vermont;VT House District Lamoille 2
+VT House District Franklin 3-1	Vermont;VT House District Franklin 3-1
+VT House District Caledonia-2	Vermont;VT House District Caledonia-2
+VT House District Addison 4	Vermont;VT House District Addison 4
+VT House District Windham 2-1	Vermont;VT House District Windham 2-1
+VT House District Windsor 4-1	Vermont;VT House District Windsor 4-1
+VT House District Chittenden-2	Vermont;VT House District Chittenden-2
+VT House District Washington 2	Vermont;VT House District Washington 2
+VT House District Caledonia-Washington	Vermont;VT House District Caledonia-Washington
+VT House District Franklin 1	Vermont;VT House District Franklin 1
+VT House District Rutland 3	Vermont;VT House District Rutland 3
+VT House District Windham 5	Vermont;VT House District Windham 5
+VT House District Chittenden 9-2	Vermont;VT House District Chittenden 9-2
+VT House District Chittenden 7-3	Vermont;VT House District Chittenden 7-3
+VT House District Windham 1	Vermont;VT House District Windham 1
+VT House District Caledonia-3	Vermont;VT House District Caledonia-3
+VT House District Chittenden 8-2	Vermont;VT House District Chittenden 8-2
+VT House District Rutland 5-2	Vermont;VT House District Rutland 5-2
+VT House District Orleans-Lamoille	Vermont;VT House District Orleans-Lamoille
+VT House District Bennington 2-1	Vermont;VT House District Bennington 2-1
+VT House District Washington 5	Vermont;VT House District Washington 5
+VT House District Lamoille 1	Vermont;VT House District Lamoille 1
+VT House District Franklin 3-2	Vermont;VT House District Franklin 3-2
+VT House District Windsor 2	Vermont;VT House District Windsor 2
+VT House District Addison 2	Vermont;VT House District Addison 2
+VT House District Addison-Rutland	Vermont;VT House District Addison-Rutland
+VT House District Chittenden 4-1	Vermont;VT House District Chittenden 4-1
+VT House District Chittenden 5-1	Vermont;VT House District Chittenden 5-1
+VT House District Bennington 4	Vermont;VT House District Bennington 4
+VT House District Windsor-Orange 1	Vermont;VT House District Windsor-Orange 1
+VT House District Caledonia-4	Vermont;VT House District Caledonia-4
+VT House District Orleans 2	Vermont;VT House District Orleans 2
+VT House District Rutland 5-4	Vermont;VT House District Rutland 5-4
+VT House District Lamoille-Washington	Vermont;VT House District Lamoille-Washington
+VT House District Windsor 3-2	Vermont;VT House District Windsor 3-2
+VT House District Lamoille 3	Vermont;VT House District Lamoille 3
+VT House District Washington 3	Vermont;VT House District Washington 3
+VT House District Chittenden 6-6	Vermont;VT House District Chittenden 6-6
+VT House District Orleans-Caledonia	Vermont;VT House District Orleans-Caledonia
+VT House District Addison 5	Vermont;VT House District Addison 5

@@ -147,6 +147,7 @@ lookup_id=column_2,column_3
 ReportingUnit_replacement=<column_4>
 
 ```
+NB: if there are multiple rows in the lookup file with the same values for the lookup id columns, the system will arbitrarily use the first row and ignore the others.
 
 ### multi_block example
 [to do]

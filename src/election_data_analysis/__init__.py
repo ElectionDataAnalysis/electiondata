@@ -1776,6 +1776,10 @@ def load_results_file(
             "_SOURCE",
             results_directory_path,
         )
+        if new_err:
+            err = ui.consolidate_errors([err, new_err])
+            if ui.fatal_error(new_err):
+                return err
     except Exception as exc:
         err = ui.add_new_error(
             err,
@@ -1857,6 +1861,18 @@ def load_results_file(
         )
         return err
     return err
+
+
+def create_from_template(template_file, target_file, replace_dict):
+    with open(template_file, "r") as f:
+        contents = f.read()
+    for k in replace_dict.keys():
+        contents = contents.replace(k, replace_dict[k])
+    with open(target_file, "w") as f:
+        f.write(contents)
+
+
+
 
 
 def create_from_template(template_file, target_file, replace_dict):

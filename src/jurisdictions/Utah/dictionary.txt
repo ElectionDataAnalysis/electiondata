@@ -324,3 +324,32 @@ Candidate	Burgess Owens	Burgess Owens
 Candidate	Brock Pierce	Brock Pierce Karla Ballard
 Candidate	Blake David Moore	Blake David Moore
 Candidate	Ben Mcadams	Ben Mcadams
+Candidate	Thomas G. Mcneill	Thomas G. Mcneill
+Candidate	Spencer J. Cox	Spencer J. Cox Deidre M. Henderson
+Candidate	Sean D. Reyes	Sean D. Reyes
+Candidate	Rudy J. Bautista	Rudy J. Bautista
+Candidate	Kanye West	Kanye West Michelle Tidball
+Candidate	Kael Weston	Kael Weston
+Candidate	Joseph R. Biden	Joseph R. Biden Kamala D. Harris
+Candidate	Jonia M Broderick	Jonia M Broderick
+Candidate	John Molnar	John Molnar
+Candidate	John Curtis	John Curtis
+Candidate	Joe Mchugh	Joe Mchugh Elizabeth Storm
+Candidate	Jo Jorgensen	Jo Jorgensen Jeremy Cohen
+Candidate	J. Robert Latham	J. Robert Latham
+Candidate	Howie Hawkins	Howie Hawkins Angela Walker
+Candidate	Greg Skordas	Greg Skordas
+Candidate	Greg Duerden	Greg Duerden Wayne Hill
+Candidate	Gloria La Riva	Gloria La Riva
+Candidate	Donald J. Trump	Donald J. Trump Michael R. Pence
+Candidate	Don Blankenship	Don Blankenship William Mohr
+Candidate	Devin D. Thorpe	Devin D. Thorpe
+Candidate	Darren Parry	Darren Parry
+Candidate	Daniel Rhead Cottam	Daniel Rhead Cottam Barry Evan Short
+Candidate	Daniel Clyde Cummings	Daniel Clyde Cummings
+Candidate	Chris Stewart	Chris Stewart
+Candidate	Chris Peterson	Chris Peterson Karina Brown
+Candidate	Burgess Owens	Burgess Owens
+Candidate	Brock Pierce	Brock Pierce Karla Ballard
+Candidate	Blake David Moore	Blake David Moore
+Candidate	Ben Mcadams	Ben Mcadams

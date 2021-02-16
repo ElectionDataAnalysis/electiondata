@@ -452,14 +452,8 @@ Candidate	AKANA, Joe	AKANA, Joe
 Candidate	GIUFFRE, John (Raghu)	GIUFFRE, John (Raghu)
 Candidate	CHEN, Wayne	CHEN, Wayne
 Candidate	Donald J. Trump	Trump / Pence
-Candidate	Donald J. Trump	TRUMP / PENCE
 Candidate	Brock Pierce	Pierce / Ballard
-Candidate	Brock Pierce	PIERCE / BALLARD
 Candidate	Jo Jorgensen	Jorgensen / Cohen
-Candidate	Jo Jorgensen	JORGENSEN / COHEN
 Candidate	Howie Hawkins	Hawkins / Walker
-Candidate	Howie Hawkins	HAWKINS / WALKER
 Candidate	Don Blankenship	Blankenship / Mohr
-Candidate	Don Blankenship	BLANKENSHIP / MOHR
 Candidate	Joseph R. Biden	Biden / Harris
-Candidate	Joseph R. Biden	BIDEN / HARRIS

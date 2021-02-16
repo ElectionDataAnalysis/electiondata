@@ -11,3 +11,4 @@ path
 psutil
 requests
 openpyxl
+openpyxl
