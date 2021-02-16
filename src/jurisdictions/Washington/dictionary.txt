@@ -3532,10 +3532,13 @@ Party	Republican Party	(Prefers Ind Republican Party)
 Party	Republican Party	(Prefers R Party)
 Party	Republican Party	(Prefers GOP/Independent Party)
 Party	Republican Party	(Prefers GOP Party)
+Party	Republican Party	(Republican Party Nominees)
 Party	Socialist Workers Party	Socialist Workers Party Nominees
 Party	Socialist Workers Party	(Prefers Socialist Workers Party)
 Party	Socialist Workers Party	(Prefers Socialist Party)
+Party	Socialist Workers Party	(Socialist Workers Party Nominees)
 Party	Socialism & Liberation Party	Socialism & Liberation Party Nominees
+Party	Socialism & Liberation Party	(Socialism and Liberation Party Nominees)
 Party	Green Party	Green Party Nominees
 Party	Green Party	(Prefers Green Party)
 Party	Constitution Party	Constitution Party Nominees
@@ -3543,9 +3546,18 @@ Party	Libertarian Party	Libertarian Party Nominees
 Party	Libertarian Party	(Prefers Libertarian Party)
 Party	No Party Preference	(States No Party Preference)
 Party	Independent Party	(Prefers Independent Party)
+Party	WA Progressive Party	(Prefers WA Progressive Party)
+Party	The Alliance Party	(Prefers The Alliance Party)
+Party	Seattle People's Party	(Prefers Seattle People&#39;s Party)
+Party	Seattle People's Party	(Prefers Seattle People's Party)
 Candidate	Devin Kuh	Devin Kuh
 Candidate	Write-in	Write-in
 Candidate	Uncommitted Delegates	Uncommitted Delegates
 Candidate	William 'Bill' Jenkin	William &quot;Bill&quot; Jenkin
 Candidate	Tracy 'Justice' Wright	Tracy &quot;Justice&quot; Wright
-
+Party	Non Partisan Party	(Prefers Non Partisan Party)
+Party	Democratic Party	(Prefers DEMOCRATIC Party)
+Party	Libertarian Party	(Libertarian Party Nominees)
+Party	Green Party	(Green Party Nominees)
+Party	Democratic Party	(Democratic Party Nominees)
+Candidate	Write-in	Write-In

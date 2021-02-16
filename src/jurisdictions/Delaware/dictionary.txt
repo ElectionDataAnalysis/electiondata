@@ -969,3 +969,23 @@ Candidate	LISA HUDSON BRIGGS	LISA HUDSON BRIGGS
 Candidate	ROBERT D. WILSON	ROBERT D. WILSON
 Candidate	IRWIN 'I.G.' BURTON III	IRWIN 'I.G.' BURTON III
 Candidate	MARK G. SCHAEFFER	MARK G. SCHAEFFER
+Candidate	Joseph R. Biden	Joseph R. Biden Jr. And Kamala D. Harris
+Candidate	Donald J. Trump	Donald J. Trump And Michael R. Pence
+Candidate	Howie Hawkins	Howie Hawkins And Angela Nicole Walker
+Candidate	Jo Jorgensen	Jo Jorgensen And Jeremy "Spike" Cohen
+Candidate	Christopher A. Coons	Christopher A. Coons
+Candidate	Lauren Witzke	Lauren Witzke
+Candidate	Mark W. Turley	Mark W. Turley
+Candidate	Nadine M. Frost	Nadine M. Frost
+Candidate	Lisa Blunt Rochester	Lisa Blunt Rochester
+Candidate	Lee Murphy	Lee Murphy
+Candidate	Catherine S. Purcell	Catherine S. Purcell
+Candidate	David L. Rogers	David L. Rogers
+Candidate	John C. Carney Jr.	John C. Carney Jr.
+Candidate	Julianne E. Murray	Julianne E. Murray
+Candidate	Kathy S. Dematteis	Kathy S. Dematteis
+Candidate	John J. Machurek	John J. Machurek
+Candidate	Bethany Hall-Long	Bethany Hall-Long
+Candidate	Donyale Hall	Donyale Hall
+Candidate	Trinidad Navarro	Trinidad Navarro
+Candidate	Julia Pillsbury	Julia Pillsbury
