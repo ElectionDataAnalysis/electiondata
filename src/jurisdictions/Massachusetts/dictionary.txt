@@ -435,7 +435,6 @@ ReportingUnit	Massachusetts;US House MA District 7	Massachusetts;US House MA Dis
 ReportingUnit	Massachusetts;US House MA District 8	Massachusetts;US House MA District 8
 ReportingUnit	Massachusetts;US House MA District 9	Massachusetts;US House MA District 9
 ReportingUnit	Massachusetts	Massachusetts
-
 Candidate	Joseph R. Biden	Joseph R. Biden, Jr.
 Candidate	Jo Jorgensen	Jo Jorgensen
 Candidate	Howard Hawkins	Howard Hawkins
