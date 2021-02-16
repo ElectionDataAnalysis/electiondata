@@ -359,8 +359,9 @@ def replace_raw_with_internal_ids(
         )
         raw_ids_for_element.drop_duplicates(inplace=True)
 
-        # Regularize candidate names from results file
+        # Regularize candidate names from results file and from dictionary.txt
         working.Candidate_raw = regularize_candidate_names(working.Candidate_raw)
+        raw_ids_for_element.raw_identifier_value = regularize_candidate_names(raw_ids_for_element.raw_identifier_value)
 
     working = working.merge(
         raw_ids_for_element,
@@ -1767,16 +1768,22 @@ def incorporate_aux_info(
         sheet_name = list(lookup_df_dict.keys())[0]
 
         lookup_df = lookup_df_dict[sheet_name]
+        lookup_key_cols = aux[element][fk]["params"]["lookup_id"].split(",")
+
         # clean the lookup table
         lookup_df = clean_strings(lookup_df, lookup_df.columns)
+        # if any lookup keys are duplicated, delete all but the first record
+        lookup_df.drop_duplicates(subset=lookup_key_cols, inplace=True)
+
         # define new column names to e.g. 'County_id LOOKUP County_name'
         rename = {c: f"{fk} LOOKUP {c}{suffix}" for c in lookup_df.columns}
+
 
         # if lookup columns not already in w_df
         if not any([f"{fk} LOOKUP" in c for c in w_df.columns]):
             # append lookup columns
             left_merge_cols = [f"{c}{suffix}" for c in fk.split(",")]
-            right_merge_cols = aux[element][fk]["params"]["lookup_id"].split(",")
+            right_merge_cols = lookup_key_cols
             w_df = w_df.merge(
                 lookup_df,
                 left_on=left_merge_cols,
