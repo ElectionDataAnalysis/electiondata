@@ -54,12 +54,9 @@ def test_presidential(dbname):
         )
         == total_pres_votes
     )
-"""
 
-def test_standard_vote_types(dbname):
-    assert e.check_count_types_standard(election, jurisdiction, dbname=dbname)
 
-def test_state_house_totals(dbname):
+def test_congressional_totals(dbname):
     assert (
         e.contest_total(
             election,
@@ -140,33 +137,3 @@ def test_county_subtotal(dbname):
         )
         == pres_votes_county
     )
-
-# to pull this info out independently would be a lot of trouble
-"""
-def test_count_type_subtotal(dbname):
-    assert (
-        e.contest_total(
-            election,
-            jurisdiction,
-            f"US President ({abbr})",
-            dbname=dbname,
-            sub_unit_type=county_or_other,
-            vote_type=single_vote_type,
-        )
-        == pres_votes_vote_type
-    )
-"""
-
-def test_county_subtotal(dbname):
-    assert (
-        e.contest_total(
-            election,
-            jurisdiction,
-            f"US President ({abbr})",
-            dbname=dbname,
-            county=single_county,
-            sub_unit_type=county_or_other,
-        )
-        == pres_votes_county
-    )
-    """
