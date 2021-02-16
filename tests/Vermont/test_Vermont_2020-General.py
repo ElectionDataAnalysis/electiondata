@@ -18,9 +18,9 @@ import election_data_analysis as e
 election = "2020 General"
 jurisdiction = "Vermont"
 abbr = "VT"
-total_pres_votes = 370968 - 278 - 3262 - 1942 	  # total of all votes for US President
+total_pres_votes = 370968 - 278 - 3262 - 1942 	  # total of all votes for US President, not including write-ins
 cd = 1  # US House congressional district
-total_cd_votes = 370968 - 383 - 15748  # total votes in that US House contest in the chosen cd
+total_cd_votes = 370968 - 383 - 15748 - 542 # total votes in that US House contest in the chosen cd (not including write-ins
 shd = "Bennington 2-2"  # state house district
 total_shd_votes = 7154 - 1511 - 2 - 21 # total votes in that State House contest
 ssd = "Grand Isle"  # state senate district
