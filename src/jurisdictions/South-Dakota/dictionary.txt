@@ -1,10 +1,13 @@
 cdf_element	cdf_internal_name	raw_identifier_value
 Candidate	Joseph R Biden	Joseph R. Biden & Kamala Harris
-Candidate	Jo Jorgensen	Jo  Jorgensen & Jeremy "Spike" Cohen
+Candidate	Joseph R Biden	Joseph R. Biden and Kamala Harris
+Candidate	Jo Jorgensen	Jo Jorgensen & Jeremy 'Spike' Cohen
+Candidate	Jo Jorgensen	Jo Jorgensen and Jeremy 'Spike' Cohen
 Candidate	Donald J Trump	Donald J. Trump & Michael R. Pence
+Candidate	Donald J Trump	Donald J. Trump and Michael R. Pence
 Candidate	Dan Ahlers	Dan Ahlers
 Candidate	Mike Rounds	Mike Rounds
-Candidate	Randy "Uriah" Luallin	Randy "Uriah" Luallin
+Candidate	Randy 'Uriah' Luallin	Randy 'Uriah' Luallin
 Candidate	Dusty Johnson	Dusty Johnson
 Candidate	Remi W. B. Bald Eagle	Remi W. B. Bald Eagle
 Candidate	Devin Saxon	Devin Saxon
@@ -22,7 +25,7 @@ Candidate	Nancy Kirstein	Nancy Kirstein
 Candidate	Herman Otten	Herman Otten
 Candidate	V. J. Smith	V. J. Smith
 Candidate	Casey Crabtree	Casey Crabtree
-Candidate	Suzanne "Suzie" Jones Pranger	Suzanne "Suzie" Jones Pranger
+Candidate	Suzanne 'Suzie' Jones Pranger	Suzanne 'Suzie' Jones Pranger
 Candidate	Wayne H. Steinhauer	Wayne H. Steinhauer
 Candidate	Nichole Cauwels	Nichole Cauwels
 Candidate	Maggie Sutton	Maggie Sutton
@@ -31,7 +34,7 @@ Candidate	Jim Stalzer	Jim Stalzer
 Candidate	Jessica Meyers	Jessica Meyers
 Candidate	R Blake Curd	R Blake Curd
 Candidate	Justyn Hauck	Justyn Hauck (Withdrawn 8/4/2020 12:00:00 AM)
-Candidate	Elizabeth "Liz" Larson	Elizabeth "Liz" Larson
+Candidate	Elizabeth 'Liz' Larson	Elizabeth 'Liz' Larson
 Candidate	Jack Kolbeck	Jack Kolbeck
 Candidate	Timothy Reed	Timothy Reed
 Candidate	Larry P. Zikmund	Larry P. Zikmund
@@ -90,11 +93,10 @@ Candidate	John Mills	John Mills
 Candidate	Hugh M. Bartels	Hugh M. Bartels
 Candidate	Nancy York	Nancy York
 Candidate	Cody Ingle	Cody Ingle
-Candidate	Ernie  Otten	Ernie  Otten
+Candidate	Ernie Otten	Ernie Otten
 Candidate	Aaron Aylward	Aaron Aylward
 Candidate	Louise Snodgrass	Louise Snodgrass
 Candidate	Bill Adamson	Bill Adamson
-Candidate	Timothy Reed	Timothy Reed
 Candidate	Larry Tidemann	Larry Tidemann
 Candidate	Joan Stamm	Joan Stamm (Withdrawn 7/31/2020 12:00:00 AM)
 Candidate	John P. Kessinger	John P. Kessinger
@@ -188,14 +190,23 @@ Candidate	Rebecca L Reimer	Rebecca L Reimer
 Candidate	Oren Lee Lesmeister	Oren Lee Lesmeister
 Candidate	Sam Marty	Sam Marty
 CandidateContest	SD House District 1	State Representative District 1
+CandidateContest	SD House District 1	State Representative District 01
 CandidateContest	SD House District 2	State Representative District 2
+CandidateContest	SD House District 2	State Representative District 02
 CandidateContest	SD House District 3	State Representative District 3
+CandidateContest	SD House District 3	State Representative District 03
 CandidateContest	SD House District 4	State Representative District 4
+CandidateContest	SD House District 4	State Representative District 04
 CandidateContest	SD House District 5	State Representative District 5
+CandidateContest	SD House District 5	State Representative District 05
 CandidateContest	SD House District 6	State Representative District 6
+CandidateContest	SD House District 6	State Representative District 06
 CandidateContest	SD House District 7	State Representative District 7
+CandidateContest	SD House District 7	State Representative District 07
 CandidateContest	SD House District 8	State Representative District 8
+CandidateContest	SD House District 8	State Representative District 08
 CandidateContest	SD House District 9	State Representative District 9
+CandidateContest	SD House District 9	State Representative District 09
 CandidateContest	SD House District 10	State Representative District 10
 CandidateContest	SD House District 11	State Representative District 11
 CandidateContest	SD House District 12	State Representative District 12
@@ -212,9 +223,11 @@ CandidateContest	SD House District 22	State Representative District 22
 CandidateContest	SD House District 23	State Representative District 23
 CandidateContest	SD House District 24	State Representative District 24
 CandidateContest	SD House District 25	State Representative District 25
-CandidateContest	SD House District 26	State Representative District 26
+CandidateContest	SD House District 26A	State Representative District 26A
+CandidateContest	SD House District 26B	State Representative District 26B
 CandidateContest	SD House District 27	State Representative District 27
-CandidateContest	SD House District 28	State Representative District 28
+CandidateContest	SD House District 28B	State Representative District 28B
+CandidateContest	SD House District 28A	State Representative District 28A
 CandidateContest	SD House District 29	State Representative District 29
 CandidateContest	SD House District 30	State Representative District 30
 CandidateContest	SD House District 31	State Representative District 31
@@ -282,14 +295,23 @@ CandidateContest	SD House District 92	State Representative District 92
 CandidateContest	SD House District 93	State Representative District 93
 CandidateContest	SD House District 94	State Representative District 94
 CandidateContest	SD Senate District 1	State Senator District 1
+CandidateContest	SD Senate District 1	State Senator District 01
 CandidateContest	SD Senate District 2	State Senator District 2
+CandidateContest	SD Senate District 2	State Senator District 02
 CandidateContest	SD Senate District 3	State Senator District 3
+CandidateContest	SD Senate District 3	State Senator District 03
 CandidateContest	SD Senate District 4	State Senator District 4
+CandidateContest	SD Senate District 4	State Senator District 04
 CandidateContest	SD Senate District 5	State Senator District 5
+CandidateContest	SD Senate District 5	State Senator District 05
 CandidateContest	SD Senate District 6	State Senator District 6
+CandidateContest	SD Senate District 6	State Senator District 06
 CandidateContest	SD Senate District 7	State Senator District 7
+CandidateContest	SD Senate District 7	State Senator District 07
 CandidateContest	SD Senate District 8	State Senator District 8
+CandidateContest	SD Senate District 8	State Senator District 08
 CandidateContest	SD Senate District 9	State Senator District 9
+CandidateContest	SD Senate District 9	State Senator District 09
 CandidateContest	SD Senate District 10	State Senator District 10
 CandidateContest	SD Senate District 11	State Senator District 11
 CandidateContest	SD Senate District 12	State Senator District 12
@@ -330,7 +352,8 @@ CandidateContest	SD Senate District 46	State Senator District 46
 CandidateContest	SD Senate District 47	State Senator District 47
 CandidateContest	US House SD District 1	United States Representative
 CandidateContest	US President (SD)	Presidential Electors
-CandidateContest	US Senate SD	United States Senator 
+CandidateContest	US Senate SD	United States Senator
+CandidateContest	SD Public Utilities Commissioner	Public Utilities Commissioner
 CandidateContest	SD Attorney General	Attorney General
 CandidateContest	SD Secretary of State	Secretary of State
 Party	Democratic Party	DEM

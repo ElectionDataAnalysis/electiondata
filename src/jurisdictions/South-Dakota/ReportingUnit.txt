@@ -24,9 +24,11 @@ South Dakota;SD House District 22	state-house
 South Dakota;SD House District 23	state-house
 South Dakota;SD House District 24	state-house
 South Dakota;SD House District 25	state-house
-South Dakota;SD House District 26	state-house
+South Dakota;SD House District 26A	state-house
+South Dakota;SD House District 26B	state-house
 South Dakota;SD House District 27	state-house
-South Dakota;SD House District 28	state-house
+South Dakota;SD House District 28A	state-house
+South Dakota;SD House District 28B	state-house
 South Dakota;SD House District 29	state-house
 South Dakota;SD House District 30	state-house
 South Dakota;SD House District 31	state-house

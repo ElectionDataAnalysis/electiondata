@@ -4,7 +4,7 @@ Jo Jorgensen
 Donald J Trump
 Dan Ahlers
 Mike Rounds
-Randy "Uriah" Luallin
+Randy 'Uriah' Luallin
 Dusty Johnson
 Remi W. B. Bald Eagle
 Devin Saxon
@@ -22,7 +22,7 @@ Nancy Kirstein
 Herman Otten
 V. J. Smith
 Casey Crabtree
-Suzanne "Suzie" Jones Pranger
+Suzanne 'Suzie' Jones Pranger
 Wayne H. Steinhauer
 Nichole Cauwels
 Maggie Sutton
@@ -31,7 +31,7 @@ Jim Stalzer
 Jessica Meyers
 R Blake Curd
 Justyn Hauck
-Elizabeth "Liz" Larson
+Elizabeth 'Liz' Larson
 Jack Kolbeck
 Timothy Reed
 Larry P. Zikmund
@@ -90,11 +90,10 @@ John Mills
 Hugh M. Bartels
 Nancy York
 Cody Ingle
-Ernie  Otten
+Ernie Otten
 Aaron Aylward
 Louise Snodgrass
 Bill Adamson
-Timothy Reed
 Larry Tidemann
 Joan Stamm
 John P. Kessinger

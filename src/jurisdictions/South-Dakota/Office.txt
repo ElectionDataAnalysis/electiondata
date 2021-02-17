@@ -24,9 +24,11 @@ SD House District 22	South Dakota;SD House District 22
 SD House District 23	South Dakota;SD House District 23
 SD House District 24	South Dakota;SD House District 24
 SD House District 25	South Dakota;SD House District 25
-SD House District 26	South Dakota;SD House District 26
+SD House District 26A	South Dakota;SD House District 26A
+SD House District 26B	South Dakota;SD House District 26B
 SD House District 27	South Dakota;SD House District 27
-SD House District 28	South Dakota;SD House District 28
+SD House District 28A	South Dakota;SD House District 28A
+SD House District 28B	South Dakota;SD House District 28B
 SD House District 29	South Dakota;SD House District 29
 SD House District 30	South Dakota;SD House District 30
 SD House District 31	South Dakota;SD House District 31
@@ -107,6 +109,7 @@ SD Senate District 35	South Dakota;SD Senate District 35
 US House SD District 1	South Dakota;US House SD District 1
 US President (SD)	South Dakota
 SD Governor	South Dakota
+SD Public Utilities Commissioner	South Dakota
 US Senate SD	South Dakota
 SD Attorney General	South Dakota
 SD Lieutenant Governor	South Dakota

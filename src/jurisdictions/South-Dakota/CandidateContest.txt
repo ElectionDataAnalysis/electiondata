@@ -24,10 +24,12 @@ SD House District 22	1	SD House District 22
 SD House District 23	1	SD House District 23	
 SD House District 24	1	SD House District 24	
 SD House District 25	1	SD House District 25	
-SD House District 26	1	SD House District 26	
-SD House District 27	1	SD House District 27	
-SD House District 28	1	SD House District 28	
-SD House District 29	1	SD House District 29	
+SD House District 26A	1	SD House District 26A
+SD House District 26B	1	SD House District 26B
+SD House District 27	1	SD House District 27
+SD House District 28A	1	SD House District 28A
+SD House District 28B	1	SD House District 28B
+SD House District 29	1	SD House District 29
 SD House District 30	1	SD House District 30	
 SD House District 31	1	SD House District 31	
 SD House District 32	1	SD House District 32	
@@ -107,7 +109,8 @@ SD Senate District 35	1	SD Senate District 35
 US House SD District 1	1	US House SD District 1	
 US President (SD)	1	US President (SD)	
 SD Governor	1	SD Governor	
-US Senate SD	1	US Senate SD	
+SD Public Utilities Commissioner	1	SD Public Utilities Commissioner
+US Senate SD	1	US Senate SD
 SD Attorney General	1	SD Attorney General	
 SD Lieutenant Governor	1	SD Lieutenant Governor	
 SD Treasurer	1	SD Treasurer	
