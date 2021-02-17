@@ -1,0 +1,428 @@
+cdf_element	cdf_internal_name	raw_identifier_value
+Candidate	Joseph R Biden	Joseph R. Biden & Kamala Harris
+Candidate	Joseph R Biden	Joseph R. Biden and Kamala Harris
+Candidate	Jo Jorgensen	Jo Jorgensen & Jeremy 'Spike' Cohen
+Candidate	Jo Jorgensen	Jo Jorgensen and Jeremy 'Spike' Cohen
+Candidate	Donald J Trump	Donald J. Trump & Michael R. Pence
+Candidate	Donald J Trump	Donald J. Trump and Michael R. Pence
+Candidate	Dan Ahlers	Dan Ahlers
+Candidate	Mike Rounds	Mike Rounds
+Candidate	Randy 'Uriah' Luallin	Randy 'Uriah' Luallin
+Candidate	Dusty Johnson	Dusty Johnson
+Candidate	Remi W. B. Bald Eagle	Remi W. B. Bald Eagle
+Candidate	Devin Saxon	Devin Saxon
+Candidate	Gary Hanson	Gary Hanson
+Candidate	Susan Wismer	Susan Wismer
+Candidate	Michael H. Rohl	Michael H. Rohl
+Candidate	Brock L. Greenfield	Brock L. Greenfield
+Candidate	Josh Halsey	Josh Halsey (Withdrawn 7/30/2020 12:00:00 AM)
+Candidate	Al Novstrup	Al Novstrup
+Candidate	Daryl Root	Daryl Root
+Candidate	John Wiik	John Wiik
+Candidate	Adam Jewell	Adam Jewell
+Candidate	Lee Schoenbeck	Lee Schoenbeck
+Candidate	Nancy Kirstein	Nancy Kirstein
+Candidate	Herman Otten	Herman Otten
+Candidate	V. J. Smith	V. J. Smith
+Candidate	Casey Crabtree	Casey Crabtree
+Candidate	Suzanne 'Suzie' Jones Pranger	Suzanne 'Suzie' Jones Pranger
+Candidate	Wayne H. Steinhauer	Wayne H. Steinhauer
+Candidate	Nichole Cauwels	Nichole Cauwels
+Candidate	Maggie Sutton	Maggie Sutton
+Candidate	Tom Cool	Tom Cool
+Candidate	Jim Stalzer	Jim Stalzer
+Candidate	Jessica Meyers	Jessica Meyers
+Candidate	R Blake Curd	R Blake Curd
+Candidate	Justyn Hauck	Justyn Hauck (Withdrawn 8/4/2020 12:00:00 AM)
+Candidate	Elizabeth 'Liz' Larson	Elizabeth 'Liz' Larson
+Candidate	Jack Kolbeck	Jack Kolbeck
+Candidate	Timothy Reed	Timothy Reed
+Candidate	Larry P. Zikmund	Larry P. Zikmund
+Candidate	Reynold F. Nesiba	Reynold F. Nesiba
+Candidate	Thor Bardon	Thor Bardon
+Candidate	Jim Bolin	Jim Bolin
+Candidate	Ailee Johns	Ailee Johns
+Candidate	Gregory Baldwin	Gregory Baldwin
+Candidate	Arthur Rusch	Arthur Rusch
+Candidate	Jay Williams	Jay Williams (Withdrawn 7/22/2020 12:00:00 AM)
+Candidate	Jordan Foos	Jordan Foos
+Candidate	Jean Hunhoff	Jean Hunhoff
+Candidate	Kyle Schoenfish	Kyle Schoenfish
+Candidate	Alexander Martin	Alexander Martin
+Candidate	Joshua Klumb	Joshua Klumb
+Candidate	Dan Kerner Andersson	Dan Kerner Andersson
+Candidate	Erin Tobin	Erin Tobin
+Candidate	David Wheeler	David Wheeler
+Candidate	CJ Abernathey	CJ Abernathey
+Candidate	Bryan J. Breitling	Bryan J. Breitling
+Candidate	Mary Duvall	Mary Duvall
+Candidate	Seth William Van't Hof	Seth William Van't Hof
+Candidate	Rick W Knobe	Rick W Knobe
+Candidate	Kris K. Langer	Kris K. Langer (Withdrawn 8/4/2020 12:00:00 AM)
+Candidate	Marsha Symens	Marsha Symens
+Candidate	Troy Heinert	Troy Heinert
+Candidate	Joel Koskan	Joel Koskan
+Candidate	Red Dawn Foster	Red Dawn Foster
+Candidate	Judd W Schomp	Judd W Schomp
+Candidate	Ryan M. Maher	Ryan M. Maher
+Candidate	Kent Wilsey	Kent Wilsey
+Candidate	Gary L. Cammack	Gary L. Cammack
+Candidate	A. Gideon Oakes	A. Gideon Oakes
+Candidate	Julie Frye-Mueller	Julie Frye-Mueller
+Candidate	Timothy R. Johns	Timothy R. Johns
+Candidate	Michael Calabrese	Michael Calabrese
+Candidate	Helene Duhamel	Helene Duhamel
+Candidate	Ryan A. Ryder	Ryan A. Ryder
+Candidate	David Johnson	David Johnson
+Candidate	George Nelson	George Nelson
+Candidate	Michael G Diedrich	Michael G Diedrich
+Candidate	Brian Gentry	Brian Gentry
+Candidate	Jessica Castleberry	Jessica Castleberry
+Candidate	Jennifer Healy Keintz	Jennifer Healy Keintz
+Candidate	Steven D. McCleerey	Steven D. McCleerey
+Candidate	Tamara St. John	Tamara St. John
+Candidate	Kaleb W. Weis	Kaleb W. Weis
+Candidate	Lana Greenfield	Lana Greenfield
+Candidate	Leslie McLaughlin	Leslie McLaughlin
+Candidate	Justin Roemmick	Justin Roemmick
+Candidate	Drew Dennert	Drew Dennert
+Candidate	Carl E Perry	Carl E Perry
+Candidate	Becky Holtquist	Becky Holtquist
+Candidate	Fred Deutsch	Fred Deutsch
+Candidate	John Mills	John Mills
+Candidate	Hugh M. Bartels	Hugh M. Bartels
+Candidate	Nancy York	Nancy York
+Candidate	Cody Ingle	Cody Ingle
+Candidate	Ernie Otten	Ernie Otten
+Candidate	Aaron Aylward	Aaron Aylward
+Candidate	Louise Snodgrass	Louise Snodgrass
+Candidate	Bill Adamson	Bill Adamson
+Candidate	Larry Tidemann	Larry Tidemann
+Candidate	Joan Stamm	Joan Stamm (Withdrawn 7/31/2020 12:00:00 AM)
+Candidate	John P. Kessinger	John P. Kessinger
+Candidate	Val Parsley	Val Parsley
+Candidate	Marli Wiese	Marli Wiese
+Candidate	Randy Gross	Randy Gross
+Candidate	Michael Saba	Michael Saba
+Candidate	Toni Miller	Toni Miller
+Candidate	Rhonda Milstead	Rhonda Milstead
+Candidate	Bethany Soye	Bethany Soye
+Candidate	Michelle L. Hentschel	Michelle L. Hentschel
+Candidate	Steven Haugaard	Steven Haugaard
+Candidate	Doug Barthel	Doug Barthel
+Candidate	Sheryl Johnson	Sheryl Johnson
+Candidate	Margaret M Kuipers	Margaret M Kuipers
+Candidate	Mark Willadsen	Mark Willadsen
+Candidate	Chris Karr	Chris Karr
+Candidate	Erin Royer	Erin Royer
+Candidate	Greg Jamison	Greg Jamison
+Candidate	Arch Beal	Arch Beal
+Candidate	Norman B. Bliss	Norman B. Bliss
+Candidate	Kelly A. Sullivan	Kelly A. Sullivan
+Candidate	Richard L Thomason	Richard L Thomason
+Candidate	Sue Peterson	Sue Peterson
+Candidate	Mike Huber	Mike Huber
+Candidate	Erin Healy	Erin Healy
+Candidate	Taylor Rae Rehfeldt	Taylor Rae Rehfeldt
+Candidate	Tom Holmes	Tom Holmes
+Candidate	Jamie Smith	Jamie Smith
+Candidate	Linda Duba	Linda Duba
+Candidate	Matt Rosburg	Matt Rosburg
+Candidate	Cole Heisey	Cole Heisey
+Candidate	David L. Anderson	David L. Anderson
+Candidate	Kevin D. Jensen	Kevin D. Jensen
+Candidate	Caitlin F. Collier	Caitlin F. Collier
+Candidate	Al Leber	Al Leber
+Candidate	Richard Vasgaard	Richard Vasgaard
+Candidate	Sydney Davis	Sydney Davis
+Candidate	Carol Williams	Carol Williams (Withdrawn 7/22/2020 12:00:00 AM)
+Candidate	Ryan Cwach	Ryan Cwach
+Candidate	Mike Stevens	Mike Stevens
+Candidate	Kent Peterson	Kent Peterson
+Candidate	Marty Overweg	Marty Overweg
+Candidate	Paul R Miskimins	Paul R Miskimins
+Candidate	Lance Koth	Lance Koth
+Candidate	Jessica Hegge	Jessica Hegge
+Candidate	Rocky Blare	Rocky Blare
+Candidate	Caleb Finck	Caleb Finck
+Candidate	Mark S Smith	Mark S Smith
+Candidate	C. John McEnelly	C. John McEnelly
+Candidate	Roger Chase	Roger Chase
+Candidate	Lynn Schneider	Lynn Schneider
+Candidate	Spencer Gosch	Spencer Gosch
+Candidate	Charlie Hoffman	Charlie Hoffman
+Candidate	Amanda Bachmann	Amanda Bachmann
+Candidate	Will D Mortenson	Will D Mortenson
+Candidate	Mike Weisgram	Mike Weisgram
+Candidate	Jeff Barth	Jeff Barth
+Candidate	Jared Nieuwenhuis	Jared Nieuwenhuis
+Candidate	Tom Pischke	Tom Pischke
+Candidate	Jon Hansen	Jon Hansen
+Candidate	Ernest Weston Jr	Ernest Weston Jr
+Candidate	Peri Pourier	Peri Pourier
+Candidate	Bill Hines	Bill Hines (Withdrawn 7/28/2020 12:00:00 AM)
+Candidate	Liz May	Liz May
+Candidate	Jade Addison	Jade Addison
+Candidate	Dean Wink	Dean Wink
+Candidate	Kirk J. Chaffee	Kirk J. Chaffee
+Candidate	Trish Ladner	Trish Ladner
+Candidate	Tim R. Goodwin	Tim R. Goodwin
+Candidate	Brooke Abdallah	Brooke Abdallah
+Candidate	Scott Odenbach	Scott Odenbach
+Candidate	Mary Fitzgerald	Mary Fitzgerald
+Candidate	Toni Diamond	Toni Diamond
+Candidate	James Preston	James Preston
+Candidate	Chris Johnson	Chris Johnson
+Candidate	Becky Drury	Becky Drury
+Candidate	Phil Jensen	Phil Jensen
+Candidate	Taffy Howard	Taffy Howard
+Candidate	Nick Anderson	Nick Anderson
+Candidate	Rick Stracqualursi	Rick Stracqualursi
+Candidate	Mike Derby	Mike Derby
+Candidate	Jess Olson	Jess Olson
+Candidate	David A. Hubbard	David A. Hubbard
+Candidate	Pat Cromwell	Pat Cromwell
+Candidate	Tina L. Mulally	Tina L. Mulally
+Candidate	Tony Randolph	Tony Randolph
+Candidate	Shawn Bordeaux	Shawn Bordeaux
+Candidate	Tim Feliciano	Tim Feliciano
+Candidate	Rebecca L Reimer	Rebecca L Reimer
+Candidate	Oren Lee Lesmeister	Oren Lee Lesmeister
+Candidate	Sam Marty	Sam Marty
+CandidateContest	SD House District 1	State Representative District 1
+CandidateContest	SD House District 1	State Representative District 01
+CandidateContest	SD House District 2	State Representative District 2
+CandidateContest	SD House District 2	State Representative District 02
+CandidateContest	SD House District 3	State Representative District 3
+CandidateContest	SD House District 3	State Representative District 03
+CandidateContest	SD House District 4	State Representative District 4
+CandidateContest	SD House District 4	State Representative District 04
+CandidateContest	SD House District 5	State Representative District 5
+CandidateContest	SD House District 5	State Representative District 05
+CandidateContest	SD House District 6	State Representative District 6
+CandidateContest	SD House District 6	State Representative District 06
+CandidateContest	SD House District 7	State Representative District 7
+CandidateContest	SD House District 7	State Representative District 07
+CandidateContest	SD House District 8	State Representative District 8
+CandidateContest	SD House District 8	State Representative District 08
+CandidateContest	SD House District 9	State Representative District 9
+CandidateContest	SD House District 9	State Representative District 09
+CandidateContest	SD House District 10	State Representative District 10
+CandidateContest	SD House District 11	State Representative District 11
+CandidateContest	SD House District 12	State Representative District 12
+CandidateContest	SD House District 13	State Representative District 13
+CandidateContest	SD House District 14	State Representative District 14
+CandidateContest	SD House District 15	State Representative District 15
+CandidateContest	SD House District 16	State Representative District 16
+CandidateContest	SD House District 17	State Representative District 17
+CandidateContest	SD House District 18	State Representative District 18
+CandidateContest	SD House District 19	State Representative District 19
+CandidateContest	SD House District 20	State Representative District 20
+CandidateContest	SD House District 21	State Representative District 21
+CandidateContest	SD House District 22	State Representative District 22
+CandidateContest	SD House District 23	State Representative District 23
+CandidateContest	SD House District 24	State Representative District 24
+CandidateContest	SD House District 25	State Representative District 25
+CandidateContest	SD House District 26A	State Representative District 26A
+CandidateContest	SD House District 26B	State Representative District 26B
+CandidateContest	SD House District 27	State Representative District 27
+CandidateContest	SD House District 28B	State Representative District 28B
+CandidateContest	SD House District 28A	State Representative District 28A
+CandidateContest	SD House District 29	State Representative District 29
+CandidateContest	SD House District 30	State Representative District 30
+CandidateContest	SD House District 31	State Representative District 31
+CandidateContest	SD House District 32	State Representative District 32
+CandidateContest	SD House District 33	State Representative District 33
+CandidateContest	SD House District 34	State Representative District 34
+CandidateContest	SD House District 35	State Representative District 35
+CandidateContest	SD House District 36	State Representative District 36
+CandidateContest	SD House District 37	State Representative District 37
+CandidateContest	SD House District 38	State Representative District 38
+CandidateContest	SD House District 39	State Representative District 39
+CandidateContest	SD House District 40	State Representative District 40
+CandidateContest	SD House District 41	State Representative District 41
+CandidateContest	SD House District 42	State Representative District 42
+CandidateContest	SD House District 43	State Representative District 43
+CandidateContest	SD House District 44	State Representative District 44
+CandidateContest	SD House District 45	State Representative District 45
+CandidateContest	SD House District 46	State Representative District 46
+CandidateContest	SD House District 47	State Representative District 47
+CandidateContest	SD House District 48	State Representative District 48
+CandidateContest	SD House District 49	State Representative District 49
+CandidateContest	SD House District 50	State Representative District 50
+CandidateContest	SD House District 51	State Representative District 51
+CandidateContest	SD House District 52	State Representative District 52
+CandidateContest	SD House District 53	State Representative District 53
+CandidateContest	SD House District 54	State Representative District 54
+CandidateContest	SD House District 55	State Representative District 55
+CandidateContest	SD House District 56	State Representative District 56
+CandidateContest	SD House District 57	State Representative District 57
+CandidateContest	SD House District 58	State Representative District 58
+CandidateContest	SD House District 59	State Representative District 59
+CandidateContest	SD House District 60	State Representative District 60
+CandidateContest	SD House District 61	State Representative District 61
+CandidateContest	SD House District 62	State Representative District 62
+CandidateContest	SD House District 63	State Representative District 63
+CandidateContest	SD House District 64	State Representative District 64
+CandidateContest	SD House District 65	State Representative District 65
+CandidateContest	SD House District 66	State Representative District 66
+CandidateContest	SD House District 67	State Representative District 67
+CandidateContest	SD House District 68	State Representative District 68
+CandidateContest	SD House District 69	State Representative District 69
+CandidateContest	SD House District 70	State Representative District 70
+CandidateContest	SD House District 71	State Representative District 71
+CandidateContest	SD House District 72	State Representative District 72
+CandidateContest	SD House District 73	State Representative District 73
+CandidateContest	SD House District 74	State Representative District 74
+CandidateContest	SD House District 75	State Representative District 75
+CandidateContest	SD House District 76	State Representative District 76
+CandidateContest	SD House District 77	State Representative District 77
+CandidateContest	SD House District 78	State Representative District 78
+CandidateContest	SD House District 79	State Representative District 79
+CandidateContest	SD House District 80	State Representative District 80
+CandidateContest	SD House District 81	State Representative District 81
+CandidateContest	SD House District 82	State Representative District 82
+CandidateContest	SD House District 83	State Representative District 83
+CandidateContest	SD House District 84	State Representative District 84
+CandidateContest	SD House District 85	State Representative District 85
+CandidateContest	SD House District 86	State Representative District 86
+CandidateContest	SD House District 87	State Representative District 87
+CandidateContest	SD House District 88	State Representative District 88
+CandidateContest	SD House District 89	State Representative District 89
+CandidateContest	SD House District 90	State Representative District 90
+CandidateContest	SD House District 91	State Representative District 91
+CandidateContest	SD House District 92	State Representative District 92
+CandidateContest	SD House District 93	State Representative District 93
+CandidateContest	SD House District 94	State Representative District 94
+CandidateContest	SD Senate District 1	State Senator District 1
+CandidateContest	SD Senate District 1	State Senator District 01
+CandidateContest	SD Senate District 2	State Senator District 2
+CandidateContest	SD Senate District 2	State Senator District 02
+CandidateContest	SD Senate District 3	State Senator District 3
+CandidateContest	SD Senate District 3	State Senator District 03
+CandidateContest	SD Senate District 4	State Senator District 4
+CandidateContest	SD Senate District 4	State Senator District 04
+CandidateContest	SD Senate District 5	State Senator District 5
+CandidateContest	SD Senate District 5	State Senator District 05
+CandidateContest	SD Senate District 6	State Senator District 6
+CandidateContest	SD Senate District 6	State Senator District 06
+CandidateContest	SD Senate District 7	State Senator District 7
+CandidateContest	SD Senate District 7	State Senator District 07
+CandidateContest	SD Senate District 8	State Senator District 8
+CandidateContest	SD Senate District 8	State Senator District 08
+CandidateContest	SD Senate District 9	State Senator District 9
+CandidateContest	SD Senate District 9	State Senator District 09
+CandidateContest	SD Senate District 10	State Senator District 10
+CandidateContest	SD Senate District 11	State Senator District 11
+CandidateContest	SD Senate District 12	State Senator District 12
+CandidateContest	SD Senate District 13	State Senator District 13
+CandidateContest	SD Senate District 14	State Senator District 14
+CandidateContest	SD Senate District 15	State Senator District 15
+CandidateContest	SD Senate District 16	State Senator District 16
+CandidateContest	SD Senate District 17	State Senator District 17
+CandidateContest	SD Senate District 18	State Senator District 18
+CandidateContest	SD Senate District 19	State Senator District 19
+CandidateContest	SD Senate District 20	State Senator District 20
+CandidateContest	SD Senate District 21	State Senator District 21
+CandidateContest	SD Senate District 22	State Senator District 22
+CandidateContest	SD Senate District 23	State Senator District 23
+CandidateContest	SD Senate District 24	State Senator District 24
+CandidateContest	SD Senate District 25	State Senator District 25
+CandidateContest	SD Senate District 26	State Senator District 26
+CandidateContest	SD Senate District 27	State Senator District 27
+CandidateContest	SD Senate District 28	State Senator District 28
+CandidateContest	SD Senate District 29	State Senator District 29
+CandidateContest	SD Senate District 30	State Senator District 30
+CandidateContest	SD Senate District 31	State Senator District 31
+CandidateContest	SD Senate District 32	State Senator District 32
+CandidateContest	SD Senate District 33	State Senator District 33
+CandidateContest	SD Senate District 34	State Senator District 34
+CandidateContest	SD Senate District 35	State Senator District 35
+CandidateContest	SD Senate District 36	State Senator District 36
+CandidateContest	SD Senate District 37	State Senator District 37
+CandidateContest	SD Senate District 38	State Senator District 38
+CandidateContest	SD Senate District 39	State Senator District 39
+CandidateContest	SD Senate District 40	State Senator District 40
+CandidateContest	SD Senate District 41	State Senator District 41
+CandidateContest	SD Senate District 42	State Senator District 42
+CandidateContest	SD Senate District 43	State Senator District 43
+CandidateContest	SD Senate District 44	State Senator District 44
+CandidateContest	SD Senate District 45	State Senator District 45
+CandidateContest	SD Senate District 46	State Senator District 46
+CandidateContest	SD Senate District 47	State Senator District 47
+CandidateContest	US House SD District 1	United States Representative
+CandidateContest	US President (SD)	Presidential Electors
+CandidateContest	US Senate SD	United States Senator
+CandidateContest	SD Public Utilities Commissioner	Public Utilities Commissioner
+CandidateContest	SD Attorney General	Attorney General
+CandidateContest	SD Secretary of State	Secretary of State
+Party	Democratic Party	DEM
+Party	Republican Party	REP
+Party	Libertarian Party	LIB
+Party	Independent Party	IND
+ReportingUnit	South Dakota;Aurora County	Aurora
+ReportingUnit	South Dakota;Beadle County	Beadle
+ReportingUnit	South Dakota;Bennett County	Bennett
+ReportingUnit	South Dakota;Bon Homme County	Bon Homme
+ReportingUnit	South Dakota;Brookings County	Brookings (Vote Center)
+ReportingUnit	South Dakota;Brown County	Brown (Vote Center)
+ReportingUnit	South Dakota;Brule County	Brule
+ReportingUnit	South Dakota;Buffalo County	Buffalo
+ReportingUnit	South Dakota;Butte County	Butte
+ReportingUnit	South Dakota;Campbell County	Campbell
+ReportingUnit	South Dakota;Charles Mix County	Charles Mix
+ReportingUnit	South Dakota;Clark County	Clark
+ReportingUnit	South Dakota;Clay County	Clay
+ReportingUnit	South Dakota;Codington County	Codington
+ReportingUnit	South Dakota;Corson County	Corson
+ReportingUnit	South Dakota;Custer County	Custer
+ReportingUnit	South Dakota;Davison County	Davison
+ReportingUnit	South Dakota;Day County	Day
+ReportingUnit	South Dakota;Deuel County	Deuel
+ReportingUnit	South Dakota;Dewey County	Dewey
+ReportingUnit	South Dakota;Douglas County	Douglas
+ReportingUnit	South Dakota;Edmunds County	Edmunds
+ReportingUnit	South Dakota;Fall River County	Fall River
+ReportingUnit	South Dakota;Faulk County	Faulk
+ReportingUnit	South Dakota;Grant County	Grant
+ReportingUnit	South Dakota;Gregory County	Gregory
+ReportingUnit	South Dakota;Haakon County	Haakon
+ReportingUnit	South Dakota;Hamlin County	Hamlin
+ReportingUnit	South Dakota;Hand County	Hand
+ReportingUnit	South Dakota;Hanson County	Hanson
+ReportingUnit	South Dakota;Harding County	Harding
+ReportingUnit	South Dakota;Hughes County	Hughes (Vote Center)
+ReportingUnit	South Dakota;Hutchinson County	Hutchinson
+ReportingUnit	South Dakota;Hyde County	Hyde (Vote Center)
+ReportingUnit	South Dakota;Jackson County	Jackson
+ReportingUnit	South Dakota;Jerauld County	Jerauld
+ReportingUnit	South Dakota;Jones County	Jones
+ReportingUnit	South Dakota;Kingsbury County	Kingsbury
+ReportingUnit	South Dakota;Lake County	Lake
+ReportingUnit	South Dakota;Lawrence County	Lawrence
+ReportingUnit	South Dakota;Lincoln County	Lincoln
+ReportingUnit	South Dakota;Lyman County	Lyman
+ReportingUnit	South Dakota;Marshall County	Marshall
+ReportingUnit	South Dakota;McCook County	McCook
+ReportingUnit	South Dakota;McPherson County	McPherson
+ReportingUnit	South Dakota;Meade County	Meade
+ReportingUnit	South Dakota;Mellette County	Mellette
+ReportingUnit	South Dakota;Miner County	Miner
+ReportingUnit	South Dakota;Minnehaha County	Minnehaha
+ReportingUnit	South Dakota;Moody County	Moody
+ReportingUnit	South Dakota;Oglala Lakota County	Oglala Lakota
+ReportingUnit	South Dakota;Pennington County	Pennington
+ReportingUnit	South Dakota;Perkins County	Perkins
+ReportingUnit	South Dakota;Potter County	Potter (Vote Center)
+ReportingUnit	South Dakota;Roberts County	Roberts
+ReportingUnit	South Dakota;Sanborn County	Sanborn
+ReportingUnit	South Dakota;Spink County	Spink
+ReportingUnit	South Dakota;Stanley County	Stanley
+ReportingUnit	South Dakota;Sully County	Sully (Vote Center)
+ReportingUnit	South Dakota;Todd County	Todd
+ReportingUnit	South Dakota;Tripp County	Tripp
+ReportingUnit	South Dakota;Turner County	Turner
+ReportingUnit	South Dakota;Union County	Union
+ReportingUnit	South Dakota;Walworth County	Walworth
+ReportingUnit	South Dakota;Yankton County	Yankton (Vote Center)
+ReportingUnit	South Dakota;Ziebach County	Ziebach

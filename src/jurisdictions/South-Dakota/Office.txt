@@ -1,0 +1,117 @@
+Name	ElectionDistrict
+SD House District 1	South Dakota;SD House District 1
+SD House District 2	South Dakota;SD House District 2
+SD House District 3	South Dakota;SD House District 3
+SD House District 4	South Dakota;SD House District 4
+SD House District 5	South Dakota;SD House District 5
+SD House District 6	South Dakota;SD House District 6
+SD House District 7	South Dakota;SD House District 7
+SD House District 8	South Dakota;SD House District 8
+SD House District 9	South Dakota;SD House District 9
+SD House District 10	South Dakota;SD House District 10
+SD House District 11	South Dakota;SD House District 11
+SD House District 12	South Dakota;SD House District 12
+SD House District 13	South Dakota;SD House District 13
+SD House District 14	South Dakota;SD House District 14
+SD House District 15	South Dakota;SD House District 15
+SD House District 16	South Dakota;SD House District 16
+SD House District 17	South Dakota;SD House District 17
+SD House District 18	South Dakota;SD House District 18
+SD House District 19	South Dakota;SD House District 19
+SD House District 20	South Dakota;SD House District 20
+SD House District 21	South Dakota;SD House District 21
+SD House District 22	South Dakota;SD House District 22
+SD House District 23	South Dakota;SD House District 23
+SD House District 24	South Dakota;SD House District 24
+SD House District 25	South Dakota;SD House District 25
+SD House District 26A	South Dakota;SD House District 26A
+SD House District 26B	South Dakota;SD House District 26B
+SD House District 27	South Dakota;SD House District 27
+SD House District 28A	South Dakota;SD House District 28A
+SD House District 28B	South Dakota;SD House District 28B
+SD House District 29	South Dakota;SD House District 29
+SD House District 30	South Dakota;SD House District 30
+SD House District 31	South Dakota;SD House District 31
+SD House District 32	South Dakota;SD House District 32
+SD House District 33	South Dakota;SD House District 33
+SD House District 34	South Dakota;SD House District 34
+SD House District 35	South Dakota;SD House District 35
+SD House District 36	South Dakota;SD House District 36
+SD House District 37	South Dakota;SD House District 37
+SD House District 38	South Dakota;SD House District 38
+SD House District 39	South Dakota;SD House District 39
+SD House District 40	South Dakota;SD House District 40
+SD House District 41	South Dakota;SD House District 41
+SD House District 42	South Dakota;SD House District 42
+SD House District 43	South Dakota;SD House District 43
+SD House District 44	South Dakota;SD House District 44
+SD House District 45	South Dakota;SD House District 45
+SD House District 46	South Dakota;SD House District 46
+SD House District 47	South Dakota;SD House District 47
+SD House District 48	South Dakota;SD House District 48
+SD House District 49	South Dakota;SD House District 49
+SD House District 50	South Dakota;SD House District 50
+SD House District 51	South Dakota;SD House District 51
+SD House District 52	South Dakota;SD House District 52
+SD House District 53	South Dakota;SD House District 53
+SD House District 54	South Dakota;SD House District 54
+SD House District 55	South Dakota;SD House District 55
+SD House District 56	South Dakota;SD House District 56
+SD House District 57	South Dakota;SD House District 57
+SD House District 58	South Dakota;SD House District 58
+SD House District 59	South Dakota;SD House District 59
+SD House District 60	South Dakota;SD House District 60
+SD House District 61	South Dakota;SD House District 61
+SD House District 62	South Dakota;SD House District 62
+SD House District 63	South Dakota;SD House District 63
+SD House District 64	South Dakota;SD House District 64
+SD House District 65	South Dakota;SD House District 65
+SD House District 66	South Dakota;SD House District 66
+SD House District 67	South Dakota;SD House District 67
+SD House District 68	South Dakota;SD House District 68
+SD House District 69	South Dakota;SD House District 69
+SD House District 70	South Dakota;SD House District 70
+SD Senate District 1	South Dakota;SD Senate District 1
+SD Senate District 2	South Dakota;SD Senate District 2
+SD Senate District 3	South Dakota;SD Senate District 3
+SD Senate District 4	South Dakota;SD Senate District 4
+SD Senate District 5	South Dakota;SD Senate District 5
+SD Senate District 6	South Dakota;SD Senate District 6
+SD Senate District 7	South Dakota;SD Senate District 7
+SD Senate District 8	South Dakota;SD Senate District 8
+SD Senate District 9	South Dakota;SD Senate District 9
+SD Senate District 10	South Dakota;SD Senate District 10
+SD Senate District 11	South Dakota;SD Senate District 11
+SD Senate District 12	South Dakota;SD Senate District 12
+SD Senate District 13	South Dakota;SD Senate District 13
+SD Senate District 14	South Dakota;SD Senate District 14
+SD Senate District 15	South Dakota;SD Senate District 15
+SD Senate District 16	South Dakota;SD Senate District 16
+SD Senate District 17	South Dakota;SD Senate District 17
+SD Senate District 18	South Dakota;SD Senate District 18
+SD Senate District 19	South Dakota;SD Senate District 19
+SD Senate District 20	South Dakota;SD Senate District 20
+SD Senate District 21	South Dakota;SD Senate District 21
+SD Senate District 22	South Dakota;SD Senate District 22
+SD Senate District 23	South Dakota;SD Senate District 23
+SD Senate District 24	South Dakota;SD Senate District 24
+SD Senate District 25	South Dakota;SD Senate District 25
+SD Senate District 26	South Dakota;SD Senate District 26
+SD Senate District 27	South Dakota;SD Senate District 27
+SD Senate District 28	South Dakota;SD Senate District 28
+SD Senate District 29	South Dakota;SD Senate District 29
+SD Senate District 30	South Dakota;SD Senate District 30
+SD Senate District 31	South Dakota;SD Senate District 31
+SD Senate District 32	South Dakota;SD Senate District 32
+SD Senate District 33	South Dakota;SD Senate District 33
+SD Senate District 34	South Dakota;SD Senate District 34
+SD Senate District 35	South Dakota;SD Senate District 35
+US House SD District 1	South Dakota;US House SD District 1
+US President (SD)	South Dakota
+SD Governor	South Dakota
+SD Public Utilities Commissioner	South Dakota
+US Senate SD	South Dakota
+SD Attorney General	South Dakota
+SD Lieutenant Governor	South Dakota
+SD Treasurer	South Dakota
+SD Secretary of State	South Dakota
