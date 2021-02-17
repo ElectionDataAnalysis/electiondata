@@ -25,7 +25,7 @@ total_shd_votes = 6908  # total votes in that State House contest
 ssd = 30  # state senate district
 total_ssd_votes = 830  # total votes in that State Senate contest
 single_vote_type = 'early'  # pick any one with corresponding data in your file, but use internal db name
-pres_votes_vote_type = 13423   # total votes for US President of that vote type
+pres_votes_vote_type = 455093   # total votes for US President of that vote type
 county_or_other = "county"   # Change this only if results are subdivided by something other than counties
                             #  e.g., 'parish' in LA, 'state-house' in Alaska, 'ward' in Philadelphia
 single_county = 'New Mexico;Eddy County'  # pick any one from your file, but use internal db name
@@ -57,7 +57,8 @@ def test_congressional_totals(dbname):
         == total_cd_votes
     )
 
-
+# didn't collect these (only contest-by-contest was available, as far as we could tell)
+"""
 def test_state_senate_totals(dbname):
     assert (e.contest_total(
         election,
@@ -78,7 +79,7 @@ def test_state_house_totals(dbname):
         )
         == total_shd_votes
     )
-
+"""
 
 def test_standard_vote_types(dbname):
     assert e.check_count_types_standard(election, jurisdiction, dbname=dbname)

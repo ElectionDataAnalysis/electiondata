@@ -1,0 +1,123 @@
+Name	ElectionDistrict
+NM House District 1	New Mexico;NM House District 1
+NM House District 2	New Mexico;NM House District 2
+NM House District 3	New Mexico;NM House District 3
+NM House District 4	New Mexico;NM House District 4
+NM House District 5	New Mexico;NM House District 5
+NM House District 6	New Mexico;NM House District 6
+NM House District 7	New Mexico;NM House District 7
+NM House District 8	New Mexico;NM House District 8
+NM House District 9	New Mexico;NM House District 9
+NM House District 10	New Mexico;NM House District 10
+NM House District 11	New Mexico;NM House District 11
+NM House District 12	New Mexico;NM House District 12
+NM House District 13	New Mexico;NM House District 13
+NM House District 14	New Mexico;NM House District 14
+NM House District 15	New Mexico;NM House District 15
+NM House District 16	New Mexico;NM House District 16
+NM House District 17	New Mexico;NM House District 17
+NM House District 18	New Mexico;NM House District 18
+NM House District 19	New Mexico;NM House District 19
+NM House District 20	New Mexico;NM House District 20
+NM House District 21	New Mexico;NM House District 21
+NM House District 22	New Mexico;NM House District 22
+NM House District 23	New Mexico;NM House District 23
+NM House District 24	New Mexico;NM House District 24
+NM House District 25	New Mexico;NM House District 25
+NM House District 26	New Mexico;NM House District 26
+NM House District 27	New Mexico;NM House District 27
+NM House District 28	New Mexico;NM House District 28
+NM House District 29	New Mexico;NM House District 29
+NM House District 30	New Mexico;NM House District 30
+NM House District 31	New Mexico;NM House District 31
+NM House District 32	New Mexico;NM House District 32
+NM House District 33	New Mexico;NM House District 33
+NM House District 34	New Mexico;NM House District 34
+NM House District 35	New Mexico;NM House District 35
+NM House District 36	New Mexico;NM House District 36
+NM House District 37	New Mexico;NM House District 37
+NM House District 38	New Mexico;NM House District 38
+NM House District 39	New Mexico;NM House District 39
+NM House District 40	New Mexico;NM House District 40
+NM House District 41	New Mexico;NM House District 41
+NM House District 42	New Mexico;NM House District 42
+NM House District 43	New Mexico;NM House District 43
+NM House District 44	New Mexico;NM House District 44
+NM House District 45	New Mexico;NM House District 45
+NM House District 46	New Mexico;NM House District 46
+NM House District 47	New Mexico;NM House District 47
+NM House District 48	New Mexico;NM House District 48
+NM House District 49	New Mexico;NM House District 49
+NM House District 50	New Mexico;NM House District 50
+NM House District 51	New Mexico;NM House District 51
+NM House District 52	New Mexico;NM House District 52
+NM House District 53	New Mexico;NM House District 53
+NM House District 54	New Mexico;NM House District 54
+NM House District 55	New Mexico;NM House District 55
+NM House District 56	New Mexico;NM House District 56
+NM House District 57	New Mexico;NM House District 57
+NM House District 58	New Mexico;NM House District 58
+NM House District 59	New Mexico;NM House District 59
+NM House District 60	New Mexico;NM House District 60
+NM House District 61	New Mexico;NM House District 61
+NM House District 62	New Mexico;NM House District 62
+NM House District 63	New Mexico;NM House District 63
+NM House District 64	New Mexico;NM House District 64
+NM House District 65	New Mexico;NM House District 65
+NM House District 66	New Mexico;NM House District 66
+NM House District 67	New Mexico;NM House District 67
+NM House District 68	New Mexico;NM House District 68
+NM House District 69	New Mexico;NM House District 69
+NM House District 70	New Mexico;NM House District 70
+NM Senate District 1	New Mexico;NM Senate District 1
+NM Senate District 2	New Mexico;NM Senate District 2
+NM Senate District 3	New Mexico;NM Senate District 3
+NM Senate District 4	New Mexico;NM Senate District 4
+NM Senate District 5	New Mexico;NM Senate District 5
+NM Senate District 6	New Mexico;NM Senate District 6
+NM Senate District 7	New Mexico;NM Senate District 7
+NM Senate District 8	New Mexico;NM Senate District 8
+NM Senate District 9	New Mexico;NM Senate District 9
+NM Senate District 10	New Mexico;NM Senate District 10
+NM Senate District 11	New Mexico;NM Senate District 11
+NM Senate District 12	New Mexico;NM Senate District 12
+NM Senate District 13	New Mexico;NM Senate District 13
+NM Senate District 14	New Mexico;NM Senate District 14
+NM Senate District 15	New Mexico;NM Senate District 15
+NM Senate District 16	New Mexico;NM Senate District 16
+NM Senate District 17	New Mexico;NM Senate District 17
+NM Senate District 18	New Mexico;NM Senate District 18
+NM Senate District 19	New Mexico;NM Senate District 19
+NM Senate District 20	New Mexico;NM Senate District 20
+NM Senate District 21	New Mexico;NM Senate District 21
+NM Senate District 22	New Mexico;NM Senate District 22
+NM Senate District 23	New Mexico;NM Senate District 23
+NM Senate District 24	New Mexico;NM Senate District 24
+NM Senate District 25	New Mexico;NM Senate District 25
+NM Senate District 26	New Mexico;NM Senate District 26
+NM Senate District 27	New Mexico;NM Senate District 27
+NM Senate District 28	New Mexico;NM Senate District 28
+NM Senate District 29	New Mexico;NM Senate District 29
+NM Senate District 30	New Mexico;NM Senate District 30
+NM Senate District 31	New Mexico;NM Senate District 31
+NM Senate District 32	New Mexico;NM Senate District 32
+NM Senate District 33	New Mexico;NM Senate District 33
+NM Senate District 34	New Mexico;NM Senate District 34
+NM Senate District 35	New Mexico;NM Senate District 35
+NM Senate District 36	New Mexico;NM Senate District 36
+NM Senate District 37	New Mexico;NM Senate District 37
+NM Senate District 38	New Mexico;NM Senate District 38
+NM Senate District 39	New Mexico;NM Senate District 39
+NM Senate District 40	New Mexico;NM Senate District 40
+NM Senate District 41	New Mexico;NM Senate District 41
+NM Senate District 42	New Mexico;NM Senate District 42
+US House NM District 1	New Mexico;US House NM District 1
+US House NM District 2	New Mexico;US House NM District 2
+US House NM District 3	New Mexico;US House NM District 3
+US President (NM)	New Mexico
+NM Governor	New Mexico
+US Senate NM	New Mexico
+NM Attorney General	New Mexico
+NM Lieutenant Governor	New Mexico
+NM Treasurer	New Mexico
+NM Secretary of State	New Mexico
