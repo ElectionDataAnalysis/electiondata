@@ -1,0 +1,857 @@
+cdf_element	cdf_internal_name	raw_identifier_value
+CandidateContest	NM House District 1	NM House District 1
+CandidateContest	NM House District 2	NM House District 2
+CandidateContest	NM House District 3	NM House District 3
+CandidateContest	NM House District 4	NM House District 4
+CandidateContest	NM House District 5	NM House District 5
+CandidateContest	NM House District 6	NM House District 6
+CandidateContest	NM House District 7	NM House District 7
+CandidateContest	NM House District 8	NM House District 8
+CandidateContest	NM House District 9	NM House District 9
+CandidateContest	NM House District 10	NM House District 10
+CandidateContest	NM House District 11	NM House District 11
+CandidateContest	NM House District 12	NM House District 12
+CandidateContest	NM House District 13	NM House District 13
+CandidateContest	NM House District 14	NM House District 14
+CandidateContest	NM House District 15	NM House District 15
+CandidateContest	NM House District 16	NM House District 16
+CandidateContest	NM House District 17	NM House District 17
+CandidateContest	NM House District 18	NM House District 18
+CandidateContest	NM House District 19	NM House District 19
+CandidateContest	NM House District 20	NM House District 20
+CandidateContest	NM House District 21	NM House District 21
+CandidateContest	NM House District 22	NM House District 22
+CandidateContest	NM House District 23	NM House District 23
+CandidateContest	NM House District 24	NM House District 24
+CandidateContest	NM House District 25	NM House District 25
+CandidateContest	NM House District 26	NM House District 26
+CandidateContest	NM House District 27	NM House District 27
+CandidateContest	NM House District 28	NM House District 28
+CandidateContest	NM House District 29	NM House District 29
+CandidateContest	NM House District 30	NM House District 30
+CandidateContest	NM House District 31	NM House District 31
+CandidateContest	NM House District 32	NM House District 32
+CandidateContest	NM House District 33	NM House District 33
+CandidateContest	NM House District 34	NM House District 34
+CandidateContest	NM House District 35	NM House District 35
+CandidateContest	NM House District 36	NM House District 36
+CandidateContest	NM House District 37	NM House District 37
+CandidateContest	NM House District 38	NM House District 38
+CandidateContest	NM House District 39	NM House District 39
+CandidateContest	NM House District 40	NM House District 40
+CandidateContest	NM House District 41	NM House District 41
+CandidateContest	NM House District 42	NM House District 42
+CandidateContest	NM House District 43	NM House District 43
+CandidateContest	NM House District 44	NM House District 44
+CandidateContest	NM House District 45	NM House District 45
+CandidateContest	NM House District 46	NM House District 46
+CandidateContest	NM House District 47	NM House District 47
+CandidateContest	NM House District 48	NM House District 48
+CandidateContest	NM House District 49	NM House District 49
+CandidateContest	NM House District 50	NM House District 50
+CandidateContest	NM House District 51	NM House District 51
+CandidateContest	NM House District 52	NM House District 52
+CandidateContest	NM House District 53	NM House District 53
+CandidateContest	NM House District 54	NM House District 54
+CandidateContest	NM House District 55	NM House District 55
+CandidateContest	NM House District 56	NM House District 56
+CandidateContest	NM House District 57	NM House District 57
+CandidateContest	NM House District 58	NM House District 58
+CandidateContest	NM House District 59	NM House District 59
+CandidateContest	NM House District 60	NM House District 60
+CandidateContest	NM House District 61	NM House District 61
+CandidateContest	NM House District 62	NM House District 62
+CandidateContest	NM House District 63	NM House District 63
+CandidateContest	NM House District 64	NM House District 64
+CandidateContest	NM House District 65	NM House District 65
+CandidateContest	NM House District 66	NM House District 66
+CandidateContest	NM House District 67	NM House District 67
+CandidateContest	NM House District 68	NM House District 68
+CandidateContest	NM House District 69	NM House District 69
+CandidateContest	NM House District 70	NM House District 70
+CandidateContest	NM Senate District 1	NM Senate District 1
+CandidateContest	NM Senate District 2	NM Senate District 2
+CandidateContest	NM Senate District 3	NM Senate District 3
+CandidateContest	NM Senate District 4	NM Senate District 4
+CandidateContest	NM Senate District 5	NM Senate District 5
+CandidateContest	NM Senate District 6	NM Senate District 6
+CandidateContest	NM Senate District 7	NM Senate District 7
+CandidateContest	NM Senate District 8	NM Senate District 8
+CandidateContest	NM Senate District 9	NM Senate District 9
+CandidateContest	NM Senate District 10	NM Senate District 10
+CandidateContest	NM Senate District 11	NM Senate District 11
+CandidateContest	NM Senate District 12	NM Senate District 12
+CandidateContest	NM Senate District 13	NM Senate District 13
+CandidateContest	NM Senate District 14	NM Senate District 14
+CandidateContest	NM Senate District 15	NM Senate District 15
+CandidateContest	NM Senate District 16	NM Senate District 16
+CandidateContest	NM Senate District 17	NM Senate District 17
+CandidateContest	NM Senate District 18	NM Senate District 18
+CandidateContest	NM Senate District 19	NM Senate District 19
+CandidateContest	NM Senate District 20	NM Senate District 20
+CandidateContest	NM Senate District 21	NM Senate District 21
+CandidateContest	NM Senate District 22	NM Senate District 22
+CandidateContest	NM Senate District 23	NM Senate District 23
+CandidateContest	NM Senate District 24	NM Senate District 24
+CandidateContest	NM Senate District 25	NM Senate District 25
+CandidateContest	NM Senate District 26	NM Senate District 26
+CandidateContest	NM Senate District 27	NM Senate District 27
+CandidateContest	NM Senate District 28	NM Senate District 28
+CandidateContest	NM Senate District 29	NM Senate District 29
+CandidateContest	NM Senate District 30	NM Senate District 30
+CandidateContest	NM Senate District 31	NM Senate District 31
+CandidateContest	NM Senate District 32	NM Senate District 32
+CandidateContest	NM Senate District 33	NM Senate District 33
+CandidateContest	NM Senate District 34	NM Senate District 34
+CandidateContest	NM Senate District 35	NM Senate District 35
+CandidateContest	NM Senate District 36	NM Senate District 36
+CandidateContest	NM Senate District 37	NM Senate District 37
+CandidateContest	NM Senate District 38	NM Senate District 38
+CandidateContest	NM Senate District 39	NM Senate District 39
+CandidateContest	NM Senate District 40	NM Senate District 40
+CandidateContest	NM Senate District 41	NM Senate District 41
+CandidateContest	NM Senate District 42	NM Senate District 42
+CandidateContest	US House NM District 1	United States Representative 1
+CandidateContest	US House NM District 2	United States Representative 2
+CandidateContest	US House NM District 3	United States Representative 3
+CandidateContest	US President (NM)	President and Vice President of the United States
+CandidateContest	NM Governor	NM Governor
+CandidateContest	US Senate NM	United States Senator
+CandidateContest	NM Attorney General	NM Attorney General
+CandidateContest	NM Lieutenant Governor	NM Lieutenant Governor
+CandidateContest	NM Treasurer	NM Treasurer
+CandidateContest	NM Secretary of State	NM Secretary of State
+Election	2020 General	2020 General
+Election	2020 Primary	2020 Primary
+Election	2018 General	2018 General
+Election	2016 General	2016 General
+Party	Democratic Party	Democratic Party
+Party	Republican Party	Republican Party
+Party	Green Party	Green Party
+Party	Libertarian Party	Libertarian Party
+ReportingUnit	New Mexico;NM House District 1	New Mexico;NM House District 1
+ReportingUnit	New Mexico;NM House District 2	New Mexico;NM House District 2
+ReportingUnit	New Mexico;NM House District 3	New Mexico;NM House District 3
+ReportingUnit	New Mexico;NM House District 4	New Mexico;NM House District 4
+ReportingUnit	New Mexico;NM House District 5	New Mexico;NM House District 5
+ReportingUnit	New Mexico;NM House District 6	New Mexico;NM House District 6
+ReportingUnit	New Mexico;NM House District 7	New Mexico;NM House District 7
+ReportingUnit	New Mexico;NM House District 8	New Mexico;NM House District 8
+ReportingUnit	New Mexico;NM House District 9	New Mexico;NM House District 9
+ReportingUnit	New Mexico;NM House District 10	New Mexico;NM House District 10
+ReportingUnit	New Mexico;NM House District 11	New Mexico;NM House District 11
+ReportingUnit	New Mexico;NM House District 12	New Mexico;NM House District 12
+ReportingUnit	New Mexico;NM House District 13	New Mexico;NM House District 13
+ReportingUnit	New Mexico;NM House District 14	New Mexico;NM House District 14
+ReportingUnit	New Mexico;NM House District 15	New Mexico;NM House District 15
+ReportingUnit	New Mexico;NM House District 16	New Mexico;NM House District 16
+ReportingUnit	New Mexico;NM House District 17	New Mexico;NM House District 17
+ReportingUnit	New Mexico;NM House District 18	New Mexico;NM House District 18
+ReportingUnit	New Mexico;NM House District 19	New Mexico;NM House District 19
+ReportingUnit	New Mexico;NM House District 20	New Mexico;NM House District 20
+ReportingUnit	New Mexico;NM House District 21	New Mexico;NM House District 21
+ReportingUnit	New Mexico;NM House District 22	New Mexico;NM House District 22
+ReportingUnit	New Mexico;NM House District 23	New Mexico;NM House District 23
+ReportingUnit	New Mexico;NM House District 24	New Mexico;NM House District 24
+ReportingUnit	New Mexico;NM House District 25	New Mexico;NM House District 25
+ReportingUnit	New Mexico;NM House District 26	New Mexico;NM House District 26
+ReportingUnit	New Mexico;NM House District 27	New Mexico;NM House District 27
+ReportingUnit	New Mexico;NM House District 28	New Mexico;NM House District 28
+ReportingUnit	New Mexico;NM House District 29	New Mexico;NM House District 29
+ReportingUnit	New Mexico;NM House District 30	New Mexico;NM House District 30
+ReportingUnit	New Mexico;NM House District 31	New Mexico;NM House District 31
+ReportingUnit	New Mexico;NM House District 32	New Mexico;NM House District 32
+ReportingUnit	New Mexico;NM House District 33	New Mexico;NM House District 33
+ReportingUnit	New Mexico;NM House District 34	New Mexico;NM House District 34
+ReportingUnit	New Mexico;NM House District 35	New Mexico;NM House District 35
+ReportingUnit	New Mexico;NM House District 36	New Mexico;NM House District 36
+ReportingUnit	New Mexico;NM House District 37	New Mexico;NM House District 37
+ReportingUnit	New Mexico;NM House District 38	New Mexico;NM House District 38
+ReportingUnit	New Mexico;NM House District 39	New Mexico;NM House District 39
+ReportingUnit	New Mexico;NM House District 40	New Mexico;NM House District 40
+ReportingUnit	New Mexico;NM House District 41	New Mexico;NM House District 41
+ReportingUnit	New Mexico;NM House District 42	New Mexico;NM House District 42
+ReportingUnit	New Mexico;NM House District 43	New Mexico;NM House District 43
+ReportingUnit	New Mexico;NM House District 44	New Mexico;NM House District 44
+ReportingUnit	New Mexico;NM House District 45	New Mexico;NM House District 45
+ReportingUnit	New Mexico;NM House District 46	New Mexico;NM House District 46
+ReportingUnit	New Mexico;NM House District 47	New Mexico;NM House District 47
+ReportingUnit	New Mexico;NM House District 48	New Mexico;NM House District 48
+ReportingUnit	New Mexico;NM House District 49	New Mexico;NM House District 49
+ReportingUnit	New Mexico;NM House District 50	New Mexico;NM House District 50
+ReportingUnit	New Mexico;NM House District 51	New Mexico;NM House District 51
+ReportingUnit	New Mexico;NM House District 52	New Mexico;NM House District 52
+ReportingUnit	New Mexico;NM House District 53	New Mexico;NM House District 53
+ReportingUnit	New Mexico;NM House District 54	New Mexico;NM House District 54
+ReportingUnit	New Mexico;NM House District 55	New Mexico;NM House District 55
+ReportingUnit	New Mexico;NM House District 56	New Mexico;NM House District 56
+ReportingUnit	New Mexico;NM House District 57	New Mexico;NM House District 57
+ReportingUnit	New Mexico;NM House District 58	New Mexico;NM House District 58
+ReportingUnit	New Mexico;NM House District 59	New Mexico;NM House District 59
+ReportingUnit	New Mexico;NM House District 60	New Mexico;NM House District 60
+ReportingUnit	New Mexico;NM House District 61	New Mexico;NM House District 61
+ReportingUnit	New Mexico;NM House District 62	New Mexico;NM House District 62
+ReportingUnit	New Mexico;NM House District 63	New Mexico;NM House District 63
+ReportingUnit	New Mexico;NM House District 64	New Mexico;NM House District 64
+ReportingUnit	New Mexico;NM House District 65	New Mexico;NM House District 65
+ReportingUnit	New Mexico;NM House District 66	New Mexico;NM House District 66
+ReportingUnit	New Mexico;NM House District 67	New Mexico;NM House District 67
+ReportingUnit	New Mexico;NM House District 68	New Mexico;NM House District 68
+ReportingUnit	New Mexico;NM House District 69	New Mexico;NM House District 69
+ReportingUnit	New Mexico;NM House District 70	New Mexico;NM House District 70
+ReportingUnit	New Mexico;NM Senate District 1	New Mexico;NM Senate District 1
+ReportingUnit	New Mexico;NM Senate District 2	New Mexico;NM Senate District 2
+ReportingUnit	New Mexico;NM Senate District 3	New Mexico;NM Senate District 3
+ReportingUnit	New Mexico;NM Senate District 4	New Mexico;NM Senate District 4
+ReportingUnit	New Mexico;NM Senate District 5	New Mexico;NM Senate District 5
+ReportingUnit	New Mexico;NM Senate District 6	New Mexico;NM Senate District 6
+ReportingUnit	New Mexico;NM Senate District 7	New Mexico;NM Senate District 7
+ReportingUnit	New Mexico;NM Senate District 8	New Mexico;NM Senate District 8
+ReportingUnit	New Mexico;NM Senate District 9	New Mexico;NM Senate District 9
+ReportingUnit	New Mexico;NM Senate District 10	New Mexico;NM Senate District 10
+ReportingUnit	New Mexico;NM Senate District 11	New Mexico;NM Senate District 11
+ReportingUnit	New Mexico;NM Senate District 12	New Mexico;NM Senate District 12
+ReportingUnit	New Mexico;NM Senate District 13	New Mexico;NM Senate District 13
+ReportingUnit	New Mexico;NM Senate District 14	New Mexico;NM Senate District 14
+ReportingUnit	New Mexico;NM Senate District 15	New Mexico;NM Senate District 15
+ReportingUnit	New Mexico;NM Senate District 16	New Mexico;NM Senate District 16
+ReportingUnit	New Mexico;NM Senate District 17	New Mexico;NM Senate District 17
+ReportingUnit	New Mexico;NM Senate District 18	New Mexico;NM Senate District 18
+ReportingUnit	New Mexico;NM Senate District 19	New Mexico;NM Senate District 19
+ReportingUnit	New Mexico;NM Senate District 20	New Mexico;NM Senate District 20
+ReportingUnit	New Mexico;NM Senate District 21	New Mexico;NM Senate District 21
+ReportingUnit	New Mexico;NM Senate District 22	New Mexico;NM Senate District 22
+ReportingUnit	New Mexico;NM Senate District 23	New Mexico;NM Senate District 23
+ReportingUnit	New Mexico;NM Senate District 24	New Mexico;NM Senate District 24
+ReportingUnit	New Mexico;NM Senate District 25	New Mexico;NM Senate District 25
+ReportingUnit	New Mexico;NM Senate District 26	New Mexico;NM Senate District 26
+ReportingUnit	New Mexico;NM Senate District 27	New Mexico;NM Senate District 27
+ReportingUnit	New Mexico;NM Senate District 28	New Mexico;NM Senate District 28
+ReportingUnit	New Mexico;NM Senate District 29	New Mexico;NM Senate District 29
+ReportingUnit	New Mexico;NM Senate District 30	New Mexico;NM Senate District 30
+ReportingUnit	New Mexico;NM Senate District 31	New Mexico;NM Senate District 31
+ReportingUnit	New Mexico;NM Senate District 32	New Mexico;NM Senate District 32
+ReportingUnit	New Mexico;NM Senate District 33	New Mexico;NM Senate District 33
+ReportingUnit	New Mexico;NM Senate District 34	New Mexico;NM Senate District 34
+ReportingUnit	New Mexico;NM Senate District 35	New Mexico;NM Senate District 35
+ReportingUnit	New Mexico;NM Senate District 36	New Mexico;NM Senate District 36
+ReportingUnit	New Mexico;NM Senate District 37	New Mexico;NM Senate District 37
+ReportingUnit	New Mexico;NM Senate District 38	New Mexico;NM Senate District 38
+ReportingUnit	New Mexico;NM Senate District 39	New Mexico;NM Senate District 39
+ReportingUnit	New Mexico;NM Senate District 40	New Mexico;NM Senate District 40
+ReportingUnit	New Mexico;NM Senate District 41	New Mexico;NM Senate District 41
+ReportingUnit	New Mexico;NM Senate District 42	New Mexico;NM Senate District 42
+ReportingUnit	New Mexico;US House NM District 1	New Mexico;US House NM District 1
+ReportingUnit	New Mexico;US House NM District 2	New Mexico;US House NM District 2
+ReportingUnit	New Mexico;US House NM District 3	New Mexico;US House NM District 3
+ReportingUnit	New Mexico	New Mexico
+ReportingUnit	New Mexico;Bernalillo County	Bernalillo
+ReportingUnit	New Mexico;Catron County	Catron
+ReportingUnit	New Mexico;Chaves County	Chaves
+ReportingUnit	New Mexico;Cibola County	Cibola
+ReportingUnit	New Mexico;Colfax County	Colfax
+ReportingUnit	New Mexico;Curry County	Curry
+ReportingUnit	New Mexico;De Baca County	De Baca
+ReportingUnit	New Mexico;Dona Ana County	Dona Ana
+ReportingUnit	New Mexico;Eddy County	Eddy
+ReportingUnit	New Mexico;Grant County	Grant
+ReportingUnit	New Mexico;Guadalupe County	Guadalupe
+ReportingUnit	New Mexico;Harding County	Harding
+ReportingUnit	New Mexico;Hidalgo County	Hidalgo
+ReportingUnit	New Mexico;Lea County	Lea
+ReportingUnit	New Mexico;Lincoln County	Lincoln
+ReportingUnit	New Mexico;Los Alamos County	Los Alamos
+ReportingUnit	New Mexico;Luna County	Luna
+ReportingUnit	New Mexico;McKinley County	McKinley
+ReportingUnit	New Mexico;Mora County	Mora
+ReportingUnit	New Mexico;Otero County	Otero
+ReportingUnit	New Mexico;Quay County	Quay
+ReportingUnit	New Mexico;Rio Arriba County	Rio Arriba
+ReportingUnit	New Mexico;Roosevelt County	Roosevelt
+ReportingUnit	New Mexico;San Juan County	San Juan
+ReportingUnit	New Mexico;San Miguel County	San Miguel
+ReportingUnit	New Mexico;Sandoval County	Sandoval
+ReportingUnit	New Mexico;Santa Fe County	Santa Fe
+ReportingUnit	New Mexico;Sierra County	Sierra
+ReportingUnit	New Mexico;Socorro County	Socorro
+ReportingUnit	New Mexico;Taos County	Taos
+ReportingUnit	New Mexico;Torrance County	Torrance
+ReportingUnit	New Mexico;Union County	Union
+ReportingUnit	New Mexico;Valencia County	Valencia
+Candidate	Howie Hawkins	Howie Hawkins And Angela Nicole Walker
+Candidate	Jo Jorgensen	Jo Jorgensen And Jeremy 'Spike' Cohen
+Candidate	Joseph R Biden	Joseph R Biden And Kamala D Harris
+Candidate	Sheila 'Samm' Tittle	Sheila 'Samm' Tittle And David Carl Sandige
+Candidate	Donald J Trump	Donald J Trump And Mike Pence
+Candidate	Gloria La Riva	Gloria La Riva And Sunil Freeman
+Candidate	Jade Simmons	Jade Simmons
+Candidate	Bob Walsh	Bob Walsh
+Candidate	Mark V Ronchetti	Mark V Ronchetti
+Candidate	Ben R Lujan	Ben R Lujan
+Candidate	Deb Haaland	Deb Haaland
+Candidate	Michelle Garcia Holmes	Michelle Garcia Holmes
+Candidate	Yvette Herrell	Yvette Herrell
+Candidate	Xochitl Torres Small	Xochitl Torres Small
+Candidate	Steve Jones	Steve Jones
+Candidate	Alexis M Johnson	Alexis M Johnson
+Candidate	Teresa Leger Fernandez	Teresa Leger Fernandez
+Candidate	William E Sharer	William E Sharer
+Candidate	Steven P Neville	Steven P Neville
+Candidate	Arthur Pierce Allison	Arthur Pierce Allison
+Candidate	Shannon Dawn Pinto	Shannon Dawn Pinto
+Candidate	George K Munoz	George K Munoz
+Candidate	Angela R Olive	Angela R Olive
+Candidate	Lee G Weinland	Lee G Weinland
+Candidate	Leo Jaramillo	Leo Jaramillo
+Candidate	Diamantina Prado Storment	Diamantina Prado Storment
+Candidate	Roberto 'Bobby' Jesse Gonzales	Roberto 'Bobby' Jesse Gonzales
+Candidate	Pat Woods	Pat Woods
+Candidate	Pete Campos	Pete Campos
+Candidate	Melissa Kay Fryzel	Melissa Kay Fryzel
+Candidate	John Stahlman Clark	John Stahlman Clark
+Candidate	Brenda Grace Mc Kenna	Brenda Grace Mc Kenna
+Candidate	Katy M Duhigg	Katy M Duhigg
+Candidate	Candace Thompson Gould	Candace Thompson Gould
+Candidate	Marylinda A Price	Marylinda A Price
+Candidate	Linda M Lopez	Linda M Lopez
+Candidate	Lisa Meyer-Hagen	Lisa Meyer-Hagen
+Candidate	Gerald P Ortiz Y Pino	Gerald P Ortiz Y Pino
+Candidate	Michaela M Chavez	Michaela M Chavez
+Candidate	Bill B O'Neill	Bill B O'Neill
+Candidate	Frederick J Snoy	Frederick J Snoy
+Candidate	Mary Kay Ingham	Mary Kay Ingham
+Candidate	Michael Padilla	Michael Padilla
+Candidate	Daniel A Ivey-Soto	Daniel A Ivey-Soto
+Candidate	Sandra B Rausch	Sandra B Rausch
+Candidate	Chelsea Ann Flanders	Chelsea Ann Flanders
+Candidate	Antoinette Sedillo Lopez	Antoinette Sedillo Lopez
+Candidate	Rodney D Deskin	Rodney D Deskin
+Candidate	Mimi Stewart	Mimi Stewart
+Candidate	Ryan Alexandra Chavez	Ryan Alexandra Chavez
+Candidate	Michael S Cordova	Michael S Cordova
+Candidate	Bill Tallman	Bill Tallman
+Candidate	John Douglas Mc Divitt	John Douglas Mc Divitt
+Candidate	Claudia M Risner	Claudia M Risner
+Candidate	Gregg William Schmedes	Gregg William Schmedes
+Candidate	Martin E Hickey	Martin E Hickey
+Candidate	John C Morton	John C Morton
+Candidate	Athena Ann Christodoulou	Athena Ann Christodoulou
+Candidate	Mark David Moores	Mark David Moores
+Candidate	Susan E Aguayo	Susan E Aguayo
+Candidate	Benny Shendo	Benny Shendo
+Candidate	Sander Rue	Sander Rue
+Candidate	Harold James Pope	Harold James Pope
+Candidate	Leighton Craig Cornish	Leighton Craig Cornish
+Candidate	Scott E Milenski	Scott E Milenski
+Candidate	Nancy Rodriguez	Nancy Rodriguez
+Candidate	Ricardo Arturo Vargas	Ricardo Arturo Vargas
+Candidate	Peter Wirth	Peter Wirth
+Candidate	Jacob R Candelaria	Jacob R Candelaria
+Candidate	Manuel Lardizabal	Manuel Lardizabal
+Candidate	Stuart Ingle	Stuart Ingle
+Candidate	Siah Correa Hemphill	Siah Correa Hemphill
+Candidate	James S Williams	James S Williams
+Candidate	Gregory A Baca	Gregory A Baca
+Candidate	Paul A Baca	Paul A Baca
+Candidate	Pamela M Cordova	Pamela M Cordova
+Candidate	Joshua A Sanchez	Joshua A Sanchez
+Candidate	Joseph Cervantes	Joseph Cervantes
+Candidate	John Thomas Roberts	John Thomas Roberts
+Candidate	Cliff R Pirtle	Cliff R Pirtle
+Candidate	William F Burt	William F Burt
+Candidate	Denise A Lang-Browne	Denise A Lang-Browne
+Candidate	Darren Murray Kugler	Darren Murray Kugler
+Candidate	Ron Griggs	Ron Griggs
+Candidate	Crystal R Diamond	Crystal R Diamond
+Candidate	Neomi O Martinez-Parra	Neomi O Martinez-Parra
+Candidate	Kimberly A Skaggs	Kimberly A Skaggs
+Candidate	Jeff Steinborn	Jeff Steinborn
+Candidate	David W Gallus	David W Gallus
+Candidate	William P Soules	William P Soules
+Candidate	Carrie Hamblen	Carrie Hamblen
+Candidate	Charles Richard Wendler	Charles Richard Wendler
+Candidate	Joseph C Tiano	Joseph C Tiano
+Candidate	Elizabeth Liz Stefanics	Elizabeth Liz Stefanics
+Candidate	Craig W Brandt	Craig W Brandt
+Candidate	David M Gallegos	David M Gallegos
+Candidate	Gay G Kernan	Gay G Kernan
+Candidate	Rodney D Montoya	Rodney D Montoya
+Candidate	James Rj Strickler	James Rj Strickler
+Candidate	T Ryan Lane	T Ryan Lane
+Candidate	P Mark Duncan	P Mark Duncan
+Candidate	Anthony Allison	Anthony Allison
+Candidate	Doreen Wonda Johnson	Doreen Wonda Johnson
+Candidate	Karen Vanessa Chavez	Karen Vanessa Chavez
+Candidate	Eliseo L Alcon	Eliseo L Alcon
+Candidate	Kelly K Fajardo	Kelly K Fajardo
+Candidate	Santos Griego	Santos Griego
+Candidate	Paul Matthew Kinzelman	Paul Matthew Kinzelman
+Candidate	Alonzo Baldonado	Alonzo Baldonado
+Candidate	Patricia 'Patty' A Lundstrom	Patricia 'Patty' A Lundstrom
+Candidate	Dinah Glenda Vargas	Dinah Glenda Vargas
+Candidate	G Andres Romero	G Andres Romero
+Candidate	Javier I Martinez	Javier I Martinez
+Candidate	Adrian Anthony Trujillo	Adrian Anthony Trujillo
+Candidate	Brittney Aileene Barreras	Brittney Aileene Barreras
+Candidate	Art De La Cruz	Art De La Cruz
+Candidate	David Grijalva	David Grijalva
+Candidate	Kayla Renee Marshall	Kayla Renee Marshall
+Candidate	Patricia A Roybal Caballero	Patricia A Roybal Caballero
+Candidate	Miguel P Garcia	Miguel P Garcia
+Candidate	Dayan 'Day' M Hochman-Vigil	Dayan 'Day' M Hochman-Vigil
+Candidate	Ranota Q Banks	Ranota Q Banks
+Candidate	Ali Ennenga	Ali Ennenga
+Candidate	Antonio Moe Maestas	Antonio Moe Maestas
+Candidate	Antoinette Bernice Taft	Antoinette Bernice Taft
+Candidate	Kimberly Ann Kaehr-Macmillan	Kimberly Ann Kaehr-Macmillan
+Candidate	Scott Goodman	Scott Goodman
+Candidate	Deborah A Armstrong	Deborah A Armstrong
+Candidate	Gail Chasey	Gail Chasey
+Candidate	Mark Austin Curtis	Mark Austin Curtis
+Candidate	Stephen J Cecco	Stephen J Cecco
+Candidate	Sheryl M Williams Stapleton	Sheryl M Williams Stapleton
+Candidate	Michael Eugene Hendricks	Michael Eugene Hendricks
+Candidate	Meredith A Dixon	Meredith A Dixon
+Candidate	Paul Ryan Mckenney	Paul Ryan Mckenney
+Candidate	Debra Marie Sarinana	Debra Marie Sarinana
+Candidate	Jessica P Velasquez	Jessica P Velasquez
+Candidate	Stefani Lord	Stefani Lord
+Candidate	Ellis C Mcmath	Ellis C Mcmath
+Candidate	Daymon B Ely	Daymon B Ely
+Candidate	Elizabeth L Thomson	Elizabeth L Thomson
+Candidate	Amy L Smith	Amy L Smith
+Candidate	Stephen A Verchinski	Stephen A Verchinski
+Candidate	Sarah Rich-Jackson	Sarah Rich-Jackson
+Candidate	Christine Trujillo	Christine Trujillo
+Candidate	Jocelynn Renee Paden	Jocelynn Renee Paden
+Candidate	Georgene Louis	Georgene Louis
+Candidate	Marian Matthews	Marian Matthews
+Candidate	Robert S Godshall	Robert S Godshall
+Candidate	Jason Morris Barker	Jason Morris Barker
+Candidate	Robert Jason Vaillancourt	Robert Jason Vaillancourt
+Candidate	Thomas Ray Stull	Thomas Ray Stull
+Candidate	Melanie Ann Stansbury	Melanie Ann Stansbury
+Candidate	Joy I Garratt	Joy I Garratt
+Candidate	Adelious De Stith	Adelious De Stith
+Candidate	John L Jones	John L Jones
+Candidate	Natalie R Figueroa	Natalie R Figueroa
+Candidate	Randall K Sobien	Randall K Sobien
+Candidate	William R Rehm	William R Rehm
+Candidate	Julie Ford Brenning	Julie Ford Brenning
+Candidate	Steven Ray Penhall	Steven Ray Penhall
+Candidate	J Scott Chandler	J Scott Chandler
+Candidate	Candie G Sweetser	Candie G Sweetser
+Candidate	Micaela Lara Cadena	Micaela Lara Cadena
+Candidate	Beth E Miller	Beth E Miller
+Candidate	Dawn E Ladd	Dawn E Ladd
+Candidate	Raymundo Lara	Raymundo Lara
+Candidate	Angelica Rubio	Angelica Rubio
+Candidate	Richelle A Ponder	Richelle A Ponder
+Candidate	Brandi L Polanco	Brandi L Polanco
+Candidate	Nathan P Small	Nathan P Small
+Candidate	Joanne J Ferrary	Joanne J Ferrary
+Candidate	Isabella Solis	Isabella Solis
+Candidate	William Parrish Kinney	William Parrish Kinney
+Candidate	Rebecca L Dow	Rebecca L Dow
+Candidate	Karen C Whitlock	Karen C Whitlock
+Candidate	Rodolpho S Martinez	Rodolpho S Martinez
+Candidate	Luis M Terrazas	Luis M Terrazas
+Candidate	Roger Evan Montoya	Roger Evan Montoya
+Candidate	Justin J Salazar-Torrez	Justin J Salazar-Torrez
+Candidate	Susan K Herrera	Susan K Herrera
+Candidate	Linda H Calhoun	Linda H Calhoun
+Candidate	Kristina Ortez	Kristina Ortez
+Candidate	Christine Chandler	Christine Chandler
+Candidate	David E Hampton	David E Hampton
+Candidate	Gary J Tripp	Gary J Tripp
+Candidate	Jeremy B Myers	Jeremy B Myers
+Candidate	Jane E Powdrell-Culbert	Jane E Powdrell-Culbert
+Candidate	Helen M Milenski	Helen M Milenski
+Candidate	Linda Michelle Serrato	Linda Michelle Serrato
+Candidate	Jay C Groseclose	Jay C Groseclose
+Candidate	Andrea Romero	Andrea Romero
+Candidate	Raye G Byford	Raye G Byford
+Candidate	Brian F Egolf	Brian F Egolf
+Candidate	Glen D Berlin	Glen D Berlin
+Candidate	Linda M Trujillo	Linda M Trujillo
+Candidate	Tara L Lujan	Tara L Lujan
+Candidate	Gail Missy Armstrong	Gail Missy Armstrong
+Candidate	Matthew Mcqueen	Matthew Mcqueen
+Candidate	Jerry D Gage	Jerry D Gage
+Candidate	Christina L Estrada	Christina L Estrada
+Candidate	Rachel A Black	Rachel A Black
+Candidate	Jeff Swanson	Jeff Swanson
+Candidate	John Foreman	John Foreman
+Candidate	Doreen Yvonne Gallegos	Doreen Yvonne Gallegos
+Candidate	Willie D Madrid	Willie D Madrid
+Candidate	Ricky L Little	Ricky L Little
+Candidate	James G Townsend	James G Townsend
+Candidate	Cathrynn N Brown	Cathrynn N Brown
+Candidate	Laura L Childress	Laura L Childress
+Candidate	Zach J Cook	Zach J Cook
+Candidate	Billie Ann Helean	Billie Ann Helean
+Candidate	Jason Carl Harper	Jason Carl Harper
+Candidate	Candy Spence Ezzell	Candy Spence Ezzell
+Candidate	Kimble Lee Kearns	Kimble Lee Kearns
+Candidate	Greg Nibert	Greg Nibert
+Candidate	Tim D Lewis	Tim D Lewis
+Candidate	Joshua Nathaniel Hernandez	Joshua Nathaniel Hernandez
+Candidate	Randall T Pettigrew	Randall T Pettigrew
+Candidate	Larry R Scott	Larry R Scott
+Candidate	Randal W Brown	Randal W Brown
+Candidate	Martin Ruben Zamora	Martin Ruben Zamora
+Candidate	Randal S Crowder	Randal S Crowder
+Candidate	Derrick J Lente	Derrick J Lente
+Candidate	Phillip D Salazar	Phillip D Salazar
+Candidate	Phelps Anderson	Phelps Anderson
+Candidate	Jackey O Chatfield	Jackey O Chatfield
+Candidate	Giovanni Coppola	Giovanni Coppola
+Candidate	Karen C Bash	Karen C Bash
+Candidate	Harry Garcia	Harry Garcia
+Candidate	Roy Randall Ryan	Roy Randall Ryan
+Candidate	Ambrose M Castellano	Ambrose M Castellano
+Candidate	Nathan M Dial	Nathan M Dial
+Candidate	Ned S Fuller	Ned S Fuller
+Candidate	Shannon Bacon	Shannon Bacon
+Candidate	Kerry J Morris	Kerry J Morris
+Candidate	David K Thomson	David K Thomson
+Candidate	Barbara V Johnson	Barbara V Johnson
+Candidate	Zach Ives	Zach Ives
+Candidate	Stephen P Curtis	Stephen P Curtis
+Candidate	Shammara H Henderson	Shammara H Henderson
+Candidate	Gertrude Lee	Gertrude Lee
+Candidate	Thomas C Montoya	Thomas C Montoya
+Candidate	Jane B Yohalem	Jane B Yohalem
+Candidate	Cynthia B Hall	Cynthia B Hall
+Candidate	Janice E Arnold-Jones	Janice E Arnold-Jones
+Candidate	Joseph M Maestas	Joseph M Maestas
+Candidate	Christopher B Luchini	Christopher B Luchini
+Candidate	Melissa D Armijo	Melissa D Armijo
+Candidate	Laura Burrows	Laura Burrows
+Candidate	Rebekka Kay Burt	Rebekka Kay Burt
+Candidate	Michael M Taylor	Michael M Taylor
+Candidate	K T Manis	K T Manis
+Candidate	Krik Myers	Krik Myers
+Candidate	Trish Ruiz	Trish Ruiz
+Candidate	Steven J Carrillo	Steven J Carrillo
+Candidate	Santa Fe SHANNON BRODERICK	Santa Fe SHANNON BRODERICK
+Candidate	Santa Fe BRYAN PAUL	Santa Fe BRYAN PAUL
+Candidate	Santa Fe KATHLEEN MCGARRY	Santa Fe KATHLEEN MCGARRY
+Candidate	Bernalillo DANIEL E	Bernalillo DANIEL E
+Candidate	Bernalillo LISA CHAVEZ	Bernalillo LISA CHAVEZ
+Candidate	Bernalillo COURTNEY BRYN	Bernalillo COURTNEY BRYN
+Candidate	Bernalillo DANIEL J	Bernalillo DANIEL J
+Candidate	Bernalillo ERIN B	Bernalillo ERIN B
+Candidate	Bernalillo AMBER LOUISEE	Bernalillo AMBER LOUISEE
+Candidate	Bernalillo JOSHUA A	Bernalillo JOSHUA A
+Candidate	Bernalillo CLARA M	Bernalillo CLARA M
+Candidate	Bernalillo LUCY BOYADJIAN	Bernalillo LUCY BOYADJIAN
+Candidate	Dona Ana RICHARD M	Dona Ana RICHARD M
+Candidate	Chaves THOMAS E	Chaves THOMAS E
+Candidate	Chaves JARED GARNER	Chaves JARED GARNER
+Candidate	Grant JIM	Grant JIM
+Candidate	Grant WILLIAM J	Grant WILLIAM J
+Candidate	Taos MELISSA A	Taos MELISSA A
+Candidate	Taos JEFF	Taos JEFF
+Candidate	San Juan CURTIS R	San Juan CURTIS R
+Candidate	McKinley R DAVID	McKinley R DAVID
+Candidate	Lincoln JOHN	Lincoln JOHN
+Candidate	Cibola AMANDA	Cibola AMANDA
+Candidate	Sandoval JAMES A	Sandoval JAMES A
+Candidate	Sandoval CHRIS G	Sandoval CHRIS G
+Candidate	Mary V Carmack-Altwies	Mary V Carmack-Altwies
+Candidate	Raul Torrez	Raul Torrez
+Candidate	Gerald Milton Byers	Gerald Milton Byers
+Candidate	Thomas A Clayton	Thomas A Clayton
+Candidate	Dianna L Luce	Dianna L Luce
+Candidate	Michael R Renteria	Michael R Renteria
+Candidate	Clint Wellborn	Clint Wellborn
+Candidate	Marcus Joseph Montoya	Marcus Joseph Montoya
+Candidate	Andrea R Reeb	Andrea R Reeb
+Candidate	Timothy L Rose	Timothy L Rose
+Candidate	San Juan ROBERT (RICK) P	San Juan ROBERT (RICK) P
+Candidate	McKinley BERNADINE	McKinley BERNADINE
+Candidate	Scot D Key	Scot D Key
+Candidate	John Sugg	John Sugg
+Candidate	Joshua Joe Jimenez	Joshua Joe Jimenez
+Candidate	Barbara A Romo	Barbara A Romo
+Candidate	Brittany Maldonado Malott	Brittany Maldonado Malott
+Candidate	Jason M Jaramillo	Jason M Jaramillo
+Candidate	Felicia R Blea-Rivera	Felicia R Blea-Rivera
+Candidate	David A Murphy	David A Murphy
+Candidate	Nechama Dina Minkowicz	Nechama Dina Minkowicz
+Candidate	Clipper G Miller	Clipper G Miller
+Candidate	Heather R Benavidez	Heather R Benavidez
+Candidate	Miles R Tafoya	Miles R Tafoya
+Candidate	Stephen M Wayne	Stephen M Wayne
+Candidate	Stacey D Biel	Stacey D Biel
+Candidate	Sara Anne Blankenhorn	Sara Anne Blankenhorn
+Candidate	Bengie Regensberg	Bengie Regensberg
+Candidate	Cindy J Garza	Cindy J Garza
+Candidate	Timothy Don Montgomery	Timothy Don Montgomery
+Candidate	Michael G Benjamin	Michael G Benjamin
+Candidate	Joseph L Garcia	Joseph L Garcia
+Candidate	Americk Padilla	Americk Padilla
+Candidate	Alfonso Joseph Griego	Alfonso Joseph Griego
+Candidate	Jacqueline R Medina	Jacqueline R Medina
+Candidate	DIVISION 01 Santa Fe FRANCIS	DIVISION 01 Santa Fe FRANCIS
+Candidate	DIVISION 01 Bernalillo WILLIAM	DIVISION 01 Bernalillo WILLIAM
+Candidate	DIVISION 01 Dona Ana MANUEL	DIVISION 01 Dona Ana MANUEL
+Candidate	DIVISION 01 San Miguel GERALD	DIVISION 01 San Miguel GERALD
+Candidate	DIVISION 03 Lea WILLIAM	DIVISION 03 Lea WILLIAM
+Candidate	DIVISION 1 Grant TOM	DIVISION 1 Grant TOM
+Candidate	DIVISION 01 Socorro MERCEDES	DIVISION 01 Socorro MERCEDES
+Candidate	DIVISION 01 Taos EMILIO	DIVISION 01 Taos EMILIO
+Candidate	DIVISION 01 Curry MATTHEW	DIVISION 01 Curry MATTHEW
+Candidate	DIVISION 01 Quay ALBERT	DIVISION 01 Quay ALBERT
+Candidate	DIVISION 01 San Juan BRADFORD	DIVISION 01 San Juan BRADFORD
+Candidate	DIVISION 01 Otero STEVEN	DIVISION 01 Otero STEVEN
+Candidate	DIVISION 01 Valencia JAMES	DIVISION 01 Valencia JAMES
+Candidate	DIVISION 02 Santa Fe MARIA	DIVISION 02 Santa Fe MARIA
+Candidate	DIVISION 02 Bernalillo STAN	DIVISION 02 Bernalillo STAN
+Candidate	DIVISION 02 Dona Ana MARCI	DIVISION 02 Dona Ana MARCI
+Candidate	DIVISION 02 Mora ABIGAIL	DIVISION 02 Mora ABIGAIL
+Candidate	DIVISION 04 Lea MARK	DIVISION 04 Lea MARK
+Candidate	DIVISION 2 Luna JENNIFER	DIVISION 2 Luna JENNIFER
+Candidate	DIVISION 02 Sierra MATTHEW	DIVISION 02 Sierra MATTHEW
+Candidate	DIVISION 02 Curry DREW	DIVISION 02 Curry DREW
+Candidate	DIVISION 02 McKinley LOUIS	DIVISION 02 McKinley LOUIS
+Candidate	DIVISION 02 Otero JAMES	DIVISION 02 Otero JAMES
+Candidate	DIVISION 02 Sandoval GEORGE	DIVISION 02 Sandoval GEORGE
+Candidate	DIVISION 04 Santa Fe SYLVIA	DIVISION 04 Santa Fe SYLVIA
+Candidate	DIVISION 03 Bernalillo BRETT	DIVISION 03 Bernalillo BRETT
+Candidate	DIVISION 03 Dona Ana CONRAD	DIVISION 03 Dona Ana CONRAD
+Candidate	DIVISION 05 Eddy JANE	DIVISION 05 Eddy JANE
+Candidate	DIVISION 4 Luna JAROD	DIVISION 4 Luna JAROD
+Candidate	DIVISION 03 Torrance SHANNON	DIVISION 03 Torrance SHANNON
+Candidate	DIVISION 03 Curry FRED	DIVISION 03 Curry FRED
+Candidate	DIVISION 03 San Juan SARAH	DIVISION 03 San Juan SARAH
+Candidate	DIVISION 03 Lincoln DANIEL	DIVISION 03 Lincoln DANIEL
+Candidate	DIVISION 03 Valencia ALLEN	DIVISION 03 Valencia ALLEN
+Candidate	DIVISION 05 Santa Fe JASON	DIVISION 05 Santa Fe JASON
+Candidate	DIVISION 04 Bernalillo BEATRICE	DIVISION 04 Bernalillo BEATRICE
+Candidate	DIVISION 04 Dona Ana MARY	DIVISION 04 Dona Ana MARY
+Candidate	DIVISION 06 Chaves JAMES	DIVISION 06 Chaves JAMES
+Candidate	DIVISION 04 Roosevelt DONNA	DIVISION 04 Roosevelt DONNA
+Candidate	DIVISION 04 Otero ANGIE	DIVISION 04 Otero ANGIE
+Candidate	DIVISION 06 Valencia CINDY	DIVISION 06 Valencia CINDY
+Candidate	DIVISION 07 Santa Fe T	DIVISION 07 Santa Fe T
+Candidate	DIVISION 05 Bernalillo NANCY	DIVISION 05 Bernalillo NANCY
+Candidate	DIVISION 05 Dona Ana LISA	DIVISION 05 Dona Ana LISA
+Candidate	DIVISION 07 Lea MICHAEL	DIVISION 07 Lea MICHAEL
+Candidate	DIVISION 05 Curry DAVID	DIVISION 05 Curry DAVID
+Candidate	DIVISION 08 Sandoval CHERYL	DIVISION 08 Sandoval CHERYL
+Candidate	Linda Stover	Linda Stover
+Candidate	Nancy Marie Bearce	Nancy Marie Bearce
+Candidate	Steven Michael Quezada	Steven Michael Quezada
+Candidate	Adriann Barboa	Adriann Barboa
+Candidate	George Walton Benson	George Walton Benson
+Candidate	Wende Schwingendorf	Wende Schwingendorf
+Candidate	DIVISION 09 Bernalillo CINDY	DIVISION 09 Bernalillo CINDY
+Candidate	DIVISION 10 Bernalillo CHRISTINA	DIVISION 10 Bernalillo CHRISTINA
+Candidate	DIVISION 11 Bernalillo GERARD	DIVISION 11 Bernalillo GERARD
+Candidate	DIVISION 12 Bernalillo CLAY	DIVISION 12 Bernalillo CLAY
+Candidate	DIVISION 14 Bernalillo MARIE	DIVISION 14 Bernalillo MARIE
+Candidate	DIVISION 18 Bernalillo DENISE	DIVISION 18 Bernalillo DENISE
+Candidate	DIVISION 19 Bernalillo BENJAMIN	DIVISION 19 Bernalillo BENJAMIN
+Candidate	DIVISION 20 Bernalillo JACQUELINE	DIVISION 20 Bernalillo JACQUELINE
+Candidate	DIVISION 21 Bernalillo ALISA	DIVISION 21 Bernalillo ALISA
+Candidate	DIVISION 24 Bernalillo DEBRA	DIVISION 24 Bernalillo DEBRA
+Candidate	DIVISION 25 Bernalillo JANE	DIVISION 25 Bernalillo JANE
+Candidate	DIVISION 27 Bernalillo VICTOR	DIVISION 27 Bernalillo VICTOR
+Candidate	Sharon Armijo	Sharon Armijo
+Candidate	Joyce R Laney	Joyce R Laney
+Candidate	Haydn R Forward	Haydn R Forward
+Candidate	Steve Douglas Gartin	Steve Douglas Gartin
+Candidate	Lucinda Mae Howell	Lucinda Mae Howell
+Candidate	Cindy Fuller	Cindy Fuller
+Candidate	Charlotte M Andrade	Charlotte M Andrade
+Candidate	T Calder Ezzell	T Calder Ezzell
+Candidate	Jeffery D Bilberry	Jeffery D Bilberry
+Candidate	Richard C Taylor	Richard C Taylor
+Candidate	DIVISION 10 Chaves DUSTIN	DIVISION 10 Chaves DUSTIN
+Candidate	Michelle E Molina-Dominguez	Michelle E Molina-Dominguez
+Candidate	Kathy Lente-Gonzales	Kathy Lente-Gonzales
+Candidate	Daniel J Torrez	Daniel J Torrez
+Candidate	Daniel R Stock	Daniel R Stock
+Candidate	Robert Scott Windhorst	Robert Scott Windhorst
+Candidate	Jerry S Wilcox	Jerry S Wilcox
+Candidate	Martha Garcia	Martha Garcia
+Candidate	Rayetta M 'Ledoux' Trujillo	Rayetta M 'Ledoux' Trujillo
+Candidate	Lydia M Garcia	Lydia M Garcia
+Candidate	Bret E Wier	Bret E Wier
+Candidate	Debora Jean Balzano	Debora Jean Balzano
+Candidate	Annie Hogland	Annie Hogland
+Candidate	Kendall David Kempf	Kendall David Kempf
+Candidate	Robert O Sandoval	Robert O Sandoval
+Candidate	James D Ridling	James D Ridling
+Candidate	Seth H Martin	Seth H Martin
+Candidate	Robert E Thornton	Robert E Thornton
+Candidate	Jeffrey Barfield Hromas	Jeffrey Barfield Hromas
+Candidate	Tonya S Elwarth	Tonya S Elwarth
+Candidate	Elizabeth L Ausborn	Elizabeth L Ausborn
+Candidate	Bill Wertheim	Bill Wertheim
+Candidate	William W West	William W West
+Candidate	Amanda Lopez Askin	Amanda Lopez Askin
+Candidate	Cheryl De Young	Cheryl De Young
+Candidate	Bernadette A Dorazio	Bernadette A Dorazio
+Candidate	Eric L Rodriguez	Eric L Rodriguez
+Candidate	Diana Murillo-Trujillo	Diana Murillo-Trujillo
+Candidate	Irma Susana Chaparro	Irma Susana Chaparro
+Candidate	Stacie Michelle Durham	Stacie Michelle Durham
+Candidate	Buck Bonner	Buck Bonner
+Candidate	Robert Bruce Flora	Robert Bruce Flora
+Candidate	Manuel A Sanchez	Manuel A Sanchez
+Candidate	DIVISION 06 Dona Ana JAMES	DIVISION 06 Dona Ana JAMES
+Candidate	DIVISION 07 Dona Ana DOUGLAS	DIVISION 07 Dona Ana DOUGLAS
+Candidate	DIVISION 08 Dona Ana GRACE	DIVISION 08 Dona Ana GRACE
+Candidate	Rosie Garcia	Rosie Garcia
+Candidate	Laurie J Pruitt	Laurie J Pruitt
+Candidate	Jonathan A Henry	Jonathan A Henry
+Candidate	Fred F Beard	Fred F Beard
+Candidate	Sarah Marie Cordova	Sarah Marie Cordova
+Candidate	Donald Cantrell	Donald Cantrell
+Candidate	Mark A Cage	Mark A Cage
+Candidate	DIVISION 09 Eddy LISA	DIVISION 09 Eddy LISA
+Candidate	Marisa Castrillo	Marisa Castrillo
+Candidate	Patrick M Cohn	Patrick M Cohn
+Candidate	Kyle Brown	Kyle Brown
+Candidate	Alicia Kay Edwards	Alicia Kay Edwards
+Candidate	Marilyn Jean Alcorn	Marilyn Jean Alcorn
+Candidate	Gerald Wayne Billings	Gerald Wayne Billings
+Candidate	Harry Francis Browne	Harry Francis Browne
+Candidate	Thomas L Shelley	Thomas L Shelley
+Candidate	"Robert E ""Bubba"" Serrano"	"Robert E ""Bubba"" Serrano"
+Candidate	Susan A Bailey	Susan A Bailey
+Candidate	Ernest Chavez	Ernest Chavez
+Candidate	Carla J Garrison	Carla J Garrison
+Candidate	Robert E Aragon	Robert E Aragon
+Candidate	Christine M Trujillo	Christine M Trujillo
+Candidate	Pedro J Laumbach	Pedro J Laumbach
+Candidate	Alyssa A Esquivel	Alyssa A Esquivel
+Candidate	Erica R Valdez	Erica R Valdez
+Candidate	Leslee A Rudiger	Leslee A Rudiger
+Candidate	Richard A Chaires	Richard A Chaires
+Candidate	Arthur G Malott	Arthur G Malott
+Candidate	Keith Manes	Keith Manes
+Candidate	Susan M Marinovich	Susan M Marinovich
+Candidate	Dean Jackson	Dean Jackson
+Candidate	Oscar C Astorga	Oscar C Astorga
+Candidate	Jonathan Sena	Jonathan Sena
+Candidate	Pat Sims	Pat Sims
+Candidate	DIVISION 11 Lea LEE	DIVISION 11 Lea LEE
+Candidate	Barb Himmel-Roberts	Barb Himmel-Roberts
+Candidate	Todd F Proctor	Todd F Proctor
+Candidate	Jon Floyd Crunk	Jon Floyd Crunk
+Candidate	Michael Wood	Michael Wood
+Candidate	Walter Lee Hill	Walter Lee Hill
+Candidate	Rhonda B Burrows	Rhonda B Burrows
+Candidate	Naomi D Maestas	Naomi D Maestas
+Candidate	Denise Derkacs	Denise Derkacs
+Candidate	Aaron Dennis Winter Walker	Aaron Dennis Winter Walker
+Candidate	Sean Jameson Williams	Sean Jameson Williams
+Candidate	James E Rickman	James E Rickman
+Candidate	Rodney Gerode Roberson	Rodney Gerode Roberson
+Candidate	David W Reagor	David W Reagor
+Candidate	Berenda L Mcwright	Berenda L Mcwright
+Candidate	Joe Padilla	Joe Padilla
+Candidate	Kristie L Hobbs	Kristie L Hobbs
+Candidate	Lisa C Pastran	Lisa C Pastran
+Candidate	Ruben Javier Diaz	Ruben Javier Diaz
+Candidate	John S Sweetser	John S Sweetser
+Candidate	Edwin J Begay	Edwin J Begay
+Candidate	Jacqueline Katherine Sloan	Jacqueline Katherine Sloan
+Candidate	Charles Long	Charles Long
+Candidate	Robert B Baca	Robert B Baca
+Candidate	DIVISION 07 McKinley ROBERT	DIVISION 07 McKinley ROBERT
+Candidate	Carlos J Arellano	Carlos J Arellano
+Candidate	Rumaldo J Pino	Rumaldo J Pino
+Candidate	Jacob Jude Regensberg	Jacob Jude Regensberg
+Candidate	Johnny Henry Trujillo	Johnny Henry Trujillo
+Candidate	Robyn Holmes	Robyn Holmes
+Candidate	Cyprina J Madrid	Cyprina J Madrid
+Candidate	Laura M Whiteside	Laura M Whiteside
+Candidate	Glenn Josef Melton	Glenn Josef Melton
+Candidate	Sharonlee Cummins	Sharonlee Cummins
+Candidate	Vickie Pruiett Marquardt	Vickie Pruiett Marquardt
+Candidate	Ellen L White	Ellen L White
+Candidate	Patsy R Gresham	Patsy R Gresham
+Candidate	Robert J Lopez	Robert J Lopez
+Candidate	Jerri R Rush	Jerri R Rush
+Candidate	Linda J Padilla	Linda J Padilla
+Candidate	Livia Olguin	Livia Olguin
+Candidate	Cyril Cy Martinez	Cyril Cy Martinez
+Candidate	Moises A Morales	Moises A Morales
+Candidate	Stephanie Hicks	Stephanie Hicks
+Candidate	Mandi M Park	Mandi M Park
+Candidate	Layle L Sanchez	Layle L Sanchez
+Candidate	Dennis Lopez	Dennis Lopez
+Candidate	Rodney O Savage	Rodney O Savage
+Candidate	Kendall G Terry	Kendall G Terry
+Candidate	Ricardo Damian Artalejo	Ricardo Damian Artalejo
+Candidate	Tanya C Shelby	Tanya C Shelby
+Candidate	Carol B Taulbee	Carol B Taulbee
+Candidate	Steve D Lanier	Steve D Lanier
+Candidate	Terri D Fortner	Terri D Fortner
+Candidate	John T Beckstead	John T Beckstead
+Candidate	DIVISION 06 San Juan DALENE	DIVISION 06 San Juan DALENE
+Candidate	DIVISION 08 San Juan KAREN	DIVISION 08 San Juan KAREN
+Candidate	Geraldine E Gutierrez	Geraldine E Gutierrez
+Candidate	Jennifer Sam Lafebre	Jennifer Sam Lafebre
+Candidate	Janice Varela	Janice Varela
+Candidate	Martin D Sena	Martin D Sena
+Candidate	Kenneth C Medina	Kenneth C Medina
+Candidate	Anne S Brady-Romero	Anne S Brady-Romero
+Candidate	Lawrence D Griego	Lawrence D Griego
+Candidate	Jennifer A Taylor	Jennifer A Taylor
+Candidate	Benay P Ward	Benay P Ward
+Candidate	Leah Michelle Ahkee-Baczkiewicz	Leah Michelle Ahkee-Baczkiewicz
+Candidate	Jay C Block	Jay C Block
+Candidate	Alexandria C Piland	Alexandria C Piland
+Candidate	David J Heil	David J Heil
+Candidate	F Kenneth Eichwald	F Kenneth Eichwald
+Candidate	Katharine E Clark	Katharine E Clark
+Candidate	Jennifer Jenn Manzanares	Jennifer Jenn Manzanares
+Candidate	Anna C Hansen	Anna C Hansen
+Candidate	Anna Tricia Hamilton	Anna Tricia Hamilton
+Candidate	Hank Hughes	Hank Hughes
+Candidate	DIVISION 08 Santa Fe MARY	DIVISION 08 Santa Fe MARY
+Candidate	DIVISION 09 Santa Fe MATTHEW	DIVISION 09 Santa Fe MATTHEW
+Candidate	Shelly K Trujillo	Shelly K Trujillo
+Candidate	Candace D Chavez	Candace D Chavez
+Candidate	Sandra K Whitehead	Sandra K Whitehead
+Candidate	William H Hopkins	William H Hopkins
+Candidate	Betty L Saavedra	Betty L Saavedra
+Candidate	Rose Mary Rosas	Rose Mary Rosas
+Candidate	Andrew E Salas	Andrew E Salas
+Candidate	Craig D Secatero	Craig D Secatero
+Candidate	Manuel T Vega	Manuel T Vega
+Candidate	Glen S Duggins	Glen S Duggins
+Candidate	Gilbert Murillo	Gilbert Murillo
+Candidate	Antonio Ray Martinez	Antonio Ray Martinez
+Candidate	Valerie Rael-Montoya	Valerie Rael-Montoya
+Candidate	Paula Marie Santistevan	Paula Marie Santistevan
+Candidate	Darlene J Vigil	Darlene J Vigil
+Candidate	Anjanette K Brush	Anjanette K Brush
+Candidate	Rubena A Miranda	Rubena A Miranda
+Candidate	Yvonne Otero	Yvonne Otero
+Candidate	Tracy L Sedillo	Tracy L Sedillo
+Candidate	Leroy M Candelaria	Leroy M Candelaria
+Candidate	Javier Ernesto Sanchez	Javier Ernesto Sanchez
+Candidate	Brenda L Green	Brenda L Green
+Candidate	Shea Lea Arnett	Shea Lea Arnett
+Candidate	Walter C Hall	Walter C Hall
+Candidate	Aurora Dolores Chavez	Aurora Dolores Chavez
+Candidate	Michael E Milam	Michael E Milam
+Candidate	Deseri Ann Sichler	Deseri Ann Sichler
+Candidate	Michael P Steininger	Michael P Steininger
+Candidate	Ralph R Miramontes	Ralph R Miramontes
+Candidate	Troy Dean Richardson	Troy Dean Richardson
+Candidate	Leroy Baca	Leroy Baca
+Candidate	Joseph Aaron Bizzell	Joseph Aaron Bizzell
+Candidate	Jhonathan M Aragon	Jhonathan M Aragon
+Candidate	David M Tynan	David M Tynan
+CountItemType	total	Total
+CountItemType	absentee	Absentee
+CountItemType	early	Early
+CountItemType	election-day	ElectionDay
