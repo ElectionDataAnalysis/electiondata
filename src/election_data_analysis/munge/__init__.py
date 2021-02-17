@@ -37,6 +37,7 @@ opt_munger_params: Dict[str, str] = {
     "string_field_name_row": "int",
     "all_rows": "string",
     "multi_block": "string",
+    "max_blocks": "integer",
     "constant_over_file": "list-of-strings",
     "nesting_tags": "list-of-strings",
 }
@@ -1410,8 +1411,7 @@ def to_standard_count_frame(
     if p["multi_block"] == "yes":
         ## ## split file into one-block-per-file files
         file_list, err = extract_blocks(
-            file_path,
-            p,
+            file_path, p, munger_name,
         )
 
         # revise parameter dictionary, removing multi_block=yes, thousands_separator, rows_to_skip
@@ -1873,36 +1873,50 @@ def extract_blocks(
             else:
                 working = df_dict[sheet]
 
-            # identify count rows (have at least one integer) and text rows (all others)
-            mask = working.T.apply(lambda row: row.str.isdigit().any())
-            count_rows = list(mask[mask].index)
-            text_rows = list(mask[~mask].index)
+            # identify count rows (have at least one integer), blank rows, and text rows (all others)
+            mask_count = working.T.apply(lambda row: row.str.isdigit().any())
+            mask_blank = working.T.apply(lambda row: list(row.unique()) == [""])  # is this the best way?
+            count_rows = list(mask_count[mask_count].index)
+            blank_rows = list(mask_blank[mask_blank].index)
+            text_rows = list(mask_count[(~mask_count) & (~mask_blank)].index)
 
-            # drop all below the last count row
-            working = working[:max(count_rows) + 1]
-            text_rows = [x for x in text_rows if x in working.index]
+            # loop through blocks starting at the top (blocks defined by no-integer lines on top)
+            while text_rows and count_rows:
+                first_text_row = min(text_rows)
+                first_count_row = min([n for n in count_rows if n > first_text_row]) # TODO what if there is none?
 
-            # loop through blocks (blocks defined by no-integer lines on top)
-            while count_rows:
-                # use only count_rows still in df
-                # create block from bottom of dframe
-                top = max([x for x in text_rows if (x==0 or x-1 in count_rows)])
-                block = working[top:]
+                # remove this block's rows from text and count lists
+                text_rows = [n for n in text_rows if n > first_count_row]
+                if text_rows:
+                    block_end = min(text_rows)
+                else:
+                    block_end = df_dict[sheet].shape[0]
+                count_rows = [n for n in count_rows if n > block_end]
+
+                block = df_dict[sheet][first_text_row: block_end]
 
                 ## export block data lines to tab-separated or excel file
                 if p["file_type"] == "flat_text":
-                    block_path = os.path.join(file_dir,f"{file_stem}_block_{top}-{max(working.index)}.txt")
-                    block.to_csv(block_path,sep=p["flat_text_delimiter"], index=False, header=False)
+                    block_path = os.path.join(
+                        file_dir, f"{file_stem}_block_{first_text_row}-{block_end - 1}.txt"
+                    )
+                    block.to_csv(block_path, sep=p["flat_text_delimiter"], index=False, header=False)
                 elif p["file_type"] == "excel":
-                    block_path = os.path.join(file_dir,f"{file_stem}_sheet_{sheet}_block_{top}-{max(working.index)}.xlsx")
+                    block_path = os.path.join(
+                        file_dir,
+                        f"{file_stem}_sheet_{sheet}_block_{first_text_row}-{block_end - 1}.xlsx"
+                    )
                     block.to_excel(block_path, index=False, header=False, sheet_name=sheet)
+                else:
+                    err = ui.add_new_error(
+                        err,
+                        "munger",
+                        munger_name,
+                        f"multi_block=yes but file_type ({p['file_type']}) is inappropriate",
+                    )
+                    return new_file_list, err
                 # add to list of new file paths
                 new_file_list.append(block_path)
-
-                # set up for next block
-                working = working[:top]
-                count_rows = [x for x in count_rows if x in working.index]
-                text_rows = [x for x in text_rows if x in working.index]
     return new_file_list, err
 
 
@@ -1910,6 +1924,7 @@ def extract_blocks(
 def extract_blocks(
         f_path: str,
         p: Dict[str, Any],
+        munger_name: str,
         output_delimiter: str = "\t",
 ) -> (List[str], Optional[dict]):
     """Given a flat_text (or excel file and list of sheets),
@@ -1973,35 +1988,49 @@ def extract_blocks(
             else:
                 working = df_dict[sheet]
 
-            # identify count rows (have at least one integer) and text rows (all others)
-            mask = working.T.apply(lambda row: row.str.isdigit().any())
-            count_rows = list(mask[mask].index)
-            text_rows = list(mask[~mask].index)
+            # identify count rows (have at least one integer), blank rows, and text rows (all others)
+            mask_count = working.T.apply(lambda row: row.str.isdigit().any())
+            mask_blank = working.T.apply(lambda row: list(row.unique()) == [""])  # is this the best way?
+            count_rows = list(mask_count[mask_count].index)
+            blank_rows = list(mask_blank[mask_blank].index)
+            text_rows = list(mask_count[(~mask_count) & (~mask_blank)].index)
 
-            # drop all below the last count row
-            working = working[:max(count_rows) + 1]
-            text_rows = [x for x in text_rows if x in working.index]
+            # loop through blocks starting at the top (blocks defined by no-integer lines on top)
+            while text_rows and count_rows:
+                first_text_row = min(text_rows)
+                first_count_row = min([n for n in count_rows if n > first_text_row]) # TODO what if there is none?
 
-            # loop through blocks (blocks defined by no-integer lines on top)
-            while count_rows:
-                # use only count_rows still in df
-                # create block from bottom of dframe
-                top = max([x for x in text_rows if (x==0 or x-1 in count_rows)])
-                block = working[top:]
+                # remove this block's rows from text and count lists
+                text_rows = [n for n in text_rows if n > first_count_row]
+                if text_rows:
+                    block_end = min(text_rows)
+                else:
+                    block_end = df_dict[sheet].shape[0]
+                count_rows = [n for n in count_rows if n > block_end]
+
+                block = df_dict[sheet][first_text_row: block_end]
 
                 ## export block data lines to tab-separated or excel file
                 if p["file_type"] == "flat_text":
-                    block_path = os.path.join(file_dir,f"{file_stem}_block_{top}-{max(working.index)}.txt")
-                    block.to_csv(block_path,sep=p["flat_text_delimiter"], index=False, header=False)
+                    block_path = os.path.join(
+                        file_dir, f"{file_stem}_block_{first_text_row}-{block_end - 1}.txt"
+                    )
+                    block.to_csv(block_path, sep=p["flat_text_delimiter"], index=False, header=False)
                 elif p["file_type"] == "excel":
-                    block_path = os.path.join(file_dir,f"{file_stem}_sheet_{sheet}_block_{top}-{max(working.index)}.xlsx")
+                    block_path = os.path.join(
+                        file_dir,
+                        f"{file_stem}_sheet_{sheet}_block_{first_text_row}-{block_end - 1}.xlsx"
+                    )
                     block.to_excel(block_path, index=False, header=False, sheet_name=sheet)
+                else:
+                    err = ui.add_new_error(
+                        err,
+                        "munger",
+                        munger_name,
+                        f"multi_block=yes but file_type ({p['file_type']}) is inappropriate",
+                    )
+                    return new_file_list, err
                 # add to list of new file paths
                 new_file_list.append(block_path)
-
-                # set up for next block
-                working = working[:top]
-                count_rows = [x for x in count_rows if x in working.index]
-                text_rows = [x for x in text_rows if x in working.index]
     return new_file_list, err
 

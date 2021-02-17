@@ -391,8 +391,6 @@ def basic_kwargs(p: Dict[str, Any], kwargs: Dict[str, Any]) -> Dict[str, Any]:
 def list_desired_excel_sheets(f_path: str, p: dict) -> Optional[list]:
     if p["sheets_to_read_names"]:
         sheets_to_read = p["sheets_to_read_names"]
-    elif p["sheets_to_read_numbers"]:
-        sheets_to_read = p["sheets_to_read_numbers"]
     else:
         xl = pd.ExcelFile(f_path)
         all_sheets = xl.sheet_names
@@ -400,6 +398,8 @@ def list_desired_excel_sheets(f_path: str, p: dict) -> Optional[list]:
             sheets_to_read = [
                 s for s in all_sheets if s not in p["sheets_to_skip_names"]
             ]
+        elif p["sheets_to_read_numbers"]:
+            sheets_to_read = [all_sheets[n] for n in p["sheets_to_read_numbers"]]
         else:
             sheets_to_read = all_sheets
     return sheets_to_read
