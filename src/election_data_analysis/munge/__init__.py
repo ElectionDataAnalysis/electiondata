@@ -1924,7 +1924,7 @@ def extract_blocks(
                 # if a maximum number of blocks was specified
                 if p["max_blocks"]:
                     blocks_created += 1
-                    if blocks_created >= p["max_blocke"]:
+                    if blocks_created >= p["max_blocks"]:
                         max_blocks_attained = True
     return new_file_list, err
 
