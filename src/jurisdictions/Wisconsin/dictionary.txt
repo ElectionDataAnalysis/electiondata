@@ -214,7 +214,7 @@ Candidate	JoCasta Zamarripa	JoCasta Zamarripa
 Candidate	Joan A. Ballweg	Joan A. Ballweg
 Candidate	Joan A. Ballweg	Joan Ballweg
 Candidate	Jodi Emerson	Jodi Emerson
-Candidate	Joe Biden	Joe Biden
+Candidate	Joseph R. Biden	Joe Biden
 Candidate	Joe Lavrenz	Joe Lavrenz
 Candidate	Joe Sanfelippo	Joe Sanfelippo
 Candidate	Joel C. Kitchens	Joel C. Kitchens
@@ -511,8 +511,7 @@ Candidate	Jo Jorgensen	Jorgensen/Cohen
 Candidate	Brian Carroll	Carroll/Patel
 Candidate	André Jacque	AndrÃÂÃÂ© Jacque
 Candidate	André Jacque	André Jacque
-Candidate	Write-in or Scattering	Write-in/Scattering
-Candidate	Write-in or Scattering	Scattering
+Candidate	Scattering	Write-in/Scattering
 CandidateContest	WI Attorney General	ATTORNEY GENERAL
 CandidateContest	WI Attorney General (Constitution Party)	ATTORNEY GENERAL - CON
 CandidateContest	WI Attorney General (Constitution Party)	ATTORNEY GENERAL - Constitution

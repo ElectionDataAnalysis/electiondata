@@ -1578,8 +1578,8 @@ Candidate	Jo Jorgensen	Jo Jorgensen
 Candidate	John Marcus Dyer	John Marcus Dyer
 Candidate	Johnnie Smith	Johnnie Smith
 Candidate	Jonathan Mark Cruise	Jonathan Mark Cruise
-Candidate	Joseph Robinette Biden Jr.	Joseph R. Biden
-Candidate	Joseph Robinette Biden Jr.	Joseph Robinette Biden Jr.
+Candidate	Joseph R. Biden	Joseph R. Biden
+Candidate	Joseph R. Biden	Joseph Robinette Biden Jr.
 Candidate	Julián Castro	Julián Castro
 Candidate	Karen Beardslee Kwasny	Karen Beardslee Kwasny
 Candidate	Karen L Jenkins	Karen L Jenkins

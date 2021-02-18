@@ -3464,7 +3464,6 @@ CandidateContest	PA Senate District 39	Senator in the General Assembly 39th Sena
 CandidateContest	PA Senate District 39 (Democratic Party)	Senator in the General Assembly 39th Senatorial District (Democratic)
 CandidateContest	PA Senate District 39 (Republican Party)	Senator in the General Assembly 39th Senatorial District (Republican)
 Candidate	Hillary Clinton	Clinton, Hillary
-Candidate	Donald J. Trump	Trump, Donald J
 Candidate	Darrell L Castle	Castle, Darrell L
 Candidate	Jill Stein	Stein, Jill
 Candidate	Gary E Johnson	Johnson, Gary E
@@ -3746,4 +3745,3 @@ Candidate	John P. Sabatina Jr	Sabatina, John P. Jr.
 Candidate	John J Padora Jr	Padora, John J Jr.
 Candidate	Wayne Langerholc Jr	Langerholc, Wayne Jr.
 Candidate	James A. Cox Jr	Cox, James A. Jr.
-Candidate	Joseph Robinette Biden Jr	Biden, Joseph Robinette Jr

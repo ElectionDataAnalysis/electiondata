@@ -264,15 +264,14 @@ ReportingUnit	Utah;Wasatch County	Wasatch
 ReportingUnit	Utah;Washington County	Washington
 ReportingUnit	Utah;Wayne County	Wayne
 ReportingUnit	Utah;Weber County	Weber
-Candidate	Brock Pierce Karla Ballard	Brock Pierce Karla Ballard
-Candidate	Don Blankenship William Mohr	Don Blankenship William Mohr
-Candidate	Donald J. Trump Michael R. Pence	Donald J. Trump Michael R. Pence
+Candidate	Brock Pierce	Brock Pierce Karla Ballard
+Candidate	Don Blankenship	Don Blankenship William Mohr
 Candidate	Gloria La Riva	Gloria La Riva
-Candidate	Howie Hawkins Angela Walker	Howie Hawkins Angela Walker
-Candidate	Jo Jorgensen Jeremy Cohen	Jo Jorgensen Jeremy Cohen
-Candidate	Joe Mchugh Elizabeth Storm	Joe Mchugh Elizabeth Storm
-Candidate	Joseph R. Biden Kamala D. Harris	Joseph R. Biden Kamala D. Harris
-Candidate	Kanye West Michelle Tidball	Kanye West Michelle Tidball
+Candidate	Howie Hawkins	Howie Hawkins Angela Walker
+Candidate	Jo Jorgensen	Jo Jorgensen Jeremy Cohen
+Candidate	Joe Mchugh	Joe Mchugh Elizabeth Storm
+Candidate	Joseph R. Biden	Joseph R. Biden Kamala D. Harris
+Candidate	Kanye West	Kanye West Michelle Tidball
 Candidate	<- did not match regex ^(.*) \([A-Z]{3}\)$	<- did not match regex ^(.*) \([A-Z]{3}\)$
 Candidate	County <- did not match regex ^(.*) \([A-Z]{3}\)$County	County <- did not match regex ^(.*) \([A-Z]{3}\)$County
 Candidate	Blake David Moore	Blake David Moore
@@ -296,14 +295,7 @@ Candidate	Greg Skordas	Greg Skordas
 Candidate	Rudy J. Bautista	Rudy J. Bautista
 Candidate	Sean D. Reyes	Sean D. Reyes
 Candidate	Spencer J. Cox	Spencer J. Cox Deidre M. Henderson
-Candidate	Kanye West	Kanye West Michelle Tidball
-Candidate	Joseph R. Biden	Joseph R. Biden Kamala D. Harris
-Candidate	Joe Mchugh	Joe Mchugh Elizabeth Storm
-Candidate	Jo Jorgensen	Jo Jorgensen Jeremy Cohen
-Candidate	Howie Hawkins	Howie Hawkins Angela Walker
 Candidate	Greg Duerden	Greg Duerden Wayne Hill
 Candidate	Donald J. Trump	Donald J. Trump Michael R. Pence
-Candidate	Don Blankenship	Don Blankenship William Mohr
 Candidate	Daniel Rhead Cottam	Daniel Rhead Cottam Barry Evan Short
 Candidate	Chris Peterson	Chris Peterson Karina Brown
-Candidate	Brock Pierce	Brock Pierce Karla Ballard
