@@ -1410,7 +1410,7 @@ def to_standard_count_frame(
     # create list of files to read
     if p["multi_block"] == "yes":
         ## ## split file into one-block-per-file files
-        file_list, err = extract_blocks(
+        file_list, err = extract_blocks_OLD(
             file_path, p, munger_name,
         )
 
@@ -1807,7 +1807,7 @@ def get_fields_from_formula(formula: str) -> List[str]:
     return fields
 
 
-def extract_blocks(
+def extract_blocks_OLD(
         f_path: str,
         p: Dict[str, Any],
         munger_name: str,
@@ -1928,6 +1928,65 @@ def extract_blocks(
                         max_blocks_attained = True
     return new_file_list, err
 
+
+def extract_blocks(
+        df: pd.DataFrame,
+        p: Dict[str, Any],
+        munger_name: str,
+        file_name: str,
+        sheet_name: str,
+        output_delimiter: str = "\t",
+) -> (List[pd.DataFrame], Optional[dict]):
+    """Given a dataframe, create a list of dataframes -- one for each block of
+    data lines"""
+
+    # set up
+    if df.empty:
+        err = ui.add_new_error(
+            None,
+            "warn-munger",
+            munger_name,
+            f"No data found in sheet {sheet_name} of file {file_name}"
+        )
+    else:
+        err = None
+    df_list = list()
+    working = df.copy()
+
+    # identify count rows (have at least one integer), blank rows, and text rows (all others)
+    mask_count = working.T.apply(lambda row: row.str.isdigit().any())
+    mask_blank = working.T.apply(lambda row: list(row.unique()) == [""])  # is this the best way?
+    count_rows = list(mask_count[mask_count].index)
+    text_rows = list(mask_count[(~mask_count) & (~mask_blank)].index)
+
+    # initialize check on max number of blocks
+    max_blocks_attained = False
+    blocks_created = 0
+
+    # loop through blocks starting at the top (blocks defined by text lines on top)
+    while text_rows and count_rows and not max_blocks_attained:
+        first_text_row = min(text_rows)
+        first_count_row = min([n for n in count_rows if n > first_text_row])  # TODO what if there is none?
+
+        # remove this block's rows from text and count lists
+        text_rows = [n for n in text_rows if n > first_count_row]
+        if text_rows:
+            block_end = min(text_rows)
+        else:
+            block_end = working.shape[0]
+        count_rows = [n for n in count_rows if n > block_end]
+
+        block = working[first_text_row: block_end]
+
+        ## add block to list
+        df_list.append(block)
+
+        # if a maximum number of blocks was specified
+        if p["max_blocks"]:
+            blocks_created += 1
+        if blocks_created >= p["max_blocks"]:
+            max_blocks_attained = True
+    return df_list, err
 
 
 
