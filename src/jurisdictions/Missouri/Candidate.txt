@@ -5,7 +5,7 @@ Paul Lehmann
 Bill Slantz
 Deb Lavender
 Alex Furman
-WRITE-INS
+Write-Ins
 John R. Jay Ashcroft
 Martin D Baker
 Robin Dominick
@@ -98,5 +98,3 @@ Rik Combs
 Doug Beck
 Brian Carroll Amar Patel
 Rick Brattin
-Write-Ins
-

@@ -10887,7 +10887,7 @@ Candidate	Cory Booker	Cory Booker
 Candidate	Michael Bennet	Michael Bennet
 Candidate	Jim Newberger	Jim Newberger
 Candidate	Paula M Overby	Paula M Overby
-Candidate	WRITE-IN**	WRITE-IN**
+Candidate	Write-In**	Write-In**
 Candidate	Sarah Wellington	Sarah Wellington
 Candidate	Jerry Trooien	Jerry Trooien
 Candidate	Joe Radinovich	Joe Radinovich
@@ -12175,9 +12175,9 @@ Candidate	Stewart Mills	Stewart Mills
 Candidate	Rick Nolan	Rick Nolan
 Candidate	Tiffany Stenglein	Tiffany Stenglein
 Candidate	Erin Wagner	Erin Wagner
-Candidate	YES	YES
-Candidate	NO	NO
-Candidate	ESTIMATED BLANKS	ESTIMATED BLANKS
+Candidate	Yes	Yes
+Candidate	No	No
+Candidate	Estimated Blanks	Estimated Blanks
 Candidate	Scott Rian	Scott Rian
 Candidate	Laurie Ann Westerlund	Laurie Ann Westerlund
 Candidate	Bill Pratt	Bill Pratt
@@ -13161,7 +13161,6 @@ Candidate	Gloria La Riva	Gloria La Riva and Leonard Peltier
 Candidate	Alyson Kennedy	Alyson Kennedy and Malcolm Jarrett
 Candidate	Jo Jorgensen	"Jo Jorgensen and Jeremy ""Spike"" Cohen"
 Candidate	Jo Jorgensen	Jo Jorgensen and Jeremy 'Spike' Cohen
-Candidate	Write-In	WRITE-IN
 Candidate	Zach Duckworth	Zach Duckworth
 Candidate	William A Johnston	William A Johnston
 y	VPM	VPM

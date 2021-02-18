@@ -1,92 +1,43 @@
 BallotName
-BROCK PIERCE KARLA BALLARD
-DON BLANKENSHIP WILLIAM MOHR
-DONALD J. TRUMP MICHAEL R. PENCE
-GLORIA LA RIVA
-HOWIE HAWKINS ANGELA WALKER
-JO JORGENSEN JEREMY COHEN
-JOE MCHUGH ELIZABETH STORM
-JOSEPH R. BIDEN KAMALA D. HARRIS
-KANYE WEST MICHELLE TIDBALL
+Brock Pierce Karla Ballard
+Don Blankenship William Mohr
+Donald J. Trump Michael R. Pence
+Gloria La Riva
+Howie Hawkins Angela Walker
+Jo Jorgensen Jeremy Cohen
+Joe Mchugh Elizabeth Storm
+Joseph R. Biden Kamala D. Harris
+Kanye West Michelle Tidball
 <- did not match regex ^(.*) \([A-Z]{3}\)$
 County <- did not match regex ^(.*) \([A-Z]{3}\)$County
-BLAKE DAVID MOORE
-DARREN PARRY
-CHRIS STEWART
-J. ROBERT LATHAM
-KAEL WESTON
-DANIEL CLYDE CUMMINGS
-DEVIN D. THORPE
-JOHN CURTIS
-THOMAS G. MCNEILL
-BEN MCADAMS
-BURGESS OWENS
-JOHN MOLNAR
-JONIA M BRODERICK
-CHRIS PETERSON KARINA BROWN
-DANIEL RHEAD COTTAM BARRY EVAN SHORT
-GREG DUERDEN WAYNE HILL
-SPENCER J. COX DEIDRE M. HENDERSON
-GREG SKORDAS
-RUDY J. BAUTISTA
-SEAN D. REYES
-Thomas G. Mcneill
-Spencer J. Cox
-Sean D. Reyes
-Rudy J. Bautista
-Kanye West
+Blake David Moore
+Darren Parry
+Chris Stewart
+J. Robert Latham
 Kael Weston
-Joseph R. Biden
-Jonia M Broderick
-John Molnar
+Daniel Clyde Cummings
+Devin D. Thorpe
 John Curtis
+Thomas G. Mcneill
+Ben Mcadams
+Burgess Owens
+John Molnar
+Jonia M Broderick
+Chris Peterson Karina Brown
+Daniel Rhead Cottam Barry Evan Short
+Greg Duerden Wayne Hill
+Spencer J. Cox Deidre M. Henderson
+Greg Skordas
+Rudy J. Bautista
+Sean D. Reyes
+Spencer J. Cox
+Kanye West
+Joseph R. Biden
 Joe Mchugh
 Jo Jorgensen
-J. Robert Latham
 Howie Hawkins
-Greg Skordas
 Greg Duerden
-Gloria La Riva
 Donald J. Trump
 Don Blankenship
-Devin D. Thorpe
-Darren Parry
 Daniel Rhead Cottam
-Daniel Clyde Cummings
-Chris Stewart
-Chris Peterson Karina Brown
-Burgess Owens
 Brock Pierce
-Blake David Moore
-Ben Mcadams
-
-Thomas G. Mcneill
-Spencer J. Cox
-Sean D. Reyes
-Rudy J. Bautista
-Kanye West
-Kael Weston
-Joseph R. Biden
-Jonia M Broderick
-John Molnar
-John Curtis
-Joe Mchugh
-Jo Jorgensen
-J. Robert Latham
-Howie Hawkins
-Greg Skordas
-Greg Duerden
-Gloria La Riva
-Donald J. Trump
-Don Blankenship
-Devin D. Thorpe
-Darren Parry
-Daniel Rhead Cottam
-Daniel Clyde Cummings
-Chris Stewart
-Chris Peterson Karina Brown
-Burgess Owens
-Brock Pierce
-Blake David Moore
-Ben Mcadams
-
