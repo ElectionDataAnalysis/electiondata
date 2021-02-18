@@ -42,6 +42,8 @@ encoding=
 all_rows=data
 ###### if there are multiple blocks of data per page, each with its own headers
 multi_block=yes
+###### if multi_block=yes, can set a max number of blocks to read from each sheet
+max_blocks=
 
 #### for excel file type:
 sheets_to_read_names=

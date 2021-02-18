@@ -419,36 +419,35 @@ CountItemType	uocava	uocava
 CountItemType	not-uocava	all-but-uocava
 CountItemType	not-uocava	not-uocava
 Candidate	Donald J. Trump	Donald J. Trump
-Candidate	Donald J. Trump	TRUMP, DONALD J.
 Candidate	Donald J. Trump	Trump, Donald J.
 Candidate	Jo Jorgensen	Jorgensen, Jo
 Candidate	Howard Hawkins	Hawkins, Howard
 Candidate	Roque De La Fuente	De La Fuente, Roque
 Candidate	Joseph R. Biden, Jr.	Biden, Joseph R.
 Candidate	Joseph R. Biden, Jr.	Joseph R. Biden, Jr.
-Candidate	Joseph R. Biden, Jr.	BIDEN, JOSEPH R., JR.
+Candidate	Joseph R. Biden, Jr.	Biden, Joseph R., Jr.
 Candidate	Michael R. Bloomberg	Michael R. Bloomberg
-Candidate	Michael R. Bloomberg	BLOOMBERG, MICHAEL R.
+Candidate	Michael R. Bloomberg	Bloomberg, Michael R.
 Candidate	Cory A. Booker	Cory A. Booker
-Candidate	Cory A. Booker	BOOKER, CORY A.
+Candidate	Cory A. Booker	Booker, Cory A.
 Candidate	Peter Buttigieg	Peter Buttigieg
-Candidate	Peter Buttigieg	BUTTIGIEG, PETER
+Candidate	Peter Buttigieg	Buttigieg, Peter
 Candidate	Tulsi Gabbard	Tulsi Gabbard
-Candidate	Tulsi Gabbard	GABBARD, TULSI
+Candidate	Tulsi Gabbard	Gabbard, Tulsi
 Candidate	Amy J. Klobuchar	Amy J. Klobuchar
-Candidate	Amy J. Klobuchar	KLOBUCHAR, AMY J.
+Candidate	Amy J. Klobuchar	Klobuchar, Amy J.
 Candidate	Deval Patrick	Deval Patrick
-Candidate	Deval Patrick	PATRICK, DEVAL
+Candidate	Deval Patrick	Patrick, Deval
 Candidate	Bernard Sanders	Bernard Sanders
-Candidate	Bernard Sanders	SANDERS, BERNARD
+Candidate	Bernard Sanders	Sanders, Bernard
 Candidate	Thomas F. Steyer	Thomas F. Steyer
-Candidate	Thomas F. Steyer	STEYER, THOMAS F.
+Candidate	Thomas F. Steyer	Steyer, Thomas F.
 Candidate	Elizabeth A. Warren	Elizabeth A. Warren
-Candidate	Elizabeth A. Warren	WARREN, ELIZABETH A.
+Candidate	Elizabeth A. Warren	Warren, Elizabeth A.
 Candidate	Marianne Williamson	Marianne Williamson
-Candidate	Marianne Williamson	WILLIAMSON, MARIANNE
+Candidate	Marianne Williamson	Williamson, Marianne
 Candidate	Andrew Yang	Andrew Yang
-Candidate	Andrew Yang	YANG, ANDREW
+Candidate	Andrew Yang	Yang, Andrew
 Candidate	Elizabeth A. Sweet	Elizabeth A. Sweet
 Candidate	Elizabeth A. Sweet	Sweet, Elizabeth A.
 Candidate	Bre Kidman	Bre Kidman

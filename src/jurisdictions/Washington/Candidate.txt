@@ -500,11 +500,11 @@ Tom Lannen
 Michael Johnson
 Dave McKenzie
 Ted Salka
-MARC ROBINS
-BLAYNEY MYERS
-ED LA MOTTE
-ALICIA BEYER
-BOB WITTENBERG
+Marc Robins
+Blayney Myers
+Ed La Motte
+Alicia Beyer
+Bob Wittenberg
 Strom Peterson
 Alex Hels
 Lillian Ortiz-Self
@@ -689,7 +689,7 @@ James (Jim) McLaughlin
 Bill Benedict
 Teresa Marchi
 Bill Peach
-Howard (Mike) Doherty, Jr.
+"Howard (Mike) Doherty, Jr."
 Rebecca Glasgow
 Suzanne M.B. Hayden
 John Black
@@ -701,7 +701,7 @@ Sasha Bentley
 Gina Mosbrucker
 Liz Hallock
 Tanisha Harris
-Damion E Jiles, Sr.
+"Damion E Jiles, Sr."
 Chris Thobaben
 Larry A. Hoff
 John Thompson
@@ -729,17 +729,17 @@ Laurie Lebowsky
 Sarah Fox
 Jim Malinowski
 Sherry Erickson
-CHRIS MILLS
-ANNE HIGGINS
-SUSAN J MARINELLA
+Chris Mills
+Anne Higgins
+Susan J Marinella
 Charles L Amerein
 Dain C. Nysoe
 C Dale Slack
 Joe Helm
-JEFF JENKINS
+Jeff Jenkins
 Carla Rowe
 Cathy Shochet
-G SCOTT MARINELLA
+G Scott Marinella
 Erin Frasier
 Joel McEntire
 Emily Wilcox
@@ -966,7 +966,7 @@ Les Ponomarchuk
 Marcine Anderson
 Jason Poydras
 Matthew York
-Nathaniel B. Green, Jr.
+"Nathaniel B. Green, Jr."
 Corinna Harn
 Virginia M. Amato
 Rhonda Laumann
@@ -1139,7 +1139,7 @@ Michael 'Hawk' Runyon
 Todd P. Stephens
 Scott L. Johnson
 Robin Souvenir
-RENEE GOODIN
+Renee Goodin
 Mark McClain
 Pam Nogueira Maneman
 Elizabeth Penoyar
@@ -1428,8 +1428,8 @@ Atul Deshmane
 Paul D. Kenner
 Michael Largent
 John-Mark Mahnkey
-ROBIN JONES
-SANDY JAMISON
+Robin Jones
+Sandy Jamison
 Eric Fejeran
 Jill E. Whelchel
 Annie Pillers
@@ -1476,7 +1476,7 @@ Tracy 'Justice' Wright
 Douglas E. McKinley
 Evan Jones
 Sarena Sloot
-WRITE-IN
+Write-In
 Alex Tsimerman
 Ryan Ryals
 Leon Aaron Lawson
@@ -1582,8 +1582,8 @@ Deidre Holmberg
 Ragan Faylor
 Dori L Luzzo Gilmour
 Steve Goheen
-BOB PARAZIN
-DAVID HARVEY
+Bob Parazin
+David Harvey
 James Mitchell
 Corey Bailey
 Jesse Jensen
@@ -1757,7 +1757,7 @@ Janet Lodge
 William Griffin
 Jordan J. Olin
 Sharon Murphin
-Richard W. Rylander, Jr.
+"Richard W. Rylander, Jr."
 Joe L. Scott
 Igor Rybkin
 Robin Rulffes
@@ -1953,7 +1953,7 @@ Wesley Hayes
 Lucinda West
 John (Jack) Dwyer
 Chris Miller
-JILL WARNE
+Jill Warne
 Jim Sorensen
 John Shaw
 Kevin R Pine
@@ -2038,7 +2038,7 @@ Robert Dean Mair
 Matthew Heines
 Justin Smoak
 Derek Chartrand
-Jeffrey Beeler, Sr.
+"Jeffrey Beeler, Sr."
 Scott Sutherland
 Jack Hughes-Hageman
 Rick Lewis
@@ -2097,8 +2097,8 @@ Jessi Murray
 John P. Gibbons
 Eric J. Brown
 Kyle Lyebyedyev
-Peter Thompson, Jr.
-Joseph Cimaomo, Jr.
+"Peter Thompson, Jr."
+"Joseph Cimaomo, Jr."
 Scott Dusenbery
 Victor H. Bishop
 Morgan Puchek
@@ -3144,7 +3144,7 @@ James House
 Andrew P. Glanville
 Jake Mayson
 Kenton Gartrell
-JASON CLARK
+Jason Clark
 Jim Bell
 Philip Ostriem
 Susan Holbrook Fenich
@@ -3152,10 +3152,10 @@ Brad Sinsel
 Deanna Roy
 Jason White
 Steve Painter
-Reynaldo Garza, Jr.
+"Reynaldo Garza, Jr."
 Gary Hintze
 Todd McClaskey
-TROY CLEMENTS
+Troy Clements
 Zach Stambaugh
 Thereasa Trujillo
 Anna Schroeder
@@ -3168,14 +3168,14 @@ Laura Pickett
 Jim Stevens
 Matthew Brown
 Kyle Curtis
-JOHN PUCCINELLI
+John Puccinelli
 Sandi Belzer
 Tim Dufault
 Mark Johnson
 Kevin Cox
 Samual Carman
 Karly Almon
-DAVID LARSON
+David Larson
 Chelsea Snodgrass
 Marshal Murray
 Elizabeth A. Marquis
@@ -3186,7 +3186,7 @@ Eric Miller
 John Mayo
 Kathy Backstrom
 Don Prest
-GARY SCOTT PETERSON
+Gary Scott Peterson
 Brad Bergener
 Matthew M Bower
 Pamela D. Robson
@@ -3197,9 +3197,9 @@ Brian Morton
 Phil Bird
 Jose Rocha
 Lars Hanson
-KATHLEEN ALTICK
+Kathleen Altick
 Lauri Palmer
-David R. Weyeneth, Sr.
+"David R. Weyeneth, Sr."
 Devin Kuh
 Write-in
 Uncommitted Delegates

@@ -264,92 +264,38 @@ ReportingUnit	Utah;Wasatch County	Wasatch
 ReportingUnit	Utah;Washington County	Washington
 ReportingUnit	Utah;Wayne County	Wayne
 ReportingUnit	Utah;Weber County	Weber
-Candidate	BROCK PIERCE KARLA BALLARD	BROCK PIERCE KARLA BALLARD
-Candidate	DON BLANKENSHIP WILLIAM MOHR	DON BLANKENSHIP WILLIAM MOHR
-Candidate	DONALD J. TRUMP MICHAEL R. PENCE	DONALD J. TRUMP MICHAEL R. PENCE
-Candidate	GLORIA LA RIVA	GLORIA LA RIVA
-Candidate	HOWIE HAWKINS ANGELA WALKER	HOWIE HAWKINS ANGELA WALKER
-Candidate	JO JORGENSEN JEREMY COHEN	JO JORGENSEN JEREMY COHEN
-Candidate	JOE MCHUGH ELIZABETH STORM	JOE MCHUGH ELIZABETH STORM
-Candidate	JOSEPH R. BIDEN KAMALA D. HARRIS	JOSEPH R. BIDEN KAMALA D. HARRIS
-Candidate	KANYE WEST MICHELLE TIDBALL	KANYE WEST MICHELLE TIDBALL
+Candidate	Brock Pierce	Brock Pierce Karla Ballard
+Candidate	Don Blankenship	Don Blankenship William Mohr
+Candidate	Gloria La Riva	Gloria La Riva
+Candidate	Howie Hawkins	Howie Hawkins Angela Walker
+Candidate	Jo Jorgensen	Jo Jorgensen Jeremy Cohen
+Candidate	Joe Mchugh	Joe Mchugh Elizabeth Storm
+Candidate	Joseph R. Biden	Joseph R. Biden Kamala D. Harris
+Candidate	Kanye West	Kanye West Michelle Tidball
 Candidate	<- did not match regex ^(.*) \([A-Z]{3}\)$	<- did not match regex ^(.*) \([A-Z]{3}\)$
 Candidate	County <- did not match regex ^(.*) \([A-Z]{3}\)$County	County <- did not match regex ^(.*) \([A-Z]{3}\)$County
-Candidate	BLAKE DAVID MOORE	BLAKE DAVID MOORE
-Candidate	DARREN PARRY	DARREN PARRY
-Candidate	CHRIS STEWART	CHRIS STEWART
-Candidate	J. ROBERT LATHAM	J. ROBERT LATHAM
-Candidate	KAEL WESTON	KAEL WESTON
-Candidate	DANIEL CLYDE CUMMINGS	DANIEL CLYDE CUMMINGS
-Candidate	DEVIN D. THORPE	DEVIN D. THORPE
-Candidate	JOHN CURTIS	JOHN CURTIS
-Candidate	THOMAS G. MCNEILL	THOMAS G. MCNEILL
-Candidate	BEN MCADAMS	BEN MCADAMS
-Candidate	BURGESS OWENS	BURGESS OWENS
-Candidate	JOHN MOLNAR	JOHN MOLNAR
-Candidate	JONIA M BRODERICK	JONIA M BRODERICK
-Candidate	CHRIS PETERSON KARINA BROWN	CHRIS PETERSON KARINA BROWN
-Candidate	DANIEL RHEAD COTTAM BARRY EVAN SHORT	DANIEL RHEAD COTTAM BARRY EVAN SHORT
-Candidate	GREG DUERDEN WAYNE HILL	GREG DUERDEN WAYNE HILL
-Candidate	SPENCER J. COX DEIDRE M. HENDERSON	SPENCER J. COX DEIDRE M. HENDERSON
-Candidate	GREG SKORDAS	GREG SKORDAS
-Candidate	RUDY J. BAUTISTA	RUDY J. BAUTISTA
-Candidate	SEAN D. REYES	SEAN D. REYES
-Candidate	Thomas G. Mcneill	Thomas G. Mcneill
-Candidate	Spencer J. Cox	Spencer J. Cox Deidre M. Henderson
-Candidate	Sean D. Reyes	Sean D. Reyes
-Candidate	Rudy J. Bautista	Rudy J. Bautista
-Candidate	Kanye West	Kanye West Michelle Tidball
-Candidate	Kael Weston	Kael Weston
-Candidate	Joseph R. Biden	Joseph R. Biden Kamala D. Harris
-Candidate	Jonia M Broderick	Jonia M Broderick
-Candidate	John Molnar	John Molnar
-Candidate	John Curtis	John Curtis
-Candidate	Joe Mchugh	Joe Mchugh Elizabeth Storm
-Candidate	Jo Jorgensen	Jo Jorgensen Jeremy Cohen
-Candidate	J. Robert Latham	J. Robert Latham
-Candidate	Howie Hawkins	Howie Hawkins Angela Walker
-Candidate	Greg Skordas	Greg Skordas
-Candidate	Greg Duerden	Greg Duerden Wayne Hill
-Candidate	Gloria La Riva	Gloria La Riva
-Candidate	Donald J. Trump	Donald J. Trump Michael R. Pence
-Candidate	Don Blankenship	Don Blankenship William Mohr
-Candidate	Devin D. Thorpe	Devin D. Thorpe
-Candidate	Darren Parry	Darren Parry
-Candidate	Daniel Rhead Cottam	Daniel Rhead Cottam Barry Evan Short
-Candidate	Daniel Clyde Cummings	Daniel Clyde Cummings
-Candidate	Chris Stewart	Chris Stewart
-Candidate	Chris Peterson	Chris Peterson Karina Brown
-Candidate	Burgess Owens	Burgess Owens
-Candidate	Brock Pierce	Brock Pierce Karla Ballard
 Candidate	Blake David Moore	Blake David Moore
-Candidate	Ben Mcadams	Ben Mcadams
-Candidate	Thomas G. Mcneill	Thomas G. Mcneill
-Candidate	Spencer J. Cox	Spencer J. Cox Deidre M. Henderson
-Candidate	Sean D. Reyes	Sean D. Reyes
-Candidate	Rudy J. Bautista	Rudy J. Bautista
-Candidate	Kanye West	Kanye West Michelle Tidball
-Candidate	Kael Weston	Kael Weston
-Candidate	Joseph R. Biden	Joseph R. Biden Kamala D. Harris
-Candidate	Jonia M Broderick	Jonia M Broderick
-Candidate	John Molnar	John Molnar
-Candidate	John Curtis	John Curtis
-Candidate	Joe Mchugh	Joe Mchugh Elizabeth Storm
-Candidate	Jo Jorgensen	Jo Jorgensen Jeremy Cohen
-Candidate	J. Robert Latham	J. Robert Latham
-Candidate	Howie Hawkins	Howie Hawkins Angela Walker
-Candidate	Greg Skordas	Greg Skordas
-Candidate	Greg Duerden	Greg Duerden Wayne Hill
-Candidate	Gloria La Riva	Gloria La Riva
-Candidate	Donald J. Trump	Donald J. Trump Michael R. Pence
-Candidate	Don Blankenship	Don Blankenship William Mohr
-Candidate	Devin D. Thorpe	Devin D. Thorpe
 Candidate	Darren Parry	Darren Parry
-Candidate	Daniel Rhead Cottam	Daniel Rhead Cottam Barry Evan Short
-Candidate	Daniel Clyde Cummings	Daniel Clyde Cummings
 Candidate	Chris Stewart	Chris Stewart
-Candidate	Chris Peterson	Chris Peterson Karina Brown
-Candidate	Burgess Owens	Burgess Owens
-Candidate	Brock Pierce	Brock Pierce Karla Ballard
-Candidate	Blake David Moore	Blake David Moore
+Candidate	J. Robert Latham	J. Robert Latham
+Candidate	Kael Weston	Kael Weston
+Candidate	Daniel Clyde Cummings	Daniel Clyde Cummings
+Candidate	Devin D. Thorpe	Devin D. Thorpe
+Candidate	John Curtis	John Curtis
+Candidate	Thomas G. Mcneill	Thomas G. Mcneill
 Candidate	Ben Mcadams	Ben Mcadams
+Candidate	Burgess Owens	Burgess Owens
+Candidate	John Molnar	John Molnar
+Candidate	Jonia M Broderick	Jonia M Broderick
+Candidate	Chris Peterson Karina Brown	Chris Peterson Karina Brown
+Candidate	Daniel Rhead Cottam Barry Evan Short	Daniel Rhead Cottam Barry Evan Short
+Candidate	Greg Duerden Wayne Hill	Greg Duerden Wayne Hill
+Candidate	Spencer J. Cox Deidre M. Henderson	Spencer J. Cox Deidre M. Henderson
+Candidate	Greg Skordas	Greg Skordas
+Candidate	Rudy J. Bautista	Rudy J. Bautista
+Candidate	Sean D. Reyes	Sean D. Reyes
+Candidate	Spencer J. Cox	Spencer J. Cox Deidre M. Henderson
+Candidate	Greg Duerden	Greg Duerden Wayne Hill
+Candidate	Donald J. Trump	Donald J. Trump Michael R. Pence
+Candidate	Daniel Rhead Cottam	Daniel Rhead Cottam Barry Evan Short
+Candidate	Chris Peterson	Chris Peterson Karina Brown

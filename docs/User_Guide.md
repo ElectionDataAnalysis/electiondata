@@ -75,7 +75,8 @@ and similarly, if necessary, for any Contest or Selection. If there is more than
    Available for flat_text and excel file types:
    * (optional) `rows_to_skip` An integer giving the number of rows to skip at the top to get to the table of counts. This parameter will affect all integers designating rows -- e.g., '<header_0>' is the first row not skipped. This affects the numbering of rows for munge strings that are constant over the sheet as well. If `rows_to_skip = 2`, then '<row_0>' will denote the third row of the actual Excel sheet -- the highest unskipped row. The system recognizes the leftmost non-blank cell as the content to be read.
    * (optional) `all_rows` If the file has no column headers but only data rows with counts, set this parameter to 'data'
-   * (optional) `multi_blocks` if there are multiple blocks of data per page, each with its own headers, set this parameter to 'yes'. For multi-block sheets, munge parameters refer to the blocks (and must be the same for all blocks).
+   * (optional) `multi_block` if there are multiple blocks of data per page, each with its own headers, set this parameter to 'yes'. For multi-block sheets, munge parameters refer to the blocks (and must be the same for all blocks).
+   * (optional) `max_blocks` if `multi_block=yes`, `max_blocks` is an integer telling the system how many blocks at most to read off of each sheet.
  
  
 Put each formula for parsing information from the results file into the corresponding munge formula section (`[in_field_values]`, `[in_count_headers]` or `[constant_over_sheet]`. Constant items can be give either:

@@ -4398,3 +4398,346 @@ Candidate	Darryl W. Perry	Darryl W. Perry
 Candidate	Dan Feltes	Dan Feltes
 Candidate	Chris Sununu	Chris Sununu
 Candidate	Justin O'Donnell	Justin O'Donnell
+Candidate	Zachary S. Dumont	Zachary S. Dumont
+Candidate	Matt Mowers	Matt Mowers
+Candidate	Chris Pappas	Chris Pappas
+Candidate	Steven Negron	Steven Negron
+Candidate	Ann McLane Kuster	Ann McLane Kuster
+Candidate	Andrew Olding	Andrew Olding
+ReportingUnit	New Hampshire;Sullivan County;Acworth	Acworth
+ReportingUnit	New Hampshire;Carroll County;Albany	Albany
+ReportingUnit	New Hampshire;Grafton County;Alexandria	Alexandria
+ReportingUnit	New Hampshire;Merrimack County;Allenstown	Allenstown
+ReportingUnit	New Hampshire;Cheshire County;Alstead	Alstead
+ReportingUnit	New Hampshire;Belknap County;Alton	Alton
+ReportingUnit	New Hampshire;Hillsborough County;Amherst	Amherst
+ReportingUnit	New Hampshire;Merrimack County;Andover	Andover
+ReportingUnit	New Hampshire;Hillsborough County;Antrim	Antrim
+ReportingUnit	New Hampshire;Grafton County;Ashland	Ashland
+ReportingUnit	New Hampshire;Rockingham County;Atkinson	Atkinson
+ReportingUnit	New Hampshire;Rockingham County;Auburn	Auburn
+ReportingUnit	New Hampshire;Belknap County;Barnstead	Barnstead
+ReportingUnit	New Hampshire;Strafford County;Barrington	Barrington
+ReportingUnit	New Hampshire;Carroll County;Bartlett	Bartlett
+ReportingUnit	New Hampshire;Grafton County;Bath	Bath
+ReportingUnit	New Hampshire;Hillsborough County;Bedford	Bedford
+ReportingUnit	New Hampshire;Belknap County;Belmont	Belmont
+ReportingUnit	New Hampshire;Hillsborough County;Bennington	Bennington
+ReportingUnit	New Hampshire;Grafton County;Benton	Benton
+ReportingUnit	New Hampshire;Coos County;Berlin	Berlin
+ReportingUnit	New Hampshire;Grafton County;Bethlehem	Bethlehem
+ReportingUnit	New Hampshire;Merrimack County;Boscawen	Boscawen
+ReportingUnit	New Hampshire;Merrimack County;Bow	Bow
+ReportingUnit	New Hampshire;Merrimack County;Bradford	Bradford
+ReportingUnit	New Hampshire;Rockingham County;Brentwood	Brentwood
+ReportingUnit	New Hampshire;Grafton County;Bridgewater	Bridgewater
+ReportingUnit	New Hampshire;Grafton County;Bristol	Bristol
+ReportingUnit	New Hampshire;Carroll County;Brookfield	Brookfield
+ReportingUnit	New Hampshire;Hillsborough County;Brookline	Brookline
+ReportingUnit	New Hampshire;Grafton County;Campton	Campton
+ReportingUnit	New Hampshire;Grafton County;Canaan	Canaan
+ReportingUnit	New Hampshire;Rockingham County;Candia	Candia
+ReportingUnit	New Hampshire;Merrimack County;Canterbury	Canterbury
+ReportingUnit	New Hampshire;Coos County;Carroll	Carroll (town)
+ReportingUnit	New Hampshire;Belknap County;Center Harbor	Center Harbor
+ReportingUnit	New Hampshire;Sullivan County;Charlestown	Charlestown
+ReportingUnit	New Hampshire;Carroll County;Chatham	Chatham
+ReportingUnit	New Hampshire;Rockingham County;Chester	Chester
+ReportingUnit	New Hampshire;Cheshire County;Chesterfield	Chesterfield
+ReportingUnit	New Hampshire;Merrimack County;Chichester	Chichester
+ReportingUnit	New Hampshire;Sullivan County;Claremont	Claremont
+ReportingUnit	New Hampshire;Coos County;Clarksville	Clarksville
+ReportingUnit	New Hampshire;Coos County;Colebrook	Colebrook
+ReportingUnit	New Hampshire;Coos County;Columbia	Columbia
+ReportingUnit	New Hampshire;Merrimack County;Concord	Concord
+ReportingUnit	New Hampshire;Carroll County;Conway	Conway
+ReportingUnit	New Hampshire;Sullivan County;Cornish	Cornish
+ReportingUnit	New Hampshire;Sullivan County;Croydon	Croydon
+ReportingUnit	New Hampshire;Coos County;Dalton	Dalton
+ReportingUnit	New Hampshire;Merrimack County;Danbury	Danbury
+ReportingUnit	New Hampshire;Rockingham County;Danville	Danville
+ReportingUnit	New Hampshire;Rockingham County;Deerfield	Deerfield
+ReportingUnit	New Hampshire;Hillsborough County;Deering	Deering
+ReportingUnit	New Hampshire;Rockingham County;Derry	Derry
+ReportingUnit	New Hampshire;Grafton County;Dorchester	Dorchester
+ReportingUnit	New Hampshire;Strafford County;Dover	Dover
+ReportingUnit	New Hampshire;Cheshire County;Dublin	Dublin
+ReportingUnit	New Hampshire;Coos County;Dummer	Dummer
+ReportingUnit	New Hampshire;Merrimack County;Dunbarton	Dunbarton
+ReportingUnit	New Hampshire;Strafford County;Durham	Durham
+ReportingUnit	New Hampshire;Rockingham County;East Kingston	East Kingston
+ReportingUnit	New Hampshire;Grafton County;Easton	Easton
+ReportingUnit	New Hampshire;Carroll County;Eaton	Eaton
+ReportingUnit	New Hampshire;Carroll County;Effingham	Effingham
+ReportingUnit	New Hampshire;Grafton County;Ellsworth	Ellsworth
+ReportingUnit	New Hampshire;Grafton County;Enfield	Enfield
+ReportingUnit	New Hampshire;Rockingham County;Epping	Epping
+ReportingUnit	New Hampshire;Merrimack County;Epsom	Epsom
+ReportingUnit	New Hampshire;Coos County;Errol	Errol
+ReportingUnit	New Hampshire;Rockingham County;Exeter	Exeter
+ReportingUnit	New Hampshire;Strafford County;Farmington	Farmington
+ReportingUnit	New Hampshire;Cheshire County;Fitzwilliam	Fitzwilliam
+ReportingUnit	New Hampshire;Hillsborough County;Francestown	Francestown
+ReportingUnit	New Hampshire;Grafton County;Franconia	Franconia
+ReportingUnit	New Hampshire;Merrimack County;Franklin	Franklin
+ReportingUnit	New Hampshire;Carroll County;Freedom	Freedom
+ReportingUnit	New Hampshire;Rockingham County;Fremont	Fremont
+ReportingUnit	New Hampshire;Belknap County;Gilford	Gilford
+ReportingUnit	New Hampshire;Belknap County;Gilmanton	Gilmanton
+ReportingUnit	New Hampshire;Cheshire County;Gilsum	Gilsum
+ReportingUnit	New Hampshire;Hillsborough County;Goffstown	Goffstown
+ReportingUnit	New Hampshire;Coos County;Gorham	Gorham
+ReportingUnit	New Hampshire;Sullivan County;Goshen	Goshen
+ReportingUnit	New Hampshire;Grafton County;Grafton	Grafton (town)
+ReportingUnit	New Hampshire;Sullivan County;Grantham	Grantham
+ReportingUnit	New Hampshire;Hillsborough County;Greenfield	Greenfield
+ReportingUnit	New Hampshire;Rockingham County;Greenland	Greenland
+ReportingUnit	New Hampshire;Hillsborough County;Greenville	Greenville
+ReportingUnit	New Hampshire;Grafton County;Groton	Groton
+ReportingUnit	New Hampshire;Rockingham County;Hampstead	Hampstead
+ReportingUnit	New Hampshire;Rockingham County;Hampton	Hampton
+ReportingUnit	New Hampshire;Rockingham County;Hampton Falls	Hampton Falls
+ReportingUnit	New Hampshire;Hillsborough County;Hancock	Hancock
+ReportingUnit	New Hampshire;Grafton County;Hanover	Hanover
+ReportingUnit	New Hampshire;Cheshire County;Harrisville	Harrisville
+ReportingUnit	New Hampshire;Carroll County;Hart's Location	Hart's Location
+ReportingUnit	New Hampshire;Grafton County;Haverhill	Haverhill
+ReportingUnit	New Hampshire;Grafton County;Hebron	Hebron
+ReportingUnit	New Hampshire;Merrimack County;Henniker	Henniker
+ReportingUnit	New Hampshire;Merrimack County;Hill	Hill
+ReportingUnit	New Hampshire;Hillsborough County;Hillsborough	Hillsborough (town)
+ReportingUnit	New Hampshire;Cheshire County;Hinsdale	Hinsdale
+ReportingUnit	New Hampshire;Grafton County;Holderness	Holderness
+ReportingUnit	New Hampshire;Hillsborough County;Hollis	Hollis
+ReportingUnit	New Hampshire;Merrimack County;Hooksett	Hooksett
+ReportingUnit	New Hampshire;Merrimack County;Hopkinton	Hopkinton
+ReportingUnit	New Hampshire;Hillsborough County;Hudson	Hudson
+ReportingUnit	New Hampshire;Carroll County;Jackson	Jackson
+ReportingUnit	New Hampshire;Cheshire County;Jaffrey	Jaffrey
+ReportingUnit	New Hampshire;Coos County;Jefferson	Jefferson
+ReportingUnit	New Hampshire;Cheshire County;Keene	Keene
+ReportingUnit	New Hampshire;Rockingham County;Kensington	Kensington
+ReportingUnit	New Hampshire;Rockingham County;Kingston	Kingston
+ReportingUnit	New Hampshire;Belknap County;Laconia	Laconia
+ReportingUnit	New Hampshire;Coos County;Lancaster	Lancaster
+ReportingUnit	New Hampshire;Grafton County;Landaff	Landaff
+ReportingUnit	New Hampshire;Sullivan County;Langdon	Langdon
+ReportingUnit	New Hampshire;Grafton County;Lebanon	Lebanon
+ReportingUnit	New Hampshire;Strafford County;Lee	Lee
+ReportingUnit	New Hampshire;Sullivan County;Lempster	Lempster
+ReportingUnit	New Hampshire;Grafton County;Lincoln	Lincoln
+ReportingUnit	New Hampshire;Grafton County;Lisbon	Lisbon
+ReportingUnit	New Hampshire;Hillsborough County;Litchfield	Litchfield
+ReportingUnit	New Hampshire;Grafton County;Littleton	Littleton
+ReportingUnit	New Hampshire;Rockingham County;Londonderry	Londonderry
+ReportingUnit	New Hampshire;Merrimack County;Loudon	Loudon
+ReportingUnit	New Hampshire;Grafton County;Lyman	Lyman
+ReportingUnit	New Hampshire;Grafton County;Lyme	Lyme
+ReportingUnit	New Hampshire;Hillsborough County;Lyndeborough	Lyndeborough
+ReportingUnit	New Hampshire;Strafford County;Madbury	Madbury
+ReportingUnit	New Hampshire;Carroll County;Madison	Madison
+ReportingUnit	New Hampshire;Hillsborough County;Manchester	Manchester
+ReportingUnit	New Hampshire;Cheshire County;Marlborough	Marlborough
+ReportingUnit	New Hampshire;Cheshire County;Marlow	Marlow
+ReportingUnit	New Hampshire;Hillsborough County;Mason	Mason
+ReportingUnit	New Hampshire;Belknap County;Meredith	Meredith
+ReportingUnit	New Hampshire;Hillsborough County;Merrimack	Merrimack (town)
+ReportingUnit	New Hampshire;Strafford County;Middleton	Middleton
+ReportingUnit	New Hampshire;Coos County;Milan	Milan
+ReportingUnit	New Hampshire;Hillsborough County;Milford	Milford
+ReportingUnit	New Hampshire;Strafford County;Milton	Milton
+ReportingUnit	New Hampshire;Grafton County;Monroe	Monroe
+ReportingUnit	New Hampshire;Hillsborough County;Mont Vernon	Mont Vernon
+ReportingUnit	New Hampshire;Carroll County;Moultonborough	Moultonborough
+ReportingUnit	New Hampshire;Hillsborough County;Nashua	Nashua
+ReportingUnit	New Hampshire;Cheshire County;Nelson	Nelson
+ReportingUnit	New Hampshire;Hillsborough County;New Boston	New Boston
+ReportingUnit	New Hampshire;Rockingham County;New Castle	New Castle
+ReportingUnit	New Hampshire;Strafford County;New Durham	New Durham
+ReportingUnit	New Hampshire;Belknap County;New Hampton	New Hampton
+ReportingUnit	New Hampshire;Hillsborough County;New Ipswich	New Ipswich
+ReportingUnit	New Hampshire;Merrimack County;New London	New London
+ReportingUnit	New Hampshire;Merrimack County;Newbury	Newbury
+ReportingUnit	New Hampshire;Rockingham County;Newfields	Newfields
+ReportingUnit	New Hampshire;Rockingham County;Newington	Newington
+ReportingUnit	New Hampshire;Rockingham County;Newmarket	Newmarket
+ReportingUnit	New Hampshire;Sullivan County;Newport	Newport
+ReportingUnit	New Hampshire;Rockingham County;Newton	Newton
+ReportingUnit	New Hampshire;Rockingham County;North Hampton	North Hampton
+ReportingUnit	New Hampshire;Merrimack County;Northfield	Northfield
+ReportingUnit	New Hampshire;Coos County;Northumberland	Northumberland
+ReportingUnit	New Hampshire;Rockingham County;Northwood	Northwood
+ReportingUnit	New Hampshire;Rockingham County;Nottingham	Nottingham
+ReportingUnit	New Hampshire;Grafton County;Orange	Orange
+ReportingUnit	New Hampshire;Grafton County;Orford	Orford
+ReportingUnit	New Hampshire;Carroll County;Ossipee	Ossipee
+ReportingUnit	New Hampshire;Hillsborough County;Pelham	Pelham
+ReportingUnit	New Hampshire;Merrimack County;Pembroke	Pembroke
+ReportingUnit	New Hampshire;Hillsborough County;Peterborough	Peterborough
+ReportingUnit	New Hampshire;Grafton County;Piermont	Piermont
+ReportingUnit	New Hampshire;Coos County;Pittsburg	Pittsburg
+ReportingUnit	New Hampshire;Merrimack County;Pittsfield	Pittsfield
+ReportingUnit	New Hampshire;Sullivan County;Plainfield	Plainfield
+ReportingUnit	New Hampshire;Rockingham County;Plaistow	Plaistow
+ReportingUnit	New Hampshire;Grafton County;Plymouth	Plymouth
+ReportingUnit	New Hampshire;Rockingham County;Portsmouth	Portsmouth
+ReportingUnit	New Hampshire;Coos County;Randolph	Randolph
+ReportingUnit	New Hampshire;Rockingham County;Raymond	Raymond
+ReportingUnit	New Hampshire;Cheshire County;Richmond	Richmond
+ReportingUnit	New Hampshire;Cheshire County;Rindge	Rindge
+ReportingUnit	New Hampshire;Strafford County;Rochester	Rochester
+ReportingUnit	New Hampshire;Strafford County;Rollinsford	Rollinsford
+ReportingUnit	New Hampshire;Cheshire County;Roxbury	Roxbury
+ReportingUnit	New Hampshire;Grafton County;Rumney	Rumney
+ReportingUnit	New Hampshire;Rockingham County;Rye	Rye
+ReportingUnit	New Hampshire;Rockingham County;Salem	Salem
+ReportingUnit	New Hampshire;Merrimack County;Salisbury	Salisbury
+ReportingUnit	New Hampshire;Belknap County;Sanbornton	Sanbornton
+ReportingUnit	New Hampshire;Rockingham County;Sandown	Sandown
+ReportingUnit	New Hampshire;Carroll County;Sandwich	Sandwich
+ReportingUnit	New Hampshire;Rockingham County;Seabrook	Seabrook
+ReportingUnit	New Hampshire;Hillsborough County;Sharon	Sharon
+ReportingUnit	New Hampshire;Coos County;Shelburne	Shelburne
+ReportingUnit	New Hampshire;Coos County;Millsfield	Millsfield
+ReportingUnit	New Hampshire;Strafford County;Somersworth	Somersworth
+ReportingUnit	New Hampshire;Rockingham County;South Hampton	South Hampton
+ReportingUnit	New Hampshire;Sullivan County;Springfield	Springfield
+ReportingUnit	New Hampshire;Coos County;Stark	Stark
+ReportingUnit	New Hampshire;Coos County;Stewartstown	Stewartstown
+ReportingUnit	New Hampshire;Cheshire County;Stoddard	Stoddard
+ReportingUnit	New Hampshire;Strafford County;Strafford	Strafford (town)
+ReportingUnit	New Hampshire;Coos County;Stratford	Stratford
+ReportingUnit	New Hampshire;Rockingham County;Stratham	Stratham
+ReportingUnit	New Hampshire;Grafton County;Sugar Hill	Sugar Hill
+ReportingUnit	New Hampshire;Cheshire County;Sullivan	Sullivan (town)
+ReportingUnit	New Hampshire;Sullivan County;Sunapee	Sunapee
+ReportingUnit	New Hampshire;Cheshire County;Surry	Surry
+ReportingUnit	New Hampshire;Merrimack County;Sutton	Sutton
+ReportingUnit	New Hampshire;Cheshire County;Swanzey	Swanzey
+ReportingUnit	New Hampshire;Carroll County;Tamworth	Tamworth
+ReportingUnit	New Hampshire;Hillsborough County;Temple	Temple
+ReportingUnit	New Hampshire;Grafton County;Thornton	Thornton
+ReportingUnit	New Hampshire;Belknap County;Tilton	Tilton
+ReportingUnit	New Hampshire;Cheshire County;Troy	Troy
+ReportingUnit	New Hampshire;Carroll County;Tuftonboro	Tuftonboro
+ReportingUnit	New Hampshire;Sullivan County;Unity	Unity
+ReportingUnit	New Hampshire;Carroll County;Wakefield	Wakefield
+ReportingUnit	New Hampshire;Cheshire County;Walpole	Walpole
+ReportingUnit	New Hampshire;Merrimack County;Warner	Warner
+ReportingUnit	New Hampshire;Grafton County;Warren	Warren
+ReportingUnit	New Hampshire;Sullivan County;Washington	Washington
+ReportingUnit	New Hampshire;Grafton County;Waterville Valley	Waterville Valley
+ReportingUnit	New Hampshire;Hillsborough County;Weare	Weare
+ReportingUnit	New Hampshire;Merrimack County;Webster	Webster
+ReportingUnit	New Hampshire;Grafton County;Wentworth	Wentworth
+ReportingUnit	New Hampshire;Cheshire County;Westmoreland	Westmoreland
+ReportingUnit	New Hampshire;Coos County;Whitefield	Whitefield
+ReportingUnit	New Hampshire;Merrimack County;Wilmot	Wilmot
+ReportingUnit	New Hampshire;Hillsborough County;Wilton	Wilton
+ReportingUnit	New Hampshire;Cheshire County;Winchester	Winchester
+ReportingUnit	New Hampshire;Rockingham County;Windham	Windham
+ReportingUnit	New Hampshire;Hillsborough County;Windsor	Windsor
+ReportingUnit	New Hampshire;Carroll County;Wolfeboro	Wolfeboro
+ReportingUnit	New Hampshire;Grafton County;Woodstock	Woodstock
+ReportingUnit	New Hampshire;Strafford County;Somersworth;Ward 5	Somersworth - Ward 5
+ReportingUnit	New Hampshire;Strafford County;Somersworth;Ward 4	Somersworth - Ward 4
+ReportingUnit	New Hampshire;Strafford County;Somersworth;Ward 3	Somersworth - Ward 3
+ReportingUnit	New Hampshire;Strafford County;Somersworth;Ward 2	Somersworth - Ward 2
+ReportingUnit	New Hampshire;Strafford County;Somersworth;Ward 1	Somersworth - Ward 1
+ReportingUnit	New Hampshire;Strafford County;Rochester;Ward 6	Rochester - Ward 6
+ReportingUnit	New Hampshire;Strafford County;Rochester;Ward 5	Rochester - Ward 5
+ReportingUnit	New Hampshire;Strafford County;Rochester;Ward 4	Rochester - Ward 4
+ReportingUnit	New Hampshire;Strafford County;Rochester;Ward 3	Rochester - Ward 3
+ReportingUnit	New Hampshire;Strafford County;Rochester;Ward 2	Rochester - Ward 2
+ReportingUnit	New Hampshire;Strafford County;Rochester;Ward 1	Rochester - Ward 1
+ReportingUnit	New Hampshire;Rockingham County;Portsmouth;Ward 5	Portsmouth - Ward 5
+ReportingUnit	New Hampshire;Rockingham County;Portsmouth;Ward 4	Portsmouth - Ward 4
+ReportingUnit	New Hampshire;Rockingham County;Portsmouth;Ward 3	Portsmouth - Ward 3
+ReportingUnit	New Hampshire;Rockingham County;Portsmouth;Ward 2	Portsmouth - Ward 2
+ReportingUnit	New Hampshire;Rockingham County;Portsmouth;Ward 1	Portsmouth - Ward 1
+ReportingUnit	New Hampshire;Hillsborough County;Manchester;Ward 9	Manchester - Ward 9
+ReportingUnit	New Hampshire;Hillsborough County;Manchester;Ward 8	Manchester - Ward 8
+ReportingUnit	New Hampshire;Hillsborough County;Manchester;Ward 7	Manchester - Ward 7
+ReportingUnit	New Hampshire;Hillsborough County;Manchester;Ward 6	Manchester - Ward 6
+ReportingUnit	New Hampshire;Hillsborough County;Manchester;Ward 5	Manchester - Ward 5
+ReportingUnit	New Hampshire;Hillsborough County;Manchester;Ward 4	Manchester - Ward 4
+ReportingUnit	New Hampshire;Hillsborough County;Manchester;Ward 3	Manchester - Ward 3
+ReportingUnit	New Hampshire;Hillsborough County;Manchester;Ward 2	Manchester - Ward 2
+ReportingUnit	New Hampshire;Hillsborough County;Manchester;Ward 12	Manchester - Ward 12
+ReportingUnit	New Hampshire;Hillsborough County;Manchester;Ward 11	Manchester - Ward 11
+ReportingUnit	New Hampshire;Hillsborough County;Manchester;Ward 10	Manchester - Ward 10
+ReportingUnit	New Hampshire;Hillsborough County;Manchester;Ward 1	Manchester - Ward 1
+ReportingUnit	New Hampshire;Belknap County;Laconia;Ward 6	Laconia - Ward 6
+ReportingUnit	New Hampshire;Belknap County;Laconia;Ward 5	Laconia - Ward 5
+ReportingUnit	New Hampshire;Belknap County;Laconia;Ward 4	Laconia - Ward 4
+ReportingUnit	New Hampshire;Belknap County;Laconia;Ward 3	Laconia - Ward 3
+ReportingUnit	New Hampshire;Belknap County;Laconia;Ward 2	Laconia - Ward 2
+ReportingUnit	New Hampshire;Belknap County;Laconia;Ward 1	Laconia - Ward 1
+ReportingUnit	New Hampshire;Carroll County;Hale's Location	Hale's Location
+ReportingUnit	New Hampshire;Strafford County;Dover;Ward 6	Dover - Ward 6
+ReportingUnit	New Hampshire;Strafford County;Dover;Ward 5	Dover - Ward 5
+ReportingUnit	New Hampshire;Strafford County;Dover;Ward 4	Dover - Ward 4
+ReportingUnit	New Hampshire;Strafford County;Dover;Ward 3	Dover - Ward 3
+ReportingUnit	New Hampshire;Strafford County;Dover;Ward 2	Dover - Ward 2
+ReportingUnit	New Hampshire;Strafford County;Dover;Ward 1	Dover - Ward 1
+ReportingUnit	New Hampshire;Lebanon County;Nashua;Ward 9	Nashua - Ward 9
+ReportingUnit	New Hampshire;Lebanon County;Nashua;Ward 8	Nashua - Ward 8
+ReportingUnit	New Hampshire;Lebanon County;Nashua;Ward 7	Nashua - Ward 7
+ReportingUnit	New Hampshire;Lebanon County;Nashua;Ward 6	Nashua - Ward 6
+ReportingUnit	New Hampshire;Lebanon County;Nashua;Ward 5	Nashua - Ward 5
+ReportingUnit	New Hampshire;Lebanon County;Nashua;Ward 4	Nashua - Ward 4
+ReportingUnit	New Hampshire;Lebanon County;Nashua;Ward 3	Nashua - Ward 3
+ReportingUnit	New Hampshire;Lebanon County;Nashua;Ward 2	Nashua - Ward 2
+ReportingUnit	New Hampshire;Lebanon County;Nashua;Ward 1	Nashua - Ward 1
+ReportingUnit	New Hampshire;Grafton County;Lebanon;Ward 3	Lebanon - Ward 3
+ReportingUnit	New Hampshire;Grafton County;Lebanon;Ward 2	Lebanon - Ward 2
+ReportingUnit	New Hampshire;Grafton County;Lebanon;Ward 1	Lebanon - Ward 1
+ReportingUnit	New Hampshire;Franklin County;Keene;Ward 5	Keene - Ward 5
+ReportingUnit	New Hampshire;Franklin County;Keene;Ward 4	Keene - Ward 4
+ReportingUnit	New Hampshire;Franklin County;Keene;Ward 3*	Keene - Ward 3*
+ReportingUnit	New Hampshire;Franklin County;Keene;Ward 2	Keene - Ward 2
+ReportingUnit	New Hampshire;Franklin County;Keene;Ward 1	Keene - Ward 1
+ReportingUnit	New Hampshire;Merrimack County;Franklin;Ward 3	Franklin - Ward 3
+ReportingUnit	New Hampshire;Merrimack County;Franklin;Ward 2	Franklin - Ward 2
+ReportingUnit	New Hampshire;Merrimack County;Franklin;Ward 1	Franklin - Ward 1
+ReportingUnit	New Hampshire;Merrimack County;Concord;Ward 9	Concord - Ward 9
+ReportingUnit	New Hampshire;Merrimack County;Concord;Ward 8	Concord - Ward 8
+ReportingUnit	New Hampshire;Merrimack County;Concord;Ward 7	Concord - Ward 7
+ReportingUnit	New Hampshire;Merrimack County;Concord;Ward 6	Concord - Ward 6
+ReportingUnit	New Hampshire;Merrimack County;Concord;Ward 5	Concord - Ward 5
+ReportingUnit	New Hampshire;Merrimack County;Concord;Ward 4	Concord - Ward 4
+ReportingUnit	New Hampshire;Merrimack County;Concord;Ward 3	Concord - Ward 3
+ReportingUnit	New Hampshire;Merrimack County;Concord;Ward 2	Concord - Ward 2
+ReportingUnit	New Hampshire;Merrimack County;Concord;Ward 10	Concord - Ward 10
+ReportingUnit	New Hampshire;Merrimack County;Concord;Ward 1	Concord - Ward 1
+ReportingUnit	New Hampshire;Sullivan County;Claremont;Ward 3	Claremont - Ward 3
+ReportingUnit	New Hampshire;Sullivan County;Claremont;Ward 2	Claremont - Ward 2
+ReportingUnit	New Hampshire;Sullivan County;Claremont;Ward 1	Claremont - Ward 1
+ReportingUnit	New Hampshire;Coos County;At. & Gil Ac. Grant	At. & Gil Ac. Grant
+ReportingUnit	New Hampshire;Coos County;At. & Gil Ac. Grant	At. & Gil Ac. Gt
+ReportingUnit	New Hampshire;Coos County;Bean's Grant	Bean's Grant
+ReportingUnit	New Hampshire;Coos County;Bean's Purchase	Bean's Purchase
+ReportingUnit	New Hampshire;Coos County;Cambridge	Cambridge
+ReportingUnit	New Hampshire;Coos County;Chandler's Purchase	Chandler's Purchase
+ReportingUnit	New Hampshire;Coos County;Crawford's Purchase	Crawford's Purchase
+ReportingUnit	New Hampshire;Coos County;Cutt's Grant	Cutt's Grant
+ReportingUnit	New Hampshire;Coos County;Dix's Grant	Dix's Grant
+ReportingUnit	New Hampshire;Coos County;Erving's Location	Erving's Location
+ReportingUnit	New Hampshire;Coos County;Green's Grant	Green's Grant
+ReportingUnit	New Hampshire;Coos County;Hadley's Purchase	Hadley's Purchase
+ReportingUnit	New Hampshire;Coos County;Kilkenny	Kilkenny
+ReportingUnit	New Hampshire;Grafton County;Livermore	Livermore
+ReportingUnit	New Hampshire;Coos County;Low & Burbank's Grant	Low & Burbank's
+ReportingUnit	New Hampshire;Coos County;Low & Burbank's Grant	Low & Burbank's Grant
+ReportingUnit	New Hampshire;Coos County; Grant	Grant
+ReportingUnit	New Hampshire;Coos County;Martin's Location	Martin's Location
+ReportingUnit	New Hampshire;Coos County;Odell	Odell
+ReportingUnit	New Hampshire;Coos County;Pinkham's Grant	Pinkham's Grant
+ReportingUnit	New Hampshire;Coos County;Sargent's Purchase	Sargent's Purchase
+ReportingUnit	New Hampshire;Coos County;Second College Grant	Second College Grant
+ReportingUnit	New Hampshire;Coos County;Success	Success
+ReportingUnit	New Hampshire;Coos County;Thompson & Mes's Purchase	Thompson & Mes's Purchase
+ReportingUnit	New Hampshire;Coos County;Thompson & Mes's Purchase	Thomp. and Mes's Pur.
+ReportingUnit	New Hampshire;Coos County; Mes's Purchase	Mes's Purchase
+ReportingUnit	New Hampshire;Coos County;Wentworth's Location	Wentworth's Location
+ReportingUnit	New Hampshire;Coos County;Dixville	Dixville

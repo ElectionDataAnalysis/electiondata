@@ -1,521 +1,271 @@
 BallotName
-DONALD J. TRUMP
-JO JORGENSEN
-JOSEPH R. BIDEN
-JADE SIMMONS
-KANYE WEST
-BROCK PIERCE
-TODD HIETT
-TODD HAGOPIAN
-JIM INHOFE
-ROBERT MURPHY
-ABBY BROYLES
-JOAN FARR
-A. D. NESBIT
-MARKWAYNE MULLIN
-RICHIE CASTALDO
-DANYELL LANIER
-BLAKE COWBOY STEPHENS
-DYLLON FITE
-JOHN R. BERRY
-JASON RITCHIE
-FRANK D. LUCAS
-ZOE MIDYETT
-GEORGE H BURNS
-RANDY COLEMAN
-SPIKE EAVES
-DALE SHEFFIELD
-TODD RUSS
-AUSTIN GIPSON-BLACK
-ANTHONY MOORE
-JUAN GARCIA
-TATE J. FINNELL
-BARRY GOWDY
-D. JENNIFER HAIGLER
-TRACY D. WALKER
-TRAVIS DAUGHERTY
-BRIAN  A. JOHNSON
-TONY SIMMONS
-BILLY W. ADAMS
-DICK LOWE
-CRAIG PARHAM
-TONI HASENBECK
-JENNIFER KERSTETTER
-TOM COLE
-BOB WHITE
-MARY BRANNON
-PAUL ROSINO
-JENNIFER WILKINSON
-JAY STEAGALL
-CASSIE KINET
-STEVE JENSEN
-JACQUELINE STEVENSON-SMITH
-DEWAYNE PEMBERTON
-JACK REAVIS
-BOB ED CULVER
-MATT MEREDITH
-MANUEL A. HOLLAND
-JASON CHENNAULT
-RANDY ROBERTSON
-CARROLL SARGENT
-ROB STANDRIDGE
-ALEX SCOTT
-PHILLIP HILLIAN
-MERLEYN BELL
-NANCY SANGIRARDI
-JACOB ROSECRANTS
-JON ECHOLS
-WAYNE HUGHES
-CHRIS AMASON
-KELLY OWINGS
-DARRY STACY
-MICHAEL D. THOMAS
-WINNIE RUSSELL
-JENEENA PALMS
-STEVEN FLOWERS
-BRYAN JUMP
+Donald J. Trump
+Jo Jorgensen
+Joseph R. Biden
+Jade Simmons
+Kanye West
+Brock Pierce
+Todd Hiett
+Todd Hagopian
+Jim Inhofe
+Robert Murphy
+Abby Broyles
+Joan Farr
+A. D. Nesbit
+Markwayne Mullin
+Richie Castaldo
+Danyell Lanier
+Blake Cowboy Stephens
+Dyllon Fite
+John R. Berry
+Jason Ritchie
+Frank D. Lucas
+Zoe Midyett
+George H Burns
+Randy Coleman
+Spike Eaves
+Dale Sheffield
+Todd Russ
+Austin Gipson-Black
+Anthony Moore
+Juan Garcia
+Tate J. Finnell
+Barry Gowdy
+D. Jennifer Haigler
+Tracy D. Walker
+Travis Daugherty
+Brian A. Johnson
+Tony Simmons
+Billy W. Adams
+Dick Lowe
+Craig Parham
+Toni Hasenbeck
+Jennifer Kerstetter
+Tom Cole
+Bob White
+Mary Brannon
+Paul Rosino
+Jennifer Wilkinson
+Jay Steagall
+Cassie Kinet
+Steve Jensen
+Jacqueline Stevenson-Smith
+Dewayne Pemberton
+Jack Reavis
+Bob Ed Culver
+Matt Meredith
+Manuel A. Holland
+Jason Chennault
+Randy Robertson
+Carroll Sargent
+Rob Standridge
+Alex Scott
+Phillip Hillian
+Merleyn Bell
+Nancy Sangirardi
+Jacob Rosecrants
+Jon Echols
+Wayne Hughes
+Chris Amason
+Kelly Owings
+Darry Stacy
+Michael D. Thomas
+Winnie Russell
+Jeneena Palms
+Steven Flowers
+Bryan Jump
 JOHN McCOLLUM
-NICK LEE
-DANIEL PAE
-LARRY BUSH
-RANDE WORTHEN
-KYLE EMMETT MERAZ
-DELL GALLOWAY
-KENNY STRADLEY
-HUGH A. GORDON
-MIKE FITZPATRICK
-KEVIN HERN
-KOJO ASAMOA-CAESAR
-EVELYN L. ROGERS
-KYLE HILBERT
-RICK PARRIS
-MARK LAWSON
-CHUCK THREADGILL
-LONNIE SIMS
-MICHAEL ROSS
-TERRI LOCKHART
-RICK MILLER
-WARREN GOLDMANN
-LEZLEY BELL
-MUSTAFA SAMI
-PAUL L BROWN
-DAVID BERRONG
-JESSICA GARVIN
-TERRI REIMER
-GARY D. AYRES
-DAVID KENNEDY
-JILL LOCKE
-FRIEDA K. WILLIS
-TIFFANY BUCHANAN
-LEANNE COFFMAN
-JEANNA BELL SCOTT
-RHONDA HENRY
-MARK BARNES
-TERRY NICKELL
-WARREN HAMILTON
-JERRY L. DONATHAN
-STEVEN FIORETTI
-TIM TURNER
-LOGAN J. PHILLIPS
-STEVE KOUPLEN
-ANGELA KAY BROOKS
-TAMMY JONES BIBLE
-JEREMIE WILSON
-MICHAEL W. BRYANT
-GARY W. DODD
-RANDY WHITE
-CACY CRIBBS
-MICHAEL G. WEST
-JASON SHANKS
+Nick Lee
+Daniel Pae
+Larry Bush
+Rande Worthen
+Kyle Emmett Meraz
+Dell Galloway
+Kenny Stradley
+Hugh A. Gordon
+Mike Fitzpatrick
+Kevin Hern
+Kojo Asamoa-Caesar
+Evelyn L. Rogers
+Kyle Hilbert
+Rick Parris
+Mark Lawson
+Chuck Threadgill
+Lonnie Sims
+Michael Ross
+Terri Lockhart
+Rick Miller
+Warren Goldmann
+Lezley Bell
+Mustafa Sami
+Paul L Brown
+David Berrong
+Jessica Garvin
+Terri Reimer
+Gary D. Ayres
+David Kennedy
+Jill Locke
+Frieda K. Willis
+Tiffany Buchanan
+Leanne Coffman
+Jeanna Bell Scott
+Rhonda Henry
+Mark Barnes
+Terry Nickell
+Warren Hamilton
+Jerry L. Donathan
+Steven Fioretti
+Tim Turner
+Logan J. Phillips
+Steve Kouplen
+Angela Kay Brooks
+Tammy Jones Bible
+Jeremie Wilson
+Michael W. Bryant
+Gary W. Dodd
+Randy White
+Cacy Cribbs
+Michael G. West
+Jason Shanks
 CHRIS DeBOARD
-ADAM  WOODRUFF
-JEREMIE GREEN
-RICK WEST
-MIKE SULLIVAN
-KATHY GRAY
-MISTY WILLISTON MANNING
-MARK JENNINGS
-TONY HILL
-MONTY GRIDER
-CLIFFORD GLEN SHATSWELL JR.
-POLLY IRVING
-DIANNA COPE
-KEITH HYSLOP
-STEPHEN WRIGHT
-TIMMIE BENSON
-DOUG SONENBERG
-JOHN WOODS
-JAMES JIM RASMUSSEN
-STEPHANIE BICE
-KENDRA S. HORN
-SHANE DAVID JETT
-GREG SADLER
-GREG TREAT
-ANDREA STONE
-MIKE OSBURN
-JACOB BACCUS
-ERIC ROBERTS
-CHELSEY BRANHAM
-BILL ROBINSON
-CYNDI MUNSON
-VALERIE WALKER
-COLLIN WALKE
-KELLY BARLEAN
-MAUREE TURNER
-JOHN HUTTON
-JOSE CRUZ
-MIKE CHRISTIAN
-MICKEY DOLLENS
-LAUREN RODEBUSH
-ANDY FUGATE
-MAX WOLFLEY
-KELLY ALBRIGHT
-BEN M JANLOO
-JASON LOWE
-MARILYN STARK
-SUMMER WESLEY
-ROBERT MANGER
-A.J. BAILEY
-MADELINE SCOTT
-DAVID B. HOOTEN
-CHRISTINA  MALLORY CHICORASKE
-TOMMIE JOHNSON III
-WAYLAND CUBIT
-RICK WARREN
-CHARLES DE COUNE
-BRIAN MAUGHAN
-SPENCER L. HICKS
-R. DAVID WALKER
-R.C. MORROW
-RASHID ABDULLA
-JADINE NOLLAN
-GREG LAIRD
-STEVE TALBURT
-JOE WILLIAMS
-JEREMY FLOYD
-DAVID DEAN
-STEVEN CHASTEEN
-CHAD MASTERSON
-DANNY CRAFTON JR.
-KENNETH L. LEGGETT JR
-ELIJAH REDDEN
-JACKIE SMITH
-DARRIN VARNELL
-MIKE WATERS
-ILA POTTS
-JANET DALLAS
-JERRY SKIDGEL
-CHARLES BENES
-JERRI SHAW
-TOM J. DUGGER
-RICK DUNHAM
-AARON MEANS
-TRISH RANSON
-DELL KERBS
-BRYCE BARFIELD
-DANNY WILLIAMS
-YASMINDA CHOATE
-VALERIE UELTZEN
-BUD JEFFREY
-RANDY THOMAS
-NORMAN SMITH
-RYAN WIGINTON
-DON BRADLEY
+Adam Woodruff
+Jeremie Green
+Rick West
+Mike Sullivan
+Kathy Gray
+Misty Williston Manning
+Mark Jennings
+Tony Hill
+Monty Grider
+Clifford Glen Shatswell Jr.
+Polly Irving
+Dianna Cope
+Keith Hyslop
+Stephen Wright
+Timmie Benson
+Doug Sonenberg
+John Woods
+James Jim Rasmussen
+Stephanie Bice
+Kendra S. Horn
+Shane David Jett
+Greg Sadler
+Greg Treat
+Andrea Stone
+Mike Osburn
+Jacob Baccus
+Eric Roberts
+Chelsey Branham
+Bill Robinson
+Cyndi Munson
+Valerie Walker
+Collin Walke
+Kelly Barlean
+Mauree Turner
+John Hutton
+Jose Cruz
+Mike Christian
+Mickey Dollens
+Lauren Rodebush
+Andy Fugate
+Max Wolfley
+Kelly Albright
+Ben M Janloo
+Jason Lowe
+Marilyn Stark
+Summer Wesley
+Robert Manger
+A.J. Bailey
+Madeline Scott
+David B. Hooten
+Christina Mallory Chicoraske
+Tommie Johnson Iii
+Wayland Cubit
+Rick Warren
+Charles De Coune
+Brian Maughan
+Spencer L. Hicks
+R. David Walker
+R.C. Morrow
+Rashid Abdulla
+Jadine Nollan
+Greg Laird
+Steve Talburt
+Joe Williams
+Jeremy Floyd
+David Dean
+Steven Chasteen
+Chad Masterson
+Danny Crafton Jr.
+Kenneth L. Leggett Jr
+Elijah Redden
+Jackie Smith
+Darrin Varnell
+Mike Waters
+Ila Potts
+Janet Dallas
+Jerry Skidgel
+Charles Benes
+Jerri Shaw
+Tom J. Dugger
+Rick Dunham
+Aaron Means
+Trish Ranson
+Dell Kerbs
+Bryce Barfield
+Danny Williams
+Yasminda Choate
+Valerie Ueltzen
+Bud Jeffrey
+Randy Thomas
+Norman Smith
+Ryan Wiginton
+Don Bradley
 JYMAY WHITSON McLEOD
-JANICE L. CONWAY
-WENDI STEARMAN
-EMILIE TINDLE
-TERRY O'DONNELL
-SUSAN CARLE YOUNG
-GREG WOLTERS
-MATTHEW HINSON
-VALARIE HOGUE
-TAHASHA WILCOTS
-TIMOTHY M. PORTER
-FRED COMBS
-GINA COX
-VICKI BEATY
-BEAU BURLISON
-STEVE CARTER
-TODD CHURCHMAN
-LONNIE L ESTES
-CHERYL BABER
-JO ANNA DOSSETT
-CODY ROGERS
-ALLISON IKLEY-FREEMAN
-DAVE RADER
-SHAWNA MOTT-WRIGHT
-MIKE MASTERS
-DENISE BREWER
-PAUL ROYSE
-MELOYDE BLANCETT
-MARGIE ALFONSO
-MELISSA PROVENZANO
-JOSH TURLEY
-KAREN KEITH
-MYKEY ARTHRELL
-CASS FAHLER
-CONNIE DODSON
-CHRISTIAN BENGEL
-LORI DECTER WRIGHT
-JUSTIN VAN KIRK
-RENEE HILLHOUSE
-RON WHITELOCK
-PAUL STUART
-JASON A. HERR
-JAMES S. CURD JR.
-ERIK TERWEY
-LYNDA VERMILLION
-KIM BATT
-LEO GOERINGER
-STEPHEN TAYLOR
-Zoe Midyett
-Yasminda Choate
+Janice L. Conway
 Wendi Stearman
-Wayne Hughes
-Warren Hamilton
-Valerie Walker
-Trish Ranson
-Toni Hasenbeck
-Tom J. Dugger
-Tom Cole
-Todd Russ
-Terry O'Donnell
-Terri Reimer
-Susan Carle Young
-Summer Wesley
-Steve Kouplen
-Stephanie Bice
-Shawna Mott-Wright
-Shane David Jett
-Robert Murphy
-Robert Manger
-Rob Standridge
-Rick West
-Rick Parris
-Rick Dunham
-Richie Castaldo
-Randy Coleman
-Rande Worthen
-Phillip Hillian
-Paul Royse
-Paul Rosino
-Nancy Sangirardi
-Mike Sullivan
-Mike Osburn
-Mike Masters
-Mike Christian
-Mickey Dollens
-Michael Ross
-Merleyn Bell
-Meloyde Blancett
-Melissa Provenzano
-Max Wolfley
-Mauree Turner
-Matt Meredith
-Mary Brannon
-Markwayne Mullin
-Mark Lawson
-Marilyn Stark
-Margie Alfonso
-Madeline Scott
-Lonnie Sims
-Logan J. Phillips
-Lauren Rodebush
-Larry Bush
-Kyle Hilbert
-Kyle Emmett Meraz
-Kojo Asamoa-Caesar
-Kevin Hern
-Kendra S. Horn
-Kelly Barlean
-Kelly Albright
-Kanye West
-Juan Garcia
-Joseph R. Biden
-Jose Cruz
-Jon Echols
-John Hutton
-Joan Farr
-Jo Jorgensen
-Jo Anna Dossett
-Jim Inhofe
-Jessica Garvin
-Jerry L. Donathan
-Jennifer Wilkinson
-Jennifer Kerstetter
-Jay Steagall
-Jason Lowe
-Jadine Nollan
-Jade Simmons
-Jacob Rosecrants
-Jacob Baccus
-Jack Reavis
-Greg Treat
-Greg Sadler
-Greg Laird
-George H Burns
-Frank D. Lucas
-Evelyn L. Rogers
-Eric Roberts
 Emilie Tindle
-Dyllon Fite
-Donald J. Trump
-Dick Lowe
-Dewayne Pemberton
-Denise Brewer
-Dell Kerbs
-Dave Rader
-Danyell Lanier
-Danny Williams
-Daniel Pae
-Cyndi Munson
-Craig Parham
-Collin Walke
-Cody Rogers
-Chuck Threadgill
-Cheryl Baber
-Chelsey Branham
-Cassie Kinet
-Bryce Barfield
-Brock Pierce
-Bob White
-Bob Ed Culver
-Blake Cowboy Stephens
-Bill Robinson
-Ben M Janloo
-Austin Gipson-Black
-Anthony Moore
-Andy Fugate
-Andrea Stone
-Allison Ikley-Freeman
-Alex Scott
-Abby Broyles
-Aaron Means
-A.J. Bailey
-A. D. Nesbit
-Zoe Midyett
-Yasminda Choate
-Wendi Stearman
-Wayne Hughes
-Warren Hamilton
-Valerie Walker
-Trish Ranson
-Toni Hasenbeck
-Tom J. Dugger
-Tom Cole
-Todd Russ
 Terry O'Donnell
-Terri Reimer
 Susan Carle Young
-Summer Wesley
-Steve Kouplen
-Stephanie Bice
-Shawna Mott-Wright
-Shane David Jett
-Robert Murphy
-Robert Manger
-Rob Standridge
-Rick West
-Rick Parris
-Rick Dunham
-Richie Castaldo
-Randy Coleman
-Rande Worthen
-Phillip Hillian
-Paul Royse
-Paul Rosino
-Nancy Sangirardi
-Mike Sullivan
-Mike Osburn
-Mike Masters
-Mike Christian
-Mickey Dollens
-Michael Ross
-Merleyn Bell
-Meloyde Blancett
-Melissa Provenzano
-Max Wolfley
-Mauree Turner
-Matt Meredith
-Mary Brannon
-Markwayne Mullin
-Mark Lawson
-Marilyn Stark
-Margie Alfonso
-Madeline Scott
-Lonnie Sims
-Logan J. Phillips
-Lauren Rodebush
-Larry Bush
-Kyle Hilbert
-Kyle Emmett Meraz
-Kojo Asamoa-Caesar
-Kevin Hern
-Kendra S. Horn
-Kelly Barlean
-Kelly Albright
-Kanye West
-Juan Garcia
-Joseph R. Biden
-Jose Cruz
-Jon Echols
-John Hutton
-Joan Farr
-Jo Jorgensen
-Jo Anna Dossett
-Jim Inhofe
-Jessica Garvin
-Jerry L. Donathan
-Jennifer Wilkinson
-Jennifer Kerstetter
-Jay Steagall
-Jason Lowe
-Jadine Nollan
-Jade Simmons
-Jacob Rosecrants
-Jacob Baccus
-Jack Reavis
-Greg Treat
-Greg Sadler
-Greg Laird
-George H Burns
-Frank D. Lucas
-Evelyn L. Rogers
-Eric Roberts
-Emilie Tindle
-Dyllon Fite
-Donald J. Trump
-Dick Lowe
-Dewayne Pemberton
-Denise Brewer
-Dell Kerbs
-Dave Rader
-Danyell Lanier
-Danny Williams
-Daniel Pae
-Cyndi Munson
-Craig Parham
-Collin Walke
-Cody Rogers
-Chuck Threadgill
+Greg Wolters
+Matthew Hinson
+Valarie Hogue
+Tahasha Wilcots
+Timothy M. Porter
+Fred Combs
+Gina Cox
+Vicki Beaty
+Beau Burlison
+Steve Carter
+Todd Churchman
+Lonnie L Estes
 Cheryl Baber
-Chelsey Branham
-Cassie Kinet
-Bryce Barfield
-Brock Pierce
-Bob White
-Bob Ed Culver
-Blake Cowboy Stephens
-Bill Robinson
-Ben M Janloo
-Austin Gipson-Black
-Anthony Moore
-Andy Fugate
-Andrea Stone
+Jo Anna Dossett
+Cody Rogers
 Allison Ikley-Freeman
-Alex Scott
-Abby Broyles
-Aaron Means
-A.J. Bailey
-A. D. Nesbit
+Dave Rader
+Shawna Mott-Wright
+Mike Masters
+Denise Brewer
+Paul Royse
+Meloyde Blancett
+Margie Alfonso
+Melissa Provenzano
+Josh Turley
+Karen Keith
+Mykey Arthrell
+Cass Fahler
+Connie Dodson
+Christian Bengel
+Lori Decter Wright
+Justin Van Kirk
+Renee Hillhouse
+Ron Whitelock
+Paul Stuart
+Jason A. Herr
+James S. Curd Jr.
+Erik Terwey
+Lynda Vermillion
+Kim Batt
+Leo Goeringer
+Stephen Taylor

@@ -2337,5 +2337,3 @@ CandidateContest	US Senate MT	UNITED STATES SENATOR 9061
 CandidateContest	US House MT District 1	UNITED STATES REPRESENTAT 9062
 Candidate	Mike Cooney	Mike Cooney And Casey Schreiner
 Candidate	Greg Gianforte	Greg Gianforte And Kristen Juras
-Candidate	Mike Cooney	Mike Cooney And Casey Schreiner
-Candidate	Greg Gianforte	Greg Gianforte And Kristen Juras

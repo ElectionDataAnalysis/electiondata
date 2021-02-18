@@ -3,13 +3,16 @@ file_type=excel
 count_locations=by_column_numbers
 munge_strings=in_count_headers,in_field_values,constant_over_file
 
-encoding=iso-8859-1
+encoding=
 count_column_numbers=1,2,3
-string_field_name_row=0
-count_field_name_row=0
+string_field_name_row=3
+count_field_name_row=3
+count_header_row_numbers=3
 sheets_to_read_numbers=0
-rows_to_skip=3
+rows_to_skip=
 constant_over_file=CandidateContest,CountItemType
+multi_block=yes
+max_blocks=1
 
 [in_field_values]
 ReportingUnit=<Summary By Counties>

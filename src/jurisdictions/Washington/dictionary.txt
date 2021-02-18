@@ -763,11 +763,11 @@ Candidate	Tom Lannen	Tom Lannen
 Candidate	Michael Johnson	Michael Johnson
 Candidate	Dave McKenzie	Dave McKenzie
 Candidate	Ted Salka	Ted Salka
-Candidate	MARC ROBINS	MARC ROBINS
-Candidate	BLAYNEY MYERS	BLAYNEY MYERS
-Candidate	ED LA MOTTE	ED LA MOTTE
-Candidate	ALICIA BEYER	ALICIA BEYER
-Candidate	BOB WITTENBERG	BOB WITTENBERG
+Candidate	Marc Robins	Marc Robins
+Candidate	Blayney Myers	Blayney Myers
+Candidate	Ed La Motte	Ed La Motte
+Candidate	Alicia Beyer	Alicia Beyer
+Candidate	Bob Wittenberg	Bob Wittenberg
 Candidate	Strom Peterson	Strom Peterson
 Candidate	Alex Hels	Alex Hels
 Candidate	Lillian Ortiz-Self	Lillian Ortiz-Self
@@ -992,17 +992,17 @@ Candidate	Laurie Lebowsky	Laurie Lebowsky
 Candidate	Sarah Fox	Sarah Fox
 Candidate	Jim Malinowski	Jim Malinowski
 Candidate	Sherry Erickson	Sherry Erickson
-Candidate	CHRIS MILLS	CHRIS MILLS
-Candidate	ANNE HIGGINS	ANNE HIGGINS
-Candidate	SUSAN J MARINELLA	SUSAN J MARINELLA
+Candidate	Chris Mills	Chris Mills
+Candidate	Anne Higgins	Anne Higgins
+Candidate	Susan J Marinella	Susan J Marinella
 Candidate	Charles L Amerein	Charles L Amerein
 Candidate	Dain C. Nysoe	Dain C. Nysoe
 Candidate	C Dale Slack	C Dale Slack
 Candidate	Joe Helm	Joe Helm
-Candidate	JEFF JENKINS	JEFF JENKINS
+Candidate	Jeff Jenkins	Jeff Jenkins
 Candidate	Carla Rowe	Carla Rowe
 Candidate	Cathy Shochet	Cathy Shochet
-Candidate	G SCOTT MARINELLA	G SCOTT MARINELLA
+Candidate	G Scott Marinella	G Scott Marinella
 Candidate	Erin Frasier	Erin Frasier
 Candidate	Joel McEntire	Joel McEntire
 Candidate	Emily Wilcox	Emily Wilcox
@@ -1402,7 +1402,7 @@ Candidate	Michael 'Hawk' Runyon	Michael 'Hawk' Runyon
 Candidate	Todd P. Stephens	Todd P. Stephens
 Candidate	Scott L. Johnson	Scott L. Johnson
 Candidate	Robin Souvenir	Robin Souvenir
-Candidate	RENEE GOODIN	RENEE GOODIN
+Candidate	Renee Goodin	Renee Goodin
 Candidate	Mark McClain	Mark McClain
 Candidate	Pam Nogueira Maneman	Pam Nogueira Maneman
 Candidate	Elizabeth Penoyar	Elizabeth Penoyar
@@ -1691,8 +1691,8 @@ Candidate	Atul Deshmane	Atul Deshmane
 Candidate	Paul D. Kenner	Paul D. Kenner
 Candidate	Michael Largent	Michael Largent
 Candidate	John-Mark Mahnkey	John-Mark Mahnkey
-Candidate	ROBIN JONES	ROBIN JONES
-Candidate	SANDY JAMISON	SANDY JAMISON
+Candidate	Robin Jones	Robin Jones
+Candidate	Sandy Jamison	Sandy Jamison
 Candidate	Eric Fejeran	Eric Fejeran
 Candidate	Jill E. Whelchel	Jill E. Whelchel
 Candidate	Annie Pillers	Annie Pillers
@@ -1742,7 +1742,6 @@ Candidate	Tracy 'Justice' Wright	Tracy 'Justice' Wright
 Candidate	Douglas E. McKinley	Douglas E. McKinley
 Candidate	Evan Jones	Evan Jones
 Candidate	Sarena Sloot	Sarena Sloot
-Candidate	WRITE-IN	WRITE-IN
 Candidate	Alex Tsimerman	Alex Tsimerman
 Candidate	Ryan Ryals	Ryan Ryals
 Candidate	Leon Aaron Lawson	Leon Aaron Lawson
@@ -1848,8 +1847,8 @@ Candidate	Deidre Holmberg	Deidre Holmberg
 Candidate	Ragan Faylor	Ragan Faylor
 Candidate	Dori L Luzzo Gilmour	Dori L Luzzo Gilmour
 Candidate	Steve Goheen	Steve Goheen
-Candidate	BOB PARAZIN	BOB PARAZIN
-Candidate	DAVID HARVEY	DAVID HARVEY
+Candidate	Bob Parazin	Bob Parazin
+Candidate	David Harvey	David Harvey
 Candidate	James Mitchell	James Mitchell
 Candidate	Corey Bailey	Corey Bailey
 Candidate	Jesse Jensen	Jesse Jensen
@@ -2219,7 +2218,7 @@ Candidate	Wesley Hayes	Wesley Hayes
 Candidate	Lucinda West	Lucinda West
 Candidate	John (Jack) Dwyer	John (Jack) Dwyer
 Candidate	Chris Miller	Chris Miller
-Candidate	JILL WARNE	JILL WARNE
+Candidate	Jill Warne	Jill Warne
 Candidate	Jim Sorensen	Jim Sorensen
 Candidate	John Shaw	John Shaw
 Candidate	Kevin R Pine	Kevin R Pine
@@ -3410,7 +3409,7 @@ Candidate	James House	James House
 Candidate	Andrew P. Glanville	Andrew P. Glanville
 Candidate	Jake Mayson	Jake Mayson
 Candidate	Kenton Gartrell	Kenton Gartrell
-Candidate	JASON CLARK	JASON CLARK
+Candidate	Jason Clark	Jason Clark
 Candidate	Jim Bell	Jim Bell
 Candidate	Philip Ostriem	Philip Ostriem
 Candidate	Susan Holbrook Fenich	Susan Holbrook Fenich
@@ -3421,7 +3420,7 @@ Candidate	Steve Painter	Steve Painter
 Candidate	Reynaldo Garza, Jr.	Reynaldo Garza, Jr.
 Candidate	Gary Hintze	Gary Hintze
 Candidate	Todd McClaskey	Todd McClaskey
-Candidate	TROY CLEMENTS	TROY CLEMENTS
+Candidate	Troy Clements	Troy Clements
 Candidate	Zach Stambaugh	Zach Stambaugh
 Candidate	Thereasa Trujillo	Thereasa Trujillo
 Candidate	Anna Schroeder	Anna Schroeder
@@ -3434,14 +3433,14 @@ Candidate	Laura Pickett	Laura Pickett
 Candidate	Jim Stevens	Jim Stevens
 Candidate	Matthew Brown	Matthew Brown
 Candidate	Kyle Curtis	Kyle Curtis
-Candidate	JOHN PUCCINELLI	JOHN PUCCINELLI
+Candidate	John Puccinelli	John Puccinelli
 Candidate	Sandi Belzer	Sandi Belzer
 Candidate	Tim Dufault	Tim Dufault
 Candidate	Mark Johnson	Mark Johnson
 Candidate	Kevin Cox	Kevin Cox
 Candidate	Samual Carman	Samual Carman
 Candidate	Karly Almon	Karly Almon
-Candidate	DAVID LARSON	DAVID LARSON
+Candidate	David Larson	David Larson
 Candidate	Chelsea Snodgrass	Chelsea Snodgrass
 Candidate	Marshal Murray	Marshal Murray
 Candidate	Elizabeth A. Marquis	Elizabeth A. Marquis
@@ -3452,7 +3451,7 @@ Candidate	Eric Miller	Eric Miller
 Candidate	John Mayo	John Mayo
 Candidate	Kathy Backstrom	Kathy Backstrom
 Candidate	Don Prest	Don Prest
-Candidate	GARY SCOTT PETERSON	GARY SCOTT PETERSON
+Candidate	Gary Scott Peterson	Gary Scott Peterson
 Candidate	Brad Bergener	Brad Bergener
 Candidate	Matthew M Bower	Matthew M Bower
 Candidate	Pamela D. Robson	Pamela D. Robson
@@ -3463,7 +3462,7 @@ Candidate	Brian Morton	Brian Morton
 Candidate	Phil Bird	Phil Bird
 Candidate	Jose Rocha	Jose Rocha
 Candidate	Lars Hanson	Lars Hanson
-Candidate	KATHLEEN ALTICK	KATHLEEN ALTICK
+Candidate	Kathleen Altick	Kathleen Altick
 Candidate	Lauri Palmer	Lauri Palmer
 Candidate	David R. Weyeneth, Sr.	David R. Weyeneth, Sr.
 CountItemType	total	total

@@ -19,7 +19,7 @@ jurisdiction = "New Hampshire"
 abbr = "NH"
 total_pres_votes = 803810  # total of all votes for US President
 cd = 2  # US House congressional district
-total_cd_votes = -1  # total votes in that US House contest in the chosen cd
+total_cd_votes = 386441  # total votes in that US House contest in the chosen cd
 shd = 1  # state house district
 total_shd_votes = -1  # total votes in that State House contest
 ssd = 15  # state senate district
@@ -42,24 +42,26 @@ def test_presidential(dbname):
             election,
             jurisdiction,
             f"US President ({abbr})",
+            sub_unit_type="state",
             dbname=dbname,
         )
         == total_pres_votes
     )
 
 
-"""
+
 def test_congressional_totals(dbname):
     assert (e.contest_total(
         election,
         jurisdiction,
         f"US House {abbr} District {cd}",
+        sub_unit_type="state",
         dbname=dbname,
         )
         == total_cd_votes
     )
 
-
+"""
 def test_state_senate_totals(dbname):
     assert (e.contest_total(
         election,
@@ -121,7 +123,7 @@ def test_county_subtotal(dbname):
             f"US President ({abbr})",
             dbname=dbname,
             county=single_county,
-            sub_unit_type=county_or_other,
+            sub_unit_type="county",
         )
         == pres_votes_county
     )

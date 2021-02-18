@@ -147,7 +147,7 @@ Candidate	Erik Brooks	Erik Brooks
 Candidate	Erin Tracy	Erin Tracy
 Candidate	Evan Goyke	Evan Goyke
 Candidate	Evan McMullin	Evan McMullin
-Candidate	"F. James Sensenbrenner, Jr."	"F. James Sensenbrenner, Jr."
+Candidate	F. James Sensenbrenner, Jr.	F. James Sensenbrenner, Jr.
 Candidate	Francesca Hong	Francesca Hong
 Candidate	Frank T. Buress	Frank T. Buress
 Candidate	Gabriel A. Gomez	Gabriel A. Gomez
@@ -214,7 +214,7 @@ Candidate	JoCasta Zamarripa	JoCasta Zamarripa
 Candidate	Joan A. Ballweg	Joan A. Ballweg
 Candidate	Joan A. Ballweg	Joan Ballweg
 Candidate	Jodi Emerson	Jodi Emerson
-Candidate	Joe Biden	Joe Biden
+Candidate	Joseph R. Biden	Joe Biden
 Candidate	Joe Lavrenz	Joe Lavrenz
 Candidate	Joe Sanfelippo	Joe Sanfelippo
 Candidate	Joel C. Kitchens	Joel C. Kitchens
@@ -261,7 +261,7 @@ Candidate	Kelly Lynn Tenpas (write-in)	Kelly Lynn Tenpas (write-in)
 Candidate	Ken Driessen	Ken Driessen
 Candidate	Ken Holdorf	Ken Holdorf
 Candidate	Ken Skowronski	Ken Skowronski
-Candidate	"Ken Van Dyke, Sr."	"Ken Van Dyke, Sr."
+Candidate	Ken Van Dyke, Sr.	Ken Van Dyke, Sr.
 Candidate	Ken Yorgan	Ken Yorgan
 Candidate	Kerry Trask	Kerry Trask
 Candidate	Kevin A. Bauer	Kevin A. Bauer
@@ -417,7 +417,7 @@ Candidate	Ryan Cason (Write-in)	Ryan Cason (Write-in)
 Candidate	Ryan Peterson (write-in)	Ryan Peterson (write-in)
 Candidate	Ryan Sherley	Ryan Sherley
 Candidate	Ryan Solen	Ryan Solen
-Candidate	SCATTERING	SCATTERING
+Candidate	Scattering	Scattering
 Candidate	Samantha Kerkman	Samantha Kerkman
 Candidate	Samba Baldeh	Samba Baldeh
 Candidate	Samuel Anderson	Samuel Anderson
@@ -511,8 +511,7 @@ Candidate	Jo Jorgensen	Jorgensen/Cohen
 Candidate	Brian Carroll	Carroll/Patel
 Candidate	André Jacque	AndrÃÂÃÂ© Jacque
 Candidate	André Jacque	André Jacque
-Candidate	Write-in or Scattering	Write-in/Scattering
-Candidate	Write-in or Scattering	Scattering
+Candidate	Scattering	Write-in/Scattering
 CandidateContest	WI Attorney General	ATTORNEY GENERAL
 CandidateContest	WI Attorney General (Constitution Party)	ATTORNEY GENERAL - CON
 CandidateContest	WI Attorney General (Constitution Party)	ATTORNEY GENERAL - Constitution
@@ -2305,25 +2304,25 @@ ReportingUnit	Wisconsin;Wood County	WOOD;Town of CARY Ward 1
 ReportingUnit	Wisconsin;Wood County	WOOD;Town of CAMERON Ward 1
 ReportingUnit	Wisconsin;Wood County	WOOD;Town of AUBURNDALE Ward 1
 ReportingUnit	Wisconsin;Wood County	WOOD;Town of ARPIN Wards 1-3
-ReportingUnit	Wisconsin;Wood County	"WOOD;City of WISCONSIN RAPIDS Wards 11-21,24-29"
-ReportingUnit	Wisconsin;Wood County	"WOOD;City of WISCONSIN RAPIDS Wards 1-10,22-23"
+ReportingUnit	Wisconsin;Wood County	WOOD;City of WISCONSIN RAPIDS Wards 11-21,24-29
+ReportingUnit	Wisconsin;Wood County	WOOD;City of WISCONSIN RAPIDS Wards 1-10,22-23
 ReportingUnit	Wisconsin;Wood County	WOOD;City of PITTSVILLE Ward 1
 ReportingUnit	Wisconsin;Wood County	WOOD;City of NEKOOSA Wards 1-4
-ReportingUnit	Wisconsin;Wood County	"WOOD;City of MARSHFIELD Wards 9,18"
-ReportingUnit	Wisconsin;Wood County	"WOOD;City of MARSHFIELD Wards 8,19,22-23"
-ReportingUnit	Wisconsin;Wood County	"WOOD;City of MARSHFIELD Wards 7,16,27"
-ReportingUnit	Wisconsin;Wood County	"WOOD;City of MARSHFIELD Wards 6,17,25-26"
-ReportingUnit	Wisconsin;Wood County	"WOOD;City of MARSHFIELD Wards 5,15"
-ReportingUnit	Wisconsin;Wood County	"WOOD;City of MARSHFIELD Wards 4,14"
-ReportingUnit	Wisconsin;Wood County	"WOOD;City of MARSHFIELD Wards 3,13"
-ReportingUnit	Wisconsin;Wood County	"WOOD;City of MARSHFIELD Wards 1,11"
+ReportingUnit	Wisconsin;Wood County	WOOD;City of MARSHFIELD Wards 9,18
+ReportingUnit	Wisconsin;Wood County	WOOD;City of MARSHFIELD Wards 8,19,22-23
+ReportingUnit	Wisconsin;Wood County	WOOD;City of MARSHFIELD Wards 7,16,27
+ReportingUnit	Wisconsin;Wood County	WOOD;City of MARSHFIELD Wards 6,17,25-26
+ReportingUnit	Wisconsin;Wood County	WOOD;City of MARSHFIELD Wards 5,15
+ReportingUnit	Wisconsin;Wood County	WOOD;City of MARSHFIELD Wards 4,14
+ReportingUnit	Wisconsin;Wood County	WOOD;City of MARSHFIELD Wards 3,13
+ReportingUnit	Wisconsin;Wood County	WOOD;City of MARSHFIELD Wards 1,11
 ReportingUnit	Wisconsin;Wood County	WOOD;City of MARSHFIELD Ward 2
 ReportingUnit	Wisconsin;Wood County	WOOD;City of MARSHFIELD Ward 10
 ReportingUnit	Wisconsin;Winnebago County	WINNEBAGO;Village of WINNECONNE Wards 1-4
 ReportingUnit	Wisconsin;Winnebago County	WINNEBAGO;Village of FOX CROSSING Wards 8-10
-ReportingUnit	Wisconsin;Winnebago County	"WINNEBAGO;Village of FOX CROSSING Wards 3,5-6"
+ReportingUnit	Wisconsin;Winnebago County	WINNEBAGO;Village of FOX CROSSING Wards 3,5-6
 ReportingUnit	Wisconsin;Winnebago County	WINNEBAGO;Village of FOX CROSSING Wards 11-13
-ReportingUnit	Wisconsin;Winnebago County	"WINNEBAGO;Village of FOX CROSSING Wards 1-2,4,7"
+ReportingUnit	Wisconsin;Winnebago County	WINNEBAGO;Village of FOX CROSSING Wards 1-2,4,7
 ReportingUnit	Wisconsin;Winnebago County	WINNEBAGO;Village of FOX CROSSING Ward 15
 ReportingUnit	Wisconsin;Winnebago County	WINNEBAGO;Village of FOX CROSSING Ward 14
 ReportingUnit	Wisconsin;Winnebago County	WINNEBAGO;Town of WOLF RIVER Wards 2B-2C
@@ -2331,12 +2330,12 @@ ReportingUnit	Wisconsin;Winnebago County	WINNEBAGO;Town of WOLF RIVER Wards 1-2A
 ReportingUnit	Wisconsin;Winnebago County	WINNEBAGO;Town of WINNECONNE Wards 1-4
 ReportingUnit	Wisconsin;Winnebago County	WINNEBAGO;Town of WINNECONNE Ward 5
 ReportingUnit	Wisconsin;Winnebago County	WINNEBAGO;Town of WINCHESTER Wards 1-2
-ReportingUnit	Wisconsin;Winnebago County	"WINNEBAGO;Town of VINLAND Wards 1A,2"
+ReportingUnit	Wisconsin;Winnebago County	WINNEBAGO;Town of VINLAND Wards 1A,2
 ReportingUnit	Wisconsin;Winnebago County	WINNEBAGO;Town of VINLAND Ward 1B
 ReportingUnit	Wisconsin;Winnebago County	WINNEBAGO;Town of UTICA Wards 1-2
 ReportingUnit	Wisconsin;Winnebago County	WINNEBAGO;Town of RUSHFORD Wards 1-2
 ReportingUnit	Wisconsin;Winnebago County	WINNEBAGO;Town of POYGAN Wards 1-2
-ReportingUnit	Wisconsin;Winnebago County	"WINNEBAGO;Town of OSHKOSH Wards 1A,2-5"
+ReportingUnit	Wisconsin;Winnebago County	WINNEBAGO;Town of OSHKOSH Wards 1A,2-5
 ReportingUnit	Wisconsin;Winnebago County	WINNEBAGO;Town of OSHKOSH Ward 1B
 ReportingUnit	Wisconsin;Winnebago County	WINNEBAGO;Town of OMRO Wards 1-3
 ReportingUnit	Wisconsin;Winnebago County	WINNEBAGO;Town of NEPEUSKUN Ward 1
@@ -2345,7 +2344,7 @@ ReportingUnit	Wisconsin;Winnebago County	WINNEBAGO;Town of NEENAH Wards 1-4
 ReportingUnit	Wisconsin;Winnebago County	WINNEBAGO;Town of CLAYTON Wards 1-7
 ReportingUnit	Wisconsin;Winnebago County	WINNEBAGO;Town of BLACK WOLF Wards 1-3
 ReportingUnit	Wisconsin;Winnebago County	WINNEBAGO;Town of ALGOMA Wards 3-6
-ReportingUnit	Wisconsin;Winnebago County	"WINNEBAGO;Town of ALGOMA Wards 1-2,7-10"
+ReportingUnit	Wisconsin;Winnebago County	WINNEBAGO;Town of ALGOMA Wards 1-2,7-10
 ReportingUnit	Wisconsin;Winnebago County	WINNEBAGO;City of OSHKOSH Ward 9
 ReportingUnit	Wisconsin;Winnebago County	WINNEBAGO;City of OSHKOSH Ward 8
 ReportingUnit	Wisconsin;Winnebago County	WINNEBAGO;City of OSHKOSH Ward 7
@@ -2397,15 +2396,15 @@ ReportingUnit	Wisconsin;Winnebago County	WINNEBAGO;City of OSHKOSH Ward 1
 ReportingUnit	Wisconsin;Winnebago County	WINNEBAGO;City of OMRO Wards 1-9
 ReportingUnit	Wisconsin;Winnebago County	WINNEBAGO;City of NEENAH Wards 9-12
 ReportingUnit	Wisconsin;Winnebago County	WINNEBAGO;City of NEENAH Wards 5-8
-ReportingUnit	Wisconsin;Winnebago County	"WINNEBAGO;City of NEENAH Wards 21-25,28"
-ReportingUnit	Wisconsin;Winnebago County	"WINNEBAGO;City of NEENAH Wards 17-20,26"
+ReportingUnit	Wisconsin;Winnebago County	WINNEBAGO;City of NEENAH Wards 21-25,28
+ReportingUnit	Wisconsin;Winnebago County	WINNEBAGO;City of NEENAH Wards 17-20,26
 ReportingUnit	Wisconsin;Winnebago County	WINNEBAGO;City of NEENAH Wards 13-16
 ReportingUnit	Wisconsin;Winnebago County	WINNEBAGO;City of NEENAH Wards 1-4
 ReportingUnit	Wisconsin;Winnebago County	WINNEBAGO;City of NEENAH Ward 27
-ReportingUnit	Wisconsin;Winnebago County	"WINNEBAGO;City of MENASHA Wards 5A,6,8-9,23-29,31-35,38-42"
-ReportingUnit	Wisconsin;Winnebago County	"WINNEBAGO;City of MENASHA Wards 3,14-15,30"
-ReportingUnit	Wisconsin;Winnebago County	"WINNEBAGO;City of MENASHA Wards 1A,2,4,7"
-ReportingUnit	Wisconsin;Winnebago County	"WINNEBAGO;City of MENASHA Wards 10-13,21-22,36-37"
+ReportingUnit	Wisconsin;Winnebago County	WINNEBAGO;City of MENASHA Wards 5A,6,8-9,23-29,31-35,38-42
+ReportingUnit	Wisconsin;Winnebago County	WINNEBAGO;City of MENASHA Wards 3,14-15,30
+ReportingUnit	Wisconsin;Winnebago County	WINNEBAGO;City of MENASHA Wards 1A,2,4,7
+ReportingUnit	Wisconsin;Winnebago County	WINNEBAGO;City of MENASHA Wards 10-13,21-22,36-37
 ReportingUnit	Wisconsin;Winnebago County	WINNEBAGO;City of MENASHA Ward 5B
 ReportingUnit	Wisconsin;Winnebago County	WINNEBAGO;City of MENASHA Ward 1B
 ReportingUnit	Wisconsin;Winnebago County	WINNEBAGO;CITY OF APPLETON Ward 32
@@ -2469,25 +2468,25 @@ ReportingUnit	Wisconsin;Waupaca County	WAUPACA;City of WEYAUWEGA Wards 1-4
 ReportingUnit	Wisconsin;Waupaca County	WAUPACA;City of WAUPACA Wards 1-13
 ReportingUnit	Wisconsin;Waupaca County	WAUPACA;City of NEW LONDON Wards 9-10
 ReportingUnit	Wisconsin;Waupaca County	WAUPACA;City of NEW LONDON Wards 6-7
-ReportingUnit	Wisconsin;Waupaca County	"WAUPACA;City of NEW LONDON Wards 3-4,8"
+ReportingUnit	Wisconsin;Waupaca County	WAUPACA;City of NEW LONDON Wards 3-4,8
 ReportingUnit	Wisconsin;Waupaca County	WAUPACA;City of NEW LONDON Wards 11-12
 ReportingUnit	Wisconsin;Waupaca County	WAUPACA;City of MARION Wards 1-3
 ReportingUnit	Wisconsin;Waupaca County	WAUPACA;City of MANAWA Wards 1-3
 ReportingUnit	Wisconsin;Waupaca County	WAUPACA;City of CLINTONVILLE Wards 8-10
 ReportingUnit	Wisconsin;Waupaca County	WAUPACA;City of CLINTONVILLE Wards 1-7
-ReportingUnit	Wisconsin;Waukesha County	"WAUKESHA;Village of WAUKESHA Wards 7,9-11"
+ReportingUnit	Wisconsin;Waukesha County	WAUKESHA;Village of WAUKESHA Wards 7,9-11
 ReportingUnit	Wisconsin;Waukesha County	WAUKESHA;Village of WAUKESHA Wards 2-6
-ReportingUnit	Wisconsin;Waukesha County	"WAUKESHA;Village of WAUKESHA Wards 1,8"
+ReportingUnit	Wisconsin;Waukesha County	WAUKESHA;Village of WAUKESHA Wards 1,8
 ReportingUnit	Wisconsin;Waukesha County	WAUKESHA;Village of WAUKESHA Ward 12
 ReportingUnit	Wisconsin;Waukesha County	WAUKESHA;Village of WALES Wards 1-5
 ReportingUnit	Wisconsin;Waukesha County	WAUKESHA;Village of VERNON Wards 1-11
 ReportingUnit	Wisconsin;Waukesha County	WAUKESHA;Village of SUSSEX Wards 9-12
-ReportingUnit	Wisconsin;Waukesha County	"WAUKESHA;Village of SUSSEX Wards 4,6"
-ReportingUnit	Wisconsin;Waukesha County	"WAUKESHA;Village of SUSSEX Wards 3,5"
-ReportingUnit	Wisconsin;Waukesha County	"WAUKESHA;Village of SUSSEX Wards 2,8"
-ReportingUnit	Wisconsin;Waukesha County	"WAUKESHA;Village of SUSSEX Wards 1,7"
+ReportingUnit	Wisconsin;Waukesha County	WAUKESHA;Village of SUSSEX Wards 4,6
+ReportingUnit	Wisconsin;Waukesha County	WAUKESHA;Village of SUSSEX Wards 3,5
+ReportingUnit	Wisconsin;Waukesha County	WAUKESHA;Village of SUSSEX Wards 2,8
+ReportingUnit	Wisconsin;Waukesha County	WAUKESHA;Village of SUSSEX Wards 1,7
 ReportingUnit	Wisconsin;Waukesha County	WAUKESHA;Village of SUMMIT Wards 2-5
-ReportingUnit	Wisconsin;Waukesha County	"WAUKESHA;Village of SUMMIT Wards 1,6"
+ReportingUnit	Wisconsin;Waukesha County	WAUKESHA;Village of SUMMIT Wards 1,6
 ReportingUnit	Wisconsin;Waukesha County	WAUKESHA;Village of PEWAUKEE Wards 6-10
 ReportingUnit	Wisconsin;Waukesha County	WAUKESHA;Village of PEWAUKEE Wards 1-5
 ReportingUnit	Wisconsin;Waukesha County	WAUKESHA;Village of OCONOMOWOC LAKE Ward 1
@@ -2534,29 +2533,29 @@ ReportingUnit	Wisconsin;Waukesha County	WAUKESHA;Village of CHENEQUA Wards 1-3
 ReportingUnit	Wisconsin;Waukesha County	WAUKESHA;Village of BUTLER Wards 1-3
 ReportingUnit	Wisconsin;Waukesha County	WAUKESHA;Village of BIG BEND Wards 1-4
 ReportingUnit	Wisconsin;Waukesha County	WAUKESHA;Town of OTTAWA Wards 1-5
-ReportingUnit	Wisconsin;Waukesha County	"WAUKESHA;Town of OCONOMOWOC Wards 5,8-9"
-ReportingUnit	Wisconsin;Waukesha County	"WAUKESHA;Town of OCONOMOWOC Wards 3,6-7"
-ReportingUnit	Wisconsin;Waukesha County	"WAUKESHA;Town of OCONOMOWOC Wards 1-2,4"
+ReportingUnit	Wisconsin;Waukesha County	WAUKESHA;Town of OCONOMOWOC Wards 5,8-9
+ReportingUnit	Wisconsin;Waukesha County	WAUKESHA;Town of OCONOMOWOC Wards 3,6-7
+ReportingUnit	Wisconsin;Waukesha County	WAUKESHA;Town of OCONOMOWOC Wards 1-2,4
 ReportingUnit	Wisconsin;Waukesha County	WAUKESHA;Town of OCONOMOWOC Ward 10
 ReportingUnit	Wisconsin;Waukesha County	WAUKESHA;Town of MUKWONAGO Wards 4-6
-ReportingUnit	Wisconsin;Waukesha County	"WAUKESHA;Town of MUKWONAGO Wards 2-3,9-11"
-ReportingUnit	Wisconsin;Waukesha County	"WAUKESHA;Town of MUKWONAGO Wards 1,7-8"
-ReportingUnit	Wisconsin;Waukesha County	"WAUKESHA;Town of MERTON Wards 4-6,10-11"
-ReportingUnit	Wisconsin;Waukesha County	"WAUKESHA;Town of MERTON Wards 1-3,7-9"
+ReportingUnit	Wisconsin;Waukesha County	WAUKESHA;Town of MUKWONAGO Wards 2-3,9-11
+ReportingUnit	Wisconsin;Waukesha County	WAUKESHA;Town of MUKWONAGO Wards 1,7-8
+ReportingUnit	Wisconsin;Waukesha County	WAUKESHA;Town of MERTON Wards 4-6,10-11
+ReportingUnit	Wisconsin;Waukesha County	WAUKESHA;Town of MERTON Wards 1-3,7-9
 ReportingUnit	Wisconsin;Waukesha County	WAUKESHA;Town of LISBON Wards 4-5
-ReportingUnit	Wisconsin;Waukesha County	"WAUKESHA;Town of LISBON Wards 1,6"
+ReportingUnit	Wisconsin;Waukesha County	WAUKESHA;Town of LISBON Wards 1,6
 ReportingUnit	Wisconsin;Waukesha County	WAUKESHA;Town of LISBON Ward 3
 ReportingUnit	Wisconsin;Waukesha County	WAUKESHA;Town of LISBON Ward 2
 ReportingUnit	Wisconsin;Waukesha County	WAUKESHA;Town of GENESEE Wards 6-8
-ReportingUnit	Wisconsin;Waukesha County	"WAUKESHA;Town of GENESEE Wards 2,4,10-11"
-ReportingUnit	Wisconsin;Waukesha County	"WAUKESHA;Town of GENESEE Wards 1,3,5,9"
+ReportingUnit	Wisconsin;Waukesha County	WAUKESHA;Town of GENESEE Wards 2,4,10-11
+ReportingUnit	Wisconsin;Waukesha County	WAUKESHA;Town of GENESEE Wards 1,3,5,9
 ReportingUnit	Wisconsin;Waukesha County	WAUKESHA;Town of EAGLE Wards 1-4
 ReportingUnit	Wisconsin;Waukesha County	WAUKESHA;Town of DELAFIELD Wards 9-11
 ReportingUnit	Wisconsin;Waukesha County	WAUKESHA;Town of DELAFIELD Wards 7-8
 ReportingUnit	Wisconsin;Waukesha County	WAUKESHA;Town of DELAFIELD Wards 3-4
-ReportingUnit	Wisconsin;Waukesha County	"WAUKESHA;Town of DELAFIELD Wards 1-2,5-6"
-ReportingUnit	Wisconsin;Waukesha County	"WAUKESHA;Town of BROOKFIELD Wards 2,5-8"
-ReportingUnit	Wisconsin;Waukesha County	"WAUKESHA;Town of BROOKFIELD Wards 1,3-4,10"
+ReportingUnit	Wisconsin;Waukesha County	WAUKESHA;Town of DELAFIELD Wards 1-2,5-6
+ReportingUnit	Wisconsin;Waukesha County	WAUKESHA;Town of BROOKFIELD Wards 2,5-8
+ReportingUnit	Wisconsin;Waukesha County	WAUKESHA;Town of BROOKFIELD Wards 1,3-4,10
 ReportingUnit	Wisconsin;Waukesha County	WAUKESHA;Town of BROOKFIELD Ward 9
 ReportingUnit	Wisconsin;Waukesha County	WAUKESHA;City of WAUKESHA Ward 9
 ReportingUnit	Wisconsin;Waukesha County	WAUKESHA;City of WAUKESHA Ward 8
@@ -2613,10 +2612,10 @@ ReportingUnit	Wisconsin;Waukesha County	WAUKESHA;City of WAUKESHA Ward 1
 ReportingUnit	Wisconsin;Waukesha County	WAUKESHA;City of PEWAUKEE Wards 8-10
 ReportingUnit	Wisconsin;Waukesha County	WAUKESHA;City of PEWAUKEE Wards 5-7
 ReportingUnit	Wisconsin;Waukesha County	WAUKESHA;City of PEWAUKEE Wards 1-4
-ReportingUnit	Wisconsin;Waukesha County	"WAUKESHA;City of OCONOMOWOC Wards 7-9,16"
+ReportingUnit	Wisconsin;Waukesha County	WAUKESHA;City of OCONOMOWOC Wards 7-9,16
 ReportingUnit	Wisconsin;Waukesha County	WAUKESHA;City of OCONOMOWOC Wards 4-6
 ReportingUnit	Wisconsin;Waukesha County	WAUKESHA;City of OCONOMOWOC Wards 10-12
-ReportingUnit	Wisconsin;Waukesha County	"WAUKESHA;City of OCONOMOWOC Wards 1-3,13-15"
+ReportingUnit	Wisconsin;Waukesha County	WAUKESHA;City of OCONOMOWOC Wards 1-3,13-15
 ReportingUnit	Wisconsin;Waukesha County	WAUKESHA;City of NEW BERLIN Ward 9
 ReportingUnit	Wisconsin;Waukesha County	WAUKESHA;City of NEW BERLIN Ward 8
 ReportingUnit	Wisconsin;Waukesha County	WAUKESHA;City of NEW BERLIN Ward 7
@@ -2682,21 +2681,21 @@ ReportingUnit	Wisconsin;Washington County	WASHINGTON;Village of SLINGER Wards 1-
 ReportingUnit	Wisconsin;Washington County	WASHINGTON;Village of SLINGER Ward 9
 ReportingUnit	Wisconsin;Washington County	WASHINGTON;Village of RICHFIELD Wards 7-9
 ReportingUnit	Wisconsin;Washington County	WASHINGTON;Village of RICHFIELD Wards 5-6
-ReportingUnit	Wisconsin;Washington County	"WASHINGTON;Village of RICHFIELD Wards 3,10"
+ReportingUnit	Wisconsin;Washington County	WASHINGTON;Village of RICHFIELD Wards 3,10
 ReportingUnit	Wisconsin;Washington County	WASHINGTON;Village of RICHFIELD Wards 1-2
 ReportingUnit	Wisconsin;Washington County	WASHINGTON;Village of RICHFIELD Ward 4
 ReportingUnit	Wisconsin;Washington County	WASHINGTON;Village of NEWBURG Wards 1-2
-ReportingUnit	Wisconsin;Washington County	"WASHINGTON;Village of KEWASKUM Wards 1-5,7"
+ReportingUnit	Wisconsin;Washington County	WASHINGTON;Village of KEWASKUM Wards 1-5,7
 ReportingUnit	Wisconsin;Washington County	WASHINGTON;Village of JACKSON Wards 10-13
 ReportingUnit	Wisconsin;Washington County	WASHINGTON;Village of JACKSON Wards 1-9
-ReportingUnit	Wisconsin;Washington County	"WASHINGTON;Village of GERMANTOWN Wards 3-4,9,16-17"
-ReportingUnit	Wisconsin;Washington County	"WASHINGTON;Village of GERMANTOWN Wards 2,5-7"
+ReportingUnit	Wisconsin;Washington County	WASHINGTON;Village of GERMANTOWN Wards 3-4,9,16-17
+ReportingUnit	Wisconsin;Washington County	WASHINGTON;Village of GERMANTOWN Wards 2,5-7
 ReportingUnit	Wisconsin;Washington County	WASHINGTON;Village of GERMANTOWN Wards 12-15
-ReportingUnit	Wisconsin;Washington County	"WASHINGTON;Village of GERMANTOWN Wards 1,8,10-11"
+ReportingUnit	Wisconsin;Washington County	WASHINGTON;Village of GERMANTOWN Wards 1,8,10-11
 ReportingUnit	Wisconsin;Washington County	WASHINGTON;Town of WEST BEND Wards 1-8
 ReportingUnit	Wisconsin;Washington County	WASHINGTON;Town of WAYNE Wards 1-3
 ReportingUnit	Wisconsin;Washington County	WASHINGTON;Town of TRENTON Wards 3-7
-ReportingUnit	Wisconsin;Washington County	"WASHINGTON;Town of TRENTON Wards 1-2,8"
+ReportingUnit	Wisconsin;Washington County	WASHINGTON;Town of TRENTON Wards 1-2,8
 ReportingUnit	Wisconsin;Washington County	WASHINGTON;Town of POLK Wards 1-6
 ReportingUnit	Wisconsin;Washington County	WASHINGTON;Town of KEWASKUM Wards 1-2
 ReportingUnit	Wisconsin;Washington County	WASHINGTON;Town of JACKSON Wards 1-6
@@ -2706,21 +2705,21 @@ ReportingUnit	Wisconsin;Washington County	WASHINGTON;Town of FARMINGTON Wards 1-
 ReportingUnit	Wisconsin;Washington County	WASHINGTON;Town of ERIN Wards 1-4
 ReportingUnit	Wisconsin;Washington County	WASHINGTON;Town of BARTON Wards 1-4
 ReportingUnit	Wisconsin;Washington County	WASHINGTON;Town of ADDISON Wards 1-6
-ReportingUnit	Wisconsin;Washington County	"WASHINGTON;City of WEST BEND Wards 9-10,32,36"
+ReportingUnit	Wisconsin;Washington County	WASHINGTON;City of WEST BEND Wards 9-10,32,36
 ReportingUnit	Wisconsin;Washington County	WASHINGTON;City of WEST BEND Wards 7-8
 ReportingUnit	Wisconsin;Washington County	WASHINGTON;City of WEST BEND Wards 4-6
-ReportingUnit	Wisconsin;Washington County	"WASHINGTON;City of WEST BEND Wards 30-31,34-35"
-ReportingUnit	Wisconsin;Washington County	"WASHINGTON;City of WEST BEND Wards 25,27"
-ReportingUnit	Wisconsin;Washington County	"WASHINGTON;City of WEST BEND Wards 23-24,26,33"
+ReportingUnit	Wisconsin;Washington County	WASHINGTON;City of WEST BEND Wards 30-31,34-35
+ReportingUnit	Wisconsin;Washington County	WASHINGTON;City of WEST BEND Wards 25,27
+ReportingUnit	Wisconsin;Washington County	WASHINGTON;City of WEST BEND Wards 23-24,26,33
 ReportingUnit	Wisconsin;Washington County	WASHINGTON;City of WEST BEND Wards 20-22
 ReportingUnit	Wisconsin;Washington County	WASHINGTON;City of WEST BEND Wards 15-19
-ReportingUnit	Wisconsin;Washington County	"WASHINGTON;City of WEST BEND Wards 11-14,28"
+ReportingUnit	Wisconsin;Washington County	WASHINGTON;City of WEST BEND Wards 11-14,28
 ReportingUnit	Wisconsin;Washington County	WASHINGTON;City of WEST BEND Wards 1-3
 ReportingUnit	Wisconsin;Washington County	WASHINGTON;City of WEST BEND Ward 29
 ReportingUnit	Wisconsin;Washington County	WASHINGTON;City of HARTFORD Wards 7-8
-ReportingUnit	Wisconsin;Washington County	"WASHINGTON;City of HARTFORD Wards 6,9-10,15-17,20,23-25,28,33,35-36"
-ReportingUnit	Wisconsin;Washington County	"WASHINGTON;City of HARTFORD Wards 3-5,31-32,34"
-ReportingUnit	Wisconsin;Washington County	"WASHINGTON;City of HARTFORD Wards 11-14,21-22,26-27,29-30"
+ReportingUnit	Wisconsin;Washington County	WASHINGTON;City of HARTFORD Wards 6,9-10,15-17,20,23-25,28,33,35-36
+ReportingUnit	Wisconsin;Washington County	WASHINGTON;City of HARTFORD Wards 3-5,31-32,34
+ReportingUnit	Wisconsin;Washington County	WASHINGTON;City of HARTFORD Wards 11-14,21-22,26-27,29-30
 ReportingUnit	Wisconsin;Washington County	WASHINGTON;City of HARTFORD Wards 1-2
 ReportingUnit	Wisconsin;Washington County	WASHINGTON;CITY OF MILWAUKEE Ward 318
 ReportingUnit	Wisconsin;Washburn County	WASHBURN;Village of MINONG Ward 1
@@ -2766,7 +2765,7 @@ ReportingUnit	Wisconsin;Walworth County	WALWORTH;Town of SPRING PRAIRIE Wards 1-
 ReportingUnit	Wisconsin;Walworth County	WALWORTH;Town of SHARON Ward 1
 ReportingUnit	Wisconsin;Walworth County	WALWORTH;Town of RICHMOND Wards 1-3
 ReportingUnit	Wisconsin;Walworth County	WALWORTH;Town of LYONS Wards 1-7
-ReportingUnit	Wisconsin;Walworth County	"WALWORTH;Town of LINN Wards 1-4,6"
+ReportingUnit	Wisconsin;Walworth County	WALWORTH;Town of LINN Wards 1-4,6
 ReportingUnit	Wisconsin;Walworth County	WALWORTH;Town of LINN Ward 5
 ReportingUnit	Wisconsin;Walworth County	WALWORTH;Town of LAFAYETTE Wards 1-3
 ReportingUnit	Wisconsin;Walworth County	WALWORTH;Town of LA GRANGE Wards 1-3
@@ -2777,7 +2776,7 @@ ReportingUnit	Wisconsin;Walworth County	WALWORTH;Town of EAST TROY Ward 1
 ReportingUnit	Wisconsin;Walworth County	WALWORTH;Town of DELAVAN Wards 1-11
 ReportingUnit	Wisconsin;Walworth County	WALWORTH;Town of DARIEN Wards 1-3
 ReportingUnit	Wisconsin;Walworth County	WALWORTH;Town of BLOOMFIELD Wards 1-2
-ReportingUnit	Wisconsin;Walworth County	"WALWORTH;City of WHITEWATER Wards 8,13"
+ReportingUnit	Wisconsin;Walworth County	WALWORTH;City of WHITEWATER Wards 8,13
 ReportingUnit	Wisconsin;Walworth County	WALWORTH;City of WHITEWATER Wards 5-6
 ReportingUnit	Wisconsin;Walworth County	WALWORTH;City of WHITEWATER Wards 3-4
 ReportingUnit	Wisconsin;Walworth County	WALWORTH;City of WHITEWATER Wards 1-2
@@ -2786,7 +2785,7 @@ ReportingUnit	Wisconsin;Walworth County	WALWORTH;City of WHITEWATER Ward 7
 ReportingUnit	Wisconsin;Walworth County	WALWORTH;City of LAKE GENEVA Wards 1-14
 ReportingUnit	Wisconsin;Walworth County	WALWORTH;City of ELKHORN Wards 1-7
 ReportingUnit	Wisconsin;Walworth County	WALWORTH;City of ELKHORN Ward 8
-ReportingUnit	Wisconsin;Walworth County	"WALWORTH;City of DELAVAN Wards 1-14,16"
+ReportingUnit	Wisconsin;Walworth County	WALWORTH;City of DELAVAN Wards 1-14,16
 ReportingUnit	Wisconsin;Walworth County	WALWORTH;City of DELAVAN Ward 15
 ReportingUnit	Wisconsin;Walworth County	WALWORTH;CITY OF BURLINGTON Ward 9
 ReportingUnit	Wisconsin;Walworth County	WALWORTH;CITY OF BURLINGTON Ward 10
@@ -2932,7 +2931,7 @@ ReportingUnit	Wisconsin;St. Croix County	ST. CROIX;City of HUDSON Wards 3-4
 ReportingUnit	Wisconsin;St. Croix County	ST. CROIX;City of HUDSON Wards 11-12
 ReportingUnit	Wisconsin;St. Croix County	ST. CROIX;City of HUDSON Wards 1-2
 ReportingUnit	Wisconsin;St. Croix County	ST. CROIX;City of GLENWOOD CITY Wards 1-2
-ReportingUnit	Wisconsin;St. Croix County	"ST. CROIX;CITY OF RIVER FALLS Wards 1-4,15"
+ReportingUnit	Wisconsin;St. Croix County	ST. CROIX;CITY OF RIVER FALLS Wards 1-4,15
 ReportingUnit	Wisconsin;Sheboygan County	SHEBOYGAN;Village of WALDO Ward 1
 ReportingUnit	Wisconsin;Sheboygan County	SHEBOYGAN;Village of RANDOM LAKE Wards 1-2
 ReportingUnit	Wisconsin;Sheboygan County	SHEBOYGAN;Village of OOSTBURG Wards 1-4
@@ -3002,7 +3001,7 @@ ReportingUnit	Wisconsin;Shawano County	SHAWANO;Village of BOWLER Ward 1
 ReportingUnit	Wisconsin;Shawano County	SHAWANO;Village of BONDUEL Wards 1-2
 ReportingUnit	Wisconsin;Shawano County	SHAWANO;Village of BIRNAMWOOD Ward 1
 ReportingUnit	Wisconsin;Shawano County	SHAWANO;Village of ANIWA Ward 1
-ReportingUnit	Wisconsin;Shawano County	"SHAWANO;VILLAGE OF PULASKI Wards 4,7"
+ReportingUnit	Wisconsin;Shawano County	SHAWANO;VILLAGE OF PULASKI Wards 4,7
 ReportingUnit	Wisconsin;Shawano County	SHAWANO;Town of WITTENBERG Wards 1-2
 ReportingUnit	Wisconsin;Shawano County	SHAWANO;Town of WESCOTT Wards 1-4
 ReportingUnit	Wisconsin;Shawano County	SHAWANO;Town of WAUKECHON Wards 1-2
@@ -3095,7 +3094,7 @@ ReportingUnit	Wisconsin;Sauk County	SAUK;Town of BEAR CREEK Ward 1
 ReportingUnit	Wisconsin;Sauk County	SAUK;Town of BARABOO Wards 1-4
 ReportingUnit	Wisconsin;Sauk County	SAUK;City of REEDSBURG Wards 1-15
 ReportingUnit	Wisconsin;Sauk County	SAUK;City of BARABOO Wards 1-14
-ReportingUnit	Wisconsin;Sauk County	"SAUK;CITY OF WISCONSIN DELLS Wards 8,10"
+ReportingUnit	Wisconsin;Sauk County	SAUK;CITY OF WISCONSIN DELLS Wards 8,10
 ReportingUnit	Wisconsin;Sauk County	SAUK;CITY OF WISCONSIN DELLS Ward 4
 ReportingUnit	Wisconsin;Rusk County	RUSK;Village of WEYERHAEUSER Wards 1-2
 ReportingUnit	Wisconsin;Rusk County	RUSK;Village of TONY Ward 1
@@ -3135,10 +3134,10 @@ ReportingUnit	Wisconsin;Rock County	ROCK;Village of FOOTVILLE Ward 1
 ReportingUnit	Wisconsin;Rock County	ROCK;Village of CLINTON Wards 1-3
 ReportingUnit	Wisconsin;Rock County	ROCK;Town of UNION Wards 1-4
 ReportingUnit	Wisconsin;Rock County	ROCK;Town of TURTLE Wards 2-3
-ReportingUnit	Wisconsin;Rock County	"ROCK;Town of TURTLE Wards 1,4"
+ReportingUnit	Wisconsin;Rock County	ROCK;Town of TURTLE Wards 1,4
 ReportingUnit	Wisconsin;Rock County	ROCK;Town of SPRING VALLEY Ward 1
-ReportingUnit	Wisconsin;Rock County	"ROCK;Town of ROCK Wards 5,7"
-ReportingUnit	Wisconsin;Rock County	"ROCK;Town of ROCK Wards 1-4,6"
+ReportingUnit	Wisconsin;Rock County	ROCK;Town of ROCK Wards 5,7
+ReportingUnit	Wisconsin;Rock County	ROCK;Town of ROCK Wards 1-4,6
 ReportingUnit	Wisconsin;Rock County	ROCK;Town of ROCK Ward 8
 ReportingUnit	Wisconsin;Rock County	ROCK;Town of PORTER Ward 1
 ReportingUnit	Wisconsin;Rock County	ROCK;Town of PLYMOUTH Wards 1-2
@@ -3274,20 +3273,20 @@ ReportingUnit	Wisconsin;Racine County	RACINE;Village of STURTEVANT Wards 1-8
 ReportingUnit	Wisconsin;Racine County	RACINE;Village of Raymond Wards 1-6
 ReportingUnit	Wisconsin;Racine County	RACINE;Village of ROCHESTER Wards 1-6
 ReportingUnit	Wisconsin;Racine County	RACINE;Village of NORTH BAY Ward 1
-ReportingUnit	Wisconsin;Racine County	"RACINE;Village of MOUNT PLEASANT Wards 9,13-14"
+ReportingUnit	Wisconsin;Racine County	RACINE;Village of MOUNT PLEASANT Wards 9,13-14
 ReportingUnit	Wisconsin;Racine County	RACINE;Village of MOUNT PLEASANT Wards 6-8
-ReportingUnit	Wisconsin;Racine County	"RACINE;Village of MOUNT PLEASANT Wards 2-4,11"
-ReportingUnit	Wisconsin;Racine County	"RACINE;Village of MOUNT PLEASANT Wards 19,21-22"
-ReportingUnit	Wisconsin;Racine County	"RACINE;Village of MOUNT PLEASANT Wards 18,23"
-ReportingUnit	Wisconsin;Racine County	"RACINE;Village of MOUNT PLEASANT Wards 10,12,15-16"
-ReportingUnit	Wisconsin;Racine County	"RACINE;Village of MOUNT PLEASANT Wards 1,17,20"
+ReportingUnit	Wisconsin;Racine County	RACINE;Village of MOUNT PLEASANT Wards 2-4,11
+ReportingUnit	Wisconsin;Racine County	RACINE;Village of MOUNT PLEASANT Wards 19,21-22
+ReportingUnit	Wisconsin;Racine County	RACINE;Village of MOUNT PLEASANT Wards 18,23
+ReportingUnit	Wisconsin;Racine County	RACINE;Village of MOUNT PLEASANT Wards 10,12,15-16
+ReportingUnit	Wisconsin;Racine County	RACINE;Village of MOUNT PLEASANT Wards 1,17,20
 ReportingUnit	Wisconsin;Racine County	RACINE;Village of MOUNT PLEASANT Ward 5
 ReportingUnit	Wisconsin;Racine County	RACINE;Village of ELMWOOD PARK Ward 1
-ReportingUnit	Wisconsin;Racine County	"RACINE;Village of CALEDONIA Wards 9-10,12-13"
+ReportingUnit	Wisconsin;Racine County	RACINE;Village of CALEDONIA Wards 9-10,12-13
 ReportingUnit	Wisconsin;Racine County	RACINE;Village of CALEDONIA Wards 6-8
-ReportingUnit	Wisconsin;Racine County	"RACINE;Village of CALEDONIA Wards 3,4-5"
-ReportingUnit	Wisconsin;Racine County	"RACINE;Village of CALEDONIA Wards 16,18-19"
-ReportingUnit	Wisconsin;Racine County	"RACINE;Village of CALEDONIA Wards 11,14-15,17"
+ReportingUnit	Wisconsin;Racine County	RACINE;Village of CALEDONIA Wards 3,4-5
+ReportingUnit	Wisconsin;Racine County	RACINE;Village of CALEDONIA Wards 16,18-19
+ReportingUnit	Wisconsin;Racine County	RACINE;Village of CALEDONIA Wards 11,14-15,17
 ReportingUnit	Wisconsin;Racine County	RACINE;Village of CALEDONIA Wards 1-2
 ReportingUnit	Wisconsin;Racine County	RACINE;Village of CALEDONIA Ward 3B
 ReportingUnit	Wisconsin;Racine County	RACINE;Village of CALEDONIA Ward 20
@@ -3380,7 +3379,7 @@ ReportingUnit	Wisconsin;Portage County	PORTAGE;Town of LANARK Wards 1-2
 ReportingUnit	Wisconsin;Portage County	PORTAGE;Town of HULL Wards 6-8
 ReportingUnit	Wisconsin;Portage County	PORTAGE;Town of HULL Wards 4-5
 ReportingUnit	Wisconsin;Portage County	PORTAGE;Town of HULL Wards 1-3
-ReportingUnit	Wisconsin;Portage County	"PORTAGE;Town of GRANT Wards 1-2,4"
+ReportingUnit	Wisconsin;Portage County	PORTAGE;Town of GRANT Wards 1-2,4
 ReportingUnit	Wisconsin;Portage County	PORTAGE;Town of GRANT Ward 3
 ReportingUnit	Wisconsin;Portage County	PORTAGE;Town of EAU PLEINE Ward 1
 ReportingUnit	Wisconsin;Portage County	PORTAGE;Town of DEWEY Ward 1
@@ -3392,10 +3391,10 @@ ReportingUnit	Wisconsin;Portage County	PORTAGE;Town of ALMOND Ward 1
 ReportingUnit	Wisconsin;Portage County	PORTAGE;Town of ALBAN Ward 1
 ReportingUnit	Wisconsin;Portage County	PORTAGE;City of STEVENS POINT Wards 7-9
 ReportingUnit	Wisconsin;Portage County	PORTAGE;City of STEVENS POINT Wards 4-6
-ReportingUnit	Wisconsin;Portage County	"PORTAGE;City of STEVENS POINT Wards 37,39,44"
-ReportingUnit	Wisconsin;Portage County	"PORTAGE;City of STEVENS POINT Wards 36,38,41,45"
-ReportingUnit	Wisconsin;Portage County	"PORTAGE;City of STEVENS POINT Wards 35,40,43,46-47"
-ReportingUnit	Wisconsin;Portage County	"PORTAGE;City of STEVENS POINT Wards 34,42"
+ReportingUnit	Wisconsin;Portage County	PORTAGE;City of STEVENS POINT Wards 37,39,44
+ReportingUnit	Wisconsin;Portage County	PORTAGE;City of STEVENS POINT Wards 36,38,41,45
+ReportingUnit	Wisconsin;Portage County	PORTAGE;City of STEVENS POINT Wards 35,40,43,46-47
+ReportingUnit	Wisconsin;Portage County	PORTAGE;City of STEVENS POINT Wards 34,42
 ReportingUnit	Wisconsin;Portage County	PORTAGE;City of STEVENS POINT Wards 31-33
 ReportingUnit	Wisconsin;Portage County	PORTAGE;City of STEVENS POINT Wards 28-30
 ReportingUnit	Wisconsin;Portage County	PORTAGE;City of STEVENS POINT Wards 25-27
@@ -3484,7 +3483,7 @@ ReportingUnit	Wisconsin;Pepin County	PEPIN;City of DURAND Wards 1-3
 ReportingUnit	Wisconsin;Ozaukee County	OZAUKEE;Village of THIENSVILLE Wards 3-4
 ReportingUnit	Wisconsin;Ozaukee County	OZAUKEE;Village of THIENSVILLE Wards 1-2
 ReportingUnit	Wisconsin;Ozaukee County	OZAUKEE;Village of SAUKVILLE Wards 2-5
-ReportingUnit	Wisconsin;Ozaukee County	"OZAUKEE;Village of SAUKVILLE Wards 1,6-7"
+ReportingUnit	Wisconsin;Ozaukee County	OZAUKEE;Village of SAUKVILLE Wards 1,6-7
 ReportingUnit	Wisconsin;Ozaukee County	OZAUKEE;Village of GRAFTON Wards 9-10
 ReportingUnit	Wisconsin;Ozaukee County	OZAUKEE;Village of GRAFTON Wards 7-8
 ReportingUnit	Wisconsin;Ozaukee County	OZAUKEE;Village of GRAFTON Wards 5-6
@@ -3499,10 +3498,10 @@ ReportingUnit	Wisconsin;Ozaukee County	OZAUKEE;VILLAGE OF BAYSIDE Ward 6
 ReportingUnit	Wisconsin;Ozaukee County	OZAUKEE;Town of SAUKVILLE Wards 1-3
 ReportingUnit	Wisconsin;Ozaukee County	OZAUKEE;Town of PORT WASHINGTON Wards 1-2
 ReportingUnit	Wisconsin;Ozaukee County	OZAUKEE;Town of GRAFTON Wards 3-4
-ReportingUnit	Wisconsin;Ozaukee County	"OZAUKEE;Town of GRAFTON Wards 1-2,5"
+ReportingUnit	Wisconsin;Ozaukee County	OZAUKEE;Town of GRAFTON Wards 1-2,5
 ReportingUnit	Wisconsin;Ozaukee County	OZAUKEE;Town of FREDONIA Wards 1-4
 ReportingUnit	Wisconsin;Ozaukee County	OZAUKEE;Town of CEDARBURG Wards 7-9
-ReportingUnit	Wisconsin;Ozaukee County	"OZAUKEE;Town of CEDARBURG Wards 5-6,10"
+ReportingUnit	Wisconsin;Ozaukee County	OZAUKEE;Town of CEDARBURG Wards 5-6,10
 ReportingUnit	Wisconsin;Ozaukee County	OZAUKEE;Town of CEDARBURG Wards 3-4
 ReportingUnit	Wisconsin;Ozaukee County	OZAUKEE;Town of CEDARBURG Wards 1-2
 ReportingUnit	Wisconsin;Ozaukee County	OZAUKEE;Town of BELGIUM Wards 1-3
@@ -3515,7 +3514,7 @@ ReportingUnit	Wisconsin;Ozaukee County	OZAUKEE;City of PORT WASHINGTON Ward 2
 ReportingUnit	Wisconsin;Ozaukee County	OZAUKEE;City of PORT WASHINGTON Ward 1
 ReportingUnit	Wisconsin;Ozaukee County	OZAUKEE;City of MEQUON Wards 8-10
 ReportingUnit	Wisconsin;Ozaukee County	OZAUKEE;City of MEQUON Wards 6-7A
-ReportingUnit	Wisconsin;Ozaukee County	"OZAUKEE;City of MEQUON Wards 5,7B"
+ReportingUnit	Wisconsin;Ozaukee County	OZAUKEE;City of MEQUON Wards 5,7B
 ReportingUnit	Wisconsin;Ozaukee County	OZAUKEE;City of MEQUON Wards 3-4
 ReportingUnit	Wisconsin;Ozaukee County	OZAUKEE;City of MEQUON Wards 19-21
 ReportingUnit	Wisconsin;Ozaukee County	OZAUKEE;City of MEQUON Wards 16-17
@@ -3525,8 +3524,8 @@ ReportingUnit	Wisconsin;Ozaukee County	OZAUKEE;City of MEQUON Ward 2
 ReportingUnit	Wisconsin;Ozaukee County	OZAUKEE;City of MEQUON Ward 18
 ReportingUnit	Wisconsin;Ozaukee County	OZAUKEE;City of MEQUON Ward 15
 ReportingUnit	Wisconsin;Ozaukee County	OZAUKEE;City of MEQUON Ward 1
-ReportingUnit	Wisconsin;Ozaukee County	"OZAUKEE;City of CEDARBURG Wards 4,8"
-ReportingUnit	Wisconsin;Ozaukee County	"OZAUKEE;City of CEDARBURG Wards 2,9"
+ReportingUnit	Wisconsin;Ozaukee County	OZAUKEE;City of CEDARBURG Wards 4,8
+ReportingUnit	Wisconsin;Ozaukee County	OZAUKEE;City of CEDARBURG Wards 2,9
 ReportingUnit	Wisconsin;Ozaukee County	OZAUKEE;City of CEDARBURG Ward 7
 ReportingUnit	Wisconsin;Ozaukee County	OZAUKEE;City of CEDARBURG Ward 6
 ReportingUnit	Wisconsin;Ozaukee County	OZAUKEE;City of CEDARBURG Ward 5
@@ -3534,10 +3533,10 @@ ReportingUnit	Wisconsin;Ozaukee County	OZAUKEE;City of CEDARBURG Ward 3
 ReportingUnit	Wisconsin;Ozaukee County	OZAUKEE;City of CEDARBURG Ward 1
 ReportingUnit	Wisconsin;Outagamie County	OUTAGAMIE;Village of SHIOCTON Ward 1
 ReportingUnit	Wisconsin;Outagamie County	OUTAGAMIE;Village of NICHOLS Ward 1
-ReportingUnit	Wisconsin;Outagamie County	"OUTAGAMIE;Village of LITTLE CHUTE Wards 3,9-11"
-ReportingUnit	Wisconsin;Outagamie County	"OUTAGAMIE;Village of LITTLE CHUTE Wards 2,6,8,12-13"
+ReportingUnit	Wisconsin;Outagamie County	OUTAGAMIE;Village of LITTLE CHUTE Wards 3,9-11
+ReportingUnit	Wisconsin;Outagamie County	OUTAGAMIE;Village of LITTLE CHUTE Wards 2,6,8,12-13
 ReportingUnit	Wisconsin;Outagamie County	OUTAGAMIE;Village of LITTLE CHUTE Wards 15-16
-ReportingUnit	Wisconsin;Outagamie County	"OUTAGAMIE;Village of LITTLE CHUTE Wards 1,4-5,14"
+ReportingUnit	Wisconsin;Outagamie County	OUTAGAMIE;Village of LITTLE CHUTE Wards 1,4-5,14
 ReportingUnit	Wisconsin;Outagamie County	OUTAGAMIE;Village of LITTLE CHUTE Ward 7
 ReportingUnit	Wisconsin;Outagamie County	OUTAGAMIE;Village of KIMBERLY Wards 1-9
 ReportingUnit	Wisconsin;Outagamie County	OUTAGAMIE;Village of HORTONVILLE Wards 1-3
@@ -3557,15 +3556,15 @@ ReportingUnit	Wisconsin;Outagamie County	OUTAGAMIE;Town of MAINE Ward 1
 ReportingUnit	Wisconsin;Outagamie County	OUTAGAMIE;Town of LIBERTY Ward 1
 ReportingUnit	Wisconsin;Outagamie County	OUTAGAMIE;Town of KAUKAUNA Wards 1-3
 ReportingUnit	Wisconsin;Outagamie County	OUTAGAMIE;Town of HORTONIA Wards 1-2
-ReportingUnit	Wisconsin;Outagamie County	"OUTAGAMIE;Town of GREENVILLE Wards 1-3,5"
+ReportingUnit	Wisconsin;Outagamie County	OUTAGAMIE;Town of GREENVILLE Wards 1-3,5
 ReportingUnit	Wisconsin;Outagamie County	OUTAGAMIE;Town of GREENVILLE Ward 9
 ReportingUnit	Wisconsin;Outagamie County	OUTAGAMIE;Town of GREENVILLE Ward 8
 ReportingUnit	Wisconsin;Outagamie County	OUTAGAMIE;Town of GREENVILLE Ward 7
 ReportingUnit	Wisconsin;Outagamie County	OUTAGAMIE;Town of GREENVILLE Ward 6
 ReportingUnit	Wisconsin;Outagamie County	OUTAGAMIE;Town of GREENVILLE Ward 4
 ReportingUnit	Wisconsin;Outagamie County	OUTAGAMIE;Town of GRAND CHUTE Wards 7-8
-ReportingUnit	Wisconsin;Outagamie County	"OUTAGAMIE;Town of GRAND CHUTE Wards 4-6,9-14"
-ReportingUnit	Wisconsin;Outagamie County	"OUTAGAMIE;Town of GRAND CHUTE Wards 1-3,15-17"
+ReportingUnit	Wisconsin;Outagamie County	OUTAGAMIE;Town of GRAND CHUTE Wards 4-6,9-14
+ReportingUnit	Wisconsin;Outagamie County	OUTAGAMIE;Town of GRAND CHUTE Wards 1-3,15-17
 ReportingUnit	Wisconsin;Outagamie County	OUTAGAMIE;Town of GRAND CHUTE Ward 18
 ReportingUnit	Wisconsin;Outagamie County	OUTAGAMIE;Town of FREEDOM Wards 1-8
 ReportingUnit	Wisconsin;Outagamie County	OUTAGAMIE;Town of ELLINGTON Wards 1-5
@@ -3578,8 +3577,8 @@ ReportingUnit	Wisconsin;Outagamie County	OUTAGAMIE;Town of BOVINA Wards 1-2
 ReportingUnit	Wisconsin;Outagamie County	OUTAGAMIE;Town of BLACK CREEK Wards 1-2
 ReportingUnit	Wisconsin;Outagamie County	OUTAGAMIE;City of SEYMOUR Wards 1-6
 ReportingUnit	Wisconsin;Outagamie County	OUTAGAMIE;City of KAUKAUNA Wards 6-10
-ReportingUnit	Wisconsin;Outagamie County	"OUTAGAMIE;City of KAUKAUNA Wards 13,15"
-ReportingUnit	Wisconsin;Outagamie County	"OUTAGAMIE;City of KAUKAUNA Wards 12,14"
+ReportingUnit	Wisconsin;Outagamie County	OUTAGAMIE;City of KAUKAUNA Wards 13,15
+ReportingUnit	Wisconsin;Outagamie County	OUTAGAMIE;City of KAUKAUNA Wards 12,14
 ReportingUnit	Wisconsin;Outagamie County	OUTAGAMIE;City of KAUKAUNA Wards 1-5
 ReportingUnit	Wisconsin;Outagamie County	OUTAGAMIE;City of APPLETON Ward 9
 ReportingUnit	Wisconsin;Outagamie County	OUTAGAMIE;City of APPLETON Ward 8
@@ -3717,8 +3716,8 @@ ReportingUnit	Wisconsin;Monroe County	MONROE;Town of LITTLE FALLS Wards 1-2
 ReportingUnit	Wisconsin;Monroe County	MONROE;Town of LINCOLN Ward 1
 ReportingUnit	Wisconsin;Monroe County	MONROE;Town of LEON Wards 1-2
 ReportingUnit	Wisconsin;Monroe County	MONROE;Town of LAFAYETTE Wards 1-2
-ReportingUnit	Wisconsin;Monroe County	"MONROE;Town of LA GRANGE Wards 1B,2B,3B"
-ReportingUnit	Wisconsin;Monroe County	"MONROE;Town of LA GRANGE Wards 1A,2A,3A"
+ReportingUnit	Wisconsin;Monroe County	MONROE;Town of LA GRANGE Wards 1B,2B,3B
+ReportingUnit	Wisconsin;Monroe County	MONROE;Town of LA GRANGE Wards 1A,2A,3A
 ReportingUnit	Wisconsin;Monroe County	MONROE;Town of JEFFERSON Ward 1
 ReportingUnit	Wisconsin;Monroe County	MONROE;Town of GREENFIELD Wards 1-2
 ReportingUnit	Wisconsin;Monroe County	MONROE;Town of GRANT Ward 1
@@ -3727,24 +3726,24 @@ ReportingUnit	Wisconsin;Monroe County	MONROE;Town of CLIFTON Ward 1
 ReportingUnit	Wisconsin;Monroe County	MONROE;Town of BYRON Ward 1
 ReportingUnit	Wisconsin;Monroe County	MONROE;Town of ANGELO Wards 1-3
 ReportingUnit	Wisconsin;Monroe County	MONROE;Town of ADRIAN Ward 1
-ReportingUnit	Wisconsin;Monroe County	"MONROE;City of TOMAH Wards 7-11,18"
-ReportingUnit	Wisconsin;Monroe County	"MONROE;City of TOMAH Wards 5B,24"
-ReportingUnit	Wisconsin;Monroe County	"MONROE;City of TOMAH Wards 17,19-23"
+ReportingUnit	Wisconsin;Monroe County	MONROE;City of TOMAH Wards 7-11,18
+ReportingUnit	Wisconsin;Monroe County	MONROE;City of TOMAH Wards 5B,24
+ReportingUnit	Wisconsin;Monroe County	MONROE;City of TOMAH Wards 17,19-23
 ReportingUnit	Wisconsin;Monroe County	MONROE;City of TOMAH Wards 12-16
-ReportingUnit	Wisconsin;Monroe County	"MONROE;City of TOMAH Wards 1-5A,6"
+ReportingUnit	Wisconsin;Monroe County	MONROE;City of TOMAH Wards 1-5A,6
 ReportingUnit	Wisconsin;Monroe County	MONROE;City of SPARTA Wards 7-12
-ReportingUnit	Wisconsin;Monroe County	"MONROE;City of SPARTA Wards 13-18,20-23"
+ReportingUnit	Wisconsin;Monroe County	MONROE;City of SPARTA Wards 13-18,20-23
 ReportingUnit	Wisconsin;Monroe County	MONROE;City of SPARTA Wards 1-6
 ReportingUnit	Wisconsin;Monroe County	MONROE;City of SPARTA Ward 19
-ReportingUnit	Wisconsin;Milwaukee County	"MILWAUKEE;Village of WHITEFISH BAY Wards 9,11"
-ReportingUnit	Wisconsin;Milwaukee County	"MILWAUKEE;Village of WHITEFISH BAY Wards 8,10"
+ReportingUnit	Wisconsin;Milwaukee County	MILWAUKEE;Village of WHITEFISH BAY Wards 9,11
+ReportingUnit	Wisconsin;Milwaukee County	MILWAUKEE;Village of WHITEFISH BAY Wards 8,10
 ReportingUnit	Wisconsin;Milwaukee County	MILWAUKEE;Village of WHITEFISH BAY Wards 5-6
 ReportingUnit	Wisconsin;Milwaukee County	MILWAUKEE;Village of WHITEFISH BAY Wards 3-4
 ReportingUnit	Wisconsin;Milwaukee County	MILWAUKEE;Village of WHITEFISH BAY Wards 1-2
 ReportingUnit	Wisconsin;Milwaukee County	MILWAUKEE;Village of WHITEFISH BAY Ward 7
 ReportingUnit	Wisconsin;Milwaukee County	MILWAUKEE;Village of WHITEFISH BAY Ward 12
-ReportingUnit	Wisconsin;Milwaukee County	"MILWAUKEE;Village of WEST MILWAUKEE Wards 3-4,6"
-ReportingUnit	Wisconsin;Milwaukee County	"MILWAUKEE;Village of WEST MILWAUKEE Wards 1-2,5"
+ReportingUnit	Wisconsin;Milwaukee County	MILWAUKEE;Village of WEST MILWAUKEE Wards 3-4,6
+ReportingUnit	Wisconsin;Milwaukee County	MILWAUKEE;Village of WEST MILWAUKEE Wards 1-2,5
 ReportingUnit	Wisconsin;Milwaukee County	MILWAUKEE;Village of SHOREWOOD Wards 9-12
 ReportingUnit	Wisconsin;Milwaukee County	MILWAUKEE;Village of SHOREWOOD Wards 5-8
 ReportingUnit	Wisconsin;Milwaukee County	MILWAUKEE;Village of SHOREWOOD Wards 1-4
@@ -3762,9 +3761,9 @@ ReportingUnit	Wisconsin;Milwaukee County	MILWAUKEE;Village of FOX POINT Wards 1-
 ReportingUnit	Wisconsin;Milwaukee County	MILWAUKEE;Village of BROWN DEER Wards 5-6
 ReportingUnit	Wisconsin;Milwaukee County	MILWAUKEE;Village of BROWN DEER Wards 3-4
 ReportingUnit	Wisconsin;Milwaukee County	MILWAUKEE;Village of BROWN DEER Wards 1-2
-ReportingUnit	Wisconsin;Milwaukee County	"MILWAUKEE;Village of BAYSIDE Wards 2,4"
-ReportingUnit	Wisconsin;Milwaukee County	"MILWAUKEE;Village of BAYSIDE Wards 1S,3S"
-ReportingUnit	Wisconsin;Milwaukee County	"MILWAUKEE;Village of BAYSIDE Wards 1,3"
+ReportingUnit	Wisconsin;Milwaukee County	MILWAUKEE;Village of BAYSIDE Wards 2,4
+ReportingUnit	Wisconsin;Milwaukee County	MILWAUKEE;Village of BAYSIDE Wards 1S,3S
+ReportingUnit	Wisconsin;Milwaukee County	MILWAUKEE;Village of BAYSIDE Wards 1,3
 ReportingUnit	Wisconsin;Milwaukee County	MILWAUKEE;Village of BAYSIDE Ward 5
 ReportingUnit	Wisconsin;Milwaukee County	MILWAUKEE;City of WEST ALLIS Ward 9
 ReportingUnit	Wisconsin;Milwaukee County	MILWAUKEE;City of WEST ALLIS Ward 8
@@ -4174,12 +4173,12 @@ ReportingUnit	Wisconsin;Milwaukee County	MILWAUKEE;City of GREENFIELD Ward 12
 ReportingUnit	Wisconsin;Milwaukee County	MILWAUKEE;City of GREENFIELD Ward 11
 ReportingUnit	Wisconsin;Milwaukee County	MILWAUKEE;City of GREENFIELD Ward 10
 ReportingUnit	Wisconsin;Milwaukee County	MILWAUKEE;City of GREENFIELD Ward 1
-ReportingUnit	Wisconsin;Milwaukee County	"MILWAUKEE;City of GLENDALE Wards 6,12"
-ReportingUnit	Wisconsin;Milwaukee County	"MILWAUKEE;City of GLENDALE Wards 5,11"
-ReportingUnit	Wisconsin;Milwaukee County	"MILWAUKEE;City of GLENDALE Wards 4,10"
-ReportingUnit	Wisconsin;Milwaukee County	"MILWAUKEE;City of GLENDALE Wards 3,9"
-ReportingUnit	Wisconsin;Milwaukee County	"MILWAUKEE;City of GLENDALE Wards 2,8S"
-ReportingUnit	Wisconsin;Milwaukee County	"MILWAUKEE;City of GLENDALE Wards 1,7"
+ReportingUnit	Wisconsin;Milwaukee County	MILWAUKEE;City of GLENDALE Wards 6,12
+ReportingUnit	Wisconsin;Milwaukee County	MILWAUKEE;City of GLENDALE Wards 5,11
+ReportingUnit	Wisconsin;Milwaukee County	MILWAUKEE;City of GLENDALE Wards 4,10
+ReportingUnit	Wisconsin;Milwaukee County	MILWAUKEE;City of GLENDALE Wards 3,9
+ReportingUnit	Wisconsin;Milwaukee County	MILWAUKEE;City of GLENDALE Wards 2,8S
+ReportingUnit	Wisconsin;Milwaukee County	MILWAUKEE;City of GLENDALE Wards 1,7
 ReportingUnit	Wisconsin;Milwaukee County	MILWAUKEE;City of GLENDALE Ward 8
 ReportingUnit	Wisconsin;Milwaukee County	MILWAUKEE;City of GLENDALE Ward 11S
 ReportingUnit	Wisconsin;Milwaukee County	MILWAUKEE;City of FRANKLIN Ward 9
@@ -4212,7 +4211,7 @@ ReportingUnit	Wisconsin;Milwaukee County	MILWAUKEE;City of CUDAHY Wards 4-6
 ReportingUnit	Wisconsin;Milwaukee County	MILWAUKEE;City of CUDAHY Wards 13-15
 ReportingUnit	Wisconsin;Milwaukee County	MILWAUKEE;City of CUDAHY Wards 10-12
 ReportingUnit	Wisconsin;Milwaukee County	MILWAUKEE;City of CUDAHY Wards 1-3
-ReportingUnit	Wisconsin;Menominee County	"MENOMINEE;Town of MENOMINEE Wards 1,3-5"
+ReportingUnit	Wisconsin;Menominee County	MENOMINEE;Town of MENOMINEE Wards 1,3-5
 ReportingUnit	Wisconsin;Menominee County	MENOMINEE;Town of MENOMINEE Ward 2
 ReportingUnit	Wisconsin;Marquette County	MARQUETTE;Village of WESTFIELD Wards 1-2
 ReportingUnit	Wisconsin;Marquette County	MARQUETTE;Village of OXFORD Ward 1
@@ -4246,7 +4245,7 @@ ReportingUnit	Wisconsin;Marinette County	MARINETTE;Town of POUND Wards 1-3
 ReportingUnit	Wisconsin;Marinette County	MARINETTE;Town of PORTERFIELD Wards 1-3
 ReportingUnit	Wisconsin;Marinette County	MARINETTE;Town of PESHTIGO Wards 5-6
 ReportingUnit	Wisconsin;Marinette County	MARINETTE;Town of PESHTIGO Wards 2-3
-ReportingUnit	Wisconsin;Marinette County	"MARINETTE;Town of PESHTIGO Wards 1,4"
+ReportingUnit	Wisconsin;Marinette County	MARINETTE;Town of PESHTIGO Wards 1,4
 ReportingUnit	Wisconsin;Marinette County	MARINETTE;Town of PEMBINE Wards 1-2
 ReportingUnit	Wisconsin;Marinette County	MARINETTE;Town of NIAGARA Ward 1
 ReportingUnit	Wisconsin;Marinette County	MARINETTE;Town of MIDDLE INLET Wards 1-2
@@ -4366,10 +4365,10 @@ ReportingUnit	Wisconsin;Marathon County	MARATHON;City of WAUSAU Ward 10
 ReportingUnit	Wisconsin;Marathon County	MARATHON;City of WAUSAU Ward 1
 ReportingUnit	Wisconsin;Marathon County	MARATHON;City of SCHOFIELD Wards 1-4
 ReportingUnit	Wisconsin;Marathon County	MARATHON;City of MOSINEE Wards 3-5
-ReportingUnit	Wisconsin;Marathon County	"MARATHON;City of MOSINEE Wards 1-2,6-7"
-ReportingUnit	Wisconsin;Marathon County	"MARATHON;CITY OF MARSHFIELD Wards 12,20-21,24"
+ReportingUnit	Wisconsin;Marathon County	MARATHON;City of MOSINEE Wards 1-2,6-7
+ReportingUnit	Wisconsin;Marathon County	MARATHON;CITY OF MARSHFIELD Wards 12,20-21,24
 ReportingUnit	Wisconsin;Marathon County	MARATHON;CITY OF COLBY Ward 1
-ReportingUnit	Wisconsin;Marathon County	"MARATHON;CITY OF ABBOTSFORD Wards 1,6"
+ReportingUnit	Wisconsin;Marathon County	MARATHON;CITY OF ABBOTSFORD Wards 1,6
 ReportingUnit	Wisconsin;Manitowoc County	MANITOWOC;Village of WHITELAW Ward 1
 ReportingUnit	Wisconsin;Manitowoc County	MANITOWOC;Village of VALDERS Ward 1
 ReportingUnit	Wisconsin;Manitowoc County	MANITOWOC;Village of ST. NAZIANZ Ward 1
@@ -4386,7 +4385,7 @@ ReportingUnit	Wisconsin;Manitowoc County	MANITOWOC;Town of ROCKLAND Wards 1-2
 ReportingUnit	Wisconsin;Manitowoc County	MANITOWOC;Town of NEWTON Wards 1-3
 ReportingUnit	Wisconsin;Manitowoc County	MANITOWOC;Town of MISHICOT Wards 1-2
 ReportingUnit	Wisconsin;Manitowoc County	MANITOWOC;Town of MEEME Wards 2-3
-ReportingUnit	Wisconsin;Manitowoc County	"MANITOWOC;Town of MEEME Wards 1,4"
+ReportingUnit	Wisconsin;Manitowoc County	MANITOWOC;Town of MEEME Wards 1,4
 ReportingUnit	Wisconsin;Manitowoc County	MANITOWOC;Town of MAPLE GROVE Ward 1
 ReportingUnit	Wisconsin;Manitowoc County	MANITOWOC;Town of MANITOWOC Wards 1-2
 ReportingUnit	Wisconsin;Manitowoc County	MANITOWOC;Town of MANITOWOC RAPIDS Wards 1-5
@@ -4402,17 +4401,17 @@ ReportingUnit	Wisconsin;Manitowoc County	MANITOWOC;City of TWO RIVERS Wards 7-8
 ReportingUnit	Wisconsin;Manitowoc County	MANITOWOC;City of TWO RIVERS Wards 5-6
 ReportingUnit	Wisconsin;Manitowoc County	MANITOWOC;City of TWO RIVERS Wards 3-4
 ReportingUnit	Wisconsin;Manitowoc County	MANITOWOC;City of TWO RIVERS Wards 1-2
-ReportingUnit	Wisconsin;Manitowoc County	"MANITOWOC;City of MANITOWOC Wards 9-10,29"
+ReportingUnit	Wisconsin;Manitowoc County	MANITOWOC;City of MANITOWOC Wards 9-10,29
 ReportingUnit	Wisconsin;Manitowoc County	MANITOWOC;City of MANITOWOC Wards 7-8
 ReportingUnit	Wisconsin;Manitowoc County	MANITOWOC;City of MANITOWOC Wards 5-6
-ReportingUnit	Wisconsin;Manitowoc County	"MANITOWOC;City of MANITOWOC Wards 3-4,22"
-ReportingUnit	Wisconsin;Manitowoc County	"MANITOWOC;City of MANITOWOC Wards 19-20,27,30"
-ReportingUnit	Wisconsin;Manitowoc County	"MANITOWOC;City of MANITOWOC Wards 17-18,21,23-26,28,32"
+ReportingUnit	Wisconsin;Manitowoc County	MANITOWOC;City of MANITOWOC Wards 3-4,22
+ReportingUnit	Wisconsin;Manitowoc County	MANITOWOC;City of MANITOWOC Wards 19-20,27,30
+ReportingUnit	Wisconsin;Manitowoc County	MANITOWOC;City of MANITOWOC Wards 17-18,21,23-26,28,32
 ReportingUnit	Wisconsin;Manitowoc County	MANITOWOC;City of MANITOWOC Wards 15-16
-ReportingUnit	Wisconsin;Manitowoc County	"MANITOWOC;City of MANITOWOC Wards 13-14,31"
+ReportingUnit	Wisconsin;Manitowoc County	MANITOWOC;City of MANITOWOC Wards 13-14,31
 ReportingUnit	Wisconsin;Manitowoc County	MANITOWOC;City of MANITOWOC Wards 11-12
 ReportingUnit	Wisconsin;Manitowoc County	MANITOWOC;City of MANITOWOC Wards 1-2
-ReportingUnit	Wisconsin;Manitowoc County	"MANITOWOC;City of KIEL Wards 1-6,8-9,11"
+ReportingUnit	Wisconsin;Manitowoc County	MANITOWOC;City of KIEL Wards 1-6,8-9,11
 ReportingUnit	Wisconsin;Lincoln County	LINCOLN;Town of WILSON Ward 1
 ReportingUnit	Wisconsin;Lincoln County	LINCOLN;Town of TOMAHAWK Ward 1
 ReportingUnit	Wisconsin;Lincoln County	LINCOLN;Town of SOMO Ward 1
@@ -4566,21 +4565,21 @@ ReportingUnit	Wisconsin;Kewaunee County	KEWAUNEE;City of KEWAUNEE Wards 1-5
 ReportingUnit	Wisconsin;Kewaunee County	KEWAUNEE;City of ALGOMA Wards 1-6
 ReportingUnit	Wisconsin;Kenosha County	KENOSHA;Village of TWIN LAKES Wards 1-9
 ReportingUnit	Wisconsin;Kenosha County	KENOSHA;Village of SOMERS Wards 7-8
-ReportingUnit	Wisconsin;Kenosha County	"KENOSHA;Village of SOMERS Wards 5-6,9-10"
+ReportingUnit	Wisconsin;Kenosha County	KENOSHA;Village of SOMERS Wards 5-6,9-10
 ReportingUnit	Wisconsin;Kenosha County	KENOSHA;Village of SOMERS Wards 1-4
 ReportingUnit	Wisconsin;Kenosha County	KENOSHA;Village of SOMERS Ward 12
 ReportingUnit	Wisconsin;Kenosha County	KENOSHA;Village of SOMERS Ward 11
 ReportingUnit	Wisconsin;Kenosha County	KENOSHA;Village of SALEM LAKES Wards 6-9
 ReportingUnit	Wisconsin;Kenosha County	KENOSHA;Village of SALEM LAKES Wards 11-13
-ReportingUnit	Wisconsin;Kenosha County	"KENOSHA;Village of SALEM LAKES Wards 1-5,10"
+ReportingUnit	Wisconsin;Kenosha County	KENOSHA;Village of SALEM LAKES Wards 1-5,10
 ReportingUnit	Wisconsin;Kenosha County	KENOSHA;Village of PLEASANT PRAIRIE Wards 8-11
-ReportingUnit	Wisconsin;Kenosha County	"KENOSHA;Village of PLEASANT PRAIRIE Wards 6-7,12"
+ReportingUnit	Wisconsin;Kenosha County	KENOSHA;Village of PLEASANT PRAIRIE Wards 6-7,12
 ReportingUnit	Wisconsin;Kenosha County	KENOSHA;Village of PLEASANT PRAIRIE Wards 4-5
 ReportingUnit	Wisconsin;Kenosha County	KENOSHA;Village of PLEASANT PRAIRIE Wards 13-14
 ReportingUnit	Wisconsin;Kenosha County	KENOSHA;Village of PLEASANT PRAIRIE Wards 1-3
 ReportingUnit	Wisconsin;Kenosha County	KENOSHA;Village of PADDOCK LAKE Wards 1-6
 ReportingUnit	Wisconsin;Kenosha County	KENOSHA;Village of BRISTOL Wards 4-7
-ReportingUnit	Wisconsin;Kenosha County	"KENOSHA;Village of BRISTOL Wards 1-3,8"
+ReportingUnit	Wisconsin;Kenosha County	KENOSHA;Village of BRISTOL Wards 1-3,8
 ReportingUnit	Wisconsin;Kenosha County	KENOSHA;VILLAGE OF GENOA CITY Ward 5
 ReportingUnit	Wisconsin;Kenosha County	KENOSHA;Town of WHEATLAND Wards 1-6
 ReportingUnit	Wisconsin;Kenosha County	KENOSHA;Town of SOMERS Ward 2
@@ -4724,7 +4723,7 @@ ReportingUnit	Wisconsin;Juneau County	JUNEAU;Town of LINDINA Ward 1
 ReportingUnit	Wisconsin;Juneau County	JUNEAU;Town of LEMONWEIR Wards 1-4
 ReportingUnit	Wisconsin;Juneau County	JUNEAU;Town of KINGSTON Ward 1
 ReportingUnit	Wisconsin;Juneau County	JUNEAU;Town of KILDARE Ward 1
-ReportingUnit	Wisconsin;Juneau County	"JUNEAU;Town of GERMANTOWN Wards 1,3"
+ReportingUnit	Wisconsin;Juneau County	JUNEAU;Town of GERMANTOWN Wards 1,3
 ReportingUnit	Wisconsin;Juneau County	JUNEAU;Town of GERMANTOWN Ward 2
 ReportingUnit	Wisconsin;Juneau County	JUNEAU;Town of FOUNTAIN Wards 1-2
 ReportingUnit	Wisconsin;Juneau County	JUNEAU;Town of FINLEY Ward 1
@@ -4750,7 +4749,7 @@ ReportingUnit	Wisconsin;Jefferson County	JEFFERSON;Town of OAKLAND Wards 1-4
 ReportingUnit	Wisconsin;Jefferson County	JEFFERSON;Town of MILFORD Wards 1-2
 ReportingUnit	Wisconsin;Jefferson County	JEFFERSON;Town of LAKE MILLS Wards 1-3
 ReportingUnit	Wisconsin;Jefferson County	JEFFERSON;Town of KOSHKONONG Wards 2-5
-ReportingUnit	Wisconsin;Jefferson County	"JEFFERSON;Town of KOSHKONONG Wards 1,6"
+ReportingUnit	Wisconsin;Jefferson County	JEFFERSON;Town of KOSHKONONG Wards 1,6
 ReportingUnit	Wisconsin;Jefferson County	JEFFERSON;Town of JEFFERSON Wards 1-3
 ReportingUnit	Wisconsin;Jefferson County	JEFFERSON;Town of IXONIA Wards 1-6
 ReportingUnit	Wisconsin;Jefferson County	JEFFERSON;Town of HEBRON Wards 1-2
@@ -4795,8 +4794,8 @@ ReportingUnit	Wisconsin;Jackson County	JACKSON;Town of CLEVELAND Ward 1
 ReportingUnit	Wisconsin;Jackson County	JACKSON;Town of CITY POINT Ward 1
 ReportingUnit	Wisconsin;Jackson County	JACKSON;Town of BROCKWAY Wards 1-6
 ReportingUnit	Wisconsin;Jackson County	JACKSON;Town of BEAR BLUFF Ward 1
-ReportingUnit	Wisconsin;Jackson County	"JACKSON;Town of ALMA Wards 2-3,5"
-ReportingUnit	Wisconsin;Jackson County	"JACKSON;Town of ALMA Wards 1,4"
+ReportingUnit	Wisconsin;Jackson County	JACKSON;Town of ALMA Wards 2-3,5
+ReportingUnit	Wisconsin;Jackson County	JACKSON;Town of ALMA Wards 1,4
 ReportingUnit	Wisconsin;Jackson County	JACKSON;Town of ALBION Wards 1-4
 ReportingUnit	Wisconsin;Jackson County	JACKSON;Town of ADAMS Wards 1-3
 ReportingUnit	Wisconsin;Jackson County	JACKSON;City of BLACK RIVER FALLS Ward 4
@@ -4983,7 +4982,7 @@ ReportingUnit	Wisconsin;Fond du Lac County	FOND DU LAC;Town of MARSHFIELD Wards 
 ReportingUnit	Wisconsin;Fond du Lac County	FOND DU LAC;Town of LAMARTINE Wards 1-2
 ReportingUnit	Wisconsin;Fond du Lac County	FOND DU LAC;Town of FRIENDSHIP Wards 1-3
 ReportingUnit	Wisconsin;Fond du Lac County	FOND DU LAC;Town of FOREST Wards 1-2
-ReportingUnit	Wisconsin;Fond du Lac County	"FOND DU LAC;Town of FOND DU LAC Wards 1,2-8"
+ReportingUnit	Wisconsin;Fond du Lac County	FOND DU LAC;Town of FOND DU LAC Wards 1,2-8
 ReportingUnit	Wisconsin;Fond du Lac County	FOND DU LAC;Town of FOND DU LAC Ward 1A
 ReportingUnit	Wisconsin;Fond du Lac County	FOND DU LAC;Town of EMPIRE Wards 1-4
 ReportingUnit	Wisconsin;Fond du Lac County	FOND DU LAC;Town of ELDORADO Wards 1-3
@@ -5029,7 +5028,7 @@ ReportingUnit	Wisconsin;Fond du Lac County	FOND DU LAC;City of FOND DU LAC Ward 
 ReportingUnit	Wisconsin;Fond du Lac County	FOND DU LAC;City of FOND DU LAC Ward 11
 ReportingUnit	Wisconsin;Fond du Lac County	FOND DU LAC;City of FOND DU LAC Ward 10
 ReportingUnit	Wisconsin;Fond du Lac County	FOND DU LAC;City of FOND DU LAC Ward 1
-ReportingUnit	Wisconsin;Fond du Lac County	"FOND DU LAC;CITY OF WAUPUN Wards 9-9A,10-12"
+ReportingUnit	Wisconsin;Fond du Lac County	FOND DU LAC;CITY OF WAUPUN Wards 9-9A,10-12
 ReportingUnit	Wisconsin;Fond du Lac County	FOND DU LAC;CITY OF WAUPUN Ward 9B
 ReportingUnit	Wisconsin;Florence County	FLORENCE;Town of TIPLER Ward 1
 ReportingUnit	Wisconsin;Florence County	FLORENCE;Town of LONG LAKE Ward 1
@@ -5164,7 +5163,7 @@ ReportingUnit	Wisconsin;Dunn County	DUNN;Town of EAU GALLE Ward 1
 ReportingUnit	Wisconsin;Dunn County	DUNN;Town of DUNN Wards 1-2
 ReportingUnit	Wisconsin;Dunn County	DUNN;Town of COLFAX Wards 1-3
 ReportingUnit	Wisconsin;Dunn County	DUNN;City of MENOMONIE Wards 8-9
-ReportingUnit	Wisconsin;Dunn County	"DUNN;City of MENOMONIE Wards 5,7"
+ReportingUnit	Wisconsin;Dunn County	DUNN;City of MENOMONIE Wards 5,7
 ReportingUnit	Wisconsin;Dunn County	DUNN;City of MENOMONIE Wards 3-4
 ReportingUnit	Wisconsin;Dunn County	DUNN;City of MENOMONIE Wards 10-11
 ReportingUnit	Wisconsin;Dunn County	DUNN;City of MENOMONIE Wards 1-2
@@ -5191,11 +5190,11 @@ ReportingUnit	Wisconsin;Douglas County	DOUGLAS;Town of CLOVERLAND Ward 1
 ReportingUnit	Wisconsin;Douglas County	DOUGLAS;Town of BRULE Wards 1-2
 ReportingUnit	Wisconsin;Douglas County	DOUGLAS;Town of BENNETT Ward 1
 ReportingUnit	Wisconsin;Douglas County	DOUGLAS;Town of AMNICON Wards 1-2
-ReportingUnit	Wisconsin;Douglas County	"DOUGLAS;City of SUPERIOR Wards 4-6,9-12"
+ReportingUnit	Wisconsin;Douglas County	DOUGLAS;City of SUPERIOR Wards 4-6,9-12
 ReportingUnit	Wisconsin;Douglas County	DOUGLAS;City of SUPERIOR Wards 23-29
-ReportingUnit	Wisconsin;Douglas County	"DOUGLAS;City of SUPERIOR Wards 17-19,30-32"
-ReportingUnit	Wisconsin;Douglas County	"DOUGLAS;City of SUPERIOR Wards 13-16,20-22"
-ReportingUnit	Wisconsin;Douglas County	"DOUGLAS;City of SUPERIOR Wards 1-3,7-8"
+ReportingUnit	Wisconsin;Douglas County	DOUGLAS;City of SUPERIOR Wards 17-19,30-32
+ReportingUnit	Wisconsin;Douglas County	DOUGLAS;City of SUPERIOR Wards 13-16,20-22
+ReportingUnit	Wisconsin;Douglas County	DOUGLAS;City of SUPERIOR Wards 1-3,7-8
 ReportingUnit	Wisconsin;Door County	DOOR;Village of SISTER BAY Ward 1
 ReportingUnit	Wisconsin;Door County	DOOR;Village of FORESTVILLE Ward 1
 ReportingUnit	Wisconsin;Door County	DOOR;Village of EPHRAIM Ward 1
@@ -5214,9 +5213,9 @@ ReportingUnit	Wisconsin;Door County	DOOR;Town of EGG HARBOR Wards 1-3
 ReportingUnit	Wisconsin;Door County	DOOR;Town of CLAY BANKS Ward 1
 ReportingUnit	Wisconsin;Door County	DOOR;Town of BRUSSELS Wards 1-2
 ReportingUnit	Wisconsin;Door County	DOOR;Town of BAILEYS HARBOR Wards 1-2
-ReportingUnit	Wisconsin;Door County	"DOOR;City of STURGEON BAY Wards 7-10,18-21,25-27,30"
-ReportingUnit	Wisconsin;Door County	"DOOR;City of STURGEON BAY Wards 11-17,28"
-ReportingUnit	Wisconsin;Door County	"DOOR;City of STURGEON BAY Wards 1-6,22-24,29"
+ReportingUnit	Wisconsin;Door County	DOOR;City of STURGEON BAY Wards 7-10,18-21,25-27,30
+ReportingUnit	Wisconsin;Door County	DOOR;City of STURGEON BAY Wards 11-17,28
+ReportingUnit	Wisconsin;Door County	DOOR;City of STURGEON BAY Wards 1-6,22-24,29
 ReportingUnit	Wisconsin;Dodge County	DODGE;Village of THERESA Wards 1-3
 ReportingUnit	Wisconsin;Dodge County	DODGE;Village of REESEVILLE Ward 1
 ReportingUnit	Wisconsin;Dodge County	DODGE;Village of RANDOLPH Wards 1-2
@@ -5231,7 +5230,7 @@ ReportingUnit	Wisconsin;Dodge County	DODGE;Village of BROWNSVILLE Ward 1
 ReportingUnit	Wisconsin;Dodge County	DODGE;Town of WESTFORD Wards 1-2
 ReportingUnit	Wisconsin;Dodge County	DODGE;Town of WESTFORD Ward 3
 ReportingUnit	Wisconsin;Dodge County	DODGE;Town of TRENTON Wards 1-2
-ReportingUnit	Wisconsin;Dodge County	"DODGE;Town of THERESA Wards 1,3-7"
+ReportingUnit	Wisconsin;Dodge County	DODGE;Town of THERESA Wards 1,3-7
 ReportingUnit	Wisconsin;Dodge County	DODGE;Town of THERESA Ward 2
 ReportingUnit	Wisconsin;Dodge County	DODGE;Town of SHIELDS Ward 1
 ReportingUnit	Wisconsin;Dodge County	DODGE;Town of RUBICON Wards 1-3
@@ -5256,7 +5255,7 @@ ReportingUnit	Wisconsin;Dodge County	DODGE;Town of CHESTER Wards 1-2
 ReportingUnit	Wisconsin;Dodge County	DODGE;Town of CALAMUS Wards 1-2
 ReportingUnit	Wisconsin;Dodge County	DODGE;Town of BURNETT Wards 1-2
 ReportingUnit	Wisconsin;Dodge County	DODGE;Town of BEAVER DAM Wards 5-6
-ReportingUnit	Wisconsin;Dodge County	"DODGE;Town of BEAVER DAM Wards 1-4,7-11"
+ReportingUnit	Wisconsin;Dodge County	DODGE;Town of BEAVER DAM Wards 1-4,7-11
 ReportingUnit	Wisconsin;Dodge County	DODGE;Town of ASHIPPUN Wards 1-4
 ReportingUnit	Wisconsin;Dodge County	DODGE;City of WAUPUN Wards 13-14
 ReportingUnit	Wisconsin;Dodge County	DODGE;City of WAUPUN Wards 1-8
@@ -5265,11 +5264,11 @@ ReportingUnit	Wisconsin;Dodge County	DODGE;City of JUNEAU Wards 1-3
 ReportingUnit	Wisconsin;Dodge County	DODGE;City of HORICON Wards 1-6
 ReportingUnit	Wisconsin;Dodge County	DODGE;City of HORICON Ward 7
 ReportingUnit	Wisconsin;Dodge County	DODGE;City of FOX LAKE Wards 1-3
-ReportingUnit	Wisconsin;Dodge County	"DODGE;City of BEAVER DAM Wards 9,11"
-ReportingUnit	Wisconsin;Dodge County	"DODGE;City of BEAVER DAM Wards 7,12-13"
-ReportingUnit	Wisconsin;Dodge County	"DODGE;City of BEAVER DAM Wards 4,8,10,14"
-ReportingUnit	Wisconsin;Dodge County	"DODGE;City of BEAVER DAM Wards 2,6"
-ReportingUnit	Wisconsin;Dodge County	"DODGE;City of BEAVER DAM Wards 1,3,5"
+ReportingUnit	Wisconsin;Dodge County	DODGE;City of BEAVER DAM Wards 9,11
+ReportingUnit	Wisconsin;Dodge County	DODGE;City of BEAVER DAM Wards 7,12-13
+ReportingUnit	Wisconsin;Dodge County	DODGE;City of BEAVER DAM Wards 4,8,10,14
+ReportingUnit	Wisconsin;Dodge County	DODGE;City of BEAVER DAM Wards 2,6
+ReportingUnit	Wisconsin;Dodge County	DODGE;City of BEAVER DAM Wards 1,3,5
 ReportingUnit	Wisconsin;Dodge County	DODGE;City of BEAVER DAM Ward 16
 ReportingUnit	Wisconsin;Dodge County	DODGE;City of BEAVER DAM Ward 15
 ReportingUnit	Wisconsin;Dodge County	DODGE;CITY OF WATERTOWN Wards 5-6
@@ -5286,8 +5285,8 @@ ReportingUnit	Wisconsin;Dane County	DANE;Village of WAUNAKEE Wards 1-5
 ReportingUnit	Wisconsin;Dane County	DANE;Village of SHOREWOOD HILLS Wards 1-2
 ReportingUnit	Wisconsin;Dane County	DANE;Village of ROCKDALE Ward 1
 ReportingUnit	Wisconsin;Dane County	DANE;Village of OREGON Wards 7-10
-ReportingUnit	Wisconsin;Dane County	"DANE;Village of OREGON Wards 2-4,12"
-ReportingUnit	Wisconsin;Dane County	"DANE;Village of OREGON Wards 1,5-6,11,13"
+ReportingUnit	Wisconsin;Dane County	DANE;Village of OREGON Wards 2-4,12
+ReportingUnit	Wisconsin;Dane County	DANE;Village of OREGON Wards 1,5-6,11,13
 ReportingUnit	Wisconsin;Dane County	DANE;Village of MOUNT HOREB Wards 5-9
 ReportingUnit	Wisconsin;Dane County	DANE;Village of MOUNT HOREB Wards 1-4
 ReportingUnit	Wisconsin;Dane County	DANE;Village of MCFARLAND Wards 1-13
@@ -5295,18 +5294,18 @@ ReportingUnit	Wisconsin;Dane County	DANE;Village of MCFARLAND Ward 14
 ReportingUnit	Wisconsin;Dane County	DANE;Village of MAZOMANIE Wards 1-3
 ReportingUnit	Wisconsin;Dane County	DANE;Village of MARSHALL Wards 1-5
 ReportingUnit	Wisconsin;Dane County	DANE;Village of MAPLE BLUFF Wards 1-2
-ReportingUnit	Wisconsin;Dane County	"DANE;Village of DEFOREST Wards 7-10,12"
-ReportingUnit	Wisconsin;Dane County	"DANE;Village of DEFOREST Wards 2,21"
-ReportingUnit	Wisconsin;Dane County	"DANE;Village of DEFOREST Wards 14,16-18"
-ReportingUnit	Wisconsin;Dane County	"DANE;Village of DEFOREST Wards 13,19,22-23"
-ReportingUnit	Wisconsin;Dane County	"DANE;Village of DEFOREST Wards 11,20"
-ReportingUnit	Wisconsin;Dane County	"DANE;Village of DEFOREST Wards 1,3-6,15"
+ReportingUnit	Wisconsin;Dane County	DANE;Village of DEFOREST Wards 7-10,12
+ReportingUnit	Wisconsin;Dane County	DANE;Village of DEFOREST Wards 2,21
+ReportingUnit	Wisconsin;Dane County	DANE;Village of DEFOREST Wards 14,16-18
+ReportingUnit	Wisconsin;Dane County	DANE;Village of DEFOREST Wards 13,19,22-23
+ReportingUnit	Wisconsin;Dane County	DANE;Village of DEFOREST Wards 11,20
+ReportingUnit	Wisconsin;Dane County	DANE;Village of DEFOREST Wards 1,3-6,15
 ReportingUnit	Wisconsin;Dane County	DANE;Village of DEERFIELD Wards 1-3
 ReportingUnit	Wisconsin;Dane County	DANE;Village of DANE Ward 1
 ReportingUnit	Wisconsin;Dane County	DANE;Village of CROSS PLAINS Wards 5-6
 ReportingUnit	Wisconsin;Dane County	DANE;Village of CROSS PLAINS Wards 1-4
 ReportingUnit	Wisconsin;Dane County	DANE;Village of COTTAGE GROVE Wards 11-12
-ReportingUnit	Wisconsin;Dane County	"DANE;Village of COTTAGE GROVE Wards 1-10,13"
+ReportingUnit	Wisconsin;Dane County	DANE;Village of COTTAGE GROVE Wards 1-10,13
 ReportingUnit	Wisconsin;Dane County	DANE;Village of CAMBRIDGE Wards 2-3
 ReportingUnit	Wisconsin;Dane County	DANE;Village of BROOKLYN Ward 3
 ReportingUnit	Wisconsin;Dane County	DANE;Village of BROOKLYN Ward 1
@@ -5334,14 +5333,14 @@ ReportingUnit	Wisconsin;Dane County	DANE;Town of MEDINA Wards 1-2
 ReportingUnit	Wisconsin;Dane County	DANE;Town of MAZOMANIE Wards 1-2
 ReportingUnit	Wisconsin;Dane County	DANE;Town of MADISON Wards 1-9
 ReportingUnit	Wisconsin;Dane County	DANE;Town of DUNN Wards 1-7
-ReportingUnit	Wisconsin;Dane County	"DANE;Town of DUNKIRK Wards 2,4,6"
-ReportingUnit	Wisconsin;Dane County	"DANE;Town of DUNKIRK Wards 1,3,5"
+ReportingUnit	Wisconsin;Dane County	DANE;Town of DUNKIRK Wards 2,4,6
+ReportingUnit	Wisconsin;Dane County	DANE;Town of DUNKIRK Wards 1,3,5
 ReportingUnit	Wisconsin;Dane County	DANE;Town of DEERFIELD Wards 1-2
 ReportingUnit	Wisconsin;Dane County	DANE;Town of DANE Ward 1
 ReportingUnit	Wisconsin;Dane County	DANE;Town of CROSS PLAINS Wards 3-4
 ReportingUnit	Wisconsin;Dane County	DANE;Town of CROSS PLAINS Wards 1-2
-ReportingUnit	Wisconsin;Dane County	"DANE;Town of COTTAGE GROVE Wards 3,6"
-ReportingUnit	Wisconsin;Dane County	"DANE;Town of COTTAGE GROVE Wards 1-2,4-5,7"
+ReportingUnit	Wisconsin;Dane County	DANE;Town of COTTAGE GROVE Wards 3,6
+ReportingUnit	Wisconsin;Dane County	DANE;Town of COTTAGE GROVE Wards 1-2,4-5,7
 ReportingUnit	Wisconsin;Dane County	DANE;Town of CHRISTIANA Wards 1-2
 ReportingUnit	Wisconsin;Dane County	DANE;Town of BURKE Wards 1-4
 ReportingUnit	Wisconsin;Dane County	DANE;Town of BRISTOL Wards 1-4
@@ -5352,23 +5351,23 @@ ReportingUnit	Wisconsin;Dane County	DANE;Town of BERRY Wards 1-2
 ReportingUnit	Wisconsin;Dane County	DANE;Town of ALBION Wards 1-2
 ReportingUnit	Wisconsin;Dane County	DANE;City of VERONA Wards 6-9
 ReportingUnit	Wisconsin;Dane County	DANE;City of VERONA Wards 2-4
-ReportingUnit	Wisconsin;Dane County	"DANE;City of VERONA Wards 1,5"
-ReportingUnit	Wisconsin;Dane County	"DANE;City of SUN PRAIRIE Wards 23,27"
-ReportingUnit	Wisconsin;Dane County	"DANE;City of SUN PRAIRIE Wards 20-22,24-25,28"
-ReportingUnit	Wisconsin;Dane County	"DANE;City of SUN PRAIRIE Wards 1-19,26"
-ReportingUnit	Wisconsin;Dane County	"DANE;City of STOUGHTON Wards 7-8,15"
+ReportingUnit	Wisconsin;Dane County	DANE;City of VERONA Wards 1,5
+ReportingUnit	Wisconsin;Dane County	DANE;City of SUN PRAIRIE Wards 23,27
+ReportingUnit	Wisconsin;Dane County	DANE;City of SUN PRAIRIE Wards 20-22,24-25,28
+ReportingUnit	Wisconsin;Dane County	DANE;City of SUN PRAIRIE Wards 1-19,26
+ReportingUnit	Wisconsin;Dane County	DANE;City of STOUGHTON Wards 7-8,15
 ReportingUnit	Wisconsin;Dane County	DANE;City of STOUGHTON Wards 5-6
-ReportingUnit	Wisconsin;Dane County	"DANE;City of STOUGHTON Wards 3-4,12"
-ReportingUnit	Wisconsin;Dane County	"DANE;City of STOUGHTON Wards 10-11,13-14"
+ReportingUnit	Wisconsin;Dane County	DANE;City of STOUGHTON Wards 3-4,12
+ReportingUnit	Wisconsin;Dane County	DANE;City of STOUGHTON Wards 10-11,13-14
 ReportingUnit	Wisconsin;Dane County	DANE;City of STOUGHTON Wards 1-2
 ReportingUnit	Wisconsin;Dane County	DANE;City of STOUGHTON Ward 9
 ReportingUnit	Wisconsin;Dane County	DANE;City of STOUGHTON Ward 16
 ReportingUnit	Wisconsin;Dane County	DANE;City of MONONA Wards 6-10
 ReportingUnit	Wisconsin;Dane County	DANE;City of MONONA Wards 1-5
 ReportingUnit	Wisconsin;Dane County	DANE;City of MIDDLETON Wards 5-8
-ReportingUnit	Wisconsin;Dane County	"DANE;City of MIDDLETON Wards 14-16,18,17,21"
-ReportingUnit	Wisconsin;Dane County	"DANE;City of MIDDLETON Wards 10-13,22"
-ReportingUnit	Wisconsin;Dane County	"DANE;City of MIDDLETON Wards 1-4,9,20"
+ReportingUnit	Wisconsin;Dane County	DANE;City of MIDDLETON Wards 14-16,18,17,21
+ReportingUnit	Wisconsin;Dane County	DANE;City of MIDDLETON Wards 10-13,22
+ReportingUnit	Wisconsin;Dane County	DANE;City of MIDDLETON Wards 1-4,9,20
 ReportingUnit	Wisconsin;Dane County	DANE;City of MIDDLETON Ward 19
 ReportingUnit	Wisconsin;Dane County	DANE;City of MADISON Ward 99
 ReportingUnit	Wisconsin;Dane County	DANE;City of MADISON Ward 98
@@ -5525,7 +5524,7 @@ ReportingUnit	Wisconsin;Dane County	DANE;City of MADISON Ward 10
 ReportingUnit	Wisconsin;Dane County	DANE;City of MADISON Ward 1
 ReportingUnit	Wisconsin;Dane County	DANE;City of FITCHBURG Wards 5-9
 ReportingUnit	Wisconsin;Dane County	DANE;City of FITCHBURG Wards 16-17
-ReportingUnit	Wisconsin;Dane County	"DANE;City of FITCHBURG Wards 15,18-19"
+ReportingUnit	Wisconsin;Dane County	DANE;City of FITCHBURG Wards 15,18-19
 ReportingUnit	Wisconsin;Dane County	DANE;City of FITCHBURG Wards 10-13
 ReportingUnit	Wisconsin;Dane County	DANE;City of FITCHBURG Wards 1-4
 ReportingUnit	Wisconsin;Dane County	DANE;City of FITCHBURG Ward 20
@@ -5552,7 +5551,7 @@ ReportingUnit	Wisconsin;Crawford County	CRAWFORD;Town of FREEMAN Ward 1
 ReportingUnit	Wisconsin;Crawford County	CRAWFORD;Town of EASTMAN Wards 1-2
 ReportingUnit	Wisconsin;Crawford County	CRAWFORD;Town of CLAYTON Wards 1-3
 ReportingUnit	Wisconsin;Crawford County	CRAWFORD;Town of BRIDGEPORT Ward 1
-ReportingUnit	Wisconsin;Crawford County	"CRAWFORD;City of PRAIRIE DU CHIEN Wards 2,7"
+ReportingUnit	Wisconsin;Crawford County	CRAWFORD;City of PRAIRIE DU CHIEN Wards 2,7
 ReportingUnit	Wisconsin;Crawford County	CRAWFORD;City of PRAIRIE DU CHIEN Ward 6
 ReportingUnit	Wisconsin;Crawford County	CRAWFORD;City of PRAIRIE DU CHIEN Ward 5
 ReportingUnit	Wisconsin;Crawford County	CRAWFORD;City of PRAIRIE DU CHIEN Ward 4
@@ -5590,10 +5589,10 @@ ReportingUnit	Wisconsin;Columbia County	COLUMBIA;Town of COLUMBUS Ward 1
 ReportingUnit	Wisconsin;Columbia County	COLUMBIA;Town of CALEDONIA Wards 1-2
 ReportingUnit	Wisconsin;Columbia County	COLUMBIA;Town of ARLINGTON Ward 1
 ReportingUnit	Wisconsin;Columbia County	COLUMBIA;City of WISCONSIN DELLS Wards 11-12
-ReportingUnit	Wisconsin;Columbia County	"COLUMBIA;City of WISCONSIN DELLS Wards 1-3,6"
-ReportingUnit	Wisconsin;Columbia County	"COLUMBIA;City of PORTAGE Wards 4,6-8"
-ReportingUnit	Wisconsin;Columbia County	"COLUMBIA;City of PORTAGE Wards 2-3,5"
-ReportingUnit	Wisconsin;Columbia County	"COLUMBIA;City of PORTAGE Wards 1,9-10"
+ReportingUnit	Wisconsin;Columbia County	COLUMBIA;City of WISCONSIN DELLS Wards 1-3,6
+ReportingUnit	Wisconsin;Columbia County	COLUMBIA;City of PORTAGE Wards 4,6-8
+ReportingUnit	Wisconsin;Columbia County	COLUMBIA;City of PORTAGE Wards 2-3,5
+ReportingUnit	Wisconsin;Columbia County	COLUMBIA;City of PORTAGE Wards 1,9-10
 ReportingUnit	Wisconsin;Columbia County	COLUMBIA;City of PORTAGE Ward 11
 ReportingUnit	Wisconsin;Columbia County	COLUMBIA;City of LODI Wards 1-6
 ReportingUnit	Wisconsin;Columbia County	COLUMBIA;City of COLUMBUS Wards 1-8
@@ -5646,7 +5645,7 @@ ReportingUnit	Wisconsin;Clark County	CLARK;City of NEILLSVILLE Ward 1
 ReportingUnit	Wisconsin;Clark County	CLARK;City of LOYAL Wards 1-2
 ReportingUnit	Wisconsin;Clark County	CLARK;City of GREENWOOD Wards 1-2
 ReportingUnit	Wisconsin;Clark County	CLARK;City of COLBY Wards 2-4
-ReportingUnit	Wisconsin;Clark County	"CLARK;City of ABBOTSFORD Wards 2-5,7"
+ReportingUnit	Wisconsin;Clark County	CLARK;City of ABBOTSFORD Wards 2-5,7
 ReportingUnit	Wisconsin;Clark County	CLARK;CITY OF STANLEY Ward 8
 ReportingUnit	Wisconsin;Clark County	CLARK;CITY OF STANLEY Ward 5
 ReportingUnit	Wisconsin;Chippewa County	CHIPPEWA;Village of NEW AUBURN Ward 1
@@ -5678,7 +5677,7 @@ ReportingUnit	Wisconsin;Chippewa County	CHIPPEWA;Town of AUBURN Ward 1
 ReportingUnit	Wisconsin;Chippewa County	CHIPPEWA;Town of ARTHUR Ward 1
 ReportingUnit	Wisconsin;Chippewa County	CHIPPEWA;Town of ANSON Wards 1-3
 ReportingUnit	Wisconsin;Chippewa County	CHIPPEWA;Town of ANSON Ward 4
-ReportingUnit	Wisconsin;Chippewa County	"CHIPPEWA;City of STANLEY Wards 1-4,6-7"
+ReportingUnit	Wisconsin;Chippewa County	CHIPPEWA;City of STANLEY Wards 1-4,6-7
 ReportingUnit	Wisconsin;Chippewa County	CHIPPEWA;City of CORNELL Wards 1-4
 ReportingUnit	Wisconsin;Chippewa County	CHIPPEWA;City of CHIPPEWA FALLS Ward 7A
 ReportingUnit	Wisconsin;Chippewa County	CHIPPEWA;City of CHIPPEWA FALLS Ward 7
@@ -5701,9 +5700,9 @@ ReportingUnit	Wisconsin;Calumet County	CALUMET;Village of SHERWOOD Wards 1-5
 ReportingUnit	Wisconsin;Calumet County	CALUMET;Village of POTTER Ward 1
 ReportingUnit	Wisconsin;Calumet County	CALUMET;Village of HILBERT Wards 1-2
 ReportingUnit	Wisconsin;Calumet County	CALUMET;Village of HILBERT Ward 3
-ReportingUnit	Wisconsin;Calumet County	"CALUMET;Village of HARRISON Wards 7-9,14-16"
-ReportingUnit	Wisconsin;Calumet County	"CALUMET;Village of HARRISON Wards 5-6,10"
-ReportingUnit	Wisconsin;Calumet County	"CALUMET;Village of HARRISON Wards 3-4,17-18"
+ReportingUnit	Wisconsin;Calumet County	CALUMET;Village of HARRISON Wards 7-9,14-16
+ReportingUnit	Wisconsin;Calumet County	CALUMET;Village of HARRISON Wards 5-6,10
+ReportingUnit	Wisconsin;Calumet County	CALUMET;Village of HARRISON Wards 3-4,17-18
 ReportingUnit	Wisconsin;Calumet County	CALUMET;Village of HARRISON Wards 11-13
 ReportingUnit	Wisconsin;Calumet County	CALUMET;Town of WOODVILLE Ward 1
 ReportingUnit	Wisconsin;Calumet County	CALUMET;Town of STOCKBRIDGE Wards 1-3
@@ -5778,11 +5777,11 @@ ReportingUnit	Wisconsin;Buffalo County	BUFFALO;City of ALMA Wards 1-2
 ReportingUnit	Wisconsin;Brown County	BROWN;Village of WRIGHTSTOWN Wards 1-3
 ReportingUnit	Wisconsin;Brown County	BROWN;Village of SUAMICO Wards 5-8
 ReportingUnit	Wisconsin;Brown County	BROWN;Village of SUAMICO Wards 1-4
-ReportingUnit	Wisconsin;Brown County	"BROWN;Village of PULASKI Wards 1-3,6"
-ReportingUnit	Wisconsin;Brown County	"BROWN;Village of HOWARD Wards 3-4,6"
-ReportingUnit	Wisconsin;Brown County	"BROWN;Village of HOWARD Wards 2,9-11,18"
+ReportingUnit	Wisconsin;Brown County	BROWN;Village of PULASKI Wards 1-3,6
+ReportingUnit	Wisconsin;Brown County	BROWN;Village of HOWARD Wards 3-4,6
+ReportingUnit	Wisconsin;Brown County	BROWN;Village of HOWARD Wards 2,9-11,18
 ReportingUnit	Wisconsin;Brown County	BROWN;Village of HOWARD Wards 15-16
-ReportingUnit	Wisconsin;Brown County	"BROWN;Village of HOWARD Wards 1,12-14"
+ReportingUnit	Wisconsin;Brown County	BROWN;Village of HOWARD Wards 1,12-14
 ReportingUnit	Wisconsin;Brown County	BROWN;Village of HOWARD Ward 8
 ReportingUnit	Wisconsin;Brown County	BROWN;Village of HOWARD Ward 7
 ReportingUnit	Wisconsin;Brown County	BROWN;Village of HOWARD Ward 5
@@ -5809,7 +5808,7 @@ ReportingUnit	Wisconsin;Brown County	BROWN;Town of PITTSFIELD Wards 1-3
 ReportingUnit	Wisconsin;Brown County	BROWN;Town of NEW DENMARK Wards 1-3
 ReportingUnit	Wisconsin;Brown County	BROWN;Town of MORRISON Wards 1-2
 ReportingUnit	Wisconsin;Brown County	BROWN;Town of LEDGEVIEW Wards 4-7
-ReportingUnit	Wisconsin;Brown County	"BROWN;Town of LEDGEVIEW Wards 1-3,8-10"
+ReportingUnit	Wisconsin;Brown County	BROWN;Town of LEDGEVIEW Wards 1-3,8-10
 ReportingUnit	Wisconsin;Brown County	BROWN;Town of LAWRENCE Wards 1-6
 ReportingUnit	Wisconsin;Brown County	BROWN;Town of HUMBOLDT Wards 1-2
 ReportingUnit	Wisconsin;Brown County	BROWN;Town of HOLLAND Wards 1-2
@@ -5863,7 +5862,7 @@ ReportingUnit	Wisconsin;Brown County	BROWN;City of GREEN BAY Ward 12
 ReportingUnit	Wisconsin;Brown County	BROWN;City of GREEN BAY Ward 11
 ReportingUnit	Wisconsin;Brown County	BROWN;City of GREEN BAY Ward 10
 ReportingUnit	Wisconsin;Brown County	BROWN;City of GREEN BAY Ward 1
-ReportingUnit	Wisconsin;Brown County	"BROWN;City of DE PERE Wards 9,18"
+ReportingUnit	Wisconsin;Brown County	BROWN;City of DE PERE Wards 9,18
 ReportingUnit	Wisconsin;Brown County	BROWN;City of DE PERE Wards 6-8
 ReportingUnit	Wisconsin;Brown County	BROWN;City of DE PERE Wards 16-17
 ReportingUnit	Wisconsin;Brown County	BROWN;City of DE PERE Wards 13-15
@@ -5972,7 +5971,7 @@ ReportingUnit	Wisconsin;Adams County	ADAMS;Town of COLBURN Ward 1
 ReportingUnit	Wisconsin;Adams County	ADAMS;Town of BIG FLATS Wards 1-2
 ReportingUnit	Wisconsin;Adams County	ADAMS;Town of ADAMS Wards 1-3
 ReportingUnit	Wisconsin;Adams County	ADAMS;City of ADAMS Wards 1-4
-ReportingUnit	Wisconsin;Adams County	"ADAMS;CITY OF WISCONSIN DELLS Wards 5,9"
+ReportingUnit	Wisconsin;Adams County	ADAMS;CITY OF WISCONSIN DELLS Wards 5,9
 ReportingUnit	Office Totals:	Office Totals:
 ReportingUnit	County	County
 Candidate	President R19 Boddie	President R19 Boddie (write-in)
@@ -6002,7 +6001,7 @@ Candidate	Thomas J. Bilski	Thomas J. Bilski
 Candidate	Theresa E. Wetzsteon	Theresa E. Wetzsteon
 Candidate	Tania M. Bonnett	Tania M. Bonnett
 Candidate	Susan L. Opper	Susan L. Opper
-Candidate	"Stephen W. Ratzlaff, Jr."	"Stephen W. Ratzlaff, Jr."
+Candidate	Stephen W. Ratzlaff, Jr.	Stephen W. Ratzlaff, Jr.
 Candidate	Reese Wood (write-in)	Reese Wood (write-in)
 Candidate	Nathan F. Haberman	Nathan F. Haberman
 Candidate	Monica J. Hall	Monica J. Hall
@@ -6021,10 +6020,10 @@ Candidate	Mark Fruehauf	Mark Fruehauf
 Candidate	Mark D. Bensen	Mark D. Bensen
 Candidate	Marc Adam Ciske	Marc Adam Ciske
 Candidate	Lukas L. Steiner	Lukas L. Steiner
-Candidate	"Louis John Molepske, Jr."	"Louis John Molepske, Jr."
+Candidate	Louis John Molepske, Jr.	Louis John Molepske, Jr.
 Candidate	Lisa A. Riniker	Lisa A. Riniker
 Candidate	Linda Boucher (write-in)	Linda Boucher (write-in)
-Candidate	"Leroy Brown, II"	"Leroy Brown, II"
+Candidate	Leroy Brown, II	Leroy Brown, II
 Candidate	Laura L. Waite	Laura L. Waite
 Candidate	Kurt F. Klomberg	Kurt F. Klomberg
 Candidate	Kristi S. Tlusty	Kristi S. Tlusty

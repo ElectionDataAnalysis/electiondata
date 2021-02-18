@@ -438,7 +438,6 @@ Candidate	Paul Lehmann	Paul Lehmann
 Candidate	Bill Slantz	Bill Slantz
 Candidate	Deb Lavender	Deb Lavender
 Candidate	Alex Furman	Alex Furman
-Candidate	WRITE-INS	WRITE-INS
 Candidate	John R. Jay Ashcroft	John R. Jay Ashcroft
 Candidate	Martin D Baker	Martin D Baker
 Candidate	Robin Dominick	Robin Dominick

@@ -6034,7 +6034,6 @@ Candidate	Gary Clary	Gary Clary
 Candidate	Davey Hiott	Davey Hiott
 Candidate	Brian White	Brian White
 Candidate	Ryan Cowsert	Ryan Cowsert
-Candidate	WRITE-IN	WRITE-IN
 Candidate	Jay West	Jay West
 Candidate	Anne Thayer	Anne Thayer
 Candidate	Lucy Hoffman	Lucy Hoffman
