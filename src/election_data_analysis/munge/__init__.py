@@ -1810,120 +1810,6 @@ def get_fields_from_formula(formula: str) -> List[str]:
 def extract_blocks(
         f_path: str,
         p: Dict[str, Any],
-        output_delimiter: str = "\t",
-) -> (List[str], Optional[dict]):
-    """Given a flat_text (or excel file and list of sheets),
-    create new tab-separated (or excel) files, one for each block of data lines
-    (in the specified excel sheets, with the new files having a sheet name from the old).
-    Returns a list of the new file paths"""
-    # set up
-    file_name = Path(f_path).name
-    file_stem = Path(f_path).stem
-    file_dir = Path(f_path).parent
-    err = None
-    kwargs = dict()
-    df_dict = dict()
-    new_file_list = list()
-
-    # set key word arguments necessary for all cases
-    kwargs["header"] = None
-    kwargs["dtype"] = str
-
-    # read file contents into a dictionary of dataframes
-    if p["file_type"] == "excel":
-        try:
-            df_dict, err = ui.excel_to_dict(
-                f_path, kwargs, ui.list_desired_excel_sheets(f_path, p)
-            )
-        except Exception as exc:
-            ui.add_new_error(
-                err,
-                "file",
-                file_name,
-                f"Exception while extracting blocks: {exc}"
-            )
-            return err
-
-    elif p["file_type"] == "flat_text":
-        kwargs["sep"] = output_delimiter
-        kwargs["quoting"] = csv.QUOTE_MINIMAL
-        try:
-            df_dict["Sheet1"] = pd.read_csv(f_path, **kwargs)
-        except Exception as exc:
-            ui.add_new_error(
-                err,
-                "file",
-                file_name,
-                f"Exception while extracting blocks: {exc}"
-            )
-            return err
-    else:
-        ui.add_new_error(
-            err,
-            "file",
-            f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
-            f"Unrecognized file type {p['file_type']}"
-        )
-
-    for sheet in df_dict.keys():
-        if not df_dict[sheet].empty:
-            # get rid of thousands separator
-            if p["thousands_separator"]:
-                working = df_dict[sheet].replace(p["thousands_separator"], "", regex=True)
-            else:
-                working = df_dict[sheet]
-
-            # identify count rows (have at least one integer), blank rows, and text rows (all others)
-            mask_count = working.T.apply(lambda row: row.str.isdigit().any())
-            mask_blank = working.T.apply(lambda row: list(row.unique()) == [""])  # is this the best way?
-            count_rows = list(mask_count[mask_count].index)
-            blank_rows = list(mask_blank[mask_blank].index)
-            text_rows = list(mask_count[(~mask_count) & (~mask_blank)].index)
-
-            # loop through blocks starting at the top (blocks defined by no-integer lines on top)
-            while text_rows and count_rows:
-                first_text_row = min(text_rows)
-                first_count_row = min([n for n in count_rows if n > first_text_row]) # TODO what if there is none?
-
-                # remove this block's rows from text and count lists
-                text_rows = [n for n in text_rows if n > first_count_row]
-                if text_rows:
-                    block_end = min(text_rows)
-                else:
-                    block_end = df_dict[sheet].shape[0]
-                count_rows = [n for n in count_rows if n > block_end]
-
-                block = df_dict[sheet][first_text_row: block_end]
-
-                ## export block data lines to tab-separated or excel file
-                if p["file_type"] == "flat_text":
-                    block_path = os.path.join(
-                        file_dir, f"{file_stem}_block_{first_text_row}-{block_end - 1}.txt"
-                    )
-                    block.to_csv(block_path, sep=p["flat_text_delimiter"], index=False, header=False)
-                elif p["file_type"] == "excel":
-                    block_path = os.path.join(
-                        file_dir,
-                        f"{file_stem}_sheet_{sheet}_block_{first_text_row}-{block_end - 1}.xlsx"
-                    )
-                    block.to_excel(block_path, index=False, header=False, sheet_name=sheet)
-                else:
-                    err = ui.add_new_error(
-                        err,
-                        "munger",
-                        munger_name,
-                        f"multi_block=yes but file_type ({p['file_type']}) is inappropriate",
-                    )
-                    return new_file_list, err
-                # add to list of new file paths
-                new_file_list.append(block_path)
-    return new_file_list, err
-
-
-
-def extract_blocks(
-        f_path: str,
-        p: Dict[str, Any],
         munger_name: str,
         output_delimiter: str = "\t",
 ) -> (List[str], Optional[dict]):
@@ -1992,11 +1878,14 @@ def extract_blocks(
             mask_count = working.T.apply(lambda row: row.str.isdigit().any())
             mask_blank = working.T.apply(lambda row: list(row.unique()) == [""])  # is this the best way?
             count_rows = list(mask_count[mask_count].index)
-            blank_rows = list(mask_blank[mask_blank].index)
             text_rows = list(mask_count[(~mask_count) & (~mask_blank)].index)
 
-            # loop through blocks starting at the top (blocks defined by no-integer lines on top)
-            while text_rows and count_rows:
+            # initialize check on max number of blocks
+            max_blocks_attained = False
+            blocks_created = 0
+
+            # loop through blocks starting at the top (blocks defined by text lines on top)
+            while text_rows and count_rows and not max_blocks_attained:
                 first_text_row = min(text_rows)
                 first_count_row = min([n for n in count_rows if n > first_text_row]) # TODO what if there is none?
 
@@ -2005,10 +1894,10 @@ def extract_blocks(
                 if text_rows:
                     block_end = min(text_rows)
                 else:
-                    block_end = df_dict[sheet].shape[0]
+                    block_end = working.shape[0]
                 count_rows = [n for n in count_rows if n > block_end]
 
-                block = df_dict[sheet][first_text_row: block_end]
+                block = working[first_text_row: block_end]
 
                 ## export block data lines to tab-separated or excel file
                 if p["file_type"] == "flat_text":
@@ -2032,5 +1921,13 @@ def extract_blocks(
                     return new_file_list, err
                 # add to list of new file paths
                 new_file_list.append(block_path)
+                # if a maximum number of blocks was specified
+                if p["max_blocks"]:
+                    blocks_created += 1
+                    if blocks_created >= p["max_blocke"]:
+                        max_blocks_attained = True
     return new_file_list, err
+
+
+
 
