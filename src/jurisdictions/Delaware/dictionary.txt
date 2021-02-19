@@ -345,12 +345,13 @@ CandidateContest	DE Senate District 18	State Senator District 18
 CandidateContest	DE Senate District 19	State Senator District 19
 CandidateContest	DE Senate District 20	State Senator District 20
 CandidateContest	DE Senate District 21	State Senator District 21
-CandidateContest	US House DE District 1	US House DE District 1
+CandidateContest	US House DE District 1	Representative in Congress
 CandidateContest	US President (DE)	President
+CandidateContest	US President (DE)	President and Vice President
 CandidateContest	DE Governor	Governor
 CandidateContest	US Senate DE	U.S. Senator
 CandidateContest	DE Attorney General	DE Attorney General
-CandidateContest	DE Lieutenant Governor	DE Lieutenant Governor
+CandidateContest	DE Lieutenant Governor	Lieutenant Governor
 CandidateContest	DE Treasurer	DE Treasurer
 CandidateContest	DE Secretary of State	DE Secretary of State
 CandidateContest	DE Insurance Commissioner	Insurance Commissioner
@@ -362,9 +363,12 @@ Election	2018 Primary	2018 Primary
 Election	2016 General	2016 General
 Election	2016 Primary	2016 Primary
 Party	Democratic Party	Democratic
+Party	Democratic Party	Democratic Party
 Party	Republican Party	Republican
-Party	Green Party	Green Party
+Party	Republican Party	Republican Party
+Party	Green Party	Green Party Of Delaware
 Party	Libertarian Party	Libertarian Party
+Party	Independent Party	Independent Party Of Delaware
 ReportingUnit	Delaware;DE House District 1	Delaware;DE House District 1
 ReportingUnit	Delaware;DE House District 2	Delaware;DE House District 2
 ReportingUnit	Delaware;DE House District 3	Delaware;DE House District 3
@@ -867,145 +871,122 @@ ReportingUnit	Delaware;New Castle County;27-10	Election District 27-10
 CountItemType	election-day	Machine Votes
 CountItemType	absentee	Absentee Votes
 CountItemType	total	Total Votes
-Candidate	BERNIE SANDERS	BERNIE SANDERS
-Candidate	ELIZABETH WARREN	ELIZABETH WARREN
-Candidate	JOSEPH R. BIDEN	JOSEPH R. BIDEN
-Candidate	DONALD J. TRUMP	DONALD J. TRUMP
-Candidate	ROQUE 'ROCKY' DE LA FUENTE	ROQUE 'ROCKY' DE LA FUENTE
-Candidate	JESSICA SCARANE	JESSICA SCARANE
-Candidate	CHRISTOPHER A. COONS	CHRISTOPHER A. COONS
-Candidate	JAMES 'JIM' DEMARTINO	JAMES 'JIM' DEMARTINO
-Candidate	LAUREN WITZKE	LAUREN WITZKE
-Candidate	LEE MURPHY	LEE MURPHY
-Candidate	MATTHEW M. HATHAWAY MORRIS	MATTHEW M. HATHAWAY MORRIS
-Candidate	DAVID LAMAR WILLIAMS JR.	DAVID LAMAR WILLIAMS JR.
-Candidate	JOHN C. CARNEY JR.	JOHN C. CARNEY JR.
-Candidate	BRYANT L. RICHARDSON	BRYANT L. RICHARDSON
-Candidate	COLIN BONINI	COLIN BONINI
-Candidate	DAVE GRAHAM	DAVE GRAHAM
-Candidate	DAVID JOSEPH BOSCO	DAVID JOSEPH BOSCO
-Candidate	JULIANNE E. MURRAY	JULIANNE E. MURRAY
-Candidate	R.E. SCOTT WALKER	R.E. SCOTT WALKER
-Candidate	KAYODE ABEGUNDE	KAYODE ABEGUNDE
-Candidate	TRINIDAD NAVARRO	TRINIDAD NAVARRO
-Candidate	JOSEPH MCCOLE	JOSEPH MCCOLE
-Candidate	SARAH MCBRIDE	SARAH MCBRIDE
-Candidate	DENISE BOWERS	DENISE BOWERS
-Candidate	ERIC LEVIN	ERIC LEVIN
-Candidate	KYLE EVANS GAY	KYLE EVANS GAY
-Candidate	DAVID B. MCBRIDE	DAVID B. MCBRIDE
-Candidate	MARIE PINKNEY	MARIE PINKNEY
-Candidate	BRUCE C. ENNIS	BRUCE C. ENNIS
-Candidate	KYRA L. HOFFNER	KYRA L. HOFFNER
-Candidate	TERRELL WILLIAMS	TERRELL WILLIAMS
-Candidate	CRAIG PUGH	CRAIG PUGH
-Candidate	TERRANCE LEE BAKER	TERRANCE LEE BAKER
-Candidate	AMY SOLOMON	AMY SOLOMON
-Candidate	GERALD L. BRADY	GERALD L. BRADY
-Candidate	LARRY D. LAMBERT JR.	LARRY D. LAMBERT JR.
-Candidate	RAY SEIGFRIED	RAY SEIGFRIED
-Candidate	MATTHEW W. POWELL	MATTHEW W. POWELL
-Candidate	SHERAE'A 'RAE' MOORE	SHERAE'A 'RAE' MOORE
-Candidate	YVETTE SANTIAGO	YVETTE SANTIAGO
-Candidate	KEITH A. JAMES II	KEITH A. JAMES II
-Candidate	SEAN MATTHEWS	SEAN MATTHEWS
-Candidate	GABRIEL OLAWALE ADELAGUNJA	GABRIEL OLAWALE ADELAGUNJA
-Candidate	JOHN J. VIOLA	JOHN J. VIOLA
-Candidate	MADINAH WILSON-ANTON	MADINAH WILSON-ANTON
-Candidate	EARL JAQUES	EARL JAQUES
-Candidate	ERIC A. MORRISON	ERIC A. MORRISON
-Candidate	ADEWUNMI 'ADE' KUFORIJI	ADEWUNMI 'ADE' KUFORIJI
-Candidate	BOB HAYNES	BOB HAYNES
-Candidate	AJA AJAVON	AJA AJAVON
-Candidate	LISA DARRAH	LISA DARRAH
-Candidate	CIRO POPPITI	CIRO POPPITI
-Candidate	KAREN HARTLEY-NAGLE	KAREN HARTLEY-NAGLE
-Candidate	MONIQUE JOHNS	MONIQUE JOHNS
-Candidate	MATTHEW MEYER	MATTHEW MEYER
-Candidate	MARGARET 'MAGGIE' JONES	MARGARET 'MAGGIE' JONES
-Candidate	KEVIN CANECO	KEVIN CANECO
-Candidate	WILLIAM BELL	WILLIAM BELL
-Candidate	JUSTEN WRIGHT	JUSTEN WRIGHT
-Candidate	MICHAEL S. PURZYCKI	MICHAEL S. PURZYCKI
-Candidate	VELDA JONES-POTTER	VELDA JONES-POTTER
-Candidate	HANIFA SHABAZZ	HANIFA SHABAZZ
-Candidate	TRIPPI CONGO	TRIPPI CONGO
-Candidate	DAWAYNE SIMS	DAWAYNE SIMS
-Candidate	VASH TURNER	VASH TURNER
-Candidate	ALBERT 'AL' MILLS	ALBERT 'AL' MILLS
-Candidate	COBY OWENS	COBY OWENS
-Candidate	KAREN 'BUTTER' FLOWERS	KAREN 'BUTTER' FLOWERS
-Candidate	LINDA GRAY	LINDA GRAY
-Candidate	BILLY LANE JR.	BILLY LANE JR.
-Candidate	DOROTHY KING	DOROTHY KING
-Candidate	JOHN JOHNSON JR.	JOHN JOHNSON JR.
-Candidate	SHANE DARBY	SHANE DARBY
-Candidate	DAVON 'D' MARQUE HALL	DAVON 'D' MARQUE HALL
-Candidate	ZANTHIA OLIVER	ZANTHIA OLIVER
-Candidate	DONALD FARRELL	DONALD FARRELL
-Candidate	MICHELLE HARLEE	MICHELLE HARLEE
-Candidate	BREGETTA A. FIELDS	BREGETTA A. FIELDS
-Candidate	CHRISTIAN WILLAUER	CHRISTIAN WILLAUER
-Candidate	EVON L. MURRAY	EVON L. MURRAY
-Candidate	IAN 'JAHITI' SMITH	IAN 'JAHITI' SMITH
-Candidate	JOSUE ORTEGA	JOSUE ORTEGA
-Candidate	YOLANDA MCCOY	YOLANDA MCCOY
-Candidate	CHRIS JOHNSON	CHRIS JOHNSON
-Candidate	DEVON HYNSON	DEVON HYNSON
-Candidate	NATHAN FIELD	NATHAN FIELD
-Candidate	SEAN BARNEY	SEAN BARNEY
-Candidate	JOANNE H. MASTEN	JOANNE H. MASTEN
-Candidate	MORGAN RUSSUM	MORGAN RUSSUM
-Candidate	ARISA WHITE	ARISA WHITE
-Candidate	CHARLES POTTER JR.	CHARLES POTTER JR.
-Candidate	LORETTA WALSH	LORETTA WALSH
-Candidate	MARIA D. CABRERA	MARIA D. CABRERA
-Candidate	ROBERT OLIVER	ROBERT OLIVER
-Candidate	RYSHEEMA DIXON	RYSHEEMA DIXON
-Candidate	SAMUEL LAWRENCE GUY	SAMUEL LAWRENCE GUY
-Candidate	TYRONE JOHNSON	TYRONE JOHNSON
-Candidate	CYNTHIA C. GREEN	CYNTHIA C. GREEN
-Candidate	LISA HUDSON BRIGGS	LISA HUDSON BRIGGS
-Candidate	ROBERT D. WILSON	ROBERT D. WILSON
-Candidate	IRWIN 'I.G.' BURTON III	IRWIN 'I.G.' BURTON III
-Candidate	MARK G. SCHAEFFER	MARK G. SCHAEFFER
+Candidate	Bernie Sanders	Bernie Sanders
+Candidate	Elizabeth Warren	Elizabeth Warren
+Candidate	Joseph R. Biden	Joseph R. Biden
+Candidate	Donald J. Trump	Donald J. Trump
+Candidate	Roque 'Rocky' De La Fuente	Roque 'Rocky' De La Fuente
+Candidate	Jessica Scarane	Jessica Scarane
+Candidate	Christopher A. Coons	Christopher A. Coons
+Candidate	James 'Jim' Demartino	James 'Jim' Demartino
+Candidate	Lauren Witzke	Lauren Witzke
+Candidate	Lee Murphy	Lee Murphy
+Candidate	Matthew M. Hathaway Morris	Matthew M. Hathaway Morris
+Candidate	David Lamar Williams Jr.	David Lamar Williams Jr.
+Candidate	John C. Carney Jr.	John C. Carney Jr.
+Candidate	Bryant L. Richardson	Bryant L. Richardson
+Candidate	Colin Bonini	Colin Bonini
+Candidate	Dave Graham	Dave Graham
+Candidate	David Joseph Bosco	David Joseph Bosco
+Candidate	Julianne E. Murray	Julianne E. Murray
+Candidate	R.E. Scott Walker	R.E. Scott Walker
+Candidate	Kayode Abegunde	Kayode Abegunde
+Candidate	Trinidad Navarro	Trinidad Navarro
+Candidate	Joseph Mccole	Joseph Mccole
+Candidate	Sarah Mcbride	Sarah Mcbride
+Candidate	Denise Bowers	Denise Bowers
+Candidate	Eric Levin	Eric Levin
+Candidate	Kyle Evans Gay	Kyle Evans Gay
+Candidate	David B. Mcbride	David B. Mcbride
+Candidate	Marie Pinkney	Marie Pinkney
+Candidate	Bruce C. Ennis	Bruce C. Ennis
+Candidate	Kyra L. Hoffner	Kyra L. Hoffner
+Candidate	Terrell Williams	Terrell Williams
+Candidate	Craig Pugh	Craig Pugh
+Candidate	Terrance Lee Baker	Terrance Lee Baker
+Candidate	Amy Solomon	Amy Solomon
+Candidate	Gerald L. Brady	Gerald L. Brady
+Candidate	Larry D. Lambert Jr.	Larry D. Lambert Jr.
+Candidate	Ray Seigfried	Ray Seigfried
+Candidate	Matthew W. Powell	Matthew W. Powell
+Candidate	Sherae'A 'Rae' Moore	Sherae'A 'Rae' Moore
+Candidate	Yvette Santiago	Yvette Santiago
+Candidate	Keith A. James Ii	Keith A. James Ii
+Candidate	Sean Matthews	Sean Matthews
+Candidate	Gabriel Olawale Adelagunja	Gabriel Olawale Adelagunja
+Candidate	John J. Viola	John J. Viola
+Candidate	Madinah Wilson-Anton	Madinah Wilson-Anton
+Candidate	Earl Jaques	Earl Jaques
+Candidate	Eric A. Morrison	Eric A. Morrison
+Candidate	Adewunmi 'Ade' Kuforiji	Adewunmi 'Ade' Kuforiji
+Candidate	Bob Haynes	Bob Haynes
+Candidate	Aja Ajavon	Aja Ajavon
+Candidate	Lisa Darrah	Lisa Darrah
+Candidate	Ciro Poppiti	Ciro Poppiti
+Candidate	Karen Hartley-Nagle	Karen Hartley-Nagle
+Candidate	Monique Johns	Monique Johns
+Candidate	Matthew Meyer	Matthew Meyer
+Candidate	Margaret 'Maggie' Jones	Margaret 'Maggie' Jones
+Candidate	Kevin Caneco	Kevin Caneco
+Candidate	William Bell	William Bell
+Candidate	Justen Wright	Justen Wright
+Candidate	Michael S. Purzycki	Michael S. Purzycki
+Candidate	Velda Jones-Potter	Velda Jones-Potter
+Candidate	Hanifa Shabazz	Hanifa Shabazz
+Candidate	Trippi Congo	Trippi Congo
+Candidate	Dawayne Sims	Dawayne Sims
+Candidate	Vash Turner	Vash Turner
+Candidate	Albert 'Al' Mills	Albert 'Al' Mills
+Candidate	Coby Owens	Coby Owens
+Candidate	Karen 'Butter' Flowers	Karen 'Butter' Flowers
+Candidate	Linda Gray	Linda Gray
+Candidate	Billy Lane Jr.	Billy Lane Jr.
+Candidate	Dorothy King	Dorothy King
+Candidate	John Johnson Jr.	John Johnson Jr.
+Candidate	Shane Darby	Shane Darby
+Candidate	Davon 'D' Marque Hall	Davon 'D' Marque Hall
+Candidate	Zanthia Oliver	Zanthia Oliver
+Candidate	Donald Farrell	Donald Farrell
+Candidate	Michelle Harlee	Michelle Harlee
+Candidate	Bregetta A. Fields	Bregetta A. Fields
+Candidate	Christian Willauer	Christian Willauer
+Candidate	Evon L. Murray	Evon L. Murray
+Candidate	Ian 'Jahiti' Smith	Ian 'Jahiti' Smith
+Candidate	Josue Ortega	Josue Ortega
+Candidate	Yolanda Mccoy	Yolanda Mccoy
+Candidate	Chris Johnson	Chris Johnson
+Candidate	Devon Hynson	Devon Hynson
+Candidate	Nathan Field	Nathan Field
+Candidate	Sean Barney	Sean Barney
+Candidate	Joanne H. Masten	Joanne H. Masten
+Candidate	Morgan Russum	Morgan Russum
+Candidate	Arisa White	Arisa White
+Candidate	Charles Potter Jr.	Charles Potter Jr.
+Candidate	Loretta Walsh	Loretta Walsh
+Candidate	Maria D. Cabrera	Maria D. Cabrera
+Candidate	Robert Oliver	Robert Oliver
+Candidate	Rysheema Dixon	Rysheema Dixon
+Candidate	Samuel Lawrence Guy	Samuel Lawrence Guy
+Candidate	Tyrone Johnson	Tyrone Johnson
+Candidate	Cynthia C. Green	Cynthia C. Green
+Candidate	Lisa Hudson Briggs	Lisa Hudson Briggs
+Candidate	Robert D. Wilson	Robert D. Wilson
+Candidate	Irwin 'I.G.' Burton Iii	Irwin 'I.G.' Burton Iii
+Candidate	Mark G. Schaeffer	Mark G. Schaeffer
 Candidate	Joseph R. Biden	Joseph R. Biden Jr. And Kamala D. Harris
 Candidate	Donald J. Trump	Donald J. Trump And Michael R. Pence
 Candidate	Howie Hawkins	Howie Hawkins And Angela Nicole Walker
-Candidate	Jo Jorgensen	Jo Jorgensen And Jeremy "Spike" Cohen
-Candidate	Christopher A. Coons	Christopher A. Coons
-Candidate	Lauren Witzke	Lauren Witzke
+Candidate	Jo Jorgensen	Jo Jorgensen And Jeremy 'Spike' Cohen
 Candidate	Mark W. Turley	Mark W. Turley
 Candidate	Nadine M. Frost	Nadine M. Frost
 Candidate	Lisa Blunt Rochester	Lisa Blunt Rochester
-Candidate	Lee Murphy	Lee Murphy
 Candidate	Catherine S. Purcell	Catherine S. Purcell
 Candidate	David L. Rogers	David L. Rogers
-Candidate	John C. Carney Jr.	John C. Carney Jr.
-Candidate	Julianne E. Murray	Julianne E. Murray
 Candidate	Kathy S. Dematteis	Kathy S. Dematteis
 Candidate	John J. Machurek	John J. Machurek
 Candidate	Bethany Hall-Long	Bethany Hall-Long
 Candidate	Donyale Hall	Donyale Hall
-Candidate	Trinidad Navarro	Trinidad Navarro
 Candidate	Julia Pillsbury	Julia Pillsbury
-Candidate	Joseph R. Biden	Joseph R. Biden Jr. And Kamala D. Harris
-Candidate	Donald J. Trump	Donald J. Trump And Michael R. Pence
-Candidate	Howie Hawkins	Howie Hawkins And Angela Nicole Walker
-Candidate	Jo Jorgensen	Jo Jorgensen And Jeremy "Spike" Cohen
-Candidate	Christopher A. Coons	Christopher A. Coons
-Candidate	Lauren Witzke	Lauren Witzke
-Candidate	Mark W. Turley	Mark W. Turley
-Candidate	Nadine M. Frost	Nadine M. Frost
-Candidate	Lisa Blunt Rochester	Lisa Blunt Rochester
-Candidate	Lee Murphy	Lee Murphy
-Candidate	Catherine S. Purcell	Catherine S. Purcell
-Candidate	David L. Rogers	David L. Rogers
-Candidate	John C. Carney Jr.	John C. Carney Jr.
-Candidate	Julianne E. Murray	Julianne E. Murray
-Candidate	Kathy S. Dematteis	Kathy S. Dematteis
-Candidate	John J. Machurek	John J. Machurek
-Candidate	Bethany Hall-Long	Bethany Hall-Long
-Candidate	Donyale Hall	Donyale Hall
-Candidate	Trinidad Navarro	Trinidad Navarro
-Candidate	Julia Pillsbury	Julia Pillsbury
+ReportingUnit	Delaware;New Castle County	New Castle
+ReportingUnit	Delaware;Kent County	Kent
+ReportingUnit	Delaware;Sussex County	Sussex
