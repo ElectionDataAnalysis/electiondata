@@ -26,6 +26,7 @@ Party	Republican Party	REP
 Party	DC Statehood Green Party	STG
 Party	Libertarian Party	LIB
 Party	Independent	IND
+Party	Socialist Workers Party	SWP
 ReportingUnit	District of Columbia;DC House District 1	District of Columbia;DC House District 1
 ReportingUnit	District of Columbia;DC House District 2	District of Columbia;DC House District 2
 ReportingUnit	District of Columbia;DC House District 3	District of Columbia;DC House District 3
@@ -228,3 +229,11 @@ Candidate	Brock Pierce - Karla Ballard	Brock Pierce - Karla Ballard
 Candidate	Ann C. Wilcox	Ann C. Wilcox
 Candidate	Alexander M. 'Alex' Padro	Alexander M. 'Alex' Padro
 Candidate	A'Shia Howard	A'Shia Howard
+Candidate	Patrick Hynes	Patrick Hynes
+Candidate	Omari Musa	Omari Musa
+Candidate	Natale Lino Stracuzzi	Natale Lino Stracuzzi
+Candidate	John 'Recovery' Cheeks	John 'Recovery' Cheeks
+Candidate	Eleanor Holmes Norton	Eleanor Holmes Norton
+Candidate	David Krucoff	David Krucoff
+Candidate	Barbara Washington Franklin	Barbara Washington Franklin
+Candidate	Amir Lowery	Amir Lowery
