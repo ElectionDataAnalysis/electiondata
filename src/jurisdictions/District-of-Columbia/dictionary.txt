@@ -205,19 +205,19 @@ Candidate	Marcus Goodwin	Marcus Goodwin
 Candidate	Keith Silver	Keith Silver
 Candidate	Kathy Henderson	Kathy Henderson
 Candidate	Joyce (Chestnut) Robinson-Paul	Joyce (Chestnut) Robinson-Paul
-Candidate	Joseph R. Biden - Kamala D. Harris	Joseph R. Biden - Kamala D. Harris
+Candidate	Joseph R. Biden	Joseph R. Biden - Kamala D. Harris
 Candidate	Joe Bishop-Henchman	Joe Bishop-Henchman
-Candidate	Jo Jorgensen - Jeremy 'Spike' Cohe	Jo Jorgensen - Jeremy 'Spike' Cohe
+Candidate	Jo Jorgensen	Jo Jorgensen - Jeremy 'Spike' Cohe
 Candidate	Jeanné Lewis	Jeanné Lewis
 Candidate	Janeese Lewis George	Janeese Lewis George
-Candidate	Howie Hawkins - Angela Walker	Howie Hawkins - Angela Walker
-Candidate	Gloria La Riva - Sunil Freeman	Gloria La Riva - Sunil Freeman
+Candidate	Howie Hawkins	Howie Hawkins - Angela Walker
+Candidate	Gloria La Riva	Gloria La Riva - Sunil Freeman
 Candidate	Fred Hill	Fred Hill
 Candidate	Franklin Garcia	Franklin Garcia
 Candidate	Eric M. Rogers	Eric M. Rogers
 Candidate	Eleanor Ory (Echo)	Eleanor Ory (Echo)
 Candidate	Ed Lazere	Ed Lazere
-Candidate	Donald J. Trump - Michael R. Pence	Donald J. Trump - Michael R. Pence
+Candidate	Donald J. Trump	Donald J. Trump - Michael R. Pence
 Candidate	Cornelia Weiss	Cornelia Weiss
 Candidate	Claudia Barragán	Claudia Barragán
 Candidate	Christopher Cole	Christopher Cole
@@ -225,7 +225,7 @@ Candidate	Christina D. Henderson	Christina D. Henderson
 Candidate	Chander Jayaraman	Chander Jayaraman
 Candidate	Calvin H. Gurley	Calvin H. Gurley
 Candidate	Brooke Pinto	Brooke Pinto
-Candidate	Brock Pierce - Karla Ballard	Brock Pierce - Karla Ballard
+Candidate	Brock Pierce	Brock Pierce - Karla Ballard
 Candidate	Ann C. Wilcox	Ann C. Wilcox
 Candidate	Alexander M. 'Alex' Padro	Alexander M. 'Alex' Padro
 Candidate	A'Shia Howard	A'Shia Howard
