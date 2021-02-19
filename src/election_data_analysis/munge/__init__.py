@@ -1452,7 +1452,6 @@ def to_standard_count_frame(
     if new_err:
         err = ui.consolidate_errors([err, new_err])
 
-
     # loop over sheets
     standard = dict()
     error_by_sheet = dict()
@@ -1473,26 +1472,8 @@ def to_standard_count_frame(
 
                 # correct column headers
                 header_list = ui.tabular_kwargs(p, dict())["header"]
-
                 for n in range(len(df_list)):
-                    # standardize the index and columns to 0, 1, 2, ...
-                    df_list[n] = df_list[n].reset_index(drop=True).T.reset_index(drop=True).T
-                    # rename any leading blank header entries to match convention of pd.read_excel, and any trailing to
-                    # closest non-blank value to left
-                    for i in header_list:
-                        prev_non_blank = None
-                        for j in df_list[n].columns:
-                            if df_list[n].loc[i,j] == "":
-                                if prev_non_blank:
-                                    df_list[n].loc[i, j] = prev_non_blank
-                                else:
-                                    df_list[n].loc[i, j] = f"Unnamed: {j}_level_{i}"
-                            else:
-                                prev_non_blank = df_list[n].loc[i, j]
-
-                    # push appropriate rows into headers
-                    df_list[n] = df_list[n].reset_index(drop=True).T.set_index(header_list).T
-                    # fill any blank entries in column headers to match convention of read_excel
+                    df_list[n] = ui.set_and_fill_headers(df_list[n], header_list)
 
             except Exception as exc:
                 error_by_sheet[sheet] = ui.add_new_error(
@@ -1894,5 +1875,3 @@ def extract_blocks(
             if blocks_created >= max_blocks:
                 max_blocks_attained = True
     return df_list, err
-
-

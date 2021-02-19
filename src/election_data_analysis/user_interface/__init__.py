@@ -416,6 +416,7 @@ def read_single_datafile(
     Auxiliary files have different parameters (e.g., no count locations)"""
     kwargs = dict()  # for syntax checker
     df_dict = dict()  # for syntax checker
+    file_name = Path(f_path).name
 
     # prepare keyword arguments for pandas read_* function
     if p["file_type"] in ["excel"]:
@@ -443,11 +444,26 @@ def read_single_datafile(
             try:
                 df = pd.read_csv(f_path, **kwargs)
             except ValueError as ve:
-                print(f"ValueError (while reading flat text file): {ve}\n Will pad records and try again")
-                new_file_path, new_err = pad_flat_text(f_path, kwargs)
+                print(f"ValueError (while reading flat text file), possibly from uneven record lengths: {ve}\n "
+                      f"Will try padding records")
+                # read file again, assuming no header rows
+                ## and set any nulls to blank strings
                 kwargs_pad = kwargs
                 kwargs_pad["index_col"] = None
-                df = pd.read_csv(new_file_path, **kwargs_pad)
+                kwargs_pad["header"] = None
+                df = pd.read_csv(f_path, **kwargs_pad).fillna("")
+                # set headers per munger
+                header_list = tabular_kwargs(p, dict())["header"]
+                try:
+                    df = set_and_fill_headers(df, header_list)
+                except Exception as exc:
+                    err = add_new_error(
+                        err,
+                        "system",
+                        f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
+                        f"Unexpected error setting and filling headers after padding file {file_name}"
+                    )
+
             df_dict = {"Sheet1": df}
 
         # rename any columns from header-less tables to column_0, column_1, etc.
@@ -457,10 +473,10 @@ def read_single_datafile(
 
     except FileNotFoundError:
         err_str = f"File not found: {f_path}"
-        err = add_new_error(err, "file", Path(f_path).name, err_str)
+        err = add_new_error(err, "file", file_name, err_str)
     except UnicodeDecodeError as ude:
         err_str = f"Encoding error. Datafile not read completely.\n\t{ude}"
-        err = add_new_error(err, "file", Path(f_path).name, err_str)
+        err = add_new_error(err, "file", file_name, err_str)
     except ParserError as pe:
         # DFs have trouble comparing against None. So we return an empty DF and
         # check for emptiness below as an indication of an error.
@@ -468,7 +484,7 @@ def read_single_datafile(
         err = add_new_error(
             err,
             "file",
-            Path(f_path).name,
+            file_name,
             err_str,
         )
         err = add_new_error(err, "file", f_path, err_str)
@@ -476,19 +492,6 @@ def read_single_datafile(
     # drop any empty dataframes
     df_dict = {k: v for k, v in df_dict.items() if not v.empty}
     return df_dict, err
-
-
-def pad_flat_text(f_path, kwargs) -> (Optional[str], Optional[dict]):
-    new_err = None
-    try:
-        df = pd.read_csv(f_path, sep=kwargs["sep"], dtype=str).fillna("")
-        new_f_path = os.path.join(Path(f_path).parent, f"{Path(f_path).name}_padded")
-        df.to_csv(new_f_path, sep=kwargs["sep"], index=False)
-        print(f"Padded file version created: {Path(new_f_path).name}")
-    except Exception as exc:
-        new_err = add_new_error(new_err, "file", Path(f_path).name, "Not able to create padded file from original")
-        new_f_path = None
-    return new_f_path, new_err
 
 
 def excel_to_dict(
@@ -1349,3 +1352,27 @@ def clean_candidate_names(df):
     df = df[df_cols].merge(extra_df, how="inner", left_index=True, right_index=True)
     df.reset_index(drop=True, inplace=True)
     return df
+
+
+def set_and_fill_headers(df: pd.DataFrame, header_list: list) -> pd.DataFrame:
+    # correct column headers
+    # standardize the index and columns to 0, 1, 2, ...
+    df = df.reset_index(drop=True).T.reset_index(drop=True).T
+    # rename any leading blank header entries to match convention of pd.read_excel, and any trailing to
+    # closest non-blank value to left
+    for i in header_list:
+        prev_non_blank = None
+        for j in df.columns:
+            if df.loc[i, j] == "":
+                if prev_non_blank:
+                    df.loc[i, j] = prev_non_blank
+                else:
+                    df.loc[i, j] = f"Unnamed: {j}_level_{i}"
+            else:
+                prev_non_blank = df.loc[i, j]
+
+    # push appropriate rows into headers
+    df = df.reset_index(drop=True).T.set_index(header_list).T
+    return df
+
+
