@@ -6173,3 +6173,8 @@ Candidate	Broderick Henderson	Broderick Henderson
 Candidate	Aaron Coleman	Aaron Coleman
 Candidate	Chris Croft	Chris Croft
 Candidate	Michael Caddell	Michael Caddell
+Candidate	Pat Pettey	Pat Pettey
+Candidate	Mike Thompson	Mike Thompson
+Candidate	Louis E. Ruiz	Louis E. Ruiz
+Candidate	Lindsey Constance	Lindsey Constance
+Candidate	Landon Griffith	Landon Griffith
