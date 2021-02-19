@@ -28,7 +28,7 @@ single_vote_type = "early"  # pick any one with corresponding data in your file,
 pres_votes_vote_type = -1  # total votes for US President of that vote type
 county_or_other = "county"  # Change this only if results are subdivided by something other than counties
 #  e.g., 'parish' in LA, 'state-house' in Alaska, 'ward' in Philadelphia
-single_county = "Delaware;Kent"  # pick any one from your file, but use internal db name
+single_county = "Delaware;Kent County"  # pick any one from your file, but use internal db name
 pres_votes_county = 87025  # total votes for US President in that county
 
 

@@ -1,143 +1,115 @@
 BallotName
-BERNIE SANDERS
-ELIZABETH WARREN
-JOSEPH R. BIDEN
-DONALD J. TRUMP
-ROQUE 'ROCKY' DE LA FUENTE
-JESSICA SCARANE
-CHRISTOPHER A. COONS
-JAMES 'JIM' DEMARTINO
-LAUREN WITZKE
-LEE MURPHY
-MATTHEW M. HATHAWAY MORRIS
-DAVID LAMAR WILLIAMS JR.
-JOHN C. CARNEY JR.
-BRYANT L. RICHARDSON
-COLIN BONINI
-DAVE GRAHAM
-DAVID JOSEPH BOSCO
-JULIANNE E. MURRAY
-R.E. SCOTT WALKER
-KAYODE ABEGUNDE
-TRINIDAD NAVARRO
-JOSEPH MCCOLE
-SARAH MCBRIDE
-DENISE BOWERS
-ERIC LEVIN
-KYLE EVANS GAY
-DAVID B. MCBRIDE
-MARIE PINKNEY
-BRUCE C. ENNIS
-KYRA L. HOFFNER
-TERRELL WILLIAMS
-CRAIG PUGH
-TERRANCE LEE BAKER
-AMY SOLOMON
-GERALD L. BRADY
-LARRY D. LAMBERT JR.
-RAY SEIGFRIED
-MATTHEW W. POWELL
-SHERAE'A 'RAE' MOORE
-YVETTE SANTIAGO
-KEITH A. JAMES II
-SEAN MATTHEWS
-GABRIEL OLAWALE ADELAGUNJA
-JOHN J. VIOLA
-MADINAH WILSON-ANTON
-EARL JAQUES
-ERIC A. MORRISON
-ADEWUNMI 'ADE' KUFORIJI
-BOB HAYNES
-AJA AJAVON
-LISA DARRAH
-CIRO POPPITI
-KAREN HARTLEY-NAGLE
-MONIQUE JOHNS
-MATTHEW MEYER
-MARGARET 'MAGGIE' JONES
-KEVIN CANECO
-WILLIAM BELL
-JUSTEN WRIGHT
-MICHAEL S. PURZYCKI
-VELDA JONES-POTTER
-HANIFA SHABAZZ
-TRIPPI CONGO
-DAWAYNE SIMS
-VASH TURNER
-ALBERT 'AL' MILLS
-COBY OWENS
-KAREN 'BUTTER' FLOWERS
-LINDA GRAY
-BILLY LANE JR.
-DOROTHY KING
-JOHN JOHNSON JR.
-SHANE DARBY
-DAVON 'D' MARQUE HALL
-ZANTHIA OLIVER
-DONALD FARRELL
-MICHELLE HARLEE
-BREGETTA A. FIELDS
-CHRISTIAN WILLAUER
-EVON L. MURRAY
-IAN 'JAHITI' SMITH
-JOSUE ORTEGA
-YOLANDA MCCOY
-CHRIS JOHNSON
-DEVON HYNSON
-NATHAN FIELD
-SEAN BARNEY
-JOANNE H. MASTEN
-MORGAN RUSSUM
-ARISA WHITE
-CHARLES POTTER JR.
-LORETTA WALSH
-MARIA D. CABRERA
-ROBERT OLIVER
-RYSHEEMA DIXON
-SAMUEL LAWRENCE GUY
-TYRONE JOHNSON
-CYNTHIA C. GREEN
-LISA HUDSON BRIGGS
-ROBERT D. WILSON
-IRWIN 'I.G.' BURTON III
-MARK G. SCHAEFFER
+Bernie Sanders
+Elizabeth Warren
 Joseph R. Biden
 Donald J. Trump
+Roque 'Rocky' De La Fuente
+Jessica Scarane
+Christopher A. Coons
+James 'Jim' Demartino
+Lauren Witzke
+Lee Murphy
+Matthew M. Hathaway Morris
+David Lamar Williams Jr.
+John C. Carney Jr.
+Bryant L. Richardson
+Colin Bonini
+Dave Graham
+David Joseph Bosco
+Julianne E. Murray
+R.E. Scott Walker
+Kayode Abegunde
+Trinidad Navarro
+Joseph Mccole
+Sarah Mcbride
+Denise Bowers
+Eric Levin
+Kyle Evans Gay
+David B. Mcbride
+Marie Pinkney
+Bruce C. Ennis
+Kyra L. Hoffner
+Terrell Williams
+Craig Pugh
+Terrance Lee Baker
+Amy Solomon
+Gerald L. Brady
+Larry D. Lambert Jr.
+Ray Seigfried
+Matthew W. Powell
+Sherae'A 'Rae' Moore
+Yvette Santiago
+Keith A. James Ii
+Sean Matthews
+Gabriel Olawale Adelagunja
+John J. Viola
+Madinah Wilson-Anton
+Earl Jaques
+Eric A. Morrison
+Adewunmi 'Ade' Kuforiji
+Bob Haynes
+Aja Ajavon
+Lisa Darrah
+Ciro Poppiti
+Karen Hartley-Nagle
+Monique Johns
+Matthew Meyer
+Margaret 'Maggie' Jones
+Kevin Caneco
+William Bell
+Justen Wright
+Michael S. Purzycki
+Velda Jones-Potter
+Hanifa Shabazz
+Trippi Congo
+Dawayne Sims
+Vash Turner
+Albert 'Al' Mills
+Coby Owens
+Karen 'Butter' Flowers
+Linda Gray
+Billy Lane Jr.
+Dorothy King
+John Johnson Jr.
+Shane Darby
+Davon 'D' Marque Hall
+Zanthia Oliver
+Donald Farrell
+Michelle Harlee
+Bregetta A. Fields
+Christian Willauer
+Evon L. Murray
+Ian 'Jahiti' Smith
+Josue Ortega
+Yolanda Mccoy
+Chris Johnson
+Devon Hynson
+Nathan Field
+Sean Barney
+Joanne H. Masten
+Morgan Russum
+Arisa White
+Charles Potter Jr.
+Loretta Walsh
+Maria D. Cabrera
+Robert Oliver
+Rysheema Dixon
+Samuel Lawrence Guy
+Tyrone Johnson
+Cynthia C. Green
+Lisa Hudson Briggs
+Robert D. Wilson
+Irwin 'I.G.' Burton Iii
+Mark G. Schaeffer
 Howie Hawkins
 Jo Jorgensen
-Christopher A. Coons
-Lauren Witzke
 Mark W. Turley
 Nadine M. Frost
 Lisa Blunt Rochester
-Lee Murphy
 Catherine S. Purcell
 David L. Rogers
-John C. Carney Jr.
-Julianne E. Murray
 Kathy S. Dematteis
 John J. Machurek
 Bethany Hall-Long
 Donyale Hall
-Trinidad Navarro
-Julia Pillsbury
-Joseph R. Biden
-Donald J. Trump
-Howie Hawkins
-Jo Jorgensen
-Christopher A. Coons
-Lauren Witzke
-Mark W. Turley
-Nadine M. Frost
-Lisa Blunt Rochester
-Lee Murphy
-Catherine S. Purcell
-David L. Rogers
-John C. Carney Jr.
-Julianne E. Murray
-Kathy S. Dematteis
-John J. Machurek
-Bethany Hall-Long
-Donyale Hall
-Trinidad Navarro
 Julia Pillsbury
