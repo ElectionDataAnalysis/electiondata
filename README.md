@@ -8,7 +8,10 @@ This repository hopes to provide reliable tools for consolidation and analysis o
 # Target Audience
 This system is intended to be of use to candidates and campaigns, election officials, students of politics and elections, and anyone else who is interested in assembling and understanding election results.
 
-# How to Help
+# How to Contribute Code
+Please contribute code that works in python 3.7, with the package versions specified in [requirements.txt](requirements.txt). We follow the [black](https://pypi.org/project/black/) format.
+
+# How to Help in Other Ways
 If you have skills to contribute to building the system, we can definitely use your help:
  * Creating visualizations
  * Importing and exporting data via xml feeds
