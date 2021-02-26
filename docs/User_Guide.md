@@ -494,7 +494,12 @@ To unload existing data for a given jurisdiction and a given election -- or more
 where `test_dir` is the directory holding the tests to perform on the data before upload. For example, `test_dir` might be the repository's `tests` directory. This routine will move any files associated with unloaded data to the directory specified in the optional `unloaded_dir` in `run_time.ini`.
 
 ## Testing
-The routine `tests/load_and_test_all.py` can be used to run tests. If the directory `tests/TestingData` does not exist, the function will download files from `github.com/ElectionDataAnalysis/TestingData`, load it all and run all tests. If `tests/TestingData` exists, the routine will test all data in that directory (without downloading anything). Election-jurisdiction pairs can be specified with the -e and -j flags, e.g. `load_all_from_repo.py -e '2018 General' -j 'Arkansas'` to restrict the loading and testing to just that pair.
+Tests to ascertain that data loaded correctly are in the [tests](../tests) file tree. The repository has a full set of tests for the 2020 General Election. There are also test templates, in the [tests/20xx_test_templates](../tests/20xx_test_templates) folder. Naming and location of the tests matter, so if you are loading new data you will want to create a new test. Put the test in a directory named for the jurisdiction, and name the test `test_<jurisdiction>_<election>.py` (replacing any spaces with hyphens). For example, the test for South Carolina's 2020 General election results is [tests/South-Carolina/test_South-Carolina_2020-General.py](../tests/South-Carolina/test_South-Carolina_2020-General.py). The test template files contain instructions for customizing to a particular jurisdiction and election.
+
+The script [tests/load_and_test_all.py](../tests/load_and_test_all.py) can be used to run tests. If the directory `tests/TestingData` does not exist, the script will download files from `github.com/ElectionDataAnalysis/TestingData` before running. If `tests/TestingData` exists, the script will use the data in that directory. Data for a particular jurisdiction should be in a folder named for that jurisdiction, with hyphens replacing spaces (e.g. "District-of-Columbia")
+
+For each jurisdiction subfolder of TestingData, and for each results file in that subfolder, the system will load data to a temporary database and run any properly-named tests in `tests` file tree.
+Or, the Election-jurisdiction pairs can be specified with the -e and -j flags, e.g. `load_all_from_repo.py -e '2018 General' -j 'Arkansas'` to restrict the loading and testing to just that pair.
 
 
 ## Miscellaneous helpful hints
