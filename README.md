@@ -1,5 +1,3 @@
-[![CII Best Practices](https://bestpractices.coreinfrastructure.org/projects/4078/badge)](https://bestpractices.coreinfrastructure.org/projects/4078)
-
 # Overview
 This repository hopes to provide reliable tools for consolidation and analysis of raw election results from the most reliable sources -- the election agencies themselves. 
  * Consolidation: take as input election results files from a wide variety of sources and load the data into a relational database
