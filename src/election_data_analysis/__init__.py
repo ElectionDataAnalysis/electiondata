@@ -13,6 +13,7 @@ import os
 import pandas as pd
 import inspect
 from pathlib import Path
+import dicttoxml
 from election_data_analysis import analyze as a
 from election_data_analysis import visualize as viz
 from election_data_analysis import juris_and_munger as jm
@@ -1426,7 +1427,7 @@ class Analyzer:
         )
         return err
 
-    def export_nist(self, election: str, jurisdiction: str):
+    def export_nist(self, election: str, jurisdiction: str) -> dict:
         election_id = db.name_to_id(self.session, "Election", election)
         jurisdiction_id = db.name_to_id(self.session, "ReportingUnit", jurisdiction)
 
@@ -1453,6 +1454,11 @@ class Analyzer:
 
         return election_report
 
+    def export_nist_xml(self, election: str, jurisdiction: str) -> str:
+        election_report_dict = self.export_nist(election, jurisdiction)
+        xml_string = dicttoxml.dicttoxml(election_report_dict)
+        # TODO add top matter, e.g. ElectionReport, xsi:schemaLocation, etc
+        return xml_string
 
 def aggregate_results(
     election,

@@ -11,4 +11,4 @@ path
 psutil
 requests
 openpyxl
-openpyxl
+dicttoxml==1.7.4
