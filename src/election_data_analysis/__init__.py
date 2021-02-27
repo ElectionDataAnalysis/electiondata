@@ -1456,7 +1456,7 @@ class Analyzer:
 
     def export_nist_xml(self, election: str, jurisdiction: str) -> str:
         election_report_dict = self.export_nist(election, jurisdiction)
-        xml_string = dicttoxml.dicttoxml(election_report_dict)
+        xml_string = dicttoxml.dicttoxml(election_report_dict, attr_type=False, custom_root="ElectionReport")
         # TODO add top matter, e.g. ElectionReport, xsi:schemaLocation, etc
         return xml_string
 
