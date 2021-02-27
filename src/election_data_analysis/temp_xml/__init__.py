@@ -14,7 +14,7 @@ def nist_xml_export(session, election, jurisdiction):
     for k in contests.keys():
         c_dict = contests[k]
         attr = {
-            "objectID": c_dict['Id']",
+            "objectID": c_dict['Id'],
             "Type": c_dict["Type"],
             "ContestName": c_dict["ContestName"],
         }
@@ -29,8 +29,8 @@ def nist_xml_export(session, election, jurisdiction):
             for vc_dict in s_dict["VoteCounts"]:
                 attr = {
                     "GpUnitId": vc_dict["Id"],
-                    "CountItemType": vc_dict["CountItemType"]
-                    "Count": vc_dict["Count"]
+                    "CountItemType": vc_dict["CountItemType"],
+                    "Count": vc_dict["Count"],
                 }
                 vc_elt = et.SubElement(s_elt,"VoteCount", attr)
 
