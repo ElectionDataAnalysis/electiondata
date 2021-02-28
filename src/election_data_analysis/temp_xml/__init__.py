@@ -32,9 +32,11 @@ def nist_xml_export(session, election, jurisdiction):
         attr = {
             "objectId": str(off["Id"]),
             "Name": off["Name"],
-            "ElectoralDistrictId": str(off["ElectoralDistrictId"])
+            # "ElectoralDistrictId": str(off["ElectoralDistrictId"]),
         }
         off_elt = et.SubElement(root, "Office", attr)
+        ed_id = et.SubElement(off_elt, "ElectoralDistrictId")
+        ed_id.text = str(off["ElectoralDistrictId"])
 
     # contests
     contests = an.nist_candidate_contest(session, election_id, jurisdiction_id)
@@ -44,24 +46,27 @@ def nist_xml_export(session, election, jurisdiction):
             "objectId": str(con['Id']),
             "Type": con["Type"],
             "ContestName": con["ContestName"],
-            "OfficeId": str(con["OfficeId"]),
         }
-        c_elt = et.SubElement(root, "Contest", attr)
+        con_elt = et.SubElement(root, "Contest", attr)
+        off_id_elt = et.SubElement(con_elt, "OfficeId")
+        off_id_elt.text = str(con["OfficeId"])
         for s_dict in con["BallotSelection"]:
             attr = {
                 "objectId": str(s_dict["Id"]),
                 "Type": "CandidateSelection",
-                "CandidateId": str(s_dict["CandidateId"]),
             }
-            s_elt = et.SubElement(c_elt, "BallotSelection", attr)
+            s_elt = et.SubElement(con_elt, "BallotSelection", attr)
+            can_id_elt = et.SubElement(s_elt, "CandidateId")
+            can_id_elt.text = str(s_dict["CandidateId"])
             vcs_elt = et.SubElement(s_elt, "VoteCountsCollection", dict())
             for vc_dict in s_dict["VoteCounts"]:
-                attr = {
-                    "GpUnitId": str(vc_dict["GpUnitId"]),
-                    "CountItemType": vc_dict["CountItemType"],
-                    "Count": str(vc_dict["Count"]),
-                }
-                vc_elt = et.SubElement(vcs_elt, "VoteCounts", attr)
+                vc_elt = et.SubElement(vcs_elt, "VoteCounts")
+                gpu_id_elt = et.SubElement(vc_elt, "CountItemType")
+                gpu_id_elt.text = vc_dict["CountItemType"]
+                gpu_id_elt = et.SubElement(vc_elt, "GpUnitId")
+                gpu_id_elt.text = str(vc_dict["GpUnitId"])
+                gpu_id_elt = et.SubElement(vc_elt, "Count")
+                gpu_id_elt.text = str(vc_dict["Count"])
 
     # get ids for gpunits that have vote counts
     vc_gpus = an.nist_reporting_unit(session, election_id, jurisdiction_id)
@@ -89,9 +94,10 @@ def nist_xml_export(session, election, jurisdiction):
             "Name": name,
             "Type": rut,
         }
-        if children:
-            attr["ComposingGpUnitIds"] = " ".join(children)
         gpu_elt = et.SubElement(root, "GpUnit", attr)
+        if children:
+            children_elt = et.SubElement(gpu_elt, "ComposingGpUnitIds")
+            children_elt.text = " ".join(children)
 
     # parties
     parties = an.nist_party(session, election_id, jurisdiction_id)
@@ -108,10 +114,10 @@ def nist_xml_export(session, election, jurisdiction):
         attr = {
             "objectId": str(can["Id"]),
             "BallotName": can["BallotName"],
-            "PartyId": str(can["PartyId"])
         }
         can_elt = et.SubElement(root, "Candidate", attr)
-
+        party_id_elt = et.SubElement(can_elt, "PartyId")
+        party_id_elt.text = str(can["PartyId"])
 
     return tree
 
