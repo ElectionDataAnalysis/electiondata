@@ -1064,8 +1064,8 @@ def nist_candidate_contest(session, election_id, jurisdiction_id):
         session,
         election_id,
         jurisdiction_id,
-        ["Contest_Id", "ContestName", "ContestType", "Office_Id"],
-        ["Id", "ContestName", "ContestType", "OfficeId"],
+        ["Contest_Id", "ContestName", "ContestType", "Office_Id", "ElectionDistrict_Id"],
+        ["Id", "ContestName", "ContestType", "OfficeId", "ElectionDistrictId"],
     )
     contest_df = contest_df[contest_df["ContestType"] == "Candidate"]
     contest_df["Type"] = "CandidateContest"

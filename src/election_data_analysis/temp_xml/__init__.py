@@ -10,36 +10,29 @@ def nist_xml_export(session, election, jurisdiction):
     election_id = db.name_to_id(session, "Election", election)
     jurisdiction_id = db.name_to_id(session, "ReportingUnit", jurisdiction)
 
-    # create ElectionReport
+    # ElectionReport (root)
     attr = {
         "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "xsi:schemaLocation": "https://github.com/usnistgov/ElectionResultsReporting/raw/version2/NIST_V2_election_results_reporting.xsd",
         "xmlns": "http://itl.nist.gov/ns/voting/1500-100/v2",
     }
     root = et.Element("ElectionReport", attr)
-    tree = et.ElementTree(root)
-    
+    et.SubElement(root, "Format").text = "summary-contest"
+    et.SubElement(root, "GeneratedDate").text = "1900-01-01T00:00:00Z"  # TODO placeholder, needs to be fixed
 
     # election
     elections = an.nist_election(session, election_id, jurisdiction_id)
+    ## there's only one election, but it comes back as a single element of a list
     for e in elections:
-        e_elt = et.SubElement(root, "Election", {"ObjectId": f'oid{e["Id"]}'})
-        et.SubElement(e_elt, "Date").text = "1900-01-01"  # TODO placeholder, needs to be fixed
-        et.SubElement(e_elt, "Name").text = e["Name"]
-        et.SubElement(e_elt, "Type").text = e["Type"]
+        attr = dict()
+        e_elt = et.SubElement(root, "Election", attr)
 
-    # offices
-    offices = an.nist_office(session, election_id, jurisdiction_id)
-    # track election districts for each contest (will need to list each as a gp unit)
-    gpu_ids = set()
-    for off in offices:
-        gpu_ids.add(off["ElectoralDistrictId"])
-        attr = {
-            "ObjectId": f'oid{off["Id"]}',
-            "Name": off["Name"],
-        }
-        off_elt = et.SubElement(root, "Office", attr)
-        ed_id = et.SubElement(off_elt, "ElectoralDistrictId")
-        ed_id.text = f'oid{off["ElectoralDistrictId"]}'
+        # offices
+        offices = an.nist_office(session, election_id, jurisdiction_id)
+        # track election districts for each contest (will need to list each as a gp unit)
+        gpu_ids = set()
+        for off in offices:
+            gpu_ids.add(off["ElectoralDistrictId"])
 
     # contests
     contests = an.nist_candidate_contest(session, election_id, jurisdiction_id)
@@ -47,18 +40,16 @@ def nist_xml_export(session, election, jurisdiction):
 
         attr = {
             "ObjectId": f'oid{con["Id"]}',
-            "Type": con["Type"],
+            "xsi:type": con["Type"],
         }
         con_elt = et.SubElement(e_elt, "Contest", attr)
-        off_id_elt = et.SubElement(con_elt, "OfficeId")
-        off_id_elt.text = f'oid{con["OfficeId"]}'
-        # add ContestName as a subelement
-        et.SubElement(con_elt, "ContestName").text = con["ContestName"]
+        et.SubElement(con_elt, "BallotTitle").text = con["ContestName"]
+        et.SubElement(con_elt, "ElectionDistrictId").text = f'oid{con["ElectionDistrictId"]}'
 
         for s_dict in con["BallotSelection"]:
             attr = {
-                "ObjectId": str(s_dict["Id"]),
-                "Type": "CandidateSelection",
+                "ObjectId": f'{s_dict["Id"]}',
+                "xsi:type": "CandidateSelection",
             }
             s_elt = et.SubElement(con_elt, "BallotSelection", attr)
             can_id_elt = et.SubElement(s_elt, "CandidateId")
@@ -111,7 +102,7 @@ def nist_xml_export(session, election, jurisdiction):
             "ObjectId": f'oid{p["Id"]}',
             "Name": p["Name"],
         }
-        p_elt = et.SubElement(root, "Party", attr)
+        p_elt = et.SubElement(e_elt, "Party", attr)
 
     # candidates
     candidates = an.nist_candidate(session, election_id, jurisdiction_id)
@@ -124,5 +115,6 @@ def nist_xml_export(session, election, jurisdiction):
         party_id_elt = et.SubElement(can_elt, "PartyId")
         party_id_elt.text = f'oid{can["PartyId"]}'
 
+    tree = et.ElementTree(root)
     return tree
 
