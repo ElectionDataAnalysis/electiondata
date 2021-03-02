@@ -1,18 +1,22 @@
 import xml.etree.ElementTree as et
 import pandas as pd
 from sqlalchemy.orm import Session
+from psycopg2 import sql
 from datetime import datetime, timezone
 from election_data_analysis import (
     analyze as an,
     database as db,
 )
 
-# constants
+# constants set by issuer
 default_issuer = "unspecified user of code base at github.com/ElectionDataAnalysis/election_data_analysis"
 default_issuer_abbreviation = "unspecified"
 default_status = "unofficial-partial"  # choices are limited by xsd schema
 default_vendor_application_id = "open source software at github.com/ElectionDataAnalysis/election_data_analysis"
 
+# constants dictated by NIST
+schema_location = "https://github.com/usnistgov/ElectionResultsReporting/raw/version2/NIST_V2_election_results_reporting.xsd"
+namespace = "http://itl.nist.gov/ns/voting/1500-100/v2"
 
 def nist_xml_export(
         session: Session,
@@ -23,38 +27,33 @@ def nist_xml_export(
         status: str = default_status,
         vendor_application_id: str = default_vendor_application_id
 ):
+    # set up
     election_id = db.name_to_id(session, "Election", election)
     jurisdiction_id = db.name_to_id(session, "ReportingUnit", jurisdiction)
+
     # include jurisdiction id in gp unit ids
     gpu_idxs = {jurisdiction_id}
 
-    # collect ids for gp units that have vote counts (NB will add to gpu_ids later)
-    vc_gpus = an.nist_reporting_unit(session, election_id, jurisdiction_id)
-    gpu_idxs.update({gpu["Id"] for gpu in vc_gpus})
+    # get vote count data
+    results_df = read_vote_count_nist(session, election_id, jurisdiction_id)
+
+    # collect ids for gp units that have vote counts, gp units that are election districts
+    gpu_idxs.update(results_df.ReportingUnit_Id.unique())
+    gpu_idxs.update(results_df.ElectionDistrict_Id.unique())
 
     # ElectionReport (root)
     attr = {
         "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
-        "xsi:schemaLocation": "https://github.com/usnistgov/ElectionResultsReporting/raw/version2/NIST_V2_election_results_reporting.xsd",
-        "xmlns": "http://itl.nist.gov/ns/voting/1500-100/v2",
+        "xsi:schemaLocation": schema_location,
+        "xmlns": namespace,
     }
     root = et.Element("ElectionReport", attr)
 
-    # election
-    elections = an.nist_election(session, election_id, jurisdiction_id)
-    ## there's only one election, but it comes back as a single element of a list
-    election = elections[0]
-    attr = dict()
-    e_elt = et.SubElement(root, "Election", attr)
-
-    # offices
-    offices = an.nist_office(session, election_id, jurisdiction_id)
-    # track election districts for each contest (will need to list each as a gp unit)
-    for off in offices:
-        gpu_idxs.add(off["ElectoralDistrictId"])
+    # add election sub-element of ElectionReport
+    e_elt = et.SubElement(root, "Election")
 
     # other sub-elements of ElectionReport
-    et.SubElement(root, "Format").text = "summary-contest"
+    et.SubElement(root, "Format").text = "summary-contest"  # NB NIST restricts choices
     et.SubElement(root, "GeneratedDate").text = datetime.now(tz=timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
 
     # get name, ru-type and composing info for all gpus
@@ -62,13 +61,10 @@ def nist_xml_export(
     ru_types = pd.read_sql("ReportingUnitType", session.bind, index_col="Id")
     cruj = pd.read_sql("ComposingReportingUnitJoin", session.bind, index_col="Id")
 
-    # relevant = rus.index.isin(gpu_ids)
+    # add each gpu
     for idx in gpu_idxs:
         name = rus.loc[idx]["Name"]
-        rut = rus.loc[idx]["OtherReportingUnitType"]
-        if rut == "":   # if it's a standard type
-            rut = ru_types.loc[rus.loc[idx]["ReportingUnitType_Id"]]["Txt"]
-        assert rut != "other", f"ReportingUnit with index {idx} has type other"
+
         children = [
             f'oid{x}' for x in
             cruj[cruj["ParentReportingUnit_Id"] == idx]["ChildReportingUnit_Id"].unique()
@@ -84,22 +80,20 @@ def nist_xml_export(
             children_elt.text = " ".join(children)
         gpu_name = et.SubElement(gpu_elt, "Name")
         et.SubElement(gpu_name, "Text", {"Language": "en"}).text = name
-        et.SubElement(gpu_elt, "Type").text = rut
-        # TODO need "OtherType" sub-element too, for nonstandard ru types
+        et.SubElement(gpu_elt, "Type").text = ru_types.loc[rus.loc[idx]["ReportingUnitType_Id"]]["Txt"]
+        if ru_types.loc[rus.loc[idx]["ReportingUnitType_Id"]]["Txt"] == "other":
+            et.SubElement(gpu_elt, "OtherType").text = rus.loc[idx]["OtherReportingUnitType"]
 
     # other sub-elements of ElectionReport
     et.SubElement(root, "Issuer").text = issuer
     et.SubElement(root, "IssuerAbbreviation").text = issuer_abbreviation
 
-    # parties
-    parties = an.nist_party(session, election_id, jurisdiction_id)
-    for p in parties:
-        attr = {
-            "ObjectId": f'oid{p["Id"]}',
-        }
-        p_elt = et.SubElement(root, "Party", attr)
+    # add each party
+    party_df = results_df[["Party_Id", "PartyName"]].drop_duplicates()
+    for i, p in party_df.iterrows():
+        p_elt = et.SubElement(root, "Party", {"ObjectId": f'oid{p["Party_Id"]}',})
         p_name_elt = et.SubElement(p_elt, "Name")
-        et.SubElement(p_name_elt, "Text", {"Language": "en"}).text = p["Name"]
+        et.SubElement(p_name_elt, "Text", {"Language": "en"}).text = p["PartyName"]
 
     # still more sub-elements of ElectionReport
     et.SubElement(root, "SequenceStart").text = "1"  # TODO placeholder
@@ -107,51 +101,57 @@ def nist_xml_export(
     et.SubElement(root, "Status").text = status
     et.SubElement(root, "VendorApplicationId").text = vendor_application_id
 
-    # candidates (sub-elements of Election)
-    candidates = an.nist_candidate(session, election_id, jurisdiction_id)
-    for can in candidates:
-        attr = {
-            "ObjectId": f'oid{can["Id"]}',
-        }
-        can_elt = et.SubElement(e_elt, "Candidate", attr)
+    # add each candidate (as sub-element of Election)
+    candidate_df = results_df[["Candidate_Id", "BallotName", "Party_Id"]].drop_duplicates()
+    for i, can in candidate_df.iterrows():
+        can_elt = et.SubElement(e_elt, "Candidate", {"ObjectId": f'oid{can["Candidate_Id"]}'})
         bn_elt = et.SubElement(can_elt, "BallotName")
         et.SubElement(bn_elt, "Text", {"Language": "en"}).text = can["BallotName"]
         party_id_elt = et.SubElement(can_elt, "PartyId")
-        party_id_elt.text = f'oid{can["PartyId"]}'
+        party_id_elt.text = f'oid{can["Party_Id"]}'
 
-    # contests (sub-elements of Election)
-    contests = an.nist_candidate_contest(session, election_id, jurisdiction_id)
-    for con in contests:
+    # add each contest (as sub-element of Election)
+    contest_df = results_df[
+        ["Contest_Id", "ContestName", "ContestType", "ElectionDistrict_Id"]
+    ].drop_duplicates()
+    for i, con in contest_df.iterrows():
         # create element for the contest
         attr = {
-            "ObjectId": f'oid{con["Id"]}',
-            "xsi:type": con["Type"],
+            "ObjectId": f'oid{con["Contest_Id"]}',
+            "xsi:type": f'{con["ContestType"]}Contest',
         }
         con_elt = et.SubElement(e_elt, "Contest", attr)
 
         # create ballot selection sub-elements
-        # TODO (assumes CandidateContest)
-        for s_dict in con["BallotSelection"]:
+        # TODO (remove assumption that it's a  CandidateContest)
+        selection_idxs = results_df[results_df.Contest_Id == con["Contest_Id"]][
+            "Selection_Id"
+        ].unique()
+        for s_idx in selection_idxs:
             attr = {
-                "ObjectId": f'oid{s_dict["Id"]}',
+                "ObjectId": f'oid{s_idx}',
                 "xsi:type": "CandidateSelection",
             }
             cs_elt = et.SubElement(con_elt, "ContestSelection", attr)
-            for vc_dict in s_dict["VoteCounts"]:
+            vc_df = results_df[
+                (results_df.Contest_Id == con["Contest_Id"]) & (results_df.Selection_Id == s_idx)
+            ][["ReportingUnit_Id", "CountItemType", "OtherCountItemType", "Count"]].drop_duplicates()
+            for i, vc in vc_df.iterrows():
                 vote_counts_elt = et.SubElement(cs_elt, "VoteCounts")
                 # create GpUnitId sub-element
-                et.SubElement(vote_counts_elt, "GpUnitId").text = f'oid{vc_dict["GpUnitId"]}'
+                et.SubElement(vote_counts_elt, "GpUnitId").text = f'oid{vc["ReportingUnit_Id"]}'
                 # create Type sub-elements (for CountItemType)
-                et.SubElement(vote_counts_elt, "Type").text = vc_dict["CountItemType"]
-                # if Type is 'other' need OtherType sub-element
+                et.SubElement(vote_counts_elt, "Type").text = vc["CountItemType"]
+                if vc["CountItemType"] == "other":
+                    et.SubElement(vote_counts_elt, "OtherType").text = vc["OtherCountItemType"]
                 # create Count sub-element
-                et.SubElement(vote_counts_elt, "Count").text = str(vc_dict["Count"])
+                et.SubElement(vote_counts_elt, "Count").text = str(vc["Count"])
 
-            et.SubElement(cs_elt, "CandidateIds").text = f'oid{s_dict["CandidateId"]}'
+            et.SubElement(cs_elt, "CandidateIds").text = f'oid{s_idx}'
             # TODO tech debt ^^ assumes single candidate
 
         # create ElectionDistrictId sub-element
-        et.SubElement(con_elt, "ElectionDistrictId").text = f'oid{con["ElectionDistrictId"]}'
+        et.SubElement(con_elt, "ElectionDistrictId").text = f'oid{con["ElectionDistrict_Id"]}'
 
         # create Name sub-element
         et.SubElement(con_elt, "Name").text = con["ContestName"]
@@ -163,17 +163,78 @@ def nist_xml_export(
     # election scope (geographic unit for whole election)
     et.SubElement(e_elt, "ElectionScopeId").text = f"oid{jurisdiction_id}"
 
-    # election name
+    # add properties of particular election
+    # NB we assume only one election!
+    election_df = pd.read_sql_table("Election", session.bind, index_col="Id")
+    election_type_df = pd.read_sql_table("ElectionType", session.bind, index_col="Id")
     election_name_elt = et.SubElement(e_elt, "Name")
-    et.SubElement(election_name_elt, "Text", {"Language": "en"}).text = election["Name"]
-
-    # election start and end date
+    et.SubElement(election_name_elt, "Text", {"Language": "en"}).text = election_df.loc[election_id]["Name"]
     et.SubElement(e_elt, "StartDate").text = "1900-01-01"  # placeholder
     et.SubElement(e_elt, "EndDate").text = "1900-01-01"  # placeholder
 
     # election type
-    et.SubElement(e_elt, "Type").text = election["Type"]
+    e_type = election_type_df.loc[
+        election_df.loc[election_id]["ElectionType_Id"]
+    ]["Txt"]
+    et.SubElement(e_elt, "Type").text = e_type
+    if e_type == "other":
+        et.SubElement(e_elt, "OtherType").text = election_df.loc[election_id]["OtherElectionType"]
 
     tree = et.ElementTree(root)
     return tree
+
+
+def read_vote_count_nist(
+    session,
+    election_id,
+    reporting_unit_id,
+):
+    """The VoteCount table is the only place that maps contests to a specific
+    election. But this table is the largest one, so we don't want to use pandas methods
+    to read into a DF and then filter"""
+
+    fields = ["ReportingUnitType_Id",
+                "Party_Id", "PartyName", "Candidate_Id", "BallotName",
+                "Contest_Id", "ContestType", "ElectionDistrict_Id", "ContestName",
+                "Selection_Id", "ReportingUnit_Id", "CountItemType", "OtherCountItemType",
+              "Count"
+    ]
+    q = sql.SQL(
+        """
+        SELECT  DISTINCT {fields}
+        FROM    (
+                    SELECT  "Id" as "VoteCount_Id", "Contest_Id", "Selection_Id",
+                            "ReportingUnit_Id", "Election_Id", "CountItemType_Id", 
+                            "OtherCountItemType", "Count"
+                    FROM    "VoteCount"
+                ) vc
+                JOIN (SELECT "Id", "Name" as "ContestName" , contest_type as "ContestType" FROM "Contest") con on vc."Contest_Id" = con."Id"
+                JOIN "ComposingReportingUnitJoin" cruj ON vc."ReportingUnit_Id" = cruj."ChildReportingUnit_Id"
+                JOIN "CandidateSelection" cs ON vc."Selection_Id" = cs."Id"
+                JOIN "Candidate" c on cs."Candidate_Id" = c."Id"
+                JOIN (SELECT "Id", "Name" AS "PartyName" FROM "Party") p ON cs."Party_Id" = p."Id"
+                JOIN "CandidateContest" cc ON con."Id" = cc."Id"
+                JOIN (SELECT "Id", "Name" as "OfficeName", "ElectionDistrict_Id" FROM "Office") o on cc."Office_Id" = o."Id"
+                -- this reporting unit info refers to the districts (state house, state senate, etc)
+                JOIN (SELECT "Id", "Name" AS "ReportingUnitName", "ReportingUnitType_Id" FROM "ReportingUnit") ru on o."ElectionDistrict_Id" = ru."Id"
+                JOIN (SELECT "Id", "Txt" AS unit_type FROM "ReportingUnitType") rut on ru."ReportingUnitType_Id" = rut."Id"
+                -- this reporting unit info refers to the geopolitical divisions (county, state, etc)
+                JOIN (SELECT "Id" as "GP_Id", "Name" AS "GPReportingUnitName", "ReportingUnitType_Id" AS "GPReportingUnitType_Id" FROM "ReportingUnit") gpru on vc."ReportingUnit_Id" = gpru."GP_Id"
+                JOIN (SELECT "Id", "Txt" AS "GPType" FROM "ReportingUnitType") gprut on gpru."GPReportingUnitType_Id" = gprut."Id"
+                JOIN (SELECT "Id", "Name" as "ElectionName", "ElectionType_Id", "OtherElectionType" FROM "Election") e on vc."Election_Id" = e."Id"
+                JOIN (SELECT "Id", "Txt" as "ElectionType" FROM "ElectionType") et on e."ElectionType_Id" = et."Id"
+                JOIN (SELECT "Id", "Txt" as "CountItemType" FROM "CountItemType") cit on vc."CountItemType_Id" = cit."Id"
+        WHERE   "Election_Id" = %s
+                AND "ParentReportingUnit_Id" = %s
+        """
+    ).format(
+        fields=sql.SQL(",").join(sql.Identifier(field) for field in fields),
+    )
+    connection = session.bind.raw_connection()
+    cursor = connection.cursor()
+    cursor.execute(q, [election_id, reporting_unit_id])
+    results = cursor.fetchall()
+    results_df = pd.DataFrame(results, columns=fields)
+    return results_df
+
 
