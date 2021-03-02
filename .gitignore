@@ -15,8 +15,10 @@ local/
 *.ini
 !src/ini_files_for_results/*.ini
 !src/ini_files_for_results/*/*.ini
+src/ini_files_for_results/Delaware/de_20g_nist_export.ini
 
 /tests/TestingData/
 /tests/Passed_Tests/
 /tests/TestingData/
 /tests/Staging/
+

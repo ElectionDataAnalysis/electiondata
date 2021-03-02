@@ -1,0 +1,35 @@
+# Format parameters section (required) #
+[format]
+file_type=xml
+count_locations=by_field_names
+munge_strings=in_field_values,constant_over_file
+
+#### if count_locations is 'by_field_names':
+count_fields_by_name=Count
+#### if 'constant_over_file' is in munge_strings (NB: give value for each in .ini file):
+constant_over_file=CountItemType
+
+#### for xml file type
+nesting_tags=Election
+
+# Munge formula sections (required if in munge_strings list) #
+[in_field_values]
+Candidate=<CandidateIds>
+CandidateContest=<Contest.Name>
+ReportingUnit=<VoteCounts.GpUnitId>
+
+
+[in_count_headers]
+
+[constant_over_sheet]
+
+# Values to ignore (optional) #
+[ignore]
+## E.g: Candidate=Total Votes Cast,Registered Voters ##
+
+# Lookup formula sections #
+## Required when foreign keys are used in munge formulas and    ##
+## must be looked up in another table.                          ##
+## See mi_gen18.munger for example                              ##
+##################################################################
+
