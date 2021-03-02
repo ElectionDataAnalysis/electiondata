@@ -1157,6 +1157,7 @@ def munge_source_to_raw(
     orig_string_cols: List[str],
     suffix: str,
     aux_directory_path,
+    results_file_path,
 ) -> (pd.DataFrame, Optional[dict]):
     """NB: assumes columns of dataframe have <suffix> appended already"""
     err = None
@@ -1198,6 +1199,7 @@ def munge_source_to_raw(
                         aux_directory_path,
                         munger_name,
                         suffix,
+                        results_file_path,
                     )
                     if new_err:
                         err = ui.consolidate_errors([err, new_err])
@@ -1691,13 +1693,12 @@ def get_aux_info(
             # if there is a lookup for this field, grab it
             f_p, f_err = ui.get_parameters(
                 required_keys=[
-                    "source_file",
                     "file_type",
                     "munge_strings",
                     "lookup_id",
                 ],
                 optional_keys=list(opt_munger_params.keys())
-                + [f"{element}_replacement"],
+                + [f"{element}_replacement", "source_file"],
                 header=f"{field} lookup",
                 param_file=munger_path,
             )
@@ -1732,6 +1733,7 @@ def incorporate_aux_info(
     aux_directory_path: str,
     munger_name: str,  # for error reporting
     suffix: str,
+    f_path: str,  # path to original file, in case that's the lookup file
 ) -> (pd.DataFrame, str, Optional[Dict[str, Any]]):
     """revises the dataframe, adding necessary columns obtained from lookup tables,
     and revises the formula to pull from those columns instead of foreign key columns
@@ -1745,9 +1747,12 @@ def incorporate_aux_info(
         r_fields = aux[element][fk]["r_fields"]
 
         # grab the lookup table
-        lt_path = os.path.join(
-            aux_directory_path, aux[element][fk]["params"]["source_file"]
-        )
+        if aux[element][fk]["params"]["source_file"]:
+            lt_path = os.path.join(
+                aux_directory_path, aux[element][fk]["params"]["source_file"]
+            )
+        else:
+            lt_path = f_path
         lookup_df_dict, fk_err = ui.read_single_datafile(
             lt_path, aux[element][fk]["params"], munger_name, dict(), aux=True
         )

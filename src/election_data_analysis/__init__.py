@@ -568,6 +568,7 @@ class SingleDataLoader:
                         original_string_columns,
                         "_SOURCE",
                         self.results_dir,
+                        f_path,
                     )
                     err = ui.consolidate_errors([err, new_err])
                     if ui.fatal_error(new_err):
@@ -1781,6 +1782,7 @@ def load_results_file(
             original_string_columns,
             "_SOURCE",
             results_directory_path,
+            f_path,
         )
         if new_err:
             err = ui.consolidate_errors([err, new_err])

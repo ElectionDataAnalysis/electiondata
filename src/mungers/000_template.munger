@@ -69,4 +69,12 @@ nesting_tags=
 ## must be looked up in another table.                          ##
 ## See mi_gen18.munger for example                              ##
 ##################################################################
+# [*** lookup]
+# optional (defaults to the results file):
+# source_file=
 
+# required:
+# lookup_id=
+# and formula for any element needing to be looked up:
+# <element>_replacement=
+# and specify munger params for source file

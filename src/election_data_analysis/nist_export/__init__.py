@@ -135,7 +135,7 @@ def nist_xml_export(
             cs_elt = et.SubElement(con_elt, "ContestSelection", attr)
             vc_df = results_df[
                 (results_df.Contest_Id == con["Contest_Id"]) & (results_df.Selection_Id == s_idx)
-            ][["ReportingUnit_Id", "CountItemType", "OtherCountItemType", "Count"]].drop_duplicates()
+            ][["ReportingUnit_Id", "Candidate_Id", "CountItemType", "OtherCountItemType", "Count"]].drop_duplicates()
             for i, vc in vc_df.iterrows():
                 vote_counts_elt = et.SubElement(cs_elt, "VoteCounts")
                 # create GpUnitId sub-element
@@ -147,8 +147,8 @@ def nist_xml_export(
                 # create Count sub-element
                 et.SubElement(vote_counts_elt, "Count").text = str(vc["Count"])
 
-            et.SubElement(cs_elt, "CandidateIds").text = f'oid{s_idx}'
-            # TODO tech debt ^^ assumes single candidate
+            candidate_ids = " ".join([f'oid{x}' for x in vc_df.Candidate_Id.unique()])
+            et.SubElement(cs_elt, "CandidateIds").text = candidate_ids
 
         # create ElectionDistrictId sub-element
         et.SubElement(con_elt, "ElectionDistrictId").text = f'oid{con["ElectionDistrict_Id"]}'
