@@ -71,7 +71,7 @@ def nist_xml_export(
         }
         can_elt = et.SubElement(e_elt, "Candidate", attr)
         bn_elt = et.SubElement(can_elt, "BallotName")
-        et.SubElement(bn_elt, "Text").text = can["BallotName"]
+        et.SubElement(bn_elt, "Text", {"Language": "en"}).text = can["BallotName"]
         party_id_elt = et.SubElement(can_elt, "PartyId")
         party_id_elt.text = f'oid{can["PartyId"]}'
 
@@ -109,7 +109,7 @@ def nist_xml_export(
         et.SubElement(con_elt, "ElectionDistrictId").text = f'oid{con["ElectionDistrictId"]}'
 
         # create Name sub-element
-        et.SubElement(con_elt, "Name", {"Language": "en"}).text = con["ContestName"]
+        et.SubElement(con_elt, "Name").text = con["ContestName"]
 
         # create VotesAllowed sub-element
         et.SubElement(con_elt, "VotesAllowed").text = "1"
