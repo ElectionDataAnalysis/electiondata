@@ -17,8 +17,6 @@ def nist_xml_export(session, election, jurisdiction):
         "xmlns": "http://itl.nist.gov/ns/voting/1500-100/v2",
     }
     root = et.Element("ElectionReport", attr)
-    et.SubElement(root, "Format").text = "summary-contest"
-    et.SubElement(root, "GeneratedDate").text = "1900-01-01T00:00:00Z"  # TODO placeholder, needs to be fixed
 
     # election
     elections = an.nist_election(session, election_id, jurisdiction_id)
@@ -34,35 +32,44 @@ def nist_xml_export(session, election, jurisdiction):
         for off in offices:
             gpu_ids.add(off["ElectoralDistrictId"])
 
+    # other sub-elements of ElectionReport
+    et.SubElement(root, "Format").text = "summary-contest"
+    et.SubElement(root, "GeneratedDate").text = "1900-01-01T00:00:00Z"  # TODO placeholder, needs to be fixed
+
     # contests
     contests = an.nist_candidate_contest(session, election_id, jurisdiction_id)
     for con in contests:
-
+        # create element for the contest
         attr = {
             "ObjectId": f'oid{con["Id"]}',
             "xsi:type": con["Type"],
         }
         con_elt = et.SubElement(e_elt, "Contest", attr)
-        et.SubElement(con_elt, "BallotTitle").text = con["ContestName"]
-        et.SubElement(con_elt, "ElectionDistrictId").text = f'oid{con["ElectionDistrictId"]}'
-
+        # create ballot title sub-element
+        bt_elt = et.SubElement(con_elt, "BallotTitle")
+        attr = {"Language": "en"}
+        et.SubElement(bt_elt, "Text", attr).text = con["ContestName"]
+        # create ballot selection sub-elements
         for s_dict in con["BallotSelection"]:
             attr = {
-                "ObjectId": f'{s_dict["Id"]}',
+                "ObjectId": f'oid{s_dict["Id"]}',
                 "xsi:type": "CandidateSelection",
             }
-            s_elt = et.SubElement(con_elt, "BallotSelection", attr)
-            can_id_elt = et.SubElement(s_elt, "CandidateId")
-            can_id_elt.text = f'oid{s_dict["CandidateId"]}'
-            vcs_elt = et.SubElement(s_elt, "VoteCountsCollection", dict())
+            cs_elt = et.SubElement(con_elt, "ContestSelection", attr)
+            c_elt = et.SubElement(cs_elt, "VoteCounts")
             for vc_dict in s_dict["VoteCounts"]:
-                vc_elt = et.SubElement(vcs_elt, "VoteCounts")
-                gpu_id_elt = et.SubElement(vc_elt, "CountItemType")
-                gpu_id_elt.text = vc_dict["CountItemType"]
-                gpu_id_elt = et.SubElement(vc_elt, "GpUnitId")
-                gpu_id_elt.text = f'oid{vc_dict["GpUnitId"]}'
-                gpu_id_elt = et.SubElement(vc_elt, "Count")
-                gpu_id_elt.text = str(vc_dict["Count"])
+                vc_elt = et.SubElement(c_elt, "Count")
+                et.SubElement(vc_elt, "CountItemType").text = vc_dict["CountItemType"]
+                et.SubElement(vc_elt, "GpUnitId").text = f'oid{vc_dict["GpUnitId"]}'
+                et.SubElement(vc_elt, "Count").text = str(vc_dict["Count"])
+
+            et.SubElement(cs_elt, "CandidateIds").text = f'oid{s_dict["CandidateId"]}'
+            # TODO tech debt ^^ assumes single candidate
+
+
+        # create ElectionDistrictId sub-element
+        et.SubElement(con_elt, "ElectionDistrictId").text = f'oid{con["ElectionDistrictId"]}'
+
 
     # get ids for gpunits that have vote counts
     vc_gpus = an.nist_reporting_unit(session, election_id, jurisdiction_id)
