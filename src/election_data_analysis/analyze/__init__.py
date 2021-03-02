@@ -1151,8 +1151,8 @@ def nist_office(session, election_id, jurisdiction_id):
         session,
         election_id,
         jurisdiction_id,
-        ["Office_Id", "OfficeName", "ElectionDistrict_Id"],
-        ["Id", "Name", "ElectoralDistrictId"],
+        ["Office_Id", "OfficeName", "ElectionDistrict_Id", "NumberElected"],
+        ["Id", "Name", "ElectoralDistrictId", "NumberElected"],
     )
     result = df.to_json(orient="records")
     return json.loads(result)
