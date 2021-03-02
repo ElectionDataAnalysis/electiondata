@@ -56,8 +56,52 @@ def nist_xml_export(
     # other sub-elements of ElectionReport
     et.SubElement(root, "Format").text = "summary-contest"
     et.SubElement(root, "GeneratedDate").text = datetime.now(tz=timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+
+    # get name, ru-type and composing info for all gpus
+    rus = pd.read_sql("ReportingUnit", session.bind, index_col="Id")
+    ru_types = pd.read_sql("ReportingUnitType", session.bind, index_col="Id")
+    cruj = pd.read_sql("ComposingReportingUnitJoin", session.bind, index_col="Id")
+
+    # relevant = rus.index.isin(gpu_ids)
+    for idx in gpu_idxs:
+        name = rus.loc[idx]["Name"]
+        rut = rus.loc[idx]["OtherReportingUnitType"]
+        if rut == "":   # if it's a standard type
+            rut = ru_types.loc[rus.loc[idx]["ReportingUnitType_Id"]]["Txt"]
+        assert rut != "other", f"ReportingUnit with index {idx} has type other"
+        children = [
+            f'oid{x}' for x in
+            cruj[cruj["ParentReportingUnit_Id"] == idx]["ChildReportingUnit_Id"].unique()
+            if x in gpu_idxs and x != idx
+        ]
+        attr = {
+            "ObjectId": f'oid{idx}',
+            "xsi:type": "ReportingUnit",
+        }
+        gpu_elt = et.SubElement(root, "GpUnit", attr)
+        if children:
+            children_elt = et.SubElement(gpu_elt, "ComposingGpUnitIds")
+            children_elt.text = " ".join(children)
+        gpu_name = et.SubElement(gpu_elt, "Name")
+        et.SubElement(gpu_name, "Text", {"Language": "en"}).text = name
+        et.SubElement(gpu_elt, "Type").text = rut
+        # TODO need "OtherType" sub-element too, for nonstandard ru types
+
+    # other sub-elements of ElectionReport
     et.SubElement(root, "Issuer").text = issuer
     et.SubElement(root, "IssuerAbbreviation").text = issuer_abbreviation
+
+    # parties
+    parties = an.nist_party(session, election_id, jurisdiction_id)
+    for p in parties:
+        attr = {
+            "ObjectId": f'oid{p["Id"]}',
+        }
+        p_elt = et.SubElement(root, "Party", attr)
+        p_name_elt = et.SubElement(p_elt, "Name")
+        et.SubElement(p_name_elt, "Text", {"Language": "en"}).text = p["Name"]
+
+    # still more sub-elements of ElectionReport
     et.SubElement(root, "SequenceStart").text = "1"  # TODO placeholder
     et.SubElement(root, "SequenceEnd").text = "1"  # TODO placeholder
     et.SubElement(root, "Status").text = status
@@ -86,6 +130,7 @@ def nist_xml_export(
         con_elt = et.SubElement(e_elt, "Contest", attr)
 
         # create ballot selection sub-elements
+        # TODO (assumes CandidateContest)
         for s_dict in con["BallotSelection"]:
             attr = {
                 "ObjectId": f'oid{s_dict["Id"]}',
@@ -128,42 +173,6 @@ def nist_xml_export(
 
     # election type
     et.SubElement(e_elt, "Type").text = election["Type"]
-
-    # get name, ru-type and composing info for all gpus
-    rus = pd.read_sql("ReportingUnit", session.bind, index_col="Id")
-    ru_types = pd.read_sql("ReportingUnitType", session.bind, index_col="Id")
-    cruj = pd.read_sql("ComposingReportingUnitJoin", session.bind, index_col="Id")
-
-    # relevant = rus.index.isin(gpu_ids)
-    for idx in gpu_idxs:
-        name = rus.loc[idx]["Name"]
-        rut = rus.loc[idx]["OtherReportingUnitType"]
-        if rut == "":   # if it's a standard type
-            rut = ru_types.loc[rus.loc[idx]["ReportingUnitType_Id"]]["Txt"]
-        assert rut != "other", f"ReportingUnit with index {idx} has type other"
-        children = [
-            f'oid{x}' for x in
-            cruj[cruj["ParentReportingUnit_Id"] == idx]["ChildReportingUnit_Id"].unique()
-            if x in gpu_idxs and x != idx
-        ]
-        attr = {
-            "ObjectId": f'oid{idx}',
-            "Name": name,
-            "Type": rut,
-        }
-        """gpu_elt = et.SubElement(e_elt, "GpUnit", attr)
-        if children:
-            children_elt = et.SubElement(gpu_elt, "ComposingGpUnitIds")
-            children_elt.text = " ".join(children)"""
-
-    """# parties
-    parties = an.nist_party(session, election_id, jurisdiction_id)
-    for p in parties:
-        attr = {
-            "ObjectId": f'oid{p["Id"]}',
-            "Name": p["Name"],
-        }
-        p_elt = et.SubElement(e_elt, "Party", attr)"""
 
     tree = et.ElementTree(root)
     return tree
