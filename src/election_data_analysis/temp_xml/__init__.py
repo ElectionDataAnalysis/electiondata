@@ -10,6 +10,10 @@ def nist_xml_export(session, election, jurisdiction):
     election_id = db.name_to_id(session, "Election", election)
     jurisdiction_id = db.name_to_id(session, "ReportingUnit", jurisdiction)
 
+    # collect ids for gp units that have vote counts (NB will add to gpu_ids later)
+    vc_gpus = an.nist_reporting_unit(session, election_id, jurisdiction_id)
+    gpu_ids = {gpu["Id"] for gpu in vc_gpus}
+
     # ElectionReport (root)
     attr = {
         "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
@@ -28,7 +32,6 @@ def nist_xml_export(session, election, jurisdiction):
         # offices
         offices = an.nist_office(session, election_id, jurisdiction_id)
         # track election districts for each contest (will need to list each as a gp unit)
-        gpu_ids = set()
         for off in offices:
             gpu_ids.add(off["ElectoralDistrictId"])
 
@@ -45,10 +48,6 @@ def nist_xml_export(session, election, jurisdiction):
             "xsi:type": con["Type"],
         }
         con_elt = et.SubElement(e_elt, "Contest", attr)
-        # create ballot title sub-element
-        bt_elt = et.SubElement(con_elt, "BallotTitle")
-        attr = {"Language": "en"}
-        et.SubElement(bt_elt, "Text", attr).text = con["ContestName"]
         # create ballot selection sub-elements
         for s_dict in con["BallotSelection"]:
             attr = {
@@ -56,12 +55,15 @@ def nist_xml_export(session, election, jurisdiction):
                 "xsi:type": "CandidateSelection",
             }
             cs_elt = et.SubElement(con_elt, "ContestSelection", attr)
-            c_elt = et.SubElement(cs_elt, "VoteCounts")
             for vc_dict in s_dict["VoteCounts"]:
-                vc_elt = et.SubElement(c_elt, "Count")
-                et.SubElement(vc_elt, "CountItemType").text = vc_dict["CountItemType"]
-                et.SubElement(vc_elt, "GpUnitId").text = f'oid{vc_dict["GpUnitId"]}'
-                et.SubElement(vc_elt, "Count").text = str(vc_dict["Count"])
+                vote_counts_elt = et.SubElement(cs_elt, "VoteCounts")
+                # create GpUnitId sub-element
+                et.SubElement(vote_counts_elt, "GpUnitId").text = f'oid{vc_dict["GpUnitId"]}'
+                # create Type sub-elements (for CountItemType)
+                et.SubElement(vote_counts_elt, "Type").text = vc_dict["CountItemType"]
+                # if Type is 'other' need OtherType sub-element
+                # create Count sub-element
+                et.SubElement(vote_counts_elt, "Count").text = str(vc_dict["Count"])
 
             et.SubElement(cs_elt, "CandidateIds").text = f'oid{s_dict["CandidateId"]}'
             # TODO tech debt ^^ assumes single candidate
@@ -70,10 +72,8 @@ def nist_xml_export(session, election, jurisdiction):
         # create ElectionDistrictId sub-element
         et.SubElement(con_elt, "ElectionDistrictId").text = f'oid{con["ElectionDistrictId"]}'
 
-
-    # get ids for gpunits that have vote counts
-    vc_gpus = an.nist_reporting_unit(session, election_id, jurisdiction_id)
-    gpu_ids.update({gpu["Id"] for gpu in vc_gpus})
+        # create Name sub-element
+        et.SubElement(con_elt, "Name").text = con["ContestName"]
 
     # get name, ru-type and composing info for all gpus
     rus = pd.read_sql("ReportingUnit", session.bind, index_col="Id")
