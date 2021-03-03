@@ -382,3 +382,83 @@ def replace_id_values(df, f_path):
         }
     )
     return df
+
+
+def read_validated_nist_xml(f_path: str) -> (pd.DataFrame, Optional[Dict]):
+    err = None
+    # TODO add error handling
+    try:
+        tree = et.parse(f_path)
+    except FileNotFoundError:
+        err = ui.add_new_error(err, "file", Path(f_path).name, "File not found")
+        return pd.DataFrame(), err
+
+    # TODO check namespace, etc?
+    ns = nist_namespace(f_path,"")
+
+    election_report = tree.getroot()
+    election = election_report.find(f"{{{ns}}}Election")
+    # TODO check that there is only one election?
+    #  Check that election is the one expected, election scope is the one expected?
+
+    # define starting nodes
+    parent = {
+        "Candidate": election, "Contest": election, "Party": election_report, "GpUnit": election_report
+    }
+    # define paths to information
+    paths = {
+        "Candidate": {
+            "BallotName": ["BallotName", "Text"],
+            "PartyId": ["PartyId"],
+        },
+        "Contest": {
+            "Count": ["ContestSelection", "VoteCounts", "Count"],
+            "CountItemType": ["ContestSelection", "VoteCounts", "Type"],
+            "GpUnitId": ["ContestSelection", "VoteCounts", "GpUnitId"],
+            "CandidateId": ["ContestSelection", "CandidateIds"],  # TODO assumes only one candidate
+            "Contest": ["Name"]  # TODO why doesn't schema ask for "Name", "Text"?
+        },
+        "Party": {"Name": ["Name", "Text"]},
+        "GpUnit": {"Name": ["Name", "Text"] }
+    }
+
+    # read info in to dataframes
+    df_dict = {
+        tag: build_df(parent[tag], ns, tag, "ObjectId", paths[tag]) for tag in paths.keys()
+    }
+    # TODO test that OtherTypes behave correctly
+
+    # build standard dataframe
+    # TODO
+
+    # TODO for testing, remove
+    df = pd.DataFrame()
+    return df, err
+
+
+def build_df(
+        node: et.Element,
+        ns: str,
+        tag: str,
+        id_attrib: str,
+        path_to_info: Dict[str,List[str]],
+) -> pd.DataFrame:
+    info_dict = dict()
+    path = dict()
+    for k, li in path_to_info.items():
+        p = "/".join([f"{{{ns}}}{x}" for x in li])
+        path[k] = f"./{p}"
+
+    for can in node.iter(f"{{{ns}}}{tag}"):
+        info_dict[can.attrib[id_attrib]] = {
+            k: can.find(path[k]).text for k in path.keys()
+        }
+        # replace any type == other with OtherType
+        for k in info_dict[can.attrib[id_attrib]].keys():
+            if (path_to_info[k][-1] == "Type") and (info_dict[can.attrib[id_attrib]][k] == "other"):
+                new_path = path_to_info[k][:-1].append("OtherType")
+                info_dict[can.attrib[id_attrib]][k] = can.find(new_path).text
+
+    df = pd.DataFrame(info_dict).T
+    return df
+

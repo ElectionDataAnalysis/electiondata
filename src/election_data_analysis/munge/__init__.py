@@ -1434,7 +1434,7 @@ def to_standard_count_frame(
             err,
             "system",
             f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
-            f"Unexpected exception while reading data from file:\n\t{exc}",
+            f"Unexpected exception while reading data from file {file_name}:\n\t{exc}",
         )
         return pd.DataFrame(), original_string_columns, err
 
