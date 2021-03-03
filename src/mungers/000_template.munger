@@ -1,8 +1,9 @@
 # Format parameters section (required) #
 [format]
-## Required format parameters:
-#### File type must be one of: excel,json-nested,xml,flat_text
+#### REQUIRED! File type must be one of: valid_nist_xml,excel,json-nested,xml,flat_text
 file_type=
+
+## Required for all file types except valid_nist_xml):
 #### Counts are found in one way of: by_field_names,by_column_numbers
 count_locations=
 #### Munge string locations must be sublist of: in_field_values,in_count_headers,constant_over_sheet,constant_over_file ##

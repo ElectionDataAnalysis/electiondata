@@ -7,6 +7,7 @@ from election_data_analysis import (
 from election_data_analysis import user_interface as ui
 from election_data_analysis import munge as m
 from sqlalchemy.orm import sessionmaker
+from sqlalchemy.orm.session import Session
 from typing import List, Dict, Optional
 import datetime
 import os
@@ -375,7 +376,7 @@ class SingleDataLoader:
         self,
         results_dir: str,
         par_file_name: str,
-        session,
+        session: Session,
         mungers_path: str,
         juris: jm.Jurisdiction,
     ):
@@ -627,7 +628,7 @@ def check_par_file_elements(
 def check_and_init_singledataloader(
     results_dir: str,
     par_file_name: str,
-    session,
+    session: Session,
     mungers_path: str,
     juris: jm.Jurisdiction,
 ) -> (Optional[SingleDataLoader], Optional[dict]):
@@ -1733,13 +1734,13 @@ def get_contest_with_unknown_candidates(
 
 
 def load_results_file(
-    session,
-    munger_path: str,
-    f_path: str,
-    juris: jm.Jurisdiction,
-    election_datafile_ids: dict,
-    constants: Dict[str, str],
-    results_directory_path,
+        session: Session,
+        munger_path: str,
+        f_path: str,
+        juris: jm.Jurisdiction,
+        election_datafile_ids: dict,
+        constants: Dict[str, str],
+        results_directory_path,
 ) -> Optional[dict]:
 
     # TODO tech debt: redundant to pass results_directory_path and f_path
@@ -1749,61 +1750,13 @@ def load_results_file(
     if ui.fatal_error(err):
         return err
 
-    # read data into standard count format dataframe
-    #  append "_SOURCE" to all non-Count column names
-    #  (to avoid conflicts if e.g., source has col names 'Party')
-    try:
-        df, original_string_columns, err = m.to_standard_count_frame(
-            f_path,
-            munger_path,
-            p,
-            constants,
-            suffix="_SOURCE",
-        )
-        if ui.fatal_error(err):
+    df, new_err = m.file_to_raw_df(
+        munger_path, p, f_path, results_directory_path
+    )
+    if new_err:
+        err = ui.consolidate_errors([err, new_err])
+        if ui.fatal_error(new_err):
             return err
-
-    except Exception as exc:
-        err = ui.add_new_error(
-            err,
-            "system",
-            f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
-            f"Exception while converting data to standard form: {exc}",
-        )
-        return err
-
-    # transform source to completely munged (possibly with foreign keys if there is aux data)
-    # # add raw-munged column for each element, removing old
-    try:
-        df, new_err = m.munge_source_to_raw(
-            df,
-            munger_path,
-            p,
-            original_string_columns,
-            "_SOURCE",
-            results_directory_path,
-            f_path,
-        )
-        if new_err:
-            err = ui.consolidate_errors([err, new_err])
-            if ui.fatal_error(new_err):
-                return err
-    except Exception as exc:
-        err = ui.add_new_error(
-            err,
-            "system",
-            f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
-            f"Exception while munging source to raw: {exc}",
-        )
-        return err
-
-    # # add columns for constant-over-file elements
-    for element in constants.keys():
-        df = m.add_constant_column(
-            df,
-            element,
-            constants[element],
-        )
 
     # # delete any rows with items to be ignored
     ig, new_err = ui.get_parameters(
