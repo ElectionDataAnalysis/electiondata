@@ -15,7 +15,6 @@ from psycopg2 import OperationalError, errorcodes, errors
 from psycopg2 import sql
 import sqlalchemy as db
 import datetime
-from election_data_analysis import user_interface as ui
 from configparser import MissingSectionHeaderError
 import pandas as pd
 from election_data_analysis import munge as m
@@ -23,6 +22,7 @@ import re
 from election_data_analysis.database import create_cdf_db as db_cdf
 import os
 from sqlalchemy import MetaData, Table, Column, Integer, Float
+# NB: syntax-checker doesn't see it, but these ^^ are used.
 from typing import Optional, List
 from election_data_analysis import user_interface as ui
 
