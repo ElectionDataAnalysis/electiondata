@@ -4,6 +4,7 @@ import election_data_analysis as eda
 from election_data_analysis import database as db
 from election_data_analysis import user_interface as ui
 from election_data_analysis import juris_and_munger as jm
+from election_data_analysis import special_formats as sf
 import pandas as pd
 from pandas.api.types import is_numeric_dtype
 from typing import Optional, List, Dict, Any
@@ -15,11 +16,11 @@ import numpy as np
 # constants
 req_munger_params: Dict[str, str] = {
     "file_type": "string",
-    "count_locations": "string",
-    "munge_strings": "list-of-strings",
 }
 
 opt_munger_params: Dict[str, str] = {
+    "count_locations": "string",
+    "munge_strings": "list-of-strings",
     "sheets_to_read_names": "list-of-strings",
     "sheets_to_skip_names": "list-of-strings",
     "sheets_to_read_numbers": "list-of-integers",
@@ -43,7 +44,12 @@ opt_munger_params: Dict[str, str] = {
 }
 
 munger_dependent_reqs: Dict[str, Dict[str, List[str]]] = {
-    "file_type": {"flat_text": ["flat_text_delimiter"]},
+    "file_type": {
+        "flat_text": ["flat_text_delimiter", "count_locations", "munge_strings"],
+        "xml": ["count_locations", "munge_strings"],
+        "json-nested": ["count_locations", "munge_strings"],
+        "excel": ["count_locations", "munge_strings"],
+    },
     "count_locations": {
         "by_field_names": ["count_fields_by_name"],
         "by_column_numbers": ["count_column_numbers"],
@@ -1880,3 +1886,89 @@ def extract_blocks(
             if blocks_created >= max_blocks:
                 max_blocks_attained = True
     return df_list, err
+
+
+def file_to_raw_df(
+        munger_path: str,
+        p,
+        f_path: str,
+        constants: Dict[str, str],
+        results_directory_path,
+) -> (pd.DataFrame, Optional[dict]):
+    err = None
+    file_name = Path(f_path).name
+
+    if p["file_type"] == "valid_nist_xml":
+        try:
+            df, err = sf.read_valid_nist_xml(f_path)
+            if ui.fatal_error(err):
+                return pd.DataFrame(), err
+        except Exception as exc:
+            err = ui.add_new_error(
+                err,
+                "file",
+                file_name,
+                f"Exception during file munge: {exc}\n"
+                f"Validation tools may be helpful:"
+                f"https://github.com/HiltonRoscoe/CdfTools",
+            )
+            return pd.DataFrame(), err
+    else:
+        # read data into standard count format dataframe
+        #  append "_SOURCE" to all non-Count column names
+        #  (to avoid conflicts if e.g., source has col names 'Party')
+        try:
+            df, original_string_columns, err = to_standard_count_frame(
+                f_path,
+                munger_path,
+                p,
+                constants,
+                suffix="_SOURCE",
+            )
+            if ui.fatal_error(err):
+                return pd.DataFrame(), err
+
+        except Exception as exc:
+            err = ui.add_new_error(
+                err,
+                "system",
+                f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
+                f"Exception while converting data to standard form: {exc}",
+            )
+            return pd.DataFrame(), err
+
+        # transform source to completely munged (possibly with foreign keys if there is aux data)
+        # # add raw-munged column for each element, removing old
+        try:
+            df, new_err = munge_source_to_raw(
+                df,
+                munger_path,
+                p,
+                original_string_columns,
+                "_SOURCE",
+                results_directory_path,
+                f_path,
+            )
+            if new_err:
+                err = ui.consolidate_errors([err, new_err])
+                if ui.fatal_error(new_err):
+                    return df, err
+        except Exception as exc:
+            err = ui.add_new_error(
+                err,
+                "system",
+                f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
+                f"Exception while munging source to raw: {exc}",
+            )
+            return df, err
+
+        # # add columns for constant-over-file elements
+        for element in constants.keys():
+            df = add_constant_column(
+                df,
+                element,
+                constants[element],
+            )
+    return df, err
+
+

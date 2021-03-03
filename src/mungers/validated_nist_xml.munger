@@ -1,5 +1,5 @@
 # Format parameters section (required) #
 [format]
-file_type=validated_nist_xml
+file_type=valid_nist_xml
 
 
