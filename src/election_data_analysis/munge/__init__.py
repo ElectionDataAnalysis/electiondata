@@ -14,11 +14,8 @@ from sqlalchemy.orm.session import Session
 import numpy as np
 
 # constants
-req_munger_params: Dict[str, str] = {
-    "file_type": "string",
-}
 
-opt_munger_params: Dict[str, str] = {
+opt_munger_data_types: Dict[str, str] = {
     "count_locations": "string",
     "munge_strings": "list-of-strings",
     "sheets_to_read_names": "list-of-strings",
@@ -56,7 +53,13 @@ munger_dependent_reqs: Dict[str, Dict[str, List[str]]] = {
     },
 }
 
-req_munger_param_values: Dict[str, List[str]] = {
+req_munger_parameters: Dict[str, Dict[str, Any]] = {
+    "file_type": {
+        "data_type": "string",
+        "allowed_values": ["excel", "json-nested", "xml", "flat_text", "valid_nist_xml"]},
+}
+
+opt_munger_param_values: Dict[str, List[str]] = {
     "munge_strings": [
         "in_field_values",
         "in_count_headers",
@@ -64,7 +67,6 @@ req_munger_param_values: Dict[str, List[str]] = {
         "constant_over_sheet",
     ],
     "count_locations": ["by_field_names", "by_column_numbers"],
-    "file_type": ["excel", "json-nested", "xml", "flat_text"],
 }
 
 string_location_reqs: Dict[str, List[str]] = {
@@ -886,8 +888,9 @@ def raw_to_id_simple(
     df: pd.DataFrame,
     juris: jm.Jurisdiction,
     element_list: list,
-    session,
-    munger_name,
+    session: Session,
+    munger_name: str,
+    file_type: str,
 ) -> (pd.DataFrame, Optional[dict]):
     """ Append ids to <df> for any row- or column- sourced elements given in <element_list>"""
 
@@ -906,12 +909,15 @@ def raw_to_id_simple(
                 drop = False
             if t == "CountItemType":
                 # munge raw to internal CountItemType
-                r_i = pd.read_csv(
-                    os.path.join(juris.path_to_juris_dir, "dictionary.txt"),
-                    sep="\t",
-                    encoding=eda.default_encoding,
-                )
-                r_i = r_i[r_i.cdf_element == "CountItemType"]
+                if file_type == "valid_nist_xml":
+                    r_i = sf.cit_from_raw_nist_df
+                else:
+                    r_i = pd.read_csv(
+                        os.path.join(juris.path_to_juris_dir, "dictionary.txt"),
+                        sep="\t",
+                        encoding=eda.default_encoding,
+                    )
+                    r_i = r_i[r_i.cdf_element == "CountItemType"]
                 recognized = r_i.raw_identifier_value.unique()
                 matched = working.CountItemType_raw.isin(recognized)
                 if not matched.all():
@@ -1046,11 +1052,12 @@ if __name__ == "__main__":
 
 
 def munge_raw_to_ids(
-    df: pd.DataFrame,
-    constants: dict,
-    juris: jm.Jurisdiction,
-    munger_name: str,
-    session,
+        df: pd.DataFrame,
+        constants: dict,
+        juris: jm.Jurisdiction,
+        munger_name: str,
+        session: Session,
+        file_type: str,
 ) -> (pd.DataFrame, Optional[dict]):
 
     err = None
@@ -1126,7 +1133,7 @@ def munge_raw_to_ids(
         and (t[-9:] != "Selection")
         and (t not in constants.keys())
     ]
-    working, new_err = raw_to_id_simple(working, juris, other_elements, session, munger_name=munger_name)
+    working, new_err = raw_to_id_simple(working, juris, other_elements, session, munger_name, file_type)
     if new_err:
         err = ui.consolidate_errors([err, new_err])
         if ui.fatal_error(new_err):
@@ -1266,8 +1273,8 @@ def munge_source_to_raw(
 
 def get_and_check_munger_params(munger_path: str) -> (dict, Optional[dict]):
     params, err = ui.get_parameters(
-        required_keys=list(req_munger_params.keys()),
-        optional_keys=list(opt_munger_params.keys()),
+        required_keys=list(req_munger_parameters.keys()),
+        optional_keys=list(opt_munger_data_types.keys()),
         param_file=munger_path,
         header="format",
         err=None,
@@ -1276,30 +1283,36 @@ def get_and_check_munger_params(munger_path: str) -> (dict, Optional[dict]):
         return dict(), err
     # get name of munger for error reporting
     munger_name = Path(munger_path).name[:-7]
+
     # define dictionary of munger parameters
+    data_types = {**{
+            k: req_munger_parameters[k]["data_type"]
+            for k in req_munger_parameters.keys()
+        },**opt_munger_data_types
+    }
     format_options = jm.recast_options(
-        params, {**opt_munger_params, **req_munger_params}
+        params, data_types
     )
 
     # Check munger values
     # # main parameters recognized
-    for k in req_munger_param_values.keys():
-        if req_munger_params[k] == "string":
-            if not format_options[k] in req_munger_param_values[k]:
+    for k in req_munger_parameters.keys():
+        if req_munger_parameters[k]["data_type"] == "string":
+            if not format_options[k] in req_munger_parameters[k]["allowed_values"]:
                 err = ui.add_new_error(
                     err,
                     "munger",
                     munger_name,
-                    f"Value of {k} must be one of these: {req_munger_param_values[k]}",
+                    f'Value of {k} must be one of these: {req_munger_parameters[k]["allowed_values"]}',
                 )
-        elif req_munger_params[k] == "list_of_strings":
-            bad = [x for x in format_options[k] if x not in req_munger_param_values]
+        elif req_munger_parameters[k]["data_type"] == "list_of_strings":
+            bad = [x for x in format_options[k] if x not in req_munger_parameters[k]["allowed_values"]]
             if bad:
                 err = ui.add_new_error(
                     err,
                     "munger",
                     munger_name,
-                    f"Each listed value of {k} must be one of these: {req_munger_param_values[k]}",
+                    f'Each listed value of {k} must be one of these: {req_munger_parameters[k]["allowed_values"]}',
                 )
 
     # # simple non-null dependencies
@@ -1703,13 +1716,19 @@ def get_aux_info(
                     "munge_strings",
                     "lookup_id",
                 ],
-                optional_keys=list(opt_munger_params.keys())
+                optional_keys=list(opt_munger_data_types.keys())
                 + [f"{element}_replacement", "source_file"],
                 header=f"{field} lookup",
                 param_file=munger_path,
             )
             # convert parameters to appropriate types
-            f_p = jm.recast_options(f_p, {**opt_munger_params, **req_munger_params})
+            f_p = jm.recast_options(
+                f_p, {
+                    **opt_munger_data_types, **{
+                        k: req_munger_parameters[k]["data_type"] for k in req_munger_parameters.keys()
+                    }
+                }
+            )
 
             if not f_err:
                 # prepare dictionary to hold info for this lookup

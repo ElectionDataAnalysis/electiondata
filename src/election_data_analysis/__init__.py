@@ -1006,7 +1006,7 @@ class JurisdictionPrepper:
             ru_formula = ""
             headers = [
                 x
-                for x in m.req_munger_param_values["munge_strings"]
+                for x in m.req_munger_parameters["munge_strings"]
                 if x != "constant_over_file"
             ]
             for header in headers:
@@ -1751,7 +1751,7 @@ def load_results_file(
         return err
 
     df, new_err = m.file_to_raw_df(
-        munger_path, p, f_path, results_directory_path
+        munger_path, p, f_path, constants, results_directory_path
     )
     if new_err:
         err = ui.consolidate_errors([err, new_err])
@@ -1781,7 +1781,7 @@ def load_results_file(
 
     # # add Id columns for all but Count, removing raw-munged
     try:
-        df, new_err = m.munge_raw_to_ids(df, constants, juris, munger_name, session)
+        df, new_err = m.munge_raw_to_ids(df, constants, juris, munger_name, session, p["file_type"])
         if new_err:
             err = ui.consolidate_errors([err, new_err])
             if ui.fatal_error(new_err):

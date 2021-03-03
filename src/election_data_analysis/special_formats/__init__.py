@@ -8,6 +8,25 @@ from typing import Optional, Dict, List, Any
 from election_data_analysis import munge as m
 from election_data_analysis import user_interface as ui
 
+# constants
+# NB: if nist schema were out of sync with internal db schema, this would be non-trivial
+cit_list = [
+        "absentee",
+        "absentee-fwab",
+        "absentee-in-person",
+        "absentee-mail",
+        "early",
+        "election-day",
+        "provisional",
+        "seats",
+        "total",
+        "uocava",
+        "write-in",
+]
+cit_from_raw_nist_df = pd.DataFrame(
+    [["CountItemType", x, x ] for x in cit_list], columns=["cdf_element", "cdf_internal_name", "raw_identifier_value"]
+)
+
 
 def strip_empties(li: list) -> list:
     # get rid of leading empty strings
