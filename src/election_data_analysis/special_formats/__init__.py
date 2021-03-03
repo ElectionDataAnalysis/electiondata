@@ -407,32 +407,43 @@ def read_validated_nist_xml(f_path: str) -> (pd.DataFrame, Optional[Dict]):
     }
     # define paths to information
     paths = {
-        "Candidate": {
-            "BallotName": ["BallotName", "Text"],
-            "PartyId": ["PartyId"],
-        },
-        "Contest": {
+       "Contest": {   # the main table; others are lookup tables
             "Count": ["ContestSelection", "VoteCounts", "Count"],
             "CountItemType": ["ContestSelection", "VoteCounts", "Type"],
             "GpUnitId": ["ContestSelection", "VoteCounts", "GpUnitId"],
             "CandidateId": ["ContestSelection", "CandidateIds"],  # TODO assumes only one candidate
             "Contest": ["Name"]  # TODO why doesn't schema ask for "Name", "Text"?
         },
+        "Candidate": {
+            "BallotName": ["BallotName", "Text"],
+            "PartyId": ["PartyId"],
+        },
         "Party": {"Name": ["Name", "Text"]},
         "GpUnit": {"Name": ["Name", "Text"] }
     }
 
     # read info in to dataframes
-    df_dict = {
+    df_dict: Dict[str, pd.DataFrame] = {
         tag: build_df(parent[tag], ns, tag, "ObjectId", paths[tag]) for tag in paths.keys()
     }
     # TODO test that OtherTypes behave correctly
 
     # build standard dataframe
-    # TODO
-
-    # TODO for testing, remove
-    df = pd.DataFrame()
+    df = df_dict["Contest"].rename(
+        columns={"Name": "Contest_raw", "CountItemType": "CountItemType_raw"}
+    ).merge(
+        df_dict["Candidate"], how="left", left_on="CandidateId", right_index=True
+    ).rename(
+        columns={"BallotName": "Candidate_raw"}
+    ).merge(
+        df_dict["GpUnit"], how="left", left_on="GpUnitId", right_index=True
+    ).rename(
+        columns={"Name": "ReportingUnit_raw"}
+    ).merge(
+        df_dict["Party"], how="left", left_on="PartyId", right_index=True
+    ).rename(
+        columns={"Name": "Party_raw"}
+    ).drop(labels=["PartyId", "CandidateId", "GpUnitId"], axis=1)
     return df, err
 
 
