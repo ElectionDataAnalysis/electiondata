@@ -787,6 +787,8 @@ Party	Democratic Party	DEM
 Party	Republican Party	REP
 Party	Independent Party	Indep
 Party	Libertarian Party	LIB
+Party	Write-in	Write-in
+Party	Nonprtycan	Nonprtycan
 ReportingUnit	Ohio;OH House District 1	Ohio;OH House District 1
 ReportingUnit	Ohio;OH House District 2	Ohio;OH House District 2
 ReportingUnit	Ohio;OH House District 3	Ohio;OH House District 3
