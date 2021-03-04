@@ -441,27 +441,21 @@ def read_valid_nist_xml(f_path: str) -> (pd.DataFrame, Optional[Dict]):
     # TODO test that OtherTypes behave correctly
 
     # read counts into a dataframe
-    count_fields = {
-        "Count": ["ContestSelection", "VoteCounts", "Count"],
-        "CountItemType": ["ContestSelection", "VoteCounts", "Type"],
-        "GpUnitId": ["ContestSelection", "VoteCounts", "GpUnitId"],
-        "CandidateId": ["ContestSelection", "CandidateIds"],  # TODO assumes only one candidate
-        "Contest": ["Name"]  # TODO why doesn't schema ask for "Name", "Text"?
-    }
-
+    # TODO assumes CandidateContest
     vc_list = list()
     vc_dict = dict()
     for con in election.findall(f"{{{ns}}}Contest"):
-        vc_dict["Contest"] = con.find(f"{{{ns}}}Name").text
+        vc_dict["CandidateContest_raw"] = con.find(f"{{{ns}}}Name").text
         for con_sel in con.findall(f"{{{ns}}}ContestSelection"):
-            vc_dict["CandidateId"] = con_sel.find(f"{{{ns}}}CandidateIds").text  # assumes one candidate
+            # TODO assumes one candidate
+            vc_dict["CandidateId"] = con_sel.find(f"{{{ns}}}CandidateIds").text
             for vc in con_sel.findall(f"{{{ns}}}VoteCounts"):
-                vc_dict = {
+                vc_dict.update({
                     "Count": vc.find(f"{{{ns}}}Count").text,
                     "CountItemType": vc.find(f"{{{ns}}}Type").text,
                     "GpUnitId": vc.find(f"{{{ns}}}GpUnitId").text,
-                }
-                vc_list.append(vc_dict)
+                })
+                vc_list.append(vc_dict.copy())
     df_dict["Contest"] = pd.DataFrame(vc_list)
 
     # build standard dataframe
