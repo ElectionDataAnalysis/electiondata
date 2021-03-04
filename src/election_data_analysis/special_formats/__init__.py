@@ -424,15 +424,8 @@ def read_valid_nist_xml(f_path: str) -> (pd.DataFrame, Optional[Dict]):
     parent = {
         "Candidate": election, "Contest": election, "Party": election_report, "GpUnit": election_report
     }
-    # define paths to information
-    paths = {
-       "Contest": {   # the main table; others are lookup tables
-            "Count": ["ContestSelection", "VoteCounts", "Count"],
-            "CountItemType": ["ContestSelection", "VoteCounts", "Type"],
-            "GpUnitId": ["ContestSelection", "VoteCounts", "GpUnitId"],
-            "CandidateId": ["ContestSelection", "CandidateIds"],  # TODO assumes only one candidate
-            "Contest": ["Name"]  # TODO why doesn't schema ask for "Name", "Text"?
-        },
+    # define paths to lookup information
+    lookup_paths = {
         "Candidate": {
             "BallotName": ["BallotName", "Text"],
             "PartyId": ["PartyId"],
@@ -441,11 +434,35 @@ def read_valid_nist_xml(f_path: str) -> (pd.DataFrame, Optional[Dict]):
         "GpUnit": {"Name": ["Name", "Text"] }
     }
 
-    # read info in to dataframes
+    # read lookup info in to dataframes
     df_dict: Dict[str, pd.DataFrame] = {
-        tag: build_df(parent[tag], ns, tag, "ObjectId", paths[tag]) for tag in paths.keys()
+        tag: build_lookup_df(parent[tag], ns, tag, "ObjectId", lookup_paths[tag]) for tag in lookup_paths.keys()
     }
     # TODO test that OtherTypes behave correctly
+
+    # read counts into a dataframe
+    count_fields = {
+        "Count": ["ContestSelection", "VoteCounts", "Count"],
+        "CountItemType": ["ContestSelection", "VoteCounts", "Type"],
+        "GpUnitId": ["ContestSelection", "VoteCounts", "GpUnitId"],
+        "CandidateId": ["ContestSelection", "CandidateIds"],  # TODO assumes only one candidate
+        "Contest": ["Name"]  # TODO why doesn't schema ask for "Name", "Text"?
+    }
+
+    vc_list = list()
+    vc_dict = dict()
+    for con in election.findall(f"{{{ns}}}Contest"):
+        vc_dict["Contest"] = con.find(f"{{{ns}}}Name").text
+        for con_sel in con.findall(f"{{{ns}}}ContestSelection"):
+            vc_dict["CandidateId"] = con_sel.find(f"{{{ns}}}CandidateIds").text  # assumes one candidate
+            for vc in con_sel.findall(f"{{{ns}}}VoteCounts"):
+                vc_dict = {
+                    "Count": vc.find(f"{{{ns}}}Count").text,
+                    "CountItemType": vc.find(f"{{{ns}}}Type").text,
+                    "GpUnitId": vc.find(f"{{{ns}}}GpUnitId").text,
+                }
+                vc_list.append(vc_dict)
+    df_dict["Contest"] = pd.DataFrame(vc_list)
 
     # build standard dataframe
     df = df_dict["Contest"].rename(
@@ -466,7 +483,7 @@ def read_valid_nist_xml(f_path: str) -> (pd.DataFrame, Optional[Dict]):
     return df, err
 
 
-def build_df(
+def build_lookup_df(
         node: et.Element,
         ns: str,
         tag: str,
