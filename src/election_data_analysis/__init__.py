@@ -14,11 +14,13 @@ import os
 import pandas as pd
 import inspect
 from pathlib import Path
+import xml.etree.ElementTree as et
 import dicttoxml
 from election_data_analysis import analyze as a
 from election_data_analysis import visualize as viz
 from election_data_analysis import juris_and_munger as jm
 from election_data_analysis import preparation as prep
+from election_data_analysis import nist_export as nist
 
 # constants
 default_encoding = "utf_8"
@@ -1429,7 +1431,7 @@ class Analyzer:
         )
         return err
 
-    def export_nist(self, election: str, jurisdiction: str) -> dict:
+    def export_nist_json(self, election: str, jurisdiction: str) -> dict:
         election_id = db.name_to_id(self.session, "Election", election)
         jurisdiction_id = db.name_to_id(self.session, "ReportingUnit", jurisdiction)
 
@@ -1456,10 +1458,16 @@ class Analyzer:
 
         return election_report
 
-    def export_nist_xml(self, election: str, jurisdiction: str) -> str:
-        election_report_dict = self.export_nist(election, jurisdiction)
-        xml_string = dicttoxml.dicttoxml(election_report_dict, attr_type=False, custom_root="ElectionReport")
-        # TODO add top matter, e.g. ElectionReport, xsi:schemaLocation, etc
+    def export_nist(self, election: str, jurisdiction: str) -> str:
+        xml_string = et.tostring(
+            nist.nist_xml_export_tree(
+                self.session, election, jurisdiction,
+                issuer=nist.default_issuer,
+                issuer_abbreviation=nist.default_issuer_abbreviation,
+                status=nist.default_status,
+                vendor_application_id=nist.default_vendor_application_id
+            ).getroot(), encoding=default_encoding, method='xml'
+        )
         return xml_string
 
 def aggregate_results(

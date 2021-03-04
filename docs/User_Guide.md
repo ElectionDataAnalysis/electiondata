@@ -545,8 +545,11 @@ If not all rows are data, and some string fields to be munged have blank headers
 
 If there are hidden columns in an Excel file, you may need to omit the hidden columns from various counts.
 
-### NIST Exports
-This package also provides functionality to export the data according to the [NIST](https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.1500-100r2.pdf) common data format specifications. This is as simple as identifying an election and jurisdiciton of interest:
+### NIST Common Data Format imports and exports
+To import results from a file that is valid NIST xml -- that can be formally validated against the [NIST election results reporting schema (Version 2)](https://github.com/usnistgov/ElectionResultsReporting/raw/version2/NIST_V2_election_results_reporting.xsd) -- use the file_type 'valid_nist_xml'
+Note: some xml files (e.g., Ohio 2020 General) loosely follow the nist format but not enough to be validated. Our convention is that if the munger name contains "nist" and the file_type is xml, then the system will look for a namespace declaration.
+
+This package also provides functionality to export the data according to the [NIST election results reporting schema (Version 2)](https://github.com/usnistgov/ElectionResultsReporting/raw/version2/NIST_V2_election_results_reporting.xsd). This is as simple as identifying an election and jurisdiction of interest:
 ```
 from election_data_analysis import Analyzer
 analyzer = Analyzer()

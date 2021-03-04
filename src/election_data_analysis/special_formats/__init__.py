@@ -70,7 +70,7 @@ def read_xml(
 
     try:
         root = tree.getroot()
-        if munger_name == "nist_xml.munger":
+        if munger_name.__contains__("_nist_"):
             namespace = nist_namespace(f_path, "")
             tags, attributes = nist_tags(tags, attributes, namespace)
         results_list = results_below(root, tags, attributes)
@@ -79,7 +79,7 @@ def read_xml(
             err = ui.add_new_error(
                 err, "file", Path(f_path).name, "No results read from file"
             )
-        if munger_name == "nist_xml.munger":
+        if munger_name.__contains__("_nist_"):
             raw_results = clean_nist_columns(raw_results, namespace)
             raw_results = replace_id_values(raw_results, f_path)
         # TODO tech debt is the for loop necessary before clean_count_cols?

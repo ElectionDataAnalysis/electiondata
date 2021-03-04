@@ -342,6 +342,8 @@ def find_dupes(df):
 def tabular_kwargs(
     p: Dict[str, Any], kwargs: Dict[str, Any], aux=False
 ) -> Dict[str, Any]:
+    """kwargs["header"] is single integer (if just one header row)
+    or list of integers (if more than one header row)"""
     # designate header rows (for both count columns or string-location info/columns)
     if p["all_rows"] == "data":
         kwargs["header"] = None
@@ -453,7 +455,11 @@ def read_single_datafile(
                 kwargs_pad["header"] = None
                 df = pd.read_csv(f_path, **kwargs_pad).fillna("")
                 # set headers per munger
-                header_list = tabular_kwargs(p, dict())["header"]
+                header_int_or_list = tabular_kwargs(p, dict())["header"]
+                if isinstance(header_int_or_list, int):  # TODO tech debt ugly! but tracks index vs. multiindex
+                    header_list = [header_int_or_list]
+                else:
+                    header_list = header_int_or_list
                 try:
                     df = set_and_fill_headers(df, header_list)
                 except Exception as exc:

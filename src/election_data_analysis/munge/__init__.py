@@ -1485,14 +1485,20 @@ def to_standard_count_frame(
         if p["multi_block"] == "yes":
             try:
                 # extract blocks as dataframes with generic headers and all rows treated as data
-                df_list, new_err = extract_blocks(raw_dict[sheet], munger_name, file_name, sheet, max_blocks=p["max_blocks"])
+                df_list, new_err = extract_blocks(
+                    raw_dict[sheet], munger_name, file_name, sheet, max_blocks=p["max_blocks"]
+                )
                 if new_err:
                     err = ui.consolidate_errors([err, new_err])
                     if ui.fatal_error(new_err):
                         continue
 
                 # correct column headers
-                header_list = ui.tabular_kwargs(p, dict())["header"]
+                header_int_or_list = ui.tabular_kwargs(p, dict())["header"]
+                if isinstance(header_int_or_list, int):  # TODO tech debt ugly! but tracks index vs. multiindex
+                    header_list = [header_int_or_list]
+                else:
+                    header_list = header_int_or_list
                 for n in range(len(df_list)):
                     df_list[n] = ui.set_and_fill_headers(df_list[n], header_list)
 

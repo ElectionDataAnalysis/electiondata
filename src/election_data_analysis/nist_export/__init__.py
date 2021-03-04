@@ -18,7 +18,11 @@ default_vendor_application_id = "open source software at github.com/ElectionData
 schema_location = "https://github.com/usnistgov/ElectionResultsReporting/raw/version2/NIST_V2_election_results_reporting.xsd"
 namespace = "http://itl.nist.gov/ns/voting/1500-100/v2"
 
-def nist_xml_export(
+
+
+
+
+def nist_xml_export_tree(
         session: Session,
         election: str,
         jurisdiction: str,
@@ -26,7 +30,11 @@ def nist_xml_export(
         issuer_abbreviation: str = default_issuer_abbreviation,
         status: str = default_status,
         vendor_application_id: str = default_vendor_application_id
-):
+) -> et.ElementTree:
+    """Creates a tree in the NIST common data format containing the results
+    from the given election and jurisdiction. Note that all available results will
+    be exported. I.e., if database has precinct-level results, the tree will
+    contain precinct-level results."""
     # set up
     election_id = db.name_to_id(session, "Election", election)
     jurisdiction_id = db.name_to_id(session, "ReportingUnit", jurisdiction)
