@@ -6,8 +6,10 @@ import sqlalchemy
 import sqlalchemy.orm
 import io
 import csv
+import inspect
 from psycopg2.extensions import ISOLATION_LEVEL_AUTOCOMMIT
 from pathlib import Path
+from sqlalchemy.orm import Session
 import numpy as np
 
 # import the error handling libraries for psycopg2
@@ -23,7 +25,7 @@ from election_data_analysis.database import create_cdf_db as db_cdf
 import os
 from sqlalchemy import MetaData, Table, Column, Integer, Float
 # NB: syntax-checker doesn't see it, but these ^^ are used.
-from typing import Optional, List
+from typing import Optional, List, Dict, Any
 from election_data_analysis import user_interface as ui
 
 states = """Alabama
@@ -1391,3 +1393,58 @@ def display_jurisdictions(session, cols):
     result_df.columns = cols
     cursor.close()
     return result_df
+
+
+def vote_types_by_juris(session: Session, election: str) -> Dict[str,List[str]]:
+    """returns dictionary of jurisdictions with list of vote types for each"""
+    q = sql.SQL("""
+    SELECT DISTINCT ru."Name", vc."CountItemType_Id", vc."OtherCountItemType"
+    FROM "VoteCount" vc
+    JOIN "_datafile" df on df."Id" = vc."_datafile_Id"
+    JOIN "ReportingUnit" ru on ru."Id" = df."ReportingUnit_Id"
+    JOIN "Election" el on df."Election_Id" = el."Id"
+    WHERE el."Name" = {election};
+    """).format(election=sql.Literal(election))
+    connection = session.bind.raw_connection()
+    cursor = connection.cursor()
+    cursor.execute(q)
+    result = cursor.fetchall()
+    result_df, err = id_other_cols_to_enum(session,
+        pd.DataFrame(result, columns=["jurisdiction","CountItemType_Id","OtherCountItemType"]),
+        "CountItemType"
+    )
+
+    cursor.close()
+    vote_types = dict(result_df.groupby("jurisdiction")["CountItemType"].apply(list))
+    return vote_types
+
+
+def id_other_cols_to_enum(session: Session, df: pd.DataFrame, enum: str) -> (pd.DataFrame, Optional[dict]):
+    err = None
+    try:
+        lookup = pd.read_sql_table(enum, session.bind, index_col="Id")
+    except Exception as exc:
+        err = ui.add_new_error(
+            err,
+            "system",
+            f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
+            f"Unable to read table {enum} from database. Exception: {exc}"
+        )
+        return df, err
+
+    id = f"{enum}_Id"
+    other = f"Other{enum}"
+    missing = [x for x in [id, other] if x not in df.columns]
+    if missing:
+        err = ui.add_new_error(
+            err,
+            "system",
+            f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
+            f"Expected column(s) missing from dataframe: {missing}"
+        )
+        return df, err
+    working = df.merge(lookup, how="left", left_on=id, right_index=True).rename(columns={"Txt": enum})
+    mask = working[enum] == "other"
+    working.loc[mask,enum] = working[mask][other]
+    working.drop([id, other], axis=1, inplace=True)
+    return working, err
