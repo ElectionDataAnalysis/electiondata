@@ -25,7 +25,7 @@ Denise M Van Essen
 Will F Tallman
 Erin R Mcclelland
 Keith James Rothfus
-Michael F.. Doyle Jr
+Michael F. Doyle Jr
 Leonard Francis Mcallister Jr
 Timothy F Murphy
 Edward H Eichenlaub
@@ -867,7 +867,7 @@ Raymond Edward Baker
 Cesar Cepeda
 Branden M. Moyer
 Kelly Mcdonough
-James A.. Cox Jr
+James A. Cox Jr
 Francis Lamar Foley Jr
 David M. Sr. Maloney
 Ryan Mackenzie
@@ -932,11 +932,10 @@ Barbara A Bustard
 Pamela Levy
 Paul J Linkmeyer
 Brian David Yanoviak
-Vincent M.. Talucci Jr
+Vincent M. Talucci Jr
 Eugene Z Bonkoski
 John S Cusatis
 Jason Runk
-Louis C.. Schmitt Jr
 Lee Griffin
 Jaclyn E Baker
 Clinton D. Owlett
@@ -1144,12 +1143,12 @@ Ellen Fisher
 Angela Renee Prattis
 Brian Kirkland
 Leanne Krueger
-Ralph F.. Shicatano Jr
+Ralph F. Shicatano Jr
 Peter Thomas Gaglio Jr
 Michael P Zabel
 Michael Mccollum
 Jennifer O'Mara
-Robert F.. Smythe Jr
+Robert F. Smythe Jr
 Jennifer A. Leith
 Greg Vitali
 Christine E Boyle
@@ -1289,7 +1288,7 @@ Patrick J Cubbage
 Gloria Lee Snover
 Thomas Joseph Carroll
 Linda Gerenser Stubits
-Robert E.. Smith Jr
+Robert E. Smith Jr
 Benjamin Barry Long
 Leslie M Altieri
 Dianne D Justesen
@@ -1344,7 +1343,7 @@ Ann L Flood
 Brendan F. Boyle
 Michael Harvey
 Nikil Saval
-John P.. Sabatina Jr
+John P. Sabatina Jr
 Michael Driscoll
 Jeffrey Dempsey
 Vanessa Mcgrath
@@ -1433,7 +1432,7 @@ John Thomas Leshko
 Timothy F Twardzik
 David Hummer Rowe
 Michael P. Reese
-Harlan G.. Shober Jr
+Harlan G. Shober Jr
 Tay R. Waltenbaugh
 George Dunbar
 Robert L Prah Jr
@@ -1470,10 +1469,5 @@ Linda J Book
 Marc I Basist
 Darryl J Audia
 Peter James Symons Jr
-Robert F. Smythe Jr
-Harlan G. Shober Jr
-Ralph F. Shicatano Jr
 Thomas R IiiSmy Sankey
-John P. Sabatina Jr
 John J Padora Jr
-James A. Cox Jr

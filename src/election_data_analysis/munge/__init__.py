@@ -4,6 +4,7 @@ import election_data_analysis as eda
 from election_data_analysis import database as db
 from election_data_analysis import user_interface as ui
 from election_data_analysis import juris_and_munger as jm
+from election_data_analysis import special_formats as sf
 import pandas as pd
 from pandas.api.types import is_numeric_dtype
 from typing import Optional, List, Dict, Any
@@ -13,13 +14,10 @@ from sqlalchemy.orm.session import Session
 import numpy as np
 
 # constants
-req_munger_params: Dict[str, str] = {
-    "file_type": "string",
+
+opt_munger_data_types: Dict[str, str] = {
     "count_locations": "string",
     "munge_strings": "list-of-strings",
-}
-
-opt_munger_params: Dict[str, str] = {
     "sheets_to_read_names": "list-of-strings",
     "sheets_to_skip_names": "list-of-strings",
     "sheets_to_read_numbers": "list-of-integers",
@@ -43,14 +41,25 @@ opt_munger_params: Dict[str, str] = {
 }
 
 munger_dependent_reqs: Dict[str, Dict[str, List[str]]] = {
-    "file_type": {"flat_text": ["flat_text_delimiter"]},
+    "file_type": {
+        "flat_text": ["flat_text_delimiter", "count_locations", "munge_strings"],
+        "xml": ["count_locations", "munge_strings"],
+        "json-nested": ["count_locations", "munge_strings"],
+        "excel": ["count_locations", "munge_strings"],
+    },
     "count_locations": {
         "by_field_names": ["count_fields_by_name"],
         "by_column_numbers": ["count_column_numbers"],
     },
 }
 
-req_munger_param_values: Dict[str, List[str]] = {
+req_munger_parameters: Dict[str, Dict[str, Any]] = {
+    "file_type": {
+        "data_type": "string",
+        "allowed_values": ["excel", "json-nested", "xml", "flat_text", "valid_nist_xml"]},
+}
+
+opt_munger_param_values: Dict[str, List[str]] = {
     "munge_strings": [
         "in_field_values",
         "in_count_headers",
@@ -58,7 +67,6 @@ req_munger_param_values: Dict[str, List[str]] = {
         "constant_over_sheet",
     ],
     "count_locations": ["by_field_names", "by_column_numbers"],
-    "file_type": ["excel", "json-nested", "xml", "flat_text"],
 }
 
 string_location_reqs: Dict[str, List[str]] = {
@@ -880,8 +888,9 @@ def raw_to_id_simple(
     df: pd.DataFrame,
     juris: jm.Jurisdiction,
     element_list: list,
-    session,
-    munger_name,
+    session: Session,
+    munger_name: str,
+    file_type: str,
 ) -> (pd.DataFrame, Optional[dict]):
     """ Append ids to <df> for any row- or column- sourced elements given in <element_list>"""
 
@@ -900,12 +909,15 @@ def raw_to_id_simple(
                 drop = False
             if t == "CountItemType":
                 # munge raw to internal CountItemType
-                r_i = pd.read_csv(
-                    os.path.join(juris.path_to_juris_dir, "dictionary.txt"),
-                    sep="\t",
-                    encoding=eda.default_encoding,
-                )
-                r_i = r_i[r_i.cdf_element == "CountItemType"]
+                if file_type == "valid_nist_xml":
+                    r_i = sf.cit_from_raw_nist_df
+                else:
+                    r_i = pd.read_csv(
+                        os.path.join(juris.path_to_juris_dir, "dictionary.txt"),
+                        sep="\t",
+                        encoding=eda.default_encoding,
+                    )
+                    r_i = r_i[r_i.cdf_element == "CountItemType"]
                 recognized = r_i.raw_identifier_value.unique()
                 matched = working.CountItemType_raw.isin(recognized)
                 if not matched.all():
@@ -1040,11 +1052,12 @@ if __name__ == "__main__":
 
 
 def munge_raw_to_ids(
-    df: pd.DataFrame,
-    constants: dict,
-    juris: jm.Jurisdiction,
-    munger_name: str,
-    session,
+        df: pd.DataFrame,
+        constants: dict,
+        juris: jm.Jurisdiction,
+        munger_name: str,
+        session: Session,
+        file_type: str,
 ) -> (pd.DataFrame, Optional[dict]):
 
     err = None
@@ -1120,7 +1133,7 @@ def munge_raw_to_ids(
         and (t[-9:] != "Selection")
         and (t not in constants.keys())
     ]
-    working, new_err = raw_to_id_simple(working, juris, other_elements, session, munger_name=munger_name)
+    working, new_err = raw_to_id_simple(working, juris, other_elements, session, munger_name, file_type)
     if new_err:
         err = ui.consolidate_errors([err, new_err])
         if ui.fatal_error(new_err):
@@ -1157,6 +1170,7 @@ def munge_source_to_raw(
     orig_string_cols: List[str],
     suffix: str,
     aux_directory_path,
+    results_file_path,
 ) -> (pd.DataFrame, Optional[dict]):
     """NB: assumes columns of dataframe have <suffix> appended already"""
     err = None
@@ -1198,6 +1212,7 @@ def munge_source_to_raw(
                         aux_directory_path,
                         munger_name,
                         suffix,
+                        results_file_path,
                     )
                     if new_err:
                         err = ui.consolidate_errors([err, new_err])
@@ -1258,8 +1273,8 @@ def munge_source_to_raw(
 
 def get_and_check_munger_params(munger_path: str) -> (dict, Optional[dict]):
     params, err = ui.get_parameters(
-        required_keys=list(req_munger_params.keys()),
-        optional_keys=list(opt_munger_params.keys()),
+        required_keys=list(req_munger_parameters.keys()),
+        optional_keys=list(opt_munger_data_types.keys()),
         param_file=munger_path,
         header="format",
         err=None,
@@ -1268,30 +1283,36 @@ def get_and_check_munger_params(munger_path: str) -> (dict, Optional[dict]):
         return dict(), err
     # get name of munger for error reporting
     munger_name = Path(munger_path).name[:-7]
+
     # define dictionary of munger parameters
+    data_types = {**{
+            k: req_munger_parameters[k]["data_type"]
+            for k in req_munger_parameters.keys()
+        },**opt_munger_data_types
+    }
     format_options = jm.recast_options(
-        params, {**opt_munger_params, **req_munger_params}
+        params, data_types
     )
 
     # Check munger values
     # # main parameters recognized
-    for k in req_munger_param_values.keys():
-        if req_munger_params[k] == "string":
-            if not format_options[k] in req_munger_param_values[k]:
+    for k in req_munger_parameters.keys():
+        if req_munger_parameters[k]["data_type"] == "string":
+            if not format_options[k] in req_munger_parameters[k]["allowed_values"]:
                 err = ui.add_new_error(
                     err,
                     "munger",
                     munger_name,
-                    f"Value of {k} must be one of these: {req_munger_param_values[k]}",
+                    f'Value of {k} must be one of these: {req_munger_parameters[k]["allowed_values"]}',
                 )
-        elif req_munger_params[k] == "list_of_strings":
-            bad = [x for x in format_options[k] if x not in req_munger_param_values]
+        elif req_munger_parameters[k]["data_type"] == "list_of_strings":
+            bad = [x for x in format_options[k] if x not in req_munger_parameters[k]["allowed_values"]]
             if bad:
                 err = ui.add_new_error(
                     err,
                     "munger",
                     munger_name,
-                    f"Each listed value of {k} must be one of these: {req_munger_param_values[k]}",
+                    f'Each listed value of {k} must be one of these: {req_munger_parameters[k]["allowed_values"]}',
                 )
 
     # # simple non-null dependencies
@@ -1432,7 +1453,7 @@ def to_standard_count_frame(
             err,
             "system",
             f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
-            f"Unexpected exception while reading data from file:\n\t{exc}",
+            f"Unexpected exception while reading data from file {file_name}:\n\t{exc}",
         )
         return pd.DataFrame(), original_string_columns, err
 
@@ -1464,14 +1485,20 @@ def to_standard_count_frame(
         if p["multi_block"] == "yes":
             try:
                 # extract blocks as dataframes with generic headers and all rows treated as data
-                df_list, new_err = extract_blocks(raw_dict[sheet], munger_name, file_name, sheet, max_blocks=p["max_blocks"])
+                df_list, new_err = extract_blocks(
+                    raw_dict[sheet], munger_name, file_name, sheet, max_blocks=p["max_blocks"]
+                )
                 if new_err:
                     err = ui.consolidate_errors([err, new_err])
                     if ui.fatal_error(new_err):
                         continue
 
                 # correct column headers
-                header_list = ui.tabular_kwargs(p, dict())["header"]
+                header_int_or_list = ui.tabular_kwargs(p, dict())["header"]
+                if isinstance(header_int_or_list, int):  # TODO tech debt ugly! but tracks index vs. multiindex
+                    header_list = [header_int_or_list]
+                else:
+                    header_list = header_int_or_list
                 for n in range(len(df_list)):
                     df_list[n] = ui.set_and_fill_headers(df_list[n], header_list)
 
@@ -1691,18 +1718,23 @@ def get_aux_info(
             # if there is a lookup for this field, grab it
             f_p, f_err = ui.get_parameters(
                 required_keys=[
-                    "source_file",
                     "file_type",
                     "munge_strings",
                     "lookup_id",
                 ],
-                optional_keys=list(opt_munger_params.keys())
-                + [f"{element}_replacement"],
+                optional_keys=list(opt_munger_data_types.keys())
+                + [f"{element}_replacement", "source_file"],
                 header=f"{field} lookup",
                 param_file=munger_path,
             )
             # convert parameters to appropriate types
-            f_p = jm.recast_options(f_p, {**opt_munger_params, **req_munger_params})
+            f_p = jm.recast_options(
+                f_p, {
+                    **opt_munger_data_types, **{
+                        k: req_munger_parameters[k]["data_type"] for k in req_munger_parameters.keys()
+                    }
+                }
+            )
 
             if not f_err:
                 # prepare dictionary to hold info for this lookup
@@ -1732,6 +1764,7 @@ def incorporate_aux_info(
     aux_directory_path: str,
     munger_name: str,  # for error reporting
     suffix: str,
+    f_path: str,  # path to original file, in case that's the lookup file
 ) -> (pd.DataFrame, str, Optional[Dict[str, Any]]):
     """revises the dataframe, adding necessary columns obtained from lookup tables,
     and revises the formula to pull from those columns instead of foreign key columns
@@ -1745,9 +1778,12 @@ def incorporate_aux_info(
         r_fields = aux[element][fk]["r_fields"]
 
         # grab the lookup table
-        lt_path = os.path.join(
-            aux_directory_path, aux[element][fk]["params"]["source_file"]
-        )
+        if aux[element][fk]["params"]["source_file"]:
+            lt_path = os.path.join(
+                aux_directory_path, aux[element][fk]["params"]["source_file"]
+            )
+        else:
+            lt_path = f_path
         lookup_df_dict, fk_err = ui.read_single_datafile(
             lt_path, aux[element][fk]["params"], munger_name, dict(), aux=True
         )
@@ -1875,3 +1911,89 @@ def extract_blocks(
             if blocks_created >= max_blocks:
                 max_blocks_attained = True
     return df_list, err
+
+
+def file_to_raw_df(
+        munger_path: str,
+        p,
+        f_path: str,
+        constants: Dict[str, str],
+        results_directory_path,
+) -> (pd.DataFrame, Optional[dict]):
+    err = None
+    file_name = Path(f_path).name
+
+    if p["file_type"] == "valid_nist_xml":
+        try:
+            df, err = sf.read_valid_nist_xml(f_path)
+            if ui.fatal_error(err):
+                return pd.DataFrame(), err
+        except Exception as exc:
+            err = ui.add_new_error(
+                err,
+                "file",
+                file_name,
+                f"Exception during file munge: {exc}\n"
+                f"Validation tools may be helpful:"
+                f"https://github.com/HiltonRoscoe/CdfTools",
+            )
+            return pd.DataFrame(), err
+    else:
+        # read data into standard count format dataframe
+        #  append "_SOURCE" to all non-Count column names
+        #  (to avoid conflicts if e.g., source has col names 'Party')
+        try:
+            df, original_string_columns, err = to_standard_count_frame(
+                f_path,
+                munger_path,
+                p,
+                constants,
+                suffix="_SOURCE",
+            )
+            if ui.fatal_error(err):
+                return pd.DataFrame(), err
+
+        except Exception as exc:
+            err = ui.add_new_error(
+                err,
+                "system",
+                f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
+                f"Exception while converting data to standard form: {exc}",
+            )
+            return pd.DataFrame(), err
+
+        # transform source to completely munged (possibly with foreign keys if there is aux data)
+        # # add raw-munged column for each element, removing old
+        try:
+            df, new_err = munge_source_to_raw(
+                df,
+                munger_path,
+                p,
+                original_string_columns,
+                "_SOURCE",
+                results_directory_path,
+                f_path,
+            )
+            if new_err:
+                err = ui.consolidate_errors([err, new_err])
+                if ui.fatal_error(new_err):
+                    return df, err
+        except Exception as exc:
+            err = ui.add_new_error(
+                err,
+                "system",
+                f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
+                f"Exception while munging source to raw: {exc}",
+            )
+            return df, err
+
+        # # add columns for constant-over-file elements
+        for element in constants.keys():
+            df = add_constant_column(
+                df,
+                element,
+                constants[element],
+            )
+    return df, err
+
+

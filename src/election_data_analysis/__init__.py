@@ -7,16 +7,20 @@ from election_data_analysis import (
 from election_data_analysis import user_interface as ui
 from election_data_analysis import munge as m
 from sqlalchemy.orm import sessionmaker
+from sqlalchemy.orm.session import Session
 from typing import List, Dict, Optional
 import datetime
 import os
 import pandas as pd
 import inspect
 from pathlib import Path
+import xml.etree.ElementTree as et
+import dicttoxml
 from election_data_analysis import analyze as a
 from election_data_analysis import visualize as viz
 from election_data_analysis import juris_and_munger as jm
 from election_data_analysis import preparation as prep
+from election_data_analysis import nist_export as nist
 
 # constants
 default_encoding = "utf_8"
@@ -374,7 +378,7 @@ class SingleDataLoader:
         self,
         results_dir: str,
         par_file_name: str,
-        session,
+        session: Session,
         mungers_path: str,
         juris: jm.Jurisdiction,
     ):
@@ -567,6 +571,7 @@ class SingleDataLoader:
                         original_string_columns,
                         "_SOURCE",
                         self.results_dir,
+                        f_path,
                     )
                     err = ui.consolidate_errors([err, new_err])
                     if ui.fatal_error(new_err):
@@ -625,7 +630,7 @@ def check_par_file_elements(
 def check_and_init_singledataloader(
     results_dir: str,
     par_file_name: str,
-    session,
+    session: Session,
     mungers_path: str,
     juris: jm.Jurisdiction,
 ) -> (Optional[SingleDataLoader], Optional[dict]):
@@ -1003,7 +1008,7 @@ class JurisdictionPrepper:
             ru_formula = ""
             headers = [
                 x
-                for x in m.req_munger_param_values["munge_strings"]
+                for x in m.req_munger_parameters["munge_strings"]
                 if x != "constant_over_file"
             ]
             for header in headers:
@@ -1426,7 +1431,7 @@ class Analyzer:
         )
         return err
 
-    def export_nist(self, election: str, jurisdiction: str):
+    def export_nist_json(self, election: str, jurisdiction: str) -> dict:
         election_id = db.name_to_id(self.session, "Election", election)
         jurisdiction_id = db.name_to_id(self.session, "ReportingUnit", jurisdiction)
 
@@ -1453,6 +1458,17 @@ class Analyzer:
 
         return election_report
 
+    def export_nist(self, election: str, jurisdiction: str) -> str:
+        xml_string = et.tostring(
+            nist.nist_xml_export_tree(
+                self.session, election, jurisdiction,
+                issuer=nist.default_issuer,
+                issuer_abbreviation=nist.default_issuer_abbreviation,
+                status=nist.default_status,
+                vendor_application_id=nist.default_vendor_application_id
+            ).getroot(), encoding=default_encoding, method='xml'
+        )
+        return xml_string
 
 def aggregate_results(
     election,
@@ -1726,13 +1742,13 @@ def get_contest_with_unknown_candidates(
 
 
 def load_results_file(
-    session,
-    munger_path: str,
-    f_path: str,
-    juris: jm.Jurisdiction,
-    election_datafile_ids: dict,
-    constants: Dict[str, str],
-    results_directory_path,
+        session: Session,
+        munger_path: str,
+        f_path: str,
+        juris: jm.Jurisdiction,
+        election_datafile_ids: dict,
+        constants: Dict[str, str],
+        results_directory_path,
 ) -> Optional[dict]:
 
     # TODO tech debt: redundant to pass results_directory_path and f_path
@@ -1742,60 +1758,13 @@ def load_results_file(
     if ui.fatal_error(err):
         return err
 
-    # read data into standard count format dataframe
-    #  append "_SOURCE" to all non-Count column names
-    #  (to avoid conflicts if e.g., source has col names 'Party')
-    try:
-        df, original_string_columns, err = m.to_standard_count_frame(
-            f_path,
-            munger_path,
-            p,
-            constants,
-            suffix="_SOURCE",
-        )
-        if ui.fatal_error(err):
+    df, new_err = m.file_to_raw_df(
+        munger_path, p, f_path, constants, results_directory_path
+    )
+    if new_err:
+        err = ui.consolidate_errors([err, new_err])
+        if ui.fatal_error(new_err):
             return err
-
-    except Exception as exc:
-        err = ui.add_new_error(
-            err,
-            "system",
-            f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
-            f"Exception while converting data to standard form: {exc}",
-        )
-        return err
-
-    # transform source to completely munged (possibly with foreign keys if there is aux data)
-    # # add raw-munged column for each element, removing old
-    try:
-        df, new_err = m.munge_source_to_raw(
-            df,
-            munger_path,
-            p,
-            original_string_columns,
-            "_SOURCE",
-            results_directory_path,
-        )
-        if new_err:
-            err = ui.consolidate_errors([err, new_err])
-            if ui.fatal_error(new_err):
-                return err
-    except Exception as exc:
-        err = ui.add_new_error(
-            err,
-            "system",
-            f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
-            f"Exception while munging source to raw: {exc}",
-        )
-        return err
-
-    # # add columns for constant-over-file elements
-    for element in constants.keys():
-        df = m.add_constant_column(
-            df,
-            element,
-            constants[element],
-        )
 
     # # delete any rows with items to be ignored
     ig, new_err = ui.get_parameters(
@@ -1820,7 +1789,7 @@ def load_results_file(
 
     # # add Id columns for all but Count, removing raw-munged
     try:
-        df, new_err = m.munge_raw_to_ids(df, constants, juris, munger_name, session)
+        df, new_err = m.munge_raw_to_ids(df, constants, juris, munger_name, session, p["file_type"])
         if new_err:
             err = ui.consolidate_errors([err, new_err])
             if ui.fatal_error(new_err):

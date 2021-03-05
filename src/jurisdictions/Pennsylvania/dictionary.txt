@@ -2608,7 +2608,7 @@ Candidate	Clare Helen Dooley	Dooley, Clare Helen
 Candidate	Michael P Reese	Reese, Michael P
 Candidate	Rebecca L Kinney	Kinney, Rebecca L
 Candidate	Jonathan A. Fritz	Fritz, Jonathan A.
-Candidate	Clark Alexander Jr. Mitchell	Mitchell, Clark Alexander Jr.
+Candidate	Clark Alexander Mitchell Jr	Mitchell, Clark Alexander Jr
 Candidate	Timothy Jon O'Neal	O'Neal, Timothy Jon
 Candidate	Douglas D Hunt	Hunt, Douglas D
 Candidate	George S Dunbar	Dunbar, George S
@@ -2797,7 +2797,7 @@ Candidate	Zachary James Wilson	Wilson, Zachary James
 Candidate	James E. Marshall	Marshall, James E.
 Candidate	Robert T Sr Williams	Williams, Robert T Sr
 Candidate	Shaun A Dougherty	Dougherty, Shaun A
-Candidate	Wayne Jr. Langerholc	Langerholc, Wayne Jr.
+Candidate	Wayne Langerholc Jr	Langerholc, Wayne Jr
 Candidate	Jesse W Topper	Topper, Jesse W
 Candidate	Madeleine Dean Cunnane	Cunnane, Madeleine Dean
 Candidate	Kathy Barnette	Barnette, Kathy
@@ -2820,7 +2820,7 @@ Candidate	Raymond Edward Baker	Baker, Raymond Edward
 Candidate	Cesar Cepeda	Cepeda, Cesar
 Candidate	Branden M. Moyer	Moyer, Branden M.
 Candidate	Kelly Mcdonough	Mcdonough, Kelly
-Candidate	James A. Jr. Cox	Cox, James A. Jr.
+Candidate	James A. Cox Jr	Cox, James A. Jr
 Candidate	Francis Lamar Foley Jr	Foley, Francis Lamar Jr
 Candidate	David M. Sr. Maloney	Maloney, David M. Sr.
 Candidate	Ryan Mackenzie	Mackenzie, Ryan
@@ -2874,7 +2874,7 @@ Candidate	Rochelle Marie Pasquariello	Pasquariello, Rochelle Marie
 Candidate	Andrew Shecktor	Shecktor, Andrew
 Candidate	Janine M Penman	Penman, Janine M
 Candidate	John K Sr Reber	Reber, John K Sr
-Candidate	George Francis Jr. Halcovage	Halcovage, George Francis Jr.
+Candidate	George Francis Halcovage Jr	Halcovage, George Francis Jr
 Candidate	Donna Lea Mrs Merritt	Merritt, Donna Lea Mrs
 Candidate	Carolyn L Bonkoski	Bonkoski, Carolyn L
 Candidate	Ellen T Rulavage	Rulavage, Ellen T
@@ -2886,11 +2886,10 @@ Candidate	Barbara A Bustard	Bustard, Barbara A
 Candidate	Pamela Levy	Levy, Pamela
 Candidate	Paul J Linkmeyer	Linkmeyer, Paul J
 Candidate	Brian David Yanoviak	Yanoviak, Brian David
-Candidate	Vincent M. Jr. Talucci	Talucci, Vincent M. Jr.
+Candidate	Vincent M. Talucci Jr	Talucci, Vincent M. Jr
 Candidate	Eugene Z Bonkoski	Bonkoski, Eugene Z
 Candidate	John S Cusatis	Cusatis, John S
 Candidate	Jason Runk	Runk, Jason
-Candidate	Louis C. Jr. Schmitt	Schmitt, Louis C. Jr.
 Candidate	Lee Griffin	Griffin, Lee
 Candidate	Jaclyn E Baker	Baker, Jaclyn E
 Candidate	Emerson Eugene Yaw	Yaw, Emerson Eugene
@@ -2905,7 +2904,7 @@ Candidate	Taran N Samarth	Samarth, Taran N
 Candidate	Daniel Muldowney	Muldowney, Daniel
 Candidate	Donald E Hoffman Jr	Hoffman, Donald E Jr
 Candidate	Carol D. Sides	Sides, Carol D.
-Candidate	David A Jr. Huffman	Huffman, David A Jr.
+Candidate	David A Huffman Jr	Huffman, David A Jr
 Candidate	Alan Martin Hall	Hall, Alan Martin
 Candidate	Krystle Bristol	Bristol, Krystle
 Candidate	Todd D Robatin	Robatin, Todd D
@@ -3105,13 +3104,13 @@ Candidate	Ellen Fisher	Fisher, Ellen
 Candidate	Angela Renee Prattis	Prattis, Angela Renee
 Candidate	Brian Kirkland	Kirkland, Brian
 Candidate	Leanne Krueger	Krueger, Leanne
-Candidate	Ralph F. Jr. Shicatano	Shicatano, Ralph F. Jr.
+Candidate	Ralph F. Shicatano Jr	Shicatano, Ralph F. Jr
 Candidate	Peter Thomas Gaglio Jr	Gaglio, Peter Thomas Jr
 Candidate	Michael P Zabel	Zabel, Michael P
 Candidate	Michael Mccollum	Mccollum, Michael
 Candidate	Margo L Davidson	Davidson, Margo L
 Candidate	Jennifer O'Mara	O'Mara, Jennifer
-Candidate	Robert F. Jr. Smythe	Smythe, Robert F. Jr.
+Candidate	Robert F. Smythe Jr	Smythe, Robert F. Jr
 Candidate	Jennifer A. Leith	Leith, Jennifer A.
 Candidate	Greg Vitali	Vitali, Greg
 Candidate	Christine E Boyle	Boyle, Christine E
@@ -3183,7 +3182,7 @@ Candidate	Dolores Strish	Strish, Dolores
 Candidate	James Paul Hutchison	Hutchison, James Paul
 Candidate	Annmarie M Tyler	Tyler, Annmarie M
 Candidate	Teresa Lynette Villano	Villano, Teresa Lynette
-Candidate	Douglas J Jr. Miller	Miller, Douglas J Jr.
+Candidate	Douglas J Miller Jr	Miller, Douglas J Jr
 Candidate	John W Wells	Wells, John W
 Candidate	Dominic J Iii Mastri	Mastri, Dominic J Iii
 Candidate	Paul Defabo	Defabo, Paul
@@ -3198,7 +3197,7 @@ Candidate	Lloyd K. Smucker	Smucker, Lloyd K.
 Candidate	Janet Temin	Temin, Janet
 Candidate	Craig E Lehman	Lehman, Craig E
 Candidate	Scott F Martin	Martin, Scott F
-Candidate	John J Jr. Padora	Padora, John J Jr.
+Candidate	John J Padora Jr	Padora, John J Jr
 Candidate	Michele Wherley	Wherley, Michele
 Candidate	Bradford L Witmer	Witmer, Bradford L
 Candidate	P Michael Sturla	Sturla, P Michael
@@ -3253,7 +3252,7 @@ Candidate	Patrick J Cubbage	Cubbage, Patrick J
 Candidate	Gloria Lee Snover	Snover, Gloria Lee
 Candidate	Thomas Joseph Carroll	Carroll, Thomas Joseph
 Candidate	Linda Gerenser Stubits	Stubits, Linda Gerenser
-Candidate	Robert E. Jr. Smith	Smith, Robert E. Jr.
+Candidate	Robert E. Smith Jr	Smith, Robert E. Jr
 Candidate	Benjamin Barry Long	Long, Benjamin Barry
 Candidate	Leslie M Altieri	Altieri, Leslie M
 Candidate	Dianne D Justesen	Justesen, Dianne D
@@ -3313,7 +3312,7 @@ Candidate	Michael Harvey	Harvey, Michael
 Candidate	Nikil Saval	Saval, Nikil
 Candidate	Lawrence M Farnese Jr	Farnese, Lawrence M Jr
 Candidate	Sharif T Street	Street, Sharif T
-Candidate	John P. Jr. Sabatina	Sabatina, John P. Jr.
+Candidate	John P. Sabatina Jr	Sabatina, John P. Jr
 Candidate	Michael Driscoll	Driscoll, Michael
 Candidate	Jeffrey Dempsey	Dempsey, Jeffrey
 Candidate	Vanessa Mcgrath	Mcgrath, Vanessa
@@ -3379,7 +3378,7 @@ Candidate	Daniel Jacob Laufer	Laufer, Daniel Jacob
 Candidate	Carla B Le'Coin	Le'Coin, Carla B
 Candidate	Christina Marie Borst	Borst, Christina Marie
 Candidate	Bryan Scott Mercer	Mercer, Bryan Scott
-Candidate	Piero Jr. Digiannantonio	Digiannantonio, Piero Jr.
+Candidate	Piero Digiannantonio Jr	Digiannantonio, Piero Jr
 Candidate	Gary Grisafi	Grisafi, Gary
 Candidate	Christopher M Vogler	Vogler, Christopher M
 Candidate	William M. Pirolli	Pirolli, William M.
@@ -3399,13 +3398,13 @@ Candidate	J. Matthew Wolfe	Wolfe, J. Matthew
 Candidate	Aaron Cohen	Cohen, Aaron
 Candidate	Marian S Keegan	Keegan, Marian S
 Candidate	Michael Peifer	Peifer, Michael
-Candidate	Peter James Jr. Symons	Symons, Peter James Jr.
+Candidate	Peter James Symons Jr	Symons, Peter James Jr
 Candidate	John Thomas Leshko	Leshko, John Thomas
 Candidate	Timothy F Twardzik	Twardzik, Timothy F
 Candidate	David Hummer Rowe	Rowe, David Hummer
 Candidate	Michael P. Reese	Reese, Michael P.
 Candidate	Jonathan A Fritz	Fritz, Jonathan A
-Candidate	Harlan G. Jr. Shober	Shober, Harlan G. Jr.
+Candidate	Harlan G. Shober Jr	Shober, Harlan G. Jr
 Candidate	Tay R. Waltenbaugh	Waltenbaugh, Tay R.
 Candidate	Kim Ward	Ward, Kim
 Candidate	George Dunbar	Dunbar, George
@@ -3487,11 +3486,10 @@ Candidate	Denise M Van Essen	Van Essen, Denise M
 Candidate	Will F Tallman	Tallman, Will F
 Candidate	Erin R Mcclelland	Mcclelland, Erin R
 Candidate	Keith James Rothfus	Rothfus, Keith James
-Candidate	Michael F. Jr. Doyle	Doyle, Michael F. Jr.
+Candidate	Michael F. Doyle Jr	Doyle, Michael F. Jr
 Candidate	Leonard Francis Mcallister Jr	Mcallister, Leonard Francis Jr
 Candidate	Timothy F Murphy	Murphy , Timothy F
 Candidate	Edward H Eichenlaub	Eichenlaub, Edward H
-Candidate	Jay Jr. Costa	Costa, Jay Jr.
 Candidate	Jim Barr	Barr, Jim
 Candidate	Dominic James Costa	Costa, Dominic James
 Candidate	Joseph F Markosek	Markosek, Joseph F
@@ -3522,7 +3520,6 @@ Candidate	James J Iii Christiana	Christiana, James J Iii
 Candidate	Art Halvorson	Halvorson, Art
 Candidate	William F Shuster	Shuster, William F
 Candidate	Ed Cernic Jr	Cernic, Ed Jr
-Candidate	Wayne Langerholc Jr	Langerholc, Wayne Jr
 Candidate	Michael D Parrish	Parrish, Michael D
 Candidate	Ryan A Costello	Costello, Ryan A
 Candidate	Mary Ellen Balchunis	Balchunis, Mary Ellen
@@ -3554,7 +3551,6 @@ Candidate	Mark Amsdell	Amsdell, Mark
 Candidate	Cecilia E Houser	Houser, Cecilia E
 Candidate	William Frederick Weaver	Weaver, William Frederick
 Candidate	Kerith Strano Taylor	Strano Taylor, Kerith
-Candidate	Glenn William Jr. Thompson	Thompson, Glenn William Jr.
 Candidate	Jerri Buchanan	Buchanan, Jerri
 Candidate	Joseph B. Iii Scarnati	Scarnati, Joseph B. Iii
 Candidate	Michael Paul Marsicano	Marsicano, Michael Paul
