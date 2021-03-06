@@ -57,7 +57,7 @@ def create_rollup(
     connection = session.bind.raw_connection()
     cursor = connection.cursor()
     if not datafile_list:
-        datafile_list, e = db.data_file_list(cursor, election_id, by="Id")
+        datafile_list, e = db.data_file_list_cursor(cursor,election_id,by="Id")
         if e:
             return e
         by = "Id"
@@ -76,9 +76,9 @@ def create_rollup(
         exclude_redundant_total = False
 
     # get names from ids
-    top_ru = db.name_from_id(cursor, "ReportingUnit", top_ru_id)
-    election = db.name_from_id(cursor, "Election", election_id)
-    sub_rutype = db.name_from_id(cursor, "ReportingUnitType", sub_rutype_id)
+    top_ru = db.name_from_id_cursor(cursor,"ReportingUnit",top_ru_id)
+    election = db.name_from_id_cursor(cursor,"Election",election_id)
+    sub_rutype = db.name_from_id_cursor(cursor,"ReportingUnitType",sub_rutype_id)
 
     # create path to export directory
     leaf_dir = os.path.join(target_dir, election, top_ru, f"by_{sub_rutype}")
@@ -176,7 +176,7 @@ def create_scatter(
         return None
 
     unsummed = pd.concat([dfh, dfv])
-    jurisdiction = db.name_from_id(cursor, "ReportingUnit", jurisdiction_id)
+    jurisdiction = db.name_from_id_cursor(cursor,"ReportingUnit",jurisdiction_id)
 
     # check if there is only 1 candidate selection (with multiple count types)
     single_selection = len(unsummed["Selection"].unique()) == 1
@@ -218,9 +218,9 @@ def create_scatter(
         results["y"] = v_count
     else:
         results = package_results(pivot_df, jurisdiction, h_count, v_count)
-    results["x-election"] = db.name_from_id(cursor, "Election", h_election_id)
-    results["y-election"] = db.name_from_id(cursor, "Election", v_election_id)
-    results["subdivision_type"] = db.name_from_id(
+    results["x-election"] = db.name_from_id_cursor(cursor,"Election",h_election_id)
+    results["y-election"] = db.name_from_id_cursor(cursor,"Election",v_election_id)
+    results["subdivision_type"] = db.name_from_id_cursor(
         cursor, "ReportingUnitType", subdivision_type_id
     )
     results["x-count_item_type"] = h_category
@@ -321,7 +321,7 @@ def get_census_data(
     # get the census data
     connection = session.bind.raw_connection()
     cursor = connection.cursor()
-    election = db.name_from_id(cursor, "Election", election_id)
+    election = db.name_from_id_cursor(cursor,"Election",election_id)
     census_df = db.read_external(
         cursor,
         int(election[0:4]),
@@ -526,8 +526,8 @@ def create_bar(
         )
 
         candidates = temp_df["Candidate_Id"].unique()
-        x = db.name_from_id(cursor, "Candidate", int(candidates[0]))
-        y = db.name_from_id(cursor, "Candidate", int(candidates[1]))
+        x = db.name_from_id_cursor(cursor,"Candidate",int(candidates[0]))
+        y = db.name_from_id_cursor(cursor,"Candidate",int(candidates[1]))
         x_party = unsummed.loc[unsummed["Candidate_Id"] == candidates[0], "Party"].iloc[
             0
         ]
@@ -536,7 +536,7 @@ def create_bar(
             0
         ]
         y_party_abbr = create_party_abbreviation(y_party)
-        jurisdiction = db.name_from_id(cursor, "ReportingUnit", top_ru_id)
+        jurisdiction = db.name_from_id_cursor(cursor,"ReportingUnit",top_ru_id)
 
         pivot_df = pd.pivot_table(
             temp_df, values="Count", index=["Name"], columns="Selection", fill_value=0
@@ -551,11 +551,11 @@ def create_bar(
             results = package_results(pivot_df, jurisdiction, x, y)
         else:
             results = package_results(pivot_df, jurisdiction, x, y, restrict=8)
-        results["election"] = db.name_from_id(cursor, "Election", election_id)
-        results["contest"] = db.name_from_id(
+        results["election"] = db.name_from_id_cursor(cursor,"Election",election_id)
+        results["contest"] = db.name_from_id_cursor(
             cursor, "Contest", int(temp_df.iloc[0]["Contest_Id"])
         )
-        results["subdivision_type"] = db.name_from_id(
+        results["subdivision_type"] = db.name_from_id_cursor(
             cursor, "ReportingUnitType", int(temp_df.iloc[0]["ReportingUnitType_Id"])
         )
         results["count_item_type"] = temp_df.iloc[0]["CountItemType"]

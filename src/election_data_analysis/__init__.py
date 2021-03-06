@@ -21,6 +21,7 @@ from election_data_analysis import visualize as viz
 from election_data_analysis import juris_and_munger as jm
 from election_data_analysis import preparation as prep
 from election_data_analysis import nist_export as nist
+import itertools
 
 # constants
 default_encoding = "utf_8"
@@ -361,7 +362,7 @@ class DataLoader:
         cursor = connection.cursor()
 
         # find all datafile ids matching the given election and jurisdiction
-        df_list, err_str = db.data_file_list(
+        df_list, err_str = db.data_file_list_cursor(
             cursor, election_id, reporting_unit_id=juris_id
         )
         if err_str:
@@ -1470,6 +1471,89 @@ class Analyzer:
         )
         return xml_string
 
+    def diff_in_diff(self, election: str) -> pd.DataFrame:
+        """for each jurisdiction in the election that has more than just 'total',
+        Calculate all possible diff-in-diff values per Herron
+        http://doi.org/10.1089/elj.2019.0544.
+        Return df with columns election, overall jurisdiction, county-type jurisdiction,
+        election district type, contest-pair, vote-type pair, diff-in-diff value"""
+
+        # TODO tech debt works for candidate contests only
+
+        # TODO: tech debt code treats 'other' like county or any county-like ru-type,
+        #  which might cause trouble if there is a non-standard major subdivision type
+
+        election_id = db.name_to_id(self.session, "Election", election)
+
+        # loop through state-like jurisdictions with multiple vote types
+        vts = db.vote_types_by_juris(self.session, election)
+
+        contests_df = db.contest_families_by_juris(
+            self.session,
+            election,
+        )
+        # loop through states, etc.
+        for state in vts.keys():
+            # get vote-types, contest roll-up by vote type and contest-by-election-district types
+            data_file_list, _ = db.data_file_list(self.session, election_id)
+            vote_types = {x for x in vts[state] if x != "total"}
+            district_types = contests_df[contests_df["jurisdiction"] == state]
+            state_id = db.name_to_id(self.session, "ReportingUnit", state)
+            major_sub_ru_type_id = db.get_jurisdiction_hierarchy(self.session, state_id)
+            major_sub_ru_type_name= db.name_from_id(
+                self.session,
+                "ReportingUnitType",
+                major_sub_ru_type_id,
+            )
+            # get dataframe of results, adding column for political party
+            """res, err = db.export_rollup_from_db(
+                self.session,
+                state,
+                election,
+                major_sub_ru_type_name,
+                "CandidateContest",
+                data_file_list,
+                exclude_redundant_total=True,
+                by_vote_type=True
+            )"""
+            res, _ = db.export_rollup_from_db(
+                self.session,
+                state,
+                election,
+                major_sub_ru_type_name,
+                "Candidate",  # TODO extend to ballotmeasure contests too
+                data_file_list,
+                exclude_redundant_total=True,
+                by_vote_type=True,
+            )
+
+
+            # loop through vote-type pairs
+            for vt_pair in itertools.combinations(vote_types,2):
+                # loop through counties
+                for county in res.reporting_unit.unique():
+                    # loop through contest district types (congressional, state-house, statewide)
+                    for cdt in district_types.ReportingUnitType.unique():
+                        # TODO find set of contests of that type in that county
+                        good_dt_contests = contests_df[
+                            (contests_df.jurisdiction == state)
+                            & (contests_df.ReportingUnitType == cdt)
+                        ]["contest"].unique()
+                        good_dt_contests_results = res[
+                            (res.reporting_unit == county)
+                            & (res.contest.isin(good_dt_contests))
+                        ]
+                        # TODO tech debt: this calc is done multiple times (once for each vt pair)
+                        good_contest_list = good_dt_contests_results.contest.unique()
+                        if len(good_contest_list) > 1:
+                            # loop through contest-pairs in county
+                            for cp in itertools(good_contest_list, 2):
+                                # TODO append diff-in-diff row
+                                continue
+
+        diff_in_diff = pd.DataFrame()
+        return diff_in_diff
+
 def aggregate_results(
     election,
     jurisdiction,
@@ -1495,7 +1579,7 @@ def aggregate_results(
     connection = an.session.bind.raw_connection()
     cursor = connection.cursor()
 
-    datafile_list, e = db.data_file_list(
+    datafile_list, e = db.data_file_list_cursor(
         cursor,
         election_id,
         reporting_unit_id=jurisdiction_id,

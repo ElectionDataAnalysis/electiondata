@@ -399,7 +399,7 @@ def get_cdf_db_table_names(eng):
     return cdf_elements, cdf_enumerations, cdf_joins, others
 
 
-def name_from_id(cursor, element, idx):
+def name_from_id_cursor(cursor,element,idx):
     name_field = get_name_field(element)
     q = sql.SQL('SELECT {name_field} FROM {element} WHERE "Id" = %s').format(
         name_field=sql.Identifier(name_field), element=sql.Identifier(element)
@@ -410,6 +410,14 @@ def name_from_id(cursor, element, idx):
     except KeyError:
         # if no record with Id = <idx> was found
         name = None
+    return name
+
+
+def name_from_id(session: Session, element: str, idx: int) -> str:
+    connection = session.bind.raw_connection()
+    cursor = connection.cursor()
+    name = name_from_id_cursor(cursor, element, idx)
+    connection.close()
     return name
 
 
@@ -713,8 +721,20 @@ def vote_type_list(cursor, datafile_list: list, by: str = "Id") -> (list, str):
 
 
 def data_file_list(
+        session: Session,
+        election_id: int,
+        reporting_unit_id: Optional[int] = None,
+        by: str = "Id",
+) -> (list, str):
+    connection = session.bind.raw_connection()
+    cursor = connection.cursor()
+    df_list, err_str = data_file_list_cursor(
+        cursor, election_id, reporting_unit_id=reporting_unit_id)
+    return df_list, err_str
+
+def data_file_list_cursor(
     cursor, election_id, reporting_unit_id: Optional[int] = None, by="Id"
-):
+) -> (list, str):
     q = sql.SQL(
         """SELECT distinct d.{by} FROM _datafile d WHERE d."Election_Id" = %s"""
     ).format(by=sql.Identifier(by))
@@ -1028,18 +1048,6 @@ and cruj."ParentReportingUnit_Id" = %s
     return contests
 
 
-def selection_ids_from_candidate_id(session, candidate_id):
-    connection = session.bind.raw_connection()
-    cursor = connection.cursor()
-
-    q = sql.SQL("""SELECT "Id" from "CandidateSelection" where "Candidate_Id" = %s""")
-
-    cursor.execute(q, (candidate_id,))
-    selection_id_list = [x for (x,) in cursor.fetchall()]
-
-    return selection_id_list
-
-
 def export_rollup_from_db(
     session,
     top_ru: str,
@@ -1201,6 +1209,17 @@ def export_rollup_from_db(
     return results_df, err_str
 
 
+    connection = session.bind.raw_connection()
+    cursor = connection.cursor()
+
+    q = sql.SQL("""SELECT "Id" from "CandidateSelection" where "Candidate_Id" = %s""")
+
+    cursor.execute(q, (candidate_id,))
+    selection_id_list = [x for (x,) in cursor.fetchall()]
+
+    return selection_id_list
+
+
 def read_vote_count(
     session,
     election_id,
@@ -1293,7 +1312,7 @@ def is_preliminary(cursor, election_id, jurisdiction_id):
         results = cursor.fetchall()
         return results[0][0]
     except Exception as exc:
-        election = name_from_id(cursor, "Election", election_id)
+        election = name_from_id_cursor(cursor,"Election",election_id)
         if election.startswith("2020 General"):
             return True
         return False
@@ -1417,6 +1436,47 @@ def vote_types_by_juris(session: Session, election: str) -> Dict[str,List[str]]:
     cursor.close()
     vote_types = dict(result_df.groupby("jurisdiction")["CountItemType"].apply(list))
     return vote_types
+
+
+def contest_families_by_juris(
+        session: Session,
+        election: str,
+) -> pd.DataFrame:
+    """returns dictionary of jurisdictions with list of contest-district types for each"""
+    q = sql.SQL("""
+    SELECT DISTINCT 
+        top_ru."Name" as jurisdiction, 
+        con."Name" as contest, 
+        ed."ReportingUnitType_Id" as ReportingUnitType_Id, 
+        ed."OtherReportingUnitType" as OtherReportingUnitType     
+    FROM "VoteCount" vc
+    JOIN "_datafile" df on df."Id" = vc."_datafile_Id"
+    JOIN "ReportingUnit" top_ru on top_ru."Id" = df."ReportingUnit_Id"
+    JOIN "Election" el on df."Election_Id" = el."Id"
+    JOIN "Contest" con on con."Id" = vc."Contest_Id"
+    JOIN "CandidateContest" cancon on cancon."Id" = con."Id"
+    JOIN "Office" off on off."Id" = cancon."Office_Id"
+    JOIN "ReportingUnit" ed on ed."Id" = off."ElectionDistrict_Id"    
+    WHERE el."Name" = {election} ;
+    """).format(
+        election=sql.Literal(election),
+    )
+    connection = session.bind.raw_connection()
+    cursor = connection.cursor()
+    cursor.execute(q)
+    result = cursor.fetchall()
+    result_df, _ = id_other_cols_to_enum(session,
+        pd.DataFrame(result,
+                     columns=["jurisdiction",
+                                "contest",
+                              "ReportingUnitType_Id",
+                              "OtherReportingUnitType"
+                              ]),
+                    "ReportingUnitType",
+    )
+
+    cursor.close()
+    return result_df
 
 
 def id_other_cols_to_enum(session: Session, df: pd.DataFrame, enum: str) -> (pd.DataFrame, Optional[dict]):
