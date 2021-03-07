@@ -1058,6 +1058,7 @@ def export_rollup_from_db(
     by: str = "Id",
     exclude_redundant_total: bool = False,
     by_vote_type: bool = False,
+    include_party_column: bool = False,
     contest: Optional[str] = None,
 ) -> (pd.DataFrame, Optional[str]):
     """Return a dataframe of rolled-up results and an error string.
@@ -1102,6 +1103,14 @@ def export_rollup_from_db(
         "count_item_type",
         "count",
     ]
+
+    if include_party_column:
+        columns.append("party")
+        select_party = ', p."Name" party'
+        group_and_order_by += """, p."Name" """
+    else:
+        select_party = ""
+
     if contest_type == "Candidate":
         q = sql.SQL(
             """
@@ -1111,13 +1120,15 @@ def export_rollup_from_db(
             Cand."BallotName" "Selection",
             IntermediateRU."Name" "ReportingUnit",
             {count_item_type_sql} "CountItemType",
-            sum(vc."Count") "Count"
+            sum(vc."Count") "Count" 
+            {select_party}
         FROM "VoteCount" vc
         LEFT JOIN _datafile d on vc."_datafile_Id" = d."Id"
         LEFT JOIN "Contest" C on vc."Contest_Id" = C."Id"
         LEFT JOIN "CandidateSelection" CS on CS."Id" = vc."Selection_Id"
         LEFT JOIN "Candidate" Cand on CS."Candidate_Id" = Cand."Id"
         LEFT JOIN "Election" e on vc."Election_Id" = e."Id"
+        LEFT JOIN "Party" p on cs."Party_Id" = p."Id"
         -- sum over all children
         LEFT JOIN "ReportingUnit" ChildRU on vc."ReportingUnit_Id" = ChildRU."Id"
         LEFT JOIN "ComposingReportingUnitJoin" CRUJ_sum on ChildRU."Id" = CRUJ_sum."ChildReportingUnit_Id"
@@ -1146,6 +1157,7 @@ def export_rollup_from_db(
             by=sql.Identifier(by),
             group_and_order_by=sql.SQL(group_and_order_by),
             restrict=sql.SQL(restrict),
+            select_party=sql.SQL(select_party)
         )
 
     elif contest_type == "BallotMeasure":

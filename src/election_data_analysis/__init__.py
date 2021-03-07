@@ -1471,13 +1471,20 @@ class Analyzer:
         )
         return xml_string
 
-    def diff_in_diff(self, election: str) -> pd.DataFrame:
+    def diff_in_diff(self,
+                     election: str,
+                     state_by_state_export: bool = False,
+                     ) -> (pd.DataFrame, list):
         """for each jurisdiction in the election that has more than just 'total',
         Calculate all possible diff-in-diff values per Herron
         http://doi.org/10.1089/elj.2019.0544.
         Return df with columns election, overall jurisdiction, county-type jurisdiction,
         election district type, contest-pair, vote-type pair, diff-in-diff value"""
 
+        party_list = ["Democratic Party", "Republican Party"]
+        missing = list()    # track items missing info for diff-in-diff calculation
+        rows = list()       # collects rows for output dataframe
+        cols = ["county", "district_type", "party", "contest_pair", "vote_type_pair", "diff_in_diff"]
         # TODO tech debt works for candidate contests only
 
         # TODO: tech debt code treats 'other' like county or any county-like ru-type,
@@ -1494,6 +1501,7 @@ class Analyzer:
         )
         # loop through states, etc.
         for state in vts.keys():
+            state_rows = list()
             # get vote-types, contest roll-up by vote type and contest-by-election-district types
             data_file_list, _ = db.data_file_list(self.session, election_id)
             vote_types = {x for x in vts[state] if x != "total"}
@@ -1525,34 +1533,66 @@ class Analyzer:
                 data_file_list,
                 exclude_redundant_total=True,
                 by_vote_type=True,
+                include_party_column=True
             )
+            # loop through counties
+            for county in res.reporting_unit.unique():
 
-
-            # loop through vote-type pairs
-            for vt_pair in itertools.combinations(vote_types,2):
-                # loop through counties
-                for county in res.reporting_unit.unique():
-                    # loop through contest district types (congressional, state-house, statewide)
-                    for cdt in district_types.ReportingUnitType.unique():
-                        # TODO find set of contests of that type in that county
-                        good_dt_contests = contests_df[
-                            (contests_df.jurisdiction == state)
-                            & (contests_df.ReportingUnitType == cdt)
-                        ]["contest"].unique()
-                        good_dt_contests_results = res[
-                            (res.reporting_unit == county)
-                            & (res.contest.isin(good_dt_contests))
-                        ]
-                        # TODO tech debt: this calc is done multiple times (once for each vt pair)
-                        good_contest_list = good_dt_contests_results.contest.unique()
-                        if len(good_contest_list) > 1:
+                # loop through contest district types (congressional, state-house, statewide)
+                for cdt in district_types.ReportingUnitType.unique():
+                    # find set of contests of that type in that county with candidates from all parties on party_list
+                    good_dt_contests = contests_df[
+                        (contests_df.jurisdiction == state)
+                        & (contests_df.ReportingUnitType == cdt)
+                    ]["contest"].unique()
+                    good_dt_contests_results = res[
+                        (res.reporting_unit == county)
+                        & (res.contest.isin(good_dt_contests))
+                    ][["contest", "selection", "party", "count_item_type", "count"]]
+                    good_contest_list = [
+                        c for c in good_dt_contests_results.contest.unique()
+                        if all([p in res[res.contest==c]["party"].unique() for p in party_list])
+                    ]
+                    # create dataframe with convenient index for calculations below
+                    if len(good_contest_list) > 1:
+                        ww = good_dt_contests_results.copy()[["contest","party","count_item_type","count"]].set_index(
+                            ["contest","party","count_item_type"]
+                        )
+                        ww['vote_type_total'] = ww.groupby(["contest","count_item_type"]).transform('sum')
+                        ww['pct_of_vote_type'] = ww["count"] / ww["vote_type_total"]
+                        ww.sort_index(inplace=True)  # sorting index helps performance
+                        # loop through vote-type pairs
+                        for vt_pair in itertools.combinations(vote_types,2):
                             # loop through contest-pairs in county
-                            for cp in itertools(good_contest_list, 2):
-                                # TODO append diff-in-diff row
-                                continue
+                            for con_pair in itertools.combinations(good_contest_list, 2):
+                                for party in party_list:
+                                    ok = True
+                                    pct = dict()
+                                    for i in (0,1):
+                                        pct[i] = dict()
+                                        for j in (0,1):
+                                            try:
+                                                pct[i][j] = ww.loc[
+                                                    (con_pair[i], party, vt_pair[j]),"pct_of_vote_type"
+                                                ]
+                                                if not isinstance(pct[i][j], float):
+                                                    ok = False
+                                                    missing.append([county, con_pair[i], party, vt_pair[j], "non-numeric"])
+                                            except KeyError as ke:
+                                                ok = False
+                                                missing.append([county, con_pair[i], party, vt_pair[j], ke])
+                                    if ok:
+                                        # append diff-in-diff row
+                                        did = abs(pct[0][0] - pct[0][1]) - abs(pct[1][0] - pct[1][1])
+                                        state_rows.append([
+                                           county, cdt, party, con_pair, vt_pair, did
+                                        ])
+            rows += state_rows
+            state_with_hyphens = state.replace(" ","-")
+            pd.DataFrame(state_rows, columns=cols).to_csv(f"{state_with_hyphens}_state_export.csv", index=False)
 
-        diff_in_diff = pd.DataFrame()
-        return diff_in_diff
+        diff_in_diff = pd.DataFrame(rows, columns=cols)
+        return diff_in_diff, missing
 
 def aggregate_results(
     election,
@@ -1923,9 +1963,6 @@ def create_from_template(template_file, target_file, replace_dict):
         contents = contents.replace(k, replace_dict[k])
     with open(target_file, "w") as f:
         f.write(contents)
-
-
-
 
 
 def create_from_template(template_file, target_file, replace_dict):
