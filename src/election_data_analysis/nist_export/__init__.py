@@ -19,10 +19,7 @@ schema_location = "https://github.com/usnistgov/ElectionResultsReporting/raw/ver
 namespace = "http://itl.nist.gov/ns/voting/1500-100/v2"
 
 
-
-
-
-def nist_xml_export_tree(
+def nist_v2_xml_export_tree(
         session: Session,
         election: str,
         jurisdiction: str,
@@ -31,10 +28,10 @@ def nist_xml_export_tree(
         status: str = default_status,
         vendor_application_id: str = default_vendor_application_id
 ) -> et.ElementTree:
-    """Creates a tree in the NIST common data format containing the results
+    """Creates a tree in the NIST common data format (V2) containing the results
     from the given election and jurisdiction. Note that all available results will
     be exported. I.e., if database has precinct-level results, the tree will
-    contain precinct-level results."""
+    contain precinct-level results. See"""
     # set up
     election_id = db.name_to_id(session, "Election", election)
     jurisdiction_id = db.name_to_id(session, "ReportingUnit", jurisdiction)
@@ -193,10 +190,10 @@ def nist_xml_export_tree(
 
 
 def read_vote_count_nist(
-    session,
-    election_id,
-    reporting_unit_id,
-):
+    session: Session,
+    election_id: int,
+    reporting_unit_id: int,
+) ->  pd.DataFrame:
     """The VoteCount table is the only place that maps contests to a specific
     election. But this table is the largest one, so we don't want to use pandas methods
     to read into a DF and then filter"""
@@ -246,3 +243,11 @@ def read_vote_count_nist(
     return results_df
 
 
+def read_vote_count_nist_NEW(
+        session: Session,
+        election: str,
+        jurisdiction: str,
+        subunit_type: str = "county",
+) -> pd.DataFrame:
+
+    return results_df

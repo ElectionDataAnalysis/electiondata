@@ -1460,7 +1460,7 @@ class Analyzer:
 
     def export_nist(self, election: str, jurisdiction: str) -> str:
         xml_string = et.tostring(
-            nist.nist_xml_export_tree(
+            nist.nist_v2_xml_export_tree(
                 self.session, election, jurisdiction,
                 issuer=nist.default_issuer,
                 issuer_abbreviation=nist.default_issuer_abbreviation,
