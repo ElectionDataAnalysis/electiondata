@@ -1113,7 +1113,6 @@ CandidateContest	US House MT District 1 (Green Party)	UNITED STATES REPRESENTATI
 CandidateContest	US President (MT) (Green Party)	PRESIDENT (GRN)
 CandidateContest	MT Governor (Green Party)	GOVERNOR & LT. GOVERNOR (GRN)
 CandidateContest	US Senate MT (Green Party)	UNITED STATES SENATOR (GRN)
-
 CandidateContest	MT State Auditor (Green Party)	STATE AUDITOR (GRN)
 CandidateContest	MT State Superintendent (Green Party)	STATE SUPERINTENDENT OF PUBLIC INSTRUCTION (GRN)
 CandidateContest	MT Attorney General (Green Party)	ATTORNEY GENERAL (GRN)
@@ -1274,7 +1273,6 @@ CandidateContest	US House MT District 1 (Libertarian Party)	UNITED STATES REPRES
 CandidateContest	US President (MT) (Libertarian Party)	PRESIDENT (Libertarian Party)
 CandidateContest	MT Governor (Libertarian Party)	GOVERNOR & LT. GOVERNOR (Libertarian Party)
 CandidateContest	US Senate MT (Libertarian Party)	UNITED STATES SENATOR (Libertarian Party)
-
 CandidateContest	MT State Auditor (Libertarian Party)	STATE AUDITOR (Libertarian Party)
 CandidateContest	MT State Superintendent (Libertarian Party)	STATE SUPERINTENDENT OF PUBLIC INSTRUCTION (Libertarian Party)
 CandidateContest	MT Attorney General (Libertarian Party)	ATTORNEY GENERAL (Libertarian Party)
@@ -1435,7 +1433,6 @@ CandidateContest	US House MT District 1	UNITED STATES REPRESENTATIVE
 CandidateContest	US President (MT)	PRESIDENT
 CandidateContest	MT Governor	GOVERNOR & LT. GOVERNOR
 CandidateContest	US Senate MT	UNITED STATES SENATOR
-
 CandidateContest	MT State Auditor	STATE AUDITOR
 CandidateContest	MT State Superintendent	STATE SUPERINTENDENT OF PUBLIC INSTRUCTION
 CandidateContest	MT Attorney General	ATTORNEY GENERAL
@@ -1684,12 +1681,12 @@ Candidate	John Evankovich	John Evankovich
 Candidate	Debra Lamm	Debra Lamm
 Candidate	Mark J. Mcginley	Mark J. Mcginley
 Candidate	Matt Rosendale	Matt Rosendale
-Candidate	Mike Cooney And Casey Schreiner	Mike Cooney And Casey Schreiner
-Candidate	Whitney Williams And Buzz Mattelin	Whitney Williams And Buzz Mattelin
-Candidate	Robert Barb And Joshua Thomas	Robert Barb And Joshua Thomas
-Candidate	Tim Fox And Jon Knokey	Tim Fox And Jon Knokey
-Candidate	Al 'Doc' Olszewski And Ken Bogner	Al 'Doc' Olszewski And Ken Bogner
-Candidate	Greg Gianforte And Kristen Juras	Greg Gianforte And Kristen Juras
+Candidate	Mike Cooney	Mike Cooney And Casey Schreiner
+Candidate	Whitney Williams	Whitney Williams And Buzz Mattelin
+Candidate	Robert Barb	Robert Barb And Joshua Thomas
+Candidate	Tim Fox	Tim Fox And Jon Knokey
+Candidate	Al 'Doc' Olszewski	Al 'Doc' Olszewski And Ken Bogner
+Candidate	Greg Gianforte	Greg Gianforte And Kristen Juras
 Candidate	Bryce Bennett	Bryce Bennett
 Candidate	Brad Johnson	Brad Johnson
 Candidate	Kurt Johnson	Kurt Johnson
@@ -2338,5 +2335,3 @@ CandidateContest	MT State Auditor	STATE AUDITOR 9066
 CandidateContest	MT Secretary of State	SECRETARY OF STATE 9067
 CandidateContest	US Senate MT	UNITED STATES SENATOR 9061
 CandidateContest	US House MT District 1	UNITED STATES REPRESENTAT 9062
-Candidate	Mike Cooney	Mike Cooney And Casey Schreiner
-Candidate	Greg Gianforte	Greg Gianforte And Kristen Juras
