@@ -1196,8 +1196,8 @@ def export_rollup_from_db(
     ).format(
         count_item_type_sql=count_item_type_sql,
         by=sql.Identifier(by),
-        group_and_order_by=sql.SQL(group_and_order_by),
-        restrict=sql.SQL(restrict),
+        group_and_order_by=group_and_order_by,
+        restrict=restrict,
         selection=selection,
         selection_join=selection_join,
         election_district_join=election_district_join,
