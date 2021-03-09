@@ -1,5 +1,6 @@
 cdf_element	cdf_internal_name	raw_identifier_value
 CandidateContest	NC Supreme Court Chief Justice	NC SUPREME COURT CHIEF JUSTICE SEAT 01
+CandidateContest	NC Supreme Court Chief Justice	NC Supreme Court Chief Justice
 CandidateContest	NC House District 1 (Democratic Party)	NC HOUSE OF REPRESENTATIVES DISTRICT 001 (DEM)
 CandidateContest	NC House District 2 (Democratic Party)	NC HOUSE OF REPRESENTATIVES DISTRICT 002 (DEM)
 CandidateContest	NC House District 3 (Democratic Party)	NC HOUSE OF REPRESENTATIVES DISTRICT 003 (DEM)
@@ -1231,208 +1232,310 @@ CandidateContest	NC Commissioner of Labor (Constitution Party)	NC COMMISSIONER O
 CandidateContest	NC Auditor (Constitution Party)	NC AUDITOR (CST)
 CandidateContest	NC Secretary of State (Constitution Party)	NC SECRETARY OF STATE (CST)
 CandidateContest	NC House District 1	NC HOUSE OF REPRESENTATIVES DISTRICT 001
+CandidateContest	NC House District 1	NC House District 1
 CandidateContest	NC House District 2	NC HOUSE OF REPRESENTATIVES DISTRICT 002
 CandidateContest	NC House District 3	NC HOUSE OF REPRESENTATIVES DISTRICT 003
+CandidateContest	NC House District 3	NC House District 3
 CandidateContest	NC House District 4	NC HOUSE OF REPRESENTATIVES DISTRICT 004
 CandidateContest	NC House District 5	NC HOUSE OF REPRESENTATIVES DISTRICT 005
+CandidateContest	NC House District 5	NC House District 5
 CandidateContest	NC House District 6	NC HOUSE OF REPRESENTATIVES DISTRICT 006
 CandidateContest	NC House District 7	NC HOUSE OF REPRESENTATIVES DISTRICT 007
+CandidateContest	NC House District 7	NC House District 7
 CandidateContest	NC House District 8	NC HOUSE OF REPRESENTATIVES DISTRICT 008
 CandidateContest	NC House District 9	NC HOUSE OF REPRESENTATIVES DISTRICT 009
+CandidateContest	NC House District 9	NC House District 9
 CandidateContest	NC House District 10	NC HOUSE OF REPRESENTATIVES DISTRICT 010
 CandidateContest	NC House District 11	NC HOUSE OF REPRESENTATIVES DISTRICT 011
+CandidateContest	NC House District 11	NC House District 11
 CandidateContest	NC House District 12	NC HOUSE OF REPRESENTATIVES DISTRICT 012
 CandidateContest	NC House District 13	NC HOUSE OF REPRESENTATIVES DISTRICT 013
+CandidateContest	NC House District 13	NC House District 13
 CandidateContest	NC House District 14	NC HOUSE OF REPRESENTATIVES DISTRICT 014
 CandidateContest	NC House District 15	NC HOUSE OF REPRESENTATIVES DISTRICT 015
+CandidateContest	NC House District 15	NC House District 15
 CandidateContest	NC House District 16	NC HOUSE OF REPRESENTATIVES DISTRICT 016
 CandidateContest	NC House District 17	NC HOUSE OF REPRESENTATIVES DISTRICT 017
+CandidateContest	NC House District 17	NC House District 17
 CandidateContest	NC House District 18	NC HOUSE OF REPRESENTATIVES DISTRICT 018
 CandidateContest	NC House District 19	NC HOUSE OF REPRESENTATIVES DISTRICT 019
+CandidateContest	NC House District 19	NC House District 19
 CandidateContest	NC House District 20	NC HOUSE OF REPRESENTATIVES DISTRICT 020
 CandidateContest	NC House District 21	NC HOUSE OF REPRESENTATIVES DISTRICT 021
+CandidateContest	NC House District 21	NC House District 21
 CandidateContest	NC House District 22	NC HOUSE OF REPRESENTATIVES DISTRICT 022
 CandidateContest	NC House District 23	NC HOUSE OF REPRESENTATIVES DISTRICT 023
+CandidateContest	NC House District 23	NC House District 23
 CandidateContest	NC House District 24	NC HOUSE OF REPRESENTATIVES DISTRICT 024
 CandidateContest	NC House District 25	NC HOUSE OF REPRESENTATIVES DISTRICT 025
+CandidateContest	NC House District 25	NC House District 25
 CandidateContest	NC House District 26	NC HOUSE OF REPRESENTATIVES DISTRICT 026
 CandidateContest	NC House District 27	NC HOUSE OF REPRESENTATIVES DISTRICT 027
+CandidateContest	NC House District 27	NC House District 27
 CandidateContest	NC House District 28	NC HOUSE OF REPRESENTATIVES DISTRICT 028
 CandidateContest	NC House District 29	NC HOUSE OF REPRESENTATIVES DISTRICT 029
+CandidateContest	NC House District 29	NC House District 29
 CandidateContest	NC House District 30	NC HOUSE OF REPRESENTATIVES DISTRICT 030
 CandidateContest	NC House District 31	NC HOUSE OF REPRESENTATIVES DISTRICT 031
+CandidateContest	NC House District 31	NC House District 31
 CandidateContest	NC House District 32	NC HOUSE OF REPRESENTATIVES DISTRICT 032
 CandidateContest	NC House District 33	NC HOUSE OF REPRESENTATIVES DISTRICT 033
+CandidateContest	NC House District 33	NC House District 33
 CandidateContest	NC House District 34	NC HOUSE OF REPRESENTATIVES DISTRICT 034
 CandidateContest	NC House District 35	NC HOUSE OF REPRESENTATIVES DISTRICT 035
+CandidateContest	NC House District 35	NC House District 35
 CandidateContest	NC House District 36	NC HOUSE OF REPRESENTATIVES DISTRICT 036
 CandidateContest	NC House District 37	NC HOUSE OF REPRESENTATIVES DISTRICT 037
+CandidateContest	NC House District 37	NC House District 37
 CandidateContest	NC House District 38	NC HOUSE OF REPRESENTATIVES DISTRICT 038
 CandidateContest	NC House District 39	NC HOUSE OF REPRESENTATIVES DISTRICT 039
+CandidateContest	NC House District 39	NC House District 39
 CandidateContest	NC House District 40	NC HOUSE OF REPRESENTATIVES DISTRICT 040
 CandidateContest	NC House District 41	NC HOUSE OF REPRESENTATIVES DISTRICT 041
+CandidateContest	NC House District 41	NC House District 41
 CandidateContest	NC House District 42	NC HOUSE OF REPRESENTATIVES DISTRICT 042
 CandidateContest	NC House District 43	NC HOUSE OF REPRESENTATIVES DISTRICT 043
+CandidateContest	NC House District 43	NC House District 43
 CandidateContest	NC House District 44	NC HOUSE OF REPRESENTATIVES DISTRICT 044
 CandidateContest	NC House District 45	NC HOUSE OF REPRESENTATIVES DISTRICT 045
+CandidateContest	NC House District 45	NC House District 45
 CandidateContest	NC House District 46	NC HOUSE OF REPRESENTATIVES DISTRICT 046
 CandidateContest	NC House District 47	NC HOUSE OF REPRESENTATIVES DISTRICT 047
+CandidateContest	NC House District 47	NC House District 47
 CandidateContest	NC House District 48	NC HOUSE OF REPRESENTATIVES DISTRICT 048
 CandidateContest	NC House District 49	NC HOUSE OF REPRESENTATIVES DISTRICT 049
+CandidateContest	NC House District 49	NC House District 49
 CandidateContest	NC House District 50	NC HOUSE OF REPRESENTATIVES DISTRICT 050
 CandidateContest	NC House District 51	NC HOUSE OF REPRESENTATIVES DISTRICT 051
+CandidateContest	NC House District 51	NC House District 51
 CandidateContest	NC House District 52	NC HOUSE OF REPRESENTATIVES DISTRICT 052
 CandidateContest	NC House District 53	NC HOUSE OF REPRESENTATIVES DISTRICT 053
+CandidateContest	NC House District 53	NC House District 53
 CandidateContest	NC House District 54	NC HOUSE OF REPRESENTATIVES DISTRICT 054
 CandidateContest	NC House District 55	NC HOUSE OF REPRESENTATIVES DISTRICT 055
+CandidateContest	NC House District 55	NC House District 55
 CandidateContest	NC House District 56	NC HOUSE OF REPRESENTATIVES DISTRICT 056
 CandidateContest	NC House District 57	NC HOUSE OF REPRESENTATIVES DISTRICT 057
+CandidateContest	NC House District 57	NC House District 57
 CandidateContest	NC House District 58	NC HOUSE OF REPRESENTATIVES DISTRICT 058
 CandidateContest	NC House District 59	NC HOUSE OF REPRESENTATIVES DISTRICT 059
+CandidateContest	NC House District 59	NC House District 59
 CandidateContest	NC House District 60	NC HOUSE OF REPRESENTATIVES DISTRICT 060
 CandidateContest	NC House District 61	NC HOUSE OF REPRESENTATIVES DISTRICT 061
+CandidateContest	NC House District 61	NC House District 61
 CandidateContest	NC House District 62	NC HOUSE OF REPRESENTATIVES DISTRICT 062
 CandidateContest	NC House District 63	NC HOUSE OF REPRESENTATIVES DISTRICT 063
+CandidateContest	NC House District 63	NC House District 63
 CandidateContest	NC House District 64	NC HOUSE OF REPRESENTATIVES DISTRICT 064
 CandidateContest	NC House District 65	NC HOUSE OF REPRESENTATIVES DISTRICT 065
+CandidateContest	NC House District 65	NC House District 65
 CandidateContest	NC House District 66	NC HOUSE OF REPRESENTATIVES DISTRICT 066
 CandidateContest	NC House District 67	NC HOUSE OF REPRESENTATIVES DISTRICT 067
+CandidateContest	NC House District 67	NC House District 67
 CandidateContest	NC House District 68	NC HOUSE OF REPRESENTATIVES DISTRICT 068
 CandidateContest	NC House District 69	NC HOUSE OF REPRESENTATIVES DISTRICT 069
+CandidateContest	NC House District 69	NC House District 69
 CandidateContest	NC House District 70	NC HOUSE OF REPRESENTATIVES DISTRICT 070
 CandidateContest	NC House District 71	NC HOUSE OF REPRESENTATIVES DISTRICT 071
+CandidateContest	NC House District 71	NC House District 71
 CandidateContest	NC House District 72	NC HOUSE OF REPRESENTATIVES DISTRICT 072
 CandidateContest	NC House District 73	NC HOUSE OF REPRESENTATIVES DISTRICT 073
+CandidateContest	NC House District 73	NC House District 73
 CandidateContest	NC House District 74	NC HOUSE OF REPRESENTATIVES DISTRICT 074
 CandidateContest	NC House District 75	NC HOUSE OF REPRESENTATIVES DISTRICT 075
+CandidateContest	NC House District 75	NC House District 75
 CandidateContest	NC House District 76	NC HOUSE OF REPRESENTATIVES DISTRICT 076
 CandidateContest	NC House District 77	NC HOUSE OF REPRESENTATIVES DISTRICT 077
+CandidateContest	NC House District 77	NC House District 77
 CandidateContest	NC House District 78	NC HOUSE OF REPRESENTATIVES DISTRICT 078
 CandidateContest	NC House District 79	NC HOUSE OF REPRESENTATIVES DISTRICT 079
+CandidateContest	NC House District 79	NC House District 79
 CandidateContest	NC House District 80	NC HOUSE OF REPRESENTATIVES DISTRICT 080
 CandidateContest	NC House District 81	NC HOUSE OF REPRESENTATIVES DISTRICT 081
+CandidateContest	NC House District 81	NC House District 81
 CandidateContest	NC House District 82	NC HOUSE OF REPRESENTATIVES DISTRICT 082
 CandidateContest	NC House District 83	NC HOUSE OF REPRESENTATIVES DISTRICT 083
+CandidateContest	NC House District 83	NC House District 83
 CandidateContest	NC House District 84	NC HOUSE OF REPRESENTATIVES DISTRICT 084
 CandidateContest	NC House District 85	NC HOUSE OF REPRESENTATIVES DISTRICT 085
+CandidateContest	NC House District 85	NC House District 85
 CandidateContest	NC House District 86	NC HOUSE OF REPRESENTATIVES DISTRICT 086
 CandidateContest	NC House District 87	NC HOUSE OF REPRESENTATIVES DISTRICT 087
+CandidateContest	NC House District 87	NC House District 87
 CandidateContest	NC House District 88	NC HOUSE OF REPRESENTATIVES DISTRICT 088
 CandidateContest	NC House District 89	NC HOUSE OF REPRESENTATIVES DISTRICT 089
+CandidateContest	NC House District 89	NC House District 89
 CandidateContest	NC House District 90	NC HOUSE OF REPRESENTATIVES DISTRICT 090
 CandidateContest	NC House District 91	NC HOUSE OF REPRESENTATIVES DISTRICT 091
+CandidateContest	NC House District 91	NC House District 91
 CandidateContest	NC House District 92	NC HOUSE OF REPRESENTATIVES DISTRICT 092
 CandidateContest	NC House District 93	NC HOUSE OF REPRESENTATIVES DISTRICT 093
+CandidateContest	NC House District 93	NC House District 93
 CandidateContest	NC House District 94	NC HOUSE OF REPRESENTATIVES DISTRICT 094
 CandidateContest	NC House District 95	NC HOUSE OF REPRESENTATIVES DISTRICT 095
+CandidateContest	NC House District 95	NC House District 95
 CandidateContest	NC House District 96	NC HOUSE OF REPRESENTATIVES DISTRICT 096
 CandidateContest	NC House District 97	NC HOUSE OF REPRESENTATIVES DISTRICT 097
+CandidateContest	NC House District 97	NC House District 97
 CandidateContest	NC House District 98	NC HOUSE OF REPRESENTATIVES DISTRICT 098
 CandidateContest	NC House District 99	NC HOUSE OF REPRESENTATIVES DISTRICT 099
+CandidateContest	NC House District 99	NC House District 99
 CandidateContest	NC House District 100	NC HOUSE OF REPRESENTATIVES DISTRICT 100
 CandidateContest	NC House District 101	NC HOUSE OF REPRESENTATIVES DISTRICT 101
+CandidateContest	NC House District 101	NC House District 101
 CandidateContest	NC House District 102	NC HOUSE OF REPRESENTATIVES DISTRICT 102
 CandidateContest	NC House District 103	NC HOUSE OF REPRESENTATIVES DISTRICT 103
+CandidateContest	NC House District 103	NC House District 103
 CandidateContest	NC House District 104	NC HOUSE OF REPRESENTATIVES DISTRICT 104
 CandidateContest	NC House District 105	NC HOUSE OF REPRESENTATIVES DISTRICT 105
+CandidateContest	NC House District 105	NC House District 105
 CandidateContest	NC House District 106	NC HOUSE OF REPRESENTATIVES DISTRICT 106
 CandidateContest	NC House District 107	NC HOUSE OF REPRESENTATIVES DISTRICT 107
+CandidateContest	NC House District 107	NC House District 107
 CandidateContest	NC House District 108	NC HOUSE OF REPRESENTATIVES DISTRICT 108
 CandidateContest	NC House District 109	NC HOUSE OF REPRESENTATIVES DISTRICT 109
+CandidateContest	NC House District 109	NC House District 109
 CandidateContest	NC House District 110	NC HOUSE OF REPRESENTATIVES DISTRICT 110
 CandidateContest	NC House District 111	NC HOUSE OF REPRESENTATIVES DISTRICT 111
+CandidateContest	NC House District 111	NC House District 111
 CandidateContest	NC House District 112	NC HOUSE OF REPRESENTATIVES DISTRICT 112
 CandidateContest	NC House District 113	NC HOUSE OF REPRESENTATIVES DISTRICT 113
+CandidateContest	NC House District 113	NC House District 113
 CandidateContest	NC House District 114	NC HOUSE OF REPRESENTATIVES DISTRICT 114
 CandidateContest	NC House District 115	NC HOUSE OF REPRESENTATIVES DISTRICT 115
+CandidateContest	NC House District 115	NC House District 115
 CandidateContest	NC House District 116	NC HOUSE OF REPRESENTATIVES DISTRICT 116
 CandidateContest	NC House District 117	NC HOUSE OF REPRESENTATIVES DISTRICT 117
+CandidateContest	NC House District 117	NC House District 117
 CandidateContest	NC House District 118	NC HOUSE OF REPRESENTATIVES DISTRICT 118
 CandidateContest	NC House District 119	NC HOUSE OF REPRESENTATIVES DISTRICT 119
+CandidateContest	NC House District 119	NC House District 119
 CandidateContest	NC House District 120	NC HOUSE OF REPRESENTATIVES DISTRICT 120
 CandidateContest	NC Senate District 1	NC STATE SENATE DISTRICT 01
+CandidateContest	NC Senate District 1	NC Senate District 1
 CandidateContest	NC Senate District 2	NC STATE SENATE DISTRICT 02
 CandidateContest	NC Senate District 3	NC STATE SENATE DISTRICT 03
+CandidateContest	NC Senate District 3	NC Senate District 3
 CandidateContest	NC Senate District 4	NC STATE SENATE DISTRICT 04
 CandidateContest	NC Senate District 5	NC STATE SENATE DISTRICT 05
+CandidateContest	NC Senate District 5	NC Senate District 5
 CandidateContest	NC Senate District 6	NC STATE SENATE DISTRICT 06
 CandidateContest	NC Senate District 7	NC STATE SENATE DISTRICT 07
+CandidateContest	NC Senate District 7	NC Senate District 7
 CandidateContest	NC Senate District 8	NC STATE SENATE DISTRICT 08
 CandidateContest	NC Senate District 9	NC STATE SENATE DISTRICT 09
+CandidateContest	NC Senate District 9	NC Senate District 9
 CandidateContest	NC Senate District 10	NC STATE SENATE DISTRICT 10
 CandidateContest	NC Senate District 11	NC STATE SENATE DISTRICT 11
+CandidateContest	NC Senate District 11	NC Senate District 11
 CandidateContest	NC Senate District 12	NC STATE SENATE DISTRICT 12
 CandidateContest	NC Senate District 13	NC STATE SENATE DISTRICT 13
+CandidateContest	NC Senate District 13	NC Senate District 13
 CandidateContest	NC Senate District 14	NC STATE SENATE DISTRICT 14
 CandidateContest	NC Senate District 15	NC STATE SENATE DISTRICT 15
+CandidateContest	NC Senate District 15	NC Senate District 15
 CandidateContest	NC Senate District 16	NC STATE SENATE DISTRICT 16
 CandidateContest	NC Senate District 17	NC STATE SENATE DISTRICT 17
+CandidateContest	NC Senate District 17	NC Senate District 17
 CandidateContest	NC Senate District 18	NC STATE SENATE DISTRICT 18
 CandidateContest	NC Senate District 19	NC STATE SENATE DISTRICT 19
+CandidateContest	NC Senate District 19	NC Senate District 19
 CandidateContest	NC Senate District 20	NC STATE SENATE DISTRICT 20
 CandidateContest	NC Senate District 21	NC STATE SENATE DISTRICT 21
+CandidateContest	NC Senate District 21	NC Senate District 21
 CandidateContest	NC Senate District 22	NC STATE SENATE DISTRICT 22
 CandidateContest	NC Senate District 23	NC STATE SENATE DISTRICT 23
+CandidateContest	NC Senate District 23	NC Senate District 23
 CandidateContest	NC Senate District 24	NC STATE SENATE DISTRICT 24
 CandidateContest	NC Senate District 25	NC STATE SENATE DISTRICT 25
+CandidateContest	NC Senate District 25	NC Senate District 25
 CandidateContest	NC Senate District 26	NC STATE SENATE DISTRICT 26
 CandidateContest	NC Senate District 27	NC STATE SENATE DISTRICT 27
+CandidateContest	NC Senate District 27	NC Senate District 27
 CandidateContest	NC Senate District 28	NC STATE SENATE DISTRICT 28
 CandidateContest	NC Senate District 29	NC STATE SENATE DISTRICT 29
+CandidateContest	NC Senate District 29	NC Senate District 29
 CandidateContest	NC Senate District 30	NC STATE SENATE DISTRICT 30
 CandidateContest	NC Senate District 31	NC STATE SENATE DISTRICT 31
+CandidateContest	NC Senate District 31	NC Senate District 31
 CandidateContest	NC Senate District 32	NC STATE SENATE DISTRICT 32
 CandidateContest	NC Senate District 33	NC STATE SENATE DISTRICT 33
+CandidateContest	NC Senate District 33	NC Senate District 33
 CandidateContest	NC Senate District 34	NC STATE SENATE DISTRICT 34
 CandidateContest	NC Senate District 35	NC STATE SENATE DISTRICT 35
+CandidateContest	NC Senate District 35	NC Senate District 35
 CandidateContest	NC Senate District 36	NC STATE SENATE DISTRICT 36
 CandidateContest	NC Senate District 37	NC STATE SENATE DISTRICT 37
+CandidateContest	NC Senate District 37	NC Senate District 37
 CandidateContest	NC Senate District 38	NC STATE SENATE DISTRICT 38
 CandidateContest	NC Senate District 39	NC STATE SENATE DISTRICT 39
+CandidateContest	NC Senate District 39	NC Senate District 39
 CandidateContest	NC Senate District 40	NC STATE SENATE DISTRICT 40
 CandidateContest	NC Senate District 41	NC STATE SENATE DISTRICT 41
+CandidateContest	NC Senate District 41	NC Senate District 41
 CandidateContest	NC Senate District 42	NC STATE SENATE DISTRICT 42
 CandidateContest	NC Senate District 43	NC STATE SENATE DISTRICT 43
+CandidateContest	NC Senate District 43	NC Senate District 43
 CandidateContest	NC Senate District 44	NC STATE SENATE DISTRICT 44
 CandidateContest	NC Senate District 45	NC STATE SENATE DISTRICT 45
+CandidateContest	NC Senate District 45	NC Senate District 45
 CandidateContest	NC Senate District 46	NC STATE SENATE DISTRICT 46
 CandidateContest	NC Senate District 47	NC STATE SENATE DISTRICT 47
+CandidateContest	NC Senate District 47	NC Senate District 47
 CandidateContest	NC Senate District 48	NC STATE SENATE DISTRICT 48
 CandidateContest	NC Senate District 49	NC STATE SENATE DISTRICT 49
+CandidateContest	NC Senate District 49	NC Senate District 49
 CandidateContest	NC Senate District 50	NC STATE SENATE DISTRICT 50
 CandidateContest	US House NC District 1	US HOUSE OF REPRESENTATIVES DISTRICT 1
+CandidateContest	US House NC District 1	US House NC District 1
 CandidateContest	US House NC District 1	US HOUSE OF REPRESENTATIVES DISTRICT 01
 CandidateContest	US House NC District 2	US HOUSE OF REPRESENTATIVES DISTRICT 2
+CandidateContest	US House NC District 2	US House NC District 2
 CandidateContest	US House NC District 2	US HOUSE OF REPRESENTATIVES DISTRICT 02
 CandidateContest	US House NC District 3	US HOUSE OF REPRESENTATIVES DISTRICT 3
+CandidateContest	US House NC District 3	US House NC District 3
 CandidateContest	US House NC District 3	US HOUSE OF REPRESENTATIVES DISTRICT 03
 CandidateContest	US House NC District 4	US HOUSE OF REPRESENTATIVES DISTRICT 4
+CandidateContest	US House NC District 4	US House NC District 4
 CandidateContest	US House NC District 4	US HOUSE OF REPRESENTATIVES DISTRICT 04
 CandidateContest	US House NC District 5	US HOUSE OF REPRESENTATIVES DISTRICT 5
+CandidateContest	US House NC District 5	US House NC District 5
 CandidateContest	US House NC District 5	US HOUSE OF REPRESENTATIVES DISTRICT 05
 CandidateContest	US House NC District 6	US HOUSE OF REPRESENTATIVES DISTRICT 6
+CandidateContest	US House NC District 6	US House NC District 6
 CandidateContest	US House NC District 6	US HOUSE OF REPRESENTATIVES DISTRICT 06
 CandidateContest	US House NC District 7	US HOUSE OF REPRESENTATIVES DISTRICT 7
+CandidateContest	US House NC District 7	US House NC District 7
 CandidateContest	US House NC District 7	US HOUSE OF REPRESENTATIVES DISTRICT 07
 CandidateContest	US House NC District 8	US HOUSE OF REPRESENTATIVES DISTRICT 8
+CandidateContest	US House NC District 8	US House NC District 8
 CandidateContest	US House NC District 8	US HOUSE OF REPRESENTATIVES DISTRICT 08
 CandidateContest	US House NC District 9	US HOUSE OF REPRESENTATIVES DISTRICT 9
+CandidateContest	US House NC District 9	US House NC District 9
 CandidateContest	US House NC District 9	US HOUSE OF REPRESENTATIVES DISTRICT 09
 CandidateContest	US House NC District 10	US HOUSE OF REPRESENTATIVES DISTRICT 10
+CandidateContest	US House NC District 10	US House NC District 10
 CandidateContest	US House NC District 11	US HOUSE OF REPRESENTATIVES DISTRICT 11
 CandidateContest	US House NC District 12	US HOUSE OF REPRESENTATIVES DISTRICT 12
+CandidateContest	US House NC District 12	US House NC District 12
 CandidateContest	US House NC District 13	US HOUSE OF REPRESENTATIVES DISTRICT 13
 CandidateContest	US President (NC)	US PRESIDENT
+CandidateContest	US President (NC)	US President (NC)
 CandidateContest	NC Governor	NC GOVERNOR
 CandidateContest	US Senate NC	US SENATE
+CandidateContest	US Senate NC	US Senate NC
 CandidateContest	NC Attorney General	NC ATTORNEY GENERAL
 CandidateContest	NC Lieutenant Governor	NC LIEUTENANT GOVERNOR
+CandidateContest	NC Lieutenant Governor	NC Lieutenant Governor
 CandidateContest	NC Treasurer	NC TREASURER
 CandidateContest	NC Superintendent of Public Instruction	NC SUPERINTENDENT OF PUBLIC INSTRUCTION
+CandidateContest	NC Superintendent of Public Instruction	NC Superintendent of Public Instruction
 CandidateContest	NC Commissioner of Insurance	NC COMMISSIONER OF INSURANCE
 CandidateContest	NC Commissioner of Agriculture	NC COMMISSIONER OF AGRICULTURE
+CandidateContest	NC Commissioner of Agriculture	NC Commissioner of Agriculture
 CandidateContest	NC Commissioner of Labor	NC COMMISSIONER OF LABOR
 CandidateContest	NC Auditor	NC AUDITOR
+CandidateContest	NC Auditor	NC Auditor
 CandidateContest	NC Secretary of State	NC SECRETARY OF STATE
 Election	2020 General	2020 General
 Election	2020 Primary	2020 Primary
@@ -14731,3 +14834,202 @@ Candidate	Cheri Beasley	Cheri Beasley
 Candidate	Theresa (Terri) Everett (Write-In)	Theresa (Terri) Everett (Write-In)
 Candidate	Jade Simmons (Write-In)	Jade Simmons (Write-In)
 Candidate	Darren Joiner (Write-In)	Darren Joiner (Write-In)
+CandidateContest	US House NC District 13	US House NC District 13
+CandidateContest	US House NC District 11	US House NC District 11
+CandidateContest	NC Treasurer	NC Treasurer
+CandidateContest	NC Senate District 8	NC Senate District 8
+CandidateContest	NC Senate District 6	NC Senate District 6
+CandidateContest	NC Senate District 50	NC Senate District 50
+CandidateContest	NC Senate District 48	NC Senate District 48
+CandidateContest	NC Senate District 46	NC Senate District 46
+CandidateContest	NC Senate District 44	NC Senate District 44
+CandidateContest	NC Senate District 42	NC Senate District 42
+CandidateContest	NC Senate District 40	NC Senate District 40
+CandidateContest	NC Senate District 4	NC Senate District 4
+CandidateContest	NC Senate District 38	NC Senate District 38
+CandidateContest	NC Senate District 36	NC Senate District 36
+CandidateContest	NC Senate District 34	NC Senate District 34
+CandidateContest	NC Senate District 32	NC Senate District 32
+CandidateContest	NC Senate District 30	NC Senate District 30
+CandidateContest	NC Senate District 28	NC Senate District 28
+CandidateContest	NC Senate District 26	NC Senate District 26
+CandidateContest	NC Senate District 24	NC Senate District 24
+CandidateContest	NC Senate District 22	NC Senate District 22
+CandidateContest	NC Senate District 20	NC Senate District 20
+CandidateContest	NC Senate District 2	NC Senate District 2
+CandidateContest	NC Senate District 18	NC Senate District 18
+CandidateContest	NC Senate District 16	NC Senate District 16
+CandidateContest	NC Senate District 14	NC Senate District 14
+CandidateContest	NC Senate District 12	NC Senate District 12
+CandidateContest	NC Senate District 10	NC Senate District 10
+CandidateContest	NC Secretary of State	NC Secretary of State
+CandidateContest	NC House District 98	NC House District 98
+CandidateContest	NC House District 96	NC House District 96
+CandidateContest	NC House District 94	NC House District 94
+CandidateContest	NC House District 92	NC House District 92
+CandidateContest	NC House District 90	NC House District 90
+CandidateContest	NC House District 88	NC House District 88
+CandidateContest	NC House District 86	NC House District 86
+CandidateContest	NC House District 84	NC House District 84
+CandidateContest	NC House District 82	NC House District 82
+CandidateContest	NC House District 80	NC House District 80
+CandidateContest	NC House District 8	NC House District 8
+CandidateContest	NC House District 78	NC House District 78
+CandidateContest	NC House District 76	NC House District 76
+CandidateContest	NC House District 74	NC House District 74
+CandidateContest	NC House District 72	NC House District 72
+CandidateContest	NC House District 70	NC House District 70
+CandidateContest	NC House District 68	NC House District 68
+CandidateContest	NC House District 66	NC House District 66
+CandidateContest	NC House District 64	NC House District 64
+CandidateContest	NC House District 62	NC House District 62
+CandidateContest	NC House District 60	NC House District 60
+CandidateContest	NC House District 6	NC House District 6
+CandidateContest	NC House District 58	NC House District 58
+CandidateContest	NC House District 56	NC House District 56
+CandidateContest	NC House District 54	NC House District 54
+CandidateContest	NC House District 52	NC House District 52
+CandidateContest	NC House District 50	NC House District 50
+CandidateContest	NC House District 48	NC House District 48
+CandidateContest	NC House District 46	NC House District 46
+CandidateContest	NC House District 44	NC House District 44
+CandidateContest	NC House District 42	NC House District 42
+CandidateContest	NC House District 40	NC House District 40
+CandidateContest	NC House District 4	NC House District 4
+CandidateContest	NC House District 38	NC House District 38
+CandidateContest	NC House District 36	NC House District 36
+CandidateContest	NC House District 34	NC House District 34
+CandidateContest	NC House District 32	NC House District 32
+CandidateContest	NC House District 30	NC House District 30
+CandidateContest	NC House District 28	NC House District 28
+CandidateContest	NC House District 26	NC House District 26
+CandidateContest	NC House District 24	NC House District 24
+CandidateContest	NC House District 22	NC House District 22
+CandidateContest	NC House District 20	NC House District 20
+CandidateContest	NC House District 2	NC House District 2
+CandidateContest	NC House District 18	NC House District 18
+CandidateContest	NC House District 16	NC House District 16
+CandidateContest	NC House District 14	NC House District 14
+CandidateContest	NC House District 120	NC House District 120
+CandidateContest	NC House District 12	NC House District 12
+CandidateContest	NC House District 118	NC House District 118
+CandidateContest	NC House District 116	NC House District 116
+CandidateContest	NC House District 114	NC House District 114
+CandidateContest	NC House District 112	NC House District 112
+CandidateContest	NC House District 110	NC House District 110
+CandidateContest	NC House District 108	NC House District 108
+CandidateContest	NC House District 106	NC House District 106
+CandidateContest	NC House District 104	NC House District 104
+CandidateContest	NC House District 102	NC House District 102
+CandidateContest	NC House District 100	NC House District 100
+CandidateContest	NC House District 10	NC House District 10
+CandidateContest	NC Governor	NC Governor
+CandidateContest	NC Commissioner of Labor	NC Commissioner of Labor
+CandidateContest	NC Commissioner of Insurance	NC Commissioner of Insurance
+CandidateContest	NC Attorney General	NC Attorney General
+Party	none or unknown	none or unknown
+Party	Republican Party	Republican Party
+Party	Libertarian Party	Libertarian Party
+Party	Green Party	Green Party
+Party	Democratic Party	Democratic Party
+Party	Constitution Party	Constitution Party
+ReportingUnit	North Carolina;Yancey County	North Carolina;Yancey County
+ReportingUnit	North Carolina;Yadkin County	North Carolina;Yadkin County
+ReportingUnit	North Carolina;Wilson County	North Carolina;Wilson County
+ReportingUnit	North Carolina;Wilkes County	North Carolina;Wilkes County
+ReportingUnit	North Carolina;Wayne County	North Carolina;Wayne County
+ReportingUnit	North Carolina;Watauga County	North Carolina;Watauga County
+ReportingUnit	North Carolina;Washington County	North Carolina;Washington County
+ReportingUnit	North Carolina;Warren County	North Carolina;Warren County
+ReportingUnit	North Carolina;Wake County	North Carolina;Wake County
+ReportingUnit	North Carolina;Vance County	North Carolina;Vance County
+ReportingUnit	North Carolina;Union County	North Carolina;Union County
+ReportingUnit	North Carolina;Tyrrell County	North Carolina;Tyrrell County
+ReportingUnit	North Carolina;Transylvania County	North Carolina;Transylvania County
+ReportingUnit	North Carolina;Swain County	North Carolina;Swain County
+ReportingUnit	North Carolina;Surry County	North Carolina;Surry County
+ReportingUnit	North Carolina;Stokes County	North Carolina;Stokes County
+ReportingUnit	North Carolina;Stanly County	North Carolina;Stanly County
+ReportingUnit	North Carolina;Scotland County	North Carolina;Scotland County
+ReportingUnit	North Carolina;Sampson County	North Carolina;Sampson County
+ReportingUnit	North Carolina;Rutherford County	North Carolina;Rutherford County
+ReportingUnit	North Carolina;Rowan County	North Carolina;Rowan County
+ReportingUnit	North Carolina;Rockingham County	North Carolina;Rockingham County
+ReportingUnit	North Carolina;Robeson County	North Carolina;Robeson County
+ReportingUnit	North Carolina;Richmond County	North Carolina;Richmond County
+ReportingUnit	North Carolina;Randolph County	North Carolina;Randolph County
+ReportingUnit	North Carolina;Polk County	North Carolina;Polk County
+ReportingUnit	North Carolina;Pitt County	North Carolina;Pitt County
+ReportingUnit	North Carolina;Person County	North Carolina;Person County
+ReportingUnit	North Carolina;Perquimans County	North Carolina;Perquimans County
+ReportingUnit	North Carolina;Pender County	North Carolina;Pender County
+ReportingUnit	North Carolina;Pasquotank County	North Carolina;Pasquotank County
+ReportingUnit	North Carolina;Pamlico County	North Carolina;Pamlico County
+ReportingUnit	North Carolina;Orange County	North Carolina;Orange County
+ReportingUnit	North Carolina;Onslow County	North Carolina;Onslow County
+ReportingUnit	North Carolina;Northampton County	North Carolina;Northampton County
+ReportingUnit	North Carolina;New Hanover County	North Carolina;New Hanover County
+ReportingUnit	North Carolina;Nash County	North Carolina;Nash County
+ReportingUnit	North Carolina;Moore County	North Carolina;Moore County
+ReportingUnit	North Carolina;Montgomery County	North Carolina;Montgomery County
+ReportingUnit	North Carolina;Mitchell County	North Carolina;Mitchell County
+ReportingUnit	North Carolina;Mecklenburg County	North Carolina;Mecklenburg County
+ReportingUnit	North Carolina;Mcdowell County	North Carolina;Mcdowell County
+ReportingUnit	North Carolina;Martin County	North Carolina;Martin County
+ReportingUnit	North Carolina;Madison County	North Carolina;Madison County
+ReportingUnit	North Carolina;Macon County	North Carolina;Macon County
+ReportingUnit	North Carolina;Lincoln County	North Carolina;Lincoln County
+ReportingUnit	North Carolina;Lenoir County	North Carolina;Lenoir County
+ReportingUnit	North Carolina;Lee County	North Carolina;Lee County
+ReportingUnit	North Carolina;Jones County	North Carolina;Jones County
+ReportingUnit	North Carolina;Johnston County	North Carolina;Johnston County
+ReportingUnit	North Carolina;Jackson County	North Carolina;Jackson County
+ReportingUnit	North Carolina;Iredell County	North Carolina;Iredell County
+ReportingUnit	North Carolina;Hyde County	North Carolina;Hyde County
+ReportingUnit	North Carolina;Hoke County	North Carolina;Hoke County
+ReportingUnit	North Carolina;Hertford County	North Carolina;Hertford County
+ReportingUnit	North Carolina;Henderson County	North Carolina;Henderson County
+ReportingUnit	North Carolina;Haywood County	North Carolina;Haywood County
+ReportingUnit	North Carolina;Harnett County	North Carolina;Harnett County
+ReportingUnit	North Carolina;Halifax County	North Carolina;Halifax County
+ReportingUnit	North Carolina;Guilford County	North Carolina;Guilford County
+ReportingUnit	North Carolina;Greene County	North Carolina;Greene County
+ReportingUnit	North Carolina;Granville County	North Carolina;Granville County
+ReportingUnit	North Carolina;Graham County	North Carolina;Graham County
+ReportingUnit	North Carolina;Gates County	North Carolina;Gates County
+ReportingUnit	North Carolina;Gaston County	North Carolina;Gaston County
+ReportingUnit	North Carolina;Franklin County	North Carolina;Franklin County
+ReportingUnit	North Carolina;Forsyth County	North Carolina;Forsyth County
+ReportingUnit	North Carolina;Edgecombe County	North Carolina;Edgecombe County
+ReportingUnit	North Carolina;Durham County	North Carolina;Durham County
+ReportingUnit	North Carolina;Duplin County	North Carolina;Duplin County
+ReportingUnit	North Carolina;Davie County	North Carolina;Davie County
+ReportingUnit	North Carolina;Davidson County	North Carolina;Davidson County
+ReportingUnit	North Carolina;Dare County	North Carolina;Dare County
+ReportingUnit	North Carolina;Currituck County	North Carolina;Currituck County
+ReportingUnit	North Carolina;Cumberland County	North Carolina;Cumberland County
+ReportingUnit	North Carolina;Craven County	North Carolina;Craven County
+ReportingUnit	North Carolina;Columbus County	North Carolina;Columbus County
+ReportingUnit	North Carolina;Cleveland County	North Carolina;Cleveland County
+ReportingUnit	North Carolina;Clay County	North Carolina;Clay County
+ReportingUnit	North Carolina;Chowan County	North Carolina;Chowan County
+ReportingUnit	North Carolina;Cherokee County	North Carolina;Cherokee County
+ReportingUnit	North Carolina;Chatham County	North Carolina;Chatham County
+ReportingUnit	North Carolina;Catawba County	North Carolina;Catawba County
+ReportingUnit	North Carolina;Caswell County	North Carolina;Caswell County
+ReportingUnit	North Carolina;Carteret County	North Carolina;Carteret County
+ReportingUnit	North Carolina;Camden County	North Carolina;Camden County
+ReportingUnit	North Carolina;Caldwell County	North Carolina;Caldwell County
+ReportingUnit	North Carolina;Cabarrus County	North Carolina;Cabarrus County
+ReportingUnit	North Carolina;Burke County	North Carolina;Burke County
+ReportingUnit	North Carolina;Buncombe County	North Carolina;Buncombe County
+ReportingUnit	North Carolina;Brunswick County	North Carolina;Brunswick County
+ReportingUnit	North Carolina;Bladen County	North Carolina;Bladen County
+ReportingUnit	North Carolina;Bertie County	North Carolina;Bertie County
+ReportingUnit	North Carolina;Beaufort County	North Carolina;Beaufort County
+ReportingUnit	North Carolina;Avery County	North Carolina;Avery County
+ReportingUnit	North Carolina;Ashe County	North Carolina;Ashe County
+ReportingUnit	North Carolina;Anson County	North Carolina;Anson County
+ReportingUnit	North Carolina;Alleghany County	North Carolina;Alleghany County
+ReportingUnit	North Carolina;Alexander County	North Carolina;Alexander County
+ReportingUnit	North Carolina;Alamance County	North Carolina;Alamance County
