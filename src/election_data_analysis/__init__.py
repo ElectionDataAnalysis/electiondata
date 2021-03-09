@@ -1458,10 +1458,16 @@ class Analyzer:
 
         return election_report
 
-    def export_nist(self, election: str, jurisdiction: str) -> str:
+    def export_nist(
+            self,
+            election: str,
+            jurisdiction: str,
+            major_subdivision: Optional[str] = None,
+    ) -> str:
         xml_string = et.tostring(
             nist.nist_v2_xml_export_tree(
                 self.session, election, jurisdiction,
+                major_subdivision=major_subdivision,
                 issuer=nist.default_issuer,
                 issuer_abbreviation=nist.default_issuer_abbreviation,
                 status=nist.default_status,
