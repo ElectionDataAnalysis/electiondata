@@ -14933,6 +14933,7 @@ Party	Libertarian Party	Libertarian Party
 Party	Green Party	Green Party
 Party	Democratic Party	Democratic Party
 Party	Constitution Party	Constitution Party
+Party	Unaffiliated	Unaffiliated
 ReportingUnit	North Carolina;Yancey County	North Carolina;Yancey County
 ReportingUnit	North Carolina;Yadkin County	North Carolina;Yadkin County
 ReportingUnit	North Carolina;Wilson County	North Carolina;Wilson County
