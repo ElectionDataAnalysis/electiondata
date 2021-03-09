@@ -1,7 +1,8 @@
 import os.path
+from typing import Optional,List
 
 import pandas as pd
-from election_data_analysis import user_interface as ui
+from election_data_analysis import user_interface as ui,database as db
 from election_data_analysis import munge as m
 import datetime
 import os
@@ -1168,3 +1169,34 @@ def nist_candidate(session, election_id, jurisdiction_id):
     )
     result = df.to_json(orient="records")
     return json.loads(result)
+
+
+def rollup(
+        session, df:pd.DataFrame,
+        count_col:str,
+        ru_id_column: str,
+        new_ru_id_column: str,
+        rollup_rut: str = "county",
+        ignore: Optional[List] = None
+) -> (pd.DataFrame(), Optional[dict]):
+    err = None  # TODO error handline
+    if ignore:
+        working = df.copy().drop(ignore, axis=1)
+    group_cols = [
+        c for c in working.columns
+        if (c not in (ru_id_column,count_col))
+    ]
+    parents, err_str = db.parents(session,df[ru_id_column].unique(), subunit_type=rollup_rut)
+
+    working = working.merge(
+        parents, how='left', left_on=ru_id_column, right_on="child_id"
+    )[group_cols + ["parent_id", count_col]]
+
+    rut_name = rollup_rut.replace(" ","-")
+    rollup_df = working.groupby(
+        group_cols + ["parent_id"]
+    ).sum(count_col).reset_index().rename(
+        columns={"parent_id": new_ru_id_column}
+    )
+
+    return rollup_df, err
