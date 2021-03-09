@@ -57,7 +57,7 @@ def create_rollup(
     connection = session.bind.raw_connection()
     cursor = connection.cursor()
     if not datafile_list:
-        datafile_list, e = db.data_file_list(cursor, election_id, by="Id")
+        datafile_list, e = db.data_file_list_cursor(cursor,election_id,by="Id")
         if e:
             return e
         by = "Id"

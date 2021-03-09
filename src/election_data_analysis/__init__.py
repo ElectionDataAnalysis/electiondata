@@ -361,7 +361,7 @@ class DataLoader:
         cursor = connection.cursor()
 
         # find all datafile ids matching the given election and jurisdiction
-        df_list, err_str = db.data_file_list(
+        df_list, err_str = db.data_file_list_cursor(
             cursor, election_id, reporting_unit_id=juris_id
         )
         if err_str:
@@ -1495,7 +1495,7 @@ def aggregate_results(
     connection = an.session.bind.raw_connection()
     cursor = connection.cursor()
 
-    datafile_list, e = db.data_file_list(
+    datafile_list, e = db.data_file_list_cursor(
         cursor,
         election_id,
         reporting_unit_id=jurisdiction_id,

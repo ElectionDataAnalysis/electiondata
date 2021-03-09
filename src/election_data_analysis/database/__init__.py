@@ -712,7 +712,7 @@ def vote_type_list(cursor, datafile_list: list, by: str = "Id") -> (list, str):
     return vt_list, err_str
 
 
-def data_file_list(
+def data_file_list_cursor(
     cursor, election_id, reporting_unit_id: Optional[int] = None, by="Id"
 ):
     q = sql.SQL(
@@ -730,6 +730,17 @@ def data_file_list(
     except Exception as exc:
         err_str = f"Database error pulling list of datafiles with election id in {election_id}: {exc}"
         df_list = None
+    return df_list, err_str
+
+def data_file_list(
+        session, election_id, reporting_unit_id: Optional[int] = None, by: str = "Id",
+) -> (list, str):
+    connection = session.bind.raw_connection()
+    cursor = connection.cursor()
+    df_list, err_str = data_file_list_cursor(
+        cursor, election_id, reporting_unit_id=reporting_unit_id, by=by
+    )
+    connection.close()
     return df_list, err_str
 
 
