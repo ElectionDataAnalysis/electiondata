@@ -25,7 +25,7 @@ from election_data_analysis.database import create_cdf_db as db_cdf
 import os
 from sqlalchemy import MetaData, Table, Column, Integer, Float
 # NB: syntax-checker doesn't see it, but these ^^ are used.
-from typing import Optional, List, Dict, Any
+from typing import Optional, List, Dict, Any, Iterable
 from election_data_analysis import user_interface as ui
 
 states = """Alabama
@@ -1475,3 +1475,44 @@ def id_other_cols_to_enum(session: Session, df: pd.DataFrame, enum: str) -> (pd.
     working.loc[mask,enum] = working[mask][other]
     working.drop([id, other], axis=1, inplace=True)
     return working, err
+
+
+def parents_by_cursor(
+        cursor, ru_id_list: List[int], subunit_type: str = "county"
+) -> (pd.DataFrame, str):
+    err_str = ""
+    # kludge, because ru_ids in ru_id_list are typed as np.int64
+    ru_id_list = [int(n) for n in ru_id_list]
+    q = sql.SQL("""
+    SELECT child."Id", parent."Id"
+    FROM "ReportingUnit" as child
+    LEFT JOIN "ComposingReportingUnitJoin" as cruj on cruj."ChildReportingUnit_Id" = child."Id"
+    LEFT JOIN "ReportingUnit" as parent on cruj."ParentReportingUnit_Id" = parent."Id"
+    LEFT JOIN "ReportingUnitType" as rut on rut."Id" = parent."ReportingUnitType_Id"
+    WHERE (rut."Txt" = {subunit_type}) or (rut."Txt" = 'other' and parent."OtherReportingUnitType" = {subunit_type})
+    and child."Id" in {ru_id_list}
+    """).format(
+        subunit_type=sql.Literal(subunit_type),
+        ru_id_list=sql.Literal(tuple(ru_id_list))
+    )
+
+    try:
+        cursor.execute(q)
+        parents = cursor.fetchall()
+        parent_df = pd.DataFrame(parents)
+        if not parent_df.empty:
+            parent_df.columns = ["child_id", "parent_id"]
+
+    except Exception as exc:
+        parent_df = pd.DataFrame()
+        err_str = f"No results exported due to database error: {exc}"
+    return parent_df, err_str
+
+
+def parents(
+        session: Session, ru_id_list: iter, subunit_type: str = "county"
+) -> (pd.DataFrame, str):
+    connection = session.bind.raw_connection()
+    cursor = connection.cursor()
+    parent_df, err_str = parents_by_cursor(cursor, ru_id_list, subunit_type=subunit_type)
+    return parent_df, err_str

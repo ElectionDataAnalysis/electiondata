@@ -1,4 +1,5 @@
 import xml.etree.ElementTree as et
+from typing import Optional, List, Dict, Any
 import pandas as pd
 from sqlalchemy.orm import Session
 from psycopg2 import sql
@@ -193,6 +194,7 @@ def read_vote_count_nist(
     session: Session,
     election_id: int,
     reporting_unit_id: int,
+    rollup_ru_type: Optional[str] = None
 ) ->  pd.DataFrame:
     """The VoteCount table is the only place that maps contests to a specific
     election. But this table is the largest one, so we don't want to use pandas methods
@@ -239,15 +241,53 @@ def read_vote_count_nist(
     cursor = connection.cursor()
     cursor.execute(q, [election_id, reporting_unit_id])
     results = cursor.fetchall()
-    results_df = pd.DataFrame(results, columns=fields)
+    unrolled_df = pd.DataFrame(results, columns=fields)
+
+    if rollup_ru_type:
+        results_df, err_str = rollup(
+            session,
+            unrolled_df,
+            "Count",
+            "ReportingUnit_Id",
+            "ReportingUnit_Id",
+            rollup_rut=rollup_ru_type,
+            ignore=["ReportingUnitType_Id"]
+        )
+        # TODO add ReportingUnitType_Id column
+        #  What happened to OtherReportingUnitType? Might need it.
+        #  NB: the ReportingUnitType_Id from read_vote_count is the Election District type
+    else:
+        results_df = unrolled_df
     return results_df
 
 
-def read_vote_count_nist_NEW(
-        session: Session,
-        election: str,
-        jurisdiction: str,
-        subunit_type: str = "county",
-) -> pd.DataFrame:
+def rollup(
+        session, df:pd.DataFrame,
+        count_col:str,
+        ru_id_column: str,
+        new_ru_id_column: str,
+        rollup_rut: str = "county",
+        ignore: Optional[List] = None
+) -> (pd.DataFrame(), Optional[dict]):
+    err = None  # TODO error handline
+    if ignore:
+        working = df.copy().drop(ignore, axis=1)
+    group_cols = [
+        c for c in working.columns
+        if (c not in (ru_id_column,count_col))
+    ]
+    parents, err_str = db.parents(session,df[ru_id_column].unique(), subunit_type=rollup_rut)
 
-    return results_df
+    working = working.merge(
+        parents, how='left', left_on=ru_id_column, right_on="child_id"
+    )[group_cols + ["parent_id", count_col]]
+
+    rut_name = rollup_rut.replace(" ","-")
+    rollup_df = working.groupby(
+        group_cols + ["parent_id"]
+    ).sum(count_col).reset_index().rename(
+        columns={"parent_id": new_ru_id_column}
+    )
+
+    return rollup_df, err
+
