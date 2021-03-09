@@ -451,7 +451,7 @@ def read_nist_xml(f_path: str) -> (pd.DataFrame,Optional[Dict]):
             vc_dict["CandidateId"] = con_sel.find(f"{{{ns}}}CandidateIds").text
             for vc in con_sel.findall(f"{{{ns}}}VoteCounts"):
                 vc_dict.update({
-                    "Count": vc.find(f"{{{ns}}}Count").text,
+                    "Count": int(vc.find(f"{{{ns}}}Count").text),
                     "CountItemType": vc.find(f"{{{ns}}}Type").text,
                     "GpUnitId": vc.find(f"{{{ns}}}GpUnitId").text,
                 })
