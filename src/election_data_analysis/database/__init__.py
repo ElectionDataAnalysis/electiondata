@@ -883,8 +883,11 @@ def get_relevant_contests(session, filters):
 
 
 def get_jurisdiction_hierarchy(session, jurisdiction_id):
-    """get type of reporting unit one level down from jurisdiction.
-    Omit particular types that are contest types, not true reporting unit types"""
+    """get reporting unit type id of reporting unit one level down from jurisdiction.
+    Omit particular types that are contest types, not true reporting unit types
+    TODO: handle case where type is non-standard and some other smaller reporting units are also
+    also non-standard
+    """
     q = sql.SQL(
         """
         SELECT  *

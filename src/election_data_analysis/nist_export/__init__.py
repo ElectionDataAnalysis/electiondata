@@ -7,6 +7,7 @@ from datetime import datetime, timezone
 from election_data_analysis import (
     database as db,
     analyze as an,
+    munge as m,
 )
 
 # constants set by issuer
@@ -24,15 +25,19 @@ def nist_v2_xml_export_tree(
         session: Session,
         election: str,
         jurisdiction: str,
+        rollup: bool = False,
+        major_subdivision: Optional[str] = None,
         issuer: str = default_issuer,
         issuer_abbreviation: str = default_issuer_abbreviation,
         status: str = default_status,
-        vendor_application_id: str = default_vendor_application_id
+        vendor_application_id: str = default_vendor_application_id,
 ) -> et.ElementTree:
     """Creates a tree in the NIST common data format (V2) containing the results
     from the given election and jurisdiction. Note that all available results will
     be exported. I.e., if database has precinct-level results, the tree will
-    contain precinct-level results. See"""
+    contain precinct-level results.
+    TODO: get major subdivision type (usually 'county') and return results that way
+    """
     # set up
     election_id = db.name_to_id(session, "Election", election)
     jurisdiction_id = db.name_to_id(session, "ReportingUnit", jurisdiction)
@@ -40,8 +45,17 @@ def nist_v2_xml_export_tree(
     # include jurisdiction id in gp unit ids
     gpu_idxs = {jurisdiction_id}
 
+    if rollup:
+        # get major subdivision type if not provided
+        rut = pd.read_sql_table("ReportingUnitType",session.bind,index_col="Id")
+        if not major_subdivision:
+            sub_type_id = db.get_jurisdiction_hierarchy(session, jurisdiction_id)
+            major_subdivision = rut.loc[sub_type_id, "Txt"]
+
     # get vote count data
-    results_df = read_vote_count_nist(session, election_id, jurisdiction_id)
+    results_df = read_vote_count_nist(
+        session, election_id, jurisdiction_id, rollup_ru_type=major_subdivision
+    )
 
     # collect ids for gp units that have vote counts, gp units that are election districts
     gpu_idxs.update(results_df.ReportingUnit_Id.unique())
@@ -253,7 +267,14 @@ def read_vote_count_nist(
             rollup_rut=rollup_ru_type,
             ignore=["ReportingUnitType_Id"]
         )
-        # TODO add ReportingUnitType_Id column
+        # add ReportingUnitType_Id column
+        # TODO error handling -- what if sub_type is non-standard?
+        rut = pd.read_sql_table("ReportingUnitType", session.bind, index_col="Id")
+        sub_type_id = rut[rut.Txt == rollup_ru_type].first_valid_index()
+        results_df = m.add_constant_column(
+            results_df, "ReportingUnitType_Id", sub_type_id, dtype="int"
+        )
+
         #  What happened to OtherReportingUnitType? Might need it.
         #  NB: the ReportingUnitType_Id from read_vote_count is the Election District type
     else:
