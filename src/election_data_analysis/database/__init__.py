@@ -399,7 +399,7 @@ def get_cdf_db_table_names(eng):
     return cdf_elements, cdf_enumerations, cdf_joins, others
 
 
-def name_from_id(cursor, element, idx):
+def name_from_id_cursor(cursor,element,idx):
     name_field = get_name_field(element)
     q = sql.SQL('SELECT {name_field} FROM {element} WHERE "Id" = %s').format(
         name_field=sql.Identifier(name_field), element=sql.Identifier(element)
@@ -410,6 +410,14 @@ def name_from_id(cursor, element, idx):
     except KeyError:
         # if no record with Id = <idx> was found
         name = None
+    return name
+
+
+def name_from_id(session, element: str, idx: int) -> str:
+    connection = session.bind.raw_connection()
+    cursor = connection.cursor()
+    name = name_from_id_cursor(cursor, element, idx)
+    connection.close()
     return name
 
 
@@ -882,6 +890,23 @@ def get_relevant_contests(session, filters):
     return result_df
 
 
+def get_major_subdiv_type(session: Session, jurisdiction: str) -> Optional[str]:
+    jurisdiction_id = name_to_id(session, "ReportingUnit", jurisdiction)
+    subdiv_id = get_jurisdiction_hierarchy(session, jurisdiction_id)
+    subdiv_type = name_from_id(session, "ReportingUnitType", subdiv_id)
+    if subdiv_type == "other":
+        connection = session.bind.raw_connection()
+        cursor = connection.cursor()
+        q = sql.SQL("""
+        SELECT ru."OtherReportingUnitType" FROM "ReportingUnit" ru 
+        WHERE ru."Id" = {idx}
+        """).format(idx=sql.Literal(jurisdiction_id))
+        cursor.execute(q)
+        subdiv_type = cursor.fetchall()[0][0]
+        connection.close()
+    return subdiv_type
+
+
 def get_jurisdiction_hierarchy(session, jurisdiction_id):
     """get reporting unit type id of reporting unit one level down from jurisdiction.
     Omit particular types that are contest types, not true reporting unit types
@@ -1323,7 +1348,7 @@ def is_preliminary(cursor, election_id, jurisdiction_id):
         results = cursor.fetchall()
         return results[0][0]
     except Exception as exc:
-        election = name_from_id(cursor, "Election", election_id)
+        election = name_from_id_cursor(cursor,"Election",election_id)
         if election.startswith("2020 General"):
             return True
         return False
@@ -1482,8 +1507,8 @@ def id_other_cols_to_enum(session: Session, df: pd.DataFrame, enum: str) -> (pd.
 
 def parents_by_cursor(
         cursor, ru_id_list: List[int], subunit_type: str = "county"
-) -> (pd.DataFrame, str):
-    err_str = ""
+) -> (pd.DataFrame, Optional[str]):
+    err_str = None
     # kludge, because ru_ids in ru_id_list are typed as np.int64
     ru_id_list = [int(n) for n in ru_id_list]
     q = sql.SQL("""
@@ -1514,7 +1539,7 @@ def parents_by_cursor(
 
 def parents(
         session: Session, ru_id_list: iter, subunit_type: str = "county"
-) -> (pd.DataFrame, str):
+) -> (pd.DataFrame, Optional[str]):
     connection = session.bind.raw_connection()
     cursor = connection.cursor()
     parent_df, err_str = parents_by_cursor(cursor, ru_id_list, subunit_type=subunit_type)

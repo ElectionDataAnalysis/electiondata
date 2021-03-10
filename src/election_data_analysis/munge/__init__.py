@@ -5,6 +5,7 @@ from election_data_analysis import database as db
 from election_data_analysis import user_interface as ui
 from election_data_analysis import juris_and_munger as jm
 from election_data_analysis import special_formats as sf
+from election_data_analysis import analyze as an
 import pandas as pd
 from pandas.api.types import is_numeric_dtype
 from typing import Optional, List, Dict, Any
@@ -1994,6 +1995,7 @@ def file_to_raw_df(
                 element,
                 constants[element],
             )
+
     return df, err
 
 
