@@ -5,6 +5,7 @@ from election_data_analysis import database as db
 from election_data_analysis import user_interface as ui
 from election_data_analysis import juris_and_munger as jm
 from election_data_analysis import special_formats as sf
+from election_data_analysis import analyze as an
 import pandas as pd
 from pandas.api.types import is_numeric_dtype
 from typing import Optional, List, Dict, Any
@@ -56,7 +57,7 @@ munger_dependent_reqs: Dict[str, Dict[str, List[str]]] = {
 req_munger_parameters: Dict[str, Dict[str, Any]] = {
     "file_type": {
         "data_type": "string",
-        "allowed_values": ["excel", "json-nested", "xml", "flat_text", "valid_nist_xml"]},
+        "allowed_values": ["excel", "json-nested", "xml", "flat_text", "nist_v2_xml"]},
 }
 
 opt_munger_param_values: Dict[str, List[str]] = {
@@ -909,7 +910,7 @@ def raw_to_id_simple(
                 drop = False
             if t == "CountItemType":
                 # munge raw to internal CountItemType
-                if file_type == "valid_nist_xml":
+                if file_type == "nist_v2_xml":
                     r_i = sf.cit_from_raw_nist_df
                 else:
                     r_i = pd.read_csv(
@@ -1923,9 +1924,9 @@ def file_to_raw_df(
     err = None
     file_name = Path(f_path).name
 
-    if p["file_type"] == "valid_nist_xml":
+    if p["file_type"] == "nist_v2_xml":
         try:
-            df, err = sf.read_valid_nist_xml(f_path)
+            df, err = sf.read_nist_xml(f_path)
             if ui.fatal_error(err):
                 return pd.DataFrame(), err
         except Exception as exc:
@@ -1994,6 +1995,7 @@ def file_to_raw_df(
                 element,
                 constants[element],
             )
+
     return df, err
 
 

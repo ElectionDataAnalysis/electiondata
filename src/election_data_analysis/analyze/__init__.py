@@ -1,7 +1,9 @@
 import os.path
+from typing import Optional,List
 
 import pandas as pd
-from election_data_analysis import user_interface as ui
+import inspect
+from election_data_analysis import user_interface as ui,database as db
 from election_data_analysis import munge as m
 import datetime
 import os
@@ -44,7 +46,7 @@ def create_rollup(
     by: str = "Id",
     by_vote_type: bool = False,
 ) -> str:
-    """<target_dir> is the directory where the resulting rollup will be stored.
+    """<target_dir> is the directory where the resulting rollup_dataframe will be stored.
     <election_id> identifies the election; <datafile_id_list> the datafile whose results will be rolled up.
     <top_ru_id> is the internal cdf name of the ReportingUnit whose results will be reported
     <sub_rutype_id> identifies the ReportingUnitType
@@ -1168,3 +1170,42 @@ def nist_candidate(session, election_id, jurisdiction_id):
     )
     result = df.to_json(orient="records")
     return json.loads(result)
+
+
+def rollup_dataframe(
+        session,
+        df:pd.DataFrame,
+        count_col:str,
+        ru_id_column: str,
+        new_ru_id_column: str,
+        rollup_rut: str = "county",
+        ignore: Optional[List] = None
+) -> (pd.DataFrame(), Optional[dict]):
+    err = None  # TODO error handling
+    if ignore:
+        working = df.copy().drop(ignore, axis=1)
+    else:
+        working = df.copy()
+    group_cols = [
+        c for c in working.columns
+        if (c not in (ru_id_column,count_col))
+    ]
+    parents, err_str = db.parents(session,df[ru_id_column].unique(), subunit_type=rollup_rut)
+    if err_str:
+        err = ui.add_new_error(
+            err,
+            "system",
+            f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
+            f"Unable to read parents reporting unit info from column {ru_id_column}"
+        )
+    working = working.merge(
+        parents, how='left', left_on=ru_id_column, right_on="child_id"
+    )[group_cols + ["parent_id", count_col]]
+
+    rollup_df = working.fillna("").groupby(
+        group_cols + ["parent_id"]
+    ).sum(count_col).reset_index().rename(
+        columns={"parent_id": new_ru_id_column}
+    )
+
+    return rollup_df, err

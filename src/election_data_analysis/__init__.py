@@ -148,6 +148,7 @@ class DataLoader:
         load_jurisdictions: bool = True,
         move_files: bool = True,
         election_jurisdiction_list: Optional[list] = None,
+        rollup: bool = False,
     ) -> (Optional[dict], bool):
         """Processes all .ini files in the DataLoader's results directory.
         By default, loads (or reloads) the info from the jurisdiction files
@@ -169,9 +170,9 @@ class DataLoader:
         )
         if new_err:
             err = ui.consolidate_errors([err, new_err])
-        if ui.fatal_error(new_err):
-            err = ui.report(err)
-            return err, False
+            if ui.fatal_error(new_err):
+                err = ui.report(err)
+                return err, False
 
         # specify directories for archiving and reporting warnings
         success_dir = os.path.join(self.d["archive_dir"], db_param["dbname"])
@@ -302,7 +303,14 @@ class DataLoader:
                 # if no fatal error from SDL initialization, continue
                 else:
                     # try to load data
-                    load_error = sdl.load_results()
+                    if rollup:
+                        rollup_rut = db.get_major_subdiv_type(
+                            self.session,
+                            params[f]["top_reporting_unit"],
+                        )
+                    else:
+                        rollup_rut = None
+                    load_error = sdl.load_results(rollup=rollup, rollup_rut=rollup_rut)
                     if load_error:
                         err = ui.consolidate_errors([err, load_error])
 
@@ -485,7 +493,10 @@ class SingleDataLoader:
             )
         return {"_datafile_Id": datafile_id, "Election_Id": election_id}, e
 
-    def load_results(self) -> dict:
+    def load_results(
+            self,
+            rollup: bool = False,
+            rollup_rut: Optional[str] = None) -> dict:
         """Load results, returning error (or None, if load successful)"""
         err = None
         print(f'\n\nProcessing {self.d["results_file"]}')
@@ -517,6 +528,8 @@ class SingleDataLoader:
                     results_info,
                     constants,
                     self.results_dir,
+                    rollup=rollup,
+                    rollup_rut=rollup_rut,
                 )
                 if new_err:
                     err = ui.consolidate_errors([err, new_err])
@@ -1459,10 +1472,16 @@ class Analyzer:
 
         return election_report
 
-    def export_nist(self, election: str, jurisdiction: str) -> str:
+    def export_nist(
+            self,
+            election: str,
+            jurisdiction: str,
+            major_subdivision: Optional[str] = None,
+    ) -> str:
         xml_string = et.tostring(
-            nist.nist_xml_export_tree(
+            nist.nist_v2_xml_export_tree(
                 self.session, election, jurisdiction,
+                major_subdivision=major_subdivision,
                 issuer=nist.default_issuer,
                 issuer_abbreviation=nist.default_issuer_abbreviation,
                 status=nist.default_status,
@@ -1873,6 +1892,8 @@ def load_results_file(
         election_datafile_ids: dict,
         constants: Dict[str, str],
         results_directory_path,
+        rollup: bool = False,
+        rollup_rut: str = "county"
 ) -> Optional[dict]:
 
     # TODO tech debt: redundant to pass results_directory_path and f_path
@@ -1938,6 +1959,21 @@ def load_results_file(
     for (contest_id, selection_id) in unknown.index:
         mask = df[["Contest_Id", "Selection_Id"]] == (contest_id, selection_id)
         df = df[~mask.all(axis=1)]
+
+    # rollup_dataframe results if requested
+    if rollup:
+        df, new_err = a.rollup_dataframe(
+            session,
+            df,
+            "Count",
+            "ReportingUnit_Id",
+            "ReportingUnit_Id",
+            rollup_rut
+        )
+        if new_err:
+            err = ui.consolidate_errors([err, new_err])
+            if ui.fatal(new_err):
+                return err
 
     # add_datafile_Id and Election_Id columns
     for c in ["_datafile_Id", "Election_Id"]:

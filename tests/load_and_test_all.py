@@ -133,6 +133,7 @@ def run2(
     dbname: Optional[str] = None,
     test_dir: Optional[str] = None,
     election_jurisdiction_list: Optional[list] = None,
+    rollup: bool = False,
 ) -> Optional[dict]:
     dl = None  # to keep syntax-checker happy
 
@@ -167,7 +168,9 @@ def run2(
 
             dl.change_dir("results_dir", "TestingData")
             err, success = dl.load_all(
-                move_files=False, election_jurisdiction_list=election_jurisdiction_list
+                move_files=False,
+                election_jurisdiction_list=election_jurisdiction_list,
+                rollup=rollup,
             )
             if not success:
                 print(f"At least one file did not load correctly.\n{err}")
@@ -212,6 +215,7 @@ if __name__ == "__main__":
 
     error = run2(
         election_jurisdiction_list=ejs,
+        rollup=True,
     )
     if error:
         print(error)

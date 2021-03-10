@@ -242,7 +242,7 @@ def test_scatter_party_votetype(runtime):
     )
 
 
-# check that rollup to county level works correctly
+# check that rollup_dataframe to county level works correctly
 def test_scatter_county_rollup(runtime):
     assert pytest.ok["nc18g"], "No North Carolina 2018 General data"
     analyzer = Analyzer(runtime)
