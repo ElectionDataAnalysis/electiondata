@@ -1602,7 +1602,7 @@ class Analyzer:
                                                 missing.append([county, con_pair[i], party, vt_pair[j], ke])
                                     if ok:
                                         # append diff-in-diff row
-                                        did = abs(pct[0][0] - pct[0][1]) - abs(pct[1][0] - pct[1][1])
+                                        did = abs(pct[0][0] - pct[1][0]) - abs(pct[0][1] - pct[1][1])
                                         state_rows.append([
                                            county, cdt, party, con_pair, vt_pair, did
                                         ])

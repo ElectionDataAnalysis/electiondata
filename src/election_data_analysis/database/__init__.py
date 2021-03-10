@@ -1141,6 +1141,24 @@ def export_rollup_from_db(
             district_id=sql.Identifier("ElectionDistrict_Id"),
             ru=sql.Identifier("ReportingUnit"),
         )
+
+        if include_party_column:
+            columns.append("party")
+            select_party = sql.SQL(", party.{name} party").format(name=sql.Identifier("Name"))
+            party_join = sql.SQL(" LEFT JOIN {party} party ON party.{id} = CS.{party_id}").format(
+                party=sql.Identifier("Party"),
+            id=sql.Identifier("Id"),
+            party_id=sql.Identifier("Party_Id"),
+            )
+            group_and_order_by = sql.Composed([
+                group_and_order_by,
+                sql.SQL(", party.{name}").format(name=sql.Identifier("Name")),
+            ])
+
+        else:
+            select_party = sql.SQL("")
+            party_join = sql.SQL("")
+
     elif contest_type == "BallotMeasure":
         selection = sql.SQL("BMS.{name}").format(name=sql.Identifier("Name"))
         selection_join = sql.SQL(
@@ -1202,11 +1220,13 @@ def export_rollup_from_db(
         {selection} "Selection",
         IntermediateRU."Name" "ReportingUnit",
         {count_item_type_sql} "CountItemType",
-        sum(vc."Count") "Count"
+        sum(vc."Count") "Count" 
+        {select_party}
     FROM "VoteCount" vc
     LEFT JOIN _datafile d on vc."_datafile_Id" = d."Id"
     LEFT JOIN "Contest" C on vc."Contest_Id" = C."Id"
     {selection_join}
+    {party_join}
     LEFT JOIN "Election" e on vc."Election_Id" = e."Id"
     -- sum over all children
     LEFT JOIN "ReportingUnit" ChildRU on vc."ReportingUnit_Id" = ChildRU."Id"
@@ -1236,7 +1256,9 @@ def export_rollup_from_db(
         restrict=restrict,
         selection=selection,
         selection_join=selection_join,
+        party_join=party_join,
         election_district_join=election_district_join,
+        select_party=select_party
     )
 
     try:
