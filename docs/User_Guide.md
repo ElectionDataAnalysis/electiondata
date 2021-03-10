@@ -29,9 +29,9 @@ Party=Total Votes Cast
 ```
 and similarly, if necessary, for any Contest or Selection. If there is more than one Party (e.g.) to be ignored, use a comma-separated list: `Candidate=Total Votes Cast,Registered Voters`
  
- There is one required parameters: `file_type`. For any file type other than valid_nist_xml, there are two more required parameters: `count_locations` and `munge_strings`. Depending on the values of these, there are other required and optional fields. 
+ There is one required parameters: `file_type`. For any file type other than nist_v2_xml, there are two more required parameters: `count_locations` and `munge_strings`. Depending on the values of these, there are other required and optional fields. 
  `file_type`: controls which pandas function reads the file contents. Related optional and required parameters must be given under the `[file_type]` header.
-   * 'valid_nist_xml' for xml-formatted file that obeys the [NIST Common Data Format schema](http://itl.nist.gov/ns/voting/1500-100/v2). For this file_type, no other parameters are needed. If there are no items to ignore, use the munger [valid_nist_xml](mungers/valid_nist_xml.munger). Otherwise, use a revised version of that munger, with an `[ignore]` section added.
+   * 'nist_v2_xml' for xml-formatted file that obeys the [NIST Common Data Format schema](http://itl.nist.gov/ns/voting/1500-100/v2). For this file_type, no other parameters are needed. If there are no items to ignore, use the munger [nist_v2_xml](mungers/nist_v2_xml.munger). Otherwise, use a revised version of that munger, with an `[ignore]` section added.
    * 'excel'
     * (optional) a list `sheets_to_read_names` (and/or `sheets_to_read_numbers`) of spreadsheets to read, 
     * (optional) a list `sheets_to_skip_names` of names of spreadsheets to skip
@@ -546,8 +546,9 @@ If not all rows are data, and some string fields to be munged have blank headers
 If there are hidden columns in an Excel file, you may need to omit the hidden columns from various counts.
 
 ### NIST Common Data Format imports and exports
-To import results from a file that is valid NIST xml -- that can be formally validated against the [NIST election results reporting schema (Version 2)](https://github.com/usnistgov/ElectionResultsReporting/raw/version2/NIST_V2_election_results_reporting.xsd) -- use the file_type 'valid_nist_xml'
-Note: some xml files (e.g., Ohio 2020 General) loosely follow the nist format but not enough to be validated. Our convention is that if the munger name contains "nist" and the file_type is xml, then the system will look for a namespace declaration.
+To import results from a file that is valid NIST V2 xml -- that can be formally validated against the [NIST election results reporting schema (Version 2)](https://github.com/usnistgov/ElectionResultsReporting/raw/version2/NIST_V2_election_results_reporting.xsd) -- use the file_type 'nist_v2_xml'
+
+Some xml files (e.g., Ohio 2020 General) use the older Version 1 common data format. Our convention is that if the munger name contains "nist" and the file_type is xml, then the system will look for a namespace declaration.
 
 This package also provides functionality to export the data according to the [NIST election results reporting schema (Version 2)](https://github.com/usnistgov/ElectionResultsReporting/raw/version2/NIST_V2_election_results_reporting.xsd). This is as simple as identifying an election and jurisdiction of interest:
 ```

@@ -361,7 +361,7 @@ class DataLoader:
         cursor = connection.cursor()
 
         # find all datafile ids matching the given election and jurisdiction
-        df_list, err_str = db.data_file_list(
+        df_list, err_str = db.data_file_list_cursor(
             cursor, election_id, reporting_unit_id=juris_id
         )
         if err_str:
@@ -1458,10 +1458,16 @@ class Analyzer:
 
         return election_report
 
-    def export_nist(self, election: str, jurisdiction: str) -> str:
+    def export_nist(
+            self,
+            election: str,
+            jurisdiction: str,
+            major_subdivision: Optional[str] = None,
+    ) -> str:
         xml_string = et.tostring(
-            nist.nist_xml_export_tree(
+            nist.nist_v2_xml_export_tree(
                 self.session, election, jurisdiction,
+                major_subdivision=major_subdivision,
                 issuer=nist.default_issuer,
                 issuer_abbreviation=nist.default_issuer_abbreviation,
                 status=nist.default_status,
@@ -1495,7 +1501,7 @@ def aggregate_results(
     connection = an.session.bind.raw_connection()
     cursor = connection.cursor()
 
-    datafile_list, e = db.data_file_list(
+    datafile_list, e = db.data_file_list_cursor(
         cursor,
         election_id,
         reporting_unit_id=jurisdiction_id,
