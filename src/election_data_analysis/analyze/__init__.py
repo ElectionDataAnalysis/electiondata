@@ -2,6 +2,7 @@ import os.path
 from typing import Optional,List
 
 import pandas as pd
+import inspect
 from election_data_analysis import user_interface as ui,database as db
 from election_data_analysis import munge as m
 import datetime
@@ -45,7 +46,7 @@ def create_rollup(
     by: str = "Id",
     by_vote_type: bool = False,
 ) -> str:
-    """<target_dir> is the directory where the resulting rollup will be stored.
+    """<target_dir> is the directory where the resulting rollup_dataframe will be stored.
     <election_id> identifies the election; <datafile_id_list> the datafile whose results will be rolled up.
     <top_ru_id> is the internal cdf name of the ReportingUnit whose results will be reported
     <sub_rutype_id> identifies the ReportingUnitType
@@ -77,9 +78,9 @@ def create_rollup(
         exclude_redundant_total = False
 
     # get names from ids
-    top_ru = db.name_from_id(cursor, "ReportingUnit", top_ru_id)
-    election = db.name_from_id(cursor, "Election", election_id)
-    sub_rutype = db.name_from_id(cursor, "ReportingUnitType", sub_rutype_id)
+    top_ru = db.name_from_id_cursor(cursor,"ReportingUnit",top_ru_id)
+    election = db.name_from_id_cursor(cursor,"Election",election_id)
+    sub_rutype = db.name_from_id_cursor(cursor,"ReportingUnitType",sub_rutype_id)
 
     # create path to export directory
     leaf_dir = os.path.join(target_dir, election, top_ru, f"by_{sub_rutype}")
@@ -177,7 +178,7 @@ def create_scatter(
         return None
 
     unsummed = pd.concat([dfh, dfv])
-    jurisdiction = db.name_from_id(cursor, "ReportingUnit", jurisdiction_id)
+    jurisdiction = db.name_from_id_cursor(cursor,"ReportingUnit",jurisdiction_id)
 
     # check if there is only 1 candidate selection (with multiple count types)
     single_selection = len(unsummed["Selection"].unique()) == 1
@@ -219,9 +220,9 @@ def create_scatter(
         results["y"] = v_count
     else:
         results = package_results(pivot_df, jurisdiction, h_count, v_count)
-    results["x-election"] = db.name_from_id(cursor, "Election", h_election_id)
-    results["y-election"] = db.name_from_id(cursor, "Election", v_election_id)
-    results["subdivision_type"] = db.name_from_id(
+    results["x-election"] = db.name_from_id_cursor(cursor,"Election",h_election_id)
+    results["y-election"] = db.name_from_id_cursor(cursor,"Election",v_election_id)
+    results["subdivision_type"] = db.name_from_id_cursor(
         cursor, "ReportingUnitType", subdivision_type_id
     )
     results["x-count_item_type"] = h_category
@@ -322,7 +323,7 @@ def get_census_data(
     # get the census data
     connection = session.bind.raw_connection()
     cursor = connection.cursor()
-    election = db.name_from_id(cursor, "Election", election_id)
+    election = db.name_from_id_cursor(cursor,"Election",election_id)
     census_df = db.read_external(
         cursor,
         int(election[0:4]),
@@ -527,8 +528,8 @@ def create_bar(
         )
 
         candidates = temp_df["Candidate_Id"].unique()
-        x = db.name_from_id(cursor, "Candidate", int(candidates[0]))
-        y = db.name_from_id(cursor, "Candidate", int(candidates[1]))
+        x = db.name_from_id_cursor(cursor,"Candidate",int(candidates[0]))
+        y = db.name_from_id_cursor(cursor,"Candidate",int(candidates[1]))
         x_party = unsummed.loc[unsummed["Candidate_Id"] == candidates[0], "Party"].iloc[
             0
         ]
@@ -537,7 +538,7 @@ def create_bar(
             0
         ]
         y_party_abbr = create_party_abbreviation(y_party)
-        jurisdiction = db.name_from_id(cursor, "ReportingUnit", top_ru_id)
+        jurisdiction = db.name_from_id_cursor(cursor,"ReportingUnit",top_ru_id)
 
         pivot_df = pd.pivot_table(
             temp_df, values="Count", index=["Name"], columns="Selection", fill_value=0
@@ -552,11 +553,11 @@ def create_bar(
             results = package_results(pivot_df, jurisdiction, x, y)
         else:
             results = package_results(pivot_df, jurisdiction, x, y, restrict=8)
-        results["election"] = db.name_from_id(cursor, "Election", election_id)
-        results["contest"] = db.name_from_id(
+        results["election"] = db.name_from_id_cursor(cursor,"Election",election_id)
+        results["contest"] = db.name_from_id_cursor(
             cursor, "Contest", int(temp_df.iloc[0]["Contest_Id"])
         )
-        results["subdivision_type"] = db.name_from_id(
+        results["subdivision_type"] = db.name_from_id_cursor(
             cursor, "ReportingUnitType", int(temp_df.iloc[0]["ReportingUnitType_Id"])
         )
         results["count_item_type"] = temp_df.iloc[0]["CountItemType"]
@@ -1171,29 +1172,37 @@ def nist_candidate(session, election_id, jurisdiction_id):
     return json.loads(result)
 
 
-def rollup(
-        session, df:pd.DataFrame,
+def rollup_dataframe(
+        session,
+        df:pd.DataFrame,
         count_col:str,
         ru_id_column: str,
         new_ru_id_column: str,
         rollup_rut: str = "county",
         ignore: Optional[List] = None
 ) -> (pd.DataFrame(), Optional[dict]):
-    err = None  # TODO error handline
+    err = None  # TODO error handling
     if ignore:
         working = df.copy().drop(ignore, axis=1)
+    else:
+        working = df.copy()
     group_cols = [
         c for c in working.columns
         if (c not in (ru_id_column,count_col))
     ]
     parents, err_str = db.parents(session,df[ru_id_column].unique(), subunit_type=rollup_rut)
-
+    if err_str:
+        err = ui.add_new_error(
+            err,
+            "system",
+            f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
+            f"Unable to read parents reporting unit info from column {ru_id_column}"
+        )
     working = working.merge(
         parents, how='left', left_on=ru_id_column, right_on="child_id"
     )[group_cols + ["parent_id", count_col]]
 
-    rut_name = rollup_rut.replace(" ","-")
-    rollup_df = working.groupby(
+    rollup_df = working.fillna("").groupby(
         group_cols + ["parent_id"]
     ).sum(count_col).reset_index().rename(
         columns={"parent_id": new_ru_id_column}

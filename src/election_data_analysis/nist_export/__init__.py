@@ -258,7 +258,7 @@ def read_vote_count_nist(
     unrolled_df = pd.DataFrame(results, columns=fields)
 
     if rollup_ru_type:
-        results_df, err_str = an.rollup(
+        results_df, new_err = an.rollup_dataframe(
             session,
             unrolled_df,
             "Count",

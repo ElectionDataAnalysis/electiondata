@@ -1147,7 +1147,7 @@ def get_filtered_input_options(session, input_str, filters):
         connection = session.bind.raw_connection()
         cursor = connection.cursor()
         reporting_unit_id = db.list_to_id(session, "ReportingUnit", filters)
-        reporting_unit = db.name_from_id(cursor, "ReportingUnit", reporting_unit_id)
+        reporting_unit = db.name_from_id_cursor(cursor,"ReportingUnit",reporting_unit_id)
         connection.close()
 
         contest_type_df = pd.DataFrame(
@@ -1169,7 +1169,7 @@ def get_filtered_input_options(session, input_str, filters):
         # get the census data
         connection = session.bind.raw_connection()
         cursor = connection.cursor()
-        election = db.name_from_id(cursor, "Election", election_id)
+        election = db.name_from_id_cursor(cursor,"Election",election_id)
         census_df = db.read_external(
             cursor, int(election[0:4]), reporting_unit_id, ["Label"]
         )
@@ -1236,7 +1236,7 @@ def get_filtered_input_options(session, input_str, filters):
         reporting_unit_id = db.list_to_id(session, "ReportingUnit", filters)
         connection = session.bind.raw_connection()
         cursor = connection.cursor()
-        election = db.name_from_id(cursor, "Election", election_id)
+        election = db.name_from_id_cursor(cursor,"Election",election_id)
         df = db.read_external(
             cursor,
             int(election[0:4]),
