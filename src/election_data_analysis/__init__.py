@@ -301,7 +301,7 @@ class DataLoader:
                 # if no fatal error from SDL initialization, continue
                 else:
                     # try to load data
-                    load_error = sdl.load_results()
+                    load_error = sdl.load_results(rollup=rollup, rollup_rut=rollup_rut)
                     if load_error:
                         err = ui.consolidate_errors([err, load_error])
 
@@ -484,7 +484,7 @@ class SingleDataLoader:
             )
         return {"_datafile_Id": datafile_id, "Election_Id": election_id}, e
 
-    def load_results(self) -> dict:
+    def load_results(self, rollup: bool = False, rollup_rut: str = "county") -> dict:
         """Load results, returning error (or None, if load successful)"""
         err = None
         print(f'\n\nProcessing {self.d["results_file"]}')
@@ -516,6 +516,8 @@ class SingleDataLoader:
                     results_info,
                     constants,
                     self.results_dir,
+                    rollup=rollup,
+                    rollup_rut=rollup_rut,
                 )
                 if new_err:
                     err = ui.consolidate_errors([err, new_err])
@@ -1755,6 +1757,8 @@ def load_results_file(
         election_datafile_ids: dict,
         constants: Dict[str, str],
         results_directory_path,
+        rollup: bool = False,
+        rollup_rut: str = "county"
 ) -> Optional[dict]:
 
     # TODO tech debt: redundant to pass results_directory_path and f_path
@@ -1820,6 +1824,20 @@ def load_results_file(
     for (contest_id, selection_id) in unknown.index:
         mask = df[["Contest_Id", "Selection_Id"]] == (contest_id, selection_id)
         df = df[~mask.all(axis=1)]
+
+    # rollup results if requested
+    if rollup:
+        df, new_err = rollup(
+            session,
+            "Count",
+            "ReportingUnit_Id",
+            "ReportingUnit_Id",
+            rollup_rut
+        )
+    if new_err:
+        err = ui.consolidate_errors([err, new_err])
+        if ui.fatal(new_err):
+            return err
 
     # add_datafile_Id and Election_Id columns
     for c in ["_datafile_Id", "Election_Id"]:

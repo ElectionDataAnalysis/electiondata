@@ -1179,7 +1179,7 @@ def rollup(
         rollup_rut: str = "county",
         ignore: Optional[List] = None
 ) -> (pd.DataFrame(), Optional[dict]):
-    err = None  # TODO error handline
+    err = None  # TODO error handling
     if ignore:
         working = df.copy().drop(ignore, axis=1)
     group_cols = [
