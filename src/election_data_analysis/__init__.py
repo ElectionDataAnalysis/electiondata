@@ -1324,7 +1324,7 @@ class Analyzer:
         html, png, jpeg, webp, svg, pdf, and eps. Note that some filetypes may need plotly-orca
         installed as well."""
         jurisdiction_id = db.name_to_id(self.session, "ReportingUnit", jurisdiction)
-        subdivision_type_id = db.get_jurisdiction_hierarchy(
+        subdivision_type_id, _ = db.get_jurisdiction_hierarchy(
             self.session, jurisdiction_id
         )
         h_election_id = db.name_to_id(self.session, "Election", h_election)
@@ -1369,7 +1369,7 @@ class Analyzer:
         jurisdiction_id = db.name_to_id(self.session, "ReportingUnit", jurisdiction)
         # for now, bar charts can only handle jurisdictions where county is one level
         # down from the jurisdiction
-        subdivision_type_id = db.get_jurisdiction_hierarchy(
+        subdivision_type_id, _ = db.get_jurisdiction_hierarchy(
             self.session, jurisdiction_id
         )
         # bar chart always at one level below top reporting unit
@@ -1410,7 +1410,7 @@ class Analyzer:
         """contest_type is one of state, congressional, state-senate, state-house"""
         election_id = db.name_to_id(self.session, "Election", election)
         jurisdiction_id = db.name_to_id(self.session, "ReportingUnit", jurisdiction)
-        subdivision_type_id = db.get_jurisdiction_hierarchy(
+        subdivision_type_id, _ = db.get_jurisdiction_hierarchy(
             self.session, jurisdiction_id
         )
         # bar chart always at one level below top reporting unit
@@ -1526,12 +1526,15 @@ class Analyzer:
             vote_types = {x for x in vts[state] if x != "total"}
             district_types = contests_df[contests_df["jurisdiction"] == state]
             state_id = db.name_to_id(self.session, "ReportingUnit", state)
-            major_sub_ru_type_id = db.get_jurisdiction_hierarchy(self.session, state_id)
-            major_sub_ru_type_name= db.name_from_id(
-                self.session,
-                "ReportingUnitType",
-                major_sub_ru_type_id,
-            )
+            major_sub_ru_type_id, major_sub_ru_type_other = db.get_jurisdiction_hierarchy(self.session, state_id)
+            if major_sub_ru_type_other == "":
+                major_sub_ru_type_name= db.name_from_id(
+                    self.session,
+                    "ReportingUnitType",
+                    major_sub_ru_type_id,
+                )
+            else:
+                major_sub_ru_type_name = major_sub_ru_type_other
             # get dataframe of results, adding column for political party
             """res, err = db.export_rollup_from_db(
                 self.session,

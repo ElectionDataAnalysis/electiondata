@@ -893,22 +893,16 @@ def get_relevant_contests(session, filters):
 
 def get_major_subdiv_type(session: Session, jurisdiction: str) -> Optional[str]:
     jurisdiction_id = name_to_id(session, "ReportingUnit", jurisdiction)
-    subdiv_id = get_jurisdiction_hierarchy(session, jurisdiction_id)
-    subdiv_type = name_from_id(session, "ReportingUnitType", subdiv_id)
-    if subdiv_type == "other":
-        connection = session.bind.raw_connection()
-        cursor = connection.cursor()
-        q = sql.SQL("""
-        SELECT ru."OtherReportingUnitType" FROM "ReportingUnit" ru 
-        WHERE ru."Id" = {idx}
-        """).format(idx=sql.Literal(jurisdiction_id))
-        cursor.execute(q)
-        subdiv_type = cursor.fetchall()[0][0]
-        connection.close()
+    subdiv_id, other_subdiv_type = get_jurisdiction_hierarchy(session, jurisdiction_id)
+    if other_subdiv_type == "":
+        subdiv_type = name_from_id(session, "ReportingUnitType", subdiv_id)
+    else:
+        subdiv_type = other_subdiv_type
+
     return subdiv_type
 
 
-def get_jurisdiction_hierarchy(session, jurisdiction_id):
+def get_jurisdiction_hierarchy(session, jurisdiction_id) -> (int, str):
     """get reporting unit type id of reporting unit one level down from jurisdiction.
     Omit particular types that are contest types, not true reporting unit types
     TODO: handle case where type is non-standard and some other smaller reporting units are also
@@ -918,7 +912,7 @@ def get_jurisdiction_hierarchy(session, jurisdiction_id):
         """
         SELECT  *
         FROM    (
-        SELECT  rut."Id", 1 AS ordering
+        SELECT  rut."Id", ru."OtherReportingUnitType", 1 AS ordering
         FROM    "ComposingReportingUnitJoin" cruj
                 JOIN "ReportingUnit" ru on cruj."ChildReportingUnit_Id" = ru."Id"
                 JOIN "ReportingUnitType" rut on ru."ReportingUnitType_Id" = rut."Id"
@@ -931,7 +925,7 @@ def get_jurisdiction_hierarchy(session, jurisdiction_id):
                 AND "ParentReportingUnit_Id" = %s
         UNION
         -- This union accommodates Alaska without breaking other states
-        SELECT  rut."Id", 2 AS ordering
+        SELECT  rut."Id", ru."OtherReportingUnitType", 2 AS ordering
         FROM    "ComposingReportingUnitJoin" cruj
                 JOIN "ReportingUnit" ru on cruj."ChildReportingUnit_Id" = ru."Id"
                 JOIN "ReportingUnitType" rut on ru."ReportingUnitType_Id" = rut."Id"
@@ -961,11 +955,11 @@ def get_jurisdiction_hierarchy(session, jurisdiction_id):
             ],
         )
         result = cursor.fetchall()
-        subdivision_type_id = result[0][0]
+        (subdivision_type_id, other_subdiv_type) = (result[0][0], result[0][1])
     except:
         subdivision_type_id = None
     cursor.close()
-    return subdivision_type_id
+    return subdivision_type_id, other_subdiv_type
 
 
 def get_candidate_votecounts(session, election_id, top_ru_id, subdivision_type_id):
