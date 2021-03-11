@@ -421,14 +421,6 @@ def name_from_id(session, element: str, idx: int) -> str:
     return name
 
 
-def name_from_id(session: Session, element: str, idx: int) -> str:
-    connection = session.bind.raw_connection()
-    cursor = connection.cursor()
-    name = name_from_id_cursor(cursor, element, idx)
-    connection.close()
-    return name
-
-
 def name_to_id_cursor(cursor, element, name) -> Optional[int]:
     if element == "CandidateContest":
         q = sql.SQL(
@@ -728,18 +720,6 @@ def vote_type_list(cursor, datafile_list: list, by: str = "Id") -> (list, str):
     return vt_list, err_str
 
 
-def data_file_list(
-        session: Session,
-        election_id: int,
-        reporting_unit_id: Optional[int] = None,
-        by: str = "Id",
-) -> (list, str):
-    connection = session.bind.raw_connection()
-    cursor = connection.cursor()
-    df_list, err_str = data_file_list_cursor(
-        cursor, election_id, reporting_unit_id=reporting_unit_id)
-    return df_list, err_str
-
 def data_file_list_cursor(
     cursor, election_id, reporting_unit_id: Optional[int] = None, by="Id"
 ) -> (list, str):
@@ -759,6 +739,19 @@ def data_file_list_cursor(
         err_str = f"Database error pulling list of datafiles with election id in {election_id}: {exc}"
         df_list = None
     return df_list, err_str
+
+
+def data_file_list(
+        session, election_id, reporting_unit_id: Optional[int] = None, by: str = "Id",
+) -> (list, str):
+    connection = session.bind.raw_connection()
+    cursor = connection.cursor()
+    df_list, err_str = data_file_list_cursor(
+        cursor, election_id, reporting_unit_id=reporting_unit_id, by=by
+    )
+    connection.close()
+    return df_list, err_str
+
 
 def active_vote_types_from_ids(cursor, election_id=None, jurisdiction_id=None):
     if election_id:
@@ -1075,6 +1068,18 @@ and cruj."ParentReportingUnit_Id" = %s
     return contests
 
 
+def selection_ids_from_candidate_id(session, candidate_id):
+    connection = session.bind.raw_connection()
+    cursor = connection.cursor()
+
+    q = sql.SQL("""SELECT "Id" from "CandidateSelection" where "Candidate_Id" = %s""")
+
+    cursor.execute(q, (candidate_id,))
+    selection_id_list = [x for (x,) in cursor.fetchall()]
+
+    return selection_id_list
+
+
 def export_rollup_from_db(
     session,
     top_ru: str,
@@ -1273,17 +1278,6 @@ def export_rollup_from_db(
         err_str = f"No results exported due to database error: {exc}"
     cursor.close()
     return results_df, err_str
-
-
-    connection = session.bind.raw_connection()
-    cursor = connection.cursor()
-
-    q = sql.SQL("""SELECT "Id" from "CandidateSelection" where "Candidate_Id" = %s""")
-
-    cursor.execute(q, (candidate_id,))
-    selection_id_list = [x for (x,) in cursor.fetchall()]
-
-    return selection_id_list
 
 
 def read_vote_count(
