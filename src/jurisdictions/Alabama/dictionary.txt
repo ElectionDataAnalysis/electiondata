@@ -352,36 +352,36 @@ ReportingUnit	Alabama;Sumter County;CUBA COMMUNITY CTR	Sumter;CUBA COMMUNITY CTR
 ReportingUnit	Alabama;Sumter County;COATOPA BEL FIRE DEPT	Sumter;COATOPA BEL FIRE DEPT
 ReportingUnit	Alabama;Sumter County;BOYD TRAILER	Sumter;BOYD TRAILER
 ReportingUnit	Alabama;Sumter County;BELLAMY COMMUNITY CTR	Sumter;BELLAMY COMMUNITY CTR
-ReportingUnit	Alabama;StClair County;WOLF CREEK VFD	StClair;WOLF CREEK VFD
-ReportingUnit	Alabama;StClair County;WHITES CHAPEL TOWN HALL	StClair;WHITES CHAPEL TOWN HALL
-ReportingUnit	Alabama;StClair County;WATTSVILLE VFD	StClair;WATTSVILLE VFD
-ReportingUnit	Alabama;StClair County;STEELE COMM_ CTR_	StClair;STEELE COMM_ CTR_
-ReportingUnit	Alabama;StClair County;SPRINGVILLE 1ST UNITED	StClair;SPRINGVILLE 1ST UNITED
-ReportingUnit	Alabama;StClair County;SLATE UNION CH	StClair;SLATE UNION CH
-ReportingUnit	Alabama;StClair County;SHOAL CREEK COMM_ CTR_	StClair;SHOAL CREEK COMM_ CTR_
-ReportingUnit	Alabama;StClair County;RIVERSIDE TOWN HALL	StClair;RIVERSIDE TOWN HALL
-ReportingUnit	Alabama;StClair County;RAGLAND TOWN HALL	StClair;RAGLAND TOWN HALL
-ReportingUnit	Alabama;StClair County;PRESCOTT BAPTIST CH	StClair;PRESCOTT BAPTIST CH
-ReportingUnit	Alabama;StClair County;POPLAR SPRGS CH	StClair;POPLAR SPRGS CH
-ReportingUnit	Alabama;StClair County;PINEDALE VFD	StClair;PINEDALE VFD
-ReportingUnit	Alabama;StClair County;PELL CITY COMM_ CTR_	StClair;PELL CITY COMM_ CTR_
-ReportingUnit	Alabama;StClair County;ODENVILLE CIVIC CTR_	StClair;ODENVILLE CIVIC CTR_
-ReportingUnit	Alabama;StClair County;NORTH VALLEY CH	StClair;NORTH VALLEY CH
-ReportingUnit	Alabama;StClair County;NEW LONDON VFD	StClair;NEW LONDON VFD
-ReportingUnit	Alabama;StClair County;NEW HOPE BAPTIST CH	StClair;NEW HOPE BAPTIST CH
-ReportingUnit	Alabama;StClair County;MOODY CIVIC CTR_	StClair;MOODY CIVIC CTR_
-ReportingUnit	Alabama;StClair County;GUM SPRGS CH	StClair;GUM SPRGS CH
-ReportingUnit	Alabama;StClair County;GALLANT VFD	StClair;GALLANT VFD
-ReportingUnit	Alabama;StClair County;FRIENDSHIP BAPTIST CH	StClair;FRIENDSHIP BAPTIST CH
-ReportingUnit	Alabama;StClair County;FAIRVIEW CH	StClair;FAIRVIEW CH
-ReportingUnit	Alabama;StClair County;CROPWELL BAPTIST CH	StClair;CROPWELL BAPTIST CH
-ReportingUnit	Alabama;StClair County;COOK SPRGS VFD	StClair;COOK SPRGS VFD
-ReportingUnit	Alabama;StClair County;CHANDLER MT_ COMM_ CTR_	StClair;CHANDLER MT_ COMM_ CTR_
-ReportingUnit	Alabama;StClair County;CELEBRATIONS	StClair;CELEBRATIONS
-ReportingUnit	Alabama;StClair County;CEDAR GROVE BAPTIST CH	StClair;CEDAR GROVE BAPTIST CH
-ReportingUnit	Alabama;StClair County;BRANCHVILLE CUMBERLAND	StClair;BRANCHVILLE CUMBERLAND
-ReportingUnit	Alabama;StClair County;ASHVILLE CITY HALL	StClair;ASHVILLE CITY HALL
-ReportingUnit	Alabama;StClair County;ARGO TOWN HALL	StClair;ARGO TOWN HALL
+ReportingUnit	Alabama;St. Clair County;WOLF CREEK VFD	StClair;WOLF CREEK VFD
+ReportingUnit	Alabama;St. Clair County;WHITES CHAPEL TOWN HALL	StClair;WHITES CHAPEL TOWN HALL
+ReportingUnit	Alabama;St. Clair County;WATTSVILLE VFD	StClair;WATTSVILLE VFD
+ReportingUnit	Alabama;St. Clair County;STEELE COMM_ CTR_	StClair;STEELE COMM_ CTR_
+ReportingUnit	Alabama;St. Clair County;SPRINGVILLE 1ST UNITED	StClair;SPRINGVILLE 1ST UNITED
+ReportingUnit	Alabama;St. Clair County;SLATE UNION CH	StClair;SLATE UNION CH
+ReportingUnit	Alabama;St. Clair County;SHOAL CREEK COMM_ CTR_	StClair;SHOAL CREEK COMM_ CTR_
+ReportingUnit	Alabama;St. Clair County;RIVERSIDE TOWN HALL	StClair;RIVERSIDE TOWN HALL
+ReportingUnit	Alabama;St. Clair County;RAGLAND TOWN HALL	StClair;RAGLAND TOWN HALL
+ReportingUnit	Alabama;St. Clair County;PRESCOTT BAPTIST CH	StClair;PRESCOTT BAPTIST CH
+ReportingUnit	Alabama;St. Clair County;POPLAR SPRGS CH	StClair;POPLAR SPRGS CH
+ReportingUnit	Alabama;St. Clair County;PINEDALE VFD	StClair;PINEDALE VFD
+ReportingUnit	Alabama;St. Clair County;PELL CITY COMM_ CTR_	StClair;PELL CITY COMM_ CTR_
+ReportingUnit	Alabama;St. Clair County;ODENVILLE CIVIC CTR_	StClair;ODENVILLE CIVIC CTR_
+ReportingUnit	Alabama;St. Clair County;NORTH VALLEY CH	StClair;NORTH VALLEY CH
+ReportingUnit	Alabama;St. Clair County;NEW LONDON VFD	StClair;NEW LONDON VFD
+ReportingUnit	Alabama;St. Clair County;NEW HOPE BAPTIST CH	StClair;NEW HOPE BAPTIST CH
+ReportingUnit	Alabama;St. Clair County;MOODY CIVIC CTR_	StClair;MOODY CIVIC CTR_
+ReportingUnit	Alabama;St. Clair County;GUM SPRGS CH	StClair;GUM SPRGS CH
+ReportingUnit	Alabama;St. Clair County;GALLANT VFD	StClair;GALLANT VFD
+ReportingUnit	Alabama;St. Clair County;FRIENDSHIP BAPTIST CH	StClair;FRIENDSHIP BAPTIST CH
+ReportingUnit	Alabama;St. Clair County;FAIRVIEW CH	StClair;FAIRVIEW CH
+ReportingUnit	Alabama;St. Clair County;CROPWELL BAPTIST CH	StClair;CROPWELL BAPTIST CH
+ReportingUnit	Alabama;St. Clair County;COOK SPRGS VFD	StClair;COOK SPRGS VFD
+ReportingUnit	Alabama;St. Clair County;CHANDLER MT_ COMM_ CTR_	StClair;CHANDLER MT_ COMM_ CTR_
+ReportingUnit	Alabama;St. Clair County;CELEBRATIONS	StClair;CELEBRATIONS
+ReportingUnit	Alabama;St. Clair County;CEDAR GROVE BAPTIST CH	StClair;CEDAR GROVE BAPTIST CH
+ReportingUnit	Alabama;St. Clair County;BRANCHVILLE CUMBERLAND	StClair;BRANCHVILLE CUMBERLAND
+ReportingUnit	Alabama;St. Clair County;ASHVILLE CITY HALL	StClair;ASHVILLE CITY HALL
+ReportingUnit	Alabama;St. Clair County;ARGO TOWN HALL	StClair;ARGO TOWN HALL
 ReportingUnit	Alabama;Shelby County;WILSONVILLE UN METHODIST	Shelby;WILSONVILLE UN METHODIST
 ReportingUnit	Alabama;Shelby County;VINCENT REVIVAL CTR_	Shelby;VINCENT REVIVAL CTR_
 ReportingUnit	Alabama;Shelby County;VANDIVER SR_ CTR_	Shelby;VANDIVER SR_ CTR_
