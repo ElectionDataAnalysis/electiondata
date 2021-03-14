@@ -24,8 +24,6 @@ from election_data_analysis import nist_export as nist
 import itertools
 
 # constants
-default_encoding = "utf_8"
-
 sdl_pars_req = [
     "munger_name",
     "results_file",
@@ -300,9 +298,9 @@ class DataLoader:
                 # if fatal error, print warning
                 if ui.fatal_error(new_err):
                     print(f"Fatal error before loading; data not loaded from {f}")
-                # if no fatal error from SDL initialization, continue
+                # if no fatal error from SDL initialization, try to load data
                 else:
-                    # try to load data
+                    # get rollup unit if required
                     if rollup:
                         rollup_rut = db.get_major_subdiv_type(
                             self.session,
@@ -310,6 +308,7 @@ class DataLoader:
                         )
                     else:
                         rollup_rut = None
+                    # load data
                     load_error = sdl.load_results(rollup=rollup, rollup_rut=rollup_rut)
                     if load_error:
                         err = ui.consolidate_errors([err, load_error])
@@ -351,6 +350,40 @@ class DataLoader:
                     ],
                     file_prefix=f"{f[:-4]}_",
                 )
+            # TODO for each election, add 'total' vote type wherever it's missing
+            for election in [e for e,j in election_jurisdiction_list if j == jp]:
+                # pull results from db
+                election_id = db.name_to_id(self.session, "Election", election)
+                jurisdiction_id = db.name_to_id(self.session, "ReportingUnit", jp)
+                fields = [
+                    "VoteCount_Id",
+                    "Contest_Id",
+                    "Selection_Id",
+                    "ReportingUnit_Id",
+                    "Election_Id",
+                    "_datafile_Id",
+                    "CountItemType_Id",
+                    "OtherCountItemType",
+                    "Count",
+                ]
+                aliases = [
+                    "Id",
+                    "Contest_Id",
+                    "Selection_Id",
+                    "ReportingUnit_Id",
+                    "Election_Id",
+                    "_datafile_Id",
+                    "CountItemType_Id",
+                    "OtherCountItemType",
+                    "Count",
+                ]
+                df = db.read_vote_count(self.session, election_id, jurisdiction_id, fields, aliases)
+                # find total records that are missing
+                m_df = m.missing_total_counts(df,self.session)
+                # load new total records to db
+                db.insert_to_cdf_db(self.session.bind, m_df, "VoteCount")
+
+
         # report remaining errors
         loc_dict = {
             "munger": self.d["results_dir"],
@@ -1486,7 +1519,7 @@ class Analyzer:
                 issuer_abbreviation=nist.default_issuer_abbreviation,
                 status=nist.default_status,
                 vendor_application_id=nist.default_vendor_application_id
-            ).getroot(), encoding=default_encoding, method='xml'
+            ).getroot(), encoding=m.default_encoding, method='xml'
         )
         return xml_string
 

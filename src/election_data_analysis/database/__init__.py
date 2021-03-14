@@ -25,7 +25,7 @@ from election_data_analysis.database import create_cdf_db as db_cdf
 import os
 from sqlalchemy import MetaData, Table, Column, Integer, Float
 # NB: syntax-checker doesn't see it, but these ^^ are used.
-from typing import Optional, List, Dict, Any, Iterable
+from typing import Optional, List, Dict, Any, Iterable, Set
 from election_data_analysis import user_interface as ui
 
 states = """Alabama
@@ -95,7 +95,7 @@ contest_types_model = [
 ]
 
 
-def get_database_names(con):
+def get_database_names(con: psycopg2.extensions.connection):
     """Return dataframe with one column called `datname` """
     names = pd.read_sql("SELECT datname FROM pg_database", con)
     return names
@@ -138,7 +138,11 @@ def remove_database(params: dict) -> Optional[dict]:
     return db_err
 
 
-def create_database(con, cur, db_name):
+def create_database(
+        con: psycopg2.extensions.connection,
+        cur: psycopg2.extensions.cursor,
+        db_name: str,
+):
     con.set_isolation_level(ISOLATION_LEVEL_AUTOCOMMIT)
     q = sql.SQL("DROP DATABASE IF EXISTS {db_name}").format(
         db_name=sql.Identifier(db_name)
@@ -361,7 +365,7 @@ def sql_alchemy_connect(
 
     # The return value of create_engine() is our connection object
     engine = db.create_engine(
-        url, client_encoding="utf8", pool_size=20, max_overflow=40
+        url, client_encoding=m.default_encoding, pool_size=20, max_overflow=40
     )
     return engine, err
 
@@ -399,7 +403,11 @@ def get_cdf_db_table_names(eng):
     return cdf_elements, cdf_enumerations, cdf_joins, others
 
 
-def name_from_id_cursor(cursor,element,idx):
+def name_from_id_cursor(
+        cursor: psycopg2.extensions.cursor,
+        element: str,
+        idx: int,
+):
     name_field = get_name_field(element)
     q = sql.SQL('SELECT {name_field} FROM {element} WHERE "Id" = %s').format(
         name_field=sql.Identifier(name_field), element=sql.Identifier(element)
@@ -421,7 +429,11 @@ def name_from_id(session, element: str, idx: int) -> str:
     return name
 
 
-def name_to_id_cursor(cursor, element, name) -> Optional[int]:
+def name_to_id_cursor(
+        cursor: psycopg2.extensions.cursor,
+        element: str,
+        name: str,
+) -> Optional[int]:
     if element == "CandidateContest":
         q = sql.SQL(
             'SELECT "Id" FROM "Contest" where "Name" = %s AND contest_type = \'Candidate\''
@@ -474,7 +486,7 @@ def get_name_field(element):
 
 
 def insert_to_cdf_db(
-    engine, df, element, sep="\t", encoding="utf_8", timestamp=None
+    engine, df, element, sep="\t", encoding=m.default_encoding, timestamp=None
 ) -> str:
     """Inserts any new records in <df> into <element>; if <element> has a timestamp column
     it must be specified in <timestamp>; <df> must have columns matching <element>,
@@ -670,7 +682,10 @@ def append_id_to_dframe(
     return df_appended
 
 
-def get_column_names(cursor, table: str) -> (list, dict):
+def get_column_names(
+        cursor: psycopg2.extensions.cursor,
+        table: str
+) -> (list, dict):
     q = sql.SQL(
         """SELECT column_name, data_type FROM information_schema.columns 
         WHERE table_schema = 'public' AND table_name = %s"""
@@ -721,7 +736,10 @@ def vote_type_list(cursor, datafile_list: list, by: str = "Id") -> (list, str):
 
 
 def data_file_list_cursor(
-    cursor, election_id, reporting_unit_id: Optional[int] = None, by="Id"
+        cursor: psycopg2.extensions.cursor,
+        election_id: int,
+        reporting_unit_id: Optional[int] = None,
+        by="Id"
 ) -> (list, str):
     q = sql.SQL(
         """SELECT distinct d.{by} FROM _datafile d WHERE d."Election_Id" = %s"""
@@ -1153,7 +1171,6 @@ def export_rollup_from_db(
                 group_and_order_by,
                 sql.SQL(", party.{name}").format(name=sql.Identifier("Name")),
             ])
-
         else:
             select_party = sql.SQL("")
             party_join = sql.SQL("")
@@ -1176,6 +1193,9 @@ def export_rollup_from_db(
             district_id=sql.Identifier("ElectionDistrict_Id"),
             id=sql.Identifier("Id"),
         )
+        select_party = sql.SQL("")
+        party_join = sql.SQL("")
+
     else:
         err_str = f"Unrecognized contest_type: {contest_type}. No results exported"
         return pd.DataFrame(columns=columns), err_str
@@ -1289,7 +1309,8 @@ def read_vote_count(
         SELECT  DISTINCT {fields}
         FROM    (
                     SELECT  "Id" as "VoteCount_Id", "Contest_Id", "Selection_Id",
-                            "ReportingUnit_Id", "Election_Id", "CountItemType_Id", "Count"
+                            "ReportingUnit_Id", "Election_Id", "_datafile_Id", 
+                            "CountItemType_Id", "OtherCountItemType", "Count"
                     FROM    "VoteCount"
                 ) vc
                 JOIN (SELECT "Id", "Name" as "ContestName" , contest_type as "ContestType" FROM "Contest") con on vc."Contest_Id" = con."Id"
@@ -1565,7 +1586,9 @@ def id_other_cols_to_enum(session: Session, df: pd.DataFrame, enum: str) -> (pd.
 
 
 def parents_by_cursor(
-        cursor, ru_id_list: List[int], subunit_type: str = "county"
+        cursor: psycopg2.extensions.cursor,
+        ru_id_list: List[int],
+        subunit_type: str = "county"
 ) -> (pd.DataFrame, Optional[str]):
     err_str = None
     # kludge, because ru_ids in ru_id_list are typed as np.int64
@@ -1603,3 +1626,45 @@ def parents(
     cursor = connection.cursor()
     parent_df, err_str = parents_by_cursor(cursor, ru_id_list, subunit_type=subunit_type)
     return parent_df, err_str
+
+
+def get_vote_count_types_cursor(
+        cursor: psycopg2.extensions.cursor, election: str, jurisdiction: str
+) -> Set[str]:
+    """return list of all vote count types present for the
+    given election-jurisdiction pair"""
+    q = sql.SQL("""
+    select distinct cit."Txt", vc."OtherCountItemType"
+    from "VoteCount" vc
+    left join "CountItemType" cit on vc."CountItemType_Id" = cit."Id"
+    left join "_datafile" d on vc."_datafile_Id" = d."Id"
+    left join "ReportingUnit" ru on d."ReportingUnit_Id" = ru."Id"
+    left join "Election" el on vc."Election_Id" = el."Id"
+    where ru."Name" = {jurisdiction}
+    and el."Name" = {election}
+    """).format(
+        jurisdiction=sql.Literal(jurisdiction),
+        election=sql.Literal(election),
+    )
+    cursor.execute(q)
+    results = cursor.fetchall()
+    results_df = pd.DataFrame(results)
+    if results_df.empty:
+        vct_set = set()
+    else:
+        vct_set = set(results_df[0].unique())
+        mask = results_df[0] == "other"
+        vct_set.update(results_df.loc[mask,1].unique())
+        if "other" in vct_set:
+            vct_set.remove("other")
+    return vct_set
+
+
+def get_vote_count_types(
+        session: Session, election: str, jurisdiction: str
+) -> Set[str]:
+    connection = session.bind.raw_connection()
+    cursor = connection.cursor()
+    vct_set = get_vote_count_types_cursor(cursor, election, jurisdiction)
+    connection.close()
+    return vct_set
