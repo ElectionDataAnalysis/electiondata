@@ -8,7 +8,7 @@ from election_data_analysis import user_interface as ui
 from election_data_analysis import munge as m
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy.orm.session import Session
-from typing import List, Dict, Optional
+from typing import List, Dict, Optional, Any
 import datetime
 import os
 import pandas as pd
@@ -1522,7 +1522,6 @@ class Analyzer:
 
     def diff_in_diff(self,
                      election: str,
-                     state_by_state_export: bool = False,
                      ) -> (pd.DataFrame, list):
         """for each jurisdiction in the election that has more than just 'total',
         Calculate all possible diff-in-diff values per Herron
@@ -1625,7 +1624,9 @@ class Analyzer:
                                                 missing.append([county, con_pair[i], party, vt_pair[j], ke])
                                     if ok:
                                         # append diff-in-diff row
-                                        did = abs(pct[0][0] - pct[1][0]) - abs(pct[0][1] - pct[1][1])
+                                        did = abs(
+                                            abs(pct[0][0] - pct[1][0]) - abs(pct[0][1] - pct[1][1])
+                                        )
                                         state_rows.append([
                                            county, cdt, party, con_pair, vt_pair, did
                                         ])
@@ -1635,6 +1636,26 @@ class Analyzer:
 
         diff_in_diff = pd.DataFrame(rows, columns=cols)
         return diff_in_diff, missing
+
+    def vote_share_comparison(
+            self,
+            element: str,
+            reportingunit_id: int,
+            election_id: int,
+            filter: Optional[Dict[str,Any]] = None,
+    ) -> pd.DataFrame:
+        """given an election, a reporting unit -- not necessarily a whole jurisdiction--
+        and an element for pairing (e.g., "Contest"), return a dataframe of pairs of elements
+         along with pairs of vote shares between those two elements (summing over everything else)"""
+        if element in ["Contest", "Party", "Office", "ReportingUnit", "Election"]:
+            name_field = f"{element}Name"
+        else:       # TODO tech debt this is not everything for read_vote_count
+            name_field = element
+        fields = [name_field, "Count"]
+        aliases = [name_field, "Count"]
+        working = db.read_vote_count(self.session, election_id, reportingunit_id, fields, aliases)
+
+        return df
 
 def aggregate_results(
     election,
