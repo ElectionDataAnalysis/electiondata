@@ -309,36 +309,36 @@ Alabama;Sumter County;CUBA COMMUNITY CTR	precinct
 Alabama;Sumter County;COATOPA BEL FIRE DEPT	precinct
 Alabama;Sumter County;BOYD TRAILER	precinct
 Alabama;Sumter County;BELLAMY COMMUNITY CTR	precinct
-Alabama;StClair County;WOLF CREEK VFD	precinct
-Alabama;StClair County;WHITES CHAPEL TOWN HALL	precinct
-Alabama;StClair County;WATTSVILLE VFD	precinct
-Alabama;StClair County;STEELE COMM_ CTR_	precinct
-Alabama;StClair County;SPRINGVILLE 1ST UNITED	precinct
-Alabama;StClair County;SLATE UNION CH	precinct
-Alabama;StClair County;SHOAL CREEK COMM_ CTR_	precinct
-Alabama;StClair County;RIVERSIDE TOWN HALL	precinct
-Alabama;StClair County;RAGLAND TOWN HALL	precinct
-Alabama;StClair County;PRESCOTT BAPTIST CH	precinct
-Alabama;StClair County;POPLAR SPRGS CH	precinct
-Alabama;StClair County;PINEDALE VFD	precinct
-Alabama;StClair County;PELL CITY COMM_ CTR_	precinct
-Alabama;StClair County;ODENVILLE CIVIC CTR_	precinct
-Alabama;StClair County;NORTH VALLEY CH	precinct
-Alabama;StClair County;NEW LONDON VFD	precinct
-Alabama;StClair County;NEW HOPE BAPTIST CH	precinct
-Alabama;StClair County;MOODY CIVIC CTR_	precinct
-Alabama;StClair County;GUM SPRGS CH	precinct
-Alabama;StClair County;GALLANT VFD	precinct
-Alabama;StClair County;FRIENDSHIP BAPTIST CH	precinct
-Alabama;StClair County;FAIRVIEW CH	precinct
-Alabama;StClair County;CROPWELL BAPTIST CH	precinct
-Alabama;StClair County;COOK SPRGS VFD	precinct
-Alabama;StClair County;CHANDLER MT_ COMM_ CTR_	precinct
-Alabama;StClair County;CELEBRATIONS	precinct
-Alabama;StClair County;CEDAR GROVE BAPTIST CH	precinct
-Alabama;StClair County;BRANCHVILLE CUMBERLAND	precinct
-Alabama;StClair County;ASHVILLE CITY HALL	precinct
-Alabama;StClair County;ARGO TOWN HALL	precinct
+Alabama;St. Clair County;WOLF CREEK VFD	precinct
+Alabama;St. Clair County;WHITES CHAPEL TOWN HALL	precinct
+Alabama;St. Clair County;WATTSVILLE VFD	precinct
+Alabama;St. Clair County;STEELE COMM_ CTR_	precinct
+Alabama;St. Clair County;SPRINGVILLE 1ST UNITED	precinct
+Alabama;St. Clair County;SLATE UNION CH	precinct
+Alabama;St. Clair County;SHOAL CREEK COMM_ CTR_	precinct
+Alabama;St. Clair County;RIVERSIDE TOWN HALL	precinct
+Alabama;St. Clair County;RAGLAND TOWN HALL	precinct
+Alabama;St. Clair County;PRESCOTT BAPTIST CH	precinct
+Alabama;St. Clair County;POPLAR SPRGS CH	precinct
+Alabama;St. Clair County;PINEDALE VFD	precinct
+Alabama;St. Clair County;PELL CITY COMM_ CTR_	precinct
+Alabama;St. Clair County;ODENVILLE CIVIC CTR_	precinct
+Alabama;St. Clair County;NORTH VALLEY CH	precinct
+Alabama;St. Clair County;NEW LONDON VFD	precinct
+Alabama;St. Clair County;NEW HOPE BAPTIST CH	precinct
+Alabama;St. Clair County;MOODY CIVIC CTR_	precinct
+Alabama;St. Clair County;GUM SPRGS CH	precinct
+Alabama;St. Clair County;GALLANT VFD	precinct
+Alabama;St. Clair County;FRIENDSHIP BAPTIST CH	precinct
+Alabama;St. Clair County;FAIRVIEW CH	precinct
+Alabama;St. Clair County;CROPWELL BAPTIST CH	precinct
+Alabama;St. Clair County;COOK SPRGS VFD	precinct
+Alabama;St. Clair County;CHANDLER MT_ COMM_ CTR_	precinct
+Alabama;St. Clair County;CELEBRATIONS	precinct
+Alabama;St. Clair County;CEDAR GROVE BAPTIST CH	precinct
+Alabama;St. Clair County;BRANCHVILLE CUMBERLAND	precinct
+Alabama;St. Clair County;ASHVILLE CITY HALL	precinct
+Alabama;St. Clair County;ARGO TOWN HALL	precinct
 Alabama;Shelby County;WILSONVILLE UN METHODIST	precinct
 Alabama;Shelby County;VINCENT REVIVAL CTR_	precinct
 Alabama;Shelby County;VANDIVER SR_ CTR_	precinct

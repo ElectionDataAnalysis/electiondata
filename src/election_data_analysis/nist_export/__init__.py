@@ -49,8 +49,12 @@ def nist_v2_xml_export_tree(
         # get major subdivision type if not provided
         rut = pd.read_sql_table("ReportingUnitType",session.bind,index_col="Id")
         if not major_subdivision:
-            sub_type_id = db.get_jurisdiction_hierarchy(session, jurisdiction_id)
-            major_subdivision = rut.loc[sub_type_id, "Txt"]
+            sub_type_id, sub_type_other = db.get_jurisdiction_hierarchy(session, jurisdiction_id)
+            if sub_type_other == "":
+                major_subdivision = rut.loc[sub_type_id, "Txt"]
+            else:
+                major_subdivision = sub_type_other
+
 
     # get vote count data
     results_df = read_vote_count_nist(

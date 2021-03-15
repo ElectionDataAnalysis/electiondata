@@ -21,10 +21,9 @@ from election_data_analysis import visualize as viz
 from election_data_analysis import juris_and_munger as jm
 from election_data_analysis import preparation as prep
 from election_data_analysis import nist_export as nist
+import itertools
 
 # constants
-default_encoding = "utf_8"
-
 sdl_pars_req = [
     "munger_name",
     "results_file",
@@ -299,9 +298,9 @@ class DataLoader:
                 # if fatal error, print warning
                 if ui.fatal_error(new_err):
                     print(f"Fatal error before loading; data not loaded from {f}")
-                # if no fatal error from SDL initialization, continue
+                # if no fatal error from SDL initialization, try to load data
                 else:
-                    # try to load data
+                    # get rollup unit if required
                     if rollup:
                         rollup_rut = db.get_major_subdiv_type(
                             self.session,
@@ -309,6 +308,7 @@ class DataLoader:
                         )
                     else:
                         rollup_rut = None
+                    # load data
                     load_error = sdl.load_results(rollup=rollup, rollup_rut=rollup_rut)
                     if load_error:
                         err = ui.consolidate_errors([err, load_error])
@@ -350,6 +350,37 @@ class DataLoader:
                     ],
                     file_prefix=f"{f[:-4]}_",
                 )
+            # for each election, add 'total' vote type wherever it's missing
+            for election in [e for e,j in election_jurisdiction_list if j == jp]:
+                # pull results from db
+                election_id = db.name_to_id(self.session, "Election", election)
+                jurisdiction_id = db.name_to_id(self.session, "ReportingUnit", jp)
+                fields = [
+                    "Contest_Id",
+                    "Selection_Id",
+                    "ReportingUnit_Id",
+                    "Election_Id",
+                    "_datafile_Id",
+                    "CountItemType_Id",
+                    "OtherCountItemType",
+                    "Count",
+                ]
+                aliases = [
+                    "Contest_Id",
+                    "Selection_Id",
+                    "ReportingUnit_Id",
+                    "Election_Id",
+                    "_datafile_Id",
+                    "CountItemType_Id",
+                    "OtherCountItemType",
+                    "Count",
+                ]
+                df = db.read_vote_count(self.session, election_id, jurisdiction_id, fields, aliases)
+                # find total records that are missing
+                m_df = m.missing_total_counts(df,self.session)
+                # load new total records to db
+                db.insert_to_cdf_db(self.session.bind, m_df, "VoteCount")
+
         # report remaining errors
         loc_dict = {
             "munger": self.d["results_dir"],
@@ -1323,7 +1354,7 @@ class Analyzer:
         html, png, jpeg, webp, svg, pdf, and eps. Note that some filetypes may need plotly-orca
         installed as well."""
         jurisdiction_id = db.name_to_id(self.session, "ReportingUnit", jurisdiction)
-        subdivision_type_id = db.get_jurisdiction_hierarchy(
+        subdivision_type_id, _ = db.get_jurisdiction_hierarchy(
             self.session, jurisdiction_id
         )
         h_election_id = db.name_to_id(self.session, "Election", h_election)
@@ -1368,7 +1399,7 @@ class Analyzer:
         jurisdiction_id = db.name_to_id(self.session, "ReportingUnit", jurisdiction)
         # for now, bar charts can only handle jurisdictions where county is one level
         # down from the jurisdiction
-        subdivision_type_id = db.get_jurisdiction_hierarchy(
+        subdivision_type_id, _ = db.get_jurisdiction_hierarchy(
             self.session, jurisdiction_id
         )
         # bar chart always at one level below top reporting unit
@@ -1409,7 +1440,7 @@ class Analyzer:
         """contest_type is one of state, congressional, state-senate, state-house"""
         election_id = db.name_to_id(self.session, "Election", election)
         jurisdiction_id = db.name_to_id(self.session, "ReportingUnit", jurisdiction)
-        subdivision_type_id = db.get_jurisdiction_hierarchy(
+        subdivision_type_id, _ = db.get_jurisdiction_hierarchy(
             self.session, jurisdiction_id
         )
         # bar chart always at one level below top reporting unit
@@ -1485,9 +1516,135 @@ class Analyzer:
                 issuer_abbreviation=nist.default_issuer_abbreviation,
                 status=nist.default_status,
                 vendor_application_id=nist.default_vendor_application_id
-            ).getroot(), encoding=default_encoding, method='xml'
+            ).getroot(), encoding=m.default_encoding, method='xml'
         )
         return xml_string
+
+    def diff_in_diff(self,
+                     election: str,
+                     state_by_state_export: bool = False,
+                     ) -> (pd.DataFrame, list):
+        """for each jurisdiction in the election that has more than just 'total',
+        Calculate all possible diff-in-diff values per Herron
+        http://doi.org/10.1089/elj.2019.0544.
+        Return df with columns election, overall jurisdiction, county-type jurisdiction,
+        election district type, contest-pair, vote-type pair, diff-in-diff value"""
+
+        party_list = ["Democratic Party", "Republican Party"]
+        missing = list()    # track items missing info for diff-in-diff calculation
+        rows = list()       # collects rows for output dataframe
+        cols = ["county", "district_type", "party", "contest_pair", "vote_type_pair", "diff_in_diff"]
+        # TODO tech debt works for candidate contests only
+
+        # TODO: tech debt code treats 'other' like county or any county-like ru-type,
+        #  which might cause trouble if there is a non-standard major subdivision type
+
+        election_id = db.name_to_id(self.session, "Election", election)
+
+        # loop through state-like jurisdictions with multiple vote types
+        vts = db.vote_types_by_juris(self.session, election)
+
+        contests_df = db.contest_families_by_juris(
+            self.session,
+            election,
+        )
+        # loop through states, etc.
+        for state in vts.keys():
+            state_rows = list()
+            # get vote-types, contest roll-up by vote type and contest-by-election-district types
+            data_file_list, _ = db.data_file_list(self.session, election_id)
+            vote_types = {x for x in vts[state] if x != "total"}
+            district_types = contests_df[contests_df["jurisdiction"] == state]
+            state_id = db.name_to_id(self.session, "ReportingUnit", state)
+            major_sub_ru_type_id, major_sub_ru_type_other = db.get_jurisdiction_hierarchy(self.session, state_id)
+            if major_sub_ru_type_other == "":
+                major_sub_ru_type_name= db.name_from_id(
+                    self.session,
+                    "ReportingUnitType",
+                    major_sub_ru_type_id,
+                )
+            else:
+                major_sub_ru_type_name = major_sub_ru_type_other
+            # get dataframe of results, adding column for political party
+            """res, err = db.export_rollup_from_db(
+                self.session,
+                state,
+                election,
+                major_sub_ru_type_name,
+                "CandidateContest",
+                data_file_list,
+                exclude_redundant_total=True,
+                by_vote_type=True
+            )"""
+            res, _ = db.export_rollup_from_db(
+                self.session,
+                state,
+                election,
+                major_sub_ru_type_name,
+                "Candidate",  # TODO extend to ballotmeasure contests too
+                data_file_list,
+                exclude_redundant_total=True,
+                by_vote_type=True,
+                include_party_column=True
+            )
+            # loop through counties
+            for county in res.reporting_unit.unique():
+
+                # loop through contest district types (congressional, state-house, statewide)
+                for cdt in district_types.ReportingUnitType.unique():
+                    # find set of contests of that type in that county with candidates from all parties on party_list
+                    good_dt_contests = contests_df[
+                        (contests_df.jurisdiction == state)
+                        & (contests_df.ReportingUnitType == cdt)
+                    ]["contest"].unique()
+                    good_dt_contests_results = res[
+                        (res.reporting_unit == county)
+                        & (res.contest.isin(good_dt_contests))
+                    ][["contest", "selection", "party", "count_item_type", "count"]]
+                    good_contest_list = [
+                        c for c in good_dt_contests_results.contest.unique()
+                        if all([p in res[res.contest==c]["party"].unique() for p in party_list])
+                    ]
+                    # create dataframe with convenient index for calculations below
+                    if len(good_contest_list) > 1:
+                        ww = good_dt_contests_results.copy()[["contest","party","count_item_type","count"]].set_index(
+                            ["contest","party","count_item_type"]
+                        )
+                        ww['vote_type_total'] = ww.groupby(["contest","count_item_type"]).transform('sum')
+                        ww['pct_of_vote_type'] = ww["count"] / ww["vote_type_total"]
+                        ww.sort_index(inplace=True)  # sorting index helps performance
+                        # loop through vote-type pairs
+                        for vt_pair in itertools.combinations(vote_types,2):
+                            # loop through contest-pairs in county
+                            for con_pair in itertools.combinations(good_contest_list, 2):
+                                for party in party_list:
+                                    ok = True
+                                    pct = dict()
+                                    for i in (0,1):
+                                        pct[i] = dict()
+                                        for j in (0,1):
+                                            try:
+                                                pct[i][j] = ww.loc[
+                                                    (con_pair[i], party, vt_pair[j]),"pct_of_vote_type"
+                                                ]
+                                                if not isinstance(pct[i][j], float):
+                                                    ok = False
+                                                    missing.append([county, con_pair[i], party, vt_pair[j], "non-numeric"])
+                                            except KeyError as ke:
+                                                ok = False
+                                                missing.append([county, con_pair[i], party, vt_pair[j], ke])
+                                    if ok:
+                                        # append diff-in-diff row
+                                        did = abs(pct[0][0] - pct[1][0]) - abs(pct[0][1] - pct[1][1])
+                                        state_rows.append([
+                                           county, cdt, party, con_pair, vt_pair, did
+                                        ])
+            rows += state_rows
+            state_with_hyphens = state.replace(" ","-")
+            pd.DataFrame(state_rows, columns=cols).to_csv(f"{state_with_hyphens}_state_export.csv", index=False)
+
+        diff_in_diff = pd.DataFrame(rows, columns=cols)
+        return diff_in_diff, missing
 
 def aggregate_results(
     election,
@@ -1875,9 +2032,6 @@ def create_from_template(template_file, target_file, replace_dict):
         contents = contents.replace(k, replace_dict[k])
     with open(target_file, "w") as f:
         f.write(contents)
-
-
-
 
 
 def create_from_template(template_file, target_file, replace_dict):

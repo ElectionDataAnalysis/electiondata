@@ -1,6 +1,7 @@
 from configparser import ConfigParser, MissingSectionHeaderError
 from election_data_analysis import special_formats as sf
 from election_data_analysis import database as db
+from election_data_analysis import munge as m
 import election_data_analysis as e
 import pandas as pd
 from pandas.errors import ParserError
@@ -383,7 +384,7 @@ def basic_kwargs(p: Dict[str, Any], kwargs: Dict[str, Any]) -> Dict[str, Any]:
         kwargs["thousands"] = p["thousands_separator"]
     if p["file_type"] in ["flat_text"]:
         if p["encoding"] is None:
-            kwargs["encoding"] = e.default_encoding
+            kwargs["encoding"] = m.default_encoding
         else:
             kwargs["encoding"] = p["encoding"]
 

@@ -1198,11 +1198,16 @@ def rollup_dataframe(
             f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
             f"Unable to read parents reporting unit info from column {ru_id_column}"
         )
-    working = working.merge(
+    new_working = working.reset_index().merge(
         parents, how='left', left_on=ru_id_column, right_on="child_id"
-    )[group_cols + ["parent_id", count_col]]
+    ).set_index("index")[group_cols + ["parent_id", count_col]]
 
-    rollup_df = working.fillna("").groupby(
+    # if no parent is found (e.g., for reporting unit that is whole state), keep the original
+    mask = new_working.parent_id.isnull()
+    if mask.any():
+        new_working.loc[mask, "parent_id"] = working.loc[mask, ru_id_column]
+
+    rollup_df = new_working.fillna("").groupby(
         group_cols + ["parent_id"]
     ).sum(count_col).reset_index().rename(
         columns={"parent_id": new_ru_id_column}

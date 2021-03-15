@@ -1,6 +1,5 @@
 import inspect
 from pathlib import Path
-import election_data_analysis as eda
 from election_data_analysis import database as db
 from election_data_analysis import user_interface as ui
 from election_data_analysis import juris_and_munger as jm
@@ -15,6 +14,7 @@ from sqlalchemy.orm.session import Session
 import numpy as np
 
 # constants
+default_encoding = "utf_8"
 
 opt_munger_data_types: Dict[str, str] = {
     "count_locations": "string",
@@ -348,7 +348,7 @@ def replace_raw_with_internal_ids(
     raw_identifiers = pd.read_csv(
         os.path.join(juris.path_to_juris_dir, "dictionary.txt"),
         sep="\t",
-        encoding=eda.default_encoding,
+        encoding=default_encoding,
     )
 
     # restrict to the element at hand
@@ -916,7 +916,7 @@ def raw_to_id_simple(
                     r_i = pd.read_csv(
                         os.path.join(juris.path_to_juris_dir, "dictionary.txt"),
                         sep="\t",
-                        encoding=eda.default_encoding,
+                        encoding=default_encoding,
                     )
                     r_i = r_i[r_i.cdf_element == "CountItemType"]
                 recognized = r_i.raw_identifier_value.unique()
@@ -1008,26 +1008,23 @@ def raw_to_id_simple(
     return working, err
 
 
-def ensure_total_counts(
+def missing_total_counts(
     df: pd.DataFrame,
-    session,
+    session: Session,
 ) -> pd.DataFrame:
     """Assumes cols of df include Count and CountItemType_Id, OtherCountItemType
-    If there are no records with CountItemType 'total', add records"""
+    Return df of "total" type records that are missing
+    """
 
     # find CountItemType_Id for 'total'
     total_idx = db.name_to_id(session, "CountItemType", "total")
 
-    # find groups that have no total CountItemType
-
-    # add total for each of those groups, but not for others.
+    # get all totals by all but count, count-item-type-related and id columns
     group_cols = [
         x
         for x in df.columns
-        if x not in ["Count", "CountItemType_Id", "OtherCountItemType"]
+        if x not in ["Count", "CountItemType_Id", "OtherCountItemType", "Id"]
     ]
-
-    # get all totals
     sums = df.groupby(group_cols)["Count"].sum()
 
     # keep only sums that already involve a total
@@ -1042,9 +1039,7 @@ def ensure_total_counts(
     sums_df = add_constant_column(sums_df, "CountItemType_Id", total_idx)
     sums_df = add_constant_column(sums_df, "OtherCountItemType", "")
 
-    working = pd.concat([df, sums_df])
-
-    return working
+    return sums_df
 
 
 if __name__ == "__main__":
@@ -1671,8 +1666,6 @@ def fill_vote_count(
     ]
     working = working[vc_cols]
 
-    # add CountItemType total if it's not already there
-    working = ensure_total_counts(working, session)
     # TODO there are edge cases where this might include dupes
     #  that should be omitted. E.g., if data mistakenly read twice
     # Sum any rows that were disambiguated (otherwise dupes will be dropped
