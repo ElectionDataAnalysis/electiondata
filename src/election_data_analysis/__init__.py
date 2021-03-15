@@ -1566,16 +1566,6 @@ class Analyzer:
             else:
                 major_sub_ru_type_name = major_sub_ru_type_other
             # get dataframe of results, adding column for political party
-            """res, err = db.export_rollup_from_db(
-                self.session,
-                state,
-                election,
-                major_sub_ru_type_name,
-                "CandidateContest",
-                data_file_list,
-                exclude_redundant_total=True,
-                by_vote_type=True
-            )"""
             res, _ = db.export_rollup_from_db(
                 self.session,
                 state,
@@ -1627,7 +1617,7 @@ class Analyzer:
                                                 pct[i][j] = ww.loc[
                                                     (con_pair[i], party, vt_pair[j]),"pct_of_vote_type"
                                                 ]
-                                                if not isinstance(pct[i][j], float):
+                                                if pd.isnull(pct[i][j]) or (not isinstance(pct[i][j], float)):
                                                     ok = False
                                                     missing.append([county, con_pair[i], party, vt_pair[j], "non-numeric"])
                                             except KeyError as ke:
