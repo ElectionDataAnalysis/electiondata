@@ -350,13 +350,12 @@ class DataLoader:
                     ],
                     file_prefix=f"{f[:-4]}_",
                 )
-            # TODO for each election, add 'total' vote type wherever it's missing
+            # for each election, add 'total' vote type wherever it's missing
             for election in [e for e,j in election_jurisdiction_list if j == jp]:
                 # pull results from db
                 election_id = db.name_to_id(self.session, "Election", election)
                 jurisdiction_id = db.name_to_id(self.session, "ReportingUnit", jp)
                 fields = [
-                    "VoteCount_Id",
                     "Contest_Id",
                     "Selection_Id",
                     "ReportingUnit_Id",
@@ -367,7 +366,6 @@ class DataLoader:
                     "Count",
                 ]
                 aliases = [
-                    "Id",
                     "Contest_Id",
                     "Selection_Id",
                     "ReportingUnit_Id",
@@ -382,7 +380,6 @@ class DataLoader:
                 m_df = m.missing_total_counts(df,self.session)
                 # load new total records to db
                 db.insert_to_cdf_db(self.session.bind, m_df, "VoteCount")
-
 
         # report remaining errors
         loc_dict = {

@@ -1019,16 +1019,12 @@ def missing_total_counts(
     # find CountItemType_Id for 'total'
     total_idx = db.name_to_id(session, "CountItemType", "total")
 
-    # find groups that have no total CountItemType
-
-    # add total for each of those groups, but not for others.
+    # get all totals by all but count, count-item-type-related and id columns
     group_cols = [
         x
         for x in df.columns
-        if x not in ["Count", "CountItemType_Id", "OtherCountItemType"]
+        if x not in ["Count", "CountItemType_Id", "OtherCountItemType", "Id"]
     ]
-
-    # get all totals
     sums = df.groupby(group_cols)["Count"].sum()
 
     # keep only sums that already involve a total
