@@ -568,6 +568,6 @@ diff_in_diff, missing = an.diff_in_diff(election)
 
 Specifically, for a fixed county and party, for a fixed pair of vote types and for a fixed pair of contests, we calculate the difference-in-difference value to be
 ```abs(abs(pct[0][0] - pct[1][0]) - abs(pct[0][1] - pct[1][1]))```
-where `pct[i][j]` denotes the percentage of the total vote share earned by the party's candidate in contest `i` on ballots in the county of vote type `j`. The vote share is of the votes for all candidates, not just Democratic or Republican.
+where `pct[i][j]` denotes the percentage of the total vote share earned by the party's candidate in contest `i` on ballots in the county of vote type `j`. The vote share is of the votes for all candidates, not just Democratic or Republican. However, we omit contests that don't have both Republican and Democratic candidates
 
 For more information and context about difference-in-difference calculations for election results, see Michael C. Herron's article [Mail-In Absentee Ballot Anomalies in North Carolina's 9th Congressional District](http://doi.org/10.1089/elj.2019.0544). Note that he uses signed difference-in-difference, while we take the absolute value.
