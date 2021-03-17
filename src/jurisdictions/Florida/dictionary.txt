@@ -14561,3 +14561,19 @@ Candidate	Alex Rizo	Alex Rizo
 Candidate	Albert Oram	Albert Oram
 Candidate	Albert M. Griffiths	Albert M. Griffiths
 Candidate	Alan Grayson	Alan Grayson
+Candidate	Vincent 'Vinny' Parlatore	Vincent 'Vinny' Parlatore
+Candidate	Theodore 'Pink Tie' Murray	Theodore 'Pink Tie' Murray
+Candidate	Shevrin 'Shev' Jones	Shevrin 'Shev' Jones
+Candidate	Scott 'Mr. H' Hottenstein	Scott 'Mr. H' Hottenstein
+Candidate	Mamie 'Dee' Melvin	Mamie 'Dee' Melvin
+Candidate	James 'Jim' Pruden	James 'Jim' Pruden
+Candidate	Edgar 'EJ' Bernier	Edgar 'EJ' Bernier
+Candidate	Demetrius 'DB' Fugate	Demetrius 'DB' Fugate
+Candidate	Anthony 'Tony' Eldon	Anthony 'Tony' Eldon
+Party	Write-In	Write-In
+Party	Reform Party of Florida	Reform Party of Florida
+Party	Party for Socialism and Liberation - Florida	Party for Socialism and Liberation - Florida
+Party	No Party Affiliation	No Party Affiliation
+Party	Libertarian Party of Florida	Libertarian Party of Florida
+Party	Green Party	Green Party
+Party	Constitution Party of Florida	Constitution Party of Florida
