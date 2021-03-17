@@ -350,36 +350,6 @@ class DataLoader:
                     ],
                     file_prefix=f"{f[:-4]}_",
                 )
-            # for each election, add 'total' vote type wherever it's missing
-            for election in [e for e,j in election_jurisdiction_list if j == jp]:
-                # pull results from db
-                election_id = db.name_to_id(self.session, "Election", election)
-                jurisdiction_id = db.name_to_id(self.session, "ReportingUnit", jp)
-                fields = [
-                    "Contest_Id",
-                    "Selection_Id",
-                    "ReportingUnit_Id",
-                    "Election_Id",
-                    "_datafile_Id",
-                    "CountItemType_Id",
-                    "OtherCountItemType",
-                    "Count",
-                ]
-                aliases = [
-                    "Contest_Id",
-                    "Selection_Id",
-                    "ReportingUnit_Id",
-                    "Election_Id",
-                    "_datafile_Id",
-                    "CountItemType_Id",
-                    "OtherCountItemType",
-                    "Count",
-                ]
-                df = db.read_vote_count(self.session, election_id, jurisdiction_id, fields, aliases)
-                # find total records that are missing
-                m_df = m.missing_total_counts(df,self.session)
-                # load new total records to db
-                db.insert_to_cdf_db(self.session.bind, m_df, "VoteCount")
 
         # report remaining errors
         loc_dict = {
@@ -411,6 +381,45 @@ class DataLoader:
             db.remove_vote_counts(connection, cursor, idx, active_confirm)
         return None
 
+    def add_totals_if_missing(self, election, jurisdiction) -> Optional[str]:
+        """ for each election, add 'total' vote type wherever it's missing
+        returning any error"""
+        err_str = None
+        # pull results from db
+        election_id = db.name_to_id(self.session,"Election",election)
+        jurisdiction_id = db.name_to_id(self.session,"ReportingUnit",jurisdiction)
+        fields = [
+            "Contest_Id",
+            "Selection_Id",
+            "ReportingUnit_Id",
+            "Election_Id",
+            "_datafile_Id",
+            "CountItemType_Id",
+            "OtherCountItemType",
+            "Count",
+        ]
+        aliases = [
+            "Contest_Id",
+            "Selection_Id",
+            "ReportingUnit_Id",
+            "Election_Id",
+            "_datafile_Id",
+            "CountItemType_Id",
+            "OtherCountItemType",
+            "Count",
+        ]
+        df = db.read_vote_count(self.session,election_id,jurisdiction_id,fields,aliases)
+        if df.empty:
+            print(f"No data found for {election}, {jurisdiction}")
+        else:
+            # find total records that are missing
+            m_df = m.missing_total_counts(df,self.session)
+            # load new total records to db
+            try:
+                err_str = db.insert_to_cdf_db(self.session.bind,m_df,"VoteCount")
+            except Exception as exc:
+                err_str = f"Insertion to database failed: {exc}"
+        return err_str
 
 class SingleDataLoader:
     def __init__(

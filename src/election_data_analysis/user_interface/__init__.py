@@ -443,6 +443,8 @@ def read_single_datafile(
                 df_dict = {"Sheet1": df}
         elif p["file_type"] == "excel":
             df_dict, err = excel_to_dict(f_path, kwargs, list_desired_excel_sheets(f_path, p))
+            if fatal_error(err):
+                df_dict = dict()
         elif p["file_type"] == "flat_text":
             try:
                 df = pd.read_csv(f_path, **kwargs)
@@ -1009,6 +1011,9 @@ def reload_juris_election(
     # load all data into temp db
     dl.change_db(temp_db)
     dl.load_all(move_files=False)
+    err_str = dl.add_totals_if_missing(election_name,juris_name)
+    if err_str:
+        print(f"Error while adding totals: {err_str}")
 
     # run test files on temp db
     _, results = run_tests(
@@ -1023,7 +1028,7 @@ def reload_juris_election(
         go_ahead = input(
             f"Did tests succeeded for election {election_name} in {juris_name} (y/n)?"
         )
-    if go_ahead != "y" or results != 0:
+    if go_ahead != "y" or results != 0 or err_str:
         print("Something went wrong, new data not loaded")
         # cleanup
         db.remove_database(db_params)
@@ -1061,6 +1066,7 @@ def reload_juris_election(
 
     # Load new data into live db (and move successful to archive)
     dl.load_all()
+    err_str = dl.add_totals_if_missing(election_name, juris_name)
 
     # run tests on live db
     run_tests(
