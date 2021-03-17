@@ -8,7 +8,7 @@ from election_data_analysis import user_interface as ui
 from election_data_analysis import munge as m
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy.orm.session import Session
-from typing import List, Dict, Optional
+from typing import List, Dict, Optional, Any
 import datetime
 import os
 import pandas as pd
@@ -350,36 +350,6 @@ class DataLoader:
                     ],
                     file_prefix=f"{f[:-4]}_",
                 )
-            # for each election, add 'total' vote type wherever it's missing
-            for election in [e for e,j in election_jurisdiction_list if j == jp]:
-                # pull results from db
-                election_id = db.name_to_id(self.session, "Election", election)
-                jurisdiction_id = db.name_to_id(self.session, "ReportingUnit", jp)
-                fields = [
-                    "Contest_Id",
-                    "Selection_Id",
-                    "ReportingUnit_Id",
-                    "Election_Id",
-                    "_datafile_Id",
-                    "CountItemType_Id",
-                    "OtherCountItemType",
-                    "Count",
-                ]
-                aliases = [
-                    "Contest_Id",
-                    "Selection_Id",
-                    "ReportingUnit_Id",
-                    "Election_Id",
-                    "_datafile_Id",
-                    "CountItemType_Id",
-                    "OtherCountItemType",
-                    "Count",
-                ]
-                df = db.read_vote_count(self.session, election_id, jurisdiction_id, fields, aliases)
-                # find total records that are missing
-                m_df = m.missing_total_counts(df,self.session)
-                # load new total records to db
-                db.insert_to_cdf_db(self.session.bind, m_df, "VoteCount")
 
         # report remaining errors
         loc_dict = {
@@ -411,6 +381,45 @@ class DataLoader:
             db.remove_vote_counts(connection, cursor, idx, active_confirm)
         return None
 
+    def add_totals_if_missing(self, election, jurisdiction) -> Optional[str]:
+        """ for each election, add 'total' vote type wherever it's missing
+        returning any error"""
+        err_str = None
+        # pull results from db
+        election_id = db.name_to_id(self.session,"Election",election)
+        jurisdiction_id = db.name_to_id(self.session,"ReportingUnit",jurisdiction)
+        fields = [
+            "Contest_Id",
+            "Selection_Id",
+            "ReportingUnit_Id",
+            "Election_Id",
+            "_datafile_Id",
+            "CountItemType_Id",
+            "OtherCountItemType",
+            "Count",
+        ]
+        aliases = [
+            "Contest_Id",
+            "Selection_Id",
+            "ReportingUnit_Id",
+            "Election_Id",
+            "_datafile_Id",
+            "CountItemType_Id",
+            "OtherCountItemType",
+            "Count",
+        ]
+        df = db.read_vote_count(self.session,election_id,jurisdiction_id,fields,aliases)
+        if df.empty:
+            print(f"No data found for {election}, {jurisdiction}")
+        else:
+            # find total records that are missing
+            m_df = m.missing_total_counts(df,self.session)
+            # load new total records to db
+            try:
+                err_str = db.insert_to_cdf_db(self.session.bind,m_df,"VoteCount")
+            except Exception as exc:
+                err_str = f"Insertion to database failed: {exc}"
+        return err_str
 
 class SingleDataLoader:
     def __init__(
@@ -1522,7 +1531,6 @@ class Analyzer:
 
     def diff_in_diff(self,
                      election: str,
-                     state_by_state_export: bool = False,
                      ) -> (pd.DataFrame, list):
         """for each jurisdiction in the election that has more than just 'total',
         Calculate all possible diff-in-diff values per Herron
@@ -1532,8 +1540,14 @@ class Analyzer:
 
         party_list = ["Democratic Party", "Republican Party"]
         missing = list()    # track items missing info for diff-in-diff calculation
+        msgs = set()    # track expected but missing counts (by vote type or contest over all county)
         rows = list()       # collects rows for output dataframe
-        cols = ["county", "district_type", "party", "contest_pair", "vote_type_pair", "diff_in_diff"]
+        cols = [
+            "county", "district_type", "party",
+            "contest_pair", "min_count_by_contest",
+            "vote_type_pair", "min_count_by_vote_type",
+            "abs_diff_in_diff"
+        ]
         # TODO tech debt works for candidate contests only
 
         # TODO: tech debt code treats 'other' like county or any county-like ru-type,
@@ -1566,16 +1580,6 @@ class Analyzer:
             else:
                 major_sub_ru_type_name = major_sub_ru_type_other
             # get dataframe of results, adding column for political party
-            """res, err = db.export_rollup_from_db(
-                self.session,
-                state,
-                election,
-                major_sub_ru_type_name,
-                "CandidateContest",
-                data_file_list,
-                exclude_redundant_total=True,
-                by_vote_type=True
-            )"""
             res, _ = db.export_rollup_from_db(
                 self.session,
                 state,
@@ -1589,10 +1593,15 @@ class Analyzer:
             )
             # loop through counties
             for county in res.reporting_unit.unique():
+                # get dictionary of vote counts by contest
+                county_id = db.name_to_id(self.session, "ReportingUnit", county)
+                vc_by_contest = self.vote_count_by_element("Contest", election_id, county_id)
+                vc_by_vote_type = self.vote_count_by_element("CountItemType", election_id, county_id)
 
                 # loop through contest district types (congressional, state-house, statewide)
                 for cdt in district_types.ReportingUnitType.unique():
-                    # find set of contests of that type in that county with candidates from all parties on party_list
+                    # find set of "good" contests of that type in that county --
+                    # contests with candidates from all parties on party_list
                     good_dt_contests = contests_df[
                         (contests_df.jurisdiction == state)
                         & (contests_df.ReportingUnitType == cdt)
@@ -1605,18 +1614,38 @@ class Analyzer:
                         c for c in good_dt_contests_results.contest.unique()
                         if all([p in res[res.contest==c]["party"].unique() for p in party_list])
                     ]
-                    # create dataframe with convenient index for calculations below
+
                     if len(good_contest_list) > 1:
-                        ww = good_dt_contests_results.copy()[["contest","party","count_item_type","count"]].set_index(
+                        # create dataframe with convenient index for calculations below
+                        # note: sum is necessary because, e.g., may have two selections of same party
+                        ww = good_dt_contests_results[["contest","party","count_item_type","count"]].groupby(
                             ["contest","party","count_item_type"]
-                        )
+                        ).sum("count")
                         ww['vote_type_total'] = ww.groupby(["contest","count_item_type"]).transform('sum')
                         ww['pct_of_vote_type'] = ww["count"] / ww["vote_type_total"]
-                        ww.sort_index(inplace=True)  # sorting index helps performance
+                        # sort index to help performance
+                        ww.sort_index(inplace=True)
+
+                        # calculate contest-to-contest vote shares and votetype-to-votetype vote shares
+                        # that will be used to exclude comparisons involving small
+
                         # loop through vote-type pairs
                         for vt_pair in itertools.combinations(vote_types,2):
+                            try:
+                                min_count_by_vote_type = min(vc_by_vote_type[vt_pair[0]], vc_by_vote_type[vt_pair[1]])
+                            except KeyError as ke:
+                                msgs.update({f"No results of vote type {ke} available in {county}"})
+                                continue
+                                # TODO better error handling?
                             # loop through contest-pairs in county
                             for con_pair in itertools.combinations(good_contest_list, 2):
+                                try:
+                                    min_count_by_contest = min(vc_by_contest[con_pair[0]], vc_by_contest[con_pair[0]])
+                                except KeyError as ke:
+                                    msgs.update({f"No results for contest {ke} available in {county}"})
+                                    continue
+                                    # TODO better error handling?
+
                                 for party in party_list:
                                     ok = True
                                     pct = dict()
@@ -1627,7 +1656,7 @@ class Analyzer:
                                                 pct[i][j] = ww.loc[
                                                     (con_pair[i], party, vt_pair[j]),"pct_of_vote_type"
                                                 ]
-                                                if not isinstance(pct[i][j], float):
+                                                if pd.isnull(pct[i][j]) or (not isinstance(pct[i][j], float)):
                                                     ok = False
                                                     missing.append([county, con_pair[i], party, vt_pair[j], "non-numeric"])
                                             except KeyError as ke:
@@ -1635,16 +1664,69 @@ class Analyzer:
                                                 missing.append([county, con_pair[i], party, vt_pair[j], ke])
                                     if ok:
                                         # append diff-in-diff row
-                                        did = abs(pct[0][0] - pct[1][0]) - abs(pct[0][1] - pct[1][1])
+                                        did = abs(
+                                            abs(pct[0][0] - pct[1][0]) - abs(pct[0][1] - pct[1][1])
+                                        )
                                         state_rows.append([
-                                           county, cdt, party, con_pair, vt_pair, did
+                                           county, cdt, party,
+                                            con_pair, min_count_by_contest,
+                                            vt_pair, min_count_by_vote_type,
+                                            did,
                                         ])
             rows += state_rows
             state_with_hyphens = state.replace(" ","-")
             pd.DataFrame(state_rows, columns=cols).to_csv(f"{state_with_hyphens}_state_export.csv", index=False)
 
         diff_in_diff = pd.DataFrame(rows, columns=cols)
+        for msg in sorted(list(msgs)):
+            print(msg)
         return diff_in_diff, missing
+
+    def vote_share_comparison(
+            self,
+            element: str,
+            election_id: int,
+            reportingunit_id: int,
+    ) -> Dict[str,Dict[str, Any]]:
+        """given an election, a reporting unit -- not necessarily a whole jurisdiction--
+        and an element for pairing (e.g., "Contest"), return a dictionary mapping pairs of elements
+        to pairs of vote shares (summing over everything else)"""
+        vote_share = dict()
+        vc = self.vote_count_by_element(element, election_id, reportingunit_id)
+        for item in vc.keys():
+            vote_share[item] = dict()
+        for (x,y) in itertools.combinations(vc.keys(),2):
+            vote_total = vc[x] + vc[y]
+            vote_share[x][y] = (
+                vc[x]/vote_total, vc[y]/vote_total
+            )
+            vote_share[y][x] = (
+                vc[y]/vote_total, vc[x]/vote_total
+            )
+        return vote_share
+
+    def vote_count_by_element(
+            self, element: str, election_id: int, reportingunit_id: int,
+    ) -> dict:
+        """Returns dictionary of vote counts by element (summing over everything else
+        within the given election and reporting unit)"""
+        if element == "CountItemType":
+            name_field = "CountItemType"
+            fields = aliases = ["CountItemType", "Count"]
+        elif element in ["Contest", "Party", "Office", "ReportingUnit", "Election"]:
+            name_field = f"{element}Name"
+            fields = aliases = [name_field, "CountItemType", "Count"]
+        else:       # TODO tech debt there are more field possibilities in read_vote_count
+            name_field = element
+            fields = aliases = [name_field,"CountItemType","Count"]
+        vc_df = db.read_vote_count(
+            self.session, election_id, reportingunit_id, fields, aliases,
+        )
+        # exclude any redundant total vote types
+        if len(vc_df.CountItemType.unique()) > 1:
+            vc_df = vc_df[vc_df.CountItemType != "total"]
+        vc_dict = vc_df.groupby(name_field).sum("Count").to_dict()["Count"]
+        return vc_dict
 
 def aggregate_results(
     election,

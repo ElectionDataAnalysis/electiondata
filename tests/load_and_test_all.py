@@ -186,6 +186,16 @@ def run2(
             )
             return err
 
+        # add any necessary totals
+        for e, j in election_jurisdiction_list:
+            err_str = dl.add_totals_if_missing(e, j)
+            if err_str:
+                err = ui.add_new_error(
+                    err,
+                    "warn-system",
+                    f"Error adding total vote types for {e}, {j}: {err_str}"
+                )
+
         if ui.fatal_error(err):
             optional_remove(dl, "TestingData")
             return err
