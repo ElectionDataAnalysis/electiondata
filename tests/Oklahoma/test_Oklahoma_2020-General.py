@@ -11,17 +11,17 @@ import election_data_analysis as e
 election = "2020 General"
 jurisdiction = "Oklahoma"
 abbr = "OK"
-total_pres_votes = 1558627  # total of all votes for President
+total_pres_votes = 1560699  # total of all votes for President
 cd = 4  # congressional district
-total_cd_votes = 313966  # total votes in the chosen cd
+total_cd_votes = 314358  # total votes in the chosen cd
 shd = 56  # state house district
-total_shd_votes = 12912
+total_shd_votes = 12950
 ssd = 17  # state senate district
-total_ssd_votes = 33196
+total_ssd_votes = 33214
 single_vote_type = "absentee-mail"  # pick any one from your file
-pres_votes_vote_type = 280799
+pres_votes_vote_type = 280885
 single_county = "Oklahoma;Choctaw County"  # pick any one from your file
-pres_votes_county = 5829  # total votes for pres of that county
+pres_votes_county = 5832  # total votes for pres of that county
 
 
 def test_data_exists(dbname):
