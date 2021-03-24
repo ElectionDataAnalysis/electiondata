@@ -1536,7 +1536,9 @@ class Analyzer:
         Calculate all possible diff-in-diff values per Herron
         http://doi.org/10.1089/elj.2019.0544.
         Return df with columns election, overall jurisdiction, county-type jurisdiction,
-        election district type, contest-pair, vote-type pair, diff-in-diff value"""
+        election district type, contest-pair, vote-type pair, diff-in-diff value
+        as well as minimum # of votes over both contests (to help eliminate
+        unenlightening variations from small contests)"""
 
         party_list = ["Democratic Party", "Republican Party"]
         missing = list()    # track items missing info for diff-in-diff calculation
@@ -1545,7 +1547,7 @@ class Analyzer:
         cols = [
             "county", "district_type", "party",
             "contest_pair", "min_count_by_contest",
-            "vote_type_pair", "min_count_by_vote_type",
+            "vote_type_pair",
             "abs_diff_in_diff"
         ]
         # TODO tech debt works for candidate contests only
@@ -1670,7 +1672,7 @@ class Analyzer:
                                         state_rows.append([
                                            county, cdt, party,
                                             con_pair, min_count_by_contest,
-                                            vt_pair, min_count_by_vote_type,
+                                            vt_pair,
                                             did,
                                         ])
             rows += state_rows
