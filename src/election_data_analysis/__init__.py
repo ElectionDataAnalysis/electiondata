@@ -1545,7 +1545,7 @@ class Analyzer:
         msgs = set()    # track expected but missing counts (by vote type or contest over all county)
         rows = list()       # collects rows for output dataframe
         cols = [
-            "county", "district_type", "party",
+            "state", "county", "district_type", "party",
             "contest_pair", "min_count_by_contest",
             "vote_type_pair",
             "abs_diff_in_diff"
@@ -1670,7 +1670,7 @@ class Analyzer:
                                             abs(pct[0][0] - pct[1][0]) - abs(pct[0][1] - pct[1][1])
                                         )
                                         state_rows.append([
-                                           county, cdt, party,
+                                           state, county, cdt, party,
                                             con_pair, min_count_by_contest,
                                             vt_pair,
                                             did,
