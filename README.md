@@ -45,10 +45,6 @@ Other nesting relationships (e.g., `Pennsylvania;Philadelphia;Ward 8;Division 6`
 
 ## Mungers
 Election result data comes in a variety of file formats. Even when the basic format is the same, file columns may have different interpretations. The code is built to ease -- as much as possible -- the chore of processing and interpreting each format. Following the [Jargon File](http://catb.org/jargon/html/M/munge.html), which gives one meaning of "munge" as "modify data in some way the speaker doesn't need to go into right now or cannot describe succinctly," we call each set of basic information about interpreting an election result file a "munger". The munger template is in the directory `src/templates/munger_templates`.
-
-Each munger directory needs the following component files:
- * `format.txt` holds information about the file format
- * `cdf_elements.txt` holds formulas for parsing information from the fields of the results file
  
 # Code components
 ## About the `CDF_schema_def_info` directory:
