@@ -93,7 +93,7 @@ The jurisdiction files in this repository follow certain conventions. Many of th
  * Elliot Meyerson
 
 # Funding
-Funding provided October 2019 - April 2021 by the National Science Foundation
+Funding provided October 2019 - September 2021 by the National Science Foundation
  * Award #1936809, "EAGER: Data Science for Election Verification" 
  * Award #2027089, "RAPID: Election Result Anomaly Detection for 2020"
 
