@@ -1175,7 +1175,7 @@ def munge_source_to_raw(
 
     if df.empty:
         return df, err
-    Path(munger_path).stem
+    munger_name = Path(munger_path).stem
     working = df.copy()
 
     # # get munge formulas
@@ -1444,7 +1444,7 @@ def get_string_fields(
     """Finds the field names expected by the munger formulas (and checks munger formulas along the way)
     Also checks that no element is defined more than once."""
     err = None
-    Path(munger_path).stem
+    munger_name = Path(munger_path).stem
     munge_field_list = list()
     defined_elements = set()
 

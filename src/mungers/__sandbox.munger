@@ -1,7 +1,8 @@
 [format]
-file_type=excel
+file_type=flat_text
 count_locations=by_column_numbers
 munge_strings=in_count_headers,in_field_values
+flat_text_delimiter=\t
 
 encoding=utf_8
 count_column_numbers=6,7,8,9,10,11,12,13,14,15,16,17
