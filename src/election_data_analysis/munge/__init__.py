@@ -17,6 +17,9 @@ import numpy as np
 default_encoding = "utf_8"
 brace_pattern = re.compile(r"{<([^,]*)>,([^{}]*|[^{}]*{[^{}]*}[^{}]*)}")
 
+# common data format file types need no extra parameters
+no_param_file_types = {"nist_v2_xml"}
+
 opt_munger_data_types: Dict[str, str] = {
     "count_locations": "string",
     "munge_strings": "list-of-strings",
@@ -1172,7 +1175,7 @@ def munge_source_to_raw(
 
     if df.empty:
         return df, err
-    munger_name = Path(munger_path).name
+    Path(munger_path).stem
     working = df.copy()
 
     # # get munge formulas
@@ -1276,8 +1279,12 @@ def get_and_check_munger_params(munger_path: str) -> (dict, Optional[dict]):
     )
     if ui.fatal_error(err):
         return dict(), err
+
+    if params["file_type"] in no_param_file_types:
+        return params, err
+
     # get name of munger for error reporting
-    munger_name = Path(munger_path).name[:-7]
+    munger_name = Path(munger_path).stem
 
     # define dictionary of munger parameters
     data_types = {**{
@@ -1314,7 +1321,7 @@ def get_and_check_munger_params(munger_path: str) -> (dict, Optional[dict]):
     for k0 in munger_dependent_reqs.keys():
         for k1 in munger_dependent_reqs[k0]:
             for v2 in munger_dependent_reqs[k0][k1]:
-                if format_options[k0] == k1 and v2 is None:
+                if (format_options[k0] == k1) and (not format_options[v2]):
                     err = ui.add_new_error(
                         err, "munger", munger_name, f"{k0}={k1}', but {v2} not found"
                     )
@@ -1344,14 +1351,15 @@ def get_and_check_munger_params(munger_path: str) -> (dict, Optional[dict]):
                     f" all_rows=data means field names must be in the "
                     f"file. But string_field_name_row not given.",
                 )
+        # if all rows are data
         else:
-            if format_options["multi_rows"] and format_options["multi_rows"] == "yes":
+            if format_options["multi_block"] and format_options["multi_block"] == "yes":
                 err = ui.add_new_error(
                     err,
                     "munger",
                     munger_name,
                     f"all_rows=data and multi_block=yes are not compatible"
-                )
+                    )
 
     # # for each value in list of string locations, requirements are met
     for k0 in format_options["munge_strings"]:
@@ -1374,9 +1382,58 @@ def get_and_check_munger_params(munger_path: str) -> (dict, Optional[dict]):
         [x for x in params["munge_strings"] if x != "constant_over_file"],
         munger_path,
     )
-
     if new_err:
-        ui.consolidate_errors([err, new_err])
+        err = ui.consolidate_errors([err, new_err])
+
+    # classify munge fields
+    mf_by_type = {"in_count_headers": set(), "in_field_values": set(), "constant_over_sheet": set()}
+    for mf in params["munge_fields"]:
+        if mf[:7] == "header_":
+            try:
+                int(mf[7:])
+                mf_by_type["in_count_headers"].update({mf})
+            except ValueError:
+                mf_by_type["in_field_values"].update({mf})
+        elif mf[:4] == "row_":
+            try:
+                int(mf[4:])
+                mf_by_type["constant_over_sheet"].update({mf})
+            except ValueError:
+                mf_by_type["in_field_values"].update({mf})
+        elif mf == "sheet_name":
+            mf_by_type["constant_over_sheet"].update({mf})
+        else:
+            mf_by_type["in_field_values"].update({mf})
+
+    # check that any header rows in formulas are in the list of header row numbers
+    for mf in mf_by_type["in_count_headers"]:
+        if int(mf[7:]) not in params["count_header_row_numbers"]:
+            err = ui.add_new_error(
+                err,
+                "munger",
+                munger_name,
+                f"{mf} in formulas but {mf[7:]} not listed in count_header_row_numbers"
+            )
+
+    #  "munge_strings" includes everything required in the formulas
+    for x in ["in_count_headers", "in_field_values", "constant_over_sheet"]:
+        if mf_by_type[x] and (x not in params["munge_strings"]):
+            err = ui.add_new_error(
+                err,
+                "munger",
+                munger_name,
+                f"{x} should be listed in munge_strings to support formula references:\n{mf_by_type[x]}"
+            )
+
+    # if constant_over_file is in munge_strings, at least one constant_over_file element must be listed
+    if "constant_over_file" in params["munge_strings"]:
+        if (not params["constant_over_file"]) or (params["constant_over_file"] == ""):
+            err = ui.add_new_error(
+                err,
+                "munger",
+                munger_name,
+                f"constant_over_file specified in munge_strings, but no constant element specified."
+            )
     return format_options, err
 
 
@@ -1387,7 +1444,7 @@ def get_string_fields(
     """Finds the field names expected by the munger formulas (and checks munger formulas along the way)
     Also checks that no element is defined more than once."""
     err = None
-    munger_name = Path(munger_path).name
+    Path(munger_path).stem
     munge_field_list = list()
     defined_elements = set()
 
@@ -1439,17 +1496,20 @@ def get_string_fields(
 def check_formula(formula: str) -> Optional[str]:
     """Runs syntax checks on a concatenation (or concatenation-with-regex) formula"""
     # brace pairs { ... , .... } contain well-formed regex as second entry with one capturing group
+    err_str_list = list()
     cr_pairs = brace_pattern.findall(formula)
     for _, regex in cr_pairs:
         # test regex well-formed
         try:
-            re.compile(regex)
+            # test regex has exactly one capturing group
+            group_count = re.compile(regex).groups
+            if group_count != 1:
+                err_str_list.append(
+                    f"Regular expression {regex} has {group_count} capturing groups but should have just one."
+                )
         except re.error as re_err:
-            err_str = f"Regular expression error in {formula}: {re_err}"
-        # test regex has exactly one capturing group
-        group_count = re.compile(regex).groups
-        if group_count != 1:
-            err_str = f"Regular expression {regex} has {group_count} capturing groups but should have just one."
+            err_str_list.append(f"Regular expression error in '{regex}': {re_err}")
+    err_str = "\n".join(err_str_list)
     return err_str
 
 

@@ -29,8 +29,8 @@ Party=Total Votes Cast
 ```
 and similarly, if necessary, for any Contest or Selection. If there is more than one Party (e.g.) to be ignored, use a comma-separated list: `Candidate=Total Votes Cast,Registered Voters`
  
- There is one required parameters: `file_type`. For any file type other than nist_v2_xml, there are two more required parameters: `count_locations` and `munge_strings`. Depending on the values of these, there are other required and optional fields. 
- `file_type`: controls which pandas function reads the file contents. Related optional and required parameters must be given under the `[file_type]` header.
+ There is one required parameter: `file_type`. For any file type other than nist_v2_xml, there are two more required parameters: `count_locations` and `munge_strings`. Depending on the values of these, there are other required and optional fields. 
+ `file_type`: controls which function from the python `pandas` module reads the file contents. Related optional and required parameters must be given under the `[format]` header.
    * 'nist_v2_xml' for xml-formatted file that obeys the [NIST Common Data Format schema](http://itl.nist.gov/ns/voting/1500-100/v2). For this file_type, no other parameters are needed. If there are no items to ignore, use the munger [nist_v2_xml](mungers/nist_v2_xml.munger). Otherwise, use a revised version of that munger, with an `[ignore]` section added.
    * 'excel'
     * (optional) a list `sheets_to_read_names` (and/or `sheets_to_read_numbers`) of spreadsheets to read, 
