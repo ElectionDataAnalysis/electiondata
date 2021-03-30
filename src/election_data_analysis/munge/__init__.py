@@ -15,6 +15,7 @@ import numpy as np
 
 # constants
 default_encoding = "utf_8"
+brace_pattern = re.compile(r"{<([^,]*)>,([^{}]*|[^{}]*{[^{}]*}[^{}]*)}")
 
 opt_munger_data_types: Dict[str, str] = {
     "count_locations": "string",
@@ -247,8 +248,6 @@ def add_column_from_formula(
     w = working.copy()
     #  for each {} pair in the formula, create a new column
     # (assuming formula is well-formed)
-    brace_pattern = re.compile(r"{<([^,]*)>,([^{}]*|[^{}]*{[^{}]*}[^{}]*)}")
-
     try:
         temp_cols = []
         for x in brace_pattern.finditer(formula):
@@ -1333,8 +1332,9 @@ def get_and_check_munger_params(munger_path: str) -> (dict, Optional[dict]):
                 f"file_type={format_options['file_type']}' but count_field_name_row not found",
             )
 
-        # # if all rows are not data, need field names
-        if format_options["all_rows"] is None:
+        # if all rows are not data
+        if (format_options["all_rows"] is None) or format_options["all_rows"] != "data":
+            # need field names
             if format_options["string_field_name_row"] is None:
                 err = ui.add_new_error(
                     err,
@@ -1343,6 +1343,14 @@ def get_and_check_munger_params(munger_path: str) -> (dict, Optional[dict]):
                     f"file_type={format_options['file_type']}' and absence of"
                     f" all_rows=data means field names must be in the "
                     f"file. But string_field_name_row not given.",
+                )
+        else:
+            if format_options["multi_rows"] and format_options["multi_rows"] == "yes":
+                err = ui.add_new_error(
+                    err,
+                    "munger",
+                    munger_name,
+                    f"all_rows=data and multi_block=yes are not compatible"
                 )
 
     # # for each value in list of string locations, requirements are met
@@ -1358,7 +1366,6 @@ def get_and_check_munger_params(munger_path: str) -> (dict, Optional[dict]):
     # TODO check formats (e.g., formulas for constant_over_sheet use only <sheet_name> and <row_{i}>)
     # TODO check that required headers are present (see User_Guide) per munge_strings list
     # TODO check that required headers are present (see User_Guide) per lookups list
-    # TODO check that each element is defined by a single formula
 
     # # add parameter listing all munge fields
     # get lists of string fields expected in raw file
@@ -1367,6 +1374,7 @@ def get_and_check_munger_params(munger_path: str) -> (dict, Optional[dict]):
         [x for x in params["munge_strings"] if x != "constant_over_file"],
         munger_path,
     )
+
     if new_err:
         ui.consolidate_errors([err, new_err])
     return format_options, err
@@ -1376,9 +1384,16 @@ def get_string_fields(
     sources: list,
     munger_path: str,
 ) -> (List[str], Optional[dict]):
+    """Finds the field names expected by the munger formulas (and checks munger formulas along the way)
+    Also checks that no element is defined more than once."""
     err = None
-    pattern = re.compile(r"<([^>,]+)(?:,([^>,]+))*>")
+    munger_name = Path(munger_path).name
     munge_field_list = list()
+    defined_elements = set()
+
+    # regex to recognize comma-less text in inmost angle brackets < ... >
+    # nb: commas can appear in lookup formulas with multi-field keys
+    pattern = re.compile(r"<([^>,]+)(?:,([^>,]+))*>")
     for source in sources:
         munge_field_set = set()
         formulas, new_err = ui.get_parameters(
@@ -1394,7 +1409,24 @@ def get_string_fields(
 
         for k in formulas.keys():
             if formulas[k]:
+                if k in defined_elements:
+                    err = ui.add_new_error(
+                        err,
+                        "munger",
+                        munger_name,
+                        f"Multiple formulas for {k}",
+                    )
+                else:
+                    defined_elements.update({k})
                 munge_field_set.update(pattern.findall(formulas[k]))
+                formula_err = check_formula(formulas[k])
+                if formula_err:
+                    err = ui.add_new_error(
+                        err,
+                        "munger",
+                        munger_name,
+                        f"Error in formula for {k}: {formula_err}",
+                    )
         flat = {x for y in munge_field_set for x in y}
         if "" in flat:
             flat.remove("")
@@ -1402,6 +1434,23 @@ def get_string_fields(
     # remove dupes
     munge_field_list = list(set(munge_field_list))
     return munge_field_list, err
+
+
+def check_formula(formula: str) -> Optional[str]:
+    """Runs syntax checks on a concatenation (or concatenation-with-regex) formula"""
+    # brace pairs { ... , .... } contain well-formed regex as second entry with one capturing group
+    cr_pairs = brace_pattern.findall(formula)
+    for _, regex in cr_pairs:
+        # test regex well-formed
+        try:
+            re.compile(regex)
+        except re.error as re_err:
+            err_str = f"Regular expression error in {formula}: {re_err}"
+        # test regex has exactly one capturing group
+        group_count = re.compile(regex).groups
+        if group_count != 1:
+            err_str = f"Regular expression {regex} has {group_count} capturing groups but should have just one."
+    return err_str
 
 
 def to_standard_count_frame(
