@@ -1434,6 +1434,21 @@ def get_and_check_munger_params(munger_path: str) -> (dict, Optional[dict]):
                 munger_name,
                 f"constant_over_file specified in munge_strings, but no constant element specified."
             )
+
+    # TODO each lookup section has a replacement formula for each element referencing the lookup field
+    headers, new_err = ui.get_section_headers(munger_path)
+    if new_err:
+        err = ui.consolidate_errors([err, new_err])
+    pattern = re.compile(r"^(.*) lookup$")
+    for h in headers:
+        try:
+            foreign_key = pattern.findall(h)[0]
+        except IndexError:
+            continue
+
+
+
+
     return format_options, err
 
 

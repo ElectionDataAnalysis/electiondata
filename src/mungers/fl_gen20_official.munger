@@ -20,7 +20,7 @@ count_fields_by_name=CanVotes
 constant_over_file=CountItemType
 #### if file type is flat_text or excel and count_locations is 'by_field_names'
 #### (start numbering from first unskipped row):
-count_field_name_row=0
+count_header_row_numbers=0
 #### if file type is flat_text or excel and not all rows are data:
 #### (start numbering from first unskipped row):
 string_field_name_row=0

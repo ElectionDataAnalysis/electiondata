@@ -26,9 +26,18 @@ ReportingUnit=<County Name>;<Reporting Unit>
 
 [in_count_headers]
 Candidate=<header_0>
+Party=<header_0>
 
 # Values to ignore (optional) #
 [ignore]
 ## E.g: Candidate=Total Votes Cast,Registered Voters ##
 
+[header_0 lookup]
+source_file=Wisconsin/Party_by_Pres_Candidate_20g.xlsx
+lookup_id=candidate_name_per_recount_file
+Party_replacement=<candidate_name_per_recount_file>
+Candidate_replacement=<candidate_name_per_recount_file>
+file_type=excel
+munge_strings=in_field_values
+string_field_name_row=0
 

@@ -636,6 +636,21 @@ def get_parameters(
     return d, err
 
 
+def get_section_headers(
+        param_file: str
+) -> (List[str], Optional[dict]):
+    err = None
+    # read info from file
+    parser = ConfigParser()
+    # find header
+    p = parser.read(param_file)
+    if len(p) == 0:
+        err = add_new_error(err, "file", param_file, "File not found")
+        return list(), err
+    headers = parser.sections()
+    return headers, err
+
+
 def consolidate_errors(list_of_err: Optional[list]) -> Optional[Dict[Any, dict]]:
     """Takes two error dictionaries (assumed to have same bottom-level keys)
     and consolidates them, concatenating the error messages"""
