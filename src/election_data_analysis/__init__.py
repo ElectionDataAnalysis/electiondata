@@ -209,8 +209,9 @@ class DataLoader:
                 param_file=par_file,
                 header="election_data_analysis",
             )
-            if new_err:
-                err = ui.consolidate_errors([err, new_err])
+            ini_err = ui.check_results_ini_params(params[f], f)
+            if new_err or ini_err:
+                err = ui.consolidate_errors([err, new_err, ini_err])
             if not ui.fatal_error(new_err):
                 ###########
                 # for backwards compatibility

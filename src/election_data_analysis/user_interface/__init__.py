@@ -1389,3 +1389,25 @@ def set_and_fill_headers(df: pd.DataFrame, header_list: list) -> pd.DataFrame:
     return df
 
 
+def check_results_ini_params(
+        p: Dict[str, Any],
+        ini_file_name: str,
+) -> Optional[dict]:
+    """Checks results parameters"""
+    err_str = None
+    try:
+        datetime.datetime.strptime(p["results_download_date"], '%Y-%m-%d')
+    except TypeError:
+        err_str = f"No download date found"
+    except ValueError:
+        err_str = f"Date could not be parsed. Expected format is 'YYYY-MM-DD', actual is {p['results_download_date']}"
+    if err_str:
+        ini_err = add_new_error(
+            None,
+            "ini",
+            ini_file_name,
+            err_str
+        )
+    else:
+        ini_err = None
+    return ini_err
