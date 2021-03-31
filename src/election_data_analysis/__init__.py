@@ -576,7 +576,8 @@ class SingleDataLoader:
         return err
 
     def collect_constants_from_ini(self) -> dict:
-        """collect constant elements from .ini file"""
+        """collect constant elements from .ini file.
+        Omits constants that have no content"""
         constants = dict()
         for k in [
             "Party",
@@ -588,9 +589,34 @@ class SingleDataLoader:
             "Candidate",
         ]:
             # if element was given in .ini file
-            if self.d[k] is not None:
+            if (self.d[k] is not None) and self.d[k] != "":
                 constants[k] = self.d[k]
         return constants
+
+    def check_ini_to_munger(self, munger_path: str) -> Optional[dict]:
+        err = None
+        ini_constants = self.collect_constants_from_ini().keys()
+        if ini_constants:
+            # find elements munger thinks will be constant (and given in .ini file)
+            mp, err = ui.get_parameters(
+                required_keys=[],
+                optional_keys=["constant_over_file"],
+                header="format",
+                param_file=munger_path,
+            )
+            if (not mp["constant_over_file"]) or mp["constant_over_file"] == "":
+                missing = ini_constants
+            else:
+                missing = [x for x in mp["constant_over_file"].split(",") if x not in ini_constants]
+            if missing:
+                missing_str = "\n".missing
+                err = ui.add_new_error(
+                    err,
+                    "ini",
+                    self.par_file_name,
+                    f"Munger {Path(munger_path).name} requires constants to be set in the .ini file:\n{missing_str}"
+                )
+        return err
 
     def list_values(self, element: str) -> (list, Optional[dict]):
         """lists all values for the element found in the file"""

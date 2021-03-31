@@ -2099,5 +2099,3 @@ def file_to_raw_df(
             )
 
     return df, err
-
-
