@@ -596,26 +596,39 @@ class SingleDataLoader:
     def check_ini_to_munger(self, munger_path: str) -> Optional[dict]:
         err = None
         ini_constants = self.collect_constants_from_ini().keys()
-        if ini_constants:
-            # find elements munger thinks will be constant (and given in .ini file)
-            mp, err = ui.get_parameters(
-                required_keys=[],
-                optional_keys=["constant_over_file"],
-                header="format",
-                param_file=munger_path,
+        # find elements munger thinks will be constant (and given in .ini file)
+        mp, err = ui.get_parameters(
+            required_keys=[],
+            optional_keys=["constant_over_file"],
+            header="format",
+            param_file=munger_path,
+        )
+        if (not mp["constant_over_file"]) or (mp["constant_over_file"] == ""):
+            munger_constants = set()
+        else:
+            munger_constants = mp["constant_over_file"].split(",")
+
+        # report anything missing from ini as error
+        missing_from_ini = [c for c in munger_constants if c not in ini_constants]
+        if missing_from_ini:
+            missing_str = "\n".join(missing_from_ini)
+            err = ui.add_new_error(
+                err,
+                "ini",
+                self.par_file_name,
+                f"Munger {Path(munger_path).name} requires constants to be set in the .ini file:\n{missing_str}"
             )
-            if (not mp["constant_over_file"]) or mp["constant_over_file"] == "":
-                missing = ini_constants
-            else:
-                missing = [x for x in mp["constant_over_file"].split(",") if x not in ini_constants]
-            if missing:
-                missing_str = "\n".missing
-                err = ui.add_new_error(
-                    err,
-                    "ini",
-                    self.par_file_name,
-                    f"Munger {Path(munger_path).name} requires constants to be set in the .ini file:\n{missing_str}"
-                )
+
+        # report anything missing from munger as warning
+        missing_from_munger = [c for c in ini_constants if c not in munger_constants]
+        if missing_from_munger:
+            missing_str = "\n".join(missing_from_munger)
+            err = ui.add_new_error(
+                err,
+                "warn-ini",
+                self.par_file_name,
+                f"Ini file contains constants not specified in munger {Path(munger_path).name}:\n{missing_str}"
+            )
         return err
 
     def list_values(self, element: str) -> (list, Optional[dict]):
