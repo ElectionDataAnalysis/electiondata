@@ -429,7 +429,10 @@ def read_single_datafile(
         kwargs = basic_kwargs(p, dict())
         kwargs = tabular_kwargs(p, kwargs, aux=aux)
         kwargs["quoting"] = csv.QUOTE_MINIMAL
-        kwargs["sep"] = p["flat_text_delimiter"].replace("tab", "\t")
+        if p["flat_text_delimiter"] in ["tab", "\\t"]:
+            kwargs["sep"] = "\t"
+        else:
+            kwargs["sep"] = p["flat_text_delimiter"]
 
     # read file
     try:
@@ -447,7 +450,7 @@ def read_single_datafile(
                 df_dict = dict()
         elif p["file_type"] == "flat_text":
             try:
-                df = pd.read_csv(f_path, **kwargs)
+                df = pd.read_csv(f_path, **kwargs, engine="python")
             except ValueError as ve:
                 print(f"ValueError (while reading flat text file), possibly from uneven record lengths: {ve}\n "
                       f"Will try padding records")
