@@ -592,7 +592,10 @@ def get_parameters(
     err: Optional[Dict] = None,
     optional_keys: Optional[List[str]] = None,
 ) -> (Dict[str, str], Optional[Dict[str, dict]]):
+    """Collects the values of the parameters corresponding to the <required_keys>
+    and <optional_keys> into a dictionary."""
     d = dict()
+    err = None
 
     # read info from file
     parser = ConfigParser()
