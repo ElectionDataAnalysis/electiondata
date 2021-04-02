@@ -972,7 +972,7 @@ def confirm_essential_info(
     return
 
 
-def election_juris_list(ini_path: str, results_path: Optional[str]) -> list:
+def election_juris_list(ini_path: str, results_path: Optional[str] = None) -> list:
     """Return list of all election-jurisdiction pairs in .ini files in the ini_path directory
     or in any of its subdirectories. Ignores 'template.ini' If results_path is given, filters
     for ini files whose results files are in the results_path directory

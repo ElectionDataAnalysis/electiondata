@@ -35,7 +35,7 @@ Party=<header_0>
 [header_0 lookup]
 source_file=Wisconsin/Party_by_Pres_Candidate_20g.xlsx
 lookup_id=candidate_name_per_recount_file
-Party_replacement=<candidate_name_per_recount_file>
+Party_replacement=<party_per_preliminary_results_file>
 Candidate_replacement=<candidate_name_per_recount_file>
 file_type=excel
 munge_strings=in_field_values
