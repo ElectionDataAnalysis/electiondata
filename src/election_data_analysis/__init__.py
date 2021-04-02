@@ -227,10 +227,11 @@ class DataLoader:
             if new_err or ini_err:
                 err = ui.consolidate_errors([err, new_err, ini_err])
             if not ui.fatal_error(new_err):
+                results_full_path = os.path.join(self.d["results_dir"], params[f_path]["results_file"])
                 if (
                     params[f_path]["election"],
                     params[f_path]["top_reporting_unit"],
-                ) in election_jurisdiction_list:
+                ) in election_jurisdiction_list and os.path.isfile(results_full_path):
                     good_par_files.append(f_path)
                 juris_directory[f_path] = params[f_path]["jurisdiction_directory"]
 
