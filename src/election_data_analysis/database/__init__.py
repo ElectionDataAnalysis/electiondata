@@ -24,6 +24,7 @@ import re
 from election_data_analysis.database import create_cdf_db as db_cdf
 import os
 from sqlalchemy import MetaData, Table, Column, Integer, Float
+
 # NB: syntax-checker doesn't see it, but these ^^ are used.
 from typing import Optional, List, Dict, Any, Iterable, Set
 from election_data_analysis import user_interface as ui
@@ -139,9 +140,9 @@ def remove_database(params: dict) -> Optional[dict]:
 
 
 def create_database(
-        con: psycopg2.extensions.connection,
-        cur: psycopg2.extensions.cursor,
-        db_name: str,
+    con: psycopg2.extensions.connection,
+    cur: psycopg2.extensions.cursor,
+    db_name: str,
 ):
     con.set_isolation_level(ISOLATION_LEVEL_AUTOCOMMIT)
     q = sql.SQL("DROP DATABASE IF EXISTS {db_name}").format(
@@ -404,9 +405,9 @@ def get_cdf_db_table_names(eng):
 
 
 def name_from_id_cursor(
-        cursor: psycopg2.extensions.cursor,
-        element: str,
-        idx: int,
+    cursor: psycopg2.extensions.cursor,
+    element: str,
+    idx: int,
 ):
     name_field = get_name_field(element)
     q = sql.SQL('SELECT {name_field} FROM {element} WHERE "Id" = %s').format(
@@ -430,9 +431,9 @@ def name_from_id(session, element: str, idx: int) -> str:
 
 
 def name_to_id_cursor(
-        cursor: psycopg2.extensions.cursor,
-        element: str,
-        name: str,
+    cursor: psycopg2.extensions.cursor,
+    element: str,
+    name: str,
 ) -> Optional[int]:
     if element == "CandidateContest":
         q = sql.SQL(
@@ -682,10 +683,7 @@ def append_id_to_dframe(
     return df_appended
 
 
-def get_column_names(
-        cursor: psycopg2.extensions.cursor,
-        table: str
-) -> (list, dict):
+def get_column_names(cursor: psycopg2.extensions.cursor, table: str) -> (list, dict):
     q = sql.SQL(
         """SELECT column_name, data_type FROM information_schema.columns 
         WHERE table_schema = 'public' AND table_name = %s"""
@@ -736,10 +734,10 @@ def vote_type_list(cursor, datafile_list: list, by: str = "Id") -> (list, str):
 
 
 def data_file_list_cursor(
-        cursor: psycopg2.extensions.cursor,
-        election_id: int,
-        reporting_unit_id: Optional[int] = None,
-        by="Id"
+    cursor: psycopg2.extensions.cursor,
+    election_id: int,
+    reporting_unit_id: Optional[int] = None,
+    by="Id",
 ) -> (list, str):
     q = sql.SQL(
         """SELECT distinct d.{by} FROM _datafile d WHERE d."Election_Id" = %s"""
@@ -760,7 +758,10 @@ def data_file_list_cursor(
 
 
 def data_file_list(
-        session, election_id, reporting_unit_id: Optional[int] = None, by: str = "Id",
+    session,
+    election_id,
+    reporting_unit_id: Optional[int] = None,
+    by: str = "Id",
 ) -> (list, str):
     connection = session.bind.raw_connection()
     cursor = connection.cursor()
@@ -883,6 +884,421 @@ def remove_vote_counts(connection, cursor, id: int, active_confirm: bool = True)
     return err_str
 
 
+def get_input_options(session, input, verbose):
+    """Returns a list of response options based on the input"""
+    # input comes as a pythonic (snake case) input, need to
+    # change to match DB element naming format
+    name_parts = input.split("_")
+    search_str = "".join([name_part.capitalize() for name_part in name_parts])
+
+    if search_str in [
+        "Contest",
+        "Election",
+        "Office",
+        "Party",
+        "ReportingUnit",
+        "BallotMeasureSelection",
+    ]:
+        column_name = "Name"
+        table_search = True
+    elif search_str in [
+        "CountItemStatus",
+        "CountItemType",
+        "ElectionType",
+        "IdentifierType",
+        "ReportingUnitType",
+    ]:
+        column_name = "Txt"
+        table_search = True
+    elif search_str == "Candidate":
+        column_name = "BallotName"
+        table_search = True
+    elif search_str in [
+        "CandidateContest",
+        "BallotMeasureContest",
+    ]:
+        pass
+    # TODO: do we need a subdivision_type?
+    else:
+        search_str = search_str.lower()
+        table_search = False
+
+    connection = session.bind.raw_connection()
+    cursor = connection.cursor()
+    if not verbose:
+        if table_search:
+            q = sql.SQL("SELECT {column_name} FROM {search_str};").format(
+                column_name=sql.Identifier(column_name),
+                search_str=sql.Identifier(search_str),
+            )
+            cursor.execute(q)
+        else:
+            q = sql.SQL(
+                """
+                SELECT "BallotName" 
+                FROM "Candidate"
+                WHERE "BallotName" ~* %s
+            """
+            )
+            cursor.execute(q, [search_str])
+        result = cursor.fetchall()
+        connection.close()
+        return [r[0] for r in result]
+    else:
+        # election result are handled differently than the rest of the flow because
+        # it's the first selection made
+        if search_str == "Election":
+            result = session.execute(
+                f"""
+                SELECT  e."Id" AS parent, "Name" AS name, "Txt" as type
+                FROM    "VoteCount" vc
+                        JOIN "Election" e ON vc."Election_Id" = e."Id"
+                        JOIN "ElectionType" et ON e."ElectionType_Id" = et."Id"
+                WHERE   "Name" != 'none or unknown'
+                GROUP BY e."Id", "Name", "Txt"
+                ORDER BY LEFT("Name", 4) DESC, RIGHT("Name", LENGTH("Name") - 5)
+            """
+            )
+            result_df = pd.DataFrame(result)
+            result_df.columns = result.keys()
+            return package_display_results(result_df)
+        elif search_str == "jurisdiction":
+            q = sql.SQL(
+                """
+                WITH states(states) AS (
+                    SELECT {states} 
+                )
+                , unnested AS (
+                    SELECT    UNNEST(regexp_split_to_array(states, '\n')) AS jurisdiction
+                    FROM    states
+                )
+
+                , ordered AS (
+                    SELECT  *, ROW_NUMBER() OVER() AS order_by
+                    FROM    unnested u
+                )
+ 				, crossed AS (
+					SELECT	"Id", "Name", jurisdiction, 
+                            ROW_NUMBER() OVER(ORDER BY o.order_by ASC, order_by, LEFT("Name", 4) DESC, RIGHT("Name", LENGTH("Name") - 5) ASC) as order_by
+                    FROM	"Election" e
+                    		CROSS JOIN ordered o
+                    WHERE	"Name" != 'none or unknown'
+                    ORDER BY o.order_by ASC, order_by, LEFT("Name", 4) DESC, RIGHT("Name", LENGTH("Name") - 5) ASC
+                )
+                , crossed_with_state_id as (
+                	SELECT	c.*, ru."Id" as jurisdiction_id
+                	FROM	crossed c
+                    		LEFT JOIN "ReportingUnit" ru ON c.jurisdiction = ru."Name"
+                )
+                SELECT  "Name" as parent,
+                        jurisdiction AS name, 
+                        CASE WHEN d."ReportingUnit_Id" IS null THEN false ELSE true END AS type
+                FROM    crossed_with_state_id s
+                        LEFT JOIN (SELECT DISTINCT "Election_Id", "ReportingUnit_Id" FROM _datafile) d 
+                        ON s."Id" = d."Election_Id" AND s.jurisdiction_id = d."ReportingUnit_Id"
+                ORDER BY order_by
+            """
+            ).format(states=sql.Literal(states))
+        elif search_str == "BallotMeasureContest":
+            # parent_id is reporting unit, type is reporting unit type
+            q = sql.SQL(
+                """
+                SELECT  ru."Name" AS parent,
+                        c."Name" AS name, rut."Txt" AS type
+                FROM    "BallotMeasureContest" bmc
+                        JOIN "ReportingUnit" ru ON bmc."ElectionDistrict_Id" = ru."Id"
+                        JOIN "ReportingUnitType" rut ON ru."ReportingUnitType_Id" = rut."Id"
+                        JOIN "Contest" c on bmc."Id" = c."Id"
+                WHERE    contest_type = 'BallotMeasure'
+                ORDER BY c."Name"
+            """
+            )
+        elif search_str == "CandidateContest":
+            q = sql.SQL(
+                """
+                SELECT  ru."Name" AS parent,
+                        c."Name" AS name, rut."Txt" AS type
+                FROM    "CandidateContest" cc
+                        JOIN "Office" o ON cc."Office_Id" = o."Id"
+                        JOIN "ReportingUnit" ru ON o."ElectionDistrict_Id" = ru."Id"
+                        JOIN "ReportingUnitType" rut ON ru."ReportingUnitType_Id" = rut."Id"
+                        JOIN "Contest" c on cc."Id" = c."Id"
+                WHERE    contest_type = 'Candidate'
+                ORDER BY c."Name"
+            """
+            )
+        elif search_str == "Candidate":
+            q = sql.SQL(
+                """
+                SELECT  DISTINCT ct."Name" AS parent, c."BallotName" as name, 
+                        p."Name" as type
+                FROM    "Candidate" c
+                        JOIN "CandidateSelection" cs ON c."Id" = cs."Candidate_Id"
+                        JOIN "Party" p ON cs."Party_Id" = p."Id"
+                        JOIN "VoteCount" vc on cs."Id" = vc."Selection_Id"
+                        JOIN "CandidateContest" cc ON vc."Contest_Id" = cc."Id"
+                        JOIN "Contest" ct on cc."Id" = ct."Id"
+                ORDER BY c."BallotName"
+            """
+            )
+        else:
+            # parent_id is candidate_id, type is combo of party and contest name
+            q = sql.SQL(
+                """
+                SELECT  DISTINCT ct."Name" AS parent, c."BallotName" as name, 
+                        p."Name" as type
+                FROM    "Candidate" c
+                        JOIN "CandidateSelection" cs ON c."Id" = cs."Candidate_Id"
+                        JOIN "Party" p ON cs."Party_Id" = p."Id"
+                        JOIN "VoteCount" vc on cs."Id" = vc."Selection_Id"
+                        JOIN "CandidateContest" cc ON vc."Contest_Id" = cc."Id"
+                        JOIN "Contest" ct on cc."Id" = ct."Id"
+                WHERE   c."BallotName" ~* {candidate}
+            """
+            ).format(candidate=sql.Literal(search_str))
+        cursor.execute(q)
+        result = cursor.fetchall()
+        cursor.close()
+        return result
+
+
+def candidate_to_id(session, name):
+    """fuzzy string matching on name field, may return multiple results"""
+    name_field = get_name_field("Candidate")
+    q = f"""SELECT "Id" FROM "{element}" WHERE "{name_field}" = '{name}' """
+    idx_df = pd.read_sql(q, session.bind)
+    try:
+        idx = idx_df.loc[0, "Id"]
+    except KeyError:
+        # if no record with name <name> was found
+        idx = None
+    return idx
+
+
+def package_display_results(data):
+    """takes a result set and packages into JSON to return"""
+    results = []
+    for i, row in data.iterrows():
+        if row[1] in ui.contest_type_mappings:
+            row[1] = ui.contest_type_mappings[row[1]]
+        temp = {"parent": row[0], "name": row[1], "type": row[2], "order_by": i + 1}
+        results.append(temp)
+    return results
+
+
+def get_filtered_input_options(session, input_str, filters):
+    df_cols = ["parent", "name", "type"]
+    # election selection is handled separately because it's the first choice.
+    if input_str == "jurisdiction":
+        result = get_input_options(session, "jurisdiction", verbose=True)
+        result_df = pd.DataFrame(result)
+        result_df.columns = df_cols
+        df = result_df[result_df["parent"].isin(filters)]
+    # contest_type is a special case because we don't have a contest_type table.
+    # instead, this is the reporting unit type of the election district
+    elif input_str == "contest_type":
+        contest_df = get_relevant_contests(session, filters)
+        contest_types = contest_df["type"].unique()
+        contest_types.sort()
+        data = {
+            "parent": [filters[0] for contest_type in contest_types],
+            "name": contest_types,
+            "type": [None for contest_type in contest_types],
+        }
+        df = pd.DataFrame(data=data)
+    elif input_str == "contest":
+        contest_type = list(set(contest_types_model) & set(filters))[0]
+
+        connection = session.bind.raw_connection()
+        cursor = connection.cursor()
+        reporting_unit_id = list_to_id(session, "ReportingUnit", filters)
+        reporting_unit = name_from_id(cursor, "ReportingUnit", reporting_unit_id)
+        connection.close()
+
+        contest_type_df = pd.DataFrame(
+            [
+                {
+                    "parent": reporting_unit,
+                    "name": f"All {ui.contest_type_mappings[contest_type]}",
+                    "type": contest_type,
+                }
+            ]
+        )
+        contest_df = get_relevant_contests(session, filters)
+        contest_df = contest_df[contest_df["type"].isin(filters)]
+        df = pd.concat([contest_type_df, contest_df])
+    # Assume these others are candidate searching. This is handled differently
+    # because the results variable is structured slightly differently
+    elif input_str == "subdivision_type":
+        # TODO: refactor this ugly mess
+        hierarchy_df = pd.read_sql_table(
+            "ComposingReportingUnitJoin", session.bind, index_col="Id"
+        )
+        unit_df = pd.read_sql_table("ReportingUnit", session.bind, index_col="Id")
+        hierarchy_df = hierarchy_df.merge(
+            unit_df, how="inner", left_on="ParentReportingUnit_Id", right_on="Id"
+        )
+        hierarchy_df = hierarchy_df[hierarchy_df["Name"].isin(filters)]
+        hierarchy_df = hierarchy_df.merge(
+            unit_df,
+            how="inner",
+            left_on="ChildReportingUnit_Id",
+            right_on="Id",
+            suffixes=["_x", None],
+        )[unit_df.columns]
+        unit_type_df = pd.read_sql_table(
+            "ReportingUnitType", session.bind, index_col="Id"
+        )
+        hierarchy_df = hierarchy_df.merge(
+            unit_type_df, how="inner", left_on="ReportingUnitType_Id", right_on="Id"
+        )
+        subdivision_types = list(hierarchy_df["Txt"].unique())
+        # Currently we don't distinguish between "location" RU types (like county)
+        # and "office" RU types (like state-senate, judicial). For now, we're
+        # hard-coding the location types to keep, though this may change in the future.
+        types_to_keep = ["county", "precinct", "ward"]
+        subdivision_types = list(set(subdivision_types) & set(types_to_keep))
+        subdivision_types.sort()
+        data = {
+            "parent": [filters[0] for subdivision_types in subdivision_types],
+            "name": subdivision_types,
+            "type": [None for subdivision_types in subdivision_types],
+        }
+        df = pd.DataFrame(data=data)
+    elif input_str == "election":
+        election_df = get_relevant_election(session, filters)
+        elections = list(election_df["Name"].unique())
+        elections.sort(reverse=True)
+        data = {
+            "parent": [filters[0] for election in elections],
+            "name": elections,
+            "type": [None for election in elections],
+        }
+        df = pd.DataFrame(data=data)
+        df[["year", "election_type"]] = df["name"].str.split(" ", expand=True)
+        df.sort_values(["year", "election_type"], ascending=[False, True], inplace=True)
+        df.drop(columns=["year", "election_type"], inplace=True)
+    elif input_str == "category":
+        election_id = list_to_id(session, "Election", filters)
+        reporting_unit_id = list_to_id(session, "ReportingUnit", filters)
+
+        # get the census data
+        connection = session.bind.raw_connection()
+        cursor = connection.cursor()
+        election = name_from_id(cursor, "Election", election_id)
+        census_df = read_external(
+            cursor, int(election[0:4]), reporting_unit_id, ["Label"]
+        )
+        cursor.close()
+        if census_df.empty:
+            census = []
+        else:
+            census = ["Census data"]
+
+        type_df = read_vote_count(
+            session,
+            election_id,
+            reporting_unit_id,
+            ["CountItemType_Id"],
+            ["CountItemType_Id"],
+        )
+        count_type_ids = type_df["CountItemType_Id"].unique()
+        count_types_df = pd.read_sql_table(
+            "CountItemType", session.bind, index_col="Id"
+        )
+        count_types = list(
+            count_types_df[count_types_df.index.isin(count_type_ids)]["Txt"].unique()
+        )
+        count_types.sort()
+        data = {
+            "parent": [filters[0] for count_type in count_types]
+            + [filters[0] for count_type in count_types]
+            + [filters[0] for count_type in count_types]
+            + [filters[0] for c in census],
+            "name": [f"Candidate {count_type}" for count_type in count_types]
+            + [f"Contest {count_type}" for count_type in count_types]
+            + [f"Party {count_type}" for count_type in count_types]
+            + [c for c in census],
+            "type": [None for count_type in count_types]
+            + [None for count_type in count_types]
+            + [None for count_type in count_types]
+            + [None for c in census],
+        }
+        df = pd.DataFrame(data=data)
+    # check if it's looking for a count of contests
+    elif input_str == "count" and bool([f for f in filters if f.startswith("Contest")]):
+        election_id = list_to_id(session, "Election", filters)
+        reporting_unit_id = list_to_id(session, "ReportingUnit", filters)
+        df = read_vote_count(
+            session,
+            election_id,
+            reporting_unit_id,
+            ["ReportingUnitName", "ContestName", "unit_type"],
+            ["parent", "name", "type"],
+        )
+        df = df.sort_values(["parent", "name"]).reset_index(drop=True)
+    # check if it's looking for a count of candidates
+    elif input_str == "count" and bool(
+        [f for f in filters if f.startswith("Candidate")]
+    ):
+        election_id = list_to_id(session, "Election", filters)
+        reporting_unit_id = list_to_id(session, "ReportingUnit", filters)
+        df_unordered = read_vote_count(
+            session,
+            election_id,
+            reporting_unit_id,
+            ["ContestName", "BallotName", "PartyName", "unit_type"],
+            ["parent", "name", "type", "unit_type"],
+        )
+        df = clean_candidate_names(df_unordered)
+        df = df[["parent", "name", "unit_type"]].rename(columns={"unit_type": "type"})
+    # check if it's looking for census data
+    elif input_str == "count" and "Census data" in filters:
+        election_id = list_to_id(session, "Election", filters)
+        reporting_unit_id = list_to_id(session, "ReportingUnit", filters)
+        connection = session.bind.raw_connection()
+        cursor = connection.cursor()
+        election = name_from_id(cursor, "Election", election_id)
+        df = read_external(
+            cursor,
+            int(election[0:4]),
+            reporting_unit_id,
+            ["Source", "Label", "Category"],
+        )
+        cursor.close()
+    # check if it's looking for a count by party
+    elif input_str == "count":
+        election_id = list_to_id(session, "Election", filters)
+        reporting_unit_id = list_to_id(session, "ReportingUnit", filters)
+        df = read_vote_count(
+            session,
+            election_id,
+            reporting_unit_id,
+            ["PartyName", "unit_type"],
+            ["parent", "type"],
+        )
+        df["name"] = df["parent"].str.replace(" Party", "") + " " + df["type"]
+        df = df[df_cols].sort_values(["parent", "type"])
+    else:
+        election_id = list_to_id(session, "Election", filters)
+        reporting_unit_id = list_to_id(session, "ReportingUnit", filters)
+        df_unordered = read_vote_count(
+            session,
+            election_id,
+            reporting_unit_id,
+            ["ContestName", "BallotName", "PartyName", "unit_type"],
+            ["parent", "name", "type", "unit_type"],
+        )
+        df_unordered = df_unordered[df_unordered["unit_type"].isin(filters)].copy()
+        df_filtered = df_unordered[
+            df_unordered["name"].str.contains(input_str, case=False)
+        ].copy()
+        df = clean_candidate_names(df_filtered[df_cols].copy())
+    # TODO: handle the "All" and "other" options better
+    # TODO: handle sorting numbers better
+    return package_display_results(df)
+
+
 def get_relevant_election(session, filters):
     unit_df = pd.read_sql_table("ReportingUnit", session.bind, index_col="Id")
     unit_df = unit_df[unit_df["Name"].isin(filters)]
@@ -899,13 +1315,16 @@ def get_relevant_contests(session, filters):
     finds all contests for that combination."""
     election_id = list_to_id(session, "Election", filters)
     reporting_unit_id = list_to_id(session, "ReportingUnit", filters)
-    result_df = read_vote_count(
-        session,
-        election_id,
-        reporting_unit_id,
-        ["ReportingUnitName", "ContestName", "unit_type"],
-        ["parent", "name", "type"],
+    contest_df = read_vote_count(
+        session, election_id, reporting_unit_id, ["ContestName"], ["contest_name"]
     )
+
+    result = get_input_options(session, "candidate_contest", True)
+    result_df = pd.DataFrame(result)
+    result_df.columns = ["parent", "name", "type"]
+    result_df = result_df.merge(
+        contest_df, how="inner", left_on="name", right_on="contest_name"
+    )[result_df.columns]
     return result_df
 
 
@@ -1131,12 +1550,17 @@ def export_rollup_from_db(
         "count_item_type",
         "count",
     ]
-    string_vars = [contest_type, contest_type, election, top_ru, sub_unit_type, tuple(datafile_list)]
+    string_vars = [
+        contest_type,
+        contest_type,
+        election,
+        top_ru,
+        sub_unit_type,
+        tuple(datafile_list),
+    ]
 
     if contest_type == "Candidate":
-        selection = sql.SQL(
-            "Cand.{bname}"
-        ).format(bname=sql.Identifier("BallotName"))
+        selection = sql.SQL("Cand.{bname}").format(bname=sql.Identifier("BallotName"))
         selection_join = sql.SQL(
             " LEFT JOIN {cansel} CS on CS.{id} = vc.{sel_id} LEFT JOIN {can} Cand on CS.{can_id} = Cand.{id} "
         ).format(
@@ -1145,7 +1569,7 @@ def export_rollup_from_db(
             sel_id=sql.Identifier("Selection_Id"),
             can_id=sql.Identifier("Candidate_Id"),
             can=sql.Identifier("Candidate"),
-                 )
+        )
         election_district_join = sql.SQL(
             """LEFT JOIN {cancon} on C.{id} = {cancon}.{id}
         LEFT JOIN {office} O on {cancon}.{office_id} = O.{id}
@@ -1162,16 +1586,22 @@ def export_rollup_from_db(
 
         if include_party_column:
             columns.append("party")
-            select_party = sql.SQL(", party.{name} party").format(name=sql.Identifier("Name"))
-            party_join = sql.SQL(" LEFT JOIN {party} party ON party.{id} = CS.{party_id}").format(
-                party=sql.Identifier("Party"),
-            id=sql.Identifier("Id"),
-            party_id=sql.Identifier("Party_Id"),
+            select_party = sql.SQL(", party.{name} party").format(
+                name=sql.Identifier("Name")
             )
-            group_and_order_by = sql.Composed([
-                group_and_order_by,
-                sql.SQL(", party.{name}").format(name=sql.Identifier("Name")),
-            ])
+            party_join = sql.SQL(
+                " LEFT JOIN {party} party ON party.{id} = CS.{party_id}"
+            ).format(
+                party=sql.Identifier("Party"),
+                id=sql.Identifier("Id"),
+                party_id=sql.Identifier("Party_Id"),
+            )
+            group_and_order_by = sql.Composed(
+                [
+                    group_and_order_by,
+                    sql.SQL(", party.{name}").format(name=sql.Identifier("Name")),
+                ]
+            )
         else:
             select_party = sql.SQL("")
             party_join = sql.SQL("")
@@ -1202,10 +1632,12 @@ def export_rollup_from_db(
         return pd.DataFrame(columns=columns), err_str
 
     if by_vote_type:
-        group_and_order_by = sql.Composed([
-            group_and_order_by,
-            sql.SQL(", CIT.{txt}").format(txt=sql.Identifier("Txt")),
-        ])
+        group_and_order_by = sql.Composed(
+            [
+                group_and_order_by,
+                sql.SQL(", CIT.{txt}").format(txt=sql.Identifier("Txt")),
+            ]
+        )
         count_item_type_sql = sql.SQL("CIT.{txt}").format(txt=sql.Identifier("Txt"))
     else:
         count_item_type_sql = sql.Literal("total")
@@ -1217,20 +1649,24 @@ def export_rollup_from_db(
             cursor, election_id=election_id, jurisdiction_id=jurisdiction_id
         )
         if len(active) > 1 and "total" in active:
-            restrict = sql.Composed([
-                restrict,
-                sql.SQL(" AND CIT.{txt} != {total}").format(
-                    txt=sql.Identifier("Txt"), total=sql.Literal("total")
-                )
-            ])
+            restrict = sql.Composed(
+                [
+                    restrict,
+                    sql.SQL(" AND CIT.{txt} != {total}").format(
+                        txt=sql.Identifier("Txt"), total=sql.Literal("total")
+                    ),
+                ]
+            )
 
     if contest:
-        restrict = sql.Composed([
-            restrict,
-            sql.SQL(" AND C.{name} = {contest}").format(
-                name=sql.Identifier("Name"), contest=sql.Literal(contest)
-            )
-        ])
+        restrict = sql.Composed(
+            [
+                restrict,
+                sql.SQL(" AND C.{name} = {contest}").format(
+                    name=sql.Identifier("Name"), contest=sql.Literal(contest)
+                ),
+            ]
+        )
 
     q = sql.SQL(
         """
@@ -1278,7 +1714,7 @@ def export_rollup_from_db(
         selection_join=selection_join,
         party_join=party_join,
         election_district_join=election_district_join,
-        select_party=select_party
+        select_party=select_party,
     )
 
     try:
@@ -1353,6 +1789,71 @@ def list_to_id(session, element, names) -> int:
     return None
 
 
+def clean_candidate_names(df):
+    """takes a df that has contest, candidate name, and party in the columns. Cleans the
+    data as described in https://github.com/ElectionDataAnalysis/election_data_analysis/issues/207"""
+    # Get first letter of each word in the party name except for "Party"
+    # if "Party" is not in the name, then it's "None"
+    cols = df.columns
+    df_cols = ["parent", "name", "type"]
+    extra_cols = [col for col in cols if col not in df_cols]
+    extra_df = df[extra_cols]
+    df = df[df_cols]
+    df["party"] = df["type"].str.split(" ")
+    df["party"] = np.where(
+        df["party"].str.contains("party", case=False),
+        df["party"]
+        .map(lambda x: x[0:-1])
+        .map(lambda words: "".join([word[0] for word in words])),
+        "None",
+    )
+
+    # create the abbreviated contest name
+    df["contest"] = df["parent"].str.replace(r"\(.*\)", "")
+    df["jurisdiction"] = df["contest"].map(lambda x: x[0:2])
+    mask_us_pres = df["contest"].str.contains("president", case=False)
+    mask_us_sen = (df["jurisdiction"] == "US") & (
+        df["contest"].str.contains("senate", case=False)
+    )
+    mask_us_house = (df["jurisdiction"] == "US") & (
+        df["contest"].str.contains("house", case=False)
+    )
+    mask_st_sen = (df["jurisdiction"] != "US") & (
+        df["contest"].str.contains("senate", case=False)
+    )
+    mask_st_house = (df["jurisdiction"] != "US") & (
+        df["contest"].str.contains("house", case=False)
+    )
+    df["chamber"] = None
+    df.loc[mask_us_pres, "chamber"] = "Pres"
+    df.loc[mask_us_sen, "chamber"] = "Sen"
+    df.loc[mask_us_house, "chamber"] = "House"
+    df.loc[mask_st_sen, "chamber"] = "S"
+    df.loc[mask_st_house, "chamber"] = "H"
+    df["chamber"] = df["chamber"].fillna("unknown")
+    df["district"] = df["contest"].str.extract(r"(\d+)")
+    df["contest_short"] = ""
+    df["contest_short"] = np.where(
+        df["chamber"] != "unknown",
+        df[df.columns[5:]].apply(lambda x: "".join(x.dropna().astype(str)), axis=1),
+        df["contest_short"],
+    )
+    df["contest_short"] = np.where(
+        df["chamber"] == "unknown",
+        df["contest"]
+        .str.split(" ")
+        .map(lambda words: "".join([word[0:3] for word in words if word != "of"])),
+        df["contest_short"],
+    )
+    df["name"] = df[["name", "party", "contest_short"]].apply(
+        lambda x: " - ".join(x.dropna().astype(str)), axis=1
+    )
+    df = df.sort_values(by=["contest_short", "party", "name"])
+    df = df[df_cols].merge(extra_df, how="inner", left_index=True, right_index=True)
+    df.reset_index(drop=True, inplace=True)
+    return df
+
+
 def data_file_download(cursor, election_id: int, reporting_unit_id: int) -> int:
     q = sql.SQL(
         """
@@ -1388,7 +1889,7 @@ def is_preliminary(cursor, election_id, jurisdiction_id):
         results = cursor.fetchall()
         return results[0][0]
     except Exception as exc:
-        election = name_from_id_cursor(cursor,"Election",election_id)
+        election = name_from_id_cursor(cursor, "Election", election_id)
         if election.startswith("2020 General"):
             return True
         return False
@@ -1424,248 +1925,3 @@ def read_external(
         return results_df.loc[:, ~results_df.columns.duplicated()][fields]
     except Exception as exc:
         return pd.DataFrame()
-
-
-def display_elections(session):
-    result = session.execute(
-        f"""
-        SELECT  e."Id" AS parent, "Name" AS name, "Txt" as type
-        FROM    "VoteCount" vc
-                JOIN "Election" e ON vc."Election_Id" = e."Id"
-                JOIN "ElectionType" et ON e."ElectionType_Id" = et."Id"
-        WHERE   "Name" != 'none or unknown'
-        GROUP BY e."Id", "Name", "Txt"
-        ORDER BY LEFT("Name", 4) DESC, RIGHT("Name", LENGTH("Name") - 5)
-    """
-    )
-    result_df = pd.DataFrame(result)
-    result_df.columns = result.keys()
-    return result_df
-
-
-def display_jurisdictions(session, cols):
-    q = sql.SQL(
-        """
-        WITH states(states) AS (
-            SELECT {states} 
-        )
-        , unnested AS (
-            SELECT    UNNEST(regexp_split_to_array(states, '\n')) AS jurisdiction
-            FROM    states
-        )
-
-        , ordered AS (
-            SELECT  *, ROW_NUMBER() OVER() AS order_by
-            FROM    unnested u
-        )
-        , crossed AS (
-            SELECT	"Id", "Name", jurisdiction, 
-                    ROW_NUMBER() OVER(ORDER BY o.order_by ASC, order_by, LEFT("Name", 4) DESC, RIGHT("Name", LENGTH("Name") - 5) ASC) as order_by
-            FROM	"Election" e
-                    CROSS JOIN ordered o
-            WHERE	"Name" != 'none or unknown'
-            ORDER BY o.order_by ASC, order_by, LEFT("Name", 4) DESC, RIGHT("Name", LENGTH("Name") - 5) ASC
-        )
-        , crossed_with_state_id as (
-            SELECT	c.*, ru."Id" as jurisdiction_id
-            FROM	crossed c
-                    LEFT JOIN "ReportingUnit" ru ON c.jurisdiction = ru."Name"
-        )
-        SELECT  "Name" as parent,
-                jurisdiction AS name, 
-                CASE WHEN d."ReportingUnit_Id" IS null THEN false ELSE true END AS type
-        FROM    crossed_with_state_id s
-                LEFT JOIN (SELECT DISTINCT "Election_Id", "ReportingUnit_Id" FROM _datafile) d 
-                ON s."Id" = d."Election_Id" AND s.jurisdiction_id = d."ReportingUnit_Id"
-        ORDER BY order_by
-    """
-    ).format(states=sql.Literal(states))
-    connection = session.bind.raw_connection()
-    cursor = connection.cursor()
-    cursor.execute(q)
-    result = cursor.fetchall()
-    result_df = pd.DataFrame(result)
-    result_df.columns = cols
-    cursor.close()
-    return result_df
-
-
-def vote_types_by_juris(session: Session, election: str) -> Dict[str,List[str]]:
-    """returns dictionary of jurisdictions with list of vote types for each"""
-    q = sql.SQL("""
-    SELECT DISTINCT ru."Name", vc."CountItemType_Id", vc."OtherCountItemType"
-    FROM "VoteCount" vc
-    JOIN "_datafile" df on df."Id" = vc."_datafile_Id"
-    JOIN "ReportingUnit" ru on ru."Id" = df."ReportingUnit_Id"
-    JOIN "Election" el on df."Election_Id" = el."Id"
-    WHERE el."Name" = {election};
-    """).format(election=sql.Literal(election))
-    connection = session.bind.raw_connection()
-    cursor = connection.cursor()
-    cursor.execute(q)
-    result = cursor.fetchall()
-    result_df, err = id_other_cols_to_enum(session,
-        pd.DataFrame(result, columns=["jurisdiction","CountItemType_Id","OtherCountItemType"]),
-        "CountItemType"
-    )
-
-    cursor.close()
-    vote_types = dict(result_df.groupby("jurisdiction")["CountItemType"].apply(list))
-    return vote_types
-
-
-def contest_families_by_juris(
-        session: Session,
-        election: str,
-) -> pd.DataFrame:
-    """returns dictionary of jurisdictions with list of contest-district types for each"""
-    q = sql.SQL("""
-    SELECT DISTINCT 
-        top_ru."Name" as jurisdiction, 
-        con."Name" as contest, 
-        ed."ReportingUnitType_Id" as ReportingUnitType_Id, 
-        ed."OtherReportingUnitType" as OtherReportingUnitType     
-    FROM "VoteCount" vc
-    JOIN "_datafile" df on df."Id" = vc."_datafile_Id"
-    JOIN "ReportingUnit" top_ru on top_ru."Id" = df."ReportingUnit_Id"
-    JOIN "Election" el on df."Election_Id" = el."Id"
-    JOIN "Contest" con on con."Id" = vc."Contest_Id"
-    JOIN "CandidateContest" cancon on cancon."Id" = con."Id"
-    JOIN "Office" off on off."Id" = cancon."Office_Id"
-    JOIN "ReportingUnit" ed on ed."Id" = off."ElectionDistrict_Id"    
-    WHERE el."Name" = {election} ;
-    """).format(
-        election=sql.Literal(election),
-    )
-    connection = session.bind.raw_connection()
-    cursor = connection.cursor()
-    cursor.execute(q)
-    result = cursor.fetchall()
-    result_df, _ = id_other_cols_to_enum(session,
-        pd.DataFrame(result,
-                     columns=["jurisdiction",
-                                "contest",
-                              "ReportingUnitType_Id",
-                              "OtherReportingUnitType"
-                              ]),
-                    "ReportingUnitType",
-    )
-
-    cursor.close()
-    return result_df
-
-
-def id_other_cols_to_enum(session: Session, df: pd.DataFrame, enum: str) -> (pd.DataFrame, Optional[dict]):
-    err = None
-    try:
-        lookup = pd.read_sql_table(enum, session.bind, index_col="Id")
-    except Exception as exc:
-        err = ui.add_new_error(
-            err,
-            "system",
-            f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
-            f"Unable to read table {enum} from database. Exception: {exc}"
-        )
-        return df, err
-
-    id = f"{enum}_Id"
-    other = f"Other{enum}"
-    missing = [x for x in [id, other] if x not in df.columns]
-    if missing:
-        err = ui.add_new_error(
-            err,
-            "system",
-            f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
-            f"Expected column(s) missing from dataframe: {missing}"
-        )
-        return df, err
-    working = df.merge(lookup, how="left", left_on=id, right_index=True).rename(columns={"Txt": enum})
-    mask = working[enum] == "other"
-    working.loc[mask,enum] = working[mask][other]
-    working.drop([id, other], axis=1, inplace=True)
-    return working, err
-
-
-def parents_by_cursor(
-        cursor: psycopg2.extensions.cursor,
-        ru_id_list: List[int],
-        subunit_type: str = "county"
-) -> (pd.DataFrame, Optional[str]):
-    err_str = None
-    # kludge, because ru_ids in ru_id_list are typed as np.int64
-    ru_id_list = [int(n) for n in ru_id_list]
-    q = sql.SQL("""
-    SELECT child."Id", parent."Id"
-    FROM "ReportingUnit" as child
-    LEFT JOIN "ComposingReportingUnitJoin" as cruj on cruj."ChildReportingUnit_Id" = child."Id"
-    LEFT JOIN "ReportingUnit" as parent on cruj."ParentReportingUnit_Id" = parent."Id"
-    LEFT JOIN "ReportingUnitType" as rut on rut."Id" = parent."ReportingUnitType_Id"
-    WHERE (rut."Txt" = {subunit_type}) or (rut."Txt" = 'other' and parent."OtherReportingUnitType" = {subunit_type})
-    and child."Id" in {ru_id_list}
-    """).format(
-        subunit_type=sql.Literal(subunit_type),
-        ru_id_list=sql.Literal(tuple(ru_id_list))
-    )
-
-    try:
-        cursor.execute(q)
-        parents = cursor.fetchall()
-        parent_df = pd.DataFrame(parents)
-        if not parent_df.empty:
-            parent_df.columns = ["child_id", "parent_id"]
-
-    except Exception as exc:
-        parent_df = pd.DataFrame()
-        err_str = f"No results exported due to database error: {exc}"
-    return parent_df, err_str
-
-
-def parents(
-        session: Session, ru_id_list: iter, subunit_type: str = "county"
-) -> (pd.DataFrame, Optional[str]):
-    connection = session.bind.raw_connection()
-    cursor = connection.cursor()
-    parent_df, err_str = parents_by_cursor(cursor, ru_id_list, subunit_type=subunit_type)
-    return parent_df, err_str
-
-
-def get_vote_count_types_cursor(
-        cursor: psycopg2.extensions.cursor, election: str, jurisdiction: str
-) -> Set[str]:
-    """return list of all vote count types present for the
-    given election-jurisdiction pair"""
-    q = sql.SQL("""
-    select distinct cit."Txt", vc."OtherCountItemType"
-    from "VoteCount" vc
-    left join "CountItemType" cit on vc."CountItemType_Id" = cit."Id"
-    left join "_datafile" d on vc."_datafile_Id" = d."Id"
-    left join "ReportingUnit" ru on d."ReportingUnit_Id" = ru."Id"
-    left join "Election" el on vc."Election_Id" = el."Id"
-    where ru."Name" = {jurisdiction}
-    and el."Name" = {election}
-    """).format(
-        jurisdiction=sql.Literal(jurisdiction),
-        election=sql.Literal(election),
-    )
-    cursor.execute(q)
-    results = cursor.fetchall()
-    results_df = pd.DataFrame(results)
-    if results_df.empty:
-        vct_set = set()
-    else:
-        vct_set = set(results_df[0].unique())
-        mask = results_df[0] == "other"
-        vct_set.update(results_df.loc[mask,1].unique())
-        if "other" in vct_set:
-            vct_set.remove("other")
-    return vct_set
-
-
-def get_vote_count_types(
-        session: Session, election: str, jurisdiction: str
-) -> Set[str]:
-    connection = session.bind.raw_connection()
-    cursor = connection.cursor()
-    vct_set = get_vote_count_types_cursor(cursor, election, jurisdiction)
-    connection.close()
-    return vct_set

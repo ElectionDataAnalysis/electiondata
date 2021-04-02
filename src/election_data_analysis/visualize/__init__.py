@@ -1,12 +1,11 @@
 import plotly.graph_objects as go
 import os
-import pathlib
 
 
-def plot(plot_type, data, fig_type, target_dir):
+def plot(type, data, fig_type, target_dir):
     labels, x, y = parse_data(data)
     fig = go.Figure()
-    if plot_type == "scatter":
+    if type == "scatter":
         fig.add_trace(
             go.Scatter(
                 x=x,
@@ -21,7 +20,7 @@ def plot(plot_type, data, fig_type, target_dir):
             yaxis_title=data["y"],
             font=dict(family="Courier New, monospace", size=18),
         )
-    elif plot_type == "bar":
+    elif type == "bar":
         total = [x + y for x, y in zip(x, y)]
         x_pct = [x / ttl for x, ttl in zip(x, total)]
         y_pct = [y / ttl for y, ttl in zip(y, total)]
@@ -34,7 +33,7 @@ def plot(plot_type, data, fig_type, target_dir):
         )
         fig.update_layout(
             title=dict(
-                text=f"""{data["contest"]}<br>{data["subdivision_type"]}<br>{data["count_item_type"]}""",
+                text=f"""{data['contest']}<br>{data['subdivision_type']}<br>{data['count_item_type']}""",
                 x=0.5,
                 font=dict(family="Courier New, monospace", size=18),
             ),
@@ -48,8 +47,6 @@ def plot(plot_type, data, fig_type, target_dir):
     file_path = os.path.join(image_dir, file_name)
 
     if not os.path.isdir(image_dir):
-        path = pathlib.Path(image_dir)
-        path.parent.mkdir(parents=True, exist_ok=True)
         os.mkdir(image_dir)
 
     if fig_type == "html":
