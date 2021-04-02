@@ -450,7 +450,7 @@ def read_single_datafile(
                 df_dict = dict()
         elif p["file_type"] == "flat_text":
             try:
-                df = pd.read_csv(f_path, **kwargs, engine="python")
+                df = pd.read_csv(f_path, **kwargs)
             except ValueError as ve:
                 print(f"ValueError (while reading flat text file), possibly from uneven record lengths: {ve}\n "
                       f"Will try padding records")
