@@ -16,11 +16,12 @@ munge_strings=in_field_values,constant_over_file
 flat_text_delimiter=tab
 #### if count_locations is 'by_field_names':
 count_fields_by_name=CanVotes
+count_field_name_row=0
 #### if 'constant_over_file' is in munge_strings (NB: give value for each in .ini file):
 constant_over_file=CountItemType
 #### if file type is flat_text or excel and count_locations is 'by_field_names'
 #### (start numbering from first unskipped row):
-count_field_name_row=0
+count_header_row_numbers=0
 #### if file type is flat_text or excel and not all rows are data:
 #### (start numbering from first unskipped row):
 string_field_name_row=0

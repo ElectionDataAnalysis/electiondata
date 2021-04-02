@@ -6,6 +6,7 @@ from pandas.api.types import is_numeric_dtype
 from typing import Optional
 from election_data_analysis import munge as m
 from election_data_analysis import user_interface as ui
+from election_data_analysis import preparation as prep
 import numpy as np
 from pathlib import Path
 import csv
@@ -152,7 +153,9 @@ class Jurisdiction:
         self.path_to_juris_dir = path_to_juris_dir
 
 
-def ensure_jurisdiction_dir(juris_path, ignore_empty=False) -> dict:
+def ensure_jurisdiction_dir(
+        juris_path: str,
+        ignore_empty: bool = False) -> Optional[dict]:
     # create directory if it doesn't exist
     try:
         Path(juris_path).mkdir(parents=True)
@@ -166,7 +169,9 @@ def ensure_jurisdiction_dir(juris_path, ignore_empty=False) -> dict:
     return err
 
 
-def ensure_juris_files(juris_path, ignore_empty=False) -> Optional[dict]:
+def ensure_juris_files(
+        juris_path: str,
+        ignore_empty: bool = False) -> Optional[dict]:
     """Check that the jurisdiction files are complete and consistent with one another.
     Check for extraneous files in Jurisdiction directory.
     Assumes Jurisdiction directory exists. Assumes dictionary.txt is in the template file"""
@@ -174,6 +179,7 @@ def ensure_juris_files(juris_path, ignore_empty=False) -> Optional[dict]:
     # package possible errors from this function into a dictionary and return them
     err = None
     juris_name = Path(juris_path).name
+    juris_true_name = juris_name.replace("-"," ")
 
     project_root = Path(__file__).parents[1].absolute()
     templates_dir = os.path.join(
@@ -277,6 +283,48 @@ def ensure_juris_files(juris_path, ignore_empty=False) -> Optional[dict]:
         d, new_err = check_dependencies(juris_path, juris_file)
         if new_err:
             err = ui.consolidate_errors([err, new_err])
+
+    # check ReportingUnit.txt for internal consistency
+    new_err = check_ru_file(juris_path, juris_true_name)
+    return err
+
+
+def check_ru_file(juris_path: str, juris_true_name: str) -> Optional[dict]:
+    err = None
+    ru = prep.get_element(juris_path, "ReportingUnit")
+
+    # create set of all parents, all lead rus
+    parents = set()
+    leadings = set()
+    for _, r in ru.iterrows():
+        components = r["Name"].split(";")
+        parents.update({";".join(components[:j+1]) for j in range(len(components) - 1)})
+        leadings.update({components[0]})
+
+    # identify and report parents that are missing from ReportingUnit.txt
+    missing = [p for p in parents if p not in ru["Name"].unique()]
+    missing.sort(reverse=True)
+    if missing:
+        m_str = "\n".join(missing)
+        err = ui.add_new_error(
+            err,
+            "jurisdiction",
+            Path(juris_path).name,
+            f"Some parent reporting units are missing from ReportingUnit.txt:\n{m_str}"
+        )
+
+    # check that all reporting units start with true name
+    bad = [j for j in leadings if j != juris_true_name]
+    if bad:
+        bad.sort(reverse=True)
+        bad_str = "\n".join(bad)
+        err = ui.add_new_error(
+            err,
+            "jurisdiction",
+            Path(juris_path).name,
+            f"Every ReportingUnit should start with the jurisdiction name. These do not:\n{bad_str}"
+        )
+
     return err
 
 

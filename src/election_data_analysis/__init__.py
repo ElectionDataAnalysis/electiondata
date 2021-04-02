@@ -209,8 +209,9 @@ class DataLoader:
                 param_file=par_file,
                 header="election_data_analysis",
             )
-            if new_err:
-                err = ui.consolidate_errors([err, new_err])
+            ini_err = ui.check_results_ini_params(params[f], f)
+            if new_err or ini_err:
+                err = ui.consolidate_errors([err, new_err, ini_err])
             if not ui.fatal_error(new_err):
                 ###########
                 # for backwards compatibility
@@ -575,7 +576,8 @@ class SingleDataLoader:
         return err
 
     def collect_constants_from_ini(self) -> dict:
-        """collect constant elements from .ini file"""
+        """collect constant elements from .ini file.
+        Omits constants that have no content"""
         constants = dict()
         for k in [
             "Party",
@@ -587,9 +589,47 @@ class SingleDataLoader:
             "Candidate",
         ]:
             # if element was given in .ini file
-            if self.d[k] is not None:
+            if (self.d[k] is not None) and self.d[k] != "":
                 constants[k] = self.d[k]
         return constants
+
+    def check_ini_to_munger(self, munger_path: str) -> Optional[dict]:
+        err = None
+        ini_constants = self.collect_constants_from_ini().keys()
+        # find elements munger thinks will be constant (and given in .ini file)
+        mp, err = ui.get_parameters(
+            required_keys=[],
+            optional_keys=["constant_over_file"],
+            header="format",
+            param_file=munger_path,
+        )
+        if (not mp["constant_over_file"]) or (mp["constant_over_file"] == ""):
+            munger_constants = set()
+        else:
+            munger_constants = mp["constant_over_file"].split(",")
+
+        # report anything missing from ini as error
+        missing_from_ini = [c for c in munger_constants if c not in ini_constants]
+        if missing_from_ini:
+            missing_str = "\n".join(missing_from_ini)
+            err = ui.add_new_error(
+                err,
+                "ini",
+                self.par_file_name,
+                f"Munger {Path(munger_path).name} requires constants to be set in the .ini file:\n{missing_str}"
+            )
+
+        # report anything missing from munger as warning
+        missing_from_munger = [c for c in ini_constants if c not in munger_constants]
+        if missing_from_munger:
+            missing_str = "\n".join(missing_from_munger)
+            err = ui.add_new_error(
+                err,
+                "warn-ini",
+                self.par_file_name,
+                f"Ini file contains constants not specified in munger {Path(munger_path).name}:\n{missing_str}"
+            )
+        return err
 
     def list_values(self, element: str) -> (list, Optional[dict]):
         """lists all values for the element found in the file"""
@@ -2020,8 +2060,13 @@ def load_results_file(
     if ui.fatal_error(err):
         return err
 
+    # TODO remove constants not called for in munger
+    necessary_constants = {
+        c:v for c,v in constants.items() if c in p["constant_over_file"]
+    }
+
     df, new_err = m.file_to_raw_df(
-        munger_path, p, f_path, constants, results_directory_path
+        munger_path, p, f_path, necessary_constants, results_directory_path
     )
     if new_err:
         err = ui.consolidate_errors([err, new_err])
@@ -2051,7 +2096,7 @@ def load_results_file(
 
     # # add Id columns for all but Count, removing raw-munged
     try:
-        df, new_err = m.munge_raw_to_ids(df, constants, juris, munger_name, session, p["file_type"])
+        df, new_err = m.munge_raw_to_ids(df, necessary_constants, juris, munger_name, session, p["file_type"])
         if new_err:
             err = ui.consolidate_errors([err, new_err])
             if ui.fatal_error(new_err):

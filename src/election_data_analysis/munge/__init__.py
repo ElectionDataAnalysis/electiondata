@@ -15,6 +15,10 @@ import numpy as np
 
 # constants
 default_encoding = "utf_8"
+brace_pattern = re.compile(r"{<([^,]*)>,([^{}]*|[^{}]*{[^{}]*}[^{}]*)}")
+
+# common data format file types need no extra parameters
+no_param_file_types = {"nist_v2_xml"}
 
 opt_munger_data_types: Dict[str, str] = {
     "count_locations": "string",
@@ -247,8 +251,6 @@ def add_column_from_formula(
     w = working.copy()
     #  for each {} pair in the formula, create a new column
     # (assuming formula is well-formed)
-    brace_pattern = re.compile(r"{<([^,]*)>,([^{}]*|[^{}]*{[^{}]*}[^{}]*)}")
-
     try:
         temp_cols = []
         for x in brace_pattern.finditer(formula):
@@ -1159,6 +1161,28 @@ def munge_raw_to_ids(
     return working, err
 
 
+def get_munge_formulas(
+        munger_path: str, header_list: List[str]
+) -> (Dict[str, str], Optional[dict]):
+    err = None
+    formulas = dict()
+    for source in header_list:
+        f, new_err = ui.get_parameters(
+            required_keys=[],
+            optional_keys=all_munge_elements,
+            header=source,
+            param_file=munger_path,
+        )
+        if new_err:
+            err = ui.consolidate_errors([err, new_err])
+            if ui.fatal_error(new_err):
+                return dict(), err
+        f = {k:v for k,v in f.items() if v}
+        if f:
+            formulas.update(f)
+    return formulas, err
+
+
 def munge_source_to_raw(
     df: pd.DataFrame,
     munger_path: str,
@@ -1173,93 +1197,88 @@ def munge_source_to_raw(
 
     if df.empty:
         return df, err
-    munger_name = Path(munger_path).name
+    munger_name = Path(munger_path).stem
     working = df.copy()
 
     # # get munge formulas
     # # for all but constant-over-file
-    sources = [x for x in p["munge_strings"] if x != "constant_over_file"]
-    for source in sources:
-        formulas, new_err = ui.get_parameters(
-            required_keys=[],
-            optional_keys=all_munge_elements,
-            header=source,
-            param_file=munger_path,
-        )
-        elements = [
-            k
-            for k in formulas.keys()
-            if (formulas[k] is not None) and (formulas[k] != "None")
-        ]
-        # get any aux info (NB: does not include suffix)
-        aux_info, foreign_key_fields = get_aux_info(formulas, elements, munger_path)
+    header_list = [x for x in p["munge_strings"] if x != "constant_over_file"]
+    formulas, new_err = get_munge_formulas(munger_path, header_list)
 
-        for element in elements:
-            try:
-                formula = formulas[element]
-                # if formula refers to any fields that need to be looked up, make appropriate replacements
-                if element in aux_info.keys():
-                    working, formula, new_err = incorporate_aux_info(
-                        working,
-                        element,
-                        formula,
-                        foreign_key_fields,
-                        aux_info,
-                        aux_directory_path,
-                        munger_name,
-                        suffix,
-                        results_file_path,
-                    )
-                    if new_err:
-                        err = ui.consolidate_errors([err, new_err])
-                        if ui.fatal_error(new_err):
-                            return working, err
+    elements = [
+        k
+        for k in formulas.keys()
+        if (formulas[k] is not None) and (formulas[k] != "None")
+    ]
+    # get any aux info (NB: does not include suffix)
+    aux_info, foreign_key_fields = get_aux_info(formulas, elements, munger_path)
 
-                # append suffix to any fields from the original table
-                for c in orig_string_cols:
-                    formula = formula.replace(f"<{c}>", f"<{c}{suffix}>")
-
-                # add col with munged values
-                working, new_err = add_column_from_formula(
-                    working, formula, f"{element}_raw", err, munger_name
+    for element in elements:
+        try:
+            formula = formulas[element]
+            # if formula refers to any fields that need to be looked up, make appropriate replacements
+            if element in aux_info.keys():
+                working, formula, new_err = incorporate_aux_info(
+                    working,
+                    element,
+                    formula,
+                    foreign_key_fields,
+                    aux_info,
+                    aux_directory_path,
+                    munger_name,
+                    suffix,
+                    results_file_path,
                 )
                 if new_err:
                     err = ui.consolidate_errors([err, new_err])
                     if ui.fatal_error(new_err):
                         return working, err
-                # TODO how to handle disambiguation? Here's how we did it before:
-                """
-                # correct any disambiguated names back to the original
-                if element in munger.alt.keys():
-                    working.replace({f"{element}_raw": munger.alt[element]}, inplace=True)
-                """
 
-            except Exception as exc:
-                err = ui.add_new_error(
-                    err,
-                    "munger",
-                    munger_name,
-                    f"Error interpreting formula for {element}. {exc}",
-                )
-                return working, err
+            # append suffix to any fields from the original table
+            for c in orig_string_cols:
+                formula = formula.replace(f"<{c}>", f"<{c}{suffix}>")
 
-            # compress whitespace for <element>_raw
-            compression = pd.DataFrame(
-                [
-                    [x, compress_whitespace(x)]
-                    for x in working[f"{element}_raw"].unique()
-                ],
-                columns=["uncompressed", "compressed"],
+            # add col with munged values
+            working, new_err = add_column_from_formula(
+                working, formula, f"{element}_raw", err, munger_name
             )
-            working = (
-                working.merge(
-                    compression,
-                    left_on=f"{element}_raw",
-                    right_on="uncompressed",
-                )
-                .drop([f"{element}_raw", "uncompressed"], axis=1)
-                .rename(columns={"compressed": f"{element}_raw"})
+            if new_err:
+                err = ui.consolidate_errors([err, new_err])
+                if ui.fatal_error(new_err):
+                    return working, err
+            # TODO how to handle disambiguation? Here's how we did it before:
+            """
+            # correct any disambiguated names back to the original
+            if element in munger.alt.keys():
+                working.replace({f"{element}_raw": munger.alt[element]}, inplace=True)
+            """
+
+        except Exception as exc:
+            err = ui.add_new_error(
+                err,
+                "munger",
+                munger_name,
+                f"Error interpreting formula for {element}. {exc}",
             )
+            return working, err
+
+        # compress whitespace for <element>_raw
+        compression = pd.DataFrame(
+            [
+                [x, compress_whitespace(x)]
+                for x in working[f"{element}_raw"].unique()
+            ],
+            columns=["uncompressed", "compressed"],
+        )
+        working = (
+            working.merge(
+                compression,
+                left_on=f"{element}_raw",
+                right_on="uncompressed",
+            )
+            .drop([f"{element}_raw", "uncompressed"], axis=1)
+            .rename(columns={"compressed": f"{element}_raw"})
+        )
     # drop all source columns
     source_cols = [c for c in working.columns if c[-len(suffix) :] == suffix]
     working.drop(source_cols, axis=1, inplace=True)
@@ -1267,7 +1286,13 @@ def munge_source_to_raw(
     return working, err
 
 
-def get_and_check_munger_params(munger_path: str) -> (dict, Optional[dict]):
+def get_and_check_munger_params(
+        munger_path: str,
+        results_dir: Optional[str] = None
+) -> (dict, Optional[dict]):
+    """Checks that munger parameter file is internally consistent.
+    If results_dir is included, then existence of any required
+    auxiliary files is checked as well"""
     params, err = ui.get_parameters(
         required_keys=list(req_munger_parameters.keys()),
         optional_keys=list(opt_munger_data_types.keys()),
@@ -1277,8 +1302,12 @@ def get_and_check_munger_params(munger_path: str) -> (dict, Optional[dict]):
     )
     if ui.fatal_error(err):
         return dict(), err
+
+    if params["file_type"] in no_param_file_types:
+        return params, err
+
     # get name of munger for error reporting
-    munger_name = Path(munger_path).name[:-7]
+    munger_name = Path(munger_path).stem
 
     # define dictionary of munger parameters
     data_types = {**{
@@ -1315,7 +1344,7 @@ def get_and_check_munger_params(munger_path: str) -> (dict, Optional[dict]):
     for k0 in munger_dependent_reqs.keys():
         for k1 in munger_dependent_reqs[k0]:
             for v2 in munger_dependent_reqs[k0][k1]:
-                if format_options[k0] == k1 and v2 is None:
+                if (format_options[k0] == k1) and (not format_options[v2]):
                     err = ui.add_new_error(
                         err, "munger", munger_name, f"{k0}={k1}', but {v2} not found"
                     )
@@ -1333,8 +1362,9 @@ def get_and_check_munger_params(munger_path: str) -> (dict, Optional[dict]):
                 f"file_type={format_options['file_type']}' but count_field_name_row not found",
             )
 
-        # # if all rows are not data, need field names
-        if format_options["all_rows"] is None:
+        # if all rows are not data
+        if (format_options["all_rows"] is None) or format_options["all_rows"] != "data":
+            # need field names
             if format_options["string_field_name_row"] is None:
                 err = ui.add_new_error(
                     err,
@@ -1344,6 +1374,15 @@ def get_and_check_munger_params(munger_path: str) -> (dict, Optional[dict]):
                     f" all_rows=data means field names must be in the "
                     f"file. But string_field_name_row not given.",
                 )
+        # if all rows are data
+        else:
+            if format_options["multi_block"] and format_options["multi_block"] == "yes":
+                err = ui.add_new_error(
+                    err,
+                    "munger",
+                    munger_name,
+                    f"all_rows=data and multi_block=yes are not compatible"
+                    )
 
     # # for each value in list of string locations, requirements are met
     for k0 in format_options["munge_strings"]:
@@ -1358,7 +1397,6 @@ def get_and_check_munger_params(munger_path: str) -> (dict, Optional[dict]):
     # TODO check formats (e.g., formulas for constant_over_sheet use only <sheet_name> and <row_{i}>)
     # TODO check that required headers are present (see User_Guide) per munge_strings list
     # TODO check that required headers are present (see User_Guide) per lookups list
-    # TODO check that each element is defined by a single formula
 
     # # add parameter listing all munge fields
     # get lists of string fields expected in raw file
@@ -1368,7 +1406,112 @@ def get_and_check_munger_params(munger_path: str) -> (dict, Optional[dict]):
         munger_path,
     )
     if new_err:
-        ui.consolidate_errors([err, new_err])
+        err = ui.consolidate_errors([err, new_err])
+
+    # classify munge fields
+    mf_by_type = {"in_count_headers": set(), "in_field_values": set(), "constant_over_sheet": set()}
+    for mf in params["munge_fields"]:
+        if mf[:7] == "header_":
+            try:
+                int(mf[7:])
+                mf_by_type["in_count_headers"].update({mf})
+            except ValueError:
+                mf_by_type["in_field_values"].update({mf})
+        elif mf[:4] == "row_":
+            try:
+                int(mf[4:])
+                mf_by_type["constant_over_sheet"].update({mf})
+            except ValueError:
+                mf_by_type["in_field_values"].update({mf})
+        elif mf == "sheet_name":
+            mf_by_type["constant_over_sheet"].update({mf})
+        else:
+            mf_by_type["in_field_values"].update({mf})
+
+    # check that any header rows in formulas are in the list of header row numbers
+    for mf in mf_by_type["in_count_headers"]:
+        if int(mf[7:]) not in params["count_header_row_numbers"]:
+            err = ui.add_new_error(
+                err,
+                "munger",
+                munger_name,
+                f"{mf} in formulas but {mf[7:]} not listed in count_header_row_numbers"
+            )
+
+    #  "munge_strings" includes everything required in the formulas
+    for x in ["in_count_headers", "in_field_values", "constant_over_sheet"]:
+        if mf_by_type[x] and (x not in params["munge_strings"]):
+            err = ui.add_new_error(
+                err,
+                "munger",
+                munger_name,
+                f"{x} should be listed in munge_strings to support formula references:\n{mf_by_type[x]}"
+            )
+
+    # if constant_over_file is in munge_strings, at least one constant_over_file element must be listed
+    if "constant_over_file" in params["munge_strings"]:
+        if (not params["constant_over_file"]) or (params["constant_over_file"] == ""):
+            err = ui.add_new_error(
+                err,
+                "munger",
+                munger_name,
+                f"constant_over_file specified in munge_strings, but no constant element specified."
+            )
+
+    # check that each lookup section has a replacement formula for each element referencing the lookup field
+    # and check that each auxiliary file exists
+    headers, new_err = ui.get_section_headers(munger_path)
+    if new_err:
+        err = ui.consolidate_errors([err, new_err])
+        if ui.fatal_error(new_err):
+            return format_options, err
+
+    # get all munge formulas (excluding _replacement formulas)
+    formulas, new_err = get_munge_formulas(munger_path, headers)
+
+    pattern = re.compile(r"^(.*) lookup$")
+    for h in headers:
+        try:
+            lookup_field = pattern.findall(h)[0]
+        except IndexError:
+            # if nothing found, this isn't a lookup section, so skip it.
+            continue
+        # check required items for lookup
+        required, new_err = ui.get_parameters(
+            required_keys=["source_file", "lookup_id", "file_type"],
+            param_file=munger_path,
+            header=h,
+        )
+        if new_err:
+            err = ui.consolidate_errors([err, new_err])
+        if results_dir:
+            aux_file_path = os.path.join(results_dir, required["source_file"])
+            if not os.isfile(aux_file_path):
+                err = ui.add_new_error(
+                    err,
+                    "munger",
+                    munger_name,
+                    f"Auxiliary file not found: {required['source_file']}"
+                )
+        # TODO check usual format items for reading aux file
+
+        # check replacement formulas
+        elements_using_lookup_field = [e for e in formulas.keys() if f"<{lookup_field}>" in formulas[e]]
+        replacements, new_err = ui.get_parameters(
+                required_keys=[f"{e}_replacement" for e in elements_using_lookup_field],
+                param_file=munger_path,
+                header=h,
+            )
+        # report any elements missing replacement definitions for this header
+        missing = [f"{e}_replacement" for e in elements_using_lookup_field if f"{e}_replacement" not in replacements.keys()]
+        if missing:
+            err = ui.add_new_error(
+                err,
+                "munger",
+                munger_name,
+                f"Section [{h} lookup] is missing formulas for:\n{missing}"
+            )
+
     return format_options, err
 
 
@@ -1376,9 +1519,16 @@ def get_string_fields(
     sources: list,
     munger_path: str,
 ) -> (List[str], Optional[dict]):
+    """Finds the field names expected by the munger formulas (and checks munger formulas along the way)
+    Also checks that no element is defined more than once."""
     err = None
-    pattern = re.compile(r"<([^>,]+)(?:,([^>,]+))*>")
+    munger_name = Path(munger_path).stem
     munge_field_list = list()
+    defined_elements = set()
+
+    # regex to recognize comma-less text in inmost angle brackets < ... >
+    # nb: commas can appear in lookup formulas with multi-field keys
+    pattern = re.compile(r"<([^>,]+)(?:,([^>,]+))*>")
     for source in sources:
         munge_field_set = set()
         formulas, new_err = ui.get_parameters(
@@ -1394,7 +1544,24 @@ def get_string_fields(
 
         for k in formulas.keys():
             if formulas[k]:
+                if k in defined_elements:
+                    err = ui.add_new_error(
+                        err,
+                        "munger",
+                        munger_name,
+                        f"Multiple formulas for {k}",
+                    )
+                else:
+                    defined_elements.update({k})
                 munge_field_set.update(pattern.findall(formulas[k]))
+                formula_err = check_formula(formulas[k])
+                if formula_err:
+                    err = ui.add_new_error(
+                        err,
+                        "munger",
+                        munger_name,
+                        f"Error in formula for {k}: {formula_err}",
+                    )
         flat = {x for y in munge_field_set for x in y}
         if "" in flat:
             flat.remove("")
@@ -1402,6 +1569,26 @@ def get_string_fields(
     # remove dupes
     munge_field_list = list(set(munge_field_list))
     return munge_field_list, err
+
+
+def check_formula(formula: str) -> Optional[str]:
+    """Runs syntax checks on a concatenation (or concatenation-with-regex) formula"""
+    # brace pairs { ... , .... } contain well-formed regex as second entry with one capturing group
+    err_str_list = list()
+    cr_pairs = brace_pattern.findall(formula)
+    for _, regex in cr_pairs:
+        # test regex well-formed
+        try:
+            # test regex has exactly one capturing group
+            group_count = re.compile(regex).groups
+            if group_count != 1:
+                err_str_list.append(
+                    f"Regular expression {regex} has {group_count} capturing groups but should have just one."
+                )
+        except re.error as re_err:
+            err_str_list.append(f"Regular expression error in '{regex}': {re_err}")
+    err_str = "\n".join(err_str_list)
+    return err_str
 
 
 def to_standard_count_frame(
@@ -1990,5 +2177,3 @@ def file_to_raw_df(
             )
 
     return df, err
-
-

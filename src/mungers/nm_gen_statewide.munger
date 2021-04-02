@@ -12,7 +12,6 @@ constant_over_file=
 
 [in_field_values]
 ReportingUnit=<County>
-CountItemType=total
 
 [in_count_headers]
 Candidate=<header_0>
@@ -24,7 +23,6 @@ CountItemType={<sheet_name>,^(.*)(?:President|United).*$}
 
 [ignore]
 ReportingUnit=TOTALS
-
 
 [header_0 lookup]
 source_file=New-Mexico/RadGridExport_revised.txt

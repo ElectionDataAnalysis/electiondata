@@ -429,7 +429,10 @@ def read_single_datafile(
         kwargs = basic_kwargs(p, dict())
         kwargs = tabular_kwargs(p, kwargs, aux=aux)
         kwargs["quoting"] = csv.QUOTE_MINIMAL
-        kwargs["sep"] = p["flat_text_delimiter"].replace("tab", "\t")
+        if p["flat_text_delimiter"] in ["tab", "\\t"]:
+            kwargs["sep"] = "\t"
+        else:
+            kwargs["sep"] = p["flat_text_delimiter"]
 
     # read file
     try:
@@ -592,7 +595,10 @@ def get_parameters(
     err: Optional[Dict] = None,
     optional_keys: Optional[List[str]] = None,
 ) -> (Dict[str, str], Optional[Dict[str, dict]]):
+    """Collects the values of the parameters corresponding to the <required_keys>
+    and <optional_keys> into a dictionary."""
     d = dict()
+    err = None
 
     # read info from file
     parser = ConfigParser()
@@ -634,6 +640,21 @@ def get_parameters(
             d[k] = None
 
     return d, err
+
+
+def get_section_headers(
+        param_file: str
+) -> (List[str], Optional[dict]):
+    err = None
+    # read info from file
+    parser = ConfigParser()
+    # find header
+    p = parser.read(param_file)
+    if len(p) == 0:
+        err = add_new_error(err, "file", param_file, "File not found")
+        return list(), err
+    headers = parser.sections()
+    return headers, err
 
 
 def consolidate_errors(list_of_err: Optional[list]) -> Optional[Dict[Any, dict]]:
@@ -1389,3 +1410,25 @@ def set_and_fill_headers(df: pd.DataFrame, header_list: list) -> pd.DataFrame:
     return df
 
 
+def check_results_ini_params(
+        p: Dict[str, Any],
+        ini_file_name: str,
+) -> Optional[dict]:
+    """Checks results parameters"""
+    err_str = None
+    try:
+        datetime.datetime.strptime(p["results_download_date"], '%Y-%m-%d')
+    except TypeError:
+        err_str = f"No download date found"
+    except ValueError:
+        err_str = f"Date could not be parsed. Expected format is 'YYYY-MM-DD', actual is {p['results_download_date']}"
+    if err_str:
+        ini_err = add_new_error(
+            None,
+            "ini",
+            ini_file_name,
+            err_str
+        )
+    else:
+        ini_err = None
+    return ini_err

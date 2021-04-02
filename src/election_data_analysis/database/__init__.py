@@ -976,6 +976,7 @@ def get_jurisdiction_hierarchy(session, jurisdiction_id) -> (int, str):
         (subdivision_type_id, other_subdiv_type) = (result[0][0], result[0][1])
     except:
         subdivision_type_id = None
+        other_subdiv_type = None
     cursor.close()
     return subdivision_type_id, other_subdiv_type
 
