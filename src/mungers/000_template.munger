@@ -70,7 +70,7 @@ nesting_tags=
 ## must be looked up in another table.                          ##
 ## See mi_gen18.munger for example                              ##
 ##################################################################
-# [*** lookup]
+# [<foreign key name> lookup]
 # optional (defaults to the results file):
 # source_file=
 

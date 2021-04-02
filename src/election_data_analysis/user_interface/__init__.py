@@ -968,23 +968,39 @@ def confirm_essential_info(
     return
 
 
-def election_juris_list(dir_path: str) -> list:
-    """Return list of all election-jurisdiction pairs in .ini files in the given directory"""
-    ej_list = []
-    for f in os.listdir(dir_path):
-        if f[-4:] == ".ini":
-            d, err = get_parameters(
-                param_file=os.path.join(dir_path, f),
-                header="election_data_analysis",
-                required_keys=["election", "top_reporting_unit"],
-            )
-            # if parameters were read without error
-            if not err:
-                # and if the pair is not already in the list
-                if (d["election"], d["top_reporting_unit"]) not in ej_list:
-                    # append the pair from the param file to the list
-                    ej_list.append((d["election"], d["top_reporting_unit"]))
-    return ej_list
+def election_juris_list(ini_path: str, results_path: Optional[str]) -> list:
+    """Return list of all election-jurisdiction pairs in .ini files in the ini_path directory
+    or in any of its subdirectories. Ignores 'template.ini' If results_path is given, filters
+    for ini files whose results files are in the results_path directory
+    """
+    ej_set = set()
+    for subdir, dirs, files in os.walk(ini_path):
+        for f in files:
+            if (f[-4:] == ".ini") and (f != "template.ini"):
+                full_path = os.path.join(subdir, f)
+                d, err = get_parameters(
+                    param_file=full_path,
+                    header="election_data_analysis",
+                    required_keys=["election", "top_reporting_unit", "results_file"],
+                )
+                # if parameters were read without error
+                if not err:
+                    # if we're not checking against results directory, or if we are and the ini file
+                    #  points to a file in or below the results directory
+                    if (not results_path) or (os.path.isfile(os.path.join(results_path, d["results_file"]))):
+                        # include the pair in the output
+                        ej_set.update({(d["election"], d["top_reporting_unit"])})
+    return list(ej_set)
+
+
+def file_full_paths(dir_path: str, ext: str) -> List[str]:
+    """Return list of full paths all .ini files in the directory or its subdirectories"""
+    ini_paths = list()
+    for subdir, dirs, files in os.walk(dir_path):
+        for f in files:
+            if (f[-len(ext)-1:] == f".{ext}") and (f != f"template.{ext}"):
+                ini_paths.append(os.path.join(subdir, f))
+    return ini_paths
 
 
 def reload_juris_election(
@@ -1412,10 +1428,11 @@ def set_and_fill_headers(df: pd.DataFrame, header_list: list) -> pd.DataFrame:
 
 def check_results_ini_params(
         p: Dict[str, Any],
-        ini_file_name: str,
+        ini_file_path: str,
 ) -> Optional[dict]:
     """Checks results parameters"""
     err_str = None
+    ini_file_name = Path(ini_file_path).name
     try:
         datetime.datetime.strptime(p["results_download_date"], '%Y-%m-%d')
     except TypeError:

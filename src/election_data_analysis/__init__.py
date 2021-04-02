@@ -54,8 +54,7 @@ sdl_pars_opt = [
 multi_data_loader_pars = [
     "results_dir",
     "archive_dir",
-    "jurisdictions_dir",
-    "mungers_dir",
+    "repository_content_root",
 ]
 
 optional_mdl_pars = [
@@ -80,6 +79,7 @@ class DataLoader:
     def __new__(cls):
         """Checks if parameter file exists and is correct. If not, does
         not create DataLoader object."""
+
         d, err = ui.get_parameters(
             required_keys=multi_data_loader_pars,
             optional_keys=optional_mdl_pars,
@@ -101,6 +101,11 @@ class DataLoader:
             param_file="run_time.ini",
             header="election_data_analysis",
         )
+
+        # define parameters derived from run_time.ini
+        self.d["ini_dir"] = os.path.join(self.d["repository_content_root"], "ini_files_for_results")
+        self.d["jurisdictions_dir"] = os.path.join(self.d["repository_content_root"], "jurisdictions")
+        self.d["mungers_dir"] = os.path.join(self.d["repository_content_root"], "mungers")
 
         # create db if it does not already exist and have right tables
         err = db.create_db_if_not_ok()
@@ -148,7 +153,9 @@ class DataLoader:
         election_jurisdiction_list: Optional[list] = None,
         rollup: bool = False,
     ) -> (Optional[dict], bool):
-        """Processes all .ini files in the DataLoader's results directory.
+        """Processes all results (or all results corresponding to pairs in
+        election_jurisdiction_list if given) in DataLoader's results directory using
+        .ini files from repository.
         By default, loads (or reloads) the info from the jurisdiction files
         into the db first. By default, moves files to the DataLoader's archive directory.
         Returns a post-reporting error dictionary, and a flag to indicate whether all loaded successfully.
@@ -158,9 +165,10 @@ class DataLoader:
         err = None
         success = True
 
+        # if no election_jurisdiction_list given, default to all represented in ini files in repository
+        if not election_jurisdiction_list:
+            election_jurisdiction_list = ui.election_juris_list(self.d["ini_dir"])
         # set locations for error reporting
-        # TODO get rid of mungers_path variable, use self.d directly
-        mungers_path = self.d["mungers_dir"]
 
         # define directory for archiving successfully loaded files (and storing warnings)
         db_param, new_err = ui.get_parameters(
@@ -182,15 +190,15 @@ class DataLoader:
         }
 
         # list .ini files and pull their jurisdiction_paths
-        par_files = [f for f in os.listdir(self.d["results_dir"]) if f[-4:] == ".ini"]
+        par_file_full_paths = ui.file_full_paths(self.d["ini_dir"], "ini")
 
         # no .ini files found, return error
-        if not par_files:
+        if not par_file_full_paths:
             err = ui.add_new_error(
                 err,
                 "file",
-                self.d["results_dir"],
-                f"No <results>.ini files found in directory. No results files will be processed.",
+                self.d["ini_dir"],
+                f"No <results>.ini files found. No results files will be processed.",
             )
             err = ui.report(err)
             return err, False
@@ -200,35 +208,25 @@ class DataLoader:
 
         # For each par_file get params or throw error
         good_par_files = list()
-        for f in par_files:
+        for f_path in par_file_full_paths:
             # grab parameters
-            par_file = os.path.join(self.d["results_dir"], f)
-            params[f], new_err = ui.get_parameters(
+            par_file = f_path
+            params[f_path], new_err = ui.get_parameters(
                 required_keys=sdl_pars_req,
                 optional_keys=sdl_pars_opt,
                 param_file=par_file,
                 header="election_data_analysis",
             )
-            ini_err = ui.check_results_ini_params(params[f], f)
+            ini_err = ui.check_results_ini_params(params[f_path], f_path)
             if new_err or ini_err:
                 err = ui.consolidate_errors([err, new_err, ini_err])
             if not ui.fatal_error(new_err):
-                ###########
-                # for backwards compatibility
-                if not params[f]["jurisdiction_directory"]:
-                    params[f]["jurisdiction_directory"] = Path(
-                        params[f]["jurisdiction_path"]
-                    ).name
-                ###########
-                if election_jurisdiction_list:
-                    if (
-                        params[f]["election"],
-                        params[f]["top_reporting_unit"],
-                    ) in election_jurisdiction_list:
-                        good_par_files.append(f)
-                else:
-                    good_par_files.append(f)
-                juris_directory[f] = params[f]["jurisdiction_directory"]
+                if (
+                    params[f_path]["election"],
+                    params[f_path]["top_reporting_unit"],
+                ) in election_jurisdiction_list:
+                    good_par_files.append(f_path)
+                juris_directory[f_path] = params[f_path]["jurisdiction_directory"]
 
         # group .ini files by jurisdiction_directory name
         jurisdiction_dirs = list({juris_directory[f] for f in good_par_files})
@@ -283,7 +281,7 @@ class DataLoader:
                     self.d["results_dir"],
                     f,
                     self.session,
-                    mungers_path,
+                    self.d["mungers_dir"],
                     juris[jp],
                 )
                 if new_err:
@@ -474,7 +472,6 @@ class SingleDataLoader:
         # TODO document
         self.mungers_dir = mungers_path
         self.munger_list = [x.strip() for x in self.d["munger_name"].split(",")]
-        # TODO check mungers for consistency?
 
     def track_results(self) -> (dict, Optional[str]):
         """insert a record for the _datafile, recording any error string <e>.
@@ -1336,14 +1333,16 @@ class Analyzer:
                 header="postgresql",
             )
             d, eda_err = ui.get_parameters(
-                required_keys=["rollup_directory"],
+                required_keys=["reports_and_plots_dir"],
                 param_file=param_file,
                 header="election_data_analysis",
             )
+            if not d["reports_and_plots_dir"]:
+                print(f"Warning: no 'reports_and_plots_dir' specified in {param_file}")
         except FileNotFoundError:
             print(
-                "Parameter file 'run_time.ini' not found. Ensure that it is located"
-                " in the current directory. Analyzer object not created."
+                f"Parameter file '{param_file}' not found. Ensure that it is located"
+                f" in the current directory ({os.getcwd()}).\nAnalyzer object not created."
             )
             return None
 
@@ -1360,13 +1359,13 @@ class Analyzer:
         if not param_file:
             param_file = "run_time.ini"
 
-        # read rollup_directory from param_file
+        # read reports_and_plots_dir from param_file
         d, error = ui.get_parameters(
-            required_keys=["rollup_directory"],
+            required_keys=["reports_and_plots_dir"],
             param_file=param_file,
             header="election_data_analysis",
         )
-        self.rollup_directory = d["rollup_directory"]
+        self.reports_and_plots_dir = d["reports_and_plots_dir"]
 
         # create session
         eng, err = db.sql_alchemy_connect(param_file, dbname=dbname)
@@ -1432,7 +1431,7 @@ class Analyzer:
             v_runoff,
         )
         if fig_type and agg_results:
-            viz.plot("scatter", agg_results, fig_type, self.rollup_directory)
+            viz.plot("scatter", agg_results, fig_type, self.reports_and_plots_dir)
         return agg_results
 
     def bar(
@@ -1463,7 +1462,7 @@ class Analyzer:
         )
         if fig_type and agg_results:
             for agg_result in agg_results:
-                viz.plot("bar", agg_result, fig_type, self.rollup_directory)
+                viz.plot("bar", agg_result, fig_type, self.reports_and_plots_dir)
         return agg_results
 
     def split_category_input(self, input_str: str):
@@ -1515,7 +1514,7 @@ class Analyzer:
         election_id = db.name_to_id(self.session, "Election", election)
         err = a.create_rollup(
             self.session,
-            self.rollup_directory,
+            self.reports_and_plots_dir,
             top_ru_id=rollup_unit_id,
             sub_rutype_id=sub_unit_id,
             election_id=election_id,
