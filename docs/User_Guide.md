@@ -14,6 +14,8 @@ In the directory from which you will run the system -- which can be outside your
 See the template file (`src/parameter_file_templates/run_time.ini.template`). 
    
 ## Determining a Munger
+Election result data comes in a variety of file formats. Even when the basic format is the same, file columns may have different interpretations. The code is built to ease -- as much as possible -- the chore of processing and interpreting each format. Following the [Jargon File](http://catb.org/jargon/html/M/munge.html), which gives one meaning of "munge" as "modify data in some way the speaker doesn't need to go into right now or cannot describe succinctly," we call each set of basic information about interpreting an election result file a "munger". The munger template is  `src/mungers/000_template.munger`.
+
 Ensure that the munger files are appropriate for your results file(s). If the munger doesn't already exist:
  * pick a name for your munger 
  * create a file with that name and extension `.munger` in the `mungers` directory (e.g., `me_excel.munger`) with sections and parameters described below. You may find it helpful to work with the template from `src/mungers/template.munger`. 
@@ -246,6 +248,8 @@ The system will report (in the `.warnings` files) any strings that did not match
 
 
 ## Create or Improve a Jurisdiction
+Because each original raw results file comes from a particular election agency, and each election agency has a fixed jurisdiction, it is natural to organize information by jurisdiction. 
+
 It's easiest to use the JurisdictionPrepper() object to create or update jurisdiction files.
 
  (0) Create a `jurisdiction_prep.ini` file, following the example in `src/parameter_file_templates/jurisdiction_prep.ini.template`. You will need to specify the number of congressional, state house and state senate districts.
@@ -273,6 +277,14 @@ Texas;Gregg County	county
 Texas;Harrison County	county
 ```
 Counties must be added by hand. (NB: in some states, the word 'county' is not used. For instance, Louisiana's major subdivisions are called 'parish'.)
+
+The system assumes that internal database names of ReportingUnits carry information about the nesting of the basic ReportingUnits (e.g., counties, towns, wards, etc., but not congressional districts) via semicolons. For example: `
+ * `Pennsylvania;Philadelphia;Ward 8;Division 6` is a precinct in 
+ * `Pennsylvania;Philadelphia;Ward 8`, which is a ward in
+ * `Pennsylvania;Philadelphia`, which is a county in
+ * `Pennsylvania`, which is a state.
+ 
+Other nesting relationships (e.g., `Pennsylvania;Philadelphia;Ward 8;Division 6` is in `Pennsylvania;PA Senate District 1`) are not yet recorded in the system (as of 4/2/2021).
 
 To find the raw_identifiers for the dictionary, look in your results files to see how counties are written. For example, if your results file looks like this (example from Texas):
 ```
@@ -503,7 +515,29 @@ Or, the Election-jurisdiction pairs can be specified with the -e and -j flags, e
 
 
 ## Miscellaneous helpful hints
-Beware of:
+### Required Conventions
+For ReportingUnits, the naming convention is to list as much of the composing information as possible in the name of the element, using `;` as a separator. E.g., 
+ * `North Carolina` -- the state of NC
+ * `North Carolina;Alamance County` -- Alamance County, which is contained in North Carolina
+ * `North Carolina;Alamance County;Precinct 12W` -- Precinct 12W in Alamance County
+The semicolons are used by the code to roll up results from smaller Reporting Units into larger Reporting Units.
+
+### Optional Conventions
+The jurisdiction files in this repository follow certain conventions. Many of these are optional; using different conventions in another copy of the system will not break anything. Internal database names names are standardized as much as possible, regardless of state, following these models:
+
+    * Office
+        * `US Senate CO`
+        * `US House FL District 5`
+        * `PA State Senate District 1`
+        * `NC State House District 22`
+        * `PA Berks County Commissioner`
+        * `DC City Council District 2`
+        * `OR Portland City Commissioner Seat 3`
+       
+    * Party
+        * `Constitution Party` (regardless of state or other jurisdiction)
+        
+### Beware of:
  - Different names for same contest in different counties (if munging from a batch of county-level files)
  - Different names for candidates, especially candidates with name suffixes or middle/maiden names
  - Different "party" names for candidates without a party affiliation 
