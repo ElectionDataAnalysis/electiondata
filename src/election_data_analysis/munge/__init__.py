@@ -61,8 +61,7 @@ munger_dependent_reqs: Dict[str, Dict[str, List[str]]] = {
 req_munger_parameters: Dict[str, Dict[str, Any]] = {
     "file_type": {
         "data_type": "string",
-        "allowed_values": ["excel", "json-nested", "xml", "flat_text", "nist_v2_xml"],
-    },
+        "allowed_values": ["excel", "json-nested", "xml", "flat_text", "nist_v2_xml"]},
 }
 
 opt_munger_param_values: Dict[str, List[str]] = {
@@ -203,9 +202,7 @@ def add_regex_column(
         )
         # # where regex succeeds, replace error message with good value
         mask = working[old_col].str.match(p)
-        working.loc[mask, new_col] = working[mask][old_col].str.extract(
-            pattern_str, expand=False
-        )
+        working.loc[mask, new_col] = working[mask][old_col].str.extract(pattern_str, expand=False)
 
     except re.error as e:
         err = ui.add_new_error(
@@ -323,7 +320,7 @@ def compress_whitespace(s: str) -> str:
     and any carriage returns are changed to spaces"""
     new_s = re.sub(r"(\s)\s+", "\\1", s)
     new_s = new_s.strip()
-    new_s = new_s.replace("\n", " ")
+    new_s = new_s.replace("\n"," ")
     return new_s
 
 
@@ -376,9 +373,7 @@ def replace_raw_with_internal_ids(
 
         # Regularize candidate names from results file and from dictionary.txt
         working.Candidate_raw = regularize_candidate_names(working.Candidate_raw)
-        raw_ids_for_element.raw_identifier_value = regularize_candidate_names(
-            raw_ids_for_element.raw_identifier_value
-        )
+        raw_ids_for_element.raw_identifier_value = regularize_candidate_names(raw_ids_for_element.raw_identifier_value)
 
     working = working.merge(
         raw_ids_for_element,
@@ -636,7 +631,7 @@ def melt_to_one_count_column(
     # NB merged cells in excel can lead to spurious empty columns
     mask = df.eq("").all()
     good_column_numbers = [j for j in range(df.shape[1]) if not mask[j]]
-    df = df.iloc[:, good_column_numbers]
+    df = df.iloc[:,good_column_numbers]
     count_columns = {c for c in count_columns if c in df.columns}
 
     # melt so that there is one single count column
@@ -1055,12 +1050,12 @@ if __name__ == "__main__":
 
 
 def munge_raw_to_ids(
-    df: pd.DataFrame,
-    constants: dict,
-    juris: jm.Jurisdiction,
-    munger_name: str,
-    session: Session,
-    file_type: str,
+        df: pd.DataFrame,
+        constants: dict,
+        juris: jm.Jurisdiction,
+        munger_name: str,
+        session: Session,
+        file_type: str,
 ) -> (pd.DataFrame, Optional[dict]):
 
     err = None
@@ -1136,9 +1131,7 @@ def munge_raw_to_ids(
         and (t[-9:] != "Selection")
         and (t not in constants.keys())
     ]
-    working, new_err = raw_to_id_simple(
-        working, juris, other_elements, session, munger_name, file_type
-    )
+    working, new_err = raw_to_id_simple(working, juris, other_elements, session, munger_name, file_type)
     if new_err:
         err = ui.consolidate_errors([err, new_err])
         if ui.fatal_error(new_err):
@@ -1169,7 +1162,7 @@ def munge_raw_to_ids(
 
 
 def get_munge_formulas(
-    munger_path: str, header_list: List[str]
+        munger_path: str, header_list: List[str]
 ) -> (Dict[str, str], Optional[dict]):
     err = None
     formulas = dict()
@@ -1184,7 +1177,7 @@ def get_munge_formulas(
             err = ui.consolidate_errors([err, new_err])
             if ui.fatal_error(new_err):
                 return dict(), err
-        f = {k: v for k, v in f.items() if v}
+        f = {k:v for k,v in f.items() if v}
         if f:
             formulas.update(f)
     return formulas, err
@@ -1271,7 +1264,10 @@ def munge_source_to_raw(
 
         # compress whitespace for <element>_raw
         compression = pd.DataFrame(
-            [[x, compress_whitespace(x)] for x in working[f"{element}_raw"].unique()],
+            [
+                [x, compress_whitespace(x)]
+                for x in working[f"{element}_raw"].unique()
+            ],
             columns=["uncompressed", "compressed"],
         )
         working = (
@@ -1291,7 +1287,8 @@ def munge_source_to_raw(
 
 
 def get_and_check_munger_params(
-    munger_path: str, results_dir: Optional[str] = None
+        munger_path: str,
+        results_dir: Optional[str] = None
 ) -> (dict, Optional[dict]):
     """Checks that munger parameter file is internally consistent.
     If results_dir is included, then existence of any required
@@ -1313,14 +1310,14 @@ def get_and_check_munger_params(
     munger_name = Path(munger_path).stem
 
     # define dictionary of munger parameters
-    data_types = {
-        **{
+    data_types = {**{
             k: req_munger_parameters[k]["data_type"]
             for k in req_munger_parameters.keys()
-        },
-        **opt_munger_data_types,
+        },**opt_munger_data_types
     }
-    format_options = jm.recast_options(params, data_types)
+    format_options = jm.recast_options(
+        params, data_types
+    )
 
     # Check munger values
     # # main parameters recognized
@@ -1334,11 +1331,7 @@ def get_and_check_munger_params(
                     f'Value of {k} must be one of these: {req_munger_parameters[k]["allowed_values"]}',
                 )
         elif req_munger_parameters[k]["data_type"] == "list_of_strings":
-            bad = [
-                x
-                for x in format_options[k]
-                if x not in req_munger_parameters[k]["allowed_values"]
-            ]
+            bad = [x for x in format_options[k] if x not in req_munger_parameters[k]["allowed_values"]]
             if bad:
                 err = ui.add_new_error(
                     err,
@@ -1388,8 +1381,8 @@ def get_and_check_munger_params(
                     err,
                     "munger",
                     munger_name,
-                    f"all_rows=data and multi_block=yes are not compatible",
-                )
+                    f"all_rows=data and multi_block=yes are not compatible"
+                    )
 
     # # for each value in list of string locations, requirements are met
     for k0 in format_options["munge_strings"]:
@@ -1416,11 +1409,7 @@ def get_and_check_munger_params(
         err = ui.consolidate_errors([err, new_err])
 
     # classify munge fields
-    mf_by_type = {
-        "in_count_headers": set(),
-        "in_field_values": set(),
-        "constant_over_sheet": set(),
-    }
+    mf_by_type = {"in_count_headers": set(), "in_field_values": set(), "constant_over_sheet": set()}
     for mf in params["munge_fields"]:
         if mf[:7] == "header_":
             try:
@@ -1446,7 +1435,7 @@ def get_and_check_munger_params(
                 err,
                 "munger",
                 munger_name,
-                f"{mf} in formulas but {mf[7:]} not listed in count_header_row_numbers",
+                f"{mf} in formulas but {mf[7:]} not listed in count_header_row_numbers"
             )
 
     #  "munge_strings" includes everything required in the formulas
@@ -1456,7 +1445,7 @@ def get_and_check_munger_params(
                 err,
                 "munger",
                 munger_name,
-                f"{x} should be listed in munge_strings to support formula references:\n{mf_by_type[x]}",
+                f"{x} should be listed in munge_strings to support formula references:\n{mf_by_type[x]}"
             )
 
     # if constant_over_file is in munge_strings, at least one constant_over_file element must be listed
@@ -1466,7 +1455,7 @@ def get_and_check_munger_params(
                 err,
                 "munger",
                 munger_name,
-                f"constant_over_file specified in munge_strings, but no constant element specified.",
+                f"constant_over_file specified in munge_strings, but no constant element specified."
             )
 
     # check that each lookup section has a replacement formula for each element referencing the lookup field
@@ -1502,31 +1491,25 @@ def get_and_check_munger_params(
                     err,
                     "munger",
                     munger_name,
-                    f"Auxiliary file not found: {required['source_file']}",
+                    f"Auxiliary file not found: {required['source_file']}"
                 )
         # TODO check usual format items for reading aux file
 
         # check replacement formulas
-        elements_using_lookup_field = [
-            e for e in formulas.keys() if f"<{lookup_field}>" in formulas[e]
-        ]
+        elements_using_lookup_field = [e for e in formulas.keys() if f"<{lookup_field}>" in formulas[e]]
         replacements, new_err = ui.get_parameters(
-            required_keys=[f"{e}_replacement" for e in elements_using_lookup_field],
-            param_file=munger_path,
-            header=h,
-        )
+                required_keys=[f"{e}_replacement" for e in elements_using_lookup_field],
+                param_file=munger_path,
+                header=h,
+            )
         # report any elements missing replacement definitions for this header
-        missing = [
-            f"{e}_replacement"
-            for e in elements_using_lookup_field
-            if f"{e}_replacement" not in replacements.keys()
-        ]
+        missing = [f"{e}_replacement" for e in elements_using_lookup_field if f"{e}_replacement" not in replacements.keys()]
         if missing:
             err = ui.add_new_error(
                 err,
                 "munger",
                 munger_name,
-                f"Section [{h} lookup] is missing formulas for:\n{missing}",
+                f"Section [{h} lookup] is missing formulas for:\n{missing}"
             )
 
     return format_options, err
@@ -1643,10 +1626,7 @@ def to_standard_count_frame(
         raw_dict, err = ui.read_single_datafile(file_path, p, munger_name, err)
         if len(raw_dict) == 0:  # no dfs at all returned
             err = ui.add_new_error(
-                err,
-                "munger",
-                munger_name,
-                f"No data found in file {Path(file_path).name}",
+                err, "munger", munger_name, f"No data found in file {Path(file_path).name}"
             )
 
         if ui.fatal_error(err):
@@ -1689,11 +1669,7 @@ def to_standard_count_frame(
             try:
                 # extract blocks as dataframes with generic headers and all rows treated as data
                 df_list, new_err = extract_blocks(
-                    raw_dict[sheet],
-                    munger_name,
-                    file_name,
-                    sheet,
-                    max_blocks=p["max_blocks"],
+                    raw_dict[sheet], munger_name, file_name, sheet, max_blocks=p["max_blocks"]
                 )
                 if new_err:
                     err = ui.consolidate_errors([err, new_err])
@@ -1702,9 +1678,7 @@ def to_standard_count_frame(
 
                 # correct column headers
                 header_int_or_list = ui.tabular_kwargs(p, dict())["header"]
-                if isinstance(
-                    header_int_or_list, int
-                ):  # TODO tech debt ugly! but tracks index vs. multiindex
+                if isinstance(header_int_or_list, int):  # TODO tech debt ugly! but tracks index vs. multiindex
                     header_list = [header_int_or_list]
                 else:
                     header_list = header_int_or_list
@@ -1713,10 +1687,7 @@ def to_standard_count_frame(
 
             except Exception as exc:
                 error_by_sheet[sheet] = ui.add_new_error(
-                    None,
-                    "munger",
-                    munger_name,
-                    f"Error extracting blocks from sheet {sheet} in {file_name}:\n {exc}",
+                    None, "munger", munger_name, f"Error extracting blocks from sheet {sheet} in {file_name}:\n {exc}"
                 )
                 continue  # goes to next k in loop
 
@@ -1730,13 +1701,12 @@ def to_standard_count_frame(
             raw = df_list[n]
             # transform to df with single count column 'Count' and all raw munge info in other columns
             try:
-                working, error_by_df[n] = melt_to_one_count_column(raw, p, munger_name)
+                working, error_by_df[n] = melt_to_one_count_column(
+                    raw, p, munger_name
+                )
             except Exception as exc:
                 error_by_df[n] = ui.add_new_error(
-                    None,
-                    "file",
-                    file_path,
-                    f"Unable to pivot dataframe from sheet {sheet}:\n {exc}",
+                    None, "file", file_path, f"Unable to pivot dataframe from sheet {sheet}:\n {exc}"
                 )
                 continue  # goes to next dataframe in list
 
@@ -1749,8 +1719,7 @@ def to_standard_count_frame(
                 try:
                     rows_needed = [
                         int(field.split("_")[-1])
-                        for field in munge_field_list
-                        if field[:4] == "row_"
+                        for field in munge_field_list if field[:4] == "row_"
                     ]
                     if rows_needed:  # (note: only excel file type has multiple sheets)
                         max_row = max(rows_needed)
@@ -1763,9 +1732,7 @@ def to_standard_count_frame(
                         )
                         for row in rows_needed:
                             # get index of first valid entry in row (or "" if none)
-                            first_valid_idx = (
-                                data.loc[row].fillna("").first_valid_index()
-                            )
+                            first_valid_idx = data.loc[row].fillna("").first_valid_index()
                             working = add_constant_column(
                                 working,
                                 f"row_{row}",
@@ -1781,9 +1748,7 @@ def to_standard_count_frame(
                     continue
 
                 except KeyError() as ke:
-                    variables = ",".join(
-                        [x for x in munge_field_list if x[:4] == "row_"]
-                    )
+                    variables = ",".join([x for x in munge_field_list if x[:4] == "row_"])
                     error_by_df[n] = ui.add_new_error(
                         error_by_df[n],
                         "file",
@@ -1826,23 +1791,17 @@ def to_standard_count_frame(
             standard[sheet] = pd.concat([standard[sheet], working])
 
         # if even one df lacks a fatal error, consider all errors non-fatal for this sheet
-        non_fatal_dfs = [
-            n for n in range(len(df_list)) if not ui.fatal_error(error_by_df[n])
-        ]
+        non_fatal_dfs = [n for n in range(len(df_list)) if not ui.fatal_error(error_by_df[n])]
         if non_fatal_dfs:
             fatal_dfs = [n for n in range(len(df_list)) if n not in non_fatal_dfs]
             for n in fatal_dfs:
                 error_by_df[n] = ui.fatal_err_to_non(error_by_df[n])
 
         # consolidate errors from all dataframes into the error for the sheet
-        error_by_sheet[sheet] = ui.consolidate_errors(
-            [error_by_df[n] for n in range(len(df_list))]
-        )
+        error_by_sheet[sheet] = ui.consolidate_errors([error_by_df[n] for n in range(len(df_list))])
 
     # if even one sheet lacks a fatal error, consider all errors non-fatal for this file
-    non_fatal_sheets = [
-        k for k in raw_dict.keys() if not ui.fatal_error(error_by_sheet[k])
-    ]
+    non_fatal_sheets = [k for k in raw_dict.keys() if not ui.fatal_error(error_by_sheet[k])]
     if non_fatal_sheets:
         fatal_sheets = [k for k in raw_dict.keys() if ui.fatal_error(error_by_sheet[k])]
         for sheet in fatal_sheets:
@@ -1951,14 +1910,11 @@ def get_aux_info(
             )
             # convert parameters to appropriate types
             f_p = jm.recast_options(
-                f_p,
-                {
-                    **opt_munger_data_types,
-                    **{
-                        k: req_munger_parameters[k]["data_type"]
-                        for k in req_munger_parameters.keys()
-                    },
-                },
+                f_p, {
+                    **opt_munger_data_types, **{
+                        k: req_munger_parameters[k]["data_type"] for k in req_munger_parameters.keys()
+                    }
+                }
             )
 
             if not f_err:
@@ -2017,14 +1973,14 @@ def incorporate_aux_info(
                 fk_err,
                 "munger",
                 munger_name,
-                f"Specify lookup sheet with sheets_to_read_names parameter in lookup section of munger. Sheets in lookup file {Path(lt_path).name} are:\n{list(lookup_df_dict.keys())}",
+                f"Specify lookup sheet with sheets_to_read_names parameter in lookup section of munger. Sheets in lookup file {Path(lt_path).name} are:\n{list(lookup_df_dict.keys())}"
             )
         elif len(lookup_df_dict) == 0:
             fk_err = ui.add_new_error(
                 fk_err,
                 "munger",
                 munger_name,
-                f"Nothing read from  lookup file {Path(lt_path).name}",
+                f"Nothing read from  lookup file {Path(lt_path).name}"
             )
 
         if fk_err:
@@ -2045,6 +2001,7 @@ def incorporate_aux_info(
 
         # define new column names to e.g. 'County_id LOOKUP County_name'
         rename = {c: f"{fk} LOOKUP {c}{suffix}" for c in lookup_df.columns}
+
 
         # if lookup columns not already in w_df
         if not any([f"{fk} LOOKUP" in c for c in w_df.columns]):
@@ -2075,11 +2032,11 @@ def get_fields_from_formula(formula: str) -> List[str]:
 
 
 def extract_blocks(
-    df: pd.DataFrame,
-    munger_name: str,
-    file_name: str,
-    sheet_name: str,
-    max_blocks: Optional[int] = None,
+        df: pd.DataFrame,
+        munger_name: str,
+        file_name: str,
+        sheet_name: str,
+        max_blocks: Optional[int] = None,
 ) -> (List[pd.DataFrame], Optional[dict]):
     """Given a dataframe, create a list of dataframes -- one for each block of
     data lines"""
@@ -2090,7 +2047,7 @@ def extract_blocks(
             None,
             "warn-munger",
             munger_name,
-            f"No data found in sheet {sheet_name} of file {file_name}",
+            f"No data found in sheet {sheet_name} of file {file_name}"
         )
         return list(), err
     else:
@@ -2103,9 +2060,7 @@ def extract_blocks(
 
     # identify count rows (have at least one integer), blank rows, and text rows (all others)
     mask_count = working.T.apply(lambda row: row.str.isdigit().any())
-    mask_blank = working.T.apply(
-        lambda row: list(row.unique()) == [""]
-    )  # is this the best way?
+    mask_blank = working.T.apply(lambda row: list(row.unique()) == [""])  # is this the best way?
     count_rows = list(mask_count[mask_count].index)
     text_rows = list(mask_count[(~mask_count) & (~mask_blank)].index)
 
@@ -2116,9 +2071,7 @@ def extract_blocks(
     # loop through blocks starting at the top (blocks defined by text lines on top)
     while text_rows and count_rows and not max_blocks_attained:
         first_text_row = min(text_rows)
-        first_count_row = min(
-            [n for n in count_rows if n > first_text_row]
-        )  # TODO what if there is none?
+        first_count_row = min([n for n in count_rows if n > first_text_row])  # TODO what if there is none?
 
         # remove this block's rows from text and count lists
         text_rows = [n for n in text_rows if n > first_count_row]
@@ -2128,7 +2081,7 @@ def extract_blocks(
             block_end = working.shape[0]
         count_rows = [n for n in count_rows if n > block_end]
 
-        block = working[first_text_row:block_end]
+        block = working[first_text_row: block_end]
 
         ## add block to list
         df_list.append(block)
@@ -2142,11 +2095,11 @@ def extract_blocks(
 
 
 def file_to_raw_df(
-    munger_path: str,
-    p,
-    f_path: str,
-    constants: Dict[str, str],
-    results_directory_path,
+        munger_path: str,
+        p,
+        f_path: str,
+        constants: Dict[str, str],
+        results_directory_path,
 ) -> (pd.DataFrame, Optional[dict]):
     err = None
     file_name = Path(f_path).name

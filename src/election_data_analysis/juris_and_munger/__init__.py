@@ -154,8 +154,8 @@ class Jurisdiction:
 
 
 def ensure_jurisdiction_dir(
-    juris_path: str, ignore_empty: bool = False
-) -> Optional[dict]:
+        juris_path: str,
+        ignore_empty: bool = False) -> Optional[dict]:
     # create directory if it doesn't exist
     try:
         Path(juris_path).mkdir(parents=True)
@@ -169,7 +169,9 @@ def ensure_jurisdiction_dir(
     return err
 
 
-def ensure_juris_files(juris_path: str, ignore_empty: bool = False) -> Optional[dict]:
+def ensure_juris_files(
+        juris_path: str,
+        ignore_empty: bool = False) -> Optional[dict]:
     """Check that the jurisdiction files are complete and consistent with one another.
     Check for extraneous files in Jurisdiction directory.
     Assumes Jurisdiction directory exists. Assumes dictionary.txt is in the template file"""
@@ -177,7 +179,7 @@ def ensure_juris_files(juris_path: str, ignore_empty: bool = False) -> Optional[
     # package possible errors from this function into a dictionary and return them
     err = None
     juris_name = Path(juris_path).name
-    juris_true_name = juris_name.replace("-", " ")
+    juris_true_name = juris_name.replace("-"," ")
 
     project_root = Path(__file__).parents[1].absolute()
     templates_dir = os.path.join(
@@ -296,9 +298,7 @@ def check_ru_file(juris_path: str, juris_true_name: str) -> Optional[dict]:
     leadings = set()
     for _, r in ru.iterrows():
         components = r["Name"].split(";")
-        parents.update(
-            {";".join(components[: j + 1]) for j in range(len(components) - 1)}
-        )
+        parents.update({";".join(components[:j+1]) for j in range(len(components) - 1)})
         leadings.update({components[0]})
 
     # identify and report parents that are missing from ReportingUnit.txt
@@ -310,7 +310,7 @@ def check_ru_file(juris_path: str, juris_true_name: str) -> Optional[dict]:
             err,
             "jurisdiction",
             Path(juris_path).name,
-            f"Some parent reporting units are missing from ReportingUnit.txt:\n{m_str}",
+            f"Some parent reporting units are missing from ReportingUnit.txt:\n{m_str}"
         )
 
     # check that all reporting units start with true name
@@ -322,7 +322,7 @@ def check_ru_file(juris_path: str, juris_true_name: str) -> Optional[dict]:
             err,
             "jurisdiction",
             Path(juris_path).name,
-            f"Every ReportingUnit should start with the jurisdiction name. These do not:\n{bad_str}",
+            f"Every ReportingUnit should start with the jurisdiction name. These do not:\n{bad_str}"
         )
 
     return err

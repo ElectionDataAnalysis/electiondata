@@ -1,7 +1,7 @@
 # TODO may need to add "NOT NULL" requirements per CDF
 # TODO add OfficeContestJoin table (e.g., Presidential contest has two offices)
 # TODO consistency check on SelectionElectionContestVoteCountJoin to make sure ElectionContestJoin_Id
-#  and ContestSelectionJoin_Id share a contest? Should this happen during the rollup process?
+#  and ContestSelectionJoin_Id share a contest? Should this happen during the rollup_dataframe process?
 
 import sqlalchemy as sa
 from sqlalchemy import (
@@ -16,8 +16,10 @@ from sqlalchemy import (
     Index,
     Boolean,
 )
-from sqlalchemy import Date, TIMESTAMP
-from psycopg2 import sql
+from sqlalchemy import (
+    Date,
+    TIMESTAMP,
+)  # these are used, even if syntax-checker can't tell
 import os
 import pandas as pd
 from election_data_analysis import database as db

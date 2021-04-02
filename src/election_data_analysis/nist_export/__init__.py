@@ -14,9 +14,7 @@ from election_data_analysis import (
 default_issuer = "unspecified user of code base at github.com/ElectionDataAnalysis/election_data_analysis"
 default_issuer_abbreviation = "unspecified"
 default_status = "unofficial-partial"  # choices are limited by xsd schema
-default_vendor_application_id = (
-    "open source software at github.com/ElectionDataAnalysis/election_data_analysis"
-)
+default_vendor_application_id = "open source software at github.com/ElectionDataAnalysis/election_data_analysis"
 
 # constants dictated by NIST
 schema_location = "https://github.com/usnistgov/ElectionResultsReporting/raw/version2/NIST_V2_election_results_reporting.xsd"
@@ -24,15 +22,15 @@ namespace = "http://itl.nist.gov/ns/voting/1500-100/v2"
 
 
 def nist_v2_xml_export_tree(
-    session: Session,
-    election: str,
-    jurisdiction: str,
-    rollup: bool = False,
-    major_subdivision: Optional[str] = None,
-    issuer: str = default_issuer,
-    issuer_abbreviation: str = default_issuer_abbreviation,
-    status: str = default_status,
-    vendor_application_id: str = default_vendor_application_id,
+        session: Session,
+        election: str,
+        jurisdiction: str,
+        rollup: bool = False,
+        major_subdivision: Optional[str] = None,
+        issuer: str = default_issuer,
+        issuer_abbreviation: str = default_issuer_abbreviation,
+        status: str = default_status,
+        vendor_application_id: str = default_vendor_application_id,
 ) -> et.ElementTree:
     """Creates a tree in the NIST common data format (V2) containing the results
     from the given election and jurisdiction. Note that all available results will
@@ -49,15 +47,14 @@ def nist_v2_xml_export_tree(
 
     if rollup:
         # get major subdivision type if not provided
-        rut = pd.read_sql_table("ReportingUnitType", session.bind, index_col="Id")
+        rut = pd.read_sql_table("ReportingUnitType",session.bind,index_col="Id")
         if not major_subdivision:
-            sub_type_id, sub_type_other = db.get_jurisdiction_hierarchy(
-                session, jurisdiction_id
-            )
+            sub_type_id, sub_type_other = db.get_jurisdiction_hierarchy(session, jurisdiction_id)
             if sub_type_other == "":
                 major_subdivision = rut.loc[sub_type_id, "Txt"]
             else:
                 major_subdivision = sub_type_other
+
 
     # get vote count data
     results_df = read_vote_count_nist(
@@ -81,9 +78,7 @@ def nist_v2_xml_export_tree(
 
     # other sub-elements of ElectionReport
     et.SubElement(root, "Format").text = "summary-contest"  # NB NIST restricts choices
-    et.SubElement(root, "GeneratedDate").text = datetime.now(tz=timezone.utc).strftime(
-        "%Y-%m-%dT%H:%M:%SZ"
-    )
+    et.SubElement(root, "GeneratedDate").text = datetime.now(tz=timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
 
     # get name, ru-type and composing info for all gpus
     rus = pd.read_sql("ReportingUnit", session.bind, index_col="Id")
@@ -95,14 +90,12 @@ def nist_v2_xml_export_tree(
         name = rus.loc[idx]["Name"]
 
         children = [
-            f"oid{x}"
-            for x in cruj[cruj["ParentReportingUnit_Id"] == idx][
-                "ChildReportingUnit_Id"
-            ].unique()
+            f'oid{x}' for x in
+            cruj[cruj["ParentReportingUnit_Id"] == idx]["ChildReportingUnit_Id"].unique()
             if x in gpu_idxs and x != idx
         ]
         attr = {
-            "ObjectId": f"oid{idx}",
+            "ObjectId": f'oid{idx}',
             "xsi:type": "ReportingUnit",
         }
         gpu_elt = et.SubElement(root, "GpUnit", attr)
@@ -111,13 +104,9 @@ def nist_v2_xml_export_tree(
             children_elt.text = " ".join(children)
         gpu_name = et.SubElement(gpu_elt, "Name")
         et.SubElement(gpu_name, "Text", {"Language": "en"}).text = name
-        et.SubElement(gpu_elt, "Type").text = ru_types.loc[
-            rus.loc[idx]["ReportingUnitType_Id"]
-        ]["Txt"]
+        et.SubElement(gpu_elt, "Type").text = ru_types.loc[rus.loc[idx]["ReportingUnitType_Id"]]["Txt"]
         if ru_types.loc[rus.loc[idx]["ReportingUnitType_Id"]]["Txt"] == "other":
-            et.SubElement(gpu_elt, "OtherType").text = rus.loc[idx][
-                "OtherReportingUnitType"
-            ]
+            et.SubElement(gpu_elt, "OtherType").text = rus.loc[idx]["OtherReportingUnitType"]
 
     # other sub-elements of ElectionReport
     et.SubElement(root, "Issuer").text = issuer
@@ -126,13 +115,7 @@ def nist_v2_xml_export_tree(
     # add each party
     party_df = results_df[["Party_Id", "PartyName"]].drop_duplicates()
     for i, p in party_df.iterrows():
-        p_elt = et.SubElement(
-            root,
-            "Party",
-            {
-                "ObjectId": f'oid{p["Party_Id"]}',
-            },
-        )
+        p_elt = et.SubElement(root, "Party", {"ObjectId": f'oid{p["Party_Id"]}',})
         p_name_elt = et.SubElement(p_elt, "Name")
         et.SubElement(p_name_elt, "Text", {"Language": "en"}).text = p["PartyName"]
 
@@ -143,13 +126,9 @@ def nist_v2_xml_export_tree(
     et.SubElement(root, "VendorApplicationId").text = vendor_application_id
 
     # add each candidate (as sub-element of Election)
-    candidate_df = results_df[
-        ["Candidate_Id", "BallotName", "Party_Id"]
-    ].drop_duplicates()
+    candidate_df = results_df[["Candidate_Id", "BallotName", "Party_Id"]].drop_duplicates()
     for i, can in candidate_df.iterrows():
-        can_elt = et.SubElement(
-            e_elt, "Candidate", {"ObjectId": f'oid{can["Candidate_Id"]}'}
-        )
+        can_elt = et.SubElement(e_elt, "Candidate", {"ObjectId": f'oid{can["Candidate_Id"]}'})
         bn_elt = et.SubElement(can_elt, "BallotName")
         et.SubElement(bn_elt, "Text", {"Language": "en"}).text = can["BallotName"]
         party_id_elt = et.SubElement(can_elt, "PartyId")
@@ -174,44 +153,29 @@ def nist_v2_xml_export_tree(
         ].unique()
         for s_idx in selection_idxs:
             attr = {
-                "ObjectId": f"oid{s_idx}",
+                "ObjectId": f'oid{s_idx}',
                 "xsi:type": "CandidateSelection",
             }
             cs_elt = et.SubElement(con_elt, "ContestSelection", attr)
             vc_df = results_df[
-                (results_df.Contest_Id == con["Contest_Id"])
-                & (results_df.Selection_Id == s_idx)
-            ][
-                [
-                    "ReportingUnit_Id",
-                    "Candidate_Id",
-                    "CountItemType",
-                    "OtherCountItemType",
-                    "Count",
-                ]
-            ].drop_duplicates()
+                (results_df.Contest_Id == con["Contest_Id"]) & (results_df.Selection_Id == s_idx)
+            ][["ReportingUnit_Id", "Candidate_Id", "CountItemType", "OtherCountItemType", "Count"]].drop_duplicates()
             for i, vc in vc_df.iterrows():
                 vote_counts_elt = et.SubElement(cs_elt, "VoteCounts")
                 # create GpUnitId sub-element
-                et.SubElement(
-                    vote_counts_elt, "GpUnitId"
-                ).text = f'oid{vc["ReportingUnit_Id"]}'
+                et.SubElement(vote_counts_elt, "GpUnitId").text = f'oid{vc["ReportingUnit_Id"]}'
                 # create Type sub-elements (for CountItemType)
                 et.SubElement(vote_counts_elt, "Type").text = vc["CountItemType"]
                 if vc["CountItemType"] == "other":
-                    et.SubElement(vote_counts_elt, "OtherType").text = vc[
-                        "OtherCountItemType"
-                    ]
+                    et.SubElement(vote_counts_elt, "OtherType").text = vc["OtherCountItemType"]
                 # create Count sub-element
                 et.SubElement(vote_counts_elt, "Count").text = str(vc["Count"])
 
-            candidate_ids = " ".join([f"oid{x}" for x in vc_df.Candidate_Id.unique()])
+            candidate_ids = " ".join([f'oid{x}' for x in vc_df.Candidate_Id.unique()])
             et.SubElement(cs_elt, "CandidateIds").text = candidate_ids
 
         # create ElectionDistrictId sub-element
-        et.SubElement(
-            con_elt, "ElectionDistrictId"
-        ).text = f'oid{con["ElectionDistrict_Id"]}'
+        et.SubElement(con_elt, "ElectionDistrictId").text = f'oid{con["ElectionDistrict_Id"]}'
 
         # create Name sub-element
         et.SubElement(con_elt, "Name").text = con["ContestName"]
@@ -228,21 +192,17 @@ def nist_v2_xml_export_tree(
     election_df = pd.read_sql_table("Election", session.bind, index_col="Id")
     election_type_df = pd.read_sql_table("ElectionType", session.bind, index_col="Id")
     election_name_elt = et.SubElement(e_elt, "Name")
-    et.SubElement(election_name_elt, "Text", {"Language": "en"}).text = election_df.loc[
-        election_id
-    ]["Name"]
+    et.SubElement(election_name_elt, "Text", {"Language": "en"}).text = election_df.loc[election_id]["Name"]
     et.SubElement(e_elt, "StartDate").text = "1900-01-01"  # placeholder
     et.SubElement(e_elt, "EndDate").text = "1900-01-01"  # placeholder
 
     # election type
-    e_type = election_type_df.loc[election_df.loc[election_id]["ElectionType_Id"]][
-        "Txt"
-    ]
+    e_type = election_type_df.loc[
+        election_df.loc[election_id]["ElectionType_Id"]
+    ]["Txt"]
     et.SubElement(e_elt, "Type").text = e_type
     if e_type == "other":
-        et.SubElement(e_elt, "OtherType").text = election_df.loc[election_id][
-            "OtherElectionType"
-        ]
+        et.SubElement(e_elt, "OtherType").text = election_df.loc[election_id]["OtherElectionType"]
 
     tree = et.ElementTree(root)
     return tree
@@ -252,27 +212,17 @@ def read_vote_count_nist(
     session: Session,
     election_id: int,
     reporting_unit_id: int,
-    rollup_ru_type: Optional[str] = None,
-) -> pd.DataFrame:
+    rollup_ru_type: Optional[str] = None
+) ->  pd.DataFrame:
     """The VoteCount table is the only place that maps contests to a specific
     election. But this table is the largest one, so we don't want to use pandas methods
     to read into a DF and then filter"""
 
-    fields = [
-        "ReportingUnitType_Id",
-        "Party_Id",
-        "PartyName",
-        "Candidate_Id",
-        "BallotName",
-        "Contest_Id",
-        "ContestType",
-        "ElectionDistrict_Id",
-        "ContestName",
-        "Selection_Id",
-        "ReportingUnit_Id",
-        "CountItemType",
-        "OtherCountItemType",
-        "Count",
+    fields = ["ReportingUnitType_Id",
+                "Party_Id", "PartyName", "Candidate_Id", "BallotName",
+                "Contest_Id", "ContestType", "ElectionDistrict_Id", "ContestName",
+                "Selection_Id", "ReportingUnit_Id", "CountItemType", "OtherCountItemType",
+              "Count"
     ]
     q = sql.SQL(
         """
@@ -319,7 +269,7 @@ def read_vote_count_nist(
             "ReportingUnit_Id",
             "ReportingUnit_Id",
             rollup_rut=rollup_ru_type,
-            ignore=["ReportingUnitType_Id"],
+            ignore=["ReportingUnitType_Id"]
         )
         # add ReportingUnitType_Id column
         # TODO error handling -- what if sub_type is non-standard?
@@ -334,3 +284,5 @@ def read_vote_count_nist(
     else:
         results_df = unrolled_df
     return results_df
+
+

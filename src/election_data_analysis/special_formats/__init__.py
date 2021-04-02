@@ -11,21 +11,20 @@ from election_data_analysis import user_interface as ui
 # constants
 # NB: if nist schema were out of sync with internal db schema, this would be non-trivial
 cit_list = [
-    "absentee",
-    "absentee-fwab",
-    "absentee-in-person",
-    "absentee-mail",
-    "early",
-    "election-day",
-    "provisional",
-    "seats",
-    "total",
-    "uocava",
-    "write-in",
+        "absentee",
+        "absentee-fwab",
+        "absentee-in-person",
+        "absentee-mail",
+        "early",
+        "election-day",
+        "provisional",
+        "seats",
+        "total",
+        "uocava",
+        "write-in",
 ]
 cit_from_raw_nist_df = pd.DataFrame(
-    [["CountItemType", x, x] for x in cit_list],
-    columns=["cdf_element", "cdf_internal_name", "raw_identifier_value"],
+    [["CountItemType", x, x ] for x in cit_list], columns=["cdf_element", "cdf_internal_name", "raw_identifier_value"]
 )
 
 
@@ -198,7 +197,9 @@ def read_nested_json(
         raw_results = pd.DataFrame(results_list)
 
         # Only keep columns that we want, so the other ones don't cause trouble later.
-        cols_we_want = list(p["count_fields_by_name"]) + list(p["munge_fields"])
+        cols_we_want = list(p["count_fields_by_name"]) + list(
+            p["munge_fields"]
+        )
         raw_results = raw_results[cols_we_want]
 
         # Perform standard cleaning
@@ -402,7 +403,7 @@ def replace_id_values(df, f_path):
     return df
 
 
-def read_nist_xml(f_path: str) -> (pd.DataFrame, Optional[Dict]):
+def read_nist_xml(f_path: str) -> (pd.DataFrame,Optional[Dict]):
     err = None
     # TODO add error handling
     try:
@@ -412,7 +413,7 @@ def read_nist_xml(f_path: str) -> (pd.DataFrame, Optional[Dict]):
         return pd.DataFrame(), err
 
     # TODO check namespace, etc?
-    ns = nist_namespace(f_path, "")
+    ns = nist_namespace(f_path,"")
 
     election_report = tree.getroot()
     election = election_report.find(f"{{{ns}}}Election")
@@ -421,10 +422,7 @@ def read_nist_xml(f_path: str) -> (pd.DataFrame, Optional[Dict]):
 
     # define starting nodes
     parent = {
-        "Candidate": election,
-        "Contest": election,
-        "Party": election_report,
-        "GpUnit": election_report,
+        "Candidate": election, "Contest": election, "Party": election_report, "GpUnit": election_report
     }
     # define paths to lookup information
     lookup_paths = {
@@ -433,13 +431,12 @@ def read_nist_xml(f_path: str) -> (pd.DataFrame, Optional[Dict]):
             "PartyId": ["PartyId"],
         },
         "Party": {"Name": ["Name", "Text"]},
-        "GpUnit": {"Name": ["Name", "Text"]},
+        "GpUnit": {"Name": ["Name", "Text"] }
     }
 
     # read lookup info in to dataframes
     df_dict: Dict[str, pd.DataFrame] = {
-        tag: build_lookup_df(parent[tag], ns, tag, "ObjectId", lookup_paths[tag])
-        for tag in lookup_paths.keys()
+        tag: build_lookup_df(parent[tag], ns, tag, "ObjectId", lookup_paths[tag]) for tag in lookup_paths.keys()
     }
     # TODO test that OtherTypes behave correctly
 
@@ -453,39 +450,39 @@ def read_nist_xml(f_path: str) -> (pd.DataFrame, Optional[Dict]):
             # TODO assumes one candidate
             vc_dict["CandidateId"] = con_sel.find(f"{{{ns}}}CandidateIds").text
             for vc in con_sel.findall(f"{{{ns}}}VoteCounts"):
-                vc_dict.update(
-                    {
-                        "Count": int(vc.find(f"{{{ns}}}Count").text),
-                        "CountItemType": vc.find(f"{{{ns}}}Type").text,
-                        "GpUnitId": vc.find(f"{{{ns}}}GpUnitId").text,
-                    }
-                )
+                vc_dict.update({
+                    "Count": int(vc.find(f"{{{ns}}}Count").text),
+                    "CountItemType": vc.find(f"{{{ns}}}Type").text,
+                    "GpUnitId": vc.find(f"{{{ns}}}GpUnitId").text,
+                })
                 vc_list.append(vc_dict.copy())
     df_dict["Contest"] = pd.DataFrame(vc_list)
 
     # build standard dataframe
-    df = (
-        df_dict["Contest"]
-        .rename(columns={"Name": "Contest_raw", "CountItemType": "CountItemType_raw"})
-        .merge(
-            df_dict["Candidate"], how="left", left_on="CandidateId", right_index=True
-        )
-        .rename(columns={"BallotName": "Candidate_raw"})
-        .merge(df_dict["GpUnit"], how="left", left_on="GpUnitId", right_index=True)
-        .rename(columns={"Name": "ReportingUnit_raw"})
-        .merge(df_dict["Party"], how="left", left_on="PartyId", right_index=True)
-        .rename(columns={"Name": "Party_raw"})
-        .drop(labels=["PartyId", "CandidateId", "GpUnitId"], axis=1)
-    )
+    df = df_dict["Contest"].rename(
+        columns={"Name": "Contest_raw", "CountItemType": "CountItemType_raw"}
+    ).merge(
+        df_dict["Candidate"], how="left", left_on="CandidateId", right_index=True
+    ).rename(
+        columns={"BallotName": "Candidate_raw"}
+    ).merge(
+        df_dict["GpUnit"], how="left", left_on="GpUnitId", right_index=True
+    ).rename(
+        columns={"Name": "ReportingUnit_raw"}
+    ).merge(
+        df_dict["Party"], how="left", left_on="PartyId", right_index=True
+    ).rename(
+        columns={"Name": "Party_raw"}
+    ).drop(labels=["PartyId", "CandidateId", "GpUnitId"], axis=1)
     return df, err
 
 
 def build_lookup_df(
-    node: et.Element,
-    ns: str,
-    tag: str,
-    id_attrib: str,
-    path_to_info: Dict[str, List[str]],
+        node: et.Element,
+        ns: str,
+        tag: str,
+        id_attrib: str,
+        path_to_info: Dict[str,List[str]],
 ) -> pd.DataFrame:
     info_dict = dict()
     path = dict()
@@ -499,11 +496,10 @@ def build_lookup_df(
         }
         # replace any type == other with OtherType
         for k in info_dict[can.attrib[id_attrib]].keys():
-            if (path_to_info[k][-1] == "Type") and (
-                info_dict[can.attrib[id_attrib]][k] == "other"
-            ):
+            if (path_to_info[k][-1] == "Type") and (info_dict[can.attrib[id_attrib]][k] == "other"):
                 new_path = path_to_info[k][:-1].append("OtherType")
                 info_dict[can.attrib[id_attrib]][k] = can.find(new_path).text
 
     df = pd.DataFrame(info_dict).T
     return df
+
