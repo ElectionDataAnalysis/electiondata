@@ -445,15 +445,19 @@ def read_single_datafile(
             if not fatal_error(err):
                 df_dict = {"Sheet1": df}
         elif p["file_type"] == "excel":
-            df_dict, err = excel_to_dict(f_path, kwargs, list_desired_excel_sheets(f_path, p))
+            df_dict, err = excel_to_dict(
+                f_path, kwargs, list_desired_excel_sheets(f_path, p)
+            )
             if fatal_error(err):
                 df_dict = dict()
         elif p["file_type"] == "flat_text":
             try:
                 df = pd.read_csv(f_path, **kwargs)
             except ValueError as ve:
-                print(f"ValueError (while reading flat text file), possibly from uneven record lengths: {ve}\n "
-                      f"Will try padding records")
+                print(
+                    f"ValueError (while reading flat text file), possibly from uneven record lengths: {ve}\n "
+                    f"Will try padding records"
+                )
                 # read file again, assuming no header rows
                 ## and set any nulls to blank strings
                 kwargs_pad = kwargs
@@ -462,7 +466,9 @@ def read_single_datafile(
                 df = pd.read_csv(f_path, **kwargs_pad).fillna("")
                 # set headers per munger
                 header_int_or_list = tabular_kwargs(p, dict())["header"]
-                if isinstance(header_int_or_list, int):  # TODO tech debt ugly! but tracks index vs. multiindex
+                if isinstance(
+                    header_int_or_list, int
+                ):  # TODO tech debt ugly! but tracks index vs. multiindex
                     header_list = [header_int_or_list]
                 else:
                     header_list = header_int_or_list
@@ -473,7 +479,7 @@ def read_single_datafile(
                         err,
                         "system",
                         f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
-                        f"Unexpected error setting and filling headers after padding file {file_name}"
+                        f"Unexpected error setting and filling headers after padding file {file_name}",
                     )
 
             df_dict = {"Sheet1": df}
@@ -507,8 +513,8 @@ def read_single_datafile(
 
 
 def excel_to_dict(
-        f_path: str, kwargs: Dict[str,Any], sheet_list: Optional[List[str]]
-) -> (Dict[str,pd.DataFrame], dict):
+    f_path: str, kwargs: Dict[str, Any], sheet_list: Optional[List[str]]
+) -> (Dict[str, pd.DataFrame], dict):
     kwargs["index_col"] = None
     #  need to omit index_col here since multi-index headers are possible
     # to avoid getting fatal error when a sheet doesn't read in correctly
@@ -642,9 +648,7 @@ def get_parameters(
     return d, err
 
 
-def get_section_headers(
-        param_file: str
-) -> (List[str], Optional[dict]):
+def get_section_headers(param_file: str) -> (List[str], Optional[dict]):
     err = None
     # read info from file
     parser = ConfigParser()
@@ -968,23 +972,41 @@ def confirm_essential_info(
     return
 
 
-def election_juris_list(dir_path: str) -> list:
-    """Return list of all election-jurisdiction pairs in .ini files in the given directory"""
-    ej_list = []
-    for f in os.listdir(dir_path):
-        if f[-4:] == ".ini":
-            d, err = get_parameters(
-                param_file=os.path.join(dir_path, f),
-                header="election_data_analysis",
-                required_keys=["election", "top_reporting_unit"],
-            )
-            # if parameters were read without error
-            if not err:
-                # and if the pair is not already in the list
-                if (d["election"], d["top_reporting_unit"]) not in ej_list:
-                    # append the pair from the param file to the list
-                    ej_list.append((d["election"], d["top_reporting_unit"]))
-    return ej_list
+def election_juris_list(ini_path: str, results_path: Optional[str] = None) -> list:
+    """Return list of all election-jurisdiction pairs in .ini files in the ini_path directory
+    or in any of its subdirectories. Ignores 'template.ini' If results_path is given, filters
+    for ini files whose results files are in the results_path directory
+    """
+    ej_set = set()
+    for subdir, dirs, files in os.walk(ini_path):
+        for f in files:
+            if (f[-4:] == ".ini") and (f != "template.ini"):
+                full_path = os.path.join(subdir, f)
+                d, err = get_parameters(
+                    param_file=full_path,
+                    header="election_data_analysis",
+                    required_keys=["election", "top_reporting_unit", "results_file"],
+                )
+                # if parameters were read without error
+                if not err:
+                    # if we're not checking against results directory, or if we are and the ini file
+                    #  points to a file in or below the results directory
+                    if (not results_path) or (
+                        os.path.isfile(os.path.join(results_path, d["results_file"]))
+                    ):
+                        # include the pair in the output
+                        ej_set.update({(d["election"], d["top_reporting_unit"])})
+    return list(ej_set)
+
+
+def file_full_paths(dir_path: str, ext: str) -> List[str]:
+    """Return list of full paths all .ini files in the directory or its subdirectories"""
+    ini_paths = list()
+    for subdir, dirs, files in os.walk(dir_path):
+        for f in files:
+            if (f[-len(ext) - 1 :] == f".{ext}") and (f != f"template.{ext}"):
+                ini_paths.append(os.path.join(subdir, f))
+    return ini_paths
 
 
 def reload_juris_election(
@@ -1032,7 +1054,7 @@ def reload_juris_election(
     # load all data into temp db
     dl.change_db(temp_db)
     dl.load_all(move_files=False)
-    err_str = dl.add_totals_if_missing(election_name,juris_name)
+    err_str = dl.add_totals_if_missing(election_name, juris_name)
     if err_str:
         print(f"Error while adding totals: {err_str}")
 
@@ -1175,7 +1197,9 @@ def get_filtered_input_options(session, input_str, filters):
         connection = session.bind.raw_connection()
         cursor = connection.cursor()
         reporting_unit_id = db.list_to_id(session, "ReportingUnit", filters)
-        reporting_unit = db.name_from_id_cursor(cursor,"ReportingUnit",reporting_unit_id)
+        reporting_unit = db.name_from_id_cursor(
+            cursor, "ReportingUnit", reporting_unit_id
+        )
         connection.close()
 
         contest_type_df = pd.DataFrame(
@@ -1197,7 +1221,7 @@ def get_filtered_input_options(session, input_str, filters):
         # get the census data
         connection = session.bind.raw_connection()
         cursor = connection.cursor()
-        election = db.name_from_id_cursor(cursor,"Election",election_id)
+        election = db.name_from_id_cursor(cursor, "Election", election_id)
         census_df = db.read_external(
             cursor, int(election[0:4]), reporting_unit_id, ["Label"]
         )
@@ -1264,7 +1288,7 @@ def get_filtered_input_options(session, input_str, filters):
         reporting_unit_id = db.list_to_id(session, "ReportingUnit", filters)
         connection = session.bind.raw_connection()
         cursor = connection.cursor()
-        election = db.name_from_id_cursor(cursor,"Election",election_id)
+        election = db.name_from_id_cursor(cursor, "Election", election_id)
         df = db.read_external(
             cursor,
             int(election[0:4]),
@@ -1377,7 +1401,7 @@ def clean_candidate_names(df):
     df["contest_short"] = np.where(
         df["parent"].str.contains("runoff"),
         df["contest_short"] + "Runoff",
-        df["contest_short"]
+        df["contest_short"],
     )
     df["name"] = df[["name", "party", "contest_short"]].apply(
         lambda x: " - ".join(x.dropna().astype(str)), axis=1
@@ -1411,24 +1435,20 @@ def set_and_fill_headers(df: pd.DataFrame, header_list: list) -> pd.DataFrame:
 
 
 def check_results_ini_params(
-        p: Dict[str, Any],
-        ini_file_name: str,
+    p: Dict[str, Any],
+    ini_file_path: str,
 ) -> Optional[dict]:
     """Checks results parameters"""
     err_str = None
+    ini_file_name = Path(ini_file_path).name
     try:
-        datetime.datetime.strptime(p["results_download_date"], '%Y-%m-%d')
+        datetime.datetime.strptime(p["results_download_date"], "%Y-%m-%d")
     except TypeError:
         err_str = f"No download date found"
     except ValueError:
         err_str = f"Date could not be parsed. Expected format is 'YYYY-MM-DD', actual is {p['results_download_date']}"
     if err_str:
-        ini_err = add_new_error(
-            None,
-            "ini",
-            ini_file_name,
-            err_str
-        )
+        ini_err = add_new_error(None, "ini", ini_file_name, err_str)
     else:
         ini_err = None
     return ini_err

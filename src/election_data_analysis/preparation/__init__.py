@@ -5,7 +5,6 @@ from election_data_analysis import user_interface as ui
 from election_data_analysis import munge as m
 
 
-
 def primary(row: pd.Series, party: str, contest_field: str) -> str:
     try:
         pr = f"{row[contest_field]} ({party})"

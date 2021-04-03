@@ -51,16 +51,6 @@ def grab_ini_files(results_dir, path_to_repo):
 
     par_files = [f for f in os.listdir(results_dir) if f[-4:] == ".ini"]
 
-    # if the results file not found, delete the .ini file & warn user
-    for par_file in par_files:
-        d, err = ui.get_parameters(
-            required_keys=["results_file"],
-            header="election_data_analysis",
-            param_file=os.path.join(results_dir, par_file),
-        )
-        # delete any .ini files whose results file is not found
-        if not os.path.isfile(os.path.join(results_dir, d["results_file"])):
-            os.remove(os.path.join(results_dir, par_file))
     return
 
 
@@ -106,7 +96,6 @@ def close_and_erase(dl: eda.DataLoader) -> Optional[dict]:
 def get_testing_data(
     url: Optional[str] = None,
     results_dir: Optional[str] = "TestingData",
-    path_to_repo: Optional[str] = None,
 ):
     # if there is no target directory
     if not os.path.isdir(results_dir):
@@ -122,9 +111,6 @@ def get_testing_data(
         print(
             f"Tests will use data in existing directory: {Path(results_dir).absolute()}"
         )
-    if path_to_repo is None:
-        path_to_repo = Path(__file__).resolve().parents[1].absolute()
-    grab_ini_files(results_dir, path_to_repo)
     return
 
 
@@ -138,7 +124,6 @@ def run2(
     dl = None  # to keep syntax-checker happy
 
     err = None
-    db_removed = False
     if not test_dir:
         # set the test_dir to the directory containing this file
         test_dir = Path(__file__).parent.absolute()
@@ -155,15 +140,26 @@ def run2(
             results_dir="TestingData",
         )
 
-    # restrict elections and jurisdictions to those given (if given)
-    # otherwise use all in TestingData
-    if not election_jurisdiction_list:
-        election_jurisdiction_list = ui.election_juris_list("TestingData")
-
     if load_data:
         try:
             # Load the data
             dl = eda.DataLoader()
+            if not dl:
+                err = ui.add_new_error(
+                    err,
+                    "ini",
+                    f"{os.getcwd()}/run_time.ini",
+                    "Error creating DataLoader."
+                )
+                return err
+
+            # restrict elections and jurisdictions to those given (if given)
+            # otherwise use all in TestingData
+            if not election_jurisdiction_list:
+                election_jurisdiction_list = ui.election_juris_list(
+                    dl.d["ini_dir"], results_path="TestingData",
+                )
+
             dl.change_db(dbname)
 
             dl.change_dir("results_dir", "TestingData")
@@ -200,19 +196,13 @@ def run2(
             optional_remove(dl, "TestingData")
             return err
 
-    if not db_removed:
-        result = ui.run_tests(
-            test_dir, dbname, election_jurisdiction_list=election_jurisdiction_list
-        )
-        print(f"test results:\n{result}")
+    result = ui.run_tests(
+        test_dir, dbname, election_jurisdiction_list=election_jurisdiction_list
+    )
+    print(f"test results:\n{result}")
 
-        # remove all .ini files
-        par_files = [x for x in os.listdir("TestingData") if x[-4:] == ".ini"]
-        for f in par_files:
-            os.remove(os.path.join("TestingData", f))
-
-        if load_data:
-            err, db_removed = optional_remove(dl, "TestingData")
+    if load_data:
+        err, db_removed = optional_remove(dl, "TestingData")
     return err
 
 

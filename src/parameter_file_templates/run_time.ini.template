@@ -1,9 +1,8 @@
 [election_data_analysis]
-results_dir=</path/to/folder/containing/result/and/parameter/files/for/batch/upload>
+results_dir=</path/to/folder/containing/result/files/for/batch/upload>
 archive_dir=</path/to/folder/for/archiving/uploaded/files>
-rollup_directory=</path/to/folder/for/archiving/files/unloaded/from/db>
-mungers_dir=</path/to/directory/holding/individual/munger/directories>
-jurisdictions_dir=</path/to/directory/holding/individual/jurisdiction/directories>
+repository_content_root=
+reports_and_plots_dir=</path/to/folder/for/analysis/output>
 
 [postgresql]
 host=<url for your postgresql server>

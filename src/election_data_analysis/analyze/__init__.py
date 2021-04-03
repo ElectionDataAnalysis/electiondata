@@ -1,9 +1,9 @@
 import os.path
-from typing import Optional,List
+from typing import Optional, List
 
 import pandas as pd
 import inspect
-from election_data_analysis import user_interface as ui,database as db
+from election_data_analysis import user_interface as ui, database as db
 from election_data_analysis import munge as m
 import datetime
 import os
@@ -59,7 +59,7 @@ def create_rollup(
     connection = session.bind.raw_connection()
     cursor = connection.cursor()
     if not datafile_list:
-        datafile_list, e = db.data_file_list_cursor(cursor,election_id,by="Id")
+        datafile_list, e = db.data_file_list_cursor(cursor, election_id, by="Id")
         if e:
             return e
         by = "Id"
@@ -78,9 +78,9 @@ def create_rollup(
         exclude_redundant_total = False
 
     # get names from ids
-    top_ru = db.name_from_id_cursor(cursor,"ReportingUnit",top_ru_id)
-    election = db.name_from_id_cursor(cursor,"Election",election_id)
-    sub_rutype = db.name_from_id_cursor(cursor,"ReportingUnitType",sub_rutype_id)
+    top_ru = db.name_from_id_cursor(cursor, "ReportingUnit", top_ru_id)
+    election = db.name_from_id_cursor(cursor, "Election", election_id)
+    sub_rutype = db.name_from_id_cursor(cursor, "ReportingUnitType", sub_rutype_id)
 
     # create path to export directory
     leaf_dir = os.path.join(target_dir, election, top_ru, f"by_{sub_rutype}")
@@ -178,7 +178,7 @@ def create_scatter(
         return None
 
     unsummed = pd.concat([dfh, dfv])
-    jurisdiction = db.name_from_id_cursor(cursor,"ReportingUnit",jurisdiction_id)
+    jurisdiction = db.name_from_id_cursor(cursor, "ReportingUnit", jurisdiction_id)
 
     # check if there is only 1 candidate selection (with multiple count types)
     single_selection = len(unsummed["Selection"].unique()) == 1
@@ -220,8 +220,8 @@ def create_scatter(
         results["y"] = v_count
     else:
         results = package_results(pivot_df, jurisdiction, h_count, v_count)
-    results["x-election"] = db.name_from_id_cursor(cursor,"Election",h_election_id)
-    results["y-election"] = db.name_from_id_cursor(cursor,"Election",v_election_id)
+    results["x-election"] = db.name_from_id_cursor(cursor, "Election", h_election_id)
+    results["y-election"] = db.name_from_id_cursor(cursor, "Election", v_election_id)
     results["subdivision_type"] = db.name_from_id_cursor(
         cursor, "ReportingUnitType", subdivision_type_id
     )
@@ -310,7 +310,7 @@ def get_data_for_scatter(
             count_item_type,
             filter_str,
             count_type,
-            is_runoff
+            is_runoff,
         )
 
 
@@ -323,7 +323,7 @@ def get_census_data(
     # get the census data
     connection = session.bind.raw_connection()
     cursor = connection.cursor()
-    election = db.name_from_id_cursor(cursor,"Election",election_id)
+    election = db.name_from_id_cursor(cursor, "Election", election_id)
     census_df = db.read_external(
         cursor,
         int(election[0:4]),
@@ -376,13 +376,9 @@ def get_votecount_data(
 
     # limit to relevant data - runoff
     if is_runoff:
-        unsummed = unsummed[
-            unsummed["Contest"].str.contains("runoff", case=False)
-        ]
+        unsummed = unsummed[unsummed["Contest"].str.contains("runoff", case=False)]
     else:
-        unsummed = unsummed[
-            ~(unsummed["Contest"].str.contains("runoff", case=False))
-        ]
+        unsummed = unsummed[~(unsummed["Contest"].str.contains("runoff", case=False))]
 
     # limit to relevant data - count type
     if count_type == "candidates":
@@ -528,8 +524,8 @@ def create_bar(
         )
 
         candidates = temp_df["Candidate_Id"].unique()
-        x = db.name_from_id_cursor(cursor,"Candidate",int(candidates[0]))
-        y = db.name_from_id_cursor(cursor,"Candidate",int(candidates[1]))
+        x = db.name_from_id_cursor(cursor, "Candidate", int(candidates[0]))
+        y = db.name_from_id_cursor(cursor, "Candidate", int(candidates[1]))
         x_party = unsummed.loc[unsummed["Candidate_Id"] == candidates[0], "Party"].iloc[
             0
         ]
@@ -538,7 +534,7 @@ def create_bar(
             0
         ]
         y_party_abbr = create_party_abbreviation(y_party)
-        jurisdiction = db.name_from_id_cursor(cursor,"ReportingUnit",top_ru_id)
+        jurisdiction = db.name_from_id_cursor(cursor, "ReportingUnit", top_ru_id)
 
         pivot_df = pd.pivot_table(
             temp_df, values="Count", index=["Name"], columns="Selection", fill_value=0
@@ -553,7 +549,7 @@ def create_bar(
             results = package_results(pivot_df, jurisdiction, x, y)
         else:
             results = package_results(pivot_df, jurisdiction, x, y, restrict=8)
-        results["election"] = db.name_from_id_cursor(cursor,"Election",election_id)
+        results["election"] = db.name_from_id_cursor(cursor, "Election", election_id)
         results["contest"] = db.name_from_id_cursor(
             cursor, "Contest", int(temp_df.iloc[0]["Contest_Id"])
         )
@@ -1066,7 +1062,13 @@ def nist_candidate_contest(session, election_id, jurisdiction_id):
         session,
         election_id,
         jurisdiction_id,
-        ["Contest_Id", "ContestName", "ContestType", "Office_Id", "ElectionDistrict_Id"],
+        [
+            "Contest_Id",
+            "ContestName",
+            "ContestType",
+            "Office_Id",
+            "ElectionDistrict_Id",
+        ],
         ["Id", "ContestName", "ContestType", "OfficeId", "ElectionDistrictId"],
     )
     contest_df = contest_df[contest_df["ContestType"] == "Candidate"]
@@ -1173,44 +1175,47 @@ def nist_candidate(session, election_id, jurisdiction_id):
 
 
 def rollup_dataframe(
-        session,
-        df:pd.DataFrame,
-        count_col:str,
-        ru_id_column: str,
-        new_ru_id_column: str,
-        rollup_rut: str = "county",
-        ignore: Optional[List] = None
+    session,
+    df: pd.DataFrame,
+    count_col: str,
+    ru_id_column: str,
+    new_ru_id_column: str,
+    rollup_rut: str = "county",
+    ignore: Optional[List] = None,
 ) -> (pd.DataFrame(), Optional[dict]):
     err = None  # TODO error handling
     if ignore:
         working = df.copy().drop(ignore, axis=1)
     else:
         working = df.copy()
-    group_cols = [
-        c for c in working.columns
-        if (c not in (ru_id_column,count_col))
-    ]
-    parents, err_str = db.parents(session,df[ru_id_column].unique(), subunit_type=rollup_rut)
+    group_cols = [c for c in working.columns if (c not in (ru_id_column, count_col))]
+    parents, err_str = db.parents(
+        session, df[ru_id_column].unique(), subunit_type=rollup_rut
+    )
     if err_str:
         err = ui.add_new_error(
             err,
             "system",
             f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
-            f"Unable to read parents reporting unit info from column {ru_id_column}"
+            f"Unable to read parents reporting unit info from column {ru_id_column}",
         )
-    new_working = working.reset_index().merge(
-        parents, how='left', left_on=ru_id_column, right_on="child_id"
-    ).set_index("index")[group_cols + ["parent_id", count_col]]
+    new_working = (
+        working.reset_index()
+        .merge(parents, how="left", left_on=ru_id_column, right_on="child_id")
+        .set_index("index")[group_cols + ["parent_id", count_col]]
+    )
 
     # if no parent is found (e.g., for reporting unit that is whole state), keep the original
     mask = new_working.parent_id.isnull()
     if mask.any():
         new_working.loc[mask, "parent_id"] = working.loc[mask, ru_id_column]
 
-    rollup_df = new_working.fillna("").groupby(
-        group_cols + ["parent_id"]
-    ).sum(count_col).reset_index().rename(
-        columns={"parent_id": new_ru_id_column}
+    rollup_df = (
+        new_working.fillna("")
+        .groupby(group_cols + ["parent_id"])
+        .sum(count_col)
+        .reset_index()
+        .rename(columns={"parent_id": new_ru_id_column})
     )
 
     return rollup_df, err
