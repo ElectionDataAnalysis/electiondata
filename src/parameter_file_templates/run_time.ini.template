@@ -1,5 +1,5 @@
 [election_data_analysis]
-results_dir=</path/to/folder/containing/result/and/parameter/files/for/batch/upload>
+results_dir=</path/to/folder/containing/result/files/for/batch/upload>
 archive_dir=</path/to/folder/for/archiving/uploaded/files>
 repository_content_root=
 reports_and_plots_dir=</path/to/folder/for/analysis/output>

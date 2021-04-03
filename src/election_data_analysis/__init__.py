@@ -55,6 +55,7 @@ multi_data_loader_pars = [
     "results_dir",
     "archive_dir",
     "repository_content_root",
+    "reports_and_plots_dir",
 ]
 
 optional_mdl_pars = [
@@ -354,7 +355,7 @@ class DataLoader:
                         "warn-jurisdiction",
                         "warn-file",
                     ],
-                    file_prefix=f"{f[:-4]}_",
+                    file_prefix=Path(f).stem,
                 )
 
         # report remaining errors
