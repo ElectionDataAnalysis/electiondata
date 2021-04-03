@@ -1,0 +1,26 @@
+[format]
+file_type=excel
+count_locations=by_column_numbers
+munge_strings=in_field_values
+
+encoding=iso-8859-1
+thousands_separator=,
+count_column_numbers=4
+string_field_name_row=0
+count_field_name_row=0
+
+[in_field_values]
+ReportingUnit=<COUNTY NAME>
+Party=<CANDIDATE NAME>
+CandidateContest=<OFFICE NAME>
+Candidate=<CANDIDATE NAME>
+CountItemType=total
+
+[CANDIDATE NAME lookup]
+source_file=Texas/Party_by_Candidate_20g.xlsx
+lookup_id=CANDIDATE NAME
+Party_replacement=<PARTY>
+Candidate_replacement=<CANDIDATE NAME>
+file_type=excel
+munge_strings=in_field_values
+string_field_name_row=0

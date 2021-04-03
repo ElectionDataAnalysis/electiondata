@@ -1,4 +1,5 @@
 cdf_element	cdf_internal_name	raw_identifier_value
+CandidateContest    US President (TX)   PRESIDENT/VICE-PRESIDENT
 CandidateContest	TX House District 1 (Democratic Party)	State Representative District 1 (DEM)
 CandidateContest	TX House District 2 (Democratic Party)	State Representative District 2 (DEM)
 CandidateContest	TX House District 3 (Democratic Party)	State Representative District 3 (DEM)
