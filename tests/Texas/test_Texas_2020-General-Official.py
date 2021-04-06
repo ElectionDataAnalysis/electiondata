@@ -12,16 +12,16 @@ election = "2020 General"
 jurisdiction = "Texas"
 abbr = "TX"
 total_pres_votes = 11315056  # total of all votes for President
-cd = 3  # congressional district
-total_cd_votes = 414436  # total votes in the chosen cd
-shd = 1  # state house district
-total_shd_votes = 59348
-ssd = 18  # state senate district
-total_ssd_votes = 415132
+cd = 2  # congressional district
+total_cd_votes = 346726  # total votes in the chosen cd
+shd = 3  # state house district
+total_shd_votes = 91010
+ssd = 6  # state senate district
+total_ssd_votes = 164061
 single_vote_type = "early"  # pick any one from your file
 pres_votes_vote_type = 0
 single_county = "Texas;Maverick County"  # pick any one from your file
-pres_votes_county = 15338  # total votes for pres of that county
+pres_votes_county = 15346  # total votes for pres of that county
 
 
 def test_data_exists(dbname):
