@@ -11,9 +11,9 @@ import election_data_analysis as e
 election = "2020 General"
 jurisdiction = "Nebraska"
 abbr = "NE"
-total_pres_votes = 922817  # total of all votes for President
+total_pres_votes = 951712  # total of all votes for President
 cd = 3  # congressional district
-total_cd_votes = 284130  # total votes in the chosen cd
+total_cd_votes = 286770  # total votes in the chosen cd
 shd = 1  # state house district
 total_shd_votes = -1
 ssd = 15  # state senate district
@@ -81,7 +81,8 @@ def test_standard_vote_types(dbname):
 
 
 def test_vote_type_counts_consistent(dbname):
-    assert e.check_totals_match_vote_types(election, jurisdiction, dbname=dbname)
+    assert e.check_totals_match_vote_types(
+        election, jurisdiction, dbname=dbname)
 
 
 """
@@ -113,6 +114,7 @@ def test_county_subtotal(dbname):
 
 def test_all_candidates_known(dbname):
     assert (
-        e.get_contest_with_unknown_candidates(election, jurisdiction, dbname=dbname)
+        e.get_contest_with_unknown_candidates(
+            election, jurisdiction, dbname=dbname)
         == []
     )
