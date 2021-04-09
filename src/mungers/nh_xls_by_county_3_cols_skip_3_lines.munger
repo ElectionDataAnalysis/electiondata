@@ -5,7 +5,7 @@ munge_strings=in_count_headers,in_field_values,constant_over_file
 
 encoding=
 count_column_numbers=1,2,3
-string_field_name_row=3
+noncount_header_row=3
 count_field_name_row=3
 count_count_header_row_numbers=3
 sheets_to_read_numbers=0

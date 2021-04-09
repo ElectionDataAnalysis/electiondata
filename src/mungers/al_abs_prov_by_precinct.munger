@@ -28,7 +28,7 @@ constant_over_file=
 count_field_name_row=
 #### if file type is flat_text or excel and not all rows are data:
 #### (start numbering from first unskipped row):
-string_field_name_row=
+noncount_header_row=
 
 
 ## Optional format parameters:

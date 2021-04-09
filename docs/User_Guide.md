@@ -61,7 +61,7 @@ and similarly, if necessary, for any Contest or Selection. If there is more than
         * all the usual basic format parameters except `count_locations` -- but not the usual formulas
         * `lookup_id` is the single field name holding the key to the lookup table. (If there are no headers in the lookup source file, use, e.g., `column_0`)
         * for each element whose formula looks something up from this table, a formula for the foreign key replacement. The formula should be named for the element in whose formula the replacement will be made, with suffix "_replacement", e.g., `Party_replacement` for the formula to replace the foreign key in the original `Party` formula.      
-    * (required for 'excel' and 'flat_text' file_types where not all rows are data) specify location of field names for string columns. Need integer `string_field_name_row` (NB: top row not skipped is 0, next row is 1, etc.)
+    * (required for 'excel' and 'flat_text' file_types where not all rows are data) specify location of field names for string columns. Need integer `noncount_header_row` (NB: top row not skipped is 0, next row is 1, etc.)
   * 'in_count_headers' this is used, e.g., when each candidate has a separate column in a tabular file. In this case there may be a single header row with relevant info, or there may be several rows (e.g., Contest in one row, Candidate in another row)
     * (required) list `count_count_header_row_numbers` of integers for rows containing necessary character strings. (NB: top row not skipped is 0, next row is 1, etc.)
   * 'constant_over_file'

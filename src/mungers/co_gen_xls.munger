@@ -5,7 +5,7 @@ munge_strings=in_count_headers,in_field_values
 
 encoding=utf-8
 count_column_numbers=4,5
-string_field_name_row=0
+noncount_header_row=0
 count_field_name_row=0
 sheets_to_read_numbers=0
 

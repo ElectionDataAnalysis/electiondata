@@ -29,7 +29,7 @@ constant_over_file=CountItemType
 #count_field_name_row=
 #### if file type is flat_text or excel and not all rows are data:
 #### (start numbering from first unskipped row):
-string_field_name_row=4
+noncount_header_row=4
 
 
 ## Optional format parameters:

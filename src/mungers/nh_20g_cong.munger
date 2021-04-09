@@ -11,20 +11,16 @@ count_locations=by_column_numbers
 count_column_numbers=1,2,3,4,5,6,7
 constant_over_file=CountItemType
 #### if file type is flat_text or excel and not all rows are data:
-string_field_name_row=0
+noncount_header_row=0
+
 
 ## Optional format parameters:
 thousands_separator=,
 rows_to_skip=0
 
-# Munge formula sections (required if in munge_strings list) #
-[in_field_values]
+[munge formulas]
 ReportingUnit=<State of New Hampshire - General Election>
-
-[in_count_headers]
 Party={<count_header_2>,^.*,(.*)$}
 Candidate={<count_header_2>,(Scatter$|\*corrections submitted by clerks$|\*corrections received by clerks$|\*corrections received from clerks$|^[\w .]+|^[\w ]+, Sr\.|^[\w ]+, Jr\.)(?:$|\W+[a-z]+$)}
-
-[constant_over_sheet]
 CandidateContest=<row_1>
 

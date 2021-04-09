@@ -36,7 +36,7 @@ opt_munger_data_types: Dict[str, str] = {
     "count_field_name_row": "int",  # TODO allow multi-rows here?
     "count_column_numbers": "list-of-integers",
     "string_field_column_numbers": "list-of-integers",
-    "string_field_name_row": "int",
+    "noncount_header_row": "int",
     "all_rows": "string",
     "multi_block": "string",
     "max_blocks": "integer",
@@ -654,7 +654,7 @@ def melt_to_one_count_column(
         for idx in range(melted.shape[1]):
             if melted.columns[idx] in id_columns:
                 new_columns[idx] = melted.columns[idx].split(";:;")[
-                    tab_to_df[p["string_field_name_row"]]
+                    tab_to_df[p["noncount_header_row"]]
                 ]
         melted.columns = new_columns
 
@@ -675,10 +675,10 @@ def df_header_rows_from_sheet_header_rows(p: Dict[str, Any]) -> Dict[int, int]:
     """produces mapping from the header row numbering in the tabular file -- which could be
     any collection of rows -- to the header numbering in the dataframe
     (which must be 0 - n for some n)."""
-    if p["count_header_row_numbers"] or p["string_field_name_row"]:
+    if p["count_header_row_numbers"] or p["noncount_header_row"]:
         # create sorted list with no dupes
         table_rows = sorted(
-            set(p["count_header_row_numbers"] + [p["string_field_name_row"]])
+            set(p["count_header_row_numbers"] + [p["noncount_header_row"]])
         )
         tab_to_df = {table_rows[idx]: idx for idx in range(len(table_rows))}
     else:
@@ -1368,14 +1368,14 @@ def get_and_check_munger_params(
         # if all rows are not data
         if (params["all_rows"] is None) or params["all_rows"] != "data":
             # need field names
-            if params["string_field_name_row"] is None:
+            if params["noncount_header_row"] is None:
                 err = ui.add_new_error(
                     err,
                     "munger",
                     munger_name,
                     f"file_type={params['file_type']}' and absence of"
                     f" all_rows=data means field names must be in the "
-                    f"file. But string_field_name_row not given.",
+                    f"file. But noncount_header_row not given.",
                 )
         # if all rows are data
         else:

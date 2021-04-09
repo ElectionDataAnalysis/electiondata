@@ -353,8 +353,8 @@ def tabular_kwargs(
         # if count_locations are by field name, need count_field_name_row
         if not aux and p["count_locations"] == "by_field_names":
             header_rows.update({p["count_field_name_row"]})
-        # need string_field_name_row
-        header_rows.update({p["string_field_name_row"]})
+        # need noncount_header_row
+        header_rows.update({p["noncount_header_row"]})
         #  need count_header_row_numbers
         header_rows.update(p["count_header_row_numbers"])
         if header_rows:
