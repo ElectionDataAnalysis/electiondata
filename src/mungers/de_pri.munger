@@ -13,4 +13,4 @@ BallotMeasureContest=<Contest Title>
 BallotMeasureSelection=<Candidate Name>
 
 [in_count_headers]
-CountItemType=<header_0>
+CountItemType=<count_header_0>

@@ -14,6 +14,6 @@ constant_over_file=CountItemType
 ReportingUnit=<WARD>;<DIVISION>
 
 [in_count_headers]
-Party={<header_0>,^.* - .*-(.*)$}
-CandidateContest={<header_0>,^.* - (.*-.*)$}
-Candidate={<header_0>,^(.*) - .*-.*$}
+Party={<count_header_0>,^.* - .*-(.*)$}
+CandidateContest={<count_header_0>,^.* - (.*-.*)$}
+Candidate={<count_header_0>,^(.*) - .*-.*$}

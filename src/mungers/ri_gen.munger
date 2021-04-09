@@ -21,7 +21,7 @@ count_fields_by_name=Election Day,Mail,Emergency
 #count_column_numbers=
 #### if 'in_count_headers' is in munge_strings
 #### (start numbering from first unskipped row):
-count_header_row_numbers=0
+count_count_header_row_numbers=0
 #### if 'constant_over_file' is in munge_strings (NB: give value for each in .ini file):
 #constant_over_file=
 #### if file type is flat_text or excel and count_locations is 'by_field_names'
@@ -50,7 +50,7 @@ sheets_to_skip_names=
 Candidate=<Candidate>
 CandidateContest=<Contest>
 Party=<Party>
-CountItemType=<header_0>
+CountItemType=<count_header_0>
 ReportingUnit=<City/Town>
 
 [in_count_headers]

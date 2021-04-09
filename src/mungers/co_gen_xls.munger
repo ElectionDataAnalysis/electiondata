@@ -20,4 +20,4 @@ BallotMeasureContest=<Office/Ballot Issue>
 CountItemType=total
 
 [in_count_headers]
-BallotMeasureSelection=<header_0>
+BallotMeasureSelection=<count_header_0>

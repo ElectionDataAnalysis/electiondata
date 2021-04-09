@@ -8,7 +8,7 @@ thousands_separator=,
 flat_text_delimiter=,
 count_column_numbers=6,7,8,9,10,11,12,13,14,15,16,17
 string_field_name_row=0
-count_header_row_numbers=0
+count_count_header_row_numbers=0
 
 [in_field_values]
 ReportingUnit=<County Name>
@@ -17,4 +17,4 @@ CandidateContest=<Office Name> <District Name>
 Candidate=<Candidate Name>
 
 [in_count_headers]
-CountItemType=<header_0>
+CountItemType=<count_header_0>

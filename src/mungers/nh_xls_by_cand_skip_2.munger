@@ -18,4 +18,4 @@ Party={<SUMMARY BY COUNTIES>,^.*,(.*)$}
 Candidate={<SUMMARY BY COUNTIES>,(Scatter$|\*corrections submitted by clerks$|\*corrections received by clerks$|\*corrections received from clerks$|^[\w .]+|^[\w ]+, Sr\.|^[\w ]+, Jr\.)(?:$|\W+[a-z]+$)}
 
 [in_count_headers]
-ReportingUnit=<header_0>
+ReportingUnit=<count_header_0>

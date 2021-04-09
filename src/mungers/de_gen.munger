@@ -21,7 +21,7 @@ count_fields_by_name=
 count_column_numbers=3,4,5
 #### if 'in_count_headers' is in munge_strings
 #### (start numbering from first unskipped row):
-count_header_row_numbers=0
+count_count_header_row_numbers=0
 #### if 'constant_over_file' is in munge_strings (NB: give value for each in .ini file):
 constant_over_file=CountItemType
 #### if file type is flat_text or excel and count_locations is 'by_field_names'
@@ -58,7 +58,7 @@ CandidateContest=<Contest>
 Party=<Party Name>
 
 [in_count_headers]
-ReportingUnit=<header_0>
+ReportingUnit=<count_header_0>
 
 [constant_over_sheet]
 

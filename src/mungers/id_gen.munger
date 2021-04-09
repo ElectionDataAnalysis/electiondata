@@ -21,7 +21,7 @@ rows_to_skip=1
 count_column_numbers=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20
 #### if 'in_count_headers' is in munge_strings
 #### (start numbering from first unskipped row):
-count_header_row_numbers=0,1,2,3,4
+count_count_header_row_numbers=0,1,2,3,4
 #### if 'constant_over_file' is in munge_strings (NB: give value for each in .ini file):
 constant_over_file=CountItemType
 #### if file type is flat_text or excel and count_locations is 'by_field_names'
@@ -47,10 +47,10 @@ nesting_tags=
 
 # Munge formula sections (required if in munge_strings list) #
 [in_field_values]
-Candidate=<header_4>
-Party=<header_3>
+Candidate=<count_header_4>
+Party=<count_header_3>
 ReportingUnit=<Counties>
-CandidateContest=<header_0> <header_1> <header_2>
+CandidateContest=<count_header_0> <count_header_1> <count_header_2>
 
 [in_count_headers]
 

@@ -7,7 +7,7 @@ encoding=iso-8859-1
 flat_text_delimiter=tab
 count_column_numbers=9,10,11,12,13
 string_field_name_row=0
-count_header_row_numbers=0
+count_count_header_row_numbers=0
 
 [in_field_values]
 ReportingUnit=<County>;<Precinct> - <Real Precinct>
@@ -18,4 +18,4 @@ BallotMeasureContest=<Contest Name>
 BallotMeasureSelection=<Choice>
 
 [in_count_headers]
-CountItemType=<header_0>
+CountItemType=<count_header_0>

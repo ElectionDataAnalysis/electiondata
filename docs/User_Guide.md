@@ -63,7 +63,7 @@ and similarly, if necessary, for any Contest or Selection. If there is more than
         * for each element whose formula looks something up from this table, a formula for the foreign key replacement. The formula should be named for the element in whose formula the replacement will be made, with suffix "_replacement", e.g., `Party_replacement` for the formula to replace the foreign key in the original `Party` formula.      
     * (required for 'excel' and 'flat_text' file_types where not all rows are data) specify location of field names for string columns. Need integer `string_field_name_row` (NB: top row not skipped is 0, next row is 1, etc.)
   * 'in_count_headers' this is used, e.g., when each candidate has a separate column in a tabular file. In this case there may be a single header row with relevant info, or there may be several rows (e.g., Contest in one row, Candidate in another row)
-    * (required) list `count_header_row_numbers` of integers for rows containing necessary character strings. (NB: top row not skipped is 0, next row is 1, etc.)
+    * (required) list `count_count_header_row_numbers` of integers for rows containing necessary character strings. (NB: top row not skipped is 0, next row is 1, etc.)
   * 'constant_over_file'
     * (required) list of items constant over file `constant_over_file=CountItemType,CandidateContest`
     * (required) the `*.ini` file for the results file must specify the values
@@ -75,7 +75,7 @@ and similarly, if necessary, for any Contest or Selection. If there is more than
    * (optional) `encoding` (If not specified or recognized, a default encoding will be used. Recognized encodings are limited [python's list of recognized encodings and aliases](https://docs.python.org/3/library/codecs.html#standard-encodings).)
 
    Available for flat_text and excel file types:
-   * (optional) `rows_to_skip` An integer giving the number of rows to skip at the top to get to the table of counts. This parameter will affect all integers designating rows -- e.g., '<header_0>' is the first row not skipped. This affects the numbering of rows for munge strings that are constant over the sheet as well. If `rows_to_skip = 2`, then '<row_0>' will denote the third row of the actual Excel sheet -- the highest unskipped row. The system recognizes the leftmost non-blank cell as the content to be read.
+   * (optional) `rows_to_skip` An integer giving the number of rows to skip at the top to get to the table of counts. This parameter will affect all integers designating rows -- e.g., '<count_header_0>' is the first row not skipped. This affects the numbering of rows for munge strings that are constant over the sheet as well. If `rows_to_skip = 2`, then '<row_0>' will denote the third row of the actual Excel sheet -- the highest unskipped row. The system recognizes the leftmost non-blank cell as the content to be read.
    * (optional) `all_rows` If the file has no column headers but only data rows with counts, set this parameter to 'data'
    * (optional) `multi_block` if there are multiple blocks of data per page, each with its own headers, set this parameter to 'yes'. For multi-block sheets, munge parameters refer to the blocks (and must be the same for all blocks).
    * (optional) `max_blocks` if `multi_block=yes`, `max_blocks` is an integer telling the system how many blocks at most to read off of each sheet.
@@ -206,7 +206,7 @@ ALAMANCE	11/06/2018	064	1228	S	NC COURT OF APPEALS JUDGE SEAT 3	Michael Monaco, 
 ALAMANCE	11/06/2018	03N	1228	S	NC COURT OF APPEALS JUDGE SEAT 3	Michael Monaco, Sr.	LIB	1	59	38	1	0	98	Y
 ALAMANCE	11/06/2018	03S	1228	S	NC COURT OF APPEALS JUDGE SEAT 3	Michael Monaco, Sr.	LIB	1	106	108	0	3	217	Y
 ```
-Here the CountItemType value ('Election Day','One Stop' a.k.a. early voting, 'Absentee by Mail','Provisional' must be read from the column headers, i.e., the information in row 0 of the file. For the first data row, the formula `<header_0>` would yield CountItemType 'Election Day' for the VoteCount of 59, 'One Stop' for the vote count of 65, etc.
+Here the CountItemType value ('Election Day','One Stop' a.k.a. early voting, 'Absentee by Mail','Provisional' must be read from the column headers, i.e., the information in row 0 of the file. For the first data row, the formula `<count_header_0>` would yield CountItemType 'Election Day' for the VoteCount of 59, 'One Stop' for the vote count of 65, etc.
 
 ### excel `[constant_over_sheet]`
 To be read automatically, information that is constant over a sheet must be read either from the sheet name (using `<sheet_name>`) or from the left-most, non-blank entry in a row of the sheet using `<row_j>`, where `j` is the row number. Row numbers start with `0` after skipping the number of rows given in `rows_to_skip`.
@@ -242,7 +242,7 @@ In this case there must be an entry in `dictionary.txt` matching the constant fo
 Sometimes it is necessary to use regular expressions to extract information from fields in the results file. For example, a single field might hold a candidate name along with the candidate's party.
 
 Some jurisdictions require regular expression (regex) analysis to extract information from the data. For example, in a primary both the Party and the Candidate may be in the same string (e.g., "Robin Perez (DEM)"). Curly brackets indicate that regex analysis is needed. Inside the curly brackets there are two parts, separated by a comma. The first part is the concatenation formula for creating a string from the data in the file. The second is a python regex formula whose first group (enclosed by parentheses) marks the desired substring.
-```Party	{<header_1>,^.*\(([a-zA-Z]{3})\)$}	row```
+```Party	{<count_header_1>,^.*\(([a-zA-Z]{3})\)$}	row```
 
 The system will report (in the `.warnings` files) any strings that did not match the regex. 
 

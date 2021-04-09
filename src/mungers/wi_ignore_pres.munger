@@ -12,7 +12,7 @@ munge_strings=in_field_values,in_count_headers,constant_over_sheet,constant_over
 #### if count_locations is 'by_column_numbers':
 count_column_numbers=3,4,5,6,7,8,9,10,11
 #### if 'in_count_headers' is in munge_strings:
-count_header_row_numbers=0,2,3
+count_count_header_row_numbers=0,2,3
 #### if 'constant_over_file' is in munge_strings:
 constant_over_file=CountItemType
 #### if file type is flat_text or excel and not all rows are data:
@@ -31,8 +31,8 @@ sheets_to_skip_names=Document map,Sheet2
 ReportingUnit=<County>
 
 [in_count_headers]
-Party=<header_2>
-Candidate=<header_3>
+Party=<count_header_2>
+Candidate=<count_header_3>
 
 [constant_over_sheet]
 CandidateContest=<row_0>

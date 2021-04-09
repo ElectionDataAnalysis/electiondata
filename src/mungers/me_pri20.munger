@@ -16,5 +16,5 @@ ReportingUnit=<CTY>;<TOWN>
 CountItemType=not-uocava
 
 [in_count_headers]
-Candidate=<header_0>
-BallotMeasureSelection=<header_0>
+Candidate=<count_header_0>
+BallotMeasureSelection=<count_header_0>
