@@ -2149,7 +2149,7 @@ def load_results_file(
     if ui.fatal_error(err):
         return err
 
-    # TODO remove constants not called for in munger
+    # remove constants not called for in munger
     necessary_constants = {
         c: v for c, v in constants.items() if c in p["constant_over_file"]
     }

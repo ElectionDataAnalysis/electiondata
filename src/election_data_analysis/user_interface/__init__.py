@@ -353,12 +353,10 @@ def tabular_kwargs(
         # if count_locations are by field name, need count_field_name_row
         if not aux and p["count_locations"] == "by_field_names":
             header_rows.update({p["count_field_name_row"]})
-        # if any string locations are from field values AND field names are in the table, need string_field_name_row
-        if "in_field_values" in p["munge_strings"]:
-            header_rows.update({p["string_field_name_row"]})
-        # if any string locations are in count headers need count_header_row_numbers
-        if "in_count_headers" in p["munge_strings"]:
-            header_rows.update(p["count_header_row_numbers"])
+        # need string_field_name_row
+        header_rows.update({p["string_field_name_row"]})
+        #  need count_header_row_numbers
+        header_rows.update(p["count_header_row_numbers"])
         if header_rows:
             # if multi-index
             if len(header_rows) > 1:

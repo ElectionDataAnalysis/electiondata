@@ -35,7 +35,6 @@ opt_munger_data_types: Dict[str, str] = {
     "count_fields_by_name": "list-of-strings",
     "count_field_name_row": "int",  # TODO allow multi-rows here?
     "count_column_numbers": "list-of-integers",
-    "count_header_row_numbers": "list-of-integers",
     "string_field_column_numbers": "list-of-integers",
     "string_field_name_row": "int",
     "all_rows": "string",
@@ -47,10 +46,10 @@ opt_munger_data_types: Dict[str, str] = {
 
 munger_dependent_reqs: Dict[str, Dict[str, List[str]]] = {
     "file_type": {
-        "flat_text": ["flat_text_delimiter", "count_locations", "munge_strings"],
+        "flat_text": ["flat_text_delimiter", "count_locations"],
         "xml": ["count_locations", "munge_strings"],
         "json-nested": ["count_locations", "munge_strings"],
-        "excel": ["count_locations", "munge_strings"],
+        "excel": ["count_locations"],
     },
     "count_locations": {
         "by_field_names": ["count_fields_by_name"],
@@ -648,29 +647,26 @@ def melt_to_one_count_column(
         value_name="Count",
     )
     if multi:
-        # remove extraneous text from column multi-headers for string fields (id_columns),
-        #  leaving only string field name row
         tab_to_df = df_header_rows_from_sheet_header_rows(p)
         new_columns = list(melted.columns)
+        # remove extraneous text from column multi-headers for string fields (id_columns),
+        #  leaving only string field name row
         for idx in range(melted.shape[1]):
             if melted.columns[idx] in id_columns:
                 new_columns[idx] = melted.columns[idx].split(";:;")[
                     tab_to_df[p["string_field_name_row"]]
                 ]
         melted.columns = new_columns
-        if "in_count_headers" in p["munge_strings"]:
 
+        if "in_count_headers" in p["munge_strings"]:
             # split header_0 column into separate columns
             # # get header_rows
-            min_ct_header_row = min(p["count_header_row_numbers"])
             melted[
-                [
-                    f"header_{idx-min_ct_header_row}"
-                    for idx in p["count_header_row_numbers"]
-                ]
+                [f"count_header_{idx}" for idx in p["count_header_row_numbers"]]
             ] = pd.DataFrame(melted["header_0"].str.split(";:;", expand=True).values)[
                 [tab_to_df[idx] for idx in p["count_header_row_numbers"]]
             ]
+            melted.drop("header_0", axis=1, inplace=True)
 
     return melted, err
 
@@ -994,7 +990,7 @@ def raw_to_id_simple(
                 "munger",
                 munger_name,
                 f"KeyError ({exc}) while adding internal ids for {t}. "
-                f"Check that munge_strings parameter has everything it needs",
+                f"Check munger",
             )
         except AttributeError as exc:
             err = ui.add_new_error(
@@ -1002,7 +998,7 @@ def raw_to_id_simple(
                 "munger",
                 munger_name,
                 f"AttributeError ({exc}) while adding internal ids for {t}."
-                f"Check that munge_strings parameter has everything it needs",
+                f"Check that munger",
             )
         except Exception as exc:
             err = ui.add_new_error(
@@ -1169,7 +1165,7 @@ def munge_raw_to_ids(
 
 
 def get_munge_formulas(
-    munger_path: str, header_list: List[str]
+    munger_path: str, header_list: List[str] = ["munge formulas"]
 ) -> (Dict[str, str], Optional[dict]):
     err = None
     formulas = dict()
@@ -1209,9 +1205,9 @@ def munge_source_to_raw(
 
     # # get munge formulas
     # # for all but constant-over-file
-    header_list = [x for x in p["munge_strings"] if x != "constant_over_file"]
-    formulas, new_err = get_munge_formulas(munger_path, header_list)
+    formulas, new_err = get_munge_formulas(munger_path)
 
+    # # get list of all elements for which we have formulas
     elements = [
         k
         for k in formulas.keys()
@@ -1296,7 +1292,7 @@ def get_and_check_munger_params(
     """Checks that munger parameter file is internally consistent.
     If results_dir is included, then existence of any required
     auxiliary files is checked as well"""
-    params, err = ui.get_parameters(
+    raw_params, err = ui.get_parameters(
         required_keys=list(req_munger_parameters.keys()),
         optional_keys=list(opt_munger_data_types.keys()),
         param_file=munger_path,
@@ -1306,8 +1302,8 @@ def get_and_check_munger_params(
     if ui.fatal_error(err):
         return dict(), err
 
-    if params["file_type"] in no_param_file_types:
-        return params, err
+    if raw_params["file_type"] in no_param_file_types:
+        return raw_params, err
 
     # get name of munger for error reporting
     munger_name = Path(munger_path).stem
@@ -1320,13 +1316,13 @@ def get_and_check_munger_params(
         },
         **opt_munger_data_types,
     }
-    format_options = jm.recast_options(params, data_types)
+    params = jm.recast_options(raw_params, data_types)
 
     # Check munger values
     # # main parameters recognized
     for k in req_munger_parameters.keys():
         if req_munger_parameters[k]["data_type"] == "string":
-            if not format_options[k] in req_munger_parameters[k]["allowed_values"]:
+            if not params[k] in req_munger_parameters[k]["allowed_values"]:
                 err = ui.add_new_error(
                     err,
                     "munger",
@@ -1336,7 +1332,7 @@ def get_and_check_munger_params(
         elif req_munger_parameters[k]["data_type"] == "list_of_strings":
             bad = [
                 x
-                for x in format_options[k]
+                for x in params[k]
                 if x not in req_munger_parameters[k]["allowed_values"]
             ]
             if bad:
@@ -1351,39 +1347,39 @@ def get_and_check_munger_params(
     for k0 in munger_dependent_reqs.keys():
         for k1 in munger_dependent_reqs[k0]:
             for v2 in munger_dependent_reqs[k0][k1]:
-                if (format_options[k0] == k1) and (not format_options[v2]):
+                if (params[k0] == k1) and (not params[v2]):
                     err = ui.add_new_error(
                         err, "munger", munger_name, f"{k0}={k1}', but {v2} not found"
                     )
 
     # # extra compatibility requirements for excel or flat text files
-    if format_options["file_type"] in ["excel", "flat_text"]:
+    if params["file_type"] in ["excel", "flat_text"]:
         # # count_field_name_row is given where required
-        if (format_options["count_field_name_row"] is None) and (
-            format_options["count_locations"] == "by_field_names"
+        if (params["count_field_name_row"] is None) and (
+            params["count_locations"] == "by_field_names"
         ):
             err = ui.add_new_error(
                 err,
                 "munger",
                 munger_name,
-                f"file_type={format_options['file_type']}' but count_field_name_row not found",
+                f"file_type={params['file_type']}' but count_field_name_row not found",
             )
 
         # if all rows are not data
-        if (format_options["all_rows"] is None) or format_options["all_rows"] != "data":
+        if (params["all_rows"] is None) or params["all_rows"] != "data":
             # need field names
-            if format_options["string_field_name_row"] is None:
+            if params["string_field_name_row"] is None:
                 err = ui.add_new_error(
                     err,
                     "munger",
                     munger_name,
-                    f"file_type={format_options['file_type']}' and absence of"
+                    f"file_type={params['file_type']}' and absence of"
                     f" all_rows=data means field names must be in the "
                     f"file. But string_field_name_row not given.",
                 )
         # if all rows are data
         else:
-            if format_options["multi_block"] and format_options["multi_block"] == "yes":
+            if params["multi_block"] and params["multi_block"] == "yes":
                 err = ui.add_new_error(
                     err,
                     "munger",
@@ -1391,8 +1387,9 @@ def get_and_check_munger_params(
                     f"all_rows=data and multi_block=yes are not compatible",
                 )
 
+
     # # for each value in list of string locations, requirements are met
-    for k0 in format_options["munge_strings"]:
+    for k0 in params["munge_strings"]:
         for v2 in string_location_reqs[k0]:
             if v2 is None:
                 err = ui.add_new_error(
@@ -1408,10 +1405,7 @@ def get_and_check_munger_params(
     # # add parameter listing all munge fields
     # get lists of string fields expected in raw file
     # TODO why can't munge_fields and string_fields be the same?
-    params["munge_fields"], new_err = get_string_fields(
-        [x for x in params["munge_strings"] if x != "constant_over_file"],
-        munger_path,
-    )
+    params["munge_fields"], new_err = get_string_fields(munger_path)
     if new_err:
         err = ui.consolidate_errors([err, new_err])
 
@@ -1422,9 +1416,9 @@ def get_and_check_munger_params(
         "constant_over_sheet": set(),
     }
     for mf in params["munge_fields"]:
-        if mf[:7] == "header_":
+        if mf[:13] == "count_header_":
             try:
-                int(mf[7:])
+                int(mf[13:])
                 mf_by_type["in_count_headers"].update({mf})
             except ValueError:
                 mf_by_type["in_field_values"].update({mf})
@@ -1439,15 +1433,21 @@ def get_and_check_munger_params(
         else:
             mf_by_type["in_field_values"].update({mf})
 
-    # check that any header rows in formulas are in the list of header row numbers
-    for mf in mf_by_type["in_count_headers"]:
-        if int(mf[7:]) not in params["count_header_row_numbers"]:
+    if params["file_type"] in ["excel", "flat_text"]:
+        # calculate munge_strings parameter (and warn if overwriting)
+        if params["munge_strings"]:
             err = ui.add_new_error(
                 err,
-                "munger",
+                "warn-munger",
                 munger_name,
-                f"{mf} in formulas but {mf[7:]} not listed in count_header_row_numbers",
+                "given munge_strings parameter ignored -- will be derived from formulas"
             )
+        params["munge_strings"] = [k for k,v in mf_by_type.items() if len(mf_by_type[k]) != 0]
+        if params["constant_over_file"]:
+            params["munge_strings"].append("constant_over_file")
+
+    # collect header rows in formulas into count_header_row_numbers list
+    params["count_header_row_numbers"] = [int(mf[13:]) for mf in mf_by_type["in_count_headers"]]
 
     #  "munge_strings" includes everything required in the formulas
     for x in ["in_count_headers", "in_field_values", "constant_over_sheet"]:
@@ -1475,7 +1475,7 @@ def get_and_check_munger_params(
     if new_err:
         err = ui.consolidate_errors([err, new_err])
         if ui.fatal_error(new_err):
-            return format_options, err
+            return params, err
 
     # get all munge formulas (excluding _replacement formulas)
     formulas, new_err = get_munge_formulas(munger_path, headers)
@@ -1529,62 +1529,58 @@ def get_and_check_munger_params(
                 f"Section [{h} lookup] is missing formulas for:\n{missing}",
             )
 
-    return format_options, err
+    return params, err
 
 
 def get_string_fields(
-    sources: list,
     munger_path: str,
 ) -> (List[str], Optional[dict]):
     """Finds the field names expected by the munger formulas (and checks munger formulas along the way)
     Also checks that no element is defined more than once."""
     err = None
     munger_name = Path(munger_path).stem
-    munge_field_list = list()
+    munge_field_set = set()
     defined_elements = set()
 
     # regex to recognize comma-less text in inmost angle brackets < ... >
     # nb: commas can appear in lookup formulas with multi-field keys
     pattern = re.compile(r"<([^>,]+)(?:,([^>,]+))*>")
-    for source in sources:
-        munge_field_set = set()
-        formulas, new_err = ui.get_parameters(
-            required_keys=[],
-            optional_keys=all_munge_elements,
-            header=source,
-            param_file=munger_path,
-        )
-        if new_err:
-            err = ui.consolidate_errors([err, new_err])
-            if ui.fatal_error(new_err):
-                return dict(), err
+    formulas, new_err = ui.get_parameters(
+        required_keys=[],
+        optional_keys=all_munge_elements,
+        header="munge formulas",
+        param_file=munger_path,
+    )
+    if new_err:
+        err = ui.consolidate_errors([err, new_err])
+        if ui.fatal_error(new_err):
+            return dict(), err
 
-        for k in formulas.keys():
-            if formulas[k]:
-                if k in defined_elements:
-                    err = ui.add_new_error(
-                        err,
-                        "munger",
-                        munger_name,
-                        f"Multiple formulas for {k}",
-                    )
-                else:
-                    defined_elements.update({k})
-                munge_field_set.update(pattern.findall(formulas[k]))
-                formula_err = check_formula(formulas[k])
-                if formula_err:
-                    err = ui.add_new_error(
-                        err,
-                        "munger",
-                        munger_name,
-                        f"Error in formula for {k}: {formula_err}",
-                    )
-        flat = {x for y in munge_field_set for x in y}
-        if "" in flat:
-            flat.remove("")
-        munge_field_list += list(flat)
-    # remove dupes
-    munge_field_list = list(set(munge_field_list))
+    for k in formulas.keys():
+        if formulas[k]:
+            if k in defined_elements:
+                err = ui.add_new_error(
+                    err,
+                    "munger",
+                    munger_name,
+                    f"Multiple formulas for {k}",
+                )
+            else:
+                defined_elements.update({k})
+            munge_field_set.update(pattern.findall(formulas[k]))
+            formula_err = check_formula(formulas[k])
+            if formula_err:
+                err = ui.add_new_error(
+                    err,
+                    "munger",
+                    munger_name,
+                    f"Error in formula for {k}: {formula_err}",
+                )
+    flat = {x for y in munge_field_set for x in y}
+    if "" in flat:
+        flat.remove("")
+    # remove dupes, make list
+    munge_field_list = list(flat)
     return munge_field_list, err
 
 
@@ -1662,10 +1658,7 @@ def to_standard_count_frame(
 
     # get lists of string fields expected in raw file
     try:
-        munge_field_list, new_err = get_string_fields(
-            [x for x in p["munge_strings"] if x != "constant_over_file"],
-            munger_path,
-        )
+        munge_field_list, new_err = get_string_fields(munger_path)
     except Exception as exc:
         new_err = ui.add_new_error(
             None,
@@ -1744,60 +1737,60 @@ def to_standard_count_frame(
             working = add_constant_column(working, "sheet_name", sheet)
 
             # add columns for any constant-over-sheet row elements
-            if "constant_over_sheet" in p["munge_strings"]:
-                # add any necessary rows
-                try:
-                    rows_needed = [
-                        int(field.split("_")[-1])
-                        for field in munge_field_list
-                        if field[:4] == "row_"
-                    ]
-                    if rows_needed:  # (note: only excel file type has multiple sheets)
-                        max_row = max(rows_needed)
-                        data = pd.read_excel(
-                            file_path,
-                            sheet_name=sheet,
-                            header=None,
-                            skiprows=p["rows_to_skip"],
-                            nrows=max_row + 1,
+            # add any necessary rows
+            try:
+                rows_needed = [
+                    int(field.split("_")[-1])
+                    for field in munge_field_list
+                    if field[:4] == "row_"
+                ]
+                # TODO what about multi-blocks?
+                if rows_needed:  # (note: only excel file type has multiple sheets)
+                    max_row = max(rows_needed)
+                    data = pd.read_excel(
+                        file_path,
+                        sheet_name=sheet,
+                        header=None,
+                        skiprows=p["rows_to_skip"],
+                        nrows=max_row + 1,
+                    )
+                    for row in rows_needed:
+                        # get index of first valid entry in row (or "" if none)
+                        first_valid_idx = (
+                            data.loc[row].fillna("").first_valid_index()
                         )
-                        for row in rows_needed:
-                            # get index of first valid entry in row (or "" if none)
-                            first_valid_idx = (
-                                data.loc[row].fillna("").first_valid_index()
-                            )
-                            working = add_constant_column(
-                                working,
-                                f"row_{row}",
-                                data.loc[row, first_valid_idx],
-                            )
-                except ValueError as ve:
-                    error_by_df[n] = ui.add_new_error(
-                        error_by_df[n],
-                        "munger",
-                        munger_name,
-                        f"In sheet {sheet}: Ill-formed reference to row of file in munger formulas in {ve}",
-                    )
-                    continue
+                        working = add_constant_column(
+                            working,
+                            f"row_{row}",
+                            data.loc[row, first_valid_idx],
+                        )
+            except ValueError as ve:
+                error_by_df[n] = ui.add_new_error(
+                    error_by_df[n],
+                    "munger",
+                    munger_name,
+                    f"In sheet {sheet}: Ill-formed reference to row of file in munger formulas in {ve}",
+                )
+                continue
 
-                except KeyError() as ke:
-                    variables = ",".join(
-                        [x for x in munge_field_list if x[:4] == "row_"]
-                    )
-                    error_by_df[n] = ui.add_new_error(
-                        error_by_df[n],
-                        "file",
-                        file_name,
-                        f"KeyError ({ke}) in sheet {sheet}: No data found for one of these: \n\t{variables}",
-                    )
-                    continue
-                except Exception as exc:
-                    error_by_df[n] = ui.add_new_error(
-                        error_by_df[n],
-                        "file",
-                        file_name,
-                        f"In sheet {sheet}: Unexpected exception: {exc}",
-                    )
+            except KeyError() as ke:
+                variables = ",".join(
+                    [x for x in munge_field_list if x[:4] == "row_"]
+                )
+                error_by_df[n] = ui.add_new_error(
+                    error_by_df[n],
+                    "file",
+                    file_name,
+                    f"KeyError ({ke}) in sheet {sheet}: No data found for one of these: \n\t{variables}",
+                )
+                continue
+            except Exception as exc:
+                error_by_df[n] = ui.add_new_error(
+                    error_by_df[n],
+                    "file",
+                    file_name,
+                    f"In sheet {sheet}: Unexpected exception: {exc}",
+                )
 
             # keep only necessary columns
             try:
