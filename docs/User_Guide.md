@@ -31,7 +31,7 @@ Party=Total Votes Cast
 ```
 and similarly, if necessary, for any Contest or Selection. If there is more than one Party (e.g.) to be ignored, use a comma-separated list: `Candidate=Total Votes Cast,Registered Voters`
  
- There is one required parameter: `file_type`. For any file type other than nist_v2_xml,  `count_locations` is also required. Depending on the values of these, there are other required and optional fields. 
+ There is one required parameter: `file_type`. For any file type other than nist_v2_xml,  `count_columns_specified` is also required. Depending on the values of these, there are other required and optional fields. 
  `file_type`: controls which function from the python `pandas` module reads the file contents. Related optional and required parameters must be given under the `[format]` header.
    * 'nist_v2_xml' for xml-formatted file that obeys the [NIST Common Data Format schema](http://itl.nist.gov/ns/voting/1500-100/v2). For this file_type, no other parameters are needed. If there are no items to ignore, use the munger [nist_v2_xml](mungers/nist_v2_xml.munger). Otherwise, use a revised version of that munger, with an `[ignore]` section added.
    * 'excel'
@@ -45,7 +45,7 @@ and similarly, if necessary, for any Contest or Selection. If there is more than
   * 'flat_text' Any tab-, comma-, or other-separated table in a plain tabular text file.
     * (required) a field delimiter `flat_text_delimiter` to be specified (usually `flat_text_delimiter=,` for csv or `flat_text_delimiter=tab` for .txt)
   
-  `count_locations`: controls how the system looks for counts. Related optional and required parameters must be given under the `[count_locations]` header.
+  `count_columns_specified`: controls how the system looks for counts. Related optional and required parameters must be given under the `[count_columns_specified]` header.
   * 'by_field_names' (NB: as of 12/2020, for this case system can handle only files with only one field-name row for the count fields. If there are multiple header rows for the count columns, use the 'by_column_number' option.)
     * (required) list `count_fields_by_name` of names of fields containing counts. 
     * (required for 'excel' and 'flat_text' file_types) specify location of field names for count columns. with integer `count_field_name_row` (NB: top row not skipped is 0, next row is 1, etc.)
@@ -81,7 +81,7 @@ Put each formula for parsing information from the results file into the `[munge 
 
 If any of the munge formulas depend on information from other files, munger must specify lookup information. For each foreign key, need a separate section with corresponding header (field name from the file with the counts, plus " lookup", e.g. `[cnadidate_id lookup]` if the results file has a `candidate_id` field. This section needs:
         * `source_file` the path to the source file, relative to the results directory given in `run_time.ini`
-        * all the usual basic format parameters except `count_locations` -- but not the usual formulas
+        * all the usual basic format parameters except `count_columns_specified` -- but not the usual formulas
         * `lookup_id` is the single field name holding the key to the lookup table. (If there are no headers in the lookup source file, use, e.g., `column_0`)
         * for each element whose formula looks something up from this table, a formula for the foreign key replacement. The formula should be named for the element in whose formula the replacement will be made, with suffix "_replacement", e.g., `Party_replacement` for the formula to replace the foreign key in the original `Party` formula.      
 
@@ -94,7 +94,7 @@ For example, here is a munger for Michigan 2018 General election results using l
 ```
 [format]
 file_type=flat_text
-count_locations=by_column_numbers
+count_columns_specified=by_number
 munge_strings=in_field_values
 
 encoding=ASCII

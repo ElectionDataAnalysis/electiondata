@@ -1,6 +1,6 @@
 [format]
 file_type=json-nested
-count_locations=by_field_names
+count_columns_specified=by_field_names
 
 count_fields_by_name=Votes
 

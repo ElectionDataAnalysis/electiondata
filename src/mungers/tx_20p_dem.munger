@@ -1,6 +1,6 @@
 [format]
 file_type=excel
-count_locations=by_field_names
+count_columns_specified=by_field_names
 
 encoding=iso-8859-1
 thousands_separator=,

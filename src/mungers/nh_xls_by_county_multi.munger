@@ -5,7 +5,7 @@ file_type=excel
 
 ## Required for all file types except nist_v2_xml):
 #### Counts are found in one way of: by_field_names,by_column_numbers
-count_locations=by_column_numbers
+count_columns_specified=by_number
 #### Munge string locations must be sublist of: in_field_values,in_count_headers,constant_over_sheet,constant_over_file ##
 
 # Optional parameter for excel or flat_text
@@ -13,7 +13,7 @@ rows_to_skip=3
 
 ################################################
 ## Sometimes required format parameters:
-#### if count_locations is 'by_column_numbers':
+#### if count_columns_specified is 'by_column_numbers':
 count_column_numbers=1,2,3,4,5,6,7
 #### if 'in_count_headers' is in munge_strings
 #### (start numbering from first unskipped row, or first row of block):

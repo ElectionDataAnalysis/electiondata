@@ -2,9 +2,9 @@
 [format]
 ## Required format parameters:
 file_type=excel
-count_locations= by_field_names
+count_columns_specified= by_field_names
 
-#### if count_locations is 'by_field_names':
+#### if count_columns_specified is 'by_field_names':
 count_fields_by_name=PVTALLY6
 #### if 'constant_over_file' is in munge_strings:
 constant_over_file=CountItemType

@@ -1,6 +1,6 @@
 [format]
 file_type=excel
-count_locations=by_column_numbers
+count_columns_specified=by_number
 constant_over_file=CountItemType
 
 thousands_separator=,

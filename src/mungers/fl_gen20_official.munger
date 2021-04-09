@@ -6,19 +6,19 @@ file_type=flat_text
 
 ## Required for all file types except nist_v2_xml):
 #### Counts are found in one way of: by_field_names,by_column_numbers
-count_locations=by_field_names
+count_columns_specified=by_field_names
 #### Munge string locations must be sublist of: in_field_values,in_count_headers,constant_over_sheet,constant_over_file ##
 
 
 ################################################
 ## Sometimes required format parameters:
 flat_text_delimiter=tab
-#### if count_locations is 'by_field_names':
+#### if count_columns_specified is 'by_field_names':
 count_fields_by_name=CanVotes
 count_field_name_row=0
 #### if 'constant_over_file' is in munge_strings (NB: give value for each in .ini file):
 constant_over_file=CountItemType
-#### if file type is flat_text or excel and count_locations is 'by_field_names'
+#### if file type is flat_text or excel and count_columns_specified is 'by_field_names'
 #### (start numbering from first unskipped row):
 count_count_header_row_numbers=0
 #### if file type is flat_text or excel and not all rows are data:

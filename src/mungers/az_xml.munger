@@ -1,6 +1,6 @@
 [format]
 file_type=xml
-count_locations=by_field_names
+count_columns_specified=by_field_names
 
 encoding=ASCII
 nesting_tags=contests,choices,jurisdictions,voteTypes

@@ -1,6 +1,6 @@
 [format]
 file_type=excel
-count_locations=by_column_numbers
+count_columns_specified=by_number
 
 encoding=iso-8859-1
 count_column_numbers=1,2,3,4,5,6,7,8,9,10,11

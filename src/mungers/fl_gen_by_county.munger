@@ -1,6 +1,6 @@
 [format]
 file_type=flat_text
-count_locations=by_column_numbers
+count_columns_specified=by_number
 
 encoding=iso-8859-1
 flat_text_delimiter=tab
