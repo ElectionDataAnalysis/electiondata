@@ -1,10 +1,10 @@
 [format]
 file_type=json-nested
-count_columns_specified=by_field_names
+count_columns_specified=by_name
 
 count_fields_by_name=Votes
 
-[in_field_values]
+[munge formulas]
 ReportingUnit=<LocalityName>
 Party=<PoliticalParty>
 CandidateContest=<RaceName>

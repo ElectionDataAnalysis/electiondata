@@ -9,11 +9,11 @@ noncount_header_row=0
 count_count_header_row_numbers=0
 rows_to_skip=1
 
-[in_field_values]
+[munge formulas]
 Party={<Candidate Name (Party)>,^.*\W*.*\W*\((.*)\)$}
 Candidate={<Candidate Name (Party)>,^(.*)\W*.*\W*\((?:.*)\)$}
 
-[in_count_headers]
+
 ReportingUnit={<count_header_0>,^(?:Part of |)(.* County) Vote\W*Results}
 
 [constant_over_sheet]

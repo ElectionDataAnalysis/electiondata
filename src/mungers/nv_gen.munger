@@ -9,7 +9,7 @@ noncount_header_row=0
 count_count_header_row_numbers=0
 rows_to_skip=2
 
-[in_field_values]
+[munge formulas]
 ReportingUnit=<Jurisdiction>;<Precinct>
 Party=Unknown
 CandidateContest=<Contest>

@@ -3,11 +3,11 @@
 ## Required format parameters:
 #### File type must be one of: excel,json-nested,xml,flat_text
 file_type=excel
-#### Counts are found in one way of: by_field_names,by_column_numbers
+#### Counts are found in one way of: by_name,by_number
 count_columns_specified=by_number
 
 ## Sometimes required format parameters:
-#### if count_columns_specified is 'by_column_numbers':
+#### if count_columns_specified is 'by_number':
 count_column_numbers=1,2,3,4,5,6,7
 constant_over_file=CountItemType
 #### if file type is flat_text or excel and not all rows are data:

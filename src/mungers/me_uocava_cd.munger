@@ -8,9 +8,9 @@ count_count_header_row_numbers=0
 sheets_to_read_numbers=0
 constant_over_file=Party,CandidateContest
 
-[in_field_values]
+[munge formulas]
 ReportingUnit={<TOWN>,^[^\-]* -- ([^\-]*)$}
 CountItemType={<TOWN>,^([^\-]*) -- [^\-]*$}
 
-[in_count_headers]
+
 Candidate=<count_header_0>

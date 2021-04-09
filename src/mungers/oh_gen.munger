@@ -4,7 +4,7 @@ file_type=excel
 sheets_to_skip_names=Contents,Statewide Offices,President,U.S. Congress,General Assembly,State Board of Education,Judicial
 rows_to_skip=0
 
-[in_field_values]
+[munge formulas]
 ReportingUnit=<first_column>
 Party={<count_header_1>,^.* \((.*)\)[^\)\n]*$}
 CandidateContest=<count_header_0>

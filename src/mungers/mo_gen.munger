@@ -10,9 +10,9 @@ noncount_header_row=0
 count_count_header_row_numbers=0
 constant_over_file=CandidateContest,CountItemType
 
-[in_field_values]
+[munge formulas]
 ReportingUnit=<County>
 
-[in_count_headers]
+
 Party={<count_header_0>,^.*, ([A-Z]{2,3})$}
 Candidate={<count_header_0>,^(.*), [A-Z]{2,3}$}

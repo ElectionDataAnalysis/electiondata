@@ -10,7 +10,7 @@ sheets_to_read_numbers=0
 
 thousands_separator=,
 
-[in_field_values]
+[munge formulas]
 ReportingUnit=<County>
 Party=<Party>
 CandidateContest=<Office/Ballot Issue>
@@ -18,5 +18,5 @@ Candidate=<Candidate/Judge/Ballot Issue Title>
 BallotMeasureContest=<Office/Ballot Issue>
 CountItemType=total
 
-[in_count_headers]
+
 BallotMeasureSelection=<count_header_0>

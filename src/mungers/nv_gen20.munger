@@ -9,9 +9,9 @@ count_count_header_row_numbers=0
 sheets_to_read_numbers=0
 constant_over_file=Party,CountItemType
 
-[in_field_values]
+[munge formulas]
 CandidateContest=<Contest>
 Candidate=<Candidate>
 
-[in_count_headers]
+
 ReportingUnit=<count_header_0>

@@ -4,7 +4,7 @@
 file_type=
 
 ## Required for all file types except nist_v2_xml):
-#### Counts are found in one way of: by_name,by_number
+#### Counts are found in one way of: by_name, by_number
 count_columns_specified=
 
 # Optional parameter for excel or flat_text
@@ -14,16 +14,16 @@ rows_to_skip=
 ## Sometimes required format parameters:
 #### for flat_text file type:
 flat_text_delimiter=
-#### if count_columns_specified is 'by_field_names':
+#### if count_columns_specified is 'by_name':
 count_fields_by_name=
-#### if count_columns_specified is 'by_column_numbers':
+#### if count_columns_specified is 'by_number':
 count_column_numbers=
-#### if 'constant_over_file' is in munge_strings (NB: give value for each in .ini file):
+#### List any elements constant over the file that will be given in the <results>.ini file:
 constant_over_file=
-#### if file type is flat_text or excel and count_columns_specified is 'by_field_names'
+#### if file type is flat_text or excel and count_columns_specified is 'by_name'
 #### (start numbering from first unskipped row):
 count_field_name_row=
-#### if file type is flat_text or excel and not all rows are data:
+#### if file type is flat_text or excel, not all rows are data, and there are noncount columns:
 #### (start numbering from first unskipped row):
 noncount_header_row=
 
@@ -34,7 +34,7 @@ thousands_separator=
 encoding=
 
 #### for a flat_text or excel file type:
-###### if field names are not given in file
+###### if there are no header rows
 all_rows=data
 ###### if there are multiple blocks of data per page, each with its own headers
 multi_block=yes
@@ -49,12 +49,8 @@ sheets_to_skip_names=
 #### for xml file type
 nesting_tags=
 
-# Munge formula sections (required if in munge_strings list) #
-[in_field_values]
-
-[in_count_headers]
-
-[constant_over_sheet]
+[munge formulas]
+# give formulas for all elements (except constants to be read from .ini file)
 
 # Values to ignore (optional) #
 [ignore]

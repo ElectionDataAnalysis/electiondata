@@ -10,7 +10,7 @@ count_count_header_row_numbers=0
 count_field_name_row=0
 constant_over_file=CountItemType
 
-[in_field_values]
+[munge formulas]
 ReportingUnit=<CountyName>
 Party=<PartyCode>
 CandidateContest=<RaceName>

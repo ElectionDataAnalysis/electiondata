@@ -4,7 +4,7 @@
 file_type=excel
 
 ## Required for all file types except nist_v2_xml):
-#### Counts are found in one way of: by_field_names,by_column_numbers
+#### Counts are found in one way of: by_name,by_number
 count_columns_specified=by_number
 #### Munge string locations must be sublist of: in_field_values,in_count_headers,constant_over_sheet,constant_over_file ##
 
@@ -13,7 +13,7 @@ rows_to_skip=3
 
 ################################################
 ## Sometimes required format parameters:
-#### if count_columns_specified is 'by_column_numbers':
+#### if count_columns_specified is 'by_number':
 count_column_numbers=1,2,3,4,5,6,7
 #### if 'in_count_headers' is in munge_strings
 #### (start numbering from first unskipped row, or first row of block):
@@ -44,10 +44,8 @@ sheets_to_skip_names=
 nesting_tags=
 
 # Munge formula sections (required if in munge_strings list) #
-[in_field_values]
+[munge formulas]
 ReportingUnit=<Summary By Counties>
-
-[in_count_headers]
 Party={<count_header_0>,^.*[ |,]([a-z]{1,3})$}
 Candidate={<count_header_0>,(Scatter$|\*corrections submitted by clerks$|\*corrections received by clerks$|\*corrections received from clerks$|^[\w .\']+|^[\w \']+, Sr\.|^[\w \']+, Jr\.)(?:$|\W+[a-z]+$)}
 

@@ -13,12 +13,12 @@ noncount_header_row=0
 
 
 # Munge formula sections (required if in munge_strings list) #
-[in_field_values]
+[munge formulas]
 ReportingUnit=<MUNICIPALITY>
 CandidateContest=US Congress District <DIST>
 CountItemType=uocava
 
-[in_count_headers]
+
 Candidate=<count_header_0>
 Party=<count_header_2>
 

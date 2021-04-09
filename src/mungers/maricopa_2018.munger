@@ -9,7 +9,7 @@ noncount_header_row=0
 count_field_name_row=0
 constant_over_file=CountItemType
 
-[in_field_values]
+[munge formulas]
 ReportingUnit=<PRECINCT_NAME>
 Party={<CANDIDATE_FULL_NAME>,^([A-Z]{3}) - .*|Write-In Candidate$}
 CandidateContest=<CONTEST_FULL_NAME>

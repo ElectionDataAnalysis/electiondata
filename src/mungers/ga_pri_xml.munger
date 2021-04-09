@@ -1,11 +1,11 @@
 [format]
 file_type=xml
-count_columns_specified=by_field_names
+count_columns_specified=by_name
 
 encoding=ASCII
 count_fields_by_name=County.votes
 
-[in_field_values]
+[munge formulas]
 ReportingUnit=<County.name>
 Party=<Choice.party>
 CandidateContest=<Contest.text>

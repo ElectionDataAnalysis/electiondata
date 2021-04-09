@@ -3,7 +3,7 @@
 ## Required format parameters:
 #### File type must be one of: excel,json-nested,xml,flat_text
 file_type=excel
-#### Counts are found in one way of: by_field_names,by_column_numbers
+#### Counts are found in one way of: by_name,by_number
 count_columns_specified=by_number
 #### Munge string locations must be sublist of: in_field_values,in_count_headers,constant_over_sheet,constant_over_file ##
 
@@ -14,16 +14,16 @@ rows_to_skip=
 ## Sometimes required format parameters:
 #### for flat_text file type:
 flat_text_delimiter=
-#### if count_columns_specified is 'by_field_names':
+#### if count_columns_specified is 'by_name':
 count_fields_by_name=
-#### if count_columns_specified is 'by_column_numbers':
+#### if count_columns_specified is 'by_number':
 count_column_numbers=2,3,4,5,6,7,8,9,10
 #### if 'in_count_headers' is in munge_strings
 #### (start numbering from first unskipped row):
 count_count_header_row_numbers=0,1,2
 #### if 'constant_over_file' is in munge_strings (NB: give value for each in .ini file):
 constant_over_file=CountItemType
-#### if file type is flat_text or excel and count_columns_specified is 'by_field_names'
+#### if file type is flat_text or excel and count_columns_specified is 'by_name'
 #### (start numbering from first unskipped row):
 count_field_name_row=
 #### if file type is flat_text or excel and not all rows are data:
@@ -51,13 +51,13 @@ sheets_to_skip_names=
 nesting_tags=
 
 # Munge formula sections (required if in munge_strings list) #
-[in_field_values]
+[munge formulas]
 ReportingUnit=<sheet_name>;<PRECINCT NAME>
 Candidate={<count_header_2>,^(?:\w\w\w |)(.*)$}
 CandidateContest=<count_header_0>
 Party={<count_header_2>,^(\w\w\w) .*$}
 
-[in_count_headers]
+
 
 [constant_over_sheet]
 

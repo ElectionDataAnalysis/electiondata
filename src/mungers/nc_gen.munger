@@ -8,7 +8,7 @@ count_column_numbers=9,10,11,12,13
 noncount_header_row=0
 count_count_header_row_numbers=0
 
-[in_field_values]
+[munge formulas]
 ReportingUnit=<County>;<Precinct> - <Real Precinct>
 Party=<Choice Party>
 CandidateContest=<Contest Name>
@@ -16,5 +16,5 @@ Candidate=<Choice>
 BallotMeasureContest=<Contest Name>
 BallotMeasureSelection=<Choice>
 
-[in_count_headers]
+
 CountItemType=<count_header_0>

@@ -13,10 +13,10 @@ constant_over_file=CandidateContest,CountItemType
 multi_block=yes
 max_blocks=1
 
-[in_field_values]
+[munge formulas]
 ReportingUnit=<Summary By Counties>
 
-[in_count_headers]
+
 Party={<count_header_0>,^.*[ |,]([a-z]{1,3})$}
 Candidate={<count_header_0>,(Scatter$|\*corrections submitted by clerks$|\*corrections received by clerks$|\*corrections received from clerks$|^[\w .\']+|^[\w \']+, Sr\.|^[\w \']+, Jr\.)(?:$|\W+[a-z]+$)}
 

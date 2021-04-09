@@ -21,7 +21,7 @@ brace_pattern = re.compile(r"{<([^,]*)>,([^{}]*|[^{}]*{[^{}]*}[^{}]*)}")
 no_param_file_types = {"nist_v2_xml"}
 
 opt_munger_data_types: Dict[str, str] = {
-    "count_locations": "string",
+    "count_columns_specified": "string",
     "munge_strings": "list-of-strings",
     "sheets_to_read_names": "list-of-strings",
     "sheets_to_skip_names": "list-of-strings",
@@ -46,14 +46,14 @@ opt_munger_data_types: Dict[str, str] = {
 
 munger_dependent_reqs: Dict[str, Dict[str, List[str]]] = {
     "file_type": {
-        "flat_text": ["flat_text_delimiter", "count_locations"],
-        "xml": ["count_locations", "munge_strings"],
-        "json-nested": ["count_locations", "munge_strings"],
-        "excel": ["count_locations"],
+        "flat_text": ["flat_text_delimiter", "count_columns_specified"],
+        "xml": ["count_columns_specified", "munge_strings"],
+        "json-nested": ["count_columns_specified", "munge_strings"],
+        "excel": ["count_columns_specified"],
     },
-    "count_locations": {
-        "by_field_names": ["count_fields_by_name"],
-        "by_column_numbers": ["count_column_numbers"],
+    "count_columns_specified": {
+        "by_name": ["count_fields_by_name"],
+        "by_number": ["count_column_numbers"],
     },
 }
 
@@ -71,7 +71,7 @@ opt_munger_param_values: Dict[str, List[str]] = {
         "constant_over_file",
         "constant_over_sheet",
     ],
-    "count_locations": ["by_field_names", "by_column_numbers"],
+    "count_columns_specified": ["by_name", "by_number"],
 }
 
 string_location_reqs: Dict[str, List[str]] = {
@@ -608,17 +608,17 @@ def melt_to_one_count_column(
         df.columns = [";:;".join([f"{x}" for x in tup]) for tup in df.columns]
 
     # define count columns
-    if p["count_locations"] == "by_column_numbers":
+    if p["count_columns_specified"] == "by_number":
         count_columns = [
             df.columns[idx] for idx in p["count_column_numbers"] if idx < df.shape[1]
         ]
-    elif p["count_locations"] == "by_field_names":
+    elif p["count_columns_specified"] == "by_name":
         if multi:
             err = ui.add_new_error(
                 err,
                 "munger",
                 mu_name,
-                "If there are multiple header rows, need to have count_locations=by_column_numbers ",
+                "If there are multiple header rows, need to have count_columns_specified=by_number ",
             )
             return pd.DataFrame(), err
         count_columns = [c for c in p["count_fields_by_name"] if c in df.columns]
@@ -627,7 +627,7 @@ def melt_to_one_count_column(
             err,
             "munger",
             mu_name,
-            f"count_locations parameter must be either by_column_numbers or by_field_names",
+            f"count_columns_specified parameter must be either by_number or by_name",
         )
         return pd.DataFrame(), err
 
@@ -667,7 +667,10 @@ def melt_to_one_count_column(
                 [tab_to_df[idx] for idx in p["count_header_row_numbers"]]
             ]
             melted.drop("header_0", axis=1, inplace=True)
-
+    elif len(p["count_header_row_numbers"]) == 1:
+        count_header_row = p["count_header_row_numbers"].pop()
+        # rename header_0 to count_header_i
+        melted.rename(columns={"header_0": f"count_header_{count_header_row}"}, inplace=True)
     return melted, err
 
 
@@ -998,7 +1001,7 @@ def raw_to_id_simple(
                 "munger",
                 munger_name,
                 f"AttributeError ({exc}) while adding internal ids for {t}."
-                f"Check that munger",
+                f"Check munger",
             )
         except Exception as exc:
             err = ui.add_new_error(
@@ -1356,7 +1359,7 @@ def get_and_check_munger_params(
     if params["file_type"] in ["excel", "flat_text"]:
         # # count_field_name_row is given where required
         if (params["count_field_name_row"] is None) and (
-            params["count_locations"] == "by_field_names"
+            params["count_columns_specified"] == "by_name"
         ):
             err = ui.add_new_error(
                 err,

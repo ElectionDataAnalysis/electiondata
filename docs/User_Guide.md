@@ -46,7 +46,7 @@ and similarly, if necessary, for any Contest or Selection. If there is more than
     * (required) a field delimiter `flat_text_delimiter` to be specified (usually `flat_text_delimiter=,` for csv or `flat_text_delimiter=tab` for .txt)
   
   `count_columns_specified`: controls how the system looks for counts. Related optional and required parameters must be given under the `[count_columns_specified]` header.
-  * 'by_field_names' (NB: as of 12/2020, for this case system can handle only files with only one field-name row for the count fields. If there are multiple header rows for the count columns, use the 'by_column_number' option.)
+  * 'by_name' (NB: as of 12/2020, for this case system can handle only files with only one field-name row for the count fields. If there are multiple header rows for the count columns, use the 'by_column_number' option.)
     * (required) list `count_fields_by_name` of names of fields containing counts. 
     * (required for 'excel' and 'flat_text' file_types) specify location of field names for count columns. with integer `count_field_name_row` (NB: top row not skipped is 0, next row is 1, etc.)
   * 'by_column_number'
@@ -103,7 +103,7 @@ count_column_numbers=11
 all_rows=data
 constant_over_file=CountItemType
 
-[in_field_values]
+[munge formulas]
 ReportingUnit=<column_6>;<column_6,column_7>;Ward <column_8>;Precinct <column_9> Label <column_10>
 Party=<column_5>
 CandidateContest=<column_2,column_3>
@@ -161,7 +161,7 @@ NB: if there are multiple rows in the lookup file with the same values for the l
 ## Formulas for parsing munge string information
 For many results files, it is enough to create concatenation formulas, referencing field names from your file by putting them in angle brackets. 
 
-### flat text `[in_field_values]` 
+### flat text 
  Consider this snippet from a comma-separated Philadelphia, Pennsylvania voting results file:
 ```
 WARD,DIVISION,VOTE TYPE,CATEGORY,SELECTION,PARTY,VOTE COUNT
@@ -171,7 +171,7 @@ WARD,DIVISION,VOTE TYPE,CATEGORY,SELECTION,PARTY,VOTE COUNT
 ```
 The formula `Ward <WARD>;Division <DIVISION>` would yield 'Ward 01;Division 01'.
 
-### xml `[in_field_values]`
+### xml 
 Consider this snippet from a Georgia voting results file:
  ```
         <Choice key="25" text="Raphael Warnock (Dem)" totalVotes="2279559">
@@ -182,7 +182,7 @@ Consider this snippet from a Georgia voting results file:
 ```
 The formula `<VoteType.name>` would yield 'Election Day Votes'.
 
-### json-nested `[in_field_values]` 
+### json-nested 
 Consider this snippet from the beginning of a Texas results file (with tabs and line breaks for clarity -- original is all one line):
  ```
 {
@@ -199,7 +199,7 @@ The colons (:) and braces ({}) determine the nesting and the syntax. Leaving out
 ```
 The party ("REP") is nested with keys `48001`, `Races`, `1001`, `C`, `9240` and `P`. The formula `Party=<C.P>` tells the system to find the string whose nested keys contain `C` and then `P`, in that order. Note that json files from other jurisdictions may have different nesting conventions. 
 
-### flat text `[in_count_headers]`
+### flat text 
 Consider this snippet from a tab-separated North Carolina voting results file:
 ```
 County	Election Date	Precinct	Contest Group ID	Contest Type	Contest Name	Choice	Choice Party	Vote For	Election Day	One Stop	Absentee by Mail	Provisional	Total Votes	Real Precinct
@@ -209,7 +209,7 @@ ALAMANCE	11/06/2018	03S	1228	S	NC COURT OF APPEALS JUDGE SEAT 3	Michael Monaco, 
 ```
 Here the CountItemType value ('Election Day','One Stop' a.k.a. early voting, 'Absentee by Mail','Provisional' must be read from the column headers, i.e., the information in row 0 of the file. For the first data row, the formula `<count_header_0>` would yield CountItemType 'Election Day' for the VoteCount of 59, 'One Stop' for the vote count of 65, etc.
 
-### excel `[constant_over_sheet]`
+### excel 
 To be read automatically, information that is constant over a sheet must be read either from the sheet name (using `<sheet_name>`) or from the left-most, non-blank entry in a row of the sheet using `<row_j>`, where `j` is the row number. Row numbers start with `0` after skipping the number of rows given in `rows_to_skip`.
 
 ### Values constant over a file
@@ -232,7 +232,7 @@ Note what is capitalized and what is not. The CandidateContest name (here `ME Go
 
 Another option is to specify the element with a constant concatenation formula in any one of the other munge string locations. E.g., 
 ```
-`[in_field_values]`
+`[munge formulas]`
 ReportingUnit=<CTY>;<TOWN>
 CandidateContest=Guv
 ```

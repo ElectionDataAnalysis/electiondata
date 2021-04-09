@@ -2,9 +2,9 @@
 [format]
 ## Required format parameters:
 file_type=excel
-count_columns_specified= by_field_names
+count_columns_specified= by_name
 
-#### if count_columns_specified is 'by_field_names':
+#### if count_columns_specified is 'by_name':
 count_fields_by_name=PVTALLY2
 #### if 'constant_over_file' is in munge_strings:
 constant_over_file=CountItemType
@@ -12,7 +12,7 @@ count_field_name_row=0
 noncount_header_row=0
 
 
-[in_field_values]
+[munge formulas]
 ReportingUnit=<COUNTY>;<PRECINCT>
 CandidateContest=<OFFICENAME>
 Candidate=<RNAME2>

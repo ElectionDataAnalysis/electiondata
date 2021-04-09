@@ -9,10 +9,10 @@ count_count_header_row_numbers=0
 sheets_to_read_numbers=0
 constant_over_file=CountItemType
 
-[in_field_values]
+[munge formulas]
 Party={<Candidate>,^.* \(([A-Z]{3})\)$}
 CandidateContest=<Contest>
 Candidate={<Candidate>,^(.*) \([A-Z]{3}\)$}
 
-[in_count_headers]
+
 ReportingUnit=<count_header_0>
