@@ -2,7 +2,6 @@
 [format]
 file_type=flat_text
 count_locations=by_field_names
-munge_strings=in_field_values,in_count_headers
 
 flat_text_delimiter=,
 count_fields_by_name=Early Voting Votes,Election Day Votes,By Mail Votes,Prov. Votes,By Mail 2 Votes,Total Votes

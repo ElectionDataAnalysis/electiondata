@@ -1,6 +1,5 @@
 [format]
 file_type=excel
-munge_strings=constant_over_sheet,in_field_values,in_count_headers
 count_locations=by_column_numbers
 
 encoding=iso-8859-1

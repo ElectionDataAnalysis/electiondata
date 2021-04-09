@@ -6,7 +6,6 @@ file_type=
 #### Counts are found in one way of: by_field_names,by_column_numbers
 count_locations=
 #### Munge string locations must be sublist of: in_field_values,in_count_headers,constant_over_sheet,constant_over_file ##
-munge_strings=
 
 # Optional parameter for excel or flat_text
 rows_to_skip=

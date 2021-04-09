@@ -1,6 +1,5 @@
 [format]
 file_type=excel
-munge_strings=in_field_values
 
 sheets_to_skip_names=Contents,Statewide Offices,President,U.S. Congress,General Assembly,State Board of Education,Judicial
 rows_to_skip=0

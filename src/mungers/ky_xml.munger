@@ -1,7 +1,6 @@
 [format]
 file_type=xml
 count_locations=by_field_names
-munge_strings=in_field_values
 
 encoding=ASCII
 count_fields_by_name=County.votes

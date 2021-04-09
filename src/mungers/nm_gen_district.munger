@@ -1,7 +1,6 @@
 [format]
 file_type=excel
 count_locations=by_column_numbers
-munge_strings=in_field_values,in_count_headers,constant_over_sheet
 
 rows_to_skip=6
 count_column_numbers=2,3,4,5,6,7,8
@@ -28,7 +27,6 @@ ReportingUnit=TOTALS
 [count_header_0 lookup]
 source_file=New-Mexico/RadGridExport_revised.txt
 file_type=flat_text
-munge_strings=in_field_values
 flat_text_delimiter=tab
 noncount_header_row=0
 encoding=ASCII

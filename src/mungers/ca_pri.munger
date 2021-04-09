@@ -1,7 +1,6 @@
 [format]
 file_type=excel
 count_locations=by_column_numbers
-munge_strings=in_field_values
 
 encoding=windows-1252
 thousands_separator=,

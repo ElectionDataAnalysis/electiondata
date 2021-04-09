@@ -1,7 +1,6 @@
 [format]
 file_type=excel
 count_locations=by_column_numbers
-munge_strings=in_field_values,in_count_headers,constant_over_sheet,constant_over_file
 constant_over_file=CountItemType
 
 thousands_separator=,

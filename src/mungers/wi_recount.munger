@@ -6,7 +6,6 @@ file_type=excel
 #### Counts are found in one way of: by_field_names,by_column_numbers
 count_locations=by_column_numbers
 #### Munge string locations must be sublist of: in_field_values,in_count_headers,constant_over_sheet,constant_over_file ##
-munge_strings=constant_over_file,in_field_values,in_count_headers
 
 ## Sometimes required format parameters:
 #### if count_locations is 'by_column_numbers':
@@ -38,6 +37,5 @@ lookup_id=candidate_name_per_recount_file
 Party_replacement=<party_per_preliminary_results_file>
 Candidate_replacement=<candidate_name_per_recount_file>
 file_type=excel
-munge_strings=in_field_values
 noncount_header_row=0
 

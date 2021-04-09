@@ -1,7 +1,6 @@
 [format]
 file_type=flat_text
 count_locations=by_column_numbers
-munge_strings=in_count_headers,in_field_values
 
 encoding=iso-8859-1
 flat_text_delimiter=tab

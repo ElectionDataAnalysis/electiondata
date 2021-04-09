@@ -22,7 +22,7 @@ Ensure that the munger files are appropriate for your results file(s). If the mu
  
  The file with munger parameters, which must have the extension `.munger`, has one or more sections, each with a header:
   * (required) `[format]` for the main parameters
-  * (may be required) one section each string locations `in_field_values` and `in_count_headers` if these are listed in the `munge_strings` parameter (defined below). 
+  * (required) `[munge formulas]`
   * (may be required) one section for each element in the `lookups` list. E.g., if `lookups=Candidate,Party` then there must be  `[Candidate lookup]` and `[Party lookup]` sections. 
   * (optional) `[ignore]` Unrecognized Contests, Candidates and Parties are collected as "none or unknown". Some states (e.g., Wisconsin 2018 General) report total votes over a contest next to individual candidates' votes. The system may read, e.g., "Total Votes Cast" as an unrecognized party name. In this case include the lines:
   ```
@@ -31,7 +31,7 @@ Party=Total Votes Cast
 ```
 and similarly, if necessary, for any Contest or Selection. If there is more than one Party (e.g.) to be ignored, use a comma-separated list: `Candidate=Total Votes Cast,Registered Voters`
  
- There is one required parameter: `file_type`. For any file type other than nist_v2_xml, there are two more required parameters: `count_locations` and `munge_strings`. Depending on the values of these, there are other required and optional fields. 
+ There is one required parameter: `file_type`. For any file type other than nist_v2_xml,  `count_locations` is also required. Depending on the values of these, there are other required and optional fields. 
  `file_type`: controls which function from the python `pandas` module reads the file contents. Related optional and required parameters must be given under the `[format]` header.
    * 'nist_v2_xml' for xml-formatted file that obeys the [NIST Common Data Format schema](http://itl.nist.gov/ns/voting/1500-100/v2). For this file_type, no other parameters are needed. If there are no items to ignore, use the munger [nist_v2_xml](mungers/nist_v2_xml.munger). Otherwise, use a revised version of that munger, with an `[ignore]` section added.
    * 'excel'
@@ -52,15 +52,9 @@ and similarly, if necessary, for any Contest or Selection. If there is more than
   * 'by_column_number'
     * (required) list `count_column_numbers` of column numbers which may contain counts. There is no problem if this list contains spurious columns.
     
-  `munge_strings`: controls how the system looks for the character strings used to munge the non-count information (Candidate, Party, etc.). There may be multiple, so the value is a list. There are related optional and required parameters depending on the values in the `munge_strings` list.
-  * 'in_field_values'
-    * (required) either:
-      * if all_rows=data (i.e., no field names) list `string_field_column_numbers` of integers designating columns (leftmost column is 0, next is 1, etc.)
-      * if some of the field values are foreign keys, must give lookup information. For each foreign key, need a separate section with corresponding header (field name from the file with the counts, plus " lookup", e.g. `[cnadidate_id lookup]` if the results file has a `candidate_id` field. This section needs:
-        * `source_file` the path to the source file, relative to the results directory given in `run_time.ini`
-        * all the usual basic format parameters except `count_locations` -- but not the usual formulas
-        * `lookup_id` is the single field name holding the key to the lookup table. (If there are no headers in the lookup source file, use, e.g., `column_0`)
-        * for each element whose formula looks something up from this table, a formula for the foreign key replacement. The formula should be named for the element in whose formula the replacement will be made, with suffix "_replacement", e.g., `Party_replacement` for the formula to replace the foreign key in the original `Party` formula.      
+    * (required) either: [[[when? ***]]]
+      * if all_rows=data (i.e., no field names) list `string_field_column_numbers` of integers designating columns (leftmost column is 0, next is 1, etc.
+        
     * (required for 'excel' and 'flat_text' file_types where not all rows are data) specify location of field names for string columns. Need integer `noncount_header_row` (NB: top row not skipped is 0, next row is 1, etc.)
   * 'in_count_headers' this is used, e.g., when each candidate has a separate column in a tabular file. In this case there may be a single header row with relevant info, or there may be several rows (e.g., Contest in one row, Candidate in another row)
     * (required) list `count_count_header_row_numbers` of integers for rows containing necessary character strings. (NB: top row not skipped is 0, next row is 1, etc.)
@@ -81,9 +75,16 @@ and similarly, if necessary, for any Contest or Selection. If there is more than
    * (optional) `max_blocks` if `multi_block=yes`, `max_blocks` is an integer telling the system how many blocks at most to read off of each sheet.
  
  
-Put each formula for parsing information from the results file into the corresponding munge formula section (`[in_field_values]`, `[in_count_headers]` or `[constant_over_sheet]`. Constant items can be give either:
+Put each formula for parsing information from the results file into the `[munge formulas]` section. Constant items can be give either:
  * as comma separated list in constant_over_sheet parameter in .munger file, with values in the .ini file
- * as a constant formula in any of the munge formula sections, in which case a corresponding entry must be made in the jurisdictions `dictionary.txt`.
+ * as a constant formula in the `[munge formulas]` section, in which case a corresponding entry must be made in the jurisdiction's `dictionary.txt`.
+
+If any of the munge formulas depend on information from other files, munger must specify lookup information. For each foreign key, need a separate section with corresponding header (field name from the file with the counts, plus " lookup", e.g. `[cnadidate_id lookup]` if the results file has a `candidate_id` field. This section needs:
+        * `source_file` the path to the source file, relative to the results directory given in `run_time.ini`
+        * all the usual basic format parameters except `count_locations` -- but not the usual formulas
+        * `lookup_id` is the single field name holding the key to the lookup table. (If there are no headers in the lookup source file, use, e.g., `column_0`)
+        * for each element whose formula looks something up from this table, a formula for the foreign key replacement. The formula should be named for the element in whose formula the replacement will be made, with suffix "_replacement", e.g., `Party_replacement` for the formula to replace the foreign key in the original `Party` formula.      
+
  
 Sometimes the election agency provides counts by ids for, say, candidates, and also provides definitions for those ids. For example, the data may be in the NIST common data format, or it may have been exported as separate tables from a relational database. In this case the file containing the counts may have foreign keys. The lookup formulas are given in lookup sections named by each foreign key column (or set of columns). Each lookup section must have:
  * a `source_file` parameter with a path to the file with the information to be looked up

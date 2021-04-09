@@ -1,7 +1,6 @@
 [format]
 file_type=flat_text
 count_locations=by_column_numbers
-munge_strings=in_count_headers,in_field_values,constant_over_file
 
 encoding=utf_8
 flat_text_delimiter=,
