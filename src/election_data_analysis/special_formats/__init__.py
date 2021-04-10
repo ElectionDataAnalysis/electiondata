@@ -402,7 +402,7 @@ def replace_id_values(df, f_path):
     return df
 
 
-def read_nist_xml(f_path: str) -> (pd.DataFrame, Optional[Dict]):
+def read_nist_v2_xml(f_path: str) -> (pd.DataFrame,Optional[Dict]):
     err = None
     # TODO add error handling
     try:

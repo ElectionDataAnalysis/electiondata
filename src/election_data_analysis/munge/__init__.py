@@ -2149,7 +2149,7 @@ def file_to_raw_df(
 
     if p["file_type"] == "nist_v2_xml":
         try:
-            df, err = sf.read_nist_xml(f_path)
+            df, err = sf.read_nist_v2_xml(f_path)
             if ui.fatal_error(err):
                 return pd.DataFrame(), err
         except Exception as exc:
