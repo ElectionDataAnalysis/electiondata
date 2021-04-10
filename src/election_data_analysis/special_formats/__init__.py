@@ -1,10 +1,10 @@
 import json
 import pandas as pd
 import traceback
-import xml.etree.ElementTree as et
+import lxml.etree as et
 from copy import deepcopy
 from pathlib import Path
-from typing import Optional, Dict, List, Any
+from typing import Optional, Dict, List, Any, Tuple
 from election_data_analysis import munge as m
 from election_data_analysis import user_interface as ui
 
@@ -27,6 +27,96 @@ cit_from_raw_nist_df = pd.DataFrame(
     [["CountItemType", x, x] for x in cit_list],
     columns=["cdf_element", "cdf_internal_name", "raw_identifier_value"],
 )
+
+
+def xml_to_standard_count(file_path: str, munger_path: str) -> (pd.DataFrame, Optional[dict]):
+    munger_name = Path(munger_path).stem
+    file_name = Path(file_path).stem
+    # TODO error handling; preliminary check of munger
+
+    p, err = m.get_and_check_munger_params(munger_path)
+    try:
+        parse_info = xml_parse_info(p)
+    except Exception as exc:
+
+        err = ui.add_new_error(err, "munger", munger_name, f"Exception in xml-parsing info")
+        if ui.fatal_error(err):
+            return pd.DataFrame, err
+    element_path, new_err = xml_element_path(munger_path, suffix="_raw")
+    if new_err:
+        err = ui.consolidate_errors([err, new_err])
+        if ui.fatal_error(err):
+            return pd.DataFrame, err
+    tree = et.parse(file_path)
+    df, new_err = df_from_tree(tree, element_path=element_path, file_name=file_name, **parse_info, )
+    if new_err:
+        err = ui.consolidate_errors([err, new_err])
+    return df, err
+
+
+def xml_parse_info(p: Dict[str, Any]) -> Dict[str, Any]:
+    """Extracts parsing info from munger parameters into dictionary
+    {'count_path': ..., 'count_attrib': ...}"""
+    parse_info = dict()
+    count_info = p["count_location"].split(".")
+    parse_info["count_path"] = count_info[0]
+    if len(count_info) > 1:
+        parse_info["count_attrib"] = count_info[1]
+    else:
+        parse_info["count_attrib"] = None
+    return parse_info
+
+
+def xml_element_path(munger_path: str, suffix: str = "") -> (Dict[str, Dict[str, str]], Optional[dict]):
+    """Extracts xml path info for munge strings from munger"""
+    xml_formula = dict()
+    f, err = m.get_munge_formulas(munger_path)
+    if ui.fatal_error(err):
+        return xml_formula, err
+
+    for elt in f.keys():
+        # read tag and attribute from < . > notation
+        tag, attrib = f[elt][1:-1].split(".")
+        xml_formula[f"{elt}{suffix}"] = {"tag": tag, "attrib": attrib}
+    return xml_formula, err
+
+
+def df_from_tree(
+        tree: et.ElementTree,
+        count_path: str,
+        count_attrib: Optional[str],
+        element_path: Dict[str, Dict[str, str]],
+        file_name: str,
+) -> (pd.DataFrame, Optional[dict]):
+    """Reads all counts, along with info from element paths ((tag, attr) for each element), into a dataframe.
+    If count_attrib is None, reads count from value of element; otherwise from attribute.
+    Each element_path value should be of the form 'tag0/tag1/.../tagn.attribute_name"""
+    head = count_path.split("/")[0]
+    tail = count_path[len(head)+1:]
+    root = tree.getroot()
+    if root.tag == head:
+        err = None
+    else:
+        err = ui.add_new_error(
+            None, "file", file_name,
+            f"Root element of file is not {head}, as expected per munger"
+        )
+        return (pd.DataFrame, err)
+    df_rows = list()
+    for count in root.findall(tail):
+        if count_attrib:
+            row = {"Count": int(count.attrib[count_attrib])}
+        else:
+            row = {"Count": int(count.text)}
+        ancestor = count
+        while ancestor is not None:
+            for elt in element_path.keys():
+                if element_path[elt]["tag"] == ancestor.tag:
+                    row[elt] = ancestor.attrib[element_path[elt]["attrib"]]
+            ancestor = ancestor.getparent()
+        df_rows.append(row)
+    df = pd.DataFrame(df_rows)
+    return df, err
 
 
 def strip_empties(li: list) -> list:

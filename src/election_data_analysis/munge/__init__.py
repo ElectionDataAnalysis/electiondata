@@ -22,6 +22,7 @@ no_param_file_types = {"nist_v2_xml"}
 
 opt_munger_data_types: Dict[str, str] = {
     "count_columns_specified": "string",
+    "count_location": "string",
     "munge_strings": "list-of-strings",
     "sheets_to_read_names": "list-of-strings",
     "sheets_to_skip_names": "list-of-strings",
@@ -47,7 +48,7 @@ opt_munger_data_types: Dict[str, str] = {
 munger_dependent_reqs: Dict[str, Dict[str, List[str]]] = {
     "file_type": {
         "flat_text": ["flat_text_delimiter", "count_columns_specified"],
-        "xml": ["count_columns_specified", "munge_strings"],
+        "xml": ["count_location"],
         "json-nested": ["count_columns_specified", "munge_strings"],
         "excel": ["count_columns_specified"],
     },
@@ -65,12 +66,6 @@ req_munger_parameters: Dict[str, Dict[str, Any]] = {
 }
 
 opt_munger_param_values: Dict[str, List[str]] = {
-    "munge_strings": [
-        "in_field_values",
-        "in_count_headers",
-        "constant_over_file",
-        "constant_over_sheet",
-    ],
     "count_columns_specified": ["by_name", "by_number"],
 }
 
@@ -1168,25 +1163,22 @@ def munge_raw_to_ids(
 
 
 def get_munge_formulas(
-    munger_path: str, header_list: List[str] = ["munge formulas"]
+    munger_path: str,
 ) -> (Dict[str, str], Optional[dict]):
     err = None
-    formulas = dict()
-    for source in header_list:
-        f, new_err = ui.get_parameters(
-            required_keys=[],
-            optional_keys=all_munge_elements,
-            header=source,
-            param_file=munger_path,
-        )
-        if new_err:
-            err = ui.consolidate_errors([err, new_err])
-            if ui.fatal_error(new_err):
-                return dict(), err
-        f = {k: v for k, v in f.items() if v}
-        if f:
-            formulas.update(f)
-    return formulas, err
+    f, new_err = ui.get_parameters(
+        required_keys=[],
+        optional_keys=all_munge_elements,
+        header="munge formulas",
+        param_file=munger_path,
+    )
+    # drop any empty formulas
+    f = {k:v for k,v in f.items() if v}
+    if new_err:
+        err = ui.consolidate_errors([err, new_err])
+        if ui.fatal_error(new_err):
+            return dict(), err
+    return f, err
 
 
 def munge_source_to_raw(
@@ -1354,9 +1346,20 @@ def get_and_check_munger_params(
                     err = ui.add_new_error(
                         err, "munger", munger_name, f"{k0}={k1}', but {v2} not found"
                     )
+    # # extra requirements for xml
+    if params["file_type"] == "xml":
+        # check count_location has correct format
+        cl_parts = params["count_location"].split(".")
+        if len(cl_parts) > 2:
+            err = ui.add_new_error(
+                err,
+                "munger",
+                munger_name,
+                f"count_location parameter can have at most one period (.)",
+            )
 
     # # extra compatibility requirements for excel or flat text files
-    if params["file_type"] in ["excel", "flat_text"]:
+    elif params["file_type"] in ["excel", "flat_text"]:
         # # count_field_name_row is given where required
         if (params["count_field_name_row"] is None) and (
             params["count_columns_specified"] == "by_name"
@@ -1405,38 +1408,63 @@ def get_and_check_munger_params(
     # TODO check that required headers are present (see User_Guide) per munge_strings list
     # TODO check that required headers are present (see User_Guide) per lookups list
 
-    # # add parameter listing all munge fields
-    # get lists of string fields expected in raw file
-    # TODO why can't munge_fields and string_fields be the same?
-    params["munge_fields"], new_err = get_string_fields(munger_path)
-    if new_err:
-        err = ui.consolidate_errors([err, new_err])
+    # get all munge formulas (excluding _replacement formulas)
+    formulas, new_err = get_munge_formulas(munger_path)
 
-    # classify munge fields
-    mf_by_type = {
-        "in_count_headers": set(),
-        "in_field_values": set(),
-        "constant_over_sheet": set(),
-    }
-    for mf in params["munge_fields"]:
-        if mf[:13] == "count_header_":
-            try:
-                int(mf[13:])
-                mf_by_type["in_count_headers"].update({mf})
-            except ValueError:
-                mf_by_type["in_field_values"].update({mf})
-        elif mf[:4] == "row_":
-            try:
-                int(mf[4:])
+    # check formulas are well-formed and consistent with count_location for xml
+    if params["file_type"] == "xml":
+        xml_formula_pattern = re.compile(r"^\<(\w+)\.\w+\>$")
+        tags = params["count_location"].split(".")[0].split("/")
+        for elt in formulas.keys():
+            if formulas[elt]:
+                tag = re.findall(xml_formula_pattern, formulas[elt])
+                if not tag:
+                    err = ui.add_new_error(
+                        err,
+                        "munger",
+                        munger_name,
+                        f"Formula for {elt} not well-formed"
+                    )
+                elif tag[0] not in tags:
+                    err = ui.add_new_error(
+                        err,
+                        "munger",
+                        munger_name,
+                        f"Tag ({tag[0]}) in formula for {elt} not found in count_location path"
+                    )
+
+    elif params["file_type"] in ["excel", "flat_text"]:
+        # # add parameter listing all munge fields
+        # get lists of string fields expected in raw file
+        # TODO why can't munge_fields and string_fields be the same?
+        params["munge_fields"], new_err = get_string_fields(munger_path)
+        if new_err:
+            err = ui.consolidate_errors([err, new_err])
+
+        # classify munge fields
+        mf_by_type = {
+            "in_count_headers": set(),
+            "in_field_values": set(),
+            "constant_over_sheet": set(),
+        }
+        for mf in params["munge_fields"]:
+            if mf[:13] == "count_header_":
+                try:
+                    int(mf[13:])
+                    mf_by_type["in_count_headers"].update({mf})
+                except ValueError:
+                    mf_by_type["in_field_values"].update({mf})
+            elif mf[:4] == "row_":
+                try:
+                    int(mf[4:])
+                    mf_by_type["constant_over_sheet"].update({mf})
+                except ValueError:
+                    mf_by_type["in_field_values"].update({mf})
+            elif mf == "sheet_name":
                 mf_by_type["constant_over_sheet"].update({mf})
-            except ValueError:
+            else:
                 mf_by_type["in_field_values"].update({mf})
-        elif mf == "sheet_name":
-            mf_by_type["constant_over_sheet"].update({mf})
-        else:
-            mf_by_type["in_field_values"].update({mf})
 
-    if params["file_type"] in ["excel", "flat_text"]:
         # calculate munge_strings parameter (and warn if overwriting)
         if params["munge_strings"]:
             err = ui.add_new_error(
@@ -1449,39 +1477,16 @@ def get_and_check_munger_params(
         if params["constant_over_file"]:
             params["munge_strings"].append("constant_over_file")
 
-    # collect header rows in formulas into count_header_row_numbers list
-    params["count_header_row_numbers"] = [int(mf[13:]) for mf in mf_by_type["in_count_headers"]]
+        # collect header rows in formulas into count_header_row_numbers list
+        params["count_header_row_numbers"] = [int(mf[13:]) for mf in mf_by_type["in_count_headers"]]
 
-    #  "munge_strings" includes everything required in the formulas
-    for x in ["in_count_headers", "in_field_values", "constant_over_sheet"]:
-        if mf_by_type[x] and (x not in params["munge_strings"]):
-            err = ui.add_new_error(
-                err,
-                "munger",
-                munger_name,
-                f"{x} should be listed in munge_strings to support formula references:\n{mf_by_type[x]}",
-            )
-
-    # if constant_over_file is in munge_strings, at least one constant_over_file element must be listed
-    if "constant_over_file" in params["munge_strings"]:
-        if (not params["constant_over_file"]) or (params["constant_over_file"] == ""):
-            err = ui.add_new_error(
-                err,
-                "munger",
-                munger_name,
-                f"constant_over_file specified in munge_strings, but no constant element specified.",
-            )
-
-    # check that each lookup section has a replacement formula for each element referencing the lookup field
+   # check that each lookup section has a replacement formula for each element referencing the lookup field
     # and check that each auxiliary file exists
     headers, new_err = ui.get_section_headers(munger_path)
     if new_err:
         err = ui.consolidate_errors([err, new_err])
         if ui.fatal_error(new_err):
             return params, err
-
-    # get all munge formulas (excluding _replacement formulas)
-    formulas, new_err = get_munge_formulas(munger_path, headers)
 
     pattern = re.compile(r"^(.*) lookup$")
     for h in headers:
@@ -2157,11 +2162,22 @@ def file_to_raw_df(
                 err,
                 "file",
                 file_name,
-                f"Exception during file munge: {exc}\n"
+                f"Exception while reading file into standard count frame: {exc}\n"
                 f"Validation tools may be helpful:"
                 f"https://github.com/HiltonRoscoe/CdfTools",
             )
             return pd.DataFrame(), err
+    elif p["file_type"] == "xml":
+        try:
+            df, err = sf.xml_to_standard_count(f_path, munger_path)
+        except Exception as exc:
+            err = ui.add_new_error(
+                err,
+                "file",
+                file_name,
+                f"Exception while reading file from xml into standard count frame: {exc}\n",
+            )
+            return pd.DataFrame(),err
     else:
         # read data into standard count format dataframe
         #  append "_SOURCE" to all non-Count column names

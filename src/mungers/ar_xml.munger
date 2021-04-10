@@ -1,11 +1,11 @@
 [format]
 file_type=xml
-count_columns_specified=by_name
+count_location=ElectionResult/Contest/Choice/VoteType/County.votes
 
 encoding=ASCII
-count_fields_by_name=County.votes
 
 [munge formulas]
+## each needs to have exactly one period ##
 ReportingUnit=<County.name>
 Party=<Choice.party>
 CandidateContest=<Contest.text>
