@@ -17,7 +17,7 @@ rows_to_skip=3
 count_column_numbers=1,2,3,4,5,6,7
 #### if 'in_count_headers' is in munge_strings
 #### (start numbering from first unskipped row, or first row of block):
-count_count_header_row_numbers=0
+count_header_row_numbers=0
 #### if 'constant_over_file' is in munge_strings (NB: give value for each in .ini file):
 constant_over_file=CountItemType,CandidateContest
 #### if file type is flat_text or excel and not all rows are data:

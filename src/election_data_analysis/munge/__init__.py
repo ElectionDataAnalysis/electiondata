@@ -668,7 +668,7 @@ def melt_to_one_count_column(
             ]
             melted.drop("header_0", axis=1, inplace=True)
     elif len(p["count_header_row_numbers"]) == 1:
-        count_header_row = p["count_header_row_numbers"].pop()
+        count_header_row = p["count_header_row_numbers"][0]
         # rename header_0 to count_header_i
         melted.rename(columns={"header_0": f"count_header_{count_header_row}"}, inplace=True)
     return melted, err

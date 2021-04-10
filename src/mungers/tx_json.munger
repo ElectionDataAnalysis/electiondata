@@ -1,10 +1,11 @@
 [format]
 file_type=json-nested
-count_columns_specified=by_name
+count_locations=by_field_names
+munge_strings=in_field_values
 
 count_fields_by_name=C.V
 
-[munge formulas]
+[in_field_values]
 ReportingUnit=<N>
 Party=<C.P>
 CandidateContest=<ON>

@@ -19,7 +19,7 @@ count_fields_by_name=
 count_column_numbers=
 #### if 'in_count_headers' is in munge_strings
 #### (start numbering from first unskipped row):
-count_count_header_row_numbers=
+count_header_row_numbers=
 #### if 'constant_over_file' is in munge_strings:
 constant_over_file=
 #### if file type is flat_text or excel and count_columns_specified is 'by_name'
@@ -48,7 +48,7 @@ nesting_tags=
 
 
 
-[constant_over_sheet]
+
 
 # Values to ignore (optional) #
 [ignore]

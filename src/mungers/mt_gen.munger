@@ -6,15 +6,11 @@ rows_to_skip=6
 count_column_numbers=2,3,4,5,6,7,8,9,10,11,12,13
 string_field_names=County
 noncount_header_row=0
-count_count_header_row_numbers=0
+count_header_row_numbers=0
 constant_over_file=CountItemType
 
 [munge formulas]
 ReportingUnit=<County>
-
-
 Party={<count_header_0>,^[^a-z]*([A-Z].*)$}
 Candidate={<count_header_0>,^([^a-z]*)[A-Z].*$}
-
-[constant_over_sheet]
 CandidateContest=<sheet_name>

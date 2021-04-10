@@ -6,7 +6,7 @@ encoding=iso-8859-1
 flat_text_delimiter=,
 count_column_numbers=4
 noncount_header_row=0
-count_count_header_row_numbers=0
+count_header_row_numbers=0
 rows_to_skip=2
 
 [munge formulas]

@@ -20,7 +20,7 @@ count_fields_by_name=
 count_column_numbers=2,3,4,5,6,7,8,9,10
 #### if 'in_count_headers' is in munge_strings
 #### (start numbering from first unskipped row):
-count_count_header_row_numbers=0,1,2
+count_header_row_numbers=0,1,2
 #### if 'constant_over_file' is in munge_strings (NB: give value for each in .ini file):
 constant_over_file=CountItemType
 #### if file type is flat_text or excel and count_columns_specified is 'by_name'
@@ -59,7 +59,7 @@ Party={<count_header_2>,^(\w\w\w) .*$}
 
 
 
-[constant_over_sheet]
+
 
 # Values to ignore (optional) #
 [ignore]
