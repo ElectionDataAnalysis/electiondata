@@ -1,10 +1,9 @@
 [format]
 file_type=xml
-count_columns_specified=by_name
+count_location=electionResult/contests/contest/choices/choice/jurisdictions/jurisdiction/voteTypes/voteType.votes
 
 encoding=ASCII
-nesting_tags=contests,choices,jurisdictions,voteTypes
-count_fields_by_name=voteType.votes
+
 
 [munge formulas]
 ReportingUnit=<jurisdiction.name>

@@ -1,9 +1,7 @@
 [format]
 file_type=xml
-count_columns_specified=by_name
-
+count_location=ElectionResult/Contest/Choice/VoteType/County.votes
 encoding=utf_8
-count_fields_by_name=County.votes
 
 [munge formulas]
 ReportingUnit=<County.name>

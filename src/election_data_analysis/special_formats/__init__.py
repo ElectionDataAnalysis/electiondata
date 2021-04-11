@@ -51,6 +51,9 @@ def xml_to_standard_count(file_path: str, munger_path: str) -> (pd.DataFrame, Op
     df, new_err = df_from_tree(tree, element_path=element_path, file_name=file_name, **parse_info, )
     if new_err:
         err = ui.consolidate_errors([err, new_err])
+    non_count = [c for c in df.columns if c != "Count"]
+    df = m.clean_strings(df,non_count)
+
     return df, err
 
 
@@ -112,7 +115,10 @@ def df_from_tree(
         while ancestor is not None:
             for elt in element_path.keys():
                 if element_path[elt]["tag"] == ancestor.tag:
-                    row[elt] = ancestor.attrib[element_path[elt]["attrib"]]
+                    try:
+                        row[elt] = ancestor.attrib[element_path[elt]["attrib"]]
+                    except KeyError:
+                        pass
             ancestor = ancestor.getparent()
         df_rows.append(row)
     df = pd.DataFrame(df_rows)

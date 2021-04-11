@@ -1349,15 +1349,21 @@ def get_and_check_munger_params(
     # # extra requirements for xml
     if params["file_type"] == "xml":
         # check count_location has correct format
-        cl_parts = params["count_location"].split(".")
-        if len(cl_parts) > 2:
+        if params["count_location"]:
+            cl_parts = params["count_location"].split(".")
+            if len(cl_parts) > 2:
+                err = ui.add_new_error(
+                    err,
+                    "munger",
+                    munger_name,
+                    f"count_location parameter can have at most one period (.)",
+                )
+        else:
             err = ui.add_new_error(
-                err,
-                "munger",
-                munger_name,
-                f"count_location parameter can have at most one period (.)",
+                err, "munger", munger_name, f"count_locations parameter is missing, or missing information",
             )
-
+        if ui.fatal_error(err):
+            return dict(), err
     # # extra compatibility requirements for excel or flat text files
     elif params["file_type"] in ["excel", "flat_text"]:
         # # count_field_name_row is given where required
