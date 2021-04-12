@@ -1424,7 +1424,7 @@ def get_and_check_munger_params(
     if params["file_type"] == "xml":
         # TODO do we need to allow field patterns wtihout period?
         #  I.e., is everything read from an attribute?
-        xml_field_pattern = re.compile(r"^\<(\w+)\.\w+\>$")
+        xml_field_pattern = re.compile(r"^(\w+)(?:\.|/)\w+$")
         tags = params["count_location"].split(".")[0].split("/")
         for field in params["munge_fields"]:
             tag = re.findall(xml_field_pattern, field)
