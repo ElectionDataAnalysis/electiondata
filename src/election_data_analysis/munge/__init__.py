@@ -12,6 +12,7 @@ import re
 import os
 from sqlalchemy.orm.session import Session
 import numpy as np
+import xml.etree.ElementTree as et
 
 # constants
 default_encoding = "utf_8"
@@ -33,6 +34,7 @@ opt_munger_data_types: Dict[str, str] = {
     "quoting": "string",
     "thousands_separator": "string",
     "encoding": "string",
+    "namespace": "string",
     "count_fields_by_name": "list-of-strings",
     "count_field_name_row": "int",  # TODO allow multi-rows here?
     "count_column_numbers": "list-of-integers",
@@ -1223,7 +1225,7 @@ def munge_source_to_raw(
                     foreign_key_fields,
                     aux_info,
                     aux_directory_path,
-                    munger_name,
+                    munger_path,
                     suffix,
                     results_file_path,
                 )
@@ -1401,22 +1403,10 @@ def get_and_check_munger_params(
                     f"all_rows=data and multi_block=yes are not compatible",
                 )
 
-    # # for each value in list of string locations, requirements are met
-    for k0 in params["munge_strings"]:
-        for v2 in string_location_reqs[k0]:
-            if v2 is None:
-                err = ui.add_new_error(
-                    err,
-                    "munger",
-                    munger_name,
-                    f"{k0} is in list of string locations, but {v2} not found",
-                )
-    # TODO check that required headers are present (see User_Guide) per lookups list
-
     # get all munge formulas (excluding _replacement formulas)
     #  and munge fields
     formulas, new_err = get_munge_formulas(munger_path)
-    params["munge_fields"], new_err = get_string_fields(munger_path)
+    params["munge_fields"], new_err = get_string_fields_from_munger(munger_path)
     if new_err:
         err = ui.consolidate_errors([err,new_err])
 
@@ -1543,19 +1533,16 @@ def get_and_check_munger_params(
     return params, err
 
 
-def get_string_fields(
+def get_string_fields_from_munger(
     munger_path: str,
 ) -> (List[str], Optional[dict]):
-    """Finds the field names expected by the munger formulas (and checks munger formulas along the way)
-    Also checks that no element is defined more than once."""
+    """Finds the field names expected by the munger formulas """
     err = None
-    munger_name = Path(munger_path).stem
     munge_field_set = set()
-    defined_elements = set()
 
     # regex to recognize comma-less text in inmost angle brackets < ... >
     # nb: commas can appear in lookup formulas with multi-field keys
-    pattern = re.compile(r"<([^>,]+)(?:,([^>,]+))*>")
+
     formulas, new_err = ui.get_parameters(
         required_keys=[],
         optional_keys=all_munge_elements,
@@ -1566,33 +1553,25 @@ def get_string_fields(
         err = ui.consolidate_errors([err, new_err])
         if ui.fatal_error(new_err):
             return dict(), err
+    munge_field_list = extract_fields_from_formulas(formulas.values())
+    return munge_field_list, err
 
-    for k in formulas.keys():
-        if formulas[k]:
-            if k in defined_elements:
-                err = ui.add_new_error(
-                    err,
-                    "munger",
-                    munger_name,
-                    f"Multiple formulas for {k}",
-                )
-            else:
-                defined_elements.update({k})
-            munge_field_set.update(pattern.findall(formulas[k]))
-            formula_err = check_formula(formulas[k])
-            if formula_err:
-                err = ui.add_new_error(
-                    err,
-                    "munger",
-                    munger_name,
-                    f"Error in formula for {k}: {formula_err}",
-                )
+
+def extract_fields_from_formulas(
+        formulas: List[str]
+) -> List[str]:
+    munge_field_set = set()
+    pattern = re.compile(r"<([^>,]+)(?:,([^>,]+))*>")
+    non_trivial_formulas = [f for f in formulas if f]
+    for f in non_trivial_formulas:
+        munge_field_set.update(pattern.findall(f))
     flat = {x for y in munge_field_set for x in y}
     if "" in flat:
         flat.remove("")
     # remove dupes, make list
     munge_field_list = list(flat)
-    return munge_field_list, err
+    return munge_field_list
+
 
 
 def check_formula(formula: str) -> Optional[str]:
@@ -1631,9 +1610,23 @@ def to_standard_count_frame(
     err = None
     original_string_columns = None
 
+    # get lists of string fields expected in raw file
+    try:
+        munge_string_fields, new_err = get_string_fields_from_munger(munger_path)
+    except Exception as exc:
+        new_err = ui.add_new_error(
+            None,
+            "system",
+            f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
+            f"Exception while getting string fields: {exc}",
+        )
+    if new_err:
+        err = ui.consolidate_errors([err, new_err])
+
     # read count dataframe(s) from file
     try:
-        raw_dict, err = ui.read_single_datafile(file_path, p, munger_name, err)
+        raw_dict, err = ui.read_single_datafile(file_path, p, munger_path, err)
+
         if len(raw_dict) == 0:  # no dfs at all returned
             err = ui.add_new_error(
                 err,
@@ -1652,19 +1645,6 @@ def to_standard_count_frame(
             f"Unexpected exception while reading data from file {file_name}:\n\t{exc}",
         )
         return pd.DataFrame(), original_string_columns, err
-
-    # get lists of string fields expected in raw file
-    try:
-        munge_field_list, new_err = get_string_fields(munger_path)
-    except Exception as exc:
-        new_err = ui.add_new_error(
-            None,
-            "system",
-            f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
-            f"Exception while getting string fields: {exc}",
-        )
-    if new_err:
-        err = ui.consolidate_errors([err, new_err])
 
     # loop over sheets
     standard = dict()
@@ -1718,17 +1698,23 @@ def to_standard_count_frame(
         standard[sheet] = pd.DataFrame()
         for n in range(len(df_list)):
             raw = df_list[n]
-            # transform to df with single count column 'Count' and all raw munge info in other columns
-            try:
-                working, error_by_df[n] = melt_to_one_count_column(raw, p, munger_name)
-            except Exception as exc:
-                error_by_df[n] = ui.add_new_error(
-                    None,
-                    "file",
-                    file_path,
-                    f"Unable to pivot dataframe from sheet {sheet}:\n {exc}",
-                )
-                continue  # goes to next dataframe in list
+
+            # some file types are read already into "melted" form
+            if p["file_type"] in ["xml"]:
+                working = raw.copy()
+                error_by_df[n] = None
+            else:
+                # transform to df with single count column 'Count' and all raw munge info in other columns
+                try:
+                    working, error_by_df[n] = melt_to_one_count_column(raw, p, munger_name)
+                except Exception as exc:
+                    error_by_df[n] = ui.add_new_error(
+                        None,
+                        "file",
+                        file_path,
+                        f"Unable to pivot dataframe from sheet {sheet}:\n {exc}",
+                    )
+                    continue  # goes to next dataframe in list
 
             # add sheet_name column
             working = add_constant_column(working, "sheet_name", sheet)
@@ -1738,7 +1724,7 @@ def to_standard_count_frame(
             try:
                 rows_needed = [
                     int(field.split("_")[-1])
-                    for field in munge_field_list
+                    for field in munge_string_fields
                     if field[:4] == "row_"
                 ]
                 # TODO what about multi-blocks?
@@ -1772,7 +1758,7 @@ def to_standard_count_frame(
 
             except KeyError() as ke:
                 variables = ",".join(
-                    [x for x in munge_field_list if x[:4] == "row_"]
+                    [x for x in munge_string_fields if x[:4] == "row_"]
                 )
                 error_by_df[n] = ui.add_new_error(
                     error_by_df[n],
@@ -1791,7 +1777,7 @@ def to_standard_count_frame(
 
             # keep only necessary columns
             try:
-                necessary = munge_field_list + ["Count"]
+                necessary = munge_string_fields + ["Count"]
                 working = working[necessary]
             except KeyError as ke:
                 error_by_df[n] = ui.add_new_error(
@@ -1807,6 +1793,7 @@ def to_standard_count_frame(
                 working, ["Count"], p["thousands_separator"]
             )
             if not bad_rows.empty:
+                # note: add_err_df is never fatal
                 error_by_df[n] = ui.add_err_df(
                     error_by_df[n], bad_rows, munger_name, file_path
                 )
@@ -1838,10 +1825,6 @@ def to_standard_count_frame(
         for sheet in fatal_sheets:
             error_by_sheet[sheet] = ui.fatal_err_to_non(error_by_sheet[sheet])
         df = pd.concat([standard[k] for k in non_fatal_sheets])
-        # clean non-count columns
-        non_count = [c for c in df.columns if c != "Count"]
-        df = clean_strings(df, non_count)
-
     else:
         df = pd.DataFrame()
     err = ui.consolidate_errors([error_by_sheet[k] for k in raw_dict.keys()])
@@ -1859,7 +1842,6 @@ def to_standard_count_frame(
                 f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
                 f"Exception while appending suffix {suffix}: {exc}",
             )
-            return df, original_string_columns, err
 
     return df, original_string_columns, err
 
@@ -1929,13 +1911,9 @@ def get_aux_info(
 
             # if there is a lookup for this field, grab it
             f_p, f_err = ui.get_parameters(
-                required_keys=[
-                    "file_type",
-                    "munge_strings",
-                    "lookup_id",
-                ],
+                required_keys=["lookup_id"],
                 optional_keys=list(opt_munger_data_types.keys())
-                + [f"{element}_replacement", "source_file"],
+                + [f"{element}_replacement", "source_file", "file_type"],
                 header=f"{field} lookup",
                 param_file=munger_path,
             )
@@ -1950,8 +1928,10 @@ def get_aux_info(
                     },
                 },
             )
-
-            if not f_err:
+            if f_err:
+                # no lookup found, so skip this one
+                pass
+            else:
                 # prepare dictionary to hold info for this lookup
                 aux[element][field] = dict()
                 # add the foreign key to the list
@@ -1977,13 +1957,14 @@ def incorporate_aux_info(
     foreign_key_fields: Dict[str, List[str]],
     aux: Dict[str, Dict[str, Dict[str, Any]]],
     aux_directory_path: str,
-    munger_name: str,  # for error reporting
+    munger_path: str,  # for error reporting
     suffix: str,
     f_path: str,  # path to original file, in case that's the lookup file
 ) -> (pd.DataFrame, str, Optional[Dict[str, Any]]):
     """revises the dataframe, adding necessary columns obtained from lookup tables,
     and revises the formula to pull from those columns instead of foreign key columns
     Note cols are assumed to have suffix, but aux does not include suffix"""
+    munger_name = Path(munger_path).stem
     w_df = df.copy()
     w_formula = formula
     err = None  # TODO error handling
@@ -2000,7 +1981,7 @@ def incorporate_aux_info(
         else:
             lt_path = f_path
         lookup_df_dict, fk_err = ui.read_single_datafile(
-            lt_path, aux[element][fk]["params"], munger_name, dict(), aux=True
+            lt_path, aux[element][fk]["params"], munger_path, dict(), aux=True
         )
         if len(lookup_df_dict) > 1:
             fk_err = ui.add_new_error(
@@ -2140,6 +2121,7 @@ def file_to_raw_df(
     err = None
     file_name = Path(f_path).name
 
+    # TODO include NIST v2 with xml
     if p["file_type"] == "nist_v2_xml":
         try:
             df, err = sf.read_nist_v2_xml(f_path)
@@ -2155,17 +2137,6 @@ def file_to_raw_df(
                 f"https://github.com/HiltonRoscoe/CdfTools",
             )
             return pd.DataFrame(), err
-    elif p["file_type"] == "xml":
-        try:
-            df, err = sf.xml_to_standard_count(f_path, munger_path)
-        except Exception as exc:
-            err = ui.add_new_error(
-                err,
-                "file",
-                file_name,
-                f"Exception while reading file from xml into standard count frame: {exc}\n",
-            )
-            return pd.DataFrame(),err
     else:
         # read data into standard count format dataframe
         #  append "_SOURCE" to all non-Count column names
@@ -2179,7 +2150,6 @@ def file_to_raw_df(
             )
             if ui.fatal_error(err):
                 return pd.DataFrame(), err
-
         except Exception as exc:
             err = ui.add_new_error(
                 err,
@@ -2188,31 +2158,34 @@ def file_to_raw_df(
                 f"Exception while converting data to standard form: {exc}",
             )
             return pd.DataFrame(), err
+        # clean non-count columns
+        non_count = [c for c in df.columns if c != "Count"]
+        df = clean_strings(df, non_count)
 
-        # transform source to completely munged (possibly with foreign keys if there is aux data)
-        # # add raw-munged column for each element, removing old
-        try:
-            df, new_err = munge_source_to_raw(
-                df,
-                munger_path,
-                p,
-                original_string_columns,
-                "_SOURCE",
-                results_directory_path,
-                f_path,
-            )
-            if new_err:
-                err = ui.consolidate_errors([err, new_err])
-                if ui.fatal_error(new_err):
-                    return df, err
-        except Exception as exc:
-            err = ui.add_new_error(
-                err,
-                "system",
-                f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
-                f"Exception while munging source to raw: {exc}",
-            )
-            return df, err
+    # transform source to completely munged (possibly with foreign keys if there is aux data)
+    # # add raw-munged column for each element, removing old
+    try:
+        df, new_err = munge_source_to_raw(
+            df,
+            munger_path,
+            p,
+            original_string_columns,
+            "_SOURCE",
+            results_directory_path,
+            f_path,
+        )
+        if new_err:
+            err = ui.consolidate_errors([err, new_err])
+            if ui.fatal_error(new_err):
+                return df, err
+    except Exception as exc:
+        err = ui.add_new_error(
+            err,
+            "system",
+            f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
+            f"Exception while munging source to raw: {exc}",
+        )
+        return df, err
 
     return df, err
 

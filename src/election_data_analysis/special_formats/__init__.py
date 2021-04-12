@@ -1,10 +1,11 @@
 import json
 import pandas as pd
 import traceback
-import lxml.etree as et
+import lxml.etree as lxml_et
+import xml.etree.ElementTree as et
 from copy import deepcopy
 from pathlib import Path
-from typing import Optional, Dict, List, Any, Tuple
+from typing import Optional, Dict, List, Any, Tuple, Iterable
 from election_data_analysis import munge as m
 from election_data_analysis import user_interface as ui
 
@@ -36,19 +37,17 @@ def xml_to_standard_count(file_path: str, munger_path: str) -> (pd.DataFrame, Op
 
     p, err = m.get_and_check_munger_params(munger_path)
     try:
-        parse_info = xml_parse_info(p)
+        parse_info = xml_count_parse_info(p)
     except Exception as exc:
-
         err = ui.add_new_error(err, "munger", munger_name, f"Exception in xml-parsing info")
-        if ui.fatal_error(err):
-            return pd.DataFrame, err
+        return pd.DataFrame, err
     element_path, new_err = xml_element_path(munger_path, suffix="_raw")
     if new_err:
         err = ui.consolidate_errors([err, new_err])
         if ui.fatal_error(err):
             return pd.DataFrame, err
-    tree = et.parse(file_path)
-    df, new_err = df_from_tree(tree, element_path=element_path, file_name=file_name, **parse_info, )
+    tree = lxml_et.parse(file_path)
+    df, new_err = df_from_tree(tree,xml_path_info=element_path,file_name=file_name,**parse_info,)
     if new_err:
         err = ui.consolidate_errors([err, new_err])
     non_count = [c for c in df.columns if c != "Count"]
@@ -57,16 +56,36 @@ def xml_to_standard_count(file_path: str, munger_path: str) -> (pd.DataFrame, Op
     return df, err
 
 
-def xml_parse_info(p: Dict[str, Any]) -> Dict[str, Any]:
+def tree_parse_info(xpath: str, namespace: str) -> Dict[str,Any]:
+    """extracts xml path-parsing info from xpath with
+    optional .* attribute. E.g., Election/Contest.name
+    gets parsed to path Election/Contest and attribute
+    name. If namespace (e.g., 'html') is given, then namespase is
+    prepended as appropriate in path (e.g. {html}Election/{html}Contest)"""
+    if "." in xpath:
+        [no_ns_path,attrib] = xpath.split(".")
+    else:
+        no_ns_path = xpath
+        attrib = None
+    components = no_ns_path.split("/")
+    if namespace:
+        ns = f"{{{namespace}}}"
+    else:
+        ns = ""
+    ns_components = [f"{ns}{s}" for s in components]
+    path = "/".join(ns_components)
+    tag = ns_components[-1]
+
+    d = {"path": path, "tag": tag, "attrib": attrib}
+    return d
+
+
+def xml_count_parse_info(p: Dict[str, Any]) -> Dict[str,Any]:
     """Extracts parsing info from munger parameters into dictionary
     {'count_path': ..., 'count_attrib': ...}"""
-    parse_info = dict()
-    count_info = p["count_location"].split(".")
-    parse_info["count_path"] = count_info[0]
-    if len(count_info) > 1:
-        parse_info["count_attrib"] = count_info[1]
-    else:
-        parse_info["count_attrib"] = None
+
+    d = tree_parse_info(p["count_location"], p["namespace"])
+    parse_info = {"main_path": d["path"], "main_attrib": d["attrib"]}
     return parse_info
 
 
@@ -84,18 +103,38 @@ def xml_element_path(munger_path: str, suffix: str = "") -> (Dict[str, Dict[str,
     return xml_formula, err
 
 
+def xml_string_path_info(
+        munge_strings: List[str],
+        namespace: Optional[str],
+) -> Dict[str, Dict[str, Dict[str, str]]]:
+    """For each munge string, extracts info for traversing tree"""
+    info_dict = dict()
+    for munge_string in munge_strings:
+        info_dict[munge_string] = tree_parse_info(munge_string, namespace)
+    return info_dict
+
+
 def df_from_tree(
-        tree: et.ElementTree,
-        count_path: str,
-        count_attrib: Optional[str],
-        element_path: Dict[str, Dict[str, str]],
+        tree: lxml_et.ElementTree,
+        main_path: str,
+        main_attrib: Optional[str],
+        xml_path_info: Dict[str, Dict[str, Dict[str, str]]],
         file_name: str,
+        namespace: Optional[str],
 ) -> (pd.DataFrame, Optional[dict]):
-    """Reads all counts, along with info from element paths ((tag, attr) for each element), into a dataframe.
+    """Reads all counts, along with info from munge string paths ((tag, attr) for each element), into a dataframe.
     If count_attrib is None, reads count from value of element; otherwise from attribute.
-    Each element_path value should be of the form 'tag0/tag1/.../tagn.attribute_name"""
-    head = count_path.split("/")[0]
-    tail = count_path[len(head)+1:]
+    Each xml_path value should be of the form 'tag0/tag1/.../tagn.attribute_name
+    or 'tag0/tag1/.../tagn' """
+    # create parent lookup
+    parent = {c:p for p in tree.iter() for c in p}
+    if namespace:
+        ns = f"{{{namespace}}}"
+    else:
+        ns = ""
+    with_ns = [f"{ns}{s}" for s in main_path.split("/")]
+    head = with_ns[0]
+    tail = "/".join(with_ns[1:])
     root = tree.getroot()
     if root.tag == head:
         err = None
@@ -107,19 +146,25 @@ def df_from_tree(
         return (pd.DataFrame, err)
     df_rows = list()
     for count in root.findall(tail):
-        if count_attrib:
-            row = {"Count": int(count.attrib[count_attrib])}
+        if main_attrib:
+            row = {"Count": int(count.attrib[main_attrib])}
         else:
             row = {"Count": int(count.text)}
         ancestor = count
         while ancestor is not None:
-            for elt in element_path.keys():
-                if element_path[elt]["tag"] == ancestor.tag:
-                    try:
-                        row[elt] = ancestor.attrib[element_path[elt]["attrib"]]
-                    except KeyError:
-                        pass
-            ancestor = ancestor.getparent()
+            for elt in xml_path_info.keys():
+                if xml_path_info[elt]["tag"] == ancestor.tag:
+                    if xml_path_info[elt]["attrib"]:
+                        try:
+                            row[elt] = ancestor.attrib[xml_path_info[elt]["attrib"]]
+                        except KeyError:
+                            pass
+                    else:
+                        row[elt] = ancestor.find(xml_path_info[elt]["tag"]).text
+            if ancestor in parent.keys():
+                ancestor = parent[ancestor]
+            else:
+                ancestor = None
         df_rows.append(row)
     df = pd.DataFrame(df_rows)
     return df, err
@@ -151,7 +196,7 @@ def read_xml(
     namespace = None  # for syntax checker
     # read data from file
     try:
-        tree = et.parse(f_path)
+        tree = lxml_et.parse(f_path)
     except FileNotFoundError:
         err = ui.add_new_error(err, "file", Path(f_path).name, "File not found")
         return pd.DataFrame(), err
@@ -213,7 +258,7 @@ def nist_tags(good_tags, good_pairs, namespace):
     return new_tags, new_pairs
 
 
-def results_below(node: et.Element, good_tags: set, good_pairs: dict) -> list:
+def results_below(node: lxml_et.Element,good_tags: set,good_pairs: dict) -> list:
     """appends all (possibly incomplete) results records that can be
     read from nodes below to the list self.results"""
     r_below = []
@@ -384,7 +429,7 @@ def nist_lookup(f_path: str) -> (pd.DataFrame, pd.DataFrame):
 
     # when this function is called, it's already been accessed. So we omit
     # the normal error checking here because we can assume it exists.
-    tree = et.parse(f_path)
+    tree = lxml_et.parse(f_path)
     root = tree.getroot()
 
     # this namespace for reportingUnit info
@@ -446,7 +491,7 @@ def nist_lookup(f_path: str) -> (pd.DataFrame, pd.DataFrame):
 def nist_namespace(f_path, key) -> Optional[dict]:
     """get the namespaces in the XML and return error if the one we're expecting
     is not found"""
-    namespaces = dict([node for _, node in et.iterparse(f_path, events=["start-ns"])])
+    namespaces = dict([node for _, node in lxml_et.iterparse(f_path,events=["start-ns"])])
     try:
         namespace = namespaces[key]
         return namespace
@@ -502,7 +547,7 @@ def read_nist_v2_xml(f_path: str) -> (pd.DataFrame,Optional[Dict]):
     err = None
     # TODO add error handling
     try:
-        tree = et.parse(f_path)
+        tree = lxml_et.parse(f_path)
     except FileNotFoundError:
         err = ui.add_new_error(err, "file", Path(f_path).name, "File not found")
         return pd.DataFrame(), err
@@ -577,7 +622,7 @@ def read_nist_v2_xml(f_path: str) -> (pd.DataFrame,Optional[Dict]):
 
 
 def build_lookup_df(
-    node: et.Element,
+    node: lxml_et.Element,
     ns: str,
     tag: str,
     id_attrib: str,
@@ -603,3 +648,4 @@ def build_lookup_df(
 
     df = pd.DataFrame(info_dict).T
     return df
+

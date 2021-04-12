@@ -13,6 +13,7 @@ import datetime
 import csv
 import numpy as np
 import inspect
+import xml.etree.ElementTree as et
 
 # constants
 recognized_encodings = {
@@ -409,7 +410,7 @@ def list_desired_excel_sheets(f_path: str, p: dict) -> Optional[list]:
 def read_single_datafile(
     f_path: str,
     p: Dict[str, Any],
-    munger_name: str,
+    munger_path: str,
     err: Optional[Dict],
     aux: bool = False,
 ) -> (Dict[str, pd.DataFrame], dict):
@@ -418,6 +419,7 @@ def read_single_datafile(
     kwargs = dict()  # for syntax checker
     df_dict = dict()  # for syntax checker
     file_name = Path(f_path).name
+    munger_name = Path(munger_path).stem
 
     # prepare keyword arguments for pandas read_* function
     if p["file_type"] in ["excel"]:
@@ -435,7 +437,13 @@ def read_single_datafile(
     # read file
     try:
         if p["file_type"] in ["xml"]:
-            df, err = sf.read_xml(f_path, p, munger_name, err)
+            driving_datum_info = sf.xml_count_parse_info(p)
+            xml_path_info = sf.xml_string_path_info(p["munge_fields"], p["namespace"])
+            tree = et.parse(f_path)
+            df, err = sf.df_from_tree(
+                tree, xml_path_info=xml_path_info, file_name=file_name, **driving_datum_info,
+                namespace=p["namespace"],
+            )
             if not fatal_error(err):
                 df_dict = {"Sheet1": df}
         elif p["file_type"] in ["json-nested"]:

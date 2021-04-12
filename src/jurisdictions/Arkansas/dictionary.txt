@@ -520,6 +520,7 @@ Candidate	Don Blankenship	Don Blankenship/William Mohr
 Candidate	C.L. Gammon	C.L. Gammon/Phil Collins
 Candidate	Brock Pierce	Brock Pierce/Karla Ballard
 Candidate	Brian Carroll	Brian Carroll/Amar Patel
+CandidateContest	US Senate AR	US Senate AR
 CandidateContest	AR House District 1 (Democratic Party)	State Representative District 1 (DEM)
 CandidateContest	AR House District 1 (Democratic Party)	State House District 1 (DEM)
 CandidateContest	AR House District 1 (Democratic Party)	State Representative District 1 - DEM
