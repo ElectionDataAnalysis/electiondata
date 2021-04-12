@@ -1364,6 +1364,7 @@ def get_and_check_munger_params(
             )
         if ui.fatal_error(err):
             return dict(), err
+
     # # extra compatibility requirements for excel or flat text files
     elif params["file_type"] in ["excel", "flat_text"]:
         # # count_field_name_row is given where required
@@ -1398,7 +1399,6 @@ def get_and_check_munger_params(
                     munger_name,
                     f"all_rows=data and multi_block=yes are not compatible",
                 )
-
 
     # # for each value in list of string locations, requirements are met
     for k0 in params["munge_strings"]:
@@ -1622,7 +1622,6 @@ def to_standard_count_frame(
     file_path: str,
     munger_path: str,
     p: dict,
-    constants: dict,
     suffix: Optional[str] = None,
 ) -> (pd.DataFrame, Optional[list], Optional[dict]):
     """Read data from file at <f_path>; return a standard dataframe with one clean count column
@@ -1634,19 +1633,6 @@ def to_standard_count_frame(
     munger_name = Path(munger_path).stem
     err = None
     original_string_columns = None
-
-    # check that all necessary constants were passed
-    if p["constant_over_file"] is not None:
-        bad = [x for x in p["constant_over_file"] if x not in constants.keys()]
-        if bad:
-            bad_str = ",".join(bad)
-            err = ui.add_new_error(
-                err,
-                "file",
-                file_path,
-                f"Required constants not given in .ini file:\n\t{bad_str}",
-            )
-            return pd.DataFrame(), original_string_columns, err
 
     # read count dataframe(s) from file
     try:
@@ -2152,7 +2138,6 @@ def file_to_raw_df(
     munger_path: str,
     p,
     f_path: str,
-    constants: Dict[str, str],
     results_directory_path,
 ) -> (pd.DataFrame, Optional[dict]):
     err = None
@@ -2193,7 +2178,6 @@ def file_to_raw_df(
                 f_path,
                 munger_path,
                 p,
-                constants,
                 suffix="_SOURCE",
             )
             if ui.fatal_error(err):
@@ -2233,12 +2217,16 @@ def file_to_raw_df(
             )
             return df, err
 
-        # # add columns for constant-over-file elements
-        for element in constants.keys():
-            df = add_constant_column(
-                df,
-                element,
-                constants[element],
-            )
-
     return df, err
+
+
+def add_constants_to_df(
+        df: pd.DataFrame, constants: Dict[str, Any]
+) -> pd.DataFrame:
+    for element in constants.keys():
+        df = add_constant_column(
+            df,
+            element,
+            constants[element],
+        )
+    return df

@@ -659,7 +659,6 @@ class SingleDataLoader:
                         f_path,
                         munger_path,
                         p,
-                        constants,
                         suffix="_SOURCE",
                     )
                     if ui.fatal_error(err):
@@ -2149,18 +2148,20 @@ def load_results_file(
     if ui.fatal_error(err):
         return err
 
-    # remove constants not called for in munger
-    necessary_constants = {
-        c: v for c, v in constants.items() if c in p["constant_over_file"]
-    }
-
+    # transform to raw df in standard form
     df, new_err = m.file_to_raw_df(
-        munger_path, p, f_path, necessary_constants, results_directory_path
+        munger_path, p, f_path, results_directory_path
     )
     if new_err:
         err = ui.consolidate_errors([err, new_err])
         if ui.fatal_error(new_err):
             return err
+
+    # # add columns for constant-over-file elements
+    necessary_constants = {
+        c: v for c, v in constants.items() if c in p["constant_over_file"]
+    }
+    df = m.add_constants_to_df(df,necessary_constants)
 
     # # delete any rows with items to be ignored
     ig, new_err = ui.get_parameters(
