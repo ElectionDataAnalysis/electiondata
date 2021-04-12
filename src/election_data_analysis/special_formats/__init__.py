@@ -75,16 +75,20 @@ def tree_parse_info(xpath: str, namespace: str) -> Dict[str,Any]:
     ns_components = [f"{ns}{s}" for s in components]
     path = "/".join(ns_components)
     tag = ns_components[-1]
+    local_root_tag = ns_components[0]
 
-    d = {"path": path, "tag": tag, "attrib": attrib}
+    d = {"path": path, "tag": tag, "attrib": attrib, "local_root_tag": local_root_tag}
     return d
 
 
-def xml_count_parse_info(p: Dict[str, Any]) -> Dict[str,Any]:
+def xml_count_parse_info(p: Dict[str, Any], ignore_namespace: bool = False) -> Dict[str,Any]:
     """Extracts parsing info from munger parameters into dictionary
     {'count_path': ..., 'count_attrib': ...}"""
-
-    d = tree_parse_info(p["count_location"], p["namespace"])
+    if ignore_namespace:
+        namespace = None
+    else:
+        namespace = p["namespace"]
+    d = tree_parse_info(p["count_location"], namespace)
     parse_info = {"main_path": d["path"], "main_attrib": d["attrib"]}
     return parse_info
 
@@ -153,7 +157,8 @@ def df_from_tree(
         ancestor = count
         while ancestor is not None:
             for elt in xml_path_info.keys():
-                if xml_path_info[elt]["tag"] == ancestor.tag:
+
+                if xml_path_info[elt]["local_root_tag"] == ancestor.tag:
                     if xml_path_info[elt]["attrib"]:
                         try:
                             row[elt] = ancestor.attrib[xml_path_info[elt]["attrib"]]

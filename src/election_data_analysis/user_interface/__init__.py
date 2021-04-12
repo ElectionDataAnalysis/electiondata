@@ -413,6 +413,7 @@ def read_single_datafile(
     munger_path: str,
     err: Optional[Dict],
     aux: bool = False,
+    xml_driving_path: Optional[str] = None,
 ) -> (Dict[str, pd.DataFrame], dict):
     """Length of returned dictionary is the number of sheets read -- usually 1 except for multi-sheet Excel.
     Auxiliary files have different parameters (e.g., no count locations)"""
@@ -437,11 +438,15 @@ def read_single_datafile(
     # read file
     try:
         if p["file_type"] in ["xml"]:
-            driving_datum_info = sf.xml_count_parse_info(p)
+            if xml_driving_path:
+                temp_d = sf.tree_parse_info(xml_driving_path, None)
+                driver = {"main_path": temp_d["path"], "main_attrib": temp_d["attrib"]}
+            else:
+                driver = sf.xml_count_parse_info(p, ignore_namespace=True)
             xml_path_info = sf.xml_string_path_info(p["munge_fields"], p["namespace"])
             tree = et.parse(f_path)
             df, err = sf.df_from_tree(
-                tree, xml_path_info=xml_path_info, file_name=file_name, **driving_datum_info,
+                tree, xml_path_info=xml_path_info, file_name=file_name, **driver,
                 namespace=p["namespace"],
             )
             if not fatal_error(err):

@@ -1939,7 +1939,7 @@ def get_aux_info(
                 # grab replacement formula, lookup_id, list of fields in replacement formula
                 aux[element][field]["r_formula"] = f_p[f"{element}_replacement"]
                 aux[element][field]["params"] = f_p
-                aux[element][field]["r_fields"] = get_fields_from_formula(
+                aux[element][field]["params"]["munge_fields"] = get_fields_from_formula(
                     f_p[f"{element}_replacement"]
                 )
         # if this element's source values will need to be lookup up
@@ -1971,7 +1971,7 @@ def incorporate_aux_info(
     for fk in foreign_key_fields[element]:
         r_formula = aux[element][fk]["r_formula"]
         assert isinstance(r_formula, str)  # to keep syntax-checker happy
-        r_fields = aux[element][fk]["r_fields"]
+        r_fields = aux[element][fk]["params"]["munge_strings"]
 
         # grab the lookup table
         if aux[element][fk]["params"]["source_file"]:
@@ -1981,7 +1981,12 @@ def incorporate_aux_info(
         else:
             lt_path = f_path
         lookup_df_dict, fk_err = ui.read_single_datafile(
-            lt_path, aux[element][fk]["params"], munger_path, dict(), aux=True
+            lt_path,
+            aux[element][fk]["params"],
+            munger_path,
+            dict(),
+            aux=True,
+            xml_driving_path=aux[element][fk]["params"]["lookup_id"]
         )
         if len(lookup_df_dict) > 1:
             fk_err = ui.add_new_error(
