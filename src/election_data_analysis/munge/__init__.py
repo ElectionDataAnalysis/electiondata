@@ -1346,6 +1346,7 @@ def get_and_check_munger_params(
                     err = ui.add_new_error(
                         err, "munger", munger_name, f"{k0}={k1}', but {v2} not found"
                     )
+
     # # extra requirements for xml
     if params["file_type"] == "xml":
         # check count_location has correct format
@@ -1415,38 +1416,35 @@ def get_and_check_munger_params(
     # TODO check that required headers are present (see User_Guide) per lookups list
 
     # get all munge formulas (excluding _replacement formulas)
+    #  and munge fields
     formulas, new_err = get_munge_formulas(munger_path)
+    params["munge_fields"], new_err = get_string_fields(munger_path)
+    if new_err:
+        err = ui.consolidate_errors([err,new_err])
 
     # check formulas are well-formed and consistent with count_location for xml
     if params["file_type"] == "xml":
-        xml_formula_pattern = re.compile(r"^\<(\w+)\.\w+\>$")
+        # TODO do we need to allow field patterns wtihout period?
+        xml_field_pattern = re.compile(r"^\<(\w+)\.\w+\>$")
         tags = params["count_location"].split(".")[0].split("/")
-        for elt in formulas.keys():
-            if formulas[elt]:
-                tag = re.findall(xml_formula_pattern, formulas[elt])
-                if not tag:
-                    err = ui.add_new_error(
-                        err,
-                        "munger",
-                        munger_name,
-                        f"Formula for {elt} not well-formed"
-                    )
-                elif tag[0] not in tags:
-                    err = ui.add_new_error(
-                        err,
-                        "munger",
-                        munger_name,
-                        f"Tag ({tag[0]}) in formula for {elt} not found in count_location path"
-                    )
+        for field in params["munge_fields"]:
+            tag = re.findall(xml_field_pattern, field)
+            if not tag:
+                err = ui.add_new_error(
+                    err,
+                    "munger",
+                    munger_name,
+                    f"Field in munge formula not well-formed: <{field}>"
+                )
+            elif tag[0] not in tags:
+                err = ui.add_new_error(
+                    err,
+                    "munger",
+                    munger_name,
+                    f"Tag ({tag[0]}) in formula for {field} not found in count_location path"
+                )
 
     elif params["file_type"] in ["excel", "flat_text"]:
-        # # add parameter listing all munge fields
-        # get lists of string fields expected in raw file
-        # TODO why can't munge_fields and string_fields be the same?
-        params["munge_fields"], new_err = get_string_fields(munger_path)
-        if new_err:
-            err = ui.consolidate_errors([err, new_err])
-
         # classify munge fields
         mf_by_type = {
             "in_count_headers": set(),
@@ -1486,7 +1484,7 @@ def get_and_check_munger_params(
         # collect header rows in formulas into count_header_row_numbers list
         params["count_header_row_numbers"] = [int(mf[13:]) for mf in mf_by_type["in_count_headers"]]
 
-   # check that each lookup section has a replacement formula for each element referencing the lookup field
+    # check that each lookup section has a replacement formula for each element referencing the lookup field
     # and check that each auxiliary file exists
     headers, new_err = ui.get_section_headers(munger_path)
     if new_err:
