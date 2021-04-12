@@ -1,0 +1,13 @@
+[format]
+file_type=json
+count_location=Localities/Candidates/Votes
+constant_over_file=CountItemType
+encoding=ASCII
+
+[munge formulas]
+## each needs to have exactly one period ##
+ReportingUnit=<Localities/Locality.LocalityName>
+Party=<Candidates/PoliticalParty>
+CandidateContest=<RaceName>
+Candidate=<Candidates/BallotName>
+

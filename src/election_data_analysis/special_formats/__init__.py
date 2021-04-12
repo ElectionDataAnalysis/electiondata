@@ -32,7 +32,7 @@ cit_from_raw_nist_df = pd.DataFrame(
 def xml_to_standard_count(file_path: str, munger_path: str) -> (pd.DataFrame, Optional[dict]):
     munger_name = Path(munger_path).stem
     file_name = Path(file_path).stem
-    # TODO error handling; preliminary check of munger
+    # TODO regex
 
     p, err = m.get_and_check_munger_params(munger_path)
     try:
