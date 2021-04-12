@@ -1411,8 +1411,6 @@ def get_and_check_munger_params(
                     munger_name,
                     f"{k0} is in list of string locations, but {v2} not found",
                 )
-    # TODO check formats (e.g., formulas for constant_over_sheet use only <sheet_name> and <row_{i}>)
-    # TODO check that required headers are present (see User_Guide) per munge_strings list
     # TODO check that required headers are present (see User_Guide) per lookups list
 
     # get all munge formulas (excluding _replacement formulas)
@@ -1425,6 +1423,7 @@ def get_and_check_munger_params(
     # check formulas are well-formed and consistent with count_location for xml
     if params["file_type"] == "xml":
         # TODO do we need to allow field patterns wtihout period?
+        #  I.e., is everything read from an attribute?
         xml_field_pattern = re.compile(r"^\<(\w+)\.\w+\>$")
         tags = params["count_location"].split(".")[0].split("/")
         for field in params["munge_fields"]:
