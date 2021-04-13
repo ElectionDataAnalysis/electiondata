@@ -1,0 +1,29 @@
+[format]
+file_type=xml
+count_location=ElectionReport/Election/Contest/ContestSelection/VoteCounts/Count
+namespace=http://itl.nist.gov/ns/voting/1500-100/v2
+
+encoding=ASCII
+
+[munge formulas]
+# each must start with something in the count_location path #
+ReportingUnit=<GpUnit/Name/Text from VoteCounts/GpUnitId>
+Party=<Party/Name/Text from Candidate/PartyId from ContestSelection/CandidateIds>
+CandidateContest=<Contest/Name>
+Candidate=<Candidate/BallotName/Text from ContestSelection/CandidateIds>
+CountItemType=<VoteCounts/Type>
+
+[VoteCounts/GpUnitId lookup]
+source_file=
+file_type=xml
+lookup_id=ElectionReport/GpUnit.ObjectId
+
+[ContestSelection/CandidateIds lookup]
+source_file=
+file_type=xml
+lookup_id=ElectionReport/Election/Candidate.ObjectId
+
+[Candidate/PartyId lookup]
+source_file=
+file_type=xml
+lookup_id=ElectionReport/Party.ObjectId
