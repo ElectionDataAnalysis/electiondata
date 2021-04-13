@@ -24,7 +24,7 @@ no_param_file_types = {"nist_v2_xml"}
 opt_munger_data_types: Dict[str, str] = {
     "count_columns_specified": "string",
     "count_location": "string",
-    "munge_strings": "list-of-strings",
+    "munge_field_types": "list-of-strings",
     "sheets_to_read_names": "list-of-strings",
     "sheets_to_skip_names": "list-of-strings",
     "sheets_to_read_numbers": "list-of-integers",
@@ -51,7 +51,7 @@ munger_dependent_reqs: Dict[str, Dict[str, List[str]]] = {
     "file_type": {
         "flat_text": ["flat_text_delimiter", "count_columns_specified"],
         "xml": ["count_location"],
-        "json-nested": ["count_columns_specified", "munge_strings"],
+        "json-nested": ["count_columns_specified", "munge_field_types"],
         "excel": ["count_columns_specified"],
     },
     "count_columns_specified": {
@@ -655,7 +655,7 @@ def melt_to_one_count_column(
                 ]
         melted.columns = new_columns
 
-        if "in_count_headers" in p["munge_strings"]:
+        if "in_count_headers" in p["munge_field_types"]:
             # split header_0 column into separate columns
             # # get header_rows
             melted[
@@ -1458,17 +1458,17 @@ def get_and_check_munger_params(
             else:
                 mf_by_type["in_field_values"].update({mf})
 
-        # calculate munge_strings parameter (and warn if overwriting)
-        if params["munge_strings"]:
+        # calculate munge_field_types parameter (and warn if overwriting)
+        if params["munge_field_types"]:
             err = ui.add_new_error(
                 err,
                 "warn-munger",
                 munger_name,
-                "given munge_strings parameter ignored -- will be derived from formulas"
+                "given munge_field_types parameter ignored -- will be derived from formulas"
             )
-        params["munge_strings"] = [k for k,v in mf_by_type.items() if len(mf_by_type[k]) != 0]
+        params["munge_field_types"] = [k for k,v in mf_by_type.items() if len(mf_by_type[k]) != 0]
         if params["constant_over_file"]:
-            params["munge_strings"].append("constant_over_file")
+            params["munge_field_types"].append("constant_over_file")
 
         # collect header rows in formulas into count_header_row_numbers list
         params["count_header_row_numbers"] = [int(mf[13:]) for mf in mf_by_type["in_count_headers"]]
@@ -1982,7 +1982,7 @@ def incorporate_aux_info(
     for fk in foreign_key_fields[element]:
         r_formula = aux[element][fk]["r_formula"]
         assert isinstance(r_formula, str)  # to keep syntax-checker happy
-        r_fields = aux[element][fk]["params"]["munge_strings"]
+        r_fields = aux[element][fk]["params"]["munge_fields"]
 
         # grab the lookup table
         if aux[element][fk]["params"]["source_file"]:
@@ -1998,7 +1998,7 @@ def incorporate_aux_info(
             None,
             aux=True,
             xml_driving_path=aux[element][fk]["params"]["lookup_id"],
-            lookup_id=fk
+            lookup_id=aux[element][fk]["params"]["lookup_id"]
         )
         if len(lookup_df_dict) > 1:
             fk_err = ui.add_new_error(
@@ -2030,7 +2030,6 @@ def incorporate_aux_info(
         lookup_df = clean_strings(lookup_df, lookup_df.columns)
         # if any lookup keys are duplicated, delete all but the first record
         lookup_df.drop_duplicates(subset=lookup_key_cols, inplace=True)
-
         # define new column names to e.g. 'County_id LOOKUP County_name'
         rename = {c: f"{fk} LOOKUP {c}{suffix}" for c in lookup_df.columns}
 

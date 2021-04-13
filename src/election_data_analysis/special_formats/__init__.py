@@ -75,9 +75,14 @@ def tree_parse_info(xpath: str, namespace: str) -> Dict[str,Any]:
     ns_components = [f"{ns}{s}" for s in components]
     path = "/".join(ns_components)
     tag = ns_components[-1]
+    head = ns_components[0]
+    tail = "/".join(ns_components[1:])
     local_root_tag = ns_components[0]
 
-    d = {"path": path, "tag": tag, "attrib": attrib, "local_root_tag": local_root_tag}
+    d = {
+        "path": path, "tag": tag, "attrib": attrib, "local_root_tag": local_root_tag,
+        "head": head, "tail": tail
+    }
     return d
 
 
@@ -108,13 +113,13 @@ def xml_element_path(munger_path: str, suffix: str = "") -> (Dict[str, Dict[str,
 
 
 def xml_string_path_info(
-        munge_strings: List[str],
+        munge_fields: List[str],
         namespace: Optional[str],
 ) -> Dict[str, Dict[str, Dict[str, str]]]:
     """For each munge string, extracts info for traversing tree"""
     info_dict = dict()
-    for munge_string in munge_strings:
-        info_dict[munge_string] = tree_parse_info(munge_string, namespace)
+    for field in munge_fields:
+        info_dict[field] = tree_parse_info(field, namespace)
     return info_dict
 
 
@@ -127,10 +132,8 @@ def df_from_tree(
         namespace: Optional[str],
         lookup_id: str = None,
 ) -> (pd.DataFrame, Optional[dict]):
-    """Reads all counts, along with info from munge string paths ((tag, attr) for each element), into a dataframe.
-    If count_attrib is None, reads count from value of element; otherwise from attribute.
-    Each xml_path value should be of the form 'tag0/tag1/.../tagn.attribute_name
-    or 'tag0/tag1/.../tagn' """
+    """Reads all counts (or lookup_ids, if given), along with info from munge string paths ((tag, attr) for each element), into a dataframe.
+    If main_attrib is None, reads from text value of element; otherwise from attribute."""
     # create parent lookup
     parent = {c:p for p in tree.iter() for c in p}
     if namespace:
@@ -164,15 +167,15 @@ def df_from_tree(
 
         ancestor = driver
         while ancestor is not None:
-            for elt in xml_path_info.keys():
-                if xml_path_info[elt]["local_root_tag"] == ancestor.tag:
-                    if xml_path_info[elt]["attrib"]:
+            for field in xml_path_info.keys():
+                if xml_path_info[field]["local_root_tag"] == ancestor.tag:
+                    if xml_path_info[field]["attrib"]:
                         try:
-                            row[elt] = ancestor.attrib[xml_path_info[elt]["attrib"]]
+                            row[field] = ancestor.attrib[xml_path_info[field]["attrib"]]
                         except KeyError:
                             pass
                     else:
-                        row[elt] = ancestor.find(xml_path_info[elt]["tag"]).text
+                        row[field] = ancestor.find(xml_path_info[field]["tail"]).text
             if ancestor in parent.keys():
                 ancestor = parent[ancestor]
             else:

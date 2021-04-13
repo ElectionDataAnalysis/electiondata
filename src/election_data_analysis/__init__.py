@@ -1107,7 +1107,7 @@ class JurisdictionPrepper:
             ru_formula = ""
             headers = [
                 x
-                for x in m.req_munger_parameters["munge_strings"]
+                for x in m.req_munger_parameters["munge_field_types"]
                 if x != "constant_over_file"
             ]
             for header in headers:
