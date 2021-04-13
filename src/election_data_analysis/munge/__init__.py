@@ -1211,7 +1211,9 @@ def munge_source_to_raw(
         if (formulas[k] is not None) and (formulas[k] != "None")
     ]
     # get any aux info (NB: does not include suffix)
-    aux_params, foreign_key_fields, new_err = get_aux_info(formulas, elements, munger_path)
+    aux_params, foreign_key_fields, lookedup_fields, new_err = get_aux_info(
+        formulas, elements, munger_path
+    )
     if new_err:
         err = ui.consolidate_errors([err, new_err])
         if ui.fatal_error(new_err):
@@ -1220,35 +1222,40 @@ def munge_source_to_raw(
     # if there is auxiliary info, i.e., if lookups need to be done
     if aux_params:
         foreign_key_list = list(set([x for y in foreign_key_fields.values() for x in y]))
-        lookup_table, new_err = get_lookup_tables(foreign_key_list, aux_params, aux_directory_path, results_file_path, munger_path)
+        lookup_table, new_err = get_lookup_tables(
+            foreign_key_list, aux_params, aux_directory_path, results_file_path, munger_path
+        )
         if new_err:
             err = ui.consolidate_errors([err, new_err])
             if ui.fatal_error(new_err):
                 return working, err
+    looked_up_already = list()  # track which foreign keys have already been processed
     for element in elements:
         try:
             formula = formulas[element]
             # if formula refers to any fields that need to be looked up, make appropriate replacements
             if element in foreign_key_fields.keys():
-                working, formula, new_err = incorporate_aux_info(
+                working, formula, looked_up_already, new_err = incorporate_aux_info(
                     working,
                     element,
                     formula,
                     foreign_key_fields[element],
+                    lookedup_fields[element],
                     lookup_table,
                     aux_params,
-                    aux_directory_path,
                     munger_path,
                     suffix,
                     results_file_path,
+                    looked_up_already,
                 )
                 if new_err:
                     err = ui.consolidate_errors([err, new_err])
                     if ui.fatal_error(new_err):
                         return working, err
 
-            # append suffix to any fields from the original table
-            for c in orig_string_cols:
+            # in formulas, append suffix to any fields from the original table
+            # TODO also need to append suffix to fields from lookups
+            for c in p["munge_fields"]:
                 formula = formula.replace(f"<{c}>", f"<{c}{suffix}>")
 
             # add col with munged values
@@ -1952,7 +1959,13 @@ def fill_vote_count(
 
 def get_aux_info(
     formulas: Dict[str, str], elements: List[str], munger_path: str
-) -> (Dict[str, Dict[str, Any]], Dict[str, List[str]], Optional[dict]):
+) -> (
+        Dict[str,
+        Dict[str, Any]],
+        Dict[str, List[str]],
+        Dict[str, Dict[str,List[str]]],
+        Optional[dict]
+):
     """returns a dictionary whose keys are elements. For each element, a dictionary whose keys are fields
     in that element's formula
     NB: each foreign key is a list"""
@@ -1998,7 +2011,8 @@ def get_aux_info(
         f_p = jm.recast_options(f_p, type_dict)
 
         # define f_p["munge_fields"]
-        f_p["munge_fields"] = [lookedup_fields[element].get(fk) for element in elements if fk in lookedup_fields[element].keys()]
+        list_of_field_lists = [lookedup_fields[element].get(fk) for element in elements if fk in lookedup_fields[element].keys()]
+        f_p["munge_fields"] = list(set(([x for y in list_of_field_lists for x in y])))
         if f_err:
             err = ui.consolidate_errors([err, f_err])
         else:
@@ -2015,7 +2029,7 @@ def get_aux_info(
                 f_p.update(jm.recast_options(main_format_params,type_dict))
             aux_params[fk] = f_p
 
-    return aux_params, foreign_key_fields, err
+    return aux_params, foreign_key_fields, lookedup_fields, err
 
 
 def incorporate_aux_info(
@@ -2023,12 +2037,14 @@ def incorporate_aux_info(
     element: str,
     formula: str,
     foreign_key_fields: List[str],
+    lookedup_fields: Dict[str, List[str]],
     lookup_table: Dict[str, pd.DataFrame],
     aux_params: Dict[str, Dict[str, Any]],
     munger_path: str,  # for error reporting
     suffix: str,
     results_file_path,
-) -> (pd.DataFrame, str, Optional[Dict[str, Any]]):
+    looked_up_already: List[str],
+) -> (pd.DataFrame, str, List[str], Optional[Dict[str, Any]]):
     """revises the dataframe, adding necessary columns obtained from lookup tables,
     and revises the formula to pull from those columns instead of foreign key columns
     Note cols are assumed to have suffix, but aux does not include suffix"""
@@ -2037,20 +2053,23 @@ def incorporate_aux_info(
     w_formula = formula
     err = None  # TODO error handling
     # NB: list is in order of appearance in lookup formula, so reverse it
-    fk_reverse = foreign_key_fields[::-1]
-    for fk in fk_reverse[:-1]:
+    # fk_reverse =
+    for fk in foreign_key_fields[::-1]:
         # join lookup for this foreign key to working dataframe
-        # TODO must have fk column already in working dataframe.
-        w_df = w_df.merge(
-            lookup_table[fk], how="left", left_on=fk, right_on=aux_params[fk]["lookup_id"]
-        )
         idx = foreign_key_fields.index(fk)
-        new_col = " from ".join(foreign_key_fields[idx:])
-        old_col = foreign_key_fields[idx-1]
-        w_df.rename({new_col, old_col},inplace=True)
+        fk_with_from = " from ".join(foreign_key_fields[idx:])
+        if fk not in looked_up_already:
+            w_df = w_df.merge(
+                lookup_table[fk],
+                how="left",
+                left_on=f"{fk_with_from}{suffix}", right_on=aux_params[fk]["lookup_id"]
+            )
+            looked_up_already.append(fk)
+        rename = {lf: f"{lf} from {fk}{suffix}" for lf in lookedup_fields[fk]}
+        w_df.rename(columns=rename, inplace=True)
 
 
-    return w_df, w_formula, err
+    return w_df, w_formula, looked_up_already, err
 
 
 def get_fields_from_formula(formula: str) -> List[str]:
@@ -2222,7 +2241,9 @@ def get_lookedup_fields(formula) -> Dict[str, List[str]]:
     for f in raw_fields:
         if " from " in f:
             parts = f.split(" from ")
+            # initialize dictionary -- one key for each foreign key
+            lookedup_fields = {p:list() for p in parts[1:]}
             for part in parts[1:]:
-                lookedup_fields[part] = parts[parts.index(part) - 1]
+                lookedup_fields[part].append(parts[parts.index(part) - 1])
 
     return lookedup_fields
