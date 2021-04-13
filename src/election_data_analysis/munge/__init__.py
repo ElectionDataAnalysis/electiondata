@@ -1947,6 +1947,17 @@ def get_aux_info(
             foreign_key_fields[element] = fk_list
         else:
             aux.pop(element)
+
+        # if source_file is None, grab format parameters for the aux file reading from the [format] section of the munger
+        if not f_p["source_file"]:
+            # we read all data from the original file (e.g., for xml)
+            main_format_params, new_err = ui.get_parameters(
+                required_keys=req_munger_parameters.keys(),
+                optional_keys=opt_munger_data_types.keys(),
+                header="format",
+                param_file=munger_path
+            )
+            f_p.update(jm.recast_options(main_format_params))
     return aux, foreign_key_fields
 
 
