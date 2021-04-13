@@ -1918,15 +1918,15 @@ def get_aux_info(
                 param_file=munger_path,
             )
             # convert parameters to appropriate types
-            f_p = jm.recast_options(
-                f_p,
-                {
+            type_dict = {
                     **opt_munger_data_types,
                     **{
                         k: req_munger_parameters[k]["data_type"]
                         for k in req_munger_parameters.keys()
                     },
-                },
+                }
+            f_p = jm.recast_options(
+                f_p, type_dict
             )
             if f_err:
                 # no lookup found, so skip this one
@@ -1949,15 +1949,15 @@ def get_aux_info(
             aux.pop(element)
 
         # if source_file is None, grab format parameters for the aux file reading from the [format] section of the munger
-        if not f_p["source_file"]:
+        if ("source_file" not in f_p.keys()) or (not f_p["source_file"]):
             # we read all data from the original file (e.g., for xml)
             main_format_params, new_err = ui.get_parameters(
-                required_keys=req_munger_parameters.keys(),
-                optional_keys=opt_munger_data_types.keys(),
+                required_keys=list(req_munger_parameters.keys()),
+                optional_keys=list(opt_munger_data_types.keys()),
                 header="format",
                 param_file=munger_path
             )
-            f_p.update(jm.recast_options(main_format_params))
+            f_p.update(jm.recast_options(main_format_params,type_dict))
     return aux, foreign_key_fields
 
 
@@ -1995,9 +1995,10 @@ def incorporate_aux_info(
             lt_path,
             aux[element][fk]["params"],
             munger_path,
-            dict(),
+            None,
             aux=True,
-            xml_driving_path=aux[element][fk]["params"]["lookup_id"]
+            xml_driving_path=aux[element][fk]["params"]["lookup_id"],
+            lookup_id=fk
         )
         if len(lookup_df_dict) > 1:
             fk_err = ui.add_new_error(

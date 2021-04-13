@@ -414,6 +414,7 @@ def read_single_datafile(
     err: Optional[Dict],
     aux: bool = False,
     xml_driving_path: Optional[str] = None,
+    lookup_id: Optional[str] = None,
 ) -> (Dict[str, pd.DataFrame], dict):
     """Length of returned dictionary is the number of sheets read -- usually 1 except for multi-sheet Excel.
     Auxiliary files have different parameters (e.g., no count locations)"""
@@ -447,7 +448,7 @@ def read_single_datafile(
             tree = et.parse(f_path)
             df, err = sf.df_from_tree(
                 tree, xml_path_info=xml_path_info, file_name=file_name, **driver,
-                namespace=p["namespace"],
+                namespace=p["namespace"], lookup_id=lookup_id
             )
             if not fatal_error(err):
                 df_dict = {"Sheet1": df}

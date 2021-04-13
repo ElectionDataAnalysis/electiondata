@@ -125,6 +125,7 @@ def df_from_tree(
         xml_path_info: Dict[str, Dict[str, Dict[str, str]]],
         file_name: str,
         namespace: Optional[str],
+        lookup_id: str = None,
 ) -> (pd.DataFrame, Optional[dict]):
     """Reads all counts, along with info from munge string paths ((tag, attr) for each element), into a dataframe.
     If count_attrib is None, reads count from value of element; otherwise from attribute.
@@ -149,15 +150,21 @@ def df_from_tree(
         )
         return (pd.DataFrame, err)
     df_rows = list()
-    for count in root.findall(tail):
-        if main_attrib:
-            row = {"Count": int(count.attrib[main_attrib])}
+    for driver in root.findall(tail):
+        if lookup_id:
+            if main_attrib:
+                row = {lookup_id: driver.attrib[main_attrib]}
+            else:
+                row = {lookup_id: driver.text}
         else:
-            row = {"Count": int(count.text)}
-        ancestor = count
+            if main_attrib:
+                row = {"Count": int(driver.attrib[main_attrib])}
+            else:
+                row = {"Count": int(driver.text)}
+
+        ancestor = driver
         while ancestor is not None:
             for elt in xml_path_info.keys():
-
                 if xml_path_info[elt]["local_root_tag"] == ancestor.tag:
                     if xml_path_info[elt]["attrib"]:
                         try:
