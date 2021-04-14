@@ -2,12 +2,13 @@
 file_type=xml
 count_location=ElectionReport/Election/ContestCollection/Contest/BallotSelection/VoteCountsCollection/VoteCounts.Count
 encoding=utf_8
+namespace=http://grouper.ieee.org/groups/1622/groups/2/V1/1622_2-election_results_reporting.xsd
 
 [munge formulas]
 ReportingUnit=<GpUnit.Name from VoteCounts/GpUnitId>
 Party=<Party/Name/LanguageString from Candidate/PartyId from BallotSelection/CandidateId>
 CandidateContest=<Contest.Abbreviation>
-Candidate=<CandidateId.text from BallotSelection/CandidateId>
+Candidate=<Candidate/BallotName/LanguageString from BallotSelection/CandidateId>
 CountItemType=<VoteCounts.Type>
 
 [VoteCounts/GpUnitId lookup]
@@ -18,7 +19,7 @@ lookup_id=ElectionReport/GpUnitCollection/GpUnit.ObjectId
 [BallotSelection/CandidateId lookup]
 source_file=
 file_type=
-lookup_id=ElectionReport/Election/CandidateCollection/Candidate/BallotName/LanguageString
+lookup_id=ElectionReport/Election/CandidateCollection/Candidate.ObjectId
 
 [Candidate/PartyId lookup]
 source_file=
