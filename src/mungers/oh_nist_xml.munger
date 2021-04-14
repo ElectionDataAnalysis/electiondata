@@ -1,11 +1,26 @@
 [format]
 file_type=xml
-count_location=ElectionResult/Contest/Choice/VoteType/County.votes
+count_location=ElectionReport/Election/ContestCollection/Contest/BallotSelection/VoteCountsCollection/VoteCounts.Count
 encoding=utf_8
 
 [munge formulas]
-ReportingUnit=<GpUnitId.text>
-Party=<PartyId.text>
-CandidateContest=<Contest.Name>
-Candidate=<CandidateId.text>
+ReportingUnit=<GpUnit.Name from VoteCounts/GpUnitId>
+Party=<Party/Name/LanguageString from Candidate/PartyId from BallotSelection/CandidateId>
+CandidateContest=<Contest.Abbreviation>
+Candidate=<CandidateId.text from BallotSelection/CandidateId>
 CountItemType=<VoteCounts.Type>
+
+[VoteCounts/GpUnitId lookup]
+source_file=
+file_type=
+lookup_id=ElectionReport/GpUnitCollection/GpUnit.ObjectId
+
+[BallotSelection/CandidateId lookup]
+source_file=
+file_type=
+lookup_id=ElectionReport/Election/CandidateCollection/Candidate/BallotName/LanguageString
+
+[Candidate/PartyId lookup]
+source_file=
+file_type=
+lookup_id=ElectionReport/PartyCollection/Party.ObjectId
