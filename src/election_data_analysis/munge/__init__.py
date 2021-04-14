@@ -932,7 +932,7 @@ def raw_to_id_simple(
                         err,
                         "warn-jurisdiction",
                         juris.short_name,
-                        f"Some unmatched CountItemTypes:\n{unmatched}",
+                        f"\nSome unmatched CountItemTypes:\n{unmatched}",
                     )
                 # get CountItemType for all matched lines
                 working = (
@@ -1253,10 +1253,8 @@ def munge_source_to_raw(
                     if ui.fatal_error(new_err):
                         return working, err
 
-            # in formulas, append suffix to any fields from the original table
-            # TODO also need to append suffix to fields from lookups
-            for c in p["munge_fields"]:
-                formula = formula.replace(f"<{c}>", f"<{c}{suffix}>")
+            # TODO in formulas, append suffix to all fields from the original table
+            formula = re.sub("\<([^\>]*)\>", f"<\\1{suffix}>", formula)
 
             # add col with munged values
             working, new_err = add_column_from_formula(
@@ -1282,20 +1280,30 @@ def munge_source_to_raw(
             )
             return working, err
 
-        # compress whitespace for <element>_raw
-        compression = pd.DataFrame(
-            [[x, compress_whitespace(x)] for x in working[f"{element}_raw"].unique()],
-            columns=["uncompressed", "compressed"],
-        )
-        working = (
-            working.merge(
-                compression,
-                left_on=f"{element}_raw",
-                right_on="uncompressed",
+        try:
+            # compress whitespace for <element>_raw
+            compression = pd.DataFrame(
+                [[x,compress_whitespace(x)] for x in working[f"{element}_raw"].unique()],
+                columns=["uncompressed","compressed"],
             )
-            .drop([f"{element}_raw", "uncompressed"], axis=1)
-            .rename(columns={"compressed": f"{element}_raw"})
-        )
+
+            working = (
+                working.merge(
+                    compression,
+                    left_on=f"{element}_raw",
+                    right_on="uncompressed",
+                )
+                .drop([f"{element}_raw", "uncompressed"], axis=1)
+                .rename(columns={"compressed": f"{element}_raw"})
+            )
+        except Exception as exc:
+            err = ui.add_new_error(
+                err,
+                "system",
+                f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
+                f"Unexpected exception while compressing whitespace for {element}: {exc}"
+            )
+            return working,err
     # drop all source columns
     source_cols = [c for c in working.columns if c[-len(suffix) :] == suffix]
     working.drop(source_cols, axis=1, inplace=True)
@@ -2065,7 +2073,7 @@ def incorporate_aux_info(
                 left_on=f"{fk_with_from}{suffix}", right_on=aux_params[fk]["lookup_id"]
             )
             looked_up_already.append(fk)
-        rename = {lf: f"{lf} from {fk}{suffix}" for lf in lookedup_fields[fk]}
+        rename = {lf: f"{lf} from {fk_with_from}{suffix}" for lf in lookedup_fields[fk]}
         w_df.rename(columns=rename, inplace=True)
 
 

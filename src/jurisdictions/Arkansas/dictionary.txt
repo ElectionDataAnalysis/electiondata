@@ -504,6 +504,7 @@ Candidate	Ashley Hudson	Ashley Hudson
 Candidate	Alisa Blaize Dixon	Alisa Blaize Dixon
 Candidate	William H. Hanson	William H. Hanson
 Candidate	Tom Cotton	Senator Tom Cotton
+Candidate	Tom Cotton	Tom Cotton
 Candidate	Joyce Elliott	Senator Joyce Elliott
 Candidate	Roque 'Rocky' De La Fuente	Roque 'Rocky' De La Fuente/Darcy G. Richardson
 Candidate	Ricky Dale Harrington Jr.	Ricky Dale Harrington Jr.
@@ -2197,13 +2198,17 @@ CandidateContest	AR Secretary of State	Secretary of State
 CandidateContest	AR Lieutenant Governor	Lieutenant Governor
 CandidateContest	AR Commissioner of State Lands	Commissioner of State Lands
 CandidateContest	US Senate AR	U.S. Senate
+CandidateContest	US President (AR)	US President (AR)
 CandidateContest	US President (AR)	U.S. President, Vice President
 CountItemType	election-day	Election Day
 CountItemType	early	Early Vote
 CountItemType	absentee	Absentee
+CountItemType	absentee	absentee
 CountItemType	provisional	Provisional
 CountItemType	total	Total
+Party	Democratic Party	Democratic Party
 Party	Democratic Party	DEM
+Party	Republican Party	Republican Party
 Party	Republican Party	REP
 Party	Libertarian Party	LIB
 Party	Republican Party	Rep
@@ -2358,6 +2363,7 @@ ReportingUnit	Arkansas;US House AR District 1	State House District 1
 ReportingUnit	Arkansas;US House AR District 2	State House District 2
 ReportingUnit	Arkansas;US House AR District 3	State House District 3
 ReportingUnit	Arkansas;US House AR District 4	State House District 4
+ReportingUnit	Arkansas;Arkansas County	Arkansas;Arkansas County
 ReportingUnit	Arkansas;Arkansas County	Arkansas
 ReportingUnit	Arkansas;Ashley County	Ashley
 ReportingUnit	Arkansas;Baxter County	Baxter
@@ -2433,4 +2439,3 @@ ReportingUnit	Arkansas;Washington County	Washington
 ReportingUnit	Arkansas;White County	White
 ReportingUnit	Arkansas;Woodruff County	Woodruff
 ReportingUnit	Arkansas;Yell County	Yell
-
