@@ -1,0 +1,30 @@
+[format]
+file_type=excel
+count_locations=by_column_numbers
+munge_strings=in_count_headers,in_field_values,constant_over_file
+
+encoding=iso-8859-1
+count_column_numbers=1,2,3,4,5,6
+string_field_name_row=0
+count_field_name_row=0
+count_header_row_numbers=0,1
+constant_over_file=CountItemType
+
+[in_field_values]
+ReportingUnit=<House District>
+CandidateContest=<sheet_name> <House District>
+
+[in_count_headers]
+Candidate=<House District,header_0>
+Party=<header_0>
+
+[ignore]
+ReportingUnit=Total, Puerto Rico
+
+[House District,header_0 lookup]
+source_file=Puerto-Rico/2020_General_PR_District_Representatives_Candidates.xlsx
+lookup_id=House District
+Candidate_replacement=<header_0>
+file_type=excel
+munge_strings=in_field_values
+string_field_name_row=0

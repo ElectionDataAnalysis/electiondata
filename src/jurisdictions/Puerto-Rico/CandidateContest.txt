@@ -1,0 +1,58 @@
+Name	NumberElected	Office	PrimaryParty
+PR House District 1	1	PR House District 1	
+PR House District 2	1	PR House District 2	
+PR House District 3	1	PR House District 3	
+PR House District 4	1	PR House District 4	
+PR House District 5	1	PR House District 5	
+PR House District 6	1	PR House District 6	
+PR House District 7	1	PR House District 7	
+PR House District 8	1	PR House District 8	
+PR House District 9	1	PR House District 9	
+PR House District 10	1	PR House District 10	
+PR House District 11	1	PR House District 11	
+PR House District 12	1	PR House District 12	
+PR House District 13	1	PR House District 13	
+PR House District 14	1	PR House District 14	
+PR House District 15	1	PR House District 15	
+PR House District 16	1	PR House District 16	
+PR House District 17	1	PR House District 17	
+PR House District 18	1	PR House District 18	
+PR House District 19	1	PR House District 19	
+PR House District 20	1	PR House District 20	
+PR House District 21	1	PR House District 21	
+PR House District 22	1	PR House District 22	
+PR House District 23	1	PR House District 23	
+PR House District 24	1	PR House District 24	
+PR House District 25	1	PR House District 25	
+PR House District 26	1	PR House District 26	
+PR House District 27	1	PR House District 27	
+PR House District 28	1	PR House District 28	
+PR House District 29	1	PR House District 29	
+PR House District 30	1	PR House District 30	
+PR House District 31	1	PR House District 31	
+PR House District 32	1	PR House District 32	
+PR House District 33	1	PR House District 33	
+PR House District 34	1	PR House District 34	
+PR House District 35	1	PR House District 35	
+PR House District 36	1	PR House District 36	
+PR House District 37	1	PR House District 37	
+PR House District 38	1	PR House District 38	
+PR House District 39	1	PR House District 39	
+PR House District 40	1	PR House District 40	
+PR Senate District 1	1	PR Senate District 1	
+PR Senate District 2	1	PR Senate District 2	
+PR Senate District 3	1	PR Senate District 3	
+PR Senate District 4	1	PR Senate District 4	
+PR Senate District 5	1	PR Senate District 5	
+PR Senate District 6	1	PR Senate District 6	
+PR Senate District 7	1	PR Senate District 7	
+PR Senate District 8	1	PR Senate District 8	
+US House PR District 1	1	US House PR District 1	
+US President (PR)	1	US President (PR)	
+PR Governor	1	PR Governor	
+US Resident Commissioner (PR)	1	US Resident Commissioner (PR)
+US Senate PR	1	US Senate PR	
+PR Attorney General	1	PR Attorney General	
+PR Lieutenant Governor	1	PR Lieutenant Governor	
+PR Treasurer	1	PR Treasurer	
+PR Secretary of State	1	PR Secretary of State	
