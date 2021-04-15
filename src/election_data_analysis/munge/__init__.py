@@ -4,15 +4,12 @@ from election_data_analysis import database as db
 from election_data_analysis import user_interface as ui
 from election_data_analysis import juris_and_munger as jm
 from election_data_analysis import special_formats as sf
-from election_data_analysis import analyze as an
 import pandas as pd
 from pandas.api.types import is_numeric_dtype
 from typing import Optional, List, Dict, Any
 import re
 import os
 from sqlalchemy.orm.session import Session
-import numpy as np
-import xml.etree.ElementTree as et
 
 # constants
 default_encoding = "utf_8"
@@ -668,7 +665,9 @@ def melt_to_one_count_column(
     elif len(p["count_header_row_numbers"]) == 1:
         count_header_row = p["count_header_row_numbers"][0]
         # rename header_0 to count_header_i
-        melted.rename(columns={"header_0": f"count_header_{count_header_row}"}, inplace=True)
+        melted.rename(
+            columns={"header_0": f"count_header_{count_header_row}"}, inplace=True
+        )
     return melted, err
 
 
@@ -990,8 +989,7 @@ def raw_to_id_simple(
                 err,
                 "munger",
                 munger_name,
-                f"KeyError ({exc}) while adding internal ids for {t}. "
-                f"Check munger",
+                f"KeyError ({exc}) while adding internal ids for {t}. " f"Check munger",
             )
         except AttributeError as exc:
             err = ui.add_new_error(
@@ -1176,7 +1174,7 @@ def get_munge_formulas(
         param_file=munger_path,
     )
     # drop any empty formulas
-    f = {k:v for k,v in f.items() if v}
+    f = {k: v for k, v in f.items() if v}
     if new_err:
         err = ui.consolidate_errors([err, new_err])
         if ui.fatal_error(new_err):
@@ -1184,7 +1182,7 @@ def get_munge_formulas(
     return f, err
 
 
-def order_lookup_keys(dependents: Dict[str,List[str]]) -> List[str]:
+def order_lookup_keys(dependents: Dict[str, List[str]]) -> List[str]:
     temp = list(dependents.keys())
     key_list = list()
     moved = list()
@@ -1198,11 +1196,10 @@ def order_lookup_keys(dependents: Dict[str,List[str]]) -> List[str]:
             key_list.append(k)
     return key_list
 
+
 def munge_source_to_raw(
     df: pd.DataFrame,
     munger_path: str,
-    p: Dict[str, Any],
-    orig_string_cols: List[str],
     suffix: str,
     aux_directory_path,
     results_file_path,
@@ -1239,7 +1236,11 @@ def munge_source_to_raw(
     if aux_params:
         # get lookup tables
         lookup_table, new_err = get_lookup_tables(
-            list(aux_params.keys()), aux_params, aux_directory_path, results_file_path, munger_path
+            list(aux_params.keys()),
+            aux_params,
+            aux_directory_path,
+            results_file_path,
+            munger_path,
         )
         if new_err:
             err = ui.consolidate_errors([err, new_err])
@@ -1256,15 +1257,15 @@ def munge_source_to_raw(
                 suffix,
             )
         if new_err:
-            err = ui.consolidate_errors([err,new_err])
+            err = ui.consolidate_errors([err, new_err])
             if ui.fatal_error(new_err):
-                return working,err
+                return working, err
 
     for element in elements:
         try:
             formula = formulas[element]
             # if formula refers to any fields that need to be looked up, make appropriate replacements
-            formula = re.sub("\<([^\>]*)\>", f"<\\1{suffix}>", formula)
+            formula = re.sub("<([^>]*)>", f"<\\1{suffix}>", formula)
 
             # add col with munged values
             working, new_err = add_column_from_formula(
@@ -1293,8 +1294,11 @@ def munge_source_to_raw(
         try:
             # compress whitespace for <element>_raw
             compression = pd.DataFrame(
-                [[x,compress_whitespace(x)] for x in working[f"{element}_raw"].unique()],
-                columns=["uncompressed","compressed"],
+                [
+                    [x, compress_whitespace(x)]
+                    for x in working[f"{element}_raw"].unique()
+                ],
+                columns=["uncompressed", "compressed"],
             )
 
             working = (
@@ -1311,9 +1315,9 @@ def munge_source_to_raw(
                 err,
                 "system",
                 f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
-                f"Unexpected exception while compressing whitespace for {element}: {exc}"
+                f"Unexpected exception while compressing whitespace for {element}: {exc}",
             )
-            return working,err
+            return working, err
     # drop all source columns
     source_cols = [c for c in working.columns if c[-len(suffix) :] == suffix]
     working.drop(source_cols, axis=1, inplace=True)
@@ -1322,11 +1326,11 @@ def munge_source_to_raw(
 
 
 def get_lookup_tables(
-        foreign_key_list: List[str],
-        aux_params: Dict[str,Dict[str, Any]],
-        aux_directory_path: str,
-        results_file_path: str,
-        munger_path: str,
+    foreign_key_list: List[str],
+    aux_params: Dict[str, Dict[str, Any]],
+    aux_directory_path: str,
+    results_file_path: str,
+    munger_path: str,
 ) -> (Dict[str, pd.DataFrame], Optional[dict]):
     err = None
     lookup_table = dict()
@@ -1334,9 +1338,7 @@ def get_lookup_tables(
     for fk in foreign_key_list:
         # grab the lookup table
         if aux_params[fk]["source_file"]:
-            lt_path = os.path.join(
-                aux_directory_path, aux_params[fk]["source_file"]
-            )
+            lt_path = os.path.join(aux_directory_path, aux_params[fk]["source_file"])
         else:
             lt_path = results_file_path
         lookup_df_dict, fk_err = ui.read_single_datafile(
@@ -1346,7 +1348,7 @@ def get_lookup_tables(
             None,
             aux=True,
             xml_driving_path=aux_params[fk]["lookup_id"],
-            lookup_id=aux_params[fk]["lookup_id"]
+            lookup_id=aux_params[fk]["lookup_id"],
         )
         if len(lookup_df_dict) > 1:
             fk_err = ui.add_new_error(
@@ -1463,7 +1465,10 @@ def get_and_check_munger_params(
                 )
         else:
             err = ui.add_new_error(
-                err, "munger", munger_name, f"count_locations parameter is missing, or missing information",
+                err,
+                "munger",
+                munger_name,
+                f"count_locations parameter is missing, or missing information",
             )
         if ui.fatal_error(err):
             return dict(), err
@@ -1508,7 +1513,7 @@ def get_and_check_munger_params(
     formulas, new_err = get_munge_formulas(munger_path)
     params["munge_fields"], new_err = get_string_fields_from_munger(munger_path)
     if new_err:
-        err = ui.consolidate_errors([err,new_err])
+        err = ui.consolidate_errors([err, new_err])
 
     # check formulas are well-formed and consistent with count_location for xml
     if params["file_type"] == "xml":
@@ -1521,14 +1526,14 @@ def get_and_check_munger_params(
                     err,
                     "munger",
                     munger_name,
-                    f"Field in munge formula not well-formed: <{field}>"
+                    f"Field in munge formula not well-formed: <{field}>",
                 )
             elif tag[0] not in tags:
                 err = ui.add_new_error(
                     err,
                     "munger",
                     munger_name,
-                    f"Munge formula element ({tag[0]}) (in {field}) not found in count_location/lookup_id path"
+                    f"Munge formula element ({tag[0]}) (in {field}) not found in count_location/lookup_id path",
                 )
     # check formulas are well-formed and consistent for excel, flat files.
     elif params["file_type"] in ["excel", "flat_text"]:
@@ -1562,14 +1567,18 @@ def get_and_check_munger_params(
                 err,
                 "warn-munger",
                 munger_name,
-                "given munge_field_types parameter ignored -- will be derived from formulas"
+                "given munge_field_types parameter ignored -- will be derived from formulas",
             )
-        params["munge_field_types"] = [k for k,v in mf_by_type.items() if len(mf_by_type[k]) != 0]
+        params["munge_field_types"] = [
+            k for k, v in mf_by_type.items() if len(mf_by_type[k]) != 0
+        ]
         if params["constant_over_file"]:
             params["munge_field_types"].append("constant_over_file")
 
         # collect header rows in formulas into count_header_row_numbers list
-        params["count_header_row_numbers"] = [int(mf[13:]) for mf in mf_by_type["in_count_headers"]]
+        params["count_header_row_numbers"] = [
+            int(mf[13:]) for mf in mf_by_type["in_count_headers"]
+        ]
 
     # check that each lookup section has a replacement formula for each element referencing the lookup field
     # and check that each auxiliary file exists
@@ -1596,7 +1605,7 @@ def get_and_check_munger_params(
             err = ui.consolidate_errors([err, new_err])
         if results_dir:
             aux_file_path = os.path.join(results_dir, required["source_file"])
-            if not os.isfile(aux_file_path):
+            if not os.path.isfile(aux_file_path):
                 err = ui.add_new_error(
                     err,
                     "munger",
@@ -1604,7 +1613,6 @@ def get_and_check_munger_params(
                     f"Auxiliary file not found: {required['source_file']}",
                 )
         # TODO check usual format items for reading aux file
-
 
     return params, err
 
@@ -1629,8 +1637,8 @@ def get_string_fields_from_munger(
 
 
 def extract_fields_from_formulas(
-        formulas: List[str],
-        drop_lookups: bool = True,
+    formulas: List[str],
+    drop_lookups: bool = True,
 ) -> List[str]:
     """If keep_lookups is true, return raw fields (including ... from ... for lookups).
     Otherwise return only the first foreign key field of each chain of lookups."""
@@ -1642,7 +1650,7 @@ def extract_fields_from_formulas(
         if drop_lookups:
             # for any lookup formulas, delete fields to be lookup up
             for x in from_pattern.findall(f):
-                f = f.replace(x,"")
+                f = f.replace(x, "")
         # pull information out of angle brackets
         munge_field_set.update(angle_pattern.findall(f))
     flat = {x for y in munge_field_set for x in y}
@@ -1651,7 +1659,6 @@ def extract_fields_from_formulas(
     # remove dupes, make list
     munge_field_list = list(flat)
     return munge_field_list
-
 
 
 def check_formula(formula: str) -> Optional[str]:
@@ -1679,7 +1686,7 @@ def to_standard_count_frame(
     munger_path: str,
     p: dict,
     suffix: Optional[str] = None,
-) -> (pd.DataFrame, Optional[list], Optional[dict]):
+) -> (pd.DataFrame, Optional[dict]):
     """Read data from file at <f_path>; return a standard dataframe with one clean count column
     and all other columns typed as 'string'.
      If <suffix> is given, append <suffix> to all non-count columns"""
@@ -1694,12 +1701,13 @@ def to_standard_count_frame(
     try:
         munge_string_fields, new_err = get_string_fields_from_munger(munger_path)
     except Exception as exc:
-        new_err = ui.add_new_error(
+        err = ui.add_new_error(
             None,
             "system",
             f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
             f"Exception while getting string fields: {exc}",
         )
+        return pd.DataFrame(), err
     if new_err:
         err = ui.consolidate_errors([err, new_err])
 
@@ -1716,7 +1724,7 @@ def to_standard_count_frame(
             )
 
         if ui.fatal_error(err):
-            return pd.DataFrame(), original_string_columns, err
+            return pd.DataFrame(), err
     except Exception as exc:
         err = ui.add_new_error(
             err,
@@ -1724,7 +1732,7 @@ def to_standard_count_frame(
             f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
             f"Unexpected exception while reading data from file {file_name}:\n\t{exc}",
         )
-        return pd.DataFrame(), original_string_columns, err
+        return pd.DataFrame(), err
 
     # loop over sheets
     standard = dict()
@@ -1786,7 +1794,9 @@ def to_standard_count_frame(
             else:
                 # transform to df with single count column 'Count' and all raw munge info in other columns
                 try:
-                    working, error_by_df[n] = melt_to_one_count_column(raw, p, munger_name)
+                    working, error_by_df[n] = melt_to_one_count_column(
+                        raw, p, munger_name
+                    )
                 except Exception as exc:
                     error_by_df[n] = ui.add_new_error(
                         None,
@@ -1819,9 +1829,7 @@ def to_standard_count_frame(
                     )
                     for row in rows_needed:
                         # get index of first valid entry in row (or "" if none)
-                        first_valid_idx = (
-                            data.loc[row].fillna("").first_valid_index()
-                        )
+                        first_valid_idx = data.loc[row].fillna("").first_valid_index()
                         working = add_constant_column(
                             working,
                             f"row_{row}",
@@ -1977,12 +1985,7 @@ def fill_vote_count(
 
 def get_aux_info(
     formula: str, munger_path: str
-) -> (
-        Dict[str, Dict[str, Any]],
-        Dict[str, List[str]],
-        List[str],
-        Optional[dict]
-):
+) -> (Dict[str, Dict[str, Any]], Dict[str, List[str]], List[str], Optional[dict]):
     """returns:
         aux_params, including lookup_id and other info for reading lookup file
             (keys are bare foreign keys)
@@ -1995,7 +1998,7 @@ def get_aux_info(
     # initialize dictionaries
     aux_params = dict()
     # get list of all fields that will be needed
-    raw_fields = extract_fields_from_formulas([formula],drop_lookups=False)
+    raw_fields = extract_fields_from_formulas([formula], drop_lookups=False)
     # get map from foreign key to all values looked up from that key, for all fields
     # NB: foreign keys include the "from"; values do not.
     lookup_map = get_lookedup_fields(raw_fields)
@@ -2013,8 +2016,11 @@ def get_aux_info(
         # convert parameters to appropriate types
         type_dict = {
             **opt_munger_data_types,
-            **{k: req_munger_parameters[k]["data_type"] for k in req_munger_parameters.keys()},
-            }
+            **{
+                k: req_munger_parameters[k]["data_type"]
+                for k in req_munger_parameters.keys()
+            },
+        }
         f_p = jm.recast_options(f_p, type_dict)
 
         # define f_p["munge_fields"]
@@ -2031,9 +2037,9 @@ def get_aux_info(
                     required_keys=list(req_munger_parameters.keys()),
                     optional_keys=list(opt_munger_data_types.keys()),
                     header="format",
-                    param_file=munger_path
+                    param_file=munger_path,
                 )
-                f_p.update(jm.recast_options(main_format_params,type_dict))
+                f_p.update(jm.recast_options(main_format_params, type_dict))
             aux_params[fk] = f_p
 
     return aux_params, lookup_map, raw_fields, err
@@ -2041,7 +2047,7 @@ def get_aux_info(
 
 def incorporate_aux_info(
     df: pd.DataFrame,
-    lookup_map: Dict[str,List[str]],
+    lookup_map: Dict[str, List[str]],
     lookup_table: Dict[str, pd.DataFrame],
     aux_params: Dict[str, Dict[str, Any]],
     munger_path: str,  # for error reporting
@@ -2054,7 +2060,7 @@ def incorporate_aux_info(
     w_df = df.copy()
     err = None  # TODO error handling
     ## set order for lookups
-    from_count = {k: len(re.findall('(?= from )',k)) for k in lookup_map.keys()}
+    from_count = {k: len(re.findall("(?= from )", k)) for k in lookup_map.keys()}
     max_from_count = max(from_count.values())
     ordered_fk_with_froms = list()
     for fc in range(max_from_count + 1):
@@ -2069,11 +2075,14 @@ def incorporate_aux_info(
         w_df = w_df.merge(
             lookup_table[fk],
             how="left",
-            left_on=working_fk_cols, right_on=lookup_fk_cols
+            left_on=working_fk_cols,
+            right_on=lookup_fk_cols,
         )
         # rename looked-up columns to incorporate the "from" and add suffix
-        rename = {c: f"{c} from {fk_with_from}{suffix}" for c in lookup_table[fk].columns}
-        w_df.rename(columns=rename,inplace=True)
+        rename = {
+            c: f"{c} from {fk_with_from}{suffix}" for c in lookup_table[fk].columns
+        }
+        w_df.rename(columns=rename, inplace=True)
 
     return w_df, err
 
@@ -2158,48 +2167,30 @@ def file_to_raw_df(
     results_directory_path,
 ) -> (pd.DataFrame, Optional[dict]):
     err = None
-    file_name = Path(f_path).name
 
-    # TODO include NIST v2 with xml
-    if p["file_type"] == "nist_v2_xml":
-        try:
-            df, err = sf.read_nist_v2_xml(f_path)
-            if ui.fatal_error(err):
-                return pd.DataFrame(), err
-        except Exception as exc:
-            err = ui.add_new_error(
-                err,
-                "file",
-                file_name,
-                f"Exception while reading file into standard count frame: {exc}\n"
-                f"Validation tools may be helpful:"
-                f"https://github.com/HiltonRoscoe/CdfTools",
-            )
+    # read data into standard count format dataframe
+    #  append "_SOURCE" to all non-Count column names
+    #  (to avoid conflicts if e.g., source has col names 'Party')
+    try:
+        df, err = to_standard_count_frame(
+            f_path,
+            munger_path,
+            p,
+            suffix="_SOURCE",
+        )
+        if ui.fatal_error(err):
             return pd.DataFrame(), err
-    else:
-        # read data into standard count format dataframe
-        #  append "_SOURCE" to all non-Count column names
-        #  (to avoid conflicts if e.g., source has col names 'Party')
-        try:
-            df, original_string_columns, err = to_standard_count_frame(
-                f_path,
-                munger_path,
-                p,
-                suffix="_SOURCE",
-            )
-            if ui.fatal_error(err):
-                return pd.DataFrame(), err
-        except Exception as exc:
-            err = ui.add_new_error(
-                err,
-                "system",
-                f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
-                f"Exception while converting data to standard form: {exc}",
-            )
-            return pd.DataFrame(), err
-        # clean non-count columns
-        non_count = [c for c in df.columns if c != "Count"]
-        df = clean_strings(df, non_count)
+    except Exception as exc:
+        err = ui.add_new_error(
+            err,
+            "system",
+            f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
+            f"Exception while converting data to standard form: {exc}",
+        )
+        return pd.DataFrame(), err
+    # clean non-count columns
+    non_count = [c for c in df.columns if c != "Count"]
+    df = clean_strings(df, non_count)
 
     # transform source to completely munged (possibly with foreign keys if there is aux data)
     # # add raw-munged column for each element, removing old
@@ -2207,8 +2198,6 @@ def file_to_raw_df(
         df, new_err = munge_source_to_raw(
             df,
             munger_path,
-            p,
-            original_string_columns,
             "_SOURCE",
             results_directory_path,
             f_path,
@@ -2229,9 +2218,7 @@ def file_to_raw_df(
     return df, err
 
 
-def add_constants_to_df(
-        df: pd.DataFrame, constants: Dict[str, Any]
-) -> pd.DataFrame:
+def add_constants_to_df(df: pd.DataFrame, constants: Dict[str, Any]) -> pd.DataFrame:
     for element in constants.keys():
         df = add_constant_column(
             df,
@@ -2249,7 +2236,7 @@ def get_lookedup_fields(raw_fields) -> Dict[str, List[str]]:
         parts = f.split(" from ")
         for j in range(len(parts) - 1):
             val = parts[j]
-            fk = " from ".join(parts[j+1:])
+            fk = " from ".join(parts[j + 1 :])
             if fk in fk_map.keys():
                 fk_map[fk].append(val)
             else:

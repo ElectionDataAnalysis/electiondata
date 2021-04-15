@@ -61,6 +61,7 @@ def test_congressional_totals(dbname):
         == total_cd_votes
     )
 
+
 # state leg contests not collected
 """def test_state_senate_totals(dbname):
     assert (
@@ -102,6 +103,7 @@ def test_all_candidates_known(dbname):
         == []
     )
 
+
 # totals only in file
 """
 def test_count_type_subtotal(dbname):
@@ -117,6 +119,7 @@ def test_count_type_subtotal(dbname):
         == pres_votes_vote_type
     )
 """
+
 
 def test_county_subtotal(dbname):
     assert (

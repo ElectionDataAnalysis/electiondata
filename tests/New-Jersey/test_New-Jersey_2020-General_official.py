@@ -64,6 +64,7 @@ def test_congressional_totals(dbname):
         == total_cd_votes
     )
 
+
 # regular legislative elections for NJ are in odd years
 """
 def test_state_senate_totals(dbname):
@@ -92,6 +93,7 @@ def test_state_house_totals(dbname):
     )
 """
 
+
 def test_standard_vote_types(dbname):
     assert e.check_count_types_standard(election, jurisdiction, dbname=dbname)
 
@@ -105,6 +107,7 @@ def test_all_candidates_known(dbname):
         e.get_contest_with_unknown_candidates(election, jurisdiction, dbname=dbname)
         == []
     )
+
 
 """
 def test_count_type_subtotal(dbname):
@@ -120,6 +123,7 @@ def test_count_type_subtotal(dbname):
         == pres_votes_vote_type
     )
 """
+
 
 def test_county_subtotal(dbname):
     assert (

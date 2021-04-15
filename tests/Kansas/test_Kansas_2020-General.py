@@ -17,14 +17,16 @@ import election_data_analysis as e
 election = "2020 General"
 jurisdiction = "Kansas"
 abbr = "KS"
-total_pres_votes = 1457960  # total from official file, does not match total from website
-    #771406 + 570323 + 30574  # total of all votes for US President per website
+total_pres_votes = (
+    1457960  # total from official file, does not match total from website
+)
+# 771406 + 570323 + 30574  # total of all votes for US President per website
 cd = 3  # US House congressional district
-cd_3_Wyandotte = 16788 + 37552 + 1914   # from official results file
-cd_3_Johnson = 157148 + 180329 + 9474   # from official results file
-cd_3_all_others = 7213   # from official results file
+cd_3_Wyandotte = 16788 + 37552 + 1914  # from official results file
+cd_3_Johnson = 157148 + 180329 + 9474  # from official results file
+cd_3_all_others = 7213  # from official results file
 total_cd_votes = cd_3_Wyandotte + cd_3_Johnson + cd_3_all_others
-    # same as from website: 220049 + 178773 + 11596  # total votes in that US House contest in the chosen cd
+# same as from website: 220049 + 178773 + 11596  # total votes in that US House contest in the chosen cd
 shd = 2  # state house district
 total_shd_votes = 6759 + 4115  # total votes in that State House contest
 ssd = 15  # state senate district
@@ -33,7 +35,9 @@ single_vote_type = "early"  # pick any one with corresponding data in your file,
 pres_votes_vote_type = -1  # total votes for US President of that vote type
 county_or_other = "county"  # Change this only if results are subdivided by something other than counties
 #  e.g., 'parish' in LA, 'state-house' in Alaska, 'ward' in Philadelphia
-single_county = "Kansas;Bourbon County"  # pick any one from your file, but use internal db name
+single_county = (
+    "Kansas;Bourbon County"  # pick any one from your file, but use internal db name
+)
 pres_votes_county = 6676  # total votes for US President in that county
 
 
@@ -122,6 +126,7 @@ def test_all_candidates_known(dbname):
     )
 """
 
+
 def test_county_subtotal(dbname):
     assert (
         e.contest_total(
@@ -134,6 +139,7 @@ def test_county_subtotal(dbname):
         )
         == pres_votes_county
     )
+
 
 def test_wyandotte_subtotal_pres(dbname):
     assert (
@@ -162,6 +168,7 @@ def test_wyandotte_subtotal_cd_3(dbname):
         == 56254
     )
 
+
 # because of duplicate info from Wyandotte in different files, couldn't resolve this.
 """def test_wyandotte_subtotal_state_senate_4(dbname):
     assert (
@@ -177,6 +184,7 @@ def test_wyandotte_subtotal_cd_3(dbname):
     )
 """
 
+
 def test_johnson_subtotal_cd_3(dbname):
     assert (
         e.contest_total(
@@ -189,4 +197,3 @@ def test_johnson_subtotal_cd_3(dbname):
         )
         == 346951
     )
-

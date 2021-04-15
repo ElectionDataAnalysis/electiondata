@@ -149,7 +149,7 @@ def run2(
                     err,
                     "ini",
                     f"{os.getcwd()}/run_time.ini",
-                    "Error creating DataLoader."
+                    "Error creating DataLoader.",
                 )
                 return err
 
@@ -157,7 +157,8 @@ def run2(
             # otherwise use all in TestingData
             if not election_jurisdiction_list:
                 election_jurisdiction_list = ui.election_juris_list(
-                    dl.d["ini_dir"], results_path="TestingData",
+                    dl.d["ini_dir"],
+                    results_path="TestingData",
                 )
 
             dl.change_db(dbname)
@@ -189,7 +190,7 @@ def run2(
                 err = ui.add_new_error(
                     err,
                     "warn-system",
-                    f"Error adding total vote types for {e}, {j}: {err_str}"
+                    f"Error adding total vote types for {e}, {j}: {err_str}",
                 )
 
         if ui.fatal_error(err):

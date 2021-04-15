@@ -17,9 +17,13 @@ import election_data_analysis as e
 election = "2020 General"
 jurisdiction = "Hawaii"
 abbr = "HI"
-total_pres_votes = 366130 + 196864 + 5539 + 3822 + 1183 + 931  # total of all votes for US President
+total_pres_votes = (
+    366130 + 196864 + 5539 + 3822 + 1183 + 931
+)  # total of all votes for US President
 cd = 2  # US House congressional district
-total_cd_votes = 171517 + 84027 + 6785 + 6453 + 2659 + 661  # total votes in that US House contest in the chosen cd
+total_cd_votes = (
+    171517 + 84027 + 6785 + 6453 + 2659 + 661
+)  # total votes in that US House contest in the chosen cd
 shd = 13  # state house district
 total_shd_votes = 7718 + 2000 + 1583  # total votes in that State House contest
 ssd = 25  # state senate district
@@ -28,8 +32,12 @@ single_vote_type = "early"  # pick any one with corresponding data in your file,
 pres_votes_vote_type = 28610  # total votes for US President of that vote type
 county_or_other = "county"  # Change this only if results are subdivided by something other than counties
 #  e.g., 'parish' in LA, 'state-house' in Alaska, 'ward' in Philadelphia
-single_county = "Hawaii;Hawai'i County"  # pick any one from your file, but use internal db name
-pres_votes_county = 58731 + 26897 + 1027 + 805 + 220 + 134  # total votes for US President in that county
+single_county = (
+    "Hawaii;Hawai'i County"  # pick any one from your file, but use internal db name
+)
+pres_votes_county = (
+    58731 + 26897 + 1027 + 805 + 220 + 134
+)  # total votes for US President in that county
 
 
 def test_data_exists(dbname):

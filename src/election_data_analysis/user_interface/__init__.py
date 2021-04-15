@@ -453,8 +453,12 @@ def read_single_datafile(
             xml_path_info = sf.xml_string_path_info(p["munge_fields"], p["namespace"])
             tree = et.parse(f_path)
             df, err = sf.df_from_tree(
-                tree, xml_path_info=xml_path_info, file_name=file_name, **driver,
-                namespace=p["namespace"], lookup_id=lookup_id
+                tree,
+                xml_path_info=xml_path_info,
+                file_name=file_name,
+                **driver,
+                namespace=p["namespace"],
+                lookup_id=lookup_id,
             )
             if not fatal_error(err):
                 df_dict = {"Sheet1": df}

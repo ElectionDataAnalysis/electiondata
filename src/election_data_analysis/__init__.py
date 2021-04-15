@@ -15,7 +15,6 @@ import pandas as pd
 import inspect
 from pathlib import Path
 import xml.etree.ElementTree as et
-import dicttoxml
 from election_data_analysis import analyze as a
 from election_data_analysis import visualize as viz
 from election_data_analysis import juris_and_munger as jm
@@ -228,7 +227,9 @@ class DataLoader:
             if new_err or ini_err:
                 err = ui.consolidate_errors([err, new_err, ini_err])
             if not ui.fatal_error(new_err):
-                results_full_path = os.path.join(self.d["results_dir"], params[f_path]["results_file"])
+                results_full_path = os.path.join(
+                    self.d["results_dir"], params[f_path]["results_file"]
+                )
                 if (
                     params[f_path]["election"],
                     params[f_path]["top_reporting_unit"],
@@ -655,7 +656,7 @@ class SingleDataLoader:
                     if ui.fatal_error(err):
                         return values, err
 
-                    df, original_string_columns, err = m.to_standard_count_frame(
+                    df, err = m.to_standard_count_frame(
                         f_path,
                         munger_path,
                         p,
@@ -666,8 +667,6 @@ class SingleDataLoader:
                     df, new_err = m.munge_source_to_raw(
                         df,
                         munger_path,
-                        p,
-                        original_string_columns,
                         "_SOURCE",
                         self.results_dir,
                         f_path,
@@ -2149,9 +2148,7 @@ def load_results_file(
         return err
 
     # transform to raw df in standard form
-    df, new_err = m.file_to_raw_df(
-        munger_path, p, f_path, results_directory_path
-    )
+    df, new_err = m.file_to_raw_df(munger_path, p, f_path, results_directory_path)
     if new_err:
         err = ui.consolidate_errors([err, new_err])
         if ui.fatal_error(new_err):
@@ -2161,7 +2158,7 @@ def load_results_file(
     necessary_constants = {
         c: v for c, v in constants.items() if c in p["constant_over_file"]
     }
-    df = m.add_constants_to_df(df,necessary_constants)
+    df = m.add_constants_to_df(df, necessary_constants)
 
     # # delete any rows with items to be ignored
     ig, new_err = ui.get_parameters(

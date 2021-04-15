@@ -15,20 +15,22 @@ import election_data_analysis as e
 
 # # # constants - CHANGE THESE!! - use internal db names
 election = "2020 General"
-jurisdiction = 'North Dakota'
-abbr = 'ND'
+jurisdiction = "North Dakota"
+abbr = "ND"
 total_pres_votes = 361819  # total of all votes for US President
 cd = 1  # US House congressional district
 total_cd_votes = 355598  # total votes in that US House contest in the chosen cd
-shd = 4   # state house district
-total_shd_votes = 12530   # total votes in that State House contest
+shd = 4  # state house district
+total_shd_votes = 12530  # total votes in that State House contest
 ssd = 2  # state senate district
 total_ssd_votes = 10059  # total votes in that State Senate contest
-single_vote_type = ''  # pick any one with corresponding data in your file, but use internal db name  ***NO DATA AVAILABLE***
-#pres_votes_vote_type =   # total votes for US President of that vote type ***NO DATA AVAILABLE***
-county_or_other = "county"   # Change this only if results are subdivided by something other than counties
-                            #  e.g., 'parish' in LA, 'state-house' in Alaska, 'ward' in Philadelphia
-single_county = 'North Dakota;Adams County'  # pick any one from your file, but use internal db name
+single_vote_type = ""  # pick any one with corresponding data in your file, but use internal db name  ***NO DATA AVAILABLE***
+# pres_votes_vote_type =   # total votes for US President of that vote type ***NO DATA AVAILABLE***
+county_or_other = "county"  # Change this only if results are subdivided by something other than counties
+#  e.g., 'parish' in LA, 'state-house' in Alaska, 'ward' in Philadelphia
+single_county = (
+    "North Dakota;Adams County"  # pick any one from your file, but use internal db name
+)
 pres_votes_county = 1269  # total votes for US President in that county
 
 
@@ -37,47 +39,52 @@ def test_data_exists(dbname):
 
 
 def test_presidential(dbname):
-    assert(e.contest_total(
-        election,
-        jurisdiction,
-        f"US President ({abbr})",
-        dbname=dbname,
+    assert (
+        e.contest_total(
+            election,
+            jurisdiction,
+            f"US President ({abbr})",
+            dbname=dbname,
         )
         == total_pres_votes
     )
 
 
 def test_congressional_totals(dbname):
-    assert (e.contest_total(
-        election,
-        jurisdiction,
-        f"US House {abbr} District {cd}",
-        dbname=dbname,
+    assert (
+        e.contest_total(
+            election,
+            jurisdiction,
+            f"US House {abbr} District {cd}",
+            dbname=dbname,
         )
         == total_cd_votes
     )
 
 
 def test_state_senate_totals(dbname):
-    assert (e.contest_total(
-        election,
-        jurisdiction,
-        f"{abbr} Senate District {ssd}",
-        dbname=dbname,
+    assert (
+        e.contest_total(
+            election,
+            jurisdiction,
+            f"{abbr} Senate District {ssd}",
+            dbname=dbname,
         )
         == total_ssd_votes
     )
 
 
 def test_state_house_totals(dbname):
-    assert (e.contest_total(
-        election,
-        jurisdiction,
-        f"{abbr} House District {shd}",
-        dbname=dbname,
+    assert (
+        e.contest_total(
+            election,
+            jurisdiction,
+            f"{abbr} House District {shd}",
+            dbname=dbname,
         )
         == total_shd_votes
     )
+
 
 """
 def test_standard_vote_types(dbname):
@@ -100,14 +107,16 @@ def test_count_type_subtotal(dbname):
     )
 """
 
+
 def test_county_subtotal(dbname):
-    assert (e.contest_total(
-        election,
-        jurisdiction,
-        f"US President ({abbr})",
-        dbname=dbname,
-        county=single_county,
-        sub_unit_type=county_or_other,
+    assert (
+        e.contest_total(
+            election,
+            jurisdiction,
+            f"US President ({abbr})",
+            dbname=dbname,
+            county=single_county,
+            sub_unit_type=county_or_other,
         )
         == pres_votes_county
-            )
+    )

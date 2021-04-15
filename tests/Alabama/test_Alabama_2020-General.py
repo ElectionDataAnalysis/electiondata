@@ -17,7 +17,9 @@ import election_data_analysis as e
 election = "2020 General"
 jurisdiction = "Alabama"
 abbr = "AL"
-total_pres_votes = 2323282  # total of all votes for US President per official Final Canvass-Merged
+total_pres_votes = (
+    2323282  # total of all votes for US President per official Final Canvass-Merged
+)
 # website https://www2.alabamavotes.gov/electionNight/statewideResultsByContest.aspx?ecode=1001090
 ## 2297295
 ### same total given in sosEnrExport.xlsx
@@ -30,14 +32,17 @@ total_shd_votes = -1  # total votes in that State House contest
 ssd = 15  # state senate district
 total_ssd_votes = -1  # total votes in that State Senate contest
 single_vote_type = "provisional"  # pick any one with corresponding data in your file, but use internal db name
-pres_votes_vote_type =  0 # total votes for US President of that vote type
+pres_votes_vote_type = 0  # total votes for US President of that vote type
 county_or_other = "county"  # Change this only if results are subdivided by something other than counties
 #  e.g., 'parish' in LA, 'state-house' in Alaska, 'ward' in Philadelphia
-single_county = "Alabama;Mobile County"  # pick any one from your file, but use internal db name
+single_county = (
+    "Alabama;Mobile County"  # pick any one from your file, but use internal db name
+)
 pres_votes_county = 183164  # total votes for US President in that county
 # website https://www2.alabamavotes.gov/electionNight/statewideResultsByContest.aspx?ecode=1001090
 ## has 181783 (same as sosEnrExport.xlsx)
 # but official final canvass has 79474 + 101243 + 1938 + 509 = 183164
+
 
 def test_data_exists(dbname):
     assert e.data_exists(election, jurisdiction, dbname=dbname)
@@ -68,6 +73,7 @@ def test_congressional_totals(dbname):
         == total_cd_votes
     )
 
+
 """
 def test_state_senate_totals(dbname):
     assert (
@@ -95,6 +101,7 @@ def test_state_house_totals(dbname):
     )
 """
 
+
 def test_standard_vote_types(dbname):
     assert e.check_count_types_standard(election, jurisdiction, dbname=dbname)
 
@@ -108,6 +115,7 @@ def test_all_candidates_known(dbname):
         e.get_contest_with_unknown_candidates(election, jurisdiction, dbname=dbname)
         == []
     )
+
 
 # to pull this info out independently would be a lot of trouble
 """
@@ -124,6 +132,7 @@ def test_count_type_subtotal(dbname):
         == pres_votes_vote_type
     )
 """
+
 
 def test_county_subtotal(dbname):
     assert (
