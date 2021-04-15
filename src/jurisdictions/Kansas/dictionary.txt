@@ -6178,3 +6178,5 @@ Candidate	Mike Thompson	Mike Thompson
 Candidate	Louis E. Ruiz	Louis E. Ruiz
 Candidate	Lindsey Constance	Lindsey Constance
 Candidate	Landon Griffith	Landon Griffith
+Candidate	Write-in	Write-in
+Candidate	Kristen O'Shea	Kristen O'Shea

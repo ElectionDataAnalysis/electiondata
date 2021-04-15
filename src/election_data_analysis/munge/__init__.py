@@ -39,6 +39,7 @@ opt_munger_data_types: Dict[str, str] = {
     "count_field_name_row": "int",  # TODO allow multi-rows here?
     "count_column_numbers": "list-of-integers",
     "string_field_column_numbers": "list-of-integers",
+    "count_header_row_numbers": "list-of-integers",
     "noncount_header_row": "int",
     "all_rows": "string",
     "multi_block": "string",
@@ -1334,7 +1335,7 @@ def get_lookup_tables(
         # grab the lookup table
         if aux_params[fk]["source_file"]:
             lt_path = os.path.join(
-                aux_directory_path, aux_params[fk][fk]["source_file"]
+                aux_directory_path, aux_params[fk]["source_file"]
             )
         else:
             lt_path = results_file_path
