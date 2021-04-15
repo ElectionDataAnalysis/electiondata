@@ -358,6 +358,8 @@ def tabular_kwargs(
         header_rows.update({p["noncount_header_row"]})
         #  need count_header_row_numbers
         header_rows.update(p["count_header_row_numbers"])
+
+        # define header parameter for reading file
         if header_rows:
             # if multi-index
             if len(header_rows) > 1:
@@ -427,9 +429,13 @@ def read_single_datafile(
     if p["file_type"] in ["excel"]:
         kwargs = basic_kwargs(p, dict())
         kwargs = tabular_kwargs(p, kwargs, aux=aux)
+        if p["multi_block"] == "yes":
+            kwargs["header"] = None
     elif p["file_type"] in ["flat_text"]:
         kwargs = basic_kwargs(p, dict())
         kwargs = tabular_kwargs(p, kwargs, aux=aux)
+        if p["multi_block"] == "yes":
+            kwargs["header"] = None
         kwargs["quoting"] = csv.QUOTE_MINIMAL
         if p["flat_text_delimiter"] in ["tab", "\\t"]:
             kwargs["sep"] = "\t"
@@ -1424,25 +1430,26 @@ def clean_candidate_names(df):
     return df
 
 
-def set_and_fill_headers(df: pd.DataFrame, header_list: list) -> pd.DataFrame:
+def set_and_fill_headers(df: pd.DataFrame, header_list: Optional[list]) -> pd.DataFrame:
     # correct column headers
     # standardize the index and columns to 0, 1, 2, ...
     df = df.reset_index(drop=True).T.reset_index(drop=True).T
     # rename any leading blank header entries to match convention of pd.read_excel, and any trailing to
     # closest non-blank value to left
-    for i in header_list:
-        prev_non_blank = None
-        for j in df.columns:
-            if df.loc[i, j] == "":
-                if prev_non_blank:
-                    df.loc[i, j] = prev_non_blank
+    if header_list:
+        for i in header_list:
+            prev_non_blank = None
+            for j in df.columns:
+                if df.loc[i, j] == "":
+                    if prev_non_blank:
+                        df.loc[i, j] = prev_non_blank
+                    else:
+                        df.loc[i, j] = f"Unnamed: {j}_level_{i}"
                 else:
-                    df.loc[i, j] = f"Unnamed: {j}_level_{i}"
-            else:
-                prev_non_blank = df.loc[i, j]
+                    prev_non_blank = df.loc[i, j]
 
-    # push appropriate rows into headers
-    df = df.reset_index(drop=True).T.set_index(header_list).T
+        # push appropriate rows into headers
+        df = df.reset_index(drop=True).T.set_index(header_list).T
     return df
 
 

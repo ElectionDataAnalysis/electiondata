@@ -592,7 +592,7 @@ def regularize_candidate_names(
 
 
 def melt_to_one_count_column(
-    df: pd.DataFrame, p: dict, mu_name: str
+    df: pd.DataFrame, p: dict, munger_name: str
 ) -> (pd.DataFrame, Optional[dict]):
     """transform to df with single count column and all raw munge info in other columns"""
     err = None
@@ -615,7 +615,7 @@ def melt_to_one_count_column(
             err = ui.add_new_error(
                 err,
                 "munger",
-                mu_name,
+                munger_name,
                 "If there are multiple header rows, need to have count_columns_specified=by_number ",
             )
             return pd.DataFrame(), err
@@ -624,7 +624,7 @@ def melt_to_one_count_column(
         err = ui.add_new_error(
             err,
             "munger",
-            mu_name,
+            munger_name,
             f"count_columns_specified parameter must be either by_number or by_name",
         )
         return pd.DataFrame(), err
@@ -2112,7 +2112,7 @@ def extract_blocks(
     working = working.T.reset_index().T.reset_index(drop=True)
 
     # identify count rows (have at least one integer), blank rows, and text rows (all others)
-    mask_count = working.T.apply(lambda row: row.str.isdigit().any())
+    mask_count = working.T.astype(str).apply(lambda row: row.str.isdigit().any())
     mask_blank = working.T.apply(
         lambda row: list(row.unique()) == [""]
     )  # is this the best way?
