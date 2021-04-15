@@ -2,7 +2,7 @@
 file_type=excel
 count_columns_specified=by_name
 
-encoding=ASCII
+encoding=utf_8
 thousands_separator=,
 count_column_numbers=4
 noncount_header_row=0
