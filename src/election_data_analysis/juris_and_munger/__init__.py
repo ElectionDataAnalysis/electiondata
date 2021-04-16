@@ -3,7 +3,7 @@ import os.path
 from election_data_analysis import database as db
 import pandas as pd
 from pandas.api.types import is_numeric_dtype
-from typing import Optional
+from typing import Optional, Dict, Any
 from election_data_analysis import munge as m
 from election_data_analysis import user_interface as ui
 from election_data_analysis import preparation as prep
@@ -13,9 +13,10 @@ import csv
 import inspect
 
 
-def recast_options(options: dict, types: dict) -> dict:
+def recast_options(options: Dict[str, str], types: Dict[str, str], munger_name: str) -> (dict, Dict[str, Any]):
     """Convert a dictionary <options> of string parameter values to typed objects,
     where type is determined by <types>"""
+    err: Dict[str, Any] = None
     keys = {k for k in options.keys() if k in types.keys()}
     for k in keys:
         if types[k] in ["int", "integer"]:
@@ -23,30 +24,42 @@ def recast_options(options: dict, types: dict) -> dict:
                 options[k] = int(options[k])
             except Exception:
                 options[k] = None
-        if types[k] == "list-of-integers":
+                err = ui.add_new_error(
+                    err, "warn-munger", munger_name, f"{k} should be integer but isn't: {options[k]}"
+                )
+        elif types[k] == "list-of-integers":
             try:
                 options[k] = [int(s) for s in options[k].split(",")]
             except Exception:
                 options[k] = list()
-        if types[k] == "str":
+                err = ui.add_new_error(
+                    err,"warn-munger",munger_name,f"{k} should be list of integers but isn't: {options[k]}"
+                )
+        elif types[k] == "str":
             if options[k] == "":
                 # null string is read as None
                 options[k] = None
-        if types[k] == "list-of-strings":
+        elif types[k] == "list-of-strings":
             if options[k] != "":
                 try:
                     options[k] = [s for s in options[k].split(",")]
                 except Exception:
                     options[k] = list()
+                    err = ui.add_new_error(
+                        err,"warn-munger",munger_name,f"{k} should be list of strings but isn't: {options[k]}"
+                    )
             # if the string is empty, assign an empty list
             else:
                 options[k] = list()
-        if types[k] == "int":
-            try:
-                options[k] = int(options[k])
-            except Exception:
-                options[k] = None
-    return options
+
+        elif types[k] == "string-with-opt-list" and k == "count_location":
+            if options[k].split(":")[0] == "by_name":
+                options["count_fields_by_name"] = [s for s in options[k][8:].split(",")]
+                options[k] = "by_name"
+            elif options[k].split(":")[0] == "by_number":
+                options["count_column_numbers"] = [int(s) for s in options[k][10:].split(",")]
+                options[k] = "by_number"
+    return options, err
 
 
 class Jurisdiction:

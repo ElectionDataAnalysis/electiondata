@@ -19,8 +19,7 @@ brace_pattern = re.compile(r"{<([^,]*)>,([^{}]*|[^{}]*{[^{}]*}[^{}]*)}")
 no_param_file_types = {"nist_v2_xml"}
 
 opt_munger_data_types: Dict[str, str] = {
-    "count_columns_specified": "string",
-    "count_location": "string",
+    "count_location": "string-with-opt-list",
     "munge_field_types": "list-of-strings",
     "sheets_to_read_names": "list-of-strings",
     "sheets_to_skip_names": "list-of-strings",
@@ -32,9 +31,7 @@ opt_munger_data_types: Dict[str, str] = {
     "thousands_separator": "string",
     "encoding": "string",
     "namespace": "string",
-    "count_fields_by_name": "list-of-strings",
-    "count_field_name_row": "int",  # TODO allow multi-rows here?
-    "count_column_numbers": "list-of-integers",
+    "count_field_name_row": "int",
     "string_field_column_numbers": "list-of-integers",
     "count_header_row_numbers": "list-of-integers",
     "noncount_header_row": "int",
@@ -42,19 +39,14 @@ opt_munger_data_types: Dict[str, str] = {
     "multi_block": "string",
     "max_blocks": "integer",
     "constant_over_file": "list-of-strings",
-    "nesting_tags": "list-of-strings",
 }
 
 munger_dependent_reqs: Dict[str, Dict[str, List[str]]] = {
     "file_type": {
-        "flat_text": ["flat_text_delimiter", "count_columns_specified"],
+        "flat_text": ["flat_text_delimiter", "count_location"],
         "xml": ["count_location"],
         "json-nested": ["count_location"],
-        "excel": ["count_columns_specified"],
-    },
-    "count_columns_specified": {
-        "by_name": ["count_fields_by_name"],
-        "by_number": ["count_column_numbers"],
+        "excel": ["count_location"],
     },
 }
 
@@ -63,10 +55,6 @@ req_munger_parameters: Dict[str, Dict[str, Any]] = {
         "data_type": "string",
         "allowed_values": ["excel", "json-nested", "xml", "flat_text", "nist_v2_xml"],
     },
-}
-
-opt_munger_param_values: Dict[str, List[str]] = {
-    "count_columns_specified": ["by_name", "by_number"],
 }
 
 string_location_reqs: Dict[str, List[str]] = {
@@ -603,17 +591,17 @@ def melt_to_one_count_column(
         df.columns = [";:;".join([f"{x}" for x in tup]) for tup in df.columns]
 
     # define count columns
-    if p["count_columns_specified"] == "by_number":
+    if p["count_location"] == "by_number":
         count_columns = [
             df.columns[idx] for idx in p["count_column_numbers"] if idx < df.shape[1]
         ]
-    elif p["count_columns_specified"] == "by_name":
+    elif p["count_location"] == "by_name":
         if multi:
             err = ui.add_new_error(
                 err,
                 "munger",
                 munger_name,
-                "If there are multiple header rows, need to have count_columns_specified=by_number ",
+                "If there are multiple header rows, need to have count_location=by_number ",
             )
             return pd.DataFrame(), err
         count_columns = [c for c in p["count_fields_by_name"] if c in df.columns]
@@ -622,7 +610,7 @@ def melt_to_one_count_column(
             err,
             "munger",
             munger_name,
-            f"count_columns_specified parameter must be either by_number or by_name",
+            f"For file type {p['file_type']}, count_location parameter must be either by_number or by_name",
         )
         return pd.DataFrame(), err
 
@@ -1415,7 +1403,7 @@ def get_and_check_munger_params(
         },
         **opt_munger_data_types,
     }
-    params = jm.recast_options(raw_params, data_types)
+    params, new_err = jm.recast_options(raw_params, data_types, munger_name)
 
     # Check munger values
     # # main parameters recognized
@@ -1477,7 +1465,7 @@ def get_and_check_munger_params(
     elif params["file_type"] in ["excel", "flat_text"]:
         # # count_field_name_row is given where required
         if (params["count_field_name_row"] is None) and (
-            params["count_columns_specified"] == "by_name"
+            params["count_location"] == "by_name"
         ):
             err = ui.add_new_error(
                 err,
@@ -2033,7 +2021,9 @@ def get_aux_info(
                 for k in req_munger_parameters.keys()
             },
         }
-        f_p = jm.recast_options(f_p, type_dict)
+        f_p, new_err = jm.recast_options(f_p, type_dict, Path(munger_path).stem)
+        if new_err:
+            ui.consolidate_errors([new_err, err])
 
         # define f_p["munge_fields"]
         f_p["munge_fields"] = list(set([f for v in lookup_map.values() for f in v]))
@@ -2051,7 +2041,10 @@ def get_aux_info(
                     header="format",
                     param_file=munger_path,
                 )
-                f_p.update(jm.recast_options(main_format_params, type_dict))
+                recast_params, new_err = jm.recast_options(main_format_params, type_dict, Path(munger_path).stem)
+                if new_err:
+                    err = ui.consolidate_errors([err, new_err])
+                f_p.update(recast_params)
             aux_params[fk] = f_p
 
     return aux_params, lookup_map, raw_fields, err
