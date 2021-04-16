@@ -1931,7 +1931,7 @@ def to_standard_count_frame(
                 f"Exception while appending suffix {suffix}: {exc}",
             )
 
-    return df, original_string_columns, err
+    return df, err
 
 
 def fill_vote_count(
