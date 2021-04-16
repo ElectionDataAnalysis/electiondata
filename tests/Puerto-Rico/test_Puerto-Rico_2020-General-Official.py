@@ -24,7 +24,7 @@ total_resident_commissioner_votes = 1200100
 cd = 3  # US House congressional district
 total_cd_votes = -1  # total votes in that US House contest in the chosen cd
 shd = 1  # state house district
-total_shd_votes = -1  # total votes in that State House contest
+total_shd_votes = 24808  # total votes in that State House contest
 ssd = 1  # state senate district
 total_ssd_votes = 265025  # total votes in that State Senate contest
 # pick any one with corresponding data in your file, but use internal db name
