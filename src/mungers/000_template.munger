@@ -1,11 +1,12 @@
 # Format parameters section (required) #
 [format]
-#### REQUIRED! File type must be one of: xml,excel,json-nested,xml,flat_text
+#### REQUIRED!
+## File type must be one of: xml,excel,json-nested,xml,flat_text
 file_type=
-
-## Required for all file types:
-#### Counts are found in one way of: by_name, by_number
-count_columns_specified=
+## for excel or flat files, either
+##	##	count_location=by_number:2,3,4  (after colon, list count column numbers)
+##	##	count_location=by_name:Early Votes, Absentee Votes, Election Day Votes  (after colon, list count column names)
+count_location=
 
 # Optional parameter for excel or flat_text
 rows_to_skip=
@@ -14,12 +15,6 @@ rows_to_skip=
 ## Sometimes required format parameters:
 #### for flat_text file type:
 flat_text_delimiter=
-#### if count_columns_specified is 'by_name':
-count_fields_by_name=
-#### if count_columns_specified is 'by_number':
-count_column_numbers=
-#### List any elements constant over the file that will be given in the <results>.ini file:
-constant_over_file=
 #### if file type is flat_text or excel and count_columns_specified is 'by_name'
 #### (start numbering from first unskipped row):
 count_field_name_row=
@@ -46,11 +41,16 @@ sheets_to_read_names=
 sheets_to_read_numbers=
 sheets_to_skip_names=
 
-#### for xml file type
-nesting_tags=
+#### List any elements constant over the file that will be given in the <results>.ini file:
+constant_over_file=
 
 [munge formulas]
-# give formulas for all elements (except constants to be read from .ini file)
+# give formulas for all elements (except constant_over_file elements)
+CandidateContest=
+Candidate=
+Party=
+CountItemType=
+ReportingUnit=
 
 # Values to ignore (optional) #
 [ignore]
@@ -67,6 +67,7 @@ nesting_tags=
 
 # required:
 # lookup_id=
-# and formula for any element needing to be looked up:
-# <element>_replacement=
-# and specify munger params for source file
+
+# optional (if not given, assumes lookup file is same as results file
+source_file=
+# and if source_file is given, specify munger params for lookup source file

@@ -53,7 +53,13 @@ def recast_options(options: Dict[str, str], types: Dict[str, str], munger_name: 
                 options[k] = list()
 
         elif types[k] == "string-with-opt-list" and k == "count_location":
-            if options[k].split(":")[0] == "by_name":
+            if not options["count_location"]:
+                # if we're munging a lookup file
+                pass
+            elif options["file_type"] in ["xml", "json-nested"]:
+                # nothing needs to be broken out for these file types
+                pass
+            elif options[k].split(":")[0] == "by_name":
                 options["count_fields_by_name"] = [s for s in options[k][8:].split(",")]
                 options[k] = "by_name"
             elif options[k].split(":")[0] == "by_number":

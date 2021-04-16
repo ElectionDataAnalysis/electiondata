@@ -37,20 +37,11 @@ encoding=windows-1252
 #### for excel file type:
 #sheets_to_read_names=
 #sheets_to_read_numbers=
-#sheets_to_skip_names=
-#### for xml file type
-nesting_tags=
-
 # Munge formula sections (required if in munge_strings list) #
 [munge formulas]
 ReportingUnit=<Town>;<Rep District>
-
-
 Candidate=<count_header_0>
-Party=<count_header_0>
-
-#
-
+Party=<Party from count_header_0>
 
 # Values to ignore (optional) #
 #[ignore]
@@ -68,5 +59,3 @@ rows_to_skip=1
 noncount_header_row=0
 sheets_to_read_names=Candidate_Listing
 lookup_id=Name On Ballot
-Party_replacement=<Party>
-Candidate_replacement=<Name On Ballot>
