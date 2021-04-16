@@ -1,9 +1,9 @@
 # Format parameters section (required) #
 [format]
-#### REQUIRED! File type must be one of: nist_v2_xml,excel,json-nested,xml,flat_text
+#### REQUIRED! File type must be one of: xml,excel,json-nested,xml,flat_text
 file_type=
 
-## Required for all file types except nist_v2_xml):
+## Required for all file types:
 #### Counts are found in one way of: by_name, by_number
 count_columns_specified=
 

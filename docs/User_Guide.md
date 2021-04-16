@@ -14,11 +14,11 @@ In the directory from which you will run the system -- which can be outside your
 See the template file (`src/parameter_file_templates/run_time.ini.template`). 
    
 ## Determining a Munger
-Election result data comes in a variety of file formats. Even when the basic format is the same, file columns may have different interpretations. The code is built to ease -- as much as possible -- the chore of processing and interpreting each format. Following the [Jargon File](http://catb.org/jargon/html/M/munge.html), which gives one meaning of "munge" as "modify data in some way the speaker doesn't need to go into right now or cannot describe succinctly," we call each set of basic information about interpreting an election result file a "munger". The munger template is  `src/mungers/000_template.munger`.
+Election result data comes in a variety of file formats. Even when the basic format is the same, file columns may have different interpretations. The code is built to ease -- as much as possible -- the chore of processing and interpreting each format. Following the [Jargon File](http://catb.org/jargon/html/M/munge.html), which gives one meaning of "munge" as "modify data in some way the speaker doesn't need to go into right now or cannot describe succinctly," we call each set of basic information about interpreting an election result file a "munger". 
 
-Ensure that the munger files are appropriate for your results file(s). If the munger doesn't already exist:
+If the munger for the format of your results file doesn't already exist:
  * pick a name for your munger 
- * create a file with that name and extension `.munger` in the `mungers` directory (e.g., `me_excel.munger`) with sections and parameters described below. You may find it helpful to work with the template from `src/mungers/template.munger`. 
+ * create a file with that name and extension `.munger` in the `mungers` directory (e.g., `me_excel.munger`) with sections and parameters described below. You may find it helpful to work with the template from `src/mungers/000_template.munger`. 
  
  The file with munger parameters, which must have the extension `.munger`, has one or more sections, each with a header:
   * (required) `[format]` for the main parameters
