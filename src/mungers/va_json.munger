@@ -1,15 +1,17 @@
 [format]
 file_type=json-nested
-count_locations=by_field_names
-munge_strings=in_field_values
+# In main json object:
+# #		Localities is a key whose value is an array (indicated by following /)
+# #		Candidates is a key whose value is an array (indicated by following /)
+# # 	Votes is the key for the count value within each object in the Candidates array
+count_location=Localities/Candidates/Votes
 
-count_fields_by_name=Votes
-
-[in_field_values]
-ReportingUnit=<LocalityName>
-Party=<PoliticalParty>
+[munge formulas]
+# # For each json object in the Localities array,
+# # # 	the key "Locality" gives a json object within which
+# # #	the key "LocalityName" gives the desired value
+ReportingUnit=<Localities.Locality.LocalityName>
+Party=<Candidates.PoliticalParty>
+Candidate=<Candidates.BallotName>
+CountItemType=total
 CandidateContest=<RaceName>
-Candidate=<BallotName>
-BallotMeasureContest=<RaceName>
-BallotMeasureSelection=<BallotName>
-CountItemType=Votes

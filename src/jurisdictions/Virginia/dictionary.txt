@@ -5245,6 +5245,7 @@ ReportingUnit	Virginia;Chesapeake City;015 - Greenbrier Middle School	CHESAPEAKE
 ReportingUnit	Virginia;Radford City;004 - New River Precinct	RADFORD CITY;004 - NEW RIVER PRECINCT
 CountItemType	total	TOTAL_VOTES
 CountItemType	total	Votes
+CountItemType	total	total
 Candidate	Robert C. 'Bobby' Scott	Robert C. 'Bobby' Scott
 Candidate	John W. Collick Jr.	John W. Collick Jr.
 Candidate	Nick J. Freitas	Nick J. Freitas

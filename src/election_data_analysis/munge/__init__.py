@@ -49,7 +49,7 @@ munger_dependent_reqs: Dict[str, Dict[str, List[str]]] = {
     "file_type": {
         "flat_text": ["flat_text_delimiter", "count_columns_specified"],
         "xml": ["count_location"],
-        "json-nested": ["count_columns_specified", "munge_field_types"],
+        "json-nested": ["count_location"],
         "excel": ["count_columns_specified"],
     },
     "count_columns_specified": {
@@ -1347,7 +1347,7 @@ def get_lookup_tables(
             munger_path,
             None,
             aux=True,
-            xml_driving_path=aux_params[fk]["lookup_id"],
+            driving_path=aux_params[fk]["lookup_id"],
             lookup_id=aux_params[fk]["lookup_id"],
         )
         if len(lookup_df_dict) > 1:
@@ -1535,6 +1535,18 @@ def get_and_check_munger_params(
                     munger_name,
                     f"Munge formula element ({tag[0]}) (in {field}) not found in count_location/lookup_id path",
                 )
+    elif params["file_type"] == "json-nested":
+        # check json formulas are well-formed
+        for mf in params["munge_fields"]:
+            # at most one /
+            if len(mf.split("/")) > 2:
+                err = ui.add_new_error(
+                    err,
+                    "munger",
+                    munger_name,
+                    f"Munge field has more than one /: <{mf}>"
+                )
+
     # check formulas are well-formed and consistent for excel, flat files.
     elif params["file_type"] in ["excel", "flat_text"]:
         # classify munge fields
@@ -1788,7 +1800,7 @@ def to_standard_count_frame(
             raw = df_list[n]
 
             # some file types are read already into "melted" form
-            if p["file_type"] in ["xml"]:
+            if p["file_type"] in ["xml", "json-nested"]:
                 working = raw.copy()
                 error_by_df[n] = None
             else:

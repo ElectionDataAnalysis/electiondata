@@ -14,6 +14,7 @@ import csv
 import numpy as np
 import inspect
 import xml.etree.ElementTree as et
+import json
 
 # constants
 recognized_encodings = {
@@ -341,6 +342,30 @@ def find_dupes(df):
     return dupes_df, deduped
 
 
+def json_kwargs(
+        munge_fields: List[str],
+        driving_path: str,
+        driver_new_col_name: str,
+) -> (Dict[str, Any], Dict[str, str]):
+    meta_set = set()
+    json_rename: Dict[str, str] = dict()
+    record_path = driving_path.split("/")[:-1]
+    driver_old_col_name = driving_path.split("/")[-1]
+    json_rename[driver_old_col_name] = driver_new_col_name
+    for mf in munge_fields:
+        path_list = mf.split(".")
+        if path_list[0] not in record_path:
+            meta_set.update({tuple(path_list)})
+        elif len(path_list) > 2:
+            meta_set.update({tuple(path_list)})
+        else:
+            json_rename[path_list[-1]] = mf
+    meta = list(list(t) for t in meta_set)
+    json_kwargs = {"meta": meta, "record_path": record_path, "errors": "ignore"}
+
+    return json_kwargs, json_rename
+
+
 def tabular_kwargs(
     p: Dict[str, Any], kwargs: Dict[str, Any], aux=False
 ) -> Dict[str, Any]:
@@ -415,7 +440,7 @@ def read_single_datafile(
     munger_path: str,
     err: Optional[Dict],
     aux: bool = False,
-    xml_driving_path: Optional[str] = None,
+    driving_path: Optional[str] = None,
     lookup_id: Optional[str] = None,
 ) -> (Dict[str, pd.DataFrame], dict):
     """Length of returned dictionary is the number of sheets read -- usually 1 except for multi-sheet Excel.
@@ -441,12 +466,13 @@ def read_single_datafile(
             kwargs["sep"] = "\t"
         else:
             kwargs["sep"] = p["flat_text_delimiter"]
-
+    elif p["file_type"] in ["json-nested"]:
+        kwargs, rename = json_kwargs(p["munge_fields"], p["count_location"], "Count")
     # read file
     try:
         if p["file_type"] in ["xml"]:
-            if xml_driving_path:
-                temp_d = sf.tree_parse_info(xml_driving_path, None)
+            if driving_path:
+                temp_d = sf.tree_parse_info(driving_path,None)
                 driver = {"main_path": temp_d["path"], "main_attrib": temp_d["attrib"]}
             else:
                 driver = sf.xml_count_parse_info(p, ignore_namespace=True)
@@ -463,9 +489,14 @@ def read_single_datafile(
             if not fatal_error(err):
                 df_dict = {"Sheet1": df}
         elif p["file_type"] in ["json-nested"]:
-            df, err = sf.read_nested_json(f_path, p, munger_name, err)
+            # TODO what if json-nested is a lookup?
+            with open(f_path, "r") as f:
+                data = json.loads(f.read())
+            df = pd.json_normalize(data, **kwargs)
             if not fatal_error(err):
+                df.rename(columns=rename, inplace=True)
                 df_dict = {"Sheet1": df}
+
         elif p["file_type"] == "excel":
             df_dict, err = excel_to_dict(
                 f_path, kwargs, list_desired_excel_sheets(f_path, p)
@@ -528,6 +559,13 @@ def read_single_datafile(
             err_str,
         )
         err = add_new_error(err, "file", f_path, err_str)
+    except Exception as exc:
+        err = add_new_error(
+            err,
+            "file",
+            file_name,
+            f"Unknown exception while reading file using munger {munger_name}: {exc}"
+        )
 
     # drop any empty dataframes
     df_dict = {k: v for k, v in df_dict.items() if not v.empty}
