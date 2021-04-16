@@ -1,10 +1,9 @@
 [format]
 file_type=flat_text
-count_columns_specified=by_number
+count_location=by_number:7
 
 encoding=iso-8859-1
 flat_text_delimiter=,
-count_column_numbers=7
 all_rows=data
 
 [munge formulas]

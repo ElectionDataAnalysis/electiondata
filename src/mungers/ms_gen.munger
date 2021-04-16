@@ -4,8 +4,7 @@
 #### File type must be one of: excel,json-nested,xml,flat_text
 file_type=flat_text
 #### Counts are found in one way of: by_name,by_number
-count_columns_specified=by_name
-#### Munge string locations must be sublist of: in_field_values,in_count_headers,constant_over_sheet,constant_over_file ##
+count_location=by_name:County Total
 
 # Optional parameter for excel or flat_text
 rows_to_skip=
@@ -15,7 +14,6 @@ rows_to_skip=
 #### for flat_text file type:
 flat_text_delimiter=,
 #### if count_columns_specified is 'by_name':
-count_fields_by_name=County Total
 #### if count_columns_specified is 'by_number':
 count_column_numbers=
 #### if 'in_count_headers' is in munge_strings

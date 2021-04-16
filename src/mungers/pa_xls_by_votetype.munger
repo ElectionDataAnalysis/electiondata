@@ -1,9 +1,8 @@
 [format]
 file_type=excel
-count_columns_specified=by_number
+count_location=by_number:6,7,8,9,10,11,12,13,14,15,16,17
 
 encoding=utf_8
-count_column_numbers=6,7,8,9,10,11,12,13,14,15,16,17
 noncount_header_row=0
 count_header_row_numbers=0
 sheets_to_read_numbers=0

@@ -1,10 +1,9 @@
 [format]
 file_type=excel
-count_columns_specified=by_number
+count_location=by_number:1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25
 constant_over_file=CountItemType
 
 thousands_separator=,
-count_column_numbers=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25
 noncount_header_row=0
 count_header_row_numbers=0
 rows_to_skip=0

@@ -1,9 +1,8 @@
 [format]
 file_type=excel
-count_columns_specified=by_number
+count_location=by_number:1,2,3
 
 encoding=
-count_column_numbers=1,2,3
 noncount_header_row=3
 count_field_name_row=3
 count_header_row_numbers=3

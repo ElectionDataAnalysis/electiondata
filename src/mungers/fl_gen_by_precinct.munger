@@ -1,10 +1,9 @@
 [format]
 file_type=flat_text
-count_columns_specified=by_number
+count_location=by_number:18
 
 encoding=iso-8859-1
 flat_text_delimiter=tab
-count_column_numbers=18
 noncount_header_row=None
 count_field_name_row=None
 all_rows=data

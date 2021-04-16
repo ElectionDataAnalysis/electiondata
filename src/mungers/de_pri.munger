@@ -1,7 +1,6 @@
 [format]
-count_columns_specified=by_name
+count_location=by_name:Machine Votes,Absentee Votes,Total Votes
 
-count_fields_by_name=Machine Votes,Absentee Votes,Total Votes
 
 [munge formulas]
 ReportingUnit=<Election District>

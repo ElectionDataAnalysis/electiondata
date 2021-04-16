@@ -4,8 +4,7 @@
 #### File type must be one of: excel,json-nested,xml,flat_text
 file_type=excel
 #### Counts are found in one way of: by_name,by_number
-count_columns_specified=by_number
-#### Munge string locations must be sublist of: in_field_values,in_count_headers,constant_over_sheet,constant_over_file ##
+count_location=by_number:1,2,3,4,5,6,7,8,9,10
 
 # Optional parameter for excel or flat_text
 rows_to_skip=
@@ -17,7 +16,6 @@ flat_text_delimiter=
 #### if count_columns_specified is 'by_name':
 count_fields_by_name=
 #### if count_columns_specified is 'by_number':
-count_column_numbers=1,2,3,4,5,6,7,8,9,10
 #### if 'in_count_headers' is in munge_strings
 #### (start numbering from first unskipped row):
 count_header_row_numbers=0,1,2,3

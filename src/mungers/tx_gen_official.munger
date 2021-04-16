@@ -1,13 +1,12 @@
 [format]
 file_type=excel
-count_columns_specified=by_name
+count_location=by_name:TOTAL VOTES PER OFFICE PER COUNTY
 
 encoding=utf_8
 thousands_separator=,
 count_column_numbers=4
 noncount_header_row=0
 count_field_name_row=0
-count_fields_by_name=TOTAL VOTES PER OFFICE PER COUNTY
 
 [munge formulas]
 ReportingUnit=<COUNTY NAME>
