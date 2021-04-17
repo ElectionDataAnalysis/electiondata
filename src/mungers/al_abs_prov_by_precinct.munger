@@ -3,10 +3,8 @@
 ## Required format parameters:
 #### File type must be one of: excel,json-nested,xml,flat_text
 file_type=
-#### Counts are found in one way of: by_field_names,by_column_numbers
-count_locations=
-#### Munge string locations must be sublist of: in_field_values,in_count_headers,constant_over_sheet,constant_over_file ##
-munge_strings=
+#### Counts are found in one way of: by_name,by_number
+count_columns_specified=
 
 # Optional parameter for excel or flat_text
 rows_to_skip=
@@ -14,21 +12,21 @@ rows_to_skip=
 ## Sometimes required format parameters:
 #### for flat_text file type:
 flat_text_delimiter=
-#### if count_locations is 'by_field_names':
+#### if count_columns_specified is 'by_name':
 count_fields_by_name=
-#### if count_locations is 'by_column_numbers':
+#### if count_columns_specified is 'by_number':
 count_column_numbers=
 #### if 'in_count_headers' is in munge_strings
 #### (start numbering from first unskipped row):
 count_header_row_numbers=
 #### if 'constant_over_file' is in munge_strings:
 constant_over_file=
-#### if file type is flat_text or excel and count_locations is 'by_field_names'
+#### if file type is flat_text or excel and count_columns_specified is 'by_name'
 #### (start numbering from first unskipped row):
 count_field_name_row=
 #### if file type is flat_text or excel and not all rows are data:
 #### (start numbering from first unskipped row):
-string_field_name_row=
+noncount_header_row=
 
 
 ## Optional format parameters:
@@ -45,11 +43,11 @@ sheets_to_skip_names=
 nesting_tags=
 
 # Munge formula sections (required if in munge_strings list) #
-[in_field_values]
+[munge formulas]
 
-[in_count_headers]
 
-[constant_over_sheet]
+
+
 
 # Values to ignore (optional) #
 [ignore]

@@ -3,14 +3,11 @@
 ## Required format parameters:
 #### File type must be one of: excel,json-nested,xml,flat_text
 file_type=excel
-#### Counts are found in one way of: by_field_names,by_column_numbers
-count_locations=by_column_numbers
-#### Munge string locations must be sublist of: in_field_values,in_count_headers,constant_over_sheet,constant_over_file ##
-munge_strings=constant_over_file,in_field_values,in_count_headers
+#### Counts are found in one way of: by_name,by_number
+count_location=by_number:6,7,8,9,10,11,12,13,14,15,16,17,18
 
 ## Sometimes required format parameters:
-#### if count_locations is 'by_column_numbers':
-count_column_numbers=6,7,8,9,10,11,12,13,14,15,16,17,18
+#### if count_columns_specified is 'by_number':
 #### if 'in_count_headers' is in munge_strings:
 count_header_row_numbers=0
 #### if 'constant_over_file' is in munge_strings:
@@ -18,26 +15,25 @@ count_header_row_numbers=0
 #########. Put `CountItemType=total` into the .ini file.
 constant_over_file=CandidateContest,CountItemType
 #### if file type is flat_text or excel and not all rows are data:
-string_field_name_row=0
+noncount_header_row=0
 
 # Munge formula sections (required if in munge_strings list) #
-[in_field_values]
+[munge formulas]
 ReportingUnit=<County Name>;<Reporting Unit>
 
-[in_count_headers]
-Candidate=<header_0>
-Party=<header_0>
+
+Candidate=<count_header_0>
+Party=<count_header_0>
 
 # Values to ignore (optional) #
 [ignore]
 ## E.g: Candidate=Total Votes Cast,Registered Voters ##
 
-[header_0 lookup]
+[count_header_0 lookup]
 source_file=Wisconsin/Party_by_Pres_Candidate_20g.xlsx
 lookup_id=candidate_name_per_recount_file
 Party_replacement=<party_per_preliminary_results_file>
 Candidate_replacement=<candidate_name_per_recount_file>
 file_type=excel
-munge_strings=in_field_values
-string_field_name_row=0
+noncount_header_row=0
 

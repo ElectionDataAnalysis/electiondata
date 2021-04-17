@@ -1,10 +1,8 @@
 [format]
 file_type=excel
-count_locations=by_column_numbers
-munge_strings=in_count_headers,in_field_values,constant_over_file
+count_location=by_number:1,2,3,4,5,6,7,8,9,10,11
 
-string_field_name_row=0
-count_column_numbers=1,2,3,4,5,6,7,8,9,10,11
+noncount_header_row=0
 count_field_name_row=0
 sheets_to_read_numbers=0
 rows_to_skip=3
@@ -12,9 +10,7 @@ constant_over_file=CandidateContest,CountItemType
 multi_block=yes
 max_blocks=1
 
-[in_field_values]
+[munge formulas]
 ReportingUnit=<Summary By Counties>
-
-[in_count_headers]
-Party={<header_0>,^.*[ |,]([a-z]{1,3})$}
-Candidate={<header_0>,(Scatter$|\*corrections submitted by clerks$|\*corrections received by clerks$|\*corrections received from clerks$|^[\w .\']+|^[\w \']+, Sr\.|^[\w \']+, Jr\.)(?:$|\W+[a-z]+$)}
+Party={<count_header_0>,^.*[ |,]([a-z]{1,3})$}
+Candidate={<count_header_0>,(Scatter$|\*corrections submitted by clerks$|\*corrections received by clerks$|\*corrections received from clerks$|^[\w .\']+|^[\w \']+, Sr\.|^[\w \']+, Jr\.)(?:$|\W+[a-z]+$)}

@@ -1,15 +1,13 @@
 [format]
 file_type=flat_text
-count_locations=by_column_numbers
-munge_strings=in_field_values
+count_location=by_number:11
 
 encoding=ASCII
 flat_text_delimiter=tab
-count_column_numbers=11
 all_rows=data
 constant_over_file=CountItemType
 
-[in_field_values]
+[munge formulas]
 ReportingUnit=<column_6>;<column_6,column_7>;Ward <column_8>;Precinct <column_9> Label <column_10>
 Party=<column_5>
 CandidateContest=<column_2,column_3>
@@ -19,7 +17,6 @@ Candidate=<column_5>
 source_file=Michigan/2018GEN/2018offc.txt
 file_type=flat_text
 flat_text_delimiter=tab
-munge_strings=in_field_values
 encoding=ASCII
 all_rows=data
 lookup_id=column_2,column_3
@@ -29,7 +26,6 @@ CandidateContest_replacement=<column_5>
 source_file=Michigan/2018GEN/2018name.txt
 file_type=flat_text
 flat_text_delimiter=tab
-munge_strings=in_field_values
 encoding=ASCII
 all_rows=data
 lookup_id=column_5
@@ -40,7 +36,6 @@ Party_replacement=<column_9>
 source_file=Michigan/2018GEN/county.txt
 file_type=flat_text
 flat_text_delimiter=tab
-munge_strings=in_field_values
 encoding=ASCII
 all_rows=data
 lookup_id=column_0
@@ -50,7 +45,6 @@ ReportingUnit_replacement=<column_1>
 source_file=Michigan/2018GEN/2018city.txt
 file_type= flat_text
 flat_text_delimiter=tab
-munge_strings=in_field_values
 encoding=ASCII
 all_rows=data
 lookup_id=column_2,column_3

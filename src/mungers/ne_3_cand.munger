@@ -1,18 +1,16 @@
 [format]
 file_type=excel
-count_locations=by_column_numbers
-munge_strings=in_count_headers,in_field_values,constant_over_file
+count_location=by_number:1,2,3
 
 encoding=iso-8859-1
-count_column_numbers=1,2,3
-string_field_name_row=0
+noncount_header_row=0
 count_header_row_numbers=0
 sheets_to_read_numbers=0
 rows_to_skip=5
 constant_over_file=Party,CandidateContest,CountItemType
 
-[in_field_values]
+[munge formulas]
 ReportingUnit=<County>
 
-[in_count_headers]
-Candidate=<header_0>
+
+Candidate=<count_header_0>

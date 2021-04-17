@@ -1,4 +1,5 @@
 cdf_element	cdf_internal_name	raw_identifier_value
+Candidate	CandidateContest    US President (TX)   PRESIDENT/VICE-PRESIDENT	CandidateContest    US President (TX)   PRESIDENT/VICE-PRESIDENT
 CandidateContest	TX House District 1 (Democratic Party)	State Representative District 1 (DEM)
 CandidateContest	TX House District 2 (Democratic Party)	State Representative District 2 (DEM)
 CandidateContest	TX House District 3 (Democratic Party)	State Representative District 3 (DEM)
@@ -3727,6 +3728,7 @@ Party	Green Party	GRE
 Party	Libertarian Party	LIB
 Party	Independent Party	IND
 Party	Write-In	W
+Party	Write-In	WRI
 Party	Write-In	W-I
 ReportingUnit	Texas;TX House District 1	Texas;TX House District 1
 ReportingUnit	Texas;TX House District 2	Texas;TX House District 2
@@ -4201,6 +4203,7 @@ ReportingUnit	Texas;Young County	YOUNG
 ReportingUnit	Texas;Zapata County	ZAPATA
 ReportingUnit	Texas;Zavala County	ZAVALA
 Candidate	Donald J. Trump	Donald J. Trump / Mike Pence
+Candidate	Donald J. Trump	Donald J. Trump/Michael R. Pence
 Candidate	Hillary Clinton	Hillary Clinton / Tim Kaine
 Candidate	Gary Johnson	Gary Johnson / William Weld
 Candidate	Jill Stein	Jill Stein / Ajamu Baraka
@@ -6924,3 +6927,8 @@ Candidate	Armando 'Mando' Martínez	Armando 'Mando' Martínez
 Candidate	Sergio Munoz Jr (I)	Sergio Munoz Jr (I)
 Candidate	Julián Villarreal	Julián Villarreal
 Candidate	José MenéNdez (I)	José MenéNdez (I)
+Candidate	Peter P. 'Pete' Flores	Peter P. &Quot;Pete&Quot; Flores
+Candidate	Juan 'Chuy' Hinojosa	Juan &Quot;Chuy&Quot; Hinojosa
+Candidate	José MenéNdez	Jose&#769; Mene&#769;Ndez
+Candidate	Charles 'Doc' Anderson	Charles &Quot;Doc&Quot; Anderson
+Candidate	Armando 'Mando' Martinez	Armando 'Mando&Quot; Martinez

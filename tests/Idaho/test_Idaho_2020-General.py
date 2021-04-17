@@ -17,9 +17,13 @@ import election_data_analysis as e
 election = "2020 General"
 jurisdiction = "Idaho"
 abbr = "ID"
-total_pres_votes = 287021 + 1886 + 1491 + 16404 + 2808 + 554119 + 3632 #+ 653  # total of all votes for US President
+total_pres_votes = (
+    287021 + 1886 + 1491 + 16404 + 2808 + 554119 + 3632
+)  # + 653  # total of all votes for US President
 cd = 2  # US House congressional district
-total_cd_votes = 7940 + 8573 + 250669 + 124151  # total votes in that US House contest in the chosen cd
+total_cd_votes = (
+    7940 + 8573 + 250669 + 124151
+)  # total votes in that US House contest in the chosen cd
 shd = 1  # state house district
 total_shd_votes = -1  # total votes in that State House contest
 ssd = 15  # state senate district
@@ -28,8 +32,12 @@ single_vote_type = "total"  # pick any one with corresponding data in your file,
 pres_votes_vote_type = -1  # total votes for US President of that vote type
 county_or_other = "county"  # Change this only if results are subdivided by something other than counties
 #  e.g., 'parish' in LA, 'state-house' in Alaska, 'ward' in Philadelphia
-single_county = "Idaho;Ada County"  # pick any one from your file, but use internal db name
-pres_votes_county = 120539  + 438  + 356  + 5310  + 875  + 130699  + 1172  #+ 311  # total votes for US President in that county
+single_county = (
+    "Idaho;Ada County"  # pick any one from your file, but use internal db name
+)
+pres_votes_county = (
+    120539 + 438 + 356 + 5310 + 875 + 130699 + 1172
+)  # + 311  # total votes for US President in that county
 
 
 def test_data_exists(dbname):
@@ -61,6 +69,7 @@ def test_congressional_totals(dbname):
         == total_cd_votes
     )
 
+
 ## state legislature results format has multiple blocks on one page
 """def test_state_senate_totals(dbname):
     assert (
@@ -87,6 +96,7 @@ def test_state_house_totals(dbname):
         == total_shd_votes
     )
 """
+
 
 def test_standard_vote_types(dbname):
     assert e.check_count_types_standard(election, jurisdiction, dbname=dbname)
@@ -116,6 +126,7 @@ def test_all_candidates_known(dbname):
         == pres_votes_vote_type
     )
 """
+
 
 def test_county_subtotal(dbname):
     assert (

@@ -3,22 +3,19 @@
 ## Required format parameters:
 #### File type must be one of: excel,json-nested,xml,flat_text
 file_type=flat_text
-#### Counts are found in one way of: by_field_names,by_column_numbers
-count_locations=by_column_numbers
-#### Munge string locations must be sublist of: in_field_values,in_count_headers,constant_over_sheet,constant_over_file ##
-munge_strings=in_field_values,in_count_headers
+#### Counts are found in one way of: by_name,by_number
+count_location=by_number:9,10,11
 
 ## Sometimes required format parameters:
 #### for flat_text file type:
 flat_text_delimiter=,
-#### if 'by_column_numbers' is in count_locations:
-count_column_numbers=9,10,11
+#### if 'by_number' is in count_columns_specified:
 #### if 'in_count_headers' is in munge_strings:
 count_header_row_numbers=0
-#### if file type is flat_text or excel and count_locations is 'by_field_names':
+#### if file type is flat_text or excel and count_columns_specified is 'by_name':
 count_field_name_row=0
 #### if file type is flat_text or excel and not all rows are data:
-string_field_name_row=0
+noncount_header_row=0
 
 
 ## Optional format parameters:
@@ -26,11 +23,11 @@ string_field_name_row=0
 rows_to_skip=2
 
 # Munge formula sections (required if in munge_strings list) #
-[in_field_values]
+[munge formulas]
 ReportingUnit=<TownName>;<Polling_Place_Name>
 CandidateContest=<OfficeName>
 Candidate={<CandidateName>,^(.+)Machine/Polling Place/EDRAbsenteeTotal$}
 Party=<PartyName>
 
-[in_count_headers]
-CountItemType={<header_0>,^(.+)_Count$}
+
+CountItemType={<count_header_0>,^(.+)_Count$}

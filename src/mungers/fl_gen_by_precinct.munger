@@ -1,16 +1,14 @@
 [format]
 file_type=flat_text
-count_locations=by_column_numbers
-munge_strings=in_field_values
+count_location=by_number:18
 
 encoding=iso-8859-1
 flat_text_delimiter=tab
-count_column_numbers=18
-string_field_name_row=None
+noncount_header_row=None
 count_field_name_row=None
 all_rows=data
 
-[in_field_values]
+[munge formulas]
 ReportingUnit=<County Name>;Precinct <Unique Precinct Identifier>
 Party=<Candidate Party>
 CandidateContest=<Contest Name> <District>

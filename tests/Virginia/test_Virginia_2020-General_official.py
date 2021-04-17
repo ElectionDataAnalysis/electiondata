@@ -55,16 +55,17 @@ def test_us_senate(dbname):
     )
 
 
-
 def test_congressional_totals(dbname):
-    assert (e.contest_total(
-        election,
-        jurisdiction,
-        f"US House {abbr} District {cd}",
-        dbname=dbname,
+    assert (
+        e.contest_total(
+            election,
+            jurisdiction,
+            f"US House {abbr} District {cd}",
+            dbname=dbname,
         )
         == total_cd_votes
     )
+
 
 """
 def test_state_senate_totals(dbname):

@@ -1,13 +1,12 @@
 # Format parameters section (required) #
 [format]
-#### REQUIRED! File type must be one of: nist_v2_xml,excel,json-nested,xml,flat_text
+#### REQUIRED!
+## File type must be one of: xml,excel,json-nested,xml,flat_text
 file_type=
-
-## Required for all file types except nist_v2_xml):
-#### Counts are found in one way of: by_field_names,by_column_numbers
-count_locations=
-#### Munge string locations must be sublist of: in_field_values,in_count_headers,constant_over_sheet,constant_over_file ##
-munge_strings=
+## for excel or flat files, either
+##	##	count_location=by_number:2,3,4  (after colon, list count column numbers)
+##	##	count_location=by_name:Early Votes, Absentee Votes, Election Day Votes  (after colon, list count column names)
+count_location=
 
 # Optional parameter for excel or flat_text
 rows_to_skip=
@@ -16,21 +15,12 @@ rows_to_skip=
 ## Sometimes required format parameters:
 #### for flat_text file type:
 flat_text_delimiter=
-#### if count_locations is 'by_field_names':
-count_fields_by_name=
-#### if count_locations is 'by_column_numbers':
-count_column_numbers=
-#### if 'in_count_headers' is in munge_strings
-#### (start numbering from first unskipped row):
-count_header_row_numbers=
-#### if 'constant_over_file' is in munge_strings (NB: give value for each in .ini file):
-constant_over_file=
-#### if file type is flat_text or excel and count_locations is 'by_field_names'
+#### if file type is flat_text or excel and count_columns_specified is 'by_name'
 #### (start numbering from first unskipped row):
 count_field_name_row=
-#### if file type is flat_text or excel and not all rows are data:
+#### if file type is flat_text or excel, not all rows are data, and there are noncount columns:
 #### (start numbering from first unskipped row):
-string_field_name_row=
+noncount_header_row=
 
 ################################################
 ## Optional format parameters:
@@ -39,7 +29,7 @@ thousands_separator=
 encoding=
 
 #### for a flat_text or excel file type:
-###### if field names are not given in file
+###### if there are no header rows
 all_rows=data
 ###### if there are multiple blocks of data per page, each with its own headers
 multi_block=yes
@@ -51,15 +41,16 @@ sheets_to_read_names=
 sheets_to_read_numbers=
 sheets_to_skip_names=
 
-#### for xml file type
-nesting_tags=
+#### List any elements constant over the file that will be given in the <results>.ini file:
+constant_over_file=
 
-# Munge formula sections (required if in munge_strings list) #
-[in_field_values]
-
-[in_count_headers]
-
-[constant_over_sheet]
+[munge formulas]
+# give formulas for all elements (except constant_over_file elements)
+CandidateContest=
+Candidate=
+Party=
+CountItemType=
+ReportingUnit=
 
 # Values to ignore (optional) #
 [ignore]
@@ -76,6 +67,7 @@ nesting_tags=
 
 # required:
 # lookup_id=
-# and formula for any element needing to be looked up:
-# <element>_replacement=
-# and specify munger params for source file
+
+# optional (if not given, assumes lookup file is same as results file
+source_file=
+# and if source_file is given, specify munger params for lookup source file

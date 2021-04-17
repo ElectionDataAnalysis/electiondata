@@ -1,19 +1,17 @@
 [format]
 file_type=flat_text
-count_locations=by_field_names
-munge_strings=in_count_headers,in_field_values
+count_location=by_name:Votes_Early Vote,Votes_Election Day,Votes
 
 encoding=utf_8
 flat_text_delimiter=tab
-string_field_name_row=0
+noncount_header_row=0
 count_field_name_row=0
-count_fields_by_name=Votes_Early Vote,Votes_Election Day,Votes
 
-[in_field_values]
+[munge formulas]
 ReportingUnit=<PrecinctName>
 Party=<CandidateAffiliation>
 CandidateContest=<ContestName>
 Candidate=<CandidateName>
 
-[in_count_headers]
-CountItemType=<header_0>
+
+CountItemType=<count_header_0>

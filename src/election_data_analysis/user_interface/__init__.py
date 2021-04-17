@@ -13,6 +13,8 @@ import datetime
 import csv
 import numpy as np
 import inspect
+import xml.etree.ElementTree as et
+import json
 
 # constants
 recognized_encodings = {
@@ -340,6 +342,30 @@ def find_dupes(df):
     return dupes_df, deduped
 
 
+def json_kwargs(
+        munge_fields: List[str],
+        driving_path: str,
+        driver_new_col_name: str,
+) -> (Dict[str, Any], Dict[str, str]):
+    meta_set = set()
+    json_rename: Dict[str, str] = dict()
+    record_path = driving_path.split("/")[:-1]
+    driver_old_col_name = driving_path.split("/")[-1]
+    json_rename[driver_old_col_name] = driver_new_col_name
+    for mf in munge_fields:
+        path_list = mf.split(".")
+        if path_list[0] not in record_path:
+            meta_set.update({tuple(path_list)})
+        elif len(path_list) > 2:
+            meta_set.update({tuple(path_list)})
+        else:
+            json_rename[path_list[-1]] = mf
+    meta = list(list(t) for t in meta_set)
+    json_kwargs = {"meta": meta, "record_path": record_path, "errors": "ignore"}
+
+    return json_kwargs, json_rename
+
+
 def tabular_kwargs(
     p: Dict[str, Any], kwargs: Dict[str, Any], aux=False
 ) -> Dict[str, Any]:
@@ -350,15 +376,15 @@ def tabular_kwargs(
         kwargs["header"] = None
     else:
         header_rows = set()
-        # if count_locations are by field name, need count_field_name_row
-        if not aux and p["count_locations"] == "by_field_names":
+        # if count_location is by name, need count_field_name_row
+        if not aux and p["count_location"] == "by_name":
             header_rows.update({p["count_field_name_row"]})
-        # if any string locations are from field values AND field names are in the table, need string_field_name_row
-        if "in_field_values" in p["munge_strings"]:
-            header_rows.update({p["string_field_name_row"]})
-        # if any string locations are in count headers need count_header_row_numbers
-        if "in_count_headers" in p["munge_strings"]:
-            header_rows.update(p["count_header_row_numbers"])
+        # need noncount_header_row
+        header_rows.update({p["noncount_header_row"]})
+        #  need count_header_row_numbers
+        header_rows.update(p["count_header_row_numbers"])
+
+        # define header parameter for reading file
         if header_rows:
             # if multi-index
             if len(header_rows) > 1:
@@ -411,39 +437,66 @@ def list_desired_excel_sheets(f_path: str, p: dict) -> Optional[list]:
 def read_single_datafile(
     f_path: str,
     p: Dict[str, Any],
-    munger_name: str,
+    munger_path: str,
     err: Optional[Dict],
     aux: bool = False,
+    driving_path: Optional[str] = None,
+    lookup_id: Optional[str] = None,
 ) -> (Dict[str, pd.DataFrame], dict):
     """Length of returned dictionary is the number of sheets read -- usually 1 except for multi-sheet Excel.
     Auxiliary files have different parameters (e.g., no count locations)"""
     kwargs = dict()  # for syntax checker
     df_dict = dict()  # for syntax checker
     file_name = Path(f_path).name
+    munger_name = Path(munger_path).stem
 
     # prepare keyword arguments for pandas read_* function
     if p["file_type"] in ["excel"]:
         kwargs = basic_kwargs(p, dict())
         kwargs = tabular_kwargs(p, kwargs, aux=aux)
+        if p["multi_block"] == "yes":
+            kwargs["header"] = None
     elif p["file_type"] in ["flat_text"]:
         kwargs = basic_kwargs(p, dict())
         kwargs = tabular_kwargs(p, kwargs, aux=aux)
+        if p["multi_block"] == "yes":
+            kwargs["header"] = None
         kwargs["quoting"] = csv.QUOTE_MINIMAL
         if p["flat_text_delimiter"] in ["tab", "\\t"]:
             kwargs["sep"] = "\t"
         else:
             kwargs["sep"] = p["flat_text_delimiter"]
-
+    elif p["file_type"] in ["json-nested"]:
+        kwargs, rename = json_kwargs(p["munge_fields"], p["count_location"], "Count")
     # read file
     try:
         if p["file_type"] in ["xml"]:
-            df, err = sf.read_xml(f_path, p, munger_name, err)
+            if driving_path:
+                temp_d = sf.tree_parse_info(driving_path,None)
+                driver = {"main_path": temp_d["path"], "main_attrib": temp_d["attrib"]}
+            else:
+                driver = sf.xml_count_parse_info(p, ignore_namespace=True)
+            xml_path_info = sf.xml_string_path_info(p["munge_fields"], p["namespace"])
+            tree = et.parse(f_path)
+            df, err = sf.df_from_tree(
+                tree,
+                xml_path_info=xml_path_info,
+                file_name=file_name,
+                **driver,
+                namespace=p["namespace"],
+                lookup_id=lookup_id,
+            )
             if not fatal_error(err):
                 df_dict = {"Sheet1": df}
         elif p["file_type"] in ["json-nested"]:
-            df, err = sf.read_nested_json(f_path, p, munger_name, err)
+            # TODO what if json-nested is a lookup?
+            with open(f_path, "r") as f:
+                data = json.loads(f.read())
+            df = pd.json_normalize(data, **kwargs)
             if not fatal_error(err):
+                df.rename(columns=rename, inplace=True)
                 df_dict = {"Sheet1": df}
+
         elif p["file_type"] == "excel":
             df_dict, err = excel_to_dict(
                 f_path, kwargs, list_desired_excel_sheets(f_path, p)
@@ -506,6 +559,13 @@ def read_single_datafile(
             err_str,
         )
         err = add_new_error(err, "file", f_path, err_str)
+    except Exception as exc:
+        err = add_new_error(
+            err,
+            "file",
+            file_name,
+            f"Unknown exception while reading file using munger {munger_name}: {exc}"
+        )
 
     # drop any empty dataframes
     df_dict = {k: v for k, v in df_dict.items() if not v.empty}
@@ -1412,25 +1472,26 @@ def clean_candidate_names(df):
     return df
 
 
-def set_and_fill_headers(df: pd.DataFrame, header_list: list) -> pd.DataFrame:
+def set_and_fill_headers(df: pd.DataFrame, header_list: Optional[list]) -> pd.DataFrame:
     # correct column headers
     # standardize the index and columns to 0, 1, 2, ...
     df = df.reset_index(drop=True).T.reset_index(drop=True).T
     # rename any leading blank header entries to match convention of pd.read_excel, and any trailing to
     # closest non-blank value to left
-    for i in header_list:
-        prev_non_blank = None
-        for j in df.columns:
-            if df.loc[i, j] == "":
-                if prev_non_blank:
-                    df.loc[i, j] = prev_non_blank
+    if header_list:
+        for i in header_list:
+            prev_non_blank = None
+            for j in df.columns:
+                if df.loc[i, j] == "":
+                    if prev_non_blank:
+                        df.loc[i, j] = prev_non_blank
+                    else:
+                        df.loc[i, j] = f"Unnamed: {j}_level_{i}"
                 else:
-                    df.loc[i, j] = f"Unnamed: {j}_level_{i}"
-            else:
-                prev_non_blank = df.loc[i, j]
+                    prev_non_blank = df.loc[i, j]
 
-    # push appropriate rows into headers
-    df = df.reset_index(drop=True).T.set_index(header_list).T
+        # push appropriate rows into headers
+        df = df.reset_index(drop=True).T.set_index(header_list).T
     return df
 
 

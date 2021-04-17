@@ -1,13 +1,11 @@
 [format]
 file_type=xml
-count_locations=by_field_names
-munge_strings=in_field_values
+count_location=electionResult/contests/contest/choices/choice/jurisdictions/jurisdiction/voteTypes/voteType.votes
 
 encoding=ASCII
-nesting_tags=contests,choices,jurisdictions,voteTypes
-count_fields_by_name=voteType.votes
 
-[in_field_values]
+
+[munge formulas]
 ReportingUnit=<jurisdiction.name>
 Party=<choice.party>
 CandidateContest=<contest.contestLongName>

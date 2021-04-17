@@ -695,6 +695,7 @@ CandidateContest	OH House District 77	State Representative - District 77
 CandidateContest	OH House District 78	State Representative - District 78
 CandidateContest	OH House District 79	State Representative - District 79
 CandidateContest	OH House District 80	State Representative - District 80
+CandidateContest	OH House District 80	State Repersenative - District 80
 CandidateContest	OH House District 81	State Representative - District 81
 CandidateContest	OH House District 82	State Representative - District 82
 CandidateContest	OH House District 83	State Representative - District 83
@@ -747,22 +748,22 @@ CandidateContest	OH Senate District 30	State Senator - District 30
 CandidateContest	OH Senate District 31	State Senator - District 31
 CandidateContest	OH Senate District 32	State Senator - District 32
 CandidateContest	OH Senate District 33	State Senator - District 33
-CandidateContest	US House OH District 1	Representative to Congress - District 01
-CandidateContest	US House OH District 2	Representative to Congress - District 02
-CandidateContest	US House OH District 3	Representative to Congress - District 03
-CandidateContest	US House OH District 4	Representative to Congress - District 04
-CandidateContest	US House OH District 5	Representative to Congress - District 05
-CandidateContest	US House OH District 6	Representative to Congress - District 06
-CandidateContest	US House OH District 7	Representative to Congress - District 07
-CandidateContest	US House OH District 8	Representative to Congress - District 08
-CandidateContest	US House OH District 9	Representative to Congress - District 09
-CandidateContest	US House OH District 10	Representative to Congress - District 10
-CandidateContest	US House OH District 11	Representative to Congress - District 11
-CandidateContest	US House OH District 12	Representative to Congress - District 12
-CandidateContest	US House OH District 13	Representative to Congress - District 13
-CandidateContest	US House OH District 14	Representative to Congress - District 14
-CandidateContest	US House OH District 15	Representative to Congress - District 15
-CandidateContest	US House OH District 16	Representative to Congress - District 16
+CandidateContest	US House OH District 1	Rep to Congress - District 01
+CandidateContest	US House OH District 2	Rep to Congress - District 02
+CandidateContest	US House OH District 3	Rep to Congress - District 03
+CandidateContest	US House OH District 4	Rep to Congress - District 04
+CandidateContest	US House OH District 5	Rep to Congress - District 05
+CandidateContest	US House OH District 6	Rep to Congress - District 06
+CandidateContest	US House OH District 7	Rep to Congress - District 07
+CandidateContest	US House OH District 8	Rep to Congress - District 08
+CandidateContest	US House OH District 9	Rep to Congress - District 09
+CandidateContest	US House OH District 10	Rep to Congress - District 10
+CandidateContest	US House OH District 11	Rep to Congress - District 11
+CandidateContest	US House OH District 12	Rep to Congress - District 12
+CandidateContest	US House OH District 13	Rep to Congress - District 13
+CandidateContest	US House OH District 14	Rep to Congress - District 14
+CandidateContest	US House OH District 15	Rep to Congress - District 15
+CandidateContest	US House OH District 16	Rep to Congress - District 16
 CandidateContest	US President (OH)	President (at-large)
 CandidateContest	US President (OH)	President
 CandidateContest	US President (OH)	President and Vice President
@@ -788,7 +789,13 @@ Party	Republican Party	REP
 Party	Independent Party	Indep
 Party	Libertarian Party	LIB
 Party	Write-in	Write-in
-Party	Nonprtycan	Nonprtycan
+Party	Nonparty candidate	Nonprtycan
+Party	Republican Party	Republican
+Party	Write-in	Not Applicable - WI
+Party	Nonparty candidate	Nonparty candidate
+Party	Libertarian Party	Libertarian
+Party	Independent - NO ballot designation	Independent - NO ballot designation
+Party	Democratic Party	Democratic
 ReportingUnit	Ohio;OH House District 1	Ohio;OH House District 1
 ReportingUnit	Ohio;OH House District 2	Ohio;OH House District 2
 ReportingUnit	Ohio;OH House District 3	Ohio;OH House District 3

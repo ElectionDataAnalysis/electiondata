@@ -1,27 +1,25 @@
 # Format parameters (required) #
 [format]
 file_type=excel
-count_locations=by_column_numbers
-munge_strings=in_field_values,in_count_headers,constant_over_file
+count_location=by_number:2,3,4,5,6,7,8,9,10,11,12
 
 ## Sometimes required format parameters:
-count_column_numbers=2,3,4,5,6,7,8,9,10,11,12
 #### if 'in_count_headers' is in munge_strings:
 count_header_row_numbers=0,1,2
 #### if file type is flat_text or excel and not all rows are data:
-string_field_name_row=0
+noncount_header_row=0
 #### if 'constant_over_file' is in munge_strings:
 constant_over_file=CandidateContest
 
 
 # Munge formula sections (required if in munge_strings list) #
-[in_field_values]
+[munge formulas]
 ReportingUnit=<MUNICIPALITY>
 CountItemType=uocava
 
-[in_count_headers]
-Candidate=<header_0>
-Party=<header_2>
+
+Candidate=<count_header_0>
+Party=<count_header_2>
 
 # Values to ignore (optional) #
 [ignore]
