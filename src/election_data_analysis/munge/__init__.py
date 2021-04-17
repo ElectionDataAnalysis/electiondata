@@ -922,7 +922,9 @@ def raw_to_id_simple(
                         juris.short_name,
                         f"\nSome unmatched CountItemTypes:\n{unmatched}",
                     )
-                # get CountItemType for all matched lines
+                # get list of raw CountItemTypes in case they are needed for error reporting
+                all_raw_cit = working.CountItemType_raw.unique().tolist()
+                # get internal CountItemType for all matched lines
                 working = (
                     working[matched]
                     .merge(
@@ -938,7 +940,7 @@ def raw_to_id_simple(
                     err = ui.add_new_error(
                         err, "jurisdiction", juris.short_name,
                         f"No CountItemTypes from results file found in dictionary.txt, so no data loaded."
-                        f"CountItemTypes from file: {working.CountItemType_raw.unique().tolist()}"
+                        f"CountItemTypes from file: {all_raw_cit}"
                     )
                     return working, err
 
