@@ -15,3 +15,6 @@ Candidate=<NameonBallot>
 BallotMeasureContest=<Office>
 BallotMeasureSelection=<NameonBallot>
 CountItemType=total
+
+[ignore]
+CandidateContest=Wlcsc

@@ -174,7 +174,6 @@ noncount_header_row=0
 NB: if there are multiple rows in the lookup file with the same values for the lookup id columns, the system will arbitrarily use the first row and ignore the others.
 
 ### \[ignore\]
-(NB: as of 4/2021, this feature was not working correctly)
  Unrecognized Contests, Candidates and Parties are collected as "none or unknown". Some states (e.g., Wisconsin 2018 General) report total votes over a contest next to individual candidates' votes. The system may read, e.g., "Total Votes Cast" as an unrecognized party name. In this case include the lines:
   ```
 [ignore]

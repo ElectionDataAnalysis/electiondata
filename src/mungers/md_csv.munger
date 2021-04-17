@@ -16,8 +16,4 @@ ReportingUnit=<County>;District <Election District> Precinct <Election Precinct>
 CandidateContest=<Office Name> District <Office District>
 Candidate=<Candidate Name>
 Party=<Party>
-
-
 CountItemType=<count_header_0>
-
-[ignore]

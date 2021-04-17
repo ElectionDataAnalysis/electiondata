@@ -447,12 +447,12 @@ def replace_raw_with_internal_ids(
     working_unmatched = working[(working.Id.isnull()) & (working[element].notnull())]
     if not working_unmatched.empty and element != "BallotMeasureContest":
         unmatched_pairs = [
-            f'({r[f"{element}_raw"]},{r[element]})'
+            f'({r[element]},{r[f"{element}_raw"]})'
             for i, r in working_unmatched[[f"{element}_raw", element]]
             .drop_duplicates()
             .iterrows()
         ]
-        unmatched_str = "\n\t".join(unmatched_pairs)
+        unmatched_str = "\n".join(unmatched_pairs)
         e = (
             f"Warning: Results for {working_unmatched.shape[0]} rows with unmatched {element}s "
             f"will not be loaded to database. "
@@ -933,6 +933,14 @@ def raw_to_id_simple(
                     )
                     .rename(columns={"cdf_internal_name": "CountItemType"})
                 )
+                # if no CountItemTypes matched to dictionary
+                if working.CountItemType.isnull().all():
+                    err = ui.add_new_error(
+                        err, "jurisdiction", juris.short_name,
+                        f"No CountItemTypes from results file found in dictionary.txt, so no data loaded."
+                        f"CountItemTypes from file: {working.CountItemType_raw.unique().tolist()}"
+                    )
+                    return working, err
 
                 # join CountItemType_Id and OtherCountItemType
                 cit = pd.read_sql_table("CountItemType", session.bind)
@@ -2247,3 +2255,28 @@ def get_lookedup_fields(raw_fields) -> Dict[str, List[str]]:
             else:
                 fk_map[fk] = [val]
     return fk_map
+
+
+def remove_ignored_rows(df: pd.DataFrame, munger_path: str) -> pd.DataFrame:
+    working = df.copy()
+    ig, new_err = ui.get_parameters(
+        header="ignore",
+        required_keys=[],
+        optional_keys=[
+            "Candidate",
+            "CandidateContest",
+            "BallotMeasureSelection",
+            "BallotMeasureContest",
+            "Party",
+        ],
+        param_file=munger_path,
+    )
+    # NB: errors ignored, as header is not required
+
+    # delete rows to be ignored
+    real_ig_keys = [x for x in ig.keys() if ig[x] is not None]
+    for element in real_ig_keys:
+        value_list = ig[element].split(",")
+        working = working[~working[f"{element}_raw"].isin(value_list)]
+
+    return working
