@@ -13,7 +13,9 @@ import csv
 import inspect
 
 
-def recast_options(options: Dict[str, str], types: Dict[str, str], munger_name: str) -> (dict, Dict[str, Any]):
+def recast_options(
+    options: Dict[str, str], types: Dict[str, str], munger_name: str
+) -> (dict, Dict[str, Any]):
     """Convert a dictionary <options> of string parameter values to typed objects,
     where type is determined by <types>"""
     err: Dict[str, Any] = None
@@ -25,7 +27,10 @@ def recast_options(options: Dict[str, str], types: Dict[str, str], munger_name: 
             except Exception:
                 options[k] = None
                 err = ui.add_new_error(
-                    err, "warn-munger", munger_name, f"{k} should be integer but isn't: {options[k]}"
+                    err,
+                    "warn-munger",
+                    munger_name,
+                    f"{k} should be integer but isn't: {options[k]}",
                 )
         elif types[k] == "list-of-integers":
             try:
@@ -33,7 +38,10 @@ def recast_options(options: Dict[str, str], types: Dict[str, str], munger_name: 
             except Exception:
                 options[k] = list()
                 err = ui.add_new_error(
-                    err,"warn-munger",munger_name,f"{k} should be list of integers but isn't: {options[k]}"
+                    err,
+                    "warn-munger",
+                    munger_name,
+                    f"{k} should be list of integers but isn't: {options[k]}",
                 )
         elif types[k] == "str":
             if options[k] == "":
@@ -46,7 +54,10 @@ def recast_options(options: Dict[str, str], types: Dict[str, str], munger_name: 
                 except Exception:
                     options[k] = list()
                     err = ui.add_new_error(
-                        err,"warn-munger",munger_name,f"{k} should be list of strings but isn't: {options[k]}"
+                        err,
+                        "warn-munger",
+                        munger_name,
+                        f"{k} should be list of strings but isn't: {options[k]}",
                     )
             # if the string is empty, assign an empty list
             else:
@@ -63,7 +74,9 @@ def recast_options(options: Dict[str, str], types: Dict[str, str], munger_name: 
                 options["count_fields_by_name"] = [s for s in options[k][8:].split(",")]
                 options[k] = "by_name"
             elif options[k].split(":")[0] == "by_number":
-                options["count_column_numbers"] = [int(s) for s in options[k][10:].split(",")]
+                options["count_column_numbers"] = [
+                    int(s) for s in options[k][10:].split(",")
+                ]
                 options[k] = "by_number"
     return options, err
 

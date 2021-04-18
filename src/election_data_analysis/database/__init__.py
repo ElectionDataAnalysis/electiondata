@@ -23,8 +23,10 @@ from election_data_analysis import munge as m
 import re
 from election_data_analysis.database import create_cdf_db as db_cdf
 import os
+
 ### sqlalchemy imports below are necessary, even if syntax-checker doesn't think so!
 from sqlalchemy import MetaData, Table, Column, Integer, Float
+
 ### NB: syntax-checker doesn't see it, but these ^^ are used.
 from typing import Optional, List, Dict, Any, Iterable, Set
 from election_data_analysis import user_interface as ui

@@ -163,5 +163,3 @@ def nist_namespace(f_path, key) -> Optional[dict]:
         return namespace
     except Exception:
         return None
-
-

@@ -343,9 +343,9 @@ def find_dupes(df):
 
 
 def json_kwargs(
-        munge_fields: List[str],
-        driving_path: str,
-        driver_new_col_name: str,
+    munge_fields: List[str],
+    driving_path: str,
+    driver_new_col_name: str,
 ) -> (Dict[str, Any], Dict[str, str]):
     meta_set = set()
     json_rename: Dict[str, str] = dict()
@@ -472,7 +472,7 @@ def read_single_datafile(
     try:
         if p["file_type"] in ["xml"]:
             if driving_path:
-                temp_d = sf.tree_parse_info(driving_path,None)
+                temp_d = sf.tree_parse_info(driving_path, None)
                 driver = {"main_path": temp_d["path"], "main_attrib": temp_d["attrib"]}
             else:
                 driver = sf.xml_count_parse_info(p, ignore_namespace=True)
@@ -564,7 +564,7 @@ def read_single_datafile(
             err,
             "file",
             file_name,
-            f"Unknown exception while reading file using munger {munger_name}: {exc}"
+            f"Unknown exception while reading file using munger {munger_name}: {exc}",
         )
 
     # drop any empty dataframes

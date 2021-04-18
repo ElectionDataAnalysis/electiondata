@@ -938,9 +938,11 @@ def raw_to_id_simple(
                 # if no CountItemTypes matched to dictionary
                 if working.CountItemType.isnull().all():
                     err = ui.add_new_error(
-                        err, "jurisdiction", juris.short_name,
+                        err,
+                        "jurisdiction",
+                        juris.short_name,
                         f"No CountItemTypes from results file found in dictionary.txt, so no data loaded."
-                        f"CountItemTypes from file: {all_raw_cit}"
+                        f"CountItemTypes from file: {all_raw_cit}",
                     )
                     return working, err
 
@@ -1542,7 +1544,7 @@ def get_and_check_munger_params(
                     err,
                     "munger",
                     munger_name,
-                    f"Munge field has more than one /: <{mf}>"
+                    f"Munge field has more than one /: <{mf}>",
                 )
 
     # check formulas are well-formed and consistent for excel, flat files.
@@ -2051,7 +2053,9 @@ def get_aux_info(
                     header="format",
                     param_file=munger_path,
                 )
-                recast_params, new_err = jm.recast_options(main_format_params, type_dict, Path(munger_path).stem)
+                recast_params, new_err = jm.recast_options(
+                    main_format_params, type_dict, Path(munger_path).stem
+                )
                 if new_err:
                     err = ui.consolidate_errors([err, new_err])
                 f_p.update(recast_params)
