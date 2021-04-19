@@ -21,7 +21,7 @@ total_pres_votes = 3025962  # total of all votes for US President
 cd = 1  # US House congressional district
 total_cd_votes = 316171  # total votes in that US House contest in the chosen cd
 shd = 1  # state house district
-total_shd_votes = -1  # total votes in that State House contest
+total_shd_votes = 14724  # total votes in that State House contest
 ssd = 15  # state senate district
 total_ssd_votes = 113304  # total votes in that State Senate contest
 # pick any one with corresponding data in your file, but use internal db name
@@ -75,17 +75,15 @@ def test_state_senate_totals(dbname):
     )
 
 
-"""  state house not collected
 def test_state_house_totals(dbname):
     assert (e.contest_total(
         election,
         jurisdiction,
         f"{abbr} House District {shd}",
         dbname=dbname,
-        )
+    )
         == total_shd_votes
     )
-"""
 
 
 def test_standard_vote_types(dbname):
