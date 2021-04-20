@@ -1829,8 +1829,8 @@ def to_standard_count_frame(
                     for field in munge_string_fields
                     if field[:4] == "row_"
                 ]
-                # TODO what about multi-blocks?
-                if rows_needed:  # (note: only excel file type has multiple sheets)
+
+                if rows_needed:  # (note: only excel file type and multi-block have multiple sheets)
                     max_row = max(rows_needed)
                     data = pd.read_excel(
                         file_path,
@@ -1874,6 +1874,20 @@ def to_standard_count_frame(
                     file_name,
                     f"In sheet {sheet}: Unexpected exception: {exc}",
                 )
+            # if not all rows are data, reanme any header-less columns in the noncount_header_row
+            if p["all_rows"] != "data":
+                unnamed_pattern = r"^Unnamed: (\d+)_level_(\d+)$"
+                for c in working.columns:
+                    # if c is of the form 'Unnamed: i_level_j' where i is any integer and j is the noncount_header_row
+                    n = re.findall(unnamed_pattern, c)
+                    if len(n) == 1:
+                        try:
+                            if int(n[0][1]) == p["noncount_header_row"]:
+                                working.columns = [
+                                    f"column_{n[0][0]}" if wc == c else wc for wc in working.columns
+                                ]
+                        except ValueError:
+                            pass
 
             # keep only necessary columns
             try:
