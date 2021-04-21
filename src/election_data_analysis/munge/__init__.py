@@ -1795,43 +1795,14 @@ def to_standard_count_frame(
         error_by_df: Optional[int, Optional[dict]] = dict()
         standard[sheet] = pd.DataFrame()
         for n in range(len(df_list)):
+            error_by_df[n] = None
             raw = df_list[n]
             working = raw.copy()
             # some file types are read already into "melted" form
             if p["file_type"] in ["xml", "json-nested"]:
                 error_by_df[n] = None
+
             else:
-                if p["all_rows"] != "data":
-                    unnamed_pattern = r"^Unnamed: (\d+)_level_(\d+)$"
-                    multi = isinstance(working.columns, pd.MultiIndex)
-
-                    for c in working.columns:
-                        if multi:
-                            tuple_from_c = c
-                        else:
-                            tuple_from_c = (c,)
-                        numbers = dict()
-                        for x in tuple_from_c:
-                            numbers[x] = re.findall(unnamed_pattern, x)
-                            # if x is of the form 'Unnamed: _level_j' where i is any integer and j is the noncount_header_row
-                            try:
-                                # replace with column_i
-                                if int(numbers[0][1]) == p["noncount_header_row"]:
-                                    tuple_from_c = tuple([
-                                        f"column_{numbers[x][0][0]}" if y == x else y for y in tuple_from_c
-                                    ])
-                            except ValueError:
-                                pass
-
-                        # rename columns of working appropriately
-                        if multi:  # TODO rename one part of the multi-index
-                            working.columns = pd.MultiIndex()
-                        else:
-                            working.columns = [
-                                            tuple_from_c[0] if wc == c else wc for wc in working.columns
-                                        ]
-
-
                 # transform to df with single count column 'Count' and all raw munge info in other columns
                 try:
                     working, error_by_df[n] = melt_to_one_count_column(
@@ -1909,9 +1880,25 @@ def to_standard_count_frame(
 
     # if even one sheet was not fatally flawed
     if suffix and non_fatal_sheets:
+        # rename any Unnamed: i_level_j to column_i if noncount header row is j
+        if p["noncount_header_row"]:
+            unnamed_pattern = r"^Unnamed: (\d+)_level_(\d+)$"
+            for c in df.columns:
+                numbers = re.findall(unnamed_pattern, c)
+                # if c is of the form 'Unnamed: _level_j' where i is any integer and j is the noncount_header_row
+                if numbers:
+                    try:
+                        # replace with column_i
+                        if int(numbers[0][1]) == p["noncount_header_row"]:
+                            df.columns = [
+                                f"column_{numbers[0][0]}" if x == c else x for x in df.columns
+                            ]
+                    except ValueError:
+                        # if anything crucial is not actually an integer, do nothing
+                        pass
+
         # append suffix to all non-Count column names (to avoid conflicts if e.g., source has col names 'Party'
         try:
-            original_string_columns = [c for c in df.columns if c != "Count"]
             df.columns = [c if c == "Count" else f"{c}{suffix}" for c in df.columns]
         except Exception as exc:
             err = ui.add_new_error(
@@ -2252,6 +2239,7 @@ def remove_ignored_rows(df: pd.DataFrame, munger_path: str) -> pd.DataFrame:
             "BallotMeasureSelection",
             "BallotMeasureContest",
             "Party",
+            "ReportingUnit",
         ],
         param_file=munger_path,
     )

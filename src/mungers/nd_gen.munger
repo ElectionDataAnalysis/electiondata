@@ -8,8 +8,6 @@ encoding=iso-8859-1
 [munge formulas]
 ReportingUnit=<County>
 CountItemType=total
-
-
 Party={<count_header_6>,^.*\s+\n*(.*)$|write-in}
 Candidate={<count_header_6>,^(.*\s+|write-in)\n*.*$}
 CandidateContest=<row_6> <row_7>

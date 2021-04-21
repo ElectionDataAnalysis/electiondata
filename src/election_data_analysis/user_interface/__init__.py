@@ -383,8 +383,6 @@ def tabular_kwargs(
         header_rows.update({p["noncount_header_row"]})
         #  need count_header_row_numbers
         header_rows.update(p["count_header_row_numbers"])
-        # if rows have constant_over_file info, need them too
-        header_rows.update(p["rows_with_constants"])
 
         # define header parameter for reading file
         if header_rows:
@@ -551,7 +549,7 @@ def read_single_datafile(
             row_constant_kwargs = get_row_constant_kwargs(kwargs)
             row_df = pd.read_csv(f_path, **row_constant_kwargs)
             row_constants["Sheet1"], new_err = build_row_constants_from_df(
-                df, p["rows_with_constants"], file_name, "Sheet1"
+                row_df, p["rows_with_constants"], file_name, "Sheet1"
             )
             if new_err:
                 err = consolidate_errors([err, new_err])
