@@ -1839,15 +1839,10 @@ def to_standard_count_frame(
                 )
                 continue
 
-            # clean Count column
+            # clean Count column (NB: bad rows not reported)
             working, bad_rows = clean_count_cols(
                 working, ["Count"], p["thousands_separator"]
             )
-            if not bad_rows.empty:
-                # note: add_err_df is never fatal
-                error_by_df[n] = ui.add_err_df(
-                    error_by_df[n], bad_rows, munger_name, file_path
-                )
 
             # append data from the nth dataframe to the standard-form dataframe
             ## NB: if df_list[n] fails it should not reach this statement

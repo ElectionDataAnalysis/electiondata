@@ -662,19 +662,6 @@ def build_row_constants_from_df(
     return row_constants, err
 
 
-def add_err_df(err, err_df, munger_name, f_path):
-    # show all columns of dataframe holding rows where counts were set to 0
-    pd.set_option("max_columns", None)
-    err = add_new_error(
-        err,
-        "warn-munger",
-        munger_name,
-        f"At least one count was set to 0 in certain rows of {Path(f_path).name}:\n{err_df}",
-    )
-    pd.reset_option("max_columns")
-    return err
-
-
 def archive_from_param_file(param_file: str, current_dir: str, archive_dir: str):
     params, err = get_parameters(
         required_keys=["results_file", "aux_data_dir"],
