@@ -383,6 +383,8 @@ def tabular_kwargs(
         header_rows.update({p["noncount_header_row"]})
         #  need count_header_row_numbers
         header_rows.update(p["count_header_row_numbers"])
+        # if rows have constant_over_file info, need them too
+        header_rows.update(p["rows_with_constants"])
 
         # define header parameter for reading file
         if header_rows:
@@ -417,6 +419,13 @@ def basic_kwargs(p: Dict[str, Any], kwargs: Dict[str, Any]) -> Dict[str, Any]:
     return kwargs
 
 
+def get_row_constant_kwargs(kwargs: dict, rows_to_read: List[int]) -> dict:
+    rck = kwargs.copy()
+    rck["header"] = None
+    rck["nrows"] = max(rows_to_read) + 1
+    return rck
+
+
 def list_desired_excel_sheets(f_path: str, p: dict) -> Optional[list]:
     if p["sheets_to_read_names"]:
         sheets_to_read = p["sheets_to_read_names"]
@@ -442,11 +451,13 @@ def read_single_datafile(
     aux: bool = False,
     driving_path: Optional[str] = None,
     lookup_id: Optional[str] = None,
-) -> (Dict[str, pd.DataFrame], dict):
+) -> (Dict[str, pd.DataFrame], Dict[str, Dict[int, Any]], Optional[dict]):
     """Length of returned dictionary is the number of sheets read -- usually 1 except for multi-sheet Excel.
     Auxiliary files have different parameters (e.g., no count locations)"""
     kwargs = dict()  # for syntax checker
     df_dict = dict()  # for syntax checker
+    row_constants = dict()  # for syntax checker
+    rename = dict()  # for syntax checker
     file_name = Path(f_path).name
     munger_name = Path(munger_path).stem
 
@@ -498,8 +509,8 @@ def read_single_datafile(
                 df_dict = {"Sheet1": df}
 
         elif p["file_type"] == "excel":
-            df_dict, err = excel_to_dict(
-                f_path, kwargs, list_desired_excel_sheets(f_path, p)
+            df_dict, row_constants, err = excel_to_dict(
+                f_path, kwargs, list_desired_excel_sheets(f_path, p), p["rows_with_constants"]
             )
             if fatal_error(err):
                 df_dict = dict()
@@ -536,6 +547,14 @@ def read_single_datafile(
                     )
 
             df_dict = {"Sheet1": df}
+            # get the row constants
+            row_constant_kwargs = get_row_constant_kwargs(kwargs)
+            row_df = pd.read_csv(f_path, **row_constant_kwargs)
+            row_constants["Sheet1"], new_err = build_row_constants_from_df(
+                df, p["rows_with_constants"], file_name, "Sheet1"
+            )
+            if new_err:
+                err = consolidate_errors([err, new_err])
 
         # rename any columns from header-less tables to column_0, column_1, etc.
         if p["all_rows"] == "data":
@@ -566,39 +585,80 @@ def read_single_datafile(
             file_name,
             f"Unknown exception while reading file using munger {munger_name}: {exc}",
         )
-
-    # drop any empty dataframes
-    df_dict = {k: v for k, v in df_dict.items() if not v.empty}
-    return df_dict, err
+    else:
+        # drop any empty dataframes
+        df_dict = {k: v for k, v in df_dict.items() if not v.empty}
+    return df_dict, row_constants, err
 
 
 def excel_to_dict(
-    f_path: str, kwargs: Dict[str, Any], sheet_list: Optional[List[str]]
-) -> (Dict[str, pd.DataFrame], dict):
+    f_path: str, kwargs: Dict[str, Any], sheet_list: Optional[List[str]], rows_to_read: List[int]
+) -> (Dict[str, pd.DataFrame], Dict[str, Dict[str, Any]], Optional[dict]):
+    """Returns dictionary of dataframes (one for each sheet), dictionary of dictionaries of constant values
+    (one dictionary for each sheet) and error."""
     kwargs["index_col"] = None
     #  need to omit index_col here since multi-index headers are possible
     # to avoid getting fatal error when a sheet doesn't read in correctly
     df_dict = dict()
-    error: Optional[dict] = None
+    row_constants = dict()
+    row_constant_kwargs = dict()
+    file_name = Path(f_path).name
+    err = None
+    if rows_to_read:
+        row_constant_kwargs = get_row_constant_kwargs(kwargs, rows_to_read)
     for sheet in sheet_list:
         try:
             df_dict[sheet] = pd.read_excel(f_path, **kwargs, sheet_name=sheet)
             # ignore any empty sheet
             if df_dict[sheet].empty:
                 df_dict.pop(sheet)
-                file_name = Path(f_path).name
-                error = add_new_error(
-                    error, "file", file_name, f"No data read from sheet {sheet}"
+                err = add_new_error(
+                    err, "file", file_name, f"No data read from sheet {sheet}"
                 )
         except Exception as exc:
             df_dict[sheet] = pd.DataFrame()
-            error = add_new_error(
-                error,
+            err = add_new_error(
+                err,
                 "warn-file",
                 Path(f_path).name,
                 f"Sheet {sheet} not read due to exception:\n\t{exc}",
             )
-    return df_dict, error
+        if rows_to_read:
+            row_constant_df = pd.read_excel(f_path, **row_constant_kwargs, sheet_name=sheet)
+            row_constants[sheet], new_err = build_row_constants_from_df(
+                row_constant_df, rows_to_read, file_name, sheet)
+            if new_err:
+                err = consolidate_errors([err, new_err])
+    return df_dict, row_constants, err
+
+
+def build_row_constants_from_df(
+        df: pd.DataFrame, rows_to_read: List[int], file_name: str, sheet: str
+) -> (Dict[int, Any], Optional[dict]):
+    """Returns first entries in rows corresponding to row_list (as a dictionary with rows in row_list as keys)"""
+    row_constants = dict()
+    err = None
+    for row in rows_to_read:
+        try:
+            first_valid_idx = df.loc[row].fillna("").first_valid_index()
+            row_constants[row] = df.fillna("").loc[row,first_valid_idx]
+        except KeyError as ke:
+            err = add_new_error(
+                err,
+                "warn-file",
+                file_name,
+                f"In sheet {sheet} no data found in row_{row}",
+            )
+            row_constants[row] = ""
+            continue
+        except Exception as exc:
+            err = add_new_error(
+                err,
+                "file",
+                file_name,
+                f"In sheet {sheet}: Unexpected exception while reading data from row_{row}: {exc}",
+            )
+    return row_constants, err
 
 
 def add_err_df(err, err_df, munger_name, f_path):

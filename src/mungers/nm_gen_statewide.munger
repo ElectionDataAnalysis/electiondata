@@ -10,12 +10,8 @@ constant_over_file=
 
 [munge formulas]
 ReportingUnit=<County>
-
-
 Candidate=<count_header_0>
-Party=<count_header_0>
-
-
+Party=<Party from count_header_0>
 CandidateContest=<row_0> <row_1>
 CountItemType={<sheet_name>,^(.*)(?:President|United).*$}
 
@@ -29,7 +25,3 @@ flat_text_delimiter=tab
 noncount_header_row=0
 encoding=ASCII
 lookup_id=Name
-Party_replacement=Party
-Candidate_replacement=<Name>
-
-

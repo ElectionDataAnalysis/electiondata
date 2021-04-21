@@ -29,7 +29,7 @@ cit_from_raw_nist_df = pd.DataFrame(
 )
 
 
-def tree_parse_info(xpath: str, namespace: str) -> Dict[str, Any]:
+def tree_parse_info(xpath: str, namespace: Optional[str]) -> Dict[str, Any]:
     """extracts xml path-parsing info from xpath with
     optional .* attribute. E.g., Election/Contest.name
     gets parsed to path Election/Contest and attribute
