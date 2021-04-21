@@ -1537,9 +1537,15 @@ def set_and_fill_headers(df: pd.DataFrame, header_list: Optional[list]) -> pd.Da
                         df.loc[i, j] = f"Unnamed: {j}_level_{i}"
                 else:
                     prev_non_blank = df.loc[i, j]
-
+        # drop any column that is empty below the header
+        df = df.reset_index(drop=True)
+        mask = df.eq("").loc[max(header_list) + 1:].all()
+        good_column_numbers = [j for j in range(df.shape[1]) if not mask[j]]
+        df = df.iloc[:,good_column_numbers]
         # push appropriate rows into headers
         df = df.reset_index(drop=True).T.set_index(header_list).T
+        # drop unused header rows
+        df.drop([x for x in range(max(header_list)) if x not in header_list], inplace=True)
     return df
 
 

@@ -577,7 +577,7 @@ def regularize_candidate_names(
 
 
 def melt_to_one_count_column(
-    df: pd.DataFrame, p: dict, munger_name: str
+    df: pd.DataFrame, p: dict, munger_name: str, file_name: str,
 ) -> (pd.DataFrame, Optional[dict]):
     """transform to df with single count column and all raw munge info in other columns"""
     err = None
@@ -617,6 +617,8 @@ def melt_to_one_count_column(
     good_column_numbers = [j for j in range(df.shape[1]) if not mask[j]]
     df = df.iloc[:, good_column_numbers]
     count_columns = {c for c in count_columns if c in df.columns}
+    if not count_columns:
+        err = ui.add_new_error(err, "warn-file", file_name, f"No count data found with munger {munger_name}")
 
     # melt so that there is one single count column
     id_columns = {c for c in df.columns if c not in count_columns}
@@ -1757,20 +1759,12 @@ def to_standard_count_frame(
         raw_dict[sheet] = raw_dict[sheet].fillna("")
         if p["multi_block"] == "yes":
             try:
-                # get header rows from parameters
-                header_row_set = set(p["count_header_row_numbers"])
-                if isinstance(p["noncount_header_row"], int):
-                    header_row_set.update({p["noncount_header_row"]})
-                if isinstance(p["count_field_name_row"], int):
-                    header_row_set.update({p["count_field_name_row"]})
-                header_row_list = sorted(header_row_set)
                 # extract blocks as dataframes with generic headers and all rows treated as data
                 df_list, new_err = extract_blocks(
                     raw_dict[sheet],
                     munger_name,
                     file_name,
                     sheet,
-                    header_row_list,
                     max_blocks=p["max_blocks"],
                 )
                 if new_err:
@@ -1818,7 +1812,7 @@ def to_standard_count_frame(
                 # transform to df with single count column 'Count' and all raw munge info in other columns
                 try:
                     working, error_by_df[n] = melt_to_one_count_column(
-                        raw, p, munger_name
+                        raw, p, munger_name, file_name
                     )
                 except Exception as exc:
                     error_by_df[n] = ui.add_new_error(
@@ -2090,7 +2084,6 @@ def extract_blocks(
     munger_name: str,
     file_name: str,
     sheet_name: str,
-    header_row_numbers: List[int],
     max_blocks: Optional[int] = None,
 ) -> (List[pd.DataFrame], Optional[dict]):
     """Given a dataframe, create a list of dataframes -- one for each block of
