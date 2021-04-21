@@ -1520,10 +1520,10 @@ def clean_candidate_names(df):
     return df
 
 
-def set_and_fill_headers(df: pd.DataFrame, header_list: Optional[list]) -> pd.DataFrame:
+def set_and_fill_headers(df_in: pd.DataFrame, header_list: Optional[list]) -> pd.DataFrame:
     # correct column headers
     # standardize the index and columns to 0, 1, 2, ...
-    df = df.reset_index(drop=True).T.reset_index(drop=True).T
+    df = df_in.reset_index(drop=True).T.reset_index(drop=True).T
     # rename any leading blank header entries to match convention of pd.read_excel, and any trailing to
     # closest non-blank value to left
     if header_list:
