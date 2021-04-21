@@ -6,7 +6,7 @@ from election_data_analysis import juris_and_munger as jm
 from election_data_analysis import special_formats as sf
 import pandas as pd
 from pandas.api.types import is_numeric_dtype
-from typing import Optional, List, Dict, Any
+from typing import Optional, List, Dict, Any, Set
 import re
 import os
 from sqlalchemy.orm.session import Session
@@ -1757,12 +1757,20 @@ def to_standard_count_frame(
         raw_dict[sheet] = raw_dict[sheet].fillna("")
         if p["multi_block"] == "yes":
             try:
+                # get header rows from parameters
+                header_row_set = set(p["count_header_row_numbers"])
+                if isinstance(p["noncount_header_row"], int):
+                    header_row_set.update({p["noncount_header_row"]})
+                if isinstance(p["count_field_name_row"], int):
+                    header_row_set.update({p["count_field_name_row"]})
+                header_row_list = sorted(header_row_set)
                 # extract blocks as dataframes with generic headers and all rows treated as data
                 df_list, new_err = extract_blocks(
                     raw_dict[sheet],
                     munger_name,
                     file_name,
                     sheet,
+                    header_row_list,
                     max_blocks=p["max_blocks"],
                 )
                 if new_err:
@@ -1771,7 +1779,9 @@ def to_standard_count_frame(
                         continue
 
                 # correct column headers
-                header_int_or_list = ui.tabular_kwargs(p, dict())["header"]
+                p_temp = p.copy()
+                p_temp["multi_block"] = None
+                header_int_or_list = ui.tabular_kwargs(p_temp, dict())["header"]
                 if isinstance(
                     header_int_or_list, int
                 ):  # TODO tech debt ugly! but tracks index vs. multiindex
@@ -2080,6 +2090,7 @@ def extract_blocks(
     munger_name: str,
     file_name: str,
     sheet_name: str,
+    header_row_numbers: List[int],
     max_blocks: Optional[int] = None,
 ) -> (List[pd.DataFrame], Optional[dict]):
     """Given a dataframe, create a list of dataframes -- one for each block of
@@ -2098,9 +2109,7 @@ def extract_blocks(
         err = None
     df_list = list()
     working = df.copy()
-
-    # convert the column (multi-)header to row(s)
-    working = working.T.reset_index().T.reset_index(drop=True)
+    # NB: no info is in column headers because multi_block=yes sets header=None when data is read
 
     # identify count rows (have at least one integer), blank rows, and text rows (all others)
     mask_count = working.T.astype(str).apply(lambda row: row.str.isdigit().any())
@@ -2130,6 +2139,9 @@ def extract_blocks(
         count_rows = [n for n in count_rows if n > block_end]
 
         block = working[first_text_row:block_end]
+
+        ## set correct lines to headers
+        # block = block.T.set_index(header_row_numbers).T
 
         ## add block to list
         df_list.append(block)

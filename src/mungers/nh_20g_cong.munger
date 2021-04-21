@@ -15,7 +15,6 @@ noncount_header_row=0
 
 ## Optional format parameters:
 thousands_separator=,
-rows_to_skip=0
 
 [munge formulas]
 ReportingUnit=<State of New Hampshire - General Election>

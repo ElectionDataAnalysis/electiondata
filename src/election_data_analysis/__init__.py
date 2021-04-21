@@ -2155,11 +2155,13 @@ def load_results_file(
             return err
 
     # # add columns for constant-over-file elements
-    necessary_constants = {
-        c: v for c, v in constants.items() if c in p["constant_over_file"]
-    }
-    df = m.add_constants_to_df(df, necessary_constants)
-
+    if p["constant_over_file"]:
+        necessary_constants = {
+            c: v for c, v in constants.items() if c in p["constant_over_file"]
+        }
+        df = m.add_constants_to_df(df, necessary_constants)
+    else:
+        necessary_constants = dict()
     # # delete any rows with items to be ignored
     df = m.remove_ignored_rows(df, munger_path)
 

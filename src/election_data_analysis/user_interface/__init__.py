@@ -372,7 +372,7 @@ def tabular_kwargs(
     """kwargs["header"] is single integer (if just one header row)
     or list of integers (if more than one header row)"""
     # designate header rows (for both count columns or string-location info/columns)
-    if p["all_rows"] == "data":
+    if p["all_rows"] == "data" or p["multi_block"] == "yes":
         kwargs["header"] = None
     else:
         header_rows = set()
@@ -380,7 +380,7 @@ def tabular_kwargs(
         if not aux and p["count_location"] == "by_name":
             header_rows.update({p["count_field_name_row"]})
         # need noncount_header_row
-        if p["noncount_header_row"]:
+        if isinstance(p["noncount_header_row"], int):
             header_rows.update({p["noncount_header_row"]})
         #  need count_header_row_numbers
         if p["count_header_row_numbers"]:
