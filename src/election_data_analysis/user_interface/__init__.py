@@ -380,9 +380,11 @@ def tabular_kwargs(
         if not aux and p["count_location"] == "by_name":
             header_rows.update({p["count_field_name_row"]})
         # need noncount_header_row
-        header_rows.update({p["noncount_header_row"]})
+        if p["noncount_header_row"]:
+            header_rows.update({p["noncount_header_row"]})
         #  need count_header_row_numbers
-        header_rows.update(p["count_header_row_numbers"])
+        if p["count_header_row_numbers"]:
+            header_rows.update(p["count_header_row_numbers"])
 
         # define header parameter for reading file
         if header_rows:
@@ -546,13 +548,14 @@ def read_single_datafile(
 
             df_dict = {"Sheet1": df}
             # get the row constants
-            row_constant_kwargs = get_row_constant_kwargs(kwargs)
-            row_df = pd.read_csv(f_path, **row_constant_kwargs)
-            row_constants["Sheet1"], new_err = build_row_constants_from_df(
-                row_df, p["rows_with_constants"], file_name, "Sheet1"
-            )
-            if new_err:
-                err = consolidate_errors([err, new_err])
+            if p["rows_with_constants"]:
+                row_constant_kwargs = get_row_constant_kwargs(kwargs, p["rows_with_constants"])
+                row_df = pd.read_csv(f_path, **row_constant_kwargs)
+                row_constants["Sheet1"], new_err = build_row_constants_from_df(
+                    row_df, p["rows_with_constants"], file_name, "Sheet1"
+                )
+                if new_err:
+                    err = consolidate_errors([err, new_err])
 
         # rename any columns from header-less tables to column_0, column_1, etc.
         if p["all_rows"] == "data":

@@ -1338,7 +1338,7 @@ def get_lookup_tables(
             lt_path = os.path.join(aux_directory_path, aux_params[fk]["source_file"])
         else:
             lt_path = results_file_path
-        lookup_df_dict, fk_err = ui.read_single_datafile(
+        lookup_df_dict, row_constants, fk_err = ui.read_single_datafile(
             lt_path,
             aux_params[fk],
             munger_path,
@@ -1413,6 +1413,10 @@ def get_and_check_munger_params(
         **opt_munger_data_types,
     }
     params, new_err = jm.recast_options(raw_params, data_types, munger_name)
+
+    # additional parameters
+    # collect necessary row number (for constant_over_sheet items) into rows_with_constants
+    params["rows_with_constants"] = list()
 
     # Check munger values
     # # main parameters recognized
@@ -1546,8 +1550,6 @@ def get_and_check_munger_params(
 
     # check formulas are well-formed and consistent for excel, flat files.
     elif params["file_type"] in ["excel", "flat_text"]:
-        # collect necessary row number (for constant_over_sheet items) into rows_with_constants
-        params["rows_with_constants"] = list()
         # collect header rows in formulas into count_header_row_numbers list
         params["count_header_row_numbers"] = list()
 
@@ -2002,8 +2004,9 @@ def get_aux_info(
         if new_err:
             ui.consolidate_errors([new_err, err])
 
-        # define f_p["munge_fields"]
+        # define calculated parameters
         f_p["munge_fields"] = list(set([f for v in lookup_map.values() for f in v]))
+        f_p["rows_with_constants"] = list() # no lookup info is constant over rows of file
 
         if f_err:
             err = ui.consolidate_errors([err, f_err])
