@@ -1,0 +1,448 @@
+cdf_element	cdf_internal_name	raw_identifier_value
+CandidateContest	PR House District 1	PR House District 1
+CandidateContest	PR House District 2	PR House District 2
+CandidateContest	PR House District 3	PR House District 3
+CandidateContest	PR House District 4	PR House District 4
+CandidateContest	PR House District 5	PR House District 5
+CandidateContest	PR House District 6	PR House District 6
+CandidateContest	PR House District 7	PR House District 7
+CandidateContest	PR House District 8	PR House District 8
+CandidateContest	PR House District 9	PR House District 9
+CandidateContest	PR House District 10	PR House District 10
+CandidateContest	PR House District 11	PR House District 11
+CandidateContest	PR House District 12	PR House District 12
+CandidateContest	PR House District 13	PR House District 13
+CandidateContest	PR House District 14	PR House District 14
+CandidateContest	PR House District 15	PR House District 15
+CandidateContest	PR House District 16	PR House District 16
+CandidateContest	PR House District 17	PR House District 17
+CandidateContest	PR House District 18	PR House District 18
+CandidateContest	PR House District 19	PR House District 19
+CandidateContest	PR House District 20	PR House District 20
+CandidateContest	PR House District 21	PR House District 21
+CandidateContest	PR House District 22	PR House District 22
+CandidateContest	PR House District 23	PR House District 23
+CandidateContest	PR House District 24	PR House District 24
+CandidateContest	PR House District 25	PR House District 25
+CandidateContest	PR House District 26	PR House District 26
+CandidateContest	PR House District 27	PR House District 27
+CandidateContest	PR House District 28	PR House District 28
+CandidateContest	PR House District 29	PR House District 29
+CandidateContest	PR House District 30	PR House District 30
+CandidateContest	PR House District 31	PR House District 31
+CandidateContest	PR House District 32	PR House District 32
+CandidateContest	PR House District 33	PR House District 33
+CandidateContest	PR House District 34	PR House District 34
+CandidateContest	PR House District 35	PR House District 35
+CandidateContest	PR House District 36	PR House District 36
+CandidateContest	PR House District 37	PR House District 37
+CandidateContest	PR House District 38	PR House District 38
+CandidateContest	PR House District 39	PR House District 39
+CandidateContest	PR House District 40	PR House District 40
+CandidateContest	PR Senate District 1	PR Senate District 1
+CandidateContest	PR Senate District 2	PR Senate District 2
+CandidateContest	PR Senate District 3	PR Senate District 3
+CandidateContest	PR Senate District 4	PR Senate District 4
+CandidateContest	PR Senate District 5	PR Senate District 5
+CandidateContest	PR Senate District 6	PR Senate District 6
+CandidateContest	PR Senate District 7	PR Senate District 7
+CandidateContest	PR Senate District 8	PR Senate District 8
+CandidateContest	US House PR District 1	US House PR District 1
+CandidateContest	US President (PR)	US President (PR)
+CandidateContest	PR Governor	PR Governor
+CandidateContest	US Resident Commissioner (PR)	US Resident Commissioner (PR)
+CandidateContest	US Senate PR	US Senate PR
+CandidateContest	PR Attorney General	PR Attorney General
+CandidateContest	PR Lieutenant Governor	PR Lieutenant Governor
+CandidateContest	PR Treasurer	PR Treasurer
+CandidateContest	PR Secretary of State	PR Secretary of State
+Election	2020 General	2020 General
+Election	2020 Primary	2020 Primary
+Election	2018 General	2018 General
+Election	2016 General	2016 General
+Party	Democratic Party	Democratic Party
+Party	Republican Party	Republican Party
+Party	Green Party	Green Party
+Party	Libertarian Party	Libertarian Party
+Party	Partido Nuevo Progresista	(PNP)
+Party	Partido Popular Democrático	(PPD)
+Party	Partido Independentista Puertorriqueño	(PIP)
+Party	Movimiento Victoria Ciudadana	(MVC)
+Party	Proyecto Dignidad	(PD)
+Party	Candidato Independiente	(Ind.)
+Party	Partido Nuevo Progresista	PNP
+Party	Partido Popular Democrático	PPD
+Party	Partido Independentista Puertorriqueño	PIP
+Party	Movimiento Victoria Ciudadana	MVC
+Party	Proyecto Dignidad	PD
+Party	Candidato Independiente	Ind.
+ReportingUnit	Puerto-Rico;PR House District 1	Puerto-Rico;PR House District 1
+ReportingUnit	Puerto-Rico;PR House District 2	Puerto-Rico;PR House District 2
+ReportingUnit	Puerto-Rico;PR House District 3	Puerto-Rico;PR House District 3
+ReportingUnit	Puerto-Rico;PR House District 4	Puerto-Rico;PR House District 4
+ReportingUnit	Puerto-Rico;PR House District 5	Puerto-Rico;PR House District 5
+ReportingUnit	Puerto-Rico;PR House District 6	Puerto-Rico;PR House District 6
+ReportingUnit	Puerto-Rico;PR House District 7	Puerto-Rico;PR House District 7
+ReportingUnit	Puerto-Rico;PR House District 8	Puerto-Rico;PR House District 8
+ReportingUnit	Puerto-Rico;PR House District 9	Puerto-Rico;PR House District 9
+ReportingUnit	Puerto-Rico;PR House District 10	Puerto-Rico;PR House District 10
+ReportingUnit	Puerto-Rico;PR House District 11	Puerto-Rico;PR House District 11
+ReportingUnit	Puerto-Rico;PR House District 12	Puerto-Rico;PR House District 12
+ReportingUnit	Puerto-Rico;PR House District 13	Puerto-Rico;PR House District 13
+ReportingUnit	Puerto-Rico;PR House District 14	Puerto-Rico;PR House District 14
+ReportingUnit	Puerto-Rico;PR House District 15	Puerto-Rico;PR House District 15
+ReportingUnit	Puerto-Rico;PR House District 16	Puerto-Rico;PR House District 16
+ReportingUnit	Puerto-Rico;PR House District 17	Puerto-Rico;PR House District 17
+ReportingUnit	Puerto-Rico;PR House District 18	Puerto-Rico;PR House District 18
+ReportingUnit	Puerto-Rico;PR House District 19	Puerto-Rico;PR House District 19
+ReportingUnit	Puerto-Rico;PR House District 20	Puerto-Rico;PR House District 20
+ReportingUnit	Puerto-Rico;PR House District 21	Puerto-Rico;PR House District 21
+ReportingUnit	Puerto-Rico;PR House District 22	Puerto-Rico;PR House District 22
+ReportingUnit	Puerto-Rico;PR House District 23	Puerto-Rico;PR House District 23
+ReportingUnit	Puerto-Rico;PR House District 24	Puerto-Rico;PR House District 24
+ReportingUnit	Puerto-Rico;PR House District 25	Puerto-Rico;PR House District 25
+ReportingUnit	Puerto-Rico;PR House District 26	Puerto-Rico;PR House District 26
+ReportingUnit	Puerto-Rico;PR House District 27	Puerto-Rico;PR House District 27
+ReportingUnit	Puerto-Rico;PR House District 28	Puerto-Rico;PR House District 28
+ReportingUnit	Puerto-Rico;PR House District 29	Puerto-Rico;PR House District 29
+ReportingUnit	Puerto-Rico;PR House District 30	Puerto-Rico;PR House District 30
+ReportingUnit	Puerto-Rico;PR House District 31	Puerto-Rico;PR House District 31
+ReportingUnit	Puerto-Rico;PR House District 32	Puerto-Rico;PR House District 32
+ReportingUnit	Puerto-Rico;PR House District 33	Puerto-Rico;PR House District 33
+ReportingUnit	Puerto-Rico;PR House District 34	Puerto-Rico;PR House District 34
+ReportingUnit	Puerto-Rico;PR House District 35	Puerto-Rico;PR House District 35
+ReportingUnit	Puerto-Rico;PR House District 36	Puerto-Rico;PR House District 36
+ReportingUnit	Puerto-Rico;PR House District 37	Puerto-Rico;PR House District 37
+ReportingUnit	Puerto-Rico;PR House District 38	Puerto-Rico;PR House District 38
+ReportingUnit	Puerto-Rico;PR House District 39	Puerto-Rico;PR House District 39
+ReportingUnit	Puerto-Rico;PR House District 40	Puerto-Rico;PR House District 40
+ReportingUnit	Puerto-Rico;PR Senate District 1	Puerto-Rico;PR Senate District 1
+ReportingUnit	Puerto-Rico;PR Senate District 2	Puerto-Rico;PR Senate District 2
+ReportingUnit	Puerto-Rico;PR Senate District 3	Puerto-Rico;PR Senate District 3
+ReportingUnit	Puerto-Rico;PR Senate District 4	Puerto-Rico;PR Senate District 4
+ReportingUnit	Puerto-Rico;PR Senate District 5	Puerto-Rico;PR Senate District 5
+ReportingUnit	Puerto-Rico;PR Senate District 6	Puerto-Rico;PR Senate District 6
+ReportingUnit	Puerto-Rico;PR Senate District 7	Puerto-Rico;PR Senate District 7
+ReportingUnit	Puerto-Rico;PR Senate District 8	Puerto-Rico;PR Senate District 8
+ReportingUnit	Puerto-Rico;PR Senate District 1	PR Senate District 1
+ReportingUnit	Puerto-Rico;PR Senate District 2	PR Senate District 2
+ReportingUnit	Puerto-Rico;PR Senate District 3	PR Senate District 3
+ReportingUnit	Puerto-Rico;PR Senate District 4	PR Senate District 4
+ReportingUnit	Puerto-Rico;PR Senate District 5	PR Senate District 5
+ReportingUnit	Puerto-Rico;PR Senate District 6	PR Senate District 6
+ReportingUnit	Puerto-Rico;PR Senate District 7	PR Senate District 7
+ReportingUnit	Puerto-Rico;PR Senate District 8	PR Senate District 8
+ReportingUnit	Puerto-Rico;US House PR District 1	Puerto-Rico;US House PR District 1
+ReportingUnit	Puerto-Rico	Puerto-Rico
+ReportingUnit	Puerto-Rico;Adjuntas Municipality	Adjuntas
+ReportingUnit	Puerto-Rico;Aguada Municipality	Aguada
+ReportingUnit	Puerto-Rico;Aguadilla Municipality	Aguadilla
+ReportingUnit	Puerto-Rico;Aguas Buenas Municipality	Aguas Buenas
+ReportingUnit	Puerto-Rico;Aibonito Municipality	Aibonito
+ReportingUnit	Puerto-Rico;Añasco Municipality	Añasco
+ReportingUnit	Puerto-Rico;Arecibo Municipality	Arecibo
+ReportingUnit	Puerto-Rico;Arroyo Municipality	Arroyo
+ReportingUnit	Puerto-Rico;Barceloneta Municipality	Barceloneta
+ReportingUnit	Puerto-Rico;Barranquitas Municipality	Barranquitas
+ReportingUnit	Puerto-Rico;Bayamón Municipality	Bayamón
+ReportingUnit	Puerto-Rico;Cabo Rojo Municipality	Cabo Rojo
+ReportingUnit	Puerto-Rico;Caguas Municipality	Caguas
+ReportingUnit	Puerto-Rico;Camuy Municipality	Camuy
+ReportingUnit	Puerto-Rico;Canóvanas Municipality	Canóvanas
+ReportingUnit	Puerto-Rico;Carolina Municipality	Carolina
+ReportingUnit	Puerto-Rico;Cataño Municipality	Cataño
+ReportingUnit	Puerto-Rico;Cayey Municipality	Cayey
+ReportingUnit	Puerto-Rico;Ceiba Municipality	Ceiba
+ReportingUnit	Puerto-Rico;Ciales Municipality	Ciales
+ReportingUnit	Puerto-Rico;Cidra Municipality	Cidra
+ReportingUnit	Puerto-Rico;Coamo Municipality	Coamo
+ReportingUnit	Puerto-Rico;Comerío Municipality	Comerío
+ReportingUnit	Puerto-Rico;Corozal Municipality	Corozal
+ReportingUnit	Puerto-Rico;Culebra Municipality	Culebra
+ReportingUnit	Puerto-Rico;Dorado Municipality	Dorado
+ReportingUnit	Puerto-Rico;Fajardo Municipality	Fajardo
+ReportingUnit	Puerto-Rico;Florida Municipality	Florida
+ReportingUnit	Puerto-Rico;Guánica Municipality	Guánica
+ReportingUnit	Puerto-Rico;Guayama Municipality	Guayama
+ReportingUnit	Puerto-Rico;Guayanilla Municipality	Guayanilla
+ReportingUnit	Puerto-Rico;Guaynabo Municipality	Guaynabo
+ReportingUnit	Puerto-Rico;Gurabo Municipality	Gurabo
+ReportingUnit	Puerto-Rico;Hatillo Municipality	Hatillo
+ReportingUnit	Puerto-Rico;Hormigueros Municipality	Hormigueros
+ReportingUnit	Puerto-Rico;Humacao Municipality	Humacao
+ReportingUnit	Puerto-Rico;Isabela Municipality	Isabela
+ReportingUnit	Puerto-Rico;Jayuya Municipality	Jayuya
+ReportingUnit	Puerto-Rico;Juana Díaz Municipality	Juana Díaz
+ReportingUnit	Puerto-Rico;Juncos Municipality	Juncos
+ReportingUnit	Puerto-Rico;Lajas Municipality	Lajas
+ReportingUnit	Puerto-Rico;Lares Municipality	Lares
+ReportingUnit	Puerto-Rico;Las Marías Municipality	Las Marías
+ReportingUnit	Puerto-Rico;Las Piedras Municipality	Las Piedras
+ReportingUnit	Puerto-Rico;Loíza Municipality	Loíza
+ReportingUnit	Puerto-Rico;Luquillo Municipality	Luquillo
+ReportingUnit	Puerto-Rico;Manatí Municipality	Manatí
+ReportingUnit	Puerto-Rico;Maricao Municipality	Maricao
+ReportingUnit	Puerto-Rico;Maunabo Municipality	Maunabo
+ReportingUnit	Puerto-Rico;Mayagüez Municipality	Mayagüez
+ReportingUnit	Puerto-Rico;Moca Municipality	Moca
+ReportingUnit	Puerto-Rico;Morovis Municipality	Morovis
+ReportingUnit	Puerto-Rico;Naguabo Municipality	Naguabo
+ReportingUnit	Puerto-Rico;Naranjito Municipality	Naranjito
+ReportingUnit	Puerto-Rico;Orocovis Municipality	Orocovis
+ReportingUnit	Puerto-Rico;Patillas Municipality	Patillas
+ReportingUnit	Puerto-Rico;Peñuelas Municipality	Peñuelas
+ReportingUnit	Puerto-Rico;Ponce Municipality	Ponce
+ReportingUnit	Puerto-Rico;Quebradillas Municipality	Quebradillas
+ReportingUnit	Puerto-Rico;Rincón Municipality	Rincón
+ReportingUnit	Puerto-Rico;Río Grande Municipality	Río Grande
+ReportingUnit	Puerto-Rico;Sabana Grande Municipality	Sabana Grande
+ReportingUnit	Puerto-Rico;Salinas Municipality	Salinas
+ReportingUnit	Puerto-Rico;San Germán Municipality	San Germán
+ReportingUnit	Puerto-Rico;San Juan Municipality	San Juan
+ReportingUnit	Puerto-Rico;San Lorenzo Municipality	San Lorenzo
+ReportingUnit	Puerto-Rico;San Sebastián Municipality	San Sebastián
+ReportingUnit	Puerto-Rico;Santa Isabel Municipality	Santa Isabel
+ReportingUnit	Puerto-Rico;Toa Alta Municipality	Toa Alta
+ReportingUnit	Puerto-Rico;Toa Baja Municipality	Toa Baja
+ReportingUnit	Puerto-Rico;Trujillo Alto Municipality	Trujillo Alto
+ReportingUnit	Puerto-Rico;Utuado Municipality	Utuado
+ReportingUnit	Puerto-Rico;Vega Alta Municipality	Vega Alta
+ReportingUnit	Puerto-Rico;Vega Baja Municipality	Vega Baja
+ReportingUnit	Puerto-Rico;Vieques Municipality	Vieques
+ReportingUnit	Puerto-Rico;Villalba Municipality	Villalba
+ReportingUnit	Puerto-Rico;Yabucoa Municipality	Yabucoa
+ReportingUnit	Puerto-Rico;Yauco Municipality	Yauco
+Candidate	Pedro Pierluisi	Pedro Pierluisi
+Candidate	Carlos 'Charlie' Delgado Altieri	Carlos 'Charlie' Delgado Altieri
+Candidate	Alexandra Lúgaro	Alexandra Lúgaro
+Candidate	Juan Dalmau Ramírez	Juan Dalmau Ramírez
+Candidate	César Augusto Vázquez Muñiz	César Augusto Vázquez Muñiz
+Candidate	Eliezer Molina Pérez	Eliezer Molina Pérez
+Candidate	Jenniffer González Colón	Jenniffer González Colón
+Candidate	Aníbal Acevedo Vilá	Aníbal Acevedo Vilá
+Candidate	Zayira Jordán Conde	Zayira Jordán Conde
+Candidate	Ada Norah Henriquez	Ada Norah Henriquez
+Candidate	Luis Roberto Piñero	Luis Roberto Piñero
+Candidate	Eddie Charbonier Chinea	Eddie Charbonier Chinea
+Candidate	Rosario (Tata) Ortiz	Rosario (Tata) Ortiz
+Candidate	Carmen H. Santiago Negrón	Carmen H. Santiago Negrón
+Candidate	Alberto A. Derkes De León	Alberto A. Derkes De León
+Candidate	Ricardo Chino Rey Ocasio	Ricardo Chino Rey Ocasio
+Candidate	Luis Raúl Torres Cruz	Luis Raúl Torres Cruz
+Candidate	Darío W. Ortiz González	Darío W. Ortiz González
+Candidate	Fernando Villaespesa Zalduondo	Fernando Villaespesa Zalduondo
+Candidate	Julio Ángel Vargas Cruz	Julio Ángel Vargas Cruz
+Candidate	Juan Oscar Morales	Juan Oscar Morales
+Candidate	José (Pepe) Ortiz	José (Pepe) Ortiz
+Candidate	Ángel L. Alicea Montañez (Luigi)	Ángel L. Alicea Montañez (Luigi)
+Candidate	Eva Prados Rodríguez	Eva Prados Rodríguez
+Candidate	Víctor Parés	Víctor Parés
+Candidate	Manuel Calderón Cerame	Manuel Calderón Cerame
+Candidate	Marian Ortiz Vargas	Marian Ortiz Vargas
+Candidate	Rafaela Esteves Agramonte	Rafaela Esteves Agramonte
+Candidate	Jorge (Georgie) Navarro	Jorge (Georgie) Navarro
+Candidate	Roberto Zayas	Roberto Zayas
+Candidate	Alfonso Questell Ortiz	Alfonso Questell Ortiz
+Candidate	Carlos Ávila Pacheco	Carlos Ávila Pacheco
+Candidate	Ricardo Rodríguez Quiles	Ricardo Rodríguez Quiles
+Candidate	Antonio (Tony) Soto	Antonio (Tony) Soto
+Candidate	Noemí Andújar	Noemí Andújar
+Candidate	Jaime Rodríguez Rivera	Jaime Rodríguez Rivera
+Candidate	Alex Rodríguez Rodríguez	Alex Rodríguez Rodríguez
+Candidate	Luis (Jr) Pérez Ortiz	Luis (Jr) Pérez Ortiz
+Candidate	Janice (Nanny) Nieves	Janice (Nanny) Nieves
+Candidate	Mario Maldonado Ramírez	Mario Maldonado Ramírez
+Candidate	Carmen J (La Reve) Pagán Cabrera	Carmen J (La Reve) Pagán Cabrera
+Candidate	Yashira Lebrón Rodríguez	Yashira Lebrón Rodríguez
+Candidate	Eric Bonilla Latoni	Eric Bonilla Latoni
+Candidate	Jesús M. Dávila Molina	Jesús M. Dávila Molina
+Candidate	Moraima Rodríguez Vélez	Moraima Rodríguez Vélez
+Candidate	Paul Rodríguez González	Paul Rodríguez González
+Candidate	Yazzer Morales Díaz	Yazzer Morales Díaz
+Candidate	Noelia Ramos Vázquez	Noelia Ramos Vázquez
+Candidate	Iván A. Sánchez Almodóvar	Iván A. Sánchez Almodóvar
+Candidate	Edna Vázquez Díaz	Edna Vázquez Díaz
+Candidate	Pedro J (Pellé) Santiago Guzmán	Pedro J (Pellé) Santiago Guzmán
+Candidate	Deborah Soto Arroyo	Deborah Soto Arroyo
+Candidate	Roberto Jusino Serrano	Roberto Jusino Serrano
+Candidate	Isabelo (Chabelo) Molina	Isabelo (Chabelo) Molina
+Candidate	Rafael (Tatito) Hernández	Rafael (Tatito) Hernández
+Candidate	Guillermo Martínez Rivera	Guillermo Martínez Rivera
+Candidate	Lousif Antonio Nevárez De Gracia	Lousif Antonio Nevárez De Gracia
+Candidate	Javier Parés	Javier Parés
+Candidate	Edgardo Feliciano	Edgardo Feliciano
+Candidate	Ángel R. (Rafita) Santana	Ángel R. (Rafita) Santana
+Candidate	Edwin (Win) Marrero Santiago	Edwin (Win) Marrero Santiago
+Candidate	Gabriel F Rodríguez Aguiló	Gabriel F Rodríguez Aguiló
+Candidate	Brian Casais García	Brian Casais García
+Candidate	Yahaira Velázquez Correa	Yahaira Velázquez Correa
+Candidate	José F. Cintrón	José F. Cintrón
+Candidate	José (Memo) González	José (Memo) González
+Candidate	Juan Torres	Juan Torres
+Candidate	Héctor Guillermo Díaz	Héctor Guillermo Díaz
+Candidate	Ismael Rodríguez Medina	Ismael Rodríguez Medina
+Candidate	Edwin Mieles Richard	Edwin Mieles Richard
+Candidate	Joel Franqui Atiles	Joel Franqui Atiles
+Candidate	Armando Legarreta Raíces	Armando Legarreta Raíces
+Candidate	Fernando Babilonia Aguilar	Fernando Babilonia Aguilar
+Candidate	Félix Lassalle Toro	Félix Lassalle Toro
+Candidate	Eladio (Layito) Cardona	Eladio (Layito) Cardona
+Candidate	Pedro Juan Méndez Acosta	Pedro Juan Méndez Acosta
+Candidate	Wilson Román	Wilson Román
+Candidate	David Villanueva	David Villanueva
+Candidate	Héctor Hiram Santaella Buitrago	Héctor Hiram Santaella Buitrago
+Candidate	Santiago Concepción Cajigas	Santiago Concepción Cajigas
+Candidate	José (Che) Pérez Cordero	José (Che) Pérez Cordero
+Candidate	Jessie Cortés Ramos	Jessie Cortés Ramos
+Candidate	Antonio Vargas Morales	Antonio Vargas Morales
+Candidate	Pedro G. Acevedo Vargas	Pedro G. Acevedo Vargas
+Candidate	Maricarmen Mas Rodríguez	Maricarmen Mas Rodríguez
+Candidate	Jocelyne M. Rodríguez Negrón	Jocelyne M. Rodríguez Negrón
+Candidate	José Javier Muñiz Quiñones	José Javier Muñiz Quiñones
+Candidate	Yadira Vázquez Rivera	Yadira Vázquez Rivera
+Candidate	Emilio Carlo	Emilio Carlo
+Candidate	Kebin Andrés Maldonado Martiz	Kebin Andrés Maldonado Martiz
+Candidate	Milagros Martínez Pérez	Milagros Martínez Pérez
+Candidate	Noé Ramírez Ramírez	Noé Ramírez Ramírez
+Candidate	Yamilet González Alicea	Yamilet González Alicea
+Candidate	Lydia Méndez	Lydia Méndez
+Candidate	Jaime Camacho Román	Jaime Camacho Román
+Candidate	Andrés Acosta Mercado	Andrés Acosta Mercado
+Candidate	Abid Quiñones	Abid Quiñones
+Candidate	Jorge Alfredo Rivera Segarra	Jorge Alfredo Rivera Segarra
+Candidate	Edia Quiñones	Edia Quiñones
+Candidate	Víctor Torres	Víctor Torres
+Candidate	José (Cheito) Rivera Madera	José (Cheito) Rivera Madera
+Candidate	Jimmy Borrero	Jimmy Borrero
+Candidate	Saimé Figueroa Rodríguez	Saimé Figueroa Rodríguez
+Candidate	José A. Banchs Alemán	José A. Banchs Alemán
+Candidate	Ángel (Tito) Fourquet	Ángel (Tito) Fourquet
+Candidate	Carlos A. Reyes Alonso	Carlos A. Reyes Alonso
+Candidate	Reinaldo Colón Vega	Reinaldo Colón Vega
+Candidate	Luis (Quiquin) Salinas	Luis (Quiquin) Salinas
+Candidate	Jacqueline (Jackie) Rodríguez	Jacqueline (Jackie) Rodríguez
+Candidate	Domingo Torres García	Domingo Torres García
+Candidate	Gerardo Cruz López	Gerardo Cruz López
+Candidate	José Alberto Hernández Pagán	José Alberto Hernández Pagán
+Candidate	Urayoán Hernández Alvarado	Urayoán Hernández Alvarado
+Candidate	Orlando Aponte Rosario	Orlando Aponte Rosario
+Candidate	Calixto Negrón Aponte	Calixto Negrón Aponte
+Candidate	Manuel O. Claudio Rodríguez	Manuel O. Claudio Rodríguez
+Candidate	Estrella Martínez Soto	Estrella Martínez Soto
+Candidate	Rafael Alejandro Rosario Rivera	Rafael Alejandro Rosario Rivera
+Candidate	Rafael June Rivera	Rafael June Rivera
+Candidate	Juan José Santiago Nieves	Juan José Santiago Nieves
+Candidate	Roy Ayala Pérez	Roy Ayala Pérez
+Candidate	José Daniel (Chapa) Rodríguez	José Daniel (Chapa) Rodríguez
+Candidate	Lisandro (Saso) Morales Vázquez	Lisandro (Saso) Morales Vázquez
+Candidate	Aníbal Díaz Collazo	Aníbal Díaz Collazo
+Candidate	Fernando Maldonado Morales	Fernando Maldonado Morales
+Candidate	Héctor Torres	Héctor Torres
+Candidate	Luis Ramón (Narmito) Ortiz Lugo	Luis Ramón (Narmito) Ortiz Lugo
+Candidate	Eduardo Soto	Eduardo Soto
+Candidate	Vimarie Peña Dávila	Vimarie Peña Dávila
+Candidate	Jesús Santa Rodríguez	Jesús Santa Rodríguez
+Candidate	Luis Domenech Sepúlveda	Luis Domenech Sepúlveda
+Candidate	César Augusto García Martínez	César Augusto García Martínez
+Candidate	Raúl Iván Colón Rodríguez	Raúl Iván Colón Rodríguez
+Candidate	José (Papo) Mercado	José (Papo) Mercado
+Candidate	José (Conny) Varela	José (Conny) Varela
+Candidate	Jesús (Manny) Roque	Jesús (Manny) Roque
+Candidate	Maritza Maymí Hernández	Maritza Maymí Hernández
+Candidate	Ángel Peña Jr.	Ángel Peña Jr.
+Candidate	Luis Collazo Negrón	Luis Collazo Negrón
+Candidate	Gloria E. Santana Velázquez	Gloria E. Santana Velázquez
+Candidate	Félix (Johnny) Figueroa	Félix (Johnny) Figueroa
+Candidate	Ramón Luis Cruz Burgos	Ramón Luis Cruz Burgos
+Candidate	Carlos M. Rosado Dávila	Carlos M. Rosado Dávila
+Candidate	Alejandro Martínez Burgos	Alejandro Martínez Burgos
+Candidate	Sol Higgins	Sol Higgins
+Candidate	Ricardo Díaz Maldonado	Ricardo Díaz Maldonado
+Candidate	Carlos (Johnny) Méndez	Carlos (Johnny) Méndez
+Candidate	Juan (Tito) Gómez	Juan (Tito) Gómez
+Candidate	Lydia A. Ramos Iraldo	Lydia A. Ramos Iraldo
+Candidate	Ángel Bulerín	Ángel Bulerín
+Candidate	Ángel Osorio Vélez	Ángel Osorio Vélez
+Candidate	Reginald M. Carrasquillo	Reginald M. Carrasquillo
+Candidate	Wanda Del Valle Correa	Wanda Del Valle Correa
+Candidate	Luis Daniel Rivera Filomeno	Luis Daniel Rivera Filomeno
+Candidate	Luz (Lucy) Álvarez Rodríguez	Luz (Lucy) Álvarez Rodríguez
+Candidate	Daniel Lugo Mercado	Daniel Lugo Mercado
+Candidate	Luis Alberto Cortés	Luis Alberto Cortés
+Candidate	Roberto Rivera Ruiz De Porras	Roberto Rivera Ruiz De Porras
+Candidate	Luis A. Cruz Batista	Luis A. Cruz Batista
+Candidate	Manuel Alonso López	Manuel Alonso López
+Candidate	Sergio E. Estevez	Sergio E. Estevez
+Candidate	Ángel Matos García	Ángel Matos García
+Candidate	María I. Vargas Cáceres	María I. Vargas Cáceres
+Candidate	Tiffany Rohena	Tiffany Rohena
+Candidate	Eilleen V Ramos Rivera	Eilleen V Ramos Rivera
+Candidate	Samuel (Sammy) Pagán Cuadrado	Samuel (Sammy) Pagán Cuadrado
+Candidate	Emmanuel Huertas	Emmanuel Huertas
+Candidate	Henry Neumann	Henry Neumann
+Candidate	Nitza Morán	Nitza Morán
+Candidate	Rosa Seguí	Rosa Seguí
+Candidate	Jesús Manuel Laboy	Jesús Manuel Laboy
+Candidate	Claribel Martínez Marmolejos	Claribel Martínez Marmolejos
+Candidate	Marilú Guzmán	Marilú Guzmán
+Candidate	Adriana Gutiérrez Colón	Adriana Gutiérrez Colón
+Candidate	Andrés González Berdecía	Andrés González Berdecía
+Candidate	Carmelo Ríos	Carmelo Ríos
+Candidate	Migdalia Padilla Alvelo	Migdalia Padilla Alvelo
+Candidate	Magdiel Colón	Magdiel Colón
+Candidate	Carlos Roberto Hyland	Carlos Roberto Hyland
+Candidate	Myrna Conty	Myrna Conty
+Candidate	Ruthie Arroyo	Ruthie Arroyo
+Candidate	Hugo Rodríguez Díaz	Hugo Rodríguez Díaz
+Candidate	Yelitza Lucena Quiles	Yelitza Lucena Quiles
+Candidate	Elizabeth Rosa Vélez	Elizabeth Rosa Vélez
+Candidate	Rubén Soto Rivera	Rubén Soto Rivera
+Candidate	Ángel 'Chayanne' Martínez	Ángel 'Chayanne' Martínez
+Candidate	José 'Joito' Peréz Rosa	José 'Joito' Peréz Rosa
+Candidate	Yamira Colón Rosa	Yamira Colón Rosa
+Candidate	Annette Y Jiménez Collet	Annette Y Jiménez Collet
+Candidate	Arnaldo L López Rosado	Arnaldo L López Rosado
+Candidate	Luis Enrique Romero Nieves	Luis Enrique Romero Nieves
+Candidate	Roberto Rivera Olivencia	Roberto Rivera Olivencia
+Candidate	Ada García Montes	Ada García Montes
+Candidate	Migdalia González	Migdalia González
+Candidate	Marcos Fabián González	Marcos Fabián González
+Candidate	Luis Daniel Muñiz	Luis Daniel Muñiz
+Candidate	Marisol Vega Muñiz	Marisol Vega Muñiz
+Candidate	Luis Antonio Ferrer Rivera	Luis Antonio Ferrer Rivera
+Candidate	Luis Ibrahyn Casiano Rodríguez	Luis Ibrahyn Casiano Rodríguez
+Candidate	Juan R. Mari Pesquera	Juan R. Mari Pesquera
+Candidate	Marially González	Marially González
+Candidate	Ramón 'Ramoncito' Ruiz	Ramón 'Ramoncito' Ruiz
+Candidate	Luis Berdiel	Luis Berdiel
+Candidate	Nelson Cruz 'El Vigilante'	Nelson Cruz 'El Vigilante'
+Candidate	Elaine M. Arrufat Berastaín	Elaine M. Arrufat Berastaín
+Candidate	Daniel 'Danny' Ortiz	Daniel 'Danny' Ortiz
+Candidate	Maikel González Alvarado	Maikel González Alvarado
+Candidate	Luis Yordán Frau	Luis Yordán Frau
+Candidate	Ángel Comas	Ángel Comas
+Candidate	José 'Maché' Ortiz	José 'Maché' Ortiz
+Candidate	Gretchen Hau	Gretchen Hau
+Candidate	Albert Torres Berrios	Albert Torres Berrios
+Candidate	Axel 'Chino' Roque	Axel 'Chino' Roque
+Candidate	Wanda Cruz	Wanda Cruz
+Candidate	Tomás Flores Torres	Tomás Flores Torres
+Candidate	Víctor Alvarado Guzmán	Víctor Alvarado Guzmán
+Candidate	Justo Echevarría	Justo Echevarría
+Candidate	Rosamar Trujillo Plumey	Rosamar Trujillo Plumey
+Candidate	Hill Román Abreu	Hill Román Abreu
+Candidate	'Wandy' Wanda Soto	'Wandy' Wanda Soto
+Candidate	Miguel Laureano	Miguel Laureano
+Candidate	Mayra Vicil Bernier	Mayra Vicil Bernier
+Candidate	Xander Torres	Xander Torres
+Candidate	Edda I. López Serrano	Edda I. López Serrano
+Candidate	Juan 'Cholo' Lebrón López	Juan 'Cholo' Lebrón López
+Candidate	Javier Aponte Dalmau	Javier Aponte Dalmau
+Candidate	Marissa 'Marissita' Jiménez	Marissa 'Marissita' Jiménez
+Candidate	Christian Rodríguez	Christian Rodríguez
+Candidate	Nayda Venegas Brown	Nayda Venegas Brown
+Candidate	Alice G Pérez Fernández	Alice G Pérez Fernández
+Candidate	Reginald 'Reggie' Smith Pizarro	Reginald 'Reggie' Smith Pizarro
+Candidate	Janise Santiago	Janise Santiago
+Candidate	Marisol Quiñones Algarín	Marisol Quiñones Algarín
+Candidate	Wanda N. Alemán Alemán	Wanda N. Alemán Alemán

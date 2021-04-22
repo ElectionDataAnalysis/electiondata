@@ -16,10 +16,8 @@ rows_to_skip=
 #### for flat_text file type:
 flat_text_delimiter=
 #### if file type is flat_text or excel and count_columns_specified is 'by_name'
-#### (start numbering from first unskipped row):
 count_field_name_row=
 #### if file type is flat_text or excel, not all rows are data, and there are noncount columns:
-#### (start numbering from first unskipped row):
 noncount_header_row=
 
 ################################################

@@ -1,0 +1,23 @@
+[format]
+file_type=excel
+count_location=by_number:1,3,5,7,9,11
+
+encoding=iso-8859-1
+
+noncount_header_row=0
+constant_over_file=CountItemType
+
+[munge formulas]
+ReportingUnit=Puerto-Rico;<sheet_name> <House District>
+CandidateContest=<sheet_name> <House District>
+Candidate=<Candidate from House District,count_header_0>
+Party=<count_header_0>
+
+[ignore]
+ReportingUnit=Total,Puerto Rico
+
+[House District,count_header_0 lookup]
+source_file=Puerto-Rico/2020_General_PR_District_Representatives_Candidates.xlsx
+lookup_id=House District,Party
+file_type=excel
+noncount_header_row=0

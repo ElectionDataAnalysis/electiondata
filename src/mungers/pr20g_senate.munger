@@ -1,0 +1,18 @@
+[format]
+file_type=excel
+count_location=by_number:2
+
+encoding=iso-8859-1
+noncount_header_row=0
+constant_over_file=CountItemType
+thousands_separator=,
+
+[munge formulas]
+CandidateContest=<sheet_name>
+ReportingUnit=<sheet_name>
+
+Candidate={<Candidate>,^([^\(\)]*)(?:(?:\(.*\)))?$}
+Party={<Candidate>,^(?:[^\(\)]*)((?:\(.*\))?)$}
+
+[ignore]
+Candidate=Valid,Others,Overvotes,Undervotes,Blank,Unadjudicated 
