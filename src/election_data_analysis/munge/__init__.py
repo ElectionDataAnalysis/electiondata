@@ -6,7 +6,7 @@ from election_data_analysis import juris_and_munger as jm
 from election_data_analysis import special_formats as sf
 import pandas as pd
 from pandas.api.types import is_numeric_dtype
-from typing import Optional, List, Dict, Any, Set
+from typing import Optional, List, Dict, Any
 import re
 import os
 from sqlalchemy.orm.session import Session
@@ -61,7 +61,7 @@ string_location_reqs: Dict[str, List[str]] = {
     "in_field_values": [],
     "in_count_headers": ["count_header_row_numbers"],
     "constant_over_file": [],
-    "constant_over_sheet": ["constant_over_sheet"],
+    "constant_over_sheet_or_block": ["constant_over_sheet_or_block"],
 }
 
 all_munge_elements = [
@@ -1393,7 +1393,7 @@ def get_and_check_munger_params(
     params, new_err = jm.recast_options(raw_params, data_types, munger_name)
 
     # additional parameters
-    # collect necessary row number (for constant_over_sheet items) into rows_with_constants
+    # collect necessary row number (for constant_over_sheet_or_block items) into rows_with_constants
     params["rows_with_constants"] = list()
 
     # Check munger values
@@ -1535,7 +1535,7 @@ def get_and_check_munger_params(
         mf_by_type = {
             "in_count_headers": set(),
             "in_field_values": set(),
-            "constant_over_sheet": set(),
+            "constant_over_sheet_or_block": set(),
         }
         for mf in params["munge_fields"]:
             if mf[:13] == "count_header_":
@@ -1547,11 +1547,11 @@ def get_and_check_munger_params(
             elif mf[:4] == "row_":
                 try:
                     params["rows_with_constants"].append(int(mf[4:]))
-                    mf_by_type["constant_over_sheet"].update({mf})
+                    mf_by_type["constant_over_sheet_or_block"].update({mf})
                 except ValueError:
                     mf_by_type["in_field_values"].update({mf})
             elif mf == "sheet_name":
-                mf_by_type["constant_over_sheet"].update({mf})
+                mf_by_type["constant_over_sheet_or_block"].update({mf})
             else:
                 mf_by_type["in_field_values"].update({mf})
 
@@ -1738,7 +1738,7 @@ def to_standard_count_frame(
     err = None
     # initialize error, count_cols dictionaries
     error_by_df: Dict[int,Optional[dict]] = dict()
-    cc_by_name: Dict[int,List[str]] = dict()
+    cc_by_name: Dict[int, List[str]] = dict()
 
     # get lists of string fields expected in raw file
     try:
@@ -1757,7 +1757,7 @@ def to_standard_count_frame(
     # read count dataframe(s) and constant-over-sheet elements from rows from file
     # # NB: sheet names are the keys
     try:
-        raw_dict, row_constants, err = ui.read_single_datafile(file_path, p, munger_path, err)
+        raw_dict, row_constants_by_sheet, err = ui.read_single_datafile(file_path, p, munger_path, err)
 
         if len(raw_dict) == 0:  # no dfs at all returned
             err = ui.add_new_error(
@@ -1790,8 +1790,9 @@ def to_standard_count_frame(
         if p["multi_block"] == "yes":
             try:
                 # extract blocks as dataframes with generic headers and all rows treated as data
-                df_list, new_err = extract_blocks(
+                df_list, row_constants, new_err = extract_blocks(
                     raw_dict[sheet],
+                    p["rows_with_constants"],
                     munger_name,
                     file_name,
                     sheet,
@@ -1801,7 +1802,6 @@ def to_standard_count_frame(
                     err = ui.consolidate_errors([err, new_err])
                     if ui.fatal_error(new_err):
                         continue
-
             except Exception as exc:
                 error_by_sheet[sheet] = ui.add_new_error(
                     None,
@@ -1810,6 +1810,7 @@ def to_standard_count_frame(
                     f"Error extracting blocks from sheet {sheet} in {file_name}:\n {exc}",
                 )
                 continue  # goes to next k in loop
+
             try:
                 # correct column headers
                 p_temp = p.copy()
@@ -1821,28 +1822,39 @@ def to_standard_count_frame(
                     header_list = [header_int_or_list]
                 else:
                     header_list = header_int_or_list
-                for n in range(len(df_list)):
 
+                # loop over extracted blocks
+                for n in range(len(df_list)):
                     # get count columns by name
                     cc_by_name[n], error_by_df[n] = get_count_cols_by_name(
                         df_list[n],p,munger_name, use_rows=header_list
                     )
                     df_list[n] = ui.set_and_fill_headers(df_list[n], header_list, drop_empties=True)
 
+                    # add columns for constant-over-block items from rows
+                    # need to correct row_constants to correspond to this block
+                    for row in p["rows_with_constants"]:
+                        df_list[n] = add_constant_column(df_list[n],f"row_{row}",row_constants[n][row])
             except Exception as exc:
                 error_by_sheet[sheet] = ui.add_new_error(
                     None,
                     "system",
                     f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
-                    f"Error correcting column headers from sheet {sheet} in {file_name}:\n {exc}",
+                    f"Error correcting column headers or getting constant info from blocks from sheet {sheet} in {file_name}:\n {exc}",
                 )
                 continue  # goes to next k in loop
 
+        # if not multi-block
         else:
             df_list = [raw_dict[sheet]]
             cc_by_name[0], error_by_df[0] = get_count_cols_by_name(
                         df_list[0], p, munger_name
                     )
+            # add column for info read from rows constant over sheet
+            for row in p["rows_with_constants"]:
+                df_list[0] = add_constant_column(
+                    df_list[0],f"row_{row}",row_constants_by_sheet[sheet][row]
+                )
 
         # loop through dataframes in list
         standard[sheet] = pd.DataFrame()
@@ -1877,12 +1889,25 @@ def to_standard_count_frame(
                     )
                     continue  # goes to next dataframe in list
 
+            # rename any Unnamed: i_level_j to column_i if noncount header row is j
+            if p["noncount_header_row"]:
+                unnamed_pattern = r"^Unnamed: (\d+)_level_(\d+)$"
+                for c in working.columns:
+                    numbers = re.findall(unnamed_pattern,c)
+                    # if c is of the form 'Unnamed: _level_j' where i is any integer and j is the noncount_header_row
+                    if numbers:
+                        try:
+                            # replace with column_i
+                            if int(numbers[0][1]) == p["noncount_header_row"]:
+                                working.columns = [
+                                    f"column_{numbers[0][0]}" if x == c else x for x in working.columns
+                                ]
+                        except ValueError:
+                            # if anything crucial is not actually an integer, do nothing
+                            pass
+
             # add sheet_name column
             working = add_constant_column(working, "sheet_name", sheet)
-
-            # add columns for any constants-over-sheet read from rows
-            for row in p["rows_with_constants"]:
-                working = add_constant_column(working, f"row_{row}", row_constants[sheet][row])
 
             # keep only necessary columns
             try:
@@ -1936,23 +1961,6 @@ def to_standard_count_frame(
 
     # if even one sheet was not fatally flawed
     if suffix and non_fatal_sheets:
-        # rename any Unnamed: i_level_j to column_i if noncount header row is j
-        if p["noncount_header_row"]:
-            unnamed_pattern = r"^Unnamed: (\d+)_level_(\d+)$"
-            for c in df.columns:
-                numbers = re.findall(unnamed_pattern, c)
-                # if c is of the form 'Unnamed: _level_j' where i is any integer and j is the noncount_header_row
-                if numbers:
-                    try:
-                        # replace with column_i
-                        if int(numbers[0][1]) == p["noncount_header_row"]:
-                            df.columns = [
-                                f"column_{numbers[0][0]}" if x == c else x for x in df.columns
-                            ]
-                    except ValueError:
-                        # if anything crucial is not actually an integer, do nothing
-                        pass
-
         # append suffix to all non-Count column names (to avoid conflicts if e.g., source has col names 'Party'
         try:
             df.columns = [c if c == "Count" else f"{c}{suffix}" for c in df.columns]
@@ -2136,11 +2144,12 @@ def get_fields_from_formula(formula: str) -> List[str]:
 
 def extract_blocks(
     df: pd.DataFrame,
+    rows_to_read: List[int],
     munger_name: str,
     file_name: str,
     sheet_name: str,
     max_blocks: Optional[int] = None,
-) -> (List[pd.DataFrame], Optional[dict]):
+) -> (List[pd.DataFrame], Dict[int, Dict[int,str]], Optional[dict]):
     """Given a dataframe, create a list of dataframes -- one for each block of
     data lines"""
 
@@ -2157,6 +2166,7 @@ def extract_blocks(
         err = None
     df_list = list()
     working = df.copy()
+    row_constants = dict()
     # NB: no info is in column headers because multi_block=yes sets header=None when data is read
 
     # identify count rows (have at least one integer), blank rows, and text rows (all others)
@@ -2188,18 +2198,22 @@ def extract_blocks(
 
         block = working[first_text_row:block_end]
 
-        ## set correct lines to headers
-        # block = block.T.set_index(header_row_numbers).T
-
         ## add block to list
         df_list.append(block)
+
+        ## get row constant for block (labeled by block number)
+        row_constants[len(df_list)-1], new_err = ui.build_row_constants_from_df(
+            block, rows_to_read, file_name, sheet_name
+        )
+        if new_err:
+            err = ui.consolidate_errors([err, new_err])
 
         # if a maximum number of blocks was specified
         if max_blocks:
             blocks_created += 1
             if blocks_created >= max_blocks:
                 max_blocks_attained = True
-    return df_list, err
+    return df_list, row_constants, err
 
 
 def file_to_raw_df(

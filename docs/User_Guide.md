@@ -47,7 +47,7 @@ If the munger for the format of your results file doesn't already exist:
    * (optional) `encoding` (If not specified or recognized, a default encoding will be used. Recognized encodings are limited [python's list of recognized encodings and aliases](https://docs.python.org/3/library/codecs.html#standard-encodings).)
 
    Available for flat_text and excel file types:
-   * (optional) `rows_to_skip` An integer giving the number of rows to skip at the top to get to the table of counts. This parameter will affect all integers designating rows -- e.g., '<count_header_0>' is the first row not skipped. This affects the numbering of rows for munge strings that are constant over the sheet as well. If `rows_to_skip = 2`, then '<row_0>' will denote the third row of the actual Excel sheet -- the highest unskipped row. The system recognizes the leftmost non-blank cell as the content to be read.
+   * (optional - use only for multi-block) `rows_to_skip` An integer giving the number of rows to skip at the top before processing blocks.
    * (optional) `all_rows` If the file has no column headers but only data rows with counts, set this parameter to 'data'
    * (optional) `multi_block` if there are multiple blocks of data per page, each with its own headers, set this parameter to 'yes'. For multi-block sheets, munge parameters refer to the blocks (and must be the same for all blocks).
    * (optional) `max_blocks` if `multi_block=yes`, `max_blocks` is an integer telling the system how many blocks at most to read off of each sheet.
@@ -58,8 +58,8 @@ Put each formula for parsing information from the results file into the `[munge 
  * as a constant formula in the `[munge formulas]` section, in which case a corresponding entry must be made in the jurisdiction's `dictionary.txt`.
 
 For many results files, it is enough to create concatenation formulas, referencing field names from your file by putting them in angle brackets (<>. The available fields are:
-  * `<header_0>`, `<header_1>`, etc. to denote information from the headers of the columns containing the counts
-  * `<row_0>`, `<row_1>`, etc., to read information constant over a sheet or block from one of the header rows
+  * `<header_0>`, `<header_1>`, etc. to denote information from the headers of the columns containing the counts.
+  * `<row_0>`, `<row_1>`, etc., to read information constant over a sheet or block from one of the header rows. The system recognizes the leftmost non-blank cell as the content to be read.
   * `<sheetname>` to denote the name of an Excel spreadsheet within a (possibly multi-sheet) workbook.
   * any field name from the file itself, e.g., `<SELECTION>`
   * for tree-structured files like json and xml, see below for field labeling conventions.

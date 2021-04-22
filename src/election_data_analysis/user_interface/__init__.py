@@ -636,7 +636,8 @@ def excel_to_dict(
 def build_row_constants_from_df(
         df: pd.DataFrame, rows_to_read: List[int], file_name: str, sheet: str
 ) -> (Dict[int, Any], Optional[dict]):
-    """Returns first entries in rows corresponding to row_list (as a dictionary with rows in row_list as keys)"""
+    """Returns first entries in rows corresponding to row_list
+    (as a dictionary with rows in row_list as keys)"""
     row_constants = dict()
     err = None
     for row in rows_to_read:
