@@ -589,7 +589,7 @@ def melt_to_one_count_column(
         df.columns = [";:;".join([f"{x}" for x in tup]) for tup in df.columns]
         count_cols_compatible = [";:;".join([f"{x}" for x in tup]) for tup in count_columns_by_name]
     else:
-        count_cols_compatible = [x[0] for x in count_columns_by_name]
+        count_cols_compatible = count_columns_by_name
     count_cols = {c for c in count_cols_compatible if c in df.columns}
 
     # NB merged cells in excel can lead to spurious empty columns
@@ -1686,9 +1686,16 @@ def get_count_cols_by_name(
                 for j in range(df.shape[1] - 1):
                     if df.loc[i, j+1] == "":
                         df.loc[i, j+1] = df.loc[i, j]
-            count_columns = list({
-                tuple(df.loc[use_rows,idx]) for idx in p["count_column_numbers"] if idx < df.shape[1]
-            })
+            # if there is more than one header row in use_rows, need multi-index of tuples
+            if len(use_rows) > 1:
+                count_columns = list({
+                    tuple(df.loc[use_rows,idx]) for idx in p["count_column_numbers"] if idx < df.shape[1]
+                })
+            else:
+                count_columns = list({
+                    df.loc[use_rows[0],idx] for idx in p["count_column_numbers"] if idx < df.shape[1]
+                })
+
         else:
             count_columns = [
                 df.columns[idx] for idx in p["count_column_numbers"] if idx < df.shape[1]
@@ -1854,6 +1861,13 @@ def to_standard_count_frame(
                     )
                     if new_err:
                         error_by_df[n] = ui.consolidate_errors([new_err, error_by_df[n]])
+                    elif working.empty:
+                        error_by_df[n] = ui.add_new_error(
+                            err,
+                            "munger",
+                            munger_name,
+                            f"No data returned from pivot"
+                        )
                 except Exception as exc:
                     error_by_df[n] = ui.add_new_error(
                         None,
@@ -1879,7 +1893,8 @@ def to_standard_count_frame(
                     error_by_df[n],
                     "munger",
                     munger_name,
-                    f"In sheet {sheet}: Field in munge formulas not found in file column headers read from file: {ke}",
+                    f"In sheet {sheet}: Field in munge formulas not found in file column headers read from file: {ke}. "
+                    f"Columns are {working.columns}",
                 )
                 continue
 
