@@ -132,6 +132,8 @@ Here the CountItemType value ('Election Day','One Stop' a.k.a. early voting, 'Ab
 #### excel and multi_block=yes
 To be read automatically, information that is constant over a sheet (or block) must be read either from the sheet name (using `<sheet_name>`) or from the left-most, non-blank entry in a row of the sheet using `<row_j>`, where `j` is the row number. Row numbers start with `0` after skipping the number of rows given in `rows_to_skip`.
 
+NB: the system assumes that blocks are separated by blank lines. This means that files with blank lines internal to the blocks must be revised before processing.
+
 
 #### Regular Expressions
 Sometimes it is necessary to use regular expressions to extract information from fields in the results file.  For example, in a primary both the Party and the Candidate may be in the same string (e.g., "Robin Perez (DEM)"). Braces ({}) indicate that regex analysis is needed. Inside the curly brackets there are two parts, separated by a comma. The first part is the field name to pull a string from the file. The second is a python regex formula whose first group (enclosed by parentheses) marks the desired substring.

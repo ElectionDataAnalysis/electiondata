@@ -372,7 +372,7 @@ def tabular_kwargs(
     """kwargs["header"] is single integer (if just one header row)
     or list of integers (if more than one header row)"""
     # designate header rows (for both count columns or string-location info/columns)
-    if p["all_rows"] == "data":
+    if p["all_rows"] == "data" or p["multi_block"] == "yes":
         kwargs["header"] = None
     else:
         header_rows = set()
@@ -380,9 +380,11 @@ def tabular_kwargs(
         if not aux and p["count_location"] == "by_name":
             header_rows.update({p["count_field_name_row"]})
         # need noncount_header_row
-        header_rows.update({p["noncount_header_row"]})
+        if isinstance(p["noncount_header_row"], int):
+            header_rows.update({p["noncount_header_row"]})
         #  need count_header_row_numbers
-        header_rows.update(p["count_header_row_numbers"])
+        if p["count_header_row_numbers"]:
+            header_rows.update(p["count_header_row_numbers"])
 
         # define header parameter for reading file
         if header_rows:
@@ -417,6 +419,13 @@ def basic_kwargs(p: Dict[str, Any], kwargs: Dict[str, Any]) -> Dict[str, Any]:
     return kwargs
 
 
+def get_row_constant_kwargs(kwargs: dict, rows_to_read: List[int]) -> dict:
+    rck = kwargs.copy()
+    rck["header"] = None
+    rck["nrows"] = max(rows_to_read) + 1
+    return rck
+
+
 def list_desired_excel_sheets(f_path: str, p: dict) -> Optional[list]:
     if p["sheets_to_read_names"]:
         sheets_to_read = p["sheets_to_read_names"]
@@ -442,11 +451,13 @@ def read_single_datafile(
     aux: bool = False,
     driving_path: Optional[str] = None,
     lookup_id: Optional[str] = None,
-) -> (Dict[str, pd.DataFrame], dict):
+) -> (Dict[str, pd.DataFrame], Dict[str, Dict[int, Any]], Optional[dict]):
     """Length of returned dictionary is the number of sheets read -- usually 1 except for multi-sheet Excel.
     Auxiliary files have different parameters (e.g., no count locations)"""
     kwargs = dict()  # for syntax checker
     df_dict = dict()  # for syntax checker
+    row_constants = dict()  # for syntax checker
+    rename = dict()  # for syntax checker
     file_name = Path(f_path).name
     munger_name = Path(munger_path).stem
 
@@ -498,8 +509,8 @@ def read_single_datafile(
                 df_dict = {"Sheet1": df}
 
         elif p["file_type"] == "excel":
-            df_dict, err = excel_to_dict(
-                f_path, kwargs, list_desired_excel_sheets(f_path, p)
+            df_dict, row_constants, err = excel_to_dict(
+                f_path, kwargs, list_desired_excel_sheets(f_path, p), p["rows_with_constants"]
             )
             if fatal_error(err):
                 df_dict = dict()
@@ -526,7 +537,7 @@ def read_single_datafile(
                 else:
                     header_list = header_int_or_list
                 try:
-                    df = set_and_fill_headers(df, header_list)
+                    df = set_and_fill_headers(df, header_list, drop_empties=False)
                 except Exception as exc:
                     err = add_new_error(
                         err,
@@ -536,6 +547,15 @@ def read_single_datafile(
                     )
 
             df_dict = {"Sheet1": df}
+            # get the row constants
+            if p["rows_with_constants"]:
+                row_constant_kwargs = get_row_constant_kwargs(kwargs, p["rows_with_constants"])
+                row_df = pd.read_csv(f_path, **row_constant_kwargs)
+                row_constants["Sheet1"], new_err = build_row_constants_from_df(
+                    row_df, p["rows_with_constants"], file_name, "Sheet1"
+                )
+                if new_err:
+                    err = consolidate_errors([err, new_err])
 
         # rename any columns from header-less tables to column_0, column_1, etc.
         if p["all_rows"] == "data":
@@ -566,52 +586,80 @@ def read_single_datafile(
             file_name,
             f"Unknown exception while reading file using munger {munger_name}: {exc}",
         )
-
-    # drop any empty dataframes
-    df_dict = {k: v for k, v in df_dict.items() if not v.empty}
-    return df_dict, err
+    else:
+        # drop any empty dataframes
+        df_dict = {k: v for k, v in df_dict.items() if not v.empty}
+    return df_dict, row_constants, err
 
 
 def excel_to_dict(
-    f_path: str, kwargs: Dict[str, Any], sheet_list: Optional[List[str]]
-) -> (Dict[str, pd.DataFrame], dict):
+    f_path: str, kwargs: Dict[str, Any], sheet_list: Optional[List[str]], rows_to_read: List[int]
+) -> (Dict[str, pd.DataFrame], Dict[str, Dict[str, Any]], Optional[dict]):
+    """Returns dictionary of dataframes (one for each sheet), dictionary of dictionaries of constant values
+    (one dictionary for each sheet) and error."""
     kwargs["index_col"] = None
     #  need to omit index_col here since multi-index headers are possible
     # to avoid getting fatal error when a sheet doesn't read in correctly
     df_dict = dict()
-    error: Optional[dict] = None
+    row_constants = dict()
+    row_constant_kwargs = dict()
+    file_name = Path(f_path).name
+    err = None
+    if rows_to_read:
+        row_constant_kwargs = get_row_constant_kwargs(kwargs, rows_to_read)
     for sheet in sheet_list:
         try:
             df_dict[sheet] = pd.read_excel(f_path, **kwargs, sheet_name=sheet)
             # ignore any empty sheet
             if df_dict[sheet].empty:
                 df_dict.pop(sheet)
-                file_name = Path(f_path).name
-                error = add_new_error(
-                    error, "file", file_name, f"No data read from sheet {sheet}"
+                err = add_new_error(
+                    err, "file", file_name, f"No data read from sheet {sheet}"
                 )
         except Exception as exc:
             df_dict[sheet] = pd.DataFrame()
-            error = add_new_error(
-                error,
+            err = add_new_error(
+                err,
                 "warn-file",
                 Path(f_path).name,
                 f"Sheet {sheet} not read due to exception:\n\t{exc}",
             )
-    return df_dict, error
+        if rows_to_read:
+            row_constant_df = pd.read_excel(f_path, **row_constant_kwargs, sheet_name=sheet)
+            row_constants[sheet], new_err = build_row_constants_from_df(
+                row_constant_df, rows_to_read, file_name, sheet)
+            if new_err:
+                err = consolidate_errors([err, new_err])
+    return df_dict, row_constants, err
 
 
-def add_err_df(err, err_df, munger_name, f_path):
-    # show all columns of dataframe holding rows where counts were set to 0
-    pd.set_option("max_columns", None)
-    err = add_new_error(
-        err,
-        "warn-munger",
-        munger_name,
-        f"At least one count was set to 0 in certain rows of {Path(f_path).name}:\n{err_df}",
-    )
-    pd.reset_option("max_columns")
-    return err
+def build_row_constants_from_df(
+        df: pd.DataFrame, rows_to_read: List[int], file_name: str, sheet: str
+) -> (Dict[int, Any], Optional[dict]):
+    """Returns first entries in rows corresponding to row_list (as a dictionary with rows in row_list as keys)"""
+    row_constants = dict()
+    err = None
+    for row in rows_to_read:
+        try:
+            first_valid_idx = df.loc[row].fillna("").first_valid_index()
+            row_constants[row] = df.fillna("").loc[row,first_valid_idx]
+        except KeyError as ke:
+            err = add_new_error(
+                err,
+                "warn-file",
+                file_name,
+                f"In sheet {sheet} no data found in row_{row}",
+            )
+            row_constants[row] = ""
+            continue
+        except Exception as exc:
+            err = add_new_error(
+                err,
+                "file",
+                file_name,
+                f"In sheet {sheet}: Unexpected exception while reading data from row_{row}: {exc}",
+            )
+    return row_constants, err
 
 
 def archive_from_param_file(param_file: str, current_dir: str, archive_dir: str):
@@ -1472,10 +1520,33 @@ def clean_candidate_names(df):
     return df
 
 
-def set_and_fill_headers(df: pd.DataFrame, header_list: Optional[list]) -> pd.DataFrame:
-    # correct column headers
-    # standardize the index and columns to 0, 1, 2, ...
-    df = df.reset_index(drop=True).T.reset_index(drop=True).T
+def disambiguate_empty_cols(df_in: pd.DataFrame,drop_empties: bool,start: int = 0,) -> pd.DataFrame:
+    """return new df with empties dropped, or kept with non-blank placeholder info"""
+    original_number_of_columns = df_in.shape[1]
+    # set row index to default
+    df = df_in.reset_index(drop=True)
+
+    # put dummy info into the tops of the bad columns
+    # in order to meet MultiIndex uniqueness criteria
+    mask = df.eq("").loc[start:].all()
+    bad_column_numbers = [j for j in range(original_number_of_columns) if mask[j]]
+    for j in bad_column_numbers:
+        for i in range(start):
+            df.iloc[i,j] = f"place_holder_{i}_{j}"
+
+    if drop_empties:
+        good_column_numbers = [j for j in range(original_number_of_columns) if j not in bad_column_numbers]
+        df = df.iloc[:,good_column_numbers]
+    return df
+
+
+def set_and_fill_headers(
+        df_in: pd.DataFrame,
+        header_list: Optional[list],
+        drop_empties: bool = True,
+) -> pd.DataFrame:
+    # standardize the index  to 0, 1, 2, ...
+    df = df_in.reset_index(drop=True)
     # rename any leading blank header entries to match convention of pd.read_excel, and any trailing to
     # closest non-blank value to left
     if header_list:
@@ -1489,9 +1560,14 @@ def set_and_fill_headers(df: pd.DataFrame, header_list: Optional[list]) -> pd.Da
                         df.loc[i, j] = f"Unnamed: {j}_level_{i}"
                 else:
                     prev_non_blank = df.loc[i, j]
-
+        # set column index to default
+        df.columns = range(df.shape[1])
+        # drop empties
+        df = disambiguate_empty_cols(df,drop_empties=drop_empties,start=max(header_list) + 1)
         # push appropriate rows into headers
-        df = df.reset_index(drop=True).T.set_index(header_list).T
+        df = df.T.set_index(header_list).T
+        # drop unused header rows
+        df.drop([x for x in range(max(header_list)) if x not in header_list], inplace=True)
     return df
 
 

@@ -12,3 +12,4 @@ psutil
 requests
 openpyxl
 dicttoxml==1.7.4
+lxml

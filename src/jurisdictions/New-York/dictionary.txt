@@ -327,7 +327,7 @@ ReportingUnit	New York;Richmond County	Richmond County
 Candidate	Donald J. Trump	Donald J. Trump
 Candidate	Donald J. Trump	Donald J. Trump Michael R. Pence
 Candidate	Shawn Howard	Shawn Howard
-Candidate	Roque 'Rocky' De La Fuente	Roque âRockyâ De La Fuente
+Candidate	Roque 'Rocky' De La Fuente	Roque 'Rocky' De La Fuente
 Candidate	Roque 'Rocky' De La Fuente	Roque “Rocky” De La Fuente
 Candidate	Richard Charles Montanye	Richard Charles Montanye
 Candidate	Phil Collins	Phil Collins
@@ -335,7 +335,7 @@ Candidate	Paul Hodges	Paul Hodges
 Candidate	Mark Charles	Mark Charles
 Candidate	Kasey Wells	Kasey Wells
 Candidate	Kanye West	Kanye West
-Candidate	Joseph R. Biden Kamala D. Harris	Joseph R. Biden Kamala D. Harris
+Candidate	Joseph R. Biden	Joseph R. Biden Kamala D. Harris
 Candidate	Joseph R. Biden	Joseph R. Biden
 Candidate	Joseph Kishore	Joseph Kishore
 Candidate	John Manimas	John Manimas
@@ -745,14 +745,14 @@ Candidate	Todd D. Kaminsky	Todd D. Kaminsky
 Candidate	Toby Ann Stavisky	Toby Ann Stavisky
 Candidate	Timothy M. Kennedy	Timothy M. Kennedy
 Candidate	Thomas P. Sullivan	Thomas P. Sullivan
-Candidate	Thomas F. O’Mara	Thomas F. O’Mara
+Candidate	Thomas F. O'Mara	Thomas F. O’Mara
 Candidate	Thomas Daniel Quiter	Thomas Daniel Quiter
 Candidate	Thearse McCalmon	Thearse McCalmon
 Candidate	Steven M. Stern	Steven M. Stern
 Candidate	Steve Brescia	Steve Brescia
 Candidate	Simcha Felder	Simcha Felder
 Candidate	Shelley B. Mayer	Shelley B. Mayer
-Candidate	Shauna O’Toole	Shauna O’Toole
+Candidate	Shauna O'Toole	Shauna O’Toole
 Candidate	Sean M. Ryan	Sean M. Ryan
 Candidate	Samra G. Brouk	Samra G. Brouk
 Candidate	Sam Rodgers	Sam Rodgers

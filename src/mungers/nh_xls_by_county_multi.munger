@@ -51,4 +51,4 @@ Candidate={<count_header_0>,(Scatter$|\*corrections submitted by clerks$|\*corre
 # Values to ignore (optional) #
 [ignore]
 ## E.g: Candidate=Total Votes Cast,Registered Voters ##
-
+ReportingUnit=TOTALS,Totals,*corrections received

@@ -21,63 +21,64 @@ def recast_options(
     err: Dict[str, Any] = None
     keys = {k for k in options.keys() if k in types.keys()}
     for k in keys:
-        if types[k] in ["int", "integer"]:
-            try:
-                options[k] = int(options[k])
-            except Exception:
-                options[k] = None
-                err = ui.add_new_error(
-                    err,
-                    "warn-munger",
-                    munger_name,
-                    f"{k} should be integer but isn't: {options[k]}",
-                )
-        elif types[k] == "list-of-integers":
-            try:
-                options[k] = [int(s) for s in options[k].split(",")]
-            except Exception:
-                options[k] = list()
-                err = ui.add_new_error(
-                    err,
-                    "warn-munger",
-                    munger_name,
-                    f"{k} should be list of integers but isn't: {options[k]}",
-                )
-        elif types[k] == "str":
-            if options[k] == "":
-                # null string is read as None
-                options[k] = None
-        elif types[k] == "list-of-strings":
-            if options[k] != "":
+        if options[k]:
+            if types[k] in ["int", "integer"]:
                 try:
-                    options[k] = [s for s in options[k].split(",")]
+                    options[k] = int(options[k])
+                except Exception:
+                    options[k] = None
+                    err = ui.add_new_error(
+                        err,
+                        "warn-munger",
+                        munger_name,
+                        f"{k} should be integer but isn't: {options[k]}",
+                    )
+            elif types[k] == "list-of-integers":
+                try:
+                    options[k] = [int(s) for s in options[k].split(",")]
                 except Exception:
                     options[k] = list()
                     err = ui.add_new_error(
                         err,
                         "warn-munger",
                         munger_name,
-                        f"{k} should be list of strings but isn't: {options[k]}",
+                        f"{k} should be list of integers but isn't: {options[k]}",
                     )
-            # if the string is empty, assign an empty list
-            else:
-                options[k] = list()
+            elif types[k] == "str":
+                if options[k] == "":
+                    # null string is read as None
+                    options[k] = None
+            elif types[k] == "list-of-strings":
+                if options[k] != "":
+                    try:
+                        options[k] = [s for s in options[k].split(",")]
+                    except Exception:
+                        options[k] = list()
+                        err = ui.add_new_error(
+                            err,
+                            "warn-munger",
+                            munger_name,
+                            f"{k} should be list of strings but isn't: {options[k]}",
+                        )
+                # if the string is empty, assign an empty list
+                else:
+                    options[k] = list()
 
-        elif types[k] == "string-with-opt-list" and k == "count_location":
-            if not options["count_location"]:
-                # if we're munging a lookup file
-                pass
-            elif options["file_type"] in ["xml", "json-nested"]:
-                # nothing needs to be broken out for these file types
-                pass
-            elif options[k].split(":")[0] == "by_name":
-                options["count_fields_by_name"] = [s for s in options[k][8:].split(",")]
-                options[k] = "by_name"
-            elif options[k].split(":")[0] == "by_number":
-                options["count_column_numbers"] = [
-                    int(s) for s in options[k][10:].split(",")
-                ]
-                options[k] = "by_number"
+            elif types[k] == "string-with-opt-list" and k == "count_location":
+                if not options["count_location"]:
+                    # if we're munging a lookup file
+                    pass
+                elif options["file_type"] in ["xml", "json-nested"]:
+                    # nothing needs to be broken out for these file types
+                    pass
+                elif options[k].split(":")[0] == "by_name":
+                    options["count_fields_by_name"] = [s for s in options[k][8:].split(",")]
+                    options[k] = "by_name"
+                elif options[k].split(":")[0] == "by_number":
+                    options["count_column_numbers"] = [
+                        int(s) for s in options[k][10:].split(",")
+                    ]
+                    options[k] = "by_number"
     return options, err
 
 

@@ -126,9 +126,15 @@ Election	2020 Primary	2020 Primary
 Election	2018 General	2018 General
 Election	2016 General	2016 General
 Party	Democratic Party	Democratic Party
+Party	Democratic Party	DEM
 Party	Republican Party	Republican Party
+Party	Republican Party	REP
 Party	Green Party	Green Party
+Party	Green GRN
 Party	Libertarian Party	Libertarian Party
+Party	Libertarian Party	LIB
+Party	PSL	PSL
+Party	CON	CON
 ReportingUnit	New Mexico;NM House District 1	New Mexico;NM House District 1
 ReportingUnit	New Mexico;NM House District 2	New Mexico;NM House District 2
 ReportingUnit	New Mexico;NM House District 3	New Mexico;NM House District 3
@@ -278,6 +284,7 @@ ReportingUnit	New Mexico;Taos County	Taos
 ReportingUnit	New Mexico;Torrance County	Torrance
 ReportingUnit	New Mexico;Union County	Union
 ReportingUnit	New Mexico;Valencia County	Valencia
+Candidate	Steve Jones (write in)	STEVE JONES (write in)
 Candidate	Howie Hawkins	Howie Hawkins And Angela Nicole Walker
 Candidate	Jo Jorgensen	Jo Jorgensen And Jeremy 'Spike' Cohen
 Candidate	Joseph R Biden	Joseph R Biden And Kamala D Harris
