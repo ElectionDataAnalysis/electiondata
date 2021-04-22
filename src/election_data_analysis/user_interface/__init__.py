@@ -537,7 +537,7 @@ def read_single_datafile(
                 else:
                     header_list = header_int_or_list
                 try:
-                    df = set_and_fill_headers(df, header_list)
+                    df = set_and_fill_headers(df, header_list, drop_empties=False)
                 except Exception as exc:
                     err = add_new_error(
                         err,
@@ -1520,10 +1520,33 @@ def clean_candidate_names(df):
     return df
 
 
-def set_and_fill_headers(df_in: pd.DataFrame, header_list: Optional[list]) -> pd.DataFrame:
-    # correct column headers
-    # standardize the index and columns to 0, 1, 2, ...
-    df = df_in.reset_index(drop=True).T.reset_index(drop=True).T
+def disambiguate_empty_cols(df_in: pd.DataFrame,drop_empties: bool,start: int = 0,) -> pd.DataFrame:
+    """return new df with empties dropped, or kept with non-blank placeholder info"""
+    original_number_of_columns = df_in.shape[1]
+    # set row index to default
+    df = df_in.reset_index(drop=True)
+
+    # put dummy info into the tops of the bad columns
+    # in order to meet MultiIndex uniqueness criteria
+    mask = df.eq("").loc[start:].all()
+    bad_column_numbers = [j for j in range(original_number_of_columns) if mask[j]]
+    for j in bad_column_numbers:
+        for i in range(start):
+            df.iloc[i,j] = f"place_holder_{i}_{j}"
+
+    if drop_empties:
+        good_column_numbers = [j for j in range(original_number_of_columns) if j not in bad_column_numbers]
+        df = df.iloc[:,good_column_numbers]
+    return df
+
+
+def set_and_fill_headers(
+        df_in: pd.DataFrame,
+        header_list: Optional[list],
+        drop_empties: bool = True,
+) -> pd.DataFrame:
+    # standardize the index  to 0, 1, 2, ...
+    df = df_in.reset_index(drop=True)
     # rename any leading blank header entries to match convention of pd.read_excel, and any trailing to
     # closest non-blank value to left
     if header_list:
@@ -1537,13 +1560,12 @@ def set_and_fill_headers(df_in: pd.DataFrame, header_list: Optional[list]) -> pd
                         df.loc[i, j] = f"Unnamed: {j}_level_{i}"
                 else:
                     prev_non_blank = df.loc[i, j]
-        # drop any column that is empty below the header
-        df = df.reset_index(drop=True)
-        mask = df.eq("").loc[max(header_list) + 1:].all()
-        good_column_numbers = [j for j in range(df.shape[1]) if not mask[j]]
-        df = df.iloc[:,good_column_numbers]
+        # set column index to default
+        df.columns = range(df.shape[1])
+        # drop empties
+        df = disambiguate_empty_cols(df,drop_empties=drop_empties,start=max(header_list) + 1)
         # push appropriate rows into headers
-        df = df.reset_index(drop=True).T.set_index(header_list).T
+        df = df.T.set_index(header_list).T
         # drop unused header rows
         df.drop([x for x in range(max(header_list)) if x not in header_list], inplace=True)
     return df

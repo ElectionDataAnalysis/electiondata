@@ -577,54 +577,30 @@ def regularize_candidate_names(
 
 
 def melt_to_one_count_column(
-    df: pd.DataFrame, p: dict, munger_name: str, file_name: str,
+    df: pd.DataFrame, p: dict, count_columns_by_name: List[str], munger_name: str, file_name: str,
 ) -> (pd.DataFrame, Optional[dict]):
     """transform to df with single count column and all raw munge info in other columns"""
     err = None
     multi = isinstance(df.columns, pd.MultiIndex)
-
+    # drop any empty columns (and remove them from count_columns list)
+    df = ui.disambiguate_empty_cols(df, drop_empties=False)
     if multi:
         # transform multi-index to plain index
         df.columns = [";:;".join([f"{x}" for x in tup]) for tup in df.columns]
-
-    # define count columns
-    if p["count_location"] == "by_number":
-        count_columns = [
-            df.columns[idx] for idx in p["count_column_numbers"] if idx < df.shape[1]
-        ]
-    elif p["count_location"] == "by_name":
-        if multi:
-            err = ui.add_new_error(
-                err,
-                "munger",
-                munger_name,
-                "If there are multiple header rows, need to have count_location=by_number ",
-            )
-            return pd.DataFrame(), err
-        count_columns = [c for c in p["count_fields_by_name"] if c in df.columns]
+        count_cols_compatible = [";:;".join([f"{x}" for x in tup]) for tup in count_columns_by_name]
     else:
-        err = ui.add_new_error(
-            err,
-            "munger",
-            munger_name,
-            f"For file type {p['file_type']}, count_location parameter must be either by_number or by_name",
-        )
-        return pd.DataFrame(), err
+        count_cols_compatible = [x[0] for x in count_columns_by_name]
+    count_cols = {c for c in count_cols_compatible if c in df.columns}
 
-    # drop any empty columns (and remove them from count_columns list)
     # NB merged cells in excel can lead to spurious empty columns
-    mask = df.eq("").all()
-    good_column_numbers = [j for j in range(df.shape[1]) if not mask[j]]
-    df = df.iloc[:, good_column_numbers]
-    count_columns = {c for c in count_columns if c in df.columns}
-    if not count_columns:
-        err = ui.add_new_error(err, "warn-file", file_name, f"No count data found with munger {munger_name}")
-
+    if not count_cols:
+        err = ui.add_new_error(err, "file", file_name, f"No count columns found with munger {munger_name}")
+        return pd.DataFrame(), err
     # melt so that there is one single count column
-    id_columns = {c for c in df.columns if c not in count_columns}
+    id_columns = {c for c in df.columns if c not in count_cols}
     melted = df.melt(
         id_vars=id_columns,
-        value_vars=count_columns,
+        value_vars=count_cols,
         var_name="header_0",
         value_name="Count",
     )
@@ -632,7 +608,7 @@ def melt_to_one_count_column(
         tab_to_df = df_header_rows_from_sheet_header_rows(p)
         new_columns = list(melted.columns)
         # remove extraneous text from column multi-headers for string fields (id_columns),
-        #  leaving only string field name row
+        #  leaving only noncount_header_row
         for idx in range(melted.shape[1]):
             if melted.columns[idx] in id_columns:
                 new_columns[idx] = melted.columns[idx].split(";:;")[
@@ -1695,6 +1671,50 @@ def check_formula(formula: str) -> Optional[str]:
     return err_str
 
 
+def get_count_cols_by_name(
+        df: pd.DataFrame, p: Dict[str, Any], munger_name: str,
+        use_rows: Optional[List[int]] = None,
+) -> (List[str], Optional[dict]):
+    err = None
+    # define count columns
+    if p["count_location"] == "by_number":
+        if use_rows:
+            # use default index 0, 1, 2,...
+            df.reset_index(inplace=True, drop=True)
+            # to match how pandas handles indices, forward-fill the header rows
+            for i in use_rows:
+                for j in range(df.shape[1] - 1):
+                    if df.loc[i, j+1] == "":
+                        df.loc[i, j+1] = df.loc[i, j]
+            count_columns = list({
+                tuple(df.loc[use_rows,idx]) for idx in p["count_column_numbers"] if idx < df.shape[1]
+            })
+        else:
+            count_columns = [
+                df.columns[idx] for idx in p["count_column_numbers"] if idx < df.shape[1]
+            ]
+    elif p["count_location"] == "by_name":
+        if isinstance(df.columns, pd.MultiIndex):
+            err = ui.add_new_error(
+                err,
+                "munger",
+                munger_name,
+                "If there are multiple header rows, need to have count_location=by_number ",
+            )
+            return list(), err
+        count_columns = [c for c in p["count_fields_by_name"] if c in df.columns]
+    else:
+        err = ui.add_new_error(
+            err,
+            "munger",
+            munger_name,
+            f"For file type {p['file_type']}, count_location parameter must be either by_number or by_name",
+        )
+        count_columns = list()
+    return count_columns, err
+
+
+
 def to_standard_count_frame(
     file_path: str,
     munger_path: str,
@@ -1709,6 +1729,9 @@ def to_standard_count_frame(
     file_name = Path(file_path).name
     munger_name = Path(munger_path).stem
     err = None
+    # initialize error, count_cols dictionaries
+    error_by_df: Dict[int,Optional[dict]] = dict()
+    cc_by_name: Dict[int,List[str]] = dict()
 
     # get lists of string fields expected in raw file
     try:
@@ -1772,6 +1795,15 @@ def to_standard_count_frame(
                     if ui.fatal_error(new_err):
                         continue
 
+            except Exception as exc:
+                error_by_sheet[sheet] = ui.add_new_error(
+                    None,
+                    "munger",
+                    munger_name,
+                    f"Error extracting blocks from sheet {sheet} in {file_name}:\n {exc}",
+                )
+                continue  # goes to next k in loop
+            try:
                 # correct column headers
                 p_temp = p.copy()
                 p_temp["multi_block"] = None
@@ -1783,25 +1815,31 @@ def to_standard_count_frame(
                 else:
                     header_list = header_int_or_list
                 for n in range(len(df_list)):
-                    df_list[n] = ui.set_and_fill_headers(df_list[n], header_list)
+
+                    # get count columns by name
+                    cc_by_name[n], error_by_df[n] = get_count_cols_by_name(
+                        df_list[n],p,munger_name, use_rows=header_list
+                    )
+                    df_list[n] = ui.set_and_fill_headers(df_list[n], header_list, drop_empties=True)
 
             except Exception as exc:
                 error_by_sheet[sheet] = ui.add_new_error(
                     None,
-                    "munger",
-                    munger_name,
-                    f"Error extracting blocks from sheet {sheet} in {file_name}:\n {exc}",
+                    "system",
+                    f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
+                    f"Error correcting column headers from sheet {sheet} in {file_name}:\n {exc}",
                 )
                 continue  # goes to next k in loop
 
         else:
             df_list = [raw_dict[sheet]]
+            cc_by_name[0], error_by_df[0] = get_count_cols_by_name(
+                        df_list[0], p, munger_name
+                    )
 
         # loop through dataframes in list
-        error_by_df: Optional[int, Optional[dict]] = dict()
         standard[sheet] = pd.DataFrame()
         for n in range(len(df_list)):
-            error_by_df[n] = None
             raw = df_list[n]
             working = raw.copy()
             # some file types are read already into "melted" form
@@ -1811,9 +1849,11 @@ def to_standard_count_frame(
             else:
                 # transform to df with single count column 'Count' and all raw munge info in other columns
                 try:
-                    working, error_by_df[n] = melt_to_one_count_column(
-                        raw, p, munger_name, file_name
+                    working, new_err = melt_to_one_count_column(
+                        raw, p, cc_by_name[n], munger_name, file_name
                     )
+                    if new_err:
+                        error_by_df[n] = ui.consolidate_errors([new_err, error_by_df[n]])
                 except Exception as exc:
                     error_by_df[n] = ui.add_new_error(
                         None,
