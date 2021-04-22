@@ -1,0 +1,19 @@
+[format]
+file_type=excel
+count_location=by_number:1,3,5,7,9,11
+munge_strings=in_count_headers,in_field_values,constant_over_file,constant_over_sheet
+
+encoding=iso-8859-1
+noncount_header_row=0
+
+constant_over_file=CountItemType
+
+[munge formulas]
+CandidateContest=<sheet_name>
+ReportingUnit=<Municipality>
+Candidate={<header_0>,^([^\(\)]*)(?:(?:\(.*\)))?$}
+Party={<header_0>,^(?:[^\(\)]*)((?:\(.*\))?)$}
+
+[ignore]
+ReportingUnit=Total, Puerto Rico
+Candidate=Others

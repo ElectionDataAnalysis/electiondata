@@ -1569,7 +1569,6 @@ def get_and_check_munger_params(
         if params["constant_over_file"]:
             params["munge_field_types"].append("constant_over_file")
 
-
     # check that each lookup section has a replacement formula for each element referencing the lookup field
     # and check that each auxiliary file exists
     headers, new_err = ui.get_section_headers(munger_path)
@@ -1622,7 +1621,7 @@ def get_string_fields_from_munger(
         err = ui.consolidate_errors([err, new_err])
         if ui.fatal_error(new_err):
             return dict(), err
-    munge_field_list = extract_fields_from_formulas(formulas.values())
+    munge_field_list, _ = extract_fields_from_formulas(formulas.values())
     return munge_field_list, err
 
 
@@ -1630,25 +1629,28 @@ def extract_fields_from_formulas(
     formulas: List[str],
     drop_lookups: bool = True,
 ) -> List[str]:
-    """If keep_lookups is true, return raw fields (including ... from ... for lookups).
+    """If drop_lookups is false, return raw fields (including ... from ... for lookups).
     Otherwise return only the first foreign key field of each chain of lookups."""
     munge_field_set = set()
-    angle_pattern = re.compile(r"<([^>,]+)(?:,([^>,]+))*>")
+    foreign_key_set = set()
+    angle_pattern = re.compile(r"<([^>]+)>")  # anything within brackets (if nested, get lowest level)
     from_pattern = re.compile(r"<([^>,]* from ).*>")
     non_trivial_formulas = [f for f in formulas if f]
     for f in non_trivial_formulas:
         if drop_lookups:
-            # for any lookup formulas, delete fields to be lookup up
+            # for any lookup formulas, delete first field ("*** from ") to be lookup up
+            ## and leave the remainder of the chain of lookups
             for x in from_pattern.findall(f):
                 f = f.replace(x, "")
         # pull information out of angle brackets
-        munge_field_set.update(angle_pattern.findall(f))
-    flat = {x for y in munge_field_set for x in y}
-    if "" in flat:
-        flat.remove("")
+        for found in angle_pattern.findall(f):
+            munge_field_set.update(found.split(","))
+            foreign_key_set.update([found])
+        munge_field_set.update()
     # remove dupes, make list
-    munge_field_list = list(flat)
-    return munge_field_list
+    munge_field_list = list([x for x in munge_field_set if x != ""])
+    foreign_key_list = list(foreign_key_set)
+    return munge_field_list, foreign_key_list
 
 
 def check_formula(formula: str) -> Optional[str]:
@@ -2039,10 +2041,10 @@ def get_aux_info(
     # initialize dictionaries
     aux_params = dict()
     # get list of all fields that will be needed
-    raw_fields = extract_fields_from_formulas([formula], drop_lookups=False)
+    raw_fields, foreign_keys = extract_fields_from_formulas([formula], drop_lookups=False)
     # get map from foreign key to all values looked up from that key, for all fields
     # NB: foreign keys include the "from"; values do not.
-    lookup_map = get_lookedup_fields(raw_fields)
+    lookup_map = get_lookedup_fields(foreign_keys)
     # get all bare foreign keys from lookup_map keys (which have " from ")
     bfks = {k.split(" from ")[0] for k in lookup_map.keys()}
     for fk in bfks:
@@ -2120,7 +2122,7 @@ def incorporate_aux_info(
         # join lookup for this foreign key to working dataframe
         fk = fk_with_from.split(" from ")[0]
         working_fk_cols = [f"{c}{suffix}" for c in fk_with_from.split(",")]
-        lookup_fk_cols = aux_params[fk]["lookup_id"]
+        lookup_fk_cols = aux_params[fk]["lookup_id"].split(",")
         w_df = w_df.merge(
             lookup_table[fk],
             how="left",

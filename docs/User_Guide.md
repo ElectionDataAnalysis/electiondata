@@ -63,6 +63,8 @@ For many results files, it is enough to create concatenation formulas, referenci
   * `<sheetname>` to denote the name of an Excel spreadsheet within a (possibly multi-sheet) workbook.
   * any field name from the file itself, e.g., `<SELECTION>`
   * for tree-structured files like json and xml, see below for field labeling conventions.
+  
+Some characters are reserved to indicate parsing and interpretation in the munge formulas. Angle brackets (`<>`), braces (`{}`), commas (`,`) and the word `from` should not be used in any other way.
 
  Consider this snippet from a comma-separated flat-text Philadelphia, Pennsylvania voting results file:
 ```
