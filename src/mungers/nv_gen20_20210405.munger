@@ -1,22 +1,26 @@
 [format]
 file_type=excel
 count_locations=by_column_numbers
-munge_strings=in_count_headers,in_field_values,constant_over_file,constant_over_sheet
+munge_strings=in_field_values,constant_over_file
 
 encoding=utf_8
-count_column_numbers=3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20
-count_header_row_numbers=2
-string_field_name_row=2
+count_column_numbers=4
+rows_to_skip=2
+string_field_name_row=0
 count_field_name_row=0
-sheets_to_read_numbers=0
-constant_over_file=Party,CountItemType
-multi_block=yes
+constant_over_file=CountItemType
 
 [in_field_values]
-Candidate=<column_0>
+Candidate=<Selection>
+ReportingUnit=<Jurisdiction>;<Precinct>
+CandidateContest=<Contest>
+Party=<Selection>
 
-[in_count_headers]
-ReportingUnit=<header_2>
-
-[constant_over_sheet]
-CandidateContest=<row_0>
+[Selection lookup]
+source_file=Nevada/Party_Candidate_20g.xlsx
+lookup_id=Selection
+Party_replacement=<Party>
+Candidate_replacement=<Selection>
+file_type=excel
+munge_strings=in_field_values
+string_field_name_row=0

@@ -8,20 +8,24 @@ import election_data_analysis as e
 #   Move this testing file to the correct jurisdiction folder in `election_data_analysis/tests`
 
 # # # constants - CHANGE THESE!! - use internal db names
+# PLEASE NOTE: Results are from the precinct level file which has the stipulation that in cases
+# where the cumulative turnout for a race or ballot question in a single precinct is greater than
+# zero but less than 10, numbers have been replaced with an asterisk (*) in order to protect the
+# secrecy of a voter's ballot as required by Nevada Law.
 election = "2020 General"
 jurisdiction = "Nevada"
 abbr = "NV"
-total_pres_votes = 1405376  # total of all votes for President
+total_pres_votes = 1404911  # total of all votes for President
 cd = 1  # congressional district
-total_cd_votes = 223213  # total votes in the chosen cd
-shd = 0  # state house district  ***NOT AVAILABLE***
-total_shd_votes = 0  # ***NOT AVAILABLE***
-ssd = 0  # state senate district ***NOT AVAILABLE***
-total_ssd_votes = 0  # ***NOT AVAILABLE***
-single_vote_type = ""  # pick any one from your file ***NOT AVAILABLE***
-pres_votes_vote_type = 0  # ***NOT AVAILABLE***
-single_county = "Nevada;Clark County"  # pick any one from your file
-pres_votes_county = 972510  # total votes for pres of that county
+total_cd_votes = 223202  # total votes in the chosen cd
+shd = 17  # state house district
+total_shd_votes = 32536
+ssd = 11  # state senate district
+total_ssd_votes = 52060
+single_vote_type = "total"  # pick any one from your file
+pres_votes_vote_type = 1404911
+single_county = "Nevada;Esmeralda County"  # pick any one from your file
+pres_votes_county = 480  # total votes for pres of that county
 
 
 def test_data_exists(dbname):
