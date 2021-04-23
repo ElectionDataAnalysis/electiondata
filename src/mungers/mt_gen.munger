@@ -13,3 +13,6 @@ ReportingUnit=<County>
 Party={<count_header_0>,^[^a-z]*([A-Z].*)$}
 Candidate={<count_header_0>,^([^a-z]*)[A-Z].*$}
 CandidateContest=<sheet_name>
+
+[ignore]
+ReportingUnit=TOTALS

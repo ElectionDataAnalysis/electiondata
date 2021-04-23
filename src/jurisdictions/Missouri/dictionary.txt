@@ -162,6 +162,169 @@ CandidateContest	MO House District 160	MO House District 160
 CandidateContest	MO House District 161	MO House District 161
 CandidateContest	MO House District 162	MO House District 162
 CandidateContest	MO House District 163	MO House District 163
+CandidateContest	MO House District 1	State Representative - District 1
+CandidateContest	MO House District 2	State Representative - District 2
+CandidateContest	MO House District 3	State Representative - District 3
+CandidateContest	MO House District 4	State Representative - District 4
+CandidateContest	MO House District 5	State Representative - District 5
+CandidateContest	MO House District 6	State Representative - District 6
+CandidateContest	MO House District 7	State Representative - District 7
+CandidateContest	MO House District 8	State Representative - District 8
+CandidateContest	MO House District 9	State Representative - District 9
+CandidateContest	MO House District 10	State Representative - District 10
+CandidateContest	MO House District 11	State Representative - District 11
+CandidateContest	MO House District 12	State Representative - District 12
+CandidateContest	MO House District 13	State Representative - District 13
+CandidateContest	MO House District 14	State Representative - District 14
+CandidateContest	MO House District 15	State Representative - District 15
+CandidateContest	MO House District 16	State Representative - District 16
+CandidateContest	MO House District 17	State Representative - District 17
+CandidateContest	MO House District 18	State Representative - District 18
+CandidateContest	MO House District 19	State Representative - District 19
+CandidateContest	MO House District 20	State Representative - District 20
+CandidateContest	MO House District 21	State Representative - District 21
+CandidateContest	MO House District 22	State Representative - District 22
+CandidateContest	MO House District 23	State Representative - District 23
+CandidateContest	MO House District 24	State Representative - District 24
+CandidateContest	MO House District 25	State Representative - District 25
+CandidateContest	MO House District 26	State Representative - District 26
+CandidateContest	MO House District 27	State Representative - District 27
+CandidateContest	MO House District 28	State Representative - District 28
+CandidateContest	MO House District 29	State Representative - District 29
+CandidateContest	MO House District 30	State Representative - District 30
+CandidateContest	MO House District 31	State Representative - District 31
+CandidateContest	MO House District 32	State Representative - District 32
+CandidateContest	MO House District 33	State Representative - District 33
+CandidateContest	MO House District 34	State Representative - District 34
+CandidateContest	MO House District 35	State Representative - District 35
+CandidateContest	MO House District 36	State Representative - District 36
+CandidateContest	MO House District 37	State Representative - District 37
+CandidateContest	MO House District 38	State Representative - District 38
+CandidateContest	MO House District 39	State Representative - District 39
+CandidateContest	MO House District 40	State Representative - District 40
+CandidateContest	MO House District 41	State Representative - District 41
+CandidateContest	MO House District 42	State Representative - District 42
+CandidateContest	MO House District 43	State Representative - District 43
+CandidateContest	MO House District 44	State Representative - District 44
+CandidateContest	MO House District 45	State Representative - District 45
+CandidateContest	MO House District 46	State Representative - District 46
+CandidateContest	MO House District 47	State Representative - District 47
+CandidateContest	MO House District 48	State Representative - District 48
+CandidateContest	MO House District 49	State Representative - District 49
+CandidateContest	MO House District 50	State Representative - District 50
+CandidateContest	MO House District 51	State Representative - District 51
+CandidateContest	MO House District 52	State Representative - District 52
+CandidateContest	MO House District 53	State Representative - District 53
+CandidateContest	MO House District 54	State Representative - District 54
+CandidateContest	MO House District 55	State Representative - District 55
+CandidateContest	MO House District 56	State Representative - District 56
+CandidateContest	MO House District 57	State Representative - District 57
+CandidateContest	MO House District 58	State Representative - District 58
+CandidateContest	MO House District 59	State Representative - District 59
+CandidateContest	MO House District 60	State Representative - District 60
+CandidateContest	MO House District 61	State Representative - District 61
+CandidateContest	MO House District 62	State Representative - District 62
+CandidateContest	MO House District 63	State Representative - District 63
+CandidateContest	MO House District 64	State Representative - District 64
+CandidateContest	MO House District 65	State Representative - District 65
+CandidateContest	MO House District 66	State Representative - District 66
+CandidateContest	MO House District 67	State Representative - District 67
+CandidateContest	MO House District 68	State Representative - District 68
+CandidateContest	MO House District 69	State Representative - District 69
+CandidateContest	MO House District 70	State Representative - District 70
+CandidateContest	MO House District 71	State Representative - District 71
+CandidateContest	MO House District 72	State Representative - District 72
+CandidateContest	MO House District 73	State Representative - District 73
+CandidateContest	MO House District 74	State Representative - District 74
+CandidateContest	MO House District 75	State Representative - District 75
+CandidateContest	MO House District 76	State Representative - District 76
+CandidateContest	MO House District 77	State Representative - District 77
+CandidateContest	MO House District 78	State Representative - District 78
+CandidateContest	MO House District 79	State Representative - District 79
+CandidateContest	MO House District 80	State Representative - District 80
+CandidateContest	MO House District 81	State Representative - District 81
+CandidateContest	MO House District 82	State Representative - District 82
+CandidateContest	MO House District 83	State Representative - District 83
+CandidateContest	MO House District 84	State Representative - District 84
+CandidateContest	MO House District 85	State Representative - District 85
+CandidateContest	MO House District 86	State Representative - District 86
+CandidateContest	MO House District 87	State Representative - District 87
+CandidateContest	MO House District 88	State Representative - District 88
+CandidateContest	MO House District 89	State Representative - District 89
+CandidateContest	MO House District 90	State Representative - District 90
+CandidateContest	MO House District 91	State Representative - District 91
+CandidateContest	MO House District 92	State Representative - District 92
+CandidateContest	MO House District 93	State Representative - District 93
+CandidateContest	MO House District 94	State Representative - District 94
+CandidateContest	MO House District 95	State Representative - District 95
+CandidateContest	MO House District 96	State Representative - District 96
+CandidateContest	MO House District 97	State Representative - District 97
+CandidateContest	MO House District 98	State Representative - District 98
+CandidateContest	MO House District 99	State Representative - District 99
+CandidateContest	MO House District 100	State Representative - District 100
+CandidateContest	MO House District 101	State Representative - District 101
+CandidateContest	MO House District 102	State Representative - District 102
+CandidateContest	MO House District 103	State Representative - District 103
+CandidateContest	MO House District 104	State Representative - District 104
+CandidateContest	MO House District 105	State Representative - District 105
+CandidateContest	MO House District 106	State Representative - District 106
+CandidateContest	MO House District 107	State Representative - District 107
+CandidateContest	MO House District 108	State Representative - District 108
+CandidateContest	MO House District 109	State Representative - District 109
+CandidateContest	MO House District 110	State Representative - District 110
+CandidateContest	MO House District 111	State Representative - District 111
+CandidateContest	MO House District 112	State Representative - District 112
+CandidateContest	MO House District 113	State Representative - District 113
+CandidateContest	MO House District 114	State Representative - District 114
+CandidateContest	MO House District 115	State Representative - District 115
+CandidateContest	MO House District 116	State Representative - District 116
+CandidateContest	MO House District 117	State Representative - District 117
+CandidateContest	MO House District 118	State Representative - District 118
+CandidateContest	MO House District 119	State Representative - District 119
+CandidateContest	MO House District 120	State Representative - District 120
+CandidateContest	MO House District 121	State Representative - District 121
+CandidateContest	MO House District 122	State Representative - District 122
+CandidateContest	MO House District 123	State Representative - District 123
+CandidateContest	MO House District 124	State Representative - District 124
+CandidateContest	MO House District 125	State Representative - District 125
+CandidateContest	MO House District 126	State Representative - District 126
+CandidateContest	MO House District 127	State Representative - District 127
+CandidateContest	MO House District 128	State Representative - District 128
+CandidateContest	MO House District 129	State Representative - District 129
+CandidateContest	MO House District 130	State Representative - District 130
+CandidateContest	MO House District 131	State Representative - District 131
+CandidateContest	MO House District 132	State Representative - District 132
+CandidateContest	MO House District 133	State Representative - District 133
+CandidateContest	MO House District 134	State Representative - District 134
+CandidateContest	MO House District 135	State Representative - District 135
+CandidateContest	MO House District 136	State Representative - District 136
+CandidateContest	MO House District 137	State Representative - District 137
+CandidateContest	MO House District 138	State Representative - District 138
+CandidateContest	MO House District 139	State Representative - District 139
+CandidateContest	MO House District 140	State Representative - District 140
+CandidateContest	MO House District 141	State Representative - District 141
+CandidateContest	MO House District 142	State Representative - District 142
+CandidateContest	MO House District 143	State Representative - District 143
+CandidateContest	MO House District 144	State Representative - District 144
+CandidateContest	MO House District 145	State Representative - District 145
+CandidateContest	MO House District 146	State Representative - District 146
+CandidateContest	MO House District 147	State Representative - District 147
+CandidateContest	MO House District 148	State Representative - District 148
+CandidateContest	MO House District 149	State Representative - District 149
+CandidateContest	MO House District 150	State Representative - District 150
+CandidateContest	MO House District 151	State Representative - District 151
+CandidateContest	MO House District 152	State Representative - District 152
+CandidateContest	MO House District 153	State Representative - District 153
+CandidateContest	MO House District 154	State Representative - District 154
+CandidateContest	MO House District 155	State Representative - District 155
+CandidateContest	MO House District 156	State Representative - District 156
+CandidateContest	MO House District 157	State Representative - District 157
+CandidateContest	MO House District 158	State Representative - District 158
+CandidateContest	MO House District 159	State Representative - District 159
+CandidateContest	MO House District 160	State Representative - District 160
+CandidateContest	MO House District 161	State Representative - District 161
+CandidateContest	MO House District 162	State Representative - District 162
+CandidateContest	MO House District 163	State Representative - District 163
 CandidateContest	MO Senate District 1	MO Senate District 1
 CandidateContest	MO Senate District 2	MO Senate District 2
 CandidateContest	MO Senate District 3	MO Senate District 3
@@ -431,6 +594,7 @@ Party	Write-in	WI
 Party	Democratic Party	DEM
 Party	Republican Party	REP
 Party	Constitution Party	CST
+Party	Independent	IND
 Candidate	Write-Ins	Write-Ins
 Candidate	Nicole Galloway	Nicole Galloway
 Candidate	Megan Rezabek	Megan Rezabek
@@ -530,6 +694,197 @@ Candidate	Rik Combs	Rik Combs
 Candidate	Doug Beck	Doug Beck
 Candidate	Brian Carroll Amar Patel	Brian Carroll Amar Patel
 Candidate	Rick Brattin	Rick Brattin
+Candidate	Yolanda Young	Yolanda Young
+Candidate	William Truman Bill Wayne	William Truman Bill Wayne
+Candidate	William Bill Betteridge	William Bill Betteridge
+Candidate	Willard Haley	Willard Haley
+Candidate	Wiley Chip Price IV	Wiley Chip Price IV
+Candidate	Wes Rogers	Wes Rogers
+Candidate	Wade Hugh Kiefer	Wade Hugh Kiefer
+Candidate	Victoria Witt Datt	Victoria Witt Datt
+Candidate	Vicki Riley	Vicki Riley
+Candidate	Vic Abundis	Vic Abundis
+Candidate	Trish Gunby	Trish Gunby
+Candidate	Travis Smith	Travis Smith
+Candidate	Travis Fitzwater	Travis Fitzwater
+Candidate	Tracy McCreery	Tracy McCreery
+Candidate	Tracy Grundy	Tracy Grundy
+Candidate	Tony Lovasco	Tony Lovasco
+Candidate	Tom Hannegan	Tom Hannegan
+Candidate	Timothy Gartin	Timothy Gartin
+Candidate	Tim Taylor	Tim Taylor
+Candidate	Terry Thompson	Terry Thompson
+Candidate	Terrence Fiala	Terrence Fiala
+Candidate	Susan Shumway	Susan Shumway
+Candidate	Steve West	Steve West
+Candidate	Steve Butz	Steve Butz
+Candidate	Stephen R. Johnson	Stephen R. Johnson
+Candidate	Sean Smith	Sean Smith
+Candidate	Sean Pouche	Sean Pouche
+Candidate	Scott E. Cazadd	Scott E. Cazadd
+Candidate	Scott Cupps	Scott Cupps
+Candidate	Sarah Unsicker	Sarah Unsicker
+Candidate	Sara Walsh	Sara Walsh
+Candidate	Rusty Black	Rusty Black
+Candidate	Rudy Veit	Rudy Veit
+Candidate	Rory Rowland	Rory Rowland
+Candidate	Ron Hicks	Ron Hicks
+Candidate	Rodger L. Reedy	Rodger L. Reedy
+Candidate	Robert Sauls	Robert Sauls
+Candidate	Robert J. Crump	Robert J. Crump
+Candidate	Rick Roeber	Rick Roeber
+Candidate	Richard W West	Richard W West
+Candidate	Richard McKie	Richard McKie
+Candidate	Richard Brown	Richard Brown
+Candidate	Rhonda R Dolan	Rhonda R Dolan
+Candidate	Raychel C Proudie	Raychel C Proudie
+Candidate	Rasheen Aldridge Jr	Rasheen Aldridge Jr
+Candidate	Randy Railsback	Randy Railsback
+Candidate	Randy Pietzman	Randy Pietzman
+Candidate	Phil Christofanelli	Phil Christofanelli
+Candidate	Peter Merideth	Peter Merideth
+Candidate	Peggy McGaugh	Peggy McGaugh
+Candidate	Paula Brown	Paula Brown
+Candidate	Patty Lewis	Patty Lewis
+Candidate	Nola Wood	Nola Wood
+Candidate	Nick Schroer	Nick Schroer
+Candidate	Neil Smith	Neil Smith
+Candidate	Neal Barnes	Neal Barnes
+Candidate	Nancy J. Ragan	Nancy J. Ragan
+Candidate	Mitch Boggs	Mitch Boggs
+Candidate	Mindi Smith	Mindi Smith
+Candidate	Mike Person	Mike Person
+Candidate	Mike Lind	Mike Lind
+Candidate	Mike Haffner	Mike Haffner
+Candidate	Mike Englert	Mike Englert
+Candidate	Mike Copeland	Mike Copeland
+Candidate	Michael L. Johnson	Michael L. Johnson
+Candidate	Michael Davis	Michael Davis
+Candidate	Michael Burton	Michael Burton
+Candidate	Michael A. O Donnell	Michael A. O Donnell
+Candidate	Mary Elizabeth Coleman	Mary Elizabeth Coleman
+Candidate	Martha Stevens	Martha Stevens
+Candidate	Marlon Anderson	Marlon Anderson
+Candidate	Marlene Terry	Marlene Terry
+Candidate	Mark Ellebracht	Mark Ellebracht
+Candidate	Mark A. Sharp	Mark A. Sharp
+Candidate	Maggie Nurrenbern	Maggie Nurrenbern
+Candidate	Luke Barber	Luke Barber
+Candidate	Louis Riggs	Louis Riggs
+Candidate	Lisa Rees	Lisa Rees
+Candidate	Lee Ann Pitman	Lee Ann Pitman
+Candidate	Lane Roberts	Lane Roberts
+Candidate	LaKeySha Bosley	LaKeySha Bosley
+Candidate	LaDonna Appelbaum	LaDonna Appelbaum
+Candidate	Kurtis Gregory	Kurtis Gregory
+Candidate	Kip Kendrick	Kip Kendrick
+Candidate	Kimberly-Ann Collins	Kimberly-Ann Collins
+Candidate	Kevin Windham Jr.	Kevin Windham Jr.
+Candidate	Keri Ingle	Keri Ingle
+Candidate	Kent Haden	Kent Haden
+Candidate	Kari L. Chesney	Kari L. Chesney
+Candidate	Karen Planalp	Karen Planalp
+Candidate	Karan Pujji	Karan Pujji
+Candidate	Justin S. Hill	Justin S. Hill
+Candidate	Joshua Shackles	Joshua Shackles
+Candidate	Joshua Dunne	Joshua Dunne
+Candidate	Josh Hurlbert	Josh Hurlbert
+Candidate	Jon Patterson	Jon Patterson
+Candidate	John Simmons	John Simmons
+Candidate	John Kiehne	John Kiehne
+Candidate	John D. Wiemann	John D. Wiemann
+Candidate	John D. Boyd Jr.	John D. Boyd Jr.
+Candidate	Joe Adams	Joe Adams
+Candidate	Jo Doll	Jo Doll
+Candidate	Jim Murphy	Jim Murphy
+Candidate	Jessica DeVoto	Jessica DeVoto
+Candidate	Jerry Adzima	Jerry Adzima
+Candidate	Jerome Barnes	Jerome Barnes
+Candidate	Jeff Porter	Jeff Porter
+Candidate	Jean Pretto	Jean Pretto
+Candidate	Jay Mosley	Jay Mosley
+Candidate	James Williams	James Williams
+Candidate	James Shackelford	James Shackelford
+Candidate	Jacque Sample	Jacque Sample
+Candidate	J. Eggleston	J. Eggleston
+Candidate	Ingrid Burnett	Ingrid Burnett
+Candidate	Ian Mackey	Ian Mackey
+Candidate	Herman Morse	Herman Morse
+Candidate	Helena Webb	Helena Webb
+Candidate	Hardy Billington	Hardy Billington
+Candidate	Gretchen Bangert	Gretchen Bangert
+Candidate	Greg Sharpe	Greg Sharpe
+Candidate	Gabriel Jones	Gabriel Jones
+Candidate	Erica Hoffman	Erica Hoffman
+Candidate	Eric Holmes	Eric Holmes
+Candidate	Emily Weber	Emily Weber
+Candidate	Ed Lewis	Ed Lewis
+Candidate	Doug Richey	Doug Richey
+Candidate	Doug Clemens	Doug Clemens
+Candidate	Dottie Bailey	Dottie Bailey
+Candidate	Donna M.C. Baringer	Donna M.C. Baringer
+Candidate	Don Rone	Don Rone
+Candidate	Dirk Deaton	Dirk Deaton
+Candidate	Derek Grier	Derek Grier
+Candidate	Dean VanSchoiack	Dean VanSchoiack
+Candidate	Dean Plocher	Dean Plocher
+Candidate	David Paul Evans	David Paul Evans
+Candidate	David J Gregory	David J Gregory
+Candidate	Dave Griffith	Dave Griffith
+Candidate	Darren L. Grant	Darren L. Grant
+Candidate	Darrell Atchison	Darrell Atchison
+Candidate	Danny Busick	Danny Busick
+Candidate	Daniel Karam	Daniel Karam
+Candidate	Dan Stacy	Dan Stacy
+Candidate	Dan Houx	Dan Houx
+Candidate	Dale Speelman	Dale Speelman
+Candidate	Connie Simmons	Connie Simmons
+Candidate	Colby Murphy	Colby Murphy
+Candidate	Cody Smith	Cody Smith
+Candidate	Cindy Berne	Cindy Berne
+Candidate	Christine Hyman	Christine Hyman
+Candidate	Chris Sander	Chris Sander
+Candidate	Chris Hager	Chris Hager
+Candidate	Chris Brown	Chris Brown
+Candidate	Cheri Toalson Reisch	Cheri Toalson Reisch
+Candidate	Charles Chuck Basye	Charles Chuck Basye
+Candidate	Chad Perkins	Chad Perkins
+Candidate	Cameron Pack	Cameron Pack
+Candidate	Bruce Sassmann	Bruce Sassmann
+Candidate	Bruce DeGroot	Bruce DeGroot
+Candidate	Bridget Walsh Moore	Bridget Walsh Moore
+Candidate	Brian H. Seitz	Brian H. Seitz
+Candidate	Brenda Shields	Brenda Shields
+Candidate	Brenda McKinney	Brenda McKinney
+Candidate	Brandt Vircks	Brandt Vircks
+Candidate	Brady Lee ODell	Brady Lee ODell
+Candidate	Bradley Pollitt	Bradley Pollitt
+Candidate	Bob Bromley	Bob Bromley
+Candidate	Bill Otto	Bill Otto
+Candidate	Bill Heisse	Bill Heisse
+Candidate	Bill Falkner	Bill Falkner
+Candidate	Bill E. Kidd	Bill E. Kidd
+Candidate	Ben Baker	Ben Baker
+Candidate	Barbara Phifer	Barbara Phifer
+Candidate	Ashley Bland Manlove	Ashley Bland Manlove
+Candidate	Ashley Aune	Ashley Aune
+Candidate	Art Schaaf	Art Schaaf
+Candidate	Annette Turnbaugh	Annette Turnbaugh
+Candidate	Anne Landers	Anne Landers
+Candidate	Ann L Zimpfer	Ann L Zimpfer
+Candidate	Angela Thomas	Angela Thomas
+Candidate	Andrew Miller	Andrew Miller
+Candidate	Andrew McDaniel	Andrew McDaniel
+Candidate	Andrew Bolin	Andrew Bolin
+Candidate	Allen Andrews	Allen Andrews
+Candidate	Alan Gray	Alan Gray
+Candidate	Adrian Plank	Adrian Plank
+Candidate	Adam Schwadron	Adam Schwadron
+Candidate	Adam Schnelting	Adam Schnelting
+Candidate	Aaron Hailey	Aaron Hailey
+Candidate	Aaron D. Griesheimer	Aaron D. Griesheimer
+Candidate	Aaron C. Mais	Aaron C. Mais
+Candidate	Aaliyah Bailey	Aaliyah Bailey
 ReportingUnit	Missouri;Adair County	Adair
 ReportingUnit	Missouri;Andrew County	Andrew
 ReportingUnit	Missouri;Atchison County	Atchison

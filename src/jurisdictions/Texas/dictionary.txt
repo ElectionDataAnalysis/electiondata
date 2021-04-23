@@ -4453,6 +4453,7 @@ Candidate	Ross Lynn Leone	Ross Lynn Leone
 Candidate	Vanessa S. Tijerina	Vanessa S. Tijerina
 Candidate	Velma A. Arellano	Velma A. Arellano
 Candidate	Juan 'Chuy' Hinojosa	"Juan ""Chuy"" Hinojosa"
+Candidate	Juan 'Chuy' Hinojosa	'Juan ''Chuy'' Hinojosa'
 Candidate	Richard C. Terrell	Richard C. Terrell
 Candidate	Carlos Omar Garcia	Carlos Omar Garcia
 Candidate	Mike Lang	Mike Lang
@@ -5998,6 +5999,7 @@ Candidate	Maria Y. Berry	Maria Y. Berry
 Candidate	Jay Johnson	Jay Johnson
 Candidate	William J. Booher	William J. Booher
 Candidate	Milinda Morris	Milinda Morris
+Candidate	Peter P. 'Pete' Flores	'Peter P. ''Pete'' Flores'
 Candidate	Peter P. 'Pete' Flores	"Peter P. ""Pete"" Flores"
 Candidate	Judy Cutright	Judy Cutright
 Candidate	Frank Pomeroy	Frank Pomeroy

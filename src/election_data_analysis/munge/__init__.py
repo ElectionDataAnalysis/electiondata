@@ -371,8 +371,12 @@ def replace_raw_with_internal_ids(
     )
 
     # identify unmatched
-    unmatched = working[working["cdf_internal_name"].isnull()]
-    unmatched_raw = sorted(unmatched[f"{element}_raw"].unique(), reverse=True)
+    try:
+        unmatched = working[working["cdf_internal_name"].isnull()]
+        unmatched_raw = sorted(unmatched[f"{element}_raw"].unique(), reverse=True)
+        unmatched_raw = [x for x in unmatched_raw if x != ""]
+    except Exception as exc:
+        pass
     if len(unmatched_raw) > 0 and element != "BallotMeasureContest":
         unmatched_str = "\n".join(unmatched_raw)
         e = f"\n{element}s not found in dictionary.txt:\n{unmatched_str}"
