@@ -1549,24 +1549,16 @@ def set_and_fill_headers(
 ) -> pd.DataFrame:
     # standardize the index  to 0, 1, 2, ...
     df = df_in.reset_index(drop=True)
-    # rename any leading blank header entries to match convention of pd.read_excel
-    # and any trailing to closest non-blank value to left
-    # TODO once headers are removed, will need to revert the non-blanks
+    # rename all blank header entries to match convention of pd.read_excel
+    #
+    #
     if header_list:
-        for i in header_list:
-            prev_non_blank = None
-            for j in df.columns:
-                if df.loc[i, j] == "":
-                    if prev_non_blank:
-                        df.loc[i, j] = prev_non_blank
-                    else:
-                        df.loc[i, j] = f"Unnamed: {j}_level_{i}"
-                else:
-                    prev_non_blank = df.loc[i, j]
+        # fill blanks to match pandas standard
+        df = m.fill_blanks_as_pandas(df, header_list)
         # set column index to default
         df.columns = range(df.shape[1])
         # drop empties
-        df = disambiguate_empty_cols(df,drop_empties=drop_empties,start=max(header_list) + 1)
+        df = disambiguate_empty_cols(df, drop_empties=drop_empties, start=max(header_list) + 1)
         # push appropriate rows into headers
         df = df.T.set_index(header_list).T
         # drop unused header rows

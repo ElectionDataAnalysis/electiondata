@@ -11,8 +11,11 @@ multi_block=yes
 [munge formulas]
 CandidateContest=<sheet_name> <row_0>
 ReportingUnit=<County>
-Candidate={<count_header_2>,^(.*)\(} <count_header_1>
-Party={<count_header_2>,\((.+)\)$}
+Candidate={<count_header_2>,^([^\(\)]*)(?:(?:\(.*\)))?$} <count_header_1>
+Party={<count_header_2>,^(?:[^\(\)]*)((?:\(.*\))?)$}
 
 [ignore]
 ReportingUnit=Total
+
+#Candidate={<header_2>,^([^\(\)]*)(?:(?:\(.*\)))?$} {<header_1>,^(?:\*\*|)(.*)$}
+#Party={<header_2>,^(?:[^\(\)]*)((?:\(.*\))?)$}

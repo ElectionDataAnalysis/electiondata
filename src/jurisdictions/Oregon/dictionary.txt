@@ -219,6 +219,7 @@ Party	Independent Party	INDEPENDENT, PROGRESSIVE, PACIFIC GREEN
 Party	Republican Party	REPUBLICAN, LIBERTARIAN
 Party	None Party	NONPARTISAN INCUMBENT
 Party	None Party	NONPARTISAN
+Party	Working Families Party	(WF)
 ReportingUnit	Oregon;OR House District 1	Oregon;OR House District 1
 ReportingUnit	Oregon;OR House District 2	Oregon;OR House District 2
 ReportingUnit	Oregon;OR House District 3	Oregon;OR House District 3
@@ -2123,8 +2124,81 @@ Candidate	Tom Beene	Tom Beene
 Candidate	Jim White	Jim White
 Candidate	Daniel Fraser	Daniel Fraser
 Candidate	Joseph R Biden	Joseph R Biden
-Candidate	Misc	Unnamed: 6_level_1 Misc.
-Candidate	Misc	Unnamed: 5_level_1 Misc.
-Candidate	Misc	Unnamed: 4_level_1 Misc.
-Candidate	Misc	Unnamed: 3_level_1 Misc.
-Candidate	Partys not found in dictionary.txt	Partys not found in dictionary.txt
+Candidate	Zach Hudson	Zach **Hudson
+Candidate	Wlnsvey E Campos	Wlnsvey E **Campos
+Candidate	Vikki Breese-Iverson	Vikki **Breese-Iverson
+Candidate	Tina Kotek	Tina **Kotek
+Candidate	Teresa Alonso Leon	Teresa **Alonso Leon
+Candidate	Tawna Sanchez	Tawna **Sanchez
+Candidate	Suzanne Weber	Suzanne **Weber
+Candidate	Susan McLain	Susan **McLain
+Candidate	Sheri Schouten	Sheri **Schouten
+Candidate	Shelly Boshart Davis	Shelly Boshart **Davis
+Candidate	Ron Noble	Ron **Noble
+Candidate	Rob Nosse	Rob **Nosse
+Candidate	Ricki Ruiz	Ricki **Ruiz
+Candidate	Rick Lewis	Rick **Lewis
+Candidate	Raquel Moore-Green	Raquel **Moore-Green
+Candidate	Rachel Prusak	Rachel **Prusak
+Candidate	Paul R Holvey	Paul R **Holvey
+Candidate	Paul Evans	Paul **Evans
+Candidate	Pam Marsh	Pam **Marsh
+Candidate	Nancy Nathanson	Nancy **Nathanson
+Candidate	Misc.	Misc.
+Candidate	Mike Nearman	Mike **Nearman
+Candidate	Maxine E Dexter	Maxine E **Dexter
+Candidate	Marty Wilde	Marty **Wilde
+Candidate	Mark W Meek	Mark W **Meek
+Candidate	Mark Owens	Mark **Owens
+Candidate	Lisa Reynolds	Lisa **Reynolds
+Candidate	Lily Morgan	Lily **Morgan
+Candidate	Kim Wallan	Kim **Wallan
+Candidate	Khanh Pham	Khanh **Pham
+Candidate	Ken Helm	Ken **Helm
+Candidate	Karin Power	Karin **Power
+Candidate	Julie Fahey	Julie **Fahey
+Candidate	John Lively	John **Lively
+Candidate	Jeff Reardon	Jeff **Reardon
+Candidate	Jason Kropf	Jason **Kropf
+Candidate	Janelle S Bynum	Janelle S **Bynum
+Candidate	Janeen Sollman	Janeen **Sollman
+Candidate	Jami Cate	Jami **Cate
+Candidate	Jack L ESP	Jack L ESP
+Candidate	Jack Zika	Jack **Zika
+Candidate	Greg Smith	Greg **Smith
+Candidate	Gary Leif	Gary **Leif
+Candidate	E Werner Reschke	E Werner **Reschke
+Candidate	Duane A Stark	Duane A **Stark
+Candidate	Diego Hernandez	Diego **Hernandez
+Candidate	David Brock Smith	David Brock **Smith
+Candidate	David Gomberg	David **Gomberg
+Candidate	Daniel G Bonham	Daniel G **Bonham
+Candidate	Dan Rayfield	Dan **Rayfield
+Candidate	Dacia Grayber	Dacia **Grayber
+Candidate	Courtney Neron	Courtney **Neron
+Candidate	Christine Drazan	Christine **Drazan
+Candidate	Cedric Hayden	Cedric **Hayden
+Candidate	Brian Clem	Brian **Clem
+Candidate	Brad Witt	Brad **Witt
+Candidate	Boomer Wright	Boomer **Wright
+Candidate	Bobby Levy	Bobby **Levy
+Candidate	Bill Post	Bill **Post
+Candidate	Barbara Smith Warner	Barbara **Smith Warner
+Candidate	Anna Williams	Anna **Williams
+Candidate	Andrea Salinas	Andrea **Salinas
+Candidate	Tim Knopp	Tim **Knopp
+Candidate	Michael Dembrow	Michael **Dembrow
+Candidate	Lynn P Findley	Lynn P **Findley
+Candidate	Lew Frederick	Lew **Frederick
+Candidate	Kathleen Taylor	Kathleen **Taylor
+Candidate	Kate Lieber	Kate **Lieber
+Candidate	Ginny Burdick	Ginny **Burdick
+Candidate	Fred Frank Girod	Fred Frank **Girod
+Candidate	Dick Anderson	Dick **Anderson
+Candidate	Dennis Linthicum	Dennis **Linthicum
+Candidate	Deb Patterson	Deb **Patterson
+Candidate	Dallas Heard	Dallas **Heard
+Candidate	Chris Gorsek	Chris **Gorsek
+Candidate	Brian J Boquist	Brian J **Boquist
+Candidate	Bill Hansell	Bill **Hansell
+Candidate	Art Robinson	Art **Robinson

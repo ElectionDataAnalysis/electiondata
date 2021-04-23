@@ -14,6 +14,7 @@ from sqlalchemy.orm.session import Session
 # constants
 default_encoding = "utf_8"
 brace_pattern = re.compile(r"{<([^,]*)>,([^{}]*|[^{}]*{[^{}]*}[^{}]*)}")
+pandas_default_pattern = r"^Unnamed: (\d+)_level_(\d+)$"
 
 # common data format file types need no extra parameters
 no_param_file_types = {"nist_v2_xml"}
@@ -1677,37 +1678,45 @@ def check_formula(formula: str) -> Optional[str]:
     return err_str
 
 
+def fill_blanks_as_pandas(df: pd.DataFrame, row_list: List[int]) -> pd.DataFrame:
+    df_new = df.copy()
+    for i in row_list:
+        for j in range(df_new.shape[1]):
+            if df_new.loc[i, j] == "":
+                df_new.loc[i, j] = f"Unnamed: {j}_level_{i}"
+    return df_new
+
+
+
 def get_count_cols_by_name(
         df: pd.DataFrame, p: Dict[str, Any], munger_name: str,
         use_rows: Optional[List[int]] = None,
 ) -> (List[str], Optional[dict]):
     err = None
+    df_new = df.copy()
     # define count columns
     if p["count_location"] == "by_number":
         if use_rows:
             # use default index 0, 1, 2,...
-            df.reset_index(inplace=True, drop=True)
-            # to match how pandas handles indices, forward-fill the header rows
-            for i in use_rows:
-                for j in range(df.shape[1] - 1):
-                    if df.loc[i, j+1] == "":
-                        df.loc[i, j+1] = df.loc[i, j]
+            df_new.reset_index(inplace=True, drop=True)
+            # to match how pandas handles indices, fill blanks with Unnamed
+            df_new = fill_blanks_as_pandas(df_new, use_rows)
             # if there is more than one header row in use_rows, need multi-index of tuples
             if len(use_rows) > 1:
                 count_columns = list({
-                    tuple(df.loc[use_rows,idx]) for idx in p["count_column_numbers"] if idx < df.shape[1]
+                    tuple(df_new.loc[use_rows, idx]) for idx in p["count_column_numbers"] if idx < df_new.shape[1]
                 })
             else:
                 count_columns = list({
-                    df.loc[use_rows[0],idx] for idx in p["count_column_numbers"] if idx < df.shape[1]
+                    df_new.loc[use_rows[0], idx] for idx in p["count_column_numbers"] if idx < df_new.shape[1]
                 })
 
         else:
             count_columns = [
-                df.columns[idx] for idx in p["count_column_numbers"] if idx < df.shape[1]
+                df_new.columns[idx] for idx in p["count_column_numbers"] if idx < df_new.shape[1]
             ]
     elif p["count_location"] == "by_name":
-        if isinstance(df.columns, pd.MultiIndex):
+        if isinstance(df_new.columns, pd.MultiIndex):
             err = ui.add_new_error(
                 err,
                 "munger",
@@ -1715,7 +1724,7 @@ def get_count_cols_by_name(
                 "If there are multiple header rows, need to have count_location=by_number ",
             )
             return list(), err
-        count_columns = [c for c in p["count_fields_by_name"] if c in df.columns]
+        count_columns = [c for c in p["count_fields_by_name"] if c in df_new.columns]
     else:
         err = ui.add_new_error(
             err,
@@ -1896,11 +1905,10 @@ def to_standard_count_frame(
                         working, f"row_{row}", row_constants_by_sheet[sheet][row]
                     )
 
-            # rename any Unnamed: i_level_j to column_i if noncount header row is j
+            # in column names, rename any Unnamed: i_level_j to column_i if noncount header row is j
             if p["noncount_header_row"]:
-                unnamed_pattern = r"^Unnamed: (\d+)_level_(\d+)$"
                 for c in working.columns:
-                    numbers = re.findall(unnamed_pattern,c)
+                    numbers = re.findall(pandas_default_pattern,c)
                     # if c is of the form 'Unnamed: _level_j' where i is any integer and j is the noncount_header_row
                     if numbers:
                         try:
@@ -1912,7 +1920,6 @@ def to_standard_count_frame(
                         except ValueError:
                             # if anything crucial is not actually an integer, do nothing
                             pass
-
             # add sheet_name column
             working = add_constant_column(working, "sheet_name", sheet)
 
@@ -1934,6 +1941,9 @@ def to_standard_count_frame(
             working, bad_rows = clean_count_cols(
                 working, ["Count"], p["thousands_separator"]
             )
+
+            # clean Unnamed:... out of any values
+            working = blank_out(working, pandas_default_pattern)
 
             # append data from the nth dataframe to the standard-form dataframe
             ## NB: if df_list[n] fails it should not reach this statement
@@ -2331,3 +2341,14 @@ def remove_ignored_rows(df: pd.DataFrame, munger_path: str) -> pd.DataFrame:
         working = working[~working[f"{element}_raw"].isin(value_list)]
 
     return working
+
+
+def blank_out(df: pd.DataFrame, regex: str) -> pd.DataFrame:
+    p = re.compile(regex)
+    new = df.copy()
+    for c in df.columns:
+        try:
+            new[c] = df[c].str.replace(p, "")
+        except Exception:
+            pass
+    return new
