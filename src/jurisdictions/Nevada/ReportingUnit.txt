@@ -92,6 +92,7 @@ Nevada;Carson City County;407	precinct
 Nevada;Carson City County;409	precinct
 Nevada;Carson City County;411	precinct
 Nevada;Carson City County;997	precinct
+Nevada;Carson City County;998	precinct
 Nevada;Churchill County;Precinct 01	precinct
 Nevada;Churchill County;Precinct 02	precinct
 Nevada;Churchill County;Precinct 03	precinct
@@ -111,6 +112,7 @@ Nevada;Churchill County;Precinct 16	precinct
 Nevada;Churchill County;Precinct 17	precinct
 Nevada;Churchill County;Precinct 18	precinct
 Nevada;Churchill County;Precinct 19	precinct
+Nevada;Churchill County;Precinct 88	precinct
 Nevada;Churchill County;Precinct 99	precinct
 Nevada;Clark County;1038	precinct
 Nevada;Clark County;1039	precinct
@@ -1250,6 +1252,23 @@ Nevada;Clark County;9991	precinct
 Nevada;Clark County;9993	precinct
 Nevada;Clark County;9994	precinct
 Nevada;Clark County;9995	precinct
+Nevada;Clark County;9996	precinct
+Nevada;Clark County;7596	precinct
+Nevada;Clark County;7458	precinct
+Nevada;Clark County;6750	precinct
+Nevada;Clark County;6740	precinct
+Nevada;Clark County;6717	precinct
+Nevada;Clark County;6467	precinct
+Nevada;Clark County;5655	precinct
+Nevada;Clark County;5599	precinct
+Nevada;Clark County;5590	precinct
+Nevada;Clark County;5563	precinct
+Nevada;Clark County;5561	precinct
+Nevada;Clark County;3779	precinct
+Nevada;Clark County;3778	precinct
+Nevada;Clark County;3588	precinct
+Nevada;Clark County;3587	precinct
+Nevada;Clark County;1161	precinct
 Nevada;Douglas County;01-1 - Centerville	precinct
 Nevada;Douglas County;01-2 - Centerville	precinct
 Nevada;Douglas County;01-Centerville	precinct
@@ -1324,6 +1343,7 @@ Nevada;Douglas County;40-Kingsbury	precinct
 Nevada;Douglas County;41-1 - Daggett	precinct
 Nevada;Douglas County;41-2 - Daggett	precinct
 Nevada;Douglas County;41-Daggett	precinct
+Nevada;Douglas County;Precinct 88	precinct
 Nevada;Douglas County;Precinct 99	precinct
 Nevada;Elko County;Precinct 1	precinct
 Nevada;Elko County;Precinct 10	precinct
@@ -1366,17 +1386,20 @@ Nevada;Elko County;Precinct 6	precinct
 Nevada;Elko County;Precinct 7	precinct
 Nevada;Elko County;Precinct 8	precinct
 Nevada;Elko County;Precinct 9	precinct
+Nevada;Elko County;Precinct 88	precinct
 Nevada;Elko County;Precinct 99	precinct
 Nevada;Esmeralda County;Precinct 1	precinct
 Nevada;Esmeralda County;Precinct 2	precinct
 Nevada;Esmeralda County;Precinct 3	precinct
 Nevada;Esmeralda County;Precinct 4	precinct
 Nevada;Esmeralda County;Precinct 5	precinct
+Nevada;Esmeralda County;Precinct 88	precinct
 Nevada;Esmeralda County;Precinct 99	precinct
 Nevada;Eureka County;Precinct 1	precinct
 Nevada;Eureka County;Precinct 2	precinct
 Nevada;Eureka County;Precinct 3	precinct
 Nevada;Eureka County;Precinct 4	precinct
+Nevada;Eureka County;Precinct 88	precinct
 Nevada;Eureka County;Precinct 99	precinct
 Nevada;Humboldt County;PRECINCT 1	precinct
 Nevada;Humboldt County;PRECINCT 10	precinct
@@ -1399,6 +1422,7 @@ Nevada;Humboldt County;PRECINCT 6	precinct
 Nevada;Humboldt County;PRECINCT 7	precinct
 Nevada;Humboldt County;PRECINCT 8	precinct
 Nevada;Humboldt County;PRECINCT 9	precinct
+Nevada;Humboldt County;PRECINCT 88	precinct
 Nevada;Humboldt County;PRECINCT 99	precinct
 Nevada;Lander County;Argenta 01	precinct
 Nevada;Lander County;Argenta 02	precinct
@@ -1408,6 +1432,7 @@ Nevada;Lander County;Argenta 05	precinct
 Nevada;Lander County;Austin 07	precinct
 Nevada;Lander County;Gillman Springs Ranch 08	precinct
 Nevada;Lander County;Kingston 09	precinct
+Nevada;Lander County;Precinct 88	precinct
 Nevada;Lander County;Precinct 99	precinct
 Nevada;Lander County;Southern Lander County 06	precinct
 Nevada;Lincoln County;1 - ALAMO	precinct
@@ -1417,6 +1442,9 @@ Nevada;Lincoln County;2 - CALIENTE-1	precinct
 Nevada;Lincoln County;3 - PANACA	precinct
 Nevada;Lincoln County;4 - PIOCHE	precinct
 Nevada;Lincoln County;5 - RACHEL	precinct
+Nevada;Lincoln County;233 - CALIENTE NORTH	precinct
+Nevada;Lincoln County;236 - CALIENTE SOUTH	precinct
+Nevada;Lincoln County;PRECINCT 88	precinct
 Nevada;Lincoln County;PRECINCT 99	precinct
 Nevada;Lyon County;01_East Mason Valley 1	precinct
 Nevada;Lyon County;02_East Mason Valley 2	precinct
@@ -1486,6 +1514,7 @@ Nevada;Lyon County;39_Fernley 13 - out of city	precinct
 Nevada;Lyon County;40_Fernley 14	precinct
 Nevada;Lyon County;40_Fernley 14- in city	precinct
 Nevada;Lyon County;40_Fernley 14- out of city	precinct
+Nevada;Lyon County;Precinct 88	precinct
 Nevada;Lyon County;Precinct 99	precinct
 Nevada;Lyon County;Precinct 99-0	precinct
 Nevada;Lyon County;Precinct 99-1	precinct
@@ -1501,6 +1530,7 @@ Nevada;Mineral County;PRECINCT 6	precinct
 Nevada;Mineral County;PRECINCT 7	precinct
 Nevada;Mineral County;PRECINCT 8	precinct
 Nevada;Mineral County;PRECINCT 9	precinct
+Nevada;Mineral County;PRECINCT 88	precinct
 Nevada;Mineral County;PRECINCT 99	precinct
 Nevada;Nye County;AMARGOSA VLY 06	precinct
 Nevada;Nye County;BEATTY 01	precinct
@@ -1530,6 +1560,7 @@ Nevada;Nye County;PAHRUMP 29	precinct
 Nevada;Nye County;PAHRUMP 30	precinct
 Nevada;Nye County;PAHRUMP 31	precinct
 Nevada;Nye County;PAHRUMP 32	precinct
+Nevada;Nye County;PRECINCT 88	precinct
 Nevada;Nye County;Precinct 99	precinct
 Nevada;Nye County;ROUND MTN 12	precinct
 Nevada;Nye County;SMOKY VALLEY 35	precinct
@@ -1542,6 +1573,7 @@ Nevada;Pershing County;PRECINCT 4	precinct
 Nevada;Pershing County;PRECINCT 5	precinct
 Nevada;Pershing County;PRECINCT 6	precinct
 Nevada;Pershing County;PRECINCT 7	precinct
+Nevada;Pershing County;PRECINCT 88	precinct
 Nevada;Pershing County;PRECINCT 99	precinct
 Nevada;Storey County;PRECINCT 1	precinct
 Nevada;Storey County;PRECINCT 10	precinct
@@ -1558,6 +1590,7 @@ Nevada;Storey County;PRECINCT 6	precinct
 Nevada;Storey County;PRECINCT 7	precinct
 Nevada;Storey County;PRECINCT 8	precinct
 Nevada;Storey County;PRECINCT 9	precinct
+Nevada;Storey County;PRECINCT 88	precinct
 Nevada;Storey County;PRECINCT 99	precinct
 Nevada;Washoe County;100000	precinct
 Nevada;Washoe County;100200	precinct
@@ -2116,6 +2149,573 @@ Nevada;Washoe County;956100	precinct
 Nevada;Washoe County;956200	precinct
 Nevada;Washoe County;970000	precinct
 Nevada;Washoe County;990000	precinct
+Nevada;Washoe County;SPARKS 9559 (MP)	precinct
+Nevada;Washoe County;SPARKS 9558 (MP)	precinct
+Nevada;Washoe County;SPARKS 9554 (MP)	precinct
+Nevada;Washoe County;SPARKS 9553 (MP)	precinct
+Nevada;Washoe County;SPARKS 9552 (MP)	precinct
+Nevada;Washoe County;SPARKS 9551 (MP)	precinct
+Nevada;Washoe County;SPARKS 9550 (MP)	precinct
+Nevada;Washoe County;SPARKS 9549 (MP)	precinct
+Nevada;Washoe County;SPARKS 9548 (MP)	precinct
+Nevada;Washoe County;SPARKS 9547 (MP)	precinct
+Nevada;Washoe County;SPARKS 9532 (MP)	precinct
+Nevada;Washoe County;SPARKS 9516 (MP)	precinct
+Nevada;Washoe County;SPARKS 9428 (MP)	precinct
+Nevada;Washoe County;SPARKS 9427 (MP)	precinct
+Nevada;Washoe County;SPARKS 9310 (MP)	precinct
+Nevada;Washoe County;SPARKS 9304 (MP)	precinct
+Nevada;Washoe County;SPARKS 9248 (MP)	precinct
+Nevada;Washoe County;SPARKS 7599 (MP)	precinct
+Nevada;Washoe County;SPARKS 7598 (MP)	precinct
+Nevada;Washoe County;SPARKS 7597 (MP)	precinct
+Nevada;Washoe County;SPARKS 7595 (MP)	precinct
+Nevada;Washoe County;SPARKS 7594 (MP)	precinct
+Nevada;Washoe County;SPARKS 7593	precinct
+Nevada;Washoe County;SPARKS 7592	precinct
+Nevada;Washoe County;SPARKS 7591 (MP)	precinct
+Nevada;Washoe County;SPARKS 7588	precinct
+Nevada;Washoe County;SPARKS 7585	precinct
+Nevada;Washoe County;SPARKS 7584	precinct
+Nevada;Washoe County;SPARKS 7583	precinct
+Nevada;Washoe County;SPARKS 7582	precinct
+Nevada;Washoe County;SPARKS 7579 (MP)	precinct
+Nevada;Washoe County;SPARKS 7578	precinct
+Nevada;Washoe County;SPARKS 7577	precinct
+Nevada;Washoe County;SPARKS 7576	precinct
+Nevada;Washoe County;SPARKS 7573	precinct
+Nevada;Washoe County;SPARKS 7565	precinct
+Nevada;Washoe County;SPARKS 7563	precinct
+Nevada;Washoe County;SPARKS 7562 (MP)	precinct
+Nevada;Washoe County;SPARKS 7550	precinct
+Nevada;Washoe County;SPARKS 7534	precinct
+Nevada;Washoe County;SPARKS 7533	precinct
+Nevada;Washoe County;SPARKS 7518 (MP)	precinct
+Nevada;Washoe County;SPARKS 7517	precinct
+Nevada;Washoe County;SPARKS 7514	precinct
+Nevada;Washoe County;SPARKS 7513	precinct
+Nevada;Washoe County;SPARKS 7512	precinct
+Nevada;Washoe County;SPARKS 7509	precinct
+Nevada;Washoe County;SPARKS 7505	precinct
+Nevada;Washoe County;SPARKS 7504	precinct
+Nevada;Washoe County;SPARKS 7503	precinct
+Nevada;Washoe County;SPARKS 7502	precinct
+Nevada;Washoe County;SPARKS 7501	precinct
+Nevada;Washoe County;SPARKS 7500	precinct
+Nevada;Washoe County;SPARKS 7433	precinct
+Nevada;Washoe County;SPARKS 7431	precinct
+Nevada;Washoe County;SPARKS 7430	precinct
+Nevada;Washoe County;SPARKS 7428 (MP)	precinct
+Nevada;Washoe County;SPARKS 7426	precinct
+Nevada;Washoe County;SPARKS 7425	precinct
+Nevada;Washoe County;SPARKS 7424	precinct
+Nevada;Washoe County;SPARKS 7418	precinct
+Nevada;Washoe County;SPARKS 7417	precinct
+Nevada;Washoe County;SPARKS 7416	precinct
+Nevada;Washoe County;SPARKS 7415	precinct
+Nevada;Washoe County;SPARKS 7414	precinct
+Nevada;Washoe County;SPARKS 7413	precinct
+Nevada;Washoe County;SPARKS 7410	precinct
+Nevada;Washoe County;SPARKS 7408	precinct
+Nevada;Washoe County;SPARKS 7407	precinct
+Nevada;Washoe County;SPARKS 7406	precinct
+Nevada;Washoe County;SPARKS 7404	precinct
+Nevada;Washoe County;SPARKS 7403	precinct
+Nevada;Washoe County;SPARKS 7402	precinct
+Nevada;Washoe County;SPARKS 7400 (MP)	precinct
+Nevada;Washoe County;SPARKS 7318	precinct
+Nevada;Washoe County;SPARKS 7317	precinct
+Nevada;Washoe County;SPARKS 7316	precinct
+Nevada;Washoe County;SPARKS 7315	precinct
+Nevada;Washoe County;SPARKS 7314	precinct
+Nevada;Washoe County;SPARKS 7313	precinct
+Nevada;Washoe County;SPARKS 7312	precinct
+Nevada;Washoe County;SPARKS 7309	precinct
+Nevada;Washoe County;SPARKS 7308	precinct
+Nevada;Washoe County;SPARKS 7306	precinct
+Nevada;Washoe County;SPARKS 7304	precinct
+Nevada;Washoe County;SPARKS 6531 MP	precinct
+Nevada;Washoe County;SPARKS 6530 (MP)	precinct
+Nevada;Washoe County;SPARKS 6529 (MP)	precinct
+Nevada;Washoe County;SPARKS 6528 (MP)	precinct
+Nevada;Washoe County;SPARKS 6527 (MP)	precinct
+Nevada;Washoe County;SPARKS 6526	precinct
+Nevada;Washoe County;SPARKS 6525	precinct
+Nevada;Washoe County;SPARKS 6524	precinct
+Nevada;Washoe County;SPARKS 6523	precinct
+Nevada;Washoe County;SPARKS 6522	precinct
+Nevada;Washoe County;SPARKS 6521	precinct
+Nevada;Washoe County;SPARKS 6520	precinct
+Nevada;Washoe County;SPARKS 6519	precinct
+Nevada;Washoe County;SPARKS 6516	precinct
+Nevada;Washoe County;SPARKS 6514	precinct
+Nevada;Washoe County;SPARKS 6513	precinct
+Nevada;Washoe County;SPARKS 6511	precinct
+Nevada;Washoe County;SPARKS 6508	precinct
+Nevada;Washoe County;SPARKS 6503	precinct
+Nevada;Washoe County;SPARKS 6501	precinct
+Nevada;Washoe County;SPARKS 6500	precinct
+Nevada;Washoe County;SPARKS 6427 (MP)	precinct
+Nevada;Washoe County;SPARKS 6425	precinct
+Nevada;Washoe County;SPARKS 6423	precinct
+Nevada;Washoe County;SPARKS 6422	precinct
+Nevada;Washoe County;SPARKS 6418	precinct
+Nevada;Washoe County;SPARKS 6416	precinct
+Nevada;Washoe County;SPARKS 6415	precinct
+Nevada;Washoe County;SPARKS 6414	precinct
+Nevada;Washoe County;SPARKS 6413	precinct
+Nevada;Washoe County;SPARKS 6411	precinct
+Nevada;Washoe County;SPARKS 6405	precinct
+Nevada;Washoe County;SPARKS 6403	precinct
+Nevada;Washoe County;SPARKS 6400	precinct
+Nevada;Washoe County;SPARKS 6320	precinct
+Nevada;Washoe County;SPARKS 6319	precinct
+Nevada;Washoe County;SPARKS 6318	precinct
+Nevada;Washoe County;SPARKS 6317 (MP)	precinct
+Nevada;Washoe County;SPARKS 6314	precinct
+Nevada;Washoe County;SPARKS 6313	precinct
+Nevada;Washoe County;SPARKS 6311	precinct
+Nevada;Washoe County;SPARKS 6310	precinct
+Nevada;Washoe County;SPARKS 6308	precinct
+Nevada;Washoe County;SPARKS 6307	precinct
+Nevada;Washoe County;SPARKS 6306	precinct
+Nevada;Washoe County;SPARKS 6303 (MP)	precinct
+Nevada;Washoe County;SPARKS 6302	precinct
+Nevada;Washoe County;SPARKS 6301	precinct
+Nevada;Washoe County;SPARKS 6300	precinct
+Nevada;Washoe County;SPARKS 6218 (MP)	precinct
+Nevada;Washoe County;SPARKS 6217 (MP)	precinct
+Nevada;Washoe County;SPARKS 6216	precinct
+Nevada;Washoe County;SPARKS 6214	precinct
+Nevada;Washoe County;SPARKS 6213	precinct
+Nevada;Washoe County;SPARKS 6212	precinct
+Nevada;Washoe County;SPARKS 6211	precinct
+Nevada;Washoe County;SPARKS 6210	precinct
+Nevada;Washoe County;SPARKS 6209	precinct
+Nevada;Washoe County;SPARKS 6208	precinct
+Nevada;Washoe County;SPARKS 6207	precinct
+Nevada;Washoe County;SPARKS 6206	precinct
+Nevada;Washoe County;SPARKS 6205	precinct
+Nevada;Washoe County;SPARKS 6203	precinct
+Nevada;Washoe County;SPARKS 6202	precinct
+Nevada;Washoe County;SPARKS 6115	precinct
+Nevada;Washoe County;SPARKS 6114	precinct
+Nevada;Washoe County;SPARKS 6113	precinct
+Nevada;Washoe County;SPARKS 6111	precinct
+Nevada;Washoe County;SPARKS 6110	precinct
+Nevada;Washoe County;SPARKS 6109	precinct
+Nevada;Washoe County;SPARKS 6108	precinct
+Nevada;Washoe County;SPARKS 6107	precinct
+Nevada;Washoe County;SPARKS 6106	precinct
+Nevada;Washoe County;SPARKS 6105	precinct
+Nevada;Washoe County;SPARKS 6104 (MP)	precinct
+Nevada;Washoe County;SPARKS 6101	precinct
+Nevada;Washoe County;SPARKS 6100	precinct
+Nevada;Washoe County;RENO-VERDI 9562 (MP)	precinct
+Nevada;Washoe County;RENO-VERDI 9561 (MP)	precinct
+Nevada;Washoe County;RENO-VERDI 9560 (MP)	precinct
+Nevada;Washoe County;RENO-VERDI 9555 (MP)	precinct
+Nevada;Washoe County;RENO-VERDI 9546 (MP)	precinct
+Nevada;Washoe County;RENO-VERDI 9543 (MP)	precinct
+Nevada;Washoe County;RENO-VERDI 9542 (MP)	precinct
+Nevada;Washoe County;RENO-VERDI 9541 (MP)	precinct
+Nevada;Washoe County;RENO-VERDI 9540 (MP)	precinct
+Nevada;Washoe County;RENO-VERDI 9538 (MP)	precinct
+Nevada;Washoe County;RENO-VERDI 9533 (MP)	precinct
+Nevada;Washoe County;RENO-VERDI 9523 (MP)	precinct
+Nevada;Washoe County;RENO-VERDI 9520 (MP)	precinct
+Nevada;Washoe County;RENO-VERDI 9513 (MP)	precinct
+Nevada;Washoe County;RENO-VERDI 9311 (MP)	precinct
+Nevada;Washoe County;RENO-VERDI 9309 (MP)	precinct
+Nevada;Washoe County;RENO-VERDI 9308 (MP)	precinct
+Nevada;Washoe County;RENO-VERDI 9307 (MP)	precinct
+Nevada;Washoe County;RENO-VERDI 9303 (MP)	precinct
+Nevada;Washoe County;RENO-VERDI 9254 (MP)	precinct
+Nevada;Washoe County;RENO-VERDI 9253 (MP)	precinct
+Nevada;Washoe County;RENO-VERDI 9249 (MP)	precinct
+Nevada;Washoe County;RENO-VERDI 9244 (MP)	precinct
+Nevada;Washoe County;RENO-VERDI 9243 (MP)	precinct
+Nevada;Washoe County;RENO-VERDI 9211 (MP)	precinct
+Nevada;Washoe County;RENO-VERDI 9210 (MP)	precinct
+Nevada;Washoe County;RENO-VERDI 9208 (MP)	precinct
+Nevada;Washoe County;RENO-VERDI 9207 (MP)	precinct
+Nevada;Washoe County;RENO-VERDI 9202 (MP)	precinct
+Nevada;Washoe County;RENO-VERDI 9131 (MP)	precinct
+Nevada;Washoe County;RENO-VERDI 9130 (MP)	precinct
+Nevada;Washoe County;RENO-VERDI 9129 (MP)	precinct
+Nevada;Washoe County;RENO-VERDI 9128 (MP)	precinct
+Nevada;Washoe County;RENO-VERDI 9127 (MP)	precinct
+Nevada;Washoe County;RENO-VERDI 9126 (MP)	precinct
+Nevada;Washoe County;RENO-VERDI 9125 (MP)	precinct
+Nevada;Washoe County;RENO-VERDI 9124 (MP)	precinct
+Nevada;Washoe County;RENO-VERDI 9123 (MP)	precinct
+Nevada;Washoe County;RENO-VERDI 9122 (MP)	precinct
+Nevada;Washoe County;RENO-VERDI 9120 (MP)	precinct
+Nevada;Washoe County;RENO-VERDI 9115 (MP)	precinct
+Nevada;Washoe County;RENO-VERDI 9109 (MP)	precinct
+Nevada;Washoe County;RENO-VERDI 9107 (MP)	precinct
+Nevada;Washoe County;RENO-VERDI 9103 (MP)	precinct
+Nevada;Washoe County;RENO-VERDI 8505	precinct
+Nevada;Washoe County;RENO-VERDI 8502	precinct
+Nevada;Washoe County;RENO-VERDI 8500	precinct
+Nevada;Washoe County;RENO-VERDI 8400 (MP)	precinct
+Nevada;Washoe County;RENO-VERDI 8297	precinct
+Nevada;Washoe County;RENO-VERDI 8294	precinct
+Nevada;Washoe County;RENO-VERDI 8292 (MP)	precinct
+Nevada;Washoe County;RENO-VERDI 8291 (MP)	precinct
+Nevada;Washoe County;RENO-VERDI 8290	precinct
+Nevada;Washoe County;RENO-VERDI 8277	precinct
+Nevada;Washoe County;RENO-VERDI 8276	precinct
+Nevada;Washoe County;RENO-VERDI 8275 (MP)	precinct
+Nevada;Washoe County;RENO-VERDI 8273	precinct
+Nevada;Washoe County;RENO-VERDI 8271	precinct
+Nevada;Washoe County;RENO-VERDI 8265	precinct
+Nevada;Washoe County;RENO-VERDI 8264	precinct
+Nevada;Washoe County;RENO-VERDI 8263	precinct
+Nevada;Washoe County;RENO-VERDI 8261	precinct
+Nevada;Washoe County;RENO-VERDI 8260 (MP)	precinct
+Nevada;Washoe County;RENO-VERDI 8259 (MP)	precinct
+Nevada;Washoe County;RENO-VERDI 8256	precinct
+Nevada;Washoe County;RENO-VERDI 8254	precinct
+Nevada;Washoe County;RENO-VERDI 8253	precinct
+Nevada;Washoe County;RENO-VERDI 8250	precinct
+Nevada;Washoe County;RENO-VERDI 8247	precinct
+Nevada;Washoe County;RENO-VERDI 8245	precinct
+Nevada;Washoe County;RENO-VERDI 8240	precinct
+Nevada;Washoe County;RENO-VERDI 8238	precinct
+Nevada;Washoe County;RENO-VERDI 8237	precinct
+Nevada;Washoe County;RENO-VERDI 8236	precinct
+Nevada;Washoe County;RENO-VERDI 8235	precinct
+Nevada;Washoe County;RENO-VERDI 8234	precinct
+Nevada;Washoe County;RENO-VERDI 8233	precinct
+Nevada;Washoe County;RENO-VERDI 8232	precinct
+Nevada;Washoe County;RENO-VERDI 8227	precinct
+Nevada;Washoe County;RENO-VERDI 8226	precinct
+Nevada;Washoe County;RENO-VERDI 8222	precinct
+Nevada;Washoe County;RENO-VERDI 8221	precinct
+Nevada;Washoe County;RENO-VERDI 8220	precinct
+Nevada;Washoe County;RENO-VERDI 8219	precinct
+Nevada;Washoe County;RENO-VERDI 8218	precinct
+Nevada;Washoe County;RENO-VERDI 8217	precinct
+Nevada;Washoe County;RENO-VERDI 8216	precinct
+Nevada;Washoe County;RENO-VERDI 8214	precinct
+Nevada;Washoe County;RENO-VERDI 8213	precinct
+Nevada;Washoe County;RENO-VERDI 8212	precinct
+Nevada;Washoe County;RENO-VERDI 8211	precinct
+Nevada;Washoe County;RENO-VERDI 8210	precinct
+Nevada;Washoe County;RENO-VERDI 8209	precinct
+Nevada;Washoe County;RENO-VERDI 8208	precinct
+Nevada;Washoe County;RENO-VERDI 8207	precinct
+Nevada;Washoe County;RENO-VERDI 8206	precinct
+Nevada;Washoe County;RENO-VERDI 8205	precinct
+Nevada;Washoe County;RENO-VERDI 8204	precinct
+Nevada;Washoe County;RENO-VERDI 8203	precinct
+Nevada;Washoe County;RENO-VERDI 8202	precinct
+Nevada;Washoe County;RENO-VERDI 8201	precinct
+Nevada;Washoe County;RENO-VERDI 8200	precinct
+Nevada;Washoe County;RENO-VERDI 8129	precinct
+Nevada;Washoe County;RENO-VERDI 8128	precinct
+Nevada;Washoe County;RENO-VERDI 8127	precinct
+Nevada;Washoe County;RENO-VERDI 8118	precinct
+Nevada;Washoe County;RENO-VERDI 8115	precinct
+Nevada;Washoe County;RENO-VERDI 8114	precinct
+Nevada;Washoe County;RENO-VERDI 8112	precinct
+Nevada;Washoe County;RENO-VERDI 8103	precinct
+Nevada;Washoe County;RENO-VERDI 8102	precinct
+Nevada;Washoe County;RENO-VERDI 8101	precinct
+Nevada;Washoe County;RENO-VERDI 8100	precinct
+Nevada;Washoe County;RENO-VERDI 7596 (MP)	precinct
+Nevada;Washoe County;RENO-VERDI 7587	precinct
+Nevada;Washoe County;RENO-VERDI 7586	precinct
+Nevada;Washoe County;RENO-VERDI 7574 (MP)	precinct
+Nevada;Washoe County;RENO-VERDI 7572	precinct
+Nevada;Washoe County;RENO-VERDI 7571	precinct
+Nevada;Washoe County;RENO-VERDI 7570	precinct
+Nevada;Washoe County;RENO-VERDI 7569	precinct
+Nevada;Washoe County;RENO-VERDI 7567	precinct
+Nevada;Washoe County;RENO-VERDI 7566 (MP)	precinct
+Nevada;Washoe County;RENO-VERDI 7558	precinct
+Nevada;Washoe County;RENO-VERDI 7557	precinct
+Nevada;Washoe County;RENO-VERDI 7556	precinct
+Nevada;Washoe County;RENO-VERDI 7553	precinct
+Nevada;Washoe County;RENO-VERDI 7552	precinct
+Nevada;Washoe County;RENO-VERDI 7549 (MP)	precinct
+Nevada;Washoe County;RENO-VERDI 7548	precinct
+Nevada;Washoe County;RENO-VERDI 7547 (MP)	precinct
+Nevada;Washoe County;RENO-VERDI 7546 (MP)	precinct
+Nevada;Washoe County;RENO-VERDI 7543	precinct
+Nevada;Washoe County;RENO-VERDI 7541	precinct
+Nevada;Washoe County;RENO-VERDI 7540	precinct
+Nevada;Washoe County;RENO-VERDI 7539 (MP)	precinct
+Nevada;Washoe County;RENO-VERDI 7537	precinct
+Nevada;Washoe County;RENO-VERDI 7536	precinct
+Nevada;Washoe County;RENO-VERDI 7532	precinct
+Nevada;Washoe County;RENO-VERDI 7529 (MP)	precinct
+Nevada;Washoe County;RENO-VERDI 7528	precinct
+Nevada;Washoe County;RENO-VERDI 7527	precinct
+Nevada;Washoe County;RENO-VERDI 7526	precinct
+Nevada;Washoe County;RENO-VERDI 7525	precinct
+Nevada;Washoe County;RENO-VERDI 7524	precinct
+Nevada;Washoe County;RENO-VERDI 7523	precinct
+Nevada;Washoe County;RENO-VERDI 7520	precinct
+Nevada;Washoe County;RENO-VERDI 7519	precinct
+Nevada;Washoe County;RENO-VERDI 7516	precinct
+Nevada;Washoe County;RENO-VERDI 7508	precinct
+Nevada;Washoe County;RENO-VERDI 7507	precinct
+Nevada;Washoe County;RENO-VERDI 7506	precinct
+Nevada;Washoe County;RENO-VERDI 7321	precinct
+Nevada;Washoe County;RENO-VERDI 7319	precinct
+Nevada;Washoe County;RENO-VERDI 7307	precinct
+Nevada;Washoe County;RENO-VERDI 7302	precinct
+Nevada;Washoe County;RENO-VERDI 7300	precinct
+Nevada;Washoe County;RENO-VERDI 7100	precinct
+Nevada;Washoe County;RENO-VERDI 5066	precinct
+Nevada;Washoe County;RENO-VERDI 5065 (MP)	precinct
+Nevada;Washoe County;RENO-VERDI 5064	precinct
+Nevada;Washoe County;RENO-VERDI 5063	precinct
+Nevada;Washoe County;RENO-VERDI 5062	precinct
+Nevada;Washoe County;RENO-VERDI 5061 (MP)	precinct
+Nevada;Washoe County;RENO-VERDI 5056	precinct
+Nevada;Washoe County;RENO-VERDI 5054	precinct
+Nevada;Washoe County;RENO-VERDI 5053	precinct
+Nevada;Washoe County;RENO-VERDI 5051 (MP)	precinct
+Nevada;Washoe County;RENO-VERDI 5049 (MP)	precinct
+Nevada;Washoe County;RENO-VERDI 5048 (MP)	precinct
+Nevada;Washoe County;RENO-VERDI 5047	precinct
+Nevada;Washoe County;RENO-VERDI 5046	precinct
+Nevada;Washoe County;RENO-VERDI 5045	precinct
+Nevada;Washoe County;RENO-VERDI 5041	precinct
+Nevada;Washoe County;RENO-VERDI 5040	precinct
+Nevada;Washoe County;RENO-VERDI 5039	precinct
+Nevada;Washoe County;RENO-VERDI 5036	precinct
+Nevada;Washoe County;RENO-VERDI 5035	precinct
+Nevada;Washoe County;RENO-VERDI 5034	precinct
+Nevada;Washoe County;RENO-VERDI 5033	precinct
+Nevada;Washoe County;RENO-VERDI 5032	precinct
+Nevada;Washoe County;RENO-VERDI 5031	precinct
+Nevada;Washoe County;RENO-VERDI 5030	precinct
+Nevada;Washoe County;RENO-VERDI 5027	precinct
+Nevada;Washoe County;RENO-VERDI 5026	precinct
+Nevada;Washoe County;RENO-VERDI 5024	precinct
+Nevada;Washoe County;RENO-VERDI 5023 (MP)	precinct
+Nevada;Washoe County;RENO-VERDI 5022	precinct
+Nevada;Washoe County;RENO-VERDI 5020	precinct
+Nevada;Washoe County;RENO-VERDI 5018	precinct
+Nevada;Washoe County;RENO-VERDI 5016	precinct
+Nevada;Washoe County;RENO-VERDI 5015	precinct
+Nevada;Washoe County;RENO-VERDI 5014	precinct
+Nevada;Washoe County;RENO-VERDI 5012	precinct
+Nevada;Washoe County;RENO-VERDI 5011	precinct
+Nevada;Washoe County;RENO-VERDI 5010	precinct
+Nevada;Washoe County;RENO-VERDI 5009	precinct
+Nevada;Washoe County;RENO-VERDI 5008	precinct
+Nevada;Washoe County;RENO-VERDI 5007	precinct
+Nevada;Washoe County;RENO-VERDI 5006	precinct
+Nevada;Washoe County;RENO-VERDI 5005	precinct
+Nevada;Washoe County;RENO-VERDI 5003	precinct
+Nevada;Washoe County;RENO-VERDI 5000	precinct
+Nevada;Washoe County;RENO-VERDI 4056	precinct
+Nevada;Washoe County;RENO-VERDI 4055 (MP)	precinct
+Nevada;Washoe County;RENO-VERDI 4054 (MP)	precinct
+Nevada;Washoe County;RENO-VERDI 4053	precinct
+Nevada;Washoe County;RENO-VERDI 4052 (MP)	precinct
+Nevada;Washoe County;RENO-VERDI 4051 (MP)	precinct
+Nevada;Washoe County;RENO-VERDI 4047	precinct
+Nevada;Washoe County;RENO-VERDI 4046	precinct
+Nevada;Washoe County;RENO-VERDI 4045	precinct
+Nevada;Washoe County;RENO-VERDI 4043	precinct
+Nevada;Washoe County;RENO-VERDI 4042 (MP)	precinct
+Nevada;Washoe County;RENO-VERDI 4041	precinct
+Nevada;Washoe County;RENO-VERDI 4040	precinct
+Nevada;Washoe County;RENO-VERDI 4039	precinct
+Nevada;Washoe County;RENO-VERDI 4038	precinct
+Nevada;Washoe County;RENO-VERDI 4037	precinct
+Nevada;Washoe County;RENO-VERDI 4036	precinct
+Nevada;Washoe County;RENO-VERDI 4035	precinct
+Nevada;Washoe County;RENO-VERDI 4033	precinct
+Nevada;Washoe County;RENO-VERDI 4032	precinct
+Nevada;Washoe County;RENO-VERDI 4029 (MP)	precinct
+Nevada;Washoe County;RENO-VERDI 4026 (MP)	precinct
+Nevada;Washoe County;RENO-VERDI 4025	precinct
+Nevada;Washoe County;RENO-VERDI 4024	precinct
+Nevada;Washoe County;RENO-VERDI 4023	precinct
+Nevada;Washoe County;RENO-VERDI 4022	precinct
+Nevada;Washoe County;RENO-VERDI 4021	precinct
+Nevada;Washoe County;RENO-VERDI 4020	precinct
+Nevada;Washoe County;RENO-VERDI 4019	precinct
+Nevada;Washoe County;RENO-VERDI 4018 (MP)	precinct
+Nevada;Washoe County;RENO-VERDI 4017	precinct
+Nevada;Washoe County;RENO-VERDI 4016	precinct
+Nevada;Washoe County;RENO-VERDI 4015 (MP)	precinct
+Nevada;Washoe County;RENO-VERDI 4014	precinct
+Nevada;Washoe County;RENO-VERDI 4012	precinct
+Nevada;Washoe County;RENO-VERDI 4009	precinct
+Nevada;Washoe County;RENO-VERDI 4007	precinct
+Nevada;Washoe County;RENO-VERDI 4005	precinct
+Nevada;Washoe County;RENO-VERDI 4003	precinct
+Nevada;Washoe County;RENO-VERDI 4000	precinct
+Nevada;Washoe County;RENO-VERDI 3040	precinct
+Nevada;Washoe County;RENO-VERDI 3039	precinct
+Nevada;Washoe County;RENO-VERDI 3038	precinct
+Nevada;Washoe County;RENO-VERDI 3036	precinct
+Nevada;Washoe County;RENO-VERDI 3035 (MP)	precinct
+Nevada;Washoe County;RENO-VERDI 3032	precinct
+Nevada;Washoe County;RENO-VERDI 3031	precinct
+Nevada;Washoe County;RENO-VERDI 3030	precinct
+Nevada;Washoe County;RENO-VERDI 3029	precinct
+Nevada;Washoe County;RENO-VERDI 3028	precinct
+Nevada;Washoe County;RENO-VERDI 3027	precinct
+Nevada;Washoe County;RENO-VERDI 3026	precinct
+Nevada;Washoe County;RENO-VERDI 3025	precinct
+Nevada;Washoe County;RENO-VERDI 3024	precinct
+Nevada;Washoe County;RENO-VERDI 3023	precinct
+Nevada;Washoe County;RENO-VERDI 3022	precinct
+Nevada;Washoe County;RENO-VERDI 3021	precinct
+Nevada;Washoe County;RENO-VERDI 3020	precinct
+Nevada;Washoe County;RENO-VERDI 3019	precinct
+Nevada;Washoe County;RENO-VERDI 3018	precinct
+Nevada;Washoe County;RENO-VERDI 3017	precinct
+Nevada;Washoe County;RENO-VERDI 3016	precinct
+Nevada;Washoe County;RENO-VERDI 3015	precinct
+Nevada;Washoe County;RENO-VERDI 3014	precinct
+Nevada;Washoe County;RENO-VERDI 3013 (MP)	precinct
+Nevada;Washoe County;RENO-VERDI 3012	precinct
+Nevada;Washoe County;RENO-VERDI 3011	precinct
+Nevada;Washoe County;RENO-VERDI 3010	precinct
+Nevada;Washoe County;RENO-VERDI 3009	precinct
+Nevada;Washoe County;RENO-VERDI 3008	precinct
+Nevada;Washoe County;RENO-VERDI 3007	precinct
+Nevada;Washoe County;RENO-VERDI 3006	precinct
+Nevada;Washoe County;RENO-VERDI 3005	precinct
+Nevada;Washoe County;RENO-VERDI 3004	precinct
+Nevada;Washoe County;RENO-VERDI 3003	precinct
+Nevada;Washoe County;RENO-VERDI 3002	precinct
+Nevada;Washoe County;RENO-VERDI 3001	precinct
+Nevada;Washoe County;RENO-VERDI 2081	precinct
+Nevada;Washoe County;RENO-VERDI 2080	precinct
+Nevada;Washoe County;RENO-VERDI 2078 (MP)	precinct
+Nevada;Washoe County;RENO-VERDI 2074 (MP)	precinct
+Nevada;Washoe County;RENO-VERDI 2073	precinct
+Nevada;Washoe County;RENO-VERDI 2070	precinct
+Nevada;Washoe County;RENO-VERDI 2068	precinct
+Nevada;Washoe County;RENO-VERDI 2065	precinct
+Nevada;Washoe County;RENO-VERDI 2064 (MP)	precinct
+Nevada;Washoe County;RENO-VERDI 2062	precinct
+Nevada;Washoe County;RENO-VERDI 2060	precinct
+Nevada;Washoe County;RENO-VERDI 2058	precinct
+Nevada;Washoe County;RENO-VERDI 2057 (MP)	precinct
+Nevada;Washoe County;RENO-VERDI 2051 (MP)	precinct
+Nevada;Washoe County;RENO-VERDI 2050	precinct
+Nevada;Washoe County;RENO-VERDI 2049	precinct
+Nevada;Washoe County;RENO-VERDI 2048 (MP)	precinct
+Nevada;Washoe County;RENO-VERDI 2047	precinct
+Nevada;Washoe County;RENO-VERDI 2043	precinct
+Nevada;Washoe County;RENO-VERDI 2042	precinct
+Nevada;Washoe County;RENO-VERDI 2041	precinct
+Nevada;Washoe County;RENO-VERDI 2040	precinct
+Nevada;Washoe County;RENO-VERDI 2039	precinct
+Nevada;Washoe County;RENO-VERDI 2037	precinct
+Nevada;Washoe County;RENO-VERDI 2036	precinct
+Nevada;Washoe County;RENO-VERDI 2035	precinct
+Nevada;Washoe County;RENO-VERDI 2034	precinct
+Nevada;Washoe County;RENO-VERDI 2033	precinct
+Nevada;Washoe County;RENO-VERDI 2032	precinct
+Nevada;Washoe County;RENO-VERDI 2031	precinct
+Nevada;Washoe County;RENO-VERDI 2030	precinct
+Nevada;Washoe County;RENO-VERDI 2029	precinct
+Nevada;Washoe County;RENO-VERDI 2028	precinct
+Nevada;Washoe County;RENO-VERDI 2027	precinct
+Nevada;Washoe County;RENO-VERDI 2026	precinct
+Nevada;Washoe County;RENO-VERDI 2025	precinct
+Nevada;Washoe County;RENO-VERDI 2023	precinct
+Nevada;Washoe County;RENO-VERDI 2022	precinct
+Nevada;Washoe County;RENO-VERDI 2021	precinct
+Nevada;Washoe County;RENO-VERDI 2020	precinct
+Nevada;Washoe County;RENO-VERDI 2019	precinct
+Nevada;Washoe County;RENO-VERDI 2018	precinct
+Nevada;Washoe County;RENO-VERDI 2017	precinct
+Nevada;Washoe County;RENO-VERDI 2016	precinct
+Nevada;Washoe County;RENO-VERDI 2013	precinct
+Nevada;Washoe County;RENO-VERDI 2010	precinct
+Nevada;Washoe County;RENO-VERDI 2009	precinct
+Nevada;Washoe County;RENO-VERDI 2007	precinct
+Nevada;Washoe County;RENO-VERDI 2006	precinct
+Nevada;Washoe County;RENO-VERDI 2004	precinct
+Nevada;Washoe County;RENO-VERDI 2002 (MP)	precinct
+Nevada;Washoe County;RENO-VERDI 2000	precinct
+Nevada;Washoe County;RENO-VERDI 1061 (MP)	precinct
+Nevada;Washoe County;RENO-VERDI 1059 (MP)	precinct
+Nevada;Washoe County;RENO-VERDI 1058	precinct
+Nevada;Washoe County;RENO-VERDI 1057	precinct
+Nevada;Washoe County;RENO-VERDI 1056	precinct
+Nevada;Washoe County;RENO-VERDI 1055	precinct
+Nevada;Washoe County;RENO-VERDI 1053	precinct
+Nevada;Washoe County;RENO-VERDI 1051	precinct
+Nevada;Washoe County;RENO-VERDI 1050 (MP)	precinct
+Nevada;Washoe County;RENO-VERDI 1047	precinct
+Nevada;Washoe County;RENO-VERDI 1046	precinct
+Nevada;Washoe County;RENO-VERDI 1045	precinct
+Nevada;Washoe County;RENO-VERDI 1044	precinct
+Nevada;Washoe County;RENO-VERDI 1043	precinct
+Nevada;Washoe County;RENO-VERDI 1040	precinct
+Nevada;Washoe County;RENO-VERDI 1039	precinct
+Nevada;Washoe County;RENO-VERDI 1038	precinct
+Nevada;Washoe County;RENO-VERDI 1036	precinct
+Nevada;Washoe County;RENO-VERDI 1035	precinct
+Nevada;Washoe County;RENO-VERDI 1033	precinct
+Nevada;Washoe County;RENO-VERDI 1032	precinct
+Nevada;Washoe County;RENO-VERDI 1031	precinct
+Nevada;Washoe County;RENO-VERDI 1029	precinct
+Nevada;Washoe County;RENO-VERDI 1027	precinct
+Nevada;Washoe County;RENO-VERDI 1026	precinct
+Nevada;Washoe County;RENO-VERDI 1024	precinct
+Nevada;Washoe County;RENO-VERDI 1023	precinct
+Nevada;Washoe County;RENO-VERDI 1022	precinct
+Nevada;Washoe County;RENO-VERDI 1020	precinct
+Nevada;Washoe County;RENO-VERDI 1018	precinct
+Nevada;Washoe County;RENO-VERDI 1016	precinct
+Nevada;Washoe County;RENO-VERDI 1015	precinct
+Nevada;Washoe County;RENO-VERDI 1014	precinct
+Nevada;Washoe County;RENO-VERDI 1012	precinct
+Nevada;Washoe County;RENO-VERDI 1011	precinct
+Nevada;Washoe County;RENO-VERDI 1010	precinct
+Nevada;Washoe County;RENO-VERDI 1008	precinct
+Nevada;Washoe County;RENO-VERDI 1007	precinct
+Nevada;Washoe County;RENO-VERDI 1006	precinct
+Nevada;Washoe County;RENO-VERDI 1005 (MP)	precinct
+Nevada;Washoe County;RENO-VERDI 1003	precinct
+Nevada;Washoe County;RENO-VERDI 1002	precinct
+Nevada;Washoe County;RENO-VERDI 1000	precinct
+Nevada;Washoe County;PROVISIONAL	precinct
+Nevada;Washoe County;NO FIXED RES	precinct
+Nevada;Washoe County;NEW RESIDENT	precinct
+Nevada;Washoe County;INCLINE VILLAGE 9251(MP)	precinct
+Nevada;Washoe County;INCLINE VILLAGE 9121(MP)	precinct
+Nevada;Washoe County;INCLINE VILLAGE 9116(MP)	precinct
+Nevada;Washoe County;INCLINE VILLAGE 9106(MP)	precinct
+Nevada;Washoe County;INCLINE VILLAGE 9102(MP)	precinct
+Nevada;Washoe County;INCLINE VILLAGE 9101(MP)	precinct
+Nevada;Washoe County;INCLINE VILLAGE 8126(MP)	precinct
+Nevada;Washoe County;INCLINE VILLAGE 8125	precinct
+Nevada;Washoe County;INCLINE VILLAGE 8117	precinct
+Nevada;Washoe County;INCLINE VILLAGE 8116	precinct
+Nevada;Washoe County;INCLINE VILLAGE 8111	precinct
+Nevada;Washoe County;INCLINE VILLAGE 8110	precinct
+Nevada;Washoe County;INCLINE VILLAGE 8109	precinct
+Nevada;Washoe County;INCLINE VILLAGE 8108	precinct
+Nevada;Washoe County;INCLINE VILLAGE 8107	precinct
+Nevada;Washoe County;INCLINE VILLAGE 8106	precinct
+Nevada;Washoe County;INCLINE VILLAGE 8105	precinct
+Nevada;Washoe County;INCLINE VILLAGE 8104	precinct
+Nevada;Washoe County;GER-WADS 9557 (MP)	precinct
+Nevada;Washoe County;GER-WADS 9408 (MP)	precinct
+Nevada;Washoe County;GER-WADS 7589	precinct
+Nevada;Washoe County;GER-WADS 7581	precinct
+Nevada;Washoe County;GER-WADS 7531 (MP)	precinct
+Nevada;Washoe County;GER-WADS 7522 (MP)	precinct
+Nevada;Washoe County;GER-WADS 7521 (MP)	precinct
+Nevada;Washoe County;GER-WADS 7412	precinct
+Nevada;Washoe County;FOC	precinct
 Nevada;White Pine County;Precinct 1	precinct
 Nevada;White Pine County;Precinct 10	precinct
 Nevada;White Pine County;Precinct 2	precinct
@@ -2126,6 +2726,7 @@ Nevada;White Pine County;Precinct 6	precinct
 Nevada;White Pine County;Precinct 7	precinct
 Nevada;White Pine County;Precinct 8	precinct
 Nevada;White Pine County;Precinct 9	precinct
+Nevada;White Pine County;Precinct 88	precinct
 Nevada;White Pine County;Precinct 99	precinct
 Nevada;Carson City County	county
 Nevada;Churchill County	county

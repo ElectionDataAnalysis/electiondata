@@ -1,0 +1,58 @@
+Name	ElectionDistrict
+PR House District 1	Puerto-Rico;PR House District 1
+PR House District 2	Puerto-Rico;PR House District 2
+PR House District 3	Puerto-Rico;PR House District 3
+PR House District 4	Puerto-Rico;PR House District 4
+PR House District 5	Puerto-Rico;PR House District 5
+PR House District 6	Puerto-Rico;PR House District 6
+PR House District 7	Puerto-Rico;PR House District 7
+PR House District 8	Puerto-Rico;PR House District 8
+PR House District 9	Puerto-Rico;PR House District 9
+PR House District 10	Puerto-Rico;PR House District 10
+PR House District 11	Puerto-Rico;PR House District 11
+PR House District 12	Puerto-Rico;PR House District 12
+PR House District 13	Puerto-Rico;PR House District 13
+PR House District 14	Puerto-Rico;PR House District 14
+PR House District 15	Puerto-Rico;PR House District 15
+PR House District 16	Puerto-Rico;PR House District 16
+PR House District 17	Puerto-Rico;PR House District 17
+PR House District 18	Puerto-Rico;PR House District 18
+PR House District 19	Puerto-Rico;PR House District 19
+PR House District 20	Puerto-Rico;PR House District 20
+PR House District 21	Puerto-Rico;PR House District 21
+PR House District 22	Puerto-Rico;PR House District 22
+PR House District 23	Puerto-Rico;PR House District 23
+PR House District 24	Puerto-Rico;PR House District 24
+PR House District 25	Puerto-Rico;PR House District 25
+PR House District 26	Puerto-Rico;PR House District 26
+PR House District 27	Puerto-Rico;PR House District 27
+PR House District 28	Puerto-Rico;PR House District 28
+PR House District 29	Puerto-Rico;PR House District 29
+PR House District 30	Puerto-Rico;PR House District 30
+PR House District 31	Puerto-Rico;PR House District 31
+PR House District 32	Puerto-Rico;PR House District 32
+PR House District 33	Puerto-Rico;PR House District 33
+PR House District 34	Puerto-Rico;PR House District 34
+PR House District 35	Puerto-Rico;PR House District 35
+PR House District 36	Puerto-Rico;PR House District 36
+PR House District 37	Puerto-Rico;PR House District 37
+PR House District 38	Puerto-Rico;PR House District 38
+PR House District 39	Puerto-Rico;PR House District 39
+PR House District 40	Puerto-Rico;PR House District 40
+PR Senate District 1	Puerto-Rico;PR Senate District 1
+PR Senate District 2	Puerto-Rico;PR Senate District 2
+PR Senate District 3	Puerto-Rico;PR Senate District 3
+PR Senate District 4	Puerto-Rico;PR Senate District 4
+PR Senate District 5	Puerto-Rico;PR Senate District 5
+PR Senate District 6	Puerto-Rico;PR Senate District 6
+PR Senate District 7	Puerto-Rico;PR Senate District 7
+PR Senate District 8	Puerto-Rico;PR Senate District 8
+US House PR District 1	Puerto-Rico;US House PR District 1
+US President (PR)	Puerto-Rico
+PR Governor	Puerto-Rico
+US Resident Commissioner (PR)	Puerto-Rico
+US Senate PR	Puerto-Rico
+PR Attorney General	Puerto-Rico
+PR Lieutenant Governor	Puerto-Rico
+PR Treasurer	Puerto-Rico
+PR Secretary of State	Puerto-Rico

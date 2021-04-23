@@ -961,6 +961,7 @@ ReportingUnit	Nevada;Carson City County;407	Carson City;407
 ReportingUnit	Nevada;Carson City County;409	Carson City;409
 ReportingUnit	Nevada;Carson City County;411	Carson City;411
 ReportingUnit	Nevada;Carson City County;997	Carson City;997
+ReportingUnit	Nevada;Carson City County;998	Carson City;998
 ReportingUnit	Nevada;Churchill County;Precinct 01	Churchill;Precinct 01
 ReportingUnit	Nevada;Churchill County;Precinct 02	Churchill;Precinct 02
 ReportingUnit	Nevada;Churchill County;Precinct 03	Churchill;Precinct 03
@@ -980,6 +981,7 @@ ReportingUnit	Nevada;Churchill County;Precinct 16	Churchill;Precinct 16
 ReportingUnit	Nevada;Churchill County;Precinct 17	Churchill;Precinct 17
 ReportingUnit	Nevada;Churchill County;Precinct 18	Churchill;Precinct 18
 ReportingUnit	Nevada;Churchill County;Precinct 19	Churchill;Precinct 19
+ReportingUnit	Nevada;Churchill County;Precinct 88	Churchill;Precinct 88
 ReportingUnit	Nevada;Churchill County;Precinct 99	Churchill;Precinct 99
 ReportingUnit	Nevada;Clark County;1038	Clark;1038
 ReportingUnit	Nevada;Clark County;1039	Clark;1039
@@ -2119,6 +2121,23 @@ ReportingUnit	Nevada;Clark County;9991	Clark;9991
 ReportingUnit	Nevada;Clark County;9993	Clark;9993
 ReportingUnit	Nevada;Clark County;9994	Clark;9994
 ReportingUnit	Nevada;Clark County;9995	Clark;9995
+ReportingUnit	Nevada;Clark County;9996	Clark;9996
+ReportingUnit	Nevada;Clark County;7596	Clark;7596
+ReportingUnit	Nevada;Clark County;7458	Clark;7458
+ReportingUnit	Nevada;Clark County;6750	Clark;6750
+ReportingUnit	Nevada;Clark County;6740	Clark;6740
+ReportingUnit	Nevada;Clark County;6717	Clark;6717
+ReportingUnit	Nevada;Clark County;6467	Clark;6467
+ReportingUnit	Nevada;Clark County;5655	Clark;5655
+ReportingUnit	Nevada;Clark County;5599	Clark;5599
+ReportingUnit	Nevada;Clark County;5590	Clark;5590
+ReportingUnit	Nevada;Clark County;5563	Clark;5563
+ReportingUnit	Nevada;Clark County;5561	Clark;5561
+ReportingUnit	Nevada;Clark County;3779	Clark;3779
+ReportingUnit	Nevada;Clark County;3778	Clark;3778
+ReportingUnit	Nevada;Clark County;3588	Clark;3588
+ReportingUnit	Nevada;Clark County;3587	Clark;3587
+ReportingUnit	Nevada;Clark County;1161	Clark;1161
 ReportingUnit	Nevada;Douglas County;01-1 - Centerville	Douglas;01-1 - Centerville
 ReportingUnit	Nevada;Douglas County;01-2 - Centerville	Douglas;01-2 - Centerville
 ReportingUnit	Nevada;Douglas County;01-Centerville	Douglas;01-Centerville
@@ -2190,9 +2209,10 @@ ReportingUnit	Nevada;Douglas County;39-Edgewood	Douglas;39-Edgewood
 ReportingUnit	Nevada;Douglas County;40-1 - Kingsbury	Douglas;40-1 - Kingsbury
 ReportingUnit	Nevada;Douglas County;40-2 - Kingsbury	Douglas;40-2 - Kingsbury
 ReportingUnit	Nevada;Douglas County;40-Kingsbury	Douglas;40-Kingsbury
+ReportingUnit	Nevada;Douglas County;41-Daggett	Douglas;41-Daggett
 ReportingUnit	Nevada;Douglas County;41-1 - Daggett	Douglas;41-1 - Daggett
 ReportingUnit	Nevada;Douglas County;41-2 - Daggett	Douglas;41-2 - Daggett
-ReportingUnit	Nevada;Douglas County;41-Daggett	Douglas;41-Daggett
+ReportingUnit	Nevada;Douglas County;Precinct 88	Douglas;Precinct 88
 ReportingUnit	Nevada;Douglas County;Precinct 99	Douglas;Precinct 99
 ReportingUnit	Nevada;Elko County;Precinct 1	Elko;Precinct 1
 ReportingUnit	Nevada;Elko County;Precinct 10	Elko;Precinct 10
@@ -3025,6 +3045,573 @@ ReportingUnit	Nevada;Washoe County;956100	Washoe;956100
 ReportingUnit	Nevada;Washoe County;956200	Washoe;956200
 ReportingUnit	Nevada;Washoe County;970000	Washoe;970000
 ReportingUnit	Nevada;Washoe County;990000	Washoe;990000
+ReportingUnit	Nevada;Washoe County;SPARKS 9559 (MP)	Washoe;SPARKS 9559 (MP)
+ReportingUnit	Nevada;Washoe County;SPARKS 9558 (MP)	Washoe;SPARKS 9558 (MP)
+ReportingUnit	Nevada;Washoe County;SPARKS 9554 (MP)	Washoe;SPARKS 9554 (MP)
+ReportingUnit	Nevada;Washoe County;SPARKS 9553 (MP)	Washoe;SPARKS 9553 (MP)
+ReportingUnit	Nevada;Washoe County;SPARKS 9552 (MP)	Washoe;SPARKS 9552 (MP)
+ReportingUnit	Nevada;Washoe County;SPARKS 9551 (MP)	Washoe;SPARKS 9551 (MP)
+ReportingUnit	Nevada;Washoe County;SPARKS 9550 (MP)	Washoe;SPARKS 9550 (MP)
+ReportingUnit	Nevada;Washoe County;SPARKS 9549 (MP)	Washoe;SPARKS 9549 (MP)
+ReportingUnit	Nevada;Washoe County;SPARKS 9548 (MP)	Washoe;SPARKS 9548 (MP)
+ReportingUnit	Nevada;Washoe County;SPARKS 9547 (MP)	Washoe;SPARKS 9547 (MP)
+ReportingUnit	Nevada;Washoe County;SPARKS 9532 (MP)	Washoe;SPARKS 9532 (MP)
+ReportingUnit	Nevada;Washoe County;SPARKS 9516 (MP)	Washoe;SPARKS 9516 (MP)
+ReportingUnit	Nevada;Washoe County;SPARKS 9428 (MP)	Washoe;SPARKS 9428 (MP)
+ReportingUnit	Nevada;Washoe County;SPARKS 9427 (MP)	Washoe;SPARKS 9427 (MP)
+ReportingUnit	Nevada;Washoe County;SPARKS 9310 (MP)	Washoe;SPARKS 9310 (MP)
+ReportingUnit	Nevada;Washoe County;SPARKS 9304 (MP)	Washoe;SPARKS 9304 (MP)
+ReportingUnit	Nevada;Washoe County;SPARKS 9248 (MP)	Washoe;SPARKS 9248 (MP)
+ReportingUnit	Nevada;Washoe County;SPARKS 7599 (MP)	Washoe;SPARKS 7599 (MP)
+ReportingUnit	Nevada;Washoe County;SPARKS 7598 (MP)	Washoe;SPARKS 7598 (MP)
+ReportingUnit	Nevada;Washoe County;SPARKS 7597 (MP)	Washoe;SPARKS 7597 (MP)
+ReportingUnit	Nevada;Washoe County;SPARKS 7595 (MP)	Washoe;SPARKS 7595 (MP)
+ReportingUnit	Nevada;Washoe County;SPARKS 7594 (MP)	Washoe;SPARKS 7594 (MP)
+ReportingUnit	Nevada;Washoe County;SPARKS 7593	Washoe;SPARKS 7593
+ReportingUnit	Nevada;Washoe County;SPARKS 7592	Washoe;SPARKS 7592
+ReportingUnit	Nevada;Washoe County;SPARKS 7591 (MP)	Washoe;SPARKS 7591 (MP)
+ReportingUnit	Nevada;Washoe County;SPARKS 7588	Washoe;SPARKS 7588
+ReportingUnit	Nevada;Washoe County;SPARKS 7585	Washoe;SPARKS 7585
+ReportingUnit	Nevada;Washoe County;SPARKS 7584	Washoe;SPARKS 7584
+ReportingUnit	Nevada;Washoe County;SPARKS 7583	Washoe;SPARKS 7583
+ReportingUnit	Nevada;Washoe County;SPARKS 7582	Washoe;SPARKS 7582
+ReportingUnit	Nevada;Washoe County;SPARKS 7579 (MP)	Washoe;SPARKS 7579 (MP)
+ReportingUnit	Nevada;Washoe County;SPARKS 7578	Washoe;SPARKS 7578
+ReportingUnit	Nevada;Washoe County;SPARKS 7577	Washoe;SPARKS 7577
+ReportingUnit	Nevada;Washoe County;SPARKS 7576	Washoe;SPARKS 7576
+ReportingUnit	Nevada;Washoe County;SPARKS 7573	Washoe;SPARKS 7573
+ReportingUnit	Nevada;Washoe County;SPARKS 7565	Washoe;SPARKS 7565
+ReportingUnit	Nevada;Washoe County;SPARKS 7563	Washoe;SPARKS 7563
+ReportingUnit	Nevada;Washoe County;SPARKS 7562 (MP)	Washoe;SPARKS 7562 (MP)
+ReportingUnit	Nevada;Washoe County;SPARKS 7550	Washoe;SPARKS 7550
+ReportingUnit	Nevada;Washoe County;SPARKS 7534	Washoe;SPARKS 7534
+ReportingUnit	Nevada;Washoe County;SPARKS 7533	Washoe;SPARKS 7533
+ReportingUnit	Nevada;Washoe County;SPARKS 7518 (MP)	Washoe;SPARKS 7518 (MP)
+ReportingUnit	Nevada;Washoe County;SPARKS 7517	Washoe;SPARKS 7517
+ReportingUnit	Nevada;Washoe County;SPARKS 7514	Washoe;SPARKS 7514
+ReportingUnit	Nevada;Washoe County;SPARKS 7513	Washoe;SPARKS 7513
+ReportingUnit	Nevada;Washoe County;SPARKS 7512	Washoe;SPARKS 7512
+ReportingUnit	Nevada;Washoe County;SPARKS 7509	Washoe;SPARKS 7509
+ReportingUnit	Nevada;Washoe County;SPARKS 7505	Washoe;SPARKS 7505
+ReportingUnit	Nevada;Washoe County;SPARKS 7504	Washoe;SPARKS 7504
+ReportingUnit	Nevada;Washoe County;SPARKS 7503	Washoe;SPARKS 7503
+ReportingUnit	Nevada;Washoe County;SPARKS 7502	Washoe;SPARKS 7502
+ReportingUnit	Nevada;Washoe County;SPARKS 7501	Washoe;SPARKS 7501
+ReportingUnit	Nevada;Washoe County;SPARKS 7500	Washoe;SPARKS 7500
+ReportingUnit	Nevada;Washoe County;SPARKS 7433	Washoe;SPARKS 7433
+ReportingUnit	Nevada;Washoe County;SPARKS 7431	Washoe;SPARKS 7431
+ReportingUnit	Nevada;Washoe County;SPARKS 7430	Washoe;SPARKS 7430
+ReportingUnit	Nevada;Washoe County;SPARKS 7428 (MP)	Washoe;SPARKS 7428 (MP)
+ReportingUnit	Nevada;Washoe County;SPARKS 7426	Washoe;SPARKS 7426
+ReportingUnit	Nevada;Washoe County;SPARKS 7425	Washoe;SPARKS 7425
+ReportingUnit	Nevada;Washoe County;SPARKS 7424	Washoe;SPARKS 7424
+ReportingUnit	Nevada;Washoe County;SPARKS 7418	Washoe;SPARKS 7418
+ReportingUnit	Nevada;Washoe County;SPARKS 7417	Washoe;SPARKS 7417
+ReportingUnit	Nevada;Washoe County;SPARKS 7416	Washoe;SPARKS 7416
+ReportingUnit	Nevada;Washoe County;SPARKS 7415	Washoe;SPARKS 7415
+ReportingUnit	Nevada;Washoe County;SPARKS 7414	Washoe;SPARKS 7414
+ReportingUnit	Nevada;Washoe County;SPARKS 7413	Washoe;SPARKS 7413
+ReportingUnit	Nevada;Washoe County;SPARKS 7410	Washoe;SPARKS 7410
+ReportingUnit	Nevada;Washoe County;SPARKS 7408	Washoe;SPARKS 7408
+ReportingUnit	Nevada;Washoe County;SPARKS 7407	Washoe;SPARKS 7407
+ReportingUnit	Nevada;Washoe County;SPARKS 7406	Washoe;SPARKS 7406
+ReportingUnit	Nevada;Washoe County;SPARKS 7404	Washoe;SPARKS 7404
+ReportingUnit	Nevada;Washoe County;SPARKS 7403	Washoe;SPARKS 7403
+ReportingUnit	Nevada;Washoe County;SPARKS 7402	Washoe;SPARKS 7402
+ReportingUnit	Nevada;Washoe County;SPARKS 7400 (MP)	Washoe;SPARKS 7400 (MP)
+ReportingUnit	Nevada;Washoe County;SPARKS 7318	Washoe;SPARKS 7318
+ReportingUnit	Nevada;Washoe County;SPARKS 7317	Washoe;SPARKS 7317
+ReportingUnit	Nevada;Washoe County;SPARKS 7316	Washoe;SPARKS 7316
+ReportingUnit	Nevada;Washoe County;SPARKS 7315	Washoe;SPARKS 7315
+ReportingUnit	Nevada;Washoe County;SPARKS 7314	Washoe;SPARKS 7314
+ReportingUnit	Nevada;Washoe County;SPARKS 7313	Washoe;SPARKS 7313
+ReportingUnit	Nevada;Washoe County;SPARKS 7312	Washoe;SPARKS 7312
+ReportingUnit	Nevada;Washoe County;SPARKS 7309	Washoe;SPARKS 7309
+ReportingUnit	Nevada;Washoe County;SPARKS 7308	Washoe;SPARKS 7308
+ReportingUnit	Nevada;Washoe County;SPARKS 7306	Washoe;SPARKS 7306
+ReportingUnit	Nevada;Washoe County;SPARKS 7304	Washoe;SPARKS 7304
+ReportingUnit	Nevada;Washoe County;SPARKS 6531 MP	Washoe;SPARKS 6531 MP
+ReportingUnit	Nevada;Washoe County;SPARKS 6530 (MP)	Washoe;SPARKS 6530 (MP)
+ReportingUnit	Nevada;Washoe County;SPARKS 6529 (MP)	Washoe;SPARKS 6529 (MP)
+ReportingUnit	Nevada;Washoe County;SPARKS 6528 (MP)	Washoe;SPARKS 6528 (MP)
+ReportingUnit	Nevada;Washoe County;SPARKS 6527 (MP)	Washoe;SPARKS 6527 (MP)
+ReportingUnit	Nevada;Washoe County;SPARKS 6526	Washoe;SPARKS 6526
+ReportingUnit	Nevada;Washoe County;SPARKS 6525	Washoe;SPARKS 6525
+ReportingUnit	Nevada;Washoe County;SPARKS 6524	Washoe;SPARKS 6524
+ReportingUnit	Nevada;Washoe County;SPARKS 6523	Washoe;SPARKS 6523
+ReportingUnit	Nevada;Washoe County;SPARKS 6522	Washoe;SPARKS 6522
+ReportingUnit	Nevada;Washoe County;SPARKS 6521	Washoe;SPARKS 6521
+ReportingUnit	Nevada;Washoe County;SPARKS 6520	Washoe;SPARKS 6520
+ReportingUnit	Nevada;Washoe County;SPARKS 6519	Washoe;SPARKS 6519
+ReportingUnit	Nevada;Washoe County;SPARKS 6516	Washoe;SPARKS 6516
+ReportingUnit	Nevada;Washoe County;SPARKS 6514	Washoe;SPARKS 6514
+ReportingUnit	Nevada;Washoe County;SPARKS 6513	Washoe;SPARKS 6513
+ReportingUnit	Nevada;Washoe County;SPARKS 6511	Washoe;SPARKS 6511
+ReportingUnit	Nevada;Washoe County;SPARKS 6508	Washoe;SPARKS 6508
+ReportingUnit	Nevada;Washoe County;SPARKS 6503	Washoe;SPARKS 6503
+ReportingUnit	Nevada;Washoe County;SPARKS 6501	Washoe;SPARKS 6501
+ReportingUnit	Nevada;Washoe County;SPARKS 6500	Washoe;SPARKS 6500
+ReportingUnit	Nevada;Washoe County;SPARKS 6427 (MP)	Washoe;SPARKS 6427 (MP)
+ReportingUnit	Nevada;Washoe County;SPARKS 6425	Washoe;SPARKS 6425
+ReportingUnit	Nevada;Washoe County;SPARKS 6423	Washoe;SPARKS 6423
+ReportingUnit	Nevada;Washoe County;SPARKS 6422	Washoe;SPARKS 6422
+ReportingUnit	Nevada;Washoe County;SPARKS 6418	Washoe;SPARKS 6418
+ReportingUnit	Nevada;Washoe County;SPARKS 6416	Washoe;SPARKS 6416
+ReportingUnit	Nevada;Washoe County;SPARKS 6415	Washoe;SPARKS 6415
+ReportingUnit	Nevada;Washoe County;SPARKS 6414	Washoe;SPARKS 6414
+ReportingUnit	Nevada;Washoe County;SPARKS 6413	Washoe;SPARKS 6413
+ReportingUnit	Nevada;Washoe County;SPARKS 6411	Washoe;SPARKS 6411
+ReportingUnit	Nevada;Washoe County;SPARKS 6405	Washoe;SPARKS 6405
+ReportingUnit	Nevada;Washoe County;SPARKS 6403	Washoe;SPARKS 6403
+ReportingUnit	Nevada;Washoe County;SPARKS 6400	Washoe;SPARKS 6400
+ReportingUnit	Nevada;Washoe County;SPARKS 6320	Washoe;SPARKS 6320
+ReportingUnit	Nevada;Washoe County;SPARKS 6319	Washoe;SPARKS 6319
+ReportingUnit	Nevada;Washoe County;SPARKS 6318	Washoe;SPARKS 6318
+ReportingUnit	Nevada;Washoe County;SPARKS 6317 (MP)	Washoe;SPARKS 6317 (MP)
+ReportingUnit	Nevada;Washoe County;SPARKS 6314	Washoe;SPARKS 6314
+ReportingUnit	Nevada;Washoe County;SPARKS 6313	Washoe;SPARKS 6313
+ReportingUnit	Nevada;Washoe County;SPARKS 6311	Washoe;SPARKS 6311
+ReportingUnit	Nevada;Washoe County;SPARKS 6310	Washoe;SPARKS 6310
+ReportingUnit	Nevada;Washoe County;SPARKS 6308	Washoe;SPARKS 6308
+ReportingUnit	Nevada;Washoe County;SPARKS 6307	Washoe;SPARKS 6307
+ReportingUnit	Nevada;Washoe County;SPARKS 6306	Washoe;SPARKS 6306
+ReportingUnit	Nevada;Washoe County;SPARKS 6303 (MP)	Washoe;SPARKS 6303 (MP)
+ReportingUnit	Nevada;Washoe County;SPARKS 6302	Washoe;SPARKS 6302
+ReportingUnit	Nevada;Washoe County;SPARKS 6301	Washoe;SPARKS 6301
+ReportingUnit	Nevada;Washoe County;SPARKS 6300	Washoe;SPARKS 6300
+ReportingUnit	Nevada;Washoe County;SPARKS 6218 (MP)	Washoe;SPARKS 6218 (MP)
+ReportingUnit	Nevada;Washoe County;SPARKS 6217 (MP)	Washoe;SPARKS 6217 (MP)
+ReportingUnit	Nevada;Washoe County;SPARKS 6216	Washoe;SPARKS 6216
+ReportingUnit	Nevada;Washoe County;SPARKS 6214	Washoe;SPARKS 6214
+ReportingUnit	Nevada;Washoe County;SPARKS 6213	Washoe;SPARKS 6213
+ReportingUnit	Nevada;Washoe County;SPARKS 6212	Washoe;SPARKS 6212
+ReportingUnit	Nevada;Washoe County;SPARKS 6211	Washoe;SPARKS 6211
+ReportingUnit	Nevada;Washoe County;SPARKS 6210	Washoe;SPARKS 6210
+ReportingUnit	Nevada;Washoe County;SPARKS 6209	Washoe;SPARKS 6209
+ReportingUnit	Nevada;Washoe County;SPARKS 6208	Washoe;SPARKS 6208
+ReportingUnit	Nevada;Washoe County;SPARKS 6207	Washoe;SPARKS 6207
+ReportingUnit	Nevada;Washoe County;SPARKS 6206	Washoe;SPARKS 6206
+ReportingUnit	Nevada;Washoe County;SPARKS 6205	Washoe;SPARKS 6205
+ReportingUnit	Nevada;Washoe County;SPARKS 6203	Washoe;SPARKS 6203
+ReportingUnit	Nevada;Washoe County;SPARKS 6202	Washoe;SPARKS 6202
+ReportingUnit	Nevada;Washoe County;SPARKS 6115	Washoe;SPARKS 6115
+ReportingUnit	Nevada;Washoe County;SPARKS 6114	Washoe;SPARKS 6114
+ReportingUnit	Nevada;Washoe County;SPARKS 6113	Washoe;SPARKS 6113
+ReportingUnit	Nevada;Washoe County;SPARKS 6111	Washoe;SPARKS 6111
+ReportingUnit	Nevada;Washoe County;SPARKS 6110	Washoe;SPARKS 6110
+ReportingUnit	Nevada;Washoe County;SPARKS 6109	Washoe;SPARKS 6109
+ReportingUnit	Nevada;Washoe County;SPARKS 6108	Washoe;SPARKS 6108
+ReportingUnit	Nevada;Washoe County;SPARKS 6107	Washoe;SPARKS 6107
+ReportingUnit	Nevada;Washoe County;SPARKS 6106	Washoe;SPARKS 6106
+ReportingUnit	Nevada;Washoe County;SPARKS 6105	Washoe;SPARKS 6105
+ReportingUnit	Nevada;Washoe County;SPARKS 6104 (MP)	Washoe;SPARKS 6104 (MP)
+ReportingUnit	Nevada;Washoe County;SPARKS 6101	Washoe;SPARKS 6101
+ReportingUnit	Nevada;Washoe County;SPARKS 6100	Washoe;SPARKS 6100
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 9562 (MP)	Washoe;RENO-VERDI 9562 (MP)
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 9561 (MP)	Washoe;RENO-VERDI 9561 (MP)
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 9560 (MP)	Washoe;RENO-VERDI 9560 (MP)
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 9555 (MP)	Washoe;RENO-VERDI 9555 (MP)
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 9546 (MP)	Washoe;RENO-VERDI 9546 (MP)
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 9543 (MP)	Washoe;RENO-VERDI 9543 (MP)
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 9542 (MP)	Washoe;RENO-VERDI 9542 (MP)
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 9541 (MP)	Washoe;RENO-VERDI 9541 (MP)
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 9540 (MP)	Washoe;RENO-VERDI 9540 (MP)
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 9538 (MP)	Washoe;RENO-VERDI 9538 (MP)
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 9533 (MP)	Washoe;RENO-VERDI 9533 (MP)
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 9523 (MP)	Washoe;RENO-VERDI 9523 (MP)
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 9520 (MP)	Washoe;RENO-VERDI 9520 (MP)
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 9513 (MP)	Washoe;RENO-VERDI 9513 (MP)
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 9311 (MP)	Washoe;RENO-VERDI 9311 (MP)
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 9309 (MP)	Washoe;RENO-VERDI 9309 (MP)
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 9308 (MP)	Washoe;RENO-VERDI 9308 (MP)
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 9307 (MP)	Washoe;RENO-VERDI 9307 (MP)
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 9303 (MP)	Washoe;RENO-VERDI 9303 (MP)
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 9254 (MP)	Washoe;RENO-VERDI 9254 (MP)
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 9253 (MP)	Washoe;RENO-VERDI 9253 (MP)
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 9249 (MP)	Washoe;RENO-VERDI 9249 (MP)
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 9244 (MP)	Washoe;RENO-VERDI 9244 (MP)
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 9243 (MP)	Washoe;RENO-VERDI 9243 (MP)
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 9211 (MP)	Washoe;RENO-VERDI 9211 (MP)
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 9210 (MP)	Washoe;RENO-VERDI 9210 (MP)
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 9208 (MP)	Washoe;RENO-VERDI 9208 (MP)
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 9207 (MP)	Washoe;RENO-VERDI 9207 (MP)
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 9202 (MP)	Washoe;RENO-VERDI 9202 (MP)
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 9131 (MP)	Washoe;RENO-VERDI 9131 (MP)
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 9130 (MP)	Washoe;RENO-VERDI 9130 (MP)
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 9129 (MP)	Washoe;RENO-VERDI 9129 (MP)
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 9128 (MP)	Washoe;RENO-VERDI 9128 (MP)
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 9127 (MP)	Washoe;RENO-VERDI 9127 (MP)
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 9126 (MP)	Washoe;RENO-VERDI 9126 (MP)
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 9125 (MP)	Washoe;RENO-VERDI 9125 (MP)
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 9124 (MP)	Washoe;RENO-VERDI 9124 (MP)
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 9123 (MP)	Washoe;RENO-VERDI 9123 (MP)
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 9122 (MP)	Washoe;RENO-VERDI 9122 (MP)
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 9120 (MP)	Washoe;RENO-VERDI 9120 (MP)
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 9115 (MP)	Washoe;RENO-VERDI 9115 (MP)
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 9109 (MP)	Washoe;RENO-VERDI 9109 (MP)
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 9107 (MP)	Washoe;RENO-VERDI 9107 (MP)
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 9103 (MP)	Washoe;RENO-VERDI 9103 (MP)
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 8505	Washoe;RENO-VERDI 8505
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 8502	Washoe;RENO-VERDI 8502
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 8500	Washoe;RENO-VERDI 8500
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 8400 (MP)	Washoe;RENO-VERDI 8400 (MP)
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 8297	Washoe;RENO-VERDI 8297
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 8294	Washoe;RENO-VERDI 8294
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 8292 (MP)	Washoe;RENO-VERDI 8292 (MP)
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 8291 (MP)	Washoe;RENO-VERDI 8291 (MP)
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 8290	Washoe;RENO-VERDI 8290
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 8277	Washoe;RENO-VERDI 8277
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 8276	Washoe;RENO-VERDI 8276
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 8275 (MP)	Washoe;RENO-VERDI 8275 (MP)
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 8273	Washoe;RENO-VERDI 8273
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 8271	Washoe;RENO-VERDI 8271
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 8265	Washoe;RENO-VERDI 8265
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 8264	Washoe;RENO-VERDI 8264
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 8263	Washoe;RENO-VERDI 8263
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 8261	Washoe;RENO-VERDI 8261
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 8260 (MP)	Washoe;RENO-VERDI 8260 (MP)
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 8259 (MP)	Washoe;RENO-VERDI 8259 (MP)
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 8256	Washoe;RENO-VERDI 8256
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 8254	Washoe;RENO-VERDI 8254
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 8253	Washoe;RENO-VERDI 8253
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 8250	Washoe;RENO-VERDI 8250
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 8247	Washoe;RENO-VERDI 8247
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 8245	Washoe;RENO-VERDI 8245
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 8240	Washoe;RENO-VERDI 8240
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 8238	Washoe;RENO-VERDI 8238
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 8237	Washoe;RENO-VERDI 8237
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 8236	Washoe;RENO-VERDI 8236
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 8235	Washoe;RENO-VERDI 8235
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 8234	Washoe;RENO-VERDI 8234
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 8233	Washoe;RENO-VERDI 8233
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 8232	Washoe;RENO-VERDI 8232
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 8227	Washoe;RENO-VERDI 8227
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 8226	Washoe;RENO-VERDI 8226
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 8222	Washoe;RENO-VERDI 8222
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 8221	Washoe;RENO-VERDI 8221
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 8220	Washoe;RENO-VERDI 8220
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 8219	Washoe;RENO-VERDI 8219
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 8218	Washoe;RENO-VERDI 8218
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 8217	Washoe;RENO-VERDI 8217
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 8216	Washoe;RENO-VERDI 8216
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 8214	Washoe;RENO-VERDI 8214
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 8213	Washoe;RENO-VERDI 8213
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 8212	Washoe;RENO-VERDI 8212
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 8211	Washoe;RENO-VERDI 8211
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 8210	Washoe;RENO-VERDI 8210
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 8209	Washoe;RENO-VERDI 8209
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 8208	Washoe;RENO-VERDI 8208
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 8207	Washoe;RENO-VERDI 8207
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 8206	Washoe;RENO-VERDI 8206
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 8205	Washoe;RENO-VERDI 8205
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 8204	Washoe;RENO-VERDI 8204
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 8203	Washoe;RENO-VERDI 8203
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 8202	Washoe;RENO-VERDI 8202
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 8201	Washoe;RENO-VERDI 8201
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 8200	Washoe;RENO-VERDI 8200
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 8129	Washoe;RENO-VERDI 8129
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 8128	Washoe;RENO-VERDI 8128
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 8127	Washoe;RENO-VERDI 8127
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 8118	Washoe;RENO-VERDI 8118
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 8115	Washoe;RENO-VERDI 8115
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 8114	Washoe;RENO-VERDI 8114
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 8112	Washoe;RENO-VERDI 8112
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 8103	Washoe;RENO-VERDI 8103
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 8102	Washoe;RENO-VERDI 8102
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 8101	Washoe;RENO-VERDI 8101
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 8100	Washoe;RENO-VERDI 8100
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 7596 (MP)	Washoe;RENO-VERDI 7596 (MP)
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 7587	Washoe;RENO-VERDI 7587
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 7586	Washoe;RENO-VERDI 7586
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 7574 (MP)	Washoe;RENO-VERDI 7574 (MP)
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 7572	Washoe;RENO-VERDI 7572
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 7571	Washoe;RENO-VERDI 7571
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 7570	Washoe;RENO-VERDI 7570
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 7569	Washoe;RENO-VERDI 7569
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 7567	Washoe;RENO-VERDI 7567
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 7566 (MP)	Washoe;RENO-VERDI 7566 (MP)
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 7558	Washoe;RENO-VERDI 7558
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 7557	Washoe;RENO-VERDI 7557
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 7556	Washoe;RENO-VERDI 7556
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 7553	Washoe;RENO-VERDI 7553
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 7552	Washoe;RENO-VERDI 7552
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 7549 (MP)	Washoe;RENO-VERDI 7549 (MP)
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 7548	Washoe;RENO-VERDI 7548
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 7547 (MP)	Washoe;RENO-VERDI 7547 (MP)
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 7546 (MP)	Washoe;RENO-VERDI 7546 (MP)
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 7543	Washoe;RENO-VERDI 7543
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 7541	Washoe;RENO-VERDI 7541
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 7540	Washoe;RENO-VERDI 7540
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 7539 (MP)	Washoe;RENO-VERDI 7539 (MP)
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 7537	Washoe;RENO-VERDI 7537
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 7536	Washoe;RENO-VERDI 7536
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 7532	Washoe;RENO-VERDI 7532
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 7529 (MP)	Washoe;RENO-VERDI 7529 (MP)
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 7528	Washoe;RENO-VERDI 7528
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 7527	Washoe;RENO-VERDI 7527
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 7526	Washoe;RENO-VERDI 7526
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 7525	Washoe;RENO-VERDI 7525
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 7524	Washoe;RENO-VERDI 7524
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 7523	Washoe;RENO-VERDI 7523
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 7520	Washoe;RENO-VERDI 7520
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 7519	Washoe;RENO-VERDI 7519
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 7516	Washoe;RENO-VERDI 7516
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 7508	Washoe;RENO-VERDI 7508
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 7507	Washoe;RENO-VERDI 7507
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 7506	Washoe;RENO-VERDI 7506
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 7321	Washoe;RENO-VERDI 7321
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 7319	Washoe;RENO-VERDI 7319
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 7307	Washoe;RENO-VERDI 7307
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 7302	Washoe;RENO-VERDI 7302
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 7300	Washoe;RENO-VERDI 7300
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 7100	Washoe;RENO-VERDI 7100
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 5066	Washoe;RENO-VERDI 5066
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 5065 (MP)	Washoe;RENO-VERDI 5065 (MP)
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 5064	Washoe;RENO-VERDI 5064
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 5063	Washoe;RENO-VERDI 5063
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 5062	Washoe;RENO-VERDI 5062
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 5061 (MP)	Washoe;RENO-VERDI 5061 (MP)
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 5056	Washoe;RENO-VERDI 5056
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 5054	Washoe;RENO-VERDI 5054
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 5053	Washoe;RENO-VERDI 5053
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 5051 (MP)	Washoe;RENO-VERDI 5051 (MP)
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 5049 (MP)	Washoe;RENO-VERDI 5049 (MP)
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 5048 (MP)	Washoe;RENO-VERDI 5048 (MP)
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 5047	Washoe;RENO-VERDI 5047
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 5046	Washoe;RENO-VERDI 5046
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 5045	Washoe;RENO-VERDI 5045
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 5041	Washoe;RENO-VERDI 5041
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 5040	Washoe;RENO-VERDI 5040
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 5039	Washoe;RENO-VERDI 5039
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 5036	Washoe;RENO-VERDI 5036
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 5035	Washoe;RENO-VERDI 5035
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 5034	Washoe;RENO-VERDI 5034
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 5033	Washoe;RENO-VERDI 5033
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 5032	Washoe;RENO-VERDI 5032
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 5031	Washoe;RENO-VERDI 5031
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 5030	Washoe;RENO-VERDI 5030
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 5027	Washoe;RENO-VERDI 5027
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 5026	Washoe;RENO-VERDI 5026
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 5024	Washoe;RENO-VERDI 5024
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 5023 (MP)	Washoe;RENO-VERDI 5023 (MP)
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 5022	Washoe;RENO-VERDI 5022
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 5020	Washoe;RENO-VERDI 5020
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 5018	Washoe;RENO-VERDI 5018
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 5016	Washoe;RENO-VERDI 5016
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 5015	Washoe;RENO-VERDI 5015
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 5014	Washoe;RENO-VERDI 5014
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 5012	Washoe;RENO-VERDI 5012
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 5011	Washoe;RENO-VERDI 5011
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 5010	Washoe;RENO-VERDI 5010
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 5009	Washoe;RENO-VERDI 5009
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 5008	Washoe;RENO-VERDI 5008
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 5007	Washoe;RENO-VERDI 5007
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 5006	Washoe;RENO-VERDI 5006
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 5005	Washoe;RENO-VERDI 5005
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 5003	Washoe;RENO-VERDI 5003
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 5000	Washoe;RENO-VERDI 5000
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 4056	Washoe;RENO-VERDI 4056
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 4055 (MP)	Washoe;RENO-VERDI 4055 (MP)
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 4054 (MP)	Washoe;RENO-VERDI 4054 (MP)
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 4053	Washoe;RENO-VERDI 4053
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 4052 (MP)	Washoe;RENO-VERDI 4052 (MP)
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 4051 (MP)	Washoe;RENO-VERDI 4051 (MP)
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 4047	Washoe;RENO-VERDI 4047
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 4046	Washoe;RENO-VERDI 4046
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 4045	Washoe;RENO-VERDI 4045
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 4043	Washoe;RENO-VERDI 4043
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 4042 (MP)	Washoe;RENO-VERDI 4042 (MP)
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 4041	Washoe;RENO-VERDI 4041
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 4040	Washoe;RENO-VERDI 4040
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 4039	Washoe;RENO-VERDI 4039
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 4038	Washoe;RENO-VERDI 4038
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 4037	Washoe;RENO-VERDI 4037
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 4036	Washoe;RENO-VERDI 4036
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 4035	Washoe;RENO-VERDI 4035
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 4033	Washoe;RENO-VERDI 4033
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 4032	Washoe;RENO-VERDI 4032
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 4029 (MP)	Washoe;RENO-VERDI 4029 (MP)
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 4026 (MP)	Washoe;RENO-VERDI 4026 (MP)
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 4025	Washoe;RENO-VERDI 4025
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 4024	Washoe;RENO-VERDI 4024
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 4023	Washoe;RENO-VERDI 4023
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 4022	Washoe;RENO-VERDI 4022
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 4021	Washoe;RENO-VERDI 4021
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 4020	Washoe;RENO-VERDI 4020
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 4019	Washoe;RENO-VERDI 4019
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 4018 (MP)	Washoe;RENO-VERDI 4018 (MP)
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 4017	Washoe;RENO-VERDI 4017
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 4016	Washoe;RENO-VERDI 4016
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 4015 (MP)	Washoe;RENO-VERDI 4015 (MP)
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 4014	Washoe;RENO-VERDI 4014
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 4012	Washoe;RENO-VERDI 4012
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 4009	Washoe;RENO-VERDI 4009
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 4007	Washoe;RENO-VERDI 4007
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 4005	Washoe;RENO-VERDI 4005
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 4003	Washoe;RENO-VERDI 4003
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 4000	Washoe;RENO-VERDI 4000
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 3040	Washoe;RENO-VERDI 3040
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 3039	Washoe;RENO-VERDI 3039
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 3038	Washoe;RENO-VERDI 3038
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 3036	Washoe;RENO-VERDI 3036
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 3035 (MP)	Washoe;RENO-VERDI 3035 (MP)
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 3032	Washoe;RENO-VERDI 3032
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 3031	Washoe;RENO-VERDI 3031
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 3030	Washoe;RENO-VERDI 3030
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 3029	Washoe;RENO-VERDI 3029
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 3028	Washoe;RENO-VERDI 3028
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 3027	Washoe;RENO-VERDI 3027
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 3026	Washoe;RENO-VERDI 3026
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 3025	Washoe;RENO-VERDI 3025
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 3024	Washoe;RENO-VERDI 3024
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 3023	Washoe;RENO-VERDI 3023
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 3022	Washoe;RENO-VERDI 3022
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 3021	Washoe;RENO-VERDI 3021
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 3020	Washoe;RENO-VERDI 3020
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 3019	Washoe;RENO-VERDI 3019
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 3018	Washoe;RENO-VERDI 3018
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 3017	Washoe;RENO-VERDI 3017
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 3016	Washoe;RENO-VERDI 3016
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 3015	Washoe;RENO-VERDI 3015
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 3014	Washoe;RENO-VERDI 3014
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 3013 (MP)	Washoe;RENO-VERDI 3013 (MP)
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 3012	Washoe;RENO-VERDI 3012
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 3011	Washoe;RENO-VERDI 3011
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 3010	Washoe;RENO-VERDI 3010
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 3009	Washoe;RENO-VERDI 3009
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 3008	Washoe;RENO-VERDI 3008
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 3007	Washoe;RENO-VERDI 3007
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 3006	Washoe;RENO-VERDI 3006
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 3005	Washoe;RENO-VERDI 3005
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 3004	Washoe;RENO-VERDI 3004
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 3003	Washoe;RENO-VERDI 3003
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 3002	Washoe;RENO-VERDI 3002
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 3001	Washoe;RENO-VERDI 3001
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 2081	Washoe;RENO-VERDI 2081
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 2080	Washoe;RENO-VERDI 2080
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 2078 (MP)	Washoe;RENO-VERDI 2078 (MP)
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 2074 (MP)	Washoe;RENO-VERDI 2074 (MP)
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 2073	Washoe;RENO-VERDI 2073
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 2070	Washoe;RENO-VERDI 2070
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 2068	Washoe;RENO-VERDI 2068
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 2065	Washoe;RENO-VERDI 2065
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 2064 (MP)	Washoe;RENO-VERDI 2064 (MP)
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 2062	Washoe;RENO-VERDI 2062
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 2060	Washoe;RENO-VERDI 2060
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 2058	Washoe;RENO-VERDI 2058
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 2057 (MP)	Washoe;RENO-VERDI 2057 (MP)
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 2051 (MP)	Washoe;RENO-VERDI 2051 (MP)
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 2050	Washoe;RENO-VERDI 2050
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 2049	Washoe;RENO-VERDI 2049
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 2048 (MP)	Washoe;RENO-VERDI 2048 (MP)
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 2047	Washoe;RENO-VERDI 2047
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 2043	Washoe;RENO-VERDI 2043
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 2042	Washoe;RENO-VERDI 2042
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 2041	Washoe;RENO-VERDI 2041
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 2040	Washoe;RENO-VERDI 2040
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 2039	Washoe;RENO-VERDI 2039
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 2037	Washoe;RENO-VERDI 2037
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 2036	Washoe;RENO-VERDI 2036
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 2035	Washoe;RENO-VERDI 2035
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 2034	Washoe;RENO-VERDI 2034
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 2033	Washoe;RENO-VERDI 2033
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 2032	Washoe;RENO-VERDI 2032
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 2031	Washoe;RENO-VERDI 2031
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 2030	Washoe;RENO-VERDI 2030
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 2029	Washoe;RENO-VERDI 2029
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 2028	Washoe;RENO-VERDI 2028
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 2027	Washoe;RENO-VERDI 2027
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 2026	Washoe;RENO-VERDI 2026
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 2025	Washoe;RENO-VERDI 2025
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 2023	Washoe;RENO-VERDI 2023
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 2022	Washoe;RENO-VERDI 2022
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 2021	Washoe;RENO-VERDI 2021
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 2020	Washoe;RENO-VERDI 2020
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 2019	Washoe;RENO-VERDI 2019
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 2018	Washoe;RENO-VERDI 2018
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 2017	Washoe;RENO-VERDI 2017
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 2016	Washoe;RENO-VERDI 2016
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 2013	Washoe;RENO-VERDI 2013
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 2010	Washoe;RENO-VERDI 2010
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 2009	Washoe;RENO-VERDI 2009
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 2007	Washoe;RENO-VERDI 2007
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 2006	Washoe;RENO-VERDI 2006
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 2004	Washoe;RENO-VERDI 2004
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 2002 (MP)	Washoe;RENO-VERDI 2002 (MP)
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 2000	Washoe;RENO-VERDI 2000
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 1061 (MP)	Washoe;RENO-VERDI 1061 (MP)
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 1059 (MP)	Washoe;RENO-VERDI 1059 (MP)
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 1058	Washoe;RENO-VERDI 1058
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 1057	Washoe;RENO-VERDI 1057
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 1056	Washoe;RENO-VERDI 1056
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 1055	Washoe;RENO-VERDI 1055
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 1053	Washoe;RENO-VERDI 1053
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 1051	Washoe;RENO-VERDI 1051
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 1050 (MP)	Washoe;RENO-VERDI 1050 (MP)
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 1047	Washoe;RENO-VERDI 1047
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 1046	Washoe;RENO-VERDI 1046
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 1045	Washoe;RENO-VERDI 1045
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 1044	Washoe;RENO-VERDI 1044
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 1043	Washoe;RENO-VERDI 1043
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 1040	Washoe;RENO-VERDI 1040
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 1039	Washoe;RENO-VERDI 1039
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 1038	Washoe;RENO-VERDI 1038
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 1036	Washoe;RENO-VERDI 1036
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 1035	Washoe;RENO-VERDI 1035
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 1033	Washoe;RENO-VERDI 1033
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 1032	Washoe;RENO-VERDI 1032
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 1031	Washoe;RENO-VERDI 1031
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 1029	Washoe;RENO-VERDI 1029
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 1027	Washoe;RENO-VERDI 1027
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 1026	Washoe;RENO-VERDI 1026
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 1024	Washoe;RENO-VERDI 1024
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 1023	Washoe;RENO-VERDI 1023
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 1022	Washoe;RENO-VERDI 1022
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 1020	Washoe;RENO-VERDI 1020
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 1018	Washoe;RENO-VERDI 1018
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 1016	Washoe;RENO-VERDI 1016
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 1015	Washoe;RENO-VERDI 1015
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 1014	Washoe;RENO-VERDI 1014
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 1012	Washoe;RENO-VERDI 1012
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 1011	Washoe;RENO-VERDI 1011
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 1010	Washoe;RENO-VERDI 1010
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 1008	Washoe;RENO-VERDI 1008
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 1007	Washoe;RENO-VERDI 1007
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 1006	Washoe;RENO-VERDI 1006
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 1005 (MP)	Washoe;RENO-VERDI 1005 (MP)
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 1003	Washoe;RENO-VERDI 1003
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 1002	Washoe;RENO-VERDI 1002
+ReportingUnit	Nevada;Washoe County;RENO-VERDI 1000	Washoe;RENO-VERDI 1000
+ReportingUnit	Nevada;Washoe County;PROVISIONAL	Washoe;PROVISIONAL
+ReportingUnit	Nevada;Washoe County;NO FIXED RES	Washoe;NO FIXED RES
+ReportingUnit	Nevada;Washoe County;NEW RESIDENT	Washoe;NEW RESIDENT
+ReportingUnit	Nevada;Washoe County;INCLINE VILLAGE 9251(MP)	Washoe;INCLINE VILLAGE 9251(MP)
+ReportingUnit	Nevada;Washoe County;INCLINE VILLAGE 9121(MP)	Washoe;INCLINE VILLAGE 9121(MP)
+ReportingUnit	Nevada;Washoe County;INCLINE VILLAGE 9116(MP)	Washoe;INCLINE VILLAGE 9116(MP)
+ReportingUnit	Nevada;Washoe County;INCLINE VILLAGE 9106(MP)	Washoe;INCLINE VILLAGE 9106(MP)
+ReportingUnit	Nevada;Washoe County;INCLINE VILLAGE 9102(MP)	Washoe;INCLINE VILLAGE 9102(MP)
+ReportingUnit	Nevada;Washoe County;INCLINE VILLAGE 9101(MP)	Washoe;INCLINE VILLAGE 9101(MP)
+ReportingUnit	Nevada;Washoe County;INCLINE VILLAGE 8126(MP)	Washoe;INCLINE VILLAGE 8126(MP)
+ReportingUnit	Nevada;Washoe County;INCLINE VILLAGE 8125	Washoe;INCLINE VILLAGE 8125
+ReportingUnit	Nevada;Washoe County;INCLINE VILLAGE 8117	Washoe;INCLINE VILLAGE 8117
+ReportingUnit	Nevada;Washoe County;INCLINE VILLAGE 8116	Washoe;INCLINE VILLAGE 8116
+ReportingUnit	Nevada;Washoe County;INCLINE VILLAGE 8111	Washoe;INCLINE VILLAGE 8111
+ReportingUnit	Nevada;Washoe County;INCLINE VILLAGE 8110	Washoe;INCLINE VILLAGE 8110
+ReportingUnit	Nevada;Washoe County;INCLINE VILLAGE 8109	Washoe;INCLINE VILLAGE 8109
+ReportingUnit	Nevada;Washoe County;INCLINE VILLAGE 8108	Washoe;INCLINE VILLAGE 8108
+ReportingUnit	Nevada;Washoe County;INCLINE VILLAGE 8107	Washoe;INCLINE VILLAGE 8107
+ReportingUnit	Nevada;Washoe County;INCLINE VILLAGE 8106	Washoe;INCLINE VILLAGE 8106
+ReportingUnit	Nevada;Washoe County;INCLINE VILLAGE 8105	Washoe;INCLINE VILLAGE 8105
+ReportingUnit	Nevada;Washoe County;INCLINE VILLAGE 8104	Washoe;INCLINE VILLAGE 8104
+ReportingUnit	Nevada;Washoe County;GER-WADS 9557 (MP)	Washoe;GER-WADS 9557 (MP)
+ReportingUnit	Nevada;Washoe County;GER-WADS 9408 (MP)	Washoe;GER-WADS 9408 (MP)
+ReportingUnit	Nevada;Washoe County;GER-WADS 7589	Washoe;GER-WADS 7589
+ReportingUnit	Nevada;Washoe County;GER-WADS 7581	Washoe;GER-WADS 7581
+ReportingUnit	Nevada;Washoe County;GER-WADS 7531 (MP)	Washoe;GER-WADS 7531 (MP)
+ReportingUnit	Nevada;Washoe County;GER-WADS 7522 (MP)	Washoe;GER-WADS 7522 (MP)
+ReportingUnit	Nevada;Washoe County;GER-WADS 7521 (MP)	Washoe;GER-WADS 7521 (MP)
+ReportingUnit	Nevada;Washoe County;GER-WADS 7412	Washoe;GER-WADS 7412
+ReportingUnit	Nevada;Washoe County;FOC	Washoe;FOC
 ReportingUnit	Nevada;White Pine County;Precinct 1	White Pine;Precinct 1
 ReportingUnit	Nevada;White Pine County;Precinct 10	White Pine;Precinct 10
 ReportingUnit	Nevada;White Pine County;Precinct 2	White Pine;Precinct 2
@@ -3035,17 +3622,30 @@ ReportingUnit	Nevada;White Pine County;Precinct 6	White Pine;Precinct 6
 ReportingUnit	Nevada;White Pine County;Precinct 7	White Pine;Precinct 7
 ReportingUnit	Nevada;White Pine County;Precinct 8	White Pine;Precinct 8
 ReportingUnit	Nevada;White Pine County;Precinct 9	White Pine;Precinct 9
+ReportingUnit	Nevada;White Pine County;Precinct 88	White Pine;Precinct 88
 ReportingUnit	Nevada;White Pine County;Precinct 99	White Pine;Precinct 99
+ReportingUnit	Nevada;Storey County;PRECINCT 88	Storey;PRECINCT 88
+ReportingUnit	Nevada;Pershing County;PRECINCT 88	Pershing;PRECINCT 88
+ReportingUnit	Nevada;Nye County;PRECINCT 88	Nye;PRECINCT 88
+ReportingUnit	Nevada;Mineral County;PRECINCT 88	Mineral;PRECINCT 88
+ReportingUnit	Nevada;Lyon County;Precinct 88	Lyon;Precinct 88
+ReportingUnit	Nevada;Lincoln County;236 - CALIENTE SOUTH	Lincoln;236 - CALIENTE SOUTH
+ReportingUnit	Nevada;Lincoln County;233 - CALIENTE NORTH	Lincoln;233 - CALIENTE NORTH
+ReportingUnit	Nevada;Lincoln County;PRECINCT 88	Lincoln;PRECINCT 88
+ReportingUnit	Nevada;Lander County;Precinct 88	Lander;Precinct 88
+ReportingUnit	Nevada;Humboldt County;PRECINCT 88	Humboldt;PRECINCT 88
+ReportingUnit	Nevada;Eureka County;Precinct 88	Eureka;Precinct 88
+ReportingUnit	Nevada;Esmeralda County;Precinct 88	Esmeralda;Precinct 88
+ReportingUnit	Nevada;Elko County;Precinct 88	Elko;Precinct 88
 Candidate	Titus, Dina	Titus, Dina
 Candidate	Robert Van Strawder, Jr.	Strawder, Jr., Robert Van
-Candidate	Rubinson, Barry	Rubinson, Barry
 Candidate	Rodimer, Dan 'Big Dan'	Rodimer, Dan 'Big Dan'
 Candidate	Rodimer, Dan 'Big Dan'	"Rodimer, Dan ""Big Dan"""
 Candidate	Marchant, Jim	Marchant, Jim
-Candidate	Lee, Suzanne	Lee, Suzanne
-Candidate	Esteban, Jonathan Royce	Esteban, Jonathan Royce
+Candidate	Suzanne Lee	Lee, Suzanne
+Candidate	Jonathan Royce Esteban	Esteban, Jonathan Royce
 Candidate	Brown, Steve	Brown, Steve
-Candidate	Bridges Ii, Edward	Bridges Ii, Edward
+Candidate	Edward Bridges II	Bridges Ii, Edward
 Candidate	Bentley, Joyce	Bentley, Joyce
 Candidate	Ackerman, Patricia	Ackerman, Patricia
 Candidate	Ackerman, Patricia	'Ackerman, Patricia'
@@ -3066,8 +3666,8 @@ Candidate	Beck, Joel	Beck, Joel
 Candidate	Beck, Joel	'Beck, Joel'
 Candidate	Hurley, Jesse Douglas	Hurley, Jesse Douglas
 Candidate	Hurley, Jesse Douglas	'Hurley, Jesse Douglas'
-Candidate	Titus, Robin L.	Titus, Robin L.
-Candidate	Titus, Robin L.	'Titus, Robin L.'
+Candidate	Robin L. Titus	Titus, Robin L.
+Candidate	Robin L. Titus	'Titus, Robin L.'
 Candidate	Ulrich, Jeff	Ulrich, Jeff
 Candidate	Ulrich, Jeff	'Ulrich, Jeff'
 Candidate	Heath, Justin	Heath, Justin
@@ -3307,12 +3907,12 @@ Candidate	Silberkraus, Stephen Hayward	Silberkraus, Stephen Hayward
 Candidate	Silberkraus, Stephen Hayward	'Silberkraus, Stephen Hayward'
 Candidate	Kintigh, Claudia	Kintigh, Claudia
 Candidate	Kintigh, Claudia	'Kintigh, Claudia'
-Candidate	Calhoun, Jay	Calhoun, Jay
-Candidate	Calhoun, Jay	'Calhoun, Jay'
+Candidate	Jay Calhoun	Calhoun, Jay
+Candidate	Jay Calhoun	'Calhoun, Jay'
 Candidate	Archer, Troy	Archer, Troy
 Candidate	Archer, Troy	'Archer, Troy'
-Candidate	Delisle, Steven E.	Delisle, Steven E.
-Candidate	Delisle, Steven E.	'Delisle, Steven E.'
+Candidate	Steven E. Delisle	Delisle, Steven E.
+Candidate	Steven E. Delisle	'Delisle, Steven E.'
 Candidate	George, Stephen L.	George, Stephen L.
 Candidate	George, Stephen L.	'George, Stephen L.'
 Candidate	Gibson, Sr., David S.	Gibson, Sr., David S.
@@ -3381,12 +3981,12 @@ Candidate	Searles, Noel	Searles, Noel
 Candidate	Searles, Noel	'Searles, Noel'
 Candidate	Richardson, Vincent L.	Richardson, Vincent L.
 Candidate	Richardson, Vincent L.	'Richardson, Vincent L.'
-Candidate	Miller, Cameron 'C.H.'	Miller, Cameron 'C.H.'
+Candidate	Cameron 'C.H.' Miller	Miller, Cameron 'C.H.'
 Candidate	Stephens, III, John	Stephens, III, John
 Candidate	Stephens, III, John	'Stephens, III, John'
 Candidate	Edwards, Chris	Edwards, Chris
 Candidate	Edwards, Chris	'Edwards, Chris'
-Candidate	Black, Ann 'Annie'	Black, Ann 'Annie'
+Candidate	Ann 'Annie' Black	Black, Ann 'Annie'
 Candidate	Boone, Kasina	Boone, Kasina
 Candidate	Boone, Kasina	'Boone, Kasina'
 Candidate	Hill, Cortland	Hill, Cortland
@@ -3403,13 +4003,13 @@ Candidate	Wachter, Bryan	Wachter, Bryan
 Candidate	Wachter, Bryan	'Wachter, Bryan'
 Candidate	Williams, Katie	Williams, Katie
 Candidate	Williams, Katie	'Williams, Katie'
-Candidate	Becker, Liz	Becker, Liz
-Candidate	Becker, Liz	'Becker, Liz'
+Candidate	Liz Becker	Becker, Liz
+Candidate	Liz Becker	'Becker, Liz'
 Candidate	Bilodeau, Ronald 'Ron'	Bilodeau, Ronald 'Ron'
 Candidate	Gibson, Donnie	Gibson, Donnie
 Candidate	Gibson, Donnie	'Gibson, Donnie'
-Candidate	McArthur, Richard	McArthur, Richard
-Candidate	McArthur, Richard	'McArthur, Richard'
+Candidate	Richard McArthur	McArthur, Richard
+Candidate	Richard McArthur	'McArthur, Richard'
 Candidate	Arroyo, Elysa	Arroyo, Elysa
 Candidate	Arroyo, Elysa	'Arroyo, Elysa'
 Candidate	Brooks, Lola	Brooks, Lola
@@ -3452,8 +4052,8 @@ Candidate	Deaville, Jacob	Deaville, Jacob
 Candidate	Deaville, Jacob	'Deaville, Jacob'
 Candidate	Noeth, Lisa	Noeth, Lisa
 Candidate	Noeth, Lisa	'Noeth, Lisa'
-Candidate	Matthews, Andy	Matthews, Andy
-Candidate	Matthews, Andy	'Matthews, Andy'
+Candidate	Andy Matthews	Matthews, Andy
+Candidate	Andy Matthews	'Matthews, Andy'
 Candidate	Brown, Patsy	Brown, Patsy
 Candidate	Brown, Patsy	'Brown, Patsy'
 Candidate	Cain, Hunter	Cain, Hunter
@@ -3466,7 +4066,7 @@ Candidate	Raja, Fayyaz	Raja, Fayyaz
 Candidate	Raja, Fayyaz	'Raja, Fayyaz'
 Candidate	Penney, Jenny	Penney, Jenny
 Candidate	Penney, Jenny	'Penney, Jenny'
-Candidate	Kunnel, Radhika 'RPK'	Kunnel, Radhika 'RPK'
+Candidate	Radhika 'RPK' Kunnel	Kunnel, Radhika 'RPK'
 Candidate	Valdes, Joe	Valdes, Joe
 Candidate	Valdes, Joe	'Valdes, Joe'
 Candidate	Sherwood, Jennie	Sherwood, Jennie
@@ -3477,31 +4077,31 @@ Candidate	McArthur, Taylor	McArthur, Taylor
 Candidate	McArthur, Taylor	'McArthur, Taylor'
 Candidate	Morehead, Christian	Morehead, Christian
 Candidate	Morehead, Christian	'Morehead, Christian'
-Candidate	Kasama, Heidi	Kasama, Heidi
-Candidate	Kasama, Heidi	'Kasama, Heidi'
+Candidate	Heidi Kasama	Kasama, Heidi
+Candidate	Heidi Kasama	'Kasama, Heidi'
 Candidate	Sexton, Erik	Sexton, Erik
 Candidate	Sexton, Erik	'Sexton, Erik'
 Candidate	Small, Jim	Small, Jim
 Candidate	Small, Jim	'Small, Jim'
-Candidate	Nguyen, Rochelle	Nguyen, Rochelle
-Candidate	Nguyen, Rochelle	'Nguyen, Rochelle'
+Candidate	Rochelle Nguyen	Nguyen, Rochelle
+Candidate	Rochelle Nguyen	'Nguyen, Rochelle'
 Candidate	Holder, Jesse 'Jake'	Holder, Jesse 'Jake'
 Candidate	Randolph, Retha	Randolph, Retha
 Candidate	Randolph, Retha	'Randolph, Retha'
 Candidate	Tracy, Mitchell T.	Tracy, Mitchell T.
 Candidate	Tracy, Mitchell T.	'Tracy, Mitchell T.'
-Candidate	Miller, Mack	Miller, Mack
-Candidate	Miller, Mack	'Miller, Mack'
+Candidate	Mack Miller	Miller, Mack
+Candidate	Mack Miller	'Miller, Mack'
 Candidate	Robinson, II, William E.	Robinson, II, William E.
 Candidate	Robinson, II, William E.	'Robinson, II, William E.'
-Candidate	Summers-Armstrong, Shondra	Summers-Armstrong, Shondra
-Candidate	Summers-Armstrong, Shondra	'Summers-Armstrong, Shondra'
+Candidate	Shondra Summers-Armstrong	Summers-Armstrong, Shondra
+Candidate	Shondra Summers-Armstrong	'Summers-Armstrong, Shondra'
 Candidate	Lewis, Geraldine	Lewis, Geraldine
 Candidate	Lewis, Geraldine	'Lewis, Geraldine'
 Candidate	Barron, Isaac	Barron, Isaac
 Candidate	Barron, Isaac	'Barron, Isaac'
-Candidate	Duncan, Katie	Duncan, Katie
-Candidate	Duncan, Katie	'Duncan, Katie'
+Candidate	Katie Duncan	Duncan, Katie
+Candidate	Katie Duncan	'Duncan, Katie'
 Candidate	Flanagan, Tanya	Flanagan, Tanya
 Candidate	Flanagan, Tanya	'Flanagan, Tanya'
 Candidate	Denis, Moises 'Mo'	Denis, Moises 'Mo'
@@ -3512,26 +4112,26 @@ Candidate	Scott, Dillard Allen	Scott, Dillard Allen
 Candidate	Scott, Dillard Allen	'Scott, Dillard Allen'
 Candidate	Moreno, Jesus Carlos	Moreno, Jesus Carlos
 Candidate	Moreno, Jesus Carlos	'Moreno, Jesus Carlos'
-Candidate	Watts, Howard	Watts, Howard
-Candidate	Watts, Howard	'Watts, Howard'
+Candidate	Howard Watts	Watts, Howard
+Candidate	Howard Watts	'Watts, Howard'
 Candidate	Andersson, Burke	Andersson, Burke
 Candidate	Andersson, Burke	'Andersson, Burke'
 Candidate	Carrillo, Richard	Carrillo, Richard
 Candidate	Carrillo, Richard	'Carrillo, Richard'
-Candidate	Lange, Roberta	Lange, Roberta
-Candidate	Lange, Roberta	'Lange, Roberta'
+Candidate	Roberta Lange	Lange, Roberta
+Candidate	Roberta Lange	'Lange, Roberta'
 Candidate	Spiegel, Ellen	Spiegel, Ellen
 Candidate	Spiegel, Ellen	'Spiegel, Ellen'
 Candidate	Logan, Zachary	Logan, Zachary
 Candidate	Logan, Zachary	'Logan, Zachary'
-Candidate	Orentlicher, David	Orentlicher, David
-Candidate	Orentlicher, David	'Orentlicher, David'
+Candidate	David Orentlicher	Orentlicher, David
+Candidate	David Orentlicher	'Orentlicher, David'
 Candidate	McAuliffe, Michael	McAuliffe, Michael
 Candidate	McAuliffe, Michael	'McAuliffe, Michael'
 Candidate	Smith, Emily	Smith, Emily
 Candidate	Smith, Emily	'Smith, Emily'
-Candidate	Considine, Venicia	Considine, Venicia
-Candidate	Considine, Venicia	'Considine, Venicia'
+Candidate	Venicia Considine	Considine, Venicia
+Candidate	Venicia Considine	'Considine, Venicia'
 Candidate	Dortch, Clarence M.	Dortch, Clarence M.
 Candidate	Dortch, Clarence M.	'Dortch, Clarence M.'
 Candidate	Frost, Char	Frost, Char
@@ -3821,8 +4421,8 @@ Candidate	White, Paul D	White, Paul D
 Candidate	White, Paul D	'White, Paul D'
 Candidate	Conner, Dale M	Conner, Dale M
 Candidate	Conner, Dale M	'Conner, Dale M'
-Candidate	Krasner, Lisa	Krasner, Lisa
-Candidate	Krasner, Lisa	'Krasner, Lisa'
+Candidate	Lisa Krasner	Krasner, Lisa
+Candidate	Lisa Krasner	'Krasner, Lisa'
 Candidate	Church, Jeff	Church, Jeff
 Candidate	Church, Jeff	'Church, Jeff'
 Candidate	Genasci, Lisa	Genasci, Lisa
@@ -4021,8 +4621,8 @@ Candidate	Tao, Jerry	Tao, Jerry
 Candidate	Tao, Jerry	'Tao, Jerry'
 Candidate	Robertson, Gayle	Robertson, Gayle
 Candidate	Robertson, Gayle	'Robertson, Gayle'
-Candidate	Alm, Vance	Alm, Vance
-Candidate	Alm, Vance	'Alm, Vance'
+Candidate	Vance Alm	Alm, Vance
+Candidate	Vance Alm	'Alm, Vance'
 Candidate	Fogarty, Patrick	Fogarty, Patrick
 Candidate	Fogarty, Patrick	'Fogarty, Patrick'
 Candidate	Schofield Jr., Jack L.	Schofield Jr., Jack L.
@@ -4138,8 +4738,8 @@ Candidate	Fougere, Thomas L.	Fougere, Thomas L.
 Candidate	Fougere, Thomas L.	'Fougere, Thomas L.'
 Candidate	Manfredi, Aaron	Manfredi, Aaron
 Candidate	Manfredi, Aaron	'Manfredi, Aaron'
-Candidate	Frierson, Jason	Frierson, Jason
-Candidate	Frierson, Jason	'Frierson, Jason'
+Candidate	Jason Frierson	Frierson, Jason
+Candidate	Jason Frierson	'Frierson, Jason'
 Candidate	Ballinger, Mary E.	Ballinger, Mary E.
 Candidate	Ballinger, Mary E.	'Ballinger, Mary E.'
 Candidate	Eady, Eileen	Eady, Eileen
@@ -4189,8 +4789,8 @@ Candidate	Teijeiro, Annette	Teijeiro, Annette
 Candidate	Teijeiro, Annette	'Teijeiro, Annette'
 Candidate	Hill, Richard	Hill, Richard
 Candidate	Hill, Richard	'Hill, Richard'
-Candidate	Leavitt, Glen	Leavitt, Glen
-Candidate	Leavitt, Glen	'Leavitt, Glen'
+Candidate	Glen Leavitt	Leavitt, Glen
+Candidate	Glen Leavitt	'Leavitt, Glen'
 Candidate	McCarthy, Matt	McCarthy, Matt
 Candidate	McCarthy, Matt	'McCarthy, Matt'
 Candidate	Atkins, Tim	Atkins, Tim
@@ -4201,8 +4801,8 @@ Candidate	Martinez, Jr., Leobardo	Martinez, Jr., Leobardo
 Candidate	Martinez, Jr., Leobardo	'Martinez, Jr., Leobardo'
 Candidate	Thompson, Eli	Thompson, Eli
 Candidate	Thompson, Eli	'Thompson, Eli'
-Candidate	Gorelow, Michelle	Gorelow, Michelle
-Candidate	Gorelow, Michelle	'Gorelow, Michelle'
+Candidate	Michelle Gorelow	Gorelow, Michelle
+Candidate	Michelle Gorelow	'Gorelow, Michelle'
 Candidate	Nimsuwan, Paul	Nimsuwan, Paul
 Candidate	Nimsuwan, Paul	'Nimsuwan, Paul'
 Candidate	Jones, Aimee	Jones, Aimee
@@ -4241,12 +4841,12 @@ Candidate	Bateman, Samuel	Bateman, Samuel
 Candidate	Bateman, Samuel	'Bateman, Samuel'
 Candidate	Aguirre-Insua, Luis	Aguirre-Insua, Luis
 Candidate	Aguirre-Insua, Luis	'Aguirre-Insua, Luis'
-Candidate	Watson, Kristee	Watson, Kristee
-Candidate	Watson, Kristee	'Watson, Kristee'
+Candidate	Kristee Watson	Watson, Kristee
+Candidate	Kristee Watson	'Watson, Kristee'
 Candidate	Bunce, Richard	Bunce, Richard
 Candidate	Bunce, Richard	'Bunce, Richard'
-Candidate	Hardy, Melissa	Hardy, Melissa
-Candidate	Hardy, Melissa	'Hardy, Melissa'
+Candidate	Melissa Hardy	Hardy, Melissa
+Candidate	Melissa Hardy	'Hardy, Melissa'
 Candidate	Carvalho, Amy	Carvalho, Amy
 Candidate	Carvalho, Amy	'Carvalho, Amy'
 Candidate	Coates, Andrew	Coates, Andrew
@@ -4259,8 +4859,8 @@ Candidate	Cannon, Linda	Cannon, Linda
 Candidate	Cannon, Linda	'Cannon, Linda'
 Candidate	Keller, Barry	Keller, Barry
 Candidate	Keller, Barry	'Keller, Barry'
-Candidate	Assefa, Alexander	Assefa, Alexander
-Candidate	Assefa, Alexander	'Assefa, Alexander'
+Candidate	Alexander Assefa	Assefa, Alexander
+Candidate	Alexander Assefa	'Assefa, Alexander'
 Candidate	Henry, LaDon	Henry, LaDon
 Candidate	Henry, LaDon	'Henry, LaDon'
 Candidate	Lauckner, Kathleen	Lauckner, Kathleen
@@ -4291,7 +4891,7 @@ Candidate	Tyrrell, Natalie	Tyrrell, Natalie
 Candidate	Tyrrell, Natalie	'Tyrrell, Natalie'
 Candidate	Anzalone, John	Anzalone, John
 Candidate	Anzalone, John	'Anzalone, John'
-Candidate	Spearman, Patricia 'Pat'	Spearman, Patricia 'Pat'
+Candidate	Patricia 'Pat' Spearman	Spearman, Patricia 'Pat'
 Candidate	Stephens, Allison	Stephens, Allison
 Candidate	Stephens, Allison	'Stephens, Allison'
 Candidate	Vilela, Amy	Vilela, Amy
@@ -4330,8 +4930,8 @@ Candidate	Brandon J Casutt	Brandon J Casutt
 Candidate	D'AYR, Gabrielle	D'AYR, Gabrielle
 Candidate	D'AYR, Gabrielle	'D'AYR, Gabrielle'
 Candidate	Levy, Anat 'Annette'	Levy, Anat 'Annette'
-Candidate	Martinez, Susan	Martinez, Susan
-Candidate	Martinez, Susan	'Martinez, Susan'
+Candidate	Susan Martinez	Martinez, Susan
+Candidate	Susan Martinez	'Martinez, Susan'
 Candidate	Moore, Cinthia	Moore, Cinthia
 Candidate	Moore, Cinthia	'Moore, Cinthia'
 Candidate	Seip, Ii, Walter L.	Seip, Ii, Walter L.
@@ -4346,8 +4946,8 @@ Candidate	Ohrenschall, James	Ohrenschall, James
 Candidate	Ohrenschall, James	'Ohrenschall, James'
 Candidate	McMichael, Sr., Donald Sylvantee	McMichael, Sr., Donald Sylvantee
 Candidate	McMichael, Sr., Donald Sylvantee	'McMichael, Sr., Donald Sylvantee'
-Candidate	Munk, Connie	Munk, Connie
-Candidate	Munk, Connie	'Munk, Connie'
+Candidate	Connie Munk	Munk, Connie
+Candidate	Connie Munk	'Munk, Connie'
 Candidate	Smith, Tony T.	Smith, Tony T.
 Candidate	Smith, Tony T.	'Smith, Tony T.'
 Candidate	Rezendes, Kenneth	Rezendes, Kenneth
@@ -4375,8 +4975,8 @@ Candidate	Toone, Ryan W.	Toone, Ryan W.
 Candidate	Toone, Ryan W.	'Toone, Ryan W.'
 Candidate	Kolhoss, Ruth	Kolhoss, Ruth
 Candidate	Kolhoss, Ruth	'Kolhoss, Ruth'
-Candidate	Backus, Shea	Backus, Shea
-Candidate	Backus, Shea	'Backus, Shea'
+Candidate	Shea Backus	Backus, Shea
+Candidate	Shea Backus	'Backus, Shea'
 Candidate	Cornstuble, Rick	Cornstuble, Rick
 Candidate	Cornstuble, Rick	'Cornstuble, Rick'
 Candidate	Pearce, Robbie Lucille	Pearce, Robbie Lucille
@@ -4464,8 +5064,8 @@ Candidate	Cracraft-Dickenson, Tammie	Cracraft-Dickenson, Tammie
 Candidate	Cracraft-Dickenson, Tammie	'Cracraft-Dickenson, Tammie'
 Candidate	Wines, Ira T.	Wines, Ira T.
 Candidate	Wines, Ira T.	'Wines, Ira T.'
-Candidate	Ellison, John C.	Ellison, John C.
-Candidate	Ellison, John C.	'Ellison, John C.'
+Candidate	John C. Ellison	Ellison, John C.
+Candidate	John C. Ellison	'Ellison, John C.'
 Candidate	Johnson, Chris J.	Johnson, Chris J.
 Candidate	Johnson, Chris J.	'Johnson, Chris J.'
 Candidate	Feasel, Teri	Feasel, Teri
@@ -4823,8 +5423,8 @@ Candidate	Schieve, Hillary	'Schieve, Hillary'
 Candidate	Shirazi, Azzi	Shirazi, Azzi
 Candidate	Shirazi, Azzi	'Shirazi, Azzi'
 Candidate	Evans, H. D. 'Chip'	Evans, H. D. 'Chip'
-Candidate	Jauregui-Jackins, Wendy	Jauregui-Jackins, Wendy
-Candidate	Jauregui-Jackins, Wendy	'Jauregui-Jackins, Wendy'
+Candidate	Wendy Jauregui-Jackins	Jauregui-Jackins, Wendy
+Candidate	Wendy Jauregui-Jackins	'Jauregui-Jackins, Wendy'
 Candidate	Clark, Aaron	Clark, Aaron
 Candidate	Clark, Aaron	'Clark, Aaron'
 Candidate	Clark, Michael E.	Clark, Michael E.
@@ -4855,8 +5455,8 @@ Candidate	Coleman, Edward	Coleman, Edward
 Candidate	Coleman, Edward	'Coleman, Edward'
 Candidate	Contine, Deonne	Contine, Deonne
 Candidate	Contine, Deonne	'Contine, Deonne'
-Candidate	Peters, Sarah	Peters, Sarah
-Candidate	Peters, Sarah	'Peters, Sarah'
+Candidate	Sarah Peters	Peters, Sarah
+Candidate	Sarah Peters	'Peters, Sarah'
 Candidate	Stewart, Tom	Stewart, Tom
 Candidate	Stewart, Tom	'Stewart, Tom'
 Candidate	Grush, Austin Jacob	Grush, Austin Jacob
@@ -5115,8 +5715,8 @@ Candidate	Giordano, Raymond Joseph	Giordano, Raymond Joseph
 Candidate	Giordano, Raymond Joseph	'Giordano, Raymond Joseph'
 Candidate	Jones, Tiffany	Jones, Tiffany
 Candidate	Jones, Tiffany	'Jones, Tiffany'
-Candidate	Jauregui, Sandra	Jauregui, Sandra
-Candidate	Jauregui, Sandra	'Jauregui, Sandra'
+Candidate	Sandra Jauregui	Jauregui, Sandra
+Candidate	Sandra Jauregui	'Jauregui, Sandra'
 Candidate	Phillips, Nick	Phillips, Nick
 Candidate	Phillips, Nick	'Phillips, Nick'
 Candidate	Rooney, Mary	Rooney, Mary
@@ -5223,8 +5823,8 @@ Candidate	Seaman, Victoria	Seaman, Victoria
 Candidate	Seaman, Victoria	'Seaman, Victoria'
 Candidate	Sedlmeyer, Stephen	Sedlmeyer, Stephen
 Candidate	Sedlmeyer, Stephen	'Sedlmeyer, Stephen'
-Candidate	Bilbray-Axelrod, Shannon	Bilbray-Axelrod, Shannon
-Candidate	Bilbray-Axelrod, Shannon	'Bilbray-Axelrod, Shannon'
+Candidate	Shannon Bilbray-Axelrod	Bilbray-Axelrod, Shannon
+Candidate	Shannon Bilbray-Axelrod	'Bilbray-Axelrod, Shannon'
 Candidate	Conine, Zach	Conine, Zach
 Candidate	Conine, Zach	'Conine, Zach'
 Candidate	Garcia, Manny	Garcia, Manny
@@ -5253,8 +5853,8 @@ Candidate	Churchwell, Shannon	Churchwell, Shannon
 Candidate	Churchwell, Shannon	'Churchwell, Shannon'
 Candidate	Martinez, Rory	Martinez, Rory
 Candidate	Martinez, Rory	'Martinez, Rory'
-Candidate	Miller, Brittney	Miller, Brittney
-Candidate	Miller, Brittney	'Miller, Brittney'
+Candidate	Brittney Miller	Miller, Brittney
+Candidate	Brittney Miller	'Miller, Brittney'
 Candidate	Baca, Tony	Baca, Tony
 Candidate	Baca, Tony	'Baca, Tony'
 Candidate	Ham, Artemus 'Art'	Ham, Artemus 'Art'
@@ -5557,8 +6157,8 @@ Candidate	Milon, John 'Jack'	Milon, John 'Jack'
 Candidate	Bailey, Kent	Bailey, Kent
 Candidate	Bailey, Kent	'Bailey, Kent'
 Candidate	Brockelsby, Samantha 'Sammy B'	Brockelsby, Samantha 'Sammy B'
-Candidate	Gansert, Heidi S.	Gansert, Heidi S.
-Candidate	Gansert, Heidi S.	'Gansert, Heidi S.'
+Candidate	Heidi S. Gansert	Gansert, Heidi S.
+Candidate	Heidi S. Gansert	'Gansert, Heidi S.'
 Candidate	Doenges, Colleen	Doenges, Colleen
 Candidate	Doenges, Colleen	'Doenges, Colleen'
 Candidate	Richardson, Dale	Richardson, Dale
@@ -5569,8 +6169,8 @@ Candidate	King, Kime	King, Kime
 Candidate	King, Kime	'King, Kime'
 Candidate	Terhune, Jennifer	Terhune, Jennifer
 Candidate	Terhune, Jennifer	'Terhune, Jennifer'
-Candidate	Tolles, Jill	Tolles, Jill
-Candidate	Tolles, Jill	'Tolles, Jill'
+Candidate	Jill Tolles	Tolles, Jill
+Candidate	Jill Tolles	'Tolles, Jill'
 Candidate	Ledon, Carlos	Ledon, Carlos
 Candidate	Ledon, Carlos	'Ledon, Carlos'
 Candidate	Taylor, Angie	Taylor, Angie
@@ -5692,8 +6292,8 @@ Candidate	Bakari, Kamau A.	Bakari, Kamau A.
 Candidate	Bakari, Kamau A.	'Bakari, Kamau A.'
 Candidate	Buck, Carrie	Buck, Carrie
 Candidate	Buck, Carrie	'Buck, Carrie'
-Candidate	Hagan, Tim	Hagan, Tim
-Candidate	Hagan, Tim	'Hagan, Tim'
+Candidate	Tim Hagan	Hagan, Tim
+Candidate	Tim Hagan	'Hagan, Tim'
 Candidate	Goossen, David	Goossen, David
 Candidate	Goossen, David	'Goossen, David'
 Candidate	Markowitz, Warren	Markowitz, Warren
@@ -5727,8 +6327,8 @@ Candidate	Posin, Jeffrey	Posin, Jeffrey
 Candidate	Posin, Jeffrey	'Posin, Jeffrey'
 Candidate	Zeller, Shane	Zeller, Shane
 Candidate	Zeller, Shane	'Zeller, Shane'
-Candidate	Yeager, Steve	Yeager, Steve
-Candidate	Yeager, Steve	'Yeager, Steve'
+Candidate	Steve Yeager	Yeager, Steve
+Candidate	Steve Yeager	'Yeager, Steve'
 Candidate	Bustamante Adams, Irene	Bustamante Adams, Irene
 Candidate	Bustamante Adams, Irene	'Bustamante Adams, Irene'
 Candidate	Scheff, Howard	Scheff, Howard
@@ -5737,12 +6337,12 @@ Candidate	Swank, Heidi	Swank, Heidi
 Candidate	Swank, Heidi	'Swank, Heidi'
 Candidate	Uehling, Edmund	Uehling, Edmund
 Candidate	Uehling, Edmund	'Uehling, Edmund'
-Candidate	Goicoechea, Pete	Goicoechea, Pete
-Candidate	Goicoechea, Pete	'Goicoechea, Pete'
+Candidate	Pete Goicoechea	Goicoechea, Pete
+Candidate	Pete Goicoechea	'Goicoechea, Pete'
 Candidate	Hansen, Janine	Hansen, Janine
 Candidate	Hansen, Janine	'Hansen, Janine'
-Candidate	Monroe-Moreno, Daniele	Monroe-Moreno, Daniele
-Candidate	Monroe-Moreno, Daniele	'Monroe-Moreno, Daniele'
+Candidate	Daniele Monroe-Moreno	Monroe-Moreno, Daniele
+Candidate	Daniele Monroe-Moreno	'Monroe-Moreno, Daniele'
 Candidate	Marciano, Len	Marciano, Len
 Candidate	Marciano, Len	'Marciano, Len'
 Candidate	Ter-Petrosyan, Arsen 'Arsen T'	Ter-Petrosyan, Arsen 'Arsen T'
@@ -5751,8 +6351,8 @@ Candidate	Little, Mike	Little, Mike
 Candidate	Little, Mike	'Little, Mike'
 Candidate	Fawzy, Jennifer	Fawzy, Jennifer
 Candidate	Fawzy, Jennifer	'Fawzy, Jennifer'
-Candidate	Neal, Dina	Neal, Dina
-Candidate	Neal, Dina	'Neal, Dina'
+Candidate	Dina Neal	Neal, Dina
+Candidate	Dina Neal	'Neal, Dina'
 Candidate	Warren, Troy Ethan	Warren, Troy Ethan
 Candidate	Warren, Troy Ethan	'Warren, Troy Ethan'
 Candidate	Hammond, Scott T.	Hammond, Scott T.
@@ -5779,18 +6379,18 @@ Candidate	Pulsipher, Billy H.	Pulsipher, Billy H.
 Candidate	Pulsipher, Billy H.	'Pulsipher, Billy H.'
 Candidate	Lyttle, Sean D.	Lyttle, Sean D.
 Candidate	Lyttle, Sean D.	'Lyttle, Sean D.'
-Candidate	Cannizzaro, Nicole	Cannizzaro, Nicole
-Candidate	Cannizzaro, Nicole	'Cannizzaro, Nicole'
+Candidate	Nicole Cannizzaro	Cannizzaro, Nicole
+Candidate	Nicole Cannizzaro	'Cannizzaro, Nicole'
 Candidate	Cornwell, Wesley	Cornwell, Wesley
 Candidate	Cornwell, Wesley	'Cornwell, Wesley'
-Candidate	Flores, Edgar	Flores, Edgar
-Candidate	Flores, Edgar	'Flores, Edgar'
+Candidate	Edgar Flores	Flores, Edgar
+Candidate	Edgar Flores	'Flores, Edgar'
 Candidate	Brown, Larry	Brown, Larry
 Candidate	Brown, Larry	'Brown, Larry'
 Candidate	Araujo, Jr., Nelson	Araujo, Jr., Nelson
 Candidate	Araujo, Jr., Nelson	'Araujo, Jr., Nelson'
-Candidate	Friedrich, Jonathan	Friedrich, Jonathan
-Candidate	Friedrich, Jonathan	'Friedrich, Jonathan'
+Candidate	Jonathan Friedrich	Friedrich, Jonathan
+Candidate	Jonathan Friedrich	'Friedrich, Jonathan'
 Candidate	Palmerston, Dennis	Palmerston, Dennis
 Candidate	Palmerston, Dennis	'Palmerston, Dennis'
 Candidate	Shelton, Shelly M.	Shelton, Shelly M.
@@ -5803,8 +6403,8 @@ Candidate	Maffatt, Carlo	Maffatt, Carlo
 Candidate	Maffatt, Carlo	'Maffatt, Carlo'
 Candidate	Diaz, Olivia	Diaz, Olivia
 Candidate	Diaz, Olivia	'Diaz, Olivia'
-Candidate	Vaughan, Stan	Vaughan, Stan
-Candidate	Vaughan, Stan	'Vaughan, Stan'
+Candidate	Stan Vaughan	Vaughan, Stan
+Candidate	Stan Vaughan	'Vaughan, Stan'
 Candidate	Linton, Carol	Linton, Carol
 Candidate	Linton, Carol	'Linton, Carol'
 Candidate	Schjang, Kimberly	Schjang, Kimberly
@@ -5829,8 +6429,8 @@ Candidate	Gilkerson, Linda	Gilkerson, Linda
 Candidate	Gilkerson, Linda	'Gilkerson, Linda'
 Candidate	Lippmann, Larry	Lippmann, Larry
 Candidate	Lippmann, Larry	'Lippmann, Larry'
-Candidate	Wheeler, Jim	Wheeler, Jim
-Candidate	Wheeler, Jim	'Wheeler, Jim'
+Candidate	Jim Wheeler	Wheeler, Jim
+Candidate	Jim Wheeler	'Wheeler, Jim'
 Candidate	Radtke, Glen A.	Radtke, Glen A.
 Candidate	Radtke, Glen A.	'Radtke, Glen A.'
 Candidate	Shorten, Christopher	Shorten, Christopher
@@ -5873,8 +6473,8 @@ Candidate	Brian, Betsy	Brian, Betsy
 Candidate	Brian, Betsy	'Brian, Betsy'
 Candidate	Ayala, Mike	Ayala, Mike
 Candidate	Ayala, Mike	'Ayala, Mike'
-Candidate	Ellison, John	Ellison, John
-Candidate	Ellison, John	'Ellison, John'
+Candidate	John C. Ellison	Ellison, John
+Candidate	John C. Ellison	'Ellison, John'
 Candidate	Holbrook, Dana	Holbrook, Dana
 Candidate	Holbrook, Dana	'Holbrook, Dana'
 Candidate	Johnston, Margaret A.	Johnston, Margaret A.
@@ -6054,8 +6654,8 @@ Candidate	Jacobs, Brandon	Jacobs, Brandon
 Candidate	Jacobs, Brandon	'Jacobs, Brandon'
 Candidate	Ratti, Julia	Ratti, Julia
 Candidate	Ratti, Julia	'Ratti, Julia'
-Candidate	Benitez-Thompson, Teresa	Benitez-Thompson, Teresa
-Candidate	Benitez-Thompson, Teresa	'Benitez-Thompson, Teresa'
+Candidate	Teresa Benitez-Thompson	Benitez-Thompson, Teresa
+Candidate	Teresa Benitez-Thompson	'Benitez-Thompson, Teresa'
 Candidate	Colborne, David	Colborne, David
 Candidate	Colborne, David	'Colborne, David'
 Candidate	Smith, Allen 'Eli'	Smith, Allen 'Eli'
@@ -6070,7 +6670,7 @@ Candidate	Evans, Carol Alice	'Evans, Carol Alice'
 Candidate	Feemster, Debra	Feemster, Debra
 Candidate	Feemster, Debra	'Feemster, Debra'
 Candidate	Stevens, Leonard 'Len'	Stevens, Leonard 'Len'
-Candidate	Daly, Richard 'Skip'	Daly, Richard 'Skip'
+Candidate	Richard 'Skip' Daly	Daly, Richard 'Skip'
 Candidate	Lee, Matt	Lee, Matt
 Candidate	Lee, Matt	'Lee, Matt'
 Candidate	Longley, Jessica	Longley, Jessica
@@ -6162,8 +6762,8 @@ Candidate	Knecht, Ron	Knecht, Ron
 Candidate	Knecht, Ron	'Knecht, Ron'
 Candidate	Davis-Hersey, Tina	Davis-Hersey, Tina
 Candidate	Davis-Hersey, Tina	'Davis-Hersey, Tina'
-Candidate	Hoge, Bill	Hoge, Bill
-Candidate	Hoge, Bill	'Hoge, Bill'
+Candidate	Bill Hoge	Hoge, Bill
+Candidate	Bill Hoge	'Hoge, Bill'
 Candidate	Harter, Mathew	Harter, Mathew
 Candidate	Harter, Mathew	'Harter, Mathew'
 Candidate	Stiglich, Lidia	Stiglich, Lidia
@@ -6294,8 +6894,8 @@ Candidate	Denis, Mo	Denis, Mo
 Candidate	Denis, Mo	'Denis, Mo'
 Candidate	Sedlmeyer, Stephen G.	Sedlmeyer, Stephen G.
 Candidate	Sedlmeyer, Stephen G.	'Sedlmeyer, Stephen G.'
-Candidate	Torres, Selena	Torres, Selena
-Candidate	Torres, Selena	'Torres, Selena'
+Candidate	Selena Torres	Torres, Selena
+Candidate	Selena Torres	'Torres, Selena'
 Candidate	McCurdy, II, William O'Neil	McCurdy, II, William O'Neil
 Candidate	McCurdy, II, William O'Neil	'McCurdy, II, William O'Neil'
 Candidate	Miceli, Gianna	Miceli, Gianna
@@ -6457,8 +7057,8 @@ Candidate	Hipp, Timothy	Hipp, Timothy
 Candidate	Hipp, Timothy	'Hipp, Timothy'
 Candidate	Glennen, Robert E. Iii	Glennen, Robert E. Iii
 Candidate	Glennen, Robert E. Iii	'Glennen, Robert E. Iii'
-Candidate	Povilaitis, Paula	Povilaitis, Paula
-Candidate	Povilaitis, Paula	'Povilaitis, Paula'
+Candidate	Paula Povilaitis	Povilaitis, Paula
+Candidate	Paula Povilaitis	'Povilaitis, Paula'
 Candidate	Boszak, Wendy	Boszak, Wendy
 Candidate	Boszak, Wendy	'Boszak, Wendy'
 Candidate	Mears, Michael A.	Mears, Michael A.
@@ -6696,8 +7296,8 @@ Candidate	Caudill, Andrew Benjamin	Caudill, Andrew Benjamin
 Candidate	Caudill, Andrew Benjamin	'Caudill, Andrew Benjamin'
 Candidate	Feemster, Debra Smith	Feemster, Debra Smith
 Candidate	Feemster, Debra Smith	'Feemster, Debra Smith'
-Candidate	Dickman, Jill Ann	Dickman, Jill Ann
-Candidate	Dickman, Jill Ann	'Dickman, Jill Ann'
+Candidate	Jill Ann Dickman	Dickman, Jill Ann
+Candidate	Jill Ann Dickman	'Dickman, Jill Ann'
 Candidate	Ainsworth, Sandra	Ainsworth, Sandra
 Candidate	Ainsworth, Sandra	'Ainsworth, Sandra'
 Candidate	Dutra, Suzanne	Dutra, Suzanne
@@ -6732,15 +7332,19 @@ Candidate	Fumo, Ozzie	FUMO, Ozzie
 Candidate	Fumo, Ozzie	'FUMO, Ozzie'
 Candidate	Titus, Dina	TITUS, Dina
 Candidate	Titus, Dina	'TITUS, Dina'
-Candidate	Carlton, Maggie	CARLTON, Maggie
-Candidate	Carlton, Maggie	'CARLTON, Maggie'
-Candidate	COHEN, LESLEY elizabeth	Cohen, Lesley Elizabeth
-Candidate	COHEN, LESLEY elizabeth	'Cohen, Lesley Elizabeth'
+Candidate	Maggie Carlton	CARLTON, Maggie
+Candidate	Maggie Carlton	'CARLTON, Maggie'
+Candidate	Lesley Elizabeth Cohen	Cohen, Lesley Elizabeth
+Candidate	Lesley Elizabeth Cohen	'Cohen, Lesley Elizabeth'
 Candidate	Thompson, Tyrone	THOMPSON, Tyrone
 Candidate	Thompson, Tyrone	'THOMPSON, Tyrone'
 Party	Unknown	Unknown
+Party	Unknown	NP
 Party	Democratic Party	DEM
 Party	Republican Party	REP
+Party	Libertarian Party	LPN
+Party	Independent American Party of Nevada	IAP
+Party	Independent	NPP
 Party	Unaffiliated	Nonpartisan
 Party	Democratic Party	Democratic
 Party	Republican Party	Republican
@@ -6750,9 +7354,44 @@ BallotMeasureSelection	No	No
 BallotMeasureContestState Question No. 1	State Question No. 1	State Question No. 1
 Candidate	Jo Jorgensen	Jorgensen, Jo
 Candidate	Don Blankenship	Blankenship, Don
-Candidate	Joseph R. Biden	Biden, Joseph R.
+Candidate	Joseph R. Biden	BIDEN, JOSEPH R.
 Candidate	Barry Rubinson	Rubinson, Barry
-Candidate	Suzanne Lee	Lee, Suzanne
-Candidate	Jonathan Royce Esteban	Esteban, Jonathan Royce
 Candidate	Edward Bridges II	Bridges II, Edward
-Candidate	Edward Bridges II	Bridges Ii, Edward
+Candidate	Edward Bridges II	BRIDGES II, EDWARD
+Candidate	Zaidi, Sayed 'SM'	Zaidi, Sayed 'SM'
+Candidate	Young, Charlene	Young, Charlene
+Candidate	Wayerski, Robert	Wayerski, Robert
+Candidate	Thomas, Clara 'Claire'	Thomas, Clara 'Claire'
+Candidate	Smith, Erika	Smith, Erika
+Candidate	Seeback, Tiffany 'Gholson'	Seeback, Tiffany 'Gholson'
+Candidate	Sajdak, Reyna 'Alex'	Sajdak, Reyna 'Alex'
+Candidate	Roberts, Thomas	Roberts, Thomas
+Candidate	Palmer, Anthony 'Tony'	Palmer, Anthony 'Tony'
+Candidate	O'Neill, Philip 'PK'	O'Neill, Philip 'PK'
+Candidate	LeDuff, Garrett	LeDuff, Garrett
+Candidate	Krattiger, Eric	Krattiger, Eric
+Candidate	Jones, Dave 'Liberty'	Jones, Dave 'Liberty'
+Candidate	Janine Hansen	Janine Hansen
+Candidate	Hoff, Randy	Hoff, Randy
+Candidate	Hisgen, Chris	Hisgen, Chris
+Candidate	Hickman, Esper M.	Hickman, Esper M.
+Candidate	Hawn, Barb	Hawn, Barb
+Candidate	Harris, Dallas	Harris, Dallas
+Candidate	Hansen, Alexis	Hansen, Alexis
+Candidate	Hafen Ii, Gregory	Hafen Ii, Gregory
+Candidate	Graves, Jeremy A.	Graves, Jeremy A.
+Candidate	González, Cecelia	González, Cecelia
+Candidate	Gerhardt, John Cardiff	Gerhardt, John Cardiff
+Candidate	Foutz, Brent	Foutz, Brent
+Candidate	Florian, Heather Ann	Florian, Heather Ann
+Candidate	Facey, Edward 'Eddie'	Facey, Edward 'Eddie'
+Candidate	Duran, Beatrice	Duran, Beatrice
+Candidate	Delsignore, Liz	Delsignore, Liz
+Candidate	DaCosta, Victoria K.	DaCosta, Victoria K.
+Candidate	Chang, Deborah	Chang, Deborah
+Candidate	Carlson, Jay Thomas	Carlson, Jay Thomas
+Candidate	Brooks, Christopher	Brooks, Christopher
+Candidate	Bousley, Natasha	Bousley, Natasha
+Candidate	Becker, April	Becker, April
+Candidate	Anderson, Natha C.	Anderson, Natha C.
+Candidate	Altman, Barbara	Altman, Barbara

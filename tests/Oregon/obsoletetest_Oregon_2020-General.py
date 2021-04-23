@@ -11,7 +11,7 @@ import election_data_analysis as e
 election = "2020 General"
 jurisdiction = "Oregon"
 abbr = "OR"
-total_pres_votes = 2349187  # total of all votes for President
+total_pres_votes = 2374321  # total of all votes for President
 cd = 3  # congressional district
 total_cd_votes = 467590  # total votes in the chosen cd
 shd = 1  # state house district
@@ -113,6 +113,7 @@ def test_county_subtotal(dbname):
 
 def test_all_candidates_known(dbname):
     assert (
-        e.get_contest_with_unknown_candidates(election, jurisdiction, dbname=dbname)
+        e.get_contest_with_unknown_candidates(
+            election, jurisdiction, dbname=dbname)
         == []
     )

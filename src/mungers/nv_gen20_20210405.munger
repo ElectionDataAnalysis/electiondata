@@ -1,56 +1,26 @@
-# Format parameters section (required) #
 [format]
-#### REQUIRED!
-## File type must be one of: xml,excel,json-nested,xml,flat_text
 file_type=excel
-## for excel or flat files, either
-count_location=by_number:3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19
+count_locations=by_column_numbers
+munge_strings=in_field_values,constant_over_file
 
-noncount_header_row=1
-
-################################################
-## Optional format parameters:
-#### for any file type:
-thousands_separator=
-encoding=
-
-#### for a flat_text or excel file type:
-###### if there are multiple blocks of data per page, each with its own headers
-multi_block=yes
-###### if multi_block=yes, can set a max number of blocks to read from each sheet
-max_blocks=
-
-#### for excel file type:
-sheets_to_read_names=
-sheets_to_read_numbers=
-sheets_to_skip_names=
-
-#### List any elements constant over the file that will be given in the <results>.ini file:
+encoding=utf_8
+count_column_numbers=4
+rows_to_skip=2
+string_field_name_row=0
+count_field_name_row=0
 constant_over_file=CountItemType
 
-[munge formulas]
-# give formulas for all elements (except constant_over_file elements)
-CandidateContest=<row_0>
-Candidate=<column_0>
-Party=unknown
-ReportingUnit=<count_header_1>
+[in_field_values]
+Candidate=<Selection>
+ReportingUnit=<Jurisdiction>;<Precinct>
+CandidateContest=<Contest>
+Party=<Selection>
 
-# Values to ignore (optional) #
-[ignore]
-## E.g: Candidate=Total Votes Cast,Registered Voters ##
-ReportingUnit=Percent,Total Votes
-# Lookup formula sections #
-## Required when foreign keys are used in munge formulas and    ##
-## must be looked up in another table.                          ##
-## See mi_gen18.munger for example                              ##
-##################################################################
-# [<foreign key name> lookup]
-# optional (defaults to the results file):
-# source_file=
-
-# required:
-# lookup_id=
-
-# optional (if not given, assumes lookup file is same as results file
-# source_file=
-# and if source_file is given, specify munger params for lookup source file
+[Selection lookup]
+source_file=Nevada/Party_Candidate_20g.xlsx
+lookup_id=Selection
+Party_replacement=<Party>
+Candidate_replacement=<Selection>
+file_type=excel
+munge_strings=in_field_values
+string_field_name_row=0
