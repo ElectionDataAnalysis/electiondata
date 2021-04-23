@@ -638,12 +638,13 @@ def build_row_constants_from_df(
 ) -> (Dict[int, Any], Optional[dict]):
     """Returns first entries in rows corresponding to row_list
     (as a dictionary with rows in row_list as keys)"""
+    working = df.reset_index(drop=True)
     row_constants = dict()
     err = None
     for row in rows_to_read:
         try:
-            first_valid_idx = df.loc[row].fillna("").first_valid_index()
-            row_constants[row] = df.fillna("").loc[row,first_valid_idx]
+            first_valid_idx = working.loc[row].fillna("").first_valid_index()
+            row_constants[row] = working.fillna("").loc[row,first_valid_idx]
         except KeyError as ke:
             err = add_new_error(
                 err,

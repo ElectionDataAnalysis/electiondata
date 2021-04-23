@@ -1837,10 +1837,6 @@ def to_standard_count_frame(
                     )
                     df_list[n] = ui.set_and_fill_headers(df_list[n], header_list, drop_empties=True)
 
-                    # add columns for constant-over-block items from rows
-                    # need to correct row_constants to correspond to this block
-                    for row in p["rows_with_constants"]:
-                        df_list[n] = add_constant_column(df_list[n],f"row_{row}",row_constants[n][row])
             except Exception as exc:
                 error_by_sheet[sheet] = ui.add_new_error(
                     None,
@@ -1856,11 +1852,6 @@ def to_standard_count_frame(
             cc_by_name[0], error_by_df[0] = get_count_cols_by_name(
                         df_list[0], p, munger_name
                     )
-            # add column for info read from rows constant over sheet
-            for row in p["rows_with_constants"]:
-                df_list[0] = add_constant_column(
-                    df_list[0],f"row_{row}",row_constants_by_sheet[sheet][row]
-                )
 
         # loop through dataframes in list
         standard[sheet] = pd.DataFrame()
@@ -1894,6 +1885,16 @@ def to_standard_count_frame(
                         f"Unable to pivot dataframe from sheet {sheet}:\n {exc}",
                     )
                     continue  # goes to next dataframe in list
+
+            # add constant-over-sheet-or-block column
+            if p["multi_block"] == "yes":
+                for row in p["rows_with_constants"]:
+                    working = add_constant_column(working, f"row_{row}", row_constants[n][row])
+            else:
+                for row in p["rows_with_constants"]:
+                    working = add_constant_column(
+                        working, f"row_{row}", row_constants_by_sheet[sheet][row]
+                    )
 
             # rename any Unnamed: i_level_j to column_i if noncount header row is j
             if p["noncount_header_row"]:
