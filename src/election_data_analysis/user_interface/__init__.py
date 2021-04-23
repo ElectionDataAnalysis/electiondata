@@ -1549,8 +1549,9 @@ def set_and_fill_headers(
 ) -> pd.DataFrame:
     # standardize the index  to 0, 1, 2, ...
     df = df_in.reset_index(drop=True)
-    # rename any leading blank header entries to match convention of pd.read_excel, and any trailing to
-    # closest non-blank value to left
+    # rename any leading blank header entries to match convention of pd.read_excel
+    # and any trailing to closest non-blank value to left
+    # TODO once headers are removed, will need to revert the non-blanks
     if header_list:
         for i in header_list:
             prev_non_blank = None
