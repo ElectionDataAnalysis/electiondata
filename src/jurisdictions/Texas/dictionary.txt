@@ -1,5 +1,5 @@
 cdf_element	cdf_internal_name	raw_identifier_value
-Candidate	CandidateContest    US President (TX)   PRESIDENT/VICE-PRESIDENT	CandidateContest    US President (TX)   PRESIDENT/VICE-PRESIDENT
+CandidateContest    US President (TX)   PRESIDENT/VICE-PRESIDENT
 CandidateContest	TX House District 1 (Democratic Party)	State Representative District 1 (DEM)
 CandidateContest	TX House District 2 (Democratic Party)	State Representative District 2 (DEM)
 CandidateContest	TX House District 3 (Democratic Party)	State Representative District 3 (DEM)
@@ -4453,6 +4453,7 @@ Candidate	Ross Lynn Leone	Ross Lynn Leone
 Candidate	Vanessa S. Tijerina	Vanessa S. Tijerina
 Candidate	Velma A. Arellano	Velma A. Arellano
 Candidate	Juan 'Chuy' Hinojosa	"Juan ""Chuy"" Hinojosa"
+Candidate	Juan 'Chuy' Hinojosa	'Juan ''Chuy'' Hinojosa'
 Candidate	Richard C. Terrell	Richard C. Terrell
 Candidate	Carlos Omar Garcia	Carlos Omar Garcia
 Candidate	Mike Lang	Mike Lang
@@ -5998,6 +5999,7 @@ Candidate	Maria Y. Berry	Maria Y. Berry
 Candidate	Jay Johnson	Jay Johnson
 Candidate	William J. Booher	William J. Booher
 Candidate	Milinda Morris	Milinda Morris
+Candidate	Peter P. 'Pete' Flores	'Peter P. ''Pete'' Flores'
 Candidate	Peter P. 'Pete' Flores	"Peter P. ""Pete"" Flores"
 Candidate	Judy Cutright	Judy Cutright
 Candidate	Frank Pomeroy	Frank Pomeroy
@@ -6927,8 +6929,3 @@ Candidate	Armando 'Mando' Martínez	Armando 'Mando' Martínez
 Candidate	Sergio Munoz Jr (I)	Sergio Munoz Jr (I)
 Candidate	Julián Villarreal	Julián Villarreal
 Candidate	José MenéNdez (I)	José MenéNdez (I)
-Candidate	Peter P. 'Pete' Flores	Peter P. &Quot;Pete&Quot; Flores
-Candidate	Juan 'Chuy' Hinojosa	Juan &Quot;Chuy&Quot; Hinojosa
-Candidate	José MenéNdez	Jose&#769; Mene&#769;Ndez
-Candidate	Charles 'Doc' Anderson	Charles &Quot;Doc&Quot; Anderson
-Candidate	Armando 'Mando' Martinez	Armando 'Mando&Quot; Martinez

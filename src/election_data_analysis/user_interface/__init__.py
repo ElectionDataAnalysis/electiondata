@@ -510,7 +510,10 @@ def read_single_datafile(
 
         elif p["file_type"] == "excel":
             df_dict, row_constants, err = excel_to_dict(
-                f_path, kwargs, list_desired_excel_sheets(f_path, p), p["rows_with_constants"]
+                f_path,
+                kwargs,
+                list_desired_excel_sheets(f_path, p),
+                p["rows_with_constants"],
             )
             if fatal_error(err):
                 df_dict = dict()
@@ -537,7 +540,10 @@ def read_single_datafile(
                 else:
                     header_list = header_int_or_list
                 try:
-                    df = set_and_fill_headers(df, header_list, drop_empties=False)
+                    merged_cells = p["merged_cells"] == "yes"
+                    df = set_and_fill_headers(
+                        df, header_list, merged_cells, drop_empties=False
+                    )
                 except Exception as exc:
                     err = add_new_error(
                         err,
@@ -549,7 +555,9 @@ def read_single_datafile(
             df_dict = {"Sheet1": df}
             # get the row constants
             if p["rows_with_constants"]:
-                row_constant_kwargs = get_row_constant_kwargs(kwargs, p["rows_with_constants"])
+                row_constant_kwargs = get_row_constant_kwargs(
+                    kwargs, p["rows_with_constants"]
+                )
                 row_df = pd.read_csv(f_path, **row_constant_kwargs)
                 row_constants["Sheet1"], new_err = build_row_constants_from_df(
                     row_df, p["rows_with_constants"], file_name, "Sheet1"
@@ -593,7 +601,10 @@ def read_single_datafile(
 
 
 def excel_to_dict(
-    f_path: str, kwargs: Dict[str, Any], sheet_list: Optional[List[str]], rows_to_read: List[int]
+    f_path: str,
+    kwargs: Dict[str, Any],
+    sheet_list: Optional[List[str]],
+    rows_to_read: List[int],
 ) -> (Dict[str, pd.DataFrame], Dict[str, Dict[str, Any]], Optional[dict]):
     """Returns dictionary of dataframes (one for each sheet), dictionary of dictionaries of constant values
     (one dictionary for each sheet) and error."""
@@ -625,25 +636,29 @@ def excel_to_dict(
                 f"Sheet {sheet} not read due to exception:\n\t{exc}",
             )
         if rows_to_read:
-            row_constant_df = pd.read_excel(f_path, **row_constant_kwargs, sheet_name=sheet)
+            row_constant_df = pd.read_excel(
+                f_path, **row_constant_kwargs, sheet_name=sheet
+            )
             row_constants[sheet], new_err = build_row_constants_from_df(
-                row_constant_df, rows_to_read, file_name, sheet)
+                row_constant_df, rows_to_read, file_name, sheet
+            )
             if new_err:
                 err = consolidate_errors([err, new_err])
     return df_dict, row_constants, err
 
 
 def build_row_constants_from_df(
-        df: pd.DataFrame, rows_to_read: List[int], file_name: str, sheet: str
+    df: pd.DataFrame, rows_to_read: List[int], file_name: str, sheet: str
 ) -> (Dict[int, Any], Optional[dict]):
     """Returns first entries in rows corresponding to row_list
     (as a dictionary with rows in row_list as keys)"""
+    working = df.reset_index(drop=True)
     row_constants = dict()
     err = None
     for row in rows_to_read:
         try:
-            first_valid_idx = df.loc[row].fillna("").first_valid_index()
-            row_constants[row] = df.fillna("").loc[row,first_valid_idx]
+            first_valid_idx = working.loc[row].fillna("").first_valid_index()
+            row_constants[row] = working.fillna("").loc[row, first_valid_idx]
         except KeyError as ke:
             err = add_new_error(
                 err,
@@ -1521,7 +1536,11 @@ def clean_candidate_names(df):
     return df
 
 
-def disambiguate_empty_cols(df_in: pd.DataFrame,drop_empties: bool,start: int = 0,) -> pd.DataFrame:
+def disambiguate_empty_cols(
+    df_in: pd.DataFrame,
+    drop_empties: bool,
+    start: int = 0,
+) -> pd.DataFrame:
     """return new df with empties dropped, or kept with non-blank placeholder info"""
     original_number_of_columns = df_in.shape[1]
     # set row index to default
@@ -1533,42 +1552,42 @@ def disambiguate_empty_cols(df_in: pd.DataFrame,drop_empties: bool,start: int = 
     bad_column_numbers = [j for j in range(original_number_of_columns) if mask[j]]
     for j in bad_column_numbers:
         for i in range(start):
-            df.iloc[i,j] = f"place_holder_{i}_{j}"
+            df.iloc[i, j] = f"place_holder_{i}_{j}"
 
     if drop_empties:
-        good_column_numbers = [j for j in range(original_number_of_columns) if j not in bad_column_numbers]
-        df = df.iloc[:,good_column_numbers]
+        good_column_numbers = [
+            j for j in range(original_number_of_columns) if j not in bad_column_numbers
+        ]
+        df = df.iloc[:, good_column_numbers]
     return df
 
 
 def set_and_fill_headers(
-        df_in: pd.DataFrame,
-        header_list: Optional[list],
-        drop_empties: bool = True,
+    df_in: pd.DataFrame,
+    header_list: Optional[list],
+    merged_cells: bool,
+    drop_empties: bool = True,
 ) -> pd.DataFrame:
     # standardize the index  to 0, 1, 2, ...
     df = df_in.reset_index(drop=True)
-    # rename any leading blank header entries to match convention of pd.read_excel, and any trailing to
-    # closest non-blank value to left
+    # rename all blank header entries to match convention of pd.read_excel
+    #
+    #
     if header_list:
-        for i in header_list:
-            prev_non_blank = None
-            for j in df.columns:
-                if df.loc[i, j] == "":
-                    if prev_non_blank:
-                        df.loc[i, j] = prev_non_blank
-                    else:
-                        df.loc[i, j] = f"Unnamed: {j}_level_{i}"
-                else:
-                    prev_non_blank = df.loc[i, j]
+        # fill blanks to match pandas standard
+        df = m.fill_blanks(df, header_list, merged_cells)
         # set column index to default
         df.columns = range(df.shape[1])
         # drop empties
-        df = disambiguate_empty_cols(df,drop_empties=drop_empties,start=max(header_list) + 1)
+        df = disambiguate_empty_cols(
+            df, drop_empties=drop_empties, start=max(header_list) + 1
+        )
         # push appropriate rows into headers
         df = df.T.set_index(header_list).T
         # drop unused header rows
-        df.drop([x for x in range(max(header_list)) if x not in header_list], inplace=True)
+        df.drop(
+            [x for x in range(max(header_list)) if x not in header_list], inplace=True
+        )
     return df
 
 

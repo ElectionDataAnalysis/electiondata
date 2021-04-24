@@ -1,0 +1,17 @@
+[format]
+file_type=excel
+count_location=by_number:1,2,3,4,5,6,7
+
+encoding=iso-8859-1
+noncount_header_row=1
+
+constant_over_file=CountItemType
+
+[munge formulas]
+CandidateContest=<sheet_name>
+ReportingUnit=<County>
+Candidate={<count_header_1>,^([^\(\)]*)(?:(?:\(.*\)))?$} {<count_header_0>,^(?:\*\*|)(.*)$}
+Party={<count_header_1>,^(?:[^\(\)]*)((?:\(.*\))?)$}
+
+[ignore]
+ReportingUnit=Total

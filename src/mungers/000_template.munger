@@ -34,10 +34,12 @@ multi_block=yes
 ###### if multi_block=yes, can set a max number of blocks to read from each sheet
 max_blocks=
 
-#### for excel file type:
-sheets_to_read_names=
-sheets_to_read_numbers=
-sheets_to_skip_names=
+#### Optional for excel file type:
+#sheets_to_read_names=
+#sheets_to_read_numbers=
+#sheets_to_skip_names=
+#merged_cells=yes
+
 
 #### List any elements constant over the file that will be given in the <results>.ini file:
 constant_over_file=

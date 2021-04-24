@@ -36,6 +36,7 @@ If the munger for the format of your results file doesn't already exist:
     * (optional) a list `sheets_to_read_names` (and/or `sheets_to_read_numbers`) of spreadsheets to read, 
     * (optional) a list `sheets_to_skip_names` of names of spreadsheets to skip
     * Default is to read all sheets
+    * (optional) `merged_cells` If there are merged cells in the meaningful header rows, set `merged_cells=yes`. 
   * for both 'flat_text' and 'excel':
     * (required if `count_location=by_name`) specify location of field names for count columns. with integer `count_field_name_row` (NB: top row not skipped is 0, next row is 1, etc.)
     * (required):
@@ -521,7 +522,7 @@ If your sheets or files have a variable number of count columns (e.g., if column
 
 If your excel file has merged cells across lines, it may not be clear which line holds the information. Save a sheet as tab-separated text to see which line holds which information from merged cells.
 
-If not all rows are data, and some string fields to be munged have blank headers (e.g., often the counties are in the first column without a cell above reading "County"), use pandas default for unnamed column headers. E.g., in multi-headers, 'Unnamed: 0_level_1' corresponds to the first cell in the second line (Cell A2 in Excel).  In single-row headers, 'Unnamed: 0' is the first cell in the header row. See for example `wy_gen.munger`.
+If not all rows are data, and some string fields to be munged have blank headers (e.g., often the counties are in the first column without a cell above reading "County"). In this case use '<column_i>' in the munge formulas to denote the i-th column (numbering from 0, as usual). For example, if counties are in the leftmost column and the header is blank, use '<column_0>' for the name of the county. See for example `wy_gen.munger`.
 
 If there are hidden columns in an Excel file, you may need to omit the hidden columns from various counts.
 

@@ -1681,12 +1681,12 @@ Candidate	John Evankovich	John Evankovich
 Candidate	Debra Lamm	Debra Lamm
 Candidate	Mark J. Mcginley	Mark J. Mcginley
 Candidate	Matt Rosendale	Matt Rosendale
-Candidate	Mike Cooney And Casey Schreiner	Mike Cooney And Casey Schreiner
-Candidate	Whitney Williams And Buzz Mattelin	Whitney Williams And Buzz Mattelin
-Candidate	Robert Barb And Joshua Thomas	Robert Barb And Joshua Thomas
-Candidate	Tim Fox And Jon Knokey	Tim Fox And Jon Knokey
-Candidate	Al 'Doc' Olszewski And Ken Bogner	Al 'Doc' Olszewski And Ken Bogner
-Candidate	Greg Gianforte And Kristen Juras	Greg Gianforte And Kristen Juras
+Candidate	Mike Cooney Mike Cooney And Casey Schreiner	
+Candidate	Whitney Williams	Whitney Williams And Buzz Mattelin
+Candidate	Robert Barb	Robert Barb And Joshua Thomas
+Candidate	Tim Fox	Tim Fox And Jon Knokey
+Candidate	Al 'Doc' Olszewski	Al 'Doc' Olszewski And Ken Bogner
+Candidate	Greg Gianforte	Greg Gianforte And Kristen Juras
 Candidate	Bryce Bennett	Bryce Bennett
 Candidate	Brad Johnson	Brad Johnson
 Candidate	Kurt Johnson	Kurt Johnson
@@ -2336,4 +2336,3 @@ CandidateContest	MT Secretary of State	SECRETARY OF STATE 9067
 CandidateContest	US Senate MT	UNITED STATES SENATOR 9061
 CandidateContest	US House MT District 1	UNITED STATES REPRESENTAT 9062
 Candidate	Mike Cooney	Mike Cooney And Casey Schreiner
-Candidate	Greg Gianforte	Greg Gianforte And Kristen Juras

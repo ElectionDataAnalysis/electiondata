@@ -16,11 +16,12 @@ multi_block=yes
 sheets_to_read_names=Wyandotte,WYANDOTTE
 sheets_to_read_numbers=
 sheets_to_skip_names=
+merged_cells=yes
 
 constant_over_file=CountItemType
 
 [munge formulas]
-ReportingUnit=<sheet_name>;<Unnamed: 0_level_0>
+ReportingUnit=<sheet_name>;<column_0>
 Candidate={<count_header_2>,^(?:\w\w\w |)(.*)$}
 CandidateContest=<count_header_0>
 Party={<count_header_2>,^(\w\w\w) .*$}

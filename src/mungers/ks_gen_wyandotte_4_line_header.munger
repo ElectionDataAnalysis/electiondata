@@ -6,8 +6,7 @@ file_type=excel
 #### Counts are found in one way of: by_name,by_number
 count_location=by_number:2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24
 
-# Optional parameter for excel or flat_text
-rows_to_skip=
+merged_cells=yes
 
 ################################################
 ## Sometimes required format parameters:
@@ -50,9 +49,7 @@ nesting_tags=
 
 # Munge formula sections (required if in munge_strings list) #
 [munge formulas]
-ReportingUnit=<sheet_name>;<Unnamed: 0_level_0>
-
-
+ReportingUnit=<sheet_name>;<column_0>
 Candidate={<count_header_2>,^(?:\w\w\w |)(.*)$}
 CandidateContest=<count_header_0>
 Party={<count_header_2>,^(\w\w\w) .*$}

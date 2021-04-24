@@ -1,27 +1,38 @@
 import election_data_analysis as e
 
 # Instructions:
+#   Copy this template and rename, including your jurisdiction and the timestamp of the results file
+#       following this model: test_North-Carolina_2020_General_20201113_1645.py
+#           * start with test_ so pytest will find the file
+#           * get the underscores and hyphens right, so the system will find the file
+#           * timestamp is YYYYMMDD_xxxx, where xxxx is the military-time Pacific Standard Time
+#           * (timestamp is crucial for files collected during recounts and evolving canvass counts)
 #   Change the constants to values from your file
-#   Delete any tests for contest types your state doesn't have in 2020 (e.g., Florida has no US Senate contest)
+#   "triple-quote" out any tests for contest types your state doesn't have in 2020 (e.g., Florida has no US Senate contest)
 #   (Optional) Change district numbers
 #   Replace each '-1' with the correct number calculated from the results file.
 #   Move this testing file to the correct jurisdiction folder in `election_data_analysis/tests`
 
 # # # constants - CHANGE THESE!! - use internal db names
 election = "2020 General"
-jurisdiction = "Oregon"
-abbr = "OR"
-total_pres_votes = 2349187  # total of all votes for President
-cd = 3  # congressional district
-total_cd_votes = 467590  # total votes in the chosen cd
+jurisdiction = "Missouri"
+abbr = "MO"
+total_pres_votes = 3025962  # total of all votes for US President
+cd = 1  # US House congressional district
+total_cd_votes = 316171  # total votes in that US House contest in the chosen cd
 shd = 1  # state house district
-total_shd_votes = 14553 + 14261 + 9270 + 2356
-ssd = 9  # state senate district
-total_ssd_votes = 30790 + 27767 + 15521
-single_vote_type = "total"  # pick any one from your file
-pres_votes_vote_type = -1
-single_county = "Oregon;Multnomah County"  # pick any one from your file
-pres_votes_county = 461453  # total votes for pres of that county
+total_shd_votes = 14724  # total votes in that State House contest
+ssd = 15  # state senate district
+total_ssd_votes = 113304  # total votes in that State Senate contest
+# pick any one with corresponding data in your file, but use internal db name
+single_vote_type = "early"
+pres_votes_vote_type = -1  # total votes for US President of that vote type
+# Change this only if results are subdivided by something other than counties
+county_or_other = "county"
+#  e.g., 'parish' in LA, 'state-house' in Alaska, 'ward' in Philadelphia
+# pick any one from your file, but use internal db name
+single_county = "Missouri;Cape Girardeau County"
+pres_votes_county = 40328  # total votes for US President in that county
 
 
 def test_data_exists(dbname):
@@ -80,11 +91,11 @@ def test_standard_vote_types(dbname):
     assert e.check_count_types_standard(election, jurisdiction, dbname=dbname)
 
 
-"""
 def test_vote_type_counts_consistent(dbname):
     assert e.check_totals_match_vote_types(election, jurisdiction, dbname=dbname)
 
 
+""" no sub vote types
 def test_count_type_subtotal(dbname):
     assert (e.contest_total(
         election,
@@ -106,6 +117,7 @@ def test_county_subtotal(dbname):
             f"US President ({abbr})",
             dbname=dbname,
             county=single_county,
+            sub_unit_type=county_or_other,
         )
         == pres_votes_county
     )

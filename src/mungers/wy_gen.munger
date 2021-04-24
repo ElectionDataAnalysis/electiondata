@@ -43,7 +43,7 @@ sheets_to_skip_names=
 
 # Munge formula sections (required if in munge_strings list) #
 [munge formulas]
-ReportingUnit=<Unnamed: 0_level_0>
+ReportingUnit=<column_0>
 ##### note: above uses pandas naming convention for blank header cell
 
 
