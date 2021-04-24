@@ -49,9 +49,7 @@ nesting_tags=
 
 # Munge formula sections (required if in munge_strings list) #
 [munge formulas]
-ReportingUnit=<sheet_name>;<Unnamed: 0_level_0>
-
-
+ReportingUnit=<sheet_name>;<column_0>
 Candidate={<count_header_2>,^(?:\w\w\w |)(.*)$}
 CandidateContest=<count_header_0>
 Party={<count_header_2>,^(\w\w\w) .*$}
