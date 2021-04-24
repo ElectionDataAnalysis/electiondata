@@ -537,7 +537,8 @@ def read_single_datafile(
                 else:
                     header_list = header_int_or_list
                 try:
-                    df = set_and_fill_headers(df, header_list, drop_empties=False)
+                    merged_cells = (p["merged_cells"] == "yes")
+                    df = set_and_fill_headers(df, header_list, merged_cells, drop_empties=False)
                 except Exception as exc:
                     err = add_new_error(
                         err,
@@ -1545,6 +1546,7 @@ def disambiguate_empty_cols(df_in: pd.DataFrame,drop_empties: bool,start: int = 
 def set_and_fill_headers(
         df_in: pd.DataFrame,
         header_list: Optional[list],
+        merged_cells: bool,
         drop_empties: bool = True,
 ) -> pd.DataFrame:
     # standardize the index  to 0, 1, 2, ...
@@ -1554,7 +1556,7 @@ def set_and_fill_headers(
     #
     if header_list:
         # fill blanks to match pandas standard
-        df = m.fill_blanks_as_pandas(df, header_list)
+        df = m.fill_blanks(df, header_list, merged_cells)
         # set column index to default
         df.columns = range(df.shape[1])
         # drop empties

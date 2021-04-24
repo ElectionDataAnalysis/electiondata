@@ -36,6 +36,7 @@ If the munger for the format of your results file doesn't already exist:
     * (optional) a list `sheets_to_read_names` (and/or `sheets_to_read_numbers`) of spreadsheets to read, 
     * (optional) a list `sheets_to_skip_names` of names of spreadsheets to skip
     * Default is to read all sheets
+    * (optional) `merged_cells` If there are merged cells in the meaningful header rows, set `merged_cells=yes`. 
   * for both 'flat_text' and 'excel':
     * (required if `count_location=by_name`) specify location of field names for count columns. with integer `count_field_name_row` (NB: top row not skipped is 0, next row is 1, etc.)
     * (required):

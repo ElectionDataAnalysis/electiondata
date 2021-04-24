@@ -38,6 +38,7 @@ opt_munger_data_types: Dict[str, str] = {
     "noncount_header_row": "int",
     "all_rows": "string",
     "multi_block": "string",
+    "merged_cells": "string",
     "max_blocks": "integer",
     "constant_over_file": "list-of-strings",
 }
@@ -1678,18 +1679,38 @@ def check_formula(formula: str) -> Optional[str]:
     return err_str
 
 
-def fill_blanks_as_pandas(df: pd.DataFrame, row_list: List[int]) -> pd.DataFrame:
+def fill_blanks(
+        df: pd.DataFrame, row_list: List[int], merged_cells: bool,
+) -> pd.DataFrame:
+    """Fills blank cells. If data is from an excel file with merged cells,
+    fill blanks from nearest non-blank to the left. Otherwise
+    fill blanks with the pandas default."""
     df_new = df.copy()
-    for i in row_list:
-        for j in range(df_new.shape[1]):
-            if df_new.loc[i, j] == "":
-                df_new.loc[i, j] = f"Unnamed: {j}_level_{i}"
+    if merged_cells:
+        for i in row_list:
+            prev_non_blank = None
+            for j in df_new.columns:
+                if df_new.loc[i, j] == "":
+                    if prev_non_blank:
+                        df_new.loc[i, j] = prev_non_blank
+                    else:
+                        df_new.loc[i, j] = f"Unnamed: {j}_level_{i}"
+                else:
+                    prev_non_blank = df_new.loc[i, j]
+
+    else:
+        for i in row_list:
+            for j in range(df_new.shape[1]):
+                if df_new.loc[i, j] == "":
+                    # pandas default
+                    df_new.loc[i, j] = f"Unnamed: {j}_level_{i}"
     return df_new
 
 
-
 def get_count_cols_by_name(
-        df: pd.DataFrame, p: Dict[str, Any], munger_name: str,
+        df: pd.DataFrame,
+        p: Dict[str, Any],
+        munger_name: str,
         use_rows: Optional[List[int]] = None,
 ) -> (List[str], Optional[dict]):
     err = None
@@ -1700,7 +1721,7 @@ def get_count_cols_by_name(
             # use default index 0, 1, 2,...
             df_new.reset_index(inplace=True, drop=True)
             # to match how pandas handles indices, fill blanks with Unnamed
-            df_new = fill_blanks_as_pandas(df_new, use_rows)
+            df_new = fill_blanks(df_new, use_rows, (p["merged_cells"] == "yes"))
             # if there is more than one header row in use_rows, need multi-index of tuples
             if len(use_rows) > 1:
                 count_columns = list({
@@ -1734,7 +1755,6 @@ def get_count_cols_by_name(
         )
         count_columns = list()
     return count_columns, err
-
 
 
 def to_standard_count_frame(
@@ -1839,12 +1859,13 @@ def to_standard_count_frame(
                     header_list = header_int_or_list
 
                 # loop over extracted blocks
+                merged_cells = (p["merged_cells"] == "yes")
                 for n in range(len(df_list)):
                     # get count columns by name
                     cc_by_name[n], error_by_df[n] = get_count_cols_by_name(
                         df_list[n],p,munger_name, use_rows=header_list
                     )
-                    df_list[n] = ui.set_and_fill_headers(df_list[n], header_list, drop_empties=True)
+                    df_list[n] = ui.set_and_fill_headers(df_list[n], header_list, merged_cells, drop_empties=True)
 
             except Exception as exc:
                 error_by_sheet[sheet] = ui.add_new_error(
@@ -1906,7 +1927,7 @@ def to_standard_count_frame(
                     )
 
             # in column names, rename any Unnamed: i_level_j to column_i if noncount header row is j
-            if p["noncount_header_row"]:
+            if isinstance(p["noncount_header_row"], int):
                 for c in working.columns:
                     numbers = re.findall(pandas_default_pattern,c)
                     # if c is of the form 'Unnamed: _level_j' where i is any integer and j is the noncount_header_row
