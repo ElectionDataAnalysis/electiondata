@@ -93,8 +93,7 @@ def test_standard_vote_types(dbname):
 
 
 def test_vote_type_counts_consistent(dbname):
-    assert e.check_totals_match_vote_types(
-        election, jurisdiction, dbname=dbname)
+    assert e.check_totals_match_vote_types(election, jurisdiction, dbname=dbname)
 
 
 """ only one vote type
@@ -127,7 +126,6 @@ def test_county_subtotal(dbname):
 
 def test_all_candidates_known(dbname):
     assert (
-        e.get_contest_with_unknown_candidates(
-            election, jurisdiction, dbname=dbname)
+        e.get_contest_with_unknown_candidates(election, jurisdiction, dbname=dbname)
         == []
     )

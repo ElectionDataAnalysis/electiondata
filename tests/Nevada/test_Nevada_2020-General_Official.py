@@ -57,23 +57,25 @@ def test_congressional_totals(dbname):
 
 
 def test_state_senate_totals(dbname):
-    assert (e.contest_total(
-        election,
-        jurisdiction,
-        f"{abbr} Senate District {ssd}",
-        dbname=dbname,
-    )
+    assert (
+        e.contest_total(
+            election,
+            jurisdiction,
+            f"{abbr} Senate District {ssd}",
+            dbname=dbname,
+        )
         == total_ssd_votes
     )
 
 
 def test_state_house_totals(dbname):
-    assert (e.contest_total(
-        election,
-        jurisdiction,
-        f"{abbr} House District {shd}",
-        dbname=dbname,
-    )
+    assert (
+        e.contest_total(
+            election,
+            jurisdiction,
+            f"{abbr} House District {shd}",
+            dbname=dbname,
+        )
         == total_shd_votes
     )
 
@@ -83,18 +85,18 @@ def test_standard_vote_types(dbname):
 
 
 def test_vote_type_counts_consistent(dbname):
-    assert e.check_totals_match_vote_types(
-        election, jurisdiction, dbname=dbname)
+    assert e.check_totals_match_vote_types(election, jurisdiction, dbname=dbname)
 
 
 def test_count_type_subtotal(dbname):
-    assert (e.contest_total(
-        election,
-        jurisdiction,
-        f"US President ({abbr})",
-        dbname=dbname,
-        vote_type=single_vote_type,
-    )
+    assert (
+        e.contest_total(
+            election,
+            jurisdiction,
+            f"US President ({abbr})",
+            dbname=dbname,
+            vote_type=single_vote_type,
+        )
         == pres_votes_vote_type
     )
 
@@ -114,7 +116,6 @@ def test_county_subtotal(dbname):
 
 def test_all_candidates_known(dbname):
     assert (
-        e.get_contest_with_unknown_candidates(
-            election, jurisdiction, dbname=dbname)
+        e.get_contest_with_unknown_candidates(election, jurisdiction, dbname=dbname)
         == []
     )

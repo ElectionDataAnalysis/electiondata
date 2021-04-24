@@ -72,7 +72,9 @@ def recast_options(
                     # nothing needs to be broken out for these file types
                     pass
                 elif options[k].split(":")[0] == "by_name":
-                    options["count_fields_by_name"] = [s for s in options[k][8:].split(",")]
+                    options["count_fields_by_name"] = [
+                        s for s in options[k][8:].split(",")
+                    ]
                     options[k] = "by_name"
                 elif options[k].split(":")[0] == "by_number":
                     options["count_column_numbers"] = [
