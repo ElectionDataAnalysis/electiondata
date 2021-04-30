@@ -31,6 +31,7 @@ from sqlalchemy import MetaData, Table, Column, Integer, Float
 from typing import Optional, List, Dict, Any, Iterable, Set
 from election_data_analysis import user_interface as ui
 
+## these form the universe of states that can be displayed via the display_jurisdictions function.
 states = """Alabama
 Alaska
 Arizona
