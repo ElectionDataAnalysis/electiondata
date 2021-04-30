@@ -31,8 +31,8 @@ from sqlalchemy import MetaData, Table, Column, Integer, Float
 from typing import Optional, List, Dict, Any, Iterable, Set
 from election_data_analysis import user_interface as ui
 
-## these form the universe of states that can be displayed via the display_jurisdictions function.
-states = """Alabama
+## these form the universe of jurisdictions that can be displayed via the display_jurisdictions function.
+states_and_such = """Alabama
 Alaska
 Arizona
 Arkansas
@@ -1501,7 +1501,7 @@ def display_jurisdictions(session, cols):
                 ON s."Id" = d."Election_Id" AND s.jurisdiction_id = d."ReportingUnit_Id"
         ORDER BY order_by
     """
-    ).format(states=sql.Literal(states))
+    ).format(states=sql.Literal(states_and_such))
     connection = session.bind.raw_connection()
     cursor = connection.cursor()
     cursor.execute(q)
