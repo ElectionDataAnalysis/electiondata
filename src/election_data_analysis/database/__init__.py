@@ -39,6 +39,7 @@ California
 Colorado
 Connecticut
 Delaware
+District of Columbia
 Florida
 Georgia
 Hawaii
