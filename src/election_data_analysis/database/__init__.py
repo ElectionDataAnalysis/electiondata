@@ -616,7 +616,7 @@ def insert_to_cdf_db(
         error_str = f"{e}"
 
     # remove temp table
-    q = sql.SQL("DROP TABLE {temp_table}").format(temp_table=sql.Identifier(temp_table))
+    q = sql.SQL("DROP TABLE IF EXISTS {temp_table}").format(temp_table=sql.Identifier(temp_table))
     cursor.execute(q)
 
     if element == "ReportingUnit":

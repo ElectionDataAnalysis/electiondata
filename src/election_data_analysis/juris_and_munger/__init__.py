@@ -11,6 +11,7 @@ import numpy as np
 from pathlib import Path
 import csv
 import inspect
+import psycopg2
 
 
 def recast_options(
@@ -153,35 +154,40 @@ class Jurisdiction:
 
         # create entries in <contest_type>Contest table
         # commit info in df to <contest_type>Contest table to db
-        err = db.insert_to_cdf_db(
-            engine, df.rename(columns={"Contest_Id": "Id"}), f"{contest_type}Contest"
-        )
-        if err:
-            if f"{contest_type}Contest" not in error:
-                error[f"{contest_type}Contest"] = {}
-            error[f"{contest_type}Contest"]["database"] = err
+        try:
+            new_err = db.insert_to_cdf_db(
+                engine, df.rename(columns={"Contest_Id": "Id"}), f"{contest_type}Contest"
+            )
+            if new_err:
+                error = ui.consolidate_errors([error, new_err])
+        except psycopg2.errors.InFailedSqlTransaction as ifst:
+            error = ui.add_new_error(
+                error,
+                "jurisdiction",
+                self.short_name,
+                "Contests not loaded to database. "
+                "Check CandidateContest.txt or BallotMeasureContest.txt for errors."
+            )
         return error
 
-    def load_juris_to_db(self, session) -> dict:
+    def load_juris_to_db(self, session) -> Optional[dict]:
         """Load info from each element in the Jurisdiction's directory into the db"""
         # load all from Jurisdiction directory (except Contests, dictionary, remark)
         juris_elements = ["ReportingUnit", "Office", "Party", "Candidate", "Election"]
 
-        error = dict()
+        err = None
         for element in juris_elements:
             # read df from Jurisdiction directory
-            error = load_juris_dframe_into_cdf(
-                session, element, self.path_to_juris_dir, error
+            err = load_juris_dframe_into_cdf(
+                session, element, self.path_to_juris_dir, err
             )
+            if ui.fatal_error(err):
+                return err
 
         # Load CandidateContests and BallotMeasureContests
-        error = dict()
         for contest_type in ["BallotMeasure", "Candidate"]:
-            error = self.load_contests(session.bind, contest_type, error)
-
-        if error == dict():
-            error = None
-        return error
+            err = self.load_contests(session.bind, contest_type, err)
+        return err
 
     def __init__(self, path_to_juris_dir):
         self.short_name = Path(path_to_juris_dir).name
