@@ -1,5 +1,5 @@
 Name	ReportingUnitType
-District of Columbia	district
+District of Columbia	city
 District of Columbia;Ward 1	ward
 District of Columbia;Ward 2	ward
 District of Columbia;Ward 3	ward
