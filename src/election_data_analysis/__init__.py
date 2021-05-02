@@ -1347,8 +1347,10 @@ class Analyzer:
                 param_file=param_file,
                 header="election_data_analysis",
             )
-            if not d["reports_and_plots_dir"]:
-                print(f"Warning: no 'reports_and_plots_dir' specified in {param_file}")
+            if eda_err:
+                print(eda_err)
+                if ui.fatal_error(eda_err):
+                    return None
         except FileNotFoundError:
             print(
                 f"Parameter file '{param_file}' not found. Ensure that it is located"
@@ -1858,8 +1860,8 @@ class Analyzer:
 
 
 def aggregate_results(
-    election,
-    jurisdiction,
+    election: str,
+    jurisdiction: str,
     dbname: Optional[str] = None,
     vote_type: Optional[str] = None,
     sub_unit: Optional[str] = None,
@@ -1867,7 +1869,7 @@ def aggregate_results(
     contest_type: str = "Candidate",
     sub_unit_type: str = "county",
     exclude_redundant_total: bool = True,
-):
+) -> pd.DataFrame:
     """if a vote type is given, restricts to that vote type; otherwise returns all vote types;
     Similarly for sub_unit and contest"""
     # using the analyzer gives us access to DB session
@@ -1920,7 +1922,12 @@ def aggregate_results(
     return df
 
 
-def data_exists(election, jurisdiction, p_path=None, dbname=None):
+def data_exists(
+    election: str,
+    jurisdiction: str,
+    p_path: Optional[str] = None,
+    dbname: Optional[str] = None,
+) -> bool:
     an = Analyzer(param_file=p_path, dbname=dbname)
     if not an:
         return False
@@ -1947,7 +1954,12 @@ def data_exists(election, jurisdiction, p_path=None, dbname=None):
         return True
 
 
-def census_data_exists(election, jurisdiction, p_path=None, dbname=None):
+def census_data_exists(
+    election: str,
+    jurisdiction: str,
+    p_path: Optional[str] = None,
+    dbname: Optional[str] = None,
+) -> bool:
     an = Analyzer(param_file=p_path, dbname=dbname)
     if not an:
         return False
@@ -1975,11 +1987,11 @@ def census_data_exists(election, jurisdiction, p_path=None, dbname=None):
 
 
 def check_totals_match_vote_types(
-    election,
-    jurisdiction,
+    election: str,
+    jurisdiction: str,
     sub_unit_type="county",
     dbname=None,
-):
+) -> bool:
     """Interesting if there are both total and other vote types;
     otherwise trivially true"""
     an = Analyzer(dbname=dbname)
@@ -2030,15 +2042,15 @@ def check_totals_match_vote_types(
 
 
 def contest_total(
-    election,
-    jurisdiction,
-    contest,
+    election: str,
+    jurisdiction: str,
+    contest: str,
     dbname: Optional[str] = None,
     vote_type: Optional[str] = None,
     county: Optional[str] = None,
     sub_unit_type: str = "county",
     contest_type: Optional[str] = "Candidate",
-):
+) -> int:
     df = aggregate_results(
         election=election,
         jurisdiction=jurisdiction,
@@ -2053,13 +2065,13 @@ def contest_total(
 
 
 def count_type_total(
-    election,
-    jurisdiction,
-    contest,
-    count_item_type,
-    sub_unit_type="county",
-    dbname=None,
-):
+    election: str,
+    jurisdiction: str,
+    contest: str,
+    count_item_type: str,
+    sub_unit_type: str = "county",
+    dbname: Optional[str] = None,
+) -> int:
     df_candidate = aggregate_results(
         election=election,
         jurisdiction=jurisdiction,
@@ -2085,7 +2097,9 @@ def count_type_total(
         return df["count"].sum()
 
 
-def check_count_types_standard(election, jurisdiction, dbname=None):
+def check_count_types_standard(
+    election: str, jurisdiction: str, dbname: Optional[str] = None
+) -> bool:
     an = Analyzer(dbname=dbname)
     election_id = db.name_to_id(an.session, "Election", election)
     reporting_unit_id = db.name_to_id(an.session, "ReportingUnit", jurisdiction)
@@ -2112,7 +2126,7 @@ def check_count_types_standard(election, jurisdiction, dbname=None):
 
 
 def get_contest_with_unknown_candidates(
-    election, jurisdiction, dbname=None
+    election: str, jurisdiction: str, dbname: Optional[str] = None
 ) -> List[str]:
     an = Analyzer(dbname=dbname)
     if not an:
@@ -2202,7 +2216,7 @@ def load_results_file(
         )
         if new_err:
             err = ui.consolidate_errors([err, new_err])
-            if ui.fatal(new_err):
+            if ui.fatal_error(new_err):
                 return err
 
     # add_datafile_Id and Election_Id columns
@@ -2222,16 +2236,9 @@ def load_results_file(
     return err
 
 
-def create_from_template(template_file, target_file, replace_dict):
-    with open(template_file, "r") as f:
-        contents = f.read()
-    for k in replace_dict.keys():
-        contents = contents.replace(k, replace_dict[k])
-    with open(target_file, "w") as f:
-        f.write(contents)
-
-
-def create_from_template(template_file, target_file, replace_dict):
+def create_from_template(
+    template_file: str, target_file: str, replace_dict: Dict[str, str]
+):
     with open(template_file, "r") as f:
         contents = f.read()
     for k in replace_dict.keys():

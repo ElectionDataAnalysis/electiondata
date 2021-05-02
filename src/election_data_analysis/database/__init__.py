@@ -10,7 +10,6 @@ import inspect
 from psycopg2.extensions import ISOLATION_LEVEL_AUTOCOMMIT
 from pathlib import Path
 from sqlalchemy.orm import Session
-import numpy as np
 
 # import the error handling libraries for psycopg2
 from psycopg2 import OperationalError, errorcodes, errors
@@ -24,14 +23,14 @@ import re
 from election_data_analysis.database import create_cdf_db as db_cdf
 import os
 
-### sqlalchemy imports below are necessary, even if syntax-checker doesn't think so!
+# sqlalchemy imports below are necessary, even if syntax-checker doesn't think so!
 from sqlalchemy import MetaData, Table, Column, Integer, Float
 
-### NB: syntax-checker doesn't see it, but these ^^ are used.
 from typing import Optional, List, Dict, Any, Iterable, Set
 from election_data_analysis import user_interface as ui
 
-states = """Alabama
+# these form the universe of jurisdictions that can be displayed via the display_jurisdictions function.
+states_and_such = """Alabama
 Alaska
 Arizona
 Arkansas
@@ -39,6 +38,7 @@ California
 Colorado
 Connecticut
 Delaware
+District of Columbia
 Florida
 Georgia
 Hawaii
@@ -95,6 +95,8 @@ contest_types_model = [
     "judicial",
     "state-house",
     "state-senate",
+    "city",
+    "territory",
 ]
 
 
@@ -168,7 +170,9 @@ def create_database(
 
 
 # TODO move to more appropriate module?
-def append_to_composing_reporting_unit_join(engine, ru):
+def append_to_composing_reporting_unit_join(
+    engine: sqlalchemy.engine, ru: pd.DataFrame
+) -> pd.DataFrame:
     """<ru> is a dframe of reporting units, with cdf internal name in column 'Name'.
     cdf internal name indicates nesting via semicolons `;`.
     This routine calculates the nesting relationships from the Names and uploads to db.
@@ -196,7 +200,8 @@ def append_to_composing_reporting_unit_join(engine, ru):
             )  # start fresh, without detritus from previous i
 
             # get name of ith ancestor
-            #  E.g., ancestor_0 is largest ancestor (i.e., shortest string, often the state); ancestor_1 is the second-largest parent, etc.
+            #  E.g., ancestor_0 is largest ancestor (i.e., shortest string, often the state);
+            #  ancestor_1 is the second-largest parent, etc.
             ru_for_cruj[f"ancestor_{i}"] = ru_static["split"].apply(
                 lambda x: ";".join(x[: i + 1])
             )
@@ -221,7 +226,9 @@ def append_to_composing_reporting_unit_join(engine, ru):
     return cruj_dframe
 
 
-def test_connection(paramfile="run_time.ini", dbname=None) -> (bool, dict):
+def test_connection(
+    paramfile: str = "run_time.ini", dbname: str = None
+) -> (bool, Optional[dict]):
     """Check for DB and relevant tables; if they don't exist, return
     error message"""
 
@@ -232,7 +239,7 @@ def test_connection(paramfile="run_time.ini", dbname=None) -> (bool, dict):
         params = ui.get_parameters(
             required_keys=db_pars, param_file=paramfile, header="postgresql"
         )[0]
-    except MissingSectionHeaderError as e:
+    except MissingSectionHeaderError:
         return {"message": "database.ini file not found suggested location."}
 
     # use dbname from paramfile, unless dbname is passed
@@ -256,7 +263,7 @@ def test_connection(paramfile="run_time.ini", dbname=None) -> (bool, dict):
     try:
         engine, new_err = sql_alchemy_connect(paramfile)
         if new_err:
-            err = ui.consolidate_errors(err, new_err)
+            err = ui.consolidate_errors([err, new_err])
             engine.dispose()
             return False, err
         elems, enums, joins, o = get_cdf_db_table_names(engine)
@@ -381,7 +388,7 @@ def create_db_if_not_ok(dbname: Optional[str] = None) -> Optional[dict]:
     return err
 
 
-def get_cdf_db_table_names(eng):
+def get_cdf_db_table_names(eng: sqlalchemy.engine):
     """This is postgresql-specific"""
     db_columns = pd.read_sql_table("columns", eng, schema="information_schema")
     public = db_columns[db_columns.table_schema == "public"]
@@ -410,7 +417,7 @@ def name_from_id_cursor(
     cursor: psycopg2.extensions.cursor,
     element: str,
     idx: int,
-):
+) -> str:
     name_field = get_name_field(element)
     q = sql.SQL('SELECT {name_field} FROM {element} WHERE "Id" = %s').format(
         name_field=sql.Identifier(name_field), element=sql.Identifier(element)
@@ -424,7 +431,7 @@ def name_from_id_cursor(
     return name
 
 
-def name_from_id(session, element: str, idx: int) -> str:
+def name_from_id(session: Session, element: str, idx: int) -> Optional[str]:
     connection = session.bind.raw_connection()
     cursor = connection.cursor()
     name = name_from_id_cursor(cursor, element, idx)
@@ -459,7 +466,7 @@ def name_to_id_cursor(
     return idx
 
 
-def name_to_id(session, element, name) -> int:
+def name_to_id(session: Session, element: str, name: str) -> Optional[int]:
     """ Condition can be a field/value pair, e.g., ('contest_type','Candidate')"""
     connection = session.bind.raw_connection()
     cursor = connection.cursor()
@@ -469,7 +476,7 @@ def name_to_id(session, element, name) -> int:
     return idx
 
 
-def get_name_field(element):
+def get_name_field(element: str) -> str:
     if element in [
         "CountItemType",
         "ElectionType",
@@ -489,12 +496,18 @@ def get_name_field(element):
 
 
 def insert_to_cdf_db(
-    engine, df, element, sep="\t", encoding=m.default_encoding, timestamp=None
-) -> str:
+    engine: sqlalchemy.engine,
+    df: pd.DataFrame,
+    element: str,
+    sep: str = "\t",
+    encoding: str = m.default_encoding,
+    timestamp=None,
+) -> Optional[str]:
     """Inserts any new records in <df> into <element>; if <element> has a timestamp column
     it must be specified in <timestamp>; <df> must have columns matching <element>,
     except Id and <timestamp> if any. Returns an error message (or None)"""
 
+    matched_with_old = pd.DataFrame()  # to satisfy syntax-checker
     working = df.copy()
     if element == "Candidate":
         # regularize name and drop dupes
@@ -604,7 +617,9 @@ def insert_to_cdf_db(
         error_str = f"{e}"
 
     # remove temp table
-    q = sql.SQL("DROP TABLE {temp_table}").format(temp_table=sql.Identifier(temp_table))
+    q = sql.SQL("DROP TABLE IF EXISTS {temp_table}").format(
+        temp_table=sql.Identifier(temp_table)
+    )
     cursor.execute(q)
 
     if element == "ReportingUnit":
@@ -620,7 +635,7 @@ def insert_to_cdf_db(
     return error_str
 
 
-def table_named_to_avoid_conflict(engine, prefix: str) -> str:
+def table_named_to_avoid_conflict(engine: sqlalchemy.engine, prefix: str) -> str:
     p = re.compile("postgresql://([^:]+)")
     user_name = p.findall(str(engine.url))[0]
     ts = datetime.datetime.now().strftime("%Y%m%d_%H%M%S_%f")
@@ -685,7 +700,9 @@ def append_id_to_dframe(
     return df_appended
 
 
-def get_column_names(cursor: psycopg2.extensions.cursor, table: str) -> (list, dict):
+def get_column_names(
+    cursor: psycopg2.extensions.cursor, table: str
+) -> (List[str], Dict[str, Any]):
     q = sql.SQL(
         """SELECT column_name, data_type FROM information_schema.columns 
         WHERE table_schema = 'public' AND table_name = %s"""
@@ -697,7 +714,7 @@ def get_column_names(cursor: psycopg2.extensions.cursor, table: str) -> (list, d
     return col_list, type_map
 
 
-def add_records_to_selection_table(engine, n: int) -> list:
+def add_records_to_selection_table(engine: sqlalchemy.engine, n: int) -> list:
     "Returns a list of the Ids of the inserted records"
     id_list = []
     connection = engine.raw_connection()
@@ -712,9 +729,13 @@ def add_records_to_selection_table(engine, n: int) -> list:
     return id_list
 
 
-def vote_type_list(cursor, datafile_list: list, by: str = "Id") -> (list, str):
+def vote_type_list(
+    cursor: psycopg2.extensions.cursor,
+    datafile_list: List[pd.DataFrame],
+    by: str = "Id",
+) -> (List[str], str):
     if len(datafile_list) == 0:
-        return [], "No vote types found because no datafiles listed"
+        return list(), "No vote types found because no datafiles listed"
 
     q = sql.SQL(
         """
@@ -740,7 +761,7 @@ def data_file_list_cursor(
     election_id: int,
     reporting_unit_id: Optional[int] = None,
     by="Id",
-) -> (list, str):
+) -> (List[pd.DataFrame], Optional[str]):
     q = sql.SQL(
         """SELECT distinct d.{by} FROM _datafile d WHERE d."Election_Id" = %s"""
     ).format(by=sql.Identifier(by))
@@ -764,7 +785,7 @@ def data_file_list(
     election_id,
     reporting_unit_id: Optional[int] = None,
     by: str = "Id",
-) -> (list, str):
+) -> (List[pd.DataFrame], Optional[str]):
     connection = session.bind.raw_connection()
     cursor = connection.cursor()
     df_list, err_str = data_file_list_cursor(
@@ -774,7 +795,11 @@ def data_file_list(
     return df_list, err_str
 
 
-def active_vote_types_from_ids(cursor, election_id=None, jurisdiction_id=None):
+def active_vote_types_from_ids(
+    cursor: psycopg2.extensions.cursor,
+    election_id: Optional[int] = None,
+    jurisdiction_id: Optional[int] = None,
+) -> List[str]:
     if election_id:
         if jurisdiction_id:
             q = """SELECT distinct cit."Txt"
@@ -824,7 +849,7 @@ def active_vote_types_from_ids(cursor, election_id=None, jurisdiction_id=None):
     return active_list
 
 
-def active_vote_types(session, election, jurisdiction):
+def active_vote_types(session: Session, election, jurisdiction):
     """Gets a list of the vote types for the given election and jurisdiction"""
 
     election_id = name_to_id(session, "Election", election)
@@ -886,7 +911,8 @@ def remove_vote_counts(connection, cursor, id: int, active_confirm: bool = True)
     return err_str
 
 
-def get_relevant_election(session, filters):
+def get_relevant_election(session: Session, filters: List[str]) -> pd.DataFrame:
+    """Returns dataframe of all records from Election table with a name in the list <filters>"""
     unit_df = pd.read_sql_table("ReportingUnit", session.bind, index_col="Id")
     unit_df = unit_df[unit_df["Name"].isin(filters)]
     election_ids = pd.read_sql_table("_datafile", session.bind, index_col="Id").merge(
@@ -897,7 +923,7 @@ def get_relevant_election(session, filters):
     return election_df
 
 
-def get_relevant_contests(session, filters):
+def get_relevant_contests(session: Session, filters: List[str]) -> pd.DataFrame:
     """expects the filters list to have an election and jurisdiction.
     finds all contests for that combination."""
     election_id = list_to_id(session, "Election", filters)
@@ -923,7 +949,9 @@ def get_major_subdiv_type(session: Session, jurisdiction: str) -> Optional[str]:
     return subdiv_type
 
 
-def get_jurisdiction_hierarchy(session, jurisdiction_id) -> (int, str):
+def get_jurisdiction_hierarchy(
+    session: Session, jurisdiction_id: int
+) -> (Optional[int], Optional[str]):
     """get reporting unit type id of reporting unit one level down from jurisdiction.
     Omit particular types that are contest types, not true reporting unit types
     TODO: handle case where type is non-standard and some other smaller reporting units are also
@@ -984,7 +1012,9 @@ def get_jurisdiction_hierarchy(session, jurisdiction_id) -> (int, str):
     return subdivision_type_id, other_subdiv_type
 
 
-def get_candidate_votecounts(session, election_id, top_ru_id, subdivision_type_id):
+def get_candidate_votecounts(
+    session: Session, election_id: int, top_ru_id: int, subdivision_type_id: int
+) -> pd.DataFrame:
     connection = session.bind.raw_connection()
     cursor = connection.cursor()
     q = sql.SQL(
@@ -1060,7 +1090,9 @@ def get_candidate_votecounts(session, election_id, top_ru_id, subdivision_type_i
     return result_df
 
 
-def get_contest_with_unknown(session, election_id, top_ru_id) -> List[str]:
+def get_contest_with_unknown(
+    session: Session, election_id: int, top_ru_id: int
+) -> List[str]:
     connection = session.bind.raw_connection()
     cursor = connection.cursor()
 
@@ -1084,7 +1116,7 @@ and cruj."ParentReportingUnit_Id" = %s
     return contests
 
 
-def selection_ids_from_candidate_id(session, candidate_id):
+def selection_ids_from_candidate_id(session: Session, candidate_id: int) -> List[int]:
     connection = session.bind.raw_connection()
     cursor = connection.cursor()
 
@@ -1097,7 +1129,7 @@ def selection_ids_from_candidate_id(session, candidate_id):
 
 
 def export_rollup_from_db(
-    session,
+    session: Session,
     top_ru: str,
     election: str,
     sub_unit_type: str,
@@ -1316,15 +1348,16 @@ def export_rollup_from_db(
 
 
 def read_vote_count(
-    session,
-    election_id,
-    reporting_unit_id,
-    fields,
-    aliases,
+    session: Session,
+    election_id: int,
+    reporting_unit_id: int,
+    fields: List[str],
+    aliases: List[str],
 ):
     """The VoteCount table is the only place that maps contests to a specific
     election. But this table is the largest one, so we don't want to use pandas methods
-    to read into a DF and then filter"""
+    to read into a DF and then filter. Data returns is determined by <fields> (column names from SQL query);
+    the columns in the returned database can be renamed as <aliases>"""
     q = sql.SQL(
         """
         SELECT  DISTINCT {fields}
@@ -1364,8 +1397,10 @@ def read_vote_count(
     return results_df
 
 
-def list_to_id(session, element, names) -> int:
-    """ takes a list of names of various element types and returns a single ID """
+def list_to_id(session: Session, element: str, names: List[str]) -> Optional[int]:
+    """takes a list of names of various element types and returns a single ID
+    ID returned is for the name in the <names> list that corresponds to an actual
+     <element>"""
     for name in names:
         id = name_to_id(session, element, name)
         if id:
@@ -1373,7 +1408,9 @@ def list_to_id(session, element, names) -> int:
     return None
 
 
-def data_file_download(cursor, election_id: int, reporting_unit_id: int) -> int:
+def data_file_download(
+    cursor: psycopg2.extensions.cursor, election_id: int, reporting_unit_id: int
+) -> Optional[int]:
     q = sql.SQL(
         """
         SELECT  MAX(download_date)::text as download_date
@@ -1389,7 +1426,9 @@ def data_file_download(cursor, election_id: int, reporting_unit_id: int) -> int:
         return None
 
 
-def is_preliminary(cursor, election_id, jurisdiction_id):
+def is_preliminary(
+    cursor: psycopg2.extensions.cursor, election_id: int, jurisdiction_id: int
+) -> bool:
     """get the preliminary flag from the _datafile table.
     Since this flag doesn't exist yet, parsing the election name for
     2020 because we expect all data for 2020 to be preliminary for awhile."""
@@ -1415,8 +1454,12 @@ def is_preliminary(cursor, election_id, jurisdiction_id):
 
 
 def read_external(
-    cursor, election_year: int, top_ru_id: int, fields: list, restrict=None
-):
+    cursor: psycopg2.extensions.cursor,
+    election_year: int,
+    top_ru_id: int,
+    fields: list,
+    restrict: Optional[Any] = None,
+) -> pd.DataFrame:
     if restrict:
         census = f"""AND "Label" = '{restrict}'"""
     else:
@@ -1446,7 +1489,7 @@ def read_external(
         return pd.DataFrame()
 
 
-def display_elections(session):
+def display_elections(session: Session) -> pd.DataFrame:
     result = session.execute(
         f"""
         SELECT  e."Id" AS parent, "Name" AS name, "Txt" as type
@@ -1463,7 +1506,9 @@ def display_elections(session):
     return result_df
 
 
-def display_jurisdictions(session, cols):
+def display_jurisdictions(session: Session, cols: List[str]) -> pd.DataFrame:
+    """Returns list of jurisdictions that have data in the database AND are listed in
+    the global constant <states_and_such>"""
     q = sql.SQL(
         """
         WITH states(states) AS (
@@ -1499,7 +1544,7 @@ def display_jurisdictions(session, cols):
                 ON s."Id" = d."Election_Id" AND s.jurisdiction_id = d."ReportingUnit_Id"
         ORDER BY order_by
     """
-    ).format(states=sql.Literal(states))
+    ).format(states=sql.Literal(states_and_such))
     connection = session.bind.raw_connection()
     cursor = connection.cursor()
     cursor.execute(q)

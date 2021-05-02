@@ -3,7 +3,7 @@ from typing import Optional, List
 
 import pandas as pd
 import inspect
-from election_data_analysis import user_interface as ui, database as db
+from election_data_analysis import user_interface as ui
 from election_data_analysis import munge as m
 import datetime
 import os
@@ -45,11 +45,12 @@ def create_rollup(
     datafile_list: list = None,
     by: str = "Id",
     by_vote_type: bool = False,
+    sub_rutype_othertext: str = "",
 ) -> str:
     """<target_dir> is the directory where the resulting rollup_dataframe will be stored.
     <election_id> identifies the election; <datafile_id_list> the datafile whose results will be rolled up.
     <top_ru_id> is the internal cdf name of the ReportingUnit whose results will be reported
-    <sub_rutype_id> identifies the ReportingUnitType
+    <sub_rutype_id> and <sub_rutype_othertext> identify the ReportingUnitType
     of the ReportingUnits used in each line of the results file
     created by the routine. (E.g., county or ward)
     <datafile_list> is a list of files, with entries from field <by> in _datafile table.
@@ -77,10 +78,12 @@ def create_rollup(
     else:
         exclude_redundant_total = False
 
-    # get names from ids
+    # get names from ids (and sub_rutype othertext if appropriate)
     top_ru = db.name_from_id_cursor(cursor, "ReportingUnit", top_ru_id)
     election = db.name_from_id_cursor(cursor, "Election", election_id)
     sub_rutype = db.name_from_id_cursor(cursor, "ReportingUnitType", sub_rutype_id)
+    if sub_rutype == "other" and sub_rutype_othertext != "":
+        sub_rutype = sub_rutype_othertext
 
     # create path to export directory
     leaf_dir = os.path.join(target_dir, election, top_ru, f"by_{sub_rutype}")
@@ -394,6 +397,8 @@ def get_votecount_data(
             + unsummed["contest_district_type"]
         )
         filter_column = "party_district_type"
+    else:
+        filter_column = ""  # to keep syntax checker happy
 
     # limit to relevant data - all data or not
     keep_all = filter_str.startswith("All ")

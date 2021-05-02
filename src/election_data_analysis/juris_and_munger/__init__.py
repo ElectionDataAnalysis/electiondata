@@ -11,14 +11,15 @@ import numpy as np
 from pathlib import Path
 import csv
 import inspect
+import psycopg2
 
 
 def recast_options(
     options: Dict[str, str], types: Dict[str, str], munger_name: str
-) -> (dict, Dict[str, Any]):
+) -> (dict, Optional[Dict[str, Any]]):
     """Convert a dictionary <options> of string parameter values to typed objects,
     where type is determined by <types>"""
-    err: Dict[str, Any] = None
+    err: Optional[Dict[str, Any]] = None
     keys = {k for k in options.keys() if k in types.keys()}
     for k in keys:
         if options[k]:
@@ -85,14 +86,21 @@ def recast_options(
 
 
 class Jurisdiction:
-    def load_contests(self, engine, contest_type: str, error: dict) -> dict:
+    def load_contests(
+        self, engine, contest_type: str, err: Optional[dict]
+    ) -> Optional[dict]:
         # read <contest_type>Contests from jurisdiction folder
         element_fpath = os.path.join(
             self.path_to_juris_dir, f"{contest_type}Contest.txt"
         )
         if not os.path.exists(element_fpath):
-            error[f"{contest_type}Contest.txt"] = "file not found"
-            return error
+            err = ui.add_new_error(
+                err,
+                "jurisdiction",
+                self.short_name,
+                f"file not found: {contest_type}Contest.txt",
+            )
+            return err
         df = pd.read_csv(
             element_fpath,
             sep="\t",
@@ -108,22 +116,17 @@ class Jurisdiction:
 
         # dedupe df
         dupes, df = ui.find_dupes(df)
-        if not dupes.empty:
-            print(
-                f"WARNING: duplicates removed from dataframe, may indicate a problem.\n"
-            )
-            if f"{contest_type}Contest" not in error:
-                error[f"{contest_type}Contest"] = {}
-            error[f"{contest_type}Contest"]["found_duplicates"] = True
 
         # insert into in Contest table
-        e = db.insert_to_cdf_db(engine, df[["Name", "contest_type"]], "Contest")
-        if e:
-            error = ui.add_new_error(
-                error,
+        new_err_str = db.insert_to_cdf_db(
+            engine, df[["Name", "contest_type"]], "Contest"
+        )
+        if new_err_str:
+            err = ui.add_new_error(
+                err,
                 "warn-system",
                 f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
-                f"On Contest table insertion: {e}",
+                f"Error on Contest table insertion: {new_err_str}",
             )
 
         # append Contest_Id
@@ -153,35 +156,42 @@ class Jurisdiction:
 
         # create entries in <contest_type>Contest table
         # commit info in df to <contest_type>Contest table to db
-        err = db.insert_to_cdf_db(
-            engine, df.rename(columns={"Contest_Id": "Id"}), f"{contest_type}Contest"
-        )
-        if err:
-            if f"{contest_type}Contest" not in error:
-                error[f"{contest_type}Contest"] = {}
-            error[f"{contest_type}Contest"]["database"] = err
-        return error
+        try:
+            new_err = db.insert_to_cdf_db(
+                engine,
+                df.rename(columns={"Contest_Id": "Id"}),
+                f"{contest_type}Contest",
+            )
+            if new_err:
+                err = ui.consolidate_errors([err, new_err])
+        except psycopg2.InternalError as ie:
+            err = ui.add_new_error(
+                err,
+                "jurisdiction",
+                self.short_name,
+                f"Contests not loaded to database (sql error {ie}). "
+                f"Check CandidateContest.txt or BallotMeasureContest.txt for errors.",
+            )
+        return err
 
-    def load_juris_to_db(self, session) -> dict:
+    def load_juris_to_db(self, session) -> Optional[dict]:
         """Load info from each element in the Jurisdiction's directory into the db"""
         # load all from Jurisdiction directory (except Contests, dictionary, remark)
         juris_elements = ["ReportingUnit", "Office", "Party", "Candidate", "Election"]
 
-        error = dict()
+        err = None
         for element in juris_elements:
             # read df from Jurisdiction directory
-            error = load_juris_dframe_into_cdf(
-                session, element, self.path_to_juris_dir, error
+            err = load_juris_dframe_into_cdf(
+                session, element, self.path_to_juris_dir, err
             )
+            if ui.fatal_error(err):
+                return err
 
         # Load CandidateContests and BallotMeasureContests
-        error = dict()
         for contest_type in ["BallotMeasure", "Candidate"]:
-            error = self.load_contests(session.bind, contest_type, error)
-
-        if error == dict():
-            error = None
-        return error
+            err = self.load_contests(session.bind, contest_type, err)
+        return err
 
     def __init__(self, path_to_juris_dir):
         self.short_name = Path(path_to_juris_dir).name
@@ -240,25 +250,35 @@ def ensure_juris_files(juris_path: str, ignore_empty: bool = False) -> Optional[
 
     # ensure necessary all files exist
     for juris_file in template_list:
-        # a list of file empty errors
         cf_path = os.path.join(juris_path, f"{juris_file}.txt")
         created = False
         # if file does not already exist in jurisdiction directory, create from template and invite user to fill
+        template_path = os.path.join(templates_dir, f"{juris_file}.txt")
         try:
-            temp = pd.read_csv(
-                os.path.join(templates_dir, f"{juris_file}.txt"),
-                sep="\t",
-                encoding=m.default_encoding,
-            )
+            if os.path.isfile(template_path):
+                temp = pd.read_csv(
+                    template_path,
+                    sep="\t",
+                    encoding=m.default_encoding,
+                )
+            else:
+                err = ui.add_new_error(
+                    err,
+                    "" "system",
+                    f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
+                    f"Template file {template_path} does not exist",
+                )
+                temp = pd.DataFrame()  # for syntax checker
         except pd.errors.EmptyDataError:
             if not ignore_empty:
                 err = ui.add_new_error(
                     err,
                     "system",
                     f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
-                    "Template file {" + juris_file + "}.txt has no contents",
+                    f"Template file {template_path} has no contents",
                 )
             temp = pd.DataFrame()
+
         # if file does not exist
         if not os.path.isfile(cf_path):
             # create the file
@@ -510,7 +530,7 @@ def juris_dependency_dictionary():
 
 
 def load_juris_dframe_into_cdf(
-    session, element, juris_path, error: Optional[dict]
+    session, element, juris_path, err: Optional[dict]
 ) -> Optional[dict]:
     """TODO"""
 
@@ -528,13 +548,13 @@ def load_juris_dframe_into_cdf(
 
     # fail if <element>.txt does not exist
     if not os.path.exists(element_file):
-        error = ui.add_new_error(
-            error,
+        err = ui.add_new_error(
+            err,
             "jurisdiction",
             Path(juris_path).name,
             f"File {element}.txt not found",
         )
-        return error
+        return err
 
     # read info from <element>.txt, filling null fields with 'none or unknown'
     df = pd.read_csv(
@@ -548,8 +568,8 @@ def load_juris_dframe_into_cdf(
     # dedupe df
     dupes, df = ui.find_dupes(df)
     if not dupes.empty:
-        error = ui.add_new_error(
-            error,
+        err = ui.add_new_error(
+            err,
             "warn-jurisdiction",
             Path(juris_path).name,
             f"Duplicates were found in {element}.txt",
@@ -566,8 +586,8 @@ def load_juris_dframe_into_cdf(
                 df, non_standard = m.enum_col_to_id_othertext(df, e, cdf_e)
                 if non_standard:
                     ns = "\n\t".join(non_standard)
-                    error = ui.add_new_error(
-                        error,
+                    err = ui.add_new_error(
+                        err,
                         "warn-jurisdiction",
                         Path(juris_path).name,
                         f"Some {e}s are non-standard:\n\t{ns}",
@@ -589,13 +609,13 @@ def load_juris_dframe_into_cdf(
     # commit info in df to corresponding cdf table to db
     err_string = db.insert_to_cdf_db(session.bind, df, element)
     if err_string:
-        error = ui.add_new_error(
-            error,
+        err = ui.add_new_error(
+            err,
             "system",
             f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
             f"Error loading {element} to database: {err_string}",
         )
-    return error
+    return err
 
 
 def add_none_or_unknown(df: pd.DataFrame, contest_type: str = None) -> pd.DataFrame:
