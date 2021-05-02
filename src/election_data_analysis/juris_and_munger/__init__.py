@@ -86,7 +86,9 @@ def recast_options(
 
 
 class Jurisdiction:
-    def load_contests(self, engine, contest_type: str, err: Optional[dict]) -> Optional[dict]:
+    def load_contests(
+        self, engine, contest_type: str, err: Optional[dict]
+    ) -> Optional[dict]:
         # read <contest_type>Contests from jurisdiction folder
         element_fpath = os.path.join(
             self.path_to_juris_dir, f"{contest_type}Contest.txt"
@@ -96,7 +98,7 @@ class Jurisdiction:
                 err,
                 "jurisdiction",
                 self.short_name,
-                f"file not found: {contest_type}Contest.txt"
+                f"file not found: {contest_type}Contest.txt",
             )
             return err
         df = pd.read_csv(
@@ -116,7 +118,9 @@ class Jurisdiction:
         dupes, df = ui.find_dupes(df)
 
         # insert into in Contest table
-        new_err_str = db.insert_to_cdf_db(engine, df[["Name", "contest_type"]], "Contest")
+        new_err_str = db.insert_to_cdf_db(
+            engine, df[["Name", "contest_type"]], "Contest"
+        )
         if new_err_str:
             err = ui.add_new_error(
                 err,
@@ -154,7 +158,9 @@ class Jurisdiction:
         # commit info in df to <contest_type>Contest table to db
         try:
             new_err = db.insert_to_cdf_db(
-                engine, df.rename(columns={"Contest_Id": "Id"}), f"{contest_type}Contest"
+                engine,
+                df.rename(columns={"Contest_Id": "Id"}),
+                f"{contest_type}Contest",
             )
             if new_err:
                 err = ui.consolidate_errors([err, new_err])
@@ -164,7 +170,7 @@ class Jurisdiction:
                 "jurisdiction",
                 self.short_name,
                 "Contests not loaded to database. "
-                "Check CandidateContest.txt or BallotMeasureContest.txt for errors."
+                "Check CandidateContest.txt or BallotMeasureContest.txt for errors.",
             )
         return err
 
@@ -257,8 +263,8 @@ def ensure_juris_files(juris_path: str, ignore_empty: bool = False) -> Optional[
                 )
             else:
                 err = ui.add_new_error(
-                    err, ""
-                    "system",
+                    err,
+                    "" "system",
                     f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
                     f"Template file {template_path} does not exist",
                 )
