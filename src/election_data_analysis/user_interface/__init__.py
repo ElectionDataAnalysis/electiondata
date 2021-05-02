@@ -1454,7 +1454,7 @@ def get_filtered_input_options(session, input_str, filters):
     return package_display_results(df)
 
 
-def package_display_results(data):
+def package_display_results(data: pd.DataFrame) -> List[Dict[str, Any]]:
     """takes a result set and packages into JSON to return"""
     results = []
     for i, row in data.iterrows():
