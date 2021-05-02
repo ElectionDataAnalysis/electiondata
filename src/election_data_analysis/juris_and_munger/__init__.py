@@ -16,10 +16,10 @@ import psycopg2
 
 def recast_options(
     options: Dict[str, str], types: Dict[str, str], munger_name: str
-) -> (dict, Dict[str, Any]):
+) -> (dict, Optional[Dict[str, Any]]):
     """Convert a dictionary <options> of string parameter values to typed objects,
     where type is determined by <types>"""
-    err: Dict[str, Any] = None
+    err: Optional[Dict[str, Any]] = None
     keys = {k for k in options.keys() if k in types.keys()}
     for k in keys:
         if options[k]:
@@ -164,13 +164,13 @@ class Jurisdiction:
             )
             if new_err:
                 err = ui.consolidate_errors([err, new_err])
-        except psycopg2.errors.InFailedSqlTransaction as ifst:
+        except psycopg2.InternalError as ie:
             err = ui.add_new_error(
                 err,
                 "jurisdiction",
                 self.short_name,
-                "Contests not loaded to database. "
-                "Check CandidateContest.txt or BallotMeasureContest.txt for errors.",
+                f"Contests not loaded to database (sql error {ie}). "
+                f"Check CandidateContest.txt or BallotMeasureContest.txt for errors.",
             )
         return err
 
@@ -268,6 +268,7 @@ def ensure_juris_files(juris_path: str, ignore_empty: bool = False) -> Optional[
                     f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
                     f"Template file {template_path} does not exist",
                 )
+                temp = pd.DataFrame()  # for syntax checker
         except pd.errors.EmptyDataError:
             if not ignore_empty:
                 err = ui.add_new_error(
