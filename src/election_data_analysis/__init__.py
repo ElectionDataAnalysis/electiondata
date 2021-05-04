@@ -167,6 +167,7 @@ class DataLoader:
         Returns a post-reporting error dictionary, and a flag to indicate whether all loaded successfully.
         (Note: errors initializing loading process (e.g., results file not found) do *not* generate
         <success> = False, though those errors are reported in <err>"""
+
         # initialize error dictionary and success flag
         err = None
         success = True
@@ -174,9 +175,9 @@ class DataLoader:
         # if no election_jurisdiction_list given, default to all represented in ini files in repository
         if not election_jurisdiction_list:
             election_jurisdiction_list = ui.election_juris_list(self.d["ini_dir"])
-        # set locations for error reporting
 
         # define directory for archiving successfully loaded files (and storing warnings)
+        # # get database name
         db_param, new_err = ui.get_parameters(
             required_keys=["dbname"], param_file="run_time.ini", header="postgresql"
         )
@@ -185,20 +186,22 @@ class DataLoader:
             if ui.fatal_error(new_err):
                 err = ui.report(err)
                 return err, False
-
-        # specify directories for archiving and reporting warnings
+        # # get timestamp
+        ts = datetime.datetime.now().strftime("%m%d_%H%M")
+        error_and_warning_dir = os.path.join(self.d["reports_and_plots_dir"], f"{db_param['dbname']}_{ts}")
+        # # specify directory for archiving files loaded successfully
         success_dir = os.path.join(self.d["archive_dir"], db_param["dbname"])
+        # # specify directory for reporting warnings and errors
         loc_dict = {
-            "munger": self.d["results_dir"],
-            "jurisdiction": self.d["results_dir"],
-            "warn-munger": self.d["results_dir"],
-            "warn-jurisdiction": self.d["results_dir"],
+            "munger": error_and_warning_dir,
+            "jurisdiction": error_and_warning_dir,
+            "warn-munger": error_and_warning_dir,
+            "warn-jurisdiction": error_and_warning_dir,
         }
 
         # list .ini files and pull their jurisdiction_paths
         par_file_full_paths = ui.file_full_paths(self.d["ini_dir"], "ini")
-
-        # no .ini files found, return error
+        # # if no .ini files found, return error
         if not par_file_full_paths:
             err = ui.add_new_error(
                 err,
@@ -209,7 +212,7 @@ class DataLoader:
             err = ui.report(err)
             return err, False
 
-        params = dict()
+        params = dict()  # keys are full ini file paths; values are parameter dictionaries
         juris_directory = dict()
 
         # For each par_file get params or throw error
@@ -242,7 +245,7 @@ class DataLoader:
         jurisdiction_dirs.sort()
 
         # for each jurisdiction, create Jurisdiction or throw error
-        good_jurisdictions = list()
+        good_jurisdictions = list()  # jurisdictions that don't throw errors
         juris = dict()
         for jp in jurisdiction_dirs:
             # create and load jurisdiction or throw error
@@ -279,10 +282,13 @@ class DataLoader:
                     good_jurisdictions.append(jp)
             else:
                 err = ui.consolidate_errors([err, new_err])
-                return err, False
+                if ui.fatal_error(err):
+                    return err, False
 
         # process all good parameter files with good jurisdictions
         for jp in good_jurisdictions:
+            at_least_one_success = False  # to determine whether to archive this particular jurisdiction
+            latest_download_date = "0000-00-00"  # for naming archive directory
             good_files = [f for f in good_par_files if juris_directory[f] == jp]
             print(f"Processing results files specified in {good_files}")
             for f in good_files:
@@ -316,48 +322,61 @@ class DataLoader:
                         )
                     else:
                         rollup_rut = None
+
                     # load data
                     load_error = sdl.load_results(rollup=rollup, rollup_rut=rollup_rut)
                     if load_error:
                         err = ui.consolidate_errors([err, load_error])
-
-                    # if move_files == True and no fatal load error,
-                    if move_files and not ui.fatal_error(load_error):
-                        # archive files
-                        ui.archive_from_param_file(
-                            f, self.d["results_dir"], success_dir
-                        )
-                        print(
-                            f"\tArchived {f} and its results file after successful load "
-                            f"via mungers {sdl.d['munger_name']}.\n"
-                        )
-                    # if there was a fatal load error
-                    elif ui.fatal_error(load_error):
-                        print(
-                            f"\tFatal loading errors. {f} and its results file not loaded (and not archived)"
-                        )
-                        success = False
-
-                    # if move_files is false and there is no fatal error
                     else:
-                        print(
-                            f"{f} and its results file loaded successfully via mungers {sdl.d['munger_name']}."
-                        )
+                        # on success, update latest download date if necessary
+                        at_least_one_success = True
+                        download_date = sdl.d["download_date"]
+                        if download_date > latest_download_date:
+                            latest_download_date = download_date
 
-                #  report munger, jurisdiction and file errors & warnings
-                err = ui.report(
-                    err,
-                    loc_dict=loc_dict,
-                    key_list=[
-                        "munger",
-                        "jurisdiction",
-                        "file",
-                        "warn-munger",
-                        "warn-jurisdiction",
-                        "warn-file",
-                    ],
-                    file_prefix=Path(f).stem,
-                )
+            # TODO if any files loaded, copy jurisdiction results files to archive
+            #  (subdir named with latest download date)
+
+            # TODO if all files loaded successfully, delete jurisdiction results file
+            #  from results directory
+            """                # if move_files == True and no fatal load error,
+                            if move_files and not ui.fatal_error(load_error):
+                                # archive files
+                                ui.archive_from_param_file(
+                                    f, self.d["results_dir"], success_dir
+                                )
+                                print(
+                                    f"\tArchived {f} and its results file after successful load "
+                                    f"via mungers {sdl.d['munger_name']}.\n"
+                                )
+                            # if there was a fatal load error
+                            elif ui.fatal_error(load_error):
+                                print(
+                                    f"\tFatal loading errors. {f} and its results file not loaded (and not archived)"
+                                )
+                                success = False
+            
+                            # if move_files is false and there is no fatal error
+                            else:
+                                print(
+                                    f"{f} and its results file loaded successfully via mungers {sdl.d['munger_name']}."
+                                )
+            
+            """
+            #  report munger, jurisdiction and file errors & warnings
+            err = ui.report(
+                err,
+                loc_dict=loc_dict,
+                key_list=[
+                    "munger",
+                    "jurisdiction",
+                    "file",
+                    "warn-munger",
+                    "warn-jurisdiction",
+                    "warn-file",
+                ],
+                file_prefix=Path(f).stem,
+            )
 
         # report remaining errors
         loc_dict = {
@@ -370,7 +389,7 @@ class DataLoader:
         return err, success
 
     def remove_data(
-        self, election_id: int, juris_id: int, active_confirm: bool
+        self, election_id: int, juris_id: int,
     ) -> Optional[str]:
         """Remove from the db all data for the given <election_id> in the given <juris>"""
         # get connection & cursor
@@ -386,7 +405,7 @@ class DataLoader:
 
         # remove data from all those datafiles
         for idx in df_list:
-            db.remove_vote_counts(connection, cursor, idx, active_confirm)
+            db.remove_vote_counts(connection, cursor, idx)
         return None
 
     def add_totals_if_missing(self, election, jurisdiction) -> Optional[str]:
