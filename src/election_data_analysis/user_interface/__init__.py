@@ -679,25 +679,6 @@ def build_row_constants_from_df(
     return row_constants, err
 
 
-def archive_from_param_file(param_file: str, current_dir: str, archive_dir: str):
-    params, err = get_parameters(
-        required_keys=["results_file", "aux_data_dir"],
-        header="election_data_analysis",
-        param_file=os.path.join(current_dir, param_file),
-    )
-    # TODO error handling
-    # if the ini file specifies an aux_data_directory
-    if (
-        "aux_data_dir" in params.keys()
-        and params["aux_data_dir"]
-        and params["aux_data_dir"] != ""
-    ):
-        archive(params["aux_data_dir"], current_dir, archive_dir)
-    archive(params["results_file"], current_dir, archive_dir)
-    archive(param_file, current_dir, archive_dir)
-    return
-
-
 def copy_directory_with_backup(
         original_path: str,
         copy_path: str,
@@ -734,27 +715,6 @@ def copy_directory_with_backup(
             f"No such directory: {original_path}",
         )
     return err
-
-
-def archive(relative_path: str, current_dir: str, archive_dir: str):
-    """Move <relative_path> from <current_dir> to <archive_dir>. If <archive_dir> already has a file with that name,
-    add a number prefix to the name of the created file."""
-    old_path = os.path.join(current_dir, relative_path)
-    new_path = os.path.join(archive_dir, relative_path)
-
-    # Create archive directory (and any necessary subdirectories)
-    archive_dir_with_subs = Path(os.path.join(archive_dir, relative_path)).parent
-    Path(archive_dir_with_subs).mkdir(parents=True, exist_ok=True)
-
-    i = 0
-    while os.path.exists(new_path):
-        i += 1
-        new_path = os.path.join(archive_dir, f"{i}_{relative_path}")
-    try:
-        os.rename(old_path, new_path)
-    except Exception as exc:
-        print(f"File {relative_path} not moved: {exc}")
-    return
 
 
 def get_parameters(
@@ -1185,12 +1145,12 @@ def reload_juris_election(
     juris_name: str,
     election_name: str,
     test_dir: str,
+    rollup: bool = False,
 ) -> bool:
-    """Loads and archives each results file in each recognized jurisdiction folders that are direct subfolders of the results_dir
+    """Loads and archives each results file in each direct subfolder of the results_dir
     named in ./run_time.ini -- provided there the results file is specified in a *.ini file in the
-    jurisdiction's subfolder of <content_root>/ini_files_for_results. <contest_root> is read from ./run_time.ini.
+    corresponding subfolder of <content_root>/ini_files_for_results. <contest_root> is read from ./run_time.ini.
     """
-    # TODO : archive per description ^^
     # initialize dataloader
     error_boolean = True
     dl = e.DataLoader()
@@ -1215,7 +1175,7 @@ def reload_juris_election(
 
     # load all data into temp db
     dl.change_db(temp_db)
-    dl.load_all(move_files=False)
+    dl.load_all(move_files=False, rollup=rollup)
     err_str = dl.add_totals_if_missing(election_name, juris_name)
     if err_str:
         error_boolean = False
@@ -1240,7 +1200,7 @@ def reload_juris_election(
             dl.remove_data(election_id, juris_id)
 
             # Load new data into live db (and move successful to archive)
-            dl.load_all()
+            dl.load_all(rollup=rollup)
             live_err_str = dl.add_totals_if_missing(election_name, juris_name)
 
             # run tests on live db
