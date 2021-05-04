@@ -88,8 +88,7 @@ class DataLoader:
             header="election_data_analysis",
         )
         if err:
-            print("DataLoader object not created.")
-            ui.report(err)
+            print(f"DataLoader object not created. Error:\n{err}")
             return None
 
         return super().__new__(cls)
@@ -134,7 +133,7 @@ class DataLoader:
         if new_err:
             print("Unexpected error connecting to database.")
             err = ui.consolidate_errors([err, new_err])
-            ui.report(err)
+            ui.report(err, self.d["reports_and_plots_dir"], file_prefix="dataloading_")
             print("Exiting")
             quit()
         else:
@@ -155,6 +154,7 @@ class DataLoader:
 
     def load_all(
         self,
+        report_dir: Optional[str] = None,
         load_jurisdictions: bool = True,
         move_files: bool = True,
         election_jurisdiction_list: Optional[list] = None,
@@ -173,6 +173,12 @@ class DataLoader:
         err = None
         success = True
 
+        # set directory for reporting
+        # # get timestamp
+        ts = datetime.datetime.now().strftime("%m%d_%H%M")
+        if not report_dir:
+            report_dir = os.path.join(self.d["reports_and_plots_dir"], f"load_all_{ts}")
+
         # if no election_jurisdiction_list given, default to all represented in ini files in repository
         if not election_jurisdiction_list:
             election_jurisdiction_list = ui.election_juris_list(self.d["ini_dir"])
@@ -185,20 +191,9 @@ class DataLoader:
         if new_err:
             err = ui.consolidate_errors([err, new_err])
             if ui.fatal_error(new_err):
-                err = ui.report(err)
+                err = ui.report(err, self.d["reports_and_plots_dir"], file_prefix="dataloading_")
                 return err, False
-        # # get timestamp
-        ts = datetime.datetime.now().strftime("%m%d_%H%M")
-        error_and_warning_dir = os.path.join(self.d["reports_and_plots_dir"], f"{db_param['dbname']}_{ts}")
-        # # specify directory for archiving files loaded successfully
-        success_dir = os.path.join(self.d["archive_dir"], db_param["dbname"])
         # # specify directory for reporting warnings and errors
-        loc_dict = {
-            "munger": error_and_warning_dir,
-            "jurisdiction": error_and_warning_dir,
-            "warn-munger": error_and_warning_dir,
-            "warn-jurisdiction": error_and_warning_dir,
-        }
 
         # list .ini files and pull their jurisdiction_paths
         par_file_full_paths = ui.file_full_paths(self.d["ini_dir"], "ini")
@@ -210,7 +205,7 @@ class DataLoader:
                 self.d["ini_dir"],
                 f"No <results>.ini files found. No results files will be processed.",
             )
-            err = ui.report(err)
+            err = ui.report(err, report_dir, file_prefix="dataloading_")
             return err, False
 
         params = dict()  # keys are full ini file paths; values are parameter dictionaries
@@ -307,7 +302,7 @@ class DataLoader:
                     new_err = ui.add_new_error(
                         new_err,
                         "ini",
-                        f,
+                        Path(f).stem,
                         f"Unexpected failure to load data (no SingleDataLoader object created)",
                     )
 
@@ -334,7 +329,7 @@ class DataLoader:
                     else:
                         # on success, update latest download date if necessary
                         at_least_one_success = True
-                        download_date = sdl.d["download_date"]
+                        download_date = sdl.d["results_download_date"]
                         if download_date > latest_download_date:
                             latest_download_date = download_date
             if move_files:
@@ -345,8 +340,7 @@ class DataLoader:
                     # (subdir named with latest download date; if exists already, create backup with timestamp)
                     new_err = ui.copy_directory_with_backup(
                         juris_results_dir_path,
-                        os.path.join(self.d["archive_dir"], jp),
-                        f"{jp}_{latest_download_date}", f"_ts",
+                        os.path.join(self.d["archive_dir"], f"{jp}_{latest_download_date}"),
                     )
                     err = ui.consolidate_errors([err, new_err])
                 # if all files loaded successfully
@@ -357,7 +351,7 @@ class DataLoader:
             #  report munger, jurisdiction and file errors & warnings
             err = ui.report(
                 err,
-                loc_dict=loc_dict,
+                report_dir,
                 key_list=[
                     "munger",
                     "jurisdiction",
@@ -365,18 +359,12 @@ class DataLoader:
                     "warn-munger",
                     "warn-jurisdiction",
                     "warn-file",
+                    "ini"
                 ],
-                file_prefix=Path(f).stem,
             )
 
         # report remaining errors
-        loc_dict = {
-            "munger": self.d["results_dir"],
-            "jurisdiction": self.d["results_dir"],
-            "warn-munger": self.d["results_dir"],
-            "warn-jurisdiction": self.d["results_dir"],
-        }
-        ui.report(err, loc_dict)
+        ui.report(err, report_dir, file_prefix="system")
         return err, success
 
     def remove_data(
@@ -831,7 +819,7 @@ class JurisdictionPrepper:
         dict_err = self.starter_dictionary()
 
         error = ui.consolidate_errors([error, asc_err, dict_err])
-        ui.report(error)
+        ui.report(error, self.d["reports_and_plots_dir"], file_prefix=f"prep_{self.d['name']}")
         return error
 
     def add_primaries_to_dict(self) -> Optional[dict]:
@@ -890,7 +878,7 @@ class JurisdictionPrepper:
             self.d["jurisdiction_path"], "dictionary", new_dictionary
         )
         ui.consolidate_errors([error, new_err])
-        ui.report(error)
+        ui.report(error, self.d["reports_and_plots_dir"], file_prefix=f"prep_{self.d['name']}")
         return error
 
     def add_standard_contests(
@@ -2255,3 +2243,56 @@ def create_from_template(
         contents = contents.replace(k, replace_dict[k])
     with open(target_file, "w") as f:
         f.write(contents)
+
+
+
+def load_or_reload_all(
+        test_dir: Optional[str] = None, rollup: bool = False
+) -> Optional[dict]:
+    err = None
+    dataloader = DataLoader()
+    if dataloader:
+        ts = datetime.datetime.now().strftime("%m%d_%H%M")
+        error_and_warning_dir = os.path.join(dataloader.d["reports_and_plots_dir"], f"dataloading_{ts}")
+        # if no test directory given, use tests from repo
+        if not test_dir:
+            test_dir = os.path.join(
+                Path(dataloader.d["repository_content_root"]).parent, "tests"
+            )
+        # get relevant election-jurisdiction pairs
+        ej_pairs = ui.election_juris_list(
+            dataloader.d["ini_dir"], results_path=dataloader.d["results_dir"]
+        )
+        if ej_pairs:
+            # process each election-jurisdiction pair
+            for (election, jurisdiction) in ej_pairs:
+                # if new results pass test, remove old if exists and load new
+                success = ui.reload_juris_election(
+                    jurisdiction,
+                    election,
+                    test_dir,
+                    error_and_warning_dir,
+                    rollup=rollup
+                )
+                if success:
+                    new_err = None
+                else:
+                    new_err = ui.add_new_error(
+                        None, "warn-file", jurisdiction, f"Load (or reload) did not succeed for results of {election}"
+                    )
+                err = ui.consolidate_errors([err, new_err])
+        else:
+            err = ui.add_new_error(
+                err, "file", "All", "No results had corresponding file in ini_files_for_results"
+            )
+            # report errors to file
+            ui.report(
+                err, error_and_warning_dir, file_prefix=f"election_data_loader_"
+            )
+    else:
+        current_directory = os.getcwd()
+        print(f"No dataloader file created; check that {current_directory}/run_time.ini exists "
+              f"and has all necessary parameters.")
+    return
+
+

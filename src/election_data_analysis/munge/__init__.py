@@ -550,8 +550,9 @@ def enum_col_to_id_othertext(
                 df.rename(columns={c * 3: c}, inplace=True)
         # create list of non-standard items found
         non_standard = list(df.loc[mask, f"Other{type_col}"].unique())
-        if "" in non_standard:
-            non_standard.remove("")
+        for ok in ["", "none or unknown"]:
+            if ok in non_standard:
+                non_standard.remove(ok)
 
     if drop_type_col:
         df = df.drop([type_col], axis=1)
