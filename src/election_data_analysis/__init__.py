@@ -21,6 +21,7 @@ from election_data_analysis import juris_and_munger as jm
 from election_data_analysis import preparation as prep
 from election_data_analysis import nist_export as nist
 import itertools
+import shutil
 
 # constants
 sdl_pars_req = [
@@ -288,6 +289,7 @@ class DataLoader:
         # process all good parameter files with good jurisdictions
         for jp in good_jurisdictions:
             at_least_one_success = False  # to determine whether to archive this particular jurisdiction
+            complete_success = True  # to determine whether to delete the jurisdiction from the results-to-load folder
             latest_download_date = "0000-00-00"  # for naming archive directory
             good_files = [f for f in good_par_files if juris_directory[f] == jp]
             print(f"Processing results files specified in {good_files}")
@@ -312,6 +314,7 @@ class DataLoader:
                 # if fatal error, print warning
                 if ui.fatal_error(new_err):
                     print(f"Fatal error before loading; data not loaded from {f}")
+                    complete_success = False
                 # if no fatal error from SDL initialization, try to load data
                 else:
                     # get rollup unit if required
@@ -325,44 +328,32 @@ class DataLoader:
 
                     # load data
                     load_error = sdl.load_results(rollup=rollup, rollup_rut=rollup_rut)
-                    if load_error:
-                        err = ui.consolidate_errors([err, load_error])
+                    err = ui.consolidate_errors([err, load_error])
+                    if ui.fatal_error(load_error):
+                        complete_success = False
                     else:
                         # on success, update latest download date if necessary
                         at_least_one_success = True
                         download_date = sdl.d["download_date"]
                         if download_date > latest_download_date:
                             latest_download_date = download_date
+            if move_files:
+                # if any files loaded
+                juris_results_dir_path = os.path.join(self.d["results_dir"], jp)
+                if at_least_one_success:
+                    # copy jurisdiction results files to archive
+                    # (subdir named with latest download date; if exists already, create backup with timestamp)
+                    new_err = ui.copy_directory_with_backup(
+                        juris_results_dir_path,
+                        os.path.join(self.d["archive_dir"], jp),
+                        f"{jp}_{latest_download_date}", f"_ts",
+                    )
+                    err = ui.consolidate_errors([err, new_err])
+                # if all files loaded successfully
+                if complete_success:
+                    # delete jurisdiction subdirectory from results directory
+                    shutil.rmtree(juris_results_dir_path)
 
-            # TODO if any files loaded, copy jurisdiction results files to archive
-            #  (subdir named with latest download date)
-
-            # TODO if all files loaded successfully, delete jurisdiction results file
-            #  from results directory
-            """                # if move_files == True and no fatal load error,
-                            if move_files and not ui.fatal_error(load_error):
-                                # archive files
-                                ui.archive_from_param_file(
-                                    f, self.d["results_dir"], success_dir
-                                )
-                                print(
-                                    f"\tArchived {f} and its results file after successful load "
-                                    f"via mungers {sdl.d['munger_name']}.\n"
-                                )
-                            # if there was a fatal load error
-                            elif ui.fatal_error(load_error):
-                                print(
-                                    f"\tFatal loading errors. {f} and its results file not loaded (and not archived)"
-                                )
-                                success = False
-            
-                            # if move_files is false and there is no fatal error
-                            else:
-                                print(
-                                    f"{f} and its results file loaded successfully via mungers {sdl.d['munger_name']}."
-                                )
-            
-            """
             #  report munger, jurisdiction and file errors & warnings
             err = ui.report(
                 err,
@@ -574,7 +565,7 @@ class SingleDataLoader:
             err = ui.add_new_error(
                 err,
                 "system",
-                "SingleDataLoader.load_results",
+                f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
                 f"Error inserting _datafile record:\n{err_str}" f" ",
             )
             return err

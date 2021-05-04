@@ -15,6 +15,7 @@ import numpy as np
 import inspect
 import xml.etree.ElementTree as et
 import json
+import shutil
 
 # constants
 recognized_encodings = {
@@ -695,6 +696,44 @@ def archive_from_param_file(param_file: str, current_dir: str, archive_dir: str)
     archive(params["results_file"], current_dir, archive_dir)
     archive(param_file, current_dir, archive_dir)
     return
+
+
+def copy_directory_with_backup(
+        original_path: str,
+        copy_path: str,
+        backup_suffix: Optional[str] = None,
+) -> Optional[dict]:
+    """copy entire directory <original_path> to <copy_path>. If
+    <copy_path> exists, move it to a backup file whose name gets the suffix
+    <backup_suffix>"""
+    err = None
+    # TODO
+    # if the original to be copied is actually a directory
+    if os.path.isdir(original_path):
+        if backup_suffix:
+            # make backup of anything with existing name
+            if os.path.isdir(copy_path):
+                shutil.move(copy_path, f"{copy_path}{backup_suffix}")
+            elif os.path.isfile(copy_path):
+                old_stem = Path(copy_path).stem
+                backup_path = os.path.join(
+                    Path(copy_path).parent, f"{old_stem}{backup_suffix}.{Path(copy_path).suffix}"
+                )
+                shutil.copytree(copy_path, backup_path)
+        # copy original to desired location
+        # # ensure parent directory exists
+        Path(copy_path).parent.mkdir(parents=True, exist_ok=True)
+        shutil.copytree(original_path, copy_path)
+    # if the original is not a directory
+    else:
+        # throw error
+        err = add_new_error(
+            err,
+            "warn-system",
+            f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
+            f"No such directory: {original_path}",
+        )
+    return err
 
 
 def archive(relative_path: str, current_dir: str, archive_dir: str):
