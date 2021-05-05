@@ -814,26 +814,21 @@ def consolidate_errors(list_of_err: Optional[list]) -> Optional[Dict[Any, dict]]
 
 def report(
     err_warn: Optional[Dict[Any, dict]],
-    loc_dict: Optional[Dict[Any, str]] = None,
+    output_location: str,
     key_list: list = None,
     file_prefix: str = "",
 ) -> Optional[dict]:
     """unpacks error dictionary <err> for reporting.
-    Keys of <location_dict> are error_types;
-    values of <loc_dict> are directories for writing error files.
+    <output_location> is directory for writing error files.
     Use <key_list> to report only on some keys, and return a copy of err_warn with those keys removed"""
-    if not loc_dict:
-        loc_dict = dict()
-
-    # create reporting directories if they do not exist
-    for dir_name in loc_dict.values():
-        if os.path.isfile(dir_name):
+    if err_warn:
+        # create reporting directory if it does not exist
+        if os.path.isfile(output_location):
             print("Target directory for errors and warnings exists as a file. Nothing will be reported.")
             return None
-        elif not os.path.isdir(dir_name):
-            Path(dir_name).mkdir(parents=True, exist_ok=True)
+        elif not os.path.isdir(output_location):
+            Path(output_location).mkdir(parents=True, exist_ok=True)
 
-    if err_warn:
         if not key_list:
             # report all keys (otherwise report only key-list keys)
             key_list = err_warn.keys()
@@ -878,20 +873,13 @@ def report(
                         warn_str = and_warns = ""
                     out_str = f"\n{et.title()} errors ({nk_name}):\n{msg[(et, nk)]}\n\n{warn_str}"
 
-                    # print/write output
-                    # # if any output locations were specified
-                    if et in loc_dict.keys():
-                        # write info to a .errors or .errors file named for the name_key <nk>
-                        out_path = os.path.join(
-                            loc_dict[et], f"{file_prefix}_{nk_name}.errors"
-                        )
-                        with open(out_path, "a") as f:
-                            f.write(out_str)
-                        print(f"{et.title()} errors{and_warns} written to {out_path}")
-                    # # if no output locations were specified
-                    else:
-                        # print for user
-                        print(out_str)
+                    # write info to a .errors or .errors file named for the name_key <nk>
+                    out_path = os.path.join(
+                        output_location, f"{file_prefix}_{nk_name}.errors"
+                    )
+                    with open(out_path, "a") as f:
+                        f.write(out_str)
+                    print(f"{et.title()} errors{and_warns} written to {out_path}")
 
             # process name keys with only warnings
             only_warns = [
@@ -906,25 +894,16 @@ def report(
                     f"{et.title()} warnings ({nk_name}):\n{msg[(f'warn-{et}', nk)]}\n"
                 )
 
-                # print/write output
-                if f"warn-{et}" in loc_dict.keys():
-                    # ensure directory exists
-                    # TODO error handline: what if the path is a file?
-                    if not os.path.exists(loc_dict[f"warn-{et}"]):
-                        Path(loc_dict[f"warn-{et}"]).mkdir(parents=True, exist_ok=True)
-
-                    # get timestamp
-                    ts = datetime.datetime.now().strftime("%m%d_%H%M")
-                    # write info to a .errors or .errors file named for the name_key <nk>
-                    out_path = os.path.join(
-                        loc_dict[f"warn-{et}"], f"{file_prefix}{nk_name}_{ts}.warnings"
-                    )
-                    with open(out_path, "a") as f:
-                        f.write(out_str)
-                    print(f"{et.title()} warnings written to {out_path}")
-                else:
-                    # print for user
-                    print(out_str)
+                # write output
+                # get timestamp
+                ts = datetime.datetime.now().strftime("%m%d_%H%M")
+                # write info to a .errors or .errors file named for the name_key <nk>
+                out_path = os.path.join(
+                    output_location, f"{file_prefix}{nk_name}_{ts}.warnings"
+                )
+                with open(out_path, "a") as f:
+                    f.write(out_str)
+                print(f"{et.title()} warnings written to {out_path}")
 
         # define return dictionary with reported keys set to {} and othe keys preserved
         remaining = {k: v for k, v in err_warn.items() if k not in key_list}
@@ -1145,6 +1124,7 @@ def reload_juris_election(
     juris_name: str,
     election_name: str,
     test_dir: str,
+    report_dir,
     rollup: bool = False,
 ) -> bool:
     """Loads and archives each results file in each direct subfolder of the results_dir
@@ -1154,7 +1134,7 @@ def reload_juris_election(
     # initialize dataloader
     error_boolean = True
     dl = e.DataLoader()
-    db_params = get_parameters(
+    db_params, _ = get_parameters(
         [
             "host",
             "port",
@@ -1164,7 +1144,7 @@ def reload_juris_election(
         ],
         "run_time.ini",
         "postgresql",
-    )[0]
+    )
 
     # create temp_db (preserving live db name)
     live_db = dl.session.bind.url.database
@@ -1175,7 +1155,9 @@ def reload_juris_election(
 
     # load all data into temp db
     dl.change_db(temp_db)
-    dl.load_all(move_files=False, rollup=rollup)
+    dl.load_all(
+        report_dir=report_dir, move_files=False, rollup=rollup, election_jurisdiction_list=[(election_name, juris_name)]
+    )
     err_str = dl.add_totals_if_missing(election_name, juris_name)
     if err_str:
         error_boolean = False
@@ -1200,7 +1182,7 @@ def reload_juris_election(
             dl.remove_data(election_id, juris_id)
 
             # Load new data into live db (and move successful to archive)
-            dl.load_all(rollup=rollup)
+            dl.load_all(report_dir=report_dir, rollup=rollup)
             live_err_str = dl.add_totals_if_missing(election_name, juris_name)
 
             # run tests on live db
