@@ -302,7 +302,7 @@ class DataLoader:
                     new_err = ui.add_new_error(
                         new_err,
                         "ini",
-                        f,
+                        Path(f).stem,
                         f"Unexpected failure to load data (no SingleDataLoader object created)",
                     )
 
@@ -361,7 +361,6 @@ class DataLoader:
                     "warn-file",
                     "ini"
                 ],
-                file_prefix=f"{jp}_",
             )
 
         # report remaining errors
@@ -2244,3 +2243,56 @@ def create_from_template(
         contents = contents.replace(k, replace_dict[k])
     with open(target_file, "w") as f:
         f.write(contents)
+
+
+
+def load_or_reload_all(
+        test_dir: Optional[str] = None, rollup: bool = False
+) -> Optional[dict]:
+    err = None
+    dataloader = DataLoader()
+    if dataloader:
+        ts = datetime.datetime.now().strftime("%m%d_%H%M")
+        error_and_warning_dir = os.path.join(dataloader.d["reports_and_plots_dir"], f"dataloading_{ts}")
+        # if no test directory given, use tests from repo
+        if not test_dir:
+            test_dir = os.path.join(
+                Path(dataloader.d["repository_content_root"]).parent, "tests"
+            )
+        # get relevant election-jurisdiction pairs
+        ej_pairs = ui.election_juris_list(
+            dataloader.d["ini_dir"], results_path=dataloader.d["results_dir"]
+        )
+        if ej_pairs:
+            # process each election-jurisdiction pair
+            for (election, jurisdiction) in ej_pairs:
+                # if new results pass test, remove old if exists and load new
+                success = ui.reload_juris_election(
+                    jurisdiction,
+                    election,
+                    test_dir,
+                    error_and_warning_dir,
+                    rollup=rollup
+                )
+                if success:
+                    new_err = None
+                else:
+                    new_err = ui.add_new_error(
+                        None, "warn-file", jurisdiction, f"Load (or reload) did not succeed for results of {election}"
+                    )
+                err = ui.consolidate_errors([err, new_err])
+            else:
+                err = ui.add_new_error(
+                    err, "file", "All", "No results had corresponding file in ini_files_for_results"
+                )
+            # report errors to file
+            ui.report(
+                err, error_and_warning_dir, file_prefix=f"election_data_loader_"
+            )
+    else:
+        current_directory = os.getcwd()
+        print(f"No dataloader file created; check that {current_directory}/run_time.ini exists "
+              f"and has all necessary parameters.")
+    return
+
+

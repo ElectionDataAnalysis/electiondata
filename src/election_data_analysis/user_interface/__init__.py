@@ -704,7 +704,7 @@ def copy_directory_with_backup(
         # copy original to desired location
         # # ensure parent directory exists
         Path(copy_path).parent.mkdir(parents=True, exist_ok=True)
-        shutil.copytree(original_path, copy_path)
+        shutil.copytree(original_path, copy_path, dirs_exist_ok=True)
     # if the original is not a directory
     else:
         # throw error
@@ -899,7 +899,7 @@ def report(
                 ts = datetime.datetime.now().strftime("%m%d_%H%M")
                 # write info to a .errors or .errors file named for the name_key <nk>
                 out_path = os.path.join(
-                    output_location, f"{file_prefix}{nk_name}_{ts}.warnings"
+                    output_location, f"{file_prefix}{nk_name}.warnings"
                 )
                 with open(out_path, "a") as f:
                     f.write(out_str)
@@ -1173,13 +1173,13 @@ def reload_juris_election(
             error_boolean = False
             print(f"No old data removed and no new data loaded because of failed tests:\n{failed_tests}")
         else:
-            # switch to live db and get info needed later
+            # switch to live db
             dl.change_db(live_db)
+            # Remove existing data for juris-election pair from live db
             election_id = db.name_to_id(dl.session, "Election", election_name)
             juris_id = db.name_to_id(dl.session, "ReportingUnit", juris_name)
-
-            # Remove existing data for juris-election pair from live db
-            dl.remove_data(election_id, juris_id)
+            if election_id and juris_id:
+                dl.remove_data(election_id, juris_id)
 
             # Load new data into live db (and move successful to archive)
             dl.load_all(report_dir=report_dir, rollup=rollup)
