@@ -680,9 +680,9 @@ def build_row_constants_from_df(
 
 
 def copy_directory_with_backup(
-        original_path: str,
-        copy_path: str,
-        backup_suffix: Optional[str] = None,
+    original_path: str,
+    copy_path: str,
+    backup_suffix: Optional[str] = None,
 ) -> Optional[dict]:
     """copy entire directory <original_path> to <copy_path>. If
     <copy_path> exists, move it to a backup file whose name gets the suffix
@@ -698,7 +698,8 @@ def copy_directory_with_backup(
             elif os.path.isfile(copy_path):
                 old_stem = Path(copy_path).stem
                 backup_path = os.path.join(
-                    Path(copy_path).parent, f"{old_stem}{backup_suffix}.{Path(copy_path).suffix}"
+                    Path(copy_path).parent,
+                    f"{old_stem}{backup_suffix}.{Path(copy_path).suffix}",
                 )
                 copy_with_err_report(copy_path, backup_path)
         # copy original to desired location
@@ -733,25 +734,26 @@ def copy_with_err_report(original_path: str, copy_path: str) -> Optional[dict]:
                     err,
                     "warn-file",
                     f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
-                    f"Error while copying {old} to {new}:\n{she}"
+                    f"Error while copying {old} to {new}:\n{she}",
                 )
         for d in dirs:
             Path(os.path.join(new_root, d)).mkdir(parents=True, exist_ok=True)
     return err
 
 
-
 def copy_with_err_report_OLD(original_path: str, copy_path: str) -> Optional[dict]:
     err = None
     Path(copy_path).parent.mkdir(parents=True, exist_ok=True)
     try:
-        shutil.copytree(original_path, copy_path, dirs_exist_ok=True, ignore_dangling_symlinks=True)
+        shutil.copytree(
+            original_path, copy_path, dirs_exist_ok=True, ignore_dangling_symlinks=True
+        )
     except shutil.Error as she:
         err = add_new_error(
             None,
             "warn-system",
             f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
-            f"Error while copying {original_path} to {copy_path}:\n{she}"
+            f"Error while copying {original_path} to {copy_path}:\n{she}",
         )
     return err
 
@@ -863,7 +865,9 @@ def report(
     if err_warn:
         # create reporting directory if it does not exist
         if os.path.isfile(output_location):
-            print("Target directory for errors and warnings exists as a file. Nothing will be reported.")
+            print(
+                "Target directory for errors and warnings exists as a file. Nothing will be reported."
+            )
             return None
         elif not os.path.isdir(output_location):
             Path(output_location).mkdir(parents=True, exist_ok=True)
@@ -1195,7 +1199,10 @@ def reload_juris_election(
     # load all data into temp db
     dl.change_db(temp_db)
     dl.load_all(
-        report_dir=report_dir, move_files=False, rollup=rollup, election_jurisdiction_list=[(election_name, juris_name)]
+        report_dir=report_dir,
+        move_files=False,
+        rollup=rollup,
+        election_jurisdiction_list=[(election_name, juris_name)],
     )
     err_str = dl.add_totals_if_missing(election_name, juris_name)
     if err_str:
@@ -1210,7 +1217,9 @@ def reload_juris_election(
         )
         if failed_tests != 0:
             error_boolean = False
-            print(f"{juris_name} {election_name}: No old data removed and no new data loaded because of failed tests:\n{failed_tests}")
+            print(
+                f"{juris_name} {election_name}: No old data removed and no new data loaded because of failed tests:\n{failed_tests}"
+            )
         else:
             # switch to live db
             dl.change_db(live_db)
@@ -1222,7 +1231,9 @@ def reload_juris_election(
 
             # Load new data into live db (and move successful to archive)
             new_err, success = dl.load_all(
-                report_dir=report_dir, rollup=rollup, election_jurisdiction_list=[(election_name, juris_name)]
+                report_dir=report_dir,
+                rollup=rollup,
+                election_jurisdiction_list=[(election_name, juris_name)],
             )
             if success:
                 live_err_str = dl.add_totals_if_missing(election_name, juris_name)
@@ -1239,10 +1250,14 @@ def reload_juris_election(
                     problem = f"{live_failed_tests}"
                     if live_err_str:
                         problem = f"{problem};\n\nalso  {live_err_str}"
-                    print(f"Data loaded successfully to test db, so old data was removed from live db.\n"
-                          f"But data load to live db had a problem:\n{problem} ")
+                    print(
+                        f"Data loaded successfully to test db, so old data was removed from live db.\n"
+                        f"But data load to live db had a problem:\n{problem} "
+                    )
             else:
-                print(f"{juris_name} {election_name}: Data not loaded to live db. Error report:\n{new_err}")
+                print(
+                    f"{juris_name} {election_name}: Data not loaded to live db. Error report:\n{new_err}"
+                )
                 error_boolean = True
     # cleanup
     db.remove_database(db_params)

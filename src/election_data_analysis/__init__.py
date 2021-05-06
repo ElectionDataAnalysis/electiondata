@@ -191,7 +191,9 @@ class DataLoader:
         if new_err:
             err = ui.consolidate_errors([err, new_err])
             if ui.fatal_error(new_err):
-                err = ui.report(err, self.d["reports_and_plots_dir"], file_prefix="dataloading_")
+                err = ui.report(
+                    err, self.d["reports_and_plots_dir"], file_prefix="dataloading_"
+                )
                 return err, False
         # # specify directory for reporting warnings and errors
 
@@ -208,7 +210,9 @@ class DataLoader:
             err = ui.report(err, report_dir, file_prefix="dataloading_")
             return err, False
 
-        params = dict()  # keys are full ini file paths; values are parameter dictionaries
+        params = (
+            dict()
+        )  # keys are full ini file paths; values are parameter dictionaries
         juris_directory = dict()
 
         # For each par_file get params or throw error
@@ -283,7 +287,9 @@ class DataLoader:
 
         # process all good parameter files with good jurisdictions
         for jp in good_jurisdictions:
-            at_least_one_success = False  # to determine whether to archive this particular jurisdiction
+            at_least_one_success = (
+                False  # to determine whether to archive this particular jurisdiction
+            )
             complete_success = True  # to determine whether to delete the jurisdiction from the results-to-load folder
             latest_download_date = "0000-00-00"  # for naming archive directory
             good_files = [f for f in good_par_files if juris_directory[f] == jp]
@@ -340,7 +346,9 @@ class DataLoader:
                     # (subdir named with latest download date; if exists already, create backup with timestamp)
                     new_err = ui.copy_directory_with_backup(
                         juris_results_dir_path,
-                        os.path.join(self.d["archive_dir"], f"{jp}_{latest_download_date}"),
+                        os.path.join(
+                            self.d["archive_dir"], f"{jp}_{latest_download_date}"
+                        ),
                     )
                     err = ui.consolidate_errors([err, new_err])
                 # if all files loaded successfully
@@ -359,7 +367,7 @@ class DataLoader:
                     "warn-munger",
                     "warn-jurisdiction",
                     "warn-file",
-                    "ini"
+                    "ini",
                 ],
             )
 
@@ -368,7 +376,9 @@ class DataLoader:
         return err, success
 
     def remove_data(
-        self, election_id: int, juris_id: int,
+        self,
+        election_id: int,
+        juris_id: int,
     ) -> Optional[str]:
         """Remove from the db all data for the given <election_id> in the given <juris>"""
         # get connection & cursor
@@ -819,7 +829,9 @@ class JurisdictionPrepper:
         dict_err = self.starter_dictionary()
 
         error = ui.consolidate_errors([error, asc_err, dict_err])
-        ui.report(error, self.d["reports_and_plots_dir"], file_prefix=f"prep_{self.d['name']}")
+        ui.report(
+            error, self.d["reports_and_plots_dir"], file_prefix=f"prep_{self.d['name']}"
+        )
         return error
 
     def add_primaries_to_dict(self) -> Optional[dict]:
@@ -878,7 +890,9 @@ class JurisdictionPrepper:
             self.d["jurisdiction_path"], "dictionary", new_dictionary
         )
         ui.consolidate_errors([error, new_err])
-        ui.report(error, self.d["reports_and_plots_dir"], file_prefix=f"prep_{self.d['name']}")
+        ui.report(
+            error, self.d["reports_and_plots_dir"], file_prefix=f"prep_{self.d['name']}"
+        )
         return error
 
     def add_standard_contests(
@@ -2245,15 +2259,16 @@ def create_from_template(
         f.write(contents)
 
 
-
 def load_or_reload_all(
-        test_dir: Optional[str] = None, rollup: bool = False
+    test_dir: Optional[str] = None, rollup: bool = False
 ) -> Optional[dict]:
     err = None
     dataloader = DataLoader()
     if dataloader:
         ts = datetime.datetime.now().strftime("%m%d_%H%M")
-        error_and_warning_dir = os.path.join(dataloader.d["reports_and_plots_dir"], f"dataloading_{ts}")
+        error_and_warning_dir = os.path.join(
+            dataloader.d["reports_and_plots_dir"], f"dataloading_{ts}"
+        )
         # if no test directory given, use tests from repo
         if not test_dir:
             test_dir = os.path.join(
@@ -2273,27 +2288,31 @@ def load_or_reload_all(
                     election,
                     test_dir,
                     error_and_warning_dir,
-                    rollup=rollup
+                    rollup=rollup,
                 )
                 if success:
                     new_err = None
                 else:
                     new_err = ui.add_new_error(
-                        None, "warn-file", jurisdiction, f"Load (or reload) did not succeed for results of {election}"
+                        None,
+                        "warn-file",
+                        jurisdiction,
+                        f"Load (or reload) did not succeed for results of {election}",
                     )
                 err = ui.consolidate_errors([err, new_err])
         else:
             err = ui.add_new_error(
-                err, "file", "All", "No results had corresponding file in ini_files_for_results"
+                err,
+                "file",
+                "All",
+                "No results had corresponding file in ini_files_for_results",
             )
             # report errors to file
-            ui.report(
-                err, error_and_warning_dir, file_prefix=f"election_data_loader_"
-            )
+            ui.report(err, error_and_warning_dir, file_prefix=f"election_data_loader_")
     else:
         current_directory = os.getcwd()
-        print(f"No dataloader file created; check that {current_directory}/run_time.ini exists "
-              f"and has all necessary parameters.")
+        print(
+            f"No dataloader file created; check that {current_directory}/run_time.ini exists "
+            f"and has all necessary parameters."
+        )
     return
-
-
