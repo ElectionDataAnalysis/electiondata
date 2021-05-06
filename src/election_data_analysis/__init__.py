@@ -2264,6 +2264,7 @@ def load_or_reload_all(
             dataloader.d["ini_dir"], results_path=dataloader.d["results_dir"]
         )
         if ej_pairs:
+            ej_pairs.sort()
             # process each election-jurisdiction pair
             for (election, jurisdiction) in ej_pairs:
                 # if new results pass test, remove old if exists and load new

@@ -724,8 +724,10 @@ def copy_with_err_report(original_path: str, copy_path: str) -> Optional[dict]:
     for root, dirs, files in os.walk(original_path, topdown=True):
         new_root = root.replace(original_path, copy_path)
         for f in files:
+            old = os.path.join(root, f)
+            new = os.path.join(new_root, f)
             try:
-                shutil.copy(os.path.join(root, f), os.path.join(new_root, f))
+                shutil.copy(old, new)
             except Exception as she:
                 err = add_new_error(
                     err,
