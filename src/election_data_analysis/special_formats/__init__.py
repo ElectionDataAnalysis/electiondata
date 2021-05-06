@@ -1,11 +1,8 @@
-import json
-import pandas as pd
-import traceback
+from typing import Optional, Dict, List, Any
+
 import lxml.etree as lxml_et
-from copy import deepcopy
-from pathlib import Path
-from typing import Optional, Dict, List, Any, Tuple, Iterable
-from election_data_analysis import munge as m
+import pandas as pd
+
 from election_data_analysis import user_interface as ui
 
 # constants
