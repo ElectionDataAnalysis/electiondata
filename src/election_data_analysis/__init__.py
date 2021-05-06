@@ -106,9 +106,6 @@ class DataLoader:
         self.d["ini_dir"] = os.path.join(
             self.d["repository_content_root"], "ini_files_for_results"
         )
-        self.d["jurisdictions_dir"] = os.path.join(
-            self.d["repository_content_root"], "jurisdictions"
-        )
         self.d["mungers_dir"] = os.path.join(
             self.d["repository_content_root"], "mungers"
         )
@@ -250,7 +247,7 @@ class DataLoader:
         for jp in jurisdiction_dirs:
             # create and load jurisdiction or throw error
             juris[jp], new_err = ui.pick_juris_from_filesystem(
-                juris_path=os.path.join(self.d["jurisdictions_dir"], jp),
+                juris_path=os.path.join(self.d["repository_content_root"], "jurisdictions", jp),
                 err=None,
                 check_files=load_jurisdictions,
             )
@@ -777,7 +774,7 @@ class JurisdictionPrepper:
         not create JurisdictionPrepper object."""
         for param_file, required in [
             ("jurisdiction_prep.ini", prep_pars),
-            ("run_time.ini", ["jurisdictions_dir", "mungers_dir"]),
+            ("run_time.ini", ["repository_content_root", "reports_and_plots_dir"]),
         ]:
             try:
                 d, parameter_err = ui.get_parameters(
@@ -1290,7 +1287,7 @@ class JurisdictionPrepper:
         # get parameters from jurisdiction_prep.ini and run_time.ini
         for param_file, required in [
             ("jurisdiction_prep.ini", prep_pars),
-            ("run_time.ini", ["jurisdictions_dir", "mungers_dir"]),
+            ("run_time.ini", ["repository_content_root", "reports_and_plots_dir"]),
         ]:
             d, parameter_err = ui.get_parameters(
                 required_keys=required,
@@ -1299,15 +1296,19 @@ class JurisdictionPrepper:
             )
             self.d.update(d)
 
-        # add attributes derived from other parameters
-        derived = {"system_name": self.d["name"].replace(" ", "-")}
+        # add dictionary attributes derived from other parameters
+        derived = {
+            "system_name": self.d["name"].replace(" ", "-"),
+            "mungers_dir": os.path.join(
+                self.d["repository_content_root"], "mungers"
+            ),
+            "jurisdiction_path": os.path.join(
+            self.d["repository_content_root"], "jurisdictions", self.d["name"].replace(" ", "-")
+        )
+        }
         self.d.update(derived)
 
-        # calculate full jurisdiction path from other info
-        self.d["jurisdiction_path"] = os.path.join(
-            self.d["jurisdictions_dir"], self.d["name"].replace(" ", "-")
-        )
-
+        # add direct attributes derived from other parameters
         self.state_house = int(self.d["count_of_state_house_districts"])
         self.state_senate = int(self.d["count_of_state_senate_districts"])
         self.congressional = int(self.d["count_of_us_house_districts"])
@@ -2308,7 +2309,7 @@ def load_or_reload_all(
                 "No results had corresponding file in ini_files_for_results",
             )
         # report errors to file
-        ui.report(err, error_and_warning_dir, file_prefix=f"election_data_loader_")
+        ui.report(err, error_and_warning_dir, file_prefix=f"loading_")
     else:
         current_directory = os.getcwd()
         print(
