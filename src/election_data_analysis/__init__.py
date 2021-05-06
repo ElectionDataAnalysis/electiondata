@@ -2307,12 +2307,12 @@ def load_or_reload_all(
                 "All",
                 "No results had corresponding file in ini_files_for_results",
             )
-            # report errors to file
-            ui.report(err, error_and_warning_dir, file_prefix=f"election_data_loader_")
+        # report errors to file
+        ui.report(err, error_and_warning_dir, file_prefix=f"election_data_loader_")
     else:
         current_directory = os.getcwd()
         print(
-            f"No dataloader file created; check that {current_directory}/run_time.ini exists "
+            f"No dataloader created; check that {current_directory}/run_time.ini exists "
             f"and has all necessary parameters."
         )
-    return
+    return err

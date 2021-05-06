@@ -741,23 +741,6 @@ def copy_with_err_report(original_path: str, copy_path: str) -> Optional[dict]:
     return err
 
 
-def copy_with_err_report_OLD(original_path: str, copy_path: str) -> Optional[dict]:
-    err = None
-    Path(copy_path).parent.mkdir(parents=True, exist_ok=True)
-    try:
-        shutil.copytree(
-            original_path, copy_path, dirs_exist_ok=True, ignore_dangling_symlinks=True
-        )
-    except shutil.Error as she:
-        err = add_new_error(
-            None,
-            "warn-system",
-            f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
-            f"Error while copying {original_path} to {copy_path}:\n{she}",
-        )
-    return err
-
-
 def get_parameters(
     required_keys: List[str],
     param_file: str,
