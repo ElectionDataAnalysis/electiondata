@@ -337,7 +337,7 @@ def replace_raw_with_internal_ids(
     raw_identifiers = pd.read_csv(
         os.path.join(juris.path_to_juris_dir, "dictionary.txt"),
         sep="\t",
-        encoding=default_encoding,
+        encoding=jm.default_juris_encoding,
     )
 
     # restrict to the element at hand
@@ -897,7 +897,7 @@ def raw_to_id_simple(
                     r_i = pd.read_csv(
                         os.path.join(juris.path_to_juris_dir, "dictionary.txt"),
                         sep="\t",
-                        encoding=default_encoding,
+                        encoding=jm.default_juris_encoding,
                     )
                     r_i = r_i[r_i.cdf_element == "CountItemType"]
                 recognized = r_i.raw_identifier_value.unique()

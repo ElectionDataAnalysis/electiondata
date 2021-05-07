@@ -571,7 +571,6 @@ ReportingUnit	Alabama;Morgan County;AQUADOME REC CTR	Morgan;AQUADOME REC CTR
 ReportingUnit	Alabama;Morgan County;AMER LEGION BLDG POST 15	Morgan;AMER LEGION BLDG POST 15
 ReportingUnit	Alabama;Morgan County;1ST BAPT CH HARTSELLE	Morgan;1ST BAPT CH HARTSELLE
 ReportingUnit	Alabama;Morgan County;1ST BAPT AUSTINVILLE	Morgan;1ST BAPT AUSTINVILLE
-Montgomery;ABSENTEE		
 ReportingUnit	Alabama;Montgomery County;512 ST JAMES METHODIST	Montgomery;512 ST JAMES METHODIST
 ReportingUnit	Alabama;Montgomery County;511 ARROWHEAD CC	Montgomery;511 ARROWHEAD CC
 ReportingUnit	Alabama;Montgomery County;510 G_ WASHINGTON SC	Montgomery;510 G_ WASHINGTON SC
@@ -1875,7 +1874,6 @@ ReportingUnit	Alabama;Baldwin County;BON SECOUR MORG CHAPEL	Baldwin;BON SECOUR M
 ReportingUnit	Alabama;Baldwin County;BELFOREST COMM_ CTR	Baldwin;BELFOREST COMM_ CTR
 ReportingUnit	Alabama;Baldwin County;BAY MINETTE CIVIC CTR	Baldwin;BAY MINETTE CIVIC CTR
 ReportingUnit	Alabama;Baldwin County;BARNWELL VFD	Baldwin;BARNWELL VFD
-Autauga;PROVISIONAL		
 ReportingUnit	Alabama;Autauga County;90 BOOTH VFD	Autauga;90 BOOTH VFD
 ReportingUnit	Alabama;Autauga County;80 INDEPENDENCE VFD	Autauga;80 INDEPENDENCE VFD
 ReportingUnit	Alabama;Autauga County;70 BOONE'S CHAPEL	Autauga;70 BOONE'S CHAPEL

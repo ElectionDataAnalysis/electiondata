@@ -13,6 +13,15 @@ import csv
 import inspect
 import psycopg2
 
+# constants
+default_juris_encoding = "utf_8"
+standard_juris_csv_reading_kwargs = {
+    "index_col": False,
+    "encoding": default_juris_encoding,
+    "quoting": csv.QUOTE_MINIMAL,
+    "sep": "\t",
+}
+
 
 def recast_options(
     options: Dict[str, str], types: Dict[str, str], munger_name: str
@@ -101,12 +110,9 @@ class Jurisdiction:
                 f"file not found: {contest_type}Contest.txt",
             )
             return err
-        df = pd.read_csv(
-            element_fpath,
-            sep="\t",
-            encoding=m.default_encoding,
-            quoting=csv.QUOTE_MINIMAL,
-        ).fillna("none or unknown")
+        df = pd.read_csv(element_fpath, **standard_juris_csv_reading_kwargs).fillna(
+            "none or unknown"
+        )
 
         # add contest_type column
         df = m.add_constant_column(df, "contest_type", contest_type)
@@ -256,11 +262,7 @@ def ensure_juris_files(juris_path: str, ignore_empty: bool = False) -> Optional[
         template_path = os.path.join(templates_dir, f"{juris_file}.txt")
         try:
             if os.path.isfile(template_path):
-                temp = pd.read_csv(
-                    template_path,
-                    sep="\t",
-                    encoding=m.default_encoding,
-                )
+                temp = pd.read_csv(template_path, **standard_juris_csv_reading_kwargs)
             else:
                 err = ui.add_new_error(
                     err,
@@ -282,7 +284,7 @@ def ensure_juris_files(juris_path: str, ignore_empty: bool = False) -> Optional[
         # if file does not exist
         if not os.path.isfile(cf_path):
             # create the file
-            temp.to_csv(cf_path, sep="\t", index=False, encoding=m.default_encoding)
+            temp.to_csv(cf_path, sep="\t", index=False, encoding=default_juris_encoding)
             created = True
 
         # if file exists, check format against template
@@ -290,16 +292,14 @@ def ensure_juris_files(juris_path: str, ignore_empty: bool = False) -> Optional[
             try:
                 cf_df = pd.read_csv(
                     os.path.join(juris_path, f"{juris_file}.txt"),
-                    sep="\t",
-                    encoding="iso=8859-1",
-                    quoting=csv.QUOTE_MINIMAL,
+                    **standard_juris_csv_reading_kwargs,
                 )
-            except pd.errors.ParserError as e:
+            except pd.errors.ParserError as pe:
                 err = ui.add_new_error(
                     err,
                     "jurisdiction",
                     juris_name,
-                    f"Error reading file {juris_file}.txt: {e}",
+                    f"Error reading file {juris_file}.txt: {pe}",
                 )
                 return err
 
@@ -316,10 +316,32 @@ def ensure_juris_files(juris_path: str, ignore_empty: bool = False) -> Optional[
             if juris_file == "dictionary":
                 # dedupe the dictionary
                 clean_and_dedupe(cf_path)
-
+                # check that no entry is null
+                df = pd.read_csv(cf_path, **standard_juris_csv_reading_kwargs)
+                null_mask = df.T.isnull().any()
+                if null_mask.any():
+                    err = ui.add_new_error(
+                        err,
+                        "jurisdiction",
+                        juris_name,
+                        f"dictionary.txt has some null entries:\n{df[null_mask]}",
+                    )
+                # check that cdf_element-raw_identifier_value pairs are unique
+                two_column_df = df[["cdf_element", "raw_identifier_value"]]
+                dupes_df, _ = ui.find_dupes(two_column_df)
+                if not dupes_df.empty:
+                    err = ui.add_new_error(
+                        err,
+                        "jurisdiction",
+                        juris_name,
+                        f"dictionary.txt has more than one entry for each of these:\n {dupes_df}",
+                    )
             else:
                 # dedupe the file
                 clean_and_dedupe(cf_path)
+
+                # TODO check for lines that are too lone
+
                 # check for problematic null entries
                 null_columns = check_nulls(juris_file, cf_path, project_root)
                 if null_columns:
@@ -339,6 +361,8 @@ def ensure_juris_files(juris_path: str, ignore_empty: bool = False) -> Optional[
 
     # check ReportingUnit.txt for internal consistency
     new_err = check_ru_file(juris_path, juris_true_name)
+    if new_err:
+        err = ui.consolidate_errors([err, new_err])
     return err
 
 
@@ -386,9 +410,7 @@ def check_ru_file(juris_path: str, juris_true_name: str) -> Optional[dict]:
 def clean_and_dedupe(f_path: str):
     """Dedupe the file, removing any leading or trailing whitespace and compressing any internal whitespace"""
     # TODO allow specification of unique constraints
-    df = pd.read_csv(
-        f_path, sep="\t", encoding=m.default_encoding, quoting=csv.QUOTE_MINIMAL
-    )
+    df = pd.read_csv(f_path, **standard_juris_csv_reading_kwargs)
 
     for c in df.columns:
         if not is_numeric_dtype(df.dtypes[c]):
@@ -401,7 +423,7 @@ def clean_and_dedupe(f_path: str):
                 pass
     dupes_df, df = ui.find_dupes(df)
     if not dupes_df.empty:
-        df.to_csv(f_path, sep="\t", index=False, encoding=m.default_encoding)
+        df.to_csv(f_path, sep="\t", index=False, encoding=default_juris_encoding)
     return
 
 
@@ -415,10 +437,8 @@ def check_nulls(element, f_path, project_root):
         element,
         "not_null_fields.txt",
     )
-    not_nulls = pd.read_csv(nn_path, sep="\t", encoding=m.default_encoding)
-    df = pd.read_csv(
-        f_path, sep="\t", encoding=m.default_encoding, quoting=csv.QUOTE_MINIMAL
-    )
+    not_nulls = pd.read_csv(nn_path, sep="\t", encoding=default_juris_encoding)
+    df = pd.read_csv(f_path, **standard_juris_csv_reading_kwargs)
 
     problem_columns = []
 
@@ -444,13 +464,7 @@ def check_dependencies(juris_dir, element) -> (list, dict):
     d = juris_dependency_dictionary()
     f_path = os.path.join(juris_dir, f"{element}.txt")
     try:
-        element_df = pd.read_csv(
-            f_path,
-            sep="\t",
-            index_col=None,
-            encoding=m.default_encoding,
-            quoting=csv.QUOTE_MINIMAL,
-        )
+        element_df = pd.read_csv(f_path, **standard_juris_csv_reading_kwargs)
     except FileNotFoundError:
         err = ui.add_new_error(
             err,
@@ -468,10 +482,7 @@ def check_dependencies(juris_dir, element) -> (list, dict):
         ed = (
             pd.read_csv(
                 os.path.join(juris_dir, f"{element}.txt"),
-                sep="\t",
-                header=0,
-                encoding=m.default_encoding,
-                quoting=csv.QUOTE_MINIMAL,
+                **standard_juris_csv_reading_kwargs,
             )
             .fillna("")
             .loc[:, c]
@@ -482,9 +493,7 @@ def check_dependencies(juris_dir, element) -> (list, dict):
         ru = list(
             pd.read_csv(
                 os.path.join(juris_dir, f"{target}.txt"),
-                sep="\t",
-                encoding=m.default_encoding,
-                quoting=csv.QUOTE_MINIMAL,
+                **standard_juris_csv_reading_kwargs,
             )
             .fillna("")
             .loc[:, db.get_name_field(target)]
@@ -557,9 +566,9 @@ def load_juris_dframe_into_cdf(
         return err
 
     # read info from <element>.txt, filling null fields with 'none or unknown'
-    df = pd.read_csv(
-        element_file, sep="\t", encoding="utf_8", quoting=csv.QUOTE_MINIMAL
-    ).fillna("none or unknown")
+    df = pd.read_csv(element_file, **standard_juris_csv_reading_kwargs).fillna(
+        "none or unknown"
+    )
     # TODO check that df has the right format
 
     # add 'none or unknown' record

@@ -3,6 +3,7 @@ import pandas as pd
 import os
 from election_data_analysis import user_interface as ui
 from election_data_analysis import munge as m
+from election_data_analysis import juris_and_munger as jm
 
 
 def primary(row: pd.Series, party: str, contest_field: str) -> str:
@@ -23,7 +24,7 @@ def get_element(juris_path: str, element: str) -> pd.DataFrame:
             f_path,
             sep="\t",
             dtype="object",
-            encoding=m.default_encoding,
+            encoding=jm.default_juris_encoding,
         )
     else:
         element_df = pd.DataFrame()
@@ -64,7 +65,7 @@ def write_element(
             os.path.join(juris_path, file_name),
             index=False,
             sep="\t",
-            encoding=m.default_encoding,
+            encoding=jm.default_juris_encoding,
         )
     except Exception as e:
         err = ui.add_new_error(
