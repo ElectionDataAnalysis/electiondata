@@ -294,12 +294,12 @@ def ensure_juris_files(juris_path: str, ignore_empty: bool = False) -> Optional[
                     os.path.join(juris_path, f"{juris_file}.txt"),
                     **standard_juris_csv_reading_kwargs,
                 )
-            except pd.errors.ParserError as e:
+            except pd.errors.ParserError as pe:
                 err = ui.add_new_error(
                     err,
                     "jurisdiction",
                     juris_name,
-                    f"Error reading file {juris_file}.txt: {e}",
+                    f"Error reading file {juris_file}.txt: {pe}",
                 )
                 return err
 

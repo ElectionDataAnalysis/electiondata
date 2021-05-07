@@ -1,5 +1,5 @@
 BallotName
-Adia Winfrey	Yes
+Adia Winfrey
 Barry Moore
 Donald J. Trump
 Doug Jones
