@@ -182,13 +182,22 @@ def run2(
             optional_remove(dl, "TestingData")
             return err
 
-    result = ui.run_tests(
+    results, _ = ui.run_tests(
         test_dir, dbname, election_jurisdiction_list=election_jurisdiction_list
     )
-    print(f"test results:\n{result}")
+    if test_dir:
+        for k in results.keys():
+            err = ui.add_new_error(
+                err,
+                "warn-test",
+                k,
+                results[k],
+            )
 
     if load_data:
-        err, db_removed = optional_remove(dl, "TestingData")
+        remove_err, db_removed = optional_remove(dl, "TestingData")
+        if remove_err:
+            err = ui.consolidate_errors([err, remove_err])
     return err
 
 
@@ -204,15 +213,17 @@ if __name__ == "__main__":
         rollup=True,
     )
     if error:
-        params, err = ui.get_parameters(
+        params, new_err = ui.get_parameters(
             required_keys=["reports_and_plots_dir"],
             param_file="run_time.ini",
             header="election_data_analysis"
         )
         ts = datetime.datetime.now().strftime("%m%d_%H%M")
-
-        report_dir = os.path.join(
-            params["reports_and_plots_dir"], f"load_and_test_all_{ts}"
-        )
-        ui.report(error, report_dir)
+        if not new_err:
+            report_dir = os.path.join(
+                params["reports_and_plots_dir"], f"load_and_test_all_{ts}"
+            )
+            ui.report(error, report_dir)
+        else:
+            print(f"No reports_and_plots_dir specified in run_time.ini. Errors:\n{error}")
     exit()

@@ -309,6 +309,7 @@ warning_keys = {
     "warn-jurisdiction",
     "warn-file",
     "warn-system",
+    "warn-test",
 }
 
 contest_type_mappings = {
@@ -1016,7 +1017,7 @@ def fatal_error(err, error_type_list=None, name_key_list=None) -> bool:
 
 
 def run_tests(
-    test_dir: str, dbname: str, election_jurisdiction_list: Optional[list] = None
+    test_dir: str, dbname: str, election_jurisdiction_list: list
 ) -> (dict, int):
     """move to tests directory, run tests, move back
     db_params must have host, user, pass, db_name.
@@ -1031,23 +1032,12 @@ def run_tests(
 
     result = dict()  # initialize result report
     # run pytest
-    if election_jurisdiction_list is None:
-        r = os.system(f"pytest --dbname {dbname}")
+
+    for (election, juris) in election_jurisdiction_list:
+        test_file = f"{juris}/test_{juris.replace(' ', '-')}_{election.replace(' ', '-')}.py"
+        r = os.system(f"pytest --dbname {dbname} {test_file}")
         if r != 0:
-            result["all"] = "At least one test failed"
-    else:
-        for (election, juris) in election_jurisdiction_list:
-            if election is None and juris is not None:
-                keyword = f"_{juris.replace(' ', '-')}"
-            elif juris is None and election is not None:
-                keyword = f"{election.replace(' ', '-')}"
-            elif juris is not None and election is not None:
-                keyword = f"_{juris.replace(' ', '-')}_{election.replace(' ', '-')}"
-            else:
-                keyword = "_"
-            r = os.system(f"pytest --dbname {dbname} -k {keyword}")
-            if r != 0:
-                result[f"{keyword}"] = "all did not pass"
+            result[test_file] = "all did not pass (or no test file found)"
 
     # move back to original directory
     os.chdir(original_dir)
