@@ -23,10 +23,12 @@ ReportingUnit	Guam;Umatac	UMATAC
 ReportingUnit	Guam;Merizo	MERIZO
 ReportingUnit	Guam;Inarajan	INARAJAN
 ReportingUnit	Guam;Talofofo	TALOFOFO
+ReportingUnit	Guam;Talofofo	TALFOFO
 ReportingUnit	Guam;Yona	YONA
 ReportingUnit	Guam;Chalan Pago-Ordot	OCP
 ReportingUnit	Guam;Sinajana	SINAJANA
 ReportingUnit	Guam;Agana Heights	AGANA HEIGHTS
+ReportingUnit	Guam;Agana Heights	AH
 ReportingUnit	Guam;Mongmong-Toto-Maite	MTM
 ReportingUnit	Guam;Barrigada	BARRIGADA
 ReportingUnit	Guam;Mangilao	MANGILAO
@@ -74,4 +76,5 @@ Candidate	Michelle Lynn Armenta	Armenta, Michelle Lynn
 Candidate	John Albert Ananich, II	Ananich, John Albert, II
 Candidate	Vicente Anthony Borja Ada	Ada, Vicente Anthony Borja
 Candidate	Brian Carroll	ASP Carroll, Brian
-
+Candidate	Robert Anacletus Underwood	Underwood, Robert Anacletus
+Candidate	Michael F.Q. San Nicolas	San Nicolas, Michael F.Q.

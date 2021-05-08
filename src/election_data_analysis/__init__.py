@@ -2194,7 +2194,7 @@ def load_results_file(
 
     # # add Id columns for all but Count, removing raw-munged
     try:
-        df, new_err = m.munge_raw_to_ids(
+        df, new_err = m.munge_raw_to_ids(  # TODO this is where FutureWarning is thrown
             df, necessary_constants, juris, munger_name, session, p["file_type"]
         )
         if new_err:
@@ -2221,6 +2221,15 @@ def load_results_file(
     for (contest_id, selection_id) in unknown.index:
         mask = df[["Contest_Id", "Selection_Id"]] == (contest_id, selection_id)
         df = df[~mask.all(axis=1)]
+
+    if df.empty:
+        err = ui.add_new_error(
+            err,
+            "jurisdiction",
+            juris.short_name,
+            f"No contest-selection pairs recognized via munger {munger_name} from {Path(f_path).name}"
+        )
+        return err
 
     # rollup_dataframe results if requested
     if rollup:

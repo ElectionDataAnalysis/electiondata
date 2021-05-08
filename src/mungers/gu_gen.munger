@@ -47,6 +47,7 @@ ReportingUnit=<sheet_name>
 # Values to ignore (optional) #
 [ignore]
 ## E.g: Candidate=Total Votes Cast,Registered Voters ##
+Candidate=Total Votes Cast,Overvotes,Contest Totals
 
 # Lookup formula sections #
 ## Required when foreign keys are used in munge formulas and    ##
