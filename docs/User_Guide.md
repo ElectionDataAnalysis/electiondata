@@ -448,7 +448,7 @@ This code will produce all North Carolina data from the 2018 general election, g
 
 ## Unload and reload data
 To unload existing data for a given jurisdiction and a given election -- or more exactly, to remove data from any datafiles with that election and that jurisdiction as "top ReportingUnit" -- you can use the routine 
-```user_interface.reload_juris_election(juris_name,election_name,test_dir)```
+```user_interface.reload_juris_election(juris_name,election_name,test_dir,report_dir)```
 
 where `test_dir` is the directory holding the tests to perform on the data before upload. For example, `test_dir` might be the repository's `tests` directory. This routine will move any files associated with unloaded data to the directory specified in the optional `unloaded_dir` in `run_time.ini`.
 
