@@ -336,8 +336,8 @@ class DataLoader:
                         if download_date > latest_download_date:
                             latest_download_date = download_date
             if move_files:
-                # if any files loaded
                 juris_results_dir_path = os.path.join(self.d["results_dir"], jp)
+                # if any files loaded
                 if at_least_one_success:
                     # copy jurisdiction results files to archive
                     # (subdir named with latest download date; if exists already, create backup with timestamp)
@@ -2268,7 +2268,7 @@ def load_or_reload_all(
     if dataloader:
         ts = datetime.datetime.now().strftime("%m%d_%H%M")
         error_and_warning_dir = os.path.join(
-            dataloader.d["reports_and_plots_dir"], f"dataloading_{ts}"
+            dataloader.d["reports_and_plots_dir"], f"load_or_reload_all_{ts}"
         )
         # if no test directory given, use tests from repo
         if not test_dir:

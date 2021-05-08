@@ -1,0 +1,77 @@
+cdf_element	cdf_internal_name	raw_identifier_value
+CandidateContest	GU Senate District 1	Guam Legislature
+CandidateContest	US House GU Delegate	Non-Voting Delegate to the U.S. House of Representatives
+CandidateContest	US President (GU)	President
+CandidateContest	GU Governor	GU Governor
+CandidateContest	GU Public Auditor	Public Auditor of Guam
+CandidateContest	GU Attorney General	GU Attorney General
+CandidateContest	GU Lieutenant Governor	GU Lieutenant Governor
+CandidateContest	GU Treasurer	GU Treasurer
+CandidateContest	GU Secretary of State	GU Secretary of State
+Party	Democratic Party	DEM
+Party	Republican Party	REP
+Party	Green Party	GRN
+Party	Libertarian Party	LIB
+Party	American Solidarity Party	ASP
+ReportingUnit	Guam	Guam
+ReportingUnit	Guam;Hagatna	HAGATNA
+ReportingUnit	Guam;Asan-Maina	ASAN MAINA
+ReportingUnit	Guam;Piti	PITI
+ReportingUnit	Guam;Agat	AGAT
+ReportingUnit	Guam;Santa Rita	SANTA RITA
+ReportingUnit	Guam;Umatac	UMATAC
+ReportingUnit	Guam;Merizo	MERIZO
+ReportingUnit	Guam;Inarajan	INARAJAN
+ReportingUnit	Guam;Talofofo	TALOFOFO
+ReportingUnit	Guam;Yona	YONA
+ReportingUnit	Guam;Chalan Pago-Ordot	OCP
+ReportingUnit	Guam;Sinajana	SINAJANA
+ReportingUnit	Guam;Agana Heights	AGANA HEIGHTS
+ReportingUnit	Guam;Mongmong-Toto-Maite	MTM
+ReportingUnit	Guam;Barrigada	BARRIGADA
+ReportingUnit	Guam;Mangilao	MANGILAO
+ReportingUnit	Guam;Dededo	DEDEDO
+ReportingUnit	Guam;Tamuning	TAMUNING
+ReportingUnit	Guam;Yigo	YIGO
+Candidate	Benjamin Cruz	Cruz, Benjamin
+Candidate	James C. Moylan	Moylan, James C.
+Candidate	Write-in	Write-In Totals
+Candidate	Donald J. Trump	Trump, Donald J.
+Candidate	Mary Camacho Torres	Torres, Mary Camacho
+Candidate	Therese M. Terlaje	Terlaje, Therese M.
+Candidate	Jose Toves Terlaje	Terlaje, Jose Toves
+Candidate	Telo Teresa Taitague	Taitague, Telo Teresa
+Candidate	Amanda Shelton	Shelton, Amanda
+Candidate	Sandra Reyes Seau	Seau, Sandra Reyes
+Candidate	Joe Shimizu San Agustin	San Agustin, Joe Shimizu
+Candidate	Clynton E. Ridgell	Ridgell, Clynton E.
+Candidate	Sabina E. Perez	Perez, Sabina E.
+Candidate	Dario PRG Hunter	PRG Hunter, Dario
+Candidate	Philip Andrew PRB COLLINS	PRB COLLINS, Philip Andrew
+Candidate	Telena Cruz Nelson	Nelson, Telena Cruz
+Candidate	Tina Rose Muna Barnes	Muna Barnes, Tina Rose
+Candidate	Franklin J. Meno	Meno, Franklin J.
+Candidate	Kelly G. Marsh	Marsh, Kelly G.
+Candidate	Joaquin Vicente Leon Guerrero	Leon Guerrero, Joaquin Vicente
+Candidate	Frank G. Leon Guerrero	Leon Guerrero, Frank G.
+Candidate	Jo Jorgensen	JORGENSEN, Jo
+Candidate	Jo Jorgensen	LIB JORGENSEN, Jo
+Candidate	Dominic Joaquin Hernandez	Hernandez, Dominic Joaquin
+Candidate	Howie Hawkins	GRN HAWKINS, Howie
+Candidate	Howie Hawkins	HAWKINS, Howie
+Candidate	Don Antonio Ada Edquilane	Edquilane, Don Antonio Ada
+Candidate	David Ralph Duenas	Duenas, David Ralph
+Candidate	Christopher M. Duenas	Duenas, Christopher M.
+Candidate	Joseph Iglesias Cruz	Cruz, Joseph Iglesias
+Candidate	Benjamin J.F. Cruz	Cruz, Benjamin J.F.
+Candidate	Christopher L. Carillo	Carillo, Christopher L.
+Candidate	Joanne M. Brown	Brown, Joanne M.
+Candidate	Vincent A.V. Borja	Borja, Vincent A.V.
+Candidate	Jr. Bordallo, Fred E.	Bordallo, Fred E., Jr.
+Candidate	Jr. Blas, Frank Flores	Blas, Frank Flores, Jr.
+Candidate	Joseph R. Biden	Biden, Joe
+Candidate	Michelle Lynn Armenta	Armenta, Michelle Lynn
+Candidate	John Albert Ananich, II	Ananich, John Albert, II
+Candidate	Vicente Anthony Borja Ada	Ada, Vicente Anthony Borja
+Candidate	Brian Carroll	ASP Carroll, Brian
+

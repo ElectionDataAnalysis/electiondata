@@ -589,6 +589,7 @@ def melt_to_one_count_column(
     count_columns_by_name: List[str],
     munger_name: str,
     file_name: str,
+    sheet_name: Optional[str] = None
 ) -> (pd.DataFrame, Optional[dict]):
     """transform to df with single count column and all raw munge info in other columns"""
     err = None
@@ -607,8 +608,14 @@ def melt_to_one_count_column(
 
     # NB merged cells in excel can lead to spurious empty columns
     if not count_cols:
+        if sheet_name:
+            extra = f" on sheet {sheet_name}"
+        else:
+            extra = ""
+        msg = f"No count columns found for at least one block of data{extra} with munger {munger_name}"
+
         err = ui.add_new_error(
-            err, "file", file_name, f"No count columns found with munger {munger_name}"
+            err, "file", file_name, msg
         )
         return pd.DataFrame(), err
     # melt so that there is one single count column
@@ -1923,7 +1930,7 @@ def to_standard_count_frame(
                 # transform to df with single count column 'Count' and all raw munge info in other columns
                 try:
                     working, new_err = melt_to_one_count_column(
-                        raw, p, cc_by_name[n], munger_name, file_name
+                        raw, p, cc_by_name[n], munger_name, file_name, sheet_name=sheet
                     )
                     if new_err:
                         error_by_df[n] = ui.consolidate_errors(

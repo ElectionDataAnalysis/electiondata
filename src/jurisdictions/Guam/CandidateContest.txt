@@ -1,0 +1,10 @@
+Name	NumberElected	Office	PrimaryParty
+GU Senate District 1	15	GU Senate District 1
+US President (GU)	1	US President (GU)	
+US House GU Delegate	1	US House GU Delegate
+GU Governor	1	GU Governor
+GU Public Auditor	1	GU Public Auditor
+GU Attorney General	1	GU Attorney General	
+GU Lieutenant Governor	1	GU Lieutenant Governor	
+GU Treasurer	1	GU Treasurer	
+GU Secretary of State	1	GU Secretary of State	
