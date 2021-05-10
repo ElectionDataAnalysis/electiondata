@@ -591,7 +591,7 @@ def melt_to_one_count_column(
     count_columns_by_name: List[str],
     munger_name: str,
     file_name: str,
-    sheet_name: Optional[str] = None
+    sheet_name: Optional[str] = None,
 ) -> (pd.DataFrame, Optional[dict]):
     """transform to df with single count column and all raw munge info in other columns"""
     err = None
@@ -616,9 +616,7 @@ def melt_to_one_count_column(
             extra = ""
         msg = f"No count columns found for at least one block of data{extra} with munger {munger_name}"
 
-        err = ui.add_new_error(
-            err, "file", file_name, msg
-        )
+        err = ui.add_new_error(err, "file", file_name, msg)
         return pd.DataFrame(), err
     # melt so that there is one single count column
     id_columns = {c for c in df.columns if c not in count_cols}
@@ -683,7 +681,11 @@ def add_constant_column(
 
 
 def add_contest_id(
-    df: pd.DataFrame, path_to_jurisdiction_dir: str, juris_true_name: str, err: Optional[dict], session: Session
+    df: pd.DataFrame,
+    path_to_jurisdiction_dir: str,
+    juris_true_name: str,
+    err: Optional[dict],
+    session: Session,
 ) -> (pd.DataFrame, dict):
     working = df.copy()
     """Append Contest_Id and contest_type. Add contest_type column and fill it correctly.
@@ -763,7 +765,11 @@ def add_contest_id(
 
 
 def add_selection_id(  # TODO tech debt: why does this add columns 'I' and 'd'?
-    df: pd.DataFrame, engine, path_to_jurisdiction_dir: str, juris_true_name: str, err: dict
+    df: pd.DataFrame,
+    engine,
+    path_to_jurisdiction_dir: str,
+    juris_true_name: str,
+    err: dict,
 ) -> (pd.DataFrame, dict):
     """Assumes <df> has contest_type, BallotMeasureSelection_raw, Candidate_Id column.
     Loads CandidateSelection table.
@@ -1084,7 +1090,9 @@ def munge_raw_to_ids(
         working = add_constant_column(working, "contest_type", "BallotMeasure")
     else:
         try:
-            working, err = add_contest_id(working, path_to_jurisdiction_dir, juris_true_name, err, session)
+            working, err = add_contest_id(
+                working, path_to_jurisdiction_dir, juris_true_name, err, session
+            )
         except Exception as exc:
             err = ui.add_new_error(
                 err,
@@ -1136,7 +1144,13 @@ def munge_raw_to_ids(
         and (t not in constants.keys())
     ]
     working, new_err = raw_to_id_simple(
-        working, path_to_jurisdiction_dir, other_elements, session, munger_name, juris_true_name, file_type
+        working,
+        path_to_jurisdiction_dir,
+        other_elements,
+        session,
+        munger_name,
+        juris_true_name,
+        file_type,
     )
     if new_err:
         err = ui.consolidate_errors([err, new_err])
@@ -1145,7 +1159,9 @@ def munge_raw_to_ids(
 
     # add Selection_Id (combines info from BallotMeasureSelection and CandidateContestSelection)
     try:
-        working, err = add_selection_id(working, session.bind, path_to_jurisdiction_dir, juris_true_name, err)
+        working, err = add_selection_id(
+            working, session.bind, path_to_jurisdiction_dir, juris_true_name, err
+        )
         working, err_df = clean_ids(working, ["Selection_Id"])
     except Exception as exc:
         err = ui.add_new_error(

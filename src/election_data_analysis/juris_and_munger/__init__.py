@@ -629,7 +629,7 @@ def load_juris_dframe_into_cdf(
 
 def system_name_from_true_name(true_name: str) -> str:
     """Replaces any spaces with hyphens"""
-    return true_name.replace(" ","-")
+    return true_name.replace(" ", "-")
 
 
 def add_none_or_unknown(df: pd.DataFrame, contest_type: str = None) -> pd.DataFrame:

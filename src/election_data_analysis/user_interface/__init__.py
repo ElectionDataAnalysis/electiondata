@@ -1034,7 +1034,9 @@ def run_tests(
     # run pytest
 
     for (election, juris) in election_jurisdiction_list:
-        test_file = f"{juris}/test_{juris.replace(' ', '-')}_{election.replace(' ', '-')}.py"
+        test_file = (
+            f"{juris}/test_{juris.replace(' ', '-')}_{election.replace(' ', '-')}.py"
+        )
         r = os.system(f"pytest --dbname {dbname} {test_file}")
         if r != 0:
             result[test_file] = "all did not pass (or no test file found)"

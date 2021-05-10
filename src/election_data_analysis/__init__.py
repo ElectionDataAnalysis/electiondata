@@ -365,11 +365,11 @@ class DataLoader:
         return
 
     def load_one_from_ini(
-            self,
-            ini_path: str,
-            path_to_jurisdiction_dir: str,
-            juris_true_name: str,
-            rollup: bool = False,
+        self,
+        ini_path: str,
+        path_to_jurisdiction_dir: str,
+        juris_true_name: str,
+        rollup: bool = False,
     ) -> (Optional[SingleDataLoader], Optional[dict]):
         """Load a single results file specified by the parameters in <ini_path>.
         Returns SingleDataLoader object (and error)"""
@@ -407,10 +407,11 @@ class DataLoader:
         return sdl, err
 
     def load_ej_pair(
-            self, election: str,
-            juris_true_name: str,
-            rollup: bool = False,
-            report_missing_files: bool = False,
+        self,
+        election: str,
+        juris_true_name: str,
+        rollup: bool = False,
+        report_missing_files: bool = False,
     ) -> (List[str], Optional[dict]):
         """Looks within ini_files_for_results/<jurisdiction> for
         all ini files matching  given election and jurisdiction.
@@ -426,7 +427,10 @@ class DataLoader:
         ini_subdir = os.path.join(self.d["ini_dir"], juris_system_name)
         if not os.path.isdir(ini_subdir):
             err = ui.add_new_error(
-                err, "jurisdiction", juris_true_name, f"No matching subfolder in ini_files_for_results"
+                err,
+                "jurisdiction",
+                juris_true_name,
+                f"No matching subfolder in ini_files_for_results",
             )
             return list(), err
         for ini in os.listdir(ini_subdir):
@@ -441,23 +445,25 @@ class DataLoader:
                     err = ui.consolidate_errors([err, new_err])
                 if ui.fatal_error(new_err):
                     continue
-                if not ui.fatal_error(new_err) and params["election"] == election :
+                if not ui.fatal_error(new_err) and params["election"] == election:
                     if params["jurisdiction"] == juris_true_name:
-                        if not os.path.isfile(os.path.join(self.d["results_dir"], params["results_file"])):
+                        if not os.path.isfile(
+                            os.path.join(self.d["results_dir"], params["results_file"])
+                        ):
                             if report_missing_files:
-                               err = ui.add_new_error(
-                                   err,
-                                   "warn-file",
-                                   params["results_file"],
-                                   f"File not found in directory {self.d['results_dir']}"
-                               )
+                                err = ui.add_new_error(
+                                    err,
+                                    "warn-file",
+                                    params["results_file"],
+                                    f"File not found in directory {self.d['results_dir']}",
+                                )
                             continue
 
                         _, load_error = self.load_one_from_ini(
                             ini_path,
                             path_to_jurisdiction_dir,
                             juris_true_name,
-                            rollup=rollup
+                            rollup=rollup,
                         )
                         if load_error:
                             err = ui.consolidate_errors([err, load_error])
@@ -468,7 +474,7 @@ class DataLoader:
                             err,
                             "warn-ini",
                             ini,
-                            f"Ini in subdirectory {ini_subdir} has non-matching jurisdiction: {params['jurisdiction']}"
+                            f"Ini in subdirectory {ini_subdir} has non-matching jurisdiction: {params['jurisdiction']}",
                         )
         return success_by_ini, err
 
@@ -558,7 +564,9 @@ class DataLoader:
                     params[f_path]["jurisdiction"],
                 ) in election_jurisdiction_list and os.path.isfile(results_full_path):
                     good_par_files.append(f_path)
-                juris_system_name[f_path] = jm.system_name_from_true_name(params[f_path]["jurisdiction"])
+                juris_system_name[f_path] = jm.system_name_from_true_name(
+                    params[f_path]["jurisdiction"]
+                )
 
         # group .ini files by jurisdiction name
         jurisdiction_dirs = list({juris_system_name[f] for f in good_par_files})
@@ -570,7 +578,9 @@ class DataLoader:
         for jp in jurisdiction_dirs:
             # create and load jurisdiction or throw error
             juris[jp], new_err = ui.pick_juris_from_filesystem(
-                juris_path=os.path.join(self.d["repository_content_root"], "jurisdictions", jp),
+                juris_path=os.path.join(
+                    self.d["repository_content_root"], "jurisdictions", jp
+                ),
                 err=None,
                 check_files=load_jurisdictions,
             )
@@ -1179,14 +1189,16 @@ class JurisdictionPrepper:
     ) -> Optional[dict]:
         err_list = list()
         dl = DataLoader()
-        path_to_jurisdiction_dir = os.path.join(self.d["jurisdiction_path"], self.d["___"])
+        path_to_jurisdiction_dir = os.path.join(
+            self.d["jurisdiction_path"], self.d["___"]
+        )
         sdl, err = check_and_init_singledataloader(
             dl.d["results_dir"],
             par_file_name,
             dl.session,
             dl.d["mungers_dir"],
             self.d["name"],
-            self.d["jurisdiction_path"]
+            self.d["jurisdiction_path"],
         )
         if not sdl:
             return err
@@ -1382,12 +1394,12 @@ class JurisdictionPrepper:
         # add dictionary attributes derived from other parameters
         derived = {
             "system_name": jm.system_name_from_true_name(self.d["name"]),
-            "mungers_dir": os.path.join(
-                self.d["repository_content_root"], "mungers"
-            ),
+            "mungers_dir": os.path.join(self.d["repository_content_root"], "mungers"),
             "jurisdiction_path": os.path.join(
-            self.d["repository_content_root"], "jurisdictions", jm.system_name_from_true_name(self.d["name"])
-        )
+                self.d["repository_content_root"],
+                "jurisdictions",
+                jm.system_name_from_true_name(self.d["name"]),
+            ),
         }
         self.d.update(derived)
 
@@ -2279,7 +2291,13 @@ def load_results_file(
     # # add Id columns for all but Count, removing raw-munged
     try:
         df, new_err = m.munge_raw_to_ids(  # TODO this is where FutureWarning is thrown
-            df, necessary_constants, path_to_jurisdiction_dir, munger_name, juris_true_name, session, p["file_type"]
+            df,
+            necessary_constants,
+            path_to_jurisdiction_dir,
+            munger_name,
+            juris_true_name,
+            session,
+            p["file_type"],
         )
         if new_err:
             err = ui.consolidate_errors([err, new_err])
@@ -2311,7 +2329,7 @@ def load_results_file(
             err,
             "jurisdiction",
             juris_true_name,
-            f"No contest-selection pairs recognized via munger {munger_name} from {Path(f_path).name}"
+            f"No contest-selection pairs recognized via munger {munger_name} from {Path(f_path).name}",
         )
         return err
 
