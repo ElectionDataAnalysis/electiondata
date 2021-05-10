@@ -153,8 +153,7 @@ def run2(
                 rollup=rollup,
             )
             if not success:
-                print(f"At least one file did not load correctly.\n{err}")
-
+                print(f"At least one file did not load correctly.")
 
         except Exception as exc:
             print(f"Exception occurred: {exc}")
