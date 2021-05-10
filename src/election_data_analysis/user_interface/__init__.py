@@ -1034,8 +1034,10 @@ def run_tests(
     # run pytest
 
     for (election, juris) in election_jurisdiction_list:
+        e_system = jm.system_name_from_true_name(election)
+        j_system = jm.system_name_from_true_name(juris)
         test_file = (
-            f"{juris}/test_{juris.replace(' ', '-')}_{election.replace(' ', '-')}.py"
+            f"{j_system}/test_{j_system}_{e_system}.py"
         )
         r = os.system(f"pytest --dbname {dbname} {test_file}")
         if r != 0:

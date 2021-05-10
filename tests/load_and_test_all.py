@@ -147,7 +147,7 @@ def run2(
             dl.change_db(dbname)
 
             dl.change_dir("results_dir", "TestingData")
-            err, success = dl.load_all(
+            success, err = dl.load_all(
                 move_files=True,
                 election_jurisdiction_list=election_jurisdiction_list,
                 rollup=rollup,
