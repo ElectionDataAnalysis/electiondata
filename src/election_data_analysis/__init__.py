@@ -82,13 +82,16 @@ class SingleDataLoader:
         par_file_name: str,
         session: Session,
         mungers_path: str,
-        juris: jm.Jurisdiction,
+        juris_true_name: str,
     ):
         # adopt passed variables needed in future as attributes
         self.session = session
         self.results_dir = results_dir
-        self.juris = juris
+        self.juris_true_name = juris_true_name
         self.par_file_name = par_file_name
+
+        # calculate useful parameters
+        self.juris_system_name = jm.system_name_from_true_name(self.juris_true_name)
 
         # grab parameters (known to exist from __new__, so can ignore error variable)
         par_file = os.path.join(results_dir, par_file_name)
@@ -360,15 +363,15 @@ class DataLoader:
         return
 
     def load_one_from_ini(
-            self, ini_path: str, juris: jm.Jurisdiction, rollup: bool = False,
+            self, ini_path: str, juris_true_name, rollup: bool = False,
     ) -> (Optional[SingleDataLoader], Optional[dict]):
-        """Load a single results file specified by the parameters in <ini_path>"""
+        """Load a single results file specified by the parameters in <ini_path>.
+        Returns SingleDataLoader object (and error)"""
         # TODO use jurisdiction internal name ("South Carolina") instead of juris class?
         sdl, err = check_and_init_singledataloader(
-            self.d["results_dir"], ini_path, self.session, self.d["munger_dir"], juris)
+            self.d["results_dir"], ini_path, self.session, self.d["munger_dir"], juris_true_name)
         if ui.fatal_error(err):
             return None, err
-
         elif sdl is None:
             err = ui.add_new_error(
                 err,
@@ -389,8 +392,48 @@ class DataLoader:
             rollup_rut = None
         load_error = sdl.load_results(rollup=rollup, rollup_rut=rollup_rut)
         err = ui.consolidate_errors([err, load_error])
-
         return sdl, err
+
+    def load_ej_pair(
+            self, election: str, juris_true_name: str, rollup: bool = False
+    ) -> Optional[dict]:
+        """Looks within ini_files_for_results/<jurisdiction> for
+        all ini files matching  given election and jurisdiction.
+        For each, attempts to load file if it exists; reports missing data files.
+        Returns error report (warns about ini files whose results files were not found,
+        outright error for results files whose loading failed."""
+        err = None
+        juris_system_name = jm.system_name_from_true_name(juris_true_name)
+        ini_subdir = os.path.join(self.d["ini_dir"], juris_system_name)
+        if not os.path.isdir(ini_subdir):
+            err = ui.add_new_error(
+                err, "jurisdiction", juris_true_name, f"No matching subfolder in ini_files_for_results"
+            )
+            return err
+        for ini in os.listdir(ini_subdir):
+            if ini[-4:] == ".ini":
+                ini_path = os.path.join(ini_subdir, ini)
+                params, new_err = ui.get_parameters(
+                    required_keys=["election", "jurisdiction"],
+                    param_file=ini_path,
+                    header="election_data_analysis",
+                )
+                if new_err:
+                    err = ui.consolidate_errors([err, new_err])
+                if not ui.fatal_error(new_err) and params["election"] == election :
+                    if params["jurisdiction"] == juris_true_name:
+                        _, load_error = self.load_one_from_ini(
+                            ini_path, juris_true_name, rollup=rollup)
+                        if load_error:
+                            err = ui.consolidate_errors([err, load_error])
+                    else:
+                        err = ui.add_new_error(
+                            err,
+                            "warn-ini",
+                            ini,
+                            f"Ini in subdirectory {ini_subdir} has non-matching jurisdiction: {params['jurisdiction']}"
+                        )
+        return err
 
     def load_all(
         self,
@@ -721,7 +764,7 @@ def check_and_init_singledataloader(
     par_file_name: str,
     session: Session,
     mungers_path: str,
-    juris: jm.Jurisdiction,
+    juris_true_name: str,
 ) -> (Optional[SingleDataLoader], Optional[dict]):
     """Return SDL if it could be successfully initialized, and
     error dictionary (including munger errors noted in SDL initialization)"""
@@ -749,7 +792,7 @@ def check_and_init_singledataloader(
             par_file_name,
             session,
             mungers_path,
-            juris,
+            juris_true_name,
         )
         err = ui.consolidate_errors([err, sdl.munger_err])
     # check download date
