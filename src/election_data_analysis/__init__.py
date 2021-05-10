@@ -407,13 +407,16 @@ class DataLoader:
         return sdl, err
 
     def load_ej_pair(
-            self, election: str, juris_true_name: str, rollup: bool = False
+            self, election: str,
+            juris_true_name: str,
+            rollup: bool = False,
+            report_missing_files: bool = False,
     ) -> (List[str], Optional[dict]):
         """Looks within ini_files_for_results/<jurisdiction> for
         all ini files matching  given election and jurisdiction.
         For each, attempts to load file if it exists; reports missing data files.
-        Returns error report (warns about ini files whose results files were not found,
-        outright error for results files whose loading failed."""
+        Returns error report with outright error for results files whose loading failed.
+        If <report_missing_files> is True, include warning for missing files"""
         err = None
         success_by_ini = list()
         juris_system_name = jm.system_name_from_true_name(juris_true_name)
@@ -441,13 +444,14 @@ class DataLoader:
                 if not ui.fatal_error(new_err) and params["election"] == election :
                     if params["jurisdiction"] == juris_true_name:
                         if not os.path.isfile(os.path.join(self.d["results_dir"], params["results_file"])):
-                           err = ui.add_new_error(
-                               err,
-                               "warn-file",
-                               params["results_file"],
-                               f"File not found in directory {self.d['results_dir']}"
-                           )
-                           continue
+                            if report_missing_files:
+                               err = ui.add_new_error(
+                                   err,
+                                   "warn-file",
+                                   params["results_file"],
+                                   f"File not found in directory {self.d['results_dir']}"
+                               )
+                            continue
 
                         _, load_error = self.load_one_from_ini(
                             ini_path,
