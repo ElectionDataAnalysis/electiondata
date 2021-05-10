@@ -195,7 +195,7 @@ and similarly, if necessary, for any Contest or Selection. If there is more than
 
 
 ## Create or Improve a Jurisdiction
-Because each original raw results file comes from a particular election agency, and each election agency has a fixed jurisdiction, it is natural to organize information by jurisdiction. 
+Because each original raw results file comes from a particular election agency, and each election agency has a fixed jurisdiction, we organize information by jurisdiction. 
 
 It's easiest to use the JurisdictionPrepper() object to create or update jurisdiction files.
 

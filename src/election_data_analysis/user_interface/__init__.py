@@ -1112,7 +1112,7 @@ def election_juris_list(ini_path: str, results_path: Optional[str] = None) -> li
                 d, err = get_parameters(
                     param_file=full_path,
                     header="election_data_analysis",
-                    required_keys=["election", "top_reporting_unit", "results_file"],
+                    required_keys=["election", "jurisdiction_true_name", "results_file"],
                 )
                 # if parameters were read without error
                 if not err:
@@ -1122,7 +1122,7 @@ def election_juris_list(ini_path: str, results_path: Optional[str] = None) -> li
                         os.path.isfile(os.path.join(results_path, d["results_file"]))
                     ):
                         # include the pair in the output
-                        ej_set.update({(d["election"], d["top_reporting_unit"])})
+                        ej_set.update({(d["election"], d["jurisdiction_true_name"])})
     return list(ej_set)
 
 

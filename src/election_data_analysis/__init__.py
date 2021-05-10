@@ -31,14 +31,13 @@ sdl_pars_req = [
     "results_download_date",
     "results_source",
     "results_note",
-    "top_reporting_unit",
+    "jurisdiction_true_name",
     "election",
 ]
 
 # nb: jurisdiction_path is for backward compatibility
 sdl_pars_opt = [
     "jurisdiction_path",
-    "jurisdiction_directory",
     "CandidateContest",
     "BallotMeasureContest",
     "BallotMeasureSelection",
@@ -127,11 +126,11 @@ class SingleDataLoader:
         """insert a record for the _datafile, recording any error string <e>.
         Return Id of _datafile.Id and Election.Id"""
         filename = self.d["results_file"]
-        top_reporting_unit_id = db.name_to_id(
-            self.session, "ReportingUnit", self.d["top_reporting_unit"]
+        jurisdiction_true_name_id = db.name_to_id(
+            self.session, "ReportingUnit", self.d["jurisdiction_true_name"]
         )
-        if top_reporting_unit_id is None:
-            e = f"No ReportingUnit named {self.d['top_reporting_unit']} found in database"
+        if jurisdiction_true_name_id is None:
+            e = f"No ReportingUnit named {self.d['jurisdiction_true_name']} found in database"
             return [0, 0], e
         election_id = db.name_to_id(self.session, "Election", self.d["election"])
         if election_id is None:
@@ -145,7 +144,7 @@ class SingleDataLoader:
                     self.d["results_download_date"],
                     self.d["results_source"],
                     self.d["results_note"],
-                    top_reporting_unit_id,
+                    jurisdiction_true_name_id,
                     election_id,
                     datetime.datetime.now(),
                     self.d["is_preliminary"],
@@ -386,7 +385,7 @@ class DataLoader:
         if rollup:
             rollup_rut = db.get_major_subdiv_type(
                 self.session,
-                sdl.d["top_reporting_unit"],
+                sdl.d["jurisdiction_true_name"],
             )
         else:
             rollup_rut = None
@@ -496,7 +495,7 @@ class DataLoader:
         params = (
             dict()
         )  # keys are full ini file paths; values are parameter dictionaries
-        juris_directory = dict()
+        juris_system_name = dict()
 
         # For each par_file get params or throw error
         good_par_files = list()
@@ -518,13 +517,13 @@ class DataLoader:
                 )
                 if (
                     params[f_path]["election"],
-                    params[f_path]["top_reporting_unit"],
+                    params[f_path]["jurisdiction_true_name"],
                 ) in election_jurisdiction_list and os.path.isfile(results_full_path):
                     good_par_files.append(f_path)
-                juris_directory[f_path] = params[f_path]["jurisdiction_directory"]
+                juris_system_name[f_path] = jm.system_name_from_true_name(params[f_path]["jurisdiction_true_name"])
 
-        # group .ini files by jurisdiction_directory name
-        jurisdiction_dirs = list({juris_directory[f] for f in good_par_files})
+        # group .ini files by jurisdiction name
+        jurisdiction_dirs = list({juris_system_name[f] for f in good_par_files})
         jurisdiction_dirs.sort()
 
         # for each jurisdiction, create Jurisdiction or throw error
@@ -575,7 +574,7 @@ class DataLoader:
             )
             complete_success = True  # to determine whether to delete the jurisdiction from the results-to-load folder
             latest_download_date = "0000-00-00"  # for naming archive directory
-            good_files = [f for f in good_par_files if juris_directory[f] == jp]
+            good_files = [f for f in good_par_files if juris_system_name[f] == jp]
             print(f"Processing results files specified in {good_files}")
             for f in good_files:
                 sdl, new_err = check_and_init_singledataloader(
@@ -605,7 +604,7 @@ class DataLoader:
                     if rollup:
                         rollup_rut = db.get_major_subdiv_type(
                             self.session,
-                            params[f]["top_reporting_unit"],
+                            params[f]["jurisdiction_true_name"],
                         )
                     else:
                         rollup_rut = None
@@ -1259,7 +1258,7 @@ class JurisdictionPrepper:
         tests_dir = os.path.join(Path(self.d["mungers_dir"]).parents[1], "tests")
         juris_test_dir = os.path.join(tests_dir, self.d["system_name"])
         sample_test_dir = os.path.join(tests_dir, "20xx_test_templates")
-        election_str = election.replace(" ", "-")
+        election_str = jm.system_name_from_true_name(election)
         test_file_name = f"test_{self.d['system_name']}_{election_str}.py"
         new_test_file = os.path.join(juris_test_dir, test_file_name)
         if not os.path.isdir(juris_test_dir):
@@ -1297,9 +1296,8 @@ class JurisdictionPrepper:
         if not os.path.isfile(new_ini_file):
             ini_replace = {
                 "results_file=": f"results_file={juris_system_name}/",
-                "jurisdiction_directory=": f"jurisdiction_directory={juris_system_name}",
                 f"munger_name=": f"munger_name={munger_name}",
-                "top_reporting_unit=": f"top_reporting_unit={juris_true_name}",
+                "jurisdiction_true_name=": f"jurisdiction_true_name={juris_true_name}",
                 "results_short_name=": f"results_short_name={Path(ini_name).stem}",
             }
             if is_preliminary:
@@ -1338,12 +1336,12 @@ class JurisdictionPrepper:
 
         # add dictionary attributes derived from other parameters
         derived = {
-            "system_name": self.d["name"].replace(" ", "-"),
+            "system_name": jm.system_name_from_true_name(self.d["name"]),
             "mungers_dir": os.path.join(
                 self.d["repository_content_root"], "mungers"
             ),
             "jurisdiction_path": os.path.join(
-            self.d["repository_content_root"], "jurisdictions", self.d["name"].replace(" ", "-")
+            self.d["repository_content_root"], "jurisdictions", jm.system_name_from_true_name(self.d["name"])
         )
         }
         self.d.update(derived)
@@ -1373,7 +1371,7 @@ def make_par_files(
     for f in data_file_list:
         par_text = (
             f"[election_data_analysis]\nresults_file={f}\njurisdiction_path={jurisdiction_path}\n"
-            f"munger_name={munger_name}\ntop_reporting_unit={top_ru}\nelection={election}\n"
+            f"munger_name={munger_name}\njurisdiction_true_name={top_ru}\nelection={election}\n"
             f"results_short_name={top_ru}_{f}\nresults_download_date={download_date}\n"
             f"results_source={source}\nresults_note={results_note}\n"
         )
@@ -1852,7 +1850,7 @@ class Analyzer:
                                             ]
                                         )
             rows += state_rows
-            state_with_hyphens = state.replace(" ", "-")
+            state_with_hyphens = jm.system_name_from_true_name(state)
             pd.DataFrame(state_rows, columns=cols).to_csv(
                 f"{state_with_hyphens}_state_export.csv", index=False
             )
