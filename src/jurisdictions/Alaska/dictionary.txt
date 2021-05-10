@@ -235,12 +235,10 @@ CandidateContest	AK House District 10	House District 10""
 CandidateContest	AK House District 10	House District 10''
 CandidateContest	AK House District 1	House District 1""
 CandidateContest	AK House District 1	House District 1''
-
 Election	2020 General	2020 General
 Election	2020 Primary	2020 Primary
 Election	2018 General	2018 General
 Election	2016 General	2016 General
-
 Party	Democratic Party	DEM
 Party	Republican Party	REP
 Party	Green Party	GRE
@@ -261,16 +259,12 @@ Party	Alliance Party	ALI''
 Party	Alliance Party	ALI
 Party	No Party	NP
 Party	NA	NA
-
-
-
 CountItemType	election-day	election-day
 CountItemType	absentee	Absentee
 CountItemType	provisional	Question
 CountItemType	early	Early Voting
 CountItemType	absentee-fwab	FWAB
 CountItemType	absentee-fwab	Fed Overseas Absentee
-
 ReportingUnit	Alaska;AK House District 1	Alaska;AK House District 1
 ReportingUnit	Alaska;AK House District 2	Alaska;AK House District 2
 ReportingUnit	Alaska;AK House District 3	Alaska;AK House District 3
@@ -332,7 +326,6 @@ ReportingUnit	Alaska;AK Senate District 18	Alaska;AK Senate District 18
 ReportingUnit	Alaska;AK Senate District 19	Alaska;AK Senate District 19
 ReportingUnit	Alaska;AK Senate District 20	Alaska;AK Senate District 20
 ReportingUnit	Alaska;US House AK District 1	Alaska;US House AK District 1
-
 ReportingUnit	Alaska	Alaska
 ReportingUnit	Alaska;AK House District 1;Aurora	01-446 Aurora
 ReportingUnit	Alaska;AK House District 1;Fairbanks No. 1	01-455 Fairbanks No. 1
@@ -778,7 +771,6 @@ ReportingUnit	Alaska;AK House District 40;Wainwright	40-040 Wainwright
 ReportingUnit	Alaska;AK House District 40;Allakaket	40-326 Allakaket
 ReportingUnit	Alaska;AK House District 40;Bettles	40-328 Bettles
 ReportingUnit	Alaska;AK House District 40;Hughes	40-330 Hughes
-ReportingUnit	Alaska
 ReportingUnit	Alaska;AK House District 1	District 1
 ReportingUnit	Alaska;AK House District 10	District 10
 ReportingUnit	Alaska;AK House District 11	District 11
@@ -1115,7 +1107,6 @@ Candidate	Verrall, Bert	Verrall, Bert
 Candidate	Von Imhof, Natasha A	Von Imhof, Natasha A
 Candidate	Von Imhof, Natasha A.	Von Imhof  Natasha A. - R
 Candidate	Von Imhof, Natasha A.	von Imhof Natasha A.''
-Candidate	Von Imhof, Natasha A.	von Imhof Natasha A.""
 Candidate	Walker, David G.	Walker  David G. - R
 Candidate	Walker	Walker
 Candidate	Watkins, Brent L.	Watkins, Brent L.
@@ -1149,8 +1140,6 @@ Candidate	row should be dropped	Times Counted
 Candidate	row should be dropped	Number of Precincts Reporting
 Candidate	row should be dropped	Number of Precincts for Race
 Candidate	row should be dropped	Number of Precincts
-Candidate	MuÃ±oz, Cathy	MuÃ±oz, Cathy
-Candidate	Wool Adam L.	Wool Adam L.''
 Candidate	Wilson David S.	Wilson David S.''
 Candidate	Wielechowski Bill	Wielechowski Bill''
 Candidate	Verhagen Elijah M.	Verhagen Elijah M.''

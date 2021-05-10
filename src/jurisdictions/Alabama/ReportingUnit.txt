@@ -2052,4 +2052,4 @@ Alabama;Jackson County;CROW FIRE HALL	precinct
 Alabama;Jackson County;BRYANT COMM BLDG	precinct
 Alabama;Jackson County;BRIDGEPORT COMM CTR_	precinct
 Alabama;Madison County;ABSENTEE 2	subcounty-absentee
-Alabama;Madison County;ABSENTEE 1	sub-county-absentee
+Alabama;Madison County;ABSENTEE 1	subcounty-absentee
