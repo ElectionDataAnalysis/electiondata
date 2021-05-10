@@ -75,6 +75,217 @@ optional_prep_pars = []
 analyze_pars = ["db_paramfile", "db_name"]
 
 # classes
+class SingleDataLoader:
+    def __init__(
+        self,
+        results_dir: str,
+        par_file_name: str,
+        session: Session,
+        mungers_path: str,
+        juris: jm.Jurisdiction,
+    ):
+        # adopt passed variables needed in future as attributes
+        self.session = session
+        self.results_dir = results_dir
+        self.juris = juris
+        self.par_file_name = par_file_name
+
+        # grab parameters (known to exist from __new__, so can ignore error variable)
+        par_file = os.path.join(results_dir, par_file_name)
+        self.d, dummy_err = ui.get_parameters(
+            required_keys=sdl_pars_req,
+            optional_keys=sdl_pars_opt,
+            param_file=par_file,
+            header="election_data_analysis",
+        )
+
+        # assign True to is_preliminary if necessary
+        if "is_preliminary" not in self.d.keys() or self.d["is_preliminary"] in [
+            "",
+            "True",
+            "true",
+            None,
+        ]:
+            self.d["is_preliminary"] = True
+
+        # change any blank parameters describing the results file to 'none'
+        for k in self.d.keys():
+            if self.d[k] == "" and k[:8] == "results_":
+                self.d[k] = "none"
+
+        # pick mungers (Note: munger_name is comma-separated list of munger names)
+        self.munger = dict()
+        self.munger_err = dict()
+        # TODO document
+        self.mungers_dir = mungers_path
+        self.munger_list = [x.strip() for x in self.d["munger_name"].split(",")]
+
+    def track_results(self) -> (dict, Optional[str]):
+        """insert a record for the _datafile, recording any error string <e>.
+        Return Id of _datafile.Id and Election.Id"""
+        filename = self.d["results_file"]
+        top_reporting_unit_id = db.name_to_id(
+            self.session, "ReportingUnit", self.d["top_reporting_unit"]
+        )
+        if top_reporting_unit_id is None:
+            e = f"No ReportingUnit named {self.d['top_reporting_unit']} found in database"
+            return [0, 0], e
+        election_id = db.name_to_id(self.session, "Election", self.d["election"])
+        if election_id is None:
+            e = f"No election named {self.d['election']} found in database"
+            return [0, 0], e
+        data = pd.DataFrame(
+            [
+                [
+                    self.d["results_short_name"],
+                    filename,
+                    self.d["results_download_date"],
+                    self.d["results_source"],
+                    self.d["results_note"],
+                    top_reporting_unit_id,
+                    election_id,
+                    datetime.datetime.now(),
+                    self.d["is_preliminary"],
+                ]
+            ],
+            columns=[
+                "short_name",
+                "file_name",
+                "download_date",
+                "source",
+                "note",
+                "ReportingUnit_Id",
+                "Election_Id",
+                "created_at",
+                "is_preliminary",
+            ],
+        )
+        data = m.clean_strings(data, ["short_name"])
+        try:
+            e = db.insert_to_cdf_db(self.session.bind, data, "_datafile")
+            if e:
+                return [0, 0], e
+            else:
+                col_map = {"short_name": "short_name"}
+                datafile_id = db.append_id_to_dframe(
+                    self.session.bind, data, "_datafile", col_map=col_map
+                ).iloc[0]["_datafile_Id"]
+        except Exception as exc:
+            return (
+                [0, 0],
+                f"Error inserting record to _datafile table or retrieving _datafile_Id: {exc}",
+            )
+        return {"_datafile_Id": datafile_id, "Election_Id": election_id}, e
+
+    def load_results(
+        self, rollup: bool = False, rollup_rut: Optional[str] = None
+    ) -> dict:
+        """Load results, returning error (or None, if load successful)"""
+        err = None
+        print(f'\n\nProcessing {self.d["results_file"]}')
+
+        # Enter datafile info to db and collect _datafile_Id and Election_Id
+        results_info, err_str = self.track_results()
+        if err_str:
+            err = ui.add_new_error(
+                err,
+                "system",
+                f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
+                f"Error inserting _datafile record:\n{err_str}" f" ",
+            )
+            return err
+
+        else:
+            constants = self.collect_constants_from_ini()
+
+            # load results to db
+            for mu in self.munger_list:
+                print(f"\twith munger {mu}")
+                f_path = os.path.join(self.results_dir, self.d["results_file"])
+                mu_path = os.path.join(self.mungers_dir, f"{mu}.munger")
+                new_err = load_results_file(
+                    self.session,
+                    mu_path,
+                    f_path,
+                    self.juris,
+                    results_info,
+                    constants,
+                    self.results_dir,
+                    rollup=rollup,
+                    rollup_rut=rollup_rut,
+                )
+                if new_err:
+                    err = ui.consolidate_errors([err, new_err])
+        return err
+
+    def collect_constants_from_ini(self) -> dict:
+        """collect constant elements from .ini file.
+        Omits constants that have no content"""
+        constants = dict()
+        for k in [
+            "Party",
+            "ReportingUnit",
+            "CountItemType",
+            "CandidateContest",
+            "BallotMeasureContest",
+            "BallotMeasureSelection",
+            "Candidate",
+        ]:
+            # if element was given in .ini file
+            if (self.d[k] is not None) and self.d[k] != "":
+                constants[k] = self.d[k]
+        return constants
+
+    def list_values(self, element: str) -> (list, Optional[dict]):
+        """lists all values for the element found in the file"""
+        err = None
+        values = list()
+        constants = self.collect_constants_from_ini()
+        if element in constants.keys():
+            return [constants[element], None]
+        else:
+            try:
+                for mu in self.munger_list:
+                    print(f"\twith munger {mu}")
+                    f_path = os.path.join(self.results_dir, self.d["results_file"])
+                    munger_path = os.path.join(self.mungers_dir, f"{mu}.munger")
+                    p, err = m.get_and_check_munger_params(munger_path)
+                    if ui.fatal_error(err):
+                        return values, err
+
+                    df, err = m.to_standard_count_frame(
+                        f_path,
+                        munger_path,
+                        p,
+                        suffix="_SOURCE",
+                    )
+                    if ui.fatal_error(err):
+                        return values, err
+                    df, new_err = m.munge_source_to_raw(
+                        df,
+                        munger_path,
+                        "_SOURCE",
+                        self.results_dir,
+                        f_path,
+                    )
+                    err = ui.consolidate_errors([err, new_err])
+                    if ui.fatal_error(new_err):
+                        return values, err
+                    values = list(set(values.extend(df[f"{element}_raw"].unique())))
+
+            except Exception as exc:
+                err = ui.add_new_error(
+                    err,
+                    "system",
+                    f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
+                    f"Unexpected exception while converting data to standard form or munging to raw: {exc}",
+                )
+                return values, err
+
+        # TODO complete
+        return values, err
+
+
 class DataLoader:
     def __new__(cls):
         """Checks if parameter file exists and is correct. If not, does
@@ -150,9 +361,9 @@ class DataLoader:
 
     def load_one_from_ini(
             self, ini_path: str, juris: jm.Jurisdiction, rollup: bool = False,
-    ) -> (Optional[SingleDataLoader], [dict]):
-        """Load a single results file specified by the paramters in <ini_path>"""
-        # TODO
+    ) -> (Optional[SingleDataLoader], Optional[dict]):
+        """Load a single results file specified by the parameters in <ini_path>"""
+        # TODO use jurisdiction internal name ("South Carolina") instead of juris class?
         sdl, err = check_and_init_singledataloader(
             self.d["results_dir"], ini_path, self.session, self.d["munger_dir"], juris)
         if ui.fatal_error(err):
@@ -165,7 +376,8 @@ class DataLoader:
                 Path(ini_path).stem,
                 f"Unexpected failure to load data (no SingleDataLoader object created)",
             )
-        # TODO check for file problems discernible before loading
+            return None, err
+        # TODO check for file problems discernible before loading?
 
         # get rollup unit if required
         if rollup:
@@ -178,7 +390,7 @@ class DataLoader:
         load_error = sdl.load_results(rollup=rollup, rollup_rut=rollup_rut)
         err = ui.consolidate_errors([err, load_error])
 
-        return err
+        return sdl, err
 
     def load_all(
         self,
@@ -466,217 +678,6 @@ class DataLoader:
             except Exception as exc:
                 err_str = f"Insertion to database failed: {exc}"
         return err_str
-
-
-class SingleDataLoader:
-    def __init__(
-        self,
-        results_dir: str,
-        par_file_name: str,
-        session: Session,
-        mungers_path: str,
-        juris: jm.Jurisdiction,
-    ):
-        # adopt passed variables needed in future as attributes
-        self.session = session
-        self.results_dir = results_dir
-        self.juris = juris
-        self.par_file_name = par_file_name
-
-        # grab parameters (known to exist from __new__, so can ignore error variable)
-        par_file = os.path.join(results_dir, par_file_name)
-        self.d, dummy_err = ui.get_parameters(
-            required_keys=sdl_pars_req,
-            optional_keys=sdl_pars_opt,
-            param_file=par_file,
-            header="election_data_analysis",
-        )
-
-        # assign True to is_preliminary if necessary
-        if "is_preliminary" not in self.d.keys() or self.d["is_preliminary"] in [
-            "",
-            "True",
-            "true",
-            None,
-        ]:
-            self.d["is_preliminary"] = True
-
-        # change any blank parameters describing the results file to 'none'
-        for k in self.d.keys():
-            if self.d[k] == "" and k[:8] == "results_":
-                self.d[k] = "none"
-
-        # pick mungers (Note: munger_name is comma-separated list of munger names)
-        self.munger = dict()
-        self.munger_err = dict()
-        # TODO document
-        self.mungers_dir = mungers_path
-        self.munger_list = [x.strip() for x in self.d["munger_name"].split(",")]
-
-    def track_results(self) -> (dict, Optional[str]):
-        """insert a record for the _datafile, recording any error string <e>.
-        Return Id of _datafile.Id and Election.Id"""
-        filename = self.d["results_file"]
-        top_reporting_unit_id = db.name_to_id(
-            self.session, "ReportingUnit", self.d["top_reporting_unit"]
-        )
-        if top_reporting_unit_id is None:
-            e = f"No ReportingUnit named {self.d['top_reporting_unit']} found in database"
-            return [0, 0], e
-        election_id = db.name_to_id(self.session, "Election", self.d["election"])
-        if election_id is None:
-            e = f"No election named {self.d['election']} found in database"
-            return [0, 0], e
-        data = pd.DataFrame(
-            [
-                [
-                    self.d["results_short_name"],
-                    filename,
-                    self.d["results_download_date"],
-                    self.d["results_source"],
-                    self.d["results_note"],
-                    top_reporting_unit_id,
-                    election_id,
-                    datetime.datetime.now(),
-                    self.d["is_preliminary"],
-                ]
-            ],
-            columns=[
-                "short_name",
-                "file_name",
-                "download_date",
-                "source",
-                "note",
-                "ReportingUnit_Id",
-                "Election_Id",
-                "created_at",
-                "is_preliminary",
-            ],
-        )
-        data = m.clean_strings(data, ["short_name"])
-        try:
-            e = db.insert_to_cdf_db(self.session.bind, data, "_datafile")
-            if e:
-                return [0, 0], e
-            else:
-                col_map = {"short_name": "short_name"}
-                datafile_id = db.append_id_to_dframe(
-                    self.session.bind, data, "_datafile", col_map=col_map
-                ).iloc[0]["_datafile_Id"]
-        except Exception as exc:
-            return (
-                [0, 0],
-                f"Error inserting record to _datafile table or retrieving _datafile_Id: {exc}",
-            )
-        return {"_datafile_Id": datafile_id, "Election_Id": election_id}, e
-
-    def load_results(
-        self, rollup: bool = False, rollup_rut: Optional[str] = None
-    ) -> dict:
-        """Load results, returning error (or None, if load successful)"""
-        err = None
-        print(f'\n\nProcessing {self.d["results_file"]}')
-
-        # Enter datafile info to db and collect _datafile_Id and Election_Id
-        results_info, err_str = self.track_results()
-        if err_str:
-            err = ui.add_new_error(
-                err,
-                "system",
-                f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
-                f"Error inserting _datafile record:\n{err_str}" f" ",
-            )
-            return err
-
-        else:
-            constants = self.collect_constants_from_ini()
-
-            # load results to db
-            for mu in self.munger_list:
-                print(f"\twith munger {mu}")
-                f_path = os.path.join(self.results_dir, self.d["results_file"])
-                mu_path = os.path.join(self.mungers_dir, f"{mu}.munger")
-                new_err = load_results_file(
-                    self.session,
-                    mu_path,
-                    f_path,
-                    self.juris,
-                    results_info,
-                    constants,
-                    self.results_dir,
-                    rollup=rollup,
-                    rollup_rut=rollup_rut,
-                )
-                if new_err:
-                    err = ui.consolidate_errors([err, new_err])
-        return err
-
-    def collect_constants_from_ini(self) -> dict:
-        """collect constant elements from .ini file.
-        Omits constants that have no content"""
-        constants = dict()
-        for k in [
-            "Party",
-            "ReportingUnit",
-            "CountItemType",
-            "CandidateContest",
-            "BallotMeasureContest",
-            "BallotMeasureSelection",
-            "Candidate",
-        ]:
-            # if element was given in .ini file
-            if (self.d[k] is not None) and self.d[k] != "":
-                constants[k] = self.d[k]
-        return constants
-
-    def list_values(self, element: str) -> (list, Optional[dict]):
-        """lists all values for the element found in the file"""
-        err = None
-        values = list()
-        constants = self.collect_constants_from_ini()
-        if element in constants.keys():
-            return [constants[element], None]
-        else:
-            try:
-                for mu in self.munger_list:
-                    print(f"\twith munger {mu}")
-                    f_path = os.path.join(self.results_dir, self.d["results_file"])
-                    munger_path = os.path.join(self.mungers_dir, f"{mu}.munger")
-                    p, err = m.get_and_check_munger_params(munger_path)
-                    if ui.fatal_error(err):
-                        return values, err
-
-                    df, err = m.to_standard_count_frame(
-                        f_path,
-                        munger_path,
-                        p,
-                        suffix="_SOURCE",
-                    )
-                    if ui.fatal_error(err):
-                        return values, err
-                    df, new_err = m.munge_source_to_raw(
-                        df,
-                        munger_path,
-                        "_SOURCE",
-                        self.results_dir,
-                        f_path,
-                    )
-                    err = ui.consolidate_errors([err, new_err])
-                    if ui.fatal_error(new_err):
-                        return values, err
-                    values = list(set(values.extend(df[f"{element}_raw"].unique())))
-
-            except Exception as exc:
-                err = ui.add_new_error(
-                    err,
-                    "system",
-                    f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
-                    f"Unexpected exception while converting data to standard form or munging to raw: {exc}",
-                )
-                return values, err
-
-        # TODO complete
-        return values, err
 
 
 def check_par_file_elements(
