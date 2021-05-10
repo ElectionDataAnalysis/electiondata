@@ -39,7 +39,6 @@ sdl_pars_req = [
 sdl_pars_opt = [
     "jurisdiction_path",
     "jurisdiction_directory",
-    "aux_data_dir",
     "CandidateContest",
     "BallotMeasureContest",
     "BallotMeasureSelection",
@@ -148,6 +147,38 @@ class DataLoader:
         # TODO technical debt: error handling
         self.d[dir_param] = new_dir
         return
+
+    def load_one_from_ini(
+            self, ini_path: str, juris: jm.Jurisdiction, rollup: bool = False,
+    ) -> (Optional[SingleDataLoader], [dict]):
+        """Load a single results file specified by the paramters in <ini_path>"""
+        # TODO
+        sdl, err = check_and_init_singledataloader(
+            self.d["results_dir"], ini_path, self.session, self.d["munger_dir"], juris)
+        if ui.fatal_error(err):
+            return None, err
+
+        elif sdl is None:
+            err = ui.add_new_error(
+                err,
+                "ini",
+                Path(ini_path).stem,
+                f"Unexpected failure to load data (no SingleDataLoader object created)",
+            )
+        # TODO check for file problems discernible before loading
+
+        # get rollup unit if required
+        if rollup:
+            rollup_rut = db.get_major_subdiv_type(
+                self.session,
+                sdl.d["top_reporting_unit"],
+            )
+        else:
+            rollup_rut = None
+        load_error = sdl.load_results(rollup=rollup, rollup_rut=rollup_rut)
+        err = ui.consolidate_errors([err, load_error])
+
+        return err
 
     def load_all(
         self,
@@ -461,14 +492,6 @@ class SingleDataLoader:
             header="election_data_analysis",
         )
 
-        # assign None to aux_data_dir if necessary
-        if "aux_data_dir" not in self.d.keys() or self.d["aux_data_dir"] in [
-            "",
-            "None",
-            "none",
-        ]:
-            self.d["aux_data_dir"] = None
-
         # assign True to is_preliminary if necessary
         if "is_preliminary" not in self.d.keys() or self.d["is_preliminary"] in [
             "",
@@ -606,44 +629,6 @@ class SingleDataLoader:
                 constants[k] = self.d[k]
         return constants
 
-    def check_ini_to_munger(self, munger_path: str) -> Optional[dict]:
-        err = None
-        ini_constants = self.collect_constants_from_ini().keys()
-        # find elements munger thinks will be constant (and given in .ini file)
-        mp, err = ui.get_parameters(
-            required_keys=[],
-            optional_keys=["constant_over_file"],
-            header="format",
-            param_file=munger_path,
-        )
-        if (not mp["constant_over_file"]) or (mp["constant_over_file"] == ""):
-            munger_constants = set()
-        else:
-            munger_constants = mp["constant_over_file"].split(",")
-
-        # report anything missing from ini as error
-        missing_from_ini = [c for c in munger_constants if c not in ini_constants]
-        if missing_from_ini:
-            missing_str = "\n".join(missing_from_ini)
-            err = ui.add_new_error(
-                err,
-                "ini",
-                self.par_file_name,
-                f"Munger {Path(munger_path).name} requires constants to be set in the .ini file:\n{missing_str}",
-            )
-
-        # report anything missing from munger as warning
-        missing_from_munger = [c for c in ini_constants if c not in munger_constants]
-        if missing_from_munger:
-            missing_str = "\n".join(missing_from_munger)
-            err = ui.add_new_error(
-                err,
-                "warn-ini",
-                self.par_file_name,
-                f"Ini file contains constants not specified in munger {Path(munger_path).name}:\n{missing_str}",
-            )
-        return err
-
     def list_values(self, element: str) -> (list, Optional[dict]):
         """lists all values for the element found in the file"""
         err = None
@@ -739,6 +724,7 @@ def check_and_init_singledataloader(
 ) -> (Optional[SingleDataLoader], Optional[dict]):
     """Return SDL if it could be successfully initialized, and
     error dictionary (including munger errors noted in SDL initialization)"""
+
     # test parameters
     par_file = os.path.join(results_dir, par_file_name)
     sdl = None
@@ -765,6 +751,16 @@ def check_and_init_singledataloader(
             juris,
         )
         err = ui.consolidate_errors([err, sdl.munger_err])
+    # check download date
+    try:
+        datetime.datetime.strptime(d["results_download_date"], "%Y-%m-%d")
+        err_str = None
+    except TypeError:
+        err_str = f"No download date found"
+    except ValueError:
+        err_str = f"Date could not be parsed. Expected format is 'YYYY-MM-DD', actual is {d['results_download_date']}"
+    if err_str:
+        err = ui.add_new_error(err, "ini", par_file_name, err_str)
     return sdl, err
 
 
