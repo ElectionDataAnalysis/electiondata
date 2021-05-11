@@ -180,9 +180,9 @@ def run2(
         if ui.fatal_error(err):
             optional_remove(dl, "TestingData")
             return err
-
+    loaded_ej_list = [k.split(";") for k in success.keys()]
     results, _ = ui.run_tests(
-        test_dir, dbname, election_jurisdiction_list=election_jurisdiction_list
+        test_dir, dbname, election_jurisdiction_list=loaded_ej_list
     )
     if test_dir:
         for k in results.keys():

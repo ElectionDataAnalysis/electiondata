@@ -3,7 +3,7 @@ import os.path
 from election_data_analysis import database as db
 import pandas as pd
 from pandas.api.types import is_numeric_dtype
-from typing import Optional, Dict, Any
+from typing import Optional, Dict, Any, List
 from election_data_analysis import munge as m
 from election_data_analysis import user_interface as ui
 from election_data_analysis import preparation as prep
@@ -191,7 +191,7 @@ class Jurisdiction:
         for element in juris_elements:
             # read df from Jurisdiction directory
             err = load_juris_dframe_into_cdf(
-                session, element, self.path_to_juris_dir, err
+                session, element, self.path_to_juris_dir, self.short_name, err
             )
             if ui.fatal_error(err):
                 return err
@@ -354,6 +354,19 @@ def ensure_juris_files(juris_path: str, ignore_empty: bool = False) -> Optional[
                         f"Null entries in {juris_file} in columns {null_columns}",
                     )
 
+                # check uniqueness of name field
+                ambiguous_names = find_ambiguous_names(juris_file, cf_path)
+                if ambiguous_names:
+                    readable_list = '\n'.join(ambiguous_names)
+                    err = ui.add_new_error(
+                        err,
+                        "jurisdiction",
+                        juris_name,
+                        f"Some names are ambiguous, appearing in more than one row in {juris_file}.txt:"
+                        f"\n{readable_list}"
+                    )
+
+
     # check dependencies
     for juris_file in [x for x in template_list if x != "remark" and x != "dictionary"]:
         # check dependencies
@@ -366,6 +379,16 @@ def ensure_juris_files(juris_path: str, ignore_empty: bool = False) -> Optional[
     if new_err:
         err = ui.consolidate_errors([err, new_err])
     return err
+
+
+def find_ambiguous_names(element: str, cf_path: str) -> List[str]:
+    name_field = db.get_name_field(element)
+    df = pd.read_csv(cf_path, **standard_juris_csv_reading_kwargs)
+    ambiguous_names = [
+        name for name in df[name_field].unique()
+        if df[df[name_field] == name].shape[0] > 1
+    ]
+    return ambiguous_names
 
 
 def check_ru_file(juris_path: str, juris_true_name: str) -> Optional[dict]:
@@ -541,7 +564,7 @@ def juris_dependency_dictionary():
 
 
 def load_juris_dframe_into_cdf(
-    session, element, juris_path, err: Optional[dict], on_conflict: str = "NOTHING"
+    session, element, juris_path, juris_true_name: str, err: Optional[dict], on_conflict: str = "NOTHING"
 ) -> Optional[dict]:
     """TODO"""
 
@@ -618,14 +641,11 @@ def load_juris_dframe_into_cdf(
             )
 
     # commit info in df to corresponding cdf table to db
-    err_string = db.insert_to_cdf_db(session.bind, df, element, on_conflict=on_conflict)
-    if err_string:
-        err = ui.add_new_error(
-            err,
-            "system",
-            f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
-            f"Error loading {element} to database: {err_string}",
-        )
+    new_err = db.insert_to_cdf_db(
+        session.bind, df, element, "jurisdiction", juris_true_name, on_conflict=on_conflict
+    )
+    if new_err:
+        err = ui.consolidate_errors([err, new_err])
     return err
 
 
@@ -662,7 +682,7 @@ def load_or_update_juris_to_db(
     for element in juris_elements:
         # read df from Jurisdiction directory
         err = load_juris_dframe_into_cdf(
-            session, element, path_to_jurisdiction_dir, err, on_conflict="UPDATE"
+            session, element, path_to_jurisdiction_dir, juris_true_name, err, on_conflict="UPDATE"
         )
         if ui.fatal_error(err):
             return err
@@ -704,16 +724,13 @@ def load_or_update_contests(
     # insert into in Contest table
     # Structure of CandidateContest vs Contest table means there is nothing to update in the CandidateContest table.
     # TODO check handling of BallotMeasure contests -- do they need to be updated?
-    new_err_str = db.insert_to_cdf_db(
-        engine, df[["Name", "contest_type"]], "Contest", on_conflict="NOTHING"
+    new_err = db.insert_to_cdf_db(
+        engine, df[["Name", "contest_type"]], "Contest", "jurisdiction", juris_true_name, on_conflict="NOTHING"
     )
-    if new_err_str:
-        err = ui.add_new_error(
-            err,
-            "warn-system",
-            f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
-            f"Error on Contest table insertion: {new_err_str}",
-        )
+    if new_err:
+        err = ui.consolidate_errors([err, new_err])
+        if ui.fatal_error(new_err):
+            return err
 
     # append Contest_Id
     col_map = {"Name": "Name", "contest_type": "contest_type"}
@@ -747,6 +764,8 @@ def load_or_update_contests(
             engine,
             df.rename(columns={"Contest_Id": "Id"}),
             f"{contest_type}Contest",
+            "jurisdiction",
+            juris_true_name,
             on_conflict="NOTHING",
         )
         if new_err:
@@ -755,7 +774,7 @@ def load_or_update_contests(
         err = ui.add_new_error(
             err,
             "jurisdiction",
-            self.short_name,
+            juris_true_name,
             f"Contests not loaded to database (sql error {ie}). "
             f"Check CandidateContest.txt or BallotMeasureContest.txt for errors.",
         )

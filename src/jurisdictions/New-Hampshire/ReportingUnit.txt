@@ -430,8 +430,10 @@ New Hampshire;Belknap County	county
 New Hampshire;Carroll County	county
 New Hampshire;Cheshire County	county
 New Hampshire;Coos County	county
+New Hampshire;Franklin County	county
 New Hampshire;Grafton County	county
 New Hampshire;Hillsborough County	county
+New Hampshire;Lebanon County	county
 New Hampshire;Merrimack County	county
 New Hampshire;Rockingham County	county
 New Hampshire;Strafford County	county
@@ -706,7 +708,6 @@ New Hampshire;Belknap County;Laconia;Ward 4	ward
 New Hampshire;Belknap County;Laconia;Ward 3	ward
 New Hampshire;Belknap County;Laconia;Ward 2	ward
 New Hampshire;Belknap County;Laconia;Ward 1	ward
-New Hampshire;Carroll County;Hale's Location	township
 New Hampshire;Strafford County;Dover;Ward 6	ward
 New Hampshire;Strafford County;Dover;Ward 5	ward
 New Hampshire;Strafford County;Dover;Ward 4	ward
@@ -738,6 +739,7 @@ New Hampshire;Coos County;Success	unincorporated-place
 New Hampshire;Coos County;Thompson & Mes's Purchase	unincorporated-place
 New Hampshire;Coos County;Mes's Purchase	unincorporated-place
 New Hampshire;Coos County;Wentworth's Location	unincorporated-place
+New Hampshire;Lebanon County;Nashua	city
 New Hampshire;Lebanon County;Nashua;Ward 9	ward
 New Hampshire;Lebanon County;Nashua;Ward 8	ward
 New Hampshire;Lebanon County;Nashua;Ward 7	ward
@@ -750,6 +752,7 @@ New Hampshire;Lebanon County;Nashua;Ward 1	ward
 New Hampshire;Grafton County;Lebanon;Ward 3	ward
 New Hampshire;Grafton County;Lebanon;Ward 2	ward
 New Hampshire;Grafton County;Lebanon;Ward 1	ward
+New Hampshire;Franklin County;Keene	city
 New Hampshire;Franklin County;Keene;Ward 5	ward
 New Hampshire;Franklin County;Keene;Ward 4	ward
 New Hampshire;Franklin County;Keene;Ward 3*	ward

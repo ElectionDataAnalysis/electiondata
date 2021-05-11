@@ -939,7 +939,7 @@ def report(
         for k in key_list:
             remaining[k] = {}
     else:
-        print("No errors or warnings")
+        print(f"No errors or warnings. Nothing written to {output_location}")
         remaining = None
 
     return remaining

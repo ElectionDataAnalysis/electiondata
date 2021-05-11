@@ -124,20 +124,31 @@ class SingleDataLoader:
         self.mungers_dir = mungers_path
         self.munger_list = [x.strip() for x in self.d["munger_name"].split(",")]
 
-    def track_results(self) -> (dict, Optional[str]):
+    def track_results(self) -> (dict, Optional[dict]):
         """insert a record for the _datafile, recording any error string <e>.
         Return Id of _datafile.Id and Election.Id"""
+        err = None
         filename = self.d["results_file"]
         jurisdiction_id = db.name_to_id(
             self.session, "ReportingUnit", self.d["jurisdiction"]
         )
         if jurisdiction_id is None:
-            e = f"No ReportingUnit named {self.d['jurisdiction']} found in database"
-            return [0, 0], e
+            err = ui.add_new_error(
+                err,
+                "ini",
+                self.par_file_name,
+                f"No ReportingUnit named {self.d['jurisdiction']} found in database",
+            )
+            return [0, 0], err
         election_id = db.name_to_id(self.session, "Election", self.d["election"])
         if election_id is None:
-            e = f"No election named {self.d['election']} found in database"
-            return [0, 0], e
+            err = ui.add_new_error(
+                err,
+                "ini",
+                self.par_file_name,
+                f"No election named {self.d['election']} found in database",
+            )
+            return [0, 0], err
         data = pd.DataFrame(
             [
                 [
@@ -166,20 +177,24 @@ class SingleDataLoader:
         )
         data = m.clean_strings(data, ["short_name"])
         try:
-            e = db.insert_to_cdf_db(self.session.bind, data, "_datafile")
-            if e:
-                return [0, 0], e
+            err = db.insert_to_cdf_db(self.session.bind, data, "_datafile", "ini", self.par_file_name)
+            if ui.fatal_error(err):
+                return [0, 0], err
             else:
                 col_map = {"short_name": "short_name"}
                 datafile_id = db.append_id_to_dframe(
                     self.session.bind, data, "_datafile", col_map=col_map
                 ).iloc[0]["_datafile_Id"]
         except Exception as exc:
-            return (
-                [0, 0],
+            err = ui.add_new_error(
+                err,
+                "system",
+                f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
                 f"Error inserting record to _datafile table or retrieving _datafile_Id: {exc}",
             )
-        return {"_datafile_Id": datafile_id, "Election_Id": election_id}, e
+            return [0, 0], err
+
+        return {"_datafile_Id": datafile_id, "Election_Id": election_id}, err
 
     def load_results(
         self, rollup: bool = False, rollup_rut: Optional[str] = None
@@ -189,14 +204,9 @@ class SingleDataLoader:
         print(f'\n\nProcessing {self.d["results_file"]}')
 
         # Enter datafile info to db and collect _datafile_Id and Election_Id
-        results_info, err_str = self.track_results()
-        if err_str:
-            err = ui.add_new_error(
-                err,
-                "system",
-                f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
-                f"Error inserting _datafile record:\n{err_str}" f" ",
-            )
+        results_info, new_err = self.track_results()
+        if new_err:
+            err = ui.consolidate_errors([err, new_err])
             return err
 
         else:
@@ -523,21 +533,37 @@ class DataLoader:
         if load_jurisdictions:
             jurisdictions = list(set(j for (e, j) in election_jurisdiction_list))
             jurisdictions.sort()
-            for j in jurisdictions:
-                print(f"Loading/updating jurisdiction {j} to {self.session.bind}")
+            for juris in jurisdictions:
+                # check jurisdiction
+                juris_path = os.path.join(
+                    self.d["repository_content_root"],
+                    "jurisdictions",
+                    jm.system_name_from_true_name(juris)
+                )
+                new_err = jm.ensure_jurisdiction_dir(juris_path)
+                if new_err:
+                    err = ui.consolidate_errors([err, new_err])
+                    if ui.fatal_error(new_err):
+                        print(f"Jurisdiction {juris} did not load. See .error file.")
+                        # remove j from jurisdictions whose files will be loaded
+                        election_jurisdiction_list = [
+                            (e,j) for (e,j) in election_jurisdiction_list if j != juris
+                        ]
+                        continue
+                print(f"Loading/updating jurisdiction {juris} to {self.session.bind}")
                 try:
                     new_err = jm.load_or_update_juris_to_db(
                         self.session,
                         os.path.join(
-                            self.d["repository_content_root"], "jurisdictions", jm.system_name_from_true_name(j)
+                            self.d["repository_content_root"], "jurisdictions", jm.system_name_from_true_name(juris)
                         ),
-                        j,
+                        juris,
                     )
                     if new_err:
                         err = ui.consolidate_errors([err, new_err])
                 except Exception as exc:
                     err = ui.add_new_error(
-                        err, "jurisdiction", j, f"Exception during loading: {exc}"
+                        err, "jurisdiction", juris, f"Exception during loading: {exc}"
                     )
         else:
             print("No jurisdictions loaded because load_jurisdictions==False")
@@ -567,7 +593,7 @@ class DataLoader:
                     shutil.rmtree(juris_results_path)
 
             err = ui.consolidate_errors([err, new_err])
-            success[f"{election} {jurisdiction}"] = success_list
+            success[f"{election};{jurisdiction}"] = success_list
 
             #  report munger, jurisdiction and file errors & warnings
             err = ui.report(
@@ -839,10 +865,10 @@ class DataLoader:
             db.remove_vote_counts(connection, cursor, idx)
         return None
 
-    def add_totals_if_missing(self, election, jurisdiction) -> Optional[str]:
+    def add_totals_if_missing(self, election, jurisdiction) -> Optional[dict]:
         """for each election, add 'total' vote type wherever it's missing
         returning any error"""
-        err_str = None
+        err = None
         # pull results from db
         election_id = db.name_to_id(self.session, "Election", election)
         jurisdiction_id = db.name_to_id(self.session, "ReportingUnit", jurisdiction)
@@ -876,10 +902,21 @@ class DataLoader:
             m_df = m.missing_total_counts(df, self.session)
             # load new total records to db
             try:
-                err_str = db.insert_to_cdf_db(self.session.bind, m_df, "VoteCount")
+                err = db.insert_to_cdf_db(
+                    self.session.bind,
+                    m_df,
+                    "VoteCount",
+                    "system",
+                    f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
+                )
             except Exception as exc:
-                err_str = f"Insertion to database failed: {exc}"
-        return err_str
+                err = ui.add_new_error(
+                    err,
+                    "system",
+                    f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
+                    f"Unexpected exception while adding totals to existing db for {election} - {jurisdiction}"
+                )
+        return err
 
 
 def check_par_file_elements(
@@ -2460,7 +2497,7 @@ def load_results_file(
         df = m.add_constant_column(df, c, election_datafile_ids[c])
     # load counts to db
     try:
-        err = m.fill_vote_count(df, session, err)
+        err = m.fill_vote_count(df, session, munger_name, err)
     except Exception as exc:
         err = ui.add_new_error(
             err,

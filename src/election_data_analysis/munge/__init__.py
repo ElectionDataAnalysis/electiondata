@@ -769,6 +769,7 @@ def add_selection_id(  # TODO tech debt: why does this add columns 'I' and 'd'?
     engine,
     path_to_jurisdiction_dir: str,
     juris_true_name: str,
+    munger_name: str,
     err: dict,
 ) -> (pd.DataFrame, dict):
     """Assumes <df> has contest_type, BallotMeasureSelection_raw, Candidate_Id column.
@@ -837,7 +838,11 @@ def add_selection_id(  # TODO tech debt: why does this add columns 'I' and 'd'?
 
             # Load unmatched records into CandidateSelection table
             c_df_unmatched["Id"] = pd.Series(id_list, index=c_df_unmatched.index)
-            db.insert_to_cdf_db(engine, c_df_unmatched, "CandidateSelection")
+            new_err = db.insert_to_cdf_db(engine, c_df_unmatched, "CandidateSelection", "munger", munger_name)
+            if new_err:
+                err = ui.consolidate_errors([err, new_err])
+                if ui.fatal_error(new_err):
+                    return pd.DataFrame(), err
 
             # update CandidateSelection_Id column for previously unmatched, merging on Candidate_Id and Party_Id
             c_df.loc[c_df_unmatched.index, "CandidateSelection_Id"] = c_df_unmatched[
@@ -1160,7 +1165,7 @@ def munge_raw_to_ids(
     # add Selection_Id (combines info from BallotMeasureSelection and CandidateContestSelection)
     try:
         working, err = add_selection_id(
-            working, session.bind, path_to_jurisdiction_dir, juris_true_name, err
+            working, session.bind, path_to_jurisdiction_dir, juris_true_name, munger_name, err
         )
         working, err_df = clean_ids(working, ["Selection_Id"])
     except Exception as exc:
@@ -2075,6 +2080,7 @@ def to_standard_count_frame(
 def fill_vote_count(
     df: pd.DataFrame,
     session,
+    munger_name,
     err: Optional[dict],
 ) -> Optional[dict]:
 
@@ -2101,21 +2107,16 @@ def fill_vote_count(
 
     # Fill VoteCount
     try:
-        err_str = db.insert_to_cdf_db(session.bind, working, "VoteCount")
-        if err_str:
-            err = ui.add_new_error(
-                err,
-                "system",
-                f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
-                f"database insertion error {err_str}",
-            )
+        new_err = db.insert_to_cdf_db(session.bind, working, "VoteCount", "munger", munger_name)
+        if new_err:
+            err = ui.consolidate_errors([err, new_err])
             return err
     except Exception as exc:
         err = ui.add_new_error(
             err,
             "system",
             f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
-            f"Error filling VoteCount:\n{exc}",
+            f"Unexpected exception while filling VoteCount:\n{exc}",
         )
 
     return err
