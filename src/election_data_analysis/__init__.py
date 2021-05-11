@@ -518,6 +518,7 @@ class DataLoader:
             election_jurisdiction_list = ui.election_juris_list(self.d["ini_dir"], results_path=self.d["results_dir"])
             if election_list:
                 election_jurisdiction_list = [(e, j) for (e, j) in election_jurisdiction_list if e in election_list]
+        election_jurisdiction_list.sort()
 
         if load_jurisdictions:
             jurisdictions = list(set(j for (e, j) in election_jurisdiction_list))
@@ -559,6 +560,7 @@ class DataLoader:
                         os.path.join(
                             self.d["archive_dir"], f"{juris_system_name}_{latest_download_date}"
                         ),
+                        report_error=False,
                     )
                     err = ui.consolidate_errors([err, new_err])
                     # remove jurisdiction's results file from results directory
@@ -786,8 +788,9 @@ class DataLoader:
                     new_err = ui.copy_directory_with_backup(
                         juris_results_dir_path,
                         os.path.join(
-                            self.d["archive_dir"], f"{jp}_{latest_download_date}"
+                            self.d["archive_dir"], f"{jp}_{latest_download_date}",
                         ),
+                        report_error=False
                     )
                     err = ui.consolidate_errors([err, new_err])
                 # if all files loaded successfully

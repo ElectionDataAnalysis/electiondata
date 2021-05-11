@@ -684,6 +684,7 @@ def copy_directory_with_backup(
     original_path: str,
     copy_path: str,
     backup_suffix: Optional[str] = None,
+    report_error: bool = False,
 ) -> Optional[dict]:
     """copy entire directory <original_path> to <copy_path>. If
     <copy_path> exists, move it to a backup file whose name gets the suffix
@@ -702,11 +703,11 @@ def copy_directory_with_backup(
                     Path(copy_path).parent,
                     f"{old_stem}{backup_suffix}.{Path(copy_path).suffix}",
                 )
-                copy_with_err_report(copy_path, backup_path)
+                copy_with_err_handling(copy_path, backup_path, report_error=report_error)
         # copy original to desired location
         # # ensure parent directory exists
         Path(copy_path).parent.mkdir(parents=True, exist_ok=True)
-        new_err = copy_with_err_report(original_path, copy_path)
+        new_err = copy_with_err_handling(original_path, copy_path, report_error=report_error)
         err = consolidate_errors([err, new_err])
     # if the original is not a directory
     else:
@@ -720,7 +721,7 @@ def copy_directory_with_backup(
     return err
 
 
-def copy_with_err_report(original_path: str, copy_path: str) -> Optional[dict]:
+def copy_with_err_handling(original_path: str, copy_path: str, report_error: bool = True) -> Optional[dict]:
     err = None
     Path(copy_path).mkdir(parents=True, exist_ok=True)
     for root, dirs, files in os.walk(original_path, topdown=True):
@@ -731,12 +732,13 @@ def copy_with_err_report(original_path: str, copy_path: str) -> Optional[dict]:
             try:
                 shutil.copy(old, new)
             except Exception as she:
-                err = add_new_error(
-                    err,
-                    "warn-file",
-                    f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
-                    f"Error while copying {old} to {new}:\n{she}",
-                )
+                if report_error:
+                    err = add_new_error(
+                        err,
+                        "warn-file",
+                        f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
+                        f"Error while copying {old} to {new}:\n{she}",
+                    )
         for d in dirs:
             Path(os.path.join(new_root, d)).mkdir(parents=True, exist_ok=True)
     return err
