@@ -3734,7 +3734,6 @@ CandidateContest	US House FL District 9 (Republican Party)	Representative in Con
 CandidateContest	US President (FL) (Republican Party)	President of the United States (REP)
 CandidateContest	US President (FL) (Republican Party)	President of the United States (Republican)
 CandidateContest	US President (FL) (Republican Party)	PRESIDENT OF THE UNITED STATES (REP)
-sident (FL) (Republican Party) (Republican Party)	PRESIDENT OF THE UNITED STATES (REP) (REP)	
 CandidateContest	US Senate FL (Republican Party)	United States Senator (REP)
 CandidateContest	US Senate FL (Republican Party)	UNITED STATES SENATOR (REP)
 Election	2016 General	2016 General
@@ -12667,87 +12666,6 @@ Candidate	Myra Middleton Valentine	Myra Middleton Valentine
 Candidate	Myron Kirkeby	Myron Kirkeby
 Candidate	Nadia K Daughtrey	Nadia K Daughtrey
 Candidate	Nan H Rich	Nan H Rich
-ReportingUnit	nan;Precinct 	;Precinct 
-ReportingUnit	nan;Precinct 1	SEMINOLE;Precinct 1
-ReportingUnit	nan;Precinct 10	SEMINOLE;Precinct 10
-ReportingUnit	nan;Precinct 11	SEMINOLE;Precinct 11
-ReportingUnit	nan;Precinct 12	SEMINOLE;Precinct 12
-ReportingUnit	nan;Precinct 13	SEMINOLE;Precinct 13
-ReportingUnit	nan;Precinct 14	SEMINOLE;Precinct 14
-ReportingUnit	nan;Precinct 15	SEMINOLE;Precinct 15
-ReportingUnit	nan;Precinct 16	SEMINOLE;Precinct 16
-ReportingUnit	nan;Precinct 17	SEMINOLE;Precinct 17
-ReportingUnit	nan;Precinct 18	SEMINOLE;Precinct 18
-ReportingUnit	nan;Precinct 19	SEMINOLE;Precinct 19
-ReportingUnit	nan;Precinct 2	SEMINOLE;Precinct 2
-ReportingUnit	nan;Precinct 20	SEMINOLE;Precinct 20
-ReportingUnit	nan;Precinct 21	SEMINOLE;Precinct 21
-ReportingUnit	nan;Precinct 22	SEMINOLE;Precinct 22
-ReportingUnit	nan;Precinct 23	SEMINOLE;Precinct 23
-ReportingUnit	nan;Precinct 24	SEMINOLE;Precinct 24
-ReportingUnit	nan;Precinct 25	SEMINOLE;Precinct 25
-ReportingUnit	nan;Precinct 26	SEMINOLE;Precinct 26
-ReportingUnit	nan;Precinct 27	SEMINOLE;Precinct 27
-ReportingUnit	nan;Precinct 28	SEMINOLE;Precinct 28
-ReportingUnit	nan;Precinct 29	SEMINOLE;Precinct 29
-ReportingUnit	nan;Precinct 3	SEMINOLE;Precinct 3
-ReportingUnit	nan;Precinct 30	SEMINOLE;Precinct 30
-ReportingUnit	nan;Precinct 31	SEMINOLE;Precinct 31
-ReportingUnit	nan;Precinct 32	SEMINOLE;Precinct 32
-ReportingUnit	nan;Precinct 33	SEMINOLE;Precinct 33
-ReportingUnit	nan;Precinct 34	SEMINOLE;Precinct 34
-ReportingUnit	nan;Precinct 35	SEMINOLE;Precinct 35
-ReportingUnit	nan;Precinct 36	SEMINOLE;Precinct 36
-ReportingUnit	nan;Precinct 37	SEMINOLE;Precinct 37
-ReportingUnit	nan;Precinct 38	SEMINOLE;Precinct 38
-ReportingUnit	nan;Precinct 39	SEMINOLE;Precinct 39
-ReportingUnit	nan;Precinct 4	SEMINOLE;Precinct 4
-ReportingUnit	nan;Precinct 40	SEMINOLE;Precinct 40
-ReportingUnit	nan;Precinct 41	SEMINOLE;Precinct 41
-ReportingUnit	nan;Precinct 42	SEMINOLE;Precinct 42
-ReportingUnit	nan;Precinct 43	SEMINOLE;Precinct 43
-ReportingUnit	nan;Precinct 44	SEMINOLE;Precinct 44
-ReportingUnit	nan;Precinct 45	SEMINOLE;Precinct 45
-ReportingUnit	nan;Precinct 46	SEMINOLE;Precinct 46
-ReportingUnit	nan;Precinct 47	SEMINOLE;Precinct 47
-ReportingUnit	nan;Precinct 48	SEMINOLE;Precinct 48
-ReportingUnit	nan;Precinct 49	SEMINOLE;Precinct 49
-ReportingUnit	nan;Precinct 5	SEMINOLE;Precinct 5
-ReportingUnit	nan;Precinct 50	SEMINOLE;Precinct 50
-ReportingUnit	nan;Precinct 51	SEMINOLE;Precinct 51
-ReportingUnit	nan;Precinct 52	SEMINOLE;Precinct 52
-ReportingUnit	nan;Precinct 53	SEMINOLE;Precinct 53
-ReportingUnit	nan;Precinct 54	SEMINOLE;Precinct 54
-ReportingUnit	nan;Precinct 55	SEMINOLE;Precinct 55
-ReportingUnit	nan;Precinct 56	SEMINOLE;Precinct 56
-ReportingUnit	nan;Precinct 57	SEMINOLE;Precinct 57
-ReportingUnit	nan;Precinct 58	SEMINOLE;Precinct 58
-ReportingUnit	nan;Precinct 59	SEMINOLE;Precinct 59
-ReportingUnit	nan;Precinct 6	SEMINOLE;Precinct 6
-ReportingUnit	nan;Precinct 60	SEMINOLE;Precinct 60
-ReportingUnit	nan;Precinct 61	SEMINOLE;Precinct 61
-ReportingUnit	nan;Precinct 62	SEMINOLE;Precinct 62
-ReportingUnit	nan;Precinct 63	SEMINOLE;Precinct 63
-ReportingUnit	nan;Precinct 64	SEMINOLE;Precinct 64
-ReportingUnit	nan;Precinct 65	SEMINOLE;Precinct 65
-ReportingUnit	nan;Precinct 66	SEMINOLE;Precinct 66
-ReportingUnit	nan;Precinct 67	SEMINOLE;Precinct 67
-ReportingUnit	nan;Precinct 68	SEMINOLE;Precinct 68
-ReportingUnit	nan;Precinct 69	SEMINOLE;Precinct 69
-ReportingUnit	nan;Precinct 7	SEMINOLE;Precinct 7
-ReportingUnit	nan;Precinct 70	SEMINOLE;Precinct 70
-ReportingUnit	nan;Precinct 71	SEMINOLE;Precinct 71
-ReportingUnit	nan;Precinct 72	SEMINOLE;Precinct 72
-ReportingUnit	nan;Precinct 73	SEMINOLE;Precinct 73
-ReportingUnit	nan;Precinct 74	SEMINOLE;Precinct 74
-ReportingUnit	nan;Precinct 75	SEMINOLE;Precinct 75
-ReportingUnit	nan;Precinct 76	SEMINOLE;Precinct 76
-ReportingUnit	nan;Precinct 77	SEMINOLE;Precinct 77
-ReportingUnit	nan;Precinct 78	SEMINOLE;Precinct 78
-ReportingUnit	nan;Precinct 79	SEMINOLE;Precinct 79
-ReportingUnit	nan;Precinct 8	SEMINOLE;Precinct 8
-ReportingUnit	nan;Precinct 80	SEMINOLE;Precinct 80
-ReportingUnit	nan;Precinct 9	SEMINOLE;Precinct 9
 Candidate	Nancy Benita Corbin	Nancy Benita Corbin
 Candidate	Nancy J Griffis	Nancy J Griffis
 Candidate	Nancy M McGovern	Nancy M McGovern
@@ -13398,7 +13316,6 @@ CandidateContest	US House FL District 1	Representative in Congress District 001
 CandidateContest	US House FL District 1	United States Representative 001
 CandidateContest	US House FL District 1	Representative in Congress 001
 CandidateContest	US House FL District 1	Representative in Congress, District 1
-CandidateContest	US House FL District 1 (Democratic Party)	Representative in Congress, District 1 (REP)
 CandidateContest	US House FL District 1	Representative in Congress District 1
 CandidateContest	US House FL District 1	Representative in Congress 1
 Office	US House FL District 1	Representative in Congress District 1
@@ -13406,7 +13323,6 @@ CandidateContest	US House FL District 10	Representative in Congress District 010
 CandidateContest	US House FL District 10	United States Representative 010
 CandidateContest	US House FL District 10	Representative in Congress 010
 CandidateContest	US House FL District 10	Representative in Congress, District 10
-CandidateContest	US House FL District 10 (Democratic Party)	Representative in Congress, District 10 (REP)
 CandidateContest	US House FL District 10	Representative in Congress District 10
 CandidateContest	US House FL District 10	Representative in Congress 10
 Office	US House FL District 10	Representative in Congress District 10
@@ -13414,7 +13330,6 @@ CandidateContest	US House FL District 11	Representative in Congress District 011
 CandidateContest	US House FL District 11	United States Representative 011
 CandidateContest	US House FL District 11	Representative in Congress 011
 CandidateContest	US House FL District 11	Representative in Congress, District 11
-CandidateContest	US House FL District 11 (Democratic Party)	Representative in Congress, District 11 (REP)
 CandidateContest	US House FL District 11	Representative in Congress District 11
 CandidateContest	US House FL District 11	Representative in Congress 11
 Office	US House FL District 11	Representative in Congress District 11
@@ -13422,7 +13337,6 @@ CandidateContest	US House FL District 12	Representative in Congress District 012
 CandidateContest	US House FL District 12	United States Representative 012
 CandidateContest	US House FL District 12	Representative in Congress 012
 CandidateContest	US House FL District 12	Representative in Congress, District 12
-CandidateContest	US House FL District 12 (Democratic Party)	Representative in Congress, District 12 (REP)
 CandidateContest	US House FL District 12	Representative in Congress District 12
 CandidateContest	US House FL District 12	Representative in Congress 12
 Office	US House FL District 12	Representative in Congress District 12
@@ -13430,7 +13344,6 @@ CandidateContest	US House FL District 13	Representative in Congress District 013
 CandidateContest	US House FL District 13	United States Representative 013
 CandidateContest	US House FL District 13	Representative in Congress 013
 CandidateContest	US House FL District 13	Representative in Congress, District 13
-CandidateContest	US House FL District 13 (Democratic Party)	Representative in Congress, District 13 (REP)
 CandidateContest	US House FL District 13	Representative in Congress District 13
 CandidateContest	US House FL District 13	Representative in Congress 13
 Office	US House FL District 13	Representative in Congress District 13
@@ -13438,7 +13351,6 @@ CandidateContest	US House FL District 14	Representative in Congress District 014
 CandidateContest	US House FL District 14	United States Representative 014
 CandidateContest	US House FL District 14	Representative in Congress 014
 CandidateContest	US House FL District 14	Representative in Congress, District 14
-CandidateContest	US House FL District 14 (Democratic Party)	Representative in Congress, District 14 (REP)
 CandidateContest	US House FL District 14	Representative in Congress District 14
 CandidateContest	US House FL District 14	Representative in Congress 14
 Office	US House FL District 14	Representative in Congress District 14
@@ -13446,7 +13358,6 @@ CandidateContest	US House FL District 15	Representative in Congress District 015
 CandidateContest	US House FL District 15	United States Representative 015
 CandidateContest	US House FL District 15	Representative in Congress 015
 CandidateContest	US House FL District 15	Representative in Congress, District 15
-CandidateContest	US House FL District 15 (Democratic Party)	Representative in Congress, District 15 (REP)
 CandidateContest	US House FL District 15	Representative in Congress District 15
 CandidateContest	US House FL District 15	Representative in Congress 15
 Office	US House FL District 15	Representative in Congress District 15
@@ -13454,7 +13365,6 @@ CandidateContest	US House FL District 16	Representative in Congress District 016
 CandidateContest	US House FL District 16	United States Representative 016
 CandidateContest	US House FL District 16	Representative in Congress 016
 CandidateContest	US House FL District 16	Representative in Congress, District 16
-CandidateContest	US House FL District 16 (Democratic Party)	Representative in Congress, District 16 (REP)
 CandidateContest	US House FL District 16	Representative in Congress District 16
 CandidateContest	US House FL District 16	Representative in Congress 16
 Office	US House FL District 16	Representative in Congress District 16
@@ -13462,7 +13372,6 @@ CandidateContest	US House FL District 17	Representative in Congress District 017
 CandidateContest	US House FL District 17	United States Representative 017
 CandidateContest	US House FL District 17	Representative in Congress 017
 CandidateContest	US House FL District 17	Representative in Congress, District 17
-CandidateContest	US House FL District 17 (Democratic Party)	Representative in Congress, District 17 (REP)
 CandidateContest	US House FL District 17	Representative in Congress District 17
 CandidateContest	US House FL District 17	Representative in Congress 17
 Office	US House FL District 17	Representative in Congress District 17
@@ -13470,7 +13379,6 @@ CandidateContest	US House FL District 18	Representative in Congress District 018
 CandidateContest	US House FL District 18	United States Representative 018
 CandidateContest	US House FL District 18	Representative in Congress 018
 CandidateContest	US House FL District 18	Representative in Congress, District 18
-CandidateContest	US House FL District 18 (Democratic Party)	Representative in Congress, District 18 (REP)
 CandidateContest	US House FL District 18	Representative in Congress District 18
 CandidateContest	US House FL District 18	Representative in Congress 18
 Office	US House FL District 18	Representative in Congress District 18
@@ -13478,7 +13386,6 @@ CandidateContest	US House FL District 19	Representative in Congress District 019
 CandidateContest	US House FL District 19	United States Representative 019
 CandidateContest	US House FL District 19	Representative in Congress 019
 CandidateContest	US House FL District 19	Representative in Congress, District 19
-CandidateContest	US House FL District 19 (Democratic Party)	Representative in Congress, District 19 (REP)
 CandidateContest	US House FL District 19	Representative in Congress District 19
 CandidateContest	US House FL District 19	Representative in Congress 19
 Office	US House FL District 19	Representative in Congress District 19
@@ -13486,7 +13393,6 @@ CandidateContest	US House FL District 2	Representative in Congress District 002
 CandidateContest	US House FL District 2	United States Representative 002
 CandidateContest	US House FL District 2	Representative in Congress 002
 CandidateContest	US House FL District 2	Representative in Congress, District 2
-CandidateContest	US House FL District 2 (Democratic Party)	Representative in Congress, District 2 (REP)
 CandidateContest	US House FL District 2	Representative in Congress District 2
 CandidateContest	US House FL District 2	Representative in Congress 2
 Office	US House FL District 2	Representative in Congress District 2
@@ -13494,7 +13400,6 @@ CandidateContest	US House FL District 20	Representative in Congress District 020
 CandidateContest	US House FL District 20	United States Representative 020
 CandidateContest	US House FL District 20	Representative in Congress 020
 CandidateContest	US House FL District 20	Representative in Congress, District 20
-CandidateContest	US House FL District 20 (Democratic Party)	Representative in Congress, District 20 (REP)
 CandidateContest	US House FL District 20	Representative in Congress District 20
 CandidateContest	US House FL District 20	Representative in Congress 20
 Office	US House FL District 20	Representative in Congress District 20
@@ -13502,7 +13407,6 @@ CandidateContest	US House FL District 21	Representative in Congress District 021
 CandidateContest	US House FL District 21	United States Representative 021
 CandidateContest	US House FL District 21	Representative in Congress 021
 CandidateContest	US House FL District 21	Representative in Congress, District 21
-CandidateContest	US House FL District 21 (Democratic Party)	Representative in Congress, District 21 (REP)
 CandidateContest	US House FL District 21	Representative in Congress District 21
 CandidateContest	US House FL District 21	Representative in Congress 21
 Office	US House FL District 21	Representative in Congress District 21
@@ -13510,7 +13414,6 @@ CandidateContest	US House FL District 22	Representative in Congress District 022
 CandidateContest	US House FL District 22	United States Representative 022
 CandidateContest	US House FL District 22	Representative in Congress 022
 CandidateContest	US House FL District 22	Representative in Congress, District 22
-CandidateContest	US House FL District 22 (Democratic Party)	Representative in Congress, District 22 (REP)
 CandidateContest	US House FL District 22	Representative in Congress District 22
 CandidateContest	US House FL District 22	Representative in Congress 22
 Office	US House FL District 22	Representative in Congress District 22
@@ -13518,7 +13421,6 @@ CandidateContest	US House FL District 23	Representative in Congress District 023
 CandidateContest	US House FL District 23	United States Representative 023
 CandidateContest	US House FL District 23	Representative in Congress 023
 CandidateContest	US House FL District 23	Representative in Congress, District 23
-CandidateContest	US House FL District 23 (Democratic Party)	Representative in Congress, District 23 (REP)
 CandidateContest	US House FL District 23	Representative in Congress District 23
 CandidateContest	US House FL District 23	Representative in Congress 23
 Office	US House FL District 23	Representative in Congress District 23
@@ -13526,7 +13428,6 @@ CandidateContest	US House FL District 24	Representative in Congress District 024
 CandidateContest	US House FL District 24	United States Representative 024
 CandidateContest	US House FL District 24	Representative in Congress 024
 CandidateContest	US House FL District 24	Representative in Congress, District 24
-CandidateContest	US House FL District 24 (Democratic Party)	Representative in Congress, District 24 (REP)
 CandidateContest	US House FL District 24	Representative in Congress District 24
 CandidateContest	US House FL District 24	Representative in Congress 24
 Office	US House FL District 24	Representative in Congress District 24
@@ -13534,7 +13435,6 @@ CandidateContest	US House FL District 25	Representative in Congress District 025
 CandidateContest	US House FL District 25	United States Representative 025
 CandidateContest	US House FL District 25	Representative in Congress 025
 CandidateContest	US House FL District 25	Representative in Congress, District 25
-CandidateContest	US House FL District 25 (Democratic Party)	Representative in Congress, District 25 (REP)
 CandidateContest	US House FL District 25	Representative in Congress District 25
 CandidateContest	US House FL District 25	Representative in Congress 25
 Office	US House FL District 25	Representative in Congress District 25
@@ -13542,7 +13442,6 @@ CandidateContest	US House FL District 26	Representative in Congress District 026
 CandidateContest	US House FL District 26	United States Representative 026
 CandidateContest	US House FL District 26	Representative in Congress 026
 CandidateContest	US House FL District 26	Representative in Congress, District 26
-CandidateContest	US House FL District 26 (Democratic Party)	Representative in Congress, District 26 (REP)
 CandidateContest	US House FL District 26	Representative in Congress District 26
 CandidateContest	US House FL District 26	Representative in Congress 26
 Office	US House FL District 26	Representative in Congress District 26
@@ -13550,7 +13449,6 @@ CandidateContest	US House FL District 27	Representative in Congress District 027
 CandidateContest	US House FL District 27	United States Representative 027
 CandidateContest	US House FL District 27	Representative in Congress 027
 CandidateContest	US House FL District 27	Representative in Congress, District 27
-CandidateContest	US House FL District 27 (Democratic Party)	Representative in Congress, District 27 (REP)
 CandidateContest	US House FL District 27	Representative in Congress District 27
 CandidateContest	US House FL District 27	Representative in Congress 27
 Office	US House FL District 27	Representative in Congress District 27
@@ -13558,7 +13456,6 @@ CandidateContest	US House FL District 3	Representative in Congress District 003
 CandidateContest	US House FL District 3	United States Representative 003
 CandidateContest	US House FL District 3	Representative in Congress 003
 CandidateContest	US House FL District 3	Representative in Congress, District 3
-CandidateContest	US House FL District 3 (Democratic Party)	Representative in Congress, District 3 (REP)
 CandidateContest	US House FL District 3	Representative in Congress District 3
 CandidateContest	US House FL District 3	Representative in Congress 3
 Office	US House FL District 3	Representative in Congress District 3
@@ -13566,7 +13463,6 @@ CandidateContest	US House FL District 4	Representative in Congress District 004
 CandidateContest	US House FL District 4	United States Representative 004
 CandidateContest	US House FL District 4	Representative in Congress 004
 CandidateContest	US House FL District 4	Representative in Congress, District 4
-CandidateContest	US House FL District 4 (Democratic Party)	Representative in Congress, District 4 (REP)
 CandidateContest	US House FL District 4	Representative in Congress District 4
 CandidateContest	US House FL District 4	Representative in Congress 4
 Office	US House FL District 4	Representative in Congress District 4
@@ -13574,7 +13470,6 @@ CandidateContest	US House FL District 5	Representative in Congress District 005
 CandidateContest	US House FL District 5	United States Representative 005
 CandidateContest	US House FL District 5	Representative in Congress 005
 CandidateContest	US House FL District 5	Representative in Congress, District 5
-CandidateContest	US House FL District 5 (Democratic Party)	Representative in Congress, District 5 (REP)
 CandidateContest	US House FL District 5	Representative in Congress District 5
 CandidateContest	US House FL District 5	Representative in Congress 5
 Office	US House FL District 5	Representative in Congress District 5
@@ -13582,7 +13477,6 @@ CandidateContest	US House FL District 6	Representative in Congress District 006
 CandidateContest	US House FL District 6	United States Representative 006
 CandidateContest	US House FL District 6	Representative in Congress 006
 CandidateContest	US House FL District 6	Representative in Congress, District 6
-CandidateContest	US House FL District 6 (Democratic Party)	Representative in Congress, District 6 (REP)
 CandidateContest	US House FL District 6	Representative in Congress District 6
 CandidateContest	US House FL District 6	Representative in Congress 6
 Office	US House FL District 6	Representative in Congress District 6
@@ -13590,7 +13484,6 @@ CandidateContest	US House FL District 7	Representative in Congress District 007
 CandidateContest	US House FL District 7	United States Representative 007
 CandidateContest	US House FL District 7	Representative in Congress 007
 CandidateContest	US House FL District 7	Representative in Congress, District 7
-CandidateContest	US House FL District 7 (Democratic Party)	Representative in Congress, District 7 (REP)
 CandidateContest	US House FL District 7	Representative in Congress District 7
 CandidateContest	US House FL District 7	Representative in Congress 7
 Office	US House FL District 7	Representative in Congress District 7
@@ -13600,7 +13493,6 @@ CandidateContest	US House FL District 8	Representative in Congress District 008
 CandidateContest	US House FL District 8	United States Representative 008
 CandidateContest	US House FL District 8	Representative in Congress 008
 CandidateContest	US House FL District 8	Representative in Congress, District 8
-CandidateContest	US House FL District 8 (Democratic Party)	Representative in Congress, District 8 (REP)
 CandidateContest	US House FL District 8	Representative in Congress District 8
 CandidateContest	US House FL District 8	Representative in Congress 8
 Office	US House FL District 8	Representative in Congress District 8
@@ -13608,7 +13500,6 @@ CandidateContest	US House FL District 9	Representative in Congress District 009
 CandidateContest	US House FL District 9	United States Representative 009
 CandidateContest	US House FL District 9	Representative in Congress 009
 CandidateContest	US House FL District 9	Representative in Congress, District 9
-CandidateContest	US House FL District 9 (Democratic Party)	Representative in Congress, District 9 (REP)
 CandidateContest	US House FL District 9	Representative in Congress District 9
 CandidateContest	US House FL District 9	Representative in Congress 9
 Office	US House FL District 9	Representative in Congress District 9

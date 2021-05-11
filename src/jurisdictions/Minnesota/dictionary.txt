@@ -13341,9 +13341,5 @@ Candidate	Cal K. Bahr	Cal K. Bahr
 Candidate	Bryan P. Björnson	Bryan P. Björnson
 Candidate	Julián Castro	Julián Castro
 Candidate	Margaret E. Martín	Margaret E. Martín
-Candidate	Margaret E. Martín	Margaret E. MartÃÂÃÂ­n
-Candidate	Julián Castro	JuliÃÂÃÂ¡n Castro
 Candidate	Joseph Patiño	Joseph Patiño
-Candidate	Joseph Patiño	Joseph PatiÃÂÃÂ±o
 Candidate	Barbara Dröher Kline	Barbara Dröher Kline
-Candidate	Barbara Dröher Kline	Barbara DrÃÂÃÂ¶her Kline

@@ -161,7 +161,7 @@ Tennessee;Crockett County	county
 Tennessee;Cumberland County	county
 Tennessee;Davidson County	county
 Tennessee;Decatur County	county
-Tennessee;Dekalb County	county
+Tennessee;DeKalb County	county
 Tennessee;Dickson County	county
 Tennessee;Dyer County	county
 Tennessee;Fayette County	county
@@ -706,21 +706,21 @@ Tennessee;Decatur County;7-2 Perryville	precinct
 Tennessee;Decatur County;8-1 Parsons	precinct
 Tennessee;Decatur County;9-1 Beacon	precinct
 Tennessee;Decatur County;9-2 Hydro	precinct
-Tennessee;Dekalb County;1-1 Alexandria	precinct
-Tennessee;Dekalb County;1-2 Temperence Hall	precinct
-Tennessee;Dekalb County;1-3 Edgar Evins Park	precinct
-Tennessee;Dekalb County;2-1 Liberty	precinct
-Tennessee;Dekalb County;2-2 Dowelltown	precinct
-Tennessee;Dekalb County;2-3 Snows Hill	precinct
-Tennessee;Dekalb County;3-1 Church of God	precinct
-Tennessee;Dekalb County;4-2 Rock Castle	precinct
-Tennessee;Dekalb County;4-3 Courthouse	precinct
-Tennessee;Dekalb County;5-1 Johnson Chapel	precinct
-Tennessee;Dekalb County;5-2 County Complex	precinct
-Tennessee;Dekalb County;6-1 Belk	precinct
-Tennessee;Dekalb County;6-2 Keltonburg	precinct
-Tennessee;Dekalb County;6-3 Blue Springs	precinct
-Tennessee;Dekalb County;7-1 Church of Christ	precinct
+Tennessee;DeKalb County;1-1 Alexandria	precinct
+Tennessee;DeKalb County;1-2 Temperence Hall	precinct
+Tennessee;DeKalb County;1-3 Edgar Evins Park	precinct
+Tennessee;DeKalb County;2-1 Liberty	precinct
+Tennessee;DeKalb County;2-2 Dowelltown	precinct
+Tennessee;DeKalb County;2-3 Snows Hill	precinct
+Tennessee;DeKalb County;3-1 Church of God	precinct
+Tennessee;DeKalb County;4-2 Rock Castle	precinct
+Tennessee;DeKalb County;4-3 Courthouse	precinct
+Tennessee;DeKalb County;5-1 Johnson Chapel	precinct
+Tennessee;DeKalb County;5-2 County Complex	precinct
+Tennessee;DeKalb County;6-1 Belk	precinct
+Tennessee;DeKalb County;6-2 Keltonburg	precinct
+Tennessee;DeKalb County;6-3 Blue Springs	precinct
+Tennessee;DeKalb County;7-1 Church of Christ	precinct
 Tennessee;Dickson County;1-1	precinct
 Tennessee;Dickson County;1-2	precinct
 Tennessee;Dickson County;2-1	precinct

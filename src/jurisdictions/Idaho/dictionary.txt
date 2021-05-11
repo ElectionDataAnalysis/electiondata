@@ -124,7 +124,6 @@ Party	Libertarian Party	LIB
 Party	CON	CON
 Party	IND	IND
 Party	W/I	W/I
-ReportingUnit	Idaho	Idaho
 ReportingUnit	Idaho;Ada County	Ada
 ReportingUnit	Idaho;Adams County	Adams
 ReportingUnit	Idaho;Bannock County	Bannock

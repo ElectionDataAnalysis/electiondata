@@ -5458,3 +5458,3306 @@ Michigan;Lenawee County;TECUMSEH TOWNSHIP;Ward 0;Precinct 3 Label	precinct
 Michigan;Livingston County;{Statistical Adjustments};Ward 0;Precinct 9999 Label	precinct
 Michigan;Muskegon County;{Statistical Adjustments};Ward 0;Precinct 9999 Label	precinct
 Michigan;Lenawee County;TECUMSEH CITY;Ward 0;Precinct 3 Label	precinct
+
+Michigan;Wexford County;{Statistical Adjustments};Ward 0	ward
+Michigan;Wexford County;{Statistical Adjustments}
+Michigan;Wexford County;WEXFORD TOWNSHIP;Ward 0	ward
+Michigan;Wexford County;WEXFORD TOWNSHIP	township
+Michigan;Wexford County;SPRINGVILLE TOWNSHIP;Ward 0	ward
+Michigan;Wexford County;SPRINGVILLE TOWNSHIP	township
+Michigan;Wexford County;SOUTH BRANCH TOWNSHIP;Ward 0	ward
+Michigan;Wexford County;SOUTH BRANCH TOWNSHIP	township
+Michigan;Wexford County;SLAGLE TOWNSHIP;Ward 0	ward
+Michigan;Wexford County;SLAGLE TOWNSHIP	township
+Michigan;Wexford County;SELMA TOWNSHIP;Ward 0	ward
+Michigan;Wexford County;SELMA TOWNSHIP	township
+Michigan;Wexford County;MANTON CITY;Ward 0	ward
+Michigan;Wexford County;MANTON CITY	city
+Michigan;Wexford County;LIBERTY TOWNSHIP;Ward 0	ward
+Michigan;Wexford County;LIBERTY TOWNSHIP	township
+Michigan;Wexford County;HENDERSON TOWNSHIP;Ward 0	ward
+Michigan;Wexford County;HENDERSON TOWNSHIP	township
+Michigan;Wexford County;HARING TOWNSHIP;Ward 0	ward
+Michigan;Wexford County;HARING TOWNSHIP	township
+Michigan;Wexford County;HANOVER TOWNSHIP;Ward 0	ward
+Michigan;Wexford County;HANOVER TOWNSHIP	township
+Michigan;Wexford County;GREENWOOD TOWNSHIP;Ward 0	ward
+Michigan;Wexford County;GREENWOOD TOWNSHIP	township
+Michigan;Wexford County;COLFAX TOWNSHIP;Ward 0	ward
+Michigan;Wexford County;COLFAX TOWNSHIP	township
+Michigan;Wexford County;CLAM LAKE TOWNSHIP;Ward 0	ward
+Michigan;Wexford County;CLAM LAKE TOWNSHIP	township
+Michigan;Wexford County;CHERRY GROVE TOWNSHIP;Ward 0	ward
+Michigan;Wexford County;CHERRY GROVE TOWNSHIP	township
+Michigan;Wexford County;CEDAR CREEK TOWNSHIP;Ward 0	ward
+Michigan;Wexford County;CEDAR CREEK TOWNSHIP	township
+Michigan;Wexford County;CADILLAC CITY;Ward 0	ward
+Michigan;Wexford County;CADILLAC CITY	city
+Michigan;Wexford County;BOON TOWNSHIP;Ward 0	ward
+Michigan;Wexford County;BOON TOWNSHIP	township
+Michigan;Wexford County;ANTIOCH TOWNSHIP;Ward 0	ward
+Michigan;Wexford County;ANTIOCH TOWNSHIP	township
+Michigan;Wayne County;{Statistical Adjustments};Ward 0	ward
+Michigan;Wayne County;{Statistical Adjustments}
+Michigan;Wayne County;WYANDOTTE CITY;Ward 0	ward
+Michigan;Wayne County;WYANDOTTE CITY	city
+Michigan;Wayne County;WOODHAVEN CITY;Ward 0	ward
+Michigan;Wayne County;WOODHAVEN CITY	city
+Michigan;Wayne County;WESTLAND CITY;Ward 0	ward
+Michigan;Wayne County;WESTLAND CITY	city
+Michigan;Wayne County;WAYNE CITY;Ward 0	ward
+Michigan;Wayne County;WAYNE CITY	city
+Michigan;Wayne County;VAN BUREN TOWNSHIP;Ward 0	ward
+Michigan;Wayne County;VAN BUREN TOWNSHIP	township
+Michigan;Wayne County;TRENTON CITY;Ward 0	ward
+Michigan;Wayne County;TRENTON CITY	city
+Michigan;Wayne County;TAYLOR CITY;Ward 0	ward
+Michigan;Wayne County;TAYLOR CITY	city
+Michigan;Wayne County;SUMPTER TOWNSHIP;Ward 0	ward
+Michigan;Wayne County;SUMPTER TOWNSHIP	township
+Michigan;Wayne County;SOUTHGATE CITY;Ward 0	ward
+Michigan;Wayne County;SOUTHGATE CITY	city
+Michigan;Wayne County;ROMULUS CITY;Ward 0	ward
+Michigan;Wayne County;ROMULUS CITY	city
+Michigan;Wayne County;ROCKWOOD CITY;Ward 0	ward
+Michigan;Wayne County;ROCKWOOD CITY	city
+Michigan;Wayne County;RIVERVIEW CITY;Ward 0	ward
+Michigan;Wayne County;RIVERVIEW CITY	city
+Michigan;Wayne County;RIVER ROUGE CITY;Ward 0	ward
+Michigan;Wayne County;RIVER ROUGE CITY	city
+Michigan;Wayne County;REDFORD TOWNSHIP;Ward 0	ward
+Michigan;Wayne County;REDFORD TOWNSHIP	township
+Michigan;Wayne County;PLYMOUTH TOWNSHIP;Ward 0	ward
+Michigan;Wayne County;PLYMOUTH TOWNSHIP	township
+Michigan;Wayne County;PLYMOUTH CITY;Ward 0	ward
+Michigan;Wayne County;PLYMOUTH CITY	city
+Michigan;Wayne County;NORTHVILLE TOWNSHIP;Ward 0	ward
+Michigan;Wayne County;NORTHVILLE TOWNSHIP	township
+Michigan;Wayne County;NORTHVILLE CITY;Ward 0	ward
+Michigan;Wayne County;NORTHVILLE CITY	city
+Michigan;Wayne County;MELVINDALE CITY;Ward 0	ward
+Michigan;Wayne County;MELVINDALE CITY	city
+Michigan;Wayne County;LIVONIA CITY;Ward 0	ward
+Michigan;Wayne County;LIVONIA CITY	city
+Michigan;Wayne County;LINCOLN PARK CITY;Ward 0	ward
+Michigan;Wayne County;LINCOLN PARK CITY	city
+Michigan;Wayne County;INKSTER CITY;Ward 6
+Michigan;Wayne County;INKSTER CITY;Ward 5
+Michigan;Wayne County;INKSTER CITY;Ward 4
+Michigan;Wayne County;INKSTER CITY;Ward 3
+Michigan;Wayne County;INKSTER CITY;Ward 2
+Michigan;Wayne County;INKSTER CITY;Ward 1	ward
+Michigan;Wayne County;INKSTER CITY	city
+Michigan;Wayne County;HURON TOWNSHIP;Ward 0	ward
+Michigan;Wayne County;HURON TOWNSHIP	township
+Michigan;Wayne County;HIGHLAND PARK CITY;Ward 0	ward
+Michigan;Wayne County;HIGHLAND PARK CITY	city
+Michigan;Wayne County;HARPER WOODS CITY;Ward 0	ward
+Michigan;Wayne County;HARPER WOODS CITY	city
+Michigan;Wayne County;HAMTRAMCK CITY;Ward 0	ward
+Michigan;Wayne County;HAMTRAMCK CITY	city
+Michigan;Wayne County;GROSSE POINTE WOODS CITY;Ward 0	ward
+Michigan;Wayne County;GROSSE POINTE WOODS CITY	city
+Michigan;Wayne County;GROSSE POINTE SHORES CITY;Ward 0	ward
+Michigan;Wayne County;GROSSE POINTE SHORES CITY	city
+Michigan;Wayne County;GROSSE POINTE PARK CITY;Ward 0	ward
+Michigan;Wayne County;GROSSE POINTE PARK CITY	city
+Michigan;Wayne County;GROSSE POINTE FARMS CITY;Ward 0	ward
+Michigan;Wayne County;GROSSE POINTE FARMS CITY	city
+Michigan;Wayne County;GROSSE POINTE CITY;Ward 0	ward
+Michigan;Wayne County;GROSSE POINTE CITY	city
+Michigan;Wayne County;GROSSE ILE TOWNSHIP;Ward 0	ward
+Michigan;Wayne County;GROSSE ILE TOWNSHIP	township
+Michigan;Wayne County;GIBRALTAR CITY;Ward 0	ward
+Michigan;Wayne County;GIBRALTAR CITY	city
+Michigan;Wayne County;GARDEN CITY;Ward 0	ward
+Michigan;Wayne County;GARDEN CITY	city
+Michigan;Wayne County;FLAT ROCK CITY;Ward 0	ward
+Michigan;Wayne County;FLAT ROCK CITY	city
+Michigan;Wayne County;ECORSE CITY;Ward 0	ward
+Michigan;Wayne County;ECORSE CITY	city
+Michigan;Wayne County;DETROIT CITY;Ward 0	ward
+Michigan;Wayne County;DETROIT CITY	city
+Michigan;Wayne County;DEARBORN HEIGHTS CITY;Ward 0	ward
+Michigan;Wayne County;DEARBORN HEIGHTS CITY	city
+Michigan;Wayne County;DEARBORN CITY;Ward 0	ward
+Michigan;Wayne County;DEARBORN CITY	city
+Michigan;Wayne County;CANTON TOWNSHIP;Ward 0	ward
+Michigan;Wayne County;CANTON TOWNSHIP	township
+Michigan;Wayne County;BROWNSTOWN TOWNSHIP;Ward 0	ward
+Michigan;Wayne County;BROWNSTOWN TOWNSHIP	township
+Michigan;Wayne County;BELLEVILLE CITY;Ward 0	ward
+Michigan;Wayne County;BELLEVILLE CITY	city
+Michigan;Wayne County;ALLEN PARK CITY;Ward 0	ward
+Michigan;Wayne County;ALLEN PARK CITY	city
+Michigan;Washtenaw County;{Statistical Adjustments};Ward 0	ward
+Michigan;Washtenaw County;{Statistical Adjustments}
+Michigan;Washtenaw County;YPSILANTI TOWNSHIP;Ward 0	ward
+Michigan;Washtenaw County;YPSILANTI TOWNSHIP	township
+Michigan;Washtenaw County;YPSILANTI CITY;Ward 3
+Michigan;Washtenaw County;YPSILANTI CITY;Ward 2
+Michigan;Washtenaw County;YPSILANTI CITY;Ward 1	ward
+Michigan;Washtenaw County;YPSILANTI CITY	city
+Michigan;Washtenaw County;YORK TOWNSHIP;Ward 0	ward
+Michigan;Washtenaw County;YORK TOWNSHIP	township
+Michigan;Washtenaw County;WEBSTER TOWNSHIP;Ward 0	ward
+Michigan;Washtenaw County;WEBSTER TOWNSHIP	township
+Michigan;Washtenaw County;SYLVAN TOWNSHIP;Ward 0	ward
+Michigan;Washtenaw County;SYLVAN TOWNSHIP	township
+Michigan;Washtenaw County;SUPERIOR TOWNSHIP;Ward 0	ward
+Michigan;Washtenaw County;SUPERIOR TOWNSHIP	township
+Michigan;Washtenaw County;SHARON TOWNSHIP;Ward 0	ward
+Michigan;Washtenaw County;SHARON TOWNSHIP	township
+Michigan;Washtenaw County;SCIO TOWNSHIP;Ward 0	ward
+Michigan;Washtenaw County;SCIO TOWNSHIP	township
+Michigan;Washtenaw County;SALINE TOWNSHIP;Ward 0	ward
+Michigan;Washtenaw County;SALINE TOWNSHIP	township
+Michigan;Washtenaw County;SALINE CITY;Ward 0	ward
+Michigan;Washtenaw County;SALINE CITY	city
+Michigan;Washtenaw County;SALEM TOWNSHIP;Ward 0	ward
+Michigan;Washtenaw County;SALEM TOWNSHIP	township
+Michigan;Washtenaw County;PITTSFIELD TOWNSHIP;Ward 0	ward
+Michigan;Washtenaw County;PITTSFIELD TOWNSHIP	township
+Michigan;Washtenaw County;NORTHFIELD TOWNSHIP;Ward 0	ward
+Michigan;Washtenaw County;NORTHFIELD TOWNSHIP	township
+Michigan;Washtenaw County;MILAN CITY;Ward 0	ward
+Michigan;Washtenaw County;MILAN CITY	city
+Michigan;Washtenaw County;MANCHESTER TOWNSHIP;Ward 0	ward
+Michigan;Washtenaw County;MANCHESTER TOWNSHIP	township
+Michigan;Washtenaw County;LYNDON TOWNSHIP;Ward 0	ward
+Michigan;Washtenaw County;LYNDON TOWNSHIP	township
+Michigan;Washtenaw County;LODI TOWNSHIP;Ward 0	ward
+Michigan;Washtenaw County;LODI TOWNSHIP	township
+Michigan;Washtenaw County;LIMA TOWNSHIP;Ward 0	ward
+Michigan;Washtenaw County;LIMA TOWNSHIP	township
+Michigan;Washtenaw County;FREEDOM TOWNSHIP;Ward 0	ward
+Michigan;Washtenaw County;FREEDOM TOWNSHIP	township
+Michigan;Washtenaw County;DEXTER TOWNSHIP;Ward 0	ward
+Michigan;Washtenaw County;DEXTER TOWNSHIP	township
+Michigan;Washtenaw County;DEXTER CITY;Ward 1	ward
+Michigan;Washtenaw County;DEXTER CITY;Ward 0	ward
+Michigan;Washtenaw County;DEXTER CITY	city
+Michigan;Washtenaw County;CHELSEA CITY;Ward 0	ward
+Michigan;Washtenaw County;CHELSEA CITY	city
+Michigan;Washtenaw County;BRIDGEWATER TOWNSHIP;Ward 0	ward
+Michigan;Washtenaw County;BRIDGEWATER TOWNSHIP	township
+Michigan;Washtenaw County;AUGUSTA TOWNSHIP;Ward 0	ward
+Michigan;Washtenaw County;AUGUSTA TOWNSHIP	township
+Michigan;Washtenaw County;ANN ARBOR TOWNSHIP;Ward 0	ward
+Michigan;Washtenaw County;ANN ARBOR TOWNSHIP	township
+Michigan;Washtenaw County;ANN ARBOR CITY;Ward 5
+Michigan;Washtenaw County;ANN ARBOR CITY;Ward 4
+Michigan;Washtenaw County;ANN ARBOR CITY;Ward 3
+Michigan;Washtenaw County;ANN ARBOR CITY;Ward 2
+Michigan;Washtenaw County;ANN ARBOR CITY;Ward 1	ward
+Michigan;Washtenaw County;ANN ARBOR CITY	city
+Michigan;Van Buren County;{Statistical Adjustments};Ward 0	ward
+Michigan;Van Buren County;{Statistical Adjustments}
+Michigan;Van Buren County;WAVERLY TOWNSHIP;Ward 0	ward
+Michigan;Van Buren County;WAVERLY TOWNSHIP	township
+Michigan;Van Buren County;SOUTH HAVEN TOWNSHIP;Ward 0	ward
+Michigan;Van Buren County;SOUTH HAVEN TOWNSHIP	township
+Michigan;Van Buren County;SOUTH HAVEN CITY;Ward 3
+Michigan;Van Buren County;SOUTH HAVEN CITY;Ward 2
+Michigan;Van Buren County;SOUTH HAVEN CITY;Ward 1	ward
+Michigan;Van Buren County;SOUTH HAVEN CITY	city
+Michigan;Van Buren County;PORTER TOWNSHIP;Ward 0	ward
+Michigan;Van Buren County;PORTER TOWNSHIP	township
+Michigan;Van Buren County;PINE GROVE TOWNSHIP;Ward 0	ward
+Michigan;Van Buren County;PINE GROVE TOWNSHIP	township
+Michigan;Van Buren County;PAW PAW TOWNSHIP;Ward 0	ward
+Michigan;Van Buren County;PAW PAW TOWNSHIP	township
+Michigan;Van Buren County;LAWRENCE TOWNSHIP;Ward 0	ward
+Michigan;Van Buren County;LAWRENCE TOWNSHIP	township
+Michigan;Van Buren County;KEELER TOWNSHIP;Ward 0	ward
+Michigan;Van Buren County;KEELER TOWNSHIP	township
+Michigan;Van Buren County;HARTFORD TOWNSHIP;Ward 0	ward
+Michigan;Van Buren County;HARTFORD TOWNSHIP	township
+Michigan;Van Buren County;HARTFORD CITY;Ward 0	ward
+Michigan;Van Buren County;HARTFORD CITY	city
+Michigan;Van Buren County;HAMILTON TOWNSHIP;Ward 0	ward
+Michigan;Van Buren County;HAMILTON TOWNSHIP	township
+Michigan;Van Buren County;GOBLES CITY;Ward 0	ward
+Michigan;Van Buren County;GOBLES CITY	city
+Michigan;Van Buren County;GENEVA TOWNSHIP;Ward 0	ward
+Michigan;Van Buren County;GENEVA TOWNSHIP	township
+Michigan;Van Buren County;DECATUR TOWNSHIP;Ward 0	ward
+Michigan;Van Buren County;DECATUR TOWNSHIP	township
+Michigan;Van Buren County;COVERT TOWNSHIP;Ward 0	ward
+Michigan;Van Buren County;COVERT TOWNSHIP	township
+Michigan;Van Buren County;COLUMBIA TOWNSHIP;Ward 0	ward
+Michigan;Van Buren County;COLUMBIA TOWNSHIP	township
+Michigan;Van Buren County;BLOOMINGDALE TOWNSHIP;Ward 0	ward
+Michigan;Van Buren County;BLOOMINGDALE TOWNSHIP	township
+Michigan;Van Buren County;BANGOR TOWNSHIP;Ward 0	ward
+Michigan;Van Buren County;BANGOR TOWNSHIP	township
+Michigan;Van Buren County;BANGOR CITY;Ward 0	ward
+Michigan;Van Buren County;BANGOR CITY	city
+Michigan;Van Buren County;ARLINGTON TOWNSHIP;Ward 0	ward
+Michigan;Van Buren County;ARLINGTON TOWNSHIP	township
+Michigan;Van Buren County;ANTWERP TOWNSHIP;Ward 0	ward
+Michigan;Van Buren County;ANTWERP TOWNSHIP	township
+Michigan;Van Buren County;ALMENA TOWNSHIP;Ward 0	ward
+Michigan;Van Buren County;ALMENA TOWNSHIP	township
+Michigan;Tuscola County;{Statistical Adjustments};Ward 0	ward
+Michigan;Tuscola County;{Statistical Adjustments}
+Michigan;Tuscola County;WISNER TOWNSHIP;Ward 0	ward
+Michigan;Tuscola County;WISNER TOWNSHIP	township
+Michigan;Tuscola County;WELLS TOWNSHIP;Ward 0	ward
+Michigan;Tuscola County;WELLS TOWNSHIP	township
+Michigan;Tuscola County;WATERTOWN TOWNSHIP;Ward 0	ward
+Michigan;Tuscola County;WATERTOWN TOWNSHIP	township
+Michigan;Tuscola County;VASSAR TOWNSHIP;Ward 0	ward
+Michigan;Tuscola County;VASSAR TOWNSHIP	township
+Michigan;Tuscola County;VASSAR CITY;Ward 0	ward
+Michigan;Tuscola County;VASSAR CITY	city
+Michigan;Tuscola County;TUSCOLA TOWNSHIP;Ward 0	ward
+Michigan;Tuscola County;TUSCOLA TOWNSHIP	township
+Michigan;Tuscola County;NOVESTA TOWNSHIP;Ward 0	ward
+Michigan;Tuscola County;NOVESTA TOWNSHIP	township
+Michigan;Tuscola County;MILLINGTON TOWNSHIP;Ward 0	ward
+Michigan;Tuscola County;MILLINGTON TOWNSHIP	township
+Michigan;Tuscola County;KOYLTON TOWNSHIP;Ward 0	ward
+Michigan;Tuscola County;KOYLTON TOWNSHIP	township
+Michigan;Tuscola County;KINGSTON TOWNSHIP;Ward 0	ward
+Michigan;Tuscola County;KINGSTON TOWNSHIP	township
+Michigan;Tuscola County;JUNIATA TOWNSHIP;Ward 0	ward
+Michigan;Tuscola County;JUNIATA TOWNSHIP	township
+Michigan;Tuscola County;INDIANFIELDS TOWNSHIP;Ward 0	ward
+Michigan;Tuscola County;INDIANFIELDS TOWNSHIP	township
+Michigan;Tuscola County;GILFORD TOWNSHIP;Ward 0	ward
+Michigan;Tuscola County;GILFORD TOWNSHIP	township
+Michigan;Tuscola County;FREMONT TOWNSHIP;Ward 0	ward
+Michigan;Tuscola County;FREMONT TOWNSHIP	township
+Michigan;Tuscola County;FAIRGROVE TOWNSHIP;Ward 0	ward
+Michigan;Tuscola County;FAIRGROVE TOWNSHIP	township
+Michigan;Tuscola County;ELMWOOD TOWNSHIP;Ward 0	ward
+Michigan;Tuscola County;ELMWOOD TOWNSHIP	township
+Michigan;Tuscola County;ELLINGTON TOWNSHIP;Ward 0	ward
+Michigan;Tuscola County;ELLINGTON TOWNSHIP	township
+Michigan;Tuscola County;ELKLAND TOWNSHIP;Ward 0	ward
+Michigan;Tuscola County;ELKLAND TOWNSHIP	township
+Michigan;Tuscola County;DENMARK TOWNSHIP;Ward 0	ward
+Michigan;Tuscola County;DENMARK TOWNSHIP	township
+Michigan;Tuscola County;DAYTON TOWNSHIP;Ward 0	ward
+Michigan;Tuscola County;DAYTON TOWNSHIP	township
+Michigan;Tuscola County;COLUMBIA TOWNSHIP;Ward 0	ward
+Michigan;Tuscola County;COLUMBIA TOWNSHIP	township
+Michigan;Tuscola County;CARO CITY;Ward 0	ward
+Michigan;Tuscola County;CARO CITY	city
+Michigan;Tuscola County;ARBELA TOWNSHIP;Ward 0	ward
+Michigan;Tuscola County;ARBELA TOWNSHIP	township
+Michigan;Tuscola County;ALMER TOWNSHIP;Ward 0	ward
+Michigan;Tuscola County;ALMER TOWNSHIP	township
+Michigan;Tuscola County;AKRON TOWNSHIP;Ward 0	ward
+Michigan;Tuscola County;AKRON TOWNSHIP	township
+Michigan;St. Joseph County;{Statistical Adjustments};Ward 0	ward
+Michigan;St. Joseph County;{Statistical Adjustments}
+Michigan;St. Joseph County;WHITE PIGEON TOWNSHIP;Ward 0	ward
+Michigan;St. Joseph County;WHITE PIGEON TOWNSHIP	township
+Michigan;St. Joseph County;THREE RIVERS CITY;Ward 0	ward
+Michigan;St. Joseph County;THREE RIVERS CITY	city
+Michigan;St. Joseph County;STURGIS TOWNSHIP;Ward 0	ward
+Michigan;St. Joseph County;STURGIS TOWNSHIP	township
+Michigan;St. Joseph County;STURGIS CITY;Ward 0	ward
+Michigan;St. Joseph County;STURGIS CITY	city
+Michigan;St. Joseph County;SHERMAN TOWNSHIP;Ward 0	ward
+Michigan;St. Joseph County;SHERMAN TOWNSHIP	township
+Michigan;St. Joseph County;PARK TOWNSHIP;Ward 0	ward
+Michigan;St. Joseph County;PARK TOWNSHIP	township
+Michigan;St. Joseph County;NOTTAWA TOWNSHIP;Ward 0	ward
+Michigan;St. Joseph County;NOTTAWA TOWNSHIP	township
+Michigan;St. Joseph County;MOTTVILLE TOWNSHIP;Ward 0	ward
+Michigan;St. Joseph County;MOTTVILLE TOWNSHIP	township
+Michigan;St. Joseph County;MENDON TOWNSHIP;Ward 0	ward
+Michigan;St. Joseph County;MENDON TOWNSHIP	township
+Michigan;St. Joseph County;LOCKPORT TOWNSHIP;Ward 0	ward
+Michigan;St. Joseph County;LOCKPORT TOWNSHIP	township
+Michigan;St. Joseph County;LEONIDAS TOWNSHIP;Ward 0	ward
+Michigan;St. Joseph County;LEONIDAS TOWNSHIP	township
+Michigan;St. Joseph County;FLOWERFIELD TOWNSHIP;Ward 0	ward
+Michigan;St. Joseph County;FLOWERFIELD TOWNSHIP	township
+Michigan;St. Joseph County;FLORENCE TOWNSHIP;Ward 0	ward
+Michigan;St. Joseph County;FLORENCE TOWNSHIP	township
+Michigan;St. Joseph County;FAWN RIVER TOWNSHIP;Ward 0	ward
+Michigan;St. Joseph County;FAWN RIVER TOWNSHIP	township
+Michigan;St. Joseph County;FABIUS TOWNSHIP;Ward 0	ward
+Michigan;St. Joseph County;FABIUS TOWNSHIP	township
+Michigan;St. Joseph County;CONSTANTINE TOWNSHIP;Ward 0	ward
+Michigan;St. Joseph County;CONSTANTINE TOWNSHIP	township
+Michigan;St. Joseph County;COLON TOWNSHIP;Ward 0	ward
+Michigan;St. Joseph County;COLON TOWNSHIP	township
+Michigan;St. Joseph County;BURR OAK TOWNSHIP;Ward 0	ward
+Michigan;St. Joseph County;BURR OAK TOWNSHIP	township
+Michigan;St. Clair County;YALE CITY;Ward 0	ward
+Michigan;St. Clair County;YALE CITY	city
+Michigan;St. Clair County;WALES TOWNSHIP;Ward 0	ward
+Michigan;St. Clair County;WALES TOWNSHIP	township
+Michigan;St. Clair County;ST. CLAIR TOWNSHIP;Ward 0	ward
+Michigan;St. Clair County;ST. CLAIR TOWNSHIP	township
+Michigan;St. Clair County;ST. CLAIR CITY;Ward 0	ward
+Michigan;St. Clair County;ST. CLAIR CITY	city
+Michigan;St. Clair County;RILEY TOWNSHIP;Ward 0	ward
+Michigan;St. Clair County;RILEY TOWNSHIP	township
+Michigan;St. Clair County;RICHMOND CITY;Ward 0	ward
+Michigan;St. Clair County;RICHMOND CITY	city
+Michigan;St. Clair County;PORT HURON TOWNSHIP;Ward 0	ward
+Michigan;St. Clair County;PORT HURON TOWNSHIP	township
+Michigan;St. Clair County;PORT HURON CITY;Ward 0	ward
+Michigan;St. Clair County;PORT HURON CITY	city
+Michigan;St. Clair County;MUSSEY TOWNSHIP;Ward 0	ward
+Michigan;St. Clair County;MUSSEY TOWNSHIP	township
+Michigan;St. Clair County;MEMPHIS CITY;Ward 0	ward
+Michigan;St. Clair County;MEMPHIS CITY	city
+Michigan;St. Clair County;MARYSVILLE CITY;Ward 0	ward
+Michigan;St. Clair County;MARYSVILLE CITY	city
+Michigan;St. Clair County;MARINE CITY;Ward 0	ward
+Michigan;St. Clair County;MARINE CITY	city
+Michigan;St. Clair County;LYNN TOWNSHIP;Ward 0	ward
+Michigan;St. Clair County;LYNN TOWNSHIP	township
+Michigan;St. Clair County;KIMBALL TOWNSHIP;Ward 0	ward
+Michigan;St. Clair County;KIMBALL TOWNSHIP	township
+Michigan;St. Clair County;KENOCKEE TOWNSHIP;Ward 0	ward
+Michigan;St. Clair County;KENOCKEE TOWNSHIP	township
+Michigan;St. Clair County;IRA TOWNSHIP;Ward 0	ward
+Michigan;St. Clair County;IRA TOWNSHIP	township
+Michigan;St. Clair County;GREENWOOD TOWNSHIP;Ward 0	ward
+Michigan;St. Clair County;GREENWOOD TOWNSHIP	township
+Michigan;St. Clair County;GRANT TOWNSHIP;Ward 0	ward
+Michigan;St. Clair County;GRANT TOWNSHIP	township
+Michigan;St. Clair County;FORT GRATIOT TOWNSHIP;Ward 0	ward
+Michigan;St. Clair County;FORT GRATIOT TOWNSHIP	township
+Michigan;St. Clair County;EMMETT TOWNSHIP;Ward 0	ward
+Michigan;St. Clair County;EMMETT TOWNSHIP	township
+Michigan;St. Clair County;EAST CHINA TOWNSHIP;Ward 0	ward
+Michigan;St. Clair County;EAST CHINA TOWNSHIP	township
+Michigan;St. Clair County;COTTRELLVILLE TOWNSHIP;Ward 0	ward
+Michigan;St. Clair County;COTTRELLVILLE TOWNSHIP	township
+Michigan;St. Clair County;COLUMBUS TOWNSHIP;Ward 0	ward
+Michigan;St. Clair County;COLUMBUS TOWNSHIP	township
+Michigan;St. Clair County;CLYDE TOWNSHIP;Ward 0	ward
+Michigan;St. Clair County;CLYDE TOWNSHIP	township
+Michigan;St. Clair County;CLAY TOWNSHIP;Ward 0	ward
+Michigan;St. Clair County;CLAY TOWNSHIP	township
+Michigan;St. Clair County;CHINA TOWNSHIP;Ward 0	ward
+Michigan;St. Clair County;CHINA TOWNSHIP	township
+Michigan;St. Clair County;CASCO TOWNSHIP;Ward 0	ward
+Michigan;St. Clair County;CASCO TOWNSHIP	township
+Michigan;St. Clair County;BURTCHVILLE TOWNSHIP;Ward 0	ward
+Michigan;St. Clair County;BURTCHVILLE TOWNSHIP	township
+Michigan;St. Clair County;BROCKWAY TOWNSHIP;Ward 0	ward
+Michigan;St. Clair County;BROCKWAY TOWNSHIP	township
+Michigan;St. Clair County;BERLIN TOWNSHIP;Ward 0	ward
+Michigan;St. Clair County;BERLIN TOWNSHIP	township
+Michigan;St. Clair County;ALGONAC CITY;Ward 0	ward
+Michigan;St. Clair County;ALGONAC CITY	city
+Michigan;Shiawassee County;{Statistical Adjustments};Ward 0	ward
+Michigan;Shiawassee County;{Statistical Adjustments}
+Michigan;Shiawassee County;WOODHULL TOWNSHIP;Ward 0	ward
+Michigan;Shiawassee County;WOODHULL TOWNSHIP	township
+Michigan;Shiawassee County;VERNON TOWNSHIP;Ward 0	ward
+Michigan;Shiawassee County;VERNON TOWNSHIP	township
+Michigan;Shiawassee County;VENICE TOWNSHIP;Ward 0	ward
+Michigan;Shiawassee County;VENICE TOWNSHIP	township
+Michigan;Shiawassee County;SHIAWASSEE TOWNSHIP;Ward 0	ward
+Michigan;Shiawassee County;SHIAWASSEE TOWNSHIP	township
+Michigan;Shiawassee County;SCIOTA TOWNSHIP;Ward 0	ward
+Michigan;Shiawassee County;SCIOTA TOWNSHIP	township
+Michigan;Shiawassee County;RUSH TOWNSHIP;Ward 0	ward
+Michigan;Shiawassee County;RUSH TOWNSHIP	township
+Michigan;Shiawassee County;PERRY TOWNSHIP;Ward 0	ward
+Michigan;Shiawassee County;PERRY TOWNSHIP	township
+Michigan;Shiawassee County;PERRY CITY;Ward 0	ward
+Michigan;Shiawassee County;PERRY CITY	city
+Michigan;Shiawassee County;OWOSSO TOWNSHIP;Ward 0	ward
+Michigan;Shiawassee County;OWOSSO TOWNSHIP	township
+Michigan;Shiawassee County;OWOSSO CITY;Ward 6
+Michigan;Shiawassee County;OWOSSO CITY;Ward 2
+Michigan;Shiawassee County;OWOSSO CITY;Ward 1	ward
+Michigan;Shiawassee County;OWOSSO CITY	city
+Michigan;Shiawassee County;NEW HAVEN TOWNSHIP;Ward 0	ward
+Michigan;Shiawassee County;NEW HAVEN TOWNSHIP	township
+Michigan;Shiawassee County;MIDDLEBURY TOWNSHIP;Ward 0	ward
+Michigan;Shiawassee County;MIDDLEBURY TOWNSHIP	township
+Michigan;Shiawassee County;LAINGSBURG CITY;Ward 0	ward
+Michigan;Shiawassee County;LAINGSBURG CITY	city
+Michigan;Shiawassee County;HAZELTON TOWNSHIP;Ward 0	ward
+Michigan;Shiawassee County;HAZELTON TOWNSHIP	township
+Michigan;Shiawassee County;FAIRFIELD TOWNSHIP;Ward 0	ward
+Michigan;Shiawassee County;FAIRFIELD TOWNSHIP	township
+Michigan;Shiawassee County;DURAND CITY;Ward 0	ward
+Michigan;Shiawassee County;DURAND CITY	city
+Michigan;Shiawassee County;CORUNNA CITY;Ward 0	ward
+Michigan;Shiawassee County;CORUNNA CITY	city
+Michigan;Shiawassee County;CALEDONIA TOWNSHIP;Ward 0	ward
+Michigan;Shiawassee County;CALEDONIA TOWNSHIP	township
+Michigan;Shiawassee County;BURNS TOWNSHIP;Ward 0	ward
+Michigan;Shiawassee County;BURNS TOWNSHIP	township
+Michigan;Shiawassee County;BENNINGTON TOWNSHIP;Ward 0	ward
+Michigan;Shiawassee County;BENNINGTON TOWNSHIP	township
+Michigan;Shiawassee County;ANTRIM TOWNSHIP;Ward 0	ward
+Michigan;Shiawassee County;ANTRIM TOWNSHIP	township
+Michigan;Schoolcraft County;{Statistical Adjustments};Ward 0	ward
+Michigan;Schoolcraft County;{Statistical Adjustments}
+Michigan;Schoolcraft County;THOMPSON TOWNSHIP;Ward 0	ward
+Michigan;Schoolcraft County;THOMPSON TOWNSHIP	township
+Michigan;Schoolcraft County;SENEY TOWNSHIP;Ward 0	ward
+Michigan;Schoolcraft County;SENEY TOWNSHIP	township
+Michigan;Schoolcraft County;MUELLER TOWNSHIP;Ward 0	ward
+Michigan;Schoolcraft County;MUELLER TOWNSHIP	township
+Michigan;Schoolcraft County;MANISTIQUE TOWNSHIP;Ward 0	ward
+Michigan;Schoolcraft County;MANISTIQUE TOWNSHIP	township
+Michigan;Schoolcraft County;MANISTIQUE CITY;Ward 0	ward
+Michigan;Schoolcraft County;MANISTIQUE CITY	city
+Michigan;Schoolcraft County;INWOOD TOWNSHIP;Ward 0	ward
+Michigan;Schoolcraft County;INWOOD TOWNSHIP	township
+Michigan;Schoolcraft County;HIAWATHA TOWNSHIP;Ward 0	ward
+Michigan;Schoolcraft County;HIAWATHA TOWNSHIP	township
+Michigan;Schoolcraft County;GERMFASK TOWNSHIP;Ward 0	ward
+Michigan;Schoolcraft County;GERMFASK TOWNSHIP	township
+Michigan;Schoolcraft County;DOYLE TOWNSHIP;Ward 0	ward
+Michigan;Schoolcraft County;DOYLE TOWNSHIP	township
+Michigan;Sanilac County;{Statistical Adjustments};Ward 0	ward
+Michigan;Sanilac County;{Statistical Adjustments}
+Michigan;Sanilac County;WORTH TOWNSHIP;Ward 0	ward
+Michigan;Sanilac County;WORTH TOWNSHIP	township
+Michigan;Sanilac County;WHEATLAND TOWNSHIP;Ward 0	ward
+Michigan;Sanilac County;WHEATLAND TOWNSHIP	township
+Michigan;Sanilac County;WATERTOWN TOWNSHIP;Ward 0	ward
+Michigan;Sanilac County;WATERTOWN TOWNSHIP	township
+Michigan;Sanilac County;WASHINGTON TOWNSHIP;Ward 0	ward
+Michigan;Sanilac County;WASHINGTON TOWNSHIP	township
+Michigan;Sanilac County;SPEAKER TOWNSHIP;Ward 0	ward
+Michigan;Sanilac County;SPEAKER TOWNSHIP	township
+Michigan;Sanilac County;SANILAC TOWNSHIP;Ward 0	ward
+Michigan;Sanilac County;SANILAC TOWNSHIP	township
+Michigan;Sanilac County;SANDUSKY CITY;Ward 0	ward
+Michigan;Sanilac County;SANDUSKY CITY	city
+Michigan;Sanilac County;MOORE TOWNSHIP;Ward 0	ward
+Michigan;Sanilac County;MOORE TOWNSHIP	township
+Michigan;Sanilac County;MINDEN TOWNSHIP;Ward 0	ward
+Michigan;Sanilac County;MINDEN TOWNSHIP	township
+Michigan;Sanilac County;MARLETTE TOWNSHIP;Ward 0	ward
+Michigan;Sanilac County;MARLETTE TOWNSHIP	township
+Michigan;Sanilac County;MARLETTE CITY;Ward 0	ward
+Michigan;Sanilac County;MARLETTE CITY	city
+Michigan;Sanilac County;MARION TOWNSHIP;Ward 0	ward
+Michigan;Sanilac County;MARION TOWNSHIP	township
+Michigan;Sanilac County;MAPLE VALLEY TOWNSHIP;Ward 0	ward
+Michigan;Sanilac County;MAPLE VALLEY TOWNSHIP	township
+Michigan;Sanilac County;LEXINGTON TOWNSHIP;Ward 0	ward
+Michigan;Sanilac County;LEXINGTON TOWNSHIP	township
+Michigan;Sanilac County;LAMOTTE TOWNSHIP;Ward 0	ward
+Michigan;Sanilac County;LAMOTTE TOWNSHIP	township
+Michigan;Sanilac County;GREENLEAF TOWNSHIP;Ward 0	ward
+Michigan;Sanilac County;GREENLEAF TOWNSHIP	township
+Michigan;Sanilac County;FREMONT TOWNSHIP;Ward 0	ward
+Michigan;Sanilac County;FREMONT TOWNSHIP	township
+Michigan;Sanilac County;FORESTER TOWNSHIP;Ward 0	ward
+Michigan;Sanilac County;FORESTER TOWNSHIP	township
+Michigan;Sanilac County;FLYNN TOWNSHIP;Ward 0	ward
+Michigan;Sanilac County;FLYNN TOWNSHIP	township
+Michigan;Sanilac County;EVERGREEN TOWNSHIP;Ward 0	ward
+Michigan;Sanilac County;EVERGREEN TOWNSHIP	township
+Michigan;Sanilac County;ELMER TOWNSHIP;Ward 0	ward
+Michigan;Sanilac County;ELMER TOWNSHIP	township
+Michigan;Sanilac County;ELK TOWNSHIP;Ward 0	ward
+Michigan;Sanilac County;ELK TOWNSHIP	township
+Michigan;Sanilac County;DELAWARE TOWNSHIP;Ward 0	ward
+Michigan;Sanilac County;DELAWARE TOWNSHIP	township
+Michigan;Sanilac County;CUSTER TOWNSHIP;Ward 0	ward
+Michigan;Sanilac County;CUSTER TOWNSHIP	township
+Michigan;Sanilac County;CROSWELL CITY;Ward 0	ward
+Michigan;Sanilac County;CROSWELL CITY	city
+Michigan;Sanilac County;BUEL TOWNSHIP;Ward 0	ward
+Michigan;Sanilac County;BUEL TOWNSHIP	township
+Michigan;Sanilac County;BROWN CITY;Ward 0	ward
+Michigan;Sanilac County;BROWN CITY	city
+Michigan;Sanilac County;BRIDGEHAMPTON TOWNSHIP;Ward 0	ward
+Michigan;Sanilac County;BRIDGEHAMPTON TOWNSHIP	township
+Michigan;Sanilac County;AUSTIN TOWNSHIP;Ward 0	ward
+Michigan;Sanilac County;AUSTIN TOWNSHIP	township
+Michigan;Sanilac County;ARGYLE TOWNSHIP;Ward 0	ward
+Michigan;Sanilac County;ARGYLE TOWNSHIP	township
+Michigan;Saginaw County;{Statistical Adjustments};Ward 0	ward
+Michigan;Saginaw County;{Statistical Adjustments}
+Michigan;Saginaw County;ZILWAUKEE TOWNSHIP;Ward 0	ward
+Michigan;Saginaw County;ZILWAUKEE TOWNSHIP	township
+Michigan;Saginaw County;ZILWAUKEE CITY;Ward 0	ward
+Michigan;Saginaw County;ZILWAUKEE CITY	city
+Michigan;Saginaw County;TITTABAWASSEE TOWNSHIP;Ward 0	ward
+Michigan;Saginaw County;TITTABAWASSEE TOWNSHIP	township
+Michigan;Saginaw County;THOMAS TOWNSHIP;Ward 0	ward
+Michigan;Saginaw County;THOMAS TOWNSHIP	township
+Michigan;Saginaw County;TAYMOUTH TOWNSHIP;Ward 0	ward
+Michigan;Saginaw County;TAYMOUTH TOWNSHIP	township
+Michigan;Saginaw County;SWAN CREEK TOWNSHIP;Ward 0	ward
+Michigan;Saginaw County;SWAN CREEK TOWNSHIP	township
+Michigan;Saginaw County;ST. CHARLES TOWNSHIP;Ward 0	ward
+Michigan;Saginaw County;ST. CHARLES TOWNSHIP	township
+Michigan;Saginaw County;SPAULDING TOWNSHIP;Ward 0	ward
+Michigan;Saginaw County;SPAULDING TOWNSHIP	township
+Michigan;Saginaw County;SAGINAW TOWNSHIP;Ward 0	ward
+Michigan;Saginaw County;SAGINAW TOWNSHIP	township
+Michigan;Saginaw County;SAGINAW CITY;Ward 0	ward
+Michigan;Saginaw County;SAGINAW CITY	city
+Michigan;Saginaw County;RICHLAND TOWNSHIP;Ward 0	ward
+Michigan;Saginaw County;RICHLAND TOWNSHIP	township
+Michigan;Saginaw County;MARION TOWNSHIP;Ward 0	ward
+Michigan;Saginaw County;MARION TOWNSHIP	township
+Michigan;Saginaw County;MAPLE GROVE TOWNSHIP;Ward 0	ward
+Michigan;Saginaw County;MAPLE GROVE TOWNSHIP	township
+Michigan;Saginaw County;LAKEFIELD TOWNSHIP;Ward 0	ward
+Michigan;Saginaw County;LAKEFIELD TOWNSHIP	township
+Michigan;Saginaw County;KOCHVILLE TOWNSHIP;Ward 0	ward
+Michigan;Saginaw County;KOCHVILLE TOWNSHIP	township
+Michigan;Saginaw County;JONESFIELD TOWNSHIP;Ward 0	ward
+Michigan;Saginaw County;JONESFIELD TOWNSHIP	township
+Michigan;Saginaw County;JAMES TOWNSHIP;Ward 0	ward
+Michigan;Saginaw County;JAMES TOWNSHIP	township
+Michigan;Saginaw County;FREMONT TOWNSHIP;Ward 0	ward
+Michigan;Saginaw County;FREMONT TOWNSHIP	township
+Michigan;Saginaw County;FRANKENMUTH TOWNSHIP;Ward 0	ward
+Michigan;Saginaw County;FRANKENMUTH TOWNSHIP	township
+Michigan;Saginaw County;FRANKENMUTH CITY;Ward 0	ward
+Michigan;Saginaw County;FRANKENMUTH CITY	city
+Michigan;Saginaw County;CHESANING TOWNSHIP;Ward 0	ward
+Michigan;Saginaw County;CHESANING TOWNSHIP	township
+Michigan;Saginaw County;CHAPIN TOWNSHIP;Ward 0	ward
+Michigan;Saginaw County;CHAPIN TOWNSHIP	township
+Michigan;Saginaw County;CARROLLTON TOWNSHIP;Ward 0	ward
+Michigan;Saginaw County;CARROLLTON TOWNSHIP	township
+Michigan;Saginaw County;BUENA VISTA TOWNSHIP;Ward 0	ward
+Michigan;Saginaw County;BUENA VISTA TOWNSHIP	township
+Michigan;Saginaw County;BRIDGEPORT TOWNSHIP;Ward 0	ward
+Michigan;Saginaw County;BRIDGEPORT TOWNSHIP	township
+Michigan;Saginaw County;BRANT TOWNSHIP;Ward 0	ward
+Michigan;Saginaw County;BRANT TOWNSHIP	township
+Michigan;Saginaw County;BRADY TOWNSHIP;Ward 0	ward
+Michigan;Saginaw County;BRADY TOWNSHIP	township
+Michigan;Saginaw County;BLUMFIELD TOWNSHIP;Ward 0	ward
+Michigan;Saginaw County;BLUMFIELD TOWNSHIP	township
+Michigan;Saginaw County;BIRCH RUN TOWNSHIP;Ward 0	ward
+Michigan;Saginaw County;BIRCH RUN TOWNSHIP	township
+Michigan;Saginaw County;ALBEE TOWNSHIP;Ward 0	ward
+Michigan;Saginaw County;ALBEE TOWNSHIP	township
+Michigan;Roscommon County;{Statistical Adjustments};Ward 0	ward
+Michigan;Roscommon County;{Statistical Adjustments}
+Michigan;Roscommon County;ROSCOMMON TOWNSHIP;Ward 0	ward
+Michigan;Roscommon County;ROSCOMMON TOWNSHIP	township
+Michigan;Roscommon County;RICHFIELD TOWNSHIP;Ward 0	ward
+Michigan;Roscommon County;RICHFIELD TOWNSHIP	township
+Michigan;Roscommon County;NESTER TOWNSHIP;Ward 0	ward
+Michigan;Roscommon County;NESTER TOWNSHIP	township
+Michigan;Roscommon County;MARKEY TOWNSHIP;Ward 0	ward
+Michigan;Roscommon County;MARKEY TOWNSHIP	township
+Michigan;Roscommon County;LYON TOWNSHIP;Ward 0	ward
+Michigan;Roscommon County;LYON TOWNSHIP	township
+Michigan;Roscommon County;LAKE TOWNSHIP;Ward 0	ward
+Michigan;Roscommon County;LAKE TOWNSHIP	township
+Michigan;Roscommon County;HIGGINS TOWNSHIP;Ward 0	ward
+Michigan;Roscommon County;HIGGINS TOWNSHIP	township
+Michigan;Roscommon County;GERRISH TOWNSHIP;Ward 0	ward
+Michigan;Roscommon County;GERRISH TOWNSHIP	township
+Michigan;Roscommon County;DENTON TOWNSHIP;Ward 0	ward
+Michigan;Roscommon County;DENTON TOWNSHIP	township
+Michigan;Roscommon County;BACKUS TOWNSHIP;Ward 0	ward
+Michigan;Roscommon County;BACKUS TOWNSHIP	township
+Michigan;Roscommon County;AU SABLE TOWNSHIP;Ward 0	ward
+Michigan;Roscommon County;AU SABLE TOWNSHIP	township
+Michigan;Presque Isle County;ROGERS TOWNSHIP;Ward 0	ward
+Michigan;Presque Isle County;ROGERS TOWNSHIP	township
+Michigan;Presque Isle County;ROGERS CITY;Ward 0	ward
+Michigan;Presque Isle County;ROGERS CITY	city
+Michigan;Presque Isle County;PULAWSKI TOWNSHIP;Ward 0	ward
+Michigan;Presque Isle County;PULAWSKI TOWNSHIP	township
+Michigan;Presque Isle County;PRESQUE ISLE TOWNSHIP;Ward 0	ward
+Michigan;Presque Isle County;PRESQUE ISLE TOWNSHIP	township
+Michigan;Presque Isle County;POSEN TOWNSHIP;Ward 0	ward
+Michigan;Presque Isle County;POSEN TOWNSHIP	township
+Michigan;Presque Isle County;ONAWAY CITY;Ward 0	ward
+Michigan;Presque Isle County;ONAWAY CITY	city
+Michigan;Presque Isle County;OCQUEOC TOWNSHIP;Ward 0	ward
+Michigan;Presque Isle County;OCQUEOC TOWNSHIP	township
+Michigan;Presque Isle County;NORTH ALLIS TOWNSHIP;Ward 0	ward
+Michigan;Presque Isle County;NORTH ALLIS TOWNSHIP	township
+Michigan;Presque Isle County;MOLTKE TOWNSHIP;Ward 0	ward
+Michigan;Presque Isle County;MOLTKE TOWNSHIP	township
+Michigan;Presque Isle County;METZ TOWNSHIP;Ward 0	ward
+Michigan;Presque Isle County;METZ TOWNSHIP	township
+Michigan;Presque Isle County;KRAKOW TOWNSHIP;Ward 0	ward
+Michigan;Presque Isle County;KRAKOW TOWNSHIP	township
+Michigan;Presque Isle County;CASE TOWNSHIP;Ward 0	ward
+Michigan;Presque Isle County;CASE TOWNSHIP	township
+Michigan;Presque Isle County;BISMARCK TOWNSHIP;Ward 0	ward
+Michigan;Presque Isle County;BISMARCK TOWNSHIP	township
+Michigan;Presque Isle County;BELKNAP TOWNSHIP;Ward 0	ward
+Michigan;Presque Isle County;BELKNAP TOWNSHIP	township
+Michigan;Presque Isle County;BEARINGER TOWNSHIP;Ward 0	ward
+Michigan;Presque Isle County;BEARINGER TOWNSHIP	township
+Michigan;Presque Isle County;ALLIS TOWNSHIP;Ward 0	ward
+Michigan;Presque Isle County;ALLIS TOWNSHIP	township
+Michigan;Ottawa County;ZEELAND TOWNSHIP;Ward 0	ward
+Michigan;Ottawa County;ZEELAND TOWNSHIP	township
+Michigan;Ottawa County;ZEELAND CITY;Ward 0	ward
+Michigan;Ottawa County;ZEELAND CITY	city
+Michigan;Ottawa County;WRIGHT TOWNSHIP;Ward 0	ward
+Michigan;Ottawa County;WRIGHT TOWNSHIP	township
+Michigan;Ottawa County;TALLMADGE TOWNSHIP;Ward 0	ward
+Michigan;Ottawa County;TALLMADGE TOWNSHIP	township
+Michigan;Ottawa County;SPRING LAKE TOWNSHIP;Ward 0	ward
+Michigan;Ottawa County;SPRING LAKE TOWNSHIP	township
+Michigan;Ottawa County;ROBINSON TOWNSHIP;Ward 0	ward
+Michigan;Ottawa County;ROBINSON TOWNSHIP	township
+Michigan;Ottawa County;PORT SHELDON TOWNSHIP;Ward 0	ward
+Michigan;Ottawa County;PORT SHELDON TOWNSHIP	township
+Michigan;Ottawa County;POLKTON TOWNSHIP;Ward 0	ward
+Michigan;Ottawa County;POLKTON TOWNSHIP	township
+Michigan;Ottawa County;PARK TOWNSHIP;Ward 0	ward
+Michigan;Ottawa County;PARK TOWNSHIP	township
+Michigan;Ottawa County;OLIVE TOWNSHIP;Ward 0	ward
+Michigan;Ottawa County;OLIVE TOWNSHIP	township
+Michigan;Ottawa County;JAMESTOWN TOWNSHIP;Ward 0	ward
+Michigan;Ottawa County;JAMESTOWN TOWNSHIP	township
+Michigan;Ottawa County;HUDSONVILLE CITY;Ward 3
+Michigan;Ottawa County;HUDSONVILLE CITY;Ward 2
+Michigan;Ottawa County;HUDSONVILLE CITY;Ward 1	ward
+Michigan;Ottawa County;HUDSONVILLE CITY	city
+Michigan;Ottawa County;HOLLAND TOWNSHIP;Ward 0	ward
+Michigan;Ottawa County;HOLLAND TOWNSHIP	township
+Michigan;Ottawa County;HOLLAND CITY;Ward 6
+Michigan;Ottawa County;HOLLAND CITY;Ward 4
+Michigan;Ottawa County;HOLLAND CITY;Ward 3
+Michigan;Ottawa County;HOLLAND CITY;Ward 2
+Michigan;Ottawa County;HOLLAND CITY;Ward 1	ward
+Michigan;Ottawa County;HOLLAND CITY	city
+Michigan;Ottawa County;GRAND HAVEN TOWNSHIP;Ward 0	ward
+Michigan;Ottawa County;GRAND HAVEN TOWNSHIP	township
+Michigan;Ottawa County;GRAND HAVEN CITY;Ward 0	ward
+Michigan;Ottawa County;GRAND HAVEN CITY	city
+Michigan;Ottawa County;GEORGETOWN TOWNSHIP;Ward 0	ward
+Michigan;Ottawa County;GEORGETOWN TOWNSHIP	township
+Michigan;Ottawa County;FERRYSBURG CITY;Ward 0	ward
+Michigan;Ottawa County;FERRYSBURG CITY	city
+Michigan;Ottawa County;CROCKERY TOWNSHIP;Ward 0	ward
+Michigan;Ottawa County;CROCKERY TOWNSHIP	township
+Michigan;Ottawa County;COOPERSVILLE CITY;Ward 0	ward
+Michigan;Ottawa County;COOPERSVILLE CITY	city
+Michigan;Ottawa County;CHESTER TOWNSHIP;Ward 0	ward
+Michigan;Ottawa County;CHESTER TOWNSHIP	township
+Michigan;Ottawa County;BLENDON TOWNSHIP;Ward 0	ward
+Michigan;Ottawa County;BLENDON TOWNSHIP	township
+Michigan;Ottawa County;ALLENDALE TOWNSHIP;Ward 0	ward
+Michigan;Ottawa County;ALLENDALE TOWNSHIP	township
+Michigan;Otsego County;OTSEGO LAKE TOWNSHIP;Ward 0	ward
+Michigan;Otsego County;OTSEGO LAKE TOWNSHIP	township
+Michigan;Otsego County;LIVINGSTON TOWNSHIP;Ward 0	ward
+Michigan;Otsego County;LIVINGSTON TOWNSHIP	township
+Michigan;Otsego County;HAYES TOWNSHIP;Ward 0	ward
+Michigan;Otsego County;HAYES TOWNSHIP	township
+Michigan;Otsego County;GAYLORD CITY;Ward 3
+Michigan;Otsego County;GAYLORD CITY;Ward 2
+Michigan;Otsego County;GAYLORD CITY;Ward 1	ward
+Michigan;Otsego County;GAYLORD CITY	city
+Michigan;Otsego County;ELMIRA TOWNSHIP;Ward 0	ward
+Michigan;Otsego County;ELMIRA TOWNSHIP	township
+Michigan;Otsego County;DOVER TOWNSHIP;Ward 0	ward
+Michigan;Otsego County;DOVER TOWNSHIP	township
+Michigan;Otsego County;CORWITH TOWNSHIP;Ward 0	ward
+Michigan;Otsego County;CORWITH TOWNSHIP	township
+Michigan;Otsego County;CHESTER TOWNSHIP;Ward 0	ward
+Michigan;Otsego County;CHESTER TOWNSHIP	township
+Michigan;Otsego County;CHARLTON TOWNSHIP;Ward 0	ward
+Michigan;Otsego County;CHARLTON TOWNSHIP	township
+Michigan;Otsego County;BAGLEY TOWNSHIP;Ward 0	ward
+Michigan;Otsego County;BAGLEY TOWNSHIP	township
+Michigan;Oscoda County;{Statistical Adjustments};Ward 0	ward
+Michigan;Oscoda County;{Statistical Adjustments}
+Michigan;Oscoda County;MENTOR TOWNSHIP;Ward 0	ward
+Michigan;Oscoda County;MENTOR TOWNSHIP	township
+Michigan;Oscoda County;GREENWOOD TOWNSHIP;Ward 0	ward
+Michigan;Oscoda County;GREENWOOD TOWNSHIP	township
+Michigan;Oscoda County;ELMER TOWNSHIP;Ward 0	ward
+Michigan;Oscoda County;ELMER TOWNSHIP	township
+Michigan;Oscoda County;COMINS TOWNSHIP;Ward 0	ward
+Michigan;Oscoda County;COMINS TOWNSHIP	township
+Michigan;Oscoda County;CLINTON TOWNSHIP;Ward 0	ward
+Michigan;Oscoda County;CLINTON TOWNSHIP	township
+Michigan;Oscoda County;BIG CREEK TOWNSHIP;Ward 0	ward
+Michigan;Oscoda County;BIG CREEK TOWNSHIP	township
+Michigan;Osceola County;{Statistical Adjustments};Ward 0	ward
+Michigan;Osceola County;{Statistical Adjustments}
+Michigan;Osceola County;SYLVAN TOWNSHIP;Ward 0	ward
+Michigan;Osceola County;SYLVAN TOWNSHIP	township
+Michigan;Osceola County;SHERMAN TOWNSHIP;Ward 0	ward
+Michigan;Osceola County;SHERMAN TOWNSHIP	township
+Michigan;Osceola County;ROSE LAKE TOWNSHIP;Ward 0	ward
+Michigan;Osceola County;ROSE LAKE TOWNSHIP	township
+Michigan;Osceola County;RICHMOND TOWNSHIP;Ward 0	ward
+Michigan;Osceola County;RICHMOND TOWNSHIP	township
+Michigan;Osceola County;REED CITY;Ward 0	ward
+Michigan;Osceola County;REED CITY	city
+Michigan;Osceola County;OSCEOLA TOWNSHIP;Ward 0	ward
+Michigan;Osceola County;OSCEOLA TOWNSHIP	township
+Michigan;Osceola County;ORIENT TOWNSHIP;Ward 0	ward
+Michigan;Osceola County;ORIENT TOWNSHIP	township
+Michigan;Osceola County;MIDDLE BRANCH TOWNSHIP;Ward 0	ward
+Michigan;Osceola County;MIDDLE BRANCH TOWNSHIP	township
+Michigan;Osceola County;MARION TOWNSHIP;Ward 0	ward
+Michigan;Osceola County;MARION TOWNSHIP	township
+Michigan;Osceola County;LINCOLN TOWNSHIP;Ward 0	ward
+Michigan;Osceola County;LINCOLN TOWNSHIP	township
+Michigan;Osceola County;LE ROY TOWNSHIP;Ward 0	ward
+Michigan;Osceola County;LE ROY TOWNSHIP	township
+Michigan;Osceola County;HIGHLAND TOWNSHIP;Ward 0	ward
+Michigan;Osceola County;HIGHLAND TOWNSHIP	township
+Michigan;Osceola County;HERSEY TOWNSHIP;Ward 0	ward
+Michigan;Osceola County;HERSEY TOWNSHIP	township
+Michigan;Osceola County;HARTWICK TOWNSHIP;Ward 0	ward
+Michigan;Osceola County;HARTWICK TOWNSHIP	township
+Michigan;Osceola County;EVART TOWNSHIP;Ward 0	ward
+Michigan;Osceola County;EVART TOWNSHIP	township
+Michigan;Osceola County;EVART CITY;Ward 0	ward
+Michigan;Osceola County;EVART CITY	city
+Michigan;Osceola County;CEDAR TOWNSHIP;Ward 0	ward
+Michigan;Osceola County;CEDAR TOWNSHIP	township
+Michigan;Osceola County;BURDELL TOWNSHIP;Ward 0	ward
+Michigan;Osceola County;BURDELL TOWNSHIP	township
+Michigan;Ontonagon County;STANNARD TOWNSHIP;Ward 0	ward
+Michigan;Ontonagon County;STANNARD TOWNSHIP	township
+Michigan;Ontonagon County;ROCKLAND TOWNSHIP;Ward 0	ward
+Michigan;Ontonagon County;ROCKLAND TOWNSHIP	township
+Michigan;Ontonagon County;ONTONAGON TOWNSHIP;Ward 0	ward
+Michigan;Ontonagon County;ONTONAGON TOWNSHIP	township
+Michigan;Ontonagon County;MCMILLAN TOWNSHIP;Ward 0	ward
+Michigan;Ontonagon County;MCMILLAN TOWNSHIP	township
+Michigan;Ontonagon County;MATCHWOOD TOWNSHIP;Ward 0	ward
+Michigan;Ontonagon County;MATCHWOOD TOWNSHIP	township
+Michigan;Ontonagon County;INTERIOR TOWNSHIP;Ward 0	ward
+Michigan;Ontonagon County;INTERIOR TOWNSHIP	township
+Michigan;Ontonagon County;HAIGHT TOWNSHIP;Ward 0	ward
+Michigan;Ontonagon County;HAIGHT TOWNSHIP	township
+Michigan;Ontonagon County;GREENLAND TOWNSHIP;Ward 0	ward
+Michigan;Ontonagon County;GREENLAND TOWNSHIP	township
+Michigan;Ontonagon County;DUNCAN TOWNSHIP;Ward 0	ward
+Michigan;Ontonagon County;DUNCAN TOWNSHIP	township
+Michigan;Ontonagon County;CARP LAKE TOWNSHIP;Ward 0	ward
+Michigan;Ontonagon County;CARP LAKE TOWNSHIP	township
+Michigan;Ontonagon County;BOHEMIA TOWNSHIP;Ward 0	ward
+Michigan;Ontonagon County;BOHEMIA TOWNSHIP	township
+Michigan;Ontonagon County;BERGLAND TOWNSHIP;Ward 0	ward
+Michigan;Ontonagon County;BERGLAND TOWNSHIP	township
+Michigan;Ogemaw County;{Statistical Adjustments};Ward 0	ward
+Michigan;Ogemaw County;{Statistical Adjustments}
+Michigan;Ogemaw County;WEST BRANCH TOWNSHIP;Ward 0	ward
+Michigan;Ogemaw County;WEST BRANCH TOWNSHIP	township
+Michigan;Ogemaw County;WEST BRANCH CITY;Ward 3
+Michigan;Ogemaw County;WEST BRANCH CITY;Ward 2
+Michigan;Ogemaw County;WEST BRANCH CITY;Ward 1	ward
+Michigan;Ogemaw County;WEST BRANCH CITY	city
+Michigan;Ogemaw County;ROSE TOWNSHIP;Ward 0	ward
+Michigan;Ogemaw County;ROSE TOWNSHIP	township
+Michigan;Ogemaw County;ROSE CITY;Ward 1	ward
+Michigan;Ogemaw County;ROSE CITY	city
+Michigan;Ogemaw County;RICHLAND TOWNSHIP;Ward 0	ward
+Michigan;Ogemaw County;RICHLAND TOWNSHIP	township
+Michigan;Ogemaw County;OGEMAW TOWNSHIP;Ward 0	ward
+Michigan;Ogemaw County;OGEMAW TOWNSHIP	township
+Michigan;Ogemaw County;MILLS TOWNSHIP;Ward 0	ward
+Michigan;Ogemaw County;MILLS TOWNSHIP	township
+Michigan;Ogemaw County;LOGAN TOWNSHIP;Ward 0	ward
+Michigan;Ogemaw County;LOGAN TOWNSHIP	township
+Michigan;Ogemaw County;KLACKING TOWNSHIP;Ward 0	ward
+Michigan;Ogemaw County;KLACKING TOWNSHIP	township
+Michigan;Ogemaw County;HORTON TOWNSHIP;Ward 0	ward
+Michigan;Ogemaw County;HORTON TOWNSHIP	township
+Michigan;Ogemaw County;HILL TOWNSHIP;Ward 0	ward
+Michigan;Ogemaw County;HILL TOWNSHIP	township
+Michigan;Ogemaw County;GOODAR TOWNSHIP;Ward 0	ward
+Michigan;Ogemaw County;GOODAR TOWNSHIP	township
+Michigan;Ogemaw County;FOSTER TOWNSHIP;Ward 0	ward
+Michigan;Ogemaw County;FOSTER TOWNSHIP	township
+Michigan;Ogemaw County;EDWARDS TOWNSHIP;Ward 0	ward
+Michigan;Ogemaw County;EDWARDS TOWNSHIP	township
+Michigan;Ogemaw County;CUMMING TOWNSHIP;Ward 0	ward
+Michigan;Ogemaw County;CUMMING TOWNSHIP	township
+Michigan;Ogemaw County;CHURCHILL TOWNSHIP;Ward 0	ward
+Michigan;Ogemaw County;CHURCHILL TOWNSHIP	township
+Michigan;Oceana County;WEARE TOWNSHIP;Ward 0	ward
+Michigan;Oceana County;WEARE TOWNSHIP	township
+Michigan;Oceana County;SHELBY TOWNSHIP;Ward 0	ward
+Michigan;Oceana County;SHELBY TOWNSHIP	township
+Michigan;Oceana County;PENTWATER TOWNSHIP;Ward 0	ward
+Michigan;Oceana County;PENTWATER TOWNSHIP	township
+Michigan;Oceana County;OTTO TOWNSHIP;Ward 0	ward
+Michigan;Oceana County;OTTO TOWNSHIP	township
+Michigan;Oceana County;NEWFIELD TOWNSHIP;Ward 0	ward
+Michigan;Oceana County;NEWFIELD TOWNSHIP	township
+Michigan;Oceana County;LEAVITT TOWNSHIP;Ward 0	ward
+Michigan;Oceana County;LEAVITT TOWNSHIP	township
+Michigan;Oceana County;HART TOWNSHIP;Ward 0	ward
+Michigan;Oceana County;HART TOWNSHIP	township
+Michigan;Oceana County;HART CITY;Ward 0	ward
+Michigan;Oceana County;HART CITY	city
+Michigan;Oceana County;GREENWOOD TOWNSHIP;Ward 0	ward
+Michigan;Oceana County;GREENWOOD TOWNSHIP	township
+Michigan;Oceana County;GRANT TOWNSHIP;Ward 0	ward
+Michigan;Oceana County;GRANT TOWNSHIP	township
+Michigan;Oceana County;GOLDEN TOWNSHIP;Ward 0	ward
+Michigan;Oceana County;GOLDEN TOWNSHIP	township
+Michigan;Oceana County;FERRY TOWNSHIP;Ward 0	ward
+Michigan;Oceana County;FERRY TOWNSHIP	township
+Michigan;Oceana County;ELBRIDGE TOWNSHIP;Ward 0	ward
+Michigan;Oceana County;ELBRIDGE TOWNSHIP	township
+Michigan;Oceana County;CRYSTAL TOWNSHIP;Ward 0	ward
+Michigan;Oceana County;CRYSTAL TOWNSHIP	township
+Michigan;Oceana County;COLFAX TOWNSHIP;Ward 0	ward
+Michigan;Oceana County;COLFAX TOWNSHIP	township
+Michigan;Oceana County;CLAYBANKS TOWNSHIP;Ward 0	ward
+Michigan;Oceana County;CLAYBANKS TOWNSHIP	township
+Michigan;Oceana County;BENONA TOWNSHIP;Ward 0	ward
+Michigan;Oceana County;BENONA TOWNSHIP	township
+Michigan;Oakland County;{Statistical Adjustments};Ward 0	ward
+Michigan;Oakland County;{Statistical Adjustments}
+Michigan;Oakland County;WIXOM CITY;Ward 0	ward
+Michigan;Oakland County;WIXOM CITY	city
+Michigan;Oakland County;WHITE LAKE TOWNSHIP;Ward 0	ward
+Michigan;Oakland County;WHITE LAKE TOWNSHIP	township
+Michigan;Oakland County;WEST BLOOMFIELD TOWNSHIP;Ward 0	ward
+Michigan;Oakland County;WEST BLOOMFIELD TOWNSHIP	township
+Michigan;Oakland County;WATERFORD TOWNSHIP;Ward 0	ward
+Michigan;Oakland County;WATERFORD TOWNSHIP	township
+Michigan;Oakland County;WALLED LAKE CITY;Ward 0	ward
+Michigan;Oakland County;WALLED LAKE CITY	city
+Michigan;Oakland County;TROY CITY;Ward 0	ward
+Michigan;Oakland County;TROY CITY	city
+Michigan;Oakland County;SYLVAN LAKE CITY;Ward 0	ward
+Michigan;Oakland County;SYLVAN LAKE CITY	city
+Michigan;Oakland County;SPRINGFIELD TOWNSHIP;Ward 0	ward
+Michigan;Oakland County;SPRINGFIELD TOWNSHIP	township
+Michigan;Oakland County;SOUTHFIELD TOWNSHIP;Ward 0	ward
+Michigan;Oakland County;SOUTHFIELD TOWNSHIP	township
+Michigan;Oakland County;SOUTHFIELD CITY;Ward 0	ward
+Michigan;Oakland County;SOUTHFIELD CITY	city
+Michigan;Oakland County;SOUTH LYON CITY;Ward 0	ward
+Michigan;Oakland County;SOUTH LYON CITY	city
+Michigan;Oakland County;ROYAL OAK TOWNSHIP;Ward 0	ward
+Michigan;Oakland County;ROYAL OAK TOWNSHIP	township
+Michigan;Oakland County;ROYAL OAK CITY;Ward 0	ward
+Michigan;Oakland County;ROYAL OAK CITY	city
+Michigan;Oakland County;ROSE TOWNSHIP;Ward 0	ward
+Michigan;Oakland County;ROSE TOWNSHIP	township
+Michigan;Oakland County;ROCHESTER HILLS CITY;Ward 1	ward
+Michigan;Oakland County;ROCHESTER HILLS CITY;Ward 0	ward
+Michigan;Oakland County;ROCHESTER HILLS CITY	city
+Michigan;Oakland County;ROCHESTER CITY;Ward 0	ward
+Michigan;Oakland County;ROCHESTER CITY	city
+Michigan;Oakland County;PONTIAC CITY;Ward 7
+Michigan;Oakland County;PONTIAC CITY;Ward 6
+Michigan;Oakland County;PONTIAC CITY;Ward 5
+Michigan;Oakland County;PONTIAC CITY;Ward 4
+Michigan;Oakland County;PONTIAC CITY;Ward 3
+Michigan;Oakland County;PONTIAC CITY;Ward 2
+Michigan;Oakland County;PONTIAC CITY;Ward 1	ward
+Michigan;Oakland County;PONTIAC CITY;Ward 0	ward
+Michigan;Oakland County;PONTIAC CITY	city
+Michigan;Oakland County;PLEASANT RIDGE CITY;Ward 0	ward
+Michigan;Oakland County;PLEASANT RIDGE CITY	city
+Michigan;Oakland County;OXFORD TOWNSHIP;Ward 0	ward
+Michigan;Oakland County;OXFORD TOWNSHIP	township
+Michigan;Oakland County;ORION TOWNSHIP;Ward 0	ward
+Michigan;Oakland County;ORION TOWNSHIP	township
+Michigan;Oakland County;ORCHARD LAKE VILLAGE CITY;Ward 0	ward
+Michigan;Oakland County;ORCHARD LAKE VILLAGE CITY	city
+Michigan;Oakland County;OAKLAND TOWNSHIP;Ward 0	ward
+Michigan;Oakland County;OAKLAND TOWNSHIP	township
+Michigan;Oakland County;OAK PARK CITY;Ward 0	ward
+Michigan;Oakland County;OAK PARK CITY	city
+Michigan;Oakland County;NOVI TOWNSHIP;Ward 0	ward
+Michigan;Oakland County;NOVI TOWNSHIP	township
+Michigan;Oakland County;NOVI CITY;Ward 0	ward
+Michigan;Oakland County;NOVI CITY	city
+Michigan;Oakland County;NORTHVILLE CITY;Ward 0	ward
+Michigan;Oakland County;NORTHVILLE CITY	city
+Michigan;Oakland County;MILFORD TOWNSHIP;Ward 0	ward
+Michigan;Oakland County;MILFORD TOWNSHIP	township
+Michigan;Oakland County;MADISON HEIGHTS CITY;Ward 0	ward
+Michigan;Oakland County;MADISON HEIGHTS CITY	city
+Michigan;Oakland County;LYON TOWNSHIP;Ward 0	ward
+Michigan;Oakland County;LYON TOWNSHIP	township
+Michigan;Oakland County;LATHRUP VILLAGE CITY;Ward 0	ward
+Michigan;Oakland County;LATHRUP VILLAGE CITY	city
+Michigan;Oakland County;LAKE ANGELUS CITY;Ward 0	ward
+Michigan;Oakland County;LAKE ANGELUS CITY	city
+Michigan;Oakland County;KEEGO HARBOR CITY;Ward 0	ward
+Michigan;Oakland County;KEEGO HARBOR CITY	city
+Michigan;Oakland County;INDEPENDENCE TOWNSHIP;Ward 0	ward
+Michigan;Oakland County;INDEPENDENCE TOWNSHIP	township
+Michigan;Oakland County;HUNTINGTON WOODS CITY;Ward 0	ward
+Michigan;Oakland County;HUNTINGTON WOODS CITY	city
+Michigan;Oakland County;HOLLY TOWNSHIP;Ward 0	ward
+Michigan;Oakland County;HOLLY TOWNSHIP	township
+Michigan;Oakland County;HIGHLAND TOWNSHIP;Ward 0	ward
+Michigan;Oakland County;HIGHLAND TOWNSHIP	township
+Michigan;Oakland County;HAZEL PARK CITY;Ward 0	ward
+Michigan;Oakland County;HAZEL PARK CITY	city
+Michigan;Oakland County;GROVELAND TOWNSHIP;Ward 0	ward
+Michigan;Oakland County;GROVELAND TOWNSHIP	township
+Michigan;Oakland County;FERNDALE CITY;Ward 0	ward
+Michigan;Oakland County;FERNDALE CITY	city
+Michigan;Oakland County;FENTON CITY;Ward 0	ward
+Michigan;Oakland County;FENTON CITY	city
+Michigan;Oakland County;FARMINGTON HILLS CITY;Ward 0	ward
+Michigan;Oakland County;FARMINGTON HILLS CITY	city
+Michigan;Oakland County;FARMINGTON CITY;Ward 1	ward
+Michigan;Oakland County;FARMINGTON CITY;Ward 0	ward
+Michigan;Oakland County;FARMINGTON CITY	city
+Michigan;Oakland County;COMMERCE TOWNSHIP;Ward 0	ward
+Michigan;Oakland County;COMMERCE TOWNSHIP	township
+Michigan;Oakland County;CLAWSON CITY;Ward 0	ward
+Michigan;Oakland County;CLAWSON CITY	city
+Michigan;Oakland County;CLARKSTON CITY;Ward 0	ward
+Michigan;Oakland County;CLARKSTON CITY	city
+Michigan;Oakland County;BRANDON TOWNSHIP;Ward 0	ward
+Michigan;Oakland County;BRANDON TOWNSHIP	township
+Michigan;Oakland County;BLOOMFIELD TOWNSHIP;Ward 0	ward
+Michigan;Oakland County;BLOOMFIELD TOWNSHIP	township
+Michigan;Oakland County;BLOOMFIELD HILLS CITY;Ward 0	ward
+Michigan;Oakland County;BLOOMFIELD HILLS CITY	city
+Michigan;Oakland County;BIRMINGHAM CITY;Ward 0	ward
+Michigan;Oakland County;BIRMINGHAM CITY	city
+Michigan;Oakland County;BERKLEY CITY;Ward 0	ward
+Michigan;Oakland County;BERKLEY CITY	city
+Michigan;Oakland County;AUBURN HILLS CITY;Ward 0	ward
+Michigan;Oakland County;AUBURN HILLS CITY	city
+Michigan;Oakland County;ADDISON TOWNSHIP;Ward 0	ward
+Michigan;Oakland County;ADDISON TOWNSHIP	township
+Michigan;Newaygo County;{Statistical Adjustments};Ward 0	ward
+Michigan;Newaygo County;{Statistical Adjustments}
+Michigan;Newaygo County;WILCOX TOWNSHIP;Ward 0	ward
+Michigan;Newaygo County;WILCOX TOWNSHIP	township
+Michigan;Newaygo County;WHITE CLOUD CITY;Ward 0	ward
+Michigan;Newaygo County;WHITE CLOUD CITY	city
+Michigan;Newaygo County;TROY TOWNSHIP;Ward 0	ward
+Michigan;Newaygo County;TROY TOWNSHIP	township
+Michigan;Newaygo County;SHERMAN TOWNSHIP;Ward 0	ward
+Michigan;Newaygo County;SHERMAN TOWNSHIP	township
+Michigan;Newaygo County;SHERIDAN TOWNSHIP;Ward 0	ward
+Michigan;Newaygo County;SHERIDAN TOWNSHIP	township
+Michigan;Newaygo County;NORWICH TOWNSHIP;Ward 0	ward
+Michigan;Newaygo County;NORWICH TOWNSHIP	township
+Michigan;Newaygo County;NEWAYGO CITY;Ward 0	ward
+Michigan;Newaygo County;NEWAYGO CITY	city
+Michigan;Newaygo County;MONROE TOWNSHIP;Ward 0	ward
+Michigan;Newaygo County;MONROE TOWNSHIP	township
+Michigan;Newaygo County;MERRILL TOWNSHIP;Ward 0	ward
+Michigan;Newaygo County;MERRILL TOWNSHIP	township
+Michigan;Newaygo County;LINCOLN TOWNSHIP;Ward 0	ward
+Michigan;Newaygo County;LINCOLN TOWNSHIP	township
+Michigan;Newaygo County;LILLEY TOWNSHIP;Ward 0	ward
+Michigan;Newaygo County;LILLEY TOWNSHIP	township
+Michigan;Newaygo County;HOME TOWNSHIP;Ward 0	ward
+Michigan;Newaygo County;HOME TOWNSHIP	township
+Michigan;Newaygo County;GRANT TOWNSHIP;Ward 0	ward
+Michigan;Newaygo County;GRANT TOWNSHIP	township
+Michigan;Newaygo County;GRANT CITY;Ward 0	ward
+Michigan;Newaygo County;GRANT CITY	city
+Michigan;Newaygo County;GOODWELL TOWNSHIP;Ward 0	ward
+Michigan;Newaygo County;GOODWELL TOWNSHIP	township
+Michigan;Newaygo County;GARFIELD TOWNSHIP;Ward 0	ward
+Michigan;Newaygo County;GARFIELD TOWNSHIP	township
+Michigan;Newaygo County;FREMONT CITY;Ward 0	ward
+Michigan;Newaygo County;FREMONT CITY	city
+Michigan;Newaygo County;EVERETT TOWNSHIP;Ward 0	ward
+Michigan;Newaygo County;EVERETT TOWNSHIP	township
+Michigan;Newaygo County;ENSLEY TOWNSHIP;Ward 0	ward
+Michigan;Newaygo County;ENSLEY TOWNSHIP	township
+Michigan;Newaygo County;DENVER TOWNSHIP;Ward 0	ward
+Michigan;Newaygo County;DENVER TOWNSHIP	township
+Michigan;Newaygo County;DAYTON TOWNSHIP;Ward 0	ward
+Michigan;Newaygo County;DAYTON TOWNSHIP	township
+Michigan;Newaygo County;CROTON TOWNSHIP;Ward 0	ward
+Michigan;Newaygo County;CROTON TOWNSHIP	township
+Michigan;Newaygo County;BROOKS TOWNSHIP;Ward 0	ward
+Michigan;Newaygo County;BROOKS TOWNSHIP	township
+Michigan;Newaygo County;BRIDGETON TOWNSHIP;Ward 0	ward
+Michigan;Newaygo County;BRIDGETON TOWNSHIP	township
+Michigan;Newaygo County;BIG PRAIRIE TOWNSHIP;Ward 0	ward
+Michigan;Newaygo County;BIG PRAIRIE TOWNSHIP	township
+Michigan;Newaygo County;BEAVER TOWNSHIP;Ward 0	ward
+Michigan;Newaygo County;BEAVER TOWNSHIP	township
+Michigan;Newaygo County;BARTON TOWNSHIP;Ward 0	ward
+Michigan;Newaygo County;BARTON TOWNSHIP	township
+Michigan;Newaygo County;ASHLAND TOWNSHIP;Ward 0	ward
+Michigan;Newaygo County;ASHLAND TOWNSHIP	township
+Michigan;Muskegon County;{Statistical Adjustments};Ward 0	ward
+Michigan;Muskegon County;{Statistical Adjustments}
+Michigan;Muskegon County;WHITEHALL TOWNSHIP;Ward 0	ward
+Michigan;Muskegon County;WHITEHALL TOWNSHIP	township
+Michigan;Muskegon County;WHITEHALL CITY;Ward 0	ward
+Michigan;Muskegon County;WHITEHALL CITY	city
+Michigan;Muskegon County;WHITE RIVER TOWNSHIP;Ward 0	ward
+Michigan;Muskegon County;WHITE RIVER TOWNSHIP	township
+Michigan;Muskegon County;SULLIVAN TOWNSHIP;Ward 0	ward
+Michigan;Muskegon County;SULLIVAN TOWNSHIP	township
+Michigan;Muskegon County;ROOSEVELT PARK CITY;Ward 0	ward
+Michigan;Muskegon County;ROOSEVELT PARK CITY	city
+Michigan;Muskegon County;RAVENNA TOWNSHIP;Ward 0	ward
+Michigan;Muskegon County;RAVENNA TOWNSHIP	township
+Michigan;Muskegon County;NORTON SHORES CITY;Ward 2
+Michigan;Muskegon County;NORTON SHORES CITY;Ward 1	ward
+Michigan;Muskegon County;NORTON SHORES CITY	city
+Michigan;Muskegon County;NORTH MUSKEGON CITY;Ward 0	ward
+Michigan;Muskegon County;NORTH MUSKEGON CITY	city
+Michigan;Muskegon County;MUSKEGON TOWNSHIP;Ward 0	ward
+Michigan;Muskegon County;MUSKEGON TOWNSHIP	township
+Michigan;Muskegon County;MUSKEGON HEIGHTS CITY;Ward 0	ward
+Michigan;Muskegon County;MUSKEGON HEIGHTS CITY	city
+Michigan;Muskegon County;MUSKEGON CITY;Ward 4
+Michigan;Muskegon County;MUSKEGON CITY;Ward 3
+Michigan;Muskegon County;MUSKEGON CITY;Ward 2
+Michigan;Muskegon County;MUSKEGON CITY;Ward 1	ward
+Michigan;Muskegon County;MUSKEGON CITY	city
+Michigan;Muskegon County;MOORLAND TOWNSHIP;Ward 0	ward
+Michigan;Muskegon County;MOORLAND TOWNSHIP	township
+Michigan;Muskegon County;MONTAGUE TOWNSHIP;Ward 0	ward
+Michigan;Muskegon County;MONTAGUE TOWNSHIP	township
+Michigan;Muskegon County;MONTAGUE CITY;Ward 0	ward
+Michigan;Muskegon County;MONTAGUE CITY	city
+Michigan;Muskegon County;LAKETON TOWNSHIP;Ward 0	ward
+Michigan;Muskegon County;LAKETON TOWNSHIP	township
+Michigan;Muskegon County;HOLTON TOWNSHIP;Ward 0	ward
+Michigan;Muskegon County;HOLTON TOWNSHIP	township
+Michigan;Muskegon County;FRUITPORT TOWNSHIP;Ward 0	ward
+Michigan;Muskegon County;FRUITPORT TOWNSHIP	township
+Michigan;Muskegon County;FRUITLAND TOWNSHIP;Ward 0	ward
+Michigan;Muskegon County;FRUITLAND TOWNSHIP	township
+Michigan;Muskegon County;EGELSTON TOWNSHIP;Ward 0	ward
+Michigan;Muskegon County;EGELSTON TOWNSHIP	township
+Michigan;Muskegon County;DALTON TOWNSHIP;Ward 0	ward
+Michigan;Muskegon County;DALTON TOWNSHIP	township
+Michigan;Muskegon County;CEDAR CREEK TOWNSHIP;Ward 0	ward
+Michigan;Muskegon County;CEDAR CREEK TOWNSHIP	township
+Michigan;Muskegon County;CASNOVIA TOWNSHIP;Ward 0	ward
+Michigan;Muskegon County;CASNOVIA TOWNSHIP	township
+Michigan;Muskegon County;BLUE LAKE TOWNSHIP;Ward 0	ward
+Michigan;Muskegon County;BLUE LAKE TOWNSHIP	township
+Michigan;Montmorency County;VIENNA TOWNSHIP;Ward 0	ward
+Michigan;Montmorency County;VIENNA TOWNSHIP	township
+Michigan;Montmorency County;RUST TOWNSHIP;Ward 0	ward
+Michigan;Montmorency County;RUST TOWNSHIP	township
+Michigan;Montmorency County;MONTMORENCY TOWNSHIP;Ward 0	ward
+Michigan;Montmorency County;MONTMORENCY TOWNSHIP	township
+Michigan;Montmorency County;LOUD TOWNSHIP;Ward 0	ward
+Michigan;Montmorency County;LOUD TOWNSHIP	township
+Michigan;Montmorency County;HILLMAN TOWNSHIP;Ward 0	ward
+Michigan;Montmorency County;HILLMAN TOWNSHIP	township
+Michigan;Montmorency County;BRILEY TOWNSHIP;Ward 0	ward
+Michigan;Montmorency County;BRILEY TOWNSHIP	township
+Michigan;Montmorency County;AVERY TOWNSHIP;Ward 0	ward
+Michigan;Montmorency County;AVERY TOWNSHIP	township
+Michigan;Montmorency County;ALBERT TOWNSHIP;Ward 0	ward
+Michigan;Montmorency County;ALBERT TOWNSHIP	township
+Michigan;Montcalm County;{Statistical Adjustments};Ward 0	ward
+Michigan;Montcalm County;{Statistical Adjustments}
+Michigan;Montcalm County;WINFIELD TOWNSHIP;Ward 0	ward
+Michigan;Montcalm County;WINFIELD TOWNSHIP	township
+Michigan;Montcalm County;STANTON CITY;Ward 0	ward
+Michigan;Montcalm County;STANTON CITY	city
+Michigan;Montcalm County;SIDNEY TOWNSHIP;Ward 0	ward
+Michigan;Montcalm County;SIDNEY TOWNSHIP	township
+Michigan;Montcalm County;RICHLAND TOWNSHIP;Ward 0	ward
+Michigan;Montcalm County;RICHLAND TOWNSHIP	township
+Michigan;Montcalm County;REYNOLDS TOWNSHIP;Ward 0	ward
+Michigan;Montcalm County;REYNOLDS TOWNSHIP	township
+Michigan;Montcalm County;PINE TOWNSHIP;Ward 0	ward
+Michigan;Montcalm County;PINE TOWNSHIP	township
+Michigan;Montcalm County;PIERSON TOWNSHIP;Ward 0	ward
+Michigan;Montcalm County;PIERSON TOWNSHIP	township
+Michigan;Montcalm County;MONTCALM TOWNSHIP;Ward 0	ward
+Michigan;Montcalm County;MONTCALM TOWNSHIP	township
+Michigan;Montcalm County;MAPLE VALLEY TOWNSHIP;Ward 0	ward
+Michigan;Montcalm County;MAPLE VALLEY TOWNSHIP	township
+Michigan;Montcalm County;HOME TOWNSHIP;Ward 0	ward
+Michigan;Montcalm County;HOME TOWNSHIP	township
+Michigan;Montcalm County;GREENVILLE CITY;Ward 0	ward
+Michigan;Montcalm County;GREENVILLE CITY	city
+Michigan;Montcalm County;FERRIS TOWNSHIP;Ward 0	ward
+Michigan;Montcalm County;FERRIS TOWNSHIP	township
+Michigan;Montcalm County;FAIRPLAIN TOWNSHIP;Ward 0	ward
+Michigan;Montcalm County;FAIRPLAIN TOWNSHIP	township
+Michigan;Montcalm County;EVERGREEN TOWNSHIP;Ward 0	ward
+Michigan;Montcalm County;EVERGREEN TOWNSHIP	township
+Michigan;Montcalm County;EUREKA TOWNSHIP;Ward 0	ward
+Michigan;Montcalm County;EUREKA TOWNSHIP	township
+Michigan;Montcalm County;DOUGLASS TOWNSHIP;Ward 0	ward
+Michigan;Montcalm County;DOUGLASS TOWNSHIP	township
+Michigan;Montcalm County;DAY TOWNSHIP;Ward 0	ward
+Michigan;Montcalm County;DAY TOWNSHIP	township
+Michigan;Montcalm County;CRYSTAL TOWNSHIP;Ward 0	ward
+Michigan;Montcalm County;CRYSTAL TOWNSHIP	township
+Michigan;Montcalm County;CATO TOWNSHIP;Ward 0	ward
+Michigan;Montcalm County;CATO TOWNSHIP	township
+Michigan;Montcalm County;CARSON CITY;Ward 0	ward
+Michigan;Montcalm County;CARSON CITY	city
+Michigan;Montcalm County;BUSHNELL TOWNSHIP;Ward 0	ward
+Michigan;Montcalm County;BUSHNELL TOWNSHIP	township
+Michigan;Montcalm County;BLOOMER TOWNSHIP;Ward 0	ward
+Michigan;Montcalm County;BLOOMER TOWNSHIP	township
+Michigan;Montcalm County;BELVIDERE TOWNSHIP;Ward 0	ward
+Michigan;Montcalm County;BELVIDERE TOWNSHIP	township
+Michigan;Monroe County;{Statistical Adjustments};Ward 0	ward
+Michigan;Monroe County;{Statistical Adjustments}
+Michigan;Monroe County;WHITEFORD TOWNSHIP;Ward 0	ward
+Michigan;Monroe County;WHITEFORD TOWNSHIP	township
+Michigan;Monroe County;SUMMERFIELD TOWNSHIP;Ward 0	ward
+Michigan;Monroe County;SUMMERFIELD TOWNSHIP	township
+Michigan;Monroe County;RAISINVILLE TOWNSHIP;Ward 0	ward
+Michigan;Monroe County;RAISINVILLE TOWNSHIP	township
+Michigan;Monroe County;PETERSBURG CITY;Ward 0	ward
+Michigan;Monroe County;PETERSBURG CITY	city
+Michigan;Monroe County;MONROE TOWNSHIP;Ward 0	ward
+Michigan;Monroe County;MONROE TOWNSHIP	township
+Michigan;Monroe County;MONROE CITY;Ward 0	ward
+Michigan;Monroe County;MONROE CITY	city
+Michigan;Monroe County;MILAN TOWNSHIP;Ward 0	ward
+Michigan;Monroe County;MILAN TOWNSHIP	township
+Michigan;Monroe County;MILAN CITY;Ward 0	ward
+Michigan;Monroe County;MILAN CITY	city
+Michigan;Monroe County;LUNA PIER CITY;Ward 0	ward
+Michigan;Monroe County;LUNA PIER CITY	city
+Michigan;Monroe County;LONDON TOWNSHIP;Ward 0	ward
+Michigan;Monroe County;LONDON TOWNSHIP	township
+Michigan;Monroe County;LA SALLE TOWNSHIP;Ward 0	ward
+Michigan;Monroe County;LA SALLE TOWNSHIP	township
+Michigan;Monroe County;IDA TOWNSHIP;Ward 0	ward
+Michigan;Monroe County;IDA TOWNSHIP	township
+Michigan;Monroe County;FRENCHTOWN TOWNSHIP;Ward 0	ward
+Michigan;Monroe County;FRENCHTOWN TOWNSHIP	township
+Michigan;Monroe County;EXETER TOWNSHIP;Ward 0	ward
+Michigan;Monroe County;EXETER TOWNSHIP	township
+Michigan;Monroe County;ERIE TOWNSHIP;Ward 0	ward
+Michigan;Monroe County;ERIE TOWNSHIP	township
+Michigan;Monroe County;DUNDEE TOWNSHIP;Ward 0	ward
+Michigan;Monroe County;DUNDEE TOWNSHIP	township
+Michigan;Monroe County;BERLIN TOWNSHIP;Ward 0	ward
+Michigan;Monroe County;BERLIN TOWNSHIP	township
+Michigan;Monroe County;BEDFORD TOWNSHIP;Ward 0	ward
+Michigan;Monroe County;BEDFORD TOWNSHIP	township
+Michigan;Monroe County;ASH TOWNSHIP;Ward 0	ward
+Michigan;Monroe County;ASH TOWNSHIP	township
+Michigan;Missaukee County;{Statistical Adjustments};Ward 0	ward
+Michigan;Missaukee County;{Statistical Adjustments}
+Michigan;Missaukee County;WEST BRANCH TOWNSHIP;Ward 0	ward
+Michigan;Missaukee County;WEST BRANCH TOWNSHIP	township
+Michigan;Missaukee County;RIVERSIDE TOWNSHIP;Ward 0	ward
+Michigan;Missaukee County;RIVERSIDE TOWNSHIP	township
+Michigan;Missaukee County;RICHLAND TOWNSHIP;Ward 0	ward
+Michigan;Missaukee County;RICHLAND TOWNSHIP	township
+Michigan;Missaukee County;REEDER TOWNSHIP;Ward 0	ward
+Michigan;Missaukee County;REEDER TOWNSHIP	township
+Michigan;Missaukee County;PIONEER TOWNSHIP;Ward 0	ward
+Michigan;Missaukee County;PIONEER TOWNSHIP	township
+Michigan;Missaukee County;NORWICH TOWNSHIP;Ward 0	ward
+Michigan;Missaukee County;NORWICH TOWNSHIP	township
+Michigan;Missaukee County;MCBAIN CITY;Ward 0	ward
+Michigan;Missaukee County;MCBAIN CITY	city
+Michigan;Missaukee County;LAKE TOWNSHIP;Ward 0	ward
+Michigan;Missaukee County;LAKE TOWNSHIP	township
+Michigan;Missaukee County;LAKE CITY;Ward 0	ward
+Michigan;Missaukee County;LAKE CITY	city
+Michigan;Missaukee County;HOLLAND TOWNSHIP;Ward 0	ward
+Michigan;Missaukee County;HOLLAND TOWNSHIP	township
+Michigan;Missaukee County;FOREST TOWNSHIP;Ward 0	ward
+Michigan;Missaukee County;FOREST TOWNSHIP	township
+Michigan;Missaukee County;ENTERPRISE TOWNSHIP;Ward 0	ward
+Michigan;Missaukee County;ENTERPRISE TOWNSHIP	township
+Michigan;Missaukee County;CLAM UNION TOWNSHIP;Ward 0	ward
+Michigan;Missaukee County;CLAM UNION TOWNSHIP	township
+Michigan;Missaukee County;CALDWELL TOWNSHIP;Ward 0	ward
+Michigan;Missaukee County;CALDWELL TOWNSHIP	township
+Michigan;Missaukee County;BUTTERFIELD TOWNSHIP;Ward 0	ward
+Michigan;Missaukee County;BUTTERFIELD TOWNSHIP	township
+Michigan;Missaukee County;BLOOMFIELD TOWNSHIP;Ward 0	ward
+Michigan;Missaukee County;BLOOMFIELD TOWNSHIP	township
+Michigan;Missaukee County;AETNA TOWNSHIP;Ward 0	ward
+Michigan;Missaukee County;AETNA TOWNSHIP	township
+Michigan;Midland County;{Statistical Adjustments};Ward 0	ward
+Michigan;Midland County;{Statistical Adjustments}
+Michigan;Midland County;WARREN TOWNSHIP;Ward 0	ward
+Michigan;Midland County;WARREN TOWNSHIP	township
+Michigan;Midland County;PORTER TOWNSHIP;Ward 0	ward
+Michigan;Midland County;PORTER TOWNSHIP	township
+Michigan;Midland County;MOUNT HALEY TOWNSHIP;Ward 0	ward
+Michigan;Midland County;MOUNT HALEY TOWNSHIP	township
+Michigan;Midland County;MILLS TOWNSHIP;Ward 0	ward
+Michigan;Midland County;MILLS TOWNSHIP	township
+Michigan;Midland County;MIDLAND TOWNSHIP;Ward 0	ward
+Michigan;Midland County;MIDLAND TOWNSHIP	township
+Michigan;Midland County;MIDLAND CITY;Ward 5
+Michigan;Midland County;MIDLAND CITY;Ward 4
+Michigan;Midland County;MIDLAND CITY;Ward 3
+Michigan;Midland County;MIDLAND CITY;Ward 2
+Michigan;Midland County;MIDLAND CITY;Ward 1	ward
+Michigan;Midland County;MIDLAND CITY	city
+Michigan;Midland County;LINCOLN TOWNSHIP;Ward 0	ward
+Michigan;Midland County;LINCOLN TOWNSHIP	township
+Michigan;Midland County;LEE TOWNSHIP;Ward 0	ward
+Michigan;Midland County;LEE TOWNSHIP	township
+Michigan;Midland County;LARKIN TOWNSHIP;Ward 0	ward
+Michigan;Midland County;LARKIN TOWNSHIP	township
+Michigan;Midland County;JEROME TOWNSHIP;Ward 0	ward
+Michigan;Midland County;JEROME TOWNSHIP	township
+Michigan;Midland County;JASPER TOWNSHIP;Ward 0	ward
+Michigan;Midland County;JASPER TOWNSHIP	township
+Michigan;Midland County;INGERSOLL TOWNSHIP;Ward 0	ward
+Michigan;Midland County;INGERSOLL TOWNSHIP	township
+Michigan;Midland County;HOPE TOWNSHIP;Ward 0	ward
+Michigan;Midland County;HOPE TOWNSHIP	township
+Michigan;Midland County;HOMER TOWNSHIP;Ward 0	ward
+Michigan;Midland County;HOMER TOWNSHIP	township
+Michigan;Midland County;GREENDALE TOWNSHIP;Ward 0	ward
+Michigan;Midland County;GREENDALE TOWNSHIP	township
+Michigan;Midland County;GENEVA TOWNSHIP;Ward 0	ward
+Michigan;Midland County;GENEVA TOWNSHIP	township
+Michigan;Midland County;EDENVILLE TOWNSHIP;Ward 0	ward
+Michigan;Midland County;EDENVILLE TOWNSHIP	township
+Michigan;Midland County;COLEMAN CITY;Ward 0	ward
+Michigan;Midland County;COLEMAN CITY	city
+Michigan;Menominee County;{Statistical Adjustments};Ward 0	ward
+Michigan;Menominee County;{Statistical Adjustments}
+Michigan;Menominee County;STEPHENSON TOWNSHIP;Ward 0	ward
+Michigan;Menominee County;STEPHENSON TOWNSHIP	township
+Michigan;Menominee County;STEPHENSON CITY;Ward 0	ward
+Michigan;Menominee County;STEPHENSON CITY	city
+Michigan;Menominee County;SPALDING TOWNSHIP;Ward 0	ward
+Michigan;Menominee County;SPALDING TOWNSHIP	township
+Michigan;Menominee County;NADEAU TOWNSHIP;Ward 0	ward
+Michigan;Menominee County;NADEAU TOWNSHIP	township
+Michigan;Menominee County;MEYER TOWNSHIP;Ward 0	ward
+Michigan;Menominee County;MEYER TOWNSHIP	township
+Michigan;Menominee County;MENOMINEE TOWNSHIP;Ward 0	ward
+Michigan;Menominee County;MENOMINEE TOWNSHIP	township
+Michigan;Menominee County;MENOMINEE CITY;Ward 0	ward
+Michigan;Menominee County;MENOMINEE CITY	city
+Michigan;Menominee County;MELLEN TOWNSHIP;Ward 0	ward
+Michigan;Menominee County;MELLEN TOWNSHIP	township
+Michigan;Menominee County;LAKE TOWNSHIP;Ward 0	ward
+Michigan;Menominee County;LAKE TOWNSHIP	township
+Michigan;Menominee County;INGALLSTON TOWNSHIP;Ward 0	ward
+Michigan;Menominee County;INGALLSTON TOWNSHIP	township
+Michigan;Menominee County;HOLMES TOWNSHIP;Ward 0	ward
+Michigan;Menominee County;HOLMES TOWNSHIP	township
+Michigan;Menominee County;HARRIS TOWNSHIP;Ward 0	ward
+Michigan;Menominee County;HARRIS TOWNSHIP	township
+Michigan;Menominee County;GOURLEY TOWNSHIP;Ward 0	ward
+Michigan;Menominee County;GOURLEY TOWNSHIP	township
+Michigan;Menominee County;FAITHORN TOWNSHIP;Ward 0	ward
+Michigan;Menominee County;FAITHORN TOWNSHIP	township
+Michigan;Menominee County;DAGGETT TOWNSHIP;Ward 0	ward
+Michigan;Menominee County;DAGGETT TOWNSHIP	township
+Michigan;Menominee County;CEDARVILLE TOWNSHIP;Ward 0	ward
+Michigan;Menominee County;CEDARVILLE TOWNSHIP	township
+Michigan;Mecosta County;WHEATLAND TOWNSHIP;Ward 0	ward
+Michigan;Mecosta County;WHEATLAND TOWNSHIP	township
+Michigan;Mecosta County;SHERIDAN TOWNSHIP;Ward 0	ward
+Michigan;Mecosta County;SHERIDAN TOWNSHIP	township
+Michigan;Mecosta County;MORTON TOWNSHIP;Ward 0	ward
+Michigan;Mecosta County;MORTON TOWNSHIP	township
+Michigan;Mecosta County;MILLBROOK TOWNSHIP;Ward 0	ward
+Michigan;Mecosta County;MILLBROOK TOWNSHIP	township
+Michigan;Mecosta County;MECOSTA TOWNSHIP;Ward 0	ward
+Michigan;Mecosta County;MECOSTA TOWNSHIP	township
+Michigan;Mecosta County;MARTINY TOWNSHIP;Ward 0	ward
+Michigan;Mecosta County;MARTINY TOWNSHIP	township
+Michigan;Mecosta County;HINTON TOWNSHIP;Ward 0	ward
+Michigan;Mecosta County;HINTON TOWNSHIP	township
+Michigan;Mecosta County;GREEN TOWNSHIP;Ward 0	ward
+Michigan;Mecosta County;GREEN TOWNSHIP	township
+Michigan;Mecosta County;GRANT TOWNSHIP;Ward 0	ward
+Michigan;Mecosta County;GRANT TOWNSHIP	township
+Michigan;Mecosta County;FORK TOWNSHIP;Ward 0	ward
+Michigan;Mecosta County;FORK TOWNSHIP	township
+Michigan;Mecosta County;DEERFIELD TOWNSHIP;Ward 0	ward
+Michigan;Mecosta County;DEERFIELD TOWNSHIP	township
+Michigan;Mecosta County;COLFAX TOWNSHIP;Ward 0	ward
+Michigan;Mecosta County;COLFAX TOWNSHIP	township
+Michigan;Mecosta County;CHIPPEWA TOWNSHIP;Ward 0	ward
+Michigan;Mecosta County;CHIPPEWA TOWNSHIP	township
+Michigan;Mecosta County;BIG RAPIDS TOWNSHIP;Ward 0	ward
+Michigan;Mecosta County;BIG RAPIDS TOWNSHIP	township
+Michigan;Mecosta County;BIG RAPIDS CITY;Ward 0	ward
+Michigan;Mecosta County;BIG RAPIDS CITY	city
+Michigan;Mecosta County;AUSTIN TOWNSHIP;Ward 0	ward
+Michigan;Mecosta County;AUSTIN TOWNSHIP	township
+Michigan;Mecosta County;AETNA TOWNSHIP;Ward 0	ward
+Michigan;Mecosta County;AETNA TOWNSHIP	township
+Michigan;Mason County;{Statistical Adjustments};Ward 0	ward
+Michigan;Mason County;{Statistical Adjustments}
+Michigan;Mason County;VICTORY TOWNSHIP;Ward 0	ward
+Michigan;Mason County;VICTORY TOWNSHIP	township
+Michigan;Mason County;SUMMIT TOWNSHIP;Ward 0	ward
+Michigan;Mason County;SUMMIT TOWNSHIP	township
+Michigan;Mason County;SHERMAN TOWNSHIP;Ward 0	ward
+Michigan;Mason County;SHERMAN TOWNSHIP	township
+Michigan;Mason County;SHERIDAN TOWNSHIP;Ward 0	ward
+Michigan;Mason County;SHERIDAN TOWNSHIP	township
+Michigan;Mason County;SCOTTVILLE CITY;Ward 2
+Michigan;Mason County;SCOTTVILLE CITY;Ward 1	ward
+Michigan;Mason County;SCOTTVILLE CITY	city
+Michigan;Mason County;RIVERTON TOWNSHIP;Ward 0	ward
+Michigan;Mason County;RIVERTON TOWNSHIP	township
+Michigan;Mason County;PERE MARQUETTE TOWNSHIP;Ward 0	ward
+Michigan;Mason County;PERE MARQUETTE TOWNSHIP	township
+Michigan;Mason County;MEADE TOWNSHIP;Ward 0	ward
+Michigan;Mason County;MEADE TOWNSHIP	township
+Michigan;Mason County;LUDINGTON CITY;Ward 6
+Michigan;Mason County;LUDINGTON CITY;Ward 5
+Michigan;Mason County;LUDINGTON CITY;Ward 4
+Michigan;Mason County;LUDINGTON CITY;Ward 3
+Michigan;Mason County;LUDINGTON CITY;Ward 2
+Michigan;Mason County;LUDINGTON CITY;Ward 1	ward
+Michigan;Mason County;LUDINGTON CITY	city
+Michigan;Mason County;LOGAN TOWNSHIP;Ward 0	ward
+Michigan;Mason County;LOGAN TOWNSHIP	township
+Michigan;Mason County;HAMLIN TOWNSHIP;Ward 0	ward
+Michigan;Mason County;HAMLIN TOWNSHIP	township
+Michigan;Mason County;GRANT TOWNSHIP;Ward 0	ward
+Michigan;Mason County;GRANT TOWNSHIP	township
+Michigan;Mason County;FREE SOIL TOWNSHIP;Ward 0	ward
+Michigan;Mason County;FREE SOIL TOWNSHIP	township
+Michigan;Mason County;EDEN TOWNSHIP;Ward 0	ward
+Michigan;Mason County;EDEN TOWNSHIP	township
+Michigan;Mason County;CUSTER TOWNSHIP;Ward 0	ward
+Michigan;Mason County;CUSTER TOWNSHIP	township
+Michigan;Mason County;BRANCH TOWNSHIP;Ward 0	ward
+Michigan;Mason County;BRANCH TOWNSHIP	township
+Michigan;Mason County;AMBER TOWNSHIP;Ward 0	ward
+Michigan;Mason County;AMBER TOWNSHIP	township
+Michigan;Marquette County;{Statistical Adjustments};Ward 0	ward
+Michigan;Marquette County;{Statistical Adjustments}
+Michigan;Marquette County;WEST BRANCH TOWNSHIP;Ward 0	ward
+Michigan;Marquette County;WEST BRANCH TOWNSHIP	township
+Michigan;Marquette County;WELLS TOWNSHIP;Ward 0	ward
+Michigan;Marquette County;WELLS TOWNSHIP	township
+Michigan;Marquette County;TURIN TOWNSHIP;Ward 0	ward
+Michigan;Marquette County;TURIN TOWNSHIP	township
+Michigan;Marquette County;TILDEN TOWNSHIP;Ward 0	ward
+Michigan;Marquette County;TILDEN TOWNSHIP	township
+Michigan;Marquette County;SKANDIA TOWNSHIP;Ward 0	ward
+Michigan;Marquette County;SKANDIA TOWNSHIP	township
+Michigan;Marquette County;SANDS TOWNSHIP;Ward 0	ward
+Michigan;Marquette County;SANDS TOWNSHIP	township
+Michigan;Marquette County;RICHMOND TOWNSHIP;Ward 0	ward
+Michigan;Marquette County;RICHMOND TOWNSHIP	township
+Michigan;Marquette County;REPUBLIC TOWNSHIP;Ward 0	ward
+Michigan;Marquette County;REPUBLIC TOWNSHIP	township
+Michigan;Marquette County;POWELL TOWNSHIP;Ward 0	ward
+Michigan;Marquette County;POWELL TOWNSHIP	township
+Michigan;Marquette County;NEGAUNEE TOWNSHIP;Ward 0	ward
+Michigan;Marquette County;NEGAUNEE TOWNSHIP	township
+Michigan;Marquette County;NEGAUNEE CITY;Ward 0	ward
+Michigan;Marquette County;NEGAUNEE CITY	city
+Michigan;Marquette County;MICHIGAMME TOWNSHIP;Ward 0	ward
+Michigan;Marquette County;MICHIGAMME TOWNSHIP	township
+Michigan;Marquette County;MARQUETTE TOWNSHIP;Ward 0	ward
+Michigan;Marquette County;MARQUETTE TOWNSHIP	township
+Michigan;Marquette County;MARQUETTE CITY;Ward 0	ward
+Michigan;Marquette County;MARQUETTE CITY	city
+Michigan;Marquette County;ISHPEMING TOWNSHIP;Ward 0	ward
+Michigan;Marquette County;ISHPEMING TOWNSHIP	township
+Michigan;Marquette County;ISHPEMING CITY;Ward 0	ward
+Michigan;Marquette County;ISHPEMING CITY	city
+Michigan;Marquette County;HUMBOLDT TOWNSHIP;Ward 0	ward
+Michigan;Marquette County;HUMBOLDT TOWNSHIP	township
+Michigan;Marquette County;FORSYTH TOWNSHIP;Ward 0	ward
+Michigan;Marquette County;FORSYTH TOWNSHIP	township
+Michigan;Marquette County;EWING TOWNSHIP;Ward 0	ward
+Michigan;Marquette County;EWING TOWNSHIP	township
+Michigan;Marquette County;ELY TOWNSHIP;Ward 0	ward
+Michigan;Marquette County;ELY TOWNSHIP	township
+Michigan;Marquette County;CHOCOLAY TOWNSHIP;Ward 0	ward
+Michigan;Marquette County;CHOCOLAY TOWNSHIP	township
+Michigan;Marquette County;CHAMPION TOWNSHIP;Ward 0	ward
+Michigan;Marquette County;CHAMPION TOWNSHIP	township
+Michigan;Manistee County;{Statistical Adjustments};Ward 0	ward
+Michigan;Manistee County;{Statistical Adjustments}
+Michigan;Manistee County;STRONACH TOWNSHIP;Ward 0	ward
+Michigan;Manistee County;STRONACH TOWNSHIP	township
+Michigan;Manistee County;SPRINGDALE TOWNSHIP;Ward 0	ward
+Michigan;Manistee County;SPRINGDALE TOWNSHIP	township
+Michigan;Manistee County;PLEASANTON TOWNSHIP;Ward 0	ward
+Michigan;Manistee County;PLEASANTON TOWNSHIP	township
+Michigan;Manistee County;ONEKAMA TOWNSHIP;Ward 0	ward
+Michigan;Manistee County;ONEKAMA TOWNSHIP	township
+Michigan;Manistee County;NORMAN TOWNSHIP;Ward 0	ward
+Michigan;Manistee County;NORMAN TOWNSHIP	township
+Michigan;Manistee County;MARILLA TOWNSHIP;Ward 0	ward
+Michigan;Manistee County;MARILLA TOWNSHIP	township
+Michigan;Manistee County;MAPLE GROVE TOWNSHIP;Ward 0	ward
+Michigan;Manistee County;MAPLE GROVE TOWNSHIP	township
+Michigan;Manistee County;MANISTEE TOWNSHIP;Ward 0	ward
+Michigan;Manistee County;MANISTEE TOWNSHIP	township
+Michigan;Manistee County;MANISTEE CITY;Ward 0	ward
+Michigan;Manistee County;MANISTEE CITY	city
+Michigan;Manistee County;FILER TOWNSHIP;Ward 0	ward
+Michigan;Manistee County;FILER TOWNSHIP	township
+Michigan;Manistee County;DICKSON TOWNSHIP;Ward 0	ward
+Michigan;Manistee County;DICKSON TOWNSHIP	township
+Michigan;Manistee County;CLEON TOWNSHIP;Ward 0	ward
+Michigan;Manistee County;CLEON TOWNSHIP	township
+Michigan;Manistee County;BROWN TOWNSHIP;Ward 0	ward
+Michigan;Manistee County;BROWN TOWNSHIP	township
+Michigan;Manistee County;BEAR LAKE TOWNSHIP;Ward 0	ward
+Michigan;Manistee County;BEAR LAKE TOWNSHIP	township
+Michigan;Manistee County;ARCADIA TOWNSHIP;Ward 0	ward
+Michigan;Manistee County;ARCADIA TOWNSHIP	township
+Michigan;Macomb County;{Statistical Adjustments};Ward 0	ward
+Michigan;Macomb County;{Statistical Adjustments}
+Michigan;Macomb County;WASHINGTON TOWNSHIP;Ward 0	ward
+Michigan;Macomb County;WASHINGTON TOWNSHIP	township
+Michigan;Macomb County;WARREN CITY;Ward 5
+Michigan;Macomb County;WARREN CITY;Ward 4
+Michigan;Macomb County;WARREN CITY;Ward 3
+Michigan;Macomb County;WARREN CITY;Ward 2
+Michigan;Macomb County;WARREN CITY;Ward 1	ward
+Michigan;Macomb County;WARREN CITY	city
+Michigan;Macomb County;UTICA CITY;Ward 0	ward
+Michigan;Macomb County;UTICA CITY	city
+Michigan;Macomb County;STERLING HEIGHTS CITY;Ward 0	ward
+Michigan;Macomb County;STERLING HEIGHTS CITY	city
+Michigan;Macomb County;ST. CLAIR SHORES CITY;Ward 0	ward
+Michigan;Macomb County;ST. CLAIR SHORES CITY	city
+Michigan;Macomb County;SHELBY TOWNSHIP;Ward 0	ward
+Michigan;Macomb County;SHELBY TOWNSHIP	township
+Michigan;Macomb County;ROSEVILLE CITY;Ward 0	ward
+Michigan;Macomb County;ROSEVILLE CITY	city
+Michigan;Macomb County;RICHMOND TOWNSHIP;Ward 0	ward
+Michigan;Macomb County;RICHMOND TOWNSHIP	township
+Michigan;Macomb County;RICHMOND CITY;Ward 0	ward
+Michigan;Macomb County;RICHMOND CITY	city
+Michigan;Macomb County;RAY TOWNSHIP;Ward 0	ward
+Michigan;Macomb County;RAY TOWNSHIP	township
+Michigan;Macomb County;NEW BALTIMORE CITY;Ward 0	ward
+Michigan;Macomb County;NEW BALTIMORE CITY	city
+Michigan;Macomb County;MOUNT CLEMENS CITY;Ward 0	ward
+Michigan;Macomb County;MOUNT CLEMENS CITY	city
+Michigan;Macomb County;MEMPHIS CITY;Ward 0	ward
+Michigan;Macomb County;MEMPHIS CITY	city
+Michigan;Macomb County;MACOMB TOWNSHIP;Ward 0	ward
+Michigan;Macomb County;MACOMB TOWNSHIP	township
+Michigan;Macomb County;LENOX TOWNSHIP;Ward 0	ward
+Michigan;Macomb County;LENOX TOWNSHIP	township
+Michigan;Macomb County;HARRISON TOWNSHIP;Ward 0	ward
+Michigan;Macomb County;HARRISON TOWNSHIP	township
+Michigan;Macomb County;GROSS POINTE SHORES CITY;Ward 0	ward
+Michigan;Macomb County;GROSS POINTE SHORES CITY	city
+Michigan;Macomb County;FRASER CITY;Ward 0	ward
+Michigan;Macomb County;FRASER CITY	city
+Michigan;Macomb County;EASTPOINTE CITY;Ward 0	ward
+Michigan;Macomb County;EASTPOINTE CITY	city
+Michigan;Macomb County;CLINTON TOWNSHIP;Ward 0	ward
+Michigan;Macomb County;CLINTON TOWNSHIP	township
+Michigan;Macomb County;CHESTERFIELD TOWNSHIP;Ward 0	ward
+Michigan;Macomb County;CHESTERFIELD TOWNSHIP	township
+Michigan;Macomb County;CENTER LINE CITY;Ward 0	ward
+Michigan;Macomb County;CENTER LINE CITY	city
+Michigan;Macomb County;BRUCE TOWNSHIP;Ward 0	ward
+Michigan;Macomb County;BRUCE TOWNSHIP	township
+Michigan;Macomb County;ARMADA TOWNSHIP;Ward 0	ward
+Michigan;Macomb County;ARMADA TOWNSHIP	township
+Michigan;Mackinac County;{Statistical Adjustments};Ward 0	ward
+Michigan;Mackinac County;{Statistical Adjustments}
+Michigan;Mackinac County;ST. IGNACE TOWNSHIP;Ward 0	ward
+Michigan;Mackinac County;ST. IGNACE TOWNSHIP	township
+Michigan;Mackinac County;ST. IGNACE CITY;Ward 0	ward
+Michigan;Mackinac County;ST. IGNACE CITY	city
+Michigan;Mackinac County;PORTAGE TOWNSHIP;Ward 0	ward
+Michigan;Mackinac County;PORTAGE TOWNSHIP	township
+Michigan;Mackinac County;NEWTON TOWNSHIP;Ward 0	ward
+Michigan;Mackinac County;NEWTON TOWNSHIP	township
+Michigan;Mackinac County;MORAN TOWNSHIP;Ward 0	ward
+Michigan;Mackinac County;MORAN TOWNSHIP	township
+Michigan;Mackinac County;MARQUETTE TOWNSHIP;Ward 0	ward
+Michigan;Mackinac County;MARQUETTE TOWNSHIP	township
+Michigan;Mackinac County;MACKINAC ISLAND CITY;Ward 0	ward
+Michigan;Mackinac County;MACKINAC ISLAND CITY	city
+Michigan;Mackinac County;HUDSON TOWNSHIP;Ward 0	ward
+Michigan;Mackinac County;HUDSON TOWNSHIP	township
+Michigan;Mackinac County;HENDRICKS TOWNSHIP;Ward 0	ward
+Michigan;Mackinac County;HENDRICKS TOWNSHIP	township
+Michigan;Mackinac County;GARFIELD TOWNSHIP;Ward 0	ward
+Michigan;Mackinac County;GARFIELD TOWNSHIP	township
+Michigan;Mackinac County;CLARK TOWNSHIP;Ward 0	ward
+Michigan;Mackinac County;CLARK TOWNSHIP	township
+Michigan;Mackinac County;BREVORT TOWNSHIP;Ward 0	ward
+Michigan;Mackinac County;BREVORT TOWNSHIP	township
+Michigan;Mackinac County;BOIS BLANC TOWNSHIP;Ward 0	ward
+Michigan;Mackinac County;BOIS BLANC TOWNSHIP	township
+Michigan;Luce County;PENTLAND TOWNSHIP;Ward 0	ward
+Michigan;Luce County;PENTLAND TOWNSHIP	township
+Michigan;Luce County;MCMILLAN TOWNSHIP;Ward 0	ward
+Michigan;Luce County;MCMILLAN TOWNSHIP	township
+Michigan;Luce County;LAKEFIELD TOWNSHIP;Ward 0	ward
+Michigan;Luce County;LAKEFIELD TOWNSHIP	township
+Michigan;Luce County;COLUMBUS TOWNSHIP;Ward 0	ward
+Michigan;Luce County;COLUMBUS TOWNSHIP	township
+Michigan;Livingston County;{Statistical Adjustments};Ward 0	ward
+Michigan;Livingston County;{Statistical Adjustments}
+Michigan;Livingston County;UNADILLA TOWNSHIP;Ward 0	ward
+Michigan;Livingston County;UNADILLA TOWNSHIP	township
+Michigan;Livingston County;TYRONE TOWNSHIP;Ward 0	ward
+Michigan;Livingston County;TYRONE TOWNSHIP	township
+Michigan;Livingston County;PUTNAM TOWNSHIP;Ward 0	ward
+Michigan;Livingston County;PUTNAM TOWNSHIP	township
+Michigan;Livingston County;OCEOLA TOWNSHIP;Ward 0	ward
+Michigan;Livingston County;OCEOLA TOWNSHIP	township
+Michigan;Livingston County;MARION TOWNSHIP;Ward 0	ward
+Michigan;Livingston County;MARION TOWNSHIP	township
+Michigan;Livingston County;IOSCO TOWNSHIP;Ward 0	ward
+Michigan;Livingston County;IOSCO TOWNSHIP	township
+Michigan;Livingston County;HOWELL TOWNSHIP;Ward 0	ward
+Michigan;Livingston County;HOWELL TOWNSHIP	township
+Michigan;Livingston County;HOWELL CITY;Ward 0	ward
+Michigan;Livingston County;HOWELL CITY	city
+Michigan;Livingston County;HARTLAND TOWNSHIP;Ward 0	ward
+Michigan;Livingston County;HARTLAND TOWNSHIP	township
+Michigan;Livingston County;HANDY TOWNSHIP;Ward 0	ward
+Michigan;Livingston County;HANDY TOWNSHIP	township
+Michigan;Livingston County;HAMBURG TOWNSHIP;Ward 0	ward
+Michigan;Livingston County;HAMBURG TOWNSHIP	township
+Michigan;Livingston County;GREEN OAK TOWNSHIP;Ward 0	ward
+Michigan;Livingston County;GREEN OAK TOWNSHIP	township
+Michigan;Livingston County;GENOA TOWNSHIP;Ward 0	ward
+Michigan;Livingston County;GENOA TOWNSHIP	township
+Michigan;Livingston County;DEERFIELD TOWNSHIP;Ward 0	ward
+Michigan;Livingston County;DEERFIELD TOWNSHIP	township
+Michigan;Livingston County;CONWAY TOWNSHIP;Ward 0	ward
+Michigan;Livingston County;CONWAY TOWNSHIP	township
+Michigan;Livingston County;COHOCTAH TOWNSHIP;Ward 0	ward
+Michigan;Livingston County;COHOCTAH TOWNSHIP	township
+Michigan;Livingston County;BRIGHTON TOWNSHIP;Ward 0	ward
+Michigan;Livingston County;BRIGHTON TOWNSHIP	township
+Michigan;Livingston County;BRIGHTON CITY;Ward 0	ward
+Michigan;Livingston County;BRIGHTON CITY	city
+Michigan;Lenawee County;{Statistical Adjustments};Ward 0	ward
+Michigan;Lenawee County;{Statistical Adjustments}
+Michigan;Lenawee County;WOODSTOCK TOWNSHIP;Ward 0	ward
+Michigan;Lenawee County;WOODSTOCK TOWNSHIP	township
+Michigan;Lenawee County;TECUMSEH TOWNSHIP;Ward 0	ward
+Michigan;Lenawee County;TECUMSEH TOWNSHIP	township
+Michigan;Lenawee County;TECUMSEH CITY;Ward 1	ward
+Michigan;Lenawee County;TECUMSEH CITY;Ward 0	ward
+Michigan;Lenawee County;TECUMSEH CITY	city
+Michigan;Lenawee County;SENECA TOWNSHIP;Ward 0	ward
+Michigan;Lenawee County;SENECA TOWNSHIP	township
+Michigan;Lenawee County;ROME TOWNSHIP;Ward 0	ward
+Michigan;Lenawee County;ROME TOWNSHIP	township
+Michigan;Lenawee County;ROLLIN TOWNSHIP;Ward 0	ward
+Michigan;Lenawee County;ROLLIN TOWNSHIP	township
+Michigan;Lenawee County;RIGA TOWNSHIP;Ward 0	ward
+Michigan;Lenawee County;RIGA TOWNSHIP	township
+Michigan;Lenawee County;RIDGEWAY TOWNSHIP;Ward 0	ward
+Michigan;Lenawee County;RIDGEWAY TOWNSHIP	township
+Michigan;Lenawee County;RAISIN TOWNSHIP;Ward 0	ward
+Michigan;Lenawee County;RAISIN TOWNSHIP	township
+Michigan;Lenawee County;PALMYRA TOWNSHIP;Ward 0	ward
+Michigan;Lenawee County;PALMYRA TOWNSHIP	township
+Michigan;Lenawee County;OGDEN TOWNSHIP;Ward 0	ward
+Michigan;Lenawee County;OGDEN TOWNSHIP	township
+Michigan;Lenawee County;MORENCI CITY;Ward 0	ward
+Michigan;Lenawee County;MORENCI CITY	city
+Michigan;Lenawee County;MEDINA TOWNSHIP;Ward 0	ward
+Michigan;Lenawee County;MEDINA TOWNSHIP	township
+Michigan;Lenawee County;MADISON TOWNSHIP;Ward 0	ward
+Michigan;Lenawee County;MADISON TOWNSHIP	township
+Michigan;Lenawee County;MACON TOWNSHIP;Ward 0	ward
+Michigan;Lenawee County;MACON TOWNSHIP	township
+Michigan;Lenawee County;HUDSON TOWNSHIP;Ward 0	ward
+Michigan;Lenawee County;HUDSON TOWNSHIP	township
+Michigan;Lenawee County;HUDSON CITY;Ward 0	ward
+Michigan;Lenawee County;HUDSON CITY	city
+Michigan;Lenawee County;FRANKLIN TOWNSHIP;Ward 0	ward
+Michigan;Lenawee County;FRANKLIN TOWNSHIP	township
+Michigan;Lenawee County;FAIRFIELD TOWNSHIP;Ward 0	ward
+Michigan;Lenawee County;FAIRFIELD TOWNSHIP	township
+Michigan;Lenawee County;DOVER TOWNSHIP;Ward 0	ward
+Michigan;Lenawee County;DOVER TOWNSHIP	township
+Michigan;Lenawee County;DEERFIELD TOWNSHIP;Ward 0	ward
+Michigan;Lenawee County;DEERFIELD TOWNSHIP	township
+Michigan;Lenawee County;CLINTON TOWNSHIP;Ward 0	ward
+Michigan;Lenawee County;CLINTON TOWNSHIP	township
+Michigan;Lenawee County;CAMBRIDGE TOWNSHIP;Ward 0	ward
+Michigan;Lenawee County;CAMBRIDGE TOWNSHIP	township
+Michigan;Lenawee County;BLISSFIELD TOWNSHIP;Ward 0	ward
+Michigan;Lenawee County;BLISSFIELD TOWNSHIP	township
+Michigan;Lenawee County;ADRIAN TOWNSHIP;Ward 0	ward
+Michigan;Lenawee County;ADRIAN TOWNSHIP	township
+Michigan;Lenawee County;ADRIAN CITY;Ward 0	ward
+Michigan;Lenawee County;ADRIAN CITY	city
+Michigan;Leelanau County;TRAVERSE CITY;Ward 0	ward
+Michigan;Leelanau County;TRAVERSE CITY	city
+Michigan;Leelanau County;SUTTONS BAY TOWNSHIP;Ward 0	ward
+Michigan;Leelanau County;SUTTONS BAY TOWNSHIP	township
+Michigan;Leelanau County;SOLON TOWNSHIP;Ward 0	ward
+Michigan;Leelanau County;SOLON TOWNSHIP	township
+Michigan;Leelanau County;LELAND TOWNSHIP;Ward 0	ward
+Michigan;Leelanau County;LELAND TOWNSHIP	township
+Michigan;Leelanau County;LEELANAU TOWNSHIP;Ward 0	ward
+Michigan;Leelanau County;LEELANAU TOWNSHIP	township
+Michigan;Leelanau County;KASSON TOWNSHIP;Ward 0	ward
+Michigan;Leelanau County;KASSON TOWNSHIP	township
+Michigan;Leelanau County;GLEN ARBOR TOWNSHIP;Ward 0	ward
+Michigan;Leelanau County;GLEN ARBOR TOWNSHIP	township
+Michigan;Leelanau County;EMPIRE TOWNSHIP;Ward 0	ward
+Michigan;Leelanau County;EMPIRE TOWNSHIP	township
+Michigan;Leelanau County;ELMWOOD TOWNSHIP;Ward 0	ward
+Michigan;Leelanau County;ELMWOOD TOWNSHIP	township
+Michigan;Leelanau County;CLEVELAND TOWNSHIP;Ward 0	ward
+Michigan;Leelanau County;CLEVELAND TOWNSHIP	township
+Michigan;Leelanau County;CENTERVILLE TOWNSHIP;Ward 0	ward
+Michigan;Leelanau County;CENTERVILLE TOWNSHIP	township
+Michigan;Leelanau County;BINGHAM TOWNSHIP;Ward 0	ward
+Michigan;Leelanau County;BINGHAM TOWNSHIP	township
+Michigan;Lapeer County;{Statistical Adjustments};Ward 0	ward
+Michigan;Lapeer County;{Statistical Adjustments}
+Michigan;Lapeer County;RICH TOWNSHIP;Ward 0	ward
+Michigan;Lapeer County;RICH TOWNSHIP	township
+Michigan;Lapeer County;OREGON TOWNSHIP;Ward 0	ward
+Michigan;Lapeer County;OREGON TOWNSHIP	township
+Michigan;Lapeer County;NORTH BRANCH TOWNSHIP;Ward 0	ward
+Michigan;Lapeer County;NORTH BRANCH TOWNSHIP	township
+Michigan;Lapeer County;METAMORA TOWNSHIP;Ward 0	ward
+Michigan;Lapeer County;METAMORA TOWNSHIP	township
+Michigan;Lapeer County;MAYFIELD TOWNSHIP;Ward 0	ward
+Michigan;Lapeer County;MAYFIELD TOWNSHIP	township
+Michigan;Lapeer County;MARATHON TOWNSHIP;Ward 0	ward
+Michigan;Lapeer County;MARATHON TOWNSHIP	township
+Michigan;Lapeer County;LAPEER TOWNSHIP;Ward 0	ward
+Michigan;Lapeer County;LAPEER TOWNSHIP	township
+Michigan;Lapeer County;LAPEER CITY;Ward 1	ward
+Michigan;Lapeer County;LAPEER CITY	city
+Michigan;Lapeer County;IMLAY TOWNSHIP;Ward 0	ward
+Michigan;Lapeer County;IMLAY TOWNSHIP	township
+Michigan;Lapeer County;IMLAY CITY;Ward 0	ward
+Michigan;Lapeer County;IMLAY CITY	city
+Michigan;Lapeer County;HADLEY TOWNSHIP;Ward 0	ward
+Michigan;Lapeer County;HADLEY TOWNSHIP	township
+Michigan;Lapeer County;GOODLAND TOWNSHIP;Ward 0	ward
+Michigan;Lapeer County;GOODLAND TOWNSHIP	township
+Michigan;Lapeer County;ELBA TOWNSHIP;Ward 0	ward
+Michigan;Lapeer County;ELBA TOWNSHIP	township
+Michigan;Lapeer County;DRYDEN TOWNSHIP;Ward 0	ward
+Michigan;Lapeer County;DRYDEN TOWNSHIP	township
+Michigan;Lapeer County;DEERFIELD TOWNSHIP;Ward 0	ward
+Michigan;Lapeer County;DEERFIELD TOWNSHIP	township
+Michigan;Lapeer County;BURNSIDE TOWNSHIP;Ward 0	ward
+Michigan;Lapeer County;BURNSIDE TOWNSHIP	township
+Michigan;Lapeer County;BURLINGTON TOWNSHIP;Ward 0	ward
+Michigan;Lapeer County;BURLINGTON TOWNSHIP	township
+Michigan;Lapeer County;BROWN CITY;Ward 0	ward
+Michigan;Lapeer County;BROWN CITY	city
+Michigan;Lapeer County;ATTICA TOWNSHIP;Ward 0	ward
+Michigan;Lapeer County;ATTICA TOWNSHIP	township
+Michigan;Lapeer County;ARCADIA TOWNSHIP;Ward 0	ward
+Michigan;Lapeer County;ARCADIA TOWNSHIP	township
+Michigan;Lapeer County;ALMONT TOWNSHIP;Ward 0	ward
+Michigan;Lapeer County;ALMONT TOWNSHIP	township
+Michigan;Lake County;{Statistical Adjustments};Ward 0	ward
+Michigan;Lake County;{Statistical Adjustments}
+Michigan;Lake County;YATES TOWNSHIP;Ward 0	ward
+Michigan;Lake County;YATES TOWNSHIP	township
+Michigan;Lake County;WEBBER TOWNSHIP;Ward 0	ward
+Michigan;Lake County;WEBBER TOWNSHIP	township
+Michigan;Lake County;SWEETWATER TOWNSHIP;Ward 0	ward
+Michigan;Lake County;SWEETWATER TOWNSHIP	township
+Michigan;Lake County;SAUBLE TOWNSHIP;Ward 0	ward
+Michigan;Lake County;SAUBLE TOWNSHIP	township
+Michigan;Lake County;PLEASANT PLAINS TOWNSHIP;Ward 0	ward
+Michigan;Lake County;PLEASANT PLAINS TOWNSHIP	township
+Michigan;Lake County;PINORA TOWNSHIP;Ward 0	ward
+Michigan;Lake County;PINORA TOWNSHIP	township
+Michigan;Lake County;PEACOCK TOWNSHIP;Ward 0	ward
+Michigan;Lake County;PEACOCK TOWNSHIP	township
+Michigan;Lake County;NEWKIRK TOWNSHIP;Ward 0	ward
+Michigan;Lake County;NEWKIRK TOWNSHIP	township
+Michigan;Lake County;LAKE TOWNSHIP;Ward 0	ward
+Michigan;Lake County;LAKE TOWNSHIP	township
+Michigan;Lake County;ELLSWORTH TOWNSHIP;Ward 0	ward
+Michigan;Lake County;ELLSWORTH TOWNSHIP	township
+Michigan;Lake County;ELK TOWNSHIP;Ward 0	ward
+Michigan;Lake County;ELK TOWNSHIP	township
+Michigan;Lake County;EDEN TOWNSHIP;Ward 0	ward
+Michigan;Lake County;EDEN TOWNSHIP	township
+Michigan;Lake County;DOVER TOWNSHIP;Ward 0	ward
+Michigan;Lake County;DOVER TOWNSHIP	township
+Michigan;Lake County;CHERRY VALLEY TOWNSHIP;Ward 0	ward
+Michigan;Lake County;CHERRY VALLEY TOWNSHIP	township
+Michigan;Lake County;CHASE TOWNSHIP;Ward 0	ward
+Michigan;Lake County;CHASE TOWNSHIP	township
+Michigan;Keweenaw County;SHERMAN TOWNSHIP;Ward 0	ward
+Michigan;Keweenaw County;SHERMAN TOWNSHIP	township
+Michigan;Keweenaw County;HOUGHTON TOWNSHIP;Ward 0	ward
+Michigan;Keweenaw County;HOUGHTON TOWNSHIP	township
+Michigan;Keweenaw County;GRANT TOWNSHIP;Ward 0	ward
+Michigan;Keweenaw County;GRANT TOWNSHIP	township
+Michigan;Keweenaw County;EAGLE HARBOR TOWNSHIP;Ward 0	ward
+Michigan;Keweenaw County;EAGLE HARBOR TOWNSHIP	township
+Michigan;Keweenaw County;ALLOUEZ TOWNSHIP;Ward 0	ward
+Michigan;Keweenaw County;ALLOUEZ TOWNSHIP	township
+Michigan;Kent County;{Statistical Adjustments};Ward 0	ward
+Michigan;Kent County;{Statistical Adjustments}
+Michigan;Kent County;WYOMING CITY;Ward 3
+Michigan;Kent County;WYOMING CITY;Ward 2
+Michigan;Kent County;WYOMING CITY;Ward 1	ward
+Michigan;Kent County;WYOMING CITY	city
+Michigan;Kent County;WALKER CITY;Ward 3
+Michigan;Kent County;WALKER CITY;Ward 2
+Michigan;Kent County;WALKER CITY;Ward 1	ward
+Michigan;Kent County;WALKER CITY	city
+Michigan;Kent County;VERGENNES TOWNSHIP;Ward 0	ward
+Michigan;Kent County;VERGENNES TOWNSHIP	township
+Michigan;Kent County;TYRONE TOWNSHIP;Ward 0	ward
+Michigan;Kent County;TYRONE TOWNSHIP	township
+Michigan;Kent County;SPENCER TOWNSHIP;Ward 0	ward
+Michigan;Kent County;SPENCER TOWNSHIP	township
+Michigan;Kent County;SPARTA TOWNSHIP;Ward 0	ward
+Michigan;Kent County;SPARTA TOWNSHIP	township
+Michigan;Kent County;SOLON TOWNSHIP;Ward 0	ward
+Michigan;Kent County;SOLON TOWNSHIP	township
+Michigan;Kent County;ROCKFORD CITY;Ward 0	ward
+Michigan;Kent County;ROCKFORD CITY	city
+Michigan;Kent County;PLAINFIELD TOWNSHIP;Ward 0	ward
+Michigan;Kent County;PLAINFIELD TOWNSHIP	township
+Michigan;Kent County;OAKFIELD TOWNSHIP;Ward 0	ward
+Michigan;Kent County;OAKFIELD TOWNSHIP	township
+Michigan;Kent County;NELSON TOWNSHIP;Ward 0	ward
+Michigan;Kent County;NELSON TOWNSHIP	township
+Michigan;Kent County;LOWELL TOWNSHIP;Ward 0	ward
+Michigan;Kent County;LOWELL TOWNSHIP	township
+Michigan;Kent County;LOWELL CITY;Ward 0	ward
+Michigan;Kent County;LOWELL CITY	city
+Michigan;Kent County;KENTWOOD CITY;Ward 2
+Michigan;Kent County;KENTWOOD CITY;Ward 1	ward
+Michigan;Kent County;KENTWOOD CITY;Ward 0	ward
+Michigan;Kent County;KENTWOOD CITY	city
+Michigan;Kent County;GRATTAN TOWNSHIP;Ward 0	ward
+Michigan;Kent County;GRATTAN TOWNSHIP	township
+Michigan;Kent County;GRANDVILLE CITY;Ward 0	ward
+Michigan;Kent County;GRANDVILLE CITY	city
+Michigan;Kent County;GRAND RAPIDS TOWNSHIP;Ward 0	ward
+Michigan;Kent County;GRAND RAPIDS TOWNSHIP	township
+Michigan;Kent County;GRAND RAPIDS CITY;Ward 3
+Michigan;Kent County;GRAND RAPIDS CITY;Ward 2
+Michigan;Kent County;GRAND RAPIDS CITY;Ward 1	ward
+Michigan;Kent County;GRAND RAPIDS CITY	city
+Michigan;Kent County;GAINES TOWNSHIP;Ward 0	ward
+Michigan;Kent County;GAINES TOWNSHIP	township
+Michigan;Kent County;EAST GRAND RAPIDS CITY;Ward 3
+Michigan;Kent County;EAST GRAND RAPIDS CITY;Ward 2
+Michigan;Kent County;EAST GRAND RAPIDS CITY;Ward 1	ward
+Michigan;Kent County;EAST GRAND RAPIDS CITY	city
+Michigan;Kent County;COURTLAND TOWNSHIP;Ward 0	ward
+Michigan;Kent County;COURTLAND TOWNSHIP	township
+Michigan;Kent County;CEDAR SPRINGS CITY;Ward 0	ward
+Michigan;Kent County;CEDAR SPRINGS CITY	city
+Michigan;Kent County;CASCADE TOWNSHIP;Ward 0	ward
+Michigan;Kent County;CASCADE TOWNSHIP	township
+Michigan;Kent County;CANNON TOWNSHIP;Ward 0	ward
+Michigan;Kent County;CANNON TOWNSHIP	township
+Michigan;Kent County;CALEDONIA TOWNSHIP;Ward 0	ward
+Michigan;Kent County;CALEDONIA TOWNSHIP	township
+Michigan;Kent County;BYRON TOWNSHIP;Ward 0	ward
+Michigan;Kent County;BYRON TOWNSHIP	township
+Michigan;Kent County;BOWNE TOWNSHIP;Ward 0	ward
+Michigan;Kent County;BOWNE TOWNSHIP	township
+Michigan;Kent County;ALPINE TOWNSHIP;Ward 0	ward
+Michigan;Kent County;ALPINE TOWNSHIP	township
+Michigan;Kent County;ALGOMA TOWNSHIP;Ward 0	ward
+Michigan;Kent County;ALGOMA TOWNSHIP	township
+Michigan;Kent County;ADA TOWNSHIP;Ward 0	ward
+Michigan;Kent County;ADA TOWNSHIP	township
+Michigan;Kalkaska County;{Statistical Adjustments};Ward 0	ward
+Michigan;Kalkaska County;{Statistical Adjustments}
+Michigan;Kalkaska County;SPRINGFIELD TOWNSHIP;Ward 0	ward
+Michigan;Kalkaska County;SPRINGFIELD TOWNSHIP	township
+Michigan;Kalkaska County;RAPID RIVER TOWNSHIP;Ward 0	ward
+Michigan;Kalkaska County;RAPID RIVER TOWNSHIP	township
+Michigan;Kalkaska County;ORANGE TOWNSHIP;Ward 0	ward
+Michigan;Kalkaska County;ORANGE TOWNSHIP	township
+Michigan;Kalkaska County;OLIVER TOWNSHIP;Ward 0	ward
+Michigan;Kalkaska County;OLIVER TOWNSHIP	township
+Michigan;Kalkaska County;KALKASKA TOWNSHIP;Ward 0	ward
+Michigan;Kalkaska County;KALKASKA TOWNSHIP	township
+Michigan;Kalkaska County;GARFIELD TOWNSHIP;Ward 0	ward
+Michigan;Kalkaska County;GARFIELD TOWNSHIP	township
+Michigan;Kalkaska County;EXCELSIOR TOWNSHIP;Ward 0	ward
+Michigan;Kalkaska County;EXCELSIOR TOWNSHIP	township
+Michigan;Kalkaska County;COLD SPRINGS TOWNSHIP;Ward 0	ward
+Michigan;Kalkaska County;COLD SPRINGS TOWNSHIP	township
+Michigan;Kalkaska County;CLEARWATER TOWNSHIP;Ward 0	ward
+Michigan;Kalkaska County;CLEARWATER TOWNSHIP	township
+Michigan;Kalkaska County;BOARDMAN TOWNSHIP;Ward 0	ward
+Michigan;Kalkaska County;BOARDMAN TOWNSHIP	township
+Michigan;Kalkaska County;BLUE LAKE TOWNSHIP;Ward 0	ward
+Michigan;Kalkaska County;BLUE LAKE TOWNSHIP	township
+Michigan;Kalkaska County;BEAR LAKE TOWNSHIP;Ward 0	ward
+Michigan;Kalkaska County;BEAR LAKE TOWNSHIP	township
+Michigan;Kalamazoo County;{Statistical Adjustments};Ward 0	ward
+Michigan;Kalamazoo County;{Statistical Adjustments}
+Michigan;Kalamazoo County;WAKESHMA TOWNSHIP;Ward 0	ward
+Michigan;Kalamazoo County;WAKESHMA TOWNSHIP	township
+Michigan;Kalamazoo County;TEXAS TOWNSHIP;Ward 0	ward
+Michigan;Kalamazoo County;TEXAS TOWNSHIP	township
+Michigan;Kalamazoo County;SCHOOLCRAFT TOWNSHIP;Ward 0	ward
+Michigan;Kalamazoo County;SCHOOLCRAFT TOWNSHIP	township
+Michigan;Kalamazoo County;ROSS TOWNSHIP;Ward 0	ward
+Michigan;Kalamazoo County;ROSS TOWNSHIP	township
+Michigan;Kalamazoo County;RICHLAND TOWNSHIP;Ward 0	ward
+Michigan;Kalamazoo County;RICHLAND TOWNSHIP	township
+Michigan;Kalamazoo County;PRAIRIE RONDE TOWNSHIP;Ward 0	ward
+Michigan;Kalamazoo County;PRAIRIE RONDE TOWNSHIP	township
+Michigan;Kalamazoo County;PORTAGE CITY;Ward 0	ward
+Michigan;Kalamazoo County;PORTAGE CITY	city
+Michigan;Kalamazoo County;PAVILION TOWNSHIP;Ward 0	ward
+Michigan;Kalamazoo County;PAVILION TOWNSHIP	township
+Michigan;Kalamazoo County;PARCHMENT CITY;Ward 0	ward
+Michigan;Kalamazoo County;PARCHMENT CITY	city
+Michigan;Kalamazoo County;OSHTEMO TOWNSHIP;Ward 0	ward
+Michigan;Kalamazoo County;OSHTEMO TOWNSHIP	township
+Michigan;Kalamazoo County;KALAMAZOO TOWNSHIP;Ward 0	ward
+Michigan;Kalamazoo County;KALAMAZOO TOWNSHIP	township
+Michigan;Kalamazoo County;KALAMAZOO CITY;Ward 0	ward
+Michigan;Kalamazoo County;KALAMAZOO CITY	city
+Michigan;Kalamazoo County;GALESBURG CITY;Ward 0	ward
+Michigan;Kalamazoo County;GALESBURG CITY	city
+Michigan;Kalamazoo County;COOPER TOWNSHIP;Ward 0	ward
+Michigan;Kalamazoo County;COOPER TOWNSHIP	township
+Michigan;Kalamazoo County;COMSTOCK TOWNSHIP;Ward 0	ward
+Michigan;Kalamazoo County;COMSTOCK TOWNSHIP	township
+Michigan;Kalamazoo County;CLIMAX TOWNSHIP;Ward 0	ward
+Michigan;Kalamazoo County;CLIMAX TOWNSHIP	township
+Michigan;Kalamazoo County;CHARLESTON TOWNSHIP;Ward 0	ward
+Michigan;Kalamazoo County;CHARLESTON TOWNSHIP	township
+Michigan;Kalamazoo County;BRADY TOWNSHIP;Ward 0	ward
+Michigan;Kalamazoo County;BRADY TOWNSHIP	township
+Michigan;Kalamazoo County;ALAMO TOWNSHIP;Ward 0	ward
+Michigan;Kalamazoo County;ALAMO TOWNSHIP	township
+Michigan;Jackson County;WATERLOO TOWNSHIP;Ward 0	ward
+Michigan;Jackson County;WATERLOO TOWNSHIP	township
+Michigan;Jackson County;TOMPKINS TOWNSHIP;Ward 0	ward
+Michigan;Jackson County;TOMPKINS TOWNSHIP	township
+Michigan;Jackson County;SUMMIT TOWNSHIP;Ward 0	ward
+Michigan;Jackson County;SUMMIT TOWNSHIP	township
+Michigan;Jackson County;SPRINGPORT TOWNSHIP;Ward 0	ward
+Michigan;Jackson County;SPRINGPORT TOWNSHIP	township
+Michigan;Jackson County;SPRING ARBOR TOWNSHIP;Ward 0	ward
+Michigan;Jackson County;SPRING ARBOR TOWNSHIP	township
+Michigan;Jackson County;SANDSTONE TOWNSHIP;Ward 0	ward
+Michigan;Jackson County;SANDSTONE TOWNSHIP	township
+Michigan;Jackson County;RIVES TOWNSHIP;Ward 0	ward
+Michigan;Jackson County;RIVES TOWNSHIP	township
+Michigan;Jackson County;PULASKI TOWNSHIP;Ward 0	ward
+Michigan;Jackson County;PULASKI TOWNSHIP	township
+Michigan;Jackson County;PARMA TOWNSHIP;Ward 0	ward
+Michigan;Jackson County;PARMA TOWNSHIP	township
+Michigan;Jackson County;NORVELL TOWNSHIP;Ward 0	ward
+Michigan;Jackson County;NORVELL TOWNSHIP	township
+Michigan;Jackson County;NAPOLEON TOWNSHIP;Ward 0	ward
+Michigan;Jackson County;NAPOLEON TOWNSHIP	township
+Michigan;Jackson County;LIBERTY TOWNSHIP;Ward 0	ward
+Michigan;Jackson County;LIBERTY TOWNSHIP	township
+Michigan;Jackson County;LEONI TOWNSHIP;Ward 0	ward
+Michigan;Jackson County;LEONI TOWNSHIP	township
+Michigan;Jackson County;JACKSON CITY;Ward 6
+Michigan;Jackson County;JACKSON CITY;Ward 5
+Michigan;Jackson County;JACKSON CITY;Ward 4
+Michigan;Jackson County;JACKSON CITY;Ward 3
+Michigan;Jackson County;JACKSON CITY;Ward 2
+Michigan;Jackson County;JACKSON CITY;Ward 1	ward
+Michigan;Jackson County;JACKSON CITY	city
+Michigan;Jackson County;HENRIETTA TOWNSHIP;Ward 0	ward
+Michigan;Jackson County;HENRIETTA TOWNSHIP	township
+Michigan;Jackson County;HANOVER TOWNSHIP;Ward 0	ward
+Michigan;Jackson County;HANOVER TOWNSHIP	township
+Michigan;Jackson County;GRASS LAKE TOWNSHIP;Ward 0	ward
+Michigan;Jackson County;GRASS LAKE TOWNSHIP	township
+Michigan;Jackson County;CONCORD TOWNSHIP;Ward 0	ward
+Michigan;Jackson County;CONCORD TOWNSHIP	township
+Michigan;Jackson County;COLUMBIA TOWNSHIP;Ward 0	ward
+Michigan;Jackson County;COLUMBIA TOWNSHIP	township
+Michigan;Jackson County;BLACKMAN TOWNSHIP;Ward 0	ward
+Michigan;Jackson County;BLACKMAN TOWNSHIP	township
+Michigan;Isabella County;{Statistical Adjustments};Ward 0	ward
+Michigan;Isabella County;{Statistical Adjustments}
+Michigan;Isabella County;WISE TOWNSHIP;Ward 0	ward
+Michigan;Isabella County;WISE TOWNSHIP	township
+Michigan;Isabella County;VERNON TOWNSHIP;Ward 0	ward
+Michigan;Isabella County;VERNON TOWNSHIP	township
+Michigan;Isabella County;UNION TOWNSHIP;Ward 0	ward
+Michigan;Isabella County;UNION TOWNSHIP	township
+Michigan;Isabella County;SHERMAN TOWNSHIP;Ward 0	ward
+Michigan;Isabella County;SHERMAN TOWNSHIP	township
+Michigan;Isabella County;ROLLAND TOWNSHIP;Ward 0	ward
+Michigan;Isabella County;ROLLAND TOWNSHIP	township
+Michigan;Isabella County;NOTTAWA TOWNSHIP;Ward 0	ward
+Michigan;Isabella County;NOTTAWA TOWNSHIP	township
+Michigan;Isabella County;MOUNT PLEASANT CITY;Ward 0	ward
+Michigan;Isabella County;MOUNT PLEASANT CITY	city
+Michigan;Isabella County;LINCOLN TOWNSHIP;Ward 0	ward
+Michigan;Isabella County;LINCOLN TOWNSHIP	township
+Michigan;Isabella County;ISABELLA TOWNSHIP;Ward 0	ward
+Michigan;Isabella County;ISABELLA TOWNSHIP	township
+Michigan;Isabella County;GILMORE TOWNSHIP;Ward 0	ward
+Michigan;Isabella County;GILMORE TOWNSHIP	township
+Michigan;Isabella County;FREMONT TOWNSHIP;Ward 0	ward
+Michigan;Isabella County;FREMONT TOWNSHIP	township
+Michigan;Isabella County;DENVER TOWNSHIP;Ward 0	ward
+Michigan;Isabella County;DENVER TOWNSHIP	township
+Michigan;Isabella County;DEERFIELD TOWNSHIP;Ward 0	ward
+Michigan;Isabella County;DEERFIELD TOWNSHIP	township
+Michigan;Isabella County;COLDWATER TOWNSHIP;Ward 0	ward
+Michigan;Isabella County;COLDWATER TOWNSHIP	township
+Michigan;Isabella County;COE TOWNSHIP;Ward 0	ward
+Michigan;Isabella County;COE TOWNSHIP	township
+Michigan;Isabella County;CLARE CITY;Ward 0	ward
+Michigan;Isabella County;CLARE CITY	city
+Michigan;Isabella County;CHIPPEWA TOWNSHIP;Ward 0	ward
+Michigan;Isabella County;CHIPPEWA TOWNSHIP	township
+Michigan;Isabella County;BROOMFIELD TOWNSHIP;Ward 0	ward
+Michigan;Isabella County;BROOMFIELD TOWNSHIP	township
+Michigan;Iron County;STAMBAUGH TOWNSHIP;Ward 0	ward
+Michigan;Iron County;STAMBAUGH TOWNSHIP	township
+Michigan;Iron County;MASTODON TOWNSHIP;Ward 0	ward
+Michigan;Iron County;MASTODON TOWNSHIP	township
+Michigan;Iron County;MANSFIELD TOWNSHIP;Ward 0	ward
+Michigan;Iron County;MANSFIELD TOWNSHIP	township
+Michigan;Iron County;IRON RIVER TOWNSHIP;Ward 0	ward
+Michigan;Iron County;IRON RIVER TOWNSHIP	township
+Michigan;Iron County;IRON RIVER CITY;Ward 0	ward
+Michigan;Iron County;IRON RIVER CITY	city
+Michigan;Iron County;HEMATITE TOWNSHIP;Ward 0	ward
+Michigan;Iron County;HEMATITE TOWNSHIP	township
+Michigan;Iron County;GAASTRA CITY;Ward 0	ward
+Michigan;Iron County;GAASTRA CITY	city
+Michigan;Iron County;CRYSTAL FALLS TOWNSHIP;Ward 0	ward
+Michigan;Iron County;CRYSTAL FALLS TOWNSHIP	township
+Michigan;Iron County;CRYSTAL FALLS CITY;Ward 0	ward
+Michigan;Iron County;CRYSTAL FALLS CITY	city
+Michigan;Iron County;CASPIAN CITY;Ward 0	ward
+Michigan;Iron County;CASPIAN CITY	city
+Michigan;Iron County;BATES TOWNSHIP;Ward 0	ward
+Michigan;Iron County;BATES TOWNSHIP	township
+Michigan;Iosco County;{Statistical Adjustments};Ward 0	ward
+Michigan;Iosco County;{Statistical Adjustments}
+Michigan;Iosco County;WILBER TOWNSHIP;Ward 0	ward
+Michigan;Iosco County;WILBER TOWNSHIP	township
+Michigan;Iosco County;WHITTEMORE CITY;Ward 0	ward
+Michigan;Iosco County;WHITTEMORE CITY	city
+Michigan;Iosco County;TAWAS TOWNSHIP;Ward 0	ward
+Michigan;Iosco County;TAWAS TOWNSHIP	township
+Michigan;Iosco County;TAWAS CITY;Ward 0	ward
+Michigan;Iosco County;TAWAS CITY	city
+Michigan;Iosco County;SHERMAN TOWNSHIP;Ward 0	ward
+Michigan;Iosco County;SHERMAN TOWNSHIP	township
+Michigan;Iosco County;RENO TOWNSHIP;Ward 0	ward
+Michigan;Iosco County;RENO TOWNSHIP	township
+Michigan;Iosco County;PLAINFIELD TOWNSHIP;Ward 0	ward
+Michigan;Iosco County;PLAINFIELD TOWNSHIP	township
+Michigan;Iosco County;OSCODA TOWNSHIP;Ward 0	ward
+Michigan;Iosco County;OSCODA TOWNSHIP	township
+Michigan;Iosco County;GRANT TOWNSHIP;Ward 0	ward
+Michigan;Iosco County;GRANT TOWNSHIP	township
+Michigan;Iosco County;EAST TAWAS CITY;Ward 0	ward
+Michigan;Iosco County;EAST TAWAS CITY	city
+Michigan;Iosco County;BURLEIGH TOWNSHIP;Ward 0	ward
+Michigan;Iosco County;BURLEIGH TOWNSHIP	township
+Michigan;Iosco County;BALDWIN TOWNSHIP;Ward 0	ward
+Michigan;Iosco County;BALDWIN TOWNSHIP	township
+Michigan;Iosco County;AU SABLE TOWNSHIP;Ward 0	ward
+Michigan;Iosco County;AU SABLE TOWNSHIP	township
+Michigan;Iosco County;ALABASTER TOWNSHIP;Ward 0	ward
+Michigan;Iosco County;ALABASTER TOWNSHIP	township
+Michigan;Ionia County;{Statistical Adjustments};Ward 0	ward
+Michigan;Ionia County;{Statistical Adjustments}
+Michigan;Ionia County;SEBEWA TOWNSHIP;Ward 0	ward
+Michigan;Ionia County;SEBEWA TOWNSHIP	township
+Michigan;Ionia County;RONALD TOWNSHIP;Ward 0	ward
+Michigan;Ionia County;RONALD TOWNSHIP	township
+Michigan;Ionia County;PORTLAND TOWNSHIP;Ward 0	ward
+Michigan;Ionia County;PORTLAND TOWNSHIP	township
+Michigan;Ionia County;PORTLAND CITY;Ward 0	ward
+Michigan;Ionia County;PORTLAND CITY	city
+Michigan;Ionia County;OTISCO TOWNSHIP;Ward 0	ward
+Michigan;Ionia County;OTISCO TOWNSHIP	township
+Michigan;Ionia County;ORLEANS TOWNSHIP;Ward 0	ward
+Michigan;Ionia County;ORLEANS TOWNSHIP	township
+Michigan;Ionia County;ORANGE TOWNSHIP;Ward 0	ward
+Michigan;Ionia County;ORANGE TOWNSHIP	township
+Michigan;Ionia County;ODESSA TOWNSHIP;Ward 0	ward
+Michigan;Ionia County;ODESSA TOWNSHIP	township
+Michigan;Ionia County;NORTH PLAINS TOWNSHIP;Ward 0	ward
+Michigan;Ionia County;NORTH PLAINS TOWNSHIP	township
+Michigan;Ionia County;LYONS TOWNSHIP;Ward 0	ward
+Michigan;Ionia County;LYONS TOWNSHIP	township
+Michigan;Ionia County;KEENE TOWNSHIP;Ward 0	ward
+Michigan;Ionia County;KEENE TOWNSHIP	township
+Michigan;Ionia County;IONIA TOWNSHIP;Ward 0	ward
+Michigan;Ionia County;IONIA TOWNSHIP	township
+Michigan;Ionia County;IONIA CITY;Ward 4
+Michigan;Ionia County;IONIA CITY;Ward 3
+Michigan;Ionia County;IONIA CITY;Ward 2
+Michigan;Ionia County;IONIA CITY;Ward 1	ward
+Michigan;Ionia County;IONIA CITY	city
+Michigan;Ionia County;EASTON TOWNSHIP;Ward 0	ward
+Michigan;Ionia County;EASTON TOWNSHIP	township
+Michigan;Ionia County;DANBY TOWNSHIP;Ward 0	ward
+Michigan;Ionia County;DANBY TOWNSHIP	township
+Michigan;Ionia County;CAMPBELL TOWNSHIP;Ward 0	ward
+Michigan;Ionia County;CAMPBELL TOWNSHIP	township
+Michigan;Ionia County;BOSTON TOWNSHIP;Ward 0	ward
+Michigan;Ionia County;BOSTON TOWNSHIP	township
+Michigan;Ionia County;BERLIN TOWNSHIP;Ward 0	ward
+Michigan;Ionia County;BERLIN TOWNSHIP	township
+Michigan;Ionia County;BELDING CITY;Ward 0	ward
+Michigan;Ionia County;BELDING CITY	city
+Michigan;Ingham County;{Statistical Adjustments};Ward 0	ward
+Michigan;Ingham County;{Statistical Adjustments}
+Michigan;Ingham County;WILLIAMSTOWN TOWNSHIP;Ward 0	ward
+Michigan;Ingham County;WILLIAMSTOWN TOWNSHIP	township
+Michigan;Ingham County;WILLIAMSTON CITY;Ward 0	ward
+Michigan;Ingham County;WILLIAMSTON CITY	city
+Michigan;Ingham County;WHITE OAK TOWNSHIP;Ward 0	ward
+Michigan;Ingham County;WHITE OAK TOWNSHIP	township
+Michigan;Ingham County;WHEATFIELD TOWNSHIP;Ward 0	ward
+Michigan;Ingham County;WHEATFIELD TOWNSHIP	township
+Michigan;Ingham County;VEVAY TOWNSHIP;Ward 0	ward
+Michigan;Ingham County;VEVAY TOWNSHIP	township
+Michigan;Ingham County;STOCKBRIDGE TOWNSHIP;Ward 0	ward
+Michigan;Ingham County;STOCKBRIDGE TOWNSHIP	township
+Michigan;Ingham County;ONONDAGA TOWNSHIP;Ward 0	ward
+Michigan;Ingham County;ONONDAGA TOWNSHIP	township
+Michigan;Ingham County;MERIDIAN TOWNSHIP;Ward 0	ward
+Michigan;Ingham County;MERIDIAN TOWNSHIP	township
+Michigan;Ingham County;MASON CITY;Ward 0	ward
+Michigan;Ingham County;MASON CITY	city
+Michigan;Ingham County;LOCKE TOWNSHIP;Ward 0	ward
+Michigan;Ingham County;LOCKE TOWNSHIP	township
+Michigan;Ingham County;LESLIE TOWNSHIP;Ward 0	ward
+Michigan;Ingham County;LESLIE TOWNSHIP	township
+Michigan;Ingham County;LESLIE CITY;Ward 0	ward
+Michigan;Ingham County;LESLIE CITY	city
+Michigan;Ingham County;LEROY TOWNSHIP;Ward 0	ward
+Michigan;Ingham County;LEROY TOWNSHIP	township
+Michigan;Ingham County;LANSING TOWNSHIP;Ward 0	ward
+Michigan;Ingham County;LANSING TOWNSHIP	township
+Michigan;Ingham County;LANSING CITY;Ward 4
+Michigan;Ingham County;LANSING CITY;Ward 3
+Michigan;Ingham County;LANSING CITY;Ward 2
+Michigan;Ingham County;LANSING CITY;Ward 1	ward
+Michigan;Ingham County;LANSING CITY	city
+Michigan;Ingham County;INGHAM TOWNSHIP;Ward 0	ward
+Michigan;Ingham County;INGHAM TOWNSHIP	township
+Michigan;Ingham County;EAST LANSING CITY;Ward 0	ward
+Michigan;Ingham County;EAST LANSING CITY	city
+Michigan;Ingham County;DELHI TOWNSHIP;Ward 0	ward
+Michigan;Ingham County;DELHI TOWNSHIP	township
+Michigan;Ingham County;BUNKER HILL TOWNSHIP;Ward 0	ward
+Michigan;Ingham County;BUNKER HILL TOWNSHIP	township
+Michigan;Ingham County;AURELIUS TOWNSHIP;Ward 0	ward
+Michigan;Ingham County;AURELIUS TOWNSHIP	township
+Michigan;Ingham County;ALAIEDON TOWNSHIP;Ward 0	ward
+Michigan;Ingham County;ALAIEDON TOWNSHIP	township
+Michigan;Huron County;{Statistical Adjustments};Ward 0	ward
+Michigan;Huron County;{Statistical Adjustments}
+Michigan;Huron County;WINSOR TOWNSHIP;Ward 0	ward
+Michigan;Huron County;WINSOR TOWNSHIP	township
+Michigan;Huron County;VERONA TOWNSHIP;Ward 0	ward
+Michigan;Huron County;VERONA TOWNSHIP	township
+Michigan;Huron County;SIGEL TOWNSHIP;Ward 0	ward
+Michigan;Huron County;SIGEL TOWNSHIP	township
+Michigan;Huron County;SHERMAN TOWNSHIP;Ward 0	ward
+Michigan;Huron County;SHERMAN TOWNSHIP	township
+Michigan;Huron County;SHERIDAN TOWNSHIP;Ward 0	ward
+Michigan;Huron County;SHERIDAN TOWNSHIP	township
+Michigan;Huron County;SEBEWAING TOWNSHIP;Ward 0	ward
+Michigan;Huron County;SEBEWAING TOWNSHIP	township
+Michigan;Huron County;SAND BEACH TOWNSHIP;Ward 0	ward
+Michigan;Huron County;SAND BEACH TOWNSHIP	township
+Michigan;Huron County;RUBICON TOWNSHIP;Ward 0	ward
+Michigan;Huron County;RUBICON TOWNSHIP	township
+Michigan;Huron County;PORT AUSTIN TOWNSHIP;Ward 0	ward
+Michigan;Huron County;PORT AUSTIN TOWNSHIP	township
+Michigan;Huron County;POINTE AUX BARQUES TOWNSHIP;Ward 0	ward
+Michigan;Huron County;POINTE AUX BARQUES TOWNSHIP	township
+Michigan;Huron County;PARIS TOWNSHIP;Ward 0	ward
+Michigan;Huron County;PARIS TOWNSHIP	township
+Michigan;Huron County;OLIVER TOWNSHIP;Ward 0	ward
+Michigan;Huron County;OLIVER TOWNSHIP	township
+Michigan;Huron County;MEADE TOWNSHIP;Ward 0	ward
+Michigan;Huron County;MEADE TOWNSHIP	township
+Michigan;Huron County;MCKINLEY TOWNSHIP;Ward 0	ward
+Michigan;Huron County;MCKINLEY TOWNSHIP	township
+Michigan;Huron County;LINCOLN TOWNSHIP;Ward 0	ward
+Michigan;Huron County;LINCOLN TOWNSHIP	township
+Michigan;Huron County;LAKE TOWNSHIP;Ward 0	ward
+Michigan;Huron County;LAKE TOWNSHIP	township
+Michigan;Huron County;HURON TOWNSHIP;Ward 0	ward
+Michigan;Huron County;HURON TOWNSHIP	township
+Michigan;Huron County;HUME TOWNSHIP;Ward 0	ward
+Michigan;Huron County;HUME TOWNSHIP	township
+Michigan;Huron County;HARBOR BEACH CITY;Ward 0	ward
+Michigan;Huron County;HARBOR BEACH CITY	city
+Michigan;Huron County;GRANT TOWNSHIP;Ward 0	ward
+Michigan;Huron County;GRANT TOWNSHIP	township
+Michigan;Huron County;GORE TOWNSHIP;Ward 0	ward
+Michigan;Huron County;GORE TOWNSHIP	township
+Michigan;Huron County;FAIRHAVEN TOWNSHIP;Ward 0	ward
+Michigan;Huron County;FAIRHAVEN TOWNSHIP	township
+Michigan;Huron County;DWIGHT TOWNSHIP;Ward 0	ward
+Michigan;Huron County;DWIGHT TOWNSHIP	township
+Michigan;Huron County;COLFAX TOWNSHIP;Ward 0	ward
+Michigan;Huron County;COLFAX TOWNSHIP	township
+Michigan;Huron County;CHANDLER TOWNSHIP;Ward 0	ward
+Michigan;Huron County;CHANDLER TOWNSHIP	township
+Michigan;Huron County;CASEVILLE TOWNSHIP;Ward 0	ward
+Michigan;Huron County;CASEVILLE TOWNSHIP	township
+Michigan;Huron County;CASEVILLE CITY;Ward 0	ward
+Michigan;Huron County;CASEVILLE CITY	city
+Michigan;Huron County;BROOKFIELD TOWNSHIP;Ward 0	ward
+Michigan;Huron County;BROOKFIELD TOWNSHIP	township
+Michigan;Huron County;BLOOMFIELD TOWNSHIP;Ward 0	ward
+Michigan;Huron County;BLOOMFIELD TOWNSHIP	township
+Michigan;Huron County;BINGHAM TOWNSHIP;Ward 0	ward
+Michigan;Huron County;BINGHAM TOWNSHIP	township
+Michigan;Huron County;BAD AXE CITY;Ward 0	ward
+Michigan;Huron County;BAD AXE CITY	city
+Michigan;Houghton County;{Statistical Adjustments};Ward 0	ward
+Michigan;Houghton County;{Statistical Adjustments}
+Michigan;Houghton County;TORCH LAKE TOWNSHIP;Ward 0	ward
+Michigan;Houghton County;TORCH LAKE TOWNSHIP	township
+Michigan;Houghton County;STANTON TOWNSHIP;Ward 0	ward
+Michigan;Houghton County;STANTON TOWNSHIP	township
+Michigan;Houghton County;SCHOOLCRAFT TOWNSHIP;Ward 0	ward
+Michigan;Houghton County;SCHOOLCRAFT TOWNSHIP	township
+Michigan;Houghton County;QUINCY TOWNSHIP;Ward 0	ward
+Michigan;Houghton County;QUINCY TOWNSHIP	township
+Michigan;Houghton County;PORTAGE TOWNSHIP;Ward 0	ward
+Michigan;Houghton County;PORTAGE TOWNSHIP	township
+Michigan;Houghton County;OSCEOLA TOWNSHIP;Ward 0	ward
+Michigan;Houghton County;OSCEOLA TOWNSHIP	township
+Michigan;Houghton County;LAIRD TOWNSHIP;Ward 0	ward
+Michigan;Houghton County;LAIRD TOWNSHIP	township
+Michigan;Houghton County;HOUGHTON CITY;Ward 0	ward
+Michigan;Houghton County;HOUGHTON CITY	city
+Michigan;Houghton County;HANCOCK TOWNSHIP;Ward 0	ward
+Michigan;Houghton County;HANCOCK TOWNSHIP	township
+Michigan;Houghton County;HANCOCK CITY;Ward 0	ward
+Michigan;Houghton County;HANCOCK CITY	city
+Michigan;Houghton County;FRANKLIN TOWNSHIP;Ward 0	ward
+Michigan;Houghton County;FRANKLIN TOWNSHIP	township
+Michigan;Houghton County;ELM RIVER TOWNSHIP;Ward 0	ward
+Michigan;Houghton County;ELM RIVER TOWNSHIP	township
+Michigan;Houghton County;DUNCAN TOWNSHIP;Ward 0	ward
+Michigan;Houghton County;DUNCAN TOWNSHIP	township
+Michigan;Houghton County;CHASSELL TOWNSHIP;Ward 0	ward
+Michigan;Houghton County;CHASSELL TOWNSHIP	township
+Michigan;Houghton County;CALUMET TOWNSHIP;Ward 0	ward
+Michigan;Houghton County;CALUMET TOWNSHIP	township
+Michigan;Houghton County;ADAMS TOWNSHIP;Ward 0	ward
+Michigan;Houghton County;ADAMS TOWNSHIP	township
+Michigan;Hillsdale County;{Statistical Adjustments};Ward 0	ward
+Michigan;Hillsdale County;{Statistical Adjustments}
+Michigan;Hillsdale County;WRIGHT TOWNSHIP;Ward 0	ward
+Michigan;Hillsdale County;WRIGHT TOWNSHIP	township
+Michigan;Hillsdale County;WOODBRIDGE TOWNSHIP;Ward 0	ward
+Michigan;Hillsdale County;WOODBRIDGE TOWNSHIP	township
+Michigan;Hillsdale County;WHEATLAND TOWNSHIP;Ward 0	ward
+Michigan;Hillsdale County;WHEATLAND TOWNSHIP	township
+Michigan;Hillsdale County;SOMERSET TOWNSHIP;Ward 0	ward
+Michigan;Hillsdale County;SOMERSET TOWNSHIP	township
+Michigan;Hillsdale County;SCIPIO TOWNSHIP;Ward 0	ward
+Michigan;Hillsdale County;SCIPIO TOWNSHIP	township
+Michigan;Hillsdale County;READING TOWNSHIP;Ward 0	ward
+Michigan;Hillsdale County;READING TOWNSHIP	township
+Michigan;Hillsdale County;READING CITY;Ward 0	ward
+Michigan;Hillsdale County;READING CITY	city
+Michigan;Hillsdale County;RANSOM TOWNSHIP;Ward 0	ward
+Michigan;Hillsdale County;RANSOM TOWNSHIP	township
+Michigan;Hillsdale County;PITTSFORD TOWNSHIP;Ward 0	ward
+Michigan;Hillsdale County;PITTSFORD TOWNSHIP	township
+Michigan;Hillsdale County;MOSCOW TOWNSHIP;Ward 0	ward
+Michigan;Hillsdale County;MOSCOW TOWNSHIP	township
+Michigan;Hillsdale County;LITCHFIELD TOWNSHIP;Ward 0	ward
+Michigan;Hillsdale County;LITCHFIELD TOWNSHIP	township
+Michigan;Hillsdale County;LITCHFIELD CITY;Ward 0	ward
+Michigan;Hillsdale County;LITCHFIELD CITY	city
+Michigan;Hillsdale County;JONESVILLE CITY;Ward 0	ward
+Michigan;Hillsdale County;JONESVILLE CITY	city
+Michigan;Hillsdale County;JEFFERSON TOWNSHIP;Ward 0	ward
+Michigan;Hillsdale County;JEFFERSON TOWNSHIP	township
+Michigan;Hillsdale County;HILLSDALE TOWNSHIP;Ward 0	ward
+Michigan;Hillsdale County;HILLSDALE TOWNSHIP	township
+Michigan;Hillsdale County;HILLSDALE CITY;Ward 4
+Michigan;Hillsdale County;HILLSDALE CITY;Ward 3
+Michigan;Hillsdale County;HILLSDALE CITY;Ward 2
+Michigan;Hillsdale County;HILLSDALE CITY;Ward 1	ward
+Michigan;Hillsdale County;HILLSDALE CITY	city
+Michigan;Hillsdale County;FAYETTE TOWNSHIP;Ward 0	ward
+Michigan;Hillsdale County;FAYETTE TOWNSHIP	township
+Michigan;Hillsdale County;CAMDEN TOWNSHIP;Ward 0	ward
+Michigan;Hillsdale County;CAMDEN TOWNSHIP	township
+Michigan;Hillsdale County;CAMBRIA TOWNSHIP;Ward 0	ward
+Michigan;Hillsdale County;CAMBRIA TOWNSHIP	township
+Michigan;Hillsdale County;AMBOY TOWNSHIP;Ward 0	ward
+Michigan;Hillsdale County;AMBOY TOWNSHIP	township
+Michigan;Hillsdale County;ALLEN TOWNSHIP;Ward 0	ward
+Michigan;Hillsdale County;ALLEN TOWNSHIP	township
+Michigan;Hillsdale County;ADAMS TOWNSHIP;Ward 0	ward
+Michigan;Hillsdale County;ADAMS TOWNSHIP	township
+Michigan;Gratiot County;{Statistical Adjustments};Ward 0	ward
+Michigan;Gratiot County;{Statistical Adjustments}
+Michigan;Gratiot County;WHEELER TOWNSHIP;Ward 0	ward
+Michigan;Gratiot County;WHEELER TOWNSHIP	township
+Michigan;Gratiot County;WASHINGTON TOWNSHIP;Ward 0	ward
+Michigan;Gratiot County;WASHINGTON TOWNSHIP	township
+Michigan;Gratiot County;SUMNER TOWNSHIP;Ward 0	ward
+Michigan;Gratiot County;SUMNER TOWNSHIP	township
+Michigan;Gratiot County;ST. LOUIS CITY;Ward 0	ward
+Michigan;Gratiot County;ST. LOUIS CITY	city
+Michigan;Gratiot County;SEVILLE TOWNSHIP;Ward 0	ward
+Michigan;Gratiot County;SEVILLE TOWNSHIP	township
+Michigan;Gratiot County;PINE RIVER TOWNSHIP;Ward 0	ward
+Michigan;Gratiot County;PINE RIVER TOWNSHIP	township
+Michigan;Gratiot County;NORTH STAR TOWNSHIP;Ward 0	ward
+Michigan;Gratiot County;NORTH STAR TOWNSHIP	township
+Michigan;Gratiot County;NORTH SHADE TOWNSHIP;Ward 0	ward
+Michigan;Gratiot County;NORTH SHADE TOWNSHIP	township
+Michigan;Gratiot County;NEWARK TOWNSHIP;Ward 0	ward
+Michigan;Gratiot County;NEWARK TOWNSHIP	township
+Michigan;Gratiot County;NEW HAVEN TOWNSHIP;Ward 0	ward
+Michigan;Gratiot County;NEW HAVEN TOWNSHIP	township
+Michigan;Gratiot County;LAFAYETTE TOWNSHIP;Ward 0	ward
+Michigan;Gratiot County;LAFAYETTE TOWNSHIP	township
+Michigan;Gratiot County;ITHACA CITY;Ward 0	ward
+Michigan;Gratiot County;ITHACA CITY	city
+Michigan;Gratiot County;HAMILTON TOWNSHIP;Ward 0	ward
+Michigan;Gratiot County;HAMILTON TOWNSHIP	township
+Michigan;Gratiot County;FULTON TOWNSHIP;Ward 0	ward
+Michigan;Gratiot County;FULTON TOWNSHIP	township
+Michigan;Gratiot County;EMERSON TOWNSHIP;Ward 0	ward
+Michigan;Gratiot County;EMERSON TOWNSHIP	township
+Michigan;Gratiot County;ELBA TOWNSHIP;Ward 0	ward
+Michigan;Gratiot County;ELBA TOWNSHIP	township
+Michigan;Gratiot County;BETHANY TOWNSHIP;Ward 0	ward
+Michigan;Gratiot County;BETHANY TOWNSHIP	township
+Michigan;Gratiot County;ARCADA TOWNSHIP;Ward 0	ward
+Michigan;Gratiot County;ARCADA TOWNSHIP	township
+Michigan;Gratiot County;ALMA CITY;Ward 0	ward
+Michigan;Gratiot County;ALMA CITY	city
+Michigan;Gogebic County;WATERSMEET TOWNSHIP;Ward 0	ward
+Michigan;Gogebic County;WATERSMEET TOWNSHIP	township
+Michigan;Gogebic County;WAKEFIELD TOWNSHIP;Ward 0	ward
+Michigan;Gogebic County;WAKEFIELD TOWNSHIP	township
+Michigan;Gogebic County;WAKEFIELD CITY;Ward 0	ward
+Michigan;Gogebic County;WAKEFIELD CITY	city
+Michigan;Gogebic County;MARENISCO TOWNSHIP;Ward 0	ward
+Michigan;Gogebic County;MARENISCO TOWNSHIP	township
+Michigan;Gogebic County;IRONWOOD TOWNSHIP;Ward 0	ward
+Michigan;Gogebic County;IRONWOOD TOWNSHIP	township
+Michigan;Gogebic County;IRONWOOD CITY;Ward 0	ward
+Michigan;Gogebic County;IRONWOOD CITY	city
+Michigan;Gogebic County;ERWIN TOWNSHIP;Ward 0	ward
+Michigan;Gogebic County;ERWIN TOWNSHIP	township
+Michigan;Gogebic County;BESSEMER TOWNSHIP;Ward 0	ward
+Michigan;Gogebic County;BESSEMER TOWNSHIP	township
+Michigan;Gogebic County;BESSEMER CITY;Ward 0	ward
+Michigan;Gogebic County;BESSEMER CITY	city
+Michigan;Gladwin County;{Statistical Adjustments};Ward 0	ward
+Michigan;Gladwin County;{Statistical Adjustments}
+Michigan;Gladwin County;TOBACCO TOWNSHIP;Ward 0	ward
+Michigan;Gladwin County;TOBACCO TOWNSHIP	township
+Michigan;Gladwin County;SHERMAN TOWNSHIP;Ward 0	ward
+Michigan;Gladwin County;SHERMAN TOWNSHIP	township
+Michigan;Gladwin County;SECORD TOWNSHIP;Ward 0	ward
+Michigan;Gladwin County;SECORD TOWNSHIP	township
+Michigan;Gladwin County;SAGE TOWNSHIP;Ward 0	ward
+Michigan;Gladwin County;SAGE TOWNSHIP	township
+Michigan;Gladwin County;HAY TOWNSHIP;Ward 0	ward
+Michigan;Gladwin County;HAY TOWNSHIP	township
+Michigan;Gladwin County;GROUT TOWNSHIP;Ward 0	ward
+Michigan;Gladwin County;GROUT TOWNSHIP	township
+Michigan;Gladwin County;GRIM TOWNSHIP;Ward 0	ward
+Michigan;Gladwin County;GRIM TOWNSHIP	township
+Michigan;Gladwin County;GLADWIN TOWNSHIP;Ward 0	ward
+Michigan;Gladwin County;GLADWIN TOWNSHIP	township
+Michigan;Gladwin County;GLADWIN CITY;Ward 1	ward
+Michigan;Gladwin County;GLADWIN CITY	city
+Michigan;Gladwin County;CLEMENT TOWNSHIP;Ward 0	ward
+Michigan;Gladwin County;CLEMENT TOWNSHIP	township
+Michigan;Gladwin County;BUTMAN TOWNSHIP;Ward 0	ward
+Michigan;Gladwin County;BUTMAN TOWNSHIP	township
+Michigan;Gladwin County;BUCKEYE TOWNSHIP;Ward 0	ward
+Michigan;Gladwin County;BUCKEYE TOWNSHIP	township
+Michigan;Gladwin County;BOURRET TOWNSHIP;Ward 0	ward
+Michigan;Gladwin County;BOURRET TOWNSHIP	township
+Michigan;Gladwin County;BILLINGS TOWNSHIP;Ward 0	ward
+Michigan;Gladwin County;BILLINGS TOWNSHIP	township
+Michigan;Gladwin County;BENTLEY TOWNSHIP;Ward 0	ward
+Michigan;Gladwin County;BENTLEY TOWNSHIP	township
+Michigan;Gladwin County;BEAVERTON TOWNSHIP;Ward 0	ward
+Michigan;Gladwin County;BEAVERTON TOWNSHIP	township
+Michigan;Gladwin County;BEAVERTON CITY;Ward 0	ward
+Michigan;Gladwin County;BEAVERTON CITY	city
+Michigan;Genesee County;{Statistical Adjustments};Ward 0	ward
+Michigan;Genesee County;{Statistical Adjustments}
+Michigan;Genesee County;VIENNA TOWNSHIP;Ward 0	ward
+Michigan;Genesee County;VIENNA TOWNSHIP	township
+Michigan;Genesee County;THETFORD TOWNSHIP;Ward 0	ward
+Michigan;Genesee County;THETFORD TOWNSHIP	township
+Michigan;Genesee County;SWARTZ CREEK CITY;Ward 0	ward
+Michigan;Genesee County;SWARTZ CREEK CITY	city
+Michigan;Genesee County;RICHFIELD TOWNSHIP;Ward 0	ward
+Michigan;Genesee County;RICHFIELD TOWNSHIP	township
+Michigan;Genesee County;MUNDY TOWNSHIP;Ward 0	ward
+Michigan;Genesee County;MUNDY TOWNSHIP	township
+Michigan;Genesee County;MOUNT MORRIS TOWNSHIP;Ward 0	ward
+Michigan;Genesee County;MOUNT MORRIS TOWNSHIP	township
+Michigan;Genesee County;MOUNT MORRIS CITY;Ward 0	ward
+Michigan;Genesee County;MOUNT MORRIS CITY	city
+Michigan;Genesee County;MONTROSE TOWNSHIP;Ward 0	ward
+Michigan;Genesee County;MONTROSE TOWNSHIP	township
+Michigan;Genesee County;MONTROSE CITY;Ward 0	ward
+Michigan;Genesee County;MONTROSE CITY	city
+Michigan;Genesee County;LINDEN CITY;Ward 0	ward
+Michigan;Genesee County;LINDEN CITY	city
+Michigan;Genesee County;GRAND BLANC TOWNSHIP;Ward 0	ward
+Michigan;Genesee County;GRAND BLANC TOWNSHIP	township
+Michigan;Genesee County;GRAND BLANC CITY;Ward 0	ward
+Michigan;Genesee County;GRAND BLANC CITY	city
+Michigan;Genesee County;GENESEE TOWNSHIP;Ward 0	ward
+Michigan;Genesee County;GENESEE TOWNSHIP	township
+Michigan;Genesee County;GAINES TOWNSHIP;Ward 0	ward
+Michigan;Genesee County;GAINES TOWNSHIP	township
+Michigan;Genesee County;FOREST TOWNSHIP;Ward 0	ward
+Michigan;Genesee County;FOREST TOWNSHIP	township
+Michigan;Genesee County;FLUSHING TOWNSHIP;Ward 0	ward
+Michigan;Genesee County;FLUSHING TOWNSHIP	township
+Michigan;Genesee County;FLUSHING CITY;Ward 0	ward
+Michigan;Genesee County;FLUSHING CITY	city
+Michigan;Genesee County;FLINT TOWNSHIP;Ward 0	ward
+Michigan;Genesee County;FLINT TOWNSHIP	township
+Michigan;Genesee County;FLINT CITY;Ward 9
+Michigan;Genesee County;FLINT CITY;Ward 8
+Michigan;Genesee County;FLINT CITY;Ward 7
+Michigan;Genesee County;FLINT CITY;Ward 6
+Michigan;Genesee County;FLINT CITY;Ward 5
+Michigan;Genesee County;FLINT CITY;Ward 4
+Michigan;Genesee County;FLINT CITY;Ward 3
+Michigan;Genesee County;FLINT CITY;Ward 2
+Michigan;Genesee County;FLINT CITY;Ward 1	ward
+Michigan;Genesee County;FLINT CITY	city
+Michigan;Genesee County;FENTON TOWNSHIP;Ward 0	ward
+Michigan;Genesee County;FENTON TOWNSHIP	township
+Michigan;Genesee County;FENTON CITY;Ward 0	ward
+Michigan;Genesee County;FENTON CITY	city
+Michigan;Genesee County;DAVISON TOWNSHIP;Ward 0	ward
+Michigan;Genesee County;DAVISON TOWNSHIP	township
+Michigan;Genesee County;DAVISON CITY;Ward 0	ward
+Michigan;Genesee County;DAVISON CITY	city
+Michigan;Genesee County;CLIO CITY;Ward 0	ward
+Michigan;Genesee County;CLIO CITY	city
+Michigan;Genesee County;CLAYTON TOWNSHIP;Ward 0	ward
+Michigan;Genesee County;CLAYTON TOWNSHIP	township
+Michigan;Genesee County;BURTON CITY;Ward 0	ward
+Michigan;Genesee County;BURTON CITY	city
+Michigan;Genesee County;ATLAS TOWNSHIP;Ward 0	ward
+Michigan;Genesee County;ATLAS TOWNSHIP	township
+Michigan;Genesee County;ARGENTINE TOWNSHIP;Ward 0	ward
+Michigan;Genesee County;ARGENTINE TOWNSHIP	township
+Michigan;Gd. Traverse County;WHITEWATER TOWNSHIP;Ward 0	ward
+Michigan;Gd. Traverse County;WHITEWATER TOWNSHIP	township
+Michigan;Gd. Traverse County;UNION TOWNSHIP;Ward 0	ward
+Michigan;Gd. Traverse County;UNION TOWNSHIP	township
+Michigan;Gd. Traverse County;TRAVERSE CITY;Ward 0	ward
+Michigan;Gd. Traverse County;TRAVERSE CITY	city
+Michigan;Gd. Traverse County;PENINSULA TOWNSHIP;Ward 0	ward
+Michigan;Gd. Traverse County;PENINSULA TOWNSHIP	township
+Michigan;Gd. Traverse County;PARADISE TOWNSHIP;Ward 0	ward
+Michigan;Gd. Traverse County;PARADISE TOWNSHIP	township
+Michigan;Gd. Traverse County;MAYFIELD TOWNSHIP;Ward 0	ward
+Michigan;Gd. Traverse County;MAYFIELD TOWNSHIP	township
+Michigan;Gd. Traverse County;LONG LAKE TOWNSHIP;Ward 0	ward
+Michigan;Gd. Traverse County;LONG LAKE TOWNSHIP	township
+Michigan;Gd. Traverse County;GREEN LAKE TOWNSHIP;Ward 0	ward
+Michigan;Gd. Traverse County;GREEN LAKE TOWNSHIP	township
+Michigan;Gd. Traverse County;GRANT TOWNSHIP;Ward 0	ward
+Michigan;Gd. Traverse County;GRANT TOWNSHIP	township
+Michigan;Gd. Traverse County;GARFIELD TOWNSHIP;Ward 0	ward
+Michigan;Gd. Traverse County;GARFIELD TOWNSHIP	township
+Michigan;Gd. Traverse County;FIFE LAKE TOWNSHIP;Ward 0	ward
+Michigan;Gd. Traverse County;FIFE LAKE TOWNSHIP	township
+Michigan;Gd. Traverse County;EAST BAY TOWNSHIP;Ward 0	ward
+Michigan;Gd. Traverse County;EAST BAY TOWNSHIP	township
+Michigan;Gd. Traverse County;BLAIR TOWNSHIP;Ward 0	ward
+Michigan;Gd. Traverse County;BLAIR TOWNSHIP	township
+Michigan;Gd. Traverse County;ACME TOWNSHIP;Ward 0	ward
+Michigan;Gd. Traverse County;ACME TOWNSHIP	township
+Michigan;Emmet County;{Statistical Adjustments};Ward 0	ward
+Michigan;Emmet County;{Statistical Adjustments}
+Michigan;Emmet County;WEST TRAVERSE TOWNSHIP;Ward 0	ward
+Michigan;Emmet County;WEST TRAVERSE TOWNSHIP	township
+Michigan;Emmet County;WAWATAM TOWNSHIP;Ward 0	ward
+Michigan;Emmet County;WAWATAM TOWNSHIP	township
+Michigan;Emmet County;SPRINGVALE TOWNSHIP;Ward 0	ward
+Michigan;Emmet County;SPRINGVALE TOWNSHIP	township
+Michigan;Emmet County;RESORT TOWNSHIP;Ward 0	ward
+Michigan;Emmet County;RESORT TOWNSHIP	township
+Michigan;Emmet County;READMOND TOWNSHIP;Ward 0	ward
+Michigan;Emmet County;READMOND TOWNSHIP	township
+Michigan;Emmet County;PLEASANT VIEW TOWNSHIP;Ward 0	ward
+Michigan;Emmet County;PLEASANT VIEW TOWNSHIP	township
+Michigan;Emmet County;PETOSKEY CITY;Ward 0	ward
+Michigan;Emmet County;PETOSKEY CITY	city
+Michigan;Emmet County;MCKINLEY TOWNSHIP;Ward 0	ward
+Michigan;Emmet County;MCKINLEY TOWNSHIP	township
+Michigan;Emmet County;MAPLE RIVER TOWNSHIP;Ward 0	ward
+Michigan;Emmet County;MAPLE RIVER TOWNSHIP	township
+Michigan;Emmet County;LITTLEFIELD TOWNSHIP;Ward 0	ward
+Michigan;Emmet County;LITTLEFIELD TOWNSHIP	township
+Michigan;Emmet County;LITTLE TRAVERSE TOWNSHIP;Ward 0	ward
+Michigan;Emmet County;LITTLE TRAVERSE TOWNSHIP	township
+Michigan;Emmet County;HARBOR SPRINGS CITY;Ward 0	ward
+Michigan;Emmet County;HARBOR SPRINGS CITY	city
+Michigan;Emmet County;FRIENDSHIP TOWNSHIP;Ward 0	ward
+Michigan;Emmet County;FRIENDSHIP TOWNSHIP	township
+Michigan;Emmet County;CROSS VILLAGE TOWNSHIP;Ward 0	ward
+Michigan;Emmet County;CROSS VILLAGE TOWNSHIP	township
+Michigan;Emmet County;CENTER TOWNSHIP;Ward 0	ward
+Michigan;Emmet County;CENTER TOWNSHIP	township
+Michigan;Emmet County;CARP LAKE TOWNSHIP;Ward 0	ward
+Michigan;Emmet County;CARP LAKE TOWNSHIP	township
+Michigan;Emmet County;BLISS TOWNSHIP;Ward 0	ward
+Michigan;Emmet County;BLISS TOWNSHIP	township
+Michigan;Emmet County;BEAR CREEK TOWNSHIP;Ward 0	ward
+Michigan;Emmet County;BEAR CREEK TOWNSHIP	township
+Michigan;Eaton County;{Statistical Adjustments};Ward 0	ward
+Michigan;Eaton County;{Statistical Adjustments}
+Michigan;Eaton County;WINDSOR TOWNSHIP;Ward 0	ward
+Michigan;Eaton County;WINDSOR TOWNSHIP	township
+Michigan;Eaton County;WALTON TOWNSHIP;Ward 0	ward
+Michigan;Eaton County;WALTON TOWNSHIP	township
+Michigan;Eaton County;VERMONTVILLE TOWNSHIP;Ward 0	ward
+Michigan;Eaton County;VERMONTVILLE TOWNSHIP	township
+Michigan;Eaton County;SUNFIELD TOWNSHIP;Ward 0	ward
+Michigan;Eaton County;SUNFIELD TOWNSHIP	township
+Michigan;Eaton County;ROXAND TOWNSHIP;Ward 0	ward
+Michigan;Eaton County;ROXAND TOWNSHIP	township
+Michigan;Eaton County;POTTERVILLE CITY;Ward 0	ward
+Michigan;Eaton County;POTTERVILLE CITY	city
+Michigan;Eaton County;ONEIDA TOWNSHIP;Ward 0	ward
+Michigan;Eaton County;ONEIDA TOWNSHIP	township
+Michigan;Eaton County;OLIVET CITY;Ward 0	ward
+Michigan;Eaton County;OLIVET CITY	city
+Michigan;Eaton County;LANSING CITY;Ward 3
+Michigan;Eaton County;LANSING CITY	city
+Michigan;Eaton County;KALAMO TOWNSHIP;Ward 0	ward
+Michigan;Eaton County;KALAMO TOWNSHIP	township
+Michigan;Eaton County;HAMLIN TOWNSHIP;Ward 0	ward
+Michigan;Eaton County;HAMLIN TOWNSHIP	township
+Michigan;Eaton County;GRAND LEDGE CITY;Ward 0	ward
+Michigan;Eaton County;GRAND LEDGE CITY	city
+Michigan;Eaton County;EATON TOWNSHIP;Ward 0	ward
+Michigan;Eaton County;EATON TOWNSHIP	township
+Michigan;Eaton County;EATON RAPIDS TOWNSHIP;Ward 0	ward
+Michigan;Eaton County;EATON RAPIDS TOWNSHIP	township
+Michigan;Eaton County;EATON RAPIDS CITY;Ward 0	ward
+Michigan;Eaton County;EATON RAPIDS CITY	city
+Michigan;Eaton County;DELTA TOWNSHIP;Ward 0	ward
+Michigan;Eaton County;DELTA TOWNSHIP	township
+Michigan;Eaton County;CHESTER TOWNSHIP;Ward 0	ward
+Michigan;Eaton County;CHESTER TOWNSHIP	township
+Michigan;Eaton County;CHARLOTTE CITY;Ward 2
+Michigan;Eaton County;CHARLOTTE CITY;Ward 1	ward
+Michigan;Eaton County;CHARLOTTE CITY	city
+Michigan;Eaton County;CARMEL TOWNSHIP;Ward 0	ward
+Michigan;Eaton County;CARMEL TOWNSHIP	township
+Michigan;Eaton County;BROOKFIELD TOWNSHIP;Ward 0	ward
+Michigan;Eaton County;BROOKFIELD TOWNSHIP	township
+Michigan;Eaton County;BENTON TOWNSHIP;Ward 0	ward
+Michigan;Eaton County;BENTON TOWNSHIP	township
+Michigan;Eaton County;BELLEVUE TOWNSHIP;Ward 0	ward
+Michigan;Eaton County;BELLEVUE TOWNSHIP	township
+Michigan;Dickinson County;{Statistical Adjustments};Ward 0	ward
+Michigan;Dickinson County;{Statistical Adjustments}
+Michigan;Dickinson County;WEST BRANCH TOWNSHIP;Ward 0	ward
+Michigan;Dickinson County;WEST BRANCH TOWNSHIP	township
+Michigan;Dickinson County;WAUCEDAH TOWNSHIP;Ward 0	ward
+Michigan;Dickinson County;WAUCEDAH TOWNSHIP	township
+Michigan;Dickinson County;SAGOLA TOWNSHIP;Ward 0	ward
+Michigan;Dickinson County;SAGOLA TOWNSHIP	township
+Michigan;Dickinson County;NORWAY TOWNSHIP;Ward 0	ward
+Michigan;Dickinson County;NORWAY TOWNSHIP	township
+Michigan;Dickinson County;NORWAY CITY;Ward 0	ward
+Michigan;Dickinson County;NORWAY CITY	city
+Michigan;Dickinson County;KINGSFORD CITY;Ward 0	ward
+Michigan;Dickinson County;KINGSFORD CITY	city
+Michigan;Dickinson County;IRON MOUNTAIN CITY;Ward 0	ward
+Michigan;Dickinson County;IRON MOUNTAIN CITY	city
+Michigan;Dickinson County;FELCH TOWNSHIP;Ward 0	ward
+Michigan;Dickinson County;FELCH TOWNSHIP	township
+Michigan;Dickinson County;BREITUNG TOWNSHIP;Ward 0	ward
+Michigan;Dickinson County;BREITUNG TOWNSHIP	township
+Michigan;Dickinson County;BREEN TOWNSHIP;Ward 0	ward
+Michigan;Dickinson County;BREEN TOWNSHIP	township
+Michigan;Delta County;{Statistical Adjustments};Ward 0	ward
+Michigan;Delta County;{Statistical Adjustments}
+Michigan;Delta County;WELLS TOWNSHIP;Ward 0	ward
+Michigan;Delta County;WELLS TOWNSHIP	township
+Michigan;Delta County;NAHMA TOWNSHIP;Ward 0	ward
+Michigan;Delta County;NAHMA TOWNSHIP	township
+Michigan;Delta County;MASONVILLE TOWNSHIP;Ward 0	ward
+Michigan;Delta County;MASONVILLE TOWNSHIP	township
+Michigan;Delta County;MAPLE RIDGE TOWNSHIP;Ward 0	ward
+Michigan;Delta County;MAPLE RIDGE TOWNSHIP	township
+Michigan;Delta County;GLADSTONE CITY;Ward 0	ward
+Michigan;Delta County;GLADSTONE CITY	city
+Michigan;Delta County;GARDEN TOWNSHIP;Ward 0	ward
+Michigan;Delta County;GARDEN TOWNSHIP	township
+Michigan;Delta County;FORD RIVER TOWNSHIP;Ward 0	ward
+Michigan;Delta County;FORD RIVER TOWNSHIP	township
+Michigan;Delta County;FAIRBANKS TOWNSHIP;Ward 0	ward
+Michigan;Delta County;FAIRBANKS TOWNSHIP	township
+Michigan;Delta County;ESCANABA TOWNSHIP;Ward 0	ward
+Michigan;Delta County;ESCANABA TOWNSHIP	township
+Michigan;Delta County;ESCANABA CITY;Ward 0	ward
+Michigan;Delta County;ESCANABA CITY	city
+Michigan;Delta County;ENSIGN TOWNSHIP;Ward 0	ward
+Michigan;Delta County;ENSIGN TOWNSHIP	township
+Michigan;Delta County;CORNELL TOWNSHIP;Ward 0	ward
+Michigan;Delta County;CORNELL TOWNSHIP	township
+Michigan;Delta County;BRAMPTON TOWNSHIP;Ward 0	ward
+Michigan;Delta County;BRAMPTON TOWNSHIP	township
+Michigan;Delta County;BAY DE NOC TOWNSHIP;Ward 0	ward
+Michigan;Delta County;BAY DE NOC TOWNSHIP	township
+Michigan;Delta County;BARK RIVER TOWNSHIP;Ward 0	ward
+Michigan;Delta County;BARK RIVER TOWNSHIP	township
+Michigan;Delta County;BALDWIN TOWNSHIP;Ward 0	ward
+Michigan;Delta County;BALDWIN TOWNSHIP	township
+Michigan;Crawford County;{Statistical Adjustments};Ward 0	ward
+Michigan;Crawford County;{Statistical Adjustments}
+Michigan;Crawford County;SOUTH BRANCH TOWNSHIP;Ward 0	ward
+Michigan;Crawford County;SOUTH BRANCH TOWNSHIP	township
+Michigan;Crawford County;MAPLE FOREST TOWNSHIP;Ward 0	ward
+Michigan;Crawford County;MAPLE FOREST TOWNSHIP	township
+Michigan;Crawford County;LOVELLS TOWNSHIP;Ward 0	ward
+Michigan;Crawford County;LOVELLS TOWNSHIP	township
+Michigan;Crawford County;GRAYLING TOWNSHIP;Ward 0	ward
+Michigan;Crawford County;GRAYLING TOWNSHIP	township
+Michigan;Crawford County;GRAYLING CITY;Ward 0	ward
+Michigan;Crawford County;GRAYLING CITY	city
+Michigan;Crawford County;FREDERIC TOWNSHIP;Ward 0	ward
+Michigan;Crawford County;FREDERIC TOWNSHIP	township
+Michigan;Crawford County;BEAVER CREEK TOWNSHIP;Ward 0	ward
+Michigan;Crawford County;BEAVER CREEK TOWNSHIP	township
+Michigan;Clinton County;{Statistical Adjustments};Ward 0	ward
+Michigan;Clinton County;{Statistical Adjustments}
+Michigan;Clinton County;WESTPHALIA TOWNSHIP;Ward 0	ward
+Michigan;Clinton County;WESTPHALIA TOWNSHIP	township
+Michigan;Clinton County;WATERTOWN TOWNSHIP;Ward 0	ward
+Michigan;Clinton County;WATERTOWN TOWNSHIP	township
+Michigan;Clinton County;VICTOR TOWNSHIP;Ward 0	ward
+Michigan;Clinton County;VICTOR TOWNSHIP	township
+Michigan;Clinton County;ST. JOHNS CITY;Ward 0	ward
+Michigan;Clinton County;ST. JOHNS CITY	city
+Michigan;Clinton County;RILEY TOWNSHIP;Ward 0	ward
+Michigan;Clinton County;RILEY TOWNSHIP	township
+Michigan;Clinton County;OVID TOWNSHIP;Ward 0	ward
+Michigan;Clinton County;OVID TOWNSHIP	township
+Michigan;Clinton County;OVID CITY;Ward 0	ward
+Michigan;Clinton County;OVID CITY	city
+Michigan;Clinton County;OLIVE TOWNSHIP;Ward 0	ward
+Michigan;Clinton County;OLIVE TOWNSHIP	township
+Michigan;Clinton County;LEBANON TOWNSHIP;Ward 0	ward
+Michigan;Clinton County;LEBANON TOWNSHIP	township
+Michigan;Clinton County;GREENBUSH TOWNSHIP;Ward 0	ward
+Michigan;Clinton County;GREENBUSH TOWNSHIP	township
+Michigan;Clinton County;ESSEX TOWNSHIP;Ward 0	ward
+Michigan;Clinton County;ESSEX TOWNSHIP	township
+Michigan;Clinton County;EAST LANSING CITY;Ward 0	ward
+Michigan;Clinton County;EAST LANSING CITY	city
+Michigan;Clinton County;EAGLE TOWNSHIP;Ward 0	ward
+Michigan;Clinton County;EAGLE TOWNSHIP	township
+Michigan;Clinton County;DUPLAIN TOWNSHIP;Ward 0	ward
+Michigan;Clinton County;DUPLAIN TOWNSHIP	township
+Michigan;Clinton County;DE WITT TOWNSHIP;Ward 0	ward
+Michigan;Clinton County;DE WITT TOWNSHIP	township
+Michigan;Clinton County;DE WITT CITY;Ward 0	ward
+Michigan;Clinton County;DE WITT CITY	city
+Michigan;Clinton County;DALLAS TOWNSHIP;Ward 0	ward
+Michigan;Clinton County;DALLAS TOWNSHIP	township
+Michigan;Clinton County;BINGHAM TOWNSHIP;Ward 0	ward
+Michigan;Clinton County;BINGHAM TOWNSHIP	township
+Michigan;Clinton County;BENGAL TOWNSHIP;Ward 0	ward
+Michigan;Clinton County;BENGAL TOWNSHIP	township
+Michigan;Clinton County;BATH TOWNSHIP;Ward 0	ward
+Michigan;Clinton County;BATH TOWNSHIP	township
+Michigan;Clare County;{Statistical Adjustments};Ward 0	ward
+Michigan;Clare County;{Statistical Adjustments}
+Michigan;Clare County;WINTERFIELD TOWNSHIP;Ward 0	ward
+Michigan;Clare County;WINTERFIELD TOWNSHIP	township
+Michigan;Clare County;SURREY TOWNSHIP;Ward 0	ward
+Michigan;Clare County;SURREY TOWNSHIP	township
+Michigan;Clare County;SUMMERFIELD TOWNSHIP;Ward 0	ward
+Michigan;Clare County;SUMMERFIELD TOWNSHIP	township
+Michigan;Clare County;SHERIDAN TOWNSHIP;Ward 0	ward
+Michigan;Clare County;SHERIDAN TOWNSHIP	township
+Michigan;Clare County;REDDING TOWNSHIP;Ward 0	ward
+Michigan;Clare County;REDDING TOWNSHIP	township
+Michigan;Clare County;LINCOLN TOWNSHIP;Ward 0	ward
+Michigan;Clare County;LINCOLN TOWNSHIP	township
+Michigan;Clare County;HAYES TOWNSHIP;Ward 0	ward
+Michigan;Clare County;HAYES TOWNSHIP	township
+Michigan;Clare County;HATTON TOWNSHIP;Ward 0	ward
+Michigan;Clare County;HATTON TOWNSHIP	township
+Michigan;Clare County;HARRISON CITY;Ward 0	ward
+Michigan;Clare County;HARRISON CITY	city
+Michigan;Clare County;HAMILTON TOWNSHIP;Ward 0	ward
+Michigan;Clare County;HAMILTON TOWNSHIP	township
+Michigan;Clare County;GREENWOOD TOWNSHIP;Ward 0	ward
+Michigan;Clare County;GREENWOOD TOWNSHIP	township
+Michigan;Clare County;GRANT TOWNSHIP;Ward 0	ward
+Michigan;Clare County;GRANT TOWNSHIP	township
+Michigan;Clare County;GARFIELD TOWNSHIP;Ward 0	ward
+Michigan;Clare County;GARFIELD TOWNSHIP	township
+Michigan;Clare County;FROST TOWNSHIP;Ward 0	ward
+Michigan;Clare County;FROST TOWNSHIP	township
+Michigan;Clare County;FREEMAN TOWNSHIP;Ward 0	ward
+Michigan;Clare County;FREEMAN TOWNSHIP	township
+Michigan;Clare County;FRANKLIN TOWNSHIP;Ward 0	ward
+Michigan;Clare County;FRANKLIN TOWNSHIP	township
+Michigan;Clare County;CLARE CITY;Ward 0	ward
+Michigan;Clare County;CLARE CITY	city
+Michigan;Clare County;ARTHUR TOWNSHIP;Ward 0	ward
+Michigan;Clare County;ARTHUR TOWNSHIP	township
+Michigan;Chippewa County;{Statistical Adjustments};Ward 0	ward
+Michigan;Chippewa County;{Statistical Adjustments}
+Michigan;Chippewa County;WHITEFISH TOWNSHIP;Ward 0	ward
+Michigan;Chippewa County;WHITEFISH TOWNSHIP	township
+Michigan;Chippewa County;TROUT LAKE TOWNSHIP;Ward 0	ward
+Michigan;Chippewa County;TROUT LAKE TOWNSHIP	township
+Michigan;Chippewa County;SUPERIOR TOWNSHIP;Ward 0	ward
+Michigan;Chippewa County;SUPERIOR TOWNSHIP	township
+Michigan;Chippewa County;SUGAR ISLAND TOWNSHIP;Ward 0	ward
+Michigan;Chippewa County;SUGAR ISLAND TOWNSHIP	township
+Michigan;Chippewa County;SOO TOWNSHIP;Ward 0	ward
+Michigan;Chippewa County;SOO TOWNSHIP	township
+Michigan;Chippewa County;SAULT STE. MARIE CITY;Ward 0	ward
+Michigan;Chippewa County;SAULT STE. MARIE CITY	city
+Michigan;Chippewa County;RUDYARD TOWNSHIP;Ward 0	ward
+Michigan;Chippewa County;RUDYARD TOWNSHIP	township
+Michigan;Chippewa County;RABER TOWNSHIP;Ward 0	ward
+Michigan;Chippewa County;RABER TOWNSHIP	township
+Michigan;Chippewa County;PICKFORD TOWNSHIP;Ward 0	ward
+Michigan;Chippewa County;PICKFORD TOWNSHIP	township
+Michigan;Chippewa County;KINROSS TOWNSHIP;Ward 0	ward
+Michigan;Chippewa County;KINROSS TOWNSHIP	township
+Michigan;Chippewa County;HULBERT TOWNSHIP;Ward 0	ward
+Michigan;Chippewa County;HULBERT TOWNSHIP	township
+Michigan;Chippewa County;DRUMMOND TOWNSHIP;Ward 0	ward
+Michigan;Chippewa County;DRUMMOND TOWNSHIP	township
+Michigan;Chippewa County;DETOUR TOWNSHIP;Ward 0	ward
+Michigan;Chippewa County;DETOUR TOWNSHIP	township
+Michigan;Chippewa County;DAFTER TOWNSHIP;Ward 0	ward
+Michigan;Chippewa County;DAFTER TOWNSHIP	township
+Michigan;Chippewa County;CHIPPEWA TOWNSHIP;Ward 0	ward
+Michigan;Chippewa County;CHIPPEWA TOWNSHIP	township
+Michigan;Chippewa County;BRUCE TOWNSHIP;Ward 0	ward
+Michigan;Chippewa County;BRUCE TOWNSHIP	township
+Michigan;Chippewa County;BAY MILLS TOWNSHIP;Ward 0	ward
+Michigan;Chippewa County;BAY MILLS TOWNSHIP	township
+Michigan;Cheboygan County;{Statistical Adjustments};Ward 0	ward
+Michigan;Cheboygan County;{Statistical Adjustments}
+Michigan;Cheboygan County;WILMOT TOWNSHIP;Ward 0	ward
+Michigan;Cheboygan County;WILMOT TOWNSHIP	township
+Michigan;Cheboygan County;WAVERLY TOWNSHIP;Ward 0	ward
+Michigan;Cheboygan County;WAVERLY TOWNSHIP	township
+Michigan;Cheboygan County;WALKER TOWNSHIP;Ward 0	ward
+Michigan;Cheboygan County;WALKER TOWNSHIP	township
+Michigan;Cheboygan County;TUSCARORA TOWNSHIP;Ward 0	ward
+Michigan;Cheboygan County;TUSCARORA TOWNSHIP	township
+Michigan;Cheboygan County;NUNDA TOWNSHIP;Ward 0	ward
+Michigan;Cheboygan County;NUNDA TOWNSHIP	township
+Michigan;Cheboygan County;MUNRO TOWNSHIP;Ward 0	ward
+Michigan;Cheboygan County;MUNRO TOWNSHIP	township
+Michigan;Cheboygan County;MULLETT TOWNSHIP;Ward 0	ward
+Michigan;Cheboygan County;MULLETT TOWNSHIP	township
+Michigan;Cheboygan County;MENTOR TOWNSHIP;Ward 0	ward
+Michigan;Cheboygan County;MENTOR TOWNSHIP	township
+Michigan;Cheboygan County;MACKINAW TOWNSHIP;Ward 0	ward
+Michigan;Cheboygan County;MACKINAW TOWNSHIP	township
+Michigan;Cheboygan County;KOEHLER TOWNSHIP;Ward 0	ward
+Michigan;Cheboygan County;KOEHLER TOWNSHIP	township
+Michigan;Cheboygan County;INVERNESS TOWNSHIP;Ward 0	ward
+Michigan;Cheboygan County;INVERNESS TOWNSHIP	township
+Michigan;Cheboygan County;HEBRON TOWNSHIP;Ward 0	ward
+Michigan;Cheboygan County;HEBRON TOWNSHIP	township
+Michigan;Cheboygan County;GRANT TOWNSHIP;Ward 0	ward
+Michigan;Cheboygan County;GRANT TOWNSHIP	township
+Michigan;Cheboygan County;FOREST TOWNSHIP;Ward 0	ward
+Michigan;Cheboygan County;FOREST TOWNSHIP	township
+Michigan;Cheboygan County;ELLIS TOWNSHIP;Ward 0	ward
+Michigan;Cheboygan County;ELLIS TOWNSHIP	township
+Michigan;Cheboygan County;CHEBOYGAN CITY;Ward 0	ward
+Michigan;Cheboygan County;CHEBOYGAN CITY	city
+Michigan;Cheboygan County;BURT TOWNSHIP;Ward 0	ward
+Michigan;Cheboygan County;BURT TOWNSHIP	township
+Michigan;Cheboygan County;BENTON TOWNSHIP;Ward 0	ward
+Michigan;Cheboygan County;BENTON TOWNSHIP	township
+Michigan;Cheboygan County;BEAUGRAND TOWNSHIP;Ward 0	ward
+Michigan;Cheboygan County;BEAUGRAND TOWNSHIP	township
+Michigan;Cheboygan County;ALOHA TOWNSHIP;Ward 0	ward
+Michigan;Cheboygan County;ALOHA TOWNSHIP	township
+Michigan;Charlevoix County;{Statistical Adjustments};Ward 0	ward
+Michigan;Charlevoix County;{Statistical Adjustments}
+Michigan;Charlevoix County;WILSON TOWNSHIP;Ward 0	ward
+Michigan;Charlevoix County;WILSON TOWNSHIP	township
+Michigan;Charlevoix County;ST JAMES TOWNSHIP;Ward 0	ward
+Michigan;Charlevoix County;ST JAMES TOWNSHIP	township
+Michigan;Charlevoix County;SOUTH ARM TOWNSHIP;Ward 0	ward
+Michigan;Charlevoix County;SOUTH ARM TOWNSHIP	township
+Michigan;Charlevoix County;PEAINE TOWNSHIP;Ward 0	ward
+Michigan;Charlevoix County;PEAINE TOWNSHIP	township
+Michigan;Charlevoix County;NORWOOD TOWNSHIP;Ward 0	ward
+Michigan;Charlevoix County;NORWOOD TOWNSHIP	township
+Michigan;Charlevoix County;MELROSE TOWNSHIP;Ward 0	ward
+Michigan;Charlevoix County;MELROSE TOWNSHIP	township
+Michigan;Charlevoix County;MARION TOWNSHIP;Ward 0	ward
+Michigan;Charlevoix County;MARION TOWNSHIP	township
+Michigan;Charlevoix County;HUDSON TOWNSHIP;Ward 0	ward
+Michigan;Charlevoix County;HUDSON TOWNSHIP	township
+Michigan;Charlevoix County;HAYES TOWNSHIP;Ward 0	ward
+Michigan;Charlevoix County;HAYES TOWNSHIP	township
+Michigan;Charlevoix County;EVELINE TOWNSHIP;Ward 0	ward
+Michigan;Charlevoix County;EVELINE TOWNSHIP	township
+Michigan;Charlevoix County;EVANGELINE TOWNSHIP;Ward 0	ward
+Michigan;Charlevoix County;EVANGELINE TOWNSHIP	township
+Michigan;Charlevoix County;EAST JORDAN CITY;Ward 0	ward
+Michigan;Charlevoix County;EAST JORDAN CITY	city
+Michigan;Charlevoix County;CHARLEVOIX TOWNSHIP;Ward 0	ward
+Michigan;Charlevoix County;CHARLEVOIX TOWNSHIP	township
+Michigan;Charlevoix County;CHARLEVOIX CITY;Ward 3
+Michigan;Charlevoix County;CHARLEVOIX CITY;Ward 2
+Michigan;Charlevoix County;CHARLEVOIX CITY;Ward 1	ward
+Michigan;Charlevoix County;CHARLEVOIX CITY	city
+Michigan;Charlevoix County;CHANDLER TOWNSHIP;Ward 0	ward
+Michigan;Charlevoix County;CHANDLER TOWNSHIP	township
+Michigan;Charlevoix County;BOYNE VALLEY TOWNSHIP;Ward 0	ward
+Michigan;Charlevoix County;BOYNE VALLEY TOWNSHIP	township
+Michigan;Charlevoix County;BOYNE CITY;Ward 0	ward
+Michigan;Charlevoix County;BOYNE CITY	city
+Michigan;Charlevoix County;BAY TOWNSHIP;Ward 0	ward
+Michigan;Charlevoix County;BAY TOWNSHIP	township
+Michigan;Cass County;{Statistical Adjustments};Ward 0	ward
+Michigan;Cass County;{Statistical Adjustments}
+Michigan;Cass County;WAYNE TOWNSHIP;Ward 0	ward
+Michigan;Cass County;WAYNE TOWNSHIP	township
+Michigan;Cass County;VOLINIA TOWNSHIP;Ward 0	ward
+Michigan;Cass County;VOLINIA TOWNSHIP	township
+Michigan;Cass County;SILVER CREEK TOWNSHIP;Ward 0	ward
+Michigan;Cass County;SILVER CREEK TOWNSHIP	township
+Michigan;Cass County;PORTER TOWNSHIP;Ward 0	ward
+Michigan;Cass County;PORTER TOWNSHIP	township
+Michigan;Cass County;POKAGON TOWNSHIP;Ward 0	ward
+Michigan;Cass County;POKAGON TOWNSHIP	township
+Michigan;Cass County;PENN TOWNSHIP;Ward 0	ward
+Michigan;Cass County;PENN TOWNSHIP	township
+Michigan;Cass County;ONTWA TOWNSHIP;Ward 0	ward
+Michigan;Cass County;ONTWA TOWNSHIP	township
+Michigan;Cass County;NEWBERG TOWNSHIP;Ward 0	ward
+Michigan;Cass County;NEWBERG TOWNSHIP	township
+Michigan;Cass County;MILTON TOWNSHIP;Ward 0	ward
+Michigan;Cass County;MILTON TOWNSHIP	township
+Michigan;Cass County;MASON TOWNSHIP;Ward 0	ward
+Michigan;Cass County;MASON TOWNSHIP	township
+Michigan;Cass County;MARCELLUS TOWNSHIP;Ward 0	ward
+Michigan;Cass County;MARCELLUS TOWNSHIP	township
+Michigan;Cass County;LA GRANGE TOWNSHIP;Ward 0	ward
+Michigan;Cass County;LA GRANGE TOWNSHIP	township
+Michigan;Cass County;JEFFERSON TOWNSHIP;Ward 0	ward
+Michigan;Cass County;JEFFERSON TOWNSHIP	township
+Michigan;Cass County;HOWARD TOWNSHIP;Ward 0	ward
+Michigan;Cass County;HOWARD TOWNSHIP	township
+Michigan;Cass County;DOWAGIAC CITY;Ward 0	ward
+Michigan;Cass County;DOWAGIAC CITY	city
+Michigan;Cass County;CALVIN TOWNSHIP;Ward 0	ward
+Michigan;Cass County;CALVIN TOWNSHIP	township
+Michigan;Calhoun County;TEKONSHA TOWNSHIP;Ward 0	ward
+Michigan;Calhoun County;TEKONSHA TOWNSHIP	township
+Michigan;Calhoun County;SPRINGFIELD CITY;Ward 0	ward
+Michigan;Calhoun County;SPRINGFIELD CITY	city
+Michigan;Calhoun County;SHERIDAN TOWNSHIP;Ward 0	ward
+Michigan;Calhoun County;SHERIDAN TOWNSHIP	township
+Michigan;Calhoun County;PENNFIELD TOWNSHIP;Ward 0	ward
+Michigan;Calhoun County;PENNFIELD TOWNSHIP	township
+Michigan;Calhoun County;NEWTON TOWNSHIP;Ward 0	ward
+Michigan;Calhoun County;NEWTON TOWNSHIP	township
+Michigan;Calhoun County;MARSHALL TOWNSHIP;Ward 0	ward
+Michigan;Calhoun County;MARSHALL TOWNSHIP	township
+Michigan;Calhoun County;MARSHALL CITY;Ward 0	ward
+Michigan;Calhoun County;MARSHALL CITY	city
+Michigan;Calhoun County;MARENGO TOWNSHIP;Ward 0	ward
+Michigan;Calhoun County;MARENGO TOWNSHIP	township
+Michigan;Calhoun County;LEROY TOWNSHIP;Ward 0	ward
+Michigan;Calhoun County;LEROY TOWNSHIP	township
+Michigan;Calhoun County;LEE TOWNSHIP;Ward 0	ward
+Michigan;Calhoun County;LEE TOWNSHIP	township
+Michigan;Calhoun County;HOMER TOWNSHIP;Ward 0	ward
+Michigan;Calhoun County;HOMER TOWNSHIP	township
+Michigan;Calhoun County;FREDONIA TOWNSHIP;Ward 0	ward
+Michigan;Calhoun County;FREDONIA TOWNSHIP	township
+Michigan;Calhoun County;EMMETT TOWNSHIP;Ward 0	ward
+Michigan;Calhoun County;EMMETT TOWNSHIP	township
+Michigan;Calhoun County;ECKFORD TOWNSHIP;Ward 0	ward
+Michigan;Calhoun County;ECKFORD TOWNSHIP	township
+Michigan;Calhoun County;CONVIS TOWNSHIP;Ward 0	ward
+Michigan;Calhoun County;CONVIS TOWNSHIP	township
+Michigan;Calhoun County;CLARENDON TOWNSHIP;Ward 0	ward
+Michigan;Calhoun County;CLARENDON TOWNSHIP	township
+Michigan;Calhoun County;CLARENCE TOWNSHIP;Ward 0	ward
+Michigan;Calhoun County;CLARENCE TOWNSHIP	township
+Michigan;Calhoun County;BURLINGTON TOWNSHIP;Ward 0	ward
+Michigan;Calhoun County;BURLINGTON TOWNSHIP	township
+Michigan;Calhoun County;BEDFORD TOWNSHIP;Ward 0	ward
+Michigan;Calhoun County;BEDFORD TOWNSHIP	township
+Michigan;Calhoun County;BATTLE CREEK CITY;Ward 0	ward
+Michigan;Calhoun County;BATTLE CREEK CITY	city
+Michigan;Calhoun County;ATHENS TOWNSHIP;Ward 0	ward
+Michigan;Calhoun County;ATHENS TOWNSHIP	township
+Michigan;Calhoun County;ALBION TOWNSHIP;Ward 0	ward
+Michigan;Calhoun County;ALBION TOWNSHIP	township
+Michigan;Calhoun County;ALBION CITY;Ward 0	ward
+Michigan;Calhoun County;ALBION CITY	city
+Michigan;Branch County;UNION TOWNSHIP;Ward 0	ward
+Michigan;Branch County;UNION TOWNSHIP	township
+Michigan;Branch County;SHERWOOD TOWNSHIP;Ward 0	ward
+Michigan;Branch County;SHERWOOD TOWNSHIP	township
+Michigan;Branch County;QUINCY TOWNSHIP;Ward 0	ward
+Michigan;Branch County;QUINCY TOWNSHIP	township
+Michigan;Branch County;OVID TOWNSHIP;Ward 0	ward
+Michigan;Branch County;OVID TOWNSHIP	township
+Michigan;Branch County;NOBLE TOWNSHIP;Ward 0	ward
+Michigan;Branch County;NOBLE TOWNSHIP	township
+Michigan;Branch County;MATTESON TOWNSHIP;Ward 0	ward
+Michigan;Branch County;MATTESON TOWNSHIP	township
+Michigan;Branch County;KINDERHOOK TOWNSHIP;Ward 0	ward
+Michigan;Branch County;KINDERHOOK TOWNSHIP	township
+Michigan;Branch County;GIRARD TOWNSHIP;Ward 0	ward
+Michigan;Branch County;GIRARD TOWNSHIP	township
+Michigan;Branch County;GILEAD TOWNSHIP;Ward 0	ward
+Michigan;Branch County;GILEAD TOWNSHIP	township
+Michigan;Branch County;COLDWATER TOWNSHIP;Ward 0	ward
+Michigan;Branch County;COLDWATER TOWNSHIP	township
+Michigan;Branch County;COLDWATER CITY;Ward 4
+Michigan;Branch County;COLDWATER CITY;Ward 3
+Michigan;Branch County;COLDWATER CITY;Ward 2
+Michigan;Branch County;COLDWATER CITY;Ward 1	ward
+Michigan;Branch County;COLDWATER CITY	city
+Michigan;Branch County;CALIFORNIA TOWNSHIP;Ward 0	ward
+Michigan;Branch County;CALIFORNIA TOWNSHIP	township
+Michigan;Branch County;BUTLER TOWNSHIP;Ward 0	ward
+Michigan;Branch County;BUTLER TOWNSHIP	township
+Michigan;Branch County;BRONSON TOWNSHIP;Ward 0	ward
+Michigan;Branch County;BRONSON TOWNSHIP	township
+Michigan;Branch County;BRONSON CITY;Ward 0	ward
+Michigan;Branch County;BRONSON CITY	city
+Michigan;Branch County;BETHEL TOWNSHIP;Ward 0	ward
+Michigan;Branch County;BETHEL TOWNSHIP	township
+Michigan;Branch County;BATAVIA TOWNSHIP;Ward 0	ward
+Michigan;Branch County;BATAVIA TOWNSHIP	township
+Michigan;Branch County;ALGANSEE TOWNSHIP;Ward 0	ward
+Michigan;Branch County;ALGANSEE TOWNSHIP	township
+Michigan;Berrien County;{Statistical Adjustments};Ward 0	ward
+Michigan;Berrien County;{Statistical Adjustments}
+Michigan;Berrien County;WEESAW TOWNSHIP;Ward 0	ward
+Michigan;Berrien County;WEESAW TOWNSHIP	township
+Michigan;Berrien County;WATERVLIET TOWNSHIP;Ward 0	ward
+Michigan;Berrien County;WATERVLIET TOWNSHIP	township
+Michigan;Berrien County;WATERVLIET CITY;Ward 0	ward
+Michigan;Berrien County;WATERVLIET CITY	city
+Michigan;Berrien County;THREE OAKS TOWNSHIP;Ward 0	ward
+Michigan;Berrien County;THREE OAKS TOWNSHIP	township
+Michigan;Berrien County;ST. JOSEPH TOWNSHIP;Ward 0	ward
+Michigan;Berrien County;ST. JOSEPH TOWNSHIP	township
+Michigan;Berrien County;ST. JOSEPH CITY;Ward 0	ward
+Michigan;Berrien County;ST. JOSEPH CITY	city
+Michigan;Berrien County;SODUS TOWNSHIP;Ward 0	ward
+Michigan;Berrien County;SODUS TOWNSHIP	township
+Michigan;Berrien County;ROYALTON TOWNSHIP;Ward 0	ward
+Michigan;Berrien County;ROYALTON TOWNSHIP	township
+Michigan;Berrien County;PIPESTONE TOWNSHIP;Ward 0	ward
+Michigan;Berrien County;PIPESTONE TOWNSHIP	township
+Michigan;Berrien County;ORONOKO TOWNSHIP;Ward 0	ward
+Michigan;Berrien County;ORONOKO TOWNSHIP	township
+Michigan;Berrien County;NILES TOWNSHIP;Ward 0	ward
+Michigan;Berrien County;NILES TOWNSHIP	township
+Michigan;Berrien County;NILES CITY;Ward 0	ward
+Michigan;Berrien County;NILES CITY	city
+Michigan;Berrien County;NEW BUFFALO TOWNSHIP;Ward 0	ward
+Michigan;Berrien County;NEW BUFFALO TOWNSHIP	township
+Michigan;Berrien County;NEW BUFFALO CITY;Ward 0	ward
+Michigan;Berrien County;NEW BUFFALO CITY	city
+Michigan;Berrien County;LINCOLN TOWNSHIP;Ward 0	ward
+Michigan;Berrien County;LINCOLN TOWNSHIP	township
+Michigan;Berrien County;LAKE TOWNSHIP;Ward 0	ward
+Michigan;Berrien County;LAKE TOWNSHIP	township
+Michigan;Berrien County;HAGAR TOWNSHIP;Ward 0	ward
+Michigan;Berrien County;HAGAR TOWNSHIP	township
+Michigan;Berrien County;GALIEN TOWNSHIP;Ward 0	ward
+Michigan;Berrien County;GALIEN TOWNSHIP	township
+Michigan;Berrien County;COLOMA TOWNSHIP;Ward 0	ward
+Michigan;Berrien County;COLOMA TOWNSHIP	township
+Michigan;Berrien County;COLOMA CITY;Ward 0	ward
+Michigan;Berrien County;COLOMA CITY	city
+Michigan;Berrien County;CHIKAMING TOWNSHIP;Ward 0	ward
+Michigan;Berrien County;CHIKAMING TOWNSHIP	township
+Michigan;Berrien County;BUCHANAN TOWNSHIP;Ward 0	ward
+Michigan;Berrien County;BUCHANAN TOWNSHIP	township
+Michigan;Berrien County;BUCHANAN CITY;Ward 0	ward
+Michigan;Berrien County;BUCHANAN CITY	city
+Michigan;Berrien County;BRIDGMAN CITY;Ward 0	ward
+Michigan;Berrien County;BRIDGMAN CITY	city
+Michigan;Berrien County;BERTRAND TOWNSHIP;Ward 0	ward
+Michigan;Berrien County;BERTRAND TOWNSHIP	township
+Michigan;Berrien County;BERRIEN TOWNSHIP;Ward 0	ward
+Michigan;Berrien County;BERRIEN TOWNSHIP	township
+Michigan;Berrien County;BENTON TOWNSHIP;Ward 0	ward
+Michigan;Berrien County;BENTON TOWNSHIP	township
+Michigan;Berrien County;BENTON HARBOR CITY;Ward 0	ward
+Michigan;Berrien County;BENTON HARBOR CITY	city
+Michigan;Berrien County;BARODA TOWNSHIP;Ward 0	ward
+Michigan;Berrien County;BARODA TOWNSHIP	township
+Michigan;Berrien County;BAINBRIDGE TOWNSHIP;Ward 0	ward
+Michigan;Berrien County;BAINBRIDGE TOWNSHIP	township
+Michigan;Benzie County;{Statistical Adjustments};Ward 0	ward
+Michigan;Benzie County;{Statistical Adjustments}
+Michigan;Benzie County;WELDON TOWNSHIP;Ward 0	ward
+Michigan;Benzie County;WELDON TOWNSHIP	township
+Michigan;Benzie County;PLATTE TOWNSHIP;Ward 0	ward
+Michigan;Benzie County;PLATTE TOWNSHIP	township
+Michigan;Benzie County;LAKE TOWNSHIP;Ward 0	ward
+Michigan;Benzie County;LAKE TOWNSHIP	township
+Michigan;Benzie County;JOYFIELD TOWNSHIP;Ward 0	ward
+Michigan;Benzie County;JOYFIELD TOWNSHIP	township
+Michigan;Benzie County;INLAND TOWNSHIP;Ward 0	ward
+Michigan;Benzie County;INLAND TOWNSHIP	township
+Michigan;Benzie County;HOMESTEAD TOWNSHIP;Ward 0	ward
+Michigan;Benzie County;HOMESTEAD TOWNSHIP	township
+Michigan;Benzie County;GILMORE TOWNSHIP;Ward 0	ward
+Michigan;Benzie County;GILMORE TOWNSHIP	township
+Michigan;Benzie County;FRANKFORT CITY;Ward 0	ward
+Michigan;Benzie County;FRANKFORT CITY	city
+Michigan;Benzie County;CRYSTAL LAKE TOWNSHIP;Ward 0	ward
+Michigan;Benzie County;CRYSTAL LAKE TOWNSHIP	township
+Michigan;Benzie County;COLFAX TOWNSHIP;Ward 0	ward
+Michigan;Benzie County;COLFAX TOWNSHIP	township
+Michigan;Benzie County;BLAINE TOWNSHIP;Ward 0	ward
+Michigan;Benzie County;BLAINE TOWNSHIP	township
+Michigan;Benzie County;BENZONIA TOWNSHIP;Ward 0	ward
+Michigan;Benzie County;BENZONIA TOWNSHIP	township
+Michigan;Benzie County;ALMIRA TOWNSHIP;Ward 0	ward
+Michigan;Benzie County;ALMIRA TOWNSHIP	township
+Michigan;Bay County;{Statistical Adjustments};Ward 0	ward
+Michigan;Bay County;{Statistical Adjustments}
+Michigan;Bay County;WILLIAMS TOWNSHIP;Ward 0	ward
+Michigan;Bay County;WILLIAMS TOWNSHIP	township
+Michigan;Bay County;PORTSMOUTH TOWNSHIP;Ward 0	ward
+Michigan;Bay County;PORTSMOUTH TOWNSHIP	township
+Michigan;Bay County;PINCONNING TOWNSHIP;Ward 0	ward
+Michigan;Bay County;PINCONNING TOWNSHIP	township
+Michigan;Bay County;PINCONNING CITY;Ward 0	ward
+Michigan;Bay County;PINCONNING CITY	city
+Michigan;Bay County;MOUNT FOREST TOWNSHIP;Ward 0	ward
+Michigan;Bay County;MOUNT FOREST TOWNSHIP	township
+Michigan;Bay County;MONITOR TOWNSHIP;Ward 0	ward
+Michigan;Bay County;MONITOR TOWNSHIP	township
+Michigan;Bay County;MIDLAND CITY;Ward 1	ward
+Michigan;Bay County;MIDLAND CITY	city
+Michigan;Bay County;MERRITT TOWNSHIP;Ward 0	ward
+Michigan;Bay County;MERRITT TOWNSHIP	township
+Michigan;Bay County;KAWKAWLIN TOWNSHIP;Ward 0	ward
+Michigan;Bay County;KAWKAWLIN TOWNSHIP	township
+Michigan;Bay County;HAMPTON TOWNSHIP;Ward 0	ward
+Michigan;Bay County;HAMPTON TOWNSHIP	township
+Michigan;Bay County;GIBSON TOWNSHIP;Ward 0	ward
+Michigan;Bay County;GIBSON TOWNSHIP	township
+Michigan;Bay County;GARFIELD TOWNSHIP;Ward 0	ward
+Michigan;Bay County;GARFIELD TOWNSHIP	township
+Michigan;Bay County;FRASER TOWNSHIP;Ward 0	ward
+Michigan;Bay County;FRASER TOWNSHIP	township
+Michigan;Bay County;FRANKENLUST TOWNSHIP;Ward 0	ward
+Michigan;Bay County;FRANKENLUST TOWNSHIP	township
+Michigan;Bay County;ESSEXVILLE CITY;Ward 0	ward
+Michigan;Bay County;ESSEXVILLE CITY	city
+Michigan;Bay County;BEAVER TOWNSHIP;Ward 0	ward
+Michigan;Bay County;BEAVER TOWNSHIP	township
+Michigan;Bay County;BAY CITY;Ward 9
+Michigan;Bay County;BAY CITY;Ward 8
+Michigan;Bay County;BAY CITY;Ward 7
+Michigan;Bay County;BAY CITY;Ward 6
+Michigan;Bay County;BAY CITY;Ward 5
+Michigan;Bay County;BAY CITY;Ward 4
+Michigan;Bay County;BAY CITY;Ward 3
+Michigan;Bay County;BAY CITY;Ward 2
+Michigan;Bay County;BAY CITY;Ward 1	ward
+Michigan;Bay County;BAY CITY	city
+Michigan;Bay County;BANGOR TOWNSHIP;Ward 0	ward
+Michigan;Bay County;BANGOR TOWNSHIP	township
+Michigan;Bay County;AUBURN CITY;Ward 0	ward
+Michigan;Bay County;AUBURN CITY	city
+Michigan;Barry County;{Statistical Adjustments};Ward 0	ward
+Michigan;Barry County;{Statistical Adjustments}
+Michigan;Barry County;YANKEE SPRINGS TOWNSHIP;Ward 0	ward
+Michigan;Barry County;YANKEE SPRINGS TOWNSHIP	township
+Michigan;Barry County;WOODLAND TOWNSHIP;Ward 0	ward
+Michigan;Barry County;WOODLAND TOWNSHIP	township
+Michigan;Barry County;THORNAPPLE TOWNSHIP;Ward 0	ward
+Michigan;Barry County;THORNAPPLE TOWNSHIP	township
+Michigan;Barry County;RUTLAND TOWNSHIP;Ward 0	ward
+Michigan;Barry County;RUTLAND TOWNSHIP	township
+Michigan;Barry County;PRAIRIEVILLE TOWNSHIP;Ward 0	ward
+Michigan;Barry County;PRAIRIEVILLE TOWNSHIP	township
+Michigan;Barry County;ORANGEVILLE TOWNSHIP;Ward 0	ward
+Michigan;Barry County;ORANGEVILLE TOWNSHIP	township
+Michigan;Barry County;MAPLE GROVE TOWNSHIP;Ward 0	ward
+Michigan;Barry County;MAPLE GROVE TOWNSHIP	township
+Michigan;Barry County;JOHNSTOWN TOWNSHIP;Ward 0	ward
+Michigan;Barry County;JOHNSTOWN TOWNSHIP	township
+Michigan;Barry County;IRVING TOWNSHIP;Ward 0	ward
+Michigan;Barry County;IRVING TOWNSHIP	township
+Michigan;Barry County;HOPE TOWNSHIP;Ward 0	ward
+Michigan;Barry County;HOPE TOWNSHIP	township
+Michigan;Barry County;HASTINGS TOWNSHIP;Ward 0	ward
+Michigan;Barry County;HASTINGS TOWNSHIP	township
+Michigan;Barry County;HASTINGS CITY;Ward 0	ward
+Michigan;Barry County;HASTINGS CITY	city
+Michigan;Barry County;CASTLETON TOWNSHIP;Ward 0	ward
+Michigan;Barry County;CASTLETON TOWNSHIP	township
+Michigan;Barry County;CARLTON TOWNSHIP;Ward 0	ward
+Michigan;Barry County;CARLTON TOWNSHIP	township
+Michigan;Barry County;BARRY TOWNSHIP;Ward 0	ward
+Michigan;Barry County;BARRY TOWNSHIP	township
+Michigan;Barry County;BALTIMORE TOWNSHIP;Ward 0	ward
+Michigan;Barry County;BALTIMORE TOWNSHIP	township
+Michigan;Barry County;ASSYRIA TOWNSHIP;Ward 0	ward
+Michigan;Barry County;ASSYRIA TOWNSHIP	township
+Michigan;Baraga County;{Statistical Adjustments};Ward 0	ward
+Michigan;Baraga County;{Statistical Adjustments}
+Michigan;Baraga County;SPURR TOWNSHIP;Ward 0	ward
+Michigan;Baraga County;SPURR TOWNSHIP	township
+Michigan;Baraga County;LANSE TOWNSHIP;Ward 0	ward
+Michigan;Baraga County;LANSE TOWNSHIP	township
+Michigan;Baraga County;COVINGTON TOWNSHIP;Ward 0	ward
+Michigan;Baraga County;COVINGTON TOWNSHIP	township
+Michigan;Baraga County;BARAGA TOWNSHIP;Ward 0	ward
+Michigan;Baraga County;BARAGA TOWNSHIP	township
+Michigan;Baraga County;ARVON TOWNSHIP;Ward 0	ward
+Michigan;Baraga County;ARVON TOWNSHIP	township
+Michigan;Arenac County;{Statistical Adjustments};Ward 0	ward
+Michigan;Arenac County;{Statistical Adjustments}
+Michigan;Arenac County;WHITNEY TOWNSHIP;Ward 0	ward
+Michigan;Arenac County;WHITNEY TOWNSHIP	township
+Michigan;Arenac County;TURNER TOWNSHIP;Ward 0	ward
+Michigan;Arenac County;TURNER TOWNSHIP	township
+Michigan;Arenac County;STANDISH TOWNSHIP;Ward 0	ward
+Michigan;Arenac County;STANDISH TOWNSHIP	township
+Michigan;Arenac County;STANDISH CITY;Ward 0	ward
+Michigan;Arenac County;STANDISH CITY	city
+Michigan;Arenac County;SIMS TOWNSHIP;Ward 0	ward
+Michigan;Arenac County;SIMS TOWNSHIP	township
+Michigan;Arenac County;OMER CITY;Ward 1	ward
+Michigan;Arenac County;OMER CITY	city
+Michigan;Arenac County;MOFFATT TOWNSHIP;Ward 0	ward
+Michigan;Arenac County;MOFFATT TOWNSHIP	township
+Michigan;Arenac County;MASON TOWNSHIP;Ward 0	ward
+Michigan;Arenac County;MASON TOWNSHIP	township
+Michigan;Arenac County;LINCOLN TOWNSHIP;Ward 0	ward
+Michigan;Arenac County;LINCOLN TOWNSHIP	township
+Michigan;Arenac County;DEEP RIVER TOWNSHIP;Ward 0	ward
+Michigan;Arenac County;DEEP RIVER TOWNSHIP	township
+Michigan;Arenac County;CLAYTON TOWNSHIP;Ward 0	ward
+Michigan;Arenac County;CLAYTON TOWNSHIP	township
+Michigan;Arenac County;AU GRES TOWNSHIP;Ward 0	ward
+Michigan;Arenac County;AU GRES TOWNSHIP	township
+Michigan;Arenac County;AU GRES CITY;Ward 0	ward
+Michigan;Arenac County;AU GRES CITY	city
+Michigan;Arenac County;ARENAC TOWNSHIP;Ward 0	ward
+Michigan;Arenac County;ARENAC TOWNSHIP	township
+Michigan;Arenac County;ADAMS TOWNSHIP;Ward 0	ward
+Michigan;Arenac County;ADAMS TOWNSHIP	township
+Michigan;Antrim County;{Statistical Adjustments};Ward 0	ward
+Michigan;Antrim County;{Statistical Adjustments}
+Michigan;Antrim County;WARNER TOWNSHIP;Ward 0	ward
+Michigan;Antrim County;WARNER TOWNSHIP	township
+Michigan;Antrim County;TORCH LAKE TOWNSHIP;Ward 0	ward
+Michigan;Antrim County;TORCH LAKE TOWNSHIP	township
+Michigan;Antrim County;STAR TOWNSHIP;Ward 0	ward
+Michigan;Antrim County;STAR TOWNSHIP	township
+Michigan;Antrim County;MILTON TOWNSHIP;Ward 0	ward
+Michigan;Antrim County;MILTON TOWNSHIP	township
+Michigan;Antrim County;MANCELONA TOWNSHIP;Ward 0	ward
+Michigan;Antrim County;MANCELONA TOWNSHIP	township
+Michigan;Antrim County;KEARNEY TOWNSHIP;Ward 0	ward
+Michigan;Antrim County;KEARNEY TOWNSHIP	township
+Michigan;Antrim County;JORDAN TOWNSHIP;Ward 0	ward
+Michigan;Antrim County;JORDAN TOWNSHIP	township
+Michigan;Antrim County;HELENA TOWNSHIP;Ward 0	ward
+Michigan;Antrim County;HELENA TOWNSHIP	township
+Michigan;Antrim County;FOREST HOME TOWNSHIP;Ward 0	ward
+Michigan;Antrim County;FOREST HOME TOWNSHIP	township
+Michigan;Antrim County;ELK RAPIDS TOWNSHIP;Ward 0	ward
+Michigan;Antrim County;ELK RAPIDS TOWNSHIP	township
+Michigan;Antrim County;ECHO TOWNSHIP;Ward 0	ward
+Michigan;Antrim County;ECHO TOWNSHIP	township
+Michigan;Antrim County;CUSTER TOWNSHIP;Ward 0	ward
+Michigan;Antrim County;CUSTER TOWNSHIP	township
+Michigan;Antrim County;CHESTONIA TOWNSHIP;Ward 0	ward
+Michigan;Antrim County;CHESTONIA TOWNSHIP	township
+Michigan;Antrim County;CENTRAL LAKE TOWNSHIP;Ward 0	ward
+Michigan;Antrim County;CENTRAL LAKE TOWNSHIP	township
+Michigan;Antrim County;BANKS TOWNSHIP;Ward 0	ward
+Michigan;Antrim County;BANKS TOWNSHIP	township
+Michigan;Alpena County;{Statistical Adjustments};Ward 0	ward
+Michigan;Alpena County;{Statistical Adjustments}
+Michigan;Alpena County;WILSON TOWNSHIP;Ward 0	ward
+Michigan;Alpena County;WILSON TOWNSHIP	township
+Michigan;Alpena County;WELLINGTON TOWNSHIP;Ward 0	ward
+Michigan;Alpena County;WELLINGTON TOWNSHIP	township
+Michigan;Alpena County;SANBORN TOWNSHIP;Ward 0	ward
+Michigan;Alpena County;SANBORN TOWNSHIP	township
+Michigan;Alpena County;OSSINEKE TOWNSHIP;Ward 0	ward
+Michigan;Alpena County;OSSINEKE TOWNSHIP	township
+Michigan;Alpena County;MAPLE RIDGE TOWNSHIP;Ward 0	ward
+Michigan;Alpena County;MAPLE RIDGE TOWNSHIP	township
+Michigan;Alpena County;LONG RAPIDS TOWNSHIP;Ward 0	ward
+Michigan;Alpena County;LONG RAPIDS TOWNSHIP	township
+Michigan;Alpena County;GREEN TOWNSHIP;Ward 0	ward
+Michigan;Alpena County;GREEN TOWNSHIP	township
+Michigan;Alpena County;ALPENA TOWNSHIP;Ward 0	ward
+Michigan;Alpena County;ALPENA TOWNSHIP	township
+Michigan;Alpena County;ALPENA CITY;Ward 0	ward
+Michigan;Alpena County;ALPENA CITY	city
+Michigan;Allegan County;WAYLAND TOWNSHIP;Ward 0	ward
+Michigan;Allegan County;WAYLAND TOWNSHIP	township
+Michigan;Allegan County;WAYLAND CITY;Ward 0	ward
+Michigan;Allegan County;WAYLAND CITY	city
+Michigan;Allegan County;WATSON TOWNSHIP;Ward 0	ward
+Michigan;Allegan County;WATSON TOWNSHIP	township
+Michigan;Allegan County;VALLEY TOWNSHIP;Ward 0	ward
+Michigan;Allegan County;VALLEY TOWNSHIP	township
+Michigan;Allegan County;TROWBRIDGE TOWNSHIP;Ward 0	ward
+Michigan;Allegan County;TROWBRIDGE TOWNSHIP	township
+Michigan;Allegan County;SOUTH HAVEN CITY;Ward 0	ward
+Michigan;Allegan County;SOUTH HAVEN CITY	city
+Michigan;Allegan County;SAUGATUCK TOWNSHIP;Ward 0	ward
+Michigan;Allegan County;SAUGATUCK TOWNSHIP	township
+Michigan;Allegan County;SAUGATUCK CITY;Ward 0	ward
+Michigan;Allegan County;SAUGATUCK CITY	city
+Michigan;Allegan County;SALEM TOWNSHIP;Ward 0	ward
+Michigan;Allegan County;SALEM TOWNSHIP	township
+Michigan;Allegan County;PLAINWELL CITY;Ward 0	ward
+Michigan;Allegan County;PLAINWELL CITY	city
+Michigan;Allegan County;OVERISEL TOWNSHIP;Ward 0	ward
+Michigan;Allegan County;OVERISEL TOWNSHIP	township
+Michigan;Allegan County;OTSEGO TOWNSHIP;Ward 0	ward
+Michigan;Allegan County;OTSEGO TOWNSHIP	township
+Michigan;Allegan County;OTSEGO CITY;Ward 0	ward
+Michigan;Allegan County;OTSEGO CITY	city
+Michigan;Allegan County;MONTEREY TOWNSHIP;Ward 0	ward
+Michigan;Allegan County;MONTEREY TOWNSHIP	township
+Michigan;Allegan County;MARTIN TOWNSHIP;Ward 0	ward
+Michigan;Allegan County;MARTIN TOWNSHIP	township
+Michigan;Allegan County;MANLIUS TOWNSHIP;Ward 0	ward
+Michigan;Allegan County;MANLIUS TOWNSHIP	township
+Michigan;Allegan County;LEIGHTON TOWNSHIP;Ward 0	ward
+Michigan;Allegan County;LEIGHTON TOWNSHIP	township
+Michigan;Allegan County;LEE TOWNSHIP;Ward 0	ward
+Michigan;Allegan County;LEE TOWNSHIP	township
+Michigan;Allegan County;LAKETOWN TOWNSHIP;Ward 0	ward
+Michigan;Allegan County;LAKETOWN TOWNSHIP	township
+Michigan;Allegan County;HOPKINS TOWNSHIP;Ward 0	ward
+Michigan;Allegan County;HOPKINS TOWNSHIP	township
+Michigan;Allegan County;HOLLAND CITY;Ward 5
+Michigan;Allegan County;HOLLAND CITY;Ward 4
+Michigan;Allegan County;HOLLAND CITY	city
+Michigan;Allegan County;HEATH TOWNSHIP;Ward 0	ward
+Michigan;Allegan County;HEATH TOWNSHIP	township
+Michigan;Allegan County;GUNPLAIN TOWNSHIP;Ward 0	ward
+Michigan;Allegan County;GUNPLAIN TOWNSHIP	township
+Michigan;Allegan County;GANGES TOWNSHIP;Ward 0	ward
+Michigan;Allegan County;GANGES TOWNSHIP	township
+Michigan;Allegan County;FILLMORE TOWNSHIP;Ward 0	ward
+Michigan;Allegan County;FILLMORE TOWNSHIP	township
+Michigan;Allegan County;FENNVILLE CITY;Ward 0	ward
+Michigan;Allegan County;FENNVILLE CITY	city
+Michigan;Allegan County;DOUGLAS CITY;Ward 0	ward
+Michigan;Allegan County;DOUGLAS CITY	city
+Michigan;Allegan County;DORR TOWNSHIP;Ward 0	ward
+Michigan;Allegan County;DORR TOWNSHIP	township
+Michigan;Allegan County;CLYDE TOWNSHIP;Ward 0	ward
+Michigan;Allegan County;CLYDE TOWNSHIP	township
+Michigan;Allegan County;CHESHIRE TOWNSHIP;Ward 0	ward
+Michigan;Allegan County;CHESHIRE TOWNSHIP	township
+Michigan;Allegan County;CASCO TOWNSHIP;Ward 0	ward
+Michigan;Allegan County;CASCO TOWNSHIP	township
+Michigan;Allegan County;ALLEGAN TOWNSHIP;Ward 0	ward
+Michigan;Allegan County;ALLEGAN TOWNSHIP	township
+Michigan;Allegan County;ALLEGAN CITY;Ward 0	ward
+Michigan;Allegan County;ALLEGAN CITY	city
+Michigan;Alger County;{Statistical Adjustments};Ward 0	ward
+Michigan;Alger County;{Statistical Adjustments}
+Michigan;Alger County;ROCK RIVER TOWNSHIP;Ward 0	ward
+Michigan;Alger County;ROCK RIVER TOWNSHIP	township
+Michigan;Alger County;ONOTA TOWNSHIP;Ward 0	ward
+Michigan;Alger County;ONOTA TOWNSHIP	township
+Michigan;Alger County;MUNISING TOWNSHIP;Ward 0	ward
+Michigan;Alger County;MUNISING TOWNSHIP	township
+Michigan;Alger County;MUNISING CITY;Ward 0	ward
+Michigan;Alger County;MUNISING CITY	city
+Michigan;Alger County;MATHIAS TOWNSHIP;Ward 0	ward
+Michigan;Alger County;MATHIAS TOWNSHIP	township
+Michigan;Alger County;LIMESTONE TOWNSHIP;Ward 0	ward
+Michigan;Alger County;LIMESTONE TOWNSHIP	township
+Michigan;Alger County;GRAND ISLAND TOWNSHIP;Ward 0	ward
+Michigan;Alger County;GRAND ISLAND TOWNSHIP	township
+Michigan;Alger County;BURT TOWNSHIP;Ward 0	ward
+Michigan;Alger County;BURT TOWNSHIP	township
+Michigan;Alger County;AU TRAIN TOWNSHIP;Ward 0	ward
+Michigan;Alger County;AU TRAIN TOWNSHIP	township
+Michigan;Alcona County;{Statistical Adjustments};Ward 0	ward
+Michigan;Alcona County;{Statistical Adjustments}
+Michigan;Alcona County;MITCHELL TOWNSHIP;Ward 0	ward
+Michigan;Alcona County;MITCHELL TOWNSHIP	township
+Michigan;Alcona County;MILLEN TOWNSHIP;Ward 0	ward
+Michigan;Alcona County;MILLEN TOWNSHIP	township
+Michigan;Alcona County;MIKADO TOWNSHIP;Ward 0	ward
+Michigan;Alcona County;MIKADO TOWNSHIP	township
+Michigan;Alcona County;HAYNES TOWNSHIP;Ward 0	ward
+Michigan;Alcona County;HAYNES TOWNSHIP	township
+Michigan;Alcona County;HAWES TOWNSHIP;Ward 0	ward
+Michigan;Alcona County;HAWES TOWNSHIP	township
+Michigan;Alcona County;HARRISVILLE TOWNSHIP;Ward 0	ward
+Michigan;Alcona County;HARRISVILLE TOWNSHIP	township
+Michigan;Alcona County;HARRISVILLE CITY;Ward 1	ward
+Michigan;Alcona County;HARRISVILLE CITY	city
+Michigan;Alcona County;GUSTIN TOWNSHIP;Ward 0	ward
+Michigan;Alcona County;GUSTIN TOWNSHIP	township
+Michigan;Alcona County;GREENBUSH TOWNSHIP;Ward 0	ward
+Michigan;Alcona County;GREENBUSH TOWNSHIP	township
+Michigan;Alcona County;CURTIS TOWNSHIP;Ward 0	ward
+Michigan;Alcona County;CURTIS TOWNSHIP	township
+Michigan;Alcona County;CALEDONIA TOWNSHIP;Ward 0	ward
+Michigan;Alcona County;CALEDONIA TOWNSHIP	township
+Michigan;Alcona County;ALCONA TOWNSHIP;Ward 0	ward
+Michigan;Alcona County;ALCONA TOWNSHIP	township
+

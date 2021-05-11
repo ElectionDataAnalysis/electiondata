@@ -1681,7 +1681,7 @@ Candidate	John Evankovich	John Evankovich
 Candidate	Debra Lamm	Debra Lamm
 Candidate	Mark J. Mcginley	Mark J. Mcginley
 Candidate	Matt Rosendale	Matt Rosendale
-Candidate	Mike Cooney Mike Cooney And Casey Schreiner	
+Candidate	Mike Cooney	Mike Cooney And Casey Schreiner
 Candidate	Whitney Williams	Whitney Williams And Buzz Mattelin
 Candidate	Robert Barb	Robert Barb And Joshua Thomas
 Candidate	Tim Fox	Tim Fox And Jon Knokey
