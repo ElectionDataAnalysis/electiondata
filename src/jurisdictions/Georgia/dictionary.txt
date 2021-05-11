@@ -2993,718 +2993,718 @@ CandidateContest	GA House District 10 (Republican Party)	Rep - State House Distr
 CandidateContest	GA House District 10 (Republican Party)	REP - State House Dist 10
 CandidateContest	GA House District 10 (Republican Party)	REP - State House District 10
 CandidateContest	GA House District 10 (Republican Party)	REP - State House District 10/Estatal ante la Asamblea General Dist 10 (Republican Party)
-CandidateContest	GA House District 10 (Republican Party)	Rep - State Representative, District 0
-CandidateContest	GA House District 10 (Republican Party)	REP - State Representative, District 0
+CandidateContest	GA House District 10 (Republican Party)	Rep - State Representative, District 10
+CandidateContest	GA House District 10 (Republican Party)	REP - State Representative, District 10
 CandidateContest	GA House District 11 (Republican Party)	Rep - State House Dist 11
 CandidateContest	GA House District 11 (Republican Party)	Rep - State House District 11
 CandidateContest	GA House District 11 (Republican Party)	Rep - State House District 11/Estatal ante la Asamblea General Dist 11 (Republican Party)
 CandidateContest	GA House District 11 (Republican Party)	REP - State House Dist 11
 CandidateContest	GA House District 11 (Republican Party)	REP - State House District 11
 CandidateContest	GA House District 11 (Republican Party)	REP - State House District 11/Estatal ante la Asamblea General Dist 11 (Republican Party)
-CandidateContest	GA House District 11 (Republican Party)	REP - State Representative, District 1
+CandidateContest	GA House District 11 (Republican Party)	REP - State Representative, District 11
 CandidateContest	GA House District 12 (Republican Party)	Rep - State House Dist 12
 CandidateContest	GA House District 12 (Republican Party)	Rep - State House District 12
 CandidateContest	GA House District 12 (Republican Party)	Rep - State House District 12/Estatal ante la Asamblea General Dist 12 (Republican Party)
 CandidateContest	GA House District 12 (Republican Party)	REP - State House Dist 12
 CandidateContest	GA House District 12 (Republican Party)	REP - State House District 12
 CandidateContest	GA House District 12 (Republican Party)	REP - State House District 12/Estatal ante la Asamblea General Dist 12 (Republican Party)
-CandidateContest	GA House District 12 (Republican Party)	Rep - State Representative, District 2
-CandidateContest	GA House District 12 (Republican Party)	REP - State Representative, District 2
+CandidateContest	GA House District 12 (Republican Party)	Rep - State Representative, District 12
+CandidateContest	GA House District 12 (Republican Party)	REP - State Representative, District 12
 CandidateContest	GA House District 13 (Republican Party)	Rep - State House Dist 13
 CandidateContest	GA House District 13 (Republican Party)	Rep - State House District 13
 CandidateContest	GA House District 13 (Republican Party)	Rep - State House District 13/Estatal ante la Asamblea General Dist 13 (Republican Party)
 CandidateContest	GA House District 13 (Republican Party)	REP - State House Dist 13
 CandidateContest	GA House District 13 (Republican Party)	REP - State House District 13
 CandidateContest	GA House District 13 (Republican Party)	REP - State House District 13/Estatal ante la Asamblea General Dist 13 (Republican Party)
-CandidateContest	GA House District 13 (Republican Party)	Rep - State Representative, District 3
-CandidateContest	GA House District 13 (Republican Party)	REP - State Representative, District 3
+CandidateContest	GA House District 13 (Republican Party)	Rep - State Representative, District 13
+CandidateContest	GA House District 13 (Republican Party)	REP - State Representative, District 13
 CandidateContest	GA House District 14 (Republican Party)	Rep - State House Dist 14
 CandidateContest	GA House District 14 (Republican Party)	Rep - State House District 14
 CandidateContest	GA House District 14 (Republican Party)	Rep - State House District 14/Estatal ante la Asamblea General Dist 14 (Republican Party)
 CandidateContest	GA House District 14 (Republican Party)	REP - State House Dist 14
 CandidateContest	GA House District 14 (Republican Party)	REP - State House District 14
 CandidateContest	GA House District 14 (Republican Party)	REP - State House District 14/Estatal ante la Asamblea General Dist 14 (Republican Party)
-CandidateContest	GA House District 14 (Republican Party)	Rep - State Representative, District 4
-CandidateContest	GA House District 14 (Republican Party)	REP - State Representative, District 4
+CandidateContest	GA House District 14 (Republican Party)	Rep - State Representative, District 14
+CandidateContest	GA House District 14 (Republican Party)	REP - State Representative, District 14
 CandidateContest	GA House District 15 (Republican Party)	Rep - State House Dist 15
 CandidateContest	GA House District 15 (Republican Party)	Rep - State House District 15
 CandidateContest	GA House District 15 (Republican Party)	Rep - State House District 15/Estatal ante la Asamblea General Dist 15 (Republican Party)
 CandidateContest	GA House District 15 (Republican Party)	REP - State House Dist 15
 CandidateContest	GA House District 15 (Republican Party)	REP - State House District 15
 CandidateContest	GA House District 15 (Republican Party)	REP - State House District 15/Estatal ante la Asamblea General Dist 15 (Republican Party)
-CandidateContest	GA House District 15 (Republican Party)	Rep - State Representative, District 5
-CandidateContest	GA House District 15 (Republican Party)	REP - State Representative, District 5
+CandidateContest	GA House District 15 (Republican Party)	Rep - State Representative, District 15
+CandidateContest	GA House District 15 (Republican Party)	REP - State Representative, District 15
 CandidateContest	GA House District 16 (Republican Party)	Rep - State House Dist 16
 CandidateContest	GA House District 16 (Republican Party)	Rep - State House District 16
 CandidateContest	GA House District 16 (Republican Party)	Rep - State House District 16/Estatal ante la Asamblea General Dist 16 (Republican Party)
 CandidateContest	GA House District 16 (Republican Party)	REP - State House Dist 16
 CandidateContest	GA House District 16 (Republican Party)	REP - State House District 16
 CandidateContest	GA House District 16 (Republican Party)	REP - State House District 16/Estatal ante la Asamblea General Dist 16 (Republican Party)
-CandidateContest	GA House District 16 (Republican Party)	Rep - State Representative, District 6
-CandidateContest	GA House District 16 (Republican Party)	REP - State Representative, District 6
+CandidateContest	GA House District 16 (Republican Party)	Rep - State Representative, District 16
+CandidateContest	GA House District 16 (Republican Party)	REP - State Representative, District 16
 CandidateContest	GA House District 17 (Republican Party)	Rep - State House Dist 17
 CandidateContest	GA House District 17 (Republican Party)	Rep - State House District 17
 CandidateContest	GA House District 17 (Republican Party)	Rep - State House District 17/Estatal ante la Asamblea General Dist 17 (Republican Party)
 CandidateContest	GA House District 17 (Republican Party)	REP - State House Dist 17
 CandidateContest	GA House District 17 (Republican Party)	REP - State House District 17
 CandidateContest	GA House District 17 (Republican Party)	REP - State House District 17/Estatal ante la Asamblea General Dist 17 (Republican Party)
-CandidateContest	GA House District 17 (Republican Party)	Rep - State Representative, District 7
-CandidateContest	GA House District 17 (Republican Party)	REP - State Representative, District 7
+CandidateContest	GA House District 17 (Republican Party)	Rep - State Representative, District 17
+CandidateContest	GA House District 17 (Republican Party)	REP - State Representative, District 17
 CandidateContest	GA House District 18 (Republican Party)	Rep - State House Dist 18
 CandidateContest	GA House District 18 (Republican Party)	Rep - State House District 18
 CandidateContest	GA House District 18 (Republican Party)	Rep - State House District 18/Estatal ante la Asamblea General Dist 18 (Republican Party)
 CandidateContest	GA House District 18 (Republican Party)	REP - State House Dist 18
 CandidateContest	GA House District 18 (Republican Party)	REP - State House District 18
 CandidateContest	GA House District 18 (Republican Party)	REP - State House District 18/Estatal ante la Asamblea General Dist 18 (Republican Party)
-CandidateContest	GA House District 18 (Republican Party)	Rep - State Representative, District 8
-CandidateContest	GA House District 18 (Republican Party)	REP - State Representative, District 8
+CandidateContest	GA House District 18 (Republican Party)	Rep - State Representative, District 18
+CandidateContest	GA House District 18 (Republican Party)	REP - State Representative, District 18
 CandidateContest	GA House District 19 (Republican Party)	Rep - State House Dist 19
 CandidateContest	GA House District 19 (Republican Party)	Rep - State House District 19
 CandidateContest	GA House District 19 (Republican Party)	Rep - State House District 19/Estatal ante la Asamblea General Dist 19 (Republican Party)
 CandidateContest	GA House District 19 (Republican Party)	REP - State House Dist 19
 CandidateContest	GA House District 19 (Republican Party)	REP - State House District 19
 CandidateContest	GA House District 19 (Republican Party)	REP - State House District 19/Estatal ante la Asamblea General Dist 19 (Republican Party)
-CandidateContest	GA House District 19 (Republican Party)	Rep - State Representative, District 9
-CandidateContest	GA House District 19 (Republican Party)	REP - State Representative, District 9
+CandidateContest	GA House District 19 (Republican Party)	Rep - State Representative, District 19
+CandidateContest	GA House District 19 (Republican Party)	REP - State Representative, District 19
 CandidateContest	GA House District 20 (Republican Party)	Rep - State House Dist 20
 CandidateContest	GA House District 20 (Republican Party)	Rep - State House District 20
 CandidateContest	GA House District 20 (Republican Party)	Rep - State House District 20/Estatal ante la Asamblea General Dist 20 (Republican Party)
 CandidateContest	GA House District 20 (Republican Party)	REP - State House Dist 20
 CandidateContest	GA House District 20 (Republican Party)	REP - State House District 20
 CandidateContest	GA House District 20 (Republican Party)	REP - State House District 20/Estatal ante la Asamblea General Dist 20 (Republican Party)
-CandidateContest	GA House District 20 (Republican Party)	Rep - State Representative, District 0
-CandidateContest	GA House District 20 (Republican Party)	REP - State Representative, District 0
+CandidateContest	GA House District 20 (Republican Party)	Rep - State Representative, District 20
+CandidateContest	GA House District 20 (Republican Party)	REP - State Representative, District 20
 CandidateContest	GA House District 21 (Republican Party)	Rep - State House Dist 21
 CandidateContest	GA House District 21 (Republican Party)	Rep - State House District 21
 CandidateContest	GA House District 21 (Republican Party)	Rep - State House District 21/Estatal ante la Asamblea General Dist 21 (Republican Party)
 CandidateContest	GA House District 21 (Republican Party)	REP - State House Dist 21
 CandidateContest	GA House District 21 (Republican Party)	REP - State House District 21
 CandidateContest	GA House District 21 (Republican Party)	REP - State House District 21/Estatal ante la Asamblea General Dist 21 (Republican Party)
-CandidateContest	GA House District 21 (Republican Party)	Rep - State Representative, District 1
-CandidateContest	GA House District 21 (Republican Party)	REP - State Representative, District 1
+CandidateContest	GA House District 21 (Republican Party)	Rep - State Representative, District 21
+CandidateContest	GA House District 21 (Republican Party)	REP - State Representative, District 21
 CandidateContest	GA House District 22 (Republican Party)	Rep - State House Dist 22
 CandidateContest	GA House District 22 (Republican Party)	Rep - State House District 22
 CandidateContest	GA House District 22 (Republican Party)	Rep - State House District 22/Estatal ante la Asamblea General Dist 22 (Republican Party)
 CandidateContest	GA House District 22 (Republican Party)	REP - State House Dist 22
 CandidateContest	GA House District 22 (Republican Party)	REP - State House District 22
 CandidateContest	GA House District 22 (Republican Party)	REP - State House District 22/Estatal ante la Asamblea General Dist 22 (Republican Party)
-CandidateContest	GA House District 22 (Republican Party)	REP - State Representative, District 2
+CandidateContest	GA House District 22 (Republican Party)	REP - State Representative, District 22
 CandidateContest	GA House District 23 (Republican Party)	Rep - State House Dist 23
 CandidateContest	GA House District 23 (Republican Party)	Rep - State House District 23
 CandidateContest	GA House District 23 (Republican Party)	Rep - State House District 23/Estatal ante la Asamblea General Dist 23 (Republican Party)
 CandidateContest	GA House District 23 (Republican Party)	REP - State House Dist 23
 CandidateContest	GA House District 23 (Republican Party)	REP - State House District 23
 CandidateContest	GA House District 23 (Republican Party)	REP - State House District 23/Estatal ante la Asamblea General Dist 23 (Republican Party)
-CandidateContest	GA House District 23 (Republican Party)	Rep - State Representative, District 3
-CandidateContest	GA House District 23 (Republican Party)	REP - State Representative, District 3
+CandidateContest	GA House District 23 (Republican Party)	Rep - State Representative, District 23
+CandidateContest	GA House District 23 (Republican Party)	REP - State Representative, District 23
 CandidateContest	GA House District 24 (Republican Party)	Rep - State House Dist 24
 CandidateContest	GA House District 24 (Republican Party)	Rep - State House District 24
 CandidateContest	GA House District 24 (Republican Party)	Rep - State House District 24/Estatal ante la Asamblea General Dist 24 (Republican Party)
 CandidateContest	GA House District 24 (Republican Party)	REP - State House Dist 24
 CandidateContest	GA House District 24 (Republican Party)	REP - State House District 24
 CandidateContest	GA House District 24 (Republican Party)	REP - State House District 24/Estatal ante la Asamblea General Dist 24 (Republican Party)
-CandidateContest	GA House District 24 (Republican Party)	Rep - State Representative, District 4
-CandidateContest	GA House District 24 (Republican Party)	REP - State Representative, District 4
+CandidateContest	GA House District 24 (Republican Party)	Rep - State Representative, District 24
+CandidateContest	GA House District 24 (Republican Party)	REP - State Representative, District 24
 CandidateContest	GA House District 25 (Republican Party)	Rep - State House Dist 25
 CandidateContest	GA House District 25 (Republican Party)	Rep - State House District 25
 CandidateContest	GA House District 25 (Republican Party)	Rep - State House District 25/Estatal ante la Asamblea General Dist 25 (Republican Party)
 CandidateContest	GA House District 25 (Republican Party)	REP - State House Dist 25
 CandidateContest	GA House District 25 (Republican Party)	REP - State House District 25
 CandidateContest	GA House District 25 (Republican Party)	REP - State House District 25/Estatal ante la Asamblea General Dist 25 (Republican Party)
-CandidateContest	GA House District 25 (Republican Party)	Rep - State Representative, District 5
-CandidateContest	GA House District 25 (Republican Party)	REP - State Representative, District 5
+CandidateContest	GA House District 25 (Republican Party)	Rep - State Representative, District 25
+CandidateContest	GA House District 25 (Republican Party)	REP - State Representative, District 25
 CandidateContest	GA House District 26 (Republican Party)	Rep - State House Dist 26
 CandidateContest	GA House District 26 (Republican Party)	Rep - State House District 26
 CandidateContest	GA House District 26 (Republican Party)	Rep - State House District 26/Estatal ante la Asamblea General Dist 26 (Republican Party)
 CandidateContest	GA House District 26 (Republican Party)	REP - State House Dist 26
 CandidateContest	GA House District 26 (Republican Party)	REP - State House District 26
 CandidateContest	GA House District 26 (Republican Party)	REP - State House District 26/Estatal ante la Asamblea General Dist 26 (Republican Party)
-CandidateContest	GA House District 26 (Republican Party)	Rep - State Representative, District 6
-CandidateContest	GA House District 26 (Republican Party)	REP - State Representative, District 6
+CandidateContest	GA House District 26 (Republican Party)	Rep - State Representative, District 26
+CandidateContest	GA House District 26 (Republican Party)	REP - State Representative, District 26
 CandidateContest	GA House District 27 (Republican Party)	Rep - State House Dist 27
 CandidateContest	GA House District 27 (Republican Party)	Rep - State House District 27
 CandidateContest	GA House District 27 (Republican Party)	Rep - State House District 27/Estatal ante la Asamblea General Dist 27 (Republican Party)
 CandidateContest	GA House District 27 (Republican Party)	REP - State House Dist 27
 CandidateContest	GA House District 27 (Republican Party)	REP - State House District 27
 CandidateContest	GA House District 27 (Republican Party)	REP - State House District 27/Estatal ante la Asamblea General Dist 27 (Republican Party)
-CandidateContest	GA House District 27 (Republican Party)	Rep - State Representative, District 7
-CandidateContest	GA House District 27 (Republican Party)	REP - State Representative, District 7
+CandidateContest	GA House District 27 (Republican Party)	Rep - State Representative, District 27
+CandidateContest	GA House District 27 (Republican Party)	REP - State Representative, District 27
 CandidateContest	GA House District 28 (Republican Party)	Rep - State House Dist 28
 CandidateContest	GA House District 28 (Republican Party)	Rep - State House District 28
 CandidateContest	GA House District 28 (Republican Party)	Rep - State House District 28/Estatal ante la Asamblea General Dist 28 (Republican Party)
 CandidateContest	GA House District 28 (Republican Party)	REP - State House Dist 28
 CandidateContest	GA House District 28 (Republican Party)	REP - State House District 28
 CandidateContest	GA House District 28 (Republican Party)	REP - State House District 28/Estatal ante la Asamblea General Dist 28 (Republican Party)
-CandidateContest	GA House District 28 (Republican Party)	Rep - State Representative, District 8
-CandidateContest	GA House District 28 (Republican Party)	REP - State Representative, District 8
+CandidateContest	GA House District 28 (Republican Party)	Rep - State Representative, District 28
+CandidateContest	GA House District 28 (Republican Party)	REP - State Representative, District 28
 CandidateContest	GA House District 29 (Republican Party)	Rep - State House Dist 29
 CandidateContest	GA House District 29 (Republican Party)	Rep - State House District 29
 CandidateContest	GA House District 29 (Republican Party)	Rep - State House District 29/Estatal ante la Asamblea General Dist 29 (Republican Party)
 CandidateContest	GA House District 29 (Republican Party)	REP - State House Dist 29
 CandidateContest	GA House District 29 (Republican Party)	REP - State House District 29
 CandidateContest	GA House District 29 (Republican Party)	REP - State House District 29/Estatal ante la Asamblea General Dist 29 (Republican Party)
-CandidateContest	GA House District 29 (Republican Party)	Rep - State Representative, District 9
-CandidateContest	GA House District 29 (Republican Party)	REP - State Representative, District 9
+CandidateContest	GA House District 29 (Republican Party)	Rep - State Representative, District 29
+CandidateContest	GA House District 29 (Republican Party)	REP - State Representative, District 29
 CandidateContest	GA House District 30 (Republican Party)	Rep - State House Dist 30
 CandidateContest	GA House District 30 (Republican Party)	Rep - State House District 30
 CandidateContest	GA House District 30 (Republican Party)	Rep - State House District 30/Estatal ante la Asamblea General Dist 30 (Republican Party)
 CandidateContest	GA House District 30 (Republican Party)	REP - State House Dist 30
 CandidateContest	GA House District 30 (Republican Party)	REP - State House District 30
 CandidateContest	GA House District 30 (Republican Party)	REP - State House District 30/Estatal ante la Asamblea General Dist 30 (Republican Party)
-CandidateContest	GA House District 30 (Republican Party)	Rep - State Representative, District 0
-CandidateContest	GA House District 30 (Republican Party)	REP - State Representative, District 0
+CandidateContest	GA House District 30 (Republican Party)	Rep - State Representative, District 30
+CandidateContest	GA House District 30 (Republican Party)	REP - State Representative, District 30
 CandidateContest	GA House District 31 (Republican Party)	Rep - State House Dist 31
 CandidateContest	GA House District 31 (Republican Party)	Rep - State House District 31
 CandidateContest	GA House District 31 (Republican Party)	Rep - State House District 31/Estatal ante la Asamblea General Dist 31 (Republican Party)
 CandidateContest	GA House District 31 (Republican Party)	REP - State House Dist 31
 CandidateContest	GA House District 31 (Republican Party)	REP - State House District 31
 CandidateContest	GA House District 31 (Republican Party)	REP - State House District 31/Estatal ante la Asamblea General Dist 31 (Republican Party)
-CandidateContest	GA House District 31 (Republican Party)	Rep - State Representative, District 1
-CandidateContest	GA House District 31 (Republican Party)	REP - State Representative, District 1
+CandidateContest	GA House District 31 (Republican Party)	Rep - State Representative, District 31
+CandidateContest	GA House District 31 (Republican Party)	REP - State Representative, District 31
 CandidateContest	GA House District 32 (Republican Party)	Rep - State House Dist 32
 CandidateContest	GA House District 32 (Republican Party)	Rep - State House District 32
 CandidateContest	GA House District 32 (Republican Party)	Rep - State House District 32/Estatal ante la Asamblea General Dist 32 (Republican Party)
 CandidateContest	GA House District 32 (Republican Party)	REP - State House Dist 32
 CandidateContest	GA House District 32 (Republican Party)	REP - State House District 32
 CandidateContest	GA House District 32 (Republican Party)	REP - State House District 32/Estatal ante la Asamblea General Dist 32 (Republican Party)
-CandidateContest	GA House District 32 (Republican Party)	Rep - State Representative, District 2
-CandidateContest	GA House District 32 (Republican Party)	REP - State Representative, District 2
+CandidateContest	GA House District 32 (Republican Party)	Rep - State Representative, District 32
+CandidateContest	GA House District 32 (Republican Party)	REP - State Representative, District 32
 CandidateContest	GA House District 33 (Republican Party)	Rep - State House Dist 33
 CandidateContest	GA House District 33 (Republican Party)	Rep - State House District 33
 CandidateContest	GA House District 33 (Republican Party)	Rep - State House District 33/Estatal ante la Asamblea General Dist 33 (Republican Party)
 CandidateContest	GA House District 33 (Republican Party)	REP - State House Dist 33
 CandidateContest	GA House District 33 (Republican Party)	REP - State House District 33
 CandidateContest	GA House District 33 (Republican Party)	REP - State House District 33/Estatal ante la Asamblea General Dist 33 (Republican Party)
-CandidateContest	GA House District 33 (Republican Party)	Rep - State Representative, District 3
-CandidateContest	GA House District 33 (Republican Party)	REP - State Representative, District 3
+CandidateContest	GA House District 33 (Republican Party)	Rep - State Representative, District 33
+CandidateContest	GA House District 33 (Republican Party)	REP - State Representative, District 33
 CandidateContest	GA House District 34 (Republican Party)	Rep - State House Dist 34
 CandidateContest	GA House District 34 (Republican Party)	Rep - State House District 34
 CandidateContest	GA House District 34 (Republican Party)	Rep - State House District 34/Estatal ante la Asamblea General Dist 34 (Republican Party)
 CandidateContest	GA House District 34 (Republican Party)	REP - State House Dist 34
 CandidateContest	GA House District 34 (Republican Party)	REP - State House District 34
 CandidateContest	GA House District 34 (Republican Party)	REP - State House District 34/Estatal ante la Asamblea General Dist 34 (Republican Party)
-CandidateContest	GA House District 34 (Republican Party)	Rep - State Representative, District 4
-CandidateContest	GA House District 34 (Republican Party)	REP - State Representative, District 4
+CandidateContest	GA House District 34 (Republican Party)	Rep - State Representative, District 34
+CandidateContest	GA House District 34 (Republican Party)	REP - State Representative, District 34
 CandidateContest	GA House District 35 (Republican Party)	Rep - State House Dist 35
 CandidateContest	GA House District 35 (Republican Party)	Rep - State House District 35
 CandidateContest	GA House District 35 (Republican Party)	Rep - State House District 35/Estatal ante la Asamblea General Dist 35 (Republican Party)
 CandidateContest	GA House District 35 (Republican Party)	REP - State House Dist 35
 CandidateContest	GA House District 35 (Republican Party)	REP - State House District 35
 CandidateContest	GA House District 35 (Republican Party)	REP - State House District 35/Estatal ante la Asamblea General Dist 35 (Republican Party)
-CandidateContest	GA House District 35 (Republican Party)	Rep - State Representative, District 5
-CandidateContest	GA House District 35 (Republican Party)	REP - State Representative, District 5
+CandidateContest	GA House District 35 (Republican Party)	Rep - State Representative, District 35
+CandidateContest	GA House District 35 (Republican Party)	REP - State Representative, District 35
 CandidateContest	GA House District 36 (Republican Party)	Rep - State House Dist 36
 CandidateContest	GA House District 36 (Republican Party)	Rep - State House District 36
 CandidateContest	GA House District 36 (Republican Party)	Rep - State House District 36/Estatal ante la Asamblea General Dist 36 (Republican Party)
 CandidateContest	GA House District 36 (Republican Party)	REP - State House Dist 36
 CandidateContest	GA House District 36 (Republican Party)	REP - State House District 36
 CandidateContest	GA House District 36 (Republican Party)	REP - State House District 36/Estatal ante la Asamblea General Dist 36 (Republican Party)
-CandidateContest	GA House District 36 (Republican Party)	Rep - State Representative, District 6
-CandidateContest	GA House District 36 (Republican Party)	REP - State Representative, District 6
+CandidateContest	GA House District 36 (Republican Party)	Rep - State Representative, District 36
+CandidateContest	GA House District 36 (Republican Party)	REP - State Representative, District 36
 CandidateContest	GA House District 37 (Republican Party)	Rep - State House Dist 37
 CandidateContest	GA House District 37 (Republican Party)	Rep - State House District 37
 CandidateContest	GA House District 37 (Republican Party)	Rep - State House District 37/Estatal ante la Asamblea General Dist 37 (Republican Party)
 CandidateContest	GA House District 37 (Republican Party)	REP - State House Dist 37
 CandidateContest	GA House District 37 (Republican Party)	REP - State House District 37
 CandidateContest	GA House District 37 (Republican Party)	REP - State House District 37/Estatal ante la Asamblea General Dist 37 (Republican Party)
-CandidateContest	GA House District 37 (Republican Party)	Rep - State Representative, District 7
-CandidateContest	GA House District 37 (Republican Party)	REP - State Representative, District 7
+CandidateContest	GA House District 37 (Republican Party)	Rep - State Representative, District 37
+CandidateContest	GA House District 37 (Republican Party)	REP - State Representative, District 37
 CandidateContest	GA House District 38 (Republican Party)	Rep - State House Dist 38
 CandidateContest	GA House District 38 (Republican Party)	Rep - State House District 38
 CandidateContest	GA House District 38 (Republican Party)	Rep - State House District 38/Estatal ante la Asamblea General Dist 38 (Republican Party)
 CandidateContest	GA House District 38 (Republican Party)	REP - State House Dist 38
 CandidateContest	GA House District 38 (Republican Party)	REP - State House District 38
 CandidateContest	GA House District 38 (Republican Party)	REP - State House District 38/Estatal ante la Asamblea General Dist 38 (Republican Party)
-CandidateContest	GA House District 38 (Republican Party)	Rep - State Representative, District 8
-CandidateContest	GA House District 38 (Republican Party)	REP - State Representative, District 8
+CandidateContest	GA House District 38 (Republican Party)	Rep - State Representative, District 38
+CandidateContest	GA House District 38 (Republican Party)	REP - State Representative, District 38
 CandidateContest	GA House District 39 (Republican Party)	Rep - State House Dist 39
 CandidateContest	GA House District 39 (Republican Party)	Rep - State House District 39
 CandidateContest	GA House District 39 (Republican Party)	Rep - State House District 39/Estatal ante la Asamblea General Dist 39 (Republican Party)
 CandidateContest	GA House District 39 (Republican Party)	REP - State House Dist 39
 CandidateContest	GA House District 39 (Republican Party)	REP - State House District 39
 CandidateContest	GA House District 39 (Republican Party)	REP - State House District 39/Estatal ante la Asamblea General Dist 39 (Republican Party)
-CandidateContest	GA House District 39 (Republican Party)	Rep - State Representative, District 9
-CandidateContest	GA House District 39 (Republican Party)	REP - State Representative, District 9
+CandidateContest	GA House District 39 (Republican Party)	Rep - State Representative, District 39
+CandidateContest	GA House District 39 (Republican Party)	REP - State Representative, District 39
 CandidateContest	GA House District 40 (Republican Party)	Rep - State House Dist 40
 CandidateContest	GA House District 40 (Republican Party)	Rep - State House District 40
 CandidateContest	GA House District 40 (Republican Party)	Rep - State House District 40/Estatal ante la Asamblea General Dist 40 (Republican Party)
 CandidateContest	GA House District 40 (Republican Party)	REP - State House Dist 40
 CandidateContest	GA House District 40 (Republican Party)	REP - State House District 40
 CandidateContest	GA House District 40 (Republican Party)	REP - State House District 40/Estatal ante la Asamblea General Dist 40 (Republican Party)
-CandidateContest	GA House District 40 (Republican Party)	Rep - State Representative, District 0
-CandidateContest	GA House District 40 (Republican Party)	REP - State Representative, District 0
+CandidateContest	GA House District 40 (Republican Party)	Rep - State Representative, District 40
+CandidateContest	GA House District 40 (Republican Party)	REP - State Representative, District 40
 CandidateContest	GA House District 41 (Republican Party)	Rep - State House Dist 41
 CandidateContest	GA House District 41 (Republican Party)	Rep - State House District 41
 CandidateContest	GA House District 41 (Republican Party)	Rep - State House District 41/Estatal ante la Asamblea General Dist 41 (Republican Party)
 CandidateContest	GA House District 41 (Republican Party)	REP - State House Dist 41
 CandidateContest	GA House District 41 (Republican Party)	REP - State House District 41
 CandidateContest	GA House District 41 (Republican Party)	REP - State House District 41/Estatal ante la Asamblea General Dist 41 (Republican Party)
-CandidateContest	GA House District 41 (Republican Party)	Rep - State Representative, District 1
-CandidateContest	GA House District 41 (Republican Party)	REP - State Representative, District 1
+CandidateContest	GA House District 41 (Republican Party)	Rep - State Representative, District 41
+CandidateContest	GA House District 41 (Republican Party)	REP - State Representative, District 41
 CandidateContest	GA House District 42 (Republican Party)	Rep - State House Dist 42
 CandidateContest	GA House District 42 (Republican Party)	Rep - State House District 42
 CandidateContest	GA House District 42 (Republican Party)	Rep - State House District 42/Estatal ante la Asamblea General Dist 42 (Republican Party)
 CandidateContest	GA House District 42 (Republican Party)	REP - State House Dist 42
 CandidateContest	GA House District 42 (Republican Party)	REP - State House District 42
 CandidateContest	GA House District 42 (Republican Party)	REP - State House District 42/Estatal ante la Asamblea General Dist 42 (Republican Party)
-CandidateContest	GA House District 42 (Republican Party)	Rep - State Representative, District 2
-CandidateContest	GA House District 42 (Republican Party)	REP - State Representative, District 2
+CandidateContest	GA House District 42 (Republican Party)	Rep - State Representative, District 42
+CandidateContest	GA House District 42 (Republican Party)	REP - State Representative, District 42
 CandidateContest	GA House District 43 (Republican Party)	Rep - State House Dist 43
 CandidateContest	GA House District 43 (Republican Party)	Rep - State House District 43
 CandidateContest	GA House District 43 (Republican Party)	Rep - State House District 43/Estatal ante la Asamblea General Dist 43 (Republican Party)
 CandidateContest	GA House District 43 (Republican Party)	REP - State House Dist 43
 CandidateContest	GA House District 43 (Republican Party)	REP - State House District 43
 CandidateContest	GA House District 43 (Republican Party)	REP - State House District 43/Estatal ante la Asamblea General Dist 43 (Republican Party)
-CandidateContest	GA House District 43 (Republican Party)	Rep - State Representative, District 3
-CandidateContest	GA House District 43 (Republican Party)	REP - State Representative, District 3
+CandidateContest	GA House District 43 (Republican Party)	Rep - State Representative, District 43
+CandidateContest	GA House District 43 (Republican Party)	REP - State Representative, District 43
 CandidateContest	GA House District 44 (Republican Party)	Rep - State House Dist 44
 CandidateContest	GA House District 44 (Republican Party)	Rep - State House District 44
 CandidateContest	GA House District 44 (Republican Party)	Rep - State House District 44/Estatal ante la Asamblea General Dist 44 (Republican Party)
 CandidateContest	GA House District 44 (Republican Party)	REP - State House Dist 44
 CandidateContest	GA House District 44 (Republican Party)	REP - State House District 44
 CandidateContest	GA House District 44 (Republican Party)	REP - State House District 44/Estatal ante la Asamblea General Dist 44 (Republican Party)
-CandidateContest	GA House District 44 (Republican Party)	Rep - State Representative, District 4
-CandidateContest	GA House District 44 (Republican Party)	REP - State Representative, District 4
+CandidateContest	GA House District 44 (Republican Party)	Rep - State Representative, District 44
+CandidateContest	GA House District 44 (Republican Party)	REP - State Representative, District 44
 CandidateContest	GA House District 45 (Republican Party)	Rep - State House Dist 45
 CandidateContest	GA House District 45 (Republican Party)	Rep - State House District 45
 CandidateContest	GA House District 45 (Republican Party)	Rep - State House District 45/Estatal ante la Asamblea General Dist 45 (Republican Party)
 CandidateContest	GA House District 45 (Republican Party)	REP - State House Dist 45
 CandidateContest	GA House District 45 (Republican Party)	REP - State House District 45
 CandidateContest	GA House District 45 (Republican Party)	REP - State House District 45/Estatal ante la Asamblea General Dist 45 (Republican Party)
-CandidateContest	GA House District 45 (Republican Party)	Rep - State Representative, District 5
-CandidateContest	GA House District 45 (Republican Party)	REP - State Representative, District 5
+CandidateContest	GA House District 45 (Republican Party)	Rep - State Representative, District 45
+CandidateContest	GA House District 45 (Republican Party)	REP - State Representative, District 45
 CandidateContest	GA House District 46 (Republican Party)	Rep - State House Dist 46
 CandidateContest	GA House District 46 (Republican Party)	Rep - State House District 46
 CandidateContest	GA House District 46 (Republican Party)	Rep - State House District 46/Estatal ante la Asamblea General Dist 46 (Republican Party)
 CandidateContest	GA House District 46 (Republican Party)	REP - State House Dist 46
 CandidateContest	GA House District 46 (Republican Party)	REP - State House District 46
 CandidateContest	GA House District 46 (Republican Party)	REP - State House District 46/Estatal ante la Asamblea General Dist 46 (Republican Party)
-CandidateContest	GA House District 46 (Republican Party)	Rep - State Representative, District 6
-CandidateContest	GA House District 46 (Republican Party)	REP - State Representative, District 6
+CandidateContest	GA House District 46 (Republican Party)	Rep - State Representative, District 46
+CandidateContest	GA House District 46 (Republican Party)	REP - State Representative, District 46
 CandidateContest	GA House District 47 (Republican Party)	Rep - State House Dist 47
 CandidateContest	GA House District 47 (Republican Party)	Rep - State House District 47
 CandidateContest	GA House District 47 (Republican Party)	Rep - State House District 47/Estatal ante la Asamblea General Dist 47 (Republican Party)
 CandidateContest	GA House District 47 (Republican Party)	REP - State House Dist 47
 CandidateContest	GA House District 47 (Republican Party)	REP - State House District 47
 CandidateContest	GA House District 47 (Republican Party)	REP - State House District 47/Estatal ante la Asamblea General Dist 47 (Republican Party)
-CandidateContest	GA House District 47 (Republican Party)	Rep - State Representative, District 7
-CandidateContest	GA House District 47 (Republican Party)	REP - State Representative, District 7
+CandidateContest	GA House District 47 (Republican Party)	Rep - State Representative, District 47
+CandidateContest	GA House District 47 (Republican Party)	REP - State Representative, District 47
 CandidateContest	GA House District 48 (Republican Party)	Rep - State House Dist 48
 CandidateContest	GA House District 48 (Republican Party)	Rep - State House District 48
 CandidateContest	GA House District 48 (Republican Party)	Rep - State House District 48/Estatal ante la Asamblea General Dist 48 (Republican Party)
 CandidateContest	GA House District 48 (Republican Party)	REP - State House Dist 48
 CandidateContest	GA House District 48 (Republican Party)	REP - State House District 48
 CandidateContest	GA House District 48 (Republican Party)	REP - State House District 48/Estatal ante la Asamblea General Dist 48 (Republican Party)
-CandidateContest	GA House District 48 (Republican Party)	Rep - State Representative, District 8
-CandidateContest	GA House District 48 (Republican Party)	REP - State Representative, District 8
+CandidateContest	GA House District 48 (Republican Party)	Rep - State Representative, District 48
+CandidateContest	GA House District 48 (Republican Party)	REP - State Representative, District 48
 CandidateContest	GA House District 49 (Republican Party)	Rep - State House Dist 49
 CandidateContest	GA House District 49 (Republican Party)	Rep - State House District 49
 CandidateContest	GA House District 49 (Republican Party)	Rep - State House District 49/Estatal ante la Asamblea General Dist 49 (Republican Party)
 CandidateContest	GA House District 49 (Republican Party)	REP - State House Dist 49
 CandidateContest	GA House District 49 (Republican Party)	REP - State House District 49
 CandidateContest	GA House District 49 (Republican Party)	REP - State House District 49/Estatal ante la Asamblea General Dist 49 (Republican Party)
-CandidateContest	GA House District 49 (Republican Party)	Rep - State Representative, District 9
-CandidateContest	GA House District 49 (Republican Party)	REP - State Representative, District 9
+CandidateContest	GA House District 49 (Republican Party)	Rep - State Representative, District 49
+CandidateContest	GA House District 49 (Republican Party)	REP - State Representative, District 49
 CandidateContest	GA House District 50 (Republican Party)	Rep - State House Dist 50
 CandidateContest	GA House District 50 (Republican Party)	Rep - State House District 50
 CandidateContest	GA House District 50 (Republican Party)	Rep - State House District 50/Estatal ante la Asamblea General Dist 50 (Republican Party)
 CandidateContest	GA House District 50 (Republican Party)	REP - State House Dist 50
 CandidateContest	GA House District 50 (Republican Party)	REP - State House District 50
 CandidateContest	GA House District 50 (Republican Party)	REP - State House District 50/Estatal ante la Asamblea General Dist 50 (Republican Party)
-CandidateContest	GA House District 50 (Republican Party)	Rep - State Representative, District 0
-CandidateContest	GA House District 50 (Republican Party)	REP - State Representative, District 0
+CandidateContest	GA House District 50 (Republican Party)	Rep - State Representative, District 50
+CandidateContest	GA House District 50 (Republican Party)	REP - State Representative, District 50
 CandidateContest	GA House District 51 (Republican Party)	Rep - State House Dist 51
 CandidateContest	GA House District 51 (Republican Party)	Rep - State House District 51
 CandidateContest	GA House District 51 (Republican Party)	Rep - State House District 51/Estatal ante la Asamblea General Dist 51 (Republican Party)
 CandidateContest	GA House District 51 (Republican Party)	REP - State House Dist 51
 CandidateContest	GA House District 51 (Republican Party)	REP - State House District 51
 CandidateContest	GA House District 51 (Republican Party)	REP - State House District 51/Estatal ante la Asamblea General Dist 51 (Republican Party)
-CandidateContest	GA House District 51 (Republican Party)	Rep - State Representative, District 1
-CandidateContest	GA House District 51 (Republican Party)	REP - State Representative, District 1
+CandidateContest	GA House District 51 (Republican Party)	Rep - State Representative, District 51
+CandidateContest	GA House District 51 (Republican Party)	REP - State Representative, District 51
 CandidateContest	GA House District 52 (Republican Party)	Rep - State House Dist 52
 CandidateContest	GA House District 52 (Republican Party)	Rep - State House District 52
 CandidateContest	GA House District 52 (Republican Party)	Rep - State House District 52/Estatal ante la Asamblea General Dist 52 (Republican Party)
 CandidateContest	GA House District 52 (Republican Party)	REP - State House Dist 52
 CandidateContest	GA House District 52 (Republican Party)	REP - State House District 52
 CandidateContest	GA House District 52 (Republican Party)	REP - State House District 52/Estatal ante la Asamblea General Dist 52 (Republican Party)
-CandidateContest	GA House District 52 (Republican Party)	Rep - State Representative, District 2
-CandidateContest	GA House District 52 (Republican Party)	REP - State Representative, District 2
+CandidateContest	GA House District 52 (Republican Party)	Rep - State Representative, District 52
+CandidateContest	GA House District 52 (Republican Party)	REP - State Representative, District 52
 CandidateContest	GA House District 53 (Republican Party)	Rep - State House Dist 53
 CandidateContest	GA House District 53 (Republican Party)	Rep - State House District 53
 CandidateContest	GA House District 53 (Republican Party)	Rep - State House District 53/Estatal ante la Asamblea General Dist 53 (Republican Party)
 CandidateContest	GA House District 53 (Republican Party)	REP - State House Dist 53
 CandidateContest	GA House District 53 (Republican Party)	REP - State House District 53
 CandidateContest	GA House District 53 (Republican Party)	REP - State House District 53/Estatal ante la Asamblea General Dist 53 (Republican Party)
-CandidateContest	GA House District 53 (Republican Party)	Rep - State Representative, District 3
-CandidateContest	GA House District 53 (Republican Party)	REP - State Representative, District 3
+CandidateContest	GA House District 53 (Republican Party)	Rep - State Representative, District 53
+CandidateContest	GA House District 53 (Republican Party)	REP - State Representative, District 53
 CandidateContest	GA House District 54 (Republican Party)	Rep - State House Dist 54
 CandidateContest	GA House District 54 (Republican Party)	Rep - State House District 54
 CandidateContest	GA House District 54 (Republican Party)	Rep - State House District 54/Estatal ante la Asamblea General Dist 54 (Republican Party)
 CandidateContest	GA House District 54 (Republican Party)	REP - State House Dist 54
 CandidateContest	GA House District 54 (Republican Party)	REP - State House District 54
 CandidateContest	GA House District 54 (Republican Party)	REP - State House District 54/Estatal ante la Asamblea General Dist 54 (Republican Party)
-CandidateContest	GA House District 54 (Republican Party)	Rep - State Representative, District 4
-CandidateContest	GA House District 54 (Republican Party)	REP - State Representative, District 4
+CandidateContest	GA House District 54 (Republican Party)	Rep - State Representative, District 54
+CandidateContest	GA House District 54 (Republican Party)	REP - State Representative, District 54
 CandidateContest	GA House District 55 (Republican Party)	Rep - State House Dist 55
 CandidateContest	GA House District 55 (Republican Party)	Rep - State House District 55
 CandidateContest	GA House District 55 (Republican Party)	Rep - State House District 55/Estatal ante la Asamblea General Dist 55 (Republican Party)
 CandidateContest	GA House District 55 (Republican Party)	REP - State House Dist 55
 CandidateContest	GA House District 55 (Republican Party)	REP - State House District 55
 CandidateContest	GA House District 55 (Republican Party)	REP - State House District 55/Estatal ante la Asamblea General Dist 55 (Republican Party)
-CandidateContest	GA House District 55 (Republican Party)	Rep - State Representative, District 5
-CandidateContest	GA House District 55 (Republican Party)	REP - State Representative, District 5
+CandidateContest	GA House District 55 (Republican Party)	Rep - State Representative, District 55
+CandidateContest	GA House District 55 (Republican Party)	REP - State Representative, District 55
 CandidateContest	GA House District 56 (Republican Party)	Rep - State House Dist 56
 CandidateContest	GA House District 56 (Republican Party)	Rep - State House District 56
 CandidateContest	GA House District 56 (Republican Party)	Rep - State House District 56/Estatal ante la Asamblea General Dist 56 (Republican Party)
 CandidateContest	GA House District 56 (Republican Party)	REP - State House Dist 56
 CandidateContest	GA House District 56 (Republican Party)	REP - State House District 56
 CandidateContest	GA House District 56 (Republican Party)	REP - State House District 56/Estatal ante la Asamblea General Dist 56 (Republican Party)
-CandidateContest	GA House District 56 (Republican Party)	Rep - State Representative, District 6
-CandidateContest	GA House District 56 (Republican Party)	REP - State Representative, District 6
+CandidateContest	GA House District 56 (Republican Party)	Rep - State Representative, District 56
+CandidateContest	GA House District 56 (Republican Party)	REP - State Representative, District 56
 CandidateContest	GA House District 57 (Republican Party)	Rep - State House Dist 57
 CandidateContest	GA House District 57 (Republican Party)	Rep - State House District 57
 CandidateContest	GA House District 57 (Republican Party)	Rep - State House District 57/Estatal ante la Asamblea General Dist 57 (Republican Party)
 CandidateContest	GA House District 57 (Republican Party)	REP - State House Dist 57
 CandidateContest	GA House District 57 (Republican Party)	REP - State House District 57
 CandidateContest	GA House District 57 (Republican Party)	REP - State House District 57/Estatal ante la Asamblea General Dist 57 (Republican Party)
-CandidateContest	GA House District 57 (Republican Party)	Rep - State Representative, District 7
-CandidateContest	GA House District 57 (Republican Party)	REP - State Representative, District 7
+CandidateContest	GA House District 57 (Republican Party)	Rep - State Representative, District 57
+CandidateContest	GA House District 57 (Republican Party)	REP - State Representative, District 57
 CandidateContest	GA House District 58 (Republican Party)	Rep - State House Dist 58
 CandidateContest	GA House District 58 (Republican Party)	Rep - State House District 58
 CandidateContest	GA House District 58 (Republican Party)	Rep - State House District 58/Estatal ante la Asamblea General Dist 58 (Republican Party)
 CandidateContest	GA House District 58 (Republican Party)	REP - State House Dist 58
 CandidateContest	GA House District 58 (Republican Party)	REP - State House District 58
 CandidateContest	GA House District 58 (Republican Party)	REP - State House District 58/Estatal ante la Asamblea General Dist 58 (Republican Party)
-CandidateContest	GA House District 58 (Republican Party)	Rep - State Representative, District 8
-CandidateContest	GA House District 58 (Republican Party)	REP - State Representative, District 8
+CandidateContest	GA House District 58 (Republican Party)	Rep - State Representative, District 58
+CandidateContest	GA House District 58 (Republican Party)	REP - State Representative, District 58
 CandidateContest	GA House District 59 (Republican Party)	Rep - State House Dist 59
 CandidateContest	GA House District 59 (Republican Party)	Rep - State House District 59
 CandidateContest	GA House District 59 (Republican Party)	Rep - State House District 59/Estatal ante la Asamblea General Dist 59 (Republican Party)
 CandidateContest	GA House District 59 (Republican Party)	REP - State House Dist 59
 CandidateContest	GA House District 59 (Republican Party)	REP - State House District 59
 CandidateContest	GA House District 59 (Republican Party)	REP - State House District 59/Estatal ante la Asamblea General Dist 59 (Republican Party)
-CandidateContest	GA House District 59 (Republican Party)	Rep - State Representative, District 9
-CandidateContest	GA House District 59 (Republican Party)	REP - State Representative, District 9
+CandidateContest	GA House District 59 (Republican Party)	Rep - State Representative, District 59
+CandidateContest	GA House District 59 (Republican Party)	REP - State Representative, District 59
 CandidateContest	GA House District 60 (Republican Party)	Rep - State House Dist 60
 CandidateContest	GA House District 60 (Republican Party)	Rep - State House District 60
 CandidateContest	GA House District 60 (Republican Party)	Rep - State House District 60/Estatal ante la Asamblea General Dist 60 (Republican Party)
 CandidateContest	GA House District 60 (Republican Party)	REP - State House Dist 60
 CandidateContest	GA House District 60 (Republican Party)	REP - State House District 60
 CandidateContest	GA House District 60 (Republican Party)	REP - State House District 60/Estatal ante la Asamblea General Dist 60 (Republican Party)
-CandidateContest	GA House District 60 (Republican Party)	Rep - State Representative, District 0
-CandidateContest	GA House District 60 (Republican Party)	REP - State Representative, District 0
+CandidateContest	GA House District 60 (Republican Party)	Rep - State Representative, District 60
+CandidateContest	GA House District 60 (Republican Party)	REP - State Representative, District 60
 CandidateContest	GA House District 61 (Republican Party)	Rep - State House Dist 61
 CandidateContest	GA House District 61 (Republican Party)	Rep - State House District 61
 CandidateContest	GA House District 61 (Republican Party)	Rep - State House District 61/Estatal ante la Asamblea General Dist 61 (Republican Party)
 CandidateContest	GA House District 61 (Republican Party)	REP - State House Dist 61
 CandidateContest	GA House District 61 (Republican Party)	REP - State House District 61
 CandidateContest	GA House District 61 (Republican Party)	REP - State House District 61/Estatal ante la Asamblea General Dist 61 (Republican Party)
-CandidateContest	GA House District 61 (Republican Party)	Rep - State Representative, District 1
-CandidateContest	GA House District 61 (Republican Party)	REP - State Representative, District 1
+CandidateContest	GA House District 61 (Republican Party)	Rep - State Representative, District 61
+CandidateContest	GA House District 61 (Republican Party)	REP - State Representative, District 61
 CandidateContest	GA House District 62 (Republican Party)	Rep - State House Dist 62
 CandidateContest	GA House District 62 (Republican Party)	Rep - State House District 62
 CandidateContest	GA House District 62 (Republican Party)	Rep - State House District 62/Estatal ante la Asamblea General Dist 62 (Republican Party)
 CandidateContest	GA House District 62 (Republican Party)	REP - State House Dist 62
 CandidateContest	GA House District 62 (Republican Party)	REP - State House District 62
 CandidateContest	GA House District 62 (Republican Party)	REP - State House District 62/Estatal ante la Asamblea General Dist 62 (Republican Party)
-CandidateContest	GA House District 62 (Republican Party)	Rep - State Representative, District 2
-CandidateContest	GA House District 62 (Republican Party)	REP - State Representative, District 2
+CandidateContest	GA House District 62 (Republican Party)	Rep - State Representative, District 62
+CandidateContest	GA House District 62 (Republican Party)	REP - State Representative, District 62
 CandidateContest	GA House District 63 (Republican Party)	Rep - State House Dist 63
 CandidateContest	GA House District 63 (Republican Party)	Rep - State House District 63
 CandidateContest	GA House District 63 (Republican Party)	Rep - State House District 63/Estatal ante la Asamblea General Dist 63 (Republican Party)
 CandidateContest	GA House District 63 (Republican Party)	REP - State House Dist 63
 CandidateContest	GA House District 63 (Republican Party)	REP - State House District 63
 CandidateContest	GA House District 63 (Republican Party)	REP - State House District 63/Estatal ante la Asamblea General Dist 63 (Republican Party)
-CandidateContest	GA House District 63 (Republican Party)	Rep - State Representative, District 3
-CandidateContest	GA House District 63 (Republican Party)	REP - State Representative, District 3
+CandidateContest	GA House District 63 (Republican Party)	Rep - State Representative, District 63
+CandidateContest	GA House District 63 (Republican Party)	REP - State Representative, District 63
 CandidateContest	GA House District 64 (Republican Party)	Rep - State House Dist 64
 CandidateContest	GA House District 64 (Republican Party)	Rep - State House District 64
 CandidateContest	GA House District 64 (Republican Party)	Rep - State House District 64/Estatal ante la Asamblea General Dist 64 (Republican Party)
 CandidateContest	GA House District 64 (Republican Party)	REP - State House Dist 64
 CandidateContest	GA House District 64 (Republican Party)	REP - State House District 64
 CandidateContest	GA House District 64 (Republican Party)	REP - State House District 64/Estatal ante la Asamblea General Dist 64 (Republican Party)
-CandidateContest	GA House District 64 (Republican Party)	Rep - State Representative, District 4
-CandidateContest	GA House District 64 (Republican Party)	REP - State Representative, District 4
+CandidateContest	GA House District 64 (Republican Party)	Rep - State Representative, District 64
+CandidateContest	GA House District 64 (Republican Party)	REP - State Representative, District 64
 CandidateContest	GA House District 65 (Republican Party)	Rep - State House Dist 65
 CandidateContest	GA House District 65 (Republican Party)	Rep - State House District 65
 CandidateContest	GA House District 65 (Republican Party)	Rep - State House District 65/Estatal ante la Asamblea General Dist 65 (Republican Party)
 CandidateContest	GA House District 65 (Republican Party)	REP - State House Dist 65
 CandidateContest	GA House District 65 (Republican Party)	REP - State House District 65
 CandidateContest	GA House District 65 (Republican Party)	REP - State House District 65/Estatal ante la Asamblea General Dist 65 (Republican Party)
-CandidateContest	GA House District 65 (Republican Party)	Rep - State Representative, District 5
-CandidateContest	GA House District 65 (Republican Party)	REP - State Representative, District 5
+CandidateContest	GA House District 65 (Republican Party)	Rep - State Representative, District 65
+CandidateContest	GA House District 65 (Republican Party)	REP - State Representative, District 65
 CandidateContest	GA House District 66 (Republican Party)	Rep - State House Dist 66
 CandidateContest	GA House District 66 (Republican Party)	Rep - State House District 66
 CandidateContest	GA House District 66 (Republican Party)	Rep - State House District 66/Estatal ante la Asamblea General Dist 66 (Republican Party)
 CandidateContest	GA House District 66 (Republican Party)	REP - State House Dist 66
 CandidateContest	GA House District 66 (Republican Party)	REP - State House District 66
 CandidateContest	GA House District 66 (Republican Party)	REP - State House District 66/Estatal ante la Asamblea General Dist 66 (Republican Party)
-CandidateContest	GA House District 66 (Republican Party)	Rep - State Representative, District 6
-CandidateContest	GA House District 66 (Republican Party)	REP - State Representative, District 6
+CandidateContest	GA House District 66 (Republican Party)	Rep - State Representative, District 66
+CandidateContest	GA House District 66 (Republican Party)	REP - State Representative, District 66
 CandidateContest	GA House District 67 (Republican Party)	Rep - State House Dist 67
 CandidateContest	GA House District 67 (Republican Party)	Rep - State House District 67
 CandidateContest	GA House District 67 (Republican Party)	Rep - State House District 67/Estatal ante la Asamblea General Dist 67 (Republican Party)
 CandidateContest	GA House District 67 (Republican Party)	REP - State House Dist 67
 CandidateContest	GA House District 67 (Republican Party)	REP - State House District 67
 CandidateContest	GA House District 67 (Republican Party)	REP - State House District 67/Estatal ante la Asamblea General Dist 67 (Republican Party)
-CandidateContest	GA House District 67 (Republican Party)	Rep - State Representative, District 7
-CandidateContest	GA House District 67 (Republican Party)	REP - State Representative, District 7
+CandidateContest	GA House District 67 (Republican Party)	Rep - State Representative, District 67
+CandidateContest	GA House District 67 (Republican Party)	REP - State Representative, District 67
 CandidateContest	GA House District 68 (Republican Party)	Rep - State House Dist 68
 CandidateContest	GA House District 68 (Republican Party)	Rep - State House District 68
 CandidateContest	GA House District 68 (Republican Party)	Rep - State House District 68/Estatal ante la Asamblea General Dist 68 (Republican Party)
 CandidateContest	GA House District 68 (Republican Party)	REP - State House Dist 68
 CandidateContest	GA House District 68 (Republican Party)	REP - State House District 68
 CandidateContest	GA House District 68 (Republican Party)	REP - State House District 68/Estatal ante la Asamblea General Dist 68 (Republican Party)
-CandidateContest	GA House District 68 (Republican Party)	Rep - State Representative, District 8
-CandidateContest	GA House District 68 (Republican Party)	REP - State Representative, District 8
+CandidateContest	GA House District 68 (Republican Party)	Rep - State Representative, District 68
+CandidateContest	GA House District 68 (Republican Party)	REP - State Representative, District 68
 CandidateContest	GA House District 69 (Republican Party)	Rep - State House Dist 69
 CandidateContest	GA House District 69 (Republican Party)	Rep - State House District 69
 CandidateContest	GA House District 69 (Republican Party)	Rep - State House District 69/Estatal ante la Asamblea General Dist 69 (Republican Party)
 CandidateContest	GA House District 69 (Republican Party)	REP - State House Dist 69
 CandidateContest	GA House District 69 (Republican Party)	REP - State House District 69
 CandidateContest	GA House District 69 (Republican Party)	REP - State House District 69/Estatal ante la Asamblea General Dist 69 (Republican Party)
-CandidateContest	GA House District 69 (Republican Party)	Rep - State Representative, District 9
-CandidateContest	GA House District 69 (Republican Party)	REP - State Representative, District 9
+CandidateContest	GA House District 69 (Republican Party)	Rep - State Representative, District 69
+CandidateContest	GA House District 69 (Republican Party)	REP - State Representative, District 69
 CandidateContest	GA House District 70 (Republican Party)	Rep - State House Dist 70
 CandidateContest	GA House District 70 (Republican Party)	Rep - State House District 70
 CandidateContest	GA House District 70 (Republican Party)	Rep - State House District 70/Estatal ante la Asamblea General Dist 70 (Republican Party)
 CandidateContest	GA House District 70 (Republican Party)	REP - State House Dist 70
 CandidateContest	GA House District 70 (Republican Party)	REP - State House District 70
 CandidateContest	GA House District 70 (Republican Party)	REP - State House District 70/Estatal ante la Asamblea General Dist 70 (Republican Party)
-CandidateContest	GA House District 70 (Republican Party)	Rep - State Representative, District 0
-CandidateContest	GA House District 70 (Republican Party)	REP - State Representative, District 0
+CandidateContest	GA House District 70 (Republican Party)	Rep - State Representative, District 70
+CandidateContest	GA House District 70 (Republican Party)	REP - State Representative, District 70
 CandidateContest	GA House District 71 (Republican Party)	Rep - State House Dist 71
 CandidateContest	GA House District 71 (Republican Party)	Rep - State House District 71
 CandidateContest	GA House District 71 (Republican Party)	Rep - State House District 71/Estatal ante la Asamblea General Dist 71 (Republican Party)
 CandidateContest	GA House District 71 (Republican Party)	REP - State House Dist 71
 CandidateContest	GA House District 71 (Republican Party)	REP - State House District 71
 CandidateContest	GA House District 71 (Republican Party)	REP - State House District 71/Estatal ante la Asamblea General Dist 71 (Republican Party)
-CandidateContest	GA House District 71 (Republican Party)	Rep - State Representative, District 1
-CandidateContest	GA House District 71 (Republican Party)	REP - State Representative, District 1
+CandidateContest	GA House District 71 (Republican Party)	Rep - State Representative, District 71
+CandidateContest	GA House District 71 (Republican Party)	REP - State Representative, District 71
 CandidateContest	GA House District 72 (Republican Party)	Rep - State House Dist 72
 CandidateContest	GA House District 72 (Republican Party)	Rep - State House District 72
 CandidateContest	GA House District 72 (Republican Party)	Rep - State House District 72/Estatal ante la Asamblea General Dist 72 (Republican Party)
 CandidateContest	GA House District 72 (Republican Party)	REP - State House Dist 72
 CandidateContest	GA House District 72 (Republican Party)	REP - State House District 72
 CandidateContest	GA House District 72 (Republican Party)	REP - State House District 72/Estatal ante la Asamblea General Dist 72 (Republican Party)
-CandidateContest	GA House District 72 (Republican Party)	Rep - State Representative, District 2
-CandidateContest	GA House District 72 (Republican Party)	REP - State Representative, District 2
+CandidateContest	GA House District 72 (Republican Party)	Rep - State Representative, District 72
+CandidateContest	GA House District 72 (Republican Party)	REP - State Representative, District 72
 CandidateContest	GA House District 73 (Republican Party)	Rep - State House Dist 73
 CandidateContest	GA House District 73 (Republican Party)	Rep - State House District 73
 CandidateContest	GA House District 73 (Republican Party)	Rep - State House District 73/Estatal ante la Asamblea General Dist 73 (Republican Party)
 CandidateContest	GA House District 73 (Republican Party)	REP - State House Dist 73
 CandidateContest	GA House District 73 (Republican Party)	REP - State House District 73
 CandidateContest	GA House District 73 (Republican Party)	REP - State House District 73/Estatal ante la Asamblea General Dist 73 (Republican Party)
-CandidateContest	GA House District 73 (Republican Party)	Rep - State Representative, District 3
-CandidateContest	GA House District 73 (Republican Party)	REP - State Representative, District 3
+CandidateContest	GA House District 73 (Republican Party)	Rep - State Representative, District 73
+CandidateContest	GA House District 73 (Republican Party)	REP - State Representative, District 73
 CandidateContest	GA House District 74 (Republican Party)	Rep - State House Dist 74
 CandidateContest	GA House District 74 (Republican Party)	Rep - State House District 74
 CandidateContest	GA House District 74 (Republican Party)	Rep - State House District 74/Estatal ante la Asamblea General Dist 74 (Republican Party)
 CandidateContest	GA House District 74 (Republican Party)	REP - State House Dist 74
 CandidateContest	GA House District 74 (Republican Party)	REP - State House District 74
 CandidateContest	GA House District 74 (Republican Party)	REP - State House District 74/Estatal ante la Asamblea General Dist 74 (Republican Party)
-CandidateContest	GA House District 74 (Republican Party)	Rep - State Representative, District 4
-CandidateContest	GA House District 74 (Republican Party)	REP - State Representative, District 4
+CandidateContest	GA House District 74 (Republican Party)	Rep - State Representative, District 74
+CandidateContest	GA House District 74 (Republican Party)	REP - State Representative, District 74
 CandidateContest	GA House District 75 (Republican Party)	Rep - State House Dist 75
 CandidateContest	GA House District 75 (Republican Party)	Rep - State House District 75
 CandidateContest	GA House District 75 (Republican Party)	Rep - State House District 75/Estatal ante la Asamblea General Dist 75 (Republican Party)
 CandidateContest	GA House District 75 (Republican Party)	REP - State House Dist 75
 CandidateContest	GA House District 75 (Republican Party)	REP - State House District 75
 CandidateContest	GA House District 75 (Republican Party)	REP - State House District 75/Estatal ante la Asamblea General Dist 75 (Republican Party)
-CandidateContest	GA House District 75 (Republican Party)	Rep - State Representative, District 5
-CandidateContest	GA House District 75 (Republican Party)	REP - State Representative, District 5
+CandidateContest	GA House District 75 (Republican Party)	Rep - State Representative, District 75
+CandidateContest	GA House District 75 (Republican Party)	REP - State Representative, District 75
 CandidateContest	GA House District 76 (Republican Party)	Rep - State House Dist 76
 CandidateContest	GA House District 76 (Republican Party)	Rep - State House District 76
 CandidateContest	GA House District 76 (Republican Party)	Rep - State House District 76/Estatal ante la Asamblea General Dist 76 (Republican Party)
 CandidateContest	GA House District 76 (Republican Party)	REP - State House Dist 76
 CandidateContest	GA House District 76 (Republican Party)	REP - State House District 76
 CandidateContest	GA House District 76 (Republican Party)	REP - State House District 76/Estatal ante la Asamblea General Dist 76 (Republican Party)
-CandidateContest	GA House District 76 (Republican Party)	Rep - State Representative, District 6
-CandidateContest	GA House District 76 (Republican Party)	REP - State Representative, District 6
+CandidateContest	GA House District 76 (Republican Party)	Rep - State Representative, District 76
+CandidateContest	GA House District 76 (Republican Party)	REP - State Representative, District 76
 CandidateContest	GA House District 77 (Republican Party)	Rep - State House Dist 77
 CandidateContest	GA House District 77 (Republican Party)	Rep - State House District 77
 CandidateContest	GA House District 77 (Republican Party)	Rep - State House District 77/Estatal ante la Asamblea General Dist 77 (Republican Party)
 CandidateContest	GA House District 77 (Republican Party)	REP - State House Dist 77
 CandidateContest	GA House District 77 (Republican Party)	REP - State House District 77
 CandidateContest	GA House District 77 (Republican Party)	REP - State House District 77/Estatal ante la Asamblea General Dist 77 (Republican Party)
-CandidateContest	GA House District 77 (Republican Party)	Rep - State Representative, District 7
-CandidateContest	GA House District 77 (Republican Party)	REP - State Representative, District 7
+CandidateContest	GA House District 77 (Republican Party)	Rep - State Representative, District 77
+CandidateContest	GA House District 77 (Republican Party)	REP - State Representative, District 77
 CandidateContest	GA House District 78 (Republican Party)	Rep - State House Dist 78
 CandidateContest	GA House District 78 (Republican Party)	Rep - State House District 78
 CandidateContest	GA House District 78 (Republican Party)	Rep - State House District 78/Estatal ante la Asamblea General Dist 78 (Republican Party)
 CandidateContest	GA House District 78 (Republican Party)	REP - State House Dist 78
 CandidateContest	GA House District 78 (Republican Party)	REP - State House District 78
 CandidateContest	GA House District 78 (Republican Party)	REP - State House District 78/Estatal ante la Asamblea General Dist 78 (Republican Party)
-CandidateContest	GA House District 78 (Republican Party)	Rep - State Representative, District 8
-CandidateContest	GA House District 78 (Republican Party)	REP - State Representative, District 8
+CandidateContest	GA House District 78 (Republican Party)	Rep - State Representative, District 78
+CandidateContest	GA House District 78 (Republican Party)	REP - State Representative, District 78
 CandidateContest	GA House District 79 (Republican Party)	Rep - State House Dist 79
 CandidateContest	GA House District 79 (Republican Party)	Rep - State House District 79
 CandidateContest	GA House District 79 (Republican Party)	Rep - State House District 79/Estatal ante la Asamblea General Dist 79 (Republican Party)
 CandidateContest	GA House District 79 (Republican Party)	REP - State House Dist 79
 CandidateContest	GA House District 79 (Republican Party)	REP - State House District 79
 CandidateContest	GA House District 79 (Republican Party)	REP - State House District 79/Estatal ante la Asamblea General Dist 79 (Republican Party)
-CandidateContest	GA House District 79 (Republican Party)	Rep - State Representative, District 9
-CandidateContest	GA House District 79 (Republican Party)	REP - State Representative, District 9
+CandidateContest	GA House District 79 (Republican Party)	Rep - State Representative, District 79
+CandidateContest	GA House District 79 (Republican Party)	REP - State Representative, District 79
 CandidateContest	GA House District 80 (Republican Party)	Rep - State House Dist 80
 CandidateContest	GA House District 80 (Republican Party)	Rep - State House District 80
 CandidateContest	GA House District 80 (Republican Party)	Rep - State House District 80/Estatal ante la Asamblea General Dist 80 (Republican Party)
 CandidateContest	GA House District 80 (Republican Party)	REP - State House Dist 80
 CandidateContest	GA House District 80 (Republican Party)	REP - State House District 80
 CandidateContest	GA House District 80 (Republican Party)	REP - State House District 80/Estatal ante la Asamblea General Dist 80 (Republican Party)
-CandidateContest	GA House District 80 (Republican Party)	Rep - State Representative, District 0
-CandidateContest	GA House District 80 (Republican Party)	REP - State Representative, District 0
+CandidateContest	GA House District 80 (Republican Party)	Rep - State Representative, District 80
+CandidateContest	GA House District 80 (Republican Party)	REP - State Representative, District 80
 CandidateContest	GA House District 81 (Republican Party)	Rep - State House Dist 81
 CandidateContest	GA House District 81 (Republican Party)	Rep - State House District 81
 CandidateContest	GA House District 81 (Republican Party)	Rep - State House District 81/Estatal ante la Asamblea General Dist 81 (Republican Party)
 CandidateContest	GA House District 81 (Republican Party)	REP - State House Dist 81
 CandidateContest	GA House District 81 (Republican Party)	REP - State House District 81
 CandidateContest	GA House District 81 (Republican Party)	REP - State House District 81/Estatal ante la Asamblea General Dist 81 (Republican Party)
-CandidateContest	GA House District 81 (Republican Party)	Rep - State Representative, District 1
-CandidateContest	GA House District 81 (Republican Party)	REP - State Representative, District 1
+CandidateContest	GA House District 81 (Republican Party)	Rep - State Representative, District 81
+CandidateContest	GA House District 81 (Republican Party)	REP - State Representative, District 81
 CandidateContest	GA House District 82 (Republican Party)	Rep - State House Dist 82
 CandidateContest	GA House District 82 (Republican Party)	Rep - State House District 82
 CandidateContest	GA House District 82 (Republican Party)	Rep - State House District 82/Estatal ante la Asamblea General Dist 82 (Republican Party)
 CandidateContest	GA House District 82 (Republican Party)	REP - State House Dist 82
 CandidateContest	GA House District 82 (Republican Party)	REP - State House District 82
 CandidateContest	GA House District 82 (Republican Party)	REP - State House District 82/Estatal ante la Asamblea General Dist 82 (Republican Party)
-CandidateContest	GA House District 82 (Republican Party)	Rep - State Representative, District 2
-CandidateContest	GA House District 82 (Republican Party)	REP - State Representative, District 2
+CandidateContest	GA House District 82 (Republican Party)	Rep - State Representative, District 82
+CandidateContest	GA House District 82 (Republican Party)	REP - State Representative, District 82
 CandidateContest	GA House District 83 (Republican Party)	Rep - State House Dist 83
 CandidateContest	GA House District 83 (Republican Party)	Rep - State House District 83
 CandidateContest	GA House District 83 (Republican Party)	Rep - State House District 83/Estatal ante la Asamblea General Dist 83 (Republican Party)
 CandidateContest	GA House District 83 (Republican Party)	REP - State House Dist 83
 CandidateContest	GA House District 83 (Republican Party)	REP - State House District 83
 CandidateContest	GA House District 83 (Republican Party)	REP - State House District 83/Estatal ante la Asamblea General Dist 83 (Republican Party)
-CandidateContest	GA House District 83 (Republican Party)	Rep - State Representative, District 3
-CandidateContest	GA House District 83 (Republican Party)	REP - State Representative, District 3
+CandidateContest	GA House District 83 (Republican Party)	Rep - State Representative, District 83
+CandidateContest	GA House District 83 (Republican Party)	REP - State Representative, District 83
 CandidateContest	GA House District 84 (Republican Party)	Rep - State House Dist 84
 CandidateContest	GA House District 84 (Republican Party)	Rep - State House District 84
 CandidateContest	GA House District 84 (Republican Party)	Rep - State House District 84/Estatal ante la Asamblea General Dist 84 (Republican Party)
 CandidateContest	GA House District 84 (Republican Party)	REP - State House Dist 84
 CandidateContest	GA House District 84 (Republican Party)	REP - State House District 84
 CandidateContest	GA House District 84 (Republican Party)	REP - State House District 84/Estatal ante la Asamblea General Dist 84 (Republican Party)
-CandidateContest	GA House District 84 (Republican Party)	Rep - State Representative, District 4
-CandidateContest	GA House District 84 (Republican Party)	REP - State Representative, District 4
+CandidateContest	GA House District 84 (Republican Party)	Rep - State Representative, District 84
+CandidateContest	GA House District 84 (Republican Party)	REP - State Representative, District 84
 CandidateContest	GA House District 85 (Republican Party)	Rep - State House Dist 85
 CandidateContest	GA House District 85 (Republican Party)	Rep - State House District 85
 CandidateContest	GA House District 85 (Republican Party)	Rep - State House District 85/Estatal ante la Asamblea General Dist 85 (Republican Party)
 CandidateContest	GA House District 85 (Republican Party)	REP - State House Dist 85
 CandidateContest	GA House District 85 (Republican Party)	REP - State House District 85
 CandidateContest	GA House District 85 (Republican Party)	REP - State House District 85/Estatal ante la Asamblea General Dist 85 (Republican Party)
-CandidateContest	GA House District 85 (Republican Party)	Rep - State Representative, District 5
-CandidateContest	GA House District 85 (Republican Party)	REP - State Representative, District 5
+CandidateContest	GA House District 85 (Republican Party)	Rep - State Representative, District 85
+CandidateContest	GA House District 85 (Republican Party)	REP - State Representative, District 85
 CandidateContest	GA House District 86 (Republican Party)	Rep - State House Dist 86
 CandidateContest	GA House District 86 (Republican Party)	Rep - State House District 86
 CandidateContest	GA House District 86 (Republican Party)	Rep - State House District 86/Estatal ante la Asamblea General Dist 86 (Republican Party)
 CandidateContest	GA House District 86 (Republican Party)	REP - State House Dist 86
 CandidateContest	GA House District 86 (Republican Party)	REP - State House District 86
 CandidateContest	GA House District 86 (Republican Party)	REP - State House District 86/Estatal ante la Asamblea General Dist 86 (Republican Party)
-CandidateContest	GA House District 86 (Republican Party)	Rep - State Representative, District 6
-CandidateContest	GA House District 86 (Republican Party)	REP - State Representative, District 6
+CandidateContest	GA House District 86 (Republican Party)	Rep - State Representative, District 86
+CandidateContest	GA House District 86 (Republican Party)	REP - State Representative, District 86
 CandidateContest	GA House District 87 (Republican Party)	Rep - State House Dist 87
 CandidateContest	GA House District 87 (Republican Party)	Rep - State House District 87
 CandidateContest	GA House District 87 (Republican Party)	Rep - State House District 87/Estatal ante la Asamblea General Dist 87 (Republican Party)
 CandidateContest	GA House District 87 (Republican Party)	REP - State House Dist 87
 CandidateContest	GA House District 87 (Republican Party)	REP - State House District 87
 CandidateContest	GA House District 87 (Republican Party)	REP - State House District 87/Estatal ante la Asamblea General Dist 87 (Republican Party)
-CandidateContest	GA House District 87 (Republican Party)	Rep - State Representative, District 7
-CandidateContest	GA House District 87 (Republican Party)	REP - State Representative, District 7
+CandidateContest	GA House District 87 (Republican Party)	Rep - State Representative, District 87
+CandidateContest	GA House District 87 (Republican Party)	REP - State Representative, District 87
 CandidateContest	GA House District 88 (Republican Party)	Rep - State House Dist 88
 CandidateContest	GA House District 88 (Republican Party)	Rep - State House District 88
 CandidateContest	GA House District 88 (Republican Party)	Rep - State House District 88/Estatal ante la Asamblea General Dist 88 (Republican Party)
 CandidateContest	GA House District 88 (Republican Party)	REP - State House Dist 88
 CandidateContest	GA House District 88 (Republican Party)	REP - State House District 88
 CandidateContest	GA House District 88 (Republican Party)	REP - State House District 88/Estatal ante la Asamblea General Dist 88 (Republican Party)
-CandidateContest	GA House District 88 (Republican Party)	Rep - State Representative, District 8
-CandidateContest	GA House District 88 (Republican Party)	REP - State Representative, District 8
+CandidateContest	GA House District 88 (Republican Party)	Rep - State Representative, District 88
+CandidateContest	GA House District 88 (Republican Party)	REP - State Representative, District 88
 CandidateContest	GA House District 89 (Republican Party)	Rep - State House Dist 89
 CandidateContest	GA House District 89 (Republican Party)	Rep - State House District 89
 CandidateContest	GA House District 89 (Republican Party)	Rep - State House District 89/Estatal ante la Asamblea General Dist 89 (Republican Party)
 CandidateContest	GA House District 89 (Republican Party)	REP - State House Dist 89
 CandidateContest	GA House District 89 (Republican Party)	REP - State House District 89
 CandidateContest	GA House District 89 (Republican Party)	REP - State House District 89/Estatal ante la Asamblea General Dist 89 (Republican Party)
-CandidateContest	GA House District 89 (Republican Party)	Rep - State Representative, District 9
-CandidateContest	GA House District 89 (Republican Party)	REP - State Representative, District 9
+CandidateContest	GA House District 89 (Republican Party)	Rep - State Representative, District 89
+CandidateContest	GA House District 89 (Republican Party)	REP - State Representative, District 89
 CandidateContest	GA House District 90 (Republican Party)	Rep - State House Dist 90
 CandidateContest	GA House District 90 (Republican Party)	Rep - State House District 90
 CandidateContest	GA House District 90 (Republican Party)	Rep - State House District 90/Estatal ante la Asamblea General Dist 90 (Republican Party)
 CandidateContest	GA House District 90 (Republican Party)	REP - State House Dist 90
 CandidateContest	GA House District 90 (Republican Party)	REP - State House District 90
 CandidateContest	GA House District 90 (Republican Party)	REP - State House District 90/Estatal ante la Asamblea General Dist 90 (Republican Party)
-CandidateContest	GA House District 90 (Republican Party)	Rep - State Representative, District 0
-CandidateContest	GA House District 90 (Republican Party)	REP - State Representative, District 0
+CandidateContest	GA House District 90 (Republican Party)	Rep - State Representative, District 90
+CandidateContest	GA House District 90 (Republican Party)	REP - State Representative, District 90
 CandidateContest	GA House District 91 (Republican Party)	Rep - State House Dist 91
 CandidateContest	GA House District 91 (Republican Party)	Rep - State House District 91
 CandidateContest	GA House District 91 (Republican Party)	Rep - State House District 91/Estatal ante la Asamblea General Dist 91 (Republican Party)
 CandidateContest	GA House District 91 (Republican Party)	REP - State House Dist 91
 CandidateContest	GA House District 91 (Republican Party)	REP - State House District 91
 CandidateContest	GA House District 91 (Republican Party)	REP - State House District 91/Estatal ante la Asamblea General Dist 91 (Republican Party)
-CandidateContest	GA House District 91 (Republican Party)	Rep - State Representative, District 1
-CandidateContest	GA House District 91 (Republican Party)	REP - State Representative, District 1
+CandidateContest	GA House District 91 (Republican Party)	Rep - State Representative, District 91
+CandidateContest	GA House District 91 (Republican Party)	REP - State Representative, District 91
 CandidateContest	GA House District 92 (Republican Party)	Rep - State House Dist 92
 CandidateContest	GA House District 92 (Republican Party)	Rep - State House District 92
 CandidateContest	GA House District 92 (Republican Party)	Rep - State House District 92/Estatal ante la Asamblea General Dist 92 (Republican Party)
 CandidateContest	GA House District 92 (Republican Party)	REP - State House Dist 92
 CandidateContest	GA House District 92 (Republican Party)	REP - State House District 92
 CandidateContest	GA House District 92 (Republican Party)	REP - State House District 92/Estatal ante la Asamblea General Dist 92 (Republican Party)
-CandidateContest	GA House District 92 (Republican Party)	Rep - State Representative, District 2
-CandidateContest	GA House District 92 (Republican Party)	REP - State Representative, District 2
+CandidateContest	GA House District 92 (Republican Party)	Rep - State Representative, District 92
+CandidateContest	GA House District 92 (Republican Party)	REP - State Representative, District 92
 CandidateContest	GA House District 93 (Republican Party)	Rep - State House Dist 93
 CandidateContest	GA House District 93 (Republican Party)	Rep - State House District 93
 CandidateContest	GA House District 93 (Republican Party)	Rep - State House District 93/Estatal ante la Asamblea General Dist 93 (Republican Party)
 CandidateContest	GA House District 93 (Republican Party)	REP - State House Dist 93
 CandidateContest	GA House District 93 (Republican Party)	REP - State House District 93
 CandidateContest	GA House District 93 (Republican Party)	REP - State House District 93/Estatal ante la Asamblea General Dist 93 (Republican Party)
-CandidateContest	GA House District 93 (Republican Party)	Rep - State Representative, District 3
-CandidateContest	GA House District 93 (Republican Party)	REP - State Representative, District 3
+CandidateContest	GA House District 93 (Republican Party)	Rep - State Representative, District 93
+CandidateContest	GA House District 93 (Republican Party)	REP - State Representative, District 93
 CandidateContest	GA House District 94 (Republican Party)	Rep - State House Dist 94
 CandidateContest	GA House District 94 (Republican Party)	Rep - State House District 94
 CandidateContest	GA House District 94 (Republican Party)	Rep - State House District 94/Estatal ante la Asamblea General Dist 94 (Republican Party)
 CandidateContest	GA House District 94 (Republican Party)	REP - State House Dist 94
 CandidateContest	GA House District 94 (Republican Party)	REP - State House District 94
 CandidateContest	GA House District 94 (Republican Party)	REP - State House District 94/Estatal ante la Asamblea General Dist 94 (Republican Party)
-CandidateContest	GA House District 94 (Republican Party)	Rep - State Representative, District 4
-CandidateContest	GA House District 94 (Republican Party)	REP - State Representative, District 4
+CandidateContest	GA House District 94 (Republican Party)	Rep - State Representative, District 94
+CandidateContest	GA House District 94 (Republican Party)	REP - State Representative, District 94
 CandidateContest	GA House District 95 (Republican Party)	Rep - State House Dist 95
 CandidateContest	GA House District 95 (Republican Party)	Rep - State House District 95
 CandidateContest	GA House District 95 (Republican Party)	Rep - State House District 95/Estatal ante la Asamblea General Dist 95 (Republican Party)
 CandidateContest	GA House District 95 (Republican Party)	REP - State House Dist 95
 CandidateContest	GA House District 95 (Republican Party)	REP - State House District 95
 CandidateContest	GA House District 95 (Republican Party)	REP - State House District 95/Estatal ante la Asamblea General Dist 95 (Republican Party)
-CandidateContest	GA House District 95 (Republican Party)	Rep - State Representative, District 5
-CandidateContest	GA House District 95 (Republican Party)	REP - State Representative, District 5
+CandidateContest	GA House District 95 (Republican Party)	Rep - State Representative, District 95
+CandidateContest	GA House District 95 (Republican Party)	REP - State Representative, District 95
 CandidateContest	GA House District 96 (Republican Party)	Rep - State House Dist 96
 CandidateContest	GA House District 96 (Republican Party)	Rep - State House District 96
 CandidateContest	GA House District 96 (Republican Party)	Rep - State House District 96/Estatal ante la Asamblea General Dist 96 (Republican Party)
 CandidateContest	GA House District 96 (Republican Party)	REP - State House Dist 96
 CandidateContest	GA House District 96 (Republican Party)	REP - State House District 96
 CandidateContest	GA House District 96 (Republican Party)	REP - State House District 96/Estatal ante la Asamblea General Dist 96 (Republican Party)
-CandidateContest	GA House District 96 (Republican Party)	Rep - State Representative, District 6
-CandidateContest	GA House District 96 (Republican Party)	REP - State Representative, District 6
+CandidateContest	GA House District 96 (Republican Party)	Rep - State Representative, District 96
+CandidateContest	GA House District 96 (Republican Party)	REP - State Representative, District 96
 CandidateContest	GA House District 97 (Republican Party)	Rep - State House Dist 97
 CandidateContest	GA House District 97 (Republican Party)	Rep - State House District 97
 CandidateContest	GA House District 97 (Republican Party)	Rep - State House District 97/Estatal ante la Asamblea General Dist 97 (Republican Party)
 CandidateContest	GA House District 97 (Republican Party)	REP - State House Dist 97
 CandidateContest	GA House District 97 (Republican Party)	REP - State House District 97
 CandidateContest	GA House District 97 (Republican Party)	REP - State House District 97/Estatal ante la Asamblea General Dist 97 (Republican Party)
-CandidateContest	GA House District 97 (Republican Party)	Rep - State Representative, District 7
-CandidateContest	GA House District 97 (Republican Party)	REP - State Representative, District 7
+CandidateContest	GA House District 97 (Republican Party)	Rep - State Representative, District 97
+CandidateContest	GA House District 97 (Republican Party)	REP - State Representative, District 97
 CandidateContest	GA House District 98 (Republican Party)	Rep - State House Dist 98
 CandidateContest	GA House District 98 (Republican Party)	Rep - State House District 98
 CandidateContest	GA House District 98 (Republican Party)	Rep - State House District 98/Estatal ante la Asamblea General Dist 98 (Republican Party)
 CandidateContest	GA House District 98 (Republican Party)	REP - State House Dist 98
 CandidateContest	GA House District 98 (Republican Party)	REP - State House District 98
 CandidateContest	GA House District 98 (Republican Party)	REP - State House District 98/Estatal ante la Asamblea General Dist 98 (Republican Party)
-CandidateContest	GA House District 98 (Republican Party)	Rep - State Representative, District 8
-CandidateContest	GA House District 98 (Republican Party)	REP - State Representative, District 8
+CandidateContest	GA House District 98 (Republican Party)	Rep - State Representative, District 98
+CandidateContest	GA House District 98 (Republican Party)	REP - State Representative, District 98
 CandidateContest	GA House District 99 (Republican Party)	Rep - State House Dist 99
 CandidateContest	GA House District 99 (Republican Party)	Rep - State House District 99
 CandidateContest	GA House District 99 (Republican Party)	Rep - State House District 99/Estatal ante la Asamblea General Dist 99 (Republican Party)
 CandidateContest	GA House District 99 (Republican Party)	REP - State House Dist 99
 CandidateContest	GA House District 99 (Republican Party)	REP - State House District 99
 CandidateContest	GA House District 99 (Republican Party)	REP - State House District 99/Estatal ante la Asamblea General Dist 99 (Republican Party)
-CandidateContest	GA House District 99 (Republican Party)	Rep - State Representative, District 9
-CandidateContest	GA House District 99 (Republican Party)	REP - State Representative, District 9
+CandidateContest	GA House District 99 (Republican Party)	Rep - State Representative, District 99
+CandidateContest	GA House District 99 (Republican Party)	REP - State Representative, District 99
 CandidateContest	GA House District 100 (Republican Party)	Rep - State House Dist 100
 CandidateContest	GA House District 100 (Republican Party)	Rep - State House District 100
 CandidateContest	GA House District 100 (Republican Party)	Rep - State House District 100/Estatal ante la Asamblea General Dist 100 (Republican Party)
@@ -4829,361 +4829,361 @@ CandidateContest	GA House District 9 (Democratic Party)	Dem - State Representati
 CandidateContest	GA House District 10 (Democratic Party)	Dem - State House Dist 10
 CandidateContest	GA House District 10 (Democratic Party)	Dem - State House District 10
 CandidateContest	GA House District 10 (Democratic Party)	Dem - State House District 10/Estatal ante la Asamblea General Dist 10 (Democratic Party)
-CandidateContest	GA House District 10 (Democratic Party)	Dem - State Representative, District 0
+CandidateContest	GA House District 10 (Democratic Party)	Dem - State Representative, District 10
 CandidateContest	GA House District 11 (Democratic Party)	Dem - State House Dist 11
 CandidateContest	GA House District 11 (Democratic Party)	Dem - State House District 11
 CandidateContest	GA House District 11 (Democratic Party)	Dem - State House District 11/Estatal ante la Asamblea General Dist 11 (Democratic Party)
 CandidateContest	GA House District 12 (Democratic Party)	Dem - State House Dist 12
 CandidateContest	GA House District 12 (Democratic Party)	Dem - State House District 12
 CandidateContest	GA House District 12 (Democratic Party)	Dem - State House District 12/Estatal ante la Asamblea General Dist 12 (Democratic Party)
-CandidateContest	GA House District 12 (Democratic Party)	Dem - State Representative, District 2
+CandidateContest	GA House District 12 (Democratic Party)	Dem - State Representative, District 12
 CandidateContest	GA House District 13 (Democratic Party)	Dem - State House Dist 13
 CandidateContest	GA House District 13 (Democratic Party)	Dem - State House District 13
 CandidateContest	GA House District 13 (Democratic Party)	Dem - State House District 13/Estatal ante la Asamblea General Dist 13 (Democratic Party)
-CandidateContest	GA House District 13 (Democratic Party)	Dem - State Representative, District 3
+CandidateContest	GA House District 13 (Democratic Party)	Dem - State Representative, District 13
 CandidateContest	GA House District 14 (Democratic Party)	Dem - State House Dist 14
 CandidateContest	GA House District 14 (Democratic Party)	Dem - State House District 14
 CandidateContest	GA House District 14 (Democratic Party)	Dem - State House District 14/Estatal ante la Asamblea General Dist 14 (Democratic Party)
-CandidateContest	GA House District 14 (Democratic Party)	Dem - State Representative, District 4
+CandidateContest	GA House District 14 (Democratic Party)	Dem - State Representative, District 14
 CandidateContest	GA House District 15 (Democratic Party)	Dem - State House Dist 15
 CandidateContest	GA House District 15 (Democratic Party)	Dem - State House District 15
 CandidateContest	GA House District 15 (Democratic Party)	Dem - State House District 15/Estatal ante la Asamblea General Dist 15 (Democratic Party)
-CandidateContest	GA House District 15 (Democratic Party)	Dem - State Representative, District 5
+CandidateContest	GA House District 15 (Democratic Party)	Dem - State Representative, District 15
 CandidateContest	GA House District 16 (Democratic Party)	Dem - State House Dist 16
 CandidateContest	GA House District 16 (Democratic Party)	Dem - State House District 16
 CandidateContest	GA House District 16 (Democratic Party)	Dem - State House District 16/Estatal ante la Asamblea General Dist 16 (Democratic Party)
-CandidateContest	GA House District 16 (Democratic Party)	Dem - State Representative, District 6
+CandidateContest	GA House District 16 (Democratic Party)	Dem - State Representative, District 16
 CandidateContest	GA House District 17 (Democratic Party)	Dem - State House Dist 17
 CandidateContest	GA House District 17 (Democratic Party)	Dem - State House District 17
 CandidateContest	GA House District 17 (Democratic Party)	Dem - State House District 17/Estatal ante la Asamblea General Dist 17 (Democratic Party)
-CandidateContest	GA House District 17 (Democratic Party)	Dem - State Representative, District 7
+CandidateContest	GA House District 17 (Democratic Party)	Dem - State Representative, District 17
 CandidateContest	GA House District 18 (Democratic Party)	Dem - State House Dist 18
 CandidateContest	GA House District 18 (Democratic Party)	Dem - State House District 18
 CandidateContest	GA House District 18 (Democratic Party)	Dem - State House District 18/Estatal ante la Asamblea General Dist 18 (Democratic Party)
-CandidateContest	GA House District 18 (Democratic Party)	Dem - State Representative, District 8
+CandidateContest	GA House District 18 (Democratic Party)	Dem - State Representative, District 18
 CandidateContest	GA House District 19 (Democratic Party)	Dem - State House Dist 19
 CandidateContest	GA House District 19 (Democratic Party)	Dem - State House District 19
 CandidateContest	GA House District 19 (Democratic Party)	Dem - State House District 19/Estatal ante la Asamblea General Dist 19 (Democratic Party)
-CandidateContest	GA House District 19 (Democratic Party)	Dem - State Representative, District 9
+CandidateContest	GA House District 19 (Democratic Party)	Dem - State Representative, District 19
 CandidateContest	GA House District 20 (Democratic Party)	Dem - State House Dist 20
 CandidateContest	GA House District 20 (Democratic Party)	Dem - State House District 20
 CandidateContest	GA House District 20 (Democratic Party)	Dem - State House District 20/Estatal ante la Asamblea General Dist 20 (Democratic Party)
-CandidateContest	GA House District 20 (Democratic Party)	Dem - State Representative, District 0
+CandidateContest	GA House District 20 (Democratic Party)	Dem - State Representative, District 20
 CandidateContest	GA House District 21 (Democratic Party)	Dem - State House Dist 21
 CandidateContest	GA House District 21 (Democratic Party)	Dem - State House District 21
 CandidateContest	GA House District 21 (Democratic Party)	Dem - State House District 21/Estatal ante la Asamblea General Dist 21 (Democratic Party)
-CandidateContest	GA House District 21 (Democratic Party)	Dem - State Representative, District 1
+CandidateContest	GA House District 21 (Democratic Party)	Dem - State Representative, District 21
 CandidateContest	GA House District 22 (Democratic Party)	Dem - State House Dist 22
 CandidateContest	GA House District 22 (Democratic Party)	Dem - State House District 22
 CandidateContest	GA House District 22 (Democratic Party)	Dem - State House District 22/Estatal ante la Asamblea General Dist 22 (Democratic Party)
 CandidateContest	GA House District 23 (Democratic Party)	Dem - State House Dist 23
 CandidateContest	GA House District 23 (Democratic Party)	Dem - State House District 23
 CandidateContest	GA House District 23 (Democratic Party)	Dem - State House District 23/Estatal ante la Asamblea General Dist 23 (Democratic Party)
-CandidateContest	GA House District 23 (Democratic Party)	Dem - State Representative, District 3
+CandidateContest	GA House District 23 (Democratic Party)	Dem - State Representative, District 23
 CandidateContest	GA House District 24 (Democratic Party)	Dem - State House Dist 24
 CandidateContest	GA House District 24 (Democratic Party)	Dem - State House District 24
 CandidateContest	GA House District 24 (Democratic Party)	Dem - State House District 24/Estatal ante la Asamblea General Dist 24 (Democratic Party)
-CandidateContest	GA House District 24 (Democratic Party)	Dem - State Representative, District 4
+CandidateContest	GA House District 24 (Democratic Party)	Dem - State Representative, District 24
 CandidateContest	GA House District 25 (Democratic Party)	Dem - State House Dist 25
 CandidateContest	GA House District 25 (Democratic Party)	Dem - State House District 25
 CandidateContest	GA House District 25 (Democratic Party)	Dem - State House District 25/Estatal ante la Asamblea General Dist 25 (Democratic Party)
-CandidateContest	GA House District 25 (Democratic Party)	Dem - State Representative, District 5
+CandidateContest	GA House District 25 (Democratic Party)	Dem - State Representative, District 25
 CandidateContest	GA House District 26 (Democratic Party)	Dem - State House Dist 26
 CandidateContest	GA House District 26 (Democratic Party)	Dem - State House District 26
 CandidateContest	GA House District 26 (Democratic Party)	Dem - State House District 26/Estatal ante la Asamblea General Dist 26 (Democratic Party)
-CandidateContest	GA House District 26 (Democratic Party)	Dem - State Representative, District 6
+CandidateContest	GA House District 26 (Democratic Party)	Dem - State Representative, District 26
 CandidateContest	GA House District 27 (Democratic Party)	Dem - State House Dist 27
 CandidateContest	GA House District 27 (Democratic Party)	Dem - State House District 27
 CandidateContest	GA House District 27 (Democratic Party)	Dem - State House District 27/Estatal ante la Asamblea General Dist 27 (Democratic Party)
-CandidateContest	GA House District 27 (Democratic Party)	Dem - State Representative, District 7
+CandidateContest	GA House District 27 (Democratic Party)	Dem - State Representative, District 27
 CandidateContest	GA House District 28 (Democratic Party)	Dem - State House Dist 28
 CandidateContest	GA House District 28 (Democratic Party)	Dem - State House District 28
 CandidateContest	GA House District 28 (Democratic Party)	Dem - State House District 28/Estatal ante la Asamblea General Dist 28 (Democratic Party)
-CandidateContest	GA House District 28 (Democratic Party)	Dem - State Representative, District 8
+CandidateContest	GA House District 28 (Democratic Party)	Dem - State Representative, District 28
 CandidateContest	GA House District 29 (Democratic Party)	Dem - State House Dist 29
 CandidateContest	GA House District 29 (Democratic Party)	Dem - State House District 29
 CandidateContest	GA House District 29 (Democratic Party)	Dem - State House District 29/Estatal ante la Asamblea General Dist 29 (Democratic Party)
-CandidateContest	GA House District 29 (Democratic Party)	Dem - State Representative, District 9
+CandidateContest	GA House District 29 (Democratic Party)	Dem - State Representative, District 29
 CandidateContest	GA House District 30 (Democratic Party)	Dem - State House Dist 30
 CandidateContest	GA House District 30 (Democratic Party)	Dem - State House District 30
 CandidateContest	GA House District 30 (Democratic Party)	Dem - State House District 30/Estatal ante la Asamblea General Dist 30 (Democratic Party)
-CandidateContest	GA House District 30 (Democratic Party)	Dem - State Representative, District 0
+CandidateContest	GA House District 30 (Democratic Party)	Dem - State Representative, District 30
 CandidateContest	GA House District 31 (Democratic Party)	Dem - State House Dist 31
 CandidateContest	GA House District 31 (Democratic Party)	Dem - State House District 31
 CandidateContest	GA House District 31 (Democratic Party)	Dem - State House District 31/Estatal ante la Asamblea General Dist 31 (Democratic Party)
-CandidateContest	GA House District 31 (Democratic Party)	Dem - State Representative, District 1
+CandidateContest	GA House District 31 (Democratic Party)	Dem - State Representative, District 31
 CandidateContest	GA House District 32 (Democratic Party)	Dem - State House Dist 32
 CandidateContest	GA House District 32 (Democratic Party)	Dem - State House District 32
 CandidateContest	GA House District 32 (Democratic Party)	Dem - State House District 32/Estatal ante la Asamblea General Dist 32 (Democratic Party)
-CandidateContest	GA House District 32 (Democratic Party)	Dem - State Representative, District 2
+CandidateContest	GA House District 32 (Democratic Party)	Dem - State Representative, District 32
 CandidateContest	GA House District 33 (Democratic Party)	Dem - State House Dist 33
 CandidateContest	GA House District 33 (Democratic Party)	Dem - State House District 33
 CandidateContest	GA House District 33 (Democratic Party)	Dem - State House District 33/Estatal ante la Asamblea General Dist 33 (Democratic Party)
-CandidateContest	GA House District 33 (Democratic Party)	Dem - State Representative, District 3
+CandidateContest	GA House District 33 (Democratic Party)	Dem - State Representative, District 33
 CandidateContest	GA House District 34 (Democratic Party)	Dem - State House Dist 34
 CandidateContest	GA House District 34 (Democratic Party)	Dem - State House District 34
 CandidateContest	GA House District 34 (Democratic Party)	Dem - State House District 34/Estatal ante la Asamblea General Dist 34 (Democratic Party)
-CandidateContest	GA House District 34 (Democratic Party)	Dem - State Representative, District 4
+CandidateContest	GA House District 34 (Democratic Party)	Dem - State Representative, District 34
 CandidateContest	GA House District 35 (Democratic Party)	Dem - State House Dist 35
 CandidateContest	GA House District 35 (Democratic Party)	Dem - State House District 35
 CandidateContest	GA House District 35 (Democratic Party)	Dem - State House District 35/Estatal ante la Asamblea General Dist 35 (Democratic Party)
-CandidateContest	GA House District 35 (Democratic Party)	Dem - State Representative, District 5
+CandidateContest	GA House District 35 (Democratic Party)	Dem - State Representative, District 35
 CandidateContest	GA House District 36 (Democratic Party)	Dem - State House Dist 36
 CandidateContest	GA House District 36 (Democratic Party)	Dem - State House District 36
 CandidateContest	GA House District 36 (Democratic Party)	Dem - State House District 36/Estatal ante la Asamblea General Dist 36 (Democratic Party)
-CandidateContest	GA House District 36 (Democratic Party)	Dem - State Representative, District 6
+CandidateContest	GA House District 36 (Democratic Party)	Dem - State Representative, District 36
 CandidateContest	GA House District 37 (Democratic Party)	Dem - State House Dist 37
 CandidateContest	GA House District 37 (Democratic Party)	Dem - State House District 37
 CandidateContest	GA House District 37 (Democratic Party)	Dem - State House District 37/Estatal ante la Asamblea General Dist 37 (Democratic Party)
-CandidateContest	GA House District 37 (Democratic Party)	Dem - State Representative, District 7
+CandidateContest	GA House District 37 (Democratic Party)	Dem - State Representative, District 37
 CandidateContest	GA House District 38 (Democratic Party)	Dem - State House Dist 38
 CandidateContest	GA House District 38 (Democratic Party)	Dem - State House District 38
 CandidateContest	GA House District 38 (Democratic Party)	Dem - State House District 38/Estatal ante la Asamblea General Dist 38 (Democratic Party)
-CandidateContest	GA House District 38 (Democratic Party)	Dem - State Representative, District 8
+CandidateContest	GA House District 38 (Democratic Party)	Dem - State Representative, District 38
 CandidateContest	GA House District 39 (Democratic Party)	Dem - State House Dist 39
 CandidateContest	GA House District 39 (Democratic Party)	Dem - State House District 39
 CandidateContest	GA House District 39 (Democratic Party)	Dem - State House District 39/Estatal ante la Asamblea General Dist 39 (Democratic Party)
-CandidateContest	GA House District 39 (Democratic Party)	Dem - State Representative, District 9
+CandidateContest	GA House District 39 (Democratic Party)	Dem - State Representative, District 39
 CandidateContest	GA House District 40 (Democratic Party)	Dem - State House Dist 40
 CandidateContest	GA House District 40 (Democratic Party)	Dem - State House District 40
 CandidateContest	GA House District 40 (Democratic Party)	Dem - State House District 40/Estatal ante la Asamblea General Dist 40 (Democratic Party)
-CandidateContest	GA House District 40 (Democratic Party)	Dem - State Representative, District 0
+CandidateContest	GA House District 40 (Democratic Party)	Dem - State Representative, District 40
 CandidateContest	GA House District 41 (Democratic Party)	Dem - State House Dist 41
 CandidateContest	GA House District 41 (Democratic Party)	Dem - State House District 41
 CandidateContest	GA House District 41 (Democratic Party)	Dem - State House District 41/Estatal ante la Asamblea General Dist 41 (Democratic Party)
-CandidateContest	GA House District 41 (Democratic Party)	Dem - State Representative, District 1
+CandidateContest	GA House District 41 (Democratic Party)	Dem - State Representative, District 41
 CandidateContest	GA House District 42 (Democratic Party)	Dem - State House Dist 42
 CandidateContest	GA House District 42 (Democratic Party)	Dem - State House District 42
 CandidateContest	GA House District 42 (Democratic Party)	Dem - State House District 42/Estatal ante la Asamblea General Dist 42 (Democratic Party)
-CandidateContest	GA House District 42 (Democratic Party)	Dem - State Representative, District 2
+CandidateContest	GA House District 42 (Democratic Party)	Dem - State Representative, District 42
 CandidateContest	GA House District 43 (Democratic Party)	Dem - State House Dist 43
 CandidateContest	GA House District 43 (Democratic Party)	Dem - State House District 43
 CandidateContest	GA House District 43 (Democratic Party)	Dem - State House District 43/Estatal ante la Asamblea General Dist 43 (Democratic Party)
-CandidateContest	GA House District 43 (Democratic Party)	Dem - State Representative, District 3
+CandidateContest	GA House District 43 (Democratic Party)	Dem - State Representative, District 43
 CandidateContest	GA House District 44 (Democratic Party)	Dem - State House Dist 44
 CandidateContest	GA House District 44 (Democratic Party)	Dem - State House District 44
 CandidateContest	GA House District 44 (Democratic Party)	Dem - State House District 44/Estatal ante la Asamblea General Dist 44 (Democratic Party)
-CandidateContest	GA House District 44 (Democratic Party)	Dem - State Representative, District 4
+CandidateContest	GA House District 44 (Democratic Party)	Dem - State Representative, District 44
 CandidateContest	GA House District 45 (Democratic Party)	Dem - State House Dist 45
 CandidateContest	GA House District 45 (Democratic Party)	Dem - State House District 45
 CandidateContest	GA House District 45 (Democratic Party)	Dem - State House District 45/Estatal ante la Asamblea General Dist 45 (Democratic Party)
-CandidateContest	GA House District 45 (Democratic Party)	Dem - State Representative, District 5
+CandidateContest	GA House District 45 (Democratic Party)	Dem - State Representative, District 45
 CandidateContest	GA House District 46 (Democratic Party)	Dem - State House Dist 46
 CandidateContest	GA House District 46 (Democratic Party)	Dem - State House District 46
 CandidateContest	GA House District 46 (Democratic Party)	Dem - State House District 46/Estatal ante la Asamblea General Dist 46 (Democratic Party)
-CandidateContest	GA House District 46 (Democratic Party)	Dem - State Representative, District 6
+CandidateContest	GA House District 46 (Democratic Party)	Dem - State Representative, District 46
 CandidateContest	GA House District 47 (Democratic Party)	Dem - State House Dist 47
 CandidateContest	GA House District 47 (Democratic Party)	Dem - State House District 47
 CandidateContest	GA House District 47 (Democratic Party)	Dem - State House District 47/Estatal ante la Asamblea General Dist 47 (Democratic Party)
-CandidateContest	GA House District 47 (Democratic Party)	Dem - State Representative, District 7
+CandidateContest	GA House District 47 (Democratic Party)	Dem - State Representative, District 47
 CandidateContest	GA House District 48 (Democratic Party)	Dem - State House Dist 48
 CandidateContest	GA House District 48 (Democratic Party)	Dem - State House District 48
 CandidateContest	GA House District 48 (Democratic Party)	Dem - State House District 48/Estatal ante la Asamblea General Dist 48 (Democratic Party)
-CandidateContest	GA House District 48 (Democratic Party)	Dem - State Representative, District 8
+CandidateContest	GA House District 48 (Democratic Party)	Dem - State Representative, District 48
 CandidateContest	GA House District 49 (Democratic Party)	Dem - State House Dist 49
 CandidateContest	GA House District 49 (Democratic Party)	Dem - State House District 49
 CandidateContest	GA House District 49 (Democratic Party)	Dem - State House District 49/Estatal ante la Asamblea General Dist 49 (Democratic Party)
-CandidateContest	GA House District 49 (Democratic Party)	Dem - State Representative, District 9
+CandidateContest	GA House District 49 (Democratic Party)	Dem - State Representative, District 49
 CandidateContest	GA House District 50 (Democratic Party)	Dem - State House Dist 50
 CandidateContest	GA House District 50 (Democratic Party)	Dem - State House District 50
 CandidateContest	GA House District 50 (Democratic Party)	Dem - State House District 50/Estatal ante la Asamblea General Dist 50 (Democratic Party)
-CandidateContest	GA House District 50 (Democratic Party)	Dem - State Representative, District 0
+CandidateContest	GA House District 50 (Democratic Party)	Dem - State Representative, District 50
 CandidateContest	GA House District 51 (Democratic Party)	Dem - State House Dist 51
 CandidateContest	GA House District 51 (Democratic Party)	Dem - State House District 51
 CandidateContest	GA House District 51 (Democratic Party)	Dem - State House District 51/Estatal ante la Asamblea General Dist 51 (Democratic Party)
-CandidateContest	GA House District 51 (Democratic Party)	Dem - State Representative, District 1
+CandidateContest	GA House District 51 (Democratic Party)	Dem - State Representative, District 51
 CandidateContest	GA House District 52 (Democratic Party)	Dem - State House Dist 52
 CandidateContest	GA House District 52 (Democratic Party)	Dem - State House District 52
 CandidateContest	GA House District 52 (Democratic Party)	Dem - State House District 52/Estatal ante la Asamblea General Dist 52 (Democratic Party)
-CandidateContest	GA House District 52 (Democratic Party)	Dem - State Representative, District 2
+CandidateContest	GA House District 52 (Democratic Party)	Dem - State Representative, District 52
 CandidateContest	GA House District 53 (Democratic Party)	Dem - State House Dist 53
 CandidateContest	GA House District 53 (Democratic Party)	Dem - State House District 53
 CandidateContest	GA House District 53 (Democratic Party)	Dem - State House District 53/Estatal ante la Asamblea General Dist 53 (Democratic Party)
-CandidateContest	GA House District 53 (Democratic Party)	Dem - State Representative, District 3
+CandidateContest	GA House District 53 (Democratic Party)	Dem - State Representative, District 53
 CandidateContest	GA House District 54 (Democratic Party)	Dem - State House Dist 54
 CandidateContest	GA House District 54 (Democratic Party)	Dem - State House District 54
 CandidateContest	GA House District 54 (Democratic Party)	Dem - State House District 54/Estatal ante la Asamblea General Dist 54 (Democratic Party)
-CandidateContest	GA House District 54 (Democratic Party)	Dem - State Representative, District 4
+CandidateContest	GA House District 54 (Democratic Party)	Dem - State Representative, District 54
 CandidateContest	GA House District 55 (Democratic Party)	Dem - State House Dist 55
 CandidateContest	GA House District 55 (Democratic Party)	Dem - State House District 55
 CandidateContest	GA House District 55 (Democratic Party)	Dem - State House District 55/Estatal ante la Asamblea General Dist 55 (Democratic Party)
-CandidateContest	GA House District 55 (Democratic Party)	Dem - State Representative, District 5
+CandidateContest	GA House District 55 (Democratic Party)	Dem - State Representative, District 55
 CandidateContest	GA House District 56 (Democratic Party)	Dem - State House Dist 56
 CandidateContest	GA House District 56 (Democratic Party)	Dem - State House District 56
 CandidateContest	GA House District 56 (Democratic Party)	Dem - State House District 56/Estatal ante la Asamblea General Dist 56 (Democratic Party)
-CandidateContest	GA House District 56 (Democratic Party)	Dem - State Representative, District 6
+CandidateContest	GA House District 56 (Democratic Party)	Dem - State Representative, District 56
 CandidateContest	GA House District 57 (Democratic Party)	Dem - State House Dist 57
 CandidateContest	GA House District 57 (Democratic Party)	Dem - State House District 57
 CandidateContest	GA House District 57 (Democratic Party)	Dem - State House District 57/Estatal ante la Asamblea General Dist 57 (Democratic Party)
-CandidateContest	GA House District 57 (Democratic Party)	Dem - State Representative, District 7
+CandidateContest	GA House District 57 (Democratic Party)	Dem - State Representative, District 57
 CandidateContest	GA House District 58 (Democratic Party)	Dem - State House Dist 58
 CandidateContest	GA House District 58 (Democratic Party)	Dem - State House District 58
 CandidateContest	GA House District 58 (Democratic Party)	Dem - State House District 58/Estatal ante la Asamblea General Dist 58 (Democratic Party)
-CandidateContest	GA House District 58 (Democratic Party)	Dem - State Representative, District 8
+CandidateContest	GA House District 58 (Democratic Party)	Dem - State Representative, District 58
 CandidateContest	GA House District 59 (Democratic Party)	Dem - State House Dist 59
 CandidateContest	GA House District 59 (Democratic Party)	Dem - State House District 59
 CandidateContest	GA House District 59 (Democratic Party)	Dem - State House District 59/Estatal ante la Asamblea General Dist 59 (Democratic Party)
-CandidateContest	GA House District 59 (Democratic Party)	Dem - State Representative, District 9
+CandidateContest	GA House District 59 (Democratic Party)	Dem - State Representative, District 59
 CandidateContest	GA House District 60 (Democratic Party)	Dem - State House Dist 60
 CandidateContest	GA House District 60 (Democratic Party)	Dem - State House District 60
 CandidateContest	GA House District 60 (Democratic Party)	Dem - State House District 60/Estatal ante la Asamblea General Dist 60 (Democratic Party)
-CandidateContest	GA House District 60 (Democratic Party)	Dem - State Representative, District 0
+CandidateContest	GA House District 60 (Democratic Party)	Dem - State Representative, District 60
 CandidateContest	GA House District 61 (Democratic Party)	Dem - State House Dist 61
 CandidateContest	GA House District 61 (Democratic Party)	Dem - State House District 61
 CandidateContest	GA House District 61 (Democratic Party)	Dem - State House District 61/Estatal ante la Asamblea General Dist 61 (Democratic Party)
-CandidateContest	GA House District 61 (Democratic Party)	Dem - State Representative, District 1
+CandidateContest	GA House District 61 (Democratic Party)	Dem - State Representative, District 61
 CandidateContest	GA House District 62 (Democratic Party)	Dem - State House Dist 62
 CandidateContest	GA House District 62 (Democratic Party)	Dem - State House District 62
 CandidateContest	GA House District 62 (Democratic Party)	Dem - State House District 62/Estatal ante la Asamblea General Dist 62 (Democratic Party)
-CandidateContest	GA House District 62 (Democratic Party)	Dem - State Representative, District 2
+CandidateContest	GA House District 62 (Democratic Party)	Dem - State Representative, District 62
 CandidateContest	GA House District 63 (Democratic Party)	Dem - State House Dist 63
 CandidateContest	GA House District 63 (Democratic Party)	Dem - State House District 63
 CandidateContest	GA House District 63 (Democratic Party)	Dem - State House District 63/Estatal ante la Asamblea General Dist 63 (Democratic Party)
-CandidateContest	GA House District 63 (Democratic Party)	Dem - State Representative, District 3
+CandidateContest	GA House District 63 (Democratic Party)	Dem - State Representative, District 63
 CandidateContest	GA House District 64 (Democratic Party)	Dem - State House Dist 64
 CandidateContest	GA House District 64 (Democratic Party)	Dem - State House District 64
 CandidateContest	GA House District 64 (Democratic Party)	Dem - State House District 64/Estatal ante la Asamblea General Dist 64 (Democratic Party)
-CandidateContest	GA House District 64 (Democratic Party)	Dem - State Representative, District 4
+CandidateContest	GA House District 64 (Democratic Party)	Dem - State Representative, District 64
 CandidateContest	GA House District 65 (Democratic Party)	Dem - State House Dist 65
 CandidateContest	GA House District 65 (Democratic Party)	Dem - State House District 65
 CandidateContest	GA House District 65 (Democratic Party)	Dem - State House District 65/Estatal ante la Asamblea General Dist 65 (Democratic Party)
-CandidateContest	GA House District 65 (Democratic Party)	Dem - State Representative, District 5
+CandidateContest	GA House District 65 (Democratic Party)	Dem - State Representative, District 65
 CandidateContest	GA House District 66 (Democratic Party)	Dem - State House Dist 66
 CandidateContest	GA House District 66 (Democratic Party)	Dem - State House District 66
 CandidateContest	GA House District 66 (Democratic Party)	Dem - State House District 66/Estatal ante la Asamblea General Dist 66 (Democratic Party)
-CandidateContest	GA House District 66 (Democratic Party)	Dem - State Representative, District 6
+CandidateContest	GA House District 66 (Democratic Party)	Dem - State Representative, District 66
 CandidateContest	GA House District 67 (Democratic Party)	Dem - State House Dist 67
 CandidateContest	GA House District 67 (Democratic Party)	Dem - State House District 67
 CandidateContest	GA House District 67 (Democratic Party)	Dem - State House District 67/Estatal ante la Asamblea General Dist 67 (Democratic Party)
-CandidateContest	GA House District 67 (Democratic Party)	Dem - State Representative, District 7
+CandidateContest	GA House District 67 (Democratic Party)	Dem - State Representative, District 67
 CandidateContest	GA House District 68 (Democratic Party)	Dem - State House Dist 68
 CandidateContest	GA House District 68 (Democratic Party)	Dem - State House District 68
 CandidateContest	GA House District 68 (Democratic Party)	Dem - State House District 68/Estatal ante la Asamblea General Dist 68 (Democratic Party)
-CandidateContest	GA House District 68 (Democratic Party)	Dem - State Representative, District 8
+CandidateContest	GA House District 68 (Democratic Party)	Dem - State Representative, District 68
 CandidateContest	GA House District 69 (Democratic Party)	Dem - State House Dist 69
 CandidateContest	GA House District 69 (Democratic Party)	Dem - State House District 69
 CandidateContest	GA House District 69 (Democratic Party)	Dem - State House District 69/Estatal ante la Asamblea General Dist 69 (Democratic Party)
-CandidateContest	GA House District 69 (Democratic Party)	Dem - State Representative, District 9
+CandidateContest	GA House District 69 (Democratic Party)	Dem - State Representative, District 69
 CandidateContest	GA House District 70 (Democratic Party)	Dem - State House Dist 70
 CandidateContest	GA House District 70 (Democratic Party)	Dem - State House District 70
 CandidateContest	GA House District 70 (Democratic Party)	Dem - State House District 70/Estatal ante la Asamblea General Dist 70 (Democratic Party)
-CandidateContest	GA House District 70 (Democratic Party)	Dem - State Representative, District 0
+CandidateContest	GA House District 70 (Democratic Party)	Dem - State Representative, District 70
 CandidateContest	GA House District 71 (Democratic Party)	Dem - State House Dist 71
 CandidateContest	GA House District 71 (Democratic Party)	Dem - State House District 71
 CandidateContest	GA House District 71 (Democratic Party)	Dem - State House District 71/Estatal ante la Asamblea General Dist 71 (Democratic Party)
-CandidateContest	GA House District 71 (Democratic Party)	Dem - State Representative, District 1
+CandidateContest	GA House District 71 (Democratic Party)	Dem - State Representative, District 71
 CandidateContest	GA House District 72 (Democratic Party)	Dem - State House Dist 72
 CandidateContest	GA House District 72 (Democratic Party)	Dem - State House District 72
 CandidateContest	GA House District 72 (Democratic Party)	Dem - State House District 72/Estatal ante la Asamblea General Dist 72 (Democratic Party)
-CandidateContest	GA House District 72 (Democratic Party)	Dem - State Representative, District 2
+CandidateContest	GA House District 72 (Democratic Party)	Dem - State Representative, District 72
 CandidateContest	GA House District 73 (Democratic Party)	Dem - State House Dist 73
 CandidateContest	GA House District 73 (Democratic Party)	Dem - State House District 73
 CandidateContest	GA House District 73 (Democratic Party)	Dem - State House District 73/Estatal ante la Asamblea General Dist 73 (Democratic Party)
-CandidateContest	GA House District 73 (Democratic Party)	Dem - State Representative, District 3
+CandidateContest	GA House District 73 (Democratic Party)	Dem - State Representative, District 73
 CandidateContest	GA House District 74 (Democratic Party)	Dem - State House Dist 74
 CandidateContest	GA House District 74 (Democratic Party)	Dem - State House District 74
 CandidateContest	GA House District 74 (Democratic Party)	Dem - State House District 74/Estatal ante la Asamblea General Dist 74 (Democratic Party)
-CandidateContest	GA House District 74 (Democratic Party)	Dem - State Representative, District 4
+CandidateContest	GA House District 74 (Democratic Party)	Dem - State Representative, District 74
 CandidateContest	GA House District 75 (Democratic Party)	Dem - State House Dist 75
 CandidateContest	GA House District 75 (Democratic Party)	Dem - State House District 75
 CandidateContest	GA House District 75 (Democratic Party)	Dem - State House District 75/Estatal ante la Asamblea General Dist 75 (Democratic Party)
-CandidateContest	GA House District 75 (Democratic Party)	Dem - State Representative, District 5
+CandidateContest	GA House District 75 (Democratic Party)	Dem - State Representative, District 75
 CandidateContest	GA House District 76 (Democratic Party)	Dem - State House Dist 76
 CandidateContest	GA House District 76 (Democratic Party)	Dem - State House District 76
 CandidateContest	GA House District 76 (Democratic Party)	Dem - State House District 76/Estatal ante la Asamblea General Dist 76 (Democratic Party)
-CandidateContest	GA House District 76 (Democratic Party)	Dem - State Representative, District 6
+CandidateContest	GA House District 76 (Democratic Party)	Dem - State Representative, District 76
 CandidateContest	GA House District 77 (Democratic Party)	Dem - State House Dist 77
 CandidateContest	GA House District 77 (Democratic Party)	Dem - State House District 77
 CandidateContest	GA House District 77 (Democratic Party)	Dem - State House District 77/Estatal ante la Asamblea General Dist 77 (Democratic Party)
-CandidateContest	GA House District 77 (Democratic Party)	Dem - State Representative, District 7
+CandidateContest	GA House District 77 (Democratic Party)	Dem - State Representative, District 77
 CandidateContest	GA House District 78 (Democratic Party)	Dem - State House Dist 78
 CandidateContest	GA House District 78 (Democratic Party)	Dem - State House District 78
 CandidateContest	GA House District 78 (Democratic Party)	Dem - State House District 78/Estatal ante la Asamblea General Dist 78 (Democratic Party)
-CandidateContest	GA House District 78 (Democratic Party)	Dem - State Representative, District 8
+CandidateContest	GA House District 78 (Democratic Party)	Dem - State Representative, District 78
 CandidateContest	GA House District 79 (Democratic Party)	Dem - State House Dist 79
 CandidateContest	GA House District 79 (Democratic Party)	Dem - State House District 79
 CandidateContest	GA House District 79 (Democratic Party)	Dem - State House District 79/Estatal ante la Asamblea General Dist 79 (Democratic Party)
-CandidateContest	GA House District 79 (Democratic Party)	Dem - State Representative, District 9
+CandidateContest	GA House District 79 (Democratic Party)	Dem - State Representative, District 79
 CandidateContest	GA House District 80 (Democratic Party)	Dem - State House Dist 80
 CandidateContest	GA House District 80 (Democratic Party)	Dem - State House District 80
 CandidateContest	GA House District 80 (Democratic Party)	Dem - State House District 80/Estatal ante la Asamblea General Dist 80 (Democratic Party)
-CandidateContest	GA House District 80 (Democratic Party)	Dem - State Representative, District 0
+CandidateContest	GA House District 80 (Democratic Party)	Dem - State Representative, District 80
 CandidateContest	GA House District 81 (Democratic Party)	Dem - State House Dist 81
 CandidateContest	GA House District 81 (Democratic Party)	Dem - State House District 81
 CandidateContest	GA House District 81 (Democratic Party)	Dem - State House District 81/Estatal ante la Asamblea General Dist 81 (Democratic Party)
-CandidateContest	GA House District 81 (Democratic Party)	Dem - State Representative, District 1
+CandidateContest	GA House District 81 (Democratic Party)	Dem - State Representative, District 81
 CandidateContest	GA House District 82 (Democratic Party)	Dem - State House Dist 82
 CandidateContest	GA House District 82 (Democratic Party)	Dem - State House District 82
 CandidateContest	GA House District 82 (Democratic Party)	Dem - State House District 82/Estatal ante la Asamblea General Dist 82 (Democratic Party)
-CandidateContest	GA House District 82 (Democratic Party)	Dem - State Representative, District 2
+CandidateContest	GA House District 82 (Democratic Party)	Dem - State Representative, District 82
 CandidateContest	GA House District 83 (Democratic Party)	Dem - State House Dist 83
 CandidateContest	GA House District 83 (Democratic Party)	Dem - State House District 83
 CandidateContest	GA House District 83 (Democratic Party)	Dem - State House District 83/Estatal ante la Asamblea General Dist 83 (Democratic Party)
-CandidateContest	GA House District 83 (Democratic Party)	Dem - State Representative, District 3
+CandidateContest	GA House District 83 (Democratic Party)	Dem - State Representative, District 83
 CandidateContest	GA House District 84 (Democratic Party)	Dem - State House Dist 84
 CandidateContest	GA House District 84 (Democratic Party)	Dem - State House District 84
 CandidateContest	GA House District 84 (Democratic Party)	Dem - State House District 84/Estatal ante la Asamblea General Dist 84 (Democratic Party)
-CandidateContest	GA House District 84 (Democratic Party)	Dem - State Representative, District 4
+CandidateContest	GA House District 84 (Democratic Party)	Dem - State Representative, District 84
 CandidateContest	GA House District 85 (Democratic Party)	Dem - State House Dist 85
 CandidateContest	GA House District 85 (Democratic Party)	Dem - State House District 85
 CandidateContest	GA House District 85 (Democratic Party)	Dem - State House District 85/Estatal ante la Asamblea General Dist 85 (Democratic Party)
-CandidateContest	GA House District 85 (Democratic Party)	Dem - State Representative, District 5
+CandidateContest	GA House District 85 (Democratic Party)	Dem - State Representative, District 85
 CandidateContest	GA House District 86 (Democratic Party)	Dem - State House Dist 86
 CandidateContest	GA House District 86 (Democratic Party)	Dem - State House District 86
 CandidateContest	GA House District 86 (Democratic Party)	Dem - State House District 86/Estatal ante la Asamblea General Dist 86 (Democratic Party)
-CandidateContest	GA House District 86 (Democratic Party)	Dem - State Representative, District 6
+CandidateContest	GA House District 86 (Democratic Party)	Dem - State Representative, District 86
 CandidateContest	GA House District 87 (Democratic Party)	Dem - State House Dist 87
 CandidateContest	GA House District 87 (Democratic Party)	Dem - State House District 87
 CandidateContest	GA House District 87 (Democratic Party)	Dem - State House District 87/Estatal ante la Asamblea General Dist 87 (Democratic Party)
-CandidateContest	GA House District 87 (Democratic Party)	Dem - State Representative, District 7
+CandidateContest	GA House District 87 (Democratic Party)	Dem - State Representative, District 87
 CandidateContest	GA House District 88 (Democratic Party)	Dem - State House Dist 88
 CandidateContest	GA House District 88 (Democratic Party)	Dem - State House District 88
 CandidateContest	GA House District 88 (Democratic Party)	Dem - State House District 88/Estatal ante la Asamblea General Dist 88 (Democratic Party)
-CandidateContest	GA House District 88 (Democratic Party)	Dem - State Representative, District 8
+CandidateContest	GA House District 88 (Democratic Party)	Dem - State Representative, District 88
 CandidateContest	GA House District 89 (Democratic Party)	Dem - State House Dist 89
 CandidateContest	GA House District 89 (Democratic Party)	Dem - State House District 89
 CandidateContest	GA House District 89 (Democratic Party)	Dem - State House District 89/Estatal ante la Asamblea General Dist 89 (Democratic Party)
-CandidateContest	GA House District 89 (Democratic Party)	Dem - State Representative, District 9
+CandidateContest	GA House District 89 (Democratic Party)	Dem - State Representative, District 89
 CandidateContest	GA House District 90 (Democratic Party)	Dem - State House Dist 90
 CandidateContest	GA House District 90 (Democratic Party)	Dem - State House District 90
 CandidateContest	GA House District 90 (Democratic Party)	Dem - State House District 90/Estatal ante la Asamblea General Dist 90 (Democratic Party)
-CandidateContest	GA House District 90 (Democratic Party)	Dem - State Representative, District 0
+CandidateContest	GA House District 90 (Democratic Party)	Dem - State Representative, District 90
 CandidateContest	GA House District 91 (Democratic Party)	Dem - State House Dist 91
 CandidateContest	GA House District 91 (Democratic Party)	Dem - State House District 91
 CandidateContest	GA House District 91 (Democratic Party)	Dem - State House District 91/Estatal ante la Asamblea General Dist 91 (Democratic Party)
-CandidateContest	GA House District 91 (Democratic Party)	Dem - State Representative, District 1
+CandidateContest	GA House District 91 (Democratic Party)	Dem - State Representative, District 91
 CandidateContest	GA House District 92 (Democratic Party)	Dem - State House Dist 92
 CandidateContest	GA House District 92 (Democratic Party)	Dem - State House District 92
 CandidateContest	GA House District 92 (Democratic Party)	Dem - State House District 92/Estatal ante la Asamblea General Dist 92 (Democratic Party)
-CandidateContest	GA House District 92 (Democratic Party)	Dem - State Representative, District 2
+CandidateContest	GA House District 92 (Democratic Party)	Dem - State Representative, District 92
 CandidateContest	GA House District 93 (Democratic Party)	Dem - State House Dist 93
 CandidateContest	GA House District 93 (Democratic Party)	Dem - State House District 93
 CandidateContest	GA House District 93 (Democratic Party)	Dem - State House District 93/Estatal ante la Asamblea General Dist 93 (Democratic Party)
-CandidateContest	GA House District 93 (Democratic Party)	Dem - State Representative, District 3
+CandidateContest	GA House District 93 (Democratic Party)	Dem - State Representative, District 93
 CandidateContest	GA House District 94 (Democratic Party)	Dem - State House Dist 94
 CandidateContest	GA House District 94 (Democratic Party)	Dem - State House District 94
 CandidateContest	GA House District 94 (Democratic Party)	Dem - State House District 94/Estatal ante la Asamblea General Dist 94 (Democratic Party)
-CandidateContest	GA House District 94 (Democratic Party)	Dem - State Representative, District 4
+CandidateContest	GA House District 94 (Democratic Party)	Dem - State Representative, District 94
 CandidateContest	GA House District 95 (Democratic Party)	Dem - State House Dist 95
 CandidateContest	GA House District 95 (Democratic Party)	Dem - State House District 95
 CandidateContest	GA House District 95 (Democratic Party)	Dem - State House District 95/Estatal ante la Asamblea General Dist 95 (Democratic Party)
-CandidateContest	GA House District 95 (Democratic Party)	Dem - State Representative, District 5
+CandidateContest	GA House District 95 (Democratic Party)	Dem - State Representative, District 95
 CandidateContest	GA House District 96 (Democratic Party)	Dem - State House Dist 96
 CandidateContest	GA House District 96 (Democratic Party)	Dem - State House District 96
 CandidateContest	GA House District 96 (Democratic Party)	Dem - State House District 96/Estatal ante la Asamblea General Dist 96 (Democratic Party)
-CandidateContest	GA House District 96 (Democratic Party)	Dem - State Representative, District 6
+CandidateContest	GA House District 96 (Democratic Party)	Dem - State Representative, District 96
 CandidateContest	GA House District 97 (Democratic Party)	Dem - State House Dist 97
 CandidateContest	GA House District 97 (Democratic Party)	Dem - State House District 97
 CandidateContest	GA House District 97 (Democratic Party)	Dem - State House District 97/Estatal ante la Asamblea General Dist 97 (Democratic Party)
-CandidateContest	GA House District 97 (Democratic Party)	Dem - State Representative, District 7
+CandidateContest	GA House District 97 (Democratic Party)	Dem - State Representative, District 97
 CandidateContest	GA House District 98 (Democratic Party)	Dem - State House Dist 98
 CandidateContest	GA House District 98 (Democratic Party)	Dem - State House District 98
 CandidateContest	GA House District 98 (Democratic Party)	Dem - State House District 98/Estatal ante la Asamblea General Dist 98 (Democratic Party)
-CandidateContest	GA House District 98 (Democratic Party)	Dem - State Representative, District 8
+CandidateContest	GA House District 98 (Democratic Party)	Dem - State Representative, District 98
 CandidateContest	GA House District 99 (Democratic Party)	Dem - State House Dist 99
 CandidateContest	GA House District 99 (Democratic Party)	Dem - State House District 99
 CandidateContest	GA House District 99 (Democratic Party)	Dem - State House District 99/Estatal ante la Asamblea General Dist 99 (Democratic Party)
-CandidateContest	GA House District 99 (Democratic Party)	Dem - State Representative, District 9
+CandidateContest	GA House District 99 (Democratic Party)	Dem - State Representative, District 99
 CandidateContest	GA House District 100 (Democratic Party)	Dem - State House Dist 100
 CandidateContest	GA House District 100 (Democratic Party)	Dem - State House District 100
 CandidateContest	GA House District 100 (Democratic Party)	Dem - State House District 100/Estatal ante la Asamblea General Dist 100 (Democratic Party)

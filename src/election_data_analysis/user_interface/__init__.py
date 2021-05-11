@@ -1,4 +1,4 @@
-from configparser import ConfigParser, MissingSectionHeaderError
+from configparser import ConfigParser, MissingSectionHeaderError, DuplicateOptionError
 from election_data_analysis import special_formats as sf
 from election_data_analysis import database as db
 from election_data_analysis import munge as m
@@ -769,6 +769,8 @@ def get_parameters(
     except (KeyError, MissingSectionHeaderError) as ke:
         err = add_new_error(err, "ini", param_file, f"Missing header: {ke}")
         return d, err
+    except DuplicateOptionError as doe:
+        err = add_new_error(err, "ini", param_file, f"Something is defined twice: {doe}")
 
     # read required info
     missing_required_params = list()
@@ -1030,13 +1032,15 @@ def run_tests(
     # run pytest
 
     for (election, juris) in election_jurisdiction_list:
-        r = -1
         # run tests
         e_system = jm.system_name_from_true_name(election)
         j_system = jm.system_name_from_true_name(juris)
         test_file = os.path.join(
             test_dir, f"{j_system}/test_{j_system}_{e_system}.py"
         )
+        if not os.path.isfile(test_file):
+            failures[f"{juris};{election}"] = f"No test file found: {test_file}"
+            continue
         cmd = f"pytest --dbname {dbname} {test_file}"
         if report_dir:
             Path(report_dir).mkdir(exist_ok=True, parents=True)
@@ -1044,7 +1048,7 @@ def run_tests(
             cmd = f"{cmd} > {report_file}"
         r = os.system(cmd)
         if r != 0:
-            failures[f"{juris};{election}"] = "all did not pass (or no test file found)"
+            failures[f"{juris};{election}"] = "At least one test failed"
 
     return failures
 
@@ -1183,19 +1187,17 @@ def reload_juris_election(
     )
     add_err = dl.add_totals_if_missing(election_name, juris_name)
     if add_err:
-        no_errors = False
         err = consolidate_errors([err, add_err])
     else:
         # run test files on temp db
-        _, failed_tests = run_tests(
+        failed_tests = run_tests(
             test_dir,
             dl.d["dbname"],
             election_jurisdiction_list=[(election_name, juris_name)],
             report_dir=report_dir,
             file_prefix="temp_db_"
         )
-        if failed_tests != 0:
-            no_errors = False
+        if failed_tests:
             print(
                 f"{juris_name} {election_name}: No old data removed and no new data loaded because of failed tests:\n{failed_tests}"
             )

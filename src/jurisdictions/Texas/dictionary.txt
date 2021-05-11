@@ -3487,7 +3487,6 @@ CandidateContest	US House TX District 33	U. S. Representative District 33
 CandidateContest	US House TX District 34	U. S. Representative District 34
 CandidateContest	US House TX District 35	U. S. Representative District 35
 CandidateContest	US House TX District 36	U. S. Representative District 36
-CandidateContest	US President (TX)	PRESIDENT/VICE-PRESIDENT
 CandidateContest	US Senate TX	U. S. SENATOR
 CandidateContest	US House TX District 1	U. S. REPRESENTATIVE DISTRICT 1
 CandidateContest	US House TX District 2	U. S. REPRESENTATIVE DISTRICT 2

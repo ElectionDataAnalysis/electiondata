@@ -54,7 +54,7 @@ CountItemType=<count_header_0>
 #
 
 # Values to ignore (optional) #
-#[ignore]
+[ignore]
 ## E.g: Candidate=Total Votes Cast,Registered Voters ##
 ReportingUnit=Presidential
 

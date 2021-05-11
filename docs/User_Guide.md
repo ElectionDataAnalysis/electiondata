@@ -452,6 +452,8 @@ To unload existing data for a given jurisdiction and a given election -- or more
 
 where `test_dir` is the directory holding the tests to perform on the data before upload. For example, `test_dir` might be the repository's `tests` directory. This routine will move any files associated with unloaded data to the directory specified in the optional `unloaded_dir` in `run_time.ini`.
 
+Warning: this routine tests the new data before unloading the existing data. The convention is that the test is in the `tests` subdirectory of the code repository, named for the election and jurisdiction separated by underscore (e.g. `test_Georgia_2020-General.py`). Spaces in the name of the jurisdiction or election are replaced by hyphens (e.g. `test_North-Carolina_2018-Primary.py`). If there is no appropriately test named test file, or if any of the tests fails, the unloading and reloading will fail.
+
 ## Testing
 Tests to ascertain that data loaded correctly are in the [tests](../tests) file tree. The repository has a full set of tests for the 2020 General Election. There are also test templates, in the [tests/20xx_test_templates](../tests/20xx_test_templates) folder. Naming and location of the tests matter, so if you are loading new data you will want to create a new test. Put the test in a directory named for the jurisdiction, and name the test `test_<jurisdiction>_<election>.py` (replacing any spaces with hyphens). For example, the test for South Carolina's 2020 General election results is [tests/South-Carolina/test_South-Carolina_2020-General.py](../tests/South-Carolina/test_South-Carolina_2020-General.py). The test template files contain instructions for customizing to a particular jurisdiction and election.
 
