@@ -15,7 +15,7 @@ import election_data_analysis as e
 
 # # # constants - CHANGE THESE!! - use internal db names
 election = "2020 General"
-jurisdiction = "Puerto-Rico"
+jurisdiction = "Puerto Rico"
 abbr = "PR"
 total_pres_votes = -1  # total of all votes for US President
 total_gov_votes = 1235521  # total of all votes for PR Governor

@@ -595,20 +595,21 @@ class DataLoader:
             err = ui.consolidate_errors([err, new_err])
             success[f"{election};{jurisdiction}"] = success_list
 
-        #  report munger, jurisdiction and file errors & warnings
         err = ui.report(
             err,
             report_dir,
             key_list=[
                 "munger",
-                "jurisdiction",
-                "file",
                 "warn-munger",
+                "jurisdiction",
                 "warn-jurisdiction",
+                "file",
                 "warn-file",
                 "ini",
+                "warn-ini"
             ],
         )
+        #  report munger, jurisdiction and file errors & warnings
 
         # report remaining errors
         ui.report(err, report_dir, file_prefix="system")

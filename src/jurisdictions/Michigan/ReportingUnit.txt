@@ -5538,8 +5538,8 @@ Michigan;Wayne County;LIVONIA CITY;Ward 0	ward
 Michigan;Wayne County;LIVONIA CITY	city
 Michigan;Wayne County;LINCOLN PARK CITY;Ward 0	ward
 Michigan;Wayne County;LINCOLN PARK CITY	city
-Michigan;Wayne County;INKSTER CITY;Ward 5
-Michigan;Wayne County;INKSTER CITY;Ward 3
+Michigan;Wayne County;INKSTER CITY;Ward 5	ward
+Michigan;Wayne County;INKSTER CITY;Ward 3	ward
 Michigan;Wayne County;INKSTER CITY;Ward 1	ward
 Michigan;Wayne County;INKSTER CITY	city
 Michigan;Wayne County;HURON TOWNSHIP;Ward 0	ward
@@ -5587,7 +5587,7 @@ Michigan;Wayne County;ALLEN PARK CITY	city
 Michigan;Washtenaw County;Ward 0	ward
 Michigan;Washtenaw County;YPSILANTI TOWNSHIP;Ward 0	ward
 Michigan;Washtenaw County;YPSILANTI TOWNSHIP	township
-Michigan;Washtenaw County;YPSILANTI CITY;Ward 2
+Michigan;Washtenaw County;YPSILANTI CITY;Ward 2	ward
 Michigan;Washtenaw County;YPSILANTI CITY;Ward 1	ward
 Michigan;Washtenaw County;YPSILANTI CITY	city
 Michigan;Washtenaw County;YORK TOWNSHIP;Ward 0	ward
@@ -5637,8 +5637,8 @@ Michigan;Washtenaw County;AUGUSTA TOWNSHIP;Ward 0	ward
 Michigan;Washtenaw County;AUGUSTA TOWNSHIP	township
 Michigan;Washtenaw County;ANN ARBOR TOWNSHIP;Ward 0	ward
 Michigan;Washtenaw County;ANN ARBOR TOWNSHIP	township
-Michigan;Washtenaw County;ANN ARBOR CITY;Ward 4
-Michigan;Washtenaw County;ANN ARBOR CITY;Ward 2
+Michigan;Washtenaw County;ANN ARBOR CITY;Ward 4	ward
+Michigan;Washtenaw County;ANN ARBOR CITY;Ward 2	ward
 Michigan;Washtenaw County;ANN ARBOR CITY;Ward 1	ward
 Michigan;Washtenaw County;ANN ARBOR CITY	city
 Michigan;Van Buren County;Ward 0	ward
@@ -5646,7 +5646,7 @@ Michigan;Van Buren County;WAVERLY TOWNSHIP;Ward 0	ward
 Michigan;Van Buren County;WAVERLY TOWNSHIP	township
 Michigan;Van Buren County;SOUTH HAVEN TOWNSHIP;Ward 0	ward
 Michigan;Van Buren County;SOUTH HAVEN TOWNSHIP	township
-Michigan;Van Buren County;SOUTH HAVEN CITY;Ward 2
+Michigan;Van Buren County;SOUTH HAVEN CITY;Ward 2	ward
 Michigan;Van Buren County;SOUTH HAVEN CITY;Ward 1	ward
 Michigan;Van Buren County;SOUTH HAVEN CITY	city
 Michigan;Van Buren County;PORTER TOWNSHIP;Ward 0	ward
@@ -5856,7 +5856,7 @@ Michigan;Shiawassee County;PERRY CITY;Ward 0	ward
 Michigan;Shiawassee County;PERRY CITY	city
 Michigan;Shiawassee County;OWOSSO TOWNSHIP;Ward 0	ward
 Michigan;Shiawassee County;OWOSSO TOWNSHIP	township
-Michigan;Shiawassee County;OWOSSO CITY;Ward 2
+Michigan;Shiawassee County;OWOSSO CITY;Ward 2	ward
 Michigan;Shiawassee County;OWOSSO CITY;Ward 1	ward
 Michigan;Shiawassee County;OWOSSO CITY	city
 Michigan;Shiawassee County;NEW HAVEN TOWNSHIP;Ward 0	ward
@@ -6099,13 +6099,13 @@ Michigan;Ottawa County;OLIVE TOWNSHIP;Ward 0	ward
 Michigan;Ottawa County;OLIVE TOWNSHIP	township
 Michigan;Ottawa County;JAMESTOWN TOWNSHIP;Ward 0	ward
 Michigan;Ottawa County;JAMESTOWN TOWNSHIP	township
-Michigan;Ottawa County;HUDSONVILLE CITY;Ward 2
+Michigan;Ottawa County;HUDSONVILLE CITY;Ward 2	ward
 Michigan;Ottawa County;HUDSONVILLE CITY;Ward 1	ward
 Michigan;Ottawa County;HUDSONVILLE CITY	city
 Michigan;Ottawa County;HOLLAND TOWNSHIP;Ward 0	ward
 Michigan;Ottawa County;HOLLAND TOWNSHIP	township
-Michigan;Ottawa County;HOLLAND CITY;Ward 4
-Michigan;Ottawa County;HOLLAND CITY;Ward 2
+Michigan;Ottawa County;HOLLAND CITY;Ward 4	ward
+Michigan;Ottawa County;HOLLAND CITY;Ward 2	ward
 Michigan;Ottawa County;HOLLAND CITY;Ward 1	ward
 Michigan;Ottawa County;HOLLAND CITY	city
 Michigan;Ottawa County;GRAND HAVEN TOWNSHIP;Ward 0	ward
@@ -6132,7 +6132,7 @@ Michigan;Otsego County;LIVINGSTON TOWNSHIP;Ward 0	ward
 Michigan;Otsego County;LIVINGSTON TOWNSHIP	township
 Michigan;Otsego County;HAYES TOWNSHIP;Ward 0	ward
 Michigan;Otsego County;HAYES TOWNSHIP	township
-Michigan;Otsego County;GAYLORD CITY;Ward 2
+Michigan;Otsego County;GAYLORD CITY;Ward 2	ward
 Michigan;Otsego County;GAYLORD CITY;Ward 1	ward
 Michigan;Otsego County;GAYLORD CITY	city
 Michigan;Otsego County;ELMIRA TOWNSHIP;Ward 0	ward
@@ -6224,7 +6224,7 @@ Michigan;Ontonagon County;BERGLAND TOWNSHIP	township
 Michigan;Ogemaw County;Ward 0	ward
 Michigan;Ogemaw County;WEST BRANCH TOWNSHIP;Ward 0	ward
 Michigan;Ogemaw County;WEST BRANCH TOWNSHIP	township
-Michigan;Ogemaw County;WEST BRANCH CITY;Ward 2
+Michigan;Ogemaw County;WEST BRANCH CITY;Ward 2	ward
 Michigan;Ogemaw County;WEST BRANCH CITY;Ward 1	ward
 Michigan;Ogemaw County;WEST BRANCH CITY	city
 Michigan;Ogemaw County;ROSE TOWNSHIP;Ward 0	ward
@@ -6323,9 +6323,9 @@ Michigan;Oakland County;ROCHESTER HILLS CITY;Ward 0	ward
 Michigan;Oakland County;ROCHESTER HILLS CITY	city
 Michigan;Oakland County;ROCHESTER CITY;Ward 0	ward
 Michigan;Oakland County;ROCHESTER CITY	city
-Michigan;Oakland County;PONTIAC CITY;Ward 6
-Michigan;Oakland County;PONTIAC CITY;Ward 4
-Michigan;Oakland County;PONTIAC CITY;Ward 2
+Michigan;Oakland County;PONTIAC CITY;Ward 6	ward
+Michigan;Oakland County;PONTIAC CITY;Ward 4	ward
+Michigan;Oakland County;PONTIAC CITY;Ward 2	ward
 Michigan;Oakland County;PONTIAC CITY;Ward 1	ward
 Michigan;Oakland County;PONTIAC CITY;Ward 0	ward
 Michigan;Oakland County;PONTIAC CITY	city
@@ -6478,7 +6478,7 @@ Michigan;Muskegon County;MUSKEGON TOWNSHIP;Ward 0	ward
 Michigan;Muskegon County;MUSKEGON TOWNSHIP	township
 Michigan;Muskegon County;MUSKEGON HEIGHTS CITY;Ward 0	ward
 Michigan;Muskegon County;MUSKEGON HEIGHTS CITY	city
-Michigan;Muskegon County;MUSKEGON CITY;Ward 3
+Michigan;Muskegon County;MUSKEGON CITY;Ward 3	ward
 Michigan;Muskegon County;MUSKEGON CITY;Ward 1	ward
 Michigan;Muskegon County;MUSKEGON CITY	city
 Michigan;Muskegon County;MOORLAND TOWNSHIP;Ward 0	ward
@@ -6653,8 +6653,8 @@ Michigan;Midland County;MILLS TOWNSHIP;Ward 0	ward
 Michigan;Midland County;MILLS TOWNSHIP	township
 Michigan;Midland County;MIDLAND TOWNSHIP;Ward 0	ward
 Michigan;Midland County;MIDLAND TOWNSHIP	township
-Michigan;Midland County;MIDLAND CITY;Ward 4
-Michigan;Midland County;MIDLAND CITY;Ward 2
+Michigan;Midland County;MIDLAND CITY;Ward 4	ward
+Michigan;Midland County;MIDLAND CITY;Ward 2	ward
 Michigan;Midland County;MIDLAND CITY;Ward 1	ward
 Michigan;Midland County;MIDLAND CITY	city
 Michigan;Midland County;LINCOLN TOWNSHIP;Ward 0	ward
@@ -6765,8 +6765,8 @@ Michigan;Mason County;PERE MARQUETTE TOWNSHIP;Ward 0	ward
 Michigan;Mason County;PERE MARQUETTE TOWNSHIP	township
 Michigan;Mason County;MEADE TOWNSHIP;Ward 0	ward
 Michigan;Mason County;MEADE TOWNSHIP	township
-Michigan;Mason County;LUDINGTON CITY;Ward 5
-Michigan;Mason County;LUDINGTON CITY;Ward 3
+Michigan;Mason County;LUDINGTON CITY;Ward 5	ward
+Michigan;Mason County;LUDINGTON CITY;Ward 3	ward
 Michigan;Mason County;LUDINGTON CITY;Ward 1	ward
 Michigan;Mason County;LUDINGTON CITY	city
 Michigan;Mason County;LOGAN TOWNSHIP;Ward 0	ward
@@ -6864,8 +6864,8 @@ Michigan;Manistee County;ARCADIA TOWNSHIP	township
 Michigan;Macomb County;Ward 0	ward
 Michigan;Macomb County;WASHINGTON TOWNSHIP;Ward 0	ward
 Michigan;Macomb County;WASHINGTON TOWNSHIP	township
-Michigan;Macomb County;WARREN CITY;Ward 4
-Michigan;Macomb County;WARREN CITY;Ward 2
+Michigan;Macomb County;WARREN CITY;Ward 4	ward
+Michigan;Macomb County;WARREN CITY;Ward 2	ward
 Michigan;Macomb County;WARREN CITY;Ward 1	ward
 Michigan;Macomb County;WARREN CITY	city
 Michigan;Macomb County;UTICA CITY;Ward 0	ward
@@ -7147,10 +7147,10 @@ Michigan;Keweenaw County;EAGLE HARBOR TOWNSHIP	township
 Michigan;Keweenaw County;ALLOUEZ TOWNSHIP;Ward 0	ward
 Michigan;Keweenaw County;ALLOUEZ TOWNSHIP	township
 Michigan;Kent County;Ward 0	ward
-Michigan;Kent County;WYOMING CITY;Ward 3
+Michigan;Kent County;WYOMING CITY;Ward 3	ward
 Michigan;Kent County;WYOMING CITY;Ward 1	ward
 Michigan;Kent County;WYOMING CITY	city
-Michigan;Kent County;WALKER CITY;Ward 2
+Michigan;Kent County;WALKER CITY;Ward 2	ward
 Michigan;Kent County;WALKER CITY;Ward 1	ward
 Michigan;Kent County;WALKER CITY	city
 Michigan;Kent County;VERGENNES TOWNSHIP;Ward 0	ward
@@ -7184,12 +7184,12 @@ Michigan;Kent County;GRANDVILLE CITY;Ward 0	ward
 Michigan;Kent County;GRANDVILLE CITY	city
 Michigan;Kent County;GRAND RAPIDS TOWNSHIP;Ward 0	ward
 Michigan;Kent County;GRAND RAPIDS TOWNSHIP	township
-Michigan;Kent County;GRAND RAPIDS CITY;Ward 2
+Michigan;Kent County;GRAND RAPIDS CITY;Ward 2	ward
 Michigan;Kent County;GRAND RAPIDS CITY;Ward 1	ward
 Michigan;Kent County;GRAND RAPIDS CITY	city
 Michigan;Kent County;GAINES TOWNSHIP;Ward 0	ward
 Michigan;Kent County;GAINES TOWNSHIP	township
-Michigan;Kent County;EAST GRAND RAPIDS CITY;Ward 2
+Michigan;Kent County;EAST GRAND RAPIDS CITY;Ward 2	ward
 Michigan;Kent County;EAST GRAND RAPIDS CITY;Ward 1	ward
 Michigan;Kent County;EAST GRAND RAPIDS CITY	city
 Michigan;Kent County;COURTLAND TOWNSHIP;Ward 0	ward
@@ -7302,8 +7302,8 @@ Michigan;Jackson County;LIBERTY TOWNSHIP;Ward 0	ward
 Michigan;Jackson County;LIBERTY TOWNSHIP	township
 Michigan;Jackson County;LEONI TOWNSHIP;Ward 0	ward
 Michigan;Jackson County;LEONI TOWNSHIP	township
-Michigan;Jackson County;JACKSON CITY;Ward 5
-Michigan;Jackson County;JACKSON CITY;Ward 3
+Michigan;Jackson County;JACKSON CITY;Ward 5	ward
+Michigan;Jackson County;JACKSON CITY;Ward 3	ward
 Michigan;Jackson County;JACKSON CITY;Ward 1	ward
 Michigan;Jackson County;JACKSON CITY	city
 Michigan;Jackson County;HENRIETTA TOWNSHIP;Ward 0	ward
@@ -7431,7 +7431,7 @@ Michigan;Ionia County;KEENE TOWNSHIP;Ward 0	ward
 Michigan;Ionia County;KEENE TOWNSHIP	township
 Michigan;Ionia County;IONIA TOWNSHIP;Ward 0	ward
 Michigan;Ionia County;IONIA TOWNSHIP	township
-Michigan;Ionia County;IONIA CITY;Ward 3
+Michigan;Ionia County;IONIA CITY;Ward 3	ward
 Michigan;Ionia County;IONIA CITY;Ward 1	ward
 Michigan;Ionia County;IONIA CITY	city
 Michigan;Ionia County;EASTON TOWNSHIP;Ward 0	ward
@@ -7475,7 +7475,7 @@ Michigan;Ingham County;LEROY TOWNSHIP;Ward 0	ward
 Michigan;Ingham County;LEROY TOWNSHIP	township
 Michigan;Ingham County;LANSING TOWNSHIP;Ward 0	ward
 Michigan;Ingham County;LANSING TOWNSHIP	township
-Michigan;Ingham County;LANSING CITY;Ward 3
+Michigan;Ingham County;LANSING CITY;Ward 3	ward
 Michigan;Ingham County;LANSING CITY;Ward 1	ward
 Michigan;Ingham County;LANSING CITY	city
 Michigan;Ingham County;INGHAM TOWNSHIP;Ward 0	ward
@@ -7617,7 +7617,7 @@ Michigan;Hillsdale County;JEFFERSON TOWNSHIP;Ward 0	ward
 Michigan;Hillsdale County;JEFFERSON TOWNSHIP	township
 Michigan;Hillsdale County;HILLSDALE TOWNSHIP;Ward 0	ward
 Michigan;Hillsdale County;HILLSDALE TOWNSHIP	township
-Michigan;Hillsdale County;HILLSDALE CITY;Ward 3
+Michigan;Hillsdale County;HILLSDALE CITY;Ward 3	ward
 Michigan;Hillsdale County;HILLSDALE CITY;Ward 1	ward
 Michigan;Hillsdale County;HILLSDALE CITY	city
 Michigan;Hillsdale County;FAYETTE TOWNSHIP;Ward 0	ward
@@ -7761,10 +7761,10 @@ Michigan;Genesee County;FLUSHING CITY;Ward 0	ward
 Michigan;Genesee County;FLUSHING CITY	city
 Michigan;Genesee County;FLINT TOWNSHIP;Ward 0	ward
 Michigan;Genesee County;FLINT TOWNSHIP	township
-Michigan;Genesee County;FLINT CITY;Ward 8
-Michigan;Genesee County;FLINT CITY;Ward 6
-Michigan;Genesee County;FLINT CITY;Ward 4
-Michigan;Genesee County;FLINT CITY;Ward 2
+Michigan;Genesee County;FLINT CITY;Ward 8	ward
+Michigan;Genesee County;FLINT CITY;Ward 6	ward
+Michigan;Genesee County;FLINT CITY;Ward 4	ward
+Michigan;Genesee County;FLINT CITY;Ward 2	ward
 Michigan;Genesee County;FLINT CITY;Ward 1	ward
 Michigan;Genesee County;FLINT CITY	city
 Michigan;Genesee County;FENTON TOWNSHIP;Ward 0	ward
@@ -8144,7 +8144,7 @@ Michigan;Charlevoix County;EAST JORDAN CITY;Ward 0	ward
 Michigan;Charlevoix County;EAST JORDAN CITY	city
 Michigan;Charlevoix County;CHARLEVOIX TOWNSHIP;Ward 0	ward
 Michigan;Charlevoix County;CHARLEVOIX TOWNSHIP	township
-Michigan;Charlevoix County;CHARLEVOIX CITY;Ward 2
+Michigan;Charlevoix County;CHARLEVOIX CITY;Ward 2	ward
 Michigan;Charlevoix County;CHARLEVOIX CITY;Ward 1	ward
 Michigan;Charlevoix County;CHARLEVOIX CITY	city
 Michigan;Charlevoix County;CHANDLER TOWNSHIP;Ward 0	ward
@@ -8254,7 +8254,7 @@ Michigan;Branch County;GILEAD TOWNSHIP;Ward 0	ward
 Michigan;Branch County;GILEAD TOWNSHIP	township
 Michigan;Branch County;COLDWATER TOWNSHIP;Ward 0	ward
 Michigan;Branch County;COLDWATER TOWNSHIP	township
-Michigan;Branch County;COLDWATER CITY;Ward 3
+Michigan;Branch County;COLDWATER CITY;Ward 3	ward
 Michigan;Branch County;COLDWATER CITY;Ward 1	ward
 Michigan;Branch County;COLDWATER CITY	city
 Michigan;Branch County;CALIFORNIA TOWNSHIP;Ward 0	ward
@@ -8392,10 +8392,10 @@ Michigan;Bay County;ESSEXVILLE CITY;Ward 0	ward
 Michigan;Bay County;ESSEXVILLE CITY	city
 Michigan;Bay County;BEAVER TOWNSHIP;Ward 0	ward
 Michigan;Bay County;BEAVER TOWNSHIP	township
-Michigan;Bay County;BAY CITY;Ward 8
-Michigan;Bay County;BAY CITY;Ward 6
-Michigan;Bay County;BAY CITY;Ward 4
-Michigan;Bay County;BAY CITY;Ward 2
+Michigan;Bay County;BAY CITY;Ward 8	ward
+Michigan;Bay County;BAY CITY;Ward 6	ward
+Michigan;Bay County;BAY CITY;Ward 4	ward
+Michigan;Bay County;BAY CITY;Ward 2	ward
 Michigan;Bay County;BAY CITY;Ward 1	ward
 Michigan;Bay County;BAY CITY	city
 Michigan;Bay County;BANGOR TOWNSHIP;Ward 0	ward
@@ -8569,7 +8569,7 @@ Michigan;Allegan County;LAKETOWN TOWNSHIP;Ward 0	ward
 Michigan;Allegan County;LAKETOWN TOWNSHIP	township
 Michigan;Allegan County;HOPKINS TOWNSHIP;Ward 0	ward
 Michigan;Allegan County;HOPKINS TOWNSHIP	township
-Michigan;Allegan County;HOLLAND CITY;Ward 4
+Michigan;Allegan County;HOLLAND CITY;Ward 4	ward
 Michigan;Allegan County;HOLLAND CITY	city
 Michigan;Allegan County;HEATH TOWNSHIP;Ward 0	ward
 Michigan;Allegan County;HEATH TOWNSHIP	township
@@ -8638,3 +8638,59 @@ Michigan;Alcona County;CALEDONIA TOWNSHIP;Ward 0	ward
 Michigan;Alcona County;CALEDONIA TOWNSHIP	township
 Michigan;Alcona County;ALCONA TOWNSHIP;Ward 0	ward
 Michigan;Alcona County;ALCONA TOWNSHIP	township
+Michigan;Wayne County;INKSTER CITY;Ward 6	ward
+Michigan;Wayne County;INKSTER CITY;Ward 4	ward
+Michigan;Wayne County;INKSTER CITY;Ward 2	ward
+Michigan;Washtenaw County;YPSILANTI CITY;Ward 3	ward
+Michigan;Washtenaw County;ANN ARBOR CITY;Ward 5	ward
+Michigan;Washtenaw County;ANN ARBOR CITY;Ward 3	ward
+Michigan;Van Buren County;SOUTH HAVEN CITY;Ward 3	ward
+Michigan;Shiawassee County;OWOSSO CITY;Ward 6	ward
+Michigan;Ottawa County;HUDSONVILLE CITY;Ward 3	ward
+Michigan;Ottawa County;HOLLAND CITY;Ward 6	ward
+Michigan;Ottawa County;HOLLAND CITY;Ward 3	ward
+Michigan;Otsego County;GAYLORD CITY;Ward 3	ward
+Michigan;Ogemaw County;WEST BRANCH CITY;Ward 3	ward
+Michigan;Oakland County;PONTIAC CITY;Ward 7	ward
+Michigan;Oakland County;PONTIAC CITY;Ward 5	ward
+Michigan;Oakland County;PONTIAC CITY;Ward 3	ward
+Michigan;Muskegon County;NORTON SHORES CITY;Ward 2	ward
+Michigan;Muskegon County;MUSKEGON CITY;Ward 4	ward
+Michigan;Muskegon County;MUSKEGON CITY;Ward 2	ward
+Michigan;Midland County;MIDLAND CITY;Ward 5	ward
+Michigan;Midland County;MIDLAND CITY;Ward 3	ward
+Michigan;Mason County;SCOTTVILLE CITY;Ward 2	ward
+Michigan;Mason County;LUDINGTON CITY;Ward 6	ward
+Michigan;Mason County;LUDINGTON CITY;Ward 4	ward
+Michigan;Mason County;LUDINGTON CITY;Ward 2	ward
+Michigan;Macomb County;WARREN CITY;Ward 5	ward
+Michigan;Macomb County;WARREN CITY;Ward 3	ward
+Michigan;Kent County;WYOMING CITY;Ward 2	ward
+Michigan;Kent County;WALKER CITY;Ward 3	ward
+Michigan;Kent County;KENTWOOD CITY;Ward 2	ward
+Michigan;Kent County;GRAND RAPIDS CITY;Ward 3	ward
+Michigan;Kent County;EAST GRAND RAPIDS CITY;Ward 3	ward
+Michigan;Jackson County;JACKSON CITY;Ward 6	ward
+Michigan;Jackson County;JACKSON CITY;Ward 4	ward
+Michigan;Jackson County;JACKSON CITY;Ward 2	ward
+Michigan;Ionia County;IONIA CITY;Ward 4	ward
+Michigan;Ionia County;IONIA CITY;Ward 2	ward
+Michigan;Ingham County;LANSING CITY;Ward 4	ward
+Michigan;Ingham County;LANSING CITY;Ward 2	ward
+Michigan;Hillsdale County;HILLSDALE CITY;Ward 4	ward
+Michigan;Hillsdale County;HILLSDALE CITY;Ward 2	ward
+Michigan;Genesee County;FLINT CITY;Ward 9	ward
+Michigan;Genesee County;FLINT CITY;Ward 7	ward
+Michigan;Genesee County;FLINT CITY;Ward 5	ward
+Michigan;Genesee County;FLINT CITY;Ward 3	ward
+Michigan;Eaton County;LANSING CITY;Ward 3	ward
+Michigan;Eaton County;CHARLOTTE CITY;Ward 2	ward
+Michigan;Charlevoix County;CHARLEVOIX CITY;Ward 3	ward
+Michigan;Branch County;COLDWATER CITY;Ward 4	ward
+Michigan;Branch County;COLDWATER CITY;Ward 2	ward
+Michigan;Bay County;BAY CITY;Ward 9	ward
+Michigan;Bay County;BAY CITY;Ward 7	ward
+Michigan;Bay County;BAY CITY;Ward 5	ward
+Michigan;Bay County;BAY CITY;Ward 3	ward
+Michigan;Allegan County;HOLLAND CITY;Ward 5	ward
+Michigan;Alcona County;Ward 0	ward
