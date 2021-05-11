@@ -6282,7 +6282,6 @@ Candidate	Joseph R. Biden	Joseph R. Biden
 Candidate	Michael R. Bloomberg	Michael R. Bloomberg
 Candidate	Cory Booker	Cory Booker
 Candidate	Pete Buttigieg	Pete Buttigieg
-Candidate	JuliãÂÃÂN Castro	JuliãÂÃÂN Castro
 Candidate	Roque 'Rocky' De La Fuente	"Roque ""Rocky"" De La Fuente"
 Candidate	John K. Delaney	John K. Delaney
 Candidate	Tulsi Gabbard	Tulsi Gabbard
@@ -6404,14 +6403,11 @@ Candidate	Borris L Miles	Borris L Miles
 Candidate	Melissa Morris	Melissa Morris
 Candidate	Michael Antalan	Michael Antalan
 Candidate	Freddy Ramirez	Freddy Ramirez
-Candidate	Xochil PeãÂÃÂA Rodriguez	Xochil PeãÂÃÂA Rodriguez
 Candidate	Robert Vick	Robert Vick
 Candidate	Clayton Tucker	Clayton Tucker
-Candidate	JoseÌ MeneÌndez	JosãÂÃÂ MenãÂÃÂNdez
 Candidate	Ruben Cortez	Ruben Cortez
 Candidate	Eddie Lucio Jr	Eddie Lucio Jr
 Candidate	Sara Stapleton Barrera	Sara Stapleton Barrera
-Candidate	CãÂÃÂSar J Blanco	CãÂÃÂSar J Blanco
 Candidate	Martin Shupp	Martin Shupp
 Candidate	Lawyanda Prince	Lawyanda Prince
 Candidate	Julie Gobble	Julie Gobble
@@ -6598,17 +6594,14 @@ Candidate	Paty Baca	Paty Baca
 Candidate	Ruben Nunez	Ruben Nunez
 Candidate	Roque 'Rocky' De La Fuente Guerra	Roque 'Rocky' De La Fuente Guerra
 Candidate	Robert 'Zack' Rader	Robert 'Zack' Rader
-Candidate	RenãÂE Swann	RenãÂE Swann
 Candidate	Peter P. 'Pete' Flores	Peter P. 'Pete' Flores
 Candidate	Kent 'Bud' Wymore	Kent 'Bud' Wymore
 Candidate	Dwayne 'Doc' Collins	Dwayne 'Doc' Collins
 Candidate	Charles 'Doc' Anderson	Charles 'Doc' Anderson
 Candidate	Cecil B. 'Burt' Jones	Cecil B. 'Burt' Jones
 Candidate	Catherine 'I Swear' Carr	Catherine 'I Swear' Carr
-Candidate	Asusena ResãÂNdiz	Asusena ResãÂNdiz
 Candidate	AlãÂA Ureste	AlãÂA Ureste
 Candidate	'Guillermo' William Hayward	'Guillermo' William Hayward
-Candidate	Xochil PeãÂA Rodriguez	Xochil PeãÂA Rodriguez
 Candidate	Shenita 'Shae' Cleveland	Shenita 'Shae' Cleveland
 Candidate	Rosalinda 'Rosey' Ramos Abuabara	Rosalinda 'Rosey' Ramos Abuabara
 Candidate	Roque 'Rocky' De La Fuente	Roque 'Rocky' De La Fuente
@@ -6617,11 +6610,9 @@ Candidate	Ricardo 'Rick' De La Fuente	Ricardo 'Rick' De La Fuente
 Candidate	Mary 'Mj' Hegar	Mary 'Mj' Hegar
 Candidate	Likeithia 'Keke' Williams	Likeithia 'Keke' Williams
 Candidate	L. 'Sarah' Demerchant	L. 'Sarah' Demerchant
-Candidate	JuliãÂN Castro	JuliãÂN Castro
 Candidate	Juan 'Chuy' Hinojosa	Juan 'Chuy' Hinojosa
 Candidate	JoseÌ MeneÌndez	JosãÂ MenãÂNdez
 Candidate	Elizabeth 'Liz' Campos	Elizabeth 'Liz' Campos
-Candidate	CãÂSar J Blanco	CãÂSar J Blanco
 Candidate	Armando 'Mando' Martinez	Armando 'Mando' Martinez
 Candidate	Annie 'MamãÂ' Garcia	Annie 'MamãÂ' Garcia
 CountItemType	total	total
@@ -6669,7 +6660,6 @@ Candidate	Shawn Nicole Thierry	Shawn Nicole Thierry (I)
 Candidate	Shawn Kelly	Shawn Kelly
 Candidate	Shawn Huckabay	Shawn Huckabay
 Candidate	Shane D. Newsom	Shane D. Newsom
-Candidate	Sergio Muñoz, Jr.	Sergio Munoz Jr (I)
 Candidate	Senfronia Thompson	Senfronia Thompson (I)
 Candidate	Scott Sanford	Scott Sanford (I)
 Candidate	Sarah Davis	Sarah Davis (I)
@@ -6740,8 +6730,7 @@ Candidate	Justin Holland	Justin Holland (I)
 Candidate	Julie Johnson	Julie Johnson (I)
 Candidate	Julian Mardock	Julian Mardock
 Candidate	Judith Zaffirini	Judith Zaffirini (I)
-Candidate	Juan &Quot;Chuy&Quot; Hinojosa	Juan &Quot;Chuy&Quot; Hinojosa (I)
-Candidate	JoseÌ MeneÌndez	JoseãÂ MeneãÂNdez (I)
+Candidate	Juan 'Chuy' Hinojosa	Juan &Quot;Chuy&Quot; Hinojosa (I)
 Candidate	Joseph R. Biden	Joseph R. Biden/Kamala D. Harris
 Candidate	Joseph Leblanc Jr	Joseph Leblanc Jr
 Candidate	Jose R. Sosa	Jose R. Sosa
@@ -6882,12 +6871,10 @@ Candidate	Alex Dominguez	Alex Dominguez (I)
 Candidate	Al Green	Al Green (I)
 Candidate	Abram Loeb	Abram Loeb/Jennifer Jairala
 Candidate	Abel Herrero	Abel Herrero (I)
-Candidate	Julián Villarreal	JuliãN Villarreal
 Candidate	José Menéndez	José Menéndez
 Candidate	Jo Jorgensen	"Jo Jorgensen/Jeremy ""Spike"" Cohen"
 Candidate	César J Blanco	CãSar J Blanco
 Candidate	César J Blanco	CÃ©sar J Blanco
-Candidate	César J Blanco	CãÂSar J Blanco
 Candidate	César J Blanco	César J Blanco
 Candidate	Julián Castro	JuliÃ¡n Castro
 Candidate	Julián Castro	Julián Castro
@@ -6895,9 +6882,7 @@ Candidate	Xochil Peña Rodriguez	Xochil Peña Rodriguez
 Candidate	Annie 'Mamá' Garcia	Annie 'Mamã' Garcia
 Candidate	Renée Swann	Renée Swann
 Candidate	Renée Swann	RenÃÂ©e Swann
-Candidate	Renée Swann	RenãÂE Swann
 Candidate	Asusena Reséndiz	Asusena Reséndiz
-Candidate	Asusena Reséndiz	Asusena ResãÂNdiz
 Candidate	Asusena Reséndiz	Asusena ResÃÂ©ndiz
 Candidate	Alía Ureste	Alía Ureste
 Candidate	Alía Ureste	AlÃÂ­a Ureste
