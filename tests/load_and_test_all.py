@@ -169,18 +169,15 @@ def run2(
 
         # add any necessary totals
         for e, j in election_jurisdiction_list:
-            err_str = dl.add_totals_if_missing(e, j)
-            if err_str:
-                err = ui.add_new_error(
-                    err,
-                    "warn-system",
-                    f"Error adding total vote types for {e}, {j}: {err_str}",
-                )
+            add_err = dl.add_totals_if_missing(e, j)
+            if add_err:
+                err = ui.consolidate_errors([err, add_err])
 
         if ui.fatal_error(err):
             optional_remove(dl, "TestingData")
             return err
     loaded_ej_list = [k.split(";") for k in success.keys()]
+    report_dir = os.path.join(dl.d["reports_and_plots_dir"], f"tests_{ts}")
     results, _ = ui.run_tests(
         test_dir, dbname, election_jurisdiction_list=loaded_ej_list, report_dir=report_dir
     )

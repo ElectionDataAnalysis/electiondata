@@ -1039,12 +1039,13 @@ def run_tests(
         # run tests
         e_system = jm.system_name_from_true_name(election)
         j_system = jm.system_name_from_true_name(juris)
-        test_file = (
-            f"{j_system}/test_{j_system}_{e_system}.py"
+        test_file = os.path.join(
+            test_dir, f"{j_system}/test_{j_system}_{e_system}.py"
         )
         cmd = f"pytest --dbname {dbname} {test_file}"
         if report_dir:
-            report_file = os.path.join(report_dir, f'{j_system}_{e_system}.tests')
+            Path(report_dir).mkdir(exist_ok=True, parents=True)
+            report_file = os.path.join(report_dir, f'{j_system}_{e_system}.txt')
             cmd = f"{cmd} > {report_file}"
         r = os.system(cmd)
         if r != 0:

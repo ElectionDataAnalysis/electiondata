@@ -595,20 +595,20 @@ class DataLoader:
             err = ui.consolidate_errors([err, new_err])
             success[f"{election};{jurisdiction}"] = success_list
 
-            #  report munger, jurisdiction and file errors & warnings
-            err = ui.report(
-                err,
-                report_dir,
-                key_list=[
-                    "munger",
-                    "jurisdiction",
-                    "file",
-                    "warn-munger",
-                    "warn-jurisdiction",
-                    "warn-file",
-                    "ini",
-                ],
-            )
+        #  report munger, jurisdiction and file errors & warnings
+        err = ui.report(
+            err,
+            report_dir,
+            key_list=[
+                "munger",
+                "jurisdiction",
+                "file",
+                "warn-munger",
+                "warn-jurisdiction",
+                "warn-file",
+                "ini",
+            ],
+        )
 
         # report remaining errors
         ui.report(err, report_dir, file_prefix="system")
@@ -896,7 +896,12 @@ class DataLoader:
             self.session, election_id, jurisdiction_id, fields, aliases
         )
         if df.empty:
-            print(f"No data found for {election}, {jurisdiction}")
+            err = ui.add_new_error(
+                err,
+                "jurisdiction",
+                jurisdiction,
+                f"Could not add totals for {election} because no data was found"
+            )
         else:
             # find total records that are missing
             m_df = m.missing_total_counts(df, self.session)

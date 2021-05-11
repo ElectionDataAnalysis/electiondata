@@ -22,6 +22,8 @@ standard_juris_csv_reading_kwargs = {
     "encoding": default_juris_encoding,
     "quoting": csv.QUOTE_MINIMAL,
     "sep": "\t",
+    "keep_default_na": False,
+    "na_values": "",
 }
 
 
