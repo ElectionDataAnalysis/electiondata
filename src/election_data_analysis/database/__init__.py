@@ -501,7 +501,8 @@ def insert_to_cdf_db(
     element: str,
     sep: str = "\t",
     encoding: str = m.default_encoding,
-    timestamp=None,
+    timestamp: Optional[str] = None,
+    on_conflict: str = "NOTHING",
 ) -> Optional[str]:
     """Inserts any new records in <df> into <element>; if <element> has a timestamp column
     it must be specified in <timestamp>; <df> must have columns matching <element>,
@@ -601,15 +602,28 @@ def insert_to_cdf_db(
             cursor.execute(q_kludge)
         connection.commit()  # TODO when Selection_Id was in mixed_int, this emptied temp table, why?
 
+        # define update clause if necessary
+        name_field = get_name_field(element)
+        if on_conflict.upper() == "UPDATE":
+            conflict_action = sql.SQL("({name_field}) DO UPDATE SET").format(name_field=sql.Identifier(name_field))
+            update_list = [sql.SQL("{c} = EXCLUDED.{c}").format(c=sql.Identifier(col)) for col in temp_columns]
+            conflict_target = sql.SQL(",").join(update_list)
+
+        else:
+            conflict_action = sql.SQL("DO NOTHING")
+            conflict_target = sql.SQL("")
+
         # insert records from temp table into <element> table
-        q = sql.SQL(
-            "INSERT INTO {t}({fields}) SELECT * FROM {temp_table} ON CONFLICT DO NOTHING"
+        q_insert = sql.SQL(
+            "INSERT INTO {t}({fields}) SELECT * FROM {temp_table} ON CONFLICT {conflict_action} {conflict_target}"
         ).format(
             t=sql.Identifier(element),
             fields=sql.SQL(",").join([sql.Identifier(x) for x in temp_columns]),
             temp_table=sql.Identifier(temp_table),
+            conflict_action=conflict_action,
+            conflict_target=conflict_target
         )
-        cursor.execute(q)
+        cursor.execute(q_insert)
         connection.commit()
         error_str = None
     except Exception as e:
@@ -617,10 +631,10 @@ def insert_to_cdf_db(
         error_str = f"{e}"
 
     # remove temp table
-    q = sql.SQL("DROP TABLE IF EXISTS {temp_table}").format(
+    q_remove = sql.SQL("DROP TABLE IF EXISTS {temp_table}").format(
         temp_table=sql.Identifier(temp_table)
     )
-    cursor.execute(q)
+    cursor.execute(q_remove)
 
     if element == "ReportingUnit":
         # check get RUs not matched and process them
@@ -1734,3 +1748,7 @@ def get_vote_count_types(
     vct_set = get_vote_count_types_cursor(cursor, election, jurisdiction)
     connection.close()
     return vct_set
+
+
+
+

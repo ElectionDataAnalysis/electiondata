@@ -523,11 +523,14 @@ class DataLoader:
             jurisdictions = list(set(j for (e, j) in election_jurisdiction_list))
             jurisdictions.sort()
             for j in jurisdictions:
-                print(f"Loading/updating jurisdiction j to {self.session.bind}")
+                print(f"Loading/updating jurisdiction {j} to {self.session.bind}")
                 try:
-                    new_err = db.load_or_update_juris_to_db(
-                        j,
+                    new_err = jm.load_or_update_juris_to_db(
                         self.session,
+                        os.path.join(
+                            self.d["repository_content_root"], "jurisdictions", jm.system_name_from_true_name(j)
+                        ),
+                        j,
                     )
                     if new_err:
                         err = ui.consolidate_errors([err, new_err])
