@@ -939,7 +939,6 @@ def report(
         for k in key_list:
             remaining[k] = {}
     else:
-        print(f"No errors or warnings. Nothing written to {output_location}")
         remaining = None
 
     return remaining
@@ -1019,23 +1018,19 @@ def fatal_error(err, error_type_list=None, name_key_list=None) -> bool:
 
 
 def run_tests(
-    test_dir: str, dbname: str, election_jurisdiction_list: list, report_dir: Optional[str] = None
-) -> (dict, int):
-    """move to tests directory, run tests, move back
+    test_dir: str, dbname: str, election_jurisdiction_list: list,
+        report_dir: Optional[str] = None, file_prefix: str = "",
+) -> Dict[str, Any]:
+    """run tests from test_dir
     db_params must have host, user, pass, db_name.
-    test_param_file is a reference run_time.ini file"""
+    test_param_file is a reference run_time.ini file.
+    Returns dictionary of failures (keys are jurisdiction;election strings)"""
 
-    r = -1
-    # note current directory
-    original_dir = os.getcwd()
-
-    # move to tests directory
-    os.chdir(test_dir)
-
-    result = dict()  # initialize result report
+    failures = dict()  # initialize result report
     # run pytest
 
     for (election, juris) in election_jurisdiction_list:
+        r = -1
         # run tests
         e_system = jm.system_name_from_true_name(election)
         j_system = jm.system_name_from_true_name(juris)
@@ -1045,16 +1040,13 @@ def run_tests(
         cmd = f"pytest --dbname {dbname} {test_file}"
         if report_dir:
             Path(report_dir).mkdir(exist_ok=True, parents=True)
-            report_file = os.path.join(report_dir, f'{j_system}_{e_system}.txt')
+            report_file = os.path.join(report_dir, f'{file_prefix}{j_system}_{e_system}.txt')
             cmd = f"{cmd} > {report_file}"
         r = os.system(cmd)
         if r != 0:
-            result[test_file] = "all did not pass (or no test file found)"
+            failures[f"{juris};{election}"] = "all did not pass (or no test file found)"
 
-    # move back to original directory
-    os.chdir(original_dir)
-    # result is 0 if all tests pass, non-zero if something went wrong
-    return result, r
+    return failures
 
 
 def confirm_essential_info(
@@ -1154,13 +1146,13 @@ def reload_juris_election(
     test_dir: str,
     report_dir,
     rollup: bool = False,
-) -> bool:
+) -> Optional[dict]:
     """Loads and archives each results file in each direct subfolder of the results_dir
     named in ./run_time.ini -- provided there the results file is specified in a *.ini file in the
     corresponding subfolder of <content_root>/ini_files_for_results. <contest_root> is read from ./run_time.ini.
     """
     # initialize dataloader
-    error_boolean = True
+    err = None
     dl = e.DataLoader()
     db_params, _ = get_parameters(
         [
@@ -1189,20 +1181,21 @@ def reload_juris_election(
         rollup=rollup,
         election_jurisdiction_list=[(election_name, juris_name)],
     )
-    err_str = dl.add_totals_if_missing(election_name, juris_name)
-    if err_str:
-        error_boolean = False
-        print(f"Error while adding totals: {err_str}")
+    add_err = dl.add_totals_if_missing(election_name, juris_name)
+    if add_err:
+        no_errors = False
+        err = consolidate_errors([err, add_err])
     else:
         # run test files on temp db
         _, failed_tests = run_tests(
             test_dir,
             dl.d["dbname"],
             election_jurisdiction_list=[(election_name, juris_name)],
-            report_dir=report_dir
+            report_dir=report_dir,
+            file_prefix="temp_db_"
         )
         if failed_tests != 0:
-            error_boolean = False
+            no_errors = False
             print(
                 f"{juris_name} {election_name}: No old data removed and no new data loaded because of failed tests:\n{failed_tests}"
             )
@@ -1222,32 +1215,34 @@ def reload_juris_election(
                 election_jurisdiction_list=[(election_name, juris_name)],
             )
             if success:
-                live_err_str = dl.add_totals_if_missing(election_name, juris_name)
+                add_err = dl.add_totals_if_missing(election_name, juris_name)
+                if add_err:
+                    err = consolidate_errors([err, add_err])
 
                 # run tests on live db
-                _, live_failed_tests = run_tests(
+                live_failed_tests = run_tests(
                     test_dir,
                     dl.d["dbname"],
                     election_jurisdiction_list=[(election_name, juris_name)],
+                    report_dir=report_dir,
+                    file_prefix="live_db_",
                 )
 
-                if live_failed_tests != 0 or live_err_str:
-                    error_boolean = False
-                    problem = f"{live_failed_tests}"
-                    if live_err_str:
-                        problem = f"{problem};\n\nalso  {live_err_str}"
-                    print(
+                if live_failed_tests:
+                    err = add_new_error(
+                        err,
+                        "database",
+                        f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
                         f"Data loaded successfully to test db, so old data was removed from live db.\n"
-                        f"But data load to live db had a problem:\n{problem} "
+                        f"But new data loaded to live db failed some tests:\n{live_failed_tests}"
                     )
             else:
-                print(
-                    f"{juris_name} {election_name}: Data not loaded to live db. Error report:\n{new_err}"
-                )
-                error_boolean = True
-    # cleanup
-    db.remove_database(db_params)
-    return error_boolean
+                err = consolidate_errors([err, new_err])
+
+    # cleanup temp database
+    if db_params["dbname"] == temp_db:
+        db.remove_database(db_params)
+    return err
 
 
 def get_contest_type_mappings(filters: list) -> Optional[list]:

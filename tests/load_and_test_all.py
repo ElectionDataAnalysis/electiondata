@@ -152,8 +152,10 @@ def run2(
                 election_jurisdiction_list=election_jurisdiction_list,
                 rollup=rollup,
             )
-            if not success:
-                print(f"At least one file did not load correctly.")
+            if success:
+                print(f"Files loading successfully:\n{success}")
+            else:
+                print("No files loaded successfully")
 
         except Exception as exc:
             print(f"Exception occurred: {exc}")
@@ -178,16 +180,16 @@ def run2(
             return err
     loaded_ej_list = [k.split(";") for k in success.keys()]
     report_dir = os.path.join(dl.d["reports_and_plots_dir"], f"tests_{ts}")
-    results, _ = ui.run_tests(
+    failures = ui.run_tests(
         test_dir, dbname, election_jurisdiction_list=loaded_ej_list, report_dir=report_dir
     )
     if test_dir:
-        for k in results.keys():
+        for k in failures.keys():
             err = ui.add_new_error(
                 err,
                 "warn-test",
                 k,
-                results[k],
+                failures[k],
             )
 
     if load_data:

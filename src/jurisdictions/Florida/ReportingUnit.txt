@@ -5777,7 +5777,7 @@ Florida;Calhoun County;Precinct 402	precinct
 Florida;Calhoun County;Precinct 501	precinct
 Florida;Calhoun County;Precinct 502	precinct
 Florida;Calhoun County;Precinct 503	precinct
-nFlorida;St. Johns County;Precinct 101	precinct
+Florida;St. Johns County;Precinct 101	precinct
 Florida;St. Johns County;Precinct 102	precinct
 Florida;St. Johns County;Precinct 103	precinct
 Florida;St. Johns County;Precinct 104	precinct
