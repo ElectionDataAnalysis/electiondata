@@ -1019,7 +1019,7 @@ def fatal_error(err, error_type_list=None, name_key_list=None) -> bool:
 
 
 def run_tests(
-    test_dir: str, dbname: str, election_jurisdiction_list: list
+    test_dir: str, dbname: str, election_jurisdiction_list: list, report_dir: Optional[str] = None
 ) -> (dict, int):
     """move to tests directory, run tests, move back
     db_params must have host, user, pass, db_name.
@@ -1036,12 +1036,17 @@ def run_tests(
     # run pytest
 
     for (election, juris) in election_jurisdiction_list:
+        # run tests
         e_system = jm.system_name_from_true_name(election)
         j_system = jm.system_name_from_true_name(juris)
         test_file = (
             f"{j_system}/test_{j_system}_{e_system}.py"
         )
-        r = os.system(f"pytest --dbname {dbname} {test_file}")
+        cmd = f"pytest --dbname {dbname} {test_file}"
+        if report_dir:
+            report_file = os.path.join(report_dir, f'{j_system}_{e_system}.tests')
+            cmd = f"{cmd} > {report_file}"
+        r = os.system(cmd)
         if r != 0:
             result[test_file] = "all did not pass (or no test file found)"
 
@@ -1193,6 +1198,7 @@ def reload_juris_election(
             test_dir,
             dl.d["dbname"],
             election_jurisdiction_list=[(election_name, juris_name)],
+            report_dir=report_dir
         )
         if failed_tests != 0:
             error_boolean = False
@@ -1209,7 +1215,7 @@ def reload_juris_election(
                 dl.remove_data(election_id, juris_id)
 
             # Load new data into live db (and move successful to archive)
-            new_err, success = dl.load_all(
+            success, new_err = dl.load_all(
                 report_dir=report_dir,
                 rollup=rollup,
                 election_jurisdiction_list=[(election_name, juris_name)],

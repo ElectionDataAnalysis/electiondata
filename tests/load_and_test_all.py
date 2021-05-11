@@ -182,7 +182,7 @@ def run2(
             return err
     loaded_ej_list = [k.split(";") for k in success.keys()]
     results, _ = ui.run_tests(
-        test_dir, dbname, election_jurisdiction_list=loaded_ej_list
+        test_dir, dbname, election_jurisdiction_list=loaded_ej_list, report_dir=report_dir
     )
     if test_dir:
         for k in results.keys():
