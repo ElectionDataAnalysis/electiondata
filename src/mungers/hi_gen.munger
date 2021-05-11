@@ -56,6 +56,7 @@ CountItemType=<count_header_0>
 # Values to ignore (optional) #
 #[ignore]
 ## E.g: Candidate=Total Votes Cast,Registered Voters ##
+ReportingUnit=Presidential
 
 # Lookup formula sections #
 ## Required when foreign keys are used in munge formulas and    ##
