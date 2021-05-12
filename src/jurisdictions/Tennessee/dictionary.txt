@@ -176,7 +176,7 @@ ReportingUnit	Tennessee;Crockett County	Crockett
 ReportingUnit	Tennessee;Cumberland County	Cumberland
 ReportingUnit	Tennessee;Davidson County	Davidson
 ReportingUnit	Tennessee;Decatur County	Decatur
-ReportingUnit	Tennessee;Dekalb County	Dekalb
+ReportingUnit	Tennessee;DeKalb County	Dekalb
 ReportingUnit	Tennessee;Dickson County	Dickson
 ReportingUnit	Tennessee;Dyer County	Dyer
 ReportingUnit	Tennessee;Fayette County	Fayette
@@ -849,36 +849,36 @@ ReportingUnit	Tennessee;Decatur County;7-2 Perryville	Decatur;7-2 Perryville
 ReportingUnit	Tennessee;Decatur County;8-1 Parsons	Decatur;8-1 Parsons
 ReportingUnit	Tennessee;Decatur County;9-1 Beacon	Decatur;9-1 Beacon
 ReportingUnit	Tennessee;Decatur County;9-2 Hydro	Decatur;9-2 Hydro
-ReportingUnit	Tennessee;Dekalb County;1-1 Alexandria	Dekalb;1-1 Alexandria
-ReportingUnit	Tennessee;Dekalb County;1-1 Alexandria	DeKalb;1-1 Alexandria
-ReportingUnit	Tennessee;Dekalb County;1-2 Temperence Hall	Dekalb;1-2 Temperence Hall
-ReportingUnit	Tennessee;Dekalb County;1-2 Temperence Hall	DeKalb;1-2 Temperence Hall
-ReportingUnit	Tennessee;Dekalb County;1-3 Edgar Evins Park	Dekalb;1-3 Edgar Evins Park
-ReportingUnit	Tennessee;Dekalb County;1-3 Edgar Evins Park	DeKalb;1-3 Edgar Evins Park
-ReportingUnit	Tennessee;Dekalb County;2-1 Liberty	Dekalb;2-1 Liberty
-ReportingUnit	Tennessee;Dekalb County;2-1 Liberty	DeKalb;2-1 Liberty
-ReportingUnit	Tennessee;Dekalb County;2-2 Dowelltown	Dekalb;2-2 Dowelltown
-ReportingUnit	Tennessee;Dekalb County;2-2 Dowelltown	DeKalb;2-2 Dowelltown
-ReportingUnit	Tennessee;Dekalb County;2-3 Snows Hill	Dekalb;2-3 Snows Hill
-ReportingUnit	Tennessee;Dekalb County;2-3 Snows Hill	DeKalb;2-3 Snows Hill
-ReportingUnit	Tennessee;Dekalb County;3-1 Church of God	Dekalb;3-1 Church of God
-ReportingUnit	Tennessee;Dekalb County;3-1 Church of God	DeKalb;3-1 Church of God
-ReportingUnit	Tennessee;Dekalb County;4-2 Rock Castle	Dekalb;4-2 Rock Castle
-ReportingUnit	Tennessee;Dekalb County;4-2 Rock Castle	DeKalb;4-2 Rock Castle
-ReportingUnit	Tennessee;Dekalb County;4-3 Courthouse	Dekalb;4-3 Courthouse
-ReportingUnit	Tennessee;Dekalb County;4-3 Courthouse	DeKalb;4-3 Courthouse
-ReportingUnit	Tennessee;Dekalb County;5-1 Johnson Chapel	Dekalb;5-1 Johnson Chapel
-ReportingUnit	Tennessee;Dekalb County;5-1 Johnson Chapel	DeKalb;5-1 Johnson Chapel
-ReportingUnit	Tennessee;Dekalb County;5-2 County Complex	Dekalb;5-2 County Complex
-ReportingUnit	Tennessee;Dekalb County;5-2 County Complex	DeKalb;5-2 County Complex
-ReportingUnit	Tennessee;Dekalb County;6-1 Belk	Dekalb;6-1 Belk
-ReportingUnit	Tennessee;Dekalb County;6-1 Belk	DeKalb;6-1 Belk
-ReportingUnit	Tennessee;Dekalb County;6-2 Keltonburg	Dekalb;6-2 Keltonburg
-ReportingUnit	Tennessee;Dekalb County;6-2 Keltonburg	DeKalb;6-2 Keltonburg
-ReportingUnit	Tennessee;Dekalb County;6-3 Blue Springs	Dekalb;6-3 Blue Springs
-ReportingUnit	Tennessee;Dekalb County;6-3 Blue Springs	DeKalb;6-3 Blue Springs
-ReportingUnit	Tennessee;Dekalb County;7-1 Church of Christ	Dekalb;7-1 Church of Christ
-ReportingUnit	Tennessee;Dekalb County;7-1 Church of Christ	DeKalb;7-1 Church of Christ
+ReportingUnit	Tennessee;DeKalb County;1-1 Alexandria	Dekalb;1-1 Alexandria
+ReportingUnit	Tennessee;DeKalb County;1-1 Alexandria	DeKalb;1-1 Alexandria
+ReportingUnit	Tennessee;DeKalb County;1-2 Temperence Hall	Dekalb;1-2 Temperence Hall
+ReportingUnit	Tennessee;DeKalb County;1-2 Temperence Hall	DeKalb;1-2 Temperence Hall
+ReportingUnit	Tennessee;DeKalb County;1-3 Edgar Evins Park	Dekalb;1-3 Edgar Evins Park
+ReportingUnit	Tennessee;DeKalb County;1-3 Edgar Evins Park	DeKalb;1-3 Edgar Evins Park
+ReportingUnit	Tennessee;DeKalb County;2-1 Liberty	Dekalb;2-1 Liberty
+ReportingUnit	Tennessee;DeKalb County;2-1 Liberty	DeKalb;2-1 Liberty
+ReportingUnit	Tennessee;DeKalb County;2-2 Dowelltown	Dekalb;2-2 Dowelltown
+ReportingUnit	Tennessee;DeKalb County;2-2 Dowelltown	DeKalb;2-2 Dowelltown
+ReportingUnit	Tennessee;DeKalb County;2-3 Snows Hill	Dekalb;2-3 Snows Hill
+ReportingUnit	Tennessee;DeKalb County;2-3 Snows Hill	DeKalb;2-3 Snows Hill
+ReportingUnit	Tennessee;DeKalb County;3-1 Church of God	Dekalb;3-1 Church of God
+ReportingUnit	Tennessee;DeKalb County;3-1 Church of God	DeKalb;3-1 Church of God
+ReportingUnit	Tennessee;DeKalb County;4-2 Rock Castle	Dekalb;4-2 Rock Castle
+ReportingUnit	Tennessee;DeKalb County;4-2 Rock Castle	DeKalb;4-2 Rock Castle
+ReportingUnit	Tennessee;DeKalb County;4-3 Courthouse	Dekalb;4-3 Courthouse
+ReportingUnit	Tennessee;DeKalb County;4-3 Courthouse	DeKalb;4-3 Courthouse
+ReportingUnit	Tennessee;DeKalb County;5-1 Johnson Chapel	Dekalb;5-1 Johnson Chapel
+ReportingUnit	Tennessee;DeKalb County;5-1 Johnson Chapel	DeKalb;5-1 Johnson Chapel
+ReportingUnit	Tennessee;DeKalb County;5-2 County Complex	Dekalb;5-2 County Complex
+ReportingUnit	Tennessee;DeKalb County;5-2 County Complex	DeKalb;5-2 County Complex
+ReportingUnit	Tennessee;DeKalb County;6-1 Belk	Dekalb;6-1 Belk
+ReportingUnit	Tennessee;DeKalb County;6-1 Belk	DeKalb;6-1 Belk
+ReportingUnit	Tennessee;DeKalb County;6-2 Keltonburg	Dekalb;6-2 Keltonburg
+ReportingUnit	Tennessee;DeKalb County;6-2 Keltonburg	DeKalb;6-2 Keltonburg
+ReportingUnit	Tennessee;DeKalb County;6-3 Blue Springs	Dekalb;6-3 Blue Springs
+ReportingUnit	Tennessee;DeKalb County;6-3 Blue Springs	DeKalb;6-3 Blue Springs
+ReportingUnit	Tennessee;DeKalb County;7-1 Church of Christ	Dekalb;7-1 Church of Christ
+ReportingUnit	Tennessee;DeKalb County;7-1 Church of Christ	DeKalb;7-1 Church of Christ
 ReportingUnit	Tennessee;Dickson County;1-1	Dickson;1-1
 ReportingUnit	Tennessee;Dickson County;1-2	Dickson;1-2
 ReportingUnit	Tennessee;Dickson County;2-1	Dickson;2-1

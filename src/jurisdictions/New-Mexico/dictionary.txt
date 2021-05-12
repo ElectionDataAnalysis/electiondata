@@ -130,7 +130,7 @@ Party	Democratic Party	DEM
 Party	Republican Party	Republican Party
 Party	Republican Party	REP
 Party	Green Party	Green Party
-Party	Green GRN
+Party	Green Party	GRN
 Party	Libertarian Party	Libertarian Party
 Party	Libertarian Party	LIB
 Party	PSL	PSL

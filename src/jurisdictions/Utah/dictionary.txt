@@ -234,7 +234,6 @@ ReportingUnit	Utah;US House UT District 1	Utah;US House UT District 1
 ReportingUnit	Utah;US House UT District 2	Utah;US House UT District 2
 ReportingUnit	Utah;US House UT District 3	Utah;US House UT District 3
 ReportingUnit	Utah;US House UT District 4	Utah;US House UT District 4
-ReportingUnit	Utah	Utah
 ReportingUnit	Utah;Beaver County	Beaver
 ReportingUnit	Utah;Box Elder County	Box Elder
 ReportingUnit	Utah;Cache County	Cache
@@ -287,10 +286,6 @@ Candidate	Ben Mcadams	Ben Mcadams
 Candidate	Burgess Owens	Burgess Owens
 Candidate	John Molnar	John Molnar
 Candidate	Jonia M Broderick	Jonia M Broderick
-Candidate	Chris Peterson Karina Brown	Chris Peterson Karina Brown
-Candidate	Daniel Rhead Cottam Barry Evan Short	Daniel Rhead Cottam Barry Evan Short
-Candidate	Greg Duerden Wayne Hill	Greg Duerden Wayne Hill
-Candidate	Spencer J. Cox Deidre M. Henderson	Spencer J. Cox Deidre M. Henderson
 Candidate	Greg Skordas	Greg Skordas
 Candidate	Rudy J. Bautista	Rudy J. Bautista
 Candidate	Sean D. Reyes	Sean D. Reyes

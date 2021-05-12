@@ -76,142 +76,142 @@ Party	Partido Independentista Puertorriqueño	PIP
 Party	Movimiento Victoria Ciudadana	MVC
 Party	Proyecto Dignidad	PD
 Party	Candidato Independiente	Ind.
-ReportingUnit	Puerto-Rico;PR House District 1	Puerto-Rico;PR House District 1
-ReportingUnit	Puerto-Rico;PR House District 2	Puerto-Rico;PR House District 2
-ReportingUnit	Puerto-Rico;PR House District 3	Puerto-Rico;PR House District 3
-ReportingUnit	Puerto-Rico;PR House District 4	Puerto-Rico;PR House District 4
-ReportingUnit	Puerto-Rico;PR House District 5	Puerto-Rico;PR House District 5
-ReportingUnit	Puerto-Rico;PR House District 6	Puerto-Rico;PR House District 6
-ReportingUnit	Puerto-Rico;PR House District 7	Puerto-Rico;PR House District 7
-ReportingUnit	Puerto-Rico;PR House District 8	Puerto-Rico;PR House District 8
-ReportingUnit	Puerto-Rico;PR House District 9	Puerto-Rico;PR House District 9
-ReportingUnit	Puerto-Rico;PR House District 10	Puerto-Rico;PR House District 10
-ReportingUnit	Puerto-Rico;PR House District 11	Puerto-Rico;PR House District 11
-ReportingUnit	Puerto-Rico;PR House District 12	Puerto-Rico;PR House District 12
-ReportingUnit	Puerto-Rico;PR House District 13	Puerto-Rico;PR House District 13
-ReportingUnit	Puerto-Rico;PR House District 14	Puerto-Rico;PR House District 14
-ReportingUnit	Puerto-Rico;PR House District 15	Puerto-Rico;PR House District 15
-ReportingUnit	Puerto-Rico;PR House District 16	Puerto-Rico;PR House District 16
-ReportingUnit	Puerto-Rico;PR House District 17	Puerto-Rico;PR House District 17
-ReportingUnit	Puerto-Rico;PR House District 18	Puerto-Rico;PR House District 18
-ReportingUnit	Puerto-Rico;PR House District 19	Puerto-Rico;PR House District 19
-ReportingUnit	Puerto-Rico;PR House District 20	Puerto-Rico;PR House District 20
-ReportingUnit	Puerto-Rico;PR House District 21	Puerto-Rico;PR House District 21
-ReportingUnit	Puerto-Rico;PR House District 22	Puerto-Rico;PR House District 22
-ReportingUnit	Puerto-Rico;PR House District 23	Puerto-Rico;PR House District 23
-ReportingUnit	Puerto-Rico;PR House District 24	Puerto-Rico;PR House District 24
-ReportingUnit	Puerto-Rico;PR House District 25	Puerto-Rico;PR House District 25
-ReportingUnit	Puerto-Rico;PR House District 26	Puerto-Rico;PR House District 26
-ReportingUnit	Puerto-Rico;PR House District 27	Puerto-Rico;PR House District 27
-ReportingUnit	Puerto-Rico;PR House District 28	Puerto-Rico;PR House District 28
-ReportingUnit	Puerto-Rico;PR House District 29	Puerto-Rico;PR House District 29
-ReportingUnit	Puerto-Rico;PR House District 30	Puerto-Rico;PR House District 30
-ReportingUnit	Puerto-Rico;PR House District 31	Puerto-Rico;PR House District 31
-ReportingUnit	Puerto-Rico;PR House District 32	Puerto-Rico;PR House District 32
-ReportingUnit	Puerto-Rico;PR House District 33	Puerto-Rico;PR House District 33
-ReportingUnit	Puerto-Rico;PR House District 34	Puerto-Rico;PR House District 34
-ReportingUnit	Puerto-Rico;PR House District 35	Puerto-Rico;PR House District 35
-ReportingUnit	Puerto-Rico;PR House District 36	Puerto-Rico;PR House District 36
-ReportingUnit	Puerto-Rico;PR House District 37	Puerto-Rico;PR House District 37
-ReportingUnit	Puerto-Rico;PR House District 38	Puerto-Rico;PR House District 38
-ReportingUnit	Puerto-Rico;PR House District 39	Puerto-Rico;PR House District 39
-ReportingUnit	Puerto-Rico;PR House District 40	Puerto-Rico;PR House District 40
-ReportingUnit	Puerto-Rico;PR Senate District 1	Puerto-Rico;PR Senate District 1
-ReportingUnit	Puerto-Rico;PR Senate District 2	Puerto-Rico;PR Senate District 2
-ReportingUnit	Puerto-Rico;PR Senate District 3	Puerto-Rico;PR Senate District 3
-ReportingUnit	Puerto-Rico;PR Senate District 4	Puerto-Rico;PR Senate District 4
-ReportingUnit	Puerto-Rico;PR Senate District 5	Puerto-Rico;PR Senate District 5
-ReportingUnit	Puerto-Rico;PR Senate District 6	Puerto-Rico;PR Senate District 6
-ReportingUnit	Puerto-Rico;PR Senate District 7	Puerto-Rico;PR Senate District 7
-ReportingUnit	Puerto-Rico;PR Senate District 8	Puerto-Rico;PR Senate District 8
-ReportingUnit	Puerto-Rico;PR Senate District 1	PR Senate District 1
-ReportingUnit	Puerto-Rico;PR Senate District 2	PR Senate District 2
-ReportingUnit	Puerto-Rico;PR Senate District 3	PR Senate District 3
-ReportingUnit	Puerto-Rico;PR Senate District 4	PR Senate District 4
-ReportingUnit	Puerto-Rico;PR Senate District 5	PR Senate District 5
-ReportingUnit	Puerto-Rico;PR Senate District 6	PR Senate District 6
-ReportingUnit	Puerto-Rico;PR Senate District 7	PR Senate District 7
-ReportingUnit	Puerto-Rico;PR Senate District 8	PR Senate District 8
-ReportingUnit	Puerto-Rico;US House PR District 1	Puerto-Rico;US House PR District 1
-ReportingUnit	Puerto-Rico	Puerto-Rico
-ReportingUnit	Puerto-Rico;Adjuntas Municipality	Adjuntas
-ReportingUnit	Puerto-Rico;Aguada Municipality	Aguada
-ReportingUnit	Puerto-Rico;Aguadilla Municipality	Aguadilla
-ReportingUnit	Puerto-Rico;Aguas Buenas Municipality	Aguas Buenas
-ReportingUnit	Puerto-Rico;Aibonito Municipality	Aibonito
-ReportingUnit	Puerto-Rico;Añasco Municipality	Añasco
-ReportingUnit	Puerto-Rico;Arecibo Municipality	Arecibo
-ReportingUnit	Puerto-Rico;Arroyo Municipality	Arroyo
-ReportingUnit	Puerto-Rico;Barceloneta Municipality	Barceloneta
-ReportingUnit	Puerto-Rico;Barranquitas Municipality	Barranquitas
-ReportingUnit	Puerto-Rico;Bayamón Municipality	Bayamón
-ReportingUnit	Puerto-Rico;Cabo Rojo Municipality	Cabo Rojo
-ReportingUnit	Puerto-Rico;Caguas Municipality	Caguas
-ReportingUnit	Puerto-Rico;Camuy Municipality	Camuy
-ReportingUnit	Puerto-Rico;Canóvanas Municipality	Canóvanas
-ReportingUnit	Puerto-Rico;Carolina Municipality	Carolina
-ReportingUnit	Puerto-Rico;Cataño Municipality	Cataño
-ReportingUnit	Puerto-Rico;Cayey Municipality	Cayey
-ReportingUnit	Puerto-Rico;Ceiba Municipality	Ceiba
-ReportingUnit	Puerto-Rico;Ciales Municipality	Ciales
-ReportingUnit	Puerto-Rico;Cidra Municipality	Cidra
-ReportingUnit	Puerto-Rico;Coamo Municipality	Coamo
-ReportingUnit	Puerto-Rico;Comerío Municipality	Comerío
-ReportingUnit	Puerto-Rico;Corozal Municipality	Corozal
-ReportingUnit	Puerto-Rico;Culebra Municipality	Culebra
-ReportingUnit	Puerto-Rico;Dorado Municipality	Dorado
-ReportingUnit	Puerto-Rico;Fajardo Municipality	Fajardo
-ReportingUnit	Puerto-Rico;Florida Municipality	Florida
-ReportingUnit	Puerto-Rico;Guánica Municipality	Guánica
-ReportingUnit	Puerto-Rico;Guayama Municipality	Guayama
-ReportingUnit	Puerto-Rico;Guayanilla Municipality	Guayanilla
-ReportingUnit	Puerto-Rico;Guaynabo Municipality	Guaynabo
-ReportingUnit	Puerto-Rico;Gurabo Municipality	Gurabo
-ReportingUnit	Puerto-Rico;Hatillo Municipality	Hatillo
-ReportingUnit	Puerto-Rico;Hormigueros Municipality	Hormigueros
-ReportingUnit	Puerto-Rico;Humacao Municipality	Humacao
-ReportingUnit	Puerto-Rico;Isabela Municipality	Isabela
-ReportingUnit	Puerto-Rico;Jayuya Municipality	Jayuya
-ReportingUnit	Puerto-Rico;Juana Díaz Municipality	Juana Díaz
-ReportingUnit	Puerto-Rico;Juncos Municipality	Juncos
-ReportingUnit	Puerto-Rico;Lajas Municipality	Lajas
-ReportingUnit	Puerto-Rico;Lares Municipality	Lares
-ReportingUnit	Puerto-Rico;Las Marías Municipality	Las Marías
-ReportingUnit	Puerto-Rico;Las Piedras Municipality	Las Piedras
-ReportingUnit	Puerto-Rico;Loíza Municipality	Loíza
-ReportingUnit	Puerto-Rico;Luquillo Municipality	Luquillo
-ReportingUnit	Puerto-Rico;Manatí Municipality	Manatí
-ReportingUnit	Puerto-Rico;Maricao Municipality	Maricao
-ReportingUnit	Puerto-Rico;Maunabo Municipality	Maunabo
-ReportingUnit	Puerto-Rico;Mayagüez Municipality	Mayagüez
-ReportingUnit	Puerto-Rico;Moca Municipality	Moca
-ReportingUnit	Puerto-Rico;Morovis Municipality	Morovis
-ReportingUnit	Puerto-Rico;Naguabo Municipality	Naguabo
-ReportingUnit	Puerto-Rico;Naranjito Municipality	Naranjito
-ReportingUnit	Puerto-Rico;Orocovis Municipality	Orocovis
-ReportingUnit	Puerto-Rico;Patillas Municipality	Patillas
-ReportingUnit	Puerto-Rico;Peñuelas Municipality	Peñuelas
-ReportingUnit	Puerto-Rico;Ponce Municipality	Ponce
-ReportingUnit	Puerto-Rico;Quebradillas Municipality	Quebradillas
-ReportingUnit	Puerto-Rico;Rincón Municipality	Rincón
-ReportingUnit	Puerto-Rico;Río Grande Municipality	Río Grande
-ReportingUnit	Puerto-Rico;Sabana Grande Municipality	Sabana Grande
-ReportingUnit	Puerto-Rico;Salinas Municipality	Salinas
-ReportingUnit	Puerto-Rico;San Germán Municipality	San Germán
-ReportingUnit	Puerto-Rico;San Juan Municipality	San Juan
-ReportingUnit	Puerto-Rico;San Lorenzo Municipality	San Lorenzo
-ReportingUnit	Puerto-Rico;San Sebastián Municipality	San Sebastián
-ReportingUnit	Puerto-Rico;Santa Isabel Municipality	Santa Isabel
-ReportingUnit	Puerto-Rico;Toa Alta Municipality	Toa Alta
-ReportingUnit	Puerto-Rico;Toa Baja Municipality	Toa Baja
-ReportingUnit	Puerto-Rico;Trujillo Alto Municipality	Trujillo Alto
-ReportingUnit	Puerto-Rico;Utuado Municipality	Utuado
-ReportingUnit	Puerto-Rico;Vega Alta Municipality	Vega Alta
-ReportingUnit	Puerto-Rico;Vega Baja Municipality	Vega Baja
-ReportingUnit	Puerto-Rico;Vieques Municipality	Vieques
-ReportingUnit	Puerto-Rico;Villalba Municipality	Villalba
-ReportingUnit	Puerto-Rico;Yabucoa Municipality	Yabucoa
-ReportingUnit	Puerto-Rico;Yauco Municipality	Yauco
+ReportingUnit	Puerto Rico;PR House District 1	Puerto-Rico;PR House District 1
+ReportingUnit	Puerto Rico;PR House District 2	Puerto-Rico;PR House District 2
+ReportingUnit	Puerto Rico;PR House District 3	Puerto-Rico;PR House District 3
+ReportingUnit	Puerto Rico;PR House District 4	Puerto-Rico;PR House District 4
+ReportingUnit	Puerto Rico;PR House District 5	Puerto-Rico;PR House District 5
+ReportingUnit	Puerto Rico;PR House District 6	Puerto-Rico;PR House District 6
+ReportingUnit	Puerto Rico;PR House District 7	Puerto-Rico;PR House District 7
+ReportingUnit	Puerto Rico;PR House District 8	Puerto-Rico;PR House District 8
+ReportingUnit	Puerto Rico;PR House District 9	Puerto-Rico;PR House District 9
+ReportingUnit	Puerto Rico;PR House District 10	Puerto-Rico;PR House District 10
+ReportingUnit	Puerto Rico;PR House District 11	Puerto-Rico;PR House District 11
+ReportingUnit	Puerto Rico;PR House District 12	Puerto-Rico;PR House District 12
+ReportingUnit	Puerto Rico;PR House District 13	Puerto-Rico;PR House District 13
+ReportingUnit	Puerto Rico;PR House District 14	Puerto-Rico;PR House District 14
+ReportingUnit	Puerto Rico;PR House District 15	Puerto-Rico;PR House District 15
+ReportingUnit	Puerto Rico;PR House District 16	Puerto-Rico;PR House District 16
+ReportingUnit	Puerto Rico;PR House District 17	Puerto-Rico;PR House District 17
+ReportingUnit	Puerto Rico;PR House District 18	Puerto-Rico;PR House District 18
+ReportingUnit	Puerto Rico;PR House District 19	Puerto-Rico;PR House District 19
+ReportingUnit	Puerto Rico;PR House District 20	Puerto-Rico;PR House District 20
+ReportingUnit	Puerto Rico;PR House District 21	Puerto-Rico;PR House District 21
+ReportingUnit	Puerto Rico;PR House District 22	Puerto-Rico;PR House District 22
+ReportingUnit	Puerto Rico;PR House District 23	Puerto-Rico;PR House District 23
+ReportingUnit	Puerto Rico;PR House District 24	Puerto-Rico;PR House District 24
+ReportingUnit	Puerto Rico;PR House District 25	Puerto-Rico;PR House District 25
+ReportingUnit	Puerto Rico;PR House District 26	Puerto-Rico;PR House District 26
+ReportingUnit	Puerto Rico;PR House District 27	Puerto-Rico;PR House District 27
+ReportingUnit	Puerto Rico;PR House District 28	Puerto-Rico;PR House District 28
+ReportingUnit	Puerto Rico;PR House District 29	Puerto-Rico;PR House District 29
+ReportingUnit	Puerto Rico;PR House District 30	Puerto-Rico;PR House District 30
+ReportingUnit	Puerto Rico;PR House District 31	Puerto-Rico;PR House District 31
+ReportingUnit	Puerto Rico;PR House District 32	Puerto-Rico;PR House District 32
+ReportingUnit	Puerto Rico;PR House District 33	Puerto-Rico;PR House District 33
+ReportingUnit	Puerto Rico;PR House District 34	Puerto-Rico;PR House District 34
+ReportingUnit	Puerto Rico;PR House District 35	Puerto-Rico;PR House District 35
+ReportingUnit	Puerto Rico;PR House District 36	Puerto-Rico;PR House District 36
+ReportingUnit	Puerto Rico;PR House District 37	Puerto-Rico;PR House District 37
+ReportingUnit	Puerto Rico;PR House District 38	Puerto-Rico;PR House District 38
+ReportingUnit	Puerto Rico;PR House District 39	Puerto-Rico;PR House District 39
+ReportingUnit	Puerto Rico;PR House District 40	Puerto-Rico;PR House District 40
+ReportingUnit	Puerto Rico;PR Senate District 1	Puerto-Rico;PR Senate District 1
+ReportingUnit	Puerto Rico;PR Senate District 2	Puerto-Rico;PR Senate District 2
+ReportingUnit	Puerto Rico;PR Senate District 3	Puerto-Rico;PR Senate District 3
+ReportingUnit	Puerto Rico;PR Senate District 4	Puerto-Rico;PR Senate District 4
+ReportingUnit	Puerto Rico;PR Senate District 5	Puerto-Rico;PR Senate District 5
+ReportingUnit	Puerto Rico;PR Senate District 6	Puerto-Rico;PR Senate District 6
+ReportingUnit	Puerto Rico;PR Senate District 7	Puerto-Rico;PR Senate District 7
+ReportingUnit	Puerto Rico;PR Senate District 8	Puerto-Rico;PR Senate District 8
+ReportingUnit	Puerto Rico;PR Senate District 1	PR Senate District 1
+ReportingUnit	Puerto Rico;PR Senate District 2	PR Senate District 2
+ReportingUnit	Puerto Rico;PR Senate District 3	PR Senate District 3
+ReportingUnit	Puerto Rico;PR Senate District 4	PR Senate District 4
+ReportingUnit	Puerto Rico;PR Senate District 5	PR Senate District 5
+ReportingUnit	Puerto Rico;PR Senate District 6	PR Senate District 6
+ReportingUnit	Puerto Rico;PR Senate District 7	PR Senate District 7
+ReportingUnit	Puerto Rico;PR Senate District 8	PR Senate District 8
+ReportingUnit	Puerto Rico;US House PR District 1	Puerto-Rico;US House PR District 1
+ReportingUnit	Puerto Rico	Puerto-Rico
+ReportingUnit	Puerto Rico;Adjuntas Municipality	Adjuntas
+ReportingUnit	Puerto Rico;Aguada Municipality	Aguada
+ReportingUnit	Puerto Rico;Aguadilla Municipality	Aguadilla
+ReportingUnit	Puerto Rico;Aguas Buenas Municipality	Aguas Buenas
+ReportingUnit	Puerto Rico;Aibonito Municipality	Aibonito
+ReportingUnit	Puerto Rico;Añasco Municipality	Añasco
+ReportingUnit	Puerto Rico;Arecibo Municipality	Arecibo
+ReportingUnit	Puerto Rico;Arroyo Municipality	Arroyo
+ReportingUnit	Puerto Rico;Barceloneta Municipality	Barceloneta
+ReportingUnit	Puerto Rico;Barranquitas Municipality	Barranquitas
+ReportingUnit	Puerto Rico;Bayamón Municipality	Bayamón
+ReportingUnit	Puerto Rico;Cabo Rojo Municipality	Cabo Rojo
+ReportingUnit	Puerto Rico;Caguas Municipality	Caguas
+ReportingUnit	Puerto Rico;Camuy Municipality	Camuy
+ReportingUnit	Puerto Rico;Canóvanas Municipality	Canóvanas
+ReportingUnit	Puerto Rico;Carolina Municipality	Carolina
+ReportingUnit	Puerto Rico;Cataño Municipality	Cataño
+ReportingUnit	Puerto Rico;Cayey Municipality	Cayey
+ReportingUnit	Puerto Rico;Ceiba Municipality	Ceiba
+ReportingUnit	Puerto Rico;Ciales Municipality	Ciales
+ReportingUnit	Puerto Rico;Cidra Municipality	Cidra
+ReportingUnit	Puerto Rico;Coamo Municipality	Coamo
+ReportingUnit	Puerto Rico;Comerío Municipality	Comerío
+ReportingUnit	Puerto Rico;Corozal Municipality	Corozal
+ReportingUnit	Puerto Rico;Culebra Municipality	Culebra
+ReportingUnit	Puerto Rico;Dorado Municipality	Dorado
+ReportingUnit	Puerto Rico;Fajardo Municipality	Fajardo
+ReportingUnit	Puerto Rico;Florida Municipality	Florida
+ReportingUnit	Puerto Rico;Guánica Municipality	Guánica
+ReportingUnit	Puerto Rico;Guayama Municipality	Guayama
+ReportingUnit	Puerto Rico;Guayanilla Municipality	Guayanilla
+ReportingUnit	Puerto Rico;Guaynabo Municipality	Guaynabo
+ReportingUnit	Puerto Rico;Gurabo Municipality	Gurabo
+ReportingUnit	Puerto Rico;Hatillo Municipality	Hatillo
+ReportingUnit	Puerto Rico;Hormigueros Municipality	Hormigueros
+ReportingUnit	Puerto Rico;Humacao Municipality	Humacao
+ReportingUnit	Puerto Rico;Isabela Municipality	Isabela
+ReportingUnit	Puerto Rico;Jayuya Municipality	Jayuya
+ReportingUnit	Puerto Rico;Juana Díaz Municipality	Juana Díaz
+ReportingUnit	Puerto Rico;Juncos Municipality	Juncos
+ReportingUnit	Puerto Rico;Lajas Municipality	Lajas
+ReportingUnit	Puerto Rico;Lares Municipality	Lares
+ReportingUnit	Puerto Rico;Las Marías Municipality	Las Marías
+ReportingUnit	Puerto Rico;Las Piedras Municipality	Las Piedras
+ReportingUnit	Puerto Rico;Loíza Municipality	Loíza
+ReportingUnit	Puerto Rico;Luquillo Municipality	Luquillo
+ReportingUnit	Puerto Rico;Manatí Municipality	Manatí
+ReportingUnit	Puerto Rico;Maricao Municipality	Maricao
+ReportingUnit	Puerto Rico;Maunabo Municipality	Maunabo
+ReportingUnit	Puerto Rico;Mayagüez Municipality	Mayagüez
+ReportingUnit	Puerto Rico;Moca Municipality	Moca
+ReportingUnit	Puerto Rico;Morovis Municipality	Morovis
+ReportingUnit	Puerto Rico;Naguabo Municipality	Naguabo
+ReportingUnit	Puerto Rico;Naranjito Municipality	Naranjito
+ReportingUnit	Puerto Rico;Orocovis Municipality	Orocovis
+ReportingUnit	Puerto Rico;Patillas Municipality	Patillas
+ReportingUnit	Puerto Rico;Peñuelas Municipality	Peñuelas
+ReportingUnit	Puerto Rico;Ponce Municipality	Ponce
+ReportingUnit	Puerto Rico;Quebradillas Municipality	Quebradillas
+ReportingUnit	Puerto Rico;Rincón Municipality	Rincón
+ReportingUnit	Puerto Rico;Río Grande Municipality	Río Grande
+ReportingUnit	Puerto Rico;Sabana Grande Municipality	Sabana Grande
+ReportingUnit	Puerto Rico;Salinas Municipality	Salinas
+ReportingUnit	Puerto Rico;San Germán Municipality	San Germán
+ReportingUnit	Puerto Rico;San Juan Municipality	San Juan
+ReportingUnit	Puerto Rico;San Lorenzo Municipality	San Lorenzo
+ReportingUnit	Puerto Rico;San Sebastián Municipality	San Sebastián
+ReportingUnit	Puerto Rico;Santa Isabel Municipality	Santa Isabel
+ReportingUnit	Puerto Rico;Toa Alta Municipality	Toa Alta
+ReportingUnit	Puerto Rico;Toa Baja Municipality	Toa Baja
+ReportingUnit	Puerto Rico;Trujillo Alto Municipality	Trujillo Alto
+ReportingUnit	Puerto Rico;Utuado Municipality	Utuado
+ReportingUnit	Puerto Rico;Vega Alta Municipality	Vega Alta
+ReportingUnit	Puerto Rico;Vega Baja Municipality	Vega Baja
+ReportingUnit	Puerto Rico;Vieques Municipality	Vieques
+ReportingUnit	Puerto Rico;Villalba Municipality	Villalba
+ReportingUnit	Puerto Rico;Yabucoa Municipality	Yabucoa
+ReportingUnit	Puerto Rico;Yauco Municipality	Yauco
 Candidate	Pedro Pierluisi	Pedro Pierluisi
 Candidate	Carlos 'Charlie' Delgado Altieri	Carlos 'Charlie' Delgado Altieri
 Candidate	Alexandra Lúgaro	Alexandra Lúgaro

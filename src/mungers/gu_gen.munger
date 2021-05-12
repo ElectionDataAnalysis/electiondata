@@ -1,0 +1,66 @@
+# Format parameters section (required) #
+[format]
+#### REQUIRED!
+## File type must be one of: xml,excel,json-nested,xml,flat_text
+file_type=excel
+## for excel or flat files, either
+##	##	count_location=by_number:2,3,4  (after colon, list count column numbers)
+##	##	count_location=by_name:Early Votes, Absentee Votes, Election Day Votes  (after colon, list count column names)
+count_location=by_number:1
+
+
+################################################
+## Sometimes required format parameters:
+#### if file type is flat_text or excel and count_columns_specified is 'by_name'
+#### if file type is flat_text or excel, not all rows are data, and there are noncount columns:
+noncount_header_row=2
+
+################################################
+## Optional format parameters:
+#### for any file type:
+thousands_separator=,
+encoding=
+
+#### for a flat_text or excel file type:
+###### if there are multiple blocks of data per page, each with its own headers
+multi_block=yes
+###### if multi_block=yes, can set a max number of blocks to read from each sheet
+max_blocks=
+
+#### Optional for excel file type:
+#sheets_to_read_names=
+#sheets_to_read_numbers=
+#sheets_to_skip_names=
+#merged_cells=yes
+
+
+#### List any elements constant over the file that will be given in the <results>.ini file:
+constant_over_file=CountItemType
+
+[munge formulas]
+# give formulas for all elements (except constant_over_file elements)
+CandidateContest=<row_0>
+Candidate={<column_0>,^(?:DEM|REP|GRN|LIB|)(.*)$}
+Party={<column_0>,^(DEM|REP|).*$}
+ReportingUnit=<sheet_name>
+
+# Values to ignore (optional) #
+[ignore]
+## E.g: Candidate=Total Votes Cast,Registered Voters ##
+Candidate=Total Votes Cast,Overvotes,Contest Totals,Undervotes
+
+# Lookup formula sections #
+## Required when foreign keys are used in munge formulas and    ##
+## must be looked up in another table.                          ##
+## See mi_gen18.munger for example                              ##
+##################################################################
+# [<foreign key name> lookup]
+# optional (defaults to the results file):
+# source_file=
+
+# required:
+# lookup_id=
+
+# optional (if not given, assumes lookup file is same as results file
+source_file=
+# and if source_file is given, specify munger params for lookup source file

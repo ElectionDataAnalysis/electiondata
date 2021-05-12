@@ -207,8 +207,6 @@ Party	Alliance Party	Alliance Party
 Party	Green Independent Party	Green Independent
 Party	Independent Party	Independent
 Party	Libertarian Party	Libertarian
-Green Independent		
-Alliance Party		
 ReportingUnit	Maine;ME House District 1	Maine;ME House District 1
 ReportingUnit	Maine;ME House District 2	Maine;ME House District 2
 ReportingUnit	Maine;ME House District 3	Maine;ME House District 3

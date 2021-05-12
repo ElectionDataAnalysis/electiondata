@@ -3,7 +3,7 @@ import os.path
 from election_data_analysis import database as db
 import pandas as pd
 from pandas.api.types import is_numeric_dtype
-from typing import Optional, Dict, Any
+from typing import Optional, Dict, Any, List
 from election_data_analysis import munge as m
 from election_data_analysis import user_interface as ui
 from election_data_analysis import preparation as prep
@@ -12,6 +12,8 @@ from pathlib import Path
 import csv
 import inspect
 import psycopg2
+from sqlalchemy.orm import Session
+
 
 # constants
 default_juris_encoding = "utf_8"
@@ -20,6 +22,8 @@ standard_juris_csv_reading_kwargs = {
     "encoding": default_juris_encoding,
     "quoting": csv.QUOTE_MINIMAL,
     "sep": "\t",
+    "keep_default_na": False,
+    "na_values": "",
 }
 
 
@@ -92,116 +96,6 @@ def recast_options(
                     ]
                     options[k] = "by_number"
     return options, err
-
-
-class Jurisdiction:
-    def load_contests(
-        self, engine, contest_type: str, err: Optional[dict]
-    ) -> Optional[dict]:
-        # read <contest_type>Contests from jurisdiction folder
-        element_fpath = os.path.join(
-            self.path_to_juris_dir, f"{contest_type}Contest.txt"
-        )
-        if not os.path.exists(element_fpath):
-            err = ui.add_new_error(
-                err,
-                "jurisdiction",
-                self.short_name,
-                f"file not found: {contest_type}Contest.txt",
-            )
-            return err
-        df = pd.read_csv(element_fpath, **standard_juris_csv_reading_kwargs).fillna(
-            "none or unknown"
-        )
-
-        # add contest_type column
-        df = m.add_constant_column(df, "contest_type", contest_type)
-
-        # add 'none or unknown' record
-        df = add_none_or_unknown(df, contest_type=contest_type)
-
-        # dedupe df
-        dupes, df = ui.find_dupes(df)
-
-        # insert into in Contest table
-        new_err_str = db.insert_to_cdf_db(
-            engine, df[["Name", "contest_type"]], "Contest"
-        )
-        if new_err_str:
-            err = ui.add_new_error(
-                err,
-                "warn-system",
-                f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
-                f"Error on Contest table insertion: {new_err_str}",
-            )
-
-        # append Contest_Id
-        col_map = {"Name": "Name", "contest_type": "contest_type"}
-        df = db.append_id_to_dframe(engine, df, "Contest", col_map=col_map)
-
-        if contest_type == "BallotMeasure":
-            # append ElectionDistrict_Id, Election_Id
-            for fk, ref in [
-                ("ElectionDistrict", "ReportingUnit"),
-                ("Election", "Election"),
-            ]:
-                col_map = {fk: "Name"}
-                df = (
-                    db.append_id_to_dframe(engine, df, ref, col_map=col_map)
-                    .rename(columns={f"{ref}_Id": f"{fk}_Id"})
-                    .drop(fk, axis=1)
-                )
-
-        else:
-            # append Office_Id, PrimaryParty_Id
-            for fk, ref in [("Office", "Office"), ("PrimaryParty", "Party")]:
-                col_map = {fk: "Name"}
-                df = db.append_id_to_dframe(engine, df, ref, col_map=col_map).rename(
-                    columns={f"{ref}_Id": f"{fk}_Id"}
-                )
-
-        # create entries in <contest_type>Contest table
-        # commit info in df to <contest_type>Contest table to db
-        try:
-            new_err = db.insert_to_cdf_db(
-                engine,
-                df.rename(columns={"Contest_Id": "Id"}),
-                f"{contest_type}Contest",
-            )
-            if new_err:
-                err = ui.consolidate_errors([err, new_err])
-        except psycopg2.InternalError as ie:
-            err = ui.add_new_error(
-                err,
-                "jurisdiction",
-                self.short_name,
-                f"Contests not loaded to database (sql error {ie}). "
-                f"Check CandidateContest.txt or BallotMeasureContest.txt for errors.",
-            )
-        return err
-
-    def load_juris_to_db(self, session) -> Optional[dict]:
-        """Load info from each element in the Jurisdiction's directory into the db"""
-        # load all from Jurisdiction directory (except Contests, dictionary, remark)
-        juris_elements = ["ReportingUnit", "Office", "Party", "Candidate", "Election"]
-
-        err = None
-        for element in juris_elements:
-            # read df from Jurisdiction directory
-            err = load_juris_dframe_into_cdf(
-                session, element, self.path_to_juris_dir, err
-            )
-            if ui.fatal_error(err):
-                return err
-
-        # Load CandidateContests and BallotMeasureContests
-        for contest_type in ["BallotMeasure", "Candidate"]:
-            err = self.load_contests(session.bind, contest_type, err)
-        return err
-
-    def __init__(self, path_to_juris_dir):
-        self.short_name = Path(path_to_juris_dir).name
-        self.path_to_juris_dir = path_to_juris_dir
 
 
 def ensure_jurisdiction_dir(
@@ -352,6 +246,18 @@ def ensure_juris_files(juris_path: str, ignore_empty: bool = False) -> Optional[
                         f"Null entries in {juris_file} in columns {null_columns}",
                     )
 
+                # check uniqueness of name field
+                ambiguous_names = find_ambiguous_names(juris_file, cf_path)
+                if ambiguous_names:
+                    readable_list = "\n".join(ambiguous_names)
+                    err = ui.add_new_error(
+                        err,
+                        "jurisdiction",
+                        juris_name,
+                        f"Some names are ambiguous, appearing in more than one row in {juris_file}.txt:"
+                        f"\n{readable_list}",
+                    )
+
     # check dependencies
     for juris_file in [x for x in template_list if x != "remark" and x != "dictionary"]:
         # check dependencies
@@ -364,6 +270,17 @@ def ensure_juris_files(juris_path: str, ignore_empty: bool = False) -> Optional[
     if new_err:
         err = ui.consolidate_errors([err, new_err])
     return err
+
+
+def find_ambiguous_names(element: str, cf_path: str) -> List[str]:
+    name_field = db.get_name_field(element)
+    df = pd.read_csv(cf_path, **standard_juris_csv_reading_kwargs)
+    ambiguous_names = [
+        name
+        for name in df[name_field].unique()
+        if df[df[name_field] == name].shape[0] > 1
+    ]
+    return ambiguous_names
 
 
 def check_ru_file(juris_path: str, juris_true_name: str) -> Optional[dict]:
@@ -539,7 +456,12 @@ def juris_dependency_dictionary():
 
 
 def load_juris_dframe_into_cdf(
-    session, element, juris_path, err: Optional[dict]
+    session,
+    element,
+    juris_path,
+    juris_true_name: str,
+    err: Optional[dict],
+    on_conflict: str = "NOTHING",
 ) -> Optional[dict]:
     """TODO"""
 
@@ -616,15 +538,22 @@ def load_juris_dframe_into_cdf(
             )
 
     # commit info in df to corresponding cdf table to db
-    err_string = db.insert_to_cdf_db(session.bind, df, element)
-    if err_string:
-        err = ui.add_new_error(
-            err,
-            "system",
-            f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
-            f"Error loading {element} to database: {err_string}",
-        )
+    new_err = db.insert_to_cdf_db(
+        session.bind,
+        df,
+        element,
+        "jurisdiction",
+        juris_true_name,
+        on_conflict=on_conflict,
+    )
+    if new_err:
+        err = ui.consolidate_errors([err, new_err])
     return err
+
+
+def system_name_from_true_name(true_name: str) -> str:
+    """Replaces any spaces with hyphens"""
+    return true_name.replace(" ", "-")
 
 
 def add_none_or_unknown(df: pd.DataFrame, contest_type: str = None) -> pd.DataFrame:
@@ -643,5 +572,126 @@ def add_none_or_unknown(df: pd.DataFrame, contest_type: str = None) -> pd.DataFr
     return df
 
 
-if __name__ == "__main__":
-    print("Done (juris_and_munger)!")
+def load_or_update_juris_to_db(
+    session: Session, path_to_jurisdiction_dir: str, juris_true_name: str
+) -> Optional[dict]:
+    """Load info from each element in the Jurisdiction's directory into the db.
+    On conflict, update the db to match the files in the Jurisdiction's directory"""
+    # load all from Jurisdiction directory (except Contests, dictionary, remark)
+    juris_elements = ["ReportingUnit", "Office", "Party", "Candidate", "Election"]
+
+    err = None
+    for element in juris_elements:
+        # read df from Jurisdiction directory
+        err = load_juris_dframe_into_cdf(
+            session,
+            element,
+            path_to_jurisdiction_dir,
+            juris_true_name,
+            err,
+            on_conflict="UPDATE",
+        )
+        if ui.fatal_error(err):
+            return err
+
+    # Load CandidateContests and BallotMeasureContests
+    for contest_type in ["BallotMeasure", "Candidate"]:
+        err = load_or_update_contests(
+            session.bind, path_to_jurisdiction_dir, juris_true_name, contest_type, err
+        )
+    return err
+
+
+def load_or_update_contests(
+    engine,
+    path_to_jurisdiction_dir,
+    juris_true_name,
+    contest_type: str,
+    err: Optional[dict],
+) -> Optional[dict]:
+    # read <contest_type>Contests from jurisdiction folder
+    element_fpath = os.path.join(path_to_jurisdiction_dir, f"{contest_type}Contest.txt")
+    if not os.path.exists(element_fpath):
+        err = ui.add_new_error(
+            err,
+            "jurisdiction",
+            juris_true_name,
+            f"file not found: {contest_type}Contest.txt",
+        )
+        return err
+    df = pd.read_csv(element_fpath, **standard_juris_csv_reading_kwargs).fillna(
+        "none or unknown"
+    )
+
+    # add contest_type column
+    df = m.add_constant_column(df, "contest_type", contest_type)
+
+    # add 'none or unknown' record
+    df = add_none_or_unknown(df, contest_type=contest_type)
+
+    # dedupe df
+    dupes, df = ui.find_dupes(df)
+
+    # insert into in Contest table
+    # Structure of CandidateContest vs Contest table means there is nothing to update in the CandidateContest table.
+    # TODO check handling of BallotMeasure contests -- do they need to be updated?
+    new_err = db.insert_to_cdf_db(
+        engine,
+        df[["Name", "contest_type"]],
+        "Contest",
+        "jurisdiction",
+        juris_true_name,
+        on_conflict="NOTHING",
+    )
+    if new_err:
+        err = ui.consolidate_errors([err, new_err])
+        if ui.fatal_error(new_err):
+            return err
+
+    # append Contest_Id
+    col_map = {"Name": "Name", "contest_type": "contest_type"}
+    df = db.append_id_to_dframe(engine, df, "Contest", col_map=col_map)
+
+    if contest_type == "BallotMeasure":
+        # append ElectionDistrict_Id, Election_Id
+        for fk, ref in [
+            ("ElectionDistrict", "ReportingUnit"),
+            ("Election", "Election"),
+        ]:
+            col_map = {fk: "Name"}
+            df = (
+                db.append_id_to_dframe(engine, df, ref, col_map=col_map)
+                .rename(columns={f"{ref}_Id": f"{fk}_Id"})
+                .drop(fk, axis=1)
+            )
+
+    else:
+        # append Office_Id, PrimaryParty_Id
+        for fk, ref in [("Office", "Office"), ("PrimaryParty", "Party")]:
+            col_map = {fk: "Name"}
+            df = db.append_id_to_dframe(engine, df, ref, col_map=col_map).rename(
+                columns={f"{ref}_Id": f"{fk}_Id"}
+            )
+
+    # create entries in <contest_type>Contest table
+    # commit info in df to <contest_type>Contest table to db
+    try:
+        new_err = db.insert_to_cdf_db(
+            engine,
+            df.rename(columns={"Contest_Id": "Id"}),
+            f"{contest_type}Contest",
+            "jurisdiction",
+            juris_true_name,
+            on_conflict="NOTHING",
+        )
+        if new_err:
+            err = ui.consolidate_errors([err, new_err])
+    except psycopg2.InternalError as ie:
+        err = ui.add_new_error(
+            err,
+            "jurisdiction",
+            juris_true_name,
+            f"Contests not loaded to database (sql error {ie}). "
+            f"Check CandidateContest.txt or BallotMeasureContest.txt for errors.",
+        )
+    return err

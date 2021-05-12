@@ -1,4 +1,4 @@
-from configparser import ConfigParser, MissingSectionHeaderError
+from configparser import ConfigParser, MissingSectionHeaderError, DuplicateOptionError
 from election_data_analysis import special_formats as sf
 from election_data_analysis import database as db
 from election_data_analysis import munge as m
@@ -15,6 +15,7 @@ import numpy as np
 import inspect
 import xml.etree.ElementTree as et
 import json
+import shutil
 
 # constants
 recognized_encodings = {
@@ -308,6 +309,7 @@ warning_keys = {
     "warn-jurisdiction",
     "warn-file",
     "warn-system",
+    "warn-test",
 }
 
 contest_type_mappings = {
@@ -316,24 +318,6 @@ contest_type_mappings = {
     "state-house": "State House",
     "state-senate": "State Senate",
 }
-
-
-def pick_juris_from_filesystem(
-    juris_path: str, err: Optional[dict], check_files: bool = False
-):
-    """Returns a Jurisdiction object. <juris_path> is the path to the directory containing the
-    defining files for the particular jurisdiction.
-    """
-    new_err = None
-    if check_files:
-        new_err = jm.ensure_jurisdiction_dir(juris_path)
-    err = consolidate_errors([err, new_err])
-    if fatal_error(new_err):
-        ss = None
-    else:
-        # initialize the jurisdiction
-        ss = jm.Jurisdiction(juris_path)
-    return ss, err
 
 
 def find_dupes(df):
@@ -678,44 +662,74 @@ def build_row_constants_from_df(
     return row_constants, err
 
 
-def archive_from_param_file(param_file: str, current_dir: str, archive_dir: str):
-    params, err = get_parameters(
-        required_keys=["results_file", "aux_data_dir"],
-        header="election_data_analysis",
-        param_file=os.path.join(current_dir, param_file),
-    )
-    # TODO error handling
-    # if the ini file specifies an aux_data_directory
-    if (
-        "aux_data_dir" in params.keys()
-        and params["aux_data_dir"]
-        and params["aux_data_dir"] != ""
-    ):
-        archive(params["aux_data_dir"], current_dir, archive_dir)
-    archive(params["results_file"], current_dir, archive_dir)
-    archive(param_file, current_dir, archive_dir)
-    return
+def copy_directory_with_backup(
+    original_path: str,
+    copy_path: str,
+    backup_suffix: Optional[str] = None,
+    report_error: bool = False,
+) -> Optional[dict]:
+    """copy entire directory <original_path> to <copy_path>. If
+    <copy_path> exists, move it to a backup file whose name gets the suffix
+    <backup_suffix>"""
+    err = None
+    # TODO
+    # if the original to be copied is actually a directory
+    if os.path.isdir(original_path):
+        if backup_suffix:
+            # make backup of anything with existing name
+            if os.path.isdir(copy_path):
+                shutil.move(copy_path, f"{copy_path}{backup_suffix}")
+            elif os.path.isfile(copy_path):
+                old_stem = Path(copy_path).stem
+                backup_path = os.path.join(
+                    Path(copy_path).parent,
+                    f"{old_stem}{backup_suffix}.{Path(copy_path).suffix}",
+                )
+                copy_with_err_handling(
+                    copy_path, backup_path, report_error=report_error
+                )
+        # copy original to desired location
+        # # ensure parent directory exists
+        Path(copy_path).parent.mkdir(parents=True, exist_ok=True)
+        new_err = copy_with_err_handling(
+            original_path, copy_path, report_error=report_error
+        )
+        err = consolidate_errors([err, new_err])
+    # if the original is not a directory
+    else:
+        # throw error
+        err = add_new_error(
+            err,
+            "warn-system",
+            f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
+            f"No such directory: {original_path}",
+        )
+    return err
 
 
-def archive(relative_path: str, current_dir: str, archive_dir: str):
-    """Move <relative_path> from <current_dir> to <archive_dir>. If <archive_dir> already has a file with that name,
-    add a number prefix to the name of the created file."""
-    old_path = os.path.join(current_dir, relative_path)
-    new_path = os.path.join(archive_dir, relative_path)
-
-    # Create archive directory (and any necessary subdirectories)
-    archive_dir_with_subs = Path(os.path.join(archive_dir, relative_path)).parent
-    Path(archive_dir_with_subs).mkdir(parents=True, exist_ok=True)
-
-    i = 0
-    while os.path.exists(new_path):
-        i += 1
-        new_path = os.path.join(archive_dir, f"{i}_{relative_path}")
-    try:
-        os.rename(old_path, new_path)
-    except Exception as exc:
-        print(f"File {relative_path} not moved: {exc}")
-    return
+def copy_with_err_handling(
+    original_path: str, copy_path: str, report_error: bool = True
+) -> Optional[dict]:
+    err = None
+    Path(copy_path).mkdir(parents=True, exist_ok=True)
+    for root, dirs, files in os.walk(original_path, topdown=True):
+        new_root = root.replace(original_path, copy_path)
+        for f in files:
+            old = os.path.join(root, f)
+            new = os.path.join(new_root, f)
+            try:
+                shutil.copy(old, new)
+            except Exception as she:
+                if report_error:
+                    err = add_new_error(
+                        err,
+                        "warn-file",
+                        f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
+                        f"Error while copying {old} to {new}:\n{she}",
+                    )
+        for d in dirs:
+            Path(os.path.join(new_root, d)).mkdir(parents=True, exist_ok=True)
+    return err
 
 
 def get_parameters(
@@ -743,6 +757,10 @@ def get_parameters(
     except (KeyError, MissingSectionHeaderError) as ke:
         err = add_new_error(err, "ini", param_file, f"Missing header: {ke}")
         return d, err
+    except DuplicateOptionError as doe:
+        err = add_new_error(
+            err, "ini", param_file, f"Something is defined twice: {doe}"
+        )
 
     # read required info
     missing_required_params = list()
@@ -815,17 +833,23 @@ def consolidate_errors(list_of_err: Optional[list]) -> Optional[Dict[Any, dict]]
 
 def report(
     err_warn: Optional[Dict[Any, dict]],
-    loc_dict: Optional[Dict[Any, str]] = None,
+    output_location: str,
     key_list: list = None,
     file_prefix: str = "",
-) -> dict:
+) -> Optional[dict]:
     """unpacks error dictionary <err> for reporting.
-    Keys of <location_dict> are error_types;
-    values of <loc_dict> are directories for writing error files.
+    <output_location> is directory for writing error files.
     Use <key_list> to report only on some keys, and return a copy of err_warn with those keys removed"""
-    if not loc_dict:
-        loc_dict = dict()
     if err_warn:
+        # create reporting directory if it does not exist
+        if os.path.isfile(output_location):
+            print(
+                "Target directory for errors and warnings exists as a file. Nothing will be reported."
+            )
+            return None
+        elif not os.path.isdir(output_location):
+            Path(output_location).mkdir(parents=True, exist_ok=True)
+
         if not key_list:
             # report all keys (otherwise report only key-list keys)
             key_list = err_warn.keys()
@@ -870,20 +894,13 @@ def report(
                         warn_str = and_warns = ""
                     out_str = f"\n{et.title()} errors ({nk_name}):\n{msg[(et, nk)]}\n\n{warn_str}"
 
-                    # print/write output
-                    if et in loc_dict.keys():
-                        # get timestamp
-                        ts = datetime.datetime.now().strftime("%m%d_%H%M")
-                        # write info to a .errors or .errors file named for the name_key <nk>
-                        out_path = os.path.join(
-                            loc_dict[et], f"{file_prefix}{nk_name}_{ts}.errors"
-                        )
-                        with open(out_path, "a") as f:
-                            f.write(out_str)
-                        print(f"{et.title()} errors{and_warns} written to {out_path}")
-                    else:
-                        # print for user
-                        print(out_str)
+                    # write info to a .errors or .errors file named for the name_key <nk>
+                    out_path = os.path.join(
+                        output_location, f"{file_prefix}_{nk_name}.errors"
+                    )
+                    with open(out_path, "a") as f:
+                        f.write(out_str)
+                    print(f"{et.title()} errors{and_warns} written to {out_path}")
 
             # process name keys with only warnings
             only_warns = [
@@ -898,32 +915,22 @@ def report(
                     f"{et.title()} warnings ({nk_name}):\n{msg[(f'warn-{et}', nk)]}\n"
                 )
 
-                # print/write output
-                if f"warn-{et}" in loc_dict.keys():
-                    # ensure directory exists
-                    # TODO error handline: what if the path is a file?
-                    if not os.path.exists(loc_dict[f"warn-{et}"]):
-                        Path(loc_dict[f"warn-{et}"]).mkdir(parents=True, exist_ok=True)
-
-                    # get timestamp
-                    ts = datetime.datetime.now().strftime("%m%d_%H%M")
-                    # write info to a .errors or .errors file named for the name_key <nk>
-                    out_path = os.path.join(
-                        loc_dict[f"warn-{et}"], f"{file_prefix}{nk_name}_{ts}.warnings"
-                    )
-                    with open(out_path, "a") as f:
-                        f.write(out_str)
-                    print(f"{et.title()} warnings written to {out_path}")
-                else:
-                    # print for user
-                    print(out_str)
+                # write output
+                # get timestamp
+                ts = datetime.datetime.now().strftime("%m%d_%H%M")
+                # write info to a .errors or .errors file named for the name_key <nk>
+                out_path = os.path.join(
+                    output_location, f"{file_prefix}{nk_name}.warnings"
+                )
+                with open(out_path, "a") as f:
+                    f.write(out_str)
+                print(f"{et.title()} warnings written to {out_path}")
 
         # define return dictionary with reported keys set to {} and othe keys preserved
         remaining = {k: v for k, v in err_warn.items() if k not in key_list}
         for k in key_list:
             remaining[k] = {}
     else:
-        print("No errors or warnings")
         remaining = None
 
     return remaining
@@ -1003,43 +1010,40 @@ def fatal_error(err, error_type_list=None, name_key_list=None) -> bool:
 
 
 def run_tests(
-    test_dir: str, dbname: str, election_jurisdiction_list: Optional[list] = None
-) -> (dict, int):
-    """move to tests directory, run tests, move back
+    test_dir: str,
+    dbname: str,
+    election_jurisdiction_list: list,
+    report_dir: Optional[str] = None,
+    file_prefix: str = "",
+) -> Dict[str, Any]:
+    """run tests from test_dir
     db_params must have host, user, pass, db_name.
-    test_param_file is a reference run_time.ini file"""
+    test_param_file is a reference run_time.ini file.
+    Returns dictionary of failures (keys are jurisdiction;election strings)"""
 
-    r = -1
-    # note current directory
-    original_dir = os.getcwd()
-
-    # move to tests directory
-    os.chdir(test_dir)
-
-    result = dict()  # initialize result report
+    failures = dict()  # initialize result report
     # run pytest
-    if election_jurisdiction_list is None:
-        r = os.system(f"pytest --dbname {dbname}")
-        if r != 0:
-            result["all"] = "At least one test failed"
-    else:
-        for (election, juris) in election_jurisdiction_list:
-            if election is None and juris is not None:
-                keyword = f"_{juris.replace(' ', '-')}"
-            elif juris is None and election is not None:
-                keyword = f"{election.replace(' ', '-')}"
-            elif juris is not None and election is not None:
-                keyword = f"_{juris.replace(' ', '-')}_{election.replace(' ', '-')}"
-            else:
-                keyword = "_"
-            r = os.system(f"pytest --dbname {dbname} -k {keyword}")
-            if r != 0:
-                result[f"{keyword}"] = "all did not pass"
 
-    # move back to original directory
-    os.chdir(original_dir)
-    # result is 0 if all tests pass, non-zero if something went wrong
-    return result, r
+    for (election, juris) in election_jurisdiction_list:
+        # run tests
+        e_system = jm.system_name_from_true_name(election)
+        j_system = jm.system_name_from_true_name(juris)
+        test_file = os.path.join(test_dir, f"{j_system}/test_{j_system}_{e_system}.py")
+        if not os.path.isfile(test_file):
+            failures[f"{juris};{election}"] = f"No test file found: {test_file}"
+            continue
+        cmd = f"pytest --dbname {dbname} {test_file}"
+        if report_dir:
+            Path(report_dir).mkdir(exist_ok=True, parents=True)
+            report_file = os.path.join(
+                report_dir, f"{file_prefix}{j_system}_{e_system}.txt"
+            )
+            cmd = f"{cmd} > {report_file}"
+        r = os.system(cmd)
+        if r != 0:
+            failures[f"{juris};{election}"] = "At least one test failed"
+
+    return failures
 
 
 def confirm_essential_info(
@@ -1109,7 +1113,7 @@ def election_juris_list(ini_path: str, results_path: Optional[str] = None) -> li
                 d, err = get_parameters(
                     param_file=full_path,
                     header="election_data_analysis",
-                    required_keys=["election", "top_reporting_unit", "results_file"],
+                    required_keys=["election", "jurisdiction", "results_file"],
                 )
                 # if parameters were read without error
                 if not err:
@@ -1119,30 +1123,25 @@ def election_juris_list(ini_path: str, results_path: Optional[str] = None) -> li
                         os.path.isfile(os.path.join(results_path, d["results_file"]))
                     ):
                         # include the pair in the output
-                        ej_set.update({(d["election"], d["top_reporting_unit"])})
+                        ej_set.update({(d["election"], d["jurisdiction"])})
     return list(ej_set)
-
-
-def file_full_paths(dir_path: str, ext: str) -> List[str]:
-    """Return list of full paths all .ini files in the directory or its subdirectories"""
-    ini_paths = list()
-    for subdir, dirs, files in os.walk(dir_path):
-        for f in files:
-            if (f[-len(ext) - 1 :] == f".{ext}") and (f != f"template.{ext}"):
-                ini_paths.append(os.path.join(subdir, f))
-    return ini_paths
 
 
 def reload_juris_election(
     juris_name: str,
     election_name: str,
     test_dir: str,
-    from_cron: bool = None,
-) -> bool:
-    """Assumes run_time.ini in directory, and results to be loaded are in the results_dir named in run_time.ini"""
+    report_dir,
+    rollup: bool = False,
+) -> Optional[dict]:
+    """Loads and archives each results file in each direct subfolder of the results_dir
+    named in ./run_time.ini -- provided there the results file is specified in a *.ini file in the
+    corresponding subfolder of <content_root>/ini_files_for_results. <contest_root> is read from ./run_time.ini.
+    """
     # initialize dataloader
+    err = None
     dl = e.DataLoader()
-    db_params = get_parameters(
+    db_params, _ = get_parameters(
         [
             "host",
             "port",
@@ -1152,21 +1151,7 @@ def reload_juris_election(
         ],
         "run_time.ini",
         "postgresql",
-    )[0]
-
-    if not from_cron:
-        # Ask user to confirm/correct essential info
-        confirm_essential_info(
-            dl.d["results_dir"],
-            "election_data_analysis",
-            ["results_file", "results_download_date", "results_source"],
-            known={
-                "top_reporting_unit": juris_name,
-                "jurisdiction_directory": juris_name.replace(" ", "-"),
-                "election": election_name,
-            },
-            msg=" Check download date carefully!!!",
-        )
+    )
 
     # create temp_db (preserving live db name)
     live_db = dl.session.bind.url.database
@@ -1177,74 +1162,72 @@ def reload_juris_election(
 
     # load all data into temp db
     dl.change_db(temp_db)
-    dl.load_all(move_files=False)
-    err_str = dl.add_totals_if_missing(election_name, juris_name)
-    if err_str:
-        print(f"Error while adding totals: {err_str}")
-
-    # run test files on temp db
-    _, results = run_tests(
-        test_dir,
-        dl.d["dbname"],
+    dl.load_all(
+        report_dir=report_dir,
+        move_files=False,
+        rollup=rollup,
         election_jurisdiction_list=[(election_name, juris_name)],
     )
-
-    go_ahead = "y"
-    if not from_cron:
-        # Ask user to OK test results or abandon
-        go_ahead = input(
-            f"Did tests succeeded for election {election_name} in {juris_name} (y/n)?"
-        )
-    if go_ahead != "y" or results != 0 or err_str:
-        print("Something went wrong, new data not loaded")
-        # cleanup
-        db.remove_database(db_params)
-        return False
-
-    # switch to live db and get info needed later
-    dl.change_db(live_db)
-    election_id = db.name_to_id(dl.session, "Election", election_name)
-    juris_id = db.name_to_id(dl.session, "ReportingUnit", juris_name)
-
-    # Move *.ini and results files for juris-election pair to 'unloaded' directory
-    archive_directory = dl.d["archive_dir"]
-    if dl.d["unloaded_dir"]:
-        unloaded_directory = dl.d["unloaded_dir"]
+    add_err = dl.add_totals_if_missing(election_name, juris_name)
+    if add_err:
+        err = consolidate_errors([err, add_err])
     else:
-        unloaded_directory = os.path.join(archive_directory, "unloaded")
-    for f in [f for f in os.listdir(archive_directory) if f[-4:] == ".ini"]:
-        param_file = os.path.join(archive_directory, f)
-        params, err = get_parameters(
-            required_keys=["election", "top_reporting_unit", "results_file"],
-            header="election_data_analysis",
-            param_file=param_file,
+        # run test files on temp db
+        failed_tests = run_tests(
+            test_dir,
+            dl.d["dbname"],
+            election_jurisdiction_list=[(election_name, juris_name)],
+            report_dir=report_dir,
+            file_prefix="temp_db_",
         )
-        # if the *.ini file is for the given election and jurisdiction
-        if (
-            (not err)
-            and params["election"] == election_name
-            and params["top_reporting_unit"] == juris_name
-        ):
-            # move the *.ini file and its results file (and any aux_data_directory) to the unloaded directory
-            archive_from_param_file(param_file, archive_directory, unloaded_directory)
+        if failed_tests:
+            print(
+                f"{juris_name} {election_name}: No old data removed and no new data loaded because of failed tests:\n{failed_tests}"
+            )
+        else:
+            # switch to live db
+            dl.change_db(live_db)
+            # Remove existing data for juris-election pair from live db
+            election_id = db.name_to_id(dl.session, "Election", election_name)
+            juris_id = db.name_to_id(dl.session, "ReportingUnit", juris_name)
+            if election_id and juris_id:
+                dl.remove_data(election_id, juris_id)
 
-    # Remove existing data for juris-election pair from live db
-    dl.remove_data(election_id, juris_id, (not from_cron))
+            # Load new data into live db (and move successful to archive)
+            success, new_err = dl.load_all(
+                report_dir=report_dir,
+                rollup=rollup,
+                election_jurisdiction_list=[(election_name, juris_name)],
+            )
+            if success:
+                add_err = dl.add_totals_if_missing(election_name, juris_name)
+                if add_err:
+                    err = consolidate_errors([err, add_err])
 
-    # Load new data into live db (and move successful to archive)
-    dl.load_all()
-    err_str = dl.add_totals_if_missing(election_name, juris_name)
+                # run tests on live db
+                live_failed_tests = run_tests(
+                    test_dir,
+                    dl.d["dbname"],
+                    election_jurisdiction_list=[(election_name, juris_name)],
+                    report_dir=report_dir,
+                    file_prefix="live_db_",
+                )
 
-    # run tests on live db
-    run_tests(
-        test_dir,
-        dl.d["dbname"],
-        election_jurisdiction_list=[(election_name, juris_name)],
-    )
+                if live_failed_tests:
+                    err = add_new_error(
+                        err,
+                        "database",
+                        f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
+                        f"Data loaded successfully to test db, so old data was removed from live db.\n"
+                        f"But new data loaded to live db failed some tests:\n{live_failed_tests}",
+                    )
+            else:
+                err = consolidate_errors([err, new_err])
 
-    # cleanup
-    db.remove_database(db_params)
-    return True
+    # cleanup temp database
+    if db_params["dbname"] == temp_db:
+        db.remove_database(db_params)
+    return err
 
 
 def get_contest_type_mappings(filters: list) -> Optional[list]:
@@ -1589,23 +1572,3 @@ def set_and_fill_headers(
             [x for x in range(max(header_list)) if x not in header_list], inplace=True
         )
     return df
-
-
-def check_results_ini_params(
-    p: Dict[str, Any],
-    ini_file_path: str,
-) -> Optional[dict]:
-    """Checks results parameters"""
-    err_str = None
-    ini_file_name = Path(ini_file_path).name
-    try:
-        datetime.datetime.strptime(p["results_download_date"], "%Y-%m-%d")
-    except TypeError:
-        err_str = f"No download date found"
-    except ValueError:
-        err_str = f"Date could not be parsed. Expected format is 'YYYY-MM-DD', actual is {p['results_download_date']}"
-    if err_str:
-        ini_err = add_new_error(None, "ini", ini_file_name, err_str)
-    else:
-        ini_err = None
-    return ini_err

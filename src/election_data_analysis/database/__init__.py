@@ -171,14 +171,15 @@ def create_database(
 
 # TODO move to more appropriate module?
 def append_to_composing_reporting_unit_join(
-    engine: sqlalchemy.engine, ru: pd.DataFrame
-) -> pd.DataFrame:
+    engine: sqlalchemy.engine, ru: pd.DataFrame, error_type, error_name
+) -> Optional[dict]:
     """<ru> is a dframe of reporting units, with cdf internal name in column 'Name'.
     cdf internal name indicates nesting via semicolons `;`.
     This routine calculates the nesting relationships from the Names and uploads to db.
     Returns the *all* composing-reporting-unit-join data from the db.
     By convention, a ReportingUnit is it's own ancestor (ancestor_0)."""
     working = ru.copy()
+    err = None
     if not working.empty:
         working["split"] = working["Name"].apply(lambda x: x.split(";"))
         working["length"] = working["split"].apply(len)
@@ -219,11 +220,16 @@ def append_to_composing_reporting_unit_join(
             )
         if cruj_dframe_list:
             cruj_dframe = pd.concat(cruj_dframe_list)
-            insert_to_cdf_db(engine, cruj_dframe, "ComposingReportingUnitJoin")
+            insert_err = insert_to_cdf_db(
+                engine,
+                cruj_dframe,
+                "ComposingReportingUnitJoin",
+                error_type,
+                error_name,
+            )
+            err = ui.consolidate_errors([err, insert_err])
 
-    cruj_dframe = pd.read_sql_table("ComposingReportingUnitJoin", engine)
-
-    return cruj_dframe
+    return err
 
 
 def test_connection(
@@ -499,14 +505,18 @@ def insert_to_cdf_db(
     engine: sqlalchemy.engine,
     df: pd.DataFrame,
     element: str,
+    error_type: str,
+    error_name: str,
     sep: str = "\t",
     encoding: str = m.default_encoding,
-    timestamp=None,
-) -> Optional[str]:
+    timestamp: Optional[str] = None,
+    on_conflict: str = "NOTHING",
+) -> Optional[dict]:
     """Inserts any new records in <df> into <element>; if <element> has a timestamp column
     it must be specified in <timestamp>; <df> must have columns matching <element>,
     except Id and <timestamp> if any. Returns an error message (or None)"""
 
+    err = None
     matched_with_old = pd.DataFrame()  # to satisfy syntax-checker
     working = df.copy()
     if element == "Candidate":
@@ -601,38 +611,94 @@ def insert_to_cdf_db(
             cursor.execute(q_kludge)
         connection.commit()  # TODO when Selection_Id was in mixed_int, this emptied temp table, why?
 
+        # define update clause if necessary
+        name_field = get_name_field(element)
+        if on_conflict.upper() == "UPDATE":
+            conflict_action = sql.SQL("({name_field}) DO UPDATE SET").format(
+                name_field=sql.Identifier(name_field)
+            )
+            update_list = [
+                sql.SQL("{c} = EXCLUDED.{c}").format(c=sql.Identifier(col))
+                for col in temp_columns
+            ]
+            conflict_target = sql.SQL(",").join(update_list)
+
+        else:
+            conflict_action = sql.SQL("DO NOTHING")
+            conflict_target = sql.SQL("")
+
         # insert records from temp table into <element> table
-        q = sql.SQL(
-            "INSERT INTO {t}({fields}) SELECT * FROM {temp_table} ON CONFLICT DO NOTHING"
-        ).format(
-            t=sql.Identifier(element),
-            fields=sql.SQL(",").join([sql.Identifier(x) for x in temp_columns]),
-            temp_table=sql.Identifier(temp_table),
+        try:
+            q_insert = sql.SQL(
+                "INSERT INTO {t}({fields}) SELECT * FROM {temp_table} ON CONFLICT {conflict_action} {conflict_target}"
+            ).format(
+                t=sql.Identifier(element),
+                fields=sql.SQL(",").join([sql.Identifier(x) for x in temp_columns]),
+                temp_table=sql.Identifier(temp_table),
+                conflict_action=conflict_action,
+                conflict_target=conflict_target,
+            )
+            cursor.execute(q_insert)
+            connection.commit()
+        except Exception as exc:
+            if on_conflict.upper() != "NOTHING":
+                # try again, with no action on conflict
+                q_insert = sql.SQL(
+                    "INSERT INTO {t}({fields}) SELECT * FROM {temp_table} ON CONFLICT DO NOTHING"
+                ).format(
+                    t=sql.Identifier(element),
+                    fields=sql.SQL(",").join([sql.Identifier(x) for x in temp_columns]),
+                    temp_table=sql.Identifier(temp_table),
+                )
+                cursor.execute(q_insert)
+                connection.commit()
+                err = ui.add_new_error(
+                    err,
+                    f"warn-{error_type}",
+                    error_name,
+                    f"Error upserting {element} resolved by only inserting and not updating. "
+                    f"Exception: {exc}",
+                )
+
+    except Exception as exc:
+        print(exc)
+        err = ui.add_new_error(
+            err,
+            error_type,
+            error_name,
+            f"Exception inserting element {element}: {exc}",
         )
-        cursor.execute(q)
-        connection.commit()
-        error_str = None
-    except Exception as e:
-        print(e)
-        error_str = f"{e}"
 
     # remove temp table
-    q = sql.SQL("DROP TABLE IF EXISTS {temp_table}").format(
-        temp_table=sql.Identifier(temp_table)
-    )
-    cursor.execute(q)
+    try:
+        q_remove = sql.SQL("DROP TABLE IF EXISTS {temp_table}").format(
+            temp_table=sql.Identifier(temp_table)
+        )
+        cursor.execute(q_remove)
+    except Exception as exc:
+        err = ui.add_new_error(
+            err,
+            "system",
+            f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
+            f"Unexpected exception removing temp table during insert/update of {element}",
+        )
+        return err
 
     if element == "ReportingUnit":
         # check get RUs not matched and process them
         mask = matched_with_old.ReportingUnit_Id > 0
         new_rus = matched_with_old[~mask]
         if not new_rus.empty:
-            append_to_composing_reporting_unit_join(engine, new_rus)
+            append_err = append_to_composing_reporting_unit_join(
+                engine, new_rus, error_type, error_name
+            )
+            if append_err:
+                err = ui.consolidate_errors([err, append_err])
 
     connection.commit()
     cursor.close()
     connection.close()
-    return error_str
+    return err
 
 
 def table_named_to_avoid_conflict(engine: sqlalchemy.engine, prefix: str) -> str:
@@ -864,7 +930,7 @@ def active_vote_types(session: Session, election, jurisdiction):
     return active_list
 
 
-def remove_vote_counts(connection, cursor, id: int, active_confirm: bool = True) -> str:
+def remove_vote_counts(connection, cursor, id: int) -> str:
     """Remove all VoteCount data from a particular file, and remove that file from _datafile"""
     try:
         q = 'SELECT "Id", file_name, download_date, created_at, is_preliminary FROM _datafile WHERE _datafile."Id"=%s;'
@@ -876,37 +942,16 @@ def remove_vote_counts(connection, cursor, id: int, active_confirm: bool = True)
             created_at,
             preliminary,
         ) = cursor.fetchall()[0]
-        record = "\n\t".join(
-            [
-                f"datafile_id: {datafile_id}",
-                f"file_name: {file_name}",
-                f"download_date: {download_date}",
-                f"datafile_id: {datafile_id}",
-                f"created_at: {created_at}",
-                f"preliminary: {preliminary}",
-            ]
-        )
     except KeyError as exc:
         return f"No datafile found with Id = {id}"
-    if active_confirm:
-        confirm = input(
-            f"Confirm: delete all VoteCount data from this results file (y/n)?\n\t{record}\n"
-        )
-    # if active_confirm is False, consider it confirmed.
-    else:
-        confirm = "y"
-    if confirm == "y":
-        try:
-            q = 'DELETE FROM "VoteCount" where "_datafile_Id"=%s;Delete from _datafile where "Id"=%s;'
-            cursor.execute(q, [id, id])
-            connection.commit()
-            print(f"{file_name}: VoteCounts deleted from results file\n")
-            err_str = None
-        except Exception as exc:
-            err_str = f"{file_name}: Error deleting data: {exc}"
-            print(err_str)
-    else:
-        err_str = f"{file_name}: Deletion not confirmed by user\n"
+    try:
+        q = 'DELETE FROM "VoteCount" where "_datafile_Id"=%s;Delete from _datafile where "Id"=%s;'
+        cursor.execute(q, [id, id])
+        connection.commit()
+        print(f"{file_name}: VoteCounts deleted from results file\n")
+        err_str = None
+    except Exception as exc:
+        err_str = f"{file_name}: Error deleting data: {exc}"
         print(err_str)
     return err_str
 

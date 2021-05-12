@@ -150,7 +150,7 @@ Virginia;US House VA District 8	congressional
 Virginia;US House VA District 9	congressional
 Virginia;US House VA District 10	congressional
 Virginia;US House VA District 11	congressional
-Virginia	State
+Virginia	state
 Virginia;Accomack County	county
 Virginia;Albemarle County	county
 Virginia;Alleghany County	county

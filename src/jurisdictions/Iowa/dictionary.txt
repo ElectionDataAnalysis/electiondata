@@ -3233,7 +3233,6 @@ ReportingUnit	Iowa;US House IA District 1	Iowa;US House IA District 1
 ReportingUnit	Iowa;US House IA District 2	Iowa;US House IA District 2
 ReportingUnit	Iowa;US House IA District 3	Iowa;US House IA District 3
 ReportingUnit	Iowa;US House IA District 4	Iowa;US House IA District 4
-ReportingUnit	Iowa	Iowa
 ReportingUnit	Iowa;Adair County	Adair
 ReportingUnit	Iowa;Adams County	Adams
 ReportingUnit	Iowa;Allamakee County	Allamakee

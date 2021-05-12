@@ -9,7 +9,7 @@ From the root folder of your repository run `python3 setup.py install` (or if `p
 
 ## Setting up
 In the directory from which you will run the system -- which can be outside your local repository-- create the main parameter files you will need to specify paths and database connection information specific to your local computing environment:
-* `run_time.ini` for loading data (DataLoader() class) and for pulling and analyzing results (the Analyzer()) class)
+* `run_time.ini` for preparing jurisdictions (JurisdictionPrepper class) loading data (DataLoader class); for pulling and analyzing results (the Analyzer class).
   
 See the template file (`src/parameter_file_templates/run_time.ini.template`). 
    
@@ -195,7 +195,7 @@ and similarly, if necessary, for any Contest or Selection. If there is more than
 
 
 ## Create or Improve a Jurisdiction
-Because each original raw results file comes from a particular election agency, and each election agency has a fixed jurisdiction, it is natural to organize information by jurisdiction. 
+Because each original raw results file comes from a particular election agency, and each election agency has a fixed jurisdiction, we organize information by jurisdiction. 
 
 It's easiest to use the JurisdictionPrepper() object to create or update jurisdiction files.
 
@@ -335,7 +335,7 @@ If the jurisdiction's major subdivision is not county but something else (e.g., 
 Corresponding entries will be made in `dictionary.txt`, using the munged name for both the `cdf_internal_name` and the `raw_identifier_value`. Note:
 
    * Candidate
-      * In every file enhanced this way, look for possible variant names (e.g., 'Fred S. Martin' and 'Fred Martin' for the same candidate in two different counties. If you find variations, pick an internal database name and put a line for each raw_identfier_value variation into `dictionary.txt`.
+      * In every file enhanced this way, look for possible variant names (e.g., 'Fred S. Martin' and 'Fred Martin' for the same candidate in two different counties. If you find variations, pick an internal database name and put a line for each raw_identifier_value variation into `dictionary.txt`.
       * Look for non-candidate lines in the file. Take a look at `Candidate.txt` to see if there are lines (such as undervotes) that you may not want included in your final results. 
       * Look in `Candidate.txt` for BallotMeasureSelections you might not have noticed before. Remove these from `Candidate.txt` and revise their lines in `dictionary.txt`.   
       * Our convention for internal names for candidates with quoted nicknames is to use single quotes. Make sure there are no double-quotes in the Name column in `Candidate.txt` and none in the cdf_internal_name column of `dictionary.txt`. E.g., use `Rosa Maria 'Rosy' Palomino`, not `Rosa Maria "Rosy" Palomino`. However, if your results file has `Rosa Maria "Rosy" Palomino`, you will need double-quotes in the raw_identifier column in `dictionary.txt`:
@@ -383,7 +383,7 @@ There are routines in the `JurisdictionPrepper()` class to help prepare a jurisd
      * `add_elements_from_multi_results_file(directory)` does the same for every file/munger in the directory named in a `.ini` file in the directory
  
 ## Load Data
-In the `results_dir` directory indicated in `run_time.ini`, create a `.ini` file for each results file you want to use. The file `src/parameter_file_templates/results.ini.template` is a template for the individual `.ini` files.  The results files and the `.ini` files must both be in the directory specified in the 'results_dir' parameter in `run_time.ini`. The files can have arbitrary names.
+Each results file to be loaded must be designated in a `*.ini` file inside the corresponding jurisdiction's subfolder of `ini_files_for_results` in the repository. The `*.ini` files currrently in this repository correspond to data files available from the [TestingData repository](https://github.com/ElectionDataAnalysis/TestingData). These should load directly with the munger and jurisdiction files from the election_data_analysis repository.
 
 If all the `.ini` files in a single directory will use the same munger, jurisdiction and election, you can use `make_par_files` to create these `.ini` files in batches. For example, 
 ```
@@ -399,14 +399,7 @@ If all the `.ini` files in a single directory will use the same munger, jurisdic
 >>> 
 ```
   
-The DataLoader class allows batch uploading of all data in a given directory. That directory should contain the files to be uploaded, as well as a `.ini` file for each file to be uploaded. See `templates/parameter_file_templates/results.ini.tempate`. You can use `make_par_files()` to create parameter files for multiple files when they share values of the following parameters:
- * directory in which the files can be found
- * munger
- * jurisdiction
- * election
- * download_date
- * source
- * note
+The DataLoader class allows batch uploading of all data in a given directory. That directory should contain the files to be uploaded
 The `load_all()` method will read each `.ini` file and make the corresponding upload.
 From a directory containing a `run_time.ini` parameter file, run
 ```
@@ -415,27 +408,16 @@ dl = ea.DataLoader()
 dl.load_all()
 ```
 
-Some results files may need to be munged with multiple mungers, e.g., if they have combined absentee results by county with election-day results by precinct. If the `.ini` file for that results file has `munger_name` set to a comma-separated list of mungers, then all those mungers will be run on that one file.
-
-If every file in your directory will use the same munger(s) -- e.g., if the jurisdiction offers results in a directory of one-county-at-a-time files, such AZ or FL -- then you may want to use `make_par_files()`, whose arguments are:
- * the directory holding the results files,
- * the munger name (for multiple mungers, pass a string that is a comma-separated list of munger names)
- * jurisdiction (can be, e.g., 'Florida' as long as every file has Florida results)
- * election (has to be just one election),
- * download_date
- * source
- * note (optional)
- * aux_data_dir (optional -- use it if your files have all have the same auxiliary data files, which might never happen in practice)
-
+Some results files may need to be munged with multiple mungers, e.g., if they have combined absentee results by county with election-day results by precinct. If the `.ini` file for that results file has `munger_list` set to a comma-separated list of mungers, then all those mungers will be run on that one file.
 
 ### Error reporting
-System errors will be printed as the system runs.
+All errors will be reported to the a subdirectory named by the database and timestamp within the directory specified in `run_time.ini` as the `reports_and_plots_dir`.
 
-Fatal errors related to the jurisdiction or the munger will be noted in a file `*.errors` named after the results `*.ini` file. 
+Fatal errors will be noted in a file `*.errors`. 
 
 Even when the upload has worked, there may be warnings about lines not loaded. The system will ignore lines that cannot be munged. For example, the only contests whose results are uploaded will be those in the `CandidateContest.txt` or `BallotMeasureContest.txt` files that are correctly described in `dictionary.txt`.
 
-If there are no errors, the results and their `.ini` files will be moved to the archive directory specified in `run_time.ini`. Any warnings for the `*.ini` will be saved in the archive directory in a file `*.warn`.
+If there are no errors, the results files will be moved to a subdirectory of the `archive_dir` directory specified in `run_time.ini`. 
 
 ## Pull Data
 The Analyzer class uses parameters in the file `run_time.ini`, which should be in the directory from which you are running the program. This class has a number of functions that allow you to aggregate the data for analysis purposes. For example, running the `.top_counts()` function exports files into your rollup_dataframe directory which with counts summed up at a particular reporting unit level. This function expects 4 arguments: the election, the jurisdiction, the reporting unit level at which the aggregation will occur, and a boolean variable indicating whether you would like the data aggregated by vote count type. For example:
@@ -448,9 +430,11 @@ This code will produce all North Carolina data from the 2018 general election, g
 
 ## Unload and reload data
 To unload existing data for a given jurisdiction and a given election -- or more exactly, to remove data from any datafiles with that election and that jurisdiction as "top ReportingUnit" -- you can use the routine 
-```user_interface.reload_juris_election(juris_name,election_name,test_dir)```
+```user_interface.reload_juris_election(juris_name, election_name, test_dir, report_dir)```
 
 where `test_dir` is the directory holding the tests to perform on the data before upload. For example, `test_dir` might be the repository's `tests` directory. This routine will move any files associated with unloaded data to the directory specified in the optional `unloaded_dir` in `run_time.ini`.
+
+Warning: this routine tests the new data before unloading the existing data. The convention is that the test is in the `tests` subdirectory of the code repository, named for the election and jurisdiction separated by underscore (e.g. `test_Georgia_2020-General.py`). Spaces in the name of the jurisdiction or election are replaced by hyphens (e.g. `test_North-Carolina_2018-Primary.py`). If there is no appropriately test named test file, or if any of the tests fails, the unloading and reloading will fail.
 
 ## Testing
 Tests to ascertain that data loaded correctly are in the [tests](../tests) file tree. The repository has a full set of tests for the 2020 General Election. There are also test templates, in the [tests/20xx_test_templates](../tests/20xx_test_templates) folder. Naming and location of the tests matter, so if you are loading new data you will want to create a new test. Put the test in a directory named for the jurisdiction, and name the test `test_<jurisdiction>_<election>.py` (replacing any spaces with hyphens). For example, the test for South Carolina's 2020 General election results is [tests/South-Carolina/test_South-Carolina_2020-General.py](../tests/South-Carolina/test_South-Carolina_2020-General.py). The test template files contain instructions for customizing to a particular jurisdiction and election.
@@ -493,6 +477,7 @@ The jurisdiction files in this repository follow certain conventions. Many of th
  - % signs in .ini files, particularly as web addresses for results_source (e.g.,https://elections.wi.gov/sites/elections.wi.gov/files/2020-11/UNOFFICIAL%20WI%20Election%20Results%202020%20by%20County%2011-5-2020.xlsx)
  - Files that total over all candidates (e.g., Nebraska 2020 General). Make sure not to include the totals in the counts as a nominal "candidate".
  - Excel files that show a thousands separator when you view them (2,931) but don't have a thousands separator under the hood (2931). If all your count are zero, try adding or removing the 'thousands-separator' parameter in `format.config`.
+ - the parser for multi-block flat files assumes that any line without counts separates blocks. Beware of stray count-less lines (e.g., can be created by utilities pulling tables from pdfs).
 
 The `database` submodule has a routine to remove all counts from a particular results file, given a connection to the database, a cursor on that connection and the _datafile.Id of the results file:
 ```

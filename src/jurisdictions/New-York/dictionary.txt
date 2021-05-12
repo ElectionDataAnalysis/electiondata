@@ -678,7 +678,6 @@ Candidate	Brian Barnwell	Brian Barnwell
 Candidate	Brenton Ritchie	Brenton Ritchie
 Candidate	Brandon S. Patterson	Brandon S. Patterson
 Candidate	Blay Tarnoff	Blay Tarnoff
-Candidate		
 Candidate	Betsy Kraat	Betsy Kraat
 Candidate	Berneda W. Jackson	Berneda W. Jackson
 Candidate	Benjamin Eggleston	Benjamin Eggleston

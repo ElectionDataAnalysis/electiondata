@@ -212,4 +212,3 @@ Wisconsin;Waupaca County	county
 Wisconsin;Waushara County	county
 Wisconsin;Winnebago County	county
 Wisconsin;Wood County	county
-Office Totals:	Office Totals:

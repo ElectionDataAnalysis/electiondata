@@ -15,88 +15,52 @@ import election_data_analysis as e
 
 # # # constants - CHANGE THESE!! - use internal db names
 election = "2020 General"
-jurisdiction = "Puerto-Rico"
-abbr = "PR"
-total_pres_votes = -1  # total of all votes for US President
-total_gov_votes = 1235521  # total of all votes for PR Governor
-# total of all votes for US Resident Commissioner
-total_resident_commissioner_votes = 1200100
+jurisdiction = "Guam"
+abbr = "GU"
+total_pres_votes = 26383  # total of all votes for US President
 cd = 3  # US House congressional district
 total_cd_votes = -1  # total votes in that US House contest in the chosen cd
 shd = 1  # state house district
-total_shd_votes = 24808  # total votes in that State House contest
+total_shd_votes = -1  # total votes in that State House contest
 ssd = 1  # state senate district
-total_ssd_votes = 265025  # total votes in that State Senate contest
-# pick any one with corresponding data in your file, but use internal db name
-single_vote_type = "early"
-pres_votes_vote_type = -1  # total votes for US President of that vote type
-# Change this only if results are subdivided by something other than counties
-county_or_other = "Municipality"
+total_ssd_votes = 294744  # total votes in that State Senate contest
+single_vote_type = "total"  # pick any one with corresponding data in your file, but use internal db name
+pres_votes_vote_type = 26383  # total votes for US President of that vote type
+county_or_other = "village"  # Change this only if results are subdivided by something other than counties
 #  e.g., 'parish' in LA, 'state-house' in Alaska, 'ward' in Philadelphia
-# pick any one from your file, but use internal db name
-single_county = "Puerto-Rico;Aguada Municipality"
-pres_votes_county = -1  # total votes for US President in that county
+single_county = "Guam;Mangilao"  # pick any one from your file, but use internal db name
+pres_votes_county = 2207  # total votes for US President in that county
 
 
 def test_data_exists(dbname):
     assert e.data_exists(election, jurisdiction, dbname=dbname)
 
 
-"""
 def test_presidential(dbname):
     assert (
         e.contest_total(
             election,
             jurisdiction,
             f"US President ({abbr})",
-            sub_unit_type="state",
+            sub_unit_type=county_or_other,
             dbname=dbname,
         )
         == total_pres_votes
     )
-"""
 
-
-def test_governor(dbname):
-    assert (
-        e.contest_total(
-            election,
-            jurisdiction,
-            f"{abbr} Governor",
-            sub_unit_type="territory",
-            dbname=dbname,
-        )
-        == total_gov_votes
-    )
-
-
-def test_resident_commissioner_totals(dbname):
-    assert (
-        e.contest_total(
-            election,
-            jurisdiction,
-            f"US Resident Commissioner ({abbr})",
-            sub_unit_type="territory",
-            dbname=dbname,
-        )
-        == total_resident_commissioner_votes
-    )
-
-
-"""
-def test_congressional_totals(dbname):
+# No congressional contest in this election
+"""def test_congressional_totals(dbname):
     assert (
         e.contest_total(
             election,
             jurisdiction,
             f"US House {abbr} District {cd}",
-            sub_unit_type="state",
+            sub_unit_type=county_or_other,
             dbname=dbname,
         )
         == total_cd_votes
     )
 """
-
 
 def test_state_senate_totals(dbname):
     assert (
@@ -104,25 +68,25 @@ def test_state_senate_totals(dbname):
             election,
             jurisdiction,
             f"{abbr} Senate District {ssd}",
-            sub_unit_type="territory",
+            sub_unit_type=county_or_other,
             dbname=dbname,
         )
         == total_ssd_votes
     )
 
-
-def test_state_house_totals(dbname):
+# Guam legislature is unicameral
+"""def test_state_house_totals(dbname):
     assert (
         e.contest_total(
             election,
             jurisdiction,
             f"{abbr} House District {shd}",
-            sub_unit_type="territory",
+            sub_unit_type=county_or_other,
             dbname=dbname,
         )
         == total_shd_votes
     )
-
+"""
 
 def test_standard_vote_types(dbname):
     assert e.check_count_types_standard(election, jurisdiction, dbname=dbname)
@@ -139,20 +103,20 @@ def test_all_candidates_known(dbname):
     )
 
 
-"""
-def test_count_type_subtotal(dbname):
+# only total count type
+"""def test_count_type_subtotal(dbname):
     assert (
         e.contest_total(
             election,
             jurisdiction,
             f"US President ({abbr})",
             dbname=dbname,
-            sub_unit_type="state",
+            sub_unit_type=county_or_other,
             vote_type=single_vote_type,
         )
         == pres_votes_vote_type
     )
-
+"""
 
 def test_county_subtotal(dbname):
     assert (
@@ -166,4 +130,3 @@ def test_county_subtotal(dbname):
         )
         == pres_votes_county
     )
-"""

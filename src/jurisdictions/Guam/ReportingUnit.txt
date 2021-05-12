@@ -1,0 +1,21 @@
+Name	ReportingUnitType
+Guam	territory
+Guam;Agana Heights	village
+Guam;Agat	village
+Guam;Asan-Maina	village
+Guam;Barrigada	village
+Guam;Chalan Pago-Ordot	village
+Guam;Dededo	village
+Guam;Hagatna	village
+Guam;Inarajan	village
+Guam;Mangilao	village
+Guam;Merizo	village
+Guam;Mongmong-Toto-Maite	village
+Guam;Piti	village
+Guam;Santa Rita	village
+Guam;Sinajana	village
+Guam;Talofofo	village
+Guam;Tamuning	village
+Guam;Umatac	village
+Guam;Yigo	village
+Guam;Yona	village

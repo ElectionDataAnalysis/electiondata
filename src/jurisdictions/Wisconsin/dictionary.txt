@@ -2268,7 +2268,6 @@ Party	Libertarian Party	LIB
 Party	Republican Party	REP
 Party	Republican Party	Republican
 Party	Green Party	WGR
-Party	Unknown	
 Party	Unknown	Unnamed: 8_level_0
 Party	Unknown	Unnamed: 7_level_0
 Party	Unknown	Unnamed: 6_level_0

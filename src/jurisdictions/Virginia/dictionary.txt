@@ -2362,7 +2362,6 @@ Party	Libertarian Party	Libertarian
 Party	Green Party	Green
 Party	Independent Party	Independent
 Party	No Affiliation	Write-In
-Party	No Affiliation	
 ReportingUnit	Virginia;Accomack County	ACCOMACK COUNTY
 ReportingUnit	Virginia;Albemarle County	ALBEMARLE COUNTY
 ReportingUnit	Virginia;Alleghany County	ALLEGHANY COUNTY

@@ -1,0 +1,10 @@
+Name	ElectionDistrict
+GU Senate District 1	Guam
+US House GU Delegate	Guam
+US President (GU)	Guam
+GU Governor	Guam
+GU Public Auditor	Guam
+GU Attorney General	Guam
+GU Lieutenant Governor	Guam
+GU Treasurer	Guam
+GU Secretary of State	Guam

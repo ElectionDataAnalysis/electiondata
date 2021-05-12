@@ -37,23 +37,6 @@ def io(argv) -> Optional[list]:
     return ej_list
 
 
-def grab_ini_files(results_dir, path_to_repo):
-    jurisdictions = [
-        name
-        for name in os.listdir(results_dir)
-        if os.path.isdir(os.path.join(results_dir, name))
-    ]
-    path_to_ini = os.path.join(path_to_repo, "src", "ini_files_for_results")
-    for j in jurisdictions:
-        copy_path = os.path.join(path_to_ini, j)
-        if os.path.isdir(copy_path):
-            copy_tree(copy_path, results_dir)
-
-    par_files = [f for f in os.listdir(results_dir) if f[-4:] == ".ini"]
-
-    return
-
-
 def optional_remove(dl: eda.DataLoader, dir_path: str) -> (Optional[dict], bool):
     err = None
     db_removed = False
@@ -164,13 +147,16 @@ def run2(
             dl.change_db(dbname)
 
             dl.change_dir("results_dir", "TestingData")
-            err, success = dl.load_all(
-                move_files=False,
+            success, err = dl.load_all(
+                move_files=True,
                 election_jurisdiction_list=election_jurisdiction_list,
                 rollup=rollup,
             )
-            if not success:
-                print(f"At least one file did not load correctly.\n{err}")
+            if success:
+                print(f"Files loading successfully:\n{success}")
+            else:
+                print("No files loaded successfully")
+
         except Exception as exc:
             print(f"Exception occurred: {exc}")
             if dl:
@@ -185,25 +171,31 @@ def run2(
 
         # add any necessary totals
         for e, j in election_jurisdiction_list:
-            err_str = dl.add_totals_if_missing(e, j)
-            if err_str:
-                err = ui.add_new_error(
-                    err,
-                    "warn-system",
-                    f"Error adding total vote types for {e}, {j}: {err_str}",
-                )
+            add_err = dl.add_totals_if_missing(e, j)
+            if add_err:
+                err = ui.consolidate_errors([err, add_err])
 
         if ui.fatal_error(err):
             optional_remove(dl, "TestingData")
             return err
-
-    result = ui.run_tests(
-        test_dir, dbname, election_jurisdiction_list=election_jurisdiction_list
+    loaded_ej_list = [k.split(";") for k in success.keys()]
+    report_dir = os.path.join(dl.d["reports_and_plots_dir"], f"tests_{ts}")
+    failures = ui.run_tests(
+        test_dir, dbname, election_jurisdiction_list=loaded_ej_list, report_dir=report_dir
     )
-    print(f"test results:\n{result}")
+    if test_dir:
+        for k in failures.keys():
+            err = ui.add_new_error(
+                err,
+                "warn-test",
+                k,
+                failures[k],
+            )
 
     if load_data:
-        err, db_removed = optional_remove(dl, "TestingData")
+        remove_err, db_removed = optional_remove(dl, "TestingData")
+        if remove_err:
+            err = ui.consolidate_errors([err, remove_err])
     return err
 
 
@@ -219,5 +211,17 @@ if __name__ == "__main__":
         rollup=True,
     )
     if error:
-        print(error)
+        params, new_err = ui.get_parameters(
+            required_keys=["reports_and_plots_dir"],
+            param_file="run_time.ini",
+            header="election_data_analysis"
+        )
+        ts = datetime.datetime.now().strftime("%m%d_%H%M")
+        if not new_err:
+            report_dir = os.path.join(
+                params["reports_and_plots_dir"], f"load_and_test_all_{ts}"
+            )
+            ui.report(error, report_dir)
+        else:
+            print(f"No reports_and_plots_dir specified in run_time.ini. Errors:\n{error}")
     exit()
