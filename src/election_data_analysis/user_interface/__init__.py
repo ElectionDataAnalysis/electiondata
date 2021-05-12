@@ -320,24 +320,6 @@ contest_type_mappings = {
 }
 
 
-def pick_juris_from_filesystem(
-    juris_path: str, err: Optional[dict], check_files: bool = False
-):
-    """Returns a Jurisdiction object. <juris_path> is the path to the directory containing the
-    defining files for the particular jurisdiction.
-    """
-    new_err = None
-    if check_files:
-        new_err = jm.ensure_jurisdiction_dir(juris_path)
-    err = consolidate_errors([err, new_err])
-    if fatal_error(new_err):
-        ss = None
-    else:
-        # initialize the jurisdiction
-        ss = jm.Jurisdiction(juris_path)
-    return ss, err
-
-
 def find_dupes(df):
     dupes_df = df[df.duplicated()].drop_duplicates(keep="first")
     deduped = df.drop_duplicates(keep="first")
@@ -703,11 +685,15 @@ def copy_directory_with_backup(
                     Path(copy_path).parent,
                     f"{old_stem}{backup_suffix}.{Path(copy_path).suffix}",
                 )
-                copy_with_err_handling(copy_path, backup_path, report_error=report_error)
+                copy_with_err_handling(
+                    copy_path, backup_path, report_error=report_error
+                )
         # copy original to desired location
         # # ensure parent directory exists
         Path(copy_path).parent.mkdir(parents=True, exist_ok=True)
-        new_err = copy_with_err_handling(original_path, copy_path, report_error=report_error)
+        new_err = copy_with_err_handling(
+            original_path, copy_path, report_error=report_error
+        )
         err = consolidate_errors([err, new_err])
     # if the original is not a directory
     else:
@@ -721,7 +707,9 @@ def copy_directory_with_backup(
     return err
 
 
-def copy_with_err_handling(original_path: str, copy_path: str, report_error: bool = True) -> Optional[dict]:
+def copy_with_err_handling(
+    original_path: str, copy_path: str, report_error: bool = True
+) -> Optional[dict]:
     err = None
     Path(copy_path).mkdir(parents=True, exist_ok=True)
     for root, dirs, files in os.walk(original_path, topdown=True):
@@ -770,7 +758,9 @@ def get_parameters(
         err = add_new_error(err, "ini", param_file, f"Missing header: {ke}")
         return d, err
     except DuplicateOptionError as doe:
-        err = add_new_error(err, "ini", param_file, f"Something is defined twice: {doe}")
+        err = add_new_error(
+            err, "ini", param_file, f"Something is defined twice: {doe}"
+        )
 
     # read required info
     missing_required_params = list()
@@ -1020,8 +1010,11 @@ def fatal_error(err, error_type_list=None, name_key_list=None) -> bool:
 
 
 def run_tests(
-    test_dir: str, dbname: str, election_jurisdiction_list: list,
-        report_dir: Optional[str] = None, file_prefix: str = "",
+    test_dir: str,
+    dbname: str,
+    election_jurisdiction_list: list,
+    report_dir: Optional[str] = None,
+    file_prefix: str = "",
 ) -> Dict[str, Any]:
     """run tests from test_dir
     db_params must have host, user, pass, db_name.
@@ -1035,16 +1028,16 @@ def run_tests(
         # run tests
         e_system = jm.system_name_from_true_name(election)
         j_system = jm.system_name_from_true_name(juris)
-        test_file = os.path.join(
-            test_dir, f"{j_system}/test_{j_system}_{e_system}.py"
-        )
+        test_file = os.path.join(test_dir, f"{j_system}/test_{j_system}_{e_system}.py")
         if not os.path.isfile(test_file):
             failures[f"{juris};{election}"] = f"No test file found: {test_file}"
             continue
         cmd = f"pytest --dbname {dbname} {test_file}"
         if report_dir:
             Path(report_dir).mkdir(exist_ok=True, parents=True)
-            report_file = os.path.join(report_dir, f'{file_prefix}{j_system}_{e_system}.txt')
+            report_file = os.path.join(
+                report_dir, f"{file_prefix}{j_system}_{e_system}.txt"
+            )
             cmd = f"{cmd} > {report_file}"
         r = os.system(cmd)
         if r != 0:
@@ -1134,16 +1127,6 @@ def election_juris_list(ini_path: str, results_path: Optional[str] = None) -> li
     return list(ej_set)
 
 
-def file_full_paths(dir_path: str, ext: str) -> List[str]:
-    """Return list of full paths all .ini files in the directory or its subdirectories"""
-    ini_paths = list()
-    for subdir, dirs, files in os.walk(dir_path):
-        for f in files:
-            if (f[-len(ext) - 1 :] == f".{ext}") and (f != f"template.{ext}"):
-                ini_paths.append(os.path.join(subdir, f))
-    return ini_paths
-
-
 def reload_juris_election(
     juris_name: str,
     election_name: str,
@@ -1195,7 +1178,7 @@ def reload_juris_election(
             dl.d["dbname"],
             election_jurisdiction_list=[(election_name, juris_name)],
             report_dir=report_dir,
-            file_prefix="temp_db_"
+            file_prefix="temp_db_",
         )
         if failed_tests:
             print(
@@ -1236,7 +1219,7 @@ def reload_juris_election(
                         "database",
                         f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
                         f"Data loaded successfully to test db, so old data was removed from live db.\n"
-                        f"But new data loaded to live db failed some tests:\n{live_failed_tests}"
+                        f"But new data loaded to live db failed some tests:\n{live_failed_tests}",
                     )
             else:
                 err = consolidate_errors([err, new_err])
@@ -1589,23 +1572,3 @@ def set_and_fill_headers(
             [x for x in range(max(header_list)) if x not in header_list], inplace=True
         )
     return df
-
-
-def check_results_ini_params(
-    p: Dict[str, Any],
-    ini_file_path: str,
-) -> Optional[dict]:
-    """Checks results parameters"""
-    err_str = None
-    ini_file_name = Path(ini_file_path).name
-    try:
-        datetime.datetime.strptime(p["results_download_date"], "%Y-%m-%d")
-    except TypeError:
-        err_str = f"No download date found"
-    except ValueError:
-        err_str = f"Date could not be parsed. Expected format is 'YYYY-MM-DD', actual is {p['results_download_date']}"
-    if err_str:
-        ini_err = add_new_error(None, "ini", ini_file_name, err_str)
-    else:
-        ini_err = None
-    return ini_err

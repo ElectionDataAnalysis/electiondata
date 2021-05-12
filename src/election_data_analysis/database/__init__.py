@@ -172,7 +172,7 @@ def create_database(
 # TODO move to more appropriate module?
 def append_to_composing_reporting_unit_join(
     engine: sqlalchemy.engine, ru: pd.DataFrame, error_type, error_name
-) ->  Optional[dict]:
+) -> Optional[dict]:
     """<ru> is a dframe of reporting units, with cdf internal name in column 'Name'.
     cdf internal name indicates nesting via semicolons `;`.
     This routine calculates the nesting relationships from the Names and uploads to db.
@@ -220,7 +220,13 @@ def append_to_composing_reporting_unit_join(
             )
         if cruj_dframe_list:
             cruj_dframe = pd.concat(cruj_dframe_list)
-            insert_err = insert_to_cdf_db(engine, cruj_dframe, "ComposingReportingUnitJoin", error_type, error_name)
+            insert_err = insert_to_cdf_db(
+                engine,
+                cruj_dframe,
+                "ComposingReportingUnitJoin",
+                error_type,
+                error_name,
+            )
             err = ui.consolidate_errors([err, insert_err])
 
     return err
@@ -608,8 +614,13 @@ def insert_to_cdf_db(
         # define update clause if necessary
         name_field = get_name_field(element)
         if on_conflict.upper() == "UPDATE":
-            conflict_action = sql.SQL("({name_field}) DO UPDATE SET").format(name_field=sql.Identifier(name_field))
-            update_list = [sql.SQL("{c} = EXCLUDED.{c}").format(c=sql.Identifier(col)) for col in temp_columns]
+            conflict_action = sql.SQL("({name_field}) DO UPDATE SET").format(
+                name_field=sql.Identifier(name_field)
+            )
+            update_list = [
+                sql.SQL("{c} = EXCLUDED.{c}").format(c=sql.Identifier(col))
+                for col in temp_columns
+            ]
             conflict_target = sql.SQL(",").join(update_list)
 
         else:
@@ -625,7 +636,7 @@ def insert_to_cdf_db(
                 fields=sql.SQL(",").join([sql.Identifier(x) for x in temp_columns]),
                 temp_table=sql.Identifier(temp_table),
                 conflict_action=conflict_action,
-                conflict_target=conflict_target
+                conflict_target=conflict_target,
             )
             cursor.execute(q_insert)
             connection.commit()
@@ -645,10 +656,9 @@ def insert_to_cdf_db(
                     err,
                     f"warn-{error_type}",
                     error_name,
-                    f"Error upserting {element} resolved by only inserting and not updating. " \
-                            f"Exception: {exc}",
+                    f"Error upserting {element} resolved by only inserting and not updating. "
+                    f"Exception: {exc}",
                 )
-
 
     except Exception as exc:
         print(exc)
@@ -670,7 +680,7 @@ def insert_to_cdf_db(
             err,
             "system",
             f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
-            f"Unexpected exception removing temp table during insert/update of {element}"
+            f"Unexpected exception removing temp table during insert/update of {element}",
         )
         return err
 
@@ -679,7 +689,9 @@ def insert_to_cdf_db(
         mask = matched_with_old.ReportingUnit_Id > 0
         new_rus = matched_with_old[~mask]
         if not new_rus.empty:
-            append_err = append_to_composing_reporting_unit_join(engine, new_rus, error_type, error_name)
+            append_err = append_to_composing_reporting_unit_join(
+                engine, new_rus, error_type, error_name
+            )
             if append_err:
                 err = ui.consolidate_errors([err, append_err])
 
@@ -1788,7 +1800,3 @@ def get_vote_count_types(
     vct_set = get_vote_count_types_cursor(cursor, election, jurisdiction)
     connection.close()
     return vct_set
-
-
-
-

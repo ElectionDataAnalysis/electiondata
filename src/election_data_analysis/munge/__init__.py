@@ -838,7 +838,9 @@ def add_selection_id(  # TODO tech debt: why does this add columns 'I' and 'd'?
 
             # Load unmatched records into CandidateSelection table
             c_df_unmatched["Id"] = pd.Series(id_list, index=c_df_unmatched.index)
-            new_err = db.insert_to_cdf_db(engine, c_df_unmatched, "CandidateSelection", "munger", munger_name)
+            new_err = db.insert_to_cdf_db(
+                engine, c_df_unmatched, "CandidateSelection", "munger", munger_name
+            )
             if new_err:
                 err = ui.consolidate_errors([err, new_err])
                 if ui.fatal_error(new_err):
@@ -1165,7 +1167,12 @@ def munge_raw_to_ids(
     # add Selection_Id (combines info from BallotMeasureSelection and CandidateContestSelection)
     try:
         working, err = add_selection_id(
-            working, session.bind, path_to_jurisdiction_dir, juris_true_name, munger_name, err
+            working,
+            session.bind,
+            path_to_jurisdiction_dir,
+            juris_true_name,
+            munger_name,
+            err,
         )
         working, err_df = clean_ids(working, ["Selection_Id"])
     except Exception as exc:
@@ -2107,7 +2114,9 @@ def fill_vote_count(
 
     # Fill VoteCount
     try:
-        new_err = db.insert_to_cdf_db(session.bind, working, "VoteCount", "munger", munger_name)
+        new_err = db.insert_to_cdf_db(
+            session.bind, working, "VoteCount", "munger", munger_name
+        )
         if new_err:
             err = ui.consolidate_errors([err, new_err])
             return err
