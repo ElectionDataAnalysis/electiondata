@@ -2216,7 +2216,6 @@ def incorporate_aux_info(
     """revises the dataframe, adding necessary columns obtained from lookup tables,
     and revises the formula to pull from those columns instead of foreign key columns
     Note cols are assumed to have suffix, but aux does not include suffix"""
-    munger_name = Path(munger_path).stem
     w_df = df.copy()
     err = None  # TODO error handling
     ## set order for lookups

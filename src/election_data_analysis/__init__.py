@@ -25,7 +25,7 @@ import shutil
 
 # constants
 sdl_pars_req = [
-    "munger_name",
+    "munger_list",
     "results_file",
     "results_short_name",
     "results_download_date",
@@ -117,12 +117,12 @@ class SingleDataLoader:
             if self.d[k] == "" and k[:8] == "results_":
                 self.d[k] = "none"
 
-        # pick mungers (Note: munger_name is comma-separated list of munger names)
+        # pick mungers (Note: munger_list is comma-separated list of munger names)
         self.munger = dict()
         self.munger_err = dict()
         # TODO document
         self.mungers_dir = mungers_path
-        self.munger_list = [x.strip() for x in self.d["munger_name"].split(",")]
+        self.munger_list = [x.strip() for x in self.d["munger_list"].split(",")]
 
     def track_results(self) -> (dict, Optional[dict]):
         """insert a record for the _datafile, recording any error string <e>.
@@ -724,7 +724,7 @@ def check_par_file_elements(
     err = None
 
     # for each munger,
-    for mu in ini_d["munger_name"].split(","):
+    for mu in ini_d["munger_list"].split(","):
         # check any constant_over_file elements are defined in .ini file
         munger_file = os.path.join(mungers_path, f"{mu}.munger")
         params, p_err = ui.get_parameters(
@@ -1281,7 +1281,7 @@ class JurisdictionPrepper:
     def make_ini_file(
         self,
         ini_name: str,
-        munger_name: str,
+        munger_name_list: str,
         is_preliminary: bool = False,
     ):
         juris_true_name = self.d["name"]
@@ -1298,7 +1298,7 @@ class JurisdictionPrepper:
         if not os.path.isfile(new_ini_file):
             ini_replace = {
                 "results_file=": f"results_file={juris_system_name}/",
-                f"munger_name=": f"munger_name={munger_name}",
+                f"munger_list=": f"munger_list={munger_name_list}",
                 "jurisdiction=": f"jurisdiction={juris_true_name}",
                 "results_short_name=": f"results_short_name={Path(ini_name).stem}",
             }
@@ -1356,7 +1356,7 @@ class JurisdictionPrepper:
 
 def make_par_files(
     directory: str,
-    munger_name: str,
+    munger_list: str,
     jurisdiction_path: str,
     top_ru: str,
     election: str,
@@ -1373,7 +1373,7 @@ def make_par_files(
     for f in data_file_list:
         par_text = (
             f"[election_data_analysis]\nresults_file={f}\njurisdiction_path={jurisdiction_path}\n"
-            f"munger_name={munger_name}\njurisdiction={top_ru}\nelection={election}\n"
+            f"munger_list={munger_list}\njurisdiction={top_ru}\nelection={election}\n"
             f"results_short_name={top_ru}_{f}\nresults_download_date={download_date}\n"
             f"results_source={source}\nresults_note={results_note}\n"
         )

@@ -408,7 +408,7 @@ dl = ea.DataLoader()
 dl.load_all()
 ```
 
-Some results files may need to be munged with multiple mungers, e.g., if they have combined absentee results by county with election-day results by precinct. If the `.ini` file for that results file has `munger_name` set to a comma-separated list of mungers, then all those mungers will be run on that one file.
+Some results files may need to be munged with multiple mungers, e.g., if they have combined absentee results by county with election-day results by precinct. If the `.ini` file for that results file has `munger_list` set to a comma-separated list of mungers, then all those mungers will be run on that one file.
 
 ### Error reporting
 All errors will be reported to the a subdirectory named by the database and timestamp within the directory specified in `run_time.ini` as the `reports_and_plots_dir`.
