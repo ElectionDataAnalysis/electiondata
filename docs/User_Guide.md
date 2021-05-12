@@ -9,7 +9,7 @@ From the root folder of your repository run `python3 setup.py install` (or if `p
 
 ## Setting up
 In the directory from which you will run the system -- which can be outside your local repository-- create the main parameter files you will need to specify paths and database connection information specific to your local computing environment:
-* `run_time.ini` for loading data (DataLoader() class) and for pulling and analyzing results (the Analyzer()) class)
+* `run_time.ini` for preparing jurisdictions (JurisdictionPrepper class) loading data (DataLoader class); for pulling and analyzing results (the Analyzer class).
   
 See the template file (`src/parameter_file_templates/run_time.ini.template`). 
    
@@ -383,7 +383,7 @@ There are routines in the `JurisdictionPrepper()` class to help prepare a jurisd
      * `add_elements_from_multi_results_file(directory)` does the same for every file/munger in the directory named in a `.ini` file in the directory
  
 ## Load Data
-In the `results_dir` directory indicated in `run_time.ini`, create a `.ini` file for each results file you want to use. The file `src/parameter_file_templates/results.ini.template` is a template for the individual `.ini` files.  The results files and the `.ini` files must both be in the directory specified in the 'results_dir' parameter in `run_time.ini`. The files can have arbitrary names.
+Each results file to be loaded must be designated in a `*.ini` file inside the corresponding jurisdiction's subfolder of `ini_files_for_results` in the repository. The `*.ini` files currrently in this repository correspond to data files available from the [TestingData repository](https://github.com/ElectionDataAnalysis/TestingData). These should load directly with the munger and jurisdiction files from the election_data_analysis repository.
 
 If all the `.ini` files in a single directory will use the same munger, jurisdiction and election, you can use `make_par_files` to create these `.ini` files in batches. For example, 
 ```
@@ -399,14 +399,7 @@ If all the `.ini` files in a single directory will use the same munger, jurisdic
 >>> 
 ```
   
-The DataLoader class allows batch uploading of all data in a given directory. That directory should contain the files to be uploaded, as well as a `.ini` file for each file to be uploaded. See `templates/parameter_file_templates/results.ini.tempate`. You can use `make_par_files()` to create parameter files for multiple files when they share values of the following parameters:
- * directory in which the files can be found
- * munger
- * jurisdiction
- * election
- * download_date
- * source
- * note
+The DataLoader class allows batch uploading of all data in a given directory. That directory should contain the files to be uploaded
 The `load_all()` method will read each `.ini` file and make the corresponding upload.
 From a directory containing a `run_time.ini` parameter file, run
 ```
@@ -417,21 +410,10 @@ dl.load_all()
 
 Some results files may need to be munged with multiple mungers, e.g., if they have combined absentee results by county with election-day results by precinct. If the `.ini` file for that results file has `munger_name` set to a comma-separated list of mungers, then all those mungers will be run on that one file.
 
-If every file in your directory will use the same munger(s) -- e.g., if the jurisdiction offers results in a directory of one-county-at-a-time files, such AZ or FL -- then you may want to use `make_par_files()`, whose arguments are:
- * the directory holding the results files,
- * the munger name (for multiple mungers, pass a string that is a comma-separated list of munger names)
- * jurisdiction (can be, e.g., 'Florida' as long as every file has Florida results)
- * election (has to be just one election),
- * download_date
- * source
- * note (optional)
- * aux_data_dir (optional -- use it if your files have all have the same auxiliary data files, which might never happen in practice)
-
-
 ### Error reporting
 All errors will be reported to the a subdirectory named by the database and timestamp within the directory specified in `run_time.ini` as the `reports_and_plots_dir`.
 
-Fatal errors related to the jurisdiction or the munger will be noted in a file `*.errors` named after the results `*.ini` file. 
+Fatal errors will be noted in a file `*.errors`. 
 
 Even when the upload has worked, there may be warnings about lines not loaded. The system will ignore lines that cannot be munged. For example, the only contests whose results are uploaded will be those in the `CandidateContest.txt` or `BallotMeasureContest.txt` files that are correctly described in `dictionary.txt`.
 
@@ -448,7 +430,7 @@ This code will produce all North Carolina data from the 2018 general election, g
 
 ## Unload and reload data
 To unload existing data for a given jurisdiction and a given election -- or more exactly, to remove data from any datafiles with that election and that jurisdiction as "top ReportingUnit" -- you can use the routine 
-```user_interface.reload_juris_election(juris_name,election_name,test_dir,report_dir)```
+```user_interface.reload_juris_election(juris_name, election_name, test_dir, report_dir)```
 
 where `test_dir` is the directory holding the tests to perform on the data before upload. For example, `test_dir` might be the repository's `tests` directory. This routine will move any files associated with unloaded data to the directory specified in the optional `unloaded_dir` in `run_time.ini`.
 
@@ -495,6 +477,7 @@ The jurisdiction files in this repository follow certain conventions. Many of th
  - % signs in .ini files, particularly as web addresses for results_source (e.g.,https://elections.wi.gov/sites/elections.wi.gov/files/2020-11/UNOFFICIAL%20WI%20Election%20Results%202020%20by%20County%2011-5-2020.xlsx)
  - Files that total over all candidates (e.g., Nebraska 2020 General). Make sure not to include the totals in the counts as a nominal "candidate".
  - Excel files that show a thousands separator when you view them (2,931) but don't have a thousands separator under the hood (2931). If all your count are zero, try adding or removing the 'thousands-separator' parameter in `format.config`.
+ - the parser for multi-block flat files assumes that any line without counts separates blocks. Beware of stray count-less lines (e.g., can be created by utilities pulling tables from pdfs).
 
 The `database` submodule has a routine to remove all counts from a particular results file, given a connection to the database, a cursor on that connection and the _datafile.Id of the results file:
 ```
