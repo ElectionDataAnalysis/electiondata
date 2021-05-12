@@ -113,15 +113,15 @@ def clean_ids(
     df: pd.DataFrame,
     cols: List[str],
 ) -> (pd.DataFrame(), pd.DataFrame):
-    """changes only the columns to of numeric type; changes them
-    to integer, with any nulls changed to 0. Reports a dataframe of
-    any rows so changed. Non-numeric-type columns are changed to all 0"""
+    """Changes to integer type each column <cols> that is actually a column of <df>.
+    Nulls are changed to 0, as are entire columns with any entries that
+    cannot be parsed as integers. """
 
     if cols == list():
         return df, pd.DataFrame()
     err_df = pd.DataFrame()
     working = df.copy()
-    for c in cols:
+    for c in [x for x in cols if x in working.columns]:
         if c in working.columns and is_numeric_dtype(working[c]):
             err_df = pd.concat([err_df, working[working[c].isnull()]])
             working[c] = working[c].fillna(0).astype("int64")
@@ -940,16 +940,13 @@ def raw_to_id_simple(
                 # get list of raw CountItemTypes in case they are needed for error reporting
                 all_raw_cit = working.CountItemType_raw.unique().tolist()
                 # get internal CountItemType for all matched lines
-                working = (
-                    working[matched]
-                    .merge(
+                working = working[matched].merge(
                         r_i,
                         how="left",
                         left_on="CountItemType_raw",
                         right_on="raw_identifier_value",
-                    )
-                    .rename(columns={"cdf_internal_name": "CountItemType"})
-                )
+                    ).rename(columns={"cdf_internal_name": "CountItemType"})
+
                 # if no CountItemTypes matched to dictionary
                 if working.CountItemType.isnull().all():
                     err = ui.add_new_error(
@@ -1020,7 +1017,7 @@ def raw_to_id_simple(
                 err,
                 "system",
                 f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
-                f"Exception ({exc}) while adding internal ids for {t}.",
+                f"Unexpected exception ({exc}) while adding internal ids for {t}.",
             )
 
     return working, err
@@ -1134,13 +1131,14 @@ def munge_raw_to_ids(
                 db.name_to_id(session, element, constants[element]),
             )
             working.drop(element, axis=1, inplace=True)
-            working, err_df = clean_ids(working, ["CountItemType_Id"])
+            working, err_df = clean_ids(working, [f"{element}_Id"])
             if not err_df.empty:
+                bad_ids = list(err_df[f"{element}_Id"].unique())
                 err = ui.add_new_error(
                     err,
                     "warn-munger",
                     munger_name,
-                    f"Problem cleaning these Ids:\n{err_df}",
+                    f"Problem cleaning these {element}_Ids:\n{bad_ids}",
                 )
 
     other_elements = [
