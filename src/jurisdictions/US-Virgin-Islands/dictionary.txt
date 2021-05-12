@@ -1,0 +1,74 @@
+cdf_element	cdf_internal_name	raw_identifier_value
+CandidateContest	VI Board of Elections District St. John Resident of St. John (vote for 1)	BOARD OF ELECTIONS - STJ ST. THOMAS / ST. JOHN
+CandidateContest	VI Board of Elections District St. Thomas and St. John Resident of St. Thomas (vote for 3)	BOARD OF ELECTIONS - STT ST. THOMAS / ST. JOHN
+CandidateContest	VI Board of Elections District St. Croix (vote for 4)	BOARD OF ELECTIONS - STX
+CandidateContest	VI Board of Education District St. Croix	BOARD OF EDUCATION - STX
+CandidateContest	VI Board of Education District St. Thomas and St. John	BOARD OF EDUCATION - STT / STJ
+CandidateContest	VI Board of Education At-Large	BOARD OF EDUCATION AT LARGE
+CandidateContest	US House VI Delegate	DELEGATE TO THE HOUSE OF REPRESENTATIVES
+CandidateContest	VI Senate At-Large	LEGISLATURE OF THE VIRGIN ISLANDS AT LARGE
+CandidateContest	VI Senate District St. Croix	LEGISLATURE OF THE VIRGIN ISLANDS ST. CROIX
+CandidateContest	VI Senate District St. Thomas and St. John	LEGISLATURE OF THE VIRGIN ISLANDS ST. THOMAS / ST. JOHN
+Election	2020 General	2020 General
+Election	2020 Primary	2020 Primary
+Election	2018 General	2018 General
+Election	2016 General	2016 General
+Party	Democratic Party	DEM
+Party	Republican Party	REP
+Party	JPG	JPG
+Party	Independent Citizens Movement	ICM
+CountItemType	election-day	ElectionDay
+CountItemType	early	Early Voting
+CountItemType	absentee	Absentee
+CountItemType	provisional	Provisional
+CountItemType	total	TOTAL
+Candidate	Write-In Totals	Write-In Totals
+Candidate	Steven D. Payne Sr.	Steven D. Payne Sr.
+Candidate	Stacey Plaskett	Stacey Plaskett
+Candidate	Shekema M. George	Shekema M. George
+Candidate	Shawna K. Richards	Shawna K. Richards
+Candidate	Samuel 'Sam' Carrion	Samuel 'Sam' Carrion
+Candidate	Oakland Benta	Oakland Benta
+Candidate	Novelle E Francis, Jr.	Novelle E Francis, Jr.
+Candidate	Norman Jn Baptiste	Norman Jn Baptiste
+Candidate	Moonark Wakefield	Moonark Wakefield
+Candidate	Michael J. Springer	Michael J. Springer
+Candidate	Mary L. Moorhead	Mary L. Moorhead
+Candidate	Martial A. Webster, Sr.	Martial A. Webster, Sr.
+Candidate	Lisa Harris-Moorhead	Lisa Harris-Moorhead
+Candidate	Liliana Belardo-Oneal	Liliana Belardo-Oneal
+Candidate	Kurt Vialet	Kurt Vialet
+Candidate	Kenneth Kenny Gittens	Kenneth Kenny Gittens
+Candidate	John McCoy	John McCoy
+Candidate	Javan E. James	Javan E. James
+Candidate	Glenn Webster	Glenn Webster
+Candidate	Genevieve Whitaker	Genevieve Whitaker
+Candidate	Franklin D. Johnson	Franklin D. Johnson
+Candidate	Epiphane 'Joe' Joseph	Epiphane 'Joe' Joseph
+Candidate	Emmanuella Perez	Emmanuella Perez
+Candidate	Devin Carrington	Devin Carrington
+Candidate	Clint D. W. Ferris	Clint D. W. Ferris
+Candidate	Angel L. Bolques, Jr.	Angel L. Bolques, Jr.
+Candidate	Allison DeGazon	Allison DeGazon
+Candidate	Alicia 'Chucky' Hansen	Alicia 'Chucky' Hansen
+Candidate	Wayne FactsMan Adams	Wayne FactsMan Adams
+Candidate	Stephen 'Smokey' Frett	Stephen 'Smokey' Frett
+Candidate	Stedmann Hodge Jr.	Stedmann Hodge Jr.
+Candidate	Shena George-Esannason	Shena George-Esannason
+Candidate	Ray Fonseca	Ray Fonseca
+Candidate	Nandi SÃ©kou, Esq	Nandi SÃ©kou, Esq
+Candidate	Milton E. Potter	Milton E. Potter
+Candidate	Marvin A. Blyden	Marvin A. Blyden
+Candidate	Lydia A. Hendricks	Lydia A. Hendricks
+Candidate	Kyza A. Callwood	Kyza A. Callwood
+Candidate	Jonathan P. Tucker, Jr.	Jonathan P. Tucker, Jr.
+Candidate	Janelle K. Sarauw	Janelle K. Sarauw
+Candidate	Irvin Pudna Mason, Sr.	Irvin Pudna Mason, Sr.
+Candidate	Eugene Farrell	Eugene Farrell
+Candidate	Dwayne M. DeGraff	Dwayne M. DeGraff
+Candidate	Donna Frett Gregory	Donna Frett Gregory
+Candidate	Carla Joseph	Carla Joseph
+Candidate	Athneil 'Bobby' Thomas	Athneil 'Bobby' Thomas
+Candidate	Arturo Watlington, Jr.	Arturo Watlington, Jr.
+Candidate	Alma Francis Heyliger	Alma Francis Heyliger
+Candidate	Alecia M. Wells	Alecia M. Wells
