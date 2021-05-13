@@ -1,0 +1,20 @@
+Name	ReportingUnitType
+Northern Mariana Islands;MP House District 1	state-house
+Northern Mariana Islands;MP House District 2	state-house
+Northern Mariana Islands;MP House District 3	state-house
+Northern Mariana Islands;MP House District 4	state-house
+Northern Mariana Islands;MP House District 5	state-house
+Northern Mariana Islands;MP House District 6	state-house
+Northern Mariana Islands;MP House District 7	state-house
+Northern Mariana Islands;MP Senate District 1	state-senate
+Northern Mariana Islands;MP Senate District 2	state-senate
+Northern Mariana Islands;MP Senate District 3	state-senate
+Northern Mariana Islands;US House MP District 1	congressional
+Northern Mariana Islands	territory
+Northern Mariana Islands;Election District 1	district
+Northern Mariana Islands;Election District 2	district
+Northern Mariana Islands;Election District 3	district
+Northern Mariana Islands;Election District 4	district
+Northern Mariana Islands;Election District 5	district
+Northern Mariana Islands;Election District 6	district
+Northern Mariana Islands;Election District 7	district

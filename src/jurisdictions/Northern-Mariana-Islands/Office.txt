@@ -1,0 +1,19 @@
+Name	ElectionDistrict
+MP House District 1	Northern Mariana Islands;MP House District 1
+MP House District 2	Northern Mariana Islands;MP House District 2
+MP House District 3	Northern Mariana Islands;MP House District 3
+MP House District 4	Northern Mariana Islands;MP House District 4
+MP House District 5	Northern Mariana Islands;MP House District 5
+MP House District 6	Northern Mariana Islands;MP House District 6
+MP House District 7	Northern Mariana Islands;MP House District 7
+MP Senate District 1	Northern Mariana Islands;MP Senate District 1
+MP Senate District 2	Northern Mariana Islands;MP Senate District 2
+MP Senate District 3	Northern Mariana Islands;MP Senate District 3
+US House MP District 1	Northern Mariana Islands;US House MP District 1
+US President (MP)	Northern Mariana Islands
+MP Governor	Northern Mariana Islands
+US Senate MP	Northern Mariana Islands
+MP Attorney General	Northern Mariana Islands
+MP Lieutenant Governor	Northern Mariana Islands
+MP Treasurer	Northern Mariana Islands
+MP Secretary of State	Northern Mariana Islands

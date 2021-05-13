@@ -680,7 +680,7 @@ def insert_to_cdf_db(
             err,
             "system",
             f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
-            f"Unexpected exception removing temp table during insert/update of {element}",
+            f"Unexpected exception removing temp table during insert/update of {element}: {exc}",
         )
         return err
 

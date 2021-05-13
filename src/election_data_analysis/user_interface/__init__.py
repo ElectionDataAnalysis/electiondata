@@ -1036,7 +1036,7 @@ def run_tests(
         if report_dir:
             Path(report_dir).mkdir(exist_ok=True, parents=True)
             report_file = os.path.join(
-                report_dir, f"{file_prefix}{j_system}_{e_system}.txt"
+                report_dir, f"{file_prefix}{j_system}_{e_system}.test_results"
             )
             cmd = f"{cmd} > {report_file}"
         r = os.system(cmd)

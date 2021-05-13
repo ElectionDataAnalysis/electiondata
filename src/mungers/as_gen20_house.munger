@@ -1,0 +1,19 @@
+[format]
+file_type=excel
+count_location=by_number:1
+
+noncount_header_row=0
+constant_over_file=CountItemType
+multi_block=yes
+
+[munge formulas]
+Candidate=<column_0>
+CandidateContest=<row_0>
+ReportingUnit=<row_0>
+Party=<Party from column_0>
+
+[column_0 lookup]
+source_file=American-Samoa/Party_by_Candidate_20g.xlsx
+lookup_id=Candidate
+file_type=excel
+noncount_header_row=0

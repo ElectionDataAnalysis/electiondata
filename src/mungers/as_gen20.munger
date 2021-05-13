@@ -1,0 +1,21 @@
+[format]
+file_type=excel
+count_location=by_number:1,2,3,4,5
+
+noncount_header_row=0
+constant_over_file=CountItemType,CandidateContest
+
+[munge formulas]
+Candidate=<count_header_0>
+ReportingUnit=<Individual Polling Booth>
+Party=<Party from count_header_0>
+
+[count_header_0 lookup]
+source_file=American-Samoa/Party_by_Candidate_20g.xlsx
+lookup_id=Candidate
+file_type=excel
+noncount_header_row=0
+
+[ignore]
+Candidate=Total
+ReportingUnit=Total,Percent

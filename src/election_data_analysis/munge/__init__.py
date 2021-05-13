@@ -1077,10 +1077,20 @@ def munge_raw_to_ids(
 
     # add Contest_Id column and contest_type column
     if "CandidateContest" in constants.keys():
+        contest_id = db.name_to_id(session, "Contest", constants["CandidateContest"])
+        if not contest_id:
+            err = ui.add_new_error(
+                err,
+                "jurisdiction",
+                juris_true_name,
+                f"CandidateContest specified in ini file ({constants['CandidateContest']}) "
+                f"not found. Check CandidateContest.txt."
+            )
+            return df, err
         working = add_constant_column(
             working,
             "Contest_Id",
-            db.name_to_id(session, "Contest", constants["CandidateContest"]),
+            contest_id,
         )
         working = add_constant_column(working, "contest_type", "Candidate")
         working.drop("CandidateContest", axis=1, inplace=True)
@@ -2123,7 +2133,8 @@ def fill_vote_count(
             err,
             "system",
             f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
-            f"Unexpected exception while filling VoteCount:\n{exc}",
+            f"Unexpected exception ({exc}) "
+            f"while inserting this data into VoteCount:\n{working}",
         )
 
     return err

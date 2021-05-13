@@ -1,0 +1,126 @@
+cdf_element	cdf_internal_name	raw_identifier_value
+CandidateContest	MP House District 1	MP House District 1
+CandidateContest	MP House District 2	MP House District 2
+CandidateContest	MP House District 3	MP House District 3
+CandidateContest	MP House District 4	MP House District 4
+CandidateContest	MP House District 5	MP House District 5
+CandidateContest	MP House District 6	MP House District 6
+CandidateContest	MP House District 7	MP House District 7
+CandidateContest	MP Senate District 1	MP Senate District 1
+CandidateContest	MP Senate District 2	MP Senate District 2
+CandidateContest	MP Senate District 3	MP Senate District 3
+CandidateContest	US House MP District 1	US House MP District 1
+CandidateContest	US House MP District 1	Delegate to U.S Congress
+CandidateContest	US President (MP)	US President (MP)
+CandidateContest	MP Governor	MP Governor
+CandidateContest	US Senate MP	US Senate MP
+CandidateContest	MP Attorney General	MP Attorney General
+CandidateContest	MP Lieutenant Governor	MP Lieutenant Governor
+CandidateContest	MP Treasurer	MP Treasurer
+CandidateContest	MP Secretary of State	MP Secretary of State
+CandidateContest	MP Senate District 3	Senate - 3rd Senatorial District - Saipan
+CandidateContest	MP Senate District 2	Senate - 2nd Senatorial District - Tinian
+CandidateContest	MP Senate District 1	Senate - 1st Senatorial District - Rota
+CandidateContest	MP House District 1	House of Representatives - Election District 1 - Saipan
+CandidateContest	MP House District 2	House of Representatives - Election District 2 - Saipan
+CandidateContest	MP House District 3	House of Representatives - Election District 3 - Saipan
+CandidateContest	MP House District 4	House of Representatives - Election District 4 - Saipan
+CandidateContest	MP House District 5	House of Representatives - Election District 5 - Saipan
+CandidateContest	MP House District 6	House of Representatives - Election District 6 - Tinian
+CandidateContest	MP House District 7	House of Representatives - Election District 7 - Rota
+Election	2020 General	2020 General
+Election	2020 Primary	2020 Primary
+Election	2018 General	2018 General
+Election	2016 General	2016 General
+Party	Democratic Party	Democratic Party
+Party	Republican Party	Republican Party
+Party	Green Party	Green Party
+Party	Libertarian Party	Libertarian Party
+Party	Democratic Party	Dem
+Party	Republican Party	Rep
+Party	Independent	Ind
+Party	Nonpartisan	NP
+ReportingUnit	Northern Mariana Islands;MP House District 1	Northern Mariana Islands;MP House District 1
+ReportingUnit	Northern Mariana Islands;MP House District 2	Northern Mariana Islands;MP House District 2
+ReportingUnit	Northern Mariana Islands;MP House District 3	Northern Mariana Islands;MP House District 3
+ReportingUnit	Northern Mariana Islands;MP House District 4	Northern Mariana Islands;MP House District 4
+ReportingUnit	Northern Mariana Islands;MP House District 5	Northern Mariana Islands;MP House District 5
+ReportingUnit	Northern Mariana Islands;MP House District 6	Northern Mariana Islands;MP House District 6
+ReportingUnit	Northern Mariana Islands;MP House District 7	Northern Mariana Islands;MP House District 7
+ReportingUnit	Northern Mariana Islands;MP Senate District 1	Northern Mariana Islands;MP Senate District 1
+ReportingUnit	Northern Mariana Islands;MP Senate District 2	Northern Mariana Islands;MP Senate District 2
+ReportingUnit	Northern Mariana Islands;MP Senate District 3	Northern Mariana Islands;MP Senate District 3
+ReportingUnit	Northern Mariana Islands;US House MP District 1	Northern Mariana Islands;US House MP District 1
+ReportingUnit	Northern Mariana Islands	Northern Mariana Islands
+ReportingUnit	Northern Mariana Islands;Election District 1	ED1
+ReportingUnit	Northern Mariana Islands;Election District 2	ED2
+ReportingUnit	Northern Mariana Islands;Election District 3	ED3
+ReportingUnit	Northern Mariana Islands;Election District 4	ED4
+ReportingUnit	Northern Mariana Islands;Election District 5	ED5
+ReportingUnit	Northern Mariana Islands;Election District 6	ED6
+ReportingUnit	Northern Mariana Islands;Election District 7	ED7
+Candidate	SABLAN, Gregorio Kilili Camacho	SABLAN, Gregorio Kilili Camacho
+Candidate	DELEON GUERRERO, Edith E.	DELEON GUERRERO, Edith E.
+Candidate	IGISOMAR, Sixto Kaipat	IGISOMAR, Sixto Kaipat
+Candidate	CRUZ, Jose Pangelinan	CRUZ, Jose Pangelinan
+Candidate	KING-NABORS, Karl Rosario	KING-NABORS, Karl Rosario
+Candidate	MANGLONA, Paul Atalig	MANGLONA, Paul Atalig
+Candidate	MENDIOLA, Dennis James Camacho	MENDIOLA, Dennis James Camacho
+Candidate	ADA, Roy Christopher Aldan	ADA, Roy Christopher Aldan
+Candidate	ALDAN, Vincent Raymond Seman	ALDAN, Vincent Raymond Seman
+Candidate	BABAUTA, Celina Roberto	BABAUTA, Celina Roberto
+Candidate	BENAVENTE, Roman Cepeda	BENAVENTE, Roman Cepeda
+Candidate	CABRERA, Antonio Blas	CABRERA, Antonio Blas
+Candidate	CASTRO, Luis John Deleon Guerrero	CASTRO, Luis John Deleon Guerrero
+Candidate	DEMAPAN, Angel Aldan	DEMAPAN, Angel Aldan
+Candidate	FLORES, Joseph Arriola	FLORES, Joseph Arriola
+Candidate	GUERRERO, Joseph Leepan Tenorio	GUERRERO, Joseph Leepan Tenorio
+Candidate	MANGLONA, Glenn Hocog	MANGLONA, Glenn Hocog
+Candidate	MUNA, Peter Francis Reyes	MUNA, Peter Francis Reyes
+Candidate	PANGELINAN, Randall Dexter Masga	PANGELINAN, Randall Dexter Masga
+Candidate	PITEG, Benusto	PITEG, Benusto
+Candidate	PROPST, Edwin Kenneth	PROPST, Edwin Kenneth
+Candidate	AQUINO, Daniel Jr. Iwashita	AQUINO, Daniel Jr. Iwashita
+Candidate	MARCIANO, Luella Ichihara	MARCIANO, Luella Ichihara
+Candidate	SABLAN, Christina Marie Elise	SABLAN, Christina Marie Elise
+Candidate	SABLAN, John Paul Palacios	SABLAN, John Paul Palacios
+Candidate	ATTAO, Blas Jonathan "BJ" Tenorio	ATTAO, Blas Jonathan "BJ" Tenorio
+Candidate	BLANCO, Ivan Alafanson	BLANCO, Ivan Alafanson
+Candidate	CAMACHO, Vicente Castro	CAMACHO, Vicente Castro
+Candidate	ITIBUS, Jose Ilo	ITIBUS, Jose Ilo
+Candidate	MAGOFNA, Corina Lorraine	MAGOFNA, Corina Lorraine
+Candidate	PETER, Marco Taisakan	PETER, Marco Taisakan
+Candidate	SAURES, Alfredo Litulumar	SAURES, Alfredo Litulumar
+Candidate	VILLAGOMEZ, Edmund Joseph Sablan	VILLAGOMEZ, Edmund Joseph Sablan
+Candidate	YANGETMAI, Denita Kaipat	YANGETMAI, Denita Kaipat
+Candidate	YUMUL, Ralph Naraja	YUMUL, Ralph Naraja
+Candidate	BABAUTA, Sheila Therese Jack	BABAUTA, Sheila Therese Jack
+Candidate	CAMACHO, Joel Castro	CAMACHO, Joel Castro
+Candidate	CASTRO, Jenita Babauta	CASTRO, Jenita Babauta
+Candidate	TAITANO, Cecilia Remedio	TAITANO, Cecilia Remedio
+Candidate	BASA, Ramon Sablan	BASA, Ramon Sablan
+Candidate	DELEON GUERRERO, Lorenzo Iglecias	DELEON GUERRERO, Lorenzo Iglecias
+Candidate	LIZAMA, Richard Tudela	LIZAMA, Richard Tudela
+Candidate	MENDIOLA, Joseph Muna	MENDIOLA, Joseph Muna
+Candidate	STAFFLER, Leila Haveia Fleming Clark	STAFFLER, Leila Haveia Fleming Clark
+Candidate	DELA CRUZ, Frederick Arend	DELA CRUZ, Frederick Arend
+Candidate	SAN NICOLAS, Patrick Hofschneider	SAN NICOLAS, Patrick Hofschneider
+Candidate	MANGLONA, Donald Manalang	MANGLONA, Donald Manalang
+Candidate	TOVES, Barry Cuthbert	TOVES, Barry Cuthbert
+Candidate	CASTRO, Ana Demapan	CASTRO, Ana Demapan
+Candidate	TUDELA, Antonia Manibusan	TUDELA, Antonia Manibusan
+Candidate	ALDAN, Michael Nap King	ALDAN, Michael Nap King
+Candidate	MANGLONA, Joseph Manglona	MANGLONA, Joseph Manglona
+Candidate	MENDIOLA, Juanita Masga	MENDIOLA, Juanita Masga
+Candidate	MENDIOLA, Thomasa Rita Palacios	MENDIOLA, Thomasa Rita Palacios
+Candidate	SANTOS, Joseph Romaldo Evangelista	SANTOS, Joseph Romaldo Evangelista
+Candidate	ATALIG, Jim Michael	ATALIG, Jim Michael
+Candidate	LIZAMA, Jonovan Hocog	LIZAMA, Jonovan Hocog
+Candidate	MANGLONA, Lorita Mesngon	MANGLONA, Lorita Mesngon
+Candidate	OGO, Abraham Manglona	OGO, Abraham Manglona
+Candidate	SIKEBERT, Michael Cain	SIKEBERT, Michael Cain
+Candidate	TAITANO, Willian Apatang	TAITANO, Willian Apatang
+Candidate	BORJA, Gregory Pat	BORJA, Gregory Pat
+Candidate	TENORIO, Maisie Bermudes	TENORIO, Maisie Bermudes
+Candidate	WOODRUFF, Stephen Carl	WOODRUFF, Stephen Carl
+Candidate	ATALIG, Herman Manglona	ATALIG, Herman Manglona

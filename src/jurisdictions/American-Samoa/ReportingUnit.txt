@@ -1,0 +1,41 @@
+Name	ReportingUnitType
+American Samoa;AS House District 1	state-house
+American Samoa;AS House District 2	state-house
+American Samoa;AS House District 3	state-house
+American Samoa;AS House District 4	state-house
+American Samoa;AS House District 5	state-house
+American Samoa;AS House District 6	state-house
+American Samoa;AS House District 7	state-house
+American Samoa;AS House District 8	state-house
+American Samoa;AS House District 9	state-house
+American Samoa;AS House District 10	state-house
+American Samoa;AS House District 11	state-house
+American Samoa;AS House District 12	state-house
+American Samoa;AS House District 13	state-house
+American Samoa;AS House District 14	state-house
+American Samoa;AS House District 15	state-house
+American Samoa;AS House District 16	state-house
+American Samoa;AS House District 17	state-house
+American Samoa;US House AS District 1	congressional
+American Samoa	territory
+American Samoa;Central Office - Swains Island	polling-place
+American Samoa;District of Manu'a;Dist #1 - Manu'a	polling-place
+American Samoa;District of Manu'a;Dist #2 - Manu'a	polling-place
+American Samoa;Eastern District;Dist #3 - Vaifanua	polling-place
+American Samoa;Eastern District;Dist #4 - Saole	polling-place
+American Samoa;Eastern District;Dist #5 - Sua No. 1	polling-place
+American Samoa;Eastern District;Dist #6 - Sua No. 2	polling-place
+American Samoa;Eastern District;Dist #7 - Maoputasi No. 1	polling-place
+American Samoa;Eastern District;Dist #8 - Maoputasi No. 2	polling-place
+American Samoa;Eastern District;Dist #9 - Maoputasi No. 3	polling-place
+American Samoa;Eastern District;Dist #10 - Maoputasi No. 4	polling-place
+American Samoa;Eastern District;Dist #11 - Maoputasi No. 5	polling-place
+American Samoa;Eastern District;Dist #12 - Ituau	polling-place
+American Samoa;Western District;Dist #13 - Fofo	polling-place
+American Samoa;Western District;Dist #14 - Alataua	polling-place
+American Samoa;Western District;Dist #15 - Tualauta	polling-place
+American Samoa;Western District;Dist #16 - Tualatai	polling-place
+American Samoa;Western District;Dist #17 - Leasina	polling-place
+American Samoa;Eastern District	district
+American Samoa;Western District	district
+American Samoa;District of Manu'a	district

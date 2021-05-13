@@ -428,11 +428,13 @@ analyzer.top_counts('2018 General', 'North Carolina', 'county', True)
 ```
 This code will produce all North Carolina data from the 2018 general election, grouped by contest, county, and vote type (total, early, absentee, etc).
 
-## Unload and reload data
+## Unload and reload data with `reload_juris_election()`
 To unload existing data for a given jurisdiction and a given election -- or more exactly, to remove data from any datafiles with that election and that jurisdiction as "top ReportingUnit" -- you can use the routine 
 ```user_interface.reload_juris_election(juris_name, election_name, test_dir, report_dir)```
 
 where `test_dir` is the directory holding the tests to perform on the data before upload. For example, `test_dir` might be the repository's `tests` directory. This routine will move any files associated with unloaded data to the directory specified in the optional `unloaded_dir` in `run_time.ini`.
+
+Results of the test will be reported in a file with extension `test_results`
 
 Warning: this routine tests the new data before unloading the existing data. The convention is that the test is in the `tests` subdirectory of the code repository, named for the election and jurisdiction separated by underscore (e.g. `test_Georgia_2020-General.py`). Spaces in the name of the jurisdiction or election are replaced by hyphens (e.g. `test_North-Carolina_2018-Primary.py`). If there is no appropriately test named test file, or if any of the tests fails, the unloading and reloading will fail.
 

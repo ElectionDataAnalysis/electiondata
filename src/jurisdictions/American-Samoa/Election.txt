@@ -1,5 +1,4 @@
 Name	ElectionType
-2020 General Runoff	runoff
 2020 General	general
 2020 Primary	primary
 2018 General	general
