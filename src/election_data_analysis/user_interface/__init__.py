@@ -1,4 +1,4 @@
-from configparser import ConfigParser, MissingSectionHeaderError, DuplicateOptionError
+from configparser import ConfigParser, MissingSectionHeaderError, DuplicateOptionError, ParsingError
 from election_data_analysis import special_formats as sf
 from election_data_analysis import database as db
 from election_data_analysis import munge as m
@@ -760,6 +760,10 @@ def get_parameters(
     except DuplicateOptionError as doe:
         err = add_new_error(
             err, "ini", param_file, f"Something is defined twice: {doe}"
+        )
+    except ParsingError as pe:
+        err = add_new_error(
+            err, "ini", param_file, pe,
         )
 
     # read required info
