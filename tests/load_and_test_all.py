@@ -147,15 +147,15 @@ def run2(
             dl.change_db(dbname)
 
             dl.change_dir("results_dir", "TestingData")
-            success, err = dl.load_all(
+            success, failure, err = dl.load_all(
                 move_files=True,
                 election_jurisdiction_list=election_jurisdiction_list,
                 rollup=rollup,
             )
             if success:
                 print(f"Files loading successfully:\n{success}")
-            else:
-                print("No files loaded successfully")
+            if failure:
+                print(f"Files failing to load:\n{failure}")
 
         except Exception as exc:
             print(f"Exception occurred: {exc}")

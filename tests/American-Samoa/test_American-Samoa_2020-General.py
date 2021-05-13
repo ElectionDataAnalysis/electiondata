@@ -23,7 +23,7 @@ single_vote_type = "total"  # pick any one from your file
 con_votes_vote_type = 11749
 # pick any one from your file
 # Change this only if results are subdivided by something other than counties
-county_or_other = "polling-place"
+county_or_other = "district"
 single_county = "American Samoa;Eastern District;Dist #5 - Sua No. 1"
 con_votes_county = 493  # total votes for congress of that county
 

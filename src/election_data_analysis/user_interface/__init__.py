@@ -1194,7 +1194,7 @@ def reload_juris_election(
                 dl.remove_data(election_id, juris_id)
 
             # Load new data into live db (and move successful to archive)
-            success, new_err = dl.load_all(
+            success, failure, new_err = dl.load_all(
                 report_dir=report_dir,
                 rollup=rollup,
                 election_jurisdiction_list=[(election_name, juris_name)],

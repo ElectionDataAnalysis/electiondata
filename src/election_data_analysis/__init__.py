@@ -424,17 +424,19 @@ class DataLoader:
         juris_true_name: str,
         rollup: bool = False,
         report_missing_files: bool = False,
-    ) -> (List[str], str, Optional[dict]):
+    ) -> (List[str], List[str], str, Optional[dict]):
         """Looks within ini_files_for_results/<jurisdiction> for
         all ini files matching  given election and jurisdiction.
         For each, attempts to load file if it exists; reports missing data files.
         Returns
         * list of successfully-loaded files,
+        * list of files that failed to load
         * latest download date for successfully-loaded files
         * error report with outright error for results files whose loading failed.
         If <report_missing_files> is True, includes warning for missing files"""
         err = None
         success_by_ini = list()
+        failure_by_ini = list()
         latest_download_date = "0000-00-00"
         juris_system_name = jm.system_name_from_true_name(juris_true_name)
         path_to_jurisdiction_dir = os.path.join(
@@ -481,7 +483,9 @@ class DataLoader:
                             juris_true_name,
                             rollup=rollup,
                         )
-                        if not ui.fatal_error(load_error):
+                        if ui.fatal_error(load_error):
+                            failure_by_ini.append(ini)
+                        else:
                             success_by_ini.append(ini)
                             if latest_download_date < sdl.d["results_download_date"]:
                                 latest_download_date = sdl.d["results_download_date"]
@@ -495,18 +499,18 @@ class DataLoader:
                             ini,
                             f"Ini in subdirectory {ini_subdir} has non-matching jurisdiction: {params['jurisdiction']}",
                         )
-        return success_by_ini, latest_download_date, err
+        return success_by_ini, failure_by_ini, latest_download_date, err
 
     def load_all(
         self,
         report_dir: Optional[str] = None,
         load_jurisdictions: bool = True,
         move_files: bool = True,
-        election_jurisdiction_list: Optional[List[Tuple[str]]] = None,
+        election_jurisdiction_list: Optional[List[Tuple[str, str]]] = None,
         election_list: Optional[List[str]] = None,
         rollup: bool = False,
         report_missing_files: bool = False,
-    ) -> (Dict[str, List[str]], Optional[dict]):
+    ) -> (Dict[str, List[str]], Dict[str, List[str]], Optional[dict]):
         """Processes all results (or all results corresponding to pairs in
         ej_list if given) in DataLoader's results directory using
         .ini files from repository.
@@ -519,6 +523,7 @@ class DataLoader:
         # initialize
         err = None
         success = dict()
+        failure = dict()
         ts = datetime.datetime.now().strftime("%m%d_%H%M")
         if not report_dir:
             report_dir = os.path.join(self.d["reports_and_plots_dir"], f"load_all_{ts}")
@@ -538,9 +543,14 @@ class DataLoader:
                 ]
         election_jurisdiction_list.sort()
 
+        jurisdictions = list(set(j for (e, j) in election_jurisdiction_list))
+        jurisdictions.sort()
+        elections = {
+            j: list(set(
+                e for (e,k) in election_jurisdiction_list if k == j
+            )) for j in jurisdictions
+        }
         if load_jurisdictions:
-            jurisdictions = list(set(j for (e, j) in election_jurisdiction_list))
-            jurisdictions.sort()
             for juris in jurisdictions:
                 # check jurisdiction
                 juris_path = os.path.join(
@@ -580,38 +590,52 @@ class DataLoader:
         else:
             print("No jurisdictions loaded because load_jurisdictions==False")
 
-        for (election, jurisdiction) in election_jurisdiction_list:
-            # load the relevant files
-            success_list, latest_download_date, new_err = self.load_ej_pair(
-                election,
-                jurisdiction,
-                rollup=rollup,
-                report_missing_files=report_missing_files,
-            )
+        for jurisdiction in jurisdictions:
+            juris_err = None
+            for election in elections[jurisdiction]:
+                # load the relevant files
+                success_list, failure_list, latest_download_date, new_err = self.load_ej_pair(
+                    election,
+                    jurisdiction,
+                    rollup=rollup,
+                    report_missing_files=report_missing_files,
+                )
+                if new_err:
+                    juris_err = ui.consolidate_errors(
+                        [juris_err, new_err]
+                    )
+                success[f"{election};{jurisdiction}"] = success_list
+                failure[f"{election};{jurisdiction}"] = failure_list
 
             if move_files:
-                # if all existing files referenced in any results.ini loaded correctly
-                if not ui.fatal_error(new_err):
+                # if all existing files referenced in any results.ini
+                # for the jurisdiction
+                # -- for any election -- loaded correctly
+                if not ui.fatal_error(juris_err):
                     juris_system_name = jm.system_name_from_true_name(jurisdiction)
                     juris_results_path = os.path.join(
                         self.d["results_dir"], juris_system_name
                     )
                     # copy the jurisdiction's results file to archive directory
                     # (subdir named with latest download date; if exists already, create backup with timestamp)
-                    new_err = ui.copy_directory_with_backup(
-                        juris_results_path,
-                        os.path.join(
-                            self.d["archive_dir"],
-                            f"{juris_system_name}_{latest_download_date}",
-                        ),
-                        report_error=False,
-                    )
-                    err = ui.consolidate_errors([err, new_err])
-                    # remove jurisdiction's results file from results directory
-                    shutil.rmtree(juris_results_path)
+                    if os.path.isdir(juris_results_path):
+                        new_err = ui.copy_directory_with_backup(
+                            juris_results_path,
+                            os.path.join(
+                                self.d["archive_dir"],
+                                f"{juris_system_name}_{latest_download_date}",
+                            ),
+                            report_error=False,
+                        )
+                        err = ui.consolidate_errors([err, new_err])
+                        # remove jurisdiction's results file from results directory
+                        shutil.rmtree(juris_results_path)
+                    else:
+                        print(f"Directory not copied, because not found: {juris_results_path}\n"
+                              f"This may be caused by having results for two different elections"
+                              f"in the directory.")
 
-            err = ui.consolidate_errors([err, new_err])
-            success[f"{election};{jurisdiction}"] = success_list
+            err = ui.consolidate_errors([err, juris_err])
 
         err = ui.report(
             err,
@@ -632,7 +656,10 @@ class DataLoader:
         # report remaining errors
         ui.report(err, report_dir, file_prefix="system")
 
-        return success, err
+        # keep all election-juris pairs in success report, but remove empty failure reports
+        failure = {k: v for k,v in failure.items() if v}
+
+        return success, failure, err
 
     def remove_data(
         self,

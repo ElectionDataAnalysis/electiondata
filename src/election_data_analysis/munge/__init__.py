@@ -1978,7 +1978,21 @@ def to_standard_count_frame(
 
         # if not multi-block
         else:
-            df_list = [raw_dict[sheet]]
+            working = raw_dict[sheet].copy()
+            # if there are column_j fields in the munge formulas
+            if p["columns_referenced_by_munge_formulas"]:
+                # if columns are multi-indices
+                if isinstance(working.columns, pd.MultiIndex):
+                    working = rename_column_index_by_number(
+                        working, p["noncount_header_row"], p["columns_referenced_by_munge_formulas"], "column_"
+                    )
+                # if columns are simple indices
+                else:
+                    new_cols = list(working.columns)
+                    for j in p["columns_referenced_by_munge_formulas"]:
+                        new_cols[j] = f"column_{j}"
+                    working.columns = new_cols
+            df_list = [working]
             cc_by_name[0], error_by_df[0] = get_count_cols_by_name(
                 df_list[0], p, munger_name
             )
@@ -2027,22 +2041,6 @@ def to_standard_count_frame(
                         working, f"row_{row}", row_constants_by_sheet[sheet][row]
                     )
 
-            # in column names, rename any Unnamed: i_level_j to column_i if noncount header row is j
-            if isinstance(p["noncount_header_row"], int):
-                for c in working.columns:
-                    numbers = re.findall(pandas_default_pattern, c)
-                    # if c is of the form 'Unnamed: _level_j' where i is any integer and j is the noncount_header_row
-                    if numbers:
-                        try:
-                            # replace with column_i
-                            if int(numbers[0][1]) == p["noncount_header_row"]:
-                                working.columns = [
-                                    f"column_{numbers[0][0]}" if x == c else x
-                                    for x in working.columns
-                                ]
-                        except ValueError:
-                            # if anything crucial is not actually an integer, do nothing
-                            pass
             # add sheet_name column
             working = add_constant_column(working, "sheet_name", sheet)
 
@@ -2477,6 +2475,23 @@ def blank_out(df: pd.DataFrame, regex: str) -> pd.DataFrame:
         except Exception:
             pass
     return new
+
+
+def rename_column_index_by_number(
+        df: pd.DataFrame,
+        row: Optional[int],
+        cols: List[int],
+        prefix: str,
+) -> pd.DataFrame:
+    midx_list = df.columns.to_list()
+    for j in cols:
+        new_list = list(midx_list[j])
+        new_list[row] = f"column_{j}"
+        midx_list[j] = tuple(new_list)
+    new_midx = pd.MultiIndex.from_tuples(midx_list, names=range(len(midx_list[0])))
+    working = df.copy()
+    working.columns = new_midx
+    return working
 
 
 def rename_cells_by_number(
