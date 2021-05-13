@@ -1524,7 +1524,8 @@ def disambiguate_empty_cols(
     drop_empties: bool,
     start: int = 0,
 ) -> pd.DataFrame:
-    """return new df with empties dropped, or kept with non-blank placeholder info"""
+    """Returns new df with empties dropped, or kept with non-blank placeholder info
+    """
     original_number_of_columns = df_in.shape[1]
     # set row index to default
     df = df_in.reset_index(drop=True)

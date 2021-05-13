@@ -1459,7 +1459,9 @@ def get_and_check_munger_params(
 
     # additional parameters
     # collect necessary row number (for constant_over_sheet_or_block items) into rows_with_constants
+    # and columns referenced by number in munge formulas
     params["rows_with_constants"] = list()
+    params["columns_referenced_by_munge_formulas"] = list()
 
     # Check munger values
     # # main parameters recognized
@@ -1615,6 +1617,11 @@ def get_and_check_munger_params(
                     mf_by_type["constant_over_sheet_or_block"].update({mf})
                 except ValueError:
                     mf_by_type["in_field_values"].update({mf})
+            elif mf[:7] == "column_":
+                try:
+                    params["columns_referenced_by_munge_formulas"].append(int(mf[7:]))
+                except ValueError:
+                    pass
             elif mf == "sheet_name":
                 mf_by_type["constant_over_sheet_or_block"].update({mf})
             else:
@@ -1923,6 +1930,7 @@ def to_standard_count_frame(
 
             try:
                 # correct column headers
+                # # get header list
                 p_temp = p.copy()
                 p_temp["multi_block"] = None
                 header_int_or_list = ui.tabular_kwargs(p_temp, dict())["header"]
@@ -1940,8 +1948,23 @@ def to_standard_count_frame(
                     cc_by_name[n], error_by_df[n] = get_count_cols_by_name(
                         df_list[n], p, munger_name, use_rows=header_list
                     )
+                    # TODO to handle cases where noncount_header_row has info
+                    #  in cells labeling columns referenced by <column_j>,
+                    #  need to put 'column_j' in the header cells. Note that we can do this
+                    #  safely only after collecting the <row_i> information ("row_constants")
+                    # rename header cells referenced by column_j in munge formulas
+                    df_list[n] = rename_cells_by_number(
+                        df_list[n],
+                        p["noncount_header_row"],
+                        p["columns_referenced_by_munge_formulas"],
+                        "column_"
+                    )
+
                     df_list[n] = ui.set_and_fill_headers(
-                        df_list[n], header_list, merged_cells, drop_empties=True
+                        df_list[n],
+                        header_list,
+                        merged_cells,
+                        drop_empties=True
                     )
 
             except Exception as exc:
@@ -2454,3 +2477,28 @@ def blank_out(df: pd.DataFrame, regex: str) -> pd.DataFrame:
         except Exception:
             pass
     return new
+
+
+def rename_cells_by_number(
+        df: pd.DataFrame,
+        row: Optional[int],
+        cols: List[int],
+        prefix: str,
+) -> pd.DataFrame:
+    """Renames cells in the given <row> and columns
+    (identified by column numbers <cols>)
+    by the column number (preceded by the prefix) .
+    """
+    working = df.copy()
+    if (row is not None) and cols:
+        for j in cols:
+            try:
+                working.iloc[row, j] = f"{prefix}{j}"
+            except:
+                pass
+    else:
+        pass
+    return working
+
+
+
