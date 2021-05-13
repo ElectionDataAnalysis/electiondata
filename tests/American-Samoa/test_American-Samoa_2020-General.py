@@ -92,6 +92,7 @@ def test_state_house_totals(dbname):
             election,
             jurisdiction,
             f"{abbr} House District {shd}",
+            sub_unit_type=county_or_other,
             dbname=dbname,
         )
         == total_shd_votes

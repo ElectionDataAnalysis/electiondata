@@ -23,12 +23,14 @@ CandidateContest	AS House District 4	District NO. 4 - Saole
 CandidateContest	AS House District 5	District NO. 5 - Sua # 1
 CandidateContest	AS House District 6	District NO. 6 - Sua # 2
 CandidateContest	AS House District 7	District No. 7 - Maoputasi # 1
+CandidateContest	AS House District 7	District No. 7 Maoputasi # 1
 CandidateContest	AS House District 8	District No. 8 - Maoputasi # 2
 CandidateContest	AS House District 9	District No. 9 - Maoputasi # 3
 CandidateContest	AS House District 10	District No. 10 - Maoputasi # 4
 CandidateContest	AS House District 11	District No. 11 - Maoputasi # 5
 CandidateContest	AS House District 12	District No. 12 - Ituau
 CandidateContest	AS House District 13	District No. 13 - Fofo
+CandidateContest	AS House District 13	District No. 13 Fofo
 CandidateContest	AS House District 14	District No. 14 - Alataua
 CandidateContest	AS House District 15	District No. 15 - Tualauta
 CandidateContest	AS House District 16	District No. 16 - Tualautai
@@ -93,12 +95,14 @@ ReportingUnit	American Samoa;AS House District 4	District NO. 4 - Saole
 ReportingUnit	American Samoa;AS House District 5	District NO. 5 - Sua # 1
 ReportingUnit	American Samoa;AS House District 6	District NO. 6 - Sua # 2
 ReportingUnit	American Samoa;AS House District 7	District No. 7 - Maoputasi # 1
+ReportingUnit	American Samoa;AS House District 7	District No. 7 Maoputasi # 1
 ReportingUnit	American Samoa;AS House District 8	District No. 8 - Maoputasi # 2
 ReportingUnit	American Samoa;AS House District 9	District No. 9 - Maoputasi # 3
 ReportingUnit	American Samoa;AS House District 10	District No. 10 - Maoputasi # 4
 ReportingUnit	American Samoa;AS House District 11	District No. 11 - Maoputasi # 5
 ReportingUnit	American Samoa;AS House District 12	District No. 12 - Ituau
 ReportingUnit	American Samoa;AS House District 13	District No. 13 - Fofo
+ReportingUnit	American Samoa;AS House District 13	District No. 13 Fofo
 ReportingUnit	American Samoa;AS House District 14	District No. 14 - Alataua
 ReportingUnit	American Samoa;AS House District 15	District No. 15 - Tualauta
 ReportingUnit	American Samoa;AS House District 16	District No. 16 - Tualautai
@@ -164,3 +168,4 @@ Candidate	RACHAEL MANNING KEY	RACHAEL MANNING KEY
 Candidate	TIMUSƒÄ TINI C. LAM YUEN	TIMUSƒÄ TINI C. LAM YUEN
 Candidate	APE MIKE ASIFOA	APE MIKE ASIFOA
 Candidate	GAFATASI AFALAVA	GAFATASI AFALAVA
+Candidate	Suaese 'Pooch' Ta'Ase	Suaese 'Pooch' Ta'Ase
