@@ -32,12 +32,13 @@ Election	2020 General	2020 General
 Election	2020 Primary	2020 Primary
 Election	2018 General	2018 General
 Election	2016 General	2016 General
-Party	Democratic Party	Democratic Party
-Party	Republican Party	Republican Party
+Party	Democratic Party	Dem.
+Party	Republican Party	Rep.
 Party	Green Party	Green Party
 Party	Libertarian Party	Libertarian Party
 Party	Democratic Party	Dem
 Party	Republican Party	Rep
+Party	Independent	Ind.
 Party	Independent	Ind
 Party	Nonpartisan	NP
 ReportingUnit	Northern Mariana Islands;MP House District 1	Northern Mariana Islands;MP House District 1
@@ -60,6 +61,7 @@ ReportingUnit	Northern Mariana Islands;Election District 5	ED5
 ReportingUnit	Northern Mariana Islands;Election District 6	ED6
 ReportingUnit	Northern Mariana Islands;Election District 7	ED7
 Candidate	SABLAN, Gregorio Kilili Camacho	SABLAN, Gregorio Kilili Camacho
+Candidate	SABLAN, Gregorio Kilili Camacho	SABLAN, Gregorio Kilili Camacho*/Ind.
 Candidate	DELEON GUERRERO, Edith E.	DELEON GUERRERO, Edith E.
 Candidate	IGISOMAR, Sixto Kaipat	IGISOMAR, Sixto Kaipat
 Candidate	CRUZ, Jose Pangelinan	CRUZ, Jose Pangelinan
@@ -124,3 +126,7 @@ Candidate	BORJA, Gregory Pat	BORJA, Gregory Pat
 Candidate	TENORIO, Maisie Bermudes	TENORIO, Maisie Bermudes
 Candidate	WOODRUFF, Stephen Carl	WOODRUFF, Stephen Carl
 Candidate	ATALIG, Herman Manglona	ATALIG, Herman Manglona
+CountItemType	election-day	election-day
+CountItemType	absentee	ABS
+CountItemType	early	EV
+CountItemType	total	TOTAL

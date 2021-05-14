@@ -12,7 +12,7 @@ MP Senate District 3	1	MP Senate District 3
 US House MP District 1	1	US House MP District 1	
 US President (MP)	1	US President (MP)	
 MP Governor	1	MP Governor	
-US Senate MP	1	US Senate MP	
+US House MP Delegate	1	US House MP Delegate
 MP Attorney General	1	MP Attorney General	
 MP Lieutenant Governor	1	MP Lieutenant Governor	
 MP Treasurer	1	MP Treasurer	
