@@ -1,7 +1,8 @@
-from typing import Optional, Dict, List, Any
+from typing import Optional, Dict, List, Any, Union, Pattern
 
 import lxml.etree as lxml_et
 import pandas as pd
+from urllib import request
 
 from election_data_analysis import user_interface as ui
 
@@ -160,3 +161,27 @@ def nist_namespace(f_path, key) -> Optional[dict]:
         return namespace
     except Exception:
         return None
+
+
+def read_data_from_url(
+    url: str,
+    local_html_file: str,
+    local_excel_file: str,
+    match: Union[str, Pattern] = "",
+):
+    """Copies html to a local file.  Pulls all tables from html into
+    separate sheets of an excel file. If match is given,
+    pulls into Excel only the tables containing that string/pattern"""
+    page = request.urlopen(url).read()
+    with open(local_html_file, "wb") as f:
+        f.write(page)
+
+    df_list = pd.read_html(local_html_file, match=match)
+
+    # write to Excel
+    with pd.ExcelWriter(local_excel_file) as ew:
+        num = 1
+        for df in df_list:
+            df.to_excel(ew, sheet_name=f"Sheet{num}", index=None)
+            num += 1
+    return

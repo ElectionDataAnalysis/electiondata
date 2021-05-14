@@ -546,9 +546,8 @@ class DataLoader:
         jurisdictions = list(set(j for (e, j) in election_jurisdiction_list))
         jurisdictions.sort()
         elections = {
-            j: list(set(
-                e for (e,k) in election_jurisdiction_list if k == j
-            )) for j in jurisdictions
+            j: list(set(e for (e, k) in election_jurisdiction_list if k == j))
+            for j in jurisdictions
         }
         if load_jurisdictions:
             for juris in jurisdictions:
@@ -594,16 +593,19 @@ class DataLoader:
             juris_err = None
             for election in elections[jurisdiction]:
                 # load the relevant files
-                success_list, failure_list, latest_download_date, new_err = self.load_ej_pair(
+                (
+                    success_list,
+                    failure_list,
+                    latest_download_date,
+                    new_err,
+                ) = self.load_ej_pair(
                     election,
                     jurisdiction,
                     rollup=rollup,
                     report_missing_files=report_missing_files,
                 )
                 if new_err:
-                    juris_err = ui.consolidate_errors(
-                        [juris_err, new_err]
-                    )
+                    juris_err = ui.consolidate_errors([juris_err, new_err])
                 success[f"{election};{jurisdiction}"] = success_list
                 failure[f"{election};{jurisdiction}"] = failure_list
 
@@ -631,9 +633,11 @@ class DataLoader:
                         # remove jurisdiction's results file from results directory
                         shutil.rmtree(juris_results_path)
                     else:
-                        print(f"Directory not copied, because not found: {juris_results_path}\n"
-                              f"This may be caused by having results for two different elections"
-                              f"in the directory.")
+                        print(
+                            f"Directory not copied, because not found: {juris_results_path}\n"
+                            f"This may be caused by having results for two different elections"
+                            f"in the directory."
+                        )
 
             err = ui.consolidate_errors([err, juris_err])
 
@@ -657,7 +661,7 @@ class DataLoader:
         ui.report(err, report_dir, file_prefix="system")
 
         # keep all election-juris pairs in success report, but remove empty failure reports
-        failure = {k: v for k,v in failure.items() if v}
+        failure = {k: v for k, v in failure.items() if v}
 
         return success, failure, err
 

@@ -115,7 +115,7 @@ def clean_ids(
 ) -> (pd.DataFrame(), pd.DataFrame):
     """Changes to integer type each column <cols> that is actually a column of <df>.
     Nulls are changed to 0, as are entire columns with any entries that
-    cannot be parsed as integers. """
+    cannot be parsed as integers."""
 
     if cols == list():
         return df, pd.DataFrame()
@@ -940,12 +940,16 @@ def raw_to_id_simple(
                 # get list of raw CountItemTypes in case they are needed for error reporting
                 all_raw_cit = working.CountItemType_raw.unique().tolist()
                 # get internal CountItemType for all matched lines
-                working = working[matched].merge(
+                working = (
+                    working[matched]
+                    .merge(
                         r_i,
                         how="left",
                         left_on="CountItemType_raw",
                         right_on="raw_identifier_value",
-                    ).rename(columns={"cdf_internal_name": "CountItemType"})
+                    )
+                    .rename(columns={"cdf_internal_name": "CountItemType"})
+                )
 
                 # if no CountItemTypes matched to dictionary
                 if working.CountItemType.isnull().all():
@@ -1084,7 +1088,7 @@ def munge_raw_to_ids(
                 "jurisdiction",
                 juris_true_name,
                 f"CandidateContest specified in ini file ({constants['CandidateContest']}) "
-                f"not found. Check CandidateContest.txt."
+                f"not found. Check CandidateContest.txt.",
             )
             return df, err
         working = add_constant_column(
@@ -1957,14 +1961,11 @@ def to_standard_count_frame(
                         df_list[n],
                         p["noncount_header_row"],
                         p["columns_referenced_by_munge_formulas"],
-                        "column_"
+                        "column_",
                     )
 
                     df_list[n] = ui.set_and_fill_headers(
-                        df_list[n],
-                        header_list,
-                        merged_cells,
-                        drop_empties=True
+                        df_list[n], header_list, merged_cells, drop_empties=True
                     )
 
             except Exception as exc:
@@ -1984,7 +1985,10 @@ def to_standard_count_frame(
                 # if columns are multi-indices
                 if isinstance(working.columns, pd.MultiIndex):
                     working = rename_column_index_by_number(
-                        working, p["noncount_header_row"], p["columns_referenced_by_munge_formulas"], "column_"
+                        working,
+                        p["noncount_header_row"],
+                        p["columns_referenced_by_munge_formulas"],
+                        "column_",
                     )
                 # if columns are simple indices
                 else:
@@ -2478,10 +2482,10 @@ def blank_out(df: pd.DataFrame, regex: str) -> pd.DataFrame:
 
 
 def rename_column_index_by_number(
-        df: pd.DataFrame,
-        row: Optional[int],
-        cols: List[int],
-        prefix: str,
+    df: pd.DataFrame,
+    row: Optional[int],
+    cols: List[int],
+    prefix: str,
 ) -> pd.DataFrame:
     midx_list = df.columns.to_list()
     for j in cols:
@@ -2495,10 +2499,10 @@ def rename_column_index_by_number(
 
 
 def rename_cells_by_number(
-        df: pd.DataFrame,
-        row: Optional[int],
-        cols: List[int],
-        prefix: str,
+    df: pd.DataFrame,
+    row: Optional[int],
+    cols: List[int],
+    prefix: str,
 ) -> pd.DataFrame:
     """Renames cells in the given <row> and columns
     (identified by column numbers <cols>)
@@ -2514,6 +2518,3 @@ def rename_cells_by_number(
     else:
         pass
     return working
-
-
-

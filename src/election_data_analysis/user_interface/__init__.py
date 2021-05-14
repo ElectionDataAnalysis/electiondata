@@ -1,4 +1,9 @@
-from configparser import ConfigParser, MissingSectionHeaderError, DuplicateOptionError, ParsingError
+from configparser import (
+    ConfigParser,
+    MissingSectionHeaderError,
+    DuplicateOptionError,
+    ParsingError,
+)
 from election_data_analysis import special_formats as sf
 from election_data_analysis import database as db
 from election_data_analysis import munge as m
@@ -763,7 +768,10 @@ def get_parameters(
         )
     except ParsingError as pe:
         err = add_new_error(
-            err, "ini", param_file, pe,
+            err,
+            "ini",
+            param_file,
+            pe,
         )
 
     # read required info
@@ -1528,8 +1536,7 @@ def disambiguate_empty_cols(
     drop_empties: bool,
     start: int = 0,
 ) -> pd.DataFrame:
-    """Returns new df with empties dropped, or kept with non-blank placeholder info
-    """
+    """Returns new df with empties dropped, or kept with non-blank placeholder info"""
     original_number_of_columns = df_in.shape[1]
     # set row index to default
     df = df_in.reset_index(drop=True)
