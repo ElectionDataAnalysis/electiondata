@@ -1737,9 +1737,10 @@ def parents_by_cursor(
     try:
         cursor.execute(q)
         parents = cursor.fetchall()
-        parent_df = pd.DataFrame(parents)
-        if not parent_df.empty:
-            parent_df.columns = ["child_id", "parent_id"]
+        if parents:
+            parent_df = pd.DataFrame(parents, columns=["child_id", "parent_id"])
+        else:
+            parent_df = pd.DataFrame(columns=["child_id", "parent_id"])
 
     except Exception as exc:
         parent_df = pd.DataFrame()
@@ -1750,6 +1751,9 @@ def parents_by_cursor(
 def parents(
     session: Session, ru_id_list: iter, subunit_type: str = "county"
 ) -> (pd.DataFrame, Optional[str]):
+    """returns dataframe of all reporting units of the given type that are
+    parents of a reporting unit identified by an id in ru_id_list
+    """
     connection = session.bind.raw_connection()
     cursor = connection.cursor()
     parent_df, err_str = parents_by_cursor(

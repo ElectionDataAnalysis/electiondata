@@ -773,6 +773,14 @@ def get_parameters(
             param_file,
             pe,
         )
+    except Exception as exc:
+        err = add_new_error(
+            err,
+            "ini",
+            param_file,
+            exc,
+        )
+
 
     # read required info
     missing_required_params = list()

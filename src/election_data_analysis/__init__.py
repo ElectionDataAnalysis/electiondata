@@ -1385,31 +1385,40 @@ class JurisdictionPrepper:
         self.congressional = int(self.d["count_of_us_house_districts"])
 
 
-def make_par_files(
-    directory: str,
-    munger_list: str,
-    jurisdiction_path: str,
-    top_ru: str,
+def make_ini_file_batch(
+    results_directory: str,
+        output_directory: str,
+        munger_list: str,
+    jurisdiction: str,
     election: str,
     download_date: str = "1900-01-01",
     source: str = "unknown",
     results_note: str = "none",
+   extension: Optional[str] = None,
 ):
     """Utility to create parameter files for multiple files.
     Makes a parameter file for each (non-.ini,non .*) file in <dir>,
-    once all other necessary parameters are specified."""
-    data_file_list = [
-        f for f in os.listdir(directory) if (f[-4:] != ".ini") & (f[0] != ".")
-    ]
+    once all other necessary parameters are specified.
+    If <extension> is given, makes parameter file for each file with the given extension.
+    Writes .ini files to <output_directory"""
+    if extension:
+        data_file_list = [
+            f for f in os.listdir(results_directory) if f[-len(extension):] == extension
+        ]
+    else:
+        data_file_list = [
+            f for f in os.listdir(results_directory) if (f[-4:] != ".ini") & (f[0] != ".")
+        ]
+    juris_system_name = jm.system_name_from_true_name(jurisdiction)
     for f in data_file_list:
         par_text = (
-            f"[election_data_analysis]\nresults_file={f}\njurisdiction_path={jurisdiction_path}\n"
-            f"munger_list={munger_list}\njurisdiction={top_ru}\nelection={election}\n"
-            f"results_short_name={top_ru}_{f}\nresults_download_date={download_date}\n"
+            f"[election_data_analysis]\nresults_file={juris_system_name}/{f}\n"
+            f"munger_list={munger_list}\njurisdiction={jurisdiction}\nelection={election}\n"
+            f"results_short_name={jurisdiction}_{f}\nresults_download_date={download_date}\n"
             f"results_source={source}\nresults_note={results_note}\n"
         )
-        par_name = ".".join(f.split(".")[:-1]) + ".ini"
-        with open(os.path.join(directory, par_name), "w") as p:
+        ini_file_name = ".".join(f.split(".")[:-1]) + ".ini"
+        with open(os.path.join(output_directory, ini_file_name), "w") as p:
             p.write(par_text)
     return
 
