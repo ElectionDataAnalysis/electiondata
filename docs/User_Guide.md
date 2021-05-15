@@ -385,7 +385,7 @@ There are routines in the `JurisdictionPrepper()` class to help prepare a jurisd
 ## Load Data
 Each results file to be loaded must be designated in a `*.ini` file inside the corresponding jurisdiction's subfolder of `ini_files_for_results` in the repository. The `*.ini` files currrently in this repository correspond to data files available from the [TestingData repository](https://github.com/ElectionDataAnalysis/TestingData). These should load directly with the munger and jurisdiction files from the election_data_analysis repository.
 
-If all the `.ini` files in a single directory will use the same munger, jurisdiction and election, you can use `make_par_files` to create these `.ini` files in batches. For example, 
+If all the `.ini` files in a single directory will use the same munger, jurisdiction and election, you can use `make_ini_file_batch` to create these `.ini` files in batches. For example, 
 ```
 >>> dir = '/Users/singer3/Documents/Data/Florida/Precinct-Level Election Results/precinctlevelelectionresults2016gen'
 >>> munger = 'fl_gen_by_precinct'
@@ -395,7 +395,7 @@ If all the `.ini` files in a single directory will use the same munger, jurisdic
 >>> date = '2020-08-09'
 >>> source = 'Florida Board of Elections: https://dos.myflorida.com/elections/data-statistics/elections-data/precinct-level-election-results/'
 >>> note = 'These statewide compiled files are derived from county-specific data submitted by supervisors of elections after each primary election, general election, special primary, and special general election and presidential preference primary election'
->>> ea.make_par_files(dir,munger, jurisdiction_path, top_ru, election, date, source=source, results_note=note)
+>>> ea.make_ini_file_batch(results_dir, output_dir, munger, jurisdiction, election, date, source=source, results_note=note)
 >>> 
 ```
   
