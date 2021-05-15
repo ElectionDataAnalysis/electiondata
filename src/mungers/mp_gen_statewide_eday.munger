@@ -14,8 +14,8 @@ constant_over_file=CandidateContest
 
 [munge formulas]
 # give formulas for all elements (except constant_over_file elements)
-Candidate=<CANDIDATE/AFFIL¹>
-Party=placeholder
+Candidate={<CANDIDATE/AFFIL¹>,^(.+[^\*])\**(?:\/.*|)$}
+Party={<CANDIDATE/AFFIL¹>,^.+[^\*]\**(\/.*|)$}
 ReportingUnit=<count_header_2>
 CountItemType=election-day
 
@@ -24,7 +24,7 @@ CountItemType=election-day
 ## E.g: Candidate=Total Votes Cast,Registered Voters ##
 ReportingUnit=TOTAL,EV,ABS
 Candidate=Total
-CountItemType=TOTAL
+CountItemType=ED1,ED2,ED3,ED4,ED5,ED6,ED7,TOTAL
 
 # Lookup formula sections #
 ## Required when foreign keys are used in munge formulas and    ##

@@ -14,14 +14,15 @@ constant_over_file=CandidateContest
 
 [munge formulas]
 # give formulas for all elements (except constant_over_file elements)
-Candidate={<CANDIDATE/AFFIL¹>,^(.+)\*+/+.*}
-Party={<CANDIDATE/AFFIL¹>,^.+\*+/+(.*)}
+Candidate={<CANDIDATE/AFFIL¹>,^(.+[^\*])\**(?:\/.*|)$}
+Party={<CANDIDATE/AFFIL¹>,^.+[^\*]\**(\/.*|)$}
 ReportingUnit=Northern Mariana Islands
 CountItemType=<count_header_2>
 
 # Values to ignore (optional) #
 [ignore]
 ## E.g: Candidate=Total Votes Cast,Registered Voters ##
+ReportingUnit=TOTAL,EV,ABS
 CountItemType=ED1,ED2,ED3,ED4,ED5,ED6,ED7,TOTAL
 Candidate=Total
 
