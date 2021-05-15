@@ -24,7 +24,7 @@ AQUINO, Daniel Jr. Iwashita
 MARCIANO, Luella Ichihara
 SABLAN, Christina Marie Elise
 SABLAN, John Paul Palacios
-ATTAO, Blas Jonathan "BJ" Tenorio
+ATTAO, Blas Jonathan 'BJ' Tenorio
 BLANCO, Ivan Alafanson
 CAMACHO, Vicente Castro
 ITIBUS, Jose Ilo
@@ -64,3 +64,5 @@ BORJA, Gregory Pat
 TENORIO, Maisie Bermudes
 WOODRUFF, Stephen Carl
 ATALIG, Herman Manglona
+IGISOMAR, Sixto Kaipat*/Rep.
+DELEON GUERRERO, Edith E./Dem.

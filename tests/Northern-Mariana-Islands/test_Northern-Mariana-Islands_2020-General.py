@@ -17,11 +17,12 @@ import election_data_analysis as e
 election = "2020 General"
 jurisdiction = "Northern Mariana Islands"
 abbr = "MP"
+juris_type = 'territory'
 total_delegate_votes = -1  # total of all votes for US President
   # US Delegate
 total_cd_votes = 11449  # total votes in that US House contest in the chosen cd
 shd = 2  # state house district
-total_shd_votes = 18449  # total votes in that State House contest
+total_shd_votes = 1961  # total votes in that State House contest
 ssd = 3  # state senate district
 total_ssd_votes = 10104  # total votes in that State Senate contest
 single_vote_type = "early"  # pick any one with corresponding data in your file, but use internal db name
@@ -55,7 +56,7 @@ def test_congressional_totals(dbname):
             election,
             jurisdiction,
             f"US House {abbr} Delegate",
-            sub_unit_type=county_or_other,
+            sub_unit_type=juris_type,
             dbname=dbname,
         )
         == total_cd_votes
@@ -68,7 +69,7 @@ def test_state_senate_totals(dbname):
             election,
             jurisdiction,
             f"{abbr} Senate District {ssd}",
-            sub_unit_type=county_or_other,
+            sub_unit_type=juris_type,
             dbname=dbname,
         )
         == total_ssd_votes
@@ -81,7 +82,7 @@ def test_state_house_totals(dbname):
             election,
             jurisdiction,
             f"{abbr} House District {shd}",
-            sub_unit_type=county_or_other,
+            sub_unit_type=juris_type,
             dbname=dbname,
         )
         == total_shd_votes
@@ -110,7 +111,7 @@ def test_count_type_subtotal(dbname):
             jurisdiction,
             f"US House {abbr} Delegate",
             dbname=dbname,
-            sub_unit_type=county_or_other,
+            sub_unit_type=juris_type,
             vote_type=single_vote_type,
         )
             == delegate_votes_vote_type
@@ -122,7 +123,7 @@ def test_county_subtotal(dbname):
             e.contest_total(
             election,
             jurisdiction,
-            f"US President ({abbr})",
+            f"US House MP Delegate",
             dbname=dbname,
             county=single_county,
             sub_unit_type=county_or_other,

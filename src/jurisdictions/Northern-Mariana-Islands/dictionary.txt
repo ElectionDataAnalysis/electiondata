@@ -86,7 +86,8 @@ Candidate	AQUINO, Daniel Jr. Iwashita	AQUINO, Daniel Jr. Iwashita
 Candidate	MARCIANO, Luella Ichihara	MARCIANO, Luella Ichihara
 Candidate	SABLAN, Christina Marie Elise	SABLAN, Christina Marie Elise
 Candidate	SABLAN, John Paul Palacios	SABLAN, John Paul Palacios
-Candidate	ATTAO, Blas Jonathan "BJ" Tenorio	ATTAO, Blas Jonathan "BJ" Tenorio
+Candidate	ATTAO, Blas Jonathan 'BJ' Tenorio	ATTAO, Blas Jonathan "BJ" Tenorio
+Candidate	ATTAO, Blas Jonathan 'BJ' Tenorio	ATTAO, Blas Jonathan 'BJ' Tenorio
 Candidate	BLANCO, Ivan Alafanson	BLANCO, Ivan Alafanson
 Candidate	CAMACHO, Vicente Castro	CAMACHO, Vicente Castro
 Candidate	ITIBUS, Jose Ilo	ITIBUS, Jose Ilo
