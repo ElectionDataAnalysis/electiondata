@@ -501,6 +501,7 @@ def read_single_datafile(
                 list_desired_excel_sheets(f_path, p),
                 p["rows_with_constants"],
             )
+            print("\nAND NOTE: just ran excel_to_dict")
             if fatal_error(err):
                 df_dict = dict()
         elif p["file_type"] == "flat_text":
