@@ -1387,14 +1387,14 @@ class JurisdictionPrepper:
 
 def make_ini_file_batch(
     results_directory: str,
-        output_directory: str,
-        munger_list: str,
+    output_directory: str,
+    munger_list: str,
     jurisdiction: str,
     election: str,
     download_date: str = "1900-01-01",
     source: str = "unknown",
     results_note: str = "none",
-   extension: Optional[str] = None,
+    extension: Optional[str] = None,
 ):
     """Utility to create parameter files for multiple files.
     Makes a parameter file for each (non-.ini,non .*) file in <dir>,
@@ -1403,11 +1403,15 @@ def make_ini_file_batch(
     Writes .ini files to <output_directory"""
     if extension:
         data_file_list = [
-            f for f in os.listdir(results_directory) if f[-len(extension):] == extension
+            f
+            for f in os.listdir(results_directory)
+            if f[-len(extension) :] == extension
         ]
     else:
         data_file_list = [
-            f for f in os.listdir(results_directory) if (f[-4:] != ".ini") & (f[0] != ".")
+            f
+            for f in os.listdir(results_directory)
+            if (f[-4:] != ".ini") & (f[0] != ".")
         ]
     juris_system_name = jm.system_name_from_true_name(jurisdiction)
     for f in data_file_list:

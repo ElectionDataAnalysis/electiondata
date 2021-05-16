@@ -781,7 +781,6 @@ def get_parameters(
             exc,
         )
 
-
     # read required info
     missing_required_params = list()
     for k in required_keys:

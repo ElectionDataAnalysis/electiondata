@@ -1221,7 +1221,7 @@ def rollup_dataframe(
             err,
             "system",
             f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
-            f"Unexpected error while merging dataframes to capture nesting relationships of ReportingUnits: {ke}"
+            f"Unexpected error while merging dataframes to capture nesting relationships of ReportingUnits: {ke}",
         )
 
     # if no parent is found (e.g., for reporting unit that is whole state), keep the original
