@@ -411,21 +411,31 @@ def get_row_constant_kwargs(kwargs: dict, rows_to_read: List[int]) -> dict:
     return rck
 
 
-def list_desired_excel_sheets(f_path: str, p: dict) -> Optional[list]:
+def list_desired_excel_sheets(
+        f_path: str, p: dict
+) -> (Optional[list], Optional[dict]):
+    err = None
     if p["sheets_to_read_names"]:
         sheets_to_read = p["sheets_to_read_names"]
     else:
-        xl = pd.ExcelFile(f_path)
-        all_sheets = xl.sheet_names
-        if p["sheets_to_skip_names"]:
-            sheets_to_read = [
-                s for s in all_sheets if s not in p["sheets_to_skip_names"]
-            ]
-        elif p["sheets_to_read_numbers"]:
-            sheets_to_read = [all_sheets[n] for n in p["sheets_to_read_numbers"]]
-        else:
-            sheets_to_read = all_sheets
-    return sheets_to_read
+        try:
+            xl = pd.ExcelFile(f_path)
+            all_sheets = xl.sheet_names
+            if p["sheets_to_skip_names"]:
+                sheets_to_read = [
+                    s for s in all_sheets if s not in p["sheets_to_skip_names"]
+                ]
+            elif p["sheets_to_read_numbers"]:
+                sheets_to_read = [all_sheets[n] for n in p["sheets_to_read_numbers"]]
+            else:
+                sheets_to_read = all_sheets
+        except Exception as exc:
+            err = add_new_error(
+                err, "file", Path(f_path).name, f"Error reading sheet names: {exc}"
+            )
+            sheets_to_read = None
+
+    return sheets_to_read, err
 
 
 def read_single_datafile(
@@ -439,6 +449,7 @@ def read_single_datafile(
 ) -> (Dict[str, pd.DataFrame], Dict[str, Dict[int, Any]], Optional[dict]):
     """Length of returned dictionary is the number of sheets read -- usually 1 except for multi-sheet Excel.
     Auxiliary files have different parameters (e.g., no count locations)"""
+    err = None
     kwargs = dict()  # for syntax checker
     df_dict = dict()  # for syntax checker
     row_constants = dict()  # for syntax checker
@@ -495,14 +506,20 @@ def read_single_datafile(
 
         elif p["file_type"] == "excel":
             print("\nNOTE: about to call excel_to_dict\n")
-            df_dict, row_constants, err = excel_to_dict(
+            desired_sheets, new_err = list_desired_excel_sheets(f_path, p)
+            if new_err:
+                err = consolidate_errors([err, new_err])
+                if fatal_error(new_err):
+                    df_dict = dict()
+                    return df_dict, row_constants, err
+            df_dict, row_constants, new_err = excel_to_dict(
                 f_path,
                 kwargs,
-                list_desired_excel_sheets(f_path, p),
+                desired_sheets,
                 p["rows_with_constants"],
             )
             print("\nAND NOTE: just ran excel_to_dict")
-            if fatal_error(err):
+            if fatal_error(new_err):
                 df_dict = dict()
         elif p["file_type"] == "flat_text":
             try:
