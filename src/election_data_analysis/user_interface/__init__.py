@@ -515,7 +515,6 @@ def read_single_datafile(
                 df_dict = {"Sheet1": df}
 
         elif p["file_type"] == "excel":
-            print("\nNOTE: about to call excel_to_dict\n")
             desired_sheets, new_err = list_desired_excel_sheets(f_path, p)
             if new_err:
                 err = consolidate_errors([err, new_err])
@@ -528,7 +527,6 @@ def read_single_datafile(
                 desired_sheets,
                 p["rows_with_constants"],
             )
-            print("\nAND NOTE: just ran excel_to_dict")
             if fatal_error(new_err):
                 df_dict = dict()
         elif p["file_type"] == "flat_text":
@@ -622,7 +620,6 @@ def excel_to_dict(
 ) -> (Dict[str, pd.DataFrame], Dict[str, Dict[str, Any]], Optional[dict]):
     """Returns dictionary of dataframes (one for each sheet), dictionary of dictionaries of constant values
     (one dictionary for each sheet) and error."""
-    print(f"Starting excel_to_dict")
     kwargs["index_col"] = None
     #  need to omit index_col here since multi-index headers are possible
     # to avoid getting fatal error when a sheet doesn't read in correctly
@@ -645,7 +642,6 @@ def excel_to_dict(
             f"Exception: {exc}",
         )
     for sheet in sheet_list:
-        print(f"NOTE: about to try read_excel for sheet {sheet}")
         try:
             df_dict[sheet] = pd.read_excel(f_path, **kwargs, sheet_name=sheet)
             # ignore any empty sheet
@@ -662,7 +658,6 @@ def excel_to_dict(
                 Path(f_path).name,
                 f"Sheet {sheet} not read due to exception:\n\t{exc}",
             )
-        print(f"NOTE: about to try build_row_constants_from_df for sheet {sheet}")
 
         try:
             if rows_to_read:
