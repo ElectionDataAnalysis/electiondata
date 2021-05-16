@@ -620,15 +620,26 @@ def excel_to_dict(
                 Path(f_path).name,
                 f"Sheet {sheet} not read due to exception:\n\t{exc}",
             )
-        if rows_to_read:
-            row_constant_df = pd.read_excel(
-                f_path, **row_constant_kwargs, sheet_name=sheet
+        try:
+            if rows_to_read:
+                row_constant_df = pd.read_excel(
+                    f_path, **row_constant_kwargs, sheet_name=sheet
+                )
+                row_constants[sheet], new_err = build_row_constants_from_df(
+                    row_constant_df, rows_to_read, file_name, sheet
+                )
+                if new_err:
+                    err = consolidate_errors([err, new_err])
+        except Exception as exc:
+            err = add_new_error(
+                err,
+                "file",
+                file_name,
+                f"Exception while reading rows {rows_to_read} from {sheet}\n"
+                f"with keyword arguments {row_constant_kwargs}\n"
+                f"in ui.excel_to_dict():\n"
+                f"{exc}"
             )
-            row_constants[sheet], new_err = build_row_constants_from_df(
-                row_constant_df, rows_to_read, file_name, sheet
-            )
-            if new_err:
-                err = consolidate_errors([err, new_err])
     return df_dict, row_constants, err
 
 
