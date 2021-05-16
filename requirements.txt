@@ -10,6 +10,6 @@ xlrd>=1.0.0
 path
 psutil
 requests
-openpyxl
+openpyxl==3.0.6
 dicttoxml==1.7.4
 lxml
