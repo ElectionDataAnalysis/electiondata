@@ -43,9 +43,8 @@ ReportingUnit=<Town>;<Rep District>
 Candidate=<count_header_0>
 Party=<Party from count_header_0>
 
-# Values to ignore (optional) #
-#[ignore]
-## E.g: Candidate=Total Votes Cast,Registered Voters ##
+[ignore]
+Candidate=Total Write-ins,Total Votes,Spoiled Votes,Blank Votes
 
 # Lookup formula sections #
 ## Required when foreign keys are used in munge formulas and    ##
