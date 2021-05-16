@@ -26,7 +26,7 @@ con_votes_vote_type = 11749
 # Change this only if results are subdivided by something other than counties
 county_or_other = "district"
 single_county = "American Samoa;Eastern District"
-con_votes_county = 493  # total votes for congress of that county
+con_votes_county = 5700  # total votes for congress of that county
 
 
 def test_data_exists(dbname):
