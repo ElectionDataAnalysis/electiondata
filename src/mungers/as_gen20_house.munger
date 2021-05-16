@@ -4,6 +4,7 @@ count_location=by_number:1
 
 constant_over_file=CountItemType
 multi_block=yes
+noncount_header_row=0
 
 [munge formulas]
 Candidate=<column_0>

@@ -11,6 +11,7 @@ constant_over_file=Party,CandidateContest,CountItemType
 
 [munge formulas]
 ReportingUnit=<County>
-
-
 Candidate=<count_header_0>
+
+[ignore]
+ReportingUnit=TOTAL,Results provided by the Office of Nebraska Secretary of State
