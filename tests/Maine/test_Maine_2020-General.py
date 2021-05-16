@@ -12,10 +12,11 @@ import election_data_analysis as e
 # # # therefore the test numbers do not include uocava.
 election = "2020 General"
 jurisdiction = "Maine"
+jurisdiction_type="state"
 abbr = "ME"
-total_pres_votes = 819461 - 5719  # total of all votes for President (uocava is 5719)
+total_pres_votes = 819461   # total of all votes for President
 cd = 1  # congressional district
-total_cd_votes = 436027 - 3271  # total votes in the chosen cd (uocava is 3271)
+total_cd_votes = 436027  # total votes in the chosen cd
 shd = 2  # state house district  ***NOT AVAILABLE***
 total_shd_votes = 6470
 ssd = 1  # state senate district
@@ -37,6 +38,7 @@ def test_presidential(dbname):
             jurisdiction,
             f"US President ({abbr})",
             dbname=dbname,
+            sub_unit_type=jurisdiction_type,
         )
         == total_pres_votes
     )
@@ -48,6 +50,7 @@ def test_congressional_totals(dbname):
             election,
             jurisdiction,
             f"US House {abbr} District {cd}",
+            sub_unit_type=jurisdiction_type,
             dbname=dbname,
         )
         == total_cd_votes
@@ -94,6 +97,7 @@ def test_count_type_subtotal(dbname):
             f"US President ({abbr})",
             dbname=dbname,
             vote_type=single_vote_type,
+            sub_unit_type=jurisdiction_type,
         )
         == pres_votes_vote_type
     )

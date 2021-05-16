@@ -421,9 +421,9 @@ Candidate	Donald J. Trump	Trump, Donald J.
 Candidate	Jo Jorgensen	Jorgensen, Jo
 Candidate	Howard Hawkins	Hawkins, Howard
 Candidate	Roque De La Fuente	De La Fuente, Roque
-Candidate	Joseph R. Biden, Jr.	Biden, Joseph R.
-Candidate	Joseph R. Biden, Jr.	Joseph R. Biden, Jr.
-Candidate	Joseph R. Biden, Jr.	Biden, Joseph R., Jr.
+Candidate	Joseph R. Biden	Biden, Joseph R.
+Candidate	Joseph R. Biden	Joseph R. Biden, Jr.
+Candidate	Joseph R. Biden	Biden, Joseph R., Jr.
 Candidate	Michael R. Bloomberg	Michael R. Bloomberg
 Candidate	Michael R. Bloomberg	Bloomberg, Michael R.
 Candidate	Cory A. Booker	Cory A. Booker
@@ -978,3 +978,4 @@ Candidate	Crafts, Dale John	Crafts, Dale John
 Candidate	Allen, Jay T.	Allen, Jay T.
 Candidate	Savage, Lisa	Savage, Lisa
 Candidate	Linn, Max Patrick	Linn, Max Patrick
+Candidate	Susan Margaret Collins	Collins, Susan Margaret
