@@ -306,17 +306,13 @@ error_keys = {
     "jurisdiction",
     "file",
     "system",
+    "database",
+    "test",
 }
+warning_keys = {f"warn-{ek}" for ek in error_keys}
 
-warning_keys = {
-    "warn-ini",
-    "warn-munger",
-    "warn-jurisdiction",
-    "warn-file",
-    "warn-system",
-    "warn-test",
-}
-
+# mapping from internal database reportingunit types to the user-facing contest types
+# (contests are categorized by the reporting unit type of their corresponding districts)
 contest_type_mappings = {
     "congressional": "Congressional",
     "state": "Statewide",

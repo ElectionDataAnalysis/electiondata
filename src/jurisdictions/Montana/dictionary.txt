@@ -308,7 +308,6 @@ CandidateContest	MT Governor (Democratic Party)	GOVERNOR & LT. GOVERNOR (Democra
 CandidateContest	US Senate MT (Democratic Party)	UNITED STATES SENATOR (Democratic)
 CandidateContest	US Senate MT (Democratic Party)	UNITED STATES SENATOR (Democrat)
 CandidateContest	MT State Auditor (Democratic Party)	STATE AUDITOR (Democratic)
-CandidateContest	MT State Attorney General (Democratic Party)	ATTORNEY GENERAL (Democrat)
 CandidateContest	MT State Superintendent (Democratic Party)	STATE SUPERINTENDENT OF PUBLIC INSTRUCTION (Democratic)
 CandidateContest	MT State Superintendent (Democratic Party)	STATE SUPERINTENDENT OF PUBLIC INSTRUCTION (Democrat)
 CandidateContest	MT Attorney General (Democratic Party)	ATTORNEY GENERAL (Democratic)

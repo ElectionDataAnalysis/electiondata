@@ -10,6 +10,7 @@ import election_data_analysis as e
 # constants - CHANGE THESE!! - use internal db names
 election = "2020 General"
 jurisdiction = "Montana"
+jurisdiction_type = "state"
 abbr = "MT"
 county_type = (
     "county"  # unless major subdivision is something else, e.g. 'parish' for Louisiana
@@ -21,7 +22,7 @@ shd = 1  # state house district
 total_shd_votes = 6734
 ssd = 9  # state senate district
 total_ssd_votes = 12826
-# pick any one from your file. only 'total' avaialable for MT
+# pick any one from your file. only 'total' available for MT
 single_vote_type = "total"
 pres_votes_vote_type = 603640
 single_county = "Montana;Deer Lodge County"  # pick any one from your file
@@ -39,7 +40,7 @@ def test_presidential(dbname):
             jurisdiction,
             f"US President ({abbr})",
             dbname=dbname,
-            sub_unit_type=county_type,
+            sub_unit_type=jurisdiction_type,
         )
         == total_pres_votes
     )
@@ -52,7 +53,7 @@ def test_statewide_totals(dbname):
             jurisdiction,
             f"US Senate {abbr}",
             dbname=dbname,
-            sub_unit_type=county_type,
+            sub_unit_type=jurisdiction_type,
         )
         == 605637
     )
@@ -65,7 +66,7 @@ def test_congressional_totals(dbname):
             jurisdiction,
             f"US House {abbr} District 1",
             dbname=dbname,
-            sub_unit_type=county_type,
+            sub_unit_type=jurisdiction_type,
         )
         == total_cd_votes
     )
@@ -78,7 +79,7 @@ def test_state_senate_totals(dbname):
             jurisdiction,
             f"{abbr} Senate District 2",
             dbname=dbname,
-            sub_unit_type=county_type,
+            sub_unit_type=jurisdiction_type,
         )
         == total_ssd_votes
     )
@@ -91,7 +92,7 @@ def test_state_house_totals(dbname):
             jurisdiction,
             f"{abbr} House District 13",
             dbname=dbname,
-            sub_unit_type=county_type,
+            sub_unit_type=jurisdiction_type,
         )
         == total_shd_votes
     )
@@ -112,6 +113,7 @@ def test_count_type_subtotal(dbname):
             jurisdiction,
             f"US President ({abbr})",
             single_vote_type,
+            sub_unit_type=jurisdiction_type,
             dbname=dbname,
         )
         == pres_votes_vote_type
