@@ -17,6 +17,7 @@ import election_data_analysis as e
 # NB: write-ins are not counted in totals given on website
 election = "2020 General"
 jurisdiction = "Vermont"
+jurisdiction_type = "state"
 abbr = "VT"
 total_pres_votes = (
     370968 - 278 - 3262 - 1942
@@ -51,7 +52,7 @@ def test_presidential(dbname):
             election,
             jurisdiction,
             f"US President ({abbr})",
-            sub_unit_type="state",
+            sub_unit_type=jurisdiction_type,
             dbname=dbname,
         )
         == total_pres_votes
@@ -64,7 +65,7 @@ def test_congressional_totals(dbname):
             election,
             jurisdiction,
             f"US House {abbr} District {cd}",
-            sub_unit_type=county_or_other,
+            sub_unit_type=jurisdiction_type,
             dbname=dbname,
         )
         == total_cd_votes
@@ -77,7 +78,7 @@ def test_state_senate_totals(dbname):
             election,
             jurisdiction,
             f"{abbr} Senate District {ssd}",
-            sub_unit_type=county_or_other,
+            sub_unit_type=jurisdiction_type,
             dbname=dbname,
         )
         == total_ssd_votes
@@ -90,7 +91,7 @@ def test_state_house_totals(dbname):
             election,
             jurisdiction,
             f"{abbr} House District {shd}",
-            sub_unit_type=county_or_other,
+            sub_unit_type=jurisdiction_type,
             dbname=dbname,
         )
         == total_shd_votes
