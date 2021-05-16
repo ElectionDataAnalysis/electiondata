@@ -494,6 +494,7 @@ def read_single_datafile(
                 df_dict = {"Sheet1": df}
 
         elif p["file_type"] == "excel":
+            print("\nNOTE: about to call excel_to_dict\n")
             df_dict, row_constants, err = excel_to_dict(
                 f_path,
                 kwargs,
