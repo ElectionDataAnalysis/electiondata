@@ -613,9 +613,11 @@ def excel_to_dict(
             f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
             f"Unexpected exception while getting row-constant keyword arguments for \n"
             f"rows_to_read: {rows_to_read}\n"
-            f"kwargs: {kwargs}",
+            f"kwargs: {kwargs}.\n"
+            f"Exception: {exc}",
         )
     for sheet in sheet_list:
+        print(f"NOTE: about to try read_excel for sheet {sheet}")
         try:
             df_dict[sheet] = pd.read_excel(f_path, **kwargs, sheet_name=sheet)
             # ignore any empty sheet
@@ -632,6 +634,8 @@ def excel_to_dict(
                 Path(f_path).name,
                 f"Sheet {sheet} not read due to exception:\n\t{exc}",
             )
+        print(f"NOTE: about to try build_row_constants_from_df for sheet {sheet}")
+
         try:
             if rows_to_read:
                 row_constant_df = pd.read_excel(
