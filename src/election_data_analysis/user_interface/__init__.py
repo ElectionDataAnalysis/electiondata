@@ -601,8 +601,18 @@ def excel_to_dict(
     row_constant_kwargs = dict()
     file_name = Path(f_path).name
     err = None
-    if rows_to_read:
-        row_constant_kwargs = get_row_constant_kwargs(kwargs, rows_to_read)
+    try:
+        if rows_to_read:
+            row_constant_kwargs = get_row_constant_kwargs(kwargs, rows_to_read)
+    except Exception as exc:
+        err = add_new_error(
+            err,
+            "system",
+            f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
+            f"Unexpected exception while getting row-constant keyword arguments for \n"
+            f"rows_to_read: {rows_to_read}\n"
+            f"kwargs: {kwargs}",
+        )
     for sheet in sheet_list:
         try:
             df_dict[sheet] = pd.read_excel(f_path, **kwargs, sheet_name=sheet)
