@@ -426,6 +426,8 @@ def list_desired_excel_sheets(
                 err, "file", file_name,
                 f"Error executing pd.ExcelFile({f_path}): {exc}"
             )
+            sheets_to_read = None
+            return sheets_to_read, err
         if xl:
             try:
                 all_sheets = xl.sheet_names
