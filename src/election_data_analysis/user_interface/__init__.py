@@ -22,6 +22,7 @@ import xml.etree.ElementTree as et
 import json
 import shutil
 import xlrd
+import openpyxl
 
 # constants
 recognized_encodings = {
@@ -421,16 +422,21 @@ def list_desired_excel_sheets(
         sheets_to_read = p["sheets_to_read_names"]
     else:
         try:
-            # read file
-            xls = xlrd.open_workbook(f_path, on_demand=True)
-            all_sheets = xls.sheet_names()
+            # read an xlsx file
+            xlsx = openpyxl.load_workbook(f_path)
+            all_sheets = xlsx.get_sheet_names()
         except Exception as exc:
-            err = add_new_error(
-                err, "file", file_name,
-                f"Error reading sheet names from Excel file ({f_path}): {exc}"
-            )
-            sheets_to_read = None
-            return sheets_to_read, err
+            try:
+                # read xls file
+                xls = xlrd.open_workbook(f_path, on_demand=True)
+                all_sheets = xls.sheet_names()
+            except Exception as exc:
+                err = add_new_error(
+                    err, "file", file_name,
+                    f"Error reading sheet names from Excel file ({f_path}): {exc}"
+                )
+                sheets_to_read = None
+                return sheets_to_read, err
         if p["sheets_to_skip_names"]:
             sheets_to_read = [
                 s for s in all_sheets if s not in p["sheets_to_skip_names"]
