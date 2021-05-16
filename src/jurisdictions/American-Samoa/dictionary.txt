@@ -1,21 +1,4 @@
 cdf_element	cdf_internal_name	raw_identifier_value
-CandidateContest	AS House District 1	AS House District 1
-CandidateContest	AS House District 2	AS House District 2
-CandidateContest	AS House District 3	AS House District 3
-CandidateContest	AS House District 4	AS House District 4
-CandidateContest	AS House District 5	AS House District 5
-CandidateContest	AS House District 6	AS House District 6
-CandidateContest	AS House District 7	AS House District 7
-CandidateContest	AS House District 8	AS House District 8
-CandidateContest	AS House District 9	AS House District 9
-CandidateContest	AS House District 10	AS House District 10
-CandidateContest	AS House District 11	AS House District 11
-CandidateContest	AS House District 12	AS House District 12
-CandidateContest	AS House District 13	AS House District 13
-CandidateContest	AS House District 14	AS House District 14
-CandidateContest	AS House District 15	AS House District 15
-CandidateContest	AS House District 16	AS House District 16
-CandidateContest	AS House District 17	AS House District 17
 CandidateContest	AS House District 1	District No. 1 - Manu'a
 CandidateContest	AS House District 2	District No. 2 - Manu'a
 CandidateContest	AS House District 3	District NO. 3 - Vaifanua
@@ -109,7 +92,7 @@ ReportingUnit	American Samoa;AS House District 16	District No. 16 - Tualautai
 ReportingUnit	American Samoa;AS House District 17	District No. 17 - Leasina
 ReportingUnit	American Samoa;US House AS District 1	American Samoa;US House AS District 1
 ReportingUnit	American Samoa	American Samoa
-ReportingUnit	American Samoa;Central Office - Swains Island	Central Office - Swains Island
+ReportingUnit	American Samoa;(no district);Central Office - Swains Island	Central Office - Swains Island
 Candidate	Aumua Amata	Aumua Amata
 Candidate	Meleagi Suitonu-Chapman	Meleagi Suitonu-Chapman
 Candidate	Oreta Tufaga-Mapu Crichton	Oreta Tufaga-Mapu Crichton

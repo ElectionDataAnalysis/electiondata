@@ -10,6 +10,7 @@ import election_data_analysis as e
 # # # constants - CHANGE THESE!! - use internal db names
 election = "2020 General"
 jurisdiction = "American Samoa"
+jurisdiction_type = "territory"
 abbr = "AS"
 total_pres_votes = -1  # total of all votes for President
 total_gov_votes = 11861  # total of all votes for Governor
@@ -24,7 +25,7 @@ con_votes_vote_type = 11749
 # pick any one from your file
 # Change this only if results are subdivided by something other than counties
 county_or_other = "district"
-single_county = "American Samoa;Eastern District;Dist #5 - Sua No. 1"
+single_county = "American Samoa;Eastern District"
 con_votes_county = 493  # total votes for congress of that county
 
 
@@ -53,7 +54,7 @@ def test_governor_totals(dbname):
             jurisdiction,
             f"{abbr} Governor",
             dbname=dbname,
-            sub_unit_type=county_or_other,
+            sub_unit_type=jurisdiction_type,
         )
         == total_gov_votes
     )
@@ -66,7 +67,7 @@ def test_congressional_totals(dbname):
             jurisdiction,
             f"US House {abbr} Delegate",
             dbname=dbname,
-            sub_unit_type=county_or_other,
+            sub_unit_type=jurisdiction_type,
         )
         == total_cd_votes
     )
@@ -92,7 +93,7 @@ def test_state_house_totals(dbname):
             election,
             jurisdiction,
             f"{abbr} House District {shd}",
-            sub_unit_type=county_or_other,
+            sub_unit_type="territory",
             dbname=dbname,
         )
         == total_shd_votes
@@ -116,7 +117,7 @@ def test_count_type_subtotal(dbname):
             f"US House {abbr} Delegate",
             dbname=dbname,
             vote_type=single_vote_type,
-            sub_unit_type=county_or_other,
+            sub_unit_type=jurisdiction_type,
         )
         == con_votes_vote_type
     )

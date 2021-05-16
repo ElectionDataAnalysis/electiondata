@@ -2,7 +2,6 @@
 file_type=excel
 count_location=by_number:1
 
-noncount_header_row=0
 constant_over_file=CountItemType
 multi_block=yes
 
