@@ -21,6 +21,7 @@ import inspect
 import xml.etree.ElementTree as et
 import json
 import shutil
+import xlrd
 
 # constants
 recognized_encodings = {
@@ -420,37 +421,25 @@ def list_desired_excel_sheets(
         sheets_to_read = p["sheets_to_read_names"]
     else:
         try:
-            xl = pd.ExcelFile(f_path)
+            # read file
+            xls = xlrd.open_workbook(f_path, on_demand=True)
+            all_sheets = xls.sheet_names()
         except Exception as exc:
             err = add_new_error(
                 err, "file", file_name,
-                f"Error executing pd.ExcelFile({f_path}): {exc}"
+                f"Error reading sheet names from Excel file ({f_path}): {exc}"
             )
             sheets_to_read = None
             return sheets_to_read, err
-        if xl:
-            try:
-                all_sheets = xl.sheet_names
-                if p["sheets_to_skip_names"]:
-                    sheets_to_read = [
-                        s for s in all_sheets if s not in p["sheets_to_skip_names"]
-                    ]
-                elif p["sheets_to_read_numbers"]:
-                    sheets_to_read = [all_sheets[n] for n in p["sheets_to_read_numbers"]]
-                else:
-                    sheets_to_read = all_sheets
-            except Exception as exc:
-                err = add_new_error(
-                    err, "file", file_name,
-                    f"Error reading sheet names with parameters {p}: {exc}"
-                )
-                sheets_to_read = None
+        if p["sheets_to_skip_names"]:
+            sheets_to_read = [
+                s for s in all_sheets if s not in p["sheets_to_skip_names"]
+            ]
+        elif p["sheets_to_read_numbers"]:
+            sheets_to_read = [all_sheets[n] for n in p["sheets_to_read_numbers"]]
         else:
-            err = add_new_error(
-                err, "file", file_name, f"No sheets read from output of pd.ExcelFile({f_path})"
-            )
-            sheets_to_read = None
-    return sheets_to_read, err
+            sheets_to_read = all_sheets
+     return sheets_to_read, err
 
 
 def read_single_datafile(
