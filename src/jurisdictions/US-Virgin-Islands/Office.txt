@@ -1,0 +1,12 @@
+Name	ElectionDistrict
+VI Board of Elections District St. John Resident of St. John (vote for 1)	US Virgin Islands;St. Thomas and St. John
+VI Board of Elections District St. Thomas and St. John Resident of St. Thomas (vote for 3)	US Virgin Islands;St. Thomas and St. John
+VI Board of Elections District St. Croix (vote for 4)	US Virgin Islands;St. Croix
+VI Board of Education District St. Croix	US Virgin Islands;St. Croix
+VI Board of Education District St. Thomas and St. John	US Virgin Islands;St. Thomas and St. John
+VI Board of Education At-Large	US Virgin Islands
+US House VI Delegate	US Virgin Islands
+VI Senate At-Large	US Virgin Islands
+VI Senate District St. Croix	US Virgin Islands;St. Croix
+VI Senate District St. Thomas and St. John	US Virgin Islands;St. Thomas and St. John
+

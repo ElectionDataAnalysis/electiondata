@@ -1,0 +1,21 @@
+Name	ElectionDistrict
+AS House District 1	American Samoa;AS House District 1
+AS House District 2	American Samoa;AS House District 2
+AS House District 3	American Samoa;AS House District 3
+AS House District 4	American Samoa;AS House District 4
+AS House District 5	American Samoa;AS House District 5
+AS House District 6	American Samoa;AS House District 6
+AS House District 7	American Samoa;AS House District 7
+AS House District 8	American Samoa;AS House District 8
+AS House District 9	American Samoa;AS House District 9
+AS House District 10	American Samoa;AS House District 10
+AS House District 11	American Samoa;AS House District 11
+AS House District 12	American Samoa;AS House District 12
+AS House District 13	American Samoa;AS House District 13
+AS House District 14	American Samoa;AS House District 14
+AS House District 15	American Samoa;AS House District 15
+AS House District 16	American Samoa;AS House District 16
+AS House District 17	American Samoa;AS House District 17
+US House AS Delegate	American Samoa
+US President (AS)	American Samoa
+AS Governor	American Samoa

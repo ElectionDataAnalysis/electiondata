@@ -1,0 +1,154 @@
+cdf_element	cdf_internal_name	raw_identifier_value
+CandidateContest	AS House District 1	District No. 1 - Manu'a
+CandidateContest	AS House District 2	District No. 2 - Manu'a
+CandidateContest	AS House District 3	District NO. 3 - Vaifanua
+CandidateContest	AS House District 4	District NO. 4 - Saole
+CandidateContest	AS House District 5	District NO. 5 - Sua # 1
+CandidateContest	AS House District 6	District NO. 6 - Sua # 2
+CandidateContest	AS House District 7	District No. 7 - Maoputasi # 1
+CandidateContest	AS House District 7	District No. 7 Maoputasi # 1
+CandidateContest	AS House District 8	District No. 8 - Maoputasi # 2
+CandidateContest	AS House District 9	District No. 9 - Maoputasi # 3
+CandidateContest	AS House District 10	District No. 10 - Maoputasi # 4
+CandidateContest	AS House District 11	District No. 11 - Maoputasi # 5
+CandidateContest	AS House District 12	District No. 12 - Ituau
+CandidateContest	AS House District 13	District No. 13 - Fofo
+CandidateContest	AS House District 13	District No. 13 Fofo
+CandidateContest	AS House District 14	District No. 14 - Alataua
+CandidateContest	AS House District 15	District No. 15 - Tualauta
+CandidateContest	AS House District 16	District No. 16 - Tualautai
+CandidateContest	AS House District 17	District No. 17 - Leasina
+CandidateContest	US President (AS)	US President (AS)
+CandidateContest	AS Governor	AS Governor
+CandidateContest	US Senate AS	US Senate AS
+CandidateContest	AS Attorney General	AS Attorney General
+CandidateContest	AS Lieutenant Governor	AS Lieutenant Governor
+CandidateContest	AS Treasurer	AS Treasurer
+CandidateContest	AS Secretary of State	AS Secretary of State
+Election	2020 General	2020 General
+Election	2020 Primary	2020 Primary
+Election	2018 General	2018 General
+Election	2016 General	2016 General
+Party	Democratic Party	Democratic Party
+Party	Republican Party	Republican Party
+Party	Green Party	Green Party
+Party	Libertarian Party	Libertarian Party
+Party	Independent	IND
+Party	Nonpartisan	NP
+Party	Democratic Party	DEM
+Party	Republican Party	REP
+ReportingUnit	American Samoa;AS House District 1	American Samoa;AS House District 1
+ReportingUnit	American Samoa;AS House District 2	American Samoa;AS House District 2
+ReportingUnit	American Samoa;AS House District 3	American Samoa;AS House District 3
+ReportingUnit	American Samoa;AS House District 4	American Samoa;AS House District 4
+ReportingUnit	American Samoa;AS House District 5	American Samoa;AS House District 5
+ReportingUnit	American Samoa;AS House District 6	American Samoa;AS House District 6
+ReportingUnit	American Samoa;AS House District 7	American Samoa;AS House District 7
+ReportingUnit	American Samoa;AS House District 8	American Samoa;AS House District 8
+ReportingUnit	American Samoa;AS House District 9	American Samoa;AS House District 9
+ReportingUnit	American Samoa;AS House District 10	American Samoa;AS House District 10
+ReportingUnit	American Samoa;AS House District 11	American Samoa;AS House District 11
+ReportingUnit	American Samoa;AS House District 12	American Samoa;AS House District 12
+ReportingUnit	American Samoa;AS House District 13	American Samoa;AS House District 13
+ReportingUnit	American Samoa;AS House District 14	American Samoa;AS House District 14
+ReportingUnit	American Samoa;AS House District 15	American Samoa;AS House District 15
+ReportingUnit	American Samoa;AS House District 16	American Samoa;AS House District 16
+ReportingUnit	American Samoa;AS House District 17	American Samoa;AS House District 17
+ReportingUnit	American Samoa;District of Manu'a;Dist #1 - Manu'a	Dist #1 - Manu'a
+ReportingUnit	American Samoa;District of Manu'a;Dist #2 - Manu'a	Dist #2 - Manu'a
+ReportingUnit	American Samoa;Eastern District;Dist #3 - Vaifanua	Dist #3 - Vaifanua
+ReportingUnit	American Samoa;Eastern District;Dist #4 - Saole	Dist #4 - Saole
+ReportingUnit	American Samoa;Eastern District;Dist #5 - Sua No. 1	Dist #5 - Sua No. 1
+ReportingUnit	American Samoa;Eastern District;Dist #6 - Sua No. 2	Dist #6 - Sua No. 2
+ReportingUnit	American Samoa;Eastern District;Dist #7 - Maoputasi No. 1	Dist #7 - Maoputasi No. 1
+ReportingUnit	American Samoa;Eastern District;Dist #8 - Maoputasi No. 2	Dist #8 - Maoputasi No. 2
+ReportingUnit	American Samoa;Eastern District;Dist #9 - Maoputasi No. 3	Dist #9 - Maoputasi No. 3
+ReportingUnit	American Samoa;Eastern District;Dist #10 - Maoputasi No. 4	Dist #10 - Maoputasi No. 4
+ReportingUnit	American Samoa;Eastern District;Dist #11 - Maoputasi No. 5	Dist #11 - Maoputasi No. 5
+ReportingUnit	American Samoa;Eastern District;Dist #12 - Ituau	Dist #12 - Ituau
+ReportingUnit	American Samoa;Western District;Dist #13 - Fofo	Dist #13 - Fofo
+ReportingUnit	American Samoa;Western District;Dist #14 - Alataua	Dist #14 - Alataua
+ReportingUnit	American Samoa;Western District;Dist #15 - Tualauta	Dist #15 - Tualauta
+ReportingUnit	American Samoa;Western District;Dist #16 - Tualatai	Dist #16 - Tualatai
+ReportingUnit	American Samoa;Western District;Dist #17 - Leasina	Dist #17 - Leasina
+ReportingUnit	American Samoa;AS House District 1	District No. 1 - Manu'a
+ReportingUnit	American Samoa;AS House District 2	District No. 2 - Manu'a
+ReportingUnit	American Samoa;AS House District 3	District NO. 3 - Vaifanua
+ReportingUnit	American Samoa;AS House District 4	District NO. 4 - Saole
+ReportingUnit	American Samoa;AS House District 5	District NO. 5 - Sua # 1
+ReportingUnit	American Samoa;AS House District 6	District NO. 6 - Sua # 2
+ReportingUnit	American Samoa;AS House District 7	District No. 7 - Maoputasi # 1
+ReportingUnit	American Samoa;AS House District 7	District No. 7 Maoputasi # 1
+ReportingUnit	American Samoa;AS House District 8	District No. 8 - Maoputasi # 2
+ReportingUnit	American Samoa;AS House District 9	District No. 9 - Maoputasi # 3
+ReportingUnit	American Samoa;AS House District 10	District No. 10 - Maoputasi # 4
+ReportingUnit	American Samoa;AS House District 11	District No. 11 - Maoputasi # 5
+ReportingUnit	American Samoa;AS House District 12	District No. 12 - Ituau
+ReportingUnit	American Samoa;AS House District 13	District No. 13 - Fofo
+ReportingUnit	American Samoa;AS House District 13	District No. 13 Fofo
+ReportingUnit	American Samoa;AS House District 14	District No. 14 - Alataua
+ReportingUnit	American Samoa;AS House District 15	District No. 15 - Tualauta
+ReportingUnit	American Samoa;AS House District 16	District No. 16 - Tualautai
+ReportingUnit	American Samoa;AS House District 17	District No. 17 - Leasina
+ReportingUnit	American Samoa;US House AS District 1	American Samoa;US House AS District 1
+ReportingUnit	American Samoa	American Samoa
+ReportingUnit	American Samoa;(no district);Central Office - Swains Island	Central Office - Swains Island
+Candidate	Aumua Amata	Aumua Amata
+Candidate	Meleagi Suitonu-Chapman	Meleagi Suitonu-Chapman
+Candidate	Oreta Tufaga-Mapu Crichton	Oreta Tufaga-Mapu Crichton
+Candidate	Gaoteote/Fai'ivae	Gaoteote/Fai'ivae
+Candidate	I'aulualo/Tapaau	I'aulualo/Tapaau
+Candidate	Lemanu/Talauega	Lemanu/Talauega
+Candidate	Nua/Satele	Nua/Satele
+Candidate	ALUMAMALU ALE SEƒÄ FILOIALI'I	ALUMAMALU ALE SEƒÄ FILOIALI'I
+Candidate	FETUI F FETUI JR.	FETUI F FETUI JR.
+Candidate	FILIOALII LE'AAI SAFULU FILIOALII JR	FILIOALII LE'AAI SAFULU FILIOALII JR
+Candidate	MAPU S JAMIAS	MAPU S JAMIAS
+Candidate	VESI TALALELEI FAUTANU JR.	VESI TALALELEI FAUTANU JR.
+Candidate	SUALEVAI NOFOAIGA SUALEVAI	SUALEVAI NOFOAIGA SUALEVAI
+Candidate	TIAOALII FAUAGIGA T SAI	TIAOALII FAUAGIGA T SAI
+Candidate	LAVEA FATULEGAE'E PALEPOI MAUGA	LAVEA FATULEGAE'E PALEPOI MAUGA
+Candidate	TUPUA SHAWN VA'A	TUPUA SHAWN VA'A
+Candidate	SUAESE "POOCH" TA'ASE	SUAESE "POOCH" TA'ASE
+Candidate	TITIALI'I KITARA VAIAU	TITIALI'I KITARA VAIAU
+Candidate	VA'ASA SIMANU EdD	VA'ASA SIMANU EdD
+Candidate	FA'ALAE LAUATUA'A KONESETI TUNUPOPO	FA'ALAE LAUATUA'A KONESETI TUNUPOPO
+Candidate	FIALUPE FELILA FIAUI LUTU	FIALUPE FELILA FIAUI LUTU
+Candidate	LUA'ITAUA GENE PAN	LUA'ITAUA GENE PAN
+Candidate	AVAGAFONO TUAVAO VAIMAGA MAIAVA	AVAGAFONO TUAVAO VAIMAGA MAIAVA
+Candidate	LOIA GUTU	LOIA GUTU
+Candidate	TUIKA TUIKA	TUIKA TUIKA
+Candidate	VAILOATA ETEUATI AMITUANA'I	VAILOATA ETEUATI AMITUANA'I
+Candidate	AGALELEI LATU FATUESI	AGALELEI LATU FATUESI
+Candidate	IFOPO MAUGAOALI'I SIPA ANOA'I	IFOPO MAUGAOALI'I SIPA ANOA'I
+Candidate	VAILIUAMA STEVE LEASIOLAGI	VAILIUAMA STEVE LEASIOLAGI
+Candidate	WAYNE MALAETASI AMES	WAYNE MALAETASI AMES
+Candidate	VE'EVALU MEAUTA LAUOI MAGEO	VE'EVALU MEAUTA LAUOI MAGEO
+Candidate	VESIA'I POYER S SAMUELU	VESIA'I POYER S SAMUELU
+Candidate	TAPAI ALAILEPULE BENJAMIN VAIVAO	TAPAI ALAILEPULE BENJAMIN VAIVAO
+Candidate	TINA FAISIOTAMO'I VIVAO IOANE	TINA FAISIOTAMO'I VIVAO IOANE
+Candidate	VAETASI TU'UMOLIMOLI S. MOLIGA	VAETASI TU'UMOLIMOLI S. MOLIGA
+Candidate	FAIMEALELEI ANTHONY FU'E ALLEN	FAIMEALELEI ANTHONY FU'E ALLEN
+Candidate	SAUAFEA SONNY SAUAFEA	SAUAFEA SONNY SAUAFEA
+Candidate	ANDREW EARNEST THOMPSON	ANDREW EARNEST THOMPSON
+Candidate	LOGOITUAU MARK TIMOTEO ATAFUA	LOGOITUAU MARK TIMOTEO ATAFUA
+Candidate	MANUMAUA WAYNE WILSON	MANUMAUA WAYNE WILSON
+Candidate	SALA SATAUA Dr. MATAESE SAMUELU	SALA SATAUA Dr. MATAESE SAMUELU
+Candidate	ANDRA TEREISE SAMOA	ANDRA TEREISE SAMOA
+Candidate	PULETUMALO DICK S. KOKO	PULETUMALO DICK S. KOKO
+Candidate	ANDREW MULIVAI AUTELE	ANDREW MULIVAI AUTELE
+Candidate	ETHAN LAKE	ETHAN LAKE
+Candidate	FALEOMAVAEGA NICHOLAS KING JR	FALEOMAVAEGA NICHOLAS KING JR
+Candidate	SAVALI TALAVOU ALE	SAVALI TALAVOU ALE
+Candidate	ALEX M. SENE. JR	ALEX M. SENE. JR
+Candidate	BARTLEY PAPALI'I SU'A LUCIA	BARTLEY PAPALI'I SU'A LUCIA
+Candidate	LARRY SIMOU SANITOA	LARRY SIMOU SANITOA
+Candidate	SAILI SIONE SAMOA	SAILI SIONE SAMOA
+Candidate	SAMUEL IOKA ALE MELEISEA	SAMUEL IOKA ALE MELEISEA
+Candidate	VUI FLORENCE VAILI SAULO	VUI FLORENCE VAILI SAULO
+Candidate	MANAVAALOFA TUTUILA MANASE	MANAVAALOFA TUTUILA MANASE
+Candidate	RACHAEL MANNING KEY	RACHAEL MANNING KEY
+Candidate	TIMUSƒÄ TINI C. LAM YUEN	TIMUSƒÄ TINI C. LAM YUEN
+Candidate	APE MIKE ASIFOA	APE MIKE ASIFOA
+Candidate	GAFATASI AFALAVA	GAFATASI AFALAVA
+Candidate	Suaese 'Pooch' Ta'Ase	Suaese 'Pooch' Ta'Ase

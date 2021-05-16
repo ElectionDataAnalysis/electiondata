@@ -1,6 +1,6 @@
 BallotName
 Donald J. Trump
-"Joseph R. Biden, Jr."
+Joseph R. Biden
 Michael R. Bloomberg
 Cory A. Booker
 Peter Buttigieg
@@ -15,13 +15,14 @@ Andrew Yang
 Elizabeth A. Sweet
 Bre Kidman
 Sara I. Gideon
-"Pingree, Chellie M."
+Pingree, Chellie M.
 Others
-"Golden, Jared F."
-"Crafts, Dale John"
-"Allen, Jay T."
-"Savage, Lisa"
-"Linn, Max Patrick"
+Golden, Jared F.
+Crafts, Dale John
+Allen, Jay T.
+Savage, Lisa
+Linn, Max Patrick
 Jo Jorgensen
 Howard Hawkins
 Roque De La Fuente
+Susan Margaret Collins

@@ -1,0 +1,20 @@
+Name	NumberElected	Office	PrimaryParty
+AS House District 1	1	AS House District 1	
+AS House District 2	1	AS House District 2	
+AS House District 3	1	AS House District 3	
+AS House District 4	1	AS House District 4	
+AS House District 5	1	AS House District 5	
+AS House District 6	1	AS House District 6	
+AS House District 7	1	AS House District 7	
+AS House District 8	1	AS House District 8	
+AS House District 9	1	AS House District 9	
+AS House District 10	1	AS House District 10	
+AS House District 11	1	AS House District 11	
+AS House District 12	1	AS House District 12	
+AS House District 13	1	AS House District 13	
+AS House District 14	1	AS House District 14	
+AS House District 15	1	AS House District 15	
+AS House District 16	1	AS House District 16	
+AS House District 17	1	AS House District 17	
+US House AS Delegate	1	US House AS Delegate
+AS Governor	1	AS Governor

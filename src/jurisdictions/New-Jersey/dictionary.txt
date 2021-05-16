@@ -1,4 +1,5 @@
 cdf_element	cdf_internal_name	raw_identifier_value
+CandidateContest	NJ House District 25	Twenty-Fifth Legislative District
 CandidateContest	US House NJ District 1	First Congressional District
 CandidateContest	US House NJ District 2	Second Congressional District
 CandidateContest	US House NJ District 3	Third Congressional District
@@ -102,6 +103,7 @@ Candidate	Amy Kennedy	Amy Kennedy
 Candidate	Akil Khalfani	Akil Khalfani
 Candidate	ANDY KIM (w)	ANDY KIM (w) *
 Candidate	ALBIO SIRES (w)	ALBIO SIRES (w) *
+Candidate	Susan Margaret Collins	Collins, Susan Margaret
 Party	Veteran For Change	VETERAN FOR CHANGE
 Party	Unity Party America	UNITY PARTY AMERICA
 Party	Truth Vision Hope	TRUTH VISION HOPE

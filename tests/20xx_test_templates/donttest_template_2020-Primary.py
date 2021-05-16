@@ -10,6 +10,7 @@ import election_data_analysis as e
 # # # constants - CHANGE THESE!! - use internal db names
 election = "2020 Primary"
 jurisdiction = "Texas"
+jurisdiction_type = "state"
 abbr = "TX"
 
 party1 = "Democratic Party"
@@ -50,7 +51,7 @@ def test_presidential_vote_type(dbname):
             jurisdiction,
             f"US President ({abbr}) ({party2})",
             vote_type=single_vote_type,
-            sub_unit_type=county_or_other,
+            sub_unit_type=jurisdiction_type,
             dbname=dbname,
         )
         == pres_votes_vote_type_party2
@@ -77,7 +78,7 @@ def test_presidential(dbname):
             election,
             jurisdiction,
             f"US President ({abbr}) ({party1})",
-            sub_unit_type=county_or_other,
+            sub_unit_type=jurisdiction_type,
             dbname=dbname,
         )
         == pres_total_party1
@@ -90,7 +91,7 @@ def test_us_house_totals(dbname):
             election,
             jurisdiction,
             f"US House {abbr} District {cd} ({party2})",
-            sub_unit_type=county_or_other,
+            sub_unit_type=jurisdiction_type,
             dbname=dbname,
         )
         == total_cd_votes_party2
@@ -103,7 +104,7 @@ def test_state_senate_totals(dbname):
             election,
             jurisdiction,
             f"{abbr} Senate District {ssd} ({party2})",
-            sub_unit_type=county_or_other,
+            sub_unit_type=jurisdiction_type,
             dbname=dbname,
         )
         == total_ssd_votes_party2
@@ -116,7 +117,7 @@ def test_state_rep_totals(dbname):
             election,
             jurisdiction,
             f"{abbr} House District {shd} ({party1})",
-            sub_unit_type=county_or_other,
+            sub_unit_type=jurisdiction_type,
             dbname=dbname,
         )
         == total_shd_votes_party1

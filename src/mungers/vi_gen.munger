@@ -1,0 +1,58 @@
+# Format parameters section (required) #
+[format]
+file_type=flat_text
+## for excel or flat files, either
+count_location=by_number:1,2,3,4,5
+
+noncount_header_row=1
+flat_text_delimiter=,
+
+################################################
+## Optional format parameters:
+#### for any file type:
+thousands_separator=,
+encoding=iso-8859-1
+
+###### if there are multiple blocks of data per page, each with its own headers
+multi_block=yes
+###### if multi_block=yes, can set a max number of blocks to read from each sheet
+max_blocks=
+
+#### Optional for excel file type:
+#sheets_to_read_names=
+#sheets_to_read_numbers=
+#sheets_to_skip_names=
+#merged_cells=yes
+
+
+#### List any elements constant over the file that will be given in the <results>.ini file:
+constant_over_file=ReportingUnit
+
+[munge formulas]
+# give formulas for all elements (except constant_over_file elements)
+CandidateContest=<row_0>
+Candidate={<column_0>,^(?:DEM |JPG |REP |ICM |)(.*)$}
+Party={<column_0>,^(DEM |JPG |REP |ICM |).*$}
+CountItemType=<count_header_1>
+
+
+# Values to ignore (optional) #
+[ignore]
+## E.g: Candidate=Total Votes Cast,Registered Voters ##
+CandidateContest=REFERENDUM
+
+# Lookup formula sections #
+## Required when foreign keys are used in munge formulas and    ##
+## must be looked up in another table.                          ##
+## See mi_gen18.munger for example                              ##
+##################################################################
+# [<foreign key name> lookup]
+# optional (defaults to the results file):
+# source_file=
+
+# required:
+# lookup_id=
+
+# optional (if not given, assumes lookup file is same as results file
+source_file=
+# and if source_file is given, specify munger params for lookup source file

@@ -1188,7 +1188,13 @@ def rollup_dataframe(
     rollup_rut: str = "county",
     ignore: Optional[List] = None,
 ) -> (pd.DataFrame(), Optional[dict]):
+    """Returns datafrome of results rolled up to the reporting unit type <rollup_rut>.
+    For reporting units without parents of the given type (e.g., sometimes absentee votes
+    are reported by state), preserve the record"""
+
     err = None  # TODO error handling
+
+    # drop from dataframe any columns in <ignore>
     if ignore:
         working = df.copy().drop(ignore, axis=1)
     else:
@@ -1204,11 +1210,19 @@ def rollup_dataframe(
             f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
             f"Unable to read parents reporting unit info from column {ru_id_column}",
         )
-    new_working = (
-        working.reset_index()
-        .merge(parents, how="left", left_on=ru_id_column, right_on="child_id")
-        .set_index("index")[group_cols + ["parent_id", count_col]]
-    )
+    try:
+        new_working = (
+            working.reset_index()
+            .merge(parents, how="left", left_on=ru_id_column, right_on="child_id")
+            .set_index("index")[group_cols + ["parent_id", count_col]]
+        )
+    except KeyError as ke:
+        err = ui.add_new_error(
+            err,
+            "system",
+            f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
+            f"Unexpected error while merging dataframes to capture nesting relationships of ReportingUnits: {ke}",
+        )
 
     # if no parent is found (e.g., for reporting unit that is whole state), keep the original
     mask = new_working.parent_id.isnull()

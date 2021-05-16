@@ -1,4 +1,9 @@
-from configparser import ConfigParser, MissingSectionHeaderError, DuplicateOptionError
+from configparser import (
+    ConfigParser,
+    MissingSectionHeaderError,
+    DuplicateOptionError,
+    ParsingError,
+)
 from election_data_analysis import special_formats as sf
 from election_data_analysis import database as db
 from election_data_analysis import munge as m
@@ -761,6 +766,20 @@ def get_parameters(
         err = add_new_error(
             err, "ini", param_file, f"Something is defined twice: {doe}"
         )
+    except ParsingError as pe:
+        err = add_new_error(
+            err,
+            "ini",
+            param_file,
+            pe,
+        )
+    except Exception as exc:
+        err = add_new_error(
+            err,
+            "ini",
+            param_file,
+            exc,
+        )
 
     # read required info
     missing_required_params = list()
@@ -1036,7 +1055,7 @@ def run_tests(
         if report_dir:
             Path(report_dir).mkdir(exist_ok=True, parents=True)
             report_file = os.path.join(
-                report_dir, f"{file_prefix}{j_system}_{e_system}.txt"
+                report_dir, f"{file_prefix}{j_system}_{e_system}.test_results"
             )
             cmd = f"{cmd} > {report_file}"
         r = os.system(cmd)
@@ -1194,7 +1213,7 @@ def reload_juris_election(
                 dl.remove_data(election_id, juris_id)
 
             # Load new data into live db (and move successful to archive)
-            success, new_err = dl.load_all(
+            success, failure, new_err = dl.load_all(
                 report_dir=report_dir,
                 rollup=rollup,
                 election_jurisdiction_list=[(election_name, juris_name)],
@@ -1524,7 +1543,7 @@ def disambiguate_empty_cols(
     drop_empties: bool,
     start: int = 0,
 ) -> pd.DataFrame:
-    """return new df with empties dropped, or kept with non-blank placeholder info"""
+    """Returns new df with empties dropped, or kept with non-blank placeholder info"""
     original_number_of_columns = df_in.shape[1]
     # set row index to default
     df = df_in.reset_index(drop=True)

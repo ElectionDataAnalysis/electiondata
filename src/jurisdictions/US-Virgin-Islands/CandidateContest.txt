@@ -1,0 +1,12 @@
+Name	NumberElected	Office	PrimaryParty
+VI Board of Elections District St. John Resident of St. John (vote for 1)	1	VI Board of Elections District St. John Resident of St. John (vote for 1)
+VI Board of Elections District St. Thomas and St. John Resident of St. Thomas (vote for 3)	3	VI Board of Elections District St. Thomas and St. John Resident of St. Thomas (vote for 3)
+VI Board of Elections District St. Croix (vote for 4)	4	VI Board of Elections District St. Croix (vote for 4)
+VI Board of Education District St. Croix	4	VI Board of Education District St. Croix
+VI Board of Education District St. Thomas and St. John	4	VI Board of Education District St. Thomas and St. John
+VI Board of Education At-Large	1	VI Board of Education At-Large
+US House VI Delegate	1	US House VI Delegate
+VI Senate At-Large	1	VI Senate At-Large
+VI Senate District St. Croix	7	VI Senate District St. Croix
+VI Senate District St. Thomas and St. John	7	VI Senate District St. Thomas and St. John
+

@@ -385,7 +385,7 @@ There are routines in the `JurisdictionPrepper()` class to help prepare a jurisd
 ## Load Data
 Each results file to be loaded must be designated in a `*.ini` file inside the corresponding jurisdiction's subfolder of `ini_files_for_results` in the repository. The `*.ini` files currrently in this repository correspond to data files available from the [TestingData repository](https://github.com/ElectionDataAnalysis/TestingData). These should load directly with the munger and jurisdiction files from the election_data_analysis repository.
 
-If all the `.ini` files in a single directory will use the same munger, jurisdiction and election, you can use `make_par_files` to create these `.ini` files in batches. For example, 
+If all the `.ini` files in a single directory will use the same munger, jurisdiction and election, you can use `make_ini_file_batch` to create these `.ini` files in batches. For example, 
 ```
 >>> dir = '/Users/singer3/Documents/Data/Florida/Precinct-Level Election Results/precinctlevelelectionresults2016gen'
 >>> munger = 'fl_gen_by_precinct'
@@ -395,7 +395,7 @@ If all the `.ini` files in a single directory will use the same munger, jurisdic
 >>> date = '2020-08-09'
 >>> source = 'Florida Board of Elections: https://dos.myflorida.com/elections/data-statistics/elections-data/precinct-level-election-results/'
 >>> note = 'These statewide compiled files are derived from county-specific data submitted by supervisors of elections after each primary election, general election, special primary, and special general election and presidential preference primary election'
->>> ea.make_par_files(dir,munger, jurisdiction_path, top_ru, election, date, source=source, results_note=note)
+>>> ea.make_ini_file_batch(results_dir, output_dir, munger, jurisdiction, election, date, source=source, results_note=note)
 >>> 
 ```
   
@@ -428,11 +428,13 @@ analyzer.top_counts('2018 General', 'North Carolina', 'county', True)
 ```
 This code will produce all North Carolina data from the 2018 general election, grouped by contest, county, and vote type (total, early, absentee, etc).
 
-## Unload and reload data
+## Unload and reload data with `reload_juris_election()`
 To unload existing data for a given jurisdiction and a given election -- or more exactly, to remove data from any datafiles with that election and that jurisdiction as "top ReportingUnit" -- you can use the routine 
 ```user_interface.reload_juris_election(juris_name, election_name, test_dir, report_dir)```
 
 where `test_dir` is the directory holding the tests to perform on the data before upload. For example, `test_dir` might be the repository's `tests` directory. This routine will move any files associated with unloaded data to the directory specified in the optional `unloaded_dir` in `run_time.ini`.
+
+Results of the test will be reported in a file with extension `test_results`
 
 Warning: this routine tests the new data before unloading the existing data. The convention is that the test is in the `tests` subdirectory of the code repository, named for the election and jurisdiction separated by underscore (e.g. `test_Georgia_2020-General.py`). Spaces in the name of the jurisdiction or election are replaced by hyphens (e.g. `test_North-Carolina_2018-Primary.py`). If there is no appropriately test named test file, or if any of the tests fails, the unloading and reloading will fail.
 

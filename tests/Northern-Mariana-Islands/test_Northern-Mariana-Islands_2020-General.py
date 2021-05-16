@@ -14,51 +14,50 @@ import election_data_analysis as e
 #   Move this testing file to the correct jurisdiction folder in `election_data_analysis/tests`
 
 # # # constants - CHANGE THESE!! - use internal db names
-## NB: vote types are *not* consistent in source file.
 election = "2020 General"
-jurisdiction = "Pennsylvania"
-jurisdiction_type = "state"
-abbr = "PA"
-total_pres_votes = 6915220  # total of all votes for US President
-cd = 16  # US House congressional district
-total_cd_votes = 354050  # total votes in that US House contest in the chosen cd
-shd = 15  # state house district
-total_shd_votes = 34660  # total votes in that State House contest
-ssd = 47  # state senate district
-total_ssd_votes = 133014  # total votes in that State Senate contest
-single_vote_type = "provisional"  # pick any one with corresponding data in your file, but use internal db name
-pres_votes_vote_type = 105319  # total votes for US President of that vote type
-county_or_other = "county"  # Change this only if results are subdivided by something other than counties
+jurisdiction = "Northern Mariana Islands"
+abbr = "MP"
+juris_type = 'territory'
+total_delegate_votes = -1  # total of all votes for US President
+  # US Delegate
+total_cd_votes = 11449  # total votes in that US House contest in the chosen cd
+shd = 2  # state house district
+total_shd_votes = 1961  # total votes in that State House contest
+ssd = 3  # state senate district
+total_ssd_votes = 10104  # total votes in that State Senate contest
+single_vote_type = "early"  # pick any one with corresponding data in your file, but use internal db name
+delegate_votes_vote_type = 6869  # total votes for US President of that vote type
+county_or_other = "district"  # Change this only if results are subdivided by something other than counties
 #  e.g., 'parish' in LA, 'state-house' in Alaska, 'ward' in Philadelphia
-single_county = "Pennsylvania;Snyder County"  # pick any one from your file, but use internal db name
-pres_votes_county = 19140  # total votes for US President in that county
+single_county = "Northern Mariana Islands;Election District 5"  # pick any one from your file, but use internal db name
+delegate_votes_county = 459  # total votes for US President in that county
 
 
 def test_data_exists(dbname):
     assert e.data_exists(election, jurisdiction, dbname=dbname)
 
 
-def test_presidential(dbname):
+"""def test_presidential(dbname):
     assert (
         e.contest_total(
             election,
             jurisdiction,
             f"US President ({abbr})",
+            sub_unit_type=county_or_other,
             dbname=dbname,
-            sub_unit_type=jurisdiction_type,
         )
         == total_pres_votes
     )
-
+"""
 
 def test_congressional_totals(dbname):
     assert (
         e.contest_total(
             election,
             jurisdiction,
-            f"US House {abbr} District {cd}",
+            f"US House {abbr} Delegate",
+            sub_unit_type=juris_type,
             dbname=dbname,
-            sub_unit_type=jurisdiction_type,
         )
         == total_cd_votes
     )
@@ -70,8 +69,8 @@ def test_state_senate_totals(dbname):
             election,
             jurisdiction,
             f"{abbr} Senate District {ssd}",
+            sub_unit_type=juris_type,
             dbname=dbname,
-            sub_unit_type=jurisdiction_type,
         )
         == total_ssd_votes
     )
@@ -83,8 +82,8 @@ def test_state_house_totals(dbname):
             election,
             jurisdiction,
             f"{abbr} House District {shd}",
+            sub_unit_type=juris_type,
             dbname=dbname,
-            sub_unit_type=jurisdiction_type,
         )
         == total_shd_votes
     )
@@ -94,11 +93,8 @@ def test_standard_vote_types(dbname):
     assert e.check_count_types_standard(election, jurisdiction, dbname=dbname)
 
 
-"""
 def test_vote_type_counts_consistent(dbname):
     assert e.check_totals_match_vote_types(election, jurisdiction, dbname=dbname)
-
-"""
 
 
 def test_all_candidates_known(dbname):
@@ -110,27 +106,27 @@ def test_all_candidates_known(dbname):
 
 def test_count_type_subtotal(dbname):
     assert (
-        e.contest_total(
+            e.contest_total(
             election,
             jurisdiction,
-            f"US President ({abbr})",
+            f"US House {abbr} Delegate",
             dbname=dbname,
+            sub_unit_type=juris_type,
             vote_type=single_vote_type,
-            sub_unit_type=jurisdiction_type,
         )
-        == pres_votes_vote_type
+            == delegate_votes_vote_type
     )
 
 
 def test_county_subtotal(dbname):
     assert (
-        e.contest_total(
+            e.contest_total(
             election,
             jurisdiction,
-            f"US President ({abbr})",
+            f"US House MP Delegate",
             dbname=dbname,
             county=single_county,
             sub_unit_type=county_or_other,
         )
-        == pres_votes_county
+            == delegate_votes_county
     )

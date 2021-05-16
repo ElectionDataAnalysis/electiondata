@@ -1,0 +1,4 @@
+Name	ReportingUnitType
+US Virgin Islands	territory
+US Virgin Islands;St. Thomas and St. John	district
+US Virgin Islands;St. Croix	district
