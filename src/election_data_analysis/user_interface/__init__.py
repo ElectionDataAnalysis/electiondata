@@ -439,7 +439,7 @@ def list_desired_excel_sheets(
             sheets_to_read = [all_sheets[n] for n in p["sheets_to_read_numbers"]]
         else:
             sheets_to_read = all_sheets
-     return sheets_to_read, err
+    return sheets_to_read, err
 
 
 def read_single_datafile(
