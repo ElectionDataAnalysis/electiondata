@@ -595,6 +595,7 @@ def excel_to_dict(
 ) -> (Dict[str, pd.DataFrame], Dict[str, Dict[str, Any]], Optional[dict]):
     """Returns dictionary of dataframes (one for each sheet), dictionary of dictionaries of constant values
     (one dictionary for each sheet) and error."""
+    print(f"Starting excel_to_dict")
     kwargs["index_col"] = None
     #  need to omit index_col here since multi-index headers are possible
     # to avoid getting fatal error when a sheet doesn't read in correctly
