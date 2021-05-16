@@ -17,6 +17,7 @@ import election_data_analysis as e
 ## NB: vote types are *not* consistent in source file.
 election = "2020 General"
 jurisdiction = "Pennsylvania"
+jurisdiction_type = "state"
 abbr = "PA"
 total_pres_votes = 6915220  # total of all votes for US President
 cd = 16  # US House congressional district
@@ -44,6 +45,7 @@ def test_presidential(dbname):
             jurisdiction,
             f"US President ({abbr})",
             dbname=dbname,
+            sub_unit_type=jurisdiction_type,
         )
         == total_pres_votes
     )
@@ -56,6 +58,7 @@ def test_congressional_totals(dbname):
             jurisdiction,
             f"US House {abbr} District {cd}",
             dbname=dbname,
+            sub_unit_type=jurisdiction_type,
         )
         == total_cd_votes
     )
@@ -68,6 +71,7 @@ def test_state_senate_totals(dbname):
             jurisdiction,
             f"{abbr} Senate District {ssd}",
             dbname=dbname,
+            sub_unit_type=jurisdiction_type,
         )
         == total_ssd_votes
     )
@@ -80,6 +84,7 @@ def test_state_house_totals(dbname):
             jurisdiction,
             f"{abbr} House District {shd}",
             dbname=dbname,
+            sub_unit_type=jurisdiction_type,
         )
         == total_shd_votes
     )
@@ -111,6 +116,7 @@ def test_count_type_subtotal(dbname):
             f"US President ({abbr})",
             dbname=dbname,
             vote_type=single_vote_type,
+            sub_unit_type=jurisdiction_type,
         )
         == pres_votes_vote_type
     )

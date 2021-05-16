@@ -2275,7 +2275,7 @@ def load_results_file(
 
     # # add Id columns for all but Count, removing raw-munged
     try:
-        df, new_err = m.munge_raw_to_ids(  # TODO this is where FutureWarning is thrown
+        df, new_err = m.munge_raw_to_ids(
             df,
             necessary_constants,
             path_to_jurisdiction_dir,
@@ -2380,23 +2380,15 @@ def load_or_reload_all(
             # process each election-jurisdiction pair
             for (election, jurisdiction) in ej_pairs:
                 # if new results pass test, remove old if exists and load new
-                success = ui.reload_juris_election(
+                new_err = ui.reload_juris_election(
                     jurisdiction,
                     election,
                     test_dir,
                     error_and_warning_dir,
                     rollup=rollup,
                 )
-                if success:
-                    new_err = None
-                else:
-                    new_err = ui.add_new_error(
-                        None,
-                        "warn-file",
-                        jurisdiction,
-                        f"Load (or reload) did not succeed for results of {election}",
-                    )
-                err = ui.consolidate_errors([err, new_err])
+                if new_err:
+                    err = ui.consolidate_errors([err, new_err])
         else:
             err = ui.add_new_error(
                 err,

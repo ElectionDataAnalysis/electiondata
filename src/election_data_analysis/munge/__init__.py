@@ -60,7 +60,7 @@ req_munger_parameters: Dict[str, Dict[str, Any]] = {
 }
 
 string_location_reqs: Dict[str, List[str]] = {
-    "in_field_values": [],
+    "by_column_name": [],
     "in_count_headers": ["count_header_row_numbers"],
     "constant_over_file": [],
     "constant_over_sheet_or_block": ["constant_over_sheet_or_block"],
@@ -1178,7 +1178,7 @@ def munge_raw_to_ids(
 
     # add Selection_Id (combines info from BallotMeasureSelection and CandidateContestSelection)
     try:
-        working, err = add_selection_id(
+        working, err = add_selection_id(  # TODO this is where FutureWarning occurs
             working,
             session.bind,
             path_to_jurisdiction_dir,
@@ -1536,31 +1536,7 @@ def get_and_check_munger_params(
                 f"file_type={params['file_type']}' but count_field_name_row not found",
             )
 
-        # if all rows are not data
-        if (params["all_rows"] is None) or params["all_rows"] != "data":
-            # need field names
-            if params["noncount_header_row"] is None:
-                err = ui.add_new_error(
-                    err,
-                    "munger",
-                    munger_name,
-                    f"file_type={params['file_type']}' and absence of"
-                    f" all_rows=data means field names must be in the "
-                    f"file. But noncount_header_row not given.",
-                )
-        # if all rows are data
-        else:
-            if params["multi_block"] and params["multi_block"] == "yes":
-                err = ui.add_new_error(
-                    err,
-                    "munger",
-                    munger_name,
-                    f"all_rows=data and multi_block=yes are not compatible",
-                )
-
-    # get all munge formulas
-    #  and munge fields
-    formulas, new_err = get_munge_formulas(munger_path)
+    # get all munge fields
     params["munge_fields"], new_err = get_string_fields_from_munger(munger_path)
     if new_err:
         err = ui.consolidate_errors([err, new_err])
@@ -1605,7 +1581,8 @@ def get_and_check_munger_params(
         # classify munge fields
         mf_by_type = {
             "in_count_headers": set(),
-            "in_field_values": set(),
+            "by_column_name": set(),
+            "by_column_number": set(),
             "constant_over_sheet_or_block": set(),
         }
         for mf in params["munge_fields"]:
@@ -1614,22 +1591,23 @@ def get_and_check_munger_params(
                     params["count_header_row_numbers"].append(int(mf[13:]))
                     mf_by_type["in_count_headers"].update({mf})
                 except ValueError:
-                    mf_by_type["in_field_values"].update({mf})
+                    mf_by_type["by_column_name"].update({mf})
             elif mf[:4] == "row_":
                 try:
                     params["rows_with_constants"].append(int(mf[4:]))
                     mf_by_type["constant_over_sheet_or_block"].update({mf})
                 except ValueError:
-                    mf_by_type["in_field_values"].update({mf})
+                    mf_by_type["by_column_name"].update({mf})
             elif mf[:7] == "column_":
                 try:
                     params["columns_referenced_by_munge_formulas"].append(int(mf[7:]))
+                    mf_by_type["by_column_number"].update({mf})
                 except ValueError:
                     pass
             elif mf == "sheet_name":
                 mf_by_type["constant_over_sheet_or_block"].update({mf})
             else:
-                mf_by_type["in_field_values"].update({mf})
+                mf_by_type["by_column_name"].update({mf})
 
         # calculate munge_field_types parameter (and warn if overwriting)
         if params["munge_field_types"]:
@@ -1644,6 +1622,26 @@ def get_and_check_munger_params(
         ]
         if params["constant_over_file"]:
             params["munge_field_types"].append("constant_over_file")
+
+        # if all rows are data
+        if params["all_rows"] == "data":
+            # then we don't have multi-blocks.
+            if params["multi_block"] and params["multi_block"] == "yes":
+                err = ui.add_new_error(
+                    err,
+                    "munger",
+                    munger_name,
+                    f"all_rows=data and multi_block=yes are not compatible",
+                )
+        # if any non-count columns are referenced by field name but no header row given
+        if mf_by_type["by_column_name"] and params["noncount_header_row"] is None:
+            err = ui.add_new_error(
+                err,
+                "munger",
+                munger_name,
+                f"No noncount_header row specified, so can't find column names matching these "
+                f"field from the formulas:\n{mf_by_type['by_column_name']}",
+            )
 
     # check that each lookup section has a replacement formula for each element referencing the lookup field
     # and check that each auxiliary file exists
@@ -1957,12 +1955,23 @@ def to_standard_count_frame(
                     #  need to put 'column_j' in the header cells. Note that we can do this
                     #  safely only after collecting the <row_i> information ("row_constants")
                     # rename header cells referenced by column_j in munge formulas
-                    df_list[n] = rename_cells_by_number(
-                        df_list[n],
-                        p["noncount_header_row"],
-                        p["columns_referenced_by_munge_formulas"],
-                        "column_",
-                    )
+                    if p["noncount_header_row"] is None:
+                        # because we're multi-block, there is a header row. But if no munge
+                        # fields depend on column names, noncount_header_row might not be given.
+                        df_list[n] = rename_cells_by_number(
+                            df_list[n],
+                            0,
+                            p["columns_referenced_by_munge_formulas"],
+                            "column_",
+                        )
+
+                    else:
+                        df_list[n] = rename_cells_by_number(
+                            df_list[n],
+                            p["noncount_header_row"],
+                            p["columns_referenced_by_munge_formulas"],
+                            "column_",
+                        )
 
                     df_list[n] = ui.set_and_fill_headers(
                         df_list[n], header_list, merged_cells, drop_empties=True
@@ -2490,7 +2499,7 @@ def rename_column_index_by_number(
     midx_list = df.columns.to_list()
     for j in cols:
         new_list = list(midx_list[j])
-        new_list[row] = f"column_{j}"
+        new_list[row] = f"{prefix}{j}"
         midx_list[j] = tuple(new_list)
     new_midx = pd.MultiIndex.from_tuples(midx_list, names=range(len(midx_list[0])))
     working = df.copy()
