@@ -641,20 +641,22 @@ class DataLoader:
 
             err = ui.consolidate_errors([err, juris_err])
 
-        err = ui.report(
-            err,
-            report_dir,
-            key_list=[
-                "munger",
-                "warn-munger",
-                "jurisdiction",
-                "warn-jurisdiction",
-                "file",
-                "warn-file",
-                "ini",
-                "warn-ini",
-            ],
-        )
+            err = ui.report(
+                err,
+                report_dir,
+                key_list=[
+                    "munger",
+                    "warn-munger",
+                    "jurisdiction",
+                    "warn-jurisdiction",
+                    "file",
+                    "warn-file",
+                    "ini",
+                    "warn-ini",
+                    "warn-database",
+                    "database"
+                ],
+            )
         #  report munger, jurisdiction and file errors & warnings
 
         # report remaining errors

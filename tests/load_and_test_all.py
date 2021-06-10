@@ -154,8 +154,12 @@ def run2(
             )
             if success:
                 print(f"Files loading successfully:\n{success}")
+            else:
+                print(f"No files loaded successfully")
             if failure:
                 print(f"Files failing to load:\n{failure}")
+            else:
+                print("All files loaded successfully")
 
         except Exception as exc:
             print(f"Exception occurred: {exc}")
