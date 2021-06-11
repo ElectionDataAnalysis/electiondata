@@ -23,6 +23,7 @@ import json
 import shutil
 import xlrd
 import openpyxl
+from sqlalchemy.orm import Session
 
 # constants
 recognized_encodings = {
@@ -320,8 +321,9 @@ contest_type_mappings = {
     "state": "Statewide",
     "state-house": "State House",
     "state-senate": "State Senate",
-    "city": "City",
-    "ward": "Ward"
+    "city": "Citywide",
+    "ward": "Ward",
+    "territory": "Territory-wide"
 }
 
 
@@ -1330,8 +1332,11 @@ def get_contest_type_display(item: str) -> str:
     return " ".join(item_list)
 
 
-def get_filtered_input_options(session, input_str, filters):
-    """ Display dropdown options for user selection """
+def get_filtered_input_options(
+        session: Session, input_str: str, filters: List[str]
+) -> List[Dict[str, Any]]:
+    """ Display dropdown options for menu <input_str>, limited to any strings in <filters>
+    (unless <filters> is None, in which case all are displayed."""
     df_cols = ["parent", "name", "type"]
     if input_str == "election":
         if filters:

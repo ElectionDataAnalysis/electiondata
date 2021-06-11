@@ -30,7 +30,7 @@ from typing import Optional, List, Dict, Any, Iterable, Set
 from election_data_analysis import user_interface as ui
 
 # these form the universe of jurisdictions that can be displayed via the display_jurisdictions function.
-states_and_such = """Alabama
+array_of_jurisdictions = """Alabama
 Alaska
 Arizona
 Arkansas
@@ -1403,6 +1403,9 @@ def read_vote_count(
     election. But this table is the largest one, so we don't want to use pandas methods
     to read into a DF and then filter. Data returns is determined by <fields> (column names from SQL query);
     the columns in the returned database can be renamed as <aliases>"""
+    # change field list to accommodate "other" type election districts if necessary
+    if "unit_type" in fields:
+        fields.append("OtherReportingUnitType")
     q = sql.SQL(
         """
         SELECT  DISTINCT {fields}
@@ -1419,8 +1422,8 @@ def read_vote_count(
                 JOIN (SELECT "Id", "Name" AS "PartyName" FROM "Party") p ON cs."Party_Id" = p."Id"
                 JOIN "CandidateContest" cc ON con."Id" = cc."Id"
                 JOIN (SELECT "Id", "Name" as "OfficeName", "ElectionDistrict_Id" FROM "Office") o on cc."Office_Id" = o."Id"
-                -- this reporting unit info refers to the districts (state house, state senate, etc)
-                JOIN (SELECT "Id", "Name" AS "ReportingUnitName", "ReportingUnitType_Id" FROM "ReportingUnit") ru on o."ElectionDistrict_Id" = ru."Id"
+                -- this reporting unit info refers to the election districts (state house, state senate, etc)
+                JOIN (SELECT "Id", "Name" AS "ReportingUnitName", "ReportingUnitType_Id", "OtherReportingUnitType" FROM "ReportingUnit") ru on o."ElectionDistrict_Id" = ru."Id"
                 JOIN (SELECT "Id", "Txt" AS unit_type FROM "ReportingUnitType") rut on ru."ReportingUnitType_Id" = rut."Id"
                 -- this reporting unit info refers to the geopolitical divisions (county, state, etc)
                 JOIN (SELECT "Id" as "GP_Id", "Name" AS "GPReportingUnitName", "ReportingUnitType_Id" AS "GPReportingUnitType_Id" FROM "ReportingUnit") gpru on vc."ReportingUnit_Id" = gpru."GP_Id"
@@ -1439,6 +1442,11 @@ def read_vote_count(
     cursor.execute(q, [election_id, reporting_unit_id])
     results = cursor.fetchall()
     results_df = pd.DataFrame(results, columns=aliases)
+    # accommodate "other" type election districts
+    if "unit_type" in fields:
+        other_mask = results_df["unit_type"] == "other"
+        results_df.loc[other_mask,["unit_type"]] = results_df[other_mask]["OtherReportingUnitType"]
+        results_df.drop("OtherReportingUnitType", axis=1, inplace=True)
     return results_df
 
 
@@ -1552,8 +1560,12 @@ def display_elections(session: Session) -> pd.DataFrame:
 
 
 def display_jurisdictions(session: Session, cols: List[str]) -> pd.DataFrame:
-    """Returns list of jurisdictions that have data in the database AND are listed in
-    the global constant <states_and_such>"""
+    """Returns dataframe of jurisdictions that have data in the database AND are listed in
+    the global constant <array_of_jurisdictions>. First column is the name of the election,
+    Second column is the name of the jurisdiction; third column is a boolean: True if the given
+    election-jurisdiction pair is present in the _datafile table.
+
+    Complexity of the table is due to the need to order all in a particular way."""
     q = sql.SQL(
         """
         WITH states(states) AS (
@@ -1589,7 +1601,7 @@ def display_jurisdictions(session: Session, cols: List[str]) -> pd.DataFrame:
                 ON s."Id" = d."Election_Id" AND s.jurisdiction_id = d."ReportingUnit_Id"
         ORDER BY order_by
     """
-    ).format(states=sql.Literal(states_and_such))
+    ).format(states=sql.Literal(array_of_jurisdictions))
     connection = session.bind.raw_connection()
     cursor = connection.cursor()
     cursor.execute(q)

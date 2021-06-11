@@ -1485,7 +1485,7 @@ class Analyzer:
     def display_options(
         self, input_str: str, verbose: bool = True, filters: list = None
     ):
-        """<input_str> is one of: 'election', 'jurisdiction', 'contest-type', 'contest',
+        """<input_str> is one of: 'election', 'jurisdiction', 'contest_type', 'contest',
          'category' or 'count' """
         try:
             filters_mapped = ui.get_contest_type_mappings(filters)
