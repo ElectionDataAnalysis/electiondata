@@ -320,6 +320,8 @@ contest_type_mappings = {
     "state": "Statewide",
     "state-house": "State House",
     "state-senate": "State Senate",
+    "city": "City",
+    "ward": "Ward"
 }
 
 
