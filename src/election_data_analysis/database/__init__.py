@@ -1405,7 +1405,9 @@ def read_vote_count(
     the columns in the returned database can be renamed as <aliases>"""
     # change field list to accommodate "other" type election districts if necessary
     if "unit_type" in fields:
-        fields.append("OtherReportingUnitType")
+        fields.append("OtherReportingUnitType_internal_only")
+        aliases.append("OtherReportingUnitType_internal_only")
+        unit_type_alias = aliases[fields.index("unit_type")]
     q = sql.SQL(
         """
         SELECT  DISTINCT {fields}
@@ -1423,7 +1425,14 @@ def read_vote_count(
                 JOIN "CandidateContest" cc ON con."Id" = cc."Id"
                 JOIN (SELECT "Id", "Name" as "OfficeName", "ElectionDistrict_Id" FROM "Office") o on cc."Office_Id" = o."Id"
                 -- this reporting unit info refers to the election districts (state house, state senate, etc)
-                JOIN (SELECT "Id", "Name" AS "ReportingUnitName", "ReportingUnitType_Id", "OtherReportingUnitType" FROM "ReportingUnit") ru on o."ElectionDistrict_Id" = ru."Id"
+                JOIN (
+                    SELECT 
+                        "Id", 
+                        "Name" AS "ReportingUnitName", 
+                        "ReportingUnitType_Id", 
+                        "OtherReportingUnitType" AS "OtherReportingUnitType_internal_only" 
+                    FROM "ReportingUnit"
+                    ) ru on o."ElectionDistrict_Id" = ru."Id"
                 JOIN (SELECT "Id", "Txt" AS unit_type FROM "ReportingUnitType") rut on ru."ReportingUnitType_Id" = rut."Id"
                 -- this reporting unit info refers to the geopolitical divisions (county, state, etc)
                 JOIN (SELECT "Id" as "GP_Id", "Name" AS "GPReportingUnitName", "ReportingUnitType_Id" AS "GPReportingUnitType_Id" FROM "ReportingUnit") gpru on vc."ReportingUnit_Id" = gpru."GP_Id"
@@ -1444,9 +1453,9 @@ def read_vote_count(
     results_df = pd.DataFrame(results, columns=aliases)
     # accommodate "other" type election districts
     if "unit_type" in fields:
-        other_mask = results_df["unit_type"] == "other"
-        results_df.loc[other_mask,["unit_type"]] = results_df[other_mask]["OtherReportingUnitType"]
-        results_df.drop("OtherReportingUnitType", axis=1, inplace=True)
+        other_mask = results_df[unit_type_alias] == "other"
+        results_df.loc[other_mask,[unit_type_alias]] = results_df[other_mask]["OtherReportingUnitType_internal_only"]
+        results_df.drop("OtherReportingUnitType_internal_only", axis=1, inplace=True)
     return results_df
 
 
