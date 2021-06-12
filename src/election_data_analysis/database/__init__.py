@@ -1026,7 +1026,7 @@ def get_jurisdiction_hierarchy(
         FROM    "ComposingReportingUnitJoin" cruj
                 JOIN "ReportingUnit" ru on cruj."ChildReportingUnit_Id" = ru."Id"
                 JOIN "ReportingUnitType" rut on ru."ReportingUnitType_Id" = rut."Id"
-        WHERE   rut."Txt" not in (    
+        WHERE   rut."Txt" not in (    -- state-house is missing, since Alaska's subdiv is state-house
                     'state',
                     'congressional',
                     'judicial',
@@ -1046,7 +1046,7 @@ def get_jurisdiction_hierarchy(
             q,
             [
                 jurisdiction_id,
-                tuple(contest_types_model),
+                tuple(contest_types_model),  # list of election-district reporting-unit types
                 jurisdiction_id,
                 jurisdiction_id,
             ],
