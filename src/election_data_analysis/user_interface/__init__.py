@@ -316,15 +316,6 @@ warning_keys = {f"warn-{ek}" for ek in error_keys}
 
 # mapping from internal database reportingunit types to the user-facing contest types
 # (contests are categorized by the reporting unit type of their corresponding districts)
-contest_type_mappings = {
-    "congressional": "Congressional",
-    "state": "Statewide",
-    "state-house": "State House",
-    "state-senate": "State Senate",
-    "city": "Citywide",
-    "ward": "Ward",
-    "territory": "Territory-wide"
-}
 
 
 def find_dupes(df):
@@ -1303,7 +1294,7 @@ def get_contest_type_mappings(filters: list) -> Optional[list]:
     """get mappings for a list to the contest type database labels"""
     if not filters:
         return None
-    contest_types = contest_type_mappings.items()
+    contest_types = db.contest_type_mappings.items()
     for index, item in enumerate(filters):
         for contest_type in contest_types:
             if item == contest_type[1]:
@@ -1314,7 +1305,7 @@ def get_contest_type_mappings(filters: list) -> Optional[list]:
 
 def get_contest_type_mapping(item: str) -> str:
     """get mappings for a string to the contest type database labels"""
-    contest_types = contest_type_mappings.items()
+    contest_types = db.contest_type_mappings.items()
     for contest_type in contest_types:
         if contest_type[1] in item:
             return item.replace(contest_type[1], contest_type[0])
@@ -1325,9 +1316,9 @@ def get_contest_type_display(item: str) -> str:
     """get the user-friendly version of the contest_type"""
     item_list = item.split(" ")
     for index in range(len(item_list)):
-        for key in contest_type_mappings.keys():
+        for key in db.contest_type_mappings.keys():
             if key == item_list[index]:
-                item_list[index] = contest_type_mappings[key]
+                item_list[index] = db.contest_type_mappings[key]
                 break
     return " ".join(item_list)
 
@@ -1385,7 +1376,7 @@ def get_filtered_input_options(
             [
                 {
                     "parent": reporting_unit,
-                    "name": f"All {contest_type_mappings[contest_type]}",
+                    "name": f"All {db.contest_type_mappings[contest_type]}",
                     "type": contest_type,
                 }
             ]
@@ -1513,8 +1504,8 @@ def package_display_results(data: pd.DataFrame) -> List[Dict[str, Any]]:
     """takes a result set and packages into JSON to return"""
     results = []
     for i, row in data.iterrows():
-        if row[1] in contest_type_mappings:
-            row[1] = contest_type_mappings[row[1]]
+        if row[1] in db.contest_type_mappings:
+            row[1] = db.contest_type_mappings[row[1]]
         temp = {"parent": row[0], "name": row[1], "type": row[2], "order_by": i + 1}
         results.append(temp)
     return results

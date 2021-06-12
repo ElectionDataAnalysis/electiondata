@@ -89,15 +89,17 @@ US Virgin Islands"""
 
 db_pars = ["host", "port", "dbname", "user", "password"]
 
-contest_types_model = [
-    "state",
-    "congressional",
-    "judicial",
-    "state-house",
-    "state-senate",
-    "city",
-    "territory",
-]
+contest_type_mappings = {
+    "congressional": "Congressional",
+    "state": "Statewide",
+    "state-house": "State House",
+    "state-senate": "State Senate",
+    "city": "Citywide",
+    "ward": "Ward",
+    "territory": "Territory-wide"
+}
+
+contest_types_model = contest_type_mappings.keys()
 
 
 def get_database_names(con: psycopg2.extensions.connection):
@@ -1019,6 +1021,7 @@ def get_jurisdiction_hierarchy(
                 AND "ParentReportingUnit_Id" = %s
         UNION
         -- This union accommodates Alaska without breaking other states
+        -- because of LIMIT 1 below, results here will show up only if nothing is found above
         SELECT  rut."Id", ru."OtherReportingUnitType", 2 AS ordering
         FROM    "ComposingReportingUnitJoin" cruj
                 JOIN "ReportingUnit" ru on cruj."ChildReportingUnit_Id" = ru."Id"

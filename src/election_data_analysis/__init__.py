@@ -1553,7 +1553,9 @@ class Analyzer:
         contest: str = None,
         fig_type: str = None,
     ) -> list:
-        """contest_type is one of state, congressional, state-senate, state-house"""
+        """contest_type is an election district type, e.g.,
+         state, congressional, state-senate, state-house, territory, etc.
+         Complete list is given by the keys of <db.contest_type_mapping>"""
         election_id = db.name_to_id(self.session, "Election", election)
         jurisdiction_id = db.name_to_id(self.session, "ReportingUnit", jurisdiction)
         # for now, bar charts can only handle jurisdictions where county is one level
