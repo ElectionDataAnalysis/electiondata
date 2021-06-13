@@ -1000,7 +1000,6 @@ def get_major_subdiv_type(session: Session, jurisdiction: str, file_path: Option
         subdiv_type = name_from_id(session, "ReportingUnitType", subdiv_id)
     else:
         subdiv_type = other_subdiv_type
-
     return subdiv_type
 
 
@@ -1101,7 +1100,7 @@ def get_candidate_votecounts(
             FROM    unit_hierarchy h
                     JOIN "ComposingReportingUnitJoin" c ON h."ChildReportingUnit_Id" = c."ParentReportingUnit_Id"
                     JOIN "ReportingUnit" ru ON c."ParentReportingUnit_Id" = ru."Id"
-            WHERE   ru."ReportingUnitType_Id" = %s
+            WHERE   ru."ReportingUnitType_Id" = %s  # TODO and ru."OtherReportingUnitType
         )
         , unit_hierarchy_named AS (
             SELECT  DISTINCT c."ParentReportingUnit_Id", c."ChildReportingUnit_Id", 
@@ -1121,7 +1120,9 @@ def get_candidate_votecounts(
                     EDRUT."Txt" AS "contest_district_type", p."Name" as Party
                     FROM unit_hierarchy_named IntermediateRU
                     JOIN "VoteCount" vc ON IntermediateRU."ChildReportingUnit_Id" = vc."ReportingUnit_Id"
-                        AND IntermediateRU."ParentReportingUnitType_Id" = %s AND vc."Election_Id" = %s
+                        AND IntermediateRU."ParentReportingUnitType_Id" = %s 
+                        # TODO AND IntermediateRU."OtherReportingUnitType" = %s for the right s
+                        AND vc."Election_Id" = %s
                     JOIN "Contest" C ON vc."Contest_Id" = C."Id" AND C.contest_type = 'Candidate'
                     JOIN "CandidateSelection" CS ON CS."Id" = vc."Selection_Id"
                     JOIN "Candidate" Cand ON CS."Candidate_Id" = Cand."Id"
@@ -1134,7 +1135,7 @@ def get_candidate_votecounts(
     """
     )
     cursor.execute(
-        q, [top_ru_id, subdivision_type_id, subdivision_type_id, election_id]
+        q, [top_ru_id, subdivision_type_id, subdivision_type_id, election_id] # TODO and subdivision othertype
     )
     result = cursor.fetchall()
     result_df = pd.DataFrame(result)

@@ -444,7 +444,7 @@ def get_votecount_data(
 def create_bar(
     session,
     top_ru_id,
-    subdivision_type_id,
+    subdivision_type_id, # TODO and subdivision_othertype
     contest_type,
     contest,
     election_id,
