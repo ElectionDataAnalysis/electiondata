@@ -411,6 +411,9 @@ class DataLoader:
             rollup_rut = db.get_major_subdiv_type(
                 self.session,
                 sdl.d["jurisdiction"],
+                file_path=os.path.join(
+                    self.d["repository_content_root"], "jurisdictions","000_major_subjurisdiction_types.txt"
+                )
             )
         else:
             rollup_rut = None
@@ -1470,11 +1473,12 @@ class Analyzer:
 
         # read reports_and_plots_dir from param_file
         d, error = ui.get_parameters(
-            required_keys=["reports_and_plots_dir"],
+            required_keys=["reports_and_plots_dir", "repository_content_root"],
             param_file=param_file,
             header="election_data_analysis",
         )
         self.reports_and_plots_dir = d["reports_and_plots_dir"]
+        self.repository_content_root = d["repository_content_root"]
 
         # create session
         eng, err = db.sql_alchemy_connect(param_file, dbname=dbname)
@@ -1735,18 +1739,12 @@ class Analyzer:
             vote_types = {x for x in vts[state] if x != "total"}
             district_types = contests_df[contests_df["jurisdiction"] == state]
             state_id = db.name_to_id(self.session, "ReportingUnit", state)
-            (
-                major_sub_ru_type_id,
-                major_sub_ru_type_other,
-            ) = db.get_jurisdiction_hierarchy(self.session, state_id)
-            if major_sub_ru_type_other == "":
-                major_sub_ru_type_name = db.name_from_id(
-                    self.session,
-                    "ReportingUnitType",
-                    major_sub_ru_type_id,
-                )
-            else:
-                major_sub_ru_type_name = major_sub_ru_type_other
+
+            # find major subdivision
+            major_sub_ru_type_name = db.get_major_subdiv_type(
+                self.session, state, file_path=os.path.join(self.repository_content_root)
+            )
+
             # get dataframe of results, adding column for political party
             res, _ = db.export_rollup_from_db(
                 self.session,

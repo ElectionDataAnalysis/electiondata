@@ -985,7 +985,15 @@ def get_relevant_contests(session: Session, filters: List[str]) -> pd.DataFrame:
     return result_df
 
 
-def get_major_subdiv_type(session: Session, jurisdiction: str) -> Optional[str]:
+def get_major_subdiv_type(session: Session, jurisdiction: str, file_path: Optional[str] = None) -> Optional[str]:
+    """Returns the type of the major subdivision, if found. Tries first from <file_path> (if given);
+    if that fails, or no file_path given, tries from database. If nothing found, returns None"""
+    # if file is given, try to get the major subdivision type from the file
+    if file_path:
+        subdiv_from_file = get_major_subdiv_from_file(file_path)
+        if subdiv_from_file:
+            return subdiv_from_file
+    # if not found in file, calculate major subdivision type from the db
     jurisdiction_id = name_to_id(session, "ReportingUnit", jurisdiction)
     subdiv_id, other_subdiv_type = get_jurisdiction_hierarchy(session, jurisdiction_id)
     if other_subdiv_type == "":
@@ -993,6 +1001,22 @@ def get_major_subdiv_type(session: Session, jurisdiction: str) -> Optional[str]:
     else:
         subdiv_type = other_subdiv_type
 
+    return subdiv_type
+
+
+def get_major_subdiv_from_file(f_path: str, jurisdiction: str) -> Optional[str]:
+    """return major subdivision of <jurisdiction> from file <f_path> with columns
+    jurisdiction, major_sub_jurisdiction_type.
+     If anything goes wrong, return None"""
+    try:
+        df = pd.read_csv(f_path, sep="\t")
+        mask = df.jurisdiction == jurisdiction
+        if mask.any():
+            subdiv_type = df.loc[mask, "major_sub_jurisdiction_type"].unique()[0]
+        else:
+            subdiv_type = None
+    except:
+        subdiv_type = None
     return subdiv_type
 
 

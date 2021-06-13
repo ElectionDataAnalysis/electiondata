@@ -29,6 +29,7 @@ def nist_v2_xml_export_tree(
     jurisdiction: str,
     rollup: bool = False,
     major_subdivision: Optional[str] = None,
+    sub_div_type_file: Optional[str] = None,
     issuer: str = default_issuer,
     issuer_abbreviation: str = default_issuer_abbreviation,
     status: str = default_status,
@@ -38,7 +39,9 @@ def nist_v2_xml_export_tree(
     from the given election and jurisdiction. Note that all available results will
     be exported. I.e., if database has precinct-level results, the tree will
     contain precinct-level results.
-    TODO: get major subdivision type (usually 'county') and return results that way
+    Major subdivision for rollup is <major_subdivision> if that's given;
+    otherwise major subdivision is read from <sub_div_type_file> if given;
+    otherwise pulled from db.
     """
     # set up
     election_id = db.name_to_id(session, "Election", election)
@@ -58,6 +61,9 @@ def nist_v2_xml_export_tree(
                 major_subdivision = rut.loc[sub_type_id, "Txt"]
             else:
                 major_subdivision = sub_type_other
+            major_subdivision = db.get_major_subdiv_type(
+                session, jurisdiction, file_path=sub_div_type_file
+            )
 
     # get vote count data
     results_df = read_vote_count_nist(
