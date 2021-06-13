@@ -1087,6 +1087,7 @@ def get_jurisdiction_hierarchy(
 def get_candidate_votecounts(
     session: Session, election_id: int, top_ru_id: int, subdivision_type_id: int
 ) -> pd.DataFrame:
+    # TODO pass also sudivision_othertype so that this query will handle nonstandard subdivisions
     connection = session.bind.raw_connection()
     cursor = connection.cursor()
     q = sql.SQL(
