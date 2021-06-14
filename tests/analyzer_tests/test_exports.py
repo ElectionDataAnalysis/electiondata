@@ -1,17 +1,14 @@
-import results
 import os
 from election_data_analysis import Analyzer, DataLoader
-from election_data_analysis import data_exists
-from election_data_analysis import census_data_exists
 from election_data_analysis import database as db
-import pytest
+from pathlib import Path
 import datetime
 
 
 def test_nist_v2():
     """Tests whether length of nist v2 export string matches the standard.
     (Would be better to test that xml is equivalent, but that's harder.)"""
-    data_path = "/Users/Steph-Airbook/PycharmProjects/election_data_analysis/tests/000_data_for_pytest"
+    data_path = Path(__file__).parents[1].absolute()
     db_dump = os.path.join(data_path,"postgres_test_db_dump.tar")
     nist_v2_reference_file = os.path.join(data_path,"wy20g.xml")
 
