@@ -990,7 +990,7 @@ def get_major_subdiv_type(session: Session, jurisdiction: str, file_path: Option
     if that fails, or no file_path given, tries from database. If nothing found, returns None"""
     # if file is given, try to get the major subdivision type from the file
     if file_path:
-        subdiv_from_file = get_major_subdiv_from_file(file_path)
+        subdiv_from_file = get_major_subdiv_from_file(file_path, jurisdiction)
         if subdiv_from_file:
             return subdiv_from_file
     # if not found in file, calculate major subdivision type from the db
