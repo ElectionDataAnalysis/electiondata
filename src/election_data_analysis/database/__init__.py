@@ -4,12 +4,13 @@
 import psycopg2
 import sqlalchemy
 import sqlalchemy.orm
+from sqlalchemy.orm import Session
 import io
 import csv
 import inspect
 from psycopg2.extensions import ISOLATION_LEVEL_AUTOCOMMIT
 from pathlib import Path
-from sqlalchemy.orm import Session
+
 
 # import the error handling libraries for psycopg2
 from psycopg2 import OperationalError, errorcodes, errors
@@ -148,28 +149,42 @@ def remove_database(params: dict) -> Optional[dict]:
 def create_database(
     con: psycopg2.extensions.connection,
     cur: psycopg2.extensions.cursor,
-    db_name: str,
-):
+    dbname: str,
+    delete_existing: bool = True,
+) -> Optional[str]:
     con.set_isolation_level(ISOLATION_LEVEL_AUTOCOMMIT)
-    q = sql.SQL("DROP DATABASE IF EXISTS {db_name}").format(
-        db_name=sql.Identifier(db_name)
-    )
-    cur.execute(q)
-    con.commit()
-    if cur.description:
-        out1 = cur.fetchall()
-    else:
-        out1 = None
 
-    q = sql.SQL("CREATE DATABASE {db_name}").format(db_name=sql.Identifier(db_name))
-    cur.execute(q)
-    con.commit()
-    if cur.description:
-        out2 = cur.fetchall()
-    else:
-        out2 = None
-    return out1, out2
+    if delete_existing:
+        q = sql.SQL("DROP DATABASE IF EXISTS {db_name}").format(
+            db_name=sql.Identifier(dbname)
+        )
+        cur.execute(q)
+        con.commit()
+    try:
+        q = sql.SQL("CREATE DATABASE {db_name}").format(db_name=sql.Identifier(dbname))
+        cur.execute(q)
+        con.commit()
+        err_str = None
+    except Exception as exc:
+        err_str = f"Could not create database {dbname}: {exc}"
+    return err_str
 
+
+def restore_to_db(dbname: str, dump_file: str, url: sqlalchemy.engine.url.URL) -> str:
+    """Restores structure and data in <dump_file> (assumed tar format)
+    to existing database dbname"""
+    # TODO does this work if a password is required?
+    err_str = None
+    cmd = f"pg_restore " \
+          f" -h {url.host} " \
+          f" -U {url.username} " \
+          f" -p {url.port}" \
+          f" -d {dbname} -F t {dump_file}"
+    try:
+        os.system(cmd)
+    except Exception as exc:
+        err_str = f"DB restore failed: {exc}"
+    return err_str
 
 # TODO move to more appropriate module?
 def append_to_composing_reporting_unit_join(

@@ -22,6 +22,7 @@ from election_data_analysis import preparation as prep
 from election_data_analysis import nist_export as nist
 import itertools
 import shutil
+import json
 
 # constants
 sdl_pars_req = [
@@ -747,6 +748,20 @@ class DataLoader:
                     f"Unexpected exception while adding totals to existing db for {election} - {jurisdiction}",
                 )
         return err
+
+    def load_data_from_db_dump(self, dbname, dump_file: str) -> Optional[str]:
+        """Create a database from a file dumped from another database (but only if db does not
+        already exist). Return error string"""
+        connection = self.session.bind.raw_connection()
+        cursor = connection.cursor()
+        err_str = db.create_database(connection, cursor, dbname=dbname, delete_existing=False)
+        cursor.close()
+        connection.close()
+
+        if not err_str:
+            # read contents of dump into db
+            err_str = db.restore_to_db(dbname, dump_file, self.engine.url)
+        return err_str
 
 
 def check_par_file_elements(
@@ -1643,7 +1658,7 @@ class Analyzer:
         )
         return err
 
-    def export_nist_json(self, election: str, jurisdiction: str) -> dict:
+    def export_nist_v1_json(self,election: str,jurisdiction: str) -> dict:
         election_id = db.name_to_id(self.session, "Election", election)
         jurisdiction_id = db.name_to_id(self.session, "ReportingUnit", jurisdiction)
 
@@ -1670,12 +1685,23 @@ class Analyzer:
 
         return election_report
 
+    def export_nist_v1(
+        self,
+        election: str,
+        jurisdiction: str,
+    ) -> str:
+        """exports NIST v1 json string"""
+        json_string = json.dumps(self.export_nist_v1_json(election, jurisdiction))
+        return json_string
+
+
     def export_nist(
         self,
         election: str,
         jurisdiction: str,
         major_subdivision: Optional[str] = None,
     ) -> str:
+        """exports NIST v2 xml string"""
         xml_string = et.tostring(
             nist.nist_v2_xml_export_tree(
                 self.session,
