@@ -1517,7 +1517,7 @@ class Analyzer:
         html, png, jpeg, webp, svg, pdf, and eps. Note that some filetypes may need plotly-orca
         installed as well."""
         jurisdiction_id = db.name_to_id(self.session, "ReportingUnit", jurisdiction)
-        subdivision_type_id, _ = db.get_jurisdiction_hierarchy(
+        subdivision_type_id, other_subdivision_type = db.get_jurisdiction_hierarchy(
             self.session, jurisdiction_id
         )
         h_election_id = db.name_to_id(self.session, "Election", h_election)
@@ -1534,6 +1534,7 @@ class Analyzer:
             self.session,
             jurisdiction_id,
             subdivision_type_id,
+            other_subdivision_type,
             h_election_id,
             h_count_item_type,
             h_count,
@@ -1564,7 +1565,7 @@ class Analyzer:
         jurisdiction_id = db.name_to_id(self.session, "ReportingUnit", jurisdiction)
         # for now, bar charts can only handle jurisdictions where county is one level
         # down from the jurisdiction
-        subdivision_type_id, _ = db.get_jurisdiction_hierarchy(
+        subdivision_type_id, other_subdivision_type = db.get_jurisdiction_hierarchy(
             self.session, jurisdiction_id
         )
         # bar chart always at one level below top reporting unit
@@ -1572,6 +1573,7 @@ class Analyzer:
             self.session,
             jurisdiction_id,
             subdivision_type_id,
+            other_subdivision_type,
             contest_type,
             contest,
             election_id,
@@ -1605,7 +1607,7 @@ class Analyzer:
         """contest_type is one of state, congressional, state-senate, state-house"""
         election_id = db.name_to_id(self.session, "Election", election)
         jurisdiction_id = db.name_to_id(self.session, "ReportingUnit", jurisdiction)
-        subdivision_type_id, _ = db.get_jurisdiction_hierarchy(
+        subdivision_type_id, other_subdivision_type = db.get_jurisdiction_hierarchy(
             self.session, jurisdiction_id
         )
         # bar chart always at one level below top reporting unit
@@ -1613,6 +1615,7 @@ class Analyzer:
             self.session,
             jurisdiction_id,
             subdivision_type_id,
+            other_subdivision_type,
             None,
             contest,
             election_id,

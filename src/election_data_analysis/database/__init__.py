@@ -1083,45 +1083,63 @@ def get_jurisdiction_hierarchy(
     return subdivision_type_id, other_subdiv_type
 
 
-def get_candidate_votecounts(
-    session: Session, election_id: int, top_ru_id: int, subdivision_type_id: int
+def unsummed_vote_counts_with_rollup_subdivision_id(
+    session: Session, election_id: int, jurisdiction_id: int,
+        subdivision_type_id: int, other_subdivision_type: str,
 ) -> pd.DataFrame:
-    # TODO pass also sudivision_othertype so that this query will handle nonstandard subdivisions
+    """Returns all vote counts for given election and jurisdiction, along with
+    the id of the subdivision (e.g. county) containing the reporting unit (e.g., precinct)
+     attached to each vote count.
+    """
     connection = session.bind.raw_connection()
     cursor = connection.cursor()
     q = sql.SQL(
         """
-        WITH RECURSIVE unit_hierarchy AS (
+        WITH RECURSIVE nesting_hierarchy AS (
             SELECT  c.*
             FROM    "ComposingReportingUnitJoin" c
             WHERE   "ParentReportingUnit_Id" = %s
             UNION
             SELECT  c.*
-            FROM    unit_hierarchy h
+            FROM    nesting_hierarchy h
                     JOIN "ComposingReportingUnitJoin" c ON h."ChildReportingUnit_Id" = c."ParentReportingUnit_Id"
                     JOIN "ReportingUnit" ru ON c."ParentReportingUnit_Id" = ru."Id"
-            WHERE   ru."ReportingUnitType_Id" = %s  # TODO and ru."OtherReportingUnitType
+            WHERE   ru."ReportingUnitType_Id" = %s  AND ru."OtherReportingUnitType" = %s
         )
-        , unit_hierarchy_named AS (
-            SELECT  DISTINCT c."ParentReportingUnit_Id", c."ChildReportingUnit_Id", 
-                    pru."Name" AS "ParentName", pru."ReportingUnitType_Id" AS "ParentReportingUnitType_Id",
-                    cru."Name" AS "ChildName", cru."ReportingUnitType_Id" AS "ChildReportingUnitType_Id"
-            FROM    unit_hierarchy c
+        , nesting_hierarchy_named AS (
+            SELECT  DISTINCT 
+                    c."ParentReportingUnit_Id", 
+                    c."ChildReportingUnit_Id", 
+                    pru."Name" AS "ParentName", 
+                    pru."ReportingUnitType_Id" AS "ParentReportingUnitType_Id",
+                    pru."OtherReportingUnitType" AS "ParentOtherReportingUnitType",
+                    cru."Name" AS "ChildName", 
+                    cru."ReportingUnitType_Id" AS "ChildReportingUnitType_Id",
+                    cru."OtherReportingUnitType" AS "ChildOtherReportingUnitType"
+            FROM    nesting_hierarchy c
                     JOIN "ReportingUnit" pru ON c."ParentReportingUnit_Id" = pru."Id"
                     JOIN "ReportingUnit" cru ON c."ChildReportingUnit_Id" = cru."Id"
         )
             SELECT  vc."Id" AS "VoteCount_Id", "Count", "CountItemType_Id",
                     vc."ReportingUnit_Id", "Contest_Id", "Selection_Id",
                     vc."Election_Id", IntermediateRU."ParentReportingUnit_Id",
-                    IntermediateRU."ChildName" AS "Name", IntermediateRU."ChildReportingUnitType_Id" AS "ReportingUnitType_Id",
-                    IntermediateRU."ParentName" AS "ParentName", IntermediateRU."ParentReportingUnitType_Id" AS "ParentReportingUnitType_Id",
+                    IntermediateRU."ChildName" AS "Name", 
+                    IntermediateRU."ChildReportingUnitType_Id" AS "ReportingUnitType_Id",
+                    IntermediateRU."ChildOtherReportingUnitType" AS "OtherReportingUnitType",
+                    IntermediateRU."ParentName" AS "ParentName", 
+                    IntermediateRU."ParentReportingUnitType_Id" AS "ParentReportingUnitType_Id",
+                    IntermediateRU."ParentOtherReportingUnitType" AS "ParentOtherReportingUnitType",
                     CIT."Txt" AS "CountItemType", C."Name" AS "Contest",
-                    Cand."BallotName" AS "Selection", "ElectionDistrict_Id", Cand."Id" AS "Candidate_Id", "contest_type",
-                    EDRUT."Txt" AS "contest_district_type", p."Name" as Party
-                    FROM unit_hierarchy_named IntermediateRU
+                    Cand."BallotName" AS "Selection", "ElectionDistrict_Id", 
+                    Cand."Id" AS "Candidate_Id", 
+                    "contest_type",
+                    EDRUT."Txt" AS "contest_district_type", 
+                    ED."OtherReportingUnitType" AS "contest_district_othertype",
+                    p."Name" as Party
+                    FROM nesting_hierarchy_named IntermediateRU
                     JOIN "VoteCount" vc ON IntermediateRU."ChildReportingUnit_Id" = vc."ReportingUnit_Id"
                         AND IntermediateRU."ParentReportingUnitType_Id" = %s 
-                        # TODO AND IntermediateRU."OtherReportingUnitType" = %s for the right s
+                        AND IntermediateRU."ParentOtherReportingUnitType" = %s
                         AND vc."Election_Id" = %s
                     JOIN "Contest" C ON vc."Contest_Id" = C."Id" AND C.contest_type = 'Candidate'
                     JOIN "CandidateSelection" CS ON CS."Id" = vc."Selection_Id"
@@ -1135,7 +1153,12 @@ def get_candidate_votecounts(
     """
     )
     cursor.execute(
-        q, [top_ru_id, subdivision_type_id, subdivision_type_id, election_id] # TODO and subdivision othertype
+        q, [
+            jurisdiction_id,
+            subdivision_type_id, other_subdivision_type,
+            subdivision_type_id, other_subdivision_type,
+            election_id
+        ]
     )
     result = cursor.fetchall()
     result_df = pd.DataFrame(result)
@@ -1150,8 +1173,10 @@ def get_candidate_votecounts(
         "ParentReportingUnit_Id",
         "Name",
         "ReportingUnitType_Id",
+        "ReportingUnitOtherType",
         "ParentName",
         "ParentReportingUnitType_Id",
+        "ParentOtherReportingUnitType",
         "CountItemType",
         "Contest",
         "Selection",
@@ -1159,6 +1184,7 @@ def get_candidate_votecounts(
         "Candidate_Id",
         "contest_type",
         "contest_district_type",
+        "contest_district_othertype",
         "Party",
     ]
     return result_df
