@@ -108,8 +108,8 @@ def run2(
 
     err = None
     if not test_dir:
-        # set the test_dir to the directory containing this file
-        test_dir = Path(__file__).parent.absolute()
+        # set the test_dir to the results-testing subdirectory of the directory containing this file
+        test_dir = os.path.join(Path(__file__).parent.absolute(), "specific_result_file_tests")
 
     # name the db
     if dbname is None:

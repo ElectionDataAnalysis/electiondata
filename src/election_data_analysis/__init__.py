@@ -304,14 +304,14 @@ class SingleDataLoader:
 
 
 class DataLoader:
-    def __new__(cls):
+    def __new__(cls, param_file="run_time.ini"):
         """Checks if parameter file exists and is correct. If not, does
         not create DataLoader object."""
 
         d, err = ui.get_parameters(
             required_keys=multi_data_loader_pars,
             optional_keys=optional_mdl_pars,
-            param_file="run_time.ini",
+            param_file=param_file,
             header="election_data_analysis",
         )
         if err:
@@ -320,12 +320,12 @@ class DataLoader:
 
         return super().__new__(cls)
 
-    def __init__(self):
+    def __init__(self, param_file="run_time.ini"):
         # grab parameters
         self.d, self.parameter_err = ui.get_parameters(
             required_keys=multi_data_loader_pars,
             optional_keys=optional_mdl_pars,
-            param_file="run_time.ini",
+            param_file=param_file,
             header="election_data_analysis",
         )
 
@@ -1291,7 +1291,7 @@ class JurisdictionPrepper:
     def make_test_file(self, election: str):
         juris_true_name = self.d["name"]
         juris_abbr = self.d["abbreviated_name"]
-        tests_dir = os.path.join(Path(self.d["mungers_dir"]).parents[1], "tests")
+        tests_dir = os.path.join(Path(self.d["mungers_dir"]).parents[1], "tests", "specific_result_file_tests")
         juris_test_dir = os.path.join(tests_dir, self.d["system_name"])
         sample_test_dir = os.path.join(tests_dir, "20xx_test_templates")
         election_str = jm.system_name_from_true_name(election)
@@ -1306,7 +1306,7 @@ class JurisdictionPrepper:
                 f'single_county = "North Carolina;Bertie County"': f'single_county = "{juris_true_name}; "',
             }
             create_from_template(
-                os.path.join(sample_test_dir, "donttest_template_2020-General.py"),
+                os.path.join(sample_test_dir, f"donttest_template_{election_str}.py"),
                 new_test_file,
                 test_replace,
             )
@@ -2378,7 +2378,7 @@ def load_or_reload_all(
         # if no test directory given, use tests from repo
         if not test_dir:
             test_dir = os.path.join(
-                Path(dataloader.d["repository_content_root"]).parent, "tests"
+                Path(dataloader.d["repository_content_root"]).parent, "tests", "specific_result_file_tests",
             )
         # get relevant election-jurisdiction pairs
         ej_pairs = ui.election_juris_list(
