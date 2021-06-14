@@ -223,7 +223,9 @@ Texas;Angelina County	county
 Texas;Gregg County	county
 Texas;Harrison County	county
 ```
-Counties must be added by hand. (NB: in some states, the word 'county' is not used. For instance, Louisiana's major subdivisions are called 'parish'.)
+Counties must be added by hand. 
+
+NB: in some jurisdictions, the major subdivision type is not 'county. For instance, Louisiana's major subdivisions are called 'parish'. In the `election_data_analysis.analyze` module, several routines roll up results to the major subdivision -- usually counties. The ReportingUnitType of the major subdivision is read from the file `src/jurisdictions/000_major_subjurisdiction_types.txt` if possible; if that file is missing, or does not provide a subdivision type for the particular jurisdiction in question, the system will try to deduce the major subdivision type from the database.
 
 The system assumes that internal database names of ReportingUnits carry information about the nesting of the basic ReportingUnits (e.g., counties, towns, wards, etc., but not congressional districts) via semicolons. For example: `
  * `Pennsylvania;Philadelphia;Ward 8;Division 6` is a precinct in 
