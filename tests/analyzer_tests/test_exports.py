@@ -5,11 +5,10 @@ from pathlib import Path
 import datetime
 
 
-def test_nist_v2_and_v1():
+def test_nist_v2_and_v1(runtime):
     """Tests whether length of nist v2 export string matches the standard.
     (Would be better to test that xml is equivalent, but that's harder.)"""
     tests_path = Path(__file__).parents[1].absolute()
-    runtime = os.path.join(tests_path, "run_time.ini")
     db_dump = os.path.join(tests_path, "000_data_for_pytest", "postgres_test_db_dump.tar")
     nist_v2_reference_file = os.path.join(tests_path, "000_data_for_pytest","nist_v2_wy20g.xml")
     nist_v1_reference_file = os.path.join(tests_path, "000_data_for_pytest","nist_v1_wy20g.json")

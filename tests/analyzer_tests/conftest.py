@@ -1,8 +1,12 @@
 import pytest
+import os
+from pathlib import Path
 
 
 def pytest_addoption(parser):
-    parser.addoption("--runtime", action="store", default="./run_time.ini")
+    parser.addoption("--runtime", action="store", default=os.path.join(
+        Path(__file__).parents[1].absolute(), "run_time.ini"
+    ))
 
 
 def pytest_generate_tests(metafunc):
