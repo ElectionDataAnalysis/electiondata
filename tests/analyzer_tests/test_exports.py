@@ -10,7 +10,7 @@ def test_nist_v2():
     (Would be better to test that xml is equivalent, but that's harder.)"""
     data_path = Path(__file__).parents[1].absolute()
     db_dump = os.path.join(data_path,"postgres_test_db_dump.tar")
-    nist_v2_reference_file = os.path.join(data_path,"wy20g.xml")
+    nist_v2_reference_file = os.path.join(data_path,"nist_ v2_wy20g.xml")
 
     ts = datetime.datetime.now().strftime("%m%d_%H%M")
     test_db_name = f"pytest_{ts}"
