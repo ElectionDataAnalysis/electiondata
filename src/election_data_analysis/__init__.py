@@ -305,7 +305,7 @@ class SingleDataLoader:
 
 
 class DataLoader:
-    def __new__(cls, param_file="run_time.ini"):
+    def __new__(cls, param_file: str ="run_time.ini", dbname: Optional[str] = None):
         """Checks if parameter file exists and is correct. If not, does
         not create DataLoader object."""
 
@@ -321,7 +321,7 @@ class DataLoader:
 
         return super().__new__(cls)
 
-    def __init__(self, param_file="run_time.ini"):
+    def __init__(self, param_file="run_time.ini", dbname: Optional[str] = None):
         # grab parameters
         self.d, self.parameter_err = ui.get_parameters(
             required_keys=multi_data_loader_pars,
@@ -339,17 +339,21 @@ class DataLoader:
         )
 
         # create db if it does not already exist and have right tables
-        err = db.create_db_if_not_ok()
+        err = db.create_db_if_not_ok(db_param_file=param_file, dbname=dbname)
 
         # connect to db
         self.engine = None  # will be set in connect_to_db
         self.session = None  # will be set in connect_to_db
-        self.connect_to_db(err=err)
+        self.connect_to_db(err=err, dbname=dbname, db_param_file=param_file)
 
-    def connect_to_db(self, dbname: Optional[str] = None, err: Optional[dict] = None):
+    def connect_to_db(
+            self, dbname: Optional[str] = None,
+            err: Optional[dict] = None,
+            db_param_file: str = "run_time.ini"
+    ):
         new_err = None
         try:
-            self.engine, new_err = db.sql_alchemy_connect(dbname=dbname)
+            self.engine, new_err = db.sql_alchemy_connect(param_file=db_param_file, dbname=dbname)
             Session = sessionmaker(bind=self.engine)
             self.session = Session()
         except Exception as e:
@@ -364,11 +368,11 @@ class DataLoader:
         else:
             return
 
-    def change_db(self, new_db_name: str):
+    def change_db(self, new_db_name: str, db_param_file: str = "run_time.ini"):
         """Changes the database into which the data is loaded, including reconnecting"""
         self.d["dbname"] = new_db_name
         self.session.close()
-        self.connect_to_db(dbname=new_db_name)
+        self.connect_to_db(dbname=new_db_name, db_param_file=db_param_file)
         db.create_db_if_not_ok(dbname=new_db_name)
         return
 
@@ -749,12 +753,13 @@ class DataLoader:
                 )
         return err
 
-    def load_data_from_db_dump(self, dbname, dump_file: str) -> Optional[str]:
+    def load_data_from_db_dump(self, dbname, dump_file: str, param_file="run_time.ini") -> Optional[str]:
         """Create a database from a file dumped from another database (but only if db does not
         already exist). Return error string"""
         connection = self.session.bind.raw_connection()
         cursor = connection.cursor()
         err_str = db.create_database(connection, cursor, dbname=dbname, delete_existing=False)
+
         cursor.close()
         connection.close()
 

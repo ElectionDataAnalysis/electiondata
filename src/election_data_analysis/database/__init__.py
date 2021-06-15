@@ -152,6 +152,7 @@ def create_database(
     dbname: str,
     delete_existing: bool = True,
 ) -> Optional[str]:
+    """Creates blank database"""
     con.set_isolation_level(ISOLATION_LEVEL_AUTOCOMMIT)
 
     if delete_existing:
@@ -175,6 +176,7 @@ def restore_to_db(dbname: str, dump_file: str, url: sqlalchemy.engine.url.URL) -
     to existing database dbname"""
     # TODO does this work if a password is required?
     err_str = None
+    # escape any spaces in dump_file path
     cmd = f"pg_restore " \
           f" -h {url.host} " \
           f" -U {url.username} " \
@@ -250,7 +252,7 @@ def append_to_composing_reporting_unit_join(
 
 
 def test_connection(
-    paramfile: str = "run_time.ini", dbname: str = None
+    db_param_file: str = "run_time.ini", dbname: str = None
 ) -> (bool, Optional[dict]):
     """Check for DB and relevant tables; if they don't exist, return
     error message"""
@@ -260,7 +262,7 @@ def test_connection(
 
     try:
         params = ui.get_parameters(
-            required_keys=db_pars, param_file=paramfile, header="postgresql"
+            required_keys=db_pars, param_file=db_param_file, header="postgresql"
         )[0]
     except MissingSectionHeaderError:
         return {"message": "database.ini file not found suggested location."}
@@ -284,7 +286,7 @@ def test_connection(
 
     # Look for tables
     try:
-        engine, new_err = sql_alchemy_connect(paramfile)
+        engine, new_err = sql_alchemy_connect(db_param_file)
         if new_err:
             err = ui.consolidate_errors([err, new_err])
             engine.dispose()
@@ -316,14 +318,14 @@ def test_connection(
 
 
 def create_or_reset_db(
-    param_file: str = "run_time.ini",
+    db_param_file: str = "run_time.ini",
     dbname: Optional[str] = None,
 ) -> Optional[dict]:
     """if no dbname is given, name will be taken from param_file"""
 
     project_root = Path(__file__).absolute().parents[1]
     params, err = ui.get_parameters(
-        required_keys=db_pars, param_file=param_file, header="postgresql"
+        required_keys=db_pars, param_file=db_param_file, header="postgresql"
     )
     if err:
         return err
@@ -350,7 +352,7 @@ def create_or_reset_db(
     # if dbname already exists.
     if dbname in db_df.datname.unique():
         # reset DB to blank
-        eng_new, err = sql_alchemy_connect(param_file, dbname=dbname)
+        eng_new, err = sql_alchemy_connect(db_param_file,dbname=dbname)
         Session_new = sqlalchemy.orm.sessionmaker(bind=eng_new)
         sess_new = Session_new()
         db_cdf.reset_db(
@@ -359,7 +361,7 @@ def create_or_reset_db(
         )
     else:
         create_database(con, cur, dbname)
-        eng_new, err = sql_alchemy_connect(param_file, dbname=dbname)
+        eng_new, err = sql_alchemy_connect(db_param_file,dbname=dbname)
         Session_new = sqlalchemy.orm.sessionmaker(bind=eng_new)
         sess_new = Session_new()
 
@@ -403,11 +405,11 @@ def sql_alchemy_connect(
     return engine, err
 
 
-def create_db_if_not_ok(dbname: Optional[str] = None) -> Optional[dict]:
+def create_db_if_not_ok(dbname: Optional[str] = None, db_param_file: str = "run_time.ini") -> Optional[dict]:
     # create db if it does not already exist and have right tables
-    ok, err = test_connection(dbname=dbname)
+    ok, err = test_connection(dbname=dbname, db_param_file=db_param_file)
     if not ok:
-        create_or_reset_db(dbname=dbname)
+        create_or_reset_db(dbname=dbname,db_param_file=db_param_file)
     return err
 
 
