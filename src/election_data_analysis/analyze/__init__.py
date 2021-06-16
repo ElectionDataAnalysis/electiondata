@@ -1,6 +1,6 @@
 import os.path
 from typing import Optional, List
-
+from sqlalchemy.orm import Session
 import pandas as pd
 import inspect
 from election_data_analysis import user_interface as ui
@@ -138,6 +138,7 @@ def create_scatter(
     session,
     jurisdiction_id,
     subdivision_type_id,
+    other_subdivision_type,
     h_election_id,
     h_category,
     h_count,
@@ -160,6 +161,7 @@ def create_scatter(
         session,
         jurisdiction_id,
         subdivision_type_id,
+        other_subdivision_type,
         h_election_id,
         h_category,
         h_count,
@@ -170,6 +172,7 @@ def create_scatter(
         session,
         jurisdiction_id,
         subdivision_type_id,
+        other_subdivision_type,
         v_election_id,
         v_category,
         v_count,
@@ -291,6 +294,7 @@ def get_data_for_scatter(
     session,
     jurisdiction_id,
     subdivision_type_id,
+    other_subdivision_type,
     election_id,
     count_item_type,
     filter_str,
@@ -309,6 +313,7 @@ def get_data_for_scatter(
             session,
             jurisdiction_id,
             subdivision_type_id,
+            other_subdivision_type,
             election_id,
             count_item_type,
             filter_str,
@@ -364,17 +369,18 @@ def get_census_data(
 
 
 def get_votecount_data(
-    session,
-    jurisdiction_id,
-    subdivision_type_id,
-    election_id,
-    count_item_type,
-    filter_str,
-    count_type,
-    is_runoff,
+    session: Session,
+    jurisdiction_id: int,
+    subdivision_type_id: int,
+    other_subdivision_type: str,
+    election_id: int,
+    count_item_type: str,
+    filter_str: str,
+    count_type: str,
+    is_runoff: bool,
 ):
-    unsummed = db.get_candidate_votecounts(
-        session, election_id, jurisdiction_id, subdivision_type_id
+    unsummed = db.unsummed_vote_counts_with_rollup_subdivision_id(
+        session, election_id, jurisdiction_id, subdivision_type_id, other_subdivision_type,
     )
 
     # limit to relevant data - runoff
@@ -442,20 +448,21 @@ def get_votecount_data(
 
 
 def create_bar(
-    session,
-    top_ru_id,
-    subdivision_type_id,
-    contest_type,
-    contest,
-    election_id,
-    for_export,
+    session: Session,
+    top_ru_id: int,
+    subdivision_type_id: int,
+    other_subdivision_type: str,
+    contest_type: str,
+    contest: str,
+    election_id: int,
+    for_export: bool,
 ):
 
     connection = session.bind.raw_connection()
     cursor = connection.cursor()
 
-    unsummed = db.get_candidate_votecounts(
-        session, election_id, top_ru_id, subdivision_type_id
+    unsummed = db.unsummed_vote_counts_with_rollup_subdivision_id(
+        session, election_id, top_ru_id, subdivision_type_id, other_subdivision_type
     )
 
     if contest_type:

@@ -4,12 +4,13 @@
 import psycopg2
 import sqlalchemy
 import sqlalchemy.orm
+from sqlalchemy.orm import Session
 import io
 import csv
 import inspect
 from psycopg2.extensions import ISOLATION_LEVEL_AUTOCOMMIT
 from pathlib import Path
-from sqlalchemy.orm import Session
+
 
 # import the error handling libraries for psycopg2
 from psycopg2 import OperationalError, errorcodes, errors
@@ -30,7 +31,7 @@ from typing import Optional, List, Dict, Any, Iterable, Set
 from election_data_analysis import user_interface as ui
 
 # these form the universe of jurisdictions that can be displayed via the display_jurisdictions function.
-states_and_such = """Alabama
+array_of_jurisdictions = """Alabama
 Alaska
 Arizona
 Arkansas
@@ -89,15 +90,17 @@ US Virgin Islands"""
 
 db_pars = ["host", "port", "dbname", "user", "password"]
 
-contest_types_model = [
-    "state",
-    "congressional",
-    "judicial",
-    "state-house",
-    "state-senate",
-    "city",
-    "territory",
-]
+contest_type_mappings = {
+    "congressional": "Congressional",
+    "state": "Statewide",
+    "state-house": "State House",
+    "state-senate": "State Senate",
+    "city": "Citywide",
+    "ward": "Ward",
+    "territory": "Territory-wide"
+}
+
+contest_types_model = contest_type_mappings.keys()
 
 
 def get_database_names(con: psycopg2.extensions.connection):
@@ -146,28 +149,44 @@ def remove_database(params: dict) -> Optional[dict]:
 def create_database(
     con: psycopg2.extensions.connection,
     cur: psycopg2.extensions.cursor,
-    db_name: str,
-):
+    dbname: str,
+    delete_existing: bool = True,
+) -> Optional[str]:
+    """Creates blank database"""
     con.set_isolation_level(ISOLATION_LEVEL_AUTOCOMMIT)
-    q = sql.SQL("DROP DATABASE IF EXISTS {db_name}").format(
-        db_name=sql.Identifier(db_name)
-    )
-    cur.execute(q)
-    con.commit()
-    if cur.description:
-        out1 = cur.fetchall()
-    else:
-        out1 = None
 
-    q = sql.SQL("CREATE DATABASE {db_name}").format(db_name=sql.Identifier(db_name))
-    cur.execute(q)
-    con.commit()
-    if cur.description:
-        out2 = cur.fetchall()
-    else:
-        out2 = None
-    return out1, out2
+    if delete_existing:
+        q = sql.SQL("DROP DATABASE IF EXISTS {db_name}").format(
+            db_name=sql.Identifier(dbname)
+        )
+        cur.execute(q)
+        con.commit()
+    try:
+        q = sql.SQL("CREATE DATABASE {db_name}").format(db_name=sql.Identifier(dbname))
+        cur.execute(q)
+        con.commit()
+        err_str = None
+    except Exception as exc:
+        err_str = f"Could not create database {dbname}: {exc}"
+    return err_str
 
+
+def restore_to_db(dbname: str, dump_file: str, url: sqlalchemy.engine.url.URL) -> str:
+    """Restores structure and data in <dump_file> (assumed tar format)
+    to existing database dbname"""
+    # TODO does this work if a password is required?
+    err_str = None
+    # escape any spaces in dump_file path
+    cmd = f"pg_restore " \
+          f" -h {url.host} " \
+          f" -U {url.username} " \
+          f" -p {url.port}" \
+          f" -d {dbname} -F t {dump_file}"
+    try:
+        os.system(cmd)
+    except Exception as exc:
+        err_str = f"DB restore failed: {exc}"
+    return err_str
 
 # TODO move to more appropriate module?
 def append_to_composing_reporting_unit_join(
@@ -233,7 +252,7 @@ def append_to_composing_reporting_unit_join(
 
 
 def test_connection(
-    paramfile: str = "run_time.ini", dbname: str = None
+    db_param_file: str = "run_time.ini", dbname: str = None
 ) -> (bool, Optional[dict]):
     """Check for DB and relevant tables; if they don't exist, return
     error message"""
@@ -243,7 +262,7 @@ def test_connection(
 
     try:
         params = ui.get_parameters(
-            required_keys=db_pars, param_file=paramfile, header="postgresql"
+            required_keys=db_pars, param_file=db_param_file, header="postgresql"
         )[0]
     except MissingSectionHeaderError:
         return {"message": "database.ini file not found suggested location."}
@@ -267,7 +286,7 @@ def test_connection(
 
     # Look for tables
     try:
-        engine, new_err = sql_alchemy_connect(paramfile)
+        engine, new_err = sql_alchemy_connect(db_param_file)
         if new_err:
             err = ui.consolidate_errors([err, new_err])
             engine.dispose()
@@ -299,14 +318,14 @@ def test_connection(
 
 
 def create_or_reset_db(
-    param_file: str = "run_time.ini",
+    db_param_file: str = "run_time.ini",
     dbname: Optional[str] = None,
 ) -> Optional[dict]:
     """if no dbname is given, name will be taken from param_file"""
 
     project_root = Path(__file__).absolute().parents[1]
     params, err = ui.get_parameters(
-        required_keys=db_pars, param_file=param_file, header="postgresql"
+        required_keys=db_pars, param_file=db_param_file, header="postgresql"
     )
     if err:
         return err
@@ -333,7 +352,7 @@ def create_or_reset_db(
     # if dbname already exists.
     if dbname in db_df.datname.unique():
         # reset DB to blank
-        eng_new, err = sql_alchemy_connect(param_file, dbname=dbname)
+        eng_new, err = sql_alchemy_connect(db_param_file,dbname=dbname)
         Session_new = sqlalchemy.orm.sessionmaker(bind=eng_new)
         sess_new = Session_new()
         db_cdf.reset_db(
@@ -342,7 +361,7 @@ def create_or_reset_db(
         )
     else:
         create_database(con, cur, dbname)
-        eng_new, err = sql_alchemy_connect(param_file, dbname=dbname)
+        eng_new, err = sql_alchemy_connect(db_param_file,dbname=dbname)
         Session_new = sqlalchemy.orm.sessionmaker(bind=eng_new)
         sess_new = Session_new()
 
@@ -386,11 +405,11 @@ def sql_alchemy_connect(
     return engine, err
 
 
-def create_db_if_not_ok(dbname: Optional[str] = None) -> Optional[dict]:
+def create_db_if_not_ok(dbname: Optional[str] = None, db_param_file: str = "run_time.ini") -> Optional[dict]:
     # create db if it does not already exist and have right tables
-    ok, err = test_connection(dbname=dbname)
+    ok, err = test_connection(dbname=dbname, db_param_file=db_param_file)
     if not ok:
-        create_or_reset_db(dbname=dbname)
+        create_or_reset_db(dbname=dbname,db_param_file=db_param_file)
     return err
 
 
@@ -957,7 +976,8 @@ def remove_vote_counts(connection, cursor, id: int) -> str:
 
 
 def get_relevant_election(session: Session, filters: List[str]) -> pd.DataFrame:
-    """Returns dataframe of all records from Election table with a name in the list <filters>"""
+    """Returns dataframe of all records from Election table
+    corresponding to a reporting unit in the list <filters>"""
     unit_df = pd.read_sql_table("ReportingUnit", session.bind, index_col="Id")
     unit_df = unit_df[unit_df["Name"].isin(filters)]
     election_ids = pd.read_sql_table("_datafile", session.bind, index_col="Id").merge(
@@ -970,7 +990,7 @@ def get_relevant_election(session: Session, filters: List[str]) -> pd.DataFrame:
 
 def get_relevant_contests(session: Session, filters: List[str]) -> pd.DataFrame:
     """expects the filters list to have an election and jurisdiction.
-    finds all contests for that combination."""
+    finds all contests for that combination. Returns a dataframe sorted by contest name"""
     election_id = list_to_id(session, "Election", filters)
     reporting_unit_id = list_to_id(session, "ReportingUnit", filters)
     result_df = read_vote_count(
@@ -980,17 +1000,42 @@ def get_relevant_contests(session: Session, filters: List[str]) -> pd.DataFrame:
         ["ReportingUnitName", "ContestName", "unit_type"],
         ["parent", "name", "type"],
     )
+    # sort by contest name
+    result_df.sort_values(by="name", inplace=True)
     return result_df
 
 
-def get_major_subdiv_type(session: Session, jurisdiction: str) -> Optional[str]:
+def get_major_subdiv_type(session: Session, jurisdiction: str, file_path: Optional[str] = None) -> Optional[str]:
+    """Returns the type of the major subdivision, if found. Tries first from <file_path> (if given);
+    if that fails, or no file_path given, tries from database. If nothing found, returns None"""
+    # if file is given, try to get the major subdivision type from the file
+    if file_path:
+        subdiv_from_file = get_major_subdiv_from_file(file_path, jurisdiction)
+        if subdiv_from_file:
+            return subdiv_from_file
+    # if not found in file, calculate major subdivision type from the db
     jurisdiction_id = name_to_id(session, "ReportingUnit", jurisdiction)
     subdiv_id, other_subdiv_type = get_jurisdiction_hierarchy(session, jurisdiction_id)
     if other_subdiv_type == "":
         subdiv_type = name_from_id(session, "ReportingUnitType", subdiv_id)
     else:
         subdiv_type = other_subdiv_type
+    return subdiv_type
 
+
+def get_major_subdiv_from_file(f_path: str, jurisdiction: str) -> Optional[str]:
+    """return major subdivision of <jurisdiction> from file <f_path> with columns
+    jurisdiction, major_sub_jurisdiction_type.
+     If anything goes wrong, return None"""
+    try:
+        df = pd.read_csv(f_path, sep="\t")
+        mask = df.jurisdiction == jurisdiction
+        if mask.any():
+            subdiv_type = df.loc[mask, "major_sub_jurisdiction_type"].unique()[0]
+        else:
+            subdiv_type = None
+    except:
+        subdiv_type = None
     return subdiv_type
 
 
@@ -1000,7 +1045,7 @@ def get_jurisdiction_hierarchy(
     """get reporting unit type id of reporting unit one level down from jurisdiction.
     Omit particular types that are contest types, not true reporting unit types
     TODO: handle case where type is non-standard and some other smaller reporting units are also
-    also non-standard
+     also non-standard
     """
     q = sql.SQL(
         """
@@ -1019,11 +1064,12 @@ def get_jurisdiction_hierarchy(
                 AND "ParentReportingUnit_Id" = %s
         UNION
         -- This union accommodates Alaska without breaking other states
+        -- because of LIMIT 1 below, results here will show up only if nothing is found above
         SELECT  rut."Id", ru."OtherReportingUnitType", 2 AS ordering
         FROM    "ComposingReportingUnitJoin" cruj
                 JOIN "ReportingUnit" ru on cruj."ChildReportingUnit_Id" = ru."Id"
                 JOIN "ReportingUnitType" rut on ru."ReportingUnitType_Id" = rut."Id"
-        WHERE   rut."Txt" not in (    
+        WHERE   rut."Txt" not in (    -- state-house is missing, since Alaska's subdiv is state-house
                     'state',
                     'congressional',
                     'judicial',
@@ -1043,7 +1089,7 @@ def get_jurisdiction_hierarchy(
             q,
             [
                 jurisdiction_id,
-                tuple(contest_types_model),
+                tuple(contest_types_model),  # list of election-district reporting-unit types
                 jurisdiction_id,
                 jurisdiction_id,
             ],
@@ -1057,43 +1103,64 @@ def get_jurisdiction_hierarchy(
     return subdivision_type_id, other_subdiv_type
 
 
-def get_candidate_votecounts(
-    session: Session, election_id: int, top_ru_id: int, subdivision_type_id: int
+def unsummed_vote_counts_with_rollup_subdivision_id(
+    session: Session, election_id: int, jurisdiction_id: int,
+        subdivision_type_id: int, other_subdivision_type: str,
 ) -> pd.DataFrame:
+    """Returns all vote counts for given election and jurisdiction, along with
+    the id of the subdivision (e.g. county) containing the reporting unit (e.g., precinct)
+     attached to each vote count.
+    """
     connection = session.bind.raw_connection()
     cursor = connection.cursor()
     q = sql.SQL(
         """
-        WITH RECURSIVE unit_hierarchy AS (
+        WITH RECURSIVE nesting_hierarchy AS (
             SELECT  c.*
             FROM    "ComposingReportingUnitJoin" c
             WHERE   "ParentReportingUnit_Id" = %s
             UNION
             SELECT  c.*
-            FROM    unit_hierarchy h
+            FROM    nesting_hierarchy h
                     JOIN "ComposingReportingUnitJoin" c ON h."ChildReportingUnit_Id" = c."ParentReportingUnit_Id"
                     JOIN "ReportingUnit" ru ON c."ParentReportingUnit_Id" = ru."Id"
-            WHERE   ru."ReportingUnitType_Id" = %s
+            WHERE   ru."ReportingUnitType_Id" = %s  AND ru."OtherReportingUnitType" = %s
         )
-        , unit_hierarchy_named AS (
-            SELECT  DISTINCT c."ParentReportingUnit_Id", c."ChildReportingUnit_Id", 
-                    pru."Name" AS "ParentName", pru."ReportingUnitType_Id" AS "ParentReportingUnitType_Id",
-                    cru."Name" AS "ChildName", cru."ReportingUnitType_Id" AS "ChildReportingUnitType_Id"
-            FROM    unit_hierarchy c
+        , nesting_hierarchy_named AS (
+            SELECT  DISTINCT 
+                    c."ParentReportingUnit_Id", 
+                    c."ChildReportingUnit_Id", 
+                    pru."Name" AS "ParentName", 
+                    pru."ReportingUnitType_Id" AS "ParentReportingUnitType_Id",
+                    pru."OtherReportingUnitType" AS "ParentOtherReportingUnitType",
+                    cru."Name" AS "ChildName", 
+                    cru."ReportingUnitType_Id" AS "ChildReportingUnitType_Id",
+                    cru."OtherReportingUnitType" AS "ChildOtherReportingUnitType"
+            FROM    nesting_hierarchy c
                     JOIN "ReportingUnit" pru ON c."ParentReportingUnit_Id" = pru."Id"
                     JOIN "ReportingUnit" cru ON c."ChildReportingUnit_Id" = cru."Id"
         )
             SELECT  vc."Id" AS "VoteCount_Id", "Count", "CountItemType_Id",
                     vc."ReportingUnit_Id", "Contest_Id", "Selection_Id",
                     vc."Election_Id", IntermediateRU."ParentReportingUnit_Id",
-                    IntermediateRU."ChildName" AS "Name", IntermediateRU."ChildReportingUnitType_Id" AS "ReportingUnitType_Id",
-                    IntermediateRU."ParentName" AS "ParentName", IntermediateRU."ParentReportingUnitType_Id" AS "ParentReportingUnitType_Id",
+                    IntermediateRU."ChildName" AS "Name", 
+                    IntermediateRU."ChildReportingUnitType_Id" AS "ReportingUnitType_Id",
+                    IntermediateRU."ChildOtherReportingUnitType" AS "OtherReportingUnitType",
+                    IntermediateRU."ParentName" AS "ParentName", 
+                    IntermediateRU."ParentReportingUnitType_Id" AS "ParentReportingUnitType_Id",
+                    IntermediateRU."ParentOtherReportingUnitType" AS "ParentOtherReportingUnitType",
                     CIT."Txt" AS "CountItemType", C."Name" AS "Contest",
-                    Cand."BallotName" AS "Selection", "ElectionDistrict_Id", Cand."Id" AS "Candidate_Id", "contest_type",
-                    EDRUT."Txt" AS "contest_district_type", p."Name" as Party
-                    FROM unit_hierarchy_named IntermediateRU
+                    Cand."BallotName" AS "Selection", "ElectionDistrict_Id", 
+                    Cand."Id" AS "Candidate_Id", 
+                    "contest_type",
+                    EDRUT."Txt" AS "contest_district_type", 
+                    ED."OtherReportingUnitType" AS "contest_district_othertype",
+                    p."Name" as Party
+                    FROM nesting_hierarchy_named IntermediateRU
                     JOIN "VoteCount" vc ON IntermediateRU."ChildReportingUnit_Id" = vc."ReportingUnit_Id"
-                        AND IntermediateRU."ParentReportingUnitType_Id" = %s AND vc."Election_Id" = %s
+                        AND IntermediateRU."ParentReportingUnitType_Id" = %s 
+                        AND IntermediateRU."ParentOtherReportingUnitType" = %s
+                        AND vc."Election_Id" = %s
                     JOIN "Contest" C ON vc."Contest_Id" = C."Id" AND C.contest_type = 'Candidate'
                     JOIN "CandidateSelection" CS ON CS."Id" = vc."Selection_Id"
                     JOIN "Candidate" Cand ON CS."Candidate_Id" = Cand."Id"
@@ -1106,7 +1173,12 @@ def get_candidate_votecounts(
     """
     )
     cursor.execute(
-        q, [top_ru_id, subdivision_type_id, subdivision_type_id, election_id]
+        q, [
+            jurisdiction_id,
+            subdivision_type_id, other_subdivision_type,
+            subdivision_type_id, other_subdivision_type,
+            election_id
+        ]
     )
     result = cursor.fetchall()
     result_df = pd.DataFrame(result)
@@ -1121,8 +1193,10 @@ def get_candidate_votecounts(
         "ParentReportingUnit_Id",
         "Name",
         "ReportingUnitType_Id",
+        "ReportingUnitOtherType",
         "ParentName",
         "ParentReportingUnitType_Id",
+        "ParentOtherReportingUnitType",
         "CountItemType",
         "Contest",
         "Selection",
@@ -1130,6 +1204,7 @@ def get_candidate_votecounts(
         "Candidate_Id",
         "contest_type",
         "contest_district_type",
+        "contest_district_othertype",
         "Party",
     ]
     return result_df
@@ -1403,6 +1478,11 @@ def read_vote_count(
     election. But this table is the largest one, so we don't want to use pandas methods
     to read into a DF and then filter. Data returns is determined by <fields> (column names from SQL query);
     the columns in the returned database can be renamed as <aliases>"""
+    # change field list to accommodate "other" type election districts if necessary
+    if "unit_type" in fields:
+        fields.append("OtherReportingUnitType_internal_only")
+        aliases.append("OtherReportingUnitType_internal_only")
+        unit_type_alias = aliases[fields.index("unit_type")]
     q = sql.SQL(
         """
         SELECT  DISTINCT {fields}
@@ -1419,8 +1499,15 @@ def read_vote_count(
                 JOIN (SELECT "Id", "Name" AS "PartyName" FROM "Party") p ON cs."Party_Id" = p."Id"
                 JOIN "CandidateContest" cc ON con."Id" = cc."Id"
                 JOIN (SELECT "Id", "Name" as "OfficeName", "ElectionDistrict_Id" FROM "Office") o on cc."Office_Id" = o."Id"
-                -- this reporting unit info refers to the districts (state house, state senate, etc)
-                JOIN (SELECT "Id", "Name" AS "ReportingUnitName", "ReportingUnitType_Id" FROM "ReportingUnit") ru on o."ElectionDistrict_Id" = ru."Id"
+                -- this reporting unit info refers to the election districts (state house, state senate, etc)
+                JOIN (
+                    SELECT 
+                        "Id", 
+                        "Name" AS "ReportingUnitName", 
+                        "ReportingUnitType_Id", 
+                        "OtherReportingUnitType" AS "OtherReportingUnitType_internal_only" 
+                    FROM "ReportingUnit"
+                    ) ru on o."ElectionDistrict_Id" = ru."Id"
                 JOIN (SELECT "Id", "Txt" AS unit_type FROM "ReportingUnitType") rut on ru."ReportingUnitType_Id" = rut."Id"
                 -- this reporting unit info refers to the geopolitical divisions (county, state, etc)
                 JOIN (SELECT "Id" as "GP_Id", "Name" AS "GPReportingUnitName", "ReportingUnitType_Id" AS "GPReportingUnitType_Id" FROM "ReportingUnit") gpru on vc."ReportingUnit_Id" = gpru."GP_Id"
@@ -1439,6 +1526,11 @@ def read_vote_count(
     cursor.execute(q, [election_id, reporting_unit_id])
     results = cursor.fetchall()
     results_df = pd.DataFrame(results, columns=aliases)
+    # accommodate "other" type election districts
+    if "unit_type" in fields:
+        other_mask = results_df[unit_type_alias] == "other"
+        results_df.loc[other_mask,[unit_type_alias]] = results_df[other_mask]["OtherReportingUnitType_internal_only"]
+        results_df.drop("OtherReportingUnitType_internal_only", axis=1, inplace=True)
     return results_df
 
 
@@ -1552,8 +1644,12 @@ def display_elections(session: Session) -> pd.DataFrame:
 
 
 def display_jurisdictions(session: Session, cols: List[str]) -> pd.DataFrame:
-    """Returns list of jurisdictions that have data in the database AND are listed in
-    the global constant <states_and_such>"""
+    """Returns dataframe of jurisdictions that have data in the database AND are listed in
+    the global constant <array_of_jurisdictions>. First column is the name of the election,
+    Second column is the name of the jurisdiction; third column is a boolean: True if the given
+    election-jurisdiction pair is present in the _datafile table.
+
+    Complexity of the table is due to the need to order all in a particular way."""
     q = sql.SQL(
         """
         WITH states(states) AS (
@@ -1589,7 +1685,7 @@ def display_jurisdictions(session: Session, cols: List[str]) -> pd.DataFrame:
                 ON s."Id" = d."Election_Id" AND s.jurisdiction_id = d."ReportingUnit_Id"
         ORDER BY order_by
     """
-    ).format(states=sql.Literal(states_and_such))
+    ).format(states=sql.Literal(array_of_jurisdictions))
     connection = session.bind.raw_connection()
     cursor = connection.cursor()
     cursor.execute(q)

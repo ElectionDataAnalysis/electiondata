@@ -108,8 +108,8 @@ def run2(
 
     err = None
     if not test_dir:
-        # set the test_dir to the directory containing this file
-        test_dir = Path(__file__).parent.absolute()
+        # set the test_dir to the results-testing subdirectory of the directory containing this file
+        test_dir = os.path.join(Path(__file__).parent.absolute(), "specific_result_file_tests")
 
     # name the db
     if dbname is None:
@@ -172,12 +172,6 @@ def run2(
                 f"Exception during data loading: {exc}",
             )
             return err
-
-        # add any necessary totals
-        for e, j in election_jurisdiction_list:
-            add_err = dl.add_totals_if_missing(e, j)
-            if add_err:
-                err = ui.consolidate_errors([err, add_err])
 
         if ui.fatal_error(err):
             optional_remove(dl, "TestingData")

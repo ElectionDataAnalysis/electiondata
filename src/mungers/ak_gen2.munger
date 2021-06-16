@@ -9,6 +9,6 @@ all_rows=data
 [munge formulas]
 ReportingUnit={<column_0>,^(?:(.*?) - (?:Absentee|Early Voting|Question))+(?:| - [0-9])$}
 CountItemType={<column_0>,^.*(Absentee|Early Voting|Question).*$}
-Party=<column_5>
+Party=<column_3>
 CandidateContest=<column_1>
-Candidate=<column_4>
+Candidate=<column_2>

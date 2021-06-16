@@ -21,6 +21,9 @@ import inspect
 import xml.etree.ElementTree as et
 import json
 import shutil
+import xlrd
+import openpyxl
+from sqlalchemy.orm import Session
 
 # constants
 recognized_encodings = {
@@ -313,12 +316,6 @@ warning_keys = {f"warn-{ek}" for ek in error_keys}
 
 # mapping from internal database reportingunit types to the user-facing contest types
 # (contests are categorized by the reporting unit type of their corresponding districts)
-contest_type_mappings = {
-    "congressional": "Congressional",
-    "state": "Statewide",
-    "state-house": "State House",
-    "state-senate": "State Senate",
-}
 
 
 def find_dupes(df):
@@ -411,12 +408,30 @@ def get_row_constant_kwargs(kwargs: dict, rows_to_read: List[int]) -> dict:
     return rck
 
 
-def list_desired_excel_sheets(f_path: str, p: dict) -> Optional[list]:
+def list_desired_excel_sheets(
+        f_path: str, p: dict
+) -> (Optional[list], Optional[dict]):
+    err = None
+    file_name = Path(f_path).name
     if p["sheets_to_read_names"]:
         sheets_to_read = p["sheets_to_read_names"]
     else:
-        xl = pd.ExcelFile(f_path)
-        all_sheets = xl.sheet_names
+        try:
+            # read an xlsx file
+            xlsx = openpyxl.load_workbook(f_path)
+            all_sheets = xlsx.get_sheet_names()
+        except Exception as exc:
+            try:
+                # read xls file
+                xls = xlrd.open_workbook(f_path, on_demand=True)
+                all_sheets = xls.sheet_names()
+            except Exception as exc:
+                err = add_new_error(
+                    err, "file", file_name,
+                    f"Error reading sheet names from Excel file ({f_path}): {exc}"
+                )
+                sheets_to_read = None
+                return sheets_to_read, err
         if p["sheets_to_skip_names"]:
             sheets_to_read = [
                 s for s in all_sheets if s not in p["sheets_to_skip_names"]
@@ -425,7 +440,7 @@ def list_desired_excel_sheets(f_path: str, p: dict) -> Optional[list]:
             sheets_to_read = [all_sheets[n] for n in p["sheets_to_read_numbers"]]
         else:
             sheets_to_read = all_sheets
-    return sheets_to_read
+    return sheets_to_read, err
 
 
 def read_single_datafile(
@@ -439,6 +454,7 @@ def read_single_datafile(
 ) -> (Dict[str, pd.DataFrame], Dict[str, Dict[int, Any]], Optional[dict]):
     """Length of returned dictionary is the number of sheets read -- usually 1 except for multi-sheet Excel.
     Auxiliary files have different parameters (e.g., no count locations)"""
+    err = None
     kwargs = dict()  # for syntax checker
     df_dict = dict()  # for syntax checker
     row_constants = dict()  # for syntax checker
@@ -494,13 +510,19 @@ def read_single_datafile(
                 df_dict = {"Sheet1": df}
 
         elif p["file_type"] == "excel":
-            df_dict, row_constants, err = excel_to_dict(
+            desired_sheets, new_err = list_desired_excel_sheets(f_path, p)
+            if new_err:
+                err = consolidate_errors([err, new_err])
+                if fatal_error(new_err):
+                    df_dict = dict()
+                    return df_dict, row_constants, err
+            df_dict, row_constants, new_err = excel_to_dict(
                 f_path,
                 kwargs,
-                list_desired_excel_sheets(f_path, p),
+                desired_sheets,
                 p["rows_with_constants"],
             )
-            if fatal_error(err):
+            if fatal_error(new_err):
                 df_dict = dict()
         elif p["file_type"] == "flat_text":
             try:
@@ -601,8 +623,19 @@ def excel_to_dict(
     row_constant_kwargs = dict()
     file_name = Path(f_path).name
     err = None
-    if rows_to_read:
-        row_constant_kwargs = get_row_constant_kwargs(kwargs, rows_to_read)
+    try:
+        if rows_to_read:
+            row_constant_kwargs = get_row_constant_kwargs(kwargs, rows_to_read)
+    except Exception as exc:
+        err = add_new_error(
+            err,
+            "system",
+            f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
+            f"Unexpected exception while getting row-constant keyword arguments for \n"
+            f"rows_to_read: {rows_to_read}\n"
+            f"kwargs: {kwargs}.\n"
+            f"Exception: {exc}",
+        )
     for sheet in sheet_list:
         try:
             df_dict[sheet] = pd.read_excel(f_path, **kwargs, sheet_name=sheet)
@@ -620,15 +653,27 @@ def excel_to_dict(
                 Path(f_path).name,
                 f"Sheet {sheet} not read due to exception:\n\t{exc}",
             )
-        if rows_to_read:
-            row_constant_df = pd.read_excel(
-                f_path, **row_constant_kwargs, sheet_name=sheet
+
+        try:
+            if rows_to_read:
+                row_constant_df = pd.read_excel(
+                    f_path, **row_constant_kwargs, sheet_name=sheet
+                )
+                row_constants[sheet], new_err = build_row_constants_from_df(
+                    row_constant_df, rows_to_read, file_name, sheet
+                )
+                if new_err:
+                    err = consolidate_errors([err, new_err])
+        except Exception as exc:
+            err = add_new_error(
+                err,
+                "file",
+                file_name,
+                f"Exception while reading rows {rows_to_read} from {sheet}\n"
+                f"with keyword arguments {row_constant_kwargs}\n"
+                f"in ui.excel_to_dict():\n"
+                f"{exc}"
             )
-            row_constants[sheet], new_err = build_row_constants_from_df(
-                row_constant_df, rows_to_read, file_name, sheet
-            )
-            if new_err:
-                err = consolidate_errors([err, new_err])
     return df_dict, row_constants, err
 
 
@@ -1215,10 +1260,6 @@ def reload_juris_election(
                 election_jurisdiction_list=[(election_name, juris_name)],
             )
             if success:
-                add_err = dl.add_totals_if_missing(election_name, juris_name)
-                if add_err:
-                    err = consolidate_errors([err, add_err])
-
                 # run tests on live db
                 live_failed_tests = run_tests(
                     test_dir,
@@ -1249,7 +1290,7 @@ def get_contest_type_mappings(filters: list) -> Optional[list]:
     """get mappings for a list to the contest type database labels"""
     if not filters:
         return None
-    contest_types = contest_type_mappings.items()
+    contest_types = db.contest_type_mappings.items()
     for index, item in enumerate(filters):
         for contest_type in contest_types:
             if item == contest_type[1]:
@@ -1260,7 +1301,7 @@ def get_contest_type_mappings(filters: list) -> Optional[list]:
 
 def get_contest_type_mapping(item: str) -> str:
     """get mappings for a string to the contest type database labels"""
-    contest_types = contest_type_mappings.items()
+    contest_types = db.contest_type_mappings.items()
     for contest_type in contest_types:
         if contest_type[1] in item:
             return item.replace(contest_type[1], contest_type[0])
@@ -1271,15 +1312,18 @@ def get_contest_type_display(item: str) -> str:
     """get the user-friendly version of the contest_type"""
     item_list = item.split(" ")
     for index in range(len(item_list)):
-        for key in contest_type_mappings.keys():
+        for key in db.contest_type_mappings.keys():
             if key == item_list[index]:
-                item_list[index] = contest_type_mappings[key]
+                item_list[index] = db.contest_type_mappings[key]
                 break
     return " ".join(item_list)
 
 
-def get_filtered_input_options(session, input_str, filters):
-    """ Display dropdown options for user selection """
+def get_filtered_input_options(
+        session: Session, input_str: str, filters: List[str]
+) -> List[Dict[str, Any]]:
+    """ Display dropdown options for menu <input_str>, limited to any strings in <filters>
+    (unless <filters> is None, in which case all are displayed. Sort as necessary"""
     df_cols = ["parent", "name", "type"]
     if input_str == "election":
         if filters:
@@ -1324,15 +1368,17 @@ def get_filtered_input_options(session, input_str, filters):
         )
         connection.close()
 
+        # define input option for all contests of the given type
         contest_type_df = pd.DataFrame(
             [
                 {
                     "parent": reporting_unit,
-                    "name": f"All {contest_type_mappings[contest_type]}",
+                    "name": f"All {db.contest_type_mappings[contest_type]}",
                     "type": contest_type,
                 }
             ]
         )
+        # define input options for each particular contest
         contest_df = db.get_relevant_contests(session, filters)
         contest_df = contest_df[contest_df["type"].isin(filters)]
         df = pd.concat([contest_type_df, contest_df])
@@ -1453,11 +1499,12 @@ def get_filtered_input_options(session, input_str, filters):
 
 
 def package_display_results(data: pd.DataFrame) -> List[Dict[str, Any]]:
-    """takes a result set and packages into JSON to return"""
+    """takes a result set and packages into JSON to return.
+    Result set should already be ordered as desired for display"""
     results = []
     for i, row in data.iterrows():
-        if row[1] in contest_type_mappings:
-            row[1] = contest_type_mappings[row[1]]
+        if row[1] in db.contest_type_mappings:
+            row[1] = db.contest_type_mappings[row[1]]
         temp = {"parent": row[0], "name": row[1], "type": row[2], "order_by": i + 1}
         results.append(temp)
     return results

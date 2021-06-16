@@ -22,6 +22,7 @@ from election_data_analysis import preparation as prep
 from election_data_analysis import nist_export as nist
 import itertools
 import shutil
+import json
 
 # constants
 sdl_pars_req = [
@@ -304,14 +305,14 @@ class SingleDataLoader:
 
 
 class DataLoader:
-    def __new__(cls):
+    def __new__(cls, param_file: str ="run_time.ini", dbname: Optional[str] = None):
         """Checks if parameter file exists and is correct. If not, does
         not create DataLoader object."""
 
         d, err = ui.get_parameters(
             required_keys=multi_data_loader_pars,
             optional_keys=optional_mdl_pars,
-            param_file="run_time.ini",
+            param_file=param_file,
             header="election_data_analysis",
         )
         if err:
@@ -320,12 +321,12 @@ class DataLoader:
 
         return super().__new__(cls)
 
-    def __init__(self):
+    def __init__(self, param_file="run_time.ini", dbname: Optional[str] = None):
         # grab parameters
         self.d, self.parameter_err = ui.get_parameters(
             required_keys=multi_data_loader_pars,
             optional_keys=optional_mdl_pars,
-            param_file="run_time.ini",
+            param_file=param_file,
             header="election_data_analysis",
         )
 
@@ -338,17 +339,21 @@ class DataLoader:
         )
 
         # create db if it does not already exist and have right tables
-        err = db.create_db_if_not_ok()
+        err = db.create_db_if_not_ok(db_param_file=param_file, dbname=dbname)
 
         # connect to db
         self.engine = None  # will be set in connect_to_db
         self.session = None  # will be set in connect_to_db
-        self.connect_to_db(err=err)
+        self.connect_to_db(err=err, dbname=dbname, db_param_file=param_file)
 
-    def connect_to_db(self, dbname: Optional[str] = None, err: Optional[dict] = None):
+    def connect_to_db(
+            self, dbname: Optional[str] = None,
+            err: Optional[dict] = None,
+            db_param_file: str = "run_time.ini"
+    ):
         new_err = None
         try:
-            self.engine, new_err = db.sql_alchemy_connect(dbname=dbname)
+            self.engine, new_err = db.sql_alchemy_connect(param_file=db_param_file, dbname=dbname)
             Session = sessionmaker(bind=self.engine)
             self.session = Session()
         except Exception as e:
@@ -363,11 +368,11 @@ class DataLoader:
         else:
             return
 
-    def change_db(self, new_db_name: str):
+    def change_db(self, new_db_name: str, db_param_file: str = "run_time.ini"):
         """Changes the database into which the data is loaded, including reconnecting"""
         self.d["dbname"] = new_db_name
         self.session.close()
-        self.connect_to_db(dbname=new_db_name)
+        self.connect_to_db(dbname=new_db_name, db_param_file=db_param_file)
         db.create_db_if_not_ok(dbname=new_db_name)
         return
 
@@ -385,7 +390,6 @@ class DataLoader:
     ) -> (Optional[SingleDataLoader], Optional[dict]):
         """Load a single results file specified by the parameters in <ini_path>.
         Returns SingleDataLoader object (and error)"""
-        # TODO use jurisdiction internal name ("South Carolina") instead of juris class?
         sdl, err = check_and_init_singledataloader(
             self.d["results_dir"],
             ini_path,
@@ -411,6 +415,9 @@ class DataLoader:
             rollup_rut = db.get_major_subdiv_type(
                 self.session,
                 sdl.d["jurisdiction"],
+                file_path=os.path.join(
+                    self.d["repository_content_root"], "jurisdictions","000_major_subjurisdiction_types.txt"
+                )
             )
         else:
             rollup_rut = None
@@ -514,6 +521,8 @@ class DataLoader:
         """Processes all results (or all results corresponding to pairs in
         ej_list if given) in DataLoader's results directory using
         .ini files from repository.
+        If load is successful for all files for a single election-jurisdicction pair,
+        then add records for total vote counts whereever necessary.
         By default, loads (or updates) the info from the jurisdiction files
         into the db first. By default, moves files to the DataLoader's archive directory.
         Returns a post-reporting error dictionary, and a dictionary of
@@ -609,6 +618,11 @@ class DataLoader:
                 success[f"{election};{jurisdiction}"] = success_list
                 failure[f"{election};{jurisdiction}"] = failure_list
 
+                # if all files loaded successfully
+                if not failure_list:
+                    # add totals
+                    self.add_totals_if_missing(election, jurisdiction)
+
             if move_files:
                 # if all existing files referenced in any results.ini
                 # for the jurisdiction
@@ -690,7 +704,7 @@ class DataLoader:
         return None
 
     def add_totals_if_missing(self, election, jurisdiction) -> Optional[dict]:
-        """for each election, add 'total' vote type wherever it's missing
+        """for each contest, add 'total' vote type wherever it's missing
         returning any error"""
         err = None
         # pull results from db
@@ -746,6 +760,21 @@ class DataLoader:
                     f"Unexpected exception while adding totals to existing db for {election} - {jurisdiction}",
                 )
         return err
+
+    def load_data_from_db_dump(self, dbname, dump_file: str, param_file="run_time.ini") -> Optional[str]:
+        """Create a database from a file dumped from another database (but only if db does not
+        already exist). Return error string"""
+        connection = self.session.bind.raw_connection()
+        cursor = connection.cursor()
+        err_str = db.create_database(connection, cursor, dbname=dbname, delete_existing=False)
+
+        cursor.close()
+        connection.close()
+
+        if not err_str:
+            # read contents of dump into db
+            err_str = db.restore_to_db(dbname, dump_file, self.engine.url)
+        return err_str
 
 
 def check_par_file_elements(
@@ -1290,7 +1319,7 @@ class JurisdictionPrepper:
     def make_test_file(self, election: str):
         juris_true_name = self.d["name"]
         juris_abbr = self.d["abbreviated_name"]
-        tests_dir = os.path.join(Path(self.d["mungers_dir"]).parents[1], "tests")
+        tests_dir = os.path.join(Path(self.d["mungers_dir"]).parents[1], "tests", "specific_result_file_tests")
         juris_test_dir = os.path.join(tests_dir, self.d["system_name"])
         sample_test_dir = os.path.join(tests_dir, "20xx_test_templates")
         election_str = jm.system_name_from_true_name(election)
@@ -1305,7 +1334,7 @@ class JurisdictionPrepper:
                 f'single_county = "North Carolina;Bertie County"': f'single_county = "{juris_true_name}; "',
             }
             create_from_template(
-                os.path.join(sample_test_dir, "donttest_template_2020-General.py"),
+                os.path.join(sample_test_dir, f"donttest_template_{election_str}.py"),
                 new_test_file,
                 test_replace,
             )
@@ -1472,11 +1501,12 @@ class Analyzer:
 
         # read reports_and_plots_dir from param_file
         d, error = ui.get_parameters(
-            required_keys=["reports_and_plots_dir"],
+            required_keys=["reports_and_plots_dir", "repository_content_root"],
             param_file=param_file,
             header="election_data_analysis",
         )
         self.reports_and_plots_dir = d["reports_and_plots_dir"]
+        self.repository_content_root = d["repository_content_root"]
 
         # create session
         eng, err = db.sql_alchemy_connect(param_file, dbname=dbname)
@@ -1487,6 +1517,8 @@ class Analyzer:
     def display_options(
         self, input_str: str, verbose: bool = True, filters: list = None
     ):
+        """<input_str> is one of: 'election', 'jurisdiction', 'contest_type', 'contest',
+         'category' or 'count' """
         try:
             filters_mapped = ui.get_contest_type_mappings(filters)
             results = ui.get_filtered_input_options(
@@ -1513,7 +1545,7 @@ class Analyzer:
         html, png, jpeg, webp, svg, pdf, and eps. Note that some filetypes may need plotly-orca
         installed as well."""
         jurisdiction_id = db.name_to_id(self.session, "ReportingUnit", jurisdiction)
-        subdivision_type_id, _ = db.get_jurisdiction_hierarchy(
+        subdivision_type_id, other_subdivision_type = db.get_jurisdiction_hierarchy(
             self.session, jurisdiction_id
         )
         h_election_id = db.name_to_id(self.session, "Election", h_election)
@@ -1530,6 +1562,7 @@ class Analyzer:
             self.session,
             jurisdiction_id,
             subdivision_type_id,
+            other_subdivision_type,
             h_election_id,
             h_count_item_type,
             h_count,
@@ -1553,12 +1586,14 @@ class Analyzer:
         contest: str = None,
         fig_type: str = None,
     ) -> list:
-        """contest_type is one of state, congressional, state-senate, state-house"""
+        """contest_type is an election district type, e.g.,
+         state, congressional, state-senate, state-house, territory, etc.
+         Complete list is given by the keys of <db.contest_type_mapping>"""
         election_id = db.name_to_id(self.session, "Election", election)
         jurisdiction_id = db.name_to_id(self.session, "ReportingUnit", jurisdiction)
         # for now, bar charts can only handle jurisdictions where county is one level
         # down from the jurisdiction
-        subdivision_type_id, _ = db.get_jurisdiction_hierarchy(
+        subdivision_type_id, other_subdivision_type = db.get_jurisdiction_hierarchy(
             self.session, jurisdiction_id
         )
         # bar chart always at one level below top reporting unit
@@ -1566,6 +1601,7 @@ class Analyzer:
             self.session,
             jurisdiction_id,
             subdivision_type_id,
+            other_subdivision_type,
             contest_type,
             contest,
             election_id,
@@ -1599,7 +1635,7 @@ class Analyzer:
         """contest_type is one of state, congressional, state-senate, state-house"""
         election_id = db.name_to_id(self.session, "Election", election)
         jurisdiction_id = db.name_to_id(self.session, "ReportingUnit", jurisdiction)
-        subdivision_type_id, _ = db.get_jurisdiction_hierarchy(
+        subdivision_type_id, other_subdivision_type = db.get_jurisdiction_hierarchy(
             self.session, jurisdiction_id
         )
         # bar chart always at one level below top reporting unit
@@ -1607,6 +1643,7 @@ class Analyzer:
             self.session,
             jurisdiction_id,
             subdivision_type_id,
+            other_subdivision_type,
             None,
             contest,
             election_id,
@@ -1634,7 +1671,7 @@ class Analyzer:
         )
         return err
 
-    def export_nist_json(self, election: str, jurisdiction: str) -> dict:
+    def export_nist_v1_json(self,election: str,jurisdiction: str) -> dict:
         election_id = db.name_to_id(self.session, "Election", election)
         jurisdiction_id = db.name_to_id(self.session, "ReportingUnit", jurisdiction)
 
@@ -1661,12 +1698,23 @@ class Analyzer:
 
         return election_report
 
+    def export_nist_v1(
+        self,
+        election: str,
+        jurisdiction: str,
+    ) -> str:
+        """exports NIST v1 json string"""
+        json_string = json.dumps(self.export_nist_v1_json(election, jurisdiction))
+        return json_string
+
+
     def export_nist(
         self,
         election: str,
         jurisdiction: str,
         major_subdivision: Optional[str] = None,
     ) -> str:
+        """exports NIST v2 xml string"""
         xml_string = et.tostring(
             nist.nist_v2_xml_export_tree(
                 self.session,
@@ -1733,18 +1781,12 @@ class Analyzer:
             vote_types = {x for x in vts[state] if x != "total"}
             district_types = contests_df[contests_df["jurisdiction"] == state]
             state_id = db.name_to_id(self.session, "ReportingUnit", state)
-            (
-                major_sub_ru_type_id,
-                major_sub_ru_type_other,
-            ) = db.get_jurisdiction_hierarchy(self.session, state_id)
-            if major_sub_ru_type_other == "":
-                major_sub_ru_type_name = db.name_from_id(
-                    self.session,
-                    "ReportingUnitType",
-                    major_sub_ru_type_id,
-                )
-            else:
-                major_sub_ru_type_name = major_sub_ru_type_other
+
+            # find major subdivision
+            major_sub_ru_type_name = db.get_major_subdiv_type(
+                self.session, state, file_path=os.path.join(self.repository_content_root)
+            )
+
             # get dataframe of results, adding column for political party
             res, _ = db.export_rollup_from_db(
                 self.session,
@@ -2375,7 +2417,7 @@ def load_or_reload_all(
         # if no test directory given, use tests from repo
         if not test_dir:
             test_dir = os.path.join(
-                Path(dataloader.d["repository_content_root"]).parent, "tests"
+                Path(dataloader.d["repository_content_root"]).parent, "tests", "specific_result_file_tests",
             )
         # get relevant election-jurisdiction pairs
         ej_pairs = ui.election_juris_list(

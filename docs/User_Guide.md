@@ -223,7 +223,9 @@ Texas;Angelina County	county
 Texas;Gregg County	county
 Texas;Harrison County	county
 ```
-Counties must be added by hand. (NB: in some states, the word 'county' is not used. For instance, Louisiana's major subdivisions are called 'parish'.)
+Counties must be added by hand. 
+
+NB: in some jurisdictions, the major subdivision type is not 'county. For instance, Louisiana's major subdivisions are called 'parish'. In the `election_data_analysis.analyze` module, several routines roll up results to the major subdivision -- usually counties. The ReportingUnitType of the major subdivision is read from the file `src/jurisdictions/000_major_subjurisdiction_types.txt` if possible; if that file is missing, or does not provide a subdivision type for the particular jurisdiction in question, the system will try to deduce the major subdivision type from the database.
 
 The system assumes that internal database names of ReportingUnits carry information about the nesting of the basic ReportingUnits (e.g., counties, towns, wards, etc., but not congressional districts) via semicolons. For example: `
  * `Pennsylvania;Philadelphia;Ward 8;Division 6` is a precinct in 
@@ -518,12 +520,20 @@ To import results from a file that is valid NIST V2 xml -- that can be formally 
 
 Some xml files (e.g., Ohio 2020 General) use the older Version 1 common data format. Our convention is that if the munger name contains "nist" and the file_type is xml, then the system will look for a namespace declaration.
 
-This package also provides functionality to export the data according to the [NIST election results reporting schema (Version 2)](https://github.com/usnistgov/ElectionResultsReporting/raw/version2/NIST_V2_election_results_reporting.xsd). This is as simple as identifying an election and jurisdiction of interest:
+This package also provides functionality to export the data to xml according to the [NIST election results reporting schema (Version 2)](https://github.com/usnistgov/ElectionResultsReporting/raw/version2/NIST_V2_election_results_reporting.xsd). This is as simple as identifying an election and jurisdiction of interest:
 ```
 from election_data_analysis import Analyzer
 analyzer = Analyzer()
 election_report = analyzer.export_nist("2020 General", "Georgia")
 ```
+The output is a string, the contents of the xml file.
+
+There is also an export in the NIST V1 json format:
+```
+analyzer = Analyzer()
+export_nist_v1_json("2020 General","Georgia")
+```
+The output is a string, the contents of the json file.
 
 ### Difference-in-Difference calculations
 The system provides a way to calculate difference-in-difference statistics. For any particular election, `Analyzer.diff_in_diff` produces a dataframe of values for any county with results by vote type, with Democratic or Republican candidates, and any comparable pair of contests both on some ballots in the county. Contests are considered "comparable" if their districts are of the same geographical district type -- e.g., both statewide, or both state-house, etc. The method also returns a list of jurisdictions for which vote counts were zero or missing.
