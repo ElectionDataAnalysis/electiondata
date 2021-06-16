@@ -75,7 +75,6 @@ def test_contest_display(runtime):
     assert live_list == reference_list
 
 
-"""
 def test_bar_congressional(runtime):
     assert pytest.ok["ga18g"], "No Georgia 2018 General data"
     analyzer = Analyzer(runtime)
@@ -87,6 +86,7 @@ def test_bar_congressional(runtime):
     )
 
 
+"""
 def test_bar_all_state(runtime):
     assert pytest.ok["nc18g"], "No North Carolina 2018 General data"
     analyzer = Analyzer(runtime)
