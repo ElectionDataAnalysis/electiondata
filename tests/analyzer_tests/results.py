@@ -739,7 +739,7 @@ nc_2018_bar_statehouse = [
 nc_2018_bar_congressional = [
     {
         "jurisdiction": "North Carolina",
-        "x": "Dan Mccready (D)",
+        "x": "Dan McCready (D)",
         "y": "Mark Harris (R)",
         "counts": [
             {
@@ -1078,7 +1078,7 @@ ga_2018_count = [
     },
     {
         "parent": "GA House District 100",
-        "name": "Dewey L. Mcclain (I) - D - GAH100",
+        "name": "Dewey L. McClain (I) - D - GAH100",
         "type": "state-house",
         "order_by": 15,
     },
@@ -1126,7 +1126,7 @@ ga_2018_count = [
     },
     {
         "parent": "GA House District 105",
-        "name": "Donna Mcleod - D - GAH105",
+        "name": "Donna McLeod - D - GAH105",
         "type": "state-house",
         "order_by": 23,
     },
@@ -1948,7 +1948,7 @@ ga_2018_count = [
     },
     {
         "parent": "GA House District 33",
-        "name": "Tom Mccall - R - GAH33",
+        "name": "Tom McCall - R - GAH33",
         "type": "state-house",
         "order_by": 160,
     },
@@ -2164,7 +2164,7 @@ ga_2018_count = [
     },
     {
         "parent": "GA House District 51",
-        "name": "Josh Mclaurin - D - GAH51",
+        "name": "Josh McLaurin - D - GAH51",
         "type": "state-house",
         "order_by": 196,
     },
@@ -3184,7 +3184,7 @@ ga_2018_count = [
     },
     {
         "parent": "US House GA District 6",
-        "name": "Lucy Mcbath - D - USHouse6",
+        "name": "Lucy McBath - D - USHouse6",
         "type": "congressional",
         "order_by": 366,
     },
@@ -3214,7 +3214,7 @@ ga_2018_count = [
     },
     {
         "parent": "US House GA District 9",
-        "name": "Josh Mccall - D - USHouse9",
+        "name": "Josh McCall - D - USHouse9",
         "type": "congressional",
         "order_by": 371,
     },
@@ -7293,7 +7293,7 @@ ga_2018_scatter_party_votetype = {
 nc_2018_scatter_county_rollup = {
     "jurisdiction": "North Carolina",
     "x": "Mark Harris",
-    "y": "Dan Mccready",
+    "y": "Dan McCready",
     "counts": [
         {
             "name": "North Carolina;Anson County",
@@ -7358,7 +7358,7 @@ nc_2018_scatter_county_rollup = {
     "x-count_item_type": "total",
     "y-count_item_type": "total",
     "x-title": "Mark Harris - 2018 General - US House NC District 9",
-    "y-title": "Dan Mccready - 2018 General - US House NC District 9",
+    "y-title": "Dan McCready - 2018 General - US House NC District 9",
     "preliminary": False,
 }
 ga_2018_candidate_search_display = [

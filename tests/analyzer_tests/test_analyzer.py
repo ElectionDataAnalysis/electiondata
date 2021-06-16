@@ -86,7 +86,7 @@ def test_bar_congressional(runtime):
     )
 
 
-"""
+
 def test_bar_all_state(runtime):
     assert pytest.ok["nc18g"], "No North Carolina 2018 General data"
     analyzer = Analyzer(runtime)
@@ -94,7 +94,6 @@ def test_bar_all_state(runtime):
         analyzer.bar("2018 General", "North Carolina", "State House", "All State House")
         == results.nc_2018_bar_statehouse
     )
-
 
 def test_bar_all_congressional(runtime):
     assert pytest.ok["nc18g"], "No North Carolina 2018 General data"
@@ -131,7 +130,7 @@ def test_category_display(runtime):
         == results.nc_2018_category
     )
 
-
+"""
 def test_count_display(runtime):
     assert pytest.ok["ga18g"], "No Georgia 2018 General data"
     analyzer = Analyzer(runtime)
