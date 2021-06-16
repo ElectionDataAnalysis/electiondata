@@ -1327,7 +1327,7 @@ def get_filtered_input_options(
         session: Session, input_str: str, filters: List[str]
 ) -> List[Dict[str, Any]]:
     """ Display dropdown options for menu <input_str>, limited to any strings in <filters>
-    (unless <filters> is None, in which case all are displayed."""
+    (unless <filters> is None, in which case all are displayed. Sort as necessary"""
     df_cols = ["parent", "name", "type"]
     if input_str == "election":
         if filters:
@@ -1372,6 +1372,7 @@ def get_filtered_input_options(
         )
         connection.close()
 
+        # define input option for all contests of the given type
         contest_type_df = pd.DataFrame(
             [
                 {
@@ -1381,6 +1382,7 @@ def get_filtered_input_options(
                 }
             ]
         )
+        # define input options for each particular contest
         contest_df = db.get_relevant_contests(session, filters)
         contest_df = contest_df[contest_df["type"].isin(filters)]
         df = pd.concat([contest_type_df, contest_df])
@@ -1501,7 +1503,8 @@ def get_filtered_input_options(
 
 
 def package_display_results(data: pd.DataFrame) -> List[Dict[str, Any]]:
-    """takes a result set and packages into JSON to return"""
+    """takes a result set and packages into JSON to return.
+    Result set should already be ordered as desired for display"""
     results = []
     for i, row in data.iterrows():
         if row[1] in db.contest_type_mappings:

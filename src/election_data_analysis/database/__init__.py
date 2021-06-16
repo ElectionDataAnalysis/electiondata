@@ -976,7 +976,8 @@ def remove_vote_counts(connection, cursor, id: int) -> str:
 
 
 def get_relevant_election(session: Session, filters: List[str]) -> pd.DataFrame:
-    """Returns dataframe of all records from Election table with a name in the list <filters>"""
+    """Returns dataframe of all records from Election table
+    corresponding to a reporting unit in the list <filters>"""
     unit_df = pd.read_sql_table("ReportingUnit", session.bind, index_col="Id")
     unit_df = unit_df[unit_df["Name"].isin(filters)]
     election_ids = pd.read_sql_table("_datafile", session.bind, index_col="Id").merge(
@@ -989,7 +990,7 @@ def get_relevant_election(session: Session, filters: List[str]) -> pd.DataFrame:
 
 def get_relevant_contests(session: Session, filters: List[str]) -> pd.DataFrame:
     """expects the filters list to have an election and jurisdiction.
-    finds all contests for that combination."""
+    finds all contests for that combination. Returns a dataframe sorted by contest name"""
     election_id = list_to_id(session, "Election", filters)
     reporting_unit_id = list_to_id(session, "ReportingUnit", filters)
     result_df = read_vote_count(
@@ -999,6 +1000,8 @@ def get_relevant_contests(session: Session, filters: List[str]) -> pd.DataFrame:
         ["ReportingUnitName", "ContestName", "unit_type"],
         ["parent", "name", "type"],
     )
+    # sort by contest name
+    result_df.sort_values(by="name", inplace=True)
     return result_df
 
 
@@ -1042,7 +1045,7 @@ def get_jurisdiction_hierarchy(
     """get reporting unit type id of reporting unit one level down from jurisdiction.
     Omit particular types that are contest types, not true reporting unit types
     TODO: handle case where type is non-standard and some other smaller reporting units are also
-    also non-standard
+     also non-standard
     """
     q = sql.SQL(
         """
