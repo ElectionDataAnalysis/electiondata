@@ -169,12 +169,6 @@ def run2(
             )
             return err
 
-        # add any necessary totals
-        for e, j in election_jurisdiction_list:
-            add_err = dl.add_totals_if_missing(e, j)
-            if add_err:
-                err = ui.consolidate_errors([err, add_err])
-
         if ui.fatal_error(err):
             optional_remove(dl, "TestingData")
             return err

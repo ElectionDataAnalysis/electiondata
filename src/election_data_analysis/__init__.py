@@ -390,7 +390,6 @@ class DataLoader:
     ) -> (Optional[SingleDataLoader], Optional[dict]):
         """Load a single results file specified by the parameters in <ini_path>.
         Returns SingleDataLoader object (and error)"""
-        # TODO use jurisdiction internal name ("South Carolina") instead of juris class?
         sdl, err = check_and_init_singledataloader(
             self.d["results_dir"],
             ini_path,
@@ -522,6 +521,8 @@ class DataLoader:
         """Processes all results (or all results corresponding to pairs in
         ej_list if given) in DataLoader's results directory using
         .ini files from repository.
+        If load is successful for all files for a single election-jurisdicction pair,
+        then add records for total vote counts whereever necessary.
         By default, loads (or updates) the info from the jurisdiction files
         into the db first. By default, moves files to the DataLoader's archive directory.
         Returns a post-reporting error dictionary, and a dictionary of
@@ -617,6 +618,11 @@ class DataLoader:
                 success[f"{election};{jurisdiction}"] = success_list
                 failure[f"{election};{jurisdiction}"] = failure_list
 
+                # if all files loaded successfully
+                if not failure_list:
+                    # add totals
+                    self.add_totals_if_missing(election, jurisdiction)
+
             if move_files:
                 # if all existing files referenced in any results.ini
                 # for the jurisdiction
@@ -696,7 +702,7 @@ class DataLoader:
         return None
 
     def add_totals_if_missing(self, election, jurisdiction) -> Optional[dict]:
-        """for each election, add 'total' vote type wherever it's missing
+        """for each contest, add 'total' vote type wherever it's missing
         returning any error"""
         err = None
         # pull results from db

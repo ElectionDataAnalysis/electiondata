@@ -1260,10 +1260,6 @@ def reload_juris_election(
                 election_jurisdiction_list=[(election_name, juris_name)],
             )
             if success:
-                add_err = dl.add_totals_if_missing(election_name, juris_name)
-                if add_err:
-                    err = consolidate_errors([err, add_err])
-
                 # run tests on live db
                 live_failed_tests = run_tests(
                     test_dir,
