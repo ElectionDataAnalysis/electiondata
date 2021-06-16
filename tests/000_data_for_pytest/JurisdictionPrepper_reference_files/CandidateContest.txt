@@ -1,0 +1,19 @@
+Name	NumberElected	Office	PrimaryParty
+MP House District 1	1	MP House District 1	
+MP House District 2	1	MP House District 2	
+MP House District 3	1	MP House District 3	
+MP House District 4	1	MP House District 4	
+MP House District 5	1	MP House District 5	
+MP House District 6	1	MP House District 6	
+MP House District 7	1	MP House District 7	
+MP Senate District 1	1	MP Senate District 1	
+MP Senate District 2	1	MP Senate District 2	
+MP Senate District 3	1	MP Senate District 3	
+US House MP District 1	1	US House MP District 1	
+US President (MP)	1	US President (MP)	
+MP Governor	1	MP Governor	
+US Senate MP	1	US Senate MP	
+MP Attorney General	1	MP Attorney General	
+MP Lieutenant Governor	1	MP Lieutenant Governor	
+MP Treasurer	1	MP Treasurer	
+MP Secretary of State	1	MP Secretary of State	

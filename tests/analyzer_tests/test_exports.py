@@ -18,7 +18,7 @@ def test_nist_v2_and_v1(runtime):
 
     # load test data to the test db
     dl = DataLoader(param_file=runtime)
-    err_str = dl.load_data_from_db_dump(param_file=runtime, dbname=test_db_name, dump_file=db_dump)
+    err_str = dl.load_data_from_db_dump(dbname=test_db_name, dump_file=db_dump)
 
     # create Analyzer object
     an = Analyzer(dbname=test_db_name, param_file=runtime)
