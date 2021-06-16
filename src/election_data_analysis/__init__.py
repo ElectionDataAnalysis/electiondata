@@ -896,7 +896,11 @@ class JurisdictionPrepper:
                 return None
         return super().__new__(cls)
 
-    def new_juris_files(self, target_dir: Optional[str] = None):
+    def new_juris_files(
+            self,
+            target_dir: Optional[str] = None,
+            templates: Optional[str] = None,
+    ):
         """Create starter files in <target_dir>. If no <target_dir> is given, put the standard
         jurisdiction files into a subdirectory of the jurisdictions directory in the repo, and put
         the starter dictionary in the current directory.
@@ -907,9 +911,11 @@ class JurisdictionPrepper:
         error = jm.ensure_jurisdiction_dir(self.d["jurisdiction_path"])
         # add default entries
         project_root = Path(__file__).absolute().parents[1]
-        templates = os.path.join(
-            project_root, "election_data_analysis", "juris_and_munger", "jurisdiction_templates"
-        )
+        # default templates are from repo
+        if not templates:
+            templates = os.path.join(
+                project_root, "election_data_analysis", "juris_and_munger", "jurisdiction_templates"
+            )
         for element in ["Party", "Election"]:
             new_err = prep.add_defaults(self.d["jurisdiction_path"], templates, element)
             if new_err:
