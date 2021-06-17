@@ -46,7 +46,7 @@ def remove_empty_lines(df: pd.DataFrame, element: str) -> pd.DataFrame:
 def write_element(
     juris_path: str, element: str, df: pd.DataFrame, file_name=None
 ) -> dict:
-    """<juris> is path to jurisdiction directory. Info taken
+    """<juris> is path to target directory. Info taken
     from <element>.txt file in that directory.
     <element>.txt is overwritten with info in <df>"""
     err = None

@@ -1,0 +1,40 @@
+cdf_element	cdf_internal_name	raw_identifier_value
+CandidateContest	MP House District 1	MP House District 1
+CandidateContest	MP House District 2	MP House District 2
+CandidateContest	MP House District 3	MP House District 3
+CandidateContest	MP House District 4	MP House District 4
+CandidateContest	MP House District 5	MP House District 5
+CandidateContest	MP House District 6	MP House District 6
+CandidateContest	MP House District 7	MP House District 7
+CandidateContest	MP Senate District 1	MP Senate District 1
+CandidateContest	MP Senate District 2	MP Senate District 2
+CandidateContest	MP Senate District 3	MP Senate District 3
+CandidateContest	US House MP District 1	US House MP District 1
+CandidateContest	US President (MP)	US President (MP)
+CandidateContest	MP Governor	MP Governor
+CandidateContest	US Senate MP	US Senate MP
+CandidateContest	MP Attorney General	MP Attorney General
+CandidateContest	MP Lieutenant Governor	MP Lieutenant Governor
+CandidateContest	MP Treasurer	MP Treasurer
+CandidateContest	MP Secretary of State	MP Secretary of State
+Election	2020 General Runoff	2020 General Runoff
+Election	2020 General	2020 General
+Election	2020 Primary	2020 Primary
+Election	2018 General	2018 General
+Election	2016 General	2016 General
+Party	Democratic Party	Democratic Party
+Party	Republican Party	Republican Party
+Party	Green Party	Green Party
+Party	Libertarian Party	Libertarian Party
+ReportingUnit	Northern Mariana Islands;MP House District 1	Northern Mariana Islands;MP House District 1
+ReportingUnit	Northern Mariana Islands;MP House District 2	Northern Mariana Islands;MP House District 2
+ReportingUnit	Northern Mariana Islands;MP House District 3	Northern Mariana Islands;MP House District 3
+ReportingUnit	Northern Mariana Islands;MP House District 4	Northern Mariana Islands;MP House District 4
+ReportingUnit	Northern Mariana Islands;MP House District 5	Northern Mariana Islands;MP House District 5
+ReportingUnit	Northern Mariana Islands;MP House District 6	Northern Mariana Islands;MP House District 6
+ReportingUnit	Northern Mariana Islands;MP House District 7	Northern Mariana Islands;MP House District 7
+ReportingUnit	Northern Mariana Islands;MP Senate District 1	Northern Mariana Islands;MP Senate District 1
+ReportingUnit	Northern Mariana Islands;MP Senate District 2	Northern Mariana Islands;MP Senate District 2
+ReportingUnit	Northern Mariana Islands;MP Senate District 3	Northern Mariana Islands;MP Senate District 3
+ReportingUnit	Northern Mariana Islands;US House MP District 1	Northern Mariana Islands;US House MP District 1
+ReportingUnit	Northern Mariana Islands	Northern Mariana Islands

@@ -761,7 +761,7 @@ class DataLoader:
                 )
         return err
 
-    def load_data_from_db_dump(self, dbname, dump_file: str, param_file="run_time.ini") -> Optional[str]:
+    def load_data_from_db_dump(self, dbname, dump_file: str) -> Optional[str]:
         """Create a database from a file dumped from another database (but only if db does not
         already exist). Return error string"""
         connection = self.session.bind.raw_connection()
@@ -865,12 +865,16 @@ def check_and_init_singledataloader(
 
 
 class JurisdictionPrepper:
-    def __new__(cls):
+    def __new__(cls,
+                prep_param_file: str = "jurisdiction_prep.ini",
+                run_time_param_file: str = "run_time.ini",
+                target_dir: Optional[str] = None
+                ):
         """Checks if parameter file exists and is correct. If not, does
         not create JurisdictionPrepper object."""
         for param_file, required in [
-            ("jurisdiction_prep.ini", prep_pars),
-            ("run_time.ini", ["repository_content_root", "reports_and_plots_dir"]),
+            (prep_param_file, prep_pars),
+            (run_time_param_file, ["repository_content_root", "reports_and_plots_dir"]),
         ]:
             try:
                 d, parameter_err = ui.get_parameters(
@@ -892,23 +896,26 @@ class JurisdictionPrepper:
                 return None
         return super().__new__(cls)
 
-    def new_juris_files(self):
-        """<juris_path> identifies the directory where the files will live.
-        <abbr> is the two-letter abbreviation for state/district/territory.
-        <state_house>, etc., gives the number of districts;
-        <other_districts> is a dictionary of other district names, types & counts, e.g.,
-        {'Circuit Court':{'ReportingUnitType':'judicial','count':5}}
+    def new_juris_files(
+            self,
+            target_dir: Optional[str] = None,
+            templates: Optional[str] = None,
+    ):
+        """Create starter files in <target_dir>. If no <target_dir> is given, put the standard
+        jurisdiction files into a subdirectory of the jurisdictions directory in the repo, and put
+        the starter dictionary in the current directory.
         """
-
-        ## create and fill jurisdiction directory
+        # create and fill jurisdiction directory
         # TODO Feature: allow other districts to be set in paramfile
         print(f"\nStarting {inspect.currentframe().f_code.co_name}")
         error = jm.ensure_jurisdiction_dir(self.d["jurisdiction_path"])
         # add default entries
         project_root = Path(__file__).absolute().parents[1]
-        templates = os.path.join(
-            project_root, "juris_and_munger", "jurisdiction_templates"
-        )
+        # default templates are from repo
+        if not templates:
+            templates = os.path.join(
+                project_root, "election_data_analysis", "juris_and_munger", "jurisdiction_templates"
+            )
         for element in ["Party", "Election"]:
             new_err = prep.add_defaults(self.d["jurisdiction_path"], templates, element)
             if new_err:
@@ -919,7 +926,7 @@ class JurisdictionPrepper:
 
         # Feature create starter dictionary.txt with cdf_internal name
         #  used as placeholder for raw_identifier_value
-        dict_err = self.starter_dictionary()
+        dict_err = self.starter_dictionary(target_dir=target_dir)
 
         error = ui.consolidate_errors([error, asc_err, dict_err])
         ui.report(
@@ -1151,7 +1158,7 @@ class JurisdictionPrepper:
         err_str = ui.consolidate_errors([err_str, new_err])
         return err_str
 
-    def starter_dictionary(self, include_existing=True) -> dict:
+    def starter_dictionary(self, include_existing=True, target_dir: Optional[str] = None) -> dict:
         """Creates a starter file for dictionary.txt, assuming raw_identifiers are the same as cdf_internal names.
         Puts file in the current directory. Returns error dictionary"""
         w = dict()
@@ -1180,11 +1187,16 @@ class JurisdictionPrepper:
                 for element in elements
             ]
         ).drop_duplicates()
+        if target_dir:
+            ssd_str = starter_dict_dir = target_dir
+        else:
+            ssd_str = "current directory (not in jurisdiction directory)"
+            starter_dict_dir = "."
         err = prep.write_element(
-            ".", "dictionary", starter, file_name=starter_file_name
+            starter_dict_dir, "dictionary", starter, file_name=starter_file_name
         )
         print(
-            f"Starter dictionary created in current directory (not in jurisdiction directory):\n{starter_file_name}"
+            f"Starter dictionary created in {ssd_str}:\n{starter_file_name}"
         )
         return err
 
@@ -1384,12 +1396,16 @@ class JurisdictionPrepper:
             )
         return
 
-    def __init__(self):
+    def __init__(self,
+                 prep_param_file: str = "jurisdiction_prep.ini",
+                 run_time_param_file: str = "run_time.ini",
+                 target_dir: Optional[str] = None
+                 ):
         self.d = dict()
         # get parameters from jurisdiction_prep.ini and run_time.ini
         for param_file, required in [
-            ("jurisdiction_prep.ini", prep_pars),
-            ("run_time.ini", ["repository_content_root", "reports_and_plots_dir"]),
+            (prep_param_file, prep_pars),
+            (run_time_param_file, ["repository_content_root", "reports_and_plots_dir"]),
         ]:
             d, parameter_err = ui.get_parameters(
                 required_keys=required,
@@ -1399,14 +1415,18 @@ class JurisdictionPrepper:
             self.d.update(d)
 
         # add dictionary attributes derived from other parameters
-        derived = {
-            "system_name": jm.system_name_from_true_name(self.d["name"]),
-            "mungers_dir": os.path.join(self.d["repository_content_root"], "mungers"),
-            "jurisdiction_path": os.path.join(
+        if target_dir:
+            juris_path = target_dir
+        else:
+            juris_path = os.path.join(
                 self.d["repository_content_root"],
                 "jurisdictions",
                 jm.system_name_from_true_name(self.d["name"]),
-            ),
+            )
+        derived = {
+            "system_name": jm.system_name_from_true_name(self.d["name"]),
+            "mungers_dir": os.path.join(self.d["repository_content_root"], "mungers"),
+            "jurisdiction_path": juris_path,
         }
         self.d.update(derived)
 
