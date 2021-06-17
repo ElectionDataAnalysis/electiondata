@@ -1389,6 +1389,8 @@ def get_filtered_input_options(
         # get the census data categories
         connection = session.bind.raw_connection()
         cursor = connection.cursor()
+
+        # TODO filter by major subdivision of jurisdiction
         population_df = db.read_external(
             cursor, election_id, jurisdiction_id, ["Category"]
         )
@@ -1458,6 +1460,7 @@ def get_filtered_input_options(
         jurisdiction_id = db.list_to_id(session, "ReportingUnit", filters)
         connection = session.bind.raw_connection()
         cursor = connection.cursor()
+        # TODO filter by major subdivision of jurisdiction
         df = db.read_external(
             cursor,
             election_id,

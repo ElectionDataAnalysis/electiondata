@@ -2125,19 +2125,20 @@ def census_data_exists(
     if not an:
         return False
 
-    reporting_unit_id = db.name_to_id(an.session, "ReportingUnit", jurisdiction)
+    jurisdiction_id = db.name_to_id(an.session, "ReportingUnit", jurisdiction)
+    election_id = db.name_to_id(an.session, "Election", election)
 
     # if the database doesn't have the reporting unit
-    if not reporting_unit_id:
+    if not jurisdiction_id:
         # data doesn't exist
         return False
 
     connection = an.session.bind.raw_connection()
     cursor = connection.cursor()
-    df = db.read_external(cursor, int(election[0:4]), reporting_unit_id, ["Label"])
+    df = db.read_external(cursor, election_id, jurisdiction_id, ["Label"])
     cursor.close()
 
-    # if no contest found
+    # if no data found
     if df.empty:
         # no data exists.
         return False

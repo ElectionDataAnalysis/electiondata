@@ -1050,7 +1050,8 @@ def scatter_axis_title(
 ) -> str:
     if contest_or_external.startswith("Population"):
         election_id = db.name_to_id_cursor(cursor, "Election", election)
-        # get the actual year of data here
+        # get the actual year of data and source of data
+        # TODO filter by major subdivision of jurisdiction
         df = db.read_external(
             cursor,
             election_id,
