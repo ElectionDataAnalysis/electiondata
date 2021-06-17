@@ -1320,22 +1320,22 @@ def get_contest_type_display(item: str) -> str:
 
 
 def get_filtered_input_options(
-        session: Session, input_str: str, filters: List[str]
+        session: Session, menu_type: str, filters: List[str]
 ) -> List[Dict[str, Any]]:
-    """ Display dropdown options for menu <input_str>, limited to any strings in <filters>
+    """ Display dropdown menu options for menu <menu_type>, limited to any strings in <filters>
     (unless <filters> is None, in which case all are displayed. Sort as necessary"""
     df_cols = ["parent", "name", "type"]
-    if input_str == "election":
+    if menu_type == "election":
         if filters:
             election_df = db.get_relevant_election(session, filters)
             elections = list(election_df["Name"].unique())
             elections.sort(reverse=True)
-            data = {
+            dropdown_options = {
                 "parent": [filters[0] for election in elections],
                 "name": elections,
                 "type": [None for election in elections],
             }
-            df = pd.DataFrame(data=data)
+            df = pd.DataFrame(data=dropdown_options)
             df[["year", "election_type"]] = df["name"].str.split(" ", expand=True)
             df.sort_values(
                 ["year", "election_type"], ascending=[False, True], inplace=True
@@ -1343,28 +1343,28 @@ def get_filtered_input_options(
             df.drop(columns=["year", "election_type"], inplace=True)
         else:
             df = db.display_elections(session)
-    elif input_str == "jurisdiction":
+    elif menu_type == "jurisdiction":
         df = db.display_jurisdictions(session, df_cols)
         if filters:
             df = df[df["parent"].isin(filters)]
-    elif input_str == "contest_type":
+    elif menu_type == "contest_type":
         contest_df = db.get_relevant_contests(session, filters)
         contest_types = contest_df["type"].unique()
         contest_types.sort()
-        data = {
+        dropdown_options = {
             "parent": [filters[0] for contest_type in contest_types],
             "name": contest_types,
             "type": [None for contest_type in contest_types],
         }
-        df = pd.DataFrame(data=data)
-    elif input_str == "contest":
+        df = pd.DataFrame(data=dropdown_options)
+    elif menu_type == "contest":
         contest_type = list(set(db.contest_types_model) & set(filters))[0]
 
         connection = session.bind.raw_connection()
         cursor = connection.cursor()
-        reporting_unit_id = db.list_to_id(session, "ReportingUnit", filters)
+        jurisdiction_id = db.list_to_id(session, "ReportingUnit", filters)
         reporting_unit = db.name_from_id_cursor(
-            cursor, "ReportingUnit", reporting_unit_id
+            cursor, "ReportingUnit", jurisdiction_id
         )
         connection.close()
 
@@ -1382,96 +1382,97 @@ def get_filtered_input_options(
         contest_df = db.get_relevant_contests(session, filters)
         contest_df = contest_df[contest_df["type"].isin(filters)]
         df = pd.concat([contest_type_df, contest_df])
-    elif input_str == "category":
+    elif menu_type == "category":
         election_id = db.list_to_id(session, "Election", filters)
-        reporting_unit_id = db.list_to_id(session, "ReportingUnit", filters)
+        jurisdiction_id = db.list_to_id(session, "ReportingUnit", filters)
 
-        # get the census data
+        # get the census data categories
         connection = session.bind.raw_connection()
         cursor = connection.cursor()
-        election = db.name_from_id_cursor(cursor, "Election", election_id)
-        census_df = db.read_external(
-            cursor, int(election[0:4]), reporting_unit_id, ["Label"]
+        population_df = db.read_external(
+            cursor, election_id, jurisdiction_id, ["Category"]
         )
         cursor.close()
-        if census_df.empty:
-            census = []
+        if population_df.empty:
+            population = []
         else:
-            census = ["Census data"]
+            population = [f"Population by {category}" for category in sorted(population_df.category.unique())]
 
+        # get the vote count categories
         type_df = db.read_vote_count(
             session,
             election_id,
-            reporting_unit_id,
+            jurisdiction_id,
             ["CountItemType"],
             ["CountItemType"],
         )
         count_types = list(type_df["CountItemType"].unique())
         count_types.sort()
-        data = {
+        dropdown_options = {
             "parent": [filters[0] for count_type in count_types]
             + [filters[0] for count_type in count_types]
             + [filters[0] for count_type in count_types]
-            + [filters[0] for c in census],
+            + [filters[0] for c in population],
             "name": [f"Candidate {count_type}" for count_type in count_types]
             + [f"Contest {count_type}" for count_type in count_types]
             + [f"Party {count_type}" for count_type in count_types]
-            + [c for c in census],
+            + [c for c in population],
             "type": [None for count_type in count_types]
             + [None for count_type in count_types]
             + [None for count_type in count_types]
-            + [None for c in census],
+            + [None for c in population],
         }
-        df = pd.DataFrame(data=data)
+        df = pd.DataFrame(data=dropdown_options)
     # check if it's looking for a count of contests
-    elif input_str == "count" and bool([f for f in filters if f.startswith("Contest")]):
+    elif menu_type == "count" and bool([f for f in filters if f.startswith("Contest")]):
         election_id = db.list_to_id(session, "Election", filters)
-        reporting_unit_id = db.list_to_id(session, "ReportingUnit", filters)
+        jurisdiction_id = db.list_to_id(session, "ReportingUnit", filters)
         df = db.read_vote_count(
             session,
             election_id,
-            reporting_unit_id,
+            jurisdiction_id,
             ["ReportingUnitName", "ContestName", "unit_type"],
             ["parent", "name", "type"],
         )
         df = df.sort_values(["parent", "name"]).reset_index(drop=True)
     # check if it's looking for a count of candidates
-    elif input_str == "count" and bool(
+    elif menu_type == "count" and bool(
         [f for f in filters if f.startswith("Candidate")]
     ):
         election_id = db.list_to_id(session, "Election", filters)
-        reporting_unit_id = db.list_to_id(session, "ReportingUnit", filters)
+        jurisdiction_id = db.list_to_id(session, "ReportingUnit", filters)
         df_unordered = db.read_vote_count(
             session,
             election_id,
-            reporting_unit_id,
+            jurisdiction_id,
             ["ContestName", "BallotName", "PartyName", "unit_type"],
             ["parent", "name", "type", "unit_type"],
         )
         df = clean_candidate_names(df_unordered)
         df = df[["parent", "name", "unit_type"]].rename(columns={"unit_type": "type"})
-    # check if it's looking for census data
-    elif input_str == "count" and "Census data" in filters:
+    # check if it's looking for population data
+    elif menu_type == "count" and bool(
+        [f for f in filters if f.startswith("Population")]
+    ):
         election_id = db.list_to_id(session, "Election", filters)
-        reporting_unit_id = db.list_to_id(session, "ReportingUnit", filters)
+        jurisdiction_id = db.list_to_id(session, "ReportingUnit", filters)
         connection = session.bind.raw_connection()
         cursor = connection.cursor()
-        election = db.name_from_id_cursor(cursor, "Election", election_id)
         df = db.read_external(
             cursor,
-            int(election[0:4]),
-            reporting_unit_id,
+            election_id,
+            jurisdiction_id,
             ["Source", "Label", "Category"],
         )
         cursor.close()
     # check if it's looking for a count by party
-    elif input_str == "count":
+    elif menu_type == "count":
         election_id = db.list_to_id(session, "Election", filters)
-        reporting_unit_id = db.list_to_id(session, "ReportingUnit", filters)
+        jurisdiction_id = db.list_to_id(session, "ReportingUnit", filters)
         df = db.read_vote_count(
             session,
             election_id,
-            reporting_unit_id,
+            jurisdiction_id,
             ["PartyName", "unit_type"],
             ["parent", "type"],
         )
@@ -1480,17 +1481,17 @@ def get_filtered_input_options(
     # Otherwise search for candidate
     else:
         election_id = db.list_to_id(session, "Election", filters)
-        reporting_unit_id = db.list_to_id(session, "ReportingUnit", filters)
+        jurisdiction_id = db.list_to_id(session, "ReportingUnit", filters)
         df_unordered = db.read_vote_count(
             session,
             election_id,
-            reporting_unit_id,
+            jurisdiction_id,
             ["ContestName", "BallotName", "PartyName", "unit_type"],
             ["parent", "name", "type", "unit_type"],
         )
         df_unordered = df_unordered[df_unordered["unit_type"].isin(filters)].copy()
         df_filtered = df_unordered[
-            df_unordered["name"].str.contains(input_str, case=False)
+            df_unordered["name"].str.contains(menu_type,case=False)
         ].copy()
         df = clean_candidate_names(df_filtered[df_cols].copy())
     # TODO: handle the "All" and "other" options better

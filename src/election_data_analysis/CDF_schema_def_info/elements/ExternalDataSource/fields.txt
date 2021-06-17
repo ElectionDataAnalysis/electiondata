@@ -1,5 +1,5 @@
 fieldname	datatype
-ShortSource	String
+Source	String
 Category	String
 Label	String
 Year	Integer

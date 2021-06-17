@@ -1565,7 +1565,7 @@ class Analyzer:
         html, png, jpeg, webp, svg, pdf, and eps. Note that some filetypes may need plotly-orca
         installed as well."""
         jurisdiction_id = db.name_to_id(self.session, "ReportingUnit", jurisdiction)
-        subdivision_type_id, other_subdivision_type = db.get_jurisdiction_hierarchy(
+        subdivision_type_id, other_subdivision_type = db.get_major_subdiv_id_and_othertext(
             self.session, jurisdiction_id
         )
         h_election_id = db.name_to_id(self.session, "Election", h_election)

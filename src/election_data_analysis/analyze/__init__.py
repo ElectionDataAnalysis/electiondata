@@ -1,6 +1,7 @@
 import os.path
 from typing import Optional, List
 from sqlalchemy.orm import Session
+import psycopg2
 import pandas as pd
 import inspect
 from election_data_analysis import user_interface as ui
@@ -307,6 +308,8 @@ def get_data_for_scatter(
             jurisdiction_id,
             election_id,
             filter_str,
+            subdivision_type_id=subdivision_type_id,
+            other_subdivision_type=other_subdivision_type,
         )
     else:
         return get_votecount_data(
@@ -327,17 +330,20 @@ def get_census_data(
     jurisdiction_id,
     election_id,
     filter_str,
+    subdivision_type_id,
+    other_subdivision_type,
 ):
     # get the census data
     connection = session.bind.raw_connection()
     cursor = connection.cursor()
-    election = db.name_from_id_cursor(cursor, "Election", election_id)
     census_df = db.read_external(
         cursor,
-        int(election[0:4]),
+        election_id,
         jurisdiction_id,
-        ["County", "Category", "Label", "Value"],
-        restrict=filter_str,
+        ["Name", "Category", "Label", "Value"],
+        restrict_by_label=filter_str,
+        subdivision_type_id=subdivision_type_id,
+        other_subdivision_type=other_subdivision_type,
     )
     cursor.close()
 
@@ -349,7 +355,7 @@ def get_census_data(
         census_df["Contest"] = "Census data"
         census_df["CountItemType"] = "total"
         census_df.rename(
-            columns={"County": "Name", "Label": "Selection", "Value": "Count"},
+            columns={"Label": "Selection", "Value": "Count"},
             inplace=True,
         )
         census_df = census_df[
@@ -1035,19 +1041,28 @@ def dedupe_scatter_title(category, election, contest):
     return title
 
 
-def scatter_axis_title(cursor, category, election, contest, jurisdiction_id):
-    if contest == "Census data":
+def scatter_axis_title(
+        cursor: psycopg2.extensions.cursor,
+        category: str,
+        election: str,
+        contest_or_external: str,
+        jurisdiction_id: int
+) -> str:
+    if contest_or_external.startswith("Population"):
+        election_id = db.name_to_id_cursor(cursor, "Election", election)
         # get the actual year of data here
-        census_year = db.read_external(
+        df = db.read_external(
             cursor,
-            int(election[0:4]),
+            election_id,
             jurisdiction_id,
-            ["CensusYear"],
-            restrict=category,
-        )["CensusYear"].iloc[0]
-        return f"{category} - {census_year} American Community Survey"
+            ["Year", "Source"],
+            restrict_by_label=category,
+        )
+        data_year = df.iloc[0, "Year"]
+        data_source = df.iloc[0, "Source"]
+        return f"{category} - {data_year} {data_source}"
     else:
-        title = dedupe_scatter_title(category, election, contest)
+        title = dedupe_scatter_title(category,election,contest_or_external)
         return ui.get_contest_type_display(title)
 
 

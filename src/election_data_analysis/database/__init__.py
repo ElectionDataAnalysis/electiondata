@@ -1023,6 +1023,14 @@ def get_major_subdiv_type(session: Session, jurisdiction: str, file_path: Option
     return subdiv_type
 
 
+def get_major_subdiv_id_and_othertext(
+        session: Session, jurisdiction: str, file_path: Optional[str] = None
+) -> (Optional[int], Optional[str]):
+    sub_div_type = get_major_subdiv_type(session, jurisdiction, file_path=file_path)
+    idx, other_text = id_othertext_from_plaintext(session, "ReportingUnitType", sub_div_type)
+    return idx, other_text
+
+
 def get_major_subdiv_from_file(f_path: str, jurisdiction: str) -> Optional[str]:
     """return major subdivision of <jurisdiction> from file <f_path> with columns
     jurisdiction, major_sub_jurisdiction_type.
@@ -1592,30 +1600,44 @@ def is_preliminary(
 
 def read_external(
     cursor: psycopg2.extensions.cursor,
-    election_year: int,
-    top_ru_id: int,
+    election_id: int,
+    jurisdiction_id: int,
     fields: list,
-    restrict: Optional[Any] = None,
+    restrict_by_label: Optional[Any] = None,
+    subdivision_type_id: Optional[int] = None,
+    other_subdivision_type: Optional[str] = None,
 ) -> pd.DataFrame:
-    if restrict:
-        census = f"""AND "Label" = '{restrict}'"""
+    """returns a dataframe with columns <fields>,
+    where each field is in the ExternalDataSource table.
+    If <major_subdivisions_only> is True, returns only major sub-divisions
+    (typically counties)"""
+    if restrict_by_label:
+        label_restriction = f""" AND "Label" = '{restrict_by_label}'"""
     else:
-        census = ""
+        label_restriction = ""
+    if subdivision_type_id:
+        sub_div_restriction = f""" AND "ReportingUnitType_Id" = {subdivision_type_id}  AND "OtherReportingUnitType" = '{other_subdivision_type}'  """
+    else:
+        sub_div_restriction = ""
     q = sql.SQL(
         """
         SELECT  DISTINCT "Category", "InCategoryOrder", {fields}
-        FROM    "External"
-        WHERE   "ElectionYear" = %s
-                AND "TopReportingUnit_Id" = %s
-                {census}
+        FROM    "ExternalData" ed
+        LEFT JOIN "ExternalDataSource" eds ON eds."Id" = ed."ExternalDataSource_Id"
+        LEFT JOIN "ReportingUnit" ru ON ru."Id" = ed."ReportingUnit_Id" -- sub-jurisdiction, typically county
+        WHERE   ed."Election_Id" = %s
+                AND ed."Jurisdiction_Id" = %s
+                {label_restriction}
+                {sub_div_restriction}
         ORDER BY "Category", "InCategoryOrder"
     """
     ).format(
         fields=sql.SQL(",").join(sql.Identifier(field) for field in fields),
-        census=sql.SQL(census),
+        label_restriction=sql.SQL(label_restriction),
+        sub_div_restriction=sql.SQL(sub_div_restriction),
     )
     try:
-        cursor.execute(q, [election_year, top_ru_id])
+        cursor.execute(q,[election_id,jurisdiction_id])
         results = cursor.fetchall()
         results_df = pd.DataFrame(
             results, columns=["Category", "InCategoryOrder"] + fields
@@ -1770,6 +1792,19 @@ def contest_families_by_juris(
 
     cursor.close()
     return result_df
+
+
+def id_othertext_from_plaintext(
+    session: Session, enum: str, plaintext: str
+) -> (Optional[int], Optional[str]):
+    lookup_df = pd.read_sql_table(enum, session.bind, index_col="Id")
+    if plaintext in lookup_df.Txt:
+        idx = lookup_df[lookup_df.Txt == plaintext].first_valid_index()
+        other_text = ""
+    else:
+        idx = lookup_df[lookup_df.Txt == "other"].first_valid_index()
+        other_text = plaintext
+    return idx, other_text
 
 
 def id_other_cols_to_enum(
