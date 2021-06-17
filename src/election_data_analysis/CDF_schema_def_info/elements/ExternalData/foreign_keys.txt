@@ -1,0 +1,5 @@
+fieldname	refers_to
+ReportingUnit_Id	ReportingUnit
+Election_Id	Election
+Jurisdiction_Id	ReportingUnit
+ExternalDataSource_Id	ExternalDataSource

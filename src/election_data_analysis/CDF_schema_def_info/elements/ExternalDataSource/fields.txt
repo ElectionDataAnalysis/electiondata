@@ -1,0 +1,6 @@
+fieldname	datatype
+ShortSource	String
+Category	String
+Label	String
+Year	Integer
+InCategoryOrder	Integer

@@ -1,0 +1,2 @@
+unique_constraint
+Jurisdiction_Id,ExternalDataSource_Id,ReportingUnit_Id,Election_Id

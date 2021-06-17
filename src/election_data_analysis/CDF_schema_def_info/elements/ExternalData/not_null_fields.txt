@@ -1,0 +1,5 @@
+not_null_fields
+Jurisdiction_Id
+ExternalDataSource_Id
+ReportingUnit_Id
+Election_Id
