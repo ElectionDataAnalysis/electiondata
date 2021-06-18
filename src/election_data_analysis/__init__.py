@@ -780,14 +780,67 @@ class DataLoader:
             self,
             data_file: str,
             source: str,
-            category: str,
-            label: str,
             year: str,
             note: str,
+            order_within_category: Optional[Dict[str, int]] = None,
+            replace_existing: bool = False,  # TODO
     ) -> Optional[dict]:
-        """<data_file>"""
+        """<data_file> has to be in particular form:
+        csv
+        columns: Category, Label, ReportingUnit, Value.
+        Choices of "Category and "Label"
+        will show up in analyze.display_options text.
+        ReportingUnit assumed to follow name convention internal to db.
+        order_within_category dictionary determines order within analyze.display_options"""
         err = None
-        # TODO
+        df = pd.read_csv(data_file)
+        # TODO check columns of df
+        df["Source"] = source
+        df["Year"] = year
+        df["Note"] = note
+
+        # determine order within category
+        category_list = df["Category"].unique()
+        if order_within_category is None:
+            order_within_category = {c: 0 for c in category_list}
+        else:
+            for c in category_list:
+                if c not in order_within_category.keys():
+                    order_within_category[c] = 0
+
+        # put info into ExternalDataSet table and retrieve Id
+        eds = df[["Category", "Label", "Source", "Year", "Note"]].drop_duplicates()
+        eds[""]
+        load_err = db.insert_to_cdf_db(
+            self.session.bind,
+            eds,
+            "ExternalDataSet",
+            "database",
+            f"Data from {data_file} did not load to ExternalDataSet",
+        )
+        if load_err:
+            err = ui.consolidate_errors([err, load_err])
+            return err
+
+        # put info into ExternalData
+        df = db.append_id_to_dframe(self.session.bind, df, "ExternalDataSet")
+        ru = pd.read_sql_table(
+            "ReportingUnit", self.session.bind
+        ).rename(columns={"Id": "ReportingUnit_Id"})
+        df = df.merge(
+            ru[["Id", "Name"]], how="left", left_on="ReportingUnit", right_on="Name"
+        )
+        ed = df[["Value", "ReportingUnit_Id", "ExternalDataSet_Id"]]
+        load_err = db.insert_to_cdf_db(
+            self.session.bind,
+            ed,
+            "ExternalData",
+            "database",
+            f"Data from {data_file} did not load to ExternalData",
+        )
+        if load_err:
+            err = ui.consolidate_errors([err, load_err])
+            return err
         return err
 
 
