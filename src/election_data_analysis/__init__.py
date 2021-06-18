@@ -20,6 +20,7 @@ from election_data_analysis import visualize as viz
 from election_data_analysis import juris_and_munger as jm
 from election_data_analysis import preparation as prep
 from election_data_analysis import nist_export as nist
+from election_data_analysis import externaldata as exd
 import itertools
 import shutil
 import json
@@ -851,11 +852,25 @@ class DataLoader:
         return err
 
     # TODO
-    def load_census_data(self, census_year: int, election: str, jurisdiction: str):
-        """Download census data by major subdivision for the given year and jurisdiction;
-        upload data to db; associate all datasets for the year to the election."""
-
-        # TODO should datasets be associated to election-jurisdiction pairs? That makes sense for display
+    def load_acs5_data(
+        self, census_year: int, election: str
+    ) -> Optional[dict]:
+        """Download census.gov American Community Survey data by county
+        for the given year;
+        upload data to db; associate all datasets for the year to election-juris
+        pairs for any juris that has nontrivial join."""
+        err = None
+        df = pd.DataFrame()
+        for category in exd.acs5_columns.keys():
+            columns_to_get = exd.acs5_columns[category].keys()
+            working = exd.get_raw_acs5_data(columns_to_get, census_year)
+            working = exd.combine_and_rename_columns(working, exd.acs_5_label_summands)
+            working = exd.normalize(working, exd.acs_5_label_summands.keys())
+            working["Category"] = category
+        df = pd.concat(df, working)
+        self.load_single_external_data_set()
+        # TODO
+        return err
 
 
 def check_par_file_elements(
