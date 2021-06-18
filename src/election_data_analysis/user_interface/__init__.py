@@ -1400,7 +1400,7 @@ def get_filtered_input_options(
         else:
             population = [
                 f"Population by {category}"
-                for category in sorted(population_df.category.unique())
+                for category in sorted(population_df.Category.unique())
             ]
 
         # get the vote count categories

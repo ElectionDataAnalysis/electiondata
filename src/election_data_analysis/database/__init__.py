@@ -1643,19 +1643,18 @@ def read_external(
         sub_div_restriction = ""
     q = sql.SQL(
         """
-        SELECT  DISTINCT "Category", "InCategoryOrder", {fields}
-        FROM "ElectionJurisdictionExternalDataSetJoin" ejedsj
-        LEFT JOIN "ComposingReportingUnitJoin" cruj ON cruj."ParentReportingUnit_Id" = ejedsj."Jurisdiction_Id"
+        SELECT  DISTINCT "Category", "OrderWithinCategory", {fields}
+        FROM "ElectionExternalDataSetJoin" eedsj
         LEFT JOIN "ExternalDataSet" eds ON eds."Id" = eedsj."ExternalDataSet_Id"
-        LEFT JOIN "ExternalData" ed ON (
-            eds."Id" = ed."ExternalDataSet_Id" AND cruj."ChildReportingUnit_Id" = ed."ReportingUnit_Id"
-        )      
+        LEFT JOIN "ExternalData" ed ON eds."Id" = ed."ExternalDataSet_Id"     
         LEFT JOIN "ReportingUnit" ru ON ru."Id" = ed."ReportingUnit_Id" -- sub-jurisdiction, typically county
-        WHERE   ejedsj."Election_Id" = %s
-                AND ejedsj."Jurisdiction_Id" = %s
+        LEFT JOIN "ComposingReportingUnitJoin" cruj ON cruj."ChildReportingUnit_Id" = ru."Id"
+ 
+        WHERE   eedsj."Election_Id" = %s
+                AND cruj."ParentReportingUnit_Id" = %s
                 {label_restriction}
                 {sub_div_restriction}
-        ORDER BY "Category", "InCategoryOrder"
+        ORDER BY "Category", "OrderWithinCategory"
     """
     ).format(
         fields=sql.SQL(",").join(sql.Identifier(field) for field in fields),

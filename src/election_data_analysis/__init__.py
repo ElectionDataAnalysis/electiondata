@@ -1662,7 +1662,7 @@ class Analyzer:
             results = ui.get_filtered_input_options(
                 self.session, input_str, filters_mapped
             )
-        except Exception:
+        except Exception as exc:
             results = None
         return results
 
