@@ -810,7 +810,7 @@ class DataLoader:
 
         # put info into ExternalDataSet table and retrieve Id
         eds = df[["Category", "Label", "Source", "Year", "Note"]].drop_duplicates()
-        eds[""]
+        eds["OrderWithinCategory"] = df["Category"].applymap(order_within_category)
         load_err = db.insert_to_cdf_db(
             self.session.bind,
             eds,
@@ -842,6 +842,13 @@ class DataLoader:
             err = ui.consolidate_errors([err, load_err])
             return err
         return err
+
+    # TODO
+    def load_census_data(self, census_year: int, election: str, jurisdiction: str):
+        """Download census data by major subdivision for the given year and jurisdiction;
+        upload data to db; associate all datasets for the year to the election. """
+
+        # TODO should datasets be associated to election-jurisdiction pairs? That makes sense for display
 
 
 def check_par_file_elements(
