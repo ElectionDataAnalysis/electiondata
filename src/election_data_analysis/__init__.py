@@ -776,6 +776,20 @@ class DataLoader:
             err_str = db.restore_to_db(dbname, dump_file, self.engine.url)
         return err_str
 
+    def load_single_external_data_set(
+            self,
+            data_file: str,
+            source: str,
+            category: str,
+            label: str,
+            year: str,
+            note: str,
+    ) -> Optional[dict]:
+        """<data_file>"""
+        err = None
+        # TODO
+        return err
+
 
 def check_par_file_elements(
     ini_d: dict,

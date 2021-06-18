@@ -1,3 +1,0 @@
-unique_constraint
-Id
-ShortSource,Category,Label,Year

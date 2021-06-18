@@ -590,7 +590,7 @@ def insert_to_cdf_db(
     mixed_int = [
         c  # TODO Selection_Id was numerical but not int here for AZ (xml)
         for c in temp_columns
-        if type_map[c] == "integer" and working[c].dtype != "int64"
+        if c in working.columns and type_map[c] == "integer" and working[c].dtype != "int64"
     ]
     for c in mixed_int:
         # set nulls to 0 (kludge because pandas can't have NaN in 'int64' column)
@@ -1608,7 +1608,7 @@ def read_external(
     other_subdivision_type: Optional[str] = None,
 ) -> pd.DataFrame:
     """returns a dataframe with columns <fields>,
-    where each field is in the ExternalDataSource table.
+    where each field is in the ExternalDataSet table.
     If <major_subdivisions_only> is True, returns only major sub-divisions
     (typically counties)"""
     if restrict_by_label:
@@ -1622,11 +1622,13 @@ def read_external(
     q = sql.SQL(
         """
         SELECT  DISTINCT "Category", "InCategoryOrder", {fields}
-        FROM    "ExternalData" ed
-        LEFT JOIN "ExternalDataSource" eds ON eds."Id" = ed."ExternalDataSource_Id"
+        FROM "ElectionExternalDataSetJoin" eedsj
+        LEFT JOIN "ExternalDataSet" eds ON eds."Id" = eedsj."ExternalDataSet_Id"
+        LEFT JOIN "ExternalData" ed ON eds."Id" = ed."ExternalDataSet_Id"        
         LEFT JOIN "ReportingUnit" ru ON ru."Id" = ed."ReportingUnit_Id" -- sub-jurisdiction, typically county
-        WHERE   ed."Election_Id" = %s
-                AND ed."Jurisdiction_Id" = %s
+        LEFT JOIN "ComposingReportingUnitJoin" cruj ON cruj."ChildReportingUnit_Id" = ru."Id"
+        WHERE   eedsj."Election_Id" = %s
+                AND cruj."ParentReportingUnit_Id" = %s
                 {label_restriction}
                 {sub_div_restriction}
         ORDER BY "Category", "InCategoryOrder"

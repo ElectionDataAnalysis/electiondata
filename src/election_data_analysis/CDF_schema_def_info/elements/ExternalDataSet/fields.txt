@@ -4,3 +4,4 @@ Category	String
 Label	String
 Year	Integer
 InCategoryOrder	Integer
+Note	String
