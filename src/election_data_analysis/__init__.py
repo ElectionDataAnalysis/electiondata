@@ -784,71 +784,84 @@ class DataLoader:
             err_str = db.restore_to_db(dbname, dump_file, self.engine.url)
         return err_str
 
+    def load_single_external_data_file(
+            self,
+            data_file: str,
+            source: str,
+            year: str,
+            note: str,
+            order_within_category: Optional[Dict[str,int]] = None,
+            replace_existing: bool = False,  # TODO
+    ) -> Optional[dict]:
+        df = pd.read_csv(data_file)
+        err = self.load_single_external_data_set(
+            df,
+            source,
+            year,
+            note,
+            order_within_category=order_within_category,
+            replace_existing=replace_existing,
+        )
+        return err
+
     def load_single_external_data_set(
         self,
-        data_file: str,
+        df: pd.DataFrame,
         source: str,
         year: str,
         note: str,
-        order_within_category: Optional[Dict[str, int]] = None,
         replace_existing: bool = False,  # TODO
     ) -> Optional[dict]:
         """<data_file> has to be in particular form:
         csv
-        columns: Category, Label, ReportingUnit, Value.
+        columns: Category, Label, OrderWithinCategory, ReportingUnit, Value.
         Choices of "Category and "Label"
         will show up in analyze.display_options text.
         ReportingUnit assumed to follow name convention internal to db.
         order_within_category dictionary determines order within analyze.display_options"""
         err = None
-        df = pd.read_csv(data_file)
         # TODO check columns of df
-        df["Source"] = source
-        df["Year"] = year
-        df["Note"] = note
-
-        # determine order within category
-        category_list = df["Category"].unique()
-        if order_within_category is None:
-            order_within_category = {c: 0 for c in category_list}
-        else:
-            for c in category_list:
-                if c not in order_within_category.keys():
-                    order_within_category[c] = 0
+        # TODO error handling
+        working = df.copy()
+        working["Source"] = source
+        working["Year"] = year
+        working["Note"] = note
 
         # put info into ExternalDataSet table and retrieve Id
-        eds = df[["Category", "Label", "Source", "Year", "Note"]].drop_duplicates()
-        eds["OrderWithinCategory"] = df["Category"].applymap(order_within_category)
+        eds = working[["Category","Label","OrderWithinCategory","Source","Year","Note"]].drop_duplicates().copy()
         load_err = db.insert_to_cdf_db(
             self.session.bind,
             eds,
             "ExternalDataSet",
             "database",
-            f"Data from {data_file} did not load to ExternalDataSet",
+            f"Data did not load to ExternalDataSet",
         )
         if load_err:
             err = ui.consolidate_errors([err, load_err])
             return err
 
         # put info into ExternalData
-        df = db.append_id_to_dframe(self.session.bind, df, "ExternalDataSet")
+        eds_col_map = {c:c for c in eds.columns}
+        working = db.append_id_to_dframe(self.session.bind,working,"ExternalDataSet",col_map=eds_col_map)
         ru = pd.read_sql_table("ReportingUnit", self.session.bind).rename(
             columns={"Id": "ReportingUnit_Id"}
         )
-        df = df.merge(
-            ru[["Id", "Name"]], how="left", left_on="ReportingUnit", right_on="Name"
+        working = working.merge(
+            ru[["ReportingUnit_Id", "Name"]], how="left", left_on="ReportingUnit", right_on="Name"
         )
-        ed = df[["Value", "ReportingUnit_Id", "ExternalDataSet_Id"]]
+        ed = working[working.ReportingUnit_Id.notnull()][["Value","ReportingUnit_Id","ExternalDataSet_Id"]]
         load_err = db.insert_to_cdf_db(
             self.session.bind,
             ed,
             "ExternalData",
             "database",
-            f"Data from {data_file} did not load to ExternalData",
+            f"Data from did not load to ExternalData",
         )
         if load_err:
             err = ui.consolidate_errors([err, load_err])
             return err
+        # TODO
+
         return err
 
     # TODO
