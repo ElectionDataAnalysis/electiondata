@@ -1637,19 +1637,22 @@ def read_external(
     else:
         label_restriction = ""
     if subdivision_type_id:
-        sub_div_restriction = f""" AND "ReportingUnitType_Id" = {subdivision_type_id}  AND "OtherReportingUnitType" = '{other_subdivision_type}'  """
+        sub_div_restriction = f""" AND "ReportingUnitType_Id" = {subdivision_type_id}  
+        AND "OtherReportingUnitType" = '{other_subdivision_type}'  """
     else:
         sub_div_restriction = ""
     q = sql.SQL(
         """
         SELECT  DISTINCT "Category", "InCategoryOrder", {fields}
-        FROM "ElectionExternalDataSetJoin" eedsj
+        FROM "ElectionJurisdictionExternalDataSetJoin" ejedsj
+        LEFT JOIN "ComposingReportingUnitJoin" cruj ON cruj."ParentReportingUnit_Id" = ejedsj."Jurisdiction_Id"
         LEFT JOIN "ExternalDataSet" eds ON eds."Id" = eedsj."ExternalDataSet_Id"
-        LEFT JOIN "ExternalData" ed ON eds."Id" = ed."ExternalDataSet_Id"        
+        LEFT JOIN "ExternalData" ed ON (
+            eds."Id" = ed."ExternalDataSet_Id" AND cruj."ChildReportingUnit_Id" = ed."ReportingUnit_Id"
+        )      
         LEFT JOIN "ReportingUnit" ru ON ru."Id" = ed."ReportingUnit_Id" -- sub-jurisdiction, typically county
-        LEFT JOIN "ComposingReportingUnitJoin" cruj ON cruj."ChildReportingUnit_Id" = ru."Id"
-        WHERE   eedsj."Election_Id" = %s
-                AND cruj."ParentReportingUnit_Id" = %s
+        WHERE   ejedsj."Election_Id" = %s
+                AND ejedsj."Jurisdiction_Id" = %s
                 {label_restriction}
                 {sub_div_restriction}
         ORDER BY "Category", "InCategoryOrder"

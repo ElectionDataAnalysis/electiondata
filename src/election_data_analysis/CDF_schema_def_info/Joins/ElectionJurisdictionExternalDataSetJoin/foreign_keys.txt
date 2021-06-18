@@ -1,3 +1,4 @@
 fieldname	refers_to
 Election_Id	Election
+Jurisdiction_Id	ReportingUnit
 ExternalDataSet_Id	ExternalDataSet
