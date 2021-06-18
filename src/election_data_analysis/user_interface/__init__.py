@@ -408,9 +408,7 @@ def get_row_constant_kwargs(kwargs: dict, rows_to_read: List[int]) -> dict:
     return rck
 
 
-def list_desired_excel_sheets(
-        f_path: str, p: dict
-) -> (Optional[list], Optional[dict]):
+def list_desired_excel_sheets(f_path: str, p: dict) -> (Optional[list], Optional[dict]):
     err = None
     file_name = Path(f_path).name
     if p["sheets_to_read_names"]:
@@ -427,8 +425,10 @@ def list_desired_excel_sheets(
                 all_sheets = xls.sheet_names()
             except Exception as exc:
                 err = add_new_error(
-                    err, "file", file_name,
-                    f"Error reading sheet names from Excel file ({f_path}): {exc}"
+                    err,
+                    "file",
+                    file_name,
+                    f"Error reading sheet names from Excel file ({f_path}): {exc}",
                 )
                 sheets_to_read = None
                 return sheets_to_read, err
@@ -672,7 +672,7 @@ def excel_to_dict(
                 f"Exception while reading rows {rows_to_read} from {sheet}\n"
                 f"with keyword arguments {row_constant_kwargs}\n"
                 f"in ui.excel_to_dict():\n"
-                f"{exc}"
+                f"{exc}",
             )
     return df_dict, row_constants, err
 
@@ -1320,9 +1320,9 @@ def get_contest_type_display(item: str) -> str:
 
 
 def get_filtered_input_options(
-        session: Session, menu_type: str, filters: List[str]
+    session: Session, menu_type: str, filters: List[str]
 ) -> List[Dict[str, Any]]:
-    """ Display dropdown menu options for menu <menu_type>, limited to any strings in <filters>
+    """Display dropdown menu options for menu <menu_type>, limited to any strings in <filters>
     (unless <filters> is None, in which case all are displayed. Sort as necessary"""
     df_cols = ["parent", "name", "type"]
     if menu_type == "election":
@@ -1398,7 +1398,10 @@ def get_filtered_input_options(
         if population_df.empty:
             population = []
         else:
-            population = [f"Population by {category}" for category in sorted(population_df.category.unique())]
+            population = [
+                f"Population by {category}"
+                for category in sorted(population_df.category.unique())
+            ]
 
         # get the vote count categories
         type_df = db.read_vote_count(
@@ -1494,7 +1497,7 @@ def get_filtered_input_options(
         )
         df_unordered = df_unordered[df_unordered["unit_type"].isin(filters)].copy()
         df_filtered = df_unordered[
-            df_unordered["name"].str.contains(menu_type,case=False)
+            df_unordered["name"].str.contains(menu_type, case=False)
         ].copy()
         df = clean_candidate_names(df_filtered[df_cols].copy())
     # TODO: handle the "All" and "other" options better

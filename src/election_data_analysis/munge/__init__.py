@@ -899,7 +899,7 @@ def raw_to_id_simple(
     juris_true_name,
     file_type: str,
 ) -> (pd.DataFrame, Optional[dict]):
-    """ Append ids to <df> for any row- or column- sourced elements given in <element_list>"""
+    """Append ids to <df> for any row- or column- sourced elements given in <element_list>"""
 
     err = None
     working = df.copy()
@@ -1683,7 +1683,7 @@ def get_and_check_munger_params(
 def get_string_fields_from_munger(
     munger_path: str,
 ) -> (List[str], Optional[dict]):
-    """Finds the field names expected by the munger formulas """
+    """Finds the field names expected by the munger formulas"""
     err = None
     formulas, new_err = ui.get_parameters(
         required_keys=[],

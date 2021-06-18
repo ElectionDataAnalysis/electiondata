@@ -305,7 +305,7 @@ class SingleDataLoader:
 
 
 class DataLoader:
-    def __new__(cls, param_file: str ="run_time.ini", dbname: Optional[str] = None):
+    def __new__(cls, param_file: str = "run_time.ini", dbname: Optional[str] = None):
         """Checks if parameter file exists and is correct. If not, does
         not create DataLoader object."""
 
@@ -347,13 +347,16 @@ class DataLoader:
         self.connect_to_db(err=err, dbname=dbname, db_param_file=param_file)
 
     def connect_to_db(
-            self, dbname: Optional[str] = None,
-            err: Optional[dict] = None,
-            db_param_file: str = "run_time.ini"
+        self,
+        dbname: Optional[str] = None,
+        err: Optional[dict] = None,
+        db_param_file: str = "run_time.ini",
     ):
         new_err = None
         try:
-            self.engine, new_err = db.sql_alchemy_connect(param_file=db_param_file, dbname=dbname)
+            self.engine, new_err = db.sql_alchemy_connect(
+                param_file=db_param_file, dbname=dbname
+            )
             Session = sessionmaker(bind=self.engine)
             self.session = Session()
         except Exception as e:
@@ -416,8 +419,10 @@ class DataLoader:
                 self.session,
                 sdl.d["jurisdiction"],
                 file_path=os.path.join(
-                    self.d["repository_content_root"], "jurisdictions","000_major_subjurisdiction_types.txt"
-                )
+                    self.d["repository_content_root"],
+                    "jurisdictions",
+                    "000_major_subjurisdiction_types.txt",
+                ),
             )
         else:
             rollup_rut = None
@@ -668,7 +673,7 @@ class DataLoader:
                     "ini",
                     "warn-ini",
                     "warn-database",
-                    "database"
+                    "database",
                 ],
             )
         #  report munger, jurisdiction and file errors & warnings
@@ -766,7 +771,9 @@ class DataLoader:
         already exist). Return error string"""
         connection = self.session.bind.raw_connection()
         cursor = connection.cursor()
-        err_str = db.create_database(connection, cursor, dbname=dbname, delete_existing=False)
+        err_str = db.create_database(
+            connection, cursor, dbname=dbname, delete_existing=False
+        )
 
         cursor.close()
         connection.close()
@@ -777,13 +784,13 @@ class DataLoader:
         return err_str
 
     def load_single_external_data_set(
-            self,
-            data_file: str,
-            source: str,
-            year: str,
-            note: str,
-            order_within_category: Optional[Dict[str, int]] = None,
-            replace_existing: bool = False,  # TODO
+        self,
+        data_file: str,
+        source: str,
+        year: str,
+        note: str,
+        order_within_category: Optional[Dict[str, int]] = None,
+        replace_existing: bool = False,  # TODO
     ) -> Optional[dict]:
         """<data_file> has to be in particular form:
         csv
@@ -824,9 +831,9 @@ class DataLoader:
 
         # put info into ExternalData
         df = db.append_id_to_dframe(self.session.bind, df, "ExternalDataSet")
-        ru = pd.read_sql_table(
-            "ReportingUnit", self.session.bind
-        ).rename(columns={"Id": "ReportingUnit_Id"})
+        ru = pd.read_sql_table("ReportingUnit", self.session.bind).rename(
+            columns={"Id": "ReportingUnit_Id"}
+        )
         df = df.merge(
             ru[["Id", "Name"]], how="left", left_on="ReportingUnit", right_on="Name"
         )
@@ -846,7 +853,7 @@ class DataLoader:
     # TODO
     def load_census_data(self, census_year: int, election: str, jurisdiction: str):
         """Download census data by major subdivision for the given year and jurisdiction;
-        upload data to db; associate all datasets for the year to the election. """
+        upload data to db; associate all datasets for the year to the election."""
 
         # TODO should datasets be associated to election-jurisdiction pairs? That makes sense for display
 
@@ -939,11 +946,12 @@ def check_and_init_singledataloader(
 
 
 class JurisdictionPrepper:
-    def __new__(cls,
-                prep_param_file: str = "jurisdiction_prep.ini",
-                run_time_param_file: str = "run_time.ini",
-                target_dir: Optional[str] = None
-                ):
+    def __new__(
+        cls,
+        prep_param_file: str = "jurisdiction_prep.ini",
+        run_time_param_file: str = "run_time.ini",
+        target_dir: Optional[str] = None,
+    ):
         """Checks if parameter file exists and is correct. If not, does
         not create JurisdictionPrepper object."""
         for param_file, required in [
@@ -971,9 +979,9 @@ class JurisdictionPrepper:
         return super().__new__(cls)
 
     def new_juris_files(
-            self,
-            target_dir: Optional[str] = None,
-            templates: Optional[str] = None,
+        self,
+        target_dir: Optional[str] = None,
+        templates: Optional[str] = None,
     ):
         """Create starter files in <target_dir>. If no <target_dir> is given, put the standard
         jurisdiction files into a subdirectory of the jurisdictions directory in the repo, and put
@@ -988,7 +996,10 @@ class JurisdictionPrepper:
         # default templates are from repo
         if not templates:
             templates = os.path.join(
-                project_root, "election_data_analysis", "juris_and_munger", "jurisdiction_templates"
+                project_root,
+                "election_data_analysis",
+                "juris_and_munger",
+                "jurisdiction_templates",
             )
         for element in ["Party", "Election"]:
             new_err = prep.add_defaults(self.d["jurisdiction_path"], templates, element)
@@ -1232,7 +1243,9 @@ class JurisdictionPrepper:
         err_str = ui.consolidate_errors([err_str, new_err])
         return err_str
 
-    def starter_dictionary(self, include_existing=True, target_dir: Optional[str] = None) -> dict:
+    def starter_dictionary(
+        self, include_existing=True, target_dir: Optional[str] = None
+    ) -> dict:
         """Creates a starter file for dictionary.txt, assuming raw_identifiers are the same as cdf_internal names.
         Puts file in the current directory. Returns error dictionary"""
         w = dict()
@@ -1269,9 +1282,7 @@ class JurisdictionPrepper:
         err = prep.write_element(
             starter_dict_dir, "dictionary", starter, file_name=starter_file_name
         )
-        print(
-            f"Starter dictionary created in {ssd_str}:\n{starter_file_name}"
-        )
+        print(f"Starter dictionary created in {ssd_str}:\n{starter_file_name}")
         return err
 
     def add_sub_county_rus(
@@ -1405,7 +1416,11 @@ class JurisdictionPrepper:
     def make_test_file(self, election: str):
         juris_true_name = self.d["name"]
         juris_abbr = self.d["abbreviated_name"]
-        tests_dir = os.path.join(Path(self.d["mungers_dir"]).parents[1], "tests", "specific_result_file_tests")
+        tests_dir = os.path.join(
+            Path(self.d["mungers_dir"]).parents[1],
+            "tests",
+            "specific_result_file_tests",
+        )
         juris_test_dir = os.path.join(tests_dir, self.d["system_name"])
         sample_test_dir = os.path.join(tests_dir, "20xx_test_templates")
         election_str = jm.system_name_from_true_name(election)
@@ -1470,11 +1485,12 @@ class JurisdictionPrepper:
             )
         return
 
-    def __init__(self,
-                 prep_param_file: str = "jurisdiction_prep.ini",
-                 run_time_param_file: str = "run_time.ini",
-                 target_dir: Optional[str] = None
-                 ):
+    def __init__(
+        self,
+        prep_param_file: str = "jurisdiction_prep.ini",
+        run_time_param_file: str = "run_time.ini",
+        target_dir: Optional[str] = None,
+    ):
         self.d = dict()
         # get parameters from jurisdiction_prep.ini and run_time.ini
         for param_file, required in [
@@ -1612,7 +1628,7 @@ class Analyzer:
         self, input_str: str, verbose: bool = True, filters: list = None
     ):
         """<input_str> is one of: 'election', 'jurisdiction', 'contest_type', 'contest',
-         'category' or 'count' """
+        'category' or 'count'"""
         try:
             filters_mapped = ui.get_contest_type_mappings(filters)
             results = ui.get_filtered_input_options(
@@ -1639,9 +1655,10 @@ class Analyzer:
         html, png, jpeg, webp, svg, pdf, and eps. Note that some filetypes may need plotly-orca
         installed as well."""
         jurisdiction_id = db.name_to_id(self.session, "ReportingUnit", jurisdiction)
-        subdivision_type_id, other_subdivision_type = db.get_major_subdiv_id_and_othertext(
-            self.session, jurisdiction_id
-        )
+        (
+            subdivision_type_id,
+            other_subdivision_type,
+        ) = db.get_major_subdiv_id_and_othertext(self.session, jurisdiction_id)
         h_election_id = db.name_to_id(self.session, "Election", h_election)
         v_election_id = db.name_to_id(self.session, "Election", v_election)
         # *_type is either candidates or contests or parties
@@ -1681,8 +1698,8 @@ class Analyzer:
         fig_type: str = None,
     ) -> list:
         """contest_type is an election district type, e.g.,
-         state, congressional, state-senate, state-house, territory, etc.
-         Complete list is given by the keys of <db.contest_type_mapping>"""
+        state, congressional, state-senate, state-house, territory, etc.
+        Complete list is given by the keys of <db.contest_type_mapping>"""
         election_id = db.name_to_id(self.session, "Election", election)
         jurisdiction_id = db.name_to_id(self.session, "ReportingUnit", jurisdiction)
         # for now, bar charts can only handle jurisdictions where county is one level
@@ -1765,7 +1782,7 @@ class Analyzer:
         )
         return err
 
-    def export_nist_v1_json(self,election: str,jurisdiction: str) -> dict:
+    def export_nist_v1_json(self, election: str, jurisdiction: str) -> dict:
         election_id = db.name_to_id(self.session, "Election", election)
         jurisdiction_id = db.name_to_id(self.session, "ReportingUnit", jurisdiction)
 
@@ -1800,7 +1817,6 @@ class Analyzer:
         """exports NIST v1 json string"""
         json_string = json.dumps(self.export_nist_v1_json(election, jurisdiction))
         return json_string
-
 
     def export_nist(
         self,
@@ -1878,7 +1894,9 @@ class Analyzer:
 
             # find major subdivision
             major_sub_ru_type_name = db.get_major_subdiv_type(
-                self.session, state, file_path=os.path.join(self.repository_content_root)
+                self.session,
+                state,
+                file_path=os.path.join(self.repository_content_root),
             )
 
             # get dataframe of results, adding column for political party
@@ -2512,7 +2530,9 @@ def load_or_reload_all(
         # if no test directory given, use tests from repo
         if not test_dir:
             test_dir = os.path.join(
-                Path(dataloader.d["repository_content_root"]).parent, "tests", "specific_result_file_tests",
+                Path(dataloader.d["repository_content_root"]).parent,
+                "tests",
+                "specific_result_file_tests",
             )
         # get relevant election-jurisdiction pairs
         ej_pairs = ui.election_juris_list(

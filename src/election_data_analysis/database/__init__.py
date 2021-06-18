@@ -97,14 +97,14 @@ contest_type_mappings = {
     "state-senate": "State Senate",
     "city": "Citywide",
     "ward": "Ward",
-    "territory": "Territory-wide"
+    "territory": "Territory-wide",
 }
 
 contest_types_model = contest_type_mappings.keys()
 
 
 def get_database_names(con: psycopg2.extensions.connection):
-    """Return dataframe with one column called `datname` """
+    """Return dataframe with one column called `datname`"""
     names = pd.read_sql("SELECT datname FROM pg_database", con)
     return names
 
@@ -177,16 +177,19 @@ def restore_to_db(dbname: str, dump_file: str, url: sqlalchemy.engine.url.URL) -
     # TODO does this work if a password is required?
     err_str = None
     # escape any spaces in dump_file path
-    cmd = f"pg_restore " \
-          f" -h {url.host} " \
-          f" -U {url.username} " \
-          f" -p {url.port}" \
-          f" -d {dbname} -F t {dump_file}"
+    cmd = (
+        f"pg_restore "
+        f" -h {url.host} "
+        f" -U {url.username} "
+        f" -p {url.port}"
+        f" -d {dbname} -F t {dump_file}"
+    )
     try:
         os.system(cmd)
     except Exception as exc:
         err_str = f"DB restore failed: {exc}"
     return err_str
+
 
 # TODO move to more appropriate module?
 def append_to_composing_reporting_unit_join(
@@ -352,7 +355,7 @@ def create_or_reset_db(
     # if dbname already exists.
     if dbname in db_df.datname.unique():
         # reset DB to blank
-        eng_new, err = sql_alchemy_connect(db_param_file,dbname=dbname)
+        eng_new, err = sql_alchemy_connect(db_param_file, dbname=dbname)
         Session_new = sqlalchemy.orm.sessionmaker(bind=eng_new)
         sess_new = Session_new()
         db_cdf.reset_db(
@@ -361,7 +364,7 @@ def create_or_reset_db(
         )
     else:
         create_database(con, cur, dbname)
-        eng_new, err = sql_alchemy_connect(db_param_file,dbname=dbname)
+        eng_new, err = sql_alchemy_connect(db_param_file, dbname=dbname)
         Session_new = sqlalchemy.orm.sessionmaker(bind=eng_new)
         sess_new = Session_new()
 
@@ -405,11 +408,13 @@ def sql_alchemy_connect(
     return engine, err
 
 
-def create_db_if_not_ok(dbname: Optional[str] = None, db_param_file: str = "run_time.ini") -> Optional[dict]:
+def create_db_if_not_ok(
+    dbname: Optional[str] = None, db_param_file: str = "run_time.ini"
+) -> Optional[dict]:
     # create db if it does not already exist and have right tables
     ok, err = test_connection(dbname=dbname, db_param_file=db_param_file)
     if not ok:
-        create_or_reset_db(dbname=dbname,db_param_file=db_param_file)
+        create_or_reset_db(dbname=dbname, db_param_file=db_param_file)
     return err
 
 
@@ -492,7 +497,7 @@ def name_to_id_cursor(
 
 
 def name_to_id(session: Session, element: str, name: str) -> Optional[int]:
-    """ Condition can be a field/value pair, e.g., ('contest_type','Candidate')"""
+    """Condition can be a field/value pair, e.g., ('contest_type','Candidate')"""
     connection = session.bind.raw_connection()
     cursor = connection.cursor()
     idx = name_to_id_cursor(cursor, element, name)
@@ -590,7 +595,9 @@ def insert_to_cdf_db(
     mixed_int = [
         c  # TODO Selection_Id was numerical but not int here for AZ (xml)
         for c in temp_columns
-        if c in working.columns and type_map[c] == "integer" and working[c].dtype != "int64"
+        if c in working.columns
+        and type_map[c] == "integer"
+        and working[c].dtype != "int64"
     ]
     for c in mixed_int:
         # set nulls to 0 (kludge because pandas can't have NaN in 'int64' column)
@@ -1005,7 +1012,9 @@ def get_relevant_contests(session: Session, filters: List[str]) -> pd.DataFrame:
     return result_df
 
 
-def get_major_subdiv_type(session: Session, jurisdiction: str, file_path: Optional[str] = None) -> Optional[str]:
+def get_major_subdiv_type(
+    session: Session, jurisdiction: str, file_path: Optional[str] = None
+) -> Optional[str]:
     """Returns the type of the major subdivision, if found. Tries first from <file_path> (if given);
     if that fails, or no file_path given, tries from database. If nothing found, returns None"""
     # if file is given, try to get the major subdivision type from the file
@@ -1024,10 +1033,12 @@ def get_major_subdiv_type(session: Session, jurisdiction: str, file_path: Option
 
 
 def get_major_subdiv_id_and_othertext(
-        session: Session, jurisdiction: str, file_path: Optional[str] = None
+    session: Session, jurisdiction: str, file_path: Optional[str] = None
 ) -> (Optional[int], Optional[str]):
     sub_div_type = get_major_subdiv_type(session, jurisdiction, file_path=file_path)
-    idx, other_text = id_othertext_from_plaintext(session, "ReportingUnitType", sub_div_type)
+    idx, other_text = id_othertext_from_plaintext(
+        session, "ReportingUnitType", sub_div_type
+    )
     return idx, other_text
 
 
@@ -1097,7 +1108,9 @@ def get_jurisdiction_hierarchy(
             q,
             [
                 jurisdiction_id,
-                tuple(contest_types_model),  # list of election-district reporting-unit types
+                tuple(
+                    contest_types_model
+                ),  # list of election-district reporting-unit types
                 jurisdiction_id,
                 jurisdiction_id,
             ],
@@ -1112,8 +1125,11 @@ def get_jurisdiction_hierarchy(
 
 
 def unsummed_vote_counts_with_rollup_subdivision_id(
-    session: Session, election_id: int, jurisdiction_id: int,
-        subdivision_type_id: int, other_subdivision_type: str,
+    session: Session,
+    election_id: int,
+    jurisdiction_id: int,
+    subdivision_type_id: int,
+    other_subdivision_type: str,
 ) -> pd.DataFrame:
     """Returns all vote counts for given election and jurisdiction, along with
     the id of the subdivision (e.g. county) containing the reporting unit (e.g., precinct)
@@ -1181,12 +1197,15 @@ def unsummed_vote_counts_with_rollup_subdivision_id(
     """
     )
     cursor.execute(
-        q, [
+        q,
+        [
             jurisdiction_id,
-            subdivision_type_id, other_subdivision_type,
-            subdivision_type_id, other_subdivision_type,
-            election_id
-        ]
+            subdivision_type_id,
+            other_subdivision_type,
+            subdivision_type_id,
+            other_subdivision_type,
+            election_id,
+        ],
     )
     result = cursor.fetchall()
     result_df = pd.DataFrame(result)
@@ -1537,7 +1556,9 @@ def read_vote_count(
     # accommodate "other" type election districts
     if "unit_type" in fields:
         other_mask = results_df[unit_type_alias] == "other"
-        results_df.loc[other_mask,[unit_type_alias]] = results_df[other_mask]["OtherReportingUnitType_internal_only"]
+        results_df.loc[other_mask, [unit_type_alias]] = results_df[other_mask][
+            "OtherReportingUnitType_internal_only"
+        ]
         results_df.drop("OtherReportingUnitType_internal_only", axis=1, inplace=True)
     return results_df
 
@@ -1639,7 +1660,7 @@ def read_external(
         sub_div_restriction=sql.SQL(sub_div_restriction),
     )
     try:
-        cursor.execute(q,[election_id,jurisdiction_id])
+        cursor.execute(q, [election_id, jurisdiction_id])
         results = cursor.fetchall()
         results_df = pd.DataFrame(
             results, columns=["Category", "InCategoryOrder"] + fields

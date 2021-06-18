@@ -386,7 +386,11 @@ def get_votecount_data(
     is_runoff: bool,
 ):
     unsummed = db.unsummed_vote_counts_with_rollup_subdivision_id(
-        session, election_id, jurisdiction_id, subdivision_type_id, other_subdivision_type,
+        session,
+        election_id,
+        jurisdiction_id,
+        subdivision_type_id,
+        other_subdivision_type,
     )
 
     # limit to relevant data - runoff
@@ -1042,11 +1046,11 @@ def dedupe_scatter_title(category, election, contest):
 
 
 def scatter_axis_title(
-        cursor: psycopg2.extensions.cursor,
-        category: str,
-        election: str,
-        contest_or_external: str,
-        jurisdiction_id: int
+    cursor: psycopg2.extensions.cursor,
+    category: str,
+    election: str,
+    contest_or_external: str,
+    jurisdiction_id: int,
 ) -> str:
     if contest_or_external.startswith("Population"):
         election_id = db.name_to_id_cursor(cursor, "Election", election)
@@ -1063,7 +1067,7 @@ def scatter_axis_title(
         data_source = df.iloc[0, "Source"]
         return f"{category} - {data_year} {data_source}"
     else:
-        title = dedupe_scatter_title(category,election,contest_or_external)
+        title = dedupe_scatter_title(category, election, contest_or_external)
         return ui.get_contest_type_display(title)
 
 
@@ -1135,7 +1139,7 @@ def nist_candidate_contest(session, election_id, jurisdiction_id):
 
 
 def nist_reporting_unit(session, election_id, jurisdiction_id):
-    """ A ReportingUnit is a GPUnit """
+    """A ReportingUnit is a GPUnit"""
     df = db.read_vote_count(
         session,
         election_id,
