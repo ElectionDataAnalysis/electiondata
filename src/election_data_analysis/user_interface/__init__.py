@@ -416,8 +416,10 @@ def list_desired_excel_sheets(f_path: str, p: dict) -> (Optional[list], Optional
     else:
         try:
             # read an xlsx file
-            xlsx = openpyxl.load_workbook(f_path)
-            all_sheets = xlsx.get_sheet_names()
+            xl = pd.ExcelFile(f_path)
+            all_sheets=xl.sheet_names
+            #xlsx = openpyxl.load_workbook(f_path)
+            #all_sheets = xlsx.get_sheet_names()
         except Exception as exc:
             try:
                 # read xls file
@@ -1463,13 +1465,14 @@ def get_filtered_input_options(
         jurisdiction_id = db.list_to_id(session, "ReportingUnit", filters)
         connection = session.bind.raw_connection()
         cursor = connection.cursor()
-        # TODO filter by major subdivision of jurisdiction
-        df = db.read_external(
+        df_unfiltered = db.read_external(
             cursor,
             election_id,
             jurisdiction_id,
             ["Source", "Label", "Category"],
         )
+        df = df_unfiltered[df_unfiltered.Category.isin(filters)]
+
         cursor.close()
     # check if it's looking for a count by party
     elif menu_type == "count":
