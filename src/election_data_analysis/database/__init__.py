@@ -33,6 +33,7 @@ from election_data_analysis import user_interface as ui
 # these form the universe of jurisdictions that can be displayed via the display_jurisdictions function.
 array_of_jurisdictions = """Alabama
 Alaska
+American Samoa
 Arizona
 Arkansas
 California
@@ -42,6 +43,7 @@ Delaware
 District of Columbia
 Florida
 Georgia
+Guam
 Hawaii
 Idaho
 Illinois
@@ -66,27 +68,25 @@ New Mexico
 New York
 North Carolina
 North Dakota
+Northern Mariana Islands
 Ohio
 Oklahoma
 Oregon
 Pennsylvania
+Puerto Rico
 Rhode Island
 South Carolina
 South Dakota
 Tennessee
 Texas
 Utah
+US Virgin Islands
 Vermont
 Virginia
 Washington
 West Virginia
 Wisconsin
-Wyoming
-American Samoa
-Guam
-Northern Mariana Islands
-Puerto Rico
-US Virgin Islands"""
+Wyoming"""
 
 db_pars = ["host", "port", "dbname", "user", "password"]
 
