@@ -6202,3 +6202,91 @@ CandidateContest	US House WI District 4	US House WI District 4
 CandidateContest	US House WI District 3	US House WI District 3
 CandidateContest	US House WI District 2	US House WI District 2
 CandidateContest	US House WI District 1	US House WI District 1
+Candidate	President R19 Boddie	President R19 Boddie
+Candidate	Mark Charles	Mark Charles
+Candidate	Kasey Wells	Kasey Wells
+Candidate	Kanye West	Kanye West
+Candidate	Joseph R. Biden	Joseph R. Biden
+Candidate	Jo Jorgensen	Jo Jorgensen
+Candidate	Jade Simmons	Jade Simmons
+Candidate	Howie Hawkins	Howie Hawkins
+Candidate	Gloria La Riva	Gloria La Riva
+Candidate	Don Blankenship	Don Blankenship
+Candidate	Brian Carroll	Brian Carroll
+Party	Republican Party	Republican Party
+Party	Independent Party	Independent Party
+Party	Democratic Party	Democratic Party
+Party	Constitution Party	Constitution Party
+ReportingUnit	Wisconsin;Wood County	Wisconsin;Wood County
+ReportingUnit	Wisconsin;Winnebago County	Wisconsin;Winnebago County
+ReportingUnit	Wisconsin;Waushara County	Wisconsin;Waushara County
+ReportingUnit	Wisconsin;Waupaca County	Wisconsin;Waupaca County
+ReportingUnit	Wisconsin;Waukesha County	Wisconsin;Waukesha County
+ReportingUnit	Wisconsin;Washington County	Wisconsin;Washington County
+ReportingUnit	Wisconsin;Washburn County	Wisconsin;Washburn County
+ReportingUnit	Wisconsin;Walworth County	Wisconsin;Walworth County
+ReportingUnit	Wisconsin;Vilas County	Wisconsin;Vilas County
+ReportingUnit	Wisconsin;Vernon County	Wisconsin;Vernon County
+ReportingUnit	Wisconsin;Trempealeau County	Wisconsin;Trempealeau County
+ReportingUnit	Wisconsin;Taylor County	Wisconsin;Taylor County
+ReportingUnit	Wisconsin;St. Croix County	Wisconsin;St. Croix County
+ReportingUnit	Wisconsin;Sheboygan County	Wisconsin;Sheboygan County
+ReportingUnit	Wisconsin;Shawano County	Wisconsin;Shawano County
+ReportingUnit	Wisconsin;Sawyer County	Wisconsin;Sawyer County
+ReportingUnit	Wisconsin;Sauk County	Wisconsin;Sauk County
+ReportingUnit	Wisconsin;Rusk County	Wisconsin;Rusk County
+ReportingUnit	Wisconsin;Rock County	Wisconsin;Rock County
+ReportingUnit	Wisconsin;Richland County	Wisconsin;Richland County
+ReportingUnit	Wisconsin;Racine County	Wisconsin;Racine County
+ReportingUnit	Wisconsin;Price County	Wisconsin;Price County
+ReportingUnit	Wisconsin;Portage County	Wisconsin;Portage County
+ReportingUnit	Wisconsin;Polk County	Wisconsin;Polk County
+ReportingUnit	Wisconsin;Pierce County	Wisconsin;Pierce County
+ReportingUnit	Wisconsin;Pepin County	Wisconsin;Pepin County
+ReportingUnit	Wisconsin;Ozaukee County	Wisconsin;Ozaukee County
+ReportingUnit	Wisconsin;Outagamie County	Wisconsin;Outagamie County
+ReportingUnit	Wisconsin;Oneida County	Wisconsin;Oneida County
+ReportingUnit	Wisconsin;Oconto County	Wisconsin;Oconto County
+ReportingUnit	Wisconsin;Monroe County	Wisconsin;Monroe County
+ReportingUnit	Wisconsin;Milwaukee County	Wisconsin;Milwaukee County
+ReportingUnit	Wisconsin;Menominee County	Wisconsin;Menominee County
+ReportingUnit	Wisconsin;Marquette County	Wisconsin;Marquette County
+ReportingUnit	Wisconsin;Marinette County	Wisconsin;Marinette County
+ReportingUnit	Wisconsin;Marathon County	Wisconsin;Marathon County
+ReportingUnit	Wisconsin;Manitowoc County	Wisconsin;Manitowoc County
+ReportingUnit	Wisconsin;Lincoln County	Wisconsin;Lincoln County
+ReportingUnit	Wisconsin;Langlade County	Wisconsin;Langlade County
+ReportingUnit	Wisconsin;Lafayette County	Wisconsin;Lafayette County
+ReportingUnit	Wisconsin;La Crosse County	Wisconsin;La Crosse County
+ReportingUnit	Wisconsin;Kewaunee County	Wisconsin;Kewaunee County
+ReportingUnit	Wisconsin;Kenosha County	Wisconsin;Kenosha County
+ReportingUnit	Wisconsin;Juneau County	Wisconsin;Juneau County
+ReportingUnit	Wisconsin;Jefferson County	Wisconsin;Jefferson County
+ReportingUnit	Wisconsin;Jackson County	Wisconsin;Jackson County
+ReportingUnit	Wisconsin;Iron County	Wisconsin;Iron County
+ReportingUnit	Wisconsin;Iowa County	Wisconsin;Iowa County
+ReportingUnit	Wisconsin;Green Lake County	Wisconsin;Green Lake County
+ReportingUnit	Wisconsin;Green County	Wisconsin;Green County
+ReportingUnit	Wisconsin;Grant County	Wisconsin;Grant County
+ReportingUnit	Wisconsin;Forest County	Wisconsin;Forest County
+ReportingUnit	Wisconsin;Fond du Lac County	Wisconsin;Fond du Lac County
+ReportingUnit	Wisconsin;Florence County	Wisconsin;Florence County
+ReportingUnit	Wisconsin;Eau Claire County	Wisconsin;Eau Claire County
+ReportingUnit	Wisconsin;Dunn County	Wisconsin;Dunn County
+ReportingUnit	Wisconsin;Douglas County	Wisconsin;Douglas County
+ReportingUnit	Wisconsin;Door County	Wisconsin;Door County
+ReportingUnit	Wisconsin;Dodge County	Wisconsin;Dodge County
+ReportingUnit	Wisconsin;Dane County	Wisconsin;Dane County
+ReportingUnit	Wisconsin;Crawford County	Wisconsin;Crawford County
+ReportingUnit	Wisconsin;Columbia County	Wisconsin;Columbia County
+ReportingUnit	Wisconsin;Clark County	Wisconsin;Clark County
+ReportingUnit	Wisconsin;Chippewa County	Wisconsin;Chippewa County
+ReportingUnit	Wisconsin;Calumet County	Wisconsin;Calumet County
+ReportingUnit	Wisconsin;Burnett County	Wisconsin;Burnett County
+ReportingUnit	Wisconsin;Buffalo County	Wisconsin;Buffalo County
+ReportingUnit	Wisconsin;Brown County	Wisconsin;Brown County
+ReportingUnit	Wisconsin;Bayfield County	Wisconsin;Bayfield County
+ReportingUnit	Wisconsin;Barron County	Wisconsin;Barron County
+ReportingUnit	Wisconsin;Ashland County	Wisconsin;Ashland County
+ReportingUnit	Wisconsin;Adams County	Wisconsin;Adams County
+
