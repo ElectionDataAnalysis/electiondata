@@ -1741,7 +1741,7 @@ class Analyzer:
         (
             subdivision_type_id,
             other_subdivision_type,
-        ) = db.get_major_subdiv_id_and_othertext(self.session, jurisdiction_id)
+        ) = db.get_major_subdiv_id_and_othertext(self.session, jurisdiction)
         h_election_id = db.name_to_id(self.session, "Election", h_election)
         v_election_id = db.name_to_id(self.session, "Election", v_election)
         # *_type is either candidates or contests or parties
@@ -1817,8 +1817,8 @@ class Analyzer:
             return "contests", input_str.replace("Contest", "").strip()
         elif input_str.startswith("Party"):
             return "parties", input_str.replace("Party", "").strip()
-        elif input_str == "Census data":
-            return "census", "total"
+        elif input_str.startswith("Population"):
+            return "Population", input_str.replace("Population", "").strip()
 
     def export_outlier_data(
         self,

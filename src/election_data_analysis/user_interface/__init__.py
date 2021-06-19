@@ -1401,10 +1401,7 @@ def get_filtered_input_options(
         if population_df.empty:
             population = []
         else:
-            population = [
-                f"Population by {category}"
-                for category in sorted(population_df.Category.unique())
-            ]
+            population =sorted(population_df.Category.unique())
 
         # get the vote count categories
         type_df = db.read_vote_count(

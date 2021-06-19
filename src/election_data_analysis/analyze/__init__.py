@@ -302,12 +302,13 @@ def get_data_for_scatter(
     count_type,
     is_runoff,
 ):
-    if count_type == "census":
-        return get_census_data(
+    if count_type.startswith("Population"):
+        return get_external_data(
             session,
             jurisdiction_id,
             election_id,
-            filter_str,
+            f"{count_type} {count_item_type}".strip(),  # category
+            filter_str,  # Label
             subdivision_type_id=subdivision_type_id,
             other_subdivision_type=other_subdivision_type,
         )
@@ -325,11 +326,12 @@ def get_data_for_scatter(
         )
 
 
-def get_census_data(
+def get_external_data(
     session,
     jurisdiction_id,
     election_id,
-    filter_str,
+    category,
+    label,
     subdivision_type_id,
     other_subdivision_type,
 ):
@@ -340,8 +342,9 @@ def get_census_data(
         cursor,
         election_id,
         jurisdiction_id,
-        ["Name", "Category", "Label", "Value"],
-        restrict_by_label=filter_str,
+        ["Name", "Category", "Label", "Value", "Source"],
+        restrict_by_label=label,
+        restrict_by_category=category,
         subdivision_type_id=subdivision_type_id,
         other_subdivision_type=other_subdivision_type,
     )
@@ -352,7 +355,7 @@ def get_census_data(
         census_df["Election_Id"] = election_id
         census_df["Contest_Id"] = 0
         census_df["Candidate_Id"] = 0
-        census_df["Contest"] = "Census data"
+        census_df["Contest"] = category
         census_df["CountItemType"] = "total"
         census_df.rename(
             columns={"Label": "Selection", "Value": "Count"},
@@ -1055,7 +1058,6 @@ def scatter_axis_title(
     if contest_or_external.startswith("Population"):
         election_id = db.name_to_id_cursor(cursor, "Election", election)
         # get the actual year of data and source of data
-        # TODO filter by major subdivision of jurisdiction
         df = db.read_external(
             cursor,
             election_id,
@@ -1063,8 +1065,8 @@ def scatter_axis_title(
             ["Year", "Source"],
             restrict_by_label=category,
         )
-        data_year = df.iloc[0, "Year"]
-        data_source = df.iloc[0, "Source"]
+        data_year = df.iloc[0]["Year"]
+        data_source = df.iloc[0]["Source"]
         return f"{category} - {data_year} {data_source}"
     else:
         title = dedupe_scatter_title(category, election, contest_or_external)

@@ -1035,11 +1035,16 @@ def get_major_subdiv_type(
 def get_major_subdiv_id_and_othertext(
     session: Session, jurisdiction: str, file_path: Optional[str] = None
 ) -> (Optional[int], Optional[str]):
+    if not file_path:
+        file_path = os.path.join(
+            Path(__file__).absolute().parents[1], "jurisdiction", "000_major_subjurisdiction_types.txt"
+        )
+
     sub_div_type = get_major_subdiv_type(session, jurisdiction, file_path=file_path)
     idx, other_text = id_othertext_from_plaintext(
         session, "ReportingUnitType", sub_div_type
     )
-    return idx, other_text
+    return int(idx), other_text
 
 
 def get_major_subdiv_from_file(f_path: str, jurisdiction: str) -> Optional[str]:
@@ -1625,6 +1630,7 @@ def read_external(
     jurisdiction_id: int,
     fields: list,
     restrict_by_label: Optional[Any] = None,
+    restrict_by_category: Optional[Any] = None,
     subdivision_type_id: Optional[int] = None,
     other_subdivision_type: Optional[str] = None,
 ) -> pd.DataFrame:
@@ -1636,6 +1642,10 @@ def read_external(
         label_restriction = f""" AND "Label" = '{restrict_by_label}'"""
     else:
         label_restriction = ""
+    if restrict_by_category:
+        category_restriction = f""" AND "Category" = '{restrict_by_category}'"""
+    else:
+        category_restriction = ""
     if subdivision_type_id:
         sub_div_restriction = f""" AND "ReportingUnitType_Id" = {subdivision_type_id}  
         AND "OtherReportingUnitType" = '{other_subdivision_type}'  """
@@ -1653,12 +1663,14 @@ def read_external(
         WHERE   eedsj."Election_Id" = %s
                 AND cruj."ParentReportingUnit_Id" = %s
                 {label_restriction}
+                {category_restriction}
                 {sub_div_restriction}
         ORDER BY "Category", "OrderWithinCategory"
     """
     ).format(
         fields=sql.SQL(",").join(sql.Identifier(field) for field in fields),
         label_restriction=sql.SQL(label_restriction),
+        category_restriction=sql.SQL(category_restriction),
         sub_div_restriction=sql.SQL(sub_div_restriction),
     )
     try:
@@ -1823,7 +1835,7 @@ def id_othertext_from_plaintext(
     session: Session, enum: str, plaintext: str
 ) -> (Optional[int], Optional[str]):
     lookup_df = pd.read_sql_table(enum, session.bind, index_col="Id")
-    if plaintext in lookup_df.Txt:
+    if plaintext in lookup_df.Txt.unique():
         idx = lookup_df[lookup_df.Txt == plaintext].first_valid_index()
         other_text = ""
     else:
