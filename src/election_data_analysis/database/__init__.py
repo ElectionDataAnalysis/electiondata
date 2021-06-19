@@ -1035,11 +1035,16 @@ def get_major_subdiv_type(
 def get_major_subdiv_id_and_othertext(
     session: Session, jurisdiction: str, file_path: Optional[str] = None
 ) -> (Optional[int], Optional[str]):
+    if not file_path:
+        file_path = os.path.join(
+            Path(__file__).absolute().parents[1], "jurisdiction", "000_major_subjurisdiction_types.txt"
+        )
+
     sub_div_type = get_major_subdiv_type(session, jurisdiction, file_path=file_path)
     idx, other_text = id_othertext_from_plaintext(
         session, "ReportingUnitType", sub_div_type
     )
-    return idx, other_text
+    return int(idx), other_text
 
 
 def get_major_subdiv_from_file(f_path: str, jurisdiction: str) -> Optional[str]:
@@ -1823,7 +1828,7 @@ def id_othertext_from_plaintext(
     session: Session, enum: str, plaintext: str
 ) -> (Optional[int], Optional[str]):
     lookup_df = pd.read_sql_table(enum, session.bind, index_col="Id")
-    if plaintext in lookup_df.Txt:
+    if plaintext in lookup_df.Txt.unique():
         idx = lookup_df[lookup_df.Txt == plaintext].first_valid_index()
         other_text = ""
     else:
