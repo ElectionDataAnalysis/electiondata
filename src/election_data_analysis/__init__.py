@@ -885,6 +885,44 @@ class DataLoader:
         # TODO
         return err
 
+    def temp_reload_existing_acs5_data(self, census_file: str) -> Optional[dict]:
+        """Transitional function for taking data from Version 1.0 system to later version (June 2021)
+        load data from census file exported from old db (e.g. census_no_ids.csv)"""
+        cdf = pd.read_csv(census_file,index_col=None)
+
+        els = pd.read_sql_table("Election",self.session.bind)
+        els = els.drop(5)
+        els["ElectionYear"] = els.Name.str[0:4]
+        els["ElectionYear"] = pd.to_numeric(els["ElectionYear"])
+
+        data_df = els.merge(cdf,how="left",on="ElectionYear").drop("Id",axis=1)
+
+        for y in [2016,2018]:
+            working = data_df[data_df.Year == y]
+
+            self.load_single_external_data_set(
+                working,
+                "American Community Survey 5",
+                y,
+                "",
+            )
+
+        col_map = {c:c for c in ["Category","Label","Year"]}
+        df_appended = db.append_id_to_dframe(
+            self.session.bind,data_df,"ExternalDataSet",col_map=col_map)
+        join_df = df_appended.merge(
+            els,on="Name"
+        ).rename(
+            columns={"Id":"Election_Id"}
+        )[["Election_Id","ExternalDataSet_Id"]]
+        err = db.insert_to_cdf_db(
+            self.session.bind,
+            join_df,
+            "ElectionExternalDataSetJoin",
+            "database",
+            "join data not loaded"
+        )
+        return err
 
 def check_par_file_elements(
     ini_d: dict,
