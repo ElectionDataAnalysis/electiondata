@@ -11,6 +11,7 @@ from sqlalchemy.orm.session import Session
 from typing import List, Dict, Optional, Any, Tuple
 import datetime
 import os
+import re
 import pandas as pd
 import inspect
 from pathlib import Path
@@ -686,6 +687,22 @@ class DataLoader:
         failure = {k: v for k, v in failure.items() if v}
 
         return success, failure, err
+
+    def strip_dates_from_results_folders(self) -> Dict[str, str]:
+        """some loading routines add date suffixes to folders after loading.
+        This routine removes the suffixes."""
+        rename: Dict[str, str] = dict()
+        p = re.compile(r"^(.*)_\d\d\d\d-\d\d-\d\d$")
+        for folder in os.listdir(self.d["results_dir"]):
+            if p.findall(folder):
+                juris = p.findall(folder)[0]
+                os.rename(
+                    os.path.join(self.d["results_dir"], folder),
+                    os.path.join(self.d["results_dir"], juris)
+                )
+                rename[folder] = juris
+        return rename
+
 
     def remove_data(
         self,
