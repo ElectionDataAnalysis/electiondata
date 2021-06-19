@@ -6078,3 +6078,127 @@ Candidate	Alex Seifert	Alex Seifert
 Candidate	Adam Y. Gerol	Adam Y. Gerol
 Candidate	Aaron M. Damrau	Aaron M. Damrau
 Candidate	Aaron B. Marcoux	Aaron B. Marcoux
+CandidateContest	WI Senate District 8	WI Senate District 8
+CandidateContest	WI Senate District 6	WI Senate District 6
+CandidateContest	WI Senate District 4	WI Senate District 4
+CandidateContest	WI Senate District 32	WI Senate District 32
+CandidateContest	WI Senate District 30	WI Senate District 30
+CandidateContest	WI Senate District 28	WI Senate District 28
+CandidateContest	WI Senate District 26	WI Senate District 26
+CandidateContest	WI Senate District 24	WI Senate District 24
+CandidateContest	WI Senate District 22	WI Senate District 22
+CandidateContest	WI Senate District 20	WI Senate District 20
+CandidateContest	WI Senate District 2	WI Senate District 2
+CandidateContest	WI Senate District 18	WI Senate District 18
+CandidateContest	WI Senate District 16	WI Senate District 16
+CandidateContest	WI Senate District 14	WI Senate District 14
+CandidateContest	WI Senate District 12	WI Senate District 12
+CandidateContest	WI Senate District 10	WI Senate District 10
+CandidateContest	WI House District 99	WI House District 99
+CandidateContest	WI House District 98	WI House District 98
+CandidateContest	WI House District 97	WI House District 97
+CandidateContest	WI House District 96	WI House District 96
+CandidateContest	WI House District 95	WI House District 95
+CandidateContest	WI House District 94	WI House District 94
+CandidateContest	WI House District 93	WI House District 93
+CandidateContest	WI House District 92	WI House District 92
+CandidateContest	WI House District 91	WI House District 91
+CandidateContest	WI House District 90	WI House District 90
+CandidateContest	WI House District 9	WI House District 9
+CandidateContest	WI House District 89	WI House District 89
+CandidateContest	WI House District 88	WI House District 88
+CandidateContest	WI House District 87	WI House District 87
+CandidateContest	WI House District 86	WI House District 86
+CandidateContest	WI House District 85	WI House District 85
+CandidateContest	WI House District 84	WI House District 84
+CandidateContest	WI House District 83	WI House District 83
+CandidateContest	WI House District 82	WI House District 82
+CandidateContest	WI House District 81	WI House District 81
+CandidateContest	WI House District 80	WI House District 80
+CandidateContest	WI House District 8	WI House District 8
+CandidateContest	WI House District 79	WI House District 79
+CandidateContest	WI House District 78	WI House District 78
+CandidateContest	WI House District 77	WI House District 77
+CandidateContest	WI House District 76	WI House District 76
+CandidateContest	WI House District 75	WI House District 75
+CandidateContest	WI House District 74	WI House District 74
+CandidateContest	WI House District 73	WI House District 73
+CandidateContest	WI House District 72	WI House District 72
+CandidateContest	WI House District 71	WI House District 71
+CandidateContest	WI House District 70	WI House District 70
+CandidateContest	WI House District 7	WI House District 7
+CandidateContest	WI House District 69	WI House District 69
+CandidateContest	WI House District 68	WI House District 68
+CandidateContest	WI House District 67	WI House District 67
+CandidateContest	WI House District 66	WI House District 66
+CandidateContest	WI House District 65	WI House District 65
+CandidateContest	WI House District 64	WI House District 64
+CandidateContest	WI House District 63	WI House District 63
+CandidateContest	WI House District 62	WI House District 62
+CandidateContest	WI House District 61	WI House District 61
+CandidateContest	WI House District 60	WI House District 60
+CandidateContest	WI House District 6	WI House District 6
+CandidateContest	WI House District 59	WI House District 59
+CandidateContest	WI House District 58	WI House District 58
+CandidateContest	WI House District 57	WI House District 57
+CandidateContest	WI House District 56	WI House District 56
+CandidateContest	WI House District 55	WI House District 55
+CandidateContest	WI House District 54	WI House District 54
+CandidateContest	WI House District 53	WI House District 53
+CandidateContest	WI House District 52	WI House District 52
+CandidateContest	WI House District 51	WI House District 51
+CandidateContest	WI House District 50	WI House District 50
+CandidateContest	WI House District 5	WI House District 5
+CandidateContest	WI House District 49	WI House District 49
+CandidateContest	WI House District 48	WI House District 48
+CandidateContest	WI House District 47	WI House District 47
+CandidateContest	WI House District 46	WI House District 46
+CandidateContest	WI House District 45	WI House District 45
+CandidateContest	WI House District 44	WI House District 44
+CandidateContest	WI House District 43	WI House District 43
+CandidateContest	WI House District 42	WI House District 42
+CandidateContest	WI House District 41	WI House District 41
+CandidateContest	WI House District 40	WI House District 40
+CandidateContest	WI House District 4	WI House District 4
+CandidateContest	WI House District 39	WI House District 39
+CandidateContest	WI House District 38	WI House District 38
+CandidateContest	WI House District 37	WI House District 37
+CandidateContest	WI House District 36	WI House District 36
+CandidateContest	WI House District 35	WI House District 35
+CandidateContest	WI House District 34	WI House District 34
+CandidateContest	WI House District 33	WI House District 33
+CandidateContest	WI House District 32	WI House District 32
+CandidateContest	WI House District 31	WI House District 31
+CandidateContest	WI House District 30	WI House District 30
+CandidateContest	WI House District 3	WI House District 3
+CandidateContest	WI House District 29	WI House District 29
+CandidateContest	WI House District 28	WI House District 28
+CandidateContest	WI House District 27	WI House District 27
+CandidateContest	WI House District 26	WI House District 26
+CandidateContest	WI House District 25	WI House District 25
+CandidateContest	WI House District 24	WI House District 24
+CandidateContest	WI House District 23	WI House District 23
+CandidateContest	WI House District 22	WI House District 22
+CandidateContest	WI House District 21	WI House District 21
+CandidateContest	WI House District 20	WI House District 20
+CandidateContest	WI House District 2	WI House District 2
+CandidateContest	WI House District 19	WI House District 19
+CandidateContest	WI House District 18	WI House District 18
+CandidateContest	WI House District 17	WI House District 17
+CandidateContest	WI House District 16	WI House District 16
+CandidateContest	WI House District 15	WI House District 15
+CandidateContest	WI House District 14	WI House District 14
+CandidateContest	WI House District 13	WI House District 13
+CandidateContest	WI House District 12	WI House District 12
+CandidateContest	WI House District 11	WI House District 11
+CandidateContest	WI House District 10	WI House District 10
+CandidateContest	WI House District 1	WI House District 1
+CandidateContest	US President (WI)	US President (WI)
+CandidateContest	US House WI District 8	US House WI District 8
+CandidateContest	US House WI District 7	US House WI District 7
+CandidateContest	US House WI District 6	US House WI District 6
+CandidateContest	US House WI District 5	US House WI District 5
+CandidateContest	US House WI District 4	US House WI District 4
+CandidateContest	US House WI District 3	US House WI District 3
+CandidateContest	US House WI District 2	US House WI District 2
+CandidateContest	US House WI District 1	US House WI District 1
