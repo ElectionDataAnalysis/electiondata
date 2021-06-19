@@ -891,7 +891,7 @@ class DataLoader:
         cdf = pd.read_csv(census_file,index_col=None)
 
         els = pd.read_sql_table("Election",self.session.bind)
-        els = els.drop(5)
+        els = els[els.Name != "none or unknown"]
         els["ElectionYear"] = els.Name.str[0:4]
         els["ElectionYear"] = pd.to_numeric(els["ElectionYear"])
 
