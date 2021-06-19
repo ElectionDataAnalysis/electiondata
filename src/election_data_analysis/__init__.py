@@ -1817,8 +1817,8 @@ class Analyzer:
             return "contests", input_str.replace("Contest", "").strip()
         elif input_str.startswith("Party"):
             return "parties", input_str.replace("Party", "").strip()
-        elif input_str == "Census data":
-            return "census", "total"
+        elif input_str.startswith("Population"):
+            return "Population", input_str.replace("Population", "").strip()
 
     def export_outlier_data(
         self,

@@ -302,12 +302,13 @@ def get_data_for_scatter(
     count_type,
     is_runoff,
 ):
-    if count_type == "census":
+    if count_type.startswith("Population"):
         return get_census_data(
             session,
             jurisdiction_id,
             election_id,
-            filter_str,
+            f"{count_type} {count_item_type}".strip(),  # category
+            filter_str,  # Label
             subdivision_type_id=subdivision_type_id,
             other_subdivision_type=other_subdivision_type,
         )
@@ -329,7 +330,8 @@ def get_census_data(
     session,
     jurisdiction_id,
     election_id,
-    filter_str,
+    category,
+    label,
     subdivision_type_id,
     other_subdivision_type,
 ):
@@ -341,7 +343,8 @@ def get_census_data(
         election_id,
         jurisdiction_id,
         ["Name", "Category", "Label", "Value"],
-        restrict_by_label=filter_str,
+        restrict_by_label=label,
+        restrict_by_category=category,
         subdivision_type_id=subdivision_type_id,
         other_subdivision_type=other_subdivision_type,
     )

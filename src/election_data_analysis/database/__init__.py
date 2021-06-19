@@ -1630,6 +1630,7 @@ def read_external(
     jurisdiction_id: int,
     fields: list,
     restrict_by_label: Optional[Any] = None,
+    restrict_by_category: Optional[Any] = None,
     subdivision_type_id: Optional[int] = None,
     other_subdivision_type: Optional[str] = None,
 ) -> pd.DataFrame:
@@ -1639,6 +1640,8 @@ def read_external(
     (typically counties)"""
     if restrict_by_label:
         label_restriction = f""" AND "Label" = '{restrict_by_label}'"""
+    if restrict_by_category:
+        category_restriction = f""" AND "Category" = '{restrict_by_category}'"""
     else:
         label_restriction = ""
     if subdivision_type_id:
@@ -1658,12 +1661,14 @@ def read_external(
         WHERE   eedsj."Election_Id" = %s
                 AND cruj."ParentReportingUnit_Id" = %s
                 {label_restriction}
+                {category_restriction}
                 {sub_div_restriction}
         ORDER BY "Category", "OrderWithinCategory"
     """
     ).format(
         fields=sql.SQL(",").join(sql.Identifier(field) for field in fields),
         label_restriction=sql.SQL(label_restriction),
+        category_restriction=sql.SQL(category_restriction),
         sub_div_restriction=sql.SQL(sub_div_restriction),
     )
     try:
