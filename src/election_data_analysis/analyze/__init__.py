@@ -1070,7 +1070,7 @@ def scatter_axis_title(
         data_source = df.iloc[0]["Source"]
         return f"{data_year} {contest_or_external_category} - {label}"
     else:
-        title = dedupe_scatter_title(label,election,contest_or_external_category)
+        title = dedupe_scatter_title(label, election, contest_or_external_category)
         return ui.get_contest_type_display(title)
 
 
