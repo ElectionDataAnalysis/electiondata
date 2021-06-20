@@ -4,13 +4,15 @@ from sqlalchemy.orm import Session
 import psycopg2
 import pandas as pd
 import inspect
-from election_data_analysis import user_interface as ui
-from election_data_analysis import munge as m
+from election_data_analysis import (
+    userinterface as ui,
+    munge as m,
+    database as db,
+)
 import datetime
 import os
 import numpy as np
 from pathlib import Path
-from election_data_analysis import database as db
 import scipy.spatial.distance as dist
 from scipy import stats
 import json
