@@ -7,7 +7,7 @@ from election_data_analysis import (
     analyze as a,
     nistformats as nist,
     visualize as viz,
-    externaldata as exd,run_tests,consolidate_errors,
+    externaldata as exd
 )
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy.orm.session import Session
@@ -24,7 +24,7 @@ import shutil
 import json
 
 # constants
-from election_data_analysis.userinterface import get_parameters,consolidate_errors,run_tests,add_new_error
+from election_data_analysis.userinterface import add_new_error
 
 sdl_pars_req = [
     "munger_list",
@@ -2687,7 +2687,7 @@ def reload_juris_election(
     # initialize dataloader
     err = None
     dl = DataLoader()
-    db_params, _ = get_parameters(
+    db_params, _ = ui.get_parameters(
         [
             "host",
             "port",
@@ -2716,10 +2716,10 @@ def reload_juris_election(
     )
     add_err = dl.add_totals_if_missing(election_name, juris_name)
     if add_err:
-        err = consolidate_errors([err, add_err])
+        err = ui.consolidate_errors([err, add_err])
     else:
         # run test files on temp db
-        failed_tests = run_tests(
+        failed_tests = ui.run_tests(
             test_dir,
             dl.d["dbname"],
             election_jurisdiction_list=[(election_name, juris_name)],
@@ -2747,7 +2747,7 @@ def reload_juris_election(
             )
             if success:
                 # run tests on live db
-                live_failed_tests = run_tests(
+                live_failed_tests = ui.run_tests(
                     test_dir,
                     dl.d["dbname"],
                     election_jurisdiction_list=[(election_name, juris_name)],
@@ -2756,7 +2756,7 @@ def reload_juris_election(
                 )
 
                 if live_failed_tests:
-                    err = add_new_error(
+                    err = ui.add_new_error(
                         err,
                         "database",
                         f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
@@ -2764,7 +2764,7 @@ def reload_juris_election(
                         f"But new data loaded to live db failed some tests:\n{live_failed_tests}",
                     )
             else:
-                err = consolidate_errors([err, new_err])
+                err = ui.consolidate_errors([err, new_err])
 
     # cleanup temp database
     if db_params["dbname"] == temp_db:
