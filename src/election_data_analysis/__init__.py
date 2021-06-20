@@ -2290,7 +2290,7 @@ def data_exists(
         return True
 
 
-def census_data_exists(
+def external_data_exists(
     election: str,
     jurisdiction: str,
     p_path: Optional[str] = None,
