@@ -11,6 +11,7 @@ from election_data_analysis import (
     userinterface as ui,
 )
 
+nist_version = "1.0"
 # constants set by issuer
 default_issuer = "unspecified user of code base at github.com/ElectionDataAnalysis/election_data_analysis"
 default_issuer_abbreviation = "unspecified"
