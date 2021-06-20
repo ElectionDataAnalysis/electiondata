@@ -1,11 +1,14 @@
+import election_data_analysis.juris
 from election_data_analysis import (
     database as db,
-    juris_and_munger as jm,
-    user_interface as ui,
+    juris as jm,
+    userinterface as ui,
     munge as m,
+    analyze as a,
+    nistformats as nist,
+    visualize as viz,
+    externaldata as exd,run_tests,consolidate_errors,
 )
-from election_data_analysis import user_interface as ui
-from election_data_analysis import munge as m
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy.orm.session import Session
 from typing import List, Dict, Optional, Any, Tuple
@@ -15,18 +18,14 @@ import re
 import pandas as pd
 import inspect
 from pathlib import Path
-import xml.etree.ElementTree as et
-from election_data_analysis import analyze as a
-from election_data_analysis import visualize as viz
-from election_data_analysis import juris_and_munger as jm
-from election_data_analysis import preparation as prep
-from election_data_analysis import nist_export as nist
-from election_data_analysis import externaldata as exd
+import xml.etree.ElementTree as ET
 import itertools
 import shutil
 import json
 
 # constants
+from election_data_analysis.userinterface import get_parameters,consolidate_errors,run_tests,add_new_error
+
 sdl_pars_req = [
     "munger_list",
     "results_file",
@@ -1091,11 +1090,11 @@ class JurisdictionPrepper:
             templates = os.path.join(
                 project_root,
                 "election_data_analysis",
-                "juris_and_munger",
+                "juris",
                 "jurisdiction_templates",
             )
         for element in ["Party", "Election"]:
-            new_err = prep.add_defaults(self.d["jurisdiction_path"], templates, element)
+            new_err = election_data_analysis.juris.add_defaults(self.d["jurisdiction_path"],templates,element)
             if new_err:
                 error = ui.consolidate_errors([error, new_err])
 
@@ -1119,9 +1118,9 @@ class JurisdictionPrepper:
 
         primaries = {}
         # read CandidateContest.txt, Party.txt and dictionary.txt
-        cc = prep.get_element(self.d["jurisdiction_path"], "CandidateContest")
-        p = prep.get_element(self.d["jurisdiction_path"], "Party")
-        d = prep.get_element(self.d["jurisdiction_path"], "dictionary")
+        cc = election_data_analysis.juris.get_element(self.d["jurisdiction_path"],"CandidateContest")
+        p = election_data_analysis.juris.get_element(self.d["jurisdiction_path"],"Party")
+        d = election_data_analysis.juris.get_element(self.d["jurisdiction_path"],"dictionary")
         # for each CandidateContest line in dictionary.txt with cdf_identifier in CandidateContest.txt
         # and for each Party line in dictionary.txt with cdf_identifier in Party.txt
         # append corresponding line in dictionary.txt
@@ -1143,7 +1142,7 @@ class JurisdictionPrepper:
             primaries[p["raw_identifier_value"]]["cdf_internal_name"] = primaries[
                 p["raw_identifier_value"]
             ].apply(
-                lambda row: prep.primary(
+                lambda row: election_data_analysis.juris.primary(
                     row, p["cdf_internal_name"], "contest_internal"
                 ),
                 axis=1,
@@ -1151,7 +1150,7 @@ class JurisdictionPrepper:
             primaries[p["raw_identifier_value"]]["raw_identifier_value"] = primaries[
                 p["raw_identifier_value"]
             ].apply(
-                lambda row: prep.primary(row, p["raw_identifier_value"], "contest_raw"),
+                lambda row: election_data_analysis.juris.primary(row,p["raw_identifier_value"],"contest_raw"),
                 axis=1,
             )
 
@@ -1164,7 +1163,7 @@ class JurisdictionPrepper:
             new_dictionary = pd.concat(df_list)
         else:
             new_dictionary = d
-        new_err = prep.write_element(
+        new_err = election_data_analysis.juris.write_element(
             self.d["jurisdiction_path"], "dictionary", new_dictionary
         )
         ui.consolidate_errors([error, new_err])
@@ -1198,9 +1197,9 @@ class JurisdictionPrepper:
                 count[k] = other_districts[k]["count"]
                 ru_type[k] = other_districts[k]["ReportingUnitType"]
 
-        w_office = prep.get_element(self.d["jurisdiction_path"], "Office")
-        w_ru = prep.get_element(self.d["jurisdiction_path"], "ReportingUnit")
-        w_cc = prep.get_element(self.d["jurisdiction_path"], "CandidateContest")
+        w_office = election_data_analysis.juris.get_element(self.d["jurisdiction_path"],"Office")
+        w_ru = election_data_analysis.juris.get_element(self.d["jurisdiction_path"],"ReportingUnit")
+        w_cc = election_data_analysis.juris.get_element(self.d["jurisdiction_path"],"CandidateContest")
         cols_off = ["Name", "ElectionDistrict"]
         cols_ru = ["Name", "ReportingUnitType"]
         cols_cc = ["Name", "NumberElected", "Office", "PrimaryParty"]
@@ -1270,7 +1269,7 @@ class JurisdictionPrepper:
         w_cc = w_cc.append(jw_cc, ignore_index=True)
 
         # write office df to Office.txt
-        new_err = prep.write_element(
+        new_err = election_data_analysis.juris.write_element(
             self.d["jurisdiction_path"], "Office", w_office.drop_duplicates()
         )
         if new_err:
@@ -1278,14 +1277,14 @@ class JurisdictionPrepper:
             if ui.fatal_error(new_err):
                 return err
 
-        new_err = prep.write_element(
+        new_err = election_data_analysis.juris.write_element(
             self.d["jurisdiction_path"], "ReportingUnit", w_ru.drop_duplicates()
         )
         if new_err:
             err = ui.consolidate_errors([err, new_err])
             if ui.fatal_error(new_err):
                 return err
-        new_err = prep.write_element(
+        new_err = election_data_analysis.juris.write_element(
             self.d["jurisdiction_path"], "CandidateContest", w_cc.drop_duplicates()
         )
         if new_err:
@@ -1301,7 +1300,7 @@ class JurisdictionPrepper:
         err_str = None
 
         # get contests that are not already primaries
-        contests = prep.get_element(self.d["jurisdiction_path"], "CandidateContest")
+        contests = election_data_analysis.juris.get_element(self.d["jurisdiction_path"],"CandidateContest")
         # TODO might have to check for '' as well as nulls
         non_p_contests = contests[contests["PrimaryParty"].isnull()]
         if non_p_contests.empty:
@@ -1309,7 +1308,7 @@ class JurisdictionPrepper:
             return err_str
 
         # get parties
-        parties = prep.get_element(self.d["jurisdiction_path"], "Party")
+        parties = election_data_analysis.juris.get_element(self.d["jurisdiction_path"],"Party")
         if parties.empty:
             if err_str:
                 err_str += (
@@ -1323,12 +1322,12 @@ class JurisdictionPrepper:
             p = party["Name"]
             primaries[p] = non_p_contests.copy()
             primaries[p]["Name"] = non_p_contests.apply(
-                lambda row: prep.primary(row, p, "Name"), axis=1
+                lambda row: election_data_analysis.juris.primary(row,p,"Name"), axis=1
             )
             primaries[p]["PrimaryParty"] = p
 
         all_primaries = [primaries[p] for p in parties.Name.unique()]
-        new_err = prep.write_element(
+        new_err = election_data_analysis.juris.write_element(
             self.d["jurisdiction_path"],
             "CandidateContest",
             pd.concat([contests] + all_primaries),
@@ -1350,11 +1349,11 @@ class JurisdictionPrepper:
             "Party",
             "ReportingUnit",
         ]
-        old = prep.get_element(self.d["jurisdiction_path"], "dictionary")
+        old = election_data_analysis.juris.get_element(self.d["jurisdiction_path"],"dictionary")
         if not include_existing:
             old.drop()
         for element in elements:
-            w[element] = prep.get_element(self.d["jurisdiction_path"], element)
+            w[element] = election_data_analysis.juris.get_element(self.d["jurisdiction_path"],element)
             name_field = db.get_name_field(element)
             w[element] = m.add_constant_column(w[element], "cdf_element", element)
             w[element].rename(columns={name_field: "cdf_internal_name"}, inplace=True)
@@ -1372,7 +1371,7 @@ class JurisdictionPrepper:
         else:
             ssd_str = "current directory (not in jurisdiction directory)"
             starter_dict_dir = "."
-        err = prep.write_element(
+        err = election_data_analysis.juris.write_element(
             starter_dict_dir, "dictionary", starter, file_name=starter_file_name
         )
         print(f"Starter dictionary created in {ssd_str}:\n{starter_file_name}")
@@ -1434,8 +1433,8 @@ class JurisdictionPrepper:
                     err_list.append(new_err)
             else:
                 # create raw -> internal dictionary of county_type names
-                jd_df = prep.get_element(self.d["jurisdiction_path"], "dictionary")
-                ru_df = prep.get_element(self.d["jurisdiction_path"], "ReportingUnit")
+                jd_df = election_data_analysis.juris.get_element(self.d["jurisdiction_path"],"dictionary")
+                ru_df = election_data_analysis.juris.get_element(self.d["jurisdiction_path"],"ReportingUnit")
                 internal = (
                     jd_df[jd_df["cdf_element"] == "ReportingUnit"]
                     .merge(
@@ -1454,7 +1453,7 @@ class JurisdictionPrepper:
                 good_vals = [v for v in vals if county[v] in internal.keys()]
 
                 # write to ReportingUnit.txt
-                new_err = prep.write_element(
+                new_err = election_data_analysis.juris.write_element(
                     self.d["jurisdiction_path"],
                     "ReportingUnit",
                     pd.concat(
@@ -1477,7 +1476,7 @@ class JurisdictionPrepper:
                     err_list.append(new_err)
 
                 # write to dictionary.txt
-                new_err = prep.write_element(
+                new_err = election_data_analysis.juris.write_element(
                     self.d["jurisdiction_path"],
                     "dictionary",
                     pd.concat(
@@ -1918,7 +1917,7 @@ class Analyzer:
         major_subdivision: Optional[str] = None,
     ) -> str:
         """exports NIST v2 xml string"""
-        xml_string = et.tostring(
+        xml_string = ET.tostring(
             nist.nist_v2_xml_export_tree(
                 self.session,
                 election,
@@ -2636,7 +2635,7 @@ def load_or_reload_all(
             # process each election-jurisdiction pair
             for (election, jurisdiction) in ej_pairs:
                 # if new results pass test, remove old if exists and load new
-                new_err = ui.reload_juris_election(
+                new_err = reload_juris_election(
                     jurisdiction,
                     election,
                     test_dir,
@@ -2660,4 +2659,103 @@ def load_or_reload_all(
             f"No dataloader created; check that {current_directory}/run_time.ini exists "
             f"and has all necessary parameters."
         )
+    return err
+
+
+def reload_juris_election(
+    juris_name: str,
+    election_name: str,
+    test_dir: str,
+    report_dir,
+    rollup: bool = False,
+) -> Optional[dict]:
+    """Loads and archives each results file in each direct subfolder of the results_dir
+    named in ./run_time.ini -- provided there the results file is specified in a *.ini file in the
+    corresponding subfolder of <content_root>/ini_files_for_results. <contest_root> is read from ./run_time.ini.
+    """
+    # initialize dataloader
+    err = None
+    dl = DataLoader()
+    db_params, _ = get_parameters(
+        [
+            "host",
+            "port",
+            "dbname",
+            "user",
+            "password",
+        ],
+        "run_time.ini",
+        "postgresql",
+    )
+
+    # create temp_db (preserving live db name)
+    live_db = dl.session.bind.url.database
+    ts = datetime.datetime.now().strftime("%m%d_%H%M")
+    temp_db = f"{live_db}_test_{ts}"
+    db_params["dbname"] = temp_db
+    db.create_or_reset_db(dbname=temp_db)
+
+    # load all data into temp db
+    dl.change_db(temp_db)
+    dl.load_all(
+        report_dir=report_dir,
+        move_files=False,
+        rollup=rollup,
+        election_jurisdiction_list=[(election_name, juris_name)],
+    )
+    add_err = dl.add_totals_if_missing(election_name, juris_name)
+    if add_err:
+        err = consolidate_errors([err, add_err])
+    else:
+        # run test files on temp db
+        failed_tests = run_tests(
+            test_dir,
+            dl.d["dbname"],
+            election_jurisdiction_list=[(election_name, juris_name)],
+            report_dir=report_dir,
+            file_prefix="temp_db_",
+        )
+        if failed_tests:
+            print(
+                f"{juris_name} {election_name}: No old data removed and no new data loaded because of failed tests:\n{failed_tests}"
+            )
+        else:
+            # switch to live db
+            dl.change_db(live_db)
+            # Remove existing data for juris-election pair from live db
+            election_id = db.name_to_id(dl.session, "Election", election_name)
+            juris_id = db.name_to_id(dl.session, "ReportingUnit", juris_name)
+            if election_id and juris_id:
+                dl.remove_data(election_id, juris_id)
+
+            # Load new data into live db (and move successful to archive)
+            success, failure, new_err = dl.load_all(
+                report_dir=report_dir,
+                rollup=rollup,
+                election_jurisdiction_list=[(election_name, juris_name)],
+            )
+            if success:
+                # run tests on live db
+                live_failed_tests = run_tests(
+                    test_dir,
+                    dl.d["dbname"],
+                    election_jurisdiction_list=[(election_name, juris_name)],
+                    report_dir=report_dir,
+                    file_prefix="live_db_",
+                )
+
+                if live_failed_tests:
+                    err = add_new_error(
+                        err,
+                        "database",
+                        f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
+                        f"Data loaded successfully to test db, so old data was removed from live db.\n"
+                        f"But new data loaded to live db failed some tests:\n{live_failed_tests}",
+                    )
+            else:
+                err = consolidate_errors([err, new_err])
+
+    # cleanup temp database
+    if db_params["dbname"] == temp_db:
+        db.remove_database(db_params)
     return err

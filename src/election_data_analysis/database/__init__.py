@@ -10,25 +10,23 @@ import csv
 import inspect
 from psycopg2.extensions import ISOLATION_LEVEL_AUTOCOMMIT
 from pathlib import Path
-
-
-# import the error handling libraries for psycopg2
-from psycopg2 import OperationalError, errorcodes, errors
 from psycopg2 import sql
 import sqlalchemy as db
 import datetime
 from configparser import MissingSectionHeaderError
 import pandas as pd
-from election_data_analysis import munge as m
-import re
+from election_data_analysis import (
+    munge as m,analyze as an,
+)
 from election_data_analysis.database import create_cdf_db as db_cdf
+import re
 import os
 
 # sqlalchemy imports below are necessary, even if syntax-checker doesn't think so!
 from sqlalchemy import MetaData, Table, Column, Integer, Float
 
 from typing import Optional, List, Dict, Any, Iterable, Set
-from election_data_analysis import user_interface as ui
+from election_data_analysis import userinterface as ui
 
 # these form the universe of jurisdictions that can be displayed via the display_jurisdictions function.
 array_of_jurisdictions = """Alabama
@@ -1974,3 +1972,91 @@ def get_vote_count_types(
     vct_set = get_vote_count_types_cursor(cursor, election, jurisdiction)
     connection.close()
     return vct_set
+
+
+def read_vote_count_nist(
+    session: Session,
+    election_id: int,
+    reporting_unit_id: int,
+    rollup_ru_type: Optional[str] = None,
+) -> pd.DataFrame:
+    """The VoteCount table is the only place that maps contests to a specific
+    election. But this table is the largest one, so we don't want to use pandas methods
+    to read into a DF and then filter"""
+
+    fields = [
+        "ReportingUnitType_Id",
+        "Party_Id",
+        "PartyName",
+        "Candidate_Id",
+        "BallotName",
+        "Contest_Id",
+        "ContestType",
+        "ElectionDistrict_Id",
+        "ContestName",
+        "Selection_Id",
+        "ReportingUnit_Id",
+        "CountItemType",
+        "OtherCountItemType",
+        "Count",
+    ]
+    q = sql.SQL(
+        """
+        SELECT  DISTINCT {fields}
+        FROM    (
+                    SELECT  "Id" as "VoteCount_Id", "Contest_Id", "Selection_Id",
+                            "ReportingUnit_Id", "Election_Id", "CountItemType_Id", 
+                            "OtherCountItemType", "Count"
+                    FROM    "VoteCount"
+                ) vc
+                JOIN (SELECT "Id", "Name" as "ContestName" , contest_type as "ContestType" FROM "Contest") con on vc."Contest_Id" = con."Id"
+                JOIN "ComposingReportingUnitJoin" cruj ON vc."ReportingUnit_Id" = cruj."ChildReportingUnit_Id"
+                JOIN "CandidateSelection" cs ON vc."Selection_Id" = cs."Id"
+                JOIN "Candidate" c on cs."Candidate_Id" = c."Id"
+                JOIN (SELECT "Id", "Name" AS "PartyName" FROM "Party") p ON cs."Party_Id" = p."Id"
+                JOIN "CandidateContest" cc ON con."Id" = cc."Id"
+                JOIN (SELECT "Id", "Name" as "OfficeName", "ElectionDistrict_Id" FROM "Office") o on cc."Office_Id" = o."Id"
+                -- this reporting unit info refers to the districts (state house, state senate, etc)
+                JOIN (SELECT "Id", "Name" AS "ReportingUnitName", "ReportingUnitType_Id" FROM "ReportingUnit") ru on o."ElectionDistrict_Id" = ru."Id"
+                JOIN (SELECT "Id", "Txt" AS unit_type FROM "ReportingUnitType") rut on ru."ReportingUnitType_Id" = rut."Id"
+                -- this reporting unit info refers to the geopolitical divisions (county, state, etc)
+                JOIN (SELECT "Id" as "GP_Id", "Name" AS "GPReportingUnitName", "ReportingUnitType_Id" AS "GPReportingUnitType_Id" FROM "ReportingUnit") gpru on vc."ReportingUnit_Id" = gpru."GP_Id"
+                JOIN (SELECT "Id", "Txt" AS "GPType" FROM "ReportingUnitType") gprut on gpru."GPReportingUnitType_Id" = gprut."Id"
+                JOIN (SELECT "Id", "Name" as "ElectionName", "ElectionType_Id", "OtherElectionType" FROM "Election") e on vc."Election_Id" = e."Id"
+                JOIN (SELECT "Id", "Txt" as "ElectionType" FROM "ElectionType") et on e."ElectionType_Id" = et."Id"
+                JOIN (SELECT "Id", "Txt" as "CountItemType" FROM "CountItemType") cit on vc."CountItemType_Id" = cit."Id"
+        WHERE   "Election_Id" = %s
+                AND "ParentReportingUnit_Id" = %s
+        """
+    ).format(
+        fields=sql.SQL(",").join(sql.Identifier(field) for field in fields),
+    )
+    connection = session.bind.raw_connection()
+    cursor = connection.cursor()
+    cursor.execute(q, [election_id, reporting_unit_id])
+    results = cursor.fetchall()
+    unrolled_df = pd.DataFrame(results, columns=fields)
+
+    if rollup_ru_type:
+        results_df, new_err = an.rollup_dataframe(
+            session,
+            unrolled_df,
+            "Count",
+            "ReportingUnit_Id",
+            "ReportingUnit_Id",
+            rollup_rut=rollup_ru_type,
+            ignore=["ReportingUnitType_Id"],
+        )
+        # add ReportingUnitType_Id column
+        # TODO error handling -- what if sub_type is non-standard?
+        rut = pd.read_sql_table("ReportingUnitType", session.bind, index_col="Id")
+        sub_type_id = rut[rut.Txt == rollup_ru_type].first_valid_index()
+        results_df = m.add_constant_column(
+            results_df, "ReportingUnitType_Id", sub_type_id, dtype="int"
+        )
+
+        #  What happened to OtherReportingUnitType? Might need it.
+        #  NB: the ReportingUnitType_Id from read_vote_count is the Election District type
+    else:
+        results_df = unrolled_df
+    return results_df

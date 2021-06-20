@@ -4,15 +4,17 @@ from configparser import (
     DuplicateOptionError,
     ParsingError,
 )
-from election_data_analysis import special_formats as sf
-from election_data_analysis import database as db
-from election_data_analysis import munge as m
-import election_data_analysis as e
+
+from election_data_analysis import (
+    database as db,
+    munge as m,
+    juris as jm,
+    nistformats as nist,
+)
 import pandas as pd
 from pandas.errors import ParserError
 import os
 from pathlib import Path
-from election_data_analysis import juris_and_munger as jm
 from typing import Optional, Dict, Any, List
 import datetime
 import csv
@@ -488,18 +490,18 @@ def read_single_datafile(
     try:
         if p["file_type"] in ["xml"]:
             if driving_path:
-                temp_d = sf.tree_parse_info(driving_path, None)
+                temp_d = nist.tree_parse_info(driving_path,None)
                 driver = {"main_path": temp_d["path"], "main_attrib": temp_d["attrib"]}
             else:
-                driver = sf.xml_count_parse_info(p, ignore_namespace=True)
-            xml_path_info = sf.xml_string_path_info(p["munge_fields"], p["namespace"])
+                driver = nist.xml_count_parse_info(p,ignore_namespace=True)
+            xml_path_info = nist.xml_string_path_info(p["munge_fields"],p["namespace"])
             tree = et.parse(f_path)
-            df, err = sf.df_from_tree(
+            df, err = nist.df_from_tree(
                 tree,
                 xml_path_info=xml_path_info,
                 file_name=file_name,
                 **driver,
-                namespace=p["namespace"],
+                ns=p["namespace"],
                 lookup_id=lookup_id,
             )
             if not fatal_error(err):
@@ -1189,105 +1191,6 @@ def election_juris_list(ini_path: str, results_path: Optional[str] = None) -> li
                         # include the pair in the output
                         ej_set.update({(d["election"], d["jurisdiction"])})
     return list(ej_set)
-
-
-def reload_juris_election(
-    juris_name: str,
-    election_name: str,
-    test_dir: str,
-    report_dir,
-    rollup: bool = False,
-) -> Optional[dict]:
-    """Loads and archives each results file in each direct subfolder of the results_dir
-    named in ./run_time.ini -- provided there the results file is specified in a *.ini file in the
-    corresponding subfolder of <content_root>/ini_files_for_results. <contest_root> is read from ./run_time.ini.
-    """
-    # initialize dataloader
-    err = None
-    dl = e.DataLoader()
-    db_params, _ = get_parameters(
-        [
-            "host",
-            "port",
-            "dbname",
-            "user",
-            "password",
-        ],
-        "run_time.ini",
-        "postgresql",
-    )
-
-    # create temp_db (preserving live db name)
-    live_db = dl.session.bind.url.database
-    ts = datetime.datetime.now().strftime("%m%d_%H%M")
-    temp_db = f"{live_db}_test_{ts}"
-    db_params["dbname"] = temp_db
-    db.create_or_reset_db(dbname=temp_db)
-
-    # load all data into temp db
-    dl.change_db(temp_db)
-    dl.load_all(
-        report_dir=report_dir,
-        move_files=False,
-        rollup=rollup,
-        election_jurisdiction_list=[(election_name, juris_name)],
-    )
-    add_err = dl.add_totals_if_missing(election_name, juris_name)
-    if add_err:
-        err = consolidate_errors([err, add_err])
-    else:
-        # run test files on temp db
-        failed_tests = run_tests(
-            test_dir,
-            dl.d["dbname"],
-            election_jurisdiction_list=[(election_name, juris_name)],
-            report_dir=report_dir,
-            file_prefix="temp_db_",
-        )
-        if failed_tests:
-            print(
-                f"{juris_name} {election_name}: No old data removed and no new data loaded because of failed tests:\n{failed_tests}"
-            )
-        else:
-            # switch to live db
-            dl.change_db(live_db)
-            # Remove existing data for juris-election pair from live db
-            election_id = db.name_to_id(dl.session, "Election", election_name)
-            juris_id = db.name_to_id(dl.session, "ReportingUnit", juris_name)
-            if election_id and juris_id:
-                dl.remove_data(election_id, juris_id)
-
-            # Load new data into live db (and move successful to archive)
-            success, failure, new_err = dl.load_all(
-                report_dir=report_dir,
-                rollup=rollup,
-                election_jurisdiction_list=[(election_name, juris_name)],
-            )
-            if success:
-                # run tests on live db
-                live_failed_tests = run_tests(
-                    test_dir,
-                    dl.d["dbname"],
-                    election_jurisdiction_list=[(election_name, juris_name)],
-                    report_dir=report_dir,
-                    file_prefix="live_db_",
-                )
-
-                if live_failed_tests:
-                    err = add_new_error(
-                        err,
-                        "database",
-                        f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
-                        f"Data loaded successfully to test db, so old data was removed from live db.\n"
-                        f"But new data loaded to live db failed some tests:\n{live_failed_tests}",
-                    )
-            else:
-                err = consolidate_errors([err, new_err])
-
-    # cleanup temp database
-    if db_params["dbname"] == temp_db:
-        db.remove_database(db_params)
-    return err
 
 
 def get_contest_type_mappings(filters: list) -> Optional[list]:
