@@ -1879,7 +1879,7 @@ class Analyzer:
     ) -> str:
         """picks either version 1.0 (json) or version 2.0 (xml) based on value of nistformats.nist_version"""
         if nist.nist_version == "1.0":
-            return self.export_nist_v1(election, jurisdiction)
+            return self.export_nist_v1_json(election, jurisdiction)
         elif nist.nist_version == "2.0":
             return self.export_nist_v2(election, jurisdiction, major_subdivision)
         else:
