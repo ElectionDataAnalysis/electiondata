@@ -1640,10 +1640,12 @@ def read_external(
     (typically counties)"""
     if restrict_by_label:
         label_restriction = f""" AND "Label" = '{restrict_by_label}'"""
+    else:
+        label_restriction = ""
     if restrict_by_category:
         category_restriction = f""" AND "Category" = '{restrict_by_category}'"""
     else:
-        label_restriction = ""
+        category_restriction = ""
     if subdivision_type_id:
         sub_div_restriction = f""" AND "ReportingUnitType_Id" = {subdivision_type_id}  
         AND "OtherReportingUnitType" = '{other_subdivision_type}'  """
