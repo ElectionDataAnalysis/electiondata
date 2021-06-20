@@ -1874,6 +1874,17 @@ class Analyzer:
         )
         return err
 
+    def export_nist(
+            self, election: str, jurisdiction, major_subdivision: Optional[str] = None
+    ) -> str:
+        """picks either version 1.0 (json) or version 2.0 (xml) based on value of nistformats.nist_version"""
+        if nist.nist_version == "1.0":
+            return self.export_nist_v1(election, jurisdiction)
+        elif nist.nist_version == "2.0":
+            return self.export_nist_v2(election, jurisdiction, major_subdivision)
+        else:
+            return ""
+
     def export_nist_v1_json(self, election: str, jurisdiction: str) -> dict:
         election_id = db.name_to_id(self.session, "Election", election)
         jurisdiction_id = db.name_to_id(self.session, "ReportingUnit", jurisdiction)
@@ -1910,7 +1921,7 @@ class Analyzer:
         json_string = json.dumps(self.export_nist_v1_json(election, jurisdiction))
         return json_string
 
-    def export_nist(
+    def export_nist_v2(
         self,
         election: str,
         jurisdiction: str,

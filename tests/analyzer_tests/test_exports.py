@@ -24,7 +24,7 @@ def test_nist_v2_and_v1(runtime):
     an = Analyzer(dbname=test_db_name, param_file=runtime)
 
     # test nist v2 export against sample file
-    new_str = an.export_nist("2020 General", "Wyoming")
+    new_str = an.export_nist_v2("2020 General","Wyoming")
     correct_str = open(nist_v2_reference_file, "rb").read()
 
     # test nist v1 export against sample file
