@@ -482,7 +482,10 @@ def create_bar(
 
     if contest_type:
         contest_type = ui.get_contest_type_mapping(contest_type)
-        unsummed = unsummed[unsummed["contest_district_type"] == contest_type]
+        unsummed = unsummed[
+            (unsummed["contest_district_type"] == contest_type) |
+            (unsummed["contest_district_othertype"] == contest_type)
+        ]
 
     # through front end, contest_type must be truthy if contest is truthy
     # Only filter when there is an actual contest passed through, as opposed to
