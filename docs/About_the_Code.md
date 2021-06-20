@@ -13,7 +13,7 @@ The information in this directory determines the structure of the database creat
  Some lists are hard-coded in one place, so could be changed.
   * Recognized jurisdictions `states_and_such` in `database/__init__.py`. Anything not on this list will not appear in the output of `database.display_jurisdictions()`, even if there is corresponding data in the database.
   * Recognized contest types `contest_types_model` in `database/__init__.py`.
-  * Recognized encodings `recognized_encodings` in `user_interface/__init__.py`
+  * Recognized encodings `recognized_encodings` in `userinterface/__init__.py`
   * Ballot measure selections `bmselections` in `database/create_cdf_db/__init__.py`
   
 ### Conventions
