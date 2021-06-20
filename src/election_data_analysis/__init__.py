@@ -698,11 +698,10 @@ class DataLoader:
                 juris = p.findall(folder)[0]
                 os.rename(
                     os.path.join(self.d["results_dir"], folder),
-                    os.path.join(self.d["results_dir"], juris)
+                    os.path.join(self.d["results_dir"], juris),
                 )
                 rename[folder] = juris
         return rename
-
 
     def remove_data(
         self,
@@ -802,13 +801,13 @@ class DataLoader:
         return err_str
 
     def load_single_external_data_file(
-            self,
-            data_file: str,
-            source: str,
-            year: str,
-            note: str,
-            order_within_category: Optional[Dict[str,int]] = None,
-            replace_existing: bool = False,  # TODO
+        self,
+        data_file: str,
+        source: str,
+        year: str,
+        note: str,
+        order_within_category: Optional[Dict[str, int]] = None,
+        replace_existing: bool = False,  # TODO
     ) -> Optional[dict]:
         df = pd.read_csv(data_file)
         err = self.load_single_external_data_set(
@@ -845,7 +844,13 @@ class DataLoader:
         working["Note"] = note
 
         # put info into ExternalDataSet table and retrieve Id
-        eds = working[["Category","Label","OrderWithinCategory","Source","Year","Note"]].drop_duplicates().copy()
+        eds = (
+            working[
+                ["Category", "Label", "OrderWithinCategory", "Source", "Year", "Note"]
+            ]
+            .drop_duplicates()
+            .copy()
+        )
         load_err = db.insert_to_cdf_db(
             self.session.bind,
             eds,
@@ -858,15 +863,22 @@ class DataLoader:
             return err
 
         # put info into ExternalData
-        eds_col_map = {c:c for c in eds.columns}
-        working = db.append_id_to_dframe(self.session.bind,working,"ExternalDataSet",col_map=eds_col_map)
+        eds_col_map = {c: c for c in eds.columns}
+        working = db.append_id_to_dframe(
+            self.session.bind, working, "ExternalDataSet", col_map=eds_col_map
+        )
         ru = pd.read_sql_table("ReportingUnit", self.session.bind).rename(
             columns={"Id": "ReportingUnit_Id"}
         )
         working = working.merge(
-            ru[["ReportingUnit_Id", "Name"]], how="left", left_on="ReportingUnit", right_on="Name"
+            ru[["ReportingUnit_Id", "Name"]],
+            how="left",
+            left_on="ReportingUnit",
+            right_on="Name",
         )
-        ed = working[working.ReportingUnit_Id.notnull()][["Value","ReportingUnit_Id","ExternalDataSet_Id"]]
+        ed = working[working.ReportingUnit_Id.notnull()][
+            ["Value", "ReportingUnit_Id", "ExternalDataSet_Id"]
+        ]
         load_err = db.insert_to_cdf_db(
             self.session.bind,
             ed,
@@ -882,9 +894,7 @@ class DataLoader:
         return err
 
     # TODO
-    def load_acs5_data(
-        self, census_year: int, election: str
-    ) -> Optional[dict]:
+    def load_acs5_data(self, census_year: int, election: str) -> Optional[dict]:
         """Download census.gov American Community Survey data by county
         for the given year;
         upload data to db; associate all datasets for the year to election-juris
@@ -905,16 +915,16 @@ class DataLoader:
     def temp_reload_existing_acs5_data(self, census_file: str) -> Optional[dict]:
         """Transitional function for taking data from Version 1.0 system to later version (June 2021)
         load data from census file exported from old db (e.g. census_no_ids.csv)"""
-        cdf = pd.read_csv(census_file,index_col=None)
+        cdf = pd.read_csv(census_file, index_col=None)
 
-        els = pd.read_sql_table("Election",self.session.bind)
+        els = pd.read_sql_table("Election", self.session.bind)
         els = els[els.Name != "none or unknown"]
         els["ElectionYear"] = els.Name.str[0:4]
         els["ElectionYear"] = pd.to_numeric(els["ElectionYear"])
 
-        data_df = els.merge(cdf,how="left",on="ElectionYear").drop("Id",axis=1)
+        data_df = els.merge(cdf, how="left", on="ElectionYear").drop("Id", axis=1)
 
-        for y in [2016,2018]:
+        for y in [2016, 2018]:
             working = data_df[data_df.Year == y]
 
             self.load_single_external_data_set(
@@ -924,22 +934,22 @@ class DataLoader:
                 "",
             )
 
-        col_map = {c:c for c in ["Category","Label","Year"]}
+        col_map = {c: c for c in ["Category", "Label", "Year"]}
         df_appended = db.append_id_to_dframe(
-            self.session.bind,data_df,"ExternalDataSet",col_map=col_map)
-        join_df = df_appended.merge(
-            els,on="Name"
-        ).rename(
-            columns={"Id":"Election_Id"}
-        )[["Election_Id","ExternalDataSet_Id"]]
+            self.session.bind, data_df, "ExternalDataSet", col_map=col_map
+        )
+        join_df = df_appended.merge(els, on="Name").rename(
+            columns={"Id": "Election_Id"}
+        )[["Election_Id", "ExternalDataSet_Id"]]
         err = db.insert_to_cdf_db(
             self.session.bind,
             join_df,
             "ElectionExternalDataSetJoin",
             "database",
-            "join data not loaded"
+            "join data not loaded",
         )
         return err
+
 
 def check_par_file_elements(
     ini_d: dict,

@@ -243,7 +243,7 @@ def combine_and_rename_columns(
     new = pd.DataFrame()
     for label in label_summands.keys():
         raw_list = label_summands[label]
-        #if all summands are in df
+        # if all summands are in df
         if all([c in df.columns for c in raw_list]):
             new[label] = df[raw_list].sum(axis=1)
 
@@ -251,16 +251,15 @@ def combine_and_rename_columns(
     return new
 
 
-def normalize(
-        df: pd.DataFrame, label_columns: List[str]
-) -> pd.DataFrame:
+def normalize(df: pd.DataFrame, label_columns: List[str]) -> pd.DataFrame:
     working = df.copy()
     working["ReportingUnit"] = df["NAME"].str.apply(normalize_geo_name)
     lc = [c for c in label_columns if c in working.columns]
     working = working.melt(
-        working, id_vars="ReportingUnit", value_vars = lc, value_name="Label"
+        working, id_vars="ReportingUnit", value_vars=lc, value_name="Label"
     )
     return working
+
 
 def normalize_geo_name(txt):
     """make geo name match ReportingUnit convention"""

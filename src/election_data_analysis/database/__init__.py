@@ -1037,7 +1037,9 @@ def get_major_subdiv_id_and_othertext(
 ) -> (Optional[int], Optional[str]):
     if not file_path:
         file_path = os.path.join(
-            Path(__file__).absolute().parents[1], "jurisdiction", "000_major_subjurisdiction_types.txt"
+            Path(__file__).absolute().parents[1],
+            "jurisdiction",
+            "000_major_subjurisdiction_types.txt",
         )
 
     sub_div_type = get_major_subdiv_type(session, jurisdiction, file_path=file_path)

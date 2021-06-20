@@ -22,6 +22,7 @@ import xml.etree.ElementTree as et
 import json
 import shutil
 import xlrd
+
 # import openpyxl
 from sqlalchemy.orm import Session
 
@@ -418,7 +419,7 @@ def list_desired_excel_sheets(f_path: str, p: dict) -> (Optional[list], Optional
             # read an xlsx file
             # # nb: the following fails on VT 2020 files
             xl = pd.ExcelFile(f_path)
-            all_sheets=xl.sheet_names
+            all_sheets = xl.sheet_names
             # xlsx = openpyxl.load_workbook(f_path)
             # all_sheets = xlsx.get_sheet_names()
         except Exception as exc:
@@ -1401,7 +1402,7 @@ def get_filtered_input_options(
         if population_df.empty:
             population = []
         else:
-            population =sorted(population_df.Category.unique())
+            population = sorted(population_df.Category.unique())
 
         # get the vote count categories
         type_df = db.read_vote_count(
