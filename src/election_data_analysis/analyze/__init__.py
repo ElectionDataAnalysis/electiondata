@@ -1050,12 +1050,12 @@ def dedupe_scatter_title(category, election, contest):
 
 def scatter_axis_title(
     cursor: psycopg2.extensions.cursor,
-    category: str,
+    label: str,
     election: str,
-    contest_or_external: str,
+    contest_or_external_category: str,
     jurisdiction_id: int,
 ) -> str:
-    if contest_or_external.startswith("Population"):
+    if contest_or_external_category.startswith("Population"):
         election_id = db.name_to_id_cursor(cursor, "Election", election)
         # get the actual year of data and source of data
         df = db.read_external(
@@ -1063,13 +1063,14 @@ def scatter_axis_title(
             election_id,
             jurisdiction_id,
             ["Year", "Source"],
-            restrict_by_label=category,
+            restrict_by_category=contest_or_external_category,
+            restrict_by_label=label,
         )
         data_year = df.iloc[0]["Year"]
         data_source = df.iloc[0]["Source"]
-        return f"{category} - {data_year} {data_source}"
+        return f"{data_year} {contest_or_external_category} - {label}"
     else:
-        title = dedupe_scatter_title(category, election, contest_or_external)
+        title = dedupe_scatter_title(label,election,contest_or_external_category)
         return ui.get_contest_type_display(title)
 
 
