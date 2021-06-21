@@ -1007,7 +1007,7 @@ def get_relevant_contests(session: Session, filters: List[str]) -> pd.DataFrame:
     subdivision_type_id, other_subdivision_type = get_major_subdiv_id_and_othertext(session, jurisdiction)
     working = unsummed_vote_counts_with_rollup_subdivision_id(
         session, election_id, jurisdiction_id, subdivision_type_id, other_subdivision_type,
-    )[[ "ElectionDistrict", "Contest", "contest_district_type", "contest_district_othertype"]]
+    )[[ "ElectionDistrict", "Contest", "contest_district_type", "contest_district_othertype"]].drop_duplicates()
     mask = working.contest_district_type == "other"
     working.loc[mask, "type"] = working.loc[mask, "contest_district_othertype"]
     working.loc[~mask, "type"] = working.loc[~mask, "contest_district_type"]
