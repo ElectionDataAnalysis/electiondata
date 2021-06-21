@@ -462,8 +462,9 @@ def juris_dependency_dictionary():
 def load_juris_dframe_into_cdf(
     session,
     element,
-    juris_path,
+    all_juris_path,
     juris_true_name: str,
+    juris_system_name: str,
     err: Optional[dict],
     on_conflict: str = "NOTHING",
 ) -> Optional[dict]:
@@ -475,7 +476,7 @@ def load_juris_dframe_into_cdf(
         project_root,
         "CDF_schema_def_info",
     )
-    element_file = os.path.join(juris_path, f"{element}.txt")
+    element_file = os.path.join(all_juris_path, juris_system_name, f"{element}.txt")
     enum_file = os.path.join(
         cdf_schema_def_dir, "elements", element, "enumerations.txt"
     )
@@ -486,7 +487,7 @@ def load_juris_dframe_into_cdf(
         err = ui.add_new_error(
             err,
             "jurisdiction",
-            Path(juris_path).name,
+            Path(all_juris_path).name,
             f"File {element}.txt not found",
         )
         return err
@@ -506,7 +507,7 @@ def load_juris_dframe_into_cdf(
         err = ui.add_new_error(
             err,
             "warn-jurisdiction",
-            Path(juris_path).name,
+            Path(all_juris_path).name,
             f"Duplicates were found in {element}.txt",
         )
 
@@ -524,7 +525,7 @@ def load_juris_dframe_into_cdf(
                     err = ui.add_new_error(
                         err,
                         "warn-jurisdiction",
-                        Path(juris_path).name,
+                        Path(all_juris_path).name,
                         f"Some {e}s are non-standard:\n\t{ns}",
                     )
 
@@ -592,6 +593,7 @@ def load_or_update_juris_to_db(
             element,
             os.path.join(repository_content_root, "jurisdictions"),
             juris_true_name,
+            juris_system_name,
             err,
             on_conflict="UPDATE",
         )

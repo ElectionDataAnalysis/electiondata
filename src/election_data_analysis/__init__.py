@@ -591,6 +591,7 @@ class DataLoader:
                         self.session,
                         self.d["repository_content_root"],
                         juris,
+                        juris_system_name,
                     )
                     if new_err:
                         err = ui.consolidate_errors([err, new_err])
