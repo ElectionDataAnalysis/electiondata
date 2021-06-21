@@ -567,12 +567,13 @@ class DataLoader:
         if load_jurisdictions:
             for juris in jurisdictions:
                 # check jurisdiction
+                juris_system_name = jm.system_name_from_true_name(juris)
                 juris_path = os.path.join(
                     self.d["repository_content_root"],
                     "jurisdictions",
-                    jm.system_name_from_true_name(juris),
+                    juris_system_name,
                 )
-                new_err = jm.ensure_jurisdiction_dir(juris_path)
+                new_err = jm.ensure_jurisdiction_dir(self.d["repository_content_root"], juris_path)
                 if new_err:
                     err = ui.consolidate_errors([err, new_err])
                     if ui.fatal_error(new_err):
@@ -588,11 +589,7 @@ class DataLoader:
                 try:
                     new_err = jm.load_or_update_juris_to_db(
                         self.session,
-                        os.path.join(
-                            self.d["repository_content_root"],
-                            "jurisdictions",
-                            jm.system_name_from_true_name(juris),
-                        ),
+                        self.d["repository_content_root"],
                         juris,
                     )
                     if new_err:
@@ -1082,16 +1079,13 @@ class JurisdictionPrepper:
         # create and fill jurisdiction directory
         # TODO Feature: allow other districts to be set in paramfile
         print(f"\nStarting {inspect.currentframe().f_code.co_name}")
-        error = jm.ensure_jurisdiction_dir(self.d["jurisdiction_path"])
+        error = jm.ensure_jurisdiction_dir(self.d["repository_content_root"], self.d["jurisdiction_path"])
         # add default entries
-        project_root = Path(__file__).absolute().parents[1]
         # default templates are from repo
         if not templates:
             templates = os.path.join(
-                project_root,
-                "election_data_analysis",
-                "juris",
-                "jurisdiction_templates",
+                self.d["repository_content_root"],
+                "jurisdictions/000_jurisdiction_templates",
             )
         for element in ["Party", "Election"]:
             new_err = election_data_analysis.juris.add_defaults(self.d["jurisdiction_path"],templates,element)
