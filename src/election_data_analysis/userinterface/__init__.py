@@ -1340,7 +1340,7 @@ def get_filtered_input_options(
             session,
             election_id,
             jurisdiction_id,
-            ["ReportingUnitName", "ContestName", "unit_type"],
+            ["ElectionDistrict", "ContestName", "unit_type"],
             ["parent", "name", "type"],
         )
         df = df.sort_values(["parent", "name"]).reset_index(drop=True)

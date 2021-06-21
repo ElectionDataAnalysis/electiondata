@@ -197,7 +197,8 @@ def append_to_composing_reporting_unit_join(
     cdf internal name indicates nesting via semicolons `;`.
     This routine calculates the nesting relationships from the Names and uploads to db.
     Returns the *all* composing-reporting-unit-join data from the db.
-    By convention, a ReportingUnit is it's own ancestor (ancestor_0)."""
+    By convention, a ReportingUnit is its own ancestor (ancestor_0).
+    NB: name Child/Parent is misleading. It's really Descendent/Ancestor"""
     working = ru.copy()
     err = None
     if not working.empty:
@@ -230,6 +231,8 @@ def append_to_composing_reporting_unit_join(
             ru_for_cruj = ru_for_cruj.merge(
                 ru_cdf, left_on=f"ancestor_{i}", right_on="Name", suffixes=["", f"_{i}"]
             )
+
+            # Add parent-child pair for ith ancestor.
             cruj_dframe_list.append(
                 ru_for_cruj[["Id", f"Id_{i}"]].rename(
                     columns={
@@ -248,7 +251,6 @@ def append_to_composing_reporting_unit_join(
                 error_name,
             )
             err = ui.consolidate_errors([err, insert_err])
-
     return err
 
 
@@ -995,16 +997,24 @@ def get_relevant_election(session: Session, filters: List[str]) -> pd.DataFrame:
 
 def get_relevant_contests(session: Session, filters: List[str]) -> pd.DataFrame:
     """expects the filters list to have an election and jurisdiction.
-    finds all contests for that combination. Returns a dataframe sorted by contest name"""
+    finds all contests for that combination. Returns a dataframe sorted by contest name.
+    Omits any counts that don't
+    roll up to the major subdivision. E.g., Puerto Rico 2020g, have legislative results by district, but these don't
+    roll up to municipality (which is the PR major subdivision)"""
     election_id = list_to_id(session, "Election", filters)
-    reporting_unit_id = list_to_id(session, "ReportingUnit", filters)
-    result_df = read_vote_count(
-        session,
-        election_id,
-        reporting_unit_id,
-        ["ReportingUnitName", "ContestName", "unit_type"],
-        ["parent", "name", "type"],
+    jurisdiction_id = list_to_id(session, "ReportingUnit", filters)
+    jurisdiction = name_from_id(session, "ReportingUnit", jurisdiction_id) # TODO tech debt
+    subdivision_type_id, other_subdivision_type = get_major_subdiv_id_and_othertext(session, jurisdiction)
+    working = unsummed_vote_counts_with_rollup_subdivision_id(
+        session, election_id, jurisdiction_id, subdivision_type_id, other_subdivision_type,
+    )[[ "ElectionDistrict", "Contest", "contest_district_type", "contest_district_othertype"]]
+    mask = working.contest_district_type == "other"
+    working.loc[mask, "type"] = working.loc[mask, "contest_district_othertype"]
+    working.loc[~mask, "type"] = working.loc[~mask, "contest_district_type"]
+    result_df = working.drop("contest_district_othertype", axis=1).rename(
+        columns={"ElectionDistrict":"parent","Contest":"name"}
     )
+
     # sort by contest name
     result_df.sort_values(by="name", inplace=True)
     return result_df
@@ -1144,72 +1154,51 @@ def unsummed_vote_counts_with_rollup_subdivision_id(
     cursor = connection.cursor()
     q = sql.SQL(
         """
-        WITH RECURSIVE nesting_hierarchy AS (
-            SELECT  c.*
-            FROM    "ComposingReportingUnitJoin" c
-            WHERE   "ParentReportingUnit_Id" = %s
-            UNION
-            SELECT  c.*
-            FROM    nesting_hierarchy h
-                    JOIN "ComposingReportingUnitJoin" c ON h."ChildReportingUnit_Id" = c."ParentReportingUnit_Id"
-                    JOIN "ReportingUnit" ru ON c."ParentReportingUnit_Id" = ru."Id"
-            WHERE   ru."ReportingUnitType_Id" = %s  AND ru."OtherReportingUnitType" = %s
-        )
-        , nesting_hierarchy_named AS (
-            SELECT  DISTINCT 
-                    c."ParentReportingUnit_Id", 
-                    c."ChildReportingUnit_Id", 
-                    pru."Name" AS "ParentName", 
-                    pru."ReportingUnitType_Id" AS "ParentReportingUnitType_Id",
-                    pru."OtherReportingUnitType" AS "ParentOtherReportingUnitType",
-                    cru."Name" AS "ChildName", 
-                    cru."ReportingUnitType_Id" AS "ChildReportingUnitType_Id",
-                    cru."OtherReportingUnitType" AS "ChildOtherReportingUnitType"
-            FROM    nesting_hierarchy c
-                    JOIN "ReportingUnit" pru ON c."ParentReportingUnit_Id" = pru."Id"
-                    JOIN "ReportingUnit" cru ON c."ChildReportingUnit_Id" = cru."Id"
-        )
             SELECT  vc."Id" AS "VoteCount_Id", "Count", "CountItemType_Id",
                     vc."ReportingUnit_Id", "Contest_Id", "Selection_Id",
-                    vc."Election_Id", IntermediateRU."ParentReportingUnit_Id",
-                    IntermediateRU."ChildName" AS "Name", 
-                    IntermediateRU."ChildReportingUnitType_Id" AS "ReportingUnitType_Id",
-                    IntermediateRU."ChildOtherReportingUnitType" AS "OtherReportingUnitType",
-                    IntermediateRU."ParentName" AS "ParentName", 
-                    IntermediateRU."ParentReportingUnitType_Id" AS "ParentReportingUnitType_Id",
-                    IntermediateRU."ParentOtherReportingUnitType" AS "ParentOtherReportingUnitType",
+                    vc."Election_Id", cruj."ParentReportingUnit_Id",
+                    cru."Name", 
+                    cru."ReportingUnitType_Id",
+                    cru."OtherReportingUnitType",
+                    IntermediateRU."Name" AS "ParentName", 
+                    IntermediateRU."ReportingUnitType_Id" AS "ParentReportingUnitType_Id",
+                    IntermediateRU."OtherReportingUnitType" AS "ParentOtherReportingUnitType",
                     CIT."Txt" AS "CountItemType", C."Name" AS "Contest",
-                    Cand."BallotName" AS "Selection", "ElectionDistrict_Id", 
+                    Cand."BallotName" AS "Selection", 
+                    "ElectionDistrict_Id", ED."Name" as "ElectionDistrict",
                     Cand."Id" AS "Candidate_Id", 
                     "contest_type",
                     EDRUT."Txt" AS "contest_district_type", 
                     ED."OtherReportingUnitType" AS "contest_district_othertype",
                     p."Name" as Party
-                    FROM nesting_hierarchy_named IntermediateRU
-                    JOIN "VoteCount" vc ON IntermediateRU."ChildReportingUnit_Id" = vc."ReportingUnit_Id"
-                        AND IntermediateRU."ParentReportingUnitType_Id" = %s 
-                        AND IntermediateRU."ParentOtherReportingUnitType" = %s
-                        AND vc."Election_Id" = %s
-                    JOIN "Contest" C ON vc."Contest_Id" = C."Id" AND C.contest_type = 'Candidate'
+                    FROM "VoteCount" vc 
+                    JOIN "_datafile" d ON vc."_datafile_Id" = d."Id"
+                    JOIN "Contest" C ON vc."Contest_Id" = C."Id" 
+                    JOIN "CandidateContest" ON C."Id" = "CandidateContest"."Id"
+                    JOIN "Office" O ON "CandidateContest"."Office_Id" = O."Id"
+                    JOIN "ReportingUnit" ED ON O."ElectionDistrict_Id" = ED."Id" -- election district
+                    JOIN "ReportingUnitType" EDRUT ON ED."ReportingUnitType_Id" = EDRUT."Id" -- type of election district
+                    JOIN "ComposingReportingUnitJoin" cruj ON cruj."ChildReportingUnit_Id" = vc."ReportingUnit_Id"
+                    JOIN "ReportingUnit" cru ON cruj."ChildReportingUnit_Id" = cru."Id" -- reporting unit for count
+                    JOIN "ReportingUnit" IntermediateRU ON cruj."ParentReportingUnit_Id" = IntermediateRU."Id" -- reporting unit for county (or county-like) 
                     JOIN "CandidateSelection" CS ON CS."Id" = vc."Selection_Id"
                     JOIN "Candidate" Cand ON CS."Candidate_Id" = Cand."Id"
                     JOIN "CountItemType" CIT ON vc."CountItemType_Id" = CIT."Id"
-                    JOIN "CandidateContest" ON C."Id" = "CandidateContest"."Id"
-                    JOIN "Office" O ON "CandidateContest"."Office_Id" = O."Id"
-                    JOIN "ReportingUnit" ED ON O."ElectionDistrict_Id" = ED."Id"
-                    JOIN "ReportingUnitType" EDRUT ON ED."ReportingUnitType_Id" = EDRUT."Id"
                     JOIN "Party" p on CS."Party_Id" = p."Id"
+                WHERE d."Election_Id" = %s  -- election_id
+                    AND d."ReportingUnit_Id" = %s  -- jurisdiction_id
+                        AND IntermediateRU."ReportingUnitType_Id" = %s  -- subdivision type id
+                        AND IntermediateRU."OtherReportingUnitType" = %s -- other subdivision type
+                        AND C.contest_type = 'Candidate'
     """
     )
     cursor.execute(
         q,
         [
+            election_id,
             jurisdiction_id,
             subdivision_type_id,
             other_subdivision_type,
-            subdivision_type_id,
-            other_subdivision_type,
-            election_id,
         ],
     )
     result = cursor.fetchall()
@@ -1233,6 +1222,7 @@ def unsummed_vote_counts_with_rollup_subdivision_id(
         "Contest",
         "Selection",
         "ElectionDistrict_Id",
+        "ElectionDistrict",
         "Candidate_Id",
         "contest_type",
         "contest_district_type",
@@ -1535,7 +1525,7 @@ def read_vote_count(
                 JOIN (
                     SELECT 
                         "Id", 
-                        "Name" AS "ReportingUnitName", 
+                        "Name" AS "ElectionDistrict", 
                         "ReportingUnitType_Id", 
                         "OtherReportingUnitType" AS "OtherReportingUnitType_internal_only" 
                     FROM "ReportingUnit"
@@ -2017,7 +2007,7 @@ def read_vote_count_nist(
                 JOIN "CandidateContest" cc ON con."Id" = cc."Id"
                 JOIN (SELECT "Id", "Name" as "OfficeName", "ElectionDistrict_Id" FROM "Office") o on cc."Office_Id" = o."Id"
                 -- this reporting unit info refers to the districts (state house, state senate, etc)
-                JOIN (SELECT "Id", "Name" AS "ReportingUnitName", "ReportingUnitType_Id" FROM "ReportingUnit") ru on o."ElectionDistrict_Id" = ru."Id"
+                JOIN (SELECT "Id", "Name" AS "ElectionDistrict", "ReportingUnitType_Id" FROM "ReportingUnit") ru on o."ElectionDistrict_Id" = ru."Id"
                 JOIN (SELECT "Id", "Txt" AS unit_type FROM "ReportingUnitType") rut on ru."ReportingUnitType_Id" = rut."Id"
                 -- this reporting unit info refers to the geopolitical divisions (county, state, etc)
                 JOIN (SELECT "Id" as "GP_Id", "Name" AS "GPReportingUnitName", "ReportingUnitType_Id" AS "GPReportingUnitType_Id" FROM "ReportingUnit") gpru on vc."ReportingUnit_Id" = gpru."GP_Id"
