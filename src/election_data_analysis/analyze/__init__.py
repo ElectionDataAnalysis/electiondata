@@ -191,7 +191,7 @@ def create_scatter(
 
     # check if there is only 1 candidate selection (with multiple count types)
     single_selection = len(unsummed["Selection"].unique()) == 1
-    # check if there is only one contest
+    # check if there is only one count type
     single_count_type = len(unsummed["CountItemType"].unique()) == 1
 
     if (h_runoff or v_runoff) and single_selection:
@@ -200,7 +200,7 @@ def create_scatter(
         pivot_col = "CountItemType"
     elif single_selection and single_count_type:
         pivot_col = "Election_Id"
-    else:
+    else: # no runoffs, not single_selection
         pivot_col = "Selection"
     pivot_df = pd.pivot_table(
         unsummed, values="Count", index=["Name"], columns=pivot_col, aggfunc=np.sum
@@ -227,7 +227,7 @@ def create_scatter(
         )
         results["x"] = h_count
         results["y"] = v_count
-    else:
+    else:  # neither is runoff; not single_selection
         results = package_results(pivot_df, jurisdiction, h_count, v_count)
     results["x-election"] = db.name_from_id_cursor(cursor, "Election", h_election_id)
     results["y-election"] = db.name_from_id_cursor(cursor, "Election", v_election_id)
