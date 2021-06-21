@@ -231,9 +231,12 @@ def create_scatter(
         results = package_results(pivot_df, jurisdiction, h_count, v_count)
     results["x-election"] = db.name_from_id_cursor(cursor, "Election", h_election_id)
     results["y-election"] = db.name_from_id_cursor(cursor, "Election", v_election_id)
-    results["subdivision_type"] = db.name_from_id_cursor(
-        cursor, "ReportingUnitType", subdivision_type_id
-    )
+    if other_subdivision_type == "":
+        results["subdivision_type"] = db.name_from_id_cursor(
+            cursor, "ReportingUnitType", subdivision_type_id
+        )
+    else:
+        results["subdivision_type"] = other_subdivision_type
     results["x-count_item_type"] = h_category
     results["y-count_item_type"] = v_category
     results["x-title"] = scatter_axis_title(
@@ -495,6 +498,7 @@ def create_bar(
 
     groupby_cols = [
         "ParentReportingUnit_Id",
+        "ReportingUnitOtherType",
         "ParentName",
         "ParentReportingUnitType_Id",
         "Candidate_Id",
@@ -584,9 +588,10 @@ def create_bar(
         results["contest"] = db.name_from_id_cursor(
             cursor, "Contest", int(temp_df.iloc[0]["Contest_Id"])
         )
-        results["subdivision_type"] = db.name_from_id_cursor(
-            cursor, "ReportingUnitType", int(temp_df.iloc[0]["ReportingUnitType_Id"])
-        )
+        if other_subdivision_type == "":
+            results["subdivision_type"] = db.name_to_id(session, "ReportingUnitType", subdivision_type_id)
+        else:
+            results["subdivision_type"] = other_subdivision_type
         results["count_item_type"] = temp_df.iloc[0]["CountItemType"]
 
         # display votes at stake, margin info
