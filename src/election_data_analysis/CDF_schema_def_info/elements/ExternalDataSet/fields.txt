@@ -1,0 +1,7 @@
+fieldname	datatype
+Source	String
+Category	String
+Label	String
+Year	Integer
+OrderWithinCategory	Integer
+Note	String

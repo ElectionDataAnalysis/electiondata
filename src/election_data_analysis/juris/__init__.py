@@ -1,12 +1,14 @@
+import os
 import os.path
 
-from election_data_analysis import database as db
+from election_data_analysis import (
+    database as db,
+    munge as m,
+    userinterface as ui,
+)
 import pandas as pd
 from pandas.api.types import is_numeric_dtype
 from typing import Optional, Dict, Any, List
-from election_data_analysis import munge as m
-from election_data_analysis import user_interface as ui
-from election_data_analysis import preparation as prep
 import numpy as np
 from pathlib import Path
 import csv
@@ -99,9 +101,10 @@ def recast_options(
 
 
 def ensure_jurisdiction_dir(
-    juris_path: str, ignore_empty: bool = False
+    repository_content_root, juris_system_name: str, ignore_empty: bool = False
 ) -> Optional[dict]:
     # create directory if it doesn't exist
+    juris_path = os.path.join(repository_content_root, "src/jurisdictions", juris_system_name)
     try:
         Path(juris_path).mkdir(parents=True)
     except FileExistsError:
@@ -110,11 +113,11 @@ def ensure_jurisdiction_dir(
         print(f"Directory created: {juris_path}")
 
     # ensure the contents of the jurisdiction directory are correct
-    err = ensure_juris_files(juris_path, ignore_empty=ignore_empty)
+    err = ensure_juris_files(repository_content_root, juris_path, ignore_empty=ignore_empty)
     return err
 
 
-def ensure_juris_files(juris_path: str, ignore_empty: bool = False) -> Optional[dict]:
+def ensure_juris_files(repository_content_root, juris_path: str, ignore_empty: bool = False) -> Optional[dict]:
     """Check that the jurisdiction files are complete and consistent with one another.
     Check for extraneous files in Jurisdiction directory.
     Assumes Jurisdiction directory exists. Assumes dictionary.txt is in the template file"""
@@ -124,9 +127,8 @@ def ensure_juris_files(juris_path: str, ignore_empty: bool = False) -> Optional[
     juris_name = Path(juris_path).name
     juris_true_name = juris_name.replace("-", " ")
 
-    project_root = Path(__file__).parents[1].absolute()
     templates_dir = os.path.join(
-        project_root, "juris_and_munger", "jurisdiction_templates"
+        repository_content_root,"jurisdictions/000_jurisdiction_templates"
     )
     # notify user of any extraneous files
     extraneous = [
@@ -237,7 +239,9 @@ def ensure_juris_files(juris_path: str, ignore_empty: bool = False) -> Optional[
                 # TODO check for lines that are too lone
 
                 # check for problematic null entries
-                null_columns = check_nulls(juris_file, cf_path, project_root)
+                null_columns = check_nulls(
+                    juris_file, cf_path, os.path.join(repository_content_root, "election_data_analysis")
+                )
                 if null_columns:
                     err = ui.add_new_error(
                         err,
@@ -285,7 +289,7 @@ def find_ambiguous_names(element: str, cf_path: str) -> List[str]:
 
 def check_ru_file(juris_path: str, juris_true_name: str) -> Optional[dict]:
     err = None
-    ru = prep.get_element(juris_path, "ReportingUnit")
+    ru = get_element(juris_path,"ReportingUnit")
 
     # create set of all parents, all lead rus
     parents = set()
@@ -458,8 +462,9 @@ def juris_dependency_dictionary():
 def load_juris_dframe_into_cdf(
     session,
     element,
-    juris_path,
+    all_juris_path,
     juris_true_name: str,
+    juris_system_name: str,
     err: Optional[dict],
     on_conflict: str = "NOTHING",
 ) -> Optional[dict]:
@@ -471,7 +476,7 @@ def load_juris_dframe_into_cdf(
         project_root,
         "CDF_schema_def_info",
     )
-    element_file = os.path.join(juris_path, f"{element}.txt")
+    element_file = os.path.join(all_juris_path, juris_system_name, f"{element}.txt")
     enum_file = os.path.join(
         cdf_schema_def_dir, "elements", element, "enumerations.txt"
     )
@@ -482,7 +487,7 @@ def load_juris_dframe_into_cdf(
         err = ui.add_new_error(
             err,
             "jurisdiction",
-            Path(juris_path).name,
+            Path(all_juris_path).name,
             f"File {element}.txt not found",
         )
         return err
@@ -502,7 +507,7 @@ def load_juris_dframe_into_cdf(
         err = ui.add_new_error(
             err,
             "warn-jurisdiction",
-            Path(juris_path).name,
+            Path(all_juris_path).name,
             f"Duplicates were found in {element}.txt",
         )
 
@@ -520,7 +525,7 @@ def load_juris_dframe_into_cdf(
                     err = ui.add_new_error(
                         err,
                         "warn-jurisdiction",
-                        Path(juris_path).name,
+                        Path(all_juris_path).name,
                         f"Some {e}s are non-standard:\n\t{ns}",
                     )
 
@@ -573,7 +578,7 @@ def add_none_or_unknown(df: pd.DataFrame, contest_type: str = None) -> pd.DataFr
 
 
 def load_or_update_juris_to_db(
-    session: Session, path_to_jurisdiction_dir: str, juris_true_name: str
+    session: Session, repository_content_root: str, juris_true_name: str, juris_system_name: str
 ) -> Optional[dict]:
     """Load info from each element in the Jurisdiction's directory into the db.
     On conflict, update the db to match the files in the Jurisdiction's directory"""
@@ -586,8 +591,9 @@ def load_or_update_juris_to_db(
         err = load_juris_dframe_into_cdf(
             session,
             element,
-            path_to_jurisdiction_dir,
+            os.path.join(repository_content_root, "jurisdictions"),
             juris_true_name,
+            juris_system_name,
             err,
             on_conflict="UPDATE",
         )
@@ -597,7 +603,9 @@ def load_or_update_juris_to_db(
     # Load CandidateContests and BallotMeasureContests
     for contest_type in ["BallotMeasure", "Candidate"]:
         err = load_or_update_contests(
-            session.bind, path_to_jurisdiction_dir, juris_true_name, contest_type, err
+            session.bind, os.path.join(
+                repository_content_root, "jurisdictions", juris_system_name
+            ), juris_true_name, contest_type, err
         )
     return err
 
@@ -694,4 +702,82 @@ def load_or_update_contests(
             f"Contests not loaded to database (sql error {ie}). "
             f"Check CandidateContest.txt or BallotMeasureContest.txt for errors.",
         )
+    return err
+
+
+def primary(row: pd.Series, party: str, contest_field: str) -> str:
+    try:
+        pr = f"{row[contest_field]} ({party})"
+    except KeyError:
+        pr = None
+    return pr
+
+
+def get_element(juris_path: str, element: str) -> pd.DataFrame:
+    """<juris> is path to jurisdiction directory. Info taken
+    from <element>.txt file in that directory. If file doesn't exist,
+    empty dataframe returned"""
+    f_path = os.path.join(juris_path, f"{element}.txt")
+    if os.path.isfile(f_path):
+        element_df = pd.read_csv(
+            f_path,
+            sep="\t",
+            dtype="object",
+            encoding=default_juris_encoding,
+        )
+    else:
+        element_df = pd.DataFrame()
+    return element_df
+
+
+def remove_empty_lines(df: pd.DataFrame, element: str) -> pd.DataFrame:
+    """return copy of <df> with any contentless lines removed.
+    For dictionary element, such lines may have a first entry (e.g., CandidateContest)"""
+    working = df.copy()
+    # remove all rows with nothing
+    working = working[((working != "") & (working != '""')).any(axis=1)]
+
+    if element == "dictionary":
+        working = working[(working.iloc[:, 1:] != "").any(axis=1)]
+    return working
+
+
+def write_element(
+    juris_path: str, element: str, df: pd.DataFrame, file_name=None
+) -> dict:
+    """<juris> is path to target directory. Info taken
+    from <element>.txt file in that directory.
+    <element>.txt is overwritten with info in <df>"""
+    err = None
+    # set name of target file
+    if not file_name:
+        file_name = f"{element}.txt"
+    # dedupe the input df
+    dupes_df, deduped = ui.find_dupes(df)
+
+    if element == "dictionary":
+        # remove empty lines
+        deduped = remove_empty_lines(deduped, element)
+    try:
+        # write info to file (note: this overwrites existing info in file!)
+        deduped.drop_duplicates().fillna("").to_csv(
+            os.path.join(juris_path, file_name),
+            index=False,
+            sep="\t",
+            encoding=default_juris_encoding,
+        )
+    except Exception as e:
+        err = ui.add_new_error(
+            err,
+            "system",
+            "REMOVEpreparation.write_element",
+            f"Unexpected exception writing to file: {e}",
+        )
+    return err
+
+
+def add_defaults(juris_path: str, juris_template_dir: str, element: str) -> dict:
+    old = get_element(juris_path, element)
+    new = get_element(juris_template_dir, element)
+    err = write_element(juris_path, element, pd.concat([old, new]).drop_duplicates())
     return err

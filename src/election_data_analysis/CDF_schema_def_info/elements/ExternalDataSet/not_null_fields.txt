@@ -1,0 +1,6 @@
+not_null_fields
+Category
+Label
+Year
+Source
+OrderWithinCategory

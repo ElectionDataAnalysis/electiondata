@@ -1,0 +1,2 @@
+fieldname	datatype
+Value	Integer

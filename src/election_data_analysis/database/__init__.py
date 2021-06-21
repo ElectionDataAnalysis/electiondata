@@ -10,29 +10,28 @@ import csv
 import inspect
 from psycopg2.extensions import ISOLATION_LEVEL_AUTOCOMMIT
 from pathlib import Path
-
-
-# import the error handling libraries for psycopg2
-from psycopg2 import OperationalError, errorcodes, errors
 from psycopg2 import sql
 import sqlalchemy as db
 import datetime
 from configparser import MissingSectionHeaderError
 import pandas as pd
-from election_data_analysis import munge as m
-import re
+from election_data_analysis import (
+    munge as m,analyze as an,
+)
 from election_data_analysis.database import create_cdf_db as db_cdf
+import re
 import os
 
 # sqlalchemy imports below are necessary, even if syntax-checker doesn't think so!
 from sqlalchemy import MetaData, Table, Column, Integer, Float
 
 from typing import Optional, List, Dict, Any, Iterable, Set
-from election_data_analysis import user_interface as ui
+from election_data_analysis import userinterface as ui
 
 # these form the universe of jurisdictions that can be displayed via the display_jurisdictions function.
 array_of_jurisdictions = """Alabama
 Alaska
+American Samoa
 Arizona
 Arkansas
 California
@@ -42,6 +41,7 @@ Delaware
 District of Columbia
 Florida
 Georgia
+Guam
 Hawaii
 Idaho
 Illinois
@@ -66,27 +66,25 @@ New Mexico
 New York
 North Carolina
 North Dakota
+Northern Mariana Islands
 Ohio
 Oklahoma
 Oregon
 Pennsylvania
+Puerto Rico
 Rhode Island
 South Carolina
 South Dakota
 Tennessee
 Texas
 Utah
+US Virgin Islands
 Vermont
 Virginia
 Washington
 West Virginia
 Wisconsin
-Wyoming
-American Samoa
-Guam
-Northern Mariana Islands
-Puerto Rico
-US Virgin Islands"""
+Wyoming"""
 
 db_pars = ["host", "port", "dbname", "user", "password"]
 
@@ -97,14 +95,14 @@ contest_type_mappings = {
     "state-senate": "State Senate",
     "city": "Citywide",
     "ward": "Ward",
-    "territory": "Territory-wide"
+    "territory": "Territory-wide",
 }
 
 contest_types_model = contest_type_mappings.keys()
 
 
 def get_database_names(con: psycopg2.extensions.connection):
-    """Return dataframe with one column called `datname` """
+    """Return dataframe with one column called `datname`"""
     names = pd.read_sql("SELECT datname FROM pg_database", con)
     return names
 
@@ -177,16 +175,19 @@ def restore_to_db(dbname: str, dump_file: str, url: sqlalchemy.engine.url.URL) -
     # TODO does this work if a password is required?
     err_str = None
     # escape any spaces in dump_file path
-    cmd = f"pg_restore " \
-          f" -h {url.host} " \
-          f" -U {url.username} " \
-          f" -p {url.port}" \
-          f" -d {dbname} -F t {dump_file}"
+    cmd = (
+        f"pg_restore "
+        f" -h {url.host} "
+        f" -U {url.username} "
+        f" -p {url.port}"
+        f" -d {dbname} -F t {dump_file}"
+    )
     try:
         os.system(cmd)
     except Exception as exc:
         err_str = f"DB restore failed: {exc}"
     return err_str
+
 
 # TODO move to more appropriate module?
 def append_to_composing_reporting_unit_join(
@@ -196,7 +197,8 @@ def append_to_composing_reporting_unit_join(
     cdf internal name indicates nesting via semicolons `;`.
     This routine calculates the nesting relationships from the Names and uploads to db.
     Returns the *all* composing-reporting-unit-join data from the db.
-    By convention, a ReportingUnit is it's own ancestor (ancestor_0)."""
+    By convention, a ReportingUnit is its own ancestor (ancestor_0).
+    NB: name Child/Parent is misleading. It's really Descendent/Ancestor"""
     working = ru.copy()
     err = None
     if not working.empty:
@@ -229,6 +231,8 @@ def append_to_composing_reporting_unit_join(
             ru_for_cruj = ru_for_cruj.merge(
                 ru_cdf, left_on=f"ancestor_{i}", right_on="Name", suffixes=["", f"_{i}"]
             )
+
+            # Add parent-child pair for ith ancestor.
             cruj_dframe_list.append(
                 ru_for_cruj[["Id", f"Id_{i}"]].rename(
                     columns={
@@ -247,7 +251,6 @@ def append_to_composing_reporting_unit_join(
                 error_name,
             )
             err = ui.consolidate_errors([err, insert_err])
-
     return err
 
 
@@ -352,7 +355,7 @@ def create_or_reset_db(
     # if dbname already exists.
     if dbname in db_df.datname.unique():
         # reset DB to blank
-        eng_new, err = sql_alchemy_connect(db_param_file,dbname=dbname)
+        eng_new, err = sql_alchemy_connect(db_param_file, dbname=dbname)
         Session_new = sqlalchemy.orm.sessionmaker(bind=eng_new)
         sess_new = Session_new()
         db_cdf.reset_db(
@@ -361,7 +364,7 @@ def create_or_reset_db(
         )
     else:
         create_database(con, cur, dbname)
-        eng_new, err = sql_alchemy_connect(db_param_file,dbname=dbname)
+        eng_new, err = sql_alchemy_connect(db_param_file, dbname=dbname)
         Session_new = sqlalchemy.orm.sessionmaker(bind=eng_new)
         sess_new = Session_new()
 
@@ -405,11 +408,13 @@ def sql_alchemy_connect(
     return engine, err
 
 
-def create_db_if_not_ok(dbname: Optional[str] = None, db_param_file: str = "run_time.ini") -> Optional[dict]:
+def create_db_if_not_ok(
+    dbname: Optional[str] = None, db_param_file: str = "run_time.ini"
+) -> Optional[dict]:
     # create db if it does not already exist and have right tables
     ok, err = test_connection(dbname=dbname, db_param_file=db_param_file)
     if not ok:
-        create_or_reset_db(dbname=dbname,db_param_file=db_param_file)
+        create_or_reset_db(dbname=dbname, db_param_file=db_param_file)
     return err
 
 
@@ -492,7 +497,7 @@ def name_to_id_cursor(
 
 
 def name_to_id(session: Session, element: str, name: str) -> Optional[int]:
-    """ Condition can be a field/value pair, e.g., ('contest_type','Candidate')"""
+    """Condition can be a field/value pair, e.g., ('contest_type','Candidate')"""
     connection = session.bind.raw_connection()
     cursor = connection.cursor()
     idx = name_to_id_cursor(cursor, element, name)
@@ -590,7 +595,9 @@ def insert_to_cdf_db(
     mixed_int = [
         c  # TODO Selection_Id was numerical but not int here for AZ (xml)
         for c in temp_columns
-        if type_map[c] == "integer" and working[c].dtype != "int64"
+        if c in working.columns
+        and type_map[c] == "integer"
+        and working[c].dtype != "int64"
     ]
     for c in mixed_int:
         # set nulls to 0 (kludge because pandas can't have NaN in 'int64' column)
@@ -990,22 +997,32 @@ def get_relevant_election(session: Session, filters: List[str]) -> pd.DataFrame:
 
 def get_relevant_contests(session: Session, filters: List[str]) -> pd.DataFrame:
     """expects the filters list to have an election and jurisdiction.
-    finds all contests for that combination. Returns a dataframe sorted by contest name"""
+    finds all contests for that combination. Returns a dataframe sorted by contest name.
+    Omits any counts that don't
+    roll up to the major subdivision. E.g., Puerto Rico 2020g, have legislative results by district, but these don't
+    roll up to municipality (which is the PR major subdivision)"""
     election_id = list_to_id(session, "Election", filters)
-    reporting_unit_id = list_to_id(session, "ReportingUnit", filters)
-    result_df = read_vote_count(
-        session,
-        election_id,
-        reporting_unit_id,
-        ["ReportingUnitName", "ContestName", "unit_type"],
-        ["parent", "name", "type"],
+    jurisdiction_id = list_to_id(session, "ReportingUnit", filters)
+    jurisdiction = name_from_id(session, "ReportingUnit", jurisdiction_id) # TODO tech debt
+    subdivision_type_id, other_subdivision_type = get_major_subdiv_id_and_othertext(session, jurisdiction)
+    working = unsummed_vote_counts_with_rollup_subdivision_id(
+        session, election_id, jurisdiction_id, subdivision_type_id, other_subdivision_type,
+    )[[ "ElectionDistrict", "Contest", "contest_district_type", "contest_district_othertype"]].drop_duplicates()
+    mask = working.contest_district_type == "other"
+    working.loc[mask, "type"] = working.loc[mask, "contest_district_othertype"]
+    working.loc[~mask, "type"] = working.loc[~mask, "contest_district_type"]
+    result_df = working.drop("contest_district_othertype", axis=1).rename(
+        columns={"ElectionDistrict":"parent","Contest":"name"}
     )
+
     # sort by contest name
     result_df.sort_values(by="name", inplace=True)
     return result_df
 
 
-def get_major_subdiv_type(session: Session, jurisdiction: str, file_path: Optional[str] = None) -> Optional[str]:
+def get_major_subdiv_type(
+    session: Session, jurisdiction: str, file_path: Optional[str] = None
+) -> Optional[str]:
     """Returns the type of the major subdivision, if found. Tries first from <file_path> (if given);
     if that fails, or no file_path given, tries from database. If nothing found, returns None"""
     # if file is given, try to get the major subdivision type from the file
@@ -1021,6 +1038,23 @@ def get_major_subdiv_type(session: Session, jurisdiction: str, file_path: Option
     else:
         subdiv_type = other_subdiv_type
     return subdiv_type
+
+
+def get_major_subdiv_id_and_othertext(
+    session: Session, jurisdiction: str, file_path: Optional[str] = None
+) -> (Optional[int], Optional[str]):
+    if not file_path:
+        file_path = os.path.join(
+            Path(__file__).absolute().parents[1],
+            "jurisdiction",
+            "000_major_subjurisdiction_types.txt",
+        )
+
+    sub_div_type = get_major_subdiv_type(session, jurisdiction, file_path=file_path)
+    idx, other_text = id_othertext_from_plaintext(
+        session, "ReportingUnitType", sub_div_type
+    )
+    return int(idx), other_text
 
 
 def get_major_subdiv_from_file(f_path: str, jurisdiction: str) -> Optional[str]:
@@ -1089,7 +1123,9 @@ def get_jurisdiction_hierarchy(
             q,
             [
                 jurisdiction_id,
-                tuple(contest_types_model),  # list of election-district reporting-unit types
+                tuple(
+                    contest_types_model
+                ),  # list of election-district reporting-unit types
                 jurisdiction_id,
                 jurisdiction_id,
             ],
@@ -1104,8 +1140,11 @@ def get_jurisdiction_hierarchy(
 
 
 def unsummed_vote_counts_with_rollup_subdivision_id(
-    session: Session, election_id: int, jurisdiction_id: int,
-        subdivision_type_id: int, other_subdivision_type: str,
+    session: Session,
+    election_id: int,
+    jurisdiction_id: int,
+    subdivision_type_id: int,
+    other_subdivision_type: str,
 ) -> pd.DataFrame:
     """Returns all vote counts for given election and jurisdiction, along with
     the id of the subdivision (e.g. county) containing the reporting unit (e.g., precinct)
@@ -1115,70 +1154,52 @@ def unsummed_vote_counts_with_rollup_subdivision_id(
     cursor = connection.cursor()
     q = sql.SQL(
         """
-        WITH RECURSIVE nesting_hierarchy AS (
-            SELECT  c.*
-            FROM    "ComposingReportingUnitJoin" c
-            WHERE   "ParentReportingUnit_Id" = %s
-            UNION
-            SELECT  c.*
-            FROM    nesting_hierarchy h
-                    JOIN "ComposingReportingUnitJoin" c ON h."ChildReportingUnit_Id" = c."ParentReportingUnit_Id"
-                    JOIN "ReportingUnit" ru ON c."ParentReportingUnit_Id" = ru."Id"
-            WHERE   ru."ReportingUnitType_Id" = %s  AND ru."OtherReportingUnitType" = %s
-        )
-        , nesting_hierarchy_named AS (
-            SELECT  DISTINCT 
-                    c."ParentReportingUnit_Id", 
-                    c."ChildReportingUnit_Id", 
-                    pru."Name" AS "ParentName", 
-                    pru."ReportingUnitType_Id" AS "ParentReportingUnitType_Id",
-                    pru."OtherReportingUnitType" AS "ParentOtherReportingUnitType",
-                    cru."Name" AS "ChildName", 
-                    cru."ReportingUnitType_Id" AS "ChildReportingUnitType_Id",
-                    cru."OtherReportingUnitType" AS "ChildOtherReportingUnitType"
-            FROM    nesting_hierarchy c
-                    JOIN "ReportingUnit" pru ON c."ParentReportingUnit_Id" = pru."Id"
-                    JOIN "ReportingUnit" cru ON c."ChildReportingUnit_Id" = cru."Id"
-        )
             SELECT  vc."Id" AS "VoteCount_Id", "Count", "CountItemType_Id",
                     vc."ReportingUnit_Id", "Contest_Id", "Selection_Id",
-                    vc."Election_Id", IntermediateRU."ParentReportingUnit_Id",
-                    IntermediateRU."ChildName" AS "Name", 
-                    IntermediateRU."ChildReportingUnitType_Id" AS "ReportingUnitType_Id",
-                    IntermediateRU."ChildOtherReportingUnitType" AS "OtherReportingUnitType",
-                    IntermediateRU."ParentName" AS "ParentName", 
-                    IntermediateRU."ParentReportingUnitType_Id" AS "ParentReportingUnitType_Id",
-                    IntermediateRU."ParentOtherReportingUnitType" AS "ParentOtherReportingUnitType",
+                    vc."Election_Id", cruj."ParentReportingUnit_Id",
+                    cru."Name", 
+                    cru."ReportingUnitType_Id",
+                    cru."OtherReportingUnitType",
+                    IntermediateRU."Name" AS "ParentName", 
+                    IntermediateRU."ReportingUnitType_Id" AS "ParentReportingUnitType_Id",
+                    IntermediateRU."OtherReportingUnitType" AS "ParentOtherReportingUnitType",
                     CIT."Txt" AS "CountItemType", C."Name" AS "Contest",
-                    Cand."BallotName" AS "Selection", "ElectionDistrict_Id", 
+                    Cand."BallotName" AS "Selection", 
+                    "ElectionDistrict_Id", ED."Name" as "ElectionDistrict",
                     Cand."Id" AS "Candidate_Id", 
                     "contest_type",
                     EDRUT."Txt" AS "contest_district_type", 
                     ED."OtherReportingUnitType" AS "contest_district_othertype",
                     p."Name" as Party
-                    FROM nesting_hierarchy_named IntermediateRU
-                    JOIN "VoteCount" vc ON IntermediateRU."ChildReportingUnit_Id" = vc."ReportingUnit_Id"
-                        AND IntermediateRU."ParentReportingUnitType_Id" = %s 
-                        AND IntermediateRU."ParentOtherReportingUnitType" = %s
-                        AND vc."Election_Id" = %s
-                    JOIN "Contest" C ON vc."Contest_Id" = C."Id" AND C.contest_type = 'Candidate'
+                    FROM "VoteCount" vc 
+                    JOIN "_datafile" d ON vc."_datafile_Id" = d."Id"
+                    JOIN "Contest" C ON vc."Contest_Id" = C."Id" 
+                    JOIN "CandidateContest" ON C."Id" = "CandidateContest"."Id"
+                    JOIN "Office" O ON "CandidateContest"."Office_Id" = O."Id"
+                    JOIN "ReportingUnit" ED ON O."ElectionDistrict_Id" = ED."Id" -- election district
+                    JOIN "ReportingUnitType" EDRUT ON ED."ReportingUnitType_Id" = EDRUT."Id" -- type of election district
+                    JOIN "ComposingReportingUnitJoin" cruj ON cruj."ChildReportingUnit_Id" = vc."ReportingUnit_Id"
+                    JOIN "ReportingUnit" cru ON cruj."ChildReportingUnit_Id" = cru."Id" -- reporting unit for count
+                    JOIN "ReportingUnit" IntermediateRU ON cruj."ParentReportingUnit_Id" = IntermediateRU."Id" -- reporting unit for county (or county-like) 
                     JOIN "CandidateSelection" CS ON CS."Id" = vc."Selection_Id"
                     JOIN "Candidate" Cand ON CS."Candidate_Id" = Cand."Id"
                     JOIN "CountItemType" CIT ON vc."CountItemType_Id" = CIT."Id"
-                    JOIN "CandidateContest" ON C."Id" = "CandidateContest"."Id"
-                    JOIN "Office" O ON "CandidateContest"."Office_Id" = O."Id"
-                    JOIN "ReportingUnit" ED ON O."ElectionDistrict_Id" = ED."Id"
-                    JOIN "ReportingUnitType" EDRUT ON ED."ReportingUnitType_Id" = EDRUT."Id"
                     JOIN "Party" p on CS."Party_Id" = p."Id"
+                WHERE d."Election_Id" = %s  -- election_id
+                    AND d."ReportingUnit_Id" = %s  -- jurisdiction_id
+                        AND IntermediateRU."ReportingUnitType_Id" = %s  -- subdivision type id
+                        AND IntermediateRU."OtherReportingUnitType" = %s -- other subdivision type
+                        AND C.contest_type = 'Candidate'
     """
     )
     cursor.execute(
-        q, [
+        q,
+        [
+            election_id,
             jurisdiction_id,
-            subdivision_type_id, other_subdivision_type,
-            subdivision_type_id, other_subdivision_type,
-            election_id
-        ]
+            subdivision_type_id,
+            other_subdivision_type,
+        ],
     )
     result = cursor.fetchall()
     result_df = pd.DataFrame(result)
@@ -1201,6 +1222,7 @@ def unsummed_vote_counts_with_rollup_subdivision_id(
         "Contest",
         "Selection",
         "ElectionDistrict_Id",
+        "ElectionDistrict",
         "Candidate_Id",
         "contest_type",
         "contest_district_type",
@@ -1503,7 +1525,7 @@ def read_vote_count(
                 JOIN (
                     SELECT 
                         "Id", 
-                        "Name" AS "ReportingUnitName", 
+                        "Name" AS "ElectionDistrict", 
                         "ReportingUnitType_Id", 
                         "OtherReportingUnitType" AS "OtherReportingUnitType_internal_only" 
                     FROM "ReportingUnit"
@@ -1529,7 +1551,9 @@ def read_vote_count(
     # accommodate "other" type election districts
     if "unit_type" in fields:
         other_mask = results_df[unit_type_alias] == "other"
-        results_df.loc[other_mask,[unit_type_alias]] = results_df[other_mask]["OtherReportingUnitType_internal_only"]
+        results_df.loc[other_mask, [unit_type_alias]] = results_df[other_mask][
+            "OtherReportingUnitType_internal_only"
+        ]
         results_df.drop("OtherReportingUnitType_internal_only", axis=1, inplace=True)
     return results_df
 
@@ -1592,30 +1616,55 @@ def is_preliminary(
 
 def read_external(
     cursor: psycopg2.extensions.cursor,
-    election_year: int,
-    top_ru_id: int,
+    election_id: int,
+    jurisdiction_id: int,
     fields: list,
-    restrict: Optional[Any] = None,
+    restrict_by_label: Optional[Any] = None,
+    restrict_by_category: Optional[Any] = None,
+    subdivision_type_id: Optional[int] = None,
+    other_subdivision_type: Optional[str] = None,
 ) -> pd.DataFrame:
-    if restrict:
-        census = f"""AND "Label" = '{restrict}'"""
+    """returns a dataframe with columns <fields>,
+    where each field is in the ExternalDataSet table.
+    If <major_subdivisions_only> is True, returns only major sub-divisions
+    (typically counties)"""
+    if restrict_by_label:
+        label_restriction = f""" AND "Label" = '{restrict_by_label}'"""
     else:
-        census = ""
+        label_restriction = ""
+    if restrict_by_category:
+        category_restriction = f""" AND "Category" = '{restrict_by_category}'"""
+    else:
+        category_restriction = ""
+    if subdivision_type_id:
+        sub_div_restriction = f""" AND "ReportingUnitType_Id" = {subdivision_type_id}  
+        AND "OtherReportingUnitType" = '{other_subdivision_type}'  """
+    else:
+        sub_div_restriction = ""
     q = sql.SQL(
         """
-        SELECT  DISTINCT "Category", "InCategoryOrder", {fields}
-        FROM    "External"
-        WHERE   "ElectionYear" = %s
-                AND "TopReportingUnit_Id" = %s
-                {census}
-        ORDER BY "Category", "InCategoryOrder"
+        SELECT  DISTINCT "Category", "OrderWithinCategory", {fields}
+        FROM "ElectionExternalDataSetJoin" eedsj
+        LEFT JOIN "ExternalDataSet" eds ON eds."Id" = eedsj."ExternalDataSet_Id"
+        LEFT JOIN "ExternalData" ed ON eds."Id" = ed."ExternalDataSet_Id"     
+        LEFT JOIN "ReportingUnit" ru ON ru."Id" = ed."ReportingUnit_Id" -- sub-jurisdiction, typically county
+        LEFT JOIN "ComposingReportingUnitJoin" cruj ON cruj."ChildReportingUnit_Id" = ru."Id"
+ 
+        WHERE   eedsj."Election_Id" = %s
+                AND cruj."ParentReportingUnit_Id" = %s
+                {label_restriction}
+                {category_restriction}
+                {sub_div_restriction}
+        ORDER BY "Category", "OrderWithinCategory"
     """
     ).format(
         fields=sql.SQL(",").join(sql.Identifier(field) for field in fields),
-        census=sql.SQL(census),
+        label_restriction=sql.SQL(label_restriction),
+        category_restriction=sql.SQL(category_restriction),
+        sub_div_restriction=sql.SQL(sub_div_restriction),
     )
     try:
-        cursor.execute(q, [election_year, top_ru_id])
+        cursor.execute(q, [election_id, jurisdiction_id])
         results = cursor.fetchall()
         results_df = pd.DataFrame(
             results, columns=["Category", "InCategoryOrder"] + fields
@@ -1772,6 +1821,19 @@ def contest_families_by_juris(
     return result_df
 
 
+def id_othertext_from_plaintext(
+    session: Session, enum: str, plaintext: str
+) -> (Optional[int], Optional[str]):
+    lookup_df = pd.read_sql_table(enum, session.bind, index_col="Id")
+    if plaintext in lookup_df.Txt.unique():
+        idx = lookup_df[lookup_df.Txt == plaintext].first_valid_index()
+        other_text = ""
+    else:
+        idx = lookup_df[lookup_df.Txt == "other"].first_valid_index()
+        other_text = plaintext
+    return idx, other_text
+
+
 def id_other_cols_to_enum(
     session: Session, df: pd.DataFrame, enum: str
 ) -> (pd.DataFrame, Optional[dict]):
@@ -1900,3 +1962,91 @@ def get_vote_count_types(
     vct_set = get_vote_count_types_cursor(cursor, election, jurisdiction)
     connection.close()
     return vct_set
+
+
+def read_vote_count_nist(
+    session: Session,
+    election_id: int,
+    reporting_unit_id: int,
+    rollup_ru_type: Optional[str] = None,
+) -> pd.DataFrame:
+    """The VoteCount table is the only place that maps contests to a specific
+    election. But this table is the largest one, so we don't want to use pandas methods
+    to read into a DF and then filter"""
+
+    fields = [
+        "ReportingUnitType_Id",
+        "Party_Id",
+        "PartyName",
+        "Candidate_Id",
+        "BallotName",
+        "Contest_Id",
+        "ContestType",
+        "ElectionDistrict_Id",
+        "ContestName",
+        "Selection_Id",
+        "ReportingUnit_Id",
+        "CountItemType",
+        "OtherCountItemType",
+        "Count",
+    ]
+    q = sql.SQL(
+        """
+        SELECT  DISTINCT {fields}
+        FROM    (
+                    SELECT  "Id" as "VoteCount_Id", "Contest_Id", "Selection_Id",
+                            "ReportingUnit_Id", "Election_Id", "CountItemType_Id", 
+                            "OtherCountItemType", "Count"
+                    FROM    "VoteCount"
+                ) vc
+                JOIN (SELECT "Id", "Name" as "ContestName" , contest_type as "ContestType" FROM "Contest") con on vc."Contest_Id" = con."Id"
+                JOIN "ComposingReportingUnitJoin" cruj ON vc."ReportingUnit_Id" = cruj."ChildReportingUnit_Id"
+                JOIN "CandidateSelection" cs ON vc."Selection_Id" = cs."Id"
+                JOIN "Candidate" c on cs."Candidate_Id" = c."Id"
+                JOIN (SELECT "Id", "Name" AS "PartyName" FROM "Party") p ON cs."Party_Id" = p."Id"
+                JOIN "CandidateContest" cc ON con."Id" = cc."Id"
+                JOIN (SELECT "Id", "Name" as "OfficeName", "ElectionDistrict_Id" FROM "Office") o on cc."Office_Id" = o."Id"
+                -- this reporting unit info refers to the districts (state house, state senate, etc)
+                JOIN (SELECT "Id", "Name" AS "ElectionDistrict", "ReportingUnitType_Id" FROM "ReportingUnit") ru on o."ElectionDistrict_Id" = ru."Id"
+                JOIN (SELECT "Id", "Txt" AS unit_type FROM "ReportingUnitType") rut on ru."ReportingUnitType_Id" = rut."Id"
+                -- this reporting unit info refers to the geopolitical divisions (county, state, etc)
+                JOIN (SELECT "Id" as "GP_Id", "Name" AS "GPReportingUnitName", "ReportingUnitType_Id" AS "GPReportingUnitType_Id" FROM "ReportingUnit") gpru on vc."ReportingUnit_Id" = gpru."GP_Id"
+                JOIN (SELECT "Id", "Txt" AS "GPType" FROM "ReportingUnitType") gprut on gpru."GPReportingUnitType_Id" = gprut."Id"
+                JOIN (SELECT "Id", "Name" as "ElectionName", "ElectionType_Id", "OtherElectionType" FROM "Election") e on vc."Election_Id" = e."Id"
+                JOIN (SELECT "Id", "Txt" as "ElectionType" FROM "ElectionType") et on e."ElectionType_Id" = et."Id"
+                JOIN (SELECT "Id", "Txt" as "CountItemType" FROM "CountItemType") cit on vc."CountItemType_Id" = cit."Id"
+        WHERE   "Election_Id" = %s
+                AND "ParentReportingUnit_Id" = %s
+        """
+    ).format(
+        fields=sql.SQL(",").join(sql.Identifier(field) for field in fields),
+    )
+    connection = session.bind.raw_connection()
+    cursor = connection.cursor()
+    cursor.execute(q, [election_id, reporting_unit_id])
+    results = cursor.fetchall()
+    unrolled_df = pd.DataFrame(results, columns=fields)
+
+    if rollup_ru_type:
+        results_df, new_err = an.rollup_dataframe(
+            session,
+            unrolled_df,
+            "Count",
+            "ReportingUnit_Id",
+            "ReportingUnit_Id",
+            rollup_rut=rollup_ru_type,
+            ignore=["ReportingUnitType_Id"],
+        )
+        # add ReportingUnitType_Id column
+        # TODO error handling -- what if sub_type is non-standard?
+        rut = pd.read_sql_table("ReportingUnitType", session.bind, index_col="Id")
+        sub_type_id = rut[rut.Txt == rollup_ru_type].first_valid_index()
+        results_df = m.add_constant_column(
+            results_df, "ReportingUnitType_Id", sub_type_id, dtype="int"
+        )
+
+        #  What happened to OtherReportingUnitType? Might need it.
+        #  NB: the ReportingUnitType_Id from read_vote_count is the Election District type
+    else:
+        results_df = unrolled_df
+    return results_df

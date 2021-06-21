@@ -1,9 +1,11 @@
 import inspect
 from pathlib import Path
-from election_data_analysis import database as db
-from election_data_analysis import user_interface as ui
-from election_data_analysis import juris_and_munger as jm
-from election_data_analysis import special_formats as sf
+from election_data_analysis import (
+    database as db,
+    userinterface as ui,
+    juris as jm,
+    nistformats as nist,
+)
 import pandas as pd
 from pandas.api.types import is_numeric_dtype
 from typing import Optional, List, Dict, Any
@@ -899,7 +901,7 @@ def raw_to_id_simple(
     juris_true_name,
     file_type: str,
 ) -> (pd.DataFrame, Optional[dict]):
-    """ Append ids to <df> for any row- or column- sourced elements given in <element_list>"""
+    """Append ids to <df> for any row- or column- sourced elements given in <element_list>"""
 
     err = None
     working = df.copy()
@@ -917,7 +919,7 @@ def raw_to_id_simple(
             if t == "CountItemType":
                 # munge raw to internal CountItemType
                 if file_type == "nist_v2_xml":
-                    r_i = sf.cit_from_raw_nist_df
+                    r_i = nist.cit_from_raw_nist_df
                 else:
                     r_i = pd.read_csv(
                         os.path.join(path_to_jurisdiction_dir, "dictionary.txt"),
@@ -1683,7 +1685,7 @@ def get_and_check_munger_params(
 def get_string_fields_from_munger(
     munger_path: str,
 ) -> (List[str], Optional[dict]):
-    """Finds the field names expected by the munger formulas """
+    """Finds the field names expected by the munger formulas"""
     err = None
     formulas, new_err = ui.get_parameters(
         required_keys=[],

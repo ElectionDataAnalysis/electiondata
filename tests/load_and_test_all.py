@@ -7,7 +7,7 @@ import shutil
 from typing import Optional
 import election_data_analysis as eda
 from election_data_analysis import database as db
-from election_data_analysis import user_interface as ui
+from election_data_analysis import userinterface as ui
 from distutils.dir_util import copy_tree
 
 

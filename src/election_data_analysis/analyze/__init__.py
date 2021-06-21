@@ -1,15 +1,18 @@
 import os.path
 from typing import Optional, List
 from sqlalchemy.orm import Session
+import psycopg2
 import pandas as pd
 import inspect
-from election_data_analysis import user_interface as ui
-from election_data_analysis import munge as m
+from election_data_analysis import (
+    userinterface as ui,
+    munge as m,
+    database as db,
+)
 import datetime
 import os
 import numpy as np
 from pathlib import Path
-from election_data_analysis import database as db
 import scipy.spatial.distance as dist
 from scipy import stats
 import json
@@ -188,7 +191,7 @@ def create_scatter(
 
     # check if there is only 1 candidate selection (with multiple count types)
     single_selection = len(unsummed["Selection"].unique()) == 1
-    # check if there is only one contest
+    # check if there is only one count type
     single_count_type = len(unsummed["CountItemType"].unique()) == 1
 
     if (h_runoff or v_runoff) and single_selection:
@@ -197,7 +200,7 @@ def create_scatter(
         pivot_col = "CountItemType"
     elif single_selection and single_count_type:
         pivot_col = "Election_Id"
-    else:
+    else: # no runoffs, not single_selection
         pivot_col = "Selection"
     pivot_df = pd.pivot_table(
         unsummed, values="Count", index=["Name"], columns=pivot_col, aggfunc=np.sum
@@ -224,13 +227,16 @@ def create_scatter(
         )
         results["x"] = h_count
         results["y"] = v_count
-    else:
+    else:  # neither is runoff; not single_selection
         results = package_results(pivot_df, jurisdiction, h_count, v_count)
     results["x-election"] = db.name_from_id_cursor(cursor, "Election", h_election_id)
     results["y-election"] = db.name_from_id_cursor(cursor, "Election", v_election_id)
-    results["subdivision_type"] = db.name_from_id_cursor(
-        cursor, "ReportingUnitType", subdivision_type_id
-    )
+    if other_subdivision_type == "":
+        results["subdivision_type"] = db.name_from_id_cursor(
+            cursor, "ReportingUnitType", subdivision_type_id
+        )
+    else:
+        results["subdivision_type"] = other_subdivision_type
     results["x-count_item_type"] = h_category
     results["y-count_item_type"] = v_category
     results["x-title"] = scatter_axis_title(
@@ -301,12 +307,15 @@ def get_data_for_scatter(
     count_type,
     is_runoff,
 ):
-    if count_type == "census":
-        return get_census_data(
+    if count_type.startswith("Population"):
+        return get_external_data(
             session,
             jurisdiction_id,
             election_id,
-            filter_str,
+            f"{count_type} {count_item_type}".strip(),  # category
+            filter_str,  # Label
+            subdivision_type_id=subdivision_type_id,
+            other_subdivision_type=other_subdivision_type,
         )
     else:
         return get_votecount_data(
@@ -322,22 +331,27 @@ def get_data_for_scatter(
         )
 
 
-def get_census_data(
+def get_external_data(
     session,
     jurisdiction_id,
     election_id,
-    filter_str,
+    category,
+    label,
+    subdivision_type_id,
+    other_subdivision_type,
 ):
     # get the census data
     connection = session.bind.raw_connection()
     cursor = connection.cursor()
-    election = db.name_from_id_cursor(cursor, "Election", election_id)
     census_df = db.read_external(
         cursor,
-        int(election[0:4]),
+        election_id,
         jurisdiction_id,
-        ["County", "Category", "Label", "Value"],
-        restrict=filter_str,
+        ["Name", "Category", "Label", "Value", "Source"],
+        restrict_by_label=label,
+        restrict_by_category=category,
+        subdivision_type_id=subdivision_type_id,
+        other_subdivision_type=other_subdivision_type,
     )
     cursor.close()
 
@@ -346,10 +360,10 @@ def get_census_data(
         census_df["Election_Id"] = election_id
         census_df["Contest_Id"] = 0
         census_df["Candidate_Id"] = 0
-        census_df["Contest"] = "Census data"
+        census_df["Contest"] = category
         census_df["CountItemType"] = "total"
         census_df.rename(
-            columns={"County": "Name", "Label": "Selection", "Value": "Count"},
+            columns={"Label": "Selection", "Value": "Count"},
             inplace=True,
         )
         census_df = census_df[
@@ -380,7 +394,11 @@ def get_votecount_data(
     is_runoff: bool,
 ):
     unsummed = db.unsummed_vote_counts_with_rollup_subdivision_id(
-        session, election_id, jurisdiction_id, subdivision_type_id, other_subdivision_type,
+        session,
+        election_id,
+        jurisdiction_id,
+        subdivision_type_id,
+        other_subdivision_type,
     )
 
     # limit to relevant data - runoff
@@ -467,7 +485,10 @@ def create_bar(
 
     if contest_type:
         contest_type = ui.get_contest_type_mapping(contest_type)
-        unsummed = unsummed[unsummed["contest_district_type"] == contest_type]
+        unsummed = unsummed[
+            (unsummed["contest_district_type"] == contest_type) |
+            (unsummed["contest_district_othertype"] == contest_type)
+        ]
 
     # through front end, contest_type must be truthy if contest is truthy
     # Only filter when there is an actual contest passed through, as opposed to
@@ -477,6 +498,7 @@ def create_bar(
 
     groupby_cols = [
         "ParentReportingUnit_Id",
+        "ReportingUnitOtherType",
         "ParentName",
         "ParentReportingUnitType_Id",
         "Candidate_Id",
@@ -488,6 +510,7 @@ def create_bar(
         "Selection_Id",
         "contest_type",
         "contest_district_type",
+        "contest_district_othertype",
         "Party",
     ]
     unsummed = unsummed.groupby(groupby_cols).sum().reset_index()
@@ -565,9 +588,10 @@ def create_bar(
         results["contest"] = db.name_from_id_cursor(
             cursor, "Contest", int(temp_df.iloc[0]["Contest_Id"])
         )
-        results["subdivision_type"] = db.name_from_id_cursor(
-            cursor, "ReportingUnitType", int(temp_df.iloc[0]["ReportingUnitType_Id"])
-        )
+        if other_subdivision_type == "":
+            results["subdivision_type"] = db.name_to_id(session, "ReportingUnitType", subdivision_type_id)
+        else:
+            results["subdivision_type"] = other_subdivision_type
         results["count_item_type"] = temp_df.iloc[0]["CountItemType"]
 
         # display votes at stake, margin info
@@ -1035,19 +1059,29 @@ def dedupe_scatter_title(category, election, contest):
     return title
 
 
-def scatter_axis_title(cursor, category, election, contest, jurisdiction_id):
-    if contest == "Census data":
-        # get the actual year of data here
-        census_year = db.read_external(
+def scatter_axis_title(
+    cursor: psycopg2.extensions.cursor,
+    label: str,
+    election: str,
+    contest_or_external_category: str,
+    jurisdiction_id: int,
+) -> str:
+    if contest_or_external_category.startswith("Population"):
+        election_id = db.name_to_id_cursor(cursor, "Election", election)
+        # get the actual year of data and source of data
+        df = db.read_external(
             cursor,
-            int(election[0:4]),
+            election_id,
             jurisdiction_id,
-            ["CensusYear"],
-            restrict=category,
-        )["CensusYear"].iloc[0]
-        return f"{category} - {census_year} American Community Survey"
+            ["Year", "Source"],
+            restrict_by_category=contest_or_external_category,
+            restrict_by_label=label,
+        )
+        data_year = df.iloc[0]["Year"]
+        data_source = df.iloc[0]["Source"]
+        return f"{data_year} {contest_or_external_category} - {label}"
     else:
-        title = dedupe_scatter_title(category, election, contest)
+        title = dedupe_scatter_title(label, election, contest_or_external_category)
         return ui.get_contest_type_display(title)
 
 
@@ -1119,7 +1153,7 @@ def nist_candidate_contest(session, election_id, jurisdiction_id):
 
 
 def nist_reporting_unit(session, election_id, jurisdiction_id):
-    """ A ReportingUnit is a GPUnit """
+    """A ReportingUnit is a GPUnit"""
     df = db.read_vote_count(
         session,
         election_id,
