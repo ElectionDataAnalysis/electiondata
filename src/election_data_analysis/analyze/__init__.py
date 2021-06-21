@@ -506,6 +506,7 @@ def create_bar(
         "Selection_Id",
         "contest_type",
         "contest_district_type",
+        "contest_district_othertype",
         "Party",
     ]
     unsummed = unsummed.groupby(groupby_cols).sum().reset_index()
