@@ -942,16 +942,16 @@ def raw_to_id_simple(
                 # get list of raw CountItemTypes in case they are needed for error reporting
                 all_raw_cit = working.CountItemType_raw.unique().tolist()
                 # get internal CountItemType for all matched lines
-                working = (
-                    working[matched]
-                    .merge(
+                working = working[matched].merge(
                         r_i,
                         how="left",
                         left_on="CountItemType_raw",
                         right_on="raw_identifier_value",
-                    )
-                    .rename(columns={"cdf_internal_name": "CountItemType"})
-                )
+                    ).rename(columns={"cdf_internal_name": "CountItemType"})
+
+
+
+
 
                 # if no CountItemTypes matched to dictionary
                 if working.CountItemType.isnull().all():
@@ -1023,7 +1023,7 @@ def raw_to_id_simple(
                 err,
                 "system",
                 f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
-                f"Unexpected exception ({exc}) while adding internal ids for {t}.",
+                f"Unexpected exception while adding internal ids for {t}:\n{exc}",
             )
 
     return working, err

@@ -1,115 +1,225 @@
 cdf_element	cdf_internal_name	raw_identifier_value
-Party	Democratic Party	Democratic Party
-Party	Republican Party	Republican Party
-Party	Green Party	Green Party
-Party	Libertarian Party	Libertarian Party
-ReportingUnit	Nebraska	Nebraska
-ReportingUnit	Nebraska;Adams County	Adams
-ReportingUnit	Nebraska;Antelope County	Antelope
-ReportingUnit	Nebraska;Arthur County	Arthur
-ReportingUnit	Nebraska;Banner County	Banner
-ReportingUnit	Nebraska;Blaine County	Blaine
-ReportingUnit	Nebraska;Boone County	Boone
-ReportingUnit	Nebraska;Box Butte County	Box Butte
-ReportingUnit	Nebraska;Boyd County	Boyd
-ReportingUnit	Nebraska;Brown County	Brown
-ReportingUnit	Nebraska;Buffalo County	Buffalo
-ReportingUnit	Nebraska;Burt County	Burt
-ReportingUnit	Nebraska;Butler County	Butler
-ReportingUnit	Nebraska;Cass County	Cass
-ReportingUnit	Nebraska;Cedar County	Cedar
-ReportingUnit	Nebraska;Chase County	Chase
-ReportingUnit	Nebraska;Cherry County	Cherry
-ReportingUnit	Nebraska;Cheyenne County	Cheyenne
-ReportingUnit	Nebraska;Clay County	Clay
-ReportingUnit	Nebraska;Colfax County	Colfax
-ReportingUnit	Nebraska;Cuming County	Cuming
-ReportingUnit	Nebraska;Custer County	Custer
-ReportingUnit	Nebraska;Dakota County	Dakota
-ReportingUnit	Nebraska;Dawes County	Dawes
-ReportingUnit	Nebraska;Dawson County	Dawson
-ReportingUnit	Nebraska;Deuel County	Deuel
-ReportingUnit	Nebraska;Dixon County	Dixon
-ReportingUnit	Nebraska;Dodge County	Dodge
-ReportingUnit	Nebraska;Douglas County	Douglas
-ReportingUnit	Nebraska;Dundy County	Dundy
-ReportingUnit	Nebraska;Fillmore County	Fillmore
-ReportingUnit	Nebraska;Franklin County	Franklin
-ReportingUnit	Nebraska;Frontier County	Frontier
-ReportingUnit	Nebraska;Furnas County	Furnas
-ReportingUnit	Nebraska;Gage County	Gage
-ReportingUnit	Nebraska;Garden County	Garden
-ReportingUnit	Nebraska;Garfield County	Garfield
-ReportingUnit	Nebraska;Gosper County	Gosper
-ReportingUnit	Nebraska;Grant County	Grant
-ReportingUnit	Nebraska;Greeley County	Greeley
-ReportingUnit	Nebraska;Hall County	Hall
-ReportingUnit	Nebraska;Hamilton County	Hamilton
-ReportingUnit	Nebraska;Harlan County	Harlan
-ReportingUnit	Nebraska;Hayes County	Hayes
-ReportingUnit	Nebraska;Hitchcock County	Hitchcock
-ReportingUnit	Nebraska;Holt County	Holt
-ReportingUnit	Nebraska;Hooker County	Hooker
-ReportingUnit	Nebraska;Howard County	Howard
-ReportingUnit	Nebraska;Jefferson County	Jefferson
-ReportingUnit	Nebraska;Johnson County	Johnson
-ReportingUnit	Nebraska;Kearney County	Kearney
-ReportingUnit	Nebraska;Keith County	Keith
-ReportingUnit	Nebraska;Keya Paha County	Keya Paha
-ReportingUnit	Nebraska;Kimball County	Kimball
-ReportingUnit	Nebraska;Knox County	Knox
-ReportingUnit	Nebraska;Lancaster County	Lancaster
-ReportingUnit	Nebraska;Lincoln County	Lincoln
-ReportingUnit	Nebraska;Logan County	Logan
-ReportingUnit	Nebraska;Loup County	Loup
-ReportingUnit	Nebraska;Madison County	Madison
-ReportingUnit	Nebraska;McPherson County	McPherson
-ReportingUnit	Nebraska;Merrick County	Merrick
-ReportingUnit	Nebraska;Morrill County	Morrill
-ReportingUnit	Nebraska;Nance County	Nance
-ReportingUnit	Nebraska;Nemaha County	Nemaha
-ReportingUnit	Nebraska;Nuckolls County	Nuckolls
-ReportingUnit	Nebraska;Otoe County	Otoe
-ReportingUnit	Nebraska;Pawnee County	Pawnee
-ReportingUnit	Nebraska;Perkins County	Perkins
-ReportingUnit	Nebraska;Phelps County	Phelps
-ReportingUnit	Nebraska;Pierce County	Pierce
-ReportingUnit	Nebraska;Platte County	Platte
-ReportingUnit	Nebraska;Polk County	Polk
-ReportingUnit	Nebraska;Red Willow County	Red Willow
-ReportingUnit	Nebraska;Richardson County	Richardson
-ReportingUnit	Nebraska;Rock County	Rock
-ReportingUnit	Nebraska;Saline County	Saline
-ReportingUnit	Nebraska;Sarpy County	Sarpy
-ReportingUnit	Nebraska;Saunders County	Saunders
-ReportingUnit	Nebraska;Scotts Bluff County	Scotts Bluff
-ReportingUnit	Nebraska;Seward County	Seward
-ReportingUnit	Nebraska;Sheridan County	Sheridan
-ReportingUnit	Nebraska;Sherman County	Sherman
-ReportingUnit	Nebraska;Sioux County	Sioux
-ReportingUnit	Nebraska;Stanton County	Stanton
-ReportingUnit	Nebraska;Thayer County	Thayer
-ReportingUnit	Nebraska;Thomas County	Thomas
-ReportingUnit	Nebraska;Thurston County	Thurston
-ReportingUnit	Nebraska;Valley County	Valley
-ReportingUnit	Nebraska;Washington County	Washington
-ReportingUnit	Nebraska;Wayne County	Wayne
-ReportingUnit	Nebraska;Webster County	Webster
-ReportingUnit	Nebraska;Wheeler County	Wheeler
-ReportingUnit	Nebraska;York County	York
-Candidate	Joseph R. Biden	Joseph R. Biden and Kamala D. Harris
-Candidate	Donald J. Trump	Donald J. Trump and Michael R. Pence
-Candidate	Jo Jorgensen	Jo Jorgensen and Jeremy Cohen
-Candidate	Gene Siadek	Gene Siadek
+Candidate	Adrian Smith	Adrian Smith
+Candidate	Al Gore	AL GORE
+Candidate	Barack Obama	BARACK OBAMA
 Candidate	Ben Sasse	Ben Sasse
 Candidate	Chris Janicek	Chris Janicek
-Candidate	Kate Bolz	Kate Bolz
-Candidate	Jeff Fortenberry	Jeff Fortenberry
 Candidate	Dennis B. Grace	Dennis B. Grace
 Candidate	Donald Bacon	Donald Bacon
-Candidate	Kara Eastman	Kara Eastman
-Candidate	Tyler Schaeffer	Tyler Schaeffer
-Candidate	Adrian Smith	Adrian Smith
-Candidate	Mark Elworth Jr.	Mark Elworth Jr.
+Candidate	Donald J. Trump	Donald J. Trump and Michael R. Pence
+Candidate	Donald J. Trump	DONALD TRUMP
 Candidate	Dustin C. Hobbs	Dustin C. Hobbs
+Candidate	Gene Siadek	Gene Siadek
+Candidate	George W. Bush	GEORGE W. BUSH
+Candidate	Hillary Clinton	HILLARY CLINTON
+Candidate	Jeff Fortenberry	Jeff Fortenberry
+Candidate	Jo Jorgensen	Jo Jorgensen and Jeremy Cohen
+Candidate	John Kerry	JOHN KERRY
+Candidate	John Mccain	JOHN MCCAIN
+Candidate	Joseph R. Biden	Joseph R. Biden and Kamala D. Harris
+Candidate	Kara Eastman	Kara Eastman
+Candidate	Kate Bolz	Kate Bolz
+Candidate	Mark Elworth Jr.	Mark Elworth Jr.
+Candidate	Mitt Romney	MITT ROMNEY
+Candidate	Other	OTHER
+Candidate	Ralph Nader	RALPH NADER
+Candidate	Tyler Schaeffer	Tyler Schaeffer
+CandidateContest	US President (NE)	PRESIDENT
+CandidateContest	US President (NE)	US PRESIDENT
 CountItemType	total	TOTAL
+Party	Democratic Party	Democratic Party
+Party	Democratic Party	DEMOCRAT
+Party	Green Party	Green Party
+Party	Green Party	GREEN
+Party	Libertarian Party	Libertarian Party
+Party	Libertarian Party	LIBERTARIAN
+Party	Republican Party	Republican Party
+Party	Republican Party	REPUBLICAN
+Party	none or unknown	OTHER
+ReportingUnit	Nebraska	Nebraska
+ReportingUnit	Nebraska;Adams County	Adams
+ReportingUnit	Nebraska;Adams County	31001
+ReportingUnit	Nebraska;Antelope County	Antelope
+ReportingUnit	Nebraska;Antelope County	31003
+ReportingUnit	Nebraska;Arthur County	Arthur
+ReportingUnit	Nebraska;Arthur County	31005
+ReportingUnit	Nebraska;Banner County	Banner
+ReportingUnit	Nebraska;Banner County	31007
+ReportingUnit	Nebraska;Blaine County	Blaine
+ReportingUnit	Nebraska;Blaine County	31009
+ReportingUnit	Nebraska;Boone County	Boone
+ReportingUnit	Nebraska;Boone County	31011
+ReportingUnit	Nebraska;Box Butte County	Box Butte
+ReportingUnit	Nebraska;Box Butte County	31013
+ReportingUnit	Nebraska;Boyd County	Boyd
+ReportingUnit	Nebraska;Boyd County	31015
+ReportingUnit	Nebraska;Brown County	Brown
+ReportingUnit	Nebraska;Brown County	31017
+ReportingUnit	Nebraska;Buffalo County	Buffalo
+ReportingUnit	Nebraska;Buffalo County	31019
+ReportingUnit	Nebraska;Burt County	Burt
+ReportingUnit	Nebraska;Burt County	31021
+ReportingUnit	Nebraska;Butler County	Butler
+ReportingUnit	Nebraska;Butler County	31023
+ReportingUnit	Nebraska;Cass County	Cass
+ReportingUnit	Nebraska;Cass County	31025
+ReportingUnit	Nebraska;Cedar County	Cedar
+ReportingUnit	Nebraska;Cedar County	31027
+ReportingUnit	Nebraska;Chase County	Chase
+ReportingUnit	Nebraska;Chase County	31029
+ReportingUnit	Nebraska;Cherry County	Cherry
+ReportingUnit	Nebraska;Cherry County	31031
+ReportingUnit	Nebraska;Cheyenne County	Cheyenne
+ReportingUnit	Nebraska;Cheyenne County	31033
+ReportingUnit	Nebraska;Clay County	Clay
+ReportingUnit	Nebraska;Clay County	31035
+ReportingUnit	Nebraska;Colfax County	Colfax
+ReportingUnit	Nebraska;Colfax County	31037
+ReportingUnit	Nebraska;Cuming County	Cuming
+ReportingUnit	Nebraska;Cuming County	31039
+ReportingUnit	Nebraska;Custer County	Custer
+ReportingUnit	Nebraska;Custer County	31041
+ReportingUnit	Nebraska;Dakota County	Dakota
+ReportingUnit	Nebraska;Dakota County	31043
+ReportingUnit	Nebraska;Dawes County	Dawes
+ReportingUnit	Nebraska;Dawes County	31045
+ReportingUnit	Nebraska;Dawson County	Dawson
+ReportingUnit	Nebraska;Dawson County	31047
+ReportingUnit	Nebraska;Deuel County	Deuel
+ReportingUnit	Nebraska;Deuel County	31049
+ReportingUnit	Nebraska;Dixon County	Dixon
+ReportingUnit	Nebraska;Dixon County	31051
+ReportingUnit	Nebraska;Dodge County	Dodge
+ReportingUnit	Nebraska;Dodge County	31053
+ReportingUnit	Nebraska;Douglas County	Douglas
+ReportingUnit	Nebraska;Douglas County	31055
+ReportingUnit	Nebraska;Dundy County	Dundy
+ReportingUnit	Nebraska;Dundy County	31057
+ReportingUnit	Nebraska;Fillmore County	Fillmore
+ReportingUnit	Nebraska;Fillmore County	31059
+ReportingUnit	Nebraska;Franklin County	Franklin
+ReportingUnit	Nebraska;Franklin County	31061
+ReportingUnit	Nebraska;Frontier County	Frontier
+ReportingUnit	Nebraska;Frontier County	31063
+ReportingUnit	Nebraska;Furnas County	Furnas
+ReportingUnit	Nebraska;Furnas County	31065
+ReportingUnit	Nebraska;Gage County	Gage
+ReportingUnit	Nebraska;Gage County	31067
+ReportingUnit	Nebraska;Garden County	Garden
+ReportingUnit	Nebraska;Garden County	31069
+ReportingUnit	Nebraska;Garfield County	Garfield
+ReportingUnit	Nebraska;Garfield County	31071
+ReportingUnit	Nebraska;Gosper County	Gosper
+ReportingUnit	Nebraska;Gosper County	31073
+ReportingUnit	Nebraska;Grant County	Grant
+ReportingUnit	Nebraska;Grant County	31075
+ReportingUnit	Nebraska;Greeley County	Greeley
+ReportingUnit	Nebraska;Greeley County	31077
+ReportingUnit	Nebraska;Hall County	Hall
+ReportingUnit	Nebraska;Hall County	31079
+ReportingUnit	Nebraska;Hamilton County	Hamilton
+ReportingUnit	Nebraska;Hamilton County	31081
+ReportingUnit	Nebraska;Harlan County	Harlan
+ReportingUnit	Nebraska;Harlan County	31083
+ReportingUnit	Nebraska;Hayes County	Hayes
+ReportingUnit	Nebraska;Hayes County	31085
+ReportingUnit	Nebraska;Hitchcock County	Hitchcock
+ReportingUnit	Nebraska;Hitchcock County	31087
+ReportingUnit	Nebraska;Holt County	Holt
+ReportingUnit	Nebraska;Holt County	31089
+ReportingUnit	Nebraska;Hooker County	Hooker
+ReportingUnit	Nebraska;Hooker County	31091
+ReportingUnit	Nebraska;Howard County	Howard
+ReportingUnit	Nebraska;Howard County	31093
+ReportingUnit	Nebraska;Jefferson County	Jefferson
+ReportingUnit	Nebraska;Jefferson County	31095
+ReportingUnit	Nebraska;Johnson County	Johnson
+ReportingUnit	Nebraska;Johnson County	31097
+ReportingUnit	Nebraska;Kearney County	Kearney
+ReportingUnit	Nebraska;Kearney County	31099
+ReportingUnit	Nebraska;Keith County	Keith
+ReportingUnit	Nebraska;Keith County	31101
+ReportingUnit	Nebraska;Keya Paha County	Keya Paha
+ReportingUnit	Nebraska;Keya Paha County	31103
+ReportingUnit	Nebraska;Kimball County	Kimball
+ReportingUnit	Nebraska;Kimball County	31105
+ReportingUnit	Nebraska;Knox County	Knox
+ReportingUnit	Nebraska;Knox County	31107
+ReportingUnit	Nebraska;Lancaster County	Lancaster
+ReportingUnit	Nebraska;Lancaster County	31109
+ReportingUnit	Nebraska;Lincoln County	Lincoln
+ReportingUnit	Nebraska;Lincoln County	31111
+ReportingUnit	Nebraska;Logan County	Logan
+ReportingUnit	Nebraska;Logan County	31113
+ReportingUnit	Nebraska;Loup County	Loup
+ReportingUnit	Nebraska;Loup County	31115
+ReportingUnit	Nebraska;Madison County	Madison
+ReportingUnit	Nebraska;Madison County	31119
+ReportingUnit	Nebraska;McPherson County	McPherson
+ReportingUnit	Nebraska;McPherson County	31117
+ReportingUnit	Nebraska;Merrick County	Merrick
+ReportingUnit	Nebraska;Merrick County	31121
+ReportingUnit	Nebraska;Morrill County	Morrill
+ReportingUnit	Nebraska;Morrill County	31123
+ReportingUnit	Nebraska;Nance County	Nance
+ReportingUnit	Nebraska;Nance County	31125
+ReportingUnit	Nebraska;Nemaha County	Nemaha
+ReportingUnit	Nebraska;Nemaha County	31127
+ReportingUnit	Nebraska;Nuckolls County	Nuckolls
+ReportingUnit	Nebraska;Nuckolls County	31129
+ReportingUnit	Nebraska;Otoe County	Otoe
+ReportingUnit	Nebraska;Otoe County	31131
+ReportingUnit	Nebraska;Pawnee County	Pawnee
+ReportingUnit	Nebraska;Pawnee County	31133
+ReportingUnit	Nebraska;Perkins County	Perkins
+ReportingUnit	Nebraska;Perkins County	31135
+ReportingUnit	Nebraska;Phelps County	Phelps
+ReportingUnit	Nebraska;Phelps County	31137
+ReportingUnit	Nebraska;Pierce County	Pierce
+ReportingUnit	Nebraska;Pierce County	31139
+ReportingUnit	Nebraska;Platte County	Platte
+ReportingUnit	Nebraska;Platte County	31141
+ReportingUnit	Nebraska;Polk County	Polk
+ReportingUnit	Nebraska;Polk County	31143
+ReportingUnit	Nebraska;Red Willow County	Red Willow
+ReportingUnit	Nebraska;Red Willow County	31145
+ReportingUnit	Nebraska;Richardson County	Richardson
+ReportingUnit	Nebraska;Richardson County	31147
+ReportingUnit	Nebraska;Rock County	Rock
+ReportingUnit	Nebraska;Rock County	31149
+ReportingUnit	Nebraska;Saline County	Saline
+ReportingUnit	Nebraska;Saline County	31151
+ReportingUnit	Nebraska;Sarpy County	Sarpy
+ReportingUnit	Nebraska;Sarpy County	31153
+ReportingUnit	Nebraska;Saunders County	Saunders
+ReportingUnit	Nebraska;Saunders County	31155
+ReportingUnit	Nebraska;Scotts Bluff County	Scotts Bluff
+ReportingUnit	Nebraska;Scotts Bluff County	31157
+ReportingUnit	Nebraska;Seward County	Seward
+ReportingUnit	Nebraska;Seward County	31159
+ReportingUnit	Nebraska;Sheridan County	Sheridan
+ReportingUnit	Nebraska;Sheridan County	31161
+ReportingUnit	Nebraska;Sherman County	Sherman
+ReportingUnit	Nebraska;Sherman County	31163
+ReportingUnit	Nebraska;Sioux County	Sioux
+ReportingUnit	Nebraska;Sioux County	31165
+ReportingUnit	Nebraska;Stanton County	Stanton
+ReportingUnit	Nebraska;Stanton County	31167
+ReportingUnit	Nebraska;Thayer County	Thayer
+ReportingUnit	Nebraska;Thayer County	31169
+ReportingUnit	Nebraska;Thomas County	Thomas
+ReportingUnit	Nebraska;Thomas County	31171
+ReportingUnit	Nebraska;Thurston County	Thurston
+ReportingUnit	Nebraska;Thurston County	31173
+ReportingUnit	Nebraska;Valley County	Valley
+ReportingUnit	Nebraska;Valley County	31175
+ReportingUnit	Nebraska;Washington County	Washington
+ReportingUnit	Nebraska;Washington County	31177
+ReportingUnit	Nebraska;Wayne County	Wayne
+ReportingUnit	Nebraska;Wayne County	31179
+ReportingUnit	Nebraska;Webster County	Webster
+ReportingUnit	Nebraska;Webster County	31181
+ReportingUnit	Nebraska;Wheeler County	Wheeler
+ReportingUnit	Nebraska;Wheeler County	31183
+ReportingUnit	Nebraska;York County	York
+ReportingUnit	Nebraska;York County	31185

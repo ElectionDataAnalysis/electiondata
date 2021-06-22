@@ -1,13 +1,123 @@
 cdf_element	cdf_internal_name	raw_identifier_value
+Candidate	AKANA, Joe	AKANA, Joe
+Candidate	ALCOS, David (Bradda)	ALCOS, David (Bradda)
+Candidate	ALDEGUER, Maysana Akahai	ALDEGUER, Maysana Akahai
+Candidate	ALLEN, Julia E.	ALLEN, Julia E.
+Candidate	Al Gore	AL GORE
+Candidate	BALINBIN, Kanamu	BALINBIN, Kanamu
+Candidate	BELATTI, Della Au	BELATTI, Della Au
+Candidate	BONOAN, Feena M.	BONOAN, Feena M.
+Candidate	BOYETTE, Jennifer (Jenny)	BOYETTE, Jennifer (Jenny)
+Candidate	BRANCO, Patrick Pihana	BRANCO, Patrick Pihana
+Candidate	BURRUS, Ron	BURRUS, Ron
+Candidate	Barack Obama	BARACK OBAMA
+Candidate	Brock Pierce	Pierce / Ballard
+Candidate	CABANILLA ARAKAWA, Rida	CABANILLA ARAKAWA, Rida
+Candidate	CASE, Ed	CASE, Ed
+Candidate	CERMELJ, Hope (Alohalani)	CERMELJ, Hope (Alohalani)
+Candidate	CHANG, Stanley	CHANG, Stanley
+Candidate	CHAPMAN, Michael	CHAPMAN, Michael
+Candidate	CHEAPE MATSUMOTO, Lauren	CHEAPE MATSUMOTO, Lauren
+Candidate	CHEN, Wayne	CHEN, Wayne
+Candidate	CHRUPALYK, Kahala Jen	CHRUPALYK, Kahala Jen
+Candidate	CULLEN, Ty J.K.	CULLEN, Ty J.K.
+Candidate	CURTIS, Ron	CURTIS, Ron
+Candidate	DANNER, Kilomana	DANNER, Kilomana
+Candidate	DECKER, Citlalli Johanna	DECKER, Citlalli Johanna
+Candidate	DECOITE, Lynn P.	DECOITE, Lynn P.
+Candidate	DELA CRUZ, Donovan	DELA CRUZ, Donovan
+Candidate	DES, Ana Mo	DES, Ana Mo
+Candidate	Don Blankenship	Blankenship / Mohr
+Candidate	Donald J. Trump	Trump / Pence
+Candidate	Donald J. Trump	DONALD TRUMP
+Candidate	ELI, Stacelynn Kehaulani	ELI, Stacelynn Kehaulani
+Candidate	FEVELLA, Kurt	FEVELLA, Kurt
+Candidate	FORD, Lori	FORD, Lori
+Candidate	GABBARD, Mike	GABBARD, Mike
+Candidate	GANADEN, Ernesto M. (Sonny)	GANADEN, Ernesto M. (Sonny)
+Candidate	GARCIA, Diamond	GARCIA, Diamond
+Candidate	GATES, Cedric Asuega	GATES, Cedric Asuega
+Candidate	GIUFFRE, John (Raghu)	GIUFFRE, John (Raghu)
+Candidate	GREENBERG, Howard E.	GREENBERG, Howard E.
+Candidate	GYLDSTRAND, Travis D.E.	GYLDSTRAND, Travis D.E.
+Candidate	George W. Bush	GEORGE W. BUSH
+Candidate	HASHEM, Mark Jun	HASHEM, Mark Jun
+Candidate	HAUMEA, Desmon Antone	HAUMEA, Desmon Antone
+Candidate	HO, Erik K.	HO, Erik K.
+Candidate	HOOD, Carl E.	HOOD, Carl E.
+Candidate	HOOHULI, Shaena Dela Cruz	HOOHULI, Shaena Dela Cruz
+Candidate	HOOMANAWANUI, Jonathan	HOOMANAWANUI, Jonathan
+Candidate	HUGHES, Susan	HUGHES, Susan
+Candidate	Hillary Clinton	HILLARY CLINTON
+Candidate	Howie Hawkins	Hawkins / Walker
+Candidate	ILAGAN, Greggor	ILAGAN, Greggor
+Candidate	Jo Jorgensen	Jorgensen / Cohen
+Candidate	John Kerry	JOHN KERRY
+Candidate	John Mccain	JOHN MCCAIN
+Candidate	Joseph R. Biden	Biden / Harris
+Candidate	KA-IPO, Ron G.	KA-IPO, Ron G.
+Candidate	KAHAU, Keline-Kameyo	KAHAU, Keline-Kameyo
+Candidate	KAHELE, Kaiali'i (Kai)	KAHELE, Kaiali'i (Kai)
+Candidate	KAJIWARA-GUSMAN, Christy	KAJIWARA-GUSMAN, Christy
+Candidate	KAMA-TOTH, Kukana K.K.	KAMA-TOTH, Kukana K.K.
+Candidate	KAPAKU, Theresa	KAPAKU, Theresa
+Candidate	KAPELA, Jeanne	KAPELA, Jeanne
+Candidate	KEEN, Rynette Ipo	KEEN, Rynette Ipo
+Candidate	KEITH-AGARAN, Gil S. Coloma	KEITH-AGARAN, Gil S. Coloma
+Candidate	KIM-MARSHALL, Kristina	KIM-MARSHALL, Kristina
+Candidate	KOBAYASHI, Bertrand (Bert)	KOBAYASHI, Bertrand (Bert)
+Candidate	KOGACHI, Keith	KOGACHI, Keith
+Candidate	KONG, Sam Satoru	KONG, Sam Satoru
+Candidate	LA CHICA, Trish	LA CHICA, Trish
+Candidate	LAST, Michael L. (Mike)	LAST, Michael L. (Mike)
+Candidate	LEE, Chris	LEE, Chris
+Candidate	LOPRESTI, Matthew S. (Matt)	LOPRESTI, Matthew S. (Matt)
+Candidate	MAGLINTI, Austin L.S.	MAGLINTI, Austin L.S.
+Candidate	MARTEN, Lisa	MARTEN, Lisa
+Candidate	MARTINEZ, Rose	MARTINEZ, Rose
+Candidate	MATAYOSHI, Scot	MATAYOSHI, Scot
+Candidate	MCDERMOTT, Bob	MCDERMOTT, Bob
+Candidate	MCKELVEY, Angus L.K.	MCKELVEY, Angus L.K.
+Candidate	MCMACKIN, Devin Shaw, Sr.	MCMACKIN, Devin Shaw, Sr.
+Candidate	MILLER, John E.	MILLER, John E.
+Candidate	MONAS, Steve	MONAS, Steve
+Candidate	MORIKAWA, Daynette (Dee)	MORIKAWA, Daynette (Dee)
+Candidate	Mitt Romney	MITT ROMNEY
+Candidate	NAKAMURA, Nadine K.	NAKAMURA, Nadine K.
+Candidate	NAKASHIMA, Mark M.	NAKASHIMA, Mark M.
+Candidate	OCHS, Nicholas R.	OCHS, Nicholas R.
+Candidate	OKIMOTO, Val	OKIMOTO, Val
+Candidate	ONISHI, Richard H.K.	ONISHI, Richard H.K.
+Candidate	Other	OTHER
+Candidate	PARRISH, Michael L. (Mike)	PARRISH, Michael L. (Mike)
+Candidate	QUILINGKING, Tess Abalos	QUILINGKING, Tess Abalos
+Candidate	QUINLAN, Sean	QUINLAN, Sean
+Candidate	READY, Boyd	READY, Boyd
+Candidate	Ralph Nader	RALPH NADER
+Candidate	SAN BUENAVENTURA, Joy	SAN BUENAVENTURA, Joy
+Candidate	SAYAMA, Jackson	SAYAMA, Jackson
+Candidate	SEXTON, Andy, Jr. (Umi)	SEXTON, Andy, Jr. (Umi)
+Candidate	SHIN, Lorraine Pualani	SHIN, Lorraine Pualani
+Candidate	SIMON, Keone F.	SIMON, Keone F.
+Candidate	SIMPLICIANO, Joseph K., Jr.	SIMPLICIANO, Joseph K., Jr.
+Candidate	SLOM, Sam M.	SLOM, Sam M.
+Candidate	SOUZA, Kanani	SOUZA, Kanani
+Candidate	SVRCINA, Emil	SVRCINA, Emil
+Candidate	TAKAYAMA, Gregg	TAKAYAMA, Gregg
+Candidate	TAKUMI, Roy M.	TAKUMI, Roy M.
+Candidate	TAM, Adrian	TAM, Adrian
+Candidate	TIPPENS, Michelle Rose	TIPPENS, Michelle Rose
+Candidate	TODD, Christopher L.T.	TODD, Christopher L.T.
+Candidate	TOKIOKA, James Kunane	TOKIOKA, James Kunane
+Candidate	VANDERPOOL, Robin	VANDERPOOL, Robin
+Candidate	WARD, Gene	WARD, Gene
+Candidate	WILDBERGER, Tina M.L.	WILDBERGER, Tina M.L.
+Candidate	WOODSON, Justin H.	WOODSON, Justin H.
+Candidate	YAMANE, Ryan I.	YAMANE, Ryan I.
+Candidate	YODER, Steve	YODER, Steve
+CandidateContest	HI Attorney General	HI Attorney General
+CandidateContest	HI Governor	HI Governor
 CandidateContest	HI House District 1	State Representative, Dist 1
-CandidateContest	HI House District 2	State Representative, Dist 2
-CandidateContest	HI House District 3	State Representative, Dist 3
-CandidateContest	HI House District 4	State Representative, Dist 4
-CandidateContest	HI House District 5	State Representative, Dist 5
-CandidateContest	HI House District 6	State Representative, Dist 6
-CandidateContest	HI House District 7	State Representative, Dist 7
-CandidateContest	HI House District 8	State Representative, Dist 8
-CandidateContest	HI House District 9	State Representative, Dist 9
 CandidateContest	HI House District 10	State Representative, Dist 10
 CandidateContest	HI House District 11	State Representative, Dist 11
 CandidateContest	HI House District 12	State Representative, Dist 12
@@ -18,6 +128,7 @@ CandidateContest	HI House District 16	State Representative, Dist 16
 CandidateContest	HI House District 17	State Representative, Dist 17
 CandidateContest	HI House District 18	State Representative, Dist 18
 CandidateContest	HI House District 19	State Representative, Dist 19
+CandidateContest	HI House District 2	State Representative, Dist 2
 CandidateContest	HI House District 20	State Representative, Dist 20
 CandidateContest	HI House District 21	State Representative, Dist 21
 CandidateContest	HI House District 22	State Representative, Dist 22
@@ -28,6 +139,7 @@ CandidateContest	HI House District 26	State Representative, Dist 26
 CandidateContest	HI House District 27	State Representative, Dist 27
 CandidateContest	HI House District 28	State Representative, Dist 28
 CandidateContest	HI House District 29	State Representative, Dist 29
+CandidateContest	HI House District 3	State Representative, Dist 3
 CandidateContest	HI House District 30	State Representative, Dist 30
 CandidateContest	HI House District 31	State Representative, Dist 31
 CandidateContest	HI House District 32	State Representative, Dist 32
@@ -38,6 +150,7 @@ CandidateContest	HI House District 36	State Representative, Dist 36
 CandidateContest	HI House District 37	State Representative, Dist 37
 CandidateContest	HI House District 38	State Representative, Dist 38
 CandidateContest	HI House District 39	State Representative, Dist 39
+CandidateContest	HI House District 4	State Representative, Dist 4
 CandidateContest	HI House District 40	State Representative, Dist 40
 CandidateContest	HI House District 41	State Representative, Dist 41
 CandidateContest	HI House District 42	State Representative, Dist 42
@@ -48,17 +161,16 @@ CandidateContest	HI House District 46	State Representative, Dist 46
 CandidateContest	HI House District 47	State Representative, Dist 47
 CandidateContest	HI House District 48	State Representative, Dist 48
 CandidateContest	HI House District 49	State Representative, Dist 49
+CandidateContest	HI House District 5	State Representative, Dist 5
 CandidateContest	HI House District 50	State Representative, Dist 50
 CandidateContest	HI House District 51	State Representative, Dist 51
+CandidateContest	HI House District 6	State Representative, Dist 6
+CandidateContest	HI House District 7	State Representative, Dist 7
+CandidateContest	HI House District 8	State Representative, Dist 8
+CandidateContest	HI House District 9	State Representative, Dist 9
+CandidateContest	HI Lieutenant Governor	HI Lieutenant Governor
+CandidateContest	HI Secretary of State	HI Secretary of State
 CandidateContest	HI Senate District 1	State Senator, Dist 1
-CandidateContest	HI Senate District 2	State Senator, Dist 2
-CandidateContest	HI Senate District 3	State Senator, Dist 3
-CandidateContest	HI Senate District 4	State Senator, Dist 4
-CandidateContest	HI Senate District 5	State Senator, Dist 5
-CandidateContest	HI Senate District 6	State Senator, Dist 6
-CandidateContest	HI Senate District 7	State Senator, Dist 7
-CandidateContest	HI Senate District 8	State Senator, Dist 8
-CandidateContest	HI Senate District 9	State Senator, Dist 9
 CandidateContest	HI Senate District 10	State Senator, Dist 10
 CandidateContest	HI Senate District 11	State Senator, Dist 11
 CandidateContest	HI Senate District 12	State Senator, Dist 12
@@ -69,35 +181,94 @@ CandidateContest	HI Senate District 16	State Senator, Dist 16
 CandidateContest	HI Senate District 17	State Senator, Dist 17
 CandidateContest	HI Senate District 18	State Senator, Dist 18
 CandidateContest	HI Senate District 19	State Senator, Dist 19
+CandidateContest	HI Senate District 2	State Senator, Dist 2
 CandidateContest	HI Senate District 20	State Senator, Dist 20
 CandidateContest	HI Senate District 21	State Senator, Dist 21
 CandidateContest	HI Senate District 22	State Senator, Dist 22
 CandidateContest	HI Senate District 23	State Senator, Dist 23
 CandidateContest	HI Senate District 24	State Senator, Dist 24
 CandidateContest	HI Senate District 25	State Senator, Dist 25
+CandidateContest	HI Senate District 3	State Senator, Dist 3
+CandidateContest	HI Senate District 4	State Senator, Dist 4
+CandidateContest	HI Senate District 5	State Senator, Dist 5
+CandidateContest	HI Senate District 6	State Senator, Dist 6
+CandidateContest	HI Senate District 7	State Senator, Dist 7
+CandidateContest	HI Senate District 8	State Senator, Dist 8
+CandidateContest	HI Senate District 9	State Senator, Dist 9
+CandidateContest	HI Treasurer	HI Treasurer
 CandidateContest	US House HI District 1	U.S. Representative, Dist I
 CandidateContest	US House HI District 2	U.S. Representative, Dist II
 CandidateContest	US President (HI)	President and Vice President
-CandidateContest	HI Governor	HI Governor
+CandidateContest	US President (HI)	PRESIDENT
+CandidateContest	US President (HI)	US PRESIDENT
 CandidateContest	US Senate HI	US Senate HI
-CandidateContest	HI Attorney General	HI Attorney General
-CandidateContest	HI Lieutenant Governor	HI Lieutenant Governor
-CandidateContest	HI Treasurer	HI Treasurer
-CandidateContest	HI Secretary of State	HI Secretary of State
+CountItemType	absentee	Absentee_votes
+CountItemType	early	Early_votes
+CountItemType	election-day	Election_Votes
+CountItemType	total	TOTAL
+Election	2016 General	2016 General
+Election	2018 General	2018 General
 Election	2020 General	2020 General
 Election	2020 Primary	2020 Primary
-Election	2018 General	2018 General
-Election	2016 General	2016 General
-Party	Democratic Party	D
-Party	Republican Party	R
-Party	Green Party	G
-Party	Libertarian Party	L
-Party	Nonpartisan	N
-Party	Constitution Party	C
 Party	Aloha Aina Party	A
-Party	S	S
 Party	American Shopping Party	AS
+Party	Constitution Party	C
+Party	Democratic Party	D
+Party	Democratic Party	DEMOCRAT
+Party	Green Party	G
+Party	Green Party	GREEN
+Party	Libertarian Party	L
+Party	Libertarian Party	LIBERTARIAN
+Party	Nonpartisan	N
+Party	Republican Party	R
+Party	Republican Party	REPUBLICAN
+Party	S	S
+Party	none or unknown	OTHER
 ReportingUnit	Hawaii	Hawaii
+ReportingUnit	Hawaii;Hawai'i County;Precinct 01-01	01-01
+ReportingUnit	Hawaii;Hawai'i County;Precinct 01-02	01-02
+ReportingUnit	Hawaii;Hawai'i County;Precinct 01-03	01-03
+ReportingUnit	Hawaii;Hawai'i County;Precinct 01-04	01-04
+ReportingUnit	Hawaii;Hawai'i County;Precinct 01-05	01-05
+ReportingUnit	Hawaii;Hawai'i County;Precinct 01-06	01-06
+ReportingUnit	Hawaii;Hawai'i County;Precinct 01-07	01-07
+ReportingUnit	Hawaii;Hawai'i County;Precinct 01-08	01-08
+ReportingUnit	Hawaii;Hawai'i County;Precinct 01-09	01-09
+ReportingUnit	Hawaii;Hawai'i County;Precinct 02-01	02-01
+ReportingUnit	Hawaii;Hawai'i County;Precinct 02-02	02-02
+ReportingUnit	Hawaii;Hawai'i County;Precinct 02-03	02-03
+ReportingUnit	Hawaii;Hawai'i County;Precinct 02-04	02-04
+ReportingUnit	Hawaii;Hawai'i County;Precinct 02-05	02-05
+ReportingUnit	Hawaii;Hawai'i County;Precinct 03-01	03-01
+ReportingUnit	Hawaii;Hawai'i County;Precinct 03-02	03-02
+ReportingUnit	Hawaii;Hawai'i County;Precinct 03-03	03-03
+ReportingUnit	Hawaii;Hawai'i County;Precinct 03-04	03-04
+ReportingUnit	Hawaii;Hawai'i County;Precinct 03-05	03-05
+ReportingUnit	Hawaii;Hawai'i County;Precinct 03-06	03-06
+ReportingUnit	Hawaii;Hawai'i County;Precinct 03-07	03-07
+ReportingUnit	Hawaii;Hawai'i County;Precinct 04-01	04-01
+ReportingUnit	Hawaii;Hawai'i County;Precinct 04-02	04-02
+ReportingUnit	Hawaii;Hawai'i County;Precinct 04-03	04-03
+ReportingUnit	Hawaii;Hawai'i County;Precinct 04-04	04-04
+ReportingUnit	Hawaii;Hawai'i County;Precinct 05-01	05-01
+ReportingUnit	Hawaii;Hawai'i County;Precinct 05-02	05-02
+ReportingUnit	Hawaii;Hawai'i County;Precinct 05-03	05-03
+ReportingUnit	Hawaii;Hawai'i County;Precinct 05-04	05-04
+ReportingUnit	Hawaii;Hawai'i County;Precinct 05-05	05-05
+ReportingUnit	Hawaii;Hawai'i County;Precinct 05-06	05-06
+ReportingUnit	Hawaii;Hawai'i County;Precinct 05-07	05-07
+ReportingUnit	Hawaii;Hawai'i County;Precinct 05-08	05-08
+ReportingUnit	Hawaii;Hawai'i County;Precinct 06-01	06-01
+ReportingUnit	Hawaii;Hawai'i County;Precinct 06-02	06-02
+ReportingUnit	Hawaii;Hawai'i County;Precinct 06-03	06-03
+ReportingUnit	Hawaii;Hawai'i County;Precinct 06-04	06-04
+ReportingUnit	Hawaii;Hawai'i County;Precinct 06-05	06-05
+ReportingUnit	Hawaii;Hawai'i County;Precinct 07-01	07-01
+ReportingUnit	Hawaii;Hawai'i County;Precinct 07-02	07-02
+ReportingUnit	Hawaii;Hawai'i County;Precinct 07-03	07-03
+ReportingUnit	Hawaii;Hawai'i County;Precinct 07-04	07-04
+ReportingUnit	Hawaii;Hawai'i County;Precinct 07-05	07-05
+ReportingUnit	Hawaii;Honolulu County	15003
 ReportingUnit	Hawaii;Honolulu County;Precinct 17-01	17-01
 ReportingUnit	Hawaii;Honolulu County;Precinct 17-02	17-02
 ReportingUnit	Hawaii;Honolulu County;Precinct 17-03	17-03
@@ -254,6 +425,7 @@ ReportingUnit	Hawaii;Honolulu County;Precinct 51-03	51-03
 ReportingUnit	Hawaii;Honolulu County;Precinct 51-04	51-04
 ReportingUnit	Hawaii;Honolulu County;Precinct 51-05	51-05
 ReportingUnit	Hawaii;Honolulu County;Precinct 51-06	51-06
+ReportingUnit	Hawaii;Kalawao County	15005
 ReportingUnit	Hawaii;Kaua'i County;Precinct 14-01	14-01
 ReportingUnit	Hawaii;Kaua'i County;Precinct 14-02	14-02
 ReportingUnit	Hawaii;Kaua'i County;Precinct 14-03	14-03
@@ -270,6 +442,7 @@ ReportingUnit	Hawaii;Kaua'i County;Precinct 16-03	16-03
 ReportingUnit	Hawaii;Kaua'i County;Precinct 16-04	16-04
 ReportingUnit	Hawaii;Kaua'i County;Precinct 16-05	16-05
 ReportingUnit	Hawaii;Kaua'i County;Precinct 16-06	16-06
+ReportingUnit	Hawaii;Maui County	15009
 ReportingUnit	Hawaii;Maui County;Precinct 08-01	08-01
 ReportingUnit	Hawaii;Maui County;Precinct 08-02	08-02
 ReportingUnit	Hawaii;Maui County;Precinct 08-03	08-03
@@ -305,155 +478,3 @@ ReportingUnit	Hawaii;Maui County;Precinct 13-06	13-06
 ReportingUnit	Hawaii;Maui County;Precinct 13-07	13-07
 ReportingUnit	Hawaii;Maui County;Precinct 13-08	13-08
 ReportingUnit	Hawaii;Maui County;Precinct 13-09	13-09
-ReportingUnit	Hawaii;Hawai'i County;Precinct 01-01	01-01
-ReportingUnit	Hawaii;Hawai'i County;Precinct 01-02	01-02
-ReportingUnit	Hawaii;Hawai'i County;Precinct 01-03	01-03
-ReportingUnit	Hawaii;Hawai'i County;Precinct 01-04	01-04
-ReportingUnit	Hawaii;Hawai'i County;Precinct 01-05	01-05
-ReportingUnit	Hawaii;Hawai'i County;Precinct 01-06	01-06
-ReportingUnit	Hawaii;Hawai'i County;Precinct 01-07	01-07
-ReportingUnit	Hawaii;Hawai'i County;Precinct 01-08	01-08
-ReportingUnit	Hawaii;Hawai'i County;Precinct 01-09	01-09
-ReportingUnit	Hawaii;Hawai'i County;Precinct 02-01	02-01
-ReportingUnit	Hawaii;Hawai'i County;Precinct 02-02	02-02
-ReportingUnit	Hawaii;Hawai'i County;Precinct 02-03	02-03
-ReportingUnit	Hawaii;Hawai'i County;Precinct 02-04	02-04
-ReportingUnit	Hawaii;Hawai'i County;Precinct 02-05	02-05
-ReportingUnit	Hawaii;Hawai'i County;Precinct 03-01	03-01
-ReportingUnit	Hawaii;Hawai'i County;Precinct 03-02	03-02
-ReportingUnit	Hawaii;Hawai'i County;Precinct 03-03	03-03
-ReportingUnit	Hawaii;Hawai'i County;Precinct 03-04	03-04
-ReportingUnit	Hawaii;Hawai'i County;Precinct 03-05	03-05
-ReportingUnit	Hawaii;Hawai'i County;Precinct 03-06	03-06
-ReportingUnit	Hawaii;Hawai'i County;Precinct 03-07	03-07
-ReportingUnit	Hawaii;Hawai'i County;Precinct 04-01	04-01
-ReportingUnit	Hawaii;Hawai'i County;Precinct 04-02	04-02
-ReportingUnit	Hawaii;Hawai'i County;Precinct 04-03	04-03
-ReportingUnit	Hawaii;Hawai'i County;Precinct 04-04	04-04
-ReportingUnit	Hawaii;Hawai'i County;Precinct 05-01	05-01
-ReportingUnit	Hawaii;Hawai'i County;Precinct 05-02	05-02
-ReportingUnit	Hawaii;Hawai'i County;Precinct 05-03	05-03
-ReportingUnit	Hawaii;Hawai'i County;Precinct 05-04	05-04
-ReportingUnit	Hawaii;Hawai'i County;Precinct 05-05	05-05
-ReportingUnit	Hawaii;Hawai'i County;Precinct 05-06	05-06
-ReportingUnit	Hawaii;Hawai'i County;Precinct 05-07	05-07
-ReportingUnit	Hawaii;Hawai'i County;Precinct 05-08	05-08
-ReportingUnit	Hawaii;Hawai'i County;Precinct 06-01	06-01
-ReportingUnit	Hawaii;Hawai'i County;Precinct 06-02	06-02
-ReportingUnit	Hawaii;Hawai'i County;Precinct 06-03	06-03
-ReportingUnit	Hawaii;Hawai'i County;Precinct 06-04	06-04
-ReportingUnit	Hawaii;Hawai'i County;Precinct 06-05	06-05
-ReportingUnit	Hawaii;Hawai'i County;Precinct 07-01	07-01
-ReportingUnit	Hawaii;Hawai'i County;Precinct 07-02	07-02
-ReportingUnit	Hawaii;Hawai'i County;Precinct 07-03	07-03
-ReportingUnit	Hawaii;Hawai'i County;Precinct 07-04	07-04
-ReportingUnit	Hawaii;Hawai'i County;Precinct 07-05	07-05
-CountItemType	absentee	Absentee_votes
-CountItemType	early	Early_votes
-CountItemType	election-day	Election_Votes
-Candidate	YODER, Steve	YODER, Steve
-Candidate	YAMANE, Ryan I.	YAMANE, Ryan I.
-Candidate	WOODSON, Justin H.	WOODSON, Justin H.
-Candidate	WILDBERGER, Tina M.L.	WILDBERGER, Tina M.L.
-Candidate	WARD, Gene	WARD, Gene
-Candidate	VANDERPOOL, Robin	VANDERPOOL, Robin
-Candidate	TOKIOKA, James Kunane	TOKIOKA, James Kunane
-Candidate	TODD, Christopher L.T.	TODD, Christopher L.T.
-Candidate	TIPPENS, Michelle Rose	TIPPENS, Michelle Rose
-Candidate	TAM, Adrian	TAM, Adrian
-Candidate	TAKUMI, Roy M.	TAKUMI, Roy M.
-Candidate	TAKAYAMA, Gregg	TAKAYAMA, Gregg
-Candidate	SVRCINA, Emil	SVRCINA, Emil
-Candidate	SOUZA, Kanani	SOUZA, Kanani
-Candidate	SLOM, Sam M.	SLOM, Sam M.
-Candidate	SIMPLICIANO, Joseph K., Jr.	SIMPLICIANO, Joseph K., Jr.
-Candidate	SIMON, Keone F.	SIMON, Keone F.
-Candidate	SHIN, Lorraine Pualani	SHIN, Lorraine Pualani
-Candidate	SEXTON, Andy, Jr. (Umi)	SEXTON, Andy, Jr. (Umi)
-Candidate	SAYAMA, Jackson	SAYAMA, Jackson
-Candidate	SAN BUENAVENTURA, Joy	SAN BUENAVENTURA, Joy
-Candidate	READY, Boyd	READY, Boyd
-Candidate	QUINLAN, Sean	QUINLAN, Sean
-Candidate	QUILINGKING, Tess Abalos	QUILINGKING, Tess Abalos
-Candidate	PARRISH, Michael L. (Mike)	PARRISH, Michael L. (Mike)
-Candidate	ONISHI, Richard H.K.	ONISHI, Richard H.K.
-Candidate	OKIMOTO, Val	OKIMOTO, Val
-Candidate	OCHS, Nicholas R.	OCHS, Nicholas R.
-Candidate	NAKASHIMA, Mark M.	NAKASHIMA, Mark M.
-Candidate	NAKAMURA, Nadine K.	NAKAMURA, Nadine K.
-Candidate	MORIKAWA, Daynette (Dee)	MORIKAWA, Daynette (Dee)
-Candidate	MONAS, Steve	MONAS, Steve
-Candidate	MILLER, John E.	MILLER, John E.
-Candidate	MCMACKIN, Devin Shaw, Sr.	MCMACKIN, Devin Shaw, Sr.
-Candidate	MCKELVEY, Angus L.K.	MCKELVEY, Angus L.K.
-Candidate	MCDERMOTT, Bob	MCDERMOTT, Bob
-Candidate	MATAYOSHI, Scot	MATAYOSHI, Scot
-Candidate	MARTINEZ, Rose	MARTINEZ, Rose
-Candidate	MARTEN, Lisa	MARTEN, Lisa
-Candidate	MAGLINTI, Austin L.S.	MAGLINTI, Austin L.S.
-Candidate	LOPRESTI, Matthew S. (Matt)	LOPRESTI, Matthew S. (Matt)
-Candidate	LEE, Chris	LEE, Chris
-Candidate	LAST, Michael L. (Mike)	LAST, Michael L. (Mike)
-Candidate	LA CHICA, Trish	LA CHICA, Trish
-Candidate	KONG, Sam Satoru	KONG, Sam Satoru
-Candidate	KOGACHI, Keith	KOGACHI, Keith
-Candidate	KOBAYASHI, Bertrand (Bert)	KOBAYASHI, Bertrand (Bert)
-Candidate	KIM-MARSHALL, Kristina	KIM-MARSHALL, Kristina
-Candidate	KEITH-AGARAN, Gil S. Coloma	KEITH-AGARAN, Gil S. Coloma
-Candidate	KEEN, Rynette Ipo	KEEN, Rynette Ipo
-Candidate	KAPELA, Jeanne	KAPELA, Jeanne
-Candidate	KAPAKU, Theresa	KAPAKU, Theresa
-Candidate	KAMA-TOTH, Kukana K.K.	KAMA-TOTH, Kukana K.K.
-Candidate	KAJIWARA-GUSMAN, Christy	KAJIWARA-GUSMAN, Christy
-Candidate	KAHELE, Kaiali'i (Kai)	KAHELE, Kaiali'i (Kai)
-Candidate	KAHAU, Keline-Kameyo	KAHAU, Keline-Kameyo
-Candidate	KA-IPO, Ron G.	KA-IPO, Ron G.
-Candidate	ILAGAN, Greggor	ILAGAN, Greggor
-Candidate	HUGHES, Susan	HUGHES, Susan
-Candidate	HOOMANAWANUI, Jonathan	HOOMANAWANUI, Jonathan
-Candidate	HOOHULI, Shaena Dela Cruz	HOOHULI, Shaena Dela Cruz
-Candidate	HOOD, Carl E.	HOOD, Carl E.
-Candidate	HO, Erik K.	HO, Erik K.
-Candidate	HAUMEA, Desmon Antone	HAUMEA, Desmon Antone
-Candidate	HASHEM, Mark Jun	HASHEM, Mark Jun
-Candidate	GYLDSTRAND, Travis D.E.	GYLDSTRAND, Travis D.E.
-Candidate	GREENBERG, Howard E.	GREENBERG, Howard E.
-Candidate	GATES, Cedric Asuega	GATES, Cedric Asuega
-Candidate	GARCIA, Diamond	GARCIA, Diamond
-Candidate	GANADEN, Ernesto M. (Sonny)	GANADEN, Ernesto M. (Sonny)
-Candidate	GABBARD, Mike	GABBARD, Mike
-Candidate	FORD, Lori	FORD, Lori
-Candidate	FEVELLA, Kurt	FEVELLA, Kurt
-Candidate	ELI, Stacelynn Kehaulani	ELI, Stacelynn Kehaulani
-Candidate	DES, Ana Mo	DES, Ana Mo
-Candidate	DELA CRUZ, Donovan	DELA CRUZ, Donovan
-Candidate	DECOITE, Lynn P.	DECOITE, Lynn P.
-Candidate	DECKER, Citlalli Johanna	DECKER, Citlalli Johanna
-Candidate	DANNER, Kilomana	DANNER, Kilomana
-Candidate	CURTIS, Ron	CURTIS, Ron
-Candidate	CULLEN, Ty J.K.	CULLEN, Ty J.K.
-Candidate	CHRUPALYK, Kahala Jen	CHRUPALYK, Kahala Jen
-Candidate	CHEAPE MATSUMOTO, Lauren	CHEAPE MATSUMOTO, Lauren
-Candidate	CHAPMAN, Michael	CHAPMAN, Michael
-Candidate	CHANG, Stanley	CHANG, Stanley
-Candidate	CERMELJ, Hope (Alohalani)	CERMELJ, Hope (Alohalani)
-Candidate	CASE, Ed	CASE, Ed
-Candidate	CABANILLA ARAKAWA, Rida	CABANILLA ARAKAWA, Rida
-Candidate	BURRUS, Ron	BURRUS, Ron
-Candidate	BRANCO, Patrick Pihana	BRANCO, Patrick Pihana
-Candidate	BOYETTE, Jennifer (Jenny)	BOYETTE, Jennifer (Jenny)
-Candidate	BONOAN, Feena M.	BONOAN, Feena M.
-Candidate	BELATTI, Della Au	BELATTI, Della Au
-Candidate	BALINBIN, Kanamu	BALINBIN, Kanamu
-Candidate	ALLEN, Julia E.	ALLEN, Julia E.
-Candidate	ALDEGUER, Maysana Akahai	ALDEGUER, Maysana Akahai
-Candidate	ALCOS, David (Bradda)	ALCOS, David (Bradda)
-Candidate	AKANA, Joe	AKANA, Joe
-Candidate	GIUFFRE, John (Raghu)	GIUFFRE, John (Raghu)
-Candidate	CHEN, Wayne	CHEN, Wayne
-Candidate	Donald J. Trump	Trump / Pence
-Candidate	Brock Pierce	Pierce / Ballard
-Candidate	Jo Jorgensen	Jorgensen / Cohen
-Candidate	Howie Hawkins	Hawkins / Walker
-Candidate	Don Blankenship	Blankenship / Mohr
-Candidate	Joseph R. Biden	Biden / Harris

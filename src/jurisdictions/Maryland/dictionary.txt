@@ -1,103 +1,71 @@
 cdf_element	cdf_internal_name	raw_identifier_value
+Candidate	Al Gore	AL GORE
+Candidate	Albert Raley	Albert Raley
+Candidate	Andy Harris	Andy Harris
+Candidate	Anthony G. Brown	Anthony G. Brown
+Candidate	Barack Obama	BARACK OBAMA
+Candidate	Barbara Bellar	Barbara Bellar
+Candidate	Benjamin Schwalb	Benjamin Schwalb
+Candidate	Brian Carroll	Brian Carroll
+Candidate	Brock Pierce	Brock Pierce
+Candidate	C.A. Dutch Ruppersberger	C.A. Dutch Ruppersberger
+Candidate	Charles Anthony	Charles Anthony
+Candidate	Charles U. Smith	Charles U. Smith
+Candidate	Chris Palombi	Chris Palombi
+Candidate	David J. Trone	David J. Trone
+Candidate	Deborah Rouse	Deborah Rouse
+Candidate	Dennis Andrew Ball	Dennis Andrew Ball
+Candidate	Donald J. Trump	Donald J. Trump
+Candidate	Donald J. Trump	DONALD TRUMP
+Candidate	Edward Shlikas	Edward Shlikas
+Candidate	George E. McDermott	George E. McDermott
+Candidate	George Gluck	George Gluck
+Candidate	George W. Bush	GEORGE W. BUSH
+Candidate	Gloria La Riva	Gloria La Riva
+Candidate	Gregory Thomas Coll	Gregory Thomas Coll
+Candidate	Hillary Clinton	HILLARY CLINTON
+Candidate	Howie Gresham Hawkins	Howie Gresham Hawkins
+Candidate	Jade Simmons	Jade Simmons
+Candidate	Jamie Raskin	Jamie Raskin
+Candidate	Jason Herrick	Jason Herrick
+Candidate	Jerome M. Segal	Jerome M. Segal
+Candidate	Jo Jorgensen	Jo Jorgensen
+Candidate	Joe Biden	Joe Biden
+Candidate	John Kerry	JOHN KERRY
+Candidate	John Mccain	JOHN MCCAIN
+Candidate	John Sarbanes	John Sarbanes
+Candidate	Johnny Ray Salling	Johnny Ray Salling
+Candidate	Johnson Lee	Johnson Lee
+Candidate	Kanye West	Kanye West
+Candidate	Kasey Wells	Kasey Wells
+Candidate	Kimberly Klacik	Kimberly Klacik
+Candidate	Kweisi Mfume	Kweisi Mfume
+Candidate	Lih Young	Lih Young
+Candidate	Mark Charles	Mark Charles
+Candidate	Mary Ruth Caro Simmons	Mary Ruth Caro Simmons
+Candidate	Mia Mason	Mia Mason
+Candidate	Mitt Romney	MITT ROMNEY
+Candidate	Neil C. Parrott	Neil C. Parrott
+Candidate	Other	OTHER
+Candidate	Other Write-Ins	Other Write-Ins
+Candidate	Peter W. Sherrill	Peter W. Sherrill
+Candidate	Phil Collins	Phil Collins
+Candidate	President Boddie	President Boddie
+Candidate	Ralph Nader	RALPH NADER
+Candidate	Randall Foltyniewkz	Randall Foltyniewkz
+Candidate	Ray Bly	Ray Bly
+Candidate	Roque Rocky De La Fuente	Roque Rocky De La Fuente
+Candidate	Ryan Ehrenreich	Ryan Ehrenreich
+Candidate	Sharon Wallace	Sharon Wallace
+Candidate	Shawn Howard	Shawn Howard
+Candidate	Steny H. Hoyer	Steny H. Hoyer
+Candidate	Susan B. Lochocki	Susan B. Lochocki
+Candidate	Todd Cella	Todd Cella
+Candidate	Tom Hoefling	Tom Hoefling
+CandidateContest	MD Attorney General	MD Attorney General
+CandidateContest	MD Governor	MD Governor
 CandidateContest	MD House District 1	MD House District 1
-CandidateContest	MD House District 2	MD House District 2
-CandidateContest	MD House District 3	MD House District 3
-CandidateContest	MD House District 4	MD House District 4
-CandidateContest	MD House District 5	MD House District 5
-CandidateContest	MD House District 6	MD House District 6
-CandidateContest	MD House District 7	MD House District 7
-CandidateContest	MD House District 8	MD House District 8
-CandidateContest	MD House District 9	MD House District 9
 CandidateContest	MD House District 10	MD House District 10
-CandidateContest	MD House District 11	MD House District 11
-CandidateContest	MD House District 12	MD House District 12
-CandidateContest	MD House District 13	MD House District 13
-CandidateContest	MD House District 14	MD House District 14
-CandidateContest	MD House District 15	MD House District 15
-CandidateContest	MD House District 16	MD House District 16
-CandidateContest	MD House District 17	MD House District 17
-CandidateContest	MD House District 18	MD House District 18
-CandidateContest	MD House District 19	MD House District 19
-CandidateContest	MD House District 20	MD House District 20
-CandidateContest	MD House District 21	MD House District 21
-CandidateContest	MD House District 22	MD House District 22
-CandidateContest	MD House District 23	MD House District 23
-CandidateContest	MD House District 24	MD House District 24
-CandidateContest	MD House District 25	MD House District 25
-CandidateContest	MD House District 26	MD House District 26
-CandidateContest	MD House District 27	MD House District 27
-CandidateContest	MD House District 28	MD House District 28
-CandidateContest	MD House District 29	MD House District 29
-CandidateContest	MD House District 30	MD House District 30
-CandidateContest	MD House District 31	MD House District 31
-CandidateContest	MD House District 32	MD House District 32
-CandidateContest	MD House District 33	MD House District 33
-CandidateContest	MD House District 34	MD House District 34
-CandidateContest	MD House District 35	MD House District 35
-CandidateContest	MD House District 36	MD House District 36
-CandidateContest	MD House District 37	MD House District 37
-CandidateContest	MD House District 38	MD House District 38
-CandidateContest	MD House District 39	MD House District 39
-CandidateContest	MD House District 40	MD House District 40
-CandidateContest	MD House District 41	MD House District 41
-CandidateContest	MD House District 42	MD House District 42
-CandidateContest	MD House District 43	MD House District 43
-CandidateContest	MD House District 44	MD House District 44
-CandidateContest	MD House District 45	MD House District 45
-CandidateContest	MD House District 46	MD House District 46
-CandidateContest	MD House District 47	MD House District 47
-CandidateContest	MD House District 48	MD House District 48
-CandidateContest	MD House District 49	MD House District 49
-CandidateContest	MD House District 50	MD House District 50
-CandidateContest	MD House District 51	MD House District 51
-CandidateContest	MD House District 52	MD House District 52
-CandidateContest	MD House District 53	MD House District 53
-CandidateContest	MD House District 54	MD House District 54
-CandidateContest	MD House District 55	MD House District 55
-CandidateContest	MD House District 56	MD House District 56
-CandidateContest	MD House District 57	MD House District 57
-CandidateContest	MD House District 58	MD House District 58
-CandidateContest	MD House District 59	MD House District 59
-CandidateContest	MD House District 60	MD House District 60
-CandidateContest	MD House District 61	MD House District 61
-CandidateContest	MD House District 62	MD House District 62
-CandidateContest	MD House District 63	MD House District 63
-CandidateContest	MD House District 64	MD House District 64
-CandidateContest	MD House District 65	MD House District 65
-CandidateContest	MD House District 66	MD House District 66
-CandidateContest	MD House District 67	MD House District 67
-CandidateContest	MD House District 68	MD House District 68
-CandidateContest	MD House District 69	MD House District 69
-CandidateContest	MD House District 70	MD House District 70
-CandidateContest	MD House District 71	MD House District 71
-CandidateContest	MD House District 72	MD House District 72
-CandidateContest	MD House District 73	MD House District 73
-CandidateContest	MD House District 74	MD House District 74
-CandidateContest	MD House District 75	MD House District 75
-CandidateContest	MD House District 76	MD House District 76
-CandidateContest	MD House District 77	MD House District 77
-CandidateContest	MD House District 78	MD House District 78
-CandidateContest	MD House District 79	MD House District 79
-CandidateContest	MD House District 80	MD House District 80
-CandidateContest	MD House District 81	MD House District 81
-CandidateContest	MD House District 82	MD House District 82
-CandidateContest	MD House District 83	MD House District 83
-CandidateContest	MD House District 84	MD House District 84
-CandidateContest	MD House District 85	MD House District 85
-CandidateContest	MD House District 86	MD House District 86
-CandidateContest	MD House District 87	MD House District 87
-CandidateContest	MD House District 88	MD House District 88
-CandidateContest	MD House District 89	MD House District 89
-CandidateContest	MD House District 90	MD House District 90
-CandidateContest	MD House District 91	MD House District 91
-CandidateContest	MD House District 92	MD House District 92
-CandidateContest	MD House District 93	MD House District 93
-CandidateContest	MD House District 94	MD House District 94
-CandidateContest	MD House District 95	MD House District 95
-CandidateContest	MD House District 96	MD House District 96
-CandidateContest	MD House District 97	MD House District 97
-CandidateContest	MD House District 98	MD House District 98
-CandidateContest	MD House District 99	MD House District 99
 CandidateContest	MD House District 100	MD House District 100
 CandidateContest	MD House District 101	MD House District 101
 CandidateContest	MD House District 102	MD House District 102
@@ -108,6 +76,7 @@ CandidateContest	MD House District 106	MD House District 106
 CandidateContest	MD House District 107	MD House District 107
 CandidateContest	MD House District 108	MD House District 108
 CandidateContest	MD House District 109	MD House District 109
+CandidateContest	MD House District 11	MD House District 11
 CandidateContest	MD House District 110	MD House District 110
 CandidateContest	MD House District 111	MD House District 111
 CandidateContest	MD House District 112	MD House District 112
@@ -118,6 +87,7 @@ CandidateContest	MD House District 116	MD House District 116
 CandidateContest	MD House District 117	MD House District 117
 CandidateContest	MD House District 118	MD House District 118
 CandidateContest	MD House District 119	MD House District 119
+CandidateContest	MD House District 12	MD House District 12
 CandidateContest	MD House District 120	MD House District 120
 CandidateContest	MD House District 121	MD House District 121
 CandidateContest	MD House District 122	MD House District 122
@@ -128,6 +98,7 @@ CandidateContest	MD House District 126	MD House District 126
 CandidateContest	MD House District 127	MD House District 127
 CandidateContest	MD House District 128	MD House District 128
 CandidateContest	MD House District 129	MD House District 129
+CandidateContest	MD House District 13	MD House District 13
 CandidateContest	MD House District 130	MD House District 130
 CandidateContest	MD House District 131	MD House District 131
 CandidateContest	MD House District 132	MD House District 132
@@ -138,17 +109,105 @@ CandidateContest	MD House District 136	MD House District 136
 CandidateContest	MD House District 137	MD House District 137
 CandidateContest	MD House District 138	MD House District 138
 CandidateContest	MD House District 139	MD House District 139
+CandidateContest	MD House District 14	MD House District 14
 CandidateContest	MD House District 140	MD House District 140
 CandidateContest	MD House District 141	MD House District 141
+CandidateContest	MD House District 15	MD House District 15
+CandidateContest	MD House District 16	MD House District 16
+CandidateContest	MD House District 17	MD House District 17
+CandidateContest	MD House District 18	MD House District 18
+CandidateContest	MD House District 19	MD House District 19
+CandidateContest	MD House District 2	MD House District 2
+CandidateContest	MD House District 20	MD House District 20
+CandidateContest	MD House District 21	MD House District 21
+CandidateContest	MD House District 22	MD House District 22
+CandidateContest	MD House District 23	MD House District 23
+CandidateContest	MD House District 24	MD House District 24
+CandidateContest	MD House District 25	MD House District 25
+CandidateContest	MD House District 26	MD House District 26
+CandidateContest	MD House District 27	MD House District 27
+CandidateContest	MD House District 28	MD House District 28
+CandidateContest	MD House District 29	MD House District 29
+CandidateContest	MD House District 3	MD House District 3
+CandidateContest	MD House District 30	MD House District 30
+CandidateContest	MD House District 31	MD House District 31
+CandidateContest	MD House District 32	MD House District 32
+CandidateContest	MD House District 33	MD House District 33
+CandidateContest	MD House District 34	MD House District 34
+CandidateContest	MD House District 35	MD House District 35
+CandidateContest	MD House District 36	MD House District 36
+CandidateContest	MD House District 37	MD House District 37
+CandidateContest	MD House District 38	MD House District 38
+CandidateContest	MD House District 39	MD House District 39
+CandidateContest	MD House District 4	MD House District 4
+CandidateContest	MD House District 40	MD House District 40
+CandidateContest	MD House District 41	MD House District 41
+CandidateContest	MD House District 42	MD House District 42
+CandidateContest	MD House District 43	MD House District 43
+CandidateContest	MD House District 44	MD House District 44
+CandidateContest	MD House District 45	MD House District 45
+CandidateContest	MD House District 46	MD House District 46
+CandidateContest	MD House District 47	MD House District 47
+CandidateContest	MD House District 48	MD House District 48
+CandidateContest	MD House District 49	MD House District 49
+CandidateContest	MD House District 5	MD House District 5
+CandidateContest	MD House District 50	MD House District 50
+CandidateContest	MD House District 51	MD House District 51
+CandidateContest	MD House District 52	MD House District 52
+CandidateContest	MD House District 53	MD House District 53
+CandidateContest	MD House District 54	MD House District 54
+CandidateContest	MD House District 55	MD House District 55
+CandidateContest	MD House District 56	MD House District 56
+CandidateContest	MD House District 57	MD House District 57
+CandidateContest	MD House District 58	MD House District 58
+CandidateContest	MD House District 59	MD House District 59
+CandidateContest	MD House District 6	MD House District 6
+CandidateContest	MD House District 60	MD House District 60
+CandidateContest	MD House District 61	MD House District 61
+CandidateContest	MD House District 62	MD House District 62
+CandidateContest	MD House District 63	MD House District 63
+CandidateContest	MD House District 64	MD House District 64
+CandidateContest	MD House District 65	MD House District 65
+CandidateContest	MD House District 66	MD House District 66
+CandidateContest	MD House District 67	MD House District 67
+CandidateContest	MD House District 68	MD House District 68
+CandidateContest	MD House District 69	MD House District 69
+CandidateContest	MD House District 7	MD House District 7
+CandidateContest	MD House District 70	MD House District 70
+CandidateContest	MD House District 71	MD House District 71
+CandidateContest	MD House District 72	MD House District 72
+CandidateContest	MD House District 73	MD House District 73
+CandidateContest	MD House District 74	MD House District 74
+CandidateContest	MD House District 75	MD House District 75
+CandidateContest	MD House District 76	MD House District 76
+CandidateContest	MD House District 77	MD House District 77
+CandidateContest	MD House District 78	MD House District 78
+CandidateContest	MD House District 79	MD House District 79
+CandidateContest	MD House District 8	MD House District 8
+CandidateContest	MD House District 80	MD House District 80
+CandidateContest	MD House District 81	MD House District 81
+CandidateContest	MD House District 82	MD House District 82
+CandidateContest	MD House District 83	MD House District 83
+CandidateContest	MD House District 84	MD House District 84
+CandidateContest	MD House District 85	MD House District 85
+CandidateContest	MD House District 86	MD House District 86
+CandidateContest	MD House District 87	MD House District 87
+CandidateContest	MD House District 88	MD House District 88
+CandidateContest	MD House District 89	MD House District 89
+CandidateContest	MD House District 9	MD House District 9
+CandidateContest	MD House District 90	MD House District 90
+CandidateContest	MD House District 91	MD House District 91
+CandidateContest	MD House District 92	MD House District 92
+CandidateContest	MD House District 93	MD House District 93
+CandidateContest	MD House District 94	MD House District 94
+CandidateContest	MD House District 95	MD House District 95
+CandidateContest	MD House District 96	MD House District 96
+CandidateContest	MD House District 97	MD House District 97
+CandidateContest	MD House District 98	MD House District 98
+CandidateContest	MD House District 99	MD House District 99
+CandidateContest	MD Lieutenant Governor	MD Lieutenant Governor
+CandidateContest	MD Secretary of State	MD Secretary of State
 CandidateContest	MD Senate District 1	MD Senate District 1
-CandidateContest	MD Senate District 2	MD Senate District 2
-CandidateContest	MD Senate District 3	MD Senate District 3
-CandidateContest	MD Senate District 4	MD Senate District 4
-CandidateContest	MD Senate District 5	MD Senate District 5
-CandidateContest	MD Senate District 6	MD Senate District 6
-CandidateContest	MD Senate District 7	MD Senate District 7
-CandidateContest	MD Senate District 8	MD Senate District 8
-CandidateContest	MD Senate District 9	MD Senate District 9
 CandidateContest	MD Senate District 10	MD Senate District 10
 CandidateContest	MD Senate District 11	MD Senate District 11
 CandidateContest	MD Senate District 12	MD Senate District 12
@@ -159,6 +218,7 @@ CandidateContest	MD Senate District 16	MD Senate District 16
 CandidateContest	MD Senate District 17	MD Senate District 17
 CandidateContest	MD Senate District 18	MD Senate District 18
 CandidateContest	MD Senate District 19	MD Senate District 19
+CandidateContest	MD Senate District 2	MD Senate District 2
 CandidateContest	MD Senate District 20	MD Senate District 20
 CandidateContest	MD Senate District 21	MD Senate District 21
 CandidateContest	MD Senate District 22	MD Senate District 22
@@ -169,6 +229,7 @@ CandidateContest	MD Senate District 26	MD Senate District 26
 CandidateContest	MD Senate District 27	MD Senate District 27
 CandidateContest	MD Senate District 28	MD Senate District 28
 CandidateContest	MD Senate District 29	MD Senate District 29
+CandidateContest	MD Senate District 3	MD Senate District 3
 CandidateContest	MD Senate District 30	MD Senate District 30
 CandidateContest	MD Senate District 31	MD Senate District 31
 CandidateContest	MD Senate District 32	MD Senate District 32
@@ -179,6 +240,7 @@ CandidateContest	MD Senate District 36	MD Senate District 36
 CandidateContest	MD Senate District 37	MD Senate District 37
 CandidateContest	MD Senate District 38	MD Senate District 38
 CandidateContest	MD Senate District 39	MD Senate District 39
+CandidateContest	MD Senate District 4	MD Senate District 4
 CandidateContest	MD Senate District 40	MD Senate District 40
 CandidateContest	MD Senate District 41	MD Senate District 41
 CandidateContest	MD Senate District 42	MD Senate District 42
@@ -187,6 +249,12 @@ CandidateContest	MD Senate District 44	MD Senate District 44
 CandidateContest	MD Senate District 45	MD Senate District 45
 CandidateContest	MD Senate District 46	MD Senate District 46
 CandidateContest	MD Senate District 47	MD Senate District 47
+CandidateContest	MD Senate District 5	MD Senate District 5
+CandidateContest	MD Senate District 6	MD Senate District 6
+CandidateContest	MD Senate District 7	MD Senate District 7
+CandidateContest	MD Senate District 8	MD Senate District 8
+CandidateContest	MD Senate District 9	MD Senate District 9
+CandidateContest	MD Treasurer	MD Treasurer
 CandidateContest	US House MD District 1	Representative in Congress District 1
 CandidateContest	US House MD District 1	Representative in Congress District 01
 CandidateContest	US House MD District 2	Representative in Congress District 2
@@ -204,109 +272,37 @@ CandidateContest	US House MD District 7	Representative in Congress District 07
 CandidateContest	US House MD District 8	Representative in Congress District 8
 CandidateContest	US House MD District 8	Representative in Congress District 08
 CandidateContest	US President (MD)	President - Vice Pres District
-CandidateContest	MD Governor	MD Governor
+CandidateContest	US President (MD)	PRESIDENT
+CandidateContest	US President (MD)	US PRESIDENT
 CandidateContest	US Senate MD	US Senate MD
-CandidateContest	MD Attorney General	MD Attorney General
-CandidateContest	MD Lieutenant Governor	MD Lieutenant Governor
-CandidateContest	MD Treasurer	MD Treasurer
-CandidateContest	MD Secretary of State	MD Secretary of State
+CountItemType	absentee-mail	By Mail Votes
+CountItemType	absentee-mail-2	By Mail 2 Votes
+CountItemType	early	Early Voting Votes
+CountItemType	election-day	Election Day Votes
+CountItemType	provisional	Prov. Votes
+CountItemType	total	Total Votes
+CountItemType	total	TOTAL
+Election	2016 General	2016 General
+Election	2018 General	2018 General
 Election	2020 General	2020 General
 Election	2020 Primary	2020 Primary
-Election	2018 General	2018 General
-Election	2016 General	2016 General
-Party	Democratic Party	DEM
-Party	Republican Party	REP
-Party	Green Party	GRN
-Party	Libertarian Party	LIB
-Party	UNF	UNF
-Party	BOT	BOT
-Party	OTH	OTH
 Party	BAR	BAR
+Party	BOT	BOT
+Party	Democratic Party	DEM
+Party	Democratic Party	DEMOCRAT
+Party	Green Party	GRN
+Party	Green Party	GREEN
+Party	Libertarian Party	LIB
+Party	Libertarian Party	LIBERTARIAN
+Party	OTH	OTH
+Party	Republican Party	REP
+Party	Republican Party	REPUBLICAN
+Party	UNF	UNF
+Party	none or unknown	OTHER
 ReportingUnit	Maryland	Maryland
 ReportingUnit	Maryland	00
 ReportingUnit	Maryland;Allegany County	01
-ReportingUnit	Maryland;Anne Arundel County	02
-ReportingUnit	Maryland;Baltimore City	03
-ReportingUnit	Maryland;Baltimore County	04
-ReportingUnit	Maryland;Calvert County	05
-ReportingUnit	Maryland;Caroline County	06
-ReportingUnit	Maryland;Carroll County	07
-ReportingUnit	Maryland;Cecil County	08
-ReportingUnit	Maryland;Charles County	09
-ReportingUnit	Maryland;Dorchester County	10
-ReportingUnit	Maryland;Frederick County	11
-ReportingUnit	Maryland;Garrett County	12
-ReportingUnit	Maryland;Harford County	13
-ReportingUnit	Maryland;Howard County	14
-ReportingUnit	Maryland;Kent County	15
-ReportingUnit	Maryland;Montgomery County	16
-ReportingUnit	Maryland;Prince George's County	17
-ReportingUnit	Maryland;Queen Anne's County	18
-ReportingUnit	Maryland;St. Mary's County	19
-ReportingUnit	Maryland;Somerset County	20
-ReportingUnit	Maryland;Talbot County	21
-ReportingUnit	Maryland;Washington County	22
-ReportingUnit	Maryland;Wicomico County	23
-ReportingUnit	Maryland;Worcester County	24
-CountItemType	early	Early Voting Votes
-CountItemType	absentee-mail	By Mail Votes
-CountItemType	provisional	Prov. Votes
-CountItemType	absentee-mail-2	By Mail 2 Votes
-CountItemType	total	Total Votes
-CountItemType	election-day	Election Day Votes
-Candidate	Steny H. Hoyer	Steny H. Hoyer
-Candidate	Ray Bly	Ray Bly
-Candidate	Other Write-Ins	Other Write-Ins
-Candidate	Neil C. Parrott	Neil C. Parrott
-Candidate	Mia Mason	Mia Mason
-Candidate	Lih Young	Lih Young
-Candidate	Kweisi Mfume	Kweisi Mfume
-Candidate	Kimberly Klacik	Kimberly Klacik
-Candidate	Johnny Ray Salling	Johnny Ray Salling
-Candidate	John Sarbanes	John Sarbanes
-Candidate	Jason Herrick	Jason Herrick
-Candidate	Jamie Raskin	Jamie Raskin
-Candidate	Gregory Thomas Coll	Gregory Thomas Coll
-Candidate	George Gluck	George Gluck
-Candidate	George E. McDermott	George E. McDermott
-Candidate	David J. Trone	David J. Trone
-Candidate	Chris Palombi	Chris Palombi
-Candidate	Charles U. Smith	Charles U. Smith
-Candidate	Charles Anthony	Charles Anthony
-Candidate	C.A. Dutch Ruppersberger	C.A. Dutch Ruppersberger
-Candidate	Anthony G. Brown	Anthony G. Brown
-Candidate	Andy Harris	Andy Harris
-Candidate	Tom Hoefling	Tom Hoefling
-Candidate	Todd Cella	Todd Cella
-Candidate	Susan B. Lochocki	Susan B. Lochocki
-Candidate	Shawn Howard	Shawn Howard
-Candidate	Sharon Wallace	Sharon Wallace
-Candidate	Ryan Ehrenreich	Ryan Ehrenreich
-Candidate	Roque Rocky De La Fuente	Roque Rocky De La Fuente
-Candidate	Randall Foltyniewkz	Randall Foltyniewkz
-Candidate	President Boddie	President Boddie
-Candidate	Phil Collins	Phil Collins
-Candidate	Peter W. Sherrill	Peter W. Sherrill
-Candidate	Mary Ruth Caro Simmons	Mary Ruth Caro Simmons
-Candidate	Mark Charles	Mark Charles
-Candidate	Kasey Wells	Kasey Wells
-Candidate	Kanye West	Kanye West
-Candidate	Johnson Lee	Johnson Lee
-Candidate	Joe Biden	Joe Biden
-Candidate	Jo Jorgensen	Jo Jorgensen
-Candidate	Jerome M. Segal	Jerome M. Segal
-Candidate	Jade Simmons	Jade Simmons
-Candidate	Howie Gresham Hawkins	Howie Gresham Hawkins
-Candidate	Gloria La Riva	Gloria La Riva
-Candidate	Edward Shlikas	Edward Shlikas
-Candidate	Donald J. Trump	Donald J. Trump
-Candidate	Dennis Andrew Ball	Dennis Andrew Ball
-Candidate	Deborah Rouse	Deborah Rouse
-Candidate	Brock Pierce	Brock Pierce
-Candidate	Brian Carroll	Brian Carroll
-Candidate	Benjamin Schwalb	Benjamin Schwalb
-Candidate	Barbara Bellar	Barbara Bellar
-Candidate	Albert Raley	Albert Raley
+ReportingUnit	Maryland;Allegany County	24001
 ReportingUnit	Maryland;Allegany County;District 001 Precinct 000	01;District 001 Precinct 000
 ReportingUnit	Maryland;Allegany County;District 002 Precinct 000	01;District 002 Precinct 000
 ReportingUnit	Maryland;Allegany County;District 003 Precinct 000	01;District 003 Precinct 000
@@ -344,6 +340,8 @@ ReportingUnit	Maryland;Allegany County;District 029 Precinct 002	01;District 029
 ReportingUnit	Maryland;Allegany County;District 029 Precinct 003	01;District 029 Precinct 003
 ReportingUnit	Maryland;Allegany County;District 031 Precinct 000	01;District 031 Precinct 000
 ReportingUnit	Maryland;Allegany County;District 034 Precinct 000	01;District 034 Precinct 000
+ReportingUnit	Maryland;Anne Arundel County	02
+ReportingUnit	Maryland;Anne Arundel County	24003
 ReportingUnit	Maryland;Anne Arundel County;District 001 Precinct 001	02;District 001 Precinct 001
 ReportingUnit	Maryland;Anne Arundel County;District 001 Precinct 002	02;District 001 Precinct 002
 ReportingUnit	Maryland;Anne Arundel County;District 001 Precinct 003	02;District 001 Precinct 003
@@ -539,6 +537,8 @@ ReportingUnit	Maryland;Anne Arundel County;District 007 Precinct 024	02;District
 ReportingUnit	Maryland;Anne Arundel County;District 007 Precinct 025	02;District 007 Precinct 025
 ReportingUnit	Maryland;Anne Arundel County;District 007 Precinct 026	02;District 007 Precinct 026
 ReportingUnit	Maryland;Anne Arundel County;District 007 Precinct 027	02;District 007 Precinct 027
+ReportingUnit	Maryland;Baltimore City	03
+ReportingUnit	Maryland;Baltimore City	24510
 ReportingUnit	Maryland;Baltimore City;District 001 Precinct 001	03;District 001 Precinct 001
 ReportingUnit	Maryland;Baltimore City;District 001 Precinct 002	03;District 001 Precinct 002
 ReportingUnit	Maryland;Baltimore City;District 001 Precinct 003	03;District 001 Precinct 003
@@ -838,6 +838,8 @@ ReportingUnit	Maryland;Baltimore City;District 028 Precinct 012	03;District 028 
 ReportingUnit	Maryland;Baltimore City;District 028 Precinct 013	03;District 028 Precinct 013
 ReportingUnit	Maryland;Baltimore City;District 028 Precinct 014	03;District 028 Precinct 014
 ReportingUnit	Maryland;Baltimore City;District 028 Precinct 015	03;District 028 Precinct 015
+ReportingUnit	Maryland;Baltimore County	04
+ReportingUnit	Maryland;Baltimore County	24005
 ReportingUnit	Maryland;Baltimore County;District 001 Precinct 001	04;District 001 Precinct 001
 ReportingUnit	Maryland;Baltimore County;District 001 Precinct 002	04;District 001 Precinct 002
 ReportingUnit	Maryland;Baltimore County;District 001 Precinct 003	04;District 001 Precinct 003
@@ -1074,6 +1076,8 @@ ReportingUnit	Maryland;Baltimore County;District 015 Precinct 023	04;District 01
 ReportingUnit	Maryland;Baltimore County;District 015 Precinct 024	04;District 015 Precinct 024
 ReportingUnit	Maryland;Baltimore County;District 015 Precinct 025	04;District 015 Precinct 025
 ReportingUnit	Maryland;Baltimore County;District 015 Precinct 026	04;District 015 Precinct 026
+ReportingUnit	Maryland;Calvert County	05
+ReportingUnit	Maryland;Calvert County	24009
 ReportingUnit	Maryland;Calvert County;District 001 Precinct 001	05;District 001 Precinct 001
 ReportingUnit	Maryland;Calvert County;District 001 Precinct 002	05;District 001 Precinct 002
 ReportingUnit	Maryland;Calvert County;District 001 Precinct 003	05;District 001 Precinct 003
@@ -1097,6 +1101,8 @@ ReportingUnit	Maryland;Calvert County;District 003 Precinct 005	05;District 003 
 ReportingUnit	Maryland;Calvert County;District 003 Precinct 006	05;District 003 Precinct 006
 ReportingUnit	Maryland;Calvert County;District 003 Precinct 007	05;District 003 Precinct 007
 ReportingUnit	Maryland;Calvert County;District 003 Precinct 008	05;District 003 Precinct 008
+ReportingUnit	Maryland;Caroline County	06
+ReportingUnit	Maryland;Caroline County	24011
 ReportingUnit	Maryland;Caroline County;District 001 Precinct 001	06;District 001 Precinct 001
 ReportingUnit	Maryland;Caroline County;District 002 Precinct 001	06;District 002 Precinct 001
 ReportingUnit	Maryland;Caroline County;District 003 Precinct 001	06;District 003 Precinct 001
@@ -1105,6 +1111,8 @@ ReportingUnit	Maryland;Caroline County;District 005 Precinct 001	06;District 005
 ReportingUnit	Maryland;Caroline County;District 006 Precinct 001	06;District 006 Precinct 001
 ReportingUnit	Maryland;Caroline County;District 007 Precinct 001	06;District 007 Precinct 001
 ReportingUnit	Maryland;Caroline County;District 008 Precinct 001	06;District 008 Precinct 001
+ReportingUnit	Maryland;Carroll County	07
+ReportingUnit	Maryland;Carroll County	24013
 ReportingUnit	Maryland;Carroll County;District 001 Precinct 001	07;District 001 Precinct 001
 ReportingUnit	Maryland;Carroll County;District 001 Precinct 002	07;District 001 Precinct 002
 ReportingUnit	Maryland;Carroll County;District 002 Precinct 001	07;District 002 Precinct 001
@@ -1141,6 +1149,8 @@ ReportingUnit	Maryland;Carroll County;District 013 Precinct 001	07;District 013 
 ReportingUnit	Maryland;Carroll County;District 014 Precinct 001	07;District 014 Precinct 001
 ReportingUnit	Maryland;Carroll County;District 014 Precinct 002	07;District 014 Precinct 002
 ReportingUnit	Maryland;Carroll County;District 014 Precinct 003	07;District 014 Precinct 003
+ReportingUnit	Maryland;Cecil County	08
+ReportingUnit	Maryland;Cecil County	24015
 ReportingUnit	Maryland;Cecil County;District 001 Precinct 001	08;District 001 Precinct 001
 ReportingUnit	Maryland;Cecil County;District 002 Precinct 001	08;District 002 Precinct 001
 ReportingUnit	Maryland;Cecil County;District 002 Precinct 002	08;District 002 Precinct 002
@@ -1169,6 +1179,8 @@ ReportingUnit	Maryland;Cecil County;District 007 Precinct 004	08;District 007 Pr
 ReportingUnit	Maryland;Cecil County;District 008 Precinct 001	08;District 008 Precinct 001
 ReportingUnit	Maryland;Cecil County;District 009 Precinct 001	08;District 009 Precinct 001
 ReportingUnit	Maryland;Cecil County;District 009 Precinct 002	08;District 009 Precinct 002
+ReportingUnit	Maryland;Charles County	09
+ReportingUnit	Maryland;Charles County	24017
 ReportingUnit	Maryland;Charles County;District 001 Precinct 001	09;District 001 Precinct 001
 ReportingUnit	Maryland;Charles County;District 001 Precinct 002	09;District 001 Precinct 002
 ReportingUnit	Maryland;Charles County;District 001 Precinct 003	09;District 001 Precinct 003
@@ -1212,6 +1224,8 @@ ReportingUnit	Maryland;Charles County;District 008 Precinct 005	09;District 008 
 ReportingUnit	Maryland;Charles County;District 009 Precinct 001	09;District 009 Precinct 001
 ReportingUnit	Maryland;Charles County;District 009 Precinct 002	09;District 009 Precinct 002
 ReportingUnit	Maryland;Charles County;District 010 Precinct 001	09;District 010 Precinct 001
+ReportingUnit	Maryland;Dorchester County	10
+ReportingUnit	Maryland;Dorchester County	24019
 ReportingUnit	Maryland;Dorchester County;District 001 Precinct 001	10;District 001 Precinct 001
 ReportingUnit	Maryland;Dorchester County;District 002 Precinct 001	10;District 002 Precinct 001
 ReportingUnit	Maryland;Dorchester County;District 002 Precinct 002	10;District 002 Precinct 002
@@ -1252,6 +1266,8 @@ ReportingUnit	Maryland;Dorchester County;District 016 Precinct 001	10;District 0
 ReportingUnit	Maryland;Dorchester County;District 017 Precinct 001	10;District 017 Precinct 001
 ReportingUnit	Maryland;Dorchester County;District 017 Precinct 002	10;District 017 Precinct 002
 ReportingUnit	Maryland;Dorchester County;District 018 Precinct 001	10;District 018 Precinct 001
+ReportingUnit	Maryland;Frederick County	11
+ReportingUnit	Maryland;Frederick County	24021
 ReportingUnit	Maryland;Frederick County;District 001 Precinct 001	11;District 001 Precinct 001
 ReportingUnit	Maryland;Frederick County;District 001 Precinct 002	11;District 001 Precinct 002
 ReportingUnit	Maryland;Frederick County;District 001 Precinct 003	11;District 001 Precinct 003
@@ -1336,6 +1352,8 @@ ReportingUnit	Maryland;Frederick County;District 024 Precinct 006	11;District 02
 ReportingUnit	Maryland;Frederick County;District 025 Precinct 001	11;District 025 Precinct 001
 ReportingUnit	Maryland;Frederick County;District 026 Precinct 001	11;District 026 Precinct 001
 ReportingUnit	Maryland;Frederick County;District 026 Precinct 002	11;District 026 Precinct 002
+ReportingUnit	Maryland;Garrett County	12
+ReportingUnit	Maryland;Garrett County	24023
 ReportingUnit	Maryland;Garrett County;District 001 Precinct 000	12;District 001 Precinct 000
 ReportingUnit	Maryland;Garrett County;District 002 Precinct 000	12;District 002 Precinct 000
 ReportingUnit	Maryland;Garrett County;District 003 Precinct 001	12;District 003 Precinct 001
@@ -1355,6 +1373,8 @@ ReportingUnit	Maryland;Garrett County;District 014 Precinct 001	12;District 014 
 ReportingUnit	Maryland;Garrett County;District 014 Precinct 002	12;District 014 Precinct 002
 ReportingUnit	Maryland;Garrett County;District 015 Precinct 000	12;District 015 Precinct 000
 ReportingUnit	Maryland;Garrett County;District 016 Precinct 000	12;District 016 Precinct 000
+ReportingUnit	Maryland;Harford County	13
+ReportingUnit	Maryland;Harford County	24025
 ReportingUnit	Maryland;Harford County;District 001 Precinct 001	13;District 001 Precinct 001
 ReportingUnit	Maryland;Harford County;District 001 Precinct 002	13;District 001 Precinct 002
 ReportingUnit	Maryland;Harford County;District 001 Precinct 003	13;District 001 Precinct 003
@@ -1444,6 +1464,8 @@ ReportingUnit	Maryland;Harford County;District 006 Precinct 004	13;District 006 
 ReportingUnit	Maryland;Harford County;District 006 Precinct 005	13;District 006 Precinct 005
 ReportingUnit	Maryland;Harford County;District 006 Precinct 006	13;District 006 Precinct 006
 ReportingUnit	Maryland;Harford County;District 006 Precinct 007	13;District 006 Precinct 007
+ReportingUnit	Maryland;Howard County	14
+ReportingUnit	Maryland;Howard County	24027
 ReportingUnit	Maryland;Howard County;District 001 Precinct 001	14;District 001 Precinct 001
 ReportingUnit	Maryland;Howard County;District 001 Precinct 002	14;District 001 Precinct 002
 ReportingUnit	Maryland;Howard County;District 001 Precinct 003	14;District 001 Precinct 003
@@ -1562,6 +1584,8 @@ ReportingUnit	Maryland;Howard County;District 006 Precinct 032	14;District 006 P
 ReportingUnit	Maryland;Howard County;District 006 Precinct 033	14;District 006 Precinct 033
 ReportingUnit	Maryland;Howard County;District 006 Precinct 034	14;District 006 Precinct 034
 ReportingUnit	Maryland;Howard County;District 006 Precinct 035	14;District 006 Precinct 035
+ReportingUnit	Maryland;Kent County	15
+ReportingUnit	Maryland;Kent County	24029
 ReportingUnit	Maryland;Kent County;District 001 Precinct 001	15;District 001 Precinct 001
 ReportingUnit	Maryland;Kent County;District 001 Precinct 002	15;District 001 Precinct 002
 ReportingUnit	Maryland;Kent County;District 002 Precinct 001	15;District 002 Precinct 001
@@ -1572,6 +1596,8 @@ ReportingUnit	Maryland;Kent County;District 004 Precinct 002	15;District 004 Pre
 ReportingUnit	Maryland;Kent County;District 005 Precinct 001	15;District 005 Precinct 001
 ReportingUnit	Maryland;Kent County;District 006 Precinct 001	15;District 006 Precinct 001
 ReportingUnit	Maryland;Kent County;District 007 Precinct 001	15;District 007 Precinct 001
+ReportingUnit	Maryland;Montgomery County	16
+ReportingUnit	Maryland;Montgomery County	24031
 ReportingUnit	Maryland;Montgomery County;District 001 Precinct 001	16;District 001 Precinct 001
 ReportingUnit	Maryland;Montgomery County;District 001 Precinct 002	16;District 001 Precinct 002
 ReportingUnit	Maryland;Montgomery County;District 001 Precinct 003	16;District 001 Precinct 003
@@ -1830,6 +1856,8 @@ ReportingUnit	Maryland;Montgomery County;District 013 Precinct 068	16;District 0
 ReportingUnit	Maryland;Montgomery County;District 013 Precinct 069	16;District 013 Precinct 069
 ReportingUnit	Maryland;Montgomery County;District 013 Precinct 070	16;District 013 Precinct 070
 ReportingUnit	Maryland;Montgomery County;District 013 Precinct 071	16;District 013 Precinct 071
+ReportingUnit	Maryland;Prince George's County	17
+ReportingUnit	Maryland;Prince George's County	24033
 ReportingUnit	Maryland;Prince George's County;District 001 Precinct 001	17;District 001 Precinct 001
 ReportingUnit	Maryland;Prince George's County;District 001 Precinct 002	17;District 001 Precinct 002
 ReportingUnit	Maryland;Prince George's County;District 001 Precinct 003	17;District 001 Precinct 003
@@ -2133,6 +2161,8 @@ ReportingUnit	Maryland;Prince George's County;District 021 Precinct 096	17;Distr
 ReportingUnit	Maryland;Prince George's County;District 021 Precinct 097	17;District 021 Precinct 097
 ReportingUnit	Maryland;Prince George's County;District 021 Precinct 098	17;District 021 Precinct 098
 ReportingUnit	Maryland;Prince George's County;District 021 Precinct 099	17;District 021 Precinct 099
+ReportingUnit	Maryland;Queen Anne's County	18
+ReportingUnit	Maryland;Queen Anne's County	24035
 ReportingUnit	Maryland;Queen Anne's County;District 001 Precinct 001	18;District 001 Precinct 001
 ReportingUnit	Maryland;Queen Anne's County;District 002 Precinct 001	18;District 002 Precinct 001
 ReportingUnit	Maryland;Queen Anne's County;District 003 Precinct 002	18;District 003 Precinct 002
@@ -2144,6 +2174,33 @@ ReportingUnit	Maryland;Queen Anne's County;District 005 Precinct 001	18;District
 ReportingUnit	Maryland;Queen Anne's County;District 005 Precinct 002	18;District 005 Precinct 002
 ReportingUnit	Maryland;Queen Anne's County;District 006 Precinct 001	18;District 006 Precinct 001
 ReportingUnit	Maryland;Queen Anne's County;District 007 Precinct 001	18;District 007 Precinct 001
+ReportingUnit	Maryland;Somerset County	20
+ReportingUnit	Maryland;Somerset County	24039
+ReportingUnit	Maryland;Somerset County;District 001 Precinct 001	20;District 001 Precinct 001
+ReportingUnit	Maryland;Somerset County;District 001 Precinct 002	20;District 001 Precinct 002
+ReportingUnit	Maryland;Somerset County;District 001 Precinct 003	20;District 001 Precinct 003
+ReportingUnit	Maryland;Somerset County;District 002 Precinct 001	20;District 002 Precinct 001
+ReportingUnit	Maryland;Somerset County;District 003 Precinct 001	20;District 003 Precinct 001
+ReportingUnit	Maryland;Somerset County;District 004 Precinct 001	20;District 004 Precinct 001
+ReportingUnit	Maryland;Somerset County;District 005 Precinct 001	20;District 005 Precinct 001
+ReportingUnit	Maryland;Somerset County;District 006 Precinct 001	20;District 006 Precinct 001
+ReportingUnit	Maryland;Somerset County;District 007 Precinct 001	20;District 007 Precinct 001
+ReportingUnit	Maryland;Somerset County;District 008 Precinct 001	20;District 008 Precinct 001
+ReportingUnit	Maryland;Somerset County;District 008 Precinct 002	20;District 008 Precinct 002
+ReportingUnit	Maryland;Somerset County;District 009 Precinct 001	20;District 009 Precinct 001
+ReportingUnit	Maryland;Somerset County;District 010 Precinct 001	20;District 010 Precinct 001
+ReportingUnit	Maryland;Somerset County;District 010 Precinct 002	20;District 010 Precinct 002
+ReportingUnit	Maryland;Somerset County;District 011 Precinct 001	20;District 011 Precinct 001
+ReportingUnit	Maryland;Somerset County;District 012 Precinct 001	20;District 012 Precinct 001
+ReportingUnit	Maryland;Somerset County;District 013 Precinct 001	20;District 013 Precinct 001
+ReportingUnit	Maryland;Somerset County;District 013 Precinct 002	20;District 013 Precinct 002
+ReportingUnit	Maryland;Somerset County;District 013 Precinct 003	20;District 013 Precinct 003
+ReportingUnit	Maryland;Somerset County;District 014 Precinct 001	20;District 014 Precinct 001
+ReportingUnit	Maryland;Somerset County;District 015 Precinct 001	20;District 015 Precinct 001
+ReportingUnit	Maryland;Somerset County;District 015 Precinct 002	20;District 015 Precinct 002
+ReportingUnit	Maryland;Somerset County;District 015 Precinct 003	20;District 015 Precinct 003
+ReportingUnit	Maryland;St. Mary's County	19
+ReportingUnit	Maryland;St. Mary's County	24037
 ReportingUnit	Maryland;St. Mary's County;District 001 Precinct 001	19;District 001 Precinct 001
 ReportingUnit	Maryland;St. Mary's County;District 001 Precinct 002	19;District 001 Precinct 002
 ReportingUnit	Maryland;St. Mary's County;District 002 Precinct 001	19;District 002 Precinct 001
@@ -2180,29 +2237,8 @@ ReportingUnit	Maryland;St. Mary's County;District 008 Precinct 010	19;District 0
 ReportingUnit	Maryland;St. Mary's County;District 008 Precinct 011	19;District 008 Precinct 011
 ReportingUnit	Maryland;St. Mary's County;District 008 Precinct 012	19;District 008 Precinct 012
 ReportingUnit	Maryland;St. Mary's County;District 009 Precinct 001	19;District 009 Precinct 001
-ReportingUnit	Maryland;Somerset County;District 001 Precinct 001	20;District 001 Precinct 001
-ReportingUnit	Maryland;Somerset County;District 001 Precinct 002	20;District 001 Precinct 002
-ReportingUnit	Maryland;Somerset County;District 001 Precinct 003	20;District 001 Precinct 003
-ReportingUnit	Maryland;Somerset County;District 002 Precinct 001	20;District 002 Precinct 001
-ReportingUnit	Maryland;Somerset County;District 003 Precinct 001	20;District 003 Precinct 001
-ReportingUnit	Maryland;Somerset County;District 004 Precinct 001	20;District 004 Precinct 001
-ReportingUnit	Maryland;Somerset County;District 005 Precinct 001	20;District 005 Precinct 001
-ReportingUnit	Maryland;Somerset County;District 006 Precinct 001	20;District 006 Precinct 001
-ReportingUnit	Maryland;Somerset County;District 007 Precinct 001	20;District 007 Precinct 001
-ReportingUnit	Maryland;Somerset County;District 008 Precinct 001	20;District 008 Precinct 001
-ReportingUnit	Maryland;Somerset County;District 008 Precinct 002	20;District 008 Precinct 002
-ReportingUnit	Maryland;Somerset County;District 009 Precinct 001	20;District 009 Precinct 001
-ReportingUnit	Maryland;Somerset County;District 010 Precinct 001	20;District 010 Precinct 001
-ReportingUnit	Maryland;Somerset County;District 010 Precinct 002	20;District 010 Precinct 002
-ReportingUnit	Maryland;Somerset County;District 011 Precinct 001	20;District 011 Precinct 001
-ReportingUnit	Maryland;Somerset County;District 012 Precinct 001	20;District 012 Precinct 001
-ReportingUnit	Maryland;Somerset County;District 013 Precinct 001	20;District 013 Precinct 001
-ReportingUnit	Maryland;Somerset County;District 013 Precinct 002	20;District 013 Precinct 002
-ReportingUnit	Maryland;Somerset County;District 013 Precinct 003	20;District 013 Precinct 003
-ReportingUnit	Maryland;Somerset County;District 014 Precinct 001	20;District 014 Precinct 001
-ReportingUnit	Maryland;Somerset County;District 015 Precinct 001	20;District 015 Precinct 001
-ReportingUnit	Maryland;Somerset County;District 015 Precinct 002	20;District 015 Precinct 002
-ReportingUnit	Maryland;Somerset County;District 015 Precinct 003	20;District 015 Precinct 003
+ReportingUnit	Maryland;Talbot County	21
+ReportingUnit	Maryland;Talbot County	24041
 ReportingUnit	Maryland;Talbot County;District 001 Precinct 001	21;District 001 Precinct 001
 ReportingUnit	Maryland;Talbot County;District 001 Precinct 002	21;District 001 Precinct 002
 ReportingUnit	Maryland;Talbot County;District 001 Precinct 003	21;District 001 Precinct 003
@@ -2215,6 +2251,8 @@ ReportingUnit	Maryland;Talbot County;District 003 Precinct 003	21;District 003 P
 ReportingUnit	Maryland;Talbot County;District 004 Precinct 001	21;District 004 Precinct 001
 ReportingUnit	Maryland;Talbot County;District 005 Precinct 001	21;District 005 Precinct 001
 ReportingUnit	Maryland;Talbot County;District 005 Precinct 002	21;District 005 Precinct 002
+ReportingUnit	Maryland;Washington County	22
+ReportingUnit	Maryland;Washington County	24043
 ReportingUnit	Maryland;Washington County;District 001 Precinct 000	22;District 001 Precinct 000
 ReportingUnit	Maryland;Washington County;District 002 Precinct 000	22;District 002 Precinct 000
 ReportingUnit	Maryland;Washington County;District 003 Precinct 001	22;District 003 Precinct 001
@@ -2268,6 +2306,8 @@ ReportingUnit	Maryland;Washington County;District 026 Precinct 003	22;District 0
 ReportingUnit	Maryland;Washington County;District 026 Precinct 004	22;District 026 Precinct 004
 ReportingUnit	Maryland;Washington County;District 027 Precinct 001	22;District 027 Precinct 001
 ReportingUnit	Maryland;Washington County;District 027 Precinct 002	22;District 027 Precinct 002
+ReportingUnit	Maryland;Wicomico County	23
+ReportingUnit	Maryland;Wicomico County	24045
 ReportingUnit	Maryland;Wicomico County;District 001 Precinct 001	23;District 001 Precinct 001
 ReportingUnit	Maryland;Wicomico County;District 001 Precinct 002	23;District 001 Precinct 002
 ReportingUnit	Maryland;Wicomico County;District 001 Precinct 003	23;District 001 Precinct 003
@@ -2322,6 +2362,8 @@ ReportingUnit	Maryland;Wicomico County;District 016 Precinct 004	23;District 016
 ReportingUnit	Maryland;Wicomico County;District 016 Precinct 005	23;District 016 Precinct 005
 ReportingUnit	Maryland;Wicomico County;District 016 Precinct 006	23;District 016 Precinct 006
 ReportingUnit	Maryland;Wicomico County;District 017 Precinct 001	23;District 017 Precinct 001
+ReportingUnit	Maryland;Worcester County	24
+ReportingUnit	Maryland;Worcester County	24047
 ReportingUnit	Maryland;Worcester County;District 001 Precinct 001	24;District 001 Precinct 001
 ReportingUnit	Maryland;Worcester County;District 001 Precinct 002	24;District 001 Precinct 002
 ReportingUnit	Maryland;Worcester County;District 002 Precinct 001	24;District 002 Precinct 001

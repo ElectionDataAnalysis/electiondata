@@ -1,13 +1,56 @@
 cdf_element	cdf_internal_name	raw_identifier_value
+Candidate	<- did not match regex ^(.*) \([A-Z]{3}\)$	<- did not match regex ^(.*) \([A-Z]{3}\)$
+Candidate	Al Gore	AL GORE
+Candidate	Barack Obama	BARACK OBAMA
+Candidate	Ben Mcadams	Ben Mcadams
+Candidate	Blake David Moore	Blake David Moore
+Candidate	Brock Pierce	Brock Pierce Karla Ballard
+Candidate	Burgess Owens	Burgess Owens
+Candidate	Chris Peterson	Chris Peterson Karina Brown
+Candidate	Chris Stewart	Chris Stewart
+Candidate	County <- did not match regex ^(.*) \([A-Z]{3}\)$County	County <- did not match regex ^(.*) \([A-Z]{3}\)$County
+Candidate	Daniel Clyde Cummings	Daniel Clyde Cummings
+Candidate	Daniel Rhead Cottam	Daniel Rhead Cottam Barry Evan Short
+Candidate	Darren Parry	Darren Parry
+Candidate	Devin D. Thorpe	Devin D. Thorpe
+Candidate	Don Blankenship	Don Blankenship William Mohr
+Candidate	Donald J. Trump	Donald J. Trump Michael R. Pence
+Candidate	Donald J. Trump	DONALD TRUMP
+Candidate	George W. Bush	GEORGE W. BUSH
+Candidate	Gloria La Riva	Gloria La Riva
+Candidate	Greg Duerden	Greg Duerden Wayne Hill
+Candidate	Greg Skordas	Greg Skordas
+Candidate	Hillary Clinton	HILLARY CLINTON
+Candidate	Howie Hawkins	Howie Hawkins Angela Walker
+Candidate	J. Robert Latham	J. Robert Latham
+Candidate	Jo Jorgensen	Jo Jorgensen Jeremy Cohen
+Candidate	Joe Mchugh	Joe Mchugh Elizabeth Storm
+Candidate	John Curtis	John Curtis
+Candidate	John Kerry	JOHN KERRY
+Candidate	John Mccain	JOHN MCCAIN
+Candidate	John Molnar	John Molnar
+Candidate	Jonia M Broderick	Jonia M Broderick
+Candidate	Joseph R. Biden	Joseph R. Biden Kamala D. Harris
+Candidate	Kael Weston	Kael Weston
+Candidate	Kanye West	Kanye West Michelle Tidball
+Candidate	Mitt Romney	MITT ROMNEY
+Candidate	Other	OTHER
+Candidate	Ralph Nader	RALPH NADER
+Candidate	Rudy J. Bautista	Rudy J. Bautista
+Candidate	Sean D. Reyes	Sean D. Reyes
+Candidate	Spencer J. Cox	Spencer J. Cox Deidre M. Henderson
+Candidate	Thomas G. Mcneill	Thomas G. Mcneill
+CandidateContest	US House UT District 1	US Congressional District 1
+CandidateContest	US House UT District 2	U.S. House 2
+CandidateContest	US House UT District 3	U.S. House 3
+CandidateContest	US House UT District 4	U.S. House 4
+CandidateContest	US President (UT)	U.S. President
+CandidateContest	US President (UT)	PRESIDENT
+CandidateContest	US President (UT)	US PRESIDENT
+CandidateContest	US Senate UT	US Senate UT
+CandidateContest	UT Attorney General	Attorney General
+CandidateContest	UT Governor	Governor
 CandidateContest	UT House District 1	UT House District 1
-CandidateContest	UT House District 2	UT House District 2
-CandidateContest	UT House District 3	UT House District 3
-CandidateContest	UT House District 4	UT House District 4
-CandidateContest	UT House District 5	UT House District 5
-CandidateContest	UT House District 6	UT House District 6
-CandidateContest	UT House District 7	UT House District 7
-CandidateContest	UT House District 8	UT House District 8
-CandidateContest	UT House District 9	UT House District 9
 CandidateContest	UT House District 10	UT House District 10
 CandidateContest	UT House District 11	UT House District 11
 CandidateContest	UT House District 12	UT House District 12
@@ -18,6 +61,7 @@ CandidateContest	UT House District 16	UT House District 16
 CandidateContest	UT House District 17	UT House District 17
 CandidateContest	UT House District 18	UT House District 18
 CandidateContest	UT House District 19	UT House District 19
+CandidateContest	UT House District 2	UT House District 2
 CandidateContest	UT House District 20	UT House District 20
 CandidateContest	UT House District 21	UT House District 21
 CandidateContest	UT House District 22	UT House District 22
@@ -28,6 +72,7 @@ CandidateContest	UT House District 26	UT House District 26
 CandidateContest	UT House District 27	UT House District 27
 CandidateContest	UT House District 28	UT House District 28
 CandidateContest	UT House District 29	UT House District 29
+CandidateContest	UT House District 3	UT House District 3
 CandidateContest	UT House District 30	UT House District 30
 CandidateContest	UT House District 31	UT House District 31
 CandidateContest	UT House District 32	UT House District 32
@@ -38,6 +83,7 @@ CandidateContest	UT House District 36	UT House District 36
 CandidateContest	UT House District 37	UT House District 37
 CandidateContest	UT House District 38	UT House District 38
 CandidateContest	UT House District 39	UT House District 39
+CandidateContest	UT House District 4	UT House District 4
 CandidateContest	UT House District 40	UT House District 40
 CandidateContest	UT House District 41	UT House District 41
 CandidateContest	UT House District 42	UT House District 42
@@ -48,6 +94,7 @@ CandidateContest	UT House District 46	UT House District 46
 CandidateContest	UT House District 47	UT House District 47
 CandidateContest	UT House District 48	UT House District 48
 CandidateContest	UT House District 49	UT House District 49
+CandidateContest	UT House District 5	UT House District 5
 CandidateContest	UT House District 50	UT House District 50
 CandidateContest	UT House District 51	UT House District 51
 CandidateContest	UT House District 52	UT House District 52
@@ -58,6 +105,7 @@ CandidateContest	UT House District 56	UT House District 56
 CandidateContest	UT House District 57	UT House District 57
 CandidateContest	UT House District 58	UT House District 58
 CandidateContest	UT House District 59	UT House District 59
+CandidateContest	UT House District 6	UT House District 6
 CandidateContest	UT House District 60	UT House District 60
 CandidateContest	UT House District 61	UT House District 61
 CandidateContest	UT House District 62	UT House District 62
@@ -68,21 +116,18 @@ CandidateContest	UT House District 66	UT House District 66
 CandidateContest	UT House District 67	UT House District 67
 CandidateContest	UT House District 68	UT House District 68
 CandidateContest	UT House District 69	UT House District 69
+CandidateContest	UT House District 7	UT House District 7
 CandidateContest	UT House District 70	UT House District 70
 CandidateContest	UT House District 71	UT House District 71
 CandidateContest	UT House District 72	UT House District 72
 CandidateContest	UT House District 73	UT House District 73
 CandidateContest	UT House District 74	UT House District 74
 CandidateContest	UT House District 75	UT House District 75
+CandidateContest	UT House District 8	UT House District 8
+CandidateContest	UT House District 9	UT House District 9
+CandidateContest	UT Lieutenant Governor	UT Lieutenant Governor
+CandidateContest	UT Secretary of State	UT Secretary of State
 CandidateContest	UT Senate District 1	UT Senate District 1
-CandidateContest	UT Senate District 2	UT Senate District 2
-CandidateContest	UT Senate District 3	UT Senate District 3
-CandidateContest	UT Senate District 4	UT Senate District 4
-CandidateContest	UT Senate District 5	UT Senate District 5
-CandidateContest	UT Senate District 6	UT Senate District 6
-CandidateContest	UT Senate District 7	UT Senate District 7
-CandidateContest	UT Senate District 8	UT Senate District 8
-CandidateContest	UT Senate District 9	UT Senate District 9
 CandidateContest	UT Senate District 10	UT Senate District 10
 CandidateContest	UT Senate District 11	UT Senate District 11
 CandidateContest	UT Senate District 12	UT Senate District 12
@@ -93,6 +138,7 @@ CandidateContest	UT Senate District 16	UT Senate District 16
 CandidateContest	UT Senate District 17	UT Senate District 17
 CandidateContest	UT Senate District 18	UT Senate District 18
 CandidateContest	UT Senate District 19	UT Senate District 19
+CandidateContest	UT Senate District 2	UT Senate District 2
 CandidateContest	UT Senate District 20	UT Senate District 20
 CandidateContest	UT Senate District 21	UT Senate District 21
 CandidateContest	UT Senate District 22	UT Senate District 22
@@ -103,38 +149,83 @@ CandidateContest	UT Senate District 26	UT Senate District 26
 CandidateContest	UT Senate District 27	UT Senate District 27
 CandidateContest	UT Senate District 28	UT Senate District 28
 CandidateContest	UT Senate District 29	UT Senate District 29
-CandidateContest	US House UT District 1	US Congressional District 1
-CandidateContest	US House UT District 2	U.S. House 2
-CandidateContest	US House UT District 3	U.S. House 3
-CandidateContest	US House UT District 4	U.S. House 4
-CandidateContest	US President (UT)	U.S. President
-CandidateContest	UT Governor	Governor
-CandidateContest	US Senate UT	US Senate UT
-CandidateContest	UT Attorney General	Attorney General
-CandidateContest	UT Lieutenant Governor	UT Lieutenant Governor
+CandidateContest	UT Senate District 3	UT Senate District 3
+CandidateContest	UT Senate District 4	UT Senate District 4
+CandidateContest	UT Senate District 5	UT Senate District 5
+CandidateContest	UT Senate District 6	UT Senate District 6
+CandidateContest	UT Senate District 7	UT Senate District 7
+CandidateContest	UT Senate District 8	UT Senate District 8
+CandidateContest	UT Senate District 9	UT Senate District 9
 CandidateContest	UT Treasurer	UT Treasurer
-CandidateContest	UT Secretary of State	UT Secretary of State
+CountItemType	total	TOTAL
+Election	2016 General	2016 General
+Election	2018 General	2018 General
 Election	2020 General	2020 General
 Election	2020 Primary	2020 Primary
-Election	2018 General	2018 General
-Election	2016 General	2016 General
-Party	Democratic Party	DEM
-Party	Republican Party	REP
-Party	Green Party	GRN
-Party	Libertarian Party	LIB
-Party	Unaffiliated	UNA
 Party	Constitution Party	CON
-Party	United Utah Party	UUP
+Party	Democratic Party	DEM
+Party	Democratic Party	DEMOCRAT
+Party	Green Party	GRN
+Party	Green Party	GREEN
 Party	Independent American Party	IAP
+Party	Libertarian Party	LIB
+Party	Libertarian Party	LIBERTARIAN
+Party	Republican Party	REP
+Party	Republican Party	REPUBLICAN
+Party	Unaffiliated	UNA
+Party	United Utah Party	UUP
+Party	none or unknown	OTHER
+ReportingUnit	Utah;Beaver County	Beaver
+ReportingUnit	Utah;Beaver County	49001
+ReportingUnit	Utah;Box Elder County	Box Elder
+ReportingUnit	Utah;Box Elder County	49003
+ReportingUnit	Utah;Cache County	Cache
+ReportingUnit	Utah;Cache County	49005
+ReportingUnit	Utah;Carbon County	Carbon
+ReportingUnit	Utah;Carbon County	49007
+ReportingUnit	Utah;Daggett County	Daggett
+ReportingUnit	Utah;Daggett County	49009
+ReportingUnit	Utah;Davis County	Davis
+ReportingUnit	Utah;Davis County	49011
+ReportingUnit	Utah;Duchesne County	Duchesne
+ReportingUnit	Utah;Duchesne County	49013
+ReportingUnit	Utah;Emery County	Emery
+ReportingUnit	Utah;Emery County	49015
+ReportingUnit	Utah;Garfield County	Garfield
+ReportingUnit	Utah;Garfield County	49017
+ReportingUnit	Utah;Grand County	Grand
+ReportingUnit	Utah;Grand County	49019
+ReportingUnit	Utah;Iron County	Iron
+ReportingUnit	Utah;Iron County	49021
+ReportingUnit	Utah;Juab County	Juab
+ReportingUnit	Utah;Juab County	49023
+ReportingUnit	Utah;Kane County	Kane
+ReportingUnit	Utah;Kane County	49025
+ReportingUnit	Utah;Millard County	Millard
+ReportingUnit	Utah;Millard County	49027
+ReportingUnit	Utah;Morgan County	Morgan
+ReportingUnit	Utah;Morgan County	49029
+ReportingUnit	Utah;Piute County	Piute
+ReportingUnit	Utah;Piute County	49031
+ReportingUnit	Utah;Rich County	Rich
+ReportingUnit	Utah;Rich County	49033
+ReportingUnit	Utah;Salt Lake County	Salt Lake
+ReportingUnit	Utah;Salt Lake County	49035
+ReportingUnit	Utah;San Juan County	San Juan
+ReportingUnit	Utah;San Juan County	49037
+ReportingUnit	Utah;Sanpete County	Sanpete
+ReportingUnit	Utah;Sanpete County	49039
+ReportingUnit	Utah;Sevier County	Sevier
+ReportingUnit	Utah;Sevier County	49041
+ReportingUnit	Utah;Summit County	Summit
+ReportingUnit	Utah;Summit County	49043
+ReportingUnit	Utah;Tooele County	Tooele
+ReportingUnit	Utah;Tooele County	49045
+ReportingUnit	Utah;US House UT District 1	Utah;US House UT District 1
+ReportingUnit	Utah;US House UT District 2	Utah;US House UT District 2
+ReportingUnit	Utah;US House UT District 3	Utah;US House UT District 3
+ReportingUnit	Utah;US House UT District 4	Utah;US House UT District 4
 ReportingUnit	Utah;UT House District 1	Utah;UT House District 1
-ReportingUnit	Utah;UT House District 2	Utah;UT House District 2
-ReportingUnit	Utah;UT House District 3	Utah;UT House District 3
-ReportingUnit	Utah;UT House District 4	Utah;UT House District 4
-ReportingUnit	Utah;UT House District 5	Utah;UT House District 5
-ReportingUnit	Utah;UT House District 6	Utah;UT House District 6
-ReportingUnit	Utah;UT House District 7	Utah;UT House District 7
-ReportingUnit	Utah;UT House District 8	Utah;UT House District 8
-ReportingUnit	Utah;UT House District 9	Utah;UT House District 9
 ReportingUnit	Utah;UT House District 10	Utah;UT House District 10
 ReportingUnit	Utah;UT House District 11	Utah;UT House District 11
 ReportingUnit	Utah;UT House District 12	Utah;UT House District 12
@@ -145,6 +236,7 @@ ReportingUnit	Utah;UT House District 16	Utah;UT House District 16
 ReportingUnit	Utah;UT House District 17	Utah;UT House District 17
 ReportingUnit	Utah;UT House District 18	Utah;UT House District 18
 ReportingUnit	Utah;UT House District 19	Utah;UT House District 19
+ReportingUnit	Utah;UT House District 2	Utah;UT House District 2
 ReportingUnit	Utah;UT House District 20	Utah;UT House District 20
 ReportingUnit	Utah;UT House District 21	Utah;UT House District 21
 ReportingUnit	Utah;UT House District 22	Utah;UT House District 22
@@ -155,6 +247,7 @@ ReportingUnit	Utah;UT House District 26	Utah;UT House District 26
 ReportingUnit	Utah;UT House District 27	Utah;UT House District 27
 ReportingUnit	Utah;UT House District 28	Utah;UT House District 28
 ReportingUnit	Utah;UT House District 29	Utah;UT House District 29
+ReportingUnit	Utah;UT House District 3	Utah;UT House District 3
 ReportingUnit	Utah;UT House District 30	Utah;UT House District 30
 ReportingUnit	Utah;UT House District 31	Utah;UT House District 31
 ReportingUnit	Utah;UT House District 32	Utah;UT House District 32
@@ -165,6 +258,7 @@ ReportingUnit	Utah;UT House District 36	Utah;UT House District 36
 ReportingUnit	Utah;UT House District 37	Utah;UT House District 37
 ReportingUnit	Utah;UT House District 38	Utah;UT House District 38
 ReportingUnit	Utah;UT House District 39	Utah;UT House District 39
+ReportingUnit	Utah;UT House District 4	Utah;UT House District 4
 ReportingUnit	Utah;UT House District 40	Utah;UT House District 40
 ReportingUnit	Utah;UT House District 41	Utah;UT House District 41
 ReportingUnit	Utah;UT House District 42	Utah;UT House District 42
@@ -175,6 +269,7 @@ ReportingUnit	Utah;UT House District 46	Utah;UT House District 46
 ReportingUnit	Utah;UT House District 47	Utah;UT House District 47
 ReportingUnit	Utah;UT House District 48	Utah;UT House District 48
 ReportingUnit	Utah;UT House District 49	Utah;UT House District 49
+ReportingUnit	Utah;UT House District 5	Utah;UT House District 5
 ReportingUnit	Utah;UT House District 50	Utah;UT House District 50
 ReportingUnit	Utah;UT House District 51	Utah;UT House District 51
 ReportingUnit	Utah;UT House District 52	Utah;UT House District 52
@@ -185,6 +280,7 @@ ReportingUnit	Utah;UT House District 56	Utah;UT House District 56
 ReportingUnit	Utah;UT House District 57	Utah;UT House District 57
 ReportingUnit	Utah;UT House District 58	Utah;UT House District 58
 ReportingUnit	Utah;UT House District 59	Utah;UT House District 59
+ReportingUnit	Utah;UT House District 6	Utah;UT House District 6
 ReportingUnit	Utah;UT House District 60	Utah;UT House District 60
 ReportingUnit	Utah;UT House District 61	Utah;UT House District 61
 ReportingUnit	Utah;UT House District 62	Utah;UT House District 62
@@ -195,21 +291,16 @@ ReportingUnit	Utah;UT House District 66	Utah;UT House District 66
 ReportingUnit	Utah;UT House District 67	Utah;UT House District 67
 ReportingUnit	Utah;UT House District 68	Utah;UT House District 68
 ReportingUnit	Utah;UT House District 69	Utah;UT House District 69
+ReportingUnit	Utah;UT House District 7	Utah;UT House District 7
 ReportingUnit	Utah;UT House District 70	Utah;UT House District 70
 ReportingUnit	Utah;UT House District 71	Utah;UT House District 71
 ReportingUnit	Utah;UT House District 72	Utah;UT House District 72
 ReportingUnit	Utah;UT House District 73	Utah;UT House District 73
 ReportingUnit	Utah;UT House District 74	Utah;UT House District 74
 ReportingUnit	Utah;UT House District 75	Utah;UT House District 75
+ReportingUnit	Utah;UT House District 8	Utah;UT House District 8
+ReportingUnit	Utah;UT House District 9	Utah;UT House District 9
 ReportingUnit	Utah;UT Senate District 1	Utah;UT Senate District 1
-ReportingUnit	Utah;UT Senate District 2	Utah;UT Senate District 2
-ReportingUnit	Utah;UT Senate District 3	Utah;UT Senate District 3
-ReportingUnit	Utah;UT Senate District 4	Utah;UT Senate District 4
-ReportingUnit	Utah;UT Senate District 5	Utah;UT Senate District 5
-ReportingUnit	Utah;UT Senate District 6	Utah;UT Senate District 6
-ReportingUnit	Utah;UT Senate District 7	Utah;UT Senate District 7
-ReportingUnit	Utah;UT Senate District 8	Utah;UT Senate District 8
-ReportingUnit	Utah;UT Senate District 9	Utah;UT Senate District 9
 ReportingUnit	Utah;UT Senate District 10	Utah;UT Senate District 10
 ReportingUnit	Utah;UT Senate District 11	Utah;UT Senate District 11
 ReportingUnit	Utah;UT Senate District 12	Utah;UT Senate District 12
@@ -220,6 +311,7 @@ ReportingUnit	Utah;UT Senate District 16	Utah;UT Senate District 16
 ReportingUnit	Utah;UT Senate District 17	Utah;UT Senate District 17
 ReportingUnit	Utah;UT Senate District 18	Utah;UT Senate District 18
 ReportingUnit	Utah;UT Senate District 19	Utah;UT Senate District 19
+ReportingUnit	Utah;UT Senate District 2	Utah;UT Senate District 2
 ReportingUnit	Utah;UT Senate District 20	Utah;UT Senate District 20
 ReportingUnit	Utah;UT Senate District 21	Utah;UT Senate District 21
 ReportingUnit	Utah;UT Senate District 22	Utah;UT Senate District 22
@@ -230,67 +322,22 @@ ReportingUnit	Utah;UT Senate District 26	Utah;UT Senate District 26
 ReportingUnit	Utah;UT Senate District 27	Utah;UT Senate District 27
 ReportingUnit	Utah;UT Senate District 28	Utah;UT Senate District 28
 ReportingUnit	Utah;UT Senate District 29	Utah;UT Senate District 29
-ReportingUnit	Utah;US House UT District 1	Utah;US House UT District 1
-ReportingUnit	Utah;US House UT District 2	Utah;US House UT District 2
-ReportingUnit	Utah;US House UT District 3	Utah;US House UT District 3
-ReportingUnit	Utah;US House UT District 4	Utah;US House UT District 4
-ReportingUnit	Utah;Beaver County	Beaver
-ReportingUnit	Utah;Box Elder County	Box Elder
-ReportingUnit	Utah;Cache County	Cache
-ReportingUnit	Utah;Carbon County	Carbon
-ReportingUnit	Utah;Daggett County	Daggett
-ReportingUnit	Utah;Davis County	Davis
-ReportingUnit	Utah;Duchesne County	Duchesne
-ReportingUnit	Utah;Emery County	Emery
-ReportingUnit	Utah;Garfield County	Garfield
-ReportingUnit	Utah;Grand County	Grand
-ReportingUnit	Utah;Iron County	Iron
-ReportingUnit	Utah;Juab County	Juab
-ReportingUnit	Utah;Kane County	Kane
-ReportingUnit	Utah;Millard County	Millard
-ReportingUnit	Utah;Morgan County	Morgan
-ReportingUnit	Utah;Piute County	Piute
-ReportingUnit	Utah;Rich County	Rich
-ReportingUnit	Utah;Salt Lake County	Salt Lake
-ReportingUnit	Utah;San Juan County	San Juan
-ReportingUnit	Utah;Sanpete County	Sanpete
-ReportingUnit	Utah;Sevier County	Sevier
-ReportingUnit	Utah;Summit County	Summit
-ReportingUnit	Utah;Tooele County	Tooele
+ReportingUnit	Utah;UT Senate District 3	Utah;UT Senate District 3
+ReportingUnit	Utah;UT Senate District 4	Utah;UT Senate District 4
+ReportingUnit	Utah;UT Senate District 5	Utah;UT Senate District 5
+ReportingUnit	Utah;UT Senate District 6	Utah;UT Senate District 6
+ReportingUnit	Utah;UT Senate District 7	Utah;UT Senate District 7
+ReportingUnit	Utah;UT Senate District 8	Utah;UT Senate District 8
+ReportingUnit	Utah;UT Senate District 9	Utah;UT Senate District 9
 ReportingUnit	Utah;Uintah County	Uintah
+ReportingUnit	Utah;Uintah County	49047
 ReportingUnit	Utah;Utah County	Utah
+ReportingUnit	Utah;Utah County	49049
 ReportingUnit	Utah;Wasatch County	Wasatch
+ReportingUnit	Utah;Wasatch County	49051
 ReportingUnit	Utah;Washington County	Washington
+ReportingUnit	Utah;Washington County	49053
 ReportingUnit	Utah;Wayne County	Wayne
+ReportingUnit	Utah;Wayne County	49055
 ReportingUnit	Utah;Weber County	Weber
-Candidate	Brock Pierce	Brock Pierce Karla Ballard
-Candidate	Don Blankenship	Don Blankenship William Mohr
-Candidate	Gloria La Riva	Gloria La Riva
-Candidate	Howie Hawkins	Howie Hawkins Angela Walker
-Candidate	Jo Jorgensen	Jo Jorgensen Jeremy Cohen
-Candidate	Joe Mchugh	Joe Mchugh Elizabeth Storm
-Candidate	Joseph R. Biden	Joseph R. Biden Kamala D. Harris
-Candidate	Kanye West	Kanye West Michelle Tidball
-Candidate	<- did not match regex ^(.*) \([A-Z]{3}\)$	<- did not match regex ^(.*) \([A-Z]{3}\)$
-Candidate	County <- did not match regex ^(.*) \([A-Z]{3}\)$County	County <- did not match regex ^(.*) \([A-Z]{3}\)$County
-Candidate	Blake David Moore	Blake David Moore
-Candidate	Darren Parry	Darren Parry
-Candidate	Chris Stewart	Chris Stewart
-Candidate	J. Robert Latham	J. Robert Latham
-Candidate	Kael Weston	Kael Weston
-Candidate	Daniel Clyde Cummings	Daniel Clyde Cummings
-Candidate	Devin D. Thorpe	Devin D. Thorpe
-Candidate	John Curtis	John Curtis
-Candidate	Thomas G. Mcneill	Thomas G. Mcneill
-Candidate	Ben Mcadams	Ben Mcadams
-Candidate	Burgess Owens	Burgess Owens
-Candidate	John Molnar	John Molnar
-Candidate	Jonia M Broderick	Jonia M Broderick
-Candidate	Greg Skordas	Greg Skordas
-Candidate	Rudy J. Bautista	Rudy J. Bautista
-Candidate	Sean D. Reyes	Sean D. Reyes
-Candidate	Spencer J. Cox	Spencer J. Cox Deidre M. Henderson
-Candidate	Greg Duerden	Greg Duerden Wayne Hill
-Candidate	Donald J. Trump	Donald J. Trump Michael R. Pence
-Candidate	Daniel Rhead Cottam	Daniel Rhead Cottam Barry Evan Short
-Candidate	Chris Peterson	Chris Peterson Karina Brown
+ReportingUnit	Utah;Weber County	49057

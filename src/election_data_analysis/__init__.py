@@ -80,7 +80,7 @@ class SingleDataLoader:
     def __init__(
         self,
         results_dir: str,
-        par_file_name: str,
+        param_file: str,
         session: Session,
         mungers_path: str,
         juris_true_name: str,
@@ -90,15 +90,15 @@ class SingleDataLoader:
         self.session = session
         self.results_dir = results_dir
         self.juris_true_name = juris_true_name
-        self.par_file_name = par_file_name
+        self.param_file = param_file
 
         # calculate useful parameters
         self.juris_system_name = jm.system_name_from_true_name(self.juris_true_name)
         self.path_to_jurisdiction_dir = path_to_jurisdiction_dir
 
         # grab parameters (known to exist from __new__, so can ignore error variable)
-        par_file = os.path.join(results_dir, par_file_name)
-        self.d, dummy_err = ui.get_parameters(
+        par_file = os.path.join(results_dir,param_file)
+        self.d, _ = ui.get_parameters(
             required_keys=sdl_pars_req,
             optional_keys=sdl_pars_opt,
             param_file=par_file,
@@ -138,7 +138,7 @@ class SingleDataLoader:
             err = ui.add_new_error(
                 err,
                 "ini",
-                self.par_file_name,
+                self.param_file,
                 f"No ReportingUnit named {self.d['jurisdiction']} found in database",
             )
             return [0, 0], err
@@ -147,58 +147,24 @@ class SingleDataLoader:
             err = ui.add_new_error(
                 err,
                 "ini",
-                self.par_file_name,
+                self.param_file,
                 f"No election named {self.d['election']} found in database",
             )
             return [0, 0], err
-        data = pd.DataFrame(
-            [
-                [
-                    self.d["results_short_name"],
-                    filename,
-                    self.d["results_download_date"],
-                    self.d["results_source"],
-                    self.d["results_note"],
-                    jurisdiction_id,
-                    election_id,
-                    datetime.datetime.now(),
-                    self.d["is_preliminary"],
-                ]
-            ],
-            columns=[
-                "short_name",
-                "file_name",
-                "download_date",
-                "source",
-                "note",
-                "ReportingUnit_Id",
-                "Election_Id",
-                "created_at",
-                "is_preliminary",
-            ],
+        idxes, err = datafile_info(
+            self.session.bind,
+            self.param_file,
+            self.d["results_short_name"],
+            filename,
+            self.d["results_download_date"],
+            self.d["results_source"],
+            self.d["results_note"],
+            jurisdiction_id,
+            election_id,
+            self.d["is_preliminary"],
         )
-        data = m.clean_strings(data, ["short_name"])
-        try:
-            err = db.insert_to_cdf_db(
-                self.session.bind, data, "_datafile", "ini", self.par_file_name
-            )
-            if ui.fatal_error(err):
-                return [0, 0], err
-            else:
-                col_map = {"short_name": "short_name"}
-                datafile_id = db.append_id_to_dframe(
-                    self.session.bind, data, "_datafile", col_map=col_map
-                ).iloc[0]["_datafile_Id"]
-        except Exception as exc:
-            err = ui.add_new_error(
-                err,
-                "system",
-                f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
-                f"Error inserting record to _datafile table or retrieving _datafile_Id: {exc}",
-            )
-            return [0, 0], err
+        return idxes, err
 
-        return {"_datafile_Id": datafile_id, "Election_Id": election_id}, err
 
     def load_results(
         self, rollup: bool = False, rollup_rut: Optional[str] = None
@@ -2494,6 +2460,92 @@ def get_contest_with_unknown_candidates(
     return contests
 
 
+def load_results_df(
+        session: Session,
+        df_original: pd.DataFrame,
+        necessary_constants: dict,
+        juris_true_name: str,
+        munger_name: str,
+        path_to_jurisdiction_dir: str,
+        election_datafile_ids: dict,
+        file_type: str,
+        rollup: bool = False,
+        rollup_rut: str = "county",
+) -> Optional[dict]:
+    err = None
+    df = df_original.copy()
+    # # add Id columns for all but Count, removing raw-munged
+    try:
+        df, new_err = m.munge_raw_to_ids(
+            df,
+            necessary_constants,
+            path_to_jurisdiction_dir,
+            munger_name,
+            juris_true_name,
+            session,
+            file_type,
+        )
+        if new_err:
+            err = ui.consolidate_errors([err, new_err])
+            if ui.fatal_error(new_err):
+                return err
+    except Exception as exc:
+        err = ui.add_new_error(
+            err,
+            "system",
+            f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
+            f"Exception while munging raw to ids: {exc}",
+        )
+        return err
+
+    # # for each contest, if none or unknown candidate has total votes 0, remove rows with that contest & candidate
+    nou_candidate_id = db.name_to_id(session, "Candidate", "none or unknown")
+    nou_selection_ids = db.selection_ids_from_candidate_id(session, nou_candidate_id)
+    unknown = (
+        df[df.Selection_Id.isin(nou_selection_ids)]
+        .groupby(["Contest_Id", "Selection_Id"])
+        .sum()
+    )
+    for (contest_id, selection_id) in unknown.index:
+        mask = df[["Contest_Id", "Selection_Id"]] == (contest_id, selection_id)
+        df = df[~mask.all(axis=1)]
+
+    if df.empty:
+        err = ui.add_new_error(
+            err,
+            "jurisdiction",
+            juris_true_name,
+            f"No contest-selection pairs recognized via munger {munger_name}",
+        )
+        return err
+
+    # rollup_dataframe results if requested
+    if rollup:
+        df, new_err = a.rollup_dataframe(
+            session, df, "Count", "ReportingUnit_Id", "ReportingUnit_Id", rollup_rut
+        )
+        if new_err:
+            err = ui.consolidate_errors([err, new_err])
+            if ui.fatal_error(new_err):
+                return err
+
+    # add_datafile_Id and Election_Id columns
+    for c in ["_datafile_Id", "Election_Id"]:
+        df = m.add_constant_column(df, c, election_datafile_ids[c])
+    # load counts to db
+    try:
+        err = m.fill_vote_count(df, session, munger_name, err)
+    except Exception as exc:
+        err = ui.add_new_error(
+            err,
+            "system",
+            f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
+            f"Exception while filling vote count table: {exc}",
+        )
+        return err
+    return err
+
+
 def load_results_file(
     session: Session,
     munger_path: str,
@@ -2532,77 +2584,11 @@ def load_results_file(
     # # delete any rows with items to be ignored
     df = m.remove_ignored_rows(df, munger_path)
 
-    # # add Id columns for all but Count, removing raw-munged
-    try:
-        df, new_err = m.munge_raw_to_ids(
-            df,
-            necessary_constants,
-            path_to_jurisdiction_dir,
-            munger_name,
-            juris_true_name,
-            session,
-            p["file_type"],
-        )
-        if new_err:
-            err = ui.consolidate_errors([err, new_err])
-            if ui.fatal_error(new_err):
-                return err
-    except Exception as exc:
-        err = ui.add_new_error(
-            err,
-            "system",
-            f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
-            f"Exception while munging raw to ids: {exc}",
-        )
-        return err
-
-    # # for each contest, if none or unknown candidate has total votes 0, remove rows with that contest & candidate
-    nou_candidate_id = db.name_to_id(session, "Candidate", "none or unknown")
-    nou_selection_ids = db.selection_ids_from_candidate_id(session, nou_candidate_id)
-    unknown = (
-        df[df.Selection_Id.isin(nou_selection_ids)]
-        .groupby(["Contest_Id", "Selection_Id"])
-        .sum()
+    new_err = load_results_df(
+        session,df,necessary_constants, juris_true_name, munger_name,path_to_jurisdiction_dir,election_datafile_ids,
+        p["file_type"], rollup=rollup, rollup_rut=rollup_rut
     )
-    for (contest_id, selection_id) in unknown.index:
-        mask = df[["Contest_Id", "Selection_Id"]] == (contest_id, selection_id)
-        df = df[~mask.all(axis=1)]
-
-    if df.empty:
-        err = ui.add_new_error(
-            err,
-            "jurisdiction",
-            juris_true_name,
-            f"No contest-selection pairs recognized via munger {munger_name} from {Path(f_path).name}",
-        )
-        return err
-
-    # rollup_dataframe results if requested
-    if rollup:
-        df, new_err = a.rollup_dataframe(
-            session, df, "Count", "ReportingUnit_Id", "ReportingUnit_Id", rollup_rut
-        )
-        if new_err:
-            err = ui.consolidate_errors([err, new_err])
-            if ui.fatal_error(new_err):
-                return err
-
-    # add_datafile_Id and Election_Id columns
-    for c in ["_datafile_Id", "Election_Id"]:
-        df = m.add_constant_column(df, c, election_datafile_ids[c])
-    # load counts to db
-    try:
-        err = m.fill_vote_count(df, session, munger_name, err)
-    except Exception as exc:
-        err = ui.add_new_error(
-            err,
-            "system",
-            f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
-            f"Exception while filling vote count table: {exc}",
-        )
-        return err
-    return err
-
+    return ui.consolidate_errors([err, new_err])
 
 def create_from_template(
     template_file: str, target_file: str, replace_dict: Dict[str, str]
@@ -2765,3 +2751,59 @@ def reload_juris_election(
     if db_params["dbname"] == temp_db:
         db.remove_database(db_params)
     return err
+
+
+def datafile_info(connection,results_filename_for_error_reporting,
+                  results_short_name,file_name,download_date: str,source: str,note: str,
+                  jurisdiction_id: int,election_id: int,is_preliminary: bool
+                  ) -> (dict, dict):
+    """Inserts record into _datafile table"""
+    data = pd.DataFrame(
+        [
+            [
+                results_short_name,
+                file_name,
+                download_date,
+                source,
+                note,
+                jurisdiction_id,
+                election_id,
+                datetime.datetime.now(),
+                is_preliminary,
+            ]
+        ],
+        columns=[
+            "short_name",
+            "file_name",
+            "download_date",
+            "source",
+            "note",
+            "ReportingUnit_Id",
+            "Election_Id",
+            "created_at",
+            "is_preliminary",
+        ],
+    )
+    data = m.clean_strings(data,["short_name"])
+    try:
+        err = db.insert_to_cdf_db(
+            connection, data,"_datafile","ini", results_filename_for_error_reporting,
+        )
+        if ui.fatal_error(err):
+            return [0,0],err
+        else:
+            col_map = {"short_name":"short_name"}
+            datafile_id = db.append_id_to_dframe(
+                connection,data,"_datafile",col_map=col_map
+            ).iloc[0]["_datafile_Id"]
+    except Exception as exc:
+        err = ui.add_new_error(
+            err,
+            "system",
+            f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
+            f"Error inserting record to _datafile table or retrieving _datafile_Id: {exc}",
+        )
+        return [0,0],err
+
+    return {"_datafile_Id":datafile_id,"Election_Id":election_id},err
+

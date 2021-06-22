@@ -1,103 +1,62 @@
 cdf_element	cdf_internal_name	raw_identifier_value
+Candidate	Al Gore	AL GORE
+Candidate	Allen, Jay T.	Allen, Jay T.
+Candidate	Amy J. Klobuchar	Amy J. Klobuchar
+Candidate	Amy J. Klobuchar	Klobuchar, Amy J.
+Candidate	Andrew Yang	Andrew Yang
+Candidate	Andrew Yang	Yang, Andrew
+Candidate	Barack Obama	BARACK OBAMA
+Candidate	Bernard Sanders	Bernard Sanders
+Candidate	Bernard Sanders	Sanders, Bernard
+Candidate	Bre Kidman	Bre Kidman
+Candidate	Bre Kidman	Kidman, Bre
+Candidate	Cory A. Booker	Cory A. Booker
+Candidate	Cory A. Booker	Booker, Cory A.
+Candidate	Crafts, Dale John	Crafts, Dale John
+Candidate	Deval Patrick	Deval Patrick
+Candidate	Deval Patrick	Patrick, Deval
+Candidate	Donald J. Trump	Donald J. Trump
+Candidate	Donald J. Trump	Trump, Donald J.
+Candidate	Donald J. Trump	DONALD TRUMP
+Candidate	Elizabeth A. Sweet	Elizabeth A. Sweet
+Candidate	Elizabeth A. Sweet	Sweet, Elizabeth A.
+Candidate	Elizabeth A. Warren	Elizabeth A. Warren
+Candidate	Elizabeth A. Warren	Warren, Elizabeth A.
+Candidate	George W. Bush	GEORGE W. BUSH
+Candidate	Golden, Jared F.	Golden, Jared F.
+Candidate	Hillary Clinton	HILLARY CLINTON
+Candidate	Howard Hawkins	Hawkins, Howard
+Candidate	Jo Jorgensen	Jorgensen, Jo
+Candidate	John Kerry	JOHN KERRY
+Candidate	John Mccain	JOHN MCCAIN
+Candidate	Joseph R. Biden	Biden, Joseph R.
+Candidate	Joseph R. Biden	Joseph R. Biden, Jr.
+Candidate	Joseph R. Biden	Biden, Joseph R., Jr.
+Candidate	Linn, Max Patrick	Linn, Max Patrick
+Candidate	Marianne Williamson	Marianne Williamson
+Candidate	Marianne Williamson	Williamson, Marianne
+Candidate	Michael R. Bloomberg	Michael R. Bloomberg
+Candidate	Michael R. Bloomberg	Bloomberg, Michael R.
+Candidate	Mitt Romney	MITT ROMNEY
+Candidate	Other	OTHER
+Candidate	Others	Others
+Candidate	Peter Buttigieg	Peter Buttigieg
+Candidate	Peter Buttigieg	Buttigieg, Peter
+Candidate	Pingree, Chellie M.	Pingree, Chellie M.
+Candidate	Ralph Nader	RALPH NADER
+Candidate	Roque De La Fuente	De La Fuente, Roque
+Candidate	Sara I. Gideon	Sara I. Gideon
+Candidate	Sara I. Gideon	Gideon, Sara I.
+Candidate	Savage, Lisa	Savage, Lisa
+Candidate	Susan Margaret Collins	Collins, Susan Margaret
+Candidate	Thomas F. Steyer	Thomas F. Steyer
+Candidate	Thomas F. Steyer	Steyer, Thomas F.
+Candidate	Tulsi Gabbard	Tulsi Gabbard
+Candidate	Tulsi Gabbard	Gabbard, Tulsi
+CandidateContest	ME Attorney General	ME Attorney General
+CandidateContest	ME Governor	ME Governor
 CandidateContest	ME House District 1	ME House District 1
-CandidateContest	ME House District 2	ME House District 2
-CandidateContest	ME House District 3	ME House District 3
-CandidateContest	ME House District 4	ME House District 4
-CandidateContest	ME House District 5	ME House District 5
-CandidateContest	ME House District 6	ME House District 6
-CandidateContest	ME House District 7	ME House District 7
-CandidateContest	ME House District 8	ME House District 8
-CandidateContest	ME House District 9	ME House District 9
 CandidateContest	ME House District 10	ME House District 10
-CandidateContest	ME House District 11	ME House District 11
-CandidateContest	ME House District 12	ME House District 12
-CandidateContest	ME House District 13	ME House District 13
-CandidateContest	ME House District 14	ME House District 14
-CandidateContest	ME House District 15	ME House District 15
-CandidateContest	ME House District 16	ME House District 16
-CandidateContest	ME House District 17	ME House District 17
-CandidateContest	ME House District 18	ME House District 18
-CandidateContest	ME House District 19	ME House District 19
-CandidateContest	ME House District 20	ME House District 20
-CandidateContest	ME House District 21	ME House District 21
-CandidateContest	ME House District 22	ME House District 22
-CandidateContest	ME House District 23	ME House District 23
-CandidateContest	ME House District 24	ME House District 24
-CandidateContest	ME House District 25	ME House District 25
-CandidateContest	ME House District 26	ME House District 26
-CandidateContest	ME House District 27	ME House District 27
-CandidateContest	ME House District 28	ME House District 28
-CandidateContest	ME House District 29	ME House District 29
-CandidateContest	ME House District 30	ME House District 30
-CandidateContest	ME House District 31	ME House District 31
-CandidateContest	ME House District 32	ME House District 32
-CandidateContest	ME House District 33	ME House District 33
-CandidateContest	ME House District 34	ME House District 34
-CandidateContest	ME House District 35	ME House District 35
-CandidateContest	ME House District 36	ME House District 36
-CandidateContest	ME House District 37	ME House District 37
-CandidateContest	ME House District 38	ME House District 38
-CandidateContest	ME House District 39	ME House District 39
-CandidateContest	ME House District 40	ME House District 40
-CandidateContest	ME House District 41	ME House District 41
-CandidateContest	ME House District 42	ME House District 42
-CandidateContest	ME House District 43	ME House District 43
-CandidateContest	ME House District 44	ME House District 44
-CandidateContest	ME House District 45	ME House District 45
-CandidateContest	ME House District 46	ME House District 46
-CandidateContest	ME House District 47	ME House District 47
-CandidateContest	ME House District 48	ME House District 48
-CandidateContest	ME House District 49	ME House District 49
-CandidateContest	ME House District 50	ME House District 50
-CandidateContest	ME House District 51	ME House District 51
-CandidateContest	ME House District 52	ME House District 52
-CandidateContest	ME House District 53	ME House District 53
-CandidateContest	ME House District 54	ME House District 54
-CandidateContest	ME House District 55	ME House District 55
-CandidateContest	ME House District 56	ME House District 56
-CandidateContest	ME House District 57	ME House District 57
-CandidateContest	ME House District 58	ME House District 58
-CandidateContest	ME House District 59	ME House District 59
-CandidateContest	ME House District 60	ME House District 60
-CandidateContest	ME House District 61	ME House District 61
-CandidateContest	ME House District 62	ME House District 62
-CandidateContest	ME House District 63	ME House District 63
-CandidateContest	ME House District 64	ME House District 64
-CandidateContest	ME House District 65	ME House District 65
-CandidateContest	ME House District 66	ME House District 66
-CandidateContest	ME House District 67	ME House District 67
-CandidateContest	ME House District 68	ME House District 68
-CandidateContest	ME House District 69	ME House District 69
-CandidateContest	ME House District 70	ME House District 70
-CandidateContest	ME House District 71	ME House District 71
-CandidateContest	ME House District 72	ME House District 72
-CandidateContest	ME House District 73	ME House District 73
-CandidateContest	ME House District 74	ME House District 74
-CandidateContest	ME House District 75	ME House District 75
-CandidateContest	ME House District 76	ME House District 76
-CandidateContest	ME House District 77	ME House District 77
-CandidateContest	ME House District 78	ME House District 78
-CandidateContest	ME House District 79	ME House District 79
-CandidateContest	ME House District 80	ME House District 80
-CandidateContest	ME House District 81	ME House District 81
-CandidateContest	ME House District 82	ME House District 82
-CandidateContest	ME House District 83	ME House District 83
-CandidateContest	ME House District 84	ME House District 84
-CandidateContest	ME House District 85	ME House District 85
-CandidateContest	ME House District 86	ME House District 86
-CandidateContest	ME House District 87	ME House District 87
-CandidateContest	ME House District 88	ME House District 88
-CandidateContest	ME House District 89	ME House District 89
-CandidateContest	ME House District 90	ME House District 90
-CandidateContest	ME House District 91	ME House District 91
-CandidateContest	ME House District 92	ME House District 92
-CandidateContest	ME House District 93	ME House District 93
-CandidateContest	ME House District 94	ME House District 94
-CandidateContest	ME House District 95	ME House District 95
-CandidateContest	ME House District 96	ME House District 96
-CandidateContest	ME House District 97	ME House District 97
-CandidateContest	ME House District 98	ME House District 98
-CandidateContest	ME House District 99	ME House District 99
 CandidateContest	ME House District 100	ME House District 100
 CandidateContest	ME House District 101	ME House District 101
 CandidateContest	ME House District 102	ME House District 102
@@ -108,6 +67,7 @@ CandidateContest	ME House District 106	ME House District 106
 CandidateContest	ME House District 107	ME House District 107
 CandidateContest	ME House District 108	ME House District 108
 CandidateContest	ME House District 109	ME House District 109
+CandidateContest	ME House District 11	ME House District 11
 CandidateContest	ME House District 110	ME House District 110
 CandidateContest	ME House District 111	ME House District 111
 CandidateContest	ME House District 112	ME House District 112
@@ -118,6 +78,7 @@ CandidateContest	ME House District 116	ME House District 116
 CandidateContest	ME House District 117	ME House District 117
 CandidateContest	ME House District 118	ME House District 118
 CandidateContest	ME House District 119	ME House District 119
+CandidateContest	ME House District 12	ME House District 12
 CandidateContest	ME House District 120	ME House District 120
 CandidateContest	ME House District 121	ME House District 121
 CandidateContest	ME House District 122	ME House District 122
@@ -128,6 +89,7 @@ CandidateContest	ME House District 126	ME House District 126
 CandidateContest	ME House District 127	ME House District 127
 CandidateContest	ME House District 128	ME House District 128
 CandidateContest	ME House District 129	ME House District 129
+CandidateContest	ME House District 13	ME House District 13
 CandidateContest	ME House District 130	ME House District 130
 CandidateContest	ME House District 131	ME House District 131
 CandidateContest	ME House District 132	ME House District 132
@@ -138,6 +100,7 @@ CandidateContest	ME House District 136	ME House District 136
 CandidateContest	ME House District 137	ME House District 137
 CandidateContest	ME House District 138	ME House District 138
 CandidateContest	ME House District 139	ME House District 139
+CandidateContest	ME House District 14	ME House District 14
 CandidateContest	ME House District 140	ME House District 140
 CandidateContest	ME House District 141	ME House District 141
 CandidateContest	ME House District 142	ME House District 142
@@ -148,17 +111,104 @@ CandidateContest	ME House District 146	ME House District 146
 CandidateContest	ME House District 147	ME House District 147
 CandidateContest	ME House District 148	ME House District 148
 CandidateContest	ME House District 149	ME House District 149
+CandidateContest	ME House District 15	ME House District 15
 CandidateContest	ME House District 150	ME House District 150
 CandidateContest	ME House District 151	ME House District 151
+CandidateContest	ME House District 16	ME House District 16
+CandidateContest	ME House District 17	ME House District 17
+CandidateContest	ME House District 18	ME House District 18
+CandidateContest	ME House District 19	ME House District 19
+CandidateContest	ME House District 2	ME House District 2
+CandidateContest	ME House District 20	ME House District 20
+CandidateContest	ME House District 21	ME House District 21
+CandidateContest	ME House District 22	ME House District 22
+CandidateContest	ME House District 23	ME House District 23
+CandidateContest	ME House District 24	ME House District 24
+CandidateContest	ME House District 25	ME House District 25
+CandidateContest	ME House District 26	ME House District 26
+CandidateContest	ME House District 27	ME House District 27
+CandidateContest	ME House District 28	ME House District 28
+CandidateContest	ME House District 29	ME House District 29
+CandidateContest	ME House District 3	ME House District 3
+CandidateContest	ME House District 30	ME House District 30
+CandidateContest	ME House District 31	ME House District 31
+CandidateContest	ME House District 32	ME House District 32
+CandidateContest	ME House District 33	ME House District 33
+CandidateContest	ME House District 34	ME House District 34
+CandidateContest	ME House District 35	ME House District 35
+CandidateContest	ME House District 36	ME House District 36
+CandidateContest	ME House District 37	ME House District 37
+CandidateContest	ME House District 38	ME House District 38
+CandidateContest	ME House District 39	ME House District 39
+CandidateContest	ME House District 4	ME House District 4
+CandidateContest	ME House District 40	ME House District 40
+CandidateContest	ME House District 41	ME House District 41
+CandidateContest	ME House District 42	ME House District 42
+CandidateContest	ME House District 43	ME House District 43
+CandidateContest	ME House District 44	ME House District 44
+CandidateContest	ME House District 45	ME House District 45
+CandidateContest	ME House District 46	ME House District 46
+CandidateContest	ME House District 47	ME House District 47
+CandidateContest	ME House District 48	ME House District 48
+CandidateContest	ME House District 49	ME House District 49
+CandidateContest	ME House District 5	ME House District 5
+CandidateContest	ME House District 50	ME House District 50
+CandidateContest	ME House District 51	ME House District 51
+CandidateContest	ME House District 52	ME House District 52
+CandidateContest	ME House District 53	ME House District 53
+CandidateContest	ME House District 54	ME House District 54
+CandidateContest	ME House District 55	ME House District 55
+CandidateContest	ME House District 56	ME House District 56
+CandidateContest	ME House District 57	ME House District 57
+CandidateContest	ME House District 58	ME House District 58
+CandidateContest	ME House District 59	ME House District 59
+CandidateContest	ME House District 6	ME House District 6
+CandidateContest	ME House District 60	ME House District 60
+CandidateContest	ME House District 61	ME House District 61
+CandidateContest	ME House District 62	ME House District 62
+CandidateContest	ME House District 63	ME House District 63
+CandidateContest	ME House District 64	ME House District 64
+CandidateContest	ME House District 65	ME House District 65
+CandidateContest	ME House District 66	ME House District 66
+CandidateContest	ME House District 67	ME House District 67
+CandidateContest	ME House District 68	ME House District 68
+CandidateContest	ME House District 69	ME House District 69
+CandidateContest	ME House District 7	ME House District 7
+CandidateContest	ME House District 70	ME House District 70
+CandidateContest	ME House District 71	ME House District 71
+CandidateContest	ME House District 72	ME House District 72
+CandidateContest	ME House District 73	ME House District 73
+CandidateContest	ME House District 74	ME House District 74
+CandidateContest	ME House District 75	ME House District 75
+CandidateContest	ME House District 76	ME House District 76
+CandidateContest	ME House District 77	ME House District 77
+CandidateContest	ME House District 78	ME House District 78
+CandidateContest	ME House District 79	ME House District 79
+CandidateContest	ME House District 8	ME House District 8
+CandidateContest	ME House District 80	ME House District 80
+CandidateContest	ME House District 81	ME House District 81
+CandidateContest	ME House District 82	ME House District 82
+CandidateContest	ME House District 83	ME House District 83
+CandidateContest	ME House District 84	ME House District 84
+CandidateContest	ME House District 85	ME House District 85
+CandidateContest	ME House District 86	ME House District 86
+CandidateContest	ME House District 87	ME House District 87
+CandidateContest	ME House District 88	ME House District 88
+CandidateContest	ME House District 89	ME House District 89
+CandidateContest	ME House District 9	ME House District 9
+CandidateContest	ME House District 90	ME House District 90
+CandidateContest	ME House District 91	ME House District 91
+CandidateContest	ME House District 92	ME House District 92
+CandidateContest	ME House District 93	ME House District 93
+CandidateContest	ME House District 94	ME House District 94
+CandidateContest	ME House District 95	ME House District 95
+CandidateContest	ME House District 96	ME House District 96
+CandidateContest	ME House District 97	ME House District 97
+CandidateContest	ME House District 98	ME House District 98
+CandidateContest	ME House District 99	ME House District 99
+CandidateContest	ME Lieutenant Governor	ME Lieutenant Governor
+CandidateContest	ME Secretary of State	ME Secretary of State
 CandidateContest	ME Senate District 1	ME Senate District 1
-CandidateContest	ME Senate District 2	ME Senate District 2
-CandidateContest	ME Senate District 3	ME Senate District 3
-CandidateContest	ME Senate District 4	ME Senate District 4
-CandidateContest	ME Senate District 5	ME Senate District 5
-CandidateContest	ME Senate District 6	ME Senate District 6
-CandidateContest	ME Senate District 7	ME Senate District 7
-CandidateContest	ME Senate District 8	ME Senate District 8
-CandidateContest	ME Senate District 9	ME Senate District 9
 CandidateContest	ME Senate District 10	ME Senate District 10
 CandidateContest	ME Senate District 11	ME Senate District 11
 CandidateContest	ME Senate District 12	ME Senate District 12
@@ -169,6 +219,7 @@ CandidateContest	ME Senate District 16	ME Senate District 16
 CandidateContest	ME Senate District 17	ME Senate District 17
 CandidateContest	ME Senate District 18	ME Senate District 18
 CandidateContest	ME Senate District 19	ME Senate District 19
+CandidateContest	ME Senate District 2	ME Senate District 2
 CandidateContest	ME Senate District 20	ME Senate District 20
 CandidateContest	ME Senate District 21	ME Senate District 21
 CandidateContest	ME Senate District 22	ME Senate District 22
@@ -179,397 +230,54 @@ CandidateContest	ME Senate District 26	ME Senate District 26
 CandidateContest	ME Senate District 27	ME Senate District 27
 CandidateContest	ME Senate District 28	ME Senate District 28
 CandidateContest	ME Senate District 29	ME Senate District 29
+CandidateContest	ME Senate District 3	ME Senate District 3
 CandidateContest	ME Senate District 30	ME Senate District 30
 CandidateContest	ME Senate District 31	ME Senate District 31
 CandidateContest	ME Senate District 32	ME Senate District 32
 CandidateContest	ME Senate District 33	ME Senate District 33
 CandidateContest	ME Senate District 34	ME Senate District 34
 CandidateContest	ME Senate District 35	ME Senate District 35
+CandidateContest	ME Senate District 4	ME Senate District 4
+CandidateContest	ME Senate District 5	ME Senate District 5
+CandidateContest	ME Senate District 6	ME Senate District 6
+CandidateContest	ME Senate District 7	ME Senate District 7
+CandidateContest	ME Senate District 8	ME Senate District 8
+CandidateContest	ME Senate District 9	ME Senate District 9
+CandidateContest	ME Treasurer	ME Treasurer
 CandidateContest	US House ME District 1	US Congress District 1
 CandidateContest	US House ME District 2	US Congress District 2
 CandidateContest	US President (ME)	US President (ME)
-CandidateContest	ME Governor	ME Governor
+CandidateContest	US President (ME)	PRESIDENT
+CandidateContest	US President (ME)	US PRESIDENT
 CandidateContest	US Senate ME	US Senate ME
-CandidateContest	ME Attorney General	ME Attorney General
-CandidateContest	ME Lieutenant Governor	ME Lieutenant Governor
-CandidateContest	ME Treasurer	ME Treasurer
-CandidateContest	ME Secretary of State	ME Secretary of State
-Election	2020 General	2020 General
-Election	2020 Primary	2020 Primary
-Election	2018 General	2018 General
-Election	2018 Primary	2018 Primary
-Election	2016 General	2016 General
-Election	2016 Primary	2016 Primary
-Party	Democratic Party	Democratic
-Party	Republican Party	Republican
-Party	Green Party	Green Party
-Party	Alliance Party	Alliance Party
-Party	Green Independent Party	Green Independent
-Party	Independent Party	Independent
-Party	Libertarian Party	Libertarian
-ReportingUnit	Maine;ME House District 1	Maine;ME House District 1
-ReportingUnit	Maine;ME House District 2	Maine;ME House District 2
-ReportingUnit	Maine;ME House District 3	Maine;ME House District 3
-ReportingUnit	Maine;ME House District 4	Maine;ME House District 4
-ReportingUnit	Maine;ME House District 5	Maine;ME House District 5
-ReportingUnit	Maine;ME House District 6	Maine;ME House District 6
-ReportingUnit	Maine;ME House District 7	Maine;ME House District 7
-ReportingUnit	Maine;ME House District 8	Maine;ME House District 8
-ReportingUnit	Maine;ME House District 9	Maine;ME House District 9
-ReportingUnit	Maine;ME House District 10	Maine;ME House District 10
-ReportingUnit	Maine;ME House District 11	Maine;ME House District 11
-ReportingUnit	Maine;ME House District 12	Maine;ME House District 12
-ReportingUnit	Maine;ME House District 13	Maine;ME House District 13
-ReportingUnit	Maine;ME House District 14	Maine;ME House District 14
-ReportingUnit	Maine;ME House District 15	Maine;ME House District 15
-ReportingUnit	Maine;ME House District 16	Maine;ME House District 16
-ReportingUnit	Maine;ME House District 17	Maine;ME House District 17
-ReportingUnit	Maine;ME House District 18	Maine;ME House District 18
-ReportingUnit	Maine;ME House District 19	Maine;ME House District 19
-ReportingUnit	Maine;ME House District 20	Maine;ME House District 20
-ReportingUnit	Maine;ME House District 21	Maine;ME House District 21
-ReportingUnit	Maine;ME House District 22	Maine;ME House District 22
-ReportingUnit	Maine;ME House District 23	Maine;ME House District 23
-ReportingUnit	Maine;ME House District 24	Maine;ME House District 24
-ReportingUnit	Maine;ME House District 25	Maine;ME House District 25
-ReportingUnit	Maine;ME House District 26	Maine;ME House District 26
-ReportingUnit	Maine;ME House District 27	Maine;ME House District 27
-ReportingUnit	Maine;ME House District 28	Maine;ME House District 28
-ReportingUnit	Maine;ME House District 29	Maine;ME House District 29
-ReportingUnit	Maine;ME House District 30	Maine;ME House District 30
-ReportingUnit	Maine;ME House District 31	Maine;ME House District 31
-ReportingUnit	Maine;ME House District 32	Maine;ME House District 32
-ReportingUnit	Maine;ME House District 33	Maine;ME House District 33
-ReportingUnit	Maine;ME House District 34	Maine;ME House District 34
-ReportingUnit	Maine;ME House District 35	Maine;ME House District 35
-ReportingUnit	Maine;ME House District 36	Maine;ME House District 36
-ReportingUnit	Maine;ME House District 37	Maine;ME House District 37
-ReportingUnit	Maine;ME House District 38	Maine;ME House District 38
-ReportingUnit	Maine;ME House District 39	Maine;ME House District 39
-ReportingUnit	Maine;ME House District 40	Maine;ME House District 40
-ReportingUnit	Maine;ME House District 41	Maine;ME House District 41
-ReportingUnit	Maine;ME House District 42	Maine;ME House District 42
-ReportingUnit	Maine;ME House District 43	Maine;ME House District 43
-ReportingUnit	Maine;ME House District 44	Maine;ME House District 44
-ReportingUnit	Maine;ME House District 45	Maine;ME House District 45
-ReportingUnit	Maine;ME House District 46	Maine;ME House District 46
-ReportingUnit	Maine;ME House District 47	Maine;ME House District 47
-ReportingUnit	Maine;ME House District 48	Maine;ME House District 48
-ReportingUnit	Maine;ME House District 49	Maine;ME House District 49
-ReportingUnit	Maine;ME House District 50	Maine;ME House District 50
-ReportingUnit	Maine;ME House District 51	Maine;ME House District 51
-ReportingUnit	Maine;ME House District 52	Maine;ME House District 52
-ReportingUnit	Maine;ME House District 53	Maine;ME House District 53
-ReportingUnit	Maine;ME House District 54	Maine;ME House District 54
-ReportingUnit	Maine;ME House District 55	Maine;ME House District 55
-ReportingUnit	Maine;ME House District 56	Maine;ME House District 56
-ReportingUnit	Maine;ME House District 57	Maine;ME House District 57
-ReportingUnit	Maine;ME House District 58	Maine;ME House District 58
-ReportingUnit	Maine;ME House District 59	Maine;ME House District 59
-ReportingUnit	Maine;ME House District 60	Maine;ME House District 60
-ReportingUnit	Maine;ME House District 61	Maine;ME House District 61
-ReportingUnit	Maine;ME House District 62	Maine;ME House District 62
-ReportingUnit	Maine;ME House District 63	Maine;ME House District 63
-ReportingUnit	Maine;ME House District 64	Maine;ME House District 64
-ReportingUnit	Maine;ME House District 65	Maine;ME House District 65
-ReportingUnit	Maine;ME House District 66	Maine;ME House District 66
-ReportingUnit	Maine;ME House District 67	Maine;ME House District 67
-ReportingUnit	Maine;ME House District 68	Maine;ME House District 68
-ReportingUnit	Maine;ME House District 69	Maine;ME House District 69
-ReportingUnit	Maine;ME House District 70	Maine;ME House District 70
-ReportingUnit	Maine;ME House District 71	Maine;ME House District 71
-ReportingUnit	Maine;ME House District 72	Maine;ME House District 72
-ReportingUnit	Maine;ME House District 73	Maine;ME House District 73
-ReportingUnit	Maine;ME House District 74	Maine;ME House District 74
-ReportingUnit	Maine;ME House District 75	Maine;ME House District 75
-ReportingUnit	Maine;ME House District 76	Maine;ME House District 76
-ReportingUnit	Maine;ME House District 77	Maine;ME House District 77
-ReportingUnit	Maine;ME House District 78	Maine;ME House District 78
-ReportingUnit	Maine;ME House District 79	Maine;ME House District 79
-ReportingUnit	Maine;ME House District 80	Maine;ME House District 80
-ReportingUnit	Maine;ME House District 81	Maine;ME House District 81
-ReportingUnit	Maine;ME House District 82	Maine;ME House District 82
-ReportingUnit	Maine;ME House District 83	Maine;ME House District 83
-ReportingUnit	Maine;ME House District 84	Maine;ME House District 84
-ReportingUnit	Maine;ME House District 85	Maine;ME House District 85
-ReportingUnit	Maine;ME House District 86	Maine;ME House District 86
-ReportingUnit	Maine;ME House District 87	Maine;ME House District 87
-ReportingUnit	Maine;ME House District 88	Maine;ME House District 88
-ReportingUnit	Maine;ME House District 89	Maine;ME House District 89
-ReportingUnit	Maine;ME House District 90	Maine;ME House District 90
-ReportingUnit	Maine;ME House District 91	Maine;ME House District 91
-ReportingUnit	Maine;ME House District 92	Maine;ME House District 92
-ReportingUnit	Maine;ME House District 93	Maine;ME House District 93
-ReportingUnit	Maine;ME House District 94	Maine;ME House District 94
-ReportingUnit	Maine;ME House District 95	Maine;ME House District 95
-ReportingUnit	Maine;ME House District 96	Maine;ME House District 96
-ReportingUnit	Maine;ME House District 97	Maine;ME House District 97
-ReportingUnit	Maine;ME House District 98	Maine;ME House District 98
-ReportingUnit	Maine;ME House District 99	Maine;ME House District 99
-ReportingUnit	Maine;ME House District 100	Maine;ME House District 100
-ReportingUnit	Maine;ME House District 101	Maine;ME House District 101
-ReportingUnit	Maine;ME House District 102	Maine;ME House District 102
-ReportingUnit	Maine;ME House District 103	Maine;ME House District 103
-ReportingUnit	Maine;ME House District 104	Maine;ME House District 104
-ReportingUnit	Maine;ME House District 105	Maine;ME House District 105
-ReportingUnit	Maine;ME House District 106	Maine;ME House District 106
-ReportingUnit	Maine;ME House District 107	Maine;ME House District 107
-ReportingUnit	Maine;ME House District 108	Maine;ME House District 108
-ReportingUnit	Maine;ME House District 109	Maine;ME House District 109
-ReportingUnit	Maine;ME House District 110	Maine;ME House District 110
-ReportingUnit	Maine;ME House District 111	Maine;ME House District 111
-ReportingUnit	Maine;ME House District 112	Maine;ME House District 112
-ReportingUnit	Maine;ME House District 113	Maine;ME House District 113
-ReportingUnit	Maine;ME House District 114	Maine;ME House District 114
-ReportingUnit	Maine;ME House District 115	Maine;ME House District 115
-ReportingUnit	Maine;ME House District 116	Maine;ME House District 116
-ReportingUnit	Maine;ME House District 117	Maine;ME House District 117
-ReportingUnit	Maine;ME House District 118	Maine;ME House District 118
-ReportingUnit	Maine;ME House District 119	Maine;ME House District 119
-ReportingUnit	Maine;ME House District 120	Maine;ME House District 120
-ReportingUnit	Maine;ME House District 121	Maine;ME House District 121
-ReportingUnit	Maine;ME House District 122	Maine;ME House District 122
-ReportingUnit	Maine;ME House District 123	Maine;ME House District 123
-ReportingUnit	Maine;ME House District 124	Maine;ME House District 124
-ReportingUnit	Maine;ME House District 125	Maine;ME House District 125
-ReportingUnit	Maine;ME House District 126	Maine;ME House District 126
-ReportingUnit	Maine;ME House District 127	Maine;ME House District 127
-ReportingUnit	Maine;ME House District 128	Maine;ME House District 128
-ReportingUnit	Maine;ME House District 129	Maine;ME House District 129
-ReportingUnit	Maine;ME House District 130	Maine;ME House District 130
-ReportingUnit	Maine;ME House District 131	Maine;ME House District 131
-ReportingUnit	Maine;ME House District 132	Maine;ME House District 132
-ReportingUnit	Maine;ME House District 133	Maine;ME House District 133
-ReportingUnit	Maine;ME House District 134	Maine;ME House District 134
-ReportingUnit	Maine;ME House District 135	Maine;ME House District 135
-ReportingUnit	Maine;ME House District 136	Maine;ME House District 136
-ReportingUnit	Maine;ME House District 137	Maine;ME House District 137
-ReportingUnit	Maine;ME House District 138	Maine;ME House District 138
-ReportingUnit	Maine;ME House District 139	Maine;ME House District 139
-ReportingUnit	Maine;ME House District 140	Maine;ME House District 140
-ReportingUnit	Maine;ME House District 141	Maine;ME House District 141
-ReportingUnit	Maine;ME House District 142	Maine;ME House District 142
-ReportingUnit	Maine;ME House District 143	Maine;ME House District 143
-ReportingUnit	Maine;ME House District 144	Maine;ME House District 144
-ReportingUnit	Maine;ME House District 145	Maine;ME House District 145
-ReportingUnit	Maine;ME House District 146	Maine;ME House District 146
-ReportingUnit	Maine;ME House District 147	Maine;ME House District 147
-ReportingUnit	Maine;ME House District 148	Maine;ME House District 148
-ReportingUnit	Maine;ME House District 149	Maine;ME House District 149
-ReportingUnit	Maine;ME House District 150	Maine;ME House District 150
-ReportingUnit	Maine;ME House District 151	Maine;ME House District 151
-ReportingUnit	Maine;ME Senate District 1	Maine;ME Senate District 1
-ReportingUnit	Maine;ME Senate District 2	Maine;ME Senate District 2
-ReportingUnit	Maine;ME Senate District 3	Maine;ME Senate District 3
-ReportingUnit	Maine;ME Senate District 4	Maine;ME Senate District 4
-ReportingUnit	Maine;ME Senate District 5	Maine;ME Senate District 5
-ReportingUnit	Maine;ME Senate District 6	Maine;ME Senate District 6
-ReportingUnit	Maine;ME Senate District 7	Maine;ME Senate District 7
-ReportingUnit	Maine;ME Senate District 8	Maine;ME Senate District 8
-ReportingUnit	Maine;ME Senate District 9	Maine;ME Senate District 9
-ReportingUnit	Maine;ME Senate District 10	Maine;ME Senate District 10
-ReportingUnit	Maine;ME Senate District 11	Maine;ME Senate District 11
-ReportingUnit	Maine;ME Senate District 12	Maine;ME Senate District 12
-ReportingUnit	Maine;ME Senate District 13	Maine;ME Senate District 13
-ReportingUnit	Maine;ME Senate District 14	Maine;ME Senate District 14
-ReportingUnit	Maine;ME Senate District 15	Maine;ME Senate District 15
-ReportingUnit	Maine;ME Senate District 16	Maine;ME Senate District 16
-ReportingUnit	Maine;ME Senate District 17	Maine;ME Senate District 17
-ReportingUnit	Maine;ME Senate District 18	Maine;ME Senate District 18
-ReportingUnit	Maine;ME Senate District 19	Maine;ME Senate District 19
-ReportingUnit	Maine;ME Senate District 20	Maine;ME Senate District 20
-ReportingUnit	Maine;ME Senate District 21	Maine;ME Senate District 21
-ReportingUnit	Maine;ME Senate District 22	Maine;ME Senate District 22
-ReportingUnit	Maine;ME Senate District 23	Maine;ME Senate District 23
-ReportingUnit	Maine;ME Senate District 24	Maine;ME Senate District 24
-ReportingUnit	Maine;ME Senate District 25	Maine;ME Senate District 25
-ReportingUnit	Maine;ME Senate District 26	Maine;ME Senate District 26
-ReportingUnit	Maine;ME Senate District 27	Maine;ME Senate District 27
-ReportingUnit	Maine;ME Senate District 28	Maine;ME Senate District 28
-ReportingUnit	Maine;ME Senate District 29	Maine;ME Senate District 29
-ReportingUnit	Maine;ME Senate District 30	Maine;ME Senate District 30
-ReportingUnit	Maine;ME Senate District 31	Maine;ME Senate District 31
-ReportingUnit	Maine;ME Senate District 32	Maine;ME Senate District 32
-ReportingUnit	Maine;ME Senate District 33	Maine;ME Senate District 33
-ReportingUnit	Maine;ME Senate District 34	Maine;ME Senate District 34
-ReportingUnit	Maine;ME Senate District 35	Maine;ME Senate District 35
-ReportingUnit	Maine;US House ME District 1	CG 1
-ReportingUnit	Maine;US House ME District 2	CG 2
-ReportingUnit	Maine	Maine
-ReportingUnit	Maine;Androscoggin County	AND
-ReportingUnit	Maine;Aroostook County	ARO
-ReportingUnit	Maine;Cumberland County	CUM
-ReportingUnit	Maine;Franklin County	FRA
-ReportingUnit	Maine;Hancock County	HAN
-ReportingUnit	Maine;Kennebec County	KEN
-ReportingUnit	Maine;Knox County	KNO
-ReportingUnit	Maine;Lincoln County	LIN
-ReportingUnit	Maine;Oxford County	OXF
-ReportingUnit	Maine;Penobscot County	PEN
-ReportingUnit	Maine;Piscataquis County	PIS
-ReportingUnit	Maine;Sagadahoc County	SAG
-ReportingUnit	Maine;Somerset County	SOM
-ReportingUnit	Maine;Waldo County	WAL
-ReportingUnit	Maine;Washington County	WAS
-ReportingUnit	Maine;York County	YOR
-CountItemType	total	total
-CountItemType	uocava	uocava
 CountItemType	not-uocava	all-but-uocava
 CountItemType	not-uocava	not-uocava
-Candidate	Donald J. Trump	Donald J. Trump
-Candidate	Donald J. Trump	Trump, Donald J.
-Candidate	Jo Jorgensen	Jorgensen, Jo
-Candidate	Howard Hawkins	Hawkins, Howard
-Candidate	Roque De La Fuente	De La Fuente, Roque
-Candidate	Joseph R. Biden	Biden, Joseph R.
-Candidate	Joseph R. Biden	Joseph R. Biden, Jr.
-Candidate	Joseph R. Biden	Biden, Joseph R., Jr.
-Candidate	Michael R. Bloomberg	Michael R. Bloomberg
-Candidate	Michael R. Bloomberg	Bloomberg, Michael R.
-Candidate	Cory A. Booker	Cory A. Booker
-Candidate	Cory A. Booker	Booker, Cory A.
-Candidate	Peter Buttigieg	Peter Buttigieg
-Candidate	Peter Buttigieg	Buttigieg, Peter
-Candidate	Tulsi Gabbard	Tulsi Gabbard
-Candidate	Tulsi Gabbard	Gabbard, Tulsi
-Candidate	Amy J. Klobuchar	Amy J. Klobuchar
-Candidate	Amy J. Klobuchar	Klobuchar, Amy J.
-Candidate	Deval Patrick	Deval Patrick
-Candidate	Deval Patrick	Patrick, Deval
-Candidate	Bernard Sanders	Bernard Sanders
-Candidate	Bernard Sanders	Sanders, Bernard
-Candidate	Thomas F. Steyer	Thomas F. Steyer
-Candidate	Thomas F. Steyer	Steyer, Thomas F.
-Candidate	Elizabeth A. Warren	Elizabeth A. Warren
-Candidate	Elizabeth A. Warren	Warren, Elizabeth A.
-Candidate	Marianne Williamson	Marianne Williamson
-Candidate	Marianne Williamson	Williamson, Marianne
-Candidate	Andrew Yang	Andrew Yang
-Candidate	Andrew Yang	Yang, Andrew
-Candidate	Elizabeth A. Sweet	Elizabeth A. Sweet
-Candidate	Elizabeth A. Sweet	Sweet, Elizabeth A.
-Candidate	Bre Kidman	Bre Kidman
-Candidate	Bre Kidman	Kidman, Bre
-Candidate	Sara I. Gideon	Sara I. Gideon
-Candidate	Sara I. Gideon	Gideon, Sara I.
+CountItemType	total	total
+CountItemType	total	TOTAL
+CountItemType	uocava	uocava
 CountItemType	uocava	UOCAVA
-ReportingUnit	Maine;Cumberland County;Baldwin	CUM;Baldwin
-ReportingUnit	Maine;Cumberland County;Bridgton	CUM;Bridgton
-ReportingUnit	Maine;Cumberland County;Brunswick	CUM;Brunswick
-ReportingUnit	Maine;Cumberland County;Cape Elizabeth	CUM;Cape Elizabeth
-ReportingUnit	Maine;Cumberland County;Casco	CUM;Casco
-ReportingUnit	Maine;Cumberland County;Chebeague Island	CUM;Chebeague Island
-ReportingUnit	Maine;Cumberland County;Cumberland	CUM;Cumberland
-ReportingUnit	Maine;Cumberland County;Falmouth	CUM;Falmouth
-ReportingUnit	Maine;Cumberland County;Freeport	CUM;Freeport
-ReportingUnit	Maine;Cumberland County;Frye Island	CUM;Frye Island
-ReportingUnit	Maine;Cumberland County;Gorham	CUM;Gorham
-ReportingUnit	Maine;Cumberland County;Gray	CUM;Gray
-ReportingUnit	Maine;Cumberland County;Harpswell	CUM;Harpswell
-ReportingUnit	Maine;Cumberland County;Harrison	CUM;Harrison
-ReportingUnit	Maine;Cumberland County;Long Island	CUM;Long Island
-ReportingUnit	Maine;Cumberland County;Naples	CUM;Naples
-ReportingUnit	Maine;Cumberland County;New Gloucester	CUM;New Gloucester
-ReportingUnit	Maine;Cumberland County;North Yarmouth	CUM;North Yarmouth
-ReportingUnit	Maine;Cumberland County;Portland	CUM;Portland
-ReportingUnit	Maine;Cumberland County;Pownal	CUM;Pownal
-ReportingUnit	Maine;Cumberland County;Raymond	CUM;Raymond
-ReportingUnit	Maine;Cumberland County;Scarborough	CUM;Scarborough
-ReportingUnit	Maine;Cumberland County;Sebago	CUM;Sebago
-ReportingUnit	Maine;Cumberland County;South Portland	CUM;South Portland
-ReportingUnit	Maine;Cumberland County;Standish	CUM;Standish
-ReportingUnit	Maine;Cumberland County;Westbrook	CUM;Westbrook
-ReportingUnit	Maine;Cumberland County;Windham	CUM;Windham
-ReportingUnit	Maine;Cumberland County;Yarmouth	CUM;Yarmouth
-ReportingUnit	Maine;Kennebec County;Augusta	KEN;Augusta
-ReportingUnit	Maine;Kennebec County;Chelsea	KEN;Chelsea
-ReportingUnit	Maine;Kennebec County;China	KEN;China
-ReportingUnit	Maine;Kennebec County;Farmingdale	KEN;Farmingdale
-ReportingUnit	Maine;Kennebec County;Hallowell	KEN;Hallowell
-ReportingUnit	Maine;Kennebec County;Manchester	KEN;Manchester
-ReportingUnit	Maine;Kennebec County;Pittston	KEN;Pittston
-ReportingUnit	Maine;Kennebec County;Readfield	KEN;Readfield
-ReportingUnit	Maine;Kennebec County;Vassalboro	KEN;Vassalboro
-ReportingUnit	Maine;Kennebec County;Waterville	KEN;Waterville
-ReportingUnit	Maine;Kennebec County;Windsor	KEN;Windsor
-ReportingUnit	Maine;Kennebec County;Winslow	KEN;Winslow
-ReportingUnit	Maine;Kennebec County;Winthrop	KEN;Winthrop
-ReportingUnit	Maine;Knox County;Appleton	KNO;Appleton
-ReportingUnit	Maine;Knox County;Camden	KNO;Camden
-ReportingUnit	Maine;Knox County;Cushing	KNO;Cushing
-ReportingUnit	Maine;Knox County;Friendship	KNO;Friendship
-ReportingUnit	Maine;Knox County;Hope	KNO;Hope
-ReportingUnit	Maine;Knox County;Isle Au Haut	KNO;Isle Au Haut
-ReportingUnit	Maine;Knox County;Matinicus Isle Plt	KNO;Matinicus Isle Plt
-ReportingUnit	Maine;Knox County;North Haven	KNO;North Haven
-ReportingUnit	Maine;Knox County;Owls Head	KNO;Owls Head
-ReportingUnit	Maine;Knox County;Rockland	KNO;Rockland
-ReportingUnit	Maine;Knox County;Rockport	KNO;Rockport
-ReportingUnit	Maine;Knox County;Saint George	KNO;Saint George
-ReportingUnit	Maine;Knox County;South Thomaston	KNO;South Thomaston
-ReportingUnit	Maine;Knox County;Thomaston	KNO;Thomaston
-ReportingUnit	Maine;Knox County;Union	KNO;Union
-ReportingUnit	Maine;Knox County;Vinalhaven	KNO;Vinalhaven
-ReportingUnit	Maine;Knox County;Warren	KNO;Warren
-ReportingUnit	Maine;Knox County;Washington	KNO;Washington
-ReportingUnit	Maine;Lincoln County;Alna	LIN;Alna
-ReportingUnit	Maine;Lincoln County;Boothbay	LIN;Boothbay
-ReportingUnit	Maine;Lincoln County;Boothbay Harbor	LIN;Boothbay Harbor
-ReportingUnit	Maine;Lincoln County;Bremen	LIN;Bremen
-ReportingUnit	Maine;Lincoln County;Bristol	LIN;Bristol
-ReportingUnit	Maine;Lincoln County;Damariscotta	LIN;Damariscotta
-ReportingUnit	Maine;Lincoln County;Dresden	LIN;Dresden
-ReportingUnit	Maine;Lincoln County;Edgecomb	LIN;Edgecomb
-ReportingUnit	Maine;Lincoln County;Jefferson	LIN;Jefferson
-ReportingUnit	Maine;Lincoln County;Monhegan Island Plt	LIN;Monhegan Island Plt
-ReportingUnit	Maine;Lincoln County;Newcastle	LIN;Newcastle
-ReportingUnit	Maine;Lincoln County;Nobleboro	LIN;Nobleboro
-ReportingUnit	Maine;Lincoln County;Somerville	LIN;Somerville
-ReportingUnit	Maine;Lincoln County;South Bristol	LIN;South Bristol
-ReportingUnit	Maine;Lincoln County;Southport	LIN;Southport
-ReportingUnit	Maine;Lincoln County;Waldoboro	LIN;Waldoboro
-ReportingUnit	Maine;Lincoln County;Westport Island	LIN;Westport Island
-ReportingUnit	Maine;Lincoln County;Whitefield	LIN;Whitefield
-ReportingUnit	Maine;Lincoln County;Wiscasset	LIN;Wiscasset
-ReportingUnit	Maine;Sagadahoc County;Arrowsic	SAG;Arrowsic
-ReportingUnit	Maine;Sagadahoc County;Bath	SAG;Bath
-ReportingUnit	Maine;Sagadahoc County;Bowdoin	SAG;Bowdoin
-ReportingUnit	Maine;Sagadahoc County;Bowdoinham	SAG;Bowdoinham
-ReportingUnit	Maine;Sagadahoc County;Georgetown	SAG;Georgetown
-ReportingUnit	Maine;Sagadahoc County;Phippsburg	SAG;Phippsburg
-ReportingUnit	Maine;Sagadahoc County;Richmond	SAG;Richmond
-ReportingUnit	Maine;Sagadahoc County;Topsham	SAG;Topsham
-ReportingUnit	Maine;Sagadahoc County;West Bath	SAG;West Bath
-ReportingUnit	Maine;Sagadahoc County;Woolwich	SAG;Woolwich
-ReportingUnit	Maine;York County;Acton	YOR;Acton
-ReportingUnit	Maine;York County;Alfred	YOR;Alfred
-ReportingUnit	Maine;York County;Arundel	YOR;Arundel
-ReportingUnit	Maine;York County;Berwick	YOR;Berwick
-ReportingUnit	Maine;York County;Biddeford	YOR;Biddeford
-ReportingUnit	Maine;York County;Buxton	YOR;Buxton
-ReportingUnit	Maine;York County;Cornish	YOR;Cornish
-ReportingUnit	Maine;York County;Dayton	YOR;Dayton
-ReportingUnit	Maine;York County;Eliot	YOR;Eliot
-ReportingUnit	Maine;York County;Hollis	YOR;Hollis
-ReportingUnit	Maine;York County;Kennebunk	YOR;Kennebunk
-ReportingUnit	Maine;York County;Kennebunkport	YOR;Kennebunkport
-ReportingUnit	Maine;York County;Kittery	YOR;Kittery
-ReportingUnit	Maine;York County;Lebanon	YOR;Lebanon
-ReportingUnit	Maine;York County;Limerick	YOR;Limerick
-ReportingUnit	Maine;York County;Limington	YOR;Limington
-ReportingUnit	Maine;York County;Lyman	YOR;Lyman
-ReportingUnit	Maine;York County;Newfield	YOR;Newfield
-ReportingUnit	Maine;York County;North Berwick	YOR;North Berwick
-ReportingUnit	Maine;York County;Ogunquit	YOR;Ogunquit
-ReportingUnit	Maine;York County;Old Orchard Beach	YOR;Old Orchard Beach
-ReportingUnit	Maine;York County;Parsonsfield	YOR;Parsonsfield
-ReportingUnit	Maine;York County;Saco	YOR;Saco
-ReportingUnit	Maine;York County;Sanford	YOR;Sanford
-ReportingUnit	Maine;York County;Shapleigh	YOR;Shapleigh
-ReportingUnit	Maine;York County;South Berwick	YOR;South Berwick
-ReportingUnit	Maine;York County;Waterboro	YOR;Waterboro
-ReportingUnit	Maine;York County;Wells	YOR;Wells
-ReportingUnit	Maine;York County;York	YOR;York
+Election	2016 General	2016 General
+Election	2016 Primary	2016 Primary
+Election	2018 General	2018 General
+Election	2018 Primary	2018 Primary
+Election	2020 General	2020 General
+Election	2020 Primary	2020 Primary
+Party	Alliance Party	Alliance Party
+Party	Democratic Party	Democratic
+Party	Democratic Party	DEMOCRAT
+Party	Green Independent Party	Green Independent
+Party	Green Party	Green Party
+Party	Green Party	GREEN
+Party	Independent Party	Independent
+Party	Libertarian Party	Libertarian
+Party	Libertarian Party	LIBERTARIAN
+Party	Republican Party	Republican
+Party	Republican Party	REPUBLICAN
+Party	none or unknown	OTHER
+ReportingUnit	Maine	Maine
+ReportingUnit	Maine	STATE UOCAVA
+ReportingUnit	Maine;Androscoggin County	AND
+ReportingUnit	Maine;Androscoggin County	23001
 ReportingUnit	Maine;Androscoggin County;Auburn	AND;Auburn
 ReportingUnit	Maine;Androscoggin County;Durham	AND;Durham
 ReportingUnit	Maine;Androscoggin County;Greene	AND;Greene
@@ -584,6 +292,8 @@ ReportingUnit	Maine;Androscoggin County;Poland	AND;Poland
 ReportingUnit	Maine;Androscoggin County;Sabattus	AND;Sabattus
 ReportingUnit	Maine;Androscoggin County;Turner	AND;Turner
 ReportingUnit	Maine;Androscoggin County;Wales	AND;Wales
+ReportingUnit	Maine;Aroostook County	ARO
+ReportingUnit	Maine;Aroostook County	23003
 ReportingUnit	Maine;Aroostook County;Allagash	ARO;Allagash
 ReportingUnit	Maine;Aroostook County;Amity	ARO;Amity
 ReportingUnit	Maine;Aroostook County;Ashland/T8 R11 Twp	ARO;Ashland/T8 R11 Twp
@@ -656,6 +366,38 @@ ReportingUnit	Maine;Aroostook County;Westmanland	ARO;Westmanland
 ReportingUnit	Maine;Aroostook County;Weston	ARO;Weston
 ReportingUnit	Maine;Aroostook County;Winterville Plt.	ARO;Winterville Plt.
 ReportingUnit	Maine;Aroostook County;Woodland	ARO;Woodland
+ReportingUnit	Maine;Cumberland County	CUM
+ReportingUnit	Maine;Cumberland County	23005
+ReportingUnit	Maine;Cumberland County;Baldwin	CUM;Baldwin
+ReportingUnit	Maine;Cumberland County;Bridgton	CUM;Bridgton
+ReportingUnit	Maine;Cumberland County;Brunswick	CUM;Brunswick
+ReportingUnit	Maine;Cumberland County;Cape Elizabeth	CUM;Cape Elizabeth
+ReportingUnit	Maine;Cumberland County;Casco	CUM;Casco
+ReportingUnit	Maine;Cumberland County;Chebeague Island	CUM;Chebeague Island
+ReportingUnit	Maine;Cumberland County;Cumberland	CUM;Cumberland
+ReportingUnit	Maine;Cumberland County;Falmouth	CUM;Falmouth
+ReportingUnit	Maine;Cumberland County;Freeport	CUM;Freeport
+ReportingUnit	Maine;Cumberland County;Frye Island	CUM;Frye Island
+ReportingUnit	Maine;Cumberland County;Gorham	CUM;Gorham
+ReportingUnit	Maine;Cumberland County;Gray	CUM;Gray
+ReportingUnit	Maine;Cumberland County;Harpswell	CUM;Harpswell
+ReportingUnit	Maine;Cumberland County;Harrison	CUM;Harrison
+ReportingUnit	Maine;Cumberland County;Long Island	CUM;Long Island
+ReportingUnit	Maine;Cumberland County;Naples	CUM;Naples
+ReportingUnit	Maine;Cumberland County;New Gloucester	CUM;New Gloucester
+ReportingUnit	Maine;Cumberland County;North Yarmouth	CUM;North Yarmouth
+ReportingUnit	Maine;Cumberland County;Portland	CUM;Portland
+ReportingUnit	Maine;Cumberland County;Pownal	CUM;Pownal
+ReportingUnit	Maine;Cumberland County;Raymond	CUM;Raymond
+ReportingUnit	Maine;Cumberland County;Scarborough	CUM;Scarborough
+ReportingUnit	Maine;Cumberland County;Sebago	CUM;Sebago
+ReportingUnit	Maine;Cumberland County;South Portland	CUM;South Portland
+ReportingUnit	Maine;Cumberland County;Standish	CUM;Standish
+ReportingUnit	Maine;Cumberland County;Westbrook	CUM;Westbrook
+ReportingUnit	Maine;Cumberland County;Windham	CUM;Windham
+ReportingUnit	Maine;Cumberland County;Yarmouth	CUM;Yarmouth
+ReportingUnit	Maine;Franklin County	FRA
+ReportingUnit	Maine;Franklin County	23007
 ReportingUnit	Maine;Franklin County;Avon	FRA;Avon
 ReportingUnit	Maine;Franklin County;Carrabassett Valley/Wyman Twp	FRA;Carrabassett Valley/Wyman Twp
 ReportingUnit	Maine;Franklin County;Carthage	FRA;Carthage
@@ -671,14 +413,16 @@ ReportingUnit	Maine;Franklin County;New Sharon	FRA;New Sharon
 ReportingUnit	Maine;Franklin County;New Vineyard	FRA;New Vineyard
 ReportingUnit	Maine;Franklin County;Perkins Twp	FRA;Perkins Twp
 ReportingUnit	Maine;Franklin County;Phillips	FRA;Phillips
-ReportingUnit	Maine;Franklin County;Rangeley/Adamstown Twp	FRA;Rangeley/Adamstown Twp
 ReportingUnit	Maine;Franklin County;Rangeley Plt	FRA;Rangeley Plt
+ReportingUnit	Maine;Franklin County;Rangeley/Adamstown Twp	FRA;Rangeley/Adamstown Twp
 ReportingUnit	Maine;Franklin County;Sandy River Plt	FRA;Sandy River Plt
 ReportingUnit	Maine;Franklin County;Strong/Freeman Twp	FRA;Strong/Freeman Twp
 ReportingUnit	Maine;Franklin County;Temple	FRA;Temple
 ReportingUnit	Maine;Franklin County;Weld	FRA;Weld
 ReportingUnit	Maine;Franklin County;Wilton/Washington Twp	FRA;Wilton/Washington Twp
 ReportingUnit	Maine;Franklin County;Wyman Twp	FRA;Wyman Twp
+ReportingUnit	Maine;Hancock County	HAN
+ReportingUnit	Maine;Hancock County	23009
 ReportingUnit	Maine;Hancock County;Amherst	HAN;Amherst
 ReportingUnit	Maine;Hancock County;Aurora	HAN;Aurora
 ReportingUnit	Maine;Hancock County;Bar Harbor	HAN;Bar Harbor
@@ -718,22 +462,266 @@ ReportingUnit	Maine;Hancock County;Trenton	HAN;Trenton
 ReportingUnit	Maine;Hancock County;Verona Island	HAN;Verona Island
 ReportingUnit	Maine;Hancock County;Waltham	HAN;Waltham
 ReportingUnit	Maine;Hancock County;Winter Harbor	HAN;Winter Harbor
+ReportingUnit	Maine;Kennebec County	KEN
+ReportingUnit	Maine;Kennebec County	23011
 ReportingUnit	Maine;Kennebec County;Albion	KEN;Albion
+ReportingUnit	Maine;Kennebec County;Augusta	KEN;Augusta
 ReportingUnit	Maine;Kennebec County;Belgrade	KEN;Belgrade
 ReportingUnit	Maine;Kennebec County;Benton	KEN;Benton
+ReportingUnit	Maine;Kennebec County;Chelsea	KEN;Chelsea
+ReportingUnit	Maine;Kennebec County;China	KEN;China
 ReportingUnit	Maine;Kennebec County;Clinton	KEN;Clinton
+ReportingUnit	Maine;Kennebec County;Farmingdale	KEN;Farmingdale
 ReportingUnit	Maine;Kennebec County;Fayette	KEN;Fayette
 ReportingUnit	Maine;Kennebec County;Gardiner	KEN;Gardiner
+ReportingUnit	Maine;Kennebec County;Hallowell	KEN;Hallowell
 ReportingUnit	Maine;Kennebec County;Litchfield	KEN;Litchfield
+ReportingUnit	Maine;Kennebec County;Manchester	KEN;Manchester
 ReportingUnit	Maine;Kennebec County;Monmouth	KEN;Monmouth
 ReportingUnit	Maine;Kennebec County;Mount Vernon	KEN;Mount Vernon
 ReportingUnit	Maine;Kennebec County;Oakland	KEN;Oakland
+ReportingUnit	Maine;Kennebec County;Pittston	KEN;Pittston
 ReportingUnit	Maine;Kennebec County;Randolph	KEN;Randolph
+ReportingUnit	Maine;Kennebec County;Readfield	KEN;Readfield
 ReportingUnit	Maine;Kennebec County;Rome	KEN;Rome
 ReportingUnit	Maine;Kennebec County;Sidney	KEN;Sidney
+ReportingUnit	Maine;Kennebec County;Vassalboro	KEN;Vassalboro
 ReportingUnit	Maine;Kennebec County;Vienna	KEN;Vienna
+ReportingUnit	Maine;Kennebec County;Waterville	KEN;Waterville
 ReportingUnit	Maine;Kennebec County;Wayne	KEN;Wayne
 ReportingUnit	Maine;Kennebec County;West Gardiner	KEN;West Gardiner
+ReportingUnit	Maine;Kennebec County;Windsor	KEN;Windsor
+ReportingUnit	Maine;Kennebec County;Winslow	KEN;Winslow
+ReportingUnit	Maine;Kennebec County;Winthrop	KEN;Winthrop
+ReportingUnit	Maine;Knox County	KNO
+ReportingUnit	Maine;Knox County	23013
+ReportingUnit	Maine;Knox County;Appleton	KNO;Appleton
+ReportingUnit	Maine;Knox County;Camden	KNO;Camden
+ReportingUnit	Maine;Knox County;Cushing	KNO;Cushing
+ReportingUnit	Maine;Knox County;Friendship	KNO;Friendship
+ReportingUnit	Maine;Knox County;Hope	KNO;Hope
+ReportingUnit	Maine;Knox County;Isle Au Haut	KNO;Isle Au Haut
+ReportingUnit	Maine;Knox County;Matinicus Isle Plt	KNO;Matinicus Isle Plt
+ReportingUnit	Maine;Knox County;North Haven	KNO;North Haven
+ReportingUnit	Maine;Knox County;Owls Head	KNO;Owls Head
+ReportingUnit	Maine;Knox County;Rockland	KNO;Rockland
+ReportingUnit	Maine;Knox County;Rockport	KNO;Rockport
+ReportingUnit	Maine;Knox County;Saint George	KNO;Saint George
+ReportingUnit	Maine;Knox County;South Thomaston	KNO;South Thomaston
+ReportingUnit	Maine;Knox County;Thomaston	KNO;Thomaston
+ReportingUnit	Maine;Knox County;Union	KNO;Union
+ReportingUnit	Maine;Knox County;Vinalhaven	KNO;Vinalhaven
+ReportingUnit	Maine;Knox County;Warren	KNO;Warren
+ReportingUnit	Maine;Knox County;Washington	KNO;Washington
+ReportingUnit	Maine;Lincoln County	LIN
+ReportingUnit	Maine;Lincoln County	23015
+ReportingUnit	Maine;Lincoln County;Alna	LIN;Alna
+ReportingUnit	Maine;Lincoln County;Boothbay	LIN;Boothbay
+ReportingUnit	Maine;Lincoln County;Boothbay Harbor	LIN;Boothbay Harbor
+ReportingUnit	Maine;Lincoln County;Bremen	LIN;Bremen
+ReportingUnit	Maine;Lincoln County;Bristol	LIN;Bristol
+ReportingUnit	Maine;Lincoln County;Damariscotta	LIN;Damariscotta
+ReportingUnit	Maine;Lincoln County;Dresden	LIN;Dresden
+ReportingUnit	Maine;Lincoln County;Edgecomb	LIN;Edgecomb
+ReportingUnit	Maine;Lincoln County;Jefferson	LIN;Jefferson
+ReportingUnit	Maine;Lincoln County;Monhegan Island Plt	LIN;Monhegan Island Plt
+ReportingUnit	Maine;Lincoln County;Newcastle	LIN;Newcastle
+ReportingUnit	Maine;Lincoln County;Nobleboro	LIN;Nobleboro
+ReportingUnit	Maine;Lincoln County;Somerville	LIN;Somerville
+ReportingUnit	Maine;Lincoln County;South Bristol	LIN;South Bristol
+ReportingUnit	Maine;Lincoln County;Southport	LIN;Southport
+ReportingUnit	Maine;Lincoln County;Waldoboro	LIN;Waldoboro
+ReportingUnit	Maine;Lincoln County;Westport Island	LIN;Westport Island
+ReportingUnit	Maine;Lincoln County;Whitefield	LIN;Whitefield
+ReportingUnit	Maine;Lincoln County;Wiscasset	LIN;Wiscasset
+ReportingUnit	Maine;ME House District 1	Maine;ME House District 1
+ReportingUnit	Maine;ME House District 10	Maine;ME House District 10
+ReportingUnit	Maine;ME House District 100	Maine;ME House District 100
+ReportingUnit	Maine;ME House District 101	Maine;ME House District 101
+ReportingUnit	Maine;ME House District 102	Maine;ME House District 102
+ReportingUnit	Maine;ME House District 103	Maine;ME House District 103
+ReportingUnit	Maine;ME House District 104	Maine;ME House District 104
+ReportingUnit	Maine;ME House District 105	Maine;ME House District 105
+ReportingUnit	Maine;ME House District 106	Maine;ME House District 106
+ReportingUnit	Maine;ME House District 107	Maine;ME House District 107
+ReportingUnit	Maine;ME House District 108	Maine;ME House District 108
+ReportingUnit	Maine;ME House District 109	Maine;ME House District 109
+ReportingUnit	Maine;ME House District 11	Maine;ME House District 11
+ReportingUnit	Maine;ME House District 110	Maine;ME House District 110
+ReportingUnit	Maine;ME House District 111	Maine;ME House District 111
+ReportingUnit	Maine;ME House District 112	Maine;ME House District 112
+ReportingUnit	Maine;ME House District 113	Maine;ME House District 113
+ReportingUnit	Maine;ME House District 114	Maine;ME House District 114
+ReportingUnit	Maine;ME House District 115	Maine;ME House District 115
+ReportingUnit	Maine;ME House District 116	Maine;ME House District 116
+ReportingUnit	Maine;ME House District 117	Maine;ME House District 117
+ReportingUnit	Maine;ME House District 118	Maine;ME House District 118
+ReportingUnit	Maine;ME House District 119	Maine;ME House District 119
+ReportingUnit	Maine;ME House District 12	Maine;ME House District 12
+ReportingUnit	Maine;ME House District 120	Maine;ME House District 120
+ReportingUnit	Maine;ME House District 121	Maine;ME House District 121
+ReportingUnit	Maine;ME House District 122	Maine;ME House District 122
+ReportingUnit	Maine;ME House District 123	Maine;ME House District 123
+ReportingUnit	Maine;ME House District 124	Maine;ME House District 124
+ReportingUnit	Maine;ME House District 125	Maine;ME House District 125
+ReportingUnit	Maine;ME House District 126	Maine;ME House District 126
+ReportingUnit	Maine;ME House District 127	Maine;ME House District 127
+ReportingUnit	Maine;ME House District 128	Maine;ME House District 128
+ReportingUnit	Maine;ME House District 129	Maine;ME House District 129
+ReportingUnit	Maine;ME House District 13	Maine;ME House District 13
+ReportingUnit	Maine;ME House District 130	Maine;ME House District 130
+ReportingUnit	Maine;ME House District 131	Maine;ME House District 131
+ReportingUnit	Maine;ME House District 132	Maine;ME House District 132
+ReportingUnit	Maine;ME House District 133	Maine;ME House District 133
+ReportingUnit	Maine;ME House District 134	Maine;ME House District 134
+ReportingUnit	Maine;ME House District 135	Maine;ME House District 135
+ReportingUnit	Maine;ME House District 136	Maine;ME House District 136
+ReportingUnit	Maine;ME House District 137	Maine;ME House District 137
+ReportingUnit	Maine;ME House District 138	Maine;ME House District 138
+ReportingUnit	Maine;ME House District 139	Maine;ME House District 139
+ReportingUnit	Maine;ME House District 14	Maine;ME House District 14
+ReportingUnit	Maine;ME House District 140	Maine;ME House District 140
+ReportingUnit	Maine;ME House District 141	Maine;ME House District 141
+ReportingUnit	Maine;ME House District 142	Maine;ME House District 142
+ReportingUnit	Maine;ME House District 143	Maine;ME House District 143
+ReportingUnit	Maine;ME House District 144	Maine;ME House District 144
+ReportingUnit	Maine;ME House District 145	Maine;ME House District 145
+ReportingUnit	Maine;ME House District 146	Maine;ME House District 146
+ReportingUnit	Maine;ME House District 147	Maine;ME House District 147
+ReportingUnit	Maine;ME House District 148	Maine;ME House District 148
+ReportingUnit	Maine;ME House District 149	Maine;ME House District 149
+ReportingUnit	Maine;ME House District 15	Maine;ME House District 15
+ReportingUnit	Maine;ME House District 150	Maine;ME House District 150
+ReportingUnit	Maine;ME House District 151	Maine;ME House District 151
+ReportingUnit	Maine;ME House District 16	Maine;ME House District 16
+ReportingUnit	Maine;ME House District 17	Maine;ME House District 17
+ReportingUnit	Maine;ME House District 18	Maine;ME House District 18
+ReportingUnit	Maine;ME House District 19	Maine;ME House District 19
+ReportingUnit	Maine;ME House District 2	Maine;ME House District 2
+ReportingUnit	Maine;ME House District 20	Maine;ME House District 20
+ReportingUnit	Maine;ME House District 21	Maine;ME House District 21
+ReportingUnit	Maine;ME House District 22	Maine;ME House District 22
+ReportingUnit	Maine;ME House District 23	Maine;ME House District 23
+ReportingUnit	Maine;ME House District 24	Maine;ME House District 24
+ReportingUnit	Maine;ME House District 25	Maine;ME House District 25
+ReportingUnit	Maine;ME House District 26	Maine;ME House District 26
+ReportingUnit	Maine;ME House District 27	Maine;ME House District 27
+ReportingUnit	Maine;ME House District 28	Maine;ME House District 28
+ReportingUnit	Maine;ME House District 29	Maine;ME House District 29
+ReportingUnit	Maine;ME House District 3	Maine;ME House District 3
+ReportingUnit	Maine;ME House District 30	Maine;ME House District 30
+ReportingUnit	Maine;ME House District 31	Maine;ME House District 31
+ReportingUnit	Maine;ME House District 32	Maine;ME House District 32
+ReportingUnit	Maine;ME House District 33	Maine;ME House District 33
+ReportingUnit	Maine;ME House District 34	Maine;ME House District 34
+ReportingUnit	Maine;ME House District 35	Maine;ME House District 35
+ReportingUnit	Maine;ME House District 36	Maine;ME House District 36
+ReportingUnit	Maine;ME House District 37	Maine;ME House District 37
+ReportingUnit	Maine;ME House District 38	Maine;ME House District 38
+ReportingUnit	Maine;ME House District 39	Maine;ME House District 39
+ReportingUnit	Maine;ME House District 4	Maine;ME House District 4
+ReportingUnit	Maine;ME House District 40	Maine;ME House District 40
+ReportingUnit	Maine;ME House District 41	Maine;ME House District 41
+ReportingUnit	Maine;ME House District 42	Maine;ME House District 42
+ReportingUnit	Maine;ME House District 43	Maine;ME House District 43
+ReportingUnit	Maine;ME House District 44	Maine;ME House District 44
+ReportingUnit	Maine;ME House District 45	Maine;ME House District 45
+ReportingUnit	Maine;ME House District 46	Maine;ME House District 46
+ReportingUnit	Maine;ME House District 47	Maine;ME House District 47
+ReportingUnit	Maine;ME House District 48	Maine;ME House District 48
+ReportingUnit	Maine;ME House District 49	Maine;ME House District 49
+ReportingUnit	Maine;ME House District 5	Maine;ME House District 5
+ReportingUnit	Maine;ME House District 50	Maine;ME House District 50
+ReportingUnit	Maine;ME House District 51	Maine;ME House District 51
+ReportingUnit	Maine;ME House District 52	Maine;ME House District 52
+ReportingUnit	Maine;ME House District 53	Maine;ME House District 53
+ReportingUnit	Maine;ME House District 54	Maine;ME House District 54
+ReportingUnit	Maine;ME House District 55	Maine;ME House District 55
+ReportingUnit	Maine;ME House District 56	Maine;ME House District 56
+ReportingUnit	Maine;ME House District 57	Maine;ME House District 57
+ReportingUnit	Maine;ME House District 58	Maine;ME House District 58
+ReportingUnit	Maine;ME House District 59	Maine;ME House District 59
+ReportingUnit	Maine;ME House District 6	Maine;ME House District 6
+ReportingUnit	Maine;ME House District 60	Maine;ME House District 60
+ReportingUnit	Maine;ME House District 61	Maine;ME House District 61
+ReportingUnit	Maine;ME House District 62	Maine;ME House District 62
+ReportingUnit	Maine;ME House District 63	Maine;ME House District 63
+ReportingUnit	Maine;ME House District 64	Maine;ME House District 64
+ReportingUnit	Maine;ME House District 65	Maine;ME House District 65
+ReportingUnit	Maine;ME House District 66	Maine;ME House District 66
+ReportingUnit	Maine;ME House District 67	Maine;ME House District 67
+ReportingUnit	Maine;ME House District 68	Maine;ME House District 68
+ReportingUnit	Maine;ME House District 69	Maine;ME House District 69
+ReportingUnit	Maine;ME House District 7	Maine;ME House District 7
+ReportingUnit	Maine;ME House District 70	Maine;ME House District 70
+ReportingUnit	Maine;ME House District 71	Maine;ME House District 71
+ReportingUnit	Maine;ME House District 72	Maine;ME House District 72
+ReportingUnit	Maine;ME House District 73	Maine;ME House District 73
+ReportingUnit	Maine;ME House District 74	Maine;ME House District 74
+ReportingUnit	Maine;ME House District 75	Maine;ME House District 75
+ReportingUnit	Maine;ME House District 76	Maine;ME House District 76
+ReportingUnit	Maine;ME House District 77	Maine;ME House District 77
+ReportingUnit	Maine;ME House District 78	Maine;ME House District 78
+ReportingUnit	Maine;ME House District 79	Maine;ME House District 79
+ReportingUnit	Maine;ME House District 8	Maine;ME House District 8
+ReportingUnit	Maine;ME House District 80	Maine;ME House District 80
+ReportingUnit	Maine;ME House District 81	Maine;ME House District 81
+ReportingUnit	Maine;ME House District 82	Maine;ME House District 82
+ReportingUnit	Maine;ME House District 83	Maine;ME House District 83
+ReportingUnit	Maine;ME House District 84	Maine;ME House District 84
+ReportingUnit	Maine;ME House District 85	Maine;ME House District 85
+ReportingUnit	Maine;ME House District 86	Maine;ME House District 86
+ReportingUnit	Maine;ME House District 87	Maine;ME House District 87
+ReportingUnit	Maine;ME House District 88	Maine;ME House District 88
+ReportingUnit	Maine;ME House District 89	Maine;ME House District 89
+ReportingUnit	Maine;ME House District 9	Maine;ME House District 9
+ReportingUnit	Maine;ME House District 90	Maine;ME House District 90
+ReportingUnit	Maine;ME House District 91	Maine;ME House District 91
+ReportingUnit	Maine;ME House District 92	Maine;ME House District 92
+ReportingUnit	Maine;ME House District 93	Maine;ME House District 93
+ReportingUnit	Maine;ME House District 94	Maine;ME House District 94
+ReportingUnit	Maine;ME House District 95	Maine;ME House District 95
+ReportingUnit	Maine;ME House District 96	Maine;ME House District 96
+ReportingUnit	Maine;ME House District 97	Maine;ME House District 97
+ReportingUnit	Maine;ME House District 98	Maine;ME House District 98
+ReportingUnit	Maine;ME House District 99	Maine;ME House District 99
+ReportingUnit	Maine;ME Senate District 1	Maine;ME Senate District 1
+ReportingUnit	Maine;ME Senate District 10	Maine;ME Senate District 10
+ReportingUnit	Maine;ME Senate District 11	Maine;ME Senate District 11
+ReportingUnit	Maine;ME Senate District 12	Maine;ME Senate District 12
+ReportingUnit	Maine;ME Senate District 13	Maine;ME Senate District 13
+ReportingUnit	Maine;ME Senate District 14	Maine;ME Senate District 14
+ReportingUnit	Maine;ME Senate District 15	Maine;ME Senate District 15
+ReportingUnit	Maine;ME Senate District 16	Maine;ME Senate District 16
+ReportingUnit	Maine;ME Senate District 17	Maine;ME Senate District 17
+ReportingUnit	Maine;ME Senate District 18	Maine;ME Senate District 18
+ReportingUnit	Maine;ME Senate District 19	Maine;ME Senate District 19
+ReportingUnit	Maine;ME Senate District 2	Maine;ME Senate District 2
+ReportingUnit	Maine;ME Senate District 20	Maine;ME Senate District 20
+ReportingUnit	Maine;ME Senate District 21	Maine;ME Senate District 21
+ReportingUnit	Maine;ME Senate District 22	Maine;ME Senate District 22
+ReportingUnit	Maine;ME Senate District 23	Maine;ME Senate District 23
+ReportingUnit	Maine;ME Senate District 24	Maine;ME Senate District 24
+ReportingUnit	Maine;ME Senate District 25	Maine;ME Senate District 25
+ReportingUnit	Maine;ME Senate District 26	Maine;ME Senate District 26
+ReportingUnit	Maine;ME Senate District 27	Maine;ME Senate District 27
+ReportingUnit	Maine;ME Senate District 28	Maine;ME Senate District 28
+ReportingUnit	Maine;ME Senate District 29	Maine;ME Senate District 29
+ReportingUnit	Maine;ME Senate District 3	Maine;ME Senate District 3
+ReportingUnit	Maine;ME Senate District 30	Maine;ME Senate District 30
+ReportingUnit	Maine;ME Senate District 31	Maine;ME Senate District 31
+ReportingUnit	Maine;ME Senate District 32	Maine;ME Senate District 32
+ReportingUnit	Maine;ME Senate District 33	Maine;ME Senate District 33
+ReportingUnit	Maine;ME Senate District 34	Maine;ME Senate District 34
+ReportingUnit	Maine;ME Senate District 35	Maine;ME Senate District 35
+ReportingUnit	Maine;ME Senate District 4	Maine;ME Senate District 4
+ReportingUnit	Maine;ME Senate District 5	Maine;ME Senate District 5
+ReportingUnit	Maine;ME Senate District 6	Maine;ME Senate District 6
+ReportingUnit	Maine;ME Senate District 7	Maine;ME Senate District 7
+ReportingUnit	Maine;ME Senate District 8	Maine;ME Senate District 8
+ReportingUnit	Maine;ME Senate District 9	Maine;ME Senate District 9
+ReportingUnit	Maine;Oxford County	OXF
+ReportingUnit	Maine;Oxford County	23017
 ReportingUnit	Maine;Oxford County;Albany Twp	OXF;Albany Twp
 ReportingUnit	Maine;Oxford County;Andover	OXF;Andover
 ReportingUnit	Maine;Oxford County;Bethel/Mason Twp	OXF;Bethel/Mason Twp
@@ -771,6 +759,8 @@ ReportingUnit	Maine;Oxford County;Upton	OXF;Upton
 ReportingUnit	Maine;Oxford County;Waterford	OXF;Waterford
 ReportingUnit	Maine;Oxford County;West Paris	OXF;West Paris
 ReportingUnit	Maine;Oxford County;Woodstock/Milton Twp	OXF;Woodstock/Milton Twp
+ReportingUnit	Maine;Penobscot County	PEN
+ReportingUnit	Maine;Penobscot County	23019
 ReportingUnit	Maine;Penobscot County;Alton	PEN;Alton
 ReportingUnit	Maine;Penobscot County;Argyle Twp	PEN;Argyle Twp
 ReportingUnit	Maine;Penobscot County;Bangor	PEN;Bangor
@@ -839,7 +829,10 @@ ReportingUnit	Maine;Penobscot County;Veazie	PEN;Veazie
 ReportingUnit	Maine;Penobscot County;Webster Plt	PEN;Webster Plt
 ReportingUnit	Maine;Penobscot County;Winn	PEN;Winn
 ReportingUnit	Maine;Penobscot County;Woodville	PEN;Woodville
+ReportingUnit	Maine;Piscataquis County	PIS
+ReportingUnit	Maine;Piscataquis County	23021
 ReportingUnit	Maine;Piscataquis County;Abbot	PIS;Abbot
+ReportingUnit	Maine;Piscataquis County;Atkinson Township	PIS;Atkinson Township
 ReportingUnit	Maine;Piscataquis County;Beaver Cove	PIS;Beaver Cove
 ReportingUnit	Maine;Piscataquis County;Bowerbank	PIS;Bowerbank
 ReportingUnit	Maine;Piscataquis County;Brownville/Twps	PIS;Brownville/Twps
@@ -850,6 +843,7 @@ ReportingUnit	Maine;Piscataquis County;Lake View Plt	PIS;Lake View Plt
 ReportingUnit	Maine;Piscataquis County;Medford	PIS;Medford
 ReportingUnit	Maine;Piscataquis County;Millinocket Piscataquis Twps	PIS;Millinocket Piscataquis Twps
 ReportingUnit	Maine;Piscataquis County;Milo/Orneville Twp	PIS;Milo/Orneville Twp
+ReportingUnit	Maine;Piscataquis County;Milo/Ornveille Twp	PIS;Milo/Ornveille Twp
 ReportingUnit	Maine;Piscataquis County;Monson/Elliotsville Twp	PIS;Monson/Elliotsville Twp
 ReportingUnit	Maine;Piscataquis County;Parkman	PIS;Parkman
 ReportingUnit	Maine;Piscataquis County;Sangerville	PIS;Sangerville
@@ -857,7 +851,20 @@ ReportingUnit	Maine;Piscataquis County;Sebec	PIS;Sebec
 ReportingUnit	Maine;Piscataquis County;Shirley	PIS;Shirley
 ReportingUnit	Maine;Piscataquis County;Wellington	PIS;Wellington
 ReportingUnit	Maine;Piscataquis County;Willimantic	PIS;Willimantic
-ReportingUnit	Maine;Piscataquis County;Milo/Ornveille Twp	PIS;Milo/Ornveille Twp
+ReportingUnit	Maine;Sagadahoc County	SAG
+ReportingUnit	Maine;Sagadahoc County	23023
+ReportingUnit	Maine;Sagadahoc County;Arrowsic	SAG;Arrowsic
+ReportingUnit	Maine;Sagadahoc County;Bath	SAG;Bath
+ReportingUnit	Maine;Sagadahoc County;Bowdoin	SAG;Bowdoin
+ReportingUnit	Maine;Sagadahoc County;Bowdoinham	SAG;Bowdoinham
+ReportingUnit	Maine;Sagadahoc County;Georgetown	SAG;Georgetown
+ReportingUnit	Maine;Sagadahoc County;Phippsburg	SAG;Phippsburg
+ReportingUnit	Maine;Sagadahoc County;Richmond	SAG;Richmond
+ReportingUnit	Maine;Sagadahoc County;Topsham	SAG;Topsham
+ReportingUnit	Maine;Sagadahoc County;West Bath	SAG;West Bath
+ReportingUnit	Maine;Sagadahoc County;Woolwich	SAG;Woolwich
+ReportingUnit	Maine;Somerset County	SOM
+ReportingUnit	Maine;Somerset County	23025
 ReportingUnit	Maine;Somerset County;Anson	SOM;Anson
 ReportingUnit	Maine;Somerset County;Athens	SOM;Athens
 ReportingUnit	Maine;Somerset County;Bingham	SOM;Bingham
@@ -894,6 +901,10 @@ ReportingUnit	Maine;Somerset County;Spring Lake Twp	SOM;Spring Lake Twp
 ReportingUnit	Maine;Somerset County;Starks	SOM;Starks
 ReportingUnit	Maine;Somerset County;The Forks Plt	SOM;The Forks Plt
 ReportingUnit	Maine;Somerset County;West Forks Plt	SOM;West Forks Plt
+ReportingUnit	Maine;US House ME District 1	CG 1
+ReportingUnit	Maine;US House ME District 2	CG 2
+ReportingUnit	Maine;Waldo County	WAL
+ReportingUnit	Maine;Waldo County	23027
 ReportingUnit	Maine;Waldo County;Belfast	WAL;Belfast
 ReportingUnit	Maine;Waldo County;Belmont	WAL;Belmont
 ReportingUnit	Maine;Waldo County;Brooks	WAL;Brooks
@@ -920,6 +931,8 @@ ReportingUnit	Maine;Waldo County;Troy	WAL;Troy
 ReportingUnit	Maine;Waldo County;Unity	WAL;Unity
 ReportingUnit	Maine;Waldo County;Waldo	WAL;Waldo
 ReportingUnit	Maine;Waldo County;Winterport	WAL;Winterport
+ReportingUnit	Maine;Washington County	WAS
+ReportingUnit	Maine;Washington County	23029
 ReportingUnit	Maine;Washington County;Addison	WAS;Addison
 ReportingUnit	Maine;Washington County;Alexander	WAS;Alexander
 ReportingUnit	Maine;Washington County;Baileyville	WAS;Baileyville
@@ -969,13 +982,34 @@ ReportingUnit	Maine;Washington County;Waite	WAS;Waite
 ReportingUnit	Maine;Washington County;Wesley	WAS;Wesley
 ReportingUnit	Maine;Washington County;Whiting	WAS;Whiting
 ReportingUnit	Maine;Washington County;Whitneyville	WAS;Whitneyville
-ReportingUnit	Maine;Piscataquis County;Atkinson Township	PIS;Atkinson Township
-ReportingUnit	Maine	STATE UOCAVA
-Candidate	Pingree, Chellie M.	Pingree, Chellie M.
-Candidate	Others	Others
-Candidate	Golden, Jared F.	Golden, Jared F.
-Candidate	Crafts, Dale John	Crafts, Dale John
-Candidate	Allen, Jay T.	Allen, Jay T.
-Candidate	Savage, Lisa	Savage, Lisa
-Candidate	Linn, Max Patrick	Linn, Max Patrick
-Candidate	Susan Margaret Collins	Collins, Susan Margaret
+ReportingUnit	Maine;York County	YOR
+ReportingUnit	Maine;York County	23031
+ReportingUnit	Maine;York County;Acton	YOR;Acton
+ReportingUnit	Maine;York County;Alfred	YOR;Alfred
+ReportingUnit	Maine;York County;Arundel	YOR;Arundel
+ReportingUnit	Maine;York County;Berwick	YOR;Berwick
+ReportingUnit	Maine;York County;Biddeford	YOR;Biddeford
+ReportingUnit	Maine;York County;Buxton	YOR;Buxton
+ReportingUnit	Maine;York County;Cornish	YOR;Cornish
+ReportingUnit	Maine;York County;Dayton	YOR;Dayton
+ReportingUnit	Maine;York County;Eliot	YOR;Eliot
+ReportingUnit	Maine;York County;Hollis	YOR;Hollis
+ReportingUnit	Maine;York County;Kennebunk	YOR;Kennebunk
+ReportingUnit	Maine;York County;Kennebunkport	YOR;Kennebunkport
+ReportingUnit	Maine;York County;Kittery	YOR;Kittery
+ReportingUnit	Maine;York County;Lebanon	YOR;Lebanon
+ReportingUnit	Maine;York County;Limerick	YOR;Limerick
+ReportingUnit	Maine;York County;Limington	YOR;Limington
+ReportingUnit	Maine;York County;Lyman	YOR;Lyman
+ReportingUnit	Maine;York County;Newfield	YOR;Newfield
+ReportingUnit	Maine;York County;North Berwick	YOR;North Berwick
+ReportingUnit	Maine;York County;Ogunquit	YOR;Ogunquit
+ReportingUnit	Maine;York County;Old Orchard Beach	YOR;Old Orchard Beach
+ReportingUnit	Maine;York County;Parsonsfield	YOR;Parsonsfield
+ReportingUnit	Maine;York County;Saco	YOR;Saco
+ReportingUnit	Maine;York County;Sanford	YOR;Sanford
+ReportingUnit	Maine;York County;Shapleigh	YOR;Shapleigh
+ReportingUnit	Maine;York County;South Berwick	YOR;South Berwick
+ReportingUnit	Maine;York County;Waterboro	YOR;Waterboro
+ReportingUnit	Maine;York County;Wells	YOR;Wells
+ReportingUnit	Maine;York County;York	YOR;York
