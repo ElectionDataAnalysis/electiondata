@@ -32,8 +32,6 @@ Candidate	Jerome M. Segal	Jerome M. Segal
 Candidate	Jo Jorgensen	Jo Jorgensen
 Candidate	Joe Biden	Joe Biden
 Candidate	John Kerry	JOHN KERRY
-Candidate	John MCCain	JOHN MCCAIN
-Candidate	John Mccain	JOHN MCCAIN
 Candidate	John Sarbanes	John Sarbanes
 Candidate	Johnny Ray Salling	Johnny Ray Salling
 Candidate	Johnson Lee	Johnson Lee

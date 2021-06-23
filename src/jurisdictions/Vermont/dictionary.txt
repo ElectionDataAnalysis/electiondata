@@ -439,8 +439,6 @@ Candidate	JUSTIN AMASH(Write-In)	JUSTIN AMASH(Write-In)
 Candidate	JUSTIN LINDOR(Write-In)	JUSTIN LINDOR(Write-In)
 Candidate	JUSTIN MONTEITH(Write-In)	JUSTIN MONTEITH(Write-In)
 Candidate	John Kerry	JOHN KERRY
-Candidate	John MCCain	JOHN MCCAIN
-Candidate	John Mccain	JOHN MCCAIN
 Candidate	KAMALA HARRIS(Write-In)	KAMALA HARRIS(Write-In)
 Candidate	KANYE WEST	KANYE WEST and MICHELLE TIDBALL
 Candidate	KAREN DOLAN	KAREN DOLAN

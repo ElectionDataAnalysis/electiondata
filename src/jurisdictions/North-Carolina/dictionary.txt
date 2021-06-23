@@ -2532,13 +2532,11 @@ Candidate	John M. Britt	John M. Britt
 Candidate	John M. Check	John M. Check
 Candidate	John M. Crowe	John M. Crowe
 Candidate	John M. Griffin	John M. Griffin
-Candidate	John MCCain	JOHN MCCAIN
 Candidate	John Mark Bennett	John Mark Bennett
 Candidate	John Martin	John Martin
 Candidate	John May	John May
 Candidate	John McAfee	John McAfee
 Candidate	John McCotter	John McCotter
-Candidate	John Mccain	JOHN MCCAIN
 Candidate	John Metcalf (Write-In)	John Metcalf (Write-In)
 Candidate	John Michael Langdon	John Michael Langdon
 Candidate	John Millan	John Millan

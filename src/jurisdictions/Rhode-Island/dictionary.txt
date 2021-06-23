@@ -89,8 +89,6 @@ Candidate	John G. Edwards	John G. Edwards
 Candidate	John J. Cullen	John J. Cullen
 Candidate	John J. Lombardi	John J. Lombardi
 Candidate	John Kerry	JOHN KERRY
-Candidate	John MCCain	JOHN MCCAIN
-Candidate	John Mccain	JOHN MCCAIN
 Candidate	John P. Burke	John P. Burke
 Candidate	John W. Lyle, Jr.	John W. Lyle, Jr.
 Candidate	Jonathan J. Keith	Jonathan J. Keith

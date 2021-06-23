@@ -7073,11 +7073,9 @@ Candidate	John M. Robbins Jr.	John M. Robbins Jr.
 Candidate	John M. Thieling	John M. Thieling
 Candidate	John M. Westercamp	John M. Westercamp
 Candidate	John M. Wrightsman	John M. Wrightsman
-Candidate	John MCCain	JOHN MCCAIN
 Candidate	John Mallers	John Mallers
 Candidate	John Mario Acosta Jr.	John Mario Acosta Jr.
 Candidate	John Matwyshyn	John Matwyshyn
-Candidate	John Mccain	JOHN MCCAIN
 Candidate	John Mcpherson	John Mcpherson
 Candidate	John Merson	John Merson
 Candidate	John Meyer (W/I)	John Meyer (W/I)

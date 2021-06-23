@@ -24,8 +24,6 @@ Candidate	Jo Jorgensen	Jo Jorgensen
 Candidate	Jo Jorgensen	Jo Jorgensen Jeremy 'Spike' Cohen
 Candidate	Jo Jorgensen	Jo Jorgensen Jeremy 'Spike' Coh
 Candidate	John Kerry	JOHN KERRY
-Candidate	John MCCain	JOHN MCCAIN
-Candidate	John Mccain	JOHN MCCAIN
 Candidate	Joseph R. Biden	Joseph R. Biden
 Candidate	Joseph R. Biden	Joseph R. Biden Kamala D. Harri
 Candidate	Mike Rogers	Mike Rogers

@@ -39,8 +39,6 @@ Candidate	Jennifer Zinone	Jennifer Zinone
 Candidate	Jesse Ehrnstrom	Jesse Ehrnstrom
 Candidate	Jo Jorgensen	Jo Jorgensen ( Vice President Spike Cohen)
 Candidate	John Kerry	JOHN KERRY
-Candidate	John MCCain	JOHN MCCAIN
-Candidate	John Mccain	JOHN MCCAIN
 Candidate	John Mirrione	John Mirrione
 Candidate	Joseph R. Biden	JOSEPH R. BIDEN (w) (VICE PRESIDENT KAMALA HARRIS)
 Candidate	Kenneth J. Cody	Kenneth J. Cody

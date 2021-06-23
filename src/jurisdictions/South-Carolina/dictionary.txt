@@ -267,10 +267,8 @@ Candidate	John Kraljevich	John Kraljevich
 Candidate	John L Scott Jr	John L Scott Jr
 Candidate	John Lastinger	John Lastinger
 Candidate	John Lowe	John Lowe
-Candidate	John MCCain	JOHN MCCAIN
 Candidate	John McCollum	John McCollum
 Candidate	John McCravy	John McCravy
-Candidate	John Mccain	JOHN MCCAIN
 Candidate	John Meadors	John Meadors
 Candidate	John R King	John R King
 Candidate	John R Prioleau Sr	John R Prioleau Sr

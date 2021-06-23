@@ -1042,8 +1042,6 @@ Candidate	John M. Bartman	John M. Bartman
 Candidate	John M. Cabello	John M. Cabello
 Candidate	John M. Shimkus	John M. Shimkus
 Candidate	John M. Stassi	John M. Stassi
-Candidate	John MCCain	JOHN MCCAIN
-Candidate	John Mccain	JOHN MCCAIN
 Candidate	John Meixner	John Meixner
 Candidate	John O'Meara	John O'Meara
 Candidate	John P. Callahan, Jr.	John P. Callahan, Jr. - No

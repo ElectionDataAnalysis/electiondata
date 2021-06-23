@@ -144,8 +144,6 @@ Candidate	Jackson, Jana	Jackson, Jana
 Candidate	Jermaine, Jennifer	Jermaine, Jennifer
 Candidate	Jo Jorgensen	Jorgensen, Jo
 Candidate	John Kerry	JOHN KERRY
-Candidate	John MCCain	JOHN MCCAIN
-Candidate	John Mccain	JOHN MCCAIN
 Candidate	John, Joel	John, Joel
 Candidate	Jolley, Richard	Jolley, Richard
 Candidate	Jones, Miko	Jones, Miko

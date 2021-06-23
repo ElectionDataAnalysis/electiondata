@@ -305,8 +305,6 @@ Candidate	John Douglas Mc Divitt	John Douglas Mc Divitt
 Candidate	John Foreman	John Foreman
 Candidate	John Kerry	JOHN KERRY
 Candidate	John L Jones	John L Jones
-Candidate	John MCCain	JOHN MCCAIN
-Candidate	John Mccain	JOHN MCCAIN
 Candidate	John S Sweetser	John S Sweetser
 Candidate	John Stahlman Clark	John Stahlman Clark
 Candidate	John Sugg	John Sugg

@@ -84,8 +84,6 @@ Candidate	Jo Jorgensen	Jo Jorgensen and Jeremy 'Spike' Cohen
 Candidate	Joan Stamm	Joan Stamm (Withdrawn 7/31/2020 12:00:00 AM)
 Candidate	Joel Koskan	Joel Koskan
 Candidate	John Kerry	JOHN KERRY
-Candidate	John MCCain	JOHN MCCAIN
-Candidate	John Mccain	JOHN MCCAIN
 Candidate	John Mills	John Mills
 Candidate	John P. Kessinger	John P. Kessinger
 Candidate	John Wiik	John Wiik

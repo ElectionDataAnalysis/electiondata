@@ -2906,9 +2906,10 @@ def datafile_info(connection,results_filename_for_error_reporting,
         if ui.fatal_error(err):
             return [0,0],err
         else:
-            col_map = {"short_name":"short_name", "note":"note", "file_name": "file_name"}
+            # TODO tech debt not sure why we need to rename here but not elsewhere, has to do with col_map
+            data.rename(columns={"short_name": "_datafile"}, inplace=True)
             datafile_id = db.append_id_to_dframe(
-                connection,data,"_datafile",col_map=col_map
+                connection,data,"_datafile",
             ).iloc[0]["_datafile_Id"]
     except Exception as exc:
         err = ui.add_new_error(

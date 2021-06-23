@@ -239,9 +239,7 @@ Candidate	John K. Mikulin	John K. Mikulin
 Candidate	John Kerry	JOHN KERRY
 Candidate	John Lemondes, Jr.	John Lemondes, Jr.
 Candidate	John M. Katko	John M. Katko
-Candidate	John MCCain	JOHN MCCAIN
 Candidate	John Manimas	John Manimas
-Candidate	John Mccain	JOHN MCCAIN
 Candidate	John Nuculovic	John Nuculovic
 Candidate	John S. Zielinski	John S. Zielinski
 Candidate	John T. McDonald, III	John T. McDonald, III

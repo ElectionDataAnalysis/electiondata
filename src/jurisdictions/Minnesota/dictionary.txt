@@ -1352,11 +1352,9 @@ Candidate	John Lindquist	John Lindquist
 Candidate	John Luepke	John Luepke
 Candidate	John M Poston	John M Poston
 Candidate	John M. Poston	John M. Poston
-Candidate	John MCCain	JOHN MCCAIN
 Candidate	John Maatz	John Maatz
 Candidate	John Marty	John Marty
 Candidate	John Mason	John Mason
-Candidate	John Mccain	JOHN MCCAIN
 Candidate	John O Cunningham	John O Cunningham
 Candidate	John P Fahey	John P Fahey
 Candidate	John P. Dehen	John P. Dehen

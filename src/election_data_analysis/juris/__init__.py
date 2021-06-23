@@ -588,7 +588,7 @@ def load_or_update_juris_to_db(
     err = None
     for element in juris_elements:
         # read df from Jurisdiction directory
-        err = load_juris_dframe_into_cdf(
+        new_err = load_juris_dframe_into_cdf(
             session,
             element,
             os.path.join(repository_content_root, "jurisdictions"),
@@ -597,16 +597,18 @@ def load_or_update_juris_to_db(
             err,
             on_conflict="UPDATE",
         )
-        if ui.fatal_error(err):
+        err = ui.consolidate_errors([err, new_err])
+        if ui.fatal_error(new_err):
             return err
 
     # Load CandidateContests and BallotMeasureContests
     for contest_type in ["BallotMeasure", "Candidate"]:
-        err = load_or_update_contests(
+        new_err = load_or_update_contests(
             session.bind, os.path.join(
                 repository_content_root, "jurisdictions", juris_system_name
             ), juris_true_name, contest_type, err
         )
+        err = ui.consolidate_errors([err,new_err])
     return err
 
 

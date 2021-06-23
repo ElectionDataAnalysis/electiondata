@@ -642,9 +642,7 @@ Candidate	John Kolesar	John Kolesar
 Candidate	John L. Juergensen	John L. Juergensen
 Candidate	John M. Durkin	John M. Durkin
 Candidate	John M. Rogers	John M. Rogers
-Candidate	John MCCain	JOHN MCCAIN
 Candidate	John McManus	John McManus
-Candidate	John Mccain	JOHN MCCAIN
 Candidate	John Mchenry	John Mchenry
 Candidate	John Mullins	John Mullins
 Candidate	John O'Donnell	John O'Donnell

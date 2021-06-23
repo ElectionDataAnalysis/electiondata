@@ -457,8 +457,6 @@ Candidate	John Kerry	JOHN KERRY
 Candidate	John Laird	John Laird
 Candidate	John M. Nevill	John M. Nevill
 Candidate	John M. W. Moorlach	John M. W. Moorlach
-Candidate	John MCCain	JOHN MCCAIN
-Candidate	John Mccain	JOHN MCCAIN
 Candidate	John Moore	John Moore
 Candidate	John P. McDonnell	John P. McDonnell
 Candidate	John Renison	John Renison

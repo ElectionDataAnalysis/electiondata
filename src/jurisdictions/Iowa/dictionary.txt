@@ -320,8 +320,6 @@ Candidate	John Hogeland	John Hogeland
 Candidate	John J. O'Brien	John J. O'Brien
 Candidate	John Kerry	JOHN KERRY
 Candidate	John Landon	John Landon
-Candidate	John MCCain	JOHN MCCAIN
-Candidate	John Mccain	JOHN MCCAIN
 Candidate	John Norris	John Norris
 Candidate	John Paschen	John Paschen
 Candidate	John William Anderson	John W. Anderson

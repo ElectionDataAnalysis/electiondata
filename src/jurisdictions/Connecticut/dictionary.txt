@@ -206,9 +206,7 @@ Candidate	John K. Hampton	John K. Hampton
 Candidate	John Kerry	JOHN KERRY
 Candidate	John L. Hall, III	John L. Hall, III
 Candidate	John M. Traceski	John M. Traceski
-Candidate	John MCCain	JOHN MCCAIN
 Candidate	John May	John May
-Candidate	John Mccain	JOHN MCCAIN
 Candidate	John Piscopo	John Piscopo
 Candidate	John Shaban	John Shaban
 Candidate	John W. Brockelman	John W. Brockelman

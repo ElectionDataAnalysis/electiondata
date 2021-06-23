@@ -27,8 +27,6 @@ Candidate	Jo Jorgensen	Jo Jorgensen Jeremy Cohen
 Candidate	Joe Mchugh	Joe Mchugh Elizabeth Storm
 Candidate	John Curtis	John Curtis
 Candidate	John Kerry	JOHN KERRY
-Candidate	John MCCain	JOHN MCCAIN
-Candidate	John Mccain	JOHN MCCAIN
 Candidate	John Molnar	John Molnar
 Candidate	Jonia M Broderick	Jonia M Broderick
 Candidate	Joseph R. Biden	Joseph R. Biden Kamala D. Harris

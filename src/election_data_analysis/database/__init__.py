@@ -555,7 +555,8 @@ def insert_to_cdf_db(
     # identify new ReportingUnits, must later enter nesting info in db
     if element == "ReportingUnit":
         working = m.clean_strings(working, ["Name"])
-        # find any new RUs
+        # append ids (if matched) and nulls (if not matched)
+
         matched_with_old = append_id_to_dframe(
             engine, working, "ReportingUnit", {"Name": "Name"}
         )
@@ -712,7 +713,7 @@ def insert_to_cdf_db(
 
     if element == "ReportingUnit":
         # check get RUs not matched and process them
-        mask = matched_with_old.ReportingUnit_Id > 0
+        mask = (matched_with_old.ReportingUnit_Id.notnull()) & (matched_with_old.ReportingUnit_Id > 0)
         new_rus = matched_with_old[~mask]
         if not new_rus.empty:
             append_err = append_to_composing_reporting_unit_join(

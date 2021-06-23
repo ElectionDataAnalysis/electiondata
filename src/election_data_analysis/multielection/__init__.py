@@ -188,11 +188,11 @@ def add_dictionary_entries(juris_sys_name,repo_content_root,element,p_map):
 
 
 def replacement(match):
-    return match.group(1).upper()
+    return f"Mc{match.group(1).upper()}"
 
 
 def correct(proper_name: str) -> str:
-    p = r"(Mc[a-z])"
+    p = r"Mc([a-z])"
     new = re.sub(p, replacement, proper_name)
     if new in correct_d.keys():
         new = correct_d[new]

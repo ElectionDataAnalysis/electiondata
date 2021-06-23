@@ -217,8 +217,6 @@ Candidate	Jeffers, Stephany	Jeffers, Stephany
 Candidate	Jo Jorgensen	Jorgensen Jo / Cohen Jeremy 'Spike'''
 Candidate	Jo Jorgensen	"Jorgensen Jo / Cohen Jeremy ""Spike"""""""
 Candidate	John Kerry	JOHN KERRY
-Candidate	John MCCain	JOHN MCCAIN
-Candidate	John Mccain	JOHN MCCAIN
 Candidate	Johnson Bill	Johnson Bill''
 Candidate	Johnson Bill	"Johnson Bill"""""
 Candidate	Johnson Carl	Johnson Carl''
@@ -840,8 +838,7 @@ Party	Republican Party	REP
 Party	Republican Party	REP''
 Party	Republican Party	REPUBLICAN
 Party	none or unknown	OTHER
-Party		
-ReportingUnit	Alaska	Alaska
+PartyReportingUnit	Alaska	Alaska
 ReportingUnit	Alaska	HD99
 ReportingUnit	Alaska;AK House District 1	Alaska;AK House District 1
 ReportingUnit	Alaska;AK House District 1	District 1
