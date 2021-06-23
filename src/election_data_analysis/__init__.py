@@ -962,7 +962,7 @@ class DataLoader:
 
         return update_err
 
-    def load_multielection(self, multi_file: str):
+    def load_multielection(self, multi_file: str) -> Optional[dict]:
         """load multi-election data from <multi_file> 
         (as of 6/2021, this works just for the MIT presidential file)"""
         err = None
@@ -1023,10 +1023,10 @@ class DataLoader:
                         err,
                         "munge",
                         "load_multi_ej_file",
-                        f"Unexpected error while munging raw to ids: {exc}"
+                        f"Unexpected error while loading results dataframe: {exc}"
                     )
-        err  = ui.report(err,self.d["reports_and_plots_dir"])
-        return
+        err = ui.report(err,self.d["reports_and_plots_dir"])
+        return err
 
 def check_par_file_elements(
     ini_d: dict,
