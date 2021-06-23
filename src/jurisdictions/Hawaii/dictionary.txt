@@ -53,6 +53,7 @@ Candidate	Howie Hawkins	Hawkins / Walker
 Candidate	ILAGAN, Greggor	ILAGAN, Greggor
 Candidate	Jo Jorgensen	Jorgensen / Cohen
 Candidate	John Kerry	JOHN KERRY
+Candidate	John MCCain	JOHN MCCAIN
 Candidate	John Mccain	JOHN MCCAIN
 Candidate	Joseph R. Biden	Biden / Harris
 Candidate	KA-IPO, Ron G.	KA-IPO, Ron G.

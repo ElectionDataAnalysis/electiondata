@@ -242,3 +242,13 @@ Write-In - David Dockery
 Write-In - Charles Shappley
 Ronnie Henley
 Howie Hawkins
+Al Gore
+Barack Obama
+George W. Bush
+Hillary Clinton
+John Kerry
+John Mccain
+Mitt Romney
+Other
+Ralph Nader
+John MCCain

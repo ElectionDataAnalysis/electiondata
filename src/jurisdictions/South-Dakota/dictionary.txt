@@ -1,212 +1,208 @@
 cdf_element	cdf_internal_name	raw_identifier_value
-Candidate	Joseph R Biden	Joseph R. Biden & Kamala Harris
-Candidate	Joseph R Biden	Joseph R. Biden and Kamala Harris
-Candidate	Jo Jorgensen	Jo Jorgensen & Jeremy 'Spike' Cohen
-Candidate	Jo Jorgensen	Jo Jorgensen and Jeremy 'Spike' Cohen
+Candidate	A. Gideon Oakes	A. Gideon Oakes
+Candidate	Aaron Aylward	Aaron Aylward
+Candidate	Adam Jewell	Adam Jewell
+Candidate	Ailee Johns	Ailee Johns
+Candidate	Al Gore	AL GORE
+Candidate	Al Leber	Al Leber
+Candidate	Al Novstrup	Al Novstrup
+Candidate	Alexander Martin	Alexander Martin
+Candidate	Amanda Bachmann	Amanda Bachmann
+Candidate	Arch Beal	Arch Beal
+Candidate	Arthur Rusch	Arthur Rusch
+Candidate	Barack Obama	BARACK OBAMA
+Candidate	Becky Drury	Becky Drury
+Candidate	Becky Holtquist	Becky Holtquist
+Candidate	Bethany Soye	Bethany Soye
+Candidate	Bill Adamson	Bill Adamson
+Candidate	Bill Hines	Bill Hines (Withdrawn 7/28/2020 12:00:00 AM)
+Candidate	Brian Gentry	Brian Gentry
+Candidate	Brock L. Greenfield	Brock L. Greenfield
+Candidate	Brooke Abdallah	Brooke Abdallah
+Candidate	Bryan J. Breitling	Bryan J. Breitling
+Candidate	C. John McEnelly	C. John McEnelly
+Candidate	CJ Abernathey	CJ Abernathey
+Candidate	Caitlin F. Collier	Caitlin F. Collier
+Candidate	Caleb Finck	Caleb Finck
+Candidate	Carl E Perry	Carl E Perry
+Candidate	Carol Williams	Carol Williams (Withdrawn 7/22/2020 12:00:00 AM)
+Candidate	Casey Crabtree	Casey Crabtree
+Candidate	Charlie Hoffman	Charlie Hoffman
+Candidate	Chris Johnson	Chris Johnson
+Candidate	Chris Karr	Chris Karr
+Candidate	Cody Ingle	Cody Ingle
+Candidate	Cole Heisey	Cole Heisey
+Candidate	Dan Ahlers	Dan Ahlers
+Candidate	Dan Kerner Andersson	Dan Kerner Andersson
+Candidate	Daryl Root	Daryl Root
+Candidate	David A. Hubbard	David A. Hubbard
+Candidate	David Johnson	David Johnson
+Candidate	David L. Anderson	David L. Anderson
+Candidate	David Wheeler	David Wheeler
+Candidate	Dean Wink	Dean Wink
+Candidate	Devin Saxon	Devin Saxon
 Candidate	Donald J Trump	Donald J. Trump & Michael R. Pence
 Candidate	Donald J Trump	Donald J. Trump and Michael R. Pence
-Candidate	Dan Ahlers	Dan Ahlers
-Candidate	Mike Rounds	Mike Rounds
-Candidate	Randy 'Uriah' Luallin	Randy 'Uriah' Luallin
-Candidate	Dusty Johnson	Dusty Johnson
-Candidate	Remi W. B. Bald Eagle	Remi W. B. Bald Eagle
-Candidate	Devin Saxon	Devin Saxon
-Candidate	Gary Hanson	Gary Hanson
-Candidate	Susan Wismer	Susan Wismer
-Candidate	Michael H. Rohl	Michael H. Rohl
-Candidate	Brock L. Greenfield	Brock L. Greenfield
-Candidate	Josh Halsey	Josh Halsey (Withdrawn 7/30/2020 12:00:00 AM)
-Candidate	Al Novstrup	Al Novstrup
-Candidate	Daryl Root	Daryl Root
-Candidate	John Wiik	John Wiik
-Candidate	Adam Jewell	Adam Jewell
-Candidate	Lee Schoenbeck	Lee Schoenbeck
-Candidate	Nancy Kirstein	Nancy Kirstein
-Candidate	Herman Otten	Herman Otten
-Candidate	V. J. Smith	V. J. Smith
-Candidate	Casey Crabtree	Casey Crabtree
-Candidate	Suzanne 'Suzie' Jones Pranger	Suzanne 'Suzie' Jones Pranger
-Candidate	Wayne H. Steinhauer	Wayne H. Steinhauer
-Candidate	Nichole Cauwels	Nichole Cauwels
-Candidate	Maggie Sutton	Maggie Sutton
-Candidate	Tom Cool	Tom Cool
-Candidate	Jim Stalzer	Jim Stalzer
-Candidate	Jessica Meyers	Jessica Meyers
-Candidate	R Blake Curd	R Blake Curd
-Candidate	Justyn Hauck	Justyn Hauck (Withdrawn 8/4/2020 12:00:00 AM)
-Candidate	Elizabeth 'Liz' Larson	Elizabeth 'Liz' Larson
-Candidate	Jack Kolbeck	Jack Kolbeck
-Candidate	Timothy Reed	Timothy Reed
-Candidate	Larry P. Zikmund	Larry P. Zikmund
-Candidate	Reynold F. Nesiba	Reynold F. Nesiba
-Candidate	Thor Bardon	Thor Bardon
-Candidate	Jim Bolin	Jim Bolin
-Candidate	Ailee Johns	Ailee Johns
-Candidate	Gregory Baldwin	Gregory Baldwin
-Candidate	Arthur Rusch	Arthur Rusch
-Candidate	Jay Williams	Jay Williams (Withdrawn 7/22/2020 12:00:00 AM)
-Candidate	Jordan Foos	Jordan Foos
-Candidate	Jean Hunhoff	Jean Hunhoff
-Candidate	Kyle Schoenfish	Kyle Schoenfish
-Candidate	Alexander Martin	Alexander Martin
-Candidate	Joshua Klumb	Joshua Klumb
-Candidate	Dan Kerner Andersson	Dan Kerner Andersson
-Candidate	Erin Tobin	Erin Tobin
-Candidate	David Wheeler	David Wheeler
-Candidate	CJ Abernathey	CJ Abernathey
-Candidate	Bryan J. Breitling	Bryan J. Breitling
-Candidate	Mary Duvall	Mary Duvall
-Candidate	Seth William Van't Hof	Seth William Van't Hof
-Candidate	Rick W Knobe	Rick W Knobe
-Candidate	Kris K. Langer	Kris K. Langer (Withdrawn 8/4/2020 12:00:00 AM)
-Candidate	Marsha Symens	Marsha Symens
-Candidate	Troy Heinert	Troy Heinert
-Candidate	Joel Koskan	Joel Koskan
-Candidate	Red Dawn Foster	Red Dawn Foster
-Candidate	Judd W Schomp	Judd W Schomp
-Candidate	Ryan M. Maher	Ryan M. Maher
-Candidate	Kent Wilsey	Kent Wilsey
-Candidate	Gary L. Cammack	Gary L. Cammack
-Candidate	A. Gideon Oakes	A. Gideon Oakes
-Candidate	Julie Frye-Mueller	Julie Frye-Mueller
-Candidate	Timothy R. Johns	Timothy R. Johns
-Candidate	Michael Calabrese	Michael Calabrese
-Candidate	Helene Duhamel	Helene Duhamel
-Candidate	Ryan A. Ryder	Ryan A. Ryder
-Candidate	David Johnson	David Johnson
-Candidate	George Nelson	George Nelson
-Candidate	Michael G Diedrich	Michael G Diedrich
-Candidate	Brian Gentry	Brian Gentry
-Candidate	Jessica Castleberry	Jessica Castleberry
-Candidate	Jennifer Healy Keintz	Jennifer Healy Keintz
-Candidate	Steven D. McCleerey	Steven D. McCleerey
-Candidate	Tamara St. John	Tamara St. John
-Candidate	Kaleb W. Weis	Kaleb W. Weis
-Candidate	Lana Greenfield	Lana Greenfield
-Candidate	Leslie McLaughlin	Leslie McLaughlin
-Candidate	Justin Roemmick	Justin Roemmick
-Candidate	Drew Dennert	Drew Dennert
-Candidate	Carl E Perry	Carl E Perry
-Candidate	Becky Holtquist	Becky Holtquist
-Candidate	Fred Deutsch	Fred Deutsch
-Candidate	John Mills	John Mills
-Candidate	Hugh M. Bartels	Hugh M. Bartels
-Candidate	Nancy York	Nancy York
-Candidate	Cody Ingle	Cody Ingle
-Candidate	Ernie Otten	Ernie Otten
-Candidate	Aaron Aylward	Aaron Aylward
-Candidate	Louise Snodgrass	Louise Snodgrass
-Candidate	Bill Adamson	Bill Adamson
-Candidate	Larry Tidemann	Larry Tidemann
-Candidate	Joan Stamm	Joan Stamm (Withdrawn 7/31/2020 12:00:00 AM)
-Candidate	John P. Kessinger	John P. Kessinger
-Candidate	Val Parsley	Val Parsley
-Candidate	Marli Wiese	Marli Wiese
-Candidate	Randy Gross	Randy Gross
-Candidate	Michael Saba	Michael Saba
-Candidate	Toni Miller	Toni Miller
-Candidate	Rhonda Milstead	Rhonda Milstead
-Candidate	Bethany Soye	Bethany Soye
-Candidate	Michelle L. Hentschel	Michelle L. Hentschel
-Candidate	Steven Haugaard	Steven Haugaard
+Candidate	Donald J. Trump	DONALD TRUMP
 Candidate	Doug Barthel	Doug Barthel
-Candidate	Sheryl Johnson	Sheryl Johnson
-Candidate	Margaret M Kuipers	Margaret M Kuipers
-Candidate	Mark Willadsen	Mark Willadsen
-Candidate	Chris Karr	Chris Karr
-Candidate	Erin Royer	Erin Royer
-Candidate	Greg Jamison	Greg Jamison
-Candidate	Arch Beal	Arch Beal
-Candidate	Norman B. Bliss	Norman B. Bliss
-Candidate	Kelly A. Sullivan	Kelly A. Sullivan
-Candidate	Richard L Thomason	Richard L Thomason
-Candidate	Sue Peterson	Sue Peterson
-Candidate	Mike Huber	Mike Huber
+Candidate	Drew Dennert	Drew Dennert
+Candidate	Dusty Johnson	Dusty Johnson
+Candidate	Elizabeth 'Liz' Larson	Elizabeth 'Liz' Larson
 Candidate	Erin Healy	Erin Healy
-Candidate	Taylor Rae Rehfeldt	Taylor Rae Rehfeldt
-Candidate	Tom Holmes	Tom Holmes
-Candidate	Jamie Smith	Jamie Smith
-Candidate	Linda Duba	Linda Duba
-Candidate	Matt Rosburg	Matt Rosburg
-Candidate	Cole Heisey	Cole Heisey
-Candidate	David L. Anderson	David L. Anderson
-Candidate	Kevin D. Jensen	Kevin D. Jensen
-Candidate	Caitlin F. Collier	Caitlin F. Collier
-Candidate	Al Leber	Al Leber
-Candidate	Richard Vasgaard	Richard Vasgaard
-Candidate	Sydney Davis	Sydney Davis
-Candidate	Carol Williams	Carol Williams (Withdrawn 7/22/2020 12:00:00 AM)
-Candidate	Ryan Cwach	Ryan Cwach
-Candidate	Mike Stevens	Mike Stevens
-Candidate	Kent Peterson	Kent Peterson
-Candidate	Marty Overweg	Marty Overweg
-Candidate	Paul R Miskimins	Paul R Miskimins
-Candidate	Lance Koth	Lance Koth
-Candidate	Jessica Hegge	Jessica Hegge
-Candidate	Rocky Blare	Rocky Blare
-Candidate	Caleb Finck	Caleb Finck
-Candidate	Mark S Smith	Mark S Smith
-Candidate	C. John McEnelly	C. John McEnelly
-Candidate	Roger Chase	Roger Chase
-Candidate	Lynn Schneider	Lynn Schneider
-Candidate	Spencer Gosch	Spencer Gosch
-Candidate	Charlie Hoffman	Charlie Hoffman
-Candidate	Amanda Bachmann	Amanda Bachmann
-Candidate	Will D Mortenson	Will D Mortenson
-Candidate	Mike Weisgram	Mike Weisgram
-Candidate	Jeff Barth	Jeff Barth
-Candidate	Jared Nieuwenhuis	Jared Nieuwenhuis
-Candidate	Tom Pischke	Tom Pischke
-Candidate	Jon Hansen	Jon Hansen
+Candidate	Erin Royer	Erin Royer
+Candidate	Erin Tobin	Erin Tobin
 Candidate	Ernest Weston Jr	Ernest Weston Jr
-Candidate	Peri Pourier	Peri Pourier
-Candidate	Bill Hines	Bill Hines (Withdrawn 7/28/2020 12:00:00 AM)
-Candidate	Liz May	Liz May
+Candidate	Ernie Otten	Ernie Otten
+Candidate	Fred Deutsch	Fred Deutsch
+Candidate	Gary Hanson	Gary Hanson
+Candidate	Gary L. Cammack	Gary L. Cammack
+Candidate	George Nelson	George Nelson
+Candidate	George W. Bush	GEORGE W. BUSH
+Candidate	Greg Jamison	Greg Jamison
+Candidate	Gregory Baldwin	Gregory Baldwin
+Candidate	Helene Duhamel	Helene Duhamel
+Candidate	Herman Otten	Herman Otten
+Candidate	Hillary Clinton	HILLARY CLINTON
+Candidate	Hugh M. Bartels	Hugh M. Bartels
+Candidate	Jack Kolbeck	Jack Kolbeck
 Candidate	Jade Addison	Jade Addison
-Candidate	Dean Wink	Dean Wink
-Candidate	Kirk J. Chaffee	Kirk J. Chaffee
-Candidate	Trish Ladner	Trish Ladner
-Candidate	Tim R. Goodwin	Tim R. Goodwin
-Candidate	Brooke Abdallah	Brooke Abdallah
-Candidate	Scott Odenbach	Scott Odenbach
-Candidate	Mary Fitzgerald	Mary Fitzgerald
-Candidate	Toni Diamond	Toni Diamond
 Candidate	James Preston	James Preston
-Candidate	Chris Johnson	Chris Johnson
-Candidate	Becky Drury	Becky Drury
-Candidate	Phil Jensen	Phil Jensen
-Candidate	Taffy Howard	Taffy Howard
-Candidate	Nick Anderson	Nick Anderson
-Candidate	Rick Stracqualursi	Rick Stracqualursi
-Candidate	Mike Derby	Mike Derby
+Candidate	Jamie Smith	Jamie Smith
+Candidate	Jared Nieuwenhuis	Jared Nieuwenhuis
+Candidate	Jay Williams	Jay Williams (Withdrawn 7/22/2020 12:00:00 AM)
+Candidate	Jean Hunhoff	Jean Hunhoff
+Candidate	Jeff Barth	Jeff Barth
+Candidate	Jennifer Healy Keintz	Jennifer Healy Keintz
 Candidate	Jess Olson	Jess Olson
-Candidate	David A. Hubbard	David A. Hubbard
-Candidate	Pat Cromwell	Pat Cromwell
-Candidate	Tina L. Mulally	Tina L. Mulally
-Candidate	Tony Randolph	Tony Randolph
-Candidate	Shawn Bordeaux	Shawn Bordeaux
-Candidate	Tim Feliciano	Tim Feliciano
-Candidate	Rebecca L Reimer	Rebecca L Reimer
+Candidate	Jessica Castleberry	Jessica Castleberry
+Candidate	Jessica Hegge	Jessica Hegge
+Candidate	Jessica Meyers	Jessica Meyers
+Candidate	Jim Bolin	Jim Bolin
+Candidate	Jim Stalzer	Jim Stalzer
+Candidate	Jo Jorgensen	Jo Jorgensen & Jeremy 'Spike' Cohen
+Candidate	Jo Jorgensen	Jo Jorgensen and Jeremy 'Spike' Cohen
+Candidate	Joan Stamm	Joan Stamm (Withdrawn 7/31/2020 12:00:00 AM)
+Candidate	Joel Koskan	Joel Koskan
+Candidate	John Kerry	JOHN KERRY
+Candidate	John MCCain	JOHN MCCAIN
+Candidate	John Mccain	JOHN MCCAIN
+Candidate	John Mills	John Mills
+Candidate	John P. Kessinger	John P. Kessinger
+Candidate	John Wiik	John Wiik
+Candidate	Jon Hansen	Jon Hansen
+Candidate	Jordan Foos	Jordan Foos
+Candidate	Joseph R Biden	Joseph R. Biden & Kamala Harris
+Candidate	Joseph R Biden	Joseph R. Biden and Kamala Harris
+Candidate	Josh Halsey	Josh Halsey (Withdrawn 7/30/2020 12:00:00 AM)
+Candidate	Joshua Klumb	Joshua Klumb
+Candidate	Judd W Schomp	Judd W Schomp
+Candidate	Julie Frye-Mueller	Julie Frye-Mueller
+Candidate	Justin Roemmick	Justin Roemmick
+Candidate	Justyn Hauck	Justyn Hauck (Withdrawn 8/4/2020 12:00:00 AM)
+Candidate	Kaleb W. Weis	Kaleb W. Weis
+Candidate	Kelly A. Sullivan	Kelly A. Sullivan
+Candidate	Kent Peterson	Kent Peterson
+Candidate	Kent Wilsey	Kent Wilsey
+Candidate	Kevin D. Jensen	Kevin D. Jensen
+Candidate	Kirk J. Chaffee	Kirk J. Chaffee
+Candidate	Kris K. Langer	Kris K. Langer (Withdrawn 8/4/2020 12:00:00 AM)
+Candidate	Kyle Schoenfish	Kyle Schoenfish
+Candidate	Lana Greenfield	Lana Greenfield
+Candidate	Lance Koth	Lance Koth
+Candidate	Larry P. Zikmund	Larry P. Zikmund
+Candidate	Larry Tidemann	Larry Tidemann
+Candidate	Lee Schoenbeck	Lee Schoenbeck
+Candidate	Leslie McLaughlin	Leslie McLaughlin
+Candidate	Linda Duba	Linda Duba
+Candidate	Liz May	Liz May
+Candidate	Louise Snodgrass	Louise Snodgrass
+Candidate	Lynn Schneider	Lynn Schneider
+Candidate	Maggie Sutton	Maggie Sutton
+Candidate	Margaret M Kuipers	Margaret M Kuipers
+Candidate	Mark S Smith	Mark S Smith
+Candidate	Mark Willadsen	Mark Willadsen
+Candidate	Marli Wiese	Marli Wiese
+Candidate	Marsha Symens	Marsha Symens
+Candidate	Marty Overweg	Marty Overweg
+Candidate	Mary Duvall	Mary Duvall
+Candidate	Mary Fitzgerald	Mary Fitzgerald
+Candidate	Matt Rosburg	Matt Rosburg
+Candidate	Michael Calabrese	Michael Calabrese
+Candidate	Michael G Diedrich	Michael G Diedrich
+Candidate	Michael H. Rohl	Michael H. Rohl
+Candidate	Michael Saba	Michael Saba
+Candidate	Michelle L. Hentschel	Michelle L. Hentschel
+Candidate	Mike Derby	Mike Derby
+Candidate	Mike Huber	Mike Huber
+Candidate	Mike Rounds	Mike Rounds
+Candidate	Mike Stevens	Mike Stevens
+Candidate	Mike Weisgram	Mike Weisgram
+Candidate	Mitt Romney	MITT ROMNEY
+Candidate	Nancy Kirstein	Nancy Kirstein
+Candidate	Nancy York	Nancy York
+Candidate	Nichole Cauwels	Nichole Cauwels
+Candidate	Nick Anderson	Nick Anderson
+Candidate	Norman B. Bliss	Norman B. Bliss
 Candidate	Oren Lee Lesmeister	Oren Lee Lesmeister
+Candidate	Other	OTHER
+Candidate	Pat Cromwell	Pat Cromwell
+Candidate	Paul R Miskimins	Paul R Miskimins
+Candidate	Peri Pourier	Peri Pourier
+Candidate	Phil Jensen	Phil Jensen
+Candidate	R Blake Curd	R Blake Curd
+Candidate	Ralph Nader	RALPH NADER
+Candidate	Randy 'Uriah' Luallin	Randy 'Uriah' Luallin
+Candidate	Randy Gross	Randy Gross
+Candidate	Rebecca L Reimer	Rebecca L Reimer
+Candidate	Red Dawn Foster	Red Dawn Foster
+Candidate	Remi W. B. Bald Eagle	Remi W. B. Bald Eagle
+Candidate	Reynold F. Nesiba	Reynold F. Nesiba
+Candidate	Rhonda Milstead	Rhonda Milstead
+Candidate	Richard L Thomason	Richard L Thomason
+Candidate	Richard Vasgaard	Richard Vasgaard
+Candidate	Rick Stracqualursi	Rick Stracqualursi
+Candidate	Rick W Knobe	Rick W Knobe
+Candidate	Rocky Blare	Rocky Blare
+Candidate	Roger Chase	Roger Chase
+Candidate	Ryan A. Ryder	Ryan A. Ryder
+Candidate	Ryan Cwach	Ryan Cwach
+Candidate	Ryan M. Maher	Ryan M. Maher
 Candidate	Sam Marty	Sam Marty
+Candidate	Scott Odenbach	Scott Odenbach
+Candidate	Seth William Van't Hof	Seth William Van't Hof
+Candidate	Shawn Bordeaux	Shawn Bordeaux
+Candidate	Sheryl Johnson	Sheryl Johnson
+Candidate	Spencer Gosch	Spencer Gosch
+Candidate	Steven D. McCleerey	Steven D. McCleerey
+Candidate	Steven Haugaard	Steven Haugaard
+Candidate	Sue Peterson	Sue Peterson
+Candidate	Susan Wismer	Susan Wismer
+Candidate	Suzanne 'Suzie' Jones Pranger	Suzanne 'Suzie' Jones Pranger
+Candidate	Sydney Davis	Sydney Davis
+Candidate	Taffy Howard	Taffy Howard
+Candidate	Tamara St. John	Tamara St. John
+Candidate	Taylor Rae Rehfeldt	Taylor Rae Rehfeldt
+Candidate	Thor Bardon	Thor Bardon
+Candidate	Tim Feliciano	Tim Feliciano
+Candidate	Tim R. Goodwin	Tim R. Goodwin
+Candidate	Timothy R. Johns	Timothy R. Johns
+Candidate	Timothy Reed	Timothy Reed
+Candidate	Tina L. Mulally	Tina L. Mulally
+Candidate	Tom Cool	Tom Cool
+Candidate	Tom Holmes	Tom Holmes
+Candidate	Tom Pischke	Tom Pischke
+Candidate	Toni Diamond	Toni Diamond
+Candidate	Toni Miller	Toni Miller
+Candidate	Tony Randolph	Tony Randolph
+Candidate	Trish Ladner	Trish Ladner
+Candidate	Troy Heinert	Troy Heinert
+Candidate	V. J. Smith	V. J. Smith
+Candidate	Val Parsley	Val Parsley
+Candidate	Wayne H. Steinhauer	Wayne H. Steinhauer
+Candidate	Will D Mortenson	Will D Mortenson
+CandidateContest	SD Attorney General	Attorney General
 CandidateContest	SD House District 1	State Representative District 1
 CandidateContest	SD House District 1	State Representative District 01
-CandidateContest	SD House District 2	State Representative District 2
-CandidateContest	SD House District 2	State Representative District 02
-CandidateContest	SD House District 3	State Representative District 3
-CandidateContest	SD House District 3	State Representative District 03
-CandidateContest	SD House District 4	State Representative District 4
-CandidateContest	SD House District 4	State Representative District 04
-CandidateContest	SD House District 5	State Representative District 5
-CandidateContest	SD House District 5	State Representative District 05
-CandidateContest	SD House District 6	State Representative District 6
-CandidateContest	SD House District 6	State Representative District 06
-CandidateContest	SD House District 7	State Representative District 7
-CandidateContest	SD House District 7	State Representative District 07
-CandidateContest	SD House District 8	State Representative District 8
-CandidateContest	SD House District 8	State Representative District 08
-CandidateContest	SD House District 9	State Representative District 9
-CandidateContest	SD House District 9	State Representative District 09
 CandidateContest	SD House District 10	State Representative District 10
 CandidateContest	SD House District 11	State Representative District 11
 CandidateContest	SD House District 12	State Representative District 12
@@ -217,6 +213,8 @@ CandidateContest	SD House District 16	State Representative District 16
 CandidateContest	SD House District 17	State Representative District 17
 CandidateContest	SD House District 18	State Representative District 18
 CandidateContest	SD House District 19	State Representative District 19
+CandidateContest	SD House District 2	State Representative District 2
+CandidateContest	SD House District 2	State Representative District 02
 CandidateContest	SD House District 20	State Representative District 20
 CandidateContest	SD House District 21	State Representative District 21
 CandidateContest	SD House District 22	State Representative District 22
@@ -226,9 +224,11 @@ CandidateContest	SD House District 25	State Representative District 25
 CandidateContest	SD House District 26A	State Representative District 26A
 CandidateContest	SD House District 26B	State Representative District 26B
 CandidateContest	SD House District 27	State Representative District 27
-CandidateContest	SD House District 28B	State Representative District 28B
 CandidateContest	SD House District 28A	State Representative District 28A
+CandidateContest	SD House District 28B	State Representative District 28B
 CandidateContest	SD House District 29	State Representative District 29
+CandidateContest	SD House District 3	State Representative District 3
+CandidateContest	SD House District 3	State Representative District 03
 CandidateContest	SD House District 30	State Representative District 30
 CandidateContest	SD House District 31	State Representative District 31
 CandidateContest	SD House District 32	State Representative District 32
@@ -239,6 +239,8 @@ CandidateContest	SD House District 36	State Representative District 36
 CandidateContest	SD House District 37	State Representative District 37
 CandidateContest	SD House District 38	State Representative District 38
 CandidateContest	SD House District 39	State Representative District 39
+CandidateContest	SD House District 4	State Representative District 4
+CandidateContest	SD House District 4	State Representative District 04
 CandidateContest	SD House District 40	State Representative District 40
 CandidateContest	SD House District 41	State Representative District 41
 CandidateContest	SD House District 42	State Representative District 42
@@ -249,6 +251,8 @@ CandidateContest	SD House District 46	State Representative District 46
 CandidateContest	SD House District 47	State Representative District 47
 CandidateContest	SD House District 48	State Representative District 48
 CandidateContest	SD House District 49	State Representative District 49
+CandidateContest	SD House District 5	State Representative District 5
+CandidateContest	SD House District 5	State Representative District 05
 CandidateContest	SD House District 50	State Representative District 50
 CandidateContest	SD House District 51	State Representative District 51
 CandidateContest	SD House District 52	State Representative District 52
@@ -259,6 +263,8 @@ CandidateContest	SD House District 56	State Representative District 56
 CandidateContest	SD House District 57	State Representative District 57
 CandidateContest	SD House District 58	State Representative District 58
 CandidateContest	SD House District 59	State Representative District 59
+CandidateContest	SD House District 6	State Representative District 6
+CandidateContest	SD House District 6	State Representative District 06
 CandidateContest	SD House District 60	State Representative District 60
 CandidateContest	SD House District 61	State Representative District 61
 CandidateContest	SD House District 62	State Representative District 62
@@ -269,6 +275,8 @@ CandidateContest	SD House District 66	State Representative District 66
 CandidateContest	SD House District 67	State Representative District 67
 CandidateContest	SD House District 68	State Representative District 68
 CandidateContest	SD House District 69	State Representative District 69
+CandidateContest	SD House District 7	State Representative District 7
+CandidateContest	SD House District 7	State Representative District 07
 CandidateContest	SD House District 70	State Representative District 70
 CandidateContest	SD House District 71	State Representative District 71
 CandidateContest	SD House District 72	State Representative District 72
@@ -279,6 +287,8 @@ CandidateContest	SD House District 76	State Representative District 76
 CandidateContest	SD House District 77	State Representative District 77
 CandidateContest	SD House District 78	State Representative District 78
 CandidateContest	SD House District 79	State Representative District 79
+CandidateContest	SD House District 8	State Representative District 8
+CandidateContest	SD House District 8	State Representative District 08
 CandidateContest	SD House District 80	State Representative District 80
 CandidateContest	SD House District 81	State Representative District 81
 CandidateContest	SD House District 82	State Representative District 82
@@ -289,29 +299,17 @@ CandidateContest	SD House District 86	State Representative District 86
 CandidateContest	SD House District 87	State Representative District 87
 CandidateContest	SD House District 88	State Representative District 88
 CandidateContest	SD House District 89	State Representative District 89
+CandidateContest	SD House District 9	State Representative District 9
+CandidateContest	SD House District 9	State Representative District 09
 CandidateContest	SD House District 90	State Representative District 90
 CandidateContest	SD House District 91	State Representative District 91
 CandidateContest	SD House District 92	State Representative District 92
 CandidateContest	SD House District 93	State Representative District 93
 CandidateContest	SD House District 94	State Representative District 94
+CandidateContest	SD Public Utilities Commissioner	Public Utilities Commissioner
+CandidateContest	SD Secretary of State	Secretary of State
 CandidateContest	SD Senate District 1	State Senator District 1
 CandidateContest	SD Senate District 1	State Senator District 01
-CandidateContest	SD Senate District 2	State Senator District 2
-CandidateContest	SD Senate District 2	State Senator District 02
-CandidateContest	SD Senate District 3	State Senator District 3
-CandidateContest	SD Senate District 3	State Senator District 03
-CandidateContest	SD Senate District 4	State Senator District 4
-CandidateContest	SD Senate District 4	State Senator District 04
-CandidateContest	SD Senate District 5	State Senator District 5
-CandidateContest	SD Senate District 5	State Senator District 05
-CandidateContest	SD Senate District 6	State Senator District 6
-CandidateContest	SD Senate District 6	State Senator District 06
-CandidateContest	SD Senate District 7	State Senator District 7
-CandidateContest	SD Senate District 7	State Senator District 07
-CandidateContest	SD Senate District 8	State Senator District 8
-CandidateContest	SD Senate District 8	State Senator District 08
-CandidateContest	SD Senate District 9	State Senator District 9
-CandidateContest	SD Senate District 9	State Senator District 09
 CandidateContest	SD Senate District 10	State Senator District 10
 CandidateContest	SD Senate District 11	State Senator District 11
 CandidateContest	SD Senate District 12	State Senator District 12
@@ -322,6 +320,8 @@ CandidateContest	SD Senate District 16	State Senator District 16
 CandidateContest	SD Senate District 17	State Senator District 17
 CandidateContest	SD Senate District 18	State Senator District 18
 CandidateContest	SD Senate District 19	State Senator District 19
+CandidateContest	SD Senate District 2	State Senator District 2
+CandidateContest	SD Senate District 2	State Senator District 02
 CandidateContest	SD Senate District 20	State Senator District 20
 CandidateContest	SD Senate District 21	State Senator District 21
 CandidateContest	SD Senate District 22	State Senator District 22
@@ -332,6 +332,8 @@ CandidateContest	SD Senate District 26	State Senator District 26
 CandidateContest	SD Senate District 27	State Senator District 27
 CandidateContest	SD Senate District 28	State Senator District 28
 CandidateContest	SD Senate District 29	State Senator District 29
+CandidateContest	SD Senate District 3	State Senator District 3
+CandidateContest	SD Senate District 3	State Senator District 03
 CandidateContest	SD Senate District 30	State Senator District 30
 CandidateContest	SD Senate District 31	State Senator District 31
 CandidateContest	SD Senate District 32	State Senator District 32
@@ -342,6 +344,8 @@ CandidateContest	SD Senate District 36	State Senator District 36
 CandidateContest	SD Senate District 37	State Senator District 37
 CandidateContest	SD Senate District 38	State Senator District 38
 CandidateContest	SD Senate District 39	State Senator District 39
+CandidateContest	SD Senate District 4	State Senator District 4
+CandidateContest	SD Senate District 4	State Senator District 04
 CandidateContest	SD Senate District 40	State Senator District 40
 CandidateContest	SD Senate District 41	State Senator District 41
 CandidateContest	SD Senate District 42	State Senator District 42
@@ -350,16 +354,31 @@ CandidateContest	SD Senate District 44	State Senator District 44
 CandidateContest	SD Senate District 45	State Senator District 45
 CandidateContest	SD Senate District 46	State Senator District 46
 CandidateContest	SD Senate District 47	State Senator District 47
+CandidateContest	SD Senate District 5	State Senator District 5
+CandidateContest	SD Senate District 5	State Senator District 05
+CandidateContest	SD Senate District 6	State Senator District 6
+CandidateContest	SD Senate District 6	State Senator District 06
+CandidateContest	SD Senate District 7	State Senator District 7
+CandidateContest	SD Senate District 7	State Senator District 07
+CandidateContest	SD Senate District 8	State Senator District 8
+CandidateContest	SD Senate District 8	State Senator District 08
+CandidateContest	SD Senate District 9	State Senator District 9
+CandidateContest	SD Senate District 9	State Senator District 09
 CandidateContest	US House SD District 1	United States Representative
 CandidateContest	US President (SD)	Presidential Electors
+CandidateContest	US President (SD)	PRESIDENT
+CandidateContest	US President (SD)	US PRESIDENT
 CandidateContest	US Senate SD	United States Senator
-CandidateContest	SD Public Utilities Commissioner	Public Utilities Commissioner
-CandidateContest	SD Attorney General	Attorney General
-CandidateContest	SD Secretary of State	Secretary of State
+CountItemType	total	TOTAL
 Party	Democratic Party	DEM
-Party	Republican Party	REP
-Party	Libertarian Party	LIB
+Party	Democratic Party	DEMOCRAT
+Party	Green Party	GREEN
 Party	Independent Party	IND
+Party	Libertarian Party	LIB
+Party	Libertarian Party	LIBERTARIAN
+Party	Republican Party	REP
+Party	Republican Party	REPUBLICAN
+Party	none or unknown	OTHER
 ReportingUnit	South Dakota;Aurora County	Aurora
 ReportingUnit	South Dakota;Beadle County	Beadle
 ReportingUnit	South Dakota;Bennett County	Bennett

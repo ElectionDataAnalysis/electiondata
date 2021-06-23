@@ -61,3 +61,13 @@ Dartanyon 'DAW' Williams
 'Mike' Johnson
 'Scotty' Robinson
 'Matt' Hasty
+Al Gore
+Barack Obama
+George W. Bush
+Hillary Clinton
+John Kerry
+John Mccain
+Mitt Romney
+Other
+Ralph Nader
+John MCCain

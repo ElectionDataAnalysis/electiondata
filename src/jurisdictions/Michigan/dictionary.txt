@@ -592,6 +592,7 @@ Candidate	John Kerry	JOHN KERRY
 Candidate	John Kivela	John Kivela
 Candidate	John Lacny	John Lacny
 Candidate	John Lawrence	John Lawrence
+Candidate	John MCCain	JOHN MCCAIN
 Candidate	John Mccain	JOHN MCCAIN
 Candidate	John Moolenaar	John Moolenaar
 Candidate	John N. Damoose	John N. Damoose

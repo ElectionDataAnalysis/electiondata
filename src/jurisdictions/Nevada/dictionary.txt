@@ -1723,6 +1723,7 @@ Candidate	John C. Ellison	'Ellison, John C.'
 Candidate	John C. Ellison	Ellison, John
 Candidate	John C. Ellison	'Ellison, John'
 Candidate	John Kerry	JOHN KERRY
+Candidate	John MCCain	JOHN MCCAIN
 Candidate	John Mccain	JOHN MCCAIN
 Candidate	Johnson, Adam C.	Johnson, Adam C.
 Candidate	Johnson, Adam C.	'Johnson, Adam C.'

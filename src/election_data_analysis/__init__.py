@@ -7,7 +7,8 @@ from election_data_analysis import (
     analyze as a,
     nistformats as nist,
     visualize as viz,
-    externaldata as exd
+    externaldata as exd,
+    multielection as multi
 )
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy.orm.session import Session
@@ -913,6 +914,119 @@ class DataLoader:
         )
         return err
 
+    def update_juris_from_multifile(self, working: pd.DataFrame,juris_true,juris_system) -> Optional[dict]:
+        update_err = None
+
+        # add elections to Election.txt
+        election_df = pd.DataFrame([[f"{e} General","general"] for e in multi.mit_elections],columns=["Name","ElectionType"])
+        update_err = ui.consolidate_errors(
+            [update_err,multi.add_elections(juris_system,self.d["repository_content_root"],election_df)]
+        )
+
+        # add candidates to Candidate.txt
+        candidate_col = multi.mit_cols["Candidate_raw"]
+        candidates = sorted(working[candidate_col].unique())
+
+        # add candidates to dictionary
+        candidate_map = {x:multi.correct(x.title()) for x in multi.mit_candidates}
+        update_err = ui.consolidate_errors(
+            [update_err,multi.add_candidates(
+                juris_system,self.d["repository_content_root"],candidates,candidate_map
+            )]
+        )
+
+        # add contests to dictionary  # TODO this belongs with constants, but depends on jurisdiction...
+        contest_d = {
+            "PRESIDENT":f"US President ({multi.abbr[juris_true]})",
+            "US PRESIDENT":f"US President ({multi.abbr[juris_true]})",
+        }
+        update_err = ui.consolidate_errors(
+            [update_err,
+             multi.add_dictionary_entries(juris_system,self.d["repository_content_root"],"CandidateContest",contest_d)]
+        )
+        # add parties to dictionary
+        update_err = ui.consolidate_errors(
+            [update_err,multi.add_dictionary_entries(
+                juris_system,self.d["repository_content_root"],"Party",multi.mit_party
+            )]
+        )
+
+        # add vote_count_types to dictionary
+        update_err = ui.consolidate_errors(
+            [update_err,multi.add_dictionary_entries(
+                juris_system,self.d["repository_content_root"],"CountItemType",multi.mit_cit
+            )]
+        )
+        ## load jurisdiction info to db
+        juris.load_or_update_juris_to_db(self.session,self.d["repository_content_root"],juris_true,juris_system)
+
+        return update_err
+
+    def load_multielection(self, multi_file: str):
+        """load multi-election data from <multi_file> 
+        (as of 6/2021, this works just for the MIT presidential file)"""
+        err = None
+        # read data for listed elections
+        df = pd.read_csv(multi_file,sep="\t",dtype=str)
+
+        # retype count column to int
+        df[multi.mit_cols["Count"]] = df[multi.mit_cols["Count"]].fillna(0).astype(int,errors="ignore")
+
+        df = df[df[multi.mit_cols["Election"]].isin(multi.mit_elections.keys())]
+        
+        # treat jurisdictions one by one
+        jurisdictions = sorted(list(df[multi.mit_cols["Jurisdiction"]].unique()))
+        for j in jurisdictions:
+            juris_true_name = multi.correct(j.title())
+            juris_system_name = juris.system_name_from_true_name(juris_true_name)
+            jurisdiction_id = db.name_to_id(self.session,"ReportingUnit",juris_true_name)
+            j_df = df[(df[multi.mit_cols["Jurisdiction"]] == j)]
+            # optionally: update juris in db
+            new_err = self.update_juris_from_multifile(j_df,juris_true_name, juris_system_name)
+
+            ## load results to db
+            for election in multi.mit_elections.values():
+                election_id = db.name_to_id(self.session,"Election", election)
+                constants = dict()
+                # create record in _datafile table
+                datafile_ids,err = datafile_info(
+                    self.session.bind,
+                    multi_file,
+                    f"MIT_pres_gen_Y2K_{juris_system_name}_{election}",
+                    Path(multi_file).name,
+                    multi.mit_datafile_info["download_date"],
+                    multi.mit_datafile_info["source"],
+                    multi.mit_datafile_info["note"],
+                    jurisdiction_id,
+                    election_id,
+                    False,
+                )
+
+                je_df = j_df[j_df[multi.mit_cols["Election"]] == election].copy()
+                if je_df.empty:
+                    continue
+                # rename datafile columns
+                # TODO tech debt: this should happen earlier, which will simplify update_jurisdiction too
+                je_df.rename(columns={v:k for k,v in multi.mit_cols.items()},inplace=True)
+                try:
+                    # load data
+                    new_err = load_results_df(self.session,je_df,dict(),juris_true_name,
+                                                  "load_multi_ej_file",
+                                                  os.path.join(self.d["repository_content_root"],"jurisdictions",
+                                                               juris_system_name),
+                                                  datafile_ids,"flat_text"
+                                                  )
+                    if new_err:
+                        err = ui.consolidate_errors([err,new_err])
+                except Exception as exc:
+                    err = ui.add_new_error(
+                        err,
+                        "munge",
+                        "load_multi_ej_file",
+                        f"Unexpected error while munging raw to ids: {exc}"
+                    )
+        err  = ui.report(err,self.d["reports_and_plots_dir"])
+        return
 
 def check_par_file_elements(
     ini_d: dict,
@@ -2792,7 +2906,7 @@ def datafile_info(connection,results_filename_for_error_reporting,
         if ui.fatal_error(err):
             return [0,0],err
         else:
-            col_map = {"short_name":"short_name"}
+            col_map = {"short_name":"short_name", "note":"note", "file_name": "file_name"}
             datafile_id = db.append_id_to_dframe(
                 connection,data,"_datafile",col_map=col_map
             ).iloc[0]["_datafile_Id"]

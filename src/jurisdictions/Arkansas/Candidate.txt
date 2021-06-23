@@ -411,7 +411,7 @@ Senator Ronald Caldwell
 Senator Ricky Hill
 Senator Lance Eads
 Senator Jonathan Dismang
-"Senator Jimmy Hickey, Jr."
+Senator Jimmy Hickey, Jr.
 Senator Jim Hendren
 Senator Jane English
 Senator Eddie L. Cheatham
@@ -459,7 +459,7 @@ Representative Clint Penzo
 Representative Cindy Crawford
 Representative Carol Dalby
 Representative Cameron Cooper
-"Rep. Milton Nicks, Jr."
+Rep. Milton Nicks, Jr.
 Rep. Gayla Hendren McKenzie
 Rep. David Hillman
 Reginald (Ray) Prunty
@@ -472,7 +472,7 @@ Mark H. Berry
 Mark D. McElroy
 Lisa L. Hassell
 Lee Johnson
-"Larry D. Faulkner, Sr."
+Larry D. Faulkner, Sr.
 Kelly Ross Krout
 Kayla Applegate
 Justin Reeves
@@ -486,7 +486,7 @@ James B. Phillips
 Howard Beaty
 Hawley Woods
 Gwen Ford Faulkenberry
-"George Calloway, Jr."
+George Calloway, Jr.
 David Norman
 Daisy Bonilla
 Clarke Tucker
@@ -503,7 +503,7 @@ Ashley Hudson
 Alisa Blaize Dixon
 Jim Hendren
 Lance Eads
-"Jimmy Hickey, Jr."
+Jimmy Hickey, Jr.
 Bruce Maloch
 Breanne Davis
 Dave Wallace
@@ -539,7 +539,7 @@ Carlton Wing
 Brian S. Evans
 Cameron Cooper
 Reginald Murdock
-"Milton Nicks, Jr."
+Milton Nicks, Jr.
 Deborah Ferguson
 Dwight Tosh
 Joe Jett
@@ -579,3 +579,13 @@ Jill Bryant
 Brian Carroll
 Don Blankenship
 Jo Jorgensen
+Al Gore
+Barack Obama
+George W. Bush
+Hillary Clinton
+John Kerry
+John Mccain
+Mitt Romney
+Other
+Ralph Nader
+John MCCain

@@ -1,6 +1,78 @@
 cdf_element	cdf_internal_name	raw_identifier_value
+Candidate	ALBIO SIRES (w)	ALBIO SIRES (w) *
+Candidate	ANDY KIM (w)	ANDY KIM (w) *
+Candidate	Akil Khalfani	Akil Khalfani
+Candidate	Al Gore	AL GORE
+Candidate	Amy Kennedy	Amy Kennedy
+Candidate	Andrew Pachuta	Andrew Pachuta
+Candidate	BILL PASCRELL JR. (w)	BILL PASCRELL JR. (w) *
+Candidate	BONNIE WATSON COLEMAN	BONNIE WATSON COLEMAN (w)
+Candidate	Barack Obama	BARACK OBAMA
+Candidate	Bill Hammons	Bill Hammons ( Vice President Eric Bodenstab)
+Candidate	Billy Prempeh	Billy Prempeh
+Candidate	CHRISTOPHER H. SMITH (w)	CHRISTOPHER H. SMITH (w) *
+Candidate	CORY BOOKER (w)	CORY BOOKER (w) *
+Candidate	Chris Auriemma	Chris Auriemma
+Candidate	Christian Onuoha	Christian Onuoha
+Candidate	Claire H. Gustafson	Claire H. Gustafson
+Candidate	DONALD M. PAYNE JR. (w)	DONALD M. PAYNE JR. (w) *
+Candidate	DONALD W. NORCROSS (w)	DONALD W. NORCROSS (w) *
+Candidate	Dan Delaney	Dan Delaney
+Candidate	Daniel Burke	Daniel Burke
+Candidate	David Richt	David Richt
+Candidate	Don Blankenship	Don Blankenship ( Vice President William Mohr)
+Candidate	Donald J. Trump	Donald J. Trump * ( Vice President Michael R. Pence)
+Candidate	Donald J. Trump	DONALD TRUMP
+Candidate	Edward 'Nj Weedman' Forchion	Edward 'Nj Weedman' Forchion
+Candidate	FRANK PALLONE JR. (w)	FRANK PALLONE JR. (w) *
+Candidate	Frank T. Pallotta	Frank T. Pallotta
+Candidate	George W. Bush	GEORGE W. BUSH
+Candidate	Gloria Estela La Riva	Gloria Estela La Riva ( Vice President Sunil Freeman)
+Candidate	Hank Schroeder	Hank Schroeder
+Candidate	Hillary Clinton	HILLARY CLINTON
+Candidate	Howie Hawkins	Howie Hawkins ( Vice President Angela Walker)
+Candidate	JEFF VAN DREW (w)	JEFF VAN DREW (w) *
+Candidate	JOSH GOTTHEIMER (w)	JOSH GOTTHEIMER (w) *
+Candidate	Jason Todd Mushnick	Jason Todd Mushnick
+Candidate	Jenna Harvey	Jenna Harvey
+Candidate	Jennifer Zinone	Jennifer Zinone
+Candidate	Jesse Ehrnstrom	Jesse Ehrnstrom
+Candidate	Jo Jorgensen	Jo Jorgensen ( Vice President Spike Cohen)
+Candidate	John Kerry	JOHN KERRY
+Candidate	John MCCain	JOHN MCCAIN
+Candidate	John Mccain	JOHN MCCAIN
+Candidate	John Mirrione	John Mirrione
+Candidate	Joseph R. Biden	JOSEPH R. BIDEN (w) (VICE PRESIDENT KAMALA HARRIS)
+Candidate	Kenneth J. Cody	Kenneth J. Cody
+Candidate	Khaliah Fitchette	Khaliah Fitchette
+Candidate	Louis A. Vellucci	Louis A. Vellucci
+Candidate	MIKIE SHERRILL (w)	MIKIE SHERRILL (w) *
+Candidate	Madelyn R. Hoffman	Madelyn R. Hoffman
+Candidate	Mark Razzoli	Mark Razzoli
+Candidate	Martin Weber	Martin Weber
+Candidate	Michael J. Rufo	Michael J. Rufo
+Candidate	Mitt Romney	MITT ROMNEY
+Candidate	Other	OTHER
+Candidate	Ralph Nader	RALPH NADER
+Candidate	Rikin 'Rik' Mehta	Rikin 'Rik' Mehta
+Candidate	Robert Shapiro	Robert Shapiro
+Candidate	Roque 'Rocky' De La Fuente	Roque 'Rocky' De La Fuente ( Vice President Darcy G. Richardson)
+Candidate	Rosemary Becchi	Rosemary Becchi
+Candidate	Stephanie Schmid	Stephanie Schmid
+Candidate	Susan Margaret Collins	Collins, Susan Margaret
+Candidate	TOM MALINOWSKI (w)	TOM MALINOWSKI (w) *
+Candidate	Thomas H. Kean Jr	Thomas H. Kean Jr
+Candidate	Veronica Fernandez	Veronica Fernandez
+CandidateContest	NJ Attorney General	NJ Attorney General
+CandidateContest	NJ Governor	NJ Governor
 CandidateContest	NJ House District 25	Twenty-Fifth Legislative District
+CandidateContest	NJ Lieutenant Governor	NJ Lieutenant Governor
+CandidateContest	NJ Secretary of State	NJ Secretary of State
+CandidateContest	NJ Treasurer	NJ Treasurer
 CandidateContest	US House NJ District 1	First Congressional District
+CandidateContest	US House NJ District 10	Tenth Congressional District
+CandidateContest	US House NJ District 11	Eleventh Congressional District
+CandidateContest	US House NJ District 12	Twelfth Congressional District
 CandidateContest	US House NJ District 2	Second Congressional District
 CandidateContest	US House NJ District 3	Third Congressional District
 CandidateContest	US House NJ District 4	Fourth Congressional District
@@ -9,26 +81,44 @@ CandidateContest	US House NJ District 6	Sixth Congressional District
 CandidateContest	US House NJ District 7	Seventh Congressional District
 CandidateContest	US House NJ District 8	Eighth Congressional District
 CandidateContest	US House NJ District 9	Ninth Congressional District
-CandidateContest	US House NJ District 10	Tenth Congressional District
-CandidateContest	US House NJ District 11	Eleventh Congressional District
-CandidateContest	US House NJ District 12	Twelfth Congressional District
 CandidateContest	US President (NJ)	President
-CandidateContest	NJ Governor	NJ Governor
+CandidateContest	US President (NJ)	PRESIDENT
+CandidateContest	US President (NJ)	US PRESIDENT
 CandidateContest	US Senate NJ	US Senate
-CandidateContest	NJ Attorney General	NJ Attorney General
-CandidateContest	NJ Lieutenant Governor	NJ Lieutenant Governor
-CandidateContest	NJ Treasurer	NJ Treasurer
-CandidateContest	NJ Secretary of State	NJ Secretary of State
+CountItemType	total	total
+CountItemType	total	TOTAL
+Election	2016 General	2016 General
+Election	2018 General	2018 General
 Election	2020 General	2020 General
 Election	2020 Primary	2020 Primary
-Election	2018 General	2018 General
-Election	2016 General	2016 General
+Party	Alliance Party	ALLIANCE PARTY
+Party	American Values	AMERICAN VALUES
+Party	Building Your Legacy	BUILDING YOUR LEGACY
+Party	Common Sense Party	COMMON SENSE PARTY
+Party	Constitution Party	CONSTITUTION PARTY
 Party	Democratic Party	Democratic
-Party	Republican Party	Republican
+Party	Democratic Party	DEMOCRAT
+Party	For The People	FOR THE PEOPLE
 Party	Green Party	Green Party
 Party	Green Party	GREEN PARTY
+Party	Green Party	GREEN
+Party	Independent Constitutional Candidate	INDEPENDENT CONSTITUTIONAL CANDIDATE
+Party	Justice Mercy Humility	JUSTICE MERCY HUMILITY
+Party	Larouche Was Right	LAROUCHE WAS RIGHT
 Party	Libertarian Party	LIBERTARIAN PARTY
 Party	Libertarian Party	Libertarian Party
+Party	Libertarian Party	LIBERTARIAN
+Party	Make Change Happen	MAKE CHANGE HAPPEN
+Party	No Slogan	NO SLOGAN
+Party	No Slogan Filed	NO SLOGAN FILED
+Party	Of, By, For!	OF, BY, FOR!
+Party	Republican Party	Republican
+Party	Republican Party	REPUBLICAN
+Party	Socialism And Liberation	SOCIALISM AND LIBERATION
+Party	Truth Vision Hope	TRUTH VISION HOPE
+Party	Unity Party America	UNITY PARTY AMERICA
+Party	Veteran For Change	VETERAN FOR CHANGE
+Party	none or unknown	OTHER
 ReportingUnit	New Jersey	New Jersey
 ReportingUnit	New Jersey;Atlantic County	ATLANTIC
 ReportingUnit	New Jersey;Bergen County	BERGEN
@@ -51,74 +141,3 @@ ReportingUnit	New Jersey;Somerset County	SOMERSET
 ReportingUnit	New Jersey;Sussex County	SUSSEX
 ReportingUnit	New Jersey;Union County	UNION
 ReportingUnit	New Jersey;Warren County	WARREN
-Candidate	Veronica Fernandez	Veronica Fernandez
-Candidate	Thomas H. Kean Jr	Thomas H. Kean Jr
-Candidate	TOM MALINOWSKI (w)	TOM MALINOWSKI (w) *
-Candidate	Stephanie Schmid	Stephanie Schmid
-Candidate	Rosemary Becchi	Rosemary Becchi
-Candidate	Roque 'Rocky' De La Fuente	Roque 'Rocky' De La Fuente ( Vice President Darcy G. Richardson)
-Candidate	Robert Shapiro	Robert Shapiro
-Candidate	Rikin 'Rik' Mehta	Rikin 'Rik' Mehta
-Candidate	Michael J. Rufo	Michael J. Rufo
-Candidate	Martin Weber	Martin Weber
-Candidate	Mark Razzoli	Mark Razzoli
-Candidate	Madelyn R. Hoffman	Madelyn R. Hoffman
-Candidate	MIKIE SHERRILL (w)	MIKIE SHERRILL (w) *
-Candidate	Louis A. Vellucci	Louis A. Vellucci
-Candidate	Khaliah Fitchette	Khaliah Fitchette
-Candidate	Kenneth J. Cody	Kenneth J. Cody
-Candidate	John Mirrione	John Mirrione
-Candidate	Jo Jorgensen	Jo Jorgensen ( Vice President Spike Cohen)
-Candidate	Jesse Ehrnstrom	Jesse Ehrnstrom
-Candidate	Jennifer Zinone	Jennifer Zinone
-Candidate	Jenna Harvey	Jenna Harvey
-Candidate	Jason Todd Mushnick	Jason Todd Mushnick
-Candidate	JOSH GOTTHEIMER (w)	JOSH GOTTHEIMER (w) *
-Candidate	Joseph R. Biden	JOSEPH R. BIDEN (w) (VICE PRESIDENT KAMALA HARRIS)
-Candidate	JEFF VAN DREW (w)	JEFF VAN DREW (w) *
-Candidate	Howie Hawkins	Howie Hawkins ( Vice President Angela Walker)
-Candidate	Hank Schroeder	Hank Schroeder
-Candidate	Gloria Estela La Riva	Gloria Estela La Riva ( Vice President Sunil Freeman)
-Candidate	Frank T. Pallotta	Frank T. Pallotta
-Candidate	FRANK PALLONE JR. (w)	FRANK PALLONE JR. (w) *
-Candidate	Edward 'Nj Weedman' Forchion	Edward 'Nj Weedman' Forchion
-Candidate	Donald J. Trump	Donald J. Trump * ( Vice President Michael R. Pence)
-Candidate	Don Blankenship	Don Blankenship ( Vice President William Mohr)
-Candidate	David Richt	David Richt
-Candidate	Daniel Burke	Daniel Burke
-Candidate	Dan Delaney	Dan Delaney
-Candidate	DONALD W. NORCROSS (w)	DONALD W. NORCROSS (w) *
-Candidate	DONALD M. PAYNE JR. (w)	DONALD M. PAYNE JR. (w) *
-Candidate	Claire H. Gustafson	Claire H. Gustafson
-Candidate	Christian Onuoha	Christian Onuoha
-Candidate	Chris Auriemma	Chris Auriemma
-Candidate	CORY BOOKER (w)	CORY BOOKER (w) *
-Candidate	CHRISTOPHER H. SMITH (w)	CHRISTOPHER H. SMITH (w) *
-Candidate	Billy Prempeh	Billy Prempeh
-Candidate	Bill Hammons	Bill Hammons ( Vice President Eric Bodenstab)
-Candidate	BONNIE WATSON COLEMAN	BONNIE WATSON COLEMAN (w)
-Candidate	BILL PASCRELL JR. (w)	BILL PASCRELL JR. (w) *
-Candidate	Andrew Pachuta	Andrew Pachuta
-Candidate	Amy Kennedy	Amy Kennedy
-Candidate	Akil Khalfani	Akil Khalfani
-Candidate	ANDY KIM (w)	ANDY KIM (w) *
-Candidate	ALBIO SIRES (w)	ALBIO SIRES (w) *
-Candidate	Susan Margaret Collins	Collins, Susan Margaret
-Party	Veteran For Change	VETERAN FOR CHANGE
-Party	Unity Party America	UNITY PARTY AMERICA
-Party	Truth Vision Hope	TRUTH VISION HOPE
-Party	Socialism And Liberation	SOCIALISM AND LIBERATION
-Party	Of, By, For!	OF, BY, FOR!
-Party	No Slogan Filed	NO SLOGAN FILED
-Party	No Slogan	NO SLOGAN
-Party	Make Change Happen	MAKE CHANGE HAPPEN
-Party	Larouche Was Right	LAROUCHE WAS RIGHT
-Party	Justice Mercy Humility	JUSTICE MERCY HUMILITY
-Party	Independent Constitutional Candidate	INDEPENDENT CONSTITUTIONAL CANDIDATE
-Party	For The People	FOR THE PEOPLE
-Party	Constitution Party	CONSTITUTION PARTY
-Party	Common Sense Party	COMMON SENSE PARTY
-Party	Building Your Legacy	BUILDING YOUR LEGACY
-Party	American Values	AMERICAN VALUES
-Party	Alliance Party	ALLIANCE PARTY
-CountItemType	total	total

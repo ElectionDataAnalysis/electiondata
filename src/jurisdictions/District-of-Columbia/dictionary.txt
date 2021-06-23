@@ -1,4 +1,73 @@
 cdf_element	cdf_internal_name	raw_identifier_value
+Candidate	A'Shia Howard	A'Shia Howard
+Candidate	Al Gore	AL GORE
+Candidate	Alexander M. 'Alex' Padro	Alexander M. 'Alex' Padro
+Candidate	Amir Lowery	Amir Lowery
+Candidate	Ann C. Wilcox	Ann C. Wilcox
+Candidate	Barack Obama	BARACK OBAMA
+Candidate	Barbara Washington Franklin	Barbara Washington Franklin
+Candidate	Brock Pierce	Brock Pierce - Karla Ballard
+Candidate	Brooke Pinto	Brooke Pinto
+Candidate	Calvin H. Gurley	Calvin H. Gurley
+Candidate	Chander Jayaraman	Chander Jayaraman
+Candidate	Christina D. Henderson	Christina D. Henderson
+Candidate	Christopher Cole	Christopher Cole
+Candidate	Claudia Barragán	Claudia Barragán
+Candidate	Cornelia Weiss	Cornelia Weiss
+Candidate	David Krucoff	David Krucoff
+Candidate	Donald J. Trump	Donald J. Trump - Michael R. Pence
+Candidate	Donald J. Trump	DONALD TRUMP
+Candidate	Ed Lazere	Ed Lazere
+Candidate	Eleanor Holmes Norton	Eleanor Holmes Norton
+Candidate	Eleanor Ory (Echo)	Eleanor Ory (Echo)
+Candidate	Eric M. Rogers	Eric M. Rogers
+Candidate	Franklin Garcia	Franklin Garcia
+Candidate	Fred Hill	Fred Hill
+Candidate	George W. Bush	GEORGE W. BUSH
+Candidate	Gloria La Riva	Gloria La Riva - Sunil Freeman
+Candidate	Hillary Clinton	HILLARY CLINTON
+Candidate	Howie Hawkins	Howie Hawkins - Angela Walker
+Candidate	Janeese Lewis George	Janeese Lewis George
+Candidate	Jeanné Lewis	Jeanné Lewis
+Candidate	Jo Jorgensen	Jo Jorgensen - Jeremy 'Spike' Cohe
+Candidate	Joe Bishop-Henchman	Joe Bishop-Henchman
+Candidate	John 'Recovery' Cheeks	John 'Recovery' Cheeks
+Candidate	John Kerry	JOHN KERRY
+Candidate	John MCCain	JOHN MCCAIN
+Candidate	John Mccain	JOHN MCCAIN
+Candidate	Joseph R. Biden	Joseph R. Biden - Kamala D. Harris
+Candidate	Joyce (Chestnut) Robinson-Paul	Joyce (Chestnut) Robinson-Paul
+Candidate	Kathy Henderson	Kathy Henderson
+Candidate	Keith Silver	Keith Silver
+Candidate	Marcus Goodwin	Marcus Goodwin
+Candidate	Mario Cristaldo	Mario Cristaldo
+Candidate	Markus Batchelor	Markus Batchelor
+Candidate	Martín Miguel Fernandez	Martín Miguel Fernandez
+Candidate	Marya Pickering	Marya Pickering
+Candidate	Michangelo 'DoctorMic' Scruggs	Michangelo 'DoctorMic' Scruggs
+Candidate	Mitt Romney	MITT ROMNEY
+Candidate	Mónica Palacio	Mónica Palacio
+Candidate	Natale Lino Stracuzzi	Natale Lino Stracuzzi
+Candidate	Nate 'Ward 8' Derenge	Nate 'Ward 8' Derenge
+Candidate	Omari Musa	Omari Musa
+Candidate	Other	OTHER
+Candidate	Oye Owolewa	Oye Owolewa
+Candidate	Patrick Hynes	Patrick Hynes
+Candidate	Paul Strauss	Paul Strauss
+Candidate	Perry Redd	Perry Redd
+Candidate	Peter Bolton	Peter Bolton
+Candidate	Ralph Nader	RALPH NADER
+Candidate	Randy Downs	Randy Downs
+Candidate	Rick Murphree	Rick Murphree
+Candidate	Robert White	Robert White
+Candidate	Sohaer Rizvi Syed	Sohaer Rizvi Syed
+Candidate	Trayon 'Ward Eight' White	Trayon 'Ward Eight' White
+Candidate	Vincent C. Gray	Vincent C. Gray
+Candidate	Vincent Orange	Vincent Orange
+Candidate	Will Merrifield	Will Merrifield
+Candidate	Write-in	Write-in
+CandidateContest	DC Attorney General	DC Attorney General
+CandidateContest	DC Council At Large	AT-LARGE MEMBER OF THE COUNCIL
 CandidateContest	DC Council District 1	WARD ONE MEMBER OF THE COUNCIL
 CandidateContest	DC Council District 2	WARD TWO MEMBER OF THE COUNCIL
 CandidateContest	DC Council District 3	WARD THREE MEMBER OF THE COUNCIL
@@ -7,26 +76,33 @@ CandidateContest	DC Council District 5	WARD FIVE MEMBER OF THE COUNCIL
 CandidateContest	DC Council District 6	WARD SIX MEMBER OF THE COUNCIL
 CandidateContest	DC Council District 7	WARD SEVEN MEMBER OF THE COUNCIL
 CandidateContest	DC Council District 8	WARD EIGHT MEMBER OF THE COUNCIL
-CandidateContest	DC Council At Large	AT-LARGE MEMBER OF THE COUNCIL
-CandidateContest	US House Delegate DC	DELEGATE TO THE U.S. HOUSE OF REPRESENTATIVES
-CandidateContest	US House DC District 1	UNITED STATES REPRESENTATIVE
-CandidateContest	US President (DC)	ELECTORS OF PRESIDENT AND VICE PRESIDENT OF THE UNITED STATES
-CandidateContest	DC Mayor	DC Mayor
-CandidateContest	US Senate DC	UNITED STATES SENATOR
-CandidateContest	DC Attorney General	DC Attorney General
 CandidateContest	DC Lieutenant Governor	DC Lieutenant Governor
-CandidateContest	DC Treasurer	DC Treasurer
+CandidateContest	DC Mayor	DC Mayor
 CandidateContest	DC Secretary of State	DC Secretary of State
+CandidateContest	DC Treasurer	DC Treasurer
+CandidateContest	US House DC District 1	UNITED STATES REPRESENTATIVE
+CandidateContest	US House Delegate DC	DELEGATE TO THE U.S. HOUSE OF REPRESENTATIVES
+CandidateContest	US President (DC)	ELECTORS OF PRESIDENT AND VICE PRESIDENT OF THE UNITED STATES
+CandidateContest	US President (DC)	PRESIDENT
+CandidateContest	US President (DC)	US PRESIDENT
+CandidateContest	US Senate DC	UNITED STATES SENATOR
+CountItemType	total	TOTAL
+Election	2016 General	2016 General
+Election	2018 General	2018 General
 Election	2020 General	2020 General
 Election	2020 Primary	2020 Primary
-Election	2018 General	2018 General
-Election	2016 General	2016 General
-Party	Democratic Party	DEM
-Party	Republican Party	REP
 Party	DC Statehood Green Party	STG
-Party	Libertarian Party	LIB
+Party	Democratic Party	DEM
+Party	Democratic Party	DEMOCRAT
+Party	Green Party	GREEN
 Party	Independent	IND
+Party	Libertarian Party	LIB
+Party	Libertarian Party	LIBERTARIAN
+Party	Republican Party	REP
+Party	Republican Party	REPUBLICAN
 Party	Socialist Workers Party	SWP
+Party	none or unknown	OTHER
+ReportingUnit	District of Columbia	District of Columbia
 ReportingUnit	District of Columbia;DC House District 1	District of Columbia;DC House District 1
 ReportingUnit	District of Columbia;DC House District 2	District of Columbia;DC House District 2
 ReportingUnit	District of Columbia;DC House District 3	District of Columbia;DC House District 3
@@ -36,204 +112,147 @@ ReportingUnit	District of Columbia;DC House District 6	District of Columbia;DC H
 ReportingUnit	District of Columbia;DC House District 7	District of Columbia;DC House District 7
 ReportingUnit	District of Columbia;DC House District 8	District of Columbia;DC House District 8
 ReportingUnit	District of Columbia;US House DC District 1	District of Columbia;US House DC District 1
-ReportingUnit	District of Columbia	District of Columbia
-ReportingUnit	District of Columbia;Ward 8;Precinct 140	Ward 8;Precinct 140
-ReportingUnit	District of Columbia;Ward 8;Precinct 134	Ward 8;Precinct 134
-ReportingUnit	District of Columbia;Ward 8;Precinct 133	Ward 8;Precinct 133
-ReportingUnit	District of Columbia;Ward 8;Precinct 126	Ward 8;Precinct 126
-ReportingUnit	District of Columbia;Ward 8;Precinct 125	Ward 8;Precinct 125
-ReportingUnit	District of Columbia;Ward 8;Precinct 124	Ward 8;Precinct 124
-ReportingUnit	District of Columbia;Ward 8;Precinct 123	Ward 8;Precinct 123
-ReportingUnit	District of Columbia;Ward 8;Precinct 122	Ward 8;Precinct 122
-ReportingUnit	District of Columbia;Ward 8;Precinct 121	Ward 8;Precinct 121
-ReportingUnit	District of Columbia;Ward 8;Precinct 120	Ward 8;Precinct 120
-ReportingUnit	District of Columbia;Ward 8;Precinct 119	Ward 8;Precinct 119
-ReportingUnit	District of Columbia;Ward 8;Precinct 118	Ward 8;Precinct 118
-ReportingUnit	District of Columbia;Ward 8;Precinct 117	Ward 8;Precinct 117
-ReportingUnit	District of Columbia;Ward 8;Precinct 116	Ward 8;Precinct 116
-ReportingUnit	District of Columbia;Ward 8;Precinct 115	Ward 8;Precinct 115
-ReportingUnit	District of Columbia;Ward 8;Precinct 114	Ward 8;Precinct 114
-ReportingUnit	District of Columbia;Ward 8;Precinct 112	Ward 8;Precinct 112
-ReportingUnit	District of Columbia;Ward 7;Precinct 99	Ward 7;Precinct 99
-ReportingUnit	District of Columbia;Ward 7;Precinct 98	Ward 7;Precinct 98
-ReportingUnit	District of Columbia;Ward 7;Precinct 97	Ward 7;Precinct 97
-ReportingUnit	District of Columbia;Ward 7;Precinct 96	Ward 7;Precinct 96
-ReportingUnit	District of Columbia;Ward 7;Precinct 95	Ward 7;Precinct 95
-ReportingUnit	District of Columbia;Ward 7;Precinct 94	Ward 7;Precinct 94
-ReportingUnit	District of Columbia;Ward 7;Precinct 93	Ward 7;Precinct 93
-ReportingUnit	District of Columbia;Ward 7;Precinct 92	Ward 7;Precinct 92
-ReportingUnit	District of Columbia;Ward 7;Precinct 80	Ward 7;Precinct 80
-ReportingUnit	District of Columbia;Ward 7;Precinct 132	Ward 7;Precinct 132
-ReportingUnit	District of Columbia;Ward 7;Precinct 113	Ward 7;Precinct 113
-ReportingUnit	District of Columbia;Ward 7;Precinct 111	Ward 7;Precinct 111
-ReportingUnit	District of Columbia;Ward 7;Precinct 110	Ward 7;Precinct 110
-ReportingUnit	District of Columbia;Ward 7;Precinct 109	Ward 7;Precinct 109
-ReportingUnit	District of Columbia;Ward 7;Precinct 108	Ward 7;Precinct 108
-ReportingUnit	District of Columbia;Ward 7;Precinct 107	Ward 7;Precinct 107
-ReportingUnit	District of Columbia;Ward 7;Precinct 106	Ward 7;Precinct 106
-ReportingUnit	District of Columbia;Ward 7;Precinct 105	Ward 7;Precinct 105
-ReportingUnit	District of Columbia;Ward 7;Precinct 104	Ward 7;Precinct 104
-ReportingUnit	District of Columbia;Ward 7;Precinct 103	Ward 7;Precinct 103
-ReportingUnit	District of Columbia;Ward 7;Precinct 102	Ward 7;Precinct 102
-ReportingUnit	District of Columbia;Ward 7;Precinct 101	Ward 7;Precinct 101
-ReportingUnit	District of Columbia;Ward 7;Precinct 100	Ward 7;Precinct 100
-ReportingUnit	District of Columbia;Ward 6;Precinct 91	Ward 6;Precinct 91
-ReportingUnit	District of Columbia;Ward 6;Precinct 90	Ward 6;Precinct 90
-ReportingUnit	District of Columbia;Ward 6;Precinct 89	Ward 6;Precinct 89
-ReportingUnit	District of Columbia;Ward 6;Precinct 88	Ward 6;Precinct 88
-ReportingUnit	District of Columbia;Ward 6;Precinct 87	Ward 6;Precinct 87
-ReportingUnit	District of Columbia;Ward 6;Precinct 86	Ward 6;Precinct 86
-ReportingUnit	District of Columbia;Ward 6;Precinct 85	Ward 6;Precinct 85
-ReportingUnit	District of Columbia;Ward 6;Precinct 84	Ward 6;Precinct 84
-ReportingUnit	District of Columbia;Ward 6;Precinct 83	Ward 6;Precinct 83
-ReportingUnit	District of Columbia;Ward 6;Precinct 82	Ward 6;Precinct 82
-ReportingUnit	District of Columbia;Ward 6;Precinct 81	Ward 6;Precinct 81
-ReportingUnit	District of Columbia;Ward 6;Precinct 21	Ward 6;Precinct 21
-ReportingUnit	District of Columbia;Ward 6;Precinct 18	Ward 6;Precinct 18
-ReportingUnit	District of Columbia;Ward 6;Precinct 144	Ward 6;Precinct 144
-ReportingUnit	District of Columbia;Ward 6;Precinct 142	Ward 6;Precinct 142
-ReportingUnit	District of Columbia;Ward 6;Precinct 131	Ward 6;Precinct 131
-ReportingUnit	District of Columbia;Ward 6;Precinct 130	Ward 6;Precinct 130
-ReportingUnit	District of Columbia;Ward 6;Precinct 128	Ward 6;Precinct 128
-ReportingUnit	District of Columbia;Ward 6;Precinct 127	Ward 6;Precinct 127
-ReportingUnit	District of Columbia;Ward 6;Precinct 1	Ward 6;Precinct 1
-ReportingUnit	District of Columbia;Ward 5;Precinct 79	Ward 5;Precinct 79
-ReportingUnit	District of Columbia;Ward 5;Precinct 78	Ward 5;Precinct 78
-ReportingUnit	District of Columbia;Ward 5;Precinct 77	Ward 5;Precinct 77
-ReportingUnit	District of Columbia;Ward 5;Precinct 76	Ward 5;Precinct 76
-ReportingUnit	District of Columbia;Ward 5;Precinct 75	Ward 5;Precinct 75
-ReportingUnit	District of Columbia;Ward 5;Precinct 74	Ward 5;Precinct 74
-ReportingUnit	District of Columbia;Ward 5;Precinct 73	Ward 5;Precinct 73
-ReportingUnit	District of Columbia;Ward 5;Precinct 72	Ward 5;Precinct 72
-ReportingUnit	District of Columbia;Ward 5;Precinct 71	Ward 5;Precinct 71
-ReportingUnit	District of Columbia;Ward 5;Precinct 70	Ward 5;Precinct 70
-ReportingUnit	District of Columbia;Ward 5;Precinct 69	Ward 5;Precinct 69
-ReportingUnit	District of Columbia;Ward 5;Precinct 68	Ward 5;Precinct 68
-ReportingUnit	District of Columbia;Ward 5;Precinct 67	Ward 5;Precinct 67
-ReportingUnit	District of Columbia;Ward 5;Precinct 66	Ward 5;Precinct 66
-ReportingUnit	District of Columbia;Ward 5;Precinct 44	Ward 5;Precinct 44
-ReportingUnit	District of Columbia;Ward 5;Precinct 19	Ward 5;Precinct 19
-ReportingUnit	District of Columbia;Ward 5;Precinct 139	Ward 5;Precinct 139
-ReportingUnit	District of Columbia;Ward 5;Precinct 135	Ward 5;Precinct 135
-ReportingUnit	District of Columbia;Ward 4;Precinct 65	Ward 4;Precinct 65
-ReportingUnit	District of Columbia;Ward 4;Precinct 64	Ward 4;Precinct 64
-ReportingUnit	District of Columbia;Ward 4;Precinct 63	Ward 4;Precinct 63
-ReportingUnit	District of Columbia;Ward 4;Precinct 62	Ward 4;Precinct 62
-ReportingUnit	District of Columbia;Ward 4;Precinct 61	Ward 4;Precinct 61
-ReportingUnit	District of Columbia;Ward 4;Precinct 60	Ward 4;Precinct 60
-ReportingUnit	District of Columbia;Ward 4;Precinct 59	Ward 4;Precinct 59
-ReportingUnit	District of Columbia;Ward 4;Precinct 58	Ward 4;Precinct 58
-ReportingUnit	District of Columbia;Ward 4;Precinct 57	Ward 4;Precinct 57
-ReportingUnit	District of Columbia;Ward 4;Precinct 56	Ward 4;Precinct 56
-ReportingUnit	District of Columbia;Ward 4;Precinct 55	Ward 4;Precinct 55
-ReportingUnit	District of Columbia;Ward 4;Precinct 54	Ward 4;Precinct 54
-ReportingUnit	District of Columbia;Ward 4;Precinct 53	Ward 4;Precinct 53
-ReportingUnit	District of Columbia;Ward 4;Precinct 52	Ward 4;Precinct 52
-ReportingUnit	District of Columbia;Ward 4;Precinct 51	Ward 4;Precinct 51
-ReportingUnit	District of Columbia;Ward 4;Precinct 49	Ward 4;Precinct 49
-ReportingUnit	District of Columbia;Ward 4;Precinct 48	Ward 4;Precinct 48
-ReportingUnit	District of Columbia;Ward 4;Precinct 47	Ward 4;Precinct 47
-ReportingUnit	District of Columbia;Ward 4;Precinct 46	Ward 4;Precinct 46
-ReportingUnit	District of Columbia;Ward 4;Precinct 45	Ward 4;Precinct 45
-ReportingUnit	District of Columbia;Ward 3;Precinct 9	Ward 3;Precinct 9
-ReportingUnit	District of Columbia;Ward 3;Precinct 8	Ward 3;Precinct 8
-ReportingUnit	District of Columbia;Ward 3;Precinct 7	Ward 3;Precinct 7
-ReportingUnit	District of Columbia;Ward 3;Precinct 50	Ward 3;Precinct 50
-ReportingUnit	District of Columbia;Ward 3;Precinct 34	Ward 3;Precinct 34
-ReportingUnit	District of Columbia;Ward 3;Precinct 33	Ward 3;Precinct 33
-ReportingUnit	District of Columbia;Ward 3;Precinct 32	Ward 3;Precinct 32
-ReportingUnit	District of Columbia;Ward 3;Precinct 31	Ward 3;Precinct 31
-ReportingUnit	District of Columbia;Ward 3;Precinct 30	Ward 3;Precinct 30
-ReportingUnit	District of Columbia;Ward 3;Precinct 29	Ward 3;Precinct 29
-ReportingUnit	District of Columbia;Ward 3;Precinct 28	Ward 3;Precinct 28
-ReportingUnit	District of Columbia;Ward 3;Precinct 27	Ward 3;Precinct 27
-ReportingUnit	District of Columbia;Ward 3;Precinct 26	Ward 3;Precinct 26
-ReportingUnit	District of Columbia;Ward 3;Precinct 138	Ward 3;Precinct 138
-ReportingUnit	District of Columbia;Ward 3;Precinct 136	Ward 3;Precinct 136
-ReportingUnit	District of Columbia;Ward 3;Precinct 12	Ward 3;Precinct 12
-ReportingUnit	District of Columbia;Ward 3;Precinct 11	Ward 3;Precinct 11
-ReportingUnit	District of Columbia;Ward 3;Precinct 10	Ward 3;Precinct 10
-ReportingUnit	District of Columbia;Ward 2;Precinct 6	Ward 2;Precinct 6
-ReportingUnit	District of Columbia;Ward 2;Precinct 5	Ward 2;Precinct 5
-ReportingUnit	District of Columbia;Ward 2;Precinct 4	Ward 2;Precinct 4
-ReportingUnit	District of Columbia;Ward 2;Precinct 3	Ward 2;Precinct 3
-ReportingUnit	District of Columbia;Ward 2;Precinct 2	Ward 2;Precinct 2
-ReportingUnit	District of Columbia;Ward 2;Precinct 17	Ward 2;Precinct 17
-ReportingUnit	District of Columbia;Ward 2;Precinct 16	Ward 2;Precinct 16
-ReportingUnit	District of Columbia;Ward 2;Precinct 15	Ward 2;Precinct 15
-ReportingUnit	District of Columbia;Ward 2;Precinct 143	Ward 2;Precinct 143
-ReportingUnit	District of Columbia;Ward 2;Precinct 141	Ward 2;Precinct 141
-ReportingUnit	District of Columbia;Ward 2;Precinct 14	Ward 2;Precinct 14
-ReportingUnit	District of Columbia;Ward 2;Precinct 13	Ward 2;Precinct 13
-ReportingUnit	District of Columbia;Ward 2;Precinct 129	Ward 2;Precinct 129
-ReportingUnit	District of Columbia;Ward 1;Precinct 43	Ward 1;Precinct 43
-ReportingUnit	District of Columbia;Ward 1;Precinct 42	Ward 1;Precinct 42
-ReportingUnit	District of Columbia;Ward 1;Precinct 41	Ward 1;Precinct 41
-ReportingUnit	District of Columbia;Ward 1;Precinct 40	Ward 1;Precinct 40
-ReportingUnit	District of Columbia;Ward 1;Precinct 39	Ward 1;Precinct 39
-ReportingUnit	District of Columbia;Ward 1;Precinct 38	Ward 1;Precinct 38
-ReportingUnit	District of Columbia;Ward 1;Precinct 37	Ward 1;Precinct 37
-ReportingUnit	District of Columbia;Ward 1;Precinct 36	Ward 1;Precinct 36
-ReportingUnit	District of Columbia;Ward 1;Precinct 35	Ward 1;Precinct 35
-ReportingUnit	District of Columbia;Ward 1;Precinct 25	Ward 1;Precinct 25
-ReportingUnit	District of Columbia;Ward 1;Precinct 24	Ward 1;Precinct 24
-ReportingUnit	District of Columbia;Ward 1;Precinct 23	Ward 1;Precinct 23
-ReportingUnit	District of Columbia;Ward 1;Precinct 22	Ward 1;Precinct 22
-ReportingUnit	District of Columbia;Ward 1;Precinct 20	Ward 1;Precinct 20
 ReportingUnit	District of Columbia;Ward 1;Precinct 137	Ward 1;Precinct 137
-Candidate	Write-in	Write-in
-Candidate	Will Merrifield	Will Merrifield
-Candidate	Vincent Orange	Vincent Orange
-Candidate	Vincent C. Gray	Vincent C. Gray
-Candidate	Trayon 'Ward Eight' White	Trayon 'Ward Eight' White
-Candidate	Sohaer Rizvi Syed	Sohaer Rizvi Syed
-Candidate	Robert White	Robert White
-Candidate	Rick Murphree	Rick Murphree
-Candidate	Randy Downs	Randy Downs
-Candidate	Peter Bolton	Peter Bolton
-Candidate	Perry Redd	Perry Redd
-Candidate	Paul Strauss	Paul Strauss
-Candidate	Oye Owolewa	Oye Owolewa
-Candidate	Nate 'Ward 8' Derenge	Nate 'Ward 8' Derenge
-Candidate	Mónica Palacio	Mónica Palacio
-Candidate	Michangelo 'DoctorMic' Scruggs	Michangelo 'DoctorMic' Scruggs
-Candidate	Marya Pickering	Marya Pickering
-Candidate	Martín Miguel Fernandez	Martín Miguel Fernandez
-Candidate	Markus Batchelor	Markus Batchelor
-Candidate	Mario Cristaldo	Mario Cristaldo
-Candidate	Marcus Goodwin	Marcus Goodwin
-Candidate	Keith Silver	Keith Silver
-Candidate	Kathy Henderson	Kathy Henderson
-Candidate	Joyce (Chestnut) Robinson-Paul	Joyce (Chestnut) Robinson-Paul
-Candidate	Joseph R. Biden	Joseph R. Biden - Kamala D. Harris
-Candidate	Joe Bishop-Henchman	Joe Bishop-Henchman
-Candidate	Jo Jorgensen	Jo Jorgensen - Jeremy 'Spike' Cohe
-Candidate	Jeanné Lewis	Jeanné Lewis
-Candidate	Janeese Lewis George	Janeese Lewis George
-Candidate	Howie Hawkins	Howie Hawkins - Angela Walker
-Candidate	Gloria La Riva	Gloria La Riva - Sunil Freeman
-Candidate	Fred Hill	Fred Hill
-Candidate	Franklin Garcia	Franklin Garcia
-Candidate	Eric M. Rogers	Eric M. Rogers
-Candidate	Eleanor Ory (Echo)	Eleanor Ory (Echo)
-Candidate	Ed Lazere	Ed Lazere
-Candidate	Donald J. Trump	Donald J. Trump - Michael R. Pence
-Candidate	Cornelia Weiss	Cornelia Weiss
-Candidate	Claudia Barragán	Claudia Barragán
-Candidate	Christopher Cole	Christopher Cole
-Candidate	Christina D. Henderson	Christina D. Henderson
-Candidate	Chander Jayaraman	Chander Jayaraman
-Candidate	Calvin H. Gurley	Calvin H. Gurley
-Candidate	Brooke Pinto	Brooke Pinto
-Candidate	Brock Pierce	Brock Pierce - Karla Ballard
-Candidate	Ann C. Wilcox	Ann C. Wilcox
-Candidate	Alexander M. 'Alex' Padro	Alexander M. 'Alex' Padro
-Candidate	A'Shia Howard	A'Shia Howard
-Candidate	Patrick Hynes	Patrick Hynes
-Candidate	Omari Musa	Omari Musa
-Candidate	Natale Lino Stracuzzi	Natale Lino Stracuzzi
-Candidate	John 'Recovery' Cheeks	John 'Recovery' Cheeks
-Candidate	Eleanor Holmes Norton	Eleanor Holmes Norton
-Candidate	David Krucoff	David Krucoff
-Candidate	Barbara Washington Franklin	Barbara Washington Franklin
-Candidate	Amir Lowery	Amir Lowery
+ReportingUnit	District of Columbia;Ward 1;Precinct 20	Ward 1;Precinct 20
+ReportingUnit	District of Columbia;Ward 1;Precinct 22	Ward 1;Precinct 22
+ReportingUnit	District of Columbia;Ward 1;Precinct 23	Ward 1;Precinct 23
+ReportingUnit	District of Columbia;Ward 1;Precinct 24	Ward 1;Precinct 24
+ReportingUnit	District of Columbia;Ward 1;Precinct 25	Ward 1;Precinct 25
+ReportingUnit	District of Columbia;Ward 1;Precinct 35	Ward 1;Precinct 35
+ReportingUnit	District of Columbia;Ward 1;Precinct 36	Ward 1;Precinct 36
+ReportingUnit	District of Columbia;Ward 1;Precinct 37	Ward 1;Precinct 37
+ReportingUnit	District of Columbia;Ward 1;Precinct 38	Ward 1;Precinct 38
+ReportingUnit	District of Columbia;Ward 1;Precinct 39	Ward 1;Precinct 39
+ReportingUnit	District of Columbia;Ward 1;Precinct 40	Ward 1;Precinct 40
+ReportingUnit	District of Columbia;Ward 1;Precinct 41	Ward 1;Precinct 41
+ReportingUnit	District of Columbia;Ward 1;Precinct 42	Ward 1;Precinct 42
+ReportingUnit	District of Columbia;Ward 1;Precinct 43	Ward 1;Precinct 43
+ReportingUnit	District of Columbia;Ward 2;Precinct 129	Ward 2;Precinct 129
+ReportingUnit	District of Columbia;Ward 2;Precinct 13	Ward 2;Precinct 13
+ReportingUnit	District of Columbia;Ward 2;Precinct 14	Ward 2;Precinct 14
+ReportingUnit	District of Columbia;Ward 2;Precinct 141	Ward 2;Precinct 141
+ReportingUnit	District of Columbia;Ward 2;Precinct 143	Ward 2;Precinct 143
+ReportingUnit	District of Columbia;Ward 2;Precinct 15	Ward 2;Precinct 15
+ReportingUnit	District of Columbia;Ward 2;Precinct 16	Ward 2;Precinct 16
+ReportingUnit	District of Columbia;Ward 2;Precinct 17	Ward 2;Precinct 17
+ReportingUnit	District of Columbia;Ward 2;Precinct 2	Ward 2;Precinct 2
+ReportingUnit	District of Columbia;Ward 2;Precinct 3	Ward 2;Precinct 3
+ReportingUnit	District of Columbia;Ward 2;Precinct 4	Ward 2;Precinct 4
+ReportingUnit	District of Columbia;Ward 2;Precinct 5	Ward 2;Precinct 5
+ReportingUnit	District of Columbia;Ward 2;Precinct 6	Ward 2;Precinct 6
+ReportingUnit	District of Columbia;Ward 3;Precinct 10	Ward 3;Precinct 10
+ReportingUnit	District of Columbia;Ward 3;Precinct 11	Ward 3;Precinct 11
+ReportingUnit	District of Columbia;Ward 3;Precinct 12	Ward 3;Precinct 12
+ReportingUnit	District of Columbia;Ward 3;Precinct 136	Ward 3;Precinct 136
+ReportingUnit	District of Columbia;Ward 3;Precinct 138	Ward 3;Precinct 138
+ReportingUnit	District of Columbia;Ward 3;Precinct 26	Ward 3;Precinct 26
+ReportingUnit	District of Columbia;Ward 3;Precinct 27	Ward 3;Precinct 27
+ReportingUnit	District of Columbia;Ward 3;Precinct 28	Ward 3;Precinct 28
+ReportingUnit	District of Columbia;Ward 3;Precinct 29	Ward 3;Precinct 29
+ReportingUnit	District of Columbia;Ward 3;Precinct 30	Ward 3;Precinct 30
+ReportingUnit	District of Columbia;Ward 3;Precinct 31	Ward 3;Precinct 31
+ReportingUnit	District of Columbia;Ward 3;Precinct 32	Ward 3;Precinct 32
+ReportingUnit	District of Columbia;Ward 3;Precinct 33	Ward 3;Precinct 33
+ReportingUnit	District of Columbia;Ward 3;Precinct 34	Ward 3;Precinct 34
+ReportingUnit	District of Columbia;Ward 3;Precinct 50	Ward 3;Precinct 50
+ReportingUnit	District of Columbia;Ward 3;Precinct 7	Ward 3;Precinct 7
+ReportingUnit	District of Columbia;Ward 3;Precinct 8	Ward 3;Precinct 8
+ReportingUnit	District of Columbia;Ward 3;Precinct 9	Ward 3;Precinct 9
+ReportingUnit	District of Columbia;Ward 4;Precinct 45	Ward 4;Precinct 45
+ReportingUnit	District of Columbia;Ward 4;Precinct 46	Ward 4;Precinct 46
+ReportingUnit	District of Columbia;Ward 4;Precinct 47	Ward 4;Precinct 47
+ReportingUnit	District of Columbia;Ward 4;Precinct 48	Ward 4;Precinct 48
+ReportingUnit	District of Columbia;Ward 4;Precinct 49	Ward 4;Precinct 49
+ReportingUnit	District of Columbia;Ward 4;Precinct 51	Ward 4;Precinct 51
+ReportingUnit	District of Columbia;Ward 4;Precinct 52	Ward 4;Precinct 52
+ReportingUnit	District of Columbia;Ward 4;Precinct 53	Ward 4;Precinct 53
+ReportingUnit	District of Columbia;Ward 4;Precinct 54	Ward 4;Precinct 54
+ReportingUnit	District of Columbia;Ward 4;Precinct 55	Ward 4;Precinct 55
+ReportingUnit	District of Columbia;Ward 4;Precinct 56	Ward 4;Precinct 56
+ReportingUnit	District of Columbia;Ward 4;Precinct 57	Ward 4;Precinct 57
+ReportingUnit	District of Columbia;Ward 4;Precinct 58	Ward 4;Precinct 58
+ReportingUnit	District of Columbia;Ward 4;Precinct 59	Ward 4;Precinct 59
+ReportingUnit	District of Columbia;Ward 4;Precinct 60	Ward 4;Precinct 60
+ReportingUnit	District of Columbia;Ward 4;Precinct 61	Ward 4;Precinct 61
+ReportingUnit	District of Columbia;Ward 4;Precinct 62	Ward 4;Precinct 62
+ReportingUnit	District of Columbia;Ward 4;Precinct 63	Ward 4;Precinct 63
+ReportingUnit	District of Columbia;Ward 4;Precinct 64	Ward 4;Precinct 64
+ReportingUnit	District of Columbia;Ward 4;Precinct 65	Ward 4;Precinct 65
+ReportingUnit	District of Columbia;Ward 5;Precinct 135	Ward 5;Precinct 135
+ReportingUnit	District of Columbia;Ward 5;Precinct 139	Ward 5;Precinct 139
+ReportingUnit	District of Columbia;Ward 5;Precinct 19	Ward 5;Precinct 19
+ReportingUnit	District of Columbia;Ward 5;Precinct 44	Ward 5;Precinct 44
+ReportingUnit	District of Columbia;Ward 5;Precinct 66	Ward 5;Precinct 66
+ReportingUnit	District of Columbia;Ward 5;Precinct 67	Ward 5;Precinct 67
+ReportingUnit	District of Columbia;Ward 5;Precinct 68	Ward 5;Precinct 68
+ReportingUnit	District of Columbia;Ward 5;Precinct 69	Ward 5;Precinct 69
+ReportingUnit	District of Columbia;Ward 5;Precinct 70	Ward 5;Precinct 70
+ReportingUnit	District of Columbia;Ward 5;Precinct 71	Ward 5;Precinct 71
+ReportingUnit	District of Columbia;Ward 5;Precinct 72	Ward 5;Precinct 72
+ReportingUnit	District of Columbia;Ward 5;Precinct 73	Ward 5;Precinct 73
+ReportingUnit	District of Columbia;Ward 5;Precinct 74	Ward 5;Precinct 74
+ReportingUnit	District of Columbia;Ward 5;Precinct 75	Ward 5;Precinct 75
+ReportingUnit	District of Columbia;Ward 5;Precinct 76	Ward 5;Precinct 76
+ReportingUnit	District of Columbia;Ward 5;Precinct 77	Ward 5;Precinct 77
+ReportingUnit	District of Columbia;Ward 5;Precinct 78	Ward 5;Precinct 78
+ReportingUnit	District of Columbia;Ward 5;Precinct 79	Ward 5;Precinct 79
+ReportingUnit	District of Columbia;Ward 6;Precinct 1	Ward 6;Precinct 1
+ReportingUnit	District of Columbia;Ward 6;Precinct 127	Ward 6;Precinct 127
+ReportingUnit	District of Columbia;Ward 6;Precinct 128	Ward 6;Precinct 128
+ReportingUnit	District of Columbia;Ward 6;Precinct 130	Ward 6;Precinct 130
+ReportingUnit	District of Columbia;Ward 6;Precinct 131	Ward 6;Precinct 131
+ReportingUnit	District of Columbia;Ward 6;Precinct 142	Ward 6;Precinct 142
+ReportingUnit	District of Columbia;Ward 6;Precinct 144	Ward 6;Precinct 144
+ReportingUnit	District of Columbia;Ward 6;Precinct 18	Ward 6;Precinct 18
+ReportingUnit	District of Columbia;Ward 6;Precinct 21	Ward 6;Precinct 21
+ReportingUnit	District of Columbia;Ward 6;Precinct 81	Ward 6;Precinct 81
+ReportingUnit	District of Columbia;Ward 6;Precinct 82	Ward 6;Precinct 82
+ReportingUnit	District of Columbia;Ward 6;Precinct 83	Ward 6;Precinct 83
+ReportingUnit	District of Columbia;Ward 6;Precinct 84	Ward 6;Precinct 84
+ReportingUnit	District of Columbia;Ward 6;Precinct 85	Ward 6;Precinct 85
+ReportingUnit	District of Columbia;Ward 6;Precinct 86	Ward 6;Precinct 86
+ReportingUnit	District of Columbia;Ward 6;Precinct 87	Ward 6;Precinct 87
+ReportingUnit	District of Columbia;Ward 6;Precinct 88	Ward 6;Precinct 88
+ReportingUnit	District of Columbia;Ward 6;Precinct 89	Ward 6;Precinct 89
+ReportingUnit	District of Columbia;Ward 6;Precinct 90	Ward 6;Precinct 90
+ReportingUnit	District of Columbia;Ward 6;Precinct 91	Ward 6;Precinct 91
+ReportingUnit	District of Columbia;Ward 7;Precinct 100	Ward 7;Precinct 100
+ReportingUnit	District of Columbia;Ward 7;Precinct 101	Ward 7;Precinct 101
+ReportingUnit	District of Columbia;Ward 7;Precinct 102	Ward 7;Precinct 102
+ReportingUnit	District of Columbia;Ward 7;Precinct 103	Ward 7;Precinct 103
+ReportingUnit	District of Columbia;Ward 7;Precinct 104	Ward 7;Precinct 104
+ReportingUnit	District of Columbia;Ward 7;Precinct 105	Ward 7;Precinct 105
+ReportingUnit	District of Columbia;Ward 7;Precinct 106	Ward 7;Precinct 106
+ReportingUnit	District of Columbia;Ward 7;Precinct 107	Ward 7;Precinct 107
+ReportingUnit	District of Columbia;Ward 7;Precinct 108	Ward 7;Precinct 108
+ReportingUnit	District of Columbia;Ward 7;Precinct 109	Ward 7;Precinct 109
+ReportingUnit	District of Columbia;Ward 7;Precinct 110	Ward 7;Precinct 110
+ReportingUnit	District of Columbia;Ward 7;Precinct 111	Ward 7;Precinct 111
+ReportingUnit	District of Columbia;Ward 7;Precinct 113	Ward 7;Precinct 113
+ReportingUnit	District of Columbia;Ward 7;Precinct 132	Ward 7;Precinct 132
+ReportingUnit	District of Columbia;Ward 7;Precinct 80	Ward 7;Precinct 80
+ReportingUnit	District of Columbia;Ward 7;Precinct 92	Ward 7;Precinct 92
+ReportingUnit	District of Columbia;Ward 7;Precinct 93	Ward 7;Precinct 93
+ReportingUnit	District of Columbia;Ward 7;Precinct 94	Ward 7;Precinct 94
+ReportingUnit	District of Columbia;Ward 7;Precinct 95	Ward 7;Precinct 95
+ReportingUnit	District of Columbia;Ward 7;Precinct 96	Ward 7;Precinct 96
+ReportingUnit	District of Columbia;Ward 7;Precinct 97	Ward 7;Precinct 97
+ReportingUnit	District of Columbia;Ward 7;Precinct 98	Ward 7;Precinct 98
+ReportingUnit	District of Columbia;Ward 7;Precinct 99	Ward 7;Precinct 99
+ReportingUnit	District of Columbia;Ward 8;Precinct 112	Ward 8;Precinct 112
+ReportingUnit	District of Columbia;Ward 8;Precinct 114	Ward 8;Precinct 114
+ReportingUnit	District of Columbia;Ward 8;Precinct 115	Ward 8;Precinct 115
+ReportingUnit	District of Columbia;Ward 8;Precinct 116	Ward 8;Precinct 116
+ReportingUnit	District of Columbia;Ward 8;Precinct 117	Ward 8;Precinct 117
+ReportingUnit	District of Columbia;Ward 8;Precinct 118	Ward 8;Precinct 118
+ReportingUnit	District of Columbia;Ward 8;Precinct 119	Ward 8;Precinct 119
+ReportingUnit	District of Columbia;Ward 8;Precinct 120	Ward 8;Precinct 120
+ReportingUnit	District of Columbia;Ward 8;Precinct 121	Ward 8;Precinct 121
+ReportingUnit	District of Columbia;Ward 8;Precinct 122	Ward 8;Precinct 122
+ReportingUnit	District of Columbia;Ward 8;Precinct 123	Ward 8;Precinct 123
+ReportingUnit	District of Columbia;Ward 8;Precinct 124	Ward 8;Precinct 124
+ReportingUnit	District of Columbia;Ward 8;Precinct 125	Ward 8;Precinct 125
+ReportingUnit	District of Columbia;Ward 8;Precinct 126	Ward 8;Precinct 126
+ReportingUnit	District of Columbia;Ward 8;Precinct 133	Ward 8;Precinct 133
+ReportingUnit	District of Columbia;Ward 8;Precinct 134	Ward 8;Precinct 134
+ReportingUnit	District of Columbia;Ward 8;Precinct 140	Ward 8;Precinct 140

@@ -6,7 +6,7 @@ Bob 'Again' Carney Jr.
 James Reibestein
 Jason Lewis
 John L. Berman
-"Christopher Lovell Seymore, Sr."
+Christopher Lovell Seymore, Sr.
 Tina Smith
 Ahmad R. Hassan
 Paula Overby
@@ -1622,7 +1622,7 @@ Sean A. Deringer
 Tom Kelly
 Judith Kelly
 Michael W. Zieska
-"Richard Neil LaBute, Jr."
+Richard Neil LaBute, Jr.
 Mary L. Wetter
 Greg Renneke
 Jane Remiger
@@ -1634,7 +1634,7 @@ Darwyn Bach
 Donald J. Trump and Michael R. Pence
 Hillary Clinton and Tim Kaine
 Darrell Castle and Scott Bradley
-"Dan R. Vacek and Mark Elworth, Jr."
+Dan R. Vacek and Mark Elworth, Jr.
 Alyson Kennedy and Osborne Hart
 Jill Stein and Howie Hawkins
 Rocky Roque De La Fuente and Michael Steinberg
@@ -1661,7 +1661,7 @@ Denise D. Reilly
 Michelle A. Larkin
 Randolph W. Peterson
 Larry Stauber Jr.
-"Peter M. Reyes, Jr."
+Peter M. Reyes, Jr.
 Matthew E. Johnson
 Heidi Schellhas
 Francis Connolly
@@ -1999,7 +1999,7 @@ Jerry L. Rapp
 Karen Hunt
 Michael F. Cleary
 Jon Schneider
-"Bill Dropik, Jr."
+Bill Dropik, Jr.
 Kenneth Douglas Rutten
 John Roper
 William (Bill) Groskreutz Jr.
@@ -2464,7 +2464,7 @@ Dave Esselink
 Jack Swanson
 Todd O. Miller
 Russell Walker
-"Jay Estling, Jr."
+Jay Estling, Jr.
 Warren Ulvin
 Landon Olson
 Jason I. Metsa
@@ -2803,3 +2803,13 @@ Julián Castro
 Margaret E. Martín
 Joseph Patiño
 Barbara Dröher Kline
+Al Gore
+Barack Obama
+George W. Bush
+Hillary Clinton
+John Kerry
+John Mccain
+Mitt Romney
+Other
+Ralph Nader
+John MCCain

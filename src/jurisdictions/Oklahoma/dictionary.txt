@@ -129,6 +129,7 @@ Candidate	Joan Farr	Joan Farr
 Candidate	Joe Williams	Joe Williams
 Candidate	John Hutton	John Hutton
 Candidate	John Kerry	JOHN KERRY
+Candidate	John MCCain	JOHN MCCAIN
 Candidate	John Mccain	JOHN MCCAIN
 Candidate	John R. Berry	John R. Berry
 Candidate	John Woods	John Woods

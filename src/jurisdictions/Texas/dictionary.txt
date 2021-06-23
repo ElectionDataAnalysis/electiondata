@@ -1282,6 +1282,7 @@ Candidate	John Kuempel	John Kuempel
 Candidate	John Kuempel	John Kuempel (I)
 Candidate	John L. Pool	John L. Pool
 Candidate	John Lujan	John Lujan
+Candidate	John MCCain	JOHN MCCAIN
 Candidate	John Maher	John Maher
 Candidate	John Mccain	JOHN MCCAIN
 Candidate	John P. Chupp	John P. Chupp

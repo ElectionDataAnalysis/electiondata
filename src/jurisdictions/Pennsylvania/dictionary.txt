@@ -680,6 +680,7 @@ Candidate	John K Sr Reber	Reber, John K Sr
 Candidate	John Kerry	JOHN KERRY
 Candidate	John Kluck	Kluck, John
 Candidate	John M Waldenberger	Waldenberger, John M
+Candidate	John MCCain	JOHN MCCAIN
 Candidate	John Mccain	JOHN MCCAIN
 Candidate	John P Blake	Blake, John P
 Candidate	John P Sabatina Jr	Sabatina, John P Jr

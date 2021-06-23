@@ -18,6 +18,7 @@ Candidate	Jake Auchincloss	Jake Auchincloss
 Candidate	James P. McGovern	James P. McGovern
 Candidate	Jo Jorgensen	Jo Jorgensen
 Candidate	John Kerry	JOHN KERRY
+Candidate	John MCCain	JOHN MCCAIN
 Candidate	John Mccain	JOHN MCCAIN
 Candidate	John Paul Moran	John Paul Moran
 Candidate	Jonathan D. Lott	Jonathan D. Lott

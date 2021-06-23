@@ -1,139 +1,422 @@
 cdf_element	cdf_internal_name	raw_identifier_value
-CandidateContest	CT Senate District 1	State Senator 01
-CandidateContest	CT Senate District 2	State Senator 02
-CandidateContest	CT Senate District 3	State Senator 03
-CandidateContest	CT Senate District 4	State Senator 04
-CandidateContest	CT Senate District 5	State Senator 05
-CandidateContest	CT Senate District 6	State Senator 06
-CandidateContest	CT Senate District 7	State Senator 07
-CandidateContest	CT Senate District 8	State Senator 08
-CandidateContest	CT Senate District 9	State Senator 09
-CandidateContest	CT Senate District 10	State Senator 10
-CandidateContest	CT Senate District 11	State Senator 11
-CandidateContest	CT Senate District 12	State Senator 12
-CandidateContest	CT Senate District 13	State Senator 13
-CandidateContest	CT Senate District 14	State Senator 14
-CandidateContest	CT Senate District 15	State Senator 15
-CandidateContest	CT Senate District 16	State Senator 16
-CandidateContest	CT Senate District 17	State Senator 17
-CandidateContest	CT Senate District 18	State Senator 18
-CandidateContest	CT Senate District 19	State Senator 19
-CandidateContest	CT Senate District 20	State Senator 20
-CandidateContest	CT Senate District 21	State Senator 21
-CandidateContest	CT Senate District 22	State Senator 22
-CandidateContest	CT Senate District 23	State Senator 23
-CandidateContest	CT Senate District 24	State Senator 24
-CandidateContest	CT Senate District 25	State Senator 25
-CandidateContest	CT Senate District 26	State Senator 26
-CandidateContest	CT Senate District 27	State Senator 27
-CandidateContest	CT Senate District 28	State Senator 28
-CandidateContest	CT Senate District 29	State Senator 29
-CandidateContest	CT Senate District 30	State Senator 30
-CandidateContest	CT Senate District 31	State Senator 31
-CandidateContest	CT Senate District 32	State Senator 32
-CandidateContest	CT Senate District 33	State Senator 33
-CandidateContest	CT Senate District 34	State Senator 34
-CandidateContest	CT Senate District 35	State Senator 35
-CandidateContest	CT Senate District 36	State Senator 36
+Candidate	Aileen Abrams	Aileen Abrams
+Candidate	Aimee Berger-Girvalo	Aimee Berger-Girvalo
+Candidate	Al Gore	AL GORE
+Candidate	Alden Russell	Alden Russell
+Candidate	Alex Kasser	Alex Kasser
+Candidate	Alexander Taubes	Alexander Taubes
+Candidate	Alphonse Paolillo, Jr.	Alphonse Paolillo, Jr.
+Candidate	Amy Morrin Bello	Amy Morrin Bello
+Candidate	Andre F. Baker	Andre F. Baker
+Candidate	Andrew M. Rasmussen-Tuller	Andrew M. Rasmussen-Tuller
+Candidate	Anne Dubay Dauphinais	Anne Dubay Dauphinais
+Candidate	Anne Hughes	Anne Hughes
+Candidate	Anthony J. D'Amelio	Anthony J. D'Amelio
+Candidate	Anthony Nolan	Anthony Nolan
+Candidate	Antonio Felipe	Antonio Felipe
+Candidate	April Capone	April Capone
+Candidate	Audrey Lampert	Audrey Lampert
+Candidate	Baird Welch-Collins	Baird Welch-Collins
+Candidate	Barack Obama	BARACK OBAMA
+Candidate	Barbara Ruhe	Barbara Ruhe
+Candidate	Barry J. D'Andrea	Barry J. D'Andrea
+Candidate	Ben McGorty	Ben McGorty
+Candidate	Bob Duff	Bob Duff
+Candidate	Bob Godfrey	Bob Godfrey
+Candidate	Bob Hebert	Bob Hebert
+Candidate	Bob Statchen	Bob Statchen
+Candidate	Bobby Gibson	Bobby Gibson
+Candidate	Brandon Chafee	Brandon Chafee
+Candidate	Brandon L. McGee	Brandon L. McGee
+Candidate	Brenda Falusi	Brenda Falusi
+Candidate	Brendan Saunders	Brendan Saunders
+Candidate	Brian Carroll	Carroll and Patel
+Candidate	Brian Farnen	Brian Farnen
+Candidate	Brian Lanoue	Brian Lanoue
+Candidate	Brian M. Ohler	Brian M. Ohler
+Candidate	Brian Marois	Brian Marois
+Candidate	Brian Merlen	Brian Merlen
+Candidate	Brian Smith	Brian Smith
+Candidate	Bruce W. Walczak	Bruce W. Walczak
+Candidate	Bryan Anderson	Bryan Anderson
+Candidate	Caleb Espinosa	Caleb Espinosa
+Candidate	Cara Pavalock-D'Amato	Cara Pavalock-D'Amato
+Candidate	Carla Volpe	Carla Volpe
+Candidate	Carlo Leone	Carlo Leone
+Candidate	Carlos M. Alvarado	Carlos M. Alvarado
+Candidate	Carol Hall	Carol Hall
+Candidate	Caroline Simmons	Caroline Simmons
+Candidate	Cassandra Martineau	Cassandra Martineau
+Candidate	Cate Steel	Cate Steel
+Candidate	Catherine A. Osten	Catherine A. Osten
+Candidate	Catherine Abercrombie	Catherine Abercrombie
+Candidate	Cathy Hopperstad	Cathy Hopperstad
+Candidate	Charles	Charles and Wallace
+Candidate	Charles Ferraro	Charles Ferraro
+Candidate	Charles Jackson	Charles Jackson
+Candidate	Charlie Stallworth	Charlie Stallworth
+Candidate	Chip Stephens	Chip Stephens
+Candidate	Chris Perone	Chris Perone
+Candidate	Christie M. Carpino	Christie M. Carpino
+Candidate	Christine Cohen	Christine Cohen
+Candidate	Christine Conley	Christine Conley
+Candidate	Christine Goupil	Christine Goupil
+Candidate	Christine Palm	Christine Palm
+Candidate	Christine Rosati Randall	Christine Rosati Randall
+Candidate	Christopher Beyus	Christopher Beyus
+Candidate	Christopher Chris' DeMatteoMachine/Polling Place/EDRAbsenteeTotal'Does not match regex ^(.+)Machine/Polling Place/EDRAbsenteeTotal$: Christopher Chris' DeMatteoMachine/Polling Place/EDRAbsenteeTotal'	Christopher Chris' DeMatteoMachine/Polling Place/EDRAbsenteeTotal'Does not match regex ^(.+)Machine/Polling Place/EDRAbsenteeTotal$: Christopher Chris' DeMatteoMachine/Polling Place/EDRAbsenteeTotal'
+Candidate	Christopher E. Bowen	Christopher E. Bowen
+Candidate	Christopher Rosario	Christopher Rosario
+Candidate	Christopher Ziogas	Christopher Ziogas
+Candidate	Cindy Harrison	Cindy Harrison
+Candidate	Craig Fishbein	Craig Fishbein
+Candidate	Craig Miner	Craig Miner
+Candidate	Cristin McCarthy Vahey	Cristin McCarthy Vahey
+Candidate	Dagmara Scalise	Dagmara Scalise
+Candidate	Dan Carter	Dan Carter
+Candidate	Dan Champagne	Dan Champagne
+Candidate	Dan DeBarba	Dan DeBarba
+Candidate	Dan Maymin	Dan Maymin
+Candidate	Danette Onofrio	Danette Onofrio
+Candidate	Daniel Adam Piper	Daniel Adam Piper
+Candidate	Daniel J. Fox	Daniel J. Fox
+Candidate	Daniel Reale	Daniel Reale
+Candidate	Danielle Cecil Wong	Danielle Cecil Wong
+Candidate	Dave Yaccarino	Dave Yaccarino
+Candidate	David A. Rubino	David A. Rubino
+Candidate	David Arconti, Jr.	David Arconti, Jr.
+Candidate	David Bedell	David Bedell
+Candidate	David E. Stavens	David E. Stavens
+Candidate	David K. Labriola	David K. Labriola
+Candidate	David Michel	David Michel
+Candidate	David Paul Kramer	David Paul Kramer
+Candidate	David R. Gronbach	David R. Gronbach
+Candidate	David Rackliffe	David Rackliffe
+Candidate	David Rutigliano	David Rutigliano
+Candidate	David T. Wilson	David T. Wilson
+Candidate	David X. Sullivan	David X. Sullivan
+Candidate	David Yaccarino	David Yaccarino
+Candidate	Dennis Bradley	Dennis Bradley
+Candidate	Derek Slap	Derek Slap
+Candidate	Devin R. Carney	Devin R. Carney
+Candidate	Devon Brown	Devon Brown
+Candidate	Don Vaniah Alexander	Don Vaniah Alexander
+Candidate	Donald J. Trump	Trump and Pence
+Candidate	Donald J. Trump	DONALD TRUMP
+Candidate	Donna Veach	Donna Veach
+Candidate	Dorinda Borer	Dorinda Borer
+Candidate	Doug Dubitsky	Doug Dubitsky
+Candidate	Douglas McCrory	Douglas McCrory
+Candidate	E.J. Maher	E.J. Maher
+Candidate	Edward J. Scinto	Edward J. Scinto
+Candidate	Edwin Vargas, Jr.	Edwin Vargas, Jr.
+Candidate	Elaine Matto	Elaine Matto
+Candidate	Eleni Kavros DeGraw	Eleni Kavros DeGraw
+Candidate	Ellen G. Wink	Ellen G. Wink
+Candidate	Ellie Kousidis	Ellie Kousidis
+Candidate	Emile Buzaid	Emile Buzaid
+Candidate	Emmanuel Manny' SanchezMachine/Polling Place/EDRAbsenteeTotal'Does not match regex ^(.+)Machine/Polling Place/EDRAbsenteeTotal$: Emmanuel Manny' SanchezMachine/Polling Place/EDRAbsenteeTotal'	Emmanuel Manny' SanchezMachine/Polling Place/EDRAbsenteeTotal'Does not match regex ^(.+)Machine/Polling Place/EDRAbsenteeTotal$: Emmanuel Manny' SanchezMachine/Polling Place/EDRAbsenteeTotal'
+Candidate	Emmett D. Riley	Emmett D. Riley
+Candidate	Eric C. Berthel	Eric C. Berthel
+Candidate	Eric Michael Mastroianni, Sr.	Eric Michael Mastroianni, Sr.
+Candidate	Erik A. Smith	Erik A. Smith
+Candidate	Erin M. Domenech	Erin M. Domenech
+Candidate	Erin Reilly	Erin Reilly
+Candidate	Ernestine Holloway	Ernestine Holloway
+Candidate	Erycka Ortiz	Erycka Ortiz
+Candidate	Ethan Book, Jr.	Ethan Book, Jr.
+Candidate	Eva A. Maldonado	Eva A. Maldonado
+Candidate	Frank Smith	Frank Smith
+Candidate	Fred Wilms	Fred Wilms
+Candidate	Frederick A. Moffa	Frederick A. Moffa
+Candidate	Gale L. Mastrofrancesco	Gale L. Mastrofrancesco
+Candidate	Gary Turco	Gary Turco
+Candidate	Gary Winfield	Gary Winfield
+Candidate	Genevieve Coursey	Genevieve Coursey
+Candidate	Gennaro Bizzarro	Gennaro Bizzarro
+Candidate	Geoff Luxenberg	Geoff Luxenberg
+Candidate	George Hallenbeck	George Hallenbeck
+Candidate	George Logan	George Logan
+Candidate	George W. Bush	GEORGE W. BUSH
+Candidate	Gerald Calnen	Gerald Calnen
+Candidate	Geraldo C. Reyes, Jr.	Geraldo C. Reyes, Jr.
+Candidate	Greg Howard	Greg Howard
+Candidate	Greg Post	Greg Post
+Candidate	Gregg Haddad	Gregg Haddad
+Candidate	Harold S. Harris	Harold S. Harris
+Candidate	Harry Arora	Harry Arora
+Candidate	Hawkins	Hawkins and Walker
+Candidate	Heather Somers	Heather Somers
+Candidate	Hector Arzeno	Hector Arzeno
+Candidate	Helene S. Kouassi	Helene S. Kouassi
+Candidate	Henri Martin	Henri Martin
+Candidate	Henry J. Genga	Henry J. Genga
+Candidate	Henry Thayer	Henry Thayer
+Candidate	Henry Vasel	Henry Vasel
+Candidate	Hilary Ram	Hilary Ram
+Candidate	Hilda E. Santiago	Hilda E. Santiago
+Candidate	Hillary Clinton	HILLARY CLINTON
+Candidate	Holly H. Cheeseman	Holly H. Cheeseman
+Candidate	Howard and Howard	Howard and Howard
+Candidate	Irene M. Haines	Irene M. Haines
+Candidate	J.D. Ospina	J.D. Ospina
+Candidate	JP Sredzinski	JP Sredzinski
+Candidate	Jack Henrie	Jack Henrie
+Candidate	Jack Perry	Jack Perry
+Candidate	Jahana Hayes	Jahana Hayes
+Candidate	Jaime Foster	Jaime Foster
+Candidate	James Maroney	James Maroney
+Candidate	Jameson White	Jameson White
+Candidate	Jane Garibay	Jane Garibay
+Candidate	Jasmin Sanchez	Jasmin Sanchez
+Candidate	Jason Doucette	Jason Doucette
+Candidate	Jason Perillo	Jason Perillo
+Candidate	Jason Rojas	Jason Rojas
+Candidate	Jason W. Bartlett	Jason W. Bartlett
+Candidate	Jay Case	Jay Case
+Candidate	Jeff Currey	Jeff Currey
+Candidate	Jeff Sullivan	Jeff Sullivan
+Candidate	Jeffrey Desmarais	Jeffrey Desmarais
+Candidate	Jennifer Leeper	Jennifer Leeper
+Candidate	Jerrell Hargraves	Jerrell Hargraves
+Candidate	Jessica Alba	Jessica Alba
+Candidate	Jill Barry	Jill Barry
+Candidate	Jillian Gilchrest	Jillian Gilchrest
+Candidate	Jim Feehan	Jim Feehan
+Candidate	Jim Himes	Jim Himes
+Candidate	Jim Jinks	Jim Jinks
+Candidate	Jo Jorgensen	Jorgensen and Cohen
+Candidate	JoAnn Angelico-Stetson	JoAnn Angelico-Stetson
+Candidate	Joan V. Hartley	Joan V. Hartley
+Candidate	Joanne Romano-Csonka	Joanne Romano-Csonka
+Candidate	Joe Courtney	Joe Courtney
+Candidate	Joe Kelly	Joe Kelly
+Candidate	Joe LaPorta	Joe LaPorta
+Candidate	Joe Zullo	Joe Zullo
+Candidate	Joe de la Cruz	Joe de la Cruz
+Candidate	Joelle Nawrocki	Joelle Nawrocki
+Candidate	John (Jack) F. Hennessy	John (Jack) F. Hennessy
+Candidate	John A. Kissel	John A. Kissel
+Candidate	John B. Larson	John B. Larson
+Candidate	John Collins	John Collins
+Candidate	John Corky Mazurek	John Corky Mazurek
+Candidate	John Fusco	John Fusco
+Candidate	John J.Flynn	John J.Flynn
+Candidate	John K. Hampton	John K. Hampton
+Candidate	John Kerry	JOHN KERRY
+Candidate	John L. Hall, III	John L. Hall, III
+Candidate	John M. Traceski	John M. Traceski
+Candidate	John MCCain	JOHN MCCAIN
+Candidate	John May	John May
+Candidate	John Mccain	JOHN MCCAIN
+Candidate	John Piscopo	John Piscopo
+Candidate	John Shaban	John Shaban
+Candidate	John W. Brockelman	John W. Brockelman
+Candidate	John W. Fonfara	John W. Fonfara
+Candidate	John-Michael Parker	John-Michael Parker
+Candidate	Jonathan Milon Johnson	Jonathan Milon Johnson
+Candidate	Jonathan Riddle	Jonathan Riddle
+Candidate	Jonathan Steinberg	Jonathan Steinberg
+Candidate	Jorge Cabrera	Jorge Cabrera
+Candidate	Jose Goncalves	Jose Goncalves
+Candidate	Joseph A. Bongiorno	Joseph A. Bongiorno
+Candidate	Joseph P. Gresko	Joseph P. Gresko
+Candidate	Joseph Polletta	Joseph Polletta
+Candidate	Joseph R. Biden	Biden and Harris
+Candidate	Joseph Taraya	Joseph Taraya
+Candidate	Josh Elliott	Josh Elliott
+Candidate	Joshua M. Hall	Joshua M. Hall
+Candidate	Josiah Israel	Josiah Israel
+Candidate	Juan Candelaria	Juan Candelaria
+Candidate	Judd Melon	Judd Melon
+Candidate	Julie Kushner	Julie Kushner
+Candidate	Julie Shilosky	Julie Shilosky
+Candidate	Julio A. Concepcion	Julio A. Concepcion
+Candidate	Justin Anderson	Justin Anderson
+Candidate	Justin C. Paglino	Justin C. Paglino
+Candidate	Kara Rochelle	Kara Rochelle
+Candidate	Kat Goulart	Kat Goulart
+Candidate	Kate Donnelly	Kate Donnelly
+Candidate	Kate Farrar	Kate Farrar
+Candidate	Kate Rotella	Kate Rotella
+Candidate	Kathleen Hoyt	Kathleen Hoyt
+Candidate	Kathleen M. McCarty	Kathleen M. McCarty
+Candidate	Kathleen Stowe	Kathleen Stowe
+Candidate	Kathy Grant	Kathy Grant
+Candidate	Kathy Kennedy	Kathy Kennedy
+Candidate	Keith James McConnell	Keith James McConnell
+Candidate	Kelly Elizabeth Green	Kelly Elizabeth Green
+Candidate	Kenneth Gucker	Kenneth Gucker
+Candidate	Kerri Colombo	Kerri Colombo
+Candidate	Kerry Szeps Wood	Kerry Szeps Wood
+Candidate	Kevin C. Kelly	Kevin C. Kelly
+Candidate	Kevin Ryan	Kevin Ryan
+Candidate	Kevin Witkos	Kevin Witkos
+Candidate	Kim Healy	Kim Healy
+Candidate	Kimberly Fiorello	Kimberly Fiorello
+Candidate	Kurt Vail	Kurt Vail
+Candidate	Lance Lusignan	Lance Lusignan
+Candidate	Larry B. Butler	Larry B. Butler
+Candidate	Larry Groh, Jr.	Larry Groh, Jr.
+Candidate	Laura B. Bush	Laura B. Bush
+Candidate	Laura Devlin	Laura Devlin
+Candidate	Lauren Gauthier	Lauren Gauthier
+Candidate	Lee V. Grisby, II	Lee V. Grisby, II
+Candidate	Len Suzio	Len Suzio
+Candidate	Leslee Hill	Leslee Hill
+Candidate	Lezlye W. Zupkus	Lezlye W. Zupkus
+Candidate	Linda Szynkowicz	Linda Szynkowicz
+Candidate	Lisa Thomas	Lisa Thomas
+Candidate	Liz Linehan	Liz Linehan
+Candidate	Lou Arata	Lou Arata
+Candidate	Lucy Dathan	Lucy Dathan
+Candidate	Mae Flexer	Mae Flexer
+Candidate	Marc Riccio	Marc Riccio
+Candidate	Margaret Streicker	Margaret Streicker
+Candidate	Maria Horn	Maria Horn
+Candidate	Marilyn Moore	Marilyn Moore
+Candidate	Mark DePonte	Mark DePonte
+Candidate	Mark Stewart Greenstein	Mark Stewart Greenstein
+Candidate	Mark W. Anderson	Mark W. Anderson
+Candidate	Martha Marx	Martha Marx
+Candidate	Martin M. Looney	Martin M. Looney
+Candidate	Mary Ann Turner	Mary Ann Turner
+Candidate	Mary B. Fortier	Mary B. Fortier
+Candidate	Mary Daugherty Abrams	Mary Daugherty Abrams
+Candidate	Mary Fay	Mary Fay
+Candidate	Mary L. Sanders	Mary L. Sanders
+Candidate	Mary Mushinsky	Mary Mushinsky
+Candidate	Mary Welander	Mary Welander
+Candidate	Matt Blumenthal	Matt Blumenthal
+Candidate	Matt Geren	Matt Geren
+Candidate	Matt Harper	Matt Harper
+Candidate	Matt Lesser	Matt Lesser
+Candidate	Matthew D. Dyer	Matthew D. Dyer
+Candidate	Matthew M. Corey	Matthew M. Corey
+Candidate	Matthew Ritter	Matthew Ritter
+Candidate	Melissa E. Osborne	Melissa E. Osborne
+Candidate	Michael C. D'Agostino	Michael C. D'Agostino
+Candidate	Michael Camillo	Michael Camillo
+Candidate	Michael D. Quinn	Michael D. Quinn
+Candidate	Michael DiGiovancarlo	Michael DiGiovancarlo
+Candidate	Michael DiMassa	Michael DiMassa
+Candidate	Michael Henry	Michael Henry
+Candidate	Michael Southworth	Michael Southworth
+Candidate	Michael Winkler	Michael Winkler
+Candidate	Michele Zommer	Michele Zommer
+Candidate	Michelle L. Cook	Michelle L. Cook
+Candidate	Michelle McCabe	Michelle McCabe
+Candidate	Mike Demicco	Mike Demicco
+Candidate	Mike France	Mike France
+Candidate	Mike Skelps	Mike Skelps
+Candidate	Minnie Gonzalez	Minnie Gonzalez
+Candidate	Mitch Bolinsky	Mitch Bolinsky
+Candidate	Mitt Romney	MITT ROMNEY
+Candidate	Myra Rivers	Myra Rivers
+Candidate	Nicole Klarides-Ditria	Nicole Klarides-Ditria
+Candidate	Noel Rodriquez	Noel Rodriquez
+Candidate	Noreen Kokoruda	Noreen Kokoruda
+Candidate	Norm Needleman	Norm Needleman
+Candidate	Other	OTHER
+Candidate	Pam Salamone	Pam Salamone
+Candidate	Pat Boyd	Pat Boyd
+Candidate	Pat Wilson Pheanious	Pat Wilson Pheanious
+Candidate	Patricia Billie Miller	Patricia Billie Miller
+Candidate	Patricia Dillon	Patricia Dillon
+Candidate	Patrick Callahan	Patrick Callahan
+Candidate	Patrick Pentalow	Patrick Pentalow
+Candidate	Patrizia Zucaro	Patrizia Zucaro
+Candidate	Paul Cicarella	Paul Cicarella
+Candidate	Paul Honig	Paul Honig
+Candidate	Paul J. Small	Paul J. Small
+Candidate	Paul M. Formica	Paul M. Formica
+Candidate	Peter Perillo	Peter Perillo
+Candidate	Peter Tercyak	Peter Tercyak
+Candidate	Philip L. Young	Philip L. Young
+Candidate	Phillip Chabot	Phillip Chabot
+Candidate	Piotr S. Ceglarz	Piotr S. Ceglarz
+Candidate	Quentin Phipps	Quentin Phipps
+Candidate	Raghib Allie-Brennan	Raghib Allie-Brennan
+Candidate	Ralph Nader	RALPH NADER
+Candidate	Rebekah Harriman-Stites	Rebekah Harriman-Stites
+Candidate	Richard Cordero	Richard Cordero
+Candidate	Richard Ruglio	Richard Ruglio
+Candidate	Rick Bush	Rick Bush
+Candidate	Rick L. Hayes	Rick L. Hayes
+Candidate	Rick Lopes	Rick Lopes
+Candidate	Rob Sampson	Rob Sampson
+Candidate	Robert Bell	Robert Bell
+Candidate	Robert Bobby' SanchezMachine/Polling Place/EDRAbsenteeTotal'Does not match regex ^(.+)Machine/Polling Place/EDRAbsenteeTotal$: Robert Bobby' SanchezMachine/Polling Place/EDRAbsenteeTotal'	Robert Bobby' SanchezMachine/Polling Place/EDRAbsenteeTotal'Does not match regex ^(.+)Machine/Polling Place/EDRAbsenteeTotal$: Robert Bobby' SanchezMachine/Polling Place/EDRAbsenteeTotal'
+Candidate	Robert E. Halstead	Robert E. Halstead
+Candidate	Robert Siegrist	Robert Siegrist
+Candidate	Robert T. Keeley, Jr.	Robert T. Keeley, Jr.
+Candidate	Robert W. Lawrence	Robert W. Lawrence
+Candidate	Robin Comey	Robin Comey
+Candidate	Robin Green	Robin Green
+Candidate	Robyn Porter	Robyn Porter
+Candidate	Rocky Roque De La Fuente	De La Fuenta and Richardson
+Candidate	Roland Lemar	Roland Lemar
+Candidate	Ronald A. Napoli, Jr.	Ronald A. Napoli, Jr.
+Candidate	Rosa C. Rebimbas	Rosa C. Rebimbas
+Candidate	Rosa L. DeLauro	Rosa L. DeLauro
+Candidate	Ryan Fazio	Ryan Fazio
+Candidate	Salvatore V. Sena, Jr.	Salvatore V. Sena, Jr.
+Candidate	Saud Anwar	Saud Anwar
+Candidate	Scott A. Storms	Scott A. Storms
+Candidate	Sean Butterly	Sean Butterly
+Candidate	Sean Scanlon	Sean Scanlon
+Candidate	Simmons and Dow	Simmons and Dow
+Candidate	Simmons and Roze	Simmons and Roze
+Candidate	Stephanie Cummings	Stephanie Cummings
+Candidate	Stephanie Thomas	Stephanie Thomas
+Candidate	Stephen Dincher	Stephen Dincher
+Candidate	Stephen G. Harding	Stephen G. Harding
+Candidate	Stephen Samela	Stephen Samela
+Candidate	Steve Cassano	Steve Cassano
+Candidate	Steve Meskers	Steve Meskers
+Candidate	Steve Weir	Steve Weir
+Candidate	Steven S. Choi	Steven S. Choi
+Candidate	Steven Stafstrom	Steven Stafstrom
+Candidate	Stewart Chip' BeckettMachine/Polling Place/EDRAbsenteeTotal'Does not match regex ^(.+)Machine/Polling Place/EDRAbsenteeTotal$: Stewart Chip' BeckettMachine/Polling Place/EDRAbsenteeTotal'	Stewart Chip' BeckettMachine/Polling Place/EDRAbsenteeTotal'Does not match regex ^(.+)Machine/Polling Place/EDRAbsenteeTotal$: Stewart Chip' BeckettMachine/Polling Place/EDRAbsenteeTotal'
+Candidate	Sujata Gadkar-Wilcox	Sujata Gadkar-Wilcox
+Candidate	Susan Chapman	Susan Chapman
+Candidate	Susan Johnson	Susan Johnson
+Candidate	Tami Zawistowski	Tami Zawistowski
+Candidate	Tammy Exum	Tammy Exum
+Candidate	Tammy Nuccio	Tammy Nuccio
+Candidate	Terrence A. Sullivan	Terrence A. Sullivan
+Candidate	Terrie E. Wood	Terrie E. Wood
+Candidate	Thomas E. McCormick	Thomas E. McCormick
+Candidate	Thomas P. O'Dea , Jr.	Thomas P. O'Dea , Jr.
+Candidate	Timothy Ackert	Timothy Ackert
+Candidate	Tom Arnone	Tom Arnone
+Candidate	Tom Delnicki	Tom Delnicki
+Candidate	Toni E. Walker	Toni E. Walker
+Candidate	Tony Gennaro	Tony Gennaro
+Candidate	Tony Hwang	Tony Hwang
+Candidate	Tony Sutton	Tony Sutton
+Candidate	Travis Simms	Travis Simms
+Candidate	Vernon R. Matthews	Vernon R. Matthews
+Candidate	Vincent J. Candelora	Vincent J. Candelora
+Candidate	Vincent J. Mase, Sr.	Vincent J. Mase, Sr.
+Candidate	Wanda R. Simmons	Wanda R. Simmons
+Candidate	Weinstein	Weinstein and Weinstein
+Candidate	Wells	Wells and Wells
+Candidate	Weruche U. George	Weruche U. George
+Candidate	West	West and Tidball
+Candidate	Weston Ulbrich	Weston Ulbrich
+Candidate	Whit Betts	Whit Betts
+Candidate	Wilfredo Martinez	Wilfredo Martinez
+Candidate	Will Haskell	Will Haskell
+Candidate	William A. Petit, Jr.	William A. Petit, Jr.
+Candidate	William H. Russell	William H. Russell
+Candidate	William J. Buckbee	William J. Buckbee
+Candidate	Wilm Donath	Wilm Donath
+Candidate	Yusheng Peng	Yusheng Peng
+CandidateContest	CT Attorney General	CT Attorney General
+CandidateContest	CT Governor	CT Governor
 CandidateContest	CT House District 1	State Representative 01
-CandidateContest	CT House District 2	State Representative 02
-CandidateContest	CT House District 3	State Representative 03
-CandidateContest	CT House District 4	State Representative 04
-CandidateContest	CT House District 5	State Representative 05
-CandidateContest	CT House District 6	State Representative 06
-CandidateContest	CT House District 7	State Representative 07
-CandidateContest	CT House District 8	State Representative 08
-CandidateContest	CT House District 9	State Representative 09
 CandidateContest	CT House District 10	State Representative 10
-CandidateContest	CT House District 11	State Representative 11
-CandidateContest	CT House District 12	State Representative 12
-CandidateContest	CT House District 13	State Representative 13
-CandidateContest	CT House District 14	State Representative 14
-CandidateContest	CT House District 15	State Representative 15
-CandidateContest	CT House District 16	State Representative 16
-CandidateContest	CT House District 17	State Representative 17
-CandidateContest	CT House District 18	State Representative 18
-CandidateContest	CT House District 19	State Representative 19
-CandidateContest	CT House District 20	State Representative 20
-CandidateContest	CT House District 21	State Representative 21
-CandidateContest	CT House District 22	State Representative 22
-CandidateContest	CT House District 23	State Representative 23
-CandidateContest	CT House District 24	State Representative 24
-CandidateContest	CT House District 25	State Representative 25
-CandidateContest	CT House District 26	State Representative 26
-CandidateContest	CT House District 27	State Representative 27
-CandidateContest	CT House District 28	State Representative 28
-CandidateContest	CT House District 29	State Representative 29
-CandidateContest	CT House District 30	State Representative 30
-CandidateContest	CT House District 31	State Representative 31
-CandidateContest	CT House District 32	State Representative 32
-CandidateContest	CT House District 33	State Representative 33
-CandidateContest	CT House District 34	State Representative 34
-CandidateContest	CT House District 35	State Representative 35
-CandidateContest	CT House District 36	State Representative 36
-CandidateContest	CT House District 37	State Representative 37
-CandidateContest	CT House District 38	State Representative 38
-CandidateContest	CT House District 39	State Representative 39
-CandidateContest	CT House District 40	State Representative 40
-CandidateContest	CT House District 41	State Representative 41
-CandidateContest	CT House District 42	State Representative 42
-CandidateContest	CT House District 43	State Representative 43
-CandidateContest	CT House District 44	State Representative 44
-CandidateContest	CT House District 45	State Representative 45
-CandidateContest	CT House District 46	State Representative 46
-CandidateContest	CT House District 47	State Representative 47
-CandidateContest	CT House District 48	State Representative 48
-CandidateContest	CT House District 49	State Representative 49
-CandidateContest	CT House District 50	State Representative 50
-CandidateContest	CT House District 51	State Representative 51
-CandidateContest	CT House District 52	State Representative 52
-CandidateContest	CT House District 53	State Representative 53
-CandidateContest	CT House District 54	State Representative 54
-CandidateContest	CT House District 55	State Representative 55
-CandidateContest	CT House District 56	State Representative 56
-CandidateContest	CT House District 57	State Representative 57
-CandidateContest	CT House District 58	State Representative 58
-CandidateContest	CT House District 59	State Representative 59
-CandidateContest	CT House District 60	State Representative 60
-CandidateContest	CT House District 61	State Representative 61
-CandidateContest	CT House District 62	State Representative 62
-CandidateContest	CT House District 63	State Representative 63
-CandidateContest	CT House District 64	State Representative 64
-CandidateContest	CT House District 65	State Representative 65
-CandidateContest	CT House District 66	State Representative 66
-CandidateContest	CT House District 67	State Representative 67
-CandidateContest	CT House District 68	State Representative 68
-CandidateContest	CT House District 69	State Representative 69
-CandidateContest	CT House District 70	State Representative 70
-CandidateContest	CT House District 71	State Representative 71
-CandidateContest	CT House District 72	State Representative 72
-CandidateContest	CT House District 73	State Representative 73
-CandidateContest	CT House District 74	State Representative 74
-CandidateContest	CT House District 75	State Representative 75
-CandidateContest	CT House District 76	State Representative 76
-CandidateContest	CT House District 77	State Representative 77
-CandidateContest	CT House District 78	State Representative 78
-CandidateContest	CT House District 79	State Representative 79
-CandidateContest	CT House District 80	State Representative 80
-CandidateContest	CT House District 81	State Representative 81
-CandidateContest	CT House District 82	State Representative 82
-CandidateContest	CT House District 83	State Representative 83
-CandidateContest	CT House District 84	State Representative 84
-CandidateContest	CT House District 85	State Representative 85
-CandidateContest	CT House District 86	State Representative 86
-CandidateContest	CT House District 87	State Representative 87
-CandidateContest	CT House District 88	State Representative 88
-CandidateContest	CT House District 89	State Representative 89
-CandidateContest	CT House District 90	State Representative 90
-CandidateContest	CT House District 91	State Representative 91
-CandidateContest	CT House District 92	State Representative 92
-CandidateContest	CT House District 93	State Representative 93
-CandidateContest	CT House District 94	State Representative 94
-CandidateContest	CT House District 95	State Representative 95
-CandidateContest	CT House District 96	State Representative 96
-CandidateContest	CT House District 97	State Representative 97
-CandidateContest	CT House District 98	State Representative 98
-CandidateContest	CT House District 99	State Representative 99
 CandidateContest	CT House District 100	State Representative 100
 CandidateContest	CT House District 101	State Representative 101
 CandidateContest	CT House District 102	State Representative 102
@@ -144,6 +427,7 @@ CandidateContest	CT House District 106	State Representative 106
 CandidateContest	CT House District 107	State Representative 107
 CandidateContest	CT House District 108	State Representative 108
 CandidateContest	CT House District 109	State Representative 109
+CandidateContest	CT House District 11	State Representative 11
 CandidateContest	CT House District 110	State Representative 110
 CandidateContest	CT House District 111	State Representative 111
 CandidateContest	CT House District 112	State Representative 112
@@ -154,6 +438,7 @@ CandidateContest	CT House District 116	State Representative 116
 CandidateContest	CT House District 117	State Representative 117
 CandidateContest	CT House District 118	State Representative 118
 CandidateContest	CT House District 119	State Representative 119
+CandidateContest	CT House District 12	State Representative 12
 CandidateContest	CT House District 120	State Representative 120
 CandidateContest	CT House District 121	State Representative 121
 CandidateContest	CT House District 122	State Representative 122
@@ -164,6 +449,7 @@ CandidateContest	CT House District 126	State Representative 126
 CandidateContest	CT House District 127	State Representative 127
 CandidateContest	CT House District 128	State Representative 128
 CandidateContest	CT House District 129	State Representative 129
+CandidateContest	CT House District 13	State Representative 13
 CandidateContest	CT House District 130	State Representative 130
 CandidateContest	CT House District 131	State Representative 131
 CandidateContest	CT House District 132	State Representative 132
@@ -174,6 +460,7 @@ CandidateContest	CT House District 136	State Representative 136
 CandidateContest	CT House District 137	State Representative 137
 CandidateContest	CT House District 138	State Representative 138
 CandidateContest	CT House District 139	State Representative 139
+CandidateContest	CT House District 14	State Representative 14
 CandidateContest	CT House District 140	State Representative 140
 CandidateContest	CT House District 141	State Representative 141
 CandidateContest	CT House District 142	State Representative 142
@@ -184,202 +471,177 @@ CandidateContest	CT House District 146	State Representative 146
 CandidateContest	CT House District 147	State Representative 147
 CandidateContest	CT House District 148	State Representative 148
 CandidateContest	CT House District 149	State Representative 149
+CandidateContest	CT House District 15	State Representative 15
 CandidateContest	CT House District 150	State Representative 150
 CandidateContest	CT House District 151	State Representative 151
+CandidateContest	CT House District 16	State Representative 16
+CandidateContest	CT House District 17	State Representative 17
+CandidateContest	CT House District 18	State Representative 18
+CandidateContest	CT House District 19	State Representative 19
+CandidateContest	CT House District 2	State Representative 02
+CandidateContest	CT House District 20	State Representative 20
+CandidateContest	CT House District 21	State Representative 21
+CandidateContest	CT House District 22	State Representative 22
+CandidateContest	CT House District 23	State Representative 23
+CandidateContest	CT House District 24	State Representative 24
+CandidateContest	CT House District 25	State Representative 25
+CandidateContest	CT House District 26	State Representative 26
+CandidateContest	CT House District 27	State Representative 27
+CandidateContest	CT House District 28	State Representative 28
+CandidateContest	CT House District 29	State Representative 29
+CandidateContest	CT House District 3	State Representative 03
+CandidateContest	CT House District 30	State Representative 30
+CandidateContest	CT House District 31	State Representative 31
+CandidateContest	CT House District 32	State Representative 32
+CandidateContest	CT House District 33	State Representative 33
+CandidateContest	CT House District 34	State Representative 34
+CandidateContest	CT House District 35	State Representative 35
+CandidateContest	CT House District 36	State Representative 36
+CandidateContest	CT House District 37	State Representative 37
+CandidateContest	CT House District 38	State Representative 38
+CandidateContest	CT House District 39	State Representative 39
+CandidateContest	CT House District 4	State Representative 04
+CandidateContest	CT House District 40	State Representative 40
+CandidateContest	CT House District 41	State Representative 41
+CandidateContest	CT House District 42	State Representative 42
+CandidateContest	CT House District 43	State Representative 43
+CandidateContest	CT House District 44	State Representative 44
+CandidateContest	CT House District 45	State Representative 45
+CandidateContest	CT House District 46	State Representative 46
+CandidateContest	CT House District 47	State Representative 47
+CandidateContest	CT House District 48	State Representative 48
+CandidateContest	CT House District 49	State Representative 49
+CandidateContest	CT House District 5	State Representative 05
+CandidateContest	CT House District 50	State Representative 50
+CandidateContest	CT House District 51	State Representative 51
+CandidateContest	CT House District 52	State Representative 52
+CandidateContest	CT House District 53	State Representative 53
+CandidateContest	CT House District 54	State Representative 54
+CandidateContest	CT House District 55	State Representative 55
+CandidateContest	CT House District 56	State Representative 56
+CandidateContest	CT House District 57	State Representative 57
+CandidateContest	CT House District 58	State Representative 58
+CandidateContest	CT House District 59	State Representative 59
+CandidateContest	CT House District 6	State Representative 06
+CandidateContest	CT House District 60	State Representative 60
+CandidateContest	CT House District 61	State Representative 61
+CandidateContest	CT House District 62	State Representative 62
+CandidateContest	CT House District 63	State Representative 63
+CandidateContest	CT House District 64	State Representative 64
+CandidateContest	CT House District 65	State Representative 65
+CandidateContest	CT House District 66	State Representative 66
+CandidateContest	CT House District 67	State Representative 67
+CandidateContest	CT House District 68	State Representative 68
+CandidateContest	CT House District 69	State Representative 69
+CandidateContest	CT House District 7	State Representative 07
+CandidateContest	CT House District 70	State Representative 70
+CandidateContest	CT House District 71	State Representative 71
+CandidateContest	CT House District 72	State Representative 72
+CandidateContest	CT House District 73	State Representative 73
+CandidateContest	CT House District 74	State Representative 74
+CandidateContest	CT House District 75	State Representative 75
+CandidateContest	CT House District 76	State Representative 76
+CandidateContest	CT House District 77	State Representative 77
+CandidateContest	CT House District 78	State Representative 78
+CandidateContest	CT House District 79	State Representative 79
+CandidateContest	CT House District 8	State Representative 08
+CandidateContest	CT House District 80	State Representative 80
+CandidateContest	CT House District 81	State Representative 81
+CandidateContest	CT House District 82	State Representative 82
+CandidateContest	CT House District 83	State Representative 83
+CandidateContest	CT House District 84	State Representative 84
+CandidateContest	CT House District 85	State Representative 85
+CandidateContest	CT House District 86	State Representative 86
+CandidateContest	CT House District 87	State Representative 87
+CandidateContest	CT House District 88	State Representative 88
+CandidateContest	CT House District 89	State Representative 89
+CandidateContest	CT House District 9	State Representative 09
+CandidateContest	CT House District 90	State Representative 90
+CandidateContest	CT House District 91	State Representative 91
+CandidateContest	CT House District 92	State Representative 92
+CandidateContest	CT House District 93	State Representative 93
+CandidateContest	CT House District 94	State Representative 94
+CandidateContest	CT House District 95	State Representative 95
+CandidateContest	CT House District 96	State Representative 96
+CandidateContest	CT House District 97	State Representative 97
+CandidateContest	CT House District 98	State Representative 98
+CandidateContest	CT House District 99	State Representative 99
+CandidateContest	CT Lieutenant Governor	CT Lieutenant Governor
+CandidateContest	CT Secretary of State	CT Secretary of State
+CandidateContest	CT Senate District 1	State Senator 01
+CandidateContest	CT Senate District 10	State Senator 10
+CandidateContest	CT Senate District 11	State Senator 11
+CandidateContest	CT Senate District 12	State Senator 12
+CandidateContest	CT Senate District 13	State Senator 13
+CandidateContest	CT Senate District 14	State Senator 14
+CandidateContest	CT Senate District 15	State Senator 15
+CandidateContest	CT Senate District 16	State Senator 16
+CandidateContest	CT Senate District 17	State Senator 17
+CandidateContest	CT Senate District 18	State Senator 18
+CandidateContest	CT Senate District 19	State Senator 19
+CandidateContest	CT Senate District 2	State Senator 02
+CandidateContest	CT Senate District 20	State Senator 20
+CandidateContest	CT Senate District 21	State Senator 21
+CandidateContest	CT Senate District 22	State Senator 22
+CandidateContest	CT Senate District 23	State Senator 23
+CandidateContest	CT Senate District 24	State Senator 24
+CandidateContest	CT Senate District 25	State Senator 25
+CandidateContest	CT Senate District 26	State Senator 26
+CandidateContest	CT Senate District 27	State Senator 27
+CandidateContest	CT Senate District 28	State Senator 28
+CandidateContest	CT Senate District 29	State Senator 29
+CandidateContest	CT Senate District 3	State Senator 03
+CandidateContest	CT Senate District 30	State Senator 30
+CandidateContest	CT Senate District 31	State Senator 31
+CandidateContest	CT Senate District 32	State Senator 32
+CandidateContest	CT Senate District 33	State Senator 33
+CandidateContest	CT Senate District 34	State Senator 34
+CandidateContest	CT Senate District 35	State Senator 35
+CandidateContest	CT Senate District 36	State Senator 36
+CandidateContest	CT Senate District 4	State Senator 04
+CandidateContest	CT Senate District 5	State Senator 05
+CandidateContest	CT Senate District 6	State Senator 06
+CandidateContest	CT Senate District 7	State Senator 07
+CandidateContest	CT Senate District 8	State Senator 08
+CandidateContest	CT Senate District 9	State Senator 09
+CandidateContest	CT Treasurer	CT Treasurer
 CandidateContest	US House CT District 1	Representative in Congress 01
 CandidateContest	US House CT District 2	Representative in Congress 02
 CandidateContest	US House CT District 3	Representative in Congress 03
 CandidateContest	US House CT District 4	Representative in Congress 04
 CandidateContest	US House CT District 5	Representative in Congress 05
 CandidateContest	US President (CT)	Presidential Electors for
-CandidateContest	CT Governor	CT Governor
+CandidateContest	US President (CT)	PRESIDENT
+CandidateContest	US President (CT)	US PRESIDENT
 CandidateContest	US Senate CT	US Senate CT
-CandidateContest	CT Attorney General	CT Attorney General
-CandidateContest	CT Lieutenant Governor	CT Lieutenant Governor
-CandidateContest	CT Treasurer	CT Treasurer
-CandidateContest	CT Secretary of State	CT Secretary of State
+CountItemType	absentee	Absentee
+CountItemType	election-day	Machine
+CountItemType	total	Final
+CountItemType	total	TOTAL
+Election	2016 General	2016 General
+Election	2018 General	2018 General
 Election	2020 General	2020 General
 Election	2020 Primary	2020 Primary
-Election	2018 General	2018 General
-Election	2016 General	2016 General
 Party	Democratic Party	Democratic Party
-Party	Republican Party	Republican Party
+Party	Democratic Party	DEMOCRAT
+Party	Epic Party	Epic Party
 Party	Green Party	Green Party
+Party	Green Party	GREEN
+Party	Independent Party	Independent Party
 Party	Libertarian Party	Libertarian Party
+Party	Libertarian Party	LIBERTARIAN
+Party	Petitioning Candidate	Petitioning Candidate
+Party	Reclaim Party	Reclaim Party
+Party	Republican Party	Republican Party
+Party	Republican Party	REPUBLICAN
+Party	Socialist Resurgence Party	Socialist Resurgence Party
+Party	Working Families Party	Working Families Party
+Party	Write In	Write In
+Party	none or unknown	OTHER
 ReportingUnit	Connecticut	Connecticut
 ReportingUnit	Connecticut;Andover	Andover
-ReportingUnit	Connecticut;Ansonia	Ansonia
-ReportingUnit	Connecticut;Ashford	Ashford
-ReportingUnit	Connecticut;Avon	Avon
-ReportingUnit	Connecticut;Barkhamsted	Barkhamsted
-ReportingUnit	Connecticut;Beacon Falls	Beacon Falls
-ReportingUnit	Connecticut;Berlin	Berlin
-ReportingUnit	Connecticut;Bethany	Bethany
-ReportingUnit	Connecticut;Bethel	Bethel
-ReportingUnit	Connecticut;Bethlehem	Bethlehem
-ReportingUnit	Connecticut;Bloomfield	Bloomfield
-ReportingUnit	Connecticut;Bolton	Bolton
-ReportingUnit	Connecticut;Bozrah	Bozrah
-ReportingUnit	Connecticut;Branford	Branford
-ReportingUnit	Connecticut;Bridgeport	Bridgeport
-ReportingUnit	Connecticut;Bridgewater	Bridgewater
-ReportingUnit	Connecticut;Bristol	Bristol
-ReportingUnit	Connecticut;Brookfield	Brookfield
-ReportingUnit	Connecticut;Brooklyn	Brooklyn
-ReportingUnit	Connecticut;Burlington	Burlington
-ReportingUnit	Connecticut;Canaan	Canaan
-ReportingUnit	Connecticut;Canterbury	Canterbury
-ReportingUnit	Connecticut;Canton	Canton
-ReportingUnit	Connecticut;Chaplin	Chaplin
-ReportingUnit	Connecticut;Cheshire	Cheshire
-ReportingUnit	Connecticut;Chester	Chester
-ReportingUnit	Connecticut;Clinton	Clinton
-ReportingUnit	Connecticut;Colchester	Colchester
-ReportingUnit	Connecticut;Colebrook	Colebrook
-ReportingUnit	Connecticut;Columbia	Columbia
-ReportingUnit	Connecticut;Cornwall	Cornwall
-ReportingUnit	Connecticut;Coventry	Coventry
-ReportingUnit	Connecticut;Cromwell	Cromwell
-ReportingUnit	Connecticut;Danbury	Danbury
-ReportingUnit	Connecticut;Darien	Darien
-ReportingUnit	Connecticut;Deep River	Deep River
-ReportingUnit	Connecticut;Derby	Derby
-ReportingUnit	Connecticut;Durham	Durham
-ReportingUnit	Connecticut;East Granby	East Granby
-ReportingUnit	Connecticut;East Haddam	East Haddam
-ReportingUnit	Connecticut;East Hampton	East Hampton
-ReportingUnit	Connecticut;East Hartford	East Hartford
-ReportingUnit	Connecticut;East Haven	East Haven
-ReportingUnit	Connecticut;East Lyme	East Lyme
-ReportingUnit	Connecticut;East Windsor	East Windsor
-ReportingUnit	Connecticut;Eastford	Eastford
-ReportingUnit	Connecticut;Easton	Easton
-ReportingUnit	Connecticut;ElectionDescription	ElectionDescription
-ReportingUnit	Connecticut;Ellington	Ellington
-ReportingUnit	Connecticut;Enfield	Enfield
-ReportingUnit	Connecticut;Essex	Essex
-ReportingUnit	Connecticut;Fairfield	Fairfield
-ReportingUnit	Connecticut;Farmington	Farmington
-ReportingUnit	Connecticut;Franklin	Franklin
-ReportingUnit	Connecticut;Glastonbury	Glastonbury
-ReportingUnit	Connecticut;Goshen	Goshen
-ReportingUnit	Connecticut;Granby	Granby
-ReportingUnit	Connecticut;Greenwich	Greenwich
-ReportingUnit	Connecticut;Griswold	Griswold
-ReportingUnit	Connecticut;Groton	Groton
-ReportingUnit	Connecticut;Guilford	Guilford
-ReportingUnit	Connecticut;Haddam	Haddam
-ReportingUnit	Connecticut;Hamden	Hamden
-ReportingUnit	Connecticut;Hampton	Hampton
-ReportingUnit	Connecticut;Hartford	Hartford
-ReportingUnit	Connecticut;Hartland	Hartland
-ReportingUnit	Connecticut;Harwinton	Harwinton
-ReportingUnit	Connecticut;Hebron	Hebron
-ReportingUnit	Connecticut;Kent	Kent
-ReportingUnit	Connecticut;Killingly	Killingly
-ReportingUnit	Connecticut;Killingworth	Killingworth
-ReportingUnit	Connecticut;Lebanon	Lebanon
-ReportingUnit	Connecticut;Ledyard	Ledyard
-ReportingUnit	Connecticut;Lisbon	Lisbon
-ReportingUnit	Connecticut;Litchfield	Litchfield
-ReportingUnit	Connecticut;Lyme	Lyme
-ReportingUnit	Connecticut;Madison	Madison
-ReportingUnit	Connecticut;Manchester	Manchester
-ReportingUnit	Connecticut;Mansfield	Mansfield
-ReportingUnit	Connecticut;Marlborough	Marlborough
-ReportingUnit	Connecticut;Meriden	Meriden
-ReportingUnit	Connecticut;Middlebury	Middlebury
-ReportingUnit	Connecticut;Middlefield	Middlefield
-ReportingUnit	Connecticut;Middletown	Middletown
-ReportingUnit	Connecticut;Milford	Milford
-ReportingUnit	Connecticut;Monroe	Monroe
-ReportingUnit	Connecticut;Montville	Montville
-ReportingUnit	Connecticut;Morris	Morris
-ReportingUnit	Connecticut;Naugatuck	Naugatuck
-ReportingUnit	Connecticut;New Britain	New Britain
-ReportingUnit	Connecticut;New Canaan	New Canaan
-ReportingUnit	Connecticut;New Fairfield	New Fairfield
-ReportingUnit	Connecticut;New Hartford	New Hartford
-ReportingUnit	Connecticut;New Haven	New Haven
-ReportingUnit	Connecticut;New London	New London
-ReportingUnit	Connecticut;New Milford	New Milford
-ReportingUnit	Connecticut;Newington	Newington
-ReportingUnit	Connecticut;Newtown	Newtown
-ReportingUnit	Connecticut;Norfolk	Norfolk
-ReportingUnit	Connecticut;North Branford	North Branford
-ReportingUnit	Connecticut;North Canaan	North Canaan
-ReportingUnit	Connecticut;North Haven	North Haven
-ReportingUnit	Connecticut;North Stonington	North Stonington
-ReportingUnit	Connecticut;Norwalk	Norwalk
-ReportingUnit	Connecticut;Norwich	Norwich
-ReportingUnit	Connecticut;Old Lyme	Old Lyme
-ReportingUnit	Connecticut;Old Saybrook	Old Saybrook
-ReportingUnit	Connecticut;Orange	Orange
-ReportingUnit	Connecticut;Oxford	Oxford
-ReportingUnit	Connecticut;Plainfield	Plainfield
-ReportingUnit	Connecticut;Plainville	Plainville
-ReportingUnit	Connecticut;Plymouth	Plymouth
-ReportingUnit	Connecticut;Polling_Place_Name	Polling_Place_Name
-ReportingUnit	Connecticut;Pomfret	Pomfret
-ReportingUnit	Connecticut;Portland	Portland
-ReportingUnit	Connecticut;Preston	Preston
-ReportingUnit	Connecticut;Prospect	Prospect
-ReportingUnit	Connecticut;Putnam	Putnam
-ReportingUnit	Connecticut;Redding	Redding
-ReportingUnit	Connecticut;Ridgefield	Ridgefield
-ReportingUnit	Connecticut;Rocky Hill	Rocky Hill
-ReportingUnit	Connecticut;Roxbury	Roxbury
-ReportingUnit	Connecticut;Salem	Salem
-ReportingUnit	Connecticut;Salisbury	Salisbury
-ReportingUnit	Connecticut;Scotland	Scotland
-ReportingUnit	Connecticut;Seymour	Seymour
-ReportingUnit	Connecticut;Sharon	Sharon
-ReportingUnit	Connecticut;Shelton	Shelton
-ReportingUnit	Connecticut;Sherman	Sherman
-ReportingUnit	Connecticut;Simsbury	Simsbury
-ReportingUnit	Connecticut;Somers	Somers
-ReportingUnit	Connecticut;South Windsor	South Windsor
-ReportingUnit	Connecticut;Southbury	Southbury
-ReportingUnit	Connecticut;Southington	Southington
-ReportingUnit	Connecticut;Sprague	Sprague
-ReportingUnit	Connecticut;Stafford	Stafford
-ReportingUnit	Connecticut;Stamford	Stamford
-ReportingUnit	Connecticut;State Election	State Election
-ReportingUnit	Connecticut;Sterling	Sterling
-ReportingUnit	Connecticut;Stonington	Stonington
-ReportingUnit	Connecticut;Stratford	Stratford
-ReportingUnit	Connecticut;Suffield	Suffield
-ReportingUnit	Connecticut;Thomaston	Thomaston
-ReportingUnit	Connecticut;Thompson	Thompson
-ReportingUnit	Connecticut;Tolland	Tolland
-ReportingUnit	Connecticut;Torrington	Torrington
-ReportingUnit	Connecticut;Trumbull	Trumbull
-ReportingUnit	Connecticut;Union	Union
-ReportingUnit	Connecticut;Vernon	Vernon
-ReportingUnit	Connecticut;Voluntown	Voluntown
-ReportingUnit	Connecticut;Wallingford	Wallingford
-ReportingUnit	Connecticut;Warren	Warren
-ReportingUnit	Connecticut;Washington	Washington
-ReportingUnit	Connecticut;Waterbury	Waterbury
-ReportingUnit	Connecticut;Waterford	Waterford
-ReportingUnit	Connecticut;Watertown	Watertown
-ReportingUnit	Connecticut;West Hartford	West Hartford
-ReportingUnit	Connecticut;West Haven	West Haven
-ReportingUnit	Connecticut;Westbrook	Westbrook
-ReportingUnit	Connecticut;Weston	Weston
-ReportingUnit	Connecticut;Westport	Westport
-ReportingUnit	Connecticut;Wethersfield	Wethersfield
-ReportingUnit	Connecticut;Willington	Willington
-ReportingUnit	Connecticut;Wilton	Wilton
-ReportingUnit	Connecticut;Winchester	Winchester
-ReportingUnit	Connecticut;Windham	Windham
-ReportingUnit	Connecticut;Windsor	Windsor
-ReportingUnit	Connecticut;Windsor Locks	Windsor Locks
-ReportingUnit	Connecticut;Wolcott	Wolcott
-ReportingUnit	Connecticut;Woodbridge	Woodbridge
-ReportingUnit	Connecticut;Woodbury	Woodbury
-ReportingUnit	Connecticut;Woodstock	Woodstock
 ReportingUnit	Connecticut;Andover;DISTRICT 1-Andover Elementary School Gymnasium	Andover;DISTRICT 1-Andover Elementary School Gymnasium
+ReportingUnit	Connecticut;Ansonia	Ansonia
 ReportingUnit	Connecticut;Ansonia;DISTRICT 1-Ward 1 Ansonia Armory	Ansonia;DISTRICT 1-Ward 1 Ansonia Armory
 ReportingUnit	Connecticut;Ansonia;DISTRICT 2-1-Ward 2 Ansonia Armory	Ansonia;DISTRICT 2-1-Ward 2 Ansonia Armory
 ReportingUnit	Connecticut;Ansonia;DISTRICT 3-1-Ward 3 Holy Rosary Church Hall	Ansonia;DISTRICT 3-1-Ward 3 Holy Rosary Church Hall
@@ -387,31 +649,43 @@ ReportingUnit	Connecticut;Ansonia;DISTRICT 4-Ward 4 Ansonia Middle School Gym	An
 ReportingUnit	Connecticut;Ansonia;DISTRICT 5-Ward 5 Ansonia Middle School Gym'	Ansonia;DISTRICT 5-Ward 5 Ansonia Middle School Gym'
 ReportingUnit	Connecticut;Ansonia;DISTRICT 6-Ward 6 Prendergast School Gym	Ansonia;DISTRICT 6-Ward 6 Prendergast School Gym
 ReportingUnit	Connecticut;Ansonia;DISTRICT 7-Ward 7 Mead School Cafe	Ansonia;DISTRICT 7-Ward 7 Mead School Cafe
+ReportingUnit	Connecticut;Ashford	Ashford
 ReportingUnit	Connecticut;Ashford;DISTRICT 1-Knowlton Memorial Hall	Ashford;DISTRICT 1-Knowlton Memorial Hall
+ReportingUnit	Connecticut;Avon	Avon
 ReportingUnit	Connecticut;Avon;DISTRICT 1-Avon High School - Gymnasium	Avon;DISTRICT 1-Avon High School - Gymnasium
 ReportingUnit	Connecticut;Avon;DISTRICT 2-Firehouse Company #1	Avon;DISTRICT 2-Firehouse Company #1
 ReportingUnit	Connecticut;Avon;DISTRICT 3-Roaring Brook School	Avon;DISTRICT 3-Roaring Brook School
+ReportingUnit	Connecticut;Barkhamsted	Barkhamsted
 ReportingUnit	Connecticut;Barkhamsted;DISTRICT 1-Barkhamsted Elementary School	Barkhamsted;DISTRICT 1-Barkhamsted Elementary School
+ReportingUnit	Connecticut;Beacon Falls	Beacon Falls
 ReportingUnit	Connecticut;Beacon Falls;DISTRICT 1-Laurel Ledge School	Beacon Falls;DISTRICT 1-Laurel Ledge School
+ReportingUnit	Connecticut;Berlin	Berlin
 ReportingUnit	Connecticut;Berlin;DISTRICT 1-Willard School	Berlin;DISTRICT 1-Willard School
 ReportingUnit	Connecticut;Berlin;DISTRICT 2-VFW	Berlin;DISTRICT 2-VFW
 ReportingUnit	Connecticut;Berlin;DISTRICT 3-Hubbard School	Berlin;DISTRICT 3-Hubbard School
 ReportingUnit	Connecticut;Berlin;DISTRICT 4-Senior Center	Berlin;DISTRICT 4-Senior Center
 ReportingUnit	Connecticut;Berlin;DISTRICT 5-Griswold School	Berlin;DISTRICT 5-Griswold School
+ReportingUnit	Connecticut;Bethany	Bethany
 ReportingUnit	Connecticut;Bethany;DISTRICT 1-Town Hall	Bethany;DISTRICT 1-Town Hall
+ReportingUnit	Connecticut;Bethel	Bethel
 ReportingUnit	Connecticut;Bethel;DISTRICT 1-Bethel Municipal Center 1	Bethel;DISTRICT 1-Bethel Municipal Center 1
 ReportingUnit	Connecticut;Bethel;DISTRICT 2-Stony Hill Fire House -2	Bethel;DISTRICT 2-Stony Hill Fire House -2
 ReportingUnit	Connecticut;Bethel;DISTRICT 3-Frank A. Berry School - 3	Bethel;DISTRICT 3-Frank A. Berry School - 3
 ReportingUnit	Connecticut;Bethel;DISTRICT 4-Bethel Municipal Center 4	Bethel;DISTRICT 4-Bethel Municipal Center 4
 ReportingUnit	Connecticut;Bethel;DISTRICT 5-Frank A. Berry School - 5	Bethel;DISTRICT 5-Frank A. Berry School - 5
+ReportingUnit	Connecticut;Bethlehem	Bethlehem
 ReportingUnit	Connecticut;Bethlehem;DISTRICT 1-Bethlehem Town Office Building	Bethlehem;DISTRICT 1-Bethlehem Town Office Building
+ReportingUnit	Connecticut;Bloomfield	Bloomfield
 ReportingUnit	Connecticut;Bloomfield;DISTRICT 1-Leisure Services Gym	Bloomfield;DISTRICT 1-Leisure Services Gym
 ReportingUnit	Connecticut;Bloomfield;DISTRICT 2-Bloomfield High School	Bloomfield;DISTRICT 2-Bloomfield High School
 ReportingUnit	Connecticut;Bloomfield;DISTRICT 3-Carmen Arace Middle School	Bloomfield;DISTRICT 3-Carmen Arace Middle School
 ReportingUnit	Connecticut;Bloomfield;DISTRICT 4-Metacomet Elementary School	Bloomfield;DISTRICT 4-Metacomet Elementary School
 ReportingUnit	Connecticut;Bloomfield;DISTRICT 5-Laurel Elementary School	Bloomfield;DISTRICT 5-Laurel Elementary School
+ReportingUnit	Connecticut;Bolton	Bolton
 ReportingUnit	Connecticut;Bolton;DISTRICT 1-Bolton Center School	Bolton;DISTRICT 1-Bolton Center School
+ReportingUnit	Connecticut;Bozrah	Bozrah
 ReportingUnit	Connecticut;Bozrah;DISTRICT 1-Fields Memorial School	Bozrah;DISTRICT 1-Fields Memorial School
+ReportingUnit	Connecticut;Branford	Branford
 ReportingUnit	Connecticut;Branford;DISTRICT 1-Community House	Branford;DISTRICT 1-Community House
 ReportingUnit	Connecticut;Branford;DISTRICT 2-St. Therese Church Hall	Branford;DISTRICT 2-St. Therese Church Hall
 ReportingUnit	Connecticut;Branford;DISTRICT 3-Branford High School	Branford;DISTRICT 3-Branford High School
@@ -419,6 +693,7 @@ ReportingUnit	Connecticut;Branford;DISTRICT 4-Branford Fire Headquarters	Branfor
 ReportingUnit	Connecticut;Branford;DISTRICT 5-Branford Yacht Club	Branford;DISTRICT 5-Branford Yacht Club
 ReportingUnit	Connecticut;Branford;DISTRICT 6-Mary T. Murphy School	Branford;DISTRICT 6-Mary T. Murphy School
 ReportingUnit	Connecticut;Branford;DISTRICT 7-Mary R. Tisko School	Branford;DISTRICT 7-Mary R. Tisko School
+ReportingUnit	Connecticut;Bridgeport	Bridgeport
 ReportingUnit	Connecticut;Bridgeport;DISTRICT 124-1-Beardsley School	Bridgeport;DISTRICT 124-1-Beardsley School
 ReportingUnit	Connecticut;Bridgeport;DISTRICT 124-2-John F. Kennedy Campus	Bridgeport;DISTRICT 124-2-John F. Kennedy Campus
 ReportingUnit	Connecticut;Bridgeport;DISTRICT 124-3-Dunbar School	Bridgeport;DISTRICT 124-3-Dunbar School
@@ -443,7 +718,9 @@ ReportingUnit	Connecticut;Bridgeport;DISTRICT 130-2-Bassick High School	Bridgepo
 ReportingUnit	Connecticut;Bridgeport;DISTRICT 130-3-City Hall	Bridgeport;DISTRICT 130-3-City Hall
 ReportingUnit	Connecticut;Bridgeport;DISTRICT 130-4-Cesar Batalla School	Bridgeport;DISTRICT 130-4-Cesar Batalla School
 ReportingUnit	Connecticut;Bridgeport;DISTRICT 130-5-Barnum School	Bridgeport;DISTRICT 130-5-Barnum School
+ReportingUnit	Connecticut;Bridgewater	Bridgewater
 ReportingUnit	Connecticut;Bridgewater;DISTRICT 1-Bridgewater Senior Center	Bridgewater;DISTRICT 1-Bridgewater Senior Center
+ReportingUnit	Connecticut;Bristol	Bristol
 ReportingUnit	Connecticut;Bristol;DISTRICT 77-1-Edgewood School	Bristol;DISTRICT 77-1-Edgewood School
 ReportingUnit	Connecticut;Bristol;DISTRICT 77-2-Northeast School	Bristol;DISTRICT 77-2-Northeast School
 ReportingUnit	Connecticut;Bristol;DISTRICT 77-3-Mountain View School	Bristol;DISTRICT 77-3-Mountain View School
@@ -453,14 +730,22 @@ ReportingUnit	Connecticut;Bristol;DISTRICT 78-2-West Bristol School	Bristol;DIST
 ReportingUnit	Connecticut;Bristol;DISTRICT 79-1-Southside School	Bristol;DISTRICT 79-1-Southside School
 ReportingUnit	Connecticut;Bristol;DISTRICT 79-2-Bristol Elks Club	Bristol;DISTRICT 79-2-Bristol Elks Club
 ReportingUnit	Connecticut;Bristol;DISTRICT 79-3-Greene-Hills School	Bristol;DISTRICT 79-3-Greene-Hills School
+ReportingUnit	Connecticut;Brookfield	Brookfield
 ReportingUnit	Connecticut;Brookfield;DISTRICT 1-Huckleberry Hill School	Brookfield;DISTRICT 1-Huckleberry Hill School
 ReportingUnit	Connecticut;Brookfield;DISTRICT 2-Brookfield High School	Brookfield;DISTRICT 2-Brookfield High School
+ReportingUnit	Connecticut;Brooklyn	Brooklyn
 ReportingUnit	Connecticut;Brooklyn;DISTRICT 1-Brooklyn Middle School	Brooklyn;DISTRICT 1-Brooklyn Middle School
+ReportingUnit	Connecticut;Burlington	Burlington
 ReportingUnit	Connecticut;Burlington;DISTRICT 1-Town Hall	Burlington;DISTRICT 1-Town Hall
+ReportingUnit	Connecticut;Canaan	Canaan
 ReportingUnit	Connecticut;Canaan;DISTRICT 1-Canaan Town Hall	Canaan;DISTRICT 1-Canaan Town Hall
+ReportingUnit	Connecticut;Canterbury	Canterbury
 ReportingUnit	Connecticut;Canterbury;DISTRICT 1-Canterbury Town Hall	Canterbury;DISTRICT 1-Canterbury Town Hall
+ReportingUnit	Connecticut;Canton	Canton
 ReportingUnit	Connecticut;Canton;DISTRICT 1-Canton High School	Canton;DISTRICT 1-Canton High School
+ReportingUnit	Connecticut;Chaplin	Chaplin
 ReportingUnit	Connecticut;Chaplin;DISTRICT 1-Chaplin Volunteer Fire Department	Chaplin;DISTRICT 1-Chaplin Volunteer Fire Department
+ReportingUnit	Connecticut;Cheshire	Cheshire
 ReportingUnit	Connecticut;Cheshire;DISTRICT 1-Cheshire High School - Dist. 1	Cheshire;DISTRICT 1-Cheshire High School - Dist. 1
 ReportingUnit	Connecticut;Cheshire;DISTRICT 2-Chapman School - Dist. 2	Cheshire;DISTRICT 2-Chapman School - Dist. 2
 ReportingUnit	Connecticut;Cheshire;DISTRICT 3-Artsplace - District 3	Cheshire;DISTRICT 3-Artsplace - District 3
@@ -468,37 +753,47 @@ ReportingUnit	Connecticut;Cheshire;DISTRICT 4-Norton School - Dist. 4	Cheshire;D
 ReportingUnit	Connecticut;Cheshire;DISTRICT 5-Doolittle School - Dist. 5	Cheshire;DISTRICT 5-Doolittle School - Dist. 5
 ReportingUnit	Connecticut;Cheshire;DISTRICT 6-Highland School - Dist. 6	Cheshire;DISTRICT 6-Highland School - Dist. 6
 ReportingUnit	Connecticut;Cheshire;DISTRICT 7-Dodd Middle School - Dist. 7	Cheshire;DISTRICT 7-Dodd Middle School - Dist. 7
+ReportingUnit	Connecticut;Chester	Chester
 ReportingUnit	Connecticut;Chester;DISTRICT 1-Chester Town Office Building	Chester;DISTRICT 1-Chester Town Office Building
+ReportingUnit	Connecticut;Clinton	Clinton
 ReportingUnit	Connecticut;Clinton;DISTRICT 2-Andrews Memorial Town Hall	Clinton;DISTRICT 2-Andrews Memorial Town Hall
+ReportingUnit	Connecticut;Colchester	Colchester
 ReportingUnit	Connecticut;Colchester;DISTRICT 1-Colchester Town Hall	Colchester;DISTRICT 1-Colchester Town Hall
 ReportingUnit	Connecticut;Colchester;DISTRICT 2-Assembly Of God Hall	Colchester;DISTRICT 2-Assembly Of God Hall
 ReportingUnit	Connecticut;Colchester;DISTRICT 3-Bacon Academy	Colchester;DISTRICT 3-Bacon Academy
 ReportingUnit	Connecticut;Colchester;DISTRICT 4-Assembly Of God Hall	Colchester;DISTRICT 4-Assembly Of God Hall
+ReportingUnit	Connecticut;Colebrook	Colebrook
 ReportingUnit	Connecticut;Colebrook;DISTRICT 1-Colebrook Town Hall	Colebrook;DISTRICT 1-Colebrook Town Hall
+ReportingUnit	Connecticut;Columbia	Columbia
 ReportingUnit	Connecticut;Columbia;DISTRICT 1-Horace W Porter School	Columbia;DISTRICT 1-Horace W Porter School
+ReportingUnit	Connecticut;Cornwall	Cornwall
 ReportingUnit	Connecticut;Cornwall;DISTRICT 1-Cornwall Consolidated School	Cornwall;DISTRICT 1-Cornwall Consolidated School
+ReportingUnit	Connecticut;Coventry	Coventry
 ReportingUnit	Connecticut;Coventry;DISTRICT 1-GH Robertson School	Coventry;DISTRICT 1-GH Robertson School
 ReportingUnit	Connecticut;Coventry;DISTRICT 2-Coventry High School	Coventry;DISTRICT 2-Coventry High School
+ReportingUnit	Connecticut;Cromwell	Cromwell
 ReportingUnit	Connecticut;Cromwell;DISTRICT 1-1-Cromwell High School	Cromwell;DISTRICT 1-1-Cromwell High School
-ReportingUnit	Connecticut;Danbury;DISTRICT 1-9-Danbury High School Gym	Danbury;DISTRICT 1-9-Danbury High School Gym
+ReportingUnit	Connecticut;Danbury	Danbury
 ReportingUnit	Connecticut;Danbury;DISTRICT 1-10-Danbury High School Gym	Danbury;DISTRICT 1-10-Danbury High School Gym
 ReportingUnit	Connecticut;Danbury;DISTRICT 1-38-Danbury High School Gym	Danbury;DISTRICT 1-38-Danbury High School Gym
+ReportingUnit	Connecticut;Danbury;DISTRICT 1-9-Danbury High School Gym	Danbury;DISTRICT 1-9-Danbury High School Gym
+ReportingUnit	Connecticut;Danbury;DISTRICT 2-38-Pembroke School Gym	Danbury;DISTRICT 2-38-Pembroke School Gym
 ReportingUnit	Connecticut;Danbury;DISTRICT 2-8-Pembroke School Gym	Danbury;DISTRICT 2-8-Pembroke School Gym
 ReportingUnit	Connecticut;Danbury;DISTRICT 2-9-Pembroke School Gym	Danbury;DISTRICT 2-9-Pembroke School Gym
-ReportingUnit	Connecticut;Danbury;DISTRICT 2-38-Pembroke School Gym	Danbury;DISTRICT 2-38-Pembroke School Gym
 ReportingUnit	Connecticut;Danbury;DISTRICT 3-7-Stadley Rough School	Danbury;DISTRICT 3-7-Stadley Rough School
 ReportingUnit	Connecticut;Danbury;DISTRICT 3-9-Stadley Rough School	Danbury;DISTRICT 3-9-Stadley Rough School
-ReportingUnit	Connecticut;Danbury;DISTRICT 4-9-Shelter Rock School Gym	Danbury;DISTRICT 4-9-Shelter Rock School Gym
 ReportingUnit	Connecticut;Danbury;DISTRICT 4-10-Shelter Rock School Gym	Danbury;DISTRICT 4-10-Shelter Rock School Gym
+ReportingUnit	Connecticut;Danbury;DISTRICT 4-9-Shelter Rock School Gym	Danbury;DISTRICT 4-9-Shelter Rock School Gym
+ReportingUnit	Connecticut;Danbury;DISTRICT 5-10-War Memorial Gym	Danbury;DISTRICT 5-10-War Memorial Gym
 ReportingUnit	Connecticut;Danbury;DISTRICT 5-2-War Memorial Gym	Danbury;DISTRICT 5-2-War Memorial Gym
 ReportingUnit	Connecticut;Danbury;DISTRICT 5-9-War Memorial Gym	Danbury;DISTRICT 5-9-War Memorial Gym
-ReportingUnit	Connecticut;Danbury;DISTRICT 5-10-War Memorial Gym	Danbury;DISTRICT 5-10-War Memorial Gym
-ReportingUnit	Connecticut;Danbury;DISTRICT 6-2-Park Avenue School Gym	Danbury;DISTRICT 6-2-Park Avenue School Gym
 ReportingUnit	Connecticut;Danbury;DISTRICT 6-10-Park Avenue School Gym	Danbury;DISTRICT 6-10-Park Avenue School Gym
+ReportingUnit	Connecticut;Danbury;DISTRICT 6-2-Park Avenue School Gym	Danbury;DISTRICT 6-2-Park Avenue School Gym
 ReportingUnit	Connecticut;Danbury;DISTRICT 6-38-Park Avenue School Gym	Danbury;DISTRICT 6-38-Park Avenue School Gym
-ReportingUnit	Connecticut;Danbury;DISTRICT 7-2-Westside Middle School Academy	Danbury;DISTRICT 7-2-Westside Middle School Academy
 ReportingUnit	Connecticut;Danbury;DISTRICT 7-10-Westside Middle School Academy	Danbury;DISTRICT 7-10-Westside Middle School Academy
+ReportingUnit	Connecticut;Danbury;DISTRICT 7-2-Westside Middle School Academy	Danbury;DISTRICT 7-2-Westside Middle School Academy
 ReportingUnit	Connecticut;Danbury;DISTRICT 7-38-Westside Middle School Academy	Danbury;DISTRICT 7-38-Westside Middle School Academy
+ReportingUnit	Connecticut;Darien	Darien
 ReportingUnit	Connecticut;Darien;DISTRICT 1-District 1 - 35 Leroy Avenue Municipal Building	Darien;DISTRICT 1-District 1 - 35 Leroy Avenue Municipal Building
 ReportingUnit	Connecticut;Darien;DISTRICT 2-District 2 - Darien Town Hall	Darien;DISTRICT 2-District 2 - Darien Town Hall
 ReportingUnit	Connecticut;Darien;DISTRICT 3-District 3 - Noroton Heights Fire Department	Darien;DISTRICT 3-District 3 - Noroton Heights Fire Department
@@ -506,17 +801,23 @@ ReportingUnit	Connecticut;Darien;DISTRICT 4-District 4 - Hindley School Gymnasiu
 ReportingUnit	Connecticut;Darien;DISTRICT 4-District 4-1 Hindley School Gymnasium Entrance	Darien;DISTRICT 4-District 4-1 Hindley School Gymnasium Entrance
 ReportingUnit	Connecticut;Darien;DISTRICT 5-District 5 - Darien Town Hall	Darien;DISTRICT 5-District 5 - Darien Town Hall
 ReportingUnit	Connecticut;Darien;DISTRICT 6-District 6 - 35 Leroy Avenue Municipal Building	Darien;DISTRICT 6-District 6 - 35 Leroy Avenue Municipal Building
+ReportingUnit	Connecticut;Deep River	Deep River
 ReportingUnit	Connecticut;Deep River;DISTRICT 1-Deep River Elementary School	Deep River;DISTRICT 1-Deep River Elementary School
+ReportingUnit	Connecticut;Derby	Derby
+ReportingUnit	Connecticut;Derby;DISTRICT 14-Bradley Elementary School	Derby;DISTRICT 14-Bradley Elementary School
 ReportingUnit	Connecticut;Derby;DISTRICT 4-Irving Elementary School	Derby;DISTRICT 4-Irving Elementary School
 ReportingUnit	Connecticut;Derby;DISTRICT 5-Irving School-105	Derby;DISTRICT 5-Irving School-105
-ReportingUnit	Connecticut;Derby;DISTRICT 14-Bradley Elementary School	Derby;DISTRICT 14-Bradley Elementary School
+ReportingUnit	Connecticut;Durham	Durham
 ReportingUnit	Connecticut;Durham;DISTRICT 2-Korn School 1	Durham;DISTRICT 2-Korn School 1
 ReportingUnit	Connecticut;Durham;DISTRICT 3-Korn School 2	Durham;DISTRICT 3-Korn School 2
 ReportingUnit	Connecticut;Durham;DISTRICT 4-Korn School 3	Durham;DISTRICT 4-Korn School 3
-ReportingUnit	Connecticut;Eastford;DISTRICT 1-Eastford Elementary School	Eastford;DISTRICT 1-Eastford Elementary School
+ReportingUnit	Connecticut;East Granby	East Granby
 ReportingUnit	Connecticut;East Granby;DISTRICT 1-East Granby Community Center-1	East Granby;DISTRICT 1-East Granby Community Center-1
+ReportingUnit	Connecticut;East Haddam	East Haddam
 ReportingUnit	Connecticut;East Haddam;DISTRICT 1-Town Office Building	East Haddam;DISTRICT 1-Town Office Building
+ReportingUnit	Connecticut;East Hampton	East Hampton
 ReportingUnit	Connecticut;East Hampton;DISTRICT 1-East Hampton High School	East Hampton;DISTRICT 1-East Hampton High School
+ReportingUnit	Connecticut;East Hartford	East Hartford
 ReportingUnit	Connecticut;East Hartford;DISTRICT 1-Anna Norris School	East Hartford;DISTRICT 1-Anna Norris School
 ReportingUnit	Connecticut;East Hartford;DISTRICT 2-Langford School	East Hartford;DISTRICT 2-Langford School
 ReportingUnit	Connecticut;East Hartford;DISTRICT 3-Mayberry School	East Hartford;DISTRICT 3-Mayberry School
@@ -524,23 +825,32 @@ ReportingUnit	Connecticut;East Hartford;DISTRICT 4-Silver Lane School	East Hartf
 ReportingUnit	Connecticut;East Hartford;DISTRICT 5-Hockanum School	East Hartford;DISTRICT 5-Hockanum School
 ReportingUnit	Connecticut;East Hartford;DISTRICT 6-Goodwin School	East Hartford;DISTRICT 6-Goodwin School
 ReportingUnit	Connecticut;East Hartford;DISTRICT 7-Saint Christopher Church Hall	East Hartford;DISTRICT 7-Saint Christopher Church Hall
-ReportingUnit	Connecticut;East Haven;DISTRICT 1-Tuttle School 1	East Haven;DISTRICT 1-Tuttle School 1
+ReportingUnit	Connecticut;East Haven	East Haven
 ReportingUnit	Connecticut;East Haven;DISTRICT 1-3-East Farm Village 1-S	East Haven;DISTRICT 1-3-East Farm Village 1-S
+ReportingUnit	Connecticut;East Haven;DISTRICT 1-Tuttle School 1	East Haven;DISTRICT 1-Tuttle School 1
 ReportingUnit	Connecticut;East Haven;DISTRICT 2-Momauguin School 2	East Haven;DISTRICT 2-Momauguin School 2
-ReportingUnit	Connecticut;East Haven;DISTRICT 3-Deer Run School 3	East Haven;DISTRICT 3-Deer Run School 3
 ReportingUnit	Connecticut;East Haven;DISTRICT 3-3-Deer Run School 3-S	East Haven;DISTRICT 3-3-Deer Run School 3-S
+ReportingUnit	Connecticut;East Haven;DISTRICT 3-Deer Run School 3	East Haven;DISTRICT 3-Deer Run School 3
 ReportingUnit	Connecticut;East Haven;DISTRICT 4-Overbrook School 4	East Haven;DISTRICT 4-Overbrook School 4
-ReportingUnit	Connecticut;East Haven;DISTRICT 5-Hays School 5	East Haven;DISTRICT 5-Hays School 5
 ReportingUnit	Connecticut;East Haven;DISTRICT 5-3-Woodview 5-S	East Haven;DISTRICT 5-3-Woodview 5-S
+ReportingUnit	Connecticut;East Haven;DISTRICT 5-Hays School 5	East Haven;DISTRICT 5-Hays School 5
+ReportingUnit	Connecticut;East Lyme	East Lyme
 ReportingUnit	Connecticut;East Lyme;DISTRICT 1-East Lyme High School	East Lyme;DISTRICT 1-East Lyme High School
 ReportingUnit	Connecticut;East Lyme;DISTRICT 2-Niantic Center School	East Lyme;DISTRICT 2-Niantic Center School
 ReportingUnit	Connecticut;East Lyme;DISTRICT 3-East Lyme Community Center	East Lyme;DISTRICT 3-East Lyme Community Center
-ReportingUnit	Connecticut;Easton;DISTRICT 1-Samuel Staples School	Easton;DISTRICT 1-Samuel Staples School
-ReportingUnit	Connecticut;East Windsor;DISTRICT 1-Town Hall Annex	East Windsor;DISTRICT 1-Town Hall Annex
+ReportingUnit	Connecticut;East Windsor	East Windsor
 ReportingUnit	Connecticut;East Windsor;DISTRICT 1-2-Town Hall Annex	East Windsor;DISTRICT 1-2-Town Hall Annex
+ReportingUnit	Connecticut;East Windsor;DISTRICT 1-Town Hall Annex	East Windsor;DISTRICT 1-Town Hall Annex
 ReportingUnit	Connecticut;East Windsor;DISTRICT 2-Town Hall	East Windsor;DISTRICT 2-Town Hall
+ReportingUnit	Connecticut;Eastford	Eastford
+ReportingUnit	Connecticut;Eastford;DISTRICT 1-Eastford Elementary School	Eastford;DISTRICT 1-Eastford Elementary School
+ReportingUnit	Connecticut;Easton	Easton
+ReportingUnit	Connecticut;Easton;DISTRICT 1-Samuel Staples School	Easton;DISTRICT 1-Samuel Staples School
+ReportingUnit	Connecticut;ElectionDescription	ElectionDescription
+ReportingUnit	Connecticut;Ellington	Ellington
 ReportingUnit	Connecticut;Ellington;DISTRICT 1-Ellington High School	Ellington;DISTRICT 1-Ellington High School
 ReportingUnit	Connecticut;Ellington;DISTRICT 2-Crystal Lake School	Ellington;DISTRICT 2-Crystal Lake School
+ReportingUnit	Connecticut;Enfield	Enfield
 ReportingUnit	Connecticut;Enfield;DISTRICT 158-Enfield Senior Center	Enfield;DISTRICT 158-Enfield Senior Center
 ReportingUnit	Connecticut;Enfield;DISTRICT 159-Enfield Senior Center	Enfield;DISTRICT 159-Enfield Senior Center
 ReportingUnit	Connecticut;Enfield;DISTRICT 258-Enfield Street School	Enfield;DISTRICT 258-Enfield Street School
@@ -548,8 +858,11 @@ ReportingUnit	Connecticut;Enfield;DISTRICT 358-Enfield Municipal Annex - Fermi	E
 ReportingUnit	Connecticut;Enfield;DISTRICT 359-Enfield Municipal Annex - Fermi	Enfield;DISTRICT 359-Enfield Municipal Annex - Fermi
 ReportingUnit	Connecticut;Enfield;DISTRICT 458-Henry Barnard School	Enfield;DISTRICT 458-Henry Barnard School
 ReportingUnit	Connecticut;Enfield;DISTRICT 459-Henry Barnard School	Enfield;DISTRICT 459-Henry Barnard School
+ReportingUnit	Connecticut;Essex	Essex
 ReportingUnit	Connecticut;Essex;DISTRICT 1-Essex Town Hall 01	Essex;DISTRICT 1-Essex Town Hall 01
+ReportingUnit	Connecticut;Fairfield	Fairfield
 ReportingUnit	Connecticut;Fairfield;DISTRICT 1-34-Dwight School	Fairfield;DISTRICT 1-34-Dwight School
+ReportingUnit	Connecticut;Fairfield;DISTRICT 10-32-Mill Hill School	Fairfield;DISTRICT 10-32-Mill Hill School
 ReportingUnit	Connecticut;Fairfield;DISTRICT 2-34-St Pius School	Fairfield;DISTRICT 2-34-St Pius School
 ReportingUnit	Connecticut;Fairfield;DISTRICT 3-32-Fairfield Woods Middle School	Fairfield;DISTRICT 3-32-Fairfield Woods Middle School
 ReportingUnit	Connecticut;Fairfield;DISTRICT 3-34-Fairfield Woods Middle School	Fairfield;DISTRICT 3-34-Fairfield Woods Middle School
@@ -559,7 +872,7 @@ ReportingUnit	Connecticut;Fairfield;DISTRICT 6-33-McKinley School	Fairfield;DIST
 ReportingUnit	Connecticut;Fairfield;DISTRICT 7-33-Holland Hill School	Fairfield;DISTRICT 7-33-Holland Hill School
 ReportingUnit	Connecticut;Fairfield;DISTRICT 8-32-Fairfield Ludlowe High School	Fairfield;DISTRICT 8-32-Fairfield Ludlowe High School
 ReportingUnit	Connecticut;Fairfield;DISTRICT 9-32-Sherman School	Fairfield;DISTRICT 9-32-Sherman School
-ReportingUnit	Connecticut;Fairfield;DISTRICT 10-32-Mill Hill School	Fairfield;DISTRICT 10-32-Mill Hill School
+ReportingUnit	Connecticut;Farmington	Farmington
 ReportingUnit	Connecticut;Farmington;DISTRICT 1-1-Irving Robbins School - District 1 Precinct 1	Farmington;DISTRICT 1-1-Irving Robbins School - District 1 Precinct 1
 ReportingUnit	Connecticut;Farmington;DISTRICT 1-2-Irving Robbins School - District 1 Precinct 2	Farmington;DISTRICT 1-2-Irving Robbins School - District 1 Precinct 2
 ReportingUnit	Connecticut;Farmington;DISTRICT 1-3-Irving Robbins School - District 1 Precinct 3	Farmington;DISTRICT 1-3-Irving Robbins School - District 1 Precinct 3
@@ -567,7 +880,9 @@ ReportingUnit	Connecticut;Farmington;DISTRICT 1-4-Irving Robbins School - Distri
 ReportingUnit	Connecticut;Farmington;DISTRICT 1-5-West Woods School - District 1 Precinct 5	Farmington;DISTRICT 1-5-West Woods School - District 1 Precinct 5
 ReportingUnit	Connecticut;Farmington;DISTRICT 2-6-Community Center - District 2 Precinct 6	Farmington;DISTRICT 2-6-Community Center - District 2 Precinct 6
 ReportingUnit	Connecticut;Farmington;DISTRICT 2-7-Municipal Buildngs - FHS Library Town Hall	Farmington;DISTRICT 2-7-Municipal Buildngs - FHS Library Town Hall
+ReportingUnit	Connecticut;Franklin	Franklin
 ReportingUnit	Connecticut;Franklin;DISTRICT 1-Franklin Town Hall	Franklin;DISTRICT 1-Franklin Town Hall
+ReportingUnit	Connecticut;Glastonbury	Glastonbury
 ReportingUnit	Connecticut;Glastonbury;DISTRICT 1-District 1 - Smith Middle School	Glastonbury;DISTRICT 1-District 1 - Smith Middle School
 ReportingUnit	Connecticut;Glastonbury;DISTRICT 2-District 2 - Hebron Avenue School	Glastonbury;DISTRICT 2-District 2 - Hebron Avenue School
 ReportingUnit	Connecticut;Glastonbury;DISTRICT 3-District 3 - Hebron Avenue School	Glastonbury;DISTRICT 3-District 3 - Hebron Avenue School
@@ -575,31 +890,36 @@ ReportingUnit	Connecticut;Glastonbury;DISTRICT 4-District 4 - Gideon Welles Scho
 ReportingUnit	Connecticut;Glastonbury;DISTRICT 5-District 5 - Nayaug Elementary School	Glastonbury;DISTRICT 5-District 5 - Nayaug Elementary School
 ReportingUnit	Connecticut;Glastonbury;DISTRICT 7-District 7 - Academy Building	Glastonbury;DISTRICT 7-District 7 - Academy Building
 ReportingUnit	Connecticut;Glastonbury;DISTRICT 9-District 9 - Hopewell School	Glastonbury;DISTRICT 9-District 9 - Hopewell School
+ReportingUnit	Connecticut;Goshen	Goshen
 ReportingUnit	Connecticut;Goshen;DISTRICT 1-Goshen Center School Gymnasium	Goshen;DISTRICT 1-Goshen Center School Gymnasium
 ReportingUnit	Connecticut;Goshen;DISTRICT 2-Goshen Center School Gymnasium	Goshen;DISTRICT 2-Goshen Center School Gymnasium
+ReportingUnit	Connecticut;Granby	Granby
 ReportingUnit	Connecticut;Granby;DISTRICT 1-Granby Memorial High School - Community Gym	Granby;DISTRICT 1-Granby Memorial High School - Community Gym
 ReportingUnit	Connecticut;Granby;DISTRICT 2-Granby Memorial High School - Community Gym	Granby;DISTRICT 2-Granby Memorial High School - Community Gym
-ReportingUnit	Connecticut;Greenwich;DISTRICT 1-Julian Curtiss School	Greenwich;DISTRICT 1-Julian Curtiss School
+ReportingUnit	Connecticut;Greenwich	Greenwich
 ReportingUnit	Connecticut;Greenwich;DISTRICT 1-1-Julian Curtiss School 1a	Greenwich;DISTRICT 1-1-Julian Curtiss School 1a
+ReportingUnit	Connecticut;Greenwich;DISTRICT 1-Julian Curtiss School	Greenwich;DISTRICT 1-Julian Curtiss School
+ReportingUnit	Connecticut;Greenwich;DISTRICT 10-1-Glenville School	Greenwich;DISTRICT 10-1-Glenville School
+ReportingUnit	Connecticut;Greenwich;DISTRICT 10-Glenville School	Greenwich;DISTRICT 10-Glenville School
+ReportingUnit	Connecticut;Greenwich;DISTRICT 11-1-North Street School 11a	Greenwich;DISTRICT 11-1-North Street School 11a
+ReportingUnit	Connecticut;Greenwich;DISTRICT 11-North Street School	Greenwich;DISTRICT 11-North Street School
+ReportingUnit	Connecticut;Greenwich;DISTRICT 12-North Mianus School	Greenwich;DISTRICT 12-North Mianus School
 ReportingUnit	Connecticut;Greenwich;DISTRICT 2-Greenwich Town Hall	Greenwich;DISTRICT 2-Greenwich Town Hall
 ReportingUnit	Connecticut;Greenwich;DISTRICT 3-Western Middle School	Greenwich;DISTRICT 3-Western Middle School
-ReportingUnit	Connecticut;Greenwich;DISTRICT 4-New Lebanon School	Greenwich;DISTRICT 4-New Lebanon School
 ReportingUnit	Connecticut;Greenwich;DISTRICT 4-1-New Lebanon School 4a	Greenwich;DISTRICT 4-1-New Lebanon School 4a
-ReportingUnit	Connecticut;Greenwich;DISTRICT 5-Riverside School	Greenwich;DISTRICT 5-Riverside School
+ReportingUnit	Connecticut;Greenwich;DISTRICT 4-New Lebanon School	Greenwich;DISTRICT 4-New Lebanon School
 ReportingUnit	Connecticut;Greenwich;DISTRICT 5-1-Riverside School 5a	Greenwich;DISTRICT 5-1-Riverside School 5a
-ReportingUnit	Connecticut;Greenwich;DISTRICT 6-Old Greenwich School	Greenwich;DISTRICT 6-Old Greenwich School
+ReportingUnit	Connecticut;Greenwich;DISTRICT 5-Riverside School	Greenwich;DISTRICT 5-Riverside School
 ReportingUnit	Connecticut;Greenwich;DISTRICT 6-1-Old Greenwich School 6a	Greenwich;DISTRICT 6-1-Old Greenwich School 6a
-ReportingUnit	Connecticut;Greenwich;DISTRICT 7-Greenwich High School	Greenwich;DISTRICT 7-Greenwich High School
+ReportingUnit	Connecticut;Greenwich;DISTRICT 6-Old Greenwich School	Greenwich;DISTRICT 6-Old Greenwich School
 ReportingUnit	Connecticut;Greenwich;DISTRICT 7-1-Greenwich High School 7a	Greenwich;DISTRICT 7-1-Greenwich High School 7a
+ReportingUnit	Connecticut;Greenwich;DISTRICT 7-Greenwich High School	Greenwich;DISTRICT 7-Greenwich High School
 ReportingUnit	Connecticut;Greenwich;DISTRICT 8-Central Middle School	Greenwich;DISTRICT 8-Central Middle School
 ReportingUnit	Connecticut;Greenwich;DISTRICT 9-Bendheim Western Greenwich Civic Center	Greenwich;DISTRICT 9-Bendheim Western Greenwich Civic Center
-ReportingUnit	Connecticut;Greenwich;DISTRICT 10-Glenville School	Greenwich;DISTRICT 10-Glenville School
-ReportingUnit	Connecticut;Greenwich;DISTRICT 10-1-Glenville School	Greenwich;DISTRICT 10-1-Glenville School
-ReportingUnit	Connecticut;Greenwich;DISTRICT 11-North Street School	Greenwich;DISTRICT 11-North Street School
-ReportingUnit	Connecticut;Greenwich;DISTRICT 11-1-North Street School 11a	Greenwich;DISTRICT 11-1-North Street School 11a
-ReportingUnit	Connecticut;Greenwich;DISTRICT 12-North Mianus School	Greenwich;DISTRICT 12-North Mianus School
+ReportingUnit	Connecticut;Griswold	Griswold
 ReportingUnit	Connecticut;Griswold;DISTRICT 1-Griswold High School - D1 - CAFE	Griswold;DISTRICT 1-Griswold High School - D1 - CAFE
 ReportingUnit	Connecticut;Griswold;DISTRICT 2-Griswold High School - D2- Gym	Griswold;DISTRICT 2-Griswold High School - D2- Gym
+ReportingUnit	Connecticut;Groton	Groton
 ReportingUnit	Connecticut;Groton;DISTRICT 1-Groton Public Library	Groton;DISTRICT 1-Groton Public Library
 ReportingUnit	Connecticut;Groton;DISTRICT 2-Zbierski House EPB	Groton;DISTRICT 2-Zbierski House EPB
 ReportingUnit	Connecticut;Groton;DISTRICT 3-City Of Groton Municipal Building	Groton;DISTRICT 3-City Of Groton Municipal Building
@@ -607,37 +927,34 @@ ReportingUnit	Connecticut;Groton;DISTRICT 4-Mary Morrisson Elementary School	Gro
 ReportingUnit	Connecticut;Groton;DISTRICT 5-School Administration Bldg	Groton;DISTRICT 5-School Administration Bldg
 ReportingUnit	Connecticut;Groton;DISTRICT 6-S B Butler School	Groton;DISTRICT 6-S B Butler School
 ReportingUnit	Connecticut;Groton;DISTRICT 7-Robert E Fitch Sr High School	Groton;DISTRICT 7-Robert E Fitch Sr High School
+ReportingUnit	Connecticut;Guilford	Guilford
 ReportingUnit	Connecticut;Guilford;DISTRICT 1-Calvin Leete School	Guilford;DISTRICT 1-Calvin Leete School
 ReportingUnit	Connecticut;Guilford;DISTRICT 2-Abraham Baldwin School	Guilford;DISTRICT 2-Abraham Baldwin School
 ReportingUnit	Connecticut;Guilford;DISTRICT 3-Guilford Fire Headquarters	Guilford;DISTRICT 3-Guilford Fire Headquarters
 ReportingUnit	Connecticut;Guilford;DISTRICT 4-Melissa Jones School	Guilford;DISTRICT 4-Melissa Jones School
 ReportingUnit	Connecticut;Guilford;DISTRICT 5-A.W. Cox School	Guilford;DISTRICT 5-A.W. Cox School
+ReportingUnit	Connecticut;Haddam	Haddam
 ReportingUnit	Connecticut;Haddam;DISTRICT 1-Haddam Firehouse Complex	Haddam;DISTRICT 1-Haddam Firehouse Complex
 ReportingUnit	Connecticut;Haddam;DISTRICT 2-Central Office	Haddam;DISTRICT 2-Central Office
 ReportingUnit	Connecticut;Haddam;DISTRICT 3-Haddam Neck Firehouse	Haddam;DISTRICT 3-Haddam Neck Firehouse
+ReportingUnit	Connecticut;Hamden	Hamden
 ReportingUnit	Connecticut;Hamden;DISTRICT 1-Miller Library	Hamden;DISTRICT 1-Miller Library
+ReportingUnit	Connecticut;Hamden;DISTRICT 10-1-Hamden Middle School	Hamden;DISTRICT 10-1-Hamden Middle School
+ReportingUnit	Connecticut;Hamden;DISTRICT 10-Hamden Middle School	Hamden;DISTRICT 10-Hamden Middle School
 ReportingUnit	Connecticut;Hamden;DISTRICT 2-Brooker T. Washington Academy	Hamden;DISTRICT 2-Brooker T. Washington Academy
 ReportingUnit	Connecticut;Hamden;DISTRICT 3-Keefe Community Center	Hamden;DISTRICT 3-Keefe Community Center
 ReportingUnit	Connecticut;Hamden;DISTRICT 4-Spring Glen School	Hamden;DISTRICT 4-Spring Glen School
-ReportingUnit	Connecticut;Hamden;DISTRICT 5-Board of Education Building	Hamden;DISTRICT 5-Board of Education Building
 ReportingUnit	Connecticut;Hamden;DISTRICT 5-1-Board of Education Building	Hamden;DISTRICT 5-1-Board of Education Building
+ReportingUnit	Connecticut;Hamden;DISTRICT 5-Board of Education Building	Hamden;DISTRICT 5-Board of Education Building
 ReportingUnit	Connecticut;Hamden;DISTRICT 6-Ridge Hill School	Hamden;DISTRICT 6-Ridge Hill School
 ReportingUnit	Connecticut;Hamden;DISTRICT 7-Dunbar Hill School	Hamden;DISTRICT 7-Dunbar Hill School
-ReportingUnit	Connecticut;Hamden;DISTRICT 8-Bear Path School	Hamden;DISTRICT 8-Bear Path School
 ReportingUnit	Connecticut;Hamden;DISTRICT 8-1-Bear Path School	Hamden;DISTRICT 8-1-Bear Path School
+ReportingUnit	Connecticut;Hamden;DISTRICT 8-Bear Path School	Hamden;DISTRICT 8-Bear Path School
 ReportingUnit	Connecticut;Hamden;DISTRICT 9-West Woods School	Hamden;DISTRICT 9-West Woods School
-ReportingUnit	Connecticut;Hamden;DISTRICT 10-Hamden Middle School	Hamden;DISTRICT 10-Hamden Middle School
-ReportingUnit	Connecticut;Hamden;DISTRICT 10-1-Hamden Middle School	Hamden;DISTRICT 10-1-Hamden Middle School
+ReportingUnit	Connecticut;Hampton	Hampton
 ReportingUnit	Connecticut;Hampton;DISTRICT 1-Hampton TH Lower Level Meeting Room	Hampton;DISTRICT 1-Hampton TH Lower Level Meeting Room
+ReportingUnit	Connecticut;Hartford	Hartford
 ReportingUnit	Connecticut;Hartford;DISTRICT 1-Liberty Christian	Hartford;DISTRICT 1-Liberty Christian
-ReportingUnit	Connecticut;Hartford;DISTRICT 2-Liberty Christian	Hartford;DISTRICT 2-Liberty Christian
-ReportingUnit	Connecticut;Hartford;DISTRICT 3-Grace Lutheran	Hartford;DISTRICT 3-Grace Lutheran
-ReportingUnit	Connecticut;Hartford;DISTRICT 4-Hartford Seminary	Hartford;DISTRICT 4-Hartford Seminary
-ReportingUnit	Connecticut;Hartford;DISTRICT 5-United Methodist Church	Hartford;DISTRICT 5-United Methodist Church
-ReportingUnit	Connecticut;Hartford;DISTRICT 6-North End Senior Center	Hartford;DISTRICT 6-North End Senior Center
-ReportingUnit	Connecticut;Hartford;DISTRICT 7-Rawson School - Gym	Hartford;DISTRICT 7-Rawson School - Gym
-ReportingUnit	Connecticut;Hartford;DISTRICT 8-Annie Fisher School - Gym	Hartford;DISTRICT 8-Annie Fisher School - Gym
-ReportingUnit	Connecticut;Hartford;DISTRICT 9-YWCA	Hartford;DISTRICT 9-YWCA
 ReportingUnit	Connecticut;Hartford;DISTRICT 10-House of Restoration Church -Gym	Hartford;DISTRICT 10-House of Restoration Church -Gym
 ReportingUnit	Connecticut;Hartford;DISTRICT 11-United Way of The Capital Area	Hartford;DISTRICT 11-United Way of The Capital Area
 ReportingUnit	Connecticut;Hartford;DISTRICT 12-Burns School	Hartford;DISTRICT 12-Burns School
@@ -648,34 +965,55 @@ ReportingUnit	Connecticut;Hartford;DISTRICT 16-Kennelly School - Gym	Hartford;DI
 ReportingUnit	Connecticut;Hartford;DISTRICT 17-South End Senior Wellness Center	Hartford;DISTRICT 17-South End Senior Wellness Center
 ReportingUnit	Connecticut;Hartford;DISTRICT 18-Metzner Center	Hartford;DISTRICT 18-Metzner Center
 ReportingUnit	Connecticut;Hartford;DISTRICT 19-Bulkeley High School	Hartford;DISTRICT 19-Bulkeley High School
+ReportingUnit	Connecticut;Hartford;DISTRICT 2-Liberty Christian	Hartford;DISTRICT 2-Liberty Christian
 ReportingUnit	Connecticut;Hartford;DISTRICT 20-The Learning Corridor - Gym	Hartford;DISTRICT 20-The Learning Corridor - Gym
 ReportingUnit	Connecticut;Hartford;DISTRICT 21-Dutch Point Community Room	Hartford;DISTRICT 21-Dutch Point Community Room
 ReportingUnit	Connecticut;Hartford;DISTRICT 22-Hartford Public Library	Hartford;DISTRICT 22-Hartford Public Library
 ReportingUnit	Connecticut;Hartford;DISTRICT 23-Mary Shepard Place Community Room	Hartford;DISTRICT 23-Mary Shepard Place Community Room
 ReportingUnit	Connecticut;Hartford;DISTRICT 24-Parker Memorial Community Center	Hartford;DISTRICT 24-Parker Memorial Community Center
+ReportingUnit	Connecticut;Hartford;DISTRICT 3-Grace Lutheran	Hartford;DISTRICT 3-Grace Lutheran
+ReportingUnit	Connecticut;Hartford;DISTRICT 4-Hartford Seminary	Hartford;DISTRICT 4-Hartford Seminary
+ReportingUnit	Connecticut;Hartford;DISTRICT 5-United Methodist Church	Hartford;DISTRICT 5-United Methodist Church
+ReportingUnit	Connecticut;Hartford;DISTRICT 6-North End Senior Center	Hartford;DISTRICT 6-North End Senior Center
+ReportingUnit	Connecticut;Hartford;DISTRICT 7-Rawson School - Gym	Hartford;DISTRICT 7-Rawson School - Gym
+ReportingUnit	Connecticut;Hartford;DISTRICT 8-Annie Fisher School - Gym	Hartford;DISTRICT 8-Annie Fisher School - Gym
+ReportingUnit	Connecticut;Hartford;DISTRICT 9-YWCA	Hartford;DISTRICT 9-YWCA
+ReportingUnit	Connecticut;Hartland	Hartland
 ReportingUnit	Connecticut;Hartland;DISTRICT 1-Hartland School	Hartland;DISTRICT 1-Hartland School
-ReportingUnit	Connecticut;Harwinton;DISTRICT 8-Assembly Hall	Harwinton;DISTRICT 8-Assembly Hall
+ReportingUnit	Connecticut;Harwinton	Harwinton
 ReportingUnit	Connecticut;Harwinton;DISTRICT 31-Assembly Hall	Harwinton;DISTRICT 31-Assembly Hall
+ReportingUnit	Connecticut;Harwinton;DISTRICT 8-Assembly Hall	Harwinton;DISTRICT 8-Assembly Hall
+ReportingUnit	Connecticut;Hebron	Hebron
 ReportingUnit	Connecticut;Hebron;DISTRICT 1-Hebron Elementary School	Hebron;DISTRICT 1-Hebron Elementary School
+ReportingUnit	Connecticut;Kent	Kent
 ReportingUnit	Connecticut;Kent;DISTRICT 1-Town Hall	Kent;DISTRICT 1-Town Hall
+ReportingUnit	Connecticut;Killingly	Killingly
 ReportingUnit	Connecticut;Killingly;DISTRICT 1-Board of Ed Central Office - Cafeteria	Killingly;DISTRICT 1-Board of Ed Central Office - Cafeteria
 ReportingUnit	Connecticut;Killingly;DISTRICT 2-1-Killingly High School	Killingly;DISTRICT 2-1-Killingly High School
 ReportingUnit	Connecticut;Killingly;DISTRICT 2-2-Killingly High School	Killingly;DISTRICT 2-2-Killingly High School
+ReportingUnit	Connecticut;Killingworth	Killingworth
 ReportingUnit	Connecticut;Killingworth;DISTRICT 1-Killingworth Elementary School	Killingworth;DISTRICT 1-Killingworth Elementary School
+ReportingUnit	Connecticut;Lebanon	Lebanon
 ReportingUnit	Connecticut;Lebanon;DISTRICT 1-Lyman Memorial High School gym 1	Lebanon;DISTRICT 1-Lyman Memorial High School gym 1
 ReportingUnit	Connecticut;Lebanon;DISTRICT 2-Lyman Memorial High School gym 2	Lebanon;DISTRICT 2-Lyman Memorial High School gym 2
+ReportingUnit	Connecticut;Ledyard	Ledyard
 ReportingUnit	Connecticut;Ledyard;DISTRICT 1-Gallup Hill School	Ledyard;DISTRICT 1-Gallup Hill School
 ReportingUnit	Connecticut;Ledyard;DISTRICT 2-Juliet Long School	Ledyard;DISTRICT 2-Juliet Long School
 ReportingUnit	Connecticut;Ledyard;DISTRICT 3-Juliet Long School	Ledyard;DISTRICT 3-Juliet Long School
+ReportingUnit	Connecticut;Lisbon	Lisbon
 ReportingUnit	Connecticut;Lisbon;DISTRICT 1-Lisbon Town Hall	Lisbon;DISTRICT 1-Lisbon Town Hall
 ReportingUnit	Connecticut;Lisbon;DISTRICT 2-Lisbon Senior Center	Lisbon;DISTRICT 2-Lisbon Senior Center
+ReportingUnit	Connecticut;Litchfield	Litchfield
 ReportingUnit	Connecticut;Litchfield;DISTRICT 1-Litchfield Fire House	Litchfield;DISTRICT 1-Litchfield Fire House
 ReportingUnit	Connecticut;Litchfield;DISTRICT 2-Northfield Fire House 2	Litchfield;DISTRICT 2-Northfield Fire House 2
 ReportingUnit	Connecticut;Litchfield;DISTRICT 3-Bantam Borough Hall	Litchfield;DISTRICT 3-Bantam Borough Hall
 ReportingUnit	Connecticut;Litchfield;DISTRICT 4-Northfield Fire House	Litchfield;DISTRICT 4-Northfield Fire House
+ReportingUnit	Connecticut;Lyme	Lyme
 ReportingUnit	Connecticut;Lyme;DISTRICT 1-Lyme Town Hall	Lyme;DISTRICT 1-Lyme Town Hall
+ReportingUnit	Connecticut;Madison	Madison
 ReportingUnit	Connecticut;Madison;DISTRICT 1-Walter C. Polson Middle School	Madison;DISTRICT 1-Walter C. Polson Middle School
 ReportingUnit	Connecticut;Madison;DISTRICT 2-District 2 (North)	Madison;DISTRICT 2-District 2 (North)
+ReportingUnit	Connecticut;Manchester	Manchester
 ReportingUnit	Connecticut;Manchester;DISTRICT 1-Robertson School	Manchester;DISTRICT 1-Robertson School
 ReportingUnit	Connecticut;Manchester;DISTRICT 2-Manchester High School Gym	Manchester;DISTRICT 2-Manchester High School Gym
 ReportingUnit	Connecticut;Manchester;DISTRICT 3-Buckley School	Manchester;DISTRICT 3-Buckley School
@@ -685,12 +1023,19 @@ ReportingUnit	Connecticut;Manchester;DISTRICT 6-Martin School	Manchester;DISTRIC
 ReportingUnit	Connecticut;Manchester;DISTRICT 7-Keeney School	Manchester;DISTRICT 7-Keeney School
 ReportingUnit	Connecticut;Manchester;DISTRICT 8-Verplanck School	Manchester;DISTRICT 8-Verplanck School
 ReportingUnit	Connecticut;Manchester;DISTRICT 9-Bennet Academy	Manchester;DISTRICT 9-Bennet Academy
+ReportingUnit	Connecticut;Mansfield	Mansfield
 ReportingUnit	Connecticut;Mansfield;DISTRICT 1-Mansfield Community Center	Mansfield;DISTRICT 1-Mansfield Community Center
 ReportingUnit	Connecticut;Mansfield;DISTRICT 2-Mansfield Fire Dept. #107@ Eagleville	Mansfield;DISTRICT 2-Mansfield Fire Dept. #107@ Eagleville
 ReportingUnit	Connecticut;Mansfield;DISTRICT 3-Mansfield Library/ Buchanan Auditorium	Mansfield;DISTRICT 3-Mansfield Library/ Buchanan Auditorium
 ReportingUnit	Connecticut;Mansfield;DISTRICT 4-Annie E. Vinton School GYM	Mansfield;DISTRICT 4-Annie E. Vinton School GYM
+ReportingUnit	Connecticut;Marlborough	Marlborough
 ReportingUnit	Connecticut;Marlborough;DISTRICT 1-Elmer Thienes Mary Hall Elementary School	Marlborough;DISTRICT 1-Elmer Thienes Mary Hall Elementary School
+ReportingUnit	Connecticut;Meriden	Meriden
 ReportingUnit	Connecticut;Meriden;DISTRICT 1-Immanuel Lutheran Church	Meriden;DISTRICT 1-Immanuel Lutheran Church
+ReportingUnit	Connecticut;Meriden;DISTRICT 10-St. John Lutheran Church	Meriden;DISTRICT 10-St. John Lutheran Church
+ReportingUnit	Connecticut;Meriden;DISTRICT 11-Israel Putnam School	Meriden;DISTRICT 11-Israel Putnam School
+ReportingUnit	Connecticut;Meriden;DISTRICT 12-Hanover School	Meriden;DISTRICT 12-Hanover School
+ReportingUnit	Connecticut;Meriden;DISTRICT 13-Lincoln Middle School	Meriden;DISTRICT 13-Lincoln Middle School
 ReportingUnit	Connecticut;Meriden;DISTRICT 2-Community Towers	Meriden;DISTRICT 2-Community Towers
 ReportingUnit	Connecticut;Meriden;DISTRICT 3-John Barry School	Meriden;DISTRICT 3-John Barry School
 ReportingUnit	Connecticut;Meriden;DISTRICT 4-St. Rose Community Center	Meriden;DISTRICT 4-St. Rose Community Center
@@ -699,14 +1044,18 @@ ReportingUnit	Connecticut;Meriden;DISTRICT 6-Washington Middle School	Meriden;DI
 ReportingUnit	Connecticut;Meriden;DISTRICT 7-Chamberlain Highway Firehouse	Meriden;DISTRICT 7-Chamberlain Highway Firehouse
 ReportingUnit	Connecticut;Meriden;DISTRICT 8-Upper Room Christian Center	Meriden;DISTRICT 8-Upper Room Christian Center
 ReportingUnit	Connecticut;Meriden;DISTRICT 9-Maloney High School	Meriden;DISTRICT 9-Maloney High School
-ReportingUnit	Connecticut;Meriden;DISTRICT 10-St. John Lutheran Church	Meriden;DISTRICT 10-St. John Lutheran Church
-ReportingUnit	Connecticut;Meriden;DISTRICT 11-Israel Putnam School	Meriden;DISTRICT 11-Israel Putnam School
-ReportingUnit	Connecticut;Meriden;DISTRICT 12-Hanover School	Meriden;DISTRICT 12-Hanover School
-ReportingUnit	Connecticut;Meriden;DISTRICT 13-Lincoln Middle School	Meriden;DISTRICT 13-Lincoln Middle School
+ReportingUnit	Connecticut;Middlebury	Middlebury
 ReportingUnit	Connecticut;Middlebury;DISTRICT 1-Shepardson Community Center 01	Middlebury;DISTRICT 1-Shepardson Community Center 01
 ReportingUnit	Connecticut;Middlebury;DISTRICT 2-Shepardson Community Center 002	Middlebury;DISTRICT 2-Shepardson Community Center 002
+ReportingUnit	Connecticut;Middlefield	Middlefield
 ReportingUnit	Connecticut;Middlefield;DISTRICT 100-Memorial School	Middlefield;DISTRICT 100-Memorial School
+ReportingUnit	Connecticut;Middletown	Middletown
 ReportingUnit	Connecticut;Middletown;DISTRICT 1-Macdonough School - District 1	Middletown;DISTRICT 1-Macdonough School - District 1
+ReportingUnit	Connecticut;Middletown;DISTRICT 10-South District Firehouse - District 10	Middletown;DISTRICT 10-South District Firehouse - District 10
+ReportingUnit	Connecticut;Middletown;DISTRICT 11-Bielefield School - District 11	Middletown;DISTRICT 11-Bielefield School - District 11
+ReportingUnit	Connecticut;Middletown;DISTRICT 12-Bielefield School - District 12	Middletown;DISTRICT 12-Bielefield School - District 12
+ReportingUnit	Connecticut;Middletown;DISTRICT 13-Spencer School - District 13	Middletown;DISTRICT 13-Spencer School - District 13
+ReportingUnit	Connecticut;Middletown;DISTRICT 14-Fayerweather Beckham Hall - District 14	Middletown;DISTRICT 14-Fayerweather Beckham Hall - District 14
 ReportingUnit	Connecticut;Middletown;DISTRICT 2-Spencer School - District 2	Middletown;DISTRICT 2-Spencer School - District 2
 ReportingUnit	Connecticut;Middletown;DISTRICT 3-District 3 - Lawrence School	Middletown;DISTRICT 3-District 3 - Lawrence School
 ReportingUnit	Connecticut;Middletown;DISTRICT 4-Moody School - District 4	Middletown;DISTRICT 4-Moody School - District 4
@@ -715,11 +1064,7 @@ ReportingUnit	Connecticut;Middletown;DISTRICT 6-District 6 - Lawrence School	Mid
 ReportingUnit	Connecticut;Middletown;DISTRICT 7-Snow School - District 7	Middletown;DISTRICT 7-Snow School - District 7
 ReportingUnit	Connecticut;Middletown;DISTRICT 8-Snow School - District 8	Middletown;DISTRICT 8-Snow School - District 8
 ReportingUnit	Connecticut;Middletown;DISTRICT 9-Wesley School - District 9	Middletown;DISTRICT 9-Wesley School - District 9
-ReportingUnit	Connecticut;Middletown;DISTRICT 10-South District Firehouse - District 10	Middletown;DISTRICT 10-South District Firehouse - District 10
-ReportingUnit	Connecticut;Middletown;DISTRICT 11-Bielefield School - District 11	Middletown;DISTRICT 11-Bielefield School - District 11
-ReportingUnit	Connecticut;Middletown;DISTRICT 12-Bielefield School - District 12	Middletown;DISTRICT 12-Bielefield School - District 12
-ReportingUnit	Connecticut;Middletown;DISTRICT 13-Spencer School - District 13	Middletown;DISTRICT 13-Spencer School - District 13
-ReportingUnit	Connecticut;Middletown;DISTRICT 14-Fayerweather Beckham Hall - District 14	Middletown;DISTRICT 14-Fayerweather Beckham Hall - District 14
+ReportingUnit	Connecticut;Milford	Milford
 ReportingUnit	Connecticut;Milford;DISTRICT 117-Joseph A Foran High School	Milford;DISTRICT 117-Joseph A Foran High School
 ReportingUnit	Connecticut;Milford;DISTRICT 118-1-John F Kennedy School	Milford;DISTRICT 118-1-John F Kennedy School
 ReportingUnit	Connecticut;Milford;DISTRICT 118-2-Meadowside School	Milford;DISTRICT 118-2-Meadowside School
@@ -729,17 +1074,21 @@ ReportingUnit	Connecticut;Milford;DISTRICT 118-5-Harborside Middle School	Milfor
 ReportingUnit	Connecticut;Milford;DISTRICT 119-1-Orange Avenue School	Milford;DISTRICT 119-1-Orange Avenue School
 ReportingUnit	Connecticut;Milford;DISTRICT 119-2-John F Kennedy School	Milford;DISTRICT 119-2-John F Kennedy School
 ReportingUnit	Connecticut;Milford;DISTRICT 119-3-Harborside Middle School	Milford;DISTRICT 119-3-Harborside Middle School
+ReportingUnit	Connecticut;Monroe	Monroe
 ReportingUnit	Connecticut;Monroe;DISTRICT 1-Fawn Hollow School	Monroe;DISTRICT 1-Fawn Hollow School
 ReportingUnit	Connecticut;Monroe;DISTRICT 2-Stepney Elementary School	Monroe;DISTRICT 2-Stepney Elementary School
 ReportingUnit	Connecticut;Monroe;DISTRICT 3-Monroe Elementary School	Monroe;DISTRICT 3-Monroe Elementary School
 ReportingUnit	Connecticut;Monroe;DISTRICT 4-Masuk High School	Monroe;DISTRICT 4-Masuk High School
+ReportingUnit	Connecticut;Montville	Montville
 ReportingUnit	Connecticut;Montville;DISTRICT 1-Town Hall-Gym-1	Montville;DISTRICT 1-Town Hall-Gym-1
 ReportingUnit	Connecticut;Montville;DISTRICT 2-Mohegan Elementary School	Montville;DISTRICT 2-Mohegan Elementary School
 ReportingUnit	Connecticut;Montville;DISTRICT 3-Montville Community Center-Gym-3	Montville;DISTRICT 3-Montville Community Center-Gym-3
 ReportingUnit	Connecticut;Montville;DISTRICT 4-Montville Community Center-Gym-4	Montville;DISTRICT 4-Montville Community Center-Gym-4
 ReportingUnit	Connecticut;Montville;DISTRICT 5-Mohegan Elementary School	Montville;DISTRICT 5-Mohegan Elementary School
 ReportingUnit	Connecticut;Montville;DISTRICT 6-Town Hall-Gym-6	Montville;DISTRICT 6-Town Hall-Gym-6
+ReportingUnit	Connecticut;Morris	Morris
 ReportingUnit	Connecticut;Morris;DISTRICT 1-James Morris Gymnasium	Morris;DISTRICT 1-James Morris Gymnasium
+ReportingUnit	Connecticut;Naugatuck	Naugatuck
 ReportingUnit	Connecticut;Naugatuck;DISTRICT 1-1-Cross Street School - A	Naugatuck;DISTRICT 1-1-Cross Street School - A
 ReportingUnit	Connecticut;Naugatuck;DISTRICT 1-2-Andrew Avenue School	Naugatuck;DISTRICT 1-2-Andrew Avenue School
 ReportingUnit	Connecticut;Naugatuck;DISTRICT 1-3-Andrew Avenue School A	Naugatuck;DISTRICT 1-3-Andrew Avenue School A
@@ -749,43 +1098,36 @@ ReportingUnit	Connecticut;Naugatuck;DISTRICT 2-3-Maple Hill School	Naugatuck;DIS
 ReportingUnit	Connecticut;Naugatuck;DISTRICT 3-1-Oak Terrace	Naugatuck;DISTRICT 3-1-Oak Terrace
 ReportingUnit	Connecticut;Naugatuck;DISTRICT 3-2-City Hill Middle School	Naugatuck;DISTRICT 3-2-City Hill Middle School
 ReportingUnit	Connecticut;Naugatuck;DISTRICT 3-3-Western School - B	Naugatuck;DISTRICT 3-3-Western School - B
+ReportingUnit	Connecticut;New Britain	New Britain
 ReportingUnit	Connecticut;New Britain;DISTRICT 1-Vance Village School	New Britain;DISTRICT 1-Vance Village School
-ReportingUnit	Connecticut;New Britain;DISTRICT 2-VFW Post 511	New Britain;DISTRICT 2-VFW Post 511
-ReportingUnit	Connecticut;New Britain;DISTRICT 3-Roosevelt Middle School	New Britain;DISTRICT 3-Roosevelt Middle School
-ReportingUnit	Connecticut;New Britain;DISTRICT 4-Gaffney School	New Britain;DISTRICT 4-Gaffney School
-ReportingUnit	Connecticut;New Britain;DISTRICT 5-New Britain Senior Center	New Britain;DISTRICT 5-New Britain Senior Center
-ReportingUnit	Connecticut;New Britain;DISTRICT 5-1-School Apartments	New Britain;DISTRICT 5-1-School Apartments
-ReportingUnit	Connecticut;New Britain;DISTRICT 5-2-Graham Apartments	New Britain;DISTRICT 5-2-Graham Apartments
-ReportingUnit	Connecticut;New Britain;DISTRICT 6-St. Jean Baptiste Societe	New Britain;DISTRICT 6-St. Jean Baptiste Societe
-ReportingUnit	Connecticut;New Britain;DISTRICT 7-Generale Ameglio Society	New Britain;DISTRICT 7-Generale Ameglio Society
-ReportingUnit	Connecticut;New Britain;DISTRICT 8-International Church	New Britain;DISTRICT 8-International Church
-ReportingUnit	Connecticut;New Britain;DISTRICT 9-Chamberlain School	New Britain;DISTRICT 9-Chamberlain School
 ReportingUnit	Connecticut;New Britain;DISTRICT 10-St. Francis Of Assisi Church Hall	New Britain;DISTRICT 10-St. Francis Of Assisi Church Hall
 ReportingUnit	Connecticut;New Britain;DISTRICT 11-Holmes Elementary School	New Britain;DISTRICT 11-Holmes Elementary School
 ReportingUnit	Connecticut;New Britain;DISTRICT 12-Pulaski Middle School	New Britain;DISTRICT 12-Pulaski Middle School
 ReportingUnit	Connecticut;New Britain;DISTRICT 13-St. John Paul II School	New Britain;DISTRICT 13-St. John Paul II School
 ReportingUnit	Connecticut;New Britain;DISTRICT 14-Diloreto School	New Britain;DISTRICT 14-Diloreto School
 ReportingUnit	Connecticut;New Britain;DISTRICT 15-Slade Middle School	New Britain;DISTRICT 15-Slade Middle School
+ReportingUnit	Connecticut;New Britain;DISTRICT 2-VFW Post 511	New Britain;DISTRICT 2-VFW Post 511
+ReportingUnit	Connecticut;New Britain;DISTRICT 3-Roosevelt Middle School	New Britain;DISTRICT 3-Roosevelt Middle School
+ReportingUnit	Connecticut;New Britain;DISTRICT 4-Gaffney School	New Britain;DISTRICT 4-Gaffney School
+ReportingUnit	Connecticut;New Britain;DISTRICT 5-1-School Apartments	New Britain;DISTRICT 5-1-School Apartments
+ReportingUnit	Connecticut;New Britain;DISTRICT 5-2-Graham Apartments	New Britain;DISTRICT 5-2-Graham Apartments
+ReportingUnit	Connecticut;New Britain;DISTRICT 5-New Britain Senior Center	New Britain;DISTRICT 5-New Britain Senior Center
+ReportingUnit	Connecticut;New Britain;DISTRICT 6-St. Jean Baptiste Societe	New Britain;DISTRICT 6-St. Jean Baptiste Societe
+ReportingUnit	Connecticut;New Britain;DISTRICT 7-Generale Ameglio Society	New Britain;DISTRICT 7-Generale Ameglio Society
+ReportingUnit	Connecticut;New Britain;DISTRICT 8-International Church	New Britain;DISTRICT 8-International Church
+ReportingUnit	Connecticut;New Britain;DISTRICT 9-Chamberlain School	New Britain;DISTRICT 9-Chamberlain School
+ReportingUnit	Connecticut;New Canaan	New Canaan
 ReportingUnit	Connecticut;New Canaan;DISTRICT 1-New Canaan High School Gym	New Canaan;DISTRICT 1-New Canaan High School Gym
 ReportingUnit	Connecticut;New Canaan;DISTRICT 2-Saxe Middle School North	New Canaan;DISTRICT 2-Saxe Middle School North
 ReportingUnit	Connecticut;New Canaan;DISTRICT 3-Saxe Middle School South	New Canaan;DISTRICT 3-Saxe Middle School South
+ReportingUnit	Connecticut;New Fairfield	New Fairfield
 ReportingUnit	Connecticut;New Fairfield;DISTRICT 1-Meeting House Hill School	New Fairfield;DISTRICT 1-Meeting House Hill School
 ReportingUnit	Connecticut;New Fairfield;DISTRICT 2-Company A Firehouse	New Fairfield;DISTRICT 2-Company A Firehouse
+ReportingUnit	Connecticut;New Hartford	New Hartford
 ReportingUnit	Connecticut;New Hartford;DISTRICT 1-New Hartford Elementary	New Hartford;DISTRICT 1-New Hartford Elementary
 ReportingUnit	Connecticut;New Hartford;DISTRICT 2-Ann Antolini School	New Hartford;DISTRICT 2-Ann Antolini School
+ReportingUnit	Connecticut;New Haven	New Haven
 ReportingUnit	Connecticut;New Haven;DISTRICT 1-2-Main Library	New Haven;DISTRICT 1-2-Main Library
-ReportingUnit	Connecticut;New Haven;DISTRICT 2-2-Troup Academy	New Haven;DISTRICT 2-2-Troup Academy
-ReportingUnit	Connecticut;New Haven;DISTRICT 3-1-Career High School	New Haven;DISTRICT 3-1-Career High School
-ReportingUnit	Connecticut;New Haven;DISTRICT 3-2-Career High School02	New Haven;DISTRICT 3-2-Career High School02
-ReportingUnit	Connecticut;New Haven;DISTRICT 4-1-Truman School	New Haven;DISTRICT 4-1-Truman School
-ReportingUnit	Connecticut;New Haven;DISTRICT 4-2-Truman School 02	New Haven;DISTRICT 4-2-Truman School 02
-ReportingUnit	Connecticut;New Haven;DISTRICT 5-Betsy Ross School	New Haven;DISTRICT 5-Betsy Ross School
-ReportingUnit	Connecticut;New Haven;DISTRICT 6-2-New Horizons School 02	New Haven;DISTRICT 6-2-New Horizons School 02
-ReportingUnit	Connecticut;New Haven;DISTRICT 6-3-New Horizons School 03	New Haven;DISTRICT 6-3-New Horizons School 03
-ReportingUnit	Connecticut;New Haven;DISTRICT 7-2-Hall Of Records 02	New Haven;DISTRICT 7-2-Hall Of Records 02
-ReportingUnit	Connecticut;New Haven;DISTRICT 8-1-Conte-West Schools 8-01	New Haven;DISTRICT 8-1-Conte-West Schools 8-01
-ReportingUnit	Connecticut;New Haven;DISTRICT 8-2-Conte-West Hills School 02	New Haven;DISTRICT 8-2-Conte-West Hills School 02
-ReportingUnit	Connecticut;New Haven;DISTRICT 9-2-Wilbur Cross High School - Ward 9	New Haven;DISTRICT 9-2-Wilbur Cross High School - Ward 9
 ReportingUnit	Connecticut;New Haven;DISTRICT 10-Wilbur Cross High School - Federal	New Haven;DISTRICT 10-Wilbur Cross High School - Federal
 ReportingUnit	Connecticut;New Haven;DISTRICT 11-1-Bella Vista 11-01	New Haven;DISTRICT 11-1-Bella Vista 11-01
 ReportingUnit	Connecticut;New Haven;DISTRICT 11-2-Bishop Woods School	New Haven;DISTRICT 11-2-Bishop Woods School
@@ -800,6 +1142,7 @@ ReportingUnit	Connecticut;New Haven;DISTRICT 17-Firehouse Woodward	New Haven;DIS
 ReportingUnit	Connecticut;New Haven;DISTRICT 18-Nathan Hale School	New Haven;DISTRICT 18-Nathan Hale School
 ReportingUnit	Connecticut;New Haven;DISTRICT 19-1-Celentano Museum Academy	New Haven;DISTRICT 19-1-Celentano Museum Academy
 ReportingUnit	Connecticut;New Haven;DISTRICT 19-2-Celentano Museum Academy	New Haven;DISTRICT 19-2-Celentano Museum Academy
+ReportingUnit	Connecticut;New Haven;DISTRICT 2-2-Troup Academy	New Haven;DISTRICT 2-2-Troup Academy
 ReportingUnit	Connecticut;New Haven;DISTRICT 20-2-Lincoln-Bassett School	New Haven;DISTRICT 20-2-Lincoln-Bassett School
 ReportingUnit	Connecticut;New Haven;DISTRICT 21-1-King-Robinson School	New Haven;DISTRICT 21-1-King-Robinson School
 ReportingUnit	Connecticut;New Haven;DISTRICT 22-1-Wexler Grant School	New Haven;DISTRICT 22-1-Wexler Grant School
@@ -811,8 +1154,32 @@ ReportingUnit	Connecticut;New Haven;DISTRICT 26-Davis Street School	New Haven;DI
 ReportingUnit	Connecticut;New Haven;DISTRICT 27-1-Mauro Sheridan School	New Haven;DISTRICT 27-1-Mauro Sheridan School
 ReportingUnit	Connecticut;New Haven;DISTRICT 28-Hillhouse High School	New Haven;DISTRICT 28-Hillhouse High School
 ReportingUnit	Connecticut;New Haven;DISTRICT 29-Beecher School	New Haven;DISTRICT 29-Beecher School
+ReportingUnit	Connecticut;New Haven;DISTRICT 3-1-Career High School	New Haven;DISTRICT 3-1-Career High School
+ReportingUnit	Connecticut;New Haven;DISTRICT 3-2-Career High School02	New Haven;DISTRICT 3-2-Career High School02
 ReportingUnit	Connecticut;New Haven;DISTRICT 30-1-Brennan Rogers	New Haven;DISTRICT 30-1-Brennan Rogers
 ReportingUnit	Connecticut;New Haven;DISTRICT 30-2-Old West Hills	New Haven;DISTRICT 30-2-Old West Hills
+ReportingUnit	Connecticut;New Haven;DISTRICT 4-1-Truman School	New Haven;DISTRICT 4-1-Truman School
+ReportingUnit	Connecticut;New Haven;DISTRICT 4-2-Truman School 02	New Haven;DISTRICT 4-2-Truman School 02
+ReportingUnit	Connecticut;New Haven;DISTRICT 5-Betsy Ross School	New Haven;DISTRICT 5-Betsy Ross School
+ReportingUnit	Connecticut;New Haven;DISTRICT 6-2-New Horizons School 02	New Haven;DISTRICT 6-2-New Horizons School 02
+ReportingUnit	Connecticut;New Haven;DISTRICT 6-3-New Horizons School 03	New Haven;DISTRICT 6-3-New Horizons School 03
+ReportingUnit	Connecticut;New Haven;DISTRICT 7-2-Hall Of Records 02	New Haven;DISTRICT 7-2-Hall Of Records 02
+ReportingUnit	Connecticut;New Haven;DISTRICT 8-1-Conte-West Schools 8-01	New Haven;DISTRICT 8-1-Conte-West Schools 8-01
+ReportingUnit	Connecticut;New Haven;DISTRICT 8-2-Conte-West Hills School 02	New Haven;DISTRICT 8-2-Conte-West Hills School 02
+ReportingUnit	Connecticut;New Haven;DISTRICT 9-2-Wilbur Cross High School - Ward 9	New Haven;DISTRICT 9-2-Wilbur Cross High School - Ward 9
+ReportingUnit	Connecticut;New London	New London
+ReportingUnit	Connecticut;New London;DISTRICT 1-New London STM High School	New London;DISTRICT 1-New London STM High School
+ReportingUnit	Connecticut;New London;DISTRICT 2-Harbor School	New London;DISTRICT 2-Harbor School
+ReportingUnit	Connecticut;New London;DISTRICT 3-Nathan Hale School	New London;DISTRICT 3-Nathan Hale School
+ReportingUnit	Connecticut;New Milford	New Milford
+ReportingUnit	Connecticut;New Milford;DISTRICT 1-Northville School	New Milford;DISTRICT 1-Northville School
+ReportingUnit	Connecticut;New Milford;DISTRICT 2-Catherine E Lillis Building	New Milford;DISTRICT 2-Catherine E Lillis Building
+ReportingUnit	Connecticut;New Milford;DISTRICT 3-Odd Fellows Lodge	New Milford;DISTRICT 3-Odd Fellows Lodge
+ReportingUnit	Connecticut;New Milford;DISTRICT 4-Gaylordsville Fire House	New Milford;DISTRICT 4-Gaylordsville Fire House
+ReportingUnit	Connecticut;New Milford;DISTRICT 5-Schaghticoke School	New Milford;DISTRICT 5-Schaghticoke School
+ReportingUnit	Connecticut;New Milford;DISTRICT 6-Hill & Plain School	New Milford;DISTRICT 6-Hill & Plain School
+ReportingUnit	Connecticut;New Milford;DISTRICT 7-Sarah Noble Intermediate School	New Milford;DISTRICT 7-Sarah Noble Intermediate School
+ReportingUnit	Connecticut;Newington	Newington
 ReportingUnit	Connecticut;Newington;DISTRICT 1-Town Hall---District---1	Newington;DISTRICT 1-Town Hall---District---1
 ReportingUnit	Connecticut;Newington;DISTRICT 2-Ruth L. Chaffee School---District---2	Newington;DISTRICT 2-Ruth L. Chaffee School---District---2
 ReportingUnit	Connecticut;Newington;DISTRICT 3-Anna Reynolds School ---District---3	Newington;DISTRICT 3-Anna Reynolds School ---District---3
@@ -821,33 +1188,30 @@ ReportingUnit	Connecticut;Newington;DISTRICT 5-John Wallace Middle School---Dist
 ReportingUnit	Connecticut;Newington;DISTRICT 6-John Paterson School---District---6	Newington;DISTRICT 6-John Paterson School---District---6
 ReportingUnit	Connecticut;Newington;DISTRICT 7-Martin Kellogg Middle School---District---7	Newington;DISTRICT 7-Martin Kellogg Middle School---District---7
 ReportingUnit	Connecticut;Newington;DISTRICT 8-John Wallace Middle School-- District--8	Newington;DISTRICT 8-John Wallace Middle School-- District--8
-ReportingUnit	Connecticut;New London;DISTRICT 1-New London STM High School	New London;DISTRICT 1-New London STM High School
-ReportingUnit	Connecticut;New London;DISTRICT 2-Harbor School	New London;DISTRICT 2-Harbor School
-ReportingUnit	Connecticut;New London;DISTRICT 3-Nathan Hale School	New London;DISTRICT 3-Nathan Hale School
-ReportingUnit	Connecticut;New Milford;DISTRICT 1-Northville School	New Milford;DISTRICT 1-Northville School
-ReportingUnit	Connecticut;New Milford;DISTRICT 2-Catherine E Lillis Building	New Milford;DISTRICT 2-Catherine E Lillis Building
-ReportingUnit	Connecticut;New Milford;DISTRICT 3-Odd Fellows Lodge	New Milford;DISTRICT 3-Odd Fellows Lodge
-ReportingUnit	Connecticut;New Milford;DISTRICT 4-Gaylordsville Fire House	New Milford;DISTRICT 4-Gaylordsville Fire House
-ReportingUnit	Connecticut;New Milford;DISTRICT 5-Schaghticoke School	New Milford;DISTRICT 5-Schaghticoke School
-ReportingUnit	Connecticut;New Milford;DISTRICT 6-Hill & Plain School	New Milford;DISTRICT 6-Hill & Plain School
-ReportingUnit	Connecticut;New Milford;DISTRICT 7-Sarah Noble Intermediate School	New Milford;DISTRICT 7-Sarah Noble Intermediate School
-ReportingUnit	Connecticut;Newtown;DISTRICT 1-Middle School Gym A	Newtown;DISTRICT 1-Middle School Gym A
+ReportingUnit	Connecticut;Newtown	Newtown
 ReportingUnit	Connecticut;Newtown;DISTRICT 1-5-Middle School Gym A	Newtown;DISTRICT 1-5-Middle School Gym A
+ReportingUnit	Connecticut;Newtown;DISTRICT 1-Middle School Gym A	Newtown;DISTRICT 1-Middle School Gym A
 ReportingUnit	Connecticut;Newtown;DISTRICT 2-Reed Intermediate School	Newtown;DISTRICT 2-Reed Intermediate School
 ReportingUnit	Connecticut;Newtown;DISTRICT 3-1-Head O Meadow School Cafetorium	Newtown;DISTRICT 3-1-Head O Meadow School Cafetorium
 ReportingUnit	Connecticut;Newtown;DISTRICT 3-2-Reed Intermediate School	Newtown;DISTRICT 3-2-Reed Intermediate School
 ReportingUnit	Connecticut;Newtown;DISTRICT 3-5-Head O Meadow School Cafetorium	Newtown;DISTRICT 3-5-Head O Meadow School Cafetorium
+ReportingUnit	Connecticut;Norfolk	Norfolk
 ReportingUnit	Connecticut;Norfolk;DISTRICT 1-Town Hall	Norfolk;DISTRICT 1-Town Hall
+ReportingUnit	Connecticut;North Branford	North Branford
 ReportingUnit	Connecticut;North Branford;DISTRICT 1-Jerome Harrison Elementary School	North Branford;DISTRICT 1-Jerome Harrison Elementary School
 ReportingUnit	Connecticut;North Branford;DISTRICT 2-Stanley T. Williams Community Center	North Branford;DISTRICT 2-Stanley T. Williams Community Center
+ReportingUnit	Connecticut;North Canaan	North Canaan
 ReportingUnit	Connecticut;North Canaan;DISTRICT 1-Town Hall - McCarthy Room	North Canaan;DISTRICT 1-Town Hall - McCarthy Room
+ReportingUnit	Connecticut;North Haven	North Haven
 ReportingUnit	Connecticut;North Haven;DISTRICT 1-Recreation Center	North Haven;DISTRICT 1-Recreation Center
 ReportingUnit	Connecticut;North Haven;DISTRICT 2-Montowese Elementary School	North Haven;DISTRICT 2-Montowese Elementary School
-ReportingUnit	Connecticut;North Haven;DISTRICT 3-Ridge Road Elementary School	North Haven;DISTRICT 3-Ridge Road Elementary School
 ReportingUnit	Connecticut;North Haven;DISTRICT 3-11-Ridge Road Elementary School	North Haven;DISTRICT 3-11-Ridge Road Elementary School
+ReportingUnit	Connecticut;North Haven;DISTRICT 3-Ridge Road Elementary School	North Haven;DISTRICT 3-Ridge Road Elementary School
 ReportingUnit	Connecticut;North Haven;DISTRICT 4-Green Acres Elementary School	North Haven;DISTRICT 4-Green Acres Elementary School
 ReportingUnit	Connecticut;North Haven;DISTRICT 5-Clintonville Elementary School	North Haven;DISTRICT 5-Clintonville Elementary School
+ReportingUnit	Connecticut;North Stonington	North Stonington
 ReportingUnit	Connecticut;North Stonington;DISTRICT 1-North Stonington Education Center	North Stonington;DISTRICT 1-North Stonington Education Center
+ReportingUnit	Connecticut;Norwalk	Norwalk
 ReportingUnit	Connecticut;Norwalk;DISTRICT 137-1-Marvin School	Norwalk;DISTRICT 137-1-Marvin School
 ReportingUnit	Connecticut;Norwalk;DISTRICT 137-2-St. Mary's Community Hall	Norwalk;DISTRICT 137-2-St. Mary's Community Hall
 ReportingUnit	Connecticut;Norwalk;DISTRICT 137-3-Tracey School	Norwalk;DISTRICT 137-3-Tracey School
@@ -860,68 +1224,105 @@ ReportingUnit	Connecticut;Norwalk;DISTRICT 142-2-Ponus Ridge Middle School	Norwa
 ReportingUnit	Connecticut;Norwalk;DISTRICT 142-3-West Rocks Middle School	Norwalk;DISTRICT 142-3-West Rocks Middle School
 ReportingUnit	Connecticut;Norwalk;DISTRICT 143-1-Nathan Hale Middle School	Norwalk;DISTRICT 143-1-Nathan Hale Middle School
 ReportingUnit	Connecticut;Norwalk;DISTRICT 143-2-Wolfpit School	Norwalk;DISTRICT 143-2-Wolfpit School
+ReportingUnit	Connecticut;Norwich	Norwich
 ReportingUnit	Connecticut;Norwich;DISTRICT 1-John M. Moriarty School	Norwich;DISTRICT 1-John M. Moriarty School
 ReportingUnit	Connecticut;Norwich;DISTRICT 2-Rose City Senior Center	Norwich;DISTRICT 2-Rose City Senior Center
 ReportingUnit	Connecticut;Norwich;DISTRICT 3-Samuel Huntington Elementary School	Norwich;DISTRICT 3-Samuel Huntington Elementary School
 ReportingUnit	Connecticut;Norwich;DISTRICT 4-John B Stanton Elementary School	Norwich;DISTRICT 4-John B Stanton Elementary School
 ReportingUnit	Connecticut;Norwich;DISTRICT 5-St Mark Lutheran Church	Norwich;DISTRICT 5-St Mark Lutheran Church
 ReportingUnit	Connecticut;Norwich;DISTRICT 6-American Legion Post 4	Norwich;DISTRICT 6-American Legion Post 4
+ReportingUnit	Connecticut;Old Lyme	Old Lyme
 ReportingUnit	Connecticut;Old Lyme;DISTRICT 1-Lyme-Old Lyme Middle School Gymnasium	Old Lyme;DISTRICT 1-Lyme-Old Lyme Middle School Gymnasium
+ReportingUnit	Connecticut;Old Saybrook	Old Saybrook
 ReportingUnit	Connecticut;Old Saybrook;DISTRICT 1-Old Saybrook Middle School Gymnasium	Old Saybrook;DISTRICT 1-Old Saybrook Middle School Gymnasium
 ReportingUnit	Connecticut;Old Saybrook;DISTRICT 2-Old Saybrook High School Gymnasium	Old Saybrook;DISTRICT 2-Old Saybrook High School Gymnasium
+ReportingUnit	Connecticut;Orange	Orange
 ReportingUnit	Connecticut;Orange;DISTRICT 1-High Plains Community Center Gym	Orange;DISTRICT 1-High Plains Community Center Gym
 ReportingUnit	Connecticut;Orange;DISTRICT 2-High Plains Community Center South Wing Room 3	Orange;DISTRICT 2-High Plains Community Center South Wing Room 3
 ReportingUnit	Connecticut;Orange;DISTRICT 3-High Plains Community Center Senior Cafeteria	Orange;DISTRICT 3-High Plains Community Center Senior Cafeteria
+ReportingUnit	Connecticut;Oxford	Oxford
 ReportingUnit	Connecticut;Oxford;DISTRICT 1-Quaker Farms School	Oxford;DISTRICT 1-Quaker Farms School
+ReportingUnit	Connecticut;Plainfield	Plainfield
 ReportingUnit	Connecticut;Plainfield;DISTRICT 1-1 Town Hall	Plainfield;DISTRICT 1-1 Town Hall
 ReportingUnit	Connecticut;Plainfield;DISTRICT 1-1-1a Town Hall	Plainfield;DISTRICT 1-1-1a Town Hall
 ReportingUnit	Connecticut;Plainfield;DISTRICT 2-2 Central Village Fire Station	Plainfield;DISTRICT 2-2 Central Village Fire Station
 ReportingUnit	Connecticut;Plainfield;DISTRICT 3-3 Moosup Fire Station	Plainfield;DISTRICT 3-3 Moosup Fire Station
 ReportingUnit	Connecticut;Plainfield;DISTRICT 4-4 Atwood Hose Station	Plainfield;DISTRICT 4-4 Atwood Hose Station
+ReportingUnit	Connecticut;Plainville	Plainville
 ReportingUnit	Connecticut;Plainville;DISTRICT 1-Linden Street School	Plainville;DISTRICT 1-Linden Street School
 ReportingUnit	Connecticut;Plainville;DISTRICT 2-Our Lady Of Mercy Parish Hall	Plainville;DISTRICT 2-Our Lady Of Mercy Parish Hall
 ReportingUnit	Connecticut;Plainville;DISTRICT 3-Toffolon School	Plainville;DISTRICT 3-Toffolon School
 ReportingUnit	Connecticut;Plainville;DISTRICT 4-Wheeler School	Plainville;DISTRICT 4-Wheeler School
+ReportingUnit	Connecticut;Plymouth	Plymouth
 ReportingUnit	Connecticut;Plymouth;DISTRICT 1-Terryville High School	Plymouth;DISTRICT 1-Terryville High School
+ReportingUnit	Connecticut;Polling_Place_Name	Polling_Place_Name
+ReportingUnit	Connecticut;Pomfret	Pomfret
 ReportingUnit	Connecticut;Pomfret;DISTRICT 1-Pomfret Community School	Pomfret;DISTRICT 1-Pomfret Community School
+ReportingUnit	Connecticut;Portland	Portland
 ReportingUnit	Connecticut;Portland;DISTRICT 1-Portland Middle School	Portland;DISTRICT 1-Portland Middle School
+ReportingUnit	Connecticut;Preston	Preston
 ReportingUnit	Connecticut;Preston;DISTRICT 1-Preston Plains Middle School	Preston;DISTRICT 1-Preston Plains Middle School
+ReportingUnit	Connecticut;Prospect	Prospect
 ReportingUnit	Connecticut;Prospect;DISTRICT 1-Prospect Firehouse	Prospect;DISTRICT 1-Prospect Firehouse
 ReportingUnit	Connecticut;Prospect;DISTRICT 2-Community Center	Prospect;DISTRICT 2-Community Center
+ReportingUnit	Connecticut;Putnam	Putnam
 ReportingUnit	Connecticut;Putnam;DISTRICT 1-Putnam Middle School Gym	Putnam;DISTRICT 1-Putnam Middle School Gym
 ReportingUnit	Connecticut;Putnam;DISTRICT 2-Town Garage	Putnam;DISTRICT 2-Town Garage
+ReportingUnit	Connecticut;Redding	Redding
 ReportingUnit	Connecticut;Redding;DISTRICT 1-Redding Community Center	Redding;DISTRICT 1-Redding Community Center
 ReportingUnit	Connecticut;Redding;DISTRICT 2-Redding Community Center 2	Redding;DISTRICT 2-Redding Community Center 2
+ReportingUnit	Connecticut;Ridgefield	Ridgefield
 ReportingUnit	Connecticut;Ridgefield;DISTRICT 1-East Ridge Middle School - 1	Ridgefield;DISTRICT 1-East Ridge Middle School - 1
 ReportingUnit	Connecticut;Ridgefield;DISTRICT 2-Scotts Ridge Middle School - 2	Ridgefield;DISTRICT 2-Scotts Ridge Middle School - 2
 ReportingUnit	Connecticut;Ridgefield;DISTRICT 3-Yanity Gym - 3	Ridgefield;DISTRICT 3-Yanity Gym - 3
 ReportingUnit	Connecticut;Ridgefield;DISTRICT 4-Scotts Ridge Middle School - 4	Ridgefield;DISTRICT 4-Scotts Ridge Middle School - 4
+ReportingUnit	Connecticut;Rocky Hill	Rocky Hill
 ReportingUnit	Connecticut;Rocky Hill;DISTRICT 1-West Hill School	Rocky Hill;DISTRICT 1-West Hill School
 ReportingUnit	Connecticut;Rocky Hill;DISTRICT 2-Moser School	Rocky Hill;DISTRICT 2-Moser School
 ReportingUnit	Connecticut;Rocky Hill;DISTRICT 3-Griswold Middle School	Rocky Hill;DISTRICT 3-Griswold Middle School
+ReportingUnit	Connecticut;Roxbury	Roxbury
 ReportingUnit	Connecticut;Roxbury;DISTRICT 1-Roxbury Town Hall	Roxbury;DISTRICT 1-Roxbury Town Hall
+ReportingUnit	Connecticut;Salem	Salem
 ReportingUnit	Connecticut;Salem;DISTRICT 1-Salem Town Office Building	Salem;DISTRICT 1-Salem Town Office Building
+ReportingUnit	Connecticut;Salisbury	Salisbury
 ReportingUnit	Connecticut;Salisbury;DISTRICT 1-Town Hall	Salisbury;DISTRICT 1-Town Hall
+ReportingUnit	Connecticut;Scotland	Scotland
 ReportingUnit	Connecticut;Scotland;DISTRICT 1-Firehouse/community Center	Scotland;DISTRICT 1-Firehouse/community Center
+ReportingUnit	Connecticut;Seymour	Seymour
 ReportingUnit	Connecticut;Seymour;DISTRICT 1-District 1 Community Center	Seymour;DISTRICT 1-District 1 Community Center
 ReportingUnit	Connecticut;Seymour;DISTRICT 2-District 2 Seymour Middle School	Seymour;DISTRICT 2-District 2 Seymour Middle School
 ReportingUnit	Connecticut;Seymour;DISTRICT 3-District 3 Chatfield-Lopresti School	Seymour;DISTRICT 3-District 3 Chatfield-Lopresti School
+ReportingUnit	Connecticut;Sharon	Sharon
 ReportingUnit	Connecticut;Sharon;DISTRICT 1-Sharon Center School	Sharon;DISTRICT 1-Sharon Center School
+ReportingUnit	Connecticut;Shelton	Shelton
 ReportingUnit	Connecticut;Shelton;DISTRICT 1-Elizabeth Shelton School	Shelton;DISTRICT 1-Elizabeth Shelton School
-ReportingUnit	Connecticut;Shelton;DISTRICT 2-Shelton Intermediate School	Shelton;DISTRICT 2-Shelton Intermediate School
 ReportingUnit	Connecticut;Shelton;DISTRICT 2-1-Shelton Intermediate School	Shelton;DISTRICT 2-1-Shelton Intermediate School
+ReportingUnit	Connecticut;Shelton;DISTRICT 2-Shelton Intermediate School	Shelton;DISTRICT 2-Shelton Intermediate School
 ReportingUnit	Connecticut;Shelton;DISTRICT 3-Long Hill School	Shelton;DISTRICT 3-Long Hill School
 ReportingUnit	Connecticut;Shelton;DISTRICT 4-Mohegan School	Shelton;DISTRICT 4-Mohegan School
+ReportingUnit	Connecticut;Sherman	Sherman
 ReportingUnit	Connecticut;Sherman;DISTRICT 1-Emerg Services Facility - Firehouse- Upper Level	Sherman;DISTRICT 1-Emerg Services Facility - Firehouse- Upper Level
+ReportingUnit	Connecticut;Simsbury	Simsbury
 ReportingUnit	Connecticut;Simsbury;DISTRICT 1-Henry James Memorial School	Simsbury;DISTRICT 1-Henry James Memorial School
 ReportingUnit	Connecticut;Simsbury;DISTRICT 2-Latimer Lane School	Simsbury;DISTRICT 2-Latimer Lane School
 ReportingUnit	Connecticut;Simsbury;DISTRICT 3-Tootin Hill School	Simsbury;DISTRICT 3-Tootin Hill School
 ReportingUnit	Connecticut;Simsbury;DISTRICT 4-Tariffville School	Simsbury;DISTRICT 4-Tariffville School
+ReportingUnit	Connecticut;Somers	Somers
 ReportingUnit	Connecticut;Somers;DISTRICT 1-Town Hall	Somers;DISTRICT 1-Town Hall
+ReportingUnit	Connecticut;South Windsor	South Windsor
+ReportingUnit	Connecticut;South Windsor;DISTRICT 1-Pleasant Valley School	South Windsor;DISTRICT 1-Pleasant Valley School
+ReportingUnit	Connecticut;South Windsor;DISTRICT 2-Eli Terry School	South Windsor;DISTRICT 2-Eli Terry School
+ReportingUnit	Connecticut;South Windsor;DISTRICT 3-SWHS	South Windsor;DISTRICT 3-SWHS
+ReportingUnit	Connecticut;South Windsor;DISTRICT 4-PR Smith School	South Windsor;DISTRICT 4-PR Smith School
+ReportingUnit	Connecticut;South Windsor;DISTRICT 5-TE Middle School	South Windsor;DISTRICT 5-TE Middle School
+ReportingUnit	Connecticut;Southbury	Southbury
 ReportingUnit	Connecticut;Southbury;DISTRICT 1-Center Fire House District #1	Southbury;DISTRICT 1-Center Fire House District #1
 ReportingUnit	Connecticut;Southbury;DISTRICT 2-Southbury Public Library District #2	Southbury;DISTRICT 2-Southbury Public Library District #2
 ReportingUnit	Connecticut;Southbury;DISTRICT 3-Southbury Community Building District #3	Southbury;DISTRICT 3-Southbury Community Building District #3
+ReportingUnit	Connecticut;Southington	Southington
 ReportingUnit	Connecticut;Southington;DISTRICT 1-South End School	Southington;DISTRICT 1-South End School
+ReportingUnit	Connecticut;Southington;DISTRICT 10-Oshana School	Southington;DISTRICT 10-Oshana School
+ReportingUnit	Connecticut;Southington;DISTRICT 11-Strong School	Southington;DISTRICT 11-Strong School
 ReportingUnit	Connecticut;Southington;DISTRICT 2-Kennedy School	Southington;DISTRICT 2-Kennedy School
 ReportingUnit	Connecticut;Southington;DISTRICT 3-Derynoski School	Southington;DISTRICT 3-Derynoski School
 ReportingUnit	Connecticut;Southington;DISTRICT 4-Hatton School	Southington;DISTRICT 4-Hatton School
@@ -930,26 +1331,14 @@ ReportingUnit	Connecticut;Southington;DISTRICT 6-De Paolo School	Southington;DIS
 ReportingUnit	Connecticut;Southington;DISTRICT 7-Kelley School	Southington;DISTRICT 7-Kelley School
 ReportingUnit	Connecticut;Southington;DISTRICT 8-Thalberg School	Southington;DISTRICT 8-Thalberg School
 ReportingUnit	Connecticut;Southington;DISTRICT 9-Tabernacle	Southington;DISTRICT 9-Tabernacle
-ReportingUnit	Connecticut;Southington;DISTRICT 10-Oshana School	Southington;DISTRICT 10-Oshana School
-ReportingUnit	Connecticut;Southington;DISTRICT 11-Strong School	Southington;DISTRICT 11-Strong School
-ReportingUnit	Connecticut;South Windsor;DISTRICT 1-Pleasant Valley School	South Windsor;DISTRICT 1-Pleasant Valley School
-ReportingUnit	Connecticut;South Windsor;DISTRICT 2-Eli Terry School	South Windsor;DISTRICT 2-Eli Terry School
-ReportingUnit	Connecticut;South Windsor;DISTRICT 3-SWHS	South Windsor;DISTRICT 3-SWHS
-ReportingUnit	Connecticut;South Windsor;DISTRICT 4-PR Smith School	South Windsor;DISTRICT 4-PR Smith School
-ReportingUnit	Connecticut;South Windsor;DISTRICT 5-TE Middle School	South Windsor;DISTRICT 5-TE Middle School
+ReportingUnit	Connecticut;Sprague	Sprague
 ReportingUnit	Connecticut;Sprague;DISTRICT 1-Sayles School	Sprague;DISTRICT 1-Sayles School
+ReportingUnit	Connecticut;Stafford	Stafford
 ReportingUnit	Connecticut;Stafford;DISTRICT 1-Stafford Public Library	Stafford;DISTRICT 1-Stafford Public Library
 ReportingUnit	Connecticut;Stafford;DISTRICT 2-Stafford Community Center	Stafford;DISTRICT 2-Stafford Community Center
 ReportingUnit	Connecticut;Stafford;DISTRICT 3-West Stafford Fire Dept.	Stafford;DISTRICT 3-West Stafford Fire Dept.
+ReportingUnit	Connecticut;Stamford	Stamford
 ReportingUnit	Connecticut;Stamford;DISTRICT 1-Our Lady Star Of The Sea	Stamford;DISTRICT 1-Our Lady Star Of The Sea
-ReportingUnit	Connecticut;Stamford;DISTRICT 2-Domus - The Old Rogers School	Stamford;DISTRICT 2-Domus - The Old Rogers School
-ReportingUnit	Connecticut;Stamford;DISTRICT 3-Murphy School	Stamford;DISTRICT 3-Murphy School
-ReportingUnit	Connecticut;Stamford;DISTRICT 4-Julia A Stark School	Stamford;DISTRICT 4-Julia A Stark School
-ReportingUnit	Connecticut;Stamford;DISTRICT 5-Stamford High School -Rear	Stamford;DISTRICT 5-Stamford High School -Rear
-ReportingUnit	Connecticut;Stamford;DISTRICT 6-1-Saint Bridget School	Stamford;DISTRICT 6-1-Saint Bridget School
-ReportingUnit	Connecticut;Stamford;DISTRICT 7-2-First Presbyterian Church	Stamford;DISTRICT 7-2-First Presbyterian Church
-ReportingUnit	Connecticut;Stamford;DISTRICT 8-Stillmeadow School	Stamford;DISTRICT 8-Stillmeadow School
-ReportingUnit	Connecticut;Stamford;DISTRICT 9-Salvation Army Community Center	Stamford;DISTRICT 9-Salvation Army Community Center
 ReportingUnit	Connecticut;Stamford;DISTRICT 10-Westover School	Stamford;DISTRICT 10-Westover School
 ReportingUnit	Connecticut;Stamford;DISTRICT 11-Cloonan Middle School -Side	Stamford;DISTRICT 11-Cloonan Middle School -Side
 ReportingUnit	Connecticut;Stamford;DISTRICT 12-Stillmeadow School	Stamford;DISTRICT 12-Stillmeadow School
@@ -960,17 +1349,30 @@ ReportingUnit	Connecticut;Stamford;DISTRICT 16-1-Turn Of River School	Stamford;D
 ReportingUnit	Connecticut;Stamford;DISTRICT 17-Roxbury School	Stamford;DISTRICT 17-Roxbury School
 ReportingUnit	Connecticut;Stamford;DISTRICT 18-2-Turn Of River School	Stamford;DISTRICT 18-2-Turn Of River School
 ReportingUnit	Connecticut;Stamford;DISTRICT 19-Davenport Ridge School	Stamford;DISTRICT 19-Davenport Ridge School
+ReportingUnit	Connecticut;Stamford;DISTRICT 2-Domus - The Old Rogers School	Stamford;DISTRICT 2-Domus - The Old Rogers School
 ReportingUnit	Connecticut;Stamford;DISTRICT 20-1-Northeast School	Stamford;DISTRICT 20-1-Northeast School
 ReportingUnit	Connecticut;Stamford;DISTRICT 21-Scofield Middle School	Stamford;DISTRICT 21-Scofield Middle School
 ReportingUnit	Connecticut;Stamford;DISTRICT 22-2-Long Ridge Fire Dept	Stamford;DISTRICT 22-2-Long Ridge Fire Dept
 ReportingUnit	Connecticut;Stamford;DISTRICT 23-South End Community Center	Stamford;DISTRICT 23-South End Community Center
+ReportingUnit	Connecticut;Stamford;DISTRICT 3-Murphy School	Stamford;DISTRICT 3-Murphy School
+ReportingUnit	Connecticut;Stamford;DISTRICT 4-Julia A Stark School	Stamford;DISTRICT 4-Julia A Stark School
+ReportingUnit	Connecticut;Stamford;DISTRICT 5-Stamford High School -Rear	Stamford;DISTRICT 5-Stamford High School -Rear
+ReportingUnit	Connecticut;Stamford;DISTRICT 6-1-Saint Bridget School	Stamford;DISTRICT 6-1-Saint Bridget School
+ReportingUnit	Connecticut;Stamford;DISTRICT 7-2-First Presbyterian Church	Stamford;DISTRICT 7-2-First Presbyterian Church
+ReportingUnit	Connecticut;Stamford;DISTRICT 8-Stillmeadow School	Stamford;DISTRICT 8-Stillmeadow School
+ReportingUnit	Connecticut;Stamford;DISTRICT 9-Salvation Army Community Center	Stamford;DISTRICT 9-Salvation Army Community Center
+ReportingUnit	Connecticut;State Election	State Election
+ReportingUnit	Connecticut;Sterling	Sterling
 ReportingUnit	Connecticut;Sterling;DISTRICT 1-Sterling Municipal Building	Sterling;DISTRICT 1-Sterling Municipal Building
+ReportingUnit	Connecticut;Stonington	Stonington
 ReportingUnit	Connecticut;Stonington;DISTRICT 1-Stonington Fire House	Stonington;DISTRICT 1-Stonington Fire House
 ReportingUnit	Connecticut;Stonington;DISTRICT 2-Pawcatuck Middle School	Stonington;DISTRICT 2-Pawcatuck Middle School
 ReportingUnit	Connecticut;Stonington;DISTRICT 3-Deans Mill School	Stonington;DISTRICT 3-Deans Mill School
 ReportingUnit	Connecticut;Stonington;DISTRICT 4-BF Hoxie Engine Company	Stonington;DISTRICT 4-BF Hoxie Engine Company
 ReportingUnit	Connecticut;Stonington;DISTRICT 5-Board Of Education Administration Building	Stonington;DISTRICT 5-Board Of Education Administration Building
+ReportingUnit	Connecticut;Stratford	Stratford
 ReportingUnit	Connecticut;Stratford;DISTRICT 10-1-Lordship Elementary School 120 21	Stratford;DISTRICT 10-1-Lordship Elementary School 120 21
+ReportingUnit	Connecticut;Stratford;DISTRICT 100-1-Second Hill Lane 120 21	Stratford;DISTRICT 100-1-Second Hill Lane 120 21
 ReportingUnit	Connecticut;Stratford;DISTRICT 11-11-Lordship Elementary School 121 21	Stratford;DISTRICT 11-11-Lordship Elementary School 121 21
 ReportingUnit	Connecticut;Stratford;DISTRICT 20-1-Stratford High School 120 21	Stratford;DISTRICT 20-1-Stratford High School 120 21
 ReportingUnit	Connecticut;Stratford;DISTRICT 20-11-Stratford High School 121-21	Stratford;DISTRICT 20-11-Stratford High School 121-21
@@ -988,16 +1390,20 @@ ReportingUnit	Connecticut;Stratford;DISTRICT 80-1-Chapel Street School 120-21	St
 ReportingUnit	Connecticut;Stratford;DISTRICT 80-21-Chapel Street School 122 21	Stratford;DISTRICT 80-21-Chapel Street School 122 21
 ReportingUnit	Connecticut;Stratford;DISTRICT 90-1-Bunnell High School 120 21	Stratford;DISTRICT 90-1-Bunnell High School 120 21
 ReportingUnit	Connecticut;Stratford;DISTRICT 90-21-Bunnell High Scool 122-21	Stratford;DISTRICT 90-21-Bunnell High Scool 122-21
-ReportingUnit	Connecticut;Stratford;DISTRICT 100-1-Second Hill Lane 120 21	Stratford;DISTRICT 100-1-Second Hill Lane 120 21
+ReportingUnit	Connecticut;Suffield	Suffield
 ReportingUnit	Connecticut;Suffield;DISTRICT 1-Suffield Middle School	Suffield;DISTRICT 1-Suffield Middle School
+ReportingUnit	Connecticut;Thomaston	Thomaston
 ReportingUnit	Connecticut;Thomaston;DISTRICT 1-Lena Morton Art Gallery	Thomaston;DISTRICT 1-Lena Morton Art Gallery
+ReportingUnit	Connecticut;Thompson	Thompson
 ReportingUnit	Connecticut;Thompson;DISTRICT 1-Thompson Hill Fire Station	Thompson;DISTRICT 1-Thompson Hill Fire Station
 ReportingUnit	Connecticut;Thompson;DISTRICT 2-Community Room Town Hall	Thompson;DISTRICT 2-Community Room Town Hall
 ReportingUnit	Connecticut;Thompson;DISTRICT 3-Quinebaug Volunteer Fire Department	Thompson;DISTRICT 3-Quinebaug Volunteer Fire Department
 ReportingUnit	Connecticut;Thompson;DISTRICT 4-East Thompson Fire Station	Thompson;DISTRICT 4-East Thompson Fire Station
+ReportingUnit	Connecticut;Tolland	Tolland
 ReportingUnit	Connecticut;Tolland;DISTRICT 1-The Gym At Tolland Recreation Center 1	Tolland;DISTRICT 1-The Gym At Tolland Recreation Center 1
 ReportingUnit	Connecticut;Tolland;DISTRICT 2-Tolland Senior Center	Tolland;DISTRICT 2-Tolland Senior Center
 ReportingUnit	Connecticut;Tolland;DISTRICT 3-The Gym At Tolland Recreation Center 3	Tolland;DISTRICT 3-The Gym At Tolland Recreation Center 3
+ReportingUnit	Connecticut;Torrington	Torrington
 ReportingUnit	Connecticut;Torrington;DISTRICT 1-Torrington Middle School	Torrington;DISTRICT 1-Torrington Middle School
 ReportingUnit	Connecticut;Torrington;DISTRICT 2-Coe Park 1	Torrington;DISTRICT 2-Coe Park 1
 ReportingUnit	Connecticut;Torrington;DISTRICT 3-Coe Park 2	Torrington;DISTRICT 3-Coe Park 2
@@ -1006,17 +1412,22 @@ ReportingUnit	Connecticut;Torrington;DISTRICT 5-Torringford School 2	Torrington;
 ReportingUnit	Connecticut;Torrington;DISTRICT 6-City Hall 1	Torrington;DISTRICT 6-City Hall 1
 ReportingUnit	Connecticut;Torrington;DISTRICT 7-City Hall 2	Torrington;DISTRICT 7-City Hall 2
 ReportingUnit	Connecticut;Torrington;DISTRICT 8-Armory	Torrington;DISTRICT 8-Armory
+ReportingUnit	Connecticut;Trumbull	Trumbull
 ReportingUnit	Connecticut;Trumbull;DISTRICT 1-23-Hillcrest School	Trumbull;DISTRICT 1-23-Hillcrest School
 ReportingUnit	Connecticut;Trumbull;DISTRICT 2-22-St. Joseph High School 122	Trumbull;DISTRICT 2-22-St. Joseph High School 122
 ReportingUnit	Connecticut;Trumbull;DISTRICT 2-23-St. Joseph High School 123	Trumbull;DISTRICT 2-23-St. Joseph High School 123
 ReportingUnit	Connecticut;Trumbull;DISTRICT 3-23-Madison School 123	Trumbull;DISTRICT 3-23-Madison School 123
 ReportingUnit	Connecticut;Trumbull;DISTRICT 4-34-Middlebrook School 134	Trumbull;DISTRICT 4-34-Middlebrook School 134
+ReportingUnit	Connecticut;Union	Union
 ReportingUnit	Connecticut;Union;DISTRICT 1-Union Town Hall	Union;DISTRICT 1-Union Town Hall
+ReportingUnit	Connecticut;Vernon	Vernon
 ReportingUnit	Connecticut;Vernon;DISTRICT 1-North East School	Vernon;DISTRICT 1-North East School
 ReportingUnit	Connecticut;Vernon;DISTRICT 2-Rockville High School	Vernon;DISTRICT 2-Rockville High School
 ReportingUnit	Connecticut;Vernon;DISTRICT 3-Skinner Road School	Vernon;DISTRICT 3-Skinner Road School
 ReportingUnit	Connecticut;Vernon;DISTRICT 4-Vernon Center Middle School	Vernon;DISTRICT 4-Vernon Center Middle School
+ReportingUnit	Connecticut;Voluntown	Voluntown
 ReportingUnit	Connecticut;Voluntown;DISTRICT 1-voluntown elementary school	Voluntown;DISTRICT 1-voluntown elementary school
+ReportingUnit	Connecticut;Wallingford	Wallingford
 ReportingUnit	Connecticut;Wallingford;DISTRICT 1-Pond Hill School	Wallingford;DISTRICT 1-Pond Hill School
 ReportingUnit	Connecticut;Wallingford;DISTRICT 2-Evarts C. Stevens School	Wallingford;DISTRICT 2-Evarts C. Stevens School
 ReportingUnit	Connecticut;Wallingford;DISTRICT 3-Moses Y. Beach School	Wallingford;DISTRICT 3-Moses Y. Beach School
@@ -1026,8 +1437,11 @@ ReportingUnit	Connecticut;Wallingford;DISTRICT 6-Parker Farms School	Wallingford
 ReportingUnit	Connecticut;Wallingford;DISTRICT 7-Yalesville Elementary School	Wallingford;DISTRICT 7-Yalesville Elementary School
 ReportingUnit	Connecticut;Wallingford;DISTRICT 8-Wallingford Senior Center	Wallingford;DISTRICT 8-Wallingford Senior Center
 ReportingUnit	Connecticut;Wallingford;DISTRICT 9-Rock Hill School	Wallingford;DISTRICT 9-Rock Hill School
+ReportingUnit	Connecticut;Warren	Warren
 ReportingUnit	Connecticut;Warren;DISTRICT 1-Town Hall	Warren;DISTRICT 1-Town Hall
+ReportingUnit	Connecticut;Washington	Washington
 ReportingUnit	Connecticut;Washington;DISTRICT 1-Town Hall	Washington;DISTRICT 1-Town Hall
+ReportingUnit	Connecticut;Waterbury	Waterbury
 ReportingUnit	Connecticut;Waterbury;DISTRICT 71-1-Kennedy High School	Waterbury;DISTRICT 71-1-Kennedy High School
 ReportingUnit	Connecticut;Waterbury;DISTRICT 71-2-Gilmartin School	Waterbury;DISTRICT 71-2-Gilmartin School
 ReportingUnit	Connecticut;Waterbury;DISTRICT 71-3-Tinker School	Waterbury;DISTRICT 71-3-Tinker School
@@ -1049,16 +1463,17 @@ ReportingUnit	Connecticut;Waterbury;DISTRICT 75-1-Willow Plaza Community Center	
 ReportingUnit	Connecticut;Waterbury;DISTRICT 75-2-Washington Park House	Waterbury;DISTRICT 75-2-Washington Park House
 ReportingUnit	Connecticut;Waterbury;DISTRICT 75-3-Maloney School	Waterbury;DISTRICT 75-3-Maloney School
 ReportingUnit	Connecticut;Waterbury;DISTRICT 75-4-St. Francis Xaiver Church Hall	Waterbury;DISTRICT 75-4-St. Francis Xaiver Church Hall
+ReportingUnit	Connecticut;Waterford	Waterford
 ReportingUnit	Connecticut;Waterford;DISTRICT 1-Town Hall	Waterford;DISTRICT 1-Town Hall
 ReportingUnit	Connecticut;Waterford;DISTRICT 2-Quaker Hill School	Waterford;DISTRICT 2-Quaker Hill School
 ReportingUnit	Connecticut;Waterford;DISTRICT 3-Oswegatchie School	Waterford;DISTRICT 3-Oswegatchie School
 ReportingUnit	Connecticut;Waterford;DISTRICT 4-Great Neck School	Waterford;DISTRICT 4-Great Neck School
+ReportingUnit	Connecticut;Watertown	Watertown
 ReportingUnit	Connecticut;Watertown;DISTRICT 1-Watertown High School	Watertown;DISTRICT 1-Watertown High School
 ReportingUnit	Connecticut;Watertown;DISTRICT 2-Judson School	Watertown;DISTRICT 2-Judson School
 ReportingUnit	Connecticut;Watertown;DISTRICT 3-Swift Middle School	Watertown;DISTRICT 3-Swift Middle School
 ReportingUnit	Connecticut;Watertown;DISTRICT 4-Polk School	Watertown;DISTRICT 4-Polk School
-ReportingUnit	Connecticut;Westbrook;DISTRICT 1-Teresa Mulvey Municipal Center - 1	Westbrook;DISTRICT 1-Teresa Mulvey Municipal Center - 1
-ReportingUnit	Connecticut;Westbrook;DISTRICT 2-Theresa Mulvey Municipal Center - 2	Westbrook;DISTRICT 2-Theresa Mulvey Municipal Center - 2
+ReportingUnit	Connecticut;West Hartford	West Hartford
 ReportingUnit	Connecticut;West Hartford;DISTRICT 1-King Philip Middle School	West Hartford;DISTRICT 1-King Philip Middle School
 ReportingUnit	Connecticut;West Hartford;DISTRICT 2-Bristow Middle School	West Hartford;DISTRICT 2-Bristow Middle School
 ReportingUnit	Connecticut;West Hartford;DISTRICT 3-West Hartford Town Hall	West Hartford;DISTRICT 3-West Hartford Town Hall
@@ -1068,7 +1483,9 @@ ReportingUnit	Connecticut;West Hartford;DISTRICT 6-Conard High School	West Hartf
 ReportingUnit	Connecticut;West Hartford;DISTRICT 7-Sedgwick Middle School	West Hartford;DISTRICT 7-Sedgwick Middle School
 ReportingUnit	Connecticut;West Hartford;DISTRICT 8-Braeburn School	West Hartford;DISTRICT 8-Braeburn School
 ReportingUnit	Connecticut;West Hartford;DISTRICT 9-Hall High School	West Hartford;DISTRICT 9-Hall High School
+ReportingUnit	Connecticut;West Haven	West Haven
 ReportingUnit	Connecticut;West Haven;DISTRICT 1-Elks Lodge #1537	West Haven;DISTRICT 1-Elks Lodge #1537
+ReportingUnit	Connecticut;West Haven;DISTRICT 10-Pagels School	West Haven;DISTRICT 10-Pagels School
 ReportingUnit	Connecticut;West Haven;DISTRICT 2-Surfside Senior Housing	West Haven;DISTRICT 2-Surfside Senior Housing
 ReportingUnit	Connecticut;West Haven;DISTRICT 3-Washington School	West Haven;DISTRICT 3-Washington School
 ReportingUnit	Connecticut;West Haven;DISTRICT 4-St Paul's Church Hall	West Haven;DISTRICT 4-St Paul's Church Hall
@@ -1077,9 +1494,13 @@ ReportingUnit	Connecticut;West Haven;DISTRICT 6-Forest School	West Haven;DISTRIC
 ReportingUnit	Connecticut;West Haven;DISTRICT 7-Ann V. Molloy School	West Haven;DISTRICT 7-Ann V. Molloy School
 ReportingUnit	Connecticut;West Haven;DISTRICT 8-Mackrille School	West Haven;DISTRICT 8-Mackrille School
 ReportingUnit	Connecticut;West Haven;DISTRICT 9-Seth Haley School	West Haven;DISTRICT 9-Seth Haley School
-ReportingUnit	Connecticut;West Haven;DISTRICT 10-Pagels School	West Haven;DISTRICT 10-Pagels School
+ReportingUnit	Connecticut;Westbrook	Westbrook
+ReportingUnit	Connecticut;Westbrook;DISTRICT 1-Teresa Mulvey Municipal Center - 1	Westbrook;DISTRICT 1-Teresa Mulvey Municipal Center - 1
+ReportingUnit	Connecticut;Westbrook;DISTRICT 2-Theresa Mulvey Municipal Center - 2	Westbrook;DISTRICT 2-Theresa Mulvey Municipal Center - 2
+ReportingUnit	Connecticut;Weston	Weston
 ReportingUnit	Connecticut;Weston;DISTRICT 1-Weston Middle School - 28	Weston;DISTRICT 1-Weston Middle School - 28
 ReportingUnit	Connecticut;Weston;DISTRICT 2-Weston Middle School - 26	Weston;DISTRICT 2-Weston Middle School - 26
+ReportingUnit	Connecticut;Westport	Westport
 ReportingUnit	Connecticut;Westport;DISTRICT 136-1-Saugatuck Elementary School Gym	Westport;DISTRICT 136-1-Saugatuck Elementary School Gym
 ReportingUnit	Connecticut;Westport;DISTRICT 136-2-Coleytown Elementary School Gymnasium	Westport;DISTRICT 136-2-Coleytown Elementary School Gymnasium
 ReportingUnit	Connecticut;Westport;DISTRICT 136-3-Long Lots Elementary School Gym	Westport;DISTRICT 136-3-Long Lots Elementary School Gym
@@ -1087,22 +1508,31 @@ ReportingUnit	Connecticut;Westport;DISTRICT 136-4-Greens Farms Elementary School
 ReportingUnit	Connecticut;Westport;DISTRICT 136-5-Greens Farms Elementary School Gym	Westport;DISTRICT 136-5-Greens Farms Elementary School Gym
 ReportingUnit	Connecticut;Westport;DISTRICT 136-6-Westport Library 136-6	Westport;DISTRICT 136-6-Westport Library 136-6
 ReportingUnit	Connecticut;Westport;DISTRICT 143-1-Saugatuck Elementary School Gym	Westport;DISTRICT 143-1-Saugatuck Elementary School Gym
+ReportingUnit	Connecticut;Wethersfield	Wethersfield
 ReportingUnit	Connecticut;Wethersfield;DISTRICT 1-Incarnation Church Hall	Wethersfield;DISTRICT 1-Incarnation Church Hall
 ReportingUnit	Connecticut;Wethersfield;DISTRICT 2-Keeney Cultural Center	Wethersfield;DISTRICT 2-Keeney Cultural Center
 ReportingUnit	Connecticut;Wethersfield;DISTRICT 3-Wethersfield United Methodist Church	Wethersfield;DISTRICT 3-Wethersfield United Methodist Church
 ReportingUnit	Connecticut;Wethersfield;DISTRICT 4-Webb Elementary School	Wethersfield;DISTRICT 4-Webb Elementary School
 ReportingUnit	Connecticut;Wethersfield;DISTRICT 5-Emerson Williams School	Wethersfield;DISTRICT 5-Emerson Williams School
 ReportingUnit	Connecticut;Wethersfield;DISTRICT 6-Pitkin Community Center	Wethersfield;DISTRICT 6-Pitkin Community Center
+ReportingUnit	Connecticut;Willington	Willington
 ReportingUnit	Connecticut;Willington;DISTRICT 1-Hall Memorial School Gymnasium	Willington;DISTRICT 1-Hall Memorial School Gymnasium
+ReportingUnit	Connecticut;Wilton	Wilton
 ReportingUnit	Connecticut;Wilton;DISTRICT 1-Wilton High School - District 1	Wilton;DISTRICT 1-Wilton High School - District 1
 ReportingUnit	Connecticut;Wilton;DISTRICT 2-Cider Mill School - District 2	Wilton;DISTRICT 2-Cider Mill School - District 2
 ReportingUnit	Connecticut;Wilton;DISTRICT 3-Middlebrook School - District 3	Wilton;DISTRICT 3-Middlebrook School - District 3
+ReportingUnit	Connecticut;Winchester	Winchester
 ReportingUnit	Connecticut;Winchester;DISTRICT 1-Pearson School	Winchester;DISTRICT 1-Pearson School
+ReportingUnit	Connecticut;Windham	Windham
 ReportingUnit	Connecticut;Windham;DISTRICT 4-Bpo Elks 1311	Windham;DISTRICT 4-Bpo Elks 1311
 ReportingUnit	Connecticut;Windham;DISTRICT 5-Vfw	Windham;DISTRICT 5-Vfw
 ReportingUnit	Connecticut;Windham;DISTRICT 6-Bpo Elks 1311	Windham;DISTRICT 6-Bpo Elks 1311
 ReportingUnit	Connecticut;Windham;DISTRICT 7-Windham Center Fire Dept	Windham;DISTRICT 7-Windham Center Fire Dept
 ReportingUnit	Connecticut;Windham;DISTRICT 8-Elks	Windham;DISTRICT 8-Elks
+ReportingUnit	Connecticut;Windsor	Windsor
+ReportingUnit	Connecticut;Windsor Locks	Windsor Locks
+ReportingUnit	Connecticut;Windsor Locks;DISTRICT 1-Mario Gatti Town Hall	Windsor Locks;DISTRICT 1-Mario Gatti Town Hall
+ReportingUnit	Connecticut;Windsor Locks;DISTRICT 2-Windsor Locks High School	Windsor Locks;DISTRICT 2-Windsor Locks High School
 ReportingUnit	Connecticut;Windsor;DISTRICT 1-L. P. Wilson	Windsor;DISTRICT 1-L. P. Wilson
 ReportingUnit	Connecticut;Windsor;DISTRICT 2-John F Kennedy School	Windsor;DISTRICT 2-John F Kennedy School
 ReportingUnit	Connecticut;Windsor;DISTRICT 3-330 Windsor Avenue	Windsor;DISTRICT 3-330 Windsor Avenue
@@ -1110,426 +1540,15 @@ ReportingUnit	Connecticut;Windsor;DISTRICT 4-Windsor Town Hall	Windsor;DISTRICT 
 ReportingUnit	Connecticut;Windsor;DISTRICT 5-Oliver Ellsworth School	Windsor;DISTRICT 5-Oliver Ellsworth School
 ReportingUnit	Connecticut;Windsor;DISTRICT 6-Poquonock School	Windsor;DISTRICT 6-Poquonock School
 ReportingUnit	Connecticut;Windsor;DISTRICT 7-Rainbow Firehouse	Windsor;DISTRICT 7-Rainbow Firehouse
-ReportingUnit	Connecticut;Windsor Locks;DISTRICT 1-Mario Gatti Town Hall	Windsor Locks;DISTRICT 1-Mario Gatti Town Hall
-ReportingUnit	Connecticut;Windsor Locks;DISTRICT 2-Windsor Locks High School	Windsor Locks;DISTRICT 2-Windsor Locks High School
+ReportingUnit	Connecticut;Wolcott	Wolcott
 ReportingUnit	Connecticut;Wolcott;DISTRICT 1-Tyrrell Middle School	Wolcott;DISTRICT 1-Tyrrell Middle School
 ReportingUnit	Connecticut;Wolcott;DISTRICT 2-Wolcott High School	Wolcott;DISTRICT 2-Wolcott High School
 ReportingUnit	Connecticut;Wolcott;DISTRICT 3-Wakelee	Wolcott;DISTRICT 3-Wakelee
-ReportingUnit	Connecticut;Woodbridge;DISTRICT 3-Center School 1	Woodbridge;DISTRICT 3-Center School 1
+ReportingUnit	Connecticut;Woodbridge	Woodbridge
 ReportingUnit	Connecticut;Woodbridge;DISTRICT 14-Center School 2	Woodbridge;DISTRICT 14-Center School 2
+ReportingUnit	Connecticut;Woodbridge;DISTRICT 3-Center School 1	Woodbridge;DISTRICT 3-Center School 1
+ReportingUnit	Connecticut;Woodbury	Woodbury
 ReportingUnit	Connecticut;Woodbury;DISTRICT 1-Senior/ Community Center - O&G Room	Woodbury;DISTRICT 1-Senior/ Community Center - O&G Room
 ReportingUnit	Connecticut;Woodbury;DISTRICT 2-Senior/ Community Center -- Activity Room	Woodbury;DISTRICT 2-Senior/ Community Center -- Activity Room
+ReportingUnit	Connecticut;Woodstock	Woodstock
 ReportingUnit	Connecticut;Woodstock;DISTRICT 1-Woodstock Town Hall	Woodstock;DISTRICT 1-Woodstock Town Hall
-CountItemType	election-day	Machine
-CountItemType	absentee	Absentee
-CountItemType	total	Final
-Candidate	West	West and Tidball
-Candidate	Wells	Wells and Wells
-Candidate	Joseph R. Biden	Biden and Harris
-Candidate	Brian Carroll	Carroll and Patel
-Candidate	Charles	Charles and Wallace
-Candidate	Rocky Roque De La Fuente	De La Fuenta and Richardson
-Candidate	Hawkins	Hawkins and Walker
-Candidate	Howard and Howard	Howard and Howard
-Candidate	Weinstein	Weinstein and Weinstein
-Candidate	Donald J. Trump	Trump and Pence
-Candidate	Jo Jorgensen	Jorgensen and Cohen
-Candidate	Yusheng Peng	Yusheng Peng
-Candidate	Wilm Donath	Wilm Donath
-Candidate	William J. Buckbee	William J. Buckbee
-Candidate	William H. Russell	William H. Russell
-Candidate	William A. Petit, Jr.	William A. Petit, Jr.
-Candidate	Will Haskell	Will Haskell
-Candidate	Wilfredo Martinez	Wilfredo Martinez
-Candidate	Whit Betts	Whit Betts
-Candidate	Weston Ulbrich	Weston Ulbrich
-Candidate	Weruche U. George	Weruche U. George
-Candidate	Wanda R. Simmons	Wanda R. Simmons
-Candidate	Vincent J. Mase, Sr.	Vincent J. Mase, Sr.
-Candidate	Vincent J. Candelora	Vincent J. Candelora
-Candidate	Vernon R. Matthews	Vernon R. Matthews
-Candidate	Travis Simms	Travis Simms
-Candidate	Tony Sutton	Tony Sutton
-Candidate	Tony Hwang	Tony Hwang
-Candidate	Tony Gennaro	Tony Gennaro
-Candidate	Toni E. Walker	Toni E. Walker
-Candidate	Tom Delnicki	Tom Delnicki
-Candidate	Tom Arnone	Tom Arnone
-Candidate	Thomas P. O'Dea , Jr.	Thomas P. O'Dea , Jr.
-Candidate	Thomas E. McCormick	Thomas E. McCormick
-Candidate	Terrie E. Wood	Terrie E. Wood
-Candidate	Terrence A. Sullivan	Terrence A. Sullivan
-Candidate	Tammy Nuccio	Tammy Nuccio
-Candidate	Tammy Exum	Tammy Exum
-Candidate	Tami Zawistowski	Tami Zawistowski
-Candidate	Susan Johnson	Susan Johnson
-Candidate	Susan Chapman	Susan Chapman
-Candidate	Sujata Gadkar-Wilcox	Sujata Gadkar-Wilcox
-Candidate	Stewart Chip' BeckettMachine/Polling Place/EDRAbsenteeTotal'Does not match regex ^(.+)Machine/Polling Place/EDRAbsenteeTotal$: Stewart Chip' BeckettMachine/Polling Place/EDRAbsenteeTotal'	Stewart Chip' BeckettMachine/Polling Place/EDRAbsenteeTotal'Does not match regex ^(.+)Machine/Polling Place/EDRAbsenteeTotal$: Stewart Chip' BeckettMachine/Polling Place/EDRAbsenteeTotal'
-Candidate	Steven Stafstrom	Steven Stafstrom
-Candidate	Steven S. Choi	Steven S. Choi
-Candidate	Steve Weir	Steve Weir
-Candidate	Steve Meskers	Steve Meskers
-Candidate	Steve Cassano	Steve Cassano
-Candidate	Stephen Samela	Stephen Samela
-Candidate	Stephen G. Harding	Stephen G. Harding
-Candidate	Stephen Dincher	Stephen Dincher
-Candidate	Stephanie Thomas	Stephanie Thomas
-Candidate	Stephanie Cummings	Stephanie Cummings
-Candidate	Simmons and Roze	Simmons and Roze
-Candidate	Simmons and Dow	Simmons and Dow
-Candidate	Sean Scanlon	Sean Scanlon
-Candidate	Sean Butterly	Sean Butterly
-Candidate	Scott A. Storms	Scott A. Storms
-Candidate	Saud Anwar	Saud Anwar
-Candidate	Salvatore V. Sena, Jr.	Salvatore V. Sena, Jr.
-Candidate	Ryan Fazio	Ryan Fazio
-Candidate	Rosa L. DeLauro	Rosa L. DeLauro
-Candidate	Rosa C. Rebimbas	Rosa C. Rebimbas
-Candidate	Ronald A. Napoli, Jr.	Ronald A. Napoli, Jr.
-Candidate	Roland Lemar	Roland Lemar
-Candidate	Robyn Porter	Robyn Porter
-Candidate	Robin Green	Robin Green
-Candidate	Robin Comey	Robin Comey
-Candidate	Robert W. Lawrence	Robert W. Lawrence
-Candidate	Robert T. Keeley, Jr.	Robert T. Keeley, Jr.
-Candidate	Robert Siegrist	Robert Siegrist
-Candidate	Robert E. Halstead	Robert E. Halstead
-Candidate	Robert Bobby' SanchezMachine/Polling Place/EDRAbsenteeTotal'Does not match regex ^(.+)Machine/Polling Place/EDRAbsenteeTotal$: Robert Bobby' SanchezMachine/Polling Place/EDRAbsenteeTotal'	Robert Bobby' SanchezMachine/Polling Place/EDRAbsenteeTotal'Does not match regex ^(.+)Machine/Polling Place/EDRAbsenteeTotal$: Robert Bobby' SanchezMachine/Polling Place/EDRAbsenteeTotal'
-Candidate	Robert Bell	Robert Bell
-Candidate	Rob Sampson	Rob Sampson
-Candidate	Rick Lopes	Rick Lopes
-Candidate	Rick L. Hayes	Rick L. Hayes
-Candidate	Rick Bush	Rick Bush
-Candidate	Richard Ruglio	Richard Ruglio
-Candidate	Richard Cordero	Richard Cordero
-Candidate	Rebekah Harriman-Stites	Rebekah Harriman-Stites
-Candidate	Quentin Phipps	Quentin Phipps
-Candidate	Piotr S. Ceglarz	Piotr S. Ceglarz
-Candidate	Phillip Chabot	Phillip Chabot
-Candidate	Philip L. Young	Philip L. Young
-Candidate	Peter Tercyak	Peter Tercyak
-Candidate	Peter Perillo	Peter Perillo
-Candidate	Paul M. Formica	Paul M. Formica
-Candidate	Paul J. Small	Paul J. Small
-Candidate	Paul Honig	Paul Honig
-Candidate	Paul Cicarella	Paul Cicarella
-Candidate	Patrizia Zucaro	Patrizia Zucaro
-Candidate	Patrick Pentalow	Patrick Pentalow
-Candidate	Patrick Callahan	Patrick Callahan
-Candidate	Patricia Dillon	Patricia Dillon
-Candidate	Patricia Billie Miller	Patricia Billie Miller
-Candidate	Pat Wilson Pheanious	Pat Wilson Pheanious
-Candidate	Pat Boyd	Pat Boyd
-Candidate	Pam Salamone	Pam Salamone
-Candidate	Norm Needleman	Norm Needleman
-Candidate	Noreen Kokoruda	Noreen Kokoruda
-Candidate	Noel Rodriquez	Noel Rodriquez
-Candidate	Nicole Klarides-Ditria	Nicole Klarides-Ditria
-Candidate	Myra Rivers	Myra Rivers
-Candidate	Mitch Bolinsky	Mitch Bolinsky
-Candidate	Mike Skelps	Mike Skelps
-Candidate	Mike France	Mike France
-Candidate	Mike Demicco	Mike Demicco
-Candidate	Michelle McCabe	Michelle McCabe
-Candidate	Michelle L. Cook	Michelle L. Cook
-Candidate	Michele Zommer	Michele Zommer
-Candidate	Michael Winkler	Michael Winkler
-Candidate	Michael Southworth	Michael Southworth
-Candidate	Michael Henry	Michael Henry
-Candidate	Michael DiMassa	Michael DiMassa
-Candidate	Michael DiGiovancarlo	Michael DiGiovancarlo
-Candidate	Michael D. Quinn	Michael D. Quinn
-Candidate	Michael Camillo	Michael Camillo
-Candidate	Michael C. D'Agostino	Michael C. D'Agostino
-Candidate	Melissa E. Osborne	Melissa E. Osborne
-Candidate	Matthew M. Corey	Matthew M. Corey
-Candidate	Matthew D. Dyer	Matthew D. Dyer
-Candidate	Matt Lesser	Matt Lesser
-Candidate	Matt Harper	Matt Harper
-Candidate	Matt Geren	Matt Geren
-Candidate	Matt Blumenthal	Matt Blumenthal
-Candidate	Mary Welander	Mary Welander
-Candidate	Mary Mushinsky	Mary Mushinsky
-Candidate	Mary L. Sanders	Mary L. Sanders
-Candidate	Mary Fay	Mary Fay
-Candidate	Mary Daugherty Abrams	Mary Daugherty Abrams
-Candidate	Mary B. Fortier	Mary B. Fortier
-Candidate	Mary Ann Turner	Mary Ann Turner
-Candidate	Martin M. Looney	Martin M. Looney
-Candidate	Martha Marx	Martha Marx
-Candidate	Mark W. Anderson	Mark W. Anderson
-Candidate	Mark DePonte	Mark DePonte
-Candidate	Marilyn Moore	Marilyn Moore
-Candidate	Maria Horn	Maria Horn
-Candidate	Margaret Streicker	Margaret Streicker
-Candidate	Marc Riccio	Marc Riccio
-Candidate	Mae Flexer	Mae Flexer
-Candidate	Lucy Dathan	Lucy Dathan
-Candidate	Lou Arata	Lou Arata
-Candidate	Liz Linehan	Liz Linehan
-Candidate	Lisa Thomas	Lisa Thomas
-Candidate	Linda Szynkowicz	Linda Szynkowicz
-Candidate	Lezlye W. Zupkus	Lezlye W. Zupkus
-Candidate	Leslee Hill	Leslee Hill
-Candidate	Len Suzio	Len Suzio
-Candidate	Lee V. Grisby, II	Lee V. Grisby, II
-Candidate	Lauren Gauthier	Lauren Gauthier
-Candidate	Laura Devlin	Laura Devlin
-Candidate	Laura B. Bush	Laura B. Bush
-Candidate	Larry Groh, Jr.	Larry Groh, Jr.
-Candidate	Larry B. Butler	Larry B. Butler
-Candidate	Lance Lusignan	Lance Lusignan
-Candidate	Kurt Vail	Kurt Vail
-Candidate	Kimberly Fiorello	Kimberly Fiorello
-Candidate	Kim Healy	Kim Healy
-Candidate	Kevin Witkos	Kevin Witkos
-Candidate	Kevin Ryan	Kevin Ryan
-Candidate	Kevin C. Kelly	Kevin C. Kelly
-Candidate	Kerry Szeps Wood	Kerry Szeps Wood
-Candidate	Kerri Colombo	Kerri Colombo
-Candidate	Kenneth Gucker	Kenneth Gucker
-Candidate	Kelly Elizabeth Green	Kelly Elizabeth Green
-Candidate	Keith James McConnell	Keith James McConnell
-Candidate	Kathy Kennedy	Kathy Kennedy
-Candidate	Kathy Grant	Kathy Grant
-Candidate	Kathleen Stowe	Kathleen Stowe
-Candidate	Kathleen M. McCarty	Kathleen M. McCarty
-Candidate	Kathleen Hoyt	Kathleen Hoyt
-Candidate	Kate Rotella	Kate Rotella
-Candidate	Kate Farrar	Kate Farrar
-Candidate	Kate Donnelly	Kate Donnelly
-Candidate	Kat Goulart	Kat Goulart
-Candidate	Kara Rochelle	Kara Rochelle
-Candidate	Justin C. Paglino	Justin C. Paglino
-Candidate	Justin Anderson	Justin Anderson
-Candidate	Julie Shilosky	Julie Shilosky
-Candidate	Julie Kushner	Julie Kushner
-Candidate	Judd Melon	Judd Melon
-Candidate	Juan Candelaria	Juan Candelaria
-Candidate	Josiah Israel	Josiah Israel
-Candidate	Josh Elliott	Josh Elliott
-Candidate	Joseph Taraya	Joseph Taraya
-Candidate	Joseph Polletta	Joseph Polletta
-Candidate	Joseph P. Gresko	Joseph P. Gresko
-Candidate	Joseph A. Bongiorno	Joseph A. Bongiorno
-Candidate	Jose Goncalves	Jose Goncalves
-Candidate	Jorge Cabrera	Jorge Cabrera
-Candidate	Jonathan Steinberg	Jonathan Steinberg
-Candidate	Jonathan Riddle	Jonathan Riddle
-Candidate	Jonathan Milon Johnson	Jonathan Milon Johnson
-Candidate	John-Michael Parker	John-Michael Parker
-Candidate	John W. Fonfara	John W. Fonfara
-Candidate	John W. Brockelman	John W. Brockelman
-Candidate	John Shaban	John Shaban
-Candidate	John Piscopo	John Piscopo
-Candidate	John May	John May
-Candidate	John M. Traceski	John M. Traceski
-Candidate	John L. Hall, III	John L. Hall, III
-Candidate	John K. Hampton	John K. Hampton
-Candidate	John J.Flynn	John J.Flynn
-Candidate	John Fusco	John Fusco
-Candidate	John Corky Mazurek	John Corky Mazurek
-Candidate	John Collins	John Collins
-Candidate	John B. Larson	John B. Larson
-Candidate	John A. Kissel	John A. Kissel
-Candidate	John (Jack) F. Hennessy	John (Jack) F. Hennessy
-Candidate	Joelle Nawrocki	Joelle Nawrocki
-Candidate	Joe de la Cruz	Joe de la Cruz
-Candidate	Joe Zullo	Joe Zullo
-Candidate	Joe LaPorta	Joe LaPorta
-Candidate	Joe Kelly	Joe Kelly
-Candidate	Joe Courtney	Joe Courtney
-Candidate	Joanne Romano-Csonka	Joanne Romano-Csonka
-Candidate	Joan V. Hartley	Joan V. Hartley
-Candidate	JoAnn Angelico-Stetson	JoAnn Angelico-Stetson
-Candidate	Jim Jinks	Jim Jinks
-Candidate	Jim Himes	Jim Himes
-Candidate	Jim Feehan	Jim Feehan
-Candidate	Jillian Gilchrest	Jillian Gilchrest
-Candidate	Jill Barry	Jill Barry
-Candidate	Jessica Alba	Jessica Alba
-Candidate	Jerrell Hargraves	Jerrell Hargraves
-Candidate	Jennifer Leeper	Jennifer Leeper
-Candidate	Jeffrey Desmarais	Jeffrey Desmarais
-Candidate	Jeff Sullivan	Jeff Sullivan
-Candidate	Jeff Currey	Jeff Currey
-Candidate	Jay Case	Jay Case
-Candidate	Jason W. Bartlett	Jason W. Bartlett
-Candidate	Jason Perillo	Jason Perillo
-Candidate	Jason Doucette	Jason Doucette
-Candidate	Jasmin Sanchez	Jasmin Sanchez
-Candidate	Jane Garibay	Jane Garibay
-Candidate	Jameson White	Jameson White
-Candidate	James Maroney	James Maroney
-Candidate	Jaime Foster	Jaime Foster
-Candidate	Jahana Hayes	Jahana Hayes
-Candidate	Jack Perry	Jack Perry
-Candidate	Jack Henrie	Jack Henrie
-Candidate	JP Sredzinski	JP Sredzinski
-Candidate	J.D. Ospina	J.D. Ospina
-Candidate	Irene M. Haines	Irene M. Haines
-Candidate	Holly H. Cheeseman	Holly H. Cheeseman
-Candidate	Hilda E. Santiago	Hilda E. Santiago
-Candidate	Hilary Ram	Hilary Ram
-Candidate	Henry Vasel	Henry Vasel
-Candidate	Henry Thayer	Henry Thayer
-Candidate	Henry J. Genga	Henry J. Genga
-Candidate	Henri Martin	Henri Martin
-Candidate	Helene S. Kouassi	Helene S. Kouassi
-Candidate	Hector Arzeno	Hector Arzeno
-Candidate	Heather Somers	Heather Somers
-Candidate	Harry Arora	Harry Arora
-Candidate	Harold S. Harris	Harold S. Harris
-Candidate	Gregg Haddad	Gregg Haddad
-Candidate	Greg Post	Greg Post
-Candidate	Greg Howard	Greg Howard
-Candidate	Geraldo C. Reyes, Jr.	Geraldo C. Reyes, Jr.
-Candidate	Gerald Calnen	Gerald Calnen
-Candidate	George Logan	George Logan
-Candidate	George Hallenbeck	George Hallenbeck
-Candidate	Geoff Luxenberg	Geoff Luxenberg
-Candidate	Gennaro Bizzarro	Gennaro Bizzarro
-Candidate	Genevieve Coursey	Genevieve Coursey
-Candidate	Gary Winfield	Gary Winfield
-Candidate	Gary Turco	Gary Turco
-Candidate	Gale L. Mastrofrancesco	Gale L. Mastrofrancesco
-Candidate	Frederick A. Moffa	Frederick A. Moffa
-Candidate	Fred Wilms	Fred Wilms
-Candidate	Frank Smith	Frank Smith
-Candidate	Eva A. Maldonado	Eva A. Maldonado
-Candidate	Ethan Book, Jr.	Ethan Book, Jr.
-Candidate	Erycka Ortiz	Erycka Ortiz
-Candidate	Ernestine Holloway	Ernestine Holloway
-Candidate	Erin Reilly	Erin Reilly
-Candidate	Erin M. Domenech	Erin M. Domenech
-Candidate	Erik A. Smith	Erik A. Smith
-Candidate	Eric Michael Mastroianni, Sr.	Eric Michael Mastroianni, Sr.
-Candidate	Eric C. Berthel	Eric C. Berthel
-Candidate	Emmett D. Riley	Emmett D. Riley
-Candidate	Emmanuel Manny' SanchezMachine/Polling Place/EDRAbsenteeTotal'Does not match regex ^(.+)Machine/Polling Place/EDRAbsenteeTotal$: Emmanuel Manny' SanchezMachine/Polling Place/EDRAbsenteeTotal'	Emmanuel Manny' SanchezMachine/Polling Place/EDRAbsenteeTotal'Does not match regex ^(.+)Machine/Polling Place/EDRAbsenteeTotal$: Emmanuel Manny' SanchezMachine/Polling Place/EDRAbsenteeTotal'
-Candidate	Emile Buzaid	Emile Buzaid
-Candidate	Ellie Kousidis	Ellie Kousidis
-Candidate	Ellen G. Wink	Ellen G. Wink
-Candidate	Eleni Kavros DeGraw	Eleni Kavros DeGraw
-Candidate	Elaine Matto	Elaine Matto
-Candidate	Edward J. Scinto	Edward J. Scinto
-Candidate	E.J. Maher	E.J. Maher
-Candidate	Douglas McCrory	Douglas McCrory
-Candidate	Doug Dubitsky	Doug Dubitsky
-Candidate	Dorinda Borer	Dorinda Borer
-Candidate	Donna Veach	Donna Veach
-Candidate	Don Vaniah Alexander	Don Vaniah Alexander
-Candidate	Devon Brown	Devon Brown
-Candidate	Devin R. Carney	Devin R. Carney
-Candidate	Derek Slap	Derek Slap
-Candidate	Dennis Bradley	Dennis Bradley
-Candidate	David Yaccarino	David Yaccarino
-Candidate	David X. Sullivan	David X. Sullivan
-Candidate	David T. Wilson	David T. Wilson
-Candidate	David Rutigliano	David Rutigliano
-Candidate	David Rackliffe	David Rackliffe
-Candidate	David R. Gronbach	David R. Gronbach
-Candidate	David Paul Kramer	David Paul Kramer
-Candidate	David Michel	David Michel
-Candidate	David K. Labriola	David K. Labriola
-Candidate	David E. Stavens	David E. Stavens
-Candidate	David Bedell	David Bedell
-Candidate	David Arconti, Jr.	David Arconti, Jr.
-Candidate	David A. Rubino	David A. Rubino
-Candidate	Dave Yaccarino	Dave Yaccarino
-Candidate	Danielle Cecil Wong	Danielle Cecil Wong
-Candidate	Daniel Reale	Daniel Reale
-Candidate	Daniel J. Fox	Daniel J. Fox
-Candidate	Danette Onofrio	Danette Onofrio
-Candidate	Dan Maymin	Dan Maymin
-Candidate	Dan DeBarba	Dan DeBarba
-Candidate	Dan Champagne	Dan Champagne
-Candidate	Dagmara Scalise	Dagmara Scalise
-Candidate	Cristin McCarthy Vahey	Cristin McCarthy Vahey
-Candidate	Craig Miner	Craig Miner
-Candidate	Craig Fishbein	Craig Fishbein
-Candidate	Cindy Harrison	Cindy Harrison
-Candidate	Christopher Ziogas	Christopher Ziogas
-Candidate	Christopher Rosario	Christopher Rosario
-Candidate	Christopher E. Bowen	Christopher E. Bowen
-Candidate	Christopher Chris' DeMatteoMachine/Polling Place/EDRAbsenteeTotal'Does not match regex ^(.+)Machine/Polling Place/EDRAbsenteeTotal$: Christopher Chris' DeMatteoMachine/Polling Place/EDRAbsenteeTotal'	Christopher Chris' DeMatteoMachine/Polling Place/EDRAbsenteeTotal'Does not match regex ^(.+)Machine/Polling Place/EDRAbsenteeTotal$: Christopher Chris' DeMatteoMachine/Polling Place/EDRAbsenteeTotal'
-Candidate	Christopher Beyus	Christopher Beyus
-Candidate	Christine Rosati Randall	Christine Rosati Randall
-Candidate	Christine Palm	Christine Palm
-Candidate	Christine Goupil	Christine Goupil
-Candidate	Christine Conley	Christine Conley
-Candidate	Christine Cohen	Christine Cohen
-Candidate	Christie M. Carpino	Christie M. Carpino
-Candidate	Chris Perone	Chris Perone
-Candidate	Chip Stephens	Chip Stephens
-Candidate	Charlie Stallworth	Charlie Stallworth
-Candidate	Charles Ferraro	Charles Ferraro
-Candidate	Catherine Abercrombie	Catherine Abercrombie
-Candidate	Catherine A. Osten	Catherine A. Osten
-Candidate	Cate Steel	Cate Steel
-Candidate	Cassandra Martineau	Cassandra Martineau
-Candidate	Caroline Simmons	Caroline Simmons
-Candidate	Carol Hall	Carol Hall
-Candidate	Carlos M. Alvarado	Carlos M. Alvarado
-Candidate	Carlo Leone	Carlo Leone
-Candidate	Carla Volpe	Carla Volpe
-Candidate	Cara Pavalock-D'Amato	Cara Pavalock-D'Amato
-Candidate	Caleb Espinosa	Caleb Espinosa
-Candidate	Bryan Anderson	Bryan Anderson
-Candidate	Bruce W. Walczak	Bruce W. Walczak
-Candidate	Brian Smith	Brian Smith
-Candidate	Brian Merlen	Brian Merlen
-Candidate	Brian Marois	Brian Marois
-Candidate	Brian M. Ohler	Brian M. Ohler
-Candidate	Brian Lanoue	Brian Lanoue
-Candidate	Brian Farnen	Brian Farnen
-Candidate	Brendan Saunders	Brendan Saunders
-Candidate	Brandon Chafee	Brandon Chafee
-Candidate	Bobby Gibson	Bobby Gibson
-Candidate	Bob Statchen	Bob Statchen
-Candidate	Bob Hebert	Bob Hebert
-Candidate	Bob Godfrey	Bob Godfrey
-Candidate	Bob Duff	Bob Duff
-Candidate	Ben McGorty	Ben McGorty
-Candidate	Barbara Ruhe	Barbara Ruhe
-Candidate	Baird Welch-Collins	Baird Welch-Collins
-Candidate	Audrey Lampert	Audrey Lampert
-Candidate	April Capone	April Capone
-Candidate	Antonio Felipe	Antonio Felipe
-Candidate	Anthony Nolan	Anthony Nolan
-Candidate	Anthony J. D'Amelio	Anthony J. D'Amelio
-Candidate	Anne Hughes	Anne Hughes
-Candidate	Anne Dubay Dauphinais	Anne Dubay Dauphinais
-Candidate	Andrew M. Rasmussen-Tuller	Andrew M. Rasmussen-Tuller
-Candidate	Andre F. Baker	Andre F. Baker
-Candidate	Amy Morrin Bello	Amy Morrin Bello
-Candidate	Alphonse Paolillo, Jr.	Alphonse Paolillo, Jr.
-Candidate	Alexander Taubes	Alexander Taubes
-Candidate	Alex Kasser	Alex Kasser
-Candidate	Alden Russell	Alden Russell
-Candidate	Aimee Berger-Girvalo	Aimee Berger-Girvalo
-Candidate	Aileen Abrams	Aileen Abrams
-Party	Write In	Write In
-Party	Working Families Party	Working Families Party
-Party	Reclaim Party	Reclaim Party
-Party	Petitioning Candidate	Petitioning Candidate
-Party	Independent Party	Independent Party
-Party	Socialist Resurgence Party	Socialist Resurgence Party
-Party	Epic Party	Epic Party
-Candidate	Timothy Ackert	Timothy Ackert
-Candidate	Raghib Allie-Brennan	Raghib Allie-Brennan
-Candidate	Minnie Gonzalez	Minnie Gonzalez
-Candidate	Matthew Ritter	Matthew Ritter
-Candidate	Mark Stewart Greenstein	Mark Stewart Greenstein
-Candidate	Julio A. Concepcion	Julio A. Concepcion
-Candidate	Joshua M. Hall	Joshua M. Hall
-Candidate	Jason Rojas	Jason Rojas
-Candidate	Edwin Vargas, Jr.	Edwin Vargas, Jr.
-Candidate	Daniel Adam Piper	Daniel Adam Piper
-Candidate	Dan Carter	Dan Carter
-Candidate	Charles Jackson	Charles Jackson
-Candidate	Cathy Hopperstad	Cathy Hopperstad
-Candidate	Brenda Falusi	Brenda Falusi
-Candidate	Brandon L. McGee	Brandon L. McGee
-Candidate	Barry J. D'Andrea	Barry J. D'Andrea

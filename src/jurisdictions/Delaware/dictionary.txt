@@ -60,6 +60,7 @@ Candidate	John J. Machurek	John J. Machurek
 Candidate	John J. Viola	John J. Viola
 Candidate	John Johnson Jr.	John Johnson Jr.
 Candidate	John Kerry	JOHN KERRY
+Candidate	John MCCain	JOHN MCCAIN
 Candidate	John Mccain	JOHN MCCAIN
 Candidate	Joseph Mccole	Joseph Mccole
 Candidate	Joseph R. Biden	Joseph R. Biden

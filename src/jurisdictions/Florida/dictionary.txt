@@ -1491,6 +1491,7 @@ Candidate	John Johnson	John Johnson
 Candidate	John Kerry	JOHN KERRY
 Candidate	John M Hill	John M Hill
 Candidate	John M. Drew	John M. Drew
+Candidate	John MCCain	JOHN MCCAIN
 Candidate	John Manners Houman	John Manners Houman
 Candidate	John Mccain	JOHN MCCAIN
 Candidate	John Mica	John Mica

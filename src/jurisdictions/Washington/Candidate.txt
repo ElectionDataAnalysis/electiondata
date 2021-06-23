@@ -689,7 +689,7 @@ James (Jim) McLaughlin
 Bill Benedict
 Teresa Marchi
 Bill Peach
-"Howard (Mike) Doherty, Jr."
+Howard (Mike) Doherty, Jr.
 Rebecca Glasgow
 Suzanne M.B. Hayden
 John Black
@@ -701,7 +701,7 @@ Sasha Bentley
 Gina Mosbrucker
 Liz Hallock
 Tanisha Harris
-"Damion E Jiles, Sr."
+Damion E Jiles, Sr.
 Chris Thobaben
 Larry A. Hoff
 John Thompson
@@ -966,7 +966,7 @@ Les Ponomarchuk
 Marcine Anderson
 Jason Poydras
 Matthew York
-"Nathaniel B. Green, Jr."
+Nathaniel B. Green, Jr.
 Corinna Harn
 Virginia M. Amato
 Rhonda Laumann
@@ -1757,7 +1757,7 @@ Janet Lodge
 William Griffin
 Jordan J. Olin
 Sharon Murphin
-"Richard W. Rylander, Jr."
+Richard W. Rylander, Jr.
 Joe L. Scott
 Igor Rybkin
 Robin Rulffes
@@ -2038,7 +2038,7 @@ Robert Dean Mair
 Matthew Heines
 Justin Smoak
 Derek Chartrand
-"Jeffrey Beeler, Sr."
+Jeffrey Beeler, Sr.
 Scott Sutherland
 Jack Hughes-Hageman
 Rick Lewis
@@ -2097,8 +2097,8 @@ Jessi Murray
 John P. Gibbons
 Eric J. Brown
 Kyle Lyebyedyev
-"Peter Thompson, Jr."
-"Joseph Cimaomo, Jr."
+Peter Thompson, Jr.
+Joseph Cimaomo, Jr.
 Scott Dusenbery
 Victor H. Bishop
 Morgan Puchek
@@ -3152,7 +3152,7 @@ Brad Sinsel
 Deanna Roy
 Jason White
 Steve Painter
-"Reynaldo Garza, Jr."
+Reynaldo Garza, Jr.
 Gary Hintze
 Todd McClaskey
 Troy Clements
@@ -3199,7 +3199,16 @@ Jose Rocha
 Lars Hanson
 Kathleen Altick
 Lauri Palmer
-"David R. Weyeneth, Sr."
+David R. Weyeneth, Sr.
 Devin Kuh
 Write-in
 Uncommitted Delegates
+Al Gore
+Barack Obama
+George W. Bush
+John Kerry
+John Mccain
+Mitt Romney
+Other
+Ralph Nader
+John MCCain
