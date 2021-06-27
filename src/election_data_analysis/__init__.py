@@ -273,9 +273,13 @@ class SingleDataLoader:
 
 
 class DataLoader:
-    def __new__(cls, param_file: str = "run_time.ini", dbname: Optional[str] = None):
+    def __new__(cls, param_file: Optional[str] = None, dbname: Optional[str] = None):
         """Checks if parameter file exists and is correct. If not, does
         not create DataLoader object."""
+
+        # default param_file is run_time.ini in current directory
+        if not param_file:
+            param_file = "run_time.ini"
 
         d, err = ui.get_parameters(
             required_keys=multi_data_loader_pars,
@@ -289,7 +293,11 @@ class DataLoader:
 
         return super().__new__(cls)
 
-    def __init__(self, param_file="run_time.ini", dbname: Optional[str] = None):
+    def __init__(self, param_file: Optional[str] = None, dbname: Optional[str] = None):
+        # default param_file is run_time.ini in current directory
+        if not param_file:
+            param_file = "run_time.ini"
+
         # grab parameters
         self.d, self.parameter_err = ui.get_parameters(
             required_keys=multi_data_loader_pars,
@@ -1457,9 +1465,11 @@ class JurisdictionPrepper:
         par_file_name: str,
         sub_ru_type: str = "precinct",
         county_type="county",
+        dbname: Optional[str] = None,
+        paraam_file: Optional[str] = None
     ) -> Optional[dict]:
         err_list = list()
-        dl = DataLoader()
+        dl = DataLoader(dbname=dbname, param_file=paraam_file)
         path_to_jurisdiction_dir = os.path.join(
             self.d["jurisdiction_path"], self.d["___"]
         )
@@ -2716,10 +2726,10 @@ def create_from_template(
 
 
 def load_or_reload_all(
-    test_dir: Optional[str] = None, rollup: bool = False
+    test_dir: Optional[str] = None, rollup: bool = False, dbname: Optional[str] = None, param_file: Optional[str] = None
 ) -> Optional[dict]:
     err = None
-    dataloader = DataLoader()
+    dataloader = DataLoader(dbname=dbname, param_file=param_file)
     if dataloader:
         ts = datetime.datetime.now().strftime("%m%d_%H%M")
         error_and_warning_dir = os.path.join(
@@ -2747,6 +2757,8 @@ def load_or_reload_all(
                     test_dir,
                     error_and_warning_dir,
                     rollup=rollup,
+                    dbname=dbname,
+                    param_file=param_file,
                 )
                 if new_err:
                     err = ui.consolidate_errors([err, new_err])
@@ -2774,6 +2786,8 @@ def reload_juris_election(
     test_dir: str,
     report_dir,
     rollup: bool = False,
+    dbname: Optional[str] = None,
+    param_file: Optional[str] = None,
 ) -> Optional[dict]:
     """Loads and archives each results file in each direct subfolder of the results_dir
     named in ./run_time.ini -- provided there the results file is specified in a *.ini file in the
@@ -2781,7 +2795,7 @@ def reload_juris_election(
     """
     # initialize dataloader
     err = None
-    dl = DataLoader()
+    dl = DataLoader(dbname=dbname, param_file=param_file)
     db_params, _ = ui.get_parameters(
         [
             "host",
