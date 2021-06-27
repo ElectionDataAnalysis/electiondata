@@ -2899,6 +2899,14 @@ def load_or_reload_all(
     return err
 
 
+def test_and_load_multifile(
+        multi_file: str, test_dir: Optional[str], dbname: Optional[str] = None, param_file: Optional[str] = None
+) -> Optional[dict]:
+    err = None
+    # TODO
+    return err
+
+
 def reload_juris_election(
     juris_name: str,
     election_name: str,
