@@ -672,7 +672,7 @@ Connecticut;Manchester;DISTRICT 8-Verplanck School	precinct
 Connecticut;Manchester;DISTRICT 9-Bennet Academy	precinct
 Connecticut;Mansfield;DISTRICT 1-Mansfield Community Center	precinct
 Connecticut;Mansfield;DISTRICT 2-Mansfield Fire Dept. #107@ Eagleville	precinct
-Connecticut;Mansfield;DISTRICT 3-Mansfield Library/ Buchanan Auditorium	precinct
+Connecticut;Mansfield;DISTRICT 3-Mansfield Library Buchanan Auditorium	precinct
 Connecticut;Mansfield;DISTRICT 4-Annie E. Vinton School GYM	precinct
 Connecticut;Marlborough;DISTRICT 1-Elmer Thienes Mary Hall Elementary School	precinct
 Connecticut;Meriden;DISTRICT 1-Immanuel Lutheran Church	precinct
@@ -775,8 +775,8 @@ Connecticut;New Haven;DISTRICT 10-Wilbur Cross High School - Federal	precinct
 Connecticut;New Haven;DISTRICT 11-1-Bella Vista 11-01	precinct
 Connecticut;New Haven;DISTRICT 11-2-Bishop Woods School	precinct
 Connecticut;New Haven;DISTRICT 11-3-Eastview Terrace	precinct
-Connecticut;New Haven;DISTRICT 12-1-Ross/woodward	precinct
-Connecticut;New Haven;DISTRICT 12-2-Ross/woodward	precinct
+Connecticut;New Haven;DISTRICT 12-1-Ross Woodward	precinct
+Connecticut;New Haven;DISTRICT 12-2-Ross Woodward	precinct
 Connecticut;New Haven;DISTRICT 13-Benjamin Jepson Magnet School	precinct
 Connecticut;New Haven;DISTRICT 14-1-Atwater Senior Center 01	precinct
 Connecticut;New Haven;DISTRICT 15-1-Community Room	precinct
@@ -887,7 +887,7 @@ Connecticut;Rocky Hill;DISTRICT 3-Griswold Middle School	precinct
 Connecticut;Roxbury;DISTRICT 1-Roxbury Town Hall	precinct
 Connecticut;Salem;DISTRICT 1-Salem Town Office Building	precinct
 Connecticut;Salisbury;DISTRICT 1-Town Hall	precinct
-Connecticut;Scotland;DISTRICT 1-Firehouse/community Center	precinct
+Connecticut;Scotland;DISTRICT 1-Firehouse Community Center	precinct
 Connecticut;Seymour;DISTRICT 1-District 1 Community Center	precinct
 Connecticut;Seymour;DISTRICT 2-District 2 Seymour Middle School	precinct
 Connecticut;Seymour;DISTRICT 3-District 3 Chatfield-Lopresti School	precinct
@@ -1102,7 +1102,7 @@ Connecticut;Wolcott;DISTRICT 2-Wolcott High School	precinct
 Connecticut;Wolcott;DISTRICT 3-Wakelee	precinct
 Connecticut;Woodbridge;DISTRICT 3-Center School 1	precinct
 Connecticut;Woodbridge;DISTRICT 14-Center School 2	precinct
-Connecticut;Woodbury;DISTRICT 1-Senior/ Community Center - O&G Room	precinct
-Connecticut;Woodbury;DISTRICT 2-Senior/ Community Center -- Activity Room	precinct
+Connecticut;Woodbury;DISTRICT 1-Senior Community Center - O&G Room	precinct
+Connecticut;Woodbury;DISTRICT 2-Senior Community Center -- Activity Room	precinct
 Connecticut;Woodstock;DISTRICT 1-Woodstock Town Hall	precinct
 

@@ -96,10 +96,10 @@ ReportingUnit	American Samoa;(no district);Central Office - Swains Island	Centra
 Candidate	Aumua Amata	Aumua Amata
 Candidate	Meleagi Suitonu-Chapman	Meleagi Suitonu-Chapman
 Candidate	Oreta Tufaga-Mapu Crichton	Oreta Tufaga-Mapu Crichton
-Candidate	Gaoteote/Fai'ivae	Gaoteote/Fai'ivae
-Candidate	I'aulualo/Tapaau	I'aulualo/Tapaau
-Candidate	Lemanu/Talauega	Lemanu/Talauega
-Candidate	Nua/Satele	Nua/Satele
+Candidate	Gaoteote Palaie Tofau	Gaoteote/Fai'ivae
+Candidate	I’aulualo Fa’afetai Talia	I'aulualo/Tapaau
+Candidate	Lemanu Palepoi Mauga	Lemanu/Talauega
+Candidate	Nua Sao	Nua/Satele
 Candidate	ALUMAMALU ALE SEƒÄ FILOIALI'I	ALUMAMALU ALE SEƒÄ FILOIALI'I
 Candidate	FETUI F FETUI JR.	FETUI F FETUI JR.
 Candidate	FILIOALII LE'AAI SAFULU FILIOALII JR	FILIOALII LE'AAI SAFULU FILIOALII JR

@@ -687,7 +687,7 @@ ReportingUnit	Connecticut;Manchester;DISTRICT 8-Verplanck School	Manchester;DIST
 ReportingUnit	Connecticut;Manchester;DISTRICT 9-Bennet Academy	Manchester;DISTRICT 9-Bennet Academy
 ReportingUnit	Connecticut;Mansfield;DISTRICT 1-Mansfield Community Center	Mansfield;DISTRICT 1-Mansfield Community Center
 ReportingUnit	Connecticut;Mansfield;DISTRICT 2-Mansfield Fire Dept. #107@ Eagleville	Mansfield;DISTRICT 2-Mansfield Fire Dept. #107@ Eagleville
-ReportingUnit	Connecticut;Mansfield;DISTRICT 3-Mansfield Library/ Buchanan Auditorium	Mansfield;DISTRICT 3-Mansfield Library/ Buchanan Auditorium
+ReportingUnit	Connecticut;Mansfield;DISTRICT 3-Mansfield Library Buchanan Auditorium	Mansfield;DISTRICT 3-Mansfield Library/ Buchanan Auditorium
 ReportingUnit	Connecticut;Mansfield;DISTRICT 4-Annie E. Vinton School GYM	Mansfield;DISTRICT 4-Annie E. Vinton School GYM
 ReportingUnit	Connecticut;Marlborough;DISTRICT 1-Elmer Thienes Mary Hall Elementary School	Marlborough;DISTRICT 1-Elmer Thienes Mary Hall Elementary School
 ReportingUnit	Connecticut;Meriden;DISTRICT 1-Immanuel Lutheran Church	Meriden;DISTRICT 1-Immanuel Lutheran Church
@@ -790,8 +790,8 @@ ReportingUnit	Connecticut;New Haven;DISTRICT 10-Wilbur Cross High School - Feder
 ReportingUnit	Connecticut;New Haven;DISTRICT 11-1-Bella Vista 11-01	New Haven;DISTRICT 11-1-Bella Vista 11-01
 ReportingUnit	Connecticut;New Haven;DISTRICT 11-2-Bishop Woods School	New Haven;DISTRICT 11-2-Bishop Woods School
 ReportingUnit	Connecticut;New Haven;DISTRICT 11-3-Eastview Terrace	New Haven;DISTRICT 11-3-Eastview Terrace
-ReportingUnit	Connecticut;New Haven;DISTRICT 12-1-Ross/woodward	New Haven;DISTRICT 12-1-Ross/woodward
-ReportingUnit	Connecticut;New Haven;DISTRICT 12-2-Ross/woodward	New Haven;DISTRICT 12-2-Ross/woodward
+ReportingUnit	Connecticut;New Haven;DISTRICT 12-1-Ross Woodward	New Haven;DISTRICT 12-1-Ross/woodward
+ReportingUnit	Connecticut;New Haven;DISTRICT 12-2-Ross Woodward	New Haven;DISTRICT 12-2-Ross/woodward
 ReportingUnit	Connecticut;New Haven;DISTRICT 13-Benjamin Jepson Magnet School	New Haven;DISTRICT 13-Benjamin Jepson Magnet School
 ReportingUnit	Connecticut;New Haven;DISTRICT 14-1-Atwater Senior Center 01	New Haven;DISTRICT 14-1-Atwater Senior Center 01
 ReportingUnit	Connecticut;New Haven;DISTRICT 15-1-Community Room	New Haven;DISTRICT 15-1-Community Room
@@ -902,7 +902,7 @@ ReportingUnit	Connecticut;Rocky Hill;DISTRICT 3-Griswold Middle School	Rocky Hil
 ReportingUnit	Connecticut;Roxbury;DISTRICT 1-Roxbury Town Hall	Roxbury;DISTRICT 1-Roxbury Town Hall
 ReportingUnit	Connecticut;Salem;DISTRICT 1-Salem Town Office Building	Salem;DISTRICT 1-Salem Town Office Building
 ReportingUnit	Connecticut;Salisbury;DISTRICT 1-Town Hall	Salisbury;DISTRICT 1-Town Hall
-ReportingUnit	Connecticut;Scotland;DISTRICT 1-Firehouse/community Center	Scotland;DISTRICT 1-Firehouse/community Center
+ReportingUnit	Connecticut;Scotland;DISTRICT 1-Firehouse Community Center	Scotland;DISTRICT 1-Firehouse/community Center
 ReportingUnit	Connecticut;Seymour;DISTRICT 1-District 1 Community Center	Seymour;DISTRICT 1-District 1 Community Center
 ReportingUnit	Connecticut;Seymour;DISTRICT 2-District 2 Seymour Middle School	Seymour;DISTRICT 2-District 2 Seymour Middle School
 ReportingUnit	Connecticut;Seymour;DISTRICT 3-District 3 Chatfield-Lopresti School	Seymour;DISTRICT 3-District 3 Chatfield-Lopresti School
@@ -1117,8 +1117,8 @@ ReportingUnit	Connecticut;Wolcott;DISTRICT 2-Wolcott High School	Wolcott;DISTRIC
 ReportingUnit	Connecticut;Wolcott;DISTRICT 3-Wakelee	Wolcott;DISTRICT 3-Wakelee
 ReportingUnit	Connecticut;Woodbridge;DISTRICT 3-Center School 1	Woodbridge;DISTRICT 3-Center School 1
 ReportingUnit	Connecticut;Woodbridge;DISTRICT 14-Center School 2	Woodbridge;DISTRICT 14-Center School 2
-ReportingUnit	Connecticut;Woodbury;DISTRICT 1-Senior/ Community Center - O&G Room	Woodbury;DISTRICT 1-Senior/ Community Center - O&G Room
-ReportingUnit	Connecticut;Woodbury;DISTRICT 2-Senior/ Community Center -- Activity Room	Woodbury;DISTRICT 2-Senior/ Community Center -- Activity Room
+ReportingUnit	Connecticut;Woodbury;DISTRICT 1-Senior Community Center - O&G Room	Woodbury;DISTRICT 1-Senior/ Community Center - O&G Room
+ReportingUnit	Connecticut;Woodbury;DISTRICT 2-Senior Community Center -- Activity Room	Woodbury;DISTRICT 2-Senior/ Community Center -- Activity Room
 ReportingUnit	Connecticut;Woodstock;DISTRICT 1-Woodstock Town Hall	Woodstock;DISTRICT 1-Woodstock Town Hall
 CountItemType	election-day	Machine
 CountItemType	absentee	Absentee
@@ -1165,7 +1165,6 @@ Candidate	Tami Zawistowski	Tami Zawistowski
 Candidate	Susan Johnson	Susan Johnson
 Candidate	Susan Chapman	Susan Chapman
 Candidate	Sujata Gadkar-Wilcox	Sujata Gadkar-Wilcox
-Candidate	Stewart Chip' BeckettMachine/Polling Place/EDRAbsenteeTotal'Does not match regex ^(.+)Machine/Polling Place/EDRAbsenteeTotal$: Stewart Chip' BeckettMachine/Polling Place/EDRAbsenteeTotal'	Stewart Chip' BeckettMachine/Polling Place/EDRAbsenteeTotal'Does not match regex ^(.+)Machine/Polling Place/EDRAbsenteeTotal$: Stewart Chip' BeckettMachine/Polling Place/EDRAbsenteeTotal'
 Candidate	Steven Stafstrom	Steven Stafstrom
 Candidate	Steven S. Choi	Steven S. Choi
 Candidate	Steve Weir	Steve Weir
@@ -1195,7 +1194,6 @@ Candidate	Robert W. Lawrence	Robert W. Lawrence
 Candidate	Robert T. Keeley, Jr.	Robert T. Keeley, Jr.
 Candidate	Robert Siegrist	Robert Siegrist
 Candidate	Robert E. Halstead	Robert E. Halstead
-Candidate	Robert Bobby' SanchezMachine/Polling Place/EDRAbsenteeTotal'Does not match regex ^(.+)Machine/Polling Place/EDRAbsenteeTotal$: Robert Bobby' SanchezMachine/Polling Place/EDRAbsenteeTotal'	Robert Bobby' SanchezMachine/Polling Place/EDRAbsenteeTotal'Does not match regex ^(.+)Machine/Polling Place/EDRAbsenteeTotal$: Robert Bobby' SanchezMachine/Polling Place/EDRAbsenteeTotal'
 Candidate	Robert Bell	Robert Bell
 Candidate	Rob Sampson	Rob Sampson
 Candidate	Rick Lopes	Rick Lopes
@@ -1407,7 +1405,6 @@ Candidate	Erik A. Smith	Erik A. Smith
 Candidate	Eric Michael Mastroianni, Sr.	Eric Michael Mastroianni, Sr.
 Candidate	Eric C. Berthel	Eric C. Berthel
 Candidate	Emmett D. Riley	Emmett D. Riley
-Candidate	Emmanuel Manny' SanchezMachine/Polling Place/EDRAbsenteeTotal'Does not match regex ^(.+)Machine/Polling Place/EDRAbsenteeTotal$: Emmanuel Manny' SanchezMachine/Polling Place/EDRAbsenteeTotal'	Emmanuel Manny' SanchezMachine/Polling Place/EDRAbsenteeTotal'Does not match regex ^(.+)Machine/Polling Place/EDRAbsenteeTotal$: Emmanuel Manny' SanchezMachine/Polling Place/EDRAbsenteeTotal'
 Candidate	Emile Buzaid	Emile Buzaid
 Candidate	Ellie Kousidis	Ellie Kousidis
 Candidate	Ellen G. Wink	Ellen G. Wink
@@ -1453,7 +1450,6 @@ Candidate	Cindy Harrison	Cindy Harrison
 Candidate	Christopher Ziogas	Christopher Ziogas
 Candidate	Christopher Rosario	Christopher Rosario
 Candidate	Christopher E. Bowen	Christopher E. Bowen
-Candidate	Christopher Chris' DeMatteoMachine/Polling Place/EDRAbsenteeTotal'Does not match regex ^(.+)Machine/Polling Place/EDRAbsenteeTotal$: Christopher Chris' DeMatteoMachine/Polling Place/EDRAbsenteeTotal'	Christopher Chris' DeMatteoMachine/Polling Place/EDRAbsenteeTotal'Does not match regex ^(.+)Machine/Polling Place/EDRAbsenteeTotal$: Christopher Chris' DeMatteoMachine/Polling Place/EDRAbsenteeTotal'
 Candidate	Christopher Beyus	Christopher Beyus
 Candidate	Christine Rosati Randall	Christine Rosati Randall
 Candidate	Christine Palm	Christine Palm
