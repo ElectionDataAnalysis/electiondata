@@ -2130,8 +2130,7 @@ class Analyzer:
         major_subdivision: Optional[str] = None,
     ) -> str:
         """exports NIST v2 xml string"""
-        xml_string = ET.tostring(
-            nist.nist_v2_xml_export_tree(
+        xml_tree, err = nist.nist_v2_xml_export_tree(
                 self.session,
                 election,
                 jurisdiction,
@@ -2140,7 +2139,8 @@ class Analyzer:
                 issuer_abbreviation=nist.default_issuer_abbreviation,
                 status=nist.default_status,
                 vendor_application_id=nist.default_vendor_application_id,
-            ).getroot(),
+            )
+        xml_string = ET.tostring(xml_tree.getroot(),
             encoding=m.default_encoding,
             method="xml",
         )

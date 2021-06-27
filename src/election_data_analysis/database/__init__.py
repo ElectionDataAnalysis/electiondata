@@ -180,7 +180,7 @@ def restore_to_db(dbname: str, dump_file: str, url: sqlalchemy.engine.url.URL) -
         f" -h {url.host} "
         f" -U {url.username} "
         f" -p {url.port}"
-        f" -d {dbname} -F t {dump_file}"
+        f" -d {dbname} -F t \"{dump_file}\""
     )
     try:
         os.system(cmd)
