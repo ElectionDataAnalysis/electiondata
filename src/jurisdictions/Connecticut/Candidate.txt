@@ -33,7 +33,6 @@ Tami Zawistowski
 Susan Johnson
 Susan Chapman
 Sujata Gadkar-Wilcox
-Stewart Chip' BeckettMachine/Polling Place/EDRAbsenteeTotal'Does not match regex ^(.+)Machine/Polling Place/EDRAbsenteeTotal$: Stewart Chip' BeckettMachine/Polling Place/EDRAbsenteeTotal'
 Steven Stafstrom
 Steven S. Choi
 Steve Weir
@@ -63,7 +62,6 @@ Robert W. Lawrence
 Robert T. Keeley, Jr.
 Robert Siegrist
 Robert E. Halstead
-Robert Bobby' SanchezMachine/Polling Place/EDRAbsenteeTotal'Does not match regex ^(.+)Machine/Polling Place/EDRAbsenteeTotal$: Robert Bobby' SanchezMachine/Polling Place/EDRAbsenteeTotal'
 Robert Bell
 Rob Sampson
 Rick Lopes
@@ -278,7 +276,6 @@ Erik A. Smith
 Eric Michael Mastroianni, Sr.
 Eric C. Berthel
 Emmett D. Riley
-Emmanuel Manny' SanchezMachine/Polling Place/EDRAbsenteeTotal'Does not match regex ^(.+)Machine/Polling Place/EDRAbsenteeTotal$: Emmanuel Manny' SanchezMachine/Polling Place/EDRAbsenteeTotal'
 Emile Buzaid
 Ellie Kousidis
 Ellen G. Wink
@@ -325,7 +322,6 @@ Cindy Harrison
 Christopher Ziogas
 Christopher Rosario
 Christopher E. Bowen
-Christopher Chris' DeMatteoMachine/Polling Place/EDRAbsenteeTotal'Does not match regex ^(.+)Machine/Polling Place/EDRAbsenteeTotal$: Christopher Chris' DeMatteoMachine/Polling Place/EDRAbsenteeTotal'
 Christopher Beyus
 Christine Rosati Randall
 Christine Palm

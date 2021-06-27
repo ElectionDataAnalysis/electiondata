@@ -213,7 +213,7 @@ Candidate	Ernest J. Gigaroa	Ernest J. Gigaroa
 Candidate	Everett Chase	Everett Chase
 Candidate	Feenstera	Feenstera
 Candidate	Fred Hubbell	Fred Hubbell
-Candidate	Fred Hubbell/Rita R. Hart	Fred Hubbell/Rita R. Hart
+Candidate	Fred Hubbell	Fred Hubbell/Rita R. Hart
 Candidate	Fred Perryman	Fred Perryman
 Candidate	Fred Year	Fred Year
 Candidate	Gabriel Thomson	Gabriel Thomson
@@ -222,8 +222,8 @@ Candidate	Garrett Gobble	Garrett Gobble
 Candidate	Gary Carlson	Gary Carlson
 Candidate	Gary M. Mohr	Gary M. Mohr
 Candidate	Gary M. Mohr	Gary Mohr
-Candidate	Gary Siegwarth/Natalia Blaskovich	Gary Siegwarth/Natalia Blaskov
-Candidate	Gary Siegwarth/Natalia Blaskovich	Gary Siegwarth/Natalia Blaskovich
+Candidate	Gary Siegwarth	Gary Siegwarth/Natalia Blaskov
+Candidate	Gary Siegwarth	Gary Siegwarth/Natalia Blaskovich
 Candidate	Gary Waechter	Gary Waechter
 Candidate	Gary Worthan	Gary Worthan
 Candidate	George M. Olmsted	George M. Olmsted
@@ -259,7 +259,7 @@ Candidate	Jacqueline Riekena	Jacqueline Riekena
 Candidate	Jake Chapman	Jake Chapman
 Candidate	Jake Highfill	Jake Highfill
 Candidate	Jake Porter	Jake Porter
-Candidate	Jake Porter/Lynne Gentry	Jake Porter/Lynne Gentry
+Candidate	Jake Porter	Jake Porter/Lynne Gentry
 Candidate	Jake Ronald Thompson	Jake Ronald Thompson
 Candidate	Jake Ronald Thompson	Jake Thompson
 Candidate	James Eliason	James Eliason
@@ -364,7 +364,7 @@ Candidate	Kevin Kinney	Kevin Kinney
 Candidate	Kevin Koester	Kevin Koester
 Candidate	Kevin Wynn	Kevin Wynn
 Candidate	Kim Reynolds	Kim Reynolds
-Candidate	Kim Reynolds/Adam Gregg	Kim Reynolds/Adam Gregg
+Candidate	Kim Reynolds	Kim Reynolds/Adam Gregg
 Candidate	Kimberly Graham	Kimberly Graham
 Candidate	Kimberly K. Davis	Kimberly K. Davis
 Candidate	Kirk Scheelhaase	Kirk Scheelhaase

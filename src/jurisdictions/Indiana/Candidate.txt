@@ -1,13 +1,13 @@
 BallotName
-Christopher Fischer (W/I)
-James L. Johnson Jr. (W/I)
+Christopher Fischer (Write-In)
+James L. Johnson Jr./ (Write-In)
 Joe Donnelly
 Lucy M. Brenton
-Mike Braun
-Nathan Altman (W/I)
+Mike Braun\(W
+Nathan Altman (Write-In)
 Connie Lawson
-George William Wolfe (W/I)
-Jeremy Heath (W/I)
+George William Wolfe (Write-In)
+Jeremy Heath (Write-In)
 Jim Harper
 Mark W. Rutherford
 John Schick
@@ -15,12 +15,12 @@ Joselyn Whitticker
 Tera Klutz
 John C. Aguilera
 Kelly Mitchell
-Jonathan S. Kleinman (W/I)
+Jonathan S. Kleinman (Write-In)
 Mark Leyva
 Peter J. Visclosky
 Jackie Walorski
 Mel Hall
-Richard Wolf (W/I)
+Richard Wolf (Write-In)
 Courtney Tritch
 Jim Banks
 Jim Baird
@@ -28,9 +28,9 @@ Tobi Beck
 Dee Thornton
 Susan W. Brooks
 Greg Pence
-Heather Leigh Meloy (W/I)
+Heather Leigh Meloy (Write-In)
 Jeannine Lee Lake
-John Miller (W/I)
+John Miller (Write-In)
 Tom Ferkinhoff
 AndrÃÂ© D. Carson
 Wayne 'Gunny' Harmon
@@ -836,7 +836,7 @@ Richard L Foutch
 Sam Hobbs
 Justin W. Cole
 Alan Malone
-David Templin (W/I)
+David Templin (Write-In)
 Richard L. Myers Jr.
 Frank A Coleman Jr.
 Kent Johnson
@@ -871,7 +871,7 @@ Dave Wedding
 Mike Phelps
 Benjamin A. Pence
 John Plasse
-Steve W Ferree (W/I)
+Steve W Ferree (Write-In)
 Ryan T Baker
 Russell K. 'Rusty' Hart
 Michael K Wilder
@@ -2276,7 +2276,7 @@ Robbie Combs
 Sandra E Putt
 W. Joy Hetrick
 Randy Allen
-Steve Lestinsky, Jr (W/I)
+Steve Lestinsky, Jr (Write-In)
 Robert (Bob) Bryan
 Leon Hicks
 Michael J Lilly
@@ -7856,35 +7856,35 @@ Bob Kern
 Edwin Lewis Jones
 Amy L. Tolbert
 Brenda Furry
-'Rocky' Roque De La Fuente (W/I)
-Cherunda Fox (W/I)
-Darrell L. Castle (W/I)
-Denny C. Jackson (W/I)
-Emidio Soltysik (W/I)
+'Rocky' Roque De La Fuente (Write-In)
+Cherunda Fox (Write-In)
+Darrell L. Castle (Write-In)
+Denny C. Jackson (Write-In)
+Emidio Soltysik (Write-In)
 Gary Johnson
 Hillary Clinton
-Jill Stein (W/I)
-Joseph Maldonado (W/I)
-Laurence Kotlikoff (W/I)
-Matthew (None Of The Above) Roberts (W/I)
-Melissa L. Kelly (W/I)
-Monica Moorehead (W/I)
-Ray C. Brown (W/I)
-Ric Mullis (W/I)
-Richard Duncan (W/I)
-Tom Hoefling (W/I)
+Jill Stein (Write-In)
+Joseph Maldonado (Write-In)
+Laurence Kotlikoff (Write-In)
+Matthew (None Of The Above) Roberts (Write-In)
+Melissa L. Kelly (Write-In)
+Monica Moorehead (Write-In)
+Ray C. Brown (Write-In)
+Ric Mullis (Write-In)
+Richard Duncan (Write-In)
+Tom Hoefling (Write-In)
 Evan Bayh
-James Johnson, Jr. (W/I)
+James Johnson, Jr. (Write-In)
 Lucy Brenton
 Todd Young
-Adam Adkins (W/I)
-Christopher Stried (W/I)
+Adam Adkins (Write-In)
+Christopher Stried (Write-In)
 John R. Gregg
 Rex Bell
 Curtis T. Hill, Jr.
 Glenda Ritz
 Jennifer Mccormick
-John Meyer (W/I)
+John Meyer (Write-In)
 Lynn C. Coleman
 Ron Cenkush
 Pepper Snyder
@@ -7911,7 +7911,7 @@ Randall Head
 Donald Rainwater Ii
 Luke Kenley
 Kevin Rogers
-Jerry Coverstone (W/I)
+Jerry Coverstone (Write-In)
 Ken Kern
 Michael R Crider
 Pamela L. Hickman
@@ -7974,7 +7974,7 @@ Michael L. (Mike) Reddick
 James V Barnes
 Wes Culver
 Richard 'Rick' Brown Jr
-Jeff Embry (W/I)
+Jeff Embry (Write-In)
 Thomas (Tom) E. Saunders
 Zachary B Lee
 Mimi Pruett
@@ -12880,7 +12880,7 @@ Kathy S. Hohenstreiter
 Kimberly K (Dunlap) Grow
 Jane E Lyons
 January L Roush
-Kenneth L Shafer (W/I)
+Kenneth L Shafer (Write-In)
 Therese K Chambers
 Lonnie E Stroud
 Lorie Hallett
@@ -13356,7 +13356,7 @@ Debbie Bledsoe
 Kent L Fisk
 Martha Vail
 Randy R Jones
-Zachary T Lafavers (W/I)
+Zachary T Lafavers (Write-In)
 Houston L Mathes
 James F Yeager
 Jennie J Capelle
@@ -14830,36 +14830,36 @@ Jane Burgess
 Joseph 'Joe' Stein
 AndrÃ© D. Carson
 Dorene RodrÃ­guez Hoops
-Valerie Mccray (W/I)
+Valerie Mccray (Write-In)
 Tonya L. Millis
 Timothy Jaycox
-Shawn Howard (W/I)
+Shawn Howard (Write-In)
 Russell (Russ) Brooksbank
-Randall F (W/I)
+Randall F (Write-In)
 Paul J. Tinkle
 Morgan Rigg
-Mitchell Williams (W/I)
+Mitchell Williams (Write-In)
 Michael Strauss
 Martha 'Marty' Lemert
 Mark A Renholzberger
 Kent Yeager
 Kenneth Tucker
 Katrina (Kat) Hardwick
-Kasey Wells (W/I)
+Kasey Wells (Write-In)
 Jonathan Weinzapfel
-Joe Schriner (W/I)
+Joe Schriner (Write-In)
 Jo Jorgensen
 Jason Eicholtz
-James L Johnson Jr. (W/I)
+James L Johnson Jr. (Write-In)
 James D. Rodenberger
-Howie Hawkins (W/I)
+Howie Hawkins (Write-In)
 Gregory L. Peete
 Eric C. Shotwell
 Emma Steele
 Deborah Rouse
 Crystal A. Henry
-Brian Carroll (W/I)
-Abram Loeb (W/I)
+Brian Carroll (Write-In)
+Abram Loeb (Write-In)
 André Carson
 Al Gore
 Barack Obama
