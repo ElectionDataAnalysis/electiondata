@@ -2,7 +2,7 @@ cdf_element	cdf_internal_name	raw_identifier_value
 Candidate	'Beth' M E Carr	'Beth' M E Carr
 Candidate	'Curt' Curtis Bedwell	'Curt' Curtis Bedwell
 Candidate	'Mac' Macolynn Gray	'Mac' Macolynn Gray
-Candidate	'Rocky' Roque De La Fuente (W/I)	'Rocky' Roque De La Fuente (W/I)
+Candidate	'Rocky' Roque De La Fuente (Write-In)	'Rocky' Roque De La Fuente (W/I)
 Candidate	'Rusty' Russell Hoaks	'Rusty' Russell Hoaks
 Candidate	(Bobby K) Kruszynski Jr	(Bobby K) Kruszynski Jr
 Candidate	(Cindy) Cynthia Reinert	(Cindy) Cynthia Reinert
@@ -73,9 +73,9 @@ Candidate	Abigail (Abby) M Dyer	Abigail (Abby) M Dyer
 Candidate	Abigail Gentry	Abigail Gentry
 Candidate	Abigail R King	Abigail R King
 Candidate	Abraham P (Abe) Schwab	Abraham P (Abe) Schwab
-Candidate	Abram Loeb (W/I)	Abram Loeb (W/I)
+Candidate	Abram Loeb (Write-In)	Abram Loeb (W/I)
 Candidate	Adam Aasen	Adam Aasen
-Candidate	Adam Adkins (W/I)	Adam Adkins (W/I)
+Candidate	Adam Adkins (Write-In)	Adam Adkins (W/I)
 Candidate	Adam Brown	Adam Brown
 Candidate	Adam Bujalski	Adam Bujalski
 Candidate	Adam Butcher	Adam Butcher
@@ -1457,7 +1457,7 @@ Candidate	Brian C Schwering	Brian C Schwering
 Candidate	Brian C Tandy	Brian C Tandy
 Candidate	Brian C. Bosma	Brian C. Bosma
 Candidate	Brian C. Tandy	Brian C. Tandy
-Candidate	Brian Carroll (W/I)	Brian Carroll (W/I)
+Candidate	Brian Carroll (Write-In)	Brian Carroll (W/I)
 Candidate	Brian Cavanaugh	Brian Cavanaugh
 Candidate	Brian Chelius	Brian Chelius
 Candidate	Brian Craig	Brian Craig
@@ -2116,7 +2116,7 @@ Candidate	Cherish Foreman Davis	Cherish Foreman Davis
 Candidate	Cherish Howell	Cherish Howell
 Candidate	Cherlisa M. Richardson	Cherlisa M. Richardson
 Candidate	Cherrish S. Pryor	Cherrish S. Pryor
-Candidate	Cherunda Fox (W/I)	Cherunda Fox (W/I)
+Candidate	Cherunda Fox (Write-In)	Cherunda Fox (W/I)
 Candidate	Cheryl A Farlow	Cheryl A Farlow
 Candidate	Cheryl A Samm	Cheryl A Samm
 Candidate	Cheryl A W Musgrave	Cheryl A W Musgrave
@@ -2302,7 +2302,7 @@ Candidate	Christopher D Fullerton	Christopher D Fullerton
 Candidate	Christopher D Sailors	Christopher D Sailors
 Candidate	Christopher D. Noel	Christopher D. Noel
 Candidate	Christopher Douglas Kehler	Christopher Douglas Kehler
-Candidate	Christopher Fischer (W/I)	Christopher Fischer (W/I)
+Candidate	Christopher Fischer (Write-In)	Christopher Fischer (W/I)
 Candidate	Christopher G Wolf	Christopher G Wolf
 Candidate	Christopher Glenn Davis	Christopher Glenn Davis
 Candidate	Christopher Greisl	Christopher Greisl
@@ -2345,7 +2345,7 @@ Candidate	Christopher S Vandewater	Christopher S Vandewater
 Candidate	Christopher Shelton	Christopher Shelton
 Candidate	Christopher Smith	Christopher Smith
 Candidate	Christopher Spiek	Christopher Spiek
-Candidate	Christopher Stried (W/I)	Christopher Stried (W/I)
+Candidate	Christopher Stried (Write-In)	Christopher Stried (W/I)
 Candidate	Christopher T Baker	Christopher T Baker
 Candidate	Christopher W Gayler	Christopher W Gayler
 Candidate	Christopher W Lawrence	Christopher W Lawrence
@@ -3001,7 +3001,7 @@ Candidate	Darrell F Maines	Darrell F Maines
 Candidate	Darrell F Mcknight I	Darrell F Mcknight I
 Candidate	Darrell J Daniel	Darrell J Daniel
 Candidate	Darrell L Wiatt	Darrell L Wiatt
-Candidate	Darrell L. Castle (W/I)	Darrell L. Castle (W/I)
+Candidate	Darrell L. Castle (Write-In)	Darrell L. Castle (W/I)
 Candidate	Darrell Lee Mcgaha	Darrell Lee Mcgaha
 Candidate	Darrell Maurice Auxier	Darrell Maurice Auxier
 Candidate	Darrell Persinger	Darrell Persinger
@@ -3332,7 +3332,7 @@ Candidate	David Stillinger	David Stillinger
 Candidate	David T Johnson	David T Johnson
 Candidate	David Taylor	David Taylor
 Candidate	David Tebbing	David Tebbing
-Candidate	David Templin (W/I)	David Templin (W/I)
+Candidate	David Templin (Write-In)	David Templin (W/I)
 Candidate	David Thompson	David Thompson
 Candidate	David V Kesvormas	David V Kesvormas
 Candidate	David Vanderkleed	David Vanderkleed
@@ -3654,7 +3654,7 @@ Candidate	Dennis Wireman	Dennis Wireman
 Candidate	Denny Bridges	Denny Bridges
 Candidate	Denny Burden	Denny Burden
 Candidate	Denny Burns	Denny Burns
-Candidate	Denny C. Jackson (W/I)	Denny C. Jackson (W/I)
+Candidate	Denny C. Jackson (Write-In)	Denny C. Jackson (W/I)
 Candidate	Denny Johnson	Denny Johnson
 Candidate	Denny Smith	Denny Smith
 Candidate	Denny Wilson	Denny Wilson
@@ -4319,7 +4319,7 @@ Candidate	Elwyn K Price	Elwyn K Price
 Candidate	Elysia M Fisher	Elysia M Fisher
 Candidate	Elzbieta (Ela) Bilderback	Elzbieta (Ela) Bilderback
 Candidate	Emery W Mcclendon	Emery W Mcclendon
-Candidate	Emidio Soltysik (W/I)	Emidio Soltysik (W/I)
+Candidate	Emidio Soltysik (Write-In)	Emidio Soltysik (W/I)
 Candidate	Emily A Beal-Nelis	Emily A Beal-Nelis
 Candidate	Emily A. Meek	Emily A. Meek
 Candidate	Emily Armonia Shrock	Emily Armonia Shrock
@@ -4855,7 +4855,7 @@ Candidate	George W Spencer	George W Spencer
 Candidate	George W. Bush	GEORGE W. BUSH
 Candidate	George W. Gilbert	George W. Gilbert
 Candidate	George Wichlinski	George Wichlinski
-Candidate	George William Wolfe (W/I)	George William Wolfe (W/I)
+Candidate	George William Wolfe (Write-In)	George William Wolfe (W/I)
 Candidate	Georgetta M. Manning-Cox	Georgetta M. Manning-Cox
 Candidate	Georgia C Parker	Georgia C Parker
 Candidate	Georgia C. Mccarty	Georgia C. Mccarty
@@ -5229,7 +5229,7 @@ Candidate	Heather L Dubree	Heather L Dubree
 Candidate	Heather L Gilbert	Heather L Gilbert
 Candidate	Heather L Wallace	Heather L Wallace
 Candidate	Heather Laffoon	Heather Laffoon
-Candidate	Heather Leigh Meloy (W/I)	Heather Leigh Meloy (W/I)
+Candidate	Heather Leigh Meloy (Write-In)	Heather Leigh Meloy (W/I)
 Candidate	Heather M Frank	Heather M Frank
 Candidate	Heather M Krebs	Heather M Krebs
 Candidate	Heather N Foy	Heather N Foy
@@ -5325,7 +5325,7 @@ Candidate	Howard Smith	Howard Smith
 Candidate	Howard Stevenson	Howard Stevenson
 Candidate	Howard W Marshall	Howard W Marshall
 Candidate	Howard Wente	Howard Wente
-Candidate	Howie Hawkins (W/I)	Howie Hawkins (W/I)
+Candidate	Howie Hawkins (Write-In)	Howie Hawkins (W/I)
 Candidate	Hubert Branstetter Jr.	Hubert Branstetter Jr.
 Candidate	Hugh Kirkham	Hugh Kirkham
 Candidate	Hugh R. (H.r.) Hunt	Hugh R. (H.r.) Hunt
@@ -5677,7 +5677,7 @@ Candidate	James J (Jimmy) Mckanna	James J (Jimmy) Mckanna
 Candidate	James J White	James J White
 Candidate	James J Wills	James J Wills
 Candidate	James Johnson	James Johnson
-Candidate	James Johnson, Jr. (W/I)	James Johnson, Jr. (W/I)
+Candidate	James Johnson, Jr. (Write-In)	James Johnson, Jr. (W/I)
 Candidate	James K Meyer	James K Meyer
 Candidate	James K. (Jim) Muehlhause	James K. (Jim) Muehlhause
 Candidate	James K. Hasenour	James K. Hasenour
@@ -5689,7 +5689,7 @@ Candidate	James L Blevins	James L Blevins
 Candidate	James L Eickhoff	James L Eickhoff
 Candidate	James L Garrett	James L Garrett
 Candidate	James L Haffner	James L Haffner
-Candidate	James L Johnson Jr. (W/I)	James L Johnson Jr. (W/I)
+Candidate	James L Johnson Jr. (Write-In)	James L Johnson Jr. (W/I)
 Candidate	James L Miller	James L Miller
 Candidate	James L Sharpe	James L Sharpe
 Candidate	James L Taylor	James L Taylor
@@ -5700,7 +5700,7 @@ Candidate	James L. Eads	James L. Eads
 Candidate	James L. Fishburn	James L. Fishburn
 Candidate	James L. Halcomb Jr.	James L. Halcomb Jr.
 Candidate	James L. Hershberger	James L. Hershberger
-Candidate	James L. Johnson Jr. (W/I)	James L. Johnson Jr. (W/I)
+Candidate	James L. Johnson Jr. (Write-In)	James L. Johnson Jr. (W/I)
 Candidate	James L. Mireley	James L. Mireley
 Candidate	James Land	James Land
 Candidate	James Lane	James Lane
@@ -6134,7 +6134,7 @@ Candidate	Jeff Edney	Jeff Edney
 Candidate	Jeff Ellington	Jeff Ellington
 Candidate	Jeff Elliott	Jeff Elliott
 Candidate	Jeff Embry	Jeff Embry
-Candidate	Jeff Embry (W/I)	Jeff Embry (W/I)
+Candidate	Jeff Embry (Write-In)	Jeff Embry (W/I)
 Candidate	Jeff Espich	Jeff Espich
 Candidate	Jeff Fleece	Jeff Fleece
 Candidate	Jeff Galliher	Jeff Galliher
@@ -6408,7 +6408,7 @@ Candidate	Jeremy Eltz	Jeremy Eltz
 Candidate	Jeremy Gilbert	Jeremy Gilbert
 Candidate	Jeremy Hart	Jeremy Hart
 Candidate	Jeremy Hawk	Jeremy Hawk
-Candidate	Jeremy Heath (W/I)	Jeremy Heath (W/I)
+Candidate	Jeremy Heath (Write-In)	Jeremy Heath (W/I)
 Candidate	Jeremy J Everett	Jeremy J Everett
 Candidate	Jeremy J Yahwak	Jeremy J Yahwak
 Candidate	Jeremy Kimball	Jeremy Kimball
@@ -6464,7 +6464,7 @@ Candidate	Jerry C Payne	Jerry C Payne
 Candidate	Jerry Calloway	Jerry Calloway
 Candidate	Jerry Carlson	Jerry Carlson
 Candidate	Jerry Chadwick	Jerry Chadwick
-Candidate	Jerry Coverstone (W/I)	Jerry Coverstone (W/I)
+Candidate	Jerry Coverstone (Write-In)	Jerry Coverstone (W/I)
 Candidate	Jerry D Alexander	Jerry D Alexander
 Candidate	Jerry D Cravens	Jerry D Cravens
 Candidate	Jerry D Monjar	Jerry D Monjar
@@ -6621,7 +6621,7 @@ Candidate	Jill P. Mandeville	Jill P. Mandeville
 Candidate	Jill R Taylor	Jill R Taylor
 Candidate	Jill R. Fulton Coffing	Jill R. Fulton Coffing
 Candidate	Jill Skonieczny	Jill Skonieczny
-Candidate	Jill Stein (W/I)	Jill Stein (W/I)
+Candidate	Jill Stein (Write-In)	Jill Stein (W/I)
 Candidate	Jill Szyarto	Jill Szyarto
 Candidate	Jill T Crehan	Jill T Crehan
 Candidate	Jill W. Pruss	Jill W. Pruss
@@ -6842,7 +6842,7 @@ Candidate	Joe Ray Mccammon	Joe Ray Mccammon
 Candidate	Joe Renck Jr.	Joe Renck Jr.
 Candidate	Joe Rutledge	Joe Rutledge
 Candidate	Joe Sayler	Joe Sayler
-Candidate	Joe Schriner (W/I)	Joe Schriner (W/I)
+Candidate	Joe Schriner (Write-In)	Joe Schriner (W/I)
 Candidate	Joe Shudick	Joe Shudick
 Candidate	Joe Sizemore	Joe Sizemore
 Candidate	Joe Smith	Joe Smith
@@ -7078,9 +7078,9 @@ Candidate	John Mario Acosta Jr.	John Mario Acosta Jr.
 Candidate	John Matwyshyn	John Matwyshyn
 Candidate	John Mcpherson	John Mcpherson
 Candidate	John Merson	John Merson
-Candidate	John Meyer (W/I)	John Meyer (W/I)
+Candidate	John Meyer (Write-In)	John Meyer (W/I)
 Candidate	John Michael F. Major	John Michael F. Major
-Candidate	John Miller (W/I)	John Miller (W/I)
+Candidate	John Miller (Write-In)	John Miller (W/I)
 Candidate	John Montrastelle	John Montrastelle
 Candidate	John Morris	John Morris
 Candidate	John Moton	John Moton
@@ -7261,7 +7261,7 @@ Candidate	Jonathan N. Cleary	Jonathan N. Cleary
 Candidate	Jonathan P Welzel	Jonathan P Welzel
 Candidate	Jonathan R Spaulding	Jonathan R Spaulding
 Candidate	Jonathan R Stalker	Jonathan R Stalker
-Candidate	Jonathan S. Kleinman (W/I)	Jonathan S. Kleinman (W/I)
+Candidate	Jonathan S. Kleinman (Write-In)	Jonathan S. Kleinman (W/I)
 Candidate	Jonathan Underwood	Jonathan Underwood
 Candidate	Jonathan Weinzapfel	Jonathan Weinzapfel
 Candidate	Jonathon A. Lamb	Jonathon A. Lamb
@@ -7340,7 +7340,7 @@ Candidate	Joseph M Ewing	Joseph M Ewing
 Candidate	Joseph M Hubbard	Joseph M Hubbard
 Candidate	Joseph M Kruzan Jr.	Joseph M Kruzan Jr.
 Candidate	Joseph M Roach	Joseph M Roach
-Candidate	Joseph Maldonado (W/I)	Joseph Maldonado (W/I)
+Candidate	Joseph Maldonado (Write-In)	Joseph Maldonado (W/I)
 Candidate	Joseph Mark Dierdorf	Joseph Mark Dierdorf
 Candidate	Joseph Mylet	Joseph Mylet
 Candidate	Joseph P Munden	Joseph P Munden
@@ -7721,7 +7721,7 @@ Candidate	Karyn J Galloway	Karyn J Galloway
 Candidate	Kasey (Bula) Clark	Kasey (Bula) Clark
 Candidate	Kasey Kendrick	Kasey Kendrick
 Candidate	Kasey Noel	Kasey Noel
-Candidate	Kasey Wells (W/I)	Kasey Wells (W/I)
+Candidate	Kasey Wells (Write-In)	Kasey Wells (W/I)
 Candidate	Kasondra J Morris	Kasondra J Morris
 Candidate	Kate Healey Snedeker	Kate Healey Snedeker
 Candidate	Kate Sweeney Bell	Kate Sweeney Bell
@@ -8028,7 +8028,7 @@ Candidate	Kenneth L Brunner	Kenneth L Brunner
 Candidate	Kenneth L Hulsman	Kenneth L Hulsman
 Candidate	Kenneth L Polston	Kenneth L Polston
 Candidate	Kenneth L Schnaus	Kenneth L Schnaus
-Candidate	Kenneth L Shafer (W/I)	Kenneth L Shafer (W/I)
+Candidate	Kenneth L Shafer (Write-In)	Kenneth L Shafer (W/I)
 Candidate	Kenneth L Simmons	Kenneth L Simmons
 Candidate	Kenneth L Smith	Kenneth L Smith
 Candidate	Kenneth L. Brett	Kenneth L. Brett
@@ -8626,7 +8626,7 @@ Candidate	Laurell Hodges	Laurell Hodges
 Candidate	Lauren K Jones	Lauren K Jones
 Candidate	Lauren L Layer	Lauren L Layer
 Candidate	Lauren Vogel	Lauren Vogel
-Candidate	Laurence Kotlikoff (W/I)	Laurence Kotlikoff (W/I)
+Candidate	Laurence Kotlikoff (Write-In)	Laurence Kotlikoff (W/I)
 Candidate	Laurence M Fouche	Laurence M Fouche
 Candidate	Lauri A Stockus	Lauri A Stockus
 Candidate	Lauri Manns Venckus	Lauri Manns Venckus
@@ -9734,7 +9734,7 @@ Candidate	Matt Young	Matt Young
 Candidate	Matthew 'Matt' Schaller	Matthew 'Matt' Schaller
 Candidate	Matthew (Matt) Hook	Matthew (Matt) Hook
 Candidate	Matthew (Matt) Impink	Matthew (Matt) Impink
-Candidate	Matthew (None Of The Above) Roberts (W/I)	Matthew (None Of The Above) Roberts (W/I)
+Candidate	Matthew (None Of The Above) Roberts (Write-In)	Matthew (None Of The Above) Roberts (W/I)
 Candidate	Matthew A Ackerman	Matthew A Ackerman
 Candidate	Matthew A. Myers	Matthew A. Myers
 Candidate	Matthew A. Sheehan	Matthew A. Sheehan
@@ -9918,7 +9918,7 @@ Candidate	Melissa K Eikens	Melissa K Eikens
 Candidate	Melissa K Parker	Melissa K Parker
 Candidate	Melissa Kay Mccollister	Melissa Kay Mccollister
 Candidate	Melissa L Christiansen	Melissa L Christiansen
-Candidate	Melissa L. Kelly (W/I)	Melissa L. Kelly (W/I)
+Candidate	Melissa L. Kelly (Write-In)	Melissa L. Kelly (W/I)
 Candidate	Melissa May	Melissa May
 Candidate	Melissa Middleton	Melissa Middleton
 Candidate	Melissa Moore	Melissa Moore
@@ -10452,7 +10452,7 @@ Candidate	Mitchel W Sprunger	Mitchel W Sprunger
 Candidate	Mitchell Conley	Mitchell Conley
 Candidate	Mitchell L. Russell	Mitchell L. Russell
 Candidate	Mitchell Moore	Mitchell Moore
-Candidate	Mitchell Williams (W/I)	Mitchell Williams (W/I)
+Candidate	Mitchell Williams (Write-In)	Mitchell Williams (W/I)
 Candidate	Mitt Romney	MITT ROMNEY
 Candidate	Mk Watkins	Mk Watkins
 Candidate	Molly Bradford	Molly Bradford
@@ -10465,7 +10465,7 @@ Candidate	Monica Casanova	Monica Casanova
 Candidate	Monica Clennon	Monica Clennon
 Candidate	Monica F Miller	Monica F Miller
 Candidate	Monica L. Hensley	Monica L. Hensley
-Candidate	Monica Moorehead (W/I)	Monica Moorehead (W/I)
+Candidate	Monica Moorehead (Write-In)	Monica Moorehead (W/I)
 Candidate	Monica Prosser	Monica Prosser
 Candidate	Monica Schaefer	Monica Schaefer
 Candidate	Monie Cronk	Monie Cronk
@@ -10575,7 +10575,7 @@ Candidate	Nathan A Alderson	Nathan A Alderson
 Candidate	Nathan A Freeman	Nathan A Freeman
 Candidate	Nathan A. Verkamp	Nathan A. Verkamp
 Candidate	Nathan Allen	Nathan Allen
-Candidate	Nathan Altman (W/I)	Nathan Altman (W/I)
+Candidate	Nathan Altman (Write-In)	Nathan Altman (W/I)
 Candidate	Nathan Crawford	Nathan Crawford
 Candidate	Nathan D Hoffman	Nathan D Hoffman
 Candidate	Nathan Diehl	Nathan Diehl
@@ -11304,7 +11304,7 @@ Candidate	Randall (Randy) Tweedy	Randall (Randy) Tweedy
 Candidate	Randall B Chapman	Randall B Chapman
 Candidate	Randall Decker	Randall Decker
 Candidate	Randall E Ashcraft	Randall E Ashcraft
-Candidate	Randall F (W/I)	Randall F (W/I)
+Candidate	Randall F (Write-In)	Randall F (W/I)
 Candidate	Randall Head	Randall Head
 Candidate	Randall J (Randy) Young	Randall J (Randy) Young
 Candidate	Randall J Guernsey	Randall J Guernsey
@@ -11394,7 +11394,7 @@ Candidate	Ray Biederman	Ray Biederman
 Candidate	Ray Black Jr.	Ray Black Jr.
 Candidate	Ray Brooks	Ray Brooks
 Candidate	Ray C Hughes	Ray C Hughes
-Candidate	Ray C. Brown (W/I)	Ray C. Brown (W/I)
+Candidate	Ray C. Brown (Write-In)	Ray C. Brown (W/I)
 Candidate	Ray Chinn	Ray Chinn
 Candidate	Ray Denning	Ray Denning
 Candidate	Ray Dudley	Ray Dudley
@@ -11545,7 +11545,7 @@ Candidate	Rhonda Sanders	Rhonda Sanders
 Candidate	Rhonda Straughn	Rhonda Straughn
 Candidate	Rhonda Wylie	Rhonda Wylie
 Candidate	Rian Mcmaster	Rian Mcmaster
-Candidate	Ric Mullis (W/I)	Ric Mullis (W/I)
+Candidate	Ric Mullis (Write-In)	Ric Mullis (W/I)
 Candidate	Ricardo (Richard) Perez Jr.	Ricardo (Richard) Perez Jr.
 Candidate	Rich Ashley	Rich Ashley
 Candidate	Rich Block	Rich Block
@@ -11611,7 +11611,7 @@ Candidate	Richard D Keiffer	Richard D Keiffer
 Candidate	Richard D Musser	Richard D Musser
 Candidate	Richard D. Bray	Richard D. Bray
 Candidate	Richard Darlage	Richard Darlage
-Candidate	Richard Duncan (W/I)	Richard Duncan (W/I)
+Candidate	Richard Duncan (Write-In)	Richard Duncan (W/I)
 Candidate	Richard E (Rick) Volbrecht Jr.	Richard E (Rick) Volbrecht Jr.
 Candidate	Richard E Blank	Richard E Blank
 Candidate	Richard E Thompson	Richard E Thompson
@@ -11701,7 +11701,7 @@ Candidate	Richard Wallace	Richard Wallace
 Candidate	Richard Warne, Jr.	Richard Warne, Jr.
 Candidate	Richard Wieczorek Sr	Richard Wieczorek Sr
 Candidate	Richard Woellner	Richard Woellner
-Candidate	Richard Wolf (W/I)	Richard Wolf (W/I)
+Candidate	Richard Wolf (Write-In)	Richard Wolf (W/I)
 Candidate	Richard Ziegler Sr.	Richard Ziegler Sr.
 Candidate	Richelle L Megnin	Richelle L Megnin
 Candidate	Rick 'Cocky' May	Rick 'Cocky' May
@@ -12834,7 +12834,7 @@ Candidate	Shawn Carruthers	Shawn Carruthers
 Candidate	Shawn D Mccammack Sr.	Shawn D Mccammack Sr.
 Candidate	Shawn Denney	Shawn Denney
 Candidate	Shawn Gearheart	Shawn Gearheart
-Candidate	Shawn Howard (W/I)	Shawn Howard (W/I)
+Candidate	Shawn Howard (Write-In)	Shawn Howard (W/I)
 Candidate	Shawn Hurt	Shawn Hurt
 Candidate	Shawn J. Holm-Hansen	Shawn J. Holm-Hansen
 Candidate	Shawn L Estep	Shawn L Estep
@@ -13212,7 +13212,7 @@ Candidate	Steve L Kuhn	Steve L Kuhn
 Candidate	Steve L Walters	Steve L Walters
 Candidate	Steve Lange	Steve Lange
 Candidate	Steve Leonard	Steve Leonard
-Candidate	Steve Lestinsky, Jr (W/I)	Steve Lestinsky, Jr (W/I)
+Candidate	Steve Lestinsky, Jr (Write-In)	Steve Lestinsky, Jr (W/I)
 Candidate	Steve Lindsey	Steve Lindsey
 Candidate	Steve Lockyear	Steve Lockyear
 Candidate	Steve Lyons	Steve Lyons
@@ -13248,7 +13248,7 @@ Candidate	Steve Talley	Steve Talley
 Candidate	Steve Thomas	Steve Thomas
 Candidate	Steve Thompson	Steve Thompson
 Candidate	Steve W Ferree	Steve W Ferree
-Candidate	Steve W Ferree (W/I)	Steve W Ferree (W/I)
+Candidate	Steve W Ferree (Write-In)	Steve W Ferree (W/I)
 Candidate	Steve Webb	Steve Webb
 Candidate	Steve Williamson	Steve Williamson
 Candidate	Steve Wilson	Steve Wilson
@@ -14162,7 +14162,7 @@ Candidate	Tom Hagedorn	Tom Hagedorn
 Candidate	Tom Hauser	Tom Hauser
 Candidate	Tom Hedde	Tom Hedde
 Candidate	Tom Helmer	Tom Helmer
-Candidate	Tom Hoefling (W/I)	Tom Hoefling (W/I)
+Candidate	Tom Hoefling (Write-In)	Tom Hoefling (W/I)
 Candidate	Tom J (Tommy) Murray	Tom J (Tommy) Murray
 Candidate	Tom J Murray	Tom J Murray
 Candidate	Tom Jackson	Tom Jackson
@@ -14434,7 +14434,7 @@ Candidate	Vada L Long	Vada L Long
 Candidate	Valeri Haughton	Valeri Haughton
 Candidate	Valerie A. Craig	Valerie A. Craig
 Candidate	Valerie Ann Stapleton	Valerie Ann Stapleton
-Candidate	Valerie Mccray (W/I)	Valerie Mccray (W/I)
+Candidate	Valerie Mccray (Write-In)	Valerie Mccray (W/I)
 Candidate	Valerie Paul-Mullin	Valerie Paul-Mullin
 Candidate	Valerie Williams	Valerie Williams
 Candidate	Valisha K. Cragun	Valisha K. Cragun
@@ -14860,7 +14860,7 @@ Candidate	Zachary P Despain	Zachary P Despain
 Candidate	Zachary Roberts	Zachary Roberts
 Candidate	Zachary Rodgers	Zachary Rodgers
 Candidate	Zachary T (Zach) Smith	Zachary T (Zach) Smith
-Candidate	Zachary T Lafavers (W/I)	Zachary T Lafavers (W/I)
+Candidate	Zachary T Lafavers (Write-In)	Zachary T Lafavers (W/I)
 Candidate	Zachary T Patton	Zachary T Patton
 Candidate	Zachary Tucker	Zachary Tucker
 Candidate	Zack Brown	Zack Brown
