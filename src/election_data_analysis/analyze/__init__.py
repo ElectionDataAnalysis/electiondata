@@ -470,8 +470,8 @@ def create_bar(
     top_ru_id: int,
     subdivision_type_id: int,
     other_subdivision_type: str,
-    contest_type: str,
-    contest: str,
+    contest_type: Optional[str],
+    contest: Optional[str],
     election_id: int,
     for_export: bool,
 ):

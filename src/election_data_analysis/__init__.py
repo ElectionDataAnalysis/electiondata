@@ -12,7 +12,7 @@ from election_data_analysis import (
 )
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy.orm.session import Session
-from typing import List, Dict, Optional, Any, Tuple
+from typing import List, Dict, Optional, Any, Tuple, Union
 import datetime
 import os
 import re
@@ -577,6 +577,7 @@ class DataLoader:
         else:
             print("No jurisdictions loaded because load_jurisdictions==False")
 
+        latest_download_date = dict()
         for jurisdiction in jurisdictions:
             juris_err = None
             for election in elections[jurisdiction]:
@@ -584,7 +585,7 @@ class DataLoader:
                 (
                     success_list,
                     failure_list,
-                    latest_download_date,
+                    latest_download_date[jurisdiction],
                     new_err,
                 ) = self.load_ej_pair(
                     election,
@@ -618,7 +619,7 @@ class DataLoader:
                             juris_results_path,
                             os.path.join(
                                 self.d["archive_dir"],
-                                f"{juris_system_name}_{latest_download_date}",
+                                f"{juris_system_name}_{latest_download_date[jurisdiction]}",
                             ),
                             report_error=False,
                         )
@@ -787,7 +788,6 @@ class DataLoader:
             source,
             year,
             note,
-            order_within_category=order_within_category,
             replace_existing=replace_existing,
         )
         return err
@@ -879,7 +879,7 @@ class DataLoader:
             working = exd.combine_and_rename_columns(working, exd.acs_5_label_summands)
             working = exd.normalize(working, exd.acs_5_label_summands.keys())
             working["Category"] = category
-        df = pd.concat(df, working)
+            df = pd.concat(df, working)
         self.load_single_external_data_set()
         # TODO
         return err
@@ -902,7 +902,7 @@ class DataLoader:
             self.load_single_external_data_set(
                 working,
                 "American Community Survey 5",
-                y,
+                f"{y}",
                 "",
             )
 
@@ -970,9 +970,11 @@ class DataLoader:
 
         return update_err
 
-    def load_multielection(self, multi_file: str) -> Optional[dict]:
+    def load_multielection(self, multi_file: str, overwrite_existing: bool = False) -> Optional[dict]:
         """load multi-election data from <multi_file> 
-        (as of 6/2021, this works just for the MIT presidential file)"""
+        (as of 6/2021, this works just for the MIT presidential file)
+        If override_existing is True, unload any jurisdictions already there;
+        otherwise do *not* overwrite"""
         err = None
         # read data for listed elections
         df = pd.read_csv(multi_file,sep="\t",dtype=str)
@@ -989,13 +991,62 @@ class DataLoader:
             juris_system_name = juris.system_name_from_true_name(juris_true_name)
             jurisdiction_id = db.name_to_id(self.session,"ReportingUnit",juris_true_name)
             j_df = df[(df[multi.mit_cols["Jurisdiction"]] == j)]
+            # proceed only if data exists for this jurisdiction
+            if j_df.empty:
+                continue
+
             # optionally: update juris in db
             new_err = self.update_juris_from_multifile(j_df,juris_true_name, juris_system_name)
-
+            if new_err:
+                err = ui.consolidate_errors([err, new_err])
             ## load results to db
-            for election in multi.mit_elections.values():
+            for election in j_df[multi.mit_cols["Election"]].unique():
+                # proceed only if data exists for this jurisdiction-election combo
+                je_df = j_df[j_df[multi.mit_cols["Election"]] == election].copy()
+                if je_df.empty:
+                    continue
                 election_id = db.name_to_id(self.session,"Election", election)
-                constants = dict()
+                # get list of datafiles in db with the election and jurisdiction
+                df_list,err_str = db.data_file_list(
+                    self.session,election_id,reporting_unit_id=jurisdiction_id
+                )
+                if err_str:
+                    err = ui.add_new_error(
+                        err,
+                        "database",
+                        self.session.bind.url,
+                        err_str,
+                    )
+                    continue
+
+                # remove existing data if overwriting
+                if df_list and overwrite_existing:
+                    # remove old data
+                    err_str = self.remove_data(election_id,jurisdiction_id)
+                    if err_str:
+                        err = ui.add_new_error(
+                            err,
+                            "database",
+                            self.session.bind.url,
+                            f"Error removing existing data for {election} {juris_true_name}:\n{err}",
+                        )
+                    # warn that data was removed:
+                    err = ui.add_new_error(
+                        err,
+                        "warn-database",
+                        self.session.bind.url,
+                        f"data removed for {election} {juris_true_name}"
+                    )
+                # skip, with warning if not overwriting
+                elif df_list and not overwrite_existing:
+                    err = ui.add_new_error(
+                        err,
+                        "warn-database",
+                        self.session.bind.url,
+                        f"Data in db for {election} {juris_true_name} not replaced with new data."
+                    )
+                    continue
+
                 # create record in _datafile table
                 datafile_ids,err = datafile_info(
                     self.session.bind,
@@ -1010,20 +1061,17 @@ class DataLoader:
                     False,
                 )
 
-                je_df = j_df[j_df[multi.mit_cols["Election"]] == election].copy()
-                if je_df.empty:
-                    continue
                 # rename datafile columns
                 # TODO tech debt: this should happen earlier, which will simplify update_jurisdiction too
                 je_df.rename(columns={v:k for k,v in multi.mit_cols.items()},inplace=True)
                 try:
                     # load data
                     new_err = load_results_df(self.session,je_df,dict(),juris_true_name,
-                                                  "load_multi_ej_file",
-                                                  os.path.join(self.d["repository_content_root"],"jurisdictions",
-                                                               juris_system_name),
-                                                  datafile_ids,"flat_text"
-                                                  )
+                                              "load_multi_ej_file",
+                                              os.path.join(self.d["repository_content_root"],"jurisdictions",
+                                                           juris_system_name),
+                                              datafile_ids,"flat_text"
+                                              )
                     if new_err:
                         err = ui.consolidate_errors([err,new_err])
                 except Exception as exc:
@@ -1961,7 +2009,7 @@ class Analyzer:
 
     def export_nist(
             self, election: str, jurisdiction, major_subdivision: Optional[str] = None
-    ) -> str:
+    ) -> Union[str, Dict[str, Any]]:
         """picks either version 1.0 (json) or version 2.0 (xml) based on value of nistformats.nist_version"""
         if nist.nist_version == "1.0":
             return self.export_nist_v1_json(election, jurisdiction)
@@ -1970,7 +2018,7 @@ class Analyzer:
         else:
             return ""
 
-    def export_nist_v1_json(self, election: str, jurisdiction: str) -> dict:
+    def export_nist_v1_json(self, election: str, jurisdiction: str) -> Dict[str, Any]:
         election_id = db.name_to_id(self.session, "Election", election)
         jurisdiction_id = db.name_to_id(self.session, "ReportingUnit", jurisdiction)
 
@@ -2884,8 +2932,9 @@ def reload_juris_election(
 def datafile_info(connection,results_filename_for_error_reporting,
                   results_short_name,file_name,download_date: str,source: str,note: str,
                   jurisdiction_id: int,election_id: int,is_preliminary: bool
-                  ) -> (dict, dict):
+                  ) -> (List[int], Optional[dict]):
     """Inserts record into _datafile table"""
+    err = None
     data = pd.DataFrame(
         [
             [
@@ -2932,7 +2981,7 @@ def datafile_info(connection,results_filename_for_error_reporting,
             f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
             f"Error inserting record to _datafile table or retrieving _datafile_Id: {exc}",
         )
-        return [0,0],err
+        return [0,0], err
 
     return {"_datafile_Id":datafile_id,"Election_Id":election_id},err
 
