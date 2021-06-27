@@ -7076,6 +7076,7 @@ Candidate	John M. Wrightsman	John M. Wrightsman
 Candidate	John Mallers	John Mallers
 Candidate	John Mario Acosta Jr.	John Mario Acosta Jr.
 Candidate	John Matwyshyn	John Matwyshyn
+Candidate	John McCain	JOHN MCCAIN
 Candidate	John Mcpherson	John Mcpherson
 Candidate	John Merson	John Merson
 Candidate	John Meyer (Write-In)	John Meyer (W/I)

@@ -47,6 +47,7 @@ Candidate	Jamar Montgomery	Jamar Montgomery
 Candidate	Jesse P. Lagarde	Jesse P. Lagarde
 Candidate	Jo Jorgensen	Jo Jorgensen, Jeremy Cohen Libertarian
 Candidate	John Kerry	JOHN KERRY
+Candidate	John McCain	JOHN MCCAIN
 Candidate	John Paul Bourgeois	John Paul Bourgeois
 Candidate	Joseph R. Biden	Joseph R. Biden, Kamala Harris Democratic
 Candidate	Kanye West	Kanye West, Michelle Tidball The Birthday Party

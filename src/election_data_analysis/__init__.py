@@ -682,6 +682,7 @@ class DataLoader:
         juris_id: int,
     ) -> Optional[str]:
         """Remove from the db all data for the given <election_id> in the given <juris>"""
+        err_str = None
         # get connection & cursor
         connection = self.session.bind.raw_connection()
         cursor = connection.cursor()
@@ -694,9 +695,18 @@ class DataLoader:
             return err_str
 
         # remove data from all those datafiles
+        err_str_list = list()
         for idx in df_list:
-            db.remove_vote_counts(connection, cursor, idx)
-        return None
+            err_str = db.remove_vote_counts(connection, cursor, idx)
+            if err_str:
+                err_str_list.append(err_str)
+            err_str = db.remove_record_from_datafile_table(connection, cursor, idx)
+            if err_str:
+                err_str_list.append(err_str)
+        if err_str_list:
+            return ";".join(err_str_list)
+        else:
+            return None
 
     def add_totals_if_missing(self, election, jurisdiction) -> Optional[dict]:
         """for each contest, add 'total' vote type wherever it's missing
@@ -926,13 +936,15 @@ class DataLoader:
         update_err = None
 
         # add elections to Election.txt
-        election_df = pd.DataFrame([[f"{e} General","general"] for e in multi.mit_elections],columns=["Name","ElectionType"])
+        election_df = pd.DataFrame(
+            [[f"{e} General","general"] for e in multi.mit_elections],columns=["Name","ElectionType"]
+        )
         update_err = ui.consolidate_errors(
             [update_err,multi.add_elections(juris_system,self.d["repository_content_root"],election_df)]
         )
 
         # add candidates to Candidate.txt
-        candidate_col = multi.mit_cols["Candidate_raw"]
+        candidate_col = "Candidate_raw"
         candidates = sorted(working[candidate_col].unique())
 
         # add candidates to dictionary
@@ -962,7 +974,7 @@ class DataLoader:
         # add vote_count_types to dictionary
         update_err = ui.consolidate_errors(
             [update_err,multi.add_dictionary_entries(
-                juris_system,self.d["repository_content_root"],"CountItemType",multi.mit_cit
+                juris_system, self.d["repository_content_root"], "CountItemType", multi.mit_cit
             )]
         )
         ## load jurisdiction info to db
@@ -976,45 +988,62 @@ class DataLoader:
         If override_existing is True, unload any jurisdictions already there;
         otherwise do *not* overwrite"""
         err = None
-        # read data for listed elections
-        df = pd.read_csv(multi_file,sep="\t",dtype=str)
+        # read data
+        try:
+            df = pd.read_csv(multi_file,sep="\t",dtype=str)
+        except FileNotFoundError:
+            err = ui.add_new_error(
+                err,
+                "file",
+                multi_file,
+                f"file not found",
+            )
+            return err
 
+        # rename columns to match internal db elements
+        df.rename(columns={v:k for k,v in multi.mit_cols.items()},inplace=True)
         # retype count column to int
-        df[multi.mit_cols["Count"]] = df[multi.mit_cols["Count"]].fillna(0).astype(int,errors="ignore")
+        df["Count"] = df["Count"].fillna(0).astype(int,errors="ignore")
 
-        df = df[df[multi.mit_cols["Election"]].isin(multi.mit_elections.keys())]
+        df = df[df["Election"].isin(multi.mit_elections.keys())]
         
         # treat jurisdictions one by one
-        jurisdictions = sorted(list(df[multi.mit_cols["Jurisdiction"]].unique()))
+        jurisdictions = sorted(list(df["Jurisdiction"].unique()))
         for j in jurisdictions:
             juris_true_name = multi.correct(j.title())
+            print(f"Starting {juris_true_name}")
             juris_system_name = juris.system_name_from_true_name(juris_true_name)
             jurisdiction_id = db.name_to_id(self.session,"ReportingUnit",juris_true_name)
-            j_df = df[(df[multi.mit_cols["Jurisdiction"]] == j)]
+            j_df = df[(df["Jurisdiction"] == j)]
             # proceed only if data exists for this jurisdiction
             if j_df.empty:
                 continue
 
-            # optionally: update juris in db
+            # update juris in db
             new_err = self.update_juris_from_multifile(j_df,juris_true_name, juris_system_name)
             if new_err:
                 err = ui.consolidate_errors([err, new_err])
             ## load results to db
-            for election in j_df[multi.mit_cols["Election"]].unique():
-                # proceed only if data exists for this jurisdiction-election combo
-                je_df = j_df[j_df[multi.mit_cols["Election"]] == election].copy()
-                if je_df.empty:
-                    continue
-                election_id = db.name_to_id(self.session,"Election", election)
+            for election in j_df["Election"].unique():
+                election_true_name = multi.mit_elections[election]
+                print(f"\tStarting {election_true_name}")
+                election_id = db.name_to_id(self.session,"Election", election_true_name)
+                if not election_id:
+                    err = ui.add_new_error(
+                        err,
+                        "warn-database",
+                        f"{self.session.bind.url.database}",
+                        f"Election {election_true_name} not found"
+                    )
                 # get list of datafiles in db with the election and jurisdiction
-                df_list,err_str = db.data_file_list(
+                df_list, err_str = db.data_file_list(
                     self.session,election_id,reporting_unit_id=jurisdiction_id
                 )
                 if err_str:
                     err = ui.add_new_error(
                         err,
                         "database",
-                        self.session.bind.url,
+                        f"{self.session.bind.url.database}",
                         err_str,
                     )
                     continue
@@ -1027,14 +1056,14 @@ class DataLoader:
                         err = ui.add_new_error(
                             err,
                             "database",
-                            self.session.bind.url,
+                            f"{self.session.bind.url.database}",
                             f"Error removing existing data for {election} {juris_true_name}:\n{err}",
                         )
                     # warn that data was removed:
                     err = ui.add_new_error(
                         err,
                         "warn-database",
-                        self.session.bind.url,
+                        f"{self.session.bind.url.database}",
                         f"data removed for {election} {juris_true_name}"
                     )
                 # skip, with warning if not overwriting
@@ -1042,13 +1071,13 @@ class DataLoader:
                     err = ui.add_new_error(
                         err,
                         "warn-database",
-                        self.session.bind.url,
+                        f"{self.session.bind.url.database}",
                         f"Data in db for {election} {juris_true_name} not replaced with new data."
                     )
                     continue
 
                 # create record in _datafile table
-                datafile_ids,err = datafile_info(
+                datafile_ids, new_err = datafile_info(
                     self.session.bind,
                     multi_file,
                     f"MIT_pres_gen_Y2K_{juris_system_name}_{election}",
@@ -1060,13 +1089,16 @@ class DataLoader:
                     election_id,
                     False,
                 )
+                if new_err:
+                    err = ui.consolidate_errors([err, new_err])
+                    if ui.fatal_error(new_err):
+                        continue
 
                 # rename datafile columns
-                # TODO tech debt: this should happen earlier, which will simplify update_jurisdiction too
-                je_df.rename(columns={v:k for k,v in multi.mit_cols.items()},inplace=True)
+                je_df = j_df[j_df["Election"] == election]
                 try:
                     # load data
-                    new_err = load_results_df(self.session,je_df,dict(),juris_true_name,
+                    new_err = load_results_df(self.session, je_df, dict(),juris_true_name,
                                               "load_multi_ej_file",
                                               os.path.join(self.d["repository_content_root"],"jurisdictions",
                                                            juris_system_name),
@@ -1074,14 +1106,24 @@ class DataLoader:
                                               )
                     if new_err:
                         err = ui.consolidate_errors([err,new_err])
+                        if ui.fatal_error(new_err):
+                            # TODO remove record from _datafile table
+                            continue
                 except Exception as exc:
                     err = ui.add_new_error(
                         err,
                         "munge",
                         "load_multi_ej_file",
-                        f"Unexpected error while loading results dataframe: {exc}"
+                        f"Unexpected error while loading results dataframe "
+                        f"for {election_true_name} {juris_true_name}: {exc}"
                     )
-        err = ui.report(err,self.d["reports_and_plots_dir"])
+                    # TODO remove record from _datafile table
+                    continue
+
+        err = ui.report(
+            err,
+            os.path.join(self.d["reports_and_plots_dir"], f"multielection_{self.session.bind.url.database}")
+        )
         return err
 
 def check_par_file_elements(
@@ -2894,7 +2936,14 @@ def reload_juris_election(
             election_id = db.name_to_id(dl.session, "Election", election_name)
             juris_id = db.name_to_id(dl.session, "ReportingUnit", juris_name)
             if election_id and juris_id:
-                dl.remove_data(election_id, juris_id)
+                err_str = dl.remove_data(election_id, juris_id)
+                if err_str:
+                    err = ui.add_new_error(
+                        err,
+                        "warn-database",
+                        f"{dl.session.bind.url.database}",
+                        f"Error removing data: {err_str}",
+                    )
 
             # Load new data into live db (and move successful to archive)
             success, failure, new_err = dl.load_all(

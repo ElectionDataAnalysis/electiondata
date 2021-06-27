@@ -217,6 +217,7 @@ Candidate	Jeffers, Stephany	Jeffers, Stephany
 Candidate	Jo Jorgensen	Jorgensen Jo / Cohen Jeremy 'Spike'''
 Candidate	Jo Jorgensen	"Jorgensen Jo / Cohen Jeremy ""Spike"""""""
 Candidate	John Kerry	JOHN KERRY
+Candidate	John McCain	JOHN MCCAIN
 Candidate	Johnson Bill	Johnson Bill''
 Candidate	Johnson Bill	"Johnson Bill"""""
 Candidate	Johnson Carl	Johnson Carl''

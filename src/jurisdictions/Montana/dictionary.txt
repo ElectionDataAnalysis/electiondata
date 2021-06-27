@@ -272,6 +272,7 @@ Candidate	John Fuller	John Fuller
 Candidate	John Gibney	John Gibney
 Candidate	John Kerry	JOHN KERRY
 Candidate	John Lamb	John Lamb
+Candidate	John McCain	JOHN MCCAIN
 Candidate	John Mues	John Mues
 Candidate	John R Mercer	John R Mercer
 Candidate	John W. Parker	John W. Parker

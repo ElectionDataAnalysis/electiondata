@@ -126,6 +126,7 @@ Candidate	John Doyle	John Doyle
 Candidate	John Hardy	John Hardy
 Candidate	John Kerry	JOHN KERRY
 Candidate	John Mandt	John Mandt
+Candidate	John McCain	JOHN MCCAIN
 Candidate	John Paul Hott Ii	John Paul Hott Ii
 Candidate	John R. Kelly	John R. Kelly
 Candidate	John Williams	John Williams

@@ -2536,6 +2536,7 @@ Candidate	John Mark Bennett	John Mark Bennett
 Candidate	John Martin	John Martin
 Candidate	John May	John May
 Candidate	John McAfee	John McAfee
+Candidate	John McCain	JOHN MCCAIN
 Candidate	John McCotter	John McCotter
 Candidate	John Metcalf (Write-In)	John Metcalf (Write-In)
 Candidate	John Michael Langdon	John Michael Langdon

@@ -221,6 +221,7 @@ Candidate	Joe Sestak	Joe Sestak
 Candidate	John K. Delaney	John K. Delaney
 Candidate	John Kerry	JOHN KERRY
 Candidate	John Maddox	State Representative John Maddox
+Candidate	John McCain	JOHN MCCAIN
 Candidate	John P. Carr	John P. Carr
 Candidate	John Payton	Representative John Payton
 Candidate	John Richard Myers	John Richard Myers/Tiara Suzanne Lusk

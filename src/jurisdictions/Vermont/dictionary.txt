@@ -47,6 +47,7 @@ Candidate	ARRON ECKHART(Write-In)	ARRON ECKHART(Write-In)
 Candidate	ARTHUR PETERSON	ARTHUR PETERSON
 Candidate	AVRAM PATT	AVRAM PATT
 Candidate	Al Gore	AL GORE
+Candidate	Alyson Kennedy	Alyson Kennedy
 Candidate	B.B.B. BROWN (Write-In)	B.B.B. BROWN (Write-In)
 Candidate	BARBARA NOYES PULLING	BARBARA NOYES PULLING
 Candidate	BARBARA RACHELSON	BARBARA RACHELSON
@@ -56,8 +57,8 @@ Candidate	BASHEAR TRAVIS(Write-In)	BASHEAR TRAVIS(Write-In)
 Candidate	BECCA BALINT	BECCA BALINT
 Candidate	BEMJAMIN CARSON(Write-In)	BEMJAMIN CARSON(Write-In)
 Candidate	BEN CARSON (Write-In)	BEN CARSON (Write-In)
-Candidate	BEN CARSON(Write-In)	BEN CARSON(Write-In)
 Candidate	BEN CARSON - MICHAEL PENCE(Write-In)	BEN CARSON/MICHAEL PENCE(Write-In)
+Candidate	BEN CARSON(Write-In)	BEN CARSON(Write-In)
 Candidate	BEN CHIAPPINELLI	BEN CHIAPPINELLI
 Candidate	BEN SASSE(Write-In)	BEN SASSE(Write-In)
 Candidate	BEN SHAPIRO(Write-In)	BEN SHAPIRO(Write-In)
@@ -68,8 +69,8 @@ Candidate	BERNIE SANDERS(Write-In)	BERNIE SANDERS(Write-In)
 Candidate	BETH PEARCE	BETH PEARCE
 Candidate	BETTY ANN PERRY(Write-In)	BETTY ANN PERRY(Write-In)
 Candidate	BETTY WHITE(Write-In)	BETTY WHITE(Write-In)
-Candidate	BIDEN PENCE(Write-In)	BIDEN PENCE(Write-In)
 Candidate	BIDEN - PENCE(Write-In)	BIDEN/PENCE(Write-In)
+Candidate	BIDEN PENCE(Write-In)	BIDEN PENCE(Write-In)
 Candidate	BILL BELICIEK(Write-In)	BILL BELICIEK(Write-In)
 Candidate	BILL BOHNYAK, JR(Write-In)	BILL BOHNYAK, JR(Write-In)
 Candidate	BILL GATES(Write-In)	BILL GATES(Write-In)
@@ -111,7 +112,10 @@ Candidate	BRYAN BRUSSA(Write-In)	BRYAN BRUSSA(Write-In)
 Candidate	BRYAN LIACCIA(Write-In)	BRYAN LIACCIA(Write-In)
 Candidate	BUTTIGIEG(Write-In)	BUTTIGIEG(Write-In)
 Candidate	Barack Obama	BARACK OBAMA
+Candidate	Blake Huber	Blake Huber
 Candidate	Blank VotesBUTTIGIEG(Write-In)	Blank VotesBUTTIGIEG(Write-In)
+Candidate	Brian Carroll	Brian Carroll
+Candidate	Brock Pierce	Brock Pierce
 Candidate	CALEB ELDER	CALEB ELDER
 Candidate	CALEB TESKE(Write-In)	CALEB TESKE(Write-In)
 Candidate	CALEB WILLHOIT(Write-In)	CALEB WILLHOIT(Write-In)
@@ -176,6 +180,7 @@ Candidate	CTHULHU(Write-In)	CTHULHU(Write-In)
 Candidate	CURT MCCORMACK	CURT MCCORMACK
 Candidate	CURT TAYLOR	CURT TAYLOR
 Candidate	CYNTHIA BROWNING	CYNTHIA BROWNING
+Candidate	Christopher Lafontaine	Christopher Lafontaine
 Candidate	D. THURBER(Write-In)	D. THURBER(Write-In)
 Candidate	DAISY JOHNSON(Write-In)	DAISY JOHNSON(Write-In)
 Candidate	DAKOTA FLEURY(Write-In)	DAKOTA FLEURY(Write-In)
@@ -247,7 +252,9 @@ Candidate	DWAYNE TUCKER	DWAYNE TUCKER
 Candidate	DWIGHT D EISENHAUER(Write-In)	DWIGHT D EISENHAUER(Write-In)
 Candidate	DWIGHT SCHRUTE(Write-In)	DWIGHT SCHRUTE(Write-In)
 Candidate	DYLAN STETSON	DYLAN STETSON
+Candidate	Don Blankenship	Don Blankenship
 Candidate	Donald J. Trump	DONALD TRUMP
+Candidate	Donald J. Trump	Donald J. Trump
 Candidate	ED BIELLO(Write-In)	ED BIELLO(Write-In)
 Candidate	EDITH BRIGHAM(Write-In)	EDITH BRIGHAM(Write-In)
 Candidate	EDMOND J	EDMOND J
@@ -303,7 +310,9 @@ Candidate	GOVERNOR CUOMO(Write-In)	GOVERNOR CUOMO(Write-In)
 Candidate	GREG COX	GREG COX
 Candidate	GREGORY DOVILLARD AND JOSEPH GOLDBERG(Write-In)	GREGORY DOVILLARD AND JOSEPH GOLDBERG(Write-In)
 Candidate	GUY PAGE(Write-In)	GUY PAGE(Write-In)
+Candidate	Gary Swing	Gary Swing
 Candidate	George W. Bush	GEORGE W. BUSH
+Candidate	Gloria Lariva	Gloria Lariva
 Candidate	H	H
 Candidate	H. BROOKE PAIGE	H. BROOKE PAIGE and THOMAS JAMES WITMAN
 Candidate	H. BROOKE PAIGE	H. BROOKE PAIGE
@@ -319,6 +328,7 @@ Candidate	HOWARD DEAN(Write-In)	HOWARD DEAN(Write-In)
 Candidate	HOWIE HAWKINS	HOWIE HAWKINS and ANGELA WALKER
 Candidate	HUNTER BIDEN(Write-In)	HUNTER BIDEN(Write-In)
 Candidate	Hillary Clinton	HILLARY CLINTON
+Candidate	Howie Hawkins	Howie Hawkins
 Candidate	J	J
 Candidate	J SPRAKE(Write-In)	J SPRAKE(Write-In)
 Candidate	J.T. DODGE	J.T. DODGE
@@ -388,9 +398,9 @@ Candidate	JOE MONTANA(Write-In)	JOE MONTANA(Write-In)
 Candidate	JOE PARSONS	JOE PARSONS
 Candidate	JOE PESCI(Write-In)	JOE PESCI(Write-In)
 Candidate	JOE RAGAN(Write-In)	JOE RAGAN(Write-In)
+Candidate	JOE ROGAN - ELON MUSK(Write-In)	JOE ROGAN/ELON MUSK(Write-In)
 Candidate	JOE ROGAN CAMERON HAYES(Write-In)	JOE ROGAN CAMERON HAYES(Write-In)
 Candidate	JOE ROGAN(Write-In)	JOE ROGAN(Write-In)
-Candidate	JOE ROGAN - ELON MUSK(Write-In)	JOE ROGAN/ELON MUSK(Write-In)
 Candidate	JOE SCRABOROUGH(Write-In)	JOE SCRABOROUGH(Write-In)
 Candidate	JOEL SALTIN(Write-In)	JOEL SALTIN(Write-In)
 Candidate	JOHN ARRISON	JOHN ARRISON
@@ -438,7 +448,11 @@ Candidate	JULIE ANN BYTHROW(Write-In)	JULIE ANN BYTHROW(Write-In)
 Candidate	JUSTIN AMASH(Write-In)	JUSTIN AMASH(Write-In)
 Candidate	JUSTIN LINDOR(Write-In)	JUSTIN LINDOR(Write-In)
 Candidate	JUSTIN MONTEITH(Write-In)	JUSTIN MONTEITH(Write-In)
+Candidate	Jerome Segal	Jerome Segal
+Candidate	Jo Jorgensen	Jo Jorgensen
 Candidate	John Kerry	JOHN KERRY
+Candidate	John McCain	JOHN MCCAIN
+Candidate	Joseph R. Biden	Joseph R. Biden
 Candidate	KAMALA HARRIS(Write-In)	KAMALA HARRIS(Write-In)
 Candidate	KANYE WEST	KANYE WEST and MICHELLE TIDBALL
 Candidate	KAREN DOLAN	KAREN DOLAN
@@ -491,6 +505,9 @@ Candidate	KUMULIA 'KASE' LONG	KUMULIA 'KASE' LONG
 Candidate	KURT ZSCHAU(Write-In)	KURT ZSCHAU(Write-In)
 Candidate	KYLE KENLEY KOPITKE	KYLE KENLEY KOPITKE and TAJA YVONNE IWANOW
 Candidate	KYLIE HOLLINGSWORTH	KYLIE HOLLINGSWORTH
+Candidate	Kanye West	Kanye West
+Candidate	Keith Mccormic	Keith Mccormic
+Candidate	Kyle Kenley Kopitke	Kyle Kenley Kopitke
 Candidate	LABRON JAMES(Write-In)	LABRON JAMES(Write-In)
 Candidate	LARRY	LARRY
 Candidate	LARRY 'COOPER' CUPOLI	LARRY 'COOPER' CUPOLI
@@ -508,8 +525,8 @@ Candidate	LIAM HOGAN(Write-In)	LIAM HOGAN(Write-In)
 Candidate	LIAM J. GIBBONS(Write-In)	LIAM J. GIBBONS(Write-In)
 Candidate	LINDA JOY SULLIVAN	LINDA JOY SULLIVAN
 Candidate	LINDA VERMTEET(Write-In)	LINDA VERMTEET(Write-In)
-Candidate	LINDSAY GRAHAM(Write-In)	LINDSAY GRAHAM(Write-In)
 Candidate	LINDSAY GRAHAM - NIKKI HALEY(Write-In)	LINDSAY GRAHAM/NIKKI HALEY(Write-In)
+Candidate	LINDSAY GRAHAM(Write-In)	LINDSAY GRAHAM(Write-In)
 Candidate	LISA A	LISA A
 Candidate	LISA A. HANGO	LISA A. HANGO
 Candidate	LOGAN NICOLL	LOGAN NICOLL
@@ -533,9 +550,9 @@ Candidate	MARI CORDES	MARI CORDES
 Candidate	MARK A	MARK A
 Candidate	MARK A. HIGLEY	MARK A. HIGLEY
 Candidate	MARK A. MACDONALD	MARK A. MACDONALD
-Candidate	MARK CHARLES(Write-In)	MARK CHARLES(Write-In)
 Candidate	MARK CHARLES - ADRIAN WALLACE(Write-In)	MARK CHARLES/ADRIAN WALLACE(Write-In)
 Candidate	MARK CHARLES - WALLACE(Write-In)	MARK CHARLES/WALLACE(Write-In)
+Candidate	MARK CHARLES(Write-In)	MARK CHARLES(Write-In)
 Candidate	MARK CHARLET(Write-In)	MARK CHARLET(Write-In)
 Candidate	MARK CUBAN(Write-In)	MARK CUBAN(Write-In)
 Candidate	MARK CUBIN(Write-In)	MARK CUBIN(Write-In)
@@ -653,8 +670,8 @@ Candidate	PAUL GROSS	PAUL GROSS
 Candidate	PAUL LEFEBVRE	PAUL LEFEBVRE
 Candidate	PAUL MARTIN	PAUL MARTIN
 Candidate	PAUL O'NEIL(Write-In)	PAUL O'NEIL(Write-In)
-Candidate	PAUL RYAN(Write-In)	PAUL RYAN(Write-In)
 Candidate	PAUL RYAN - MITT ROMNEY(Write-In)	PAUL RYAN/MITT ROMNEY(Write-In)
+Candidate	PAUL RYAN(Write-In)	PAUL RYAN(Write-In)
 Candidate	PAUL VALLERAND	PAUL VALLERAND
 Candidate	PAULINE BROUSSEAU(Write-In)	PAULINE BROUSSEAU(Write-In)
 Candidate	PETE BUTTEGIEG(Write-In)	PETE BUTTEGIEG(Write-In)
@@ -677,6 +694,7 @@ Candidate	PHILLIP J BARNEY(Write-In)	PHILLIP J BARNEY(Write-In)
 Candidate	PHILLIP J CITEK(Write-In)	PHILLIP J CITEK(Write-In)
 Candidate	PIERCE DUFRESNE(Write-In)	PIERCE DUFRESNE(Write-In)
 Candidate	Partys not found in dictionary.txt	Partys not found in dictionary.txt
+Candidate	Phil Collins	Phil Collins
 Candidate	RACHEL CLARK(Write-In)	RACHEL CLARK(Write-In)
 Candidate	RALPH CORBO	RALPH CORBO
 Candidate	RALPH NADER(Write-In)	RALPH NADER(Write-In)
@@ -744,6 +762,8 @@ Candidate	RUTH HARDY	RUTH HARDY
 Candidate	RUTH SHATTUCK BERNSTEIN	RUTH SHATTUCK BERNSTEIN
 Candidate	RYAN COYNE	RYAN COYNE
 Candidate	Ralph Nader	RALPH NADER
+Candidate	Richard Duncan	Richard Duncan
+Candidate	Roque 'Rocky' De La Fuente	Roque 'Rocky' De La Fuente
 Candidate	SALLY ACHEY	SALLY ACHEY
 Candidate	SAM ELLIOT(Write-In)	SAM ELLIOT(Write-In)
 Candidate	SAM HEMMINGWAY(Write-In)	SAM HEMMINGWAY(Write-In)
@@ -912,12 +932,14 @@ Candidate	ZACHARY MICHAEL LANG	ZACHARY MICHAEL LANG
 Candidate	ZACHARY SCALF	ZACHARY SCALF and MATTHEW LYDA
 Candidate	ZADA GILMORE(Write-In)	ZADA GILMORE(Write-In)
 Candidate	ZOILE APOLO HAMLIN(Write-In)	ZOILE APOLO HAMLIN(Write-In)
+Candidate	Zachary Scalf	Zachary Scalf
 CandidateContest	US House VT District 1	US House VT District 1
 CandidateContest	US President (VT)	US President (VT)
 CandidateContest	US President (VT)	PRESIDENT
 CandidateContest	US President (VT)	US PRESIDENT
 CandidateContest	US Senate VT	US Senate VT
 CandidateContest	VT Attorney General	VT Attorney General
+CandidateContest	VT Auditor of Accounts	VT Auditor of Accounts
 CandidateContest	VT Governor	VT Governor
 CandidateContest	VT House District 1	VT House District 1
 CandidateContest	VT House District 10	VT House District 10
@@ -1109,119 +1131,177 @@ CandidateContest	VT Senate District 6	VT Senate District 6
 CandidateContest	VT Senate District 7	VT Senate District 7
 CandidateContest	VT Senate District 8	VT Senate District 8
 CandidateContest	VT Senate District 9	VT Senate District 9
+CandidateContest	VT State Treasurer	VT State Treasurer
 CandidateContest	VT Treasurer	VT Treasurer
 CountItemType	total	TOTAL
+CountItemType	total	total
 Election	2016 General	2016 General
 Election	2018 General	2018 General
 Election	2020 General	2020 General
 Election	2020 Primary	2020 Primary
 Party	Alliance Party	ALLIANCE
+Party	Alliance Party	Alliance Party
 Party	American Solidarity Party	AMERICAN SOLIDARITY
+Party	American Solidarity Party	American Solidarity Party
 Party	Approval Voting Party	APPROVAL VOTING
+Party	Approval Voting Party	Approval Voting Party
 Party	Banish the F35s Party	BANISH THE F35S
+Party	Banish the F35s Party	Banish the F35s Party
 Party	Berlin Party	BERLIN
 Party	Berlin-Northfield Alliance Party	BERLIN-NORTHFIELD ALLIANCE
 Party	Boiling Frog Party	BOILING FROG
+Party	Boiling Frog Party	Boiling Frog Party
 Party	Bread And Roses Party	BREAD AND ROSES
+Party	Bread And Roses Party	Bread And Roses Party
 Party	Bull Moose Party	BULL MOOSE
+Party	Bull Moose Party	Bull Moose Party
 Party	Communist Party	COMMUNIST
+Party	Communist Party	Communist Party
 Party	Constitution Party	CONSTITUTION
+Party	Constitution Party	Constitution Party
 Party	Democratic Party	DEMOCRATIC
 Party	Democratic Party	DEM
 Party	Democratic Party	DEMOCRAT
+Party	Democratic Party	Democratic Party
 Party	Democratic-Progressive Party	DEM/PROG
 Party	Democratic-Progressive Party	PROG/DEM
+Party	Democratic-Progressive Party	Democratic/Progressive Party
 Party	Democratic-Republican Party	DEM/REP
 Party	Democratic-Republican Party	REP/DEM
 Party	Democratic-Republican Party	Democratic/Republican Party
 Party	Green Party	GREEN
+Party	Green Party	Green Party
 Party	Grumpy Old Patriots Party	GRUMPY OLD PATRIOTS
 Party	Independent Party	INDEPENDENT
+Party	Independent Party	Independent Party
 Party	Libertarian Party	LIBERTARIAN
+Party	Libertarian Party	Libertarian Party
 Party	Liberty Union Party	LIBERTY UNION
+Party	Liberty Union Party	Liberty Union Party
 Party	Progressive Party	PROGRESSIVE
 Party	Progressive Party	PROG
+Party	Progressive Party	Progressive Party
 Party	Prohibition Party	PROHIBITION
+Party	Prohibition Party	Prohibition Party
 Party	Republican Party	REPUBLICAN
 Party	Republican Party	REP
+Party	Republican Party	Republican Party
 Party	Socialist Workers Party	SOCIALIST WORKERS
+Party	Socialist Workers Party	Socialist Workers Party
 Party	Truth Matters Party	TRUTH MATTERS
+Party	Truth Matters Party	Truth Matters Party
 Party	Unaffiliated Party	UNAFFILIATED
+Party	Unaffiliated Party	Unaffiliated Party
 Party	Vets for Vets Party	VETS FOR VETS
 Party	none or unknown	OTHER
 ReportingUnit	Vermont	Vermont
 ReportingUnit	Vermont;Addison	ADDISON
+ReportingUnit	Vermont;Addison	Vermont;Addison
 ReportingUnit	Vermont;Addison;ADD-3	ADDISON;ADD-3
 ReportingUnit	Vermont;Albany	ALBANY
+ReportingUnit	Vermont;Albany	Vermont;Albany
 ReportingUnit	Vermont;Albany;ORL-CAL	ALBANY;ORL-CAL
 ReportingUnit	Vermont;Alburgh	ALBURGH
+ReportingUnit	Vermont;Alburgh	Vermont;Alburgh
 ReportingUnit	Vermont;Alburgh;GI-CHI	ALBURGH;GI-CHI
 ReportingUnit	Vermont;Andover	ANDOVER
+ReportingUnit	Vermont;Andover	Vermont;Andover
 ReportingUnit	Vermont;Andover;WDR-3-1	ANDOVER;WDR-3-1
 ReportingUnit	Vermont;Arlington	ARLINGTON
+ReportingUnit	Vermont;Arlington	Vermont;Arlington
 ReportingUnit	Vermont;Arlington;BEN-4	ARLINGTON;BEN-4
 ReportingUnit	Vermont;Athens	ATHENS
+ReportingUnit	Vermont;Athens	Vermont;Athens
 ReportingUnit	Vermont;Athens;WDH-3	ATHENS;WDH-3
 ReportingUnit	Vermont;Bakersfield	BAKERSFIELD
+ReportingUnit	Vermont;Bakersfield	Vermont;Bakersfield
 ReportingUnit	Vermont;Bakersfield;FRA-6	BAKERSFIELD;FRA-6
 ReportingUnit	Vermont;Baltimore	BALTIMORE
+ReportingUnit	Vermont;Baltimore	Vermont;Baltimore
 ReportingUnit	Vermont;Baltimore;WDR-3-1	BALTIMORE;WDR-3-1
 ReportingUnit	Vermont;Barnard	BARNARD
+ReportingUnit	Vermont;Barnard	Vermont;Barnard
 ReportingUnit	Vermont;Barnard;WDR-4-1	BARNARD;WDR-4-1
 ReportingUnit	Vermont;Barnet	BARNET
+ReportingUnit	Vermont;Barnet	Vermont;Barnet
 ReportingUnit	Vermont;Barnet;CAL-1	BARNET;CAL-1
 ReportingUnit	Vermont;Barre City	BARRE CITY
+ReportingUnit	Vermont;Barre City	Vermont;Barre City
 ReportingUnit	Vermont;Barre City;WAS-3	BARRE CITY;WAS-3
 ReportingUnit	Vermont;Barre Town	BARRE TOWN
+ReportingUnit	Vermont;Barre Town	Vermont;Barre Town
 ReportingUnit	Vermont;Barre Town;WAS-2	BARRE TOWN;WAS-2
 ReportingUnit	Vermont;Barton	BARTON
+ReportingUnit	Vermont;Barton	Vermont;Barton
 ReportingUnit	Vermont;Barton;ORL-CAL	BARTON;ORL-CAL
 ReportingUnit	Vermont;Belvidere	BELVIDERE
+ReportingUnit	Vermont;Belvidere	Vermont;Belvidere
 ReportingUnit	Vermont;Belvidere;LAM-2	BELVIDERE;LAM-2
 ReportingUnit	Vermont;Bennington	BENNINGTON
+ReportingUnit	Vermont;Bennington	Vermont;Bennington
 ReportingUnit	Vermont;Bennington;BEN-2-1	BENNINGTON;BEN-2-1
 ReportingUnit	Vermont;Bennington;BEN-2-2	BENNINGTON;BEN-2-2
 ReportingUnit	Vermont;Benson	BENSON
+ReportingUnit	Vermont;Benson	Vermont;Benson
 ReportingUnit	Vermont;Benson;ADD-RUT	BENSON;ADD-RUT
 ReportingUnit	Vermont;Berkshire	BERKSHIRE
+ReportingUnit	Vermont;Berkshire	Vermont;Berkshire
 ReportingUnit	Vermont;Berkshire;FRA-5	BERKSHIRE;FRA-5
 ReportingUnit	Vermont;Berlin	BERLIN
+ReportingUnit	Vermont;Berlin	Vermont;Berlin
 ReportingUnit	Vermont;Berlin;WAS-1	BERLIN;WAS-1
 ReportingUnit	Vermont;Bethel	BETHEL
+ReportingUnit	Vermont;Bethel	Vermont;Bethel
 ReportingUnit	Vermont;Bethel;WDR-RUT	BETHEL;WDR-RUT
 ReportingUnit	Vermont;Bloomfield	BLOOMFIELD
+ReportingUnit	Vermont;Bloomfield	Vermont;Bloomfield
 ReportingUnit	Vermont;Bloomfield;ESX-CAL-ORL	BLOOMFIELD;ESX-CAL-ORL
 ReportingUnit	Vermont;Bolton	BOLTON
+ReportingUnit	Vermont;Bolton	Vermont;Bolton
 ReportingUnit	Vermont;Bolton;WAS-CHI	BOLTON;WAS-CHI
 ReportingUnit	Vermont;Bradford	BRADFORD
+ReportingUnit	Vermont;Bradford	Vermont;Bradford
 ReportingUnit	Vermont;Bradford;ORA-2	BRADFORD;ORA-2
 ReportingUnit	Vermont;Braintree	BRAINTREE
+ReportingUnit	Vermont;Braintree	Vermont;Braintree
 ReportingUnit	Vermont;Braintree;ORA-WAS-ADD	BRAINTREE;ORA-WAS-ADD
 ReportingUnit	Vermont;Brandon	BRANDON
+ReportingUnit	Vermont;Brandon	Vermont;Brandon
 ReportingUnit	Vermont;Brandon;RUT-6	BRANDON;RUT-6
 ReportingUnit	Vermont;Brattleboro	BRATTLEBORO
+ReportingUnit	Vermont;Brattleboro	Vermont;Brattleboro
 ReportingUnit	Vermont;Brattleboro;WDH-2-1	BRATTLEBORO;WDH-2-1
 ReportingUnit	Vermont;Brattleboro;WDH-2-2	BRATTLEBORO;WDH-2-2
 ReportingUnit	Vermont;Brattleboro;WDH-2-3	BRATTLEBORO;WDH-2-3
 ReportingUnit	Vermont;Bridgewater	BRIDGEWATER
+ReportingUnit	Vermont;Bridgewater	Vermont;Bridgewater
 ReportingUnit	Vermont;Bridgewater;RUT-WDR-1	BRIDGEWATER;RUT-WDR-1
 ReportingUnit	Vermont;Bridport	BRIDPORT
+ReportingUnit	Vermont;Bridport	Vermont;Bridport
 ReportingUnit	Vermont;Bridport;ADD-5	BRIDPORT;ADD-5
 ReportingUnit	Vermont;Brighton	BRIGHTON
+ReportingUnit	Vermont;Brighton	Vermont;Brighton
 ReportingUnit	Vermont;Brighton;ESX-CAL-ORL	BRIGHTON;ESX-CAL-ORL
 ReportingUnit	Vermont;Bristol	BRISTOL
+ReportingUnit	Vermont;Bristol	Vermont;Bristol
 ReportingUnit	Vermont;Bristol;ADD-4	BRISTOL;ADD-4
 ReportingUnit	Vermont;Brookfield	BROOKFIELD
+ReportingUnit	Vermont;Brookfield	Vermont;Brookfield
 ReportingUnit	Vermont;Brookfield;ORA-WAS-ADD	BROOKFIELD;ORA-WAS-ADD
 ReportingUnit	Vermont;Brookline	BROOKLINE
+ReportingUnit	Vermont;Brookline	Vermont;Brookline
 ReportingUnit	Vermont;Brookline;WDH-3	BROOKLINE;WDH-3
 ReportingUnit	Vermont;Brownington	BROWNINGTON
+ReportingUnit	Vermont;Brownington	Vermont;Brownington
 ReportingUnit	Vermont;Brownington;ORL-1	BROWNINGTON;ORL-1
 ReportingUnit	Vermont;Brunswick	BRUNSWICK
+ReportingUnit	Vermont;Brunswick	Vermont;Brunswick
 ReportingUnit	Vermont;Brunswick;ESX-CAL	BRUNSWICK;ESX-CAL
 ReportingUnit	Vermont;Burke	BURKE
+ReportingUnit	Vermont;Burke	Vermont;Burke
 ReportingUnit	Vermont;Burke;CAL-4	BURKE;CAL-4
 ReportingUnit	Vermont;Burlington	BURLINGTON
+ReportingUnit	Vermont;Burlington	Vermont;Burlington
 ReportingUnit	Vermont;Burlington;CHI-6-1	BURLINGTON;CHI-6-1
 ReportingUnit	Vermont;Burlington;CHI-6-2	BURLINGTON;CHI-6-2
 ReportingUnit	Vermont;Burlington;CHI-6-3	BURLINGTON;CHI-6-3
@@ -1230,363 +1310,533 @@ ReportingUnit	Vermont;Burlington;CHI-6-5	BURLINGTON;CHI-6-5
 ReportingUnit	Vermont;Burlington;CHI-6-6	BURLINGTON;CHI-6-6
 ReportingUnit	Vermont;Burlington;CHI-6-7	BURLINGTON;CHI-6-7
 ReportingUnit	Vermont;Cabot	CABOT
+ReportingUnit	Vermont;Cabot	Vermont;Cabot
 ReportingUnit	Vermont;Cabot;CAL-WAS	CABOT;CAL-WAS
 ReportingUnit	Vermont;Calais	CALAIS
+ReportingUnit	Vermont;Calais	Vermont;Calais
 ReportingUnit	Vermont;Calais;WAS-6	CALAIS;WAS-6
 ReportingUnit	Vermont;Cambridge	CAMBRIDGE
+ReportingUnit	Vermont;Cambridge	Vermont;Cambridge
 ReportingUnit	Vermont;Cambridge;LAM-3	CAMBRIDGE;LAM-3
 ReportingUnit	Vermont;Canaan	CANAAN
+ReportingUnit	Vermont;Canaan	Vermont;Canaan
 ReportingUnit	Vermont;Canaan;ESX-CAL-ORL	CANAAN;ESX-CAL-ORL
 ReportingUnit	Vermont;Castleton	CASTLETON
+ReportingUnit	Vermont;Castleton	Vermont;Castleton
 ReportingUnit	Vermont;Castleton;RUT-3	CASTLETON;RUT-3
 ReportingUnit	Vermont;Cavendish	CAVENDISH
+ReportingUnit	Vermont;Cavendish	Vermont;Cavendish
 ReportingUnit	Vermont;Cavendish;WDR-2	CAVENDISH;WDR-2
 ReportingUnit	Vermont;Charleston	CHARLESTON
+ReportingUnit	Vermont;Charleston	Vermont;Charleston
 ReportingUnit	Vermont;Charleston;ORL-1	CHARLESTON;ORL-1
 ReportingUnit	Vermont;Charlotte	CHARLOTTE
+ReportingUnit	Vermont;Charlotte	Vermont;Charlotte
 ReportingUnit	Vermont;Charlotte;CHI-4-1	CHARLOTTE;CHI-4-1
 ReportingUnit	Vermont;Chelsea	CHELSEA
+ReportingUnit	Vermont;Chelsea	Vermont;Chelsea
 ReportingUnit	Vermont;Chelsea;ORA-1	CHELSEA;ORA-1
 ReportingUnit	Vermont;Chester	CHESTER
+ReportingUnit	Vermont;Chester	Vermont;Chester
 ReportingUnit	Vermont;Chester;WDR-3-1	CHESTER;WDR-3-1
 ReportingUnit	Vermont;Chittenden	CHITTENDEN
+ReportingUnit	Vermont;Chittenden	Vermont;Chittenden
 ReportingUnit	Vermont;Chittenden;RUT-WDR-1	CHITTENDEN;RUT-WDR-1
 ReportingUnit	Vermont;Clarendon	CLARENDON
+ReportingUnit	Vermont;Clarendon	Vermont;Clarendon
 ReportingUnit	Vermont;Clarendon;RUT-2	CLARENDON;RUT-2
 ReportingUnit	Vermont;Colchester	COLCHESTER
+ReportingUnit	Vermont;Colchester	Vermont;Colchester
 ReportingUnit	Vermont;Colchester;CHI-9-1	COLCHESTER;CHI-9-1
 ReportingUnit	Vermont;Colchester;CHI-9-2	COLCHESTER;CHI-9-2
 ReportingUnit	Vermont;Concord	CONCORD
+ReportingUnit	Vermont;Concord	Vermont;Concord
 ReportingUnit	Vermont;Concord;ESX-CAL	CONCORD;ESX-CAL
 ReportingUnit	Vermont;Corinth	CORINTH
+ReportingUnit	Vermont;Corinth	Vermont;Corinth
 ReportingUnit	Vermont;Corinth;ORA-1	CORINTH;ORA-1
 ReportingUnit	Vermont;Cornwall	CORNWALL
+ReportingUnit	Vermont;Cornwall	Vermont;Cornwall
 ReportingUnit	Vermont;Cornwall;ADD-2	CORNWALL;ADD-2
 ReportingUnit	Vermont;Coventry	COVENTRY
+ReportingUnit	Vermont;Coventry	Vermont;Coventry
 ReportingUnit	Vermont;Coventry;ORL-2	COVENTRY;ORL-2
 ReportingUnit	Vermont;Craftsbury	CRAFTSBURY
+ReportingUnit	Vermont;Craftsbury	Vermont;Craftsbury
 ReportingUnit	Vermont;Craftsbury;ORL-CAL	CRAFTSBURY;ORL-CAL
 ReportingUnit	Vermont;Danby	DANBY
+ReportingUnit	Vermont;Danby	Vermont;Danby
 ReportingUnit	Vermont;Danby;BEN-RUT	DANBY;BEN-RUT
 ReportingUnit	Vermont;Danville	DANVILLE
+ReportingUnit	Vermont;Danville	Vermont;Danville
 ReportingUnit	Vermont;Danville;CAL-WAS	DANVILLE;CAL-WAS
 ReportingUnit	Vermont;Derby	DERBY
+ReportingUnit	Vermont;Derby	Vermont;Derby
 ReportingUnit	Vermont;Derby;ORL-1	DERBY;ORL-1
 ReportingUnit	Vermont;Dorset	DORSET
+ReportingUnit	Vermont;Dorset	Vermont;Dorset
 ReportingUnit	Vermont;Dorset;BEN-RUT	DORSET;BEN-RUT
 ReportingUnit	Vermont;Dover	DOVER
+ReportingUnit	Vermont;Dover	Vermont;Dover
 ReportingUnit	Vermont;Dover;WDH-BEN	DOVER;WDH-BEN
 ReportingUnit	Vermont;Dummerston	DUMMERSTON
+ReportingUnit	Vermont;Dummerston	Vermont;Dummerston
 ReportingUnit	Vermont;Dummerston;WDH-4	DUMMERSTON;WDH-4
 ReportingUnit	Vermont;Duxbury	DUXBURY
+ReportingUnit	Vermont;Duxbury	Vermont;Duxbury
 ReportingUnit	Vermont;Duxbury;WAS-7	DUXBURY;WAS-7
 ReportingUnit	Vermont;East Haven	EAST HAVEN
+ReportingUnit	Vermont;East Haven	Vermont;East Haven
 ReportingUnit	Vermont;East Haven;ESX-CAL-ORL	EAST HAVEN;ESX-CAL-ORL
 ReportingUnit	Vermont;East Montpelier	EAST MONTPELIER
+ReportingUnit	Vermont;East Montpelier	Vermont;East Montpelier
 ReportingUnit	Vermont;East Montpelier;WAS-5	EAST MONTPELIER;WAS-5
 ReportingUnit	Vermont;Eden	EDEN
+ReportingUnit	Vermont;Eden	Vermont;Eden
 ReportingUnit	Vermont;Eden;ORL-LAM	EDEN;ORL-LAM
 ReportingUnit	Vermont;Elmore	ELMORE
+ReportingUnit	Vermont;Elmore	Vermont;Elmore
 ReportingUnit	Vermont;Elmore;LAM-WAS	ELMORE;LAM-WAS
 ReportingUnit	Vermont;Enosburgh	ENOSBURGH
+ReportingUnit	Vermont;Enosburgh	Vermont;Enosburgh
 ReportingUnit	Vermont;Enosburgh;FRA-7	ENOSBURGH;FRA-7
 ReportingUnit	Vermont;Essex	ESSEX
+ReportingUnit	Vermont;Essex	Vermont;Essex
 ReportingUnit	Vermont;Essex;CHI-8-1	ESSEX;CHI-8-1
 ReportingUnit	Vermont;Essex;CHI-8-2	ESSEX;CHI-8-2
 ReportingUnit	Vermont;Essex;CHI-8-3	ESSEX;CHI-8-3
 ReportingUnit	Vermont;Fair Haven	FAIR HAVEN
+ReportingUnit	Vermont;Fair Haven	Vermont;Fair Haven
 ReportingUnit	Vermont;Fair Haven;RUT-3	FAIR HAVEN;RUT-3
 ReportingUnit	Vermont;Fairfax	FAIRFAX
+ReportingUnit	Vermont;Fairfax	Vermont;Fairfax
 ReportingUnit	Vermont;Fairfax;FRA-2	FAIRFAX;FRA-2
 ReportingUnit	Vermont;Fairfield	FAIRFIELD
+ReportingUnit	Vermont;Fairfield	Vermont;Fairfield
 ReportingUnit	Vermont;Fairfield;FRA-6	FAIRFIELD;FRA-6
 ReportingUnit	Vermont;Fairlee	FAIRLEE
+ReportingUnit	Vermont;Fairlee	Vermont;Fairlee
 ReportingUnit	Vermont;Fairlee;ORA-2	FAIRLEE;ORA-2
 ReportingUnit	Vermont;Fayston	FAYSTON
+ReportingUnit	Vermont;Fayston	Vermont;Fayston
 ReportingUnit	Vermont;Fayston;WAS-7	FAYSTON;WAS-7
 ReportingUnit	Vermont;Ferrisburgh	FERRISBURGH
+ReportingUnit	Vermont;Ferrisburgh	Vermont;Ferrisburgh
 ReportingUnit	Vermont;Ferrisburgh;ADD-3	FERRISBURGH;ADD-3
 ReportingUnit	Vermont;Fletcher	FLETCHER
+ReportingUnit	Vermont;Fletcher	Vermont;Fletcher
 ReportingUnit	Vermont;Fletcher;FRA-6	FLETCHER;FRA-6
 ReportingUnit	Vermont;Franklin	FRANKLIN
+ReportingUnit	Vermont;Franklin	Vermont;Franklin
 ReportingUnit	Vermont;Franklin;FRA-5	FRANKLIN;FRA-5
 ReportingUnit	Vermont;Georgia	GEORGIA
+ReportingUnit	Vermont;Georgia	Vermont;Georgia
 ReportingUnit	Vermont;Georgia;FRA-1	GEORGIA;FRA-1
 ReportingUnit	Vermont;Glover	GLOVER
+ReportingUnit	Vermont;Glover	Vermont;Glover
 ReportingUnit	Vermont;Glover;ORL-CAL	GLOVER;ORL-CAL
 ReportingUnit	Vermont;Goshen	GOSHEN
+ReportingUnit	Vermont;Goshen	Vermont;Goshen
 ReportingUnit	Vermont;Goshen;ADD-2	GOSHEN;ADD-2
 ReportingUnit	Vermont;Grafton	GRAFTON
+ReportingUnit	Vermont;Grafton	Vermont;Grafton
 ReportingUnit	Vermont;Grafton;WDH-3	GRAFTON;WDH-3
 ReportingUnit	Vermont;Granby	GRANBY
+ReportingUnit	Vermont;Granby	Vermont;Granby
 ReportingUnit	Vermont;Granby;ESX-CAL	GRANBY;ESX-CAL
 ReportingUnit	Vermont;Grand Isle	GRAND ISLE
+ReportingUnit	Vermont;Grand Isle	Vermont;Grand Isle
 ReportingUnit	Vermont;Grand Isle;GI-CHI	GRAND ISLE;GI-CHI
 ReportingUnit	Vermont;Granville	GRANVILLE
+ReportingUnit	Vermont;Granville	Vermont;Granville
 ReportingUnit	Vermont;Granville;ORA-WAS-ADD	GRANVILLE;ORA-WAS-ADD
 ReportingUnit	Vermont;Greensboro	GREENSBORO
+ReportingUnit	Vermont;Greensboro	Vermont;Greensboro
 ReportingUnit	Vermont;Greensboro;ORL-CAL	GREENSBORO;ORL-CAL
 ReportingUnit	Vermont;Groton	GROTON
+ReportingUnit	Vermont;Groton	Vermont;Groton
 ReportingUnit	Vermont;Groton;ORA-CAL	GROTON;ORA-CAL
 ReportingUnit	Vermont;Guildhall	GUILDHALL
+ReportingUnit	Vermont;Guildhall	Vermont;Guildhall
 ReportingUnit	Vermont;Guildhall;ESX-CAL	GUILDHALL;ESX-CAL
 ReportingUnit	Vermont;Guilford	GUILFORD
+ReportingUnit	Vermont;Guilford	Vermont;Guilford
 ReportingUnit	Vermont;Guilford;WDH-1	GUILFORD;WDH-1
 ReportingUnit	Vermont;Halifax	HALIFAX
+ReportingUnit	Vermont;Halifax	Vermont;Halifax
 ReportingUnit	Vermont;Halifax;WDH-6	HALIFAX;WDH-6
 ReportingUnit	Vermont;Hancock	HANCOCK
+ReportingUnit	Vermont;Hancock	Vermont;Hancock
 ReportingUnit	Vermont;Hancock;ADD-2	HANCOCK;ADD-2
 ReportingUnit	Vermont;Hardwick	HARDWICK
+ReportingUnit	Vermont;Hardwick	Vermont;Hardwick
 ReportingUnit	Vermont;Hardwick;CAL-2	HARDWICK;CAL-2
 ReportingUnit	Vermont;Hartford	HARTFORD
+ReportingUnit	Vermont;Hartford	Vermont;Hartford
 ReportingUnit	Vermont;Hartford;WDR-4-1	HARTFORD;WDR-4-1
 ReportingUnit	Vermont;Hartford;WDR-4-2	HARTFORD;WDR-4-2
 ReportingUnit	Vermont;Hartland	HARTLAND
+ReportingUnit	Vermont;Hartland	Vermont;Hartland
 ReportingUnit	Vermont;Hartland;WDR-1	HARTLAND;WDR-1
 ReportingUnit	Vermont;Highgate	HIGHGATE
+ReportingUnit	Vermont;Highgate	Vermont;Highgate
 ReportingUnit	Vermont;Highgate;FRA-5	HIGHGATE;FRA-5
 ReportingUnit	Vermont;Hinesburg	HINESBURG
+ReportingUnit	Vermont;Hinesburg	Vermont;Hinesburg
 ReportingUnit	Vermont;Hinesburg;CHI-4-1	HINESBURG;CHI-4-1
 ReportingUnit	Vermont;Hinesburg;CHI-4-2	HINESBURG;CHI-4-2
 ReportingUnit	Vermont;Holland	HOLLAND
+ReportingUnit	Vermont;Holland	Vermont;Holland
 ReportingUnit	Vermont;Holland;ORL-1	HOLLAND;ORL-1
 ReportingUnit	Vermont;Hubbardton	HUBBARDTON
+ReportingUnit	Vermont;Hubbardton	Vermont;Hubbardton
 ReportingUnit	Vermont;Hubbardton;RUT-3	HUBBARDTON;RUT-3
 ReportingUnit	Vermont;Huntington	HUNTINGTON
+ReportingUnit	Vermont;Huntington	Vermont;Huntington
 ReportingUnit	Vermont;Huntington;WAS-CHI	HUNTINGTON;WAS-CHI
 ReportingUnit	Vermont;Hyde Park	HYDE PARK
+ReportingUnit	Vermont;Hyde Park	Vermont;Hyde Park
 ReportingUnit	Vermont;Hyde Park;LAM-2	HYDE PARK;LAM-2
 ReportingUnit	Vermont;Ira	IRA
+ReportingUnit	Vermont;Ira	Vermont;Ira
 ReportingUnit	Vermont;Ira;RUT-1	IRA;RUT-1
 ReportingUnit	Vermont;Irasburg	IRASBURG
+ReportingUnit	Vermont;Irasburg	Vermont;Irasburg
 ReportingUnit	Vermont;Irasburg;ORL-2	IRASBURG;ORL-2
 ReportingUnit	Vermont;Isle La Motte	ISLE LA MOTTE
+ReportingUnit	Vermont;Isle La Motte	Vermont;Isle La Motte
 ReportingUnit	Vermont;Isle La Motte;GI-CHI	ISLE LA MOTTE;GI-CHI
 ReportingUnit	Vermont;Jamaica	JAMAICA
+ReportingUnit	Vermont;Jamaica	Vermont;Jamaica
 ReportingUnit	Vermont;Jamaica;WDH-BEN-WDR	JAMAICA;WDH-BEN-WDR
 ReportingUnit	Vermont;Jay	JAY
+ReportingUnit	Vermont;Jay	Vermont;Jay
 ReportingUnit	Vermont;Jay;ORL-LAM	JAY;ORL-LAM
 ReportingUnit	Vermont;Jericho	JERICHO
+ReportingUnit	Vermont;Jericho	Vermont;Jericho
 ReportingUnit	Vermont;Jericho;CHI-3	JERICHO;CHI-3
 ReportingUnit	Vermont;Johnson	JOHNSON
+ReportingUnit	Vermont;Johnson	Vermont;Johnson
 ReportingUnit	Vermont;Johnson;LAM-2	JOHNSON;LAM-2
 ReportingUnit	Vermont;Killington	KILLINGTON
+ReportingUnit	Vermont;Killington	Vermont;Killington
 ReportingUnit	Vermont;Killington;RUT-WDR-1	KILLINGTON;RUT-WDR-1
 ReportingUnit	Vermont;Kirby	KIRBY
+ReportingUnit	Vermont;Kirby	Vermont;Kirby
 ReportingUnit	Vermont;Kirby;ESX-CAL	KIRBY;ESX-CAL
 ReportingUnit	Vermont;Landgrove	LANDGROVE
+ReportingUnit	Vermont;Landgrove	Vermont;Landgrove
 ReportingUnit	Vermont;Landgrove;BEN-RUT	LANDGROVE;BEN-RUT
 ReportingUnit	Vermont;Leicester	LEICESTER
+ReportingUnit	Vermont;Leicester	Vermont;Leicester
 ReportingUnit	Vermont;Leicester;ADD-2	LEICESTER;ADD-2
 ReportingUnit	Vermont;Lemington	LEMINGTON
+ReportingUnit	Vermont;Lemington	Vermont;Lemington
 ReportingUnit	Vermont;Lemington;ESX-CAL-ORL	LEMINGTON;ESX-CAL-ORL
 ReportingUnit	Vermont;Lincoln	LINCOLN
+ReportingUnit	Vermont;Lincoln	Vermont;Lincoln
 ReportingUnit	Vermont;Lincoln;ADD-4	LINCOLN;ADD-4
 ReportingUnit	Vermont;Londonderry	LONDONDERRY
+ReportingUnit	Vermont;Londonderry	Vermont;Londonderry
 ReportingUnit	Vermont;Londonderry;WDH-BEN-WDR	LONDONDERRY;WDH-BEN-WDR
 ReportingUnit	Vermont;Lowell	LOWELL
+ReportingUnit	Vermont;Lowell	Vermont;Lowell
 ReportingUnit	Vermont;Lowell;ORL-LAM	LOWELL;ORL-LAM
 ReportingUnit	Vermont;Ludlow	LUDLOW
+ReportingUnit	Vermont;Ludlow	Vermont;Ludlow
 ReportingUnit	Vermont;Ludlow;RUT-WDR-2	LUDLOW;RUT-WDR-2
 ReportingUnit	Vermont;Lunenburg	LUNENBURG
+ReportingUnit	Vermont;Lunenburg	Vermont;Lunenburg
 ReportingUnit	Vermont;Lunenburg;ESX-CAL	LUNENBURG;ESX-CAL
 ReportingUnit	Vermont;Lyndon	LYNDON
+ReportingUnit	Vermont;Lyndon	Vermont;Lyndon
 ReportingUnit	Vermont;Lyndon;CAL-4	LYNDON;CAL-4
 ReportingUnit	Vermont;Maidstone	MAIDSTONE
+ReportingUnit	Vermont;Maidstone	Vermont;Maidstone
 ReportingUnit	Vermont;Maidstone;ESX-CAL	MAIDSTONE;ESX-CAL
 ReportingUnit	Vermont;Manchester	MANCHESTER
+ReportingUnit	Vermont;Manchester	Vermont;Manchester
 ReportingUnit	Vermont;Manchester;BEN-4	MANCHESTER;BEN-4
 ReportingUnit	Vermont;Marlboro	MARLBORO
+ReportingUnit	Vermont;Marlboro	Vermont;Marlboro
 ReportingUnit	Vermont;Marlboro;WDH-5	MARLBORO;WDH-5
 ReportingUnit	Vermont;Marshfield	MARSHFIELD
+ReportingUnit	Vermont;Marshfield	Vermont;Marshfield
 ReportingUnit	Vermont;Marshfield;WAS-6	MARSHFIELD;WAS-6
 ReportingUnit	Vermont;Mendon	MENDON
+ReportingUnit	Vermont;Mendon	Vermont;Mendon
 ReportingUnit	Vermont;Mendon;RUT-WDR-1	MENDON;RUT-WDR-1
 ReportingUnit	Vermont;Middlebury	MIDDLEBURY
+ReportingUnit	Vermont;Middlebury	Vermont;Middlebury
 ReportingUnit	Vermont;Middlebury;ADD-1	MIDDLEBURY;ADD-1
 ReportingUnit	Vermont;Middlesex	MIDDLESEX
+ReportingUnit	Vermont;Middlesex	Vermont;Middlesex
 ReportingUnit	Vermont;Middlesex;WAS-5	MIDDLESEX;WAS-5
 ReportingUnit	Vermont;Middletown Springs	MIDDLETOWN SPRINGS
+ReportingUnit	Vermont;Middletown Springs	Vermont;Middletown Springs
 ReportingUnit	Vermont;Middletown Springs;RUT-BEN	MIDDLETOWN SPRINGS;RUT-BEN
 ReportingUnit	Vermont;Milton	MILTON
+ReportingUnit	Vermont;Milton	Vermont;Milton
 ReportingUnit	Vermont;Milton;CHI-10	MILTON;CHI-10
 ReportingUnit	Vermont;Milton;GI-CHI	MILTON;GI-CHI
 ReportingUnit	Vermont;Monkton	MONKTON
+ReportingUnit	Vermont;Monkton	Vermont;Monkton
 ReportingUnit	Vermont;Monkton;ADD-4	MONKTON;ADD-4
 ReportingUnit	Vermont;Montgomery	MONTGOMERY
+ReportingUnit	Vermont;Montgomery	Vermont;Montgomery
 ReportingUnit	Vermont;Montgomery;FRA-7	MONTGOMERY;FRA-7
 ReportingUnit	Vermont;Montpelier	MONTPELIER
+ReportingUnit	Vermont;Montpelier	Vermont;Montpelier
 ReportingUnit	Vermont;Montpelier;WAS-4	MONTPELIER;WAS-4
 ReportingUnit	Vermont;Moretown	MORETOWN
+ReportingUnit	Vermont;Moretown	Vermont;Moretown
 ReportingUnit	Vermont;Moretown;WAS-7	MORETOWN;WAS-7
 ReportingUnit	Vermont;Morgan	MORGAN
+ReportingUnit	Vermont;Morgan	Vermont;Morgan
 ReportingUnit	Vermont;Morgan;ORL-1	MORGAN;ORL-1
 ReportingUnit	Vermont;Morristown	MORRISTOWN
+ReportingUnit	Vermont;Morristown	Vermont;Morristown
 ReportingUnit	Vermont;Morristown;LAM-WAS	MORRISTOWN;LAM-WAS
 ReportingUnit	Vermont;Mount Holly	MOUNT HOLLY
+ReportingUnit	Vermont;Mount Holly	Vermont;Mount Holly
 ReportingUnit	Vermont;Mount Holly;RUT-WDR-2	MOUNT HOLLY;RUT-WDR-2
 ReportingUnit	Vermont;Mount Tabor	MOUNT TABOR
+ReportingUnit	Vermont;Mount Tabor	Vermont;Mount Tabor
 ReportingUnit	Vermont;Mount Tabor;BEN-RUT	MOUNT TABOR;BEN-RUT
 ReportingUnit	Vermont;New Haven	NEW HAVEN
+ReportingUnit	Vermont;New Haven	Vermont;New Haven
 ReportingUnit	Vermont;New Haven;ADD-5	NEW HAVEN;ADD-5
 ReportingUnit	Vermont;Newark	NEWARK
+ReportingUnit	Vermont;Newark	Vermont;Newark
 ReportingUnit	Vermont;Newark;ESX-CAL-ORL	NEWARK;ESX-CAL-ORL
 ReportingUnit	Vermont;Newbury	NEWBURY
+ReportingUnit	Vermont;Newbury	Vermont;Newbury
 ReportingUnit	Vermont;Newbury;ORA-CAL	NEWBURY;ORA-CAL
 ReportingUnit	Vermont;Newfane	NEWFANE
+ReportingUnit	Vermont;Newfane	Vermont;Newfane
 ReportingUnit	Vermont;Newfane;WDH-5	NEWFANE;WDH-5
 ReportingUnit	Vermont;Newport City	NEWPORT CITY
+ReportingUnit	Vermont;Newport City	Vermont;Newport City
 ReportingUnit	Vermont;Newport City;ORL-2	NEWPORT CITY;ORL-2
 ReportingUnit	Vermont;Newport Town	NEWPORT TOWN
+ReportingUnit	Vermont;Newport Town	Vermont;Newport Town
 ReportingUnit	Vermont;Newport Town;ORL-2	NEWPORT TOWN;ORL-2
 ReportingUnit	Vermont;North Hero	NORTH HERO
+ReportingUnit	Vermont;North Hero	Vermont;North Hero
 ReportingUnit	Vermont;North Hero;GI-CHI	NORTH HERO;GI-CHI
 ReportingUnit	Vermont;Northfield	NORTHFIELD
+ReportingUnit	Vermont;Northfield	Vermont;Northfield
 ReportingUnit	Vermont;Northfield;WAS-1	NORTHFIELD;WAS-1
 ReportingUnit	Vermont;Norton	NORTON
+ReportingUnit	Vermont;Norton	Vermont;Norton
 ReportingUnit	Vermont;Norton;ESX-CAL-ORL	NORTON;ESX-CAL-ORL
 ReportingUnit	Vermont;Norwich	NORWICH
+ReportingUnit	Vermont;Norwich	Vermont;Norwich
 ReportingUnit	Vermont;Norwich;WDR-ORA-2	NORWICH;WDR-ORA-2
 ReportingUnit	Vermont;Orange	ORANGE
+ReportingUnit	Vermont;Orange	Vermont;Orange
 ReportingUnit	Vermont;Orange;ORA-1	ORANGE;ORA-1
 ReportingUnit	Vermont;Orwell	ORWELL
+ReportingUnit	Vermont;Orwell	Vermont;Orwell
 ReportingUnit	Vermont;Orwell;ADD-RUT	ORWELL;ADD-RUT
 ReportingUnit	Vermont;Panton	PANTON
+ReportingUnit	Vermont;Panton	Vermont;Panton
 ReportingUnit	Vermont;Panton;ADD-3	PANTON;ADD-3
 ReportingUnit	Vermont;Pawlet	PAWLET
+ReportingUnit	Vermont;Pawlet	Vermont;Pawlet
 ReportingUnit	Vermont;Pawlet;RUT-BEN	PAWLET;RUT-BEN
 ReportingUnit	Vermont;Peacham	PEACHAM
+ReportingUnit	Vermont;Peacham	Vermont;Peacham
 ReportingUnit	Vermont;Peacham;CAL-WAS	PEACHAM;CAL-WAS
 ReportingUnit	Vermont;Peru	PERU
+ReportingUnit	Vermont;Peru	Vermont;Peru
 ReportingUnit	Vermont;Peru;BEN-RUT	PERU;BEN-RUT
 ReportingUnit	Vermont;Pittsfield	PITTSFIELD
+ReportingUnit	Vermont;Pittsfield	Vermont;Pittsfield
 ReportingUnit	Vermont;Pittsfield;WDR-RUT	PITTSFIELD;WDR-RUT
 ReportingUnit	Vermont;Pittsford	PITTSFORD
+ReportingUnit	Vermont;Pittsford	Vermont;Pittsford
 ReportingUnit	Vermont;Pittsford;RUT-6	PITTSFORD;RUT-6
 ReportingUnit	Vermont;Plainfield	PLAINFIELD
+ReportingUnit	Vermont;Plainfield	Vermont;Plainfield
 ReportingUnit	Vermont;Plainfield;WAS-6	PLAINFIELD;WAS-6
 ReportingUnit	Vermont;Plymouth	PLYMOUTH
+ReportingUnit	Vermont;Plymouth	Vermont;Plymouth
 ReportingUnit	Vermont;Plymouth;WDR-5	PLYMOUTH;WDR-5
 ReportingUnit	Vermont;Pomfret	POMFRET
+ReportingUnit	Vermont;Pomfret	Vermont;Pomfret
 ReportingUnit	Vermont;Pomfret;WDR-4-1	POMFRET;WDR-4-1
 ReportingUnit	Vermont;Poultney	POULTNEY
+ReportingUnit	Vermont;Poultney	Vermont;Poultney
 ReportingUnit	Vermont;Poultney;RUT-1	POULTNEY;RUT-1
 ReportingUnit	Vermont;Pownal	POWNAL
+ReportingUnit	Vermont;Pownal	Vermont;Pownal
 ReportingUnit	Vermont;Pownal;BEN-1	POWNAL;BEN-1
 ReportingUnit	Vermont;Proctor	PROCTOR
+ReportingUnit	Vermont;Proctor	Vermont;Proctor
 ReportingUnit	Vermont;Proctor;RUT-2	PROCTOR;RUT-2
 ReportingUnit	Vermont;Putney	PUTNEY
+ReportingUnit	Vermont;Putney	Vermont;Putney
 ReportingUnit	Vermont;Putney;WDH-4	PUTNEY;WDH-4
 ReportingUnit	Vermont;Randolph	RANDOLPH
+ReportingUnit	Vermont;Randolph	Vermont;Randolph
 ReportingUnit	Vermont;Randolph;ORA-WAS-ADD	RANDOLPH;ORA-WAS-ADD
 ReportingUnit	Vermont;Reading	READING
+ReportingUnit	Vermont;Reading	Vermont;Reading
 ReportingUnit	Vermont;Reading;WDR-5	READING;WDR-5
 ReportingUnit	Vermont;Readsboro	READSBORO
+ReportingUnit	Vermont;Readsboro	Vermont;Readsboro
 ReportingUnit	Vermont;Readsboro;WDH-BEN	READSBORO;WDH-BEN
 ReportingUnit	Vermont;Richford	RICHFORD
+ReportingUnit	Vermont;Richford	Vermont;Richford
 ReportingUnit	Vermont;Richford;FRA-5	RICHFORD;FRA-5
 ReportingUnit	Vermont;Richmond	RICHMOND
+ReportingUnit	Vermont;Richmond	Vermont;Richmond
 ReportingUnit	Vermont;Richmond;CHI-1	RICHMOND;CHI-1
 ReportingUnit	Vermont;Ripton	RIPTON
+ReportingUnit	Vermont;Ripton	Vermont;Ripton
 ReportingUnit	Vermont;Ripton;ADD-2	RIPTON;ADD-2
 ReportingUnit	Vermont;Rochester	ROCHESTER
+ReportingUnit	Vermont;Rochester	Vermont;Rochester
 ReportingUnit	Vermont;Rochester;WDR-RUT	ROCHESTER;WDR-RUT
 ReportingUnit	Vermont;Rockingham	ROCKINGHAM
+ReportingUnit	Vermont;Rockingham	Vermont;Rockingham
 ReportingUnit	Vermont;Rockingham;WDH-3	ROCKINGHAM;WDH-3
 ReportingUnit	Vermont;Roxbury	ROXBURY
+ReportingUnit	Vermont;Roxbury	Vermont;Roxbury
 ReportingUnit	Vermont;Roxbury;ORA-WAS-ADD	ROXBURY;ORA-WAS-ADD
 ReportingUnit	Vermont;Royalton	ROYALTON
+ReportingUnit	Vermont;Royalton	Vermont;Royalton
 ReportingUnit	Vermont;Royalton;WDR-ORA-1	ROYALTON;WDR-ORA-1
 ReportingUnit	Vermont;Rupert	RUPERT
+ReportingUnit	Vermont;Rupert	Vermont;Rupert
 ReportingUnit	Vermont;Rupert;RUT-BEN	RUPERT;RUT-BEN
 ReportingUnit	Vermont;Rutland City	RUTLAND CITY
+ReportingUnit	Vermont;Rutland City	Vermont;Rutland City
 ReportingUnit	Vermont;Rutland City;RUT-5-1	RUTLAND CITY;RUT-5-1
 ReportingUnit	Vermont;Rutland City;RUT-5-2	RUTLAND CITY;RUT-5-2
 ReportingUnit	Vermont;Rutland City;RUT-5-3	RUTLAND CITY;RUT-5-3
 ReportingUnit	Vermont;Rutland City;RUT-5-4	RUTLAND CITY;RUT-5-4
 ReportingUnit	Vermont;Rutland Town	RUTLAND TOWN
+ReportingUnit	Vermont;Rutland Town	Vermont;Rutland Town
 ReportingUnit	Vermont;Rutland Town;RUT-4	RUTLAND TOWN;RUT-4
 ReportingUnit	Vermont;Ryegate	RYEGATE
+ReportingUnit	Vermont;Ryegate	Vermont;Ryegate
 ReportingUnit	Vermont;Ryegate;CAL-1	RYEGATE;CAL-1
 ReportingUnit	Vermont;Saint Albans City	SAINT ALBANS CITY
+ReportingUnit	Vermont;Saint Albans City	Vermont;Saint Albans City
 ReportingUnit	Vermont;Saint Albans City;FRA-3-1	SAINT ALBANS CITY;FRA-3-1
 ReportingUnit	Vermont;Saint Albans Town	SAINT ALBANS TOWN
+ReportingUnit	Vermont;Saint Albans Town	Vermont;Saint Albans Town
 ReportingUnit	Vermont;Saint Albans Town;FRA-3-1	SAINT ALBANS TOWN;FRA-3-1
 ReportingUnit	Vermont;Saint Albans Town;FRA-3-2	SAINT ALBANS TOWN;FRA-3-2
 ReportingUnit	Vermont;Saint George	SAINT GEORGE
+ReportingUnit	Vermont;Saint George	Vermont;Saint George
 ReportingUnit	Vermont;Saint George;CHI-5-2	SAINT GEORGE;CHI-5-2
 ReportingUnit	Vermont;Saint Johnsbury	SAINT JOHNSBURY
+ReportingUnit	Vermont;Saint Johnsbury	Vermont;Saint Johnsbury
 ReportingUnit	Vermont;Saint Johnsbury;CAL-3	SAINT JOHNSBURY;CAL-3
 ReportingUnit	Vermont;Salisbury	SALISBURY
+ReportingUnit	Vermont;Salisbury	Vermont;Salisbury
 ReportingUnit	Vermont;Salisbury;ADD-2	SALISBURY;ADD-2
 ReportingUnit	Vermont;Sandgate	SANDGATE
+ReportingUnit	Vermont;Sandgate	Vermont;Sandgate
 ReportingUnit	Vermont;Sandgate;BEN-4	SANDGATE;BEN-4
 ReportingUnit	Vermont;Searsburg	SEARSBURG
+ReportingUnit	Vermont;Searsburg	Vermont;Searsburg
 ReportingUnit	Vermont;Searsburg;WDH-BEN	SEARSBURG;WDH-BEN
 ReportingUnit	Vermont;Shaftsbury	SHAFTSBURY
+ReportingUnit	Vermont;Shaftsbury	Vermont;Shaftsbury
 ReportingUnit	Vermont;Shaftsbury;BEN-3	SHAFTSBURY;BEN-3
 ReportingUnit	Vermont;Sharon	SHARON
+ReportingUnit	Vermont;Sharon	Vermont;Sharon
 ReportingUnit	Vermont;Sharon;WDR-ORA-2	SHARON;WDR-ORA-2
 ReportingUnit	Vermont;Sheffield	SHEFFIELD
+ReportingUnit	Vermont;Sheffield	Vermont;Sheffield
 ReportingUnit	Vermont;Sheffield;ORL-CAL	SHEFFIELD;ORL-CAL
 ReportingUnit	Vermont;Shelburne	SHELBURNE
+ReportingUnit	Vermont;Shelburne	Vermont;Shelburne
 ReportingUnit	Vermont;Shelburne;CHI-5-1	SHELBURNE;CHI-5-1
 ReportingUnit	Vermont;Shelburne;CHI-5-2	SHELBURNE;CHI-5-2
 ReportingUnit	Vermont;Sheldon	SHELDON
+ReportingUnit	Vermont;Sheldon	Vermont;Sheldon
 ReportingUnit	Vermont;Sheldon;FRA-4	SHELDON;FRA-4
 ReportingUnit	Vermont;Shoreham	SHOREHAM
+ReportingUnit	Vermont;Shoreham	Vermont;Shoreham
 ReportingUnit	Vermont;Shoreham;ADD-RUT	SHOREHAM;ADD-RUT
 ReportingUnit	Vermont;Shrewsbury	SHREWSBURY
+ReportingUnit	Vermont;Shrewsbury	Vermont;Shrewsbury
 ReportingUnit	Vermont;Shrewsbury;RUT-WDR-2	SHREWSBURY;RUT-WDR-2
 ReportingUnit	Vermont;South Burlington	SOUTH BURLINGTON
+ReportingUnit	Vermont;South Burlington	Vermont;South Burlington
 ReportingUnit	Vermont;South Burlington;CHI-7-1	SOUTH BURLINGTON;CHI-7-1
 ReportingUnit	Vermont;South Burlington;CHI-7-2	SOUTH BURLINGTON;CHI-7-2
 ReportingUnit	Vermont;South Burlington;CHI-7-3	SOUTH BURLINGTON;CHI-7-3
 ReportingUnit	Vermont;South Burlington;CHI-7-4	SOUTH BURLINGTON;CHI-7-4
 ReportingUnit	Vermont;South Hero	SOUTH HERO
+ReportingUnit	Vermont;South Hero	Vermont;South Hero
 ReportingUnit	Vermont;South Hero;GI-CHI	SOUTH HERO;GI-CHI
 ReportingUnit	Vermont;Springfield	SPRINGFIELD
+ReportingUnit	Vermont;Springfield	Vermont;Springfield
 ReportingUnit	Vermont;Springfield;WDR-3-1	SPRINGFIELD;WDR-3-1
 ReportingUnit	Vermont;Springfield;WDR-3-2	SPRINGFIELD;WDR-3-2
 ReportingUnit	Vermont;Stamford	STAMFORD
+ReportingUnit	Vermont;Stamford	Vermont;Stamford
 ReportingUnit	Vermont;Stamford;WDH-BEN	STAMFORD;WDH-BEN
 ReportingUnit	Vermont;Stannard	STANNARD
+ReportingUnit	Vermont;Stannard	Vermont;Stannard
 ReportingUnit	Vermont;Stannard;CAL-2	STANNARD;CAL-2
 ReportingUnit	Vermont;Starksboro	STARKSBORO
+ReportingUnit	Vermont;Starksboro	Vermont;Starksboro
 ReportingUnit	Vermont;Starksboro;ADD-4	STARKSBORO;ADD-4
 ReportingUnit	Vermont;Stockbridge	STOCKBRIDGE
+ReportingUnit	Vermont;Stockbridge	Vermont;Stockbridge
 ReportingUnit	Vermont;Stockbridge;WDR-RUT	STOCKBRIDGE;WDR-RUT
 ReportingUnit	Vermont;Stowe	STOWE
+ReportingUnit	Vermont;Stowe	Vermont;Stowe
 ReportingUnit	Vermont;Stowe;LAM-1	STOWE;LAM-1
 ReportingUnit	Vermont;Strafford	STRAFFORD
+ReportingUnit	Vermont;Strafford	Vermont;Strafford
 ReportingUnit	Vermont;Strafford;WDR-ORA-2	STRAFFORD;WDR-ORA-2
 ReportingUnit	Vermont;Stratton	STRATTON
+ReportingUnit	Vermont;Stratton	Vermont;Stratton
 ReportingUnit	Vermont;Stratton;WDH-BEN-WDR	STRATTON;WDH-BEN-WDR
 ReportingUnit	Vermont;Sudbury	SUDBURY
+ReportingUnit	Vermont;Sudbury	Vermont;Sudbury
 ReportingUnit	Vermont;Sudbury;RUT-6	SUDBURY;RUT-6
 ReportingUnit	Vermont;Sunderland	SUNDERLAND
+ReportingUnit	Vermont;Sunderland	Vermont;Sunderland
 ReportingUnit	Vermont;Sunderland;BEN-3	SUNDERLAND;BEN-3
 ReportingUnit	Vermont;Sunderland;BEN-4	SUNDERLAND;BEN-4
 ReportingUnit	Vermont;Sutton	SUTTON
+ReportingUnit	Vermont;Sutton	Vermont;Sutton
 ReportingUnit	Vermont;Sutton;CAL-4	SUTTON;CAL-4
 ReportingUnit	Vermont;Swanton	SWANTON
+ReportingUnit	Vermont;Swanton	Vermont;Swanton
 ReportingUnit	Vermont;Swanton;FRA-4	SWANTON;FRA-4
 ReportingUnit	Vermont;Thetford	THETFORD
+ReportingUnit	Vermont;Thetford	Vermont;Thetford
 ReportingUnit	Vermont;Thetford;WDR-ORA-2	THETFORD;WDR-ORA-2
 ReportingUnit	Vermont;Tinmouth	TINMOUTH
+ReportingUnit	Vermont;Tinmouth	Vermont;Tinmouth
 ReportingUnit	Vermont;Tinmouth;RUT-2	TINMOUTH;RUT-2
 ReportingUnit	Vermont;Tinmouth;RUT-BEN	TINMOUTH;RUT-BEN
 ReportingUnit	Vermont;Topsham	TOPSHAM
+ReportingUnit	Vermont;Topsham	Vermont;Topsham
 ReportingUnit	Vermont;Topsham;ORA-CAL	TOPSHAM;ORA-CAL
 ReportingUnit	Vermont;Townshend	TOWNSHEND
+ReportingUnit	Vermont;Townshend	Vermont;Townshend
 ReportingUnit	Vermont;Townshend;WDH-5	TOWNSHEND;WDH-5
 ReportingUnit	Vermont;Troy	TROY
+ReportingUnit	Vermont;Troy	Vermont;Troy
 ReportingUnit	Vermont;Troy;ORL-2	TROY;ORL-2
 ReportingUnit	Vermont;Troy;ORL-LAM	TROY;ORL-LAM
 ReportingUnit	Vermont;Tunbridge	TUNBRIDGE
+ReportingUnit	Vermont;Tunbridge	Vermont;Tunbridge
 ReportingUnit	Vermont;Tunbridge;WDR-ORA-1	TUNBRIDGE;WDR-ORA-1
 ReportingUnit	Vermont;US House VT District 1	Vermont;US House VT District 1
 ReportingUnit	Vermont;Underhill	UNDERHILL
+ReportingUnit	Vermont;Underhill	Vermont;Underhill
 ReportingUnit	Vermont;Underhill;CHI-3	UNDERHILL;CHI-3
 ReportingUnit	Vermont;VT House District 1	Vermont;VT House District 1
 ReportingUnit	Vermont;VT House District 10	Vermont;VT House District 10
@@ -1777,376 +2027,127 @@ ReportingUnit	Vermont;VT Senate District 7	Vermont;VT Senate District 7
 ReportingUnit	Vermont;VT Senate District 8	Vermont;VT Senate District 8
 ReportingUnit	Vermont;VT Senate District 9	Vermont;VT Senate District 9
 ReportingUnit	Vermont;Vergennes	VERGENNES
+ReportingUnit	Vermont;Vergennes	Vermont;Vergennes
 ReportingUnit	Vermont;Vergennes;ADD-3	VERGENNES;ADD-3
 ReportingUnit	Vermont;Vernon	VERNON
+ReportingUnit	Vermont;Vernon	Vermont;Vernon
 ReportingUnit	Vermont;Vernon;WDH-1	VERNON;WDH-1
 ReportingUnit	Vermont;Vershire	VERSHIRE
+ReportingUnit	Vermont;Vershire	Vermont;Vershire
 ReportingUnit	Vermont;Vershire;ORA-1	VERSHIRE;ORA-1
 ReportingUnit	Vermont;Victory	VICTORY
+ReportingUnit	Vermont;Victory	Vermont;Victory
 ReportingUnit	Vermont;Victory;ESX-CAL	VICTORY;ESX-CAL
 ReportingUnit	Vermont;Waitsfield	WAITSFIELD
+ReportingUnit	Vermont;Waitsfield	Vermont;Waitsfield
 ReportingUnit	Vermont;Waitsfield;WAS-7	WAITSFIELD;WAS-7
 ReportingUnit	Vermont;Walden	WALDEN
+ReportingUnit	Vermont;Walden	Vermont;Walden
 ReportingUnit	Vermont;Walden;CAL-2	WALDEN;CAL-2
 ReportingUnit	Vermont;Wallingford	WALLINGFORD
+ReportingUnit	Vermont;Wallingford	Vermont;Wallingford
 ReportingUnit	Vermont;Wallingford;RUT-2	WALLINGFORD;RUT-2
 ReportingUnit	Vermont;Waltham	WALTHAM
+ReportingUnit	Vermont;Waltham	Vermont;Waltham
 ReportingUnit	Vermont;Waltham;ADD-3	WALTHAM;ADD-3
 ReportingUnit	Vermont;Wardsboro	WARDSBORO
+ReportingUnit	Vermont;Wardsboro	Vermont;Wardsboro
 ReportingUnit	Vermont;Wardsboro;WDH-BEN	WARDSBORO;WDH-BEN
 ReportingUnit	Vermont;Warren	WARREN
+ReportingUnit	Vermont;Warren	Vermont;Warren
 ReportingUnit	Vermont;Warren;WAS-7	WARREN;WAS-7
 ReportingUnit	Vermont;Washington	WASHINGTON
+ReportingUnit	Vermont;Washington	Vermont;Washington
 ReportingUnit	Vermont;Washington;ORA-1	WASHINGTON;ORA-1
 ReportingUnit	Vermont;Waterbury	WATERBURY
+ReportingUnit	Vermont;Waterbury	Vermont;Waterbury
 ReportingUnit	Vermont;Waterbury;WAS-CHI	WATERBURY;WAS-CHI
 ReportingUnit	Vermont;Waterford	WATERFORD
+ReportingUnit	Vermont;Waterford	Vermont;Waterford
 ReportingUnit	Vermont;Waterford;CAL-1	WATERFORD;CAL-1
 ReportingUnit	Vermont;Waterville	WATERVILLE
+ReportingUnit	Vermont;Waterville	Vermont;Waterville
 ReportingUnit	Vermont;Waterville;LAM-3	WATERVILLE;LAM-3
 ReportingUnit	Vermont;Weathersfield	WEATHERSFIELD
+ReportingUnit	Vermont;Weathersfield	Vermont;Weathersfield
 ReportingUnit	Vermont;Weathersfield;WDR-2	WEATHERSFIELD;WDR-2
 ReportingUnit	Vermont;Wells	WELLS
+ReportingUnit	Vermont;Wells	Vermont;Wells
 ReportingUnit	Vermont;Wells;RUT-BEN	WELLS;RUT-BEN
 ReportingUnit	Vermont;West Fairlee	WEST FAIRLEE
+ReportingUnit	Vermont;West Fairlee	Vermont;West Fairlee
 ReportingUnit	Vermont;West Fairlee;ORA-2	WEST FAIRLEE;ORA-2
 ReportingUnit	Vermont;West Haven	WEST HAVEN
+ReportingUnit	Vermont;West Haven	Vermont;West Haven
 ReportingUnit	Vermont;West Haven;RUT-3	WEST HAVEN;RUT-3
 ReportingUnit	Vermont;West Rutland	WEST RUTLAND
+ReportingUnit	Vermont;West Rutland	Vermont;West Rutland
 ReportingUnit	Vermont;West Rutland;RUT-2	WEST RUTLAND;RUT-2
 ReportingUnit	Vermont;West Windsor	WEST WINDSOR
+ReportingUnit	Vermont;West Windsor	Vermont;West Windsor
 ReportingUnit	Vermont;West Windsor;WDR-1	WEST WINDSOR;WDR-1
 ReportingUnit	Vermont;Westfield	WESTFIELD
+ReportingUnit	Vermont;Westfield	Vermont;Westfield
 ReportingUnit	Vermont;Westfield;ORL-LAM	WESTFIELD;ORL-LAM
 ReportingUnit	Vermont;Westford	WESTFORD
+ReportingUnit	Vermont;Westford	Vermont;Westford
 ReportingUnit	Vermont;Westford;CHI-8-3	WESTFORD;CHI-8-3
 ReportingUnit	Vermont;Westminster	WESTMINSTER
+ReportingUnit	Vermont;Westminster	Vermont;Westminster
 ReportingUnit	Vermont;Westminster;WDH-3	WESTMINSTER;WDH-3
 ReportingUnit	Vermont;Westminster;WDH-4	WESTMINSTER;WDH-4
 ReportingUnit	Vermont;Westmore	WESTMORE
+ReportingUnit	Vermont;Westmore	Vermont;Westmore
 ReportingUnit	Vermont;Westmore;ESX-CAL-ORL	WESTMORE;ESX-CAL-ORL
 ReportingUnit	Vermont;Weston	WESTON
+ReportingUnit	Vermont;Weston	Vermont;Weston
 ReportingUnit	Vermont;Weston;WDH-BEN-WDR	WESTON;WDH-BEN-WDR
 ReportingUnit	Vermont;Weybridge	WEYBRIDGE
+ReportingUnit	Vermont;Weybridge	Vermont;Weybridge
 ReportingUnit	Vermont;Weybridge;ADD-5	WEYBRIDGE;ADD-5
 ReportingUnit	Vermont;Wheelock	WHEELOCK
+ReportingUnit	Vermont;Wheelock	Vermont;Wheelock
 ReportingUnit	Vermont;Wheelock;ORL-CAL	WHEELOCK;ORL-CAL
 ReportingUnit	Vermont;Whiting	WHITING
+ReportingUnit	Vermont;Whiting	Vermont;Whiting
 ReportingUnit	Vermont;Whiting;ADD-RUT	WHITING;ADD-RUT
 ReportingUnit	Vermont;Whitingham	WHITINGHAM
+ReportingUnit	Vermont;Whitingham	Vermont;Whitingham
 ReportingUnit	Vermont;Whitingham;WDH-6	WHITINGHAM;WDH-6
 ReportingUnit	Vermont;Whitingham;WDH-BEN	WHITINGHAM;WDH-BEN
 ReportingUnit	Vermont;Williamstown	WILLIAMSTOWN
+ReportingUnit	Vermont;Williamstown	Vermont;Williamstown
 ReportingUnit	Vermont;Williamstown;ORA-1	WILLIAMSTOWN;ORA-1
 ReportingUnit	Vermont;Williston	WILLISTON
+ReportingUnit	Vermont;Williston	Vermont;Williston
 ReportingUnit	Vermont;Williston;CHI-2	WILLISTON;CHI-2
 ReportingUnit	Vermont;Wilmington	WILMINGTON
+ReportingUnit	Vermont;Wilmington	Vermont;Wilmington
 ReportingUnit	Vermont;Wilmington;WDH-6	WILMINGTON;WDH-6
 ReportingUnit	Vermont;Windham	WINDHAM
+ReportingUnit	Vermont;Windham	Vermont;Windham
 ReportingUnit	Vermont;Windham;WDH-3	WINDHAM;WDH-3
 ReportingUnit	Vermont;Windsor	WINDSOR
+ReportingUnit	Vermont;Windsor	Vermont;Windsor
 ReportingUnit	Vermont;Windsor;WDR-1	WINDSOR;WDR-1
 ReportingUnit	Vermont;Winhall	WINHALL
+ReportingUnit	Vermont;Winhall	Vermont;Winhall
 ReportingUnit	Vermont;Winhall;WDH-BEN-WDR	WINHALL;WDH-BEN-WDR
 ReportingUnit	Vermont;Winooski	WINOOSKI
+ReportingUnit	Vermont;Winooski	Vermont;Winooski
 ReportingUnit	Vermont;Winooski;CHI-6-7	WINOOSKI;CHI-6-7
 ReportingUnit	Vermont;Wolcott	WOLCOTT
+ReportingUnit	Vermont;Wolcott	Vermont;Wolcott
 ReportingUnit	Vermont;Wolcott;LAM-2	WOLCOTT;LAM-2
 ReportingUnit	Vermont;Woodbury	WOODBURY
+ReportingUnit	Vermont;Woodbury	Vermont;Woodbury
 ReportingUnit	Vermont;Woodbury;LAM-WAS	WOODBURY;LAM-WAS
 ReportingUnit	Vermont;Woodford	WOODFORD
+ReportingUnit	Vermont;Woodford	Vermont;Woodford
 ReportingUnit	Vermont;Woodford;BEN-1	WOODFORD;BEN-1
 ReportingUnit	Vermont;Woodstock	WOODSTOCK
+ReportingUnit	Vermont;Woodstock	Vermont;Woodstock
 ReportingUnit	Vermont;Woodstock;WDR-5	WOODSTOCK;WDR-5
 ReportingUnit	Vermont;Worcester	WORCESTER
-ReportingUnit	Vermont;Worcester;LAM-WAS	WORCESTER;LAM-WAS
-CandidateContest	VT State Treasurer	VT State Treasurer
-CandidateContest	VT Auditor of Accounts	VT Auditor of Accounts
-Candidate	Zachary Scalf	Zachary Scalf
-Candidate	Roque 'Rocky' De La Fuente	Roque 'Rocky' De La Fuente
-Candidate	Richard Duncan	Richard Duncan
-Candidate	Phil Collins	Phil Collins
-Candidate	Kyle Kenley Kopitke	Kyle Kenley Kopitke
-Candidate	Keith Mccormic	Keith Mccormic
-Candidate	Kanye West	Kanye West
-Candidate	Joseph R. Biden	Joseph R. Biden
-Candidate	Jo Jorgensen	Jo Jorgensen
-Candidate	Jerome Segal	Jerome Segal
-Candidate	Howie Hawkins	Howie Hawkins
-Candidate	Gloria Lariva	Gloria Lariva
-Candidate	Gary Swing	Gary Swing
-Candidate	Donald J. Trump	Donald J. Trump
-Candidate	Don Blankenship	Don Blankenship
-Candidate	Christopher Lafontaine	Christopher Lafontaine
-Candidate	Brock Pierce	Brock Pierce
-Candidate	Brian Carroll	Brian Carroll
-Candidate	Blake Huber	Blake Huber
-Candidate	Alyson Kennedy	Alyson Kennedy
-Party	Unaffiliated Party	Unaffiliated Party
-Party	Truth Matters Party	Truth Matters Party
-Party	Socialist Workers Party	Socialist Workers Party
-Party	Republican Party	Republican Party
-Party	Prohibition Party	Prohibition Party
-Party	Progressive Party	Progressive Party
-Party	Liberty Union Party	Liberty Union Party
-Party	Libertarian Party	Libertarian Party
-Party	Independent Party	Independent Party
-Party	Green Party	Green Party
-Party	Democratic-Progressive Party	Democratic/Progressive Party
-Party	Democratic Party	Democratic Party
-Party	Constitution Party	Constitution Party
-Party	Communist Party	Communist Party
-Party	Bull Moose Party	Bull Moose Party
-Party	Bread And Roses Party	Bread And Roses Party
-Party	Boiling Frog Party	Boiling Frog Party
-Party	Banish the F35s Party	Banish the F35s Party
-Party	Approval Voting Party	Approval Voting Party
-Party	American Solidarity Party	American Solidarity Party
-Party	Alliance Party	Alliance Party
 ReportingUnit	Vermont;Worcester	Vermont;Worcester
-ReportingUnit	Vermont;Woodstock	Vermont;Woodstock
-ReportingUnit	Vermont;Woodford	Vermont;Woodford
-ReportingUnit	Vermont;Woodbury	Vermont;Woodbury
-ReportingUnit	Vermont;Wolcott	Vermont;Wolcott
-ReportingUnit	Vermont;Winooski	Vermont;Winooski
-ReportingUnit	Vermont;Winhall	Vermont;Winhall
-ReportingUnit	Vermont;Windsor	Vermont;Windsor
-ReportingUnit	Vermont;Windham	Vermont;Windham
-ReportingUnit	Vermont;Wilmington	Vermont;Wilmington
-ReportingUnit	Vermont;Williston	Vermont;Williston
-ReportingUnit	Vermont;Williamstown	Vermont;Williamstown
-ReportingUnit	Vermont;Whitingham	Vermont;Whitingham
-ReportingUnit	Vermont;Whiting	Vermont;Whiting
-ReportingUnit	Vermont;Wheelock	Vermont;Wheelock
-ReportingUnit	Vermont;Weybridge	Vermont;Weybridge
-ReportingUnit	Vermont;Weston	Vermont;Weston
-ReportingUnit	Vermont;Westmore	Vermont;Westmore
-ReportingUnit	Vermont;Westminster	Vermont;Westminster
-ReportingUnit	Vermont;Westford	Vermont;Westford
-ReportingUnit	Vermont;Westfield	Vermont;Westfield
-ReportingUnit	Vermont;West Windsor	Vermont;West Windsor
-ReportingUnit	Vermont;West Rutland	Vermont;West Rutland
-ReportingUnit	Vermont;West Haven	Vermont;West Haven
-ReportingUnit	Vermont;West Fairlee	Vermont;West Fairlee
-ReportingUnit	Vermont;Wells	Vermont;Wells
-ReportingUnit	Vermont;Weathersfield	Vermont;Weathersfield
-ReportingUnit	Vermont;Waterville	Vermont;Waterville
-ReportingUnit	Vermont;Waterford	Vermont;Waterford
-ReportingUnit	Vermont;Waterbury	Vermont;Waterbury
-ReportingUnit	Vermont;Washington	Vermont;Washington
-ReportingUnit	Vermont;Warren	Vermont;Warren
-ReportingUnit	Vermont;Wardsboro	Vermont;Wardsboro
-ReportingUnit	Vermont;Waltham	Vermont;Waltham
-ReportingUnit	Vermont;Wallingford	Vermont;Wallingford
-ReportingUnit	Vermont;Walden	Vermont;Walden
-ReportingUnit	Vermont;Waitsfield	Vermont;Waitsfield
-ReportingUnit	Vermont;Victory	Vermont;Victory
-ReportingUnit	Vermont;Vershire	Vermont;Vershire
-ReportingUnit	Vermont;Vernon	Vermont;Vernon
-ReportingUnit	Vermont;Vergennes	Vermont;Vergennes
-ReportingUnit	Vermont;Underhill	Vermont;Underhill
-ReportingUnit	Vermont;Tunbridge	Vermont;Tunbridge
-ReportingUnit	Vermont;Troy	Vermont;Troy
-ReportingUnit	Vermont;Townshend	Vermont;Townshend
-ReportingUnit	Vermont;Topsham	Vermont;Topsham
-ReportingUnit	Vermont;Tinmouth	Vermont;Tinmouth
-ReportingUnit	Vermont;Thetford	Vermont;Thetford
-ReportingUnit	Vermont;Swanton	Vermont;Swanton
-ReportingUnit	Vermont;Sutton	Vermont;Sutton
-ReportingUnit	Vermont;Sunderland	Vermont;Sunderland
-ReportingUnit	Vermont;Sudbury	Vermont;Sudbury
-ReportingUnit	Vermont;Stratton	Vermont;Stratton
-ReportingUnit	Vermont;Strafford	Vermont;Strafford
-ReportingUnit	Vermont;Stowe	Vermont;Stowe
-ReportingUnit	Vermont;Stockbridge	Vermont;Stockbridge
-ReportingUnit	Vermont;Starksboro	Vermont;Starksboro
-ReportingUnit	Vermont;Stannard	Vermont;Stannard
-ReportingUnit	Vermont;Stamford	Vermont;Stamford
-ReportingUnit	Vermont;Springfield	Vermont;Springfield
-ReportingUnit	Vermont;South Hero	Vermont;South Hero
-ReportingUnit	Vermont;South Burlington	Vermont;South Burlington
-ReportingUnit	Vermont;Shrewsbury	Vermont;Shrewsbury
-ReportingUnit	Vermont;Shoreham	Vermont;Shoreham
-ReportingUnit	Vermont;Sheldon	Vermont;Sheldon
-ReportingUnit	Vermont;Shelburne	Vermont;Shelburne
-ReportingUnit	Vermont;Sheffield	Vermont;Sheffield
-ReportingUnit	Vermont;Sharon	Vermont;Sharon
-ReportingUnit	Vermont;Shaftsbury	Vermont;Shaftsbury
-ReportingUnit	Vermont;Searsburg	Vermont;Searsburg
-ReportingUnit	Vermont;Sandgate	Vermont;Sandgate
-ReportingUnit	Vermont;Salisbury	Vermont;Salisbury
-ReportingUnit	Vermont;Saint Johnsbury	Vermont;Saint Johnsbury
-ReportingUnit	Vermont;Saint George	Vermont;Saint George
-ReportingUnit	Vermont;Saint Albans Town	Vermont;Saint Albans Town
-ReportingUnit	Vermont;Saint Albans City	Vermont;Saint Albans City
-ReportingUnit	Vermont;Ryegate	Vermont;Ryegate
-ReportingUnit	Vermont;Rutland Town	Vermont;Rutland Town
-ReportingUnit	Vermont;Rutland City	Vermont;Rutland City
-ReportingUnit	Vermont;Rupert	Vermont;Rupert
-ReportingUnit	Vermont;Royalton	Vermont;Royalton
-ReportingUnit	Vermont;Roxbury	Vermont;Roxbury
-ReportingUnit	Vermont;Rockingham	Vermont;Rockingham
-ReportingUnit	Vermont;Rochester	Vermont;Rochester
-ReportingUnit	Vermont;Ripton	Vermont;Ripton
-ReportingUnit	Vermont;Richmond	Vermont;Richmond
-ReportingUnit	Vermont;Richford	Vermont;Richford
-ReportingUnit	Vermont;Readsboro	Vermont;Readsboro
-ReportingUnit	Vermont;Reading	Vermont;Reading
-ReportingUnit	Vermont;Randolph	Vermont;Randolph
-ReportingUnit	Vermont;Putney	Vermont;Putney
-ReportingUnit	Vermont;Proctor	Vermont;Proctor
-ReportingUnit	Vermont;Pownal	Vermont;Pownal
-ReportingUnit	Vermont;Poultney	Vermont;Poultney
-ReportingUnit	Vermont;Pomfret	Vermont;Pomfret
-ReportingUnit	Vermont;Plymouth	Vermont;Plymouth
-ReportingUnit	Vermont;Plainfield	Vermont;Plainfield
-ReportingUnit	Vermont;Pittsford	Vermont;Pittsford
-ReportingUnit	Vermont;Pittsfield	Vermont;Pittsfield
-ReportingUnit	Vermont;Peru	Vermont;Peru
-ReportingUnit	Vermont;Peacham	Vermont;Peacham
-ReportingUnit	Vermont;Pawlet	Vermont;Pawlet
-ReportingUnit	Vermont;Panton	Vermont;Panton
-ReportingUnit	Vermont;Orwell	Vermont;Orwell
-ReportingUnit	Vermont;Orange	Vermont;Orange
-ReportingUnit	Vermont;Norwich	Vermont;Norwich
-ReportingUnit	Vermont;Norton	Vermont;Norton
-ReportingUnit	Vermont;Northfield	Vermont;Northfield
-ReportingUnit	Vermont;North Hero	Vermont;North Hero
-ReportingUnit	Vermont;Newport Town	Vermont;Newport Town
-ReportingUnit	Vermont;Newport City	Vermont;Newport City
-ReportingUnit	Vermont;Newfane	Vermont;Newfane
-ReportingUnit	Vermont;Newbury	Vermont;Newbury
-ReportingUnit	Vermont;Newark	Vermont;Newark
-ReportingUnit	Vermont;New Haven	Vermont;New Haven
-ReportingUnit	Vermont;Mount Tabor	Vermont;Mount Tabor
-ReportingUnit	Vermont;Mount Holly	Vermont;Mount Holly
-ReportingUnit	Vermont;Morristown	Vermont;Morristown
-ReportingUnit	Vermont;Morgan	Vermont;Morgan
-ReportingUnit	Vermont;Moretown	Vermont;Moretown
-ReportingUnit	Vermont;Montpelier	Vermont;Montpelier
-ReportingUnit	Vermont;Montgomery	Vermont;Montgomery
-ReportingUnit	Vermont;Monkton	Vermont;Monkton
-ReportingUnit	Vermont;Milton	Vermont;Milton
-ReportingUnit	Vermont;Middletown Springs	Vermont;Middletown Springs
-ReportingUnit	Vermont;Middlesex	Vermont;Middlesex
-ReportingUnit	Vermont;Middlebury	Vermont;Middlebury
-ReportingUnit	Vermont;Mendon	Vermont;Mendon
-ReportingUnit	Vermont;Marshfield	Vermont;Marshfield
-ReportingUnit	Vermont;Marlboro	Vermont;Marlboro
-ReportingUnit	Vermont;Manchester	Vermont;Manchester
-ReportingUnit	Vermont;Maidstone	Vermont;Maidstone
-ReportingUnit	Vermont;Lyndon	Vermont;Lyndon
-ReportingUnit	Vermont;Lunenburg	Vermont;Lunenburg
-ReportingUnit	Vermont;Ludlow	Vermont;Ludlow
-ReportingUnit	Vermont;Lowell	Vermont;Lowell
-ReportingUnit	Vermont;Londonderry	Vermont;Londonderry
-ReportingUnit	Vermont;Lincoln	Vermont;Lincoln
-ReportingUnit	Vermont;Lemington	Vermont;Lemington
-ReportingUnit	Vermont;Leicester	Vermont;Leicester
-ReportingUnit	Vermont;Landgrove	Vermont;Landgrove
-ReportingUnit	Vermont;Kirby	Vermont;Kirby
-ReportingUnit	Vermont;Killington	Vermont;Killington
-ReportingUnit	Vermont;Johnson	Vermont;Johnson
-ReportingUnit	Vermont;Jericho	Vermont;Jericho
-ReportingUnit	Vermont;Jay	Vermont;Jay
-ReportingUnit	Vermont;Jamaica	Vermont;Jamaica
-ReportingUnit	Vermont;Isle La Motte	Vermont;Isle La Motte
-ReportingUnit	Vermont;Irasburg	Vermont;Irasburg
-ReportingUnit	Vermont;Ira	Vermont;Ira
-ReportingUnit	Vermont;Hyde Park	Vermont;Hyde Park
-ReportingUnit	Vermont;Huntington	Vermont;Huntington
-ReportingUnit	Vermont;Hubbardton	Vermont;Hubbardton
-ReportingUnit	Vermont;Holland	Vermont;Holland
-ReportingUnit	Vermont;Hinesburg	Vermont;Hinesburg
-ReportingUnit	Vermont;Highgate	Vermont;Highgate
-ReportingUnit	Vermont;Hartland	Vermont;Hartland
-ReportingUnit	Vermont;Hartford	Vermont;Hartford
-ReportingUnit	Vermont;Hardwick	Vermont;Hardwick
-ReportingUnit	Vermont;Hancock	Vermont;Hancock
-ReportingUnit	Vermont;Halifax	Vermont;Halifax
-ReportingUnit	Vermont;Guilford	Vermont;Guilford
-ReportingUnit	Vermont;Guildhall	Vermont;Guildhall
-ReportingUnit	Vermont;Groton	Vermont;Groton
-ReportingUnit	Vermont;Greensboro	Vermont;Greensboro
-ReportingUnit	Vermont;Granville	Vermont;Granville
-ReportingUnit	Vermont;Grand Isle	Vermont;Grand Isle
-ReportingUnit	Vermont;Granby	Vermont;Granby
-ReportingUnit	Vermont;Grafton	Vermont;Grafton
-ReportingUnit	Vermont;Goshen	Vermont;Goshen
-ReportingUnit	Vermont;Glover	Vermont;Glover
-ReportingUnit	Vermont;Georgia	Vermont;Georgia
-ReportingUnit	Vermont;Franklin	Vermont;Franklin
-ReportingUnit	Vermont;Fletcher	Vermont;Fletcher
-ReportingUnit	Vermont;Ferrisburgh	Vermont;Ferrisburgh
-ReportingUnit	Vermont;Fayston	Vermont;Fayston
-ReportingUnit	Vermont;Fairlee	Vermont;Fairlee
-ReportingUnit	Vermont;Fairfield	Vermont;Fairfield
-ReportingUnit	Vermont;Fairfax	Vermont;Fairfax
-ReportingUnit	Vermont;Fair Haven	Vermont;Fair Haven
-ReportingUnit	Vermont;Essex	Vermont;Essex
-ReportingUnit	Vermont;Enosburgh	Vermont;Enosburgh
-ReportingUnit	Vermont;Elmore	Vermont;Elmore
-ReportingUnit	Vermont;Eden	Vermont;Eden
-ReportingUnit	Vermont;East Montpelier	Vermont;East Montpelier
-ReportingUnit	Vermont;East Haven	Vermont;East Haven
-ReportingUnit	Vermont;Duxbury	Vermont;Duxbury
-ReportingUnit	Vermont;Dummerston	Vermont;Dummerston
-ReportingUnit	Vermont;Dover	Vermont;Dover
-ReportingUnit	Vermont;Dorset	Vermont;Dorset
-ReportingUnit	Vermont;Derby	Vermont;Derby
-ReportingUnit	Vermont;Danville	Vermont;Danville
-ReportingUnit	Vermont;Danby	Vermont;Danby
-ReportingUnit	Vermont;Craftsbury	Vermont;Craftsbury
-ReportingUnit	Vermont;Coventry	Vermont;Coventry
-ReportingUnit	Vermont;Cornwall	Vermont;Cornwall
-ReportingUnit	Vermont;Corinth	Vermont;Corinth
-ReportingUnit	Vermont;Concord	Vermont;Concord
-ReportingUnit	Vermont;Colchester	Vermont;Colchester
-ReportingUnit	Vermont;Clarendon	Vermont;Clarendon
-ReportingUnit	Vermont;Chittenden	Vermont;Chittenden
-ReportingUnit	Vermont;Chester	Vermont;Chester
-ReportingUnit	Vermont;Chelsea	Vermont;Chelsea
-ReportingUnit	Vermont;Charlotte	Vermont;Charlotte
-ReportingUnit	Vermont;Charleston	Vermont;Charleston
-ReportingUnit	Vermont;Cavendish	Vermont;Cavendish
-ReportingUnit	Vermont;Castleton	Vermont;Castleton
-ReportingUnit	Vermont;Canaan	Vermont;Canaan
-ReportingUnit	Vermont;Cambridge	Vermont;Cambridge
-ReportingUnit	Vermont;Calais	Vermont;Calais
-ReportingUnit	Vermont;Cabot	Vermont;Cabot
-ReportingUnit	Vermont;Burlington	Vermont;Burlington
-ReportingUnit	Vermont;Burke	Vermont;Burke
-ReportingUnit	Vermont;Brunswick	Vermont;Brunswick
-ReportingUnit	Vermont;Brownington	Vermont;Brownington
-ReportingUnit	Vermont;Brookline	Vermont;Brookline
-ReportingUnit	Vermont;Brookfield	Vermont;Brookfield
-ReportingUnit	Vermont;Bristol	Vermont;Bristol
-ReportingUnit	Vermont;Brighton	Vermont;Brighton
-ReportingUnit	Vermont;Bridport	Vermont;Bridport
-ReportingUnit	Vermont;Bridgewater	Vermont;Bridgewater
-ReportingUnit	Vermont;Brattleboro	Vermont;Brattleboro
-ReportingUnit	Vermont;Brandon	Vermont;Brandon
-ReportingUnit	Vermont;Braintree	Vermont;Braintree
-ReportingUnit	Vermont;Bradford	Vermont;Bradford
-ReportingUnit	Vermont;Bolton	Vermont;Bolton
-ReportingUnit	Vermont;Bloomfield	Vermont;Bloomfield
-ReportingUnit	Vermont;Bethel	Vermont;Bethel
-ReportingUnit	Vermont;Berlin	Vermont;Berlin
-ReportingUnit	Vermont;Berkshire	Vermont;Berkshire
-ReportingUnit	Vermont;Benson	Vermont;Benson
-ReportingUnit	Vermont;Bennington	Vermont;Bennington
-ReportingUnit	Vermont;Belvidere	Vermont;Belvidere
-ReportingUnit	Vermont;Barton	Vermont;Barton
-ReportingUnit	Vermont;Barre Town	Vermont;Barre Town
-ReportingUnit	Vermont;Barre City	Vermont;Barre City
-ReportingUnit	Vermont;Barnet	Vermont;Barnet
-ReportingUnit	Vermont;Barnard	Vermont;Barnard
-ReportingUnit	Vermont;Baltimore	Vermont;Baltimore
-ReportingUnit	Vermont;Bakersfield	Vermont;Bakersfield
-ReportingUnit	Vermont;Athens	Vermont;Athens
-ReportingUnit	Vermont;Arlington	Vermont;Arlington
-ReportingUnit	Vermont;Andover	Vermont;Andover
-ReportingUnit	Vermont;Alburgh	Vermont;Alburgh
-ReportingUnit	Vermont;Albany	Vermont;Albany
-ReportingUnit	Vermont;Addison	Vermont;Addison
-CountItemType	total	total
+ReportingUnit	Vermont;Worcester;LAM-WAS	WORCESTER;LAM-WAS

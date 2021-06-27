@@ -128,6 +128,7 @@ Candidate	John J. Deberry Jr.	John J. Deberry Jr.
 Candidate	John K. Crawford	John K. Crawford
 Candidate	John Kerry	JOHN KERRY
 Candidate	John Mark Windle	John Mark Windle
+Candidate	John McCain	JOHN MCCAIN
 Candidate	John Ray Clemmons	John Ray Clemmons
 Candidate	John Rose	John Rose
 Candidate	John W. Dawson	John W. Dawson

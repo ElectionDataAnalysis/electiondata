@@ -543,6 +543,7 @@ Candidate	John Kefalas	John Kefalas
 Candidate	John Kellner	John Kellner
 Candidate	John Kerry	JOHN KERRY
 Candidate	John M. Marcucci	John M. Marcucci
+Candidate	John McCain	JOHN MCCAIN
 Candidate	John Pickerill	John Pickerill
 Candidate	John Pyne IV	John Pyne IV
 Candidate	John Ronquillo	John Ronquillo

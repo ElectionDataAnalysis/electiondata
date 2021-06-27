@@ -25,7 +25,7 @@ mit_cols = {
     "Election": "year",
     "Count": "candidatevotes",
     "ReportingUnit_raw": "county_fips",
-    "CandidateContest_raw": "ofiice",
+    "CandidateContest_raw": "office",
     "Party_raw": "party",
     "Candidate_raw": "candidate",
     "CountItemType_raw": "mode"
@@ -47,7 +47,7 @@ mit_elections = {"2000": "2000 General",
                 "2016": "2016 General",
 }  # 2020 is there but we won't load it.
 
-mit_cit = {"TOTAL", "total"}
+mit_cit = {"TOTAL": "total"}
 
 
 mit_candidates = ['MITT ROMNEY', 'OTHER', 'DONALD J TRUMP', 'DONALD TRUMP',

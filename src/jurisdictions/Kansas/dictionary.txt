@@ -102,6 +102,7 @@ Candidate	John Brosz	Brosz, John
 Candidate	John Doll	Doll, John
 Candidate	John E Barker	Barker, John E
 Candidate	John Kerry	JOHN KERRY
+Candidate	John McCain	JOHN MCCAIN
 Candidate	John P. Wheeler Jr.	Wheeler Jr., John P.
 Candidate	John R. Eplee	Eplee, John R.
 Candidate	John Toplikar	John Toplikar

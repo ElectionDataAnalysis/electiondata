@@ -518,6 +518,7 @@ Candidate	John 'Bam' CARNEY	John 'Bam' CARNEY
 Candidate	John A. YARMUTH	John A. YARMUTH
 Candidate	John C. BLANTON	John C. BLANTON
 Candidate	John Kerry	JOHN KERRY
+Candidate	John McCain	JOHN MCCAIN
 Candidate	John SCHICKEL	John SCHICKEL
 Candidate	John Schiess (write-in)	John Schiess (write-in)
 Candidate	John W. PENNINGTON	John W. PENNINGTON

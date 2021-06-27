@@ -1019,6 +1019,7 @@ Candidate	John L. Smith	John L. Smith
 Candidate	John Lesch	John Lesch
 Candidate	John Manners Houman	John Manners Houman
 Candidate	John Mason	John Mason
+Candidate	John McCain	JOHN MCCAIN
 Candidate	John Mills	John Mills
 Candidate	John O Cunningham	John O Cunningham
 Candidate	John P Fahey	John P Fahey

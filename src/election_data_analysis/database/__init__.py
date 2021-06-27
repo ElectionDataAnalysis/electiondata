@@ -957,6 +957,19 @@ def active_vote_types(session: Session, election, jurisdiction):
     return active_list
 
 
+def remove_record_from_datafile_table(connection, cursor, idx) -> Optional[str]:
+    err_str = None
+    try:
+        q = sql.SQL("""DELETE FROM _datafile WHERE "Id" = {idx}""").format(
+            idx=sql.Literal(idx)
+        )
+        cursor.execute(q, [id, id])
+        connection.commit()
+    except Exception as exc:
+        err_str = f"Error deleting record from _datafile table: {exc}"
+        print(err_str)
+    return err_str
+
 def remove_vote_counts(connection, cursor, id: int) -> str:
     """Remove all VoteCount data from a particular file, and remove that file from _datafile"""
     try:

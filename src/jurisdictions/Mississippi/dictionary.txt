@@ -17,6 +17,7 @@ Candidate	Howie Hawkins	Presidential Electors for Howie Hawkins for President an
 Candidate	Jimmy L. Edwards	Jimmy L. Edwards
 Candidate	Jo Jorgensen	Presidential Electors for Jo Jorgensen for President and Jeremy 'Spike' Cohen for Vice President
 Candidate	John Kerry	JOHN KERRY
+Candidate	John McCain	JOHN MCCAIN
 Candidate	Joseph R. Biden Jr.	Presidential Electors for Joseph R. Biden Jr. for President and Kamala D. Harris for Vice President
 Candidate	Kanye West	Presidential Electors for Kanye West for President and Michelle Tidball for Vice President
 Candidate	Michael Guest	Michael Guest

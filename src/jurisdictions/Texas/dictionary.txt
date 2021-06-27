@@ -1283,6 +1283,7 @@ Candidate	John Kuempel	John Kuempel (I)
 Candidate	John L. Pool	John L. Pool
 Candidate	John Lujan	John Lujan
 Candidate	John Maher	John Maher
+Candidate	John McCain	JOHN MCCAIN
 Candidate	John P. Chupp	John P. Chupp
 Candidate	John P. Cyrier	John P. Cyrier
 Candidate	John P. Cyrier	John P. Cyrier (I)

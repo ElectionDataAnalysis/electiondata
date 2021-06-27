@@ -1,4 +1,5 @@
 cdf_element	cdf_internal_name	raw_identifier_value
+
 Candidate	A. Gideon Oakes	A. Gideon Oakes
 Candidate	Aaron Aylward	Aaron Aylward
 Candidate	Adam Jewell	Adam Jewell
@@ -84,6 +85,7 @@ Candidate	Jo Jorgensen	Jo Jorgensen and Jeremy 'Spike' Cohen
 Candidate	Joan Stamm	Joan Stamm (Withdrawn 7/31/2020 12:00:00 AM)
 Candidate	Joel Koskan	Joel Koskan
 Candidate	John Kerry	JOHN KERRY
+Candidate	John McCain	JOHN MCCAIN
 Candidate	John Mills	John Mills
 Candidate	John P. Kessinger	John P. Kessinger
 Candidate	John Wiik	John Wiik

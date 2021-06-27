@@ -66,6 +66,7 @@ Candidate	John Bear	John Bear
 Candidate	John Eklund	John Eklund
 Candidate	John K. Kolb	John K. Kolb
 Candidate	John Kerry	JOHN KERRY
+Candidate	John McCain	JOHN MCCAIN
 Candidate	John R. Winter	John R. Winter
 Candidate	Joseph R. Biden	Joseph R. Biden and Kamala D. Harris
 Candidate	Joseph S. Porambo	Joseph S. Porambo

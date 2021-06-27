@@ -28,6 +28,7 @@ Candidate	Hillary Clinton	HILLARY CLINTON
 Candidate	Howard Hawkins	Hawkins, Howard
 Candidate	Jo Jorgensen	Jorgensen, Jo
 Candidate	John Kerry	JOHN KERRY
+Candidate	John McCain	JOHN MCCAIN
 Candidate	Joseph R. Biden	Biden, Joseph R.
 Candidate	Joseph R. Biden	Joseph R. Biden, Jr.
 Candidate	Joseph R. Biden	Biden, Joseph R., Jr.

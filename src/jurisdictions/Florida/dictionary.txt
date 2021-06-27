@@ -1492,6 +1492,7 @@ Candidate	John Kerry	JOHN KERRY
 Candidate	John M Hill	John M Hill
 Candidate	John M. Drew	John M. Drew
 Candidate	John Manners Houman	John Manners Houman
+Candidate	John McCain	JOHN MCCAIN
 Candidate	John Mica	John Mica
 Candidate	John Michael Rothenberger	John Michael Rothenberger
 Candidate	John Mills	John Mills

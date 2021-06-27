@@ -148,6 +148,7 @@ Candidate	John D. Wiemann	John D. Wiemann
 Candidate	John Joseph Rizzo	John Joseph Rizzo
 Candidate	John Kerry	JOHN KERRY
 Candidate	John Kiehne	John Kiehne
+Candidate	John McCain	JOHN MCCAIN
 Candidate	John R. Jay Ashcroft	John R. Jay Ashcroft
 Candidate	John Simmons	John Simmons
 Candidate	Jon Patterson	Jon Patterson

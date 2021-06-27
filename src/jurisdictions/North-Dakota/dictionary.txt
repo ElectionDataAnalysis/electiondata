@@ -366,6 +366,7 @@ Candidate	John J Kessel	John J Kessel
 Candidate	John Kerry	JOHN KERRY
 Candidate	John M Hokana	John M Hokana
 Candidate	John Martin Pederson	John Martin Pederson
+Candidate	John McCain	JOHN MCCAIN
 Candidate	John Narloch	John Narloch
 Candidate	John Peyerl	John Peyerl
 Candidate	John Pietsch	John Pietsch

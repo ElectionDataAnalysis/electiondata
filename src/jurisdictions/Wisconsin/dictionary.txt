@@ -297,6 +297,7 @@ Candidate	John Jagler	John Jagler
 Candidate	John Kerry	JOHN KERRY
 Candidate	John Lehman	John Lehman
 Candidate	John Macco	John Macco
+Candidate	John McCain	JOHN MCCAIN
 Candidate	John Nygren	John Nygren
 Candidate	John Rocco Calabrese	John Rocco Calabrese
 Candidate	John Schiess (write-in)	John Schiess (write-in)
