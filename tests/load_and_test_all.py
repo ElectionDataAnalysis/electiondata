@@ -100,6 +100,7 @@ def get_testing_data(
 def run2(
     load_data: bool = True,
     dbname: Optional[str] = None,
+    param_file: Optional[str] = None,
     test_dir: Optional[str] = None,
     election_jurisdiction_list: Optional[list] = None,
     rollup: bool = False,
@@ -126,7 +127,7 @@ def run2(
     if load_data:
         try:
             # Load the data
-            dl = eda.DataLoader()
+            dl = eda.DataLoader(dbname=dbname, param_file=param_file)
             if not dl:
                 err = ui.add_new_error(
                     err,

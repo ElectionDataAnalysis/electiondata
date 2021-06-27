@@ -1543,11 +1543,8 @@ ReportingUnit	Connecticut;Wolcott;DISTRICT 3-Wakelee	Wolcott;DISTRICT 3-Wakelee
 ReportingUnit	Connecticut;Woodbridge	Woodbridge
 ReportingUnit	Connecticut;Woodbridge;DISTRICT 14-Center School 2	Woodbridge;DISTRICT 14-Center School 2
 ReportingUnit	Connecticut;Woodbridge;DISTRICT 3-Center School 1	Woodbridge;DISTRICT 3-Center School 1
-ReportingUnit	Connecticut;Woodbridge;DISTRICT 14-Center School 2	Woodbridge;DISTRICT 14-Center School 2
 ReportingUnit	Connecticut;Woodbury;DISTRICT 1-Senior Community Center - O&G Room	Woodbury;DISTRICT 1-Senior/ Community Center - O&G Room
 ReportingUnit	Connecticut;Woodbury;DISTRICT 2-Senior Community Center -- Activity Room	Woodbury;DISTRICT 2-Senior/ Community Center -- Activity Room
 ReportingUnit	Connecticut;Woodbury	Woodbury
-ReportingUnit	Connecticut;Woodbury;DISTRICT 1-Senior/ Community Center - O&G Room	Woodbury;DISTRICT 1-Senior/ Community Center - O&G Room
-ReportingUnit	Connecticut;Woodbury;DISTRICT 2-Senior/ Community Center -- Activity Room	Woodbury;DISTRICT 2-Senior/ Community Center -- Activity Room
 ReportingUnit	Connecticut;Woodstock	Woodstock
 ReportingUnit	Connecticut;Woodstock;DISTRICT 1-Woodstock Town Hall	Woodstock;DISTRICT 1-Woodstock Town Hall
