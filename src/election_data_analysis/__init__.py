@@ -127,9 +127,9 @@ class SingleDataLoader:
         self.mungers_dir = mungers_path
         self.munger_list = [x.strip() for x in self.d["munger_list"].split(",")]
 
-    def track_results(self) -> (dict, Optional[dict]):
+    def track_results(self) -> (List[int], Optional[dict]):
         """insert a record for the _datafile, recording any error string <e>.
-        Return Id of _datafile.Id and Election.Id"""
+        Return _datafile.Id and Election_Id"""
         err = None
         filename = self.d["results_file"]
         jurisdiction_id = db.name_to_id(
@@ -152,7 +152,7 @@ class SingleDataLoader:
                 f"No election named {self.d['election']} found in database",
             )
             return [0, 0], err
-        idxes, err = datafile_info(
+        datafile_id, err = datafile_info(
             self.session.bind,
             self.param_file,
             self.d["results_short_name"],
@@ -164,7 +164,7 @@ class SingleDataLoader:
             election_id,
             self.d["is_preliminary"],
         )
-        return idxes, err
+        return [datafile_id, election_id], err
 
 
     def load_results(
@@ -175,7 +175,7 @@ class SingleDataLoader:
         print(f'\n\nProcessing {self.d["results_file"]}')
 
         # Enter datafile info to db and collect _datafile_Id and Election_Id
-        results_info, new_err = self.track_results()
+        [datafile_id, election_id], new_err = self.track_results()
         if new_err:
             err = ui.consolidate_errors([err, new_err])
             return err
@@ -193,7 +193,8 @@ class SingleDataLoader:
                     mu_path,
                     f_path,
                     self.juris_true_name,
-                    results_info,
+                    datafile_id,
+                    election_id,
                     constants,
                     self.results_dir,
                     self.path_to_jurisdiction_dir,
@@ -272,6 +273,7 @@ class SingleDataLoader:
         return values, err
 
 
+# noinspection PyTypeChecker
 class DataLoader:
     def __new__(cls, param_file: Optional[str] = None, dbname: Optional[str] = None):
         """Checks if parameter file exists and is correct. If not, does
@@ -697,10 +699,10 @@ class DataLoader:
         # remove data from all those datafiles
         err_str_list = list()
         for idx in df_list:
-            err_str = db.remove_vote_counts(connection, cursor, idx)
+            err_str = db.remove_vote_counts(self.session, idx)
             if err_str:
                 err_str_list.append(err_str)
-            err_str = db.remove_record_from_datafile_table(connection, cursor, idx)
+            err_str = db.remove_record_from_datafile_table(self.session, idx)
             if err_str:
                 err_str_list.append(err_str)
         if err_str_list:
@@ -982,12 +984,15 @@ class DataLoader:
 
         return update_err
 
-    def load_multielection(self, multi_file: str, overwrite_existing: bool = False) -> Optional[dict]:
+    def load_multielection(
+            self, multi_file: str, overwrite_existing: bool = False
+    ) -> (Dict[str, List[str]], Optional[dict]):
         """load multi-election data from <multi_file> 
         (as of 6/2021, this works just for the MIT presidential file)
         If override_existing is True, unload any jurisdictions already there;
         otherwise do *not* overwrite"""
         err = None
+        success: Dict[str,List[str]] = dict()
         # read data
         try:
             df = pd.read_csv(multi_file,sep="\t",dtype=str)
@@ -998,7 +1003,7 @@ class DataLoader:
                 multi_file,
                 f"file not found",
             )
-            return err
+            return success, err
 
         # rename columns to match internal db elements
         df.rename(columns={v:k for k,v in multi.mit_cols.items()},inplace=True)
@@ -1009,8 +1014,10 @@ class DataLoader:
         
         # treat jurisdictions one by one
         jurisdictions = sorted(list(df["Jurisdiction"].unique()))
+
         for j in jurisdictions:
             juris_true_name = multi.correct(j.title())
+            success[juris_true_name]: List[str] = list()
             print(f"Starting {juris_true_name}")
             juris_system_name = juris.system_name_from_true_name(juris_true_name)
             jurisdiction_id = db.name_to_id(self.session,"ReportingUnit",juris_true_name)
@@ -1026,6 +1033,7 @@ class DataLoader:
             ## load results to db
             for election in j_df["Election"].unique():
                 election_true_name = multi.mit_elections[election]
+
                 print(f"\tStarting {election_true_name}")
                 election_id = db.name_to_id(self.session,"Election", election_true_name)
                 if not election_id:
@@ -1077,7 +1085,7 @@ class DataLoader:
                     continue
 
                 # create record in _datafile table
-                datafile_ids, new_err = datafile_info(
+                datafile_id, new_err = datafile_info(
                     self.session.bind,
                     multi_file,
                     f"MIT_pres_gen_Y2K_{juris_system_name}_{election}",
@@ -1102,13 +1110,15 @@ class DataLoader:
                                               "load_multi_ej_file",
                                               os.path.join(self.d["repository_content_root"],"jurisdictions",
                                                            juris_system_name),
-                                              datafile_ids,"flat_text"
+                                              datafile_id, election_id, "flat_text"
                                               )
                     if new_err:
                         err = ui.consolidate_errors([err,new_err])
                         if ui.fatal_error(new_err):
-                            # TODO remove record from _datafile table
+                            db.remove_record_from_datafile_table(self.session, datafile_id)
                             continue
+                        else:
+                            success[juris_true_name].append(election_true_name)
                 except Exception as exc:
                     err = ui.add_new_error(
                         err,
@@ -1117,14 +1127,31 @@ class DataLoader:
                         f"Unexpected error while loading results dataframe "
                         f"for {election_true_name} {juris_true_name}: {exc}"
                     )
-                    # TODO remove record from _datafile table
+                    err_str = db.remove_vote_counts(self.session, datafile_id)
+                    if err_str:
+                        err = ui.add_new_error(
+                            err,
+                            "warn-database",
+                            f"{self.session.bind.url.database}",
+                            f"Vote counts not removed for datafile id {datafile_id} because of error: {err_str}"
+                        )
+                    else:
+                        err_str = db.remove_record_from_datafile_table(self.session,datafile_id)
+                        if err_str:
+                            err = ui.add_new_error(
+                                err,
+                                "warn-database",
+                                f"{self.session.bind.url.database}",
+                                f"Vote counts removed but datafile record not removed for datafile id {datafile_id} "
+                                f"because of error: {err_str}",
+                            )
                     continue
 
         err = ui.report(
             err,
             os.path.join(self.d["reports_and_plots_dir"], f"multielection_{self.session.bind.url.database}")
         )
-        return err
+        return success, err
 
 def check_par_file_elements(
     ini_d: dict,
@@ -2681,7 +2708,8 @@ def load_results_df(
         juris_true_name: str,
         munger_name: str,
         path_to_jurisdiction_dir: str,
-        election_datafile_ids: dict,
+        datafile_id: int,
+        election_id: int,
         file_type: str,
         rollup: bool = False,
         rollup_rut: str = "county",
@@ -2744,8 +2772,8 @@ def load_results_df(
                 return err
 
     # add_datafile_Id and Election_Id columns
-    for c in ["_datafile_Id", "Election_Id"]:
-        df = m.add_constant_column(df, c, election_datafile_ids[c])
+    df = m.add_constant_column(df, "_datafile_Id", datafile_id)
+    df = m.add_constant_column(df, "Election_Id", election_id)
     # load counts to db
     try:
         err = m.fill_vote_count(df, session, munger_name, err)
@@ -2765,7 +2793,8 @@ def load_results_file(
     munger_path: str,
     f_path: str,
     juris_true_name: str,
-    election_datafile_ids: dict,
+    datafile_id: int,
+    election_id: int,
     constants: Dict[str, str],
     results_directory_path: str,
     path_to_jurisdiction_dir: str,
@@ -2799,7 +2828,7 @@ def load_results_file(
     df = m.remove_ignored_rows(df, munger_path)
 
     new_err = load_results_df(
-        session,df,necessary_constants, juris_true_name, munger_name,path_to_jurisdiction_dir,election_datafile_ids,
+        session,df,necessary_constants, juris_true_name, munger_name,path_to_jurisdiction_dir,datafile_id, election_id,
         p["file_type"], rollup=rollup, rollup_rut=rollup_rut
     )
     return ui.consolidate_errors([err, new_err])
@@ -2981,8 +3010,8 @@ def reload_juris_election(
 def datafile_info(connection,results_filename_for_error_reporting,
                   results_short_name,file_name,download_date: str,source: str,note: str,
                   jurisdiction_id: int,election_id: int,is_preliminary: bool
-                  ) -> (List[int], Optional[dict]):
-    """Inserts record into _datafile table"""
+                  ) -> (int, Optional[dict]):
+    """Inserts record into _datafile table. Returns id of datafile record"""
     err = None
     data = pd.DataFrame(
         [
@@ -3016,7 +3045,7 @@ def datafile_info(connection,results_filename_for_error_reporting,
             connection, data,"_datafile","ini", results_filename_for_error_reporting,
         )
         if ui.fatal_error(err):
-            return [0,0],err
+            return 0, err
         else:
             # TODO tech debt not sure why we need to rename here but not elsewhere, has to do with col_map
             data.rename(columns={"short_name": "_datafile"}, inplace=True)
@@ -3030,7 +3059,7 @@ def datafile_info(connection,results_filename_for_error_reporting,
             f"{Path(__file__).absolute().parents[0].name}.{inspect.currentframe().f_code.co_name}",
             f"Error inserting record to _datafile table or retrieving _datafile_Id: {exc}",
         )
-        return [0,0], err
+        return 0, err
 
-    return {"_datafile_Id":datafile_id,"Election_Id":election_id},err
+    return datafile_id, err
 

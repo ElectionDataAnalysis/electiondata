@@ -957,21 +957,28 @@ def active_vote_types(session: Session, election, jurisdiction):
     return active_list
 
 
-def remove_record_from_datafile_table(connection, cursor, idx) -> Optional[str]:
+def remove_record_from_datafile_table(session, idx) -> Optional[str]:
+
     err_str = None
     try:
+        connection = session.bind.raw_connection()
+        cursor = connection.cursor()
         q = sql.SQL("""DELETE FROM _datafile WHERE "Id" = {idx}""").format(
             idx=sql.Literal(idx)
         )
         cursor.execute(q, [id, id])
         connection.commit()
+        cursor.close()
+        connection.close()
     except Exception as exc:
         err_str = f"Error deleting record from _datafile table: {exc}"
         print(err_str)
     return err_str
 
-def remove_vote_counts(connection, cursor, id: int) -> str:
+def remove_vote_counts(session: Session, id: int) -> Optional[str]:
     """Remove all VoteCount data from a particular file, and remove that file from _datafile"""
+    connection = session.raw_connection()
+    cursor = connection.cursor()
     try:
         q = 'SELECT "Id", file_name, download_date, created_at, is_preliminary FROM _datafile WHERE _datafile."Id"=%s;'
         cursor.execute(q, [id])
@@ -983,7 +990,9 @@ def remove_vote_counts(connection, cursor, id: int) -> str:
             preliminary,
         ) = cursor.fetchall()[0]
     except KeyError as exc:
-        return f"No datafile found with Id = {id}"
+        cursor.close()
+        connection.close()
+        return f"No datafile found with Id = {id}: {exc}"
     try:
         q = 'DELETE FROM "VoteCount" where "_datafile_Id"=%s;Delete from _datafile where "Id"=%s;'
         cursor.execute(q, [id, id])
@@ -993,6 +1002,8 @@ def remove_vote_counts(connection, cursor, id: int) -> str:
     except Exception as exc:
         err_str = f"{file_name}: Error deleting data: {exc}"
         print(err_str)
+    cursor.close()
+    connection.close()
     return err_str
 
 
