@@ -12284,29 +12284,47 @@ Candidate	Tanya Sumner	Tanya Sumner
 Candidate	Jeffrey S Jacob	Jeffrey S Jacob
 Candidate	Rosalie H Verseman	Rosalie H Verseman
 Candidate	Jeff Barnes	Jeff Barnes
-Candidate	'Rocky' Roque De La Fuente (W/I)	'Rocky' Roque De La Fuente (W/I)
-Candidate	Cherunda Fox (W/I)	Cherunda Fox (W/I)
-Candidate	Darrell L. Castle (W/I)	Darrell L. Castle (W/I)
-Candidate	Denny C. Jackson (W/I)	Denny C. Jackson (W/I)
-Candidate	Emidio Soltysik (W/I)	Emidio Soltysik (W/I)
+Candidate	'Rocky' Roque De La Fuente (Write-In)	'Rocky' Roque De La Fuente (W/I)
+
+Candidate	Cherunda Fox (Write-In)	Cherunda Fox (W/I)
+
+Candidate	Darrell L. Castle (Write-In)	Darrell L. Castle (W/I)
+
+Candidate	Denny C. Jackson (Write-In)	Denny C. Jackson (W/I)
+
+Candidate	Emidio Soltysik (Write-In)	Emidio Soltysik (W/I)
+
 Candidate	Gary Johnson	Gary Johnson
 Candidate	Hillary Clinton	Hillary Clinton
-Candidate	Jill Stein (W/I)	Jill Stein (W/I)
-Candidate	Joseph Maldonado (W/I)	Joseph Maldonado (W/I)
-Candidate	Laurence Kotlikoff (W/I)	Laurence Kotlikoff (W/I)
-Candidate	Matthew (None Of The Above) Roberts (W/I)	Matthew (None Of The Above) Roberts (W/I)
-Candidate	Melissa L. Kelly (W/I)	Melissa L. Kelly (W/I)
-Candidate	Monica Moorehead (W/I)	Monica Moorehead (W/I)
-Candidate	Ray C. Brown (W/I)	Ray C. Brown (W/I)
-Candidate	Ric Mullis (W/I)	Ric Mullis (W/I)
-Candidate	Richard Duncan (W/I)	Richard Duncan (W/I)
-Candidate	Tom Hoefling (W/I)	Tom Hoefling (W/I)
+Candidate	Jill Stein (Write-In)	Jill Stein (W/I)
+
+Candidate	Joseph Maldonado (Write-In)	Joseph Maldonado (W/I)
+
+Candidate	Laurence Kotlikoff (Write-In)	Laurence Kotlikoff (W/I)
+
+Candidate	Matthew (None Of The Above) Roberts (Write-In)	Matthew (None Of The Above) Roberts (W/I)
+
+Candidate	Melissa L. Kelly (Write-In)	Melissa L. Kelly (W/I)
+
+Candidate	Monica Moorehead (Write-In)	Monica Moorehead (W/I)
+
+Candidate	Ray C. Brown (Write-In)	Ray C. Brown (W/I)
+
+Candidate	Ric Mullis (Write-In)	Ric Mullis (W/I)
+
+Candidate	Richard Duncan (Write-In)	Richard Duncan (W/I)
+
+Candidate	Tom Hoefling (Write-In)	Tom Hoefling (W/I)
+
 Candidate	Evan Bayh	Evan Bayh
-Candidate	James Johnson, Jr. (W/I)	James Johnson, Jr. (W/I)
+Candidate	James Johnson, Jr. (Write-In)	James Johnson, Jr. (W/I)
+
 Candidate	Lucy Brenton	Lucy Brenton
 Candidate	Todd Young	Todd Young
-Candidate	Adam Adkins (W/I)	Adam Adkins (W/I)
-Candidate	Christopher Stried (W/I)	Christopher Stried (W/I)
+Candidate	Adam Adkins (Write-In)	Adam Adkins (W/I)
+
+Candidate	Christopher Stried (Write-In)	Christopher Stried (W/I)
+
 Candidate	John R. Gregg	John R. Gregg
 Candidate	Rex Bell	Rex Bell
 Candidate	Curtis T. Hill, Jr.	Curtis T. Hill, Jr.
@@ -12314,7 +12332,8 @@ Candidate	Lorenzo Arredondo	Lorenzo Arredondo
 Candidate	Glenda Ritz	Glenda Ritz
 Candidate	Jennifer Mccormick	Jennifer Mccormick
 Candidate	Donna Dunn	Donna Dunn
-Candidate	John Meyer (W/I)	John Meyer (W/I)
+Candidate	John Meyer (Write-In)	John Meyer (W/I)
+
 Candidate	Peter J. Visclosky	Peter J. Visclosky
 Candidate	Lynn C. Coleman	Lynn C. Coleman
 Candidate	Ron Cenkush	Ron Cenkush
@@ -12346,7 +12365,8 @@ Candidate	Donald Rainwater Ii	Donald Rainwater Ii
 Candidate	Luke Kenley	Luke Kenley
 Candidate	Paula Jo Gilliam	Paula Jo Gilliam
 Candidate	Kevin Rogers	Kevin Rogers
-Candidate	Jerry Coverstone (W/I)	Jerry Coverstone (W/I)
+Candidate	Jerry Coverstone (Write-In)	Jerry Coverstone (W/I)
+
 Candidate	Ken Kern	Ken Kern
 Candidate	Michael R Crider	Michael R Crider
 Candidate	Pamela L. Hickman	Pamela L. Hickman
@@ -12426,7 +12446,8 @@ Candidate	Wes Culver	Wes Culver
 Candidate	Charlie Odier	Charlie Odier
 Candidate	Nancy Tibbett	Nancy Tibbett
 Candidate	Richard 'Rick' Brown Jr	Richard 'Rick' Brown Jr
-Candidate	Jeff Embry (W/I)	Jeff Embry (W/I)
+Candidate	Jeff Embry (Write-In)	Jeff Embry (W/I)
+
 Candidate	Thomas (Tom) E. Saunders	Thomas (Tom) E. Saunders
 Candidate	Zachary B Lee	Zachary B Lee
 Candidate	Mimi Pruett	Mimi Pruett
@@ -12581,7 +12602,8 @@ Candidate	Kathy S. Hohenstreiter	Kathy S. Hohenstreiter
 Candidate	Kimberly K (Dunlap) Grow	Kimberly K (Dunlap) Grow
 Candidate	Jane E Lyons	Jane E Lyons
 Candidate	January L Roush	January L Roush
-Candidate	Kenneth L Shafer (W/I)	Kenneth L Shafer (W/I)
+Candidate	Kenneth L Shafer (Write-In)	Kenneth L Shafer (W/I)
+
 Candidate	T. Ann Boehm	T. Ann Boehm
 Candidate	Therese K Chambers	Therese K Chambers
 Candidate	Lonnie E Stroud	Lonnie E Stroud
@@ -13085,7 +13107,8 @@ Candidate	Debbie Bledsoe	Debbie Bledsoe
 Candidate	Kent L Fisk	Kent L Fisk
 Candidate	Martha Vail	Martha Vail
 Candidate	Randy R Jones	Randy R Jones
-Candidate	Zachary T Lafavers (W/I)	Zachary T Lafavers (W/I)
+Candidate	Zachary T Lafavers (Write-In)	Zachary T Lafavers (W/I)
+
 Candidate	Houston L Mathes	Houston L Mathes
 Candidate	James F Yeager	James F Yeager
 Candidate	Jennie J Capelle	Jennie J Capelle
@@ -14613,25 +14636,34 @@ Candidate	Deborah G Hiss	Deborah G Hiss
 Candidate	James Renbarger	James Renbarger
 Candidate	Jane Burgess	Jane Burgess
 Candidate	Joseph 'Joe' Stein	Joseph 'Joe' Stein
-Candidate	Christopher Fischer (W/I)	Christopher Fischer (W/I)
-Candidate	James L. Johnson Jr. (W/I)	James L. Johnson Jr. (W/I)
+Candidate	Christopher Fischer (Write-In)	Christopher Fischer (W/I)
+
+Candidate	James L. Johnson Jr. (Write-In)	James L. Johnson Jr. (W/I)
+
 Candidate	Joe Donnelly	Joe Donnelly
 Candidate	Lucy M. Brenton	Lucy M. Brenton
-Candidate	Nathan Altman (W/I)	Nathan Altman (W/I)
-Candidate	George William Wolfe (W/I)	George William Wolfe (W/I)
-Candidate	Jeremy Heath (W/I)	Jeremy Heath (W/I)
+Candidate	Nathan Altman (Write-In)	Nathan Altman (W/I)
+
+Candidate	George William Wolfe (Write-In)	George William Wolfe (W/I)
+
+Candidate	Jeremy Heath (Write-In)	Jeremy Heath (W/I)
+
 Candidate	Mark W. Rutherford	Mark W. Rutherford
 Candidate	John Schick	John Schick
 Candidate	Tera Klutz	Tera Klutz
 Candidate	John C. Aguilera	John C. Aguilera
 Candidate	Kelly Mitchell	Kelly Mitchell
-Candidate	Jonathan S. Kleinman (W/I)	Jonathan S. Kleinman (W/I)
+Candidate	Jonathan S. Kleinman (Write-In)	Jonathan S. Kleinman (W/I)
+
 Candidate	Mel Hall	Mel Hall
-Candidate	Richard Wolf (W/I)	Richard Wolf (W/I)
+Candidate	Richard Wolf (Write-In)	Richard Wolf (W/I)
+
 Candidate	Courtney Tritch	Courtney Tritch
 Candidate	Tobi Beck	Tobi Beck
-Candidate	Heather Leigh Meloy (W/I)	Heather Leigh Meloy (W/I)
-Candidate	John Miller (W/I)	John Miller (W/I)
+Candidate	Heather Leigh Meloy (Write-In)	Heather Leigh Meloy (W/I)
+
+Candidate	John Miller (Write-In)	John Miller (W/I)
+
 Candidate	Tom Ferkinhoff	Tom Ferkinhoff
 Candidate	André D. Carson	André D. Carson
 Candidate	Wayne 'Gunny' Harmon	Wayne 'Gunny' Harmon
@@ -15229,7 +15261,8 @@ Candidate	Richard L Foutch	Richard L Foutch
 Candidate	Sam Hobbs	Sam Hobbs
 Candidate	Justin W. Cole	Justin W. Cole
 Candidate	Alan Malone	Alan Malone
-Candidate	David Templin (W/I)	David Templin (W/I)
+Candidate	David Templin (Write-In)	David Templin (W/I)
+
 Candidate	Richard L. Myers Jr.	Richard L. Myers Jr.
 Candidate	Frank A Coleman Jr.	Frank A Coleman Jr.
 Candidate	Kent Johnson	Kent Johnson
@@ -15263,7 +15296,8 @@ Candidate	Dave Wedding	Dave Wedding
 Candidate	Mike Phelps	Mike Phelps
 Candidate	Benjamin A. Pence	Benjamin A. Pence
 Candidate	John Plasse	John Plasse
-Candidate	Steve W Ferree (W/I)	Steve W Ferree (W/I)
+Candidate	Steve W Ferree (Write-In)	Steve W Ferree (W/I)
+
 Candidate	Ryan T Baker	Ryan T Baker
 Candidate	Russell K. 'Rusty' Hart	Russell K. 'Rusty' Hart
 Candidate	Michael K Wilder	Michael K Wilder
@@ -16522,7 +16556,8 @@ Candidate	Toni Halcomb	Toni Halcomb
 Candidate	Sandra E Putt	Sandra E Putt
 Candidate	W. Joy Hetrick	W. Joy Hetrick
 Candidate	Randy Allen	Randy Allen
-Candidate	Steve Lestinsky, Jr (W/I)	Steve Lestinsky, Jr (W/I)
+Candidate	Steve Lestinsky, Jr (Write-In)	Steve Lestinsky, Jr (W/I)
+
 Candidate	Robert (Bob) Bryan	Robert (Bob) Bryan
 Candidate	Leon Hicks	Leon Hicks
 Candidate	Michael J Lilly	Michael J Lilly
@@ -21619,30 +21654,38 @@ Candidate	Doug Scheffel	Doug Scheffel
 Candidate	Kevin Joseph Kelly	Kevin Joseph Kelly
 Candidate	Stephen E Pittman	Stephen E Pittman
 Candidate	Woodrow (Woody) Myers	Woodrow (Woody) Myers & Linda C Lawson
-Candidate	Valerie Mccray (W/I)	Valerie Mccray (W/I)
+Candidate	Valerie Mccray (Write-In)	Valerie Mccray (W/I)
+
 Candidate	Tonya L. Millis	Tonya L. Millis
 Candidate	Timothy Jaycox	Timothy Jaycox
-Candidate	Shawn Howard (W/I)	Shawn Howard (W/I)
+Candidate	Shawn Howard (Write-In)	Shawn Howard (W/I)
+
 Candidate	Russell (Russ) Brooksbank	Russell (Russ) Brooksbank
-Candidate	Randall F (W/I)	Randall F (W/I)
+Candidate	Randall F (Write-In)	Randall F (W/I)
+
 Candidate	Paul J. Tinkle	Paul J. Tinkle
 Candidate	Morgan Rigg	Morgan Rigg
-Candidate	Mitchell Williams (W/I)	Mitchell Williams (W/I)
+Candidate	Mitchell Williams (Write-In)	Mitchell Williams (W/I)
+
 Candidate	Michael Strauss	Michael Strauss
 Candidate	Martha 'Marty' Lemert	Martha 'Marty' Lemert
 Candidate	Mark A Renholzberger	Mark A Renholzberger
 Candidate	Kent Yeager	Kent Yeager
 Candidate	Kenneth Tucker	Kenneth Tucker
 Candidate	Katrina (Kat) Hardwick	Katrina (Kat) Hardwick
-Candidate	Kasey Wells (W/I)	Kasey Wells (W/I)
+Candidate	Kasey Wells (Write-In)	Kasey Wells (W/I)
+
 Candidate	Joseph R. Biden	Joseph R. Biden & Kamala D. Harris
 Candidate	Jonathan Weinzapfel	Jonathan Weinzapfel
-Candidate	Joe Schriner (W/I)	Joe Schriner (W/I)
+Candidate	Joe Schriner (Write-In)	Joe Schriner (W/I)
+
 Candidate	Jo Jorgensen	Jo Jorgensen & Jeremy (Spike) Cohen
 Candidate	Jason Eicholtz	Jason Eicholtz
-Candidate	James L Johnson Jr. (W/I)	James L Johnson Jr. (W/I)
+Candidate	James L Johnson Jr. (Write-In)	James L Johnson Jr. (W/I)
+
 Candidate	James D. Rodenberger	James D. Rodenberger
-Candidate	Howie Hawkins (W/I)	Howie Hawkins (W/I)
+Candidate	Howie Hawkins (Write-In)	Howie Hawkins (W/I)
+
 Candidate	Gregory L. Peete	Gregory L. Peete
 Candidate	Eric Holcomb	Eric Holcomb & Suzanne Crouch
 Candidate	Eric C. Shotwell	Eric C. Shotwell
@@ -21651,8 +21694,10 @@ Candidate	Donald J. Trump	Donald J. Trump & Michael R. Pence
 Candidate	Donald G. Rainwater Ii	Donald G. Rainwater Ii & William E. Henry
 Candidate	Deborah Rouse	Deborah Rouse & Sheila Marie Cannon (W/I)
 Candidate	Crystal A. Henry	Crystal A. Henry
-Candidate	Brian Carroll (W/I)	Brian Carroll (W/I)
-Candidate	Abram Loeb (W/I)	Abram Loeb (W/I)
+Candidate	Brian Carroll (Write-In)	Brian Carroll (W/I)
+
+Candidate	Abram Loeb (Write-In)	Abram Loeb (W/I)
+
 ReportingUnit	Indiana;Vermillion County;Vermillion 2	Vermillion;Vermillion 2
 ReportingUnit	Indiana;Vermillion County;Vermillion 1	Vermillion;Vermillion 1
 ReportingUnit	Indiana;Vermillion County;St Bernice	Vermillion;St Bernice
