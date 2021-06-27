@@ -1517,10 +1517,10 @@ def export_rollup_from_db(
 def read_vote_count(
     session: Session,
     election_id: int,
-    reporting_unit_id: int,
+    jurisdiction_id: int,
     fields: List[str],
     aliases: List[str],
-):
+) -> pd.DataFrame:
     """The VoteCount table is the only place that maps contests to a specific
     election. But this table is the largest one, so we don't want to use pandas methods
     to read into a DF and then filter. Data returns is determined by <fields> (column names from SQL query);
@@ -1570,7 +1570,7 @@ def read_vote_count(
     )
     connection = session.bind.raw_connection()
     cursor = connection.cursor()
-    cursor.execute(q, [election_id, reporting_unit_id])
+    cursor.execute(q,[election_id,jurisdiction_id])
     results = cursor.fetchall()
     results_df = pd.DataFrame(results, columns=aliases)
     # accommodate "other" type election districts

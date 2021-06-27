@@ -3071,3 +3071,30 @@ def datafile_info(connection,results_filename_for_error_reporting,
 
     return datafile_id, err
 
+
+def bad_multi_presidentials(
+        dbname: str, param_file: str, compare_file: str
+) -> List[str]:
+    """Compares presidential results for elections and jurisdictions listed
+    in <compare_file>. Assumes <compare_file> has columns
+    Election, Jurisdiction, Total Presidential"""
+
+    results = pd.read_csv(compare_file,sep="\t")
+    bad_list: List[str] = list()
+    good_list: List[str] = list()
+    an = Analyzer(dbname=dbname, param_file=param_file)
+    for idx, r in results.iterrows():
+        election_id = db.name_to_id(an.session,"Election", r["Election"])
+        jurisdiction_id = db.name_to_id(an.session, "ReportingUnit", r["Jurisdiction"])
+        db_counts = db.read_vote_count(
+            an.session, election_id, jurisdiction_id, ["ContestName", "Count"], ["ContestName", "Count"]
+        )
+        if db_counts[db_counts.ContestName.str.contains("US President")].empty:
+            bad_list.append(f"{r['Election']} {r['Jurisdiction']}: no results found")
+        else:
+            total = db_counts[db_counts.ContestName.str.contains("US President")].sum()["Count"]
+            if total != r["Total_Presidential"]:
+                bad_list.append(f"{r['Election']} {r['Jurisdiction']}:\n\t{total}\tfrom db \n\t{r['Total_Presidential']}\t from compare file")
+            else:
+                good_list.append(f"{r['Election']} {r['Jurisdiction']}: {total}")
+    return good_list, bad_list
