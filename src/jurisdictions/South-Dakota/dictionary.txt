@@ -1,5 +1,4 @@
 cdf_element	cdf_internal_name	raw_identifier_value
-
 Candidate	A. Gideon Oakes	A. Gideon Oakes
 Candidate	Aaron Aylward	Aaron Aylward
 Candidate	Adam Jewell	Adam Jewell
@@ -445,3 +444,69 @@ ReportingUnit	South Dakota;Union County	Union
 ReportingUnit	South Dakota;Walworth County	Walworth
 ReportingUnit	South Dakota;Yankton County	Yankton (Vote Center)
 ReportingUnit	South Dakota;Ziebach County	Ziebach
+ReportingUnit	South Dakota;Aurora County	46003
+ReportingUnit	South Dakota;Beadle County	46005
+ReportingUnit	South Dakota;Bennett County	46007
+ReportingUnit	South Dakota;Bon Homme County	46009
+ReportingUnit	South Dakota;Brookings County	46011
+ReportingUnit	South Dakota;Brown County	46013
+ReportingUnit	South Dakota;Brule County	46015
+ReportingUnit	South Dakota;Buffalo County	46017
+ReportingUnit	South Dakota;Butte County	46019
+ReportingUnit	South Dakota;Campbell County	46021
+ReportingUnit	South Dakota;Charles Mix County	46023
+ReportingUnit	South Dakota;Clark County	46025
+ReportingUnit	South Dakota;Clay County	46027
+ReportingUnit	South Dakota;Codington County	46029
+ReportingUnit	South Dakota;Corson County	46031
+ReportingUnit	South Dakota;Custer County	46033
+ReportingUnit	South Dakota;Davison County	46035
+ReportingUnit	South Dakota;Day County	46037
+ReportingUnit	South Dakota;Deuel County	46039
+ReportingUnit	South Dakota;Dewey County	46041
+ReportingUnit	South Dakota;Douglas County	46043
+ReportingUnit	South Dakota;Edmunds County	46045
+ReportingUnit	South Dakota;Fall River County	46047
+ReportingUnit	South Dakota;Faulk County	46049
+ReportingUnit	South Dakota;Grant County	46051
+ReportingUnit	South Dakota;Gregory County	46053
+ReportingUnit	South Dakota;Haakon County	46055
+ReportingUnit	South Dakota;Hamlin County	46057
+ReportingUnit	South Dakota;Hand County	46059
+ReportingUnit	South Dakota;Hanson County	46061
+ReportingUnit	South Dakota;Harding County	46063
+ReportingUnit	South Dakota;Hughes County	46065
+ReportingUnit	South Dakota;Hutchinson County	46067
+ReportingUnit	South Dakota;Hyde County	46069
+ReportingUnit	South Dakota;Jackson County	46071
+ReportingUnit	South Dakota;Jerauld County	46073
+ReportingUnit	South Dakota;Jones County	46075
+ReportingUnit	South Dakota;Kingsbury County	46077
+ReportingUnit	South Dakota;Lake County	46079
+ReportingUnit	South Dakota;Lawrence County	46081
+ReportingUnit	South Dakota;Lincoln County	46083
+ReportingUnit	South Dakota;Lyman County	46085
+ReportingUnit	South Dakota;Marshall County	46091
+ReportingUnit	South Dakota;McCook County	46087
+ReportingUnit	South Dakota;McPherson County	46089
+ReportingUnit	South Dakota;Meade County	46093
+ReportingUnit	South Dakota;Mellette County	46095
+ReportingUnit	South Dakota;Miner County	46097
+ReportingUnit	South Dakota;Minnehaha County	46099
+ReportingUnit	South Dakota;Moody County	46101
+ReportingUnit	South Dakota;Oglala Lakota County	46102
+ReportingUnit	South Dakota;Pennington County	46103
+ReportingUnit	South Dakota;Perkins County	46105
+ReportingUnit	South Dakota;Potter County	46107
+ReportingUnit	South Dakota;Roberts County	46109
+ReportingUnit	South Dakota;Sanborn County	46111
+ReportingUnit	South Dakota;Spink County	46115
+ReportingUnit	South Dakota;Stanley County	46117
+ReportingUnit	South Dakota;Sully County	46119
+ReportingUnit	South Dakota;Todd County	46121
+ReportingUnit	South Dakota;Tripp County	46123
+ReportingUnit	South Dakota;Turner County	46125
+ReportingUnit	South Dakota;Union County	46127
+ReportingUnit	South Dakota;Walworth County	46129
+ReportingUnit	South Dakota;Yankton County	46135
+ReportingUnit	South Dakota;Ziebach County	46137
