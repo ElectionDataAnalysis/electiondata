@@ -1323,7 +1323,7 @@ Party	Republican Party	Republican
 Candidate	Write-in	Write-in
 Candidate	Joseph R. Biden	JOSEPH R BIDEN / KAMALA D HARRIS
 Candidate	Jo Jorgensen	JO JORGENSEN / JEREMY (SPIKE) COHEN
-Candidate	HOWIE HAWKINS / ANGELA WALKER	HOWIE HAWKINS / ANGELA WALKER
+Candidate	HOWIE HAWKINS	HOWIE HAWKINS / ANGELA WALKER
 Candidate	Dario Hunter	DARIO HUNTER / DAWN NEPTUNE ADAMS
 Candidate	Donald J. Trump	DONALD J TRUMP / MICHAEL R PENCE
 Candidate	JEFF MERKLEY	JEFF MERKLEY
@@ -1490,7 +1490,7 @@ Candidate	Ken FLEMING	Ken FLEMING
 Candidate	Ken CARROLL	Ken CARROLL
 Candidate	Kelly FLOOD	Kelly FLOOD
 Candidate	Kathy HINKLE	Kathy HINKLE
-Candidate	Kanye WEST / Michelle TIDBALL	Kanye WEST / Michelle TIDBALL
+Candidate	Kanye WEST	Kanye WEST / Michelle TIDBALL
 Candidate	Josie RAYMOND	Josie RAYMOND
 Candidate	Joshua GILPIN	Joshua GILPIN
 Candidate	Joshua BRANSCUM	Joshua BRANSCUM

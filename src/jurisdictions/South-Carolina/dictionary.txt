@@ -5992,8 +5992,8 @@ Candidate	Bernie Sanders	Bernie Sanders
 Candidate	Tom Steyer	Tom Steyer
 Candidate	Elizabeth Warren	Elizabeth Warren
 Candidate	Andrew Yang - WITHDREW	Andrew Yang - WITHDREW
-Candidate	James Smith / Mandy Powers Norrell	James Smith / Mandy Powers Norrell
-Candidate	Henry McMaster / Pamela Evette	Henry McMaster / Pamela Evette
+Candidate	James Smith	James Smith / Mandy Powers Norrell
+Candidate	Henry McMaster	Henry McMaster / Pamela Evette
 Candidate	Write-In	Write-In
 Candidate	Write-In	Write-in
 Candidate	Melvin T Whittenburg	Melvin T Whittenburg
