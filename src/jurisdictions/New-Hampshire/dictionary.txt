@@ -4404,6 +4404,7 @@ Party	none or unknown	OTHER
 ReportingUnit	New Hampshire	New Hampshire
 ReportingUnit	New Hampshire;Belknap County	Belknap
 ReportingUnit	New Hampshire;Belknap County	Belknap*
+ReportingUnit	New Hampshire;Belknap County	33001
 ReportingUnit	New Hampshire;Belknap County;Alton	Alton
 ReportingUnit	New Hampshire;Belknap County;Barnstead	Barnstead
 ReportingUnit	New Hampshire;Belknap County;Belmont	Belmont
@@ -4423,6 +4424,7 @@ ReportingUnit	New Hampshire;Belknap County;Sanbornton	Sanbornton
 ReportingUnit	New Hampshire;Belknap County;Tilton	Tilton
 ReportingUnit	New Hampshire;Carroll County	Carroll
 ReportingUnit	New Hampshire;Carroll County	Carroll*
+ReportingUnit	New Hampshire;Carroll County	33003
 ReportingUnit	New Hampshire;Carroll County;Albany	Albany
 ReportingUnit	New Hampshire;Carroll County;Bartlett	Bartlett
 ReportingUnit	New Hampshire;Carroll County;Brookfield	Brookfield
@@ -4444,6 +4446,7 @@ ReportingUnit	New Hampshire;Carroll County;Wakefield	Wakefield
 ReportingUnit	New Hampshire;Carroll County;Wolfeboro	Wolfeboro
 ReportingUnit	New Hampshire;Cheshire County	Cheshire
 ReportingUnit	New Hampshire;Cheshire County	Cheshire*
+ReportingUnit	New Hampshire;Cheshire County	33005
 ReportingUnit	New Hampshire;Cheshire County;Alstead	Alstead
 ReportingUnit	New Hampshire;Cheshire County;Chesterfield	Chesterfield
 ReportingUnit	New Hampshire;Cheshire County;Dublin	Dublin
@@ -4469,6 +4472,7 @@ ReportingUnit	New Hampshire;Cheshire County;Westmoreland	Westmoreland
 ReportingUnit	New Hampshire;Cheshire County;Winchester	Winchester
 ReportingUnit	New Hampshire;Coos County	Coos
 ReportingUnit	New Hampshire;Coos County	Coos*
+ReportingUnit	New Hampshire;Coos County	33007
 ReportingUnit	New Hampshire;Coos County; Grant	Grant
 ReportingUnit	New Hampshire;Coos County; Mes's Purchase	Mes's Purchase
 ReportingUnit	New Hampshire;Coos County;At. & Gil Ac. Grant	At. & Gil Ac. Grant
@@ -4524,6 +4528,7 @@ ReportingUnit	New Hampshire;Franklin County;Keene;Ward 4	Keene - Ward 4
 ReportingUnit	New Hampshire;Franklin County;Keene;Ward 5	Keene - Ward 5
 ReportingUnit	New Hampshire;Grafton County	Grafton
 ReportingUnit	New Hampshire;Grafton County	Grafton*
+ReportingUnit	New Hampshire;Grafton County	33009
 ReportingUnit	New Hampshire;Grafton County;Alexandria	Alexandria
 ReportingUnit	New Hampshire;Grafton County;Ashland	Ashland
 ReportingUnit	New Hampshire;Grafton County;Bath	Bath
@@ -4569,6 +4574,7 @@ ReportingUnit	New Hampshire;Grafton County;Wentworth	Wentworth
 ReportingUnit	New Hampshire;Grafton County;Woodstock	Woodstock
 ReportingUnit	New Hampshire;Hillsborough County	Hillsborough
 ReportingUnit	New Hampshire;Hillsborough County	Hillsborough*
+ReportingUnit	New Hampshire;Hillsborough County	33011
 ReportingUnit	New Hampshire;Hillsborough County;Amherst	Amherst
 ReportingUnit	New Hampshire;Hillsborough County;Antrim	Antrim
 ReportingUnit	New Hampshire;Hillsborough County;Bedford	Bedford
@@ -4623,6 +4629,7 @@ ReportingUnit	New Hampshire;Lebanon County;Nashua;Ward 8	Nashua - Ward 8
 ReportingUnit	New Hampshire;Lebanon County;Nashua;Ward 9	Nashua - Ward 9
 ReportingUnit	New Hampshire;Merrimack County	Merrimack
 ReportingUnit	New Hampshire;Merrimack County	Merrimack*
+ReportingUnit	New Hampshire;Merrimack County	33013
 ReportingUnit	New Hampshire;Merrimack County;Allenstown	Allenstown
 ReportingUnit	New Hampshire;Merrimack County;Andover	Andover
 ReportingUnit	New Hampshire;Merrimack County;Boscawen	Boscawen
@@ -4665,6 +4672,7 @@ ReportingUnit	New Hampshire;Merrimack County;Webster	Webster
 ReportingUnit	New Hampshire;Merrimack County;Wilmot	Wilmot
 ReportingUnit	New Hampshire;Rockingham County	Rockingham
 ReportingUnit	New Hampshire;Rockingham County	Rockingham*
+ReportingUnit	New Hampshire;Rockingham County	33015
 ReportingUnit	New Hampshire;Rockingham County;Atkinson	Atkinson
 ReportingUnit	New Hampshire;Rockingham County;Auburn	Auburn
 ReportingUnit	New Hampshire;Rockingham County;Brentwood	Brentwood
@@ -4709,6 +4717,7 @@ ReportingUnit	New Hampshire;Rockingham County;Stratham	Stratham
 ReportingUnit	New Hampshire;Rockingham County;Windham	Windham
 ReportingUnit	New Hampshire;Strafford County	Strafford
 ReportingUnit	New Hampshire;Strafford County	Strafford*
+ReportingUnit	New Hampshire;Strafford County	33017
 ReportingUnit	New Hampshire;Strafford County;Barrington	Barrington
 ReportingUnit	New Hampshire;Strafford County;Dover	Dover
 ReportingUnit	New Hampshire;Strafford County;Dover;Ward 1	Dover - Ward 1
@@ -4741,6 +4750,7 @@ ReportingUnit	New Hampshire;Strafford County;Somersworth;Ward 5	Somersworth - Wa
 ReportingUnit	New Hampshire;Strafford County;Strafford	Strafford (town)
 ReportingUnit	New Hampshire;Sullivan County	Sullivan
 ReportingUnit	New Hampshire;Sullivan County	Sullivan*
+ReportingUnit	New Hampshire;Sullivan County	33019
 ReportingUnit	New Hampshire;Sullivan County;Acworth	Acworth
 ReportingUnit	New Hampshire;Sullivan County;Charlestown	Charlestown
 ReportingUnit	New Hampshire;Sullivan County;Claremont	Claremont

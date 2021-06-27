@@ -6166,45 +6166,85 @@ Party	no party	NON
 Party	none or unknown	OTHER
 ReportingUnit	South Carolina	South Carolina
 ReportingUnit	South Carolina;Abbeville County	Abbeville
+ReportingUnit	South Carolina;Abbeville County	45001
 ReportingUnit	South Carolina;Aiken County	Aiken
+ReportingUnit	South Carolina;Aiken County	45003
 ReportingUnit	South Carolina;Allendale County	Allendale
+ReportingUnit	South Carolina;Allendale County	45005
 ReportingUnit	South Carolina;Anderson County	Anderson
+ReportingUnit	South Carolina;Anderson County	45007
 ReportingUnit	South Carolina;Bamberg County	Bamberg
+ReportingUnit	South Carolina;Bamberg County	45009
 ReportingUnit	South Carolina;Barnwell County	Barnwell
+ReportingUnit	South Carolina;Barnwell County	45011
 ReportingUnit	South Carolina;Beaufort County	Beaufort
+ReportingUnit	South Carolina;Beaufort County	45013
 ReportingUnit	South Carolina;Berkeley County	Berkeley
+ReportingUnit	South Carolina;Berkeley County	45015
 ReportingUnit	South Carolina;Calhoun County	Calhoun
+ReportingUnit	South Carolina;Calhoun County	45017
 ReportingUnit	South Carolina;Charleston County	Charleston
+ReportingUnit	South Carolina;Charleston County	45019
 ReportingUnit	South Carolina;Cherokee County	Cherokee
+ReportingUnit	South Carolina;Cherokee County	45021
 ReportingUnit	South Carolina;Chester County	Chester
+ReportingUnit	South Carolina;Chester County	45023
 ReportingUnit	South Carolina;Chesterfield County	Chesterfield
+ReportingUnit	South Carolina;Chesterfield County	45025
 ReportingUnit	South Carolina;Clarendon County	Clarendon
+ReportingUnit	South Carolina;Clarendon County	45027
 ReportingUnit	South Carolina;Colleton County	Colleton
+ReportingUnit	South Carolina;Colleton County	45029
 ReportingUnit	South Carolina;Darlington County	Darlington
+ReportingUnit	South Carolina;Darlington County	45031
 ReportingUnit	South Carolina;Dillon County	Dillon
+ReportingUnit	South Carolina;Dillon County	45033
 ReportingUnit	South Carolina;Dorchester County	Dorchester
+ReportingUnit	South Carolina;Dorchester County	45035
 ReportingUnit	South Carolina;Edgefield County	Edgefield
+ReportingUnit	South Carolina;Edgefield County	45037
 ReportingUnit	South Carolina;Fairfield County	Fairfield
+ReportingUnit	South Carolina;Fairfield County	45039
 ReportingUnit	South Carolina;Florence County	Florence
+ReportingUnit	South Carolina;Florence County	45041
 ReportingUnit	South Carolina;Georgetown County	Georgetown
+ReportingUnit	South Carolina;Georgetown County	45043
 ReportingUnit	South Carolina;Greenville County	Greenville
+ReportingUnit	South Carolina;Greenville County	45045
 ReportingUnit	South Carolina;Greenwood County	Greenwood
+ReportingUnit	South Carolina;Greenwood County	45047
 ReportingUnit	South Carolina;Hampton County	Hampton
+ReportingUnit	South Carolina;Hampton County	45049
 ReportingUnit	South Carolina;Horry County	Horry
+ReportingUnit	South Carolina;Horry County	45051
 ReportingUnit	South Carolina;Jasper County	Jasper
+ReportingUnit	South Carolina;Jasper County	45053
 ReportingUnit	South Carolina;Kershaw County	Kershaw
+ReportingUnit	South Carolina;Kershaw County	45055
 ReportingUnit	South Carolina;Lancaster County	Lancaster
+ReportingUnit	South Carolina;Lancaster County	45057
 ReportingUnit	South Carolina;Laurens County	Laurens
+ReportingUnit	South Carolina;Laurens County	45059
 ReportingUnit	South Carolina;Lee County	Lee
+ReportingUnit	South Carolina;Lee County	45061
 ReportingUnit	South Carolina;Lexington County	Lexington
+ReportingUnit	South Carolina;Lexington County	45063
 ReportingUnit	South Carolina;Marion County	Marion
+ReportingUnit	South Carolina;Marion County	45067
 ReportingUnit	South Carolina;Marlboro County	Marlboro
+ReportingUnit	South Carolina;Marlboro County	45069
 ReportingUnit	South Carolina;McCormick County	McCormick
+ReportingUnit	South Carolina;McCormick County	45065
 ReportingUnit	South Carolina;Newberry County	Newberry
+ReportingUnit	South Carolina;Newberry County	45071
 ReportingUnit	South Carolina;Oconee County	Oconee
+ReportingUnit	South Carolina;Oconee County	45073
 ReportingUnit	South Carolina;Orangeburg County	Orangeburg
+ReportingUnit	South Carolina;Orangeburg County	45075
 ReportingUnit	South Carolina;Pickens County	Pickens
+ReportingUnit	South Carolina;Pickens County	45077
 ReportingUnit	South Carolina;Richland County	Richland
+ReportingUnit	South Carolina;Richland County	45079
 ReportingUnit	South Carolina;SC House District 1	South Carolina;SC House District 1
 ReportingUnit	South Carolina;SC House District 10	South Carolina;SC House District 10
 ReportingUnit	South Carolina;SC House District 100	South Carolina;SC House District 100
@@ -6376,8 +6416,11 @@ ReportingUnit	South Carolina;SC Senate District 7	South Carolina;SC Senate Distr
 ReportingUnit	South Carolina;SC Senate District 8	South Carolina;SC Senate District 8
 ReportingUnit	South Carolina;SC Senate District 9	South Carolina;SC Senate District 9
 ReportingUnit	South Carolina;Saluda County	Saluda
+ReportingUnit	South Carolina;Saluda County	45081
 ReportingUnit	South Carolina;Spartanburg County	Spartanburg
+ReportingUnit	South Carolina;Spartanburg County	45083
 ReportingUnit	South Carolina;Sumter County	Sumter
+ReportingUnit	South Carolina;Sumter County	45085
 ReportingUnit	South Carolina;US House SC District 1	South Carolina;US House SC District 1
 ReportingUnit	South Carolina;US House SC District 2	South Carolina;US House SC District 2
 ReportingUnit	South Carolina;US House SC District 3	South Carolina;US House SC District 3
@@ -6386,5 +6429,8 @@ ReportingUnit	South Carolina;US House SC District 5	South Carolina;US House SC D
 ReportingUnit	South Carolina;US House SC District 6	South Carolina;US House SC District 6
 ReportingUnit	South Carolina;US House SC District 7	South Carolina;US House SC District 7
 ReportingUnit	South Carolina;Union County	Union
+ReportingUnit	South Carolina;Union County	45087
 ReportingUnit	South Carolina;Williamsburg County	Williamsburg
+ReportingUnit	South Carolina;Williamsburg County	45089
 ReportingUnit	South Carolina;York County	York
+ReportingUnit	South Carolina;York County	45091

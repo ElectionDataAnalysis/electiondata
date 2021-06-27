@@ -798,64 +798,126 @@ Party	Write-In	Write-In
 Party	none or unknown	OTHER
 ReportingUnit	New York	New York
 ReportingUnit	New York;Albany County	Albany County
+ReportingUnit	New York;Albany County	36001
 ReportingUnit	New York;Allegany County	Allegany County
+ReportingUnit	New York;Allegany County	36003
 ReportingUnit	New York;Bronx County	Bronx County
+ReportingUnit	New York;Bronx County	36005
 ReportingUnit	New York;Broome County	Broome County
+ReportingUnit	New York;Broome County	36007
 ReportingUnit	New York;Cattaraugus County	Cattaraugus County
+ReportingUnit	New York;Cattaraugus County	36009
 ReportingUnit	New York;Cayuga County	Cayuga County
+ReportingUnit	New York;Cayuga County	36011
 ReportingUnit	New York;Chautauqua County	Chautauqua County
+ReportingUnit	New York;Chautauqua County	36013
 ReportingUnit	New York;Chemung County	Chemung County
+ReportingUnit	New York;Chemung County	36015
 ReportingUnit	New York;Chenango County	Chenango County
+ReportingUnit	New York;Chenango County	36017
 ReportingUnit	New York;Clinton County	Clinton County
+ReportingUnit	New York;Clinton County	36019
 ReportingUnit	New York;Columbia County	Columbia County
+ReportingUnit	New York;Columbia County	36021
 ReportingUnit	New York;Cortland County	Cortland County
+ReportingUnit	New York;Cortland County	36023
 ReportingUnit	New York;Delaware County	Delaware County
+ReportingUnit	New York;Delaware County	36025
 ReportingUnit	New York;Dutchess County	Dutchess County
+ReportingUnit	New York;Dutchess County	36027
 ReportingUnit	New York;Erie County	Erie County
+ReportingUnit	New York;Erie County	36029
 ReportingUnit	New York;Essex County	Essex County
+ReportingUnit	New York;Essex County	36031
 ReportingUnit	New York;Franklin County	Franklin County
+ReportingUnit	New York;Franklin County	36033
 ReportingUnit	New York;Fulton County	Fulton County
+ReportingUnit	New York;Fulton County	36035
 ReportingUnit	New York;Genesee County	Genesee County
+ReportingUnit	New York;Genesee County	36037
 ReportingUnit	New York;Greene County	Greene County
+ReportingUnit	New York;Greene County	36039
 ReportingUnit	New York;Hamilton County	Hamilton County
+ReportingUnit	New York;Hamilton County	36041
 ReportingUnit	New York;Herkimer County	Herkimer County
+ReportingUnit	New York;Herkimer County	36043
 ReportingUnit	New York;Jefferson County	Jefferson County
+ReportingUnit	New York;Jefferson County	36045
 ReportingUnit	New York;Kings County	Kings County
+ReportingUnit	New York;Kings County	36047
 ReportingUnit	New York;Lewis County	Lewis County
+ReportingUnit	New York;Lewis County	36049
 ReportingUnit	New York;Livingston County	Livingston County
+ReportingUnit	New York;Livingston County	36051
 ReportingUnit	New York;Madison County	Madison County
+ReportingUnit	New York;Madison County	36053
 ReportingUnit	New York;Monroe County	Monroe County
+ReportingUnit	New York;Monroe County	36055
 ReportingUnit	New York;Montgomery County	Montgomery County
+ReportingUnit	New York;Montgomery County	36057
 ReportingUnit	New York;Nassau County	Nassau County
+ReportingUnit	New York;Nassau County	36059
 ReportingUnit	New York;New York County	New York County
+ReportingUnit	New York;New York County	36061
 ReportingUnit	New York;Niagara County	Niagara County
+ReportingUnit	New York;Niagara County	36063
 ReportingUnit	New York;Oneida County	Oneida County
+ReportingUnit	New York;Oneida County	36065
 ReportingUnit	New York;Onondaga County	Onondaga County
+ReportingUnit	New York;Onondaga County	36067
 ReportingUnit	New York;Ontario County	Ontario County
+ReportingUnit	New York;Ontario County	36069
 ReportingUnit	New York;Orange County	Orange County
+ReportingUnit	New York;Orange County	36071
 ReportingUnit	New York;Orleans County	Orleans County
+ReportingUnit	New York;Orleans County	36073
 ReportingUnit	New York;Oswego County	Oswego County
+ReportingUnit	New York;Oswego County	36075
 ReportingUnit	New York;Otsego County	Otsego County
+ReportingUnit	New York;Otsego County	36077
 ReportingUnit	New York;Putnam County	Putnam County
+ReportingUnit	New York;Putnam County	36079
 ReportingUnit	New York;Queens County	Queens County
+ReportingUnit	New York;Queens County	36081
 ReportingUnit	New York;Rensselaer County	Rensselaer County
+ReportingUnit	New York;Rensselaer County	36083
 ReportingUnit	New York;Richmond County	Richmond County
+ReportingUnit	New York;Richmond County	36085
 ReportingUnit	New York;Rockland County	Rockland County
+ReportingUnit	New York;Rockland County	36087
 ReportingUnit	New York;Saratoga County	Saratoga County
+ReportingUnit	New York;Saratoga County	36091
 ReportingUnit	New York;Schenectady County	Schenectady County
+ReportingUnit	New York;Schenectady County	36093
 ReportingUnit	New York;Schoharie County	Schoharie County
+ReportingUnit	New York;Schoharie County	36095
 ReportingUnit	New York;Schuyler County	Schuyler County
+ReportingUnit	New York;Schuyler County	36097
 ReportingUnit	New York;Seneca County	Seneca County
+ReportingUnit	New York;Seneca County	36099
 ReportingUnit	New York;St. Lawrence County	St. Lawrence County
+ReportingUnit	New York;St. Lawrence County	36089
 ReportingUnit	New York;Steuben County	Steuben County
+ReportingUnit	New York;Steuben County	36101
 ReportingUnit	New York;Suffolk County	Suffolk County
+ReportingUnit	New York;Suffolk County	36103
 ReportingUnit	New York;Sullivan County	Sullivan County
+ReportingUnit	New York;Sullivan County	36105
 ReportingUnit	New York;Tioga County	Tioga County
+ReportingUnit	New York;Tioga County	36107
 ReportingUnit	New York;Tompkins County	Tompkins County
+ReportingUnit	New York;Tompkins County	36109
 ReportingUnit	New York;Ulster County	Ulster County
+ReportingUnit	New York;Ulster County	36111
 ReportingUnit	New York;Warren County	Warren County
+ReportingUnit	New York;Warren County	36113
 ReportingUnit	New York;Washington County	Washington County
+ReportingUnit	New York;Washington County	36115
 ReportingUnit	New York;Wayne County	Wayne County
+ReportingUnit	New York;Wayne County	36117
 ReportingUnit	New York;Westchester County	Westchester County
+ReportingUnit	New York;Westchester County	36119
 ReportingUnit	New York;Wyoming County	Wyoming County
+ReportingUnit	New York;Wyoming County	36121
 ReportingUnit	New York;Yates County	Yates County
+ReportingUnit	New York;Yates County	36123
