@@ -964,9 +964,8 @@ def remove_record_from_datafile_table(session, idx) -> Optional[str]:
         connection = session.bind.raw_connection()
         cursor = connection.cursor()
         q = sql.SQL("""DELETE FROM _datafile WHERE "Id" = {idx}""").format(
-            idx=sql.Literal(idx)
-        )
-        cursor.execute(q, [id, id])
+            idx=sql.Literal(str(idx)))
+        cursor.execute(q)
         connection.commit()
         cursor.close()
         connection.close()
@@ -977,7 +976,7 @@ def remove_record_from_datafile_table(session, idx) -> Optional[str]:
 
 def remove_vote_counts(session: Session, id: int) -> Optional[str]:
     """Remove all VoteCount data from a particular file, and remove that file from _datafile"""
-    connection = session.raw_connection()
+    connection = session.bind.raw_connection()
     cursor = connection.cursor()
     try:
         q = 'SELECT "Id", file_name, download_date, created_at, is_preliminary FROM _datafile WHERE _datafile."Id"=%s;'
@@ -997,7 +996,7 @@ def remove_vote_counts(session: Session, id: int) -> Optional[str]:
         q = 'DELETE FROM "VoteCount" where "_datafile_Id"=%s;Delete from _datafile where "Id"=%s;'
         cursor.execute(q, [id, id])
         connection.commit()
-        print(f"{file_name}: VoteCounts deleted from results file\n")
+        print(f"{file_name}: VoteCounts deleted from db for datafile id {id}\n")
         err_str = None
     except Exception as exc:
         err_str = f"{file_name}: Error deleting data: {exc}"

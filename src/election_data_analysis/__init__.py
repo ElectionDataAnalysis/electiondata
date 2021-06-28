@@ -1034,7 +1034,7 @@ class DataLoader:
             for election in j_df["Election"].unique():
                 election_true_name = multi.mit_elections[election]
 
-                print(f"\tStarting {election_true_name}")
+                print(f"\t{election_true_name}")
                 election_id = db.name_to_id(self.session,"Election", election_true_name)
                 if not election_id:
                     err = ui.add_new_error(
@@ -1043,6 +1043,7 @@ class DataLoader:
                         f"{self.session.bind.url.database}",
                         f"Election {election_true_name} not found"
                     )
+                    print(f"\t\tElection not found")
                 # get list of datafiles in db with the election and jurisdiction
                 df_list, err_str = db.data_file_list(
                     self.session,election_id,reporting_unit_id=jurisdiction_id
@@ -1054,6 +1055,7 @@ class DataLoader:
                         f"{self.session.bind.url.database}",
                         err_str,
                     )
+                    f"Not loaded: {err_str}"
                     continue
 
                 # remove existing data if overwriting
@@ -1067,6 +1069,7 @@ class DataLoader:
                             f"{self.session.bind.url.database}",
                             f"Error removing existing data for {election} {juris_true_name}:\n{err}",
                         )
+                        print(f"\t\tError removing data: {err_str}")
                     # warn that data was removed:
                     err = ui.add_new_error(
                         err,
@@ -1080,8 +1083,9 @@ class DataLoader:
                         err,
                         "warn-database",
                         f"{self.session.bind.url.database}",
-                        f"Data in db for {election} {juris_true_name} not replaced with new data."
+                        f"Data in db for {election} {juris_true_name} exists; will not be replaced with new data."
                     )
+                    print(f"\t\tData exists in db; will not be replaced with new data.")
                     continue
 
                 # create record in _datafile table
@@ -1100,6 +1104,7 @@ class DataLoader:
                 if new_err:
                     err = ui.consolidate_errors([err, new_err])
                     if ui.fatal_error(new_err):
+                        print(f"\t\tNot loaded due to error creating datafile record")
                         continue
 
                 # rename datafile columns
@@ -1115,10 +1120,20 @@ class DataLoader:
                     if new_err:
                         err = ui.consolidate_errors([err,new_err])
                         if ui.fatal_error(new_err):
-                            db.remove_record_from_datafile_table(self.session, datafile_id)
+                            print(f"\t\tError during data loading")
+                            err_str = db.remove_record_from_datafile_table(self.session, datafile_id)
+                            if err_str:
+                                ui.add_new_error(
+                                    err,
+                                    "database",
+                                    self.session.bind.url.database,
+                                    f"Error removing record with id {datafile_id}: {err_str}"
+                                )
+                                print("Error removing datafile record")
                             continue
                         else:
                             success[juris_true_name].append(election_true_name)
+                            print(f"Successful load: {election} {juris_true_name}")
                 except Exception as exc:
                     err = ui.add_new_error(
                         err,
@@ -1146,10 +1161,13 @@ class DataLoader:
                                 f"because of error: {err_str}",
                             )
                     continue
-
+        ts = datetime.datetime.now().strftime("%m%d_%H%M")
+        report_dir = os.path.join(
+            self.d["reports_and_plots_dir"], f"multielection_{self.session.bind.url.database}_{ts}"
+        )
         err = ui.report(
             err,
-            os.path.join(self.d["reports_and_plots_dir"], f"multielection_{self.session.bind.url.database}")
+            report_dir
         )
         return success, err
 

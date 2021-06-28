@@ -341,6 +341,7 @@ def replace_raw_with_internal_ids(
         os.path.join(path_to_jurisdiction_dir, "dictionary.txt"),
         sep="\t",
         encoding=jm.default_juris_encoding,
+        dtype=str,
     )
 
     # restrict to the element at hand
@@ -377,7 +378,9 @@ def replace_raw_with_internal_ids(
 
     # identify unmatched
     try:
-        unmatched = working[working["cdf_internal_name"].isnull()]
+        unmatched = working[
+            working["cdf_internal_name"].isnull() & working[f"{element}_raw"].notnull()
+        ]
         unmatched_raw = sorted(unmatched[f"{element}_raw"].unique(), reverse=True)
         unmatched_raw = [x for x in unmatched_raw if x != ""]
     except Exception:
@@ -925,6 +928,7 @@ def raw_to_id_simple(
                         os.path.join(path_to_jurisdiction_dir, "dictionary.txt"),
                         sep="\t",
                         encoding=jm.default_juris_encoding,
+                        dtype=str,
                     )
                     r_i = r_i[r_i.cdf_element == "CountItemType"]
                 recognized = r_i.raw_identifier_value.unique()
