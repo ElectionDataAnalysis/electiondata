@@ -739,25 +739,25 @@ New Hampshire;Coos County;Success	unincorporated-place
 New Hampshire;Coos County;Thompson & Mes's Purchase	unincorporated-place
 New Hampshire;Coos County;Mes's Purchase	unincorporated-place
 New Hampshire;Coos County;Wentworth's Location	unincorporated-place
-New Hampshire;Lebanon County;Nashua	city
-New Hampshire;Lebanon County;Nashua;Ward 9	ward
-New Hampshire;Lebanon County;Nashua;Ward 8	ward
-New Hampshire;Lebanon County;Nashua;Ward 7	ward
-New Hampshire;Lebanon County;Nashua;Ward 6	ward
-New Hampshire;Lebanon County;Nashua;Ward 5	ward
-New Hampshire;Lebanon County;Nashua;Ward 4	ward
-New Hampshire;Lebanon County;Nashua;Ward 3	ward
-New Hampshire;Lebanon County;Nashua;Ward 2	ward
-New Hampshire;Lebanon County;Nashua;Ward 1	ward
+New Hampshire;Hillsborough County;Nashua	city
+New Hampshire;Hillsborough County;Nashua;Ward 9	ward
+New Hampshire;Hillsborough County;Nashua;Ward 8	ward
+New Hampshire;Hillsborough County;Nashua;Ward 7	ward
+New Hampshire;Hillsborough County;Nashua;Ward 6	ward
+New Hampshire;Hillsborough County;Nashua;Ward 5	ward
+New Hampshire;Hillsborough County;Nashua;Ward 4	ward
+New Hampshire;Hillsborough County;Nashua;Ward 3	ward
+New Hampshire;Hillsborough County;Nashua;Ward 2	ward
+New Hampshire;Hillsborough County;Nashua;Ward 1	ward
 New Hampshire;Grafton County;Lebanon;Ward 3	ward
 New Hampshire;Grafton County;Lebanon;Ward 2	ward
 New Hampshire;Grafton County;Lebanon;Ward 1	ward
-New Hampshire;Franklin County;Keene	city
-New Hampshire;Franklin County;Keene;Ward 5	ward
-New Hampshire;Franklin County;Keene;Ward 4	ward
-New Hampshire;Franklin County;Keene;Ward 3*	ward
-New Hampshire;Franklin County;Keene;Ward 2	ward
-New Hampshire;Franklin County;Keene;Ward 1	ward
+New Hampshire;Cheshire County;Keene	city
+New Hampshire;Cheshire County;Keene;Ward 5	ward
+New Hampshire;Cheshire County;Keene;Ward 4	ward
+New Hampshire;Cheshire County;Keene;Ward 3*	ward
+New Hampshire;Cheshire County;Keene;Ward 2	ward
+New Hampshire;Cheshire County;Keene;Ward 1	ward
 New Hampshire;Merrimack County;Franklin;Ward 3	ward
 New Hampshire;Merrimack County;Franklin;Ward 2	ward
 New Hampshire;Merrimack County;Franklin;Ward 1	ward

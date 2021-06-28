@@ -4521,11 +4521,11 @@ ReportingUnit	New Hampshire;Coos County;Thompson & Mes's Purchase	Thompson & Mes
 ReportingUnit	New Hampshire;Coos County;Thompson & Mes's Purchase	Thomp. and Mes's Pur.
 ReportingUnit	New Hampshire;Coos County;Wentworth's Location	Wentworth's Location
 ReportingUnit	New Hampshire;Coos County;Whitefield	Whitefield
-ReportingUnit	New Hampshire;Franklin County;Keene;Ward 1	Keene - Ward 1
-ReportingUnit	New Hampshire;Franklin County;Keene;Ward 2	Keene - Ward 2
-ReportingUnit	New Hampshire;Franklin County;Keene;Ward 3*	Keene - Ward 3*
-ReportingUnit	New Hampshire;Franklin County;Keene;Ward 4	Keene - Ward 4
-ReportingUnit	New Hampshire;Franklin County;Keene;Ward 5	Keene - Ward 5
+ReportingUnit	New Hampshire;Cheshire County;Keene;Ward 1	Keene - Ward 1
+ReportingUnit	New Hampshire;Cheshire County;Keene;Ward 2	Keene - Ward 2
+ReportingUnit	New Hampshire;Cheshire County;Keene;Ward 3*	Keene - Ward 3*
+ReportingUnit	New Hampshire;Cheshire County;Keene;Ward 4	Keene - Ward 4
+ReportingUnit	New Hampshire;Cheshire County;Keene;Ward 5	Keene - Ward 5
 ReportingUnit	New Hampshire;Grafton County	Grafton
 ReportingUnit	New Hampshire;Grafton County	Grafton*
 ReportingUnit	New Hampshire;Grafton County	33009
@@ -4618,15 +4618,15 @@ ReportingUnit	New Hampshire;Hillsborough County;Temple	Temple
 ReportingUnit	New Hampshire;Hillsborough County;Weare	Weare
 ReportingUnit	New Hampshire;Hillsborough County;Wilton	Wilton
 ReportingUnit	New Hampshire;Hillsborough County;Windsor	Windsor
-ReportingUnit	New Hampshire;Lebanon County;Nashua;Ward 1	Nashua - Ward 1
-ReportingUnit	New Hampshire;Lebanon County;Nashua;Ward 2	Nashua - Ward 2
-ReportingUnit	New Hampshire;Lebanon County;Nashua;Ward 3	Nashua - Ward 3
-ReportingUnit	New Hampshire;Lebanon County;Nashua;Ward 4	Nashua - Ward 4
-ReportingUnit	New Hampshire;Lebanon County;Nashua;Ward 5	Nashua - Ward 5
-ReportingUnit	New Hampshire;Lebanon County;Nashua;Ward 6	Nashua - Ward 6
-ReportingUnit	New Hampshire;Lebanon County;Nashua;Ward 7	Nashua - Ward 7
-ReportingUnit	New Hampshire;Lebanon County;Nashua;Ward 8	Nashua - Ward 8
-ReportingUnit	New Hampshire;Lebanon County;Nashua;Ward 9	Nashua - Ward 9
+ReportingUnit	New Hampshire;Hillsborough County;Nashua;Ward 1	Nashua - Ward 1
+ReportingUnit	New Hampshire;Hillsborough County;Nashua;Ward 2	Nashua - Ward 2
+ReportingUnit	New Hampshire;Hillsborough County;Nashua;Ward 3	Nashua - Ward 3
+ReportingUnit	New Hampshire;Hillsborough County;Nashua;Ward 4	Nashua - Ward 4
+ReportingUnit	New Hampshire;Hillsborough County;Nashua;Ward 5	Nashua - Ward 5
+ReportingUnit	New Hampshire;Hillsborough County;Nashua;Ward 6	Nashua - Ward 6
+ReportingUnit	New Hampshire;Hillsborough County;Nashua;Ward 7	Nashua - Ward 7
+ReportingUnit	New Hampshire;Hillsborough County;Nashua;Ward 8	Nashua - Ward 8
+ReportingUnit	New Hampshire;Hillsborough County;Nashua;Ward 9	Nashua - Ward 9
 ReportingUnit	New Hampshire;Merrimack County	Merrimack
 ReportingUnit	New Hampshire;Merrimack County	Merrimack*
 ReportingUnit	New Hampshire;Merrimack County	33013

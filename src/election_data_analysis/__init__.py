@@ -1011,6 +1011,9 @@ class DataLoader:
         df["Count"] = df["Count"].fillna(0).astype(int,errors="ignore")
 
         df = df[df["Election"].isin(multi.mit_elections.keys())]
+
+        # regularize fips to match standard in jurisdiction/dictionary.txt files
+        df["ReportingUnit_raw"] = "fips"+ df["ReportingUnit_raw"]
         
         # treat jurisdictions one by one
         jurisdictions = sorted(list(df["Jurisdiction"].unique()))
@@ -1120,7 +1123,7 @@ class DataLoader:
                     if new_err:
                         err = ui.consolidate_errors([err,new_err])
                         if ui.fatal_error(new_err):
-                            print(f"\t\tError during data loading")
+                            print(f"\t\tError during data loading: {new_err}")
                             err_str = db.remove_record_from_datafile_table(self.session, datafile_id)
                             if err_str:
                                 ui.add_new_error(

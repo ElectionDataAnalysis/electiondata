@@ -198,7 +198,7 @@ Maryland;US House MD District 8	congressional
 Maryland	state
 Maryland;Allegany County	county
 Maryland;Anne Arundel County	county
-Maryland;Baltimore City	county
+Maryland;Baltimore city	county
 Maryland;Baltimore County	county
 Maryland;Calvert County	county
 Maryland;Caroline County	county
