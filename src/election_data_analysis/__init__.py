@@ -985,7 +985,7 @@ class DataLoader:
         return update_err
 
     def load_multielection(
-            self, multi_file: str, overwrite_existing: bool = False
+            self, multi_file: str, overwrite_existing: bool = False, update_jurisdictions: bool = False,
     ) -> (Dict[str, List[str]], Optional[dict]):
         """load multi-election data from <multi_file> 
         (as of 6/2021, this works just for the MIT presidential file)
@@ -1029,10 +1029,11 @@ class DataLoader:
             if j_df.empty:
                 continue
 
-            # update juris in db
-            new_err = self.update_juris_from_multifile(j_df,juris_true_name, juris_system_name)
-            if new_err:
-                err = ui.consolidate_errors([err, new_err])
+            if update_jurisdictions:
+                # update juris in db
+                new_err = self.update_juris_from_multifile(j_df,juris_true_name, juris_system_name)
+                if new_err:
+                    err = ui.consolidate_errors([err, new_err])
             ## load results to db
             for election in j_df["Election"].unique():
                 election_true_name = multi.mit_elections[election]
